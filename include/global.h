@@ -8,7 +8,7 @@
 // Align X to the next N bytes (N must be power of two)
 #define ALIGN_NEXT(X, N) ALIGN_PREV(((X) + (N)-1), N)
 // Check if X is aligned to N (N must be power of two)
-#define IS_ALIGNED(X, N) (((X) & ((N) - 1)) != 0)
+#define IS_ALIGNED(X, N) (((X) & ((N)-1)) != 0)
 
 struct Vec {
     float x, y, z;
