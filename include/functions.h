@@ -192,9 +192,7 @@ void JSUInputStream_NS_read(void);
 void JSURandomInputStream_NS_seek(void);
 void JSUInputStream_NS_dtor(void);
 void JSUFileInputStream_ct(void);
-void ARAlloc(void);
-void ARGetSize(void);
-void ARInit(void);
+
 void DCStoreRangeNoSync(void);
 void __RAS_OSDisableInterrupts_begin(void);
 u8 dComIfGs_getBottleMax(void);
@@ -424,9 +422,6 @@ void JSURandomInputStream_NS_seek(void);
 void JSUInputStream_NS_dtor(void);
 void JSUFileInputStream_ct(void);
 
-void ARAlloc(void);
-void ARGetSize(void);
-void ARInit(void);
 void DCStoreRangeNoSync(void);
 void __RAS_OSDisableInterrupts_begin(void);
 u8 dComIfGs_getBottleMax(void);

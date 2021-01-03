@@ -35,10 +35,10 @@ JKRAMCommand* JKRAramPiece::orderAsync(int direction, u32 source, u32 destinatio
         JUTException_NS_panic_f(filename, 0x6c, format, arg1);
     }
 
-    Message* message = new (JKRHeap::getSystemHeap(), -4) Message();
+    JKRAMCommand::Message* message = new (JKRHeap::getSystemHeap(), -4) JKRAMCommand::Message();
     JKRAMCommand* command =
         JKRAramPiece::prepareCommand(direction, source, destination, length, block, callback);
-    message->field_0x00 = 1;
+    message->field_0x0 = 1;
     message->command = command;
 
     OSSendMessage(&lbl_803CC138, message, OS_MESSAGE_BLOCKING);

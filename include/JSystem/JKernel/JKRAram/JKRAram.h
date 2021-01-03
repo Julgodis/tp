@@ -20,22 +20,25 @@ private:
     /* vt[03] */ void* run(void); /* override */
 
 public:
-    void* getAudioMemory() { return this->mAudioMemoryPtr; }
-    u32 getAudioMemSize() { return this->mAudioMemorySize; }
+    u32 getAudioMemory() const { return mAudioMemoryPtr; }
+    u32 getAudioMemSize() const { return mAudioMemorySize; }
+    u32 getGraphMemory() const { return mGraphMemoryPtr; }
+    u32 getGraphMemSize() const { return mGraphMemorySize; }
 
 private:
-    void* mAudioMemoryPtr;
-    u32 mAudioMemorySize;
-    void* mGraphMemoryPtr;
-    u32 mGraphMemorySize;
-    void* mAramMemoryPtr;
-    u32 mAramMemorySize;
-    JKRAramHeap* mAramHeap;
-    u32 field_0x9c;
-    u32 field_0xa0;
+    /* 0x00 */  // vtable
+    /* 0x04 */  // JKRThread
+    /* 0x7C */ u32 mAudioMemoryPtr;
+    /* 0x80 */ u32 mAudioMemorySize;
+    /* 0x84 */ u32 mGraphMemoryPtr;
+    /* 0x88 */ u32 mGraphMemorySize;
+    /* 0x8C */ u32 mAramMemoryPtr;
+    /* 0x90 */ u32 mAramMemorySize;
+    /* 0x94 */ JKRAramHeap* mAramHeap;
+    /* 0x98 */ u32 mStackArray[3];
 
 public:
-    static void create(u32, u32, long, long, long);
+    static JKRAram* create(u32, u32, long, long, long);
     static void checkOkAddress(u8*, u32, JKRAramBlock*, u32);
     static void changeGroupIdIfNeed(u8*, int);
     static void mainRamToAram(u8*, u32, u32, JKRExpandSwitch, u32, JKRHeap*, int, u32*);

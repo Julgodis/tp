@@ -12,6 +12,11 @@ class JKRAramBlock;
 class JKRDecompCommand;
 class JKRAMCommand {
 public:
+    struct Message {
+        s32 field_0x0;
+        JKRAMCommand* command;
+    };
+
     typedef void (*AsyncCallback)(u32);
 
     JKRAMCommand();
@@ -40,12 +45,6 @@ public:
 };
 
 class JKRAramPiece {
-public:
-    struct Message {
-        s32 field_0x00;
-        JKRAMCommand* command;
-    };
-
 public:
     static JKRAMCommand* prepareCommand(int, u32, u32, u32, JKRAramBlock*,
                                         JKRAMCommand::AsyncCallback);

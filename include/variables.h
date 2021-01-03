@@ -370,13 +370,13 @@ extern u8 lbl_804513FC;        // DAT_804513fc (init global mutex)
 extern u8 lbl_80451400;        // JKernel::tsPtr (static?)
 extern u8 lbl_80451404;        // JKernel::tsArea (static?)
 
-extern u8 lbl_803CC158;  // JKRAram::__vt
-extern u8 lbl_8039D078;  // "JKRAram.cpp"
-extern u8 lbl_804342D0;  // JKernel::@492 (global destructor chain)
-extern u8 lbl_804342DC;  // JKRAram::sAramCommandList
-extern u8 lbl_804342E8;  // JKernel::decompMutex (static?)
-extern u8 lbl_804508B8;  // JKRAram::sSZSBufferSize
-extern u8 lbl_803CC128;  // JKRAram::sMessageBuffer
+extern u8 lbl_803CC158;            // JKRAram::__vt
+extern char lbl_8039D078[16];      // "JKRAram.cpp"
+extern u8 lbl_804342D0;            // JKernel::@492 (global destructor chain)
+extern u8 lbl_804342DC;            // JKRAram::sAramCommandList
+extern u8 lbl_804342E8;            // JKernel::decompMutex (static?)
+extern u8 lbl_804508B8;            // JKRAram::sSZSBufferSize
+extern OSMessage lbl_803CC128[4];  // JKRAram::sMessageBuffer
 
 extern bool lbl_80451501;
 
@@ -403,12 +403,10 @@ extern u8 lbl_80451400;  // JKernel::tsPtr (static?)
 extern u8 lbl_80451404;  // JKernel::tsArea (static?)
 
 extern u8 lbl_803CC158;  // JKRAram::__vt
-extern u8 lbl_8039D078;  // "JKRAram.cpp"
 extern u8 lbl_804342D0;  // JKernel::@492 (global destructor chain)
 extern u8 lbl_804342DC;  // JKRAram::sAramCommandList
 extern u8 lbl_804342E8;  // JKernel::decompMutex (static?)
 extern u8 lbl_804508B8;  // JKRAram::sSZSBufferSize
-extern u8 lbl_803CC128;  // JKRAram::sMessageBuffer
 
 //// JUTGamePad:
 // func_802E06DC

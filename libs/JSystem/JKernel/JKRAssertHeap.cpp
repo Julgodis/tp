@@ -29,7 +29,7 @@ void JKRAssertHeap::do_destroy(void) {
 }
 
 u32 JKRAssertHeap::getHeapType(void) {
-    return 0x41535448;  // FOURCC("ASTH")
+    return JKRHEAP_TYPE_ASTH;
 }
 
 bool JKRAssertHeap::check(void) {

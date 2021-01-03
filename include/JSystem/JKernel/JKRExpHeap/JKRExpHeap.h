@@ -16,17 +16,20 @@ public:
 
         void newGroupId(u8 groupId) { this->mGroupId = groupId; }
 
-        bool isValid() { return this->mMagic == 0x484d; }
+        bool isValid() const { return this->mMagic == 0x484d; }
 
-        bool _isTempMemBlock() { return (this->mFlags & 0x80) ? true : false; }
+        bool _isTempMemBlock() const { return (this->mFlags & 0x80) ? true : false; }
 
         int getAlignment() const { return this->mFlags & 0x7f; }
 
-        void* getContent() { return (void*)(this + 1); }
+        void* getContent() const { return (void*)(this + 1); }
 
-        CMemBlock* getPrevBlock() { return this->mPrev; }
+        CMemBlock* getPrevBlock() const { return this->mPrev; }
 
-        CMemBlock* getNextBlock() { return this->mNext; }
+        CMemBlock* getNextBlock() const { return this->mNext; }
+
+    public:
+        static CMemBlock* getMemBlock(u8* data) { return ((CMemBlock*)data) - 1; }
 
     private:
         u16 mMagic;

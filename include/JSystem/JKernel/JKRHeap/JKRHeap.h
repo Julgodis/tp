@@ -5,6 +5,9 @@
 #include "dolphin/types.h"
 #include "global.h"
 
+#define JKRHEAP_TYPE_ASTH 0x41535448
+#define JKRHEAP_TYPE_EXPH 0x45585048
+
 typedef void (*JKRErrorHandler)(void*, u32, int);
 class JKRHeap : public JKRDisposer {
 public:
