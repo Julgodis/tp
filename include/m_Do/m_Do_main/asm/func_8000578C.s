@@ -23,8 +23,8 @@ lbl_800057E0:
 /* 800057E0 00002720  54 BC 06 3E */	clrlwi r28, r5, 0x18
 /* 800057E4 00002724  3B 60 00 00 */	li r27, 0
 /* 800057E8 00002728  3B E0 00 00 */	li r31, 0
-/* 800057EC 0000272C  3C 60 80 3A */	lis r3, lbl_803A2EF4@ha
-/* 800057F0 00002730  3B C3 2E F4 */	addi r30, r3, lbl_803A2EF4@l
+/* 800057EC 0000272C  3C 60 80 3A */	lis r3, HeapCheckTable@ha
+/* 800057F0 00002730  3B C3 2E F4 */	addi r30, r3, HeapCheckTable@l
 lbl_800057F4:
 /* 800057F4 00002734  7C 7E F8 2E */	lwzx r3, r30, r31
 /* 800057F8 00002738  4B FF FF 31 */	bl CheckHeap1__9HeapCheckFv

@@ -8,7 +8,6 @@ extern u8 lbl_80379235[16];
 extern char lbl_80379234[0x64];
 extern char lbl_803739A0[0x310];
 extern u32 _sRumbleSupported;
-extern u8 lbl_803A2EF4;
 extern char lbl_803A2EE0[20];
 extern u8 lbl_80450B19;
 // extern u8 lbl_80450588;
@@ -73,6 +72,7 @@ extern float lbl_804550E8;
 extern float lbl_804550EC;
 extern u8 lbl_80450C90;
 extern u8 J3DLightObj;
+extern u8 lbl_803C3384;
 
 #define _SDA_BASE_(dummy) 0
 #define _SDA2_BASE_(dummy) 0
