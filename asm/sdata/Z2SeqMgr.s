@@ -4,80 +4,81 @@
 /* 0x80450860 0x1 ??? */
 .global lbl_80450860
 lbl_80450860:
-.incbin "baserom.dol", 0x3D05C0, 0x1
+.byte 0x21 /* baserom.dol+0x3d05c0 */
 
 /* 0x80450861 0x1 ??? */
 .global lbl_80450861
 lbl_80450861:
-.incbin "baserom.dol", 0x3D05C1, 0x1
+.byte 0x3c /* baserom.dol+0x3d05c1 */
 
 /* 0x80450862 0x1 ??? */
 .global lbl_80450862
 lbl_80450862:
-.incbin "baserom.dol", 0x3D05C2, 0x1
+.byte 0x3c /* baserom.dol+0x3d05c2 */
 
 /* 0x80450863 0x1 ??? */
 .global lbl_80450863
 lbl_80450863:
-.incbin "baserom.dol", 0x3D05C3, 0x1
+.byte 0x1e /* baserom.dol+0x3d05c3 */
 
 /* 0x80450864 0x1 ??? */
 .global lbl_80450864
 lbl_80450864:
-.incbin "baserom.dol", 0x3D05C4, 0x1
+.byte 0x14 /* baserom.dol+0x3d05c4 */
 
 /* 0x80450865 0x1 ??? */
 .global lbl_80450865
 lbl_80450865:
-.incbin "baserom.dol", 0x3D05C5, 0x1
+.byte 0x1e /* baserom.dol+0x3d05c5 */
 
 /* 0x80450866 0x1 ??? */
 .global lbl_80450866
 lbl_80450866:
-.incbin "baserom.dol", 0x3D05C6, 0x1
+.byte 0x0a /* baserom.dol+0x3d05c6 */
 
 /* 0x80450867 0x1 ??? */
 .global lbl_80450867
 lbl_80450867:
-.incbin "baserom.dol", 0x3D05C7, 0x1
+.byte 0x1e /* baserom.dol+0x3d05c7 */
 
 /* 0x80450868 0x1 ??? */
 .global lbl_80450868
 lbl_80450868:
-.incbin "baserom.dol", 0x3D05C8, 0x1
+.byte 0x01 /* baserom.dol+0x3d05c8 */
 
 /* 0x80450869 0x1 ??? */
 .global lbl_80450869
 lbl_80450869:
-.incbin "baserom.dol", 0x3D05C9, 0x1
+.byte 0x0a /* baserom.dol+0x3d05c9 */
 
 /* 0x8045086a 0x1 ??? */
 .global lbl_8045086A
 lbl_8045086A:
-.incbin "baserom.dol", 0x3D05CA, 0x1
+.byte 0x1e /* baserom.dol+0x3d05ca */
 
 /* 0x8045086b 0x1 ??? */
 .global lbl_8045086B
 lbl_8045086B:
-.incbin "baserom.dol", 0x3D05CB, 0x1
+.byte 0x14 /* baserom.dol+0x3d05cb */
 
 /* 0x8045086c 0x4 ??? */
 .global lbl_8045086C
 lbl_8045086C:
-.incbin "baserom.dol", 0x3D05CC, 0x4
+.byte 0x01, 0x00, 0x00, 0x00 /* baserom.dol+0x3d05cc */
 
 /* 0x80450870 0x4 sDeathMtBottom */
 .global lbl_80450870
 lbl_80450870:
-.incbin "baserom.dol", 0x3D05D0, 0x4
+.byte 0xc4, 0x7a, 0x00, 0x00 /* baserom.dol+0x3d05d0 */
 
 /* 0x80450874 0x4 sDeathMtTop */
 .global lbl_80450874
 lbl_80450874:
-.incbin "baserom.dol", 0x3D05D4, 0x4
+.byte 0x45, 0x64, 0x20, 0x00 /* baserom.dol+0x3d05d4 */
 
 /* 0x80450878 0x4 sUnderWaterDepthMax */
 .global lbl_80450878
 lbl_80450878:
-.incbin "baserom.dol", 0x3D05D8, 0x8
+.byte 0x45, 0x5a, 0xc0, 0x00 /* baserom.dol+0x3d05d8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d05dc */
 

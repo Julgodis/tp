@@ -4,10 +4,11 @@
 /* 0x804509b8 0x4 SwitchThreadCallback */
 .global lbl_804509B8
 lbl_804509B8:
-.incbin "baserom.dol", 0x3D0718, 0x4
+.byte 0x80, 0x34, 0x0a, 0xa4 /* baserom.dol+0x3d0718 */
 
 /* 0x804509bc 0x1 @833 */
 .global lbl_804509BC
 lbl_804509BC:
-.incbin "baserom.dol", 0x3D071C, 0x4
+.byte 0x00 /* baserom.dol+0x3d071c */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3d071d */
 
