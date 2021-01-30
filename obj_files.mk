@@ -1,5 +1,25 @@
 # Linker order for every file, passed to the Metrowerks linker.
 
+LIB_FILES :=  						                \
+    $(BUILD_DIR)/libRuntime.PPCEABI.H.a             \
+    $(BUILD_DIR)/libgd.a                            \
+    $(BUILD_DIR)/libgx.a                            \
+    $(BUILD_DIR)/libcard.a                          \
+    $(BUILD_DIR)/libdsp.a                           \
+    $(BUILD_DIR)/libar.a                            \
+    $(BUILD_DIR)/libai.a                            \
+    $(BUILD_DIR)/libpad.a                           \
+    $(BUILD_DIR)/libvi.a                            \
+    $(BUILD_DIR)/libdvd.a                           \
+    $(BUILD_DIR)/libmtx.a                           \
+    $(BUILD_DIR)/libdb.a                            \
+    $(BUILD_DIR)/libsi.a                            \
+    $(BUILD_DIR)/libexi.a                           \
+    $(BUILD_DIR)/libos.a                            \
+    $(BUILD_DIR)/libbase.a                          \
+    $(BUILD_DIR)/libJMath.a                         \
+
+
 INIT_O_FILES := 						            \
     $(BUILD_DIR)/asm/init.o
 
@@ -1013,99 +1033,329 @@ TEXT_O_FILES := 						            \
             $(BUILD_DIR)/asm/sdata2/JMATrigonometric.o \
             $(BUILD_DIR)/asm/JMath/JMATrigonometric.o \
             $(BUILD_DIR)/asm/base/PPCArch.o \
-            $(BUILD_DIR)/asm/os/OS.o \
-            $(BUILD_DIR)/asm/os/OSAlarm.o \
-            $(BUILD_DIR)/asm/os/OSAlloc.o \
-            $(BUILD_DIR)/asm/os/OSArena.o \
-            $(BUILD_DIR)/asm/os/OSAudioSystem.o \
-            $(BUILD_DIR)/asm/os/OSCache.o \
-            $(BUILD_DIR)/asm/os/OSContext.o \
-            $(BUILD_DIR)/asm/os/OSError.o \
-            $(BUILD_DIR)/asm/os/OSExec.o \
-            $(BUILD_DIR)/asm/os/OSFont.o \
-            $(BUILD_DIR)/asm/os/OSInterrupt.o \
-            $(BUILD_DIR)/asm/os/OSLink.o \
-            $(BUILD_DIR)/asm/os/OSMessage.o \
-            $(BUILD_DIR)/asm/os/OSMemory.o \
-            $(BUILD_DIR)/asm/os/OSMutex.o \
-            $(BUILD_DIR)/asm/os/OSReboot.o \
-            $(BUILD_DIR)/asm/os/OSReset.o \
-            $(BUILD_DIR)/asm/os/OSResetSW.o \
-            $(BUILD_DIR)/asm/os/OSRtc.o \
-            $(BUILD_DIR)/asm/os/OSSync.o \
-            $(BUILD_DIR)/asm/os/OSThread.o \
-            $(BUILD_DIR)/asm/os/OSTime.o \
-            $(BUILD_DIR)/asm/os///ppc/eabi/__ppc_eabi_init.o \
-            $(BUILD_DIR)/asm/exi/EXIBios.o \
-            $(BUILD_DIR)/asm/exi/EXIUart.o \
-            $(BUILD_DIR)/asm/si/SIBios.o \
-            $(BUILD_DIR)/asm/si/SISamplingRate.o \
-            $(BUILD_DIR)/asm/db/db.o \
-            $(BUILD_DIR)/asm/sdata2/mtx.o \
-            $(BUILD_DIR)/asm/mtx/mtx.o \
-            $(BUILD_DIR)/asm/mtx/mtxvec.o \
-            $(BUILD_DIR)/asm/sdata2/mtx44.o \
-            $(BUILD_DIR)/asm/mtx/mtx44.o \
-            $(BUILD_DIR)/asm/sdata2/vec.o \
-            $(BUILD_DIR)/asm/mtx/vec.o \
-            $(BUILD_DIR)/asm/sdata2/quat.o \
-            $(BUILD_DIR)/asm/mtx/quat.o \
-            $(BUILD_DIR)/asm/dvd/dvdlow.o \
-            $(BUILD_DIR)/asm/dvd/dvdfs.o \
-            $(BUILD_DIR)/asm/dvd/dvd.o \
-            $(BUILD_DIR)/asm/dvd/dvdqueue.o \
-            $(BUILD_DIR)/asm/dvd/dvderror.o \
-            $(BUILD_DIR)/asm/dvd/dvdidutils.o \
-            $(BUILD_DIR)/asm/dvd/dvdFatal.o \
-            $(BUILD_DIR)/asm/dvd/fstload.o \
-            $(BUILD_DIR)/asm/vi/vi.o \
-            $(BUILD_DIR)/asm/sdata2/Padclamp.o \
-            $(BUILD_DIR)/asm/pad/Padclamp.o \
-            $(BUILD_DIR)/asm/pad/Pad.o \
-            $(BUILD_DIR)/asm/ai/ai.o \
-            $(BUILD_DIR)/asm/ar/ar.o \
-            $(BUILD_DIR)/asm/ar/arq.o \
-            $(BUILD_DIR)/asm/dsp/dsp.o \
-            $(BUILD_DIR)/asm/dsp/dsp/dsp_debug.o \
-            $(BUILD_DIR)/asm/dsp/dsp/dsp_task.o \
-            $(BUILD_DIR)/asm/card/CARDBios.o \
-            $(BUILD_DIR)/asm/card/CARDUnlock.o \
-            $(BUILD_DIR)/asm/card/CARDRdwr.o \
-            $(BUILD_DIR)/asm/card/CARDBlock.o \
-            $(BUILD_DIR)/asm/card/CARDDir.o \
-            $(BUILD_DIR)/asm/card/CARDCheck.o \
-            $(BUILD_DIR)/asm/card/CARDMount.o \
-            $(BUILD_DIR)/asm/card/CARDFormat.o \
-            $(BUILD_DIR)/asm/card/CARDOpen.o \
-            $(BUILD_DIR)/asm/card/CARDCreate.o \
-            $(BUILD_DIR)/asm/card/CARDRead.o \
-            $(BUILD_DIR)/asm/card/CARDWrite.o \
-            $(BUILD_DIR)/asm/card/CARDStat.o \
-            $(BUILD_DIR)/asm/card/CARDNet.o \
-            $(BUILD_DIR)/asm/sdata2/GXInit.o \
-            $(BUILD_DIR)/asm/gx/GXInit.o \
-            $(BUILD_DIR)/asm/gx/GXFifo.o \
-            $(BUILD_DIR)/asm/gx/GXAttr.o \
-            $(BUILD_DIR)/asm/gx/GXMisc.o \
-            $(BUILD_DIR)/asm/gx/GXGeometry.o \
-            $(BUILD_DIR)/asm/sdata2/GXFrameBuf.o \
-            $(BUILD_DIR)/asm/gx/GXFrameBuf.o \
-            $(BUILD_DIR)/asm/sdata2/GXLight.o \
-            $(BUILD_DIR)/asm/gx/GXLight.o \
-            $(BUILD_DIR)/asm/sdata2/GXTexture.o \
-            $(BUILD_DIR)/asm/gx/GXTexture.o \
-            $(BUILD_DIR)/asm/sdata2/GXBump.o \
-            $(BUILD_DIR)/asm/gx/GXBump.o \
-            $(BUILD_DIR)/asm/gx/GXTev.o \
-            $(BUILD_DIR)/asm/sdata2/GXPixel.o \
-            $(BUILD_DIR)/asm/gx/GXPixel.o \
-            $(BUILD_DIR)/asm/gx/GXDisplayList.o \
-            $(BUILD_DIR)/asm/sdata2/GXTransform.o \
-            $(BUILD_DIR)/asm/gx/GXTransform.o \
-            $(BUILD_DIR)/asm/gx/GXPerf.o \
-            $(BUILD_DIR)/asm/gd/GDBase.o \
-            $(BUILD_DIR)/asm/gd/GDGeometry.o \
-            $(BUILD_DIR)/asm/clib.o     
+    $(BUILD_DIR)/asm/os/OS.o \
+    $(BUILD_DIR)/asm/os/OSAlarm.o \
+    $(BUILD_DIR)/asm/os/OSAlloc.o \
+    $(BUILD_DIR)/asm/os/OSArena.o \
+    $(BUILD_DIR)/asm/os/OSAudioSystem.o \
+    $(BUILD_DIR)/asm/os/OSCache.o \
+    $(BUILD_DIR)/asm/os/OSContext.o \
+    $(BUILD_DIR)/asm/os/OSError.o \
+    $(BUILD_DIR)/asm/os/OSExec.o \
+    $(BUILD_DIR)/asm/os/OSFont.o \
+    $(BUILD_DIR)/asm/os/OSInterrupt.o \
+    $(BUILD_DIR)/asm/os/OSLink.o \
+    $(BUILD_DIR)/asm/os/OSMessage.o \
+    $(BUILD_DIR)/asm/os/OSMemory.o \
+    $(BUILD_DIR)/asm/os/OSMutex.o \
+    $(BUILD_DIR)/asm/os/OSReboot.o \
+    $(BUILD_DIR)/asm/os/OSReset.o \
+    $(BUILD_DIR)/asm/os/OSResetSW.o \
+    $(BUILD_DIR)/asm/os/OSRtc.o \
+    $(BUILD_DIR)/asm/os/OSSync.o \
+    $(BUILD_DIR)/asm/os/OSThread.o \
+    $(BUILD_DIR)/asm/os/OSTime.o \
+    $(BUILD_DIR)/asm/os///ppc/eabi/__ppc_eabi_init.o \
+    $(BUILD_DIR)/asm/exi/EXIBios.o \
+    $(BUILD_DIR)/asm/exi/EXIUart.o \
+    $(BUILD_DIR)/asm/si/SIBios.o \
+    $(BUILD_DIR)/asm/si/SISamplingRate.o \
+    $(BUILD_DIR)/asm/db/db.o  \
+    $(BUILD_DIR)/asm/sdata2/mtx.o \
+    $(BUILD_DIR)/asm/sdata2/mtx44.o \
+    $(BUILD_DIR)/asm/sdata2/vec.o \
+    $(BUILD_DIR)/asm/sdata2/quat.o \
+    $(BUILD_DIR)/asm/mtx/mtx.o \
+    $(BUILD_DIR)/asm/mtx/mtxvec.o \
+    $(BUILD_DIR)/asm/mtx/mtx44.o \
+    $(BUILD_DIR)/asm/mtx/vec.o \
+    $(BUILD_DIR)/asm/mtx/quat.o  \
+    $(BUILD_DIR)/asm/dvd/dvdlow.o \
+    $(BUILD_DIR)/asm/dvd/dvdfs.o \
+    $(BUILD_DIR)/asm/dvd/dvd.o \
+    $(BUILD_DIR)/asm/dvd/dvdqueue.o \
+    $(BUILD_DIR)/asm/dvd/dvderror.o \
+    $(BUILD_DIR)/asm/dvd/dvdidutils.o \
+    $(BUILD_DIR)/asm/dvd/dvdFatal.o \
+    $(BUILD_DIR)/asm/dvd/fstload.o \
+    $(BUILD_DIR)/asm/vi/vi.o  \
+    $(BUILD_DIR)/asm/sdata2/Padclamp.o \
+    $(BUILD_DIR)/asm/pad/Padclamp.o \
+    $(BUILD_DIR)/asm/pad/Pad.o  \
+    $(BUILD_DIR)/asm/ai/ai.o  \
+    $(BUILD_DIR)/asm/ar/ar.o \
+    $(BUILD_DIR)/asm/ar/arq.o  \
+    $(BUILD_DIR)/asm/dsp/dsp.o \
+    $(BUILD_DIR)/asm/dsp/dsp/dsp_debug.o \
+    $(BUILD_DIR)/asm/dsp/dsp/dsp_task.o  \
+    $(BUILD_DIR)/asm/card/CARDBios.o \
+    $(BUILD_DIR)/asm/card/CARDUnlock.o \
+    $(BUILD_DIR)/asm/card/CARDRdwr.o \
+    $(BUILD_DIR)/asm/card/CARDBlock.o \
+    $(BUILD_DIR)/asm/card/CARDDir.o \
+    $(BUILD_DIR)/asm/card/CARDCheck.o \
+    $(BUILD_DIR)/asm/card/CARDMount.o \
+    $(BUILD_DIR)/asm/card/CARDFormat.o \
+    $(BUILD_DIR)/asm/card/CARDOpen.o \
+    $(BUILD_DIR)/asm/card/CARDCreate.o \
+    $(BUILD_DIR)/asm/card/CARDRead.o \
+    $(BUILD_DIR)/asm/card/CARDWrite.o \
+    $(BUILD_DIR)/asm/card/CARDStat.o \
+    $(BUILD_DIR)/asm/card/CARDNet.o  \
+    $(BUILD_DIR)/asm/sdata2/GXInit.o \
+    $(BUILD_DIR)/asm/sdata2/GXFrameBuf.o \
+    $(BUILD_DIR)/asm/sdata2/GXLight.o \
+    $(BUILD_DIR)/asm/sdata2/GXTexture.o \
+    $(BUILD_DIR)/asm/sdata2/GXBump.o \
+    $(BUILD_DIR)/asm/sdata2/GXPixel.o \
+    $(BUILD_DIR)/asm/sdata2/GXTransform.o \
+    $(BUILD_DIR)/asm/gx/GXInit.o \
+    $(BUILD_DIR)/asm/gx/GXFifo.o \
+    $(BUILD_DIR)/asm/gx/GXAttr.o \
+    $(BUILD_DIR)/asm/gx/GXMisc.o \
+    $(BUILD_DIR)/asm/gx/GXGeometry.o \
+    $(BUILD_DIR)/asm/gx/GXFrameBuf.o \
+    $(BUILD_DIR)/asm/gx/GXLight.o \
+    $(BUILD_DIR)/asm/gx/GXTexture.o \
+    $(BUILD_DIR)/asm/gx/GXBump.o \
+    $(BUILD_DIR)/asm/gx/GXTev.o \
+    $(BUILD_DIR)/asm/gx/GXPixel.o \
+    $(BUILD_DIR)/asm/gx/GXDisplayList.o \
+    $(BUILD_DIR)/asm/gx/GXTransform.o \
+    $(BUILD_DIR)/asm/gx/GXPerf.o  \
+    $(BUILD_DIR)/asm/gd/GDBase.o \
+    $(BUILD_DIR)/asm/gd/GDGeometry.o \
+    $(BUILD_DIR)/asm/rodata/rodata_Padclamp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_ptmf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_runtime.o \
+    $(BUILD_DIR)/asm/rodata/rodata_GCN_mem_alloc.o \
+    $(BUILD_DIR)/asm/rodata/rodata_alloc.o \
+    $(BUILD_DIR)/asm/rodata/rodata_ansi_fp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_printf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_exp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_fmod.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_pow.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_rem_pio2.o \
+    $(BUILD_DIR)/asm/rodata/rodata_k_rem_pio2.o \
+    $(BUILD_DIR)/asm/rodata/rodata_k_tan.o \
+    $(BUILD_DIR)/asm/rodata/rodata_s_atan.o \
+    $(BUILD_DIR)/asm/rodata/rodata_nubinit.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msg.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msgbuf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_serpoll.o \
+    $(BUILD_DIR)/asm/rodata/rodata_dispatch.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msghndlr.o \
+    $(BUILD_DIR)/asm/rodata/rodata_support.o \
+    $(BUILD_DIR)/asm/rodata/rodata_targimpl.o \
+    $(BUILD_DIR)/asm/rodata/rodata_main_TRK.o \
+    $(BUILD_DIR)/asm/rodata/rodata_dolphin_trk_glue.o \
+    $(BUILD_DIR)/asm/rodata/rodata_main.o \
+    $(BUILD_DIR)/asm/sdata2/ansi_fp.o \
+    $(BUILD_DIR)/asm/sdata2/mbstring.o \
+    $(BUILD_DIR)/asm/sdata2/printf.o \
+    $(BUILD_DIR)/asm/sdata2/e_acos.o \
+    $(BUILD_DIR)/asm/sdata2/e_asin.o \
+    $(BUILD_DIR)/asm/sdata2/e_atan2.o \
+    $(BUILD_DIR)/asm/sdata2/e_exp.o \
+    $(BUILD_DIR)/asm/sdata2/e_pow.o \
+    $(BUILD_DIR)/asm/sdata2/e_rem_pio2.o \
+    $(BUILD_DIR)/asm/sdata2/k_cos.o \
+    $(BUILD_DIR)/asm/sdata2/k_rem_pio2.o \
+    $(BUILD_DIR)/asm/sdata2/k_sin.o \
+    $(BUILD_DIR)/asm/sdata2/k_tan.o \
+    $(BUILD_DIR)/asm/sdata2/s_atan.o \
+    $(BUILD_DIR)/asm/sdata2/s_ceil.o \
+    $(BUILD_DIR)/asm/sdata2/s_cos.o \
+    $(BUILD_DIR)/asm/sdata2/s_floor.o \
+    $(BUILD_DIR)/asm/sdata2/s_frexp.o \
+    $(BUILD_DIR)/asm/sdata2/s_ldexp.o \
+    $(BUILD_DIR)/asm/sdata2/s_sin.o \
+    $(BUILD_DIR)/asm/sdata2/s_tan.o \
+    $(BUILD_DIR)/asm/sdata2/e_sqrt.o  \
+    $(BUILD_DIR)/asm/clib.o  
+
+#
+#
+
+JMATH_O_FILES := \
+    $(BUILD_DIR)/asm/sdata2/JMath.o \
+    $(BUILD_DIR)/asm/JMath/JMath.o \
+    $(BUILD_DIR)/libs/JSystem/JMath/random.o \
+    $(BUILD_DIR)/asm/sdata2/JMATrigonometric.o \
+    $(BUILD_DIR)/asm/JMath/JMATrigonometric.o 
+
+BASE_O_FILES := \
+    $(BUILD_DIR)/asm/base/PPCArch.o 
+
+OS_O_FILES := \
+    $(BUILD_DIR)/asm/os/OS.o \
+    $(BUILD_DIR)/asm/os/OSAlarm.o \
+    $(BUILD_DIR)/asm/os/OSAlloc.o \
+    $(BUILD_DIR)/asm/os/OSArena.o \
+    $(BUILD_DIR)/asm/os/OSAudioSystem.o \
+    $(BUILD_DIR)/asm/os/OSCache.o \
+    $(BUILD_DIR)/asm/os/OSContext.o \
+    $(BUILD_DIR)/asm/os/OSError.o \
+    $(BUILD_DIR)/asm/os/OSExec.o \
+    $(BUILD_DIR)/asm/os/OSFont.o \
+    $(BUILD_DIR)/asm/os/OSInterrupt.o \
+    $(BUILD_DIR)/asm/os/OSLink.o \
+    $(BUILD_DIR)/asm/os/OSMessage.o \
+    $(BUILD_DIR)/asm/os/OSMemory.o \
+    $(BUILD_DIR)/asm/os/OSMutex.o \
+    $(BUILD_DIR)/asm/os/OSReboot.o \
+    $(BUILD_DIR)/asm/os/OSReset.o \
+    $(BUILD_DIR)/asm/os/OSResetSW.o \
+    $(BUILD_DIR)/asm/os/OSRtc.o \
+    $(BUILD_DIR)/asm/os/OSSync.o \
+    $(BUILD_DIR)/asm/os/OSThread.o \
+    $(BUILD_DIR)/asm/os/OSTime.o \
+    $(BUILD_DIR)/asm/os///ppc/eabi/__ppc_eabi_init.o
+
+EXI_O_FILES := \
+    $(BUILD_DIR)/asm/exi/EXIBios.o \
+    $(BUILD_DIR)/asm/exi/EXIUart.o 
+
+SI_O_FILES := \
+    $(BUILD_DIR)/asm/si/SIBios.o \
+    $(BUILD_DIR)/asm/si/SISamplingRate.o
+            
+DB_O_FILES := \
+    $(BUILD_DIR)/asm/db/db.o 
+
+MTX_O_FILES := \
+    $(BUILD_DIR)/asm/sdata2/mtx.o \
+    $(BUILD_DIR)/asm/sdata2/mtx44.o \
+    $(BUILD_DIR)/asm/sdata2/vec.o \
+    $(BUILD_DIR)/asm/sdata2/quat.o \
+    $(BUILD_DIR)/asm/mtx/mtx.o \
+    $(BUILD_DIR)/asm/mtx/mtxvec.o \
+    $(BUILD_DIR)/asm/mtx/mtx44.o \
+    $(BUILD_DIR)/asm/mtx/vec.o \
+    $(BUILD_DIR)/asm/mtx/quat.o 
+
+DVD_O_FILES := \
+    $(BUILD_DIR)/asm/dvd/dvdlow.o \
+    $(BUILD_DIR)/asm/dvd/dvdfs.o \
+    $(BUILD_DIR)/asm/dvd/dvd.o \
+    $(BUILD_DIR)/asm/dvd/dvdqueue.o \
+    $(BUILD_DIR)/asm/dvd/dvderror.o \
+    $(BUILD_DIR)/asm/dvd/dvdidutils.o \
+    $(BUILD_DIR)/asm/dvd/dvdFatal.o \
+    $(BUILD_DIR)/asm/dvd/fstload.o
+
+VI_O_FILES := \
+    $(BUILD_DIR)/asm/vi/vi.o 
+
+PAD_O_FILES := \
+    $(BUILD_DIR)/asm/sdata2/Padclamp.o \
+    $(BUILD_DIR)/asm/pad/Padclamp.o \
+    $(BUILD_DIR)/asm/pad/Pad.o 
+
+AI_O_FILES := \
+    $(BUILD_DIR)/asm/ai/ai.o 
+
+AR_O_FILES := \
+    $(BUILD_DIR)/asm/ar/ar.o \
+    $(BUILD_DIR)/asm/ar/arq.o 
+
+DSP_O_FILES := \
+    $(BUILD_DIR)/asm/dsp/dsp.o \
+    $(BUILD_DIR)/asm/dsp/dsp/dsp_debug.o \
+    $(BUILD_DIR)/asm/dsp/dsp/dsp_task.o 
+
+CARD_O_FILES := \
+    $(BUILD_DIR)/asm/card/CARDBios.o \
+    $(BUILD_DIR)/asm/card/CARDUnlock.o \
+    $(BUILD_DIR)/asm/card/CARDRdwr.o \
+    $(BUILD_DIR)/asm/card/CARDBlock.o \
+    $(BUILD_DIR)/asm/card/CARDDir.o \
+    $(BUILD_DIR)/asm/card/CARDCheck.o \
+    $(BUILD_DIR)/asm/card/CARDMount.o \
+    $(BUILD_DIR)/asm/card/CARDFormat.o \
+    $(BUILD_DIR)/asm/card/CARDOpen.o \
+    $(BUILD_DIR)/asm/card/CARDCreate.o \
+    $(BUILD_DIR)/asm/card/CARDRead.o \
+    $(BUILD_DIR)/asm/card/CARDWrite.o \
+    $(BUILD_DIR)/asm/card/CARDStat.o \
+    $(BUILD_DIR)/asm/card/CARDNet.o 
+
+GX_O_FILES :=                        \
+    $(BUILD_DIR)/asm/sdata2/GXInit.o \
+    $(BUILD_DIR)/asm/sdata2/GXFrameBuf.o \
+    $(BUILD_DIR)/asm/sdata2/GXLight.o \
+    $(BUILD_DIR)/asm/sdata2/GXTexture.o \
+    $(BUILD_DIR)/asm/sdata2/GXBump.o \
+    $(BUILD_DIR)/asm/sdata2/GXPixel.o \
+    $(BUILD_DIR)/asm/sdata2/GXTransform.o \
+    $(BUILD_DIR)/asm/gx/GXInit.o \
+    $(BUILD_DIR)/asm/gx/GXFifo.o \
+    $(BUILD_DIR)/asm/gx/GXAttr.o \
+    $(BUILD_DIR)/asm/gx/GXMisc.o \
+    $(BUILD_DIR)/asm/gx/GXGeometry.o \
+    $(BUILD_DIR)/asm/gx/GXFrameBuf.o \
+    $(BUILD_DIR)/asm/gx/GXLight.o \
+    $(BUILD_DIR)/asm/gx/GXTexture.o \
+    $(BUILD_DIR)/asm/gx/GXBump.o \
+    $(BUILD_DIR)/asm/gx/GXTev.o \
+    $(BUILD_DIR)/asm/gx/GXPixel.o \
+    $(BUILD_DIR)/asm/gx/GXDisplayList.o \
+    $(BUILD_DIR)/asm/gx/GXTransform.o \
+    $(BUILD_DIR)/asm/gx/GXPerf.o 
+
+GD_O_FILES :=                                      \
+    $(BUILD_DIR)/asm/gd/GDBase.o \
+    $(BUILD_DIR)/asm/gd/GDGeometry.o   
+
+RUNTIME_O_FILES :=                                     \
+    $(BUILD_DIR)/asm/rodata/rodata_Padclamp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_ptmf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_runtime.o \
+    $(BUILD_DIR)/asm/rodata/rodata_GCN_mem_alloc.o \
+    $(BUILD_DIR)/asm/rodata/rodata_alloc.o \
+    $(BUILD_DIR)/asm/rodata/rodata_ansi_fp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_printf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_exp.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_fmod.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_pow.o \
+    $(BUILD_DIR)/asm/rodata/rodata_e_rem_pio2.o \
+    $(BUILD_DIR)/asm/rodata/rodata_k_rem_pio2.o \
+    $(BUILD_DIR)/asm/rodata/rodata_k_tan.o \
+    $(BUILD_DIR)/asm/rodata/rodata_s_atan.o \
+    $(BUILD_DIR)/asm/rodata/rodata_nubinit.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msg.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msgbuf.o \
+    $(BUILD_DIR)/asm/rodata/rodata_serpoll.o \
+    $(BUILD_DIR)/asm/rodata/rodata_dispatch.o \
+    $(BUILD_DIR)/asm/rodata/rodata_msghndlr.o \
+    $(BUILD_DIR)/asm/rodata/rodata_support.o \
+    $(BUILD_DIR)/asm/rodata/rodata_targimpl.o \
+    $(BUILD_DIR)/asm/rodata/rodata_main_TRK.o \
+    $(BUILD_DIR)/asm/rodata/rodata_dolphin_trk_glue.o \
+    $(BUILD_DIR)/asm/rodata/rodata_main.o \
+    $(BUILD_DIR)/asm/sdata2/ansi_fp.o \
+    $(BUILD_DIR)/asm/sdata2/mbstring.o \
+    $(BUILD_DIR)/asm/sdata2/printf.o \
+    $(BUILD_DIR)/asm/sdata2/e_acos.o \
+    $(BUILD_DIR)/asm/sdata2/e_asin.o \
+    $(BUILD_DIR)/asm/sdata2/e_atan2.o \
+    $(BUILD_DIR)/asm/sdata2/e_exp.o \
+    $(BUILD_DIR)/asm/sdata2/e_pow.o \
+    $(BUILD_DIR)/asm/sdata2/e_rem_pio2.o \
+    $(BUILD_DIR)/asm/sdata2/k_cos.o \
+    $(BUILD_DIR)/asm/sdata2/k_rem_pio2.o \
+    $(BUILD_DIR)/asm/sdata2/k_sin.o \
+    $(BUILD_DIR)/asm/sdata2/k_tan.o \
+    $(BUILD_DIR)/asm/sdata2/s_atan.o \
+    $(BUILD_DIR)/asm/sdata2/s_ceil.o \
+    $(BUILD_DIR)/asm/sdata2/s_cos.o \
+    $(BUILD_DIR)/asm/sdata2/s_floor.o \
+    $(BUILD_DIR)/asm/sdata2/s_frexp.o \
+    $(BUILD_DIR)/asm/sdata2/s_ldexp.o \
+    $(BUILD_DIR)/asm/sdata2/s_sin.o \
+    $(BUILD_DIR)/asm/sdata2/s_tan.o \
+    $(BUILD_DIR)/asm/sdata2/e_sqrt.o  \
+    $(BUILD_DIR)/asm/clib.o  
 
 CTORS_O_FILES :=                                    \
     $(BUILD_DIR)/asm/ctors.o
@@ -1113,32 +1363,7 @@ CTORS_O_FILES :=                                    \
 DTORS_O_FILES :=                                    \
     $(BUILD_DIR)/asm/dtors.o
 
-RODATA_O_FILES := \
-            $(BUILD_DIR)/asm/rodata/rodata_Padclamp.o \
-            $(BUILD_DIR)/asm/rodata/rodata_ptmf.o \
-            $(BUILD_DIR)/asm/rodata/rodata_runtime.o \
-            $(BUILD_DIR)/asm/rodata/rodata_GCN_mem_alloc.o \
-            $(BUILD_DIR)/asm/rodata/rodata_alloc.o \
-            $(BUILD_DIR)/asm/rodata/rodata_ansi_fp.o \
-            $(BUILD_DIR)/asm/rodata/rodata_printf.o \
-            $(BUILD_DIR)/asm/rodata/rodata_e_exp.o \
-            $(BUILD_DIR)/asm/rodata/rodata_e_fmod.o \
-            $(BUILD_DIR)/asm/rodata/rodata_e_pow.o \
-            $(BUILD_DIR)/asm/rodata/rodata_e_rem_pio2.o \
-            $(BUILD_DIR)/asm/rodata/rodata_k_rem_pio2.o \
-            $(BUILD_DIR)/asm/rodata/rodata_k_tan.o \
-            $(BUILD_DIR)/asm/rodata/rodata_s_atan.o \
-            $(BUILD_DIR)/asm/rodata/rodata_nubinit.o \
-            $(BUILD_DIR)/asm/rodata/rodata_msg.o \
-            $(BUILD_DIR)/asm/rodata/rodata_msgbuf.o \
-            $(BUILD_DIR)/asm/rodata/rodata_serpoll.o \
-            $(BUILD_DIR)/asm/rodata/rodata_dispatch.o \
-            $(BUILD_DIR)/asm/rodata/rodata_msghndlr.o \
-            $(BUILD_DIR)/asm/rodata/rodata_support.o \
-            $(BUILD_DIR)/asm/rodata/rodata_targimpl.o \
-            $(BUILD_DIR)/asm/rodata/rodata_main_TRK.o \
-            $(BUILD_DIR)/asm/rodata/rodata_dolphin_trk_glue.o \
-            $(BUILD_DIR)/asm/rodata/rodata_main.o 
+RODATA_O_FILES := 
 
 DATA_O_FILES :=                                     \
     $(BUILD_DIR)/asm/data.o                         
@@ -1147,34 +1372,97 @@ BSS_O_FILES :=                                      \
     $(BUILD_DIR)/asm/bss.o
 
 SDATA_O_FILES :=                                      \
-    $(BUILD_DIR)/asm/sdata.o
+    $(BUILD_DIR)/asm/sdata/m_Do_main.o \
+    $(BUILD_DIR)/asm/sdata/m_Do_graphic.o \
+    $(BUILD_DIR)/asm/sdata/m_Do_machine.o \
+    $(BUILD_DIR)/asm/sdata/m_Do_mtx.o \
+    $(BUILD_DIR)/asm/sdata/f_op_overlap_mng.o \
+    $(BUILD_DIR)/asm/sdata/f_op_scene_mng.o \
+    $(BUILD_DIR)/asm/sdata/f_op_kankyo_mng.o \
+    $(BUILD_DIR)/asm/sdata/f_op_msg_mng.o \
+    $(BUILD_DIR)/asm/sdata/f_op_draw_tag.o \
+    $(BUILD_DIR)/asm/sdata/f_pc_line.o \
+    $(BUILD_DIR)/asm/sdata/f_pc_node.o \
+    $(BUILD_DIR)/asm/sdata/f_pc_priority.o \
+    $(BUILD_DIR)/asm/sdata/d_map.o \
+    $(BUILD_DIR)/asm/sdata/d_com_inf_game.o \
+    $(BUILD_DIR)/asm/sdata/d_com_inf_actor.o \
+    $(BUILD_DIR)/asm/sdata/d_demo.o \
+    $(BUILD_DIR)/asm/sdata/d_resorce.o \
+    $(BUILD_DIR)/asm/sdata/d_map_path_dmap.o \
+    $(BUILD_DIR)/asm/sdata/d_event_data.o \
+    $(BUILD_DIR)/asm/sdata/d_drawlist.o \
+    $(BUILD_DIR)/asm/sdata/d_attention.o \
+    $(BUILD_DIR)/asm/sdata/d_a_alink.o \
+    $(BUILD_DIR)/asm/sdata/d_a_obj_item.o \
+    $(BUILD_DIR)/asm/sdata/d_file_select.o \
+    $(BUILD_DIR)/asm/sdata/d_shop_system.o \
+    $(BUILD_DIR)/asm/sdata/d_kankyo.o \
+    $(BUILD_DIR)/asm/sdata/d_menu_collect.o \
+    $(BUILD_DIR)/asm/sdata/d_menu_fmap_map.o \
+    $(BUILD_DIR)/asm/sdata/d_menu_option.o \
+    $(BUILD_DIR)/asm/sdata/d_menu_save.o \
+    $(BUILD_DIR)/asm/sdata/d_menu_window_HIO.o \
+    $(BUILD_DIR)/asm/sdata/d_s_name.o \
+    $(BUILD_DIR)/asm/sdata/c_lib.o \
+    $(BUILD_DIR)/asm/sdata/JFWSystem.o \
+    $(BUILD_DIR)/asm/sdata/JPABaseShape.o \
+    $(BUILD_DIR)/asm/sdata/JASAiCtrl.o \
+    $(BUILD_DIR)/asm/sdata/JASDSPInterface.o \
+    $(BUILD_DIR)/asm/sdata/JASDriverIF.o \
+    $(BUILD_DIR)/asm/sdata/dspproc.o \
+    $(BUILD_DIR)/asm/sdata/JAUSectionHeap.o \
+    $(BUILD_DIR)/asm/sdata/Z2Param.o \
+    $(BUILD_DIR)/asm/sdata/Z2SeqMgr.o \
+    $(BUILD_DIR)/asm/sdata/Z2WolfHowlMgr.o \
+    $(BUILD_DIR)/asm/sdata/GFGeometry.o \
+    $(BUILD_DIR)/asm/sdata/JKRAram.o \
+    $(BUILD_DIR)/asm/sdata/JKRFileLoader.o \
+    $(BUILD_DIR)/asm/sdata/JKRDvdRipper.o \
+    $(BUILD_DIR)/asm/sdata/JKRDvdAramRipper.o \
+    $(BUILD_DIR)/asm/sdata/JUTGamePad.o \
+    $(BUILD_DIR)/asm/sdata/JUTException.o \
+    $(BUILD_DIR)/asm/sdata/JUTProcBar.o \
+    $(BUILD_DIR)/asm/sdata/J3DGD.o \
+    $(BUILD_DIR)/asm/sdata/J3DSys.o \
+    $(BUILD_DIR)/asm/sdata/J3DTransform.o \
+    $(BUILD_DIR)/asm/sdata/J3DMatBlock.o \
+    $(BUILD_DIR)/asm/sdata/J3DMtxBuffer.o \
+    $(BUILD_DIR)/asm/sdata/OS.o \
+    $(BUILD_DIR)/asm/sdata/OSAlloc.o \
+    $(BUILD_DIR)/asm/sdata/OSArena.o \
+    $(BUILD_DIR)/asm/sdata/OSError.o \
+    $(BUILD_DIR)/asm/sdata/OSExec.o \
+    $(BUILD_DIR)/asm/sdata/OSFont.o \
+    $(BUILD_DIR)/asm/sdata/OSThread.o \
+    $(BUILD_DIR)/asm/sdata/EXIBios.o \
+    $(BUILD_DIR)/asm/sdata/SIBios.o \
+    $(BUILD_DIR)/asm/sdata/mtx.o \
+    $(BUILD_DIR)/asm/sdata/dvdlow.o \
+    $(BUILD_DIR)/asm/sdata/dvdfs.o \
+    $(BUILD_DIR)/asm/sdata/dvd.o \
+    $(BUILD_DIR)/asm/sdata/fstload.o \
+    $(BUILD_DIR)/asm/sdata/vi.o \
+    $(BUILD_DIR)/asm/sdata/Pad.o \
+    $(BUILD_DIR)/asm/sdata/ai.o \
+    $(BUILD_DIR)/asm/sdata/ar.o \
+    $(BUILD_DIR)/asm/sdata/arq.o \
+    $(BUILD_DIR)/asm/sdata/dsp.o \
+    $(BUILD_DIR)/asm/sdata/CARDBios.o \
+    $(BUILD_DIR)/asm/sdata/CARDUnlock.o \
+    $(BUILD_DIR)/asm/sdata/CARDNet.o \
+    $(BUILD_DIR)/asm/sdata/GXInit.o \
+    $(BUILD_DIR)/asm/sdata/GXAttr.o \
+    $(BUILD_DIR)/asm/sdata/GXTexture.o \
+    $(BUILD_DIR)/asm/sdata/__init_cpp_exceptions.o \
+    $(BUILD_DIR)/asm/sdata/printf.o \
+    $(BUILD_DIR)/asm/sdata/float.o \
+
 
 SBSS_O_FILES :=                                     \
     $(BUILD_DIR)/asm/sbss.o
 
-SDATA2_O_FILES :=  \
-            $(BUILD_DIR)/asm/sdata2/ansi_fp.o \
-            $(BUILD_DIR)/asm/sdata2/mbstring.o \
-            $(BUILD_DIR)/asm/sdata2/printf.o \
-            $(BUILD_DIR)/asm/sdata2/e_acos.o \
-            $(BUILD_DIR)/asm/sdata2/e_asin.o \
-            $(BUILD_DIR)/asm/sdata2/e_atan2.o \
-            $(BUILD_DIR)/asm/sdata2/e_exp.o \
-            $(BUILD_DIR)/asm/sdata2/e_pow.o \
-            $(BUILD_DIR)/asm/sdata2/e_rem_pio2.o \
-            $(BUILD_DIR)/asm/sdata2/k_cos.o \
-            $(BUILD_DIR)/asm/sdata2/k_rem_pio2.o \
-            $(BUILD_DIR)/asm/sdata2/k_sin.o \
-            $(BUILD_DIR)/asm/sdata2/k_tan.o \
-            $(BUILD_DIR)/asm/sdata2/s_atan.o \
-            $(BUILD_DIR)/asm/sdata2/s_ceil.o \
-            $(BUILD_DIR)/asm/sdata2/s_cos.o \
-            $(BUILD_DIR)/asm/sdata2/s_floor.o \
-            $(BUILD_DIR)/asm/sdata2/s_frexp.o \
-            $(BUILD_DIR)/asm/sdata2/s_ldexp.o \
-            $(BUILD_DIR)/asm/sdata2/s_sin.o \
-            $(BUILD_DIR)/asm/sdata2/s_tan.o \
-            $(BUILD_DIR)/asm/sdata2/e_sqrt.o 
+SDATA2_O_FILES :=  
 
 SBSS2_O_FILES :=                                    \
     $(BUILD_DIR)/asm/sbss2.o

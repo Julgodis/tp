@@ -70,6 +70,13 @@ ELF2DOL := tools/elf2dol
 PYTHON  := python3
 DOXYGEN := doxygen
 
+# Library order matters!
+LIBS     := 
+#-lbase -los -lexi -lsi -ldb \
+#-lmtx -ldvd -lvi -lpad -lai -lar -ldsp \
+#-lcard -lgx -lgd -lRuntime.PPCEABI.H
+LIB_PATH := $(BUILD_DIR)
+
 POSTPROC := tools/postprocess.py
 
 # Options
@@ -79,7 +86,8 @@ INCLUDES := -i include -i include/dolphin/ -i src
 ASFLAGS := -mgekko -I include
 
 # Linker flags
-LDFLAGS := -map $(MAP) -fp hard -nodefaults -w off
+LDFLAGS     := -map $(MAP) -fp hard -nodefaults -w off -lr $(LIB_PATH) $(LIBS)
+LIB_LDFLAGS := -library -fp hard -nodefaults -w off 
 
 # Compiler flags
 CFLAGS  += -Cpp_exceptions off -proc gekko -fp hard -O3 -nodefaults -msgstyle gcc -str pool,readonly,reuse -RTTI off -maxerrors 5 -enum int $(INCLUDES)
@@ -96,7 +104,7 @@ SBSS_PDHR := 10
 
 default: all
 
-all: dirs $(DOL)
+all: dirs libs $(DOL)
 
 ALL_DIRS := build $(BUILD_DIR) $(addprefix $(BUILD_DIR)/,$(SRC_DIRS) $(ASM_DIRS))
 
@@ -121,8 +129,82 @@ tools:
 docs:
 	$(DOXYGEN) Doxyfile
 
-$(ELF): $(O_FILES) $(LDSCRIPT)
-	echo $(O_FILES) > build/o_files
+
+# libraries
+libs: $(LIB_FILES)
+
+$(BUILD_DIR)/libRuntime.PPCEABI.H.a: $(RUNTIME_O_FILES)
+	@echo $(RUNTIME_O_FILES) > build/runtime_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/runtime_o_files
+
+$(BUILD_DIR)/libgd.a: $(GD_O_FILES)
+	@echo $(GD_O_FILES) > build/gd_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/gd_o_files
+
+$(BUILD_DIR)/libgx.a: $(GX_O_FILES)
+	@echo $(GX_O_FILES) > build/gx_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/gx_o_files
+
+$(BUILD_DIR)/libcard.a: $(CARD_O_FILES)
+	@echo $(CARD_O_FILES) > build/card_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/card_o_files
+
+$(BUILD_DIR)/libdsp.a: $(DSP_O_FILES)
+	@echo $(DSP_O_FILES) > build/dsp_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/dsp_o_files
+
+$(BUILD_DIR)/libar.a: $(AR_O_FILES)
+	@echo $(AR_O_FILES) > build/ar_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/ar_o_files
+
+$(BUILD_DIR)/libai.a: $(AI_O_FILES)
+	@echo $(AI_O_FILES) > build/ai_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/ai_o_files
+
+$(BUILD_DIR)/libpad.a: $(PAD_O_FILES)
+	@echo $(PAD_O_FILES) > build/pad_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/pad_o_files
+
+$(BUILD_DIR)/libvi.a: $(VI_O_FILES)
+	@echo $(VI_O_FILES) > build/vi_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/vi_o_files
+
+$(BUILD_DIR)/libdvd.a: $(DVD_O_FILES)
+	@echo $(DVD_O_FILES) > build/dvd_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/dvd_o_files
+
+$(BUILD_DIR)/libmtx.a: $(MTX_O_FILES)
+	@echo $(MTX_O_FILES) > build/mtx_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/mtx_o_files
+
+$(BUILD_DIR)/libdb.a: $(DB_O_FILES)
+	@echo $(DB_O_FILES) > build/db_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/db_o_files
+
+$(BUILD_DIR)/libsi.a: $(SI_O_FILES)
+	@echo $(SI_O_FILES) > build/si_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/si_o_files
+
+$(BUILD_DIR)/libexi.a: $(EXI_O_FILES)
+	@echo $(EXI_O_FILES) > build/exi_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/exi_o_files
+
+$(BUILD_DIR)/libos.a: $(OS_O_FILES)
+	@echo $(OS_O_FILES) > build/os_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/os_o_files
+
+$(BUILD_DIR)/libbase.a: $(BASE_O_FILES)
+	@echo $(BASE_O_FILES) > build/base_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/base_o_files
+
+$(BUILD_DIR)/libJMath.a: $(JMATH_O_FILES)
+	@echo $(JMATH_O_FILES) > build/jmath_o_files
+	$(LD) $(LIB_LDFLAGS) -o $@ @build/jmath_o_files
+
+# elf
+$(ELF): $(O_FILES) $(LDSCRIPT) libs
+	@echo $(O_FILES) > build/o_files
+	$(LD) $(LIB_LDFLAGS) -r -o $(BUILD_DIR)/test.a $(SDATA_O_FILES)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 #	$(OBJCOPY) $@ $@
