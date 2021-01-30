@@ -204,7 +204,6 @@ $(BUILD_DIR)/libJMath.a: $(JMATH_O_FILES)
 # elf
 $(ELF): $(O_FILES) $(LDSCRIPT) libs
 	@echo $(O_FILES) > build/o_files
-	$(LD) $(LIB_LDFLAGS) -r -o $(BUILD_DIR)/test.a $(DATA_O_FILES)
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 #	$(OBJCOPY) $@ $@
