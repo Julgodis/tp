@@ -77,9 +77,6 @@ extern u8 lbl_803C3384;
 #define _SDA_BASE_(dummy) 0
 #define _SDA2_BASE_(dummy) 0
 
-// func_802CE138
-extern void* lbl_803CBF70;  // JKRHeap::__vt
-
 class JKRHeap;
 extern JKRHeap* sSystemHeap__7JKRHeap;   // JKRHeap::sSystemHeap
 extern JKRHeap* sRootHeap__7JKRHeap;     // JKRHeap::sRootHeap

@@ -5,9 +5,7 @@
 #include "dolphin/types.h"
 #include "global.h"
 
-class JKRHeap;
-typedef void (*JKRErrorHandler)(JKRHeap*, u32, int);
-extern JKRErrorHandler lbl_8045137C;  // JKRHeap::mErrorHandler
+typedef void (*JKRErrorHandler)(void*, u32, int);
 
 class JKRHeap : public JKRDisposer {
 public:
@@ -40,12 +38,12 @@ public:
     void freeAll();
     void freeTail();
     s32 resize(void* ptr, u32 size);
-    s32 getSize(void* ptr) const;
-    s32 getFreeSize() const;
+    s32 getSize(void* ptr);
+    s32 getFreeSize();
     void* getMaxFreeBlock() const;
-    s32 getTotalFreeSize() const;
+    s32 getTotalFreeSize();
     u8 changeGroupID(u8 newGroupId);
-    u32 getMaxAllocatableSize(int alignment) const;
+    u32 getMaxAllocatableSize(int alignment);
 
     JKRHeap* find(void* ptr) const;
     JKRHeap* findAllHeap(void* ptr) const;
@@ -87,9 +85,8 @@ public:
     u32 getSize() const { return mSize; }
     bool getErrorFlag() const { return mErrorFlag; }
     void callErrorHandler(JKRHeap* heap, u32 size, int alignment) {
-        // lbl_8045137C = JKRHeap::mErrorHandler
-        if (lbl_8045137C) {
-            (*lbl_8045137C)(heap, size, alignment);
+        if (mErrorHandler) {
+            (*mErrorHandler)(heap, size, alignment);
         }
     }
 
@@ -133,7 +130,7 @@ public:
     static void fillMemory(void* dst, u32 size, u8 value);  // NOTE: never used
     static bool checkMemoryFilled(void* src, u32 size, u8 value);
 
-    static void JKRDefaultMemoryErrorRoutine(JKRHeap* heap, u32 size, int alignment);
+    static void JKRDefaultMemoryErrorRoutine(void* heap, u32 size, int alignment);
     static JKRErrorHandler setErrorHandler(JKRErrorHandler errorHandler);
 
     static void* getCodeStart(void) { return mCodeStart; }
@@ -155,15 +152,19 @@ public:
     static void* getState_buf_(TState* state) { return &state->mBuf; }
     static void* getState_(TState* state) { return getState_buf_(state); }
 
+
+    static JKRHeap* sSystemHeap;
+    static JKRHeap* sCurrentHeap;
+    static JKRHeap* sRootHeap;
+
+    static JKRErrorHandler mErrorHandler;
+
     static void* mCodeStart;
     static void* mCodeEnd;
     static void* mUserRamStart;
     static void* mUserRamEnd;
     static u32 mMemorySize;
 
-    static JKRHeap* sRootHeap;
-    static JKRHeap* sSystemHeap;
-    static JKRHeap* sCurrentHeap;
 };
 
 void* operator new(u32 size);

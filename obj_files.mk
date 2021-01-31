@@ -452,6 +452,7 @@ $(BUILD_DIR)/asm/gf/GFGeometry.o \
 $(BUILD_DIR)/asm/gf/GFLight.o \
 $(BUILD_DIR)/asm/gf/GFPixel.o \
 $(BUILD_DIR)/asm/gf/GFTev.o \
+$(BUILD_DIR)/libs/JSystem/JKernel/JKRHeap.o \
 $(BUILD_DIR)/asm/JKernel/JKRHeap.o \
 $(BUILD_DIR)/asm/JKernel/JKRExpHeap.o \
 $(BUILD_DIR)/asm/JKernel/JKRSolidHeap.o \

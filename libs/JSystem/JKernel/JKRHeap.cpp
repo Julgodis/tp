@@ -1,5 +1,19 @@
 #include "JSystem/JKernel/JKRHeap/JKRHeap.h"
+#include "JSystem/JUtility/JUTException.h"
 #include "global.h"
+
+JKRHeap* JKRHeap::sSystemHeap = NULL;
+JKRHeap* JKRHeap::sCurrentHeap = NULL;
+JKRHeap* JKRHeap::sRootHeap = NULL;
+
+JKRErrorHandler JKRHeap::mErrorHandler = NULL;
+static bool lbl_80451380 = false;
+
+void* JKRHeap::mCodeStart = NULL;
+void* JKRHeap::mCodeEnd = NULL;
+void* JKRHeap::mUserRamStart = NULL;
+void* JKRHeap::mUserRamEnd = NULL;
+u32 JKRHeap::mMemorySize = 0;
 
 JKRHeap::JKRHeap(void* data, u32 size, JKRHeap* parent, bool errorFlag)
     : JKRDisposer(), mChildTree(this), mDisposerList() {
@@ -23,8 +37,8 @@ JKRHeap::JKRHeap(void* data, u32 size, JKRHeap* parent, bool errorFlag)
     }
 
     mErrorFlag = errorFlag;
-    if ((mErrorFlag == true) && (lbl_8045137C == NULL)) {
-        lbl_8045137C = JKRHeap::JKRDefaultMemoryErrorRoutine;
+    if ((mErrorFlag == true) && (mErrorHandler == NULL)) {
+        mErrorHandler = JKRHeap::JKRDefaultMemoryErrorRoutine;
     }
 
     mDebugFill = lbl_804508B0;
@@ -62,6 +76,7 @@ JKRHeap::~JKRHeap() {
     setSystemHeap(systemHeap);
 }
 #else
+extern u8 __vt__7JKRHeap;
 asm JKRHeap::~JKRHeap() {
     nofralloc
 #include "JSystem/JKernel/JKRHeap/asm/func_802CE264.s"
@@ -177,11 +192,11 @@ s32 JKRHeap::getSize(void* ptr, JKRHeap* heap) {
     return heap->getSize(ptr);
 }
 
-s32 JKRHeap::getSize(void* ptr) const {
+s32 JKRHeap::getSize(void* ptr) {
     return do_getSize(ptr);
 }
 
-s32 JKRHeap::getFreeSize() const {
+s32 JKRHeap::getFreeSize() {
     return do_getFreeSize();
 }
 
@@ -189,7 +204,7 @@ void* JKRHeap::getMaxFreeBlock() const {
     return do_getMaxFreeBlock();
 }
 
-s32 JKRHeap::getTotalFreeSize() const {
+s32 JKRHeap::getTotalFreeSize() {
     return do_getTotalFreeSize();
 }
 
@@ -199,7 +214,7 @@ u8 JKRHeap::changeGroupID(u8 param_1) {
 
 // "not/nor" instruction in the wrong place
 #ifdef NONMATCHING
-s32 JKRHeap::getMaxAllocatableSize(int alignment) const {
+s32 JKRHeap::getMaxAllocatableSize(int alignment) {
     u32 maxFreeBlock = (u32)getMaxFreeBlock();
     s32 freeSize = getFreeSize();
 
@@ -209,7 +224,8 @@ s32 JKRHeap::getMaxAllocatableSize(int alignment) const {
     return alignedSize;
 }
 #else
-asm u32 JKRHeap::getMaxAllocatableSize(int alignment) const {
+extern "C" void getFreeSize__7JKRHeapFv();
+asm u32 JKRHeap::getMaxAllocatableSize(int alignment) {
     nofralloc
 #include "JSystem/JKernel/JKRHeap/asm/func_802CE7DC.s"
 }
@@ -242,7 +258,7 @@ JKRHeap* JKRHeap::find(void* ptr) const {
             }
         }
 
-        // todo: not sure about this... casting away const for now.
+        // fixme: should the return be "const JKRHeap*" or should we cast away the const
         return (JKRHeap*)this;
     }
 
@@ -263,7 +279,7 @@ JKRHeap* JKRHeap::findAllHeap(void* ptr) const {
     }
 
     if (getStartAddr() <= ptr && ptr < getEndAddr()) {
-        // todo: not sure about this... casting away const for now.
+        // fixme: should the return be "const JKRHeap*" or should we cast away the const
         return (JKRHeap*)this;
     }
 
@@ -335,11 +351,8 @@ void JKRHeap::copyMemory(void* dst, void* src, u32 size) {
     }
 }
 
-void JKRHeap::JKRDefaultMemoryErrorRoutine(JKRHeap* heap, u32 size, int alignment) {
-    const char* filename = lbl_8039CAD8;     // "JKRHeap.cpp"
-    const char* format = lbl_8039CAD8 + 12;  // "%s"
-    const char* arg1 = lbl_8039CAD8 + 15;    // "abort\n"
-    JUTException_NS_panic_f(filename, 0x33f, format, arg1);
+void JKRHeap::JKRDefaultMemoryErrorRoutine(void* heap, u32 size, int alignment) {
+    JUTException::panic_f("JKRHeap.cpp", /* line number */ 831, "%s", "abort\n");
 }
 
 bool JKRHeap::setErrorFlag(bool errorFlag) {
@@ -349,13 +362,13 @@ bool JKRHeap::setErrorFlag(bool errorFlag) {
 }
 
 JKRErrorHandler JKRHeap::setErrorHandler(JKRErrorHandler errorHandler) {
-    JKRErrorHandler prev = (JKRErrorHandler)lbl_8045137C;
+    JKRErrorHandler prev = mErrorHandler;
 
     if (!errorHandler) {
-        errorHandler = (JKRErrorHandler)JKRHeap::JKRDefaultMemoryErrorRoutine;
+        errorHandler = JKRHeap::JKRDefaultMemoryErrorRoutine;
     }
 
-    lbl_8045137C = errorHandler;
+    mErrorHandler = errorHandler;
     return prev;
 }
 
