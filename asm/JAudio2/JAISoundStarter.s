@@ -7,7 +7,7 @@
 __ct__15JAISoundStarterFb:
 /* 802A2F6C 0029FEAC  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 802A2F70 0029FEB0  41 82 00 08 */	beq lbl_802A2F78
-/* 802A2F74 0029FEB4  90 6D 85 F8 */	stw r3, lbl_80450B78-_SDA_BASE_(r13)
+/* 802A2F74 0029FEB4  90 6D 85 F8 */	stw r3, "sInstance__36JASGlobalInstance<15JAISoundStarter>"-_SDA_BASE_(r13)
 lbl_802A2F78:
 /* 802A2F78 0029FEB8  3C 80 80 3D */	lis r4, __vt__15JAISoundStarter@ha
 /* 802A2F7C 0029FEBC  38 04 99 C8 */	addi r0, r4, __vt__15JAISoundStarter@l
@@ -27,11 +27,11 @@ __dt__15JAISoundStarterFv:
 /* 802A2FA4 0029FEE4  38 03 99 C8 */	addi r0, r3, __vt__15JAISoundStarter@l
 /* 802A2FA8 0029FEE8  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A2FAC 0029FEEC  41 82 00 18 */	beq lbl_802A2FC4
-/* 802A2FB0 0029FEF0  80 0D 85 F8 */	lwz r0, lbl_80450B78-_SDA_BASE_(r13)
+/* 802A2FB0 0029FEF0  80 0D 85 F8 */	lwz r0, "sInstance__36JASGlobalInstance<15JAISoundStarter>"-_SDA_BASE_(r13)
 /* 802A2FB4 0029FEF4  7C 00 F8 40 */	cmplw r0, r31
 /* 802A2FB8 0029FEF8  40 82 00 0C */	bne lbl_802A2FC4
 /* 802A2FBC 0029FEFC  38 00 00 00 */	li r0, 0
-/* 802A2FC0 0029FF00  90 0D 85 F8 */	stw r0, lbl_80450B78-_SDA_BASE_(r13)
+/* 802A2FC0 0029FF00  90 0D 85 F8 */	stw r0, "sInstance__36JASGlobalInstance<15JAISoundStarter>"-_SDA_BASE_(r13)
 lbl_802A2FC4:
 /* 802A2FC4 0029FF04  7C 80 07 35 */	extsh. r0, r4
 /* 802A2FC8 0029FF08  40 81 00 0C */	ble lbl_802A2FD4
@@ -45,9 +45,9 @@ lbl_802A2FD4:
 /* 802A2FE4 0029FF24  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2FE8 0029FF28  4E 80 00 20 */	blr 
 
-/* 802A2FEC 00E8 .text func_802A2FEC startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
-.global func_802A2FEC
-func_802A2FEC:
+/* 802A2FEC 00E8 .text "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>" startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+.global "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
+"startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>":
 /* 802A2FEC 0029FF2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A2FF0 0029FF30  7C 08 02 A6 */	mflr r0
 /* 802A2FF4 0029FF34  90 01 00 24 */	stw r0, 0x24(r1)

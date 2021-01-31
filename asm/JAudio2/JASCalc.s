@@ -292,9 +292,9 @@ lbl_8028F694:
 /* 8028F694 0028C5D4  38 21 00 30 */	addi r1, r1, 0x30
 /* 8028F698 0028C5D8  4E 80 00 20 */	blr 
 
-/* 8028F69C 0028 .text func_8028F69C clamp<s,l>__7JASCalcFl */
-.global func_8028F69C
-func_8028F69C:
+/* 8028F69C 0028 .text "clamp<s,l>__7JASCalcFl" clamp<s,l>__7JASCalcFl */
+.global "clamp<s,l>__7JASCalcFl"
+"clamp<s,l>__7JASCalcFl":
 /* 8028F69C 0028C5DC  2C 03 80 00 */	cmpwi r3, -32768
 /* 8028F6A0 0028C5E0  41 81 00 0C */	bgt lbl_8028F6AC
 /* 8028F6A4 0028C5E4  38 60 80 00 */	li r3, -32768

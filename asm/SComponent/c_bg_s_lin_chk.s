@@ -161,9 +161,9 @@ PreCalc__11cBgS_LinChkFv:
 /* 80267F78 00264EB8  98 03 00 52 */	stb r0, 0x52(r3)
 /* 80267F7C 00264EBC  4E 80 00 20 */	blr 
 
-/* 80267F80 0008 .text func_80267F80 @20@__dt__11cBgS_LinChkFv */
-.global func_80267F80
-func_80267F80:
+/* 80267F80 0008 .text lbl_80267F80 @20@__dt__11cBgS_LinChkFv */
+.global lbl_80267F80
+lbl_80267F80:
 /* 80267F80 00264EC0  38 63 FF EC */	addi r3, r3, -20
 /* 80267F84 00264EC4  4B FF FE 38 */	b __dt__11cBgS_LinChkFv
 

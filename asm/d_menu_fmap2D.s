@@ -702,7 +702,7 @@ draw__18dMenu_Fmap2DBack_cFv:
 /* 801CFFBC 001CCEFC  D0 01 00 6C */	stfs f0, 0x6c(r1)
 /* 801CFFC0 001CCF00  7F C3 F3 78 */	mr r3, r30
 /* 801CFFC4 001CCF04  38 81 00 60 */	addi r4, r1, 0x60
-/* 801CFFC8 001CCF08  48 11 90 F9 */	bl func_802E90C0
+/* 801CFFC8 001CCF08  48 11 90 F9 */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 801CFFCC 001CCF0C  7F C3 F3 78 */	mr r3, r30
 /* 801CFFD0 001CCF10  81 9E 00 00 */	lwz r12, 0(r30)
 /* 801CFFD4 001CCF14  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -812,7 +812,7 @@ draw__18dMenu_Fmap2DBack_cFv:
 /* 801D0174 001CD0B4  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 801D0178 001CD0B8  7F C3 F3 78 */	mr r3, r30
 /* 801D017C 001CD0BC  38 81 00 50 */	addi r4, r1, 0x50
-/* 801D0180 001CD0C0  48 11 8F 41 */	bl func_802E90C0
+/* 801D0180 001CD0C0  48 11 8F 41 */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 801D0184 001CD0C4  7F C3 F3 78 */	mr r3, r30
 /* 801D0188 001CD0C8  81 9E 00 00 */	lwz r12, 0(r30)
 /* 801D018C 001CD0CC  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -974,7 +974,7 @@ lbl_801D036C:
 /* 801D03D8 001CD318  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 801D03DC 001CD31C  7F C3 F3 78 */	mr r3, r30
 /* 801D03E0 001CD320  38 81 00 40 */	addi r4, r1, 0x40
-/* 801D03E4 001CD324  48 11 8C DD */	bl func_802E90C0
+/* 801D03E4 001CD324  48 11 8C DD */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 801D03E8 001CD328  7F C3 F3 78 */	mr r3, r30
 /* 801D03EC 001CD32C  81 9E 00 00 */	lwz r12, 0(r30)
 /* 801D03F0 001CD330  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -8269,7 +8269,7 @@ draw__17dMenu_Fmap2DTop_cFv:
 /* 801D6D04 001D3C44  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 801D6D08 001D3C48  7F E3 FB 78 */	mr r3, r31
 /* 801D6D0C 001D3C4C  38 81 00 28 */	addi r4, r1, 0x28
-/* 801D6D10 001D3C50  48 11 23 B1 */	bl func_802E90C0
+/* 801D6D10 001D3C50  48 11 23 B1 */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 801D6D14 001D3C54  7F E3 FB 78 */	mr r3, r31
 /* 801D6D18 001D3C58  81 9F 00 00 */	lwz r12, 0(r31)
 /* 801D6D1C 001D3C5C  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -8310,7 +8310,7 @@ draw__17dMenu_Fmap2DTop_cFv:
 /* 801D6DA8 001D3CE8  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 801D6DAC 001D3CEC  7F E3 FB 78 */	mr r3, r31
 /* 801D6DB0 001D3CF0  38 81 00 18 */	addi r4, r1, 0x18
-/* 801D6DB4 001D3CF4  48 11 23 0D */	bl func_802E90C0
+/* 801D6DB4 001D3CF4  48 11 23 0D */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 801D6DB8 001D3CF8  7F E3 FB 78 */	mr r3, r31
 /* 801D6DBC 001D3CFC  81 9F 00 00 */	lwz r12, 0(r31)
 /* 801D6DC0 001D3D00  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -9722,9 +9722,9 @@ lbl_801D80FC:
 /* 801D8104 001D5044  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D8108 001D5048  4E 80 00 20 */	blr 
 
-/* 801D810C 0008 .text func_801D810C @4@__dt__18dMenu_Fmap2DBack_cFv */
-.global func_801D810C
-func_801D810C:
+/* 801D810C 0008 .text lbl_801D810C @4@__dt__18dMenu_Fmap2DBack_cFv */
+.global lbl_801D810C
+lbl_801D810C:
 /* 801D810C 001D504C  38 63 FF FC */	addi r3, r3, -4
 /* 801D8110 001D5050  4B FF 7B CC */	b __dt__18dMenu_Fmap2DBack_cFv
 

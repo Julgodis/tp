@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 8028D728 0028 .text func_8028D728 setValue_VOLUME___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
-.global func_8028D728
-func_8028D728:
+/* 8028D728 0028 .text lbl_8028D728 setValue_VOLUME___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+.global lbl_8028D728
+lbl_8028D728:
 /* 8028D728 0028A668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028D72C 0028A66C  7C 08 02 A6 */	mflr r0
 /* 8028D730 0028A670  90 01 00 14 */	stw r0, 0x14(r1)
@@ -16,9 +16,9 @@ func_8028D728:
 /* 8028D748 0028A688  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028D74C 0028A68C  4E 80 00 20 */	blr 
 
-/* 8028D750 0028 .text func_8028D750 setValue_PAN___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
-.global func_8028D750
-func_8028D750:
+/* 8028D750 0028 .text lbl_8028D750 setValue_PAN___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+.global lbl_8028D750
+lbl_8028D750:
 /* 8028D750 0028A690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028D754 0028A694  7C 08 02 A6 */	mflr r0
 /* 8028D758 0028A698  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,9 +30,9 @@ func_8028D750:
 /* 8028D770 0028A6B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028D774 0028A6B4  4E 80 00 20 */	blr 
 
-/* 8028D778 0028 .text func_8028D778 setValue_PITCH___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
-.global func_8028D778
-func_8028D778:
+/* 8028D778 0028 .text lbl_8028D778 setValue_PITCH___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+.global lbl_8028D778
+lbl_8028D778:
 /* 8028D778 0028A6B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028D77C 0028A6BC  7C 08 02 A6 */	mflr r0
 /* 8028D780 0028A6C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -44,9 +44,9 @@ func_8028D778:
 /* 8028D798 0028A6D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028D79C 0028A6DC  4E 80 00 20 */	blr 
 
-/* 8028D7A0 0060 .text func_8028D7A0 setValue_TEMPO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
-.global func_8028D7A0
-func_8028D7A0:
+/* 8028D7A0 0060 .text lbl_8028D7A0 setValue_TEMPO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+.global lbl_8028D7A0
+lbl_8028D7A0:
 /* 8028D7A0 0028A6E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028D7A4 0028A6E4  7C 08 02 A6 */	mflr r0
 /* 8028D7A8 0028A6E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -73,9 +73,9 @@ lbl_8028D7E8:
 /* 8028D7F8 0028A738  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028D7FC 0028A73C  4E 80 00 20 */	blr 
 
-/* 8028D800 0028 .text func_8028D800 setValue_ECHO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
-.global func_8028D800
-func_8028D800:
+/* 8028D800 0028 .text lbl_8028D800 setValue_ECHO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+.global lbl_8028D800
+lbl_8028D800:
 /* 8028D800 0028A740  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028D804 0028A744  7C 08 02 A6 */	mflr r0
 /* 8028D808 0028A748  90 01 00 14 */	stw r0, 0x14(r1)
@@ -338,7 +338,7 @@ lbl_8028DB68:
 /* 8028DB78 0028AAB8  38 81 00 08 */	addi r4, r1, 8
 /* 8028DB7C 0028AABC  38 BF 01 18 */	addi r5, r31, 0x118
 /* 8028DB80 0028AAC0  80 DF 01 2C */	lwz r6, 0x12c(r31)
-/* 8028DB84 0028AAC4  48 01 54 69 */	bl func_802A2FEC
+/* 8028DB84 0028AAC4  48 01 54 69 */	bl "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
 /* 8028DB88 0028AAC8  48 00 00 0C */	b lbl_8028DB94
 lbl_8028DB8C:
 /* 8028DB8C 0028AACC  38 00 00 02 */	li r0, 2
@@ -669,7 +669,7 @@ lbl_8028DF64:
 /* 8028DF6C 0028AEAC  38 81 00 08 */	addi r4, r1, 8
 /* 8028DF70 0028AEB0  38 BF 01 18 */	addi r5, r31, 0x118
 /* 8028DF74 0028AEB4  80 DF 01 2C */	lwz r6, 0x12c(r31)
-/* 8028DF78 0028AEB8  48 01 50 75 */	bl func_802A2FEC
+/* 8028DF78 0028AEB8  48 01 50 75 */	bl "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
 lbl_8028DF7C:
 /* 8028DF7C 0028AEBC  80 7F 01 18 */	lwz r3, 0x118(r31)
 /* 8028DF80 0028AEC0  28 03 00 00 */	cmplwi r3, 0
@@ -784,9 +784,9 @@ lbl_8028E0D8:
 /* 8028E0EC 0028B02C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028E0F0 0028B030  4E 80 00 20 */	blr 
 
-/* 8028E0F4 02AC .text func_8028E0F4 __sinit_object-sound_cpp */
-.global func_8028E0F4
-func_8028E0F4:
+/* 8028E0F4 02AC .text lbl_8028E0F4 __sinit_object-sound_cpp */
+.global lbl_8028E0F4
+lbl_8028E0F4:
 /* 8028E0F4 0028B034  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8028E0F8 0028B038  7C 08 02 A6 */	mflr r0
 /* 8028E0FC 0028B03C  90 01 00 64 */	stw r0, 0x64(r1)
@@ -801,8 +801,8 @@ func_8028E0F4:
 /* 8028E120 0028B060  90 A1 00 44 */	stw r5, 0x44(r1)
 /* 8028E124 0028B064  38 80 00 07 */	li r4, 7
 /* 8028E128 0028B068  90 81 00 48 */	stw r4, 0x48(r1)
-/* 8028E12C 0028B06C  3C 60 80 29 */	lis r3, func_8028D728@ha
-/* 8028E130 0028B070  38 03 D7 28 */	addi r0, r3, func_8028D728@l
+/* 8028E12C 0028B06C  3C 60 80 29 */	lis r3, lbl_8028D728@ha
+/* 8028E130 0028B070  38 03 D7 28 */	addi r0, r3, lbl_8028D728@l
 /* 8028E134 0028B074  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 8028E138 0028B078  90 DF 00 68 */	stw r6, 0x68(r31)
 /* 8028E13C 0028B07C  90 BF 00 68 */	stw r5, 0x68(r31)
@@ -827,8 +827,8 @@ func_8028E0F4:
 /* 8028E188 0028B0C8  90 A1 00 38 */	stw r5, 0x38(r1)
 /* 8028E18C 0028B0CC  38 80 00 08 */	li r4, 8
 /* 8028E190 0028B0D0  90 81 00 3C */	stw r4, 0x3c(r1)
-/* 8028E194 0028B0D4  3C 60 80 29 */	lis r3, func_8028D750@ha
-/* 8028E198 0028B0D8  38 03 D7 50 */	addi r0, r3, func_8028D750@l
+/* 8028E194 0028B0D4  3C 60 80 29 */	lis r3, lbl_8028D750@ha
+/* 8028E198 0028B0D8  38 03 D7 50 */	addi r0, r3, lbl_8028D750@l
 /* 8028E19C 0028B0DC  90 01 00 40 */	stw r0, 0x40(r1)
 /* 8028E1A0 0028B0E0  38 7F 00 68 */	addi r3, r31, 0x68
 /* 8028E1A4 0028B0E4  90 C3 00 0C */	stw r6, 0xc(r3)
@@ -854,8 +854,8 @@ func_8028E0F4:
 /* 8028E1F4 0028B134  90 A1 00 2C */	stw r5, 0x2c(r1)
 /* 8028E1F8 0028B138  38 80 00 09 */	li r4, 9
 /* 8028E1FC 0028B13C  90 81 00 30 */	stw r4, 0x30(r1)
-/* 8028E200 0028B140  3C 60 80 29 */	lis r3, func_8028D778@ha
-/* 8028E204 0028B144  38 03 D7 78 */	addi r0, r3, func_8028D778@l
+/* 8028E200 0028B140  3C 60 80 29 */	lis r3, lbl_8028D778@ha
+/* 8028E204 0028B144  38 03 D7 78 */	addi r0, r3, lbl_8028D778@l
 /* 8028E208 0028B148  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8028E20C 0028B14C  38 7F 00 68 */	addi r3, r31, 0x68
 /* 8028E210 0028B150  90 C3 00 18 */	stw r6, 0x18(r3)
@@ -881,8 +881,8 @@ func_8028E0F4:
 /* 8028E260 0028B1A0  90 A1 00 20 */	stw r5, 0x20(r1)
 /* 8028E264 0028B1A4  38 80 00 0A */	li r4, 0xa
 /* 8028E268 0028B1A8  90 81 00 24 */	stw r4, 0x24(r1)
-/* 8028E26C 0028B1AC  3C 60 80 29 */	lis r3, func_8028D7A0@ha
-/* 8028E270 0028B1B0  38 03 D7 A0 */	addi r0, r3, func_8028D7A0@l
+/* 8028E26C 0028B1AC  3C 60 80 29 */	lis r3, lbl_8028D7A0@ha
+/* 8028E270 0028B1B0  38 03 D7 A0 */	addi r0, r3, lbl_8028D7A0@l
 /* 8028E274 0028B1B4  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8028E278 0028B1B8  38 7F 00 68 */	addi r3, r31, 0x68
 /* 8028E27C 0028B1BC  90 C3 00 24 */	stw r6, 0x24(r3)
@@ -908,8 +908,8 @@ func_8028E0F4:
 /* 8028E2CC 0028B20C  90 A1 00 14 */	stw r5, 0x14(r1)
 /* 8028E2D0 0028B210  38 80 00 0B */	li r4, 0xb
 /* 8028E2D4 0028B214  90 81 00 18 */	stw r4, 0x18(r1)
-/* 8028E2D8 0028B218  3C 60 80 29 */	lis r3, func_8028D800@ha
-/* 8028E2DC 0028B21C  38 03 D8 00 */	addi r0, r3, func_8028D800@l
+/* 8028E2D8 0028B218  3C 60 80 29 */	lis r3, lbl_8028D800@ha
+/* 8028E2DC 0028B21C  38 03 D8 00 */	addi r0, r3, lbl_8028D800@l
 /* 8028E2E0 0028B220  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8028E2E4 0028B224  38 7F 00 68 */	addi r3, r31, 0x68
 /* 8028E2E8 0028B228  90 C3 00 30 */	stw r6, 0x30(r3)

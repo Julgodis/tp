@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 802A4A80 0020 .text func_802A4A80 appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
-.global func_802A4A80
-func_802A4A80:
+/* 802A4A80 0020 .text "appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable>" appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
+.global "appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable>"
+"appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable>":
 /* 802A4A80 002A19C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4A84 002A19C4  7C 08 02 A6 */	mflr r0
 /* 802A4A88 002A19C8  90 01 00 14 */	stw r0, 0x14(r1)

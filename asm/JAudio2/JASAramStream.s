@@ -1466,8 +1466,8 @@ lbl_802976CC:
 /* 802976F4 00294634  4B FF 91 55 */	bl __ct__17JASGenericMemPoolFv
 /* 802976F8 00294638  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 802976FC 0029463C  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-/* 80297700 00294640  3C 80 80 29 */	lis r4, func_802978DC@ha
-/* 80297704 00294644  38 84 78 DC */	addi r4, r4, func_802978DC@l
+/* 80297700 00294640  3C 80 80 29 */	lis r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@ha
+/* 80297704 00294644  38 84 78 DC */	addi r4, r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@l
 /* 80297708 00294648  3C A0 80 43 */	lis r5, lbl_80431B28@ha
 /* 8029770C 0029464C  38 A5 1B 28 */	addi r5, r5, lbl_80431B28@l
 /* 80297710 00294650  48 0C A5 15 */	bl __register_global_object
@@ -1597,9 +1597,9 @@ lbl_802978B8:
 /* 802978D4 00294814  38 21 00 20 */	addi r1, r1, 0x20
 /* 802978D8 00294818  4E 80 00 20 */	blr 
 
-/* 802978DC 0054 .text func_802978DC __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv */
-.global func_802978DC
-func_802978DC:
+/* 802978DC 0054 .text "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv" __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv */
+.global "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"
+"__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv":
 /* 802978DC 0029481C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802978E0 00294820  7C 08 02 A6 */	mflr r0
 /* 802978E4 00294824  90 01 00 14 */	stw r0, 0x14(r1)

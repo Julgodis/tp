@@ -336,8 +336,8 @@ __sinit_JKRAramHeap_cpp:
 /* 802D3280 002D01C0  48 00 8C 95 */	bl initiate__10JSUPtrListFv
 /* 802D3284 002D01C4  3C 60 80 43 */	lis r3, sAramList__11JKRAramHeap@ha
 /* 802D3288 002D01C8  38 63 43 0C */	addi r3, r3, sAramList__11JKRAramHeap@l
-/* 802D328C 002D01CC  3C 80 80 2D */	lis r4, func_802D32B0@ha
-/* 802D3290 002D01D0  38 84 32 B0 */	addi r4, r4, func_802D32B0@l
+/* 802D328C 002D01CC  3C 80 80 2D */	lis r4, "__dt__23JSUList<12JKRAramBlock>Fv"@ha
+/* 802D3290 002D01D0  38 84 32 B0 */	addi r4, r4, "__dt__23JSUList<12JKRAramBlock>Fv"@l
 /* 802D3294 002D01D4  3C A0 80 43 */	lis r5, lbl_80434300@ha
 /* 802D3298 002D01D8  38 A5 43 00 */	addi r5, r5, lbl_80434300@l
 /* 802D329C 002D01DC  48 08 E9 89 */	bl __register_global_object
@@ -346,9 +346,9 @@ __sinit_JKRAramHeap_cpp:
 /* 802D32A8 002D01E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D32AC 002D01EC  4E 80 00 20 */	blr 
 
-/* 802D32B0 0054 .text func_802D32B0 __dt__23JSUList<12JKRAramBlock>Fv */
-.global func_802D32B0
-func_802D32B0:
+/* 802D32B0 0054 .text "__dt__23JSUList<12JKRAramBlock>Fv" __dt__23JSUList<12JKRAramBlock>Fv */
+.global "__dt__23JSUList<12JKRAramBlock>Fv"
+"__dt__23JSUList<12JKRAramBlock>Fv":
 /* 802D32B0 002D01F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D32B4 002D01F4  7C 08 02 A6 */	mflr r0
 /* 802D32B8 002D01F8  90 01 00 14 */	stw r0, 0x14(r1)

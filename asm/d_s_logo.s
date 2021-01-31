@@ -126,7 +126,7 @@ draw__10dScnLogo_cFv:
 /* 8025621C 0025315C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80256220 00253160  7C 7F 1B 78 */	mr r31, r3
 /* 80256224 00253164  38 7F 02 0C */	addi r3, r31, 0x20c
-/* 80256228 00253168  48 00 23 7D */	bl func_802585A4
+/* 80256228 00253168  48 00 23 7D */	bl "cLib_calcTimer<Us>__FPUs"
 /* 8025622C 0025316C  7F E3 FB 78 */	mr r3, r31
 /* 80256230 00253170  88 1F 02 08 */	lbz r0, 0x208(r31)
 /* 80256234 00253174  1C A0 00 0C */	mulli r5, r0, 0xc
@@ -2635,9 +2635,9 @@ lbl_8025858C:
 /* 8025859C 002554DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802585A0 002554E0  4E 80 00 20 */	blr 
 
-/* 802585A4 001C .text func_802585A4 cLib_calcTimer<Us>__FPUs */
-.global func_802585A4
-func_802585A4:
+/* 802585A4 001C .text "cLib_calcTimer<Us>__FPUs" cLib_calcTimer<Us>__FPUs */
+.global "cLib_calcTimer<Us>__FPUs"
+"cLib_calcTimer<Us>__FPUs":
 /* 802585A4 002554E4  A0 83 00 00 */	lhz r4, 0(r3)
 /* 802585A8 002554E8  28 04 00 00 */	cmplwi r4, 0
 /* 802585AC 002554EC  41 82 00 0C */	beq lbl_802585B8

@@ -97,8 +97,8 @@ lbl_802AB184:
 /* 802AB198 002A80D8  4B FE 56 B1 */	bl __ct__17JASGenericMemPoolFv
 /* 802AB19C 002A80DC  3C 60 80 43 */	lis r3, lbl_804341C4@ha
 /* 802AB1A0 002A80E0  38 63 41 C4 */	addi r3, r3, lbl_804341C4@l
-/* 802AB1A4 002A80E4  3C 80 80 2B */	lis r4, func_802AB200@ha
-/* 802AB1A8 002A80E8  38 84 B2 00 */	addi r4, r4, func_802AB200@l
+/* 802AB1A4 002A80E4  3C 80 80 2B */	lis r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@ha
+/* 802AB1A8 002A80E8  38 84 B2 00 */	addi r4, r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@l
 /* 802AB1AC 002A80EC  3C A0 80 43 */	lis r5, lbl_804341B8@ha
 /* 802AB1B0 002A80F0  38 A5 41 B8 */	addi r5, r5, lbl_804341B8@l
 /* 802AB1B4 002A80F4  48 0B 6A 71 */	bl __register_global_object
@@ -123,9 +123,9 @@ lbl_802AB1D4:
 /* 802AB1F8 002A8138  38 21 00 10 */	addi r1, r1, 0x10
 /* 802AB1FC 002A813C  4E 80 00 20 */	blr 
 
-/* 802AB200 0054 .text func_802AB200 __dt__31JASMemPool<17Z2SoundHandlePool>Fv */
-.global func_802AB200
-func_802AB200:
+/* 802AB200 0054 .text "__dt__31JASMemPool<17Z2SoundHandlePool>Fv" __dt__31JASMemPool<17Z2SoundHandlePool>Fv */
+.global "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"
+"__dt__31JASMemPool<17Z2SoundHandlePool>Fv":
 /* 802AB200 002A8140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AB204 002A8144  7C 08 02 A6 */	mflr r0
 /* 802AB208 002A8148  90 01 00 14 */	stw r0, 0x14(r1)
@@ -231,8 +231,8 @@ lbl_802AB310:
 /* 802AB33C 002A827C  4B FE 55 0D */	bl __ct__17JASGenericMemPoolFv
 /* 802AB340 002A8280  3C 60 80 43 */	lis r3, lbl_804341C4@ha
 /* 802AB344 002A8284  38 63 41 C4 */	addi r3, r3, lbl_804341C4@l
-/* 802AB348 002A8288  3C 80 80 2B */	lis r4, func_802AB200@ha
-/* 802AB34C 002A828C  38 84 B2 00 */	addi r4, r4, func_802AB200@l
+/* 802AB348 002A8288  3C 80 80 2B */	lis r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@ha
+/* 802AB34C 002A828C  38 84 B2 00 */	addi r4, r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@l
 /* 802AB350 002A8290  3C A0 80 43 */	lis r5, lbl_804341B8@ha
 /* 802AB354 002A8294  38 A5 41 B8 */	addi r5, r5, lbl_804341B8@l
 /* 802AB358 002A8298  48 0B 68 CD */	bl __register_global_object
@@ -280,7 +280,7 @@ getLowPrioSound__14Z2SoundHandlesF10JAISoundID:
 /* 802AB3DC 002A831C  39 61 00 30 */	addi r11, r1, 0x30
 /* 802AB3E0 002A8320  48 0B 6D F1 */	bl _savegpr_26
 /* 802AB3E4 002A8324  7C 9A 23 78 */	mr r26, r4
-/* 802AB3E8 002A8328  83 ED 85 DC */	lwz r31, lbl_80450B5C-_SDA_BASE_(r13)
+/* 802AB3E8 002A8328  83 ED 85 DC */	lwz r31, "sInstance__33JASGlobalInstance<12JAISoundInfo>"-_SDA_BASE_(r13)
 /* 802AB3EC 002A832C  3C 80 00 01 */	lis r4, 0x0000FFFF@ha
 /* 802AB3F0 002A8330  3B A4 FF FF */	addi r29, r4, 0x0000FFFF@l
 /* 802AB3F4 002A8334  3B 80 00 00 */	li r28, 0
@@ -385,9 +385,9 @@ lbl_802AB528:
 /* 802AB530 002A8470  38 60 00 00 */	li r3, 0
 /* 802AB534 002A8474  4E 80 00 20 */	blr 
 
-/* 802AB538 0114 .text func_802AB538 setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f> */
-.global func_802AB538
-func_802AB538:
+/* 802AB538 0114 .text "setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>" setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f> */
+.global "setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>"
+"setPos__14Z2SoundHandlesFRCQ29JGeometry8TVec3<f>":
 /* 802AB538 002A8478  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802AB53C 002A847C  7C 08 02 A6 */	mflr r0
 /* 802AB540 002A8480  90 01 00 24 */	stw r0, 0x24(r1)
@@ -441,8 +441,8 @@ lbl_802AB5D8:
 /* 802AB5EC 002A852C  4B FE 52 5D */	bl __ct__17JASGenericMemPoolFv
 /* 802AB5F0 002A8530  3C 60 80 43 */	lis r3, lbl_804341C4@ha
 /* 802AB5F4 002A8534  38 63 41 C4 */	addi r3, r3, lbl_804341C4@l
-/* 802AB5F8 002A8538  3C 80 80 2B */	lis r4, func_802AB200@ha
-/* 802AB5FC 002A853C  38 84 B2 00 */	addi r4, r4, func_802AB200@l
+/* 802AB5F8 002A8538  3C 80 80 2B */	lis r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@ha
+/* 802AB5FC 002A853C  38 84 B2 00 */	addi r4, r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@l
 /* 802AB600 002A8540  3C A0 80 43 */	lis r5, lbl_804341B8@ha
 /* 802AB604 002A8544  38 A5 41 B8 */	addi r5, r5, lbl_804341B8@l
 /* 802AB608 002A8548  48 0B 66 1D */	bl __register_global_object

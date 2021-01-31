@@ -59,7 +59,7 @@ lbl_8004890C:
 /* 80048918 00045858  7F C3 F3 78 */	mr r3, r30
 /* 8004891C 0004585C  3C 80 80 42 */	lis r4, l_startAction@ha
 /* 80048920 00045860  38 84 46 E0 */	addi r4, r4, l_startAction@l
-/* 80048924 00045864  48 00 00 4D */	bl func_80048970
+/* 80048924 00045864  48 00 00 4D */	bl "setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>"
 lbl_80048928:
 /* 80048928 00045868  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8004892C 0004586C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -85,9 +85,9 @@ lbl_8004895C:
 /* 80048968 000458A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8004896C 000458AC  4E 80 00 20 */	blr 
 
-/* 80048970 0038 .text func_80048970 setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> */
-.global func_80048970
-func_80048970:
+/* 80048970 0038 .text "setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>" setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> */
+.global "setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>"
+"setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>":
 /* 80048970 000458B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80048974 000458B4  7C 08 02 A6 */	mflr r0
 /* 80048978 000458B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -214,7 +214,7 @@ lbl_80048AE4:
 lbl_80048AFC:
 /* 80048AFC 00045A3C  3C 80 80 42 */	lis r4, l_runAction@ha
 /* 80048B00 00045A40  38 84 46 F8 */	addi r4, r4, l_runAction@l
-/* 80048B04 00045A44  4B FF FE 6D */	bl func_80048970
+/* 80048B04 00045A44  4B FF FE 6D */	bl "setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>"
 lbl_80048B08:
 /* 80048B08 00045A48  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80048B0C 00045A4C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -265,7 +265,7 @@ lbl_80048B98:
 /* 80048B9C 00045ADC  4B FF 98 CD */	bl reset__14dEvt_control_cFv
 /* 80048BA0 00045AE0  7F C3 F3 78 */	mr r3, r30
 /* 80048BA4 00045AE4  38 80 00 00 */	li r4, 0
-/* 80048BA8 00045AE8  4B FF FD C9 */	bl func_80048970
+/* 80048BA8 00045AE8  4B FF FD C9 */	bl "setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c>"
 /* 80048BAC 00045AEC  7F C3 F3 78 */	mr r3, r30
 /* 80048BB0 00045AF0  81 9E 00 00 */	lwz r12, 0(r30)
 /* 80048BB4 00045AF4  81 8C 00 14 */	lwz r12, 0x14(r12)

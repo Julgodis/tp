@@ -1006,8 +1006,8 @@ __sinit_JKRDvdAramRipper_cpp:
 /* 802DB5FC 002D853C  48 00 09 19 */	bl initiate__10JSUPtrListFv
 /* 802DB600 002D8540  3C 60 80 43 */	lis r3, sDvdAramAsyncList__16JKRDvdAramRipper@ha
 /* 802DB604 002D8544  38 63 43 B4 */	addi r3, r3, sDvdAramAsyncList__16JKRDvdAramRipper@l
-/* 802DB608 002D8548  3C 80 80 2E */	lis r4, func_802DB62C@ha
-/* 802DB60C 002D854C  38 84 B6 2C */	addi r4, r4, func_802DB62C@l
+/* 802DB608 002D8548  3C 80 80 2E */	lis r4, "__dt__23JSUList<12JKRADCommand>Fv"@ha
+/* 802DB60C 002D854C  38 84 B6 2C */	addi r4, r4, "__dt__23JSUList<12JKRADCommand>Fv"@l
 /* 802DB610 002D8550  3C A0 80 43 */	lis r5, lbl_804343A8@ha
 /* 802DB614 002D8554  38 A5 43 A8 */	addi r5, r5, lbl_804343A8@l
 /* 802DB618 002D8558  48 08 66 0D */	bl __register_global_object
@@ -1016,9 +1016,9 @@ __sinit_JKRDvdAramRipper_cpp:
 /* 802DB624 002D8564  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB628 002D8568  4E 80 00 20 */	blr 
 
-/* 802DB62C 0054 .text func_802DB62C __dt__23JSUList<12JKRADCommand>Fv */
-.global func_802DB62C
-func_802DB62C:
+/* 802DB62C 0054 .text "__dt__23JSUList<12JKRADCommand>Fv" __dt__23JSUList<12JKRADCommand>Fv */
+.global "__dt__23JSUList<12JKRADCommand>Fv"
+"__dt__23JSUList<12JKRADCommand>Fv":
 /* 802DB62C 002D856C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB630 002D8570  7C 08 02 A6 */	mflr r0
 /* 802DB634 002D8574  90 01 00 14 */	stw r0, 0x14(r1)

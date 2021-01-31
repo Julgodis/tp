@@ -1628,15 +1628,15 @@ lbl_80077468:
 /* 8007747C 000743BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80077480 000743C0  4E 80 00 20 */	blr 
 
-/* 80077484 0008 .text func_80077484 @36@__dt__9dBgS_AcchFv */
-.global func_80077484
-func_80077484:
+/* 80077484 0008 .text lbl_80077484 @36@__dt__9dBgS_AcchFv */
+.global lbl_80077484
+lbl_80077484:
 /* 80077484 000743C4  38 63 FF DC */	addi r3, r3, -36
 /* 80077488 000743C8  4B FF EB 0C */	b __dt__9dBgS_AcchFv
 
-/* 8007748C 0008 .text func_8007748C @20@__dt__9dBgS_AcchFv */
-.global func_8007748C
-func_8007748C:
+/* 8007748C 0008 .text lbl_8007748C @20@__dt__9dBgS_AcchFv */
+.global lbl_8007748C
+lbl_8007748C:
 /* 8007748C 000743CC  38 63 FF EC */	addi r3, r3, -20
 /* 80077490 000743D0  4B FF EB 04 */	b __dt__9dBgS_AcchFv
 

@@ -10,7 +10,7 @@ __ct__12Z2SpeechMgr2Fv:
 /* 802CBC68 002C8BA8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CBC6C 002C8BAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802CBC70 002C8BB0  7C 7F 1B 78 */	mr r31, r3
-/* 802CBC74 002C8BB4  93 ED 85 F0 */	stw r31, lbl_80450B70-_SDA_BASE_(r13)
+/* 802CBC74 002C8BB4  93 ED 85 F0 */	stw r31, "sInstance__33JASGlobalInstance<12Z2SpeechMgr2>"-_SDA_BASE_(r13)
 /* 802CBC78 002C8BB8  38 00 00 00 */	li r0, 0
 /* 802CBC7C 002C8BBC  90 03 00 00 */	stw r0, 0(r3)
 /* 802CBC80 002C8BC0  90 03 00 04 */	stw r0, 4(r3)
@@ -66,11 +66,11 @@ __dt__15Z2SpeechStarterFv:
 /* 802CBD34 002C8C74  41 82 00 08 */	beq lbl_802CBD3C
 /* 802CBD38 002C8C78  38 63 FF FC */	addi r3, r3, -4
 lbl_802CBD3C:
-/* 802CBD3C 002C8C7C  80 0D 85 F4 */	lwz r0, lbl_80450B74-_SDA_BASE_(r13)
+/* 802CBD3C 002C8C7C  80 0D 85 F4 */	lwz r0, "sInstance__35JASGlobalInstance<14Z2SoundStarter>"-_SDA_BASE_(r13)
 /* 802CBD40 002C8C80  7C 00 18 40 */	cmplw r0, r3
 /* 802CBD44 002C8C84  40 82 00 0C */	bne lbl_802CBD50
 /* 802CBD48 002C8C88  38 00 00 00 */	li r0, 0
-/* 802CBD4C 002C8C8C  90 0D 85 F4 */	stw r0, lbl_80450B74-_SDA_BASE_(r13)
+/* 802CBD4C 002C8C8C  90 0D 85 F4 */	stw r0, "sInstance__35JASGlobalInstance<14Z2SoundStarter>"-_SDA_BASE_(r13)
 lbl_802CBD50:
 /* 802CBD50 002C8C90  7F C3 F3 78 */	mr r3, r30
 /* 802CBD54 002C8C94  38 80 00 00 */	li r4, 0
@@ -387,7 +387,7 @@ speakOneWord__12Z2SpeechMgr2Fb:
 /* 802CC1A0 002C90E0  48 09 60 3D */	bl _savegpr_29
 /* 802CC1A4 002C90E4  7C 7E 1B 78 */	mr r30, r3
 /* 802CC1A8 002C90E8  7C 9F 23 78 */	mr r31, r4
-/* 802CC1AC 002C90EC  80 6D 86 00 */	lwz r3, lbl_80450B80-_SDA_BASE_(r13)
+/* 802CC1AC 002C90EC  80 6D 86 00 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802CC1B0 002C90F0  88 03 00 1D */	lbz r0, 0x1d(r3)
 /* 802CC1B4 002C90F4  28 00 00 00 */	cmplwi r0, 0
 /* 802CC1B8 002C90F8  41 82 01 2C */	beq lbl_802CC2E4
@@ -420,7 +420,7 @@ lbl_802CC20C:
 lbl_802CC21C:
 /* 802CC21C 002C915C  A0 7E 03 FC */	lhz r3, 0x3fc(r30)
 /* 802CC220 002C9160  3F A3 00 05 */	addis r29, r3, 5
-/* 802CC224 002C9164  80 6D 86 00 */	lwz r3, lbl_80450B80-_SDA_BASE_(r13)
+/* 802CC224 002C9164  80 6D 86 00 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802CC228 002C9168  88 63 00 0C */	lbz r3, 0xc(r3)
 /* 802CC22C 002C916C  7C 63 07 74 */	extsb r3, r3
 /* 802CC230 002C9170  3B BD 00 A1 */	addi r29, r29, 0xa1
@@ -1007,7 +1007,7 @@ playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc:
 /* 802CCA40 002C9980  7C DF 33 78 */	mr r31, r6
 /* 802CCA44 002C9984  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 802CCA48 002C9988  41 82 05 20 */	beq lbl_802CCF68
-/* 802CCA4C 002C998C  80 6D 86 00 */	lwz r3, lbl_80450B80-_SDA_BASE_(r13)
+/* 802CCA4C 002C998C  80 6D 86 00 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802CCA50 002C9990  88 63 00 0C */	lbz r3, 0xc(r3)
 /* 802CCA54 002C9994  7C 63 07 74 */	extsb r3, r3
 /* 802CCA58 002C9998  4B D6 06 15 */	bl dComIfGp_getReverb__Fi
@@ -1192,7 +1192,7 @@ lbl_802CCCC8:
 /* 802CCCC8 002C9C08  57 C0 04 3E */	clrlwi r0, r30, 0x10
 /* 802CCCCC 002C9C0C  28 00 00 01 */	cmplwi r0, 1
 /* 802CCCD0 002C9C10  40 82 02 1C */	bne lbl_802CCEEC
-/* 802CCCD4 002C9C14  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CCCD4 002C9C14  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CCCD8 002C9C18  3C 80 01 00 */	lis r4, 0x0100000B@ha
 /* 802CCCDC 002C9C1C  38 84 00 0B */	addi r4, r4, 0x0100000B@l
 /* 802CCCE0 002C9C20  4B FE 27 BD */	bl subBgmStart__8Z2SeqMgrFUl
@@ -1426,9 +1426,9 @@ __ct__15Z2SpeechStarterFv:
 /* 802CCFF0 002C9F30  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CCFF4 002C9F34  4E 80 00 20 */	blr 
 
-/* 802CCFF8 0250 .text func_802CCFF8 startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
-.global func_802CCFF8
-func_802CCFF8:
+/* 802CCFF8 0250 .text "startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl" startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl */
+.global "startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl"
+"startSound__15Z2SpeechStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>UlfffffUl":
 /* 802CCFF8 002C9F38  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802CCFFC 002C9F3C  7C 08 02 A6 */	mflr r0
 /* 802CD000 002C9F40  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1455,7 +1455,7 @@ func_802CCFF8:
 /* 802CD054 002C9F94  FF C0 20 90 */	fmr f30, f4
 /* 802CD058 002C9F98  FF E0 28 90 */	fmr f31, f5
 /* 802CD05C 002C9F9C  7D 1F 43 78 */	mr r31, r8
-/* 802CD060 002C9FA0  80 8D 86 00 */	lwz r4, lbl_80450B80-_SDA_BASE_(r13)
+/* 802CD060 002C9FA0  80 8D 86 00 */	lwz r4, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802CD064 002C9FA4  88 04 00 1E */	lbz r0, 0x1e(r4)
 /* 802CD068 002C9FA8  28 00 00 00 */	cmplwi r0, 0
 /* 802CD06C 002C9FAC  41 82 00 20 */	beq lbl_802CD08C
@@ -1467,7 +1467,7 @@ func_802CCFF8:
 /* 802CD084 002C9FC4  C3 62 C5 34 */	lfs f27, lbl_80455F34-_SDA2_BASE_(r2)
 /* 802CD088 002C9FC8  48 00 00 84 */	b lbl_802CD10C
 lbl_802CD08C:
-/* 802CD08C 002C9FCC  80 6D 85 FC */	lwz r3, lbl_80450B7C-_SDA_BASE_(r13)
+/* 802CD08C 002C9FCC  80 6D 85 FC */	lwz r3, "sInstance__32JASGlobalInstance<11Z2StatusMgr>"-_SDA_BASE_(r13)
 /* 802CD090 002C9FD0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 802CD094 002C9FD4  C0 42 C5 30 */	lfs f2, lbl_80455F30-_SDA2_BASE_(r2)
 /* 802CD098 002C9FD8  FC 00 10 40 */	fcmpo cr0, f0, f2
@@ -1493,7 +1493,7 @@ lbl_802CD0E0:
 /* 802CD0E0 002CA020  C3 62 C5 50 */	lfs f27, lbl_80455F50-_SDA2_BASE_(r2)
 /* 802CD0E4 002CA024  48 00 00 28 */	b lbl_802CD10C
 lbl_802CD0E8:
-/* 802CD0E8 002CA028  80 6D 85 BC */	lwz r3, lbl_80450B3C-_SDA_BASE_(r13)
+/* 802CD0E8 002CA028  80 6D 85 BC */	lwz r3, "sInstance__31JASGlobalInstance<10Z2EnvSeMgr>"-_SDA_BASE_(r13)
 /* 802CD0EC 002CA02C  4B FF C2 F9 */	bl getFogDensity__10Z2EnvSeMgrFv
 /* 802CD0F0 002CA030  C0 02 C5 54 */	lfs f0, lbl_80455F54-_SDA2_BASE_(r2)
 /* 802CD0F4 002CA034  EC 00 00 72 */	fmuls f0, f0, f1

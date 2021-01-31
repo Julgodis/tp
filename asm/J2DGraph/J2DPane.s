@@ -92,9 +92,9 @@ initiate__7J2DPaneFv:
 /* 802F5D38 002F2C78  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F5D3C 002F2C7C  4E 80 00 20 */	blr 
 
-/* 802F5D40 0090 .text func_802F5D40 __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f> */
-.global func_802F5D40
-func_802F5D40:
+/* 802F5D40 0090 .text "__ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>" __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f> */
+.global "__ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>"
+"__ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>":
 /* 802F5D40 002F2C80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F5D44 002F2C84  7C 08 02 A6 */	mflr r0
 /* 802F5D48 002F2C88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -123,7 +123,7 @@ func_802F5D40:
 /* 802F5DA4 002F2CE4  7F A8 EB 78 */	mr r8, r29
 /* 802F5DA8 002F2CE8  7F C7 F3 78 */	mr r7, r30
 /* 802F5DAC 002F2CEC  7F E9 FB 78 */	mr r9, r31
-/* 802F5DB0 002F2CF0  48 00 00 21 */	bl func_802F5DD0
+/* 802F5DB0 002F2CF0  48 00 00 21 */	bl "initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>"
 /* 802F5DB4 002F2CF4  7F 23 CB 78 */	mr r3, r25
 /* 802F5DB8 002F2CF8  39 61 00 30 */	addi r11, r1, 0x30
 /* 802F5DBC 002F2CFC  48 06 C4 5D */	bl _restgpr_25
@@ -132,9 +132,9 @@ func_802F5D40:
 /* 802F5DC8 002F2D08  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F5DCC 002F2D0C  4E 80 00 20 */	blr 
 
-/* 802F5DD0 00B8 .text func_802F5DD0 initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f> */
-.global func_802F5DD0
-func_802F5DD0:
+/* 802F5DD0 00B8 .text "initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>" initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f> */
+.global "initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>"
+"initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>":
 /* 802F5DD0 002F2D10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F5DD4 002F2D14  7C 08 02 A6 */	mflr r0
 /* 802F5DD8 002F2D18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -184,9 +184,9 @@ lbl_802F5E48:
 /* 802F5E80 002F2DC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F5E84 002F2DC4  4E 80 00 20 */	blr 
 
-/* 802F5E88 0080 .text func_802F5E88 __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f> */
-.global func_802F5E88
-func_802F5E88:
+/* 802F5E88 0080 .text "__ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>" __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f> */
+.global "__ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>"
+"__ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>":
 /* 802F5E88 002F2DC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F5E8C 002F2DCC  7C 08 02 A6 */	mflr r0
 /* 802F5E90 002F2DD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -211,7 +211,7 @@ func_802F5E88:
 /* 802F5EDC 002F2E1C  7F A6 EB 78 */	mr r6, r29
 /* 802F5EE0 002F2E20  7F C5 F3 78 */	mr r5, r30
 /* 802F5EE4 002F2E24  7F E7 FB 78 */	mr r7, r31
-/* 802F5EE8 002F2E28  48 00 00 21 */	bl func_802F5F08
+/* 802F5EE8 002F2E28  48 00 00 21 */	bl "initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>"
 /* 802F5EEC 002F2E2C  7F 63 DB 78 */	mr r3, r27
 /* 802F5EF0 002F2E30  39 61 00 20 */	addi r11, r1, 0x20
 /* 802F5EF4 002F2E34  48 06 C3 2D */	bl _restgpr_27
@@ -220,9 +220,9 @@ func_802F5E88:
 /* 802F5F00 002F2E40  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5F04 002F2E44  4E 80 00 20 */	blr 
 
-/* 802F5F08 0094 .text func_802F5F08 initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f> */
-.global func_802F5F08
-func_802F5F08:
+/* 802F5F08 0094 .text "initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>" initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f> */
+.global "initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>"
+"initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>":
 /* 802F5F08 002F2E48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F5F0C 002F2E4C  7C 08 02 A6 */	mflr r0
 /* 802F5F10 002F2E50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1064,7 +1064,7 @@ lbl_802F6ADC:
 /* 802F6B00 002F3A40  7F 83 E3 78 */	mr r3, r28
 /* 802F6B04 002F3A44  38 81 00 08 */	addi r4, r1, 8
 /* 802F6B08 002F3A48  38 BB 00 40 */	addi r5, r27, 0x40
-/* 802F6B0C 002F3A4C  4B FF 2D 71 */	bl func_802E987C
+/* 802F6B0C 002F3A4C  4B FF 2D 71 */	bl "scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f>"
 lbl_802F6B10:
 /* 802F6B10 002F3A50  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 802F6B14 002F3A54  41 82 01 94 */	beq lbl_802F6CA8
@@ -1156,7 +1156,7 @@ lbl_802F6C14:
 /* 802F6C5C 002F3B9C  41 82 00 18 */	beq lbl_802F6C74
 /* 802F6C60 002F3BA0  38 61 00 18 */	addi r3, r1, 0x18
 /* 802F6C64 002F3BA4  38 81 00 08 */	addi r4, r1, 8
-/* 802F6C68 002F3BA8  4B FF 24 59 */	bl func_802E90C0
+/* 802F6C68 002F3BA8  4B FF 24 59 */	bl "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 802F6C6C 002F3BAC  38 61 00 18 */	addi r3, r1, 0x18
 /* 802F6C70 002F3BB0  4B FF 21 B1 */	bl setScissor__14J2DGrafContextFv
 lbl_802F6C74:
@@ -1206,9 +1206,9 @@ lbl_802F6CF0:
 /* 802F6D10 002F3C50  38 21 01 10 */	addi r1, r1, 0x110
 /* 802F6D14 002F3C54  4E 80 00 20 */	blr 
 
-/* 802F6D18 0248 .text func_802F6D18 place__7J2DPaneFRCQ29JGeometry8TBox2<f> */
-.global func_802F6D18
-func_802F6D18:
+/* 802F6D18 0248 .text "place__7J2DPaneFRCQ29JGeometry8TBox2<f>" place__7J2DPaneFRCQ29JGeometry8TBox2<f> */
+.global "place__7J2DPaneFRCQ29JGeometry8TBox2<f>"
+"place__7J2DPaneFRCQ29JGeometry8TBox2<f>":
 /* 802F6D18 002F3C58  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802F6D1C 002F3C5C  7C 08 02 A6 */	mflr r0
 /* 802F6D20 002F3C60  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1386,7 +1386,7 @@ move__7J2DPaneFff:
 /* 802F6F94 002F3ED4  EC 02 18 2A */	fadds f0, f2, f3
 /* 802F6F98 002F3ED8  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 802F6F9C 002F3EDC  38 81 00 08 */	addi r4, r1, 8
-/* 802F6FA0 002F3EE0  4B FF FD 79 */	bl func_802F6D18
+/* 802F6FA0 002F3EE0  4B FF FD 79 */	bl "place__7J2DPaneFRCQ29JGeometry8TBox2<f>"
 /* 802F6FA4 002F3EE4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802F6FA8 002F3EE8  7C 08 03 A6 */	mtlr r0
 /* 802F6FAC 002F3EEC  38 21 00 20 */	addi r1, r1, 0x20
@@ -1473,7 +1473,7 @@ lbl_802F70B8:
 /* 802F70CC 002F400C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 802F70D0 002F4010  7F E3 FB 78 */	mr r3, r31
 /* 802F70D4 002F4014  38 81 00 08 */	addi r4, r1, 8
-/* 802F70D8 002F4018  4B FF FC 41 */	bl func_802F6D18
+/* 802F70D8 002F4018  4B FF FC 41 */	bl "place__7J2DPaneFRCQ29JGeometry8TBox2<f>"
 /* 802F70DC 002F401C  E3 E1 00 38 */	psq_l f31, 56(r1), 0, qr0
 /* 802F70E0 002F4020  CB E1 00 30 */	lfd f31, 0x30(r1)
 /* 802F70E4 002F4024  E3 C1 00 28 */	psq_l f30, 40(r1), 0, qr0
@@ -1589,9 +1589,9 @@ lbl_802F7244:
 /* 802F725C 002F419C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F7260 002F41A0  4E 80 00 20 */	blr 
 
-/* 802F7264 007C .text func_802F7264 clip__7J2DPaneFRCQ29JGeometry8TBox2<f> */
-.global func_802F7264
-func_802F7264:
+/* 802F7264 007C .text "clip__7J2DPaneFRCQ29JGeometry8TBox2<f>" clip__7J2DPaneFRCQ29JGeometry8TBox2<f> */
+.global "clip__7J2DPaneFRCQ29JGeometry8TBox2<f>"
+"clip__7J2DPaneFRCQ29JGeometry8TBox2<f>":
 /* 802F7264 002F41A4  C0 24 00 00 */	lfs f1, 0(r4)
 /* 802F7268 002F41A8  C0 44 00 04 */	lfs f2, 4(r4)
 /* 802F726C 002F41AC  C0 64 00 08 */	lfs f3, 8(r4)

@@ -549,9 +549,9 @@ lbl_8028D29C:
 /* 8028D2B0 0028A1F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028D2B4 0028A1F4  4E 80 00 20 */	blr 
 
-/* 8028D2B8 0298 .text func_8028D2B8 __sinit_object-light_cpp */
-.global func_8028D2B8
-func_8028D2B8:
+/* 8028D2B8 0298 .text lbl_8028D2B8 __sinit_object-light_cpp */
+.global lbl_8028D2B8
+lbl_8028D2B8:
 /* 8028D2B8 0028A1F8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8028D2BC 0028A1FC  7C 08 02 A6 */	mflr r0
 /* 8028D2C0 0028A200  90 01 00 64 */	stw r0, 0x64(r1)

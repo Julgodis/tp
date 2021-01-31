@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 802BBCDC 003C .text func_802BBCDC calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f> */
-.global func_802BBCDC
-func_802BBCDC:
+/* 802BBCDC 003C .text "calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>" calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f> */
+.global "calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>"
+"calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>":
 /* 802BBCDC 002B8C1C  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 802BBCE0 002B8C20  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 802BBCE4 002B8C24  10 01 00 28 */	ps_sub f0, f1, f0
@@ -21,9 +21,9 @@ func_802BBCDC:
 /* 802BBD10 002B8C50  D0 03 00 08 */	stfs f0, 8(r3)
 /* 802BBD14 002B8C54  4E 80 00 20 */	blr 
 
-/* 802BBD18 007C .text func_802BBD18 init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f> */
-.global func_802BBD18
-func_802BBD18:
+/* 802BBD18 007C .text "init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>" init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f> */
+.global "init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>"
+"init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>":
 /* 802BBD18 002B8C58  C0 45 00 00 */	lfs f2, 0(r5)
 /* 802BBD1C 002B8C5C  D0 44 00 00 */	stfs f2, 0(r4)
 /* 802BBD20 002B8C60  C0 25 00 04 */	lfs f1, 4(r5)
@@ -57,9 +57,9 @@ lbl_802BBD74:
 /* 802BBD8C 002B8CCC  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 802BBD90 002B8CD0  4E 80 00 20 */	blr 
 
-/* 802BBD94 00E0 .text func_802BBD94 __ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb */
-.global func_802BBD94
-func_802BBD94:
+/* 802BBD94 00E0 .text "__ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb" __ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb */
+.global "__ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb"
+"__ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb":
 /* 802BBD94 002B8CD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BBD98 002B8CD8  7C 08 02 A6 */	mflr r0
 /* 802BBD9C 002B8CDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -88,7 +88,7 @@ func_802BBD94:
 /* 802BBDF8 002B8D38  38 9C 00 04 */	addi r4, r28, 4
 /* 802BBDFC 002B8D3C  7F A5 EB 78 */	mr r5, r29
 /* 802BBE00 002B8D40  7F C6 F3 78 */	mr r6, r30
-/* 802BBE04 002B8D44  4B FF FF 15 */	bl func_802BBD18
+/* 802BBE04 002B8D44  4B FF FF 15 */	bl "init__15Z2AudibleAbsPosFPQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>"
 /* 802BBE08 002B8D48  38 60 00 00 */	li r3, 0
 /* 802BBE0C 002B8D4C  38 00 00 01 */	li r0, 1
 /* 802BBE10 002B8D50  7C 00 18 30 */	slw r0, r0, r3
@@ -143,7 +143,7 @@ calc__9Z2AudibleFv:
 /* 802BBEB0 002B8DF0  41 82 00 10 */	beq lbl_802BBEC0
 /* 802BBEB4 002B8DF4  38 64 00 14 */	addi r3, r4, 0x14
 /* 802BBEB8 002B8DF8  38 84 00 04 */	addi r4, r4, 4
-/* 802BBEBC 002B8DFC  4B FF FE 21 */	bl func_802BBCDC
+/* 802BBEBC 002B8DFC  4B FF FE 21 */	bl "calc__15Z2AudibleAbsPosFRCQ29JGeometry8TVec3<f>"
 lbl_802BBEC0:
 /* 802BBEC0 002B8E00  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802BBEC4 002B8E04  7C 08 03 A6 */	mtlr r0
@@ -982,13 +982,13 @@ lbl_802BCA3C:
 /* 802BCA64 002B99A4  EC 01 00 B2 */	fmuls f0, f1, f2
 /* 802BCA68 002B99A8  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 802BCA6C 002B99AC  40 81 00 18 */	ble lbl_802BCA84
-/* 802BCA70 002B99B0  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCA70 002B99B0  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BCA74 002B99B4  38 63 00 0C */	addi r3, r3, 0xc
 /* 802BCA78 002B99B8  EC 23 10 24 */	fdivs f1, f3, f2
 /* 802BCA7C 002B99BC  4B FF FA 55 */	bl updateVolumeDist__19Z2Audience3DSettingFf
 /* 802BCA80 002B99C0  48 00 00 10 */	b lbl_802BCA90
 lbl_802BCA84:
-/* 802BCA84 002B99C4  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCA84 002B99C4  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BCA88 002B99C8  38 63 00 0C */	addi r3, r3, 0xc
 /* 802BCA8C 002B99CC  4B FF F8 7D */	bl initVolumeDist__19Z2Audience3DSettingFv
 lbl_802BCA90:
@@ -1005,7 +1005,7 @@ lbl_802BCAAC:
 /* 802BCAB4 002B99F4  88 1B 00 70 */	lbz r0, 0x70(r27)
 /* 802BCAB8 002B99F8  28 00 00 00 */	cmplwi r0, 0
 /* 802BCABC 002B99FC  41 82 00 DC */	beq lbl_802BCB98
-/* 802BCAC0 002B9A00  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCAC0 002B9A00  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BCAC4 002B9A04  38 63 00 0C */	addi r3, r3, 0xc
 /* 802BCAC8 002B9A08  C0 3B 00 64 */	lfs f1, 0x64(r27)
 /* 802BCACC 002B9A0C  FC 40 08 90 */	fmr f2, f1
@@ -1053,7 +1053,7 @@ lbl_802BCAD8:
 /* 802BCB70 002B9AB0  88 1B 00 70 */	lbz r0, 0x70(r27)
 /* 802BCB74 002B9AB4  28 00 00 00 */	cmplwi r0, 0
 /* 802BCB78 002B9AB8  41 82 00 20 */	beq lbl_802BCB98
-/* 802BCB7C 002B9ABC  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCB7C 002B9ABC  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BCB80 002B9AC0  38 63 00 0C */	addi r3, r3, 0xc
 /* 802BCB84 002B9AC4  C0 1B 00 60 */	lfs f0, 0x60(r27)
 /* 802BCB88 002B9AC8  C0 5B 00 64 */	lfs f2, 0x64(r27)
@@ -1291,7 +1291,7 @@ lbl_802BCE8C:
 /* 802BCEA4 002B9DE4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 802BCEA8 002B9DE8  38 61 00 08 */	addi r3, r1, 8
 /* 802BCEAC 002B9DEC  48 08 A2 A5 */	bl PSVECMag
-/* 802BCEB0 002B9DF0  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCEB0 002B9DF0  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BCEB4 002B9DF4  C0 83 00 0C */	lfs f4, 0xc(r3)
 /* 802BCEB8 002B9DF8  C0 A3 00 48 */	lfs f5, 0x48(r3)
 /* 802BCEBC 002B9DFC  FC 01 20 40 */	fcmpo cr0, f1, f4
@@ -1393,7 +1393,7 @@ calcMicPriority__9Z2SpotMicFf:
 /* 802BCFF0 002B9F30  C0 03 00 04 */	lfs f0, 4(r3)
 /* 802BCFF4 002B9F34  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802BCFF8 002B9F38  40 81 00 10 */	ble lbl_802BD008
-/* 802BCFFC 002B9F3C  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BCFFC 002B9F3C  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BD000 002B9F40  80 63 00 70 */	lwz r3, 0x70(r3)
 /* 802BD004 002B9F44  48 00 00 28 */	b lbl_802BD02C
 lbl_802BD008:
@@ -1504,7 +1504,7 @@ __ct__10Z2AudienceFv:
 /* 802BD154 002BA094  41 82 00 08 */	beq lbl_802BD15C
 /* 802BD158 002BA098  38 63 FF FC */	addi r3, r3, -4
 lbl_802BD15C:
-/* 802BD15C 002BA09C  90 6D 85 C4 */	stw r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BD15C 002BA09C  90 6D 85 C4 */	stw r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BD160 002BA0A0  3C 60 80 3D */	lis r3, __vt__10Z2Audience@ha
 /* 802BD164 002BA0A4  38 03 AC 98 */	addi r0, r3, __vt__10Z2Audience@l
 /* 802BD168 002BA0A8  90 1F 00 00 */	stw r0, 0(r31)
@@ -1565,11 +1565,11 @@ __dt__10Z2AudienceFv:
 /* 802BD234 002BA174  41 82 00 08 */	beq lbl_802BD23C
 /* 802BD238 002BA178  38 63 FF FC */	addi r3, r3, -4
 lbl_802BD23C:
-/* 802BD23C 002BA17C  80 0D 85 C4 */	lwz r0, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BD23C 002BA17C  80 0D 85 C4 */	lwz r0, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802BD240 002BA180  7C 00 18 40 */	cmplw r0, r3
 /* 802BD244 002BA184  40 82 00 0C */	bne lbl_802BD250
 /* 802BD248 002BA188  38 00 00 00 */	li r0, 0
-/* 802BD24C 002BA18C  90 0D 85 C4 */	stw r0, lbl_80450B44-_SDA_BASE_(r13)
+/* 802BD24C 002BA18C  90 0D 85 C4 */	stw r0, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 lbl_802BD250:
 /* 802BD250 002BA190  7F C3 F3 78 */	mr r3, r30
 /* 802BD254 002BA194  38 80 00 00 */	li r4, 0
@@ -1587,9 +1587,9 @@ lbl_802BD26C:
 /* 802BD280 002BA1C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BD284 002BA1C4  4E 80 00 20 */	blr 
 
-/* 802BD288 0054 .text func_802BD288 __dt__22JASMemPool<9Z2Audible>Fv */
-.global func_802BD288
-func_802BD288:
+/* 802BD288 0054 .text "__dt__22JASMemPool<9Z2Audible>Fv" __dt__22JASMemPool<9Z2Audible>Fv */
+.global "__dt__22JASMemPool<9Z2Audible>Fv"
+"__dt__22JASMemPool<9Z2Audible>Fv":
 /* 802BD288 002BA1C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BD28C 002BA1CC  7C 08 02 A6 */	mflr r0
 /* 802BD290 002BA1D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1640,9 +1640,9 @@ setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib:
 /* 802BD330 002BA270  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BD334 002BA274  4E 80 00 20 */	blr 
 
-/* 802BD338 019C .text func_802BD338 newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul */
-.global func_802BD338
-func_802BD338:
+/* 802BD338 019C .text "newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul" newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul */
+.global "newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul"
+"newAudible__10Z2AudienceFRCQ29JGeometry8TVec3<f>10JAISoundIDPCQ29JGeometry8TVec3<f>Ul":
 /* 802BD338 002BA278  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BD33C 002BA27C  7C 08 02 A6 */	mflr r0
 /* 802BD340 002BA280  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1665,7 +1665,7 @@ func_802BD338:
 lbl_802BD384:
 /* 802BD384 002BA2C4  80 05 00 00 */	lwz r0, 0(r5)
 /* 802BD388 002BA2C8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802BD38C 002BA2CC  80 6D 85 CC */	lwz r3, lbl_80450B4C-_SDA_BASE_(r13)
+/* 802BD38C 002BA2CC  80 6D 85 CC */	lwz r3, "sInstance__32JASGlobalInstance<11Z2SoundInfo>"-_SDA_BASE_(r13)
 /* 802BD390 002BA2D0  38 81 00 0C */	addi r4, r1, 0xc
 /* 802BD394 002BA2D4  4B FF DD C5 */	bl getAudibleSwFull__11Z2SoundInfoF10JAISoundID
 /* 802BD398 002BA2D8  90 61 00 10 */	stw r3, 0x10(r1)
@@ -1681,8 +1681,8 @@ lbl_802BD384:
 /* 802BD3C0 002BA300  4B FD 34 89 */	bl __ct__17JASGenericMemPoolFv
 /* 802BD3C4 002BA304  3C 60 80 43 */	lis r3, lbl_804341E4@ha
 /* 802BD3C8 002BA308  38 63 41 E4 */	addi r3, r3, lbl_804341E4@l
-/* 802BD3CC 002BA30C  3C 80 80 2C */	lis r4, func_802BD288@ha
-/* 802BD3D0 002BA310  38 84 D2 88 */	addi r4, r4, func_802BD288@l
+/* 802BD3CC 002BA30C  3C 80 80 2C */	lis r4, "__dt__22JASMemPool<9Z2Audible>Fv"@ha
+/* 802BD3D0 002BA310  38 84 D2 88 */	addi r4, r4, "__dt__22JASMemPool<9Z2Audible>Fv"@l
 /* 802BD3D4 002BA314  3C A0 80 43 */	lis r5, lbl_804341D8@ha
 /* 802BD3D8 002BA318  38 A5 41 D8 */	addi r5, r5, lbl_804341D8@l
 /* 802BD3DC 002BA31C  48 0A 48 49 */	bl __register_global_object
@@ -1699,7 +1699,7 @@ lbl_802BD3E8:
 /* 802BD404 002BA344  7F A5 EB 78 */	mr r5, r29
 /* 802BD408 002BA348  7F E6 FB 78 */	mr r6, r31
 /* 802BD40C 002BA34C  7F C7 F3 78 */	mr r7, r30
-/* 802BD410 002BA350  4B FF E9 85 */	bl func_802BBD94
+/* 802BD410 002BA350  4B FF E9 85 */	bl "__ct__9Z2AudibleFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>Ulb"
 /* 802BD414 002BA354  7C 7A 1B 78 */	mr r26, r3
 lbl_802BD418:
 /* 802BD418 002BA358  28 1A 00 00 */	cmplwi r26, 0
@@ -1802,8 +1802,8 @@ __dt__9Z2AudibleFv:
 /* 802BD560 002BA4A0  4B FD 32 E9 */	bl __ct__17JASGenericMemPoolFv
 /* 802BD564 002BA4A4  3C 60 80 43 */	lis r3, lbl_804341E4@ha
 /* 802BD568 002BA4A8  38 63 41 E4 */	addi r3, r3, lbl_804341E4@l
-/* 802BD56C 002BA4AC  3C 80 80 2C */	lis r4, func_802BD288@ha
-/* 802BD570 002BA4B0  38 84 D2 88 */	addi r4, r4, func_802BD288@l
+/* 802BD56C 002BA4AC  3C 80 80 2C */	lis r4, "__dt__22JASMemPool<9Z2Audible>Fv"@ha
+/* 802BD570 002BA4B0  38 84 D2 88 */	addi r4, r4, "__dt__22JASMemPool<9Z2Audible>Fv"@l
 /* 802BD574 002BA4B4  3C A0 80 43 */	lis r5, lbl_804341D8@ha
 /* 802BD578 002BA4B8  38 A5 41 D8 */	addi r5, r5, lbl_804341D8@l
 /* 802BD57C 002BA4BC  48 0A 46 A9 */	bl __register_global_object
@@ -2353,9 +2353,9 @@ lbl_802BDCA0:
 /* 802BDCA8 002BABE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BDCAC 002BABEC  4E 80 00 20 */	blr 
 
-/* 802BDCB0 0050 .text func_802BDCB0 calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f */
-.global func_802BDCB0
-func_802BDCB0:
+/* 802BDCB0 0050 .text "calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f" calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f */
+.global "calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f"
+"calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f":
 /* 802BDCB0 002BABF0  E0 64 00 04 */	psq_l f3, 4(r4), 0, qr0
 /* 802BDCB4 002BABF4  E0 45 00 04 */	psq_l f2, 4(r5), 0, qr0
 /* 802BDCB8 002BABF8  10 63 00 B2 */	ps_mul f3, f3, f2
@@ -2476,7 +2476,7 @@ lbl_802BDE18:
 /* 802BDE4C 002BAD8C  38 81 00 10 */	addi r4, r1, 0x10
 /* 802BDE50 002BAD90  38 A6 00 30 */	addi r5, r6, 0x30
 /* 802BDE54 002BAD94  38 C7 00 20 */	addi r6, r7, 0x20
-/* 802BDE58 002BAD98  4B FF FE 59 */	bl func_802BDCB0
+/* 802BDE58 002BAD98  4B FF FE 59 */	bl "calcPitchDoppler___10Z2AudienceCFRCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>RCQ29JGeometry8TVec3<f>f"
 /* 802BDE5C 002BAD9C  C0 5F 00 34 */	lfs f2, 0x34(r31)
 /* 802BDE60 002BADA0  C0 02 C0 A0 */	lfs f0, lbl_80455AA0-_SDA2_BASE_(r2)
 /* 802BDE64 002BADA4  FC 02 00 40 */	fcmpo cr0, f2, f0

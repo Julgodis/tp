@@ -258,9 +258,9 @@ onLoadDone__10JASWaveArcFv:
 onEraseDone__10JASWaveArcFv:
 /* 80298FA4 00295EE4  4E 80 00 20 */	blr 
 
-/* 80298FA8 0008 .text func_80298FA8 @4@__dt__17JASSimpleWaveBankFv */
-.global func_80298FA8
-func_80298FA8:
+/* 80298FA8 0008 .text lbl_80298FA8 @4@__dt__17JASSimpleWaveBankFv */
+.global lbl_80298FA8
+lbl_80298FA8:
 /* 80298FA8 00295EE8  38 63 FF FC */	addi r3, r3, -4
 /* 80298FAC 00295EEC  4B FF FD 48 */	b __dt__17JASSimpleWaveBankFv
 

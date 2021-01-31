@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 8029F03C 00BC .text func_8029F03C __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul */
-.global func_8029F03C
-func_8029F03C:
+/* 8029F03C 00BC .text "__ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul" __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul */
+.global "__ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul"
+"__ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul":
 /* 8029F03C 0029BF7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029F040 0029BF80  7C 08 02 A6 */	mflr r0
 /* 8029F044 0029BF84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -457,9 +457,9 @@ lbl_8029F63C:
 /* 8029F648 0029C588  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029F64C 0029C58C  4E 80 00 20 */	blr 
 
-/* 8029F650 0088 .text func_8029F650 JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
-.global func_8029F650
-func_8029F650:
+/* 8029F650 0088 .text "JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience" JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+.global "JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience"
+"JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience":
 /* 8029F650 0029C590  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029F654 0029C594  7C 08 02 A6 */	mflr r0
 /* 8029F658 0029C598  90 01 00 24 */	stw r0, 0x24(r1)
@@ -471,7 +471,7 @@ func_8029F650:
 /* 8029F670 0029C5B0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8029F674 0029C5B4  38 7E 00 10 */	addi r3, r30, 0x10
 /* 8029F678 0029C5B8  38 81 00 0C */	addi r4, r1, 0xc
-/* 8029F67C 0029C5BC  48 00 2C AD */	bl func_802A2328
+/* 8029F67C 0029C5BC  48 00 2C AD */	bl "start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience"
 /* 8029F680 0029C5C0  38 60 00 00 */	li r3, 0
 /* 8029F684 0029C5C4  98 7E 03 18 */	stb r3, 0x318(r30)
 /* 8029F688 0029C5C8  80 1E 03 20 */	lwz r0, 0x320(r30)
@@ -647,51 +647,51 @@ getTempoMgr__5JAISeFv:
 /* 8029F868 0029C7A8  38 63 03 28 */	addi r3, r3, 0x328
 /* 8029F86C 0029C7AC  4E 80 00 20 */	blr 
 
-/* 8029F870 0008 .text func_8029F870 @16@JAISound_tryDie___5JAISeFv */
-.global func_8029F870
-func_8029F870:
+/* 8029F870 0008 .text lbl_8029F870 @16@JAISound_tryDie___5JAISeFv */
+.global lbl_8029F870
+lbl_8029F870:
 /* 8029F870 0029C7B0  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F874 0029C7B4  4B FF FD 54 */	b JAISound_tryDie___5JAISeFv
 
-/* 8029F878 0008 .text func_8029F878 @16@getTempoMgr__5JAISeFv */
-.global func_8029F878
-func_8029F878:
+/* 8029F878 0008 .text lbl_8029F878 @16@getTempoMgr__5JAISeFv */
+.global lbl_8029F878
+lbl_8029F878:
 /* 8029F878 0029C7B8  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F87C 0029C7BC  4B FF FF EC */	b getTempoMgr__5JAISeFv
 
-/* 8029F880 0008 .text func_8029F880 @16@getChildTrack__5JAISeFi */
-.global func_8029F880
-func_8029F880:
+/* 8029F880 0008 .text lbl_8029F880 @16@getChildTrack__5JAISeFi */
+.global lbl_8029F880
+lbl_8029F880:
 /* 8029F880 0029C7C0  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F884 0029C7C4  4B FF FF D0 */	b getChildTrack__5JAISeFi
 
-/* 8029F888 0008 .text func_8029F888 @16@getTrack__5JAISeFv */
-.global func_8029F888
-func_8029F888:
+/* 8029F888 0008 .text lbl_8029F888 @16@getTrack__5JAISeFv */
+.global lbl_8029F888
+lbl_8029F888:
 /* 8029F888 0029C7C8  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F88C 0029C7CC  4B FF FF C0 */	b getTrack__5JAISeFv
 
-/* 8029F890 0008 .text func_8029F890 @16@asSe__5JAISeFv */
-.global func_8029F890
-func_8029F890:
+/* 8029F890 0008 .text lbl_8029F890 @16@asSe__5JAISeFv */
+.global lbl_8029F890
+lbl_8029F890:
 /* 8029F890 0029C7D0  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F894 0029C7D4  4B FF FF D0 */	b asSe__5JAISeFv
 
-/* 8029F898 0008 .text func_8029F898 @16@releaseChild__5JAISeFi */
-.global func_8029F898
-func_8029F898:
+/* 8029F898 0008 .text lbl_8029F898 @16@releaseChild__5JAISeFi */
+.global lbl_8029F898
+lbl_8029F898:
 /* 8029F898 0029C7D8  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F89C 0029C7DC  4B FF FE 4C */	b releaseChild__5JAISeFi
 
-/* 8029F8A0 0008 .text func_8029F8A0 @16@getChild__5JAISeFi */
-.global func_8029F8A0
-func_8029F8A0:
+/* 8029F8A0 0008 .text lbl_8029F8A0 @16@getChild__5JAISeFi */
+.global lbl_8029F8A0
+lbl_8029F8A0:
 /* 8029F8A0 0029C7E0  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F8A4 0029C7E4  4B FF FE 3C */	b getChild__5JAISeFi
 
-/* 8029F8A8 0008 .text func_8029F8A8 @16@getNumChild__5JAISeCFv */
-.global func_8029F8A8
-func_8029F8A8:
+/* 8029F8A8 0008 .text lbl_8029F8A8 @16@getNumChild__5JAISeCFv */
+.global lbl_8029F8A8
+lbl_8029F8A8:
 /* 8029F8A8 0029C7E8  38 63 FF F0 */	addi r3, r3, -16
 /* 8029F8AC 0029C7EC  4B FF FE 2C */	b getNumChild__5JAISeCFv
 

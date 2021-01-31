@@ -1214,8 +1214,8 @@ __sinit_d_com_static_cpp:
 /* 80031DF4 0002ED34  38 E0 00 20 */	li r7, 0x20
 /* 80031DF8 0002ED38  48 32 FF 69 */	bl __construct_array
 /* 80031DFC 0002ED3C  38 60 00 00 */	li r3, 0
-/* 80031E00 0002ED40  3C 80 80 03 */	lis r4, func_80031EF0@ha
-/* 80031E04 0002ED44  38 84 1E F0 */	addi r4, r4, func_80031EF0@l
+/* 80031E00 0002ED40  3C 80 80 03 */	lis r4, lbl_80031EF0@ha
+/* 80031E04 0002ED44  38 84 1E F0 */	addi r4, r4, lbl_80031EF0@l
 /* 80031E08 0002ED48  38 BF 00 00 */	addi r5, r31, 0
 /* 80031E0C 0002ED4C  48 32 FE 19 */	bl __register_global_object
 /* 80031E10 0002ED50  38 7F 04 8C */	addi r3, r31, 0x48c
@@ -1248,8 +1248,8 @@ __sinit_d_com_static_cpp:
 /* 80031E7C 0002EDBC  38 E0 00 05 */	li r7, 5
 /* 80031E80 0002EDC0  48 32 FE E1 */	bl __construct_array
 /* 80031E84 0002EDC4  38 60 00 00 */	li r3, 0
-/* 80031E88 0002EDC8  3C 80 80 03 */	lis r4, func_80031EAC@ha
-/* 80031E8C 0002EDCC  38 84 1E AC */	addi r4, r4, func_80031EAC@l
+/* 80031E88 0002EDC8  3C 80 80 03 */	lis r4, lbl_80031EAC@ha
+/* 80031E8C 0002EDCC  38 84 1E AC */	addi r4, r4, lbl_80031EAC@l
 /* 80031E90 0002EDD0  38 BF 05 B0 */	addi r5, r31, 0x5b0
 /* 80031E94 0002EDD4  48 32 FD 91 */	bl __register_global_object
 /* 80031E98 0002EDD8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1258,9 +1258,9 @@ __sinit_d_com_static_cpp:
 /* 80031EA4 0002EDE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80031EA8 0002EDE8  4E 80 00 20 */	blr 
 
-/* 80031EAC 0038 .text func_80031EAC __arraydtor$4479 */
-.global func_80031EAC
-func_80031EAC:
+/* 80031EAC 0038 .text lbl_80031EAC __arraydtor$4479 */
+.global lbl_80031EAC
+lbl_80031EAC:
 /* 80031EAC 0002EDEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80031EB0 0002EDF0  7C 08 02 A6 */	mflr r0
 /* 80031EB4 0002EDF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1283,9 +1283,9 @@ __ct__Q27daSus_c6room_cFv:
 /* 80031EE8 0002EE28  90 03 00 00 */	stw r0, 0(r3)
 /* 80031EEC 0002EE2C  4E 80 00 20 */	blr 
 
-/* 80031EF0 0038 .text func_80031EF0 __arraydtor$3839 */
-.global func_80031EF0
-func_80031EF0:
+/* 80031EF0 0038 .text lbl_80031EF0 __arraydtor$3839 */
+.global lbl_80031EF0
+lbl_80031EF0:
 /* 80031EF0 0002EE30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80031EF4 0002EE34  7C 08 02 A6 */	mflr r0
 /* 80031EF8 0002EE38  90 01 00 14 */	stw r0, 0x14(r1)

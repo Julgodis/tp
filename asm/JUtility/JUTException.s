@@ -2644,8 +2644,8 @@ __sinit_JUTException_cpp:
 /* 802E4164 002E10A4  4B FF 7D 11 */	bl __ct__10JSUPtrListFb
 /* 802E4168 002E10A8  3C 60 80 43 */	lis r3, sMapFileList__12JUTException@ha
 /* 802E416C 002E10AC  38 63 45 98 */	addi r3, r3, sMapFileList__12JUTException@l
-/* 802E4170 002E10B0  3C 80 80 2E */	lis r4, func_802E4194@ha
-/* 802E4174 002E10B4  38 84 41 94 */	addi r4, r4, func_802E4194@l
+/* 802E4170 002E10B0  3C 80 80 2E */	lis r4, "__dt__39JSUList<Q212JUTException12JUTExMapFile>Fv"@ha
+/* 802E4174 002E10B4  38 84 41 94 */	addi r4, r4, "__dt__39JSUList<Q212JUTException12JUTExMapFile>Fv"@l
 /* 802E4178 002E10B8  3C A0 80 43 */	lis r5, lbl_8043458C@ha
 /* 802E417C 002E10BC  38 A5 45 8C */	addi r5, r5, lbl_8043458C@l
 /* 802E4180 002E10C0  48 07 DA A5 */	bl __register_global_object
@@ -2654,9 +2654,9 @@ __sinit_JUTException_cpp:
 /* 802E418C 002E10CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4190 002E10D0  4E 80 00 20 */	blr 
 
-/* 802E4194 0054 .text func_802E4194 __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv */
-.global func_802E4194
-func_802E4194:
+/* 802E4194 0054 .text "__dt__39JSUList<Q212JUTException12JUTExMapFile>Fv" __dt__39JSUList<Q212JUTException12JUTExMapFile>Fv */
+.global "__dt__39JSUList<Q212JUTException12JUTExMapFile>Fv"
+"__dt__39JSUList<Q212JUTException12JUTExMapFile>Fv":
 /* 802E4194 002E10D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4198 002E10D8  7C 08 02 A6 */	mflr r0
 /* 802E419C 002E10DC  90 01 00 14 */	stw r0, 0x14(r1)

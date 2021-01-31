@@ -662,183 +662,183 @@ lbl_80078518:
 /* 8007852C 0007546C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078530 00075470  4E 80 00 20 */	blr 
 
-/* 80078534 0008 .text func_80078534 @20@__dt__11dBgS_LinChkFv */
-.global func_80078534
-func_80078534:
+/* 80078534 0008 .text lbl_80078534 @20@__dt__11dBgS_LinChkFv */
+.global lbl_80078534
+lbl_80078534:
 /* 80078534 00075474  38 63 FF EC */	addi r3, r3, -20
 /* 80078538 00075478  4B FF F7 A4 */	b __dt__11dBgS_LinChkFv
 
-/* 8007853C 0008 .text func_8007853C @104@__dt__11dBgS_LinChkFv */
-.global func_8007853C
-func_8007853C:
+/* 8007853C 0008 .text lbl_8007853C @104@__dt__11dBgS_LinChkFv */
+.global lbl_8007853C
+lbl_8007853C:
 /* 8007853C 0007547C  38 63 FF 98 */	addi r3, r3, -104
 /* 80078540 00075480  4B FF F7 9C */	b __dt__11dBgS_LinChkFv
 
-/* 80078544 0008 .text func_80078544 @88@__dt__11dBgS_LinChkFv */
-.global func_80078544
-func_80078544:
+/* 80078544 0008 .text lbl_80078544 @88@__dt__11dBgS_LinChkFv */
+.global lbl_80078544
+lbl_80078544:
 /* 80078544 00075484  38 63 FF A8 */	addi r3, r3, -88
 /* 80078548 00075488  4B FF F7 94 */	b __dt__11dBgS_LinChkFv
 
-/* 8007854C 0008 .text func_8007854C @20@__dt__14dBgS_CamLinChkFv */
-.global func_8007854C
-func_8007854C:
+/* 8007854C 0008 .text lbl_8007854C @20@__dt__14dBgS_CamLinChkFv */
+.global lbl_8007854C
+lbl_8007854C:
 /* 8007854C 0007548C  38 63 FF EC */	addi r3, r3, -20
 /* 80078550 00075490  4B FF F8 B0 */	b __dt__14dBgS_CamLinChkFv
 
-/* 80078554 0008 .text func_80078554 @104@__dt__14dBgS_CamLinChkFv */
-.global func_80078554
-func_80078554:
+/* 80078554 0008 .text lbl_80078554 @104@__dt__14dBgS_CamLinChkFv */
+.global lbl_80078554
+lbl_80078554:
 /* 80078554 00075494  38 63 FF 98 */	addi r3, r3, -104
 /* 80078558 00075498  4B FF F8 A8 */	b __dt__14dBgS_CamLinChkFv
 
-/* 8007855C 0008 .text func_8007855C @88@__dt__14dBgS_CamLinChkFv */
-.global func_8007855C
-func_8007855C:
+/* 8007855C 0008 .text lbl_8007855C @88@__dt__14dBgS_CamLinChkFv */
+.global lbl_8007855C
+lbl_8007855C:
 /* 8007855C 0007549C  38 63 FF A8 */	addi r3, r3, -88
 /* 80078560 000754A0  4B FF F8 A0 */	b __dt__14dBgS_CamLinChkFv
 
-/* 80078564 0008 .text func_80078564 @20@__dt__21dBgS_CamLinChk_NorWtrFv */
-.global func_80078564
-func_80078564:
+/* 80078564 0008 .text lbl_80078564 @20@__dt__21dBgS_CamLinChk_NorWtrFv */
+.global lbl_80078564
+lbl_80078564:
 /* 80078564 000754A4  38 63 FF EC */	addi r3, r3, -20
 /* 80078568 000754A8  4B FF F9 7C */	b __dt__21dBgS_CamLinChk_NorWtrFv
 
-/* 8007856C 0008 .text func_8007856C @104@__dt__21dBgS_CamLinChk_NorWtrFv */
-.global func_8007856C
-func_8007856C:
+/* 8007856C 0008 .text lbl_8007856C @104@__dt__21dBgS_CamLinChk_NorWtrFv */
+.global lbl_8007856C
+lbl_8007856C:
 /* 8007856C 000754AC  38 63 FF 98 */	addi r3, r3, -104
 /* 80078570 000754B0  4B FF F9 74 */	b __dt__21dBgS_CamLinChk_NorWtrFv
 
-/* 80078574 0008 .text func_80078574 @88@__dt__21dBgS_CamLinChk_NorWtrFv */
-.global func_80078574
-func_80078574:
+/* 80078574 0008 .text lbl_80078574 @88@__dt__21dBgS_CamLinChk_NorWtrFv */
+.global lbl_80078574
+lbl_80078574:
 /* 80078574 000754B4  38 63 FF A8 */	addi r3, r3, -88
 /* 80078578 000754B8  4B FF F9 6C */	b __dt__21dBgS_CamLinChk_NorWtrFv
 
-/* 8007857C 0008 .text func_8007857C @20@__dt__14dBgS_ObjLinChkFv */
-.global func_8007857C
-func_8007857C:
+/* 8007857C 0008 .text lbl_8007857C @20@__dt__14dBgS_ObjLinChkFv */
+.global lbl_8007857C
+lbl_8007857C:
 /* 8007857C 000754BC  38 63 FF EC */	addi r3, r3, -20
 /* 80078580 000754C0  4B FF FA 38 */	b __dt__14dBgS_ObjLinChkFv
 
-/* 80078584 0008 .text func_80078584 @104@__dt__14dBgS_ObjLinChkFv */
-.global func_80078584
-func_80078584:
+/* 80078584 0008 .text lbl_80078584 @104@__dt__14dBgS_ObjLinChkFv */
+.global lbl_80078584
+lbl_80078584:
 /* 80078584 000754C4  38 63 FF 98 */	addi r3, r3, -104
 /* 80078588 000754C8  4B FF FA 30 */	b __dt__14dBgS_ObjLinChkFv
 
-/* 8007858C 0008 .text func_8007858C @88@__dt__14dBgS_ObjLinChkFv */
-.global func_8007858C
-func_8007858C:
+/* 8007858C 0008 .text lbl_8007858C @88@__dt__14dBgS_ObjLinChkFv */
+.global lbl_8007858C
+lbl_8007858C:
 /* 8007858C 000754CC  38 63 FF A8 */	addi r3, r3, -88
 /* 80078590 000754D0  4B FF FA 28 */	b __dt__14dBgS_ObjLinChkFv
 
-/* 80078594 0008 .text func_80078594 @20@__dt__15dBgS_LinkLinChkFv */
-.global func_80078594
-func_80078594:
+/* 80078594 0008 .text lbl_80078594 @20@__dt__15dBgS_LinkLinChkFv */
+.global lbl_80078594
+lbl_80078594:
 /* 80078594 000754D4  38 63 FF EC */	addi r3, r3, -20
 /* 80078598 000754D8  4B FF FA F4 */	b __dt__15dBgS_LinkLinChkFv
 
-/* 8007859C 0008 .text func_8007859C @104@__dt__15dBgS_LinkLinChkFv */
-.global func_8007859C
-func_8007859C:
+/* 8007859C 0008 .text lbl_8007859C @104@__dt__15dBgS_LinkLinChkFv */
+.global lbl_8007859C
+lbl_8007859C:
 /* 8007859C 000754DC  38 63 FF 98 */	addi r3, r3, -104
 /* 800785A0 000754E0  4B FF FA EC */	b __dt__15dBgS_LinkLinChkFv
 
-/* 800785A4 0008 .text func_800785A4 @88@__dt__15dBgS_LinkLinChkFv */
-.global func_800785A4
-func_800785A4:
+/* 800785A4 0008 .text lbl_800785A4 @88@__dt__15dBgS_LinkLinChkFv */
+.global lbl_800785A4
+lbl_800785A4:
 /* 800785A4 000754E4  38 63 FF A8 */	addi r3, r3, -88
 /* 800785A8 000754E8  4B FF FA E4 */	b __dt__15dBgS_LinkLinChkFv
 
-/* 800785AC 0008 .text func_800785AC @20@__dt__15dBgS_BombLinChkFv */
-.global func_800785AC
-func_800785AC:
+/* 800785AC 0008 .text lbl_800785AC @20@__dt__15dBgS_BombLinChkFv */
+.global lbl_800785AC
+lbl_800785AC:
 /* 800785AC 000754EC  38 63 FF EC */	addi r3, r3, -20
 /* 800785B0 000754F0  4B FF FB B0 */	b __dt__15dBgS_BombLinChkFv
 
-/* 800785B4 0008 .text func_800785B4 @104@__dt__15dBgS_BombLinChkFv */
-.global func_800785B4
-func_800785B4:
+/* 800785B4 0008 .text lbl_800785B4 @104@__dt__15dBgS_BombLinChkFv */
+.global lbl_800785B4
+lbl_800785B4:
 /* 800785B4 000754F4  38 63 FF 98 */	addi r3, r3, -104
 /* 800785B8 000754F8  4B FF FB A8 */	b __dt__15dBgS_BombLinChkFv
 
-/* 800785BC 0008 .text func_800785BC @88@__dt__15dBgS_BombLinChkFv */
-.global func_800785BC
-func_800785BC:
+/* 800785BC 0008 .text lbl_800785BC @88@__dt__15dBgS_BombLinChkFv */
+.global lbl_800785BC
+lbl_800785BC:
 /* 800785BC 000754FC  38 63 FF A8 */	addi r3, r3, -88
 /* 800785C0 00075500  4B FF FB A0 */	b __dt__15dBgS_BombLinChkFv
 
-/* 800785C4 0008 .text func_800785C4 @20@__dt__16dBgS_ArrowLinChkFv */
-.global func_800785C4
-func_800785C4:
+/* 800785C4 0008 .text lbl_800785C4 @20@__dt__16dBgS_ArrowLinChkFv */
+.global lbl_800785C4
+lbl_800785C4:
 /* 800785C4 00075504  38 63 FF EC */	addi r3, r3, -20
 /* 800785C8 00075508  4B FF FC 78 */	b __dt__16dBgS_ArrowLinChkFv
 
-/* 800785CC 0008 .text func_800785CC @104@__dt__16dBgS_ArrowLinChkFv */
-.global func_800785CC
-func_800785CC:
+/* 800785CC 0008 .text lbl_800785CC @104@__dt__16dBgS_ArrowLinChkFv */
+.global lbl_800785CC
+lbl_800785CC:
 /* 800785CC 0007550C  38 63 FF 98 */	addi r3, r3, -104
 /* 800785D0 00075510  4B FF FC 70 */	b __dt__16dBgS_ArrowLinChkFv
 
-/* 800785D4 0008 .text func_800785D4 @88@__dt__16dBgS_ArrowLinChkFv */
-.global func_800785D4
-func_800785D4:
+/* 800785D4 0008 .text lbl_800785D4 @88@__dt__16dBgS_ArrowLinChkFv */
+.global lbl_800785D4
+lbl_800785D4:
 /* 800785D4 00075514  38 63 FF A8 */	addi r3, r3, -88
 /* 800785D8 00075518  4B FF FC 68 */	b __dt__16dBgS_ArrowLinChkFv
 
-/* 800785DC 0008 .text func_800785DC @20@__dt__20dBgS_BoomerangLinChkFv */
-.global func_800785DC
-func_800785DC:
+/* 800785DC 0008 .text lbl_800785DC @20@__dt__20dBgS_BoomerangLinChkFv */
+.global lbl_800785DC
+lbl_800785DC:
 /* 800785DC 0007551C  38 63 FF EC */	addi r3, r3, -20
 /* 800785E0 00075520  4B FF FD 34 */	b __dt__20dBgS_BoomerangLinChkFv
 
-/* 800785E4 0008 .text func_800785E4 @104@__dt__20dBgS_BoomerangLinChkFv */
-.global func_800785E4
-func_800785E4:
+/* 800785E4 0008 .text lbl_800785E4 @104@__dt__20dBgS_BoomerangLinChkFv */
+.global lbl_800785E4
+lbl_800785E4:
 /* 800785E4 00075524  38 63 FF 98 */	addi r3, r3, -104
 /* 800785E8 00075528  4B FF FD 2C */	b __dt__20dBgS_BoomerangLinChkFv
 
-/* 800785EC 0008 .text func_800785EC @88@__dt__20dBgS_BoomerangLinChkFv */
-.global func_800785EC
-func_800785EC:
+/* 800785EC 0008 .text lbl_800785EC @88@__dt__20dBgS_BoomerangLinChkFv */
+.global lbl_800785EC
+lbl_800785EC:
 /* 800785EC 0007552C  38 63 FF A8 */	addi r3, r3, -88
 /* 800785F0 00075530  4B FF FD 24 */	b __dt__20dBgS_BoomerangLinChkFv
 
-/* 800785F4 0008 .text func_800785F4 @20@__dt__15dBgS_RopeLinChkFv */
-.global func_800785F4
-func_800785F4:
+/* 800785F4 0008 .text lbl_800785F4 @20@__dt__15dBgS_RopeLinChkFv */
+.global lbl_800785F4
+lbl_800785F4:
 /* 800785F4 00075534  38 63 FF EC */	addi r3, r3, -20
 /* 800785F8 00075538  4B FF FD F0 */	b __dt__15dBgS_RopeLinChkFv
 
-/* 800785FC 0008 .text func_800785FC @104@__dt__15dBgS_RopeLinChkFv */
-.global func_800785FC
-func_800785FC:
+/* 800785FC 0008 .text lbl_800785FC @104@__dt__15dBgS_RopeLinChkFv */
+.global lbl_800785FC
+lbl_800785FC:
 /* 800785FC 0007553C  38 63 FF 98 */	addi r3, r3, -104
 /* 80078600 00075540  4B FF FD E8 */	b __dt__15dBgS_RopeLinChkFv
 
-/* 80078604 0008 .text func_80078604 @88@__dt__15dBgS_RopeLinChkFv */
-.global func_80078604
-func_80078604:
+/* 80078604 0008 .text lbl_80078604 @88@__dt__15dBgS_RopeLinChkFv */
+.global lbl_80078604
+lbl_80078604:
 /* 80078604 00075544  38 63 FF A8 */	addi r3, r3, -88
 /* 80078608 00075548  4B FF FD E0 */	b __dt__15dBgS_RopeLinChkFv
 
-/* 8007860C 0008 .text func_8007860C @20@__dt__16dBgS_HorseLinChkFv */
-.global func_8007860C
-func_8007860C:
+/* 8007860C 0008 .text lbl_8007860C @20@__dt__16dBgS_HorseLinChkFv */
+.global lbl_8007860C
+lbl_8007860C:
 /* 8007860C 0007554C  38 63 FF EC */	addi r3, r3, -20
 /* 80078610 00075550  4B FF FE AC */	b __dt__16dBgS_HorseLinChkFv
 
-/* 80078614 0008 .text func_80078614 @104@__dt__16dBgS_HorseLinChkFv */
-.global func_80078614
-func_80078614:
+/* 80078614 0008 .text lbl_80078614 @104@__dt__16dBgS_HorseLinChkFv */
+.global lbl_80078614
+lbl_80078614:
 /* 80078614 00075554  38 63 FF 98 */	addi r3, r3, -104
 /* 80078618 00075558  4B FF FE A4 */	b __dt__16dBgS_HorseLinChkFv
 
-/* 8007861C 0008 .text func_8007861C @88@__dt__16dBgS_HorseLinChkFv */
-.global func_8007861C
-func_8007861C:
+/* 8007861C 0008 .text lbl_8007861C @88@__dt__16dBgS_HorseLinChkFv */
+.global lbl_8007861C
+lbl_8007861C:
 /* 8007861C 0007555C  38 63 FF A8 */	addi r3, r3, -88
 /* 80078620 00075560  4B FF FE 9C */	b __dt__16dBgS_HorseLinChkFv
 

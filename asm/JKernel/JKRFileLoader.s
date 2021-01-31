@@ -383,8 +383,8 @@ __sinit_JKRFileLoader_cpp:
 /* 802D45B4 002D14F4  48 00 79 61 */	bl initiate__10JSUPtrListFv
 /* 802D45B8 002D14F8  3C 60 80 43 */	lis r3, sVolumeList__13JKRFileLoader@ha
 /* 802D45BC 002D14FC  38 63 43 54 */	addi r3, r3, sVolumeList__13JKRFileLoader@l
-/* 802D45C0 002D1500  3C 80 80 2D */	lis r4, func_802D45E4@ha
-/* 802D45C4 002D1504  38 84 45 E4 */	addi r4, r4, func_802D45E4@l
+/* 802D45C0 002D1500  3C 80 80 2D */	lis r4, "__dt__24JSUList<13JKRFileLoader>Fv"@ha
+/* 802D45C4 002D1504  38 84 45 E4 */	addi r4, r4, "__dt__24JSUList<13JKRFileLoader>Fv"@l
 /* 802D45C8 002D1508  3C A0 80 43 */	lis r5, lbl_80434348@ha
 /* 802D45CC 002D150C  38 A5 43 48 */	addi r5, r5, lbl_80434348@l
 /* 802D45D0 002D1510  48 08 D6 55 */	bl __register_global_object
@@ -393,9 +393,9 @@ __sinit_JKRFileLoader_cpp:
 /* 802D45DC 002D151C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D45E0 002D1520  4E 80 00 20 */	blr 
 
-/* 802D45E4 0054 .text func_802D45E4 __dt__24JSUList<13JKRFileLoader>Fv */
-.global func_802D45E4
-func_802D45E4:
+/* 802D45E4 0054 .text "__dt__24JSUList<13JKRFileLoader>Fv" __dt__24JSUList<13JKRFileLoader>Fv */
+.global "__dt__24JSUList<13JKRFileLoader>Fv"
+"__dt__24JSUList<13JKRFileLoader>Fv":
 /* 802D45E4 002D1524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D45E8 002D1528  7C 08 02 A6 */	mflr r0
 /* 802D45EC 002D152C  90 01 00 14 */	stw r0, 0x14(r1)

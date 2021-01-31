@@ -1,9 +1,0 @@
-.include "macros.inc"
-.section .sdata, "a"  # 0x80450720 - 0x80450724
-
-/* 0x80450720 0x4 mViewOffsetY__17dMenu_Collect3D_c */
-.global lbl_80450720
-lbl_80450720:
-.byte 0xc2, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d0480 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0484 */
-

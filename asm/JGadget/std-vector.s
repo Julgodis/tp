@@ -8,9 +8,9 @@ extend_default__Q27JGadget6vectorFUlUlUl:
 /* 802DCCC8 002D9C08  54 83 08 3C */	slwi r3, r4, 1
 /* 802DCCCC 002D9C0C  4E 80 00 20 */	blr 
 
-/* 802DCCD0 002C .text func_802DCCD0 __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
-.global func_802DCCD0
-func_802DCCD0:
+/* 802DCCD0 002C .text "__ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv>" __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
+.global "__ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv>"
+"__ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv>":
 /* 802DCCD0 002D9C10  88 04 00 00 */	lbz r0, 0(r4)
 /* 802DCCD4 002D9C14  98 03 00 00 */	stb r0, 0(r3)
 /* 802DCCD8 002D9C18  38 80 00 00 */	li r4, 0
@@ -81,7 +81,7 @@ insert__Q27JGadget20TVector_pointer_voidFPPvRCPv:
 /* 802DCDA4 002D9CE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCDA8 002D9CE8  7C 08 02 A6 */	mflr r0
 /* 802DCDAC 002D9CEC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DCDB0 002D9CF0  48 00 03 81 */	bl func_802DD130
+/* 802DCDB0 002D9CF0  48 00 03 81 */	bl "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv"
 /* 802DCDB4 002D9CF4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DCDB8 002D9CF8  7C 08 03 A6 */	mtlr r0
 /* 802DCDBC 002D9CFC  38 21 00 10 */	addi r1, r1, 0x10
@@ -117,9 +117,9 @@ lbl_802DCE08:
 /* 802DCE14 002D9D54  7C 83 23 78 */	mr r3, r4
 /* 802DCE18 002D9D58  4E 80 00 20 */	blr 
 
-/* 802DCE1C 0070 .text func_802DCE1C insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
-.global func_802DCE1C
-func_802DCE1C:
+/* 802DCE1C 0070 .text "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv" insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
+.global "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv"
+"insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv":
 /* 802DCE1C 002D9D5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DCE20 002D9D60  7C 08 02 A6 */	mflr r0
 /* 802DCE24 002D9D64  90 01 00 24 */	stw r0, 0x24(r1)
@@ -129,7 +129,7 @@ func_802DCE1C:
 /* 802DCE34 002D9D74  7C BE 2B 79 */	or. r30, r5, r5
 /* 802DCE38 002D9D78  7C DF 33 78 */	mr r31, r6
 /* 802DCE3C 002D9D7C  41 82 00 38 */	beq lbl_802DCE74
-/* 802DCE40 002D9D80  48 00 00 4D */	bl func_802DCE8C
+/* 802DCE40 002D9D80  48 00 00 4D */	bl "Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl"
 /* 802DCE44 002D9D84  80 1D 00 08 */	lwz r0, 8(r29)
 /* 802DCE48 002D9D88  7C 03 00 40 */	cmplw r3, r0
 /* 802DCE4C 002D9D8C  41 82 00 28 */	beq lbl_802DCE74
@@ -152,9 +152,9 @@ lbl_802DCE74:
 /* 802DCE84 002D9DC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DCE88 002D9DC8  4E 80 00 20 */	blr 
 
-/* 802DCE8C 02A4 .text func_802DCE8C Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
-.global func_802DCE8C
-func_802DCE8C:
+/* 802DCE8C 02A4 .text "Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl" Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
+.global "Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl"
+"Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl":
 /* 802DCE8C 002D9DCC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DCE90 002D9DD0  7C 08 02 A6 */	mflr r0
 /* 802DCE94 002D9DD4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -351,9 +351,9 @@ lbl_802DD118:
 /* 802DD128 002DA068  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DD12C 002DA06C  4E 80 00 20 */	blr 
 
-/* 802DD130 0058 .text func_802DD130 insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
-.global func_802DD130
-func_802DD130:
+/* 802DD130 0058 .text "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv" insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
+.global "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv"
+"insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv":
 /* 802DD130 002DA070  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD134 002DA074  7C 08 02 A6 */	mflr r0
 /* 802DD138 002DA078  90 01 00 14 */	stw r0, 0x14(r1)
@@ -366,7 +366,7 @@ func_802DD130:
 /* 802DD154 002DA094  7C 00 16 70 */	srawi r0, r0, 2
 /* 802DD158 002DA098  7F E0 01 94 */	addze r31, r0
 /* 802DD15C 002DA09C  38 A0 00 01 */	li r5, 1
-/* 802DD160 002DA0A0  4B FF FC BD */	bl func_802DCE1C
+/* 802DD160 002DA0A0  4B FF FC BD */	bl "insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv"
 /* 802DD164 002DA0A4  80 7E 00 04 */	lwz r3, 4(r30)
 /* 802DD168 002DA0A8  57 E0 10 3A */	slwi r0, r31, 2
 /* 802DD16C 002DA0AC  7C 63 02 14 */	add r3, r3, r0

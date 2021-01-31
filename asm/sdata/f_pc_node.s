@@ -1,9 +1,0 @@
-.include "macros.inc"
-.section .sdata, "a"  # 0x804505e0 - 0x804505e4
-
-/* 0x804505e0 0x4 g_fpcNd_IsCheckOfDeleteTiming */
-.global lbl_804505E0
-lbl_804505E0:
-.byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d0340 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0344 */
-

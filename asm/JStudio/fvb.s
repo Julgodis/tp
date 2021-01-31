@@ -175,58 +175,58 @@ lbl_802841B8:
 /* 802841E4 00281124  38 21 00 60 */	addi r1, r1, 0x60
 /* 802841E8 00281128  4E 80 00 20 */	blr 
 
-/* 802841EC 000C .text func_802841EC getCompositeData_raw___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_802841EC
-func_802841EC:
+/* 802841EC 000C .text lbl_802841EC getCompositeData_raw___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_802841EC
+lbl_802841EC:
 /* 802841EC 0028112C  80 04 00 00 */	lwz r0, 0(r4)
 /* 802841F0 00281130  90 03 00 00 */	stw r0, 0(r3)
 /* 802841F4 00281134  4E 80 00 20 */	blr 
 
-/* 802841F8 000C .text func_802841F8 getCompositeData_index___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_802841F8
-func_802841F8:
+/* 802841F8 000C .text lbl_802841F8 getCompositeData_index___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_802841F8
+lbl_802841F8:
 /* 802841F8 00281138  80 04 00 00 */	lwz r0, 0(r4)
 /* 802841FC 0028113C  90 03 00 00 */	stw r0, 0(r3)
 /* 80284200 00281140  4E 80 00 20 */	blr 
 
-/* 80284204 000C .text func_80284204 getCompositeData_parameter___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_80284204
-func_80284204:
+/* 80284204 000C .text lbl_80284204 getCompositeData_parameter___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_80284204
+lbl_80284204:
 /* 80284204 00281144  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80284208 00281148  D8 03 00 00 */	stfd f0, 0(r3)
 /* 8028420C 0028114C  4E 80 00 20 */	blr 
 
-/* 80284210 000C .text func_80284210 getCompositeData_add___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_80284210
-func_80284210:
+/* 80284210 000C .text lbl_80284210 getCompositeData_add___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_80284210
+lbl_80284210:
 /* 80284210 00281150  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80284214 00281154  D8 03 00 00 */	stfd f0, 0(r3)
 /* 80284218 00281158  4E 80 00 20 */	blr 
 
-/* 8028421C 000C .text func_8028421C getCompositeData_subtract___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_8028421C
-func_8028421C:
+/* 8028421C 000C .text lbl_8028421C getCompositeData_subtract___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_8028421C
+lbl_8028421C:
 /* 8028421C 0028115C  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80284220 00281160  D8 03 00 00 */	stfd f0, 0(r3)
 /* 80284224 00281164  4E 80 00 20 */	blr 
 
-/* 80284228 000C .text func_80284228 getCompositeData_multiply___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_80284228
-func_80284228:
+/* 80284228 000C .text lbl_80284228 getCompositeData_multiply___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_80284228
+lbl_80284228:
 /* 80284228 00281168  C0 04 00 00 */	lfs f0, 0(r4)
 /* 8028422C 0028116C  D8 03 00 00 */	stfd f0, 0(r3)
 /* 80284230 00281170  4E 80 00 20 */	blr 
 
-/* 80284234 000C .text func_80284234 getCompositeData_divide___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
-.global func_80284234
-func_80284234:
+/* 80284234 000C .text lbl_80284234 getCompositeData_divide___Q37JStudio3fvb17@unnamed@fvb_cpp@FPCv */
+.global lbl_80284234
+lbl_80284234:
 /* 80284234 00281174  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80284238 00281178  D8 03 00 00 */	stfd f0, 0(r3)
 /* 8028423C 0028117C  4E 80 00 20 */	blr 
 
-/* 80284240 0014 .text func_80284240 getCompositeOperation___Q37JStudio3fvb17@unnamed@fvb_cpp@FQ47JStudio3fvb4data11TEComposite */
-.global func_80284240
-func_80284240:
+/* 80284240 0014 .text lbl_80284240 getCompositeOperation___Q37JStudio3fvb17@unnamed@fvb_cpp@FQ47JStudio3fvb4data11TEComposite */
+.global lbl_80284240
+lbl_80284240:
 /* 80284240 00281180  54 64 18 38 */	slwi r4, r3, 3
 /* 80284244 00281184  3C 60 80 3A */	lis r3, lbl_8039AA00@ha
 /* 80284248 00281188  38 03 AA 00 */	addi r0, r3, lbl_8039AA00@l
@@ -281,7 +281,7 @@ prepare_data___Q37JStudio3fvb17TObject_compositeFRCQ57JStudio3fvb4data17TParse_T
 /* 802842E8 00281228  7C 7D 1B 78 */	mr r29, r3
 /* 802842EC 0028122C  83 C4 00 08 */	lwz r30, 8(r4)
 /* 802842F0 00281230  80 7E 00 00 */	lwz r3, 0(r30)
-/* 802842F4 00281234  4B FF FF 4D */	bl func_80284240
+/* 802842F4 00281234  4B FF FF 4D */	bl lbl_80284240
 /* 802842F8 00281238  7C 7F 1B 78 */	mr r31, r3
 /* 802842FC 0028123C  38 61 00 08 */	addi r3, r1, 8
 /* 80284300 00281240  38 9E 00 04 */	addi r4, r30, 4
@@ -713,7 +713,7 @@ getObject__Q37JStudio3fvb8TControlFPCvUl:
 /* 80284874 002817B4  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80284878 002817B8  38 A1 00 28 */	addi r5, r1, 0x28
 /* 8028487C 002817BC  38 C1 00 40 */	addi r6, r1, 0x40
-/* 80284880 002817C0  48 00 07 99 */	bl func_80285018
+/* 80284880 002817C0  48 00 07 99 */	bl lbl_80285018
 /* 80284884 002817C4  80 61 00 30 */	lwz r3, 0x30(r1)
 /* 80284888 002817C8  90 61 00 34 */	stw r3, 0x34(r1)
 /* 8028488C 002817CC  80 01 00 38 */	lwz r0, 0x38(r1)
@@ -1303,9 +1303,9 @@ lbl_80284FFC:
 /* 80285010 00281F50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80285014 00281F54  4E 80 00 20 */	blr 
 
-/* 80285018 0094 .text func_80285018 find_if<Q37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
-.global func_80285018
-func_80285018:
+/* 80285018 0094 .text lbl_80285018 find_if<Q37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3fvb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
+.global lbl_80285018
+lbl_80285018:
 /* 80285018 00281F58  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028501C 00281F5C  7C 08 02 A6 */	mflr r0
 /* 80285020 00281F60  90 01 00 34 */	stw r0, 0x34(r1)

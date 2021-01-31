@@ -20,8 +20,8 @@ __sinit_JMATrigonometric_cpp:
 /* 80339B1C 00336A5C  48 02 86 B9 */	bl _savegpr_27
 /* 80339B20 00336A60  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80339B24 00336A64  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
-/* 80339B28 00336A68  3C 80 80 34 */	lis r4, func_80339CB0@ha
-/* 80339B2C 00336A6C  38 84 9C B0 */	addi r4, r4, func_80339CB0@l
+/* 80339B28 00336A68  3C 80 80 34 */	lis r4, "__ct__Q23std9pair<f,f>Fv"@ha
+/* 80339B2C 00336A6C  38 84 9C B0 */	addi r4, r4, "__ct__Q23std9pair<f,f>Fv"@l
 /* 80339B30 00336A70  38 A0 00 00 */	li r5, 0
 /* 80339B34 00336A74  38 C0 00 08 */	li r6, 8
 /* 80339B38 00336A78  38 E0 20 00 */	li r7, 0x2000
@@ -122,9 +122,9 @@ lbl_80339C30:
 /* 80339CA8 00336BE8  38 21 00 70 */	addi r1, r1, 0x70
 /* 80339CAC 00336BEC  4E 80 00 20 */	blr 
 
-/* 80339CB0 0010 .text func_80339CB0 __ct__Q23std9pair<f,f>Fv */
-.global func_80339CB0
-func_80339CB0:
+/* 80339CB0 0010 .text "__ct__Q23std9pair<f,f>Fv" __ct__Q23std9pair<f,f>Fv */
+.global "__ct__Q23std9pair<f,f>Fv"
+"__ct__Q23std9pair<f,f>Fv":
 /* 80339CB0 00336BF0  C0 02 CA D8 */	lfs f0, lbl_804564D8-_SDA2_BASE_(r2)
 /* 80339CB4 00336BF4  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80339CB8 00336BF8  D0 03 00 04 */	stfs f0, 4(r3)

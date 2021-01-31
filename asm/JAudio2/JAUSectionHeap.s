@@ -14,9 +14,9 @@ __ct__Q210JAUSection12TSectionDataFv:
 /* 802A4F00 002A1E40  38 7F 00 28 */	addi r3, r31, 0x28
 /* 802A4F04 002A1E44  48 03 70 11 */	bl initiate__10JSUPtrListFv
 /* 802A4F08 002A1E48  38 7F 00 34 */	addi r3, r31, 0x34
-/* 802A4F0C 002A1E4C  48 00 17 51 */	bl func_802A665C
+/* 802A4F0C 002A1E4C  48 00 17 51 */	bl "__ct__Q23std16__bitset_base<8>Fv"
 /* 802A4F10 002A1E50  38 7F 00 54 */	addi r3, r31, 0x54
-/* 802A4F14 002A1E54  48 00 17 49 */	bl func_802A665C
+/* 802A4F14 002A1E54  48 00 17 49 */	bl "__ct__Q23std16__bitset_base<8>Fv"
 /* 802A4F18 002A1E58  38 7F 00 74 */	addi r3, r31, 0x74
 /* 802A4F1C 002A1E5C  48 03 6F F9 */	bl initiate__10JSUPtrListFv
 /* 802A4F20 002A1E60  38 7F 00 8C */	addi r3, r31, 0x8c
@@ -64,7 +64,7 @@ lbl_802A4F98:
 lbl_802A4FB4:
 /* 802A4FB4 002A1EF4  38 7C 00 54 */	addi r3, r28, 0x54
 /* 802A4FB8 002A1EF8  7F A4 EB 78 */	mr r4, r29
-/* 802A4FBC 002A1EFC  48 00 16 59 */	bl func_802A6614
+/* 802A4FBC 002A1EFC  48 00 16 59 */	bl "reset__Q23std16__bitset_base<8>FUl"
 /* 802A4FC0 002A1F00  3B BD 00 01 */	addi r29, r29, 1
 /* 802A4FC4 002A1F04  28 1D 00 FF */	cmplwi r29, 0xff
 /* 802A4FC8 002A1F08  41 80 FF D0 */	blt lbl_802A4F98
@@ -101,7 +101,7 @@ lbl_802A5014:
 lbl_802A5030:
 /* 802A5030 002A1F70  38 7C 00 34 */	addi r3, r28, 0x34
 /* 802A5034 002A1F74  7F A4 EB 78 */	mr r4, r29
-/* 802A5038 002A1F78  48 00 15 DD */	bl func_802A6614
+/* 802A5038 002A1F78  48 00 15 DD */	bl "reset__Q23std16__bitset_base<8>FUl"
 /* 802A503C 002A1F7C  3B BD 00 01 */	addi r29, r29, 1
 /* 802A5040 002A1F80  28 1D 00 FF */	cmplwi r29, 0xff
 /* 802A5044 002A1F84  41 80 FF D0 */	blt lbl_802A5014
@@ -196,11 +196,11 @@ dispose__10JAUSectionFv:
 /* 802A5174 002A20B4  28 04 00 00 */	cmplwi r4, 0
 /* 802A5178 002A20B8  41 82 00 1C */	beq lbl_802A5194
 /* 802A517C 002A20BC  41 82 00 18 */	beq lbl_802A5194
-/* 802A5180 002A20C0  80 0D 85 D8 */	lwz r0, lbl_80450B58-_SDA_BASE_(r13)
+/* 802A5180 002A20C0  80 0D 85 D8 */	lwz r0, "sInstance__34JASGlobalInstance<13JAUSoundTable>"-_SDA_BASE_(r13)
 /* 802A5184 002A20C4  7C 00 20 40 */	cmplw r0, r4
 /* 802A5188 002A20C8  40 82 00 0C */	bne lbl_802A5194
 /* 802A518C 002A20CC  38 00 00 00 */	li r0, 0
-/* 802A5190 002A20D0  90 0D 85 D8 */	stw r0, lbl_80450B58-_SDA_BASE_(r13)
+/* 802A5190 002A20D0  90 0D 85 D8 */	stw r0, "sInstance__34JASGlobalInstance<13JAUSoundTable>"-_SDA_BASE_(r13)
 lbl_802A5194:
 /* 802A5194 002A20D4  38 00 00 00 */	li r0, 0
 /* 802A5198 002A20D8  80 83 00 30 */	lwz r4, 0x30(r3)
@@ -214,11 +214,11 @@ lbl_802A51A0:
 /* 802A51B4 002A20F4  28 04 00 00 */	cmplwi r4, 0
 /* 802A51B8 002A20F8  41 82 00 1C */	beq lbl_802A51D4
 /* 802A51BC 002A20FC  41 82 00 18 */	beq lbl_802A51D4
-/* 802A51C0 002A2100  80 0D 85 D4 */	lwz r0, lbl_80450B54-_SDA_BASE_(r13)
+/* 802A51C0 002A2100  80 0D 85 D4 */	lwz r0, "sInstance__38JASGlobalInstance<17JAUSoundNameTable>"-_SDA_BASE_(r13)
 /* 802A51C4 002A2104  7C 00 20 40 */	cmplw r0, r4
 /* 802A51C8 002A2108  40 82 00 0C */	bne lbl_802A51D4
 /* 802A51CC 002A210C  38 00 00 00 */	li r0, 0
-/* 802A51D0 002A2110  90 0D 85 D4 */	stw r0, lbl_80450B54-_SDA_BASE_(r13)
+/* 802A51D0 002A2110  90 0D 85 D4 */	stw r0, "sInstance__38JASGlobalInstance<17JAUSoundNameTable>"-_SDA_BASE_(r13)
 lbl_802A51D4:
 /* 802A51D4 002A2114  38 00 00 00 */	li r0, 0
 /* 802A51D8 002A2118  80 63 00 30 */	lwz r3, 0x30(r3)
@@ -256,7 +256,7 @@ lbl_802A5238:
 /* 802A5244 002A2184  41 82 00 1C */	beq lbl_802A5260
 /* 802A5248 002A2188  57 A0 06 3F */	clrlwi. r0, r29, 0x18
 /* 802A524C 002A218C  41 82 00 08 */	beq lbl_802A5254
-/* 802A5250 002A2190  93 ED 85 D8 */	stw r31, lbl_80450B58-_SDA_BASE_(r13)
+/* 802A5250 002A2190  93 ED 85 D8 */	stw r31, "sInstance__34JASGlobalInstance<13JAUSoundTable>"-_SDA_BASE_(r13)
 lbl_802A5254:
 /* 802A5254 002A2194  38 00 00 00 */	li r0, 0
 /* 802A5258 002A2198  90 1F 00 00 */	stw r0, 0(r31)
@@ -310,7 +310,7 @@ lbl_802A52F4:
 /* 802A5300 002A2240  41 82 00 1C */	beq lbl_802A531C
 /* 802A5304 002A2244  57 A0 06 3F */	clrlwi. r0, r29, 0x18
 /* 802A5308 002A2248  41 82 00 08 */	beq lbl_802A5310
-/* 802A530C 002A224C  93 ED 85 D4 */	stw r31, lbl_80450B54-_SDA_BASE_(r13)
+/* 802A530C 002A224C  93 ED 85 D4 */	stw r31, "sInstance__38JASGlobalInstance<17JAUSoundNameTable>"-_SDA_BASE_(r13)
 lbl_802A5310:
 /* 802A5310 002A2250  38 00 00 00 */	li r0, 0
 /* 802A5314 002A2254  90 1F 00 00 */	stw r0, 0(r31)
@@ -624,7 +624,7 @@ newStaticSeqData__10JAUSectionF10JAISoundID:
 /* 802A5744 002A2684  7C 7D 1B 78 */	mr r29, r3
 /* 802A5748 002A2688  7C 9E 23 78 */	mr r30, r4
 /* 802A574C 002A268C  83 E3 00 5C */	lwz r31, 0x5c(r3)
-/* 802A5750 002A2690  80 6D 85 D0 */	lwz r3, lbl_80450B50-_SDA_BASE_(r13)
+/* 802A5750 002A2690  80 6D 85 D0 */	lwz r3, "sInstance__33JASGlobalInstance<12JAUSoundInfo>"-_SDA_BASE_(r13)
 /* 802A5754 002A2694  28 03 00 00 */	cmplwi r3, 0
 /* 802A5758 002A2698  40 82 00 0C */	bne lbl_802A5764
 /* 802A575C 002A269C  38 60 00 00 */	li r3, 0
@@ -742,7 +742,7 @@ lbl_802A58E8:
 /* 802A58E8 002A2828  38 7F 00 6C */	addi r3, r31, 0x6c
 /* 802A58EC 002A282C  7F 84 E3 78 */	mr r4, r28
 /* 802A58F0 002A2830  38 A0 00 01 */	li r5, 1
-/* 802A58F4 002A2834  48 00 0C E1 */	bl func_802A65D4
+/* 802A58F4 002A2834  48 00 0C E1 */	bl "set__Q23std16__bitset_base<8>FUlb"
 /* 802A58F8 002A2838  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 802A58FC 002A283C  80 63 00 E0 */	lwz r3, 0xe0(r3)
 /* 802A5900 002A2840  48 02 8E 2D */	bl getFreeSize__7JKRHeapFv
@@ -791,7 +791,7 @@ loadWaveArc__10JAUSectionFUlUl:
 lbl_802A5994:
 /* 802A5994 002A28D4  38 7E 00 6C */	addi r3, r30, 0x6c
 /* 802A5998 002A28D8  7F A4 EB 78 */	mr r4, r29
-/* 802A599C 002A28DC  48 00 0C 99 */	bl func_802A6634
+/* 802A599C 002A28DC  48 00 0C 99 */	bl "test__Q23std16__bitset_base<8>CFUl"
 /* 802A59A0 002A28E0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802A59A4 002A28E4  41 82 00 90 */	beq lbl_802A5A34
 /* 802A59A8 002A28E8  80 7E 00 30 */	lwz r3, 0x30(r30)
@@ -887,7 +887,7 @@ lbl_802A5A90:
 /* 802A5ADC 002A2A1C  7F E3 01 2E */	stwx r31, r3, r0
 /* 802A5AE0 002A2A20  48 00 00 50 */	b lbl_802A5B30
 lbl_802A5AE4:
-/* 802A5AE4 002A2A24  80 6D 86 10 */	lwz r3, lbl_80450B90-_SDA_BASE_(r13)
+/* 802A5AE4 002A2A24  80 6D 86 10 */	lwz r3, "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"-_SDA_BASE_(r13)
 /* 802A5AE8 002A2A28  80 63 00 04 */	lwz r3, 4(r3)
 /* 802A5AEC 002A2A2C  57 60 10 3A */	slwi r0, r27, 2
 /* 802A5AF0 002A2A30  7F E3 01 2E */	stwx r31, r3, r0
@@ -906,7 +906,7 @@ lbl_802A5B20:
 /* 802A5B20 002A2A60  38 7E 00 8C */	addi r3, r30, 0x8c
 /* 802A5B24 002A2A64  7F 64 DB 78 */	mr r4, r27
 /* 802A5B28 002A2A68  38 A0 00 01 */	li r5, 1
-/* 802A5B2C 002A2A6C  48 00 0A A9 */	bl func_802A65D4
+/* 802A5B2C 002A2A6C  48 00 0A A9 */	bl "set__Q23std16__bitset_base<8>FUlb"
 lbl_802A5B30:
 /* 802A5B30 002A2A70  93 9F 00 04 */	stw r28, 4(r31)
 /* 802A5B34 002A2A74  80 7E 00 30 */	lwz r3, 0x30(r30)
@@ -980,7 +980,7 @@ lbl_802A5C00:
 /* 802A5C20 002A2B60  7C 64 01 2E */	stwx r3, r4, r0
 /* 802A5C24 002A2B64  48 00 00 50 */	b lbl_802A5C74
 lbl_802A5C28:
-/* 802A5C28 002A2B68  80 8D 86 10 */	lwz r4, lbl_80450B90-_SDA_BASE_(r13)
+/* 802A5C28 002A2B68  80 8D 86 10 */	lwz r4, "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"-_SDA_BASE_(r13)
 /* 802A5C2C 002A2B6C  80 84 00 04 */	lwz r4, 4(r4)
 /* 802A5C30 002A2B70  57 C0 10 3A */	slwi r0, r30, 2
 /* 802A5C34 002A2B74  7C 64 01 2E */	stwx r3, r4, r0
@@ -999,7 +999,7 @@ lbl_802A5C64:
 /* 802A5C64 002A2BA4  38 7D 00 8C */	addi r3, r29, 0x8c
 /* 802A5C68 002A2BA8  7F C4 F3 78 */	mr r4, r30
 /* 802A5C6C 002A2BAC  38 A0 00 01 */	li r5, 1
-/* 802A5C70 002A2BB0  48 00 09 65 */	bl func_802A65D4
+/* 802A5C70 002A2BB0  48 00 09 65 */	bl "set__Q23std16__bitset_base<8>FUlb"
 lbl_802A5C74:
 /* 802A5C74 002A2BB4  93 FC 00 04 */	stw r31, 4(r28)
 /* 802A5C78 002A2BB8  80 61 00 08 */	lwz r3, 8(r1)
@@ -1098,7 +1098,7 @@ endNewBankTable__10JAUSectionFv:
 /* 802A5DB8 002A2CF8  28 04 00 00 */	cmplwi r4, 0
 /* 802A5DBC 002A2CFC  41 82 00 24 */	beq lbl_802A5DE0
 /* 802A5DC0 002A2D00  38 7F 00 AC */	addi r3, r31, 0xac
-/* 802A5DC4 002A2D04  4B FF EC BD */	bl func_802A4A80
+/* 802A5DC4 002A2D04  4B FF EC BD */	bl "appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable>"
 /* 802A5DC8 002A2D08  38 00 00 00 */	li r0, 0
 /* 802A5DCC 002A2D0C  90 1F 00 34 */	stw r0, 0x34(r31)
 /* 802A5DD0 002A2D10  80 7F 00 34 */	lwz r3, 0x34(r31)
@@ -1282,7 +1282,7 @@ __ct__14JAUSectionHeapFP12JKRSolidHeapbl:
 /* 802A6018 002A2F58  41 82 00 08 */	beq lbl_802A6020
 /* 802A601C 002A2F5C  38 63 FF 24 */	addi r3, r3, -220
 lbl_802A6020:
-/* 802A6020 002A2F60  90 6D 87 40 */	stw r3, lbl_80450CC0-_SDA_BASE_(r13)
+/* 802A6020 002A2F60  90 6D 87 40 */	stw r3, "sInstance__35JASGlobalInstance<14JAUSectionHeap>"-_SDA_BASE_(r13)
 lbl_802A6024:
 /* 802A6024 002A2F64  3C 60 80 3D */	lis r3, __vt__13JAISeqDataMgr@ha
 /* 802A6028 002A2F68  38 03 99 28 */	addi r0, r3, __vt__13JAISeqDataMgr@l
@@ -1522,11 +1522,11 @@ lbl_802A6318:
 /* 802A6330 002A3270  41 82 00 08 */	beq lbl_802A6338
 /* 802A6334 002A3274  38 63 FF 24 */	addi r3, r3, -220
 lbl_802A6338:
-/* 802A6338 002A3278  80 0D 87 40 */	lwz r0, lbl_80450CC0-_SDA_BASE_(r13)
+/* 802A6338 002A3278  80 0D 87 40 */	lwz r0, "sInstance__35JASGlobalInstance<14JAUSectionHeap>"-_SDA_BASE_(r13)
 /* 802A633C 002A327C  7C 00 18 40 */	cmplw r0, r3
 /* 802A6340 002A3280  40 82 00 0C */	bne lbl_802A634C
 /* 802A6344 002A3284  38 00 00 00 */	li r0, 0
-/* 802A6348 002A3288  90 0D 87 40 */	stw r0, lbl_80450CC0-_SDA_BASE_(r13)
+/* 802A6348 002A3288  90 0D 87 40 */	stw r0, "sInstance__35JASGlobalInstance<14JAUSectionHeap>"-_SDA_BASE_(r13)
 lbl_802A634C:
 /* 802A634C 002A328C  28 1E 00 00 */	cmplwi r30, 0
 /* 802A6350 002A3290  41 82 00 C4 */	beq lbl_802A6414
@@ -1599,9 +1599,9 @@ lbl_802A6424:
 /* 802A6438 002A3378  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A643C 002A337C  4E 80 00 20 */	blr 
 
-/* 802A6440 0028 .text func_802A6440 getStreamFileEntry__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrF10JAISoundID */
-.global func_802A6440
-func_802A6440:
+/* 802A6440 0028 .text lbl_802A6440 getStreamFileEntry__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrF10JAISoundID */
+.global lbl_802A6440
+lbl_802A6440:
 /* 802A6440 002A3380  A0 84 00 02 */	lhz r4, 2(r4)
 /* 802A6444 002A3384  80 03 00 04 */	lwz r0, 4(r3)
 /* 802A6448 002A3388  7C 04 00 40 */	cmplw r4, r0
@@ -1693,9 +1693,9 @@ lbl_802A6558:
 /* 802A656C 002A34AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6570 002A34B0  4E 80 00 20 */	blr 
 
-/* 802A6574 0060 .text func_802A6574 __dt__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrFv */
-.global func_802A6574
-func_802A6574:
+/* 802A6574 0060 .text lbl_802A6574 __dt__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgrFv */
+.global lbl_802A6574
+lbl_802A6574:
 /* 802A6574 002A34B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6578 002A34B8  7C 08 02 A6 */	mflr r0
 /* 802A657C 002A34BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1722,9 +1722,9 @@ lbl_802A65B8:
 /* 802A65CC 002A350C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A65D0 002A3510  4E 80 00 20 */	blr 
 
-/* 802A65D4 0040 .text func_802A65D4 set__Q23std16__bitset_base<8>FUlb */
-.global func_802A65D4
-func_802A65D4:
+/* 802A65D4 0040 .text "set__Q23std16__bitset_base<8>FUlb" set__Q23std16__bitset_base<8>FUlb */
+.global "set__Q23std16__bitset_base<8>FUlb"
+"set__Q23std16__bitset_base<8>FUlb":
 /* 802A65D4 002A3514  54 87 D9 7E */	srwi r7, r4, 5
 /* 802A65D8 002A3518  38 C0 00 01 */	li r6, 1
 /* 802A65DC 002A351C  54 80 06 FE */	clrlwi r0, r4, 0x1b
@@ -1743,9 +1743,9 @@ lbl_802A6600:
 /* 802A660C 002A354C  7C 03 21 2E */	stwx r0, r3, r4
 /* 802A6610 002A3550  4E 80 00 20 */	blr 
 
-/* 802A6614 0020 .text func_802A6614 reset__Q23std16__bitset_base<8>FUl */
-.global func_802A6614
-func_802A6614:
+/* 802A6614 0020 .text "reset__Q23std16__bitset_base<8>FUl" reset__Q23std16__bitset_base<8>FUl */
+.global "reset__Q23std16__bitset_base<8>FUl"
+"reset__Q23std16__bitset_base<8>FUl":
 /* 802A6614 002A3554  54 87 E8 FA */	rlwinm r7, r4, 0x1d, 3, 0x1d
 /* 802A6618 002A3558  7C C3 38 2E */	lwzx r6, r3, r7
 /* 802A661C 002A355C  38 A0 00 01 */	li r5, 1
@@ -1755,9 +1755,9 @@ func_802A6614:
 /* 802A662C 002A356C  7C 03 39 2E */	stwx r0, r3, r7
 /* 802A6630 002A3570  4E 80 00 20 */	blr 
 
-/* 802A6634 0028 .text func_802A6634 test__Q23std16__bitset_base<8>CFUl */
-.global func_802A6634
-func_802A6634:
+/* 802A6634 0028 .text "test__Q23std16__bitset_base<8>CFUl" test__Q23std16__bitset_base<8>CFUl */
+.global "test__Q23std16__bitset_base<8>CFUl"
+"test__Q23std16__bitset_base<8>CFUl":
 /* 802A6634 002A3574  38 A0 00 01 */	li r5, 1
 /* 802A6638 002A3578  54 80 06 FE */	clrlwi r0, r4, 0x1b
 /* 802A663C 002A357C  7C A5 00 30 */	slw r5, r5, r0
@@ -1769,9 +1769,9 @@ func_802A6634:
 /* 802A6654 002A3594  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 802A6658 002A3598  4E 80 00 20 */	blr 
 
-/* 802A665C 0024 .text func_802A665C __ct__Q23std16__bitset_base<8>Fv */
-.global func_802A665C
-func_802A665C:
+/* 802A665C 0024 .text "__ct__Q23std16__bitset_base<8>Fv" __ct__Q23std16__bitset_base<8>Fv */
+.global "__ct__Q23std16__bitset_base<8>Fv"
+"__ct__Q23std16__bitset_base<8>Fv":
 /* 802A665C 002A359C  7C 65 1B 78 */	mr r5, r3
 /* 802A6660 002A35A0  38 03 00 20 */	addi r0, r3, 0x20
 /* 802A6664 002A35A4  48 00 00 10 */	b lbl_802A6674
@@ -1784,27 +1784,27 @@ lbl_802A6674:
 /* 802A6678 002A35B8  40 82 FF F0 */	bne lbl_802A6668
 /* 802A667C 002A35BC  4E 80 00 20 */	blr 
 
-/* 802A6680 0008 .text func_802A6680 @220@setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser */
-.global func_802A6680
-func_802A6680:
+/* 802A6680 0008 .text lbl_802A6680 @220@setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser */
+.global lbl_802A6680
+lbl_802A6680:
 /* 802A6680 002A35C0  38 63 FF 24 */	addi r3, r3, -220
 /* 802A6684 002A35C4  4B FF FA 1C */	b setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser
 
-/* 802A6688 0008 .text func_802A6688 @220@releaseSeqData__14JAUSectionHeapFv */
-.global func_802A6688
-func_802A6688:
+/* 802A6688 0008 .text lbl_802A6688 @220@releaseSeqData__14JAUSectionHeapFv */
+.global lbl_802A6688
+lbl_802A6688:
 /* 802A6688 002A35C8  38 63 FF 24 */	addi r3, r3, -220
 /* 802A668C 002A35CC  4B FF FB E4 */	b releaseSeqData__14JAUSectionHeapFv
 
-/* 802A6690 0008 .text func_802A6690 @220@getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData */
-.global func_802A6690
-func_802A6690:
+/* 802A6690 0008 .text lbl_802A6690 @220@getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData */
+.global lbl_802A6690
+lbl_802A6690:
 /* 802A6690 002A35D0  38 63 FF 24 */	addi r3, r3, -220
 /* 802A6694 002A35D4  4B FF FB 3C */	b getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData
 
-/* 802A6698 0008 .text func_802A6698 @220@__dt__14JAUSectionHeapFv */
-.global func_802A6698
-func_802A6698:
+/* 802A6698 0008 .text lbl_802A6698 @220@__dt__14JAUSectionHeapFv */
+.global lbl_802A6698
+lbl_802A6698:
 /* 802A6698 002A35D8  38 63 FF 24 */	addi r3, r3, -220
 /* 802A669C 002A35DC  4B FF FB DC */	b __dt__14JAUSectionHeapFv
 

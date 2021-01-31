@@ -926,9 +926,9 @@ g_fopAc_type:
 stopStatus__10fopAc_ac_c:
 .skip 0x4
 
-/* 80450CC0 0004 .sbss lbl_80450CC0 sInstance__35JASGlobalInstance<14JAUSectionHeap> */
-.global lbl_80450CC0
-lbl_80450CC0:
+/* 80450CC0 0004 .sbss "sInstance__35JASGlobalInstance<14JAUSectionHeap>" sInstance__35JASGlobalInstance<14JAUSectionHeap> */
+.global "sInstance__35JASGlobalInstance<14JAUSectionHeap>"
+"sInstance__35JASGlobalInstance<14JAUSectionHeap>":
 .skip 0x4
 .skip 0x4 /* padding */
 

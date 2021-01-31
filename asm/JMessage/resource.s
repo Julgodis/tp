@@ -112,7 +112,7 @@ lbl_802A8E10:
 /* 802A8E30 002A5D70  7F E3 FB 78 */	mr r3, r31
 /* 802A8E34 002A5D74  7F C4 F3 78 */	mr r4, r30
 /* 802A8E38 002A5D78  38 A1 00 08 */	addi r5, r1, 8
-/* 802A8E3C 002A5D7C  48 00 06 99 */	bl func_802A94D4
+/* 802A8E3C 002A5D7C  48 00 06 99 */	bl "lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl"
 /* 802A8E40 002A5D80  7C 03 F0 40 */	cmplw r3, r30
 /* 802A8E44 002A5D84  41 82 00 14 */	beq lbl_802A8E58
 /* 802A8E48 002A5D88  80 83 00 00 */	lwz r4, 0(r3)
@@ -163,8 +163,8 @@ __ct__Q38JMessage18TResourceContainer10TCResourceFv:
 /* 802A8ED0 002A5E10  38 03 00 04 */	addi r0, r3, 4
 /* 802A8ED4 002A5E14  90 03 00 04 */	stw r0, 4(r3)
 /* 802A8ED8 002A5E18  90 03 00 08 */	stw r0, 8(r3)
-/* 802A8EDC 002A5E1C  3C 80 80 3D */	lis r4, lbl_803C9CBC@ha
-/* 802A8EE0 002A5E20  38 04 9C BC */	addi r0, r4, lbl_803C9CBC@l
+/* 802A8EDC 002A5E1C  3C 80 80 3D */	lis r4, "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>"@ha
+/* 802A8EE0 002A5E20  38 04 9C BC */	addi r0, r4, "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>"@l
 /* 802A8EE4 002A5E24  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802A8EE8 002A5E28  3C 80 80 3D */	lis r4, __vt__Q38JMessage18TResourceContainer10TCResource@ha
 /* 802A8EEC 002A5E2C  38 04 9C A8 */	addi r0, r4, __vt__Q38JMessage18TResourceContainer10TCResource@l
@@ -186,8 +186,8 @@ __dt__Q38JMessage18TResourceContainer10TCResourceFv:
 /* 802A8F1C 002A5E5C  38 04 9C A8 */	addi r0, r4, __vt__Q38JMessage18TResourceContainer10TCResource@l
 /* 802A8F20 002A5E60  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 802A8F24 002A5E64  41 82 00 1C */	beq lbl_802A8F40
-/* 802A8F28 002A5E68  3C 80 80 3D */	lis r4, lbl_803C9CBC@ha
-/* 802A8F2C 002A5E6C  38 04 9C BC */	addi r0, r4, lbl_803C9CBC@l
+/* 802A8F28 002A5E68  3C 80 80 3D */	lis r4, "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>"@ha
+/* 802A8F2C 002A5E6C  38 04 9C BC */	addi r0, r4, "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>"@l
 /* 802A8F30 002A5E70  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 802A8F34 002A5E74  41 82 00 0C */	beq lbl_802A8F40
 /* 802A8F38 002A5E78  38 80 00 00 */	li r4, 0
@@ -630,9 +630,9 @@ parseCharacter_2Byte__Q28JMessage6localeFPPCc:
 /* 802A94CC 002A640C  7C C3 33 78 */	mr r3, r6
 /* 802A94D0 002A6410  4E 80 00 20 */	blr 
 
-/* 802A94D4 0054 .text func_802A94D4 lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl */
-.global func_802A94D4
-func_802A94D4:
+/* 802A94D4 0054 .text "lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl" lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl */
+.global "lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl"
+"lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl":
 /* 802A94D4 002A6414  7C 03 20 50 */	subf r0, r3, r4
 /* 802A94D8 002A6418  7C 00 16 70 */	srawi r0, r0, 2
 /* 802A94DC 002A641C  7C 00 01 94 */	addze r0, r0
@@ -679,9 +679,9 @@ __vt__Q38JMessage18TResourceContainer10TCResource:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x8e, 0xf8, 0x80, 0x2a, 0x8f, 0xfc /* baserom.dol+0x3c6ca8 */
 .byte 0x80, 0x2a, 0x90, 0x48 /* baserom.dol+0x3c6cb8 */
 
-/* 803C9CBC 0014 .data lbl_803C9CBC __vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0> */
-.global lbl_803C9CBC
-lbl_803C9CBC:
+/* 803C9CBC 0014 .data "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>" __vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0> */
+.global "__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>"
+"__vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6cbc */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6ccc */
 

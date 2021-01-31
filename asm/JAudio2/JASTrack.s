@@ -94,8 +94,8 @@ lbl_8029134C:
 /* 80291368 0028E2A8  4B FF F4 E1 */	bl __ct__17JASGenericMemPoolFv
 /* 8029136C 0028E2AC  3C 60 80 43 */	lis r3, lbl_80431AF4@ha
 /* 80291370 0028E2B0  38 63 1A F4 */	addi r3, r3, lbl_80431AF4@l
-/* 80291374 0028E2B4  3C 80 80 29 */	lis r4, func_80293334@ha
-/* 80291378 0028E2B8  38 84 33 34 */	addi r4, r4, func_80293334@l
+/* 80291374 0028E2B4  3C 80 80 29 */	lis r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@ha
+/* 80291378 0028E2B8  38 84 33 34 */	addi r4, r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@l
 /* 8029137C 0028E2BC  3C A0 80 43 */	lis r5, lbl_80431ADC@ha
 /* 80291380 0028E2C0  38 A5 1A DC */	addi r5, r5, lbl_80431ADC@l
 /* 80291384 0028E2C4  48 0D 08 A1 */	bl __register_global_object
@@ -124,8 +124,8 @@ lbl_80291390:
 /* 802913DC 0028E31C  4B FF F4 6D */	bl __ct__17JASGenericMemPoolFv
 /* 802913E0 0028E320  3C 60 80 43 */	lis r3, lbl_80431B04@ha
 /* 802913E4 0028E324  38 63 1B 04 */	addi r3, r3, lbl_80431B04@l
-/* 802913E8 0028E328  3C 80 80 29 */	lis r4, func_802932E0@ha
-/* 802913EC 0028E32C  38 84 32 E0 */	addi r4, r4, func_802932E0@l
+/* 802913E8 0028E328  3C 80 80 29 */	lis r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@ha
+/* 802913EC 0028E32C  38 84 32 E0 */	addi r4, r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@l
 /* 802913F0 0028E330  3C A0 80 43 */	lis r5, lbl_80431AE8@ha
 /* 802913F4 0028E334  38 A5 1A E8 */	addi r5, r5, lbl_80431AE8@l
 /* 802913F8 0028E338  48 0D 08 2D */	bl __register_global_object
@@ -178,8 +178,8 @@ lbl_80291474:
 /* 80291498 0028E3D8  4B FF F3 B1 */	bl __ct__17JASGenericMemPoolFv
 /* 8029149C 0028E3DC  3C 60 80 43 */	lis r3, lbl_80431AF4@ha
 /* 802914A0 0028E3E0  38 63 1A F4 */	addi r3, r3, lbl_80431AF4@l
-/* 802914A4 0028E3E4  3C 80 80 29 */	lis r4, func_80293334@ha
-/* 802914A8 0028E3E8  38 84 33 34 */	addi r4, r4, func_80293334@l
+/* 802914A4 0028E3E4  3C 80 80 29 */	lis r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@ha
+/* 802914A8 0028E3E8  38 84 33 34 */	addi r4, r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@l
 /* 802914AC 0028E3EC  3C A0 80 43 */	lis r5, lbl_80431ADC@ha
 /* 802914B0 0028E3F0  38 A5 1A DC */	addi r5, r5, lbl_80431ADC@l
 /* 802914B4 0028E3F4  48 0D 07 71 */	bl __register_global_object
@@ -231,8 +231,8 @@ lbl_80291534:
 /* 80291558 0028E498  4B FF F2 F1 */	bl __ct__17JASGenericMemPoolFv
 /* 8029155C 0028E49C  3C 60 80 43 */	lis r3, lbl_80431AF4@ha
 /* 80291560 0028E4A0  38 63 1A F4 */	addi r3, r3, lbl_80431AF4@l
-/* 80291564 0028E4A4  3C 80 80 29 */	lis r4, func_80293334@ha
-/* 80291568 0028E4A8  38 84 33 34 */	addi r4, r4, func_80293334@l
+/* 80291564 0028E4A4  3C 80 80 29 */	lis r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@ha
+/* 80291568 0028E4A8  38 84 33 34 */	addi r4, r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@l
 /* 8029156C 0028E4AC  3C A0 80 43 */	lis r5, lbl_80431ADC@ha
 /* 80291570 0028E4B0  38 A5 1A DC */	addi r5, r5, lbl_80431ADC@l
 /* 80291574 0028E4B4  48 0D 06 B1 */	bl __register_global_object
@@ -352,8 +352,8 @@ lbl_802916EC:
 /* 80291710 0028E650  4B FF F1 39 */	bl __ct__17JASGenericMemPoolFv
 /* 80291714 0028E654  3C 60 80 43 */	lis r3, lbl_80431AF4@ha
 /* 80291718 0028E658  38 63 1A F4 */	addi r3, r3, lbl_80431AF4@l
-/* 8029171C 0028E65C  3C 80 80 29 */	lis r4, func_80293334@ha
-/* 80291720 0028E660  38 84 33 34 */	addi r4, r4, func_80293334@l
+/* 8029171C 0028E65C  3C 80 80 29 */	lis r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@ha
+/* 80291720 0028E660  38 84 33 34 */	addi r4, r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@l
 /* 80291724 0028E664  3C A0 80 43 */	lis r5, lbl_80431ADC@ha
 /* 80291728 0028E668  38 A5 1A DC */	addi r5, r5, lbl_80431ADC@l
 /* 8029172C 0028E66C  48 0D 04 F9 */	bl __register_global_object
@@ -788,8 +788,8 @@ lbl_80291CD0:
 /* 80291CE4 0028EC24  4B FF EB 65 */	bl __ct__17JASGenericMemPoolFv
 /* 80291CE8 0028EC28  3C 60 80 43 */	lis r3, lbl_80431B04@ha
 /* 80291CEC 0028EC2C  38 63 1B 04 */	addi r3, r3, lbl_80431B04@l
-/* 80291CF0 0028EC30  3C 80 80 29 */	lis r4, func_802932E0@ha
-/* 80291CF4 0028EC34  38 84 32 E0 */	addi r4, r4, func_802932E0@l
+/* 80291CF0 0028EC30  3C 80 80 29 */	lis r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@ha
+/* 80291CF4 0028EC34  38 84 32 E0 */	addi r4, r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@l
 /* 80291CF8 0028EC38  3C A0 80 43 */	lis r5, lbl_80431AE8@ha
 /* 80291CFC 0028EC3C  38 A5 1A E8 */	addi r5, r5, lbl_80431AE8@l
 /* 80291D00 0028EC40  48 0C FF 25 */	bl __register_global_object
@@ -2485,9 +2485,9 @@ __ct__Q28JASTrack10MoveParam_Fv:
 /* 802932D8 00290218  90 03 00 08 */	stw r0, 8(r3)
 /* 802932DC 0029021C  4E 80 00 20 */	blr 
 
-/* 802932E0 0054 .text func_802932E0 __dt__35JASMemPool_MultiThreaded<8JASTrack>Fv */
-.global func_802932E0
-func_802932E0:
+/* 802932E0 0054 .text "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv" __dt__35JASMemPool_MultiThreaded<8JASTrack>Fv */
+.global "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"
+"__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv":
 /* 802932E0 00290220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802932E4 00290224  7C 08 02 A6 */	mflr r0
 /* 802932E8 00290228  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2511,9 +2511,9 @@ lbl_80293318:
 /* 8029332C 0029026C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80293330 00290270  4E 80 00 20 */	blr 
 
-/* 80293334 0054 .text func_80293334 __dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv */
-.global func_80293334
-func_80293334:
+/* 80293334 0054 .text "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv" __dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv */
+.global "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"
+"__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv":
 /* 80293334 00290274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80293338 00290278  7C 08 02 A6 */	mflr r0
 /* 8029333C 0029027C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2551,8 +2551,8 @@ __sinit_JASTrack_cpp:
 /* 802933A8 002902E8  3C 60 80 3C */	lis r3, __vt__11JASBankList@ha
 /* 802933AC 002902EC  38 03 5B 80 */	addi r0, r3, __vt__11JASBankList@l
 /* 802933B0 002902F0  90 1F 00 0C */	stw r0, 0xc(r31)
-/* 802933B4 002902F4  3C 60 80 3C */	lis r3, lbl_803C5B74@ha
-/* 802933B8 002902F8  38 03 5B 74 */	addi r0, r3, lbl_803C5B74@l
+/* 802933B4 002902F4  3C 60 80 3C */	lis r3, "__vt__17JASBankTable<256>"@ha
+/* 802933B8 002902F8  38 03 5B 74 */	addi r0, r3, "__vt__17JASBankTable<256>"@l
 /* 802933BC 002902FC  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 802933C0 00290300  38 7E 00 0C */	addi r3, r30, 0xc
 /* 802933C4 00290304  90 7E 00 04 */	stw r3, 4(r30)
@@ -2566,7 +2566,7 @@ __sinit_JASTrack_cpp:
 /* 802933E4 00290324  41 82 00 08 */	beq lbl_802933EC
 /* 802933E8 00290328  38 63 FB F4 */	addi r3, r3, -1036
 lbl_802933EC:
-/* 802933EC 0029032C  90 6D 86 10 */	stw r3, lbl_80450B90-_SDA_BASE_(r13)
+/* 802933EC 0029032C  90 6D 86 10 */	stw r3, "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"-_SDA_BASE_(r13)
 /* 802933F0 00290330  3C 60 80 3C */	lis r3, __vt__19JASDefaultBankTable@ha
 /* 802933F4 00290334  38 03 5B 68 */	addi r0, r3, __vt__19JASDefaultBankTable@l
 /* 802933F8 00290338  90 1E 00 00 */	stw r0, 0(r30)
@@ -2641,11 +2641,11 @@ __dt__19JASDefaultBankTableFv:
 /* 802934E4 00290424  41 82 00 08 */	beq lbl_802934EC
 /* 802934E8 00290428  38 63 FB F4 */	addi r3, r3, -1036
 lbl_802934EC:
-/* 802934EC 0029042C  80 0D 86 10 */	lwz r0, lbl_80450B90-_SDA_BASE_(r13)
+/* 802934EC 0029042C  80 0D 86 10 */	lwz r0, "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"-_SDA_BASE_(r13)
 /* 802934F0 00290430  7C 00 18 40 */	cmplw r0, r3
 /* 802934F4 00290434  40 82 00 0C */	bne lbl_80293500
 /* 802934F8 00290438  38 00 00 00 */	li r0, 0
-/* 802934FC 0029043C  90 0D 86 10 */	stw r0, lbl_80450B90-_SDA_BASE_(r13)
+/* 802934FC 0029043C  90 0D 86 10 */	stw r0, "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"-_SDA_BASE_(r13)
 lbl_80293500:
 /* 80293500 00290440  7C 80 07 35 */	extsh. r0, r4
 /* 80293504 00290444  40 81 00 0C */	ble lbl_80293510
@@ -2659,9 +2659,9 @@ lbl_80293510:
 /* 80293520 00290460  38 21 00 10 */	addi r1, r1, 0x10
 /* 80293524 00290464  4E 80 00 20 */	blr 
 
-/* 80293528 0024 .text func_80293528 getBank__17JASBankTable<256>CFUl */
-.global func_80293528
-func_80293528:
+/* 80293528 0024 .text "getBank__17JASBankTable<256>CFUl" getBank__17JASBankTable<256>CFUl */
+.global "getBank__17JASBankTable<256>CFUl"
+"getBank__17JASBankTable<256>CFUl":
 /* 80293528 00290468  80 03 00 08 */	lwz r0, 8(r3)
 /* 8029352C 0029046C  7C 04 00 40 */	cmplw r4, r0
 /* 80293530 00290470  41 80 00 0C */	blt lbl_8029353C
@@ -2702,9 +2702,9 @@ sPitchEnvOsc__8JASTrack:
 __vt__19JASDefaultBankTable:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x35, 0x28 /* baserom.dol+0x3c2b68 */
 
-/* 803C5B74 000C .data lbl_803C5B74 __vt__17JASBankTable<256> */
-.global lbl_803C5B74
-lbl_803C5B74:
+/* 803C5B74 000C .data "__vt__17JASBankTable<256>" __vt__17JASBankTable<256> */
+.global "__vt__17JASBankTable<256>"
+"__vt__17JASBankTable<256>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x35, 0x28 /* baserom.dol+0x3c2b74 */
 
 /* 803C5B80 000C .data __vt__11JASBankList __vt__11JASBankList */

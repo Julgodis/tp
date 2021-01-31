@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 80280588 0138 .text func_80280588 JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f */
-.global func_80280588
-func_80280588:
+/* 80280588 0138 .text "JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f" JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f */
+.global "JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f"
+"JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f":
 /* 80280588 0027D4C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028058C 0027D4CC  7C 08 02 A6 */	mflr r0
 /* 80280590 0027D4D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -166,23 +166,23 @@ JPAGetXYZRotateMtx__FsssPA4_f:
 /* 802807D8 0027D718  D0 06 00 0C */	stfs f0, 0xc(r6)
 /* 802807DC 0027D71C  4E 80 00 20 */	blr 
 
-/* 802807E0 0028 .text func_802807E0 JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f> */
-.global func_802807E0
-func_802807E0:
+/* 802807E0 0028 .text "JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>" JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f> */
+.global "JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>"
+"JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>":
 /* 802807E0 0027D720  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802807E4 0027D724  7C 08 02 A6 */	mflr r0
 /* 802807E8 0027D728  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802807EC 0027D72C  7C A6 2B 78 */	mr r6, r5
 /* 802807F0 0027D730  38 A1 00 08 */	addi r5, r1, 8
-/* 802807F4 0027D734  48 00 00 15 */	bl func_80280808
+/* 802807F4 0027D734  48 00 00 15 */	bl "JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f>"
 /* 802807F8 0027D738  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802807FC 0027D73C  7C 08 03 A6 */	mtlr r0
 /* 80280800 0027D740  38 21 00 20 */	addi r1, r1, 0x20
 /* 80280804 0027D744  4E 80 00 20 */	blr 
 
-/* 80280808 017C .text func_80280808 JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
-.global func_80280808
-func_80280808:
+/* 80280808 017C .text "JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f>" JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
+.global "JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f>"
+"JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f>":
 /* 80280808 0027D748  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028080C 0027D74C  7C 08 02 A6 */	mflr r0
 /* 80280810 0027D750  90 01 00 34 */	stw r0, 0x34(r1)

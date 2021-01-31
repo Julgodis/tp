@@ -5,7 +5,7 @@
 /* 802CAAC0 00CC .text __ct__13Z2WolfHowlMgrFv __ct__13Z2WolfHowlMgrFv */
 .global __ct__13Z2WolfHowlMgrFv
 __ct__13Z2WolfHowlMgrFv:
-/* 802CAAC0 002C7A00  90 6D 85 B8 */	stw r3, lbl_80450B38-_SDA_BASE_(r13)
+/* 802CAAC0 002C7A00  90 6D 85 B8 */	stw r3, "sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>"-_SDA_BASE_(r13)
 /* 802CAAC4 002C7A04  38 A0 00 00 */	li r5, 0
 /* 802CAAC8 002C7A08  90 A3 00 00 */	stw r5, 0(r3)
 /* 802CAACC 002C7A0C  90 A3 00 04 */	stw r5, 4(r3)
@@ -323,7 +323,7 @@ startWolfHowlSound__13Z2WolfHowlMgrFffbf:
 /* 802CAF00 002C7E40  7C 00 07 74 */	extsb r0, r0
 /* 802CAF04 002C7E44  2C 00 00 01 */	cmpwi r0, 1
 /* 802CAF08 002C7E48  40 81 00 20 */	ble lbl_802CAF28
-/* 802CAF0C 002C7E4C  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CAF0C 002C7E4C  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CAF10 002C7E50  C0 02 C4 60 */	lfs f0, lbl_80455E60-_SDA2_BASE_(r2)
 /* 802CAF14 002C7E54  D0 03 00 94 */	stfs f0, 0x94(r3)
 /* 802CAF18 002C7E58  D0 03 00 98 */	stfs f0, 0x98(r3)
@@ -331,7 +331,7 @@ startWolfHowlSound__13Z2WolfHowlMgrFffbf:
 /* 802CAF20 002C7E60  90 03 00 A0 */	stw r0, 0xa0(r3)
 /* 802CAF24 002C7E64  D0 03 00 9C */	stfs f0, 0x9c(r3)
 lbl_802CAF28:
-/* 802CAF28 002C7E68  80 8D 86 04 */	lwz r4, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CAF28 002C7E68  80 8D 86 04 */	lwz r4, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CAF2C 002C7E6C  38 60 00 00 */	li r3, 0
 /* 802CAF30 002C7E70  80 04 00 08 */	lwz r0, 8(r4)
 /* 802CAF34 002C7E74  28 00 00 00 */	cmplwi r0, 0
@@ -390,11 +390,11 @@ lbl_802CAFD4:
 /* 802CAFEC 002C7F2C  3C 60 00 01 */	lis r3, 0x00010035@ha
 /* 802CAFF0 002C7F30  38 03 00 35 */	addi r0, r3, 0x00010035@l
 /* 802CAFF4 002C7F34  90 01 00 0C */	stw r0, 0xc(r1)
-/* 802CAFF8 002C7F38  80 6D 85 F4 */	lwz r3, lbl_80450B74-_SDA_BASE_(r13)
+/* 802CAFF8 002C7F38  80 6D 85 F4 */	lwz r3, "sInstance__35JASGlobalInstance<14Z2SoundStarter>"-_SDA_BASE_(r13)
 /* 802CAFFC 002C7F3C  38 81 00 0C */	addi r4, r1, 0xc
 /* 802CB000 002C7F40  7F E5 FB 78 */	mr r5, r31
 /* 802CB004 002C7F44  38 C0 00 00 */	li r6, 0
-/* 802CB008 002C7F48  4B FD 7F E5 */	bl func_802A2FEC
+/* 802CB008 002C7F48  4B FD 7F E5 */	bl "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
 lbl_802CB00C:
 /* 802CB00C 002C7F4C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802CB010 002C7F50  28 00 00 00 */	cmplwi r0, 0
@@ -422,11 +422,11 @@ lbl_802CB044:
 /* 802CB060 002C7FA0  3C 60 00 01 */	lis r3, 0x00010035@ha
 /* 802CB064 002C7FA4  38 03 00 35 */	addi r0, r3, 0x00010035@l
 /* 802CB068 002C7FA8  90 01 00 08 */	stw r0, 8(r1)
-/* 802CB06C 002C7FAC  80 6D 85 F4 */	lwz r3, lbl_80450B74-_SDA_BASE_(r13)
+/* 802CB06C 002C7FAC  80 6D 85 F4 */	lwz r3, "sInstance__35JASGlobalInstance<14Z2SoundStarter>"-_SDA_BASE_(r13)
 /* 802CB070 002C7FB0  38 81 00 08 */	addi r4, r1, 8
 /* 802CB074 002C7FB4  7F E5 FB 78 */	mr r5, r31
 /* 802CB078 002C7FB8  38 C0 00 00 */	li r6, 0
-/* 802CB07C 002C7FBC  4B FD 7F 71 */	bl func_802A2FEC
+/* 802CB07C 002C7FBC  4B FD 7F 71 */	bl "startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
 /* 802CB080 002C7FC0  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802CB084 002C7FC4  28 00 00 00 */	cmplwi r0, 0
 /* 802CB088 002C7FC8  41 82 00 20 */	beq lbl_802CB0A8
@@ -678,7 +678,7 @@ lbl_802CB3C0:
 /* 802CB3C0 002C8300  38 60 FF FF */	li r3, -1
 /* 802CB3C4 002C8304  48 00 02 74 */	b lbl_802CB638
 lbl_802CB3C8:
-/* 802CB3C8 002C8308  80 AD 86 04 */	lwz r5, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CB3C8 002C8308  80 AD 86 04 */	lwz r5, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CB3CC 002C830C  38 80 00 00 */	li r4, 0
 /* 802CB3D0 002C8310  80 05 00 08 */	lwz r0, 8(r5)
 /* 802CB3D4 002C8314  28 00 00 00 */	cmplwi r0, 0
@@ -738,7 +738,7 @@ lbl_802CB45C:
 lbl_802CB490:
 /* 802CB490 002C83D0  38 00 00 0D */	li r0, 0xd
 /* 802CB494 002C83D4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802CB498 002C83D8  80 6D 86 08 */	lwz r3, lbl_80450B88-_SDA_BASE_(r13)
+/* 802CB498 002C83D8  80 6D 86 08 */	lwz r3, "sInstance__27JASGlobalInstance<7Z2SeMgr>"-_SDA_BASE_(r13)
 /* 802CB49C 002C83DC  38 81 00 14 */	addi r4, r1, 0x14
 /* 802CB4A0 002C83E0  38 A0 00 00 */	li r5, 0
 /* 802CB4A4 002C83E4  38 C0 00 00 */	li r6, 0
@@ -753,7 +753,7 @@ lbl_802CB490:
 /* 802CB4C8 002C8408  7C 00 07 74 */	extsb r0, r0
 /* 802CB4CC 002C840C  2C 00 00 02 */	cmpwi r0, 2
 /* 802CB4D0 002C8410  40 81 00 30 */	ble lbl_802CB500
-/* 802CB4D4 002C8414  80 6D 86 00 */	lwz r3, lbl_80450B80-_SDA_BASE_(r13)
+/* 802CB4D4 002C8414  80 6D 86 00 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802CB4D8 002C8418  80 63 00 04 */	lwz r3, 4(r3)
 /* 802CB4DC 002C841C  2C 03 00 21 */	cmpwi r3, 0x21
 /* 802CB4E0 002C8420  40 82 00 38 */	bne lbl_802CB518
@@ -761,7 +761,7 @@ lbl_802CB490:
 /* 802CB4E8 002C8428  3C 60 80 43 */	lis r3, sCorrectDuo@ha
 /* 802CB4EC 002C842C  38 63 42 40 */	addi r3, r3, sCorrectDuo@l
 /* 802CB4F0 002C8430  7C 83 00 2E */	lwzx r4, r3, r0
-/* 802CB4F4 002C8434  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CB4F4 002C8434  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CB4F8 002C8438  4B FE 3F A5 */	bl subBgmStart__8Z2SeqMgrFUl
 /* 802CB4FC 002C843C  48 00 00 1C */	b lbl_802CB518
 lbl_802CB500:
@@ -769,7 +769,7 @@ lbl_802CB500:
 /* 802CB504 002C8444  3C 60 80 43 */	lis r3, sCorrectPhrase@ha
 /* 802CB508 002C8448  38 63 41 F8 */	addi r3, r3, sCorrectPhrase@l
 /* 802CB50C 002C844C  7C 83 00 2E */	lwzx r4, r3, r0
-/* 802CB510 002C8450  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CB510 002C8450  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CB514 002C8454  4B FE 3F 89 */	bl subBgmStart__8Z2SeqMgrFUl
 lbl_802CB518:
 /* 802CB518 002C8458  38 00 FF FF */	li r0, -1
@@ -927,7 +927,7 @@ startWindStoneSound__13Z2WolfHowlMgrFScP3Vec:
 /* 802CB724 002C8664  40 82 00 08 */	bne lbl_802CB72C
 /* 802CB728 002C8668  48 00 03 48 */	b lbl_802CBA70
 lbl_802CB72C:
-/* 802CB72C 002C866C  80 6D 85 C4 */	lwz r3, lbl_80450B44-_SDA_BASE_(r13)
+/* 802CB72C 002C866C  80 6D 85 C4 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2Audience>"-_SDA_BASE_(r13)
 /* 802CB730 002C8670  E0 23 01 70 */	psq_l f1, 368(r3), 0, qr0
 /* 802CB734 002C8674  C0 03 01 78 */	lfs f0, 0x178(r3)
 /* 802CB738 002C8678  F0 21 00 14 */	psq_st f1, 20(r1), 0, qr0
@@ -1028,7 +1028,7 @@ lbl_802CB868:
 /* 802CB88C 002C87CC  38 63 42 1C */	addi r3, r3, sWindStoneSound@l
 /* 802CB890 002C87D0  7C 03 00 2E */	lwzx r0, r3, r0
 /* 802CB894 002C87D4  90 01 00 10 */	stw r0, 0x10(r1)
-/* 802CB898 002C87D8  80 6D 85 E0 */	lwz r3, lbl_80450B60-_SDA_BASE_(r13)
+/* 802CB898 002C87D8  80 6D 85 E0 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SoundMgr>"-_SDA_BASE_(r13)
 /* 802CB89C 002C87DC  38 81 00 10 */	addi r4, r1, 0x10
 /* 802CB8A0 002C87E0  38 BD 00 04 */	addi r5, r29, 4
 /* 802CB8A4 002C87E4  7F E6 FB 78 */	mr r6, r31
@@ -1140,7 +1140,7 @@ lbl_802CBA08:
 /* 802CBA20 002C8960  4B FD DC D5 */	bl getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign
 /* 802CBA24 002C8964  FC C0 08 90 */	fmr f6, f1
 lbl_802CBA28:
-/* 802CBA28 002C8968  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CBA28 002C8968  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CBA2C 002C896C  D0 C3 00 94 */	stfs f6, 0x94(r3)
 /* 802CBA30 002C8970  C0 02 C4 60 */	lfs f0, lbl_80455E60-_SDA2_BASE_(r2)
 /* 802CBA34 002C8974  D0 03 00 98 */	stfs f0, 0x98(r3)
@@ -1175,7 +1175,7 @@ startGuideMelody__13Z2WolfHowlMgrFb:
 /* 802CBA90 002C89D0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802CBA94 002C89D4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802CBA98 002C89D8  7C 7F 1B 78 */	mr r31, r3
-/* 802CBA9C 002C89DC  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CBA9C 002C89DC  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CBAA0 002C89E0  C0 02 C4 60 */	lfs f0, lbl_80455E60-_SDA2_BASE_(r2)
 /* 802CBAA4 002C89E4  D0 03 00 94 */	stfs f0, 0x94(r3)
 /* 802CBAA8 002C89E8  D0 03 00 98 */	stfs f0, 0x98(r3)
@@ -1191,7 +1191,7 @@ startGuideMelody__13Z2WolfHowlMgrFb:
 /* 802CBAD0 002C8A10  38 63 42 1C */	addi r3, r3, sWindStoneSound@l
 /* 802CBAD4 002C8A14  7C 03 00 2E */	lwzx r0, r3, r0
 /* 802CBAD8 002C8A18  90 01 00 08 */	stw r0, 8(r1)
-/* 802CBADC 002C8A1C  80 6D 85 E0 */	lwz r3, lbl_80450B60-_SDA_BASE_(r13)
+/* 802CBADC 002C8A1C  80 6D 85 E0 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SoundMgr>"-_SDA_BASE_(r13)
 /* 802CBAE0 002C8A20  38 81 00 08 */	addi r4, r1, 8
 /* 802CBAE4 002C8A24  38 BF 00 08 */	addi r5, r31, 8
 /* 802CBAE8 002C8A28  38 C0 00 00 */	li r6, 0
@@ -1232,7 +1232,7 @@ skipCorrectDemo__13Z2WolfHowlMgrFv:
 /* 802CBB58 002C8A98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CBB5C 002C8A9C  7C 08 02 A6 */	mflr r0
 /* 802CBB60 002C8AA0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802CBB64 002C8AA4  80 6D 86 04 */	lwz r3, lbl_80450B84-_SDA_BASE_(r13)
+/* 802CBB64 002C8AA4  80 6D 86 04 */	lwz r3, "sInstance__28JASGlobalInstance<8Z2SeqMgr>"-_SDA_BASE_(r13)
 /* 802CBB68 002C8AA8  4B FE 77 15 */	bl stopWolfHowlSong__8Z2SeqMgrFv
 /* 802CBB6C 002C8AAC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802CBB70 002C8AB0  7C 08 03 A6 */	mtlr r0

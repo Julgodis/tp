@@ -978,7 +978,7 @@ animation__9daNpcCd_cFv:
 /* 80156DF4 00153D34  FC 00 F8 40 */	fcmpo cr0, f0, f31
 /* 80156DF8 00153D38  40 80 00 0C */	bge lbl_80156E04
 /* 80156DFC 00153D3C  38 7F 09 C8 */	addi r3, r31, 0x9c8
-/* 80156E00 00153D40  4B FF 65 49 */	bl func_8014D348
+/* 80156E00 00153D40  4B FF 65 49 */	bl "cLib_calcTimer<i>__FPi"
 lbl_80156E04:
 /* 80156E04 00153D44  E3 E1 00 18 */	psq_l f31, 24(r1), 0, qr0
 /* 80156E08 00153D48  CB E1 00 10 */	lfd f31, 0x10(r1)

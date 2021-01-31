@@ -2,15 +2,15 @@
 
 
 .section .text, "ax"
-/* 80041480 0008 .text func_80041480 event_debug_evnt__21@unnamed@d_event_cpp@Fv */
-.global func_80041480
-func_80041480:
+/* 80041480 0008 .text lbl_80041480 event_debug_evnt__21@unnamed@d_event_cpp@Fv */
+.global lbl_80041480
+lbl_80041480:
 /* 80041480 0003E3C0  38 60 00 00 */	li r3, 0
 /* 80041484 0003E3C4  4E 80 00 20 */	blr 
 
-/* 80041488 00F8 .text func_80041488 clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv */
-.global func_80041488
-func_80041488:
+/* 80041488 00F8 .text lbl_80041488 clear_tmpflag_for_message__21@unnamed@d_event_cpp@Fv */
+.global lbl_80041488
+lbl_80041488:
 /* 80041488 0003E3C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8004148C 0003E3CC  7C 08 02 A6 */	mflr r0
 /* 80041490 0003E3D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1838,7 +1838,7 @@ lbl_80042D0C:
 /* 80042D0C 0003FC4C  A0 1D 00 DA */	lhz r0, 0xda(r29)
 /* 80042D10 0003FC50  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
 /* 80042D14 0003FC54  B0 1D 00 DA */	sth r0, 0xda(r29)
-/* 80042D18 0003FC58  4B FF E7 71 */	bl func_80041488
+/* 80042D18 0003FC58  4B FF E7 71 */	bl lbl_80041488
 lbl_80042D1C:
 /* 80042D1C 0003FC5C  7F A3 EB 78 */	mr r3, r29
 /* 80042D20 0003FC60  4B FF F4 A1 */	bl endProc__14dEvt_control_cFv
@@ -1864,7 +1864,7 @@ lbl_80042D50:
 /* 80042D68 0003FCA8  2C 00 00 00 */	cmpwi r0, 0
 /* 80042D6C 0003FCAC  40 80 00 08 */	bge lbl_80042D74
 lbl_80042D70:
-/* 80042D70 0003FCB0  4B FF E7 19 */	bl func_80041488
+/* 80042D70 0003FCB0  4B FF E7 19 */	bl lbl_80041488
 lbl_80042D74:
 /* 80042D74 0003FCB4  7F A3 EB 78 */	mr r3, r29
 /* 80042D78 0003FCB8  4B FF F4 DD */	bl change__14dEvt_control_cFv
@@ -2318,14 +2318,14 @@ getStbDemoData__14dEvt_control_cFPc:
 /* 80043358 00040298  4B FF 90 25 */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 8004335C 0004029C  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80043360 000402A0  41 82 00 10 */	beq lbl_80043370
-/* 80043364 000402A4  4B FF E1 1D */	bl func_80041480
+/* 80043364 000402A4  4B FF E1 1D */	bl lbl_80041480
 /* 80043368 000402A8  7F E3 FB 78 */	mr r3, r31
 /* 8004336C 000402AC  48 00 00 6C */	b lbl_800433D8
 lbl_80043370:
-/* 80043370 000402B0  4B FF E1 11 */	bl func_80041480
+/* 80043370 000402B0  4B FF E1 11 */	bl lbl_80041480
 /* 80043374 000402B4  48 00 00 08 */	b lbl_8004337C
 lbl_80043378:
-/* 80043378 000402B8  4B FF E1 09 */	bl func_80041480
+/* 80043378 000402B8  4B FF E1 09 */	bl lbl_80041480
 lbl_8004337C:
 /* 8004337C 000402BC  88 6D 87 E4 */	lbz r3, lbl_80450D64-_SDA_BASE_(r13)
 /* 80043380 000402C0  7C 63 07 74 */	extsb r3, r3
@@ -2339,7 +2339,7 @@ lbl_8004337C:
 /* 800433A0 000402E0  4B FF 8F DD */	bl getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 800433A4 000402E4  7C 7F 1B 79 */	or. r31, r3, r3
 /* 800433A8 000402E8  41 82 00 10 */	beq lbl_800433B8
-/* 800433AC 000402EC  4B FF E0 D5 */	bl func_80041480
+/* 800433AC 000402EC  4B FF E0 D5 */	bl lbl_80041480
 /* 800433B0 000402F0  7F E3 FB 78 */	mr r3, r31
 /* 800433B4 000402F4  48 00 00 24 */	b lbl_800433D8
 lbl_800433B8:
@@ -2347,7 +2347,7 @@ lbl_800433B8:
 /* 800433BC 000402FC  4B FE C0 79 */	bl dComIfG_getStageRes__FPCc
 /* 800433C0 00040300  7C 7F 1B 79 */	or. r31, r3, r3
 /* 800433C4 00040304  41 82 00 10 */	beq lbl_800433D4
-/* 800433C8 00040308  4B FF E0 B9 */	bl func_80041480
+/* 800433C8 00040308  4B FF E0 B9 */	bl lbl_80041480
 /* 800433CC 0004030C  7F E3 FB 78 */	mr r3, r31
 /* 800433D0 00040310  48 00 00 08 */	b lbl_800433D8
 lbl_800433D4:

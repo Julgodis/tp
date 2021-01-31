@@ -112,8 +112,8 @@ lbl_8029A96C:
 /* 8029A988 002978C8  4B FF 5E C1 */	bl __ct__17JASGenericMemPoolFv
 /* 8029A98C 002978CC  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 8029A990 002978D0  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-/* 8029A994 002978D4  3C 80 80 29 */	lis r4, func_802978DC@ha
-/* 8029A998 002978D8  38 84 78 DC */	addi r4, r4, func_802978DC@l
+/* 8029A994 002978D4  3C 80 80 29 */	lis r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@ha
+/* 8029A998 002978D8  38 84 78 DC */	addi r4, r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@l
 /* 8029A99C 002978DC  3C A0 80 43 */	lis r5, lbl_80431C30@ha
 /* 8029A9A0 002978E0  38 A5 1C 30 */	addi r5, r5, lbl_80431C30@l
 /* 8029A9A4 002978E4  48 0C 72 81 */	bl __register_global_object

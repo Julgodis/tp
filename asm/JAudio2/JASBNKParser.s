@@ -411,7 +411,7 @@ lbl_80299AA8:
 /* 80299AA8 002969E8  7F E3 FB 78 */	mr r3, r31
 /* 80299AAC 002969EC  38 15 00 24 */	addi r0, r21, 0x24
 /* 80299AB0 002969F0  7C 9F 00 2E */	lwzx r4, r31, r0
-/* 80299AB4 002969F4  48 00 05 7D */	bl func_8029A030
+/* 80299AB4 002969F4  48 00 05 7D */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl"
 /* 80299AB8 002969F8  7C 7C 1B 79 */	or. r28, r3, r3
 /* 80299ABC 002969FC  41 82 02 20 */	beq lbl_80299CDC
 /* 80299AC0 00296A00  38 60 00 1C */	li r3, 0x1c
@@ -434,7 +434,7 @@ lbl_80299AFC:
 /* 80299AFC 00296A3C  7F E3 FB 78 */	mr r3, r31
 /* 80299B00 00296A40  38 18 00 10 */	addi r0, r24, 0x10
 /* 80299B04 00296A44  7C 9C 00 2E */	lwzx r4, r28, r0
-/* 80299B08 00296A48  48 00 05 11 */	bl func_8029A018
+/* 80299B08 00296A48  48 00 05 11 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl"
 /* 80299B0C 00296A4C  7C 76 1B 79 */	or. r22, r3, r3
 /* 80299B10 00296A50  41 82 01 2C */	beq lbl_80299C3C
 /* 80299B14 00296A54  7F A3 EB 78 */	mr r3, r29
@@ -459,7 +459,7 @@ lbl_80299B3C:
 /* 80299B5C 00296A9C  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80299B60 00296AA0  7F E3 FB 78 */	mr r3, r31
 /* 80299B64 00296AA4  80 96 00 08 */	lwz r4, 8(r22)
-/* 80299B68 00296AA8  48 00 04 99 */	bl func_8029A000
+/* 80299B68 00296AA8  48 00 04 99 */	bl "JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl"
 /* 80299B6C 00296AAC  7C 73 1B 79 */	or. r19, r3, r3
 /* 80299B70 00296AB0  41 82 00 44 */	beq lbl_80299BB4
 /* 80299B74 00296AB4  48 00 04 19 */	bl getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point
@@ -484,7 +484,7 @@ lbl_80299BB4:
 lbl_80299BBC:
 /* 80299BBC 00296AFC  7F E3 FB 78 */	mr r3, r31
 /* 80299BC0 00296B00  80 96 00 0C */	lwz r4, 0xc(r22)
-/* 80299BC4 00296B04  48 00 04 3D */	bl func_8029A000
+/* 80299BC4 00296B04  48 00 04 3D */	bl "JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl"
 /* 80299BC8 00296B08  7C 73 1B 79 */	or. r19, r3, r3
 /* 80299BCC 00296B0C  41 82 00 44 */	beq lbl_80299C10
 /* 80299BD0 00296B10  48 00 03 BD */	bl getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point
@@ -537,13 +537,13 @@ lbl_80299C68:
 /* 80299C78 00296BB8  7F E3 FB 78 */	mr r3, r31
 /* 80299C7C 00296BBC  38 14 00 2C */	addi r0, r20, 0x2c
 /* 80299C80 00296BC0  7C 9C 00 2E */	lwzx r4, r28, r0
-/* 80299C84 00296BC4  48 00 03 65 */	bl func_80299FE8
+/* 80299C84 00296BC4  48 00 03 65 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl"
 /* 80299C88 00296BC8  7C 64 1B 78 */	mr r4, r3
 /* 80299C8C 00296BCC  88 03 00 00 */	lbz r0, 0(r3)
 /* 80299C90 00296BD0  90 16 00 00 */	stw r0, 0(r22)
 /* 80299C94 00296BD4  7F E3 FB 78 */	mr r3, r31
 /* 80299C98 00296BD8  80 84 00 08 */	lwz r4, 8(r4)
-/* 80299C9C 00296BDC  48 00 03 35 */	bl func_80299FD0
+/* 80299C9C 00296BDC  48 00 03 35 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl"
 /* 80299CA0 00296BE0  80 03 00 04 */	lwz r0, 4(r3)
 /* 80299CA4 00296BE4  B0 16 00 04 */	sth r0, 4(r22)
 /* 80299CA8 00296BE8  C0 03 00 08 */	lfs f0, 8(r3)
@@ -571,7 +571,7 @@ lbl_80299CF4:
 /* 80299CF4 00296C34  7F E3 FB 78 */	mr r3, r31
 /* 80299CF8 00296C38  38 1A 03 B4 */	addi r0, r26, 0x3b4
 /* 80299CFC 00296C3C  7C 9F 00 2E */	lwzx r4, r31, r0
-/* 80299D00 00296C40  48 00 02 B9 */	bl func_80299FB8
+/* 80299D00 00296C40  48 00 02 B9 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl"
 /* 80299D04 00296C44  7C 76 1B 79 */	or. r22, r3, r3
 /* 80299D08 00296C48  41 82 01 34 */	beq lbl_80299E3C
 /* 80299D0C 00296C4C  38 60 00 0C */	li r3, 0xc
@@ -594,7 +594,7 @@ lbl_80299D48:
 /* 80299D48 00296C88  7F E3 FB 78 */	mr r3, r31
 /* 80299D4C 00296C8C  38 1C 00 88 */	addi r0, r28, 0x88
 /* 80299D50 00296C90  7C 96 00 2E */	lwzx r4, r22, r0
-/* 80299D54 00296C94  48 00 02 4D */	bl func_80299FA0
+/* 80299D54 00296C94  48 00 02 4D */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl"
 /* 80299D58 00296C98  7C 75 1B 79 */	or. r21, r3, r3
 /* 80299D5C 00296C9C  41 82 00 BC */	beq lbl_80299E18
 /* 80299D60 00296CA0  38 60 00 18 */	li r3, 0x18
@@ -634,7 +634,7 @@ lbl_80299D80:
 lbl_80299DE4:
 /* 80299DE4 00296D24  7F E3 FB 78 */	mr r3, r31
 /* 80299DE8 00296D28  80 95 00 14 */	lwz r4, 0x14(r21)
-/* 80299DEC 00296D2C  48 00 01 E5 */	bl func_80299FD0
+/* 80299DEC 00296D2C  48 00 01 E5 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl"
 /* 80299DF0 00296D30  80 03 00 04 */	lwz r0, 4(r3)
 /* 80299DF4 00296D34  B0 18 00 0E */	sth r0, 0xe(r24)
 /* 80299DF8 00296D38  C0 03 00 08 */	lfs f0, 8(r3)
@@ -687,7 +687,7 @@ lbl_80299E94:
 /* 80299E94 00296DD4  7F 03 C3 78 */	mr r3, r24
 /* 80299E98 00296DD8  38 1F 00 04 */	addi r0, r31, 4
 /* 80299E9C 00296DDC  7C 9C 00 2E */	lwzx r4, r28, r0
-/* 80299EA0 00296DE0  48 00 01 91 */	bl func_8029A030
+/* 80299EA0 00296DE0  48 00 01 91 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl"
 /* 80299EA4 00296DE4  7C 7D 1B 79 */	or. r29, r3, r3
 /* 80299EA8 00296DE8  41 82 00 B8 */	beq lbl_80299F60
 /* 80299EAC 00296DEC  3B 40 00 00 */	li r26, 0
@@ -696,7 +696,7 @@ lbl_80299EB4:
 /* 80299EB4 00296DF4  7F 03 C3 78 */	mr r3, r24
 /* 80299EB8 00296DF8  38 1E 00 10 */	addi r0, r30, 0x10
 /* 80299EBC 00296DFC  7C 9D 00 2E */	lwzx r4, r29, r0
-/* 80299EC0 00296E00  48 00 01 59 */	bl func_8029A018
+/* 80299EC0 00296E00  48 00 01 59 */	bl "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl"
 /* 80299EC4 00296E04  7C 03 C8 40 */	cmplw r3, r25
 /* 80299EC8 00296E08  40 82 00 88 */	bne lbl_80299F50
 /* 80299ECC 00296E0C  7E E3 BB 78 */	mr r3, r23
@@ -760,9 +760,9 @@ getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point:
 /* 80299F98 00296ED8  40 81 FF F4 */	ble getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point
 /* 80299F9C 00296EDC  4E 80 00 20 */	blr 
 
-/* 80299FA0 0018 .text func_80299FA0 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl */
-.global func_80299FA0
-func_80299FA0:
+/* 80299FA0 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl":
 /* 80299FA0 00296EE0  28 04 00 00 */	cmplwi r4, 0
 /* 80299FA4 00296EE4  40 82 00 0C */	bne lbl_80299FB0
 /* 80299FA8 00296EE8  38 60 00 00 */	li r3, 0
@@ -771,9 +771,9 @@ lbl_80299FB0:
 /* 80299FB0 00296EF0  7C 63 22 14 */	add r3, r3, r4
 /* 80299FB4 00296EF4  4E 80 00 20 */	blr 
 
-/* 80299FB8 0018 .text func_80299FB8 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl */
-.global func_80299FB8
-func_80299FB8:
+/* 80299FB8 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl":
 /* 80299FB8 00296EF8  28 04 00 00 */	cmplwi r4, 0
 /* 80299FBC 00296EFC  40 82 00 0C */	bne lbl_80299FC8
 /* 80299FC0 00296F00  38 60 00 00 */	li r3, 0
@@ -782,9 +782,9 @@ lbl_80299FC8:
 /* 80299FC8 00296F08  7C 63 22 14 */	add r3, r3, r4
 /* 80299FCC 00296F0C  4E 80 00 20 */	blr 
 
-/* 80299FD0 0018 .text func_80299FD0 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl */
-.global func_80299FD0
-func_80299FD0:
+/* 80299FD0 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl":
 /* 80299FD0 00296F10  28 04 00 00 */	cmplwi r4, 0
 /* 80299FD4 00296F14  40 82 00 0C */	bne lbl_80299FE0
 /* 80299FD8 00296F18  38 60 00 00 */	li r3, 0
@@ -793,9 +793,9 @@ lbl_80299FE0:
 /* 80299FE0 00296F20  7C 63 22 14 */	add r3, r3, r4
 /* 80299FE4 00296F24  4E 80 00 20 */	blr 
 
-/* 80299FE8 0018 .text func_80299FE8 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl */
-.global func_80299FE8
-func_80299FE8:
+/* 80299FE8 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl":
 /* 80299FE8 00296F28  28 04 00 00 */	cmplwi r4, 0
 /* 80299FEC 00296F2C  40 82 00 0C */	bne lbl_80299FF8
 /* 80299FF0 00296F30  38 60 00 00 */	li r3, 0
@@ -804,9 +804,9 @@ lbl_80299FF8:
 /* 80299FF8 00296F38  7C 63 22 14 */	add r3, r3, r4
 /* 80299FFC 00296F3C  4E 80 00 20 */	blr 
 
-/* 8029A000 0018 .text func_8029A000 JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl */
-.global func_8029A000
-func_8029A000:
+/* 8029A000 0018 .text "JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl" JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl"
+"JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl":
 /* 8029A000 00296F40  28 04 00 00 */	cmplwi r4, 0
 /* 8029A004 00296F44  40 82 00 0C */	bne lbl_8029A010
 /* 8029A008 00296F48  38 60 00 00 */	li r3, 0
@@ -815,9 +815,9 @@ lbl_8029A010:
 /* 8029A010 00296F50  7C 63 22 14 */	add r3, r3, r4
 /* 8029A014 00296F54  4E 80 00 20 */	blr 
 
-/* 8029A018 0018 .text func_8029A018 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl */
-.global func_8029A018
-func_8029A018:
+/* 8029A018 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl":
 /* 8029A018 00296F58  28 04 00 00 */	cmplwi r4, 0
 /* 8029A01C 00296F5C  40 82 00 0C */	bne lbl_8029A028
 /* 8029A020 00296F60  38 60 00 00 */	li r3, 0
@@ -826,9 +826,9 @@ lbl_8029A028:
 /* 8029A028 00296F68  7C 63 22 14 */	add r3, r3, r4
 /* 8029A02C 00296F6C  4E 80 00 20 */	blr 
 
-/* 8029A030 0018 .text func_8029A030 JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl */
-.global func_8029A030
-func_8029A030:
+/* 8029A030 0018 .text "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl" JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl"
+"JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl":
 /* 8029A030 00296F70  28 04 00 00 */	cmplwi r4, 0
 /* 8029A034 00296F74  40 82 00 0C */	bne lbl_8029A040
 /* 8029A038 00296F78  38 60 00 00 */	li r3, 0
@@ -846,13 +846,13 @@ __sinit_JASBNKParser_cpp:
 /* 8029A054 00296F94  88 0D 8D 0C */	lbz r0, lbl_8045128C-_SDA_BASE_(r13)
 /* 8029A058 00296F98  7C 00 07 75 */	extsb. r0, r0
 /* 8029A05C 00296F9C  40 82 00 34 */	bne lbl_8029A090
-/* 8029A060 00296FA0  3C 60 80 43 */	lis r3, lbl_80431B7C@ha
-/* 8029A064 00296FA4  38 63 1B 7C */	addi r3, r3, lbl_80431B7C@l
+/* 8029A060 00296FA0  3C 60 80 43 */	lis r3, "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>"@ha
+/* 8029A064 00296FA4  38 63 1B 7C */	addi r3, r3, "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>"@l
 /* 8029A068 00296FA8  4B FF 67 E1 */	bl __ct__17JASGenericMemPoolFv
-/* 8029A06C 00296FAC  3C 60 80 43 */	lis r3, lbl_80431B7C@ha
-/* 8029A070 00296FB0  38 63 1B 7C */	addi r3, r3, lbl_80431B7C@l
-/* 8029A074 00296FB4  3C 80 80 29 */	lis r4, func_802978DC@ha
-/* 8029A078 00296FB8  38 84 78 DC */	addi r4, r4, func_802978DC@l
+/* 8029A06C 00296FAC  3C 60 80 43 */	lis r3, "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>"@ha
+/* 8029A070 00296FB0  38 63 1B 7C */	addi r3, r3, "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>"@l
+/* 8029A074 00296FB4  3C 80 80 29 */	lis r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@ha
+/* 8029A078 00296FB8  38 84 78 DC */	addi r4, r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@l
 /* 8029A07C 00296FBC  3C A0 80 43 */	lis r5, lbl_80431B70@ha
 /* 8029A080 00296FC0  38 A5 1B 70 */	addi r5, r5, lbl_80431B70@l
 /* 8029A084 00296FC4  48 0C 7B A1 */	bl __register_global_object
@@ -872,9 +872,9 @@ lbl_8029A090:
 lbl_80431B70:
 .skip 0xc
 
-/* 80431B7C 0010 .bss lbl_80431B7C memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel> */
-.global lbl_80431B7C
-lbl_80431B7C:
+/* 80431B7C 0010 .bss "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>" memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel> */
+.global "memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>"
+"memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>":
 .skip 0x10
 .skip 0x4 /* padding */
 

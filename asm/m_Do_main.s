@@ -1439,119 +1439,119 @@ lbl_80450B30:
 lbl_80450B34:
 .skip 0x4
 
-/* 80450B38 0004 .sbss lbl_80450B38 sInstance__34JASGlobalInstance<13Z2WolfHowlMgr> */
-.global lbl_80450B38
-lbl_80450B38:
+/* 80450B38 0004 .sbss "sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>" sInstance__34JASGlobalInstance<13Z2WolfHowlMgr> */
+.global "sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>"
+"sInstance__34JASGlobalInstance<13Z2WolfHowlMgr>":
 .skip 0x4
 
-/* 80450B3C 0004 .sbss lbl_80450B3C sInstance__31JASGlobalInstance<10Z2EnvSeMgr> */
-.global lbl_80450B3C
-lbl_80450B3C:
+/* 80450B3C 0004 .sbss "sInstance__31JASGlobalInstance<10Z2EnvSeMgr>" sInstance__31JASGlobalInstance<10Z2EnvSeMgr> */
+.global "sInstance__31JASGlobalInstance<10Z2EnvSeMgr>"
+"sInstance__31JASGlobalInstance<10Z2EnvSeMgr>":
 .skip 0x4
 
-/* 80450B40 0004 .sbss lbl_80450B40 sInstance__32JASGlobalInstance<11Z2FxLineMgr> */
-.global lbl_80450B40
-lbl_80450B40:
+/* 80450B40 0004 .sbss "sInstance__32JASGlobalInstance<11Z2FxLineMgr>" sInstance__32JASGlobalInstance<11Z2FxLineMgr> */
+.global "sInstance__32JASGlobalInstance<11Z2FxLineMgr>"
+"sInstance__32JASGlobalInstance<11Z2FxLineMgr>":
 .skip 0x4
 
-/* 80450B44 0004 .sbss lbl_80450B44 sInstance__31JASGlobalInstance<10Z2Audience> */
-.global lbl_80450B44
-lbl_80450B44:
+/* 80450B44 0004 .sbss "sInstance__31JASGlobalInstance<10Z2Audience>" sInstance__31JASGlobalInstance<10Z2Audience> */
+.global "sInstance__31JASGlobalInstance<10Z2Audience>"
+"sInstance__31JASGlobalInstance<10Z2Audience>":
 .skip 0x4
 
-/* 80450B48 0004 .sbss lbl_80450B48 sInstance__34JASGlobalInstance<13Z2SoundObjMgr> */
-.global lbl_80450B48
-lbl_80450B48:
+/* 80450B48 0004 .sbss "sInstance__34JASGlobalInstance<13Z2SoundObjMgr>" sInstance__34JASGlobalInstance<13Z2SoundObjMgr> */
+.global "sInstance__34JASGlobalInstance<13Z2SoundObjMgr>"
+"sInstance__34JASGlobalInstance<13Z2SoundObjMgr>":
 .skip 0x4
 
-/* 80450B4C 0004 .sbss lbl_80450B4C sInstance__32JASGlobalInstance<11Z2SoundInfo> */
-.global lbl_80450B4C
-lbl_80450B4C:
+/* 80450B4C 0004 .sbss "sInstance__32JASGlobalInstance<11Z2SoundInfo>" sInstance__32JASGlobalInstance<11Z2SoundInfo> */
+.global "sInstance__32JASGlobalInstance<11Z2SoundInfo>"
+"sInstance__32JASGlobalInstance<11Z2SoundInfo>":
 .skip 0x4
 
-/* 80450B50 0004 .sbss lbl_80450B50 sInstance__33JASGlobalInstance<12JAUSoundInfo> */
-.global lbl_80450B50
-lbl_80450B50:
+/* 80450B50 0004 .sbss "sInstance__33JASGlobalInstance<12JAUSoundInfo>" sInstance__33JASGlobalInstance<12JAUSoundInfo> */
+.global "sInstance__33JASGlobalInstance<12JAUSoundInfo>"
+"sInstance__33JASGlobalInstance<12JAUSoundInfo>":
 .skip 0x4
 
-/* 80450B54 0004 .sbss lbl_80450B54 sInstance__38JASGlobalInstance<17JAUSoundNameTable> */
-.global lbl_80450B54
-lbl_80450B54:
+/* 80450B54 0004 .sbss "sInstance__38JASGlobalInstance<17JAUSoundNameTable>" sInstance__38JASGlobalInstance<17JAUSoundNameTable> */
+.global "sInstance__38JASGlobalInstance<17JAUSoundNameTable>"
+"sInstance__38JASGlobalInstance<17JAUSoundNameTable>":
 .skip 0x4
 
-/* 80450B58 0004 .sbss lbl_80450B58 sInstance__34JASGlobalInstance<13JAUSoundTable> */
-.global lbl_80450B58
-lbl_80450B58:
+/* 80450B58 0004 .sbss "sInstance__34JASGlobalInstance<13JAUSoundTable>" sInstance__34JASGlobalInstance<13JAUSoundTable> */
+.global "sInstance__34JASGlobalInstance<13JAUSoundTable>"
+"sInstance__34JASGlobalInstance<13JAUSoundTable>":
 .skip 0x4
 
-/* 80450B5C 0004 .sbss lbl_80450B5C sInstance__33JASGlobalInstance<12JAISoundInfo> */
-.global lbl_80450B5C
-lbl_80450B5C:
+/* 80450B5C 0004 .sbss "sInstance__33JASGlobalInstance<12JAISoundInfo>" sInstance__33JASGlobalInstance<12JAISoundInfo> */
+.global "sInstance__33JASGlobalInstance<12JAISoundInfo>"
+"sInstance__33JASGlobalInstance<12JAISoundInfo>":
 .skip 0x4
 
-/* 80450B60 0004 .sbss lbl_80450B60 sInstance__31JASGlobalInstance<10Z2SoundMgr> */
-.global lbl_80450B60
-lbl_80450B60:
+/* 80450B60 0004 .sbss "sInstance__31JASGlobalInstance<10Z2SoundMgr>" sInstance__31JASGlobalInstance<10Z2SoundMgr> */
+.global "sInstance__31JASGlobalInstance<10Z2SoundMgr>"
+"sInstance__31JASGlobalInstance<10Z2SoundMgr>":
 .skip 0x4
 
-/* 80450B64 0004 .sbss lbl_80450B64 sInstance__33JASGlobalInstance<12JAIStreamMgr> */
-.global lbl_80450B64
-lbl_80450B64:
+/* 80450B64 0004 .sbss "sInstance__33JASGlobalInstance<12JAIStreamMgr>" sInstance__33JASGlobalInstance<12JAIStreamMgr> */
+.global "sInstance__33JASGlobalInstance<12JAIStreamMgr>"
+"sInstance__33JASGlobalInstance<12JAIStreamMgr>":
 .skip 0x4
 
-/* 80450B68 0004 .sbss lbl_80450B68 sInstance__29JASGlobalInstance<9JAISeqMgr> */
-.global lbl_80450B68
-lbl_80450B68:
+/* 80450B68 0004 .sbss "sInstance__29JASGlobalInstance<9JAISeqMgr>" sInstance__29JASGlobalInstance<9JAISeqMgr> */
+.global "sInstance__29JASGlobalInstance<9JAISeqMgr>"
+"sInstance__29JASGlobalInstance<9JAISeqMgr>":
 .skip 0x4
 
-/* 80450B6C 0004 .sbss lbl_80450B6C sInstance__28JASGlobalInstance<8JAISeMgr> */
-.global lbl_80450B6C
-lbl_80450B6C:
+/* 80450B6C 0004 .sbss "sInstance__28JASGlobalInstance<8JAISeMgr>" sInstance__28JASGlobalInstance<8JAISeMgr> */
+.global "sInstance__28JASGlobalInstance<8JAISeMgr>"
+"sInstance__28JASGlobalInstance<8JAISeMgr>":
 .skip 0x4
 
-/* 80450B70 0004 .sbss lbl_80450B70 sInstance__33JASGlobalInstance<12Z2SpeechMgr2> */
-.global lbl_80450B70
-lbl_80450B70:
+/* 80450B70 0004 .sbss "sInstance__33JASGlobalInstance<12Z2SpeechMgr2>" sInstance__33JASGlobalInstance<12Z2SpeechMgr2> */
+.global "sInstance__33JASGlobalInstance<12Z2SpeechMgr2>"
+"sInstance__33JASGlobalInstance<12Z2SpeechMgr2>":
 .skip 0x4
 
-/* 80450B74 0004 .sbss lbl_80450B74 sInstance__35JASGlobalInstance<14Z2SoundStarter> */
-.global lbl_80450B74
-lbl_80450B74:
+/* 80450B74 0004 .sbss "sInstance__35JASGlobalInstance<14Z2SoundStarter>" sInstance__35JASGlobalInstance<14Z2SoundStarter> */
+.global "sInstance__35JASGlobalInstance<14Z2SoundStarter>"
+"sInstance__35JASGlobalInstance<14Z2SoundStarter>":
 .skip 0x4
 
-/* 80450B78 0004 .sbss lbl_80450B78 sInstance__36JASGlobalInstance<15JAISoundStarter> */
-.global lbl_80450B78
-lbl_80450B78:
+/* 80450B78 0004 .sbss "sInstance__36JASGlobalInstance<15JAISoundStarter>" sInstance__36JASGlobalInstance<15JAISoundStarter> */
+.global "sInstance__36JASGlobalInstance<15JAISoundStarter>"
+"sInstance__36JASGlobalInstance<15JAISoundStarter>":
 .skip 0x4
 
-/* 80450B7C 0004 .sbss lbl_80450B7C sInstance__32JASGlobalInstance<11Z2StatusMgr> */
-.global lbl_80450B7C
-lbl_80450B7C:
+/* 80450B7C 0004 .sbss "sInstance__32JASGlobalInstance<11Z2StatusMgr>" sInstance__32JASGlobalInstance<11Z2StatusMgr> */
+.global "sInstance__32JASGlobalInstance<11Z2StatusMgr>"
+"sInstance__32JASGlobalInstance<11Z2StatusMgr>":
 .skip 0x4
 
-/* 80450B80 0004 .sbss lbl_80450B80 sInstance__31JASGlobalInstance<10Z2SceneMgr> */
-.global lbl_80450B80
-lbl_80450B80:
+/* 80450B80 0004 .sbss "sInstance__31JASGlobalInstance<10Z2SceneMgr>" sInstance__31JASGlobalInstance<10Z2SceneMgr> */
+.global "sInstance__31JASGlobalInstance<10Z2SceneMgr>"
+"sInstance__31JASGlobalInstance<10Z2SceneMgr>":
 .skip 0x4
 
-/* 80450B84 0004 .sbss lbl_80450B84 sInstance__28JASGlobalInstance<8Z2SeqMgr> */
-.global lbl_80450B84
-lbl_80450B84:
+/* 80450B84 0004 .sbss "sInstance__28JASGlobalInstance<8Z2SeqMgr>" sInstance__28JASGlobalInstance<8Z2SeqMgr> */
+.global "sInstance__28JASGlobalInstance<8Z2SeqMgr>"
+"sInstance__28JASGlobalInstance<8Z2SeqMgr>":
 .skip 0x4
 
-/* 80450B88 0004 .sbss lbl_80450B88 sInstance__27JASGlobalInstance<7Z2SeMgr> */
-.global lbl_80450B88
-lbl_80450B88:
+/* 80450B88 0004 .sbss "sInstance__27JASGlobalInstance<7Z2SeMgr>" sInstance__27JASGlobalInstance<7Z2SeMgr> */
+.global "sInstance__27JASGlobalInstance<7Z2SeMgr>"
+"sInstance__27JASGlobalInstance<7Z2SeMgr>":
 .skip 0x4
 
-/* 80450B8C 0004 .sbss lbl_80450B8C sInstance__35JASGlobalInstance<14JASAudioThread> */
-.global lbl_80450B8C
-lbl_80450B8C:
+/* 80450B8C 0004 .sbss "sInstance__35JASGlobalInstance<14JASAudioThread>" sInstance__35JASGlobalInstance<14JASAudioThread> */
+.global "sInstance__35JASGlobalInstance<14JASAudioThread>"
+"sInstance__35JASGlobalInstance<14JASAudioThread>":
 .skip 0x4
 
-/* 80450B90 0004 .sbss lbl_80450B90 sInstance__40JASGlobalInstance<19JASDefaultBankTable> */
-.global lbl_80450B90
-lbl_80450B90:
+/* 80450B90 0004 .sbss "sInstance__40JASGlobalInstance<19JASDefaultBankTable>" sInstance__40JASGlobalInstance<19JASDefaultBankTable> */
+.global "sInstance__40JASGlobalInstance<19JASDefaultBankTable>"
+"sInstance__40JASGlobalInstance<19JASDefaultBankTable>":
 .skip 0x4
 .skip 0x4 /* padding */
 

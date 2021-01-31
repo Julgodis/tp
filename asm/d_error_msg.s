@@ -44,7 +44,7 @@ messageSet__FUlb:
 /* 8009CC18 00099B58  39 04 B3 E0 */	addi r8, r4, font_data@l
 /* 8009CC1C 00099B5C  7F E9 FB 78 */	mr r9, r31
 /* 8009CC20 00099B60  39 40 02 00 */	li r10, 0x200
-/* 8009CC24 00099B64  48 26 2F A1 */	bl func_802FFBC4
+/* 8009CC24 00099B64  48 26 2F A1 */	bl "__ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding"
 /* 8009CC28 00099B68  C0 02 92 18 */	lfs f0, lbl_80452C18-_SDA2_BASE_(r2)
 /* 8009CC2C 00099B6C  D0 01 00 8C */	stfs f0, 0x8c(r1)
 /* 8009CC30 00099B70  D0 01 00 90 */	stfs f0, 0x90(r1)
@@ -64,7 +64,7 @@ messageSet__FUlb:
 /* 8009CC68 00099BA8  39 04 B3 E0 */	addi r8, r4, font_data@l
 /* 8009CC6C 00099BAC  7F E9 FB 78 */	mr r9, r31
 /* 8009CC70 00099BB0  39 40 02 00 */	li r10, 0x200
-/* 8009CC74 00099BB4  48 26 2F 51 */	bl func_802FFBC4
+/* 8009CC74 00099BB4  48 26 2F 51 */	bl "__ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding"
 /* 8009CC78 00099BB8  C0 02 92 18 */	lfs f0, lbl_80452C18-_SDA2_BASE_(r2)
 /* 8009CC7C 00099BBC  D0 01 00 7C */	stfs f0, 0x7c(r1)
 /* 8009CC80 00099BC0  D0 01 00 80 */	stfs f0, 0x80(r1)
@@ -80,7 +80,7 @@ messageSet__FUlb:
 /* 8009CCA8 00099BE8  3C 80 80 38 */	lis r4, black_tex@ha
 /* 8009CCAC 00099BEC  39 04 B1 40 */	addi r8, r4, black_tex@l
 /* 8009CCB0 00099BF0  39 20 00 00 */	li r9, 0
-/* 8009CCB4 00099BF4  48 25 FB 4D */	bl func_802FC800
+/* 8009CCB4 00099BF4  48 25 FB 4D */	bl "__ct__10J2DPictureFUxRCQ29JGeometry8TBox2<f>PC7ResTIMGPC7ResTLUT"
 /* 8009CCB8 00099BF8  38 61 00 D4 */	addi r3, r1, 0xd4
 /* 8009CCBC 00099BFC  3C 80 80 38 */	lis r4, font_data@ha
 /* 8009CCC0 00099C00  38 84 B3 E0 */	addi r4, r4, font_data@l
@@ -467,7 +467,7 @@ draw__14dDvdErrorMsg_cFl:
 /* 8009D254 0009A194  38 81 00 14 */	addi r4, r1, 0x14
 /* 8009D258 0009A198  C0 22 92 48 */	lfs f1, lbl_80452C48-_SDA2_BASE_(r2)
 /* 8009D25C 0009A19C  C0 42 92 30 */	lfs f2, lbl_80452C30-_SDA2_BASE_(r2)
-/* 8009D260 0009A1A0  48 24 C5 AD */	bl func_802E980C
+/* 8009D260 0009A1A0  48 24 C5 AD */	bl "setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff"
 /* 8009D264 0009A1A4  38 61 00 24 */	addi r3, r1, 0x24
 /* 8009D268 0009A1A8  48 24 C5 4D */	bl setPort__13J2DOrthoGraphFv
 /* 8009D26C 0009A1AC  38 01 00 24 */	addi r0, r1, 0x24

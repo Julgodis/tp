@@ -140,9 +140,9 @@ __ct__8JAISoundFv:
 /* 802A2320 0029F260  D0 23 00 58 */	stfs f1, 0x58(r3)
 /* 802A2324 0029F264  4E 80 00 20 */	blr 
 
-/* 802A2328 0124 .text func_802A2328 start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
-.global func_802A2328
-func_802A2328:
+/* 802A2328 0124 .text "start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience" start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+.global "start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience"
+"start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience":
 /* 802A2328 0029F268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A232C 0029F26C  7C 08 02 A6 */	mflr r0
 /* 802A2330 0029F270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -234,9 +234,9 @@ lbl_802A246C:
 /* 802A246C 0029F3AC  7C 83 23 78 */	mr r3, r4
 /* 802A2470 0029F3B0  4E 80 00 20 */	blr 
 
-/* 802A2474 0068 .text func_802A2474 newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
-.global func_802A2474
-func_802A2474:
+/* 802A2474 0068 .text "newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience" newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
+.global "newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience"
+"newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience":
 /* 802A2474 0029F3B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A2478 0029F3B8  7C 08 02 A6 */	mflr r0
 /* 802A247C 0029F3BC  90 01 00 24 */	stw r0, 0x24(r1)

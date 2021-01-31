@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 802A0A6C 0020 .text func_802A0A6C JASTrack_isFreeOrStopped__20@unnamed@JAISeq_cpp@FP8JASTrack */
-.global func_802A0A6C
-func_802A0A6C:
+/* 802A0A6C 0020 .text lbl_802A0A6C JASTrack_isFreeOrStopped__20@unnamed@JAISeq_cpp@FP8JASTrack */
+.global lbl_802A0A6C
+lbl_802A0A6C:
 /* 802A0A6C 0029D9AC  88 03 02 15 */	lbz r0, 0x215(r3)
 /* 802A0A70 0029D9B0  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 802A0A74 0029D9B4  38 60 00 00 */	li r3, 0
@@ -15,9 +15,9 @@ lbl_802A0A84:
 /* 802A0A84 0029D9C4  38 60 00 01 */	li r3, 1
 /* 802A0A88 0029D9C8  4E 80 00 20 */	blr 
 
-/* 802A0A8C 00D8 .text func_802A0A8C __ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq> */
-.global func_802A0A8C
-func_802A0A8C:
+/* 802A0A8C 00D8 .text "__ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq>" __ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq> */
+.global "__ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq>"
+"__ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq>":
 /* 802A0A8C 0029D9CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0A90 0029D9D0  7C 08 02 A6 */	mflr r0
 /* 802A0A94 0029D9D4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -74,9 +74,9 @@ lbl_802A0B38:
 /* 802A0B5C 0029DA9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0B60 0029DAA0  4E 80 00 20 */	blr 
 
-/* 802A0B64 00A0 .text func_802A0B64 JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii */
-.global func_802A0B64
-func_802A0B64:
+/* 802A0B64 00A0 .text "JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii" JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii */
+.global "JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii"
+"JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii":
 /* 802A0B64 0029DAA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0B68 0029DAA8  7C 08 02 A6 */	mflr r0
 /* 802A0B6C 0029DAAC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -95,7 +95,7 @@ func_802A0B64:
 /* 802A0BA0 0029DAE0  38 81 00 0C */	addi r4, r1, 0xc
 /* 802A0BA4 0029DAE4  7F C5 F3 78 */	mr r5, r30
 /* 802A0BA8 0029DAE8  7F E6 FB 78 */	mr r6, r31
-/* 802A0BAC 0029DAEC  48 00 17 7D */	bl func_802A2328
+/* 802A0BAC 0029DAEC  48 00 17 7D */	bl "start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience"
 /* 802A0BB0 0029DAF0  80 1C 03 A4 */	lwz r0, 0x3a4(r28)
 /* 802A0BB4 0029DAF4  28 00 00 00 */	cmplwi r0, 0
 /* 802A0BB8 0029DAF8  41 82 00 2C */	beq lbl_802A0BE4
@@ -189,8 +189,8 @@ lbl_802A0CD0:
 /* 802A0CE4 0029DC24  4B FE FB 65 */	bl __ct__17JASGenericMemPoolFv
 /* 802A0CE8 0029DC28  3C 60 80 43 */	lis r3, lbl_80431B04@ha
 /* 802A0CEC 0029DC2C  38 63 1B 04 */	addi r3, r3, lbl_80431B04@l
-/* 802A0CF0 0029DC30  3C 80 80 29 */	lis r4, func_802932E0@ha
-/* 802A0CF4 0029DC34  38 84 32 E0 */	addi r4, r4, func_802932E0@l
+/* 802A0CF0 0029DC30  3C 80 80 29 */	lis r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@ha
+/* 802A0CF4 0029DC34  38 84 32 E0 */	addi r4, r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@l
 /* 802A0CF8 0029DC38  3C A0 80 43 */	lis r5, lbl_80434098@ha
 /* 802A0CFC 0029DC3C  38 A5 40 98 */	addi r5, r5, lbl_80434098@l
 /* 802A0D00 0029DC40  48 0C 0F 25 */	bl __register_global_object
@@ -234,8 +234,8 @@ lbl_802A0D6C:
 /* 802A0D8C 0029DCCC  4B FE FA BD */	bl __ct__17JASGenericMemPoolFv
 /* 802A0D90 0029DCD0  3C 60 80 43 */	lis r3, lbl_80431B04@ha
 /* 802A0D94 0029DCD4  38 63 1B 04 */	addi r3, r3, lbl_80431B04@l
-/* 802A0D98 0029DCD8  3C 80 80 29 */	lis r4, func_802932E0@ha
-/* 802A0D9C 0029DCDC  38 84 32 E0 */	addi r4, r4, func_802932E0@l
+/* 802A0D98 0029DCD8  3C 80 80 29 */	lis r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@ha
+/* 802A0D9C 0029DCDC  38 84 32 E0 */	addi r4, r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@l
 /* 802A0DA0 0029DCE0  3C A0 80 43 */	lis r5, lbl_80434098@ha
 /* 802A0DA4 0029DCE4  38 A5 40 98 */	addi r5, r5, lbl_80434098@l
 /* 802A0DA8 0029DCE8  48 0C 0E 7D */	bl __register_global_object
@@ -550,8 +550,8 @@ lbl_802A11A0:
 /* 802A11C4 0029E104  4B FE F6 85 */	bl __ct__17JASGenericMemPoolFv
 /* 802A11C8 0029E108  3C 60 80 43 */	lis r3, lbl_804340B0@ha
 /* 802A11CC 0029E10C  38 63 40 B0 */	addi r3, r3, lbl_804340B0@l
-/* 802A11D0 0029E110  3C 80 80 2A */	lis r4, func_802A1268@ha
-/* 802A11D4 0029E114  38 84 12 68 */	addi r4, r4, func_802A1268@l
+/* 802A11D0 0029E110  3C 80 80 2A */	lis r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@ha
+/* 802A11D4 0029E114  38 84 12 68 */	addi r4, r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@l
 /* 802A11D8 0029E118  3C A0 80 43 */	lis r5, lbl_804340A4@ha
 /* 802A11DC 0029E11C  38 A5 40 A4 */	addi r5, r5, lbl_804340A4@l
 /* 802A11E0 0029E120  48 0C 0A 45 */	bl __register_global_object
@@ -592,9 +592,9 @@ lbl_802A1240:
 /* 802A1260 0029E1A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A1264 0029E1A4  4E 80 00 20 */	blr 
 
-/* 802A1268 0054 .text func_802A1268 __dt__27JASMemPool<13JAISoundChild>Fv */
-.global func_802A1268
-func_802A1268:
+/* 802A1268 0054 .text "__dt__27JASMemPool<13JAISoundChild>Fv" __dt__27JASMemPool<13JAISoundChild>Fv */
+.global "__dt__27JASMemPool<13JAISoundChild>Fv"
+"__dt__27JASMemPool<13JAISoundChild>Fv":
 /* 802A1268 0029E1A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A126C 0029E1AC  7C 08 02 A6 */	mflr r0
 /* 802A1270 0029E1B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -627,7 +627,7 @@ JAISound_tryDie___6JAISeqFv:
 /* 802A12C8 0029E208  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802A12CC 0029E20C  7C 7F 1B 78 */	mr r31, r3
 /* 802A12D0 0029E210  38 7F 00 A8 */	addi r3, r31, 0xa8
-/* 802A12D4 0029E214  4B FF F7 99 */	bl func_802A0A6C
+/* 802A12D4 0029E214  4B FF F7 99 */	bl lbl_802A0A6C
 /* 802A12D8 0029E218  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802A12DC 0029E21C  41 82 00 14 */	beq lbl_802A12F0
 /* 802A12E0 0029E220  7F E3 FB 78 */	mr r3, r31
@@ -846,8 +846,8 @@ lbl_802A15A4:
 /* 802A15B8 0029E4F8  4B FE F2 91 */	bl __ct__17JASGenericMemPoolFv
 /* 802A15BC 0029E4FC  3C 60 80 43 */	lis r3, lbl_804340B0@ha
 /* 802A15C0 0029E500  38 63 40 B0 */	addi r3, r3, lbl_804340B0@l
-/* 802A15C4 0029E504  3C 80 80 2A */	lis r4, func_802A1268@ha
-/* 802A15C8 0029E508  38 84 12 68 */	addi r4, r4, func_802A1268@l
+/* 802A15C4 0029E504  3C 80 80 2A */	lis r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@ha
+/* 802A15C8 0029E508  38 84 12 68 */	addi r4, r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@l
 /* 802A15CC 0029E50C  3C A0 80 43 */	lis r5, lbl_804340A4@ha
 /* 802A15D0 0029E510  38 A5 40 A4 */	addi r5, r5, lbl_804340A4@l
 /* 802A15D4 0029E514  48 0C 06 51 */	bl __register_global_object
@@ -923,8 +923,8 @@ lbl_802A16B4:
 /* 802A16CC 0029E60C  4B FE F1 7D */	bl __ct__17JASGenericMemPoolFv
 /* 802A16D0 0029E610  3C 60 80 43 */	lis r3, lbl_804340B0@ha
 /* 802A16D4 0029E614  38 63 40 B0 */	addi r3, r3, lbl_804340B0@l
-/* 802A16D8 0029E618  3C 80 80 2A */	lis r4, func_802A1268@ha
-/* 802A16DC 0029E61C  38 84 12 68 */	addi r4, r4, func_802A1268@l
+/* 802A16D8 0029E618  3C 80 80 2A */	lis r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@ha
+/* 802A16DC 0029E61C  38 84 12 68 */	addi r4, r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@l
 /* 802A16E0 0029E620  3C A0 80 43 */	lis r5, lbl_804340A4@ha
 /* 802A16E4 0029E624  38 A5 40 A4 */	addi r5, r5, lbl_804340A4@l
 /* 802A16E8 0029E628  48 0C 05 3D */	bl __register_global_object

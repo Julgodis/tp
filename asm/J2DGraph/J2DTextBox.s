@@ -366,9 +366,9 @@ lbl_802FFB94:
 /* 802FFBBC 002FCAFC  38 21 00 90 */	addi r1, r1, 0x90
 /* 802FFBC0 002FCB00  4E 80 00 20 */	blr 
 
-/* 802FFBC4 0094 .text func_802FFBC4 __ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding */
-.global func_802FFBC4
-func_802FFBC4:
+/* 802FFBC4 0094 .text "__ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding" __ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding */
+.global "__ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding"
+"__ct__10J2DTextBoxFUxRCQ29JGeometry8TBox2<f>PC7ResFONTPCcs18J2DTextBoxHBinding18J2DTextBoxVBinding":
 /* 802FFBC4 002FCB04  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FFBC8 002FCB08  7C 08 02 A6 */	mflr r0
 /* 802FFBCC 002FCB0C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -380,7 +380,7 @@ func_802FFBC4:
 /* 802FFBE4 002FCB24  7D 5D 53 78 */	mr r29, r10
 /* 802FFBE8 002FCB28  83 C1 00 28 */	lwz r30, 0x28(r1)
 /* 802FFBEC 002FCB2C  83 E1 00 2C */	lwz r31, 0x2c(r1)
-/* 802FFBF0 002FCB30  4B FF 62 99 */	bl func_802F5E88
+/* 802FFBF0 002FCB30  4B FF 62 99 */	bl "__ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>"
 /* 802FFBF4 002FCB34  3C 60 80 3D */	lis r3, __vt__10J2DTextBox@ha
 /* 802FFBF8 002FCB38  38 03 D3 28 */	addi r0, r3, __vt__10J2DTextBox@l
 /* 802FFBFC 002FCB3C  90 1A 00 00 */	stw r0, 0(r26)

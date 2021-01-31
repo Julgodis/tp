@@ -130,21 +130,21 @@ Init__14dBgS_SplGrpChkFv:
 /* 80078D44 00075C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078D48 00075C88  4E 80 00 20 */	blr 
 
-/* 80078D4C 0008 .text func_80078D4C @16@__dt__14dBgS_SplGrpChkFv */
-.global func_80078D4C
-func_80078D4C:
+/* 80078D4C 0008 .text lbl_80078D4C @16@__dt__14dBgS_SplGrpChkFv */
+.global lbl_80078D4C
+lbl_80078D4C:
 /* 80078D4C 00075C8C  38 63 FF F0 */	addi r3, r3, -16
 /* 80078D50 00075C90  4B FF FF 28 */	b __dt__14dBgS_SplGrpChkFv
 
-/* 80078D54 0008 .text func_80078D54 @52@__dt__14dBgS_SplGrpChkFv */
-.global func_80078D54
-func_80078D54:
+/* 80078D54 0008 .text lbl_80078D54 @52@__dt__14dBgS_SplGrpChkFv */
+.global lbl_80078D54
+lbl_80078D54:
 /* 80078D54 00075C94  38 63 FF CC */	addi r3, r3, -52
 /* 80078D58 00075C98  4B FF FF 20 */	b __dt__14dBgS_SplGrpChkFv
 
-/* 80078D5C 0008 .text func_80078D5C @36@__dt__14dBgS_SplGrpChkFv */
-.global func_80078D5C
-func_80078D5C:
+/* 80078D5C 0008 .text lbl_80078D5C @36@__dt__14dBgS_SplGrpChkFv */
+.global lbl_80078D5C
+lbl_80078D5C:
 /* 80078D5C 00075C9C  38 63 FF DC */	addi r3, r3, -36
 /* 80078D60 00075CA0  4B FF FF 18 */	b __dt__14dBgS_SplGrpChkFv
 

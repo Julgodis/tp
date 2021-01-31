@@ -101,8 +101,8 @@ __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial:
 /* 803037A0 003006E0  38 A0 00 00 */	li r5, 0
 /* 803037A4 003006E4  4B FD 8D 39 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 803037A8 003006E8  38 61 00 2C */	addi r3, r1, 0x2c
-/* 803037AC 003006EC  3C 80 80 30 */	lis r4, func_802FF204@ha
-/* 803037B0 003006F0  38 84 F2 04 */	addi r4, r4, func_802FF204@l
+/* 803037AC 003006EC  3C 80 80 30 */	lis r4, "__ct__Q29JGeometry8TVec2<s>Fv"@ha
+/* 803037B0 003006F0  38 84 F2 04 */	addi r4, r4, "__ct__Q29JGeometry8TVec2<s>Fv"@l
 /* 803037B4 003006F4  38 A0 00 00 */	li r5, 0
 /* 803037B8 003006F8  38 C0 00 04 */	li r6, 4
 /* 803037BC 003006FC  38 E0 00 04 */	li r7, 4
@@ -1746,9 +1746,9 @@ lbl_80304EAC:
 /* 80304EE8 00301E28  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80304EEC 00301E2C  4E 80 00 20 */	blr 
 
-/* 80304EF0 0374 .text func_80304EF0 drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
-.global func_80304EF0
-func_80304EF0:
+/* 80304EF0 0374 .text "drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f>" drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+.global "drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f>"
+"drawOut__12J2DPictureExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f>":
 /* 80304EF0 00301E30  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80304EF4 00301E34  7C 08 02 A6 */	mflr r0
 /* 80304EF8 00301E38  90 01 00 74 */	stw r0, 0x74(r1)

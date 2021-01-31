@@ -2,9 +2,9 @@
 
 
 .section .text, "ax"
-/* 80037DE4 0060 .text func_80037DE4 __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv */
-.global func_80037DE4
-func_80037DE4:
+/* 80037DE4 0060 .text lbl_80037DE4 __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv */
+.global lbl_80037DE4
+lbl_80037DE4:
 /* 80037DE4 00034D24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037DE8 00034D28  7C 08 02 A6 */	mflr r0
 /* 80037DEC 00034D2C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -31,9 +31,9 @@ lbl_80037E28:
 /* 80037E3C 00034D7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80037E40 00034D80  4E 80 00 20 */	blr 
 
-/* 80037E44 0030 .text func_80037E44 adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
-.global func_80037E44
-func_80037E44:
+/* 80037E44 0030 .text lbl_80037E44 adaptor_do_MESSAGE__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFQ37JStudio4data15TEOperationDataPCvUl */
+.global lbl_80037E44
+lbl_80037E44:
 /* 80037E44 00034D84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037E48 00034D88  7C 08 02 A6 */	mflr r0
 /* 80037E4C 00034D8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -49,9 +49,9 @@ lbl_80037E64:
 /* 80037E6C 00034DAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80037E70 00034DB0  4E 80 00 20 */	blr 
 
-/* 80037E74 0060 .text func_80037E74 __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
-.global func_80037E74
-func_80037E74:
+/* 80037E74 0060 .text lbl_80037E74 __dt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFv */
+.global lbl_80037E74
+lbl_80037E74:
 /* 80037E74 00034DB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037E78 00034DB8  7C 08 02 A6 */	mflr r0
 /* 80037E7C 00034DBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,9 +78,9 @@ lbl_80037EB8:
 /* 80037ECC 00034E0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80037ED0 00034E10  4E 80 00 20 */	blr 
 
-/* 80037ED4 014C .text func_80037ED4 create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
-.global func_80037ED4
-func_80037ED4:
+/* 80037ED4 014C .text lbl_80037ED4 create__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_messageFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+.global lbl_80037ED4
+lbl_80037ED4:
 /* 80037ED4 00034E14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80037ED8 00034E18  7C 08 02 A6 */	mflr r0
 /* 80037EDC 00034E1C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2025,7 +2025,7 @@ lbl_80039738:
 /* 80039740 00036680  48 29 55 0D */	bl __nw__FUl
 /* 80039744 00036684  28 03 00 00 */	cmplwi r3, 0
 /* 80039748 00036688  41 82 00 3C */	beq lbl_80039784
-/* 8003974C 0003668C  80 ED 85 F4 */	lwz r7, lbl_80450B74-_SDA_BASE_(r13)
+/* 8003974C 0003668C  80 ED 85 F4 */	lwz r7, "sInstance__35JASGlobalInstance<14Z2SoundStarter>"-_SDA_BASE_(r13)
 /* 80039750 00036690  80 CD 88 80 */	lwz r6, m_system__7dDemo_c-_SDA_BASE_(r13)
 /* 80039754 00036694  3C 80 80 3A */	lis r4, __vt__Q27JStudio13TCreateObject@ha
 /* 80039758 00036698  38 04 79 34 */	addi r0, r4, __vt__Q27JStudio13TCreateObject@l

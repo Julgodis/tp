@@ -1859,27 +1859,27 @@ __sinit_c_cc_d_cpp:
 /* 80264A44 00261984  38 21 00 10 */	addi r1, r1, 0x10
 /* 80264A48 00261988  4E 80 00 20 */	blr 
 
-/* 80264A4C 0008 .text func_80264A4C @32@__dt__12cCcD_TriAttrFv */
-.global func_80264A4C
-func_80264A4C:
+/* 80264A4C 0008 .text lbl_80264A4C @32@__dt__12cCcD_TriAttrFv */
+.global lbl_80264A4C
+lbl_80264A4C:
 /* 80264A4C 0026198C  38 63 FF E0 */	addi r3, r3, -32
 /* 80264A50 00261990  4B FF FE E8 */	b __dt__12cCcD_TriAttrFv
 
-/* 80264A54 0008 .text func_80264A54 @32@__dt__12cCcD_CpsAttrFv */
-.global func_80264A54
-func_80264A54:
+/* 80264A54 0008 .text lbl_80264A54 @32@__dt__12cCcD_CpsAttrFv */
+.global lbl_80264A54
+lbl_80264A54:
 /* 80264A54 00261994  38 63 FF E0 */	addi r3, r3, -32
 /* 80264A58 00261998  4B E2 09 F8 */	b __dt__12cCcD_CpsAttrFv
 
-/* 80264A5C 0008 .text func_80264A5C @32@__dt__12cCcD_CylAttrFv */
-.global func_80264A5C
-func_80264A5C:
+/* 80264A5C 0008 .text lbl_80264A5C @32@__dt__12cCcD_CylAttrFv */
+.global lbl_80264A5C
+lbl_80264A5C:
 /* 80264A5C 0026199C  38 63 FF E0 */	addi r3, r3, -32
 /* 80264A60 002619A0  4B E2 0A 80 */	b __dt__12cCcD_CylAttrFv
 
-/* 80264A64 0008 .text func_80264A64 @32@__dt__12cCcD_SphAttrFv */
-.global func_80264A64
-func_80264A64:
+/* 80264A64 0008 .text lbl_80264A64 @32@__dt__12cCcD_SphAttrFv */
+.global lbl_80264A64
+lbl_80264A64:
 /* 80264A64 002619A4  38 63 FF E0 */	addi r3, r3, -32
 /* 80264A68 002619A8  4B E2 27 B4 */	b __dt__12cCcD_SphAttrFv
 

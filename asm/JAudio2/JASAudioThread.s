@@ -20,7 +20,7 @@ __ct__14JASAudioThreadFiiUl:
 /* 8029CD0C 00299C4C  41 82 00 08 */	beq lbl_8029CD14
 /* 8029CD10 00299C50  38 63 FF 84 */	addi r3, r3, -124
 lbl_8029CD14:
-/* 8029CD14 00299C54  90 6D 86 0C */	stw r3, lbl_80450B8C-_SDA_BASE_(r13)
+/* 8029CD14 00299C54  90 6D 86 0C */	stw r3, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 /* 8029CD18 00299C58  3C 60 80 3C */	lis r3, __vt__14JASAudioThread@ha
 /* 8029CD1C 00299C5C  38 03 78 E0 */	addi r0, r3, __vt__14JASAudioThread@l
 /* 8029CD20 00299C60  90 1F 00 00 */	stw r0, 0(r31)
@@ -122,8 +122,8 @@ run__14JASAudioThreadFv:
 /* 8029CE64 00299DA4  4B FF 39 E5 */	bl __ct__17JASGenericMemPoolFv
 /* 8029CE68 00299DA8  3C 80 80 43 */	lis r4, lbl_80431B34@ha
 /* 8029CE6C 00299DAC  38 64 1B 34 */	addi r3, r4, lbl_80431B34@l
-/* 8029CE70 00299DB0  3C 80 80 29 */	lis r4, func_802978DC@ha
-/* 8029CE74 00299DB4  38 84 78 DC */	addi r4, r4, func_802978DC@l
+/* 8029CE70 00299DB0  3C 80 80 29 */	lis r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@ha
+/* 8029CE74 00299DB4  38 84 78 DC */	addi r4, r4, "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"@l
 /* 8029CE78 00299DB8  3C A0 80 43 */	lis r5, lbl_80431C68@ha
 /* 8029CE7C 00299DBC  38 A5 1C 68 */	addi r5, r5, lbl_80431C68@l
 /* 8029CE80 00299DC0  48 0C 4D A5 */	bl __register_global_object
@@ -200,7 +200,7 @@ DMACallback__14JASAudioThreadFv:
 /* 8029CF6C 00299EAC  7C 08 02 A6 */	mflr r0
 /* 8029CF70 00299EB0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029CF74 00299EB4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8029CF78 00299EB8  83 ED 86 0C */	lwz r31, lbl_80450B8C-_SDA_BASE_(r13)
+/* 8029CF78 00299EB8  83 ED 86 0C */	lwz r31, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 /* 8029CF7C 00299EBC  38 60 00 04 */	li r3, 4
 /* 8029CF80 00299EC0  4B FF 3F A5 */	bl stop__8JASProbeFl
 /* 8029CF84 00299EC4  38 60 00 04 */	li r3, 4
@@ -225,7 +225,7 @@ DSPCallback__14JASAudioThreadFPv:
 /* 8029CFC0 00299F00  7C 08 02 A6 */	mflr r0
 /* 8029CFC4 00299F04  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029CFC8 00299F08  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8029CFCC 00299F0C  83 ED 86 0C */	lwz r31, lbl_80450B8C-_SDA_BASE_(r13)
+/* 8029CFCC 00299F0C  83 ED 86 0C */	lwz r31, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 lbl_8029CFD0:
 /* 8029CFD0 00299F10  48 0B 54 71 */	bl DSPCheckMailFromDSP
 /* 8029CFD4 00299F14  28 03 00 00 */	cmplwi r3, 0
@@ -272,11 +272,11 @@ __dt__14JASAudioThreadFv:
 /* 8029D060 00299FA0  41 82 00 08 */	beq lbl_8029D068
 /* 8029D064 00299FA4  38 63 FF 84 */	addi r3, r3, -124
 lbl_8029D068:
-/* 8029D068 00299FA8  80 0D 86 0C */	lwz r0, lbl_80450B8C-_SDA_BASE_(r13)
+/* 8029D068 00299FA8  80 0D 86 0C */	lwz r0, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 /* 8029D06C 00299FAC  7C 00 18 40 */	cmplw r0, r3
 /* 8029D070 00299FB0  40 82 00 0C */	bne lbl_8029D07C
 /* 8029D074 00299FB4  38 00 00 00 */	li r0, 0
-/* 8029D078 00299FB8  90 0D 86 0C */	stw r0, lbl_80450B8C-_SDA_BASE_(r13)
+/* 8029D078 00299FB8  90 0D 86 0C */	stw r0, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 lbl_8029D07C:
 /* 8029D07C 00299FBC  7F C3 F3 78 */	mr r3, r30
 /* 8029D080 00299FC0  38 80 00 00 */	li r4, 0

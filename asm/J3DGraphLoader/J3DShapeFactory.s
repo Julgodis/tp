@@ -14,31 +14,31 @@ __ct__15J3DShapeFactoryFRC13J3DShapeBlock:
 /* 80337368 003342A8  7C 9F 23 78 */	mr r31, r4
 /* 8033736C 003342AC  7F E3 FB 78 */	mr r3, r31
 /* 80337370 003342B0  80 84 00 0C */	lwz r4, 0xc(r4)
-/* 80337374 003342B4  4B FF F3 F1 */	bl func_80336764
+/* 80337374 003342B4  4B FF F3 F1 */	bl "JSUConvertOffsetToPtr<16J3DShapeInitData>__FPCvUl"
 /* 80337378 003342B8  90 7E 00 00 */	stw r3, 0(r30)
 /* 8033737C 003342BC  7F E3 FB 78 */	mr r3, r31
 /* 80337380 003342C0  80 9F 00 10 */	lwz r4, 0x10(r31)
-/* 80337384 003342C4  4B FF F3 F9 */	bl func_8033677C
+/* 80337384 003342C4  4B FF F3 F9 */	bl "JSUConvertOffsetToPtr<Us>__FPCvUl"
 /* 80337388 003342C8  90 7E 00 04 */	stw r3, 4(r30)
 /* 8033738C 003342CC  7F E3 FB 78 */	mr r3, r31
 /* 80337390 003342D0  80 9F 00 18 */	lwz r4, 0x18(r31)
-/* 80337394 003342D4  48 00 07 95 */	bl func_80337B28
+/* 80337394 003342D4  48 00 07 95 */	bl "JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl"
 /* 80337398 003342D8  90 7E 00 08 */	stw r3, 8(r30)
 /* 8033739C 003342DC  7F E3 FB 78 */	mr r3, r31
 /* 803373A0 003342E0  80 9F 00 1C */	lwz r4, 0x1c(r31)
-/* 803373A4 003342E4  4B FF F3 D9 */	bl func_8033677C
+/* 803373A4 003342E4  4B FF F3 D9 */	bl "JSUConvertOffsetToPtr<Us>__FPCvUl"
 /* 803373A8 003342E8  90 7E 00 0C */	stw r3, 0xc(r30)
 /* 803373AC 003342EC  7F E3 FB 78 */	mr r3, r31
 /* 803373B0 003342F0  80 9F 00 20 */	lwz r4, 0x20(r31)
-/* 803373B4 003342F4  48 00 07 5D */	bl func_80337B10
+/* 803373B4 003342F4  48 00 07 5D */	bl "JSUConvertOffsetToPtr<Uc>__FPCvUl"
 /* 803373B8 003342F8  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 803373BC 003342FC  7F E3 FB 78 */	mr r3, r31
 /* 803373C0 00334300  80 9F 00 24 */	lwz r4, 0x24(r31)
-/* 803373C4 00334304  48 00 07 35 */	bl func_80337AF8
+/* 803373C4 00334304  48 00 07 35 */	bl "JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl"
 /* 803373C8 00334308  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 803373CC 0033430C  7F E3 FB 78 */	mr r3, r31
 /* 803373D0 00334310  80 9F 00 28 */	lwz r4, 0x28(r31)
-/* 803373D4 00334314  48 00 07 0D */	bl func_80337AE0
+/* 803373D4 00334314  48 00 07 0D */	bl "JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl"
 /* 803373D8 00334318  90 7E 00 18 */	stw r3, 0x18(r30)
 /* 803373DC 0033431C  38 00 00 00 */	li r0, 0
 /* 803373E0 00334320  90 1E 00 1C */	stw r0, 0x1c(r30)
@@ -556,9 +556,9 @@ lbl_80337AC8:
 /* 80337AD8 00334A18  38 21 00 10 */	addi r1, r1, 0x10
 /* 80337ADC 00334A1C  4E 80 00 20 */	blr 
 
-/* 80337AE0 0018 .text func_80337AE0 JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl */
-.global func_80337AE0
-func_80337AE0:
+/* 80337AE0 0018 .text "JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl" JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl */
+.global "JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl"
+"JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl":
 /* 80337AE0 00334A20  28 04 00 00 */	cmplwi r4, 0
 /* 80337AE4 00334A24  40 82 00 0C */	bne lbl_80337AF0
 /* 80337AE8 00334A28  38 60 00 00 */	li r3, 0
@@ -567,9 +567,9 @@ lbl_80337AF0:
 /* 80337AF0 00334A30  7C 63 22 14 */	add r3, r3, r4
 /* 80337AF4 00334A34  4E 80 00 20 */	blr 
 
-/* 80337AF8 0018 .text func_80337AF8 JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl */
-.global func_80337AF8
-func_80337AF8:
+/* 80337AF8 0018 .text "JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl" JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl */
+.global "JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl"
+"JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl":
 /* 80337AF8 00334A38  28 04 00 00 */	cmplwi r4, 0
 /* 80337AFC 00334A3C  40 82 00 0C */	bne lbl_80337B08
 /* 80337B00 00334A40  38 60 00 00 */	li r3, 0
@@ -578,9 +578,9 @@ lbl_80337B08:
 /* 80337B08 00334A48  7C 63 22 14 */	add r3, r3, r4
 /* 80337B0C 00334A4C  4E 80 00 20 */	blr 
 
-/* 80337B10 0018 .text func_80337B10 JSUConvertOffsetToPtr<Uc>__FPCvUl */
-.global func_80337B10
-func_80337B10:
+/* 80337B10 0018 .text "JSUConvertOffsetToPtr<Uc>__FPCvUl" JSUConvertOffsetToPtr<Uc>__FPCvUl */
+.global "JSUConvertOffsetToPtr<Uc>__FPCvUl"
+"JSUConvertOffsetToPtr<Uc>__FPCvUl":
 /* 80337B10 00334A50  28 04 00 00 */	cmplwi r4, 0
 /* 80337B14 00334A54  40 82 00 0C */	bne lbl_80337B20
 /* 80337B18 00334A58  38 60 00 00 */	li r3, 0
@@ -589,9 +589,9 @@ lbl_80337B20:
 /* 80337B20 00334A60  7C 63 22 14 */	add r3, r3, r4
 /* 80337B24 00334A64  4E 80 00 20 */	blr 
 
-/* 80337B28 0018 .text func_80337B28 JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl */
-.global func_80337B28
-func_80337B28:
+/* 80337B28 0018 .text "JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl" JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl */
+.global "JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl"
+"JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl":
 /* 80337B28 00334A68  28 04 00 00 */	cmplwi r4, 0
 /* 80337B2C 00334A6C  40 82 00 0C */	bne lbl_80337B38
 /* 80337B30 00334A70  38 60 00 00 */	li r3, 0

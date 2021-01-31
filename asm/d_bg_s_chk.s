@@ -73,9 +73,9 @@ GetGrpPassChkInfo__8dBgS_ChkFv:
 /* 8007756C 000744AC  38 63 00 10 */	addi r3, r3, 0x10
 /* 80077570 000744B0  4E 80 00 20 */	blr 
 
-/* 80077574 0008 .text func_80077574 @16@__dt__8dBgS_ChkFv */
-.global func_80077574
-func_80077574:
+/* 80077574 0008 .text lbl_80077574 @16@__dt__8dBgS_ChkFv */
+.global lbl_80077574
+lbl_80077574:
 /* 80077574 000744B4  38 63 FF F0 */	addi r3, r3, -16
 /* 80077578 000744B8  4B FF FF 70 */	b __dt__8dBgS_ChkFv
 

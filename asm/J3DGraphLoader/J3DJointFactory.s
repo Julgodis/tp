@@ -14,11 +14,11 @@ __ct__15J3DJointFactoryFRC13J3DJointBlock:
 /* 80337190 003340D0  7C 9F 23 78 */	mr r31, r4
 /* 80337194 003340D4  7F E3 FB 78 */	mr r3, r31
 /* 80337198 003340D8  80 84 00 0C */	lwz r4, 0xc(r4)
-/* 8033719C 003340DC  48 00 01 9D */	bl func_80337338
+/* 8033719C 003340DC  48 00 01 9D */	bl "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl"
 /* 803371A0 003340E0  90 7E 00 00 */	stw r3, 0(r30)
 /* 803371A4 003340E4  7F E3 FB 78 */	mr r3, r31
 /* 803371A8 003340E8  80 9F 00 10 */	lwz r4, 0x10(r31)
-/* 803371AC 003340EC  4B FF F5 D1 */	bl func_8033677C
+/* 803371AC 003340EC  4B FF F5 D1 */	bl "JSUConvertOffsetToPtr<Us>__FPCvUl"
 /* 803371B0 003340F0  90 7E 00 04 */	stw r3, 4(r30)
 /* 803371B4 003340F4  7F C3 F3 78 */	mr r3, r30
 /* 803371B8 003340F8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -124,9 +124,9 @@ lbl_8033731C:
 /* 80337330 00334270  38 21 00 10 */	addi r1, r1, 0x10
 /* 80337334 00334274  4E 80 00 20 */	blr 
 
-/* 80337338 0018 .text func_80337338 JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl */
-.global func_80337338
-func_80337338:
+/* 80337338 0018 .text "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl" JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl */
+.global "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl"
+"JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl":
 /* 80337338 00334278  28 04 00 00 */	cmplwi r4, 0
 /* 8033733C 0033427C  40 82 00 0C */	bne lbl_80337348
 /* 80337340 00334280  38 60 00 00 */	li r3, 0

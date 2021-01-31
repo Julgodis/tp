@@ -151,7 +151,7 @@ draw__8JUTFaderFv:
 /* 802E5730 002E2670  48 00 39 E9 */	bl setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 802E5734 002E2674  38 61 00 1C */	addi r3, r1, 0x1c
 /* 802E5738 002E2678  38 9F 00 10 */	addi r4, r31, 0x10
-/* 802E573C 002E267C  48 00 3B 25 */	bl func_802E9260
+/* 802E573C 002E267C  48 00 3B 25 */	bl "fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
 /* 802E5740 002E2680  3C 60 80 3D */	lis r3, __vt__13J2DOrthoGraph@ha
 /* 802E5744 002E2684  38 03 C9 E0 */	addi r0, r3, __vt__13J2DOrthoGraph@l
 /* 802E5748 002E2688  90 01 00 1C */	stw r0, 0x1c(r1)

@@ -580,9 +580,9 @@ lbl_8027EEA8:
 /* 8027EEA8 0027BDE8  38 60 00 00 */	li r3, 0
 /* 8027EEAC 0027BDEC  4E 80 00 20 */	blr 
 
-/* 8027EEB0 0080 .text func_8027EEB0 calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
-.global func_8027EEB0
-func_8027EEB0:
+/* 8027EEB0 0080 .text "calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f>" calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
+.global "calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f>"
+"calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f>":
 /* 8027EEB0 0027BDF0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8027EEB4 0027BDF4  7C 08 02 A6 */	mflr r0
 /* 8027EEB8 0027BDF8  90 01 00 44 */	stw r0, 0x44(r1)

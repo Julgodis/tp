@@ -5,7 +5,7 @@
 /* 802BA7DC 0020 .text __ct__11Z2FxLineMgrFv __ct__11Z2FxLineMgrFv */
 .global __ct__11Z2FxLineMgrFv
 __ct__11Z2FxLineMgrFv:
-/* 802BA7DC 002B771C  90 6D 85 C0 */	stw r3, lbl_80450B40-_SDA_BASE_(r13)
+/* 802BA7DC 002B771C  90 6D 85 C0 */	stw r3, "sInstance__32JASGlobalInstance<11Z2FxLineMgr>"-_SDA_BASE_(r13)
 /* 802BA7E0 002B7720  38 80 00 00 */	li r4, 0
 /* 802BA7E4 002B7724  90 83 00 00 */	stw r4, 0(r3)
 /* 802BA7E8 002B7728  38 00 FF FF */	li r0, -1
@@ -466,7 +466,7 @@ setUnderWaterFx__11Z2FxLineMgrFb:
 /* 802BAE88 002B7DC8  4B FF FD A1 */	bl setLineID__11Z2FxLineMgrFScbb
 /* 802BAE8C 002B7DCC  48 00 00 10 */	b lbl_802BAE9C
 lbl_802BAE90:
-/* 802BAE90 002B7DD0  80 8D 86 00 */	lwz r4, lbl_80450B80-_SDA_BASE_(r13)
+/* 802BAE90 002B7DD0  80 8D 86 00 */	lwz r4, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802BAE94 002B7DD4  80 84 00 04 */	lwz r4, 4(r4)
 /* 802BAE98 002B7DD8  48 00 00 21 */	bl setSceneFx__11Z2FxLineMgrFl
 lbl_802BAE9C:
@@ -485,7 +485,7 @@ setSceneFx__11Z2FxLineMgrFl:
 /* 802BAEB8 002B7DF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BAEBC 002B7DFC  7C 08 02 A6 */	mflr r0
 /* 802BAEC0 002B7E00  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802BAEC4 002B7E04  80 AD 86 00 */	lwz r5, lbl_80450B80-_SDA_BASE_(r13)
+/* 802BAEC4 002B7E04  80 AD 86 00 */	lwz r5, "sInstance__31JASGlobalInstance<10Z2SceneMgr>"-_SDA_BASE_(r13)
 /* 802BAEC8 002B7E08  88 05 00 1E */	lbz r0, 0x1e(r5)
 /* 802BAECC 002B7E0C  28 00 00 00 */	cmplwi r0, 0
 /* 802BAED0 002B7E10  41 82 00 18 */	beq lbl_802BAEE8

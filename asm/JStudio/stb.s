@@ -728,7 +728,7 @@ getObject__Q37JStudio3stb8TControlFPCvUl:
 /* 802893A4 002862E4  38 81 00 2C */	addi r4, r1, 0x2c
 /* 802893A8 002862E8  38 A1 00 28 */	addi r5, r1, 0x28
 /* 802893AC 002862EC  38 C1 00 40 */	addi r6, r1, 0x40
-/* 802893B0 002862F0  48 00 05 79 */	bl func_80289928
+/* 802893B0 002862F0  48 00 05 79 */	bl lbl_80289928
 /* 802893B4 002862F4  80 61 00 30 */	lwz r3, 0x30(r1)
 /* 802893B8 002862F8  90 61 00 34 */	stw r3, 0x34(r1)
 /* 802893BC 002862FC  80 01 00 38 */	lwz r0, 0x38(r1)
@@ -1149,9 +1149,9 @@ lbl_80289910:
 /* 80289920 00286860  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289924 00286864  4E 80 00 20 */	blr 
 
-/* 80289928 0094 .text func_80289928 find_if<Q37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
-.global func_80289928
-func_80289928:
+/* 80289928 0094 .text lbl_80289928 find_if<Q37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3stb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
+.global lbl_80289928
+lbl_80289928:
 /* 80289928 00286868  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028992C 0028686C  7C 08 02 A6 */	mflr r0
 /* 80289930 00286870  90 01 00 34 */	stw r0, 0x34(r1)

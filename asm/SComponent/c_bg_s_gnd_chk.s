@@ -101,9 +101,9 @@ PreCheck__11cBgS_GndChkFv:
 /* 80267D4C 00264C8C  90 03 00 38 */	stw r0, 0x38(r3)
 /* 80267D50 00264C90  4E 80 00 20 */	blr 
 
-/* 80267D54 0008 .text func_80267D54 @20@__dt__11cBgS_GndChkFv */
-.global func_80267D54
-func_80267D54:
+/* 80267D54 0008 .text lbl_80267D54 @20@__dt__11cBgS_GndChkFv */
+.global lbl_80267D54
+lbl_80267D54:
 /* 80267D54 00264C94  38 63 FF EC */	addi r3, r3, -20
 /* 80267D58 00264C98  4B FF FF 3C */	b __dt__11cBgS_GndChkFv
 

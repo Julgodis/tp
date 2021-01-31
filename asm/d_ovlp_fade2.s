@@ -319,7 +319,7 @@ draw__15dOvlpFd2_dlst_cFv:
 /* 80252958 0024F898  38 81 00 14 */	addi r4, r1, 0x14
 /* 8025295C 0024F89C  C0 22 B4 44 */	lfs f1, lbl_80454E44-_SDA2_BASE_(r2)
 /* 80252960 0024F8A0  C0 42 B4 30 */	lfs f2, lbl_80454E30-_SDA2_BASE_(r2)
-/* 80252964 0024F8A4  48 09 6E A9 */	bl func_802E980C
+/* 80252964 0024F8A4  48 09 6E A9 */	bl "setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff"
 /* 80252968 0024F8A8  7F E3 FB 78 */	mr r3, r31
 /* 8025296C 0024F8AC  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80252970 0024F8B0  81 8C 00 18 */	lwz r12, 0x18(r12)
@@ -372,7 +372,7 @@ execFirstSnap__10dOvlpFd2_cFv:
 /* 80252A0C 0024F94C  28 00 00 00 */	cmplwi r0, 0
 /* 80252A10 0024F950  41 82 00 54 */	beq lbl_80252A64
 /* 80252A14 0024F954  38 7F 01 1D */	addi r3, r31, 0x11d
-/* 80252A18 0024F958  48 00 04 59 */	bl func_80252E70
+/* 80252A18 0024F958  48 00 04 59 */	bl "cLib_calcTimer<Sc>__FPSc"
 /* 80252A1C 0024F95C  7C 60 07 75 */	extsb. r0, r3
 /* 80252A20 0024F960  40 82 00 34 */	bne lbl_80252A54
 /* 80252A24 0024F964  3C 60 80 3C */	lis r3, lbl_803C2CFC@ha
@@ -473,7 +473,7 @@ lbl_80252B78:
 /* 80252B80 0024FAC0  48 00 00 0C */	b lbl_80252B8C
 lbl_80252B84:
 /* 80252B84 0024FAC4  38 7F 01 1D */	addi r3, r31, 0x11d
-/* 80252B88 0024FAC8  48 00 02 E9 */	bl func_80252E70
+/* 80252B88 0024FAC8  48 00 02 E9 */	bl "cLib_calcTimer<Sc>__FPSc"
 lbl_80252B8C:
 /* 80252B8C 0024FACC  A8 7F 01 14 */	lha r3, 0x114(r31)
 /* 80252B90 0024FAD0  38 03 08 00 */	addi r0, r3, 0x800
@@ -498,7 +498,7 @@ execNextSnap__10dOvlpFd2_cFv:
 /* 80252BCC 0024FB0C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80252BD0 0024FB10  7C 7F 1B 78 */	mr r31, r3
 /* 80252BD4 0024FB14  38 7F 01 1D */	addi r3, r31, 0x11d
-/* 80252BD8 0024FB18  48 00 02 99 */	bl func_80252E70
+/* 80252BD8 0024FB18  48 00 02 99 */	bl "cLib_calcTimer<Sc>__FPSc"
 /* 80252BDC 0024FB1C  7C 60 07 75 */	extsb. r0, r3
 /* 80252BE0 0024FB20  40 82 00 74 */	bne lbl_80252C54
 /* 80252BE4 0024FB24  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay-_SDA_BASE_(r13)
@@ -696,9 +696,9 @@ lbl_80252E5C:
 /* 80252E68 0024FDA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80252E6C 0024FDAC  4E 80 00 20 */	blr 
 
-/* 80252E70 001C .text func_80252E70 cLib_calcTimer<Sc>__FPSc */
-.global func_80252E70
-func_80252E70:
+/* 80252E70 001C .text "cLib_calcTimer<Sc>__FPSc" cLib_calcTimer<Sc>__FPSc */
+.global "cLib_calcTimer<Sc>__FPSc"
+"cLib_calcTimer<Sc>__FPSc":
 /* 80252E70 0024FDB0  88 83 00 00 */	lbz r4, 0(r3)
 /* 80252E74 0024FDB4  7C 80 07 75 */	extsb. r0, r4
 /* 80252E78 0024FDB8  41 82 00 0C */	beq lbl_80252E84

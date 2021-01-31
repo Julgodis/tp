@@ -101,7 +101,7 @@ __ct__9JAISeqMgrFb:
 /* 802A1924 0029E864  7C 7F 1B 78 */	mr r31, r3
 /* 802A1928 0029E868  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 802A192C 0029E86C  41 82 00 08 */	beq lbl_802A1934
-/* 802A1930 0029E870  93 ED 85 E8 */	stw r31, lbl_80450B68-_SDA_BASE_(r13)
+/* 802A1930 0029E870  93 ED 85 E8 */	stw r31, "sInstance__29JASGlobalInstance<9JAISeqMgr>"-_SDA_BASE_(r13)
 lbl_802A1934:
 /* 802A1934 0029E874  3C 60 80 3D */	lis r3, __vt__14JAISeqDataUser@ha
 /* 802A1938 0029E878  38 03 99 40 */	addi r0, r3, __vt__14JAISeqDataUser@l
@@ -201,8 +201,8 @@ lbl_802A1A80:
 /* 802A1A94 0029E9D4  4B FE ED B5 */	bl __ct__17JASGenericMemPoolFv
 /* 802A1A98 0029E9D8  3C 60 80 43 */	lis r3, lbl_804340CC@ha
 /* 802A1A9C 0029E9DC  38 63 40 CC */	addi r3, r3, lbl_804340CC@l
-/* 802A1AA0 0029E9E0  3C 80 80 2A */	lis r4, func_802A1AF4@ha
-/* 802A1AA4 0029E9E4  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
+/* 802A1AA0 0029E9E0  3C 80 80 2A */	lis r4, "__dt__19JASMemPool<6JAISeq>Fv"@ha
+/* 802A1AA4 0029E9E4  38 84 1A F4 */	addi r4, r4, "__dt__19JASMemPool<6JAISeq>Fv"@l
 /* 802A1AA8 0029E9E8  3C A0 80 43 */	lis r5, lbl_804340C0@ha
 /* 802A1AAC 0029E9EC  38 A5 40 C0 */	addi r5, r5, lbl_804340C0@l
 /* 802A1AB0 0029E9F0  48 0C 01 75 */	bl __register_global_object
@@ -226,9 +226,9 @@ lbl_802A1AD4:
 /* 802A1AEC 0029EA2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A1AF0 0029EA30  4E 80 00 20 */	blr 
 
-/* 802A1AF4 0054 .text func_802A1AF4 __dt__19JASMemPool<6JAISeq>Fv */
-.global func_802A1AF4
-func_802A1AF4:
+/* 802A1AF4 0054 .text "__dt__19JASMemPool<6JAISeq>Fv" __dt__19JASMemPool<6JAISeq>Fv */
+.global "__dt__19JASMemPool<6JAISeq>Fv"
+"__dt__19JASMemPool<6JAISeq>Fv":
 /* 802A1AF4 0029EA34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A1AF8 0029EA38  7C 08 02 A6 */	mflr r0
 /* 802A1AFC 0029EA3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -252,9 +252,9 @@ lbl_802A1B2C:
 /* 802A1B40 0029EA80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A1B44 0029EA84  4E 80 00 20 */	blr 
 
-/* 802A1B48 0148 .text func_802A1B48 startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
-.global func_802A1B48
-func_802A1B48:
+/* 802A1B48 0148 .text "startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>" startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+.global "startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
+"startSound__9JAISeqMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>":
 /* 802A1B48 0029EA88  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802A1B4C 0029EA8C  7C 08 02 A6 */	mflr r0
 /* 802A1B50 0029EA90  90 01 00 44 */	stw r0, 0x44(r1)
@@ -270,7 +270,7 @@ func_802A1B48:
 /* 802A1B78 0029EAB8  41 82 00 08 */	beq lbl_802A1B80
 /* 802A1B7C 0029EABC  48 00 0A 1D */	bl stop__8JAISoundFv
 lbl_802A1B80:
-/* 802A1B80 0029EAC0  83 CD 85 DC */	lwz r30, lbl_80450B5C-_SDA_BASE_(r13)
+/* 802A1B80 0029EAC0  83 CD 85 DC */	lwz r30, "sInstance__33JASGlobalInstance<12JAISoundInfo>"-_SDA_BASE_(r13)
 /* 802A1B84 0029EAC4  28 1E 00 00 */	cmplwi r30, 0
 /* 802A1B88 0029EAC8  41 82 00 2C */	beq lbl_802A1BB4
 /* 802A1B8C 0029EACC  80 1A 00 00 */	lwz r0, 0(r26)
@@ -314,7 +314,7 @@ lbl_802A1BF8:
 /* 802A1C18 0029EB58  80 D9 00 08 */	lwz r6, 8(r25)
 /* 802A1C1C 0029EB5C  7F E7 FB 78 */	mr r7, r31
 /* 802A1C20 0029EB60  81 19 00 70 */	lwz r8, 0x70(r25)
-/* 802A1C24 0029EB64  4B FF EF 41 */	bl func_802A0B64
+/* 802A1C24 0029EB64  4B FF EF 41 */	bl "JAISeqMgr_startID___6JAISeqF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudienceii"
 /* 802A1C28 0029EB68  7F 23 CB 78 */	mr r3, r25
 /* 802A1C2C 0029EB6C  7F A4 EB 78 */	mr r4, r29
 /* 802A1C30 0029EB70  7F 65 DB 78 */	mr r5, r27
@@ -581,8 +581,8 @@ beginStartSeq___9JAISeqMgrFv:
 /* 802A1F80 0029EEC0  4B FE E8 C9 */	bl __ct__17JASGenericMemPoolFv
 /* 802A1F84 0029EEC4  3C 60 80 43 */	lis r3, lbl_804340CC@ha
 /* 802A1F88 0029EEC8  38 63 40 CC */	addi r3, r3, lbl_804340CC@l
-/* 802A1F8C 0029EECC  3C 80 80 2A */	lis r4, func_802A1AF4@ha
-/* 802A1F90 0029EED0  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
+/* 802A1F8C 0029EECC  3C 80 80 2A */	lis r4, "__dt__19JASMemPool<6JAISeq>Fv"@ha
+/* 802A1F90 0029EED0  38 84 1A F4 */	addi r4, r4, "__dt__19JASMemPool<6JAISeq>Fv"@l
 /* 802A1F94 0029EED4  3C A0 80 43 */	lis r5, lbl_804340C0@ha
 /* 802A1F98 0029EED8  38 A5 40 C0 */	addi r5, r5, lbl_804340C0@l
 /* 802A1F9C 0029EEDC  48 0B FC 89 */	bl __register_global_object
@@ -597,7 +597,7 @@ lbl_802A1FA8:
 /* 802A1FBC 0029EEFC  41 82 00 14 */	beq lbl_802A1FD0
 /* 802A1FC0 0029EF00  7F E4 FB 78 */	mr r4, r31
 /* 802A1FC4 0029EF04  80 BF 00 10 */	lwz r5, 0x10(r31)
-/* 802A1FC8 0029EF08  4B FF EA C5 */	bl func_802A0A8C
+/* 802A1FC8 0029EF08  4B FF EA C5 */	bl "__ct__6JAISeqFP9JAISeqMgrP28JAISoundStrategyMgr<6JAISeq>"
 /* 802A1FCC 0029EF0C  7C 60 1B 78 */	mr r0, r3
 lbl_802A1FD0:
 /* 802A1FD0 0029EF10  7C 03 03 78 */	mr r3, r0
@@ -662,8 +662,8 @@ lbl_802A2084:
 /* 802A2098 0029EFD8  4B FE E7 B1 */	bl __ct__17JASGenericMemPoolFv
 /* 802A209C 0029EFDC  3C 60 80 43 */	lis r3, lbl_804340CC@ha
 /* 802A20A0 0029EFE0  38 63 40 CC */	addi r3, r3, lbl_804340CC@l
-/* 802A20A4 0029EFE4  3C 80 80 2A */	lis r4, func_802A1AF4@ha
-/* 802A20A8 0029EFE8  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
+/* 802A20A4 0029EFE4  3C 80 80 2A */	lis r4, "__dt__19JASMemPool<6JAISeq>Fv"@ha
+/* 802A20A8 0029EFE8  38 84 1A F4 */	addi r4, r4, "__dt__19JASMemPool<6JAISeq>Fv"@l
 /* 802A20AC 0029EFEC  3C A0 80 43 */	lis r5, lbl_804340C0@ha
 /* 802A20B0 0029EFF0  38 A5 40 C0 */	addi r5, r5, lbl_804340C0@l
 /* 802A20B4 0029EFF4  48 0B FB 71 */	bl __register_global_object
@@ -710,11 +710,11 @@ lbl_802A2130:
 /* 802A2138 0029F078  4B FF F6 3D */	bl __dt__14JAISeqDataUserFv
 /* 802A213C 0029F07C  28 1E 00 00 */	cmplwi r30, 0
 /* 802A2140 0029F080  41 82 00 18 */	beq lbl_802A2158
-/* 802A2144 0029F084  80 0D 85 E8 */	lwz r0, lbl_80450B68-_SDA_BASE_(r13)
+/* 802A2144 0029F084  80 0D 85 E8 */	lwz r0, "sInstance__29JASGlobalInstance<9JAISeqMgr>"-_SDA_BASE_(r13)
 /* 802A2148 0029F088  7C 00 F0 40 */	cmplw r0, r30
 /* 802A214C 0029F08C  40 82 00 0C */	bne lbl_802A2158
 /* 802A2150 0029F090  38 00 00 00 */	li r0, 0
-/* 802A2154 0029F094  90 0D 85 E8 */	stw r0, lbl_80450B68-_SDA_BASE_(r13)
+/* 802A2154 0029F094  90 0D 85 E8 */	stw r0, "sInstance__29JASGlobalInstance<9JAISeqMgr>"-_SDA_BASE_(r13)
 lbl_802A2158:
 /* 802A2158 0029F098  7F E0 07 35 */	extsh. r0, r31
 /* 802A215C 0029F09C  40 81 00 0C */	ble lbl_802A2168

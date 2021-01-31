@@ -35,7 +35,7 @@ __ct__10Z2AudioMgrFv:
 /* 802CD2B4 002CA1F4  38 80 00 01 */	li r4, 1
 /* 802CD2B8 002CA1F8  4B FD 5A 7D */	bl __ct__12JAISoundInfoFb
 /* 802CD2BC 002CA1FC  38 9E 00 04 */	addi r4, r30, 4
-/* 802CD2C0 002CA200  90 8D 85 D0 */	stw r4, lbl_80450B50-_SDA_BASE_(r13)
+/* 802CD2C0 002CA200  90 8D 85 D0 */	stw r4, "sInstance__33JASGlobalInstance<12JAUSoundInfo>"-_SDA_BASE_(r13)
 /* 802CD2C4 002CA204  3C 60 80 3A */	lis r3, __vt__12JAUSoundInfo@ha
 /* 802CD2C8 002CA208  38 03 2F 4C */	addi r0, r3, __vt__12JAUSoundInfo@l
 /* 802CD2CC 002CA20C  90 1E 00 04 */	stw r0, 4(r30)
@@ -46,7 +46,7 @@ __ct__10Z2AudioMgrFv:
 /* 802CD2E0 002CA220  41 82 00 08 */	beq lbl_802CD2E8
 /* 802CD2E4 002CA224  38 63 FF F4 */	addi r3, r3, -12
 lbl_802CD2E8:
-/* 802CD2E8 002CA228  90 6D 85 CC */	stw r3, lbl_80450B4C-_SDA_BASE_(r13)
+/* 802CD2E8 002CA228  90 6D 85 CC */	stw r3, "sInstance__32JASGlobalInstance<11Z2SoundInfo>"-_SDA_BASE_(r13)
 /* 802CD2EC 002CA22C  3C 60 80 3D */	lis r3, __vt__11Z2SoundInfo@ha
 /* 802CD2F0 002CA230  38 63 AC 48 */	addi r3, r3, __vt__11Z2SoundInfo@l
 /* 802CD2F4 002CA234  90 7E 00 00 */	stw r3, 0(r30)
@@ -200,8 +200,8 @@ init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive:
 /* 802CD534 002CA474  3C 60 80 3D */	lis r3, __vt__16JAIStreamAramMgr@ha
 /* 802CD538 002CA478  38 03 9A 08 */	addi r0, r3, __vt__16JAIStreamAramMgr@l
 /* 802CD53C 002CA47C  90 1B 00 00 */	stw r0, 0(r27)
-/* 802CD540 002CA480  3C 60 80 3D */	lis r3, lbl_803CBF58@ha
-/* 802CD544 002CA484  38 03 BF 58 */	addi r0, r3, lbl_803CBF58@l
+/* 802CD540 002CA480  3C 60 80 3D */	lis r3, "__vt__24JAUStreamAramMgrBase_<1>"@ha
+/* 802CD544 002CA484  38 03 BF 58 */	addi r0, r3, "__vt__24JAUStreamAramMgrBase_<1>"@l
 /* 802CD548 002CA488  90 1B 00 00 */	stw r0, 0(r27)
 /* 802CD54C 002CA48C  38 00 00 00 */	li r0, 0
 /* 802CD550 002CA490  90 1B 00 04 */	stw r0, 4(r27)
@@ -231,8 +231,8 @@ lbl_802CD5A8:
 /* 802CD5AC 002CA4EC  7F 20 C0 30 */	slw r0, r25, r24
 /* 802CD5B0 002CA4F0  7C 60 00 78 */	andc r0, r3, r0
 /* 802CD5B4 002CA4F4  90 1B 00 04 */	stw r0, 4(r27)
-/* 802CD5B8 002CA4F8  3C 60 80 3D */	lis r3, lbl_803CBF44@ha
-/* 802CD5BC 002CA4FC  38 03 BF 44 */	addi r0, r3, lbl_803CBF44@l
+/* 802CD5B8 002CA4F8  3C 60 80 3D */	lis r3, "__vt__26JAUStreamStaticAramMgr_<1>"@ha
+/* 802CD5BC 002CA4FC  38 03 BF 44 */	addi r0, r3, "__vt__26JAUStreamStaticAramMgr_<1>"@l
 /* 802CD5C0 002CA500  90 1B 00 00 */	stw r0, 0(r27)
 /* 802CD5C4 002CA504  38 00 00 00 */	li r0, 0
 /* 802CD5C8 002CA508  90 1B 00 4C */	stw r0, 0x4c(r27)
@@ -261,8 +261,8 @@ lbl_802CD5F4:
 /* 802CD61C 002CA55C  4B FC 32 2D */	bl __ct__17JASGenericMemPoolFv
 /* 802CD620 002CA560  3C 60 80 43 */	lis r3, lbl_804341E4@ha
 /* 802CD624 002CA564  38 63 41 E4 */	addi r3, r3, lbl_804341E4@l
-/* 802CD628 002CA568  3C 80 80 2C */	lis r4, func_802BD288@ha
-/* 802CD62C 002CA56C  38 84 D2 88 */	addi r4, r4, func_802BD288@l
+/* 802CD628 002CA568  3C 80 80 2C */	lis r4, "__dt__22JASMemPool<9Z2Audible>Fv"@ha
+/* 802CD62C 002CA56C  38 84 D2 88 */	addi r4, r4, "__dt__22JASMemPool<9Z2Audible>Fv"@l
 /* 802CD630 002CA570  3C A0 80 43 */	lis r5, lbl_80434268@ha
 /* 802CD634 002CA574  38 A5 42 68 */	addi r5, r5, lbl_80434268@l
 /* 802CD638 002CA578  48 09 45 ED */	bl __register_global_object
@@ -287,8 +287,8 @@ lbl_802CD644:
 /* 802CD680 002CA5C0  4B FC 31 C9 */	bl __ct__17JASGenericMemPoolFv
 /* 802CD684 002CA5C4  3C 60 80 43 */	lis r3, lbl_804341C4@ha
 /* 802CD688 002CA5C8  38 63 41 C4 */	addi r3, r3, lbl_804341C4@l
-/* 802CD68C 002CA5CC  3C 80 80 2B */	lis r4, func_802AB200@ha
-/* 802CD690 002CA5D0  38 84 B2 00 */	addi r4, r4, func_802AB200@l
+/* 802CD68C 002CA5CC  3C 80 80 2B */	lis r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@ha
+/* 802CD690 002CA5D0  38 84 B2 00 */	addi r4, r4, "__dt__31JASMemPool<17Z2SoundHandlePool>Fv"@l
 /* 802CD694 002CA5D4  3C A0 80 43 */	lis r5, lbl_80434274@ha
 /* 802CD698 002CA5D8  38 A5 42 74 */	addi r5, r5, lbl_80434274@l
 /* 802CD69C 002CA5DC  48 09 45 89 */	bl __register_global_object
@@ -384,9 +384,9 @@ lbl_802CD7A0:
 /* 802CD7F0 002CA730  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 802CD7F4 002CA734  4E 80 00 20 */	blr 
 
-/* 802CD7F8 0090 .text func_802CD7F8 __dt__24JAUStreamAramMgrBase_<1>Fv */
-.global func_802CD7F8
-func_802CD7F8:
+/* 802CD7F8 0090 .text "__dt__24JAUStreamAramMgrBase_<1>Fv" __dt__24JAUStreamAramMgrBase_<1>Fv */
+.global "__dt__24JAUStreamAramMgrBase_<1>Fv"
+"__dt__24JAUStreamAramMgrBase_<1>Fv":
 /* 802CD7F8 002CA738  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CD7FC 002CA73C  7C 08 02 A6 */	mflr r0
 /* 802CD800 002CA740  90 01 00 14 */	stw r0, 0x14(r1)
@@ -395,8 +395,8 @@ func_802CD7F8:
 /* 802CD80C 002CA74C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802CD810 002CA750  7C 9F 23 78 */	mr r31, r4
 /* 802CD814 002CA754  41 82 00 58 */	beq lbl_802CD86C
-/* 802CD818 002CA758  3C 60 80 3D */	lis r3, lbl_803CBF58@ha
-/* 802CD81C 002CA75C  38 03 BF 58 */	addi r0, r3, lbl_803CBF58@l
+/* 802CD818 002CA758  3C 60 80 3D */	lis r3, "__vt__24JAUStreamAramMgrBase_<1>"@ha
+/* 802CD81C 002CA75C  38 03 BF 58 */	addi r0, r3, "__vt__24JAUStreamAramMgrBase_<1>"@l
 /* 802CD820 002CA760  90 1E 00 00 */	stw r0, 0(r30)
 /* 802CD824 002CA764  80 1E 00 40 */	lwz r0, 0x40(r30)
 /* 802CD828 002CA768  28 00 00 00 */	cmplwi r0, 0
@@ -622,9 +622,9 @@ lbl_802CDB00:
 /* 802CDB14 002CAA54  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CDB18 002CAA58  4E 80 00 20 */	blr 
 
-/* 802CDB1C 004C .text func_802CDB1C startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
-.global func_802CDB1C
-func_802CDB1C:
+/* 802CDB1C 004C .text "startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>" startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+.global "startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>"
+"startSound__10Z2AudioMgrF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f>":
 /* 802CDB1C 002CAA5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CDB20 002CAA60  7C 08 02 A6 */	mflr r0
 /* 802CDB24 002CAA64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -647,9 +647,9 @@ lbl_802CDB58:
 /* 802CDB60 002CAAA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CDB64 002CAAA4  4E 80 00 20 */	blr 
 
-/* 802CDB68 00A0 .text func_802CDB68 __dt__26JAUStreamStaticAramMgr_<1>Fv */
-.global func_802CDB68
-func_802CDB68:
+/* 802CDB68 00A0 .text "__dt__26JAUStreamStaticAramMgr_<1>Fv" __dt__26JAUStreamStaticAramMgr_<1>Fv */
+.global "__dt__26JAUStreamStaticAramMgr_<1>Fv"
+"__dt__26JAUStreamStaticAramMgr_<1>Fv":
 /* 802CDB68 002CAAA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CDB6C 002CAAAC  7C 08 02 A6 */	mflr r0
 /* 802CDB70 002CAAB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -658,12 +658,12 @@ func_802CDB68:
 /* 802CDB7C 002CAABC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802CDB80 002CAAC0  7C 9F 23 78 */	mr r31, r4
 /* 802CDB84 002CAAC4  41 82 00 68 */	beq lbl_802CDBEC
-/* 802CDB88 002CAAC8  3C 60 80 3D */	lis r3, lbl_803CBF44@ha
-/* 802CDB8C 002CAACC  38 03 BF 44 */	addi r0, r3, lbl_803CBF44@l
+/* 802CDB88 002CAAC8  3C 60 80 3D */	lis r3, "__vt__26JAUStreamStaticAramMgr_<1>"@ha
+/* 802CDB8C 002CAACC  38 03 BF 44 */	addi r0, r3, "__vt__26JAUStreamStaticAramMgr_<1>"@l
 /* 802CDB90 002CAAD0  90 1E 00 00 */	stw r0, 0(r30)
 /* 802CDB94 002CAAD4  41 82 00 48 */	beq lbl_802CDBDC
-/* 802CDB98 002CAAD8  3C 60 80 3D */	lis r3, lbl_803CBF58@ha
-/* 802CDB9C 002CAADC  38 03 BF 58 */	addi r0, r3, lbl_803CBF58@l
+/* 802CDB98 002CAAD8  3C 60 80 3D */	lis r3, "__vt__24JAUStreamAramMgrBase_<1>"@ha
+/* 802CDB9C 002CAADC  38 03 BF 58 */	addi r0, r3, "__vt__24JAUStreamAramMgrBase_<1>"@l
 /* 802CDBA0 002CAAE0  90 1E 00 00 */	stw r0, 0(r30)
 /* 802CDBA4 002CAAE4  80 1E 00 40 */	lwz r0, 0x40(r30)
 /* 802CDBA8 002CAAE8  28 00 00 00 */	cmplwi r0, 0
@@ -694,9 +694,9 @@ lbl_802CDBEC:
 /* 802CDC00 002CAB40  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CDC04 002CAB44  4E 80 00 20 */	blr 
 
-/* 802CDC08 00E4 .text func_802CDC08 deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl */
-.global func_802CDC08
-func_802CDC08:
+/* 802CDC08 00E4 .text "deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl" deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl */
+.global "deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl"
+"deleteStreamAram__26JAUStreamStaticAramMgr_<1>FUl":
 /* 802CDC08 002CAB48  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDC0C 002CAB4C  7C 08 02 A6 */	mflr r0
 /* 802CDC10 002CAB50  90 01 00 34 */	stw r0, 0x34(r1)
@@ -761,9 +761,9 @@ lbl_802CDCD4:
 /* 802CDCE4 002CAC24  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDCE8 002CAC28  4E 80 00 20 */	blr 
 
-/* 802CDCEC 00DC .text func_802CDCEC newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl */
-.global func_802CDCEC
-func_802CDCEC:
+/* 802CDCEC 00DC .text "newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl" newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl */
+.global "newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl"
+"newStreamAram__26JAUStreamStaticAramMgr_<1>FPUl":
 /* 802CDCEC 002CAC2C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDCF0 002CAC30  7C 08 02 A6 */	mflr r0
 /* 802CDCF4 002CAC34  90 01 00 34 */	stw r0, 0x34(r1)
@@ -850,15 +850,15 @@ lbl_8039CA58:
 __vt__10Z2AudioMgr:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2c, 0xdb, 0x1c /* baserom.dol+0x3c8f38 */
 
-/* 803CBF44 0014 .data lbl_803CBF44 __vt__26JAUStreamStaticAramMgr_<1> */
-.global lbl_803CBF44
-lbl_803CBF44:
+/* 803CBF44 0014 .data "__vt__26JAUStreamStaticAramMgr_<1>" __vt__26JAUStreamStaticAramMgr_<1> */
+.global "__vt__26JAUStreamStaticAramMgr_<1>"
+"__vt__26JAUStreamStaticAramMgr_<1>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2c, 0xdc, 0xec, 0x80, 0x2c, 0xdc, 0x08 /* baserom.dol+0x3c8f44 */
 .byte 0x80, 0x2c, 0xdb, 0x68 /* baserom.dol+0x3c8f54 */
 
-/* 803CBF58 0014 .data lbl_803CBF58 __vt__24JAUStreamAramMgrBase_<1> */
-.global lbl_803CBF58
-lbl_803CBF58:
+/* 803CBF58 0014 .data "__vt__24JAUStreamAramMgrBase_<1>" __vt__24JAUStreamAramMgrBase_<1> */
+.global "__vt__24JAUStreamAramMgrBase_<1>"
+"__vt__24JAUStreamAramMgrBase_<1>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c8f58 */
 .byte 0x80, 0x2c, 0xd7, 0xf8 /* baserom.dol+0x3c8f68 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c8f6c */

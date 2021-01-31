@@ -268,9 +268,9 @@ posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff:
 /* 800373E8 00034328  38 21 00 10 */	addi r1, r1, 0x10
 /* 800373EC 0003432C  4E 80 00 20 */	blr 
 
-/* 800373F0 00FC .text func_800373F0 posMoveF_resist_acc__Q25daObj21@unnamed@d_a_obj_cpp@FP4cXyzPC10fopAc_ac_cPC4cXyzff */
-.global func_800373F0
-func_800373F0:
+/* 800373F0 00FC .text lbl_800373F0 posMoveF_resist_acc__Q25daObj21@unnamed@d_a_obj_cpp@FP4cXyzPC10fopAc_ac_cPC4cXyzff */
+.global lbl_800373F0
+lbl_800373F0:
 /* 800373F0 00034330  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 800373F4 00034334  7C 08 02 A6 */	mflr r0
 /* 800373F8 00034338  90 01 00 64 */	stw r0, 0x64(r1)
@@ -335,9 +335,9 @@ func_800373F0:
 /* 800374E4 00034424  38 21 00 60 */	addi r1, r1, 0x60
 /* 800374E8 00034428  4E 80 00 20 */	blr 
 
-/* 800374EC 0134 .text func_800374EC posMoveF_grade_acc__Q25daObj21@unnamed@d_a_obj_cpp@FP4cXyzPC10fopAc_ac_cPC4cXyzffPC4cXyzPC4cXyz */
-.global func_800374EC
-func_800374EC:
+/* 800374EC 0134 .text lbl_800374EC posMoveF_grade_acc__Q25daObj21@unnamed@d_a_obj_cpp@FP4cXyzPC10fopAc_ac_cPC4cXyzffPC4cXyzPC4cXyz */
+.global lbl_800374EC
+lbl_800374EC:
 /* 800374EC 0003442C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 800374F0 00034430  7C 08 02 A6 */	mflr r0
 /* 800374F4 00034434  90 01 00 74 */	stw r0, 0x74(r1)
@@ -439,7 +439,7 @@ posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz:
 /* 80037658 00034598  7C FF 3B 78 */	mr r31, r7
 /* 8003765C 0003459C  38 61 00 14 */	addi r3, r1, 0x14
 /* 80037660 000345A0  7F 84 E3 78 */	mr r4, r28
-/* 80037664 000345A4  4B FF FD 8D */	bl func_800373F0
+/* 80037664 000345A4  4B FF FD 8D */	bl lbl_800373F0
 /* 80037668 000345A8  38 61 00 08 */	addi r3, r1, 8
 /* 8003766C 000345AC  7F 84 E3 78 */	mr r4, r28
 /* 80037670 000345B0  7F C5 F3 78 */	mr r5, r30
@@ -447,7 +447,7 @@ posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz:
 /* 80037678 000345B8  FC 40 F8 90 */	fmr f2, f31
 /* 8003767C 000345BC  38 C1 00 14 */	addi r6, r1, 0x14
 /* 80037680 000345C0  7F E7 FB 78 */	mr r7, r31
-/* 80037684 000345C4  4B FF FE 69 */	bl func_800374EC
+/* 80037684 000345C4  4B FF FE 69 */	bl lbl_800374EC
 /* 80037688 000345C8  C0 9C 05 2C */	lfs f4, 0x52c(r28)
 /* 8003768C 000345CC  C0 BC 05 30 */	lfs f5, 0x530(r28)
 /* 80037690 000345D0  A8 1C 04 DE */	lha r0, 0x4de(r28)

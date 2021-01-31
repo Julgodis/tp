@@ -1767,9 +1767,9 @@ lbl_8027829C:
 /* 802782AC 002751EC  38 21 00 50 */	addi r1, r1, 0x50
 /* 802782B0 002751F0  4E 80 00 20 */	blr 
 
-/* 802782B4 001C .text func_802782B4 dirTypeVel__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
-.global func_802782B4
-func_802782B4:
+/* 802782B4 001C .text "dirTypeVel__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>" dirTypeVel__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
+.global "dirTypeVel__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>"
+"dirTypeVel__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>":
 /* 802782B4 002751F4  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 802782B8 002751F8  D0 05 00 00 */	stfs f0, 0(r5)
 /* 802782BC 002751FC  C0 04 00 28 */	lfs f0, 0x28(r4)
@@ -1778,9 +1778,9 @@ func_802782B4:
 /* 802782C8 00275208  D0 05 00 08 */	stfs f0, 8(r5)
 /* 802782CC 0027520C  4E 80 00 20 */	blr 
 
-/* 802782D0 001C .text func_802782D0 dirTypePos__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
-.global func_802782D0
-func_802782D0:
+/* 802782D0 001C .text "dirTypePos__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>" dirTypePos__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
+.global "dirTypePos__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>"
+"dirTypePos__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>":
 /* 802782D0 00275210  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 802782D4 00275214  D0 05 00 00 */	stfs f0, 0(r5)
 /* 802782D8 00275218  C0 04 00 10 */	lfs f0, 0x10(r4)
@@ -1789,9 +1789,9 @@ func_802782D0:
 /* 802782E4 00275224  D0 05 00 08 */	stfs f0, 8(r5)
 /* 802782E8 00275228  4E 80 00 20 */	blr 
 
-/* 802782EC 0034 .text func_802782EC dirTypePosInv__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
-.global func_802782EC
-func_802782EC:
+/* 802782EC 0034 .text "dirTypePosInv__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>" dirTypePosInv__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
+.global "dirTypePosInv__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>"
+"dirTypePosInv__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>":
 /* 802782EC 0027522C  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 802782F0 00275230  D0 05 00 00 */	stfs f0, 0(r5)
 /* 802782F4 00275234  C0 04 00 10 */	lfs f0, 0x10(r4)
@@ -1806,9 +1806,9 @@ func_802782EC:
 /* 80278318 00275258  D0 05 00 08 */	stfs f0, 8(r5)
 /* 8027831C 0027525C  4E 80 00 20 */	blr 
 
-/* 80278320 001C .text func_80278320 dirTypeEmtrDir__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
-.global func_80278320
-func_80278320:
+/* 80278320 001C .text "dirTypeEmtrDir__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>" dirTypeEmtrDir__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
+.global "dirTypeEmtrDir__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>"
+"dirTypeEmtrDir__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>":
 /* 80278320 00275260  C0 03 01 20 */	lfs f0, 0x120(r3)
 /* 80278324 00275264  D0 05 00 00 */	stfs f0, 0(r5)
 /* 80278328 00275268  C0 03 01 24 */	lfs f0, 0x124(r3)
@@ -1817,9 +1817,9 @@ func_80278320:
 /* 80278334 00275274  D0 05 00 08 */	stfs f0, 8(r5)
 /* 80278338 00275278  4E 80 00 20 */	blr 
 
-/* 8027833C 0098 .text func_8027833C dirTypePrevPtcl__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
-.global func_8027833C
-func_8027833C:
+/* 8027833C 0098 .text "dirTypePrevPtcl__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>" dirTypePrevPtcl__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f> */
+.global "dirTypePrevPtcl__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>"
+"dirTypePrevPtcl__FPC18JPAEmitterWorkDataPC15JPABaseParticlePQ29JGeometry8TVec3<f>":
 /* 8027833C 0027527C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80278340 00275280  7C 08 02 A6 */	mflr r0
 /* 80278344 00275284  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1845,7 +1845,7 @@ func_8027833C:
 lbl_80278394:
 /* 80278394 002752D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80278398 002752D8  7F E4 FB 78 */	mr r4, r31
-/* 8027839C 002752DC  48 00 6B 15 */	bl func_8027EEB0
+/* 8027839C 002752DC  48 00 6B 15 */	bl "calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f>"
 lbl_802783A0:
 /* 802783A0 002752E0  E0 3F 00 00 */	psq_l f1, 0(r31), 0, qr0
 /* 802783A4 002752E4  E0 01 00 08 */	psq_l f0, 8(r1), 0, qr0
@@ -2939,15 +2939,15 @@ lbl_80279354:
 /* 8027935C 0027629C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80279360 002762A0  4E 80 00 20 */	blr 
 
-/* 80279364 0008 .text func_80279364 getNext__FP26JPANode<15JPABaseParticle> */
-.global func_80279364
-func_80279364:
+/* 80279364 0008 .text "getNext__FP26JPANode<15JPABaseParticle>" getNext__FP26JPANode<15JPABaseParticle> */
+.global "getNext__FP26JPANode<15JPABaseParticle>"
+"getNext__FP26JPANode<15JPABaseParticle>":
 /* 80279364 002762A4  80 63 00 04 */	lwz r3, 4(r3)
 /* 80279368 002762A8  4E 80 00 20 */	blr 
 
-/* 8027936C 0008 .text func_8027936C getPrev__FP26JPANode<15JPABaseParticle> */
-.global func_8027936C
-func_8027936C:
+/* 8027936C 0008 .text "getPrev__FP26JPANode<15JPABaseParticle>" getPrev__FP26JPANode<15JPABaseParticle> */
+.global "getPrev__FP26JPANode<15JPABaseParticle>"
+"getPrev__FP26JPANode<15JPABaseParticle>":
 /* 8027936C 002762AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80279370 002762B0  4E 80 00 20 */	blr 
 
@@ -3019,16 +3019,16 @@ JPADrawStripe__FP18JPAEmitterWorkData:
 /* 8027946C 002763AC  54 00 02 95 */	rlwinm. r0, r0, 0, 0xa, 0xa
 /* 80279470 002763B0  41 82 00 20 */	beq lbl_80279490
 /* 80279474 002763B4  83 04 00 04 */	lwz r24, 4(r4)
-/* 80279478 002763B8  3C 60 80 28 */	lis r3, func_8027936C@ha
-/* 8027947C 002763BC  38 03 93 6C */	addi r0, r3, func_8027936C@l
+/* 80279478 002763B8  3C 60 80 28 */	lis r3, "getPrev__FP26JPANode<15JPABaseParticle>"@ha
+/* 8027947C 002763BC  38 03 93 6C */	addi r0, r3, "getPrev__FP26JPANode<15JPABaseParticle>"@l
 /* 80279480 002763C0  7C 1F 03 78 */	mr r31, r0
 /* 80279484 002763C4  FE 80 18 90 */	fmr f20, f3
 /* 80279488 002763C8  FE 60 98 50 */	fneg f19, f19
 /* 8027948C 002763CC  48 00 00 14 */	b lbl_802794A0
 lbl_80279490:
 /* 80279490 002763D0  83 04 00 00 */	lwz r24, 0(r4)
-/* 80279494 002763D4  3C 60 80 28 */	lis r3, func_80279364@ha
-/* 80279498 002763D8  38 03 93 64 */	addi r0, r3, func_80279364@l
+/* 80279494 002763D4  3C 60 80 28 */	lis r3, "getNext__FP26JPANode<15JPABaseParticle>"@ha
+/* 80279498 002763D8  38 03 93 64 */	addi r0, r3, "getNext__FP26JPANode<15JPABaseParticle>"@l
 /* 8027949C 002763DC  7C 1F 03 78 */	mr r31, r0
 lbl_802794A0:
 /* 802794A0 002763E0  38 7D 01 84 */	addi r3, r29, 0x184
@@ -3439,8 +3439,8 @@ JPADrawStripeX__FP18JPAEmitterWorkData:
 /* 80279AAC 002769EC  54 00 02 95 */	rlwinm. r0, r0, 0, 0xa, 0xa
 /* 80279AB0 002769F0  41 82 00 24 */	beq lbl_80279AD4
 /* 80279AB4 002769F4  83 84 00 04 */	lwz r28, 4(r4)
-/* 80279AB8 002769F8  3C 60 80 28 */	lis r3, func_8027936C@ha
-/* 80279ABC 002769FC  38 03 93 6C */	addi r0, r3, func_8027936C@l
+/* 80279AB8 002769F8  3C 60 80 28 */	lis r3, "getPrev__FP26JPANode<15JPABaseParticle>"@ha
+/* 80279ABC 002769FC  38 03 93 6C */	addi r0, r3, "getPrev__FP26JPANode<15JPABaseParticle>"@l
 /* 80279AC0 00276A00  7C 1B 03 78 */	mr r27, r0
 /* 80279AC4 00276A04  FD C0 18 90 */	fmr f14, f3
 /* 80279AC8 00276A08  FD E0 18 90 */	fmr f15, f3
@@ -3448,8 +3448,8 @@ JPADrawStripeX__FP18JPAEmitterWorkData:
 /* 80279AD0 00276A10  48 00 00 14 */	b lbl_80279AE4
 lbl_80279AD4:
 /* 80279AD4 00276A14  83 84 00 00 */	lwz r28, 0(r4)
-/* 80279AD8 00276A18  3C 60 80 28 */	lis r3, func_80279364@ha
-/* 80279ADC 00276A1C  38 03 93 64 */	addi r0, r3, func_80279364@l
+/* 80279AD8 00276A18  3C 60 80 28 */	lis r3, "getNext__FP26JPANode<15JPABaseParticle>"@ha
+/* 80279ADC 00276A1C  38 03 93 64 */	addi r0, r3, "getNext__FP26JPANode<15JPABaseParticle>"@l
 /* 80279AE0 00276A20  7C 1B 03 78 */	mr r27, r0
 lbl_80279AE4:
 /* 80279AE4 00276A24  38 79 01 84 */	addi r3, r25, 0x184

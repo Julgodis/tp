@@ -102,7 +102,7 @@ lbl_800221B4:
 /* 800221C4 0001F104  28 00 00 00 */	cmplwi r0, 0
 /* 800221C8 0001F108  41 82 00 1C */	beq lbl_800221E4
 /* 800221CC 0001F10C  48 01 06 F1 */	bl startTime__11dLib_time_cFv
-/* 800221D0 0001F110  80 6D 85 E0 */	lwz r3, lbl_80450B60-_SDA_BASE_(r13)
+/* 800221D0 0001F110  80 6D 85 E0 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SoundMgr>"-_SDA_BASE_(r13)
 /* 800221D4 0001F114  38 80 00 00 */	li r4, 0
 /* 800221D8 0001F118  48 28 84 D9 */	bl pauseAllGameSound__10Z2SoundMgrFb
 /* 800221DC 0001F11C  38 00 00 00 */	li r0, 0
@@ -150,7 +150,7 @@ lbl_80022268:
 /* 8002226C 0001F1AC  28 00 00 00 */	cmplwi r0, 0
 /* 80022270 0001F1B0  40 82 00 30 */	bne lbl_800222A0
 /* 80022274 0001F1B4  48 01 06 0D */	bl stopTime__11dLib_time_cFv
-/* 80022278 0001F1B8  80 6D 85 E0 */	lwz r3, lbl_80450B60-_SDA_BASE_(r13)
+/* 80022278 0001F1B8  80 6D 85 E0 */	lwz r3, "sInstance__31JASGlobalInstance<10Z2SoundMgr>"-_SDA_BASE_(r13)
 /* 8002227C 0001F1BC  38 80 00 01 */	li r4, 1
 /* 80022280 0001F1C0  48 28 84 31 */	bl pauseAllGameSound__10Z2SoundMgrFb
 /* 80022284 0001F1C4  3C 60 80 3E */	lis r3, m_gamePad__8mDoCPd_c@ha

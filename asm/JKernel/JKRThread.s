@@ -703,15 +703,15 @@ __sinit_JKRThread_cpp:
 /* 802D1EB0 002CEDF0  38 80 00 00 */	li r4, 0
 /* 802D1EB4 002CEDF4  48 00 9F C1 */	bl __ct__10JSUPtrListFb
 /* 802D1EB8 002CEDF8  38 7F 00 0C */	addi r3, r31, 0xc
-/* 802D1EBC 002CEDFC  3C 80 80 2D */	lis r4, func_802D1F50@ha
-/* 802D1EC0 002CEE00  38 84 1F 50 */	addi r4, r4, func_802D1F50@l
+/* 802D1EBC 002CEDFC  3C 80 80 2D */	lis r4, "__dt__19JSUList<9JKRThread>Fv"@ha
+/* 802D1EC0 002CEE00  38 84 1F 50 */	addi r4, r4, "__dt__19JSUList<9JKRThread>Fv"@l
 /* 802D1EC4 002CEE04  38 BF 00 00 */	addi r5, r31, 0
 /* 802D1EC8 002CEE08  48 08 FD 5D */	bl __register_global_object
 /* 802D1ECC 002CEE0C  38 7F 00 24 */	addi r3, r31, 0x24
 /* 802D1ED0 002CEE10  48 00 A0 45 */	bl initiate__10JSUPtrListFv
 /* 802D1ED4 002CEE14  38 7F 00 24 */	addi r3, r31, 0x24
-/* 802D1ED8 002CEE18  3C 80 80 2D */	lis r4, func_802D1EFC@ha
-/* 802D1EDC 002CEE1C  38 84 1E FC */	addi r4, r4, func_802D1EFC@l
+/* 802D1ED8 002CEE18  3C 80 80 2D */	lis r4, "__dt__17JSUList<7JKRTask>Fv"@ha
+/* 802D1EDC 002CEE1C  38 84 1E FC */	addi r4, r4, "__dt__17JSUList<7JKRTask>Fv"@l
 /* 802D1EE0 002CEE20  38 BF 00 18 */	addi r5, r31, 0x18
 /* 802D1EE4 002CEE24  48 08 FD 41 */	bl __register_global_object
 /* 802D1EE8 002CEE28  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -720,9 +720,9 @@ __sinit_JKRThread_cpp:
 /* 802D1EF4 002CEE34  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1EF8 002CEE38  4E 80 00 20 */	blr 
 
-/* 802D1EFC 0054 .text func_802D1EFC __dt__17JSUList<7JKRTask>Fv */
-.global func_802D1EFC
-func_802D1EFC:
+/* 802D1EFC 0054 .text "__dt__17JSUList<7JKRTask>Fv" __dt__17JSUList<7JKRTask>Fv */
+.global "__dt__17JSUList<7JKRTask>Fv"
+"__dt__17JSUList<7JKRTask>Fv":
 /* 802D1EFC 002CEE3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1F00 002CEE40  7C 08 02 A6 */	mflr r0
 /* 802D1F04 002CEE44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -746,9 +746,9 @@ lbl_802D1F34:
 /* 802D1F48 002CEE88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1F4C 002CEE8C  4E 80 00 20 */	blr 
 
-/* 802D1F50 0054 .text func_802D1F50 __dt__19JSUList<9JKRThread>Fv */
-.global func_802D1F50
-func_802D1F50:
+/* 802D1F50 0054 .text "__dt__19JSUList<9JKRThread>Fv" __dt__19JSUList<9JKRThread>Fv */
+.global "__dt__19JSUList<9JKRThread>Fv"
+"__dt__19JSUList<9JKRThread>Fv":
 /* 802D1F50 002CEE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1F54 002CEE94  7C 08 02 A6 */	mflr r0
 /* 802D1F58 002CEE98  90 01 00 14 */	stw r0, 0x14(r1)

@@ -1,9 +1,0 @@
-.include "macros.inc"
-.section .sdata, "a"  # 0x804505b0 - 0x804505b4
-
-/* 0x804505b0 0x4 l_fopOvlpM_overlap */
-.global lbl_804505B0
-lbl_804505B0:
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0310 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0314 */
-

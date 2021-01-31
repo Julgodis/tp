@@ -1,9 +1,0 @@
-.include "macros.inc"
-.section .sdata, "a"  # 0x804506a8 - 0x804506ac
-
-/* 0x804506a8 0x4 m_timer_max__8daItem_c */
-.global lbl_804506A8
-lbl_804506A8:
-.byte 0x00, 0x00, 0x27, 0x10 /* baserom.dol+0x3d0408 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d040c */
-

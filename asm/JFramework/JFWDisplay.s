@@ -1651,8 +1651,8 @@ __sinit_JFWDisplay_cpp:
 /* 802736F4 00270634  48 06 87 81 */	bl __ct__10JSUPtrListFb
 /* 802736F8 00270638  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
 /* 802736FC 0027063C  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
-/* 80273700 00270640  3C 80 80 27 */	lis r4, func_80273724@ha
-/* 80273704 00270644  38 84 37 24 */	addi r4, r4, func_80273724@l
+/* 80273700 00270640  3C 80 80 27 */	lis r4, "__dt__18JSUList<8JFWAlarm>Fv"@ha
+/* 80273704 00270644  38 84 37 24 */	addi r4, r4, "__dt__18JSUList<8JFWAlarm>Fv"@l
 /* 80273708 00270648  3C A0 80 43 */	lis r5, lbl_80430FD8@ha
 /* 8027370C 0027064C  38 A5 0F D8 */	addi r5, r5, lbl_80430FD8@l
 /* 80273710 00270650  48 0E E5 15 */	bl __register_global_object
@@ -1661,9 +1661,9 @@ __sinit_JFWDisplay_cpp:
 /* 8027371C 0027065C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80273720 00270660  4E 80 00 20 */	blr 
 
-/* 80273724 0054 .text func_80273724 __dt__18JSUList<8JFWAlarm>Fv */
-.global func_80273724
-func_80273724:
+/* 80273724 0054 .text "__dt__18JSUList<8JFWAlarm>Fv" __dt__18JSUList<8JFWAlarm>Fv */
+.global "__dt__18JSUList<8JFWAlarm>Fv"
+"__dt__18JSUList<8JFWAlarm>Fv":
 /* 80273724 00270664  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273728 00270668  7C 08 02 A6 */	mflr r0
 /* 8027372C 0027066C  90 01 00 14 */	stw r0, 0x14(r1)

@@ -1,9 +1,0 @@
-.include "macros.inc"
-.section .sdata, "a"  # 0x80450620 - 0x80450622
-
-/* 0x80450620 0x2 m_branchId__7dDemo_c */
-.global lbl_80450620
-lbl_80450620:
-.byte 0xff, 0xff /* baserom.dol+0x3d0380 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0382 */
-

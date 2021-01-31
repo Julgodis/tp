@@ -230,7 +230,7 @@ endBNKList__17JAUAudioArcLoaderFv:
 /* 802A49D8 0024 .text readMaxSeCategory__17JAUAudioArcLoaderFiii readMaxSeCategory__17JAUAudioArcLoaderFiii */
 .global readMaxSeCategory__17JAUAudioArcLoaderFiii
 readMaxSeCategory__17JAUAudioArcLoaderFiii:
-/* 802A49D8 002A1918  80 0D 85 EC */	lwz r0, lbl_80450B6C-_SDA_BASE_(r13)
+/* 802A49D8 002A1918  80 0D 85 EC */	lwz r0, "sInstance__28JASGlobalInstance<8JAISeMgr>"-_SDA_BASE_(r13)
 /* 802A49DC 002A191C  28 00 00 00 */	cmplwi r0, 0
 /* 802A49E0 002A1920  4D 82 00 20 */	beqlr 
 /* 802A49E4 002A1924  1C 64 00 6C */	mulli r3, r4, 0x6c

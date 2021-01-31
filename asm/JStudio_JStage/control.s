@@ -72,32 +72,32 @@ lbl_80289BC8:
 /* 80289BE8 00286B28  41 82 00 58 */	beq lbl_80289C40
 /* 80289BEC 00286B2C  48 00 00 68 */	b lbl_80289C54
 lbl_80289BF0:
-/* 80289BF0 00286B30  3C 60 80 29 */	lis r3, func_80289CE4@ha
-/* 80289BF4 00286B34  38 03 9C E4 */	addi r0, r3, func_80289CE4@l
+/* 80289BF0 00286B30  3C 60 80 29 */	lis r3, lbl_80289CE4@ha
+/* 80289BF4 00286B34  38 03 9C E4 */	addi r0, r3, lbl_80289CE4@l
 /* 80289BF8 00286B38  7C 1C 03 78 */	mr r28, r0
 /* 80289BFC 00286B3C  38 C0 00 02 */	li r6, 2
 /* 80289C00 00286B40  48 00 00 5C */	b lbl_80289C5C
 lbl_80289C04:
-/* 80289C04 00286B44  3C 60 80 29 */	lis r3, func_80289DE8@ha
-/* 80289C08 00286B48  38 03 9D E8 */	addi r0, r3, func_80289DE8@l
+/* 80289C04 00286B44  3C 60 80 29 */	lis r3, lbl_80289DE8@ha
+/* 80289C08 00286B48  38 03 9D E8 */	addi r0, r3, lbl_80289DE8@l
 /* 80289C0C 00286B4C  7C 1C 03 78 */	mr r28, r0
 /* 80289C10 00286B50  38 C0 00 03 */	li r6, 3
 /* 80289C14 00286B54  48 00 00 48 */	b lbl_80289C5C
 lbl_80289C18:
-/* 80289C18 00286B58  3C 60 80 29 */	lis r3, func_80289EEC@ha
-/* 80289C1C 00286B5C  38 03 9E EC */	addi r0, r3, func_80289EEC@l
+/* 80289C18 00286B58  3C 60 80 29 */	lis r3, lbl_80289EEC@ha
+/* 80289C1C 00286B5C  38 03 9E EC */	addi r0, r3, lbl_80289EEC@l
 /* 80289C20 00286B60  7C 1C 03 78 */	mr r28, r0
 /* 80289C24 00286B64  38 C0 00 04 */	li r6, 4
 /* 80289C28 00286B68  48 00 00 34 */	b lbl_80289C5C
 lbl_80289C2C:
-/* 80289C2C 00286B6C  3C 60 80 29 */	lis r3, func_80289FF0@ha
-/* 80289C30 00286B70  38 03 9F F0 */	addi r0, r3, func_80289FF0@l
+/* 80289C2C 00286B6C  3C 60 80 29 */	lis r3, lbl_80289FF0@ha
+/* 80289C30 00286B70  38 03 9F F0 */	addi r0, r3, lbl_80289FF0@l
 /* 80289C34 00286B74  7C 1C 03 78 */	mr r28, r0
 /* 80289C38 00286B78  38 C0 00 05 */	li r6, 5
 /* 80289C3C 00286B7C  48 00 00 20 */	b lbl_80289C5C
 lbl_80289C40:
-/* 80289C40 00286B80  3C 60 80 29 */	lis r3, func_8028A0F4@ha
-/* 80289C44 00286B84  38 03 A0 F4 */	addi r0, r3, func_8028A0F4@l
+/* 80289C40 00286B80  3C 60 80 29 */	lis r3, lbl_8028A0F4@ha
+/* 80289C44 00286B84  38 03 A0 F4 */	addi r0, r3, lbl_8028A0F4@l
 /* 80289C48 00286B88  7C 1C 03 78 */	mr r28, r0
 /* 80289C4C 00286B8C  38 C0 00 06 */	li r6, 6
 /* 80289C50 00286B90  48 00 00 0C */	b lbl_80289C5C
@@ -145,9 +145,9 @@ lbl_80289CCC:
 /* 80289CDC 00286C1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289CE0 00286C20  4E 80 00 20 */	blr 
 
-/* 80289CE4 0104 .text func_80289CE4 createObject_JSG_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
-.global func_80289CE4
-func_80289CE4:
+/* 80289CE4 0104 .text lbl_80289CE4 createObject_JSG_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+.global lbl_80289CE4
+lbl_80289CE4:
 /* 80289CE4 00286C24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289CE8 00286C28  7C 08 02 A6 */	mflr r0
 /* 80289CEC 00286C2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -223,9 +223,9 @@ lbl_80289DD0:
 /* 80289DE0 00286D20  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289DE4 00286D24  4E 80 00 20 */	blr 
 
-/* 80289DE8 0104 .text func_80289DE8 createObject_JSG_<Q214JStudio_JStage15TAdaptor_camera,Q26JStage7TCamera>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
-.global func_80289DE8
-func_80289DE8:
+/* 80289DE8 0104 .text lbl_80289DE8 createObject_JSG_<Q214JStudio_JStage15TAdaptor_camera,Q26JStage7TCamera>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+.global lbl_80289DE8
+lbl_80289DE8:
 /* 80289DE8 00286D28  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289DEC 00286D2C  7C 08 02 A6 */	mflr r0
 /* 80289DF0 00286D30  90 01 00 24 */	stw r0, 0x24(r1)
@@ -301,9 +301,9 @@ lbl_80289ED4:
 /* 80289EE4 00286E24  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289EE8 00286E28  4E 80 00 20 */	blr 
 
-/* 80289EEC 0104 .text func_80289EEC createObject_JSG_<Q214JStudio_JStage21TAdaptor_ambientLight,Q26JStage13TAmbientLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
-.global func_80289EEC
-func_80289EEC:
+/* 80289EEC 0104 .text lbl_80289EEC createObject_JSG_<Q214JStudio_JStage21TAdaptor_ambientLight,Q26JStage13TAmbientLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+.global lbl_80289EEC
+lbl_80289EEC:
 /* 80289EEC 00286E2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289EF0 00286E30  7C 08 02 A6 */	mflr r0
 /* 80289EF4 00286E34  90 01 00 24 */	stw r0, 0x24(r1)
@@ -379,9 +379,9 @@ lbl_80289FD8:
 /* 80289FE8 00286F28  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289FEC 00286F2C  4E 80 00 20 */	blr 
 
-/* 80289FF0 0104 .text func_80289FF0 createObject_JSG_<Q214JStudio_JStage14TAdaptor_light,Q26JStage6TLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
-.global func_80289FF0
-func_80289FF0:
+/* 80289FF0 0104 .text lbl_80289FF0 createObject_JSG_<Q214JStudio_JStage14TAdaptor_light,Q26JStage6TLight>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+.global lbl_80289FF0
+lbl_80289FF0:
 /* 80289FF0 00286F30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289FF4 00286F34  7C 08 02 A6 */	mflr r0
 /* 80289FF8 00286F38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -457,9 +457,9 @@ lbl_8028A0DC:
 /* 8028A0EC 0028702C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028A0F0 00287030  4E 80 00 20 */	blr 
 
-/* 8028A0F4 0104 .text func_8028A0F4 createObject_JSG_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
-.global func_8028A0F4
-func_8028A0F4:
+/* 8028A0F4 0104 .text lbl_8028A0F4 createObject_JSG_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>__Q214JStudio_JStage21@unnamed@control_cpp@FRCQ47JStudio3stb4data20TParse_TBlock_objectPQ26JStage7TObjectPCQ26JStage7TSystem */
+.global lbl_8028A0F4
+lbl_8028A0F4:
 /* 8028A0F4 00287034  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028A0F8 00287038  7C 08 02 A6 */	mflr r0
 /* 8028A0FC 0028703C  90 01 00 24 */	stw r0, 0x24(r1)

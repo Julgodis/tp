@@ -561,8 +561,8 @@ init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb:
 /* 8000D83C 0000A77C  38 04 34 3C */	addi r0, r4, __vt__17J3DMtxCalcAnmBase@l
 /* 8000D840 0000A780  90 03 00 00 */	stw r0, 0(r3)
 /* 8000D844 0000A784  90 A3 00 04 */	stw r5, 4(r3)
-/* 8000D848 0000A788  3C 80 80 3A */	lis r4, lbl_803A3410@ha
-/* 8000D84C 0000A78C  38 04 34 10 */	addi r0, r4, lbl_803A3410@l
+/* 8000D848 0000A788  3C 80 80 3A */	lis r4, "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 8000D84C 0000A78C  38 04 34 10 */	addi r0, r4, "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 8000D850 0000A790  90 03 00 00 */	stw r0, 0(r3)
 lbl_8000D854:
 /* 8000D854 0000A794  90 7F 00 18 */	stw r3, 0x18(r31)
@@ -608,9 +608,9 @@ lbl_8000D8C8:
 /* 8000D8DC 0000A81C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8000D8E0 0000A820  4E 80 00 20 */	blr 
 
-/* 8000D8E4 0008 .text func_8000D8E4 setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform */
-.global func_8000D8E4
-func_8000D8E4:
+/* 8000D8E4 0008 .text "setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform" setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform */
+.global "setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform"
+"setAnmTransform__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FP15J3DAnmTransform":
 /* 8000D8E4 0000A824  90 83 00 04 */	stw r4, 4(r3)
 /* 8000D8E8 0000A828  4E 80 00 20 */	blr 
 
@@ -3293,8 +3293,8 @@ __ct__13mDoExt_morf_cFv:
 /* 8000F970 0000C8B0  3C 60 80 3A */	lis r3, __vt__19J3DMtxCalcNoAnmBase@ha
 /* 8000F974 0000C8B4  38 03 33 8C */	addi r0, r3, __vt__19J3DMtxCalcNoAnmBase@l
 /* 8000F978 0000C8B8  90 1F 00 00 */	stw r0, 0(r31)
-/* 8000F97C 0000C8BC  3C 60 80 3A */	lis r3, lbl_803A3360@ha
-/* 8000F980 0000C8C0  38 03 33 60 */	addi r0, r3, lbl_803A3360@l
+/* 8000F97C 0000C8BC  3C 60 80 3A */	lis r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 8000F980 0000C8C0  38 03 33 60 */	addi r0, r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 8000F984 0000C8C4  90 1F 00 00 */	stw r0, 0(r31)
 /* 8000F988 0000C8C8  3C 60 80 3A */	lis r3, __vt__13mDoExt_morf_c@ha
 /* 8000F98C 0000C8CC  38 03 33 28 */	addi r0, r3, __vt__13mDoExt_morf_c@l
@@ -3340,17 +3340,17 @@ lbl_8000FA08:
 /* 8000FA18 0000C958  38 21 00 10 */	addi r1, r1, 0x10
 /* 8000FA1C 0000C95C  4E 80 00 20 */	blr 
 
-/* 8000FA20 006C .text func_8000FA20 __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
-.global func_8000FA20
-func_8000FA20:
+/* 8000FA20 006C .text "__dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv" __dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
+.global "__dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv"
+"__dt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv":
 /* 8000FA20 0000C960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000FA24 0000C964  7C 08 02 A6 */	mflr r0
 /* 8000FA28 0000C968  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8000FA2C 0000C96C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8000FA30 0000C970  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8000FA34 0000C974  41 82 00 40 */	beq lbl_8000FA74
-/* 8000FA38 0000C978  3C 60 80 3A */	lis r3, lbl_803A3360@ha
-/* 8000FA3C 0000C97C  38 03 33 60 */	addi r0, r3, lbl_803A3360@l
+/* 8000FA38 0000C978  3C 60 80 3A */	lis r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 8000FA3C 0000C97C  38 03 33 60 */	addi r0, r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 8000FA40 0000C980  90 1F 00 00 */	stw r0, 0(r31)
 /* 8000FA44 0000C984  41 82 00 20 */	beq lbl_8000FA64
 /* 8000FA48 0000C988  3C 60 80 3A */	lis r3, __vt__19J3DMtxCalcNoAnmBase@ha
@@ -3422,8 +3422,8 @@ __dt__13mDoExt_morf_cFv:
 lbl_8000FB20:
 /* 8000FB20 0000CA60  28 1F 00 00 */	cmplwi r31, 0
 /* 8000FB24 0000CA64  41 82 00 30 */	beq lbl_8000FB54
-/* 8000FB28 0000CA68  3C 60 80 3A */	lis r3, lbl_803A3360@ha
-/* 8000FB2C 0000CA6C  38 03 33 60 */	addi r0, r3, lbl_803A3360@l
+/* 8000FB28 0000CA68  3C 60 80 3A */	lis r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 8000FB2C 0000CA6C  38 03 33 60 */	addi r0, r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 8000FB30 0000CA70  90 1F 00 00 */	stw r0, 0(r31)
 /* 8000FB34 0000CA74  41 82 00 20 */	beq lbl_8000FB54
 /* 8000FB38 0000CA78  3C 60 80 3A */	lis r3, __vt__19J3DMtxCalcNoAnmBase@ha
@@ -9380,8 +9380,8 @@ __dt__28mDoExt_MtxCalcAnmBlendTblOldFv:
 /* 80014EDC 00011E1C  38 03 33 E4 */	addi r0, r3, __vt__25mDoExt_MtxCalcAnmBlendTbl@l
 /* 80014EE0 00011E20  90 1F 00 00 */	stw r0, 0(r31)
 /* 80014EE4 00011E24  41 82 00 30 */	beq lbl_80014F14
-/* 80014EE8 00011E28  3C 60 80 3A */	lis r3, lbl_803A3360@ha
-/* 80014EEC 00011E2C  38 03 33 60 */	addi r0, r3, lbl_803A3360@l
+/* 80014EE8 00011E28  3C 60 80 3A */	lis r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 80014EEC 00011E2C  38 03 33 60 */	addi r0, r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 80014EF0 00011E30  90 1F 00 00 */	stw r0, 0(r31)
 /* 80014EF4 00011E34  41 82 00 20 */	beq lbl_80014F14
 /* 80014EF8 00011E38  3C 60 80 3A */	lis r3, __vt__19J3DMtxCalcNoAnmBase@ha
@@ -9417,8 +9417,8 @@ __dt__25mDoExt_MtxCalcAnmBlendTblFv:
 /* 80014F58 00011E98  38 03 33 E4 */	addi r0, r3, __vt__25mDoExt_MtxCalcAnmBlendTbl@l
 /* 80014F5C 00011E9C  90 1F 00 00 */	stw r0, 0(r31)
 /* 80014F60 00011EA0  41 82 00 30 */	beq lbl_80014F90
-/* 80014F64 00011EA4  3C 60 80 3A */	lis r3, lbl_803A3360@ha
-/* 80014F68 00011EA8  38 03 33 60 */	addi r0, r3, lbl_803A3360@l
+/* 80014F64 00011EA4  3C 60 80 3A */	lis r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 80014F68 00011EA8  38 03 33 60 */	addi r0, r3, "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 80014F6C 00011EAC  90 1F 00 00 */	stw r0, 0(r31)
 /* 80014F70 00011EB0  41 82 00 20 */	beq lbl_80014F90
 /* 80014F74 00011EB4  3C 60 80 3A */	lis r3, __vt__19J3DMtxCalcNoAnmBase@ha
@@ -9453,17 +9453,17 @@ setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform:
 /* 80014FC0 00011F00  90 83 00 04 */	stw r4, 4(r3)
 /* 80014FC4 00011F04  4E 80 00 20 */	blr 
 
-/* 80014FC8 006C .text func_80014FC8 __dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
-.global func_80014FC8
-func_80014FC8:
+/* 80014FC8 006C .text "__dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv" __dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
+.global "__dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv"
+"__dt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv":
 /* 80014FC8 00011F08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80014FCC 00011F0C  7C 08 02 A6 */	mflr r0
 /* 80014FD0 00011F10  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80014FD4 00011F14  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80014FD8 00011F18  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80014FDC 00011F1C  41 82 00 40 */	beq lbl_8001501C
-/* 80014FE0 00011F20  3C 60 80 3A */	lis r3, lbl_803A3410@ha
-/* 80014FE4 00011F24  38 03 34 10 */	addi r0, r3, lbl_803A3410@l
+/* 80014FE0 00011F20  3C 60 80 3A */	lis r3, "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>"@ha
+/* 80014FE4 00011F24  38 03 34 10 */	addi r0, r3, "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>"@l
 /* 80014FE8 00011F28  90 1F 00 00 */	stw r0, 0(r31)
 /* 80014FEC 00011F2C  41 82 00 20 */	beq lbl_8001500C
 /* 80014FF0 00011F30  3C 60 80 3A */	lis r3, __vt__17J3DMtxCalcAnmBase@ha
@@ -9486,9 +9486,9 @@ lbl_8001501C:
 /* 8001502C 00011F6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80015030 00011F70  4E 80 00 20 */	blr 
 
-/* 80015034 0028 .text func_80015034 init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
-.global func_80015034
-func_80015034:
+/* 80015034 0028 .text "init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf" init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
+.global "init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf"
+"init__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf":
 /* 80015034 00011F74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80015038 00011F78  7C 08 02 A6 */	mflr r0
 /* 8001503C 00011F7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -9500,9 +9500,9 @@ func_80015034:
 /* 80015054 00011F94  38 21 00 10 */	addi r1, r1, 0x10
 /* 80015058 00011F98  4E 80 00 20 */	blr 
 
-/* 8001505C 0028 .text func_8001505C init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
-.global func_8001505C
-func_8001505C:
+/* 8001505C 0028 .text "init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf" init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf */
+.global "init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf"
+"init__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>FRC3VecRA3_A4_Cf":
 /* 8001505C 00011F9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80015060 00011FA0  7C 08 02 A6 */	mflr r0
 /* 80015064 00011FA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -9514,9 +9514,9 @@ func_8001505C:
 /* 8001507C 00011FBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80015080 00011FC0  4E 80 00 20 */	blr 
 
-/* 80015084 0028 .text func_80015084 calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
-.global func_80015084
-func_80015084:
+/* 80015084 0028 .text "calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv" calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv */
+.global "calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv"
+"calc__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>Fv":
 /* 80015084 00011FC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80015088 00011FC8  7C 08 02 A6 */	mflr r0
 /* 8001508C 00011FCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -9528,9 +9528,9 @@ func_80015084:
 /* 800150A4 00011FE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800150A8 00011FE8  4E 80 00 20 */	blr 
 
-/* 800150AC 0090 .text func_800150AC calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
-.global func_800150AC
-func_800150AC:
+/* 800150AC 0090 .text "calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv" calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv */
+.global "calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv"
+"calc__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>Fv":
 /* 800150AC 00011FEC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800150B0 00011FF0  7C 08 02 A6 */	mflr r0
 /* 800150B4 00011FF4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -9725,9 +9725,9 @@ __vt__13mDoExt_morf_c:
 __vt__12J3DFrameCtrl:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0xf9, 0xd8 /* baserom.dol+0x3a0354 */
 
-/* 803A3360 002C .data lbl_803A3360 __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
-.global lbl_803A3360
-lbl_803A3360:
+/* 803A3360 002C .data "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>" __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
+.global "__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>"
+"__vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0xfa, 0x20, 0x80, 0x01, 0x4e, 0x90 /* baserom.dol+0x3a0360 */
 .byte 0x80, 0x01, 0x4e, 0x9c, 0x80, 0x01, 0x4e, 0x8c, 0x80, 0x01, 0x4e, 0x94, 0x80, 0x01, 0x4e, 0xa4 /* baserom.dol+0x3a0370 */
 .byte 0x80, 0x01, 0x4e, 0xa8, 0x80, 0x01, 0x50, 0x5c, 0x80, 0x01, 0x50, 0x84 /* baserom.dol+0x3a0380 */
@@ -9753,9 +9753,9 @@ __vt__25mDoExt_MtxCalcAnmBlendTbl:
 .byte 0x80, 0x01, 0x4e, 0x9c, 0x80, 0x01, 0x4e, 0x8c, 0x80, 0x01, 0x4e, 0x94, 0x80, 0x01, 0x4e, 0xa4 /* baserom.dol+0x3a03f4 */
 .byte 0x80, 0x01, 0x4e, 0xa8, 0x80, 0x01, 0x50, 0x5c, 0x80, 0x00, 0xf2, 0x6c /* baserom.dol+0x3a0404 */
 
-/* 803A3410 002C .data lbl_803A3410 __vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya> */
-.global lbl_803A3410
-lbl_803A3410:
+/* 803A3410 002C .data "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>" __vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya> */
+.global "__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>"
+"__vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya>":
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x4f, 0xc8, 0x80, 0x00, 0xd8, 0xe4 /* baserom.dol+0x3a0410 */
 .byte 0x80, 0x01, 0x4f, 0xb8, 0x80, 0x01, 0x4e, 0x8c, 0x80, 0x01, 0x4e, 0x94, 0x80, 0x01, 0x4e, 0xa4 /* baserom.dol+0x3a0420 */
 .byte 0x80, 0x01, 0x4e, 0xa8, 0x80, 0x01, 0x50, 0x34, 0x80, 0x01, 0x50, 0xac /* baserom.dol+0x3a0430 */

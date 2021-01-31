@@ -38,7 +38,7 @@ initJASystem__18JAU_JASInitializerFP12JKRSolidHeap:
 /* 802A4B38 002A1A78  48 0B D6 A5 */	bl _savegpr_29
 /* 802A4B3C 002A1A7C  7C 7F 1B 78 */	mr r31, r3
 /* 802A4B40 002A1A80  7C 9D 23 78 */	mr r29, r4
-/* 802A4B44 002A1A84  80 0D 86 0C */	lwz r0, lbl_80450B8C-_SDA_BASE_(r13)
+/* 802A4B44 002A1A84  80 0D 86 0C */	lwz r0, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 /* 802A4B48 002A1A88  28 00 00 00 */	cmplwi r0, 0
 /* 802A4B4C 002A1A8C  40 82 01 98 */	bne lbl_802A4CE4
 /* 802A4B50 002A1A90  4B FE B3 AD */	bl getThreadPointer__6JASDvdFv
@@ -73,8 +73,8 @@ lbl_802A4B98:
 /* 802A4BBC 002A1AFC  4B FE BC 8D */	bl __ct__17JASGenericMemPoolFv
 /* 802A4BC0 002A1B00  3C 60 80 43 */	lis r3, lbl_80431B04@ha
 /* 802A4BC4 002A1B04  38 63 1B 04 */	addi r3, r3, lbl_80431B04@l
-/* 802A4BC8 002A1B08  3C 80 80 29 */	lis r4, func_802932E0@ha
-/* 802A4BCC 002A1B0C  38 84 32 E0 */	addi r4, r4, func_802932E0@l
+/* 802A4BC8 002A1B08  3C 80 80 29 */	lis r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@ha
+/* 802A4BCC 002A1B0C  38 84 32 E0 */	addi r4, r4, "__dt__35JASMemPool_MultiThreaded<8JASTrack>Fv"@l
 /* 802A4BD0 002A1B10  3C A0 80 43 */	lis r5, lbl_80434110@ha
 /* 802A4BD4 002A1B14  38 A5 41 10 */	addi r5, r5, lbl_80434110@l
 /* 802A4BD8 002A1B18  48 0B D0 4D */	bl __register_global_object
@@ -101,8 +101,8 @@ lbl_802A4BE4:
 /* 802A4C28 002A1B68  4B FE BC 21 */	bl __ct__17JASGenericMemPoolFv
 /* 802A4C2C 002A1B6C  3C 60 80 43 */	lis r3, lbl_80431AF4@ha
 /* 802A4C30 002A1B70  38 63 1A F4 */	addi r3, r3, lbl_80431AF4@l
-/* 802A4C34 002A1B74  3C 80 80 29 */	lis r4, func_80293334@ha
-/* 802A4C38 002A1B78  38 84 33 34 */	addi r4, r4, func_80293334@l
+/* 802A4C34 002A1B74  3C 80 80 29 */	lis r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@ha
+/* 802A4C38 002A1B78  38 84 33 34 */	addi r4, r4, "__dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv"@l
 /* 802A4C3C 002A1B7C  3C A0 80 43 */	lis r5, lbl_8043411C@ha
 /* 802A4C40 002A1B80  38 A5 41 1C */	addi r5, r5, lbl_8043411C@l
 /* 802A4C44 002A1B84  48 0B CF E1 */	bl __register_global_object
@@ -141,7 +141,7 @@ lbl_802A4CB8:
 /* 802A4CBC 002A1BFC  2C 05 00 00 */	cmpwi r5, 0
 /* 802A4CC0 002A1C00  41 80 00 10 */	blt lbl_802A4CD0
 /* 802A4CC4 002A1C04  7F C3 F3 78 */	mr r3, r30
-/* 802A4CC8 002A1C08  80 8D 86 0C */	lwz r4, lbl_80450B8C-_SDA_BASE_(r13)
+/* 802A4CC8 002A1C08  80 8D 86 0C */	lwz r4, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
 /* 802A4CCC 002A1C0C  48 02 CD A5 */	bl enter__15JKRThreadSwitchFP9JKRThreadi
 lbl_802A4CD0:
 /* 802A4CD0 002A1C10  C0 3F 00 2C */	lfs f1, 0x2c(r31)
@@ -212,8 +212,8 @@ initJAInterface__18JAU_JAIInitializerFv:
 /* 802A4DA0 002A1CE0  4B FE BA A9 */	bl __ct__17JASGenericMemPoolFv
 /* 802A4DA4 002A1CE4  3C 60 80 43 */	lis r3, lbl_804340FC@ha
 /* 802A4DA8 002A1CE8  38 63 40 FC */	addi r3, r3, lbl_804340FC@l
-/* 802A4DAC 002A1CEC  3C 80 80 2A */	lis r4, func_802A3E68@ha
-/* 802A4DB0 002A1CF0  38 84 3E 68 */	addi r4, r4, func_802A3E68@l
+/* 802A4DAC 002A1CEC  3C 80 80 2A */	lis r4, "__dt__22JASMemPool<9JAIStream>Fv"@ha
+/* 802A4DB0 002A1CF0  38 84 3E 68 */	addi r4, r4, "__dt__22JASMemPool<9JAIStream>Fv"@l
 /* 802A4DB4 002A1CF4  38 BF 00 18 */	addi r5, r31, 0x18
 /* 802A4DB8 002A1CF8  48 0B CE 6D */	bl __register_global_object
 /* 802A4DBC 002A1CFC  38 00 00 01 */	li r0, 1
@@ -233,8 +233,8 @@ lbl_802A4DC4:
 /* 802A4DF0 002A1D30  4B FE BA 59 */	bl __ct__17JASGenericMemPoolFv
 /* 802A4DF4 002A1D34  3C 60 80 43 */	lis r3, lbl_804340CC@ha
 /* 802A4DF8 002A1D38  38 63 40 CC */	addi r3, r3, lbl_804340CC@l
-/* 802A4DFC 002A1D3C  3C 80 80 2A */	lis r4, func_802A1AF4@ha
-/* 802A4E00 002A1D40  38 84 1A F4 */	addi r4, r4, func_802A1AF4@l
+/* 802A4DFC 002A1D3C  3C 80 80 2A */	lis r4, "__dt__19JASMemPool<6JAISeq>Fv"@ha
+/* 802A4E00 002A1D40  38 84 1A F4 */	addi r4, r4, "__dt__19JASMemPool<6JAISeq>Fv"@l
 /* 802A4E04 002A1D44  38 BF 00 24 */	addi r5, r31, 0x24
 /* 802A4E08 002A1D48  48 0B CE 1D */	bl __register_global_object
 /* 802A4E0C 002A1D4C  38 00 00 01 */	li r0, 1
@@ -254,8 +254,8 @@ lbl_802A4E14:
 /* 802A4E40 002A1D80  4B FE BA 09 */	bl __ct__17JASGenericMemPoolFv
 /* 802A4E44 002A1D84  3C 60 80 43 */	lis r3, lbl_80434084@ha
 /* 802A4E48 002A1D88  38 63 40 84 */	addi r3, r3, lbl_80434084@l
-/* 802A4E4C 002A1D8C  3C 80 80 2A */	lis r4, func_8029FC34@ha
-/* 802A4E50 002A1D90  38 84 FC 34 */	addi r4, r4, func_8029FC34@l
+/* 802A4E4C 002A1D8C  3C 80 80 2A */	lis r4, "__dt__18JASMemPool<5JAISe>Fv"@ha
+/* 802A4E50 002A1D90  38 84 FC 34 */	addi r4, r4, "__dt__18JASMemPool<5JAISe>Fv"@l
 /* 802A4E54 002A1D94  38 BF 00 30 */	addi r5, r31, 0x30
 /* 802A4E58 002A1D98  48 0B CD CD */	bl __register_global_object
 /* 802A4E5C 002A1D9C  38 00 00 01 */	li r0, 1
@@ -275,8 +275,8 @@ lbl_802A4E64:
 /* 802A4E90 002A1DD0  4B FE B9 B9 */	bl __ct__17JASGenericMemPoolFv
 /* 802A4E94 002A1DD4  3C 60 80 43 */	lis r3, lbl_804340B0@ha
 /* 802A4E98 002A1DD8  38 63 40 B0 */	addi r3, r3, lbl_804340B0@l
-/* 802A4E9C 002A1DDC  3C 80 80 2A */	lis r4, func_802A1268@ha
-/* 802A4EA0 002A1DE0  38 84 12 68 */	addi r4, r4, func_802A1268@l
+/* 802A4E9C 002A1DDC  3C 80 80 2A */	lis r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@ha
+/* 802A4EA0 002A1DE0  38 84 12 68 */	addi r4, r4, "__dt__27JASMemPool<13JAISoundChild>Fv"@l
 /* 802A4EA4 002A1DE4  38 BF 00 3C */	addi r5, r31, 0x3c
 /* 802A4EA8 002A1DE8  48 0B CD 7D */	bl __register_global_object
 /* 802A4EAC 002A1DEC  38 00 00 01 */	li r0, 1

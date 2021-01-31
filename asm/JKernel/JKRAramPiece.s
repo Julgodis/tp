@@ -425,8 +425,8 @@ __sinit_JKRAramPiece_cpp:
 /* 802D3B18 002D0A58  48 00 83 FD */	bl initiate__10JSUPtrListFv
 /* 802D3B1C 002D0A5C  3C 60 80 43 */	lis r3, sAramPieceCommandList__12JKRAramPiece@ha
 /* 802D3B20 002D0A60  38 63 43 24 */	addi r3, r3, sAramPieceCommandList__12JKRAramPiece@l
-/* 802D3B24 002D0A64  3C 80 80 2D */	lis r4, func_802D2DF0@ha
-/* 802D3B28 002D0A68  38 84 2D F0 */	addi r4, r4, func_802D2DF0@l
+/* 802D3B24 002D0A64  3C 80 80 2D */	lis r4, "__dt__23JSUList<12JKRAMCommand>Fv"@ha
+/* 802D3B28 002D0A68  38 84 2D F0 */	addi r4, r4, "__dt__23JSUList<12JKRAMCommand>Fv"@l
 /* 802D3B2C 002D0A6C  3C A0 80 43 */	lis r5, lbl_80434318@ha
 /* 802D3B30 002D0A70  38 A5 43 18 */	addi r5, r5, lbl_80434318@l
 /* 802D3B34 002D0A74  48 08 E0 F1 */	bl __register_global_object

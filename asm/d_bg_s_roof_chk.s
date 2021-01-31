@@ -101,21 +101,21 @@ Init__12dBgS_RoofChkFv:
 /* 80079144 00076084  38 21 00 10 */	addi r1, r1, 0x10
 /* 80079148 00076088  4E 80 00 20 */	blr 
 
-/* 8007914C 0008 .text func_8007914C @16@__dt__12dBgS_RoofChkFv */
-.global func_8007914C
-func_8007914C:
+/* 8007914C 0008 .text lbl_8007914C @16@__dt__12dBgS_RoofChkFv */
+.global lbl_8007914C
+lbl_8007914C:
 /* 8007914C 0007608C  38 63 FF F0 */	addi r3, r3, -16
 /* 80079150 00076090  4B FF FF 40 */	b __dt__12dBgS_RoofChkFv
 
-/* 80079154 0008 .text func_80079154 @52@__dt__12dBgS_RoofChkFv */
-.global func_80079154
-func_80079154:
+/* 80079154 0008 .text lbl_80079154 @52@__dt__12dBgS_RoofChkFv */
+.global lbl_80079154
+lbl_80079154:
 /* 80079154 00076094  38 63 FF CC */	addi r3, r3, -52
 /* 80079158 00076098  4B FF FF 38 */	b __dt__12dBgS_RoofChkFv
 
-/* 8007915C 0008 .text func_8007915C @36@__dt__12dBgS_RoofChkFv */
-.global func_8007915C
-func_8007915C:
+/* 8007915C 0008 .text lbl_8007915C @36@__dt__12dBgS_RoofChkFv */
+.global lbl_8007915C
+lbl_8007915C:
 /* 8007915C 0007609C  38 63 FF DC */	addi r3, r3, -36
 /* 80079160 000760A0  4B FF FF 30 */	b __dt__12dBgS_RoofChkFv
 

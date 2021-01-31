@@ -94,7 +94,7 @@ emitter_create__Q217JStudio_JParticle13TCreateObjectFUl:
 /* 8028E4C4 0028B404  54 E7 86 3E */	rlwinm r7, r7, 0x10, 0x18, 0x1f
 /* 8028E4C8 0028B408  39 00 00 00 */	li r8, 0
 /* 8028E4CC 0028B40C  39 20 00 00 */	li r9, 0
-/* 8028E4D0 0028B410  4B FE F9 ED */	bl func_8027DEBC
+/* 8028E4D0 0028B410  4B FE F9 ED */	bl "createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack"
 /* 8028E4D4 0028B414  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8028E4D8 0028B418  7C 08 03 A6 */	mtlr r0
 /* 8028E4DC 0028B41C  38 21 00 20 */	addi r1, r1, 0x20
