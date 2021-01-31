@@ -1,39 +1,40 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029a0a0
 
-
-.global JASWaveArcLoader_NS_getRootHeap
-JASWaveArcLoader_NS_getRootHeap:
+.section .text, "ax"
+/* 8029A0A0 0030 .text getRootHeap__16JASWaveArcLoaderFv getRootHeap__16JASWaveArcLoaderFv */
+.global getRootHeap__16JASWaveArcLoaderFv
+getRootHeap__16JASWaveArcLoaderFv:
 /* 8029A0A0 00296FE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A0A4 00296FE4  7C 08 02 A6 */	mflr r0
 /* 8029A0A8 00296FE8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029A0AC 00296FEC  80 6D 8D 10 */	lwz r3, lbl_80451290-_SDA_BASE_(r13)
+/* 8029A0AC 00296FEC  80 6D 8D 10 */	lwz r3, sAramHeap__16JASWaveArcLoader-_SDA_BASE_(r13)
 /* 8029A0B0 00296FF0  28 03 00 00 */	cmplwi r3, 0
 /* 8029A0B4 00296FF4  41 82 00 08 */	beq lbl_8029A0BC
 /* 8029A0B8 00296FF8  48 00 00 08 */	b lbl_8029A0C0
 lbl_8029A0BC:
-/* 8029A0BC 00296FFC  4B FF 6A 4D */	bl JASKernel_NS_getAramHeap
+/* 8029A0BC 00296FFC  4B FF 6A 4D */	bl getAramHeap__9JASKernelFv
 lbl_8029A0C0:
 /* 8029A0C0 00297000  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029A0C4 00297004  7C 08 03 A6 */	mtlr r0
 /* 8029A0C8 00297008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A0CC 0029700C  4E 80 00 20 */	blr 
 
-.global JASWaveArcLoader_NS_setCurrentDir
-JASWaveArcLoader_NS_setCurrentDir:
+/* 8029A0D0 0060 .text setCurrentDir__16JASWaveArcLoaderFPCc setCurrentDir__16JASWaveArcLoaderFPCc */
+.global setCurrentDir__16JASWaveArcLoaderFPCc
+setCurrentDir__16JASWaveArcLoaderFPCc:
 /* 8029A0D0 00297010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A0D4 00297014  7C 08 02 A6 */	mflr r0
 /* 8029A0D8 00297018  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029A0DC 0029701C  7C 64 1B 78 */	mr r4, r3
-/* 8029A0E0 00297020  3C 60 80 3C */	lis r3, lbl_803C77E0@ha
-/* 8029A0E4 00297024  38 63 77 E0 */	addi r3, r3, lbl_803C77E0@l
+/* 8029A0E0 00297020  3C 60 80 3C */	lis r3, sCurrentDir__16JASWaveArcLoader@ha
+/* 8029A0E4 00297024  38 63 77 E0 */	addi r3, r3, sCurrentDir__16JASWaveArcLoader@l
 /* 8029A0E8 00297028  48 0C EA 45 */	bl strcpy
-/* 8029A0EC 0029702C  3C 60 80 3C */	lis r3, lbl_803C77E0@ha
-/* 8029A0F0 00297030  38 63 77 E0 */	addi r3, r3, lbl_803C77E0@l
+/* 8029A0EC 0029702C  3C 60 80 3C */	lis r3, sCurrentDir__16JASWaveArcLoader@ha
+/* 8029A0F0 00297030  38 63 77 E0 */	addi r3, r3, sCurrentDir__16JASWaveArcLoader@l
 /* 8029A0F4 00297034  48 0C EA F1 */	bl strlen
-/* 8029A0F8 00297038  3C 80 80 3C */	lis r4, lbl_803C77E0@ha
-/* 8029A0FC 0029703C  38 A4 77 E0 */	addi r5, r4, lbl_803C77E0@l
+/* 8029A0F8 00297038  3C 80 80 3C */	lis r4, sCurrentDir__16JASWaveArcLoader@ha
+/* 8029A0FC 0029703C  38 A4 77 E0 */	addi r5, r4, sCurrentDir__16JASWaveArcLoader@l
 /* 8029A100 00297040  7C 85 1A 14 */	add r4, r5, r3
 /* 8029A104 00297044  88 04 FF FF */	lbz r0, -1(r4)
 /* 8029A108 00297048  2C 00 00 2F */	cmpwi r0, 0x2f
@@ -48,28 +49,30 @@ lbl_8029A120:
 /* 8029A128 00297068  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A12C 0029706C  4E 80 00 20 */	blr 
 
-.global JASWaveArcLoader_NS_getCurrentDir
-JASWaveArcLoader_NS_getCurrentDir:
-/* 8029A130 00297070  3C 60 80 3C */	lis r3, lbl_803C77E0@ha
-/* 8029A134 00297074  38 63 77 E0 */	addi r3, r3, lbl_803C77E0@l
+/* 8029A130 000C .text getCurrentDir__16JASWaveArcLoaderFv getCurrentDir__16JASWaveArcLoaderFv */
+.global getCurrentDir__16JASWaveArcLoaderFv
+getCurrentDir__16JASWaveArcLoaderFv:
+/* 8029A130 00297070  3C 60 80 3C */	lis r3, sCurrentDir__16JASWaveArcLoader@ha
+/* 8029A134 00297074  38 63 77 E0 */	addi r3, r3, sCurrentDir__16JASWaveArcLoader@l
 /* 8029A138 00297078  4E 80 00 20 */	blr 
 
-.global JASWaveArc
-JASWaveArc:
+/* 8029A13C 0078 .text __ct__10JASWaveArcFv __ct__10JASWaveArcFv */
+.global __ct__10JASWaveArcFv
+__ct__10JASWaveArcFv:
 /* 8029A13C 0029707C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A140 00297080  7C 08 02 A6 */	mflr r0
 /* 8029A144 00297084  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029A148 00297088  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029A14C 0029708C  7C 7F 1B 78 */	mr r31, r3
-/* 8029A150 00297090  3C 60 80 3C */	lis r3, lbl_803C7838@ha
-/* 8029A154 00297094  38 03 78 38 */	addi r0, r3, lbl_803C7838@l
+/* 8029A150 00297090  3C 60 80 3C */	lis r3, __vt__11JASDisposer@ha
+/* 8029A154 00297094  38 03 78 38 */	addi r0, r3, __vt__11JASDisposer@l
 /* 8029A158 00297098  90 1F 00 00 */	stw r0, 0(r31)
-/* 8029A15C 0029709C  3C 60 80 3C */	lis r3, lbl_803C7820@ha
-/* 8029A160 002970A0  38 03 78 20 */	addi r0, r3, lbl_803C7820@l
+/* 8029A15C 0029709C  3C 60 80 3C */	lis r3, __vt__10JASWaveArc@ha
+/* 8029A160 002970A0  38 03 78 20 */	addi r0, r3, __vt__10JASWaveArc@l
 /* 8029A164 002970A4  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029A168 002970A8  7F E4 FB 78 */	mr r4, r31
 /* 8029A16C 002970AC  38 64 00 04 */	addi r3, r4, 4
-/* 8029A170 002970B0  4B FF 5F D1 */	bl JASHeap
+/* 8029A170 002970B0  4B FF 5F D1 */	bl __ct__7JASHeapFP11JASDisposer
 /* 8029A174 002970B4  38 60 00 00 */	li r3, 0
 /* 8029A178 002970B8  90 7F 00 48 */	stw r3, 0x48(r31)
 /* 8029A17C 002970BC  90 7F 00 4C */	stw r3, 0x4c(r31)
@@ -87,8 +90,9 @@ JASWaveArc:
 /* 8029A1AC 002970EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A1B0 002970F0  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_dtor
-JASWaveArc_NS_dtor:
+/* 8029A1B4 00A4 .text __dt__10JASWaveArcFv __dt__10JASWaveArcFv */
+.global __dt__10JASWaveArcFv
+__dt__10JASWaveArcFv:
 /* 8029A1B4 002970F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A1B8 002970F8  7C 08 02 A6 */	mflr r0
 /* 8029A1BC 002970FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -97,8 +101,8 @@ JASWaveArc_NS_dtor:
 /* 8029A1C8 00297108  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8029A1CC 0029710C  7C 9F 23 78 */	mr r31, r4
 /* 8029A1D0 00297110  41 82 00 6C */	beq lbl_8029A23C
-/* 8029A1D4 00297114  3C 60 80 3C */	lis r3, lbl_803C7820@ha
-/* 8029A1D8 00297118  38 03 78 20 */	addi r0, r3, lbl_803C7820@l
+/* 8029A1D4 00297114  3C 60 80 3C */	lis r3, __vt__10JASWaveArc@ha
+/* 8029A1D8 00297118  38 03 78 20 */	addi r0, r3, __vt__10JASWaveArc@l
 /* 8029A1DC 0029711C  90 1E 00 00 */	stw r0, 0(r30)
 /* 8029A1E0 00297120  34 1E 00 04 */	addic. r0, r30, 4
 /* 8029A1E4 00297124  41 82 00 34 */	beq lbl_8029A218
@@ -118,8 +122,8 @@ lbl_8029A204:
 lbl_8029A218:
 /* 8029A218 00297158  28 1E 00 00 */	cmplwi r30, 0
 /* 8029A21C 0029715C  41 82 00 10 */	beq lbl_8029A22C
-/* 8029A220 00297160  3C 60 80 3C */	lis r3, lbl_803C7838@ha
-/* 8029A224 00297164  38 03 78 38 */	addi r0, r3, lbl_803C7838@l
+/* 8029A220 00297160  3C 60 80 3C */	lis r3, __vt__11JASDisposer@ha
+/* 8029A224 00297164  38 03 78 38 */	addi r0, r3, __vt__11JASDisposer@l
 /* 8029A228 00297168  90 1E 00 00 */	stw r0, 0(r30)
 lbl_8029A22C:
 /* 8029A22C 0029716C  7F E0 07 35 */	extsh. r0, r31
@@ -135,8 +139,9 @@ lbl_8029A23C:
 /* 8029A250 00297190  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A254 00297194  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_loadSetup
-JASWaveArc_NS_loadSetup:
+/* 8029A258 0094 .text loadSetup__10JASWaveArcFUl loadSetup__10JASWaveArcFUl */
+.global loadSetup__10JASWaveArcFUl
+loadSetup__10JASWaveArcFUl:
 /* 8029A258 00297198  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A25C 0029719C  7C 08 02 A6 */	mflr r0
 /* 8029A260 002971A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -178,8 +183,9 @@ lbl_8029A2D4:
 /* 8029A2E4 00297224  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A2E8 00297228  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_eraseSetup
-JASWaveArc_NS_eraseSetup:
+/* 8029A2EC 008C .text eraseSetup__10JASWaveArcFv eraseSetup__10JASWaveArcFv */
+.global eraseSetup__10JASWaveArcFv
+eraseSetup__10JASWaveArcFv:
 /* 8029A2EC 0029722C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A2F0 00297230  7C 08 02 A6 */	mflr r0
 /* 8029A2F4 00297234  90 01 00 24 */	stw r0, 0x24(r1)
@@ -218,8 +224,10 @@ lbl_8029A364:
 /* 8029A36C 002972AC  7C 08 03 A6 */	mtlr r0
 /* 8029A370 002972B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A374 002972B4  4E 80 00 20 */	blr 
-.global JASWaveArc_NS_loadToAramCallback
-JASWaveArc_NS_loadToAramCallback:
+
+/* 8029A378 008C .text loadToAramCallback__10JASWaveArcFPv loadToAramCallback__10JASWaveArcFPv */
+.global loadToAramCallback__10JASWaveArcFPv
+loadToAramCallback__10JASWaveArcFPv:
 /* 8029A378 002972B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A37C 002972BC  7C 08 02 A6 */	mflr r0
 /* 8029A380 002972C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -241,7 +249,7 @@ JASWaveArc_NS_loadToAramCallback:
 /* 8029A3C0 00297300  B0 1F 00 5A */	sth r0, 0x5a(r31)
 /* 8029A3C4 00297304  7F E3 FB 78 */	mr r3, r31
 /* 8029A3C8 00297308  80 9E 00 0C */	lwz r4, 0xc(r30)
-/* 8029A3CC 0029730C  4B FF FE 8D */	bl JASWaveArc_NS_loadSetup
+/* 8029A3CC 0029730C  4B FF FE 8D */	bl loadSetup__10JASWaveArcFUl
 /* 8029A3D0 00297310  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8029A3D4 00297314  41 82 00 18 */	beq lbl_8029A3EC
 /* 8029A3D8 00297318  7F E3 FB 78 */	mr r3, r31
@@ -257,8 +265,9 @@ lbl_8029A3EC:
 /* 8029A3FC 0029733C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A400 00297340  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_sendLoadCmd
-JASWaveArc_NS_sendLoadCmd:
+/* 8029A404 00BC .text sendLoadCmd__10JASWaveArcFv sendLoadCmd__10JASWaveArcFv */
+.global sendLoadCmd__10JASWaveArcFv
+sendLoadCmd__10JASWaveArcFv:
 /* 8029A404 00297344  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8029A408 00297348  7C 08 02 A6 */	mflr r0
 /* 8029A40C 0029734C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -284,18 +293,16 @@ JASWaveArc_NS_sendLoadCmd:
 /* 8029A45C 0029739C  A0 7F 00 5A */	lhz r3, 0x5a(r31)
 /* 8029A460 002973A0  38 03 00 01 */	addi r0, r3, 1
 /* 8029A464 002973A4  B0 1F 00 5A */	sth r0, 0x5a(r31)
-/* 8029A468 002973A8  4B FF 5A 95 */	bl JASDvd_NS_getThreadPointer
-.global JASWaveArc_NS_loadToAramCallback
-/* 8029A46C 002973AC  3C 80 80 2A */	lis r4, JASWaveArc_NS_loadToAramCallback@ha
-.global JASWaveArc_NS_loadToAramCallback
-/* 8029A470 002973B0  38 84 A3 78 */	addi r4, r4, JASWaveArc_NS_loadToAramCallback@l
+/* 8029A468 002973A8  4B FF 5A 95 */	bl getThreadPointer__6JASDvdFv
+/* 8029A46C 002973AC  3C 80 80 2A */	lis r4, loadToAramCallback__10JASWaveArcFPv@ha
+/* 8029A470 002973B0  38 84 A3 78 */	addi r4, r4, loadToAramCallback__10JASWaveArcFPv@l
 /* 8029A474 002973B4  38 A1 00 0C */	addi r5, r1, 0xc
 /* 8029A478 002973B8  38 C0 00 10 */	li r6, 0x10
-/* 8029A47C 002973BC  4B FF 56 E1 */	bl JASTaskThread_NS_sendCmdMsg
+/* 8029A47C 002973BC  4B FF 56 E1 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl
 /* 8029A480 002973C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8029A484 002973C4  40 82 00 1C */	bne lbl_8029A4A0
 /* 8029A488 002973C8  38 7F 00 04 */	addi r3, r31, 4
-/* 8029A48C 002973CC  4B FF 60 59 */	bl JASHeap_NS_free
+/* 8029A48C 002973CC  4B FF 60 59 */	bl free__7JASHeapFv
 /* 8029A490 002973D0  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029A494 002973D4  48 0A 4C 89 */	bl OSUnlockMutex
 /* 8029A498 002973D8  38 60 00 00 */	li r3, 0
@@ -311,8 +318,9 @@ lbl_8029A4AC:
 /* 8029A4B8 002973F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8029A4BC 002973FC  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_load
-JASWaveArc_NS_load:
+/* 8029A4C0 00C0 .text load__10JASWaveArcFP7JASHeap load__10JASWaveArcFP7JASHeap */
+.global load__10JASWaveArcFP7JASHeap
+load__10JASWaveArcFP7JASHeap:
 /* 8029A4C0 00297400  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A4C4 00297404  7C 08 02 A6 */	mflr r0
 /* 8029A4C8 00297408  90 01 00 24 */	stw r0, 0x24(r1)
@@ -339,13 +347,13 @@ lbl_8029A4F0:
 lbl_8029A518:
 /* 8029A518 00297458  28 1F 00 00 */	cmplwi r31, 0
 /* 8029A51C 0029745C  40 82 00 0C */	bne lbl_8029A528
-/* 8029A520 00297460  4B FF FB 81 */	bl JASWaveArcLoader_NS_getRootHeap
+/* 8029A520 00297460  4B FF FB 81 */	bl getRootHeap__16JASWaveArcLoaderFv
 /* 8029A524 00297464  7C 7F 1B 78 */	mr r31, r3
 lbl_8029A528:
 /* 8029A528 00297468  38 7E 00 04 */	addi r3, r30, 4
 /* 8029A52C 0029746C  7F E4 FB 78 */	mr r4, r31
 /* 8029A530 00297470  80 BE 00 54 */	lwz r5, 0x54(r30)
-/* 8029A534 00297474  4B FF 5C E9 */	bl JASHeap_NS_alloc
+/* 8029A534 00297474  4B FF 5C E9 */	bl alloc__7JASHeapFP7JASHeapUl
 /* 8029A538 00297478  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8029A53C 0029747C  40 82 00 14 */	bne lbl_8029A550
 /* 8029A540 00297480  80 61 00 08 */	lwz r3, 8(r1)
@@ -354,7 +362,7 @@ lbl_8029A528:
 /* 8029A54C 0029748C  48 00 00 1C */	b lbl_8029A568
 lbl_8029A550:
 /* 8029A550 00297490  7F C3 F3 78 */	mr r3, r30
-/* 8029A554 00297494  4B FF FE B1 */	bl JASWaveArc_NS_sendLoadCmd
+/* 8029A554 00297494  4B FF FE B1 */	bl sendLoadCmd__10JASWaveArcFv
 /* 8029A558 00297498  7C 7F 1B 78 */	mr r31, r3
 /* 8029A55C 0029749C  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029A560 002974A0  48 0A 4B BD */	bl OSUnlockMutex
@@ -367,8 +375,9 @@ lbl_8029A568:
 /* 8029A578 002974B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A57C 002974BC  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_loadTail
-JASWaveArc_NS_loadTail:
+/* 8029A580 00C0 .text loadTail__10JASWaveArcFP7JASHeap loadTail__10JASWaveArcFP7JASHeap */
+.global loadTail__10JASWaveArcFP7JASHeap
+loadTail__10JASWaveArcFP7JASHeap:
 /* 8029A580 002974C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A584 002974C4  7C 08 02 A6 */	mflr r0
 /* 8029A588 002974C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -395,13 +404,13 @@ lbl_8029A5B0:
 lbl_8029A5D8:
 /* 8029A5D8 00297518  28 1F 00 00 */	cmplwi r31, 0
 /* 8029A5DC 0029751C  40 82 00 0C */	bne lbl_8029A5E8
-/* 8029A5E0 00297520  4B FF FA C1 */	bl JASWaveArcLoader_NS_getRootHeap
+/* 8029A5E0 00297520  4B FF FA C1 */	bl getRootHeap__16JASWaveArcLoaderFv
 /* 8029A5E4 00297524  7C 7F 1B 78 */	mr r31, r3
 lbl_8029A5E8:
 /* 8029A5E8 00297528  38 7E 00 04 */	addi r3, r30, 4
 /* 8029A5EC 0029752C  7F E4 FB 78 */	mr r4, r31
 /* 8029A5F0 00297530  80 BE 00 54 */	lwz r5, 0x54(r30)
-/* 8029A5F4 00297534  4B FF 5E 01 */	bl JASHeap_NS_allocTail
+/* 8029A5F4 00297534  4B FF 5E 01 */	bl allocTail__7JASHeapFP7JASHeapUl
 /* 8029A5F8 00297538  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8029A5FC 0029753C  40 82 00 14 */	bne lbl_8029A610
 /* 8029A600 00297540  80 61 00 08 */	lwz r3, 8(r1)
@@ -410,7 +419,7 @@ lbl_8029A5E8:
 /* 8029A60C 0029754C  48 00 00 1C */	b lbl_8029A628
 lbl_8029A610:
 /* 8029A610 00297550  7F C3 F3 78 */	mr r3, r30
-/* 8029A614 00297554  4B FF FD F1 */	bl JASWaveArc_NS_sendLoadCmd
+/* 8029A614 00297554  4B FF FD F1 */	bl sendLoadCmd__10JASWaveArcFv
 /* 8029A618 00297558  7C 7F 1B 78 */	mr r31, r3
 /* 8029A61C 0029755C  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029A620 00297560  48 0A 4A FD */	bl OSUnlockMutex
@@ -423,23 +432,28 @@ lbl_8029A628:
 /* 8029A638 00297578  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A63C 0029757C  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_erase
-JASWaveArc_NS_erase:
+/* 8029A640 0024 .text erase__10JASWaveArcFv erase__10JASWaveArcFv */
+.global erase__10JASWaveArcFv
+erase__10JASWaveArcFv:
 /* 8029A640 00297580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A644 00297584  7C 08 02 A6 */	mflr r0
 /* 8029A648 00297588  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029A64C 0029758C  38 63 00 04 */	addi r3, r3, 4
-/* 8029A650 00297590  4B FF 5E 95 */	bl JASHeap_NS_free
+/* 8029A650 00297590  4B FF 5E 95 */	bl free__7JASHeapFv
 /* 8029A654 00297594  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029A658 00297598  7C 08 03 A6 */	mtlr r0
 /* 8029A65C 0029759C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A660 002975A0  4E 80 00 20 */	blr 
+
+/* 8029A664 0048 .text onDispose__10JASWaveArcFv onDispose__10JASWaveArcFv */
+.global onDispose__10JASWaveArcFv
+onDispose__10JASWaveArcFv:
 /* 8029A664 002975A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A668 002975A8  7C 08 02 A6 */	mflr r0
 /* 8029A66C 002975AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029A670 002975B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029A674 002975B4  7C 7F 1B 78 */	mr r31, r3
-/* 8029A678 002975B8  4B FF FC 75 */	bl JASWaveArc_NS_eraseSetup
+/* 8029A678 002975B8  4B FF FC 75 */	bl eraseSetup__10JASWaveArcFv
 /* 8029A67C 002975BC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8029A680 002975C0  41 82 00 18 */	beq lbl_8029A698
 /* 8029A684 002975C4  7F E3 FB 78 */	mr r3, r31
@@ -454,8 +468,9 @@ lbl_8029A698:
 /* 8029A6A4 002975E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A6A8 002975E8  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_setEntryNum
-JASWaveArc_NS_setEntryNum:
+/* 8029A6AC 0060 .text setEntryNum__10JASWaveArcFl setEntryNum__10JASWaveArcFl */
+.global setEntryNum__10JASWaveArcFl
+setEntryNum__10JASWaveArcFl:
 /* 8029A6AC 002975EC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8029A6B0 002975F0  7C 08 02 A6 */	mflr r0
 /* 8029A6B4 002975F4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -482,8 +497,9 @@ lbl_8029A6F4:
 /* 8029A704 00297644  38 21 00 50 */	addi r1, r1, 0x50
 /* 8029A708 00297648  4E 80 00 20 */	blr 
 
-.global JASWaveArc_NS_setFileName
-JASWaveArc_NS_setFileName:
+/* 8029A70C 00AC .text setFileName__10JASWaveArcFPCc setFileName__10JASWaveArcFPCc */
+.global setFileName__10JASWaveArcFPCc
+setFileName__10JASWaveArcFPCc:
 /* 8029A70C 0029764C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A710 00297650  7C 08 02 A6 */	mflr r0
 /* 8029A714 00297654  90 01 00 24 */	stw r0, 0x24(r1)
@@ -491,14 +507,14 @@ JASWaveArc_NS_setFileName:
 /* 8029A71C 0029765C  48 0C 7A B9 */	bl _savegpr_27
 /* 8029A720 00297660  7C 7B 1B 78 */	mr r27, r3
 /* 8029A724 00297664  7C 9C 23 78 */	mr r28, r4
-/* 8029A728 00297668  4B FF FA 09 */	bl JASWaveArcLoader_NS_getCurrentDir
+/* 8029A728 00297668  4B FF FA 09 */	bl getCurrentDir__16JASWaveArcLoaderFv
 /* 8029A72C 0029766C  7C 7E 1B 78 */	mr r30, r3
 /* 8029A730 00297670  48 0C E4 B5 */	bl strlen
 /* 8029A734 00297674  7C 7F 1B 78 */	mr r31, r3
 /* 8029A738 00297678  7F 83 E3 78 */	mr r3, r28
 /* 8029A73C 0029767C  48 0C E4 A9 */	bl strlen
 /* 8029A740 00297680  7F FF 1A 14 */	add r31, r31, r3
-/* 8029A744 00297684  4B FF 63 7D */	bl JASKernel_NS_getSystemHeap
+/* 8029A744 00297684  4B FF 63 7D */	bl getSystemHeap__9JASKernelFv
 /* 8029A748 00297688  7C 64 1B 78 */	mr r4, r3
 /* 8029A74C 0029768C  38 7F 00 01 */	addi r3, r31, 1
 /* 8029A750 00297690  38 A0 FF FC */	li r5, -4
@@ -520,7 +536,7 @@ JASWaveArc_NS_setFileName:
 /* 8029A790 002976D0  41 80 00 10 */	blt lbl_8029A7A0
 /* 8029A794 002976D4  7F 63 DB 78 */	mr r3, r27
 /* 8029A798 002976D8  7F C4 F3 78 */	mr r4, r30
-/* 8029A79C 002976DC  4B FF FF 11 */	bl JASWaveArc_NS_setEntryNum
+/* 8029A79C 002976DC  4B FF FF 11 */	bl setEntryNum__10JASWaveArcFl
 lbl_8029A7A0:
 /* 8029A7A0 002976E0  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029A7A4 002976E4  48 0C 7A 7D */	bl _restgpr_27
@@ -528,14 +544,18 @@ lbl_8029A7A0:
 /* 8029A7AC 002976EC  7C 08 03 A6 */	mtlr r0
 /* 8029A7B0 002976F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A7B4 002976F4  4E 80 00 20 */	blr 
+
+/* 8029A7B8 0048 .text __dt__11JASDisposerFv __dt__11JASDisposerFv */
+.global __dt__11JASDisposerFv
+__dt__11JASDisposerFv:
 /* 8029A7B8 002976F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A7BC 002976FC  7C 08 02 A6 */	mflr r0
 /* 8029A7C0 00297700  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029A7C4 00297704  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029A7C8 00297708  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8029A7CC 0029770C  41 82 00 1C */	beq lbl_8029A7E8
-/* 8029A7D0 00297710  3C A0 80 3C */	lis r5, lbl_803C7838@ha
-/* 8029A7D4 00297714  38 05 78 38 */	addi r0, r5, lbl_803C7838@l
+/* 8029A7D0 00297710  3C A0 80 3C */	lis r5, __vt__11JASDisposer@ha
+/* 8029A7D4 00297714  38 05 78 38 */	addi r0, r5, __vt__11JASDisposer@l
 /* 8029A7D8 00297718  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029A7DC 0029771C  7C 80 07 35 */	extsh. r0, r4
 /* 8029A7E0 00297720  40 81 00 08 */	ble lbl_8029A7E8
@@ -547,4 +567,35 @@ lbl_8029A7E8:
 /* 8029A7F4 00297734  7C 08 03 A6 */	mtlr r0
 /* 8029A7F8 00297738  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A7FC 0029773C  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C77E0 0040 .data sCurrentDir__16JASWaveArcLoader sCurrentDir__16JASWaveArcLoader */
+.global sCurrentDir__16JASWaveArcLoader
+sCurrentDir__16JASWaveArcLoader:
+.byte 0x2f, 0x41, 0x75, 0x64, 0x69, 0x6f, 0x52, 0x65, 0x73, 0x2f, 0x57, 0x61, 0x76, 0x65, 0x73, 0x2f /* baserom.dol+0x3c47e0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c47f0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4800 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4810 */
+
+/* 803C7820 0018 .data __vt__10JASWaveArc __vt__10JASWaveArc */
+.global __vt__10JASWaveArc
+__vt__10JASWaveArc:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0xa1, 0xb4, 0x80, 0x29, 0xa6, 0x64 /* baserom.dol+0x3c4820 */
+.byte 0x80, 0x29, 0x8f, 0xa0, 0x80, 0x29, 0x8f, 0xa4 /* baserom.dol+0x3c4830 */
+
+/* 803C7838 0010 .data __vt__11JASDisposer __vt__11JASDisposer */
+.global __vt__11JASDisposer
+__vt__11JASDisposer:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0xa7, 0xb8, 0x80, 0x29, 0x0b, 0xcc /* baserom.dol+0x3c4838 */
+
+
+
+.section .sbss, "aw"
+/* 80451290 0004 .sbss sAramHeap__16JASWaveArcLoader sAramHeap__16JASWaveArcLoader */
+.global sAramHeap__16JASWaveArcLoader
+sAramHeap__16JASWaveArcLoader:
+.skip 0x4
+.skip 0x4 /* padding */
 

@@ -2177,4 +2177,15 @@ SBSS_O_FILES :=                                     \
 SDATA2_O_FILES :=  
 
 SBSS2_O_FILES :=                                    \
-    $(BUILD_DIR)/asm/sbss2.o
+    $(BUILD_DIR)/asm/sbss2/m_Do_graphic.o \
+    $(BUILD_DIR)/asm/sbss2/d_drawlist.o \
+    $(BUILD_DIR)/asm/sbss2/d_model.o \
+    $(BUILD_DIR)/asm/sbss2/d_error_msg.o \
+    $(BUILD_DIR)/asm/sbss2/d_envse.o \
+    $(BUILD_DIR)/asm/sbss2/d_menu_window.o \
+    $(BUILD_DIR)/asm/sbss2/d_meter2_draw.o \
+    $(BUILD_DIR)/asm/sbss2/d_msg_flow.o \
+    $(BUILD_DIR)/asm/sbss2/Z2AudioLib/Z2SpeechMgr2.o \
+    $(BUILD_DIR)/asm/sbss2/J2DGraph/J2DMaterialFactory.o \
+    $(BUILD_DIR)/asm/sbss2/J3DGraphLoader/J3DMaterialFactory.o \
+    $(BUILD_DIR)/asm/sbss2/J3DGraphLoader/J3DMaterialFactory_v21.o \

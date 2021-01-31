@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80346d6c
 
-
+.section .text, "ax"
+/* 80346D6C 0054 .text PSMTXMultVec PSMTXMultVec */
 .global PSMTXMultVec
 PSMTXMultVec:
 /* 80346D6C 00343CAC  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
@@ -27,6 +27,7 @@ PSMTXMultVec:
 /* 80346DB8 00343CF8  F0 C5 80 08 */	psq_st f6, 8(r5), 1, qr0
 /* 80346DBC 00343CFC  4E 80 00 20 */	blr 
 
+/* 80346DC0 008C .text PSMTXMultVecArray PSMTXMultVecArray */
 .global PSMTXMultVecArray
 PSMTXMultVecArray:
 /* 80346DC0 00343D00  E1 A3 00 00 */	psq_l f13, 0(r3), 0, qr0
@@ -66,6 +67,7 @@ lbl_80346E0C:
 /* 80346E44 00343D84  F5 A5 80 08 */	psq_stu f13, 8(r5), 1, qr0
 /* 80346E48 00343D88  4E 80 00 20 */	blr 
 
+/* 80346E4C 0054 .text PSMTXMultVecSR PSMTXMultVecSR */
 .global PSMTXMultVecSR
 PSMTXMultVecSR:
 /* 80346E4C 00343D8C  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -90,6 +92,7 @@ PSMTXMultVecSR:
 /* 80346E98 00343DD8  F1 A5 80 08 */	psq_st f13, 8(r5), 1, qr0
 /* 80346E9C 00343DDC  4E 80 00 20 */	blr 
 
+/* 80346EA0 0088 .text PSMTXMultVecArraySR PSMTXMultVecArraySR */
 .global PSMTXMultVecArraySR
 PSMTXMultVecArraySR:
 /* 80346EA0 00343DE0  E1 A3 00 00 */	psq_l f13, 0(r3), 0, qr0

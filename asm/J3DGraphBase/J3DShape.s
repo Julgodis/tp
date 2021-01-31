@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80314b48
 
-
-.global J3DShape_NS_initialize
-J3DShape_NS_initialize:
+.section .text, "ax"
+/* 80314B48 0070 .text initialize__8J3DShapeFv initialize__8J3DShapeFv */
+.global initialize__8J3DShapeFv
+initialize__8J3DShapeFv:
 /* 80314B48 00311A88  38 A0 00 00 */	li r5, 0
 /* 80314B4C 00311A8C  90 A3 00 04 */	stw r5, 4(r3)
 /* 80314B50 00311A90  3C 80 00 01 */	lis r4, 0x0000FFFF@ha
@@ -28,14 +28,15 @@ J3DShape_NS_initialize:
 /* 80314B98 00311AD8  90 A3 00 54 */	stw r5, 0x54(r3)
 /* 80314B9C 00311ADC  90 A3 00 58 */	stw r5, 0x58(r3)
 /* 80314BA0 00311AE0  90 A3 00 5C */	stw r5, 0x5c(r3)
-/* 80314BA4 00311AE4  38 0D 90 18 */	addi r0, r13, lbl_80451598-_SDA_BASE_
+/* 80314BA4 00311AE4  38 0D 90 18 */	addi r0, r13, j3dDefaultViewNo-_SDA_BASE_
 /* 80314BA8 00311AE8  90 03 00 60 */	stw r0, 0x60(r3)
 /* 80314BAC 00311AEC  98 A3 00 34 */	stb r5, 0x34(r3)
 /* 80314BB0 00311AF0  98 A3 00 48 */	stb r5, 0x48(r3)
 /* 80314BB4 00311AF4  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_addTexMtxIndexInDL
-J3DShape_NS_addTexMtxIndexInDL:
+/* 80314BB8 0104 .text addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl */
+.global addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl
+addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl:
 /* 80314BB8 00311AF8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80314BBC 00311AFC  7C 08 02 A6 */	mflr r0
 /* 80314BC0 00311B00  90 01 00 34 */	stw r0, 0x34(r1)
@@ -94,7 +95,7 @@ lbl_80314C74:
 /* 80314C80 00311BC0  7F 84 E3 78 */	mr r4, r28
 /* 80314C84 00311BC4  7F A5 EB 78 */	mr r5, r29
 /* 80314C88 00311BC8  7F C6 F3 78 */	mr r6, r30
-/* 80314C8C 00311BCC  4B FF FC E9 */	bl J3DShapeDraw_NS_addTexMtxIndexInDL
+/* 80314C8C 00311BCC  4B FF FC E9 */	bl addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl
 /* 80314C90 00311BD0  3B 7B 00 01 */	addi r27, r27, 1
 lbl_80314C94:
 /* 80314C94 00311BD4  57 63 04 3E */	clrlwi r3, r27, 0x10
@@ -109,8 +110,9 @@ lbl_80314CA4:
 /* 80314CB4 00311BF4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80314CB8 00311BF8  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_addTexMtxIndexInVcd
-J3DShape_NS_addTexMtxIndexInVcd:
+/* 80314CBC 00EC .text addTexMtxIndexInVcd__8J3DShapeF7_GXAttr addTexMtxIndexInVcd__8J3DShapeF7_GXAttr */
+.global addTexMtxIndexInVcd__8J3DShapeF7_GXAttr
+addTexMtxIndexInVcd__8J3DShapeF7_GXAttr:
 /* 80314CBC 00311BFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80314CC0 00311C00  7C 08 02 A6 */	mflr r0
 /* 80314CC4 00311C04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -169,7 +171,7 @@ lbl_80314D68:
 /* 80314D80 00311CC0  90 07 00 04 */	stw r0, 4(r7)
 /* 80314D84 00311CC4  90 7F 00 30 */	stw r3, 0x30(r31)
 /* 80314D88 00311CC8  7F E3 FB 78 */	mr r3, r31
-/* 80314D8C 00311CCC  48 00 04 D5 */	bl J3DShape_NS_makeVcdVatCmd
+/* 80314D8C 00311CCC  48 00 04 D5 */	bl makeVcdVatCmd__8J3DShapeFv
 lbl_80314D90:
 /* 80314D90 00311CD0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80314D94 00311CD4  83 C1 00 08 */	lwz r30, 8(r1)
@@ -178,8 +180,9 @@ lbl_80314D90:
 /* 80314DA0 00311CE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314DA4 00311CE4  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_calcNBTScale
-J3DShape_NS_calcNBTScale:
+/* 80314DA8 0080 .text calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f */
+.global calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f
+calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f:
 /* 80314DA8 00311CE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314DAC 00311CEC  7C 08 02 A6 */	mflr r0
 /* 80314DB0 00311CF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -215,8 +218,9 @@ lbl_80314E00:
 /* 80314E20 00311D60  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314E24 00311D64  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_countBumpMtxNum
-J3DShape_NS_countBumpMtxNum:
+/* 80314E28 0070 .text countBumpMtxNum__8J3DShapeCFv countBumpMtxNum__8J3DShapeCFv */
+.global countBumpMtxNum__8J3DShapeCFv
+countBumpMtxNum__8J3DShapeCFv:
 /* 80314E28 00311D68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314E2C 00311D6C  7C 08 02 A6 */	mflr r0
 /* 80314E30 00311D70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -248,8 +252,9 @@ lbl_80314E70:
 /* 80314E90 00311DD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314E94 00311DD4  4E 80 00 20 */	blr 
 
-.global J3DLoadCPCmd
-J3DLoadCPCmd:
+/* 80314E98 0018 .text J3DLoadCPCmd__FUcUl J3DLoadCPCmd__FUcUl */
+.global J3DLoadCPCmd__FUcUl
+J3DLoadCPCmd__FUcUl:
 /* 80314E98 00311DD8  38 00 00 08 */	li r0, 8
 /* 80314E9C 00311DDC  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 80314EA0 00311DE0  98 05 80 00 */	stb r0, 0xCC008000@l(r5)
@@ -257,8 +262,9 @@ J3DLoadCPCmd:
 /* 80314EA8 00311DE8  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 80314EAC 00311DEC  4E 80 00 20 */	blr 
 
-.global J3DLoadArrayBasePtr
-J3DLoadArrayBasePtr:
+/* 80314EB0 003C .text J3DLoadArrayBasePtr__F7_GXAttrPv J3DLoadArrayBasePtr__F7_GXAttrPv */
+.global J3DLoadArrayBasePtr__F7_GXAttrPv
+J3DLoadArrayBasePtr__F7_GXAttrPv:
 /* 80314EB0 00311DF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80314EB4 00311DF4  7C 08 02 A6 */	mflr r0
 /* 80314EB8 00311DF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -270,46 +276,48 @@ lbl_80314ECC:
 /* 80314ECC 00311E0C  38 05 00 A0 */	addi r0, r5, 0xa0
 /* 80314ED0 00311E10  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 80314ED4 00311E14  54 84 00 7E */	clrlwi r4, r4, 1
-/* 80314ED8 00311E18  4B FF FF C1 */	bl J3DLoadCPCmd
+/* 80314ED8 00311E18  4B FF FF C1 */	bl J3DLoadCPCmd__FUcUl
 /* 80314EDC 00311E1C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80314EE0 00311E20  7C 08 03 A6 */	mtlr r0
 /* 80314EE4 00311E24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314EE8 00311E28  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_loadVtxArray
-J3DShape_NS_loadVtxArray:
+/* 80314EEC 0070 .text loadVtxArray__8J3DShapeCFv loadVtxArray__8J3DShapeCFv */
+.global loadVtxArray__8J3DShapeCFv
+loadVtxArray__8J3DShapeCFv:
 /* 80314EEC 00311E2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80314EF0 00311E30  7C 08 02 A6 */	mflr r0
 /* 80314EF4 00311E34  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80314EF8 00311E38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80314EFC 00311E3C  7C 7F 1B 78 */	mr r31, r3
 /* 80314F00 00311E40  38 60 00 09 */	li r3, 9
-/* 80314F04 00311E44  3C 80 80 43 */	lis r4, lbl_80434AC8@ha
-/* 80314F08 00311E48  38 84 4A C8 */	addi r4, r4, lbl_80434AC8@l
+/* 80314F04 00311E44  3C 80 80 43 */	lis r4, j3dSys@ha
+/* 80314F08 00311E48  38 84 4A C8 */	addi r4, r4, j3dSys@l
 /* 80314F0C 00311E4C  80 84 01 0C */	lwz r4, 0x10c(r4)
-/* 80314F10 00311E50  4B FF FF A1 */	bl J3DLoadArrayBasePtr
+/* 80314F10 00311E50  4B FF FF A1 */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 /* 80314F14 00311E54  88 1F 00 34 */	lbz r0, 0x34(r31)
 /* 80314F18 00311E58  28 00 00 00 */	cmplwi r0, 0
 /* 80314F1C 00311E5C  40 82 00 18 */	bne lbl_80314F34
 /* 80314F20 00311E60  38 60 00 0A */	li r3, 0xa
-/* 80314F24 00311E64  3C 80 80 43 */	lis r4, lbl_80434AC8@ha
-/* 80314F28 00311E68  38 84 4A C8 */	addi r4, r4, lbl_80434AC8@l
+/* 80314F24 00311E64  3C 80 80 43 */	lis r4, j3dSys@ha
+/* 80314F28 00311E68  38 84 4A C8 */	addi r4, r4, j3dSys@l
 /* 80314F2C 00311E6C  80 84 01 10 */	lwz r4, 0x110(r4)
-/* 80314F30 00311E70  4B FF FF 81 */	bl J3DLoadArrayBasePtr
+/* 80314F30 00311E70  4B FF FF 81 */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 lbl_80314F34:
 /* 80314F34 00311E74  38 60 00 0B */	li r3, 0xb
-/* 80314F38 00311E78  3C 80 80 43 */	lis r4, lbl_80434AC8@ha
-/* 80314F3C 00311E7C  38 84 4A C8 */	addi r4, r4, lbl_80434AC8@l
+/* 80314F38 00311E78  3C 80 80 43 */	lis r4, j3dSys@ha
+/* 80314F3C 00311E7C  38 84 4A C8 */	addi r4, r4, j3dSys@l
 /* 80314F40 00311E80  80 84 01 14 */	lwz r4, 0x114(r4)
-/* 80314F44 00311E84  4B FF FF 6D */	bl J3DLoadArrayBasePtr
+/* 80314F44 00311E84  4B FF FF 6D */	bl J3DLoadArrayBasePtr__F7_GXAttrPv
 /* 80314F48 00311E88  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80314F4C 00311E8C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80314F50 00311E90  7C 08 03 A6 */	mtlr r0
 /* 80314F54 00311E94  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314F58 00311E98  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_isSameVcdVatCmd
-J3DShape_NS_isSameVcdVatCmd:
+/* 80314F5C 003C .text isSameVcdVatCmd__8J3DShapeFP8J3DShape isSameVcdVatCmd__8J3DShapeFP8J3DShape */
+.global isSameVcdVatCmd__8J3DShapeFP8J3DShape
+isSameVcdVatCmd__8J3DShapeFP8J3DShape:
 /* 80314F5C 00311E9C  80 84 00 2C */	lwz r4, 0x2c(r4)
 /* 80314F60 00311EA0  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 80314F64 00311EA4  38 00 00 C0 */	li r0, 0xc0
@@ -328,8 +336,9 @@ lbl_80314F84:
 /* 80314F90 00311ED0  38 60 00 01 */	li r3, 1
 /* 80314F94 00311ED4  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_makeVtxArrayCmd
-J3DShape_NS_makeVtxArrayCmd:
+/* 80314F98 02C8 .text makeVtxArrayCmd__8J3DShapeFv makeVtxArrayCmd__8J3DShapeFv */
+.global makeVtxArrayCmd__8J3DShapeFv
+makeVtxArrayCmd__8J3DShapeFv:
 /* 80314F98 00311ED8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80314F9C 00311EDC  7C 08 02 A6 */	mflr r0
 /* 80314FA0 00311EE0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -531,8 +540,9 @@ lbl_80315230:
 /* 80315258 00312198  38 21 00 60 */	addi r1, r1, 0x60
 /* 8031525C 0031219C  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_makeVcdVatCmd
-J3DShape_NS_makeVcdVatCmd:
+/* 80315260 00A0 .text makeVcdVatCmd__8J3DShapeFv makeVcdVatCmd__8J3DShapeFv */
+.global makeVcdVatCmd__8J3DShapeFv
+makeVcdVatCmd__8J3DShapeFv:
 /* 80315260 003121A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315264 003121A4  7C 08 02 A6 */	mflr r0
 /* 80315268 003121A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -541,7 +551,7 @@ J3DShape_NS_makeVcdVatCmd:
 /* 80315274 003121B4  88 0D 90 4C */	lbz r0, lbl_804515CC-_SDA_BASE_(r13)
 /* 80315278 003121B8  7C 00 07 75 */	extsb. r0, r0
 /* 8031527C 003121BC  40 82 00 14 */	bne lbl_80315290
-/* 80315280 003121C0  48 02 84 75 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80315280 003121C0  48 02 84 75 */	bl __RAS_OSDisableInterrupts_begin
 /* 80315284 003121C4  90 6D 90 48 */	stw r3, lbl_804515C8-_SDA_BASE_(r13)
 /* 80315288 003121C8  38 00 00 01 */	li r0, 1
 /* 8031528C 003121CC  98 0D 90 4C */	stb r0, lbl_804515CC-_SDA_BASE_(r13)
@@ -552,20 +562,20 @@ lbl_80315290:
 /* 8031529C 003121DC  38 A0 00 C0 */	li r5, 0xc0
 /* 803152A0 003121E0  48 04 BC F9 */	bl GDInitGDLObj
 /* 803152A4 003121E4  38 01 00 08 */	addi r0, r1, 8
-/* 803152A8 003121E8  90 0D 94 00 */	stw r0, lbl_80451980-_SDA_BASE_(r13)
+/* 803152A8 003121E8  90 0D 94 00 */	stw r0, __GDCurrentDL-_SDA_BASE_(r13)
 /* 803152AC 003121EC  80 7F 00 30 */	lwz r3, 0x30(r31)
 /* 803152B0 003121F0  48 04 BE 55 */	bl GDSetVtxDescv
 /* 803152B4 003121F4  7F E3 FB 78 */	mr r3, r31
-/* 803152B8 003121F8  4B FF FC E1 */	bl J3DShape_NS_makeVtxArrayCmd
+/* 803152B8 003121F8  4B FF FC E1 */	bl makeVtxArrayCmd__8J3DShapeFv
 /* 803152BC 003121FC  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 803152C0 00312200  80 83 00 14 */	lwz r4, 0x14(r3)
 /* 803152C4 00312204  38 60 00 00 */	li r3, 0
 /* 803152C8 00312208  88 BF 00 34 */	lbz r5, 0x34(r31)
-/* 803152CC 0031220C  4B FF 88 39 */	bl J3DGDSetVtxAttrFmtv
+/* 803152CC 0031220C  4B FF 88 39 */	bl J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb
 /* 803152D0 00312210  48 04 BD 0D */	bl GDPadCurr32
 /* 803152D4 00312214  48 04 BC DD */	bl GDFlushCurrToMem
 /* 803152D8 00312218  38 00 00 00 */	li r0, 0
-/* 803152DC 0031221C  90 0D 94 00 */	stw r0, lbl_80451980-_SDA_BASE_(r13)
+/* 803152DC 0031221C  90 0D 94 00 */	stw r0, __GDCurrentDL-_SDA_BASE_(r13)
 /* 803152E0 00312220  48 02 BA 25 */	bl OSEnableScheduler
 /* 803152E4 00312224  80 6D 90 48 */	lwz r3, lbl_804515C8-_SDA_BASE_(r13)
 /* 803152E8 00312228  48 02 84 35 */	bl OSRestoreInterrupts
@@ -575,21 +585,22 @@ lbl_80315290:
 /* 803152F8 00312238  38 21 00 20 */	addi r1, r1, 0x20
 /* 803152FC 0031223C  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_loadPreDrawSetting
-J3DShape_NS_loadPreDrawSetting:
+/* 80315300 0098 .text loadPreDrawSetting__8J3DShapeCFv loadPreDrawSetting__8J3DShapeCFv */
+.global loadPreDrawSetting__8J3DShapeCFv
+loadPreDrawSetting__8J3DShapeCFv:
 /* 80315300 00312240  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80315304 00312244  7C 08 02 A6 */	mflr r0
 /* 80315308 00312248  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031530C 0031224C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80315310 00312250  7C 7F 1B 78 */	mr r31, r3
-/* 80315314 00312254  80 0D 90 50 */	lwz r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 80315314 00312254  80 0D 90 50 */	lwz r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 /* 80315318 00312258  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 8031531C 0031225C  7C 00 18 40 */	cmplw r0, r3
 /* 80315320 00312260  41 82 00 14 */	beq lbl_80315334
 /* 80315324 00312264  38 80 00 C0 */	li r4, 0xc0
 /* 80315328 00312268  48 04 AB C9 */	bl GXCallDisplayList
 /* 8031532C 0031226C  80 1F 00 2C */	lwz r0, 0x2c(r31)
-/* 80315330 00312270  90 0D 90 50 */	stw r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 80315330 00312270  90 0D 90 50 */	stw r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 lbl_80315334:
 /* 80315334 00312274  80 BF 00 40 */	lwz r5, 0x40(r31)
 /* 80315338 00312278  38 80 00 08 */	li r4, 8
@@ -617,8 +628,9 @@ lbl_80315334:
 /* 80315390 003122D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80315394 003122D4  4E 80 00 20 */	blr 
 
-.global J3DShape_NS_setArrayAndBindPipeline
-J3DShape_NS_setArrayAndBindPipeline:
+/* 80315398 00B4 .text setArrayAndBindPipeline__8J3DShapeCFv setArrayAndBindPipeline__8J3DShapeCFv */
+.global setArrayAndBindPipeline__8J3DShapeCFv
+setArrayAndBindPipeline__8J3DShapeCFv:
 /* 80315398 003122D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031539C 003122DC  7C 08 02 A6 */	mflr r0
 /* 803153A0 003122E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -626,15 +638,15 @@ J3DShape_NS_setArrayAndBindPipeline:
 /* 803153A8 003122E8  7C 7F 1B 78 */	mr r31, r3
 /* 803153AC 003122EC  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803153B0 003122F0  54 00 F7 7E */	rlwinm r0, r0, 0x1e, 0x1d, 0x1f
-/* 803153B4 003122F4  90 0D 90 28 */	stw r0, lbl_804515A8-_SDA_BASE_(r13)
-/* 803153B8 003122F8  4B FF FB 35 */	bl J3DShape_NS_loadVtxArray
+/* 803153B4 003122F4  90 0D 90 28 */	stw r0, sCurrentPipeline__11J3DShapeMtx-_SDA_BASE_(r13)
+/* 803153B8 003122F8  4B FF FB 35 */	bl loadVtxArray__8J3DShapeCFv
 /* 803153BC 003122FC  80 9F 00 58 */	lwz r4, 0x58(r31)
 /* 803153C0 00312300  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 803153C4 00312304  80 03 00 00 */	lwz r0, 0(r3)
 /* 803153C8 00312308  54 00 10 3A */	slwi r0, r0, 2
 /* 803153CC 0031230C  7C 84 00 2E */	lwzx r4, r4, r0
-/* 803153D0 00312310  3C 60 80 43 */	lis r3, lbl_80434AC8@ha
-/* 803153D4 00312314  38 63 4A C8 */	addi r3, r3, lbl_80434AC8@l
+/* 803153D0 00312310  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 803153D4 00312314  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 803153D8 00312318  90 83 01 04 */	stw r4, 0x104(r3)
 /* 803153DC 0031231C  38 60 00 15 */	li r3, 0x15
 /* 803153E0 00312320  38 A0 00 30 */	li r5, 0x30
@@ -644,40 +656,44 @@ J3DShape_NS_setArrayAndBindPipeline:
 /* 803153F0 00312330  80 03 00 00 */	lwz r0, 0(r3)
 /* 803153F4 00312334  54 00 10 3A */	slwi r0, r0, 2
 /* 803153F8 00312338  7C 84 00 2E */	lwzx r4, r4, r0
-/* 803153FC 0031233C  3C 60 80 43 */	lis r3, lbl_80434AC8@ha
-/* 80315400 00312340  38 63 4A C8 */	addi r3, r3, lbl_80434AC8@l
+/* 803153FC 0031233C  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 80315400 00312340  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 80315404 00312344  90 83 01 08 */	stw r4, 0x108(r3)
 /* 80315408 00312348  38 60 00 16 */	li r3, 0x16
 /* 8031540C 0031234C  38 A0 00 24 */	li r5, 0x24
 /* 80315410 00312350  48 04 67 19 */	bl GXSetArray
 /* 80315414 00312354  80 1F 00 54 */	lwz r0, 0x54(r31)
-/* 80315418 00312358  90 0D 90 2C */	stw r0, lbl_804515AC-_SDA_BASE_(r13)
+/* 80315418 00312358  90 0D 90 2C */	stw r0, sCurrentScaleFlag__11J3DShapeMtx-_SDA_BASE_(r13)
 /* 8031541C 0031235C  88 1F 00 34 */	lbz r0, 0x34(r31)
 /* 80315420 00312360  98 0D 90 30 */	stb r0, lbl_804515B0-_SDA_BASE_(r13)
 /* 80315424 00312364  88 1F 00 48 */	lbz r0, 0x48(r31)
 /* 80315428 00312368  98 0D 90 54 */	stb r0, lbl_804515D4-_SDA_BASE_(r13)
 /* 8031542C 0031236C  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80315430 00312370  54 00 04 26 */	rlwinm r0, r0, 0, 0x10, 0x13
-/* 80315434 00312374  90 0D 90 34 */	stw r0, lbl_804515B4-_SDA_BASE_(r13)
+/* 80315434 00312374  90 0D 90 34 */	stw r0, sTexMtxLoadType__11J3DShapeMtx-_SDA_BASE_(r13)
 /* 80315438 00312378  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031543C 0031237C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80315440 00312380  7C 08 03 A6 */	mtlr r0
 /* 80315444 00312384  38 21 00 10 */	addi r1, r1, 0x10
 /* 80315448 00312388  4E 80 00 20 */	blr 
+
+/* 8031544C 0194 .text drawFast__8J3DShapeCFv drawFast__8J3DShapeCFv */
+.global drawFast__8J3DShapeCFv
+drawFast__8J3DShapeCFv:
 /* 8031544C 0031238C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315450 00312390  7C 08 02 A6 */	mflr r0
 /* 80315454 00312394  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80315458 00312398  39 61 00 20 */	addi r11, r1, 0x20
 /* 8031545C 0031239C  48 04 CD 79 */	bl _savegpr_27
 /* 80315460 003123A0  7C 7F 1B 78 */	mr r31, r3
-/* 80315464 003123A4  80 0D 90 50 */	lwz r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 80315464 003123A4  80 0D 90 50 */	lwz r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 /* 80315468 003123A8  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 8031546C 003123AC  7C 00 18 40 */	cmplw r0, r3
 /* 80315470 003123B0  41 82 00 14 */	beq lbl_80315484
 /* 80315474 003123B4  38 80 00 C0 */	li r4, 0xc0
 /* 80315478 003123B8  48 04 AA 79 */	bl GXCallDisplayList
 /* 8031547C 003123BC  80 1F 00 2C */	lwz r0, 0x2c(r31)
-/* 80315480 003123C0  90 0D 90 50 */	stw r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 80315480 003123C0  90 0D 90 50 */	stw r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 lbl_80315484:
 /* 80315484 003123C4  88 0D 90 54 */	lbz r0, lbl_804515D4-_SDA_BASE_(r13)
 /* 80315488 003123C8  28 00 00 00 */	cmplwi r0, 0
@@ -707,14 +723,14 @@ lbl_80315484:
 /* 803154E8 00312428  90 C3 80 00 */	stw r6, -0x8000(r3)
 lbl_803154EC:
 /* 803154EC 0031242C  7F E3 FB 78 */	mr r3, r31
-/* 803154F0 00312430  4B FF FE A9 */	bl J3DShape_NS_setArrayAndBindPipeline
+/* 803154F0 00312430  4B FF FE A9 */	bl setArrayAndBindPipeline__8J3DShapeCFv
 /* 803154F4 00312434  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 803154F8 00312438  54 00 05 AD */	rlwinm. r0, r0, 0, 0x16, 0x16
 /* 803154FC 0031243C  40 82 00 6C */	bne lbl_80315568
 /* 80315500 00312440  88 0D 90 31 */	lbz r0, lbl_804515B1-_SDA_BASE_(r13)
 /* 80315504 00312444  28 00 00 00 */	cmplwi r0, 0
 /* 80315508 00312448  41 82 00 08 */	beq lbl_80315510
-/* 8031550C 0031244C  4B FF DB 9D */	bl J3DShapeMtx_NS_resetMtxLoadCache
+/* 8031550C 0031244C  4B FF DB 9D */	bl resetMtxLoadCache__11J3DShapeMtxFv
 lbl_80315510:
 /* 80315510 00312450  A3 DF 00 0A */	lhz r30, 0xa(r31)
 /* 80315514 00312454  3B 60 00 00 */	li r27, 0
@@ -734,7 +750,7 @@ lbl_80315544:
 /* 80315544 00312484  7C 7F E0 2E */	lwzx r3, r31, r28
 /* 80315548 00312488  28 03 00 00 */	cmplwi r3, 0
 /* 8031554C 0031248C  41 82 00 08 */	beq lbl_80315554
-/* 80315550 00312490  4B FF F5 85 */	bl J3DShapeDraw_NS_draw
+/* 80315550 00312490  4B FF F5 85 */	bl draw__12J3DShapeDrawCFv
 lbl_80315554:
 /* 80315554 00312494  3B 7B 00 01 */	addi r27, r27, 1
 lbl_80315558:
@@ -743,16 +759,16 @@ lbl_80315558:
 /* 80315560 003124A0  41 80 FF C4 */	blt lbl_80315524
 /* 80315564 003124A4  48 00 00 64 */	b lbl_803155C8
 lbl_80315568:
-/* 80315568 003124A8  3C 60 80 43 */	lis r3, lbl_80434AC8@ha
-/* 8031556C 003124AC  3B C3 4A C8 */	addi r30, r3, lbl_80434AC8@l
+/* 80315568 003124A8  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 8031556C 003124AC  3B C3 4A C8 */	addi r30, r3, j3dSys@l
 /* 80315570 003124B0  80 7E 00 40 */	lwz r3, 0x40(r30)
 /* 80315574 003124B4  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 80315578 003124B8  38 80 00 00 */	li r4, 0
-/* 8031557C 003124BC  4B FF A5 65 */	bl J3DFifoLoadPosMtxImm
+/* 8031557C 003124BC  4B FF A5 65 */	bl J3DFifoLoadPosMtxImm__FPA4_fUl
 /* 80315580 003124C0  80 7E 00 40 */	lwz r3, 0x40(r30)
 /* 80315584 003124C4  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 80315588 003124C8  38 80 00 00 */	li r4, 0
-/* 8031558C 003124CC  4B FF A5 D5 */	bl J3DFifoLoadNrmMtxImm
+/* 8031558C 003124CC  4B FF A5 D5 */	bl J3DFifoLoadNrmMtxImm__FPA4_fUl
 /* 80315590 003124D0  A0 1F 00 0A */	lhz r0, 0xa(r31)
 /* 80315594 003124D4  3B 60 00 00 */	li r27, 0
 /* 80315598 003124D8  83 DF 00 3C */	lwz r30, 0x3c(r31)
@@ -763,7 +779,7 @@ lbl_803155A4:
 /* 803155A8 003124E8  7C 7E 00 2E */	lwzx r3, r30, r0
 /* 803155AC 003124EC  28 03 00 00 */	cmplwi r3, 0
 /* 803155B0 003124F0  41 82 00 08 */	beq lbl_803155B8
-/* 803155B4 003124F4  4B FF F5 21 */	bl J3DShapeDraw_NS_draw
+/* 803155B4 003124F4  4B FF F5 21 */	bl draw__12J3DShapeDrawCFv
 lbl_803155B8:
 /* 803155B8 003124F8  3B 7B 00 01 */	addi r27, r27, 1
 lbl_803155BC:
@@ -777,14 +793,18 @@ lbl_803155C8:
 /* 803155D4 00312514  7C 08 03 A6 */	mtlr r0
 /* 803155D8 00312518  38 21 00 20 */	addi r1, r1, 0x20
 /* 803155DC 0031251C  4E 80 00 20 */	blr 
+
+/* 803155E0 0048 .text draw__8J3DShapeCFv draw__8J3DShapeCFv */
+.global draw__8J3DShapeCFv
+draw__8J3DShapeCFv:
 /* 803155E0 00312520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803155E4 00312524  7C 08 02 A6 */	mflr r0
 /* 803155E8 00312528  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803155EC 0031252C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803155F0 00312530  7C 7F 1B 78 */	mr r31, r3
 /* 803155F4 00312534  38 00 00 00 */	li r0, 0
-/* 803155F8 00312538  90 0D 90 50 */	stw r0, lbl_804515D0-_SDA_BASE_(r13)
-/* 803155FC 0031253C  4B FF FD 05 */	bl J3DShape_NS_loadPreDrawSetting
+/* 803155F8 00312538  90 0D 90 50 */	stw r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
+/* 803155FC 0031253C  4B FF FD 05 */	bl loadPreDrawSetting__8J3DShapeCFv
 /* 80315600 00312540  7F E3 FB 78 */	mr r3, r31
 /* 80315604 00312544  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80315608 00312548  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -795,6 +815,10 @@ lbl_803155C8:
 /* 8031561C 0031255C  7C 08 03 A6 */	mtlr r0
 /* 80315620 00312560  38 21 00 10 */	addi r1, r1, 0x10
 /* 80315624 00312564  4E 80 00 20 */	blr 
+
+/* 80315628 0084 .text simpleDraw__8J3DShapeCFv simpleDraw__8J3DShapeCFv */
+.global simpleDraw__8J3DShapeCFv
+simpleDraw__8J3DShapeCFv:
 /* 80315628 00312568  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031562C 0031256C  7C 08 02 A6 */	mflr r0
 /* 80315630 00312570  90 01 00 24 */	stw r0, 0x24(r1)
@@ -802,13 +826,13 @@ lbl_803155C8:
 /* 80315638 00312578  48 04 CB A5 */	bl _savegpr_29
 /* 8031563C 0031257C  7C 7E 1B 78 */	mr r30, r3
 /* 80315640 00312580  38 00 00 00 */	li r0, 0
-/* 80315644 00312584  90 0D 90 50 */	stw r0, lbl_804515D0-_SDA_BASE_(r13)
-/* 80315648 00312588  4B FF FC B9 */	bl J3DShape_NS_loadPreDrawSetting
+/* 80315644 00312584  90 0D 90 50 */	stw r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
+/* 80315648 00312588  4B FF FC B9 */	bl loadPreDrawSetting__8J3DShapeCFv
 /* 8031564C 0031258C  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 80315650 00312590  54 00 F7 7E */	rlwinm r0, r0, 0x1e, 0x1d, 0x1f
-/* 80315654 00312594  90 0D 90 28 */	stw r0, lbl_804515A8-_SDA_BASE_(r13)
+/* 80315654 00312594  90 0D 90 28 */	stw r0, sCurrentPipeline__11J3DShapeMtx-_SDA_BASE_(r13)
 /* 80315658 00312598  7F C3 F3 78 */	mr r3, r30
-/* 8031565C 0031259C  4B FF F8 91 */	bl J3DShape_NS_loadVtxArray
+/* 8031565C 0031259C  4B FF F8 91 */	bl loadVtxArray__8J3DShapeCFv
 /* 80315660 003125A0  A3 FE 00 0A */	lhz r31, 0xa(r30)
 /* 80315664 003125A4  3B A0 00 00 */	li r29, 0
 /* 80315668 003125A8  83 DE 00 3C */	lwz r30, 0x3c(r30)
@@ -818,7 +842,7 @@ lbl_80315670:
 /* 80315674 003125B4  7C 7E 00 2E */	lwzx r3, r30, r0
 /* 80315678 003125B8  28 03 00 00 */	cmplwi r3, 0
 /* 8031567C 003125BC  41 82 00 08 */	beq lbl_80315684
-/* 80315680 003125C0  4B FF F4 55 */	bl J3DShapeDraw_NS_draw
+/* 80315680 003125C0  4B FF F4 55 */	bl draw__12J3DShapeDrawCFv
 lbl_80315684:
 /* 80315684 003125C4  3B BD 00 01 */	addi r29, r29, 1
 lbl_80315688:
@@ -831,20 +855,24 @@ lbl_80315688:
 /* 803156A0 003125E0  7C 08 03 A6 */	mtlr r0
 /* 803156A4 003125E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803156A8 003125E8  4E 80 00 20 */	blr 
+
+/* 803156AC 00F4 .text simpleDrawCache__8J3DShapeCFv simpleDrawCache__8J3DShapeCFv */
+.global simpleDrawCache__8J3DShapeCFv
+simpleDrawCache__8J3DShapeCFv:
 /* 803156AC 003125EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803156B0 003125F0  7C 08 02 A6 */	mflr r0
 /* 803156B4 003125F4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803156B8 003125F8  39 61 00 20 */	addi r11, r1, 0x20
 /* 803156BC 003125FC  48 04 CB 21 */	bl _savegpr_29
 /* 803156C0 00312600  7C 7E 1B 78 */	mr r30, r3
-/* 803156C4 00312604  80 0D 90 50 */	lwz r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 803156C4 00312604  80 0D 90 50 */	lwz r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 /* 803156C8 00312608  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 803156CC 0031260C  7C 00 18 40 */	cmplw r0, r3
 /* 803156D0 00312610  41 82 00 14 */	beq lbl_803156E4
 /* 803156D4 00312614  38 80 00 C0 */	li r4, 0xc0
 /* 803156D8 00312618  48 04 A8 19 */	bl GXCallDisplayList
 /* 803156DC 0031261C  80 1E 00 2C */	lwz r0, 0x2c(r30)
-/* 803156E0 00312620  90 0D 90 50 */	stw r0, lbl_804515D0-_SDA_BASE_(r13)
+/* 803156E0 00312620  90 0D 90 50 */	stw r0, sOldVcdVatCmd__8J3DShape-_SDA_BASE_(r13)
 lbl_803156E4:
 /* 803156E4 00312624  88 0D 90 54 */	lbz r0, lbl_804515D4-_SDA_BASE_(r13)
 /* 803156E8 00312628  28 00 00 00 */	cmplwi r0, 0
@@ -874,7 +902,7 @@ lbl_803156E4:
 /* 80315748 00312688  90 C3 80 00 */	stw r6, -0x8000(r3)
 lbl_8031574C:
 /* 8031574C 0031268C  7F C3 F3 78 */	mr r3, r30
-/* 80315750 00312690  4B FF F7 9D */	bl J3DShape_NS_loadVtxArray
+/* 80315750 00312690  4B FF F7 9D */	bl loadVtxArray__8J3DShapeCFv
 /* 80315754 00312694  A3 FE 00 0A */	lhz r31, 0xa(r30)
 /* 80315758 00312698  3B A0 00 00 */	li r29, 0
 /* 8031575C 0031269C  83 DE 00 3C */	lwz r30, 0x3c(r30)
@@ -884,7 +912,7 @@ lbl_80315764:
 /* 80315768 003126A8  7C 7E 00 2E */	lwzx r3, r30, r0
 /* 8031576C 003126AC  28 03 00 00 */	cmplwi r3, 0
 /* 80315770 003126B0  41 82 00 08 */	beq lbl_80315778
-/* 80315774 003126B4  4B FF F3 61 */	bl J3DShapeDraw_NS_draw
+/* 80315774 003126B4  4B FF F3 61 */	bl draw__12J3DShapeDrawCFv
 lbl_80315778:
 /* 80315778 003126B8  3B BD 00 01 */	addi r29, r29, 1
 lbl_8031577C:
@@ -897,4 +925,53 @@ lbl_8031577C:
 /* 80315794 003126D4  7C 08 03 A6 */	mtlr r0
 /* 80315798 003126D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031579C 003126DC  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 803A1E98 0010 .rodata lbl_803A1E98 @697 */
+.global lbl_803A1E98
+lbl_803A1E98:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02 /* baserom.dol+0x39ee98 */
+
+
+
+.section .data, "aw"
+/* 803CDC78 0018 .data __vt__8J3DShape __vt__8J3DShape */
+.global __vt__8J3DShape
+__vt__8J3DShape:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x31, 0x55, 0xe0, 0x80, 0x31, 0x54, 0x4c /* baserom.dol+0x3cac78 */
+.byte 0x80, 0x31, 0x56, 0x28, 0x80, 0x31, 0x56, 0xac /* baserom.dol+0x3cac88 */
+
+
+
+.section .sbss, "aw"
+/* 804515C8 0004 .sbss lbl_804515C8 sInterruptFlag$903 */
+.global lbl_804515C8
+lbl_804515C8:
+.skip 0x4
+
+/* 804515CC 0004 .sbss lbl_804515CC lbl_804515CC */
+.global lbl_804515CC
+lbl_804515CC:
+.skip 0x4
+
+/* 804515D0 0004 .sbss sOldVcdVatCmd__8J3DShape sOldVcdVatCmd__8J3DShape */
+.global sOldVcdVatCmd__8J3DShape
+sOldVcdVatCmd__8J3DShape:
+.skip 0x4
+
+/* 804515D4 0004 .sbss lbl_804515D4 lbl_804515D4 */
+.global lbl_804515D4
+lbl_804515D4:
+.skip 0x4
+
+
+
+.section .sdata2, "a"
+/* 804563A0 0004 .sdata2 lbl_804563A0 @687 */
+.global lbl_804563A0
+lbl_804563A0:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5200 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5204 */
 

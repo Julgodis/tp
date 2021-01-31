@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 803584a0
 
-
+.section .text, "ax"
+/* 803584A0 01B8 .text __CARDSeek __CARDSeek */
 .global __CARDSeek
 __CARDSeek:
 /* 803584A0 003553E0  7C 08 02 A6 */	mflr r0
@@ -126,6 +126,8 @@ lbl_80358638:
 /* 8035864C 0035558C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80358650 00355590  7C 08 03 A6 */	mtlr r0
 /* 80358654 00355594  4E 80 00 20 */	blr 
+
+/* 80358658 0130 .text ReadCallback ReadCallback */
 .global ReadCallback
 ReadCallback:
 /* 80358658 00355598  7C 08 02 A6 */	mflr r0
@@ -133,9 +135,9 @@ ReadCallback:
 /* 80358660 003555A0  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 80358664 003555A4  BF 61 00 14 */	stmw r27, 0x14(r1)
 /* 80358668 003555A8  3B A3 00 00 */	addi r29, r3, 0
-/* 8035866C 003555AC  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
+/* 8035866C 003555AC  3C 60 80 45 */	lis r3, __CARDBlock@ha
 /* 80358670 003555B0  1C BD 01 10 */	mulli r5, r29, 0x110
-/* 80358674 003555B4  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80358674 003555B4  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80358678 003555B8  7C 9E 23 79 */	or. r30, r4, r4
 /* 8035867C 003555BC  7F E0 2A 14 */	add r31, r0, r5
 /* 80358680 003555C0  41 80 00 C8 */	blt lbl_80358748
@@ -187,9 +189,7 @@ lbl_80358724:
 lbl_80358728:
 /* 80358728 00355668  7C 80 19 D6 */	mullw r4, r0, r3
 /* 8035872C 0035566C  80 DF 00 B4 */	lwz r6, 0xb4(r31)
-.global ReadCallback
 /* 80358730 00355670  3C 60 80 36 */	lis r3, ReadCallback@ha
-.global ReadCallback
 /* 80358734 00355674  38 E3 86 58 */	addi r7, r3, ReadCallback@l
 /* 80358738 00355678  38 7D 00 00 */	addi r3, r29, 0
 /* 8035873C 0035567C  4B FF CB 25 */	bl __CARDRead
@@ -214,6 +214,7 @@ lbl_80358774:
 /* 80358780 003556C0  7C 08 03 A6 */	mtlr r0
 /* 80358784 003556C4  4E 80 00 20 */	blr 
 
+/* 80358788 0144 .text CARDReadAsync CARDReadAsync */
 .global CARDReadAsync
 CARDReadAsync:
 /* 80358788 003556C8  7C 08 02 A6 */	mflr r0
@@ -265,9 +266,7 @@ lbl_8035881C:
 /* 80358830 00355770  7F 80 E3 78 */	mr r0, r28
 /* 80358834 00355774  48 00 00 0C */	b lbl_80358840
 lbl_80358838:
-.global __CARDDefaultApiCallback
 /* 80358838 00355778  3C 60 80 35 */	lis r3, __CARDDefaultApiCallback@ha
-.global __CARDDefaultApiCallback
 /* 8035883C 0035577C  38 03 2A 30 */	addi r0, r3, __CARDDefaultApiCallback@l
 lbl_80358840:
 /* 80358840 00355780  80 61 00 1C */	lwz r3, 0x1c(r1)
@@ -283,12 +282,10 @@ lbl_80358840:
 /* 80358868 003557A8  7F E3 FB 78 */	mr r3, r31
 lbl_8035886C:
 /* 8035886C 003557AC  A0 1D 00 10 */	lhz r0, 0x10(r29)
-.global ReadCallback
 /* 80358870 003557B0  3C 80 80 36 */	lis r4, ReadCallback@ha
 /* 80358874 003557B4  3B E3 00 00 */	addi r31, r3, 0
 /* 80358878 003557B8  80 7D 00 00 */	lwz r3, 0(r29)
 /* 8035887C 003557BC  7C 05 01 D6 */	mullw r0, r5, r0
-.global ReadCallback
 /* 80358880 003557C0  38 E4 86 58 */	addi r7, r4, ReadCallback@l
 /* 80358884 003557C4  38 BF 00 00 */	addi r5, r31, 0
 /* 80358888 003557C8  38 DE 00 00 */	addi r6, r30, 0
@@ -311,13 +308,12 @@ lbl_803588AC:
 /* 803588C4 00355804  7C 08 03 A6 */	mtlr r0
 /* 803588C8 00355808  4E 80 00 20 */	blr 
 
+/* 803588CC 0048 .text CARDRead CARDRead */
 .global CARDRead
 CARDRead:
 /* 803588CC 0035580C  7C 08 02 A6 */	mflr r0
-.global __CARDSyncCallback
 /* 803588D0 00355810  3C E0 80 35 */	lis r7, __CARDSyncCallback@ha
 /* 803588D4 00355814  90 01 00 04 */	stw r0, 4(r1)
-.global __CARDSyncCallback
 /* 803588D8 00355818  38 E7 2A 34 */	addi r7, r7, __CARDSyncCallback@l
 /* 803588DC 0035581C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803588E0 00355820  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -335,3 +331,4 @@ lbl_80358900:
 /* 80358908 00355848  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035890C 0035584C  7C 08 03 A6 */	mtlr r0
 /* 80358910 00355850  4E 80 00 20 */	blr 
+

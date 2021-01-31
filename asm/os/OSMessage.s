@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033e994
 
-
+.section .text, "ax"
+/* 8033E994 0060 .text OSInitMessageQueue OSInitMessageQueue */
 .global OSInitMessageQueue
 OSInitMessageQueue:
 /* 8033E994 0033B8D4  7C 08 02 A6 */	mflr r0
@@ -30,6 +30,7 @@ OSInitMessageQueue:
 /* 8033E9EC 0033B92C  7C 08 03 A6 */	mtlr r0
 /* 8033E9F0 0033B930  4E 80 00 20 */	blr 
 
+/* 8033E9F4 00C8 .text OSSendMessage OSSendMessage */
 .global OSSendMessage
 OSSendMessage:
 /* 8033E9F4 0033B934  7C 08 02 A6 */	mflr r0
@@ -42,7 +43,7 @@ OSSendMessage:
 /* 8033EA10 0033B950  3B A4 00 00 */	addi r29, r4, 0
 /* 8033EA14 0033B954  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EA18 0033B958  3B 83 00 00 */	addi r28, r3, 0
-/* 8033EA1C 0033B95C  4B FF EC D9 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033EA1C 0033B95C  4B FF EC D9 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033EA20 0033B960  3B C3 00 00 */	addi r30, r3, 0
 /* 8033EA24 0033B964  57 FF 07 FE */	clrlwi r31, r31, 0x1f
 /* 8033EA28 0033B968  48 00 00 24 */	b lbl_8033EA4C
@@ -87,6 +88,7 @@ lbl_8033EA9C:
 /* 8033EAB4 0033B9F4  7C 08 03 A6 */	mtlr r0
 /* 8033EAB8 0033B9F8  4E 80 00 20 */	blr 
 
+/* 8033EABC 00DC .text OSReceiveMessage OSReceiveMessage */
 .global OSReceiveMessage
 OSReceiveMessage:
 /* 8033EABC 0033B9FC  7C 08 02 A6 */	mflr r0
@@ -99,7 +101,7 @@ OSReceiveMessage:
 /* 8033EAD8 0033BA18  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8033EADC 0033BA1C  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EAE0 0033BA20  3B 84 00 00 */	addi r28, r4, 0
-/* 8033EAE4 0033BA24  4B FF EC 11 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033EAE4 0033BA24  4B FF EC 11 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033EAE8 0033BA28  3B A3 00 00 */	addi r29, r3, 0
 /* 8033EAEC 0033BA2C  57 DE 07 FE */	clrlwi r30, r30, 0x1f
 /* 8033EAF0 0033BA30  48 00 00 24 */	b lbl_8033EB14
@@ -150,6 +152,7 @@ lbl_8033EB78:
 /* 8033EB90 0033BAD0  7C 08 03 A6 */	mtlr r0
 /* 8033EB94 0033BAD4  4E 80 00 20 */	blr 
 
+/* 8033EB98 00D4 .text OSJamMessage OSJamMessage */
 .global OSJamMessage
 OSJamMessage:
 /* 8033EB98 0033BAD8  7C 08 02 A6 */	mflr r0
@@ -162,7 +165,7 @@ OSJamMessage:
 /* 8033EBB4 0033BAF4  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8033EBB8 0033BAF8  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EBBC 0033BAFC  3B 84 00 00 */	addi r28, r4, 0
-/* 8033EBC0 0033BB00  4B FF EB 35 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033EBC0 0033BB00  4B FF EB 35 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033EBC4 0033BB04  3B A3 00 00 */	addi r29, r3, 0
 /* 8033EBC8 0033BB08  57 DE 07 FE */	clrlwi r30, r30, 0x1f
 /* 8033EBCC 0033BB0C  48 00 00 24 */	b lbl_8033EBF0
@@ -209,3 +212,4 @@ lbl_8033EC4C:
 /* 8033EC60 0033BBA0  38 21 00 28 */	addi r1, r1, 0x28
 /* 8033EC64 0033BBA4  7C 08 03 A6 */	mtlr r0
 /* 8033EC68 0033BBA8  4E 80 00 20 */	blr 
+

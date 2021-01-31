@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802cddc8
 
-
+.section .text, "ax"
+/* 802CDDC8 008C .text GFSetGenMode2__FUcUcUcUc11_GXCullMode GFSetGenMode2__FUcUcUcUc11_GXCullMode */
+.global GFSetGenMode2__FUcUcUcUc11_GXCullMode
+GFSetGenMode2__FUcUcUcUc11_GXCullMode:
 /* 802CDDC8 002CAD08  39 40 00 61 */	li r10, 0x61
 /* 802CDDCC 002CAD0C  3D 20 CC 01 */	lis r9, 0xCC008000@ha
 /* 802CDDD0 002CAD10  99 49 80 00 */	stb r10, 0xCC008000@l(r9)
@@ -38,3 +40,18 @@
 /* 802CDE48 002CAD88  B0 09 80 00 */	sth r0, -0x8000(r9)
 /* 802CDE4C 002CAD8C  91 49 80 00 */	stw r10, -0x8000(r9)
 /* 802CDE50 002CAD90  4E 80 00 20 */	blr 
+
+
+
+.section .sdata, "a"
+/* 804508A8 0004 .sdata lbl_804508A8 cm2hw$539 */
+.global lbl_804508A8
+lbl_804508A8:
+.byte 0x00, 0x02, 0x01, 0x03 /* baserom.dol+0x3d0608 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d060c */
+
+/* 804508B0 0008 .sdata lbl_804508B0 lbl_804508B0 */
+.global lbl_804508B0
+lbl_804508B0:
+.byte 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0610 */
+

@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033f5d0
 
-
+.section .text, "ax"
+/* 8033F5D0 0070 .text __OSReboot __OSReboot */
 .global __OSReboot
 __OSReboot:
 /* 8033F5D0 0033C510  7C 08 02 A6 */	mflr r0
@@ -12,7 +12,7 @@ __OSReboot:
 /* 8033F5E0 0033C520  3B E4 00 00 */	addi r31, r4, 0
 /* 8033F5E4 0033C524  93 C1 02 E0 */	stw r30, 0x2e0(r1)
 /* 8033F5E8 0033C528  3B C3 00 00 */	addi r30, r3, 0
-/* 8033F5EC 0033C52C  4B FF E1 09 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F5EC 0033C52C  4B FF E1 09 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F5F0 0033C530  3C 60 81 28 */	lis r3, 0x8128
 /* 8033F5F4 0033C534  4B FF BC B1 */	bl OSSetArenaLo
 /* 8033F5F8 0033C538  3C 60 81 2F */	lis r3, 0x812f
@@ -34,17 +34,32 @@ __OSReboot:
 /* 8033F638 0033C578  7C 08 03 A6 */	mtlr r0
 /* 8033F63C 0033C57C  4E 80 00 20 */	blr 
 
+/* 8033F640 000C .text OSSetSaveRegion OSSetSaveRegion */
 .global OSSetSaveRegion
 OSSetSaveRegion:
-/* 8033F640 0033C580  90 6D 91 08 */	stw r3, lbl_80451688-_SDA_BASE_(r13)
-/* 8033F644 0033C584  90 8D 91 0C */	stw r4, lbl_8045168C-_SDA_BASE_(r13)
+/* 8033F640 0033C580  90 6D 91 08 */	stw r3, SaveStart-_SDA_BASE_(r13)
+/* 8033F644 0033C584  90 8D 91 0C */	stw r4, SaveEnd-_SDA_BASE_(r13)
 /* 8033F648 0033C588  4E 80 00 20 */	blr 
 
+/* 8033F64C 0014 .text OSGetSaveRegion OSGetSaveRegion */
 .global OSGetSaveRegion
 OSGetSaveRegion:
-/* 8033F64C 0033C58C  80 0D 91 08 */	lwz r0, lbl_80451688-_SDA_BASE_(r13)
+/* 8033F64C 0033C58C  80 0D 91 08 */	lwz r0, SaveStart-_SDA_BASE_(r13)
 /* 8033F650 0033C590  90 03 00 00 */	stw r0, 0(r3)
-/* 8033F654 0033C594  80 0D 91 0C */	lwz r0, lbl_8045168C-_SDA_BASE_(r13)
+/* 8033F654 0033C594  80 0D 91 0C */	lwz r0, SaveEnd-_SDA_BASE_(r13)
 /* 8033F658 0033C598  90 04 00 00 */	stw r0, 0(r4)
 /* 8033F65C 0033C59C  4E 80 00 20 */	blr 
+
+
+
+.section .sbss, "aw"
+/* 80451688 0004 .sbss SaveStart SaveStart */
+.global SaveStart
+SaveStart:
+.skip 0x4
+
+/* 8045168C 0004 .sbss SaveEnd SaveEnd */
+.global SaveEnd
+SaveEnd:
+.skip 0x4
 

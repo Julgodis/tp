@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029354c
 
-
-.global JASTrackPort_NS_init
-JASTrackPort_NS_init:
+.section .text, "ax"
+/* 8029354C 0030 .text init__12JASTrackPortFv init__12JASTrackPortFv */
+.global init__12JASTrackPortFv
+init__12JASTrackPortFv:
 /* 8029354C 0029048C  38 80 00 00 */	li r4, 0
 /* 80293550 00290490  7C 85 23 78 */	mr r5, r4
 /* 80293554 00290494  38 00 00 10 */	li r0, 0x10
@@ -19,8 +19,9 @@ lbl_8029355C:
 /* 80293574 002904B4  B0 03 00 02 */	sth r0, 2(r3)
 /* 80293578 002904B8  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_readImport
-JASTrackPort_NS_readImport:
+/* 8029357C 0024 .text readImport__12JASTrackPortFUl readImport__12JASTrackPortFUl */
+.global readImport__12JASTrackPortFUl
+readImport__12JASTrackPortFUl:
 /* 8029357C 002904BC  A0 A3 00 00 */	lhz r5, 0(r3)
 /* 80293580 002904C0  38 00 00 01 */	li r0, 1
 /* 80293584 002904C4  7C 00 20 30 */	slw r0, r0, r4
@@ -31,8 +32,9 @@ JASTrackPort_NS_readImport:
 /* 80293598 002904D8  A0 63 00 04 */	lhz r3, 4(r3)
 /* 8029359C 002904DC  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_readExport
-JASTrackPort_NS_readExport:
+/* 802935A0 0024 .text readExport__12JASTrackPortFUl readExport__12JASTrackPortFUl */
+.global readExport__12JASTrackPortFUl
+readExport__12JASTrackPortFUl:
 /* 802935A0 002904E0  A0 A3 00 02 */	lhz r5, 2(r3)
 /* 802935A4 002904E4  38 00 00 01 */	li r0, 1
 /* 802935A8 002904E8  7C 00 20 30 */	slw r0, r0, r4
@@ -43,8 +45,9 @@ JASTrackPort_NS_readExport:
 /* 802935BC 002904FC  A0 63 00 04 */	lhz r3, 4(r3)
 /* 802935C0 00290500  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_writeImport
-JASTrackPort_NS_writeImport:
+/* 802935C4 0024 .text writeImport__12JASTrackPortFUlUs writeImport__12JASTrackPortFUlUs */
+.global writeImport__12JASTrackPortFUlUs
+writeImport__12JASTrackPortFUlUs:
 /* 802935C4 00290504  A0 C3 00 00 */	lhz r6, 0(r3)
 /* 802935C8 00290508  38 00 00 01 */	li r0, 1
 /* 802935CC 0029050C  7C 00 20 30 */	slw r0, r0, r4
@@ -55,8 +58,9 @@ JASTrackPort_NS_writeImport:
 /* 802935E0 00290520  B0 A3 00 04 */	sth r5, 4(r3)
 /* 802935E4 00290524  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_writeExport
-JASTrackPort_NS_writeExport:
+/* 802935E8 0024 .text writeExport__12JASTrackPortFUlUs writeExport__12JASTrackPortFUlUs */
+.global writeExport__12JASTrackPortFUlUs
+writeExport__12JASTrackPortFUlUs:
 /* 802935E8 00290528  A0 C3 00 02 */	lhz r6, 2(r3)
 /* 802935EC 0029052C  38 00 00 01 */	li r0, 1
 /* 802935F0 00290530  7C 00 20 30 */	slw r0, r0, r4
@@ -67,8 +71,9 @@ JASTrackPort_NS_writeExport:
 /* 80293604 00290544  B0 A3 00 04 */	sth r5, 4(r3)
 /* 80293608 00290548  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_checkImport
-JASTrackPort_NS_checkImport:
+/* 8029360C 001C .text checkImport__12JASTrackPortCFUl checkImport__12JASTrackPortCFUl */
+.global checkImport__12JASTrackPortCFUl
+checkImport__12JASTrackPortCFUl:
 /* 8029360C 0029054C  A0 63 00 00 */	lhz r3, 0(r3)
 /* 80293610 00290550  38 00 00 01 */	li r0, 1
 /* 80293614 00290554  7C 00 20 30 */	slw r0, r0, r4
@@ -77,8 +82,9 @@ JASTrackPort_NS_checkImport:
 /* 80293620 00290560  7C 60 19 10 */	subfe r3, r0, r3
 /* 80293624 00290564  4E 80 00 20 */	blr 
 
-.global JASTrackPort_NS_checkExport
-JASTrackPort_NS_checkExport:
+/* 80293628 001C .text checkExport__12JASTrackPortCFUl checkExport__12JASTrackPortCFUl */
+.global checkExport__12JASTrackPortCFUl
+checkExport__12JASTrackPortCFUl:
 /* 80293628 00290568  A0 63 00 02 */	lhz r3, 2(r3)
 /* 8029362C 0029056C  38 00 00 01 */	li r0, 1
 /* 80293630 00290570  7C 00 20 30 */	slw r0, r0, r4

@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a2ab0
 
-
-.global JAISoundChild_NS_init
-JAISoundChild_NS_init:
+.section .text, "ax"
+/* 802A2AB0 0078 .text init__13JAISoundChildFv init__13JAISoundChildFv */
+.global init__13JAISoundChildFv
+init__13JAISoundChildFv:
 /* 802A2AB0 0029F9F0  C0 42 BD D8 */	lfs f2, lbl_804557D8-_SDA2_BASE_(r2)
 /* 802A2AB4 0029F9F4  D0 43 00 00 */	stfs f2, 0(r3)
 /* 802A2AB8 0029F9F8  D0 43 00 08 */	stfs f2, 8(r3)
@@ -36,8 +36,9 @@ JAISoundChild_NS_init:
 /* 802A2B20 0029FA60  D0 23 00 60 */	stfs f1, 0x60(r3)
 /* 802A2B24 0029FA64  4E 80 00 20 */	blr 
 
-.global JAISoundChild_NS_mixOut
-JAISoundChild_NS_mixOut:
+/* 802A2B28 0054 .text mixOut__13JAISoundChildFP8JASTrack mixOut__13JAISoundChildFP8JASTrack */
+.global mixOut__13JAISoundChildFP8JASTrack
+mixOut__13JAISoundChildFP8JASTrack:
 /* 802A2B28 0029FA68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2B2C 0029FA6C  7C 08 02 A6 */	mflr r0
 /* 802A2B30 0029FA70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -54,14 +55,15 @@ JAISoundChild_NS_mixOut:
 /* 802A2B5C 0029FA9C  D0 03 00 60 */	stfs f0, 0x60(r3)
 /* 802A2B60 0029FAA0  7C 83 23 78 */	mr r3, r4
 /* 802A2B64 0029FAA4  38 80 00 00 */	li r4, 0
-/* 802A2B68 0029FAA8  4B FE EE 8D */	bl JASTrack_NS_assignExtBuffer
+/* 802A2B68 0029FAA8  4B FE EE 8D */	bl assignExtBuffer__8JASTrackFUlP14JASSoundParams
 /* 802A2B6C 0029FAAC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802A2B70 0029FAB0  7C 08 03 A6 */	mtlr r0
 /* 802A2B74 0029FAB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2B78 0029FAB8  4E 80 00 20 */	blr 
 
-.global JAISoundChild_NS_calc
-JAISoundChild_NS_calc:
+/* 802A2B7C 011C .text calc__13JAISoundChildFv calc__13JAISoundChildFv */
+.global calc__13JAISoundChildFv
+calc__13JAISoundChildFv:
 /* 802A2B7C 0029FABC  C0 23 00 00 */	lfs f1, 0(r3)
 /* 802A2B80 0029FAC0  80 83 00 1C */	lwz r4, 0x1c(r3)
 /* 802A2B84 0029FAC4  28 04 00 01 */	cmplwi r4, 1
@@ -143,4 +145,23 @@ lbl_802A2C80:
 lbl_802A2C90:
 /* 802A2C90 0029FBD0  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 802A2C94 0029FBD4  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 804557D8 0004 .sdata2 lbl_804557D8 @689 */
+.global lbl_804557D8
+lbl_804557D8:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4638 */
+
+/* 804557DC 0004 .sdata2 lbl_804557DC @690 */
+.global lbl_804557DC
+lbl_804557DC:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d463c */
+
+/* 804557E0 0004 .sdata2 lbl_804557E0 @691 */
+.global lbl_804557E0
+lbl_804557E0:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4640 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4644 */
 

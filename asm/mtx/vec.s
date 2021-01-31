@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80347090
 
-
+.section .text, "ax"
+/* 80347090 0024 .text PSVECAdd PSVECAdd */
 .global PSVECAdd
 PSVECAdd:
 /* 80347090 00343FD0  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
@@ -15,6 +15,7 @@ PSVECAdd:
 /* 803470AC 00343FEC  F0 E5 80 08 */	psq_st f7, 8(r5), 1, qr0
 /* 803470B0 00343FF0  4E 80 00 20 */	blr 
 
+/* 803470B4 0024 .text PSVECSubtract PSVECSubtract */
 .global PSVECSubtract
 PSVECSubtract:
 /* 803470B4 00343FF4  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
@@ -27,6 +28,7 @@ PSVECSubtract:
 /* 803470D0 00344010  F0 E5 80 08 */	psq_st f7, 8(r5), 1, qr0
 /* 803470D4 00344014  4E 80 00 20 */	blr 
 
+/* 803470D8 001C .text PSVECScale PSVECScale */
 .global PSVECScale
 PSVECScale:
 /* 803470D8 00344018  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -37,6 +39,7 @@ PSVECScale:
 /* 803470EC 0034402C  F0 04 80 08 */	psq_st f0, 8(r4), 1, qr0
 /* 803470F0 00344030  4E 80 00 20 */	blr 
 
+/* 803470F4 0044 .text PSVECNormalize PSVECNormalize */
 .global PSVECNormalize
 PSVECNormalize:
 /* 803470F4 00344034  C0 02 CB 44 */	lfs f0, lbl_80456544-_SDA2_BASE_(r2)
@@ -57,6 +60,7 @@ PSVECNormalize:
 /* 80347130 00344070  F0 64 80 08 */	psq_st f3, 8(r4), 1, qr0
 /* 80347134 00344074  4E 80 00 20 */	blr 
 
+/* 80347138 0018 .text PSVECSquareMag PSVECSquareMag */
 .global PSVECSquareMag
 PSVECSquareMag:
 /* 80347138 00344078  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -66,6 +70,7 @@ PSVECSquareMag:
 /* 80347148 00344088  10 21 00 14 */	ps_sum0 f1, f1, f0, f0
 /* 8034714C 0034408C  4E 80 00 20 */	blr 
 
+/* 80347150 0044 .text PSVECMag PSVECMag */
 .global PSVECMag
 PSVECMag:
 /* 80347150 00344090  C0 82 CB 44 */	lfs f4, lbl_80456544-_SDA2_BASE_(r2)
@@ -87,6 +92,7 @@ PSVECMag:
 lbl_80347190:
 /* 80347190 003440D0  4E 80 00 20 */	blr 
 
+/* 80347194 0020 .text PSVECDotProduct PSVECDotProduct */
 .global PSVECDotProduct
 PSVECDotProduct:
 /* 80347194 003440D4  E0 43 00 04 */	psq_l f2, 4(r3), 0, qr0
@@ -98,6 +104,7 @@ PSVECDotProduct:
 /* 803471AC 003440EC  10 23 10 94 */	ps_sum0 f1, f3, f2, f2
 /* 803471B0 003440F0  4E 80 00 20 */	blr 
 
+/* 803471B4 003C .text PSVECCrossProduct PSVECCrossProduct */
 .global PSVECCrossProduct
 PSVECCrossProduct:
 /* 803471B4 003440F4  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
@@ -116,6 +123,7 @@ PSVECCrossProduct:
 /* 803471E8 00344128  F1 45 00 04 */	psq_st f10, 4(r5), 0, qr0
 /* 803471EC 0034412C  4E 80 00 20 */	blr 
 
+/* 803471F0 00D8 .text C_VECHalfAngle C_VECHalfAngle */
 .global C_VECHalfAngle
 C_VECHalfAngle:
 /* 803471F0 00344130  7C 08 02 A6 */	mflr r0
@@ -175,6 +183,7 @@ lbl_803472B4:
 /* 803472C0 00344200  7C 08 03 A6 */	mtlr r0
 /* 803472C4 00344204  4E 80 00 20 */	blr 
 
+/* 803472C8 00D4 .text C_VECReflect C_VECReflect */
 .global C_VECReflect
 C_VECReflect:
 /* 803472C8 00344208  7C 08 02 A6 */	mflr r0
@@ -231,6 +240,7 @@ C_VECReflect:
 /* 80347394 003442D4  7C 08 03 A6 */	mtlr r0
 /* 80347398 003442D8  4E 80 00 20 */	blr 
 
+/* 8034739C 0028 .text PSVECSquareDistance PSVECSquareDistance */
 .global PSVECSquareDistance
 PSVECSquareDistance:
 /* 8034739C 003442DC  E0 03 00 04 */	psq_l f0, 4(r3), 0, qr0
@@ -244,6 +254,7 @@ PSVECSquareDistance:
 /* 803473BC 003442FC  10 21 10 94 */	ps_sum0 f1, f1, f2, f2
 /* 803473C0 00344300  4E 80 00 20 */	blr 
 
+/* 803473C4 0054 .text PSVECDistance PSVECDistance */
 .global PSVECDistance
 PSVECDistance:
 /* 803473C4 00344304  E0 03 00 04 */	psq_l f0, 4(r3), 0, qr0
@@ -268,3 +279,27 @@ PSVECDistance:
 /* 80347410 00344350  EC 21 00 32 */	fmuls f1, f1, f0
 lbl_80347414:
 /* 80347414 00344354  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80456540 0004 .sdata2 lbl_80456540 @113 */
+.global lbl_80456540
+lbl_80456540:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53a0 */
+
+/* 80456544 0004 .sdata2 lbl_80456544 @118 */
+.global lbl_80456544
+lbl_80456544:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53a4 */
+
+/* 80456548 0004 .sdata2 lbl_80456548 @119 */
+.global lbl_80456548
+lbl_80456548:
+.byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d53a8 */
+
+/* 8045654C 0004 .sdata2 lbl_8045654C @161 */
+.global lbl_8045654C
+lbl_8045654C:
+.byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53ac */
+

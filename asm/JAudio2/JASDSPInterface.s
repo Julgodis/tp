@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029d958
 
-
-.global JASDsp_NS_boot
-JASDsp_NS_boot:
+.section .text, "ax"
+/* 8029D958 004C .text boot__6JASDspFPFPv_v boot__6JASDspFPFPv_v */
+.global boot__6JASDspFPFPv_v
+boot__6JASDspFPFPv_v:
 /* 8029D958 0029A898  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029D95C 0029A89C  7C 08 02 A6 */	mflr r0
 /* 8029D960 0029A8A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,7 +18,7 @@ lbl_8029D97C:
 /* 8029D97C 0029A8BC  88 0D 8D 74 */	lbz r0, lbl_804512F4-_SDA_BASE_(r13)
 /* 8029D980 0029A8C0  28 00 00 00 */	cmplwi r0, 0
 /* 8029D984 0029A8C4  41 82 00 10 */	beq lbl_8029D994
-/* 8029D988 0029A8C8  48 00 0D 99 */	bl DspBoot
+/* 8029D988 0029A8C8  48 00 0D 99 */	bl DspBoot__FPFPv_v
 /* 8029D98C 0029A8CC  38 00 00 00 */	li r0, 0
 /* 8029D990 0029A8D0  98 0D 8D 74 */	stb r0, lbl_804512F4-_SDA_BASE_(r13)
 lbl_8029D994:
@@ -27,67 +27,74 @@ lbl_8029D994:
 /* 8029D99C 0029A8DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D9A0 0029A8E0  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_releaseHalt
-JASDsp_NS_releaseHalt:
+/* 8029D9A4 0020 .text releaseHalt__6JASDspFUl releaseHalt__6JASDspFUl */
+.global releaseHalt__6JASDspFUl
+releaseHalt__6JASDspFUl:
 /* 8029D9A4 0029A8E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029D9A8 0029A8E8  7C 08 02 A6 */	mflr r0
 /* 8029D9AC 0029A8EC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029D9B0 0029A8F0  48 00 0B 31 */	bl DSPReleaseHalt2
+/* 8029D9B0 0029A8F0  48 00 0B 31 */	bl DSPReleaseHalt2__FUl
 /* 8029D9B4 0029A8F4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029D9B8 0029A8F8  7C 08 03 A6 */	mtlr r0
 /* 8029D9BC 0029A8FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D9C0 0029A900  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_finishWork
-JASDsp_NS_finishWork:
+/* 8029D9C4 0020 .text finishWork__6JASDspFUs finishWork__6JASDspFUs */
+.global finishWork__6JASDspFUs
+finishWork__6JASDspFUs:
 /* 8029D9C4 0029A904  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029D9C8 0029A908  7C 08 02 A6 */	mflr r0
 /* 8029D9CC 0029A90C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029D9D0 0029A910  48 00 0F B1 */	bl DspFinishWork
+/* 8029D9D0 0029A910  48 00 0F B1 */	bl DspFinishWork__FUs
 /* 8029D9D4 0029A914  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029D9D8 0029A918  7C 08 03 A6 */	mtlr r0
 /* 8029D9DC 0029A91C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D9E0 0029A920  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_syncFrame
-JASDsp_NS_syncFrame:
+/* 8029D9E4 0020 .text syncFrame__6JASDspFUlUlUl syncFrame__6JASDspFUlUlUl */
+.global syncFrame__6JASDspFUlUlUl
+syncFrame__6JASDspFUlUlUl:
 /* 8029D9E4 0029A924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029D9E8 0029A928  7C 08 02 A6 */	mflr r0
 /* 8029D9EC 0029A92C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029D9F0 0029A930  48 00 14 51 */	bl DsyncFrame2
+/* 8029D9F0 0029A930  48 00 14 51 */	bl DsyncFrame2__FUlUlUl
 /* 8029D9F4 0029A934  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029D9F8 0029A938  7C 08 03 A6 */	mtlr r0
 /* 8029D9FC 0029A93C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DA00 0029A940  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_setDSPMixerLevel
-JASDsp_NS_setDSPMixerLevel:
+/* 8029DA04 002C .text setDSPMixerLevel__6JASDspFf setDSPMixerLevel__6JASDspFf */
+.global setDSPMixerLevel__6JASDspFf
+setDSPMixerLevel__6JASDspFf:
 /* 8029DA04 0029A944  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DA08 0029A948  7C 08 02 A6 */	mflr r0
 /* 8029DA0C 0029A94C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029DA10 0029A950  D0 2D 8D 70 */	stfs f1, lbl_804512F0-_SDA_BASE_(r13)
+/* 8029DA10 0029A950  D0 2D 8D 70 */	stfs f1, sDSPVolume__6JASDsp-_SDA_BASE_(r13)
 /* 8029DA14 0029A954  C0 02 BD 48 */	lfs f0, lbl_80455748-_SDA2_BASE_(r2)
 /* 8029DA18 0029A958  EC 21 00 32 */	fmuls f1, f1, f0
-/* 8029DA1C 0029A95C  48 00 0B C5 */	bl DsetMixerLevel
+/* 8029DA1C 0029A95C  48 00 0B C5 */	bl DsetMixerLevel__Ff
 /* 8029DA20 0029A960  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029DA24 0029A964  7C 08 03 A6 */	mtlr r0
 /* 8029DA28 0029A968  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DA2C 0029A96C  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_getDSPMixerLevel
-JASDsp_NS_getDSPMixerLevel:
-/* 8029DA30 0029A970  C0 2D 8D 70 */	lfs f1, lbl_804512F0-_SDA_BASE_(r13)
+/* 8029DA30 0008 .text getDSPMixerLevel__6JASDspFv getDSPMixerLevel__6JASDspFv */
+.global getDSPMixerLevel__6JASDspFv
+getDSPMixerLevel__6JASDspFv:
+/* 8029DA30 0029A970  C0 2D 8D 70 */	lfs f1, sDSPVolume__6JASDsp-_SDA_BASE_(r13)
 /* 8029DA34 0029A974  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_getDSPHandle
-JASDsp_NS_getDSPHandle:
-/* 8029DA38 0029A978  80 8D 8D 68 */	lwz r4, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029DA38 0010 .text getDSPHandle__6JASDspFi getDSPHandle__6JASDspFi */
+.global getDSPHandle__6JASDspFi
+getDSPHandle__6JASDspFi:
+/* 8029DA38 0029A978  80 8D 8D 68 */	lwz r4, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DA3C 0029A97C  1C 03 01 80 */	mulli r0, r3, 0x180
 /* 8029DA40 0029A980  7C 64 02 14 */	add r3, r4, r0
 /* 8029DA44 0029A984  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_setFilterTable
-JASDsp_NS_setFilterTable:
+/* 8029DA48 0024 .text setFilterTable__6JASDspFPsPsUl setFilterTable__6JASDspFPsPsUl */
+.global setFilterTable__6JASDspFPsPsUl
+setFilterTable__6JASDspFPsPsUl:
 /* 8029DA48 0029A988  7C A9 03 A6 */	mtctr r5
 /* 8029DA4C 0029A98C  28 05 00 00 */	cmplwi r5, 0
 /* 8029DA50 0029A990  4C 81 00 20 */	blelr 
@@ -99,15 +106,16 @@ lbl_8029DA54:
 /* 8029DA64 0029A9A4  42 00 FF F0 */	bdnz lbl_8029DA54
 /* 8029DA68 0029A9A8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_flushBuffer
-JASDsp_NS_flushBuffer:
+/* 8029DA6C 0034 .text flushBuffer__6JASDspFv flushBuffer__6JASDspFv */
+.global flushBuffer__6JASDspFv
+flushBuffer__6JASDspFv:
 /* 8029DA6C 0029A9AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DA70 0029A9B0  7C 08 02 A6 */	mflr r0
 /* 8029DA74 0029A9B4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029DA78 0029A9B8  80 6D 8D 68 */	lwz r3, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029DA78 0029A9B8  80 6D 8D 68 */	lwz r3, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DA7C 0029A9BC  38 80 60 00 */	li r4, 0x6000
 /* 8029DA80 0029A9C0  48 09 DB 2D */	bl DCFlushRange
-/* 8029DA84 0029A9C4  80 6D 8D 6C */	lwz r3, lbl_804512EC-_SDA_BASE_(r13)
+/* 8029DA84 0029A9C4  80 6D 8D 6C */	lwz r3, FX_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DA88 0029A9C8  38 80 00 80 */	li r4, 0x80
 /* 8029DA8C 0029A9CC  48 09 DB 21 */	bl DCFlushRange
 /* 8029DA90 0029A9D0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -115,12 +123,13 @@ JASDsp_NS_flushBuffer:
 /* 8029DA98 0029A9D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DA9C 0029A9DC  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_invalChannelAll
-JASDsp_NS_invalChannelAll:
+/* 8029DAA0 0028 .text invalChannelAll__6JASDspFv invalChannelAll__6JASDspFv */
+.global invalChannelAll__6JASDspFv
+invalChannelAll__6JASDspFv:
 /* 8029DAA0 0029A9E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DAA4 0029A9E4  7C 08 02 A6 */	mflr r0
 /* 8029DAA8 0029A9E8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029DAAC 0029A9EC  80 6D 8D 68 */	lwz r3, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029DAAC 0029A9EC  80 6D 8D 68 */	lwz r3, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DAB0 0029A9F0  38 80 60 00 */	li r4, 0x6000
 /* 8029DAB4 0029A9F4  48 09 DA CD */	bl DCInvalidateRange
 /* 8029DAB8 0029A9F8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -128,57 +137,59 @@ JASDsp_NS_invalChannelAll:
 /* 8029DAC0 0029AA00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DAC4 0029AA04  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_initBuffer
-JASDsp_NS_initBuffer:
+/* 8029DAC8 00B0 .text initBuffer__6JASDspFv initBuffer__6JASDspFv */
+.global initBuffer__6JASDspFv
+initBuffer__6JASDspFv:
 /* 8029DAC8 0029AA08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DACC 0029AA0C  7C 08 02 A6 */	mflr r0
 /* 8029DAD0 0029AA10  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029DAD4 0029AA14  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029DAD8 0029AA18  38 60 60 00 */	li r3, 0x6000
-/* 8029DADC 0029AA1C  80 8D 8C 90 */	lwz r4, lbl_80451210-_SDA_BASE_(r13)
+/* 8029DADC 0029AA1C  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029DAE0 0029AA20  38 A0 00 20 */	li r5, 0x20
 /* 8029DAE4 0029AA24  48 03 12 2D */	bl __nwa__FUlP7JKRHeapi
-/* 8029DAE8 0029AA28  90 6D 8D 68 */	stw r3, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029DAE8 0029AA28  90 6D 8D 68 */	stw r3, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DAEC 0029AA2C  38 60 00 80 */	li r3, 0x80
-/* 8029DAF0 0029AA30  80 8D 8C 90 */	lwz r4, lbl_80451210-_SDA_BASE_(r13)
+/* 8029DAF0 0029AA30  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029DAF4 0029AA34  38 A0 00 20 */	li r5, 0x20
 /* 8029DAF8 0029AA38  48 03 12 19 */	bl __nwa__FUlP7JKRHeapi
-/* 8029DAFC 0029AA3C  90 6D 8D 6C */	stw r3, lbl_804512EC-_SDA_BASE_(r13)
-/* 8029DB00 0029AA40  80 6D 8D 68 */	lwz r3, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029DAFC 0029AA3C  90 6D 8D 6C */	stw r3, FX_BUF__6JASDsp-_SDA_BASE_(r13)
+/* 8029DB00 0029AA40  80 6D 8D 68 */	lwz r3, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DB04 0029AA44  38 80 60 00 */	li r4, 0x6000
-/* 8029DB08 0029AA48  4B FF 19 79 */	bl JASCalc_NS_bzero
-/* 8029DB0C 0029AA4C  80 6D 8D 6C */	lwz r3, lbl_804512EC-_SDA_BASE_(r13)
+/* 8029DB08 0029AA48  4B FF 19 79 */	bl bzero__7JASCalcFPvUl
+/* 8029DB0C 0029AA4C  80 6D 8D 6C */	lwz r3, FX_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DB10 0029AA50  38 80 00 80 */	li r4, 0x80
-/* 8029DB14 0029AA54  4B FF 19 6D */	bl JASCalc_NS_bzero
+/* 8029DB14 0029AA54  4B FF 19 6D */	bl bzero__7JASCalcFPvUl
 /* 8029DB18 0029AA58  3B E0 00 00 */	li r31, 0
 /* 8029DB1C 0029AA5C  48 00 00 18 */	b lbl_8029DB34
 lbl_8029DB20:
 /* 8029DB20 0029AA60  7F E3 FB 78 */	mr r3, r31
 /* 8029DB24 0029AA64  38 80 00 00 */	li r4, 0
 /* 8029DB28 0029AA68  38 A0 00 00 */	li r5, 0
-/* 8029DB2C 0029AA6C  48 00 00 4D */	bl JASDsp_NS_setFXLine
+/* 8029DB2C 0029AA6C  48 00 00 4D */	bl setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_
 /* 8029DB30 0029AA70  3B FF 00 01 */	addi r31, r31, 1
 lbl_8029DB34:
 /* 8029DB34 0029AA74  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 8029DB38 0029AA78  28 00 00 04 */	cmplwi r0, 4
 /* 8029DB3C 0029AA7C  41 80 FF E4 */	blt lbl_8029DB20
 /* 8029DB40 0029AA80  38 60 00 40 */	li r3, 0x40
-/* 8029DB44 0029AA84  80 8D 8D 68 */	lwz r4, lbl_804512E8-_SDA_BASE_(r13)
-/* 8029DB48 0029AA88  3C A0 80 3A */	lis r5, lbl_8039B3A0@ha
-/* 8029DB4C 0029AA8C  38 A5 B3 A0 */	addi r5, r5, lbl_8039B3A0@l
-/* 8029DB50 0029AA90  3C C0 80 3A */	lis r6, lbl_8039B360@ha
-/* 8029DB54 0029AA94  38 C6 B3 60 */	addi r6, r6, lbl_8039B360@l
-/* 8029DB58 0029AA98  80 ED 8D 6C */	lwz r7, lbl_804512EC-_SDA_BASE_(r13)
-/* 8029DB5C 0029AA9C  48 00 0A 05 */	bl DsetupTable
-/* 8029DB60 0029AAA0  4B FF FF 0D */	bl JASDsp_NS_flushBuffer
+/* 8029DB44 0029AA84  80 8D 8D 68 */	lwz r4, CH_BUF__6JASDsp-_SDA_BASE_(r13)
+/* 8029DB48 0029AA88  3C A0 80 3A */	lis r5, DSPRES_FILTER__6JASDsp@ha
+/* 8029DB4C 0029AA8C  38 A5 B3 A0 */	addi r5, r5, DSPRES_FILTER__6JASDsp@l
+/* 8029DB50 0029AA90  3C C0 80 3A */	lis r6, DSPADPCM_FILTER__6JASDsp@ha
+/* 8029DB54 0029AA94  38 C6 B3 60 */	addi r6, r6, DSPADPCM_FILTER__6JASDsp@l
+/* 8029DB58 0029AA98  80 ED 8D 6C */	lwz r7, FX_BUF__6JASDsp-_SDA_BASE_(r13)
+/* 8029DB5C 0029AA9C  48 00 0A 05 */	bl DsetupTable__FUlUlUlUlUl
+/* 8029DB60 0029AAA0  4B FF FF 0D */	bl flushBuffer__6JASDspFv
 /* 8029DB64 0029AAA4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029DB68 0029AAA8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029DB6C 0029AAAC  7C 08 03 A6 */	mtlr r0
 /* 8029DB70 0029AAB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DB74 0029AAB4  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_setFXLine
-JASDsp_NS_setFXLine:
+/* 8029DB78 012C .text setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_ setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_ */
+.global setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_
+setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_:
 /* 8029DB78 0029AAB8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029DB7C 0029AABC  7C 08 02 A6 */	mflr r0
 /* 8029DB80 0029AAC0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -186,10 +197,10 @@ JASDsp_NS_setFXLine:
 /* 8029DB88 0029AAC8  48 0C 46 51 */	bl _savegpr_28
 /* 8029DB8C 0029AACC  7C 9D 23 78 */	mr r29, r4
 /* 8029DB90 0029AAD0  7C BE 2B 78 */	mr r30, r5
-/* 8029DB94 0029AAD4  80 8D 8D 6C */	lwz r4, lbl_804512EC-_SDA_BASE_(r13)
+/* 8029DB94 0029AAD4  80 8D 8D 6C */	lwz r4, FX_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029DB98 0029AAD8  54 60 2C F4 */	rlwinm r0, r3, 5, 0x13, 0x1a
 /* 8029DB9C 0029AADC  7F E4 02 14 */	add r31, r4, r0
-/* 8029DBA0 0029AAE0  48 09 FB 55 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8029DBA0 0029AAE0  48 09 FB 55 */	bl __RAS_OSDisableInterrupts_begin
 /* 8029DBA4 0029AAE4  90 61 00 08 */	stw r3, 8(r1)
 /* 8029DBA8 0029AAE8  38 00 00 00 */	li r0, 0
 /* 8029DBAC 0029AAEC  B0 1F 00 00 */	sth r0, 0(r31)
@@ -199,8 +210,8 @@ JASDsp_NS_setFXLine:
 /* 8029DBBC 0029AAFC  B0 1F 00 0A */	sth r0, 0xa(r31)
 /* 8029DBC0 0029AB00  A0 1E 00 02 */	lhz r0, 2(r30)
 /* 8029DBC4 0029AB04  54 00 08 3C */	slwi r0, r0, 1
-/* 8029DBC8 0029AB08  3C 60 80 3C */	lis r3, lbl_803C78F0@ha
-/* 8029DBCC 0029AB0C  38 63 78 F0 */	addi r3, r3, lbl_803C78F0@l
+/* 8029DBC8 0029AB08  3C 60 80 3C */	lis r3, SEND_TABLE__6JASDsp@ha
+/* 8029DBCC 0029AB0C  38 63 78 F0 */	addi r3, r3, SEND_TABLE__6JASDsp@l
 /* 8029DBD0 0029AB10  7C 03 02 2E */	lhzx r0, r3, r0
 /* 8029DBD4 0029AB14  B0 1F 00 08 */	sth r0, 8(r31)
 /* 8029DBD8 0029AB18  A8 1E 00 08 */	lha r0, 8(r30)
@@ -214,7 +225,7 @@ JASDsp_NS_setFXLine:
 /* 8029DBF8 0029AB38  38 7F 00 10 */	addi r3, r31, 0x10
 /* 8029DBFC 0029AB3C  38 9E 00 10 */	addi r4, r30, 0x10
 /* 8029DC00 0029AB40  38 A0 00 08 */	li r5, 8
-/* 8029DC04 0029AB44  4B FF FE 45 */	bl JASDsp_NS_setFilterTable
+/* 8029DC04 0029AB44  4B FF FE 45 */	bl setFilterTable__6JASDspFPsPsUl
 lbl_8029DC08:
 /* 8029DC08 0029AB48  28 1D 00 00 */	cmplwi r29, 0
 /* 8029DC0C 0029AB4C  41 82 00 34 */	beq lbl_8029DC40
@@ -225,7 +236,7 @@ lbl_8029DC08:
 /* 8029DC20 0029AB60  93 BF 00 04 */	stw r29, 4(r31)
 /* 8029DC24 0029AB64  7F A3 EB 78 */	mr r3, r29
 /* 8029DC28 0029AB68  7F 84 E3 78 */	mr r4, r28
-/* 8029DC2C 0029AB6C  4B FF 18 55 */	bl JASCalc_NS_bzero
+/* 8029DC2C 0029AB6C  4B FF 18 55 */	bl bzero__7JASCalcFPvUl
 /* 8029DC30 0029AB70  7F A3 EB 78 */	mr r3, r29
 /* 8029DC34 0029AB74  7F 84 E3 78 */	mr r4, r28
 /* 8029DC38 0029AB78  48 09 D9 75 */	bl DCFlushRange
@@ -261,8 +272,9 @@ lbl_8029DC74:
 /* 8029DC9C 0029ABDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029DCA0 0029ABE0  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_init
-JASDsp_NS_TChannel_NS_init:
+/* 8029DCA4 003C .text init__Q26JASDsp8TChannelFv init__Q26JASDsp8TChannelFv */
+.global init__Q26JASDsp8TChannelFv
+init__Q26JASDsp8TChannelFv:
 /* 8029DCA4 0029ABE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DCA8 0029ABE8  7C 08 02 A6 */	mflr r0
 /* 8029DCAC 0029ABEC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -273,14 +285,15 @@ JASDsp_NS_TChannel_NS_init:
 /* 8029DCC0 0029AC00  B0 03 00 00 */	sth r0, 0(r3)
 /* 8029DCC4 0029AC04  B0 03 00 58 */	sth r0, 0x58(r3)
 /* 8029DCC8 0029AC08  90 03 00 68 */	stw r0, 0x68(r3)
-/* 8029DCCC 0029AC0C  48 00 02 E5 */	bl JASDsp_NS_TChannel_NS_initFilter
+/* 8029DCCC 0029AC0C  48 00 02 E5 */	bl initFilter__Q26JASDsp8TChannelFv
 /* 8029DCD0 0029AC10  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029DCD4 0029AC14  7C 08 03 A6 */	mtlr r0
 /* 8029DCD8 0029AC18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DCDC 0029AC1C  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_playStart
-JASDsp_NS_TChannel_NS_playStart:
+/* 8029DCE0 0064 .text playStart__Q26JASDsp8TChannelFv playStart__Q26JASDsp8TChannelFv */
+.global playStart__Q26JASDsp8TChannelFv
+playStart__Q26JASDsp8TChannelFv:
 /* 8029DCE0 0029AC20  38 A0 00 00 */	li r5, 0
 /* 8029DCE4 0029AC24  90 A3 01 0C */	stw r5, 0x10c(r3)
 /* 8029DCE8 0029AC28  B0 A3 00 60 */	sth r5, 0x60(r3)
@@ -309,41 +322,47 @@ lbl_8029DD28:
 /* 8029DD3C 0029AC7C  B0 03 00 00 */	sth r0, 0(r3)
 /* 8029DD40 0029AC80  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_playStop
-JASDsp_NS_TChannel_NS_playStop:
+/* 8029DD44 000C .text playStop__Q26JASDsp8TChannelFv playStop__Q26JASDsp8TChannelFv */
+.global playStop__Q26JASDsp8TChannelFv
+playStop__Q26JASDsp8TChannelFv:
 /* 8029DD44 0029AC84  38 00 00 00 */	li r0, 0
 /* 8029DD48 0029AC88  B0 03 00 00 */	sth r0, 0(r3)
 /* 8029DD4C 0029AC8C  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_replyFinishRequest
-JASDsp_NS_TChannel_NS_replyFinishRequest:
+/* 8029DD50 0010 .text replyFinishRequest__Q26JASDsp8TChannelFv replyFinishRequest__Q26JASDsp8TChannelFv */
+.global replyFinishRequest__Q26JASDsp8TChannelFv
+replyFinishRequest__Q26JASDsp8TChannelFv:
 /* 8029DD50 0029AC90  38 00 00 00 */	li r0, 0
 /* 8029DD54 0029AC94  B0 03 00 02 */	sth r0, 2(r3)
 /* 8029DD58 0029AC98  B0 03 00 00 */	sth r0, 0(r3)
 /* 8029DD5C 0029AC9C  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_forceStop
-JASDsp_NS_TChannel_NS_forceStop:
+/* 8029DD60 000C .text forceStop__Q26JASDsp8TChannelFv forceStop__Q26JASDsp8TChannelFv */
+.global forceStop__Q26JASDsp8TChannelFv
+forceStop__Q26JASDsp8TChannelFv:
 /* 8029DD60 0029ACA0  38 00 00 01 */	li r0, 1
 /* 8029DD64 0029ACA4  B0 03 01 0A */	sth r0, 0x10a(r3)
 /* 8029DD68 0029ACA8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_isActive
-JASDsp_NS_TChannel_NS_isActive:
+/* 8029DD6C 0010 .text isActive__Q26JASDsp8TChannelCFv isActive__Q26JASDsp8TChannelCFv */
+.global isActive__Q26JASDsp8TChannelCFv
+isActive__Q26JASDsp8TChannelCFv:
 /* 8029DD6C 0029ACAC  A0 63 00 00 */	lhz r3, 0(r3)
 /* 8029DD70 0029ACB0  30 03 FF FF */	addic r0, r3, -1
 /* 8029DD74 0029ACB4  7C 60 19 10 */	subfe r3, r0, r3
 /* 8029DD78 0029ACB8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_isFinish
-JASDsp_NS_TChannel_NS_isFinish:
+/* 8029DD7C 0010 .text isFinish__Q26JASDsp8TChannelCFv isFinish__Q26JASDsp8TChannelCFv */
+.global isFinish__Q26JASDsp8TChannelCFv
+isFinish__Q26JASDsp8TChannelCFv:
 /* 8029DD7C 0029ACBC  A0 63 00 02 */	lhz r3, 2(r3)
 /* 8029DD80 0029ACC0  30 03 FF FF */	addic r0, r3, -1
 /* 8029DD84 0029ACC4  7C 60 19 10 */	subfe r3, r0, r3
 /* 8029DD88 0029ACC8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setWaveInfo
-JASDsp_NS_TChannel_NS_setWaveInfo:
+/* 8029DD8C 0120 .text setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl */
+.global setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl
+setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl:
 /* 8029DD8C 0029ACCC  90 A3 01 18 */	stw r5, 0x118(r3)
 /* 8029DD90 0029ACD0  88 E4 00 00 */	lbz r7, 0(r4)
 /* 8029DD94 0029ACD4  38 A2 BD 4C */	addi r5, r2, lbl_8045574C-_SDA2_BASE_
@@ -425,8 +444,9 @@ lbl_8029DE98:
 /* 8029DEA4 0029ADE4  42 00 FF F4 */	bdnz lbl_8029DE98
 /* 8029DEA8 0029ADE8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setOscInfo
-JASDsp_NS_TChannel_NS_setOscInfo:
+/* 8029DEAC 0018 .text setOscInfo__Q26JASDsp8TChannelFUl setOscInfo__Q26JASDsp8TChannelFUl */
+.global setOscInfo__Q26JASDsp8TChannelFUl
+setOscInfo__Q26JASDsp8TChannelFUl:
 /* 8029DEAC 0029ADEC  38 00 00 00 */	li r0, 0
 /* 8029DEB0 0029ADF0  90 03 01 18 */	stw r0, 0x118(r3)
 /* 8029DEB4 0029ADF4  38 00 00 10 */	li r0, 0x10
@@ -434,8 +454,9 @@ JASDsp_NS_TChannel_NS_setOscInfo:
 /* 8029DEBC 0029ADFC  B0 83 01 00 */	sth r4, 0x100(r3)
 /* 8029DEC0 0029AE00  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_initAutoMixer
-JASDsp_NS_TChannel_NS_initAutoMixer:
+/* 8029DEC4 002C .text initAutoMixer__Q26JASDsp8TChannelFv initAutoMixer__Q26JASDsp8TChannelFv */
+.global initAutoMixer__Q26JASDsp8TChannelFv
+initAutoMixer__Q26JASDsp8TChannelFv:
 /* 8029DEC4 0029AE04  A0 03 00 58 */	lhz r0, 0x58(r3)
 /* 8029DEC8 0029AE08  28 00 00 00 */	cmplwi r0, 0
 /* 8029DECC 0029AE0C  41 82 00 10 */	beq lbl_8029DEDC
@@ -449,8 +470,9 @@ lbl_8029DEDC:
 /* 8029DEE8 0029AE28  B0 03 00 58 */	sth r0, 0x58(r3)
 /* 8029DEEC 0029AE2C  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setAutoMixer
-JASDsp_NS_TChannel_NS_setAutoMixer:
+/* 8029DEF0 002C .text setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc */
+.global setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc
+setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc:
 /* 8029DEF0 0029AE30  54 C0 06 3E */	clrlwi r0, r6, 0x18
 /* 8029DEF4 0029AE34  50 A0 44 2E */	rlwimi r0, r5, 8, 0x10, 0x17
 /* 8029DEF8 0029AE38  B0 03 00 50 */	sth r0, 0x50(r3)
@@ -463,8 +485,9 @@ JASDsp_NS_TChannel_NS_setAutoMixer:
 /* 8029DF14 0029AE54  B0 03 00 58 */	sth r0, 0x58(r3)
 /* 8029DF18 0029AE58  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setPitch
-JASDsp_NS_TChannel_NS_setPitch:
+/* 8029DF1C 0018 .text setPitch__Q26JASDsp8TChannelFUs setPitch__Q26JASDsp8TChannelFUs */
+.global setPitch__Q26JASDsp8TChannelFUs
+setPitch__Q26JASDsp8TChannelFUs:
 /* 8029DF1C 0029AE5C  54 80 04 3E */	clrlwi r0, r4, 0x10
 /* 8029DF20 0029AE60  28 00 7F FF */	cmplwi r0, 0x7fff
 /* 8029DF24 0029AE64  41 80 00 08 */	blt lbl_8029DF2C
@@ -473,8 +496,9 @@ lbl_8029DF2C:
 /* 8029DF2C 0029AE6C  B0 83 00 04 */	sth r4, 4(r3)
 /* 8029DF30 0029AE70  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setMixerInitVolume
-JASDsp_NS_TChannel_NS_setMixerInitVolume:
+/* 8029DF34 0020 .text setMixerInitVolume__Q26JASDsp8TChannelFUcs setMixerInitVolume__Q26JASDsp8TChannelFUcs */
+.global setMixerInitVolume__Q26JASDsp8TChannelFUcs
+setMixerInitVolume__Q26JASDsp8TChannelFUcs:
 /* 8029DF34 0029AE74  54 84 1D 78 */	rlwinm r4, r4, 3, 0x15, 0x1c
 /* 8029DF38 0029AE78  38 84 00 10 */	addi r4, r4, 0x10
 /* 8029DF3C 0029AE7C  7C 83 22 14 */	add r4, r3, r4
@@ -484,8 +508,9 @@ JASDsp_NS_TChannel_NS_setMixerInitVolume:
 /* 8029DF4C 0029AE8C  B0 04 00 06 */	sth r0, 6(r4)
 /* 8029DF50 0029AE90  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setMixerVolume
-JASDsp_NS_TChannel_NS_setMixerVolume:
+/* 8029DF54 002C .text setMixerVolume__Q26JASDsp8TChannelFUcs setMixerVolume__Q26JASDsp8TChannelFUcs */
+.global setMixerVolume__Q26JASDsp8TChannelFUcs
+setMixerVolume__Q26JASDsp8TChannelFUcs:
 /* 8029DF54 0029AE94  A0 03 01 0A */	lhz r0, 0x10a(r3)
 /* 8029DF58 0029AE98  28 00 00 00 */	cmplwi r0, 0
 /* 8029DF5C 0029AE9C  4C 82 00 20 */	bnelr 
@@ -498,14 +523,16 @@ JASDsp_NS_TChannel_NS_setMixerVolume:
 /* 8029DF78 0029AEB8  B0 04 00 06 */	sth r0, 6(r4)
 /* 8029DF7C 0029AEBC  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setPauseFlag
-JASDsp_NS_TChannel_NS_setPauseFlag:
+/* 8029DF80 000C .text setPauseFlag__Q26JASDsp8TChannelFUc setPauseFlag__Q26JASDsp8TChannelFUc */
+.global setPauseFlag__Q26JASDsp8TChannelFUc
+setPauseFlag__Q26JASDsp8TChannelFUc:
 /* 8029DF80 0029AEC0  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8029DF84 0029AEC4  B0 03 00 0C */	sth r0, 0xc(r3)
 /* 8029DF88 0029AEC8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_flush
-JASDsp_NS_TChannel_NS_flush:
+/* 8029DF8C 0024 .text flush__Q26JASDsp8TChannelFv flush__Q26JASDsp8TChannelFv */
+.global flush__Q26JASDsp8TChannelFv
+flush__Q26JASDsp8TChannelFv:
 /* 8029DF8C 0029AECC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029DF90 0029AED0  7C 08 02 A6 */	mflr r0
 /* 8029DF94 0029AED4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -516,8 +543,9 @@ JASDsp_NS_TChannel_NS_flush:
 /* 8029DFA8 0029AEE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029DFAC 0029AEEC  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_initFilter
-JASDsp_NS_TChannel_NS_initFilter:
+/* 8029DFB0 005C .text initFilter__Q26JASDsp8TChannelFv initFilter__Q26JASDsp8TChannelFv */
+.global initFilter__Q26JASDsp8TChannelFv
+initFilter__Q26JASDsp8TChannelFv:
 /* 8029DFB0 0029AEF0  38 80 00 00 */	li r4, 0
 /* 8029DFB4 0029AEF4  7C 85 23 78 */	mr r5, r4
 /* 8029DFB8 0029AEF8  38 00 00 08 */	li r0, 8
@@ -544,8 +572,9 @@ lbl_8029DFE8:
 /* 8029E004 0029AF44  B0 03 01 50 */	sth r0, 0x150(r3)
 /* 8029E008 0029AF48  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setFilterMode
-JASDsp_NS_TChannel_NS_setFilterMode:
+/* 8029E00C 0038 .text setFilterMode__Q26JASDsp8TChannelFUs setFilterMode__Q26JASDsp8TChannelFUs */
+.global setFilterMode__Q26JASDsp8TChannelFUs
+setFilterMode__Q26JASDsp8TChannelFUs:
 /* 8029E00C 0029AF4C  54 85 06 B5 */	rlwinm. r5, r4, 0, 0x1a, 0x1a
 /* 8029E010 0029AF50  54 80 06 FE */	clrlwi r0, r4, 0x1b
 /* 8029E014 0029AF54  41 82 00 14 */	beq lbl_8029E028
@@ -563,39 +592,43 @@ lbl_8029E034:
 /* 8029E03C 0029AF7C  B0 03 01 08 */	sth r0, 0x108(r3)
 /* 8029E040 0029AF80  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setIIRFilterParam
-JASDsp_NS_TChannel_NS_setIIRFilterParam:
+/* 8029E044 0028 .text setIIRFilterParam__Q26JASDsp8TChannelFPs setIIRFilterParam__Q26JASDsp8TChannelFPs */
+.global setIIRFilterParam__Q26JASDsp8TChannelFPs
+setIIRFilterParam__Q26JASDsp8TChannelFPs:
 /* 8029E044 0029AF84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E048 0029AF88  7C 08 02 A6 */	mflr r0
 /* 8029E04C 0029AF8C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029E050 0029AF90  38 A0 00 08 */	li r5, 8
 /* 8029E054 0029AF94  38 63 01 48 */	addi r3, r3, 0x148
-/* 8029E058 0029AF98  4B FF F9 F1 */	bl JASDsp_NS_setFilterTable
+/* 8029E058 0029AF98  4B FF F9 F1 */	bl setFilterTable__6JASDspFPsPsUl
 /* 8029E05C 0029AF9C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029E060 0029AFA0  7C 08 03 A6 */	mtlr r0
 /* 8029E064 0029AFA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029E068 0029AFA8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setFIR8FilterParam
-JASDsp_NS_TChannel_NS_setFIR8FilterParam:
+/* 8029E06C 0028 .text setFIR8FilterParam__Q26JASDsp8TChannelFPs setFIR8FilterParam__Q26JASDsp8TChannelFPs */
+.global setFIR8FilterParam__Q26JASDsp8TChannelFPs
+setFIR8FilterParam__Q26JASDsp8TChannelFPs:
 /* 8029E06C 0029AFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E070 0029AFB0  7C 08 02 A6 */	mflr r0
 /* 8029E074 0029AFB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029E078 0029AFB8  38 A0 00 08 */	li r5, 8
 /* 8029E07C 0029AFBC  38 63 01 20 */	addi r3, r3, 0x120
-/* 8029E080 0029AFC0  4B FF F9 C9 */	bl JASDsp_NS_setFilterTable
+/* 8029E080 0029AFC0  4B FF F9 C9 */	bl setFilterTable__6JASDspFPsPsUl
 /* 8029E084 0029AFC4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029E088 0029AFC8  7C 08 03 A6 */	mtlr r0
 /* 8029E08C 0029AFCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029E090 0029AFD0  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setDistFilter
-JASDsp_NS_TChannel_NS_setDistFilter:
+/* 8029E094 0008 .text setDistFilter__Q26JASDsp8TChannelFs setDistFilter__Q26JASDsp8TChannelFs */
+.global setDistFilter__Q26JASDsp8TChannelFs
+setDistFilter__Q26JASDsp8TChannelFs:
 /* 8029E094 0029AFD4  B0 83 01 50 */	sth r4, 0x150(r3)
 /* 8029E098 0029AFD8  4E 80 00 20 */	blr 
 
-.global JASDsp_NS_TChannel_NS_setBusConnect
-JASDsp_NS_TChannel_NS_setBusConnect:
+/* 8029E09C 0020 .text setBusConnect__Q26JASDsp8TChannelFUcUc setBusConnect__Q26JASDsp8TChannelFUcUc */
+.global setBusConnect__Q26JASDsp8TChannelFUcUc
+setBusConnect__Q26JASDsp8TChannelFUcUc:
 /* 8029E09C 0029AFDC  54 A0 0D FC */	rlwinm r0, r5, 1, 0x17, 0x1e
 /* 8029E0A0 0029AFE0  3C A0 80 3A */	lis r5, lbl_8039B8A0@ha
 /* 8029E0A4 0029AFE4  38 A5 B8 A0 */	addi r5, r5, lbl_8039B8A0@l
@@ -605,15 +638,16 @@ JASDsp_NS_TChannel_NS_setBusConnect:
 /* 8029E0B4 0029AFF4  7C A3 03 2E */	sthx r5, r3, r0
 /* 8029E0B8 0029AFF8  4E 80 00 20 */	blr 
 
-.global DSP_CreateMap2
-DSP_CreateMap2:
+/* 8029E0BC 0074 .text DSP_CreateMap2__FUl DSP_CreateMap2__FUl */
+.global DSP_CreateMap2__FUl
+DSP_CreateMap2__FUl:
 /* 8029E0BC 0029AFFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029E0C0 0029B000  7C 08 02 A6 */	mflr r0
 /* 8029E0C4 0029B004  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8029E0C8 0029B008  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029E0CC 0029B00C  48 0C 41 11 */	bl _savegpr_29
 /* 8029E0D0 0029B010  3B E0 00 00 */	li r31, 0
-/* 8029E0D4 0029B014  80 8D 8D 68 */	lwz r4, lbl_804512E8-_SDA_BASE_(r13)
+/* 8029E0D4 0029B014  80 8D 8D 68 */	lwz r4, CH_BUF__6JASDsp-_SDA_BASE_(r13)
 /* 8029E0D8 0029B018  54 60 20 36 */	slwi r0, r3, 4
 /* 8029E0DC 0029B01C  1C 00 01 80 */	mulli r0, r0, 0x180
 /* 8029E0E0 0029B020  7F C4 02 14 */	add r30, r4, r0
@@ -621,7 +655,7 @@ DSP_CreateMap2:
 lbl_8029E0E8:
 /* 8029E0E8 0029B028  57 FF 0C 3C */	rlwinm r31, r31, 1, 0x10, 0x1e
 /* 8029E0EC 0029B02C  7F C3 F3 78 */	mr r3, r30
-/* 8029E0F0 0029B030  4B FF FC 7D */	bl JASDsp_NS_TChannel_NS_isActive
+/* 8029E0F0 0029B030  4B FF FC 7D */	bl isActive__Q26JASDsp8TChannelCFv
 /* 8029E0F4 0029B034  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8029E0F8 0029B038  41 82 00 0C */	beq lbl_8029E104
 /* 8029E0FC 0029B03C  63 E0 00 01 */	ori r0, r31, 1
@@ -638,4 +672,172 @@ lbl_8029E104:
 /* 8029E124 0029B064  7C 08 03 A6 */	mtlr r0
 /* 8029E128 0029B068  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029E12C 0029B06C  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039B360 0040 .rodata DSPADPCM_FILTER__6JASDsp DSPADPCM_FILTER__6JASDsp */
+.global DSPADPCM_FILTER__6JASDsp
+DSPADPCM_FILTER__6JASDsp:
+.byte 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00, 0x04, 0x00 /* baserom.dol+0x398360 */
+.byte 0x10, 0x00, 0xf8, 0x00, 0x0e, 0x00, 0xfa, 0x00, 0x0c, 0x00, 0xfc, 0x00, 0x12, 0x00, 0xf6, 0x00 /* baserom.dol+0x398370 */
+.byte 0x10, 0x68, 0xf7, 0x38, 0x12, 0xc0, 0xf7, 0x04, 0x14, 0x00, 0xf4, 0x00, 0x08, 0x00, 0xf8, 0x00 /* baserom.dol+0x398380 */
+.byte 0x04, 0x00, 0xfc, 0x00, 0xfc, 0x00, 0x04, 0x00, 0xfc, 0x00, 0x00, 0x00, 0xf8, 0x00, 0x00, 0x00 /* baserom.dol+0x398390 */
+
+/* 8039B3A0 0500 .rodata DSPRES_FILTER__6JASDsp DSPRES_FILTER__6JASDsp */
+.global DSPRES_FILTER__6JASDsp
+DSPRES_FILTER__6JASDsp:
+.byte 0x0c, 0x39, 0x66, 0xad, 0x0d, 0x46, 0xff, 0xdf, 0x0b, 0x39, 0x66, 0x96, 0x0e, 0x5f, 0xff, 0xd8 /* baserom.dol+0x3983a0 */
+.byte 0x0a, 0x44, 0x66, 0x69, 0x0f, 0x83, 0xff, 0xd0, 0x09, 0x5a, 0x66, 0x26, 0x10, 0xb4, 0xff, 0xc8 /* baserom.dol+0x3983b0 */
+.byte 0x08, 0x7d, 0x65, 0xcd, 0x11, 0xf0, 0xff, 0xbf, 0x07, 0xab, 0x65, 0x5e, 0x13, 0x38, 0xff, 0xb6 /* baserom.dol+0x3983c0 */
+.byte 0x06, 0xe4, 0x64, 0xd9, 0x14, 0x8c, 0xff, 0xac, 0x06, 0x28, 0x64, 0x3f, 0x15, 0xeb, 0xff, 0xa1 /* baserom.dol+0x3983d0 */
+.byte 0x05, 0x77, 0x63, 0x8f, 0x17, 0x56, 0xff, 0x96, 0x04, 0xd1, 0x62, 0xcb, 0x18, 0xcb, 0xff, 0x8a /* baserom.dol+0x3983e0 */
+.byte 0x04, 0x35, 0x61, 0xf3, 0x1a, 0x4c, 0xff, 0x7e, 0x03, 0xa4, 0x61, 0x06, 0x1b, 0xd7, 0xff, 0x71 /* baserom.dol+0x3983f0 */
+.byte 0x03, 0x1c, 0x60, 0x07, 0x1d, 0x6c, 0xff, 0x64, 0x02, 0x9f, 0x5e, 0xf5, 0x1f, 0x0b, 0xff, 0x56 /* baserom.dol+0x398400 */
+.byte 0x02, 0x2a, 0x5d, 0xd0, 0x20, 0xb3, 0xff, 0x48, 0x01, 0xbe, 0x5c, 0x9a, 0x22, 0x64, 0xff, 0x3a /* baserom.dol+0x398410 */
+.byte 0x01, 0x5b, 0x5b, 0x53, 0x24, 0x1e, 0xff, 0x2c, 0x01, 0x01, 0x59, 0xfc, 0x25, 0xe0, 0xff, 0x1e /* baserom.dol+0x398420 */
+.byte 0x00, 0xae, 0x58, 0x96, 0x27, 0xa9, 0xff, 0x10, 0x00, 0x63, 0x57, 0x20, 0x29, 0x7a, 0xff, 0x02 /* baserom.dol+0x398430 */
+.byte 0x00, 0x1f, 0x55, 0x9d, 0x2b, 0x50, 0xfe, 0xf4, 0xff, 0xe2, 0x54, 0x0d, 0x2d, 0x2c, 0xfe, 0xe8 /* baserom.dol+0x398440 */
+.byte 0xff, 0xac, 0x52, 0x70, 0x2f, 0x0d, 0xfe, 0xdb, 0xff, 0x7c, 0x50, 0xc7, 0x30, 0xf3, 0xfe, 0xd0 /* baserom.dol+0x398450 */
+.byte 0xff, 0x53, 0x4f, 0x14, 0x32, 0xdc, 0xfe, 0xc6, 0xff, 0x2e, 0x4d, 0x57, 0x34, 0xc8, 0xfe, 0xbd /* baserom.dol+0x398460 */
+.byte 0xff, 0x0f, 0x4b, 0x91, 0x36, 0xb6, 0xfe, 0xb6, 0xfe, 0xf5, 0x49, 0xc2, 0x38, 0xa5, 0xfe, 0xb0 /* baserom.dol+0x398470 */
+.byte 0xfe, 0xdf, 0x47, 0xed, 0x3a, 0x95, 0xfe, 0xac, 0xfe, 0xce, 0x46, 0x11, 0x3c, 0x85, 0xfe, 0xab /* baserom.dol+0x398480 */
+.byte 0xfe, 0xc0, 0x44, 0x30, 0x3e, 0x74, 0xfe, 0xac, 0xfe, 0xb6, 0x42, 0x4a, 0x40, 0x60, 0xfe, 0xaf /* baserom.dol+0x398490 */
+.byte 0xfe, 0xaf, 0x40, 0x60, 0x42, 0x4a, 0xfe, 0xb6, 0xfe, 0xac, 0x3e, 0x74, 0x44, 0x30, 0xfe, 0xc0 /* baserom.dol+0x3984a0 */
+.byte 0xfe, 0xab, 0x3c, 0x85, 0x46, 0x11, 0xfe, 0xce, 0xfe, 0xac, 0x3a, 0x95, 0x47, 0xed, 0xfe, 0xdf /* baserom.dol+0x3984b0 */
+.byte 0xfe, 0xb0, 0x38, 0xa5, 0x49, 0xc2, 0xfe, 0xf5, 0xfe, 0xb6, 0x36, 0xb6, 0x4b, 0x91, 0xff, 0x0f /* baserom.dol+0x3984c0 */
+.byte 0xfe, 0xbd, 0x34, 0xc8, 0x4d, 0x57, 0xff, 0x2e, 0xfe, 0xc6, 0x32, 0xdc, 0x4f, 0x14, 0xff, 0x53 /* baserom.dol+0x3984d0 */
+.byte 0xfe, 0xd0, 0x30, 0xf3, 0x50, 0xc7, 0xff, 0x7c, 0xfe, 0xdb, 0x2f, 0x0d, 0x52, 0x70, 0xff, 0xac /* baserom.dol+0x3984e0 */
+.byte 0xfe, 0xe8, 0x2d, 0x2c, 0x54, 0x0d, 0xff, 0xe2, 0xfe, 0xf4, 0x2b, 0x50, 0x55, 0x9d, 0x00, 0x1f /* baserom.dol+0x3984f0 */
+.byte 0xff, 0x02, 0x29, 0x7a, 0x57, 0x20, 0x00, 0x63, 0xff, 0x10, 0x27, 0xa9, 0x58, 0x96, 0x00, 0xae /* baserom.dol+0x398500 */
+.byte 0xff, 0x1e, 0x25, 0xe0, 0x59, 0xfc, 0x01, 0x01, 0xff, 0x2c, 0x24, 0x1e, 0x5b, 0x53, 0x01, 0x5b /* baserom.dol+0x398510 */
+.byte 0xff, 0x3a, 0x22, 0x64, 0x5c, 0x9a, 0x01, 0xbe, 0xff, 0x48, 0x20, 0xb3, 0x5d, 0xd0, 0x02, 0x2a /* baserom.dol+0x398520 */
+.byte 0xff, 0x56, 0x1f, 0x0b, 0x5e, 0xf5, 0x02, 0x9f, 0xff, 0x64, 0x1d, 0x6c, 0x60, 0x07, 0x03, 0x1c /* baserom.dol+0x398530 */
+.byte 0xff, 0x71, 0x1b, 0xd7, 0x61, 0x06, 0x03, 0xa4, 0xff, 0x7e, 0x1a, 0x4c, 0x61, 0xf3, 0x04, 0x35 /* baserom.dol+0x398540 */
+.byte 0xff, 0x8a, 0x18, 0xcb, 0x62, 0xcb, 0x04, 0xd1, 0xff, 0x96, 0x17, 0x56, 0x63, 0x8f, 0x05, 0x77 /* baserom.dol+0x398550 */
+.byte 0xff, 0xa1, 0x15, 0xeb, 0x64, 0x3f, 0x06, 0x28, 0xff, 0xac, 0x14, 0x8c, 0x64, 0xd9, 0x06, 0xe4 /* baserom.dol+0x398560 */
+.byte 0xff, 0xb6, 0x13, 0x38, 0x65, 0x5e, 0x07, 0xab, 0xff, 0xbf, 0x11, 0xf0, 0x65, 0xcd, 0x08, 0x7d /* baserom.dol+0x398570 */
+.byte 0xff, 0xc8, 0x10, 0xb4, 0x66, 0x26, 0x09, 0x5a, 0xff, 0xd0, 0x0f, 0x83, 0x66, 0x69, 0x0a, 0x44 /* baserom.dol+0x398580 */
+.byte 0xff, 0xd8, 0x0e, 0x5f, 0x66, 0x96, 0x0b, 0x39, 0xff, 0xdf, 0x0d, 0x46, 0x66, 0xad, 0x0c, 0x39 /* baserom.dol+0x398590 */
+.byte 0x00, 0x00, 0x0c, 0x8b, 0x18, 0xf8, 0x25, 0x27, 0x30, 0xfb, 0x3c, 0x56, 0x47, 0x1c, 0x51, 0x33 /* baserom.dol+0x3985a0 */
+.byte 0x5a, 0x82, 0x62, 0xf1, 0x6a, 0x6d, 0x70, 0xe2, 0x76, 0x41, 0x7a, 0x7c, 0x7d, 0x89, 0x7f, 0x61 /* baserom.dol+0x3985b0 */
+.byte 0x7f, 0xff, 0x7f, 0x61, 0x7d, 0x89, 0x7a, 0x7c, 0x76, 0x41, 0x70, 0xe2, 0x6a, 0x6d, 0x62, 0xf1 /* baserom.dol+0x3985c0 */
+.byte 0x5a, 0x82, 0x51, 0x33, 0x47, 0x1c, 0x3c, 0x56, 0x30, 0xfb, 0x25, 0x27, 0x18, 0xf8, 0x0c, 0x8b /* baserom.dol+0x3985d0 */
+.byte 0x00, 0x00, 0xf3, 0x75, 0xe7, 0x08, 0xda, 0xd9, 0xcf, 0x05, 0xc3, 0xaa, 0xb8, 0xe4, 0xae, 0xcd /* baserom.dol+0x3985e0 */
+.byte 0xa5, 0x7e, 0x9d, 0x0f, 0x95, 0x93, 0x8f, 0x1e, 0x89, 0xbf, 0x85, 0x84, 0x82, 0x77, 0x80, 0x9f /* baserom.dol+0x3985f0 */
+.byte 0x80, 0x01, 0x80, 0x9f, 0x82, 0x77, 0x85, 0x84, 0x89, 0xbf, 0x8f, 0x1e, 0x95, 0x93, 0x9d, 0x0f /* baserom.dol+0x398600 */
+.byte 0xa5, 0x7e, 0xae, 0xcd, 0xb8, 0xe4, 0xc3, 0xaa, 0xcf, 0x05, 0xda, 0xd9, 0xe7, 0x08, 0xf3, 0x75 /* baserom.dol+0x398610 */
+.byte 0x00, 0x00, 0x07, 0xff, 0x0f, 0xff, 0x17, 0xff, 0x1f, 0xff, 0x27, 0xff, 0x2f, 0xff, 0x37, 0xff /* baserom.dol+0x398620 */
+.byte 0x3f, 0xff, 0x47, 0xff, 0x4f, 0xff, 0x57, 0xff, 0x5f, 0xff, 0x67, 0xff, 0x6f, 0xff, 0x77, 0xff /* baserom.dol+0x398630 */
+.byte 0x7f, 0xff, 0x78, 0x00, 0x70, 0x00, 0x68, 0x00, 0x60, 0x00, 0x58, 0x00, 0x50, 0x00, 0x48, 0x00 /* baserom.dol+0x398640 */
+.byte 0x40, 0x00, 0x38, 0x00, 0x30, 0x00, 0x28, 0x00, 0x20, 0x00, 0x18, 0x00, 0x10, 0x00, 0x08, 0x00 /* baserom.dol+0x398650 */
+.byte 0x00, 0x00, 0xf8, 0x01, 0xf0, 0x01, 0xe8, 0x01, 0xe0, 0x01, 0xd8, 0x01, 0xd0, 0x01, 0xc8, 0x01 /* baserom.dol+0x398660 */
+.byte 0xc0, 0x01, 0xb8, 0x01, 0xb0, 0x01, 0xa8, 0x01, 0xa0, 0x01, 0x98, 0x01, 0x90, 0x01, 0x88, 0x01 /* baserom.dol+0x398670 */
+.byte 0x80, 0x01, 0x88, 0x00, 0x90, 0x00, 0x98, 0x00, 0xa0, 0x00, 0xa8, 0x00, 0xb0, 0x00, 0xb8, 0x00 /* baserom.dol+0x398680 */
+.byte 0xc0, 0x00, 0xc8, 0x00, 0xd0, 0x00, 0xd8, 0x00, 0xe0, 0x00, 0xe8, 0x00, 0xf0, 0x00, 0xf8, 0x00 /* baserom.dol+0x398690 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986a0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986b0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986c0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986d0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986e0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3986f0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398700 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0xff, 0x3f, 0xff /* baserom.dol+0x398710 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398720 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398730 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398740 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398750 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398760 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398770 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398780 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0xff, 0xc0, 0x01 /* baserom.dol+0x398790 */
+.byte 0x00, 0x00, 0x01, 0x92, 0x03, 0x24, 0x04, 0xb6, 0x06, 0x47, 0x07, 0xd9, 0x09, 0x6a, 0x0a, 0xfb /* baserom.dol+0x3987a0 */
+.byte 0x0c, 0x8b, 0x0e, 0x1b, 0x0f, 0xab, 0x11, 0x39, 0x12, 0xc7, 0x14, 0x55, 0x15, 0xe1, 0x17, 0x6d /* baserom.dol+0x3987b0 */
+.byte 0x18, 0xf8, 0x1a, 0x82, 0x1c, 0x0b, 0x1d, 0x93, 0x1f, 0x19, 0x20, 0x9f, 0x22, 0x23, 0x23, 0xa6 /* baserom.dol+0x3987c0 */
+.byte 0x25, 0x27, 0x26, 0xa7, 0x28, 0x26, 0x29, 0xa3, 0x2b, 0x1f, 0x2c, 0x98, 0x2e, 0x10, 0x2f, 0x87 /* baserom.dol+0x3987d0 */
+.byte 0x30, 0xfb, 0x32, 0x6e, 0x33, 0xde, 0x35, 0x4d, 0x36, 0xb9, 0x38, 0x24, 0x39, 0x8c, 0x3a, 0xf2 /* baserom.dol+0x3987e0 */
+.byte 0x3c, 0x56, 0x3d, 0xb7, 0x3f, 0x17, 0x40, 0x73, 0x41, 0xcd, 0x43, 0x25, 0x44, 0x7a, 0x45, 0xcc /* baserom.dol+0x3987f0 */
+.byte 0x47, 0x1c, 0x48, 0x69, 0x49, 0xb3, 0x4a, 0xfb, 0x4c, 0x3f, 0x4d, 0x81, 0x4e, 0xbf, 0x4f, 0xfb /* baserom.dol+0x398800 */
+.byte 0x51, 0x33, 0x52, 0x68, 0x53, 0x9a, 0x54, 0xc9, 0x55, 0xf5, 0x57, 0x1d, 0x58, 0x42, 0x59, 0x64 /* baserom.dol+0x398810 */
+.byte 0x5a, 0x82, 0x5b, 0x9c, 0x5c, 0xb3, 0x5d, 0xc7, 0x5e, 0xd7, 0x5f, 0xe3, 0x60, 0xeb, 0x61, 0xf0 /* baserom.dol+0x398820 */
+.byte 0x62, 0xf1, 0x63, 0xee, 0x64, 0xe8, 0x65, 0xdd, 0x66, 0xcf, 0x67, 0xbc, 0x68, 0xa6, 0x69, 0x8b /* baserom.dol+0x398830 */
+.byte 0x6a, 0x6d, 0x6b, 0x4a, 0x6c, 0x23, 0x6c, 0xf8, 0x6d, 0xc9, 0x6e, 0x96, 0x6f, 0x5e, 0x70, 0x22 /* baserom.dol+0x398840 */
+.byte 0x70, 0xe2, 0x71, 0x9d, 0x72, 0x54, 0x73, 0x07, 0x73, 0xb5, 0x74, 0x5f, 0x75, 0x04, 0x75, 0xa5 /* baserom.dol+0x398850 */
+.byte 0x76, 0x41, 0x76, 0xd8, 0x77, 0x6b, 0x77, 0xfa, 0x78, 0x84, 0x79, 0x09, 0x79, 0x89, 0x7a, 0x05 /* baserom.dol+0x398860 */
+.byte 0x7a, 0x7c, 0x7a, 0xee, 0x7b, 0x5c, 0x7b, 0xc5, 0x7c, 0x29, 0x7c, 0x88, 0x7c, 0xe3, 0x7d, 0x39 /* baserom.dol+0x398870 */
+.byte 0x7d, 0x89, 0x7d, 0xd5, 0x7e, 0x1d, 0x7e, 0x5f, 0x7e, 0x9c, 0x7e, 0xd5, 0x7f, 0x09, 0x7f, 0x37 /* baserom.dol+0x398880 */
+.byte 0x7f, 0x61, 0x7f, 0x86, 0x7f, 0xa6, 0x7f, 0xc1, 0x7f, 0xd8, 0x7f, 0xe9, 0x7f, 0xf5, 0x7f, 0xfd /* baserom.dol+0x398890 */
+
+/* 8039B8A0 0018 .rodata lbl_8039B8A0 connect_table$463 */
+.global lbl_8039B8A0
+lbl_8039B8A0:
+.byte 0x00, 0x00, 0x0d, 0x00, 0x0d, 0x60, 0x0d, 0xc0, 0x0e, 0x20, 0x0e, 0x80, 0x0e, 0xe0, 0x0c, 0xa0 /* baserom.dol+0x3988a0 */
+.byte 0x0f, 0x40, 0x0f, 0xa0, 0x0b, 0x00, 0x09, 0xa0 /* baserom.dol+0x3988b0 */
+
+
+
+.section .data, "aw"
+/* 803C78F0 0018 .data SEND_TABLE__6JASDsp SEND_TABLE__6JASDsp */
+.global SEND_TABLE__6JASDsp
+SEND_TABLE__6JASDsp:
+.byte 0x0d, 0x00, 0x0d, 0x60, 0x0d, 0xc8, 0x0e, 0x28, 0x0e, 0x88, 0x0e, 0xe8, 0x0c, 0xa0, 0x0f, 0x40 /* baserom.dol+0x3c48f0 */
+.byte 0x0f, 0xa0, 0x0b, 0x00, 0x09, 0xa0, 0x00, 0x00 /* baserom.dol+0x3c4900 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4908 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4918 */
+
+
+
+.section .sdata, "a"
+/* 804507B8 0004 .sdata one__11JASWaveInfo one__11JASWaveInfo */
+.global one__11JASWaveInfo
+one__11JASWaveInfo:
+.byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d0518 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d051c */
+
+
+
+.section .sbss, "aw"
+/* 804512E8 0004 .sbss CH_BUF__6JASDsp CH_BUF__6JASDsp */
+.global CH_BUF__6JASDsp
+CH_BUF__6JASDsp:
+.skip 0x4
+
+/* 804512EC 0004 .sbss FX_BUF__6JASDsp FX_BUF__6JASDsp */
+.global FX_BUF__6JASDsp
+FX_BUF__6JASDsp:
+.skip 0x4
+
+/* 804512F0 0004 .sbss sDSPVolume__6JASDsp sDSPVolume__6JASDsp */
+.global sDSPVolume__6JASDsp
+sDSPVolume__6JASDsp:
+.skip 0x4
+
+/* 804512F4 0001 .sbss lbl_804512F4 lbl_804512F4 */
+.global lbl_804512F4
+lbl_804512F4:
+.skip 0x1
+
+/* 804512F5 0003 .sbss lbl_804512F5 lbl_804512F5 */
+.global lbl_804512F5
+lbl_804512F5:
+.skip 0x3
+
+
+
+.section .sdata2, "a"
+/* 80455748 0004 .sdata2 lbl_80455748 @176 */
+.global lbl_80455748
+lbl_80455748:
+.byte 0x40, 0x80, 0x00, 0x00 /* baserom.dol+0x3d45a8 */
+
+/* 8045574C 0008 .sdata2 lbl_8045574C COMP_BLOCKSAMPLES$331 */
+.global lbl_8045574C
+lbl_8045574C:
+.byte 0x10, 0x10, 0x01, 0x01, 0x01, 0x10, 0x10, 0x01 /* baserom.dol+0x3d45ac */
+
+/* 80455754 0008 .sdata2 lbl_80455754 COMP_BLOCKBYTES$332 */
+.global lbl_80455754
+lbl_80455754:
+.byte 0x09, 0x05, 0x08, 0x10, 0x01, 0x01, 0x01, 0x01 /* baserom.dol+0x3d45b4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45bc */
 

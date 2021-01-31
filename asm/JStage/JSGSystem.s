@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80280e90
 
-
-.global JStage_NS_TSystem_NS_dtor
-JStage_NS_TSystem_NS_dtor:
+.section .text, "ax"
+/* 80280E90 0060 .text __dt__Q26JStage7TSystemFv __dt__Q26JStage7TSystemFv */
+.global __dt__Q26JStage7TSystemFv
+__dt__Q26JStage7TSystemFv:
 /* 80280E90 0027DDD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80280E94 0027DDD4  7C 08 02 A6 */	mflr r0
 /* 80280E98 0027DDD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -13,11 +13,11 @@ JStage_NS_TSystem_NS_dtor:
 /* 80280EA4 0027DDE4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80280EA8 0027DDE8  7C 9F 23 78 */	mr r31, r4
 /* 80280EAC 0027DDEC  41 82 00 28 */	beq lbl_80280ED4
-/* 80280EB0 0027DDF0  3C 80 80 3C */	lis r4, lbl_803C4828@ha
-/* 80280EB4 0027DDF4  38 04 48 28 */	addi r0, r4, lbl_803C4828@l
+/* 80280EB0 0027DDF0  3C 80 80 3C */	lis r4, __vt__Q26JStage7TSystem@ha
+/* 80280EB4 0027DDF4  38 04 48 28 */	addi r0, r4, __vt__Q26JStage7TSystem@l
 /* 80280EB8 0027DDF8  90 1E 00 00 */	stw r0, 0(r30)
 /* 80280EBC 0027DDFC  38 80 00 00 */	li r4, 0
-/* 80280EC0 0027DE00  4B FF FF 15 */	bl JStage_NS_TObject_NS_dtor
+/* 80280EC0 0027DE00  4B FF FF 15 */	bl __dt__Q26JStage7TObjectFv
 /* 80280EC4 0027DE04  7F E0 07 35 */	extsh. r0, r31
 /* 80280EC8 0027DE08  40 81 00 0C */	ble lbl_80280ED4
 /* 80280ECC 0027DE0C  7F C3 F3 78 */	mr r3, r30
@@ -30,14 +30,50 @@ lbl_80280ED4:
 /* 80280EE4 0027DE24  7C 08 03 A6 */	mtlr r0
 /* 80280EE8 0027DE28  38 21 00 10 */	addi r1, r1, 0x10
 /* 80280EEC 0027DE2C  4E 80 00 20 */	blr 
+
+/* 80280EF0 0008 .text JSGFGetType__Q26JStage7TSystemCFv JSGFGetType__Q26JStage7TSystemCFv */
+.global JSGFGetType__Q26JStage7TSystemCFv
+JSGFGetType__Q26JStage7TSystemCFv:
 /* 80280EF0 0027DE30  38 60 00 01 */	li r3, 1
 /* 80280EF4 0027DE34  4E 80 00 20 */	blr 
+
+/* 80280EF8 0008 .text JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
+.global JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject
+JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject:
 /* 80280EF8 0027DE38  38 60 00 01 */	li r3, 1
 /* 80280EFC 0027DE3C  4E 80 00 20 */	blr 
+
+/* 80280F00 0008 .text JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl */
+.global JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl
+JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl:
 /* 80280F00 0027DE40  38 60 00 00 */	li r3, 0
 /* 80280F04 0027DE44  4E 80 00 20 */	blr 
+
+/* 80280F08 0004 .text JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject */
+.global JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject
+JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject:
 /* 80280F08 0027DE48  4E 80 00 20 */	blr 
+
+/* 80280F0C 0008 .text JSGGetSystemData__Q26JStage7TSystemFUl JSGGetSystemData__Q26JStage7TSystemFUl */
+.global JSGGetSystemData__Q26JStage7TSystemFUl
+JSGGetSystemData__Q26JStage7TSystemFUl:
 /* 80280F0C 0027DE4C  38 60 00 00 */	li r3, 0
 /* 80280F10 0027DE50  4E 80 00 20 */	blr 
+
+/* 80280F14 0004 .text JSGSetSystemData__Q26JStage7TSystemFUlUl JSGSetSystemData__Q26JStage7TSystemFUlUl */
+.global JSGSetSystemData__Q26JStage7TSystemFUlUl
+JSGSetSystemData__Q26JStage7TSystemFUlUl:
 /* 80280F14 0027DE54  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C4828 0050 .data __vt__Q26JStage7TSystem __vt__Q26JStage7TSystem */
+.global __vt__Q26JStage7TSystem
+__vt__Q26JStage7TSystem:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x0e, 0xf0 /* baserom.dol+0x3c1828 */
+.byte 0x80, 0x28, 0x0e, 0x1c, 0x80, 0x28, 0x0e, 0x24, 0x80, 0x28, 0x0e, 0x28, 0x80, 0x28, 0x0e, 0x30 /* baserom.dol+0x3c1838 */
+.byte 0x80, 0x28, 0x0e, 0x34, 0x80, 0x28, 0x0e, 0x3c, 0x80, 0x28, 0x0e, 0x40, 0x80, 0x28, 0x0e, 0x44 /* baserom.dol+0x3c1848 */
+.byte 0x80, 0x28, 0x0e, 0x48, 0x80, 0x28, 0x0e, 0x4c, 0x80, 0x28, 0x0e, 0x54, 0x80, 0x28, 0x0e, 0xf8 /* baserom.dol+0x3c1858 */
+.byte 0x80, 0x28, 0x0f, 0x00, 0x80, 0x28, 0x0f, 0x08, 0x80, 0x28, 0x0f, 0x0c, 0x80, 0x28, 0x0f, 0x14 /* baserom.dol+0x3c1868 */
 

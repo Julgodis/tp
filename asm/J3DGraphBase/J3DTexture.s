@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8031204c
 
-
-.global J3DTexture_NS_loadGX
-J3DTexture_NS_loadGX:
+.section .text, "ax"
+/* 8031204C 0158 .text loadGX__10J3DTextureCFUs11_GXTexMapID loadGX__10J3DTextureCFUs11_GXTexMapID */
+.global loadGX__10J3DTextureCFUs11_GXTexMapID
+loadGX__10J3DTextureCFUs11_GXTexMapID:
 /* 8031204C 0030EF8C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80312050 0030EF90  7C 08 02 A6 */	mflr r0
 /* 80312054 0030EF94  90 01 00 64 */	stw r0, 0x64(r1)
@@ -94,8 +94,9 @@ lbl_803120F8:
 /* 8031219C 0030F0DC  38 21 00 60 */	addi r1, r1, 0x60
 /* 803121A0 0030F0E0  4E 80 00 20 */	blr 
 
-.global J3DTexture_NS_entryNum
-J3DTexture_NS_entryNum:
+/* 803121A4 0078 .text entryNum__10J3DTextureFUs entryNum__10J3DTextureFUs */
+.global entryNum__10J3DTextureFUs
+entryNum__10J3DTextureFUs:
 /* 803121A4 0030F0E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803121A8 0030F0E8  7C 08 02 A6 */	mflr r0
 /* 803121AC 0030F0EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -129,8 +130,9 @@ lbl_803121FC:
 /* 80312214 0030F154  38 21 00 10 */	addi r1, r1, 0x10
 /* 80312218 0030F158  4E 80 00 20 */	blr 
 
-.global J3DTexture_NS_addResTIMG
-J3DTexture_NS_addResTIMG:
+/* 8031221C 026C .text addResTIMG__10J3DTextureFUsPC7ResTIMG addResTIMG__10J3DTextureFUsPC7ResTIMG */
+.global addResTIMG__10J3DTextureFUsPC7ResTIMG
+addResTIMG__10J3DTextureFUsPC7ResTIMG:
 /* 8031221C 0030F15C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80312220 0030F160  7C 08 02 A6 */	mflr r0
 /* 80312224 0030F164  90 01 00 24 */	stw r0, 0x24(r1)
@@ -145,7 +147,7 @@ J3DTexture_NS_addResTIMG:
 /* 80312248 0030F188  83 DC 00 04 */	lwz r30, 4(r28)
 /* 8031224C 0030F18C  7C 00 22 14 */	add r0, r0, r4
 /* 80312250 0030F190  54 04 04 3E */	clrlwi r4, r0, 0x10
-/* 80312254 0030F194  4B FF FF 51 */	bl J3DTexture_NS_entryNum
+/* 80312254 0030F194  4B FF FF 51 */	bl entryNum__10J3DTextureFUs
 /* 80312258 0030F198  38 A0 00 00 */	li r5, 0
 /* 8031225C 0030F19C  57 E6 04 3E */	clrlwi r6, r31, 0x10
 /* 80312260 0030F1A0  48 00 00 F8 */	b lbl_80312358
@@ -291,4 +293,22 @@ lbl_80312470:
 /* 8031247C 0030F3BC  7C 08 03 A6 */	mtlr r0
 /* 80312480 0030F3C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80312484 0030F3C4  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80456388 0004 .sdata2 lbl_80456388 @284 */
+.global lbl_80456388
+lbl_80456388:
+.byte 0x3e, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51e8 */
+
+/* 8045638C 0004 .sdata2 lbl_8045638C @285 */
+.global lbl_8045638C
+lbl_8045638C:
+.byte 0x3c, 0x23, 0xd7, 0x0a /* baserom.dol+0x3d51ec */
+
+/* 80456390 0008 .sdata2 lbl_80456390 @288 */
+.global lbl_80456390
+lbl_80456390:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51f0 */
 

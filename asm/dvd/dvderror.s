@@ -1,14 +1,14 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8034ba6c
 
-
+.section .text, "ax"
+/* 8034BA6C 011C .text ErrorCode2Num ErrorCode2Num */
 .global ErrorCode2Num
 ErrorCode2Num:
 /* 8034BA6C 003489AC  38 00 00 02 */	li r0, 2
-/* 8034BA70 003489B0  3C 80 80 3D */	lis r4, lbl_803D16A8@ha
+/* 8034BA70 003489B0  3C 80 80 3D */	lis r4, ErrorTable@ha
 /* 8034BA74 003489B4  7C 09 03 A6 */	mtctr r0
-/* 8034BA78 003489B8  38 84 16 A8 */	addi r4, r4, lbl_803D16A8@l
+/* 8034BA78 003489B8  38 84 16 A8 */	addi r4, r4, ErrorTable@l
 /* 8034BA7C 003489BC  38 A0 00 00 */	li r5, 0
 lbl_8034BA80:
 /* 8034BA80 003489C0  80 04 00 00 */	lwz r0, 0(r4)
@@ -88,6 +88,7 @@ lbl_8034BB80:
 /* 8034BB80 00348AC0  38 60 00 1D */	li r3, 0x1d
 /* 8034BB84 00348AC4  4E 80 00 20 */	blr 
 
+/* 8034BB88 007C .text __DVDStoreErrorCode __DVDStoreErrorCode */
 .global __DVDStoreErrorCode
 __DVDStoreErrorCode:
 /* 8034BB88 00348AC8  7C 08 02 A6 */	mflr r0
@@ -125,4 +126,16 @@ lbl_8034BBE0:
 /* 8034BBF8 00348B38  38 21 00 18 */	addi r1, r1, 0x18
 /* 8034BBFC 00348B3C  7C 08 03 A6 */	mtlr r0
 /* 8034BC00 00348B40  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D16A8 0048 .data ErrorTable ErrorTable */
+.global ErrorTable
+ErrorTable:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x3a, 0x00, 0x00, 0x06, 0x28, 0x00, 0x00, 0x03, 0x02, 0x00 /* baserom.dol+0x3ce6a8 */
+.byte 0x00, 0x03, 0x11, 0x00, 0x00, 0x05, 0x20, 0x00, 0x00, 0x05, 0x20, 0x01, 0x00, 0x05, 0x21, 0x00 /* baserom.dol+0x3ce6b8 */
+.byte 0x00, 0x05, 0x24, 0x00, 0x00, 0x05, 0x24, 0x01, 0x00, 0x05, 0x24, 0x02, 0x00, 0x0b, 0x5a, 0x01 /* baserom.dol+0x3ce6c8 */
+.byte 0x00, 0x05, 0x63, 0x00, 0x00, 0x02, 0x04, 0x01, 0x00, 0x02, 0x04, 0x00, 0x00, 0x04, 0x08, 0x00 /* baserom.dol+0x3ce6d8 */
+.byte 0x00, 0x10, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce6e8 */
 

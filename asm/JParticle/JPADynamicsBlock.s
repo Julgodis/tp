@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8027b144
 
-
-.global JPAVolumePoint
-JPAVolumePoint:
+.section .text, "ax"
+/* 8027B144 00DC .text JPAVolumePoint__FP18JPAEmitterWorkData JPAVolumePoint__FP18JPAEmitterWorkData */
+.global JPAVolumePoint__FP18JPAEmitterWorkData
+JPAVolumePoint__FP18JPAEmitterWorkData:
 /* 8027B144 00278084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B148 00278088  C0 62 B9 10 */	lfs f3, lbl_80455310-_SDA2_BASE_(r2)
 /* 8027B14C 0027808C  D0 63 00 18 */	stfs f3, 0x18(r3)
@@ -60,8 +60,10 @@ JPAVolumePoint:
 /* 8027B214 00278154  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B218 00278158  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B21C 0027815C  4E 80 00 20 */	blr 
-.global JPAVolumeLine
-JPAVolumeLine:
+
+/* 8027B220 011C .text JPAVolumeLine__FP18JPAEmitterWorkData JPAVolumeLine__FP18JPAEmitterWorkData */
+.global JPAVolumeLine__FP18JPAEmitterWorkData
+JPAVolumeLine__FP18JPAEmitterWorkData:
 /* 8027B220 00278160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B224 00278164  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027B228 00278168  80 86 00 E8 */	lwz r4, 0xe8(r6)
@@ -135,8 +137,10 @@ lbl_8027B308:
 /* 8027B330 00278270  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B334 00278274  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B338 00278278  4E 80 00 20 */	blr 
-.global JPAVolumeCircle
-JPAVolumeCircle:
+
+/* 8027B33C 01AC .text JPAVolumeCircle__FP18JPAEmitterWorkData JPAVolumeCircle__FP18JPAEmitterWorkData */
+.global JPAVolumeCircle__FP18JPAEmitterWorkData
+JPAVolumeCircle__FP18JPAEmitterWorkData:
 /* 8027B33C 0027827C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B340 00278280  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027B344 00278284  80 86 00 E8 */	lwz r4, 0xe8(r6)
@@ -220,8 +224,8 @@ lbl_8027B460:
 /* 8027B470 002783B0  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8027B474 002783B4  EC 02 00 2A */	fadds f0, f2, f0
 /* 8027B478 002783B8  EC 41 00 32 */	fmuls f2, f1, f0
-/* 8027B47C 002783BC  3C 80 80 44 */	lis r4, lbl_80439A20@ha
-/* 8027B480 002783C0  38 A4 9A 20 */	addi r5, r4, lbl_80439A20@l
+/* 8027B47C 002783BC  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
+/* 8027B480 002783C0  38 A4 9A 20 */	addi r5, r4, sincosTable___5JMath@l
 /* 8027B484 002783C4  54 E0 04 38 */	rlwinm r0, r7, 0, 0x10, 0x1c
 /* 8027B488 002783C8  7C 85 02 14 */	add r4, r5, r0
 /* 8027B48C 002783CC  C0 04 00 04 */	lfs f0, 4(r4)
@@ -247,8 +251,10 @@ lbl_8027B460:
 /* 8027B4DC 0027841C  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B4E0 00278420  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B4E4 00278424  4E 80 00 20 */	blr 
-.global JPAVolumeCube
-JPAVolumeCube:
+
+/* 8027B4E8 0108 .text JPAVolumeCube__FP18JPAEmitterWorkData JPAVolumeCube__FP18JPAEmitterWorkData */
+.global JPAVolumeCube__FP18JPAEmitterWorkData
+JPAVolumeCube__FP18JPAEmitterWorkData:
 /* 8027B4E8 00278428  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B4EC 0027842C  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027B4F0 00278430  80 06 00 C4 */	lwz r0, 0xc4(r6)
@@ -315,8 +321,10 @@ JPAVolumeCube:
 /* 8027B5E4 00278524  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B5E8 00278528  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B5EC 0027852C  4E 80 00 20 */	blr 
-.global JPAVolumeSphere
-JPAVolumeSphere:
+
+/* 8027B5F0 028C .text JPAVolumeSphere__FP18JPAEmitterWorkData JPAVolumeSphere__FP18JPAEmitterWorkData */
+.global JPAVolumeSphere__FP18JPAEmitterWorkData
+JPAVolumeSphere__FP18JPAEmitterWorkData:
 /* 8027B5F0 00278530  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B5F4 00278534  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027B5F8 00278538  80 86 00 E8 */	lwz r4, 0xe8(r6)
@@ -455,8 +463,8 @@ lbl_8027B7DC:
 /* 8027B7EC 0027872C  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8027B7F0 00278730  EC 02 00 2A */	fadds f0, f2, f0
 /* 8027B7F4 00278734  EC 21 00 32 */	fmuls f1, f1, f0
-/* 8027B7F8 00278738  3C A0 80 44 */	lis r5, lbl_80439A20@ha
-/* 8027B7FC 0027873C  38 A5 9A 20 */	addi r5, r5, lbl_80439A20@l
+/* 8027B7F8 00278738  3C A0 80 44 */	lis r5, sincosTable___5JMath@ha
+/* 8027B7FC 0027873C  38 A5 9A 20 */	addi r5, r5, sincosTable___5JMath@l
 /* 8027B800 00278740  38 C5 00 04 */	addi r6, r5, 4
 /* 8027B804 00278744  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 8027B808 00278748  7C 06 04 2E */	lfsx f0, r6, r0
@@ -488,8 +496,10 @@ lbl_8027B7DC:
 /* 8027B870 002787B0  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B874 002787B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B878 002787B8  4E 80 00 20 */	blr 
-.global JPAVolumeCylinder
-JPAVolumeCylinder:
+
+/* 8027B87C 017C .text JPAVolumeCylinder__FP18JPAEmitterWorkData JPAVolumeCylinder__FP18JPAEmitterWorkData */
+.global JPAVolumeCylinder__FP18JPAEmitterWorkData
+JPAVolumeCylinder__FP18JPAEmitterWorkData:
 /* 8027B87C 002787BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B880 002787C0  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027B884 002787C4  80 06 00 C4 */	lwz r0, 0xc4(r6)
@@ -543,8 +553,8 @@ lbl_8027B930:
 /* 8027B940 00278880  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8027B944 00278884  EC 03 00 2A */	fadds f0, f3, f0
 /* 8027B948 00278888  EC 62 00 32 */	fmuls f3, f2, f0
-/* 8027B94C 0027888C  3C 80 80 44 */	lis r4, lbl_80439A20@ha
-/* 8027B950 00278890  38 C4 9A 20 */	addi r6, r4, lbl_80439A20@l
+/* 8027B94C 0027888C  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
+/* 8027B950 00278890  38 C4 9A 20 */	addi r6, r4, sincosTable___5JMath@l
 /* 8027B954 00278894  55 08 04 38 */	rlwinm r8, r8, 0, 0x10, 0x1c
 /* 8027B958 00278898  7C 86 42 14 */	add r4, r6, r8
 /* 8027B95C 0027889C  C0 04 00 04 */	lfs f0, 4(r4)
@@ -586,8 +596,10 @@ lbl_8027B930:
 /* 8027B9EC 0027892C  D0 23 00 30 */	stfs f1, 0x30(r3)
 /* 8027B9F0 00278930  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027B9F4 00278934  4E 80 00 20 */	blr 
-.global JPAVolumeTorus
-JPAVolumeTorus:
+
+/* 8027B9F8 0120 .text JPAVolumeTorus__FP18JPAEmitterWorkData JPAVolumeTorus__FP18JPAEmitterWorkData */
+.global JPAVolumeTorus__FP18JPAEmitterWorkData
+JPAVolumeTorus__FP18JPAEmitterWorkData:
 /* 8027B9F8 00278938  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027B9FC 0027893C  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8027BA00 00278940  80 06 00 C4 */	lwz r0, 0xc4(r6)
@@ -620,8 +632,8 @@ JPAVolumeTorus:
 /* 8027BA6C 002789AC  C0 23 00 34 */	lfs f1, 0x34(r3)
 /* 8027BA70 002789B0  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 8027BA74 002789B4  EC 81 00 32 */	fmuls f4, f1, f0
-/* 8027BA78 002789B8  3C 80 80 44 */	lis r4, lbl_80439A20@ha
-/* 8027BA7C 002789BC  38 84 9A 20 */	addi r4, r4, lbl_80439A20@l
+/* 8027BA78 002789B8  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
+/* 8027BA7C 002789BC  38 84 9A 20 */	addi r4, r4, sincosTable___5JMath@l
 /* 8027BA80 002789C0  38 A4 00 04 */	addi r5, r4, 4
 /* 8027BA84 002789C4  54 E6 04 38 */	rlwinm r6, r7, 0, 0x10, 0x1c
 /* 8027BA88 002789C8  7C 05 34 2E */	lfsx f0, r5, r6
@@ -661,15 +673,16 @@ JPAVolumeTorus:
 /* 8027BB10 00278A50  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027BB14 00278A54  4E 80 00 20 */	blr 
 
-.global JPADynamicsBlock
-JPADynamicsBlock:
+/* 8027BB18 0034 .text __ct__16JPADynamicsBlockFPCUc __ct__16JPADynamicsBlockFPCUc */
+.global __ct__16JPADynamicsBlockFPCUc
+__ct__16JPADynamicsBlockFPCUc:
 /* 8027BB18 00278A58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027BB1C 00278A5C  7C 08 02 A6 */	mflr r0
 /* 8027BB20 00278A60  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8027BB24 00278A64  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027BB28 00278A68  7C 7F 1B 78 */	mr r31, r3
 /* 8027BB2C 00278A6C  90 83 00 00 */	stw r4, 0(r3)
-/* 8027BB30 00278A70  48 00 00 1D */	bl JPADynamicsBlock_NS_init
+/* 8027BB30 00278A70  48 00 00 1D */	bl init__16JPADynamicsBlockFv
 /* 8027BB34 00278A74  7F E3 FB 78 */	mr r3, r31
 /* 8027BB38 00278A78  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027BB3C 00278A7C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -677,8 +690,9 @@ JPADynamicsBlock:
 /* 8027BB44 00278A84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027BB48 00278A88  4E 80 00 20 */	blr 
 
-.global JPADynamicsBlock_NS_init
-JPADynamicsBlock_NS_init:
+/* 8027BB4C 009C .text init__16JPADynamicsBlockFv init__16JPADynamicsBlockFv */
+.global init__16JPADynamicsBlockFv
+init__16JPADynamicsBlockFv:
 /* 8027BB4C 00278A8C  80 83 00 00 */	lwz r4, 0(r3)
 /* 8027BB50 00278A90  80 04 00 08 */	lwz r0, 8(r4)
 /* 8027BB54 00278A94  54 00 C7 7E */	rlwinm r0, r0, 0x18, 0x1d, 0x1f
@@ -690,51 +704,38 @@ JPADynamicsBlock_NS_init:
 /* 8027BB6C 00278AAC  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8027BB70 00278AB0  7C 09 03 A6 */	mtctr r0
 /* 8027BB74 00278AB4  4E 80 04 20 */	bctr 
-.global JPAVolumeCube
-/* 8027BB78 00278AB8  3C 80 80 28 */	lis r4, JPAVolumeCube@ha
-.global JPAVolumeCube
-/* 8027BB7C 00278ABC  38 04 B4 E8 */	addi r0, r4, JPAVolumeCube@l
+/* 8027BB78 00278AB8  3C 80 80 28 */	lis r4, JPAVolumeCube__FP18JPAEmitterWorkData@ha
+/* 8027BB7C 00278ABC  38 04 B4 E8 */	addi r0, r4, JPAVolumeCube__FP18JPAEmitterWorkData@l
 /* 8027BB80 00278AC0  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BB84 00278AC4  4E 80 00 20 */	blr 
-.global JPAVolumeSphere
-/* 8027BB88 00278AC8  3C 80 80 28 */	lis r4, JPAVolumeSphere@ha
-.global JPAVolumeSphere
-/* 8027BB8C 00278ACC  38 04 B5 F0 */	addi r0, r4, JPAVolumeSphere@l
+/* 8027BB88 00278AC8  3C 80 80 28 */	lis r4, JPAVolumeSphere__FP18JPAEmitterWorkData@ha
+/* 8027BB8C 00278ACC  38 04 B5 F0 */	addi r0, r4, JPAVolumeSphere__FP18JPAEmitterWorkData@l
 /* 8027BB90 00278AD0  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BB94 00278AD4  4E 80 00 20 */	blr 
-.global JPAVolumeCylinder
-/* 8027BB98 00278AD8  3C 80 80 28 */	lis r4, JPAVolumeCylinder@ha
-.global JPAVolumeCylinder
-/* 8027BB9C 00278ADC  38 04 B8 7C */	addi r0, r4, JPAVolumeCylinder@l
+/* 8027BB98 00278AD8  3C 80 80 28 */	lis r4, JPAVolumeCylinder__FP18JPAEmitterWorkData@ha
+/* 8027BB9C 00278ADC  38 04 B8 7C */	addi r0, r4, JPAVolumeCylinder__FP18JPAEmitterWorkData@l
 /* 8027BBA0 00278AE0  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BBA4 00278AE4  4E 80 00 20 */	blr 
-.global JPAVolumeTorus
-/* 8027BBA8 00278AE8  3C 80 80 28 */	lis r4, JPAVolumeTorus@ha
-.global JPAVolumeTorus
-/* 8027BBAC 00278AEC  38 04 B9 F8 */	addi r0, r4, JPAVolumeTorus@l
+/* 8027BBA8 00278AE8  3C 80 80 28 */	lis r4, JPAVolumeTorus__FP18JPAEmitterWorkData@ha
+/* 8027BBAC 00278AEC  38 04 B9 F8 */	addi r0, r4, JPAVolumeTorus__FP18JPAEmitterWorkData@l
 /* 8027BBB0 00278AF0  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BBB4 00278AF4  4E 80 00 20 */	blr 
-.global JPAVolumePoint
-/* 8027BBB8 00278AF8  3C 80 80 28 */	lis r4, JPAVolumePoint@ha
-.global JPAVolumePoint
-/* 8027BBBC 00278AFC  38 04 B1 44 */	addi r0, r4, JPAVolumePoint@l
+/* 8027BBB8 00278AF8  3C 80 80 28 */	lis r4, JPAVolumePoint__FP18JPAEmitterWorkData@ha
+/* 8027BBBC 00278AFC  38 04 B1 44 */	addi r0, r4, JPAVolumePoint__FP18JPAEmitterWorkData@l
 /* 8027BBC0 00278B00  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BBC4 00278B04  4E 80 00 20 */	blr 
-.global JPAVolumeCircle
-/* 8027BBC8 00278B08  3C 80 80 28 */	lis r4, JPAVolumeCircle@ha
-.global JPAVolumeCircle
-/* 8027BBCC 00278B0C  38 04 B3 3C */	addi r0, r4, JPAVolumeCircle@l
+/* 8027BBC8 00278B08  3C 80 80 28 */	lis r4, JPAVolumeCircle__FP18JPAEmitterWorkData@ha
+/* 8027BBCC 00278B0C  38 04 B3 3C */	addi r0, r4, JPAVolumeCircle__FP18JPAEmitterWorkData@l
 /* 8027BBD0 00278B10  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BBD4 00278B14  4E 80 00 20 */	blr 
-.global JPAVolumeLine
-/* 8027BBD8 00278B18  3C 80 80 28 */	lis r4, JPAVolumeLine@ha
-.global JPAVolumeLine
-/* 8027BBDC 00278B1C  38 04 B2 20 */	addi r0, r4, JPAVolumeLine@l
+/* 8027BBD8 00278B18  3C 80 80 28 */	lis r4, JPAVolumeLine__FP18JPAEmitterWorkData@ha
+/* 8027BBDC 00278B1C  38 04 B2 20 */	addi r0, r4, JPAVolumeLine__FP18JPAEmitterWorkData@l
 /* 8027BBE0 00278B20  90 03 00 04 */	stw r0, 4(r3)
 /* 8027BBE4 00278B24  4E 80 00 20 */	blr 
 
-.global JPADynamicsBlock_NS_create
-JPADynamicsBlock_NS_create:
+/* 8027BBE8 0204 .text create__16JPADynamicsBlockFP18JPAEmitterWorkData create__16JPADynamicsBlockFP18JPAEmitterWorkData */
+.global create__16JPADynamicsBlockFP18JPAEmitterWorkData
+create__16JPADynamicsBlockFP18JPAEmitterWorkData:
 /* 8027BBE8 00278B28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8027BBEC 00278B2C  7C 08 02 A6 */	mflr r0
 /* 8027BBF0 00278B30  90 01 00 34 */	stw r0, 0x34(r1)
@@ -830,7 +831,7 @@ lbl_8027BD40:
 /* 8027BD44 00278C84  48 00 00 18 */	b lbl_8027BD5C
 lbl_8027BD48:
 /* 8027BD48 00278C88  80 7F 00 00 */	lwz r3, 0(r31)
-/* 8027BD4C 00278C8C  48 00 2C F5 */	bl JPABaseEmitter_NS_createParticle
+/* 8027BD4C 00278C8C  48 00 2C F5 */	bl createParticle__14JPABaseEmitterFv
 /* 8027BD50 00278C90  28 03 00 00 */	cmplwi r3, 0
 /* 8027BD54 00278C94  41 82 00 10 */	beq lbl_8027BD64
 /* 8027BD58 00278C98  3B DE FF FF */	addi r30, r30, -1
@@ -874,4 +875,49 @@ lbl_8027BDC4:
 /* 8027BDE0 00278D20  7C 08 03 A6 */	mtlr r0
 /* 8027BDE4 00278D24  38 21 00 30 */	addi r1, r1, 0x30
 /* 8027BDE8 00278D28  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C4488 001C .data lbl_803C4488 @2631 */
+.global lbl_803C4488
+lbl_803C4488:
+.byte 0x80, 0x27, 0xbb, 0x78, 0x80, 0x27, 0xbb, 0x88, 0x80, 0x27, 0xbb, 0x98, 0x80, 0x27, 0xbb, 0xa8 /* baserom.dol+0x3c1488 */
+.byte 0x80, 0x27, 0xbb, 0xb8, 0x80, 0x27, 0xbb, 0xc8, 0x80, 0x27, 0xbb, 0xd8 /* baserom.dol+0x3c1498 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c14a4 */
+
+
+
+.section .sdata2, "a"
+/* 80455310 0004 .sdata2 lbl_80455310 @2287 */
+.global lbl_80455310
+lbl_80455310:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4170 */
+
+/* 80455314 0004 .sdata2 lbl_80455314 @2288 */
+.global lbl_80455314
+lbl_80455314:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4174 */
+
+/* 80455318 0004 .sdata2 lbl_80455318 @2289 */
+.global lbl_80455318
+lbl_80455318:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4178 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d417c */
+
+/* 80455320 0008 .sdata2 lbl_80455320 @2321 */
+.global lbl_80455320
+lbl_80455320:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4180 */
+
+/* 80455328 0004 .sdata2 lbl_80455328 @2501 */
+.global lbl_80455328
+lbl_80455328:
+.byte 0x47, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4188 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d418c */
+
+/* 80455330 0008 .sdata2 lbl_80455330 @2503 */
+.global lbl_80455330
+lbl_80455330:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4190 */
 

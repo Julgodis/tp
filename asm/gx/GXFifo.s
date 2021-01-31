@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8035a5a8
 
-
+.section .text, "ax"
+/* 8035A5A8 0134 .text GXCPInterruptHandler GXCPInterruptHandler */
 .global GXCPInterruptHandler
 GXCPInterruptHandler:
 /* 8035A5A8 003574E8  7C 08 02 A6 */	mflr r0
@@ -10,8 +10,8 @@ GXCPInterruptHandler:
 /* 8035A5B0 003574F0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 8035A5B4 003574F4  93 E1 02 DC */	stw r31, 0x2dc(r1)
 /* 8035A5B8 003574F8  7C 9F 23 78 */	mr r31, r4
-/* 8035A5BC 003574FC  80 AD 93 A4 */	lwz r5, lbl_80451924-_SDA_BASE_(r13)
-/* 8035A5C0 00357500  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035A5BC 003574FC  80 AD 93 A4 */	lwz r5, __cpReg-_SDA_BASE_(r13)
+/* 8035A5C0 00357500  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035A5C4 00357504  A0 05 00 00 */	lhz r0, 0(r5)
 /* 8035A5C8 00357508  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8035A5CC 0035750C  80 03 00 08 */	lwz r0, 8(r3)
@@ -20,10 +20,10 @@ GXCPInterruptHandler:
 /* 8035A5D8 00357518  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8035A5DC 0035751C  54 00 FF FF */	rlwinm. r0, r0, 0x1f, 0x1f, 0x1f
 /* 8035A5E0 00357520  41 82 00 2C */	beq lbl_8035A60C
-/* 8035A5E4 00357524  80 6D 93 D0 */	lwz r3, lbl_80451950-_SDA_BASE_(r13)
+/* 8035A5E4 00357524  80 6D 93 D0 */	lwz r3, __GXCurrentThread-_SDA_BASE_(r13)
 /* 8035A5E8 00357528  4B FE 71 CD */	bl OSResumeThread
 /* 8035A5EC 0035752C  38 00 00 00 */	li r0, 0
-/* 8035A5F0 00357530  90 0D 93 D8 */	stw r0, lbl_80451958-_SDA_BASE_(r13)
+/* 8035A5F0 00357530  90 0D 93 D8 */	stw r0, GXOverflowSuspendInProgress-_SDA_BASE_(r13)
 /* 8035A5F4 00357534  38 60 00 01 */	li r3, 1
 /* 8035A5F8 00357538  38 80 00 01 */	li r4, 1
 /* 8035A5FC 0035753C  48 00 07 29 */	bl __GXWriteFifoIntReset
@@ -31,28 +31,28 @@ GXCPInterruptHandler:
 /* 8035A604 00357544  38 80 00 00 */	li r4, 0
 /* 8035A608 00357548  48 00 06 ED */	bl __GXWriteFifoIntEnable
 lbl_8035A60C:
-/* 8035A60C 0035754C  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035A60C 0035754C  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035A610 00357550  80 03 00 08 */	lwz r0, 8(r3)
 /* 8035A614 00357554  54 00 F7 FF */	rlwinm. r0, r0, 0x1e, 0x1f, 0x1f
 /* 8035A618 00357558  41 82 00 44 */	beq lbl_8035A65C
 /* 8035A61C 0035755C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8035A620 00357560  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8035A624 00357564  41 82 00 38 */	beq lbl_8035A65C
-/* 8035A628 00357568  80 AD 93 E0 */	lwz r5, lbl_80451960-_SDA_BASE_(r13)
+/* 8035A628 00357568  80 AD 93 E0 */	lwz r5, __GXOverflowCount-_SDA_BASE_(r13)
 /* 8035A62C 0035756C  38 60 00 00 */	li r3, 0
 /* 8035A630 00357570  38 80 00 01 */	li r4, 1
 /* 8035A634 00357574  38 05 00 01 */	addi r0, r5, 1
-/* 8035A638 00357578  90 0D 93 E0 */	stw r0, lbl_80451960-_SDA_BASE_(r13)
+/* 8035A638 00357578  90 0D 93 E0 */	stw r0, __GXOverflowCount-_SDA_BASE_(r13)
 /* 8035A63C 0035757C  48 00 06 B9 */	bl __GXWriteFifoIntEnable
 /* 8035A640 00357580  38 60 00 01 */	li r3, 1
 /* 8035A644 00357584  38 80 00 00 */	li r4, 0
 /* 8035A648 00357588  48 00 06 DD */	bl __GXWriteFifoIntReset
 /* 8035A64C 0035758C  38 00 00 01 */	li r0, 1
-/* 8035A650 00357590  80 6D 93 D0 */	lwz r3, lbl_80451950-_SDA_BASE_(r13)
-/* 8035A654 00357594  90 0D 93 D8 */	stw r0, lbl_80451958-_SDA_BASE_(r13)
+/* 8035A650 00357590  80 6D 93 D0 */	lwz r3, __GXCurrentThread-_SDA_BASE_(r13)
+/* 8035A654 00357594  90 0D 93 D8 */	stw r0, GXOverflowSuspendInProgress-_SDA_BASE_(r13)
 /* 8035A658 00357598  4B FE 73 E5 */	bl OSSuspendThread
 lbl_8035A65C:
-/* 8035A65C 0035759C  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035A65C 0035759C  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035A660 003575A0  80 83 00 08 */	lwz r4, 8(r3)
 /* 8035A664 003575A4  54 80 DF FF */	rlwinm. r0, r4, 0x1b, 0x1f, 0x1f
 /* 8035A668 003575A8  41 82 00 60 */	beq lbl_8035A6C8
@@ -63,16 +63,16 @@ lbl_8035A65C:
 /* 8035A67C 003575BC  50 04 2E B4 */	rlwimi r4, r0, 5, 0x1a, 0x1a
 /* 8035A680 003575C0  90 83 00 08 */	stw r4, 8(r3)
 /* 8035A684 003575C4  80 03 00 08 */	lwz r0, 8(r3)
-/* 8035A688 003575C8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A688 003575C8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A68C 003575CC  B0 03 00 02 */	sth r0, 2(r3)
-/* 8035A690 003575D0  80 0D 93 DC */	lwz r0, lbl_8045195C-_SDA_BASE_(r13)
+/* 8035A690 003575D0  80 0D 93 DC */	lwz r0, BreakPointCB-_SDA_BASE_(r13)
 /* 8035A694 003575D4  28 00 00 00 */	cmplwi r0, 0
 /* 8035A698 003575D8  41 82 00 30 */	beq lbl_8035A6C8
 /* 8035A69C 003575DC  38 61 00 10 */	addi r3, r1, 0x10
 /* 8035A6A0 003575E0  4B FE 19 61 */	bl OSClearContext
 /* 8035A6A4 003575E4  38 61 00 10 */	addi r3, r1, 0x10
 /* 8035A6A8 003575E8  4B FE 17 91 */	bl OSSetCurrentContext
-/* 8035A6AC 003575EC  81 8D 93 DC */	lwz r12, lbl_8045195C-_SDA_BASE_(r13)
+/* 8035A6AC 003575EC  81 8D 93 DC */	lwz r12, BreakPointCB-_SDA_BASE_(r13)
 /* 8035A6B0 003575F0  7D 88 03 A6 */	mtlr r12
 /* 8035A6B4 003575F4  4E 80 00 21 */	blrl 
 /* 8035A6B8 003575F8  38 61 00 10 */	addi r3, r1, 0x10
@@ -86,6 +86,7 @@ lbl_8035A6C8:
 /* 8035A6D4 00357614  7C 08 03 A6 */	mtlr r0
 /* 8035A6D8 00357618  4E 80 00 20 */	blr 
 
+/* 8035A6DC 006C .text GXInitFifoBase GXInitFifoBase */
 .global GXInitFifoBase
 GXInitFifoBase:
 /* 8035A6DC 0035761C  7C 08 02 A6 */	mflr r0
@@ -116,6 +117,7 @@ GXInitFifoBase:
 /* 8035A740 00357680  7C 08 03 A6 */	mtlr r0
 /* 8035A744 00357684  4E 80 00 20 */	blr 
 
+/* 8035A748 0070 .text GXInitFifoPtrs GXInitFifoPtrs */
 .global GXInitFifoPtrs
 GXInitFifoPtrs:
 /* 8035A748 00357688  7C 08 02 A6 */	mflr r0
@@ -127,7 +129,7 @@ GXInitFifoPtrs:
 /* 8035A760 003576A0  3B C4 00 00 */	addi r30, r4, 0
 /* 8035A764 003576A4  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8035A768 003576A8  3B A3 00 00 */	addi r29, r3, 0
-/* 8035A76C 003576AC  4B FE 2F 89 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8035A76C 003576AC  4B FE 2F 89 */	bl __RAS_OSDisableInterrupts_begin
 /* 8035A770 003576B0  93 DD 00 14 */	stw r30, 0x14(r29)
 /* 8035A774 003576B4  7C 1E F8 50 */	subf r0, r30, r31
 /* 8035A778 003576B8  93 FD 00 18 */	stw r31, 0x18(r29)
@@ -148,12 +150,14 @@ lbl_8035A798:
 /* 8035A7B0 003576F0  7C 08 03 A6 */	mtlr r0
 /* 8035A7B4 003576F4  4E 80 00 20 */	blr 
 
+/* 8035A7B8 000C .text GXInitFifoLimits GXInitFifoLimits */
 .global GXInitFifoLimits
 GXInitFifoLimits:
 /* 8035A7B8 003576F8  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8035A7BC 003576FC  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 8035A7C0 00357700  4E 80 00 20 */	blr 
 
+/* 8035A7C4 0128 .text GXSetCPUFifo GXSetCPUFifo */
 .global GXSetCPUFifo
 GXSetCPUFifo:
 /* 8035A7C4 00357704  7C 08 02 A6 */	mflr r0
@@ -162,15 +166,15 @@ GXSetCPUFifo:
 /* 8035A7D0 00357710  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8035A7D4 00357714  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8035A7D8 00357718  7C 7E 1B 78 */	mr r30, r3
-/* 8035A7DC 0035771C  4B FE 2F 19 */	bl __RAS_OSDisableInterrupts_begin 
-/* 8035A7E0 00357720  80 0D 93 CC */	lwz r0, lbl_8045194C-_SDA_BASE_(r13)
+/* 8035A7DC 0035771C  4B FE 2F 19 */	bl __RAS_OSDisableInterrupts_begin
+/* 8035A7E0 00357720  80 0D 93 CC */	lwz r0, GPFifo-_SDA_BASE_(r13)
 /* 8035A7E4 00357724  3B E3 00 00 */	addi r31, r3, 0
-/* 8035A7E8 00357728  93 CD 93 C8 */	stw r30, lbl_80451948-_SDA_BASE_(r13)
+/* 8035A7E8 00357728  93 CD 93 C8 */	stw r30, CPUFifo-_SDA_BASE_(r13)
 /* 8035A7EC 0035772C  7C 1E 00 40 */	cmplw r30, r0
 /* 8035A7F0 00357730  40 82 00 70 */	bne lbl_8035A860
 /* 8035A7F4 00357734  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8035A7F8 00357738  39 00 00 00 */	li r8, 0
-/* 8035A7FC 0035773C  80 6D 93 A0 */	lwz r3, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A7FC 0035773C  80 6D 93 A0 */	lwz r3, __piReg-_SDA_BASE_(r13)
 /* 8035A800 00357740  38 C0 00 00 */	li r6, 0
 /* 8035A804 00357744  54 00 00 BE */	clrlwi r0, r0, 2
 /* 8035A808 00357748  90 03 00 0C */	stw r0, 0xc(r3)
@@ -178,11 +182,11 @@ GXSetCPUFifo:
 /* 8035A810 00357750  38 60 00 01 */	li r3, 1
 /* 8035A814 00357754  80 FE 00 04 */	lwz r7, 4(r30)
 /* 8035A818 00357758  38 80 00 01 */	li r4, 1
-/* 8035A81C 0035775C  80 AD 93 A0 */	lwz r5, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A81C 0035775C  80 AD 93 A0 */	lwz r5, __piReg-_SDA_BASE_(r13)
 /* 8035A820 00357760  54 E7 00 BE */	clrlwi r7, r7, 2
 /* 8035A824 00357764  90 E5 00 10 */	stw r7, 0x10(r5)
 /* 8035A828 00357768  80 FE 00 18 */	lwz r7, 0x18(r30)
-/* 8035A82C 0035776C  80 AD 93 A0 */	lwz r5, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A82C 0035776C  80 AD 93 A0 */	lwz r5, __piReg-_SDA_BASE_(r13)
 /* 8035A830 00357770  50 E8 01 B4 */	rlwimi r8, r7, 0, 6, 0x1a
 /* 8035A834 00357774  38 E8 00 00 */	addi r7, r8, 0
 /* 8035A838 00357778  50 C7 D1 4A */	rlwimi r7, r6, 0x1a, 5, 5
@@ -209,16 +213,16 @@ lbl_8035A87C:
 /* 8035A884 003577C4  48 00 04 71 */	bl __GXWriteFifoIntEnable
 /* 8035A888 003577C8  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8035A88C 003577CC  38 A0 00 00 */	li r5, 0
-/* 8035A890 003577D0  80 6D 93 A0 */	lwz r3, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A890 003577D0  80 6D 93 A0 */	lwz r3, __piReg-_SDA_BASE_(r13)
 /* 8035A894 003577D4  38 00 00 00 */	li r0, 0
 /* 8035A898 003577D8  54 84 00 BE */	clrlwi r4, r4, 2
 /* 8035A89C 003577DC  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8035A8A0 003577E0  80 9E 00 04 */	lwz r4, 4(r30)
-/* 8035A8A4 003577E4  80 6D 93 A0 */	lwz r3, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A8A4 003577E4  80 6D 93 A0 */	lwz r3, __piReg-_SDA_BASE_(r13)
 /* 8035A8A8 003577E8  54 84 00 BE */	clrlwi r4, r4, 2
 /* 8035A8AC 003577EC  90 83 00 10 */	stw r4, 0x10(r3)
 /* 8035A8B0 003577F0  80 9E 00 18 */	lwz r4, 0x18(r30)
-/* 8035A8B4 003577F4  80 6D 93 A0 */	lwz r3, lbl_80451920-_SDA_BASE_(r13)
+/* 8035A8B4 003577F4  80 6D 93 A0 */	lwz r3, __piReg-_SDA_BASE_(r13)
 /* 8035A8B8 003577F8  50 85 01 B4 */	rlwimi r5, r4, 0, 6, 0x1a
 /* 8035A8BC 003577FC  38 85 00 00 */	addi r4, r5, 0
 /* 8035A8C0 00357800  50 04 D1 4A */	rlwimi r4, r0, 0x1a, 5, 5
@@ -234,6 +238,7 @@ lbl_8035A8C8:
 /* 8035A8E4 00357824  7C 08 03 A6 */	mtlr r0
 /* 8035A8E8 00357828  4E 80 00 20 */	blr 
 
+/* 8035A8EC 01A0 .text GXSetGPFifo GXSetGPFifo */
 .global GXSetGPFifo
 GXSetGPFifo:
 /* 8035A8EC 0035782C  7C 08 02 A6 */	mflr r0
@@ -242,65 +247,65 @@ GXSetGPFifo:
 /* 8035A8F8 00357838  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8035A8FC 0035783C  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8035A900 00357840  7C 7E 1B 78 */	mr r30, r3
-/* 8035A904 00357844  4B FE 2D F1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8035A904 00357844  4B FE 2D F1 */	bl __RAS_OSDisableInterrupts_begin
 /* 8035A908 00357848  7C 7F 1B 78 */	mr r31, r3
 /* 8035A90C 0035784C  48 00 03 91 */	bl __GXFifoReadDisable
 /* 8035A910 00357850  38 60 00 00 */	li r3, 0
 /* 8035A914 00357854  38 80 00 00 */	li r4, 0
 /* 8035A918 00357858  48 00 03 DD */	bl __GXWriteFifoIntEnable
-/* 8035A91C 0035785C  93 CD 93 CC */	stw r30, lbl_8045194C-_SDA_BASE_(r13)
-/* 8035A920 00357860  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A91C 0035785C  93 CD 93 CC */	stw r30, GPFifo-_SDA_BASE_(r13)
+/* 8035A920 00357860  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A924 00357864  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8035A928 00357868  B0 03 00 20 */	sth r0, 0x20(r3)
 /* 8035A92C 0035786C  80 1E 00 04 */	lwz r0, 4(r30)
-/* 8035A930 00357870  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A930 00357870  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A934 00357874  B0 03 00 24 */	sth r0, 0x24(r3)
 /* 8035A938 00357878  80 1E 00 1C */	lwz r0, 0x1c(r30)
-/* 8035A93C 0035787C  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A93C 0035787C  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A940 00357880  B0 03 00 30 */	sth r0, 0x30(r3)
 /* 8035A944 00357884  80 1E 00 18 */	lwz r0, 0x18(r30)
-/* 8035A948 00357888  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A948 00357888  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A94C 0035788C  B0 03 00 34 */	sth r0, 0x34(r3)
 /* 8035A950 00357890  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 8035A954 00357894  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A954 00357894  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A958 00357898  B0 03 00 38 */	sth r0, 0x38(r3)
 /* 8035A95C 0035789C  80 1E 00 0C */	lwz r0, 0xc(r30)
-/* 8035A960 003578A0  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A960 003578A0  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A964 003578A4  B0 03 00 28 */	sth r0, 0x28(r3)
 /* 8035A968 003578A8  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 8035A96C 003578AC  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A96C 003578AC  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A970 003578B0  B0 03 00 2C */	sth r0, 0x2c(r3)
 /* 8035A974 003578B4  80 1E 00 00 */	lwz r0, 0(r30)
-/* 8035A978 003578B8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A978 003578B8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A97C 003578BC  54 00 84 BE */	rlwinm r0, r0, 0x10, 0x12, 0x1f
 /* 8035A980 003578C0  B0 03 00 22 */	sth r0, 0x22(r3)
 /* 8035A984 003578C4  80 1E 00 04 */	lwz r0, 4(r30)
-/* 8035A988 003578C8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A988 003578C8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A98C 003578CC  54 00 84 BE */	rlwinm r0, r0, 0x10, 0x12, 0x1f
 /* 8035A990 003578D0  B0 03 00 26 */	sth r0, 0x26(r3)
 /* 8035A994 003578D4  80 1E 00 1C */	lwz r0, 0x1c(r30)
-/* 8035A998 003578D8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A998 003578D8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A99C 003578DC  7C 00 86 70 */	srawi r0, r0, 0x10
 /* 8035A9A0 003578E0  B0 03 00 32 */	sth r0, 0x32(r3)
 /* 8035A9A4 003578E4  80 1E 00 18 */	lwz r0, 0x18(r30)
-/* 8035A9A8 003578E8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A9A8 003578E8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A9AC 003578EC  54 00 84 BE */	rlwinm r0, r0, 0x10, 0x12, 0x1f
 /* 8035A9B0 003578F0  B0 03 00 36 */	sth r0, 0x36(r3)
 /* 8035A9B4 003578F4  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 8035A9B8 003578F8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A9B8 003578F8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A9BC 003578FC  54 00 84 BE */	rlwinm r0, r0, 0x10, 0x12, 0x1f
 /* 8035A9C0 00357900  B0 03 00 3A */	sth r0, 0x3a(r3)
 /* 8035A9C4 00357904  80 1E 00 0C */	lwz r0, 0xc(r30)
-/* 8035A9C8 00357908  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A9C8 00357908  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A9CC 0035790C  54 00 84 3E */	srwi r0, r0, 0x10
 /* 8035A9D0 00357910  B0 03 00 2A */	sth r0, 0x2a(r3)
 /* 8035A9D4 00357914  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 8035A9D8 00357918  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035A9D8 00357918  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035A9DC 0035791C  54 00 84 3E */	srwi r0, r0, 0x10
 /* 8035A9E0 00357920  B0 03 00 2E */	sth r0, 0x2e(r3)
 /* 8035A9E4 00357924  4B FD F3 15 */	bl PPCSync
-/* 8035A9E8 00357928  80 6D 93 C8 */	lwz r3, lbl_80451948-_SDA_BASE_(r13)
-/* 8035A9EC 0035792C  80 0D 93 CC */	lwz r0, lbl_8045194C-_SDA_BASE_(r13)
+/* 8035A9E8 00357928  80 6D 93 C8 */	lwz r3, CPUFifo-_SDA_BASE_(r13)
+/* 8035A9EC 0035792C  80 0D 93 CC */	lwz r0, GPFifo-_SDA_BASE_(r13)
 /* 8035A9F0 00357930  7C 03 00 40 */	cmplw r3, r0
 /* 8035A9F4 00357934  40 82 00 24 */	bne lbl_8035AA18
 /* 8035A9F8 00357938  38 00 00 01 */	li r0, 1
@@ -320,9 +325,9 @@ lbl_8035AA18:
 /* 8035AA2C 0035796C  38 60 00 00 */	li r3, 0
 /* 8035AA30 00357970  48 00 02 91 */	bl __GXFifoLink
 lbl_8035AA34:
-/* 8035AA34 00357974  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035AA34 00357974  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 8035AA38 00357978  38 00 00 00 */	li r0, 0
-/* 8035AA3C 0035797C  80 8D 93 A4 */	lwz r4, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AA3C 0035797C  80 8D 93 A4 */	lwz r4, __cpReg-_SDA_BASE_(r13)
 /* 8035AA40 00357980  38 60 00 01 */	li r3, 1
 /* 8035AA44 00357984  80 C5 00 08 */	lwz r6, 8(r5)
 /* 8035AA48 00357988  50 06 0F BC */	rlwimi r6, r0, 1, 0x1e, 0x1e
@@ -330,7 +335,7 @@ lbl_8035AA34:
 /* 8035AA50 00357990  B0 C4 00 02 */	sth r6, 2(r4)
 /* 8035AA54 00357994  38 80 00 01 */	li r4, 1
 /* 8035AA58 00357998  80 05 00 08 */	lwz r0, 8(r5)
-/* 8035AA5C 0035799C  80 AD 93 A4 */	lwz r5, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AA5C 0035799C  80 AD 93 A4 */	lwz r5, __cpReg-_SDA_BASE_(r13)
 /* 8035AA60 003579A0  B0 05 00 02 */	sth r0, 2(r5)
 /* 8035AA64 003579A4  48 00 02 C1 */	bl __GXWriteFifoIntReset
 /* 8035AA68 003579A8  48 00 02 11 */	bl __GXFifoReadEnable
@@ -343,6 +348,7 @@ lbl_8035AA34:
 /* 8035AA84 003579C4  7C 08 03 A6 */	mtlr r0
 /* 8035AA88 003579C8  4E 80 00 20 */	blr 
 
+/* 8035AA8C 0034 .text GXSaveCPUFifo GXSaveCPUFifo */
 .global GXSaveCPUFifo
 GXSaveCPUFifo:
 /* 8035AA8C 003579CC  7C 08 02 A6 */	mflr r0
@@ -359,6 +365,7 @@ GXSaveCPUFifo:
 /* 8035AAB8 003579F8  7C 08 03 A6 */	mtlr r0
 /* 8035AABC 003579FC  4E 80 00 20 */	blr 
 
+/* 8035AAC0 00C8 .text __GXSaveCPUFifoAux __GXSaveCPUFifoAux */
 .global __GXSaveCPUFifoAux
 __GXSaveCPUFifoAux:
 /* 8035AAC0 00357A00  7C 08 02 A6 */	mflr r0
@@ -366,16 +373,16 @@ __GXSaveCPUFifoAux:
 /* 8035AAC8 00357A08  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8035AACC 00357A0C  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8035AAD0 00357A10  7C 7F 1B 78 */	mr r31, r3
-/* 8035AAD4 00357A14  4B FE 2C 21 */	bl __RAS_OSDisableInterrupts_begin 
-/* 8035AAD8 00357A18  80 8D 93 A0 */	lwz r4, lbl_80451920-_SDA_BASE_(r13)
+/* 8035AAD4 00357A14  4B FE 2C 21 */	bl __RAS_OSDisableInterrupts_begin
+/* 8035AAD8 00357A18  80 8D 93 A0 */	lwz r4, __piReg-_SDA_BASE_(r13)
 /* 8035AADC 00357A1C  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 8035AAE0 00357A20  3C 04 80 00 */	addis r0, r4, 0x8000
 /* 8035AAE4 00357A24  90 1F 00 00 */	stw r0, 0(r31)
-/* 8035AAE8 00357A28  80 8D 93 A0 */	lwz r4, lbl_80451920-_SDA_BASE_(r13)
+/* 8035AAE8 00357A28  80 8D 93 A0 */	lwz r4, __piReg-_SDA_BASE_(r13)
 /* 8035AAEC 00357A2C  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 8035AAF0 00357A30  3C 04 80 00 */	addis r0, r4, 0x8000
 /* 8035AAF4 00357A34  90 1F 00 04 */	stw r0, 4(r31)
-/* 8035AAF8 00357A38  80 8D 93 A0 */	lwz r4, lbl_80451920-_SDA_BASE_(r13)
+/* 8035AAF8 00357A38  80 8D 93 A0 */	lwz r4, __piReg-_SDA_BASE_(r13)
 /* 8035AAFC 00357A3C  80 04 00 14 */	lwz r0, 0x14(r4)
 /* 8035AB00 00357A40  54 04 01 88 */	rlwinm r4, r0, 0, 6, 4
 /* 8035AB04 00357A44  3C 04 80 00 */	addis r0, r4, 0x8000
@@ -383,13 +390,13 @@ __GXSaveCPUFifoAux:
 /* 8035AB0C 00357A4C  88 0D 93 D4 */	lbz r0, lbl_80451954-_SDA_BASE_(r13)
 /* 8035AB10 00357A50  28 00 00 00 */	cmplwi r0, 0
 /* 8035AB14 00357A54  41 82 00 34 */	beq lbl_8035AB48
-/* 8035AB18 00357A58  80 8D 93 A4 */	lwz r4, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AB18 00357A58  80 8D 93 A4 */	lwz r4, __cpReg-_SDA_BASE_(r13)
 /* 8035AB1C 00357A5C  A0 04 00 3A */	lhz r0, 0x3a(r4)
 /* 8035AB20 00357A60  A0 84 00 38 */	lhz r4, 0x38(r4)
 /* 8035AB24 00357A64  50 04 80 1E */	rlwimi r4, r0, 0x10, 0, 0xf
 /* 8035AB28 00357A68  3C 04 80 00 */	addis r0, r4, 0x8000
 /* 8035AB2C 00357A6C  90 1F 00 14 */	stw r0, 0x14(r31)
-/* 8035AB30 00357A70  80 8D 93 A4 */	lwz r4, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AB30 00357A70  80 8D 93 A4 */	lwz r4, __cpReg-_SDA_BASE_(r13)
 /* 8035AB34 00357A74  A0 04 00 32 */	lhz r0, 0x32(r4)
 /* 8035AB38 00357A78  A0 84 00 30 */	lhz r4, 0x30(r4)
 /* 8035AB3C 00357A7C  50 04 80 1E */	rlwimi r4, r0, 0x10, 0, 0xf
@@ -414,10 +421,11 @@ lbl_8035AB70:
 /* 8035AB80 00357AC0  7C 08 03 A6 */	mtlr r0
 /* 8035AB84 00357AC4  4E 80 00 20 */	blr 
 
+/* 8035AB88 0050 .text GXGetGPStatus GXGetGPStatus */
 .global GXGetGPStatus
 GXGetGPStatus:
-/* 8035AB88 00357AC8  81 2D 93 A4 */	lwz r9, lbl_80451924-_SDA_BASE_(r13)
-/* 8035AB8C 00357ACC  81 02 CB 80 */	lwz r8, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035AB88 00357AC8  81 2D 93 A4 */	lwz r9, __cpReg-_SDA_BASE_(r13)
+/* 8035AB8C 00357ACC  81 02 CB 80 */	lwz r8, __GXData-_SDA2_BASE_(r2)
 /* 8035AB90 00357AD0  A0 09 00 00 */	lhz r0, 0(r9)
 /* 8035AB94 00357AD4  90 08 00 0C */	stw r0, 0xc(r8)
 /* 8035AB98 00357AD8  80 08 00 0C */	lwz r0, 0xc(r8)
@@ -437,16 +445,19 @@ GXGetGPStatus:
 /* 8035ABD0 00357B10  98 07 00 00 */	stb r0, 0(r7)
 /* 8035ABD4 00357B14  4E 80 00 20 */	blr 
 
+/* 8035ABD8 0008 .text GXGetFifoBase GXGetFifoBase */
 .global GXGetFifoBase
 GXGetFifoBase:
 /* 8035ABD8 00357B18  80 63 00 00 */	lwz r3, 0(r3)
 /* 8035ABDC 00357B1C  4E 80 00 20 */	blr 
 
+/* 8035ABE0 0008 .text GXGetFifoSize GXGetFifoSize */
 .global GXGetFifoSize
 GXGetFifoSize:
 /* 8035ABE0 00357B20  80 63 00 08 */	lwz r3, 8(r3)
 /* 8035ABE4 00357B24  4E 80 00 20 */	blr 
 
+/* 8035ABE8 0044 .text GXSetBreakPtCallback GXSetBreakPtCallback */
 .global GXSetBreakPtCallback
 GXSetBreakPtCallback:
 /* 8035ABE8 00357B28  7C 08 02 A6 */	mflr r0
@@ -455,9 +466,9 @@ GXSetBreakPtCallback:
 /* 8035ABF4 00357B34  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8035ABF8 00357B38  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8035ABFC 00357B3C  7C 7E 1B 78 */	mr r30, r3
-/* 8035AC00 00357B40  83 ED 93 DC */	lwz r31, lbl_8045195C-_SDA_BASE_(r13)
-/* 8035AC04 00357B44  4B FE 2A F1 */	bl __RAS_OSDisableInterrupts_begin 
-/* 8035AC08 00357B48  93 CD 93 DC */	stw r30, lbl_8045195C-_SDA_BASE_(r13)
+/* 8035AC00 00357B40  83 ED 93 DC */	lwz r31, BreakPointCB-_SDA_BASE_(r13)
+/* 8035AC04 00357B44  4B FE 2A F1 */	bl __RAS_OSDisableInterrupts_begin
+/* 8035AC08 00357B48  93 CD 93 DC */	stw r30, BreakPointCB-_SDA_BASE_(r13)
 /* 8035AC0C 00357B4C  4B FE 2B 11 */	bl OSRestoreInterrupts
 /* 8035AC10 00357B50  7F E3 FB 78 */	mr r3, r31
 /* 8035AC14 00357B54  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -467,13 +478,12 @@ GXSetBreakPtCallback:
 /* 8035AC24 00357B64  7C 08 03 A6 */	mtlr r0
 /* 8035AC28 00357B68  4E 80 00 20 */	blr 
 
+/* 8035AC2C 004C .text __GXFifoInit __GXFifoInit */
 .global __GXFifoInit
 __GXFifoInit:
 /* 8035AC2C 00357B6C  7C 08 02 A6 */	mflr r0
-.global GXCPInterruptHandler
 /* 8035AC30 00357B70  3C 60 80 36 */	lis r3, GXCPInterruptHandler@ha
 /* 8035AC34 00357B74  90 01 00 04 */	stw r0, 4(r1)
-.global GXCPInterruptHandler
 /* 8035AC38 00357B78  38 83 A5 A8 */	addi r4, r3, GXCPInterruptHandler@l
 /* 8035AC3C 00357B7C  38 60 00 11 */	li r3, 0x11
 /* 8035AC40 00357B80  94 21 FF F8 */	stwu r1, -8(r1)
@@ -482,39 +492,42 @@ __GXFifoInit:
 /* 8035AC4C 00357B8C  4B FE 2E F9 */	bl __OSUnmaskInterrupts
 /* 8035AC50 00357B90  4B FE 60 35 */	bl OSGetCurrentThread
 /* 8035AC54 00357B94  38 00 00 00 */	li r0, 0
-/* 8035AC58 00357B98  90 6D 93 D0 */	stw r3, lbl_80451950-_SDA_BASE_(r13)
-/* 8035AC5C 00357B9C  90 0D 93 D8 */	stw r0, lbl_80451958-_SDA_BASE_(r13)
-/* 8035AC60 00357BA0  90 0D 93 C8 */	stw r0, lbl_80451948-_SDA_BASE_(r13)
-/* 8035AC64 00357BA4  90 0D 93 CC */	stw r0, lbl_8045194C-_SDA_BASE_(r13)
+/* 8035AC58 00357B98  90 6D 93 D0 */	stw r3, __GXCurrentThread-_SDA_BASE_(r13)
+/* 8035AC5C 00357B9C  90 0D 93 D8 */	stw r0, GXOverflowSuspendInProgress-_SDA_BASE_(r13)
+/* 8035AC60 00357BA0  90 0D 93 C8 */	stw r0, CPUFifo-_SDA_BASE_(r13)
+/* 8035AC64 00357BA4  90 0D 93 CC */	stw r0, GPFifo-_SDA_BASE_(r13)
 /* 8035AC68 00357BA8  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8035AC6C 00357BAC  38 21 00 08 */	addi r1, r1, 8
 /* 8035AC70 00357BB0  7C 08 03 A6 */	mtlr r0
 /* 8035AC74 00357BB4  4E 80 00 20 */	blr 
 
+/* 8035AC78 0024 .text __GXFifoReadEnable __GXFifoReadEnable */
 .global __GXFifoReadEnable
 __GXFifoReadEnable:
-/* 8035AC78 00357BB8  80 82 CB 80 */	lwz r4, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035AC78 00357BB8  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 8035AC7C 00357BBC  38 00 00 01 */	li r0, 1
 /* 8035AC80 00357BC0  80 64 00 08 */	lwz r3, 8(r4)
 /* 8035AC84 00357BC4  50 03 07 FE */	rlwimi r3, r0, 0, 0x1f, 0x1f
 /* 8035AC88 00357BC8  90 64 00 08 */	stw r3, 8(r4)
 /* 8035AC8C 00357BCC  80 04 00 08 */	lwz r0, 8(r4)
-/* 8035AC90 00357BD0  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AC90 00357BD0  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035AC94 00357BD4  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035AC98 00357BD8  4E 80 00 20 */	blr 
 
+/* 8035AC9C 0024 .text __GXFifoReadDisable __GXFifoReadDisable */
 .global __GXFifoReadDisable
 __GXFifoReadDisable:
-/* 8035AC9C 00357BDC  80 82 CB 80 */	lwz r4, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035AC9C 00357BDC  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 8035ACA0 00357BE0  38 00 00 00 */	li r0, 0
 /* 8035ACA4 00357BE4  80 64 00 08 */	lwz r3, 8(r4)
 /* 8035ACA8 00357BE8  50 03 07 FE */	rlwimi r3, r0, 0, 0x1f, 0x1f
 /* 8035ACAC 00357BEC  90 64 00 08 */	stw r3, 8(r4)
 /* 8035ACB0 00357BF0  80 04 00 08 */	lwz r0, 8(r4)
-/* 8035ACB4 00357BF4  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035ACB4 00357BF4  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035ACB8 00357BF8  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035ACBC 00357BFC  4E 80 00 20 */	blr 
 
+/* 8035ACC0 0034 .text __GXFifoLink __GXFifoLink */
 .global __GXFifoLink
 __GXFifoLink:
 /* 8035ACC0 00357C00  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -524,18 +537,19 @@ __GXFifoLink:
 lbl_8035ACD0:
 /* 8035ACD0 00357C10  38 80 00 00 */	li r4, 0
 lbl_8035ACD4:
-/* 8035ACD4 00357C14  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035ACD4 00357C14  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035ACD8 00357C18  80 03 00 08 */	lwz r0, 8(r3)
 /* 8035ACDC 00357C1C  50 80 26 F6 */	rlwimi r0, r4, 4, 0x1b, 0x1b
 /* 8035ACE0 00357C20  90 03 00 08 */	stw r0, 8(r3)
 /* 8035ACE4 00357C24  80 03 00 08 */	lwz r0, 8(r3)
-/* 8035ACE8 00357C28  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035ACE8 00357C28  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035ACEC 00357C2C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035ACF0 00357C30  4E 80 00 20 */	blr 
 
+/* 8035ACF4 0030 .text __GXWriteFifoIntEnable __GXWriteFifoIntEnable */
 .global __GXWriteFifoIntEnable
 __GXWriteFifoIntEnable:
-/* 8035ACF4 00357C34  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035ACF4 00357C34  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 8035ACF8 00357C38  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8035ACFC 00357C3C  80 85 00 08 */	lwz r4, 8(r5)
 /* 8035AD00 00357C40  50 64 17 7A */	rlwimi r4, r3, 2, 0x1d, 0x1d
@@ -544,13 +558,14 @@ __GXWriteFifoIntEnable:
 /* 8035AD0C 00357C4C  50 03 1F 38 */	rlwimi r3, r0, 3, 0x1c, 0x1c
 /* 8035AD10 00357C50  90 65 00 08 */	stw r3, 8(r5)
 /* 8035AD14 00357C54  80 05 00 08 */	lwz r0, 8(r5)
-/* 8035AD18 00357C58  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AD18 00357C58  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035AD1C 00357C5C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035AD20 00357C60  4E 80 00 20 */	blr 
 
+/* 8035AD24 0030 .text __GXWriteFifoIntReset __GXWriteFifoIntReset */
 .global __GXWriteFifoIntReset
 __GXWriteFifoIntReset:
-/* 8035AD24 00357C64  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035AD24 00357C64  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 8035AD28 00357C68  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8035AD2C 00357C6C  80 85 00 10 */	lwz r4, 0x10(r5)
 /* 8035AD30 00357C70  50 64 07 FE */	rlwimi r4, r3, 0, 0x1f, 0x1f
@@ -559,10 +574,11 @@ __GXWriteFifoIntReset:
 /* 8035AD3C 00357C7C  50 03 0F BC */	rlwimi r3, r0, 1, 0x1e, 0x1e
 /* 8035AD40 00357C80  90 65 00 10 */	stw r3, 0x10(r5)
 /* 8035AD44 00357C84  80 05 00 10 */	lwz r0, 0x10(r5)
-/* 8035AD48 00357C88  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 8035AD48 00357C88  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 8035AD4C 00357C8C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8035AD50 00357C90  4E 80 00 20 */	blr 
 
+/* 8035AD54 0100 .text __GXCleanGPFifo __GXCleanGPFifo */
 .global __GXCleanGPFifo
 __GXCleanGPFifo:
 /* 8035AD54 00357C94  7C 08 02 A6 */	mflr r0
@@ -587,7 +603,7 @@ lbl_8035AD94:
 /* 8035AD9C 00357CDC  94 65 00 08 */	stwu r3, 8(r5)
 /* 8035ADA0 00357CE0  90 05 00 04 */	stw r0, 4(r5)
 /* 8035ADA4 00357CE4  42 00 FF F0 */	bdnz lbl_8035AD94
-/* 8035ADA8 00357CE8  4B FE 29 4D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8035ADA8 00357CE8  4B FE 29 4D */	bl __RAS_OSDisableInterrupts_begin
 /* 8035ADAC 00357CEC  93 A1 00 28 */	stw r29, 0x28(r1)
 /* 8035ADB0 00357CF0  38 00 00 00 */	li r0, 0
 /* 8035ADB4 00357CF4  93 A1 00 2C */	stw r29, 0x2c(r1)
@@ -607,7 +623,7 @@ lbl_8035ADD4:
 /* 8035ADE8 00357D28  38 61 00 14 */	addi r3, r1, 0x14
 /* 8035ADEC 00357D2C  4B FF F9 D9 */	bl GXSetCPUFifo
 lbl_8035ADF0:
-/* 8035ADF0 00357D30  4B FE 29 05 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8035ADF0 00357D30  4B FE 29 05 */	bl __RAS_OSDisableInterrupts_begin
 /* 8035ADF4 00357D34  93 BF 00 14 */	stw r29, 0x14(r31)
 /* 8035ADF8 00357D38  38 00 00 00 */	li r0, 0
 /* 8035ADFC 00357D3C  93 BF 00 18 */	stw r29, 0x18(r31)
@@ -635,6 +651,7 @@ lbl_8035AE38:
 /* 8035AE4C 00357D8C  7C 08 03 A6 */	mtlr r0
 /* 8035AE50 00357D90  4E 80 00 20 */	blr 
 
+/* 8035AE54 004C .text GXSetCurrentGXThread GXSetCurrentGXThread */
 .global GXSetCurrentGXThread
 GXSetCurrentGXThread:
 /* 8035AE54 00357D94  7C 08 02 A6 */	mflr r0
@@ -642,11 +659,11 @@ GXSetCurrentGXThread:
 /* 8035AE5C 00357D9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035AE60 00357DA0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035AE64 00357DA4  93 C1 00 08 */	stw r30, 8(r1)
-/* 8035AE68 00357DA8  4B FE 28 8D */	bl __RAS_OSDisableInterrupts_begin 
-/* 8035AE6C 00357DAC  83 CD 93 D0 */	lwz r30, lbl_80451950-_SDA_BASE_(r13)
+/* 8035AE68 00357DA8  4B FE 28 8D */	bl __RAS_OSDisableInterrupts_begin
+/* 8035AE6C 00357DAC  83 CD 93 D0 */	lwz r30, __GXCurrentThread-_SDA_BASE_(r13)
 /* 8035AE70 00357DB0  7C 7F 1B 78 */	mr r31, r3
 /* 8035AE74 00357DB4  4B FE 5E 11 */	bl OSGetCurrentThread
-/* 8035AE78 00357DB8  90 6D 93 D0 */	stw r3, lbl_80451950-_SDA_BASE_(r13)
+/* 8035AE78 00357DB8  90 6D 93 D0 */	stw r3, __GXCurrentThread-_SDA_BASE_(r13)
 /* 8035AE7C 00357DBC  7F E3 FB 78 */	mr r3, r31
 /* 8035AE80 00357DC0  4B FE 28 9D */	bl OSRestoreInterrupts
 /* 8035AE84 00357DC4  7F C3 F3 78 */	mr r3, r30
@@ -657,18 +674,60 @@ GXSetCurrentGXThread:
 /* 8035AE98 00357DD8  7C 08 03 A6 */	mtlr r0
 /* 8035AE9C 00357DDC  4E 80 00 20 */	blr 
 
+/* 8035AEA0 0008 .text GXGetCurrentGXThread GXGetCurrentGXThread */
 .global GXGetCurrentGXThread
 GXGetCurrentGXThread:
-/* 8035AEA0 00357DE0  80 6D 93 D0 */	lwz r3, lbl_80451950-_SDA_BASE_(r13)
+/* 8035AEA0 00357DE0  80 6D 93 D0 */	lwz r3, __GXCurrentThread-_SDA_BASE_(r13)
 /* 8035AEA4 00357DE4  4E 80 00 20 */	blr 
 
+/* 8035AEA8 0008 .text GXGetCPUFifo GXGetCPUFifo */
 .global GXGetCPUFifo
 GXGetCPUFifo:
-/* 8035AEA8 00357DE8  80 6D 93 C8 */	lwz r3, lbl_80451948-_SDA_BASE_(r13)
+/* 8035AEA8 00357DE8  80 6D 93 C8 */	lwz r3, CPUFifo-_SDA_BASE_(r13)
 /* 8035AEAC 00357DEC  4E 80 00 20 */	blr 
 
+/* 8035AEB0 0008 .text GXGetGPFifo GXGetGPFifo */
 .global GXGetGPFifo
 GXGetGPFifo:
-/* 8035AEB0 00357DF0  80 6D 93 CC */	lwz r3, lbl_8045194C-_SDA_BASE_(r13)
+/* 8035AEB0 00357DF0  80 6D 93 CC */	lwz r3, GPFifo-_SDA_BASE_(r13)
 /* 8035AEB4 00357DF4  4E 80 00 20 */	blr 
+
+
+
+.section .sbss, "aw"
+/* 80451948 0004 .sbss CPUFifo CPUFifo */
+.global CPUFifo
+CPUFifo:
+.skip 0x4
+
+/* 8045194C 0004 .sbss GPFifo GPFifo */
+.global GPFifo
+GPFifo:
+.skip 0x4
+
+/* 80451950 0004 .sbss __GXCurrentThread __GXCurrentThread */
+.global __GXCurrentThread
+__GXCurrentThread:
+.skip 0x4
+
+/* 80451954 0004 .sbss lbl_80451954 lbl_80451954 */
+.global lbl_80451954
+lbl_80451954:
+.skip 0x4
+
+/* 80451958 0004 .sbss GXOverflowSuspendInProgress GXOverflowSuspendInProgress */
+.global GXOverflowSuspendInProgress
+GXOverflowSuspendInProgress:
+.skip 0x4
+
+/* 8045195C 0004 .sbss BreakPointCB BreakPointCB */
+.global BreakPointCB
+BreakPointCB:
+.skip 0x4
+
+/* 80451960 0004 .sbss __GXOverflowCount __GXOverflowCount */
+.global __GXOverflowCount
+__GXOverflowCount:
+.skip 0x4
+.skip 0x4 /* padding */
 

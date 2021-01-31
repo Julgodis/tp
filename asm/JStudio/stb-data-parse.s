@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802899bc
 
-
-.global JStudio_NS_stb_NS_data_NS_TParse_TSequence_NS_getData
-JStudio_NS_stb_NS_data_NS_TParse_TSequence_NS_getData:
+.section .text, "ax"
+/* 802899BC 004C .text getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
+.global getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData
+getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData:
 /* 802899BC 002868FC  38 00 00 00 */	li r0, 0
 /* 802899C0 00286900  90 04 00 08 */	stw r0, 8(r4)
 /* 802899C4 00286904  90 04 00 0C */	stw r0, 0xc(r4)
@@ -26,8 +26,9 @@ lbl_802899F8:
 /* 80289A00 00286940  90 04 00 0C */	stw r0, 0xc(r4)
 /* 80289A04 00286944  4E 80 00 20 */	blr 
 
-.global JStudio_NS_stb_NS_data_NS_TParse_TParagraph_NS_getData
-JStudio_NS_stb_NS_data_NS_TParse_TParagraph_NS_getData:
+/* 80289A08 0078 .text getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
+.global getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData
+getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData:
 /* 80289A08 00286948  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289A0C 0028694C  7C 08 02 A6 */	mflr r0
 /* 80289A10 00286950  90 01 00 24 */	stw r0, 0x24(r1)
@@ -61,8 +62,9 @@ lbl_80289A6C:
 /* 80289A78 002869B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289A7C 002869BC  4E 80 00 20 */	blr 
 
-.global JStudio_NS_stb_NS_data_NS_TParse_TParagraph_data_NS_getData
-JStudio_NS_stb_NS_data_NS_TParse_TParagraph_data_NS_getData:
+/* 80289A80 0080 .text getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+.global getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData
+getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData:
 /* 80289A80 002869C0  38 00 00 00 */	li r0, 0
 /* 80289A84 002869C4  90 04 00 04 */	stw r0, 4(r4)
 /* 80289A88 002869C8  90 04 00 08 */	stw r0, 8(r4)
@@ -88,11 +90,12 @@ lbl_80289ACC:
 /* 80289AD4 00286A14  54 C0 07 7F */	clrlwi. r0, r6, 0x1d
 /* 80289AD8 00286A18  4D 82 00 20 */	beqlr 
 /* 80289ADC 00286A1C  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
-/* 80289AE0 00286A20  3C 60 80 3A */	lis r3, lbl_8039AB88@ha
-/* 80289AE4 00286A24  38 63 AB 88 */	addi r3, r3, lbl_8039AB88@l
+/* 80289AE0 00286A20  3C 60 80 3A */	lis r3, gauDataSize_TEParagraph_data__Q37JStudio3stb4data@ha
+/* 80289AE4 00286A24  38 63 AB 88 */	addi r3, r3, gauDataSize_TEParagraph_data__Q37JStudio3stb4data@l
 /* 80289AE8 00286A28  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80289AEC 00286A2C  90 04 00 04 */	stw r0, 4(r4)
 /* 80289AF0 00286A30  7C 00 39 D6 */	mullw r0, r0, r7
 /* 80289AF4 00286A34  7C 05 02 14 */	add r0, r5, r0
 /* 80289AF8 00286A38  90 04 00 10 */	stw r0, 0x10(r4)
 /* 80289AFC 00286A3C  4E 80 00 20 */	blr 
+

@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80314924
 
-
-.global J3DShapeDraw_NS_countVertex
-J3DShapeDraw_NS_countVertex:
+.section .text, "ax"
+/* 80314924 0050 .text countVertex__12J3DShapeDrawFUl countVertex__12J3DShapeDrawFUl */
+.global countVertex__12J3DShapeDrawFUl
+countVertex__12J3DShapeDrawFUl:
 /* 80314924 00311864  38 A0 00 00 */	li r5, 0
 /* 80314928 00311868  80 C3 00 08 */	lwz r6, 8(r3)
 /* 8031492C 0031186C  7C C7 33 78 */	mr r7, r6
@@ -30,8 +30,9 @@ lbl_8031496C:
 /* 8031496C 003118AC  7C A3 2B 78 */	mr r3, r5
 /* 80314970 003118B0  4E 80 00 20 */	blr 
 
-.global J3DShapeDraw_NS_addTexMtxIndexInDL
-J3DShapeDraw_NS_addTexMtxIndexInDL:
+/* 80314974 0148 .text addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl */
+.global addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl
+addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl:
 /* 80314974 003118B4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80314978 003118B8  7C 08 02 A6 */	mflr r0
 /* 8031497C 003118BC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -41,7 +42,7 @@ J3DShapeDraw_NS_addTexMtxIndexInDL:
 /* 8031498C 003118CC  7C 9A 23 78 */	mr r26, r4
 /* 80314990 003118D0  7C BB 2B 78 */	mr r27, r5
 /* 80314994 003118D4  7C DC 33 78 */	mr r28, r6
-/* 80314998 003118D8  4B FF FF 8D */	bl J3DShapeDraw_NS_countVertex
+/* 80314998 003118D8  4B FF FF 8D */	bl countVertex__12J3DShapeDrawFUl
 /* 8031499C 003118DC  80 99 00 04 */	lwz r4, 4(r25)
 /* 803149A0 003118E0  38 03 00 1F */	addi r0, r3, 0x1f
 /* 803149A4 003118E4  7C 04 02 14 */	add r0, r4, r0
@@ -123,17 +124,19 @@ lbl_80314A84:
 /* 80314AB4 003119F4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80314AB8 003119F8  4E 80 00 20 */	blr 
 
-.global J3DShapeDraw
-J3DShapeDraw:
-/* 80314ABC 003119FC  3C C0 80 3D */	lis r6, lbl_803CDC68@ha
-/* 80314AC0 00311A00  38 06 DC 68 */	addi r0, r6, lbl_803CDC68@l
+/* 80314ABC 0018 .text __ct__12J3DShapeDrawFPCUcUl __ct__12J3DShapeDrawFPCUcUl */
+.global __ct__12J3DShapeDrawFPCUcUl
+__ct__12J3DShapeDrawFPCUcUl:
+/* 80314ABC 003119FC  3C C0 80 3D */	lis r6, __vt__12J3DShapeDraw@ha
+/* 80314AC0 00311A00  38 06 DC 68 */	addi r0, r6, __vt__12J3DShapeDraw@l
 /* 80314AC4 00311A04  90 03 00 00 */	stw r0, 0(r3)
 /* 80314AC8 00311A08  90 83 00 08 */	stw r4, 8(r3)
 /* 80314ACC 00311A0C  90 A3 00 04 */	stw r5, 4(r3)
 /* 80314AD0 00311A10  4E 80 00 20 */	blr 
 
-.global J3DShapeDraw_NS_draw
-J3DShapeDraw_NS_draw:
+/* 80314AD4 002C .text draw__12J3DShapeDrawCFv draw__12J3DShapeDrawCFv */
+.global draw__12J3DShapeDrawCFv
+draw__12J3DShapeDrawCFv:
 /* 80314AD4 00311A14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80314AD8 00311A18  7C 08 02 A6 */	mflr r0
 /* 80314ADC 00311A1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -145,14 +148,18 @@ J3DShapeDraw_NS_draw:
 /* 80314AF4 00311A34  7C 08 03 A6 */	mtlr r0
 /* 80314AF8 00311A38  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314AFC 00311A3C  4E 80 00 20 */	blr 
+
+/* 80314B00 0048 .text __dt__12J3DShapeDrawFv __dt__12J3DShapeDrawFv */
+.global __dt__12J3DShapeDrawFv
+__dt__12J3DShapeDrawFv:
 /* 80314B00 00311A40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80314B04 00311A44  7C 08 02 A6 */	mflr r0
 /* 80314B08 00311A48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80314B0C 00311A4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80314B10 00311A50  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80314B14 00311A54  41 82 00 1C */	beq lbl_80314B30
-/* 80314B18 00311A58  3C A0 80 3D */	lis r5, lbl_803CDC68@ha
-/* 80314B1C 00311A5C  38 05 DC 68 */	addi r0, r5, lbl_803CDC68@l
+/* 80314B18 00311A58  3C A0 80 3D */	lis r5, __vt__12J3DShapeDraw@ha
+/* 80314B1C 00311A5C  38 05 DC 68 */	addi r0, r5, __vt__12J3DShapeDraw@l
 /* 80314B20 00311A60  90 1F 00 00 */	stw r0, 0(r31)
 /* 80314B24 00311A64  7C 80 07 35 */	extsh. r0, r4
 /* 80314B28 00311A68  40 81 00 08 */	ble lbl_80314B30
@@ -164,4 +171,13 @@ lbl_80314B30:
 /* 80314B3C 00311A7C  7C 08 03 A6 */	mtlr r0
 /* 80314B40 00311A80  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314B44 00311A84  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CDC68 000C .data __vt__12J3DShapeDraw __vt__12J3DShapeDraw */
+.global __vt__12J3DShapeDraw
+__vt__12J3DShapeDraw:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x31, 0x4b, 0x00 /* baserom.dol+0x3cac68 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cac74 */
 

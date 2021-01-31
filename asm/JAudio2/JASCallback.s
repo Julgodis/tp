@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8028ffa8
 
-
-.global JASCallbackMgr_NS_regist
-JASCallbackMgr_NS_regist:
+.section .text, "ax"
+/* 8028FFA8 0088 .text regist__14JASCallbackMgrFPFPv_lPv regist__14JASCallbackMgrFPFPv_lPv */
+.global regist__14JASCallbackMgrFPFPv_lPv
+regist__14JASCallbackMgrFPFPv_lPv:
 /* 8028FFA8 0028CEE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FFAC 0028CEEC  7C 08 02 A6 */	mflr r0
 /* 8028FFB0 0028CEF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -13,7 +13,7 @@ JASCallbackMgr_NS_regist:
 /* 8028FFBC 0028CEFC  7C 7D 1B 78 */	mr r29, r3
 /* 8028FFC0 0028CF00  7C 9E 23 78 */	mr r30, r4
 /* 8028FFC4 0028CF04  7C BF 2B 78 */	mr r31, r5
-/* 8028FFC8 0028CF08  48 0A D7 2D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8028FFC8 0028CF08  48 0A D7 2D */	bl __RAS_OSDisableInterrupts_begin
 /* 8028FFCC 0028CF0C  90 61 00 08 */	stw r3, 8(r1)
 /* 8028FFD0 0028CF10  38 60 00 00 */	li r3, 0
 /* 8028FFD4 0028CF14  38 00 00 20 */	li r0, 0x20
@@ -43,8 +43,9 @@ lbl_80290018:
 /* 80290028 0028CF68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029002C 0028CF6C  4E 80 00 20 */	blr 
 
-.global JASCallbackMgr_NS_reject
-JASCallbackMgr_NS_reject:
+/* 80290030 0094 .text reject__14JASCallbackMgrFPFPv_lPv reject__14JASCallbackMgrFPFPv_lPv */
+.global reject__14JASCallbackMgrFPFPv_lPv
+reject__14JASCallbackMgrFPFPv_lPv:
 /* 80290030 0028CF70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80290034 0028CF74  7C 08 02 A6 */	mflr r0
 /* 80290038 0028CF78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -54,7 +55,7 @@ JASCallbackMgr_NS_reject:
 /* 80290048 0028CF88  7C 9D 23 78 */	mr r29, r4
 /* 8029004C 0028CF8C  7C BE 2B 78 */	mr r30, r5
 /* 80290050 0028CF90  3B E0 00 00 */	li r31, 0
-/* 80290054 0028CF94  48 0A D6 A1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80290054 0028CF94  48 0A D6 A1 */	bl __RAS_OSDisableInterrupts_begin
 /* 80290058 0028CF98  90 61 00 08 */	stw r3, 8(r1)
 /* 8029005C 0028CF9C  38 60 00 00 */	li r3, 0
 /* 80290060 0028CFA0  7C 65 1B 78 */	mr r5, r3
@@ -85,8 +86,9 @@ lbl_80290098:
 /* 802900BC 0028CFFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802900C0 0028D000  4E 80 00 20 */	blr 
 
-.global JASCallbackMgr_NS_callback
-JASCallbackMgr_NS_callback:
+/* 802900C4 007C .text callback__14JASCallbackMgrFv callback__14JASCallbackMgrFv */
+.global callback__14JASCallbackMgrFv
+callback__14JASCallbackMgrFv:
 /* 802900C4 0028D004  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802900C8 0028D008  7C 08 02 A6 */	mflr r0
 /* 802900CC 0028D00C  90 01 00 24 */	stw r0, 0x24(r1)

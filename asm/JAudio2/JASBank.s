@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80297930
 
-
-.global JASBank_NS_noteOn
-JASBank_NS_noteOn:
+.section .text, "ax"
+/* 80297930 0310 .text noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
+.global noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
+noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv:
 /* 80297930 00294870  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80297934 00294874  7C 08 02 A6 */	mflr r0
 /* 80297938 00294878  90 01 00 64 */	stw r0, 0x64(r1)
@@ -23,7 +23,7 @@ JASBank_NS_noteOn:
 /* 8029796C 002948AC  7F 86 E3 78 */	mr r6, r28
 /* 80297970 002948B0  7F A7 EB 78 */	mr r7, r29
 /* 80297974 002948B4  7F C8 F3 78 */	mr r8, r30
-/* 80297978 002948B8  48 00 02 C9 */	bl JASBank_NS_noteOnOsc
+/* 80297978 002948B8  48 00 02 C9 */	bl noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
 /* 8029797C 002948BC  48 00 02 AC */	b lbl_80297C28
 lbl_80297980:
 /* 80297980 002948C0  28 1A 00 00 */	cmplwi r26, 0
@@ -99,25 +99,23 @@ lbl_80297A78:
 /* 80297A80 002949C0  40 82 00 34 */	bne lbl_80297AB4
 /* 80297A84 002949C4  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297A88 002949C8  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-/* 80297A8C 002949CC  4B FF 8D BD */	bl JASGenericMemPool
+/* 80297A8C 002949CC  4B FF 8D BD */	bl __ct__17JASGenericMemPoolFv
 /* 80297A90 002949D0  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297A94 002949D4  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 80297A98 002949D8  3C 80 80 29 */	lis r4, JASMemPool_MultiThreaded_NS_dtor_X2_@ha
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 80297A9C 002949DC  38 84 78 DC */	addi r4, r4, JASMemPool_MultiThreaded_NS_dtor_X2_@l
+/* 80297A98 002949D8  3C 80 80 29 */	lis r4, func_802978DC@ha
+/* 80297A9C 002949DC  38 84 78 DC */	addi r4, r4, func_802978DC@l
 /* 80297AA0 002949E0  3C A0 80 43 */	lis r5, lbl_80431B48@ha
 /* 80297AA4 002949E4  38 A5 1B 48 */	addi r5, r5, lbl_80431B48@l
-/* 80297AA8 002949E8  48 0C A1 7D */	bl func_80361C24
+/* 80297AA8 002949E8  48 0C A1 7D */	bl __register_global_object
 /* 80297AAC 002949EC  38 00 00 01 */	li r0, 1
 /* 80297AB0 002949F0  98 0D 8C E2 */	stb r0, lbl_80451262-_SDA_BASE_(r13)
 lbl_80297AB4:
-/* 80297AB4 002949F4  48 0A 5C 41 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80297AB4 002949F4  48 0A 5C 41 */	bl __RAS_OSDisableInterrupts_begin
 /* 80297AB8 002949F8  90 61 00 08 */	stw r3, 8(r1)
 /* 80297ABC 002949FC  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297AC0 00294A00  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
 /* 80297AC4 00294A04  38 80 01 08 */	li r4, 0x108
-/* 80297AC8 00294A08  4B FF 8E 81 */	bl JASGenericMemPool_NS_alloc
+/* 80297AC8 00294A08  4B FF 8E 81 */	bl alloc__17JASGenericMemPoolFUl
 /* 80297ACC 00294A0C  7C 77 1B 78 */	mr r23, r3
 /* 80297AD0 00294A10  80 61 00 08 */	lwz r3, 8(r1)
 /* 80297AD4 00294A14  48 0A 5C 49 */	bl OSRestoreInterrupts
@@ -126,7 +124,7 @@ lbl_80297AB4:
 /* 80297AE0 00294A20  7E E3 BB 78 */	mr r3, r23
 /* 80297AE4 00294A24  7F A4 EB 78 */	mr r4, r29
 /* 80297AE8 00294A28  7F C5 F3 78 */	mr r5, r30
-/* 80297AEC 00294A2C  48 00 2D 15 */	bl JASChannel
+/* 80297AEC 00294A2C  48 00 2D 15 */	bl __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
 /* 80297AF0 00294A30  7C 77 1B 78 */	mr r23, r3
 lbl_80297AF4:
 /* 80297AF4 00294A34  28 17 00 00 */	cmplwi r23, 0
@@ -163,7 +161,7 @@ lbl_80297B04:
 /* 80297B6C 00294AAC  88 01 00 28 */	lbz r0, 0x28(r1)
 /* 80297B70 00294AB0  90 17 00 DC */	stw r0, 0xdc(r23)
 /* 80297B74 00294AB4  93 57 00 18 */	stw r26, 0x18(r23)
-/* 80297B78 00294AB8  48 00 4E 71 */	bl JASDriver_NS_getDacRate
+/* 80297B78 00294AB8  48 00 4E 71 */	bl getDacRate__9JASDriverFv
 /* 80297B7C 00294ABC  C0 18 00 04 */	lfs f0, 4(r24)
 /* 80297B80 00294AC0  EC 20 08 24 */	fdivs f1, f0, f1
 /* 80297B84 00294AC4  C0 01 00 14 */	lfs f0, 0x14(r1)
@@ -194,7 +192,7 @@ lbl_80297BDC:
 /* 80297BE0 00294B20  7F 24 CB 78 */	mr r4, r25
 /* 80297BE4 00294B24  80 A1 00 20 */	lwz r5, 0x20(r1)
 /* 80297BE8 00294B28  7C A5 C0 2E */	lwzx r5, r5, r24
-/* 80297BEC 00294B2C  48 00 2F 79 */	bl JASChannel_NS_setOscInit
+/* 80297BEC 00294B2C  48 00 2F 79 */	bl setOscInit__10JASChannelFUlPCQ213JASOscillator4Data
 /* 80297BF0 00294B30  3B 39 00 01 */	addi r25, r25, 1
 /* 80297BF4 00294B34  3B 18 00 04 */	addi r24, r24, 4
 lbl_80297BF8:
@@ -204,7 +202,7 @@ lbl_80297BF8:
 /* 80297C04 00294B44  A0 01 00 24 */	lhz r0, 0x24(r1)
 /* 80297C08 00294B48  B0 17 00 32 */	sth r0, 0x32(r23)
 /* 80297C0C 00294B4C  7E E3 BB 78 */	mr r3, r23
-/* 80297C10 00294B50  48 00 2D E1 */	bl JASChannel_NS_play
+/* 80297C10 00294B50  48 00 2D E1 */	bl play__10JASChannelFv
 /* 80297C14 00294B54  2C 03 00 00 */	cmpwi r3, 0
 /* 80297C18 00294B58  41 82 00 0C */	beq lbl_80297C24
 /* 80297C1C 00294B5C  7E E3 BB 78 */	mr r3, r23
@@ -219,8 +217,9 @@ lbl_80297C28:
 /* 80297C38 00294B78  38 21 00 60 */	addi r1, r1, 0x60
 /* 80297C3C 00294B7C  4E 80 00 20 */	blr 
 
-.global JASBank_NS_noteOnOsc
-JASBank_NS_noteOnOsc:
+/* 80297C40 0138 .text noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
+.global noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
+noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv:
 /* 80297C40 00294B80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80297C44 00294B84  7C 08 02 A6 */	mflr r0
 /* 80297C48 00294B88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -237,25 +236,23 @@ JASBank_NS_noteOnOsc:
 /* 80297C74 00294BB4  40 82 00 34 */	bne lbl_80297CA8
 /* 80297C78 00294BB8  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297C7C 00294BBC  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-/* 80297C80 00294BC0  4B FF 8B C9 */	bl JASGenericMemPool
+/* 80297C80 00294BC0  4B FF 8B C9 */	bl __ct__17JASGenericMemPoolFv
 /* 80297C84 00294BC4  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297C88 00294BC8  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 80297C8C 00294BCC  3C 80 80 29 */	lis r4, JASMemPool_MultiThreaded_NS_dtor_X2_@ha
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 80297C90 00294BD0  38 84 78 DC */	addi r4, r4, JASMemPool_MultiThreaded_NS_dtor_X2_@l
+/* 80297C8C 00294BCC  3C 80 80 29 */	lis r4, func_802978DC@ha
+/* 80297C90 00294BD0  38 84 78 DC */	addi r4, r4, func_802978DC@l
 /* 80297C94 00294BD4  3C A0 80 43 */	lis r5, lbl_80431B48@ha
 /* 80297C98 00294BD8  38 A5 1B 48 */	addi r5, r5, lbl_80431B48@l
-/* 80297C9C 00294BDC  48 0C 9F 89 */	bl func_80361C24
+/* 80297C9C 00294BDC  48 0C 9F 89 */	bl __register_global_object
 /* 80297CA0 00294BE0  38 00 00 01 */	li r0, 1
 /* 80297CA4 00294BE4  98 0D 8C E2 */	stb r0, lbl_80451262-_SDA_BASE_(r13)
 lbl_80297CA8:
-/* 80297CA8 00294BE8  48 0A 5A 4D */	bl __RAS_OSDisableInterrupts_begin 
+/* 80297CA8 00294BE8  48 0A 5A 4D */	bl __RAS_OSDisableInterrupts_begin
 /* 80297CAC 00294BEC  90 61 00 08 */	stw r3, 8(r1)
 /* 80297CB0 00294BF0  3C 60 80 43 */	lis r3, lbl_80431B34@ha
 /* 80297CB4 00294BF4  38 63 1B 34 */	addi r3, r3, lbl_80431B34@l
 /* 80297CB8 00294BF8  38 80 01 08 */	li r4, 0x108
-/* 80297CBC 00294BFC  4B FF 8C 8D */	bl JASGenericMemPool_NS_alloc
+/* 80297CBC 00294BFC  4B FF 8C 8D */	bl alloc__17JASGenericMemPoolFUl
 /* 80297CC0 00294C00  7C 79 1B 78 */	mr r25, r3
 /* 80297CC4 00294C04  80 61 00 08 */	lwz r3, 8(r1)
 /* 80297CC8 00294C08  48 0A 5A 55 */	bl OSRestoreInterrupts
@@ -264,7 +261,7 @@ lbl_80297CA8:
 /* 80297CD4 00294C14  7F 23 CB 78 */	mr r3, r25
 /* 80297CD8 00294C18  7F C4 F3 78 */	mr r4, r30
 /* 80297CDC 00294C1C  7F E5 FB 78 */	mr r5, r31
-/* 80297CE0 00294C20  48 00 2B 21 */	bl JASChannel
+/* 80297CE0 00294C20  48 00 2B 21 */	bl __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
 /* 80297CE4 00294C24  7C 79 1B 78 */	mr r25, r3
 lbl_80297CE8:
 /* 80297CE8 00294C28  28 19 00 00 */	cmplwi r25, 0
@@ -276,7 +273,7 @@ lbl_80297CF8:
 /* 80297CFC 00294C3C  93 59 01 04 */	stw r26, 0x104(r25)
 /* 80297D00 00294C40  38 00 00 02 */	li r0, 2
 /* 80297D04 00294C44  90 19 00 DC */	stw r0, 0xdc(r25)
-/* 80297D08 00294C48  48 00 4C E1 */	bl JASDriver_NS_getDacRate
+/* 80297D08 00294C48  48 00 4C E1 */	bl getDacRate__9JASDriverFv
 /* 80297D0C 00294C4C  C0 02 BC 3C */	lfs f0, lbl_8045563C-_SDA2_BASE_(r2)
 /* 80297D10 00294C50  EC 00 08 24 */	fdivs f0, f0, f1
 /* 80297D14 00294C54  D0 19 00 BC */	stfs f0, 0xbc(r25)
@@ -290,9 +287,9 @@ lbl_80297CF8:
 /* 80297D34 00294C74  38 80 00 00 */	li r4, 0
 /* 80297D38 00294C78  3C A0 80 3A */	lis r5, lbl_8039B19C@ha
 /* 80297D3C 00294C7C  38 A5 B1 9C */	addi r5, r5, lbl_8039B19C@l
-/* 80297D40 00294C80  48 00 2E 25 */	bl JASChannel_NS_setOscInit
+/* 80297D40 00294C80  48 00 2E 25 */	bl setOscInit__10JASChannelFUlPCQ213JASOscillator4Data
 /* 80297D44 00294C84  7F 23 CB 78 */	mr r3, r25
-/* 80297D48 00294C88  48 00 2C A9 */	bl JASChannel_NS_play
+/* 80297D48 00294C88  48 00 2C A9 */	bl play__10JASChannelFv
 /* 80297D4C 00294C8C  2C 03 00 00 */	cmpwi r3, 0
 /* 80297D50 00294C90  41 82 00 0C */	beq lbl_80297D5C
 /* 80297D54 00294C94  7F 23 CB 78 */	mr r3, r25
@@ -306,4 +303,51 @@ lbl_80297D60:
 /* 80297D6C 00294CAC  7C 08 03 A6 */	mtlr r0
 /* 80297D70 00294CB0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80297D74 00294CB4  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039B190 000C .rodata lbl_8039B190 OSC_RELEASE_TABLE$260 */
+.global lbl_8039B190
+lbl_8039B190:
+.byte 0x00, 0x01, 0x00, 0x0a, 0x00, 0x00, 0x00, 0x0f, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398190 */
+
+/* 8039B19C 0018 .rodata lbl_8039B19C OSC_ENV$261 */
+.global lbl_8039B19C
+lbl_8039B19C:
+.byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x39, 0xb1, 0x90 /* baserom.dol+0x39819c */
+.byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3981ac */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3981b4 */
+
+
+
+.section .bss, "aw"
+/* 80431B48 000C .bss lbl_80431B48 @156 */
+.global lbl_80431B48
+lbl_80431B48:
+.skip 0xc
+.skip 0x4 /* padding */
+
+
+
+.section .sdata2, "a"
+/* 80455630 0004 .sdata2 lbl_80455630 @248 */
+.global lbl_80455630
+lbl_80455630:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4490 */
+
+/* 80455634 0004 .sdata2 lbl_80455634 @249 */
+.global lbl_80455634
+lbl_80455634:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4494 */
+
+/* 80455638 0004 .sdata2 lbl_80455638 @250 */
+.global lbl_80455638
+lbl_80455638:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4498 */
+
+/* 8045563C 0004 .sdata2 lbl_8045563C @290 */
+.global lbl_8045563C
+lbl_8045563C:
+.byte 0x46, 0x82, 0xc0, 0x08 /* baserom.dol+0x3d449c */
 

@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80339dd4
 
-
+.section .text, "ax"
+/* 80339DD4 0128 .text __OSFPRInit __OSFPRInit */
 .global __OSFPRInit
 __OSFPRInit:
 /* 80339DD4 00336D14  7C 60 00 A6 */	mfmsr r3
@@ -11,8 +11,8 @@ __OSFPRInit:
 /* 80339DE0 00336D20  7C 78 E2 A6 */	mfspr r3, 0x398
 /* 80339DE4 00336D24  54 63 1F FF */	rlwinm. r3, r3, 3, 0x1f, 0x1f
 /* 80339DE8 00336D28  41 82 00 8C */	beq lbl_80339E74
-/* 80339DEC 00336D2C  3C 60 80 45 */	lis r3, lbl_80451618@ha
-/* 80339DF0 00336D30  38 63 16 18 */	addi r3, r3, lbl_80451618@l
+/* 80339DEC 00336D2C  3C 60 80 45 */	lis r3, ZeroPS@ha
+/* 80339DF0 00336D30  38 63 16 18 */	addi r3, r3, ZeroPS@l
 /* 80339DF4 00336D34  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 80339DF8 00336D38  10 20 00 90 */	ps_mr f1, f0
 /* 80339DFC 00336D3C  10 40 00 90 */	ps_mr f2, f0
@@ -46,7 +46,7 @@ __OSFPRInit:
 /* 80339E6C 00336DAC  13 C0 00 90 */	ps_mr f30, f0
 /* 80339E70 00336DB0  13 E0 00 90 */	ps_mr f31, f0
 lbl_80339E74:
-/* 80339E74 00336DB4  C8 0D 90 90 */	lfd f0, lbl_80451610-_SDA_BASE_(r13)
+/* 80339E74 00336DB4  C8 0D 90 90 */	lfd f0, ZeroF-_SDA_BASE_(r13)
 /* 80339E78 00336DB8  FC 20 00 90 */	fmr f1, f0
 /* 80339E7C 00336DBC  FC 40 00 90 */	fmr f2, f0
 /* 80339E80 00336DC0  FC 60 00 90 */	fmr f3, f0
@@ -81,6 +81,7 @@ lbl_80339E74:
 /* 80339EF4 00336E34  FD FE 05 8E */	mtfsf 0xff, f0
 /* 80339EF8 00336E38  4E 80 00 20 */	blr 
 
+/* 80339EFC 0028 .text OSGetConsoleType OSGetConsoleType */
 .global OSGetConsoleType
 OSGetConsoleType:
 /* 80339EFC 00336E3C  80 6D 90 80 */	lwz r3, lbl_80451600-_SDA_BASE_(r13)
@@ -95,6 +96,8 @@ lbl_80339F14:
 /* 80339F1C 00336E5C  48 00 00 04 */	b lbl_80339F20
 lbl_80339F20:
 /* 80339F20 00336E60  4E 80 00 20 */	blr 
+
+/* 80339F24 003C .text InquiryCallback InquiryCallback */
 .global InquiryCallback
 InquiryCallback:
 /* 80339F24 00336E64  80 04 00 0C */	lwz r0, 0xc(r4)
@@ -102,8 +105,8 @@ InquiryCallback:
 /* 80339F2C 00336E6C  41 82 00 08 */	beq lbl_80339F34
 /* 80339F30 00336E70  48 00 00 20 */	b lbl_80339F50
 lbl_80339F34:
-/* 80339F34 00336E74  3C 60 80 45 */	lis r3, lbl_8044BA60@ha
-/* 80339F38 00336E78  38 63 BA 60 */	addi r3, r3, lbl_8044BA60@l
+/* 80339F34 00336E74  3C 60 80 45 */	lis r3, DriveInfo@ha
+/* 80339F38 00336E78  38 63 BA 60 */	addi r3, r3, DriveInfo@l
 /* 80339F3C 00336E7C  A0 03 00 02 */	lhz r0, 2(r3)
 /* 80339F40 00336E80  3C 60 80 00 */	lis r3, 0x800030E6@ha
 /* 80339F44 00336E84  60 00 80 00 */	ori r0, r0, 0x8000
@@ -116,6 +119,7 @@ lbl_80339F50:
 lbl_80339F5C:
 /* 80339F5C 00336E9C  4E 80 00 20 */	blr 
 
+/* 80339F60 04E0 .text OSInit OSInit */
 .global OSInit
 OSInit:
 /* 80339F60 00336EA0  7C 08 02 A6 */	mflr r0
@@ -124,19 +128,19 @@ OSInit:
 /* 80339F6C 00336EAC  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80339F70 00336EB0  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80339F74 00336EB4  93 A1 00 0C */	stw r29, 0xc(r1)
-/* 80339F78 00336EB8  80 0D 90 A0 */	lwz r0, lbl_80451620-_SDA_BASE_(r13)
-/* 80339F7C 00336EBC  3C 60 80 45 */	lis r3, lbl_8044BA60@ha
-/* 80339F80 00336EC0  3B E3 BA 60 */	addi r31, r3, lbl_8044BA60@l
+/* 80339F78 00336EB8  80 0D 90 A0 */	lwz r0, AreWeInitialized-_SDA_BASE_(r13)
+/* 80339F7C 00336EBC  3C 60 80 45 */	lis r3, DriveInfo@ha
+/* 80339F80 00336EC0  3B E3 BA 60 */	addi r31, r3, DriveInfo@l
 /* 80339F84 00336EC4  2C 00 00 00 */	cmpwi r0, 0
 /* 80339F88 00336EC8  3C 60 80 3D */	lis r3, lbl_803CF288@ha
 /* 80339F8C 00336ECC  3B C3 F2 88 */	addi r30, r3, lbl_803CF288@l
 /* 80339F90 00336ED0  40 82 04 94 */	bne lbl_8033A424
 /* 80339F94 00336ED4  38 00 00 01 */	li r0, 1
-/* 80339F98 00336ED8  90 0D 90 A0 */	stw r0, lbl_80451620-_SDA_BASE_(r13)
+/* 80339F98 00336ED8  90 0D 90 A0 */	stw r0, AreWeInitialized-_SDA_BASE_(r13)
 /* 80339F9C 00336EDC  48 00 87 81 */	bl __OSGetSystemTime
 /* 80339FA0 00336EE0  90 8D 90 B4 */	stw r4, lbl_80451634-_SDA_BASE_(r13)
-/* 80339FA4 00336EE4  90 6D 90 B0 */	stw r3, lbl_80451630-_SDA_BASE_(r13)
-/* 80339FA8 00336EE8  48 00 37 4D */	bl __RAS_OSDisableInterrupts_begin 
+/* 80339FA4 00336EE4  90 6D 90 B0 */	stw r3, __OSStartTime-_SDA_BASE_(r13)
+/* 80339FA8 00336EE8  48 00 37 4D */	bl __RAS_OSDisableInterrupts_begin
 /* 80339FAC 00336EEC  38 7F 00 50 */	addi r3, r31, 0x50
 /* 80339FB0 00336EF0  48 00 2D 0D */	bl __OSGetExecParams
 /* 80339FB4 00336EF4  38 60 00 00 */	li r3, 0
@@ -155,21 +159,21 @@ OSInit:
 /* 80339FE8 00336F28  4B FF FD E5 */	bl PPCSetFpNonIEEEMode
 /* 80339FEC 00336F2C  38 00 00 00 */	li r0, 0
 /* 80339FF0 00336F30  3C 80 80 00 */	lis r4, 0x800000F4@ha
-/* 80339FF4 00336F34  90 0D 90 84 */	stw r0, lbl_80451604-_SDA_BASE_(r13)
+/* 80339FF4 00336F34  90 0D 90 84 */	stw r0, BI2DebugFlag-_SDA_BASE_(r13)
 /* 80339FF8 00336F38  90 8D 90 80 */	stw r4, lbl_80451600-_SDA_BASE_(r13)
-/* 80339FFC 00336F3C  90 0D 91 EC */	stw r0, lbl_8045176C-_SDA_BASE_(r13)
+/* 80339FFC 00336F3C  90 0D 91 EC */	stw r0, __DVDLongFileNameFlag-_SDA_BASE_(r13)
 /* 8033A000 00336F40  80 64 00 F4 */	lwz r3, 0x800000F4@l(r4)
 /* 8033A004 00336F44  28 03 00 00 */	cmplwi r3, 0
 /* 8033A008 00336F48  41 82 00 34 */	beq lbl_8033A03C
 /* 8033A00C 00336F4C  38 03 00 0C */	addi r0, r3, 0xc
-/* 8033A010 00336F50  90 0D 90 84 */	stw r0, lbl_80451604-_SDA_BASE_(r13)
+/* 8033A010 00336F50  90 0D 90 84 */	stw r0, BI2DebugFlag-_SDA_BASE_(r13)
 /* 8033A014 00336F54  80 03 00 24 */	lwz r0, 0x24(r3)
-/* 8033A018 00336F58  80 6D 90 84 */	lwz r3, lbl_80451604-_SDA_BASE_(r13)
-/* 8033A01C 00336F5C  90 0D 92 F0 */	stw r0, lbl_80451870-_SDA_BASE_(r13)
+/* 8033A018 00336F58  80 6D 90 84 */	lwz r3, BI2DebugFlag-_SDA_BASE_(r13)
+/* 8033A01C 00336F5C  90 0D 92 F0 */	stw r0, __PADSpec-_SDA_BASE_(r13)
 /* 8033A020 00336F60  80 03 00 00 */	lwz r0, 0(r3)
 /* 8033A024 00336F64  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8033A028 00336F68  98 04 30 E8 */	stb r0, 0x30e8(r4)
-/* 8033A02C 00336F6C  80 0D 92 F0 */	lwz r0, lbl_80451870-_SDA_BASE_(r13)
+/* 8033A02C 00336F6C  80 0D 92 F0 */	lwz r0, __PADSpec-_SDA_BASE_(r13)
 /* 8033A030 00336F70  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8033A034 00336F74  98 04 30 E9 */	stb r0, 0x30e9(r4)
 /* 8033A038 00336F78  48 00 00 28 */	b lbl_8033A060
@@ -178,15 +182,15 @@ lbl_8033A03C:
 /* 8033A040 00336F80  28 00 00 00 */	cmplwi r0, 0
 /* 8033A044 00336F84  41 82 00 1C */	beq lbl_8033A060
 /* 8033A048 00336F88  88 64 30 E8 */	lbz r3, 0x30e8(r4)
-/* 8033A04C 00336F8C  38 0D 90 88 */	addi r0, r13, lbl_80451608-_SDA_BASE_
-/* 8033A050 00336F90  90 6D 90 88 */	stw r3, lbl_80451608-_SDA_BASE_(r13)
-/* 8033A054 00336F94  90 0D 90 84 */	stw r0, lbl_80451604-_SDA_BASE_(r13)
+/* 8033A04C 00336F8C  38 0D 90 88 */	addi r0, r13, BI2DebugFlagHolder-_SDA_BASE_
+/* 8033A050 00336F90  90 6D 90 88 */	stw r3, BI2DebugFlagHolder-_SDA_BASE_(r13)
+/* 8033A054 00336F94  90 0D 90 84 */	stw r0, BI2DebugFlag-_SDA_BASE_(r13)
 /* 8033A058 00336F98  88 04 30 E9 */	lbz r0, 0x30e9(r4)
-/* 8033A05C 00336F9C  90 0D 92 F0 */	stw r0, lbl_80451870-_SDA_BASE_(r13)
+/* 8033A05C 00336F9C  90 0D 92 F0 */	stw r0, __PADSpec-_SDA_BASE_(r13)
 lbl_8033A060:
 /* 8033A060 00336FA0  38 00 00 01 */	li r0, 1
 /* 8033A064 00336FA4  80 6D 90 80 */	lwz r3, lbl_80451600-_SDA_BASE_(r13)
-/* 8033A068 00336FA8  90 0D 91 EC */	stw r0, lbl_8045176C-_SDA_BASE_(r13)
+/* 8033A068 00336FA8  90 0D 91 EC */	stw r0, __DVDLongFileNameFlag-_SDA_BASE_(r13)
 /* 8033A06C 00336FAC  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 8033A070 00336FB0  28 03 00 00 */	cmplwi r3, 0
 /* 8033A074 00336FB4  40 82 00 10 */	bne lbl_8033A084
@@ -199,7 +203,7 @@ lbl_8033A084:
 /* 8033A08C 00336FCC  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 8033A090 00336FD0  28 00 00 00 */	cmplwi r0, 0
 /* 8033A094 00336FD4  40 82 00 30 */	bne lbl_8033A0C4
-/* 8033A098 00336FD8  80 6D 90 84 */	lwz r3, lbl_80451604-_SDA_BASE_(r13)
+/* 8033A098 00336FD8  80 6D 90 84 */	lwz r3, BI2DebugFlag-_SDA_BASE_(r13)
 /* 8033A09C 00336FDC  28 03 00 00 */	cmplwi r3, 0
 /* 8033A0A0 00336FE0  41 82 00 24 */	beq lbl_8033A0C4
 /* 8033A0A4 00336FE4  80 03 00 00 */	lwz r0, 0(r3)
@@ -225,9 +229,7 @@ lbl_8033A0E0:
 /* 8033A0EC 0033702C  48 00 07 B5 */	bl OSInitAlarm
 /* 8033A0F0 00337030  48 00 48 8D */	bl __OSModuleInit
 /* 8033A0F4 00337034  48 00 36 7D */	bl __OSInterruptInit
-.global __OSResetSWInterruptHandler
 /* 8033A0F8 00337038  3C 60 80 34 */	lis r3, __OSResetSWInterruptHandler@ha
-.global __OSResetSWInterruptHandler
 /* 8033A0FC 0033703C  38 83 FA E4 */	addi r4, r3, __OSResetSWInterruptHandler@l
 /* 8033A100 00337040  38 60 00 16 */	li r3, 0x16
 /* 8033A104 00337044  48 00 36 3D */	bl __OSSetInterruptHandler
@@ -241,7 +243,7 @@ lbl_8033A0E0:
 /* 8033A124 00337064  4B FF FC 69 */	bl PPCMfhid2
 /* 8033A128 00337068  54 63 00 80 */	rlwinm r3, r3, 0, 2, 0
 /* 8033A12C 0033706C  4B FF FC 69 */	bl PPCMthid2
-/* 8033A130 00337070  80 0D 90 A8 */	lwz r0, lbl_80451628-_SDA_BASE_(r13)
+/* 8033A130 00337070  80 0D 90 A8 */	lwz r0, __OSInIPL-_SDA_BASE_(r13)
 /* 8033A134 00337074  2C 00 00 00 */	cmpwi r0, 0
 /* 8033A138 00337078  40 82 00 08 */	bne lbl_8033A140
 /* 8033A13C 0033707C  48 00 4D B5 */	bl __OSInitMemoryProtection
@@ -349,15 +351,15 @@ lbl_8033A270:
 /* 8033A29C 003371DC  7F A5 EB 78 */	mr r5, r29
 /* 8033A2A0 003371E0  38 7E 01 0C */	addi r3, r30, 0x10c
 /* 8033A2A4 003371E4  4B CC C8 19 */	bl OSReport
-/* 8033A2A8 003371E8  80 6D 84 00 */	lwz r3, lbl_80450980-_SDA_BASE_(r13)
+/* 8033A2A8 003371E8  80 6D 84 00 */	lwz r3, __OSVersion-_SDA_BASE_(r13)
 /* 8033A2AC 003371EC  48 00 05 C9 */	bl OSRegisterVersion
-/* 8033A2B0 003371F0  80 6D 90 84 */	lwz r3, lbl_80451604-_SDA_BASE_(r13)
+/* 8033A2B0 003371F0  80 6D 90 84 */	lwz r3, BI2DebugFlag-_SDA_BASE_(r13)
 /* 8033A2B4 003371F4  28 03 00 00 */	cmplwi r3, 0
 /* 8033A2B8 003371F8  41 82 00 14 */	beq lbl_8033A2CC
 /* 8033A2BC 003371FC  80 03 00 00 */	lwz r0, 0(r3)
 /* 8033A2C0 00337200  28 00 00 02 */	cmplwi r0, 2
 /* 8033A2C4 00337204  41 80 00 08 */	blt lbl_8033A2CC
-/* 8033A2C8 00337208  48 03 78 B5 */	bl func_80371B7C
+/* 8033A2C8 00337208  48 03 78 B5 */	bl EnableMetroTRKInterrupts
 lbl_8033A2CC:
 /* 8033A2CC 0033720C  48 00 57 E1 */	bl OSGetResetCode
 /* 8033A2D0 00337210  54 60 00 00 */	rlwinm r0, r3, 0, 0, 0
@@ -431,11 +433,11 @@ lbl_8033A38C:
 /* 8033A3CC 0033730C  4B CC 90 8D */	bl memset
 lbl_8033A3D0:
 /* 8033A3D0 00337310  48 00 33 39 */	bl OSEnableInterrupts
-/* 8033A3D4 00337314  80 0D 90 A8 */	lwz r0, lbl_80451628-_SDA_BASE_(r13)
+/* 8033A3D4 00337314  80 0D 90 A8 */	lwz r0, __OSInIPL-_SDA_BASE_(r13)
 /* 8033A3D8 00337318  2C 00 00 00 */	cmpwi r0, 0
 /* 8033A3DC 0033731C  40 82 00 48 */	bne lbl_8033A424
 /* 8033A3E0 00337320  48 00 ED 11 */	bl DVDInit
-/* 8033A3E4 00337324  80 0D 90 8C */	lwz r0, lbl_8045160C-_SDA_BASE_(r13)
+/* 8033A3E4 00337324  80 0D 90 8C */	lwz r0, __OSIsGcam-_SDA_BASE_(r13)
 /* 8033A3E8 00337328  2C 00 00 00 */	cmpwi r0, 0
 /* 8033A3EC 0033732C  41 82 00 18 */	beq lbl_8033A404
 /* 8033A3F0 00337330  3C 60 00 01 */	lis r3, 0x00009000@ha
@@ -447,9 +449,7 @@ lbl_8033A404:
 /* 8033A404 00337344  7F E3 FB 78 */	mr r3, r31
 /* 8033A408 00337348  38 80 00 20 */	li r4, 0x20
 /* 8033A40C 0033734C  48 00 11 75 */	bl DCInvalidateRange
-.global InquiryCallback
 /* 8033A410 00337350  3C 60 80 34 */	lis r3, InquiryCallback@ha
-.global InquiryCallback
 /* 8033A414 00337354  38 A3 9F 24 */	addi r5, r3, InquiryCallback@l
 /* 8033A418 00337358  7F E4 FB 78 */	mr r4, r31
 /* 8033A41C 0033735C  38 7F 00 20 */	addi r3, r31, 0x20
@@ -463,6 +463,7 @@ lbl_8033A424:
 /* 8033A438 00337378  7C 08 03 A6 */	mtlr r0
 /* 8033A43C 0033737C  4E 80 00 20 */	blr 
 
+/* 8033A440 0280 .text OSExceptionInit OSExceptionInit */
 .global OSExceptionInit
 OSExceptionInit:
 /* 8033A440 00337380  7C 08 02 A6 */	mflr r0
@@ -471,19 +472,13 @@ OSExceptionInit:
 /* 8033A44C 0033738C  BE 81 00 08 */	stmw r20, 8(r1)
 /* 8033A450 00337390  3C 60 80 00 */	lis r3, 0x80000060@ha
 /* 8033A454 00337394  80 03 00 60 */	lwz r0, 0x80000060@l(r3)
-.global __OSEVSetNumber 
-/* 8033A458 00337398  3C 80 80 34 */	lis r4, __OSEVSetNumber @ha
-.global __OSEVSetNumber 
-/* 8033A45C 0033739C  3B C4 A7 80 */	addi r30, r4, __OSEVSetNumber @l
-.global __OSEVStart 
-/* 8033A460 003373A0  3C A0 80 34 */	lis r5, __OSEVStart @ha
+/* 8033A458 00337398  3C 80 80 34 */	lis r4, __OSEVSetNumber@ha
+/* 8033A45C 0033739C  3B C4 A7 80 */	addi r30, r4, __OSEVSetNumber@l
+/* 8033A460 003373A0  3C A0 80 34 */	lis r5, __OSEVStart@ha
 /* 8033A464 003373A4  83 3E 00 00 */	lwz r25, 0(r30)
-.global __OSEVEnd 
-/* 8033A468 003373A8  3C 80 80 34 */	lis r4, __OSEVEnd @ha
-.global __OSEVStart 
-/* 8033A46C 003373AC  38 A5 A7 18 */	addi r5, r5, __OSEVStart @l
-.global __OSEVEnd 
-/* 8033A470 003373B0  38 84 A7 B0 */	addi r4, r4, __OSEVEnd @l
+/* 8033A468 003373A8  3C 80 80 34 */	lis r4, __OSEVEnd@ha
+/* 8033A46C 003373AC  38 A5 A7 18 */	addi r5, r5, __OSEVStart@l
+/* 8033A470 003373B0  38 84 A7 B0 */	addi r4, r4, __OSEVEnd@l
 /* 8033A474 003373B4  3C C0 80 3D */	lis r6, lbl_803CF288@ha
 /* 8033A478 003373B8  28 00 00 00 */	cmplwi r0, 0
 /* 8033A47C 003373BC  7C B8 2B 78 */	mr r24, r5
@@ -494,14 +489,10 @@ OSExceptionInit:
 /* 8033A490 003373D0  38 7D 01 60 */	addi r3, r29, 0x160
 /* 8033A494 003373D4  4C C6 31 82 */	crclr 6
 /* 8033A498 003373D8  48 00 BF 9D */	bl DBPrintf
-.global __OSDBINTSTART 
-/* 8033A49C 003373DC  3C 80 80 34 */	lis r4, __OSDBINTSTART @ha
-.global __OSDBJUMPSTART 
-/* 8033A4A0 003373E0  3C 60 80 34 */	lis r3, __OSDBJUMPSTART @ha
-.global __OSDBJUMPSTART 
-/* 8033A4A4 003373E4  38 03 A6 E4 */	addi r0, r3, __OSDBJUMPSTART @l
-.global __OSDBINTSTART 
-/* 8033A4A8 003373E8  38 84 A6 C0 */	addi r4, r4, __OSDBINTSTART @l
+/* 8033A49C 003373DC  3C 80 80 34 */	lis r4, __OSDBINTSTART@ha
+/* 8033A4A0 003373E0  3C 60 80 34 */	lis r3, __OSDBJUMPSTART@ha
+/* 8033A4A4 003373E4  38 03 A6 E4 */	addi r0, r3, __OSDBJUMPSTART@l
+/* 8033A4A8 003373E8  38 84 A6 C0 */	addi r4, r4, __OSDBINTSTART@l
 /* 8033A4AC 003373EC  7E A4 00 50 */	subf r21, r4, r0
 /* 8033A4B0 003373F0  7E 83 A3 78 */	mr r3, r20
 /* 8033A4B4 003373F4  7E A5 AB 78 */	mr r5, r21
@@ -514,27 +505,23 @@ OSExceptionInit:
 /* 8033A4D0 00337410  7E A4 AB 78 */	mr r4, r21
 /* 8033A4D4 00337414  48 00 11 BD */	bl ICInvalidateRange
 lbl_8033A4D8:
-.global __OSDBJUMPSTART 
-/* 8033A4D8 00337418  3C 80 80 34 */	lis r4, __OSDBJUMPSTART @ha
-/* 8033A4DC 0033741C  3C 60 80 34 */	lis r3, __OSDBJUMPEND @ha
-.global __OSDBJUMPSTART 
-/* 8033A4E0 00337420  3B E4 A6 E4 */	addi r31, r4, __OSDBJUMPSTART @l
-/* 8033A4E4 00337424  38 03 A6 E8 */	addi r0, r3, __OSDBJUMPEND @l
+/* 8033A4D8 00337418  3C 80 80 34 */	lis r4, __OSDBJUMPSTART@ha
+/* 8033A4DC 0033741C  3C 60 80 34 */	lis r3, __OSDBJUMPEND@ha
+/* 8033A4E0 00337420  3B E4 A6 E4 */	addi r31, r4, __OSDBJUMPSTART@l
+/* 8033A4E4 00337424  38 03 A6 E8 */	addi r0, r3, __OSDBJUMPEND@l
 /* 8033A4E8 00337428  3B 9D 01 24 */	addi r28, r29, 0x124
 /* 8033A4EC 0033742C  7F 7F 00 50 */	subf r27, r31, r0
 /* 8033A4F0 00337430  3B 40 00 00 */	li r26, 0
 /* 8033A4F4 00337434  48 00 00 04 */	b lbl_8033A4F8
 lbl_8033A4F8:
-.global __DBVECTOR 
-/* 8033A4F8 00337438  3C 60 80 34 */	lis r3, __DBVECTOR @ha
-.global __DBVECTOR 
-/* 8033A4FC 0033743C  3A A3 A7 70 */	addi r21, r3, __DBVECTOR @l
+/* 8033A4F8 00337438  3C 60 80 34 */	lis r3, __DBVECTOR@ha
+/* 8033A4FC 0033743C  3A A3 A7 70 */	addi r21, r3, __DBVECTOR@l
 /* 8033A500 00337440  3E C0 60 00 */	lis r22, 0x6000
 /* 8033A504 00337444  48 00 00 04 */	b lbl_8033A508
 lbl_8033A508:
 /* 8033A508 00337448  48 00 01 48 */	b lbl_8033A650
 lbl_8033A50C:
-/* 8033A50C 0033744C  80 6D 90 84 */	lwz r3, lbl_80451604-_SDA_BASE_(r13)
+/* 8033A50C 0033744C  80 6D 90 84 */	lwz r3, BI2DebugFlag-_SDA_BASE_(r13)
 /* 8033A510 00337450  28 03 00 00 */	cmplwi r3, 0
 /* 8033A514 00337454  41 82 00 34 */	beq lbl_8033A548
 /* 8033A518 00337458  80 03 00 00 */	lwz r0, 0(r3)
@@ -629,13 +616,11 @@ lbl_8033A650:
 /* 8033A658 00337598  41 80 FE B4 */	blt lbl_8033A50C
 /* 8033A65C 0033759C  3C 60 80 00 */	lis r3, 0x80003000@ha
 /* 8033A660 003375A0  38 03 30 00 */	addi r0, r3, 0x80003000@l
-/* 8033A664 003375A4  90 0D 90 A4 */	stw r0, lbl_80451624-_SDA_BASE_(r13)
+/* 8033A664 003375A4  90 0D 90 A4 */	stw r0, OSExceptionTable-_SDA_BASE_(r13)
 /* 8033A668 003375A8  3A 80 00 00 */	li r20, 0
 /* 8033A66C 003375AC  48 00 00 04 */	b lbl_8033A670
 lbl_8033A670:
-.global OSDefaultExceptionHandler
 /* 8033A670 003375B0  3C 60 80 34 */	lis r3, OSDefaultExceptionHandler@ha
-.global OSDefaultExceptionHandler
 /* 8033A674 003375B4  3A E3 A7 B4 */	addi r23, r3, OSDefaultExceptionHandler@l
 /* 8033A678 003375B8  48 00 00 04 */	b lbl_8033A67C
 lbl_8033A67C:
@@ -643,7 +628,7 @@ lbl_8033A67C:
 lbl_8033A680:
 /* 8033A680 003375C0  7E 83 A3 78 */	mr r3, r20
 /* 8033A684 003375C4  7E E4 BB 78 */	mr r4, r23
-/* 8033A688 003375C8  48 00 00 61 */	bl __OSDBJUMPEND 
+/* 8033A688 003375C8  48 00 00 61 */	bl __OSDBJUMPEND
 /* 8033A68C 003375CC  3A 94 00 01 */	addi r20, r20, 1
 lbl_8033A690:
 /* 8033A690 003375D0  56 80 06 3E */	clrlwi r0, r20, 0x18
@@ -658,8 +643,10 @@ lbl_8033A690:
 /* 8033A6B4 003375F4  38 21 00 38 */	addi r1, r1, 0x38
 /* 8033A6B8 003375F8  7C 08 03 A6 */	mtlr r0
 /* 8033A6BC 003375FC  4E 80 00 20 */	blr 
-.global __OSDBINTSTART 
-__OSDBINTSTART :
+
+/* 8033A6C0 0024 .text __OSDBINTSTART __OSDBINTSTART */
+.global __OSDBINTSTART
+__OSDBINTSTART:
 /* 8033A6C0 00337600  38 A0 00 40 */	li r5, 0x40
 /* 8033A6C4 00337604  7C 68 02 A6 */	mflr r3
 /* 8033A6C8 00337608  90 65 00 0C */	stw r3, 0xc(r5)
@@ -669,29 +656,35 @@ __OSDBINTSTART :
 /* 8033A6D8 00337618  38 60 00 30 */	li r3, 0x30
 /* 8033A6DC 0033761C  7C 60 01 24 */	mtmsr r3
 /* 8033A6E0 00337620  4E 80 00 20 */	blr 
-.global __OSDBJUMPSTART 
-__OSDBJUMPSTART :
+
+/* 8033A6E4 0004 .text __OSDBJUMPSTART __OSDBJUMPSTART */
+.global __OSDBJUMPSTART
+__OSDBJUMPSTART:
 /* 8033A6E4 00337624  48 00 00 63 */	bla 0x60
 
-.global __OSDBJUMPEND 
-__OSDBJUMPEND :
+/* 8033A6E8 001C .text __OSDBJUMPEND __OSDBJUMPEND */
+.global __OSDBJUMPEND
+__OSDBJUMPEND:
 /* 8033A6E8 00337628  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 8033A6EC 0033762C  80 6D 90 A4 */	lwz r3, lbl_80451624-_SDA_BASE_(r13)
+/* 8033A6EC 0033762C  80 6D 90 A4 */	lwz r3, OSExceptionTable-_SDA_BASE_(r13)
 /* 8033A6F0 00337630  54 00 10 3A */	slwi r0, r0, 2
 /* 8033A6F4 00337634  7C A3 02 14 */	add r5, r3, r0
 /* 8033A6F8 00337638  80 65 00 00 */	lwz r3, 0(r5)
 /* 8033A6FC 0033763C  90 85 00 00 */	stw r4, 0(r5)
 /* 8033A700 00337640  4E 80 00 20 */	blr 
 
+/* 8033A704 0014 .text __OSGetExceptionHandler __OSGetExceptionHandler */
 .global __OSGetExceptionHandler
 __OSGetExceptionHandler:
 /* 8033A704 00337644  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 8033A708 00337648  80 6D 90 A4 */	lwz r3, lbl_80451624-_SDA_BASE_(r13)
+/* 8033A708 00337648  80 6D 90 A4 */	lwz r3, OSExceptionTable-_SDA_BASE_(r13)
 /* 8033A70C 0033764C  54 00 10 3A */	slwi r0, r0, 2
 /* 8033A710 00337650  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8033A714 00337654  4E 80 00 20 */	blr 
-.global __OSEVStart 
-__OSEVStart :
+
+/* 8033A718 0058 .text __OSEVStart __OSEVStart */
+.global __OSEVStart
+__OSEVStart:
 /* 8033A718 00337658  7C 90 43 A6 */	mtspr 0x110, r4
 /* 8033A71C 0033765C  80 80 00 C0 */	lwz r4, 0xc0(0)
 /* 8033A720 00337660  90 64 00 0C */	stw r3, 0xc(r4)
@@ -714,21 +707,23 @@ __OSEVStart :
 /* 8033A764 003376A4  7C 7B 02 A6 */	mfspr r3, 0x1b
 /* 8033A768 003376A8  90 64 01 9C */	stw r3, 0x19c(r4)
 /* 8033A76C 003376AC  7C 65 1B 78 */	mr r5, r3
-.global __DBVECTOR 
-__DBVECTOR :
+
+/* 8033A770 0010 .text __DBVECTOR __DBVECTOR */
+.global __DBVECTOR
+__DBVECTOR:
 /* 8033A770 003376B0  60 00 00 00 */	nop 
 /* 8033A774 003376B4  7C 60 00 A6 */	mfmsr r3
 /* 8033A778 003376B8  60 63 00 30 */	ori r3, r3, 0x30
 /* 8033A77C 003376BC  7C 7B 03 A6 */	mtspr 0x1b, r3
-.global __OSEVSetNumber 
-__OSEVSetNumber :
+
+/* 8033A780 0030 .text __OSEVSetNumber __OSEVSetNumber */
+.global __OSEVSetNumber
+__OSEVSetNumber:
 /* 8033A780 003376C0  38 60 00 00 */	li r3, 0
 /* 8033A784 003376C4  80 80 00 D4 */	lwz r4, 0xd4(0)
 /* 8033A788 003376C8  54 A5 07 BD */	rlwinm. r5, r5, 0, 0x1e, 0x1e
 /* 8033A78C 003376CC  40 82 00 14 */	bne lbl_8033A7A0
-.global OSDefaultExceptionHandler
 /* 8033A790 003376D0  3C A0 80 34 */	lis r5, OSDefaultExceptionHandler@ha
-.global OSDefaultExceptionHandler
 /* 8033A794 003376D4  38 A5 A7 B4 */	addi r5, r5, OSDefaultExceptionHandler@l
 /* 8033A798 003376D8  7C BA 03 A6 */	mtspr 0x1a, r5
 /* 8033A79C 003376DC  4C 00 00 64 */	rfi 
@@ -737,9 +732,13 @@ lbl_8033A7A0:
 /* 8033A7A4 003376E4  80 A5 30 00 */	lwz r5, 0x3000(r5)
 /* 8033A7A8 003376E8  7C BA 03 A6 */	mtspr 0x1a, r5
 /* 8033A7AC 003376EC  4C 00 00 64 */	rfi 
-.global __OSEVEnd 
-__OSEVEnd :
+
+/* 8033A7B0 0004 .text __OSEVEnd __OSEVEnd */
+.global __OSEVEnd
+__OSEVEnd:
 /* 8033A7B0 003376F0  60 00 00 00 */	nop 
+
+/* 8033A7B4 0058 .text OSDefaultExceptionHandler OSDefaultExceptionHandler */
 .global OSDefaultExceptionHandler
 OSDefaultExceptionHandler:
 /* 8033A7B4 003376F4  90 04 00 00 */	stw r0, 0(r4)
@@ -765,6 +764,7 @@ OSDefaultExceptionHandler:
 /* 8033A804 00337744  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8033A808 00337748  48 00 1F 90 */	b __OSUnhandledException
 
+/* 8033A80C 0054 .text __OSPSInit __OSPSInit */
 .global __OSPSInit
 __OSPSInit:
 /* 8033A80C 0033774C  7C 08 02 A6 */	mflr r0
@@ -789,6 +789,7 @@ __OSPSInit:
 /* 8033A858 00337798  7C 08 03 A6 */	mtlr r0
 /* 8033A85C 0033779C  4E 80 00 20 */	blr 
 
+/* 8033A860 0014 .text __OSGetDIConfig __OSGetDIConfig */
 .global __OSGetDIConfig
 __OSGetDIConfig:
 /* 8033A860 003377A0  3C 60 CC 00 */	lis r3, 0xCC006000@ha
@@ -797,6 +798,7 @@ __OSGetDIConfig:
 /* 8033A86C 003377AC  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 8033A870 003377B0  4E 80 00 20 */	blr 
 
+/* 8033A874 002C .text OSRegisterVersion OSRegisterVersion */
 .global OSRegisterVersion
 OSRegisterVersion:
 /* 8033A874 003377B4  7C 08 02 A6 */	mflr r0
@@ -810,4 +812,230 @@ OSRegisterVersion:
 /* 8033A894 003377D4  38 21 00 08 */	addi r1, r1, 8
 /* 8033A898 003377D8  7C 08 03 A6 */	mtlr r0
 /* 8033A89C 003377DC  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CF288 0044 .data lbl_803CF288 @1 */
+.global lbl_803CF288
+lbl_803CF288:
+.byte 0x3c, 0x3c, 0x20, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x53, 0x44, 0x4b, 0x20, 0x2d /* baserom.dol+0x3cc288 */
+.byte 0x20, 0x4f, 0x53, 0x09, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6c /* baserom.dol+0x3cc298 */
+.byte 0x64, 0x3a, 0x20, 0x4e, 0x6f, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30 /* baserom.dol+0x3cc2a8 */
+.byte 0x36, 0x3a, 0x32, 0x36, 0x3a, 0x34, 0x31, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29 /* baserom.dol+0x3cc2b8 */
+.byte 0x20, 0x3e, 0x3e, 0x00 /* baserom.dol+0x3cc2c8 */
+
+/* 803CF2CC 000D .data lbl_803CF2CC @105 */
+.global lbl_803CF2CC
+lbl_803CF2CC:
+.byte 0x0a, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x4f, 0x53, 0x0a, 0x00 /* baserom.dol+0x3cc2cc */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc2d9 */
+
+/* 803CF2DC 0016 .data lbl_803CF2DC @106 */
+.global lbl_803CF2DC
+lbl_803CF2DC:
+.byte 0x4b, 0x65, 0x72, 0x6e, 0x65, 0x6c, 0x20, 0x62, 0x75, 0x69, 0x6c, 0x74, 0x20, 0x3a, 0x20, 0x25 /* baserom.dol+0x3cc2dc */
+.byte 0x73, 0x20, 0x25, 0x73, 0x0a, 0x00 /* baserom.dol+0x3cc2ec */
+.byte 0x00, 0x00 /* baserom.dol+0x3cc2f2 */
+
+/* 803CF2F4 000C .data lbl_803CF2F4 @107 */
+.global lbl_803CF2F4
+lbl_803CF2F4:
+.byte 0x4e, 0x6f, 0x76, 0x20, 0x31, 0x30, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00 /* baserom.dol+0x3cc2f4 */
+
+/* 803CF300 0009 .data lbl_803CF300 @108 */
+.global lbl_803CF300
+lbl_803CF300:
+.byte 0x30, 0x36, 0x3a, 0x32, 0x36, 0x3a, 0x34, 0x31, 0x00 /* baserom.dol+0x3cc300 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc309 */
+
+/* 803CF30C 0010 .data lbl_803CF30C @109 */
+.global lbl_803CF30C
+lbl_803CF30C:
+.byte 0x43, 0x6f, 0x6e, 0x73, 0x6f, 0x6c, 0x65, 0x20, 0x54, 0x79, 0x70, 0x65, 0x20, 0x3a, 0x20, 0x00 /* baserom.dol+0x3cc30c */
+
+/* 803CF31C 000B .data lbl_803CF31C @110 */
+.global lbl_803CF31C
+lbl_803CF31C:
+.byte 0x52, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc31c */
+.byte 0x00 /* baserom.dol+0x3cc327 */
+
+/* 803CF328 000E .data lbl_803CF328 @111 */
+.global lbl_803CF328
+lbl_803CF328:
+.byte 0x4d, 0x61, 0x63, 0x20, 0x45, 0x6d, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x0a, 0x00 /* baserom.dol+0x3cc328 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cc336 */
+
+/* 803CF338 000D .data lbl_803CF338 @112 */
+.global lbl_803CF338
+lbl_803CF338:
+.byte 0x50, 0x43, 0x20, 0x45, 0x6d, 0x75, 0x6c, 0x61, 0x74, 0x6f, 0x72, 0x0a, 0x00 /* baserom.dol+0x3cc338 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc345 */
+
+/* 803CF348 000D .data lbl_803CF348 @113 */
+.global lbl_803CF348
+lbl_803CF348:
+.byte 0x45, 0x50, 0x50, 0x43, 0x20, 0x41, 0x72, 0x74, 0x68, 0x75, 0x72, 0x0a, 0x00 /* baserom.dol+0x3cc348 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc355 */
+
+/* 803CF358 000D .data lbl_803CF358 @114 */
+.global lbl_803CF358
+lbl_803CF358:
+.byte 0x45, 0x50, 0x50, 0x43, 0x20, 0x4d, 0x69, 0x6e, 0x6e, 0x6f, 0x77, 0x0a, 0x00 /* baserom.dol+0x3cc358 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc365 */
+
+/* 803CF368 0019 .data lbl_803CF368 @115 */
+.global lbl_803CF368
+lbl_803CF368:
+.byte 0x44, 0x65, 0x76, 0x65, 0x6c, 0x6f, 0x70, 0x6d, 0x65, 0x6e, 0x74, 0x20, 0x48, 0x57, 0x25, 0x64 /* baserom.dol+0x3cc368 */
+.byte 0x20, 0x28, 0x25, 0x30, 0x38, 0x78, 0x29, 0x0a, 0x00 /* baserom.dol+0x3cc378 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc381 */
+
+/* 803CF384 000E .data lbl_803CF384 @117 */
+.global lbl_803CF384
+lbl_803CF384:
+.byte 0x4d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x20, 0x25, 0x64, 0x20, 0x4d, 0x42, 0x0a, 0x00 /* baserom.dol+0x3cc384 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cc392 */
+
+/* 803CF394 0015 .data lbl_803CF394 @118 */
+.global lbl_803CF394
+lbl_803CF394:
+.byte 0x41, 0x72, 0x65, 0x6e, 0x61, 0x20, 0x3a, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x2d, 0x20, 0x30 /* baserom.dol+0x3cc394 */
+.byte 0x78, 0x25, 0x78, 0x0a, 0x00 /* baserom.dol+0x3cc3a4 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc3a9 */
+
+/* 803CF3AC 003C .data __OSExceptionLocations __OSExceptionLocations */
+.global __OSExceptionLocations
+__OSExceptionLocations:
+.byte 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00 /* baserom.dol+0x3cc3ac */
+.byte 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00 /* baserom.dol+0x3cc3bc */
+.byte 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0c, 0x00, 0x00, 0x00, 0x0d, 0x00, 0x00, 0x00, 0x0f, 0x00 /* baserom.dol+0x3cc3cc */
+.byte 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x17, 0x00 /* baserom.dol+0x3cc3dc */
+
+/* 803CF3E8 001B .data lbl_803CF3E8 @152 */
+.global lbl_803CF3E8
+lbl_803CF3E8:
+.byte 0x49, 0x6e, 0x73, 0x74, 0x61, 0x6c, 0x6c, 0x69, 0x6e, 0x67, 0x20, 0x4f, 0x53, 0x44, 0x42, 0x49 /* baserom.dol+0x3cc3e8 */
+.byte 0x6e, 0x74, 0x65, 0x67, 0x72, 0x61, 0x74, 0x6f, 0x72, 0x0a, 0x00 /* baserom.dol+0x3cc3f8 */
+.byte 0x00 /* baserom.dol+0x3cc403 */
+
+/* 803CF404 002E .data lbl_803CF404 @153 */
+.global lbl_803CF404
+lbl_803CF404:
+.byte 0x3e, 0x3e, 0x3e, 0x20, 0x4f, 0x53, 0x49, 0x4e, 0x49, 0x54, 0x3a, 0x20, 0x65, 0x78, 0x63, 0x65 /* baserom.dol+0x3cc404 */
+.byte 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x25, 0x64, 0x20, 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64 /* baserom.dol+0x3cc414 */
+.byte 0x65, 0x65, 0x72, 0x65, 0x64, 0x20, 0x62, 0x79, 0x20, 0x54, 0x52, 0x4b, 0x0a, 0x00 /* baserom.dol+0x3cc424 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cc432 */
+
+/* 803CF434 002F .data lbl_803CF434 @154 */
+.global lbl_803CF434
+lbl_803CF434:
+.byte 0x3e, 0x3e, 0x3e, 0x20, 0x4f, 0x53, 0x49, 0x4e, 0x49, 0x54, 0x3a, 0x20, 0x65, 0x78, 0x63, 0x65 /* baserom.dol+0x3cc434 */
+.byte 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x25, 0x64, 0x20, 0x76, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x65 /* baserom.dol+0x3cc444 */
+.byte 0x64, 0x20, 0x74, 0x6f, 0x20, 0x64, 0x65, 0x62, 0x75, 0x67, 0x67, 0x65, 0x72, 0x0a, 0x00 /* baserom.dol+0x3cc454 */
+.byte 0x00 /* baserom.dol+0x3cc463 */
+
+/* 803CF464 001B .data lbl_803CF464 @155 */
+.global lbl_803CF464
+lbl_803CF464:
+.byte 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x20, 0x69, 0x6e, 0x69, 0x74, 0x69 /* baserom.dol+0x3cc464 */
+.byte 0x61, 0x6c, 0x69, 0x7a, 0x65, 0x64, 0x2e, 0x2e, 0x2e, 0x0a, 0x00 /* baserom.dol+0x3cc474 */
+.byte 0x00 /* baserom.dol+0x3cc47f */
+
+
+
+.section .bss, "aw"
+/* 8044BA60 0020 .bss DriveInfo DriveInfo */
+.global DriveInfo
+DriveInfo:
+.skip 0x20
+
+/* 8044BA80 0030 .bss DriveBlock DriveBlock */
+.global DriveBlock
+DriveBlock:
+.skip 0x30
+
+/* 8044BAB0 001C .bss __OSRebootParams __OSRebootParams */
+.global __OSRebootParams
+__OSRebootParams:
+.skip 0x1c
+.skip 0x4 /* padding */
+
+
+
+.section .sdata, "a"
+/* 80450980 0004 .sdata __OSVersion __OSVersion */
+.global __OSVersion
+__OSVersion:
+.byte 0x80, 0x3c, 0xf2, 0x88 /* baserom.dol+0x3d06e0 */
+
+/* 80450984 0006 .sdata lbl_80450984 @116 */
+.global lbl_80450984
+lbl_80450984:
+.byte 0x25, 0x30, 0x38, 0x78, 0x0a, 0x00 /* baserom.dol+0x3d06e4 */
+.byte 0x00, 0x00 /* baserom.dol+0x3d06ea */
+
+/* 8045098C 0004 .sdata lbl_8045098C @163 */
+.global lbl_8045098C
+lbl_8045098C:
+.byte 0x25, 0x73, 0x0a, 0x00 /* baserom.dol+0x3d06ec */
+
+
+
+.section .sbss, "aw"
+/* 80451600 0004 .sbss lbl_80451600 BootInfo */
+.global lbl_80451600
+lbl_80451600:
+.skip 0x4
+
+/* 80451604 0004 .sbss BI2DebugFlag BI2DebugFlag */
+.global BI2DebugFlag
+BI2DebugFlag:
+.skip 0x4
+
+/* 80451608 0004 .sbss BI2DebugFlagHolder BI2DebugFlagHolder */
+.global BI2DebugFlagHolder
+BI2DebugFlagHolder:
+.skip 0x4
+
+/* 8045160C 0004 .sbss __OSIsGcam __OSIsGcam */
+.global __OSIsGcam
+__OSIsGcam:
+.skip 0x4
+
+/* 80451610 0008 .sbss ZeroF ZeroF */
+.global ZeroF
+ZeroF:
+.skip 0x8
+
+/* 80451618 0008 .sbss ZeroPS ZeroPS */
+.global ZeroPS
+ZeroPS:
+.skip 0x8
+
+/* 80451620 0004 .sbss AreWeInitialized AreWeInitialized */
+.global AreWeInitialized
+AreWeInitialized:
+.skip 0x4
+
+/* 80451624 0004 .sbss OSExceptionTable OSExceptionTable */
+.global OSExceptionTable
+OSExceptionTable:
+.skip 0x4
+
+/* 80451628 0004 .sbss __OSInIPL __OSInIPL */
+.global __OSInIPL
+__OSInIPL:
+.skip 0x4
+.skip 0x4 /* padding */
+
+/* 80451630 0004 .sbss __OSStartTime __OSStartTime */
+.global __OSStartTime
+__OSStartTime:
+.skip 0x4
+
+/* 80451634 0004 .sbss lbl_80451634 lbl_80451634 */
+.global lbl_80451634
+lbl_80451634:
+.skip 0x4
 

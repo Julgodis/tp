@@ -1,16 +1,17 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a66a0
 
-
-.global JAUSeqCollection
-JAUSeqCollection:
+.section .text, "ax"
+/* 802A66A0 000C .text __ct__16JAUSeqCollectionFv __ct__16JAUSeqCollectionFv */
+.global __ct__16JAUSeqCollectionFv
+__ct__16JAUSeqCollectionFv:
 /* 802A66A0 002A35E0  38 00 00 00 */	li r0, 0
 /* 802A66A4 002A35E4  90 03 00 08 */	stw r0, 8(r3)
 /* 802A66A8 002A35E8  4E 80 00 20 */	blr 
 
-.global JAUSeqCollection_NS_init
-JAUSeqCollection_NS_init:
+/* 802A66AC 0050 .text init__16JAUSeqCollectionFPCv init__16JAUSeqCollectionFPCv */
+.global init__16JAUSeqCollectionFPCv
+init__16JAUSeqCollectionFPCv:
 /* 802A66AC 002A35EC  90 83 00 08 */	stw r4, 8(r3)
 /* 802A66B0 002A35F0  80 83 00 08 */	lwz r4, 8(r3)
 /* 802A66B4 002A35F4  88 04 00 00 */	lbz r0, 0(r4)
@@ -34,8 +35,9 @@ lbl_802A66D8:
 /* 802A66F4 002A3634  90 03 00 04 */	stw r0, 4(r3)
 /* 802A66F8 002A3638  4E 80 00 20 */	blr 
 
-.global JAUSeqCollection_NS_getSeqData
-JAUSeqCollection_NS_getSeqData:
+/* 802A66FC 0058 .text getSeqData__16JAUSeqCollectionFiiP10JAISeqData getSeqData__16JAUSeqCollectionFiiP10JAISeqData */
+.global getSeqData__16JAUSeqCollectionFiiP10JAISeqData
+getSeqData__16JAUSeqCollectionFiiP10JAISeqData:
 /* 802A66FC 002A363C  A0 03 00 00 */	lhz r0, 0(r3)
 /* 802A6700 002A3640  7C 04 00 00 */	cmpw r4, r0
 /* 802A6704 002A3644  41 80 00 0C */	blt lbl_802A6710
@@ -61,8 +63,9 @@ lbl_802A6738:
 /* 802A674C 002A368C  38 60 00 01 */	li r3, 1
 /* 802A6750 002A3690  4E 80 00 20 */	blr 
 
-.global JAUSeqCollection_NS_getSeqDataRegion
-JAUSeqCollection_NS_getSeqDataRegion:
+/* 802A6754 0028 .text getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion */
+.global getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion
+getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion:
 /* 802A6754 002A3694  80 03 00 08 */	lwz r0, 8(r3)
 /* 802A6758 002A3698  28 00 00 00 */	cmplwi r0, 0
 /* 802A675C 002A369C  41 82 00 18 */	beq lbl_802A6774
@@ -75,20 +78,21 @@ lbl_802A6774:
 /* 802A6774 002A36B4  38 60 00 00 */	li r3, 0
 /* 802A6778 002A36B8  4E 80 00 20 */	blr 
 
-.global JAUSeqDataMgr_SeqCollection
-JAUSeqDataMgr_SeqCollection:
+/* 802A677C 0054 .text __ct__27JAUSeqDataMgr_SeqCollectionFv __ct__27JAUSeqDataMgr_SeqCollectionFv */
+.global __ct__27JAUSeqDataMgr_SeqCollectionFv
+__ct__27JAUSeqDataMgr_SeqCollectionFv:
 /* 802A677C 002A36BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6780 002A36C0  7C 08 02 A6 */	mflr r0
 /* 802A6784 002A36C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A6788 002A36C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A678C 002A36CC  7C 7F 1B 78 */	mr r31, r3
-/* 802A6790 002A36D0  3C 60 80 3D */	lis r3, lbl_803C9928@ha
-/* 802A6794 002A36D4  38 03 99 28 */	addi r0, r3, lbl_803C9928@l
+/* 802A6790 002A36D0  3C 60 80 3D */	lis r3, __vt__13JAISeqDataMgr@ha
+/* 802A6794 002A36D4  38 03 99 28 */	addi r0, r3, __vt__13JAISeqDataMgr@l
 /* 802A6798 002A36D8  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A679C 002A36DC  38 7F 00 04 */	addi r3, r31, 4
-/* 802A67A0 002A36E0  4B FF FF 01 */	bl JAUSeqCollection
-/* 802A67A4 002A36E4  3C 60 80 3D */	lis r3, lbl_803C9B38@ha
-/* 802A67A8 002A36E8  38 03 9B 38 */	addi r0, r3, lbl_803C9B38@l
+/* 802A67A0 002A36E0  4B FF FF 01 */	bl __ct__16JAUSeqCollectionFv
+/* 802A67A4 002A36E4  3C 60 80 3D */	lis r3, __vt__27JAUSeqDataMgr_SeqCollection@ha
+/* 802A67A8 002A36E8  38 03 9B 38 */	addi r0, r3, __vt__27JAUSeqDataMgr_SeqCollection@l
 /* 802A67AC 002A36EC  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A67B0 002A36F0  38 00 00 00 */	li r0, 0
 /* 802A67B4 002A36F4  90 1F 00 14 */	stw r0, 0x14(r31)
@@ -98,9 +102,17 @@ JAUSeqDataMgr_SeqCollection:
 /* 802A67C4 002A3704  7C 08 03 A6 */	mtlr r0
 /* 802A67C8 002A3708  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A67CC 002A370C  4E 80 00 20 */	blr 
+
+/* 802A67D0 000C .text setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser */
+.global setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser
+setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser:
 /* 802A67D0 002A3710  90 83 00 14 */	stw r4, 0x14(r3)
 /* 802A67D4 002A3714  38 60 00 01 */	li r3, 1
 /* 802A67D8 002A3718  4E 80 00 20 */	blr 
+
+/* 802A67DC 0060 .text releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv */
+.global releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv
+releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv:
 /* 802A67DC 002A371C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A67E0 002A3720  7C 08 02 A6 */	mflr r0
 /* 802A67E4 002A3724  90 01 00 24 */	stw r0, 0x24(r1)
@@ -111,7 +123,7 @@ JAUSeqDataMgr_SeqCollection:
 /* 802A67F8 002A3738  41 82 00 2C */	beq lbl_802A6824
 /* 802A67FC 002A373C  38 7F 00 04 */	addi r3, r31, 4
 /* 802A6800 002A3740  38 81 00 08 */	addi r4, r1, 8
-/* 802A6804 002A3744  4B FF FF 51 */	bl JAUSeqCollection_NS_getSeqDataRegion
+/* 802A6804 002A3744  4B FF FF 51 */	bl getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion
 /* 802A6808 002A3748  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 802A680C 002A374C  38 81 00 08 */	addi r4, r1, 8
 /* 802A6810 002A3750  81 83 00 00 */	lwz r12, 0(r3)
@@ -127,6 +139,10 @@ lbl_802A6828:
 /* 802A6830 002A3770  7C 08 03 A6 */	mtlr r0
 /* 802A6834 002A3774  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A6838 002A3778  4E 80 00 20 */	blr 
+
+/* 802A683C 0058 .text getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData */
+.global getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData
+getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData:
 /* 802A683C 002A377C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6840 002A3780  7C 08 02 A6 */	mflr r0
 /* 802A6844 002A3784  90 01 00 14 */	stw r0, 0x14(r1)
@@ -141,7 +157,7 @@ lbl_802A6864:
 /* 802A6864 002A37A4  38 63 00 04 */	addi r3, r3, 4
 /* 802A6868 002A37A8  88 87 00 01 */	lbz r4, 1(r7)
 /* 802A686C 002A37AC  A0 A7 00 02 */	lhz r5, 2(r7)
-/* 802A6870 002A37B0  4B FF FE 8D */	bl JAUSeqCollection_NS_getSeqData
+/* 802A6870 002A37B0  4B FF FE 8D */	bl getSeqData__16JAUSeqCollectionFiiP10JAISeqData
 /* 802A6874 002A37B4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802A6878 002A37B8  38 60 00 00 */	li r3, 0
 /* 802A687C 002A37BC  41 82 00 08 */	beq lbl_802A6884
@@ -151,6 +167,10 @@ lbl_802A6884:
 /* 802A6888 002A37C8  7C 08 03 A6 */	mtlr r0
 /* 802A688C 002A37CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6890 002A37D0  4E 80 00 20 */	blr 
+
+/* 802A6894 0060 .text __dt__27JAUSeqDataMgr_SeqCollectionFv __dt__27JAUSeqDataMgr_SeqCollectionFv */
+.global __dt__27JAUSeqDataMgr_SeqCollectionFv
+__dt__27JAUSeqDataMgr_SeqCollectionFv:
 /* 802A6894 002A37D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6898 002A37D8  7C 08 02 A6 */	mflr r0
 /* 802A689C 002A37DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -159,11 +179,11 @@ lbl_802A6884:
 /* 802A68A8 002A37E8  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802A68AC 002A37EC  7C 9F 23 78 */	mr r31, r4
 /* 802A68B0 002A37F0  41 82 00 28 */	beq lbl_802A68D8
-/* 802A68B4 002A37F4  3C 80 80 3D */	lis r4, lbl_803C9B38@ha
-/* 802A68B8 002A37F8  38 04 9B 38 */	addi r0, r4, lbl_803C9B38@l
+/* 802A68B4 002A37F4  3C 80 80 3D */	lis r4, __vt__27JAUSeqDataMgr_SeqCollection@ha
+/* 802A68B8 002A37F8  38 04 9B 38 */	addi r0, r4, __vt__27JAUSeqDataMgr_SeqCollection@l
 /* 802A68BC 002A37FC  90 1E 00 00 */	stw r0, 0(r30)
 /* 802A68C0 002A3800  38 80 00 00 */	li r4, 0
-/* 802A68C4 002A3804  4B FF AE F9 */	bl JAISeqDataMgr_NS_dtor
+/* 802A68C4 002A3804  4B FF AE F9 */	bl __dt__13JAISeqDataMgrFv
 /* 802A68C8 002A3808  7F E0 07 35 */	extsh. r0, r31
 /* 802A68CC 002A380C  40 81 00 0C */	ble lbl_802A68D8
 /* 802A68D0 002A3810  7F C3 F3 78 */	mr r3, r30
@@ -176,4 +196,13 @@ lbl_802A68D8:
 /* 802A68E8 002A3828  7C 08 03 A6 */	mtlr r0
 /* 802A68EC 002A382C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A68F0 002A3830  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C9B38 0018 .data __vt__27JAUSeqDataMgr_SeqCollection __vt__27JAUSeqDataMgr_SeqCollection */
+.global __vt__27JAUSeqDataMgr_SeqCollection
+__vt__27JAUSeqDataMgr_SeqCollection:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x68, 0x94, 0x80, 0x2a, 0x68, 0x3c /* baserom.dol+0x3c6b38 */
+.byte 0x80, 0x2a, 0x67, 0xdc, 0x80, 0x2a, 0x67, 0xd0 /* baserom.dol+0x3c6b48 */
 

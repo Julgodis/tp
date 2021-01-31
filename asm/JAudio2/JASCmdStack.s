@@ -1,33 +1,34 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80291060
 
-
-.global JASPortCmd_NS_execAllCommand
-JASPortCmd_NS_execAllCommand:
+.section .text, "ax"
+/* 80291060 0034 .text execAllCommand__10JASPortCmdFv execAllCommand__10JASPortCmdFv */
+.global execAllCommand__10JASPortCmdFv
+execAllCommand__10JASPortCmdFv:
 /* 80291060 0028DFA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80291064 0028DFA4  7C 08 02 A6 */	mflr r0
 /* 80291068 0028DFA8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029106C 0028DFAC  3C 60 80 43 */	lis r3, lbl_80431684@ha
-/* 80291070 0028DFB0  38 63 16 84 */	addi r3, r3, lbl_80431684@l
-/* 80291074 0028DFB4  48 00 00 21 */	bl JASPortCmd_NS_TPortHead_NS_execCommandOnce
-/* 80291078 0028DFB8  3C 60 80 43 */	lis r3, lbl_8043169C@ha
-/* 8029107C 0028DFBC  38 63 16 9C */	addi r3, r3, lbl_8043169C@l
-/* 80291080 0028DFC0  48 00 00 8D */	bl JASPortCmd_NS_TPortHead_NS_execCommandStay
+/* 8029106C 0028DFAC  3C 60 80 43 */	lis r3, sCommandListOnce__10JASPortCmd@ha
+/* 80291070 0028DFB0  38 63 16 84 */	addi r3, r3, sCommandListOnce__10JASPortCmd@l
+/* 80291074 0028DFB4  48 00 00 21 */	bl execCommandOnce__Q210JASPortCmd9TPortHeadFv
+/* 80291078 0028DFB8  3C 60 80 43 */	lis r3, sCommandListStay__10JASPortCmd@ha
+/* 8029107C 0028DFBC  38 63 16 9C */	addi r3, r3, sCommandListStay__10JASPortCmd@l
+/* 80291080 0028DFC0  48 00 00 8D */	bl execCommandStay__Q210JASPortCmd9TPortHeadFv
 /* 80291084 0028DFC4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80291088 0028DFC8  7C 08 03 A6 */	mtlr r0
 /* 8029108C 0028DFCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80291090 0028DFD0  4E 80 00 20 */	blr 
 
-.global JASPortCmd_NS_TPortHead_NS_execCommandOnce
-JASPortCmd_NS_TPortHead_NS_execCommandOnce:
+/* 80291094 0078 .text execCommandOnce__Q210JASPortCmd9TPortHeadFv execCommandOnce__Q210JASPortCmd9TPortHeadFv */
+.global execCommandOnce__Q210JASPortCmd9TPortHeadFv
+execCommandOnce__Q210JASPortCmd9TPortHeadFv:
 /* 80291094 0028DFD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80291098 0028DFD8  7C 08 02 A6 */	mflr r0
 /* 8029109C 0028DFDC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802910A0 0028DFE0  39 61 00 20 */	addi r11, r1, 0x20
 /* 802910A4 0028DFE4  48 0D 11 39 */	bl _savegpr_29
 /* 802910A8 0028DFE8  7C 7D 1B 78 */	mr r29, r3
-/* 802910AC 0028DFEC  48 0A C6 49 */	bl __RAS_OSDisableInterrupts_begin 
+/* 802910AC 0028DFEC  48 0A C6 49 */	bl __RAS_OSDisableInterrupts_begin
 /* 802910B0 0028DFF0  90 61 00 08 */	stw r3, 8(r1)
 /* 802910B4 0028DFF4  83 DD 00 00 */	lwz r30, 0(r29)
 /* 802910B8 0028DFF8  48 00 00 2C */	b lbl_802910E4
@@ -54,14 +55,15 @@ lbl_802910E4:
 /* 80291104 0028E044  38 21 00 20 */	addi r1, r1, 0x20
 /* 80291108 0028E048  4E 80 00 20 */	blr 
 
-.global JASPortCmd_NS_TPortHead_NS_execCommandStay
-JASPortCmd_NS_TPortHead_NS_execCommandStay:
+/* 8029110C 0060 .text execCommandStay__Q210JASPortCmd9TPortHeadFv execCommandStay__Q210JASPortCmd9TPortHeadFv */
+.global execCommandStay__Q210JASPortCmd9TPortHeadFv
+execCommandStay__Q210JASPortCmd9TPortHeadFv:
 /* 8029110C 0028E04C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80291110 0028E050  7C 08 02 A6 */	mflr r0
 /* 80291114 0028E054  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80291118 0028E058  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8029111C 0028E05C  7C 7F 1B 78 */	mr r31, r3
-/* 80291120 0028E060  48 0A C5 D5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80291120 0028E060  48 0A C5 D5 */	bl __RAS_OSDisableInterrupts_begin
 /* 80291124 0028E064  90 61 00 08 */	stw r3, 8(r1)
 /* 80291128 0028E068  83 FF 00 00 */	lwz r31, 0(r31)
 /* 8029112C 0028E06C  48 00 00 1C */	b lbl_80291148
@@ -82,6 +84,10 @@ lbl_80291148:
 /* 80291160 0028E0A0  7C 08 03 A6 */	mtlr r0
 /* 80291164 0028E0A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80291168 0028E0A8  4E 80 00 20 */	blr 
+
+/* 8029116C 0064 .text __sinit_JASCmdStack_cpp __sinit_JASCmdStack_cpp */
+.global __sinit_JASCmdStack_cpp
+__sinit_JASCmdStack_cpp:
 /* 8029116C 0028E0AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80291170 0028E0B0  7C 08 02 A6 */	mflr r0
 /* 80291174 0028E0B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,28 +97,26 @@ lbl_80291148:
 /* 80291184 0028E0C4  38 7F 00 0C */	addi r3, r31, 0xc
 /* 80291188 0028E0C8  48 04 AD 8D */	bl initiate__10JSUPtrListFv
 /* 8029118C 0028E0CC  38 7F 00 0C */	addi r3, r31, 0xc
-.global JASPortCmd_NS_TPortHead_NS_dtor
-/* 80291190 0028E0D0  3C 80 80 29 */	lis r4, JASPortCmd_NS_TPortHead_NS_dtor@ha
-.global JASPortCmd_NS_TPortHead_NS_dtor
-/* 80291194 0028E0D4  38 84 11 D0 */	addi r4, r4, JASPortCmd_NS_TPortHead_NS_dtor@l
+/* 80291190 0028E0D0  3C 80 80 29 */	lis r4, __dt__Q210JASPortCmd9TPortHeadFv@ha
+/* 80291194 0028E0D4  38 84 11 D0 */	addi r4, r4, __dt__Q210JASPortCmd9TPortHeadFv@l
 /* 80291198 0028E0D8  38 BF 00 00 */	addi r5, r31, 0
-/* 8029119C 0028E0DC  48 0D 0A 89 */	bl func_80361C24
+/* 8029119C 0028E0DC  48 0D 0A 89 */	bl __register_global_object
 /* 802911A0 0028E0E0  38 7F 00 24 */	addi r3, r31, 0x24
 /* 802911A4 0028E0E4  48 04 AD 71 */	bl initiate__10JSUPtrListFv
 /* 802911A8 0028E0E8  38 7F 00 24 */	addi r3, r31, 0x24
-.global JASPortCmd_NS_TPortHead_NS_dtor
-/* 802911AC 0028E0EC  3C 80 80 29 */	lis r4, JASPortCmd_NS_TPortHead_NS_dtor@ha
-.global JASPortCmd_NS_TPortHead_NS_dtor
-/* 802911B0 0028E0F0  38 84 11 D0 */	addi r4, r4, JASPortCmd_NS_TPortHead_NS_dtor@l
+/* 802911AC 0028E0EC  3C 80 80 29 */	lis r4, __dt__Q210JASPortCmd9TPortHeadFv@ha
+/* 802911B0 0028E0F0  38 84 11 D0 */	addi r4, r4, __dt__Q210JASPortCmd9TPortHeadFv@l
 /* 802911B4 0028E0F4  38 BF 00 18 */	addi r5, r31, 0x18
-/* 802911B8 0028E0F8  48 0D 0A 6D */	bl func_80361C24
+/* 802911B8 0028E0F8  48 0D 0A 6D */	bl __register_global_object
 /* 802911BC 0028E0FC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802911C0 0028E100  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802911C4 0028E104  7C 08 03 A6 */	mtlr r0
 /* 802911C8 0028E108  38 21 00 10 */	addi r1, r1, 0x10
 /* 802911CC 0028E10C  4E 80 00 20 */	blr 
-.global JASPortCmd_NS_TPortHead_NS_dtor
-JASPortCmd_NS_TPortHead_NS_dtor:
+
+/* 802911D0 0058 .text __dt__Q210JASPortCmd9TPortHeadFv __dt__Q210JASPortCmd9TPortHeadFv */
+.global __dt__Q210JASPortCmd9TPortHeadFv
+__dt__Q210JASPortCmd9TPortHeadFv:
 /* 802911D0 0028E110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802911D4 0028E114  7C 08 02 A6 */	mflr r0
 /* 802911D8 0028E118  90 01 00 14 */	stw r0, 0x14(r1)
@@ -137,4 +141,27 @@ lbl_8029120C:
 /* 8029121C 0028E15C  7C 08 03 A6 */	mtlr r0
 /* 80291220 0028E160  38 21 00 10 */	addi r1, r1, 0x10
 /* 80291224 0028E164  4E 80 00 20 */	blr 
+
+
+
+.section .bss, "aw"
+/* 80431678 000C .bss lbl_80431678 @80 */
+.global lbl_80431678
+lbl_80431678:
+.skip 0xc
+
+/* 80431684 000C .bss sCommandListOnce__10JASPortCmd sCommandListOnce__10JASPortCmd */
+.global sCommandListOnce__10JASPortCmd
+sCommandListOnce__10JASPortCmd:
+.skip 0xc
+
+/* 80431690 000C .bss lbl_80431690 @82 */
+.global lbl_80431690
+lbl_80431690:
+.skip 0xc
+
+/* 8043169C 000C .bss sCommandListStay__10JASPortCmd sCommandListStay__10JASPortCmd */
+.global sCommandListStay__10JASPortCmd
+sCommandListStay__10JASPortCmd:
+.skip 0xc
 

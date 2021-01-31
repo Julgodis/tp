@@ -1,22 +1,22 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802dc23c
 
-
-.global JSUInputStream_NS_dtor
-JSUInputStream_NS_dtor:
+.section .text, "ax"
+/* 802DC23C 005C .text __dt__14JSUInputStreamFv __dt__14JSUInputStreamFv */
+.global __dt__14JSUInputStreamFv
+__dt__14JSUInputStreamFv:
 /* 802DC23C 002D917C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC240 002D9180  7C 08 02 A6 */	mflr r0
 /* 802DC244 002D9184  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DC248 002D9188  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DC24C 002D918C  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802DC250 002D9190  41 82 00 30 */	beq lbl_802DC280
-/* 802DC254 002D9194  3C 60 80 3D */	lis r3, lbl_803CC4D4@ha
-/* 802DC258 002D9198  38 03 C4 D4 */	addi r0, r3, lbl_803CC4D4@l
+/* 802DC254 002D9194  3C 60 80 3D */	lis r3, __vt__14JSUInputStream@ha
+/* 802DC258 002D9198  38 03 C4 D4 */	addi r0, r3, __vt__14JSUInputStream@l
 /* 802DC25C 002D919C  90 1F 00 00 */	stw r0, 0(r31)
 /* 802DC260 002D91A0  41 82 00 10 */	beq lbl_802DC270
-/* 802DC264 002D91A4  3C 60 80 3C */	lis r3, lbl_803C2DF8@ha
-/* 802DC268 002D91A8  38 03 2D F8 */	addi r0, r3, lbl_803C2DF8@l
+/* 802DC264 002D91A4  3C 60 80 3C */	lis r3, __vt__10JSUIosBase@ha
+/* 802DC268 002D91A8  38 03 2D F8 */	addi r0, r3, __vt__10JSUIosBase@l
 /* 802DC26C 002D91AC  90 1F 00 00 */	stw r0, 0(r31)
 lbl_802DC270:
 /* 802DC270 002D91B0  7C 80 07 35 */	extsh. r0, r4
@@ -31,8 +31,9 @@ lbl_802DC280:
 /* 802DC290 002D91D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC294 002D91D4  4E 80 00 20 */	blr 
 
-.global JSUInputStream_NS_read
-JSUInputStream_NS_read:
+/* 802DC298 0058 .text read__14JSUInputStreamFPvl read__14JSUInputStreamFPvl */
+.global read__14JSUInputStreamFPvl
+read__14JSUInputStreamFPvl:
 /* 802DC298 002D91D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC29C 002D91DC  7C 08 02 A6 */	mflr r0
 /* 802DC2A0 002D91E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -56,6 +57,10 @@ lbl_802DC2D8:
 /* 802DC2E4 002D9224  7C 08 03 A6 */	mtlr r0
 /* 802DC2E8 002D9228  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC2EC 002D922C  4E 80 00 20 */	blr 
+
+/* 802DC2F0 0080 .text skip__14JSUInputStreamFl skip__14JSUInputStreamFl */
+.global skip__14JSUInputStreamFl
+skip__14JSUInputStreamFl:
 /* 802DC2F0 002D9230  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC2F4 002D9234  7C 08 02 A6 */	mflr r0
 /* 802DC2F8 002D9238  90 01 00 24 */	stw r0, 0x24(r1)
@@ -93,8 +98,9 @@ lbl_802DC354:
 /* 802DC368 002D92A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC36C 002D92AC  4E 80 00 20 */	blr 
 
-.global JSURandomInputStream_NS_align
-JSURandomInputStream_NS_align:
+/* 802DC370 008C .text align__20JSURandomInputStreamFl align__20JSURandomInputStreamFl */
+.global align__20JSURandomInputStreamFl
+align__20JSURandomInputStreamFl:
 /* 802DC370 002D92B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC374 002D92B4  7C 08 02 A6 */	mflr r0
 /* 802DC378 002D92B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -131,6 +137,10 @@ lbl_802DC3E0:
 /* 802DC3F0 002D9330  7C 08 03 A6 */	mtlr r0
 /* 802DC3F4 002D9334  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC3F8 002D9338  4E 80 00 20 */	blr 
+
+/* 802DC3FC 005C .text skip__20JSURandomInputStreamFl skip__20JSURandomInputStreamFl */
+.global skip__20JSURandomInputStreamFl
+skip__20JSURandomInputStreamFl:
 /* 802DC3FC 002D933C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC400 002D9340  7C 08 02 A6 */	mflr r0
 /* 802DC404 002D9344  90 01 00 14 */	stw r0, 0x14(r1)
@@ -156,8 +166,9 @@ lbl_802DC440:
 /* 802DC450 002D9390  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC454 002D9394  4E 80 00 20 */	blr 
 
-.global JSURandomInputStream_NS_peek
-JSURandomInputStream_NS_peek:
+/* 802DC458 0084 .text peek__20JSURandomInputStreamFPvl peek__20JSURandomInputStreamFPvl */
+.global peek__20JSURandomInputStreamFPvl
+peek__20JSURandomInputStreamFPvl:
 /* 802DC458 002D9398  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC45C 002D939C  7C 08 02 A6 */	mflr r0
 /* 802DC460 002D93A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -174,7 +185,7 @@ JSURandomInputStream_NS_peek:
 /* 802DC48C 002D93CC  7F 83 E3 78 */	mr r3, r28
 /* 802DC490 002D93D0  7F A4 EB 78 */	mr r4, r29
 /* 802DC494 002D93D4  7F C5 F3 78 */	mr r5, r30
-/* 802DC498 002D93D8  4B FF FE 01 */	bl JSUInputStream_NS_read
+/* 802DC498 002D93D8  4B FF FE 01 */	bl read__14JSUInputStreamFPvl
 /* 802DC49C 002D93DC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802DC4A0 002D93E0  41 82 00 20 */	beq lbl_802DC4C0
 /* 802DC4A4 002D93E4  7F 83 E3 78 */	mr r3, r28
@@ -193,8 +204,9 @@ lbl_802DC4C0:
 /* 802DC4D4 002D9414  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC4D8 002D9418  4E 80 00 20 */	blr 
 
-.global JSURandomInputStream_NS_seek
-JSURandomInputStream_NS_seek:
+/* 802DC4DC 0044 .text seek__20JSURandomInputStreamFl17JSUStreamSeekFrom seek__20JSURandomInputStreamFl17JSUStreamSeekFrom */
+.global seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
+seek__20JSURandomInputStreamFl17JSUStreamSeekFrom:
 /* 802DC4DC 002D941C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC4E0 002D9420  7C 08 02 A6 */	mflr r0
 /* 802DC4E4 002D9424  90 01 00 14 */	stw r0, 0x14(r1)
@@ -212,4 +224,21 @@ JSURandomInputStream_NS_seek:
 /* 802DC514 002D9454  7C 08 03 A6 */	mtlr r0
 /* 802DC518 002D9458  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC51C 002D945C  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC4B0 0024 .data __vt__20JSURandomInputStream __vt__20JSURandomInputStream */
+.global __vt__20JSURandomInputStream
+__vt__20JSURandomInputStream:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x25, 0x53, 0x28, 0x80, 0x2d, 0x40, 0x94 /* baserom.dol+0x3c94b0 */
+.byte 0x80, 0x2d, 0xc3, 0xfc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c94c0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c94d0 */
+
+/* 803CC4D4 0018 .data __vt__14JSUInputStream __vt__14JSUInputStream */
+.global __vt__14JSUInputStream
+__vt__14JSUInputStream:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0xc2, 0x3c, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c94d4 */
+.byte 0x80, 0x2d, 0xc2, 0xf0, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c94e4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c94ec */
 

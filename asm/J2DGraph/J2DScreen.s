@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802f8498
 
-
+.section .text, "ax"
+/* 802F8498 00A8 .text __ct__9J2DScreenFv __ct__9J2DScreenFv */
 .global __ct__9J2DScreenFv
 __ct__9J2DScreenFv:
 /* 802F8498 002F53D8  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -25,9 +25,9 @@ __ct__9J2DScreenFv:
 /* 802F84DC 002F541C  39 06 6F 74 */	addi r8, r6, 0x726F6F74@l
 /* 802F84E0 002F5420  38 E0 00 00 */	li r7, 0
 /* 802F84E4 002F5424  39 21 00 10 */	addi r9, r1, 0x10
-/* 802F84E8 002F5428  4B FF D8 59 */	bl J2DPane_X1_
-/* 802F84EC 002F542C  3C 60 80 3D */	lis r3, lbl_803CD068@ha
-/* 802F84F0 002F5430  38 03 D0 68 */	addi r0, r3, lbl_803CD068@l
+/* 802F84E8 002F5428  4B FF D8 59 */	bl func_802F5D40
+/* 802F84EC 002F542C  3C 60 80 3D */	lis r3, __vt__9J2DScreen@ha
+/* 802F84F0 002F5430  38 03 D0 68 */	addi r0, r3, __vt__9J2DScreen@l
 /* 802F84F4 002F5434  90 1F 00 00 */	stw r0, 0(r31)
 /* 802F84F8 002F5438  38 00 FF FF */	li r0, -1
 /* 802F84FC 002F543C  90 1F 01 14 */	stw r0, 0x114(r31)
@@ -47,6 +47,10 @@ __ct__9J2DScreenFv:
 /* 802F8534 002F5474  7C 08 03 A6 */	mtlr r0
 /* 802F8538 002F5478  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F853C 002F547C  4E 80 00 20 */	blr 
+
+/* 802F8540 0068 .text __dt__9J2DScreenFv __dt__9J2DScreenFv */
+.global __dt__9J2DScreenFv
+__dt__9J2DScreenFv:
 /* 802F8540 002F5480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F8544 002F5484  7C 08 02 A6 */	mflr r0
 /* 802F8548 002F5488  90 01 00 14 */	stw r0, 0x14(r1)
@@ -55,10 +59,10 @@ __ct__9J2DScreenFv:
 /* 802F8554 002F5494  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802F8558 002F5498  7C 9F 23 78 */	mr r31, r4
 /* 802F855C 002F549C  41 82 00 30 */	beq lbl_802F858C
-/* 802F8560 002F54A0  3C 80 80 3D */	lis r4, lbl_803CD068@ha
-/* 802F8564 002F54A4  38 04 D0 68 */	addi r0, r4, lbl_803CD068@l
+/* 802F8560 002F54A0  3C 80 80 3D */	lis r4, __vt__9J2DScreen@ha
+/* 802F8564 002F54A4  38 04 D0 68 */	addi r0, r4, __vt__9J2DScreen@l
 /* 802F8568 002F54A8  90 1E 00 00 */	stw r0, 0(r30)
-/* 802F856C 002F54AC  48 00 00 3D */	bl J2DScreen_NS_clean
+/* 802F856C 002F54AC  48 00 00 3D */	bl clean__9J2DScreenFv
 /* 802F8570 002F54B0  7F C3 F3 78 */	mr r3, r30
 /* 802F8574 002F54B4  38 80 00 00 */	li r4, 0
 /* 802F8578 002F54B8  4B FF E0 15 */	bl __dt__7J2DPaneFv
@@ -75,19 +79,18 @@ lbl_802F858C:
 /* 802F85A0 002F54E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F85A4 002F54E4  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_clean
-J2DScreen_NS_clean:
+/* 802F85A8 00A0 .text clean__9J2DScreenFv clean__9J2DScreenFv */
+.global clean__9J2DScreenFv
+clean__9J2DScreenFv:
 /* 802F85A8 002F54E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F85AC 002F54EC  7C 08 02 A6 */	mflr r0
 /* 802F85B0 002F54F0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802F85B4 002F54F4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F85B8 002F54F8  7C 7F 1B 78 */	mr r31, r3
 /* 802F85BC 002F54FC  80 63 01 04 */	lwz r3, 0x104(r3)
-.global J2DMaterial_NS_dtor
-/* 802F85C0 002F5500  3C 80 80 2F */	lis r4, J2DMaterial_NS_dtor@ha
-.global J2DMaterial_NS_dtor
-/* 802F85C4 002F5504  38 84 A2 CC */	addi r4, r4, J2DMaterial_NS_dtor@l
-/* 802F85C8 002F5508  48 06 96 A5 */	bl func_80361C6C
+/* 802F85C0 002F5500  3C 80 80 2F */	lis r4, __dt__11J2DMaterialFv@ha
+/* 802F85C4 002F5504  38 84 A2 CC */	addi r4, r4, __dt__11J2DMaterialFv@l
+/* 802F85C8 002F5508  48 06 96 A5 */	bl __destroy_new_array
 /* 802F85CC 002F550C  38 00 00 00 */	li r0, 0
 /* 802F85D0 002F5510  B0 1F 01 02 */	sth r0, 0x102(r31)
 /* 802F85D4 002F5514  90 1F 01 04 */	stw r0, 0x104(r31)
@@ -122,8 +125,9 @@ lbl_802F8634:
 /* 802F8640 002F5580  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F8644 002F5584  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_setPriority
-J2DScreen_NS_setPriority:
+/* 802F8648 0100 .text setPriority__9J2DScreenFPCcUlP10JKRArchive setPriority__9J2DScreenFPCcUlP10JKRArchive */
+.global setPriority__9J2DScreenFPCcUlP10JKRArchive
+setPriority__9J2DScreenFPCcUlP10JKRArchive:
 /* 802F8648 002F5588  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F864C 002F558C  7C 08 02 A6 */	mflr r0
 /* 802F8650 002F5590  90 01 00 34 */	stw r0, 0x34(r1)
@@ -149,37 +153,37 @@ lbl_802F8674:
 /* 802F869C 002F55DC  4E 80 04 21 */	bctrl 
 /* 802F86A0 002F55E0  7C 65 1B 78 */	mr r5, r3
 /* 802F86A4 002F55E4  38 61 00 08 */	addi r3, r1, 8
-/* 802F86A8 002F55E8  3C 80 80 3C */	lis r4, lbl_803C2DF8@ha
-/* 802F86AC 002F55EC  38 04 2D F8 */	addi r0, r4, lbl_803C2DF8@l
+/* 802F86A8 002F55E8  3C 80 80 3C */	lis r4, __vt__10JSUIosBase@ha
+/* 802F86AC 002F55EC  38 04 2D F8 */	addi r0, r4, __vt__10JSUIosBase@l
 /* 802F86B0 002F55F0  90 01 00 08 */	stw r0, 8(r1)
 /* 802F86B4 002F55F4  38 00 00 00 */	li r0, 0
 /* 802F86B8 002F55F8  98 01 00 0C */	stb r0, 0xc(r1)
-/* 802F86BC 002F55FC  3C 80 80 3D */	lis r4, lbl_803CC4D4@ha
-/* 802F86C0 002F5600  38 04 C4 D4 */	addi r0, r4, lbl_803CC4D4@l
+/* 802F86BC 002F55FC  3C 80 80 3D */	lis r4, __vt__14JSUInputStream@ha
+/* 802F86C0 002F5600  38 04 C4 D4 */	addi r0, r4, __vt__14JSUInputStream@l
 /* 802F86C4 002F5604  90 01 00 08 */	stw r0, 8(r1)
-/* 802F86C8 002F5608  3C 80 80 3D */	lis r4, lbl_803CC4B0@ha
-/* 802F86CC 002F560C  38 04 C4 B0 */	addi r0, r4, lbl_803CC4B0@l
+/* 802F86C8 002F5608  3C 80 80 3D */	lis r4, __vt__20JSURandomInputStream@ha
+/* 802F86CC 002F560C  38 04 C4 B0 */	addi r0, r4, __vt__20JSURandomInputStream@l
 /* 802F86D0 002F5610  90 01 00 08 */	stw r0, 8(r1)
-/* 802F86D4 002F5614  3C 80 80 3D */	lis r4, lbl_803CC4F0@ha
-/* 802F86D8 002F5618  38 04 C4 F0 */	addi r0, r4, lbl_803CC4F0@l
+/* 802F86D4 002F5614  3C 80 80 3D */	lis r4, __vt__20JSUMemoryInputStream@ha
+/* 802F86D8 002F5618  38 04 C4 F0 */	addi r0, r4, __vt__20JSUMemoryInputStream@l
 /* 802F86DC 002F561C  90 01 00 08 */	stw r0, 8(r1)
 /* 802F86E0 002F5620  7F 84 E3 78 */	mr r4, r28
-/* 802F86E4 002F5624  4B FE 3E 3D */	bl JSUMemoryInputStream_NS_setBuffer
+/* 802F86E4 002F5624  4B FE 3E 3D */	bl setBuffer__20JSUMemoryInputStreamFPCvl
 /* 802F86E8 002F5628  7F A3 EB 78 */	mr r3, r29
 /* 802F86EC 002F562C  38 81 00 08 */	addi r4, r1, 8
 /* 802F86F0 002F5630  7F C5 F3 78 */	mr r5, r30
 /* 802F86F4 002F5634  7F E6 FB 78 */	mr r6, r31
-/* 802F86F8 002F5638  48 00 00 51 */	bl J2DScreen_NS_setPriority_X1_
+/* 802F86F8 002F5638  48 00 00 51 */	bl setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
 /* 802F86FC 002F563C  7C 7D 1B 78 */	mr r29, r3
-/* 802F8700 002F5640  3C 60 80 3D */	lis r3, lbl_803CC4F0@ha
-/* 802F8704 002F5644  38 03 C4 F0 */	addi r0, r3, lbl_803CC4F0@l
+/* 802F8700 002F5640  3C 60 80 3D */	lis r3, __vt__20JSUMemoryInputStream@ha
+/* 802F8704 002F5644  38 03 C4 F0 */	addi r0, r3, __vt__20JSUMemoryInputStream@l
 /* 802F8708 002F5648  90 01 00 08 */	stw r0, 8(r1)
-/* 802F870C 002F564C  3C 60 80 3D */	lis r3, lbl_803CC4B0@ha
-/* 802F8710 002F5650  38 03 C4 B0 */	addi r0, r3, lbl_803CC4B0@l
+/* 802F870C 002F564C  3C 60 80 3D */	lis r3, __vt__20JSURandomInputStream@ha
+/* 802F8710 002F5650  38 03 C4 B0 */	addi r0, r3, __vt__20JSURandomInputStream@l
 /* 802F8714 002F5654  90 01 00 08 */	stw r0, 8(r1)
 /* 802F8718 002F5658  38 61 00 08 */	addi r3, r1, 8
 /* 802F871C 002F565C  38 80 00 00 */	li r4, 0
-/* 802F8720 002F5660  4B FE 3B 1D */	bl JSUInputStream_NS_dtor
+/* 802F8720 002F5660  4B FE 3B 1D */	bl __dt__14JSUInputStreamFv
 /* 802F8724 002F5664  7F A3 EB 78 */	mr r3, r29
 /* 802F8728 002F5668  48 00 00 08 */	b lbl_802F8730
 lbl_802F872C:
@@ -192,8 +196,9 @@ lbl_802F8730:
 /* 802F8740 002F5680  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F8744 002F5684  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_setPriority_X1_
-J2DScreen_NS_setPriority_X1_:
+/* 802F8748 0030 .text setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive */
+.global setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
+setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive:
 /* 802F8748 002F5688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F874C 002F568C  7C 08 02 A6 */	mflr r0
 /* 802F8750 002F5690  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,15 +207,16 @@ J2DScreen_NS_setPriority_X1_:
 /* 802F875C 002F569C  38 60 00 00 */	li r3, 0
 /* 802F8760 002F56A0  48 00 00 08 */	b lbl_802F8768
 lbl_802F8764:
-/* 802F8764 002F56A4  48 00 00 15 */	bl J2DScreen_NS_private_set
+/* 802F8764 002F56A4  48 00 00 15 */	bl private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
 lbl_802F8768:
 /* 802F8768 002F56A8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802F876C 002F56AC  7C 08 03 A6 */	mtlr r0
 /* 802F8770 002F56B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F8774 002F56B4  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_private_set
-J2DScreen_NS_private_set:
+/* 802F8778 00BC .text private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive */
+.global private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
+private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive:
 /* 802F8778 002F56B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F877C 002F56BC  7C 08 02 A6 */	mflr r0
 /* 802F8780 002F56C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -220,7 +226,7 @@ J2DScreen_NS_private_set:
 /* 802F8790 002F56D0  7C 9D 23 78 */	mr r29, r4
 /* 802F8794 002F56D4  7C BE 2B 78 */	mr r30, r5
 /* 802F8798 002F56D8  7C DF 33 78 */	mr r31, r6
-/* 802F879C 002F56DC  48 00 00 99 */	bl J2DScreen_NS_checkSignature
+/* 802F879C 002F56DC  48 00 00 99 */	bl checkSignature__9J2DScreenFP20JSURandomInputStream
 /* 802F87A0 002F56E0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802F87A4 002F56E4  40 82 00 0C */	bne lbl_802F87B0
 /* 802F87A8 002F56E8  38 60 00 00 */	li r3, 0
@@ -228,7 +234,7 @@ J2DScreen_NS_private_set:
 lbl_802F87B0:
 /* 802F87B0 002F56F0  7F 83 E3 78 */	mr r3, r28
 /* 802F87B4 002F56F4  7F A4 EB 78 */	mr r4, r29
-/* 802F87B8 002F56F8  48 00 00 DD */	bl J2DScreen_NS_getScreenInformation
+/* 802F87B8 002F56F8  48 00 00 DD */	bl getScreenInformation__9J2DScreenFP20JSURandomInputStream
 /* 802F87BC 002F56FC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802F87C0 002F5700  40 82 00 0C */	bne lbl_802F87CC
 /* 802F87C4 002F5704  38 60 00 00 */	li r3, 0
@@ -239,14 +245,14 @@ lbl_802F87CC:
 /* 802F87D4 002F5714  7F A5 EB 78 */	mr r5, r29
 /* 802F87D8 002F5718  7F C6 F3 78 */	mr r6, r30
 /* 802F87DC 002F571C  7F E7 FB 78 */	mr r7, r31
-/* 802F87E0 002F5720  48 00 01 B1 */	bl J2DScreen_NS_makeHierarchyPanes
+/* 802F87E0 002F5720  48 00 01 B1 */	bl makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive
 /* 802F87E4 002F5724  20 63 00 02 */	subfic r3, r3, 2
 /* 802F87E8 002F5728  30 03 FF FF */	addic r0, r3, -1
 /* 802F87EC 002F572C  7F E0 19 10 */	subfe r31, r0, r3
 /* 802F87F0 002F5730  57 C0 02 DF */	rlwinm. r0, r30, 0, 0xb, 0xf
 /* 802F87F4 002F5734  40 82 00 0C */	bne lbl_802F8800
 /* 802F87F8 002F5738  7F 83 E3 78 */	mr r3, r28
-/* 802F87FC 002F573C  4B FF FD AD */	bl J2DScreen_NS_clean
+/* 802F87FC 002F573C  4B FF FD AD */	bl clean__9J2DScreenFv
 lbl_802F8800:
 /* 802F8800 002F5740  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 802F8804 002F5744  41 82 00 14 */	beq lbl_802F8818
@@ -264,15 +270,16 @@ lbl_802F881C:
 /* 802F882C 002F576C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8830 002F5770  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_checkSignature
-J2DScreen_NS_checkSignature:
+/* 802F8834 0060 .text checkSignature__9J2DScreenFP20JSURandomInputStream checkSignature__9J2DScreenFP20JSURandomInputStream */
+.global checkSignature__9J2DScreenFP20JSURandomInputStream
+checkSignature__9J2DScreenFP20JSURandomInputStream:
 /* 802F8834 002F5774  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F8838 002F5778  7C 08 02 A6 */	mflr r0
 /* 802F883C 002F577C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802F8840 002F5780  7C 83 23 78 */	mr r3, r4
 /* 802F8844 002F5784  38 81 00 08 */	addi r4, r1, 8
 /* 802F8848 002F5788  38 A0 00 20 */	li r5, 0x20
-/* 802F884C 002F578C  4B FE 3A 4D */	bl JSUInputStream_NS_read
+/* 802F884C 002F578C  4B FE 3A 4D */	bl read__14JSUInputStreamFPvl
 /* 802F8850 002F5790  80 61 00 08 */	lwz r3, 8(r1)
 /* 802F8854 002F5794  3C 03 AC BD */	addis r0, r3, 0xacbd
 /* 802F8858 002F5798  28 00 52 4E */	cmplwi r0, 0x524e
@@ -294,8 +301,9 @@ lbl_802F8884:
 /* 802F888C 002F57CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F8890 002F57D0  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_getScreenInformation
-J2DScreen_NS_getScreenInformation:
+/* 802F8894 00FC .text getScreenInformation__9J2DScreenFP20JSURandomInputStream getScreenInformation__9J2DScreenFP20JSURandomInputStream */
+.global getScreenInformation__9J2DScreenFP20JSURandomInputStream
+getScreenInformation__9J2DScreenFP20JSURandomInputStream:
 /* 802F8894 002F57D4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802F8898 002F57D8  7C 08 02 A6 */	mflr r0
 /* 802F889C 002F57DC  90 01 00 54 */	stw r0, 0x54(r1)
@@ -306,7 +314,7 @@ J2DScreen_NS_getScreenInformation:
 /* 802F88B0 002F57F0  7F E3 FB 78 */	mr r3, r31
 /* 802F88B4 002F57F4  38 81 00 1C */	addi r4, r1, 0x1c
 /* 802F88B8 002F57F8  38 A0 00 10 */	li r5, 0x10
-/* 802F88BC 002F57FC  4B FE 39 DD */	bl JSUInputStream_NS_read
+/* 802F88BC 002F57FC  4B FE 39 DD */	bl read__14JSUInputStreamFPvl
 /* 802F88C0 002F5800  80 61 00 1C */	lwz r3, 0x1c(r1)
 /* 802F88C4 002F5804  3C 03 B6 B2 */	addis r0, r3, 0xb6b2
 /* 802F88C8 002F5808  28 00 46 31 */	cmplwi r0, 0x4631
@@ -333,7 +341,7 @@ lbl_802F88D8:
 /* 802F8918 002F5858  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 802F891C 002F585C  7F C3 F3 78 */	mr r3, r30
 /* 802F8920 002F5860  38 81 00 0C */	addi r4, r1, 0xc
-/* 802F8924 002F5864  4B FF E3 F5 */	bl J2DPane_NS_place
+/* 802F8924 002F5864  4B FF E3 F5 */	bl func_802F6D18
 /* 802F8928 002F5868  80 01 00 28 */	lwz r0, 0x28(r1)
 /* 802F892C 002F586C  90 01 00 08 */	stw r0, 8(r1)
 /* 802F8930 002F5870  88 01 00 08 */	lbz r0, 8(r1)
@@ -363,8 +371,9 @@ lbl_802F8978:
 /* 802F8988 002F58C8  38 21 00 50 */	addi r1, r1, 0x50
 /* 802F898C 002F58CC  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_makeHierarchyPanes
-J2DScreen_NS_makeHierarchyPanes:
+/* 802F8990 0208 .text makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive */
+.global makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive
+makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive:
 /* 802F8990 002F58D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F8994 002F58D4  7C 08 02 A6 */	mflr r0
 /* 802F8998 002F58D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -382,7 +391,7 @@ lbl_802F89C4:
 /* 802F89C4 002F5904  7F 63 DB 78 */	mr r3, r27
 /* 802F89C8 002F5908  38 81 00 08 */	addi r4, r1, 8
 /* 802F89CC 002F590C  38 A0 00 08 */	li r5, 8
-/* 802F89D0 002F5910  4B FE 3A 89 */	bl JSURandomInputStream_NS_peek
+/* 802F89D0 002F5910  4B FE 3A 89 */	bl peek__20JSURandomInputStreamFPvl
 /* 802F89D4 002F5914  80 81 00 08 */	lwz r4, 8(r1)
 /* 802F89D8 002F5918  7C 04 F8 00 */	cmpw r4, r31
 /* 802F89DC 002F591C  41 82 00 F4 */	beq lbl_802F8AD0
@@ -418,20 +427,20 @@ lbl_802F8A48:
 /* 802F8A48 002F5988  7F 63 DB 78 */	mr r3, r27
 /* 802F8A4C 002F598C  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 802F8A50 002F5990  38 A0 00 01 */	li r5, 1
-/* 802F8A54 002F5994  4B FE 3A 89 */	bl JSURandomInputStream_NS_seek
+/* 802F8A54 002F5994  4B FE 3A 89 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 802F8A58 002F5998  38 60 00 01 */	li r3, 1
 /* 802F8A5C 002F599C  48 00 01 24 */	b lbl_802F8B80
 lbl_802F8A60:
 /* 802F8A60 002F59A0  7F 63 DB 78 */	mr r3, r27
 /* 802F8A64 002F59A4  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 802F8A68 002F59A8  38 A0 00 01 */	li r5, 1
-/* 802F8A6C 002F59AC  4B FE 3A 71 */	bl JSURandomInputStream_NS_seek
+/* 802F8A6C 002F59AC  4B FE 3A 71 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 802F8A70 002F59B0  7F 23 CB 78 */	mr r3, r25
 /* 802F8A74 002F59B4  7F C4 F3 78 */	mr r4, r30
 /* 802F8A78 002F59B8  7F 65 DB 78 */	mr r5, r27
 /* 802F8A7C 002F59BC  7F 86 E3 78 */	mr r6, r28
 /* 802F8A80 002F59C0  7F A7 EB 78 */	mr r7, r29
-/* 802F8A84 002F59C4  4B FF FF 0D */	bl J2DScreen_NS_makeHierarchyPanes
+/* 802F8A84 002F59C4  4B FF FF 0D */	bl makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive
 /* 802F8A88 002F59C8  2C 03 00 00 */	cmpwi r3, 0
 /* 802F8A8C 002F59CC  41 82 FF 38 */	beq lbl_802F89C4
 /* 802F8A90 002F59D0  48 00 00 F0 */	b lbl_802F8B80
@@ -439,14 +448,14 @@ lbl_802F8A94:
 /* 802F8A94 002F59D4  7F 63 DB 78 */	mr r3, r27
 /* 802F8A98 002F59D8  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 802F8A9C 002F59DC  38 A0 00 01 */	li r5, 1
-/* 802F8AA0 002F59E0  4B FE 3A 3D */	bl JSURandomInputStream_NS_seek
+/* 802F8AA0 002F59E0  4B FE 3A 3D */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 802F8AA4 002F59E4  38 60 00 00 */	li r3, 0
 /* 802F8AA8 002F59E8  48 00 00 D8 */	b lbl_802F8B80
 lbl_802F8AAC:
 /* 802F8AAC 002F59EC  7F 23 CB 78 */	mr r3, r25
 /* 802F8AB0 002F59F0  7F 64 DB 78 */	mr r4, r27
 /* 802F8AB4 002F59F4  7F 85 E3 78 */	mr r5, r28
-/* 802F8AB8 002F59F8  48 00 07 C9 */	bl J2DScreen_NS_getResReference
+/* 802F8AB8 002F59F8  48 00 07 C9 */	bl getResReference__9J2DScreenFP20JSURandomInputStreamUl
 /* 802F8ABC 002F59FC  90 79 01 08 */	stw r3, 0x108(r25)
 /* 802F8AC0 002F5A00  28 03 00 00 */	cmplwi r3, 0
 /* 802F8AC4 002F5A04  40 82 FF 00 */	bne lbl_802F89C4
@@ -456,7 +465,7 @@ lbl_802F8AD0:
 /* 802F8AD0 002F5A10  7F 23 CB 78 */	mr r3, r25
 /* 802F8AD4 002F5A14  7F 64 DB 78 */	mr r4, r27
 /* 802F8AD8 002F5A18  7F 85 E3 78 */	mr r5, r28
-/* 802F8ADC 002F5A1C  48 00 07 A5 */	bl J2DScreen_NS_getResReference
+/* 802F8ADC 002F5A1C  48 00 07 A5 */	bl getResReference__9J2DScreenFP20JSURandomInputStreamUl
 /* 802F8AE0 002F5A20  90 79 01 0C */	stw r3, 0x10c(r25)
 /* 802F8AE4 002F5A24  28 03 00 00 */	cmplwi r3, 0
 /* 802F8AE8 002F5A28  40 82 FE DC */	bne lbl_802F89C4
@@ -467,7 +476,7 @@ lbl_802F8AF4:
 /* 802F8AF8 002F5A38  7F 64 DB 78 */	mr r4, r27
 /* 802F8AFC 002F5A3C  7F 85 E3 78 */	mr r5, r28
 /* 802F8B00 002F5A40  7F A6 EB 78 */	mr r6, r29
-/* 802F8B04 002F5A44  48 00 08 79 */	bl J2DScreen_NS_createMaterial
+/* 802F8B04 002F5A44  48 00 08 79 */	bl createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
 /* 802F8B08 002F5A48  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802F8B0C 002F5A4C  40 82 FE B8 */	bne lbl_802F89C4
 /* 802F8B10 002F5A50  38 60 00 02 */	li r3, 2
@@ -508,6 +517,10 @@ lbl_802F8B80:
 /* 802F8B8C 002F5ACC  7C 08 03 A6 */	mtlr r0
 /* 802F8B90 002F5AD0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F8B94 002F5AD4  4E 80 00 20 */	blr 
+
+/* 802F8B98 033C .text createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive */
+.global createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive
+createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive:
 /* 802F8B98 002F5AD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F8B9C 002F5ADC  7C 08 02 A6 */	mflr r0
 /* 802F8BA0 002F5AE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -580,7 +593,7 @@ lbl_802F8C84:
 /* 802F8C94 002F5BD4  7F A4 EB 78 */	mr r4, r29
 /* 802F8C98 002F5BD8  7F 85 E3 78 */	mr r5, r28
 /* 802F8C9C 002F5BDC  7F E6 FB 78 */	mr r6, r31
-/* 802F8CA0 002F5BE0  48 00 0E D5 */	bl J2DWindow_X1_
+/* 802F8CA0 002F5BE0  48 00 0E D5 */	bl __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive
 /* 802F8CA4 002F5BE4  7C 60 1B 78 */	mr r0, r3
 lbl_802F8CA8:
 /* 802F8CA8 002F5BE8  7C 1A 03 78 */	mr r26, r0
@@ -593,7 +606,7 @@ lbl_802F8CB0:
 /* 802F8CC0 002F5C00  7F A4 EB 78 */	mr r4, r29
 /* 802F8CC4 002F5C04  7F 85 E3 78 */	mr r5, r28
 /* 802F8CC8 002F5C08  7F E6 FB 78 */	mr r6, r31
-/* 802F8CCC 002F5C0C  48 00 34 4D */	bl J2DPicture_X1_
+/* 802F8CCC 002F5C0C  48 00 34 4D */	bl __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive
 /* 802F8CD0 002F5C10  7C 60 1B 78 */	mr r0, r3
 lbl_802F8CD4:
 /* 802F8CD4 002F5C14  7C 1A 03 78 */	mr r26, r0
@@ -606,7 +619,7 @@ lbl_802F8CDC:
 /* 802F8CEC 002F5C2C  7F A4 EB 78 */	mr r4, r29
 /* 802F8CF0 002F5C30  7F 85 E3 78 */	mr r5, r28
 /* 802F8CF4 002F5C34  7F E6 FB 78 */	mr r6, r31
-/* 802F8CF8 002F5C38  48 00 69 E1 */	bl J2DTextBox_X1_
+/* 802F8CF8 002F5C38  48 00 69 E1 */	bl __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamP10JKRArchive
 /* 802F8CFC 002F5C3C  7C 60 1B 78 */	mr r0, r3
 lbl_802F8D00:
 /* 802F8D00 002F5C40  7C 1A 03 78 */	mr r26, r0
@@ -635,7 +648,7 @@ lbl_802F8D34:
 /* 802F8D50 002F5C90  7F 85 E3 78 */	mr r5, r28
 /* 802F8D54 002F5C94  7F C6 F3 78 */	mr r6, r30
 /* 802F8D58 002F5C98  80 FA 01 04 */	lwz r7, 0x104(r26)
-/* 802F8D5C 002F5C9C  48 00 7F 39 */	bl J2DWindowEx
+/* 802F8D5C 002F5C9C  48 00 7F 39 */	bl __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
 /* 802F8D60 002F5CA0  7C 60 1B 78 */	mr r0, r3
 lbl_802F8D64:
 /* 802F8D64 002F5CA4  7C 1A 03 78 */	mr r26, r0
@@ -648,7 +661,7 @@ lbl_802F8D6C:
 /* 802F8D7C 002F5CBC  7F A4 EB 78 */	mr r4, r29
 /* 802F8D80 002F5CC0  7F 85 E3 78 */	mr r5, r28
 /* 802F8D84 002F5CC4  80 DA 01 04 */	lwz r6, 0x104(r26)
-/* 802F8D88 002F5CC8  48 00 0E 89 */	bl J2DWindow_X2_
+/* 802F8D88 002F5CC8  48 00 0E 89 */	bl __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial
 /* 802F8D8C 002F5CCC  7C 60 1B 78 */	mr r0, r3
 lbl_802F8D90:
 /* 802F8D90 002F5CD0  7C 1A 03 78 */	mr r26, r0
@@ -664,7 +677,7 @@ lbl_802F8D98:
 /* 802F8DB4 002F5CF4  7F 85 E3 78 */	mr r5, r28
 /* 802F8DB8 002F5CF8  7F C6 F3 78 */	mr r6, r30
 /* 802F8DBC 002F5CFC  80 FA 01 04 */	lwz r7, 0x104(r26)
-/* 802F8DC0 002F5D00  48 00 A9 2D */	bl J2DPictureEx
+/* 802F8DC0 002F5D00  48 00 A9 2D */	bl __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
 /* 802F8DC4 002F5D04  7C 60 1B 78 */	mr r0, r3
 lbl_802F8DC8:
 /* 802F8DC8 002F5D08  7C 1A 03 78 */	mr r26, r0
@@ -677,7 +690,7 @@ lbl_802F8DD0:
 /* 802F8DE0 002F5D20  7F A4 EB 78 */	mr r4, r29
 /* 802F8DE4 002F5D24  7F 85 E3 78 */	mr r5, r28
 /* 802F8DE8 002F5D28  80 DA 01 04 */	lwz r6, 0x104(r26)
-/* 802F8DEC 002F5D2C  48 00 33 E9 */	bl J2DPicture_X2_
+/* 802F8DEC 002F5D2C  48 00 33 E9 */	bl __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial
 /* 802F8DF0 002F5D30  7C 60 1B 78 */	mr r0, r3
 lbl_802F8DF4:
 /* 802F8DF4 002F5D34  7C 1A 03 78 */	mr r26, r0
@@ -693,7 +706,7 @@ lbl_802F8DFC:
 /* 802F8E18 002F5D58  7F 85 E3 78 */	mr r5, r28
 /* 802F8E1C 002F5D5C  7F C6 F3 78 */	mr r6, r30
 /* 802F8E20 002F5D60  80 FA 01 04 */	lwz r7, 0x104(r26)
-/* 802F8E24 002F5D64  48 00 E3 C1 */	bl J2DTextBoxEx
+/* 802F8E24 002F5D64  48 00 E3 C1 */	bl __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
 /* 802F8E28 002F5D68  7C 60 1B 78 */	mr r0, r3
 lbl_802F8E2C:
 /* 802F8E2C 002F5D6C  7C 1A 03 78 */	mr r26, r0
@@ -707,7 +720,7 @@ lbl_802F8E34:
 /* 802F8E48 002F5D88  7F 85 E3 78 */	mr r5, r28
 /* 802F8E4C 002F5D8C  7F C6 F3 78 */	mr r6, r30
 /* 802F8E50 002F5D90  80 FA 01 04 */	lwz r7, 0x104(r26)
-/* 802F8E54 002F5D94  48 00 69 09 */	bl J2DTextBox_X2_
+/* 802F8E54 002F5D94  48 00 69 09 */	bl __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
 /* 802F8E58 002F5D98  7C 60 1B 78 */	mr r0, r3
 lbl_802F8E5C:
 /* 802F8E5C 002F5D9C  7C 1A 03 78 */	mr r26, r0
@@ -734,7 +747,7 @@ lbl_802F8EA4:
 /* 802F8EA8 002F5DE8  7F 83 E3 78 */	mr r3, r28
 /* 802F8EAC 002F5DEC  7F 64 DB 78 */	mr r4, r27
 /* 802F8EB0 002F5DF0  38 A0 00 00 */	li r5, 0
-/* 802F8EB4 002F5DF4  4B FE 36 29 */	bl JSURandomInputStream_NS_seek
+/* 802F8EB4 002F5DF4  4B FE 36 29 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 lbl_802F8EB8:
 /* 802F8EB8 002F5DF8  7F 43 D3 78 */	mr r3, r26
 /* 802F8EBC 002F5DFC  39 61 00 20 */	addi r11, r1, 0x20
@@ -744,8 +757,9 @@ lbl_802F8EB8:
 /* 802F8ECC 002F5E0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8ED0 002F5E10  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_draw
-J2DScreen_NS_draw:
+/* 802F8ED4 01CC .text draw__9J2DScreenFffPC14J2DGrafContext draw__9J2DScreenFffPC14J2DGrafContext */
+.global draw__9J2DScreenFffPC14J2DGrafContext
+draw__9J2DScreenFffPC14J2DGrafContext:
 /* 802F8ED4 002F5E14  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802F8ED8 002F5E18  7C 08 02 A6 */	mflr r0
 /* 802F8EDC 002F5E1C  90 01 01 24 */	stw r0, 0x124(r1)
@@ -786,9 +800,9 @@ lbl_802F8F50:
 /* 802F8F60 002F5EA0  C0 82 C8 28 */	lfs f4, lbl_80456228-_SDA2_BASE_(r2)
 /* 802F8F64 002F5EA4  C0 A2 C8 38 */	lfs f5, lbl_80456238-_SDA2_BASE_(r2)
 /* 802F8F68 002F5EA8  C0 C2 C8 3C */	lfs f6, lbl_8045623C-_SDA2_BASE_(r2)
-/* 802F8F6C 002F5EAC  4B FF 07 65 */	bl J2DOrthoGraph_X1_
+/* 802F8F6C 002F5EAC  4B FF 07 65 */	bl __ct__13J2DOrthoGraphFffffff
 /* 802F8F70 002F5EB0  38 61 00 18 */	addi r3, r1, 0x18
-/* 802F8F74 002F5EB4  4B FF 08 41 */	bl J2DOrthoGraph_NS_setPort
+/* 802F8F74 002F5EB4  4B FF 08 41 */	bl setPort__13J2DOrthoGraphFv
 /* 802F8F78 002F5EB8  7F C3 F3 78 */	mr r3, r30
 /* 802F8F7C 002F5EBC  FC 20 F0 90 */	fmr f1, f30
 /* 802F8F80 002F5EC0  FC 40 F8 90 */	fmr f2, f31
@@ -796,11 +810,11 @@ lbl_802F8F50:
 /* 802F8F88 002F5EC8  88 BE 01 00 */	lbz r5, 0x100(r30)
 /* 802F8F8C 002F5ECC  38 C0 00 01 */	li r6, 1
 /* 802F8F90 002F5ED0  4B FF D8 51 */	bl draw__7J2DPaneFffPC14J2DGrafContextbb
-/* 802F8F94 002F5ED4  3C 60 80 3D */	lis r3, lbl_803CC9E0@ha
-/* 802F8F98 002F5ED8  38 03 C9 E0 */	addi r0, r3, lbl_803CC9E0@l
+/* 802F8F94 002F5ED4  3C 60 80 3D */	lis r3, __vt__13J2DOrthoGraph@ha
+/* 802F8F98 002F5ED8  38 03 C9 E0 */	addi r0, r3, __vt__13J2DOrthoGraph@l
 /* 802F8F9C 002F5EDC  90 01 00 18 */	stw r0, 0x18(r1)
-/* 802F8FA0 002F5EE0  3C 60 80 3D */	lis r3, lbl_803CC9B8@ha
-/* 802F8FA4 002F5EE4  38 03 C9 B8 */	addi r0, r3, lbl_803CC9B8@l
+/* 802F8FA0 002F5EE0  3C 60 80 3D */	lis r3, __vt__14J2DGrafContext@ha
+/* 802F8FA4 002F5EE4  38 03 C9 B8 */	addi r0, r3, __vt__14J2DGrafContext@l
 /* 802F8FA8 002F5EE8  90 01 00 18 */	stw r0, 0x18(r1)
 lbl_802F8FAC:
 /* 802F8FAC 002F5EEC  88 1E 01 00 */	lbz r0, 0x100(r30)
@@ -867,6 +881,10 @@ lbl_802F9054:
 /* 802F9094 002F5FD4  7C 08 03 A6 */	mtlr r0
 /* 802F9098 002F5FD8  38 21 01 20 */	addi r1, r1, 0x120
 /* 802F909C 002F5FDC  4E 80 00 20 */	blr 
+
+/* 802F90A0 0040 .text search__9J2DScreenFUx search__9J2DScreenFUx */
+.global search__9J2DScreenFUx
+search__9J2DScreenFUx:
 /* 802F90A0 002F5FE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F90A4 002F5FE4  7C 08 02 A6 */	mflr r0
 /* 802F90A8 002F5FE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -885,6 +903,10 @@ lbl_802F90CC:
 /* 802F90D4 002F6014  7C 08 03 A6 */	mtlr r0
 /* 802F90D8 002F6018  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F90DC 002F601C  4E 80 00 20 */	blr 
+
+/* 802F90E0 0040 .text searchUserInfo__9J2DScreenFUx searchUserInfo__9J2DScreenFUx */
+.global searchUserInfo__9J2DScreenFUx
+searchUserInfo__9J2DScreenFUx:
 /* 802F90E0 002F6020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F90E4 002F6024  7C 08 02 A6 */	mflr r0
 /* 802F90E8 002F6028  90 01 00 14 */	stw r0, 0x14(r1)
@@ -903,6 +925,10 @@ lbl_802F910C:
 /* 802F9114 002F6054  7C 08 03 A6 */	mtlr r0
 /* 802F9118 002F6058  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F911C 002F605C  4E 80 00 20 */	blr 
+
+/* 802F9120 0160 .text drawSelf__9J2DScreenFffPA3_A4_f drawSelf__9J2DScreenFffPA3_A4_f */
+.global drawSelf__9J2DScreenFffPA3_A4_f
+drawSelf__9J2DScreenFffPA3_A4_f:
 /* 802F9120 002F6060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F9124 002F6064  7C 08 02 A6 */	mflr r0
 /* 802F9128 002F6068  90 01 00 24 */	stw r0, 0x24(r1)
@@ -993,8 +1019,9 @@ lbl_802F926C:
 /* 802F9278 002F61B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F927C 002F61BC  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_getResReference
-J2DScreen_NS_getResReference:
+/* 802F9280 00FC .text getResReference__9J2DScreenFP20JSURandomInputStreamUl getResReference__9J2DScreenFP20JSURandomInputStreamUl */
+.global getResReference__9J2DScreenFP20JSURandomInputStreamUl
+getResReference__9J2DScreenFP20JSURandomInputStreamUl:
 /* 802F9280 002F61C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F9284 002F61C4  7C 08 02 A6 */	mflr r0
 /* 802F9288 002F61C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1017,7 +1044,7 @@ J2DScreen_NS_getResReference:
 /* 802F92CC 002F620C  7F 63 DB 78 */	mr r3, r27
 /* 802F92D0 002F6210  38 81 00 0C */	addi r4, r1, 0xc
 /* 802F92D4 002F6214  38 A0 00 04 */	li r5, 4
-/* 802F92D8 002F6218  4B FE 2F C1 */	bl JSUInputStream_NS_read
+/* 802F92D8 002F6218  4B FE 2F C1 */	bl read__14JSUInputStreamFPvl
 /* 802F92DC 002F621C  83 A1 00 0C */	lwz r29, 0xc(r1)
 /* 802F92E0 002F6220  7F 63 DB 78 */	mr r3, r27
 /* 802F92E4 002F6224  38 80 00 04 */	li r4, 4
@@ -1028,12 +1055,12 @@ J2DScreen_NS_getResReference:
 /* 802F92F8 002F6238  7F 63 DB 78 */	mr r3, r27
 /* 802F92FC 002F623C  38 81 00 08 */	addi r4, r1, 8
 /* 802F9300 002F6240  38 A0 00 04 */	li r5, 4
-/* 802F9304 002F6244  4B FE 2F 95 */	bl JSUInputStream_NS_read
+/* 802F9304 002F6244  4B FE 2F 95 */	bl read__14JSUInputStreamFPvl
 /* 802F9308 002F6248  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802F930C 002F624C  7F 63 DB 78 */	mr r3, r27
 /* 802F9310 002F6250  7C 9F F2 14 */	add r4, r31, r30
 /* 802F9314 002F6254  38 A0 00 00 */	li r5, 0
-/* 802F9318 002F6258  4B FE 31 C5 */	bl JSURandomInputStream_NS_seek
+/* 802F9318 002F6258  4B FE 31 C5 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 802F931C 002F625C  7F BE E8 50 */	subf r29, r30, r29
 /* 802F9320 002F6260  57 80 02 DF */	rlwinm. r0, r28, 0, 0xb, 0xf
 /* 802F9324 002F6264  41 82 00 14 */	beq lbl_802F9338
@@ -1052,7 +1079,7 @@ lbl_802F9348:
 /* 802F9350 002F6290  41 82 00 10 */	beq lbl_802F9360
 /* 802F9354 002F6294  7F 63 DB 78 */	mr r3, r27
 /* 802F9358 002F6298  7F A5 EB 78 */	mr r5, r29
-/* 802F935C 002F629C  4B FE 2F 3D */	bl JSUInputStream_NS_read
+/* 802F935C 002F629C  4B FE 2F 3D */	bl read__14JSUInputStreamFPvl
 lbl_802F9360:
 /* 802F9360 002F62A0  7F C3 F3 78 */	mr r3, r30
 /* 802F9364 002F62A4  39 61 00 30 */	addi r11, r1, 0x30
@@ -1062,8 +1089,9 @@ lbl_802F9360:
 /* 802F9374 002F62B4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F9378 002F62B8  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_createMaterial
-J2DScreen_NS_createMaterial:
+/* 802F937C 0284 .text createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive */
+.global createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive
+createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive:
 /* 802F937C 002F62BC  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802F9380 002F62C0  7C 08 02 A6 */	mflr r0
 /* 802F9384 002F62C4  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1082,11 +1110,11 @@ J2DScreen_NS_createMaterial:
 /* 802F93B8 002F62F8  7F 23 CB 78 */	mr r3, r25
 /* 802F93BC 002F62FC  38 81 00 0C */	addi r4, r1, 0xc
 /* 802F93C0 002F6300  38 A0 00 08 */	li r5, 8
-/* 802F93C4 002F6304  4B FE 2E D5 */	bl JSUInputStream_NS_read
+/* 802F93C4 002F6304  4B FE 2E D5 */	bl read__14JSUInputStreamFPvl
 /* 802F93C8 002F6308  7F 23 CB 78 */	mr r3, r25
 /* 802F93CC 002F630C  38 81 00 08 */	addi r4, r1, 8
 /* 802F93D0 002F6310  38 A0 00 02 */	li r5, 2
-/* 802F93D4 002F6314  4B FE 2E C5 */	bl JSUInputStream_NS_read
+/* 802F93D4 002F6314  4B FE 2E C5 */	bl read__14JSUInputStreamFPvl
 /* 802F93D8 002F6318  A0 01 00 08 */	lhz r0, 8(r1)
 /* 802F93DC 002F631C  B0 1F 01 02 */	sth r0, 0x102(r31)
 /* 802F93E0 002F6320  7F 23 CB 78 */	mr r3, r25
@@ -1101,17 +1129,13 @@ J2DScreen_NS_createMaterial:
 /* 802F9404 002F6344  1C 7C 00 88 */	mulli r3, r28, 0x88
 /* 802F9408 002F6348  38 63 00 10 */	addi r3, r3, 0x10
 /* 802F940C 002F634C  4B FD 58 B9 */	bl __nwa__FUl
-.global J2DMaterial
-/* 802F9410 002F6350  3C 80 80 2F */	lis r4, J2DMaterial@ha
-.global J2DMaterial
-/* 802F9414 002F6354  38 84 A1 AC */	addi r4, r4, J2DMaterial@l
-.global J2DMaterial_NS_dtor
-/* 802F9418 002F6358  3C A0 80 2F */	lis r5, J2DMaterial_NS_dtor@ha
-.global J2DMaterial_NS_dtor
-/* 802F941C 002F635C  38 A5 A2 CC */	addi r5, r5, J2DMaterial_NS_dtor@l
+/* 802F9410 002F6350  3C 80 80 2F */	lis r4, __ct__11J2DMaterialFv@ha
+/* 802F9414 002F6354  38 84 A1 AC */	addi r4, r4, __ct__11J2DMaterialFv@l
+/* 802F9418 002F6358  3C A0 80 2F */	lis r5, __dt__11J2DMaterialFv@ha
+/* 802F941C 002F635C  38 A5 A2 CC */	addi r5, r5, __dt__11J2DMaterialFv@l
 /* 802F9420 002F6360  38 C0 00 88 */	li r6, 0x88
 /* 802F9424 002F6364  7F 87 E3 78 */	mr r7, r28
-/* 802F9428 002F6368  48 06 8A ED */	bl func_80361F14
+/* 802F9428 002F6368  48 06 8A ED */	bl __construct_new_array
 /* 802F942C 002F636C  90 7F 01 04 */	stw r3, 0x104(r31)
 /* 802F9430 002F6370  48 00 00 38 */	b lbl_802F9468
 lbl_802F9434:
@@ -1120,17 +1144,13 @@ lbl_802F9434:
 /* 802F943C 002F637C  38 63 00 10 */	addi r3, r3, 0x10
 /* 802F9440 002F6380  38 80 FF FC */	li r4, -4
 /* 802F9444 002F6384  4B FD 58 A9 */	bl __nwa__FUli
-.global J2DMaterial
-/* 802F9448 002F6388  3C 80 80 2F */	lis r4, J2DMaterial@ha
-.global J2DMaterial
-/* 802F944C 002F638C  38 84 A1 AC */	addi r4, r4, J2DMaterial@l
-.global J2DMaterial_NS_dtor
-/* 802F9450 002F6390  3C A0 80 2F */	lis r5, J2DMaterial_NS_dtor@ha
-.global J2DMaterial_NS_dtor
-/* 802F9454 002F6394  38 A5 A2 CC */	addi r5, r5, J2DMaterial_NS_dtor@l
+/* 802F9448 002F6388  3C 80 80 2F */	lis r4, __ct__11J2DMaterialFv@ha
+/* 802F944C 002F638C  38 84 A1 AC */	addi r4, r4, __ct__11J2DMaterialFv@l
+/* 802F9450 002F6390  3C A0 80 2F */	lis r5, __dt__11J2DMaterialFv@ha
+/* 802F9454 002F6394  38 A5 A2 CC */	addi r5, r5, __dt__11J2DMaterialFv@l
 /* 802F9458 002F6398  38 C0 00 88 */	li r6, 0x88
 /* 802F945C 002F639C  7F 87 E3 78 */	mr r7, r28
-/* 802F9460 002F63A0  48 06 8A B5 */	bl func_80361F14
+/* 802F9460 002F63A0  48 06 8A B5 */	bl __construct_new_array
 /* 802F9464 002F63A4  90 7F 01 04 */	stw r3, 0x104(r31)
 lbl_802F9468:
 /* 802F9468 002F63A8  80 61 00 10 */	lwz r3, 0x10(r1)
@@ -1145,14 +1165,14 @@ lbl_802F9468:
 /* 802F948C 002F63CC  7F 23 CB 78 */	mr r3, r25
 /* 802F9490 002F63D0  7F A4 EB 78 */	mr r4, r29
 /* 802F9494 002F63D4  38 A0 00 00 */	li r5, 0
-/* 802F9498 002F63D8  4B FE 30 45 */	bl JSURandomInputStream_NS_seek
+/* 802F9498 002F63D8  4B FE 30 45 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 802F949C 002F63DC  7F 23 CB 78 */	mr r3, r25
 /* 802F94A0 002F63E0  7F 84 E3 78 */	mr r4, r28
 /* 802F94A4 002F63E4  80 A1 00 10 */	lwz r5, 0x10(r1)
-/* 802F94A8 002F63E8  4B FE 2D F1 */	bl JSUInputStream_NS_read
+/* 802F94A8 002F63E8  4B FE 2D F1 */	bl read__14JSUInputStreamFPvl
 /* 802F94AC 002F63EC  38 61 00 14 */	addi r3, r1, 0x14
 /* 802F94B0 002F63F0  7F 84 E3 78 */	mr r4, r28
-/* 802F94B4 002F63F4  4B FF 96 1D */	bl J2DMaterialFactory
+/* 802F94B4 002F63F4  4B FF 96 1D */	bl __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock
 /* 802F94B8 002F63F8  3B 20 00 00 */	li r25, 0
 /* 802F94BC 002F63FC  48 00 00 30 */	b lbl_802F94EC
 lbl_802F94C0:
@@ -1165,7 +1185,7 @@ lbl_802F94C0:
 /* 802F94D8 002F6418  80 FF 01 08 */	lwz r7, 0x108(r31)
 /* 802F94DC 002F641C  81 1F 01 0C */	lwz r8, 0x10c(r31)
 /* 802F94E0 002F6420  7F 69 DB 78 */	mr r9, r27
-/* 802F94E4 002F6424  4B FF 98 39 */	bl J2DMaterialFactory_NS_create
+/* 802F94E4 002F6424  4B FF 98 39 */	bl create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive
 /* 802F94E8 002F6428  3B 39 00 01 */	addi r25, r25, 1
 lbl_802F94EC:
 /* 802F94EC 002F642C  57 23 04 3E */	clrlwi r3, r25, 0x10
@@ -1217,7 +1237,7 @@ lbl_802F9580:
 /* 802F9594 002F64D4  7C 60 1B 79 */	or. r0, r3, r3
 /* 802F9598 002F64D8  41 82 00 10 */	beq lbl_802F95A8
 /* 802F959C 002F64DC  7F 64 DB 78 */	mr r4, r27
-/* 802F95A0 002F64E0  4B FE 54 41 */	bl JUTNameTab_X1_
+/* 802F95A0 002F64E0  4B FE 54 41 */	bl __ct__10JUTNameTabFPC7ResNTAB
 /* 802F95A4 002F64E4  7C 60 1B 78 */	mr r0, r3
 lbl_802F95A8:
 /* 802F95A8 002F64E8  90 1F 01 10 */	stw r0, 0x110(r31)
@@ -1236,7 +1256,7 @@ lbl_802F95D4:
 /* 802F95D4 002F6514  7F 83 E3 78 */	mr r3, r28
 /* 802F95D8 002F6518  4B FD 57 89 */	bl __dla__FPv
 /* 802F95DC 002F651C  7F E3 FB 78 */	mr r3, r31
-/* 802F95E0 002F6520  4B FF EF C9 */	bl J2DScreen_NS_clean
+/* 802F95E0 002F6520  4B FF EF C9 */	bl clean__9J2DScreenFv
 /* 802F95E4 002F6524  38 60 00 00 */	li r3, 0
 lbl_802F95E8:
 /* 802F95E8 002F6528  39 61 00 90 */	addi r11, r1, 0x90
@@ -1245,6 +1265,10 @@ lbl_802F95E8:
 /* 802F95F4 002F6534  7C 08 03 A6 */	mtlr r0
 /* 802F95F8 002F6538  38 21 00 90 */	addi r1, r1, 0x90
 /* 802F95FC 002F653C  4E 80 00 20 */	blr 
+
+/* 802F9600 0020 .text isUsed__9J2DScreenFPC7ResTIMG isUsed__9J2DScreenFPC7ResTIMG */
+.global isUsed__9J2DScreenFPC7ResTIMG
+isUsed__9J2DScreenFPC7ResTIMG:
 /* 802F9600 002F6540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9604 002F6544  7C 08 02 A6 */	mflr r0
 /* 802F9608 002F6548  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1253,6 +1277,10 @@ lbl_802F95E8:
 /* 802F9614 002F6554  7C 08 03 A6 */	mtlr r0
 /* 802F9618 002F6558  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F961C 002F655C  4E 80 00 20 */	blr 
+
+/* 802F9620 0020 .text isUsed__9J2DScreenFPC7ResFONT isUsed__9J2DScreenFPC7ResFONT */
+.global isUsed__9J2DScreenFPC7ResFONT
+isUsed__9J2DScreenFPC7ResFONT:
 /* 802F9620 002F6560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9624 002F6564  7C 08 02 A6 */	mflr r0
 /* 802F9628 002F6568  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1262,8 +1290,9 @@ lbl_802F95E8:
 /* 802F9638 002F6578  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F963C 002F657C  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_getNameResource
-J2DScreen_NS_getNameResource:
+/* 802F9640 0050 .text getNameResource__9J2DScreenFPCc getNameResource__9J2DScreenFPCc */
+.global getNameResource__9J2DScreenFPCc
+getNameResource__9J2DScreenFPCc:
 /* 802F9640 002F6580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9644 002F6584  7C 08 02 A6 */	mflr r0
 /* 802F9648 002F6588  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1273,12 +1302,12 @@ J2DScreen_NS_getNameResource:
 /* 802F9658 002F6598  4B FD AC 19 */	bl getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
 /* 802F965C 002F659C  28 03 00 00 */	cmplwi r3, 0
 /* 802F9660 002F65A0  40 82 00 1C */	bne lbl_802F967C
-/* 802F9664 002F65A4  80 0D 90 10 */	lwz r0, lbl_80451590-_SDA_BASE_(r13)
+/* 802F9664 002F65A4  80 0D 90 10 */	lwz r0, mDataManage__9J2DScreen-_SDA_BASE_(r13)
 /* 802F9668 002F65A8  28 00 00 00 */	cmplwi r0, 0
 /* 802F966C 002F65AC  41 82 00 10 */	beq lbl_802F967C
 /* 802F9670 002F65B0  7C 03 03 78 */	mr r3, r0
 /* 802F9674 002F65B4  7F E4 FB 78 */	mr r4, r31
-/* 802F9678 002F65B8  48 01 37 A1 */	bl J2DDataManage_NS_get
+/* 802F9678 002F65B8  48 01 37 A1 */	bl get__13J2DDataManageFPCc
 lbl_802F967C:
 /* 802F967C 002F65BC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802F9680 002F65C0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1286,8 +1315,9 @@ lbl_802F967C:
 /* 802F9688 002F65C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F968C 002F65CC  4E 80 00 20 */	blr 
 
-.global J2DScreen_NS_animation
-J2DScreen_NS_animation:
+/* 802F9690 0074 .text animation__9J2DScreenFv animation__9J2DScreenFv */
+.global animation__9J2DScreenFv
+animation__9J2DScreenFv:
 /* 802F9690 002F65D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9694 002F65D4  7C 08 02 A6 */	mflr r0
 /* 802F9698 002F65D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1306,7 +1336,7 @@ lbl_802F96C4:
 /* 802F96C8 002F6608  57 E0 04 3E */	clrlwi r0, r31, 0x10
 /* 802F96CC 002F660C  1C 00 00 88 */	mulli r0, r0, 0x88
 /* 802F96D0 002F6610  7C 63 02 14 */	add r3, r3, r0
-/* 802F96D4 002F6614  4B FF 15 A5 */	bl J2DMaterial_NS_animation
+/* 802F96D4 002F6614  4B FF 15 A5 */	bl animation__11J2DMaterialFv
 /* 802F96D8 002F6618  3B FF 00 01 */	addi r31, r31, 1
 lbl_802F96DC:
 /* 802F96DC 002F661C  57 E3 04 3E */	clrlwi r3, r31, 0x10
@@ -1319,6 +1349,10 @@ lbl_802F96DC:
 /* 802F96F8 002F6638  7C 08 03 A6 */	mtlr r0
 /* 802F96FC 002F663C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9700 002F6640  4E 80 00 20 */	blr 
+
+/* 802F9704 0094 .text setAnimation__9J2DScreenFP11J2DAnmColor setAnimation__9J2DScreenFP11J2DAnmColor */
+.global setAnimation__9J2DScreenFP11J2DAnmColor
+setAnimation__9J2DScreenFP11J2DAnmColor:
 /* 802F9704 002F6644  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F9708 002F6648  7C 08 02 A6 */	mflr r0
 /* 802F970C 002F664C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1346,7 +1380,7 @@ lbl_802F9744:
 /* 802F9760 002F66A0  1C 04 00 88 */	mulli r0, r4, 0x88
 /* 802F9764 002F66A4  7C 63 02 14 */	add r3, r3, r0
 /* 802F9768 002F66A8  7F A4 EB 78 */	mr r4, r29
-/* 802F976C 002F66AC  4B FF 11 31 */	bl J2DMaterial_NS_setAnimation
+/* 802F976C 002F66AC  4B FF 11 31 */	bl setAnimation__11J2DMaterialFP11J2DAnmColor
 lbl_802F9770:
 /* 802F9770 002F66B0  3B DE 00 01 */	addi r30, r30, 1
 lbl_802F9774:
@@ -1359,6 +1393,10 @@ lbl_802F9774:
 /* 802F978C 002F66CC  7C 08 03 A6 */	mtlr r0
 /* 802F9790 002F66D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F9794 002F66D4  4E 80 00 20 */	blr 
+
+/* 802F9798 00A0 .text setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey */
+.global setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey
+setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey:
 /* 802F9798 002F66D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F979C 002F66DC  7C 08 02 A6 */	mflr r0
 /* 802F97A0 002F66E0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1389,7 +1427,7 @@ lbl_802F97E4:
 /* 802F9800 002F6740  1C 04 00 88 */	mulli r0, r4, 0x88
 /* 802F9804 002F6744  7C 63 02 14 */	add r3, r3, r0
 /* 802F9808 002F6748  7F A4 EB 78 */	mr r4, r29
-/* 802F980C 002F674C  4B FF 11 41 */	bl J2DMaterial_NS_setAnimation_X1_
+/* 802F980C 002F674C  4B FF 11 41 */	bl setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey
 lbl_802F9810:
 /* 802F9810 002F6750  3B DE 00 01 */	addi r30, r30, 1
 lbl_802F9814:
@@ -1402,6 +1440,10 @@ lbl_802F9814:
 /* 802F982C 002F676C  7C 08 03 A6 */	mtlr r0
 /* 802F9830 002F6770  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F9834 002F6774  4E 80 00 20 */	blr 
+
+/* 802F9838 0094 .text setAnimation__9J2DScreenFP16J2DAnmTexPattern setAnimation__9J2DScreenFP16J2DAnmTexPattern */
+.global setAnimation__9J2DScreenFP16J2DAnmTexPattern
+setAnimation__9J2DScreenFP16J2DAnmTexPattern:
 /* 802F9838 002F6778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F983C 002F677C  7C 08 02 A6 */	mflr r0
 /* 802F9840 002F6780  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1429,7 +1471,7 @@ lbl_802F9878:
 /* 802F9894 002F67D4  1C 04 00 88 */	mulli r0, r4, 0x88
 /* 802F9898 002F67D8  7C 63 02 14 */	add r3, r3, r0
 /* 802F989C 002F67DC  7F A4 EB 78 */	mr r4, r29
-/* 802F98A0 002F67E0  4B FF 11 8D */	bl J2DMaterial_NS_setAnimation_X2_
+/* 802F98A0 002F67E0  4B FF 11 8D */	bl setAnimation__11J2DMaterialFP16J2DAnmTexPattern
 lbl_802F98A4:
 /* 802F98A4 002F67E4  3B DE 00 01 */	addi r30, r30, 1
 lbl_802F98A8:
@@ -1442,6 +1484,10 @@ lbl_802F98A8:
 /* 802F98C0 002F6800  7C 08 03 A6 */	mtlr r0
 /* 802F98C4 002F6804  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F98C8 002F6808  4E 80 00 20 */	blr 
+
+/* 802F98CC 00DC .text setAnimation__9J2DScreenFP15J2DAnmTevRegKey setAnimation__9J2DScreenFP15J2DAnmTevRegKey */
+.global setAnimation__9J2DScreenFP15J2DAnmTevRegKey
+setAnimation__9J2DScreenFP15J2DAnmTevRegKey:
 /* 802F98CC 002F680C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F98D0 002F6810  7C 08 02 A6 */	mflr r0
 /* 802F98D4 002F6814  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1469,7 +1515,7 @@ lbl_802F990C:
 /* 802F9928 002F6868  1C 04 00 88 */	mulli r0, r4, 0x88
 /* 802F992C 002F686C  7C 63 02 14 */	add r3, r3, r0
 /* 802F9930 002F6870  7F E4 FB 78 */	mr r4, r31
-/* 802F9934 002F6874  4B FF 11 D9 */	bl J2DMaterial_NS_setAnimation_X3_
+/* 802F9934 002F6874  4B FF 11 D9 */	bl setAnimation__11J2DMaterialFP15J2DAnmTevRegKey
 lbl_802F9938:
 /* 802F9938 002F6878  3B 9C 00 01 */	addi r28, r28, 1
 lbl_802F993C:
@@ -1490,7 +1536,7 @@ lbl_802F9954:
 /* 802F9970 002F68B0  1C 04 00 88 */	mulli r0, r4, 0x88
 /* 802F9974 002F68B4  7C 63 02 14 */	add r3, r3, r0
 /* 802F9978 002F68B8  7F E4 FB 78 */	mr r4, r31
-/* 802F997C 002F68BC  4B FF 11 91 */	bl J2DMaterial_NS_setAnimation_X3_
+/* 802F997C 002F68BC  4B FF 11 91 */	bl setAnimation__11J2DMaterialFP15J2DAnmTevRegKey
 lbl_802F9980:
 /* 802F9980 002F68C0  3B 9C 00 01 */	addi r28, r28, 1
 lbl_802F9984:
@@ -1503,6 +1549,10 @@ lbl_802F9984:
 /* 802F999C 002F68DC  7C 08 03 A6 */	mtlr r0
 /* 802F99A0 002F68E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F99A4 002F68E4  4E 80 00 20 */	blr 
+
+/* 802F99A8 0020 .text setAnimation__9J2DScreenFP14J2DAnmVtxColor setAnimation__9J2DScreenFP14J2DAnmVtxColor */
+.global setAnimation__9J2DScreenFP14J2DAnmVtxColor
+setAnimation__9J2DScreenFP14J2DAnmVtxColor:
 /* 802F99A8 002F68E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F99AC 002F68EC  7C 08 02 A6 */	mflr r0
 /* 802F99B0 002F68F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1511,6 +1561,10 @@ lbl_802F9984:
 /* 802F99BC 002F68FC  7C 08 03 A6 */	mtlr r0
 /* 802F99C0 002F6900  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F99C4 002F6904  4E 80 00 20 */	blr 
+
+/* 802F99C8 0020 .text setAnimation__9J2DScreenFP20J2DAnmVisibilityFull setAnimation__9J2DScreenFP20J2DAnmVisibilityFull */
+.global setAnimation__9J2DScreenFP20J2DAnmVisibilityFull
+setAnimation__9J2DScreenFP20J2DAnmVisibilityFull:
 /* 802F99C8 002F6908  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F99CC 002F690C  7C 08 02 A6 */	mflr r0
 /* 802F99D0 002F6910  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1519,6 +1573,10 @@ lbl_802F9984:
 /* 802F99DC 002F691C  7C 08 03 A6 */	mtlr r0
 /* 802F99E0 002F6920  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F99E4 002F6924  4E 80 00 20 */	blr 
+
+/* 802F99E8 0030 .text createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl */
+.global createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl
+createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl:
 /* 802F99E8 002F6928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F99EC 002F692C  7C 08 02 A6 */	mflr r0
 /* 802F99F0 002F6930  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1531,8 +1589,16 @@ lbl_802F9984:
 /* 802F9A0C 002F694C  7C 08 03 A6 */	mtlr r0
 /* 802F9A10 002F6950  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9A14 002F6954  4E 80 00 20 */	blr 
+
+/* 802F9A18 0008 .text getTypeID__9J2DScreenCFv getTypeID__9J2DScreenCFv */
+.global getTypeID__9J2DScreenCFv
+getTypeID__9J2DScreenCFv:
 /* 802F9A18 002F6958  38 60 00 08 */	li r3, 8
 /* 802F9A1C 002F695C  4E 80 00 20 */	blr 
+
+/* 802F9A20 0034 .text calcMtx__9J2DScreenFv calcMtx__9J2DScreenFv */
+.global calcMtx__9J2DScreenFv
+calcMtx__9J2DScreenFv:
 /* 802F9A20 002F6960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9A24 002F6964  7C 08 02 A6 */	mflr r0
 /* 802F9A28 002F6968  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1546,6 +1612,10 @@ lbl_802F9984:
 /* 802F9A48 002F6988  7C 08 03 A6 */	mtlr r0
 /* 802F9A4C 002F698C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9A50 002F6990  4E 80 00 20 */	blr 
+
+/* 802F9A54 0020 .text setAnimation__9J2DScreenFP10J2DAnmBase setAnimation__9J2DScreenFP10J2DAnmBase */
+.global setAnimation__9J2DScreenFP10J2DAnmBase
+setAnimation__9J2DScreenFP10J2DAnmBase:
 /* 802F9A54 002F6994  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9A58 002F6998  7C 08 02 A6 */	mflr r0
 /* 802F9A5C 002F699C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1554,6 +1624,75 @@ lbl_802F9984:
 /* 802F9A68 002F69A8  7C 08 03 A6 */	mtlr r0
 /* 802F9A6C 002F69AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9A70 002F69B0  4E 80 00 20 */	blr 
+
+/* 802F9A74 0004 .text setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull */
+.global setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull
+setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull:
 /* 802F9A74 002F69B4  4E 80 00 20 */	blr 
+
+/* 802F9A78 0004 .text setAnimationVC__9J2DScreenFP14J2DAnmVtxColor setAnimationVC__9J2DScreenFP14J2DAnmVtxColor */
+.global setAnimationVC__9J2DScreenFP14J2DAnmVtxColor
+setAnimationVC__9J2DScreenFP14J2DAnmVtxColor:
 /* 802F9A78 002F69B8  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CD068 009C .data __vt__9J2DScreen __vt__9J2DScreen */
+.global __vt__9J2DScreen
+__vt__9J2DScreen:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2f, 0x85, 0x40, 0x80, 0x2f, 0x9a, 0x18 /* baserom.dol+0x3ca068 */
+.byte 0x80, 0x2f, 0x6f, 0x60, 0x80, 0x2f, 0x6f, 0xb4, 0x80, 0x2f, 0x6f, 0xf8, 0x80, 0x2f, 0x84, 0x28 /* baserom.dol+0x3ca078 */
+.byte 0x80, 0x2f, 0x76, 0x80, 0x80, 0x02, 0x01, 0x58, 0x80, 0x2f, 0x84, 0x64, 0x80, 0x2f, 0x9a, 0x20 /* baserom.dol+0x3ca088 */
+.byte 0x80, 0x2f, 0x84, 0x74, 0x80, 0x2f, 0x84, 0x78, 0x80, 0x2f, 0x91, 0x20, 0x80, 0x2f, 0x90, 0xa0 /* baserom.dol+0x3ca098 */
+.byte 0x80, 0x2f, 0x90, 0xe0, 0x80, 0x05, 0x3c, 0x00, 0x80, 0x2f, 0x75, 0x40, 0x80, 0x2f, 0x96, 0x00 /* baserom.dol+0x3ca0a8 */
+.byte 0x80, 0x2f, 0x96, 0x20, 0x80, 0x05, 0x3b, 0xa0, 0x80, 0x2f, 0x83, 0xcc, 0x80, 0x2f, 0x9a, 0x54 /* baserom.dol+0x3ca0b8 */
+.byte 0x80, 0x19, 0x24, 0x14, 0x80, 0x2f, 0x97, 0x04, 0x80, 0x2f, 0x98, 0x38, 0x80, 0x2f, 0x97, 0x98 /* baserom.dol+0x3ca0c8 */
+.byte 0x80, 0x2f, 0x98, 0xcc, 0x80, 0x2f, 0x99, 0xc8, 0x80, 0x2f, 0x99, 0xa8, 0x80, 0x2f, 0x80, 0x80 /* baserom.dol+0x3ca0d8 */
+.byte 0x80, 0x2f, 0x81, 0x18, 0x80, 0x2f, 0x9a, 0x74, 0x80, 0x2f, 0x81, 0xa0, 0x80, 0x2f, 0x9a, 0x78 /* baserom.dol+0x3ca0e8 */
+.byte 0x80, 0x2f, 0x82, 0x28, 0x80, 0x2f, 0x99, 0xe8, 0x80, 0x2f, 0x8b, 0x98 /* baserom.dol+0x3ca0f8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca104 */
+
+
+
+.section .sbss, "aw"
+/* 80451590 0004 .sbss mDataManage__9J2DScreen mDataManage__9J2DScreen */
+.global mDataManage__9J2DScreen
+mDataManage__9J2DScreen:
+.skip 0x4
+.skip 0x4 /* padding */
+
+
+
+.section .sdata2, "a"
+/* 80456220 0004 .sdata2 lbl_80456220 @1561 */
+.global lbl_80456220
+lbl_80456220:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5080 */
+
+/* 80456224 0004 .sdata2 lbl_80456224 @1562 */
+.global lbl_80456224
+lbl_80456224:
+.byte 0x44, 0x20, 0x00, 0x00 /* baserom.dol+0x3d5084 */
+
+/* 80456228 0004 .sdata2 lbl_80456228 @1563 */
+.global lbl_80456228
+lbl_80456228:
+.byte 0x43, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d5088 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d508c */
+
+/* 80456230 0008 .sdata2 lbl_80456230 @1705 */
+.global lbl_80456230
+lbl_80456230:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5090 */
+
+/* 80456238 0004 .sdata2 lbl_80456238 @1829 */
+.global lbl_80456238
+lbl_80456238:
+.byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5098 */
+
+/* 8045623C 0004 .sdata2 lbl_8045623C @1830 */
+.global lbl_8045623C
+lbl_8045623C:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d509c */
 

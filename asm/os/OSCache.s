@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033b56c
 
-
+.section .text, "ax"
+/* 8033B56C 0014 .text DCEnable DCEnable */
 .global DCEnable
 DCEnable:
 /* 8033B56C 003384AC  7C 00 04 AC */	sync 0
@@ -11,6 +11,7 @@ DCEnable:
 /* 8033B578 003384B8  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 8033B57C 003384BC  4E 80 00 20 */	blr 
 
+/* 8033B580 002C .text DCInvalidateRange DCInvalidateRange */
 .global DCInvalidateRange
 DCInvalidateRange:
 /* 8033B580 003384C0  28 04 00 00 */	cmplwi r4, 0
@@ -26,6 +27,7 @@ lbl_8033B59C:
 /* 8033B5A4 003384E4  42 00 FF F8 */	bdnz lbl_8033B59C
 /* 8033B5A8 003384E8  4E 80 00 20 */	blr 
 
+/* 8033B5AC 0030 .text DCFlushRange DCFlushRange */
 .global DCFlushRange
 DCFlushRange:
 /* 8033B5AC 003384EC  28 04 00 00 */	cmplwi r4, 0
@@ -42,6 +44,7 @@ lbl_8033B5C8:
 /* 8033B5D4 00338514  44 00 00 02 */	sc 
 /* 8033B5D8 00338518  4E 80 00 20 */	blr 
 
+/* 8033B5DC 0030 .text DCStoreRange DCStoreRange */
 .global DCStoreRange
 DCStoreRange:
 /* 8033B5DC 0033851C  28 04 00 00 */	cmplwi r4, 0
@@ -58,6 +61,7 @@ lbl_8033B5F8:
 /* 8033B604 00338544  44 00 00 02 */	sc 
 /* 8033B608 00338548  4E 80 00 20 */	blr 
 
+/* 8033B60C 002C .text DCFlushRangeNoSync DCFlushRangeNoSync */
 .global DCFlushRangeNoSync
 DCFlushRangeNoSync:
 /* 8033B60C 0033854C  28 04 00 00 */	cmplwi r4, 0
@@ -73,6 +77,7 @@ lbl_8033B628:
 /* 8033B630 00338570  42 00 FF F8 */	bdnz lbl_8033B628
 /* 8033B634 00338574  4E 80 00 20 */	blr 
 
+/* 8033B638 002C .text DCStoreRangeNoSync DCStoreRangeNoSync */
 .global DCStoreRangeNoSync
 DCStoreRangeNoSync:
 /* 8033B638 00338578  28 04 00 00 */	cmplwi r4, 0
@@ -88,6 +93,7 @@ lbl_8033B654:
 /* 8033B65C 0033859C  42 00 FF F8 */	bdnz lbl_8033B654
 /* 8033B660 003385A0  4E 80 00 20 */	blr 
 
+/* 8033B664 002C .text DCZeroRange DCZeroRange */
 .global DCZeroRange
 DCZeroRange:
 /* 8033B664 003385A4  28 04 00 00 */	cmplwi r4, 0
@@ -103,6 +109,7 @@ lbl_8033B680:
 /* 8033B688 003385C8  42 00 FF F8 */	bdnz lbl_8033B680
 /* 8033B68C 003385CC  4E 80 00 20 */	blr 
 
+/* 8033B690 0034 .text ICInvalidateRange ICInvalidateRange */
 .global ICInvalidateRange
 ICInvalidateRange:
 /* 8033B690 003385D0  28 04 00 00 */	cmplwi r4, 0
@@ -120,6 +127,7 @@ lbl_8033B6AC:
 /* 8033B6BC 003385FC  4C 00 01 2C */	isync 
 /* 8033B6C0 00338600  4E 80 00 20 */	blr 
 
+/* 8033B6C4 0010 .text ICFlashInvalidate ICFlashInvalidate */
 .global ICFlashInvalidate
 ICFlashInvalidate:
 /* 8033B6C4 00338604  7C 70 FA A6 */	mfspr r3, 0x3f0
@@ -127,6 +135,7 @@ ICFlashInvalidate:
 /* 8033B6CC 0033860C  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 8033B6D0 00338610  4E 80 00 20 */	blr 
 
+/* 8033B6D4 0014 .text ICEnable ICEnable */
 .global ICEnable
 ICEnable:
 /* 8033B6D4 00338614  4C 00 01 2C */	isync 
@@ -135,6 +144,7 @@ ICEnable:
 /* 8033B6E0 00338620  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 8033B6E4 00338624  4E 80 00 20 */	blr 
 
+/* 8033B6E8 00CC .text __LCEnable __LCEnable */
 .global __LCEnable
 __LCEnable:
 /* 8033B6E8 00338628  7C A0 00 A6 */	mfmsr r5
@@ -190,11 +200,15 @@ lbl_8033B774:
 /* 8033B7A8 003386E8  60 00 00 00 */	nop 
 /* 8033B7AC 003386EC  60 00 00 00 */	nop 
 /* 8033B7B0 003386F0  4E 80 00 20 */	blr 
+
+/* 8033B7B4 0038 .text LCEnable LCEnable */
+.global LCEnable
+LCEnable:
 /* 8033B7B4 003386F4  7C 08 02 A6 */	mflr r0
 /* 8033B7B8 003386F8  90 01 00 04 */	stw r0, 4(r1)
 /* 8033B7BC 003386FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033B7C0 00338700  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8033B7C4 00338704  48 00 1F 31 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033B7C4 00338704  48 00 1F 31 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033B7C8 00338708  7C 7F 1B 78 */	mr r31, r3
 /* 8033B7CC 0033870C  4B FF FF 1D */	bl __LCEnable
 /* 8033B7D0 00338710  7F E3 FB 78 */	mr r3, r31
@@ -205,6 +219,7 @@ lbl_8033B774:
 /* 8033B7E4 00338724  7C 08 03 A6 */	mtlr r0
 /* 8033B7E8 00338728  4E 80 00 20 */	blr 
 
+/* 8033B7EC 0028 .text LCDisable LCDisable */
 .global LCDisable
 LCDisable:
 /* 8033B7EC 0033872C  3C 60 E0 00 */	lis r3, 0xE0000020@ha
@@ -219,6 +234,7 @@ lbl_8033B7F8:
 /* 8033B80C 0033874C  7C 98 E3 A6 */	mtspr 0x398, r4
 /* 8033B810 00338750  4E 80 00 20 */	blr 
 
+/* 8033B814 0024 .text LCStoreBlocks LCStoreBlocks */
 .global LCStoreBlocks
 LCStoreBlocks:
 /* 8033B814 00338754  54 A6 F6 FE */	rlwinm r6, r5, 0x1e, 0x1b, 0x1f
@@ -230,6 +246,10 @@ LCStoreBlocks:
 /* 8033B82C 0033876C  60 C6 00 02 */	ori r6, r6, 2
 /* 8033B830 00338770  7C DB E3 A6 */	mtspr 0x39b, r6
 /* 8033B834 00338774  4E 80 00 20 */	blr 
+
+/* 8033B838 00AC .text LCStoreData LCStoreData */
+.global LCStoreData
+LCStoreData:
 /* 8033B838 00338778  7C 08 02 A6 */	mflr r0
 /* 8033B83C 0033877C  90 01 00 04 */	stw r0, 4(r1)
 /* 8033B840 00338780  94 21 FF D8 */	stwu r1, -0x28(r1)
@@ -278,15 +298,17 @@ lbl_8033B8B8:
 /* 8033B8D8 00338818  38 21 00 28 */	addi r1, r1, 0x28
 /* 8033B8DC 0033881C  7C 08 03 A6 */	mtlr r0
 /* 8033B8E0 00338820  4E 80 00 20 */	blr 
+
+/* 8033B8E4 0014 .text LCQueueWait LCQueueWait */
 .global LCQueueWait
 LCQueueWait:
 /* 8033B8E4 00338824  7C 98 E2 A6 */	mfspr r4, 0x398
 /* 8033B8E8 00338828  54 84 47 3E */	rlwinm r4, r4, 8, 0x1c, 0x1f
 /* 8033B8EC 0033882C  7C 04 18 00 */	cmpw r4, r3
-.global LCQueueWait
 /* 8033B8F0 00338830  41 81 FF F4 */	bgt LCQueueWait
 /* 8033B8F4 00338834  4E 80 00 20 */	blr 
 
+/* 8033B8F8 0098 .text L2GlobalInvalidate L2GlobalInvalidate */
 .global L2GlobalInvalidate
 L2GlobalInvalidate:
 /* 8033B8F8 00338838  7C 08 02 A6 */	mflr r0
@@ -333,6 +355,8 @@ lbl_8033B96C:
 /* 8033B984 003388C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033B988 003388C8  7C 08 03 A6 */	mtlr r0
 /* 8033B98C 003388CC  4E 80 00 20 */	blr 
+
+/* 8033B990 0160 .text DMAErrorHandler DMAErrorHandler */
 .global DMAErrorHandler
 DMAErrorHandler:
 /* 8033B990 003388D0  7C 08 02 A6 */	mflr r0
@@ -431,6 +455,7 @@ lbl_8033BACC:
 /* 8033BAE8 00338A28  7C 08 03 A6 */	mtlr r0
 /* 8033BAEC 00338A2C  4E 80 00 20 */	blr 
 
+/* 8033BAF0 00F4 .text __OSCacheInit __OSCacheInit */
 .global __OSCacheInit
 __OSCacheInit:
 /* 8033BAF0 00338A30  7C 08 02 A6 */	mflr r0
@@ -484,9 +509,7 @@ lbl_8033BB4C:
 /* 8033BBA8 00338AE8  4C C6 31 82 */	crclr 6
 /* 8033BBAC 00338AEC  48 00 A8 89 */	bl DBPrintf
 lbl_8033BBB0:
-.global DMAErrorHandler
 /* 8033BBB0 00338AF0  3C 60 80 34 */	lis r3, DMAErrorHandler@ha
-.global DMAErrorHandler
 /* 8033BBB4 00338AF4  38 83 B9 90 */	addi r4, r3, DMAErrorHandler@l
 /* 8033BBB8 00338AF8  38 60 00 01 */	li r3, 1
 /* 8033BBBC 00338AFC  48 00 09 C5 */	bl OSSetErrorHandler
@@ -499,4 +522,112 @@ lbl_8033BBB0:
 /* 8033BBD8 00338B18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033BBDC 00338B1C  7C 08 03 A6 */	mtlr r0
 /* 8033BBE0 00338B20  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CF510 0029 .data lbl_803CF510 @63 */
+.global lbl_803CF510
+lbl_803CF510:
+.byte 0x3e, 0x3e, 0x3e, 0x20, 0x4c, 0x32, 0x20, 0x49, 0x4e, 0x56, 0x41, 0x4c, 0x49, 0x44, 0x41, 0x54 /* baserom.dol+0x3cc510 */
+.byte 0x45, 0x20, 0x3a, 0x20, 0x53, 0x48, 0x4f, 0x55, 0x4c, 0x44, 0x20, 0x4e, 0x45, 0x56, 0x45, 0x52 /* baserom.dol+0x3cc520 */
+.byte 0x20, 0x48, 0x41, 0x50, 0x50, 0x45, 0x4e, 0x0a, 0x00 /* baserom.dol+0x3cc530 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc539 */
+
+/* 803CF53C 0018 .data lbl_803CF53C @84 */
+.global lbl_803CF53C
+lbl_803CF53C:
+.byte 0x4d, 0x61, 0x63, 0x68, 0x69, 0x6e, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x20, 0x72, 0x65 /* baserom.dol+0x3cc53c */
+.byte 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc54c */
+
+/* 803CF554 001B .data lbl_803CF554 @85 */
+.global lbl_803CF554
+lbl_803CF554:
+.byte 0x48, 0x49, 0x44, 0x32, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x20, 0x20, 0x53, 0x52 /* baserom.dol+0x3cc554 */
+.byte 0x52, 0x31, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x78, 0x0a, 0x00 /* baserom.dol+0x3cc564 */
+.byte 0x00 /* baserom.dol+0x3cc56f */
+
+/* 803CF570 0030 .data lbl_803CF570 @86 */
+.global lbl_803CF570
+lbl_803CF570:
+.byte 0x4d, 0x61, 0x63, 0x68, 0x69, 0x6e, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x20, 0x77, 0x61 /* baserom.dol+0x3cc570 */
+.byte 0x73, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x44, 0x4d, 0x41, 0x2f, 0x6c, 0x6f, 0x63, 0x6b, 0x65, 0x64 /* baserom.dol+0x3cc580 */
+.byte 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x72, 0x65, 0x6c, 0x61, 0x74, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc590 */
+
+/* 803CF5A0 003C .data lbl_803CF5A0 @87 */
+.global lbl_803CF5A0
+lbl_803CF5A0:
+.byte 0x44, 0x4d, 0x41, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x48, 0x61, 0x6e, 0x64, 0x6c, 0x65, 0x72, 0x28 /* baserom.dol+0x3cc5a0 */
+.byte 0x29, 0x3a, 0x20, 0x41, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x6f, 0x63, 0x63, 0x75 /* baserom.dol+0x3cc5b0 */
+.byte 0x72, 0x72, 0x65, 0x64, 0x20, 0x77, 0x68, 0x69, 0x6c, 0x65, 0x20, 0x70, 0x72, 0x6f, 0x63, 0x65 /* baserom.dol+0x3cc5c0 */
+.byte 0x73, 0x73, 0x69, 0x6e, 0x67, 0x20, 0x44, 0x4d, 0x41, 0x2e, 0x0a, 0x00 /* baserom.dol+0x3cc5d0 */
+
+/* 803CF5DC 0037 .data lbl_803CF5DC @88 */
+.global lbl_803CF5DC
+lbl_803CF5DC:
+.byte 0x54, 0x68, 0x65, 0x20, 0x66, 0x6f, 0x6c, 0x6c, 0x6f, 0x77, 0x69, 0x6e, 0x67, 0x20, 0x65, 0x72 /* baserom.dol+0x3cc5dc */
+.byte 0x72, 0x6f, 0x72, 0x73, 0x20, 0x68, 0x61, 0x76, 0x65, 0x20, 0x62, 0x65, 0x65, 0x6e, 0x20, 0x64 /* baserom.dol+0x3cc5ec */
+.byte 0x65, 0x74, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x63, 0x6c, 0x65, 0x61 /* baserom.dol+0x3cc5fc */
+.byte 0x72, 0x65, 0x64, 0x20, 0x3a, 0x0a, 0x00 /* baserom.dol+0x3cc60c */
+.byte 0x00 /* baserom.dol+0x3cc613 */
+
+/* 803CF614 003F .data lbl_803CF614 @89 */
+.global lbl_803CF614
+lbl_803CF614:
+.byte 0x09, 0x2d, 0x20, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x65, 0x64, 0x20, 0x61, 0x20, 0x6c /* baserom.dol+0x3cc614 */
+.byte 0x6f, 0x63, 0x6b, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x74, 0x61, 0x67, 0x20 /* baserom.dol+0x3cc624 */
+.byte 0x74, 0x68, 0x61, 0x74, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6c, 0x72, 0x65, 0x61, 0x64, 0x79 /* baserom.dol+0x3cc634 */
+.byte 0x20, 0x69, 0x6e, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0a, 0x00 /* baserom.dol+0x3cc644 */
+.byte 0x00 /* baserom.dol+0x3cc653 */
+
+/* 803CF654 0029 .data lbl_803CF654 @90 */
+.global lbl_803CF654
+lbl_803CF654:
+.byte 0x09, 0x2d, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x61, 0x74, 0x74, 0x65, 0x6d, 0x70, 0x74, 0x65, 0x64 /* baserom.dol+0x3cc654 */
+.byte 0x20, 0x74, 0x6f, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x20, 0x6e, 0x6f, 0x72, 0x6d, 0x61 /* baserom.dol+0x3cc664 */
+.byte 0x6c, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0a, 0x00 /* baserom.dol+0x3cc674 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc67d */
+
+/* 803CF680 001D .data lbl_803CF680 @91 */
+.global lbl_803CF680
+lbl_803CF680:
+.byte 0x09, 0x2d, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x6d, 0x69, 0x73, 0x73, 0x65, 0x64, 0x20, 0x69, 0x6e /* baserom.dol+0x3cc680 */
+.byte 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0a, 0x00 /* baserom.dol+0x3cc690 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc69d */
+
+/* 803CF6A0 0019 .data lbl_803CF6A0 @92 */
+.global lbl_803CF6A0
+lbl_803CF6A0:
+.byte 0x09, 0x2d, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x6f, 0x76, 0x65 /* baserom.dol+0x3cc6a0 */
+.byte 0x72, 0x66, 0x6c, 0x6f, 0x77, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc6b0 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc6b9 */
+
+/* 803CF6BC 0019 .data lbl_803CF6BC @104 */
+.global lbl_803CF6BC
+lbl_803CF6BC:
+.byte 0x4c, 0x31, 0x20, 0x69, 0x2d, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6e, 0x69, 0x74 /* baserom.dol+0x3cc6bc */
+.byte 0x69, 0x61, 0x6c, 0x69, 0x7a, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc6cc */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc6d5 */
+
+/* 803CF6D8 0019 .data lbl_803CF6D8 @105 */
+.global lbl_803CF6D8
+lbl_803CF6D8:
+.byte 0x4c, 0x31, 0x20, 0x64, 0x2d, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6e, 0x69, 0x74 /* baserom.dol+0x3cc6d8 */
+.byte 0x69, 0x61, 0x6c, 0x69, 0x7a, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc6e8 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc6f1 */
+
+/* 803CF6F4 0016 .data lbl_803CF6F4 @106 */
+.global lbl_803CF6F4
+lbl_803CF6F4:
+.byte 0x4c, 0x32, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x69, 0x6e, 0x69, 0x74, 0x69, 0x61, 0x6c /* baserom.dol+0x3cc6f4 */
+.byte 0x69, 0x7a, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc704 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cc70a */
+
+/* 803CF70C 002E .data lbl_803CF70C @107 */
+.global lbl_803CF70C
+lbl_803CF70C:
+.byte 0x4c, 0x6f, 0x63, 0x6b, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x6d, 0x61, 0x63 /* baserom.dol+0x3cc70c */
+.byte 0x68, 0x69, 0x6e, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x20, 0x68, 0x61, 0x6e, 0x64, 0x6c /* baserom.dol+0x3cc71c */
+.byte 0x65, 0x72, 0x20, 0x69, 0x6e, 0x73, 0x74, 0x61, 0x6c, 0x6c, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cc72c */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cc73a */
 

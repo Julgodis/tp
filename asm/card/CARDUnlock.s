@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80353f24
 
-
+.section .text, "ax"
+/* 80353F24 016C .text bitrev bitrev */
 .global bitrev
 bitrev:
 /* 80353F24 00350E64  38 00 00 08 */	li r0, 8
@@ -110,6 +110,7 @@ lbl_80354080:
 /* 80354088 00350FC8  7C E3 3B 78 */	mr r3, r7
 /* 8035408C 00350FCC  4E 80 00 20 */	blr 
 
+/* 80354090 0144 .text ReadArrayUnlock ReadArrayUnlock */
 .global ReadArrayUnlock
 ReadArrayUnlock:
 /* 80354090 00350FD0  7C 08 02 A6 */	mflr r0
@@ -117,8 +118,8 @@ ReadArrayUnlock:
 /* 80354098 00350FD8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8035409C 00350FDC  BF 41 00 28 */	stmw r26, 0x28(r1)
 /* 803540A0 00350FE0  3B A3 00 00 */	addi r29, r3, 0
-/* 803540A4 00350FE4  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 803540A8 00350FE8  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 803540A4 00350FE4  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 803540A8 00350FE8  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 803540AC 00350FEC  1D 1D 01 10 */	mulli r8, r29, 0x110
 /* 803540B0 00350FF0  3B 44 00 00 */	addi r26, r4, 0
 /* 803540B4 00350FF4  3B C5 00 00 */	addi r30, r5, 0
@@ -199,6 +200,7 @@ lbl_803541C0:
 /* 803541CC 0035110C  7C 08 03 A6 */	mtlr r0
 /* 803541D0 00351110  4E 80 00 20 */	blr 
 
+/* 803541D4 00C4 .text DummyLen DummyLen */
 .global DummyLen
 DummyLen:
 /* 803541D4 00351114  7C 08 02 A6 */	mflr r0
@@ -210,14 +212,14 @@ DummyLen:
 /* 803541EC 0035112C  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 803541F0 00351130  3B A0 00 00 */	li r29, 0
 /* 803541F4 00351134  4B FE E5 21 */	bl OSGetTick
-/* 803541F8 00351138  90 6D 84 E8 */	stw r3, lbl_80450A68-_SDA_BASE_(r13)
+/* 803541F8 00351138  90 6D 84 E8 */	stw r3, next-_SDA_BASE_(r13)
 /* 803541FC 0035113C  3C 60 41 C6 */	lis r3, 0x41C64E6D@ha
 /* 80354200 00351140  3B E3 4E 6D */	addi r31, r3, 0x41C64E6D@l
-/* 80354204 00351144  80 0D 84 E8 */	lwz r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 80354204 00351144  80 0D 84 E8 */	lwz r0, next-_SDA_BASE_(r13)
 /* 80354208 00351148  7C 60 F9 D6 */	mullw r3, r0, r31
 /* 8035420C 0035114C  38 03 30 39 */	addi r0, r3, 0x3039
-/* 80354210 00351150  90 0D 84 E8 */	stw r0, lbl_80450A68-_SDA_BASE_(r13)
-/* 80354214 00351154  80 0D 84 E8 */	lwz r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 80354210 00351150  90 0D 84 E8 */	stw r0, next-_SDA_BASE_(r13)
+/* 80354214 00351154  80 0D 84 E8 */	lwz r0, next-_SDA_BASE_(r13)
 /* 80354218 00351158  54 03 86 FE */	rlwinm r3, r0, 0x10, 0x1b, 0x1f
 /* 8035421C 0035115C  38 63 00 01 */	addi r3, r3, 1
 /* 80354220 00351160  48 00 00 40 */	b lbl_80354260
@@ -229,13 +231,13 @@ lbl_80354224:
 /* 80354234 00351174  40 81 00 08 */	ble lbl_8035423C
 /* 80354238 00351178  3B C0 00 01 */	li r30, 1
 lbl_8035423C:
-/* 8035423C 0035117C  90 0D 84 E8 */	stw r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 8035423C 0035117C  90 0D 84 E8 */	stw r0, next-_SDA_BASE_(r13)
 /* 80354240 00351180  3B BD 00 01 */	addi r29, r29, 1
-/* 80354244 00351184  80 0D 84 E8 */	lwz r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 80354244 00351184  80 0D 84 E8 */	lwz r0, next-_SDA_BASE_(r13)
 /* 80354248 00351188  7C 60 F9 D6 */	mullw r3, r0, r31
 /* 8035424C 0035118C  38 03 30 39 */	addi r0, r3, 0x3039
-/* 80354250 00351190  90 0D 84 E8 */	stw r0, lbl_80450A68-_SDA_BASE_(r13)
-/* 80354254 00351194  80 0D 84 E8 */	lwz r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 80354250 00351190  90 0D 84 E8 */	stw r0, next-_SDA_BASE_(r13)
+/* 80354254 00351194  80 0D 84 E8 */	lwz r0, next-_SDA_BASE_(r13)
 /* 80354258 00351198  54 03 86 FE */	rlwinm r3, r0, 0x10, 0x1b, 0x1f
 /* 8035425C 0035119C  38 63 00 01 */	addi r3, r3, 1
 lbl_80354260:
@@ -256,6 +258,7 @@ lbl_8035427C:
 /* 80354290 003511D0  7C 08 03 A6 */	mtlr r0
 /* 80354294 003511D4  4E 80 00 20 */	blr 
 
+/* 80354298 0B58 .text __CARDUnlock __CARDUnlock */
 .global __CARDUnlock
 __CARDUnlock:
 /* 80354298 003511D8  7C 08 02 A6 */	mflr r0
@@ -263,9 +266,9 @@ __CARDUnlock:
 /* 803542A0 003511E0  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 803542A4 003511E4  BE C1 00 F8 */	stmw r22, 0xf8(r1)
 /* 803542A8 003511E8  3B 03 00 00 */	addi r24, r3, 0
-/* 803542AC 003511EC  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
+/* 803542AC 003511EC  3C 60 80 45 */	lis r3, __CARDBlock@ha
 /* 803542B0 003511F0  1C B8 01 10 */	mulli r5, r24, 0x110
-/* 803542B4 003511F4  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 803542B4 003511F4  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 803542B8 003511F8  7F E0 2A 14 */	add r31, r0, r5
 /* 803542BC 003511FC  3A E4 00 00 */	addi r23, r4, 0
 /* 803542C0 00351200  3B DF 00 30 */	addi r30, r31, 0x30
@@ -275,16 +278,16 @@ __CARDUnlock:
 /* 803542D0 00351210  3B A3 00 00 */	addi r29, r3, 0
 /* 803542D4 00351214  3A DC 00 20 */	addi r22, r28, 0x20
 /* 803542D8 00351218  4B FE E4 3D */	bl OSGetTick
-/* 803542DC 0035121C  90 6D 84 E8 */	stw r3, lbl_80450A68-_SDA_BASE_(r13)
+/* 803542DC 0035121C  90 6D 84 E8 */	stw r3, next-_SDA_BASE_(r13)
 /* 803542E0 00351220  3C 60 41 C6 */	lis r3, 0x41C64E6D@ha
 /* 803542E4 00351224  3C A0 7F ED */	lis r5, 0x7FEC8000@ha
-/* 803542E8 00351228  80 8D 84 E8 */	lwz r4, lbl_80450A68-_SDA_BASE_(r13)
+/* 803542E8 00351228  80 8D 84 E8 */	lwz r4, next-_SDA_BASE_(r13)
 /* 803542EC 0035122C  38 03 4E 6D */	addi r0, r3, 0x41C64E6D@l
 /* 803542F0 00351230  3B 25 80 00 */	addi r25, r5, 0x7FEC8000@l
 /* 803542F4 00351234  7C 64 01 D6 */	mullw r3, r4, r0
 /* 803542F8 00351238  38 03 30 39 */	addi r0, r3, 0x3039
-/* 803542FC 0035123C  90 0D 84 E8 */	stw r0, lbl_80450A68-_SDA_BASE_(r13)
-/* 80354300 00351240  80 0D 84 E8 */	lwz r0, lbl_80450A68-_SDA_BASE_(r13)
+/* 803542FC 0035123C  90 0D 84 E8 */	stw r0, next-_SDA_BASE_(r13)
+/* 80354300 00351240  80 0D 84 E8 */	lwz r0, next-_SDA_BASE_(r13)
 /* 80354304 00351244  54 00 84 7E */	rlwinm r0, r0, 0x10, 0x11, 0x1f
 /* 80354308 00351248  7F 39 03 78 */	or r25, r25, r0
 /* 8035430C 0035124C  57 39 00 26 */	rlwinm r25, r25, 0, 0, 0x13
@@ -972,22 +975,18 @@ lbl_80354D10:
 /* 80354D70 00351CB0  38 80 00 10 */	li r4, 0x10
 /* 80354D74 00351CB4  4B FE 68 39 */	bl DCFlushRange
 /* 80354D78 00351CB8  38 00 00 FF */	li r0, 0xff
-/* 80354D7C 00351CBC  3C 60 80 3D */	lis r3, lbl_803D1EA0@ha
+/* 80354D7C 00351CBC  3C 60 80 3D */	lis r3, CardData@ha
 /* 80354D80 00351CC0  90 1E 00 04 */	stw r0, 4(r30)
-/* 80354D84 00351CC4  38 63 1E A0 */	addi r3, r3, lbl_803D1EA0@l
+/* 80354D84 00351CC4  38 63 1E A0 */	addi r3, r3, CardData@l
 /* 80354D88 00351CC8  3C 03 80 00 */	addis r0, r3, 0x8000
 /* 80354D8C 00351CCC  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 80354D90 00351CD0  38 00 01 60 */	li r0, 0x160
-.global InitCallback
 /* 80354D94 00351CD4  3C 80 80 35 */	lis r4, InitCallback@ha
 /* 80354D98 00351CD8  90 1E 00 10 */	stw r0, 0x10(r30)
-.global DoneCallback
 /* 80354D9C 00351CDC  3C 60 80 35 */	lis r3, DoneCallback@ha
 /* 80354DA0 00351CE0  38 A0 00 10 */	li r5, 0x10
 /* 80354DA4 00351CE4  93 7E 00 14 */	stw r27, 0x14(r30)
-.global InitCallback
 /* 80354DA8 00351CE8  38 84 4D F0 */	addi r4, r4, InitCallback@l
-.global DoneCallback
 /* 80354DAC 00351CEC  38 03 4E 60 */	addi r0, r3, DoneCallback@l
 /* 80354DB0 00351CF0  B0 BE 00 24 */	sth r5, 0x24(r30)
 /* 80354DB4 00351CF4  7F C3 F3 78 */	mr r3, r30
@@ -1006,12 +1005,14 @@ lbl_80354DDC:
 /* 80354DE4 00351D24  38 21 01 20 */	addi r1, r1, 0x120
 /* 80354DE8 00351D28  7C 08 03 A6 */	mtlr r0
 /* 80354DEC 00351D2C  4E 80 00 20 */	blr 
+
+/* 80354DF0 0070 .text InitCallback InitCallback */
 .global InitCallback
 InitCallback:
 /* 80354DF0 00351D30  7C 08 02 A6 */	mflr r0
-/* 80354DF4 00351D34  3C 80 80 45 */	lis r4, lbl_8044CBC0@ha
+/* 80354DF4 00351D34  3C 80 80 45 */	lis r4, __CARDBlock@ha
 /* 80354DF8 00351D38  90 01 00 04 */	stw r0, 4(r1)
-/* 80354DFC 00351D3C  38 84 CB C0 */	addi r4, r4, lbl_8044CBC0@l
+/* 80354DFC 00351D3C  38 84 CB C0 */	addi r4, r4, __CARDBlock@l
 /* 80354E00 00351D40  38 04 00 30 */	addi r0, r4, 0x30
 /* 80354E04 00351D44  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80354E08 00351D48  7C 00 18 40 */	cmplw r0, r3
@@ -1039,12 +1040,14 @@ lbl_80354E40:
 /* 80354E54 00351D94  38 21 00 18 */	addi r1, r1, 0x18
 /* 80354E58 00351D98  7C 08 03 A6 */	mtlr r0
 /* 80354E5C 00351D9C  4E 80 00 20 */	blr 
+
+/* 80354E60 0324 .text DoneCallback DoneCallback */
 .global DoneCallback
 DoneCallback:
 /* 80354E60 00351DA0  7C 08 02 A6 */	mflr r0
-/* 80354E64 00351DA4  3C 80 80 45 */	lis r4, lbl_8044CBC0@ha
+/* 80354E64 00351DA4  3C 80 80 45 */	lis r4, __CARDBlock@ha
 /* 80354E68 00351DA8  90 01 00 04 */	stw r0, 4(r1)
-/* 80354E6C 00351DAC  38 84 CB C0 */	addi r4, r4, lbl_8044CBC0@l
+/* 80354E6C 00351DAC  38 84 CB C0 */	addi r4, r4, __CARDBlock@l
 /* 80354E70 00351DB0  38 04 00 30 */	addi r0, r4, 0x30
 /* 80354E74 00351DB4  94 21 FF 78 */	stwu r1, -0x88(r1)
 /* 80354E78 00351DB8  7C 00 18 40 */	cmplw r0, r3
@@ -1252,3 +1255,42 @@ lbl_80355164:
 /* 80355178 003520B8  38 21 00 88 */	addi r1, r1, 0x88
 /* 8035517C 003520BC  7C 08 03 A6 */	mtlr r0
 /* 80355180 003520C0  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D1EA0 0160 .data CardData CardData */
+.global CardData
+CardData:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ceea0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x02, 0xff, 0x00, 0x21 /* baserom.dol+0x3ceeb0 */
+.byte 0x13, 0x06, 0x12, 0x03, 0x12, 0x04, 0x13, 0x05, 0x00, 0x92, 0x00, 0xff, 0x00, 0x88, 0xff, 0xff /* baserom.dol+0x3ceec0 */
+.byte 0x00, 0x89, 0xff, 0xff, 0x00, 0x8a, 0xff, 0xff, 0x00, 0x8b, 0xff, 0xff, 0x8f, 0x00, 0x02, 0xbf /* baserom.dol+0x3ceed0 */
+.byte 0x00, 0x88, 0x16, 0xfc, 0xdc, 0xd1, 0x16, 0xfd, 0x00, 0x00, 0x16, 0xfb, 0x00, 0x01, 0x02, 0xbf /* baserom.dol+0x3ceee0 */
+.byte 0x00, 0x8e, 0x25, 0xff, 0x03, 0x80, 0xff, 0x00, 0x02, 0x94, 0x00, 0x27, 0x02, 0xbf, 0x00, 0x8e /* baserom.dol+0x3ceef0 */
+.byte 0x1f, 0xdf, 0x24, 0xff, 0x02, 0x40, 0x0f, 0xff, 0x00, 0x98, 0x04, 0x00, 0x00, 0x9a, 0x00, 0x10 /* baserom.dol+0x3cef00 */
+.byte 0x00, 0x99, 0x00, 0x00, 0x8e, 0x00, 0x02, 0xbf, 0x00, 0x94, 0x02, 0xbf, 0x86, 0x44, 0x02, 0xbf /* baserom.dol+0x3cef10 */
+.byte 0x00, 0x88, 0x16, 0xfc, 0xdc, 0xd1, 0x16, 0xfd, 0x00, 0x03, 0x16, 0xfb, 0x00, 0x01, 0x8f, 0x00 /* baserom.dol+0x3cef20 */
+.byte 0x02, 0xbf, 0x00, 0x8e, 0x03, 0x80, 0xcd, 0xd1, 0x02, 0x94, 0x00, 0x48, 0x27, 0xff, 0x03, 0x80 /* baserom.dol+0x3cef30 */
+.byte 0x00, 0x01, 0x02, 0x95, 0x00, 0x5a, 0x03, 0x80, 0x00, 0x02, 0x02, 0x95, 0x80, 0x00, 0x02, 0x9f /* baserom.dol+0x3cef40 */
+.byte 0x00, 0x48, 0x00, 0x21, 0x8e, 0x00, 0x02, 0xbf, 0x00, 0x8e, 0x25, 0xff, 0x02, 0xbf, 0x00, 0x8e /* baserom.dol+0x3cef50 */
+.byte 0x25, 0xff, 0x02, 0xbf, 0x00, 0x8e, 0x25, 0xff, 0x02, 0xbf, 0x00, 0x8e, 0x00, 0xc5, 0xff, 0xff /* baserom.dol+0x3cef60 */
+.byte 0x03, 0x40, 0x0f, 0xff, 0x1c, 0x9f, 0x02, 0xbf, 0x00, 0x8e, 0x00, 0xc7, 0xff, 0xff, 0x02, 0xbf /* baserom.dol+0x3cef70 */
+.byte 0x00, 0x8e, 0x00, 0xc6, 0xff, 0xff, 0x02, 0xbf, 0x00, 0x8e, 0x00, 0xc0, 0xff, 0xff, 0x02, 0xbf /* baserom.dol+0x3cef80 */
+.byte 0x00, 0x8e, 0x20, 0xff, 0x03, 0x40, 0x0f, 0xff, 0x1f, 0x5f, 0x02, 0xbf, 0x00, 0x8e, 0x21, 0xff /* baserom.dol+0x3cef90 */
+.byte 0x02, 0xbf, 0x00, 0x8e, 0x23, 0xff, 0x12, 0x05, 0x12, 0x06, 0x02, 0x9f, 0x80, 0xb5, 0x00, 0x21 /* baserom.dol+0x3cefa0 */
+.byte 0x27, 0xfc, 0x03, 0xc0, 0x80, 0x00, 0x02, 0x9d, 0x00, 0x88, 0x02, 0xdf, 0x27, 0xfe, 0x03, 0xc0 /* baserom.dol+0x3cefb0 */
+.byte 0x80, 0x00, 0x02, 0x9c, 0x00, 0x8e, 0x02, 0xdf, 0x2e, 0xce, 0x2c, 0xcf, 0x00, 0xf8, 0xff, 0xcd /* baserom.dol+0x3cefc0 */
+.byte 0x00, 0xf9, 0xff, 0xc9, 0x00, 0xfa, 0xff, 0xcb, 0x26, 0xc9, 0x02, 0xc0, 0x00, 0x04, 0x02, 0x9d /* baserom.dol+0x3cefd0 */
+.byte 0x00, 0x9c, 0x02, 0xdf, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cefe0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ceff0 */
+
+
+
+.section .sdata, "a"
+/* 80450A68 0004 .sdata next next */
+.global next
+next:
+.byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d07c8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d07cc */
+

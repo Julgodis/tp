@@ -1,9 +1,19 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802e5214
 
-.global JUTXfb_NS_common_init
-JUTXfb_NS_common_init:
+.section .text, "ax"
+/* 802E5214 0014 .text clearIndex__6JUTXfbFv clearIndex__6JUTXfbFv */
+.global clearIndex__6JUTXfbFv
+clearIndex__6JUTXfbFv:
+/* 802E5214 002E2154  38 00 FF FF */	li r0, -1
+/* 802E5218 002E2158  B0 03 00 14 */	sth r0, 0x14(r3)
+/* 802E521C 002E215C  B0 03 00 16 */	sth r0, 0x16(r3)
+/* 802E5220 002E2160  B0 03 00 18 */	sth r0, 0x18(r3)
+/* 802E5224 002E2164  4E 80 00 20 */	blr 
+
+/* 802E5228 0038 .text common_init__6JUTXfbFi common_init__6JUTXfbFi */
+.global common_init__6JUTXfbFi
+common_init__6JUTXfbFi:
 /* 802E5228 002E2168  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E522C 002E216C  7C 08 02 A6 */	mflr r0
 /* 802E5230 002E2170  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,8 +29,9 @@ JUTXfb_NS_common_init:
 /* 802E5258 002E2198  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E525C 002E219C  4E 80 00 20 */	blr 
 
-.global JUTXfb
-JUTXfb:
+/* 802E5260 00A8 .text __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
+.global __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber
+__ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber:
 /* 802E5260 002E21A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5264 002E21A4  7C 08 02 A6 */	mflr r0
 /* 802E5268 002E21A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -31,7 +42,7 @@ JUTXfb:
 /* 802E527C 002E21BC  7C BC 2B 78 */	mr r28, r5
 /* 802E5280 002E21C0  7C DD 33 78 */	mr r29, r6
 /* 802E5284 002E21C4  7F A4 EB 78 */	mr r4, r29
-/* 802E5288 002E21C8  4B FF FF A1 */	bl JUTXfb_NS_common_init
+/* 802E5288 002E21C8  4B FF FF A1 */	bl common_init__6JUTXfbFi
 /* 802E528C 002E21CC  28 1E 00 00 */	cmplwi r30, 0
 /* 802E5290 002E21D0  41 82 00 20 */	beq lbl_802E52B0
 /* 802E5294 002E21D4  7F 63 DB 78 */	mr r3, r27
@@ -39,10 +50,10 @@ JUTXfb:
 /* 802E529C 002E21DC  A0 BE 00 08 */	lhz r5, 8(r30)
 /* 802E52A0 002E21E0  7F 86 E3 78 */	mr r6, r28
 /* 802E52A4 002E21E4  7F A7 EB 78 */	mr r7, r29
-/* 802E52A8 002E21E8  48 00 01 AD */	bl JUTXfb_NS_initiate
+/* 802E52A8 002E21E8  48 00 01 AD */	bl initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber
 /* 802E52AC 002E21EC  48 00 00 40 */	b lbl_802E52EC
 lbl_802E52B0:
-/* 802E52B0 002E21F0  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E52B0 002E21F0  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E52B4 002E21F4  80 83 00 04 */	lwz r4, 4(r3)
 /* 802E52B8 002E21F8  A3 E4 00 04 */	lhz r31, 4(r4)
 /* 802E52BC 002E21FC  A0 64 00 06 */	lhz r3, 6(r4)
@@ -56,7 +67,7 @@ lbl_802E52B0:
 /* 802E52DC 002E221C  7F E4 FB 78 */	mr r4, r31
 /* 802E52E0 002E2220  7F 86 E3 78 */	mr r6, r28
 /* 802E52E4 002E2224  7F A7 EB 78 */	mr r7, r29
-/* 802E52E8 002E2228  48 00 01 6D */	bl JUTXfb_NS_initiate
+/* 802E52E8 002E2228  48 00 01 6D */	bl initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber
 lbl_802E52EC:
 /* 802E52EC 002E222C  7F 63 DB 78 */	mr r3, r27
 /* 802E52F0 002E2230  39 61 00 20 */	addi r11, r1, 0x20
@@ -66,8 +77,9 @@ lbl_802E52EC:
 /* 802E5300 002E2240  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5304 002E2244  4E 80 00 20 */	blr 
 
-.global JUTXfb_NS_dtor
-JUTXfb_NS_dtor:
+/* 802E5308 0070 .text __dt__6JUTXfbFv __dt__6JUTXfbFv */
+.global __dt__6JUTXfbFv
+__dt__6JUTXfbFv:
 /* 802E5308 002E2248  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E530C 002E224C  7C 08 02 A6 */	mflr r0
 /* 802E5310 002E2250  90 01 00 24 */	stw r0, 0x24(r1)
@@ -80,12 +92,12 @@ JUTXfb_NS_dtor:
 lbl_802E532C:
 /* 802E532C 002E226C  7F A3 EB 78 */	mr r3, r29
 /* 802E5330 002E2270  7F E4 FB 78 */	mr r4, r31
-/* 802E5334 002E2274  48 00 00 45 */	bl JUTXfb_NS_delXfb
+/* 802E5334 002E2274  48 00 00 45 */	bl delXfb__6JUTXfbFi
 /* 802E5338 002E2278  3B FF 00 01 */	addi r31, r31, 1
 /* 802E533C 002E227C  2C 1F 00 03 */	cmpwi r31, 3
 /* 802E5340 002E2280  41 80 FF EC */	blt lbl_802E532C
 /* 802E5344 002E2284  38 00 00 00 */	li r0, 0
-/* 802E5348 002E2288  90 0D 8F D0 */	stw r0, lbl_80451550-_SDA_BASE_(r13)
+/* 802E5348 002E2288  90 0D 8F D0 */	stw r0, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E534C 002E228C  7F C0 07 35 */	extsh. r0, r30
 /* 802E5350 002E2290  40 81 00 0C */	ble lbl_802E535C
 /* 802E5354 002E2294  7F A3 EB 78 */	mr r3, r29
@@ -99,8 +111,9 @@ lbl_802E535C:
 /* 802E5370 002E22B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5374 002E22B4  4E 80 00 20 */	blr 
 
-.global JUTXfb_NS_delXfb
-JUTXfb_NS_delXfb:
+/* 802E5378 0040 .text delXfb__6JUTXfbFi delXfb__6JUTXfbFi */
+.global delXfb__6JUTXfbFi
+delXfb__6JUTXfbFi:
 /* 802E5378 002E22B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E537C 002E22BC  7C 08 02 A6 */	mflr r0
 /* 802E5380 002E22C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -119,8 +132,9 @@ lbl_802E53A8:
 /* 802E53B0 002E22F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E53B4 002E22F4  4E 80 00 20 */	blr 
 
-.global JUTXfb_NS_createManager
-JUTXfb_NS_createManager:
+/* 802E53B8 006C .text createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber */
+.global createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber
+createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber:
 /* 802E53B8 002E22F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E53BC 002E22FC  7C 08 02 A6 */	mflr r0
 /* 802E53C0 002E2300  90 01 00 14 */	stw r0, 0x14(r1)
@@ -128,7 +142,7 @@ JUTXfb_NS_createManager:
 /* 802E53C8 002E2308  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E53CC 002E230C  7C 7E 1B 78 */	mr r30, r3
 /* 802E53D0 002E2310  7C 9F 23 78 */	mr r31, r4
-/* 802E53D4 002E2314  80 0D 8F D0 */	lwz r0, lbl_80451550-_SDA_BASE_(r13)
+/* 802E53D4 002E2314  80 0D 8F D0 */	lwz r0, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E53D8 002E2318  28 00 00 00 */	cmplwi r0, 0
 /* 802E53DC 002E231C  40 82 00 2C */	bne lbl_802E5408
 /* 802E53E0 002E2320  38 60 00 20 */	li r3, 0x20
@@ -138,12 +152,12 @@ JUTXfb_NS_createManager:
 /* 802E53F0 002E2330  38 80 00 00 */	li r4, 0
 /* 802E53F4 002E2334  7F C5 F3 78 */	mr r5, r30
 /* 802E53F8 002E2338  7F E6 FB 78 */	mr r6, r31
-/* 802E53FC 002E233C  4B FF FE 65 */	bl JUTXfb
+/* 802E53FC 002E233C  4B FF FE 65 */	bl __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber
 /* 802E5400 002E2340  7C 60 1B 78 */	mr r0, r3
 lbl_802E5404:
-/* 802E5404 002E2344  90 0D 8F D0 */	stw r0, lbl_80451550-_SDA_BASE_(r13)
+/* 802E5404 002E2344  90 0D 8F D0 */	stw r0, sManager__6JUTXfb-_SDA_BASE_(r13)
 lbl_802E5408:
-/* 802E5408 002E2348  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 802E5408 002E2348  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E540C 002E234C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E5410 002E2350  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802E5414 002E2354  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -151,23 +165,25 @@ lbl_802E5408:
 /* 802E541C 002E235C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5420 002E2360  4E 80 00 20 */	blr 
 
-.global JUTXfb_NS_destroyManager
-JUTXfb_NS_destroyManager:
+/* 802E5424 0030 .text destroyManager__6JUTXfbFv destroyManager__6JUTXfbFv */
+.global destroyManager__6JUTXfbFv
+destroyManager__6JUTXfbFv:
 /* 802E5424 002E2364  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E5428 002E2368  7C 08 02 A6 */	mflr r0
 /* 802E542C 002E236C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E5430 002E2370  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 802E5430 002E2370  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E5434 002E2374  38 80 00 01 */	li r4, 1
-/* 802E5438 002E2378  4B FF FE D1 */	bl JUTXfb_NS_dtor
+/* 802E5438 002E2378  4B FF FE D1 */	bl __dt__6JUTXfbFv
 /* 802E543C 002E237C  38 00 00 00 */	li r0, 0
-/* 802E5440 002E2380  90 0D 8F D0 */	stw r0, lbl_80451550-_SDA_BASE_(r13)
+/* 802E5440 002E2380  90 0D 8F D0 */	stw r0, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E5444 002E2384  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E5448 002E2388  7C 08 03 A6 */	mtlr r0
 /* 802E544C 002E238C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5450 002E2390  4E 80 00 20 */	blr 
 
-.global JUTXfb_NS_initiate
-JUTXfb_NS_initiate:
+/* 802E5454 00DC .text initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber */
+.global initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber
+initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber:
 /* 802E5454 002E2394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5458 002E2398  7C 08 02 A6 */	mflr r0
 /* 802E545C 002E239C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -228,4 +244,13 @@ lbl_802E5518:
 /* 802E5524 002E2464  7C 08 03 A6 */	mtlr r0
 /* 802E5528 002E2468  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E552C 002E246C  4E 80 00 20 */	blr 
+
+
+
+.section .sbss, "aw"
+/* 80451550 0004 .sbss sManager__6JUTXfb sManager__6JUTXfb */
+.global sManager__6JUTXfb
+sManager__6JUTXfb:
+.skip 0x4
+.skip 0x4 /* padding */
 

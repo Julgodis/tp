@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80272040
 
-
-.global JFWDisplay_NS_ctor_subroutine
-JFWDisplay_NS_ctor_subroutine:
+.section .text, "ax"
+/* 80272040 00B8 .text ctor_subroutine__10JFWDisplayFb ctor_subroutine__10JFWDisplayFb */
+.global ctor_subroutine__10JFWDisplayFb
+ctor_subroutine__10JFWDisplayFb:
 /* 80272040 0026EF80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272044 0026EF84  7C 08 02 A6 */	mflr r0
 /* 80272048 0026EF88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -37,9 +37,9 @@ JFWDisplay_NS_ctor_subroutine:
 /* 802720B4 0026EFF4  98 1F 00 4A */	stb r0, 0x4a(r31)
 /* 802720B8 0026EFF8  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 802720BC 0026EFFC  7F E3 FB 78 */	mr r3, r31
-/* 802720C0 0026F000  48 00 0D F9 */	bl JFWDisplay_NS_clearEfb_init
-/* 802720C4 0026F004  48 07 39 1D */	bl JUTProcBar_NS_create
-/* 802720C8 0026F008  48 07 39 99 */	bl JUTProcBar_NS_clear
+/* 802720C0 0026F000  48 00 0D F9 */	bl clearEfb_init__10JFWDisplayFv
+/* 802720C4 0026F004  48 07 39 1D */	bl create__10JUTProcBarFv
+/* 802720C8 0026F008  48 07 39 99 */	bl clear__10JUTProcBarFv
 /* 802720CC 0026F00C  38 00 00 01 */	li r0, 1
 /* 802720D0 0026F010  90 1F 00 38 */	stw r0, 0x38(r31)
 /* 802720D4 0026F014  38 00 00 00 */	li r0, 0
@@ -52,8 +52,9 @@ JFWDisplay_NS_ctor_subroutine:
 /* 802720F0 0026F030  38 21 00 10 */	addi r1, r1, 0x10
 /* 802720F4 0026F034  4E 80 00 20 */	blr 
 
-.global JFWDisplay
-JFWDisplay:
+/* 802720F8 0068 .text __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb */
+.global __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb
+__ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb:
 /* 802720F8 0026F038  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802720FC 0026F03C  7C 08 02 A6 */	mflr r0
 /* 80272100 0026F040  90 01 00 24 */	stw r0, 0x24(r1)
@@ -62,16 +63,16 @@ JFWDisplay:
 /* 8027210C 0026F04C  7C 7D 1B 78 */	mr r29, r3
 /* 80272110 0026F050  7C 9E 23 78 */	mr r30, r4
 /* 80272114 0026F054  7C BF 2B 78 */	mr r31, r5
-/* 80272118 0026F058  3C 80 80 3C */	lis r4, lbl_803C40A0@ha
-/* 8027211C 0026F05C  38 04 40 A0 */	addi r0, r4, lbl_803C40A0@l
+/* 80272118 0026F058  3C 80 80 3C */	lis r4, __vt__10JFWDisplay@ha
+/* 8027211C 0026F05C  38 04 40 A0 */	addi r0, r4, __vt__10JFWDisplay@l
 /* 80272120 0026F060  90 03 00 00 */	stw r0, 0(r3)
 /* 80272124 0026F064  38 00 FF FF */	li r0, -1
 /* 80272128 0026F068  90 03 00 08 */	stw r0, 8(r3)
 /* 8027212C 0026F06C  7C C4 33 78 */	mr r4, r6
-/* 80272130 0026F070  4B FF FF 11 */	bl JFWDisplay_NS_ctor_subroutine
+/* 80272130 0026F070  4B FF FF 11 */	bl ctor_subroutine__10JFWDisplayFb
 /* 80272134 0026F074  7F C3 F3 78 */	mr r3, r30
 /* 80272138 0026F078  7F E4 FB 78 */	mr r4, r31
-/* 8027213C 0026F07C  48 07 32 7D */	bl createManager__6JUTXfbFP7JKRHeapl
+/* 8027213C 0026F07C  48 07 32 7D */	bl createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber
 /* 80272140 0026F080  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80272144 0026F084  7F A3 EB 78 */	mr r3, r29
 /* 80272148 0026F088  39 61 00 20 */	addi r11, r1, 0x20
@@ -80,6 +81,10 @@ JFWDisplay:
 /* 80272154 0026F094  7C 08 03 A6 */	mtlr r0
 /* 80272158 0026F098  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027215C 0026F09C  4E 80 00 20 */	blr 
+
+/* 80272160 007C .text __dt__10JFWDisplayFv __dt__10JFWDisplayFv */
+.global __dt__10JFWDisplayFv
+__dt__10JFWDisplayFv:
 /* 80272160 0026F0A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272164 0026F0A4  7C 08 02 A6 */	mflr r0
 /* 80272168 0026F0A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -88,16 +93,16 @@ JFWDisplay:
 /* 80272174 0026F0B4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80272178 0026F0B8  7C 9F 23 78 */	mr r31, r4
 /* 8027217C 0026F0BC  41 82 00 44 */	beq lbl_802721C0
-/* 80272180 0026F0C0  3C 80 80 3C */	lis r4, lbl_803C40A0@ha
-/* 80272184 0026F0C4  38 04 40 A0 */	addi r0, r4, lbl_803C40A0@l
+/* 80272180 0026F0C0  3C 80 80 3C */	lis r4, __vt__10JFWDisplay@ha
+/* 80272184 0026F0C4  38 04 40 A0 */	addi r0, r4, __vt__10JFWDisplay@l
 /* 80272188 0026F0C8  90 1E 00 00 */	stw r0, 0(r30)
-/* 8027218C 0026F0CC  80 0D 8F B8 */	lwz r0, lbl_80451538-_SDA_BASE_(r13)
+/* 8027218C 0026F0CC  80 0D 8F B8 */	lwz r0, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272190 0026F0D0  28 00 00 00 */	cmplwi r0, 0
 /* 80272194 0026F0D4  41 82 00 0C */	beq lbl_802721A0
 /* 80272198 0026F0D8  38 80 00 02 */	li r4, 2
-/* 8027219C 0026F0DC  48 00 0A C5 */	bl JFWDisplay_NS_waitBlanking
+/* 8027219C 0026F0DC  48 00 0A C5 */	bl waitBlanking__10JFWDisplayFi
 lbl_802721A0:
-/* 802721A0 0026F0E0  48 07 38 89 */	bl JUTProcBar_NS_destroy
+/* 802721A0 0026F0E0  48 07 38 89 */	bl destroy__10JUTProcBarFv
 /* 802721A4 0026F0E4  48 07 32 81 */	bl destroyManager__6JUTXfbFv
 /* 802721A8 0026F0E8  38 00 00 00 */	li r0, 0
 /* 802721AC 0026F0EC  90 1E 00 10 */	stw r0, 0x10(r30)
@@ -114,8 +119,9 @@ lbl_802721C0:
 /* 802721D4 0026F114  38 21 00 10 */	addi r1, r1, 0x10
 /* 802721D8 0026F118  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_createManager
-JFWDisplay_NS_createManager:
+/* 802721DC 0084 .text createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb */
+.global createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb
+createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb:
 /* 802721DC 0026F11C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802721E0 0026F120  7C 08 02 A6 */	mflr r0
 /* 802721E4 0026F124  90 01 00 24 */	stw r0, 0x24(r1)
@@ -126,11 +132,11 @@ JFWDisplay_NS_createManager:
 /* 802721F8 0026F138  7C BE 2B 78 */	mr r30, r5
 /* 802721FC 0026F13C  7C DF 33 78 */	mr r31, r6
 /* 80272200 0026F140  41 82 00 10 */	beq lbl_80272210
-/* 80272204 0026F144  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 80272204 0026F144  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272208 0026F148  7C 04 03 78 */	mr r4, r0
-/* 8027220C 0026F14C  48 07 2F 8D */	bl JUTVideo_NS_setRenderMode
+/* 8027220C 0026F14C  48 07 2F 8D */	bl setRenderMode__8JUTVideoFPC16_GXRenderModeObj
 lbl_80272210:
-/* 80272210 0026F150  80 0D 8C 40 */	lwz r0, lbl_804511C0-_SDA_BASE_(r13)
+/* 80272210 0026F150  80 0D 8C 40 */	lwz r0, sManager__10JFWDisplay-_SDA_BASE_(r13)
 /* 80272214 0026F154  28 00 00 00 */	cmplwi r0, 0
 /* 80272218 0026F158  40 82 00 2C */	bne lbl_80272244
 /* 8027221C 0026F15C  38 60 00 4C */	li r3, 0x4c
@@ -140,12 +146,12 @@ lbl_80272210:
 /* 8027222C 0026F16C  7F A4 EB 78 */	mr r4, r29
 /* 80272230 0026F170  7F C5 F3 78 */	mr r5, r30
 /* 80272234 0026F174  7F E6 FB 78 */	mr r6, r31
-/* 80272238 0026F178  4B FF FE C1 */	bl JFWDisplay
+/* 80272238 0026F178  4B FF FE C1 */	bl __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb
 /* 8027223C 0026F17C  7C 60 1B 78 */	mr r0, r3
 lbl_80272240:
-/* 80272240 0026F180  90 0D 8C 40 */	stw r0, lbl_804511C0-_SDA_BASE_(r13)
+/* 80272240 0026F180  90 0D 8C 40 */	stw r0, sManager__10JFWDisplay-_SDA_BASE_(r13)
 lbl_80272244:
-/* 80272244 0026F184  80 6D 8C 40 */	lwz r3, lbl_804511C0-_SDA_BASE_(r13)
+/* 80272244 0026F184  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay-_SDA_BASE_(r13)
 /* 80272248 0026F188  39 61 00 20 */	addi r11, r1, 0x20
 /* 8027224C 0026F18C  48 0E FF DD */	bl _restgpr_29
 /* 80272250 0026F190  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -153,16 +159,17 @@ lbl_80272244:
 /* 80272258 0026F198  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027225C 0026F19C  4E 80 00 20 */	blr 
 
-.global callDirectDraw
-callDirectDraw:
+/* 80272260 0058 .text callDirectDraw__Fv callDirectDraw__Fv */
+.global callDirectDraw__Fv
+callDirectDraw__Fv:
 /* 80272260 0026F1A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272264 0026F1A4  7C 08 02 A6 */	mflr r0
 /* 80272268 0026F1A8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027226C 0026F1AC  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 8027226C 0026F1AC  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272270 0026F1B0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80272274 0026F1B4  A0 A3 00 04 */	lhz r5, 4(r3)
 /* 80272278 0026F1B8  A0 C3 00 06 */	lhz r6, 6(r3)
-/* 8027227C 0026F1BC  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 8027227C 0026F1BC  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272280 0026F1C0  A8 03 00 14 */	lha r0, 0x14(r3)
 /* 80272284 0026F1C4  2C 00 00 00 */	cmpwi r0, 0
 /* 80272288 0026F1C8  41 80 00 10 */	blt lbl_80272298
@@ -172,16 +179,17 @@ callDirectDraw:
 lbl_80272298:
 /* 80272298 0026F1D8  38 80 00 00 */	li r4, 0
 lbl_8027229C:
-/* 8027229C 0026F1DC  80 6D 8F A8 */	lwz r3, lbl_80451528-_SDA_BASE_(r13)
-/* 802722A0 0026F1E0  48 07 22 CD */	bl JUTDirectPrint_NS_changeFrameBuffer
-/* 802722A4 0026F1E4  48 07 26 F9 */	bl JUTAssertion_NS_flushMessage
+/* 8027229C 0026F1DC  80 6D 8F A8 */	lwz r3, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
+/* 802722A0 0026F1E0  48 07 22 CD */	bl changeFrameBuffer__14JUTDirectPrintFPvUsUs
+/* 802722A4 0026F1E4  48 07 26 F9 */	bl flushMessage__12JUTAssertionFv
 /* 802722A8 0026F1E8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802722AC 0026F1EC  7C 08 03 A6 */	mtlr r0
 /* 802722B0 0026F1F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802722B4 0026F1F4  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_prepareCopyDisp
-JFWDisplay_NS_prepareCopyDisp:
+/* 802722B8 00F4 .text prepareCopyDisp__10JFWDisplayFv prepareCopyDisp__10JFWDisplayFv */
+.global prepareCopyDisp__10JFWDisplayFv
+prepareCopyDisp__10JFWDisplayFv:
 /* 802722B8 0026F1F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802722BC 0026F1FC  7C 08 02 A6 */	mflr r0
 /* 802722C0 0026F200  90 01 00 34 */	stw r0, 0x34(r1)
@@ -189,7 +197,7 @@ JFWDisplay_NS_prepareCopyDisp:
 /* 802722C8 0026F208  39 61 00 28 */	addi r11, r1, 0x28
 /* 802722CC 0026F20C  48 0E FF 0D */	bl _savegpr_28
 /* 802722D0 0026F210  7C 7C 1B 78 */	mr r28, r3
-/* 802722D4 0026F214  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802722D4 0026F214  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802722D8 0026F218  80 63 00 04 */	lwz r3, 4(r3)
 /* 802722DC 0026F21C  A3 E3 00 04 */	lhz r31, 4(r3)
 /* 802722E0 0026F220  A3 C3 00 06 */	lhz r30, 6(r3)
@@ -216,7 +224,7 @@ JFWDisplay_NS_prepareCopyDisp:
 /* 80272334 0026F274  FC 20 F8 90 */	fmr f1, f31
 /* 80272338 0026F278  48 0E AC 6D */	bl GXSetDispCopyYScale
 /* 8027233C 0026F27C  48 0D B3 59 */	bl VIFlush
-/* 80272340 0026F280  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 80272340 0026F280  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272344 0026F284  80 63 00 04 */	lwz r3, 4(r3)
 /* 80272348 0026F288  38 C3 00 32 */	addi r6, r3, 0x32
 /* 8027234C 0026F28C  38 83 00 1A */	addi r4, r3, 0x1a
@@ -245,18 +253,19 @@ lbl_80272390:
 /* 802723A4 0026F2E4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802723A8 0026F2E8  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_drawendXfb_single
-JFWDisplay_NS_drawendXfb_single:
+/* 802723AC 0048 .text drawendXfb_single__10JFWDisplayFv drawendXfb_single__10JFWDisplayFv */
+.global drawendXfb_single__10JFWDisplayFv
+drawendXfb_single__10JFWDisplayFv:
 /* 802723AC 0026F2EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802723B0 0026F2F0  7C 08 02 A6 */	mflr r0
 /* 802723B4 0026F2F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802723B8 0026F2F8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802723BC 0026F2FC  83 ED 8F D0 */	lwz r31, lbl_80451550-_SDA_BASE_(r13)
+/* 802723BC 0026F2FC  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802723C0 0026F300  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 802723C4 0026F304  7C 00 07 35 */	extsh. r0, r0
 /* 802723C8 0026F308  41 80 00 18 */	blt lbl_802723E0
-/* 802723CC 0026F30C  4B FF FE ED */	bl JFWDisplay_NS_prepareCopyDisp
-/* 802723D0 0026F310  48 00 0F D9 */	bl JFWDrawDoneAlarm
+/* 802723CC 0026F30C  4B FF FE ED */	bl prepareCopyDisp__10JFWDisplayFv
+/* 802723D0 0026F310  48 00 0F D9 */	bl JFWDrawDoneAlarm__Fv
 /* 802723D4 0026F314  48 0E 9A F9 */	bl GXFlush
 /* 802723D8 0026F318  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 802723DC 0026F31C  B0 1F 00 16 */	sth r0, 0x16(r31)
@@ -267,15 +276,16 @@ lbl_802723E0:
 /* 802723EC 0026F32C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802723F0 0026F330  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_exchangeXfb_double
-JFWDisplay_NS_exchangeXfb_double:
+/* 802723F4 0108 .text exchangeXfb_double__10JFWDisplayFv exchangeXfb_double__10JFWDisplayFv */
+.global exchangeXfb_double__10JFWDisplayFv
+exchangeXfb_double__10JFWDisplayFv:
 /* 802723F4 0026F334  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802723F8 0026F338  7C 08 02 A6 */	mflr r0
 /* 802723FC 0026F33C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80272400 0026F340  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80272404 0026F344  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80272408 0026F348  7C 7E 1B 78 */	mr r30, r3
-/* 8027240C 0026F34C  83 ED 8F D0 */	lwz r31, lbl_80451550-_SDA_BASE_(r13)
+/* 8027240C 0026F34C  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272410 0026F350  A8 9F 00 16 */	lha r4, 0x16(r31)
 /* 80272414 0026F354  A8 1F 00 18 */	lha r0, 0x18(r31)
 /* 80272418 0026F358  7C 04 00 00 */	cmpw r4, r0
@@ -290,7 +300,7 @@ JFWDisplay_NS_exchangeXfb_double:
 /* 8027243C 0026F37C  4E 80 04 21 */	bctrl 
 lbl_80272440:
 /* 80272440 0026F380  7F C3 F3 78 */	mr r3, r30
-/* 80272444 0026F384  4B FF FE 75 */	bl JFWDisplay_NS_prepareCopyDisp
+/* 80272444 0026F384  4B FF FE 75 */	bl prepareCopyDisp__10JFWDisplayFv
 /* 80272448 0026F388  A8 7F 00 14 */	lha r3, 0x14(r31)
 /* 8027244C 0026F38C  7C 60 07 35 */	extsh. r0, r3
 /* 80272450 0026F390  41 80 00 10 */	blt lbl_80272460
@@ -308,15 +318,15 @@ lbl_80272464:
 /* 80272478 0026F3B8  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 8027247C 0026F3BC  B0 1F 00 16 */	sth r0, 0x16(r31)
 /* 80272480 0026F3C0  48 0E 9E 75 */	bl GXDrawDone
-/* 80272484 0026F3C4  48 07 2C 2D */	bl JUTVideo_NS_dummyNoDrawWait
+/* 80272484 0026F3C4  48 07 2C 2D */	bl dummyNoDrawWait__8JUTVideoFv
 /* 80272488 0026F3C8  48 00 00 08 */	b lbl_80272490
 lbl_8027248C:
-/* 8027248C 0026F3CC  48 07 2B FD */	bl JUTVideo_NS_drawDoneStart
+/* 8027248C 0026F3CC  48 07 2B FD */	bl drawDoneStart__8JUTVideoFv
 lbl_80272490:
 /* 80272490 0026F3D0  80 1E 00 18 */	lwz r0, 0x18(r30)
 /* 80272494 0026F3D4  2C 00 00 00 */	cmpwi r0, 0
 /* 80272498 0026F3D8  40 82 00 08 */	bne lbl_802724A0
-/* 8027249C 0026F3DC  4B FF FD C5 */	bl callDirectDraw
+/* 8027249C 0026F3DC  4B FF FD C5 */	bl callDirectDraw__Fv
 lbl_802724A0:
 /* 802724A0 0026F3E0  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 802724A4 0026F3E4  B0 1F 00 16 */	sth r0, 0x16(r31)
@@ -330,7 +340,7 @@ lbl_802724C0:
 /* 802724C0 0026F400  80 1E 00 08 */	lwz r0, 8(r30)
 /* 802724C4 0026F404  90 01 00 08 */	stw r0, 8(r1)
 /* 802724C8 0026F408  38 81 00 08 */	addi r4, r1, 8
-/* 802724CC 0026F40C  48 00 0A 8D */	bl JFWDisplay_NS_clearEfb_X1_
+/* 802724CC 0026F40C  48 00 0A 8D */	bl clearEfb__10JFWDisplayF8_GXColor
 /* 802724D0 0026F410  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 802724D4 0026F414  7C 00 07 35 */	extsh. r0, r0
 /* 802724D8 0026F418  40 80 00 0C */	bge lbl_802724E4
@@ -344,17 +354,18 @@ lbl_802724E4:
 /* 802724F4 0026F434  38 21 00 20 */	addi r1, r1, 0x20
 /* 802724F8 0026F438  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_exchangeXfb_triple
-JFWDisplay_NS_exchangeXfb_triple:
+/* 802724FC 0078 .text exchangeXfb_triple__10JFWDisplayFv exchangeXfb_triple__10JFWDisplayFv */
+.global exchangeXfb_triple__10JFWDisplayFv
+exchangeXfb_triple__10JFWDisplayFv:
 /* 802724FC 0026F43C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272500 0026F440  7C 08 02 A6 */	mflr r0
 /* 80272504 0026F444  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272508 0026F448  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8027250C 0026F44C  83 ED 8F D0 */	lwz r31, lbl_80451550-_SDA_BASE_(r13)
+/* 8027250C 0026F44C  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272510 0026F450  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 80272514 0026F454  7C 00 07 35 */	extsh. r0, r0
 /* 80272518 0026F458  41 80 00 08 */	blt lbl_80272520
-/* 8027251C 0026F45C  4B FF FD 45 */	bl callDirectDraw
+/* 8027251C 0026F45C  4B FF FD 45 */	bl callDirectDraw__Fv
 lbl_80272520:
 /* 80272520 0026F460  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 80272524 0026F464  B0 1F 00 16 */	sth r0, 0x16(r31)
@@ -381,15 +392,16 @@ lbl_80272550:
 /* 8027256C 0026F4AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272570 0026F4B0  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_copyXfb_triple
-JFWDisplay_NS_copyXfb_triple:
+/* 80272574 0084 .text copyXfb_triple__10JFWDisplayFv copyXfb_triple__10JFWDisplayFv */
+.global copyXfb_triple__10JFWDisplayFv
+copyXfb_triple__10JFWDisplayFv:
 /* 80272574 0026F4B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272578 0026F4B8  7C 08 02 A6 */	mflr r0
 /* 8027257C 0026F4BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272580 0026F4C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80272584 0026F4C4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80272588 0026F4C8  7C 7E 1B 78 */	mr r30, r3
-/* 8027258C 0026F4CC  83 ED 8F D0 */	lwz r31, lbl_80451550-_SDA_BASE_(r13)
+/* 8027258C 0026F4CC  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272590 0026F4D0  A8 1F 00 14 */	lha r0, 0x14(r31)
 /* 80272594 0026F4D4  7C 00 07 35 */	extsh. r0, r0
 /* 80272598 0026F4D8  41 80 00 48 */	blt lbl_802725E0
@@ -400,7 +412,7 @@ JFWDisplay_NS_copyXfb_triple:
 /* 802725AC 0026F4EC  4E 80 04 21 */	bctrl 
 lbl_802725B0:
 /* 802725B0 0026F4F0  7F C3 F3 78 */	mr r3, r30
-/* 802725B4 0026F4F4  4B FF FD 05 */	bl JFWDisplay_NS_prepareCopyDisp
+/* 802725B4 0026F4F4  4B FF FD 05 */	bl prepareCopyDisp__10JFWDisplayFv
 /* 802725B8 0026F4F8  A8 7F 00 14 */	lha r3, 0x14(r31)
 /* 802725BC 0026F4FC  7C 60 07 35 */	extsh. r0, r3
 /* 802725C0 0026F500  41 80 00 10 */	blt lbl_802725D0
@@ -421,8 +433,9 @@ lbl_802725E0:
 /* 802725F0 0026F530  38 21 00 10 */	addi r1, r1, 0x10
 /* 802725F4 0026F534  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_preGX
-JFWDisplay_NS_preGX:
+/* 802725F8 0094 .text preGX__10JFWDisplayFv preGX__10JFWDisplayFv */
+.global preGX__10JFWDisplayFv
+preGX__10JFWDisplayFv:
 /* 802725F8 0026F538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802725FC 0026F53C  7C 08 02 A6 */	mflr r0
 /* 80272600 0026F540  90 01 00 14 */	stw r0, 0x14(r1)
@@ -430,7 +443,7 @@ JFWDisplay_NS_preGX:
 /* 80272608 0026F548  7C 7F 1B 78 */	mr r31, r3
 /* 8027260C 0026F54C  48 0E C0 59 */	bl GXInvalidateTexAll
 /* 80272610 0026F550  48 0E 95 5D */	bl GXInvalidateVtxCache
-/* 80272614 0026F554  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 80272614 0026F554  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272618 0026F558  80 63 00 04 */	lwz r3, 4(r3)
 /* 8027261C 0026F55C  88 03 00 19 */	lbz r0, 0x19(r3)
 /* 80272620 0026F560  28 00 00 00 */	cmplwi r0, 0
@@ -464,14 +477,15 @@ lbl_80272678:
 /* 80272684 0026F5C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272688 0026F5C8  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_endGX
-JFWDisplay_NS_endGX:
+/* 8027268C 010C .text endGX__10JFWDisplayFv endGX__10JFWDisplayFv */
+.global endGX__10JFWDisplayFv
+endGX__10JFWDisplayFv:
 /* 8027268C 0026F5CC  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 80272690 0026F5D0  7C 08 02 A6 */	mflr r0
 /* 80272694 0026F5D4  90 01 01 04 */	stw r0, 0x104(r1)
 /* 80272698 0026F5D8  93 E1 00 FC */	stw r31, 0xfc(r1)
 /* 8027269C 0026F5DC  7C 7F 1B 78 */	mr r31, r3
-/* 802726A0 0026F5E0  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802726A0 0026F5E0  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802726A4 0026F5E4  80 63 00 04 */	lwz r3, 4(r3)
 /* 802726A8 0026F5E8  A0 03 00 04 */	lhz r0, 4(r3)
 /* 802726AC 0026F5EC  A0 83 00 06 */	lhz r4, 6(r3)
@@ -490,53 +504,57 @@ JFWDisplay_NS_endGX:
 /* 802726E0 0026F620  EC 80 20 28 */	fsubs f4, f0, f4
 /* 802726E4 0026F624  C0 A2 B8 54 */	lfs f5, lbl_80455254-_SDA2_BASE_(r2)
 /* 802726E8 0026F628  C0 C2 B8 58 */	lfs f6, lbl_80455258-_SDA2_BASE_(r2)
-/* 802726EC 0026F62C  48 07 6F E5 */	bl J2DOrthoGraph_X1_
+/* 802726EC 0026F62C  48 07 6F E5 */	bl __ct__13J2DOrthoGraphFffffff
 /* 802726F0 0026F630  80 1F 00 04 */	lwz r0, 4(r31)
 /* 802726F4 0026F634  28 00 00 00 */	cmplwi r0, 0
 /* 802726F8 0026F638  41 82 00 14 */	beq lbl_8027270C
 /* 802726FC 0026F63C  38 61 00 08 */	addi r3, r1, 8
-/* 80272700 0026F640  48 07 70 B5 */	bl J2DOrthoGraph_NS_setPort
+/* 80272700 0026F640  48 07 70 B5 */	bl setPort__13J2DOrthoGraphFv
 /* 80272704 0026F644  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80272708 0026F648  48 07 2E D5 */	bl JUTFader_NS_control
+/* 80272708 0026F648  48 07 2E D5 */	bl control__8JUTFaderFv
 lbl_8027270C:
 /* 8027270C 0026F64C  38 61 00 08 */	addi r3, r1, 8
-/* 80272710 0026F650  48 07 70 A5 */	bl J2DOrthoGraph_NS_setPort
-/* 80272714 0026F654  80 6D 8F 48 */	lwz r3, lbl_804514C8-_SDA_BASE_(r13)
-/* 80272718 0026F658  48 06 DB 8D */	bl JUTDbPrint_NS_flush
-/* 8027271C 0026F65C  80 0D 8F F0 */	lwz r0, lbl_80451570-_SDA_BASE_(r13)
+/* 80272710 0026F650  48 07 70 A5 */	bl setPort__13J2DOrthoGraphFv
+/* 80272714 0026F654  80 6D 8F 48 */	lwz r3, sDebugPrint__10JUTDbPrint-_SDA_BASE_(r13)
+/* 80272718 0026F658  48 06 DB 8D */	bl flush__10JUTDbPrintFv
+/* 8027271C 0026F65C  80 0D 8F F0 */	lwz r0, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
 /* 80272720 0026F660  28 00 00 00 */	cmplwi r0, 0
 /* 80272724 0026F664  41 82 00 14 */	beq lbl_80272738
 /* 80272728 0026F668  38 61 00 08 */	addi r3, r1, 8
-/* 8027272C 0026F66C  48 07 70 89 */	bl J2DOrthoGraph_NS_setPort
-/* 80272730 0026F670  80 6D 8F F0 */	lwz r3, lbl_80451570-_SDA_BASE_(r13)
-/* 80272734 0026F674  48 07 5C 51 */	bl JUTConsoleManager_NS_draw
+/* 8027272C 0026F66C  48 07 70 89 */	bl setPort__13J2DOrthoGraphFv
+/* 80272730 0026F670  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
+/* 80272734 0026F674  48 07 5C 51 */	bl draw__17JUTConsoleManagerCFv
 lbl_80272738:
 /* 80272738 0026F678  38 61 00 08 */	addi r3, r1, 8
-/* 8027273C 0026F67C  48 07 70 79 */	bl J2DOrthoGraph_NS_setPort
-/* 80272740 0026F680  80 6D 8F D8 */	lwz r3, lbl_80451558-_SDA_BASE_(r13)
-/* 80272744 0026F684  48 07 36 C5 */	bl JUTProcBar_NS_draw
+/* 8027273C 0026F67C  48 07 70 79 */	bl setPort__13J2DOrthoGraphFv
+/* 80272740 0026F680  80 6D 8F D8 */	lwz r3, sManager__10JUTProcBar-_SDA_BASE_(r13)
+/* 80272744 0026F684  48 07 36 C5 */	bl draw__10JUTProcBarFv
 /* 80272748 0026F688  80 1F 00 18 */	lwz r0, 0x18(r31)
 /* 8027274C 0026F68C  2C 00 00 00 */	cmpwi r0, 0
 /* 80272750 0026F690  40 82 00 14 */	bne lbl_80272764
-/* 80272754 0026F694  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 80272754 0026F694  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272758 0026F698  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 8027275C 0026F69C  2C 00 00 01 */	cmpwi r0, 1
 /* 80272760 0026F6A0  40 82 00 08 */	bne lbl_80272768
 lbl_80272764:
-/* 80272764 0026F6A4  48 07 22 F1 */	bl JUTAssertion_NS_flushMessage_dbPrint
+/* 80272764 0026F6A4  48 07 22 F1 */	bl flushMessage_dbPrint__12JUTAssertionFv
 lbl_80272768:
 /* 80272768 0026F6A8  48 0E 97 65 */	bl GXFlush
-/* 8027276C 0026F6AC  3C 60 80 3D */	lis r3, lbl_803CC9E0@ha
-/* 80272770 0026F6B0  38 03 C9 E0 */	addi r0, r3, lbl_803CC9E0@l
+/* 8027276C 0026F6AC  3C 60 80 3D */	lis r3, __vt__13J2DOrthoGraph@ha
+/* 80272770 0026F6B0  38 03 C9 E0 */	addi r0, r3, __vt__13J2DOrthoGraph@l
 /* 80272774 0026F6B4  90 01 00 08 */	stw r0, 8(r1)
-/* 80272778 0026F6B8  3C 60 80 3D */	lis r3, lbl_803CC9B8@ha
-/* 8027277C 0026F6BC  38 03 C9 B8 */	addi r0, r3, lbl_803CC9B8@l
+/* 80272778 0026F6B8  3C 60 80 3D */	lis r3, __vt__14J2DGrafContext@ha
+/* 8027277C 0026F6BC  38 03 C9 B8 */	addi r0, r3, __vt__14J2DGrafContext@l
 /* 80272780 0026F6C0  90 01 00 08 */	stw r0, 8(r1)
 /* 80272784 0026F6C4  83 E1 00 FC */	lwz r31, 0xfc(r1)
 /* 80272788 0026F6C8  80 01 01 04 */	lwz r0, 0x104(r1)
 /* 8027278C 0026F6CC  7C 08 03 A6 */	mtlr r0
 /* 80272790 0026F6D0  38 21 01 00 */	addi r1, r1, 0x100
 /* 80272794 0026F6D4  4E 80 00 20 */	blr 
+
+/* 80272798 026C .text beginRender__10JFWDisplayFv beginRender__10JFWDisplayFv */
+.global beginRender__10JFWDisplayFv
+beginRender__10JFWDisplayFv:
 /* 80272798 0026F6D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027279C 0026F6DC  7C 08 02 A6 */	mflr r0
 /* 802727A0 0026F6E0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -546,7 +564,7 @@ lbl_80272768:
 /* 802727B0 0026F6F0  88 03 00 40 */	lbz r0, 0x40(r3)
 /* 802727B4 0026F6F4  28 00 00 00 */	cmplwi r0, 0
 /* 802727B8 0026F6F8  41 82 00 4C */	beq lbl_80272804
-/* 802727BC 0026F6FC  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 802727BC 0026F6FC  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 802727C0 0026F700  48 0C FF 55 */	bl OSGetTick
 /* 802727C4 0026F704  80 1E 00 50 */	lwz r0, 0x50(r30)
 /* 802727C8 0026F708  7C 00 18 50 */	subf r0, r0, r3
@@ -568,7 +586,7 @@ lbl_80272804:
 /* 80272804 0026F744  88 1F 00 40 */	lbz r0, 0x40(r31)
 /* 80272808 0026F748  28 00 00 00 */	cmplwi r0, 0
 /* 8027280C 0026F74C  41 82 00 4C */	beq lbl_80272858
-/* 80272810 0026F750  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272810 0026F750  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272814 0026F754  38 00 00 FF */	li r0, 0xff
 /* 80272818 0026F758  98 1E 00 60 */	stb r0, 0x60(r30)
 /* 8027281C 0026F75C  38 00 00 81 */	li r0, 0x81
@@ -577,7 +595,7 @@ lbl_80272804:
 /* 80272828 0026F768  98 1E 00 62 */	stb r0, 0x62(r30)
 /* 8027282C 0026F76C  48 0C FE E9 */	bl OSGetTick
 /* 80272830 0026F770  90 7E 00 50 */	stw r3, 0x50(r30)
-/* 80272834 0026F774  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272834 0026F774  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272838 0026F778  38 00 00 FF */	li r0, 0xff
 /* 8027283C 0026F77C  98 1E 00 10 */	stb r0, 0x10(r30)
 /* 80272840 0026F780  38 00 00 81 */	li r0, 0x81
@@ -589,22 +607,22 @@ lbl_80272804:
 lbl_80272858:
 /* 80272858 0026F798  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 8027285C 0026F79C  A0 9F 00 1C */	lhz r4, 0x1c(r31)
-/* 80272860 0026F7A0  48 00 04 51 */	bl waitForTick
-/* 80272864 0026F7A4  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
-/* 80272868 0026F7A8  48 07 29 A9 */	bl JUTVideo_NS_waitRetraceIfNeed
+/* 80272860 0026F7A0  48 00 04 51 */	bl waitForTick__FUlUs
+/* 80272864 0026F7A4  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
+/* 80272868 0026F7A8  48 07 29 A9 */	bl waitRetraceIfNeed__8JUTVideoFv
 /* 8027286C 0026F7AC  48 0C FE A9 */	bl OSGetTick
 /* 80272870 0026F7B0  80 1F 00 2C */	lwz r0, 0x2c(r31)
 /* 80272874 0026F7B4  7C 00 18 50 */	subf r0, r0, r3
 /* 80272878 0026F7B8  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 8027287C 0026F7BC  90 7F 00 2C */	stw r3, 0x2c(r31)
-/* 80272880 0026F7C0  80 6D 8F BC */	lwz r3, lbl_8045153C-_SDA_BASE_(r13)
+/* 80272880 0026F7C0  80 6D 8F BC */	lwz r3, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
 /* 80272884 0026F7C4  80 1F 00 2C */	lwz r0, 0x2c(r31)
 /* 80272888 0026F7C8  7C 03 00 50 */	subf r0, r3, r0
 /* 8027288C 0026F7CC  90 1F 00 34 */	stw r0, 0x34(r31)
 /* 80272890 0026F7D0  88 1F 00 40 */	lbz r0, 0x40(r31)
 /* 80272894 0026F7D4  28 00 00 00 */	cmplwi r0, 0
 /* 80272898 0026F7D8  41 82 00 4C */	beq lbl_802728E4
-/* 8027289C 0026F7DC  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 8027289C 0026F7DC  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 802728A0 0026F7E0  48 0C FE 75 */	bl OSGetTick
 /* 802728A4 0026F7E4  80 1E 00 00 */	lwz r0, 0(r30)
 /* 802728A8 0026F7E8  7C 00 18 50 */	subf r0, r0, r3
@@ -626,7 +644,7 @@ lbl_802728E4:
 /* 802728E4 0026F824  88 1F 00 40 */	lbz r0, 0x40(r31)
 /* 802728E8 0026F828  28 00 00 00 */	cmplwi r0, 0
 /* 802728EC 0026F82C  41 82 00 A8 */	beq lbl_80272994
-/* 802728F0 0026F830  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 802728F0 0026F830  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 802728F4 0026F834  38 00 00 FF */	li r0, 0xff
 /* 802728F8 0026F838  98 1E 00 24 */	stb r0, 0x24(r30)
 /* 802728FC 0026F83C  38 00 00 81 */	li r0, 0x81
@@ -635,7 +653,7 @@ lbl_802728E4:
 /* 80272908 0026F848  98 1E 00 26 */	stb r0, 0x26(r30)
 /* 8027290C 0026F84C  48 0C FE 09 */	bl OSGetTick
 /* 80272910 0026F850  90 7E 00 14 */	stw r3, 0x14(r30)
-/* 80272914 0026F854  83 CD 8F D0 */	lwz r30, lbl_80451550-_SDA_BASE_(r13)
+/* 80272914 0026F854  83 CD 8F D0 */	lwz r30, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272918 0026F858  80 1E 00 10 */	lwz r0, 0x10(r30)
 /* 8027291C 0026F85C  2C 00 00 02 */	cmpwi r0, 2
 /* 80272920 0026F860  41 82 00 60 */	beq lbl_80272980
@@ -657,7 +675,7 @@ lbl_80272940:
 /* 80272958 0026F898  90 01 00 08 */	stw r0, 8(r1)
 /* 8027295C 0026F89C  7F E3 FB 78 */	mr r3, r31
 /* 80272960 0026F8A0  38 81 00 08 */	addi r4, r1, 8
-/* 80272964 0026F8A4  48 00 05 F5 */	bl JFWDisplay_NS_clearEfb_X1_
+/* 80272964 0026F8A4  48 00 05 F5 */	bl clearEfb__10JFWDisplayF8_GXColor
 /* 80272968 0026F8A8  48 00 00 0C */	b lbl_80272974
 lbl_8027296C:
 /* 8027296C 0026F8AC  38 00 00 01 */	li r0, 1
@@ -668,11 +686,11 @@ lbl_80272974:
 /* 8027297C 0026F8BC  48 00 00 18 */	b lbl_80272994
 lbl_80272980:
 /* 80272980 0026F8C0  7F E3 FB 78 */	mr r3, r31
-/* 80272984 0026F8C4  4B FF FA 71 */	bl JFWDisplay_NS_exchangeXfb_double
+/* 80272984 0026F8C4  4B FF FA 71 */	bl exchangeXfb_double__10JFWDisplayFv
 /* 80272988 0026F8C8  48 00 00 0C */	b lbl_80272994
 lbl_8027298C:
 /* 8027298C 0026F8CC  7F E3 FB 78 */	mr r3, r31
-/* 80272990 0026F8D0  4B FF FB 6D */	bl JFWDisplay_NS_exchangeXfb_triple
+/* 80272990 0026F8D0  4B FF FB 6D */	bl exchangeXfb_triple__10JFWDisplayFv
 lbl_80272994:
 /* 80272994 0026F8D4  80 7F 00 3C */	lwz r3, 0x3c(r31)
 /* 80272998 0026F8D8  38 03 00 01 */	addi r0, r3, 1
@@ -694,9 +712,9 @@ lbl_802729D0:
 /* 802729D4 0026F914  28 00 00 00 */	cmplwi r0, 0
 /* 802729D8 0026F918  41 82 00 14 */	beq lbl_802729EC
 /* 802729DC 0026F91C  7F E3 FB 78 */	mr r3, r31
-/* 802729E0 0026F920  48 00 05 4D */	bl JFWDisplay_NS_clearEfb
+/* 802729E0 0026F920  48 00 05 4D */	bl clearEfb__10JFWDisplayFv
 /* 802729E4 0026F924  7F E3 FB 78 */	mr r3, r31
-/* 802729E8 0026F928  4B FF FC 11 */	bl JFWDisplay_NS_preGX
+/* 802729E8 0026F928  4B FF FC 11 */	bl preGX__10JFWDisplayFv
 lbl_802729EC:
 /* 802729EC 0026F92C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802729F0 0026F930  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -704,17 +722,21 @@ lbl_802729EC:
 /* 802729F8 0026F938  7C 08 03 A6 */	mtlr r0
 /* 802729FC 0026F93C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80272A00 0026F940  4E 80 00 20 */	blr 
+
+/* 80272A04 00AC .text endRender__10JFWDisplayFv endRender__10JFWDisplayFv */
+.global endRender__10JFWDisplayFv
+endRender__10JFWDisplayFv:
 /* 80272A04 0026F944  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272A08 0026F948  7C 08 02 A6 */	mflr r0
 /* 80272A0C 0026F94C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272A10 0026F950  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80272A14 0026F954  93 C1 00 08 */	stw r30, 8(r1)
 /* 80272A18 0026F958  7C 7E 1B 78 */	mr r30, r3
-/* 80272A1C 0026F95C  4B FF FC 71 */	bl JFWDisplay_NS_endGX
+/* 80272A1C 0026F95C  4B FF FC 71 */	bl endGX__10JFWDisplayFv
 /* 80272A20 0026F960  88 1E 00 40 */	lbz r0, 0x40(r30)
 /* 80272A24 0026F964  28 00 00 00 */	cmplwi r0, 0
 /* 80272A28 0026F968  41 82 00 44 */	beq lbl_80272A6C
-/* 80272A2C 0026F96C  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 80272A2C 0026F96C  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272A30 0026F970  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 80272A34 0026F974  2C 00 00 02 */	cmpwi r0, 2
 /* 80272A38 0026F978  41 82 00 34 */	beq lbl_80272A6C
@@ -728,13 +750,13 @@ lbl_80272A4C:
 /* 80272A54 0026F994  48 00 00 10 */	b lbl_80272A64
 lbl_80272A58:
 /* 80272A58 0026F998  7F C3 F3 78 */	mr r3, r30
-/* 80272A5C 0026F99C  4B FF F9 51 */	bl JFWDisplay_NS_drawendXfb_single
+/* 80272A5C 0026F99C  4B FF F9 51 */	bl drawendXfb_single__10JFWDisplayFv
 /* 80272A60 0026F9A0  48 00 00 0C */	b lbl_80272A6C
 lbl_80272A64:
 /* 80272A64 0026F9A4  7F C3 F3 78 */	mr r3, r30
-/* 80272A68 0026F9A8  4B FF FB 0D */	bl JFWDisplay_NS_copyXfb_triple
+/* 80272A68 0026F9A8  4B FF FB 0D */	bl copyXfb_triple__10JFWDisplayFv
 lbl_80272A6C:
-/* 80272A6C 0026F9AC  83 ED 8F D8 */	lwz r31, lbl_80451558-_SDA_BASE_(r13)
+/* 80272A6C 0026F9AC  83 ED 8F D8 */	lwz r31, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272A70 0026F9B0  38 00 00 FF */	li r0, 0xff
 /* 80272A74 0026F9B4  98 1F 00 38 */	stb r0, 0x38(r31)
 /* 80272A78 0026F9B8  38 00 00 81 */	li r0, 0x81
@@ -744,20 +766,24 @@ lbl_80272A6C:
 /* 80272A88 0026F9C8  48 0C FC 8D */	bl OSGetTick
 /* 80272A8C 0026F9CC  90 7F 00 28 */	stw r3, 0x28(r31)
 /* 80272A90 0026F9D0  7F C3 F3 78 */	mr r3, r30
-/* 80272A94 0026F9D4  48 00 08 89 */	bl JFWDisplay_NS_calcCombinationRatio
+/* 80272A94 0026F9D4  48 00 08 89 */	bl calcCombinationRatio__10JFWDisplayFv
 /* 80272A98 0026F9D8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80272A9C 0026F9DC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80272AA0 0026F9E0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80272AA4 0026F9E4  7C 08 03 A6 */	mtlr r0
 /* 80272AA8 0026F9E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272AAC 0026F9EC  4E 80 00 20 */	blr 
+
+/* 80272AB0 01B0 .text endFrame__10JFWDisplayFv endFrame__10JFWDisplayFv */
+.global endFrame__10JFWDisplayFv
+endFrame__10JFWDisplayFv:
 /* 80272AB0 0026F9F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272AB4 0026F9F4  7C 08 02 A6 */	mflr r0
 /* 80272AB8 0026F9F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272ABC 0026F9FC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80272AC0 0026FA00  93 C1 00 08 */	stw r30, 8(r1)
 /* 80272AC4 0026FA04  7C 7F 1B 78 */	mr r31, r3
-/* 80272AC8 0026FA08  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272AC8 0026FA08  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272ACC 0026FA0C  48 0C FC 49 */	bl OSGetTick
 /* 80272AD0 0026FA10  80 1E 00 28 */	lwz r0, 0x28(r30)
 /* 80272AD4 0026FA14  7C 00 18 50 */	subf r0, r0, r3
@@ -779,7 +805,7 @@ lbl_80272B10:
 /* 80272B10 0026FA50  88 1F 00 40 */	lbz r0, 0x40(r31)
 /* 80272B14 0026FA54  28 00 00 00 */	cmplwi r0, 0
 /* 80272B18 0026FA58  41 82 00 F0 */	beq lbl_80272C08
-/* 80272B1C 0026FA5C  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272B1C 0026FA5C  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272B20 0026FA60  38 00 00 FF */	li r0, 0xff
 /* 80272B24 0026FA64  98 1E 00 4C */	stb r0, 0x4c(r30)
 /* 80272B28 0026FA68  38 00 00 81 */	li r0, 0x81
@@ -788,7 +814,7 @@ lbl_80272B10:
 /* 80272B34 0026FA74  98 1E 00 4E */	stb r0, 0x4e(r30)
 /* 80272B38 0026FA78  48 0C FB DD */	bl OSGetTick
 /* 80272B3C 0026FA7C  90 7E 00 3C */	stw r3, 0x3c(r30)
-/* 80272B40 0026FA80  80 6D 8F D0 */	lwz r3, lbl_80451550-_SDA_BASE_(r13)
+/* 80272B40 0026FA80  80 6D 8F D0 */	lwz r3, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 80272B44 0026FA84  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 80272B48 0026FA88  2C 00 00 02 */	cmpwi r0, 2
 /* 80272B4C 0026FA8C  41 82 00 18 */	beq lbl_80272B64
@@ -799,14 +825,14 @@ lbl_80272B58:
 /* 80272B5C 0026FA9C  40 80 00 1C */	bge lbl_80272B78
 /* 80272B60 0026FAA0  48 00 00 10 */	b lbl_80272B70
 lbl_80272B64:
-/* 80272B64 0026FAA4  48 00 08 45 */	bl JFWDrawDoneAlarm
+/* 80272B64 0026FAA4  48 00 08 45 */	bl JFWDrawDoneAlarm__Fv
 /* 80272B68 0026FAA8  48 0E 93 65 */	bl GXFlush
 /* 80272B6C 0026FAAC  48 00 00 0C */	b lbl_80272B78
 lbl_80272B70:
-/* 80272B70 0026FAB0  48 00 08 39 */	bl JFWDrawDoneAlarm
+/* 80272B70 0026FAB0  48 00 08 39 */	bl JFWDrawDoneAlarm__Fv
 /* 80272B74 0026FAB4  48 0E 93 59 */	bl GXFlush
 lbl_80272B78:
-/* 80272B78 0026FAB8  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272B78 0026FAB8  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272B7C 0026FABC  48 0C FB 99 */	bl OSGetTick
 /* 80272B80 0026FAC0  80 1E 00 3C */	lwz r0, 0x3c(r30)
 /* 80272B84 0026FAC4  7C 00 18 50 */	subf r0, r0, r3
@@ -825,7 +851,7 @@ lbl_80272B78:
 /* 80272BB8 0026FAF8  38 00 00 01 */	li r0, 1
 /* 80272BBC 0026FAFC  90 1E 00 40 */	stw r0, 0x40(r30)
 lbl_80272BC0:
-/* 80272BC0 0026FB00  83 CD 8F D8 */	lwz r30, lbl_80451558-_SDA_BASE_(r13)
+/* 80272BC0 0026FB00  83 CD 8F D8 */	lwz r30, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272BC4 0026FB04  48 0C FB 51 */	bl OSGetTick
 /* 80272BC8 0026FB08  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 80272BCC 0026FB0C  7C 00 18 50 */	subf r0, r0, r3
@@ -858,7 +884,7 @@ lbl_80272C30:
 /* 80272C30 0026FB70  48 0D AC 8D */	bl VIGetRetraceCount
 /* 80272C34 0026FB74  80 0D 8C 44 */	lwz r0, lbl_804511C4-_SDA_BASE_(r13)
 /* 80272C38 0026FB78  7C 00 18 50 */	subf r0, r0, r3
-/* 80272C3C 0026FB7C  80 8D 8F D8 */	lwz r4, lbl_80451558-_SDA_BASE_(r13)
+/* 80272C3C 0026FB7C  80 8D 8F D8 */	lwz r4, sManager__10JUTProcBar-_SDA_BASE_(r13)
 /* 80272C40 0026FB80  90 04 01 04 */	stw r0, 0x104(r4)
 /* 80272C44 0026FB84  90 6D 8C 44 */	stw r3, lbl_804511C4-_SDA_BASE_(r13)
 lbl_80272C48:
@@ -869,8 +895,9 @@ lbl_80272C48:
 /* 80272C58 0026FB98  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272C5C 0026FB9C  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_waitBlanking
-JFWDisplay_NS_waitBlanking:
+/* 80272C60 0050 .text waitBlanking__10JFWDisplayFi waitBlanking__10JFWDisplayFi */
+.global waitBlanking__10JFWDisplayFi
+waitBlanking__10JFWDisplayFi:
 /* 80272C60 0026FBA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272C64 0026FBA4  7C 08 02 A6 */	mflr r0
 /* 80272C68 0026FBA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -882,7 +909,7 @@ JFWDisplay_NS_waitBlanking:
 lbl_80272C80:
 /* 80272C80 0026FBC0  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 80272C84 0026FBC4  A0 9E 00 1C */	lhz r4, 0x1c(r30)
-/* 80272C88 0026FBC8  48 00 00 29 */	bl waitForTick
+/* 80272C88 0026FBC8  48 00 00 29 */	bl waitForTick__FUlUs
 lbl_80272C8C:
 /* 80272C8C 0026FBCC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80272C90 0026FBD0  3B FF FF FF */	addi r31, r31, -1
@@ -894,8 +921,9 @@ lbl_80272C8C:
 /* 80272CA8 0026FBE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272CAC 0026FBEC  4E 80 00 20 */	blr 
 
-.global waitForTick
-waitForTick:
+/* 80272CB0 0120 .text waitForTick__FUlUs waitForTick__FUlUs */
+.global waitForTick__FUlUs
+waitForTick__FUlUs:
 /* 80272CB0 0026FBF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80272CB4 0026FBF4  7C 08 02 A6 */	mflr r0
 /* 80272CB8 0026FBF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -917,10 +945,10 @@ lbl_80272CF0:
 /* 80272CF4 0026FC34  7C 68 1B 78 */	mr r8, r3
 /* 80272CF8 0026FC38  48 00 00 1C */	b lbl_80272D14
 lbl_80272CFC:
-/* 80272CFC 0026FC3C  80 6D 8C 40 */	lwz r3, lbl_804511C0-_SDA_BASE_(r13)
+/* 80272CFC 0026FC3C  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay-_SDA_BASE_(r13)
 /* 80272D00 0026FC40  7C C4 30 10 */	subfc r6, r4, r6
 /* 80272D04 0026FC44  7C A8 39 10 */	subfe r5, r8, r7
-/* 80272D08 0026FC48  48 00 01 09 */	bl JFWDisplay_NS_threadSleep
+/* 80272D08 0026FC48  48 00 01 09 */	bl threadSleep__10JFWDisplayFx
 /* 80272D0C 0026FC4C  48 0C F9 F1 */	bl OSGetTime
 /* 80272D10 0026FC50  7C 68 1B 78 */	mr r8, r3
 lbl_80272D14:
@@ -955,7 +983,7 @@ lbl_80272D6C:
 lbl_80272D7C:
 /* 80272D7C 0026FCBC  3B E0 00 00 */	li r31, 0
 lbl_80272D80:
-/* 80272D80 0026FCC0  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 80272D80 0026FCC0  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272D84 0026FCC4  38 63 00 38 */	addi r3, r3, 0x38
 /* 80272D88 0026FCC8  38 81 00 08 */	addi r4, r1, 8
 /* 80272D8C 0026FCCC  38 A0 00 01 */	li r5, 1
@@ -977,15 +1005,17 @@ lbl_80272DB8:
 /* 80272DC4 0026FD04  7C 08 03 A6 */	mtlr r0
 /* 80272DC8 0026FD08  38 21 00 20 */	addi r1, r1, 0x20
 /* 80272DCC 0026FD0C  4E 80 00 20 */	blr 
-.global JFWThreadAlarmHandler
-JFWThreadAlarmHandler:
+
+/* 80272DD0 0040 .text JFWThreadAlarmHandler__FP7OSAlarmP9OSContext JFWThreadAlarmHandler__FP7OSAlarmP9OSContext */
+.global JFWThreadAlarmHandler__FP7OSAlarmP9OSContext
+JFWThreadAlarmHandler__FP7OSAlarmP9OSContext:
 /* 80272DD0 0026FD10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272DD4 0026FD14  7C 08 02 A6 */	mflr r0
 /* 80272DD8 0026FD18  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272DDC 0026FD1C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80272DE0 0026FD20  7C 7F 1B 78 */	mr r31, r3
-/* 80272DE4 0026FD24  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 80272DE8 0026FD28  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
+/* 80272DE4 0026FD24  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 80272DE8 0026FD28  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
 /* 80272DEC 0026FD2C  38 9F 00 2C */	addi r4, r31, 0x2c
 /* 80272DF0 0026FD30  48 06 93 6D */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 80272DF4 0026FD34  80 7F 00 28 */	lwz r3, 0x28(r31)
@@ -996,8 +1026,9 @@ JFWThreadAlarmHandler:
 /* 80272E08 0026FD48  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272E0C 0026FD4C  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_threadSleep
-JFWDisplay_NS_threadSleep:
+/* 80272E10 00A8 .text threadSleep__10JFWDisplayFx threadSleep__10JFWDisplayFx */
+.global threadSleep__10JFWDisplayFx
+threadSleep__10JFWDisplayFx:
 /* 80272E10 0026FD50  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80272E14 0026FD54  7C 08 02 A6 */	mflr r0
 /* 80272E18 0026FD58  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1013,19 +1044,17 @@ JFWDisplay_NS_threadSleep:
 /* 80272E40 0026FD80  48 0C 7A B9 */	bl OSCreateAlarm
 /* 80272E44 0026FD84  48 0C DE 41 */	bl OSGetCurrentThread
 /* 80272E48 0026FD88  90 61 00 30 */	stw r3, 0x30(r1)
-/* 80272E4C 0026FD8C  48 0C A8 A9 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80272E4C 0026FD8C  48 0C A8 A9 */	bl __RAS_OSDisableInterrupts_begin
 /* 80272E50 0026FD90  7C 7E 1B 78 */	mr r30, r3
-/* 80272E54 0026FD94  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 80272E58 0026FD98  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
+/* 80272E54 0026FD94  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 80272E58 0026FD98  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
 /* 80272E5C 0026FD9C  7F E4 FB 78 */	mr r4, r31
 /* 80272E60 0026FDA0  48 06 90 ED */	bl append__10JSUPtrListFP10JSUPtrLink
 /* 80272E64 0026FDA4  38 61 00 08 */	addi r3, r1, 8
 /* 80272E68 0026FDA8  7F 86 E3 78 */	mr r6, r28
 /* 80272E6C 0026FDAC  7F A5 EB 78 */	mr r5, r29
-.global JFWThreadAlarmHandler
-/* 80272E70 0026FDB0  3C 80 80 27 */	lis r4, JFWThreadAlarmHandler@ha
-.global JFWThreadAlarmHandler
-/* 80272E74 0026FDB4  38 E4 2D D0 */	addi r7, r4, JFWThreadAlarmHandler@l
+/* 80272E70 0026FDB0  3C 80 80 27 */	lis r4, JFWThreadAlarmHandler__FP7OSAlarmP9OSContext@ha
+/* 80272E74 0026FDB4  38 E4 2D D0 */	addi r7, r4, JFWThreadAlarmHandler__FP7OSAlarmP9OSContext@l
 /* 80272E78 0026FDB8  48 0C 7C E1 */	bl OSSetAlarm
 /* 80272E7C 0026FDBC  80 61 00 30 */	lwz r3, 0x30(r1)
 /* 80272E80 0026FDC0  48 0C EB BD */	bl OSSuspendThread
@@ -1044,15 +1073,16 @@ lbl_80272EA0:
 /* 80272EB0 0026FDF0  38 21 00 60 */	addi r1, r1, 0x60
 /* 80272EB4 0026FDF4  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_clearEfb_init
-JFWDisplay_NS_clearEfb_init:
+/* 80272EB8 0074 .text clearEfb_init__10JFWDisplayFv clearEfb_init__10JFWDisplayFv */
+.global clearEfb_init__10JFWDisplayFv
+clearEfb_init__10JFWDisplayFv:
 /* 80272EB8 0026FDF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272EBC 0026FDFC  7C 08 02 A6 */	mflr r0
 /* 80272EC0 0026FE00  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80272EC4 0026FE04  3C 60 80 43 */	lis r3, lbl_80430FF0@ha
-/* 80272EC8 0026FE08  38 63 0F F0 */	addi r3, r3, lbl_80430FF0@l
-/* 80272ECC 0026FE0C  3C 80 80 3C */	lis r4, lbl_803C4060@ha
-/* 80272ED0 0026FE10  38 84 40 60 */	addi r4, r4, lbl_803C4060@l
+/* 80272EC4 0026FE04  3C 60 80 43 */	lis r3, clear_z_tobj@ha
+/* 80272EC8 0026FE08  38 63 0F F0 */	addi r3, r3, clear_z_tobj@l
+/* 80272ECC 0026FE0C  3C 80 80 3C */	lis r4, clear_z_TX@ha
+/* 80272ED0 0026FE10  38 84 40 60 */	addi r4, r4, clear_z_TX@l
 /* 80272ED4 0026FE14  38 A0 00 04 */	li r5, 4
 /* 80272ED8 0026FE18  38 C0 00 04 */	li r6, 4
 /* 80272EDC 0026FE1C  38 E0 00 16 */	li r7, 0x16
@@ -1060,8 +1090,8 @@ JFWDisplay_NS_clearEfb_init:
 /* 80272EE4 0026FE24  39 20 00 01 */	li r9, 1
 /* 80272EE8 0026FE28  39 40 00 00 */	li r10, 0
 /* 80272EEC 0026FE2C  48 0E AF 55 */	bl GXInitTexObj
-/* 80272EF0 0026FE30  3C 60 80 43 */	lis r3, lbl_80430FF0@ha
-/* 80272EF4 0026FE34  38 63 0F F0 */	addi r3, r3, lbl_80430FF0@l
+/* 80272EF0 0026FE30  3C 60 80 43 */	lis r3, clear_z_tobj@ha
+/* 80272EF4 0026FE34  38 63 0F F0 */	addi r3, r3, clear_z_tobj@l
 /* 80272EF8 0026FE38  38 80 00 00 */	li r4, 0
 /* 80272EFC 0026FE3C  38 A0 00 00 */	li r5, 0
 /* 80272F00 0026FE40  C0 22 B8 50 */	lfs f1, lbl_80455250-_SDA2_BASE_(r2)
@@ -1076,26 +1106,28 @@ JFWDisplay_NS_clearEfb_init:
 /* 80272F24 0026FE64  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272F28 0026FE68  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_clearEfb
-JFWDisplay_NS_clearEfb:
+/* 80272F2C 002C .text clearEfb__10JFWDisplayFv clearEfb__10JFWDisplayFv */
+.global clearEfb__10JFWDisplayFv
+clearEfb__10JFWDisplayFv:
 /* 80272F2C 0026FE6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272F30 0026FE70  7C 08 02 A6 */	mflr r0
 /* 80272F34 0026FE74  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80272F38 0026FE78  80 03 00 08 */	lwz r0, 8(r3)
 /* 80272F3C 0026FE7C  90 01 00 08 */	stw r0, 8(r1)
 /* 80272F40 0026FE80  38 81 00 08 */	addi r4, r1, 8
-/* 80272F44 0026FE84  48 00 00 15 */	bl JFWDisplay_NS_clearEfb_X1_
+/* 80272F44 0026FE84  48 00 00 15 */	bl clearEfb__10JFWDisplayF8_GXColor
 /* 80272F48 0026FE88  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80272F4C 0026FE8C  7C 08 03 A6 */	mtlr r0
 /* 80272F50 0026FE90  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272F54 0026FE94  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_clearEfb_X1_
-JFWDisplay_NS_clearEfb_X1_:
+/* 80272F58 0044 .text clearEfb__10JFWDisplayF8_GXColor clearEfb__10JFWDisplayF8_GXColor */
+.global clearEfb__10JFWDisplayF8_GXColor
+clearEfb__10JFWDisplayF8_GXColor:
 /* 80272F58 0026FE98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80272F5C 0026FE9C  7C 08 02 A6 */	mflr r0
 /* 80272F60 0026FEA0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80272F64 0026FEA4  80 AD 8F B8 */	lwz r5, lbl_80451538-_SDA_BASE_(r13)
+/* 80272F64 0026FEA4  80 AD 8F B8 */	lwz r5, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272F68 0026FEA8  80 A5 00 04 */	lwz r5, 4(r5)
 /* 80272F6C 0026FEAC  A0 C5 00 04 */	lhz r6, 4(r5)
 /* 80272F70 0026FEB0  A0 E5 00 06 */	lhz r7, 6(r5)
@@ -1104,14 +1136,15 @@ JFWDisplay_NS_clearEfb_X1_:
 /* 80272F7C 0026FEBC  38 80 00 00 */	li r4, 0
 /* 80272F80 0026FEC0  38 A0 00 00 */	li r5, 0
 /* 80272F84 0026FEC4  39 01 00 08 */	addi r8, r1, 8
-/* 80272F88 0026FEC8  48 00 00 15 */	bl JFWDisplay_NS_clearEfb_X2_
+/* 80272F88 0026FEC8  48 00 00 15 */	bl clearEfb__10JFWDisplayFiiii8_GXColor
 /* 80272F8C 0026FECC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80272F90 0026FED0  7C 08 03 A6 */	mtlr r0
 /* 80272F94 0026FED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80272F98 0026FED8  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_clearEfb_X2_
-JFWDisplay_NS_clearEfb_X2_:
+/* 80272F9C 0380 .text clearEfb__10JFWDisplayFiiii8_GXColor clearEfb__10JFWDisplayFiiii8_GXColor */
+.global clearEfb__10JFWDisplayFiiii8_GXColor
+clearEfb__10JFWDisplayFiiii8_GXColor:
 /* 80272F9C 0026FEDC  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80272FA0 0026FEE0  7C 08 02 A6 */	mflr r0
 /* 80272FA4 0026FEE4  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1123,7 +1156,7 @@ JFWDisplay_NS_clearEfb_X2_:
 /* 80272FBC 0026FEFC  7C DD 33 78 */	mr r29, r6
 /* 80272FC0 0026FF00  7C FE 3B 78 */	mr r30, r7
 /* 80272FC4 0026FF04  7D 1F 43 78 */	mr r31, r8
-/* 80272FC8 0026FF08  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 80272FC8 0026FF08  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 80272FCC 0026FF0C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80272FD0 0026FF10  A3 03 00 04 */	lhz r24, 4(r3)
 /* 80272FD4 0026FF14  A3 23 00 06 */	lhz r25, 6(r3)
@@ -1168,8 +1201,8 @@ JFWDisplay_NS_clearEfb_X2_:
 /* 80273070 0026FFB0  57 05 04 3E */	clrlwi r5, r24, 0x10
 /* 80273074 0026FFB4  57 26 04 3E */	clrlwi r6, r25, 0x10
 /* 80273078 0026FFB8  48 0E D4 59 */	bl GXSetScissor
-/* 8027307C 0026FFBC  3C 60 80 3C */	lis r3, lbl_803C4020@ha
-/* 80273080 0026FFC0  38 63 40 20 */	addi r3, r3, lbl_803C4020@l
+/* 8027307C 0026FFBC  3C 60 80 3C */	lis r3, e_mtx@ha
+/* 80273080 0026FFC0  38 63 40 20 */	addi r3, r3, e_mtx@l
 /* 80273084 0026FFC4  38 80 00 00 */	li r4, 0
 /* 80273088 0026FFC8  48 0E D1 C5 */	bl GXLoadPosMtxImm
 /* 8027308C 0026FFCC  38 60 00 00 */	li r3, 0
@@ -1220,8 +1253,8 @@ JFWDisplay_NS_clearEfb_X2_:
 /* 80273140 00270080  38 E0 00 00 */	li r7, 0
 /* 80273144 00270084  39 00 00 7D */	li r8, 0x7d
 /* 80273148 00270088  48 0E 8A 35 */	bl GXSetTexCoordGen2
-/* 8027314C 0027008C  3C 60 80 43 */	lis r3, lbl_80430FF0@ha
-/* 80273150 00270090  38 63 0F F0 */	addi r3, r3, lbl_80430FF0@l
+/* 8027314C 0027008C  3C 60 80 43 */	lis r3, clear_z_tobj@ha
+/* 80273150 00270090  38 63 0F F0 */	addi r3, r3, clear_z_tobj@l
 /* 80273154 00270094  38 80 00 00 */	li r4, 0
 /* 80273158 00270098  48 0E B2 BD */	bl GXLoadTexObj
 /* 8027315C 0027009C  38 60 00 01 */	li r3, 1
@@ -1339,10 +1372,11 @@ lbl_80273304:
 /* 80273314 00270254  38 21 00 90 */	addi r1, r1, 0x90
 /* 80273318 00270258  4E 80 00 20 */	blr 
 
-.global JFWDisplay_NS_calcCombinationRatio
-JFWDisplay_NS_calcCombinationRatio:
+/* 8027331C 008C .text calcCombinationRatio__10JFWDisplayFv calcCombinationRatio__10JFWDisplayFv */
+.global calcCombinationRatio__10JFWDisplayFv
+calcCombinationRatio__10JFWDisplayFv:
 /* 8027331C 0027025C  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80273320 00270260  80 AD 8F C0 */	lwz r5, lbl_80451540-_SDA_BASE_(r13)
+/* 80273320 00270260  80 AD 8F C0 */	lwz r5, sVideoInterval__8JUTVideo-_SDA_BASE_(r13)
 /* 80273324 00270264  80 C3 00 30 */	lwz r6, 0x30(r3)
 /* 80273328 00270268  54 C0 08 3C */	slwi r0, r6, 1
 /* 8027332C 0027026C  7C A7 2B 78 */	mr r7, r5
@@ -1381,8 +1415,9 @@ lbl_802733A0:
 /* 802733A0 002702E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802733A4 002702E4  4E 80 00 20 */	blr 
 
-.global JFWDrawDoneAlarm
-JFWDrawDoneAlarm:
+/* 802733A8 00DC .text JFWDrawDoneAlarm__Fv JFWDrawDoneAlarm__Fv */
+.global JFWDrawDoneAlarm__Fv
+JFWDrawDoneAlarm__Fv:
 /* 802733A8 002702E8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802733AC 002702EC  7C 08 02 A6 */	mflr r0
 /* 802733B0 002702F0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1392,12 +1427,12 @@ JFWDrawDoneAlarm:
 /* 802733C0 00270300  7F E3 FB 78 */	mr r3, r31
 /* 802733C4 00270304  38 81 00 08 */	addi r4, r1, 8
 /* 802733C8 00270308  48 06 8A 35 */	bl __ct__10JSUPtrLinkFPv
-/* 802733CC 0027030C  48 0C A3 29 */	bl __RAS_OSDisableInterrupts_begin 
+/* 802733CC 0027030C  48 0C A3 29 */	bl __RAS_OSDisableInterrupts_begin
 /* 802733D0 00270310  7C 7E 1B 78 */	mr r30, r3
 /* 802733D4 00270314  38 61 00 08 */	addi r3, r1, 8
 /* 802733D8 00270318  48 0C 75 21 */	bl OSCreateAlarm
-/* 802733DC 0027031C  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 802733E0 00270320  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
+/* 802733DC 0027031C  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 802733E0 00270320  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
 /* 802733E4 00270324  7F E4 FB 78 */	mr r4, r31
 /* 802733E8 00270328  48 06 8B 65 */	bl append__10JSUPtrListFP10JSUPtrLink
 /* 802733EC 0027032C  C8 42 B8 70 */	lfd f2, lbl_80455270-_SDA2_BASE_(r2)
@@ -1411,20 +1446,18 @@ JFWDrawDoneAlarm:
 /* 8027340C 0027034C  C8 01 00 48 */	lfd f0, 0x48(r1)
 /* 80273410 00270350  FC 00 08 28 */	fsub f0, f0, f1
 /* 80273414 00270354  FC 22 00 32 */	fmul f1, f2, f0
-/* 80273418 00270358  48 0E F3 59 */	bl func_80362770
+/* 80273418 00270358  48 0E F3 59 */	bl __cvt_dbl_usll
 /* 8027341C 0027035C  7C 65 1B 78 */	mr r5, r3
 /* 80273420 00270360  38 61 00 08 */	addi r3, r1, 8
 /* 80273424 00270364  7C 86 23 78 */	mr r6, r4
-.global JFWGXAbortAlarmHandler
-/* 80273428 00270368  3C 80 80 27 */	lis r4, JFWGXAbortAlarmHandler@ha
-.global JFWGXAbortAlarmHandler
-/* 8027342C 0027036C  38 E4 34 84 */	addi r7, r4, JFWGXAbortAlarmHandler@l
+/* 80273428 00270368  3C 80 80 27 */	lis r4, JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext@ha
+/* 8027342C 0027036C  38 E4 34 84 */	addi r7, r4, JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext@l
 /* 80273430 00270370  48 0C 77 29 */	bl OSSetAlarm
 /* 80273434 00270374  48 0E 8E C1 */	bl GXDrawDone
 /* 80273438 00270378  38 61 00 08 */	addi r3, r1, 8
 /* 8027343C 0027037C  48 0C 78 01 */	bl OSCancelAlarm
-/* 80273440 00270380  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 80273444 00270384  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
+/* 80273440 00270380  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 80273444 00270384  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
 /* 80273448 00270388  7F E4 FB 78 */	mr r4, r31
 /* 8027344C 0027038C  48 06 8D 11 */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 80273450 00270390  7F C3 F3 78 */	mr r3, r30
@@ -1441,14 +1474,16 @@ lbl_8027346C:
 /* 80273478 002703B8  7C 08 03 A6 */	mtlr r0
 /* 8027347C 002703BC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80273480 002703C0  4E 80 00 20 */	blr 
-.global JFWGXAbortAlarmHandler
-JFWGXAbortAlarmHandler:
+
+/* 80273484 0078 .text JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext */
+.global JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext
+JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext:
 /* 80273484 002703C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273488 002703C8  7C 08 02 A6 */	mflr r0
 /* 8027348C 002703CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80273490 002703D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80273494 002703D4  93 C1 00 08 */	stw r30, 8(r1)
-/* 80273498 002703D8  48 00 00 65 */	bl diagnoseGpHang
+/* 80273498 002703D8  48 00 00 65 */	bl diagnoseGpHang__Fv
 /* 8027349C 002703DC  48 0E 8B F9 */	bl GXAbortFrame
 /* 802734A0 002703E0  38 00 00 61 */	li r0, 0x61
 /* 802734A4 002703E4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -1475,8 +1510,9 @@ lbl_802734E0:
 /* 802734F4 00270434  38 21 00 10 */	addi r1, r1, 0x10
 /* 802734F8 00270438  4E 80 00 20 */	blr 
 
-.global diagnoseGpHang
-diagnoseGpHang:
+/* 802734FC 01E0 .text diagnoseGpHang__Fv diagnoseGpHang__Fv */
+.global diagnoseGpHang__Fv
+diagnoseGpHang__Fv:
 /* 802734FC 0027043C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80273500 00270440  7C 08 02 A6 */	mflr r0
 /* 80273504 00270444  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1602,28 +1638,32 @@ lbl_802736C4:
 /* 802736D0 00270610  7C 08 03 A6 */	mtlr r0
 /* 802736D4 00270614  38 21 00 40 */	addi r1, r1, 0x40
 /* 802736D8 00270618  4E 80 00 20 */	blr 
+
+/* 802736DC 0048 .text __sinit_JFWDisplay_cpp __sinit_JFWDisplay_cpp */
+.global __sinit_JFWDisplay_cpp
+__sinit_JFWDisplay_cpp:
 /* 802736DC 0027061C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802736E0 00270620  7C 08 02 A6 */	mflr r0
 /* 802736E4 00270624  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802736E8 00270628  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 802736EC 0027062C  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
+/* 802736E8 00270628  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 802736EC 0027062C  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
 /* 802736F0 00270630  38 80 00 00 */	li r4, 0
 /* 802736F4 00270634  48 06 87 81 */	bl __ct__10JSUPtrListFb
-/* 802736F8 00270638  3C 60 80 43 */	lis r3, lbl_80430FE4@ha
-/* 802736FC 0027063C  38 63 0F E4 */	addi r3, r3, lbl_80430FE4@l
-.global JSUList_NS_dtor
-/* 80273700 00270640  3C 80 80 27 */	lis r4, JSUList_NS_dtor@ha
-.global JSUList_NS_dtor
-/* 80273704 00270644  38 84 37 24 */	addi r4, r4, JSUList_NS_dtor@l
+/* 802736F8 00270638  3C 60 80 43 */	lis r3, sList__8JFWAlarm@ha
+/* 802736FC 0027063C  38 63 0F E4 */	addi r3, r3, sList__8JFWAlarm@l
+/* 80273700 00270640  3C 80 80 27 */	lis r4, func_80273724@ha
+/* 80273704 00270644  38 84 37 24 */	addi r4, r4, func_80273724@l
 /* 80273708 00270648  3C A0 80 43 */	lis r5, lbl_80430FD8@ha
 /* 8027370C 0027064C  38 A5 0F D8 */	addi r5, r5, lbl_80430FD8@l
-/* 80273710 00270650  48 0E E5 15 */	bl func_80361C24
+/* 80273710 00270650  48 0E E5 15 */	bl __register_global_object
 /* 80273714 00270654  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80273718 00270658  7C 08 03 A6 */	mtlr r0
 /* 8027371C 0027065C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80273720 00270660  4E 80 00 20 */	blr 
-.global JSUList_NS_dtor
-JSUList_NS_dtor:
+
+/* 80273724 0054 .text func_80273724 __dt__18JSUList<8JFWAlarm>Fv */
+.global func_80273724
+func_80273724:
 /* 80273724 00270664  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273728 00270668  7C 08 02 A6 */	mflr r0
 /* 8027372C 0027066C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1646,4 +1686,145 @@ lbl_8027375C:
 /* 8027376C 002706AC  7C 08 03 A6 */	mtlr r0
 /* 80273770 002706B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80273774 002706B4  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039A878 00D0 .rodata lbl_8039A878 @stringBase0 */
+.global lbl_8039A878
+lbl_8039A878:
+.byte 0x47, 0x50, 0x20, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x20, 0x25, 0x64, 0x25, 0x64, 0x25, 0x64 /* baserom.dol+0x397878 */
+.byte 0x25, 0x64, 0x25, 0x64, 0x25, 0x64, 0x20, 0x2d, 0x2d, 0x3e, 0x20, 0x00, 0x47, 0x50, 0x20, 0x68 /* baserom.dol+0x397888 */
+.byte 0x61, 0x6e, 0x67, 0x20, 0x64, 0x75, 0x65, 0x20, 0x74, 0x6f, 0x20, 0x58, 0x46, 0x20, 0x73, 0x74 /* baserom.dol+0x397898 */
+.byte 0x61, 0x6c, 0x6c, 0x20, 0x62, 0x75, 0x67, 0x2e, 0x0a, 0x00, 0x47, 0x50, 0x20, 0x68, 0x61, 0x6e /* baserom.dol+0x3978a8 */
+.byte 0x67, 0x20, 0x64, 0x75, 0x65, 0x20, 0x74, 0x6f, 0x20, 0x75, 0x6e, 0x74, 0x65, 0x72, 0x6d, 0x69 /* baserom.dol+0x3978b8 */
+.byte 0x6e, 0x61, 0x74, 0x65, 0x64, 0x20, 0x70, 0x72, 0x69, 0x6d, 0x69, 0x74, 0x69, 0x76, 0x65, 0x2e /* baserom.dol+0x3978c8 */
+.byte 0x0a, 0x00, 0x47, 0x50, 0x20, 0x68, 0x61, 0x6e, 0x67, 0x20, 0x64, 0x75, 0x65, 0x20, 0x74, 0x6f /* baserom.dol+0x3978d8 */
+.byte 0x20, 0x69, 0x6c, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x20, 0x69, 0x6e, 0x73, 0x74, 0x72, 0x75, 0x63 /* baserom.dol+0x3978e8 */
+.byte 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x0a, 0x00, 0x47, 0x50, 0x20, 0x61, 0x70, 0x70, 0x65, 0x61, 0x72 /* baserom.dol+0x3978f8 */
+.byte 0x73, 0x20, 0x74, 0x6f, 0x20, 0x62, 0x65, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x68, 0x75, 0x6e, 0x67 /* baserom.dol+0x397908 */
+.byte 0x20, 0x28, 0x77, 0x61, 0x69, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x66, 0x6f, 0x72, 0x20, 0x69, 0x6e /* baserom.dol+0x397918 */
+.byte 0x70, 0x75, 0x74, 0x29, 0x2e, 0x0a, 0x00, 0x47, 0x50, 0x20, 0x69, 0x73, 0x20, 0x69, 0x6e, 0x20 /* baserom.dol+0x397928 */
+.byte 0x75, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x20, 0x73, 0x74, 0x61, 0x74, 0x65, 0x2e, 0x0a, 0x00 /* baserom.dol+0x397938 */
+
+
+
+.section .data, "aw"
+/* 803C4020 0030 .data e_mtx e_mtx */
+.global e_mtx
+e_mtx:
+.byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c1020 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c1030 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c1040 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c1050 */
+
+/* 803C4060 0040 .data clear_z_TX clear_z_TX */
+.global clear_z_TX
+clear_z_TX:
+.byte 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff /* baserom.dol+0x3c1060 */
+.byte 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff, 0x00, 0xff /* baserom.dol+0x3c1070 */
+.byte 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3c1080 */
+.byte 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3c1090 */
+
+/* 803C40A0 0018 .data __vt__10JFWDisplay __vt__10JFWDisplay */
+.global __vt__10JFWDisplay
+__vt__10JFWDisplay:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x27, 0x27, 0x98, 0x80, 0x27, 0x2a, 0x04 /* baserom.dol+0x3c10a0 */
+.byte 0x80, 0x27, 0x2a, 0xb0, 0x80, 0x27, 0x21, 0x60 /* baserom.dol+0x3c10b0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c10b8 */
+
+
+
+.section .bss, "aw"
+/* 80430FD8 000C .bss lbl_80430FD8 @2184 */
+.global lbl_80430FD8
+lbl_80430FD8:
+.skip 0xc
+
+/* 80430FE4 000C .bss sList__8JFWAlarm sList__8JFWAlarm */
+.global sList__8JFWAlarm
+sList__8JFWAlarm:
+.skip 0xc
+
+/* 80430FF0 0020 .bss clear_z_tobj clear_z_tobj */
+.global clear_z_tobj
+clear_z_tobj:
+.skip 0x20
+
+
+
+.section .sbss, "aw"
+/* 804511C0 0004 .sbss sManager__10JFWDisplay sManager__10JFWDisplay */
+.global sManager__10JFWDisplay
+sManager__10JFWDisplay:
+.skip 0x4
+
+/* 804511C4 0004 .sbss lbl_804511C4 prevFrame$2597 */
+.global lbl_804511C4
+lbl_804511C4:
+.skip 0x4
+
+/* 804511C8 0008 .sbss lbl_804511C8 lbl_804511C8 */
+.global lbl_804511C8
+lbl_804511C8:
+.skip 0x8
+
+/* 804511D0 0004 .sbss lbl_804511D0 nextTick$2642 */
+.global lbl_804511D0
+lbl_804511D0:
+.skip 0x4
+
+/* 804511D4 0004 .sbss lbl_804511D4 lbl_804511D4 */
+.global lbl_804511D4
+lbl_804511D4:
+.skip 0x4
+
+/* 804511D8 0004 .sbss lbl_804511D8 lbl_804511D8 */
+.global lbl_804511D8
+lbl_804511D8:
+.skip 0x4
+
+/* 804511DC 0004 .sbss lbl_804511DC nextCount$2650 */
+.global lbl_804511DC
+lbl_804511DC:
+.skip 0x4
+
+/* 804511E0 0008 .sbss lbl_804511E0 lbl_804511E0 */
+.global lbl_804511E0
+lbl_804511E0:
+.skip 0x8
+
+
+
+.section .sdata2, "a"
+/* 80455250 0004 .sdata2 lbl_80455250 @2198 */
+.global lbl_80455250
+lbl_80455250:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40b0 */
+
+/* 80455254 0004 .sdata2 lbl_80455254 @2497 */
+.global lbl_80455254
+lbl_80455254:
+.byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d40b4 */
+
+/* 80455258 0004 .sdata2 lbl_80455258 @2498 */
+.global lbl_80455258
+lbl_80455258:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d40b8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40bc */
+
+/* 80455260 0008 .sdata2 lbl_80455260 @2500 */
+.global lbl_80455260
+lbl_80455260:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40c0 */
+
+/* 80455268 0008 .sdata2 lbl_80455268 @2933 */
+.global lbl_80455268
+lbl_80455268:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40c8 */
+
+/* 80455270 0008 .sdata2 lbl_80455270 @2964 */
+.global lbl_80455270
+lbl_80455270:
+.byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40d0 */
 

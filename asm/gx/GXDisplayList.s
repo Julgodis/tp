@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8035fef0
 
-
+.section .text, "ax"
+/* 8035FEF0 0070 .text GXCallDisplayList GXCallDisplayList */
 .global GXCallDisplayList
 GXCallDisplayList:
 /* 8035FEF0 0035CE30  7C 08 02 A6 */	mflr r0
@@ -12,13 +12,13 @@ GXCallDisplayList:
 /* 8035FF00 0035CE40  3B E4 00 00 */	addi r31, r4, 0
 /* 8035FF04 0035CE44  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8035FF08 0035CE48  3B C3 00 00 */	addi r30, r3, 0
-/* 8035FF0C 0035CE4C  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035FF0C 0035CE4C  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 8035FF10 0035CE50  80 05 05 AC */	lwz r0, 0x5ac(r5)
 /* 8035FF14 0035CE54  28 00 00 00 */	cmplwi r0, 0
 /* 8035FF18 0035CE58  41 82 00 08 */	beq lbl_8035FF20
 /* 8035FF1C 0035CE5C  4B FF C7 C9 */	bl __GXSetDirtyState
 lbl_8035FF20:
-/* 8035FF20 0035CE60  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035FF20 0035CE60  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035FF24 0035CE64  80 03 00 00 */	lwz r0, 0(r3)
 /* 8035FF28 0035CE68  28 00 00 00 */	cmplwi r0, 0
 /* 8035FF2C 0035CE6C  40 82 00 08 */	bne lbl_8035FF34

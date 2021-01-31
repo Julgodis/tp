@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a9528
 
-
+.section .text, "ax"
+/* 802A9528 0064 .text parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc */
+.global parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc
+parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc:
 /* 802A9528 002A6468  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802A952C 002A646C  88 85 00 00 */	lbz r4, 0(r5)
 /* 802A9530 002A6470  7C 86 23 78 */	mr r6, r4
@@ -31,6 +33,10 @@ lbl_802A9564:
 lbl_802A9584:
 /* 802A9584 002A64C4  7C C3 33 78 */	mr r3, r6
 /* 802A9588 002A64C8  4E 80 00 20 */	blr 
+
+/* 802A958C 0100 .text parseCharacter_UTF8__Q28JMessage6localeFPPCc parseCharacter_UTF8__Q28JMessage6localeFPPCc */
+.global parseCharacter_UTF8__Q28JMessage6localeFPPCc
+parseCharacter_UTF8__Q28JMessage6localeFPPCc:
 /* 802A958C 002A64CC  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A9590 002A64D0  88 A4 00 00 */	lbz r5, 0(r4)
 /* 802A9594 002A64D4  7C A6 2B 78 */	mr r6, r5

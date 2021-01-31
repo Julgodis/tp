@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033ca80
 
-
+.section .text, "ax"
+/* 8033CA80 0188 .text PackArgs PackArgs */
 .global PackArgs
 PackArgs:
 /* 8033CA80 003399C0  7C 08 02 A6 */	mflr r0
@@ -114,6 +114,7 @@ lbl_8033CBF4:
 /* 8033CC00 00339B40  7C 08 03 A6 */	mtlr r0
 /* 8033CC04 00339B44  4E 80 00 20 */	blr 
 
+/* 8033CC08 003C .text Run Run */
 .global Run
 Run:
 /* 8033CC08 00339B48  7C 08 02 A6 */	mflr r0
@@ -132,6 +133,7 @@ Run:
 /* 8033CC3C 00339B7C  7C 08 03 A6 */	mtlr r0
 /* 8033CC40 00339B80  4E 80 00 20 */	blr 
 
+/* 8033CC44 006C .text ReadDisc ReadDisc */
 .global ReadDisc
 ReadDisc:
 /* 8033CC44 00339B84  7C 08 02 A6 */	mflr r0
@@ -165,12 +167,15 @@ lbl_8033CC90:
 /* 8033CCA4 00339BE4  38 21 00 48 */	addi r1, r1, 0x48
 /* 8033CCA8 00339BE8  7C 08 03 A6 */	mtlr r0
 /* 8033CCAC 00339BEC  4E 80 00 20 */	blr 
-.global Callback
-Callback:
+
+/* 8033CCB0 000C .text func_8033CCB0 Callback */
+.global func_8033CCB0
+func_8033CCB0:
 /* 8033CCB0 00339BF0  38 00 00 01 */	li r0, 1
-/* 8033CCB4 00339BF4  90 0D 90 D8 */	stw r0, lbl_80451658-_SDA_BASE_(r13)
+/* 8033CCB4 00339BF4  90 0D 90 D8 */	stw r0, Prepared-_SDA_BASE_(r13)
 /* 8033CCB8 00339BF8  4E 80 00 20 */	blr 
 
+/* 8033CCBC 0040 .text __OSGetExecParams __OSGetExecParams */
 .global __OSGetExecParams
 __OSGetExecParams:
 /* 8033CCBC 00339BFC  7C 08 02 A6 */	mflr r0
@@ -192,6 +197,7 @@ lbl_8033CCEC:
 /* 8033CCF4 00339C34  7C 08 03 A6 */	mtlr r0
 /* 8033CCF8 00339C38  4E 80 00 20 */	blr 
 
+/* 8033CCFC 00C4 .text GetApploaderPosition GetApploaderPosition */
 .global GetApploaderPosition
 GetApploaderPosition:
 /* 8033CCFC 00339C3C  7C 08 02 A6 */	mflr r0
@@ -252,6 +258,7 @@ lbl_8033CDAC:
 /* 8033CDB8 00339CF8  7C 08 03 A6 */	mtlr r0
 /* 8033CDBC 00339CFC  4E 80 00 20 */	blr 
 
+/* 8033CDC0 0484 .text __OSBootDolSimple __OSBootDolSimple */
 .global __OSBootDolSimple
 __OSBootDolSimple:
 /* 8033CDC0 00339D00  7C 08 02 A6 */	mflr r0
@@ -265,7 +272,7 @@ __OSBootDolSimple:
 /* 8033CDE0 00339D20  7C F9 3B 78 */	mr r25, r7
 /* 8033CDE4 00339D24  7D 1A 43 78 */	mr r26, r8
 /* 8033CDE8 00339D28  7D 3E 4B 78 */	mr r30, r9
-/* 8033CDEC 00339D2C  48 00 09 09 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033CDEC 00339D2C  48 00 09 09 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033CDF0 00339D30  38 60 00 1C */	li r3, 0x1c
 /* 8033CDF4 00339D34  38 80 00 01 */	li r4, 1
 /* 8033CDF8 00339D38  4B FF E4 B5 */	bl OSAllocFromArenaLo
@@ -292,11 +299,9 @@ lbl_8033CE40:
 /* 8033CE48 00339D88  48 00 E4 2D */	bl DVDSetAutoInvalidation
 /* 8033CE4C 00339D8C  48 00 E4 39 */	bl DVDResume
 /* 8033CE50 00339D90  38 00 00 00 */	li r0, 0
-.global Callback
-/* 8033CE54 00339D94  3C 60 80 34 */	lis r3, Callback@ha
-/* 8033CE58 00339D98  90 0D 90 D8 */	stw r0, lbl_80451658-_SDA_BASE_(r13)
-.global Callback
-/* 8033CE5C 00339D9C  38 63 CC B0 */	addi r3, r3, Callback@l
+/* 8033CE54 00339D94  3C 60 80 34 */	lis r3, func_8033CCB0@ha
+/* 8033CE58 00339D98  90 0D 90 D8 */	stw r0, Prepared-_SDA_BASE_(r13)
+/* 8033CE5C 00339D9C  38 63 CC B0 */	addi r3, r3, func_8033CCB0@l
 /* 8033CE60 00339DA0  48 00 E8 C1 */	bl __DVDPrepareResetAsync
 /* 8033CE64 00339DA4  38 60 FF E0 */	li r3, -32
 /* 8033CE68 00339DA8  48 00 0C 55 */	bl __OSMaskInterrupts
@@ -315,10 +320,10 @@ lbl_8033CE84:
 /* 8033CE90 00339DD0  38 60 00 00 */	li r3, 0
 /* 8033CE94 00339DD4  48 00 29 D1 */	bl __OSDoHotReset
 lbl_8033CE98:
-/* 8033CE98 00339DD8  80 0D 90 D8 */	lwz r0, lbl_80451658-_SDA_BASE_(r13)
+/* 8033CE98 00339DD8  80 0D 90 D8 */	lwz r0, Prepared-_SDA_BASE_(r13)
 /* 8033CE9C 00339DDC  2C 00 00 01 */	cmpwi r0, 1
 /* 8033CEA0 00339DE0  40 82 FF E4 */	bne lbl_8033CE84
-/* 8033CEA4 00339DE4  80 0D 90 8C */	lwz r0, lbl_8045160C-_SDA_BASE_(r13)
+/* 8033CEA4 00339DE4  80 0D 90 8C */	lwz r0, __OSIsGcam-_SDA_BASE_(r13)
 /* 8033CEA8 00339DE8  2C 00 00 00 */	cmpwi r0, 0
 /* 8033CEAC 00339DEC  40 82 00 7C */	bne lbl_8033CF28
 /* 8033CEB0 00339DF0  48 00 E7 71 */	bl DVDGetCurrentDiskID
@@ -383,7 +388,7 @@ lbl_8033CF28:
 /* 8033CF80 00339EC0  38 83 FC 38 */	addi r4, r3, lbl_803CFC38@l
 /* 8033CF84 00339EC4  7F C3 F3 78 */	mr r3, r30
 /* 8033CF88 00339EC8  38 A0 00 0A */	li r5, 0xa
-/* 8033CF8C 00339ECC  48 02 B9 C9 */	bl func_80368954
+/* 8033CF8C 00339ECC  48 02 B9 C9 */	bl strncmp
 /* 8033CF90 00339ED0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033CF94 00339ED4  40 81 00 0C */	ble lbl_8033CFA0
 /* 8033CF98 00339ED8  38 00 00 01 */	li r0, 1
@@ -528,7 +533,7 @@ lbl_8033D11C:
 /* 8033D178 0033A0B8  38 63 30 00 */	addi r3, r3, 0xCC003000@l
 /* 8033D17C 0033A0BC  38 00 00 07 */	li r0, 7
 /* 8033D180 0033A0C0  90 03 00 24 */	stw r0, 0x24(r3)
-/* 8033D184 0033A0C4  48 00 05 71 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033D184 0033A0C4  48 00 05 71 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033D188 0033A0C8  7F 83 E3 78 */	mr r3, r28
 /* 8033D18C 0033A0CC  4B FF FA 7D */	bl Run
 /* 8033D190 0033A0D0  48 00 00 A0 */	b lbl_8033D230
@@ -572,7 +577,7 @@ lbl_8033D1FC:
 /* 8033D214 0033A154  38 04 00 1F */	addi r0, r4, 0x1f
 /* 8033D218 0033A158  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
 /* 8033D21C 0033A15C  4B FF E4 75 */	bl ICInvalidateRange
-/* 8033D220 0033A160  48 00 04 D5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033D220 0033A160  48 00 04 D5 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033D224 0033A164  4B FF E4 A1 */	bl ICFlashInvalidate
 /* 8033D228 0033A168  3C 60 81 30 */	lis r3, 0x8130
 /* 8033D22C 0033A16C  4B FF F9 DD */	bl Run
@@ -583,6 +588,7 @@ lbl_8033D230:
 /* 8033D23C 0033A17C  7C 08 03 A6 */	mtlr r0
 /* 8033D240 0033A180  4E 80 00 20 */	blr 
 
+/* 8033D244 019C .text __OSBootDol __OSBootDol */
 .global __OSBootDol
 __OSBootDol:
 /* 8033D244 0033A184  7C 08 02 A6 */	mflr r0
@@ -601,7 +607,7 @@ __OSBootDol:
 /* 8033D278 0033A1B8  4C C6 31 82 */	crclr 6
 /* 8033D27C 0033A1BC  38 61 00 1C */	addi r3, r1, 0x1c
 /* 8033D280 0033A1C0  38 8D 84 28 */	addi r4, r13, lbl_804509A8-_SDA_BASE_
-/* 8033D284 0033A1C4  48 02 92 59 */	bl func_803664DC
+/* 8033D284 0033A1C4  48 02 92 59 */	bl sprintf
 /* 8033D288 0033A1C8  28 1E 00 00 */	cmplwi r30, 0
 /* 8033D28C 0033A1CC  3B E0 00 00 */	li r31, 0
 /* 8033D290 0033A1D0  41 82 00 28 */	beq lbl_8033D2B8
@@ -698,4 +704,35 @@ lbl_8033D3A8:
 /* 8033D3D4 0033A314  38 21 00 40 */	addi r1, r1, 0x40
 /* 8033D3D8 0033A318  7C 08 03 A6 */	mtlr r0
 /* 8033D3DC 0033A31C  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CFC38 000B .data lbl_803CFC38 @115 */
+.global lbl_803CFC38
+lbl_803CFC38:
+.byte 0x32, 0x30, 0x30, 0x34, 0x2f, 0x30, 0x32, 0x2f, 0x30, 0x31, 0x00 /* baserom.dol+0x3ccc38 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ccc43 */
+
+
+
+.section .sdata, "a"
+/* 804509A8 0003 .sdata lbl_804509A8 @213 */
+.global lbl_804509A8
+lbl_804509A8:
+.byte 0x25, 0x64, 0x00 /* baserom.dol+0x3d0708 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d070b */
+
+
+
+.section .sbss, "aw"
+/* 80451658 0004 .sbss Prepared Prepared */
+.global Prepared
+Prepared:
+.skip 0x4
+
+/* 8045165C 0004 .sbss lbl_8045165C apploaderPosition$69 */
+.global lbl_8045165C
+lbl_8045165C:
+.skip 0x4
 

@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8028b610
 
-
-.global JStudio_JStage_NS_TAdaptor_ambientLight
-JStudio_JStage_NS_TAdaptor_ambientLight:
+.section .text, "ax"
+/* 8028B610 009C .text __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */
+.global __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight
+__ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight:
 /* 8028B610 00288550  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B614 00288554  7C 08 02 A6 */	mflr r0
 /* 8028B618 00288558  90 01 00 24 */	stw r0, 0x24(r1)
@@ -14,8 +14,8 @@ JStudio_JStage_NS_TAdaptor_ambientLight:
 /* 8028B628 00288568  7C 9E 23 78 */	mr r30, r4
 /* 8028B62C 0028856C  7C BF 2B 78 */	mr r31, r5
 /* 8028B630 00288570  7F A5 EB 78 */	mr r5, r29
-/* 8028B634 00288574  3C 60 80 3C */	lis r3, lbl_803C5610@ha
-/* 8028B638 00288578  38 03 56 10 */	addi r0, r3, lbl_803C5610@l
+/* 8028B634 00288574  3C 60 80 3C */	lis r3, __vt__Q27JStudio8TAdaptor@ha
+/* 8028B638 00288578  38 03 56 10 */	addi r0, r3, __vt__Q27JStudio8TAdaptor@l
 /* 8028B63C 0028857C  90 1D 00 00 */	stw r0, 0(r29)
 /* 8028B640 00288580  38 00 00 00 */	li r0, 0
 /* 8028B644 00288584  90 1D 00 04 */	stw r0, 4(r29)
@@ -23,21 +23,19 @@ JStudio_JStage_NS_TAdaptor_ambientLight:
 /* 8028B64C 0028858C  90 7D 00 08 */	stw r3, 8(r29)
 /* 8028B650 00288590  38 00 00 04 */	li r0, 4
 /* 8028B654 00288594  90 1D 00 0C */	stw r0, 0xc(r29)
-/* 8028B658 00288598  3C 80 80 3C */	lis r4, lbl_803C5560@ha
-/* 8028B65C 0028859C  38 04 55 60 */	addi r0, r4, lbl_803C5560@l
+/* 8028B658 00288598  3C 80 80 3C */	lis r4, __vt__Q27JStudio21TAdaptor_ambientLight@ha
+/* 8028B65C 0028859C  38 04 55 60 */	addi r0, r4, __vt__Q27JStudio21TAdaptor_ambientLight@l
 /* 8028B660 002885A0  90 1D 00 00 */	stw r0, 0(r29)
-.global JStudio_NS_TVariableValue
-/* 8028B664 002885A4  3C 80 80 29 */	lis r4, JStudio_NS_TVariableValue@ha
-.global JStudio_NS_TVariableValue
-/* 8028B668 002885A8  38 84 B5 68 */	addi r4, r4, JStudio_NS_TVariableValue@l
+/* 8028B664 002885A4  3C 80 80 29 */	lis r4, __ct__Q27JStudio14TVariableValueFv@ha
+/* 8028B668 002885A8  38 84 B5 68 */	addi r4, r4, __ct__Q27JStudio14TVariableValueFv@l
 /* 8028B66C 002885AC  38 A0 00 00 */	li r5, 0
 /* 8028B670 002885B0  38 C0 00 14 */	li r6, 0x14
 /* 8028B674 002885B4  38 E0 00 04 */	li r7, 4
-/* 8028B678 002885B8  48 0D 66 E9 */	bl func_80361D60
+/* 8028B678 002885B8  48 0D 66 E9 */	bl __construct_array
 /* 8028B67C 002885BC  93 DD 00 60 */	stw r30, 0x60(r29)
 /* 8028B680 002885C0  93 FD 00 64 */	stw r31, 0x64(r29)
-/* 8028B684 002885C4  3C 60 80 3C */	lis r3, lbl_803C5888@ha
-/* 8028B688 002885C8  38 03 58 88 */	addi r0, r3, lbl_803C5888@l
+/* 8028B684 002885C4  3C 60 80 3C */	lis r3, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@ha
+/* 8028B688 002885C8  38 03 58 88 */	addi r0, r3, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@l
 /* 8028B68C 002885CC  90 1D 00 00 */	stw r0, 0(r29)
 /* 8028B690 002885D0  7F A3 EB 78 */	mr r3, r29
 /* 8028B694 002885D4  39 61 00 20 */	addi r11, r1, 0x20
@@ -46,6 +44,10 @@ JStudio_JStage_NS_TAdaptor_ambientLight:
 /* 8028B6A0 002885E0  7C 08 03 A6 */	mtlr r0
 /* 8028B6A4 002885E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028B6A8 002885E8  4E 80 00 20 */	blr 
+
+/* 8028B6AC 0074 .text __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+.global __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv
+__dt__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B6AC 002885EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B6B0 002885F0  7C 08 02 A6 */	mflr r0
 /* 8028B6B4 002885F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -54,8 +56,8 @@ JStudio_JStage_NS_TAdaptor_ambientLight:
 /* 8028B6C0 00288600  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028B6C4 00288604  7C 9F 23 78 */	mr r31, r4
 /* 8028B6C8 00288608  41 82 00 3C */	beq lbl_8028B704
-/* 8028B6CC 0028860C  3C 80 80 3C */	lis r4, lbl_803C5888@ha
-/* 8028B6D0 00288610  38 04 58 88 */	addi r0, r4, lbl_803C5888@l
+/* 8028B6CC 0028860C  3C 80 80 3C */	lis r4, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@ha
+/* 8028B6D0 00288610  38 04 58 88 */	addi r0, r4, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@l
 /* 8028B6D4 00288614  90 1E 00 00 */	stw r0, 0(r30)
 /* 8028B6D8 00288618  81 83 00 00 */	lwz r12, 0(r3)
 /* 8028B6DC 0028861C  81 8C 00 14 */	lwz r12, 0x14(r12)
@@ -63,7 +65,7 @@ JStudio_JStage_NS_TAdaptor_ambientLight:
 /* 8028B6E4 00288624  4E 80 04 21 */	bctrl 
 /* 8028B6E8 00288628  7F C3 F3 78 */	mr r3, r30
 /* 8028B6EC 0028862C  38 80 00 00 */	li r4, 0
-/* 8028B6F0 00288630  4B FF B5 AD */	bl JStudio_NS_TAdaptor_ambientLight_NS_dtor
+/* 8028B6F0 00288630  4B FF B5 AD */	bl __dt__Q27JStudio21TAdaptor_ambientLightFv
 /* 8028B6F4 00288634  7F E0 07 35 */	extsh. r0, r31
 /* 8028B6F8 00288638  40 81 00 0C */	ble lbl_8028B704
 /* 8028B6FC 0028863C  7F C3 F3 78 */	mr r3, r30
@@ -76,7 +78,15 @@ lbl_8028B704:
 /* 8028B714 00288654  7C 08 03 A6 */	mtlr r0
 /* 8028B718 00288658  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028B71C 0028865C  4E 80 00 20 */	blr 
+
+/* 8028B720 0004 .text adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+.global adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv
+adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B720 00288660  4E 80 00 20 */	blr 
+
+/* 8028B724 008C .text adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+.global adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv
+adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B724 00288664  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B728 00288668  7C 08 02 A6 */	mflr r0
 /* 8028B72C 0028866C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -102,16 +112,20 @@ lbl_8028B704:
 /* 8028B77C 002886BC  4E 80 04 21 */	bctrl 
 /* 8028B780 002886C0  90 61 00 08 */	stw r3, 8(r1)
 /* 8028B784 002886C4  7F C3 F3 78 */	mr r3, r30
-/* 8028B788 002886C8  3C 80 80 3A */	lis r4, lbl_8039AA98@ha
-/* 8028B78C 002886CC  38 84 AA 98 */	addi r4, r4, lbl_8039AA98@l
+/* 8028B788 002886C8  3C 80 80 3A */	lis r4, sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight@ha
+/* 8028B78C 002886CC  38 84 AA 98 */	addi r4, r4, sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight@l
 /* 8028B790 002886D0  38 A1 00 08 */	addi r5, r1, 8
-/* 8028B794 002886D4  4B FF AB 19 */	bl JStudio_NS_TAdaptor_NS_adaptor_setVariableValue_GXColor
+/* 8028B794 002886D4  4B FF AB 19 */	bl adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor
 /* 8028B798 002886D8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8028B79C 002886DC  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8028B7A0 002886E0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8028B7A4 002886E4  7C 08 03 A6 */	mtlr r0
 /* 8028B7A8 002886E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028B7AC 002886EC  4E 80 00 20 */	blr 
+
+/* 8028B7B0 0054 .text adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+.global adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv
+adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B7B0 002886F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B7B4 002886F4  7C 08 02 A6 */	mflr r0
 /* 8028B7B8 002886F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -133,6 +147,10 @@ lbl_8028B704:
 /* 8028B7F8 00288738  7C 08 03 A6 */	mtlr r0
 /* 8028B7FC 0028873C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028B800 00288740  4E 80 00 20 */	blr 
+
+/* 8028B804 0078 .text adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl */
+.global adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl
+adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl:
 /* 8028B804 00288744  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B808 00288748  7C 08 02 A6 */	mflr r0
 /* 8028B80C 0028874C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -141,9 +159,9 @@ lbl_8028B704:
 /* 8028B818 00288758  7C 7E 1B 78 */	mr r30, r3
 /* 8028B81C 0028875C  83 E3 00 64 */	lwz r31, 0x64(r3)
 /* 8028B820 00288760  38 81 00 0C */	addi r4, r1, 0xc
-/* 8028B824 00288764  3C A0 80 3A */	lis r5, lbl_8039AA98@ha
-/* 8028B828 00288768  38 A5 AA 98 */	addi r5, r5, lbl_8039AA98@l
-/* 8028B82C 0028876C  4B FF AB 61 */	bl JStudio_NS_TAdaptor_NS_adaptor_getVariableValue_GXColor
+/* 8028B824 00288764  3C A0 80 3A */	lis r5, sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight@ha
+/* 8028B828 00288768  38 A5 AA 98 */	addi r5, r5, sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight@l
+/* 8028B82C 0028876C  4B FF AB 61 */	bl adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl
 /* 8028B830 00288770  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8028B834 00288774  90 01 00 08 */	stw r0, 8(r1)
 /* 8028B838 00288778  7F E3 FB 78 */	mr r3, r31
@@ -163,13 +181,26 @@ lbl_8028B704:
 /* 8028B870 002887B0  7C 08 03 A6 */	mtlr r0
 /* 8028B874 002887B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028B878 002887B8  4E 80 00 20 */	blr 
+
+/* 8028B87C 0024 .text adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl */
+.global adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl
+adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl:
 /* 8028B87C 002887BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B880 002887C0  7C 08 02 A6 */	mflr r0
 /* 8028B884 002887C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8028B888 002887C8  38 63 00 60 */	addi r3, r3, 0x60
-/* 8028B88C 002887CC  4B FF EB E5 */	bl JStudio_JStage_NS_TAdaptor_object__NS_adaptor_object_data_
+/* 8028B88C 002887CC  4B FF EB E5 */	bl adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl
 /* 8028B890 002887D0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8028B894 002887D4  7C 08 03 A6 */	mtlr r0
 /* 8028B898 002887D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028B89C 002887DC  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C5888 0020 .data __vt__Q214JStudio_JStage21TAdaptor_ambientLight __vt__Q214JStudio_JStage21TAdaptor_ambientLight */
+.global __vt__Q214JStudio_JStage21TAdaptor_ambientLight
+__vt__Q214JStudio_JStage21TAdaptor_ambientLight:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0xb6, 0xac, 0x80, 0x28, 0xb7, 0x20 /* baserom.dol+0x3c2888 */
+.byte 0x80, 0x28, 0xb7, 0x24, 0x80, 0x28, 0xb7, 0xb0, 0x80, 0x28, 0xb8, 0x04, 0x80, 0x28, 0xb8, 0x7c /* baserom.dol+0x3c2898 */
 

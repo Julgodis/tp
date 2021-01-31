@@ -1,15 +1,19 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802dc520
 
-
-.global JSUMemoryInputStream_NS_setBuffer
-JSUMemoryInputStream_NS_setBuffer:
+.section .text, "ax"
+/* 802DC520 0014 .text setBuffer__20JSUMemoryInputStreamFPCvl setBuffer__20JSUMemoryInputStreamFPCvl */
+.global setBuffer__20JSUMemoryInputStreamFPCvl
+setBuffer__20JSUMemoryInputStreamFPCvl:
 /* 802DC520 002D9460  90 83 00 08 */	stw r4, 8(r3)
 /* 802DC524 002D9464  90 A3 00 0C */	stw r5, 0xc(r3)
 /* 802DC528 002D9468  38 00 00 00 */	li r0, 0
 /* 802DC52C 002D946C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 802DC530 002D9470  4E 80 00 20 */	blr 
+
+/* 802DC534 0078 .text readData__20JSUMemoryInputStreamFPvl readData__20JSUMemoryInputStreamFPvl */
+.global readData__20JSUMemoryInputStreamFPvl
+readData__20JSUMemoryInputStreamFPvl:
 /* 802DC534 002D9474  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC538 002D9478  7C 08 02 A6 */	mflr r0
 /* 802DC53C 002D947C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -42,6 +46,10 @@ lbl_802DC590:
 /* 802DC5A0 002D94E0  7C 08 03 A6 */	mtlr r0
 /* 802DC5A4 002D94E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC5A8 002D94E8  4E 80 00 20 */	blr 
+
+/* 802DC5AC 007C .text seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom */
+.global seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom
+seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom:
 /* 802DC5AC 002D94EC  80 C3 00 10 */	lwz r6, 0x10(r3)
 /* 802DC5B0 002D94F0  2C 05 00 01 */	cmpwi r5, 1
 /* 802DC5B4 002D94F4  41 82 00 38 */	beq lbl_802DC5EC
@@ -80,8 +88,27 @@ lbl_802DC61C:
 /* 802DC61C 002D955C  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 802DC620 002D9560  7C 66 00 50 */	subf r3, r6, r0
 /* 802DC624 002D9564  4E 80 00 20 */	blr 
+
+/* 802DC628 0008 .text getLength__20JSUMemoryInputStreamCFv getLength__20JSUMemoryInputStreamCFv */
+.global getLength__20JSUMemoryInputStreamCFv
+getLength__20JSUMemoryInputStreamCFv:
 /* 802DC628 002D9568  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 802DC62C 002D956C  4E 80 00 20 */	blr 
+
+/* 802DC630 0008 .text getPosition__20JSUMemoryInputStreamCFv getPosition__20JSUMemoryInputStreamCFv */
+.global getPosition__20JSUMemoryInputStreamCFv
+getPosition__20JSUMemoryInputStreamCFv:
 /* 802DC630 002D9570  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 802DC634 002D9574  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC4F0 0024 .data __vt__20JSUMemoryInputStream __vt__20JSUMemoryInputStream */
+.global __vt__20JSUMemoryInputStream
+__vt__20JSUMemoryInputStream:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x25, 0x52, 0xb8, 0x80, 0x2d, 0x40, 0x94 /* baserom.dol+0x3c94f0 */
+.byte 0x80, 0x2d, 0xc3, 0xfc, 0x80, 0x2d, 0xc5, 0x34, 0x80, 0x2d, 0xc6, 0x28, 0x80, 0x2d, 0xc6, 0x30 /* baserom.dol+0x3c9500 */
+.byte 0x80, 0x2d, 0xc5, 0xac /* baserom.dol+0x3c9510 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9514 */
 

@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033ec6c
 
-
+.section .text, "ax"
+/* 8033EC6C 003C .text func_8033EC6C OnReset */
+.global func_8033EC6C
+func_8033EC6C:
 /* 8033EC6C 0033BBAC  7C 08 02 A6 */	mflr r0
 /* 8033EC70 0033BBB0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033EC74 0033BBB4  90 01 00 04 */	stw r0, 4(r1)
@@ -19,6 +21,8 @@ lbl_8033EC94:
 /* 8033EC9C 0033BBDC  38 21 00 08 */	addi r1, r1, 8
 /* 8033ECA0 0033BBE0  7C 08 03 A6 */	mtlr r0
 /* 8033ECA4 0033BBE4  4E 80 00 20 */	blr 
+
+/* 8033ECA8 006C .text MEMIntrruptHandler MEMIntrruptHandler */
 .global MEMIntrruptHandler
 MEMIntrruptHandler:
 /* 8033ECA8 0033BBE8  7C 08 02 A6 */	mflr r0
@@ -28,9 +32,9 @@ MEMIntrruptHandler:
 /* 8033ECB8 0033BBF8  38 00 00 00 */	li r0, 0
 /* 8033ECBC 0033BBFC  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8033ECC0 0033BC00  A0 E3 40 24 */	lhz r7, 0x4024(r3)
-/* 8033ECC4 0033BC04  3C 60 80 45 */	lis r3, lbl_8044BAD0@ha
+/* 8033ECC4 0033BC04  3C 60 80 45 */	lis r3, __OSErrorTable@ha
 /* 8033ECC8 0033BC08  A0 C8 00 22 */	lhz r6, 0x22(r8)
-/* 8033ECCC 0033BC0C  38 63 BA D0 */	addi r3, r3, lbl_8044BAD0@l
+/* 8033ECCC 0033BC0C  38 63 BA D0 */	addi r3, r3, __OSErrorTable@l
 /* 8033ECD0 0033BC10  A0 A8 00 1E */	lhz r5, 0x1e(r8)
 /* 8033ECD4 0033BC14  50 E6 81 9E */	rlwimi r6, r7, 0x10, 6, 0xf
 /* 8033ECD8 0033BC18  B0 08 00 20 */	sth r0, 0x20(r8)
@@ -51,6 +55,7 @@ lbl_8033ED04:
 /* 8033ED0C 0033BC4C  7C 08 03 A6 */	mtlr r0
 /* 8033ED10 0033BC50  4E 80 00 20 */	blr 
 
+/* 8033ED14 00C4 .text OSProtectRange OSProtectRange */
 .global OSProtectRange
 OSProtectRange:
 /* 8033ED14 0033BC54  7C 08 02 A6 */	mflr r0
@@ -68,7 +73,7 @@ OSProtectRange:
 /* 8033ED44 0033BC84  54 DF 07 BE */	clrlwi r31, r6, 0x1e
 /* 8033ED48 0033BC88  7C 9B E8 50 */	subf r4, r27, r29
 /* 8033ED4C 0033BC8C  4B FF C8 61 */	bl DCFlushRange
-/* 8033ED50 0033BC90  4B FF E9 A5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033ED50 0033BC90  4B FF E9 A5 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033ED54 0033BC94  3C 00 80 00 */	lis r0, 0x8000
 /* 8033ED58 0033BC98  7C 1E D4 30 */	srw r30, r0, r26
 /* 8033ED5C 0033BC9C  3B 83 00 00 */	addi r28, r3, 0
@@ -104,6 +109,8 @@ lbl_8033EDC4:
 /* 8033EDCC 0033BD0C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033EDD0 0033BD10  7C 08 03 A6 */	mtlr r0
 /* 8033EDD4 0033BD14  4E 80 00 20 */	blr 
+
+/* 8033EDD8 0080 .text Config24MB Config24MB */
 .global Config24MB
 Config24MB:
 /* 8033EDD8 0033BD18  38 E0 00 00 */	li r7, 0
@@ -138,6 +145,8 @@ Config24MB:
 /* 8033EE4C 0033BD8C  7C 68 02 A6 */	mflr r3
 /* 8033EE50 0033BD90  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 8033EE54 0033BD94  4C 00 00 64 */	rfi 
+
+/* 8033EE58 0080 .text Config48MB Config48MB */
 .global Config48MB
 Config48MB:
 /* 8033EE58 0033BD98  38 E0 00 00 */	li r7, 0
@@ -173,6 +182,7 @@ Config48MB:
 /* 8033EED0 0033BE10  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 8033EED4 0033BE14  4C 00 00 64 */	rfi 
 
+/* 8033EED8 0018 .text RealMode RealMode */
 .global RealMode
 RealMode:
 /* 8033EED8 0033BE18  54 63 00 BE */	clrlwi r3, r3, 2
@@ -182,6 +192,7 @@ RealMode:
 /* 8033EEE8 0033BE28  7C 7B 03 A6 */	mtspr 0x1b, r3
 /* 8033EEEC 0033BE2C  4C 00 00 64 */	rfi 
 
+/* 8033EEF0 0118 .text __OSInitMemoryProtection __OSInitMemoryProtection */
 .global __OSInitMemoryProtection
 __OSInitMemoryProtection:
 /* 8033EEF0 0033BE30  7C 08 02 A6 */	mflr r0
@@ -190,7 +201,7 @@ __OSInitMemoryProtection:
 /* 8033EEFC 0033BE3C  BF 61 00 3C */	stmw r27, 0x3c(r1)
 /* 8033EF00 0033BE40  3F 60 80 00 */	lis r27, 0x800000F0@ha
 /* 8033EF04 0033BE44  83 FB 00 F0 */	lwz r31, 0x800000F0@l(r27)
-/* 8033EF08 0033BE48  4B FF E7 ED */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033EF08 0033BE48  4B FF E7 ED */	bl __RAS_OSDisableInterrupts_begin
 /* 8033EF0C 0033BE4C  3C 80 CC 00 */	lis r4, 0xCC004000@ha
 /* 8033EF10 0033BE50  3B 84 40 00 */	addi r28, r4, 0xCC004000@l
 /* 8033EF14 0033BE54  38 00 00 00 */	li r0, 0
@@ -200,9 +211,7 @@ __OSInitMemoryProtection:
 /* 8033EF24 0033BE64  B0 1C 00 10 */	sth r0, 0x10(r28)
 /* 8033EF28 0033BE68  3C 60 F0 00 */	lis r3, 0xf000
 /* 8033EF2C 0033BE6C  4B FF EB 91 */	bl __OSMaskInterrupts
-.global MEMIntrruptHandler
 /* 8033EF30 0033BE70  3C 60 80 34 */	lis r3, MEMIntrruptHandler@ha
-.global MEMIntrruptHandler
 /* 8033EF34 0033BE74  3B A3 EC A8 */	addi r29, r3, MEMIntrruptHandler@l
 /* 8033EF38 0033BE78  7F A4 EB 78 */	mr r4, r29
 /* 8033EF3C 0033BE7C  38 60 00 00 */	li r3, 0
@@ -238,9 +247,7 @@ lbl_8033EFB0:
 /* 8033EFB0 0033BEF0  3C 00 01 80 */	lis r0, 0x180
 /* 8033EFB4 0033BEF4  7C 1F 00 40 */	cmplw r31, r0
 /* 8033EFB8 0033BEF8  41 81 00 14 */	bgt lbl_8033EFCC
-.global Config24MB
 /* 8033EFBC 0033BEFC  3C 60 80 34 */	lis r3, Config24MB@ha
-.global Config24MB
 /* 8033EFC0 0033BF00  38 63 ED D8 */	addi r3, r3, Config24MB@l
 /* 8033EFC4 0033BF04  4B FF FF 15 */	bl RealMode
 /* 8033EFC8 0033BF08  48 00 00 1C */	b lbl_8033EFE4
@@ -248,9 +255,7 @@ lbl_8033EFCC:
 /* 8033EFCC 0033BF0C  3C 00 03 00 */	lis r0, 0x300
 /* 8033EFD0 0033BF10  7C 1F 00 40 */	cmplw r31, r0
 /* 8033EFD4 0033BF14  41 81 00 10 */	bgt lbl_8033EFE4
-.global Config48MB
 /* 8033EFD8 0033BF18  3C 60 80 34 */	lis r3, Config48MB@ha
-.global Config48MB
 /* 8033EFDC 0033BF1C  38 63 EE 58 */	addi r3, r3, Config48MB@l
 /* 8033EFE0 0033BF20  4B FF FE F9 */	bl RealMode
 lbl_8033EFE4:
@@ -263,4 +268,12 @@ lbl_8033EFE4:
 /* 8033EFFC 0033BF3C  38 21 00 50 */	addi r1, r1, 0x50
 /* 8033F000 0033BF40  7C 08 03 A6 */	mtlr r0
 /* 8033F004 0033BF44  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D07D8 0010 .data lbl_803D07D8 ResetFunctionInfo */
+.global lbl_803D07D8
+lbl_803D07D8:
+.byte 0x80, 0x33, 0xec, 0x6c, 0x00, 0x00, 0x00, 0x7f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cd7d8 */
 

@@ -1,18 +1,18 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029efac
 
-
-.global JAIAudible_NS_dtor
-JAIAudible_NS_dtor:
+.section .text, "ax"
+/* 8029EFAC 0048 .text __dt__10JAIAudibleFv __dt__10JAIAudibleFv */
+.global __dt__10JAIAudibleFv
+__dt__10JAIAudibleFv:
 /* 8029EFAC 0029BEEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029EFB0 0029BEF0  7C 08 02 A6 */	mflr r0
 /* 8029EFB4 0029BEF4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029EFB8 0029BEF8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029EFBC 0029BEFC  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8029EFC0 0029BF00  41 82 00 1C */	beq lbl_8029EFDC
-/* 8029EFC4 0029BF04  3C A0 80 3D */	lis r5, lbl_803C9820@ha
-/* 8029EFC8 0029BF08  38 05 98 20 */	addi r0, r5, lbl_803C9820@l
+/* 8029EFC4 0029BF04  3C A0 80 3D */	lis r5, __vt__10JAIAudible@ha
+/* 8029EFC8 0029BF08  38 05 98 20 */	addi r0, r5, __vt__10JAIAudible@l
 /* 8029EFCC 0029BF0C  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029EFD0 0029BF10  7C 80 07 35 */	extsh. r0, r4
 /* 8029EFD4 0029BF14  40 81 00 08 */	ble lbl_8029EFDC
@@ -24,4 +24,14 @@ lbl_8029EFDC:
 /* 8029EFE8 0029BF28  7C 08 03 A6 */	mtlr r0
 /* 8029EFEC 0029BF2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029EFF0 0029BF30  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C9820 0014 .data __vt__10JAIAudible __vt__10JAIAudible */
+.global __vt__10JAIAudible
+__vt__10JAIAudible:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0xef, 0xac, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6820 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6830 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6834 */
 

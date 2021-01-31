@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80346f28
 
-
+.section .text, "ax"
+/* 80346F28 00D0 .text C_MTXPerspective C_MTXPerspective */
 .global C_MTXPerspective
 C_MTXPerspective:
 /* 80346F28 00343E68  7C 08 02 A6 */	mflr r0
@@ -20,7 +20,7 @@ C_MTXPerspective:
 /* 80346F58 00343E98  C0 02 CB 3C */	lfs f0, lbl_8045653C-_SDA2_BASE_(r2)
 /* 80346F5C 00343E9C  EC 25 00 72 */	fmuls f1, f5, f1
 /* 80346F60 00343EA0  EC 20 00 72 */	fmuls f1, f0, f1
-/* 80346F64 00343EA4  48 02 5A 61 */	bl func_8036C9C4
+/* 80346F64 00343EA4  48 02 5A 61 */	bl tanf
 /* 80346F68 00343EA8  C0 62 CB 28 */	lfs f3, lbl_80456528-_SDA2_BASE_(r2)
 /* 80346F6C 00343EAC  EC 5F F0 28 */	fsubs f2, f31, f30
 /* 80346F70 00343EB0  EC 1F 07 B2 */	fmuls f0, f31, f30
@@ -58,6 +58,7 @@ C_MTXPerspective:
 /* 80346FF0 00343F30  7C 08 03 A6 */	mtlr r0
 /* 80346FF4 00343F34  4E 80 00 20 */	blr 
 
+/* 80346FF8 0098 .text C_MTXOrtho C_MTXOrtho */
 .global C_MTXOrtho
 C_MTXOrtho:
 /* 80346FF8 00343F38  ED 04 18 28 */	fsubs f8, f4, f3
@@ -98,4 +99,37 @@ C_MTXOrtho:
 /* 80347084 00343FC4  D0 63 00 38 */	stfs f3, 0x38(r3)
 /* 80347088 00343FC8  D1 23 00 3C */	stfs f9, 0x3c(r3)
 /* 8034708C 00343FCC  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80456528 0004 .sdata2 lbl_80456528 @99 */
+.global lbl_80456528
+lbl_80456528:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5388 */
+
+/* 8045652C 0004 .sdata2 lbl_8045652C @100 */
+.global lbl_8045652C
+lbl_8045652C:
+.byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d538c */
+
+/* 80456530 0004 .sdata2 lbl_80456530 @101 */
+.global lbl_80456530
+lbl_80456530:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5390 */
+
+/* 80456534 0004 .sdata2 lbl_80456534 @102 */
+.global lbl_80456534
+lbl_80456534:
+.byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5394 */
+
+/* 80456538 0004 .sdata2 lbl_80456538 @105 */
+.global lbl_80456538
+lbl_80456538:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5398 */
+
+/* 8045653C 0004 .sdata2 lbl_8045653C @106 */
+.global lbl_8045653C
+lbl_8045653C:
+.byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d539c */
 

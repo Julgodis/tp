@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8034ddbc
 
-
+.section .text, "ax"
+/* 8034DDBC 0130 .text ClampStick ClampStick */
 .global ClampStick
 ClampStick:
 /* 8034DDBC 0034ACFC  88 03 00 00 */	lbz r0, 0(r3)
@@ -93,6 +93,7 @@ lbl_8034DED8:
 /* 8034DEE4 0034AE24  98 04 00 00 */	stb r0, 0(r4)
 /* 8034DEE8 0034AE28  4E 80 00 20 */	blr 
 
+/* 8034DEEC 01A8 .text ClampCircle ClampCircle */
 .global ClampCircle
 ClampCircle:
 /* 8034DEEC 0034AE2C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -211,10 +212,11 @@ lbl_8034E07C:
 /* 8034E08C 0034AFCC  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034E090 0034AFD0  4E 80 00 20 */	blr 
 
+/* 8034E094 0114 .text PADClamp PADClamp */
 .global PADClamp
 PADClamp:
 /* 8034E094 0034AFD4  7C 08 02 A6 */	mflr r0
-/* 8034E098 0034AFD8  3C 80 80 3A */	lis r4, lbl_803A2170@ha
+/* 8034E098 0034AFD8  3C 80 80 3A */	lis r4, ClampRegion@ha
 /* 8034E09C 0034AFDC  90 01 00 04 */	stw r0, 4(r1)
 /* 8034E0A0 0034AFE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034E0A4 0034AFE4  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -223,7 +225,7 @@ PADClamp:
 /* 8034E0B0 0034AFF0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8034E0B4 0034AFF4  3B A3 00 00 */	addi r29, r3, 0
 /* 8034E0B8 0034AFF8  93 81 00 10 */	stw r28, 0x10(r1)
-/* 8034E0BC 0034AFFC  3B 84 21 70 */	addi r28, r4, lbl_803A2170@l
+/* 8034E0BC 0034AFFC  3B 84 21 70 */	addi r28, r4, ClampRegion@l
 /* 8034E0C0 0034B000  3B FC 00 01 */	addi r31, r28, 1
 lbl_8034E0C4:
 /* 8034E0C4 0034B004  88 1D 00 0A */	lbz r0, 0xa(r29)
@@ -290,10 +292,11 @@ lbl_8034E178:
 /* 8034E1A0 0034B0E0  7C 08 03 A6 */	mtlr r0
 /* 8034E1A4 0034B0E4  4E 80 00 20 */	blr 
 
+/* 8034E1A8 010C .text PADClampCircle PADClampCircle */
 .global PADClampCircle
 PADClampCircle:
 /* 8034E1A8 0034B0E8  7C 08 02 A6 */	mflr r0
-/* 8034E1AC 0034B0EC  3C 80 80 3A */	lis r4, lbl_803A2170@ha
+/* 8034E1AC 0034B0EC  3C 80 80 3A */	lis r4, ClampRegion@ha
 /* 8034E1B0 0034B0F0  90 01 00 04 */	stw r0, 4(r1)
 /* 8034E1B4 0034B0F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034E1B8 0034B0F8  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -302,7 +305,7 @@ PADClampCircle:
 /* 8034E1C4 0034B104  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8034E1C8 0034B108  3B A3 00 00 */	addi r29, r3, 0
 /* 8034E1CC 0034B10C  93 81 00 10 */	stw r28, 0x10(r1)
-/* 8034E1D0 0034B110  3B 84 21 70 */	addi r28, r4, lbl_803A2170@l
+/* 8034E1D0 0034B110  3B 84 21 70 */	addi r28, r4, ClampRegion@l
 /* 8034E1D4 0034B114  3B FC 00 01 */	addi r31, r28, 1
 lbl_8034E1D8:
 /* 8034E1D8 0034B118  88 1D 00 0A */	lbz r0, 0xa(r29)
@@ -366,4 +369,37 @@ lbl_8034E284:
 /* 8034E2A8 0034B1E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034E2AC 0034B1EC  7C 08 03 A6 */	mtlr r0
 /* 8034E2B0 0034B1F0  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 803A2170 000A .rodata ClampRegion ClampRegion */
+.global ClampRegion
+ClampRegion:
+.byte 0x1e, 0xb4, 0x0f, 0x48, 0x28, 0x0f, 0x3b, 0x1f, 0x38, 0x2c /* baserom.dol+0x39f170 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39f17a */
+
+
+
+.section .sdata2, "a"
+/* 80456560 0004 .sdata2 lbl_80456560 @160 */
+.global lbl_80456560
+lbl_80456560:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53c0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53c4 */
+
+/* 80456568 0008 .sdata2 lbl_80456568 @161 */
+.global lbl_80456568
+lbl_80456568:
+.byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53c8 */
+
+/* 80456570 0008 .sdata2 lbl_80456570 @162 */
+.global lbl_80456570
+lbl_80456570:
+.byte 0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53d0 */
+
+/* 80456578 0008 .sdata2 lbl_80456578 @164 */
+.global lbl_80456578
+lbl_80456578:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53d8 */
 

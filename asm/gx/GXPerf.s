@@ -1,11 +1,11 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8036067c
 
-
+.section .text, "ax"
+/* 8036067C 0848 .text GXSetGPMetric GXSetGPMetric */
 .global GXSetGPMetric
 GXSetGPMetric:
-/* 8036067C 0035D5BC  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8036067C 0035D5BC  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 80360680 0035D5C0  80 05 05 9C */	lwz r0, 0x59c(r5)
 /* 80360684 0035D5C4  2C 00 00 22 */	cmpwi r0, 0x22
 /* 80360688 0035D5C8  41 82 00 2C */	beq lbl_803606B4
@@ -43,7 +43,7 @@ lbl_803606EC:
 /* 803606F8 0035D638  3C 00 24 00 */	lis r0, 0x2400
 /* 803606FC 0035D63C  90 05 80 00 */	stw r0, -0x8000(r5)
 lbl_80360700:
-/* 80360700 0035D640  80 C2 CB 80 */	lwz r6, lbl_80456580-_SDA2_BASE_(r2)
+/* 80360700 0035D640  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
 /* 80360704 0035D644  80 06 05 A0 */	lwz r0, 0x5a0(r6)
 /* 80360708 0035D648  2C 00 00 15 */	cmpwi r0, 0x15
 /* 8036070C 0035D64C  41 82 00 2C */	beq lbl_80360738
@@ -79,11 +79,11 @@ lbl_80360750:
 /* 80360778 0035D6B8  90 05 80 00 */	stw r0, -0x8000(r5)
 /* 8036077C 0035D6BC  48 00 00 10 */	b lbl_8036078C
 lbl_80360780:
-/* 80360780 0035D6C0  80 AD 93 A4 */	lwz r5, lbl_80451924-_SDA_BASE_(r13)
+/* 80360780 0035D6C0  80 AD 93 A4 */	lwz r5, __cpReg-_SDA_BASE_(r13)
 /* 80360784 0035D6C4  38 00 00 00 */	li r0, 0
 /* 80360788 0035D6C8  B0 05 00 06 */	sth r0, 6(r5)
 lbl_8036078C:
-/* 8036078C 0035D6CC  80 A2 CB 80 */	lwz r5, lbl_80456580-_SDA2_BASE_(r2)
+/* 8036078C 0035D6CC  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 80360790 0035D6D0  90 65 05 9C */	stw r3, 0x59c(r5)
 /* 80360794 0035D6D4  80 05 05 9C */	lwz r0, 0x59c(r5)
 /* 80360798 0035D6D8  28 00 00 23 */	cmplwi r0, 0x23
@@ -351,7 +351,7 @@ lbl_8036078C:
 /* 80360BB0 0035DAF0  38 03 C1 AD */	addi r0, r3, 0x2402C1AD@l
 /* 80360BB4 0035DAF4  90 05 80 00 */	stw r0, -0x8000(r5)
 lbl_80360BB8:
-/* 80360BB8 0035DAF8  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 80360BB8 0035DAF8  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 80360BBC 0035DAFC  90 83 05 A0 */	stw r4, 0x5a0(r3)
 /* 80360BC0 0035DB00  80 03 05 A0 */	lwz r0, 0x5a0(r3)
 /* 80360BC4 0035DB04  28 00 00 16 */	cmplwi r0, 0x16
@@ -527,37 +527,39 @@ lbl_80360BB8:
 /* 80360E6C 0035DDAC  80 03 05 A4 */	lwz r0, 0x5a4(r3)
 /* 80360E70 0035DDB0  90 04 80 00 */	stw r0, -0x8000(r4)
 /* 80360E74 0035DDB4  48 00 00 40 */	b lbl_80360EB4
-/* 80360E78 0035DDB8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360E78 0035DDB8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360E7C 0035DDBC  38 00 00 02 */	li r0, 2
 /* 80360E80 0035DDC0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80360E84 0035DDC4  48 00 00 30 */	b lbl_80360EB4
-/* 80360E88 0035DDC8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360E88 0035DDC8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360E8C 0035DDCC  38 00 00 03 */	li r0, 3
 /* 80360E90 0035DDD0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80360E94 0035DDD4  48 00 00 20 */	b lbl_80360EB4
-/* 80360E98 0035DDD8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360E98 0035DDD8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360E9C 0035DDDC  38 00 00 04 */	li r0, 4
 /* 80360EA0 0035DDE0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80360EA4 0035DDE4  48 00 00 10 */	b lbl_80360EB4
-/* 80360EA8 0035DDE8  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360EA8 0035DDE8  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360EAC 0035DDEC  38 00 00 05 */	li r0, 5
 /* 80360EB0 0035DDF0  B0 03 00 06 */	sth r0, 6(r3)
 lbl_80360EB4:
-/* 80360EB4 0035DDF4  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 80360EB4 0035DDF4  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 80360EB8 0035DDF8  38 00 00 00 */	li r0, 0
 /* 80360EBC 0035DDFC  B0 03 00 02 */	sth r0, 2(r3)
 /* 80360EC0 0035DE00  4E 80 00 20 */	blr 
 
+/* 80360EC4 0010 .text GXClearGPMetric GXClearGPMetric */
 .global GXClearGPMetric
 GXClearGPMetric:
-/* 80360EC4 0035DE04  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360EC4 0035DE04  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360EC8 0035DE08  38 00 00 04 */	li r0, 4
 /* 80360ECC 0035DE0C  B0 03 00 04 */	sth r0, 4(r3)
 /* 80360ED0 0035DE10  4E 80 00 20 */	blr 
 
+/* 80360ED4 00C4 .text GXReadXfRasMetric GXReadXfRasMetric */
 .global GXReadXfRasMetric
 GXReadXfRasMetric:
-/* 80360ED4 0035DE14  80 ED 93 A4 */	lwz r7, lbl_80451924-_SDA_BASE_(r13)
+/* 80360ED4 0035DE14  80 ED 93 A4 */	lwz r7, __cpReg-_SDA_BASE_(r13)
 /* 80360ED8 0035DE18  39 47 00 42 */	addi r10, r7, 0x42
 /* 80360EDC 0035DE1C  A1 07 00 42 */	lhz r8, 0x42(r7)
 /* 80360EE0 0035DE20  39 27 00 40 */	addi r9, r7, 0x40
@@ -570,7 +572,7 @@ lbl_80360EE4:
 /* 80360EF8 0035DE38  55 00 80 1E */	slwi r0, r8, 0x10
 /* 80360EFC 0035DE3C  7C 00 3B 78 */	or r0, r0, r7
 /* 80360F00 0035DE40  90 05 00 00 */	stw r0, 0(r5)
-/* 80360F04 0035DE44  80 AD 93 A4 */	lwz r5, lbl_80451924-_SDA_BASE_(r13)
+/* 80360F04 0035DE44  80 AD 93 A4 */	lwz r5, __cpReg-_SDA_BASE_(r13)
 /* 80360F08 0035DE48  39 25 00 46 */	addi r9, r5, 0x46
 /* 80360F0C 0035DE4C  A0 E5 00 46 */	lhz r7, 0x46(r5)
 /* 80360F10 0035DE50  39 05 00 44 */	addi r8, r5, 0x44
@@ -583,7 +585,7 @@ lbl_80360F14:
 /* 80360F28 0035DE68  54 E0 80 1E */	slwi r0, r7, 0x10
 /* 80360F2C 0035DE6C  7C 00 2B 78 */	or r0, r0, r5
 /* 80360F30 0035DE70  90 06 00 00 */	stw r0, 0(r6)
-/* 80360F34 0035DE74  80 AD 93 A4 */	lwz r5, lbl_80451924-_SDA_BASE_(r13)
+/* 80360F34 0035DE74  80 AD 93 A4 */	lwz r5, __cpReg-_SDA_BASE_(r13)
 /* 80360F38 0035DE78  39 05 00 4A */	addi r8, r5, 0x4a
 /* 80360F3C 0035DE7C  A0 C5 00 4A */	lhz r6, 0x4a(r5)
 /* 80360F40 0035DE80  38 E5 00 48 */	addi r7, r5, 0x48
@@ -596,7 +598,7 @@ lbl_80360F44:
 /* 80360F58 0035DE98  54 C0 80 1E */	slwi r0, r6, 0x10
 /* 80360F5C 0035DE9C  7C 00 2B 78 */	or r0, r0, r5
 /* 80360F60 0035DEA0  90 03 00 00 */	stw r0, 0(r3)
-/* 80360F64 0035DEA4  80 6D 93 A4 */	lwz r3, lbl_80451924-_SDA_BASE_(r13)
+/* 80360F64 0035DEA4  80 6D 93 A4 */	lwz r3, __cpReg-_SDA_BASE_(r13)
 /* 80360F68 0035DEA8  38 E3 00 4E */	addi r7, r3, 0x4e
 /* 80360F6C 0035DEAC  A0 A3 00 4E */	lhz r5, 0x4e(r3)
 /* 80360F70 0035DEB0  38 C3 00 4C */	addi r6, r3, 0x4c
@@ -610,4 +612,31 @@ lbl_80360F74:
 /* 80360F8C 0035DECC  7C 00 1B 78 */	or r0, r0, r3
 /* 80360F90 0035DED0  90 04 00 00 */	stw r0, 0(r4)
 /* 80360F94 0035DED4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D2858 005C .data lbl_803D2858 @182 */
+.global lbl_803D2858
+lbl_803D2858:
+.byte 0x80, 0x36, 0x0b, 0xe4, 0x80, 0x36, 0x0c, 0x00, 0x80, 0x36, 0x0c, 0x1c, 0x80, 0x36, 0x0c, 0x38 /* baserom.dol+0x3cf858 */
+.byte 0x80, 0x36, 0x0c, 0x8c, 0x80, 0x36, 0x0c, 0xa8, 0x80, 0x36, 0x0c, 0xc4, 0x80, 0x36, 0x0c, 0xe0 /* baserom.dol+0x3cf868 */
+.byte 0x80, 0x36, 0x0c, 0x54, 0x80, 0x36, 0x0c, 0xfc, 0x80, 0x36, 0x0d, 0x2c, 0x80, 0x36, 0x0d, 0x5c /* baserom.dol+0x3cf878 */
+.byte 0x80, 0x36, 0x0d, 0x8c, 0x80, 0x36, 0x0d, 0xbc, 0x80, 0x36, 0x0d, 0xec, 0x80, 0x36, 0x0e, 0x1c /* baserom.dol+0x3cf888 */
+.byte 0x80, 0x36, 0x0e, 0x4c, 0x80, 0x36, 0x0e, 0x78, 0x80, 0x36, 0x0e, 0x88, 0x80, 0x36, 0x0e, 0x98 /* baserom.dol+0x3cf898 */
+.byte 0x80, 0x36, 0x0e, 0xa8, 0x80, 0x36, 0x0c, 0x70, 0x80, 0x36, 0x0e, 0xb4 /* baserom.dol+0x3cf8a8 */
+
+/* 803D28B4 0090 .data lbl_803D28B4 @181 */
+.global lbl_803D28B4
+lbl_803D28B4:
+.byte 0x80, 0x36, 0x07, 0xb8, 0x80, 0x36, 0x07, 0xd8, 0x80, 0x36, 0x07, 0xf8, 0x80, 0x36, 0x08, 0x18 /* baserom.dol+0x3cf8b4 */
+.byte 0x80, 0x36, 0x08, 0x38, 0x80, 0x36, 0x08, 0x58, 0x80, 0x36, 0x08, 0x78, 0x80, 0x36, 0x08, 0x98 /* baserom.dol+0x3cf8c4 */
+.byte 0x80, 0x36, 0x08, 0xb8, 0x80, 0x36, 0x08, 0xd8, 0x80, 0x36, 0x09, 0x18, 0x80, 0x36, 0x09, 0x38 /* baserom.dol+0x3cf8d4 */
+.byte 0x80, 0x36, 0x09, 0x54, 0x80, 0x36, 0x09, 0x70, 0x80, 0x36, 0x09, 0x8c, 0x80, 0x36, 0x09, 0xa8 /* baserom.dol+0x3cf8e4 */
+.byte 0x80, 0x36, 0x09, 0xc4, 0x80, 0x36, 0x09, 0xe0, 0x80, 0x36, 0x09, 0xfc, 0x80, 0x36, 0x0a, 0x18 /* baserom.dol+0x3cf8f4 */
+.byte 0x80, 0x36, 0x0a, 0x34, 0x80, 0x36, 0x0a, 0x50, 0x80, 0x36, 0x0a, 0x6c, 0x80, 0x36, 0x0a, 0x88 /* baserom.dol+0x3cf904 */
+.byte 0x80, 0x36, 0x0a, 0xa4, 0x80, 0x36, 0x0a, 0xc0, 0x80, 0x36, 0x0a, 0xdc, 0x80, 0x36, 0x0a, 0xf8 /* baserom.dol+0x3cf914 */
+.byte 0x80, 0x36, 0x0b, 0x14, 0x80, 0x36, 0x0b, 0x30, 0x80, 0x36, 0x0b, 0x4c, 0x80, 0x36, 0x0b, 0x68 /* baserom.dol+0x3cf924 */
+.byte 0x80, 0x36, 0x0b, 0x84, 0x80, 0x36, 0x0b, 0xa0, 0x80, 0x36, 0x08, 0xf8, 0x80, 0x36, 0x0b, 0xb8 /* baserom.dol+0x3cf934 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cf944 */
 

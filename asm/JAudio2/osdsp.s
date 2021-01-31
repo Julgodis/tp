@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029ea00
 
-
+.section .text, "ax"
+/* 8029EA00 0084 .text DSPAddTask DSPAddTask */
 .global DSPAddTask
 DSPAddTask:
 /* 8029EA00 0029B940  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -11,7 +11,7 @@ DSPAddTask:
 /* 8029EA0C 0029B94C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029EA10 0029B950  93 C1 00 08 */	stw r30, 8(r1)
 /* 8029EA14 0029B954  7C 7E 1B 78 */	mr r30, r3
-/* 8029EA18 0029B958  80 0D 8D 8C */	lwz r0, lbl_8045130C-_SDA_BASE_(r13)
+/* 8029EA18 0029B958  80 0D 8D 8C */	lwz r0, DSP_prior_task-_SDA_BASE_(r13)
 /* 8029EA1C 0029B95C  28 00 00 00 */	cmplwi r0, 0
 /* 8029EA20 0029B960  40 82 00 1C */	bne lbl_8029EA3C
 /* 8029EA24 0029B964  3C 60 80 3A */	lis r3, lbl_8039B8B8@ha
@@ -21,7 +21,7 @@ DSPAddTask:
 /* 8029EA34 0029B974  38 60 00 00 */	li r3, 0
 /* 8029EA38 0029B978  48 00 00 34 */	b lbl_8029EA6C
 lbl_8029EA3C:
-/* 8029EA3C 0029B97C  48 09 EC B9 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8029EA3C 0029B97C  48 09 EC B9 */	bl __RAS_OSDisableInterrupts_begin
 /* 8029EA40 0029B980  7C 60 1B 78 */	mr r0, r3
 /* 8029EA44 0029B984  7F C3 F3 78 */	mr r3, r30
 /* 8029EA48 0029B988  7C 1F 03 78 */	mr r31, r0
@@ -40,23 +40,21 @@ lbl_8029EA6C:
 /* 8029EA78 0029B9B8  7C 08 03 A6 */	mtlr r0
 /* 8029EA7C 0029B9BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029EA80 0029B9C0  4E 80 00 20 */	blr 
-/* 8029EA84 0029B9C4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA88 0029B9C8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA8C 0029B9CC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA90 0029B9D0  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA94 0029B9D4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA98 0029B9D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 8029EA9C 0029B9DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00
 
-.global DSPAddPriorTask
-DSPAddPriorTask:
+/* 8029EAA0 007C .text DSPAddPriorTask__FP15STRUCT_DSP_TASK DSPAddPriorTask__FP15STRUCT_DSP_TASK */
+.global DSPAddPriorTask__FP15STRUCT_DSP_TASK
+DSPAddPriorTask__FP15STRUCT_DSP_TASK:
 /* 8029EAA0 0029B9E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029EAA4 0029B9E4  7C 08 02 A6 */	mflr r0
 /* 8029EAA8 0029B9E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029EAAC 0029B9EC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029EAB0 0029B9F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8029EAB4 0029B9F4  7C 7E 1B 78 */	mr r30, r3
-/* 8029EAB8 0029B9F8  80 0D 8D 8C */	lwz r0, lbl_8045130C-_SDA_BASE_(r13)
+/* 8029EAB8 0029B9F8  80 0D 8D 8C */	lwz r0, DSP_prior_task-_SDA_BASE_(r13)
 /* 8029EABC 0029B9FC  28 00 00 00 */	cmplwi r0, 0
 /* 8029EAC0 0029BA00  41 82 00 18 */	beq lbl_8029EAD8
 /* 8029EAC4 0029BA04  3C 60 80 3A */	lis r3, lbl_8039B8D4@ha
@@ -65,8 +63,8 @@ DSPAddPriorTask:
 /* 8029EAD0 0029BA10  4B D6 7F ED */	bl OSReport
 /* 8029EAD4 0029BA14  48 00 00 30 */	b lbl_8029EB04
 lbl_8029EAD8:
-/* 8029EAD8 0029BA18  48 09 EC 1D */	bl __RAS_OSDisableInterrupts_begin 
-/* 8029EADC 0029BA1C  93 CD 8D 8C */	stw r30, lbl_8045130C-_SDA_BASE_(r13)
+/* 8029EAD8 0029BA18  48 09 EC 1D */	bl __RAS_OSDisableInterrupts_begin
+/* 8029EADC 0029BA1C  93 CD 8D 8C */	stw r30, DSP_prior_task-_SDA_BASE_(r13)
 /* 8029EAE0 0029BA20  38 80 00 00 */	li r4, 0
 /* 8029EAE4 0029BA24  7C 7F 1B 78 */	mr r31, r3
 /* 8029EAE8 0029BA28  38 00 00 01 */	li r0, 1
@@ -83,4 +81,22 @@ lbl_8029EB04:
 /* 8029EB10 0029BA50  7C 08 03 A6 */	mtlr r0
 /* 8029EB14 0029BA54  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029EB18 0029BA58  4E 80 00 20 */	blr 
-/* 8029EB1C 0029BA5C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+.byte 0x00, 0x00, 0x00, 0x00
+
+
+
+.section .rodata, "a"
+/* 8039B8B8 001A .rodata lbl_8039B8B8 @81 */
+.global lbl_8039B8B8
+lbl_8039B8B8:
+.byte 0x50, 0x72, 0x69, 0x6f, 0x72, 0x20, 0x54, 0x61, 0x73, 0x6b, 0x20, 0x69, 0x73, 0x20, 0x6e, 0x6f /* baserom.dol+0x3988b8 */
+.byte 0x74, 0x20, 0x69, 0x6e, 0x69, 0x74, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3988c8 */
+.byte 0x00, 0x00 /* baserom.dol+0x3988d2 */
+
+/* 8039B8D4 001F .rodata lbl_8039B8D4 @88 */
+.global lbl_8039B8D4
+lbl_8039B8D4:
+.byte 0x41, 0x6c, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6e, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70 /* baserom.dol+0x3988d4 */
+.byte 0x72, 0x69, 0x6f, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6b, 0x0a, 0x00 /* baserom.dol+0x3988e4 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3988f3 */
+

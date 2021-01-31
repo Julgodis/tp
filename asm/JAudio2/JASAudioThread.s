@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029ccdc
 
-
-.global JASAudioThread
-JASAudioThread:
+.section .text, "ax"
+/* 8029CCDC 0070 .text __ct__14JASAudioThreadFiiUl __ct__14JASAudioThreadFiiUl */
+.global __ct__14JASAudioThreadFiiUl
+__ct__14JASAudioThreadFiiUl:
 /* 8029CCDC 00299C1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029CCE0 00299C20  7C 08 02 A6 */	mflr r0
 /* 8029CCE4 00299C24  90 01 00 14 */	stw r0, 0x14(r1)
@@ -12,7 +12,7 @@ JASAudioThread:
 /* 8029CCEC 00299C2C  7C 7F 1B 78 */	mr r31, r3
 /* 8029CCF0 00299C30  7C 87 23 78 */	mr r7, r4
 /* 8029CCF4 00299C34  7C A0 2B 78 */	mr r0, r5
-/* 8029CCF8 00299C38  80 8D 8C 90 */	lwz r4, lbl_80451210-_SDA_BASE_(r13)
+/* 8029CCF8 00299C38  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029CCFC 00299C3C  7C C5 33 78 */	mr r5, r6
 /* 8029CD00 00299C40  7C 06 03 78 */	mr r6, r0
 /* 8029CD04 00299C44  48 03 49 0D */	bl __ct__9JKRThreadFP7JKRHeapUlii
@@ -21,8 +21,8 @@ JASAudioThread:
 /* 8029CD10 00299C50  38 63 FF 84 */	addi r3, r3, -124
 lbl_8029CD14:
 /* 8029CD14 00299C54  90 6D 86 0C */	stw r3, lbl_80450B8C-_SDA_BASE_(r13)
-/* 8029CD18 00299C58  3C 60 80 3C */	lis r3, lbl_803C78E0@ha
-/* 8029CD1C 00299C5C  38 03 78 E0 */	addi r0, r3, lbl_803C78E0@l
+/* 8029CD18 00299C58  3C 60 80 3C */	lis r3, __vt__14JASAudioThread@ha
+/* 8029CD1C 00299C5C  38 03 78 E0 */	addi r0, r3, __vt__14JASAudioThread@l
 /* 8029CD20 00299C60  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029CD24 00299C64  38 00 00 00 */	li r0, 0
 /* 8029CD28 00299C68  98 1F 00 84 */	stb r0, 0x84(r31)
@@ -35,15 +35,16 @@ lbl_8029CD14:
 /* 8029CD44 00299C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029CD48 00299C88  4E 80 00 20 */	blr 
 
-.global JASAudioThread_NS_create
-JASAudioThread_NS_create:
+/* 8029CD4C 0074 .text create__14JASAudioThreadFl create__14JASAudioThreadFl */
+.global create__14JASAudioThreadFl
+create__14JASAudioThreadFl:
 /* 8029CD4C 00299C8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029CD50 00299C90  7C 08 02 A6 */	mflr r0
 /* 8029CD54 00299C94  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029CD58 00299C98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029CD5C 00299C9C  7C 7F 1B 78 */	mr r31, r3
 /* 8029CD60 00299CA0  38 60 00 88 */	li r3, 0x88
-/* 8029CD64 00299CA4  80 8D 8C 90 */	lwz r4, lbl_80451210-_SDA_BASE_(r13)
+/* 8029CD64 00299CA4  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029CD68 00299CA8  38 A0 00 00 */	li r5, 0
 /* 8029CD6C 00299CAC  48 03 1F 2D */	bl __nw__FUlP7JKRHeapi
 /* 8029CD70 00299CB0  7C 64 1B 79 */	or. r4, r3, r3
@@ -51,7 +52,7 @@ JASAudioThread_NS_create:
 /* 8029CD78 00299CB8  7F E4 FB 78 */	mr r4, r31
 /* 8029CD7C 00299CBC  38 A0 00 10 */	li r5, 0x10
 /* 8029CD80 00299CC0  38 C0 14 00 */	li r6, 0x1400
-/* 8029CD84 00299CC4  4B FF FF 59 */	bl JASAudioThread
+/* 8029CD84 00299CC4  4B FF FF 59 */	bl __ct__14JASAudioThreadFiiUl
 /* 8029CD88 00299CC8  7C 64 1B 78 */	mr r4, r3
 lbl_8029CD8C:
 /* 8029CD8C 00299CCC  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
@@ -70,8 +71,9 @@ lbl_8029CDA0:
 /* 8029CDB8 00299CF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029CDBC 00299CFC  4E 80 00 20 */	blr 
 
-.global JASAudioThread_NS_stop
-JASAudioThread_NS_stop:
+/* 8029CDC0 002C .text stop__14JASAudioThreadFv stop__14JASAudioThreadFv */
+.global stop__14JASAudioThreadFv
+stop__14JASAudioThreadFv:
 /* 8029CDC0 00299D00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029CDC4 00299D04  7C 08 02 A6 */	mflr r0
 /* 8029CDC8 00299D08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -83,6 +85,10 @@ JASAudioThread_NS_stop:
 /* 8029CDE0 00299D20  7C 08 03 A6 */	mtlr r0
 /* 8029CDE4 00299D24  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029CDE8 00299D28  4E 80 00 20 */	blr 
+
+/* 8029CDEC 017C .text run__14JASAudioThreadFv run__14JASAudioThreadFv */
+.global run__14JASAudioThreadFv
+run__14JASAudioThreadFv:
 /* 8029CDEC 00299D2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029CDF0 00299D30  7C 08 02 A6 */	mflr r0
 /* 8029CDF4 00299D34  90 01 00 24 */	stw r0, 0x24(r1)
@@ -100,46 +106,40 @@ JASAudioThread_NS_stop:
 /* 8029CE24 00299D64  38 60 00 07 */	li r3, 7
 /* 8029CE28 00299D68  64 63 00 07 */	oris r3, r3, 7
 /* 8029CE2C 00299D6C  7C 75 E3 A6 */	mtspr 0x395, r3
-.global JASAudioThread_NS_DMACallback
-/* 8029CE30 00299D70  3C 80 80 2A */	lis r4, JASAudioThread_NS_DMACallback@ha
-.global JASAudioThread_NS_DMACallback
-/* 8029CE34 00299D74  38 64 CF 68 */	addi r3, r4, JASAudioThread_NS_DMACallback@l
-/* 8029CE38 00299D78  4B FF F5 51 */	bl JASDriver_NS_initAI
-.global JASAudioThread_NS_DSPCallback
-/* 8029CE3C 00299D7C  3C 80 80 2A */	lis r4, JASAudioThread_NS_DSPCallback@ha
-.global JASAudioThread_NS_DSPCallback
-/* 8029CE40 00299D80  38 64 CF BC */	addi r3, r4, JASAudioThread_NS_DSPCallback@l
-/* 8029CE44 00299D84  48 00 0B 15 */	bl JASDsp_NS_boot
-/* 8029CE48 00299D88  48 00 0C 81 */	bl JASDsp_NS_initBuffer
-/* 8029CE4C 00299D8C  48 00 05 7D */	bl JASDSPChannel_NS_initAll
+/* 8029CE30 00299D70  3C 80 80 2A */	lis r4, DMACallback__14JASAudioThreadFv@ha
+/* 8029CE34 00299D74  38 64 CF 68 */	addi r3, r4, DMACallback__14JASAudioThreadFv@l
+/* 8029CE38 00299D78  4B FF F5 51 */	bl initAI__9JASDriverFPFv_v
+/* 8029CE3C 00299D7C  3C 80 80 2A */	lis r4, DSPCallback__14JASAudioThreadFPv@ha
+/* 8029CE40 00299D80  38 64 CF BC */	addi r3, r4, DSPCallback__14JASAudioThreadFPv@l
+/* 8029CE44 00299D84  48 00 0B 15 */	bl boot__6JASDspFPFPv_v
+/* 8029CE48 00299D88  48 00 0C 81 */	bl initBuffer__6JASDspFv
+/* 8029CE4C 00299D8C  48 00 05 7D */	bl initAll__13JASDSPChannelFv
 /* 8029CE50 00299D90  88 0D 8C E2 */	lbz r0, lbl_80451262-_SDA_BASE_(r13)
 /* 8029CE54 00299D94  7C 00 07 75 */	extsb. r0, r0
 /* 8029CE58 00299D98  40 82 00 34 */	bne lbl_8029CE8C
 /* 8029CE5C 00299D9C  3C 80 80 43 */	lis r4, lbl_80431B34@ha
 /* 8029CE60 00299DA0  38 64 1B 34 */	addi r3, r4, lbl_80431B34@l
-/* 8029CE64 00299DA4  4B FF 39 E5 */	bl JASGenericMemPool
+/* 8029CE64 00299DA4  4B FF 39 E5 */	bl __ct__17JASGenericMemPoolFv
 /* 8029CE68 00299DA8  3C 80 80 43 */	lis r4, lbl_80431B34@ha
 /* 8029CE6C 00299DAC  38 64 1B 34 */	addi r3, r4, lbl_80431B34@l
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 8029CE70 00299DB0  3C 80 80 29 */	lis r4, JASMemPool_MultiThreaded_NS_dtor_X2_@ha
-.global JASMemPool_MultiThreaded_NS_dtor_X2_
-/* 8029CE74 00299DB4  38 84 78 DC */	addi r4, r4, JASMemPool_MultiThreaded_NS_dtor_X2_@l
+/* 8029CE70 00299DB0  3C 80 80 29 */	lis r4, func_802978DC@ha
+/* 8029CE74 00299DB4  38 84 78 DC */	addi r4, r4, func_802978DC@l
 /* 8029CE78 00299DB8  3C A0 80 43 */	lis r5, lbl_80431C68@ha
 /* 8029CE7C 00299DBC  38 A5 1C 68 */	addi r5, r5, lbl_80431C68@l
-/* 8029CE80 00299DC0  48 0C 4D A5 */	bl func_80361C24
+/* 8029CE80 00299DC0  48 0C 4D A5 */	bl __register_global_object
 /* 8029CE84 00299DC4  38 00 00 01 */	li r0, 1
 /* 8029CE88 00299DC8  98 0D 8C E2 */	stb r0, lbl_80451262-_SDA_BASE_(r13)
 lbl_8029CE8C:
-/* 8029CE8C 00299DCC  48 0A 08 69 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8029CE8C 00299DCC  48 0A 08 69 */	bl __RAS_OSDisableInterrupts_begin
 /* 8029CE90 00299DD0  90 61 00 08 */	stw r3, 8(r1)
 /* 8029CE94 00299DD4  3C 80 80 43 */	lis r4, lbl_80431B34@ha
 /* 8029CE98 00299DD8  38 64 1B 34 */	addi r3, r4, lbl_80431B34@l
 /* 8029CE9C 00299DDC  38 80 01 08 */	li r4, 0x108
 /* 8029CEA0 00299DE0  38 A0 00 48 */	li r5, 0x48
-/* 8029CEA4 00299DE4  4B FF 3A 25 */	bl JASGenericMemPool_NS_newMemPool
+/* 8029CEA4 00299DE4  4B FF 3A 25 */	bl newMemPool__17JASGenericMemPoolFUli
 /* 8029CEA8 00299DE8  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029CEAC 00299DEC  48 0A 08 71 */	bl OSRestoreInterrupts
-/* 8029CEB0 00299DF0  4B FF F6 35 */	bl JASDriver_NS_startDMA
+/* 8029CEB0 00299DF0  4B FF F6 35 */	bl startDMA__9JASDriverFv
 lbl_8029CEB4:
 /* 8029CEB4 00299DF4  38 7F 00 30 */	addi r3, r31, 0x30
 /* 8029CEB8 00299DF8  38 81 00 0C */	addi r4, r1, 0xc
@@ -160,52 +160,54 @@ lbl_8029CEEC:
 /* 8029CEEC 00299E2C  88 1F 00 84 */	lbz r0, 0x84(r31)
 /* 8029CEF0 00299E30  28 00 00 00 */	cmplwi r0, 0
 /* 8029CEF4 00299E34  41 82 00 10 */	beq lbl_8029CF04
-/* 8029CEF8 00299E38  4B FF F6 0D */	bl JASDriver_NS_stopDMA
+/* 8029CEF8 00299E38  4B FF F6 0D */	bl stopDMA__9JASDriverFv
 /* 8029CEFC 00299E3C  38 7F 00 7C */	addi r3, r31, 0x7c
 /* 8029CF00 00299E40  48 0A 4C AD */	bl OSSleepThread
 lbl_8029CF04:
-/* 8029CF04 00299E44  4B FF F6 65 */	bl JASDriver_NS_updateDac
-/* 8029CF08 00299E48  48 00 13 F1 */	bl JASDriver_NS_updateDacCallback
+/* 8029CF04 00299E44  4B FF F6 65 */	bl updateDac__9JASDriverFv
+/* 8029CF08 00299E48  48 00 13 F1 */	bl updateDacCallback__9JASDriverFv
 /* 8029CF0C 00299E4C  4B FF FF A8 */	b lbl_8029CEB4
 lbl_8029CF10:
-/* 8029CF10 00299E50  80 8D 8D 58 */	lwz r4, lbl_804512D8-_SDA_BASE_(r13)
+/* 8029CF10 00299E50  80 8D 8D 58 */	lwz r4, snIntCount__14JASAudioThread-_SDA_BASE_(r13)
 /* 8029CF14 00299E54  38 04 FF FF */	addi r0, r4, -1
-/* 8029CF18 00299E58  90 0D 8D 58 */	stw r0, lbl_804512D8-_SDA_BASE_(r13)
-/* 8029CF1C 00299E5C  80 0D 8D 58 */	lwz r0, lbl_804512D8-_SDA_BASE_(r13)
+/* 8029CF18 00299E58  90 0D 8D 58 */	stw r0, snIntCount__14JASAudioThread-_SDA_BASE_(r13)
+/* 8029CF1C 00299E5C  80 0D 8D 58 */	lwz r0, snIntCount__14JASAudioThread-_SDA_BASE_(r13)
 /* 8029CF20 00299E60  2C 00 00 00 */	cmpwi r0, 0
 /* 8029CF24 00299E64  40 82 00 14 */	bne lbl_8029CF38
 /* 8029CF28 00299E68  38 60 00 07 */	li r3, 7
-/* 8029CF2C 00299E6C  4B FF 3F F9 */	bl JASProbe_NS_stop_X1_
-/* 8029CF30 00299E70  4B FF F9 D1 */	bl JASDriver_NS_finishDSPFrame
+/* 8029CF2C 00299E6C  4B FF 3F F9 */	bl stop__8JASProbeFl
+/* 8029CF30 00299E70  4B FF F9 D1 */	bl finishDSPFrame__9JASDriverFv
 /* 8029CF34 00299E74  4B FF FF 80 */	b lbl_8029CEB4
 lbl_8029CF38:
 /* 8029CF38 00299E78  38 60 00 02 */	li r3, 2
 /* 8029CF3C 00299E7C  3C 80 80 3A */	lis r4, lbl_8039B338@ha
 /* 8029CF40 00299E80  38 84 B3 38 */	addi r4, r4, lbl_8039B338@l
-/* 8029CF44 00299E84  4B FF 3F A1 */	bl JASProbe_NS_start_X1_
-/* 8029CF48 00299E88  4B FF F7 7D */	bl JASDriver_NS_updateDSP
+/* 8029CF44 00299E84  4B FF 3F A1 */	bl start__8JASProbeFlPCc
+/* 8029CF48 00299E88  4B FF F7 7D */	bl updateDSP__9JASDriverFv
 /* 8029CF4C 00299E8C  38 60 00 02 */	li r3, 2
-/* 8029CF50 00299E90  4B FF 3F D5 */	bl JASProbe_NS_stop_X1_
+/* 8029CF50 00299E90  4B FF 3F D5 */	bl stop__8JASProbeFl
 /* 8029CF54 00299E94  4B FF FF 60 */	b lbl_8029CEB4
 lbl_8029CF58:
-/* 8029CF58 00299E98  4B FF F5 AD */	bl JASDriver_NS_stopDMA
+/* 8029CF58 00299E98  4B FF F5 AD */	bl stopDMA__9JASDriverFv
 /* 8029CF5C 00299E9C  38 60 00 00 */	li r3, 0
 /* 8029CF60 00299EA0  48 0A 45 15 */	bl OSExitThread
 /* 8029CF64 00299EA4  4B FF FF 50 */	b lbl_8029CEB4
-.global JASAudioThread_NS_DMACallback
-JASAudioThread_NS_DMACallback:
+
+/* 8029CF68 0054 .text DMACallback__14JASAudioThreadFv DMACallback__14JASAudioThreadFv */
+.global DMACallback__14JASAudioThreadFv
+DMACallback__14JASAudioThreadFv:
 /* 8029CF68 00299EA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029CF6C 00299EAC  7C 08 02 A6 */	mflr r0
 /* 8029CF70 00299EB0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029CF74 00299EB4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029CF78 00299EB8  83 ED 86 0C */	lwz r31, lbl_80450B8C-_SDA_BASE_(r13)
 /* 8029CF7C 00299EBC  38 60 00 04 */	li r3, 4
-/* 8029CF80 00299EC0  4B FF 3F A5 */	bl JASProbe_NS_stop_X1_
+/* 8029CF80 00299EC0  4B FF 3F A5 */	bl stop__8JASProbeFl
 /* 8029CF84 00299EC4  38 60 00 04 */	li r3, 4
 /* 8029CF88 00299EC8  3C 80 80 3A */	lis r4, lbl_8039B338@ha
 /* 8029CF8C 00299ECC  38 84 B3 38 */	addi r4, r4, lbl_8039B338@l
 /* 8029CF90 00299ED0  38 84 00 08 */	addi r4, r4, 8
-/* 8029CF94 00299ED4  4B FF 3F 51 */	bl JASProbe_NS_start_X1_
+/* 8029CF94 00299ED4  4B FF 3F 51 */	bl start__8JASProbeFlPCc
 /* 8029CF98 00299ED8  38 7F 00 30 */	addi r3, r31, 0x30
 /* 8029CF9C 00299EDC  38 80 00 00 */	li r4, 0
 /* 8029CFA0 00299EE0  38 A0 00 00 */	li r5, 0
@@ -215,8 +217,10 @@ JASAudioThread_NS_DMACallback:
 /* 8029CFB0 00299EF0  7C 08 03 A6 */	mtlr r0
 /* 8029CFB4 00299EF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029CFB8 00299EF8  4E 80 00 20 */	blr 
-.global JASAudioThread_NS_DSPCallback
-JASAudioThread_NS_DSPCallback:
+
+/* 8029CFBC 006C .text DSPCallback__14JASAudioThreadFPv DSPCallback__14JASAudioThreadFPv */
+.global DSPCallback__14JASAudioThreadFPv
+DSPCallback__14JASAudioThreadFPv:
 /* 8029CFBC 00299EFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029CFC0 00299F00  7C 08 02 A6 */	mflr r0
 /* 8029CFC4 00299F04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -240,13 +244,17 @@ lbl_8029CFD0:
 /* 8029D008 00299F48  48 00 00 0C */	b lbl_8029D014
 lbl_8029D00C:
 /* 8029D00C 00299F4C  54 63 04 3E */	clrlwi r3, r3, 0x10
-/* 8029D010 00299F50  48 00 09 B5 */	bl JASDsp_NS_finishWork
+/* 8029D010 00299F50  48 00 09 B5 */	bl finishWork__6JASDspFUs
 lbl_8029D014:
 /* 8029D014 00299F54  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029D018 00299F58  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029D01C 00299F5C  7C 08 03 A6 */	mtlr r0
 /* 8029D020 00299F60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D024 00299F64  4E 80 00 20 */	blr 
+
+/* 8029D028 008C .text __dt__14JASAudioThreadFv __dt__14JASAudioThreadFv */
+.global __dt__14JASAudioThreadFv
+__dt__14JASAudioThreadFv:
 /* 8029D028 00299F68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029D02C 00299F6C  7C 08 02 A6 */	mflr r0
 /* 8029D030 00299F70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -255,8 +263,8 @@ lbl_8029D014:
 /* 8029D03C 00299F7C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8029D040 00299F80  7C 9F 23 78 */	mr r31, r4
 /* 8029D044 00299F84  41 82 00 54 */	beq lbl_8029D098
-/* 8029D048 00299F88  3C 60 80 3C */	lis r3, lbl_803C78E0@ha
-/* 8029D04C 00299F8C  38 03 78 E0 */	addi r0, r3, lbl_803C78E0@l
+/* 8029D048 00299F88  3C 60 80 3C */	lis r3, __vt__14JASAudioThread@ha
+/* 8029D04C 00299F8C  38 03 78 E0 */	addi r0, r3, __vt__14JASAudioThread@l
 /* 8029D050 00299F90  90 1E 00 00 */	stw r0, 0(r30)
 /* 8029D054 00299F94  34 1E 00 7C */	addic. r0, r30, 0x7c
 /* 8029D058 00299F98  41 82 00 24 */	beq lbl_8029D07C
@@ -285,4 +293,41 @@ lbl_8029D098:
 /* 8029D0A8 00299FE8  7C 08 03 A6 */	mtlr r0
 /* 8029D0AC 00299FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D0B0 00299FF0  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039B338 0013 .rodata lbl_8039B338 @stringBase0 */
+.global lbl_8039B338
+lbl_8039B338:
+.byte 0x53, 0x46, 0x52, 0x5f, 0x44, 0x53, 0x50, 0x00, 0x55, 0x50, 0x44, 0x41, 0x54, 0x45, 0x2d, 0x44 /* baserom.dol+0x398338 */
+.byte 0x41, 0x43, 0x00 /* baserom.dol+0x398348 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39834b */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39835b */
+
+
+
+.section .data, "aw"
+/* 803C78E0 0010 .data __vt__14JASAudioThread __vt__14JASAudioThread */
+.global __vt__14JASAudioThread
+__vt__14JASAudioThread:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0xd0, 0x28, 0x80, 0x29, 0xcd, 0xec /* baserom.dol+0x3c48e0 */
+
+
+
+.section .bss, "aw"
+/* 80431C68 000C .bss lbl_80431C68 @205 */
+.global lbl_80431C68
+lbl_80431C68:
+.skip 0xc
+.skip 0x4 /* padding */
+
+
+
+.section .sbss, "aw"
+/* 804512D8 0004 .sbss snIntCount__14JASAudioThread snIntCount__14JASAudioThread */
+.global snIntCount__14JASAudioThread
+snIntCount__14JASAudioThread:
+.skip 0x4
+.skip 0x4 /* padding */
 

@@ -1,35 +1,41 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80297f74
 
-
+.section .text, "ax"
+/* 80297F74 0038 .text getInstParam__12JASVoiceBankCFiiiP12JASInstParam getInstParam__12JASVoiceBankCFiiiP12JASInstParam */
+.global getInstParam__12JASVoiceBankCFiiiP12JASInstParam
+getInstParam__12JASVoiceBankCFiiiP12JASInstParam:
 /* 80297F74 00294EB4  2C 04 00 00 */	cmpwi r4, 0
 /* 80297F78 00294EB8  40 80 00 0C */	bge lbl_80297F84
 /* 80297F7C 00294EBC  38 60 00 00 */	li r3, 0
 /* 80297F80 00294EC0  4E 80 00 20 */	blr 
 lbl_80297F84:
-/* 80297F84 00294EC4  3C 60 80 3A */	lis r3, lbl_8039B1B8@ha
-/* 80297F88 00294EC8  38 03 B1 B8 */	addi r0, r3, lbl_8039B1B8@l
-/* 80297F8C 00294ECC  90 0D 8C E8 */	stw r0, lbl_80451268-_SDA_BASE_(r13)
+/* 80297F84 00294EC4  3C 60 80 3A */	lis r3, sOscData__12JASVoiceBank@ha
+/* 80297F88 00294EC8  38 03 B1 B8 */	addi r0, r3, sOscData__12JASVoiceBank@l
+/* 80297F8C 00294ECC  90 0D 8C E8 */	stw r0, sOscTable__12JASVoiceBank-_SDA_BASE_(r13)
 /* 80297F90 00294ED0  B0 87 00 1A */	sth r4, 0x1a(r7)
 /* 80297F94 00294ED4  38 00 00 01 */	li r0, 1
 /* 80297F98 00294ED8  98 07 00 1D */	stb r0, 0x1d(r7)
-/* 80297F9C 00294EDC  38 0D 8C E8 */	addi r0, r13, lbl_80451268-_SDA_BASE_
+/* 80297F9C 00294EDC  38 0D 8C E8 */	addi r0, r13, sOscTable__12JASVoiceBank-_SDA_BASE_
 /* 80297FA0 00294EE0  90 07 00 14 */	stw r0, 0x14(r7)
 /* 80297FA4 00294EE4  38 60 00 01 */	li r3, 1
 /* 80297FA8 00294EE8  4E 80 00 20 */	blr 
+
+/* 80297FAC 005C .text __dt__12JASVoiceBankFv __dt__12JASVoiceBankFv */
+.global __dt__12JASVoiceBankFv
+__dt__12JASVoiceBankFv:
 /* 80297FAC 00294EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80297FB0 00294EF0  7C 08 02 A6 */	mflr r0
 /* 80297FB4 00294EF4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80297FB8 00294EF8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80297FBC 00294EFC  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80297FC0 00294F00  41 82 00 30 */	beq lbl_80297FF0
-/* 80297FC4 00294F04  3C 60 80 3C */	lis r3, lbl_803C76D0@ha
-/* 80297FC8 00294F08  38 03 76 D0 */	addi r0, r3, lbl_803C76D0@l
+/* 80297FC4 00294F04  3C 60 80 3C */	lis r3, __vt__12JASVoiceBank@ha
+/* 80297FC8 00294F08  38 03 76 D0 */	addi r0, r3, __vt__12JASVoiceBank@l
 /* 80297FCC 00294F0C  90 1F 00 00 */	stw r0, 0(r31)
 /* 80297FD0 00294F10  41 82 00 10 */	beq lbl_80297FE0
-/* 80297FD4 00294F14  3C 60 80 3C */	lis r3, lbl_803C76BC@ha
-/* 80297FD8 00294F18  38 03 76 BC */	addi r0, r3, lbl_803C76BC@l
+/* 80297FD4 00294F14  3C 60 80 3C */	lis r3, __vt__7JASBank@ha
+/* 80297FD8 00294F18  38 03 76 BC */	addi r0, r3, __vt__7JASBank@l
 /* 80297FDC 00294F1C  90 1F 00 00 */	stw r0, 0(r31)
 lbl_80297FE0:
 /* 80297FE0 00294F20  7C 80 07 35 */	extsh. r0, r4
@@ -43,7 +49,39 @@ lbl_80297FF0:
 /* 80297FFC 00294F3C  7C 08 03 A6 */	mtlr r0
 /* 80298000 00294F40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80298004 00294F44  4E 80 00 20 */	blr 
+
+/* 80298008 000C .text getType__12JASVoiceBankCFv getType__12JASVoiceBankCFv */
+.global getType__12JASVoiceBankCFv
+getType__12JASVoiceBankCFv:
 /* 80298008 00294F48  3C 60 56 4F */	lis r3, 0x564F4943@ha
 /* 8029800C 00294F4C  38 63 49 43 */	addi r3, r3, 0x564F4943@l
 /* 80298010 00294F50  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039B1B8 0018 .rodata sOscData__12JASVoiceBank sOscData__12JASVoiceBank */
+.global sOscData__12JASVoiceBank
+sOscData__12JASVoiceBank:
+.byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3981b8 */
+.byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3981c8 */
+
+
+
+.section .data, "aw"
+/* 803C76D0 0014 .data __vt__12JASVoiceBank __vt__12JASVoiceBank */
+.global __vt__12JASVoiceBank
+__vt__12JASVoiceBank:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x7f, 0xac, 0x80, 0x29, 0x7f, 0x74 /* baserom.dol+0x3c46d0 */
+.byte 0x80, 0x29, 0x80, 0x08 /* baserom.dol+0x3c46e0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c46e4 */
+
+
+
+.section .sbss, "aw"
+/* 80451268 0004 .sbss sOscTable__12JASVoiceBank sOscTable__12JASVoiceBank */
+.global sOscTable__12JASVoiceBank
+sOscTable__12JASVoiceBank:
+.skip 0x4
+.skip 0x4 /* padding */
 

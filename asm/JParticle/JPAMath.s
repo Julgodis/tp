@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80280588
 
-
-.global JPAGetDirMtx
-JPAGetDirMtx:
+.section .text, "ax"
+/* 80280588 0138 .text func_80280588 JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f */
+.global func_80280588
+func_80280588:
 /* 80280588 0027D4C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028058C 0027D4CC  7C 08 02 A6 */	mflr r0
 /* 80280590 0027D4D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -24,8 +24,8 @@ JPAGetDirMtx:
 /* 802805C8 0027D508  38 61 00 08 */	addi r3, r1, 8
 /* 802805CC 0027D50C  48 0C 6B 85 */	bl PSVECMag
 /* 802805D0 0027D510  C0 42 B9 C0 */	lfs f2, lbl_804553C0-_SDA2_BASE_(r2)
-/* 802805D4 0027D514  3C 60 80 45 */	lis r3, lbl_80450AEC@ha
-/* 802805D8 0027D518  C0 03 0A EC */	lfs f0, lbl_80450AEC@l(r3)
+/* 802805D4 0027D514  3C 60 80 45 */	lis r3, __float_epsilon@ha
+/* 802805D8 0027D518  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 802805DC 0027D51C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802805E0 0027D520  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802805E4 0027D524  4C 40 13 82 */	cror 2, 0, 2
@@ -86,10 +86,11 @@ lbl_80280620:
 /* 802806B8 0027D5F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802806BC 0027D5FC  4E 80 00 20 */	blr 
 
-.global JPAGetYZRotateMtx
-JPAGetYZRotateMtx:
-/* 802806C0 0027D600  3C C0 80 44 */	lis r6, lbl_80439A20@ha
-/* 802806C4 0027D604  38 C6 9A 20 */	addi r6, r6, lbl_80439A20@l
+/* 802806C0 0074 .text JPAGetYZRotateMtx__FssPA4_f JPAGetYZRotateMtx__FssPA4_f */
+.global JPAGetYZRotateMtx__FssPA4_f
+JPAGetYZRotateMtx__FssPA4_f:
+/* 802806C0 0027D600  3C C0 80 44 */	lis r6, sincosTable___5JMath@ha
+/* 802806C4 0027D604  38 C6 9A 20 */	addi r6, r6, sincosTable___5JMath@l
 /* 802806C8 0027D608  38 E6 00 04 */	addi r7, r6, 4
 /* 802806CC 0027D60C  54 60 04 38 */	rlwinm r0, r3, 0, 0x10, 0x1c
 /* 802806D0 0027D610  7C 27 04 2E */	lfsx f1, r7, r0
@@ -118,10 +119,11 @@ JPAGetYZRotateMtx:
 /* 8028072C 0027D66C  D0 05 00 0C */	stfs f0, 0xc(r5)
 /* 80280730 0027D670  4E 80 00 20 */	blr 
 
-.global JPAGetXYZRotateMtx
-JPAGetXYZRotateMtx:
-/* 80280734 0027D674  3C E0 80 44 */	lis r7, lbl_80439A20@ha
-/* 80280738 0027D678  38 E7 9A 20 */	addi r7, r7, lbl_80439A20@l
+/* 80280734 00AC .text JPAGetXYZRotateMtx__FsssPA4_f JPAGetXYZRotateMtx__FsssPA4_f */
+.global JPAGetXYZRotateMtx__FsssPA4_f
+JPAGetXYZRotateMtx__FsssPA4_f:
+/* 80280734 0027D674  3C E0 80 44 */	lis r7, sincosTable___5JMath@ha
+/* 80280738 0027D678  38 E7 9A 20 */	addi r7, r7, sincosTable___5JMath@l
 /* 8028073C 0027D67C  39 07 00 04 */	addi r8, r7, 4
 /* 80280740 0027D680  54 60 04 38 */	rlwinm r0, r3, 0, 0x10, 0x1c
 /* 80280744 0027D684  7C 28 04 2E */	lfsx f1, r8, r0
@@ -164,21 +166,23 @@ JPAGetXYZRotateMtx:
 /* 802807D8 0027D718  D0 06 00 0C */	stfs f0, 0xc(r6)
 /* 802807DC 0027D71C  4E 80 00 20 */	blr 
 
-.global JPASetRMtxTVecfromMtx
-JPASetRMtxTVecfromMtx:
+/* 802807E0 0028 .text func_802807E0 JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f> */
+.global func_802807E0
+func_802807E0:
 /* 802807E0 0027D720  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802807E4 0027D724  7C 08 02 A6 */	mflr r0
 /* 802807E8 0027D728  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802807EC 0027D72C  7C A6 2B 78 */	mr r6, r5
 /* 802807F0 0027D730  38 A1 00 08 */	addi r5, r1, 8
-/* 802807F4 0027D734  48 00 00 15 */	bl JPASetRMtxSTVecfromMtx
+/* 802807F4 0027D734  48 00 00 15 */	bl func_80280808
 /* 802807F8 0027D738  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802807FC 0027D73C  7C 08 03 A6 */	mtlr r0
 /* 80280800 0027D740  38 21 00 20 */	addi r1, r1, 0x20
 /* 80280804 0027D744  4E 80 00 20 */	blr 
 
-.global JPASetRMtxSTVecfromMtx
-JPASetRMtxSTVecfromMtx:
+/* 80280808 017C .text func_80280808 JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
+.global func_80280808
+func_80280808:
 /* 80280808 0027D748  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028080C 0027D74C  7C 08 02 A6 */	mflr r0
 /* 80280810 0027D750  90 01 00 34 */	stw r0, 0x34(r1)
@@ -278,8 +282,9 @@ lbl_80280954:
 /* 8028097C 0027D8BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80280980 0027D8C0  4E 80 00 20 */	blr 
 
-.global JPACalcKeyAnmValue
-JPACalcKeyAnmValue:
+/* 80280984 00C4 .text JPACalcKeyAnmValue__FfUsPCf JPACalcKeyAnmValue__FfUsPCf */
+.global JPACalcKeyAnmValue__FfUsPCf
+JPACalcKeyAnmValue__FfUsPCf:
 /* 80280984 0027D8C4  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80280988 0027D8C8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8028098C 0027D8CC  40 80 00 0C */	bge lbl_80280998
@@ -333,4 +338,23 @@ lbl_802809F0:
 /* 80280A3C 0027D97C  EC 23 09 F8 */	fmsubs f1, f3, f7, f1
 /* 80280A40 0027D980  EC 25 00 7C */	fnmsubs f1, f5, f1, f0
 /* 80280A44 0027D984  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 804553B8 0004 .sdata2 lbl_804553B8 @2193 */
+.global lbl_804553B8
+lbl_804553B8:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4218 */
+
+/* 804553BC 0004 .sdata2 lbl_804553BC @2238 */
+.global lbl_804553BC
+lbl_804553BC:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d421c */
+
+/* 804553C0 0004 .sdata2 lbl_804553C0 @2239 */
+.global lbl_804553C0
+lbl_804553C0:
+.byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4220 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4224 */
 

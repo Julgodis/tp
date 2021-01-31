@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80337178
 
-
-.global J3DJointFactory
-J3DJointFactory:
+.section .text, "ax"
+/* 80337178 0058 .text __ct__15J3DJointFactoryFRC13J3DJointBlock __ct__15J3DJointFactoryFRC13J3DJointBlock */
+.global __ct__15J3DJointFactoryFRC13J3DJointBlock
+__ct__15J3DJointFactoryFRC13J3DJointBlock:
 /* 80337178 003340B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033717C 003340BC  7C 08 02 A6 */	mflr r0
 /* 80337180 003340C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -14,11 +14,11 @@ J3DJointFactory:
 /* 80337190 003340D0  7C 9F 23 78 */	mr r31, r4
 /* 80337194 003340D4  7F E3 FB 78 */	mr r3, r31
 /* 80337198 003340D8  80 84 00 0C */	lwz r4, 0xc(r4)
-/* 8033719C 003340DC  48 00 01 9D */	bl JSUConvertOffsetToPtr_X73_
+/* 8033719C 003340DC  48 00 01 9D */	bl func_80337338
 /* 803371A0 003340E0  90 7E 00 00 */	stw r3, 0(r30)
 /* 803371A4 003340E4  7F E3 FB 78 */	mr r3, r31
 /* 803371A8 003340E8  80 9F 00 10 */	lwz r4, 0x10(r31)
-/* 803371AC 003340EC  4B FF F5 D1 */	bl JSUConvertOffsetToPtr_X72_
+/* 803371AC 003340EC  4B FF F5 D1 */	bl func_8033677C
 /* 803371B0 003340F0  90 7E 00 04 */	stw r3, 4(r30)
 /* 803371B4 003340F4  7F C3 F3 78 */	mr r3, r30
 /* 803371B8 003340F8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -28,8 +28,9 @@ J3DJointFactory:
 /* 803371C8 00334108  38 21 00 10 */	addi r1, r1, 0x10
 /* 803371CC 0033410C  4E 80 00 20 */	blr 
 
-.global J3DJointFactory_NS_create
-J3DJointFactory_NS_create:
+/* 803371D0 0168 .text create__15J3DJointFactoryFi create__15J3DJointFactoryFi */
+.global create__15J3DJointFactoryFi
+create__15J3DJointFactoryFi:
 /* 803371D0 00334110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803371D4 00334114  7C 08 02 A6 */	mflr r0
 /* 803371D8 00334118  90 01 00 14 */	stw r0, 0x14(r1)
@@ -41,7 +42,7 @@ J3DJointFactory_NS_create:
 /* 803371F0 00334130  4B F9 7A 5D */	bl __nw__FUl
 /* 803371F4 00334134  7C 64 1B 79 */	or. r4, r3, r3
 /* 803371F8 00334138  41 82 00 0C */	beq lbl_80337204
-/* 803371FC 0033413C  4B FF 7F 75 */	bl J3DJoint
+/* 803371FC 0033413C  4B FF 7F 75 */	bl __ct__8J3DJointFv
 /* 80337200 00334140  7C 64 1B 78 */	mr r4, r3
 lbl_80337204:
 /* 80337204 00334144  B3 C4 00 14 */	sth r30, 0x14(r4)
@@ -123,8 +124,9 @@ lbl_8033731C:
 /* 80337330 00334270  38 21 00 10 */	addi r1, r1, 0x10
 /* 80337334 00334274  4E 80 00 20 */	blr 
 
-.global JSUConvertOffsetToPtr_X73_
-JSUConvertOffsetToPtr_X73_:
+/* 80337338 0018 .text func_80337338 JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl */
+.global func_80337338
+func_80337338:
 /* 80337338 00334278  28 04 00 00 */	cmplwi r4, 0
 /* 8033733C 0033427C  40 82 00 0C */	bne lbl_80337348
 /* 80337340 00334280  38 60 00 00 */	li r3, 0

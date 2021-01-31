@@ -1,19 +1,19 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8030fde8
 
-
-.global J3DSys
-J3DSys:
+.section .text, "ax"
+/* 8030FDE8 00D8 .text __ct__6J3DSysFv __ct__6J3DSysFv */
+.global __ct__6J3DSysFv
+__ct__6J3DSysFv:
 /* 8030FDE8 0030CD28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FDEC 0030CD2C  7C 08 02 A6 */	mflr r0
 /* 8030FDF0 0030CD30  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8030FDF4 0030CD34  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8030FDF8 0030CD38  7C 7F 1B 78 */	mr r31, r3
-/* 8030FDFC 0030CD3C  48 01 43 99 */	bl makeTexCoordTable
-/* 8030FE00 0030CD40  48 01 45 15 */	bl makeTevSwapTable
-/* 8030FE04 0030CD44  48 01 44 39 */	bl makeAlphaCmpTable
-/* 8030FE08 0030CD48  48 01 44 A1 */	bl makeZModeTable
+/* 8030FDFC 0030CD3C  48 01 43 99 */	bl makeTexCoordTable__Fv
+/* 8030FE00 0030CD40  48 01 45 15 */	bl makeTevSwapTable__Fv
+/* 8030FE04 0030CD44  48 01 44 39 */	bl makeAlphaCmpTable__Fv
+/* 8030FE08 0030CD48  48 01 44 A1 */	bl makeZModeTable__Fv
 /* 8030FE0C 0030CD4C  38 00 00 00 */	li r0, 0
 /* 8030FE10 0030CD50  90 1F 00 34 */	stw r0, 0x34(r31)
 /* 8030FE14 0030CD54  7F E3 FB 78 */	mr r3, r31
@@ -43,8 +43,8 @@ lbl_8030FE40:
 /* 8030FE70 0030CDB0  90 DF 01 14 */	stw r6, 0x114(r31)
 /* 8030FE74 0030CDB4  38 60 00 00 */	li r3, 0
 /* 8030FE78 0030CDB8  38 A0 00 01 */	li r5, 1
-/* 8030FE7C 0030CDBC  3C 80 80 43 */	lis r4, lbl_80434C2C@ha
-/* 8030FE80 0030CDC0  38 84 4C 2C */	addi r4, r4, lbl_80434C2C@l
+/* 8030FE7C 0030CDBC  3C 80 80 43 */	lis r4, sTexCoordScaleTable__6J3DSys@ha
+/* 8030FE80 0030CDC0  38 84 4C 2C */	addi r4, r4, sTexCoordScaleTable__6J3DSys@l
 /* 8030FE84 0030CDC4  38 00 00 08 */	li r0, 8
 /* 8030FE88 0030CDC8  7C 09 03 A6 */	mtctr r0
 lbl_8030FE8C:
@@ -62,8 +62,9 @@ lbl_8030FE8C:
 /* 8030FEB8 0030CDF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FEBC 0030CDFC  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_loadPosMtxIndx
-J3DSys_NS_loadPosMtxIndx:
+/* 8030FEC0 0024 .text loadPosMtxIndx__6J3DSysCFiUs loadPosMtxIndx__6J3DSysCFiUs */
+.global loadPosMtxIndx__6J3DSysCFiUs
+loadPosMtxIndx__6J3DSysCFiUs:
 /* 8030FEC0 0030CE00  38 00 00 20 */	li r0, 0x20
 /* 8030FEC4 0030CE04  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8030FEC8 0030CE08  98 03 80 00 */	stb r0, 0xCC008000@l(r3)
@@ -74,8 +75,9 @@ J3DSys_NS_loadPosMtxIndx:
 /* 8030FEDC 0030CE1C  B0 03 80 00 */	sth r0, -0x8000(r3)
 /* 8030FEE0 0030CE20  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_loadNrmMtxIndx
-J3DSys_NS_loadNrmMtxIndx:
+/* 8030FEE4 0028 .text loadNrmMtxIndx__6J3DSysCFiUs loadNrmMtxIndx__6J3DSysCFiUs */
+.global loadNrmMtxIndx__6J3DSysCFiUs
+loadNrmMtxIndx__6J3DSysCFiUs:
 /* 8030FEE4 0030CE24  38 00 00 28 */	li r0, 0x28
 /* 8030FEE8 0030CE28  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 8030FEEC 0030CE2C  98 06 80 00 */	stb r0, 0xCC008000@l(r6)
@@ -87,8 +89,9 @@ J3DSys_NS_loadNrmMtxIndx:
 /* 8030FF04 0030CE44  B0 06 80 00 */	sth r0, -0x8000(r6)
 /* 8030FF08 0030CE48  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_setTexCacheRegion
-J3DSys_NS_setTexCacheRegion:
+/* 8030FF0C 01B0 .text setTexCacheRegion__6J3DSysF15_GXTexCacheSize setTexCacheRegion__6J3DSysF15_GXTexCacheSize */
+.global setTexCacheRegion__6J3DSysF15_GXTexCacheSize
+setTexCacheRegion__6J3DSysF15_GXTexCacheSize:
 /* 8030FF0C 0030CE4C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8030FF10 0030CE50  7C 08 02 A6 */	mflr r0
 /* 8030FF14 0030CE54  90 01 00 54 */	stw r0, 0x54(r1)
@@ -145,7 +148,7 @@ lbl_8030FFA4:
 /* 8030FFDC 0030CF1C  3C 86 00 08 */	addis r4, r6, 8
 /* 8030FFE0 0030CF20  7F A5 EB 78 */	mr r5, r29
 /* 8030FFE4 0030CF24  7F A7 EB 78 */	mr r7, r29
-/* 8030FFE8 0030CF28  4B FF FD 81 */	bl J3DFifoLoadTexCached
+/* 8030FFE8 0030CF28  4B FF FD 81 */	bl J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize
 /* 8030FFEC 0030CF2C  48 00 00 44 */	b lbl_80310030
 lbl_8030FFF0:
 /* 8030FFF0 0030CF30  7C 1A F8 2E */	lwzx r0, r26, r31
@@ -163,7 +166,7 @@ lbl_8030FFF0:
 /* 80310020 0030CF60  7F A5 EB 78 */	mr r5, r29
 /* 80310024 0030CF64  3C C4 00 08 */	addis r6, r4, 8
 /* 80310028 0030CF68  7F A7 EB 78 */	mr r7, r29
-/* 8031002C 0030CF6C  4B FF FD 3D */	bl J3DFifoLoadTexCached
+/* 8031002C 0030CF6C  4B FF FD 3D */	bl J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize
 lbl_80310030:
 /* 80310030 0030CF70  3B 39 00 01 */	addi r25, r25, 1
 /* 80310034 0030CF74  3B 7B 00 10 */	addi r27, r27, 0x10
@@ -192,7 +195,7 @@ lbl_80310054:
 /* 80310084 0030CFC4  7F A5 EB 78 */	mr r5, r29
 /* 80310088 0030CFC8  3C C4 00 08 */	addis r6, r4, 8
 /* 8031008C 0030CFCC  7F A7 EB 78 */	mr r7, r29
-/* 80310090 0030CFD0  4B FF FC D9 */	bl J3DFifoLoadTexCached
+/* 80310090 0030CFD0  4B FF FC D9 */	bl J3DFifoLoadTexCached__F11_GXTexMapIDUl15_GXTexCacheSizeUl15_GXTexCacheSize
 /* 80310094 0030CFD4  3B 39 00 01 */	addi r25, r25, 1
 /* 80310098 0030CFD8  3B 7B 00 10 */	addi r27, r27, 0x10
 lbl_8031009C:
@@ -206,8 +209,9 @@ lbl_803100A4:
 /* 803100B4 0030CFF4  38 21 00 50 */	addi r1, r1, 0x50
 /* 803100B8 0030CFF8  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_drawInit
-J3DSys_NS_drawInit:
+/* 803100BC 0680 .text drawInit__6J3DSysFv drawInit__6J3DSysFv */
+.global drawInit__6J3DSysFv
+drawInit__6J3DSysFv:
 /* 803100BC 0030CFFC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803100C0 0030D000  7C 08 02 A6 */	mflr r0
 /* 803100C4 0030D004  90 01 00 54 */	stw r0, 0x54(r1)
@@ -319,7 +323,7 @@ J3DSys_NS_drawInit:
 /* 8031026C 0030D1AC  38 60 00 00 */	li r3, 0
 /* 80310270 0030D1B0  48 04 EE 65 */	bl GXSetNumIndStages
 /* 80310274 0030D1B4  7F E3 FB 78 */	mr r3, r31
-/* 80310278 0030D1B8  48 00 07 21 */	bl J3DSys_NS_reinitTexture
+/* 80310278 0030D1B8  48 00 07 21 */	bl reinitTexture__6J3DSysFv
 /* 8031027C 0030D1BC  38 60 00 00 */	li r3, 0
 /* 80310280 0030D1C0  38 80 00 FF */	li r4, 0xff
 /* 80310284 0030D1C4  38 A0 00 FF */	li r5, 0xff
@@ -402,8 +406,8 @@ J3DSys_NS_drawInit:
 /* 803103B8 0030D2F8  48 04 F3 3D */	bl GXSetTevOrder
 /* 803103BC 0030D2FC  3B 80 00 00 */	li r28, 0
 /* 803103C0 0030D300  3B C0 00 00 */	li r30, 0
-/* 803103C4 0030D304  3C 80 80 3D */	lis r4, lbl_803CD8B0@ha
-/* 803103C8 0030D308  3B A4 D8 B0 */	addi r29, r4, lbl_803CD8B0@l
+/* 803103C4 0030D304  3C 80 80 3D */	lis r4, j3dIdentityMtx@ha
+/* 803103C8 0030D308  3B A4 D8 B0 */	addi r29, r4, j3dIdentityMtx@l
 lbl_803103CC:
 /* 803103CC 0030D30C  7F A3 EB 78 */	mr r3, r29
 /* 803103D0 0030D310  38 9E 00 1E */	addi r4, r30, 0x1e
@@ -438,12 +442,12 @@ lbl_80310438:
 /* 80310438 0030D378  57 80 06 3E */	clrlwi r0, r28, 0x18
 /* 8031043C 0030D37C  28 00 00 03 */	cmplwi r0, 3
 /* 80310440 0030D380  41 80 FF E0 */	blt lbl_80310420
-/* 80310444 0030D384  80 02 C9 C0 */	lwz r0, lbl_804563C0-_SDA2_BASE_(r2)
+/* 80310444 0030D384  80 02 C9 C0 */	lwz r0, j3dDefaultColInfo-_SDA2_BASE_(r2)
 /* 80310448 0030D388  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8031044C 0030D38C  38 60 00 04 */	li r3, 4
 /* 80310450 0030D390  38 81 00 18 */	addi r4, r1, 0x18
 /* 80310454 0030D394  48 04 D5 F5 */	bl GXSetChanMatColor
-/* 80310458 0030D398  80 02 C9 C0 */	lwz r0, lbl_804563C0-_SDA2_BASE_(r2)
+/* 80310458 0030D398  80 02 C9 C0 */	lwz r0, j3dDefaultColInfo-_SDA2_BASE_(r2)
 /* 8031045C 0030D39C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80310460 0030D3A0  38 60 00 05 */	li r3, 5
 /* 80310464 0030D3A4  38 81 00 14 */	addi r4, r1, 0x14
@@ -471,8 +475,8 @@ lbl_80310438:
 /* 803104BC 0030D3FC  39 20 00 02 */	li r9, 2
 /* 803104C0 0030D400  48 04 D6 AD */	bl GXSetChanCtrl
 /* 803104C4 0030D404  3B 80 00 00 */	li r28, 0
-/* 803104C8 0030D408  3C 80 80 3A */	lis r4, lbl_803A1EFC@ha
-/* 803104CC 0030D40C  3B A4 1E FC */	addi r29, r4, lbl_803A1EFC@l
+/* 803104C8 0030D408  3C 80 80 3A */	lis r4, j3dDefaultTexCoordInfo@ha
+/* 803104CC 0030D40C  3B A4 1E FC */	addi r29, r4, j3dDefaultTexCoordInfo@l
 /* 803104D0 0030D410  48 00 00 2C */	b lbl_803104FC
 lbl_803104D4:
 /* 803104D4 0030D414  57 83 06 3E */	clrlwi r3, r28, 0x18
@@ -502,7 +506,7 @@ lbl_80310524:
 /* 80310528 0030D468  28 00 00 04 */	cmplwi r0, 4
 /* 8031052C 0030D46C  41 80 FF E4 */	blt lbl_80310510
 /* 80310530 0030D470  3B 80 00 00 */	li r28, 0
-/* 80310534 0030D474  83 A2 C9 E0 */	lwz r29, lbl_804563E0-_SDA2_BASE_(r2)
+/* 80310534 0030D474  83 A2 C9 E0 */	lwz r29, j3dDefaultTevKColor-_SDA2_BASE_(r2)
 /* 80310538 0030D478  48 00 00 18 */	b lbl_80310550
 lbl_8031053C:
 /* 8031053C 0030D47C  93 A1 00 10 */	stw r29, 0x10(r1)
@@ -515,7 +519,7 @@ lbl_80310550:
 /* 80310554 0030D494  28 00 00 04 */	cmplwi r0, 4
 /* 80310558 0030D498  41 80 FF E4 */	blt lbl_8031053C
 /* 8031055C 0030D49C  3B 80 00 00 */	li r28, 0
-/* 80310560 0030D4A0  83 C2 C9 D4 */	lwz r30, lbl_804563D4-_SDA2_BASE_(r2)
+/* 80310560 0030D4A0  83 C2 C9 D4 */	lwz r30, j3dDefaultTevColor-_SDA2_BASE_(r2)
 /* 80310564 0030D4A4  83 A2 C9 D8 */	lwz r29, lbl_804563D8-_SDA2_BASE_(r2)
 /* 80310568 0030D4A8  48 00 00 1C */	b lbl_80310584
 lbl_8031056C:
@@ -635,7 +639,7 @@ lbl_803106DC:
 /* 80310714 0030D654  7C 75 E3 A6 */	mtspr 0x395, r3
 /* 80310718 0030D658  7F E3 FB 78 */	mr r3, r31
 /* 8031071C 0030D65C  38 80 00 00 */	li r4, 0
-/* 80310720 0030D660  4B FF F7 ED */	bl J3DSys_NS_setTexCacheRegion
+/* 80310720 0030D660  4B FF F7 ED */	bl setTexCacheRegion__6J3DSysF15_GXTexCacheSize
 /* 80310724 0030D664  39 61 00 50 */	addi r11, r1, 0x50
 /* 80310728 0030D668  48 05 1A FD */	bl _restgpr_28
 /* 8031072C 0030D66C  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -643,26 +647,27 @@ lbl_803106DC:
 /* 80310734 0030D674  38 21 00 50 */	addi r1, r1, 0x50
 /* 80310738 0030D678  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitGX
-J3DSys_NS_reinitGX:
+/* 8031073C 0060 .text reinitGX__6J3DSysFv reinitGX__6J3DSysFv */
+.global reinitGX__6J3DSysFv
+reinitGX__6J3DSysFv:
 /* 8031073C 0030D67C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310740 0030D680  7C 08 02 A6 */	mflr r0
 /* 80310744 0030D684  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80310748 0030D688  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8031074C 0030D68C  7C 7F 1B 78 */	mr r31, r3
-/* 80310750 0030D690  48 00 00 4D */	bl J3DSys_NS_reinitGenMode
+/* 80310750 0030D690  48 00 00 4D */	bl reinitGenMode__6J3DSysFv
 /* 80310754 0030D694  7F E3 FB 78 */	mr r3, r31
-/* 80310758 0030D698  48 00 00 91 */	bl J3DSys_NS_reinitLighting
+/* 80310758 0030D698  48 00 00 91 */	bl reinitLighting__6J3DSysFv
 /* 8031075C 0030D69C  7F E3 FB 78 */	mr r3, r31
-/* 80310760 0030D6A0  48 00 01 35 */	bl J3DSys_NS_reinitTransform
+/* 80310760 0030D6A0  48 00 01 35 */	bl reinitTransform__6J3DSysFv
 /* 80310764 0030D6A4  7F E3 FB 78 */	mr r3, r31
-/* 80310768 0030D6A8  48 00 02 31 */	bl J3DSys_NS_reinitTexture
+/* 80310768 0030D6A8  48 00 02 31 */	bl reinitTexture__6J3DSysFv
 /* 8031076C 0030D6AC  7F E3 FB 78 */	mr r3, r31
-/* 80310770 0030D6B0  48 00 02 CD */	bl J3DSys_NS_reinitTevStages
+/* 80310770 0030D6B0  48 00 02 CD */	bl reinitTevStages__6J3DSysFv
 /* 80310774 0030D6B4  7F E3 FB 78 */	mr r3, r31
-/* 80310778 0030D6B8  48 00 05 CD */	bl J3DSys_NS_reinitIndStages
+/* 80310778 0030D6B8  48 00 05 CD */	bl reinitIndStages__6J3DSysFv
 /* 8031077C 0030D6BC  7F E3 FB 78 */	mr r3, r31
-/* 80310780 0030D6C0  48 00 06 BD */	bl J3DSys_NS_reinitPixelProc
+/* 80310780 0030D6C0  48 00 06 BD */	bl reinitPixelProc__6J3DSysFv
 /* 80310784 0030D6C4  48 04 B7 49 */	bl GXFlush
 /* 80310788 0030D6C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031078C 0030D6CC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -670,8 +675,9 @@ J3DSys_NS_reinitGX:
 /* 80310794 0030D6D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310798 0030D6D8  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitGenMode
-J3DSys_NS_reinitGenMode:
+/* 8031079C 004C .text reinitGenMode__6J3DSysFv reinitGenMode__6J3DSysFv */
+.global reinitGenMode__6J3DSysFv
+reinitGenMode__6J3DSysFv:
 /* 8031079C 0030D6DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803107A0 0030D6E0  7C 08 02 A6 */	mflr r0
 /* 803107A4 0030D6E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -692,8 +698,9 @@ J3DSys_NS_reinitGenMode:
 /* 803107E0 0030D720  38 21 00 10 */	addi r1, r1, 0x10
 /* 803107E4 0030D724  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitLighting
-J3DSys_NS_reinitLighting:
+/* 803107E8 00AC .text reinitLighting__6J3DSysFv reinitLighting__6J3DSysFv */
+.global reinitLighting__6J3DSysFv
+reinitLighting__6J3DSysFv:
 /* 803107E8 0030D728  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803107EC 0030D72C  7C 08 02 A6 */	mflr r0
 /* 803107F0 0030D730  90 01 00 24 */	stw r0, 0x24(r1)
@@ -713,22 +720,22 @@ J3DSys_NS_reinitLighting:
 /* 80310828 0030D768  39 00 00 00 */	li r8, 0
 /* 8031082C 0030D76C  39 20 00 02 */	li r9, 2
 /* 80310830 0030D770  48 04 D3 3D */	bl GXSetChanCtrl
-/* 80310834 0030D774  80 0D 83 D0 */	lwz r0, lbl_80450950-_SDA_BASE_(r13)
+/* 80310834 0030D774  80 0D 83 D0 */	lwz r0, ColorBlack-_SDA_BASE_(r13)
 /* 80310838 0030D778  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031083C 0030D77C  38 60 00 04 */	li r3, 4
 /* 80310840 0030D780  38 81 00 14 */	addi r4, r1, 0x14
 /* 80310844 0030D784  48 04 D1 1D */	bl GXSetChanAmbColor
-/* 80310848 0030D788  80 0D 83 D0 */	lwz r0, lbl_80450950-_SDA_BASE_(r13)
+/* 80310848 0030D788  80 0D 83 D0 */	lwz r0, ColorBlack-_SDA_BASE_(r13)
 /* 8031084C 0030D78C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80310850 0030D790  38 60 00 05 */	li r3, 5
 /* 80310854 0030D794  38 81 00 10 */	addi r4, r1, 0x10
 /* 80310858 0030D798  48 04 D1 09 */	bl GXSetChanAmbColor
-/* 8031085C 0030D79C  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 8031085C 0030D79C  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310860 0030D7A0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80310864 0030D7A4  38 60 00 04 */	li r3, 4
 /* 80310868 0030D7A8  38 81 00 0C */	addi r4, r1, 0xc
 /* 8031086C 0030D7AC  48 04 D1 DD */	bl GXSetChanMatColor
-/* 80310870 0030D7B0  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310870 0030D7B0  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310874 0030D7B4  90 01 00 08 */	stw r0, 8(r1)
 /* 80310878 0030D7B8  38 60 00 05 */	li r3, 5
 /* 8031087C 0030D7BC  38 81 00 08 */	addi r4, r1, 8
@@ -738,8 +745,9 @@ J3DSys_NS_reinitLighting:
 /* 8031088C 0030D7CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80310890 0030D7D0  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitTransform
-J3DSys_NS_reinitTransform:
+/* 80310894 0104 .text reinitTransform__6J3DSysFv reinitTransform__6J3DSysFv */
+.global reinitTransform__6J3DSysFv
+reinitTransform__6J3DSysFv:
 /* 80310894 0030D7D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310898 0030D7D8  7C 08 02 A6 */	mflr r0
 /* 8031089C 0030D7DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -806,14 +814,15 @@ J3DSys_NS_reinitTransform:
 /* 80310990 0030D8D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310994 0030D8D4  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitTexture
-J3DSys_NS_reinitTexture:
+/* 80310998 00A4 .text reinitTexture__6J3DSysFv reinitTexture__6J3DSysFv */
+.global reinitTexture__6J3DSysFv
+reinitTexture__6J3DSysFv:
 /* 80310998 0030D8D8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031099C 0030D8DC  7C 08 02 A6 */	mflr r0
 /* 803109A0 0030D8E0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803109A4 0030D8E4  38 61 00 08 */	addi r3, r1, 8
-/* 803109A8 0030D8E8  3C 80 80 3D */	lis r4, lbl_803CD8A0@ha
-/* 803109AC 0030D8EC  38 84 D8 A0 */	addi r4, r4, lbl_803CD8A0@l
+/* 803109A8 0030D8E8  3C 80 80 3D */	lis r4, NullTexData@ha
+/* 803109AC 0030D8EC  38 84 D8 A0 */	addi r4, r4, NullTexData@l
 /* 803109B0 0030D8F0  38 A0 00 04 */	li r5, 4
 /* 803109B4 0030D8F4  38 C0 00 04 */	li r6, 4
 /* 803109B8 0030D8F8  38 E0 00 03 */	li r7, 3
@@ -850,8 +859,9 @@ J3DSys_NS_reinitTexture:
 /* 80310A34 0030D974  38 21 00 30 */	addi r1, r1, 0x30
 /* 80310A38 0030D978  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitTevStages
-J3DSys_NS_reinitTevStages:
+/* 80310A3C 0308 .text reinitTevStages__6J3DSysFv reinitTevStages__6J3DSysFv */
+.global reinitTevStages__6J3DSysFv
+reinitTevStages__6J3DSysFv:
 /* 80310A3C 0030D97C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80310A40 0030D980  7C 08 02 A6 */	mflr r0
 /* 80310A44 0030D984  90 01 00 34 */	stw r0, 0x34(r1)
@@ -936,37 +946,37 @@ J3DSys_NS_reinitTevStages:
 /* 80310B80 0030DAC0  38 A0 00 FF */	li r5, 0xff
 /* 80310B84 0030DAC4  38 C0 00 FF */	li r6, 0xff
 /* 80310B88 0030DAC8  48 04 EB 6D */	bl GXSetTevOrder
-/* 80310B8C 0030DACC  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310B8C 0030DACC  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310B90 0030DAD0  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80310B94 0030DAD4  38 60 00 01 */	li r3, 1
 /* 80310B98 0030DAD8  38 81 00 20 */	addi r4, r1, 0x20
 /* 80310B9C 0030DADC  48 04 E7 E1 */	bl GXSetTevColor
-/* 80310BA0 0030DAE0  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310BA0 0030DAE0  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310BA4 0030DAE4  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80310BA8 0030DAE8  38 60 00 02 */	li r3, 2
 /* 80310BAC 0030DAEC  38 81 00 1C */	addi r4, r1, 0x1c
 /* 80310BB0 0030DAF0  48 04 E7 CD */	bl GXSetTevColor
-/* 80310BB4 0030DAF4  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310BB4 0030DAF4  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310BB8 0030DAF8  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80310BBC 0030DAFC  38 60 00 03 */	li r3, 3
 /* 80310BC0 0030DB00  38 81 00 18 */	addi r4, r1, 0x18
 /* 80310BC4 0030DB04  48 04 E7 B9 */	bl GXSetTevColor
-/* 80310BC8 0030DB08  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310BC8 0030DB08  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310BCC 0030DB0C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80310BD0 0030DB10  38 60 00 00 */	li r3, 0
 /* 80310BD4 0030DB14  38 81 00 14 */	addi r4, r1, 0x14
 /* 80310BD8 0030DB18  48 04 E8 69 */	bl GXSetTevKColor
-/* 80310BDC 0030DB1C  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310BDC 0030DB1C  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310BE0 0030DB20  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80310BE4 0030DB24  38 60 00 01 */	li r3, 1
 /* 80310BE8 0030DB28  38 81 00 10 */	addi r4, r1, 0x10
 /* 80310BEC 0030DB2C  48 04 E8 55 */	bl GXSetTevKColor
-/* 80310BF0 0030DB30  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310BF0 0030DB30  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310BF4 0030DB34  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80310BF8 0030DB38  38 60 00 02 */	li r3, 2
 /* 80310BFC 0030DB3C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80310C00 0030DB40  48 04 E8 41 */	bl GXSetTevKColor
-/* 80310C04 0030DB44  80 0D 83 D4 */	lwz r0, lbl_80450954-_SDA_BASE_(r13)
+/* 80310C04 0030DB44  80 0D 83 D4 */	lwz r0, ColorWhite-_SDA_BASE_(r13)
 /* 80310C08 0030DB48  90 01 00 08 */	stw r0, 8(r1)
 /* 80310C0C 0030DB4C  38 60 00 03 */	li r3, 3
 /* 80310C10 0030DB50  38 81 00 08 */	addi r4, r1, 8
@@ -1048,8 +1058,9 @@ lbl_80310C1C:
 /* 80310D3C 0030DC7C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80310D40 0030DC80  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitIndStages
-J3DSys_NS_reinitIndStages:
+/* 80310D44 00F8 .text reinitIndStages__6J3DSysFv reinitIndStages__6J3DSysFv */
+.global reinitIndStages__6J3DSysFv
+reinitIndStages__6J3DSysFv:
 /* 80310D44 0030DC84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310D48 0030DC88  7C 08 02 A6 */	mflr r0
 /* 80310D4C 0030DC8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1094,18 +1105,18 @@ lbl_80310D58:
 /* 80310DE4 0030DD24  38 A0 00 00 */	li r5, 0
 /* 80310DE8 0030DD28  48 04 E0 BD */	bl GXSetIndTexCoordScale
 /* 80310DEC 0030DD2C  38 60 00 01 */	li r3, 1
-/* 80310DF0 0030DD30  3C 80 80 3D */	lis r4, lbl_803CD8E0@ha
-/* 80310DF4 0030DD34  38 84 D8 E0 */	addi r4, r4, lbl_803CD8E0@l
+/* 80310DF0 0030DD30  3C 80 80 3D */	lis r4, IndMtx@ha
+/* 80310DF4 0030DD34  38 84 D8 E0 */	addi r4, r4, IndMtx@l
 /* 80310DF8 0030DD38  38 A0 00 01 */	li r5, 1
 /* 80310DFC 0030DD3C  48 04 DF 31 */	bl GXSetIndTexMtx
 /* 80310E00 0030DD40  38 60 00 02 */	li r3, 2
-/* 80310E04 0030DD44  3C 80 80 3D */	lis r4, lbl_803CD8E0@ha
-/* 80310E08 0030DD48  38 84 D8 E0 */	addi r4, r4, lbl_803CD8E0@l
+/* 80310E04 0030DD44  3C 80 80 3D */	lis r4, IndMtx@ha
+/* 80310E08 0030DD48  38 84 D8 E0 */	addi r4, r4, IndMtx@l
 /* 80310E0C 0030DD4C  38 A0 00 01 */	li r5, 1
 /* 80310E10 0030DD50  48 04 DF 1D */	bl GXSetIndTexMtx
 /* 80310E14 0030DD54  38 60 00 03 */	li r3, 3
-/* 80310E18 0030DD58  3C 80 80 3D */	lis r4, lbl_803CD8E0@ha
-/* 80310E1C 0030DD5C  38 84 D8 E0 */	addi r4, r4, lbl_803CD8E0@l
+/* 80310E18 0030DD58  3C 80 80 3D */	lis r4, IndMtx@ha
+/* 80310E1C 0030DD5C  38 84 D8 E0 */	addi r4, r4, IndMtx@l
 /* 80310E20 0030DD60  38 A0 00 01 */	li r5, 1
 /* 80310E24 0030DD64  48 04 DF 09 */	bl GXSetIndTexMtx
 /* 80310E28 0030DD68  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1114,8 +1125,9 @@ lbl_80310D58:
 /* 80310E34 0030DD74  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310E38 0030DD78  4E 80 00 20 */	blr 
 
-.global J3DSys_NS_reinitPixelProc
-J3DSys_NS_reinitPixelProc:
+/* 80310E3C 0094 .text reinitPixelProc__6J3DSysFv reinitPixelProc__6J3DSysFv */
+.global reinitPixelProc__6J3DSysFv
+reinitPixelProc__6J3DSysFv:
 /* 80310E3C 0030DD7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310E40 0030DD80  7C 08 02 A6 */	mflr r0
 /* 80310E44 0030DD84  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1130,7 +1142,7 @@ J3DSys_NS_reinitPixelProc:
 /* 80310E68 0030DDA8  48 04 EE 09 */	bl GXSetAlphaUpdate
 /* 80310E6C 0030DDAC  38 60 00 01 */	li r3, 1
 /* 80310E70 0030DDB0  48 04 EF 69 */	bl GXSetDither
-/* 80310E74 0030DDB4  80 0D 83 D0 */	lwz r0, lbl_80450950-_SDA_BASE_(r13)
+/* 80310E74 0030DDB4  80 0D 83 D0 */	lwz r0, ColorBlack-_SDA_BASE_(r13)
 /* 80310E78 0030DDB8  90 01 00 08 */	stw r0, 8(r1)
 /* 80310E7C 0030DDBC  38 60 00 00 */	li r3, 0
 /* 80310E80 0030DDC0  C0 22 C9 68 */	lfs f1, lbl_80456368-_SDA2_BASE_(r2)
@@ -1153,14 +1165,128 @@ J3DSys_NS_reinitPixelProc:
 /* 80310EC4 0030DE04  7C 08 03 A6 */	mtlr r0
 /* 80310EC8 0030DE08  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310ECC 0030DE0C  4E 80 00 20 */	blr 
+
+/* 80310ED0 0028 .text __sinit_J3DSys_cpp __sinit_J3DSys_cpp */
+.global __sinit_J3DSys_cpp
+__sinit_J3DSys_cpp:
 /* 80310ED0 0030DE10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310ED4 0030DE14  7C 08 02 A6 */	mflr r0
 /* 80310ED8 0030DE18  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80310EDC 0030DE1C  3C 60 80 43 */	lis r3, lbl_80434AC8@ha
-/* 80310EE0 0030DE20  38 63 4A C8 */	addi r3, r3, lbl_80434AC8@l
-/* 80310EE4 0030DE24  4B FF EF 05 */	bl J3DSys
+/* 80310EDC 0030DE1C  3C 60 80 43 */	lis r3, j3dSys@ha
+/* 80310EE0 0030DE20  38 63 4A C8 */	addi r3, r3, j3dSys@l
+/* 80310EE4 0030DE24  4B FF EF 05 */	bl __ct__6J3DSysFv
 /* 80310EE8 0030DE28  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80310EEC 0030DE2C  7C 08 03 A6 */	mtlr r0
 /* 80310EF0 0030DE30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310EF4 0030DE34  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 803A1DF8 0010 .rodata lbl_803A1DF8 @695 */
+.global lbl_803A1DF8
+lbl_803A1DF8:
+.byte 0x00, 0x00, 0x80, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39edf8 */
+
+/* 803A1E08 0010 .rodata lbl_803A1E08 @696 */
+.global lbl_803A1E08
+lbl_803A1E08:
+.byte 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ee08 */
+
+/* 803A1E18 0018 .rodata lbl_803A1E18 @737 */
+.global lbl_803A1E18
+lbl_803A1E18:
+.byte 0x3f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ee18 */
+.byte 0x3f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ee28 */
+
+
+
+.section .data, "aw"
+/* 803CD8A0 0010 .data NullTexData NullTexData */
+.global NullTexData
+NullTexData:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8a0 */
+
+/* 803CD8B0 0030 .data j3dIdentityMtx j3dIdentityMtx */
+.global j3dIdentityMtx
+j3dIdentityMtx:
+.byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8b0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8c0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8d0 */
+
+/* 803CD8E0 0018 .data IndMtx IndMtx */
+.global IndMtx
+IndMtx:
+.byte 0x3f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8e0 */
+.byte 0x3f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca8f0 */
+
+
+
+.section .bss, "aw"
+/* 80434AC8 011C .bss j3dSys j3dSys */
+.global j3dSys
+j3dSys:
+.skip 0x11c
+
+/* 80434BE4 0030 .bss mCurrentMtx__6J3DSys mCurrentMtx__6J3DSys */
+.global mCurrentMtx__6J3DSys
+mCurrentMtx__6J3DSys:
+.skip 0x30
+
+/* 80434C14 000C .bss mCurrentS__6J3DSys mCurrentS__6J3DSys */
+.global mCurrentS__6J3DSys
+mCurrentS__6J3DSys:
+.skip 0xc
+
+/* 80434C20 000C .bss mParentS__6J3DSys mParentS__6J3DSys */
+.global mParentS__6J3DSys
+mParentS__6J3DSys:
+.skip 0xc
+
+/* 80434C2C 0040 .bss sTexCoordScaleTable__6J3DSys sTexCoordScaleTable__6J3DSys */
+.global sTexCoordScaleTable__6J3DSys
+sTexCoordScaleTable__6J3DSys:
+.skip 0x40
+.skip 0x4 /* padding */
+
+
+
+.section .sdata, "a"
+/* 80450950 0004 .sdata ColorBlack ColorBlack */
+.global ColorBlack
+ColorBlack:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d06b0 */
+
+/* 80450954 0004 .sdata ColorWhite ColorWhite */
+.global ColorWhite
+ColorWhite:
+.byte 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3d06b4 */
+
+
+
+.section .sbss, "aw"
+/* 80451598 0004 .sbss j3dDefaultViewNo j3dDefaultViewNo */
+.global j3dDefaultViewNo
+j3dDefaultViewNo:
+.skip 0x4
+.skip 0x4 /* padding */
+
+
+
+.section .sdata2, "a"
+/* 80456368 0004 .sdata2 lbl_80456368 @892 */
+.global lbl_80456368
+lbl_80456368:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51c8 */
+
+/* 8045636C 0004 .sdata2 lbl_8045636C @893 */
+.global lbl_8045636C
+lbl_8045636C:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d51cc */
+
+/* 80456370 0004 .sdata2 lbl_80456370 @894 */
+.global lbl_80456370
+lbl_80456370:
+.byte 0x3d, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d51d0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51d4 */
 

@@ -1,13 +1,13 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802e5530
 
-
-.global JUTFader
-JUTFader:
+.section .text, "ax"
+/* 802E5530 00AC .text __ct__8JUTFaderFiiiiQ28JUtility6TColor __ct__8JUTFaderFiiiiQ28JUtility6TColor */
+.global __ct__8JUTFaderFiiiiQ28JUtility6TColor
+__ct__8JUTFaderFiiiiQ28JUtility6TColor:
 /* 802E5530 002E2470  94 21 FF D0 */	stwu r1, -0x30(r1)
-/* 802E5534 002E2474  3D 20 80 3D */	lis r9, lbl_803CC990@ha
-/* 802E5538 002E2478  38 09 C9 90 */	addi r0, r9, lbl_803CC990@l
+/* 802E5534 002E2474  3D 20 80 3D */	lis r9, __vt__8JUTFader@ha
+/* 802E5538 002E2478  38 09 C9 90 */	addi r0, r9, __vt__8JUTFader@l
 /* 802E553C 002E247C  90 03 00 00 */	stw r0, 0(r3)
 /* 802E5540 002E2480  80 08 00 00 */	lwz r0, 0(r8)
 /* 802E5544 002E2484  90 03 00 0C */	stw r0, 0xc(r3)
@@ -49,8 +49,9 @@ JUTFader:
 /* 802E55D4 002E2514  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E55D8 002E2518  4E 80 00 20 */	blr 
 
-.global JUTFader_NS_control
-JUTFader_NS_control:
+/* 802E55DC 0100 .text control__8JUTFaderFv control__8JUTFaderFv */
+.global control__8JUTFaderFv
+control__8JUTFaderFv:
 /* 802E55DC 002E251C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E55E0 002E2520  7C 08 02 A6 */	mflr r0
 /* 802E55E4 002E2524  90 01 00 14 */	stw r0, 0x14(r1)
@@ -122,6 +123,10 @@ lbl_802E56CC:
 /* 802E56D0 002E2610  7C 08 03 A6 */	mtlr r0
 /* 802E56D4 002E2614  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E56D8 002E2618  4E 80 00 20 */	blr 
+
+/* 802E56DC 0090 .text draw__8JUTFaderFv draw__8JUTFaderFv */
+.global draw__8JUTFaderFv
+draw__8JUTFaderFv:
 /* 802E56DC 002E261C  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 802E56E0 002E2620  7C 08 02 A6 */	mflr r0
 /* 802E56E4 002E2624  90 01 01 04 */	stw r0, 0x104(r1)
@@ -131,7 +136,7 @@ lbl_802E56CC:
 /* 802E56F4 002E2634  28 00 00 00 */	cmplwi r0, 0
 /* 802E56F8 002E2638  41 82 00 60 */	beq lbl_802E5758
 /* 802E56FC 002E263C  38 61 00 1C */	addi r3, r1, 0x1c
-/* 802E5700 002E2640  48 00 3F 71 */	bl J2DOrthoGraph
+/* 802E5700 002E2640  48 00 3F 71 */	bl __ct__13J2DOrthoGraphFv
 /* 802E5704 002E2644  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 802E5708 002E2648  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802E570C 002E264C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -143,15 +148,15 @@ lbl_802E56CC:
 /* 802E5724 002E2664  38 A1 00 0C */	addi r5, r1, 0xc
 /* 802E5728 002E2668  38 C1 00 10 */	addi r6, r1, 0x10
 /* 802E572C 002E266C  38 E1 00 14 */	addi r7, r1, 0x14
-/* 802E5730 002E2670  48 00 39 E9 */	bl J2DGrafContext_NS_setColor
+/* 802E5730 002E2670  48 00 39 E9 */	bl setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 802E5734 002E2674  38 61 00 1C */	addi r3, r1, 0x1c
 /* 802E5738 002E2678  38 9F 00 10 */	addi r4, r31, 0x10
-/* 802E573C 002E267C  48 00 3B 25 */	bl J2DGrafContext_NS_fillBox
-/* 802E5740 002E2680  3C 60 80 3D */	lis r3, lbl_803CC9E0@ha
-/* 802E5744 002E2684  38 03 C9 E0 */	addi r0, r3, lbl_803CC9E0@l
+/* 802E573C 002E267C  48 00 3B 25 */	bl func_802E9260
+/* 802E5740 002E2680  3C 60 80 3D */	lis r3, __vt__13J2DOrthoGraph@ha
+/* 802E5744 002E2684  38 03 C9 E0 */	addi r0, r3, __vt__13J2DOrthoGraph@l
 /* 802E5748 002E2688  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 802E574C 002E268C  3C 60 80 3D */	lis r3, lbl_803CC9B8@ha
-/* 802E5750 002E2690  38 03 C9 B8 */	addi r0, r3, lbl_803CC9B8@l
+/* 802E574C 002E268C  3C 60 80 3D */	lis r3, __vt__14J2DGrafContext@ha
+/* 802E5750 002E2690  38 03 C9 B8 */	addi r0, r3, __vt__14J2DGrafContext@l
 /* 802E5754 002E2694  90 01 00 1C */	stw r0, 0x1c(r1)
 lbl_802E5758:
 /* 802E5758 002E2698  83 E1 00 FC */	lwz r31, 0xfc(r1)
@@ -159,6 +164,10 @@ lbl_802E5758:
 /* 802E5760 002E26A0  7C 08 03 A6 */	mtlr r0
 /* 802E5764 002E26A4  38 21 01 00 */	addi r1, r1, 0x100
 /* 802E5768 002E26A8  4E 80 00 20 */	blr 
+
+/* 802E576C 0030 .text startFadeIn__8JUTFaderFi startFadeIn__8JUTFaderFi */
+.global startFadeIn__8JUTFaderFi
+startFadeIn__8JUTFaderFi:
 /* 802E576C 002E26AC  80 03 00 04 */	lwz r0, 4(r3)
 /* 802E5770 002E26B0  7C 00 00 34 */	cntlzw r0, r0
 /* 802E5774 002E26B4  54 05 D9 7E */	srwi r5, r0, 5
@@ -172,6 +181,10 @@ lbl_802E5758:
 lbl_802E5794:
 /* 802E5794 002E26D4  7C A3 2B 78 */	mr r3, r5
 /* 802E5798 002E26D8  4E 80 00 20 */	blr 
+
+/* 802E579C 0034 .text startFadeOut__8JUTFaderFi startFadeOut__8JUTFaderFi */
+.global startFadeOut__8JUTFaderFi
+startFadeOut__8JUTFaderFi:
 /* 802E579C 002E26DC  80 03 00 04 */	lwz r0, 4(r3)
 /* 802E57A0 002E26E0  20 00 00 01 */	subfic r0, r0, 1
 /* 802E57A4 002E26E4  7C 00 00 34 */	cntlzw r0, r0
@@ -187,8 +200,9 @@ lbl_802E57C8:
 /* 802E57C8 002E2708  7C A3 2B 78 */	mr r3, r5
 /* 802E57CC 002E270C  4E 80 00 20 */	blr 
 
-.global JUTFader_NS_setStatus
-JUTFader_NS_setStatus:
+/* 802E57D0 0070 .text setStatus__8JUTFaderFQ28JUTFader7EStatusi setStatus__8JUTFaderFQ28JUTFader7EStatusi */
+.global setStatus__8JUTFaderFQ28JUTFader7EStatusi
+setStatus__8JUTFaderFQ28JUTFader7EStatusi:
 /* 802E57D0 002E2710  2C 04 00 01 */	cmpwi r4, 1
 /* 802E57D4 002E2714  41 82 00 3C */	beq lbl_802E5810
 /* 802E57D8 002E2718  4C 80 00 20 */	bgelr 
@@ -220,14 +234,18 @@ lbl_802E5828:
 /* 802E5834 002E2774  38 00 00 00 */	li r0, 0
 /* 802E5838 002E2778  90 03 00 20 */	stw r0, 0x20(r3)
 /* 802E583C 002E277C  4E 80 00 20 */	blr 
+
+/* 802E5840 0048 .text __dt__8JUTFaderFv __dt__8JUTFaderFv */
+.global __dt__8JUTFaderFv
+__dt__8JUTFaderFv:
 /* 802E5840 002E2780  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E5844 002E2784  7C 08 02 A6 */	mflr r0
 /* 802E5848 002E2788  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E584C 002E278C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E5850 002E2790  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802E5854 002E2794  41 82 00 1C */	beq lbl_802E5870
-/* 802E5858 002E2798  3C A0 80 3D */	lis r5, lbl_803CC990@ha
-/* 802E585C 002E279C  38 05 C9 90 */	addi r0, r5, lbl_803CC990@l
+/* 802E5858 002E2798  3C A0 80 3D */	lis r5, __vt__8JUTFader@ha
+/* 802E585C 002E279C  38 05 C9 90 */	addi r0, r5, __vt__8JUTFader@l
 /* 802E5860 002E27A0  90 1F 00 00 */	stw r0, 0(r31)
 /* 802E5864 002E27A4  7C 80 07 35 */	extsh. r0, r4
 /* 802E5868 002E27A8  40 81 00 08 */	ble lbl_802E5870
@@ -239,4 +257,21 @@ lbl_802E5870:
 /* 802E587C 002E27BC  7C 08 03 A6 */	mtlr r0
 /* 802E5880 002E27C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5884 002E27C4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC990 0018 .data __vt__8JUTFader __vt__8JUTFader */
+.global __vt__8JUTFader
+__vt__8JUTFader:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x58, 0x40, 0x80, 0x2e, 0x57, 0x6c /* baserom.dol+0x3c9990 */
+.byte 0x80, 0x2e, 0x57, 0x9c, 0x80, 0x2e, 0x56, 0xdc /* baserom.dol+0x3c99a0 */
+
+
+
+.section .sdata2, "a"
+/* 804560D0 0008 .sdata2 lbl_804560D0 @2196 */
+.global lbl_804560D0
+lbl_804560D0:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4f30 */
 

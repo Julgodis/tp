@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80300c94
 
-
-.global J2DWindowEx
-J2DWindowEx:
+.section .text, "ax"
+/* 80300C94 02EC .text __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+.global __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
+__ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial:
 /* 80300C94 002FDBD4  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 80300C98 002FDBD8  7C 08 02 A6 */	mflr r0
 /* 80300C9C 002FDBDC  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -14,9 +14,9 @@ J2DWindowEx:
 /* 80300CAC 002FDBEC  7C 9A 23 78 */	mr r26, r4
 /* 80300CB0 002FDBF0  7C BD 2B 78 */	mr r29, r5
 /* 80300CB4 002FDBF4  7C FE 3B 78 */	mr r30, r7
-/* 80300CB8 002FDBF8  4B FF 8D C5 */	bl J2DWindow
-/* 80300CBC 002FDBFC  3C 60 80 3D */	lis r3, lbl_803CD3E8@ha
-/* 80300CC0 002FDC00  38 03 D3 E8 */	addi r0, r3, lbl_803CD3E8@l
+/* 80300CB8 002FDBF8  4B FF 8D C5 */	bl __ct__9J2DWindowFv
+/* 80300CBC 002FDBFC  3C 60 80 3D */	lis r3, __vt__11J2DWindowEx@ha
+/* 80300CC0 002FDC00  38 03 D3 E8 */	addi r0, r3, __vt__11J2DWindowEx@l
 /* 80300CC4 002FDC04  90 1C 00 00 */	stw r0, 0(r28)
 /* 80300CC8 002FDC08  38 00 00 00 */	li r0, 0
 /* 80300CCC 002FDC0C  90 1C 01 74 */	stw r0, 0x174(r28)
@@ -30,7 +30,7 @@ J2DWindowEx:
 /* 80300CEC 002FDC2C  7F A3 EB 78 */	mr r3, r29
 /* 80300CF0 002FDC30  38 81 00 14 */	addi r4, r1, 0x14
 /* 80300CF4 002FDC34  38 A0 00 08 */	li r5, 8
-/* 80300CF8 002FDC38  4B FD B5 A1 */	bl JSUInputStream_NS_read
+/* 80300CF8 002FDC38  4B FD B5 A1 */	bl read__14JSUInputStreamFPvl
 /* 80300CFC 002FDC3C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80300D00 002FDC40  90 1C 00 08 */	stw r0, 8(r28)
 /* 80300D04 002FDC44  7F A3 EB 78 */	mr r3, r29
@@ -42,7 +42,7 @@ J2DWindowEx:
 /* 80300D1C 002FDC5C  7F A3 EB 78 */	mr r3, r29
 /* 80300D20 002FDC60  38 81 00 0C */	addi r4, r1, 0xc
 /* 80300D24 002FDC64  38 A0 00 08 */	li r5, 8
-/* 80300D28 002FDC68  4B FD B7 31 */	bl JSURandomInputStream_NS_peek
+/* 80300D28 002FDC68  4B FD B7 31 */	bl peek__20JSURandomInputStreamFPvl
 /* 80300D2C 002FDC6C  7F 83 E3 78 */	mr r3, r28
 /* 80300D30 002FDC70  7F 44 D3 78 */	mr r4, r26
 /* 80300D34 002FDC74  7F A5 EB 78 */	mr r5, r29
@@ -51,11 +51,11 @@ J2DWindowEx:
 /* 80300D40 002FDC80  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 80300D44 002FDC84  7C 9B 02 14 */	add r4, r27, r0
 /* 80300D48 002FDC88  38 A0 00 00 */	li r5, 0
-/* 80300D4C 002FDC8C  4B FD B7 91 */	bl JSURandomInputStream_NS_seek
+/* 80300D4C 002FDC8C  4B FD B7 91 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 80300D50 002FDC90  7F A3 EB 78 */	mr r3, r29
 /* 80300D54 002FDC94  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80300D58 002FDC98  38 A0 00 40 */	li r5, 0x40
-/* 80300D5C 002FDC9C  4B FD B5 3D */	bl JSUInputStream_NS_read
+/* 80300D5C 002FDC9C  4B FD B5 3D */	bl read__14JSUInputStreamFPvl
 /* 80300D60 002FDCA0  3C 60 80 3A */	lis r3, lbl_803A1C60@ha
 /* 80300D64 002FDCA4  38 83 1C 60 */	addi r4, r3, lbl_803A1C60@l
 /* 80300D68 002FDCA8  80 64 00 00 */	lwz r3, 0(r4)
@@ -172,7 +172,7 @@ lbl_80300F14:
 /* 80300F18 002FDE58  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 80300F1C 002FDE5C  7C 9F 02 14 */	add r4, r31, r0
 /* 80300F20 002FDE60  38 A0 00 00 */	li r5, 0
-/* 80300F24 002FDE64  4B FD B5 B9 */	bl JSURandomInputStream_NS_seek
+/* 80300F24 002FDE64  4B FD B5 B9 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 80300F28 002FDE68  7F 83 E3 78 */	mr r3, r28
 /* 80300F2C 002FDE6C  81 9C 00 00 */	lwz r12, 0(r28)
 /* 80300F30 002FDE70  81 8C 00 58 */	lwz r12, 0x58(r12)
@@ -187,7 +187,7 @@ lbl_80300F14:
 /* 80300F54 002FDE94  90 1C 01 10 */	stw r0, 0x110(r28)
 /* 80300F58 002FDE98  98 1C 01 70 */	stb r0, 0x170(r28)
 /* 80300F5C 002FDE9C  7F 83 E3 78 */	mr r3, r28
-/* 80300F60 002FDEA0  48 00 00 21 */	bl J2DWindowEx_NS_setMinSize
+/* 80300F60 002FDEA0  48 00 00 21 */	bl setMinSize__11J2DWindowExFv
 /* 80300F64 002FDEA4  7F 83 E3 78 */	mr r3, r28
 /* 80300F68 002FDEA8  39 61 00 B0 */	addi r11, r1, 0xb0
 /* 80300F6C 002FDEAC  48 06 12 B1 */	bl _restgpr_26
@@ -196,8 +196,9 @@ lbl_80300F14:
 /* 80300F78 002FDEB8  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80300F7C 002FDEBC  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_setMinSize
-J2DWindowEx_NS_setMinSize:
+/* 80300F80 01C4 .text setMinSize__11J2DWindowExFv setMinSize__11J2DWindowExFv */
+.global setMinSize__11J2DWindowExFv
+setMinSize__11J2DWindowExFv:
 /* 80300F80 002FDEC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300F84 002FDEC4  7C 08 02 A6 */	mflr r0
 /* 80300F88 002FDEC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -312,6 +313,10 @@ lbl_8030112C:
 /* 80301138 002FE078  7C 08 03 A6 */	mtlr r0
 /* 8030113C 002FE07C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80301140 002FE080  4E 80 00 20 */	blr 
+
+/* 80301144 00E8 .text __dt__11J2DWindowExFv __dt__11J2DWindowExFv */
+.global __dt__11J2DWindowExFv
+__dt__11J2DWindowExFv:
 /* 80301144 002FE084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301148 002FE088  7C 08 02 A6 */	mflr r0
 /* 8030114C 002FE08C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -320,8 +325,8 @@ lbl_8030112C:
 /* 80301158 002FE098  7C 7C 1B 79 */	or. r28, r3, r3
 /* 8030115C 002FE09C  7C 9D 23 78 */	mr r29, r4
 /* 80301160 002FE0A0  41 82 00 B0 */	beq lbl_80301210
-/* 80301164 002FE0A4  3C 60 80 3D */	lis r3, lbl_803CD3E8@ha
-/* 80301168 002FE0A8  38 03 D3 E8 */	addi r0, r3, lbl_803CD3E8@l
+/* 80301164 002FE0A4  3C 60 80 3D */	lis r3, __vt__11J2DWindowEx@ha
+/* 80301168 002FE0A8  38 03 D3 E8 */	addi r0, r3, __vt__11J2DWindowEx@l
 /* 8030116C 002FE0AC  90 1C 00 00 */	stw r0, 0(r28)
 /* 80301170 002FE0B0  3B C0 00 00 */	li r30, 0
 /* 80301174 002FE0B4  3B E0 00 01 */	li r31, 1
@@ -362,7 +367,7 @@ lbl_803011BC:
 lbl_803011F4:
 /* 803011F4 002FE134  7F 83 E3 78 */	mr r3, r28
 /* 803011F8 002FE138  38 80 00 00 */	li r4, 0
-/* 803011FC 002FE13C  4B FF 96 85 */	bl J2DWindow_NS_dtor
+/* 803011FC 002FE13C  4B FF 96 85 */	bl __dt__9J2DWindowFv
 /* 80301200 002FE140  7F A0 07 35 */	extsh. r0, r29
 /* 80301204 002FE144  40 81 00 0C */	ble lbl_80301210
 /* 80301208 002FE148  7F 83 E3 78 */	mr r3, r28
@@ -375,6 +380,10 @@ lbl_80301210:
 /* 80301220 002FE160  7C 08 03 A6 */	mtlr r0
 /* 80301224 002FE164  38 21 00 20 */	addi r1, r1, 0x20
 /* 80301228 002FE168  4E 80 00 20 */	blr 
+
+/* 8030122C 00A0 .text drawSelf__11J2DWindowExFffPA3_A4_f drawSelf__11J2DWindowExFffPA3_A4_f */
+.global drawSelf__11J2DWindowExFffPA3_A4_f
+drawSelf__11J2DWindowExFffPA3_A4_f:
 /* 8030122C 002FE16C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80301230 002FE170  7C 08 02 A6 */	mflr r0
 /* 80301234 002FE174  90 01 00 54 */	stw r0, 0x54(r1)
@@ -406,18 +415,19 @@ lbl_80301210:
 /* 8030129C 002FE1DC  7F E3 FB 78 */	mr r3, r31
 /* 803012A0 002FE1E0  38 81 00 08 */	addi r4, r1, 8
 /* 803012A4 002FE1E4  38 BF 01 14 */	addi r5, r31, 0x114
-/* 803012A8 002FE1E8  48 00 00 25 */	bl J2DWindowEx_NS_draw_private
+/* 803012A8 002FE1E8  48 00 00 25 */	bl func_803012CC
 /* 803012AC 002FE1EC  7F E3 FB 78 */	mr r3, r31
 /* 803012B0 002FE1F0  38 9F 01 14 */	addi r4, r31, 0x114
-/* 803012B4 002FE1F4  4B FF 5F B1 */	bl clip__7J2DPaneFRCQ29JGeometry8TBox2
+/* 803012B4 002FE1F4  4B FF 5F B1 */	bl func_802F7264
 /* 803012B8 002FE1F8  83 E1 00 4C */	lwz r31, 0x4c(r1)
 /* 803012BC 002FE1FC  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 803012C0 002FE200  7C 08 03 A6 */	mtlr r0
 /* 803012C4 002FE204  38 21 00 50 */	addi r1, r1, 0x50
 /* 803012C8 002FE208  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_draw_private
-J2DWindowEx_NS_draw_private:
+/* 803012CC 06C8 .text func_803012CC draw_private__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+.global func_803012CC
+func_803012CC:
 /* 803012CC 002FE20C  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 803012D0 002FE210  7C 08 02 A6 */	mflr r0
 /* 803012D4 002FE214  90 01 01 34 */	stw r0, 0x134(r1)
@@ -591,7 +601,7 @@ lbl_803013D8:
 /* 8030156C 002FE4AC  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80301570 002FE4B0  81 1F 01 48 */	lwz r8, 0x148(r31)
 /* 80301574 002FE4B4  39 20 00 01 */	li r9, 1
-/* 80301578 002FE4B8  48 00 07 FD */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301578 002FE4B8  48 00 07 FD */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 8030157C 002FE4BC  81 1F 01 4C */	lwz r8, 0x14c(r31)
 /* 80301580 002FE4C0  80 1F 01 48 */	lwz r0, 0x148(r31)
 /* 80301584 002FE4C4  7C 68 00 50 */	subf r3, r8, r0
@@ -630,7 +640,7 @@ lbl_803013D8:
 /* 80301608 002FE548  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 8030160C 002FE54C  7C 05 50 50 */	subf r0, r5, r10
 /* 80301610 002FE550  54 07 04 3E */	clrlwi r7, r0, 0x10
-/* 80301614 002FE554  48 00 07 61 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301614 002FE554  48 00 07 61 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 80301618 002FE558  88 BF 01 44 */	lbz r5, 0x144(r31)
 /* 8030161C 002FE55C  54 A0 DF FE */	rlwinm r0, r5, 0x1b, 0x1f, 0x1f
 /* 80301620 002FE560  7C 00 00 D0 */	neg r0, r0
@@ -660,7 +670,7 @@ lbl_803013D8:
 /* 80301680 002FE5C0  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80301684 002FE5C4  81 1F 01 4C */	lwz r8, 0x14c(r31)
 /* 80301688 002FE5C8  39 20 00 00 */	li r9, 0
-/* 8030168C 002FE5CC  48 00 06 E9 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 8030168C 002FE5CC  48 00 06 E9 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 80301690 002FE5D0  81 1F 01 54 */	lwz r8, 0x154(r31)
 /* 80301694 002FE5D4  80 1F 01 4C */	lwz r0, 0x14c(r31)
 /* 80301698 002FE5D8  7C 68 00 50 */	subf r3, r8, r0
@@ -697,7 +707,7 @@ lbl_803013D8:
 /* 80301714 002FE654  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 80301718 002FE658  7C 05 38 50 */	subf r0, r5, r7
 /* 8030171C 002FE65C  54 07 04 3E */	clrlwi r7, r0, 0x10
-/* 80301720 002FE660  48 00 06 55 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301720 002FE660  48 00 06 55 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 80301724 002FE664  88 BF 01 44 */	lbz r5, 0x144(r31)
 /* 80301728 002FE668  54 A0 FF FE */	rlwinm r0, r5, 0x1f, 0x1f, 0x1f
 /* 8030172C 002FE66C  7C 00 00 D0 */	neg r0, r0
@@ -725,7 +735,7 @@ lbl_803013D8:
 /* 80301784 002FE6C4  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80301788 002FE6C8  81 1F 01 54 */	lwz r8, 0x154(r31)
 /* 8030178C 002FE6CC  39 20 00 00 */	li r9, 0
-/* 80301790 002FE6D0  48 00 05 E5 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301790 002FE6D0  48 00 05 E5 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 80301794 002FE6D4  88 BF 01 44 */	lbz r5, 0x144(r31)
 /* 80301798 002FE6D8  54 A0 FF FE */	rlwinm r0, r5, 0x1f, 0x1f, 0x1f
 /* 8030179C 002FE6DC  7C 00 00 D0 */	neg r0, r0
@@ -754,7 +764,7 @@ lbl_803013D8:
 /* 803017F8 002FE738  7C A7 2B 78 */	mr r7, r5
 /* 803017FC 002FE73C  81 1F 01 54 */	lwz r8, 0x154(r31)
 /* 80301800 002FE740  39 20 00 00 */	li r9, 0
-/* 80301804 002FE744  48 00 05 71 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301804 002FE744  48 00 05 71 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 80301808 002FE748  81 1F 01 50 */	lwz r8, 0x150(r31)
 /* 8030180C 002FE74C  80 1F 01 54 */	lwz r0, 0x154(r31)
 /* 80301810 002FE750  7C 68 00 50 */	subf r3, r8, r0
@@ -793,7 +803,7 @@ lbl_803013D8:
 /* 80301894 002FE7D4  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 80301898 002FE7D8  7C 05 38 50 */	subf r0, r5, r7
 /* 8030189C 002FE7DC  54 07 04 3E */	clrlwi r7, r0, 0x10
-/* 803018A0 002FE7E0  48 00 04 D5 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 803018A0 002FE7E0  48 00 04 D5 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 /* 803018A4 002FE7E4  88 BF 01 44 */	lbz r5, 0x144(r31)
 /* 803018A8 002FE7E8  54 A0 EF FE */	rlwinm r0, r5, 0x1d, 0x1f, 0x1f
 /* 803018AC 002FE7EC  7C 00 00 D0 */	neg r0, r0
@@ -822,7 +832,7 @@ lbl_803013D8:
 /* 80301908 002FE848  7C A7 2B 78 */	mr r7, r5
 /* 8030190C 002FE84C  81 1F 01 50 */	lwz r8, 0x150(r31)
 /* 80301910 002FE850  39 20 00 00 */	li r9, 0
-/* 80301914 002FE854  48 00 04 61 */	bl J2DWindowEx_NS_drawFrameTexture
+/* 80301914 002FE854  48 00 04 61 */	bl drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
 lbl_80301918:
 /* 80301918 002FE858  38 60 00 00 */	li r3, 0
 /* 8030191C 002FE85C  38 80 00 04 */	li r4, 4
@@ -856,6 +866,10 @@ lbl_8030194C:
 /* 80301988 002FE8C8  7C 08 03 A6 */	mtlr r0
 /* 8030198C 002FE8CC  38 21 01 30 */	addi r1, r1, 0x130
 /* 80301990 002FE8D0  4E 80 00 20 */	blr 
+
+/* 80301994 03E0 .text func_80301994 drawContents__11J2DWindowExFRCQ29JGeometry8TBox2<f> */
+.global func_80301994
+func_80301994:
 /* 80301994 002FE8D4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80301998 002FE8D8  7C 08 02 A6 */	mflr r0
 /* 8030199C 002FE8DC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -894,7 +908,7 @@ lbl_80301A18:
 /* 80301A18 002FE958  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 80301A1C 002FE95C  28 00 00 00 */	cmplwi r0, 0
 /* 80301A20 002FE960  41 82 03 1C */	beq lbl_80301D3C
-/* 80301A24 002FE964  4B FE 89 69 */	bl J2DMaterial_NS_setGX
+/* 80301A24 002FE964  4B FE 89 69 */	bl setGX__11J2DMaterialFv
 /* 80301A28 002FE968  48 05 9B 65 */	bl GXClearVtxDesc
 /* 80301A2C 002FE96C  38 60 00 09 */	li r3, 9
 /* 80301A30 002FE970  38 80 00 01 */	li r4, 1
@@ -1115,8 +1129,9 @@ lbl_80301D3C:
 /* 80301D6C 002FECAC  38 21 00 80 */	addi r1, r1, 0x80
 /* 80301D70 002FECB0  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_drawFrameTexture
-J2DWindowEx_NS_drawFrameTexture:
+/* 80301D74 0254 .text drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb */
+.global drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb
+drawFrameTexture__11J2DWindowExFffffUsUsUsUsP11J2DMaterialb:
 /* 80301D74 002FECB4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80301D78 002FECB8  7C 08 02 A6 */	mflr r0
 /* 80301D7C 002FECBC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1148,7 +1163,7 @@ J2DWindowEx_NS_drawFrameTexture:
 /* 80301DE4 002FED24  57 60 06 3F */	clrlwi. r0, r27, 0x18
 /* 80301DE8 002FED28  41 82 00 0C */	beq lbl_80301DF4
 /* 80301DEC 002FED2C  7F 43 D3 78 */	mr r3, r26
-/* 80301DF0 002FED30  4B FE 85 9D */	bl J2DMaterial_NS_setGX
+/* 80301DF0 002FED30  4B FE 85 9D */	bl setGX__11J2DMaterialFv
 lbl_80301DF4:
 /* 80301DF4 002FED34  38 00 FF FF */	li r0, -1
 /* 80301DF8 002FED38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1272,6 +1287,10 @@ lbl_80301F90:
 /* 80301FBC 002FEEFC  7C 08 03 A6 */	mtlr r0
 /* 80301FC0 002FEF00  38 21 00 80 */	addi r1, r1, 0x80
 /* 80301FC4 002FEF04  4E 80 00 20 */	blr 
+
+/* 80301FC8 019C .text func_80301FC8 draw__11J2DWindowExFRCQ29JGeometry8TBox2<f> */
+.global func_80301FC8
+func_80301FC8:
 /* 80301FC8 002FEF08  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80301FCC 002FEF0C  7C 08 02 A6 */	mflr r0
 /* 80301FD0 002FEF10  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1380,6 +1399,10 @@ lbl_8030214C:
 /* 80302158 002FF098  7C 08 03 A6 */	mtlr r0
 /* 8030215C 002FF09C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80302160 002FF0A0  4E 80 00 20 */	blr 
+
+/* 80302164 0120 .text func_80302164 draw__11J2DWindowExFRCQ29JGeometry8TBox2<f>RCQ29JGeometry8TBox2<f> */
+.global func_80302164
+func_80302164:
 /* 80302164 002FF0A4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80302168 002FF0A8  7C 08 02 A6 */	mflr r0
 /* 8030216C 002FF0AC  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1422,7 +1445,7 @@ lbl_8030214C:
 /* 80302200 002FF140  7F A3 EB 78 */	mr r3, r29
 /* 80302204 002FF144  38 81 00 08 */	addi r4, r1, 8
 /* 80302208 002FF148  7F E5 FB 78 */	mr r5, r31
-/* 8030220C 002FF14C  4B FF F0 C1 */	bl J2DWindowEx_NS_draw_private
+/* 8030220C 002FF14C  4B FF F0 C1 */	bl func_803012CC
 /* 80302210 002FF150  3B E0 00 00 */	li r31, 0
 lbl_80302214:
 /* 80302214 002FF154  7F E3 FB 78 */	mr r3, r31
@@ -1455,8 +1478,9 @@ lbl_80302244:
 /* 8030227C 002FF1BC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80302280 002FF1C0  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_setTevOrder
-J2DWindowEx_NS_setTevOrder:
+/* 80302284 0104 .text setTevOrder__11J2DWindowExFb setTevOrder__11J2DWindowExFb */
+.global setTevOrder__11J2DWindowExFb
+setTevOrder__11J2DWindowExFb:
 /* 80302284 002FF1C4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80302288 002FF1C8  7C 08 02 A6 */	mflr r0
 /* 8030228C 002FF1CC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1529,8 +1553,9 @@ lbl_80302364:
 /* 80302380 002FF2C0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80302384 002FF2C4  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_setTevStage
-J2DWindowEx_NS_setTevStage:
+/* 80302388 012C .text setTevStage__11J2DWindowExFb setTevStage__11J2DWindowExFb */
+.global setTevStage__11J2DWindowExFb
+setTevStage__11J2DWindowExFb:
 /* 80302388 002FF2C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030238C 002FF2CC  7C 08 02 A6 */	mflr r0
 /* 80302390 002FF2D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1579,7 +1604,7 @@ lbl_80302420:
 /* 80302430 002FF370  54 A5 06 3E */	clrlwi r5, r5, 0x18
 /* 80302434 002FF374  30 05 FF FF */	addic r0, r5, -1
 /* 80302438 002FF378  7C A0 29 10 */	subfe r5, r0, r5
-/* 8030243C 002FF37C  48 00 00 79 */	bl J2DWindowEx_NS_setStage
+/* 8030243C 002FF37C  48 00 00 79 */	bl setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum
 /* 80302440 002FF380  48 00 00 4C */	b lbl_8030248C
 lbl_80302444:
 /* 80302444 002FF384  7F C3 F3 78 */	mr r3, r30
@@ -1589,7 +1614,7 @@ lbl_80302444:
 /* 80302454 002FF394  41 82 00 08 */	beq lbl_8030245C
 /* 80302458 002FF398  38 A0 00 04 */	li r5, 4
 lbl_8030245C:
-/* 8030245C 002FF39C  48 00 00 59 */	bl J2DWindowEx_NS_setStage
+/* 8030245C 002FF39C  48 00 00 59 */	bl setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum
 /* 80302460 002FF3A0  7C 7E D8 2E */	lwzx r3, r30, r27
 /* 80302464 002FF3A4  80 63 00 70 */	lwz r3, 0x70(r3)
 /* 80302468 002FF3A8  38 80 00 01 */	li r4, 1
@@ -1600,7 +1625,7 @@ lbl_8030245C:
 /* 8030247C 002FF3BC  7C 64 1B 78 */	mr r4, r3
 /* 80302480 002FF3C0  7F C3 F3 78 */	mr r3, r30
 /* 80302484 002FF3C4  38 A0 00 02 */	li r5, 2
-/* 80302488 002FF3C8  48 00 00 2D */	bl J2DWindowEx_NS_setStage
+/* 80302488 002FF3C8  48 00 00 2D */	bl setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum
 lbl_8030248C:
 /* 8030248C 002FF3CC  3B FF 00 01 */	addi r31, r31, 1
 /* 80302490 002FF3D0  2C 1F 00 04 */	cmpwi r31, 4
@@ -1613,8 +1638,9 @@ lbl_8030248C:
 /* 803024AC 002FF3EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803024B0 002FF3F0  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_setStage
-J2DWindowEx_NS_setStage:
+/* 803024B4 02B0 .text setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum */
+.global setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum
+setStage__11J2DWindowExFP11J2DTevStageQ211J2DWindowEx10stage_enum:
 /* 803024B4 002FF3F4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803024B8 002FF3F8  7C 08 02 A6 */	mflr r0
 /* 803024BC 002FF3FC  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1794,6 +1820,10 @@ lbl_80302728:
 /* 80302758 002FF698  7C 08 03 A6 */	mtlr r0
 /* 8030275C 002FF69C  38 21 00 70 */	addi r1, r1, 0x70
 /* 80302760 002FF6A0  4E 80 00 20 */	blr 
+
+/* 80302764 0088 .text setBlack__11J2DWindowExFQ28JUtility6TColor setBlack__11J2DWindowExFQ28JUtility6TColor */
+.global setBlack__11J2DWindowExFQ28JUtility6TColor
+setBlack__11J2DWindowExFQ28JUtility6TColor:
 /* 80302764 002FF6A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302768 002FF6A8  7C 08 02 A6 */	mflr r0
 /* 8030276C 002FF6AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1806,7 +1836,7 @@ lbl_80302728:
 /* 80302788 002FF6C8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8030278C 002FF6CC  38 81 00 14 */	addi r4, r1, 0x14
 /* 80302790 002FF6D0  38 A1 00 10 */	addi r5, r1, 0x10
-/* 80302794 002FF6D4  48 00 02 B9 */	bl J2DWindowEx_NS_getBlackWhite
+/* 80302794 002FF6D4  48 00 02 B9 */	bl getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 80302798 002FF6D8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8030279C 002FF6DC  40 82 00 0C */	bne lbl_803027A8
 /* 803027A0 002FF6E0  38 60 00 00 */	li r3, 0
@@ -1830,6 +1860,10 @@ lbl_803027D4:
 /* 803027E0 002FF720  7C 08 03 A6 */	mtlr r0
 /* 803027E4 002FF724  38 21 00 20 */	addi r1, r1, 0x20
 /* 803027E8 002FF728  4E 80 00 20 */	blr 
+
+/* 803027EC 0088 .text setWhite__11J2DWindowExFQ28JUtility6TColor setWhite__11J2DWindowExFQ28JUtility6TColor */
+.global setWhite__11J2DWindowExFQ28JUtility6TColor
+setWhite__11J2DWindowExFQ28JUtility6TColor:
 /* 803027EC 002FF72C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803027F0 002FF730  7C 08 02 A6 */	mflr r0
 /* 803027F4 002FF734  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1842,7 +1876,7 @@ lbl_803027D4:
 /* 80302810 002FF750  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80302814 002FF754  38 81 00 14 */	addi r4, r1, 0x14
 /* 80302818 002FF758  38 A1 00 10 */	addi r5, r1, 0x10
-/* 8030281C 002FF75C  48 00 02 31 */	bl J2DWindowEx_NS_getBlackWhite
+/* 8030281C 002FF75C  48 00 02 31 */	bl getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 80302820 002FF760  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80302824 002FF764  40 82 00 0C */	bne lbl_80302830
 /* 80302828 002FF768  38 60 00 00 */	li r3, 0
@@ -1866,6 +1900,10 @@ lbl_8030285C:
 /* 80302868 002FF7A8  7C 08 03 A6 */	mtlr r0
 /* 8030286C 002FF7AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302870 002FF7B0  4E 80 00 20 */	blr 
+
+/* 80302874 01D8 .text setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor */
+.global setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor
+setBlackWhite__11J2DWindowExFQ28JUtility6TColorQ28JUtility6TColor:
 /* 80302874 002FF7B4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80302878 002FF7B8  7C 08 02 A6 */	mflr r0
 /* 8030287C 002FF7BC  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1900,7 +1938,7 @@ lbl_803028CC:
 /* 803028E4 002FF824  7F A3 EB 78 */	mr r3, r29
 /* 803028E8 002FF828  38 81 00 0C */	addi r4, r1, 0xc
 /* 803028EC 002FF82C  38 A1 00 08 */	addi r5, r1, 8
-/* 803028F0 002FF830  48 00 02 F9 */	bl J2DWindowEx_NS_isSetBlackWhite
+/* 803028F0 002FF830  48 00 02 F9 */	bl isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor
 /* 803028F4 002FF834  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803028F8 002FF838  40 82 00 0C */	bne lbl_80302904
 /* 803028FC 002FF83C  38 60 00 00 */	li r3, 0
@@ -1939,10 +1977,10 @@ lbl_80302944:
 /* 80302970 002FF8B0  41 80 FF D4 */	blt lbl_80302944
 /* 80302974 002FF8B4  7F A3 EB 78 */	mr r3, r29
 /* 80302978 002FF8B8  7F 64 DB 78 */	mr r4, r27
-/* 8030297C 002FF8BC  4B FF F9 09 */	bl J2DWindowEx_NS_setTevOrder
+/* 8030297C 002FF8BC  4B FF F9 09 */	bl setTevOrder__11J2DWindowExFb
 /* 80302980 002FF8C0  7F A3 EB 78 */	mr r3, r29
 /* 80302984 002FF8C4  7F 64 DB 78 */	mr r4, r27
-/* 80302988 002FF8C8  4B FF FA 01 */	bl J2DWindowEx_NS_setTevStage
+/* 80302988 002FF8C8  4B FF FA 01 */	bl setTevStage__11J2DWindowExFb
 /* 8030298C 002FF8CC  57 60 06 3F */	clrlwi. r0, r27, 0x18
 /* 80302990 002FF8D0  41 82 00 A0 */	beq lbl_80302A30
 /* 80302994 002FF8D4  8B 7E 00 00 */	lbz r27, 0(r30)
@@ -1995,8 +2033,9 @@ lbl_80302A34:
 /* 80302A44 002FF984  38 21 00 50 */	addi r1, r1, 0x50
 /* 80302A48 002FF988  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_getBlackWhite
-J2DWindowEx_NS_getBlackWhite:
+/* 80302A4C 019C .text getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+.global getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor
+getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor:
 /* 80302A4C 002FF98C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80302A50 002FF990  7C 08 02 A6 */	mflr r0
 /* 80302A54 002FF994  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2105,8 +2144,9 @@ lbl_80302BD0:
 /* 80302BE0 002FFB20  38 21 00 40 */	addi r1, r1, 0x40
 /* 80302BE4 002FFB24  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_isSetBlackWhite
-J2DWindowEx_NS_isSetBlackWhite:
+/* 80302BE8 00A0 .text isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor */
+.global isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor
+isSetBlackWhite__11J2DWindowExCFQ28JUtility6TColorQ28JUtility6TColor:
 /* 80302BE8 002FFB28  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302BEC 002FFB2C  7C 08 02 A6 */	mflr r0
 /* 80302BF0 002FFB30  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2151,6 +2191,10 @@ lbl_80302C70:
 /* 80302C7C 002FFBBC  7C 08 03 A6 */	mtlr r0
 /* 80302C80 002FFBC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302C84 002FFBC4  4E 80 00 20 */	blr 
+
+/* 80302C88 0060 .text getBlack__11J2DWindowExCFv getBlack__11J2DWindowExCFv */
+.global getBlack__11J2DWindowExCFv
+getBlack__11J2DWindowExCFv:
 /* 80302C88 002FFBC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302C8C 002FFBCC  7C 08 02 A6 */	mflr r0
 /* 80302C90 002FFBD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2162,7 +2206,7 @@ lbl_80302C70:
 /* 80302CA8 002FFBE8  7C 83 23 78 */	mr r3, r4
 /* 80302CAC 002FFBEC  38 81 00 0C */	addi r4, r1, 0xc
 /* 80302CB0 002FFBF0  38 A1 00 08 */	addi r5, r1, 8
-/* 80302CB4 002FFBF4  4B FF FD 99 */	bl J2DWindowEx_NS_getBlackWhite
+/* 80302CB4 002FFBF4  4B FF FD 99 */	bl getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 80302CB8 002FFBF8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80302CBC 002FFBFC  40 82 00 10 */	bne lbl_80302CCC
 /* 80302CC0 002FFC00  38 00 00 00 */	li r0, 0
@@ -2177,6 +2221,10 @@ lbl_80302CD4:
 /* 80302CDC 002FFC1C  7C 08 03 A6 */	mtlr r0
 /* 80302CE0 002FFC20  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302CE4 002FFC24  4E 80 00 20 */	blr 
+
+/* 80302CE8 0060 .text getWhite__11J2DWindowExCFv getWhite__11J2DWindowExCFv */
+.global getWhite__11J2DWindowExCFv
+getWhite__11J2DWindowExCFv:
 /* 80302CE8 002FFC28  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302CEC 002FFC2C  7C 08 02 A6 */	mflr r0
 /* 80302CF0 002FFC30  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2188,7 +2236,7 @@ lbl_80302CD4:
 /* 80302D08 002FFC48  7C 83 23 78 */	mr r3, r4
 /* 80302D0C 002FFC4C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80302D10 002FFC50  38 A1 00 08 */	addi r5, r1, 8
-/* 80302D14 002FFC54  4B FF FD 39 */	bl J2DWindowEx_NS_getBlackWhite
+/* 80302D14 002FFC54  4B FF FD 39 */	bl getBlackWhite__11J2DWindowExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 80302D18 002FFC58  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80302D1C 002FFC5C  40 82 00 10 */	bne lbl_80302D2C
 /* 80302D20 002FFC60  38 00 FF FF */	li r0, -1
@@ -2203,6 +2251,10 @@ lbl_80302D34:
 /* 80302D3C 002FFC7C  7C 08 03 A6 */	mtlr r0
 /* 80302D40 002FFC80  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302D44 002FFC84  4E 80 00 20 */	blr 
+
+/* 80302D48 0050 .text setAlpha__11J2DWindowExFUc setAlpha__11J2DWindowExFUc */
+.global setAlpha__11J2DWindowExFUc
+setAlpha__11J2DWindowExFUc:
 /* 80302D48 002FFC88  98 83 00 B2 */	stb r4, 0xb2(r3)
 /* 80302D4C 002FFC8C  38 A0 00 00 */	li r5, 0
 /* 80302D50 002FFC90  38 00 00 04 */	li r0, 4
@@ -2225,6 +2277,10 @@ lbl_80302D74:
 /* 80302D8C 002FFCCC  4D 82 00 20 */	beqlr 
 /* 80302D90 002FFCD0  98 83 00 03 */	stb r4, 3(r3)
 /* 80302D94 002FFCD4  4E 80 00 20 */	blr 
+
+/* 80302D98 005C .text setCullBack__11J2DWindowExF11_GXCullMode setCullBack__11J2DWindowExF11_GXCullMode */
+.global setCullBack__11J2DWindowExF11_GXCullMode
+setCullBack__11J2DWindowExF11_GXCullMode:
 /* 80302D98 002FFCD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302D9C 002FFCDC  7C 08 02 A6 */	mflr r0
 /* 80302DA0 002FFCE0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2251,12 +2307,20 @@ lbl_80302DE0:
 /* 80302DE8 002FFD28  7C 08 03 A6 */	mtlr r0
 /* 80302DEC 002FFD2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302DF0 002FFD30  4E 80 00 20 */	blr 
+
+/* 80302DF4 0018 .text rewriteAlpha__11J2DWindowExFv rewriteAlpha__11J2DWindowExFv */
+.global rewriteAlpha__11J2DWindowExFv
+rewriteAlpha__11J2DWindowExFv:
 /* 80302DF4 002FFD34  80 83 01 60 */	lwz r4, 0x160(r3)
 /* 80302DF8 002FFD38  28 04 00 00 */	cmplwi r4, 0
 /* 80302DFC 002FFD3C  4D 82 00 20 */	beqlr 
 /* 80302E00 002FFD40  88 04 00 13 */	lbz r0, 0x13(r4)
 /* 80302E04 002FFD44  98 03 00 B2 */	stb r0, 0xb2(r3)
 /* 80302E08 002FFD48  4E 80 00 20 */	blr 
+
+/* 80302E0C 0068 .text getFrameTexture__11J2DWindowExCFUcUc getFrameTexture__11J2DWindowExCFUcUc */
+.global getFrameTexture__11J2DWindowExCFUcUc
+getFrameTexture__11J2DWindowExCFUcUc:
 /* 80302E0C 002FFD4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302E10 002FFD50  7C 08 02 A6 */	mflr r0
 /* 80302E14 002FFD54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2285,6 +2349,10 @@ lbl_80302E60:
 /* 80302E68 002FFDA8  7C 08 03 A6 */	mtlr r0
 /* 80302E6C 002FFDAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302E70 002FFDB0  4E 80 00 20 */	blr 
+
+/* 80302E74 0068 .text getContentsTexture__11J2DWindowExCFUc getContentsTexture__11J2DWindowExCFUc */
+.global getContentsTexture__11J2DWindowExCFUc
+getContentsTexture__11J2DWindowExCFUc:
 /* 80302E74 002FFDB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302E78 002FFDB8  7C 08 02 A6 */	mflr r0
 /* 80302E7C 002FFDBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2313,6 +2381,10 @@ lbl_80302EC8:
 /* 80302ED0 002FFE10  7C 08 03 A6 */	mtlr r0
 /* 80302ED4 002FFE14  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302ED8 002FFE18  4E 80 00 20 */	blr 
+
+/* 80302EDC 0120 .text isUsed__11J2DWindowExFPC7ResTIMG isUsed__11J2DWindowExFPC7ResTIMG */
+.global isUsed__11J2DWindowExFPC7ResTIMG
+isUsed__11J2DWindowExFPC7ResTIMG:
 /* 80302EDC 002FFE1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302EE0 002FFE20  7C 08 02 A6 */	mflr r0
 /* 80302EE4 002FFE24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2394,6 +2466,10 @@ lbl_80302FE4:
 /* 80302FF0 002FFF30  7C 08 03 A6 */	mtlr r0
 /* 80302FF4 002FFF34  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302FF8 002FFF38  4E 80 00 20 */	blr 
+
+/* 80302FFC 0088 .text setAnimation__11J2DWindowExFP11J2DAnmColor setAnimation__11J2DWindowExFP11J2DAnmColor */
+.global setAnimation__11J2DWindowExFP11J2DAnmColor
+setAnimation__11J2DWindowExFP11J2DAnmColor:
 /* 80302FFC 002FFF3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303000 002FFF40  7C 08 02 A6 */	mflr r0
 /* 80303004 002FFF44  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2406,14 +2482,14 @@ lbl_80302FE4:
 lbl_80303020:
 /* 80303020 002FFF60  7F A3 EB 78 */	mr r3, r29
 /* 80303024 002FFF64  7F E4 FB 78 */	mr r4, r31
-/* 80303028 002FFF68  48 00 01 F5 */	bl J2DWindowEx_NS_isNeedSetAnm
+/* 80303028 002FFF68  48 00 01 F5 */	bl isNeedSetAnm__11J2DWindowExFUc
 /* 8030302C 002FFF6C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303030 002FFF70  41 82 00 18 */	beq lbl_80303048
 /* 80303034 002FFF74  57 E3 15 BA */	rlwinm r3, r31, 2, 0x16, 0x1d
 /* 80303038 002FFF78  38 03 01 48 */	addi r0, r3, 0x148
 /* 8030303C 002FFF7C  7C 7D 00 2E */	lwzx r3, r29, r0
 /* 80303040 002FFF80  7F C4 F3 78 */	mr r4, r30
-/* 80303044 002FFF84  4B FE 78 59 */	bl J2DMaterial_NS_setAnimation
+/* 80303044 002FFF84  4B FE 78 59 */	bl setAnimation__11J2DMaterialFP11J2DAnmColor
 lbl_80303048:
 /* 80303048 002FFF88  3B FF 00 01 */	addi r31, r31, 1
 lbl_8030304C:
@@ -2424,7 +2500,7 @@ lbl_8030304C:
 /* 8030305C 002FFF9C  28 03 00 00 */	cmplwi r3, 0
 /* 80303060 002FFFA0  41 82 00 0C */	beq lbl_8030306C
 /* 80303064 002FFFA4  7F C4 F3 78 */	mr r4, r30
-/* 80303068 002FFFA8  4B FE 78 35 */	bl J2DMaterial_NS_setAnimation
+/* 80303068 002FFFA8  4B FE 78 35 */	bl setAnimation__11J2DMaterialFP11J2DAnmColor
 lbl_8030306C:
 /* 8030306C 002FFFAC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80303070 002FFFB0  48 05 F1 B9 */	bl _restgpr_29
@@ -2432,6 +2508,10 @@ lbl_8030306C:
 /* 80303078 002FFFB8  7C 08 03 A6 */	mtlr r0
 /* 8030307C 002FFFBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303080 002FFFC0  4E 80 00 20 */	blr 
+
+/* 80303084 0088 .text setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey */
+.global setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey
+setAnimation__11J2DWindowExFP19J2DAnmTextureSRTKey:
 /* 80303084 002FFFC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303088 002FFFC8  7C 08 02 A6 */	mflr r0
 /* 8030308C 002FFFCC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2444,14 +2524,14 @@ lbl_8030306C:
 lbl_803030A8:
 /* 803030A8 002FFFE8  7F A3 EB 78 */	mr r3, r29
 /* 803030AC 002FFFEC  7F E4 FB 78 */	mr r4, r31
-/* 803030B0 002FFFF0  48 00 01 6D */	bl J2DWindowEx_NS_isNeedSetAnm
+/* 803030B0 002FFFF0  48 00 01 6D */	bl isNeedSetAnm__11J2DWindowExFUc
 /* 803030B4 002FFFF4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803030B8 002FFFF8  41 82 00 18 */	beq lbl_803030D0
 /* 803030BC 002FFFFC  57 E3 15 BA */	rlwinm r3, r31, 2, 0x16, 0x1d
 /* 803030C0 00300000  38 03 01 48 */	addi r0, r3, 0x148
 /* 803030C4 00300004  7C 7D 00 2E */	lwzx r3, r29, r0
 /* 803030C8 00300008  7F C4 F3 78 */	mr r4, r30
-/* 803030CC 0030000C  4B FE 78 81 */	bl J2DMaterial_NS_setAnimation_X1_
+/* 803030CC 0030000C  4B FE 78 81 */	bl setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey
 lbl_803030D0:
 /* 803030D0 00300010  3B FF 00 01 */	addi r31, r31, 1
 lbl_803030D4:
@@ -2462,7 +2542,7 @@ lbl_803030D4:
 /* 803030E4 00300024  28 03 00 00 */	cmplwi r3, 0
 /* 803030E8 00300028  41 82 00 0C */	beq lbl_803030F4
 /* 803030EC 0030002C  7F C4 F3 78 */	mr r4, r30
-/* 803030F0 00300030  4B FE 78 5D */	bl J2DMaterial_NS_setAnimation_X1_
+/* 803030F0 00300030  4B FE 78 5D */	bl setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey
 lbl_803030F4:
 /* 803030F4 00300034  39 61 00 20 */	addi r11, r1, 0x20
 /* 803030F8 00300038  48 05 F1 31 */	bl _restgpr_29
@@ -2470,6 +2550,10 @@ lbl_803030F4:
 /* 80303100 00300040  7C 08 03 A6 */	mtlr r0
 /* 80303104 00300044  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303108 00300048  4E 80 00 20 */	blr 
+
+/* 8030310C 0088 .text setAnimation__11J2DWindowExFP16J2DAnmTexPattern setAnimation__11J2DWindowExFP16J2DAnmTexPattern */
+.global setAnimation__11J2DWindowExFP16J2DAnmTexPattern
+setAnimation__11J2DWindowExFP16J2DAnmTexPattern:
 /* 8030310C 0030004C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303110 00300050  7C 08 02 A6 */	mflr r0
 /* 80303114 00300054  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2482,14 +2566,14 @@ lbl_803030F4:
 lbl_80303130:
 /* 80303130 00300070  7F A3 EB 78 */	mr r3, r29
 /* 80303134 00300074  7F E4 FB 78 */	mr r4, r31
-/* 80303138 00300078  48 00 00 E5 */	bl J2DWindowEx_NS_isNeedSetAnm
+/* 80303138 00300078  48 00 00 E5 */	bl isNeedSetAnm__11J2DWindowExFUc
 /* 8030313C 0030007C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80303140 00300080  41 82 00 18 */	beq lbl_80303158
 /* 80303144 00300084  57 E3 15 BA */	rlwinm r3, r31, 2, 0x16, 0x1d
 /* 80303148 00300088  38 03 01 48 */	addi r0, r3, 0x148
 /* 8030314C 0030008C  7C 7D 00 2E */	lwzx r3, r29, r0
 /* 80303150 00300090  7F C4 F3 78 */	mr r4, r30
-/* 80303154 00300094  4B FE 78 D9 */	bl J2DMaterial_NS_setAnimation_X2_
+/* 80303154 00300094  4B FE 78 D9 */	bl setAnimation__11J2DMaterialFP16J2DAnmTexPattern
 lbl_80303158:
 /* 80303158 00300098  3B FF 00 01 */	addi r31, r31, 1
 lbl_8030315C:
@@ -2500,7 +2584,7 @@ lbl_8030315C:
 /* 8030316C 003000AC  28 03 00 00 */	cmplwi r3, 0
 /* 80303170 003000B0  41 82 00 0C */	beq lbl_8030317C
 /* 80303174 003000B4  7F C4 F3 78 */	mr r4, r30
-/* 80303178 003000B8  4B FE 78 B5 */	bl J2DMaterial_NS_setAnimation_X2_
+/* 80303178 003000B8  4B FE 78 B5 */	bl setAnimation__11J2DMaterialFP16J2DAnmTexPattern
 lbl_8030317C:
 /* 8030317C 003000BC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80303180 003000C0  48 05 F0 A9 */	bl _restgpr_29
@@ -2508,6 +2592,10 @@ lbl_8030317C:
 /* 80303188 003000C8  7C 08 03 A6 */	mtlr r0
 /* 8030318C 003000CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303190 003000D0  4E 80 00 20 */	blr 
+
+/* 80303194 0088 .text setAnimation__11J2DWindowExFP15J2DAnmTevRegKey setAnimation__11J2DWindowExFP15J2DAnmTevRegKey */
+.global setAnimation__11J2DWindowExFP15J2DAnmTevRegKey
+setAnimation__11J2DWindowExFP15J2DAnmTevRegKey:
 /* 80303194 003000D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303198 003000D8  7C 08 02 A6 */	mflr r0
 /* 8030319C 003000DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2520,14 +2608,14 @@ lbl_8030317C:
 lbl_803031B8:
 /* 803031B8 003000F8  7F A3 EB 78 */	mr r3, r29
 /* 803031BC 003000FC  7F E4 FB 78 */	mr r4, r31
-/* 803031C0 00300100  48 00 00 5D */	bl J2DWindowEx_NS_isNeedSetAnm
+/* 803031C0 00300100  48 00 00 5D */	bl isNeedSetAnm__11J2DWindowExFUc
 /* 803031C4 00300104  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803031C8 00300108  41 82 00 18 */	beq lbl_803031E0
 /* 803031CC 0030010C  57 E3 15 BA */	rlwinm r3, r31, 2, 0x16, 0x1d
 /* 803031D0 00300110  38 03 01 48 */	addi r0, r3, 0x148
 /* 803031D4 00300114  7C 7D 00 2E */	lwzx r3, r29, r0
 /* 803031D8 00300118  7F C4 F3 78 */	mr r4, r30
-/* 803031DC 0030011C  4B FE 79 31 */	bl J2DMaterial_NS_setAnimation_X3_
+/* 803031DC 0030011C  4B FE 79 31 */	bl setAnimation__11J2DMaterialFP15J2DAnmTevRegKey
 lbl_803031E0:
 /* 803031E0 00300120  3B FF 00 01 */	addi r31, r31, 1
 lbl_803031E4:
@@ -2538,7 +2626,7 @@ lbl_803031E4:
 /* 803031F4 00300134  28 03 00 00 */	cmplwi r3, 0
 /* 803031F8 00300138  41 82 00 0C */	beq lbl_80303204
 /* 803031FC 0030013C  7F C4 F3 78 */	mr r4, r30
-/* 80303200 00300140  4B FE 79 0D */	bl J2DMaterial_NS_setAnimation_X3_
+/* 80303200 00300140  4B FE 79 0D */	bl setAnimation__11J2DMaterialFP15J2DAnmTevRegKey
 lbl_80303204:
 /* 80303204 00300144  39 61 00 20 */	addi r11, r1, 0x20
 /* 80303208 00300148  48 05 F0 21 */	bl _restgpr_29
@@ -2547,8 +2635,9 @@ lbl_80303204:
 /* 80303214 00300154  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303218 00300158  4E 80 00 20 */	blr 
 
-.global J2DWindowEx_NS_isNeedSetAnm
-J2DWindowEx_NS_isNeedSetAnm:
+/* 8030321C 0058 .text isNeedSetAnm__11J2DWindowExFUc isNeedSetAnm__11J2DWindowExFUc */
+.global isNeedSetAnm__11J2DWindowExFUc
+isNeedSetAnm__11J2DWindowExFUc:
 /* 8030321C 0030015C  39 00 00 00 */	li r8, 0
 /* 80303220 00300160  54 85 06 3E */	clrlwi r5, r4, 0x18
 /* 80303224 00300164  54 87 15 BA */	rlwinm r7, r4, 2, 0x16, 0x1d
@@ -2574,8 +2663,16 @@ lbl_80303254:
 /* 80303268 003001A8  30 03 FF FF */	addic r0, r3, -1
 /* 8030326C 003001AC  7C 60 19 10 */	subfe r3, r0, r3
 /* 80303270 003001B0  4E 80 00 20 */	blr 
+
+/* 80303274 0008 .text setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull */
+.global setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull
+setAnimation__11J2DWindowExFP20J2DAnmVisibilityFull:
 /* 80303274 003001B4  90 83 01 74 */	stw r4, 0x174(r3)
 /* 80303278 003001B8  4E 80 00 20 */	blr 
+
+/* 8030327C 00F4 .text setAnimation__11J2DWindowExFP14J2DAnmVtxColor setAnimation__11J2DWindowExFP14J2DAnmVtxColor */
+.global setAnimation__11J2DWindowExFP14J2DAnmVtxColor
+setAnimation__11J2DWindowExFP14J2DAnmVtxColor:
 /* 8030327C 003001BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80303280 003001C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80303284 003001C4  90 83 01 78 */	stw r4, 0x178(r3)
@@ -2647,6 +2744,10 @@ lbl_80303364:
 /* 80303364 003002A4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80303368 003002A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030336C 003002AC  4E 80 00 20 */	blr 
+
+/* 80303370 01A0 .text animationPane__11J2DWindowExFPC15J2DAnmTransform animationPane__11J2DWindowExFPC15J2DAnmTransform */
+.global animationPane__11J2DWindowExFPC15J2DAnmTransform
+animationPane__11J2DWindowExFPC15J2DAnmTransform:
 /* 80303370 003002B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303374 003002B4  7C 08 02 A6 */	mflr r0
 /* 80303378 003002B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2661,7 +2762,7 @@ lbl_80303364:
 /* 8030339C 003002DC  28 04 FF FF */	cmplwi r4, 0xffff
 /* 803033A0 003002E0  41 82 00 2C */	beq lbl_803033CC
 /* 803033A4 003002E4  38 A1 00 08 */	addi r5, r1, 8
-/* 803033A8 003002E8  48 00 8C A1 */	bl J2DAnmVisibilityFull_NS_getVisibility
+/* 803033A8 003002E8  48 00 8C A1 */	bl getVisibility__20J2DAnmVisibilityFullCFUsPUc
 /* 803033AC 003002EC  88 01 00 08 */	lbz r0, 8(r1)
 /* 803033B0 003002F0  28 00 00 00 */	cmplwi r0, 0
 /* 803033B4 003002F4  41 82 00 10 */	beq lbl_803033C4
@@ -2762,6 +2863,10 @@ lbl_803034EC:
 /* 80303504 00300444  7C 08 03 A6 */	mtlr r0
 /* 80303508 00300448  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030350C 0030044C  4E 80 00 20 */	blr 
+
+/* 80303510 0024 .text getFrameMaterial__11J2DWindowExCFUc getFrameMaterial__11J2DWindowExCFUc */
+.global getFrameMaterial__11J2DWindowExCFUc
+getFrameMaterial__11J2DWindowExCFUc:
 /* 80303510 00300450  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 80303514 00300454  28 00 00 04 */	cmplwi r0, 4
 /* 80303518 00300458  41 80 00 0C */	blt lbl_80303524
@@ -2772,8 +2877,16 @@ lbl_80303524:
 /* 80303528 00300468  7C 63 02 14 */	add r3, r3, r0
 /* 8030352C 0030046C  80 63 01 48 */	lwz r3, 0x148(r3)
 /* 80303530 00300470  4E 80 00 20 */	blr 
+
+/* 80303534 0008 .text getContentsMaterial__11J2DWindowExCFv getContentsMaterial__11J2DWindowExCFv */
+.global getContentsMaterial__11J2DWindowExCFv
+getContentsMaterial__11J2DWindowExCFv:
 /* 80303534 00300474  80 63 01 60 */	lwz r3, 0x160(r3)
 /* 80303538 00300478  4E 80 00 20 */	blr 
+
+/* 8030353C 002C .text getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial */
+.global getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial
+getMaterial__11J2DWindowExCFRQ29J2DWindow9TMaterial:
 /* 8030353C 0030047C  80 03 01 48 */	lwz r0, 0x148(r3)
 /* 80303540 00300480  90 04 00 00 */	stw r0, 0(r4)
 /* 80303544 00300484  80 03 01 4C */	lwz r0, 0x14c(r3)
@@ -2785,6 +2898,10 @@ lbl_80303524:
 /* 8030355C 0030049C  80 03 01 60 */	lwz r0, 0x160(r3)
 /* 80303560 003004A0  90 04 00 10 */	stw r0, 0x10(r4)
 /* 80303564 003004A4  4E 80 00 20 */	blr 
+
+/* 80303568 0058 .text draw__11J2DWindowExFffff draw__11J2DWindowExFffff */
+.global draw__11J2DWindowExFffff
+draw__11J2DWindowExFffff:
 /* 80303568 003004A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030356C 003004AC  7C 08 02 A6 */	mflr r0
 /* 80303570 003004B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2807,6 +2924,10 @@ lbl_80303524:
 /* 803035B4 003004F4  7C 08 03 A6 */	mtlr r0
 /* 803035B8 003004F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803035BC 003004FC  4E 80 00 20 */	blr 
+
+/* 803035C0 003C .text setCullBack__11J2DWindowExFb setCullBack__11J2DWindowExFb */
+.global setCullBack__11J2DWindowExFb
+setCullBack__11J2DWindowExFb:
 /* 803035C0 00300500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803035C4 00300504  7C 08 02 A6 */	mflr r0
 /* 803035C8 00300508  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2823,6 +2944,10 @@ lbl_803035DC:
 /* 803035F0 00300530  7C 08 03 A6 */	mtlr r0
 /* 803035F4 00300534  38 21 00 10 */	addi r1, r1, 0x10
 /* 803035F8 00300538  4E 80 00 20 */	blr 
+
+/* 803035FC 0020 .text isUsed__11J2DWindowExFPC7ResFONT isUsed__11J2DWindowExFPC7ResFONT */
+.global isUsed__11J2DWindowExFPC7ResFONT
+isUsed__11J2DWindowExFPC7ResFONT:
 /* 803035FC 0030053C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80303600 00300540  7C 08 02 A6 */	mflr r0
 /* 80303604 00300544  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2831,6 +2956,10 @@ lbl_803035DC:
 /* 80303610 00300550  7C 08 03 A6 */	mtlr r0
 /* 80303614 00300554  38 21 00 10 */	addi r1, r1, 0x10
 /* 80303618 00300558  4E 80 00 20 */	blr 
+
+/* 8030361C 0020 .text setAnimation__11J2DWindowExFP10J2DAnmBase setAnimation__11J2DWindowExFP10J2DAnmBase */
+.global setAnimation__11J2DWindowExFP10J2DAnmBase
+setAnimation__11J2DWindowExFP10J2DAnmBase:
 /* 8030361C 0030055C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80303620 00300560  7C 08 02 A6 */	mflr r0
 /* 80303624 00300564  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2839,4 +2968,131 @@ lbl_803035DC:
 /* 80303630 00300570  7C 08 03 A6 */	mtlr r0
 /* 80303634 00300574  38 21 00 10 */	addi r1, r1, 0x10
 /* 80303638 00300578  4E 80 00 20 */	blr 
+
+/* 8030363C 0004 .text getColor__14J2DAnmVtxColorCFUcUsP8_GXColor getColor__14J2DAnmVtxColorCFUcUsP8_GXColor */
+.global getColor__14J2DAnmVtxColorCFUcUsP8_GXColor
+getColor__14J2DAnmVtxColorCFUcUsP8_GXColor:
 /* 8030363C 0030057C  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 803A1C60 0010 .rodata lbl_803A1C60 @1508 */
+.global lbl_803A1C60
+lbl_803A1C60:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ec60 */
+
+/* 803A1C70 0010 .rodata lbl_803A1C70 @1557 */
+.global lbl_803A1C70
+lbl_803A1C70:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ec70 */
+
+/* 803A1C80 0010 .rodata lbl_803A1C80 @1566 */
+.global lbl_803A1C80
+lbl_803A1C80:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ec80 */
+
+/* 803A1C90 0010 .rodata lbl_803A1C90 @1575 */
+.global lbl_803A1C90
+lbl_803A1C90:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ec90 */
+
+/* 803A1CA0 0010 .rodata lbl_803A1CA0 @1581 */
+.global lbl_803A1CA0
+lbl_803A1CA0:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39eca0 */
+
+/* 803A1CB0 0010 .rodata lbl_803A1CB0 @1587 */
+.global lbl_803A1CB0
+lbl_803A1CB0:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ecb0 */
+
+/* 803A1CC0 0010 .rodata lbl_803A1CC0 @1596 */
+.global lbl_803A1CC0
+lbl_803A1CC0:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ecc0 */
+
+/* 803A1CD0 0010 .rodata lbl_803A1CD0 @1605 */
+.global lbl_803A1CD0
+lbl_803A1CD0:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ecd0 */
+
+/* 803A1CE0 0010 .rodata lbl_803A1CE0 @1612 */
+.global lbl_803A1CE0
+lbl_803A1CE0:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ece0 */
+
+/* 803A1CF0 0018 .rodata lbl_803A1CF0 @2530 */
+.global lbl_803A1CF0
+lbl_803A1CF0:
+.byte 0x0f, 0x08, 0x0a, 0x0f, 0x0f, 0x08, 0x0a, 0x0f, 0x0f, 0x0a, 0x00, 0x0f, 0x02, 0x04, 0x08, 0x0f /* baserom.dol+0x39ecf0 */
+.byte 0x02, 0x04, 0x08, 0x0f, 0x0f, 0x0f, 0x0f, 0x0a /* baserom.dol+0x39ed00 */
+
+/* 803A1D08 0018 .rodata lbl_803A1D08 @2531 */
+.global lbl_803A1D08
+lbl_803A1D08:
+.byte 0x07, 0x04, 0x05, 0x07, 0x05, 0x07, 0x07, 0x07, 0x07, 0x05, 0x00, 0x07, 0x01, 0x02, 0x04, 0x07 /* baserom.dol+0x39ed08 */
+.byte 0x07, 0x07, 0x07, 0x02, 0x07, 0x07, 0x07, 0x05 /* baserom.dol+0x39ed18 */
+
+/* 803A1D20 001E .rodata lbl_803A1D20 @2532 */
+.global lbl_803A1D20
+lbl_803A1D20:
+.byte 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00 /* baserom.dol+0x39ed20 */
+.byte 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00 /* baserom.dol+0x39ed30 */
+.byte 0x00, 0x00 /* baserom.dol+0x39ed3e */
+
+/* 803A1D40 0010 .rodata lbl_803A1D40 @3089 */
+.global lbl_803A1D40
+lbl_803A1D40:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39ed40 */
+
+
+
+.section .data, "aw"
+/* 803CD3E8 00CC .data __vt__11J2DWindowEx __vt__11J2DWindowEx */
+.global __vt__11J2DWindowEx
+__vt__11J2DWindowEx:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x30, 0x11, 0x44, 0x80, 0x2f, 0xbf, 0x98 /* baserom.dol+0x3ca3e8 */
+.byte 0x80, 0x2f, 0x6f, 0x60, 0x80, 0x2f, 0x6f, 0xb4, 0x80, 0x2f, 0xb0, 0x00, 0x80, 0x30, 0x35, 0xc0 /* baserom.dol+0x3ca3f8 */
+.byte 0x80, 0x30, 0x2d, 0x98, 0x80, 0x30, 0x2d, 0x48, 0x80, 0x2f, 0x84, 0x64, 0x80, 0x05, 0x3b, 0xc0 /* baserom.dol+0x3ca408 */
+.byte 0x80, 0x2f, 0x84, 0x74, 0x80, 0x2f, 0xb1, 0xd8, 0x80, 0x30, 0x12, 0x2c, 0x80, 0x2f, 0x72, 0xe0 /* baserom.dol+0x3ca418 */
+.byte 0x80, 0x2f, 0x73, 0x88, 0x80, 0x05, 0x3c, 0x00, 0x80, 0x2f, 0x75, 0x40, 0x80, 0x30, 0x2e, 0xdc /* baserom.dol+0x3ca428 */
+.byte 0x80, 0x30, 0x35, 0xfc, 0x80, 0x2f, 0x80, 0x04, 0x80, 0x30, 0x2d, 0xf4, 0x80, 0x30, 0x36, 0x1c /* baserom.dol+0x3ca438 */
+.byte 0x80, 0x25, 0x60, 0x84, 0x80, 0x30, 0x2f, 0xfc, 0x80, 0x30, 0x31, 0x0c, 0x80, 0x30, 0x30, 0x84 /* baserom.dol+0x3ca448 */
+.byte 0x80, 0x30, 0x31, 0x94, 0x80, 0x30, 0x32, 0x74, 0x80, 0x30, 0x32, 0x7c, 0x80, 0x2f, 0x80, 0x80 /* baserom.dol+0x3ca458 */
+.byte 0x80, 0x2f, 0x81, 0x18, 0x80, 0x2f, 0x83, 0xd0, 0x80, 0x2f, 0x81, 0xa0, 0x80, 0x2f, 0x83, 0xfc /* baserom.dol+0x3ca468 */
+.byte 0x80, 0x30, 0x33, 0x70, 0x80, 0x30, 0x1f, 0xc8, 0x80, 0x30, 0x21, 0x64, 0x80, 0x30, 0x35, 0x68 /* baserom.dol+0x3ca478 */
+.byte 0x80, 0x30, 0x27, 0x64, 0x80, 0x30, 0x27, 0xec, 0x80, 0x30, 0x28, 0x74, 0x80, 0x30, 0x2c, 0x88 /* baserom.dol+0x3ca488 */
+.byte 0x80, 0x30, 0x2c, 0xe8, 0x80, 0x30, 0x2e, 0x0c, 0x80, 0x30, 0x2e, 0x74, 0x80, 0x30, 0x35, 0x3c /* baserom.dol+0x3ca498 */
+.byte 0x80, 0x30, 0x35, 0x10, 0x80, 0x30, 0x35, 0x34, 0x80, 0x30, 0x19, 0x94 /* baserom.dol+0x3ca4a8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca4b4 */
+
+
+
+.section .sdata2, "a"
+/* 804562A0 0008 .sdata2 lbl_804562A0 @1549 */
+.global lbl_804562A0
+lbl_804562A0:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5100 */
+
+/* 804562A8 0008 .sdata2 lbl_804562A8 @1552 */
+.global lbl_804562A8
+lbl_804562A8:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5108 */
+
+/* 804562B0 0004 .sdata2 lbl_804562B0 @1827 */
+.global lbl_804562B0
+lbl_804562B0:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5110 */
+
+/* 804562B4 0004 .sdata2 lbl_804562B4 @2256 */
+.global lbl_804562B4
+lbl_804562B4:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5114 */
+
+/* 804562B8 0004 .sdata2 lbl_804562B8 @2257 */
+.global lbl_804562B8
+lbl_804562B8:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5118 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d511c */
+

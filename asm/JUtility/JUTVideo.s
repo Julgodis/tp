@@ -1,16 +1,16 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802e4c54
 
-
-.global JUTVideo_NS_createManager
-JUTVideo_NS_createManager:
+.section .text, "ax"
+/* 802E4C54 0058 .text createManager__8JUTVideoFPC16_GXRenderModeObj createManager__8JUTVideoFPC16_GXRenderModeObj */
+.global createManager__8JUTVideoFPC16_GXRenderModeObj
+createManager__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4C54 002E1B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4C58 002E1B98  7C 08 02 A6 */	mflr r0
 /* 802E4C5C 002E1B9C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E4C60 002E1BA0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E4C64 002E1BA4  7C 7F 1B 78 */	mr r31, r3
-/* 802E4C68 002E1BA8  80 0D 8F B8 */	lwz r0, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4C68 002E1BA8  80 0D 8F B8 */	lwz r0, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4C6C 002E1BAC  28 00 00 00 */	cmplwi r0, 0
 /* 802E4C70 002E1BB0  40 82 00 24 */	bne lbl_802E4C94
 /* 802E4C74 002E1BB4  38 60 00 58 */	li r3, 0x58
@@ -18,24 +18,25 @@ JUTVideo_NS_createManager:
 /* 802E4C7C 002E1BBC  7C 60 1B 79 */	or. r0, r3, r3
 /* 802E4C80 002E1BC0  41 82 00 10 */	beq lbl_802E4C90
 /* 802E4C84 002E1BC4  7F E4 FB 78 */	mr r4, r31
-/* 802E4C88 002E1BC8  48 00 00 6D */	bl JUTVideo
+/* 802E4C88 002E1BC8  48 00 00 6D */	bl __ct__8JUTVideoFPC16_GXRenderModeObj
 /* 802E4C8C 002E1BCC  7C 60 1B 78 */	mr r0, r3
 lbl_802E4C90:
-/* 802E4C90 002E1BD0  90 0D 8F B8 */	stw r0, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4C90 002E1BD0  90 0D 8F B8 */	stw r0, sManager__8JUTVideo-_SDA_BASE_(r13)
 lbl_802E4C94:
-/* 802E4C94 002E1BD4  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4C94 002E1BD4  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4C98 002E1BD8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E4C9C 002E1BDC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E4CA0 002E1BE0  7C 08 03 A6 */	mtlr r0
 /* 802E4CA4 002E1BE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4CA8 002E1BE8  4E 80 00 20 */	blr 
 
-.global JUTVideo_NS_destroyManager
-JUTVideo_NS_destroyManager:
+/* 802E4CAC 0048 .text destroyManager__8JUTVideoFv destroyManager__8JUTVideoFv */
+.global destroyManager__8JUTVideoFv
+destroyManager__8JUTVideoFv:
 /* 802E4CAC 002E1BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4CB0 002E1BF0  7C 08 02 A6 */	mflr r0
 /* 802E4CB4 002E1BF4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E4CB8 002E1BF8  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4CB8 002E1BF8  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4CBC 002E1BFC  28 03 00 00 */	cmplwi r3, 0
 /* 802E4CC0 002E1C00  41 82 00 24 */	beq lbl_802E4CE4
 /* 802E4CC4 002E1C04  41 82 00 18 */	beq lbl_802E4CDC
@@ -46,15 +47,16 @@ JUTVideo_NS_destroyManager:
 /* 802E4CD8 002E1C18  4E 80 04 21 */	bctrl 
 lbl_802E4CDC:
 /* 802E4CDC 002E1C1C  38 00 00 00 */	li r0, 0
-/* 802E4CE0 002E1C20  90 0D 8F B8 */	stw r0, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4CE0 002E1C20  90 0D 8F B8 */	stw r0, sManager__8JUTVideo-_SDA_BASE_(r13)
 lbl_802E4CE4:
 /* 802E4CE4 002E1C24  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E4CE8 002E1C28  7C 08 03 A6 */	mtlr r0
 /* 802E4CEC 002E1C2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4CF0 002E1C30  4E 80 00 20 */	blr 
 
-.global JUTVideo
-JUTVideo:
+/* 802E4CF4 00F4 .text __ct__8JUTVideoFPC16_GXRenderModeObj __ct__8JUTVideoFPC16_GXRenderModeObj */
+.global __ct__8JUTVideoFPC16_GXRenderModeObj
+__ct__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4CF4 002E1C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4CF8 002E1C38  7C 08 02 A6 */	mflr r0
 /* 802E4CFC 002E1C3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -62,8 +64,8 @@ JUTVideo:
 /* 802E4D04 002E1C44  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E4D08 002E1C48  7C 7F 1B 78 */	mr r31, r3
 /* 802E4D0C 002E1C4C  7C 9E 23 78 */	mr r30, r4
-/* 802E4D10 002E1C50  3C 60 80 3D */	lis r3, lbl_803CC980@ha
-/* 802E4D14 002E1C54  38 03 C9 80 */	addi r0, r3, lbl_803CC980@l
+/* 802E4D10 002E1C50  3C 60 80 3D */	lis r3, __vt__8JUTVideo@ha
+/* 802E4D14 002E1C54  38 03 C9 80 */	addi r0, r3, __vt__8JUTVideo@l
 /* 802E4D18 002E1C58  90 1F 00 00 */	stw r0, 0(r31)
 /* 802E4D1C 002E1C5C  38 00 00 00 */	li r0, 0
 /* 802E4D20 002E1C60  90 1F 00 04 */	stw r0, 4(r31)
@@ -74,7 +76,7 @@ JUTVideo:
 /* 802E4D34 002E1C74  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 802E4D38 002E1C78  7F E3 FB 78 */	mr r3, r31
 /* 802E4D3C 002E1C7C  7F C4 F3 78 */	mr r4, r30
-/* 802E4D40 002E1C80  48 00 04 59 */	bl JUTVideo_NS_setRenderMode
+/* 802E4D40 002E1C80  48 00 04 59 */	bl setRenderMode__8JUTVideoFPC16_GXRenderModeObj
 /* 802E4D44 002E1C84  38 60 00 01 */	li r3, 1
 /* 802E4D48 002E1C88  48 06 8A F9 */	bl VISetBlack
 /* 802E4D4C 002E1C8C  48 06 89 49 */	bl VIFlush
@@ -87,20 +89,16 @@ JUTVideo:
 /* 802E4D68 002E1CA8  38 00 00 00 */	li r0, 0
 /* 802E4D6C 002E1CAC  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 802E4D70 002E1CB0  48 05 D9 A5 */	bl OSGetTick
-/* 802E4D74 002E1CB4  90 6D 8F BC */	stw r3, lbl_8045153C-_SDA_BASE_(r13)
+/* 802E4D74 002E1CB4  90 6D 8F BC */	stw r3, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4D78 002E1CB8  3C 60 00 0A */	lis r3, 0x000A3930@ha
 /* 802E4D7C 002E1CBC  38 03 39 30 */	addi r0, r3, 0x000A3930@l
-/* 802E4D80 002E1CC0  90 0D 8F C0 */	stw r0, lbl_80451540-_SDA_BASE_(r13)
-.global JUTVideo_NS_preRetraceProc
-/* 802E4D84 002E1CC4  3C 60 80 2E */	lis r3, JUTVideo_NS_preRetraceProc@ha
-.global JUTVideo_NS_preRetraceProc
-/* 802E4D88 002E1CC8  38 63 4E 50 */	addi r3, r3, JUTVideo_NS_preRetraceProc@l
+/* 802E4D80 002E1CC0  90 0D 8F C0 */	stw r0, sVideoInterval__8JUTVideo-_SDA_BASE_(r13)
+/* 802E4D84 002E1CC4  3C 60 80 2E */	lis r3, preRetraceProc__8JUTVideoFUl@ha
+/* 802E4D88 002E1CC8  38 63 4E 50 */	addi r3, r3, preRetraceProc__8JUTVideoFUl@l
 /* 802E4D8C 002E1CCC  48 06 74 55 */	bl VISetPreRetraceCallback
 /* 802E4D90 002E1CD0  90 7F 00 1C */	stw r3, 0x1c(r31)
-.global JUTVideo_NS_postRetraceProc
-/* 802E4D94 002E1CD4  3C 60 80 2E */	lis r3, JUTVideo_NS_postRetraceProc@ha
-.global JUTVideo_NS_postRetraceProc
-/* 802E4D98 002E1CD8  38 63 51 44 */	addi r3, r3, JUTVideo_NS_postRetraceProc@l
+/* 802E4D94 002E1CD4  3C 60 80 2E */	lis r3, postRetraceProc__8JUTVideoFUl@ha
+/* 802E4D98 002E1CD8  38 63 51 44 */	addi r3, r3, postRetraceProc__8JUTVideoFUl@l
 /* 802E4D9C 002E1CDC  48 06 74 89 */	bl VISetPostRetraceCallback
 /* 802E4DA0 002E1CE0  90 7F 00 20 */	stw r3, 0x20(r31)
 /* 802E4DA4 002E1CE4  38 00 00 00 */	li r0, 0
@@ -110,10 +108,8 @@ JUTVideo:
 /* 802E4DB4 002E1CF4  38 9F 00 34 */	addi r4, r31, 0x34
 /* 802E4DB8 002E1CF8  38 A0 00 01 */	li r5, 1
 /* 802E4DBC 002E1CFC  48 05 9B D9 */	bl OSInitMessageQueue
-.global JUTVideo_NS_drawDoneCallback
-/* 802E4DC0 002E1D00  3C 60 80 2E */	lis r3, JUTVideo_NS_drawDoneCallback@ha
-.global JUTVideo_NS_drawDoneCallback
-/* 802E4DC4 002E1D04  38 63 50 BC */	addi r3, r3, JUTVideo_NS_drawDoneCallback@l
+/* 802E4DC0 002E1D00  3C 60 80 2E */	lis r3, drawDoneCallback__8JUTVideoFv@ha
+/* 802E4DC4 002E1D04  38 63 50 BC */	addi r3, r3, drawDoneCallback__8JUTVideoFv@l
 /* 802E4DC8 002E1D08  48 07 77 E5 */	bl GXSetDrawDoneCallback
 /* 802E4DCC 002E1D0C  7F E3 FB 78 */	mr r3, r31
 /* 802E4DD0 002E1D10  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -122,6 +118,10 @@ JUTVideo:
 /* 802E4DDC 002E1D1C  7C 08 03 A6 */	mtlr r0
 /* 802E4DE0 002E1D20  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4DE4 002E1D24  4E 80 00 20 */	blr 
+
+/* 802E4DE8 0068 .text __dt__8JUTVideoFv __dt__8JUTVideoFv */
+.global __dt__8JUTVideoFv
+__dt__8JUTVideoFv:
 /* 802E4DE8 002E1D28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4DEC 002E1D2C  7C 08 02 A6 */	mflr r0
 /* 802E4DF0 002E1D30  90 01 00 14 */	stw r0, 0x14(r1)
@@ -130,8 +130,8 @@ JUTVideo:
 /* 802E4DFC 002E1D3C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E4E00 002E1D40  7C 9F 23 78 */	mr r31, r4
 /* 802E4E04 002E1D44  41 82 00 30 */	beq lbl_802E4E34
-/* 802E4E08 002E1D48  3C 60 80 3D */	lis r3, lbl_803CC980@ha
-/* 802E4E0C 002E1D4C  38 03 C9 80 */	addi r0, r3, lbl_803CC980@l
+/* 802E4E08 002E1D48  3C 60 80 3D */	lis r3, __vt__8JUTVideo@ha
+/* 802E4E0C 002E1D4C  38 03 C9 80 */	addi r0, r3, __vt__8JUTVideo@l
 /* 802E4E10 002E1D50  90 1E 00 00 */	stw r0, 0(r30)
 /* 802E4E14 002E1D54  80 7E 00 1C */	lwz r3, 0x1c(r30)
 /* 802E4E18 002E1D58  48 06 73 C9 */	bl VISetPreRetraceCallback
@@ -149,13 +149,15 @@ lbl_802E4E34:
 /* 802E4E44 002E1D84  7C 08 03 A6 */	mtlr r0
 /* 802E4E48 002E1D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4E4C 002E1D8C  4E 80 00 20 */	blr 
-.global JUTVideo_NS_preRetraceProc
-JUTVideo_NS_preRetraceProc:
+
+/* 802E4E50 0238 .text preRetraceProc__8JUTVideoFUl preRetraceProc__8JUTVideoFUl */
+.global preRetraceProc__8JUTVideoFUl
+preRetraceProc__8JUTVideoFUl:
 /* 802E4E50 002E1D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4E54 002E1D94  7C 08 02 A6 */	mflr r0
 /* 802E4E58 002E1D98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E4E5C 002E1D9C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802E4E60 002E1DA0  80 8D 8F B8 */	lwz r4, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4E60 002E1DA0  80 8D 8F B8 */	lwz r4, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4E64 002E1DA4  28 04 00 00 */	cmplwi r4, 0
 /* 802E4E68 002E1DA8  41 82 02 0C */	beq lbl_802E5074
 /* 802E4E6C 002E1DAC  81 84 00 24 */	lwz r12, 0x24(r4)
@@ -165,11 +167,11 @@ JUTVideo_NS_preRetraceProc:
 /* 802E4E7C 002E1DBC  4E 80 04 21 */	bctrl 
 lbl_802E4E80:
 /* 802E4E80 002E1DC0  48 05 D8 95 */	bl OSGetTick
-/* 802E4E84 002E1DC4  80 0D 8F BC */	lwz r0, lbl_8045153C-_SDA_BASE_(r13)
+/* 802E4E84 002E1DC4  80 0D 8F BC */	lwz r0, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4E88 002E1DC8  7C 00 18 50 */	subf r0, r0, r3
-/* 802E4E8C 002E1DCC  90 0D 8F C0 */	stw r0, lbl_80451540-_SDA_BASE_(r13)
-/* 802E4E90 002E1DD0  90 6D 8F BC */	stw r3, lbl_8045153C-_SDA_BASE_(r13)
-/* 802E4E94 002E1DD4  83 ED 8F D0 */	lwz r31, lbl_80451550-_SDA_BASE_(r13)
+/* 802E4E8C 002E1DCC  90 0D 8F C0 */	stw r0, sVideoInterval__8JUTVideo-_SDA_BASE_(r13)
+/* 802E4E90 002E1DD0  90 6D 8F BC */	stw r3, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
+/* 802E4E94 002E1DD4  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E4E98 002E1DD8  28 1F 00 00 */	cmplwi r31, 0
 /* 802E4E9C 002E1DDC  40 82 00 14 */	bne lbl_802E4EB0
 /* 802E4EA0 002E1DE0  38 60 00 01 */	li r3, 1
@@ -188,14 +190,14 @@ lbl_802E4ECC:
 /* 802E4ECC 002E1E0C  80 8D 8F C8 */	lwz r4, lbl_80451548-_SDA_BASE_(r13)
 /* 802E4ED0 002E1E10  28 04 00 00 */	cmplwi r4, 0
 /* 802E4ED4 002E1E14  41 82 00 1C */	beq lbl_802E4EF0
-/* 802E4ED8 002E1E18  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4ED8 002E1E18  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4EDC 002E1E1C  80 C3 00 04 */	lwz r6, 4(r3)
-/* 802E4EE0 002E1E20  80 6D 8F A8 */	lwz r3, lbl_80451528-_SDA_BASE_(r13)
+/* 802E4EE0 002E1E20  80 6D 8F A8 */	lwz r3, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 /* 802E4EE4 002E1E24  A0 A6 00 04 */	lhz r5, 4(r6)
 /* 802E4EE8 002E1E28  A0 C6 00 06 */	lhz r6, 6(r6)
-/* 802E4EEC 002E1E2C  4B FF F6 81 */	bl JUTDirectPrint_NS_changeFrameBuffer
+/* 802E4EEC 002E1E2C  4B FF F6 81 */	bl changeFrameBuffer__14JUTDirectPrintFPvUsUs
 lbl_802E4EF0:
-/* 802E4EF0 002E1E30  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4EF0 002E1E30  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4EF4 002E1E34  88 03 00 2C */	lbz r0, 0x2c(r3)
 /* 802E4EF8 002E1E38  28 00 00 01 */	cmplwi r0, 1
 /* 802E4EFC 002E1E3C  40 82 00 38 */	bne lbl_802E4F34
@@ -207,7 +209,7 @@ lbl_802E4F10:
 /* 802E4F10 002E1E50  90 83 00 30 */	stw r4, 0x30(r3)
 /* 802E4F14 002E1E54  30 04 FF FF */	addic r0, r4, -1
 /* 802E4F18 002E1E58  7C 00 21 10 */	subfe r0, r0, r4
-/* 802E4F1C 002E1E5C  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E4F1C 002E1E5C  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4F20 002E1E60  98 03 00 2C */	stb r0, 0x2c(r3)
 /* 802E4F24 002E1E64  38 60 00 01 */	li r3, 1
 /* 802E4F28 002E1E68  48 06 89 19 */	bl VISetBlack
@@ -315,8 +317,9 @@ lbl_802E5074:
 /* 802E5080 002E1FC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5084 002E1FC4  4E 80 00 20 */	blr 
 
-.global JUTVideo_NS_drawDoneStart
-JUTVideo_NS_drawDoneStart:
+/* 802E5088 0028 .text drawDoneStart__8JUTVideoFv drawDoneStart__8JUTVideoFv */
+.global drawDoneStart__8JUTVideoFv
+drawDoneStart__8JUTVideoFv:
 /* 802E5088 002E1FC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E508C 002E1FCC  7C 08 02 A6 */	mflr r0
 /* 802E5090 002E1FD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -328,17 +331,20 @@ JUTVideo_NS_drawDoneStart:
 /* 802E50A8 002E1FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E50AC 002E1FEC  4E 80 00 20 */	blr 
 
-.global JUTVideo_NS_dummyNoDrawWait
-JUTVideo_NS_dummyNoDrawWait:
+/* 802E50B0 000C .text dummyNoDrawWait__8JUTVideoFv dummyNoDrawWait__8JUTVideoFv */
+.global dummyNoDrawWait__8JUTVideoFv
+dummyNoDrawWait__8JUTVideoFv:
 /* 802E50B0 002E1FF0  38 00 00 00 */	li r0, 0
 /* 802E50B4 002E1FF4  98 0D 8F C4 */	stb r0, lbl_80451544-_SDA_BASE_(r13)
 /* 802E50B8 002E1FF8  4E 80 00 20 */	blr 
-.global JUTVideo_NS_drawDoneCallback
-JUTVideo_NS_drawDoneCallback:
+
+/* 802E50BC 0088 .text drawDoneCallback__8JUTVideoFv drawDoneCallback__8JUTVideoFv */
+.global drawDoneCallback__8JUTVideoFv
+drawDoneCallback__8JUTVideoFv:
 /* 802E50BC 002E1FFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E50C0 002E2000  7C 08 02 A6 */	mflr r0
 /* 802E50C4 002E2004  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E50C8 002E2008  80 8D 8F D0 */	lwz r4, lbl_80451550-_SDA_BASE_(r13)
+/* 802E50C8 002E2008  80 8D 8F D0 */	lwz r4, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E50CC 002E200C  28 04 00 00 */	cmplwi r4, 0
 /* 802E50D0 002E2010  41 82 00 64 */	beq lbl_802E5134
 /* 802E50D4 002E2014  38 60 00 00 */	li r3, 0
@@ -373,12 +379,14 @@ lbl_802E5134:
 /* 802E5138 002E2078  7C 08 03 A6 */	mtlr r0
 /* 802E513C 002E207C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5140 002E2080  4E 80 00 20 */	blr 
-.global JUTVideo_NS_postRetraceProc
-JUTVideo_NS_postRetraceProc:
+
+/* 802E5144 0054 .text postRetraceProc__8JUTVideoFUl postRetraceProc__8JUTVideoFUl */
+.global postRetraceProc__8JUTVideoFUl
+postRetraceProc__8JUTVideoFUl:
 /* 802E5144 002E2084  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E5148 002E2088  7C 08 02 A6 */	mflr r0
 /* 802E514C 002E208C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E5150 002E2090  80 8D 8F B8 */	lwz r4, lbl_80451538-_SDA_BASE_(r13)
+/* 802E5150 002E2090  80 8D 8F B8 */	lwz r4, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E5154 002E2094  28 04 00 00 */	cmplwi r4, 0
 /* 802E5158 002E2098  41 82 00 30 */	beq lbl_802E5188
 /* 802E515C 002E209C  81 84 00 28 */	lwz r12, 0x28(r4)
@@ -389,7 +397,7 @@ JUTVideo_NS_postRetraceProc:
 lbl_802E5170:
 /* 802E5170 002E20B0  48 06 87 4D */	bl VIGetRetraceCount
 /* 802E5174 002E20B4  7C 64 1B 78 */	mr r4, r3
-/* 802E5178 002E20B8  80 6D 8F B8 */	lwz r3, lbl_80451538-_SDA_BASE_(r13)
+/* 802E5178 002E20B8  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E517C 002E20BC  38 63 00 38 */	addi r3, r3, 0x38
 /* 802E5180 002E20C0  38 A0 00 00 */	li r5, 0
 /* 802E5184 002E20C4  48 05 98 71 */	bl OSSendMessage
@@ -399,8 +407,9 @@ lbl_802E5188:
 /* 802E5190 002E20D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5194 002E20D4  4E 80 00 20 */	blr 
 
-.global JUTVideo_NS_setRenderMode
-JUTVideo_NS_setRenderMode:
+/* 802E5198 0078 .text setRenderMode__8JUTVideoFPC16_GXRenderModeObj setRenderMode__8JUTVideoFPC16_GXRenderModeObj */
+.global setRenderMode__8JUTVideoFPC16_GXRenderModeObj
+setRenderMode__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E5198 002E20D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E519C 002E20DC  7C 08 02 A6 */	mflr r0
 /* 802E51A0 002E20E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -434,7 +443,50 @@ lbl_802E51FC:
 /* 802E5208 002E2148  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E520C 002E214C  4E 80 00 20 */	blr 
 
-.global JUTVideo_NS_waitRetraceIfNeed
-JUTVideo_NS_waitRetraceIfNeed:
+/* 802E5210 0004 .text waitRetraceIfNeed__8JUTVideoFv waitRetraceIfNeed__8JUTVideoFv */
+.global waitRetraceIfNeed__8JUTVideoFv
+waitRetraceIfNeed__8JUTVideoFv:
 /* 802E5210 002E2150  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC980 000C .data __vt__8JUTVideo __vt__8JUTVideo */
+.global __vt__8JUTVideo
+__vt__8JUTVideo:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x4d, 0xe8 /* baserom.dol+0x3c9980 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c998c */
+
+
+
+.section .sbss, "aw"
+/* 80451538 0004 .sbss sManager__8JUTVideo sManager__8JUTVideo */
+.global sManager__8JUTVideo
+sManager__8JUTVideo:
+.skip 0x4
+
+/* 8045153C 0004 .sbss sVideoLastTick__8JUTVideo sVideoLastTick__8JUTVideo */
+.global sVideoLastTick__8JUTVideo
+sVideoLastTick__8JUTVideo:
+.skip 0x4
+
+/* 80451540 0004 .sbss sVideoInterval__8JUTVideo sVideoInterval__8JUTVideo */
+.global sVideoInterval__8JUTVideo
+sVideoInterval__8JUTVideo:
+.skip 0x4
+
+/* 80451544 0004 .sbss lbl_80451544 lbl_80451544 */
+.global lbl_80451544
+lbl_80451544:
+.skip 0x4
+
+/* 80451548 0004 .sbss lbl_80451548 frameBuffer$2222 */
+.global lbl_80451548
+lbl_80451548:
+.skip 0x4
+
+/* 8045154C 0004 .sbss lbl_8045154C lbl_8045154C */
+.global lbl_8045154C
+lbl_8045154C:
+.skip 0x4
 

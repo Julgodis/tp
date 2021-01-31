@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a2184
 
-
+.section .text, "ax"
+/* 802A2184 001C .text releaseSound__14JAISoundHandleFv releaseSound__14JAISoundHandleFv */
 .global releaseSound__14JAISoundHandleFv
 releaseSound__14JAISoundHandleFv:
 /* 802A2184 0029F0C4  80 83 00 00 */	lwz r4, 0(r3)
@@ -13,8 +13,9 @@ releaseSound__14JAISoundHandleFv:
 /* 802A2198 0029F0D8  90 03 00 00 */	stw r0, 0(r3)
 /* 802A219C 0029F0DC  4E 80 00 20 */	blr 
 
-.global JAISound_NS_releaseHandle
-JAISound_NS_releaseHandle:
+/* 802A21A0 001C .text releaseHandle__8JAISoundFv releaseHandle__8JAISoundFv */
+.global releaseHandle__8JAISoundFv
+releaseHandle__8JAISoundFv:
 /* 802A21A0 0029F0E0  80 83 00 04 */	lwz r4, 4(r3)
 /* 802A21A4 0029F0E4  28 04 00 00 */	cmplwi r4, 0
 /* 802A21A8 0029F0E8  4D 82 00 20 */	beqlr 
@@ -23,8 +24,9 @@ JAISound_NS_releaseHandle:
 /* 802A21B4 0029F0F4  90 03 00 04 */	stw r0, 4(r3)
 /* 802A21B8 0029F0F8  4E 80 00 20 */	blr 
 
-.global JAISound_NS_attachHandle
-JAISound_NS_attachHandle:
+/* 802A21BC 0064 .text attachHandle__8JAISoundFP14JAISoundHandle attachHandle__8JAISoundFP14JAISoundHandle */
+.global attachHandle__8JAISoundFP14JAISoundHandle
+attachHandle__8JAISoundFP14JAISoundHandle:
 /* 802A21BC 0029F0FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A21C0 0029F100  7C 08 02 A6 */	mflr r0
 /* 802A21C4 0029F104  90 01 00 14 */	stw r0, 0x14(r1)
@@ -41,7 +43,7 @@ lbl_802A21E8:
 /* 802A21EC 0029F12C  28 00 00 00 */	cmplwi r0, 0
 /* 802A21F0 0029F130  41 82 00 0C */	beq lbl_802A21FC
 /* 802A21F4 0029F134  7F C3 F3 78 */	mr r3, r30
-/* 802A21F8 0029F138  4B FF FF A9 */	bl JAISound_NS_releaseHandle
+/* 802A21F8 0029F138  4B FF FF A9 */	bl releaseHandle__8JAISoundFv
 lbl_802A21FC:
 /* 802A21FC 0029F13C  93 FE 00 04 */	stw r31, 4(r30)
 /* 802A2200 0029F140  80 7E 00 04 */	lwz r3, 4(r30)
@@ -53,8 +55,9 @@ lbl_802A21FC:
 /* 802A2218 0029F158  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A221C 0029F15C  4E 80 00 20 */	blr 
 
-.global JAISoundStatus__NS_lockWhenPrepared
-JAISoundStatus__NS_lockWhenPrepared:
+/* 802A2220 0024 .text lockWhenPrepared__15JAISoundStatus_Fv lockWhenPrepared__15JAISoundStatus_Fv */
+.global lockWhenPrepared__15JAISoundStatus_Fv
+lockWhenPrepared__15JAISoundStatus_Fv:
 /* 802A2220 0029F160  88 03 00 02 */	lbz r0, 2(r3)
 /* 802A2224 0029F164  28 00 00 00 */	cmplwi r0, 0
 /* 802A2228 0029F168  40 82 00 14 */	bne lbl_802A223C
@@ -66,8 +69,9 @@ lbl_802A223C:
 /* 802A223C 0029F17C  38 60 00 00 */	li r3, 0
 /* 802A2240 0029F180  4E 80 00 20 */	blr 
 
-.global JAISoundStatus__NS_unlockIfLocked
-JAISoundStatus__NS_unlockIfLocked:
+/* 802A2244 003C .text unlockIfLocked__15JAISoundStatus_Fv unlockIfLocked__15JAISoundStatus_Fv */
+.global unlockIfLocked__15JAISoundStatus_Fv
+unlockIfLocked__15JAISoundStatus_Fv:
 /* 802A2244 0029F184  88 03 00 02 */	lbz r0, 2(r3)
 /* 802A2248 0029F188  28 00 00 03 */	cmplwi r0, 3
 /* 802A224C 0029F18C  40 82 00 14 */	bne lbl_802A2260
@@ -86,8 +90,9 @@ lbl_802A2278:
 /* 802A2278 0029F1B8  38 60 00 00 */	li r3, 0
 /* 802A227C 0029F1BC  4E 80 00 20 */	blr 
 
-.global JAISoundParams_NS_mixOutAll
-JAISoundParams_NS_mixOutAll:
+/* 802A2280 0078 .text mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
+.global mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf
+mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf:
 /* 802A2280 0029F1C0  C0 63 00 0C */	lfs f3, 0xc(r3)
 /* 802A2284 0029F1C4  C0 44 00 00 */	lfs f2, 0(r4)
 /* 802A2288 0029F1C8  C0 03 00 00 */	lfs f0, 0(r3)
@@ -119,10 +124,11 @@ JAISoundParams_NS_mixOutAll:
 /* 802A22F0 0029F230  D0 05 00 10 */	stfs f0, 0x10(r5)
 /* 802A22F4 0029F234  4E 80 00 20 */	blr 
 
-.global JAISound
-JAISound:
-/* 802A22F8 0029F238  3C 80 80 3D */	lis r4, lbl_803C9970@ha
-/* 802A22FC 0029F23C  38 04 99 70 */	addi r0, r4, lbl_803C9970@l
+/* 802A22F8 0030 .text __ct__8JAISoundFv __ct__8JAISoundFv */
+.global __ct__8JAISoundFv
+__ct__8JAISoundFv:
+/* 802A22F8 0029F238  3C 80 80 3D */	lis r4, __vt__8JAISound@ha
+/* 802A22FC 0029F23C  38 04 99 70 */	addi r0, r4, __vt__8JAISound@l
 /* 802A2300 0029F240  90 03 00 00 */	stw r0, 0(r3)
 /* 802A2304 0029F244  C0 02 BD BC */	lfs f0, lbl_804557BC-_SDA2_BASE_(r2)
 /* 802A2308 0029F248  D0 03 00 48 */	stfs f0, 0x48(r3)
@@ -134,8 +140,9 @@ JAISound:
 /* 802A2320 0029F260  D0 23 00 58 */	stfs f1, 0x58(r3)
 /* 802A2324 0029F264  4E 80 00 20 */	blr 
 
-.global JAISound_NS_start_JAISound_
-JAISound_NS_start_JAISound_:
+/* 802A2328 0124 .text func_802A2328 start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+.global func_802A2328
+func_802A2328:
 /* 802A2328 0029F268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A232C 0029F26C  7C 08 02 A6 */	mflr r0
 /* 802A2330 0029F270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -212,8 +219,9 @@ lbl_802A2430:
 /* 802A2444 0029F384  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A2448 0029F388  4E 80 00 20 */	blr 
 
-.global JAISound_NS_acceptsNewAudible
-JAISound_NS_acceptsNewAudible:
+/* 802A244C 0028 .text acceptsNewAudible__8JAISoundCFv acceptsNewAudible__8JAISoundCFv */
+.global acceptsNewAudible__8JAISoundCFv
+acceptsNewAudible__8JAISoundCFv:
 /* 802A244C 0029F38C  38 80 00 00 */	li r4, 0
 /* 802A2450 0029F390  80 03 00 08 */	lwz r0, 8(r3)
 /* 802A2454 0029F394  28 00 00 00 */	cmplwi r0, 0
@@ -226,8 +234,9 @@ lbl_802A246C:
 /* 802A246C 0029F3AC  7C 83 23 78 */	mr r3, r4
 /* 802A2470 0029F3B0  4E 80 00 20 */	blr 
 
-.global JAISound_NS_newAudible
-JAISound_NS_newAudible:
+/* 802A2474 0068 .text func_802A2474 newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
+.global func_802A2474
+func_802A2474:
 /* 802A2474 0029F3B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A2478 0029F3B8  7C 08 02 A6 */	mflr r0
 /* 802A247C 0029F3BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -256,6 +265,7 @@ lbl_802A249C:
 /* 802A24D4 0029F414  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A24D8 0029F418  4E 80 00 20 */	blr 
 
+/* 802A24DC 00BC .text stop__8JAISoundFUl stop__8JAISoundFUl */
 .global stop__8JAISoundFUl
 stop__8JAISoundFUl:
 /* 802A24DC 0029F41C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -310,6 +320,7 @@ lbl_802A2588:
 /* 802A2590 0029F4D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2594 0029F4D4  4E 80 00 20 */	blr 
 
+/* 802A2598 0040 .text stop__8JAISoundFv stop__8JAISoundFv */
 .global stop__8JAISoundFv
 stop__8JAISoundFv:
 /* 802A2598 0029F4D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -323,20 +334,33 @@ stop__8JAISoundFv:
 /* 802A25B8 0029F4F8  88 03 00 1F */	lbz r0, 0x1f(r3)
 /* 802A25BC 0029F4FC  50 80 3E 30 */	rlwimi r0, r4, 7, 0x18, 0x18
 /* 802A25C0 0029F500  98 03 00 1F */	stb r0, 0x1f(r3)
-/* 802A25C4 0029F504  4B FF FB DD */	bl JAISound_NS_releaseHandle
+/* 802A25C4 0029F504  4B FF FB DD */	bl releaseHandle__8JAISoundFv
 /* 802A25C8 0029F508  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802A25CC 0029F50C  7C 08 03 A6 */	mtlr r0
 /* 802A25D0 0029F510  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A25D4 0029F514  4E 80 00 20 */	blr 
+
+/* 802A25D8 0008 .text asSe__8JAISoundFv asSe__8JAISoundFv */
+.global asSe__8JAISoundFv
+asSe__8JAISoundFv:
 /* 802A25D8 0029F518  38 60 00 00 */	li r3, 0
 /* 802A25DC 0029F51C  4E 80 00 20 */	blr 
+
+/* 802A25E0 0008 .text asSeq__8JAISoundFv asSeq__8JAISoundFv */
+.global asSeq__8JAISoundFv
+asSeq__8JAISoundFv:
 /* 802A25E0 0029F520  38 60 00 00 */	li r3, 0
 /* 802A25E4 0029F524  4E 80 00 20 */	blr 
+
+/* 802A25E8 0008 .text asStream__8JAISoundFv asStream__8JAISoundFv */
+.global asStream__8JAISoundFv
+asStream__8JAISoundFv:
 /* 802A25E8 0029F528  38 60 00 00 */	li r3, 0
 /* 802A25EC 0029F52C  4E 80 00 20 */	blr 
 
-.global JAISound_NS_die_JAISound_
-JAISound_NS_die_JAISound_:
+/* 802A25F0 007C .text die_JAISound___8JAISoundFv die_JAISound___8JAISoundFv */
+.global die_JAISound___8JAISoundFv
+die_JAISound___8JAISoundFv:
 /* 802A25F0 0029F530  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A25F4 0029F534  7C 08 02 A6 */	mflr r0
 /* 802A25F8 0029F538  90 01 00 14 */	stw r0, 0x14(r1)
@@ -361,7 +385,7 @@ lbl_802A2630:
 /* 802A2640 0029F580  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 802A2644 0029F584  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 802A2648 0029F588  7F E3 FB 78 */	mr r3, r31
-/* 802A264C 0029F58C  4B FF FB 55 */	bl JAISound_NS_releaseHandle
+/* 802A264C 0029F58C  4B FF FB 55 */	bl releaseHandle__8JAISoundFv
 /* 802A2650 0029F590  38 00 00 06 */	li r0, 6
 /* 802A2654 0029F594  98 1F 00 1E */	stb r0, 0x1e(r31)
 /* 802A2658 0029F598  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -370,8 +394,9 @@ lbl_802A2630:
 /* 802A2664 0029F5A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2668 0029F5A8  4E 80 00 20 */	blr 
 
-.global JAISound_NS_increasePrepareCount_JAISound_
-JAISound_NS_increasePrepareCount_JAISound_:
+/* 802A266C 004C .text increasePrepareCount_JAISound___8JAISoundFv increasePrepareCount_JAISound___8JAISoundFv */
+.global increasePrepareCount_JAISound___8JAISoundFv
+increasePrepareCount_JAISound___8JAISoundFv:
 /* 802A266C 0029F5AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2670 0029F5B0  7C 08 02 A6 */	mflr r0
 /* 802A2674 0029F5B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -386,15 +411,16 @@ JAISound_NS_increasePrepareCount_JAISound_:
 /* 802A2698 0029F5D8  80 86 00 14 */	lwz r4, 0x14(r6)
 /* 802A269C 0029F5DC  80 A6 00 18 */	lwz r5, 0x18(r6)
 /* 802A26A0 0029F5E0  4C C6 31 82 */	crclr 6
-/* 802A26A4 0029F5E4  4B FE E8 C1 */	bl JASReport
+/* 802A26A4 0029F5E4  4B FE E8 C1 */	bl JASReport__FPCce
 lbl_802A26A8:
 /* 802A26A8 0029F5E8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802A26AC 0029F5EC  7C 08 03 A6 */	mtlr r0
 /* 802A26B0 0029F5F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A26B4 0029F5F4  4E 80 00 20 */	blr 
 
-.global JAISound_NS_calc_JAISound_
-JAISound_NS_calc_JAISound_:
+/* 802A26B8 0324 .text calc_JAISound___8JAISoundFv calc_JAISound___8JAISoundFv */
+.global calc_JAISound___8JAISoundFv
+calc_JAISound___8JAISoundFv:
 /* 802A26B8 0029F5F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A26BC 0029F5FC  7C 08 02 A6 */	mflr r0
 /* 802A26C0 0029F600  90 01 00 14 */	stw r0, 0x14(r1)
@@ -621,8 +647,9 @@ lbl_802A29C4:
 /* 802A29D4 0029F914  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A29D8 0029F918  4E 80 00 20 */	blr 
 
-.global JAISound_NS_initTrack_JAISound_
-JAISound_NS_initTrack_JAISound_:
+/* 802A29DC 00D4 .text initTrack_JAISound___8JAISoundFP8JASTrack initTrack_JAISound___8JAISoundFP8JASTrack */
+.global initTrack_JAISound___8JAISoundFP8JASTrack
+initTrack_JAISound___8JAISoundFP8JASTrack:
 /* 802A29DC 0029F91C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802A29E0 0029F920  7C 08 02 A6 */	mflr r0
 /* 802A29E4 0029F924  90 01 00 44 */	stw r0, 0x44(r1)
@@ -659,7 +686,7 @@ lbl_802A2A3C:
 /* 802A2A54 0029F994  41 80 FF B8 */	blt lbl_802A2A0C
 /* 802A2A58 0029F998  7F 63 DB 78 */	mr r3, r27
 /* 802A2A5C 0029F99C  7F A4 EB 78 */	mr r4, r29
-/* 802A2A60 0029F9A0  4B FE E9 E5 */	bl JASTrack_NS_setChannelMgrCount
+/* 802A2A60 0029F9A0  4B FE E9 E5 */	bl setChannelMgrCount__8JASTrackFUl
 /* 802A2A64 0029F9A4  3B 80 00 00 */	li r28, 0
 /* 802A2A68 0029F9A8  3B E0 00 00 */	li r31, 0
 /* 802A2A6C 0029F9AC  3B C1 00 08 */	addi r30, r1, 8
@@ -668,7 +695,7 @@ lbl_802A2A74:
 /* 802A2A74 0029F9B4  7F 63 DB 78 */	mr r3, r27
 /* 802A2A78 0029F9B8  7F 84 E3 78 */	mr r4, r28
 /* 802A2A7C 0029F9BC  7C BE F8 2E */	lwzx r5, r30, r31
-/* 802A2A80 0029F9C0  4B FE EF 75 */	bl JASTrack_NS_assignExtBuffer
+/* 802A2A80 0029F9C0  4B FE EF 75 */	bl assignExtBuffer__8JASTrackFUlP14JASSoundParams
 /* 802A2A84 0029F9C4  3B 9C 00 01 */	addi r28, r28, 1
 /* 802A2A88 0029F9C8  3B FF 00 04 */	addi r31, r31, 4
 lbl_802A2A8C:
@@ -681,4 +708,56 @@ lbl_802A2A8C:
 /* 802A2AA4 0029F9E4  7C 08 03 A6 */	mtlr r0
 /* 802A2AA8 0029F9E8  38 21 00 40 */	addi r1, r1, 0x40
 /* 802A2AAC 0029F9EC  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039B910 003A .rodata lbl_8039B910 @stringBase0 */
+.global lbl_8039B910
+lbl_8039B910:
+.byte 0x49, 0x74, 0x20, 0x63, 0x6f, 0x73, 0x74, 0x20, 0x25, 0x64, 0x20, 0x73, 0x74, 0x65, 0x70, 0x73 /* baserom.dol+0x398910 */
+.byte 0x20, 0x74, 0x6f, 0x20, 0x70, 0x72, 0x65, 0x70, 0x61, 0x72, 0x65, 0x20, 0x53, 0x6f, 0x75, 0x6e /* baserom.dol+0x398920 */
+.byte 0x64, 0x28, 0x49, 0x44, 0x3a, 0x25, 0x30, 0x38, 0x78, 0x2c, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65 /* baserom.dol+0x398930 */
+.byte 0x73, 0x73, 0x25, 0x30, 0x38, 0x78, 0x29, 0x2e, 0x0a, 0x00 /* baserom.dol+0x398940 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39894a */
+
+
+
+.section .data, "aw"
+/* 803C9970 0030 .data __vt__8JAISound __vt__8JAISound */
+.global __vt__8JAISound
+__vt__8JAISound:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6970 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x25, 0xd8, 0x80, 0x2a, 0x25, 0xe0, 0x80, 0x2a, 0x25, 0xe8 /* baserom.dol+0x3c6980 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6990 */
+
+
+
+.section .sdata2, "a"
+/* 804557B8 0004 .sdata2 lbl_804557B8 @659 */
+.global lbl_804557B8
+lbl_804557B8:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4618 */
+
+/* 804557BC 0004 .sdata2 lbl_804557BC @697 */
+.global lbl_804557BC
+lbl_804557BC:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d461c */
+
+/* 804557C0 0004 .sdata2 lbl_804557C0 @698 */
+.global lbl_804557C0
+lbl_804557C0:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4620 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4624 */
+
+/* 804557C8 0008 .sdata2 lbl_804557C8 @766 */
+.global lbl_804557C8
+lbl_804557C8:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4628 */
+
+/* 804557D0 0004 .sdata2 lbl_804557D0 @887 */
+.global lbl_804557D0
+lbl_804557D0:
+.byte 0x3c, 0x23, 0xd7, 0x0a /* baserom.dol+0x3d4630 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4634 */
 

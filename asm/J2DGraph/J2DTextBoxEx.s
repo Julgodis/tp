@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 803071e4
 
-
-.global J2DTextBoxEx
-J2DTextBoxEx:
+.section .text, "ax"
+/* 803071E4 0338 .text __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+.global __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial
+__ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial:
 /* 803071E4 00304124  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803071E8 00304128  7C 08 02 A6 */	mflr r0
 /* 803071EC 0030412C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -15,9 +15,9 @@ J2DTextBoxEx:
 /* 80307200 00304140  7C BC 2B 78 */	mr r28, r5
 /* 80307204 00304144  7C DD 33 78 */	mr r29, r6
 /* 80307208 00304148  7C FE 3B 78 */	mr r30, r7
-/* 8030720C 0030414C  4B FF 84 55 */	bl J2DTextBox
-/* 80307210 00304150  3C 60 80 3D */	lis r3, lbl_803CD608@ha
-/* 80307214 00304154  38 03 D6 08 */	addi r0, r3, lbl_803CD608@l
+/* 8030720C 0030414C  4B FF 84 55 */	bl __ct__10J2DTextBoxFv
+/* 80307210 00304150  3C 60 80 3D */	lis r3, __vt__12J2DTextBoxEx@ha
+/* 80307214 00304154  38 03 D6 08 */	addi r0, r3, __vt__12J2DTextBoxEx@l
 /* 80307218 00304158  90 1B 00 00 */	stw r0, 0(r27)
 /* 8030721C 0030415C  38 00 00 00 */	li r0, 0
 /* 80307220 00304160  90 1B 01 44 */	stw r0, 0x144(r27)
@@ -30,7 +30,7 @@ J2DTextBoxEx:
 /* 8030723C 0030417C  7F 83 E3 78 */	mr r3, r28
 /* 80307240 00304180  38 81 00 18 */	addi r4, r1, 0x18
 /* 80307244 00304184  38 A0 00 08 */	li r5, 8
-/* 80307248 00304188  4B FD 50 51 */	bl JSUInputStream_NS_read
+/* 80307248 00304188  4B FD 50 51 */	bl read__14JSUInputStreamFPvl
 /* 8030724C 0030418C  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 80307250 00304190  90 1B 00 08 */	stw r0, 8(r27)
 /* 80307254 00304194  7F 83 E3 78 */	mr r3, r28
@@ -42,7 +42,7 @@ J2DTextBoxEx:
 /* 8030726C 003041AC  7F 83 E3 78 */	mr r3, r28
 /* 80307270 003041B0  38 81 00 10 */	addi r4, r1, 0x10
 /* 80307274 003041B4  38 A0 00 08 */	li r5, 8
-/* 80307278 003041B8  4B FD 51 E1 */	bl JSURandomInputStream_NS_peek
+/* 80307278 003041B8  4B FD 51 E1 */	bl peek__20JSURandomInputStreamFPvl
 /* 8030727C 003041BC  7F 63 DB 78 */	mr r3, r27
 /* 80307280 003041C0  7F 24 CB 78 */	mr r4, r25
 /* 80307284 003041C4  7F 85 E3 78 */	mr r5, r28
@@ -51,11 +51,11 @@ J2DTextBoxEx:
 /* 80307290 003041D0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80307294 003041D4  7C 9A 02 14 */	add r4, r26, r0
 /* 80307298 003041D8  38 A0 00 00 */	li r5, 0
-/* 8030729C 003041DC  4B FD 52 41 */	bl JSURandomInputStream_NS_seek
+/* 8030729C 003041DC  4B FD 52 41 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 803072A0 003041E0  7F 83 E3 78 */	mr r3, r28
 /* 803072A4 003041E4  38 81 00 20 */	addi r4, r1, 0x20
 /* 803072A8 003041E8  38 A0 00 20 */	li r5, 0x20
-/* 803072AC 003041EC  4B FD 4F ED */	bl JSUInputStream_NS_read
+/* 803072AC 003041EC  4B FD 4F ED */	bl read__14JSUInputStreamFPvl
 /* 803072B0 003041F0  A0 01 00 22 */	lhz r0, 0x22(r1)
 /* 803072B4 003041F4  B0 1B 01 3C */	sth r0, 0x13c(r27)
 /* 803072B8 003041F8  A0 01 00 24 */	lhz r0, 0x24(r1)
@@ -186,7 +186,7 @@ lbl_8030749C:
 /* 8030749C 003043DC  7F 83 E3 78 */	mr r3, r28
 /* 803074A0 003043E0  80 9B 01 24 */	lwz r4, 0x124(r27)
 /* 803074A4 003043E4  57 45 04 3E */	clrlwi r5, r26, 0x10
-/* 803074A8 003043E8  4B FD 4F B1 */	bl JSURandomInputStream_NS_peek
+/* 803074A8 003043E8  4B FD 4F B1 */	bl peek__20JSURandomInputStreamFPvl
 /* 803074AC 003043EC  38 80 00 00 */	li r4, 0
 /* 803074B0 003043F0  80 7B 01 24 */	lwz r3, 0x124(r27)
 /* 803074B4 003043F4  57 40 04 3E */	clrlwi r0, r26, 0x10
@@ -202,7 +202,7 @@ lbl_803074BC:
 /* 803074D8 00304418  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 803074DC 0030441C  7C 9F 02 14 */	add r4, r31, r0
 /* 803074E0 00304420  38 A0 00 00 */	li r5, 0
-/* 803074E4 00304424  4B FD 4F F9 */	bl JSURandomInputStream_NS_seek
+/* 803074E4 00304424  4B FD 4F F9 */	bl seek__20JSURandomInputStreamFl17JSUStreamSeekFrom
 /* 803074E8 00304428  C0 02 C8 D8 */	lfs f0, lbl_804562D8-_SDA2_BASE_(r2)
 /* 803074EC 0030442C  D0 1B 01 0C */	stfs f0, 0x10c(r27)
 /* 803074F0 00304430  D0 1B 01 10 */	stfs f0, 0x110(r27)
@@ -216,6 +216,10 @@ lbl_803074BC:
 /* 80307510 00304450  7C 08 03 A6 */	mtlr r0
 /* 80307514 00304454  38 21 00 80 */	addi r1, r1, 0x80
 /* 80307518 00304458  4E 80 00 20 */	blr 
+
+/* 8030751C 0090 .text __dt__12J2DTextBoxExFv __dt__12J2DTextBoxExFv */
+.global __dt__12J2DTextBoxExFv
+__dt__12J2DTextBoxExFv:
 /* 8030751C 0030445C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307520 00304460  7C 08 02 A6 */	mflr r0
 /* 80307524 00304464  90 01 00 14 */	stw r0, 0x14(r1)
@@ -224,8 +228,8 @@ lbl_803074BC:
 /* 80307530 00304470  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80307534 00304474  7C 9F 23 78 */	mr r31, r4
 /* 80307538 00304478  41 82 00 58 */	beq lbl_80307590
-/* 8030753C 0030447C  3C 60 80 3D */	lis r3, lbl_803CD608@ha
-/* 80307540 00304480  38 03 D6 08 */	addi r0, r3, lbl_803CD608@l
+/* 8030753C 0030447C  3C 60 80 3D */	lis r3, __vt__12J2DTextBoxEx@ha
+/* 80307540 00304480  38 03 D6 08 */	addi r0, r3, __vt__12J2DTextBoxEx@l
 /* 80307544 00304484  90 1E 00 00 */	stw r0, 0(r30)
 /* 80307548 00304488  88 1E 01 40 */	lbz r0, 0x140(r30)
 /* 8030754C 0030448C  28 00 00 00 */	cmplwi r0, 0
@@ -241,7 +245,7 @@ lbl_803074BC:
 lbl_80307574:
 /* 80307574 003044B4  7F C3 F3 78 */	mr r3, r30
 /* 80307578 003044B8  38 80 00 00 */	li r4, 0
-/* 8030757C 003044BC  4B FF 8C 65 */	bl J2DTextBox_NS_dtor
+/* 8030757C 003044BC  4B FF 8C 65 */	bl __dt__10J2DTextBoxFv
 /* 80307580 003044C0  7F E0 07 35 */	extsh. r0, r31
 /* 80307584 003044C4  40 81 00 0C */	ble lbl_80307590
 /* 80307588 003044C8  7F C3 F3 78 */	mr r3, r30
@@ -254,6 +258,10 @@ lbl_80307590:
 /* 803075A0 003044E0  7C 08 03 A6 */	mtlr r0
 /* 803075A4 003044E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803075A8 003044E8  4E 80 00 20 */	blr 
+
+/* 803075AC 0300 .text drawSelf__12J2DTextBoxExFffPA3_A4_f drawSelf__12J2DTextBoxExFffPA3_A4_f */
+.global drawSelf__12J2DTextBoxExFffPA3_A4_f
+drawSelf__12J2DTextBoxExFffPA3_A4_f:
 /* 803075AC 003044EC  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 803075B0 003044F0  7C 08 02 A6 */	mflr r0
 /* 803075B4 003044F4  90 01 01 24 */	stw r0, 0x124(r1)
@@ -313,7 +321,7 @@ lbl_80307610:
 /* 80307688 003045C8  38 C1 00 18 */	addi r6, r1, 0x18
 /* 8030768C 003045CC  38 E1 00 14 */	addi r7, r1, 0x14
 /* 80307690 003045D0  39 01 00 10 */	addi r8, r1, 0x10
-/* 80307694 003045D4  4B FE CD 01 */	bl J2DPrint
+/* 80307694 003045D4  4B FE CD 01 */	bl __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 80307698 003045D8  C0 1E 01 20 */	lfs f0, 0x120(r30)
 /* 8030769C 003045DC  FC 00 00 1E */	fctiwz f0, f0
 /* 803076A0 003045E0  D8 01 00 D0 */	stfd f0, 0xd0(r1)
@@ -353,7 +361,7 @@ lbl_80307714:
 /* 80307718 00304658  80 7E 01 38 */	lwz r3, 0x138(r30)
 /* 8030771C 0030465C  28 03 00 00 */	cmplwi r3, 0
 /* 80307720 00304660  41 82 01 58 */	beq lbl_80307878
-/* 80307724 00304664  4B FE 2C 69 */	bl J2DMaterial_NS_setGX
+/* 80307724 00304664  4B FE 2C 69 */	bl setGX__11J2DMaterialFv
 /* 80307728 00304668  7F E3 FB 78 */	mr r3, r31
 /* 8030772C 0030466C  38 9E 00 80 */	addi r4, r30, 0x80
 /* 80307730 00304670  38 A1 00 20 */	addi r5, r1, 0x20
@@ -376,7 +384,7 @@ lbl_80307714:
 /* 80307774 003046B4  EC 3E 00 2A */	fadds f1, f30, f0
 /* 80307778 003046B8  C0 1E 00 24 */	lfs f0, 0x24(r30)
 /* 8030777C 003046BC  EC 5F 00 2A */	fadds f2, f31, f0
-/* 80307780 003046C0  4B FE CF DD */	bl J2DPrint_NS_locate
+/* 80307780 003046C0  4B FE CF DD */	bl locate__8J2DPrintFff
 /* 80307784 003046C4  80 7E 01 38 */	lwz r3, 0x138(r30)
 /* 80307788 003046C8  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 8030778C 003046CC  28 00 00 00 */	cmplwi r0, 0
@@ -439,11 +447,11 @@ lbl_803077EC:
 /* 80307868 003047A8  C0 7E 01 0C */	lfs f3, 0x10c(r30)
 /* 8030786C 003047AC  C0 9E 01 10 */	lfs f4, 0x110(r30)
 /* 80307870 003047B0  7F E7 FB 78 */	mr r7, r31
-/* 80307874 003047B4  4B FE CF B5 */	bl J2DPrint_NS_printReturn
+/* 80307874 003047B4  4B FE CF B5 */	bl printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc
 lbl_80307878:
 /* 80307878 003047B8  38 61 00 50 */	addi r3, r1, 0x50
 /* 8030787C 003047BC  38 80 FF FF */	li r4, -1
-/* 80307880 003047C0  4B FE CB A1 */	bl J2DPrint_NS_dtor
+/* 80307880 003047C0  4B FE CB A1 */	bl __dt__8J2DPrintFv
 /* 80307884 003047C4  E3 E1 01 18 */	psq_l f31, 280(r1), 0, qr0
 /* 80307888 003047C8  CB E1 01 10 */	lfd f31, 0x110(r1)
 /* 8030788C 003047CC  E3 C1 01 08 */	psq_l f30, 264(r1), 0, qr0
@@ -454,6 +462,10 @@ lbl_80307878:
 /* 803078A0 003047E0  7C 08 03 A6 */	mtlr r0
 /* 803078A4 003047E4  38 21 01 20 */	addi r1, r1, 0x120
 /* 803078A8 003047E8  4E 80 00 20 */	blr 
+
+/* 803078AC 0244 .text draw__12J2DTextBoxExFff draw__12J2DTextBoxExFff */
+.global draw__12J2DTextBoxExFff
+draw__12J2DTextBoxExFff:
 /* 803078AC 003047EC  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 803078B0 003047F0  7C 08 02 A6 */	mflr r0
 /* 803078B4 003047F4  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -496,7 +508,7 @@ lbl_80307914:
 /* 80307944 00304884  38 C1 00 10 */	addi r6, r1, 0x10
 /* 80307948 00304888  38 E1 00 0C */	addi r7, r1, 0xc
 /* 8030794C 0030488C  39 01 00 08 */	addi r8, r1, 8
-/* 80307950 00304890  4B FE CA 45 */	bl J2DPrint
+/* 80307950 00304890  4B FE CA 45 */	bl __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 80307954 00304894  C0 5F 01 20 */	lfs f2, 0x120(r31)
 /* 80307958 00304898  C0 3F 01 1C */	lfs f1, 0x11c(r31)
 /* 8030795C 0030489C  C0 02 C8 D8 */	lfs f0, lbl_804562D8-_SDA2_BASE_(r2)
@@ -520,7 +532,7 @@ lbl_80307988:
 /* 80307994 003048D4  80 7F 01 38 */	lwz r3, 0x138(r31)
 /* 80307998 003048D8  28 03 00 00 */	cmplwi r3, 0
 /* 8030799C 003048DC  41 82 01 24 */	beq lbl_80307AC0
-/* 803079A0 003048E0  4B FE 29 ED */	bl J2DMaterial_NS_setGX
+/* 803079A0 003048E0  4B FE 29 ED */	bl setGX__11J2DMaterialFv
 /* 803079A4 003048E4  7F E3 FB 78 */	mr r3, r31
 /* 803079A8 003048E8  FC 20 F0 90 */	fmr f1, f30
 /* 803079AC 003048EC  FC 40 F8 90 */	fmr f2, f31
@@ -541,7 +553,7 @@ lbl_80307988:
 /* 803079E8 00304928  40 82 00 14 */	bne lbl_803079FC
 /* 803079EC 0030492C  38 61 00 48 */	addi r3, r1, 0x48
 /* 803079F0 00304930  38 80 FF FF */	li r4, -1
-/* 803079F4 00304934  4B FE CA 2D */	bl J2DPrint_NS_dtor
+/* 803079F4 00304934  4B FE CA 2D */	bl __dt__8J2DPrintFv
 /* 803079F8 00304938  48 00 00 D4 */	b lbl_80307ACC
 lbl_803079FC:
 /* 803079FC 0030493C  48 05 3B 91 */	bl GXClearVtxDesc
@@ -570,7 +582,7 @@ lbl_80307A48:
 /* 80307A54 00304994  3C A0 80 3A */	lis r5, lbl_803A1DF0@ha
 /* 80307A58 00304998  38 A5 1D F0 */	addi r5, r5, lbl_803A1DF0@l
 /* 80307A5C 0030499C  4C C6 32 42 */	crset 6
-/* 80307A60 003049A0  4B FE CD 19 */	bl J2DPrint_NS_print
+/* 80307A60 003049A0  4B FE CD 19 */	bl print__8J2DPrintFffUcPCce
 lbl_80307A64:
 /* 80307A64 003049A4  3B E0 00 00 */	li r31, 0
 lbl_80307A68:
@@ -600,7 +612,7 @@ lbl_80307A98:
 lbl_80307AC0:
 /* 80307AC0 00304A00  38 61 00 48 */	addi r3, r1, 0x48
 /* 80307AC4 00304A04  38 80 FF FF */	li r4, -1
-/* 80307AC8 00304A08  4B FE C9 59 */	bl J2DPrint_NS_dtor
+/* 80307AC8 00304A08  4B FE C9 59 */	bl __dt__8J2DPrintFv
 lbl_80307ACC:
 /* 80307ACC 00304A0C  E3 E1 00 C8 */	psq_l f31, 200(r1), 0, qr0
 /* 80307AD0 00304A10  CB E1 00 C0 */	lfd f31, 0xc0(r1)
@@ -611,6 +623,10 @@ lbl_80307ACC:
 /* 80307AE4 00304A24  7C 08 03 A6 */	mtlr r0
 /* 80307AE8 00304A28  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 80307AEC 00304A2C  4E 80 00 20 */	blr 
+
+/* 80307AF0 026C .text draw__12J2DTextBoxExFfff18J2DTextBoxHBinding draw__12J2DTextBoxExFfff18J2DTextBoxHBinding */
+.global draw__12J2DTextBoxExFfff18J2DTextBoxHBinding
+draw__12J2DTextBoxExFfff18J2DTextBoxHBinding:
 /* 80307AF0 00304A30  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 80307AF4 00304A34  7C 08 02 A6 */	mflr r0
 /* 80307AF8 00304A38  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -658,7 +674,7 @@ lbl_80307B6C:
 /* 80307B9C 00304ADC  38 C1 00 10 */	addi r6, r1, 0x10
 /* 80307BA0 00304AE0  38 E1 00 0C */	addi r7, r1, 0xc
 /* 80307BA4 00304AE4  39 01 00 08 */	addi r8, r1, 8
-/* 80307BA8 00304AE8  4B FE C7 ED */	bl J2DPrint
+/* 80307BA8 00304AE8  4B FE C7 ED */	bl __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 80307BAC 00304AEC  C0 5E 01 20 */	lfs f2, 0x120(r30)
 /* 80307BB0 00304AF0  C0 3E 01 1C */	lfs f1, 0x11c(r30)
 /* 80307BB4 00304AF4  C0 02 C8 D8 */	lfs f0, lbl_804562D8-_SDA2_BASE_(r2)
@@ -682,7 +698,7 @@ lbl_80307BE0:
 /* 80307BEC 00304B2C  80 7E 01 38 */	lwz r3, 0x138(r30)
 /* 80307BF0 00304B30  28 03 00 00 */	cmplwi r3, 0
 /* 80307BF4 00304B34  41 82 01 2C */	beq lbl_80307D20
-/* 80307BF8 00304B38  4B FE 27 95 */	bl J2DMaterial_NS_setGX
+/* 80307BF8 00304B38  4B FE 27 95 */	bl setGX__11J2DMaterialFv
 /* 80307BFC 00304B3C  7F C3 F3 78 */	mr r3, r30
 /* 80307C00 00304B40  FC 20 E8 90 */	fmr f1, f29
 /* 80307C04 00304B44  FC 40 F0 90 */	fmr f2, f30
@@ -703,7 +719,7 @@ lbl_80307BE0:
 /* 80307C40 00304B80  40 82 00 14 */	bne lbl_80307C54
 /* 80307C44 00304B84  38 61 00 48 */	addi r3, r1, 0x48
 /* 80307C48 00304B88  38 80 FF FF */	li r4, -1
-/* 80307C4C 00304B8C  4B FE C7 D5 */	bl J2DPrint_NS_dtor
+/* 80307C4C 00304B8C  4B FE C7 D5 */	bl __dt__8J2DPrintFv
 /* 80307C50 00304B90  48 00 00 DC */	b lbl_80307D2C
 lbl_80307C54:
 /* 80307C54 00304B94  48 05 39 39 */	bl GXClearVtxDesc
@@ -734,7 +750,7 @@ lbl_80307CA0:
 /* 80307CB4 00304BF4  FC 60 10 90 */	fmr f3, f2
 /* 80307CB8 00304BF8  C0 1E 01 20 */	lfs f0, 0x120(r30)
 /* 80307CBC 00304BFC  FC 80 00 50 */	fneg f4, f0
-/* 80307CC0 00304C00  4B FE CB 69 */	bl J2DPrint_NS_printReturn
+/* 80307CC0 00304C00  4B FE CB 69 */	bl printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc
 lbl_80307CC4:
 /* 80307CC4 00304C04  3B C0 00 00 */	li r30, 0
 lbl_80307CC8:
@@ -764,7 +780,7 @@ lbl_80307CF8:
 lbl_80307D20:
 /* 80307D20 00304C60  38 61 00 48 */	addi r3, r1, 0x48
 /* 80307D24 00304C64  38 80 FF FF */	li r4, -1
-/* 80307D28 00304C68  4B FE C6 F9 */	bl J2DPrint_NS_dtor
+/* 80307D28 00304C68  4B FE C6 F9 */	bl __dt__8J2DPrintFv
 lbl_80307D2C:
 /* 80307D2C 00304C6C  E3 E1 00 D8 */	psq_l f31, 216(r1), 0, qr0
 /* 80307D30 00304C70  CB E1 00 D0 */	lfd f31, 0xd0(r1)
@@ -778,6 +794,10 @@ lbl_80307D2C:
 /* 80307D50 00304C90  7C 08 03 A6 */	mtlr r0
 /* 80307D54 00304C94  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 80307D58 00304C98  4E 80 00 20 */	blr 
+
+/* 80307D5C 0064 .text setFont__12J2DTextBoxExFP7JUTFont setFont__12J2DTextBoxExFP7JUTFont */
+.global setFont__12J2DTextBoxExFP7JUTFont
+setFont__12J2DTextBoxExFP7JUTFont:
 /* 80307D5C 00304C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307D60 00304CA0  7C 08 02 A6 */	mflr r0
 /* 80307D64 00304CA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -804,6 +824,10 @@ lbl_80307DA8:
 /* 80307DB4 00304CF4  7C 08 03 A6 */	mtlr r0
 /* 80307DB8 00304CF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80307DBC 00304CFC  4E 80 00 20 */	blr 
+
+/* 80307DC0 004C .text getFont__12J2DTextBoxExCFv getFont__12J2DTextBoxExCFv */
+.global getFont__12J2DTextBoxExCFv
+getFont__12J2DTextBoxExCFv:
 /* 80307DC0 00304D00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307DC4 00304D04  7C 08 02 A6 */	mflr r0
 /* 80307DC8 00304D08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -826,8 +850,9 @@ lbl_80307DFC:
 /* 80307E04 00304D44  38 21 00 10 */	addi r1, r1, 0x10
 /* 80307E08 00304D48  4E 80 00 20 */	blr 
 
-.global J2DTextBoxEx_NS_setTevOrder
-J2DTextBoxEx_NS_setTevOrder:
+/* 80307E0C 00E4 .text setTevOrder__12J2DTextBoxExFb setTevOrder__12J2DTextBoxExFb */
+.global setTevOrder__12J2DTextBoxExFb
+setTevOrder__12J2DTextBoxExFb:
 /* 80307E0C 00304D4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80307E10 00304D50  7C 08 02 A6 */	mflr r0
 /* 80307E14 00304D54  90 01 00 24 */	stw r0, 0x24(r1)
@@ -891,8 +916,9 @@ lbl_80307ECC:
 /* 80307EE8 00304E28  38 21 00 20 */	addi r1, r1, 0x20
 /* 80307EEC 00304E2C  4E 80 00 20 */	blr 
 
-.global J2DTextBoxEx_NS_setTevStage
-J2DTextBoxEx_NS_setTevStage:
+/* 80307EF0 00A4 .text setTevStage__12J2DTextBoxExFb setTevStage__12J2DTextBoxExFb */
+.global setTevStage__12J2DTextBoxExFb
+setTevStage__12J2DTextBoxExFb:
 /* 80307EF0 00304E30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307EF4 00304E34  7C 08 02 A6 */	mflr r0
 /* 80307EF8 00304E38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -912,12 +938,12 @@ J2DTextBoxEx_NS_setTevStage:
 /* 80307F30 00304E70  40 82 00 14 */	bne lbl_80307F44
 /* 80307F34 00304E74  7F C3 F3 78 */	mr r3, r30
 /* 80307F38 00304E78  38 A0 00 00 */	li r5, 0
-/* 80307F3C 00304E7C  48 00 00 59 */	bl J2DTextBoxEx_NS_setStage
+/* 80307F3C 00304E7C  48 00 00 59 */	bl setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum
 /* 80307F40 00304E80  48 00 00 3C */	b lbl_80307F7C
 lbl_80307F44:
 /* 80307F44 00304E84  7F C3 F3 78 */	mr r3, r30
 /* 80307F48 00304E88  38 A0 00 01 */	li r5, 1
-/* 80307F4C 00304E8C  48 00 00 49 */	bl J2DTextBoxEx_NS_setStage
+/* 80307F4C 00304E8C  48 00 00 49 */	bl setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum
 /* 80307F50 00304E90  80 7E 01 38 */	lwz r3, 0x138(r30)
 /* 80307F54 00304E94  80 63 00 70 */	lwz r3, 0x70(r3)
 /* 80307F58 00304E98  38 80 00 01 */	li r4, 1
@@ -928,7 +954,7 @@ lbl_80307F44:
 /* 80307F6C 00304EAC  7C 64 1B 78 */	mr r4, r3
 /* 80307F70 00304EB0  7F C3 F3 78 */	mr r3, r30
 /* 80307F74 00304EB4  38 A0 00 02 */	li r5, 2
-/* 80307F78 00304EB8  48 00 00 1D */	bl J2DTextBoxEx_NS_setStage
+/* 80307F78 00304EB8  48 00 00 1D */	bl setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum
 lbl_80307F7C:
 /* 80307F7C 00304EBC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80307F80 00304EC0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -937,8 +963,9 @@ lbl_80307F7C:
 /* 80307F8C 00304ECC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80307F90 00304ED0  4E 80 00 20 */	blr 
 
-.global J2DTextBoxEx_NS_setStage
-J2DTextBoxEx_NS_setStage:
+/* 80307F94 02A8 .text setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum */
+.global setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum
+setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum:
 /* 80307F94 00304ED4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80307F98 00304ED8  3C 60 80 3A */	lis r3, lbl_803A1DB8@ha
 /* 80307F9C 00304EDC  38 C3 1D B8 */	addi r6, r3, lbl_803A1DB8@l
@@ -1113,6 +1140,10 @@ lbl_80308210:
 /* 80308230 00305170  98 04 00 05 */	stb r0, 5(r4)
 /* 80308234 00305174  38 21 00 40 */	addi r1, r1, 0x40
 /* 80308238 00305178  4E 80 00 20 */	blr 
+
+/* 8030823C 0088 .text setBlack__12J2DTextBoxExFQ28JUtility6TColor setBlack__12J2DTextBoxExFQ28JUtility6TColor */
+.global setBlack__12J2DTextBoxExFQ28JUtility6TColor
+setBlack__12J2DTextBoxExFQ28JUtility6TColor:
 /* 8030823C 0030517C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80308240 00305180  7C 08 02 A6 */	mflr r0
 /* 80308244 00305184  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1125,7 +1156,7 @@ lbl_80308210:
 /* 80308260 003051A0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80308264 003051A4  38 81 00 14 */	addi r4, r1, 0x14
 /* 80308268 003051A8  38 A1 00 10 */	addi r5, r1, 0x10
-/* 8030826C 003051AC  48 00 02 61 */	bl J2DTextBoxEx_NS_getBlackWhite
+/* 8030826C 003051AC  48 00 02 61 */	bl getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 80308270 003051B0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80308274 003051B4  40 82 00 0C */	bne lbl_80308280
 /* 80308278 003051B8  38 60 00 00 */	li r3, 0
@@ -1149,6 +1180,10 @@ lbl_803082AC:
 /* 803082B8 003051F8  7C 08 03 A6 */	mtlr r0
 /* 803082BC 003051FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803082C0 00305200  4E 80 00 20 */	blr 
+
+/* 803082C4 0088 .text setWhite__12J2DTextBoxExFQ28JUtility6TColor setWhite__12J2DTextBoxExFQ28JUtility6TColor */
+.global setWhite__12J2DTextBoxExFQ28JUtility6TColor
+setWhite__12J2DTextBoxExFQ28JUtility6TColor:
 /* 803082C4 00305204  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803082C8 00305208  7C 08 02 A6 */	mflr r0
 /* 803082CC 0030520C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1161,7 +1196,7 @@ lbl_803082AC:
 /* 803082E8 00305228  90 01 00 10 */	stw r0, 0x10(r1)
 /* 803082EC 0030522C  38 81 00 14 */	addi r4, r1, 0x14
 /* 803082F0 00305230  38 A1 00 10 */	addi r5, r1, 0x10
-/* 803082F4 00305234  48 00 01 D9 */	bl J2DTextBoxEx_NS_getBlackWhite
+/* 803082F4 00305234  48 00 01 D9 */	bl getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 803082F8 00305238  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803082FC 0030523C  40 82 00 0C */	bne lbl_80308308
 /* 80308300 00305240  38 60 00 00 */	li r3, 0
@@ -1185,6 +1220,10 @@ lbl_80308334:
 /* 80308340 00305280  7C 08 03 A6 */	mtlr r0
 /* 80308344 00305284  38 21 00 20 */	addi r1, r1, 0x20
 /* 80308348 00305288  4E 80 00 20 */	blr 
+
+/* 8030834C 0180 .text setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor */
+.global setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor
+setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor:
 /* 8030834C 0030528C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80308350 00305290  7C 08 02 A6 */	mflr r0
 /* 80308354 00305294  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1211,7 +1250,7 @@ lbl_80308394:
 /* 803083A0 003052E0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 803083A4 003052E4  38 81 00 0C */	addi r4, r1, 0xc
 /* 803083A8 003052E8  38 A1 00 08 */	addi r5, r1, 8
-/* 803083AC 003052EC  48 00 02 BD */	bl J2DTextBoxEx_NS_isSetBlackWhite
+/* 803083AC 003052EC  48 00 02 BD */	bl isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor
 /* 803083B0 003052F0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803083B4 003052F4  40 82 00 0C */	bne lbl_803083C0
 /* 803083B8 003052F8  38 60 00 00 */	li r3, 0
@@ -1241,10 +1280,10 @@ lbl_803083E4:
 /* 8030840C 0030534C  4E 80 04 21 */	bctrl 
 /* 80308410 00305350  7F A3 EB 78 */	mr r3, r29
 /* 80308414 00305354  7F 84 E3 78 */	mr r4, r28
-/* 80308418 00305358  4B FF F9 F5 */	bl J2DTextBoxEx_NS_setTevOrder
+/* 80308418 00305358  4B FF F9 F5 */	bl setTevOrder__12J2DTextBoxExFb
 /* 8030841C 0030535C  7F A3 EB 78 */	mr r3, r29
 /* 80308420 00305360  7F 84 E3 78 */	mr r4, r28
-/* 80308424 00305364  4B FF FA CD */	bl J2DTextBoxEx_NS_setTevStage
+/* 80308424 00305364  4B FF FA CD */	bl setTevStage__12J2DTextBoxExFb
 /* 80308428 00305368  57 80 06 3F */	clrlwi. r0, r28, 0x18
 /* 8030842C 0030536C  41 82 00 84 */	beq lbl_803084B0
 /* 80308430 00305370  88 1E 00 00 */	lbz r0, 0(r30)
@@ -1289,8 +1328,9 @@ lbl_803084B4:
 /* 803084C4 00305404  38 21 00 30 */	addi r1, r1, 0x30
 /* 803084C8 00305408  4E 80 00 20 */	blr 
 
-.global J2DTextBoxEx_NS_getBlackWhite
-J2DTextBoxEx_NS_getBlackWhite:
+/* 803084CC 019C .text getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+.global getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor
+getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor:
 /* 803084CC 0030540C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803084D0 00305410  7C 08 02 A6 */	mflr r0
 /* 803084D4 00305414  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1399,8 +1439,9 @@ lbl_80308650:
 /* 80308660 003055A0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80308664 003055A4  4E 80 00 20 */	blr 
 
-.global J2DTextBoxEx_NS_isSetBlackWhite
-J2DTextBoxEx_NS_isSetBlackWhite:
+/* 80308668 0094 .text isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor */
+.global isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor
+isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor:
 /* 80308668 003055A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030866C 003055AC  7C 08 02 A6 */	mflr r0
 /* 80308670 003055B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1441,6 +1482,10 @@ lbl_803086E8:
 /* 803086F0 00305630  7C 08 03 A6 */	mtlr r0
 /* 803086F4 00305634  38 21 00 10 */	addi r1, r1, 0x10
 /* 803086F8 00305638  4E 80 00 20 */	blr 
+
+/* 803086FC 0060 .text getBlack__12J2DTextBoxExCFv getBlack__12J2DTextBoxExCFv */
+.global getBlack__12J2DTextBoxExCFv
+getBlack__12J2DTextBoxExCFv:
 /* 803086FC 0030563C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80308700 00305640  7C 08 02 A6 */	mflr r0
 /* 80308704 00305644  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1452,7 +1497,7 @@ lbl_803086E8:
 /* 8030871C 0030565C  7C 83 23 78 */	mr r3, r4
 /* 80308720 00305660  38 81 00 0C */	addi r4, r1, 0xc
 /* 80308724 00305664  38 A1 00 08 */	addi r5, r1, 8
-/* 80308728 00305668  4B FF FD A5 */	bl J2DTextBoxEx_NS_getBlackWhite
+/* 80308728 00305668  4B FF FD A5 */	bl getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 8030872C 0030566C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80308730 00305670  40 82 00 10 */	bne lbl_80308740
 /* 80308734 00305674  38 00 00 00 */	li r0, 0
@@ -1467,6 +1512,10 @@ lbl_80308748:
 /* 80308750 00305690  7C 08 03 A6 */	mtlr r0
 /* 80308754 00305694  38 21 00 20 */	addi r1, r1, 0x20
 /* 80308758 00305698  4E 80 00 20 */	blr 
+
+/* 8030875C 0060 .text getWhite__12J2DTextBoxExCFv getWhite__12J2DTextBoxExCFv */
+.global getWhite__12J2DTextBoxExCFv
+getWhite__12J2DTextBoxExCFv:
 /* 8030875C 0030569C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80308760 003056A0  7C 08 02 A6 */	mflr r0
 /* 80308764 003056A4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1478,7 +1527,7 @@ lbl_80308748:
 /* 8030877C 003056BC  7C 83 23 78 */	mr r3, r4
 /* 80308780 003056C0  38 81 00 0C */	addi r4, r1, 0xc
 /* 80308784 003056C4  38 A1 00 08 */	addi r5, r1, 8
-/* 80308788 003056C8  4B FF FD 45 */	bl J2DTextBoxEx_NS_getBlackWhite
+/* 80308788 003056C8  4B FF FD 45 */	bl getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor
 /* 8030878C 003056CC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80308790 003056D0  40 82 00 10 */	bne lbl_803087A0
 /* 80308794 003056D4  38 00 FF FF */	li r0, -1
@@ -1493,6 +1542,10 @@ lbl_803087A8:
 /* 803087B0 003056F0  7C 08 03 A6 */	mtlr r0
 /* 803087B4 003056F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803087B8 003056F8  4E 80 00 20 */	blr 
+
+/* 803087BC 0020 .text setAlpha__12J2DTextBoxExFUc setAlpha__12J2DTextBoxExFUc */
+.global setAlpha__12J2DTextBoxExFUc
+setAlpha__12J2DTextBoxExFUc:
 /* 803087BC 003056FC  98 83 00 B2 */	stb r4, 0xb2(r3)
 /* 803087C0 00305700  80 63 01 38 */	lwz r3, 0x138(r3)
 /* 803087C4 00305704  28 03 00 00 */	cmplwi r3, 0
@@ -1501,6 +1554,10 @@ lbl_803087A8:
 /* 803087D0 00305710  4D 82 00 20 */	beqlr 
 /* 803087D4 00305714  98 83 00 03 */	stb r4, 3(r3)
 /* 803087D8 00305718  4E 80 00 20 */	blr 
+
+/* 803087DC 0034 .text setCullBack__12J2DTextBoxExF11_GXCullMode setCullBack__12J2DTextBoxExF11_GXCullMode */
+.global setCullBack__12J2DTextBoxExF11_GXCullMode
+setCullBack__12J2DTextBoxExF11_GXCullMode:
 /* 803087DC 0030571C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803087E0 00305720  7C 08 02 A6 */	mflr r0
 /* 803087E4 00305724  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1515,12 +1572,20 @@ lbl_803087FC:
 /* 80308804 00305744  7C 08 03 A6 */	mtlr r0
 /* 80308808 00305748  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030880C 0030574C  4E 80 00 20 */	blr 
+
+/* 80308810 0018 .text rewriteAlpha__12J2DTextBoxExFv rewriteAlpha__12J2DTextBoxExFv */
+.global rewriteAlpha__12J2DTextBoxExFv
+rewriteAlpha__12J2DTextBoxExFv:
 /* 80308810 00305750  80 83 01 38 */	lwz r4, 0x138(r3)
 /* 80308814 00305754  28 04 00 00 */	cmplwi r4, 0
 /* 80308818 00305758  4D 82 00 20 */	beqlr 
 /* 8030881C 0030575C  88 04 00 13 */	lbz r0, 0x13(r4)
 /* 80308820 00305760  98 03 00 B2 */	stb r0, 0xb2(r3)
 /* 80308824 00305764  4E 80 00 20 */	blr 
+
+/* 80308828 008C .text isUsed__12J2DTextBoxExFPC7ResFONT isUsed__12J2DTextBoxExFPC7ResFONT */
+.global isUsed__12J2DTextBoxExFPC7ResFONT
+isUsed__12J2DTextBoxExFPC7ResFONT:
 /* 80308828 00305768  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030882C 0030576C  7C 08 02 A6 */	mflr r0
 /* 80308830 00305770  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1558,56 +1623,80 @@ lbl_8030889C:
 /* 803088A8 003057E8  7C 08 03 A6 */	mtlr r0
 /* 803088AC 003057EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803088B0 003057F0  4E 80 00 20 */	blr 
+
+/* 803088B4 002C .text setAnimation__12J2DTextBoxExFP11J2DAnmColor setAnimation__12J2DTextBoxExFP11J2DAnmColor */
+.global setAnimation__12J2DTextBoxExFP11J2DAnmColor
+setAnimation__12J2DTextBoxExFP11J2DAnmColor:
 /* 803088B4 003057F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803088B8 003057F8  7C 08 02 A6 */	mflr r0
 /* 803088BC 003057FC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803088C0 00305800  80 63 01 38 */	lwz r3, 0x138(r3)
 /* 803088C4 00305804  28 03 00 00 */	cmplwi r3, 0
 /* 803088C8 00305808  41 82 00 08 */	beq lbl_803088D0
-/* 803088CC 0030580C  4B FE 1F D1 */	bl J2DMaterial_NS_setAnimation
+/* 803088CC 0030580C  4B FE 1F D1 */	bl setAnimation__11J2DMaterialFP11J2DAnmColor
 lbl_803088D0:
 /* 803088D0 00305810  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803088D4 00305814  7C 08 03 A6 */	mtlr r0
 /* 803088D8 00305818  38 21 00 10 */	addi r1, r1, 0x10
 /* 803088DC 0030581C  4E 80 00 20 */	blr 
+
+/* 803088E0 002C .text setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey */
+.global setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey
+setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey:
 /* 803088E0 00305820  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803088E4 00305824  7C 08 02 A6 */	mflr r0
 /* 803088E8 00305828  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803088EC 0030582C  80 63 01 38 */	lwz r3, 0x138(r3)
 /* 803088F0 00305830  28 03 00 00 */	cmplwi r3, 0
 /* 803088F4 00305834  41 82 00 08 */	beq lbl_803088FC
-/* 803088F8 00305838  4B FE 20 55 */	bl J2DMaterial_NS_setAnimation_X1_
+/* 803088F8 00305838  4B FE 20 55 */	bl setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey
 lbl_803088FC:
 /* 803088FC 0030583C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80308900 00305840  7C 08 03 A6 */	mtlr r0
 /* 80308904 00305844  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308908 00305848  4E 80 00 20 */	blr 
+
+/* 8030890C 002C .text setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern */
+.global setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern
+setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern:
 /* 8030890C 0030584C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80308910 00305850  7C 08 02 A6 */	mflr r0
 /* 80308914 00305854  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80308918 00305858  80 63 01 38 */	lwz r3, 0x138(r3)
 /* 8030891C 0030585C  28 03 00 00 */	cmplwi r3, 0
 /* 80308920 00305860  41 82 00 08 */	beq lbl_80308928
-/* 80308924 00305864  4B FE 21 09 */	bl J2DMaterial_NS_setAnimation_X2_
+/* 80308924 00305864  4B FE 21 09 */	bl setAnimation__11J2DMaterialFP16J2DAnmTexPattern
 lbl_80308928:
 /* 80308928 00305868  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8030892C 0030586C  7C 08 03 A6 */	mtlr r0
 /* 80308930 00305870  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308934 00305874  4E 80 00 20 */	blr 
+
+/* 80308938 002C .text setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey */
+.global setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey
+setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey:
 /* 80308938 00305878  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030893C 0030587C  7C 08 02 A6 */	mflr r0
 /* 80308940 00305880  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80308944 00305884  80 63 01 38 */	lwz r3, 0x138(r3)
 /* 80308948 00305888  28 03 00 00 */	cmplwi r3, 0
 /* 8030894C 0030588C  41 82 00 08 */	beq lbl_80308954
-/* 80308950 00305890  4B FE 21 BD */	bl J2DMaterial_NS_setAnimation_X3_
+/* 80308950 00305890  4B FE 21 BD */	bl setAnimation__11J2DMaterialFP15J2DAnmTevRegKey
 lbl_80308954:
 /* 80308954 00305894  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80308958 00305898  7C 08 03 A6 */	mtlr r0
 /* 8030895C 0030589C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308960 003058A0  4E 80 00 20 */	blr 
+
+/* 80308964 0008 .text setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull */
+.global setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull
+setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull:
 /* 80308964 003058A4  90 83 01 44 */	stw r4, 0x144(r3)
 /* 80308968 003058A8  4E 80 00 20 */	blr 
+
+/* 8030896C 0080 .text animationPane__12J2DTextBoxExFPC15J2DAnmTransform animationPane__12J2DTextBoxExFPC15J2DAnmTransform */
+.global animationPane__12J2DTextBoxExFPC15J2DAnmTransform
+animationPane__12J2DTextBoxExFPC15J2DAnmTransform:
 /* 8030896C 003058AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80308970 003058B0  7C 08 02 A6 */	mflr r0
 /* 80308974 003058B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1622,7 +1711,7 @@ lbl_80308954:
 /* 80308998 003058D8  28 04 FF FF */	cmplwi r4, 0xffff
 /* 8030899C 003058DC  41 82 00 2C */	beq lbl_803089C8
 /* 803089A0 003058E0  38 A1 00 08 */	addi r5, r1, 8
-/* 803089A4 003058E4  48 00 36 A5 */	bl J2DAnmVisibilityFull_NS_getVisibility
+/* 803089A4 003058E4  48 00 36 A5 */	bl getVisibility__20J2DAnmVisibilityFullCFUsPUc
 /* 803089A8 003058E8  88 01 00 08 */	lbz r0, 8(r1)
 /* 803089AC 003058EC  28 00 00 00 */	cmplwi r0, 0
 /* 803089B0 003058F0  41 82 00 10 */	beq lbl_803089C0
@@ -1642,6 +1731,10 @@ lbl_803089C8:
 /* 803089E0 00305920  7C 08 03 A6 */	mtlr r0
 /* 803089E4 00305924  38 21 00 20 */	addi r1, r1, 0x20
 /* 803089E8 00305928  4E 80 00 20 */	blr 
+
+/* 803089EC 003C .text setCullBack__12J2DTextBoxExFb setCullBack__12J2DTextBoxExFb */
+.global setCullBack__12J2DTextBoxExFb
+setCullBack__12J2DTextBoxExFb:
 /* 803089EC 0030592C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803089F0 00305930  7C 08 02 A6 */	mflr r0
 /* 803089F4 00305934  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1658,6 +1751,10 @@ lbl_80308A08:
 /* 80308A1C 0030595C  7C 08 03 A6 */	mtlr r0
 /* 80308A20 00305960  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308A24 00305964  4E 80 00 20 */	blr 
+
+/* 80308A28 0020 .text isUsed__12J2DTextBoxExFPC7ResTIMG isUsed__12J2DTextBoxExFPC7ResTIMG */
+.global isUsed__12J2DTextBoxExFPC7ResTIMG
+isUsed__12J2DTextBoxExFPC7ResTIMG:
 /* 80308A28 00305968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80308A2C 0030596C  7C 08 02 A6 */	mflr r0
 /* 80308A30 00305970  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1666,7 +1763,15 @@ lbl_80308A08:
 /* 80308A3C 0030597C  7C 08 03 A6 */	mtlr r0
 /* 80308A40 00305980  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308A44 00305984  4E 80 00 20 */	blr 
+
+/* 80308A48 0004 .text setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor */
+.global setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor
+setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor:
 /* 80308A48 00305988  4E 80 00 20 */	blr 
+
+/* 80308A4C 0020 .text setAnimation__12J2DTextBoxExFP10J2DAnmBase setAnimation__12J2DTextBoxExFP10J2DAnmBase */
+.global setAnimation__12J2DTextBoxExFP10J2DAnmBase
+setAnimation__12J2DTextBoxExFP10J2DAnmBase:
 /* 80308A4C 0030598C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80308A50 00305990  7C 08 02 A6 */	mflr r0
 /* 80308A54 00305994  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1675,4 +1780,80 @@ lbl_80308A08:
 /* 80308A60 003059A0  7C 08 03 A6 */	mtlr r0
 /* 80308A64 003059A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80308A68 003059A8  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 803A1DB8 000C .rodata lbl_803A1DB8 @1953 */
+.global lbl_803A1DB8
+lbl_803A1DB8:
+.byte 0x0f, 0x08, 0x0a, 0x0f, 0x02, 0x04, 0x08, 0x0f, 0x0f, 0x0a, 0x00, 0x0f /* baserom.dol+0x39edb8 */
+
+/* 803A1DC4 000C .rodata lbl_803A1DC4 @1954 */
+.global lbl_803A1DC4
+lbl_803A1DC4:
+.byte 0x07, 0x04, 0x05, 0x07, 0x01, 0x02, 0x04, 0x07, 0x07, 0x05, 0x00, 0x07 /* baserom.dol+0x39edc4 */
+
+/* 803A1DD0 000F .rodata lbl_803A1DD0 @1955 */
+.global lbl_803A1DD0
+lbl_803A1DD0:
+.byte 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00 /* baserom.dol+0x39edd0 */
+.byte 0x00 /* baserom.dol+0x39eddf */
+
+/* 803A1DE0 000F .rodata lbl_803A1DE0 @1956 */
+.global lbl_803A1DE0
+lbl_803A1DE0:
+.byte 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00 /* baserom.dol+0x39ede0 */
+.byte 0x00 /* baserom.dol+0x39edef */
+
+/* 803A1DF0 0003 .rodata lbl_803A1DF0 @stringBase0 */
+.global lbl_803A1DF0
+lbl_803A1DF0:
+.byte 0x25, 0x73, 0x00 /* baserom.dol+0x39edf0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39edf3 */
+
+
+
+.section .data, "aw"
+/* 803CD608 00BC .data __vt__12J2DTextBoxEx __vt__12J2DTextBoxEx */
+.global __vt__12J2DTextBoxEx
+__vt__12J2DTextBoxEx:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x30, 0x75, 0x1c, 0x80, 0x30, 0x0c, 0x68 /* baserom.dol+0x3ca608 */
+.byte 0x80, 0x2f, 0x6f, 0x60, 0x80, 0x2f, 0x6f, 0xb4, 0x80, 0x30, 0x0a, 0xf8, 0x80, 0x30, 0x89, 0xec /* baserom.dol+0x3ca618 */
+.byte 0x80, 0x30, 0x87, 0xdc, 0x80, 0x30, 0x87, 0xbc, 0x80, 0x30, 0x08, 0x70, 0x80, 0x05, 0x3b, 0xc0 /* baserom.dol+0x3ca628 */
+.byte 0x80, 0x2f, 0x84, 0x74, 0x80, 0x30, 0x08, 0xe8, 0x80, 0x30, 0x75, 0xac, 0x80, 0x2f, 0x72, 0xe0 /* baserom.dol+0x3ca638 */
+.byte 0x80, 0x2f, 0x73, 0x88, 0x80, 0x05, 0x3c, 0x00, 0x80, 0x2f, 0x75, 0x40, 0x80, 0x30, 0x8a, 0x28 /* baserom.dol+0x3ca648 */
+.byte 0x80, 0x30, 0x88, 0x28, 0x80, 0x2f, 0x80, 0x04, 0x80, 0x30, 0x88, 0x10, 0x80, 0x30, 0x8a, 0x4c /* baserom.dol+0x3ca658 */
+.byte 0x80, 0x25, 0x60, 0x44, 0x80, 0x30, 0x88, 0xb4, 0x80, 0x30, 0x89, 0x0c, 0x80, 0x30, 0x88, 0xe0 /* baserom.dol+0x3ca668 */
+.byte 0x80, 0x30, 0x89, 0x38, 0x80, 0x30, 0x89, 0x64, 0x80, 0x30, 0x8a, 0x48, 0x80, 0x2f, 0x80, 0x80 /* baserom.dol+0x3ca678 */
+.byte 0x80, 0x2f, 0x81, 0x18, 0x80, 0x2f, 0x83, 0xd0, 0x80, 0x2f, 0x81, 0xa0, 0x80, 0x2f, 0x83, 0xfc /* baserom.dol+0x3ca688 */
+.byte 0x80, 0x30, 0x89, 0x6c, 0x80, 0x30, 0x78, 0xac, 0x80, 0x30, 0x7a, 0xf0, 0x80, 0x30, 0x7d, 0x5c /* baserom.dol+0x3ca698 */
+.byte 0x80, 0x30, 0x7d, 0xc0, 0x80, 0x30, 0x82, 0x3c, 0x80, 0x30, 0x82, 0xc4, 0x80, 0x30, 0x83, 0x4c /* baserom.dol+0x3ca6a8 */
+.byte 0x80, 0x30, 0x86, 0xfc, 0x80, 0x30, 0x87, 0x5c, 0x80, 0x25, 0x60, 0x24 /* baserom.dol+0x3ca6b8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ca6c4 */
+
+
+
+.section .sdata2, "a"
+/* 804562D8 0004 .sdata2 lbl_804562D8 @1534 */
+.global lbl_804562D8
+lbl_804562D8:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5138 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d513c */
+
+/* 804562E0 0008 .sdata2 lbl_804562E0 @1536 */
+.global lbl_804562E0
+lbl_804562E0:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5140 */
+
+/* 804562E8 0008 .sdata2 lbl_804562E8 @1539 */
+.global lbl_804562E8
+lbl_804562E8:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5148 */
+
+/* 804562F0 0004 .sdata2 lbl_804562F0 @1731 */
+.global lbl_804562F0
+lbl_804562F0:
+.byte 0x38, 0xd1, 0xb7, 0x17 /* baserom.dol+0x3d5150 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5154 */
 

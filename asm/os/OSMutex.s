@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033f008
 
-
+.section .text, "ax"
+/* 8033F008 0038 .text OSInitMutex OSInitMutex */
 .global OSInitMutex
 OSInitMutex:
 /* 8033F008 0033BF48  7C 08 02 A6 */	mflr r0
@@ -20,6 +20,7 @@ OSInitMutex:
 /* 8033F038 0033BF78  7C 08 03 A6 */	mtlr r0
 /* 8033F03C 0033BF7C  4E 80 00 20 */	blr 
 
+/* 8033F040 00DC .text OSLockMutex OSLockMutex */
 .global OSLockMutex
 OSLockMutex:
 /* 8033F040 0033BF80  7C 08 02 A6 */	mflr r0
@@ -30,7 +31,7 @@ OSLockMutex:
 /* 8033F054 0033BF94  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8033F058 0033BF98  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8033F05C 0033BF9C  7C 7C 1B 78 */	mr r28, r3
-/* 8033F060 0033BFA0  4B FF E6 95 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F060 0033BFA0  4B FF E6 95 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F064 0033BFA4  7C 7D 1B 78 */	mr r29, r3
 /* 8033F068 0033BFA8  48 00 1C 1D */	bl OSGetCurrentThread
 /* 8033F06C 0033BFAC  3B C3 00 00 */	addi r30, r3, 0
@@ -84,6 +85,7 @@ lbl_8033F0F4:
 /* 8033F114 0033C054  7C 08 03 A6 */	mtlr r0
 /* 8033F118 0033C058  4E 80 00 20 */	blr 
 
+/* 8033F11C 00C8 .text OSUnlockMutex OSUnlockMutex */
 .global OSUnlockMutex
 OSUnlockMutex:
 /* 8033F11C 0033C05C  7C 08 02 A6 */	mflr r0
@@ -93,7 +95,7 @@ OSUnlockMutex:
 /* 8033F12C 0033C06C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8033F130 0033C070  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8033F134 0033C074  7C 7D 1B 78 */	mr r29, r3
-/* 8033F138 0033C078  4B FF E5 BD */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F138 0033C078  4B FF E5 BD */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F13C 0033C07C  7C 7F 1B 78 */	mr r31, r3
 /* 8033F140 0033C080  48 00 1B 45 */	bl OSGetCurrentThread
 /* 8033F144 0033C084  80 1D 00 08 */	lwz r0, 8(r29)
@@ -143,6 +145,7 @@ lbl_8033F1C0:
 /* 8033F1DC 0033C11C  7C 08 03 A6 */	mtlr r0
 /* 8033F1E0 0033C120  4E 80 00 20 */	blr 
 
+/* 8033F1E4 0070 .text __OSUnlockAllMutex __OSUnlockAllMutex */
 .global __OSUnlockAllMutex
 __OSUnlockAllMutex:
 /* 8033F1E4 0033C124  7C 08 02 A6 */	mflr r0
@@ -178,6 +181,7 @@ lbl_8033F230:
 /* 8033F24C 0033C18C  7C 08 03 A6 */	mtlr r0
 /* 8033F250 0033C190  4E 80 00 20 */	blr 
 
+/* 8033F254 00BC .text OSTryLockMutex OSTryLockMutex */
 .global OSTryLockMutex
 OSTryLockMutex:
 /* 8033F254 0033C194  7C 08 02 A6 */	mflr r0
@@ -187,7 +191,7 @@ OSTryLockMutex:
 /* 8033F264 0033C1A4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8033F268 0033C1A8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8033F26C 0033C1AC  7C 7D 1B 78 */	mr r29, r3
-/* 8033F270 0033C1B0  4B FF E4 85 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F270 0033C1B0  4B FF E4 85 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F274 0033C1B4  7C 7F 1B 78 */	mr r31, r3
 /* 8033F278 0033C1B8  48 00 1A 0D */	bl OSGetCurrentThread
 /* 8033F27C 0033C1BC  80 1D 00 08 */	lwz r0, 8(r29)
@@ -233,6 +237,7 @@ lbl_8033F2E8:
 /* 8033F308 0033C248  7C 08 03 A6 */	mtlr r0
 /* 8033F30C 0033C24C  4E 80 00 20 */	blr 
 
+/* 8033F310 0020 .text OSInitCond OSInitCond */
 .global OSInitCond
 OSInitCond:
 /* 8033F310 0033C250  7C 08 02 A6 */	mflr r0
@@ -244,6 +249,7 @@ OSInitCond:
 /* 8033F328 0033C268  7C 08 03 A6 */	mtlr r0
 /* 8033F32C 0033C26C  4E 80 00 20 */	blr 
 
+/* 8033F330 00D4 .text OSWaitCond OSWaitCond */
 .global OSWaitCond
 OSWaitCond:
 /* 8033F330 0033C270  7C 08 02 A6 */	mflr r0
@@ -252,7 +258,7 @@ OSWaitCond:
 /* 8033F33C 0033C27C  BF 61 00 14 */	stmw r27, 0x14(r1)
 /* 8033F340 0033C280  3B 63 00 00 */	addi r27, r3, 0
 /* 8033F344 0033C284  3B 84 00 00 */	addi r28, r4, 0
-/* 8033F348 0033C288  4B FF E3 AD */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F348 0033C288  4B FF E3 AD */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F34C 0033C28C  7C 7F 1B 78 */	mr r31, r3
 /* 8033F350 0033C290  48 00 19 35 */	bl OSGetCurrentThread
 /* 8033F354 0033C294  80 1C 00 08 */	lwz r0, 8(r28)
@@ -306,6 +312,7 @@ lbl_8033F3E8:
 /* 8033F3FC 0033C33C  7C 08 03 A6 */	mtlr r0
 /* 8033F400 0033C340  4E 80 00 20 */	blr 
 
+/* 8033F404 0020 .text OSSignalCond OSSignalCond */
 .global OSSignalCond
 OSSignalCond:
 /* 8033F404 0033C344  7C 08 02 A6 */	mflr r0
@@ -317,6 +324,7 @@ OSSignalCond:
 /* 8033F41C 0033C35C  7C 08 03 A6 */	mtlr r0
 /* 8033F420 0033C360  4E 80 00 20 */	blr 
 
+/* 8033F424 0100 .text __OSCheckMutex __OSCheckMutex */
 .global __OSCheckMutex
 __OSCheckMutex:
 /* 8033F424 0033C364  80 83 00 00 */	lwz r4, 0(r3)
@@ -394,6 +402,7 @@ lbl_8033F51C:
 /* 8033F51C 0033C45C  38 60 00 01 */	li r3, 1
 /* 8033F520 0033C460  4E 80 00 20 */	blr 
 
+/* 8033F524 0038 .text __OSCheckDeadLock __OSCheckDeadLock */
 .global __OSCheckDeadLock
 __OSCheckDeadLock:
 /* 8033F524 0033C464  80 83 02 F0 */	lwz r4, 0x2f0(r3)
@@ -415,6 +424,7 @@ lbl_8033F554:
 /* 8033F554 0033C494  38 60 00 00 */	li r3, 0
 /* 8033F558 0033C498  4E 80 00 20 */	blr 
 
+/* 8033F55C 0074 .text __OSCheckMutexes __OSCheckMutexes */
 .global __OSCheckMutexes
 __OSCheckMutexes:
 /* 8033F55C 0033C49C  7C 08 02 A6 */	mflr r0

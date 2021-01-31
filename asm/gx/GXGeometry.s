@@ -1,15 +1,15 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8035c6e4
 
-
+.section .text, "ax"
+/* 8035C6E4 0080 .text __GXSetDirtyState __GXSetDirtyState */
 .global __GXSetDirtyState
 __GXSetDirtyState:
 /* 8035C6E4 00359624  7C 08 02 A6 */	mflr r0
 /* 8035C6E8 00359628  90 01 00 04 */	stw r0, 4(r1)
 /* 8035C6EC 0035962C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035C6F0 00359630  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8035C6F4 00359634  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C6F4 00359634  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C6F8 00359638  83 E3 05 AC */	lwz r31, 0x5ac(r3)
 /* 8035C6FC 0035963C  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
 /* 8035C700 00359640  41 82 00 08 */	beq lbl_8035C708
@@ -35,7 +35,7 @@ lbl_8035C738:
 /* 8035C73C 0035967C  41 82 00 08 */	beq lbl_8035C744
 /* 8035C740 00359680  4B FF ED 29 */	bl __GXCalculateVLim
 lbl_8035C744:
-/* 8035C744 00359684  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C744 00359684  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C748 00359688  38 00 00 00 */	li r0, 0
 /* 8035C74C 0035968C  90 03 05 AC */	stw r0, 0x5ac(r3)
 /* 8035C750 00359690  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -44,6 +44,7 @@ lbl_8035C744:
 /* 8035C75C 0035969C  7C 08 03 A6 */	mtlr r0
 /* 8035C760 003596A0  4E 80 00 20 */	blr 
 
+/* 8035C764 00D0 .text GXBegin GXBegin */
 .global GXBegin
 GXBegin:
 /* 8035C764 003596A4  7C 08 02 A6 */	mflr r0
@@ -56,7 +57,7 @@ GXBegin:
 /* 8035C780 003596C0  3B A4 00 00 */	addi r29, r4, 0
 /* 8035C784 003596C4  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8035C788 003596C8  3B 83 00 00 */	addi r28, r3, 0
-/* 8035C78C 003596CC  80 C2 CB 80 */	lwz r6, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C78C 003596CC  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
 /* 8035C790 003596D0  83 E6 05 AC */	lwz r31, 0x5ac(r6)
 /* 8035C794 003596D4  28 1F 00 00 */	cmplwi r31, 0
 /* 8035C798 003596D8  41 82 00 58 */	beq lbl_8035C7F0
@@ -84,11 +85,11 @@ lbl_8035C7D8:
 /* 8035C7DC 0035971C  41 82 00 08 */	beq lbl_8035C7E4
 /* 8035C7E0 00359720  4B FF EC 89 */	bl __GXCalculateVLim
 lbl_8035C7E4:
-/* 8035C7E4 00359724  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C7E4 00359724  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C7E8 00359728  38 00 00 00 */	li r0, 0
 /* 8035C7EC 0035972C  90 03 05 AC */	stw r0, 0x5ac(r3)
 lbl_8035C7F0:
-/* 8035C7F0 00359730  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C7F0 00359730  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C7F4 00359734  80 03 00 00 */	lwz r0, 0(r3)
 /* 8035C7F8 00359738  28 00 00 00 */	cmplwi r0, 0
 /* 8035C7FC 0035973C  40 82 00 08 */	bne lbl_8035C804
@@ -107,9 +108,10 @@ lbl_8035C804:
 /* 8035C82C 0035976C  7C 08 03 A6 */	mtlr r0
 /* 8035C830 00359770  4E 80 00 20 */	blr 
 
+/* 8035C834 0088 .text __GXSendFlushPrim __GXSendFlushPrim */
 .global __GXSendFlushPrim
 __GXSendFlushPrim:
-/* 8035C834 00359774  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C834 00359774  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C838 00359778  38 00 00 98 */	li r0, 0x98
 /* 8035C83C 0035977C  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8035C840 00359780  A0 C3 00 04 */	lhz r6, 4(r3)
@@ -143,14 +145,15 @@ lbl_8035C8A4:
 /* 8035C8A4 003597E4  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 8035C8A8 003597E8  42 00 FF FC */	bdnz lbl_8035C8A4
 lbl_8035C8AC:
-/* 8035C8AC 003597EC  80 62 CB 80 */	lwz r3, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C8AC 003597EC  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035C8B0 003597F0  38 00 00 01 */	li r0, 1
 /* 8035C8B4 003597F4  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035C8B8 003597F8  4E 80 00 20 */	blr 
 
+/* 8035C8BC 0040 .text GXSetLineWidth GXSetLineWidth */
 .global GXSetLineWidth
 GXSetLineWidth:
-/* 8035C8BC 003597FC  80 E2 CB 80 */	lwz r7, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C8BC 003597FC  80 E2 CB 80 */	lwz r7, __GXData-_SDA2_BASE_(r2)
 /* 8035C8C0 00359800  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8035C8C4 00359804  38 60 00 61 */	li r3, 0x61
 /* 8035C8C8 00359808  80 C7 00 7C */	lwz r6, 0x7c(r7)
@@ -167,9 +170,10 @@ GXSetLineWidth:
 /* 8035C8F4 00359834  B0 07 00 02 */	sth r0, 2(r7)
 /* 8035C8F8 00359838  4E 80 00 20 */	blr 
 
+/* 8035C8FC 0040 .text GXSetPointSize GXSetPointSize */
 .global GXSetPointSize
 GXSetPointSize:
-/* 8035C8FC 0035983C  80 E2 CB 80 */	lwz r7, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C8FC 0035983C  80 E2 CB 80 */	lwz r7, __GXData-_SDA2_BASE_(r2)
 /* 8035C900 00359840  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8035C904 00359844  38 60 00 61 */	li r3, 0x61
 /* 8035C908 00359848  80 C7 00 7C */	lwz r6, 0x7c(r7)
@@ -186,9 +190,10 @@ GXSetPointSize:
 /* 8035C934 00359874  B0 07 00 02 */	sth r0, 2(r7)
 /* 8035C938 00359878  4E 80 00 20 */	blr 
 
+/* 8035C93C 0048 .text GXEnableTexOffsets GXEnableTexOffsets */
 .global GXEnableTexOffsets
 GXEnableTexOffsets:
-/* 8035C93C 0035987C  80 E2 CB 80 */	lwz r7, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C93C 0035987C  80 E2 CB 80 */	lwz r7, __GXData-_SDA2_BASE_(r2)
 /* 8035C940 00359880  54 63 10 3A */	slwi r3, r3, 2
 /* 8035C944 00359884  54 A0 06 3E */	clrlwi r0, r5, 0x18
 /* 8035C948 00359888  7C C7 1A 14 */	add r6, r7, r3
@@ -207,9 +212,10 @@ GXEnableTexOffsets:
 /* 8035C97C 003598BC  B0 07 00 02 */	sth r0, 2(r7)
 /* 8035C980 003598C0  4E 80 00 20 */	blr 
 
+/* 8035C984 0028 .text GXSetCullMode GXSetCullMode */
 .global GXSetCullMode
 GXSetCullMode:
-/* 8035C984 003598C4  80 82 CB 80 */	lwz r4, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C984 003598C4  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 8035C988 003598C8  54 65 FF FE */	rlwinm r5, r3, 0x1f, 0x1f, 0x1f
 /* 8035C98C 003598CC  50 65 0F BC */	rlwimi r5, r3, 1, 0x1e, 0x1e
 /* 8035C990 003598D0  80 04 02 04 */	lwz r0, 0x204(r4)
@@ -220,9 +226,10 @@ GXSetCullMode:
 /* 8035C9A4 003598E4  90 04 05 AC */	stw r0, 0x5ac(r4)
 /* 8035C9A8 003598E8  4E 80 00 20 */	blr 
 
+/* 8035C9AC 0034 .text GXSetCoPlanar GXSetCoPlanar */
 .global GXSetCoPlanar
 GXSetCoPlanar:
-/* 8035C9AC 003598EC  80 C2 CB 80 */	lwz r6, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C9AC 003598EC  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
 /* 8035C9B0 003598F0  38 80 00 61 */	li r4, 0x61
 /* 8035C9B4 003598F4  3C 00 FE 08 */	lis r0, 0xfe08
 /* 8035C9B8 003598F8  80 A6 02 04 */	lwz r5, 0x204(r6)
@@ -236,10 +243,11 @@ GXSetCoPlanar:
 /* 8035C9D8 00359918  90 03 80 00 */	stw r0, -0x8000(r3)
 /* 8035C9DC 0035991C  4E 80 00 20 */	blr 
 
+/* 8035C9E0 0024 .text __GXSetGenMode __GXSetGenMode */
 .global __GXSetGenMode
 __GXSetGenMode:
 /* 8035C9E0 00359920  38 00 00 61 */	li r0, 0x61
-/* 8035C9E4 00359924  80 82 CB 80 */	lwz r4, lbl_80456580-_SDA2_BASE_(r2)
+/* 8035C9E4 00359924  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 8035C9E8 00359928  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8035C9EC 0035992C  98 05 80 00 */	stb r0, 0xCC008000@l(r5)
 /* 8035C9F0 00359930  38 00 00 00 */	li r0, 0

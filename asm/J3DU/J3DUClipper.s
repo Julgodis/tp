@@ -1,18 +1,19 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80273778
 
-
-.global J3DUClipper_NS_init
-J3DUClipper_NS_init:
+.section .text, "ax"
+/* 80273778 0014 .text init__11J3DUClipperFv init__11J3DUClipperFv */
+.global init__11J3DUClipperFv
+init__11J3DUClipperFv:
 /* 80273778 002706B8  C0 02 B8 78 */	lfs f0, lbl_80455278-_SDA2_BASE_(r2)
 /* 8027377C 002706BC  D0 03 00 54 */	stfs f0, 0x54(r3)
 /* 80273780 002706C0  C0 02 B8 7C */	lfs f0, lbl_8045527C-_SDA2_BASE_(r2)
 /* 80273784 002706C4  D0 03 00 58 */	stfs f0, 0x58(r3)
 /* 80273788 002706C8  4E 80 00 20 */	blr 
 
-.global J3DUClipper_NS_calcViewFrustum
-J3DUClipper_NS_calcViewFrustum:
+/* 8027378C 0170 .text calcViewFrustum__11J3DUClipperFv calcViewFrustum__11J3DUClipperFv */
+.global calcViewFrustum__11J3DUClipperFv
+calcViewFrustum__11J3DUClipperFv:
 /* 8027378C 002706CC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80273790 002706D0  7C 08 02 A6 */	mflr r0
 /* 80273794 002706D4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -26,7 +27,7 @@ J3DUClipper_NS_calcViewFrustum:
 /* 802737B4 002706F4  C0 1E 00 4C */	lfs f0, 0x4c(r30)
 /* 802737B8 002706F8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 802737BC 002706FC  EC 22 00 32 */	fmuls f1, f2, f0
-/* 802737C0 00270700  48 0F 8E A9 */	bl func_8036C668
+/* 802737C0 00270700  48 0F 8E A9 */	bl tan
 /* 802737C4 00270704  FC 00 08 18 */	frsp f0, f1
 /* 802737C8 00270708  C0 3E 00 54 */	lfs f1, 0x54(r30)
 /* 802737CC 0027070C  EC 81 00 32 */	fmuls f4, f1, f0
@@ -106,8 +107,9 @@ J3DUClipper_NS_calcViewFrustum:
 /* 802738F4 00270834  38 21 00 40 */	addi r1, r1, 0x40
 /* 802738F8 00270838  4E 80 00 20 */	blr 
 
-.global J3DUClipper_NS_clip
-J3DUClipper_NS_clip:
+/* 802738FC 0148 .text clip__11J3DUClipperCFPA4_Cf3Vecf clip__11J3DUClipperCFPA4_Cf3Vecf */
+.global clip__11J3DUClipperCFPA4_Cf3Vecf
+clip__11J3DUClipperCFPA4_Cf3Vecf:
 /* 802738FC 0027083C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80273900 00270840  7C 08 02 A6 */	mflr r0
 /* 80273904 00270844  90 01 00 34 */	stw r0, 0x34(r1)
@@ -197,8 +199,9 @@ lbl_80273A28:
 /* 80273A3C 0027097C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80273A40 00270980  4E 80 00 20 */	blr 
 
-.global J3DUClipper_NS_clip_X1_
-J3DUClipper_NS_clip_X1_:
+/* 80273A44 03C4 .text clip__11J3DUClipperCFPA4_CfP3VecP3Vec clip__11J3DUClipperCFPA4_CfP3VecP3Vec */
+.global clip__11J3DUClipperCFPA4_CfP3VecP3Vec
+clip__11J3DUClipperCFPA4_CfP3VecP3Vec:
 /* 80273A44 00270984  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 80273A48 00270988  7C 08 02 A6 */	mflr r0
 /* 80273A4C 0027098C  90 01 01 94 */	stw r0, 0x194(r1)
@@ -455,3 +458,73 @@ lbl_80273D78:
 /* 80273DFC 00270D3C  7C 08 03 A6 */	mtlr r0
 /* 80273E00 00270D40  38 21 01 90 */	addi r1, r1, 0x190
 /* 80273E04 00270D44  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039A948 000C .rodata lbl_8039A948 @898 */
+.global lbl_8039A948
+lbl_8039A948:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x397948 */
+
+/* 8039A954 000C .rodata lbl_8039A954 @899 */
+.global lbl_8039A954
+lbl_8039A954:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x397954 */
+
+/* 8039A960 000C .rodata lbl_8039A960 @900 */
+.global lbl_8039A960
+lbl_8039A960:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x397960 */
+
+/* 8039A96C 000C .rodata lbl_8039A96C @901 */
+.global lbl_8039A96C
+lbl_8039A96C:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39796c */
+
+/* 8039A978 000C .rodata lbl_8039A978 @902 */
+.global lbl_8039A978
+lbl_8039A978:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x397978 */
+
+/* 8039A984 0065 .rodata lbl_8039A984 @stringBase0 */
+.global lbl_8039A984
+lbl_8039A984:
+.byte 0x20, 0x4a, 0x33, 0x44, 0x55, 0x43, 0x6c, 0x69, 0x70, 0x70, 0x65, 0x72, 0x3a, 0x3a, 0x6d, 0x46 /* baserom.dol+0x397984 */
+.byte 0x6f, 0x76, 0x79, 0x20, 0x3d, 0x20, 0x25, 0x66, 0x00, 0x20, 0x4a, 0x33, 0x44, 0x55, 0x43, 0x6c /* baserom.dol+0x397994 */
+.byte 0x69, 0x70, 0x70, 0x65, 0x72, 0x3a, 0x3a, 0x6d, 0x41, 0x73, 0x70, 0x65, 0x63, 0x74, 0x20, 0x3d /* baserom.dol+0x3979a4 */
+.byte 0x20, 0x25, 0x66, 0x00, 0x20, 0x4a, 0x33, 0x44, 0x55, 0x43, 0x6c, 0x69, 0x70, 0x70, 0x65, 0x72 /* baserom.dol+0x3979b4 */
+.byte 0x3a, 0x3a, 0x6d, 0x4e, 0x65, 0x61, 0x72, 0x20, 0x3d, 0x20, 0x25, 0x66, 0x00, 0x20, 0x4a, 0x33 /* baserom.dol+0x3979c4 */
+.byte 0x44, 0x55, 0x43, 0x6c, 0x69, 0x70, 0x70, 0x65, 0x72, 0x3a, 0x3a, 0x6d, 0x46, 0x61, 0x72, 0x20 /* baserom.dol+0x3979d4 */
+.byte 0x3d, 0x20, 0x25, 0x66, 0x00 /* baserom.dol+0x3979e4 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3979e9 */
+
+
+
+.section .sdata2, "a"
+/* 80455278 0004 .sdata2 lbl_80455278 @893 */
+.global lbl_80455278
+lbl_80455278:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d40d8 */
+
+/* 8045527C 0004 .sdata2 lbl_8045527C @894 */
+.global lbl_8045527C
+lbl_8045527C:
+.byte 0x47, 0xc3, 0x50, 0x00 /* baserom.dol+0x3d40dc */
+
+/* 80455280 0004 .sdata2 lbl_80455280 @913 */
+.global lbl_80455280
+lbl_80455280:
+.byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d40e0 */
+
+/* 80455284 0004 .sdata2 lbl_80455284 @914 */
+.global lbl_80455284
+lbl_80455284:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40e4 */
+
+/* 80455288 0004 .sdata2 lbl_80455288 @991 */
+.global lbl_80455288
+lbl_80455288:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40e8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40ec */
+

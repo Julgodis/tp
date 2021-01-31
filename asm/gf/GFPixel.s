@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802cde9c
 
-
-.global GFSetFog
-GFSetFog:
+.section .text, "ax"
+/* 802CDE9C 0168 .text GFSetFog__F10_GXFogTypeffff8_GXColor GFSetFog__F10_GXFogTypeffff8_GXColor */
+.global GFSetFog__F10_GXFogTypeffff8_GXColor
+GFSetFog__F10_GXFogTypeffff8_GXColor:
 /* 802CDE9C 002CADDC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDEA0 002CADE0  7C 08 02 A6 */	mflr r0
 /* 802CDEA4 002CADE4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -76,7 +76,7 @@ lbl_802CDF40:
 /* 802CDF8C 002CAECC  98 83 80 00 */	stb r4, -0x8000(r3)
 /* 802CDF90 002CAED0  C0 02 C5 88 */	lfs f0, lbl_80455F88-_SDA2_BASE_(r2)
 /* 802CDF94 002CAED4  EC 20 00 F2 */	fmuls f1, f0, f3
-/* 802CDF98 002CAED8  48 09 41 15 */	bl func_803620AC
+/* 802CDF98 002CAED8  48 09 41 15 */	bl __cvt_fp2unsigned
 /* 802CDF9C 002CAEDC  64 60 EF 00 */	oris r0, r3, 0xef00
 /* 802CDFA0 002CAEE0  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 802CDFA4 002CAEE4  90 06 80 00 */	stw r0, 0xCC008000@l(r6)
@@ -104,8 +104,9 @@ lbl_802CDF40:
 /* 802CDFFC 002CAF3C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CE000 002CAF40  4E 80 00 20 */	blr 
 
-.global GFSetBlendModeEtc
-GFSetBlendModeEtc:
+/* 802CE004 00A0 .text GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
+.global GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc
+GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc:
 /* 802CE004 002CAF44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CE008 002CAF48  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802CE00C 002CAF4C  93 C1 00 08 */	stw r30, 8(r1)
@@ -149,8 +150,9 @@ lbl_802CE034:
 /* 802CE09C 002CAFDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CE0A0 002CAFE0  4E 80 00 20 */	blr 
 
-.global GFSetZMode
-GFSetZMode:
+/* 802CE0A4 002C .text GFSetZMode__FUc10_GXCompareUc GFSetZMode__FUc10_GXCompareUc */
+.global GFSetZMode__FUc10_GXCompareUc
+GFSetZMode__FUc10_GXCompareUc:
 /* 802CE0A4 002CAFE4  38 00 00 61 */	li r0, 0x61
 /* 802CE0A8 002CAFE8  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 802CE0AC 002CAFEC  98 06 80 00 */	stb r0, 0xCC008000@l(r6)
@@ -162,3 +164,44 @@ GFSetZMode:
 /* 802CE0C4 002CB004  64 00 40 00 */	oris r0, r0, 0x4000
 /* 802CE0C8 002CB008  90 06 80 00 */	stw r0, -0x8000(r6)
 /* 802CE0CC 002CB00C  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80455F68 0004 .sdata2 lbl_80455F68 @293 */
+.global lbl_80455F68
+lbl_80455F68:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dc8 */
+
+/* 80455F6C 0004 .sdata2 lbl_80455F6C @294 */
+.global lbl_80455F6C
+lbl_80455F6C:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dcc */
+
+/* 80455F70 0008 .sdata2 lbl_80455F70 @295 */
+.global lbl_80455F70
+lbl_80455F70:
+.byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dd0 */
+
+/* 80455F78 0004 .sdata2 lbl_80455F78 @296 */
+.global lbl_80455F78
+lbl_80455F78:
+.byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dd8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4ddc */
+
+/* 80455F80 0008 .sdata2 lbl_80455F80 @297 */
+.global lbl_80455F80
+lbl_80455F80:
+.byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4de0 */
+
+/* 80455F88 0004 .sdata2 lbl_80455F88 @298 */
+.global lbl_80455F88
+lbl_80455F88:
+.byte 0x4b, 0x00, 0x00, 0x1e /* baserom.dol+0x3d4de8 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dec */
+
+/* 80455F90 0008 .sdata2 lbl_80455F90 @301 */
+.global lbl_80455F90
+lbl_80455F90:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4df0 */
+

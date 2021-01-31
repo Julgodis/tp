@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802e41e8
 
-
-.global JUTDirectPrint
-JUTDirectPrint:
+.section .text, "ax"
+/* 802E41E8 0058 .text __ct__14JUTDirectPrintFv __ct__14JUTDirectPrintFv */
+.global __ct__14JUTDirectPrintFv
+__ct__14JUTDirectPrintFv:
 /* 802E41E8 002E1128  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E41EC 002E112C  7C 08 02 A6 */	mflr r0
 /* 802E41F0 002E1130  90 01 00 14 */	stw r0, 0x14(r1)
@@ -15,12 +15,12 @@ JUTDirectPrint:
 /* 802E4204 002E1144  38 80 00 00 */	li r4, 0
 /* 802E4208 002E1148  38 A0 00 00 */	li r5, 0
 /* 802E420C 002E114C  38 C0 00 00 */	li r6, 0
-/* 802E4210 002E1150  48 00 03 5D */	bl JUTDirectPrint_NS_changeFrameBuffer
+/* 802E4210 002E1150  48 00 03 5D */	bl changeFrameBuffer__14JUTDirectPrintFPvUsUs
 /* 802E4214 002E1154  7F E3 FB 78 */	mr r3, r31
 /* 802E4218 002E1158  38 80 00 FF */	li r4, 0xff
 /* 802E421C 002E115C  38 A0 00 FF */	li r5, 0xff
 /* 802E4220 002E1160  38 C0 00 FF */	li r6, 0xff
-/* 802E4224 002E1164  48 00 05 A5 */	bl JUTDirectPrint_NS_setCharColor_X1_
+/* 802E4224 002E1164  48 00 05 A5 */	bl setCharColor__14JUTDirectPrintFUcUcUc
 /* 802E4228 002E1168  7F E3 FB 78 */	mr r3, r31
 /* 802E422C 002E116C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E4230 002E1170  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -28,31 +28,33 @@ JUTDirectPrint:
 /* 802E4238 002E1178  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E423C 002E117C  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_start
-JUTDirectPrint_NS_start:
+/* 802E4240 0048 .text start__14JUTDirectPrintFv start__14JUTDirectPrintFv */
+.global start__14JUTDirectPrintFv
+start__14JUTDirectPrintFv:
 /* 802E4240 002E1180  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4244 002E1184  7C 08 02 A6 */	mflr r0
 /* 802E4248 002E1188  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E424C 002E118C  80 0D 8F A8 */	lwz r0, lbl_80451528-_SDA_BASE_(r13)
+/* 802E424C 002E118C  80 0D 8F A8 */	lwz r0, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 /* 802E4250 002E1190  28 00 00 00 */	cmplwi r0, 0
 /* 802E4254 002E1194  40 82 00 20 */	bne lbl_802E4274
 /* 802E4258 002E1198  38 60 00 2C */	li r3, 0x2c
 /* 802E425C 002E119C  4B FE A9 F1 */	bl __nw__FUl
 /* 802E4260 002E11A0  7C 60 1B 79 */	or. r0, r3, r3
 /* 802E4264 002E11A4  41 82 00 0C */	beq lbl_802E4270
-/* 802E4268 002E11A8  4B FF FF 81 */	bl JUTDirectPrint
+/* 802E4268 002E11A8  4B FF FF 81 */	bl __ct__14JUTDirectPrintFv
 /* 802E426C 002E11AC  7C 60 1B 78 */	mr r0, r3
 lbl_802E4270:
-/* 802E4270 002E11B0  90 0D 8F A8 */	stw r0, lbl_80451528-_SDA_BASE_(r13)
+/* 802E4270 002E11B0  90 0D 8F A8 */	stw r0, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 lbl_802E4274:
-/* 802E4274 002E11B4  80 6D 8F A8 */	lwz r3, lbl_80451528-_SDA_BASE_(r13)
+/* 802E4274 002E11B4  80 6D 8F A8 */	lwz r3, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 /* 802E4278 002E11B8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E427C 002E11BC  7C 08 03 A6 */	mtlr r0
 /* 802E4280 002E11C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4284 002E11C4  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_erase
-JUTDirectPrint_NS_erase:
+/* 802E4288 0094 .text erase__14JUTDirectPrintFiiii erase__14JUTDirectPrintFiiii */
+.global erase__14JUTDirectPrintFiiii
+erase__14JUTDirectPrintFiiii:
 /* 802E4288 002E11C8  80 03 00 00 */	lwz r0, 0(r3)
 /* 802E428C 002E11CC  28 00 00 00 */	cmplwi r0, 0
 /* 802E4290 002E11D0  4D 82 00 20 */	beqlr 
@@ -97,15 +99,16 @@ lbl_802E4310:
 /* 802E4314 002E1254  41 80 FF D0 */	blt lbl_802E42E4
 /* 802E4318 002E1258  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_drawChar
-JUTDirectPrint_NS_drawChar:
+/* 802E431C 0250 .text drawChar__14JUTDirectPrintFiii drawChar__14JUTDirectPrintFiii */
+.global drawChar__14JUTDirectPrintFiii
+drawChar__14JUTDirectPrintFiii:
 /* 802E431C 002E125C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4320 002E1260  7C 08 02 A6 */	mflr r0
 /* 802E4324 002E1264  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802E4328 002E1268  39 61 00 20 */	addi r11, r1, 0x20
 /* 802E432C 002E126C  48 07 DE A9 */	bl _savegpr_27
-/* 802E4330 002E1270  3C E0 80 3D */	lis r7, lbl_803CC6B8@ha
-/* 802E4334 002E1274  38 E7 C6 B8 */	addi r7, r7, lbl_803CC6B8@l
+/* 802E4330 002E1270  3C E0 80 3D */	lis r7, sAsciiTable__14JUTDirectPrint@ha
+/* 802E4334 002E1274  38 E7 C6 B8 */	addi r7, r7, sAsciiTable__14JUTDirectPrint@l
 /* 802E4338 002E1278  2C 06 00 64 */	cmpwi r6, 0x64
 /* 802E433C 002E127C  7C C8 33 78 */	mr r8, r6
 /* 802E4340 002E1280  41 80 00 08 */	blt lbl_802E4348
@@ -273,8 +276,9 @@ lbl_802E4534:
 /* 802E4564 002E14A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4568 002E14A8  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_changeFrameBuffer
-JUTDirectPrint_NS_changeFrameBuffer:
+/* 802E456C 0038 .text changeFrameBuffer__14JUTDirectPrintFPvUsUs changeFrameBuffer__14JUTDirectPrintFPvUsUs */
+.global changeFrameBuffer__14JUTDirectPrintFPvUsUs
+changeFrameBuffer__14JUTDirectPrintFPvUsUs:
 /* 802E456C 002E14AC  90 83 00 00 */	stw r4, 0(r3)
 /* 802E4570 002E14B0  90 83 00 14 */	stw r4, 0x14(r3)
 /* 802E4574 002E14B4  B0 A3 00 04 */	sth r5, 4(r3)
@@ -290,6 +294,7 @@ JUTDirectPrint_NS_changeFrameBuffer:
 /* 802E459C 002E14DC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802E45A0 002E14E0  4E 80 00 20 */	blr 
 
+/* 802E45A4 0134 .text printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb */
 .global printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb
 printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb:
 /* 802E45A4 002E14E4  94 21 FE D0 */	stwu r1, -0x130(r1)
@@ -308,7 +313,7 @@ printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb:
 /* 802E45D8 002E1518  38 80 01 00 */	li r4, 0x100
 /* 802E45DC 002E151C  7C C5 33 78 */	mr r5, r6
 /* 802E45E0 002E1520  7C E6 3B 78 */	mr r6, r7
-/* 802E45E4 002E1524  48 08 20 AD */	bl func_80366690
+/* 802E45E4 002E1524  48 08 20 AD */	bl vsnprintf
 /* 802E45E8 002E1528  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E45EC 002E152C  7F 5D D3 78 */	mr r29, r26
 /* 802E45F0 002E1530  40 81 00 C4 */	ble lbl_802E46B4
@@ -322,12 +327,12 @@ printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb:
 /* 802E4610 002E1550  38 1E 00 02 */	addi r0, r30, 2
 /* 802E4614 002E1554  1C C0 00 06 */	mulli r6, r0, 6
 /* 802E4618 002E1558  38 E0 00 0D */	li r7, 0xd
-/* 802E461C 002E155C  4B FF FC 6D */	bl JUTDirectPrint_NS_erase
+/* 802E461C 002E155C  4B FF FC 6D */	bl erase__14JUTDirectPrintFiiii
 lbl_802E4620:
 /* 802E4620 002E1560  3B 81 00 08 */	addi r28, r1, 8
 /* 802E4624 002E1564  57 5F 04 3E */	clrlwi r31, r26, 0x10
-/* 802E4628 002E1568  3C 60 80 3D */	lis r3, lbl_803CC6B8@ha
-/* 802E462C 002E156C  3B 03 C6 B8 */	addi r24, r3, lbl_803CC6B8@l
+/* 802E4628 002E1568  3C 60 80 3D */	lis r3, sAsciiTable__14JUTDirectPrint@ha
+/* 802E462C 002E156C  3B 03 C6 B8 */	addi r24, r3, sAsciiTable__14JUTDirectPrint@l
 /* 802E4630 002E1570  48 00 00 7C */	b lbl_802E46AC
 lbl_802E4634:
 /* 802E4634 002E1574  88 1C 00 00 */	lbz r0, 0(r28)
@@ -358,7 +363,7 @@ lbl_802E4688:
 /* 802E4690 002E15D0  7F 23 CB 78 */	mr r3, r25
 /* 802E4694 002E15D4  57 44 04 3E */	clrlwi r4, r26, 0x10
 /* 802E4698 002E15D8  57 65 04 3E */	clrlwi r5, r27, 0x10
-/* 802E469C 002E15DC  4B FF FC 81 */	bl JUTDirectPrint_NS_drawChar
+/* 802E469C 002E15DC  4B FF FC 81 */	bl drawChar__14JUTDirectPrintFiii
 lbl_802E46A0:
 /* 802E46A0 002E15E0  3B 5A 00 06 */	addi r26, r26, 6
 lbl_802E46A4:
@@ -379,8 +384,9 @@ lbl_802E46C0:
 /* 802E46D0 002E1610  38 21 01 30 */	addi r1, r1, 0x130
 /* 802E46D4 002E1614  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_drawString
-JUTDirectPrint_NS_drawString:
+/* 802E46D8 0030 .text drawString__14JUTDirectPrintFUsUsPc drawString__14JUTDirectPrintFUsUsPc */
+.global drawString__14JUTDirectPrintFUsUsPc
+drawString__14JUTDirectPrintFUsUsPc:
 /* 802E46D8 002E1618  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E46DC 002E161C  7C 08 02 A6 */	mflr r0
 /* 802E46E0 002E1620  90 01 00 14 */	stw r0, 0x14(r1)
@@ -388,14 +394,15 @@ JUTDirectPrint_NS_drawString:
 /* 802E46E8 002E1628  3C C0 80 3A */	lis r6, lbl_8039D9A0@ha
 /* 802E46EC 002E162C  38 C6 D9 A0 */	addi r6, r6, lbl_8039D9A0@l
 /* 802E46F0 002E1630  4C C6 31 82 */	crclr 6
-/* 802E46F4 002E1634  48 00 00 15 */	bl JUTDirectPrint_NS_drawString_f
+/* 802E46F4 002E1634  48 00 00 15 */	bl drawString_f__14JUTDirectPrintFUsUsPCce
 /* 802E46F8 002E1638  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E46FC 002E163C  7C 08 03 A6 */	mtlr r0
 /* 802E4700 002E1640  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4704 002E1644  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_drawString_f
-JUTDirectPrint_NS_drawString_f:
+/* 802E4708 0090 .text drawString_f__14JUTDirectPrintFUsUsPCce drawString_f__14JUTDirectPrintFUsUsPCce */
+.global drawString_f__14JUTDirectPrintFUsUsPCce
+drawString_f__14JUTDirectPrintFUsUsPCce:
 /* 802E4708 002E1648  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802E470C 002E164C  7C 08 02 A6 */	mflr r0
 /* 802E4710 002E1650  90 01 00 84 */	stw r0, 0x84(r1)
@@ -435,8 +442,9 @@ lbl_802E4788:
 /* 802E4790 002E16D0  38 21 00 80 */	addi r1, r1, 0x80
 /* 802E4794 002E16D4  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_setCharColor
-JUTDirectPrint_NS_setCharColor:
+/* 802E4798 0030 .text setCharColor__14JUTDirectPrintFQ28JUtility6TColor setCharColor__14JUTDirectPrintFQ28JUtility6TColor */
+.global setCharColor__14JUTDirectPrintFQ28JUtility6TColor
+setCharColor__14JUTDirectPrintFQ28JUtility6TColor:
 /* 802E4798 002E16D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E479C 002E16DC  7C 08 02 A6 */	mflr r0
 /* 802E47A0 002E16E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -444,14 +452,15 @@ JUTDirectPrint_NS_setCharColor:
 /* 802E47A8 002E16E8  88 84 00 00 */	lbz r4, 0(r4)
 /* 802E47AC 002E16EC  88 A6 00 01 */	lbz r5, 1(r6)
 /* 802E47B0 002E16F0  88 C6 00 02 */	lbz r6, 2(r6)
-/* 802E47B4 002E16F4  48 00 00 15 */	bl JUTDirectPrint_NS_setCharColor_X1_
+/* 802E47B4 002E16F4  48 00 00 15 */	bl setCharColor__14JUTDirectPrintFUcUcUc
 /* 802E47B8 002E16F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E47BC 002E16FC  7C 08 03 A6 */	mtlr r0
 /* 802E47C0 002E1700  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E47C4 002E1704  4E 80 00 20 */	blr 
 
-.global JUTDirectPrint_NS_setCharColor_X1_
-JUTDirectPrint_NS_setCharColor_X1_:
+/* 802E47C8 0194 .text setCharColor__14JUTDirectPrintFUcUcUc setCharColor__14JUTDirectPrintFUcUcUc */
+.global setCharColor__14JUTDirectPrintFUcUcUc
+setCharColor__14JUTDirectPrintFUcUcUc:
 /* 802E47C8 002E1708  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802E47CC 002E170C  98 83 00 18 */	stb r4, 0x18(r3)
 /* 802E47D0 002E1710  98 A3 00 19 */	stb r5, 0x19(r3)
@@ -553,4 +562,145 @@ JUTDirectPrint_NS_setCharColor_X1_:
 /* 802E4950 002E1890  B0 03 00 28 */	sth r0, 0x28(r3)
 /* 802E4954 002E1894  38 21 00 70 */	addi r1, r1, 0x70
 /* 802E4958 002E1898  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039D9A0 0003 .rodata lbl_8039D9A0 @stringBase0 */
+.global lbl_8039D9A0
+lbl_8039D9A0:
+.byte 0x25, 0x73, 0x00 /* baserom.dol+0x39a9a0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39a9a3 */
+
+
+
+.section .data, "aw"
+/* 803CC6B8 0080 .data sAsciiTable__14JUTDirectPrint sAsciiTable__14JUTDirectPrint */
+.global sAsciiTable__14JUTDirectPrint
+sAsciiTable__14JUTDirectPrint:
+.byte 0x7a, 0x7a, 0x7a, 0x7a, 0x7a, 0x7a, 0x7a, 0x7a, 0x7a, 0xfd, 0xfe, 0x7a, 0x7a, 0x7a, 0x7a, 0x7a /* baserom.dol+0x3c96b8 */
+.byte 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3c96c8 */
+.byte 0xff, 0x29, 0x64, 0x65, 0x66, 0x2b, 0x67, 0x68, 0x25, 0x26, 0x69, 0x2a, 0x6a, 0x27, 0x2c, 0x6b /* baserom.dol+0x3c96d8 */
+.byte 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x24, 0x6c, 0x6d, 0x6e, 0x6f, 0x28 /* baserom.dol+0x3c96e8 */
+.byte 0x70, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18 /* baserom.dol+0x3c96f8 */
+.byte 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x71, 0x72, 0x73, 0x74, 0x75 /* baserom.dol+0x3c9708 */
+.byte 0xff, 0x7d, 0x7e, 0x7f, 0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b /* baserom.dol+0x3c9718 */
+.byte 0x8c, 0x8d, 0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x76, 0x77, 0x78, 0x79, 0x7a /* baserom.dol+0x3c9728 */
+
+/* 803CC738 0100 .data sFontData__14JUTDirectPrint sFontData__14JUTDirectPrint */
+.global sFontData__14JUTDirectPrint
+sFontData__14JUTDirectPrint:
+.byte 0x70, 0x87, 0x1c, 0x30, 0x89, 0x88, 0xa2, 0x50, 0x88, 0x80, 0x82, 0x90, 0x88, 0x83, 0x0c, 0x90 /* baserom.dol+0x3c9738 */
+.byte 0x88, 0x84, 0x02, 0xf8, 0x88, 0x88, 0x22, 0x10, 0x71, 0xcf, 0x9c, 0x10, 0xf9, 0xcf, 0x9c, 0x70 /* baserom.dol+0x3c9748 */
+.byte 0x82, 0x08, 0xa2, 0x88, 0xf2, 0x00, 0xa2, 0x88, 0x0b, 0xc1, 0x1c, 0x78, 0x0a, 0x22, 0x22, 0x08 /* baserom.dol+0x3c9758 */
+.byte 0x8a, 0x22, 0x22, 0x08, 0x71, 0xc2, 0x1c, 0x70, 0x23, 0xc7, 0x38, 0xf8, 0x52, 0x28, 0xa4, 0x80 /* baserom.dol+0x3c9768 */
+.byte 0x8a, 0x28, 0x22, 0x80, 0x8b, 0xc8, 0x22, 0xf0, 0xfa, 0x28, 0x22, 0x80, 0x8a, 0x28, 0xa4, 0x80 /* baserom.dol+0x3c9778 */
+.byte 0x8b, 0xc7, 0x38, 0xf8, 0xf9, 0xc8, 0x9c, 0x08, 0x82, 0x28, 0x88, 0x08, 0x82, 0x08, 0x88, 0x08 /* baserom.dol+0x3c9788 */
+.byte 0xf2, 0xef, 0x88, 0x08, 0x82, 0x28, 0x88, 0x88, 0x82, 0x28, 0x88, 0x88, 0x81, 0xc8, 0x9c, 0x70 /* baserom.dol+0x3c9798 */
+.byte 0x8a, 0x08, 0xa2, 0x70, 0x92, 0x0d, 0xa2, 0x88, 0xa2, 0x0a, 0xb2, 0x88, 0xc2, 0x0a, 0xaa, 0x88 /* baserom.dol+0x3c97a8 */
+.byte 0xa2, 0x08, 0xa6, 0x88, 0x92, 0x08, 0xa2, 0x88, 0x8b, 0xe8, 0xa2, 0x70, 0xf1, 0xcf, 0x1c, 0xf8 /* baserom.dol+0x3c97b8 */
+.byte 0x8a, 0x28, 0xa2, 0x20, 0x8a, 0x28, 0xa0, 0x20, 0xf2, 0x2f, 0x1c, 0x20, 0x82, 0xaa, 0x02, 0x20 /* baserom.dol+0x3c97c8 */
+.byte 0x82, 0x49, 0x22, 0x20, 0x81, 0xa8, 0x9c, 0x20, 0x8a, 0x28, 0xa2, 0x88, 0x8a, 0x28, 0xa2, 0x88 /* baserom.dol+0x3c97d8 */
+.byte 0x8a, 0x28, 0x94, 0x88, 0x8a, 0x2a, 0x88, 0x50, 0x89, 0x4a, 0x94, 0x20, 0x89, 0x4a, 0xa2, 0x20 /* baserom.dol+0x3c97e8 */
+.byte 0x70, 0x85, 0x22, 0x20, 0xf8, 0x01, 0x10, 0x00, 0x08, 0x02, 0x08, 0x00, 0x10, 0x84, 0x04, 0x00 /* baserom.dol+0x3c97f8 */
+.byte 0x20, 0x04, 0x04, 0x70, 0x40, 0x84, 0x04, 0x00, 0x80, 0x02, 0x08, 0x00, 0xf8, 0x01, 0x10, 0x00 /* baserom.dol+0x3c9808 */
+.byte 0x70, 0x80, 0x00, 0x00, 0x88, 0x82, 0x22, 0x00, 0x08, 0x82, 0x04, 0x00, 0x10, 0x8f, 0x88, 0x00 /* baserom.dol+0x3c9818 */
+.byte 0x20, 0x82, 0x10, 0x00, 0x00, 0x02, 0x22, 0x00, 0x20, 0x80, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9828 */
+
+/* 803CC838 0134 .data sFontData2__14JUTDirectPrint sFontData2__14JUTDirectPrint */
+.global sFontData2__14JUTDirectPrint
+sFontData2__14JUTDirectPrint:
+.byte 0x51, 0x42, 0x18, 0x20, 0x53, 0xe7, 0xa4, 0x20, 0x01, 0x4a, 0x2c, 0x40, 0x01, 0x47, 0x10, 0x00 /* baserom.dol+0x3c9838 */
+.byte 0x01, 0x42, 0xaa, 0x00, 0x03, 0xea, 0xa4, 0x00, 0x01, 0x47, 0x1a, 0x78, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9848 */
+.byte 0x50, 0x00, 0x80, 0x10, 0x20, 0x01, 0x08, 0x20, 0xf8, 0x02, 0x00, 0x40, 0x20, 0x42, 0x08, 0x20 /* baserom.dol+0x3c9858 */
+.byte 0x50, 0x44, 0x10, 0x10, 0x00, 0x88, 0x00, 0x00, 0x00, 0x07, 0x0e, 0x00, 0x01, 0x08, 0x88, 0x40 /* baserom.dol+0x3c9868 */
+.byte 0x78, 0x89, 0x88, 0x20, 0x00, 0x4a, 0x88, 0x10, 0x78, 0x8a, 0x88, 0x10, 0x01, 0x09, 0x88, 0x08 /* baserom.dol+0x3c9878 */
+.byte 0x00, 0x04, 0x0e, 0x04, 0x70, 0x80, 0x06, 0x20, 0x11, 0x40, 0x08, 0x20, 0x12, 0x20, 0x08, 0x20 /* baserom.dol+0x3c9888 */
+.byte 0x10, 0x00, 0x10, 0x20, 0x10, 0x00, 0x08, 0x20, 0x10, 0x0f, 0x88, 0x20, 0x70, 0x00, 0x06, 0x20 /* baserom.dol+0x3c9898 */
+.byte 0x60, 0x07, 0x00, 0x00, 0x11, 0x0f, 0x82, 0xa0, 0x12, 0xaa, 0x8a, 0xe0, 0x08, 0x4f, 0x92, 0xa0 /* baserom.dol+0x3c98a8 */
+.byte 0x10, 0x0f, 0xbe, 0x1c, 0x10, 0x08, 0x90, 0x08, 0x60, 0x07, 0x08, 0x08, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c98b8 */
+.byte 0x02, 0x00, 0x02, 0x00, 0x7a, 0x07, 0x82, 0x70, 0x8b, 0xc8, 0x1e, 0x88, 0x8a, 0x28, 0x22, 0xf8 /* baserom.dol+0x3c98c8 */
+.byte 0x9a, 0x28, 0x22, 0x80, 0x6b, 0xc7, 0x9e, 0x78, 0x30, 0x00, 0x00, 0x00, 0x48, 0x08, 0x08, 0x10 /* baserom.dol+0x3c98d8 */
+.byte 0x41, 0xe8, 0x00, 0x00, 0x42, 0x2f, 0x18, 0x30, 0xfb, 0xe8, 0x88, 0x10, 0x40, 0x28, 0x88, 0x90 /* baserom.dol+0x3c98e8 */
+.byte 0x43, 0xc8, 0x9c, 0x60, 0x81, 0x00, 0x00, 0x00, 0x81, 0x00, 0x00, 0x00, 0x99, 0x0f, 0x3c, 0x70 /* baserom.dol+0x3c98f8 */
+.byte 0xa1, 0x0a, 0xa2, 0x88, 0xe1, 0x0a, 0xa2, 0x88, 0xa1, 0x0a, 0xa2, 0x88, 0x98, 0xca, 0xa2, 0x70 /* baserom.dol+0x3c9908 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20, 0xf1, 0xef, 0x1e, 0x20, 0x8a, 0x28, 0xa0, 0xf8 /* baserom.dol+0x3c9918 */
+.byte 0x8a, 0x28, 0x1c, 0x20, 0xf1, 0xe8, 0x02, 0x20, 0x80, 0x28, 0x3c, 0x38, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9928 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x8a, 0x28, 0xb6, 0x88, 0x8a, 0x2a, 0x88, 0x88, 0x8a, 0x2a, 0x88, 0x78 /* baserom.dol+0x3c9938 */
+.byte 0x89, 0x4a, 0x88, 0x08, 0x78, 0x85, 0x36, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9948 */
+.byte 0xf8, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9958 */
+.byte 0xf8, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9968 */
+
+/* 803CC96C 0010 .data lbl_803CC96C twiceBit$371 */
+.global lbl_803CC96C
+lbl_803CC96C:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x0c, 0x00, 0x00, 0x00, 0x0f /* baserom.dol+0x3c996c */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c997c */
+
+
+
+.section .sbss, "aw"
+/* 80451528 0004 .sbss sDirectPrint__14JUTDirectPrint sDirectPrint__14JUTDirectPrint */
+.global sDirectPrint__14JUTDirectPrint
+sDirectPrint__14JUTDirectPrint:
+.skip 0x4
+.skip 0x4 /* padding */
+
+
+
+.section .sdata2, "a"
+/* 80456060 0008 .sdata2 lbl_80456060 @503 */
+.global lbl_80456060
+lbl_80456060:
+.byte 0x40, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4ec0 */
+
+/* 80456068 0008 .sdata2 lbl_80456068 @504 */
+.global lbl_80456068
+lbl_80456068:
+.byte 0x3f, 0xdc, 0x18, 0x93, 0x74, 0xbc, 0x6a, 0x7f /* baserom.dol+0x3d4ec8 */
+
+/* 80456070 0008 .sdata2 lbl_80456070 @505 */
+.global lbl_80456070
+lbl_80456070:
+.byte 0xbf, 0xc2, 0xf1, 0xa9, 0xfb, 0xe7, 0x6c, 0x8b /* baserom.dol+0x3d4ed0 */
+
+/* 80456078 0008 .sdata2 lbl_80456078 @506 */
+.global lbl_80456078
+lbl_80456078:
+.byte 0x3f, 0xd2, 0x9f, 0xbe, 0x76, 0xc8, 0xb4, 0x39 /* baserom.dol+0x3d4ed8 */
+
+/* 80456080 0008 .sdata2 lbl_80456080 @507 */
+.global lbl_80456080
+lbl_80456080:
+.byte 0x3f, 0xd7, 0x8d, 0x4f, 0xdf, 0x3b, 0x64, 0x5a /* baserom.dol+0x3d4ee0 */
+
+/* 80456088 0008 .sdata2 lbl_80456088 @508 */
+.global lbl_80456088
+lbl_80456088:
+.byte 0x3f, 0xb2, 0x2d, 0x0e, 0x56, 0x04, 0x18, 0x93 /* baserom.dol+0x3d4ee8 */
+
+/* 80456090 0008 .sdata2 lbl_80456090 @509 */
+.global lbl_80456090
+lbl_80456090:
+.byte 0x40, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4ef0 */
+
+/* 80456098 0008 .sdata2 lbl_80456098 @510 */
+.global lbl_80456098
+lbl_80456098:
+.byte 0x3f, 0xb9, 0x16, 0x87, 0x2b, 0x02, 0x0c, 0x4a /* baserom.dol+0x3d4ef8 */
+
+/* 804560A0 0008 .sdata2 lbl_804560A0 @511 */
+.global lbl_804560A0
+lbl_804560A0:
+.byte 0x3f, 0xd0, 0x72, 0xb0, 0x20, 0xc4, 0x9b, 0xa6 /* baserom.dol+0x3d4f00 */
+
+/* 804560A8 0008 .sdata2 lbl_804560A8 @512 */
+.global lbl_804560A8
+lbl_804560A8:
+.byte 0x3f, 0xe0, 0x20, 0xc4, 0x9b, 0xa5, 0xe3, 0x54 /* baserom.dol+0x3d4f08 */
+
+/* 804560B0 0008 .sdata2 lbl_804560B0 @514 */
+.global lbl_804560B0
+lbl_804560B0:
+.byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4f10 */
 

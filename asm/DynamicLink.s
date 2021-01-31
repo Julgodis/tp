@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802621cc
 
-
-.global DynamicModuleControlBase_NS_dtor
-DynamicModuleControlBase_NS_dtor:
+.section .text, "ax"
+/* 802621CC 00B8 .text __dt__24DynamicModuleControlBaseFv __dt__24DynamicModuleControlBaseFv */
+.global __dt__24DynamicModuleControlBaseFv
+__dt__24DynamicModuleControlBaseFv:
 /* 802621CC 0025F10C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802621D0 0025F110  7C 08 02 A6 */	mflr r0
 /* 802621D4 0025F114  90 01 00 14 */	stw r0, 0x14(r1)
@@ -13,10 +13,10 @@ DynamicModuleControlBase_NS_dtor:
 /* 802621E0 0025F120  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802621E4 0025F124  7C 9F 23 78 */	mr r31, r4
 /* 802621E8 0025F128  41 82 00 80 */	beq lbl_80262268
-/* 802621EC 0025F12C  3C 80 80 3C */	lis r4, lbl_803C34F4@ha
-/* 802621F0 0025F130  38 04 34 F4 */	addi r0, r4, lbl_803C34F4@l
+/* 802621EC 0025F12C  3C 80 80 3C */	lis r4, __vt__24DynamicModuleControlBase@ha
+/* 802621F0 0025F130  38 04 34 F4 */	addi r0, r4, __vt__24DynamicModuleControlBase@l
 /* 802621F4 0025F134  90 1E 00 0C */	stw r0, 0xc(r30)
-/* 802621F8 0025F138  48 00 02 35 */	bl DynamicModuleControlBase_NS_force_unlink
+/* 802621F8 0025F138  48 00 02 35 */	bl force_unlink__24DynamicModuleControlBaseFv
 /* 802621FC 0025F13C  80 7E 00 04 */	lwz r3, 4(r30)
 /* 80262200 0025F140  28 03 00 00 */	cmplwi r3, 0
 /* 80262204 0025F144  41 82 00 0C */	beq lbl_80262210
@@ -29,17 +29,17 @@ lbl_80262210:
 /* 8026221C 0025F15C  80 1E 00 04 */	lwz r0, 4(r30)
 /* 80262220 0025F160  90 03 00 04 */	stw r0, 4(r3)
 lbl_80262224:
-/* 80262224 0025F164  80 0D 8B B8 */	lwz r0, lbl_80451138-_SDA_BASE_(r13)
+/* 80262224 0025F164  80 0D 8B B8 */	lwz r0, mFirst__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 80262228 0025F168  7C 00 F0 40 */	cmplw r0, r30
 /* 8026222C 0025F16C  40 82 00 0C */	bne lbl_80262238
 /* 80262230 0025F170  80 1E 00 08 */	lwz r0, 8(r30)
-/* 80262234 0025F174  90 0D 8B B8 */	stw r0, lbl_80451138-_SDA_BASE_(r13)
+/* 80262234 0025F174  90 0D 8B B8 */	stw r0, mFirst__24DynamicModuleControlBase-_SDA_BASE_(r13)
 lbl_80262238:
-/* 80262238 0025F178  80 0D 8B BC */	lwz r0, lbl_8045113C-_SDA_BASE_(r13)
+/* 80262238 0025F178  80 0D 8B BC */	lwz r0, mLast__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 8026223C 0025F17C  7C 00 F0 40 */	cmplw r0, r30
 /* 80262240 0025F180  40 82 00 0C */	bne lbl_8026224C
 /* 80262244 0025F184  80 1E 00 04 */	lwz r0, 4(r30)
-/* 80262248 0025F188  90 0D 8B BC */	stw r0, lbl_8045113C-_SDA_BASE_(r13)
+/* 80262248 0025F188  90 0D 8B BC */	stw r0, mLast__24DynamicModuleControlBase-_SDA_BASE_(r13)
 lbl_8026224C:
 /* 8026224C 0025F18C  38 00 00 00 */	li r0, 0
 /* 80262250 0025F190  90 1E 00 08 */	stw r0, 8(r30)
@@ -57,32 +57,34 @@ lbl_80262268:
 /* 8026227C 0025F1BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262280 0025F1C0  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase
-DynamicModuleControlBase:
-/* 80262284 0025F1C4  3C 80 80 3C */	lis r4, lbl_803C34F4@ha
-/* 80262288 0025F1C8  38 04 34 F4 */	addi r0, r4, lbl_803C34F4@l
+/* 80262284 004C .text __ct__24DynamicModuleControlBaseFv __ct__24DynamicModuleControlBaseFv */
+.global __ct__24DynamicModuleControlBaseFv
+__ct__24DynamicModuleControlBaseFv:
+/* 80262284 0025F1C4  3C 80 80 3C */	lis r4, __vt__24DynamicModuleControlBase@ha
+/* 80262288 0025F1C8  38 04 34 F4 */	addi r0, r4, __vt__24DynamicModuleControlBase@l
 /* 8026228C 0025F1CC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80262290 0025F1D0  38 00 00 00 */	li r0, 0
 /* 80262294 0025F1D4  B0 03 00 00 */	sth r0, 0(r3)
 /* 80262298 0025F1D8  B0 03 00 02 */	sth r0, 2(r3)
 /* 8026229C 0025F1DC  90 03 00 08 */	stw r0, 8(r3)
-/* 802622A0 0025F1E0  80 0D 8B B8 */	lwz r0, lbl_80451138-_SDA_BASE_(r13)
+/* 802622A0 0025F1E0  80 0D 8B B8 */	lwz r0, mFirst__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 802622A4 0025F1E4  28 00 00 00 */	cmplwi r0, 0
 /* 802622A8 0025F1E8  40 82 00 08 */	bne lbl_802622B0
-/* 802622AC 0025F1EC  90 6D 8B B8 */	stw r3, lbl_80451138-_SDA_BASE_(r13)
+/* 802622AC 0025F1EC  90 6D 8B B8 */	stw r3, mFirst__24DynamicModuleControlBase-_SDA_BASE_(r13)
 lbl_802622B0:
-/* 802622B0 0025F1F0  80 0D 8B BC */	lwz r0, lbl_8045113C-_SDA_BASE_(r13)
+/* 802622B0 0025F1F0  80 0D 8B BC */	lwz r0, mLast__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 802622B4 0025F1F4  90 03 00 04 */	stw r0, 4(r3)
 /* 802622B8 0025F1F8  80 83 00 04 */	lwz r4, 4(r3)
 /* 802622BC 0025F1FC  28 04 00 00 */	cmplwi r4, 0
 /* 802622C0 0025F200  41 82 00 08 */	beq lbl_802622C8
 /* 802622C4 0025F204  90 64 00 08 */	stw r3, 8(r4)
 lbl_802622C8:
-/* 802622C8 0025F208  90 6D 8B BC */	stw r3, lbl_8045113C-_SDA_BASE_(r13)
+/* 802622C8 0025F208  90 6D 8B BC */	stw r3, mLast__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 802622CC 0025F20C  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase_NS_link
-DynamicModuleControlBase_NS_link:
+/* 802622D0 0094 .text link__24DynamicModuleControlBaseFv link__24DynamicModuleControlBaseFv */
+.global link__24DynamicModuleControlBaseFv
+link__24DynamicModuleControlBaseFv:
 /* 802622D0 0025F210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802622D4 0025F214  7C 08 02 A6 */	mflr r0
 /* 802622D8 0025F218  90 01 00 14 */	stw r0, 0x14(r1)
@@ -125,8 +127,9 @@ lbl_80262350:
 /* 8026235C 0025F29C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262360 0025F2A0  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase_NS_unlink
-DynamicModuleControlBase_NS_unlink:
+/* 80262364 0088 .text unlink__24DynamicModuleControlBaseFv unlink__24DynamicModuleControlBaseFv */
+.global unlink__24DynamicModuleControlBaseFv
+unlink__24DynamicModuleControlBaseFv:
 /* 80262364 0025F2A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262368 0025F2A8  7C 08 02 A6 */	mflr r0
 /* 8026236C 0025F2AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -164,8 +167,9 @@ lbl_802623D4:
 /* 802623E4 0025F324  38 21 00 10 */	addi r1, r1, 0x10
 /* 802623E8 0025F328  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase_NS_load_async
-DynamicModuleControlBase_NS_load_async:
+/* 802623EC 0040 .text load_async__24DynamicModuleControlBaseFv load_async__24DynamicModuleControlBaseFv */
+.global load_async__24DynamicModuleControlBaseFv
+load_async__24DynamicModuleControlBaseFv:
 /* 802623EC 0025F32C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802623F0 0025F330  7C 08 02 A6 */	mflr r0
 /* 802623F4 0025F334  90 01 00 14 */	stw r0, 0x14(r1)
@@ -185,8 +189,9 @@ lbl_8026241C:
 /* 80262424 0025F364  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262428 0025F368  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase_NS_force_unlink
-DynamicModuleControlBase_NS_force_unlink:
+/* 8026242C 0044 .text force_unlink__24DynamicModuleControlBaseFv force_unlink__24DynamicModuleControlBaseFv */
+.global force_unlink__24DynamicModuleControlBaseFv
+force_unlink__24DynamicModuleControlBaseFv:
 /* 8026242C 0025F36C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262430 0025F370  7C 08 02 A6 */	mflr r0
 /* 80262434 0025F374  90 01 00 14 */	stw r0, 0x14(r1)
@@ -206,14 +211,15 @@ lbl_8026245C:
 /* 80262468 0025F3A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026246C 0025F3AC  4E 80 00 20 */	blr 
 
-.global DynamicModuleControlBase_NS_dump
-DynamicModuleControlBase_NS_dump:
+/* 80262470 01F0 .text dump__24DynamicModuleControlBaseFv dump__24DynamicModuleControlBaseFv */
+.global dump__24DynamicModuleControlBaseFv
+dump__24DynamicModuleControlBaseFv:
 /* 80262470 0025F3B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80262474 0025F3B4  7C 08 02 A6 */	mflr r0
 /* 80262478 0025F3B8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8026247C 0025F3BC  39 61 00 30 */	addi r11, r1, 0x30
 /* 80262480 0025F3C0  48 0F FD 51 */	bl _savegpr_26
-/* 80262484 0025F3C4  83 AD 8B B8 */	lwz r29, lbl_80451138-_SDA_BASE_(r13)
+/* 80262484 0025F3C4  83 AD 8B B8 */	lwz r29, mFirst__24DynamicModuleControlBase-_SDA_BASE_(r13)
 /* 80262488 0025F3C8  3B 80 00 00 */	li r28, 0
 /* 8026248C 0025F3CC  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
 /* 80262490 0025F3D0  38 63 A4 A0 */	addi r3, r3, lbl_8039A4A0@l
@@ -343,8 +349,9 @@ lbl_80262608:
 /* 80262658 0025F598  38 21 00 30 */	addi r1, r1, 0x30
 /* 8026265C 0025F59C  4E 80 00 20 */	blr 
 
-.global DynamicModuleControl
-DynamicModuleControl:
+/* 80262660 0070 .text __ct__20DynamicModuleControlFPCc __ct__20DynamicModuleControlFPCc */
+.global __ct__20DynamicModuleControlFPCc
+__ct__20DynamicModuleControlFPCc:
 /* 80262660 0025F5A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262664 0025F5A4  7C 08 02 A6 */	mflr r0
 /* 80262668 0025F5A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -352,9 +359,9 @@ DynamicModuleControl:
 /* 80262670 0025F5B0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80262674 0025F5B4  7C 7E 1B 78 */	mr r30, r3
 /* 80262678 0025F5B8  7C 9F 23 78 */	mr r31, r4
-/* 8026267C 0025F5BC  4B FF FC 09 */	bl DynamicModuleControlBase
-/* 80262680 0025F5C0  3C 60 80 3C */	lis r3, lbl_803C34C0@ha
-/* 80262684 0025F5C4  38 03 34 C0 */	addi r0, r3, lbl_803C34C0@l
+/* 8026267C 0025F5BC  4B FF FC 09 */	bl __ct__24DynamicModuleControlBaseFv
+/* 80262680 0025F5C0  3C 60 80 3C */	lis r3, __vt__20DynamicModuleControl@ha
+/* 80262684 0025F5C4  38 03 34 C0 */	addi r0, r3, __vt__20DynamicModuleControl@l
 /* 80262688 0025F5C8  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8026268C 0025F5CC  38 00 00 00 */	li r0, 0
 /* 80262690 0025F5D0  90 1E 00 10 */	stw r0, 0x10(r30)
@@ -374,13 +381,14 @@ DynamicModuleControl:
 /* 802626C8 0025F608  38 21 00 10 */	addi r1, r1, 0x10
 /* 802626CC 0025F60C  4E 80 00 20 */	blr 
 
-.global DynamicModuleControl_NS_mountCallback
-DynamicModuleControl_NS_mountCallback:
+/* 802626D0 008C .text mountCallback__20DynamicModuleControlFPv mountCallback__20DynamicModuleControlFPv */
+.global mountCallback__20DynamicModuleControlFPv
+mountCallback__20DynamicModuleControlFPv:
 /* 802626D0 0025F610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802626D4 0025F614  7C 08 02 A6 */	mflr r0
 /* 802626D8 0025F618  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802626DC 0025F61C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802626E0 0025F620  4B DA C7 0D */	bl mDoExt_getArchiveHeap
+/* 802626E0 0025F620  4B DA C7 0D */	bl mDoExt_getArchiveHeap__Fv
 /* 802626E4 0025F624  7C 7F 1B 78 */	mr r31, r3
 /* 802626E8 0025F628  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
 /* 802626EC 0025F62C  38 63 A4 A0 */	addi r3, r3, lbl_8039A4A0@l
@@ -388,7 +396,7 @@ DynamicModuleControl_NS_mountCallback:
 /* 802626F4 0025F634  7F E4 FB 78 */	mr r4, r31
 /* 802626F8 0025F638  38 A0 00 00 */	li r5, 0
 /* 802626FC 0025F63C  48 07 22 B9 */	bl mount__12JKRFileCacheFPCcP7JKRHeapPCc
-/* 80262700 0025F640  90 6D 8B C8 */	stw r3, lbl_80451148-_SDA_BASE_(r13)
+/* 80262700 0025F640  90 6D 8B C8 */	stw r3, sFileCache__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262704 0025F644  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
 /* 80262708 0025F648  38 63 A4 A0 */	addi r3, r3, lbl_8039A4A0@l
 /* 8026270C 0025F64C  38 63 00 F3 */	addi r3, r3, 0xf3
@@ -396,7 +404,7 @@ DynamicModuleControl_NS_mountCallback:
 /* 80262714 0025F654  7F E5 FB 78 */	mr r5, r31
 /* 80262718 0025F658  38 C0 00 01 */	li r6, 1
 /* 8026271C 0025F65C  48 07 30 C9 */	bl mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection
-/* 80262720 0025F660  90 6D 8B C4 */	stw r3, lbl_80451144-_SDA_BASE_(r13)
+/* 80262720 0025F660  90 6D 8B C4 */	stw r3, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262724 0025F664  28 03 00 00 */	cmplwi r3, 0
 /* 80262728 0025F668  40 82 00 1C */	bne lbl_80262744
 /* 8026272C 0025F66C  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
@@ -406,31 +414,34 @@ DynamicModuleControl_NS_mountCallback:
 /* 8026273C 0025F67C  4C C6 31 82 */	crclr 6
 /* 80262740 0025F680  4B DA 45 AD */	bl OSReport_Warning
 lbl_80262744:
-/* 80262744 0025F684  80 6D 8B C4 */	lwz r3, lbl_80451144-_SDA_BASE_(r13)
+/* 80262744 0025F684  80 6D 8B C4 */	lwz r3, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262748 0025F688  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8026274C 0025F68C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80262750 0025F690  7C 08 03 A6 */	mtlr r0
 /* 80262754 0025F694  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262758 0025F698  4E 80 00 20 */	blr 
 
-.global DynamicModuleControl_NS_initialize
-DynamicModuleControl_NS_initialize:
+/* 8026275C 0038 .text initialize__20DynamicModuleControlFv initialize__20DynamicModuleControlFv */
+.global initialize__20DynamicModuleControlFv
+initialize__20DynamicModuleControlFv:
 /* 8026275C 0025F69C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262760 0025F6A0  7C 08 02 A6 */	mflr r0
 /* 80262764 0025F6A4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80262768 0025F6A8  38 00 00 00 */	li r0, 0
-/* 8026276C 0025F6AC  90 0D 8B C8 */	stw r0, lbl_80451148-_SDA_BASE_(r13)
-/* 80262770 0025F6B0  90 0D 8B C0 */	stw r0, lbl_80451140-_SDA_BASE_(r13)
-/* 80262774 0025F6B4  90 0D 8B C4 */	stw r0, lbl_80451144-_SDA_BASE_(r13)
+/* 8026276C 0025F6AC  90 0D 8B C8 */	stw r0, sFileCache__20DynamicModuleControl-_SDA_BASE_(r13)
+/* 80262770 0025F6B0  90 0D 8B C0 */	stw r0, sAllocBytes__20DynamicModuleControl-_SDA_BASE_(r13)
+/* 80262774 0025F6B4  90 0D 8B C4 */	stw r0, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262778 0025F6B8  38 60 00 00 */	li r3, 0
-/* 8026277C 0025F6BC  4B FF FF 55 */	bl DynamicModuleControl_NS_mountCallback
+/* 8026277C 0025F6BC  4B FF FF 55 */	bl mountCallback__20DynamicModuleControlFPv
 /* 80262780 0025F6C0  38 60 00 01 */	li r3, 1
 /* 80262784 0025F6C4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80262788 0025F6C8  7C 08 03 A6 */	mtlr r0
 /* 8026278C 0025F6CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262790 0025F6D0  4E 80 00 20 */	blr 
-.global DynamicModuleControl_NS_callback
-DynamicModuleControl_NS_callback:
+
+/* 80262794 002C .text callback__20DynamicModuleControlFPv callback__20DynamicModuleControlFPv */
+.global callback__20DynamicModuleControlFPv
+callback__20DynamicModuleControlFPv:
 /* 80262794 0025F6D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262798 0025F6D8  7C 08 02 A6 */	mflr r0
 /* 8026279C 0025F6DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -443,8 +454,9 @@ DynamicModuleControl_NS_callback:
 /* 802627B8 0025F6F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802627BC 0025F6FC  4E 80 00 20 */	blr 
 
-.global calcSum2
-calcSum2:
+/* 802627C0 0028 .text calcSum2__FPCUsUl calcSum2__FPCUsUl */
+.global calcSum2__FPCUsUl
+calcSum2__FPCUsUl:
 /* 802627C0 0025F700  38 A0 00 00 */	li r5, 0
 /* 802627C4 0025F704  48 00 00 14 */	b lbl_802627D8
 lbl_802627C8:
@@ -457,6 +469,10 @@ lbl_802627D8:
 /* 802627DC 0025F71C  40 82 FF EC */	bne lbl_802627C8
 /* 802627E0 0025F720  7C A3 2B 78 */	mr r3, r5
 /* 802627E4 0025F724  4E 80 00 20 */	blr 
+
+/* 802627E8 0314 .text do_load__20DynamicModuleControlFv do_load__20DynamicModuleControlFv */
+.global do_load__20DynamicModuleControlFv
+do_load__20DynamicModuleControlFv:
 /* 802627E8 0025F728  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802627EC 0025F72C  7C 08 02 A6 */	mflr r0
 /* 802627F0 0025F730  90 01 00 64 */	stw r0, 0x64(r1)
@@ -469,7 +485,7 @@ lbl_802627D8:
 /* 8026280C 0025F74C  38 60 00 01 */	li r3, 1
 /* 80262810 0025F750  48 00 02 D4 */	b lbl_80262AE4
 lbl_80262814:
-/* 80262814 0025F754  4B DA C5 D9 */	bl mDoExt_getArchiveHeap
+/* 80262814 0025F754  4B DA C5 D9 */	bl mDoExt_getArchiveHeap__Fv
 /* 80262818 0025F758  7C 7E 1B 78 */	mr r30, r3
 /* 8026281C 0025F75C  3B A0 00 00 */	li r29, 0
 /* 80262820 0025F760  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
@@ -488,11 +504,11 @@ lbl_80262844:
 /* 8026284C 0025F78C  38 BF 01 41 */	addi r5, r31, 0x141
 /* 80262850 0025F790  80 DC 00 1C */	lwz r6, 0x1c(r28)
 /* 80262854 0025F794  4C C6 31 82 */	crclr 6
-/* 80262858 0025F798  48 10 3D 65 */	bl func_803665BC
+/* 80262858 0025F798  48 10 3D 65 */	bl snprintf
 /* 8026285C 0025F79C  80 1C 00 10 */	lwz r0, 0x10(r28)
 /* 80262860 0025F7A0  28 00 00 00 */	cmplwi r0, 0
 /* 80262864 0025F7A4  40 82 00 B0 */	bne lbl_80262914
-/* 80262868 0025F7A8  80 AD 8B C4 */	lwz r5, lbl_80451144-_SDA_BASE_(r13)
+/* 80262868 0025F7A8  80 AD 8B C4 */	lwz r5, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 8026286C 0025F7AC  28 05 00 00 */	cmplwi r5, 0
 /* 80262870 0025F7B0  41 82 00 A4 */	beq lbl_80262914
 /* 80262874 0025F7B4  28 00 00 00 */	cmplwi r0, 0
@@ -514,7 +530,7 @@ lbl_802628A4:
 /* 802628B0 0025F7F0  3C 60 41 4D */	lis r3, 0x414D454D@ha
 /* 802628B4 0025F7F4  38 63 45 4D */	addi r3, r3, 0x414D454D@l
 /* 802628B8 0025F7F8  38 81 00 10 */	addi r4, r1, 0x10
-/* 802628BC 0025F7FC  80 AD 8B C4 */	lwz r5, lbl_80451144-_SDA_BASE_(r13)
+/* 802628BC 0025F7FC  80 AD 8B C4 */	lwz r5, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 802628C0 0025F800  48 07 32 79 */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 802628C4 0025F804  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 802628C8 0025F808  80 1C 00 10 */	lwz r0, 0x10(r28)
@@ -529,7 +545,7 @@ lbl_802628DC:
 /* 802628E8 0025F828  3C 60 44 4D */	lis r3, 0x444D454D@ha
 /* 802628EC 0025F82C  38 63 45 4D */	addi r3, r3, 0x444D454D@l
 /* 802628F0 0025F830  38 81 00 10 */	addi r4, r1, 0x10
-/* 802628F4 0025F834  80 AD 8B C4 */	lwz r5, lbl_80451144-_SDA_BASE_(r13)
+/* 802628F4 0025F834  80 AD 8B C4 */	lwz r5, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 802628F8 0025F838  48 07 32 41 */	bl getGlbResource__10JKRArchiveFUlPCcP10JKRArchive
 /* 802628FC 0025F83C  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 80262900 0025F840  80 1C 00 10 */	lwz r0, 0x10(r28)
@@ -541,7 +557,7 @@ lbl_80262914:
 /* 80262914 0025F854  80 9C 00 10 */	lwz r4, 0x10(r28)
 /* 80262918 0025F858  28 04 00 00 */	cmplwi r4, 0
 /* 8026291C 0025F85C  41 82 00 2C */	beq lbl_80262948
-/* 80262920 0025F860  80 6D 8B C4 */	lwz r3, lbl_80451144-_SDA_BASE_(r13)
+/* 80262920 0025F860  80 6D 8B C4 */	lwz r3, sArchive__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262924 0025F864  81 83 00 00 */	lwz r12, 0(r3)
 /* 80262928 0025F868  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 8026292C 0025F86C  7D 89 03 A6 */	mtctr r12
@@ -560,7 +576,7 @@ lbl_80262948:
 /* 8026295C 0025F89C  38 A5 01 48 */	addi r5, r5, 0x148
 /* 80262960 0025F8A0  80 DC 00 1C */	lwz r6, 0x1c(r28)
 /* 80262964 0025F8A4  4C C6 31 82 */	crclr 6
-/* 80262968 0025F8A8  48 10 3C 55 */	bl func_803665BC
+/* 80262968 0025F8A8  48 10 3C 55 */	bl snprintf
 /* 8026296C 0025F8AC  38 00 00 00 */	li r0, 0
 /* 80262970 0025F8B0  90 01 00 08 */	stw r0, 8(r1)
 /* 80262974 0025F8B4  38 61 00 10 */	addi r3, r1, 0x10
@@ -584,7 +600,7 @@ lbl_802629B8:
 /* 802629B8 0025F8F8  80 1C 00 10 */	lwz r0, 0x10(r28)
 /* 802629BC 0025F8FC  28 00 00 00 */	cmplwi r0, 0
 /* 802629C0 0025F900  40 82 00 58 */	bne lbl_80262A18
-/* 802629C4 0025F904  80 6D 8B C8 */	lwz r3, lbl_80451148-_SDA_BASE_(r13)
+/* 802629C4 0025F904  80 6D 8B C8 */	lwz r3, sFileCache__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 802629C8 0025F908  28 03 00 00 */	cmplwi r3, 0
 /* 802629CC 0025F90C  41 82 00 4C */	beq lbl_80262A18
 /* 802629D0 0025F910  3C 80 72 65 */	lis r4, 0x72656C73@ha
@@ -621,7 +637,7 @@ lbl_80262A44:
 /* 80262A44 0025F984  80 9C 00 24 */	lwz r4, 0x24(r28)
 /* 80262A48 0025F988  2C 04 00 00 */	cmpwi r4, 0
 /* 80262A4C 0025F98C  40 81 00 80 */	ble lbl_80262ACC
-/* 80262A50 0025F990  4B FF FD 71 */	bl calcSum2
+/* 80262A50 0025F990  4B FF FD 71 */	bl calcSum2__FPCUsUl
 /* 80262A54 0025F994  88 DC 00 21 */	lbz r6, 0x21(r28)
 /* 80262A58 0025F998  28 06 00 00 */	cmplwi r6, 0
 /* 80262A5C 0025F99C  40 82 00 18 */	bne lbl_80262A74
@@ -669,6 +685,10 @@ lbl_80262AE4:
 /* 80262AF0 0025FA30  7C 08 03 A6 */	mtlr r0
 /* 80262AF4 0025FA34  38 21 00 60 */	addi r1, r1, 0x60
 /* 80262AF8 0025FA38  4E 80 00 20 */	blr 
+
+/* 80262AFC 00C8 .text do_load_async__20DynamicModuleControlFv do_load_async__20DynamicModuleControlFv */
+.global do_load_async__20DynamicModuleControlFv
+do_load_async__20DynamicModuleControlFv:
 /* 80262AFC 0025FA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262B00 0025FA40  7C 08 02 A6 */	mflr r0
 /* 80262B04 0025FA44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -683,12 +703,10 @@ lbl_80262AE4:
 /* 80262B28 0025FA68  38 60 00 01 */	li r3, 1
 /* 80262B2C 0025FA6C  48 00 00 84 */	b lbl_80262BB0
 lbl_80262B30:
-.global DynamicModuleControl_NS_callback
-/* 80262B30 0025FA70  3C 60 80 26 */	lis r3, DynamicModuleControl_NS_callback@ha
-.global DynamicModuleControl_NS_callback
-/* 80262B34 0025FA74  38 63 27 94 */	addi r3, r3, DynamicModuleControl_NS_callback@l
+/* 80262B30 0025FA70  3C 60 80 26 */	lis r3, callback__20DynamicModuleControlFPv@ha
+/* 80262B34 0025FA74  38 63 27 94 */	addi r3, r3, callback__20DynamicModuleControlFPv@l
 /* 80262B38 0025FA78  7F E4 FB 78 */	mr r4, r31
-/* 80262B3C 0025FA7C  4B DB 31 39 */	bl mDoDvdThd_callback_c_NS_create
+/* 80262B3C 0025FA7C  4B DB 31 39 */	bl create__20mDoDvdThd_callback_cFPFPv_PvPv
 /* 80262B40 0025FA80  90 7F 00 28 */	stw r3, 0x28(r31)
 /* 80262B44 0025FA84  80 1F 00 28 */	lwz r0, 0x28(r31)
 /* 80262B48 0025FA88  28 00 00 00 */	cmplwi r0, 0
@@ -726,6 +744,10 @@ lbl_80262BB0:
 /* 80262BB8 0025FAF8  7C 08 03 A6 */	mtlr r0
 /* 80262BBC 0025FAFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262BC0 0025FB00  4E 80 00 20 */	blr 
+
+/* 80262BC4 0048 .text do_unload__20DynamicModuleControlFv do_unload__20DynamicModuleControlFv */
+.global do_unload__20DynamicModuleControlFv
+do_unload__20DynamicModuleControlFv:
 /* 80262BC4 0025FB04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262BC8 0025FB08  7C 08 02 A6 */	mflr r0
 /* 80262BCC 0025FB0C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -745,6 +767,10 @@ lbl_80262BF4:
 /* 80262C00 0025FB40  7C 08 03 A6 */	mtlr r0
 /* 80262C04 0025FB44  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262C08 0025FB48  4E 80 00 20 */	blr 
+
+/* 80262C0C 0050 .text dump2__20DynamicModuleControlFv dump2__20DynamicModuleControlFv */
+.global dump2__20DynamicModuleControlFv
+dump2__20DynamicModuleControlFv:
 /* 80262C0C 0025FB4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262C10 0025FB50  7C 08 02 A6 */	mflr r0
 /* 80262C14 0025FB54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -766,6 +792,10 @@ lbl_80262C4C:
 /* 80262C50 0025FB90  7C 08 03 A6 */	mtlr r0
 /* 80262C54 0025FB94  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262C58 0025FB98  4E 80 00 20 */	blr 
+
+/* 80262C5C 02CC .text do_link__20DynamicModuleControlFv do_link__20DynamicModuleControlFv */
+.global do_link__20DynamicModuleControlFv
+do_link__20DynamicModuleControlFv:
 /* 80262C5C 0025FB9C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80262C60 0025FBA0  7C 08 02 A6 */	mflr r0
 /* 80262C64 0025FBA4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -919,9 +949,9 @@ lbl_80262E84:
 /* 80262E90 0025FDD0  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 80262E94 0025FDD4  7D 89 03 A6 */	mtctr r12
 /* 80262E98 0025FDD8  4E 80 04 21 */	bctrl 
-/* 80262E9C 0025FDDC  80 0D 8B C0 */	lwz r0, lbl_80451140-_SDA_BASE_(r13)
+/* 80262E9C 0025FDDC  80 0D 8B C0 */	lwz r0, sAllocBytes__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262EA0 0025FDE0  7C 00 1A 14 */	add r0, r0, r3
-/* 80262EA4 0025FDE4  90 0D 8B C0 */	stw r0, lbl_80451140-_SDA_BASE_(r13)
+/* 80262EA4 0025FDE4  90 0D 8B C0 */	stw r0, sAllocBytes__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262EA8 0025FDE8  48 0D F8 55 */	bl OSGetTime
 /* 80262EAC 0025FDEC  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 80262EB0 0025FDF0  81 83 00 34 */	lwz r12, 0x34(r3)
@@ -958,6 +988,10 @@ lbl_80262F10:
 /* 80262F1C 0025FE5C  7C 08 03 A6 */	mtlr r0
 /* 80262F20 0025FE60  38 21 00 20 */	addi r1, r1, 0x20
 /* 80262F24 0025FE64  4E 80 00 20 */	blr 
+
+/* 80262F28 00D8 .text do_unlink__20DynamicModuleControlFv do_unlink__20DynamicModuleControlFv */
+.global do_unlink__20DynamicModuleControlFv
+do_unlink__20DynamicModuleControlFv:
 /* 80262F28 0025FE68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80262F2C 0025FE6C  7C 08 02 A6 */	mflr r0
 /* 80262F30 0025FE70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -991,9 +1025,9 @@ lbl_80262F94:
 /* 80262F9C 0025FEDC  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 80262FA0 0025FEE0  7D 89 03 A6 */	mtctr r12
 /* 80262FA4 0025FEE4  4E 80 04 21 */	bctrl 
-/* 80262FA8 0025FEE8  80 0D 8B C0 */	lwz r0, lbl_80451140-_SDA_BASE_(r13)
+/* 80262FA8 0025FEE8  80 0D 8B C0 */	lwz r0, sAllocBytes__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262FAC 0025FEEC  7C 03 00 50 */	subf r0, r3, r0
-/* 80262FB0 0025FEF0  90 0D 8B C0 */	stw r0, lbl_80451140-_SDA_BASE_(r13)
+/* 80262FB0 0025FEF0  90 0D 8B C0 */	stw r0, sAllocBytes__20DynamicModuleControl-_SDA_BASE_(r13)
 /* 80262FB4 0025FEF4  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 80262FB8 0025FEF8  28 03 00 00 */	cmplwi r3, 0
 /* 80262FBC 0025FEFC  41 82 00 14 */	beq lbl_80262FD0
@@ -1015,6 +1049,10 @@ lbl_80262FE8:
 /* 80262FF4 0025FF34  7C 08 03 A6 */	mtlr r0
 /* 80262FF8 0025FF38  38 21 00 10 */	addi r1, r1, 0x10
 /* 80262FFC 0025FF3C  4E 80 00 20 */	blr 
+
+/* 80263000 0070 .text getModuleSize__20DynamicModuleControlCFv getModuleSize__20DynamicModuleControlCFv */
+.global getModuleSize__20DynamicModuleControlCFv
+getModuleSize__20DynamicModuleControlCFv:
 /* 80263000 0025FF40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263004 0025FF44  7C 08 02 A6 */	mflr r0
 /* 80263008 0025FF48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1046,14 +1084,30 @@ lbl_80263058:
 /* 80263064 0025FFA4  7C 08 03 A6 */	mtlr r0
 /* 80263068 0025FFA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026306C 0025FFAC  4E 80 00 20 */	blr 
+
+/* 80263070 0018 .text getModuleTypeString__20DynamicModuleControlCFv getModuleTypeString__20DynamicModuleControlCFv */
+.global getModuleTypeString__20DynamicModuleControlCFv
+getModuleTypeString__20DynamicModuleControlCFv:
 /* 80263070 0025FFB0  88 03 00 20 */	lbz r0, 0x20(r3)
 /* 80263074 0025FFB4  54 00 17 3A */	rlwinm r0, r0, 2, 0x1c, 0x1d
 /* 80263078 0025FFB8  3C 60 80 3C */	lis r3, lbl_803C34B0@ha
 /* 8026307C 0025FFBC  38 63 34 B0 */	addi r3, r3, lbl_803C34B0@l
 /* 80263080 0025FFC0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80263084 0025FFC4  4E 80 00 20 */	blr 
+
+/* 80263088 0004 .text ModuleProlog ModuleProlog */
+.global ModuleProlog
+ModuleProlog:
 /* 80263088 0025FFC8  4E 80 00 20 */	blr 
+
+/* 8026308C 0004 .text ModuleEpilog ModuleEpilog */
+.global ModuleEpilog
+ModuleEpilog:
 /* 8026308C 0025FFCC  4E 80 00 20 */	blr 
+
+/* 80263090 00BC .text ModuleUnresolved ModuleUnresolved */
+.global ModuleUnresolved
+ModuleUnresolved:
 /* 80263090 0025FFD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80263094 0025FFD4  7C 08 02 A6 */	mflr r0
 /* 80263098 0025FFD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1104,6 +1158,10 @@ lbl_80263120:
 /* 80263140 00260080  7C 08 03 A6 */	mtlr r0
 /* 80263144 00260084  38 21 00 20 */	addi r1, r1, 0x20
 /* 80263148 00260088  4E 80 00 20 */	blr 
+
+/* 8026314C 0044 .text ModuleConstructorsX ModuleConstructorsX */
+.global ModuleConstructorsX
+ModuleConstructorsX:
 /* 8026314C 0026008C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263150 00260090  7C 08 02 A6 */	mflr r0
 /* 80263154 00260094  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1123,6 +1181,10 @@ lbl_80263170:
 /* 80263184 002600C4  7C 08 03 A6 */	mtlr r0
 /* 80263188 002600C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026318C 002600CC  4E 80 00 20 */	blr 
+
+/* 80263190 0044 .text ModuleDestructorsX ModuleDestructorsX */
+.global ModuleDestructorsX
+ModuleDestructorsX:
 /* 80263190 002600D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263194 002600D4  7C 08 02 A6 */	mflr r0
 /* 80263198 002600D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1142,23 +1204,187 @@ lbl_802631B4:
 /* 802631C8 00260108  7C 08 03 A6 */	mtlr r0
 /* 802631CC 0026010C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802631D0 00260110  4E 80 00 20 */	blr 
+
+/* 802631D4 0008 .text do_link__24DynamicModuleControlBaseFv do_link__24DynamicModuleControlBaseFv */
+.global do_link__24DynamicModuleControlBaseFv
+do_link__24DynamicModuleControlBaseFv:
 /* 802631D4 00260114  38 60 00 01 */	li r3, 1
 /* 802631D8 00260118  4E 80 00 20 */	blr 
+
+/* 802631DC 0008 .text do_load__24DynamicModuleControlBaseFv do_load__24DynamicModuleControlBaseFv */
+.global do_load__24DynamicModuleControlBaseFv
+do_load__24DynamicModuleControlBaseFv:
 /* 802631DC 0026011C  38 60 00 01 */	li r3, 1
 /* 802631E0 00260120  4E 80 00 20 */	blr 
+
+/* 802631E4 0008 .text do_unload__24DynamicModuleControlBaseFv do_unload__24DynamicModuleControlBaseFv */
+.global do_unload__24DynamicModuleControlBaseFv
+do_unload__24DynamicModuleControlBaseFv:
 /* 802631E4 00260124  38 60 00 01 */	li r3, 1
 /* 802631E8 00260128  4E 80 00 20 */	blr 
+
+/* 802631EC 0008 .text do_unlink__24DynamicModuleControlBaseFv do_unlink__24DynamicModuleControlBaseFv */
+.global do_unlink__24DynamicModuleControlBaseFv
+do_unlink__24DynamicModuleControlBaseFv:
 /* 802631EC 0026012C  38 60 00 01 */	li r3, 1
 /* 802631F0 00260130  4E 80 00 20 */	blr 
+
+/* 802631F4 0008 .text do_load_async__24DynamicModuleControlBaseFv do_load_async__24DynamicModuleControlBaseFv */
+.global do_load_async__24DynamicModuleControlBaseFv
+do_load_async__24DynamicModuleControlBaseFv:
 /* 802631F4 00260134  38 60 00 01 */	li r3, 1
 /* 802631F8 00260138  4E 80 00 20 */	blr 
+
+/* 802631FC 0004 .text dump2__24DynamicModuleControlBaseFv dump2__24DynamicModuleControlBaseFv */
+.global dump2__24DynamicModuleControlBaseFv
+dump2__24DynamicModuleControlBaseFv:
 /* 802631FC 0026013C  4E 80 00 20 */	blr 
+
+/* 80263200 0010 .text getModuleTypeString__24DynamicModuleControlBaseCFv getModuleTypeString__24DynamicModuleControlBaseCFv */
+.global getModuleTypeString__24DynamicModuleControlBaseCFv
+getModuleTypeString__24DynamicModuleControlBaseCFv:
 /* 80263200 00260140  3C 60 80 3A */	lis r3, lbl_8039A4A0@ha
 /* 80263204 00260144  38 63 A4 A0 */	addi r3, r3, lbl_8039A4A0@l
 /* 80263208 00260148  38 63 00 DB */	addi r3, r3, 0xdb
 /* 8026320C 0026014C  4E 80 00 20 */	blr 
+
+/* 80263210 0008 .text getModuleSize__24DynamicModuleControlBaseCFv getModuleSize__24DynamicModuleControlBaseCFv */
+.global getModuleSize__24DynamicModuleControlBaseCFv
+getModuleSize__24DynamicModuleControlBaseCFv:
 /* 80263210 00260150  38 60 00 00 */	li r3, 0
 /* 80263214 00260154  4E 80 00 20 */	blr 
+
+/* 80263218 0008 .text getModuleName__20DynamicModuleControlCFv getModuleName__20DynamicModuleControlCFv */
+.global getModuleName__20DynamicModuleControlCFv
+getModuleName__20DynamicModuleControlCFv:
 /* 80263218 00260158  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 8026321C 0026015C  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039A4A0 0344 .rodata lbl_8039A4A0 @stringBase0 */
+.global lbl_8039A4A0
+lbl_8039A4A0:
+.byte 0x25, 0x30, 0x38, 0x78, 0x20, 0x44, 0x79, 0x6e, 0x61, 0x6d, 0x69, 0x63, 0x4d, 0x6f, 0x64, 0x75 /* baserom.dol+0x3974a0 */
+.byte 0x6c, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x42, 0x61, 0x73, 0x65, 0x3a, 0x3a, 0x75 /* baserom.dol+0x3974b0 */
+.byte 0x6e, 0x6c, 0x69, 0x6e, 0x6b, 0x28, 0x29, 0x20, 0x6d, 0x4c, 0x69, 0x6e, 0x6b, 0x43, 0x6f, 0x75 /* baserom.dol+0x3974c0 */
+.byte 0x6e, 0x74, 0x20, 0x69, 0x64, 0x20, 0x61, 0x6c, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x7a, 0x65 /* baserom.dol+0x3974d0 */
+.byte 0x72, 0x6f, 0x2e, 0x0a, 0x00, 0x0a, 0x44, 0x79, 0x6e, 0x61, 0x6d, 0x69, 0x63, 0x4d, 0x6f, 0x64 /* baserom.dol+0x3974e0 */
+.byte 0x75, 0x6c, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x42, 0x61, 0x73, 0x65, 0x3a, 0x3a /* baserom.dol+0x3974f0 */
+.byte 0x64, 0x75, 0x6d, 0x70, 0x28, 0x29, 0x0a, 0x00, 0x44, 0x6f, 0x20, 0x20, 0x4c, 0x6e, 0x6b, 0x20 /* baserom.dol+0x397500 */
+.byte 0x53, 0x69, 0x7a, 0x65, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x4e, 0x61, 0x6d, 0x65, 0x0a, 0x00 /* baserom.dol+0x397510 */
+.byte 0x28, 0x4e, 0x75, 0x6c, 0x6c, 0x29, 0x00, 0x25, 0x33, 0x64, 0x25, 0x33, 0x64, 0x25, 0x35, 0x2e /* baserom.dol+0x397520 */
+.byte 0x31, 0x66, 0x20, 0x25, 0x30, 0x35, 0x78, 0x20, 0x25, 0x2d, 0x34, 0x73, 0x20, 0x25, 0x2d, 0x32 /* baserom.dol+0x397530 */
+.byte 0x34, 0x73, 0x20, 0x00, 0x25, 0x33, 0x64, 0x25, 0x33, 0x64, 0x20, 0x3f, 0x3f, 0x3f, 0x3f, 0x20 /* baserom.dol+0x397540 */
+.byte 0x3f, 0x3f, 0x3f, 0x3f, 0x3f, 0x20, 0x25, 0x2d, 0x34, 0x73, 0x20, 0x25, 0x2d, 0x32, 0x34, 0x73 /* baserom.dol+0x397550 */
+.byte 0x20, 0x00, 0x0a, 0x00, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x53, 0x69, 0x7a, 0x65, 0x20, 0x25, 0x36 /* baserom.dol+0x397560 */
+.byte 0x2e, 0x32, 0x66, 0x20, 0x25, 0x30, 0x36, 0x78, 0x0a, 0x0a, 0x00, 0x42, 0x61, 0x73, 0x65, 0x00 /* baserom.dol+0x397570 */
+.byte 0x2f, 0x72, 0x65, 0x6c, 0x2f, 0x46, 0x69, 0x6e, 0x61, 0x6c, 0x2f, 0x52, 0x65, 0x6c, 0x65, 0x61 /* baserom.dol+0x397580 */
+.byte 0x73, 0x65, 0x00, 0x52, 0x45, 0x4c, 0x53, 0x2e, 0x61, 0x72, 0x63, 0x00, 0x83, 0x7d, 0x83, 0x45 /* baserom.dol+0x397590 */
+.byte 0x83, 0x93, 0x83, 0x67, 0x8e, 0xb8, 0x94, 0x73, 0x82, 0xc5, 0x82, 0xb7, 0x82, 0xaa, 0x92, 0x50 /* baserom.dol+0x3975a0 */
+.byte 0x82, 0xc9, 0x83, 0x41, 0x81, 0x5b, 0x83, 0x4a, 0x83, 0x43, 0x83, 0x75, 0x82, 0xf0, 0x8d, 0xec /* baserom.dol+0x3975b0 */
+.byte 0x82, 0xc1, 0x82, 0xc4, 0x82, 0xc8, 0x82, 0xa2, 0x82, 0xbe, 0x82, 0xaf, 0x82, 0xc8, 0x82, 0xe7 /* baserom.dol+0x3975c0 */
+.byte 0x92, 0x78, 0x82, 0xa2, 0x82, 0xbe, 0x82, 0xaf, 0x82, 0xc5, 0x82, 0xb7, 0x20, 0x25, 0x73, 0x0a /* baserom.dol+0x3975d0 */
+.byte 0x00, 0x25, 0x73, 0x2e, 0x72, 0x65, 0x6c, 0x00, 0x2f, 0x72, 0x65, 0x6c, 0x2f, 0x46, 0x69, 0x6e /* baserom.dol+0x3975e0 */
+.byte 0x61, 0x6c, 0x2f, 0x52, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x2f, 0x25, 0x73, 0x2e, 0x72, 0x65 /* baserom.dol+0x3975f0 */
+.byte 0x6c, 0x00, 0x44, 0x79, 0x6e, 0x61, 0x6d, 0x69, 0x63, 0x4d, 0x6f, 0x64, 0x75, 0x6c, 0x65, 0x43 /* baserom.dol+0x397600 */
+.byte 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x3a, 0x3a, 0x64, 0x6f, 0x5f, 0x6c, 0x6f, 0x61, 0x64, 0x28 /* baserom.dol+0x397610 */
+.byte 0x29, 0x20, 0x83, 0x8a, 0x83, 0x5c, 0x81, 0x5b, 0x83, 0x58, 0x93, 0xc7, 0x82, 0xdd, 0x8d, 0x9e /* baserom.dol+0x397620 */
+.byte 0x82, 0xdd, 0x8e, 0xb8, 0x94, 0x73, 0x20, 0x5b, 0x25, 0x73, 0x5d, 0x0a, 0x00, 0x44, 0x79, 0x6e /* baserom.dol+0x397630 */
+.byte 0x61, 0x6d, 0x69, 0x63, 0x4d, 0x6f, 0x64, 0x75, 0x6c, 0x65, 0x43, 0x6f, 0x6e, 0x74, 0x72, 0x6f /* baserom.dol+0x397640 */
+.byte 0x6c, 0x3a, 0x3a, 0x64, 0x6f, 0x5f, 0x6c, 0x6f, 0x61, 0x64, 0x28, 0x29, 0x20, 0x83, 0x60, 0x83 /* baserom.dol+0x397650 */
+.byte 0x46, 0x83, 0x62, 0x83, 0x4e, 0x83, 0x54, 0x83, 0x80, 0x83, 0x47, 0x83, 0x89, 0x81, 0x5b, 0x20 /* baserom.dol+0x397660 */
+.byte 0x25, 0x30, 0x34, 0x78, 0x20, 0x25, 0x30, 0x34, 0x78, 0x5b, 0x25, 0x73, 0x5d, 0x0a, 0x00, 0x44 /* baserom.dol+0x397670 */
+.byte 0x79, 0x6e, 0x61, 0x6d, 0x69, 0x63, 0x4d, 0x6f, 0x64, 0x75, 0x6c, 0x65, 0x43, 0x6f, 0x6e, 0x74 /* baserom.dol+0x397680 */
+.byte 0x72, 0x6f, 0x6c, 0x3a, 0x3a, 0x64, 0x6f, 0x5f, 0x6c, 0x6f, 0x61, 0x64, 0x5f, 0x61, 0x73, 0x79 /* baserom.dol+0x397690 */
+.byte 0x6e, 0x63, 0x28, 0x29, 0x20, 0x94, 0xf1, 0x93, 0xaf, 0x8a, 0xfa, 0x93, 0xc7, 0x82, 0xdd, 0x8d /* baserom.dol+0x3976a0 */
+.byte 0x9e, 0x82, 0xdd, 0x83, 0x52, 0x81, 0x5b, 0x83, 0x8b, 0x83, 0x6f, 0x83, 0x62, 0x83, 0x4e, 0x93 /* baserom.dol+0x3976b0 */
+.byte 0x6f, 0x98, 0x5e, 0x8e, 0xb8, 0x94, 0x73, 0x20, 0x5b, 0x25, 0x73, 0x5d, 0x0a, 0x00, 0x25, 0x30 /* baserom.dol+0x3976c0 */
+.byte 0x38, 0x78, 0x2d, 0x25, 0x30, 0x38, 0x78, 0x20, 0x25, 0x30, 0x38, 0x78, 0x20, 0x25, 0x30, 0x38 /* baserom.dol+0x3976d0 */
+.byte 0x78, 0x00, 0x42, 0x53, 0x53, 0x83, 0x81, 0x83, 0x82, 0x83, 0x8a, 0x8a, 0x6d, 0x95, 0xdb, 0x8e /* baserom.dol+0x3976e0 */
+.byte 0xb8, 0x94, 0x73, 0x0a, 0x00, 0x83, 0x8a, 0x83, 0x93, 0x83, 0x4e, 0x8e, 0xb8, 0x94, 0x73, 0x0a /* baserom.dol+0x3976f0 */
+.byte 0x00, 0x83, 0x82, 0x83, 0x57, 0x83, 0x85, 0x81, 0x5b, 0x83, 0x8b, 0x83, 0x8a, 0x83, 0x54, 0x83 /* baserom.dol+0x397700 */
+.byte 0x43, 0x83, 0x59, 0x28, 0x8f, 0x6b, 0x8f, 0xac, 0x29, 0x8e, 0xb8, 0x94, 0x73, 0x0a, 0x00, 0x42 /* baserom.dol+0x397710 */
+.byte 0x53, 0x53, 0x83, 0x81, 0x83, 0x82, 0x83, 0x8a, 0x8a, 0x6d, 0x95, 0xdb, 0x8e, 0xb8, 0x94, 0x73 /* baserom.dol+0x397720 */
+.byte 0x20, 0x5b, 0x25, 0x78, 0x5d, 0x0a, 0x00, 0x83, 0x41, 0x83, 0x93, 0x83, 0x8a, 0x83, 0x93, 0x83 /* baserom.dol+0x397730 */
+.byte 0x4e, 0x8e, 0xb8, 0x94, 0x73, 0x20, 0x6d, 0x4d, 0x6f, 0x64, 0x75, 0x6c, 0x65, 0x3d, 0x25, 0x30 /* baserom.dol+0x397740 */
+.byte 0x38, 0x78, 0x20, 0x6d, 0x42, 0x73, 0x73, 0x3d, 0x25, 0x30, 0x38, 0x78, 0x0a, 0x00, 0x3f, 0x3f /* baserom.dol+0x397750 */
+.byte 0x3f, 0x3f, 0x00, 0x4d, 0x45, 0x4d, 0x00, 0x41, 0x52, 0x41, 0x4d, 0x00, 0x44, 0x56, 0x44, 0x00 /* baserom.dol+0x397760 */
+.byte 0x0a, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x3a, 0x20, 0x83, 0x8a, 0x83, 0x93, 0x83, 0x4e, 0x82, 0xb3 /* baserom.dol+0x397770 */
+.byte 0x82, 0xea, 0x82, 0xc4, 0x82, 0xa2, 0x82, 0xc8, 0x82, 0xa2, 0x8a, 0xd6, 0x90, 0x94, 0x82, 0xaa /* baserom.dol+0x397780 */
+.byte 0x8c, 0xc4, 0x82, 0xd1, 0x8f, 0x6f, 0x82, 0xb3, 0x82, 0xea, 0x82, 0xdc, 0x82, 0xb5, 0x82, 0xbd /* baserom.dol+0x397790 */
+.byte 0x2e, 0x0a, 0x00, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x20, 0x20, 0x20, 0x20, 0x20 /* baserom.dol+0x3977a0 */
+.byte 0x20, 0x42, 0x61, 0x63, 0x6b, 0x20, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x20, 0x20, 0x20, 0x20, 0x4c /* baserom.dol+0x3977b0 */
+.byte 0x52, 0x20, 0x53, 0x61, 0x76, 0x65, 0x0a, 0x00, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3a, 0x20 /* baserom.dol+0x3977c0 */
+.byte 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30 /* baserom.dol+0x3977d0 */
+.byte 0x38, 0x78, 0x0a, 0x00 /* baserom.dol+0x3977e0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3977e4 */
+
+
+
+.section .data, "aw"
+/* 803C34B0 0010 .data lbl_803C34B0 strings$4165 */
+.global lbl_803C34B0
+lbl_803C34B0:
+.byte 0x80, 0x39, 0xa7, 0x5e, 0x80, 0x39, 0xa7, 0x63, 0x80, 0x39, 0xa7, 0x67, 0x80, 0x39, 0xa7, 0x6c /* baserom.dol+0x3c04b0 */
+
+/* 803C34C0 0034 .data __vt__20DynamicModuleControl __vt__20DynamicModuleControl */
+.global __vt__20DynamicModuleControl
+__vt__20DynamicModuleControl:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x88, 0xe4, 0x80, 0x26, 0x32, 0x18 /* baserom.dol+0x3c04c0 */
+.byte 0x80, 0x26, 0x30, 0x00, 0x80, 0x26, 0x30, 0x70, 0x80, 0x26, 0x24, 0x70, 0x80, 0x26, 0x2c, 0x0c /* baserom.dol+0x3c04d0 */
+.byte 0x80, 0x26, 0x27, 0xe8, 0x80, 0x26, 0x2a, 0xfc, 0x80, 0x26, 0x2b, 0xc4, 0x80, 0x26, 0x2c, 0x5c /* baserom.dol+0x3c04e0 */
+.byte 0x80, 0x26, 0x2f, 0x28 /* baserom.dol+0x3c04f0 */
+
+/* 803C34F4 0034 .data __vt__24DynamicModuleControlBase __vt__24DynamicModuleControlBase */
+.global __vt__24DynamicModuleControlBase
+__vt__24DynamicModuleControlBase:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x26, 0x21, 0xcc, 0x80, 0x01, 0x88, 0xdc /* baserom.dol+0x3c04f4 */
+.byte 0x80, 0x26, 0x32, 0x10, 0x80, 0x26, 0x32, 0x00, 0x80, 0x26, 0x24, 0x70, 0x80, 0x26, 0x31, 0xfc /* baserom.dol+0x3c0504 */
+.byte 0x80, 0x26, 0x31, 0xdc, 0x80, 0x26, 0x31, 0xf4, 0x80, 0x26, 0x31, 0xe4, 0x80, 0x26, 0x31, 0xd4 /* baserom.dol+0x3c0514 */
+.byte 0x80, 0x26, 0x31, 0xec /* baserom.dol+0x3c0524 */
+
+
+
+.section .sbss, "aw"
+/* 80451138 0004 .sbss mFirst__24DynamicModuleControlBase mFirst__24DynamicModuleControlBase */
+.global mFirst__24DynamicModuleControlBase
+mFirst__24DynamicModuleControlBase:
+.skip 0x4
+
+/* 8045113C 0004 .sbss mLast__24DynamicModuleControlBase mLast__24DynamicModuleControlBase */
+.global mLast__24DynamicModuleControlBase
+mLast__24DynamicModuleControlBase:
+.skip 0x4
+
+/* 80451140 0004 .sbss sAllocBytes__20DynamicModuleControl sAllocBytes__20DynamicModuleControl */
+.global sAllocBytes__20DynamicModuleControl
+sAllocBytes__20DynamicModuleControl:
+.skip 0x4
+
+/* 80451144 0004 .sbss sArchive__20DynamicModuleControl sArchive__20DynamicModuleControl */
+.global sArchive__20DynamicModuleControl
+sArchive__20DynamicModuleControl:
+.skip 0x4
+
+/* 80451148 0004 .sbss sFileCache__20DynamicModuleControl sFileCache__20DynamicModuleControl */
+.global sFileCache__20DynamicModuleControl
+sFileCache__20DynamicModuleControl:
+.skip 0x4
+.skip 0x4 /* padding */
+
+
+
+.section .sdata2, "a"
+/* 80455008 0004 .sdata2 lbl_80455008 @3772 */
+.global lbl_80455008
+lbl_80455008:
+.byte 0x3a, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3e68 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3e6c */
+
+/* 80455010 0008 .sdata2 lbl_80455010 @3774 */
+.global lbl_80455010
+lbl_80455010:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3e70 */
 

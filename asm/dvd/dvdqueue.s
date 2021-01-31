@@ -1,12 +1,12 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8034b874
 
-
+.section .text, "ax"
+/* 8034B874 0038 .text __DVDClearWaitingQueue __DVDClearWaitingQueue */
 .global __DVDClearWaitingQueue
 __DVDClearWaitingQueue:
-/* 8034B874 003487B4  3C 60 80 45 */	lis r3, lbl_8044C998@ha
-/* 8034B878 003487B8  38 63 C9 98 */	addi r3, r3, lbl_8044C998@l
+/* 8034B874 003487B4  3C 60 80 45 */	lis r3, WaitingQueue@ha
+/* 8034B878 003487B8  38 63 C9 98 */	addi r3, r3, WaitingQueue@l
 /* 8034B87C 003487BC  90 63 00 00 */	stw r3, 0(r3)
 /* 8034B880 003487C0  38 A3 00 08 */	addi r5, r3, 8
 /* 8034B884 003487C4  38 83 00 10 */	addi r4, r3, 0x10
@@ -20,6 +20,7 @@ __DVDClearWaitingQueue:
 /* 8034B8A4 003487E4  90 63 00 04 */	stw r3, 4(r3)
 /* 8034B8A8 003487E8  4E 80 00 20 */	blr 
 
+/* 8034B8AC 0068 .text __DVDPushWaitingQueue __DVDPushWaitingQueue */
 .global __DVDPushWaitingQueue
 __DVDPushWaitingQueue:
 /* 8034B8AC 003487EC  7C 08 02 A6 */	mflr r0
@@ -29,10 +30,10 @@ __DVDPushWaitingQueue:
 /* 8034B8BC 003487FC  3B E4 00 00 */	addi r31, r4, 0
 /* 8034B8C0 00348800  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8034B8C4 00348804  3B C3 00 00 */	addi r30, r3, 0
-/* 8034B8C8 00348808  4B FF 1E 2D */	bl __RAS_OSDisableInterrupts_begin 
-/* 8034B8CC 0034880C  3C 80 80 45 */	lis r4, lbl_8044C998@ha
+/* 8034B8C8 00348808  4B FF 1E 2D */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B8CC 0034880C  3C 80 80 45 */	lis r4, WaitingQueue@ha
 /* 8034B8D0 00348810  57 C5 18 38 */	slwi r5, r30, 3
-/* 8034B8D4 00348814  38 04 C9 98 */	addi r0, r4, lbl_8044C998@l
+/* 8034B8D4 00348814  38 04 C9 98 */	addi r0, r4, WaitingQueue@l
 /* 8034B8D8 00348818  7C A0 2A 14 */	add r5, r0, r5
 /* 8034B8DC 0034881C  80 85 00 04 */	lwz r4, 4(r5)
 /* 8034B8E0 00348820  93 E4 00 00 */	stw r31, 0(r4)
@@ -49,27 +50,28 @@ __DVDPushWaitingQueue:
 /* 8034B90C 0034884C  7C 08 03 A6 */	mtlr r0
 /* 8034B910 00348850  4E 80 00 20 */	blr 
 
+/* 8034B914 00A0 .text __DVDPopWaitingQueue __DVDPopWaitingQueue */
 .global __DVDPopWaitingQueue
 __DVDPopWaitingQueue:
 /* 8034B914 00348854  7C 08 02 A6 */	mflr r0
 /* 8034B918 00348858  90 01 00 04 */	stw r0, 4(r1)
 /* 8034B91C 0034885C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034B920 00348860  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8034B924 00348864  4B FF 1D D1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034B924 00348864  4B FF 1D D1 */	bl __RAS_OSDisableInterrupts_begin
 /* 8034B928 00348868  38 00 00 04 */	li r0, 4
-/* 8034B92C 0034886C  3C 80 80 45 */	lis r4, lbl_8044C998@ha
+/* 8034B92C 0034886C  3C 80 80 45 */	lis r4, WaitingQueue@ha
 /* 8034B930 00348870  7C 09 03 A6 */	mtctr r0
-/* 8034B934 00348874  38 84 C9 98 */	addi r4, r4, lbl_8044C998@l
+/* 8034B934 00348874  38 84 C9 98 */	addi r4, r4, WaitingQueue@l
 /* 8034B938 00348878  3B E0 00 00 */	li r31, 0
 lbl_8034B93C:
 /* 8034B93C 0034887C  80 04 00 00 */	lwz r0, 0(r4)
 /* 8034B940 00348880  7C 00 20 40 */	cmplw r0, r4
 /* 8034B944 00348884  41 82 00 48 */	beq lbl_8034B98C
 /* 8034B948 00348888  4B FF 1D D5 */	bl OSRestoreInterrupts
-/* 8034B94C 0034888C  4B FF 1D A9 */	bl __RAS_OSDisableInterrupts_begin 
-/* 8034B950 00348890  3C 80 80 45 */	lis r4, lbl_8044C998@ha
+/* 8034B94C 0034888C  4B FF 1D A9 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B950 00348890  3C 80 80 45 */	lis r4, WaitingQueue@ha
 /* 8034B954 00348894  57 E5 18 38 */	slwi r5, r31, 3
-/* 8034B958 00348898  38 04 C9 98 */	addi r0, r4, lbl_8044C998@l
+/* 8034B958 00348898  38 04 C9 98 */	addi r0, r4, WaitingQueue@l
 /* 8034B95C 0034889C  7C A0 2A 14 */	add r5, r0, r5
 /* 8034B960 003488A0  83 E5 00 00 */	lwz r31, 0(r5)
 /* 8034B964 003488A4  80 1F 00 00 */	lwz r0, 0(r31)
@@ -95,16 +97,17 @@ lbl_8034B9A0:
 /* 8034B9AC 003488EC  7C 08 03 A6 */	mtlr r0
 /* 8034B9B0 003488F0  4E 80 00 20 */	blr 
 
+/* 8034B9B4 0058 .text __DVDCheckWaitingQueue __DVDCheckWaitingQueue */
 .global __DVDCheckWaitingQueue
 __DVDCheckWaitingQueue:
 /* 8034B9B4 003488F4  7C 08 02 A6 */	mflr r0
 /* 8034B9B8 003488F8  90 01 00 04 */	stw r0, 4(r1)
 /* 8034B9BC 003488FC  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034B9C0 00348900  4B FF 1D 35 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034B9C0 00348900  4B FF 1D 35 */	bl __RAS_OSDisableInterrupts_begin
 /* 8034B9C4 00348904  38 00 00 04 */	li r0, 4
-/* 8034B9C8 00348908  3C 80 80 45 */	lis r4, lbl_8044C998@ha
+/* 8034B9C8 00348908  3C 80 80 45 */	lis r4, WaitingQueue@ha
 /* 8034B9CC 0034890C  7C 09 03 A6 */	mtctr r0
-/* 8034B9D0 00348910  38 84 C9 98 */	addi r4, r4, lbl_8044C998@l
+/* 8034B9D0 00348910  38 84 C9 98 */	addi r4, r4, WaitingQueue@l
 lbl_8034B9D4:
 /* 8034B9D4 00348914  80 04 00 00 */	lwz r0, 0(r4)
 /* 8034B9D8 00348918  7C 00 20 40 */	cmplw r0, r4
@@ -123,6 +126,7 @@ lbl_8034B9FC:
 /* 8034BA04 00348944  7C 08 03 A6 */	mtlr r0
 /* 8034BA08 00348948  4E 80 00 20 */	blr 
 
+/* 8034BA0C 0060 .text __DVDDequeueWaitingQueue __DVDDequeueWaitingQueue */
 .global __DVDDequeueWaitingQueue
 __DVDDequeueWaitingQueue:
 /* 8034BA0C 0034894C  7C 08 02 A6 */	mflr r0
@@ -130,7 +134,7 @@ __DVDDequeueWaitingQueue:
 /* 8034BA14 00348954  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8034BA18 00348958  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8034BA1C 0034895C  7C 7F 1B 78 */	mr r31, r3
-/* 8034BA20 00348960  4B FF 1C D5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034BA20 00348960  4B FF 1C D5 */	bl __RAS_OSDisableInterrupts_begin
 /* 8034BA24 00348964  80 9F 00 04 */	lwz r4, 4(r31)
 /* 8034BA28 00348968  80 BF 00 00 */	lwz r5, 0(r31)
 /* 8034BA2C 0034896C  28 04 00 00 */	cmplwi r4, 0
@@ -152,4 +156,12 @@ lbl_8034BA58:
 /* 8034BA60 003489A0  38 21 00 18 */	addi r1, r1, 0x18
 /* 8034BA64 003489A4  7C 08 03 A6 */	mtlr r0
 /* 8034BA68 003489A8  4E 80 00 20 */	blr 
+
+
+
+.section .bss, "aw"
+/* 8044C998 0020 .bss WaitingQueue WaitingQueue */
+.global WaitingQueue
+WaitingQueue:
+.skip 0x20
 

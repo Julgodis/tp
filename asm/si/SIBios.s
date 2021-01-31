@@ -1,12 +1,12 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80344ba0
 
-
+.section .text, "ax"
+/* 80344BA0 0020 .text SIBusy SIBusy */
 .global SIBusy
 SIBusy:
-/* 80344BA0 00341AE0  3C 60 80 3D */	lis r3, lbl_803D11FC@ha
-/* 80344BA4 00341AE4  80 03 11 FC */	lwz r0, lbl_803D11FC@l(r3)
+/* 80344BA0 00341AE0  3C 60 80 3D */	lis r3, Si@ha
+/* 80344BA4 00341AE4  80 03 11 FC */	lwz r0, Si@l(r3)
 /* 80344BA8 00341AE8  2C 00 FF FF */	cmpwi r0, -1
 /* 80344BAC 00341AEC  41 82 00 0C */	beq lbl_80344BB8
 /* 80344BB0 00341AF0  38 60 00 01 */	li r3, 1
@@ -15,18 +15,19 @@ lbl_80344BB8:
 /* 80344BB8 00341AF8  38 60 00 00 */	li r3, 0
 /* 80344BBC 00341AFC  4E 80 00 20 */	blr 
 
+/* 80344BC0 003C .text SIIsChanBusy SIIsChanBusy */
 .global SIIsChanBusy
 SIIsChanBusy:
-/* 80344BC0 00341B00  3C 80 80 45 */	lis r4, lbl_8044C630@ha
+/* 80344BC0 00341B00  3C 80 80 45 */	lis r4, Packet@ha
 /* 80344BC4 00341B04  54 65 28 34 */	slwi r5, r3, 5
-/* 80344BC8 00341B08  38 04 C6 30 */	addi r0, r4, lbl_8044C630@l
+/* 80344BC8 00341B08  38 04 C6 30 */	addi r0, r4, Packet@l
 /* 80344BCC 00341B0C  7C 80 2A 14 */	add r4, r0, r5
 /* 80344BD0 00341B10  80 04 00 00 */	lwz r0, 0(r4)
 /* 80344BD4 00341B14  38 A0 00 01 */	li r5, 1
 /* 80344BD8 00341B18  2C 00 FF FF */	cmpwi r0, -1
 /* 80344BDC 00341B1C  40 82 00 18 */	bne lbl_80344BF4
-/* 80344BE0 00341B20  3C 80 80 3D */	lis r4, lbl_803D11FC@ha
-/* 80344BE4 00341B24  80 04 11 FC */	lwz r0, lbl_803D11FC@l(r4)
+/* 80344BE0 00341B20  3C 80 80 3D */	lis r4, Si@ha
+/* 80344BE4 00341B24  80 04 11 FC */	lwz r0, Si@l(r4)
 /* 80344BE8 00341B28  7C 00 18 00 */	cmpw r0, r3
 /* 80344BEC 00341B2C  41 82 00 08 */	beq lbl_80344BF4
 /* 80344BF0 00341B30  38 A0 00 00 */	li r5, 0
@@ -34,6 +35,7 @@ lbl_80344BF4:
 /* 80344BF4 00341B34  7C A3 2B 78 */	mr r3, r5
 /* 80344BF8 00341B38  4E 80 00 20 */	blr 
 
+/* 80344BFC 02FC .text CompleteTransfer CompleteTransfer */
 .global CompleteTransfer
 CompleteTransfer:
 /* 80344BFC 00341B3C  7C 08 02 A6 */	mflr r0
@@ -58,8 +60,8 @@ CompleteTransfer:
 /* 80344C48 00341B88  41 82 02 74 */	beq lbl_80344EBC
 /* 80344C4C 00341B8C  4B FF DA D1 */	bl __OSGetSystemTime
 /* 80344C50 00341B90  80 DF 00 44 */	lwz r6, 0x44(r31)
-/* 80344C54 00341B94  3C A0 80 45 */	lis r5, lbl_8044C770@ha
-/* 80344C58 00341B98  38 05 C7 70 */	addi r0, r5, lbl_8044C770@l
+/* 80344C54 00341B94  3C A0 80 45 */	lis r5, XferTime@ha
+/* 80344C58 00341B98  38 05 C7 70 */	addi r0, r5, XferTime@l
 /* 80344C5C 00341B9C  54 C5 18 38 */	slwi r5, r6, 3
 /* 80344C60 00341BA0  7C A0 2A 14 */	add r5, r0, r5
 /* 80344C64 00341BA4  90 85 00 04 */	stw r4, 4(r5)
@@ -213,8 +215,8 @@ lbl_80344E80:
 lbl_80344E90:
 /* 80344E90 00341DD0  4B FF D8 8D */	bl __OSGetSystemTime
 /* 80344E94 00341DD4  80 DF 00 44 */	lwz r6, 0x44(r31)
-/* 80344E98 00341DD8  3C A0 80 45 */	lis r5, lbl_8044C750@ha
-/* 80344E9C 00341DDC  38 05 C7 50 */	addi r0, r5, lbl_8044C750@l
+/* 80344E98 00341DD8  3C A0 80 45 */	lis r5, TypeTime@ha
+/* 80344E9C 00341DDC  38 05 C7 50 */	addi r0, r5, TypeTime@l
 /* 80344EA0 00341DE0  54 C5 18 38 */	slwi r5, r6, 3
 /* 80344EA4 00341DE4  7C A0 2A 14 */	add r5, r0, r5
 /* 80344EA8 00341DE8  90 85 00 04 */	stw r4, 4(r5)
@@ -241,18 +243,20 @@ lbl_80344ED8:
 /* 80344EEC 00341E2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80344EF0 00341E30  7C 08 03 A6 */	mtlr r0
 /* 80344EF4 00341E34  4E 80 00 20 */	blr 
+
+/* 80344EF8 0344 .text SIInterruptHandler SIInterruptHandler */
 .global SIInterruptHandler
 SIInterruptHandler:
 /* 80344EF8 00341E38  7C 08 02 A6 */	mflr r0
 /* 80344EFC 00341E3C  3C A0 CC 00 */	lis r5, 0xCC006434@ha
 /* 80344F00 00341E40  90 01 00 04 */	stw r0, 4(r1)
-/* 80344F04 00341E44  3C E0 80 45 */	lis r7, lbl_8044C630@ha
+/* 80344F04 00341E44  3C E0 80 45 */	lis r7, Packet@ha
 /* 80344F08 00341E48  3C C0 80 3D */	lis r6, lbl_803D11B8@ha
 /* 80344F0C 00341E4C  94 21 FF B8 */	stwu r1, -0x48(r1)
 /* 80344F10 00341E50  BE A1 00 1C */	stmw r21, 0x1c(r1)
 /* 80344F14 00341E54  3B C3 00 00 */	addi r30, r3, 0
 /* 80344F18 00341E58  3B E4 00 00 */	addi r31, r4, 0
-/* 80344F1C 00341E5C  3B 87 C6 30 */	addi r28, r7, lbl_8044C630@l
+/* 80344F1C 00341E5C  3B 87 C6 30 */	addi r28, r7, Packet@l
 /* 80344F20 00341E60  3B A6 11 B8 */	addi r29, r6, lbl_803D11B8@l
 /* 80344F24 00341E64  83 05 64 34 */	lwz r24, 0xCC006434@l(r5)
 /* 80344F28 00341E68  57 05 00 02 */	rlwinm r5, r24, 0, 0, 1
@@ -346,14 +350,12 @@ lbl_8034506C:
 /* 80345074 00341FB4  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 80345078 00341FB8  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 8034507C 00341FBC  3C 60 43 1C */	lis r3, 0x431BDE83@ha
-.global GetTypeCallback
 /* 80345080 00341FC0  3C 80 80 34 */	lis r4, GetTypeCallback@ha
 /* 80345084 00341FC4  54 00 F0 BE */	srwi r0, r0, 2
 /* 80345088 00341FC8  38 63 DE 83 */	addi r3, r3, 0x431BDE83@l
 /* 8034508C 00341FCC  7C 03 00 16 */	mulhwu r0, r3, r0
 /* 80345090 00341FD0  54 00 8B FE */	srwi r0, r0, 0xf
 /* 80345094 00341FD4  1C 00 00 41 */	mulli r0, r0, 0x41
-.global GetTypeCallback
 /* 80345098 00341FD8  39 04 5C F8 */	addi r8, r4, GetTypeCallback@l
 /* 8034509C 00341FDC  54 0A E8 FE */	srwi r10, r0, 3
 /* 803450A0 00341FE0  38 77 00 00 */	addi r3, r23, 0
@@ -470,18 +472,19 @@ lbl_80345228:
 /* 80345234 00342174  7C 08 03 A6 */	mtlr r0
 /* 80345238 00342178  4E 80 00 20 */	blr 
 
+/* 8034523C 0098 .text SIEnablePollingInterrupt SIEnablePollingInterrupt */
 .global SIEnablePollingInterrupt
 SIEnablePollingInterrupt:
 /* 8034523C 0034217C  7C 08 02 A6 */	mflr r0
-/* 80345240 00342180  3C 80 80 45 */	lis r4, lbl_8044C630@ha
+/* 80345240 00342180  3C 80 80 45 */	lis r4, Packet@ha
 /* 80345244 00342184  90 01 00 04 */	stw r0, 4(r1)
 /* 80345248 00342188  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8034524C 0034218C  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 80345250 00342190  3B E4 C6 30 */	addi r31, r4, lbl_8044C630@l
+/* 80345250 00342190  3B E4 C6 30 */	addi r31, r4, Packet@l
 /* 80345254 00342194  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80345258 00342198  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 8034525C 0034219C  3B A3 00 00 */	addi r29, r3, 0
-/* 80345260 003421A0  4B FF 84 95 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80345260 003421A0  4B FF 84 95 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345264 003421A4  3C 80 CC 00 */	lis r4, 0xcc00
 /* 80345268 003421A8  84 A4 64 34 */	lwzu r5, 0x6434(r4)
 /* 8034526C 003421AC  54 A0 01 09 */	rlwinm. r0, r5, 0, 4, 4
@@ -515,6 +518,7 @@ lbl_803452A8:
 /* 803452CC 0034220C  7C 08 03 A6 */	mtlr r0
 /* 803452D0 00342210  4E 80 00 20 */	blr 
 
+/* 803452D4 00CC .text SIRegisterPollingHandler SIRegisterPollingHandler */
 .global SIRegisterPollingHandler
 SIRegisterPollingHandler:
 /* 803452D4 00342214  7C 08 02 A6 */	mflr r0
@@ -523,10 +527,10 @@ SIRegisterPollingHandler:
 /* 803452E0 00342220  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 803452E4 00342224  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 803452E8 00342228  7C 7E 1B 78 */	mr r30, r3
-/* 803452EC 0034222C  4B FF 84 09 */	bl __RAS_OSDisableInterrupts_begin 
-/* 803452F0 00342230  3C 80 80 45 */	lis r4, lbl_8044C7D0@ha
+/* 803452EC 0034222C  4B FF 84 09 */	bl __RAS_OSDisableInterrupts_begin
+/* 803452F0 00342230  3C 80 80 45 */	lis r4, RDSTHandler@ha
 /* 803452F4 00342234  38 00 00 04 */	li r0, 4
-/* 803452F8 00342238  38 84 C7 D0 */	addi r4, r4, lbl_8044C7D0@l
+/* 803452F8 00342238  38 84 C7 D0 */	addi r4, r4, RDSTHandler@l
 /* 803452FC 0034223C  7C 09 03 A6 */	mtctr r0
 /* 80345300 00342240  3B E3 00 00 */	addi r31, r3, 0
 /* 80345304 00342244  38 64 00 00 */	addi r3, r4, 0
@@ -548,9 +552,9 @@ lbl_80345338:
 /* 80345338 00342278  80 04 00 00 */	lwz r0, 0(r4)
 /* 8034533C 0034227C  28 00 00 00 */	cmplwi r0, 0
 /* 80345340 00342280  40 82 00 30 */	bne lbl_80345370
-/* 80345344 00342284  3C 60 80 45 */	lis r3, lbl_8044C7D0@ha
+/* 80345344 00342284  3C 60 80 45 */	lis r3, RDSTHandler@ha
 /* 80345348 00342288  54 A4 10 3A */	slwi r4, r5, 2
-/* 8034534C 0034228C  38 03 C7 D0 */	addi r0, r3, lbl_8044C7D0@l
+/* 8034534C 0034228C  38 03 C7 D0 */	addi r0, r3, RDSTHandler@l
 /* 80345350 00342290  7C 60 22 14 */	add r3, r0, r4
 /* 80345354 00342294  93 C3 00 00 */	stw r30, 0(r3)
 /* 80345358 00342298  38 60 00 01 */	li r3, 1
@@ -574,6 +578,7 @@ lbl_80345388:
 /* 80345398 003422D8  7C 08 03 A6 */	mtlr r0
 /* 8034539C 003422DC  4E 80 00 20 */	blr 
 
+/* 803453A0 00F4 .text SIUnregisterPollingHandler SIUnregisterPollingHandler */
 .global SIUnregisterPollingHandler
 SIUnregisterPollingHandler:
 /* 803453A0 003422E0  7C 08 02 A6 */	mflr r0
@@ -582,10 +587,10 @@ SIUnregisterPollingHandler:
 /* 803453AC 003422EC  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 803453B0 003422F0  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 803453B4 003422F4  7C 7E 1B 78 */	mr r30, r3
-/* 803453B8 003422F8  4B FF 83 3D */	bl __RAS_OSDisableInterrupts_begin 
-/* 803453BC 003422FC  3C 80 80 45 */	lis r4, lbl_8044C7D0@ha
+/* 803453B8 003422F8  4B FF 83 3D */	bl __RAS_OSDisableInterrupts_begin
+/* 803453BC 003422FC  3C 80 80 45 */	lis r4, RDSTHandler@ha
 /* 803453C0 00342300  38 00 00 04 */	li r0, 4
-/* 803453C4 00342304  38 A4 C7 D0 */	addi r5, r4, lbl_8044C7D0@l
+/* 803453C4 00342304  38 A4 C7 D0 */	addi r5, r4, RDSTHandler@l
 /* 803453C8 00342308  7C 09 03 A6 */	mtctr r0
 /* 803453CC 0034230C  3B E3 00 00 */	addi r31, r3, 0
 /* 803453D0 00342310  38 65 00 00 */	addi r3, r5, 0
@@ -594,9 +599,9 @@ lbl_803453D8:
 /* 803453D8 00342318  80 03 00 00 */	lwz r0, 0(r3)
 /* 803453DC 0034231C  7C 00 F0 40 */	cmplw r0, r30
 /* 803453E0 00342320  40 82 00 84 */	bne lbl_80345464
-/* 803453E4 00342324  3C 60 80 45 */	lis r3, lbl_8044C7D0@ha
+/* 803453E4 00342324  3C 60 80 45 */	lis r3, RDSTHandler@ha
 /* 803453E8 00342328  54 84 10 3A */	slwi r4, r4, 2
-/* 803453EC 0034232C  38 03 C7 D0 */	addi r0, r3, lbl_8044C7D0@l
+/* 803453EC 0034232C  38 03 C7 D0 */	addi r0, r3, RDSTHandler@l
 /* 803453F0 00342330  7C 60 22 14 */	add r3, r0, r4
 /* 803453F4 00342334  38 00 00 00 */	li r0, 0
 /* 803453F8 00342338  90 03 00 00 */	stw r0, 0(r3)
@@ -643,20 +648,21 @@ lbl_8034547C:
 /* 8034548C 003423CC  7C 08 03 A6 */	mtlr r0
 /* 80345490 003423D0  4E 80 00 20 */	blr 
 
+/* 80345494 00B4 .text SIInit SIInit */
 .global SIInit
 SIInit:
 /* 80345494 003423D4  7C 08 02 A6 */	mflr r0
-/* 80345498 003423D8  3C 80 80 45 */	lis r4, lbl_8044C630@ha
+/* 80345498 003423D8  3C 80 80 45 */	lis r4, Packet@ha
 /* 8034549C 003423DC  90 01 00 04 */	stw r0, 4(r1)
 /* 803454A0 003423E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803454A4 003423E4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803454A8 003423E8  3B E4 C6 30 */	addi r31, r4, lbl_8044C630@l
-/* 803454AC 003423EC  80 6D 84 48 */	lwz r3, lbl_804509C8-_SDA_BASE_(r13)
+/* 803454A8 003423E8  3B E4 C6 30 */	addi r31, r4, Packet@l
+/* 803454AC 003423EC  80 6D 84 48 */	lwz r3, __SIVersion-_SDA_BASE_(r13)
 /* 803454B0 003423F0  4B FF 53 C5 */	bl OSRegisterVersion
 /* 803454B4 003423F4  38 A0 FF FF */	li r5, -1
 /* 803454B8 003423F8  90 BF 00 60 */	stw r5, 0x60(r31)
-/* 803454BC 003423FC  3C 60 80 3D */	lis r3, lbl_803D11FC@ha
-/* 803454C0 00342400  38 83 11 FC */	addi r4, r3, lbl_803D11FC@l
+/* 803454BC 003423FC  3C 60 80 3D */	lis r3, Si@ha
+/* 803454C0 00342400  38 83 11 FC */	addi r4, r3, Si@l
 /* 803454C4 00342404  90 BF 00 40 */	stw r5, 0x40(r31)
 /* 803454C8 00342408  38 00 00 00 */	li r0, 0
 /* 803454CC 0034240C  38 60 00 00 */	li r3, 0
@@ -671,10 +677,8 @@ lbl_803454E4:
 /* 803454EC 0034242C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 803454F0 00342430  40 82 FF F4 */	bne lbl_803454E4
 /* 803454F4 00342434  3C 00 80 00 */	lis r0, 0x8000
-.global SIInterruptHandler
 /* 803454F8 00342438  3C 60 80 34 */	lis r3, SIInterruptHandler@ha
 /* 803454FC 0034243C  90 04 00 00 */	stw r0, 0(r4)
-.global SIInterruptHandler
 /* 80345500 00342440  38 83 4E F8 */	addi r4, r3, SIInterruptHandler@l
 /* 80345504 00342444  38 60 00 14 */	li r3, 0x14
 /* 80345508 00342448  4B FF 82 39 */	bl __OSSetInterruptHandler
@@ -694,6 +698,7 @@ lbl_803454E4:
 /* 80345540 00342480  7C 08 03 A6 */	mtlr r0
 /* 80345544 00342484  4E 80 00 20 */	blr 
 
+/* 80345548 020C .text __SITransfer __SITransfer */
 .global __SITransfer
 __SITransfer:
 /* 80345548 00342488  7C 08 02 A6 */	mflr r0
@@ -708,7 +713,7 @@ __SITransfer:
 /* 8034556C 003424AC  3B C7 00 00 */	addi r30, r7, 0
 /* 80345570 003424B0  3B E8 00 00 */	addi r31, r8, 0
 /* 80345574 003424B4  3B 29 11 B8 */	addi r25, r9, lbl_803D11B8@l
-/* 80345578 003424B8  4B FF 81 7D */	bl __RAS_OSDisableInterrupts_begin 
+/* 80345578 003424B8  4B FF 81 7D */	bl __RAS_OSDisableInterrupts_begin
 /* 8034557C 003424BC  80 19 00 44 */	lwz r0, 0x44(r25)
 /* 80345580 003424C0  2C 00 FF FF */	cmpwi r0, -1
 /* 80345584 003424C4  41 82 00 10 */	beq lbl_80345594
@@ -841,6 +846,7 @@ lbl_80345740:
 /* 8034574C 0034268C  7C 08 03 A6 */	mtlr r0
 /* 80345750 00342690  4E 80 00 20 */	blr 
 
+/* 80345754 007C .text SIGetStatus SIGetStatus */
 .global SIGetStatus
 SIGetStatus:
 /* 80345754 00342694  7C 08 02 A6 */	mflr r0
@@ -849,7 +855,7 @@ SIGetStatus:
 /* 80345760 003426A0  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80345764 003426A4  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80345768 003426A8  7C 7E 1B 78 */	mr r30, r3
-/* 8034576C 003426AC  4B FF 7F 89 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034576C 003426AC  4B FF 7F 89 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345770 003426B0  3C 80 CC 00 */	lis r4, 0xCC006438@ha
 /* 80345774 003426B4  20 1E 00 03 */	subfic r0, r30, 3
 /* 80345778 003426B8  83 E4 64 38 */	lwz r31, 0xCC006438@l(r4)
@@ -876,6 +882,7 @@ lbl_803457B0:
 /* 803457C8 00342708  7C 08 03 A6 */	mtlr r0
 /* 803457CC 0034270C  4E 80 00 20 */	blr 
 
+/* 803457D0 0014 .text SISetCommand SISetCommand */
 .global SISetCommand
 SISetCommand:
 /* 803457D0 00342710  1C 03 00 0C */	mulli r0, r3, 0xc
@@ -884,6 +891,7 @@ SISetCommand:
 /* 803457DC 0034271C  7C 83 01 2E */	stwx r4, r3, r0
 /* 803457E0 00342720  4E 80 00 20 */	blr 
 
+/* 803457E4 0010 .text SITransferCommands SITransferCommands */
 .global SITransferCommands
 SITransferCommands:
 /* 803457E4 00342724  3C 60 CC 00 */	lis r3, 0xCC006438@ha
@@ -891,6 +899,7 @@ SITransferCommands:
 /* 803457EC 0034272C  90 03 64 38 */	stw r0, 0xCC006438@l(r3)
 /* 803457F0 00342730  4E 80 00 20 */	blr 
 
+/* 803457F4 006C .text SISetXY SISetXY */
 .global SISetXY
 SISetXY:
 /* 803457F4 00342734  7C 08 02 A6 */	mflr r0
@@ -900,9 +909,9 @@ SISetXY:
 /* 80345804 00342744  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80345808 00342748  54 7F 80 1E */	slwi r31, r3, 0x10
 /* 8034580C 0034274C  7F FF 03 78 */	or r31, r31, r0
-/* 80345810 00342750  4B FF 7E E5 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80345814 00342754  3C 80 80 3D */	lis r4, lbl_803D11FC@ha
-/* 80345818 00342758  38 84 11 FC */	addi r4, r4, lbl_803D11FC@l
+/* 80345810 00342750  4B FF 7E E5 */	bl __RAS_OSDisableInterrupts_begin
+/* 80345814 00342754  3C 80 80 3D */	lis r4, Si@ha
+/* 80345818 00342758  38 84 11 FC */	addi r4, r4, Si@l
 /* 8034581C 0034275C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80345820 00342760  38 A4 00 04 */	addi r5, r4, 4
 /* 80345824 00342764  3C 80 CC 00 */	lis r4, 0xCC006430@ha
@@ -921,6 +930,7 @@ SISetXY:
 /* 80345858 00342798  7C 08 03 A6 */	mtlr r0
 /* 8034585C 0034279C  4E 80 00 20 */	blr 
 
+/* 80345860 009C .text SIEnablePolling SIEnablePolling */
 .global SIEnablePolling
 SIEnablePolling:
 /* 80345860 003427A0  7C 08 02 A6 */	mflr r0
@@ -929,14 +939,14 @@ SIEnablePolling:
 /* 8034586C 003427AC  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80345870 003427B0  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80345874 003427B4  40 82 00 14 */	bne lbl_80345888
-/* 80345878 003427B8  3C 60 80 3D */	lis r3, lbl_803D11FC@ha
-/* 8034587C 003427BC  38 63 11 FC */	addi r3, r3, lbl_803D11FC@l
+/* 80345878 003427B8  3C 60 80 3D */	lis r3, Si@ha
+/* 8034587C 003427BC  38 63 11 FC */	addi r3, r3, Si@l
 /* 80345880 003427C0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80345884 003427C4  48 00 00 64 */	b lbl_803458E8
 lbl_80345888:
-/* 80345888 003427C8  4B FF 7E 6D */	bl __RAS_OSDisableInterrupts_begin 
-/* 8034588C 003427CC  3C 80 80 3D */	lis r4, lbl_803D11FC@ha
-/* 80345890 003427D0  38 84 11 FC */	addi r4, r4, lbl_803D11FC@l
+/* 80345888 003427C8  4B FF 7E 6D */	bl __RAS_OSDisableInterrupts_begin
+/* 8034588C 003427CC  3C 80 80 3D */	lis r4, Si@ha
+/* 80345890 003427D0  38 84 11 FC */	addi r4, r4, Si@l
 /* 80345894 003427D4  57 FF 46 3E */	srwi r31, r31, 0x18
 /* 80345898 003427D8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8034589C 003427DC  38 A4 00 04 */	addi r5, r4, 4
@@ -965,6 +975,7 @@ lbl_803458E8:
 /* 803458F4 00342834  7C 08 03 A6 */	mtlr r0
 /* 803458F8 00342838  4E 80 00 20 */	blr 
 
+/* 803458FC 006C .text SIDisablePolling SIDisablePolling */
 .global SIDisablePolling
 SIDisablePolling:
 /* 803458FC 0034283C  7C 08 02 A6 */	mflr r0
@@ -973,14 +984,14 @@ SIDisablePolling:
 /* 80345908 00342848  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8034590C 0034284C  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80345910 00342850  40 82 00 14 */	bne lbl_80345924
-/* 80345914 00342854  3C 60 80 3D */	lis r3, lbl_803D11FC@ha
-/* 80345918 00342858  38 63 11 FC */	addi r3, r3, lbl_803D11FC@l
+/* 80345914 00342854  3C 60 80 3D */	lis r3, Si@ha
+/* 80345918 00342858  38 63 11 FC */	addi r3, r3, Si@l
 /* 8034591C 0034285C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80345920 00342860  48 00 00 34 */	b lbl_80345954
 lbl_80345924:
-/* 80345924 00342864  4B FF 7D D1 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80345928 00342868  3C 80 80 3D */	lis r4, lbl_803D11FC@ha
-/* 8034592C 0034286C  38 84 11 FC */	addi r4, r4, lbl_803D11FC@l
+/* 80345924 00342864  4B FF 7D D1 */	bl __RAS_OSDisableInterrupts_begin
+/* 80345928 00342868  3C 80 80 3D */	lis r4, Si@ha
+/* 8034592C 0034286C  38 84 11 FC */	addi r4, r4, Si@l
 /* 80345930 00342870  80 04 00 04 */	lwz r0, 4(r4)
 /* 80345934 00342874  57 FF 46 36 */	rlwinm r31, r31, 8, 0x18, 0x1b
 /* 80345938 00342878  38 A4 00 04 */	addi r5, r4, 4
@@ -997,18 +1008,19 @@ lbl_80345954:
 /* 80345960 003428A0  7C 08 03 A6 */	mtlr r0
 /* 80345964 003428A4  4E 80 00 20 */	blr 
 
+/* 80345968 00D4 .text SIGetResponseRaw SIGetResponseRaw */
 .global SIGetResponseRaw
 SIGetResponseRaw:
 /* 80345968 003428A8  7C 08 02 A6 */	mflr r0
-/* 8034596C 003428AC  3C 80 80 45 */	lis r4, lbl_8044C630@ha
+/* 8034596C 003428AC  3C 80 80 45 */	lis r4, Packet@ha
 /* 80345970 003428B0  90 01 00 04 */	stw r0, 4(r1)
 /* 80345974 003428B4  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 80345978 003428B8  93 E1 00 24 */	stw r31, 0x24(r1)
-/* 8034597C 003428BC  3B E4 C6 30 */	addi r31, r4, lbl_8044C630@l
+/* 8034597C 003428BC  3B E4 C6 30 */	addi r31, r4, Packet@l
 /* 80345980 003428C0  93 C1 00 20 */	stw r30, 0x20(r1)
 /* 80345984 003428C4  3B C3 00 00 */	addi r30, r3, 0
 /* 80345988 003428C8  93 A1 00 1C */	stw r29, 0x1c(r1)
-/* 8034598C 003428CC  4B FF 7D 69 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034598C 003428CC  4B FF 7D 69 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345990 003428D0  3C 80 CC 00 */	lis r4, 0xCC006438@ha
 /* 80345994 003428D4  20 1E 00 03 */	subfic r0, r30, 3
 /* 80345998 003428D8  83 A4 64 38 */	lwz r29, 0xCC006438@l(r4)
@@ -1056,17 +1068,18 @@ lbl_80345A20:
 /* 80345A34 00342974  7C 08 03 A6 */	mtlr r0
 /* 80345A38 00342978  4E 80 00 20 */	blr 
 
+/* 80345A3C 00C4 .text SIGetResponse SIGetResponse */
 .global SIGetResponse
 SIGetResponse:
 /* 80345A3C 0034297C  7C 08 02 A6 */	mflr r0
-/* 80345A40 00342980  3C A0 80 45 */	lis r5, lbl_8044C630@ha
+/* 80345A40 00342980  3C A0 80 45 */	lis r5, Packet@ha
 /* 80345A44 00342984  90 01 00 04 */	stw r0, 4(r1)
 /* 80345A48 00342988  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 80345A4C 0034298C  BF 61 00 14 */	stmw r27, 0x14(r1)
 /* 80345A50 00342990  3B A3 00 00 */	addi r29, r3, 0
 /* 80345A54 00342994  3B C4 00 00 */	addi r30, r4, 0
-/* 80345A58 00342998  3B 85 C6 30 */	addi r28, r5, lbl_8044C630@l
-/* 80345A5C 0034299C  4B FF 7C 99 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80345A58 00342998  3B 85 C6 30 */	addi r28, r5, Packet@l
+/* 80345A5C 0034299C  4B FF 7C 99 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345A60 003429A0  3B E3 00 00 */	addi r31, r3, 0
 /* 80345A64 003429A4  38 7D 00 00 */	addi r3, r29, 0
 /* 80345A68 003429A8  4B FF FC ED */	bl SIGetStatus
@@ -1109,8 +1122,10 @@ lbl_80345AE0:
 /* 80345AF4 00342A34  38 21 00 28 */	addi r1, r1, 0x28
 /* 80345AF8 00342A38  7C 08 03 A6 */	mtlr r0
 /* 80345AFC 00342A3C  4E 80 00 20 */	blr 
-.global AlarmHandler_X1_
-AlarmHandler_X1_:
+
+/* 80345B00 008C .text func_80345B00 AlarmHandler */
+.global func_80345B00
+func_80345B00:
 /* 80345B00 00342A40  7C 08 02 A6 */	mflr r0
 /* 80345B04 00342A44  3C 80 80 45 */	lis r4, lbl_8044C6B0@ha
 /* 80345B08 00342A48  90 01 00 04 */	stw r0, 4(r1)
@@ -1124,9 +1139,9 @@ AlarmHandler_X1_:
 /* 80345B28 00342A68  7C 00 26 70 */	srawi r0, r0, 4
 /* 80345B2C 00342A6C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80345B30 00342A70  7C 00 1A 14 */	add r0, r0, r3
-/* 80345B34 00342A74  3C 60 80 45 */	lis r3, lbl_8044C630@ha
+/* 80345B34 00342A74  3C 60 80 45 */	lis r3, Packet@ha
 /* 80345B38 00342A78  54 04 28 34 */	slwi r4, r0, 5
-/* 80345B3C 00342A7C  38 03 C6 30 */	addi r0, r3, lbl_8044C630@l
+/* 80345B3C 00342A7C  38 03 C6 30 */	addi r0, r3, Packet@l
 /* 80345B40 00342A80  7F E0 22 14 */	add r31, r0, r4
 /* 80345B44 00342A84  80 7F 00 00 */	lwz r3, 0(r31)
 /* 80345B48 00342A88  2C 03 FF FF */	cmpwi r3, -1
@@ -1148,6 +1163,7 @@ lbl_80345B78:
 /* 80345B84 00342AC4  7C 08 03 A6 */	mtlr r0
 /* 80345B88 00342AC8  4E 80 00 20 */	blr 
 
+/* 80345B8C 016C .text SITransfer SITransfer */
 .global SITransfer
 SITransfer:
 /* 80345B8C 00342ACC  7C 08 02 A6 */	mflr r0
@@ -1155,8 +1171,8 @@ SITransfer:
 /* 80345B94 00342AD4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80345B98 00342AD8  BE 61 00 2C */	stmw r19, 0x2c(r1)
 /* 80345B9C 00342ADC  3B 03 00 00 */	addi r24, r3, 0
-/* 80345BA0 00342AE0  3C 60 80 45 */	lis r3, lbl_8044C630@ha
-/* 80345BA4 00342AE4  3A E3 C6 30 */	addi r23, r3, lbl_8044C630@l
+/* 80345BA0 00342AE0  3C 60 80 45 */	lis r3, Packet@ha
+/* 80345BA4 00342AE4  3A E3 C6 30 */	addi r23, r3, Packet@l
 /* 80345BA8 00342AE8  57 00 28 34 */	slwi r0, r24, 5
 /* 80345BAC 00342AEC  3B 24 00 00 */	addi r25, r4, 0
 /* 80345BB0 00342AF0  3B 45 00 00 */	addi r26, r5, 0
@@ -1166,13 +1182,13 @@ SITransfer:
 /* 80345BC0 00342B00  3B E9 00 00 */	addi r31, r9, 0
 /* 80345BC4 00342B04  3B CA 00 00 */	addi r30, r10, 0
 /* 80345BC8 00342B08  7E D7 02 14 */	add r22, r23, r0
-/* 80345BCC 00342B0C  4B FF 7B 29 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80345BCC 00342B0C  4B FF 7B 29 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345BD0 00342B10  80 16 00 00 */	lwz r0, 0(r22)
 /* 80345BD4 00342B14  3A A3 00 00 */	addi r21, r3, 0
 /* 80345BD8 00342B18  2C 00 FF FF */	cmpwi r0, -1
 /* 80345BDC 00342B1C  40 82 00 14 */	bne lbl_80345BF0
-/* 80345BE0 00342B20  3C 60 80 3D */	lis r3, lbl_803D11FC@ha
-/* 80345BE4 00342B24  80 03 11 FC */	lwz r0, lbl_803D11FC@l(r3)
+/* 80345BE0 00342B20  3C 60 80 3D */	lis r3, Si@ha
+/* 80345BE4 00342B24  80 03 11 FC */	lwz r0, Si@l(r3)
 /* 80345BE8 00342B28  7C 00 C0 00 */	cmpw r0, r24
 /* 80345BEC 00342B2C  40 82 00 14 */	bne lbl_80345C00
 lbl_80345BF0:
@@ -1208,11 +1224,9 @@ lbl_80345C3C:
 /* 80345C58 00342B98  1C 18 00 28 */	mulli r0, r24, 0x28
 /* 80345C5C 00342B9C  7F C4 98 10 */	subfc r30, r4, r19
 /* 80345C60 00342BA0  7F E3 A1 10 */	subfe r31, r3, r20
-.global AlarmHandler_X1_
-/* 80345C64 00342BA4  3C 80 80 34 */	lis r4, AlarmHandler_X1_@ha
+/* 80345C64 00342BA4  3C 80 80 34 */	lis r4, func_80345B00@ha
 /* 80345C68 00342BA8  7C 77 02 14 */	add r3, r23, r0
-.global AlarmHandler_X1_
-/* 80345C6C 00342BAC  38 E4 5B 00 */	addi r7, r4, AlarmHandler_X1_@l
+/* 80345C6C 00342BAC  38 E4 5B 00 */	addi r7, r4, func_80345B00@l
 /* 80345C70 00342BB0  38 DE 00 00 */	addi r6, r30, 0
 /* 80345C74 00342BB4  38 BF 00 00 */	addi r5, r31, 0
 /* 80345C78 00342BB8  38 63 00 80 */	addi r3, r3, 0x80
@@ -1250,6 +1264,8 @@ lbl_80345CE4:
 /* 80345CEC 00342C2C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80345CF0 00342C30  7C 08 03 A6 */	mtlr r0
 /* 80345CF4 00342C34  4E 80 00 20 */	blr 
+
+/* 80345CF8 0298 .text GetTypeCallback GetTypeCallback */
 .global GetTypeCallback
 GetTypeCallback:
 /* 80345CF8 00342C38  7C 08 02 A6 */	mflr r0
@@ -1261,9 +1277,9 @@ GetTypeCallback:
 /* 80345D10 00342C50  38 03 12 10 */	addi r0, r3, lbl_803D1210@l
 /* 80345D14 00342C54  57 7D 10 3A */	slwi r29, r27, 2
 /* 80345D18 00342C58  7F C0 EA 14 */	add r30, r0, r29
-/* 80345D1C 00342C5C  3C 60 80 45 */	lis r3, lbl_8044C630@ha
+/* 80345D1C 00342C5C  3C 60 80 45 */	lis r3, Packet@ha
 /* 80345D20 00342C60  3B 44 00 00 */	addi r26, r4, 0
-/* 80345D24 00342C64  3B E3 C6 30 */	addi r31, r3, lbl_8044C630@l
+/* 80345D24 00342C64  3B E3 C6 30 */	addi r31, r3, Packet@l
 /* 80345D28 00342C68  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80345D2C 00342C6C  54 00 06 6E */	rlwinm r0, r0, 0, 0x19, 0x17
 /* 80345D30 00342C70  90 1E 00 00 */	stw r0, 0(r30)
@@ -1278,10 +1294,10 @@ GetTypeCallback:
 /* 80345D54 00342C94  57 40 07 3F */	clrlwi. r0, r26, 0x1c
 /* 80345D58 00342C98  90 65 01 20 */	stw r3, 0x120(r5)
 /* 80345D5C 00342C9C  7C 84 DC 30 */	srw r4, r4, r27
-/* 80345D60 00342CA0  80 6D 91 78 */	lwz r3, lbl_804516F8-_SDA_BASE_(r13)
+/* 80345D60 00342CA0  80 6D 91 78 */	lwz r3, __PADFixBits-_SDA_BASE_(r13)
 /* 80345D64 00342CA4  83 9E 00 00 */	lwz r28, 0(r30)
 /* 80345D68 00342CA8  7C 60 20 78 */	andc r0, r3, r4
-/* 80345D6C 00342CAC  90 0D 91 78 */	stw r0, lbl_804516F8-_SDA_BASE_(r13)
+/* 80345D6C 00342CAC  90 0D 91 78 */	stw r0, __PADFixBits-_SDA_BASE_(r13)
 /* 80345D70 00342CB0  7C 7A 20 38 */	and r26, r3, r4
 /* 80345D74 00342CB4  40 82 00 24 */	bne lbl_80345D98
 /* 80345D78 00342CB8  57 83 00 C8 */	rlwinm r3, r28, 0, 3, 4
@@ -1332,10 +1348,8 @@ lbl_80345DF0:
 /* 80345E1C 00342D5C  7C 9F EA 14 */	add r4, r31, r29
 /* 80345E20 00342D60  94 04 01 F0 */	stwu r0, 0x1f0(r4)
 /* 80345E24 00342D64  38 00 00 80 */	li r0, 0x80
-.global GetTypeCallback
 /* 80345E28 00342D68  3C 60 80 34 */	lis r3, GetTypeCallback@ha
 /* 80345E2C 00342D6C  90 1E 00 00 */	stw r0, 0(r30)
-.global GetTypeCallback
 /* 80345E30 00342D70  39 03 5C F8 */	addi r8, r3, GetTypeCallback@l
 /* 80345E34 00342D74  38 7B 00 00 */	addi r3, r27, 0
 /* 80345E38 00342D78  38 DE 00 00 */	addi r6, r30, 0
@@ -1365,10 +1379,8 @@ lbl_80345E8C:
 /* 80345E90 00342DD0  7C 9F EA 14 */	add r4, r31, r29
 /* 80345E94 00342DD4  94 04 01 F0 */	stwu r0, 0x1f0(r4)
 /* 80345E98 00342DD8  38 00 00 80 */	li r0, 0x80
-.global GetTypeCallback
 /* 80345E9C 00342DDC  3C 60 80 34 */	lis r3, GetTypeCallback@ha
 /* 80345EA0 00342DE0  90 1E 00 00 */	stw r0, 0(r30)
-.global GetTypeCallback
 /* 80345EA4 00342DE4  39 03 5C F8 */	addi r8, r3, GetTypeCallback@l
 /* 80345EA8 00342DE8  38 7B 00 00 */	addi r3, r27, 0
 /* 80345EAC 00342DEC  38 DE 00 00 */	addi r6, r30, 0
@@ -1392,10 +1404,8 @@ lbl_80345EC8:
 /* 80345EF0 00342E30  7C 9F EA 14 */	add r4, r31, r29
 /* 80345EF4 00342E34  94 04 01 F0 */	stwu r0, 0x1f0(r4)
 /* 80345EF8 00342E38  38 00 00 80 */	li r0, 0x80
-.global GetTypeCallback
 /* 80345EFC 00342E3C  3C 60 80 34 */	lis r3, GetTypeCallback@ha
 /* 80345F00 00342E40  90 1E 00 00 */	stw r0, 0(r30)
-.global GetTypeCallback
 /* 80345F04 00342E44  39 03 5C F8 */	addi r8, r3, GetTypeCallback@l
 /* 80345F08 00342E48  38 7B 00 00 */	addi r3, r27, 0
 /* 80345F0C 00342E4C  38 DE 00 00 */	addi r6, r30, 0
@@ -1437,6 +1447,7 @@ lbl_80345F7C:
 /* 80345F88 00342EC8  7C 08 03 A6 */	mtlr r0
 /* 80345F8C 00342ECC  4E 80 00 20 */	blr 
 
+/* 80345F90 01C4 .text SIGetType SIGetType */
 .global SIGetType
 SIGetType:
 /* 80345F90 00342ED0  7C 08 02 A6 */	mflr r0
@@ -1444,7 +1455,7 @@ SIGetType:
 /* 80345F98 00342ED8  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 80345F9C 00342EDC  BF 61 00 14 */	stmw r27, 0x14(r1)
 /* 80345FA0 00342EE0  7C 7B 1B 78 */	mr r27, r3
-/* 80345FA4 00342EE4  4B FF 77 51 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80345FA4 00342EE4  4B FF 77 51 */	bl __RAS_OSDisableInterrupts_begin
 /* 80345FA8 00342EE8  3C 80 80 3D */	lis r4, lbl_803D1210@ha
 /* 80345FAC 00342EEC  57 65 10 3A */	slwi r5, r27, 2
 /* 80345FB0 00342EF0  38 04 12 10 */	addi r0, r4, lbl_803D1210@l
@@ -1452,13 +1463,13 @@ SIGetType:
 /* 80345FB8 00342EF8  83 9E 00 00 */	lwz r28, 0(r30)
 /* 80345FBC 00342EFC  7C 7D 1B 78 */	mr r29, r3
 /* 80345FC0 00342F00  4B FF C7 5D */	bl __OSGetSystemTime
-/* 80345FC4 00342F04  3C A0 80 45 */	lis r5, lbl_8044C750@ha
+/* 80345FC4 00342F04  3C A0 80 45 */	lis r5, TypeTime@ha
 /* 80345FC8 00342F08  57 66 18 38 */	slwi r6, r27, 3
-/* 80345FCC 00342F0C  38 05 C7 50 */	addi r0, r5, lbl_8044C750@l
+/* 80345FCC 00342F0C  38 05 C7 50 */	addi r0, r5, TypeTime@l
 /* 80345FD0 00342F10  7F E0 32 14 */	add r31, r0, r6
 /* 80345FD4 00342F14  80 DF 00 04 */	lwz r6, 4(r31)
-/* 80345FD8 00342F18  3C A0 80 3D */	lis r5, lbl_803D11FC@ha
-/* 80345FDC 00342F1C  38 A5 11 FC */	addi r5, r5, lbl_803D11FC@l
+/* 80345FD8 00342F18  3C A0 80 3D */	lis r5, Si@ha
+/* 80345FDC 00342F1C  38 A5 11 FC */	addi r5, r5, Si@l
 /* 80345FE0 00342F20  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80345FE4 00342F24  7C 86 20 10 */	subfc r4, r6, r4
 /* 80345FE8 00342F28  7C 00 19 10 */	subfe r0, r0, r3
@@ -1531,11 +1542,9 @@ lbl_803460E0:
 /* 803460E0 00343020  4B FF C6 3D */	bl __OSGetSystemTime
 /* 803460E4 00343024  90 9F 00 04 */	stw r4, 4(r31)
 /* 803460E8 00343028  3C 80 43 1C */	lis r4, 0x431BDE83@ha
-.global GetTypeCallback
 /* 803460EC 0034302C  3C A0 80 34 */	lis r5, GetTypeCallback@ha
 /* 803460F0 00343030  90 7F 00 00 */	stw r3, 0(r31)
 /* 803460F4 00343034  3C 60 80 00 */	lis r3, 0x800000F8@ha
-.global GetTypeCallback
 /* 803460F8 00343038  39 05 5C F8 */	addi r8, r5, GetTypeCallback@l
 /* 803460FC 0034303C  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 80346100 00343040  38 84 DE 83 */	addi r4, r4, 0x431BDE83@l
@@ -1561,6 +1570,7 @@ lbl_80346140:
 /* 8034614C 0034308C  7C 08 03 A6 */	mtlr r0
 /* 80346150 00343090  4E 80 00 20 */	blr 
 
+/* 80346154 013C .text SIGetTypeAsync SIGetTypeAsync */
 .global SIGetTypeAsync
 SIGetTypeAsync:
 /* 80346154 00343094  7C 08 02 A6 */	mflr r0
@@ -1572,7 +1582,7 @@ SIGetTypeAsync:
 /* 8034616C 003430AC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80346170 003430B0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80346174 003430B4  3B 83 00 00 */	addi r28, r3, 0
-/* 80346178 003430B8  4B FF 75 7D */	bl __RAS_OSDisableInterrupts_begin 
+/* 80346178 003430B8  4B FF 75 7D */	bl __RAS_OSDisableInterrupts_begin
 /* 8034617C 003430BC  3B C3 00 00 */	addi r30, r3, 0
 /* 80346180 003430C0  38 7C 00 00 */	addi r3, r28, 0
 /* 80346184 003430C4  4B FF FE 0D */	bl SIGetType
@@ -1584,9 +1594,9 @@ SIGetTypeAsync:
 /* 8034619C 003430DC  3B A3 00 00 */	addi r29, r3, 0
 /* 803461A0 003430E0  54 00 06 31 */	rlwinm. r0, r0, 0, 0x18, 0x18
 /* 803461A4 003430E4  41 82 00 AC */	beq lbl_80346250
-/* 803461A8 003430E8  3C 60 80 45 */	lis r3, lbl_8044C790@ha
+/* 803461A8 003430E8  3C 60 80 45 */	lis r3, TypeCallback@ha
 /* 803461AC 003430EC  57 84 20 36 */	slwi r4, r28, 4
-/* 803461B0 003430F0  38 03 C7 90 */	addi r0, r3, lbl_8044C790@l
+/* 803461B0 003430F0  38 03 C7 90 */	addi r0, r3, TypeCallback@l
 /* 803461B4 003430F4  7C 80 22 14 */	add r4, r0, r4
 /* 803461B8 003430F8  80 04 00 00 */	lwz r0, 0(r4)
 /* 803461BC 003430FC  38 A0 00 00 */	li r5, 0
@@ -1647,4 +1657,173 @@ lbl_80346264:
 /* 80346284 003431C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80346288 003431C8  7C 08 03 A6 */	mtlr r0
 /* 8034628C 003431CC  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D11B8 0044 .data lbl_803D11B8 @1 */
+.global lbl_803D11B8
+lbl_803D11B8:
+.byte 0x3c, 0x3c, 0x20, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x53, 0x44, 0x4b, 0x20, 0x2d /* baserom.dol+0x3ce1b8 */
+.byte 0x20, 0x53, 0x49, 0x09, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6c /* baserom.dol+0x3ce1c8 */
+.byte 0x64, 0x3a, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20, 0x30 /* baserom.dol+0x3ce1d8 */
+.byte 0x34, 0x3a, 0x31, 0x34, 0x3a, 0x31, 0x36, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31, 0x29 /* baserom.dol+0x3ce1e8 */
+.byte 0x20, 0x3e, 0x3e, 0x00 /* baserom.dol+0x3ce1f8 */
+
+/* 803D11FC 0014 .data Si Si */
+.global Si
+Si:
+.byte 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce1fc */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce20c */
+
+/* 803D1210 0010 .data lbl_803D1210 Type */
+.global lbl_803D1210
+lbl_803D1210:
+.byte 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x08 /* baserom.dol+0x3ce210 */
+
+/* 803D1220 000C .data lbl_803D1220 @457 */
+.global lbl_803D1220
+lbl_803D1220:
+.byte 0x4e, 0x6f, 0x20, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x00 /* baserom.dol+0x3ce220 */
+
+/* 803D122C 000F .data lbl_803D122C @459 */
+.global lbl_803D122C
+lbl_803D122C:
+.byte 0x4e, 0x36, 0x34, 0x20, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c, 0x6c, 0x65, 0x72, 0x00 /* baserom.dol+0x3ce22c */
+.byte 0x00 /* baserom.dol+0x3ce23b */
+
+/* 803D123C 000F .data lbl_803D123C @460 */
+.global lbl_803D123C
+lbl_803D123C:
+.byte 0x4e, 0x36, 0x34, 0x20, 0x6d, 0x69, 0x63, 0x72, 0x6f, 0x70, 0x68, 0x6f, 0x6e, 0x65, 0x00 /* baserom.dol+0x3ce23c */
+.byte 0x00 /* baserom.dol+0x3ce24b */
+
+/* 803D124C 000D .data lbl_803D124C @461 */
+.global lbl_803D124C
+lbl_803D124C:
+.byte 0x4e, 0x36, 0x34, 0x20, 0x6b, 0x65, 0x79, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x00 /* baserom.dol+0x3ce24c */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce259 */
+
+/* 803D125C 000A .data lbl_803D125C @462 */
+.global lbl_803D125C
+lbl_803D125C:
+.byte 0x4e, 0x36, 0x34, 0x20, 0x6d, 0x6f, 0x75, 0x73, 0x65, 0x00 /* baserom.dol+0x3ce25c */
+.byte 0x00, 0x00 /* baserom.dol+0x3ce266 */
+
+/* 803D1268 0010 .data lbl_803D1268 @463 */
+.global lbl_803D1268
+lbl_803D1268:
+.byte 0x47, 0x61, 0x6d, 0x65, 0x42, 0x6f, 0x79, 0x20, 0x41, 0x64, 0x76, 0x61, 0x6e, 0x63, 0x65, 0x00 /* baserom.dol+0x3ce268 */
+
+/* 803D1278 0014 .data lbl_803D1278 @464 */
+.global lbl_803D1278
+lbl_803D1278:
+.byte 0x53, 0x74, 0x61, 0x6e, 0x64, 0x61, 0x72, 0x64, 0x20, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c /* baserom.dol+0x3ce278 */
+.byte 0x6c, 0x65, 0x72, 0x00 /* baserom.dol+0x3ce288 */
+
+/* 803D128C 0012 .data lbl_803D128C @465 */
+.global lbl_803D128C
+lbl_803D128C:
+.byte 0x57, 0x69, 0x72, 0x65, 0x6c, 0x65, 0x73, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65 /* baserom.dol+0x3ce28c */
+.byte 0x72, 0x00 /* baserom.dol+0x3ce29c */
+.byte 0x00, 0x00 /* baserom.dol+0x3ce29e */
+
+/* 803D12A0 0014 .data lbl_803D12A0 @466 */
+.global lbl_803D12A0
+lbl_803D12A0:
+.byte 0x57, 0x61, 0x76, 0x65, 0x42, 0x69, 0x72, 0x64, 0x20, 0x63, 0x6f, 0x6e, 0x74, 0x72, 0x6f, 0x6c /* baserom.dol+0x3ce2a0 */
+.byte 0x6c, 0x65, 0x72, 0x00 /* baserom.dol+0x3ce2b0 */
+
+/* 803D12B4 0009 .data lbl_803D12B4 @467 */
+.global lbl_803D12B4
+lbl_803D12B4:
+.byte 0x4b, 0x65, 0x79, 0x62, 0x6f, 0x61, 0x72, 0x64, 0x00 /* baserom.dol+0x3ce2b4 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce2bd */
+
+/* 803D12C0 0009 .data lbl_803D12C0 @468 */
+.global lbl_803D12C0
+lbl_803D12C0:
+.byte 0x53, 0x74, 0x65, 0x65, 0x72, 0x69, 0x6e, 0x67, 0x00 /* baserom.dol+0x3ce2c0 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce2c9 */
+
+
+
+.section .bss, "aw"
+/* 8044C630 0080 .bss Packet Packet */
+.global Packet
+Packet:
+.skip 0x80
+
+/* 8044C6B0 00A0 .bss lbl_8044C6B0 Alarm */
+.global lbl_8044C6B0
+lbl_8044C6B0:
+.skip 0xa0
+
+/* 8044C750 0020 .bss TypeTime TypeTime */
+.global TypeTime
+TypeTime:
+.skip 0x20
+
+/* 8044C770 0020 .bss XferTime XferTime */
+.global XferTime
+XferTime:
+.skip 0x20
+
+/* 8044C790 0040 .bss TypeCallback TypeCallback */
+.global TypeCallback
+TypeCallback:
+.skip 0x40
+
+/* 8044C7D0 0010 .bss RDSTHandler RDSTHandler */
+.global RDSTHandler
+RDSTHandler:
+.skip 0x10
+
+/* 8044C7E0 0010 .bss InputBufferValid InputBufferValid */
+.global InputBufferValid
+InputBufferValid:
+.skip 0x10
+
+/* 8044C7F0 0020 .bss InputBuffer InputBuffer */
+.global InputBuffer
+InputBuffer:
+.skip 0x20
+
+/* 8044C810 0010 .bss InputBufferVcount InputBufferVcount */
+.global InputBufferVcount
+InputBufferVcount:
+.skip 0x10
+
+/* 8044C820 0010 .bss lbl_8044C820 cmdFixDevice$327 */
+.global lbl_8044C820
+lbl_8044C820:
+.skip 0x10
+
+
+
+.section .sdata, "a"
+/* 804509C8 0004 .sdata __SIVersion __SIVersion */
+.global __SIVersion
+__SIVersion:
+.byte 0x80, 0x3d, 0x11, 0xb8 /* baserom.dol+0x3d0728 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d072c */
+
+
+
+.section .sbss, "aw"
+/* 804516F0 0004 .sbss lbl_804516F0 cmdTypeAndStatus$78 */
+.global lbl_804516F0
+lbl_804516F0:
+.skip 0x4
+
+/* 804516F4 0004 .sbss lbl_804516F4 cmdTypeAndStatus$372 */
+.global lbl_804516F4
+lbl_804516F4:
+.skip 0x4
+
+/* 804516F8 0004 .sbss __PADFixBits __PADFixBits */
+.global __PADFixBits
+__PADFixBits:
+.skip 0x4
+.skip 0x4 /* padding */
 

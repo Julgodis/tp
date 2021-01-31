@@ -1,17 +1,17 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80325a18
 
-
-.global J3DJointTree
-J3DJointTree:
+.section .text, "ax"
+/* 80325A18 0084 .text __ct__12J3DJointTreeFv __ct__12J3DJointTreeFv */
+.global __ct__12J3DJointTreeFv
+__ct__12J3DJointTreeFv:
 /* 80325A18 00322958  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80325A1C 0032295C  7C 08 02 A6 */	mflr r0
 /* 80325A20 00322960  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80325A24 00322964  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80325A28 00322968  7C 7F 1B 78 */	mr r31, r3
-/* 80325A2C 0032296C  3C 60 80 3D */	lis r3, lbl_803CECF4@ha
-/* 80325A30 00322970  38 03 EC F4 */	addi r0, r3, lbl_803CECF4@l
+/* 80325A2C 0032296C  3C 60 80 3D */	lis r3, __vt__12J3DJointTree@ha
+/* 80325A30 00322970  38 03 EC F4 */	addi r0, r3, __vt__12J3DJointTree@l
 /* 80325A34 00322974  90 1F 00 00 */	stw r0, 0(r31)
 /* 80325A38 00322978  38 00 00 00 */	li r0, 0
 /* 80325A3C 0032297C  90 1F 00 04 */	stw r0, 4(r31)
@@ -28,7 +28,7 @@ J3DJointTree:
 /* 80325A68 003229A8  90 1F 00 2C */	stw r0, 0x2c(r31)
 /* 80325A6C 003229AC  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 80325A70 003229B0  38 7F 00 34 */	addi r3, r31, 0x34
-/* 80325A74 003229B4  4B FE BB 6D */	bl J3DDrawMtxData
+/* 80325A74 003229B4  4B FE BB 6D */	bl __ct__14J3DDrawMtxDataFv
 /* 80325A78 003229B8  38 00 00 00 */	li r0, 0
 /* 80325A7C 003229BC  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80325A80 003229C0  90 1F 00 44 */	stw r0, 0x44(r31)
@@ -39,8 +39,9 @@ J3DJointTree:
 /* 80325A94 003229D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80325A98 003229D8  4E 80 00 20 */	blr 
 
-.global J3DJointTree_NS_makeHierarchy
-J3DJointTree_NS_makeHierarchy:
+/* 80325A9C 0164 .text makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable */
+.global makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable
+makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable:
 /* 80325A9C 003229DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80325AA0 003229E0  7C 08 02 A6 */	mflr r0
 /* 80325AA4 003229E4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -73,7 +74,7 @@ lbl_80325AC8:
 /* 80325B0C 00322A4C  7F 25 CB 78 */	mr r5, r25
 /* 80325B10 00322A50  7F 46 D3 78 */	mr r6, r26
 /* 80325B14 00322A54  7F 67 DB 78 */	mr r7, r27
-/* 80325B18 00322A58  4B FF FF 85 */	bl J3DJointTree_NS_makeHierarchy
+/* 80325B18 00322A58  4B FF FF 85 */	bl makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable
 /* 80325B1C 00322A5C  48 00 00 64 */	b lbl_80325B80
 /* 80325B20 00322A60  38 04 00 04 */	addi r0, r4, 4
 /* 80325B24 00322A64  90 19 00 00 */	stw r0, 0(r25)
@@ -110,7 +111,7 @@ lbl_80325B80:
 lbl_80325B9C:
 /* 80325B9C 00322ADC  7F 03 C3 78 */	mr r3, r24
 /* 80325BA0 00322AE0  7F C4 F3 78 */	mr r4, r30
-/* 80325BA4 00322AE4  48 00 95 99 */	bl J3DJoint_NS_appendChild
+/* 80325BA4 00322AE4  48 00 95 99 */	bl appendChild__8J3DJointFP8J3DJoint
 /* 80325BA8 00322AE8  4B FF FF 20 */	b lbl_80325AC8
 lbl_80325BAC:
 /* 80325BAC 00322AEC  28 1D 00 00 */	cmplwi r29, 0
@@ -138,8 +139,9 @@ lbl_80325BE8:
 /* 80325BF8 00322B38  38 21 00 30 */	addi r1, r1, 0x30
 /* 80325BFC 00322B3C  4E 80 00 20 */	blr 
 
-.global J3DJointTree_NS_findImportantMtxIndex
-J3DJointTree_NS_findImportantMtxIndex:
+/* 80325C00 00AC .text findImportantMtxIndex__12J3DJointTreeFv findImportantMtxIndex__12J3DJointTreeFv */
+.global findImportantMtxIndex__12J3DJointTreeFv
+findImportantMtxIndex__12J3DJointTreeFv:
 /* 80325C00 00322B40  A0 E3 00 1E */	lhz r7, 0x1e(r3)
 /* 80325C04 00322B44  38 80 00 00 */	li r4, 0
 /* 80325C08 00322B48  38 A0 00 00 */	li r5, 0
@@ -190,6 +192,10 @@ lbl_80325CA0:
 /* 80325CA0 00322BE0  7C 0B 38 00 */	cmpw r11, r7
 /* 80325CA4 00322BE4  41 80 FF A8 */	blt lbl_80325C4C
 /* 80325CA8 00322BE8  4E 80 00 20 */	blr 
+
+/* 80325CAC 0070 .text calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf */
+.global calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf
+calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf:
 /* 80325CAC 00322BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80325CB0 00322BF0  7C 08 02 A6 */	mflr r0
 /* 80325CB4 00322BF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -205,13 +211,13 @@ lbl_80325CA0:
 /* 80325CDC 00322C1C  7D 89 03 A6 */	mtctr r12
 /* 80325CE0 00322C20  4E 80 04 21 */	bctrl 
 /* 80325CE4 00322C24  7F E3 FB 78 */	mr r3, r31
-/* 80325CE8 00322C28  48 00 00 35 */	bl J3DMtxCalc_NS_setMtxBuffer
+/* 80325CE8 00322C28  48 00 00 35 */	bl setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer
 /* 80325CEC 00322C2C  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 80325CF0 00322C30  28 03 00 00 */	cmplwi r3, 0
 /* 80325CF4 00322C34  41 82 00 10 */	beq lbl_80325D04
 /* 80325CF8 00322C38  80 1E 00 14 */	lwz r0, 0x14(r30)
-/* 80325CFC 00322C3C  90 0D 90 78 */	stw r0, lbl_804515F8-_SDA_BASE_(r13)
-/* 80325D00 00322C40  48 00 96 F9 */	bl J3DJoint_NS_recursiveCalc
+/* 80325CFC 00322C3C  90 0D 90 78 */	stw r0, mCurrentMtxCalc__8J3DJoint-_SDA_BASE_(r13)
+/* 80325D00 00322C40  48 00 96 F9 */	bl recursiveCalc__8J3DJointFv
 lbl_80325D04:
 /* 80325D04 00322C44  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80325D08 00322C48  83 C1 00 08 */	lwz r30, 8(r1)
@@ -220,10 +226,15 @@ lbl_80325D04:
 /* 80325D14 00322C54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80325D18 00322C58  4E 80 00 20 */	blr 
 
-.global J3DMtxCalc_NS_setMtxBuffer
-J3DMtxCalc_NS_setMtxBuffer:
-/* 80325D1C 00322C5C  90 6D 90 70 */	stw r3, lbl_804515F0-_SDA_BASE_(r13)
+/* 80325D1C 0008 .text setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer */
+.global setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer
+setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer:
+/* 80325D1C 00322C5C  90 6D 90 70 */	stw r3, mMtxBuffer__10J3DMtxCalc-_SDA_BASE_(r13)
 /* 80325D20 00322C60  4E 80 00 20 */	blr 
+
+/* 80325D24 0064 .text __dt__12J3DJointTreeFv __dt__12J3DJointTreeFv */
+.global __dt__12J3DJointTreeFv
+__dt__12J3DJointTreeFv:
 /* 80325D24 00322C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80325D28 00322C68  7C 08 02 A6 */	mflr r0
 /* 80325D2C 00322C6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -232,12 +243,12 @@ J3DMtxCalc_NS_setMtxBuffer:
 /* 80325D38 00322C78  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80325D3C 00322C7C  7C 9F 23 78 */	mr r31, r4
 /* 80325D40 00322C80  41 82 00 2C */	beq lbl_80325D6C
-/* 80325D44 00322C84  3C 60 80 3D */	lis r3, lbl_803CECF4@ha
-/* 80325D48 00322C88  38 03 EC F4 */	addi r0, r3, lbl_803CECF4@l
+/* 80325D44 00322C84  3C 60 80 3D */	lis r3, __vt__12J3DJointTree@ha
+/* 80325D48 00322C88  38 03 EC F4 */	addi r0, r3, __vt__12J3DJointTree@l
 /* 80325D4C 00322C8C  90 1E 00 00 */	stw r0, 0(r30)
 /* 80325D50 00322C90  38 7E 00 34 */	addi r3, r30, 0x34
 /* 80325D54 00322C94  38 80 FF FF */	li r4, -1
-/* 80325D58 00322C98  4B FE B8 9D */	bl J3DDrawMtxData_NS_dtor
+/* 80325D58 00322C98  4B FE B8 9D */	bl __dt__14J3DDrawMtxDataFv
 /* 80325D5C 00322C9C  7F E0 07 35 */	extsh. r0, r31
 /* 80325D60 00322CA0  40 81 00 0C */	ble lbl_80325D6C
 /* 80325D64 00322CA4  7F C3 F3 78 */	mr r3, r30
@@ -250,4 +261,31 @@ lbl_80325D6C:
 /* 80325D7C 00322CBC  7C 08 03 A6 */	mtlr r0
 /* 80325D80 00322CC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80325D84 00322CC4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CECA8 004C .data lbl_803CECA8 @871 */
+.global lbl_803CECA8
+lbl_803CECA8:
+.byte 0x80, 0x32, 0x5b, 0x2c, 0x80, 0x32, 0x5a, 0xfc, 0x80, 0x32, 0x5b, 0x20, 0x80, 0x32, 0x5b, 0x80 /* baserom.dol+0x3cbca8 */
+.byte 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80 /* baserom.dol+0x3cbcb8 */
+.byte 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80 /* baserom.dol+0x3cbcc8 */
+.byte 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80, 0x80, 0x32, 0x5b, 0x80 /* baserom.dol+0x3cbcd8 */
+.byte 0x80, 0x32, 0x5b, 0x30, 0x80, 0x32, 0x5b, 0x4c, 0x80, 0x32, 0x5b, 0x68 /* baserom.dol+0x3cbce8 */
+
+/* 803CECF4 0010 .data __vt__12J3DJointTree __vt__12J3DJointTree */
+.global __vt__12J3DJointTree
+__vt__12J3DJointTree:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x32, 0x5c, 0xac, 0x80, 0x32, 0x5d, 0x24 /* baserom.dol+0x3cbcf4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cbd04 */
+
+
+
+.section .sdata2, "a"
+/* 80456418 0004 .sdata2 lbl_80456418 @903 */
+.global lbl_80456418
+lbl_80456418:
+.byte 0xbd, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d5278 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d527c */
 

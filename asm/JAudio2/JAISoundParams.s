@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a2db4
 
-
+.section .text, "ax"
+/* 802A2DB4 0058 .text moveVolume__18JAISoundParamsMoveFfUl moveVolume__18JAISoundParamsMoveFfUl */
 .global moveVolume__18JAISoundParamsMoveFfUl
 moveVolume__18JAISoundParamsMoveFfUl:
 /* 802A2DB4 0029FCF4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -30,8 +30,9 @@ lbl_802A2E04:
 /* 802A2E04 0029FD44  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2E08 0029FD48  4E 80 00 20 */	blr 
 
-.global JAISoundParamsMove_NS_movePitch
-JAISoundParamsMove_NS_movePitch:
+/* 802A2E0C 0058 .text movePitch__18JAISoundParamsMoveFfUl movePitch__18JAISoundParamsMoveFfUl */
+.global movePitch__18JAISoundParamsMoveFfUl
+movePitch__18JAISoundParamsMoveFfUl:
 /* 802A2E0C 0029FD4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2E10 0029FD50  28 04 00 00 */	cmplwi r4, 0
 /* 802A2E14 0029FD54  40 82 00 14 */	bne lbl_802A2E28
@@ -57,8 +58,9 @@ lbl_802A2E5C:
 /* 802A2E5C 0029FD9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2E60 0029FDA0  4E 80 00 20 */	blr 
 
-.global JAISoundParamsMove_NS_moveFxMix
-JAISoundParamsMove_NS_moveFxMix:
+/* 802A2E64 0058 .text moveFxMix__18JAISoundParamsMoveFfUl moveFxMix__18JAISoundParamsMoveFfUl */
+.global moveFxMix__18JAISoundParamsMoveFfUl
+moveFxMix__18JAISoundParamsMoveFfUl:
 /* 802A2E64 0029FDA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2E68 0029FDA8  28 04 00 00 */	cmplwi r4, 0
 /* 802A2E6C 0029FDAC  40 82 00 14 */	bne lbl_802A2E80
@@ -84,8 +86,9 @@ lbl_802A2EB4:
 /* 802A2EB4 0029FDF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2EB8 0029FDF8  4E 80 00 20 */	blr 
 
-.global JAISoundParamsMove_NS_movePan
-JAISoundParamsMove_NS_movePan:
+/* 802A2EBC 0058 .text movePan__18JAISoundParamsMoveFfUl movePan__18JAISoundParamsMoveFfUl */
+.global movePan__18JAISoundParamsMoveFfUl
+movePan__18JAISoundParamsMoveFfUl:
 /* 802A2EBC 0029FDFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2EC0 0029FE00  28 04 00 00 */	cmplwi r4, 0
 /* 802A2EC4 0029FE04  40 82 00 14 */	bne lbl_802A2ED8
@@ -111,8 +114,9 @@ lbl_802A2F0C:
 /* 802A2F0C 0029FE4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2F10 0029FE50  4E 80 00 20 */	blr 
 
-.global JAISoundParamsMove_NS_moveDolby
-JAISoundParamsMove_NS_moveDolby:
+/* 802A2F14 0058 .text moveDolby__18JAISoundParamsMoveFfUl moveDolby__18JAISoundParamsMoveFfUl */
+.global moveDolby__18JAISoundParamsMoveFfUl
+moveDolby__18JAISoundParamsMoveFfUl:
 /* 802A2F14 0029FE54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2F18 0029FE58  28 04 00 00 */	cmplwi r4, 0
 /* 802A2F1C 0029FE5C  40 82 00 14 */	bne lbl_802A2F30
@@ -137,4 +141,12 @@ lbl_802A2F30:
 lbl_802A2F64:
 /* 802A2F64 0029FEA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2F68 0029FEA8  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 804557E8 0008 .sdata2 lbl_804557E8 @292 */
+.global lbl_804557E8
+lbl_804557E8:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4648 */
 

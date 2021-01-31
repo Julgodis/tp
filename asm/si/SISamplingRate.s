@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80346290
 
-
+.section .text, "ax"
+/* 80346290 00E4 .text SISetSamplingRate SISetSamplingRate */
 .global SISetSamplingRate
 SISetSamplingRate:
 /* 80346290 003431D0  7C 08 02 A6 */	mflr r0
@@ -13,13 +13,13 @@ SISetSamplingRate:
 /* 803462A4 003431E4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803462A8 003431E8  3B A3 00 00 */	addi r29, r3, 0
 /* 803462AC 003431EC  28 1D 00 0B */	cmplwi r29, 0xb
-/* 803462B0 003431F0  3C 60 80 3D */	lis r3, lbl_803D12D0@ha
-/* 803462B4 003431F4  3B E3 12 D0 */	addi r31, r3, lbl_803D12D0@l
+/* 803462B0 003431F0  3C 60 80 3D */	lis r3, XYNTSC@ha
+/* 803462B4 003431F4  3B E3 12 D0 */	addi r31, r3, XYNTSC@l
 /* 803462B8 003431F8  40 81 00 08 */	ble lbl_803462C0
 /* 803462BC 003431FC  3B A0 00 0B */	li r29, 0xb
 lbl_803462C0:
-/* 803462C0 00343200  4B FF 74 35 */	bl __RAS_OSDisableInterrupts_begin 
-/* 803462C4 00343204  93 AD 91 80 */	stw r29, lbl_80451700-_SDA_BASE_(r13)
+/* 803462C0 00343200  4B FF 74 35 */	bl __RAS_OSDisableInterrupts_begin
+/* 803462C4 00343204  93 AD 91 80 */	stw r29, SamplingRate-_SDA_BASE_(r13)
 /* 803462C8 00343208  7C 7E 1B 78 */	mr r30, r3
 /* 803462CC 0034320C  48 00 77 D1 */	bl VIGetTvFormat
 /* 803462D0 00343210  2C 03 00 02 */	cmpwi r3, 2
@@ -71,15 +71,51 @@ lbl_80346338:
 /* 8034636C 003432AC  7C 08 03 A6 */	mtlr r0
 /* 80346370 003432B0  4E 80 00 20 */	blr 
 
+/* 80346374 0024 .text SIRefreshSamplingRate SIRefreshSamplingRate */
 .global SIRefreshSamplingRate
 SIRefreshSamplingRate:
 /* 80346374 003432B4  7C 08 02 A6 */	mflr r0
 /* 80346378 003432B8  90 01 00 04 */	stw r0, 4(r1)
 /* 8034637C 003432BC  94 21 FF F8 */	stwu r1, -8(r1)
-/* 80346380 003432C0  80 6D 91 80 */	lwz r3, lbl_80451700-_SDA_BASE_(r13)
+/* 80346380 003432C0  80 6D 91 80 */	lwz r3, SamplingRate-_SDA_BASE_(r13)
 /* 80346384 003432C4  4B FF FF 0D */	bl SISetSamplingRate
 /* 80346388 003432C8  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8034638C 003432CC  38 21 00 08 */	addi r1, r1, 8
 /* 80346390 003432D0  7C 08 03 A6 */	mtlr r0
 /* 80346394 003432D4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D12D0 0030 .data XYNTSC XYNTSC */
+.global XYNTSC
+XYNTSC:
+.byte 0x00, 0xf6, 0x02, 0x00, 0x00, 0x0e, 0x13, 0x00, 0x00, 0x1e, 0x09, 0x00, 0x00, 0x2c, 0x06, 0x00 /* baserom.dol+0x3ce2d0 */
+.byte 0x00, 0x34, 0x05, 0x00, 0x00, 0x41, 0x04, 0x00, 0x00, 0x57, 0x03, 0x00, 0x00, 0x57, 0x03, 0x00 /* baserom.dol+0x3ce2e0 */
+.byte 0x00, 0x57, 0x03, 0x00, 0x00, 0x83, 0x02, 0x00, 0x00, 0x83, 0x02, 0x00, 0x00, 0x83, 0x02, 0x00 /* baserom.dol+0x3ce2f0 */
+
+/* 803D1300 0030 .data XYPAL XYPAL */
+.global XYPAL
+XYPAL:
+.byte 0x01, 0x28, 0x02, 0x00, 0x00, 0x0f, 0x15, 0x00, 0x00, 0x1d, 0x0b, 0x00, 0x00, 0x2d, 0x07, 0x00 /* baserom.dol+0x3ce300 */
+.byte 0x00, 0x34, 0x06, 0x00, 0x00, 0x3f, 0x05, 0x00, 0x00, 0x4e, 0x04, 0x00, 0x00, 0x68, 0x03, 0x00 /* baserom.dol+0x3ce310 */
+.byte 0x00, 0x68, 0x03, 0x00, 0x00, 0x68, 0x03, 0x00, 0x00, 0x68, 0x03, 0x00, 0x00, 0x9c, 0x02, 0x00 /* baserom.dol+0x3ce320 */
+
+/* 803D1330 0033 .data lbl_803D1330 @16 */
+.global lbl_803D1330
+lbl_803D1330:
+.byte 0x53, 0x49, 0x53, 0x65, 0x74, 0x53, 0x61, 0x6d, 0x70, 0x6c, 0x69, 0x6e, 0x67, 0x52, 0x61, 0x74 /* baserom.dol+0x3ce330 */
+.byte 0x65, 0x3a, 0x20, 0x75, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6f /* baserom.dol+0x3ce340 */
+.byte 0x72, 0x6d, 0x61, 0x74, 0x2e, 0x20, 0x55, 0x73, 0x65, 0x20, 0x64, 0x65, 0x66, 0x61, 0x75, 0x6c /* baserom.dol+0x3ce350 */
+.byte 0x74, 0x2e, 0x00 /* baserom.dol+0x3ce360 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce363 */
+
+
+
+.section .sbss, "aw"
+/* 80451700 0004 .sbss SamplingRate SamplingRate */
+.global SamplingRate
+SamplingRate:
+.skip 0x4
+.skip 0x4 /* padding */
 

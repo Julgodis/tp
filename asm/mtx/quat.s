@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80347418
 
-
+.section .text, "ax"
+/* 80347418 005C .text PSQUATMultiply PSQUATMultiply */
+.global PSQUATMultiply
+PSQUATMultiply:
 /* 80347418 00344358  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034741C 0034435C  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
 /* 80347420 00344360  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
@@ -27,6 +29,7 @@
 /* 8034746C 003443AC  F0 A5 00 08 */	psq_st f5, 8(r5), 0, qr0
 /* 80347470 003443B0  4E 80 00 20 */	blr 
 
+/* 80347474 008C .text C_QUATRotAxisRad C_QUATRotAxisRad */
 .global C_QUATRotAxisRad
 C_QUATRotAxisRad:
 /* 80347474 003443B4  7C 08 02 A6 */	mflr r0
@@ -43,10 +46,10 @@ C_QUATRotAxisRad:
 /* 803474A0 003443E0  C0 02 CB 58 */	lfs f0, lbl_80456558-_SDA2_BASE_(r2)
 /* 803474A4 003443E4  EF C0 07 B2 */	fmuls f30, f0, f30
 /* 803474A8 003443E8  FC 20 F0 90 */	fmr f1, f30
-/* 803474AC 003443EC  48 02 55 3D */	bl func_8036C9E8
+/* 803474AC 003443EC  48 02 55 3D */	bl sinf
 /* 803474B0 003443F0  FF E0 08 90 */	fmr f31, f1
 /* 803474B4 003443F4  FC 20 F0 90 */	fmr f1, f30
-/* 803474B8 003443F8  48 02 55 55 */	bl func_8036CA0C
+/* 803474B8 003443F8  48 02 55 55 */	bl cosf
 /* 803474BC 003443FC  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 803474C0 00344400  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 803474C4 00344404  D0 1F 00 00 */	stfs f0, 0(r31)
@@ -64,6 +67,10 @@ C_QUATRotAxisRad:
 /* 803474F4 00344434  38 21 00 38 */	addi r1, r1, 0x38
 /* 803474F8 00344438  7C 08 03 A6 */	mtlr r0
 /* 803474FC 0034443C  4E 80 00 20 */	blr 
+
+/* 80347500 0174 .text C_QUATSlerp C_QUATSlerp */
+.global C_QUATSlerp
+C_QUATSlerp:
 /* 80347500 00344440  7C 08 02 A6 */	mflr r0
 /* 80347504 00344444  90 01 00 04 */	stw r0, 4(r1)
 /* 80347508 00344448  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -105,17 +112,17 @@ lbl_80347590:
 /* 80347594 003444D4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80347598 003444D8  4C 40 13 82 */	cror 2, 0, 2
 /* 8034759C 003444DC  40 82 00 3C */	bne lbl_803475D8
-/* 803475A0 003444E0  48 02 54 91 */	bl func_8036CA30
+/* 803475A0 003444E0  48 02 54 91 */	bl acosf
 /* 803475A4 003444E4  FF 60 08 90 */	fmr f27, f1
-/* 803475A8 003444E8  48 02 54 41 */	bl func_8036C9E8
+/* 803475A8 003444E8  48 02 54 41 */	bl sinf
 /* 803475AC 003444EC  C0 02 CB 54 */	lfs f0, lbl_80456554-_SDA2_BASE_(r2)
 /* 803475B0 003444F0  FF 80 08 90 */	fmr f28, f1
 /* 803475B4 003444F4  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 803475B8 003444F8  EC 20 06 F2 */	fmuls f1, f0, f27
-/* 803475BC 003444FC  48 02 54 2D */	bl func_8036C9E8
+/* 803475BC 003444FC  48 02 54 2D */	bl sinf
 /* 803475C0 00344500  EF E1 E0 24 */	fdivs f31, f1, f28
 /* 803475C4 00344504  EC 3D 06 F2 */	fmuls f1, f29, f27
-/* 803475C8 00344508  48 02 54 21 */	bl func_8036C9E8
+/* 803475C8 00344508  48 02 54 21 */	bl sinf
 /* 803475CC 0034450C  EC 01 E0 24 */	fdivs f0, f1, f28
 /* 803475D0 00344510  EF DE 00 32 */	fmuls f30, f30, f0
 /* 803475D4 00344514  48 00 00 10 */	b lbl_803475E4
@@ -160,4 +167,27 @@ lbl_803475E4:
 /* 80347668 003445A8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8034766C 003445AC  7C 08 03 A6 */	mtlr r0
 /* 80347670 003445B0  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80456550 0004 .sdata2 lbl_80456550 @130 */
+.global lbl_80456550
+lbl_80456550:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53b0 */
+
+/* 80456554 0004 .sdata2 lbl_80456554 @133 */
+.global lbl_80456554
+lbl_80456554:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d53b4 */
+
+/* 80456558 0004 .sdata2 lbl_80456558 @135 */
+.global lbl_80456558
+lbl_80456558:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53b8 */
+
+/* 8045655C 0004 .sdata2 lbl_8045655C @261 */
+.global lbl_8045655C
+lbl_8045655C:
+.byte 0x3f, 0x7f, 0xff, 0x58 /* baserom.dol+0x3d53bc */
 

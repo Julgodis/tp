@@ -1,28 +1,29 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a4244
 
-
-.global JAUAudioArcInterpreter
-JAUAudioArcInterpreter:
-/* 802A4244 002A1184  3C 80 80 3D */	lis r4, lbl_803C9A30@ha
-/* 802A4248 002A1188  38 04 9A 30 */	addi r0, r4, lbl_803C9A30@l
+.section .text, "ax"
+/* 802A4244 001C .text __ct__22JAUAudioArcInterpreterFv __ct__22JAUAudioArcInterpreterFv */
+.global __ct__22JAUAudioArcInterpreterFv
+__ct__22JAUAudioArcInterpreterFv:
+/* 802A4244 002A1184  3C 80 80 3D */	lis r4, __vt__22JAUAudioArcInterpreter@ha
+/* 802A4248 002A1188  38 04 9A 30 */	addi r0, r4, __vt__22JAUAudioArcInterpreter@l
 /* 802A424C 002A118C  90 03 00 00 */	stw r0, 0(r3)
 /* 802A4250 002A1190  38 00 00 00 */	li r0, 0
 /* 802A4254 002A1194  90 03 00 08 */	stw r0, 8(r3)
 /* 802A4258 002A1198  90 03 00 04 */	stw r0, 4(r3)
 /* 802A425C 002A119C  4E 80 00 20 */	blr 
 
-.global JAUAudioArcInterpreter_NS_dtor
-JAUAudioArcInterpreter_NS_dtor:
+/* 802A4260 0048 .text __dt__22JAUAudioArcInterpreterFv __dt__22JAUAudioArcInterpreterFv */
+.global __dt__22JAUAudioArcInterpreterFv
+__dt__22JAUAudioArcInterpreterFv:
 /* 802A4260 002A11A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4264 002A11A4  7C 08 02 A6 */	mflr r0
 /* 802A4268 002A11A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A426C 002A11AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A4270 002A11B0  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802A4274 002A11B4  41 82 00 1C */	beq lbl_802A4290
-/* 802A4278 002A11B8  3C A0 80 3D */	lis r5, lbl_803C9A30@ha
-/* 802A427C 002A11BC  38 05 9A 30 */	addi r0, r5, lbl_803C9A30@l
+/* 802A4278 002A11B8  3C A0 80 3D */	lis r5, __vt__22JAUAudioArcInterpreter@ha
+/* 802A427C 002A11BC  38 05 9A 30 */	addi r0, r5, __vt__22JAUAudioArcInterpreter@l
 /* 802A4280 002A11C0  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A4284 002A11C4  7C 80 07 35 */	extsh. r0, r4
 /* 802A4288 002A11C8  40 81 00 08 */	ble lbl_802A4290
@@ -35,8 +36,9 @@ lbl_802A4290:
 /* 802A42A0 002A11E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A42A4 002A11E4  4E 80 00 20 */	blr 
 
-.global JAUAudioArcInterpreter_NS_parse
-JAUAudioArcInterpreter_NS_parse:
+/* 802A42A8 006C .text parse__22JAUAudioArcInterpreterFPCv parse__22JAUAudioArcInterpreterFPCv */
+.global parse__22JAUAudioArcInterpreterFPCv
+parse__22JAUAudioArcInterpreterFPCv:
 /* 802A42A8 002A11E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A42AC 002A11EC  7C 08 02 A6 */	mflr r0
 /* 802A42B0 002A11F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -56,7 +58,7 @@ JAUAudioArcInterpreter_NS_parse:
 /* 802A42E8 002A1228  48 00 00 18 */	b lbl_802A4300
 lbl_802A42EC:
 /* 802A42EC 002A122C  7F E3 FB 78 */	mr r3, r31
-/* 802A42F0 002A1230  48 00 00 2D */	bl JAUAudioArcInterpreter_NS_readCommand_
+/* 802A42F0 002A1230  48 00 00 2D */	bl readCommand___22JAUAudioArcInterpreterFv
 /* 802A42F4 002A1234  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802A42F8 002A1238  40 82 FF F4 */	bne lbl_802A42EC
 /* 802A42FC 002A123C  38 60 00 01 */	li r3, 1
@@ -66,11 +68,16 @@ lbl_802A4300:
 /* 802A4308 002A1248  7C 08 03 A6 */	mtlr r0
 /* 802A430C 002A124C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A4310 002A1250  4E 80 00 20 */	blr 
+
+/* 802A4314 0008 .text readCommandMore__22JAUAudioArcInterpreterFUl readCommandMore__22JAUAudioArcInterpreterFUl */
+.global readCommandMore__22JAUAudioArcInterpreterFUl
+readCommandMore__22JAUAudioArcInterpreterFUl:
 /* 802A4314 002A1254  38 60 00 00 */	li r3, 0
 /* 802A4318 002A1258  4E 80 00 20 */	blr 
 
-.global JAUAudioArcInterpreter_NS_readCommand_
-JAUAudioArcInterpreter_NS_readCommand_:
+/* 802A431C 0424 .text readCommand___22JAUAudioArcInterpreterFv readCommand___22JAUAudioArcInterpreterFv */
+.global readCommand___22JAUAudioArcInterpreterFv
+readCommand___22JAUAudioArcInterpreterFv:
 /* 802A431C 002A125C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A4320 002A1260  7C 08 02 A6 */	mflr r0
 /* 802A4324 002A1264  90 01 00 14 */	stw r0, 0x14(r1)
@@ -359,4 +366,17 @@ lbl_802A4730:
 /* 802A4734 002A1674  7C 08 03 A6 */	mtlr r0
 /* 802A4738 002A1678  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A473C 002A167C  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C9A30 0044 .data __vt__22JAUAudioArcInterpreter __vt__22JAUAudioArcInterpreter */
+.global __vt__22JAUAudioArcInterpreter
+__vt__22JAUAudioArcInterpreter:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x42, 0x60, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a30 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a40 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a50 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a60 */
+.byte 0x80, 0x2a, 0x43, 0x14 /* baserom.dol+0x3c6a70 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a74 */
 

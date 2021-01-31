@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a8cdc
 
-
-.global JMessage_NS_TResource_NS_toMessageIndex_messageID
-JMessage_NS_TResource_NS_toMessageIndex_messageID:
+.section .text, "ax"
+/* 802A8CDC 01E4 .text toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb */
+.global toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb
+toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb:
 /* 802A8CDC 002A5C1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A8CE0 002A5C20  7C 08 02 A6 */	mflr r0
 /* 802A8CE4 002A5C24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -112,7 +112,7 @@ lbl_802A8E10:
 /* 802A8E30 002A5D70  7F E3 FB 78 */	mr r3, r31
 /* 802A8E34 002A5D74  7F C4 F3 78 */	mr r4, r30
 /* 802A8E38 002A5D78  38 A1 00 08 */	addi r5, r1, 8
-/* 802A8E3C 002A5D7C  48 00 06 99 */	bl std_NS_lower_bound
+/* 802A8E3C 002A5D7C  48 00 06 99 */	bl func_802A94D4
 /* 802A8E40 002A5D80  7C 03 F0 40 */	cmplw r3, r30
 /* 802A8E44 002A5D84  41 82 00 14 */	beq lbl_802A8E58
 /* 802A8E48 002A5D88  80 83 00 00 */	lwz r4, 0(r3)
@@ -153,8 +153,9 @@ lbl_802A8EA8:
 /* 802A8EB8 002A5DF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A8EBC 002A5DFC  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer_NS_TCResource
-JMessage_NS_TResourceContainer_NS_TCResource:
+/* 802A8EC0 0038 .text __ct__Q38JMessage18TResourceContainer10TCResourceFv __ct__Q38JMessage18TResourceContainer10TCResourceFv */
+.global __ct__Q38JMessage18TResourceContainer10TCResourceFv
+__ct__Q38JMessage18TResourceContainer10TCResourceFv:
 /* 802A8EC0 002A5E00  38 00 00 00 */	li r0, 0
 /* 802A8EC4 002A5E04  90 03 00 04 */	stw r0, 4(r3)
 /* 802A8EC8 002A5E08  90 03 00 08 */	stw r0, 8(r3)
@@ -165,13 +166,14 @@ JMessage_NS_TResourceContainer_NS_TCResource:
 /* 802A8EDC 002A5E1C  3C 80 80 3D */	lis r4, lbl_803C9CBC@ha
 /* 802A8EE0 002A5E20  38 04 9C BC */	addi r0, r4, lbl_803C9CBC@l
 /* 802A8EE4 002A5E24  90 03 00 0C */	stw r0, 0xc(r3)
-/* 802A8EE8 002A5E28  3C 80 80 3D */	lis r4, lbl_803C9CA8@ha
-/* 802A8EEC 002A5E2C  38 04 9C A8 */	addi r0, r4, lbl_803C9CA8@l
+/* 802A8EE8 002A5E28  3C 80 80 3D */	lis r4, __vt__Q38JMessage18TResourceContainer10TCResource@ha
+/* 802A8EEC 002A5E2C  38 04 9C A8 */	addi r0, r4, __vt__Q38JMessage18TResourceContainer10TCResource@l
 /* 802A8EF0 002A5E30  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802A8EF4 002A5E34  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer_NS_TCResource_NS_dtor
-JMessage_NS_TResourceContainer_NS_TCResource_NS_dtor:
+/* 802A8EF8 0074 .text __dt__Q38JMessage18TResourceContainer10TCResourceFv __dt__Q38JMessage18TResourceContainer10TCResourceFv */
+.global __dt__Q38JMessage18TResourceContainer10TCResourceFv
+__dt__Q38JMessage18TResourceContainer10TCResourceFv:
 /* 802A8EF8 002A5E38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A8EFC 002A5E3C  7C 08 02 A6 */	mflr r0
 /* 802A8F00 002A5E40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -180,8 +182,8 @@ JMessage_NS_TResourceContainer_NS_TCResource_NS_dtor:
 /* 802A8F0C 002A5E4C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802A8F10 002A5E50  7C 9F 23 78 */	mr r31, r4
 /* 802A8F14 002A5E54  41 82 00 3C */	beq lbl_802A8F50
-/* 802A8F18 002A5E58  3C 80 80 3D */	lis r4, lbl_803C9CA8@ha
-/* 802A8F1C 002A5E5C  38 04 9C A8 */	addi r0, r4, lbl_803C9CA8@l
+/* 802A8F18 002A5E58  3C 80 80 3D */	lis r4, __vt__Q38JMessage18TResourceContainer10TCResource@ha
+/* 802A8F1C 002A5E5C  38 04 9C A8 */	addi r0, r4, __vt__Q38JMessage18TResourceContainer10TCResource@l
 /* 802A8F20 002A5E60  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 802A8F24 002A5E64  41 82 00 1C */	beq lbl_802A8F40
 /* 802A8F28 002A5E68  3C 80 80 3D */	lis r4, lbl_803C9CBC@ha
@@ -204,8 +206,9 @@ lbl_802A8F50:
 /* 802A8F64 002A5EA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A8F68 002A5EA8  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer_NS_TCResource_NS_Get_groupID
-JMessage_NS_TResourceContainer_NS_TCResource_NS_Get_groupID:
+/* 802A8F6C 0090 .text Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs */
+.global Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs
+Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs:
 /* 802A8F6C 002A5EAC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802A8F70 002A5EB0  38 03 00 04 */	addi r0, r3, 4
 /* 802A8F74 002A5EB4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -246,6 +249,10 @@ lbl_802A8FC8:
 lbl_802A8FF4:
 /* 802A8FF4 002A5F34  38 21 00 40 */	addi r1, r1, 0x40
 /* 802A8FF8 002A5F38  4E 80 00 20 */	blr 
+
+/* 802A8FFC 004C .text Do_create__Q38JMessage18TResourceContainer10TCResourceFv Do_create__Q38JMessage18TResourceContainer10TCResourceFv */
+.global Do_create__Q38JMessage18TResourceContainer10TCResourceFv
+Do_create__Q38JMessage18TResourceContainer10TCResourceFv:
 /* 802A8FFC 002A5F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A9000 002A5F40  7C 08 02 A6 */	mflr r0
 /* 802A9004 002A5F44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -266,6 +273,10 @@ lbl_802A9038:
 /* 802A903C 002A5F7C  7C 08 03 A6 */	mtlr r0
 /* 802A9040 002A5F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A9044 002A5F84  4E 80 00 20 */	blr 
+
+/* 802A9048 0024 .text Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource */
+.global Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource
+Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource:
 /* 802A9048 002A5F88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A904C 002A5F8C  7C 08 02 A6 */	mflr r0
 /* 802A9050 002A5F90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -276,8 +287,9 @@ lbl_802A9038:
 /* 802A9064 002A5FA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A9068 002A5FA8  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer
-JMessage_NS_TResourceContainer:
+/* 802A906C 004C .text __ct__Q28JMessage18TResourceContainerFv __ct__Q28JMessage18TResourceContainerFv */
+.global __ct__Q28JMessage18TResourceContainerFv
+__ct__Q28JMessage18TResourceContainerFv:
 /* 802A906C 002A5FAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A9070 002A5FB0  7C 08 02 A6 */	mflr r0
 /* 802A9074 002A5FB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -287,7 +299,7 @@ JMessage_NS_TResourceContainer:
 /* 802A9084 002A5FC4  98 03 00 00 */	stb r0, 0(r3)
 /* 802A9088 002A5FC8  90 03 00 04 */	stw r0, 4(r3)
 /* 802A908C 002A5FCC  38 7F 00 08 */	addi r3, r31, 8
-/* 802A9090 002A5FD0  4B FF FE 31 */	bl JMessage_NS_TResourceContainer_NS_TCResource
+/* 802A9090 002A5FD0  4B FF FE 31 */	bl __ct__Q38JMessage18TResourceContainer10TCResourceFv
 /* 802A9094 002A5FD4  38 00 00 00 */	li r0, 0
 /* 802A9098 002A5FD8  90 1F 00 18 */	stw r0, 0x18(r31)
 /* 802A909C 002A5FDC  90 1F 00 1C */	stw r0, 0x1c(r31)
@@ -298,8 +310,9 @@ JMessage_NS_TResourceContainer:
 /* 802A90B0 002A5FF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A90B4 002A5FF4  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer_NS_setEncoding
-JMessage_NS_TResourceContainer_NS_setEncoding:
+/* 802A90B8 0038 .text setEncoding__Q28JMessage18TResourceContainerFUc setEncoding__Q28JMessage18TResourceContainerFUc */
+.global setEncoding__Q28JMessage18TResourceContainerFUc
+setEncoding__Q28JMessage18TResourceContainerFUc:
 /* 802A90B8 002A5FF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A90BC 002A5FFC  7C 08 02 A6 */	mflr r0
 /* 802A90C0 002A6000  90 01 00 14 */	stw r0, 0x14(r1)
@@ -310,15 +323,16 @@ JMessage_NS_TResourceContainer_NS_setEncoding:
 /* 802A90D4 002A6014  90 03 00 04 */	stw r0, 4(r3)
 /* 802A90D8 002A6018  48 00 00 08 */	b lbl_802A90E0
 lbl_802A90DC:
-/* 802A90DC 002A601C  48 00 00 15 */	bl JMessage_NS_TResourceContainer_NS_setEncoding_
+/* 802A90DC 002A601C  48 00 00 15 */	bl setEncoding___Q28JMessage18TResourceContainerFUc
 lbl_802A90E0:
 /* 802A90E0 002A6020  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802A90E4 002A6024  7C 08 03 A6 */	mtlr r0
 /* 802A90E8 002A6028  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A90EC 002A602C  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TResourceContainer_NS_setEncoding_
-JMessage_NS_TResourceContainer_NS_setEncoding_:
+/* 802A90F0 0040 .text setEncoding___Q28JMessage18TResourceContainerFUc setEncoding___Q28JMessage18TResourceContainerFUc */
+.global setEncoding___Q28JMessage18TResourceContainerFUc
+setEncoding___Q28JMessage18TResourceContainerFUc:
 /* 802A90F0 002A6030  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A90F4 002A6034  98 83 00 00 */	stb r4, 0(r3)
 /* 802A90F8 002A6038  38 00 00 00 */	li r0, 0
@@ -326,8 +340,8 @@ JMessage_NS_TResourceContainer_NS_setEncoding_:
 /* 802A9100 002A6040  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 802A9104 002A6044  28 00 00 05 */	cmplwi r0, 5
 /* 802A9108 002A6048  54 85 15 BA */	rlwinm r5, r4, 2, 0x16, 0x1d
-/* 802A910C 002A604C  3C 80 80 3D */	lis r4, lbl_803C9C80@ha
-/* 802A9110 002A6050  38 04 9C 80 */	addi r0, r4, lbl_803C9C80@l
+/* 802A910C 002A604C  3C 80 80 3D */	lis r4, sapfnParseCharacter___Q28JMessage18TResourceContainer@ha
+/* 802A9110 002A6050  38 04 9C 80 */	addi r0, r4, sapfnParseCharacter___Q28JMessage18TResourceContainer@l
 /* 802A9114 002A6054  7C 80 2A 14 */	add r4, r0, r5
 /* 802A9118 002A6058  41 80 00 08 */	blt lbl_802A9120
 /* 802A911C 002A605C  38 81 00 08 */	addi r4, r1, 8
@@ -337,18 +351,23 @@ lbl_802A9120:
 /* 802A9128 002A6068  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A912C 002A606C  4E 80 00 20 */	blr 
 
-.global JMessage_NS_TParse
-JMessage_NS_TParse:
-/* 802A9130 002A6070  3C A0 80 3C */	lis r5, lbl_803C488C@ha
-/* 802A9134 002A6074  38 05 48 8C */	addi r0, r5, lbl_803C488C@l
+/* 802A9130 0028 .text __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer */
+.global __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer
+__ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer:
+/* 802A9130 002A6070  3C A0 80 3C */	lis r5, __vt__Q37JGadget6binary19TParse_header_block@ha
+/* 802A9134 002A6074  38 05 48 8C */	addi r0, r5, __vt__Q37JGadget6binary19TParse_header_block@l
 /* 802A9138 002A6078  90 03 00 00 */	stw r0, 0(r3)
-/* 802A913C 002A607C  3C A0 80 3D */	lis r5, lbl_803C9C94@ha
-/* 802A9140 002A6080  38 05 9C 94 */	addi r0, r5, lbl_803C9C94@l
+/* 802A913C 002A607C  3C A0 80 3D */	lis r5, __vt__Q28JMessage6TParse@ha
+/* 802A9140 002A6080  38 05 9C 94 */	addi r0, r5, __vt__Q28JMessage6TParse@l
 /* 802A9144 002A6084  90 03 00 00 */	stw r0, 0(r3)
 /* 802A9148 002A6088  90 83 00 04 */	stw r4, 4(r3)
 /* 802A914C 002A608C  38 00 00 00 */	li r0, 0
 /* 802A9150 002A6090  90 03 00 08 */	stw r0, 8(r3)
 /* 802A9154 002A6094  4E 80 00 20 */	blr 
+
+/* 802A9158 0060 .text __dt__Q28JMessage6TParseFv __dt__Q28JMessage6TParseFv */
+.global __dt__Q28JMessage6TParseFv
+__dt__Q28JMessage6TParseFv:
 /* 802A9158 002A6098  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A915C 002A609C  7C 08 02 A6 */	mflr r0
 /* 802A9160 002A60A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -357,8 +376,8 @@ JMessage_NS_TParse:
 /* 802A916C 002A60AC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802A9170 002A60B0  7C 9F 23 78 */	mr r31, r4
 /* 802A9174 002A60B4  41 82 00 28 */	beq lbl_802A919C
-/* 802A9178 002A60B8  3C 80 80 3D */	lis r4, lbl_803C9C94@ha
-/* 802A917C 002A60BC  38 04 9C 94 */	addi r0, r4, lbl_803C9C94@l
+/* 802A9178 002A60B8  3C 80 80 3D */	lis r4, __vt__Q28JMessage6TParse@ha
+/* 802A917C 002A60BC  38 04 9C 94 */	addi r0, r4, __vt__Q28JMessage6TParse@l
 /* 802A9180 002A60C0  90 1E 00 00 */	stw r0, 0(r30)
 /* 802A9184 002A60C4  38 80 00 00 */	li r4, 0
 /* 802A9188 002A60C8  48 03 37 41 */	bl __dt__Q37JGadget6binary19TParse_header_blockFv
@@ -374,6 +393,10 @@ lbl_802A919C:
 /* 802A91AC 002A60EC  7C 08 03 A6 */	mtlr r0
 /* 802A91B0 002A60F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A91B4 002A60F4  4E 80 00 20 */	blr 
+
+/* 802A91B8 013C .text parseHeader_next__Q28JMessage6TParseFPPCvPUlUl parseHeader_next__Q28JMessage6TParseFPPCvPUlUl */
+.global parseHeader_next__Q28JMessage6TParseFPPCvPUlUl
+parseHeader_next__Q28JMessage6TParseFPPCvPUlUl:
 /* 802A91B8 002A60F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A91BC 002A60FC  7C 08 02 A6 */	mflr r0
 /* 802A91C0 002A6100  90 01 00 34 */	stw r0, 0x34(r1)
@@ -387,9 +410,9 @@ lbl_802A919C:
 /* 802A91E0 002A6120  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 802A91E4 002A6124  90 05 00 00 */	stw r0, 0(r5)
 /* 802A91E8 002A6128  7F C3 F3 78 */	mr r3, r30
-/* 802A91EC 002A612C  38 82 BE 18 */	addi r4, r2, lbl_80455818-_SDA2_BASE_
+/* 802A91EC 002A612C  38 82 BE 18 */	addi r4, r2, ga4cSignature__Q28JMessage4data-_SDA2_BASE_
 /* 802A91F0 002A6130  38 A0 00 04 */	li r5, 4
-/* 802A91F4 002A6134  48 0B CE 99 */	bl func_8036608C
+/* 802A91F4 002A6134  48 0B CE 99 */	bl memcmp
 /* 802A91F8 002A6138  2C 03 00 00 */	cmpwi r3, 0
 /* 802A91FC 002A613C  41 82 00 0C */	beq lbl_802A9208
 /* 802A9200 002A6140  38 60 00 00 */	li r3, 0
@@ -421,7 +444,7 @@ lbl_802A9250:
 /* 802A9258 002A6198  38 60 00 00 */	li r3, 0
 /* 802A925C 002A619C  48 00 00 80 */	b lbl_802A92DC
 lbl_802A9260:
-/* 802A9260 002A61A0  4B FF FE 59 */	bl JMessage_NS_TResourceContainer_NS_setEncoding
+/* 802A9260 002A61A0  4B FF FE 59 */	bl setEncoding__Q28JMessage18TResourceContainerFUc
 lbl_802A9264:
 /* 802A9264 002A61A4  57 80 06 F7 */	rlwinm. r0, r28, 0, 0x1b, 0x1b
 /* 802A9268 002A61A8  41 82 00 0C */	beq lbl_802A9274
@@ -462,6 +485,10 @@ lbl_802A92DC:
 /* 802A92E8 002A6228  7C 08 03 A6 */	mtlr r0
 /* 802A92EC 002A622C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A92F0 002A6230  4E 80 00 20 */	blr 
+
+/* 802A92F4 019C .text parseBlock_next__Q28JMessage6TParseFPPCvPUlUl parseBlock_next__Q28JMessage6TParseFPPCvPUlUl */
+.global parseBlock_next__Q28JMessage6TParseFPPCvPUlUl
+parseBlock_next__Q28JMessage6TParseFPPCvPUlUl:
 /* 802A92F4 002A6234  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A92F8 002A6238  7C 08 02 A6 */	mflr r0
 /* 802A92FC 002A623C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -538,7 +565,7 @@ lbl_802A9400:
 /* 802A9400 002A6340  38 61 00 0C */	addi r3, r1, 0xc
 /* 802A9404 002A6344  7F E4 FB 78 */	mr r4, r31
 /* 802A9408 002A6348  7F 85 E3 78 */	mr r5, r28
-/* 802A940C 002A634C  48 03 37 C9 */	bl JGadget_NS_TNodeLinkList_NS_Erase
+/* 802A940C 002A634C  48 03 37 C9 */	bl Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode
 /* 802A9410 002A6350  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 802A9414 002A6354  90 01 00 08 */	stw r0, 8(r1)
 /* 802A9418 002A6358  7F E3 FB 78 */	mr r3, r31
@@ -577,12 +604,20 @@ lbl_802A9478:
 /* 802A9484 002A63C4  7C 08 03 A6 */	mtlr r0
 /* 802A9488 002A63C8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A948C 002A63CC  4E 80 00 20 */	blr 
+
+/* 802A9490 0018 .text parseCharacter_1Byte__Q28JMessage6localeFPPCc parseCharacter_1Byte__Q28JMessage6localeFPPCc */
+.global parseCharacter_1Byte__Q28JMessage6localeFPPCc
+parseCharacter_1Byte__Q28JMessage6localeFPPCc:
 /* 802A9490 002A63D0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802A9494 002A63D4  88 85 00 00 */	lbz r4, 0(r5)
 /* 802A9498 002A63D8  38 05 00 01 */	addi r0, r5, 1
 /* 802A949C 002A63DC  90 03 00 00 */	stw r0, 0(r3)
 /* 802A94A0 002A63E0  7C 83 23 78 */	mr r3, r4
 /* 802A94A4 002A63E4  4E 80 00 20 */	blr 
+
+/* 802A94A8 002C .text parseCharacter_2Byte__Q28JMessage6localeFPPCc parseCharacter_2Byte__Q28JMessage6localeFPPCc */
+.global parseCharacter_2Byte__Q28JMessage6localeFPPCc
+parseCharacter_2Byte__Q28JMessage6localeFPPCc:
 /* 802A94A8 002A63E8  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A94AC 002A63EC  88 A4 00 00 */	lbz r5, 0(r4)
 /* 802A94B0 002A63F0  38 04 00 01 */	addi r0, r4, 1
@@ -595,8 +630,9 @@ lbl_802A9478:
 /* 802A94CC 002A640C  7C C3 33 78 */	mr r3, r6
 /* 802A94D0 002A6410  4E 80 00 20 */	blr 
 
-.global std_NS_lower_bound
-std_NS_lower_bound:
+/* 802A94D4 0054 .text func_802A94D4 lower_bound<PCUl,Ul>__3stdFPCUlPCUlRCUl */
+.global func_802A94D4
+func_802A94D4:
 /* 802A94D4 002A6414  7C 03 20 50 */	subf r0, r3, r4
 /* 802A94D8 002A6418  7C 00 16 70 */	srawi r0, r0, 2
 /* 802A94DC 002A641C  7C 00 01 94 */	addze r0, r0
@@ -621,3 +657,31 @@ lbl_802A951C:
 /* 802A951C 002A645C  2C 06 00 00 */	cmpwi r6, 0
 /* 802A9520 002A6460  41 81 FF CC */	bgt lbl_802A94EC
 /* 802A9524 002A6464  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C9C80 0014 .data sapfnParseCharacter___Q28JMessage18TResourceContainer sapfnParseCharacter___Q28JMessage18TResourceContainer */
+.global sapfnParseCharacter___Q28JMessage18TResourceContainer
+sapfnParseCharacter___Q28JMessage18TResourceContainer:
+.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x94, 0x90, 0x80, 0x2a, 0x94, 0xa8, 0x80, 0x2a, 0x95, 0x28 /* baserom.dol+0x3c6c80 */
+.byte 0x80, 0x2a, 0x95, 0x8c /* baserom.dol+0x3c6c90 */
+
+/* 803C9C94 0014 .data __vt__Q28JMessage6TParse __vt__Q28JMessage6TParse */
+.global __vt__Q28JMessage6TParse
+__vt__Q28JMessage6TParse:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x91, 0x58, 0x80, 0x2a, 0x91, 0xb8 /* baserom.dol+0x3c6c94 */
+.byte 0x80, 0x2a, 0x92, 0xf4 /* baserom.dol+0x3c6ca4 */
+
+/* 803C9CA8 0014 .data __vt__Q38JMessage18TResourceContainer10TCResource __vt__Q38JMessage18TResourceContainer10TCResource */
+.global __vt__Q38JMessage18TResourceContainer10TCResource
+__vt__Q38JMessage18TResourceContainer10TCResource:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x8e, 0xf8, 0x80, 0x2a, 0x8f, 0xfc /* baserom.dol+0x3c6ca8 */
+.byte 0x80, 0x2a, 0x90, 0x48 /* baserom.dol+0x3c6cb8 */
+
+/* 803C9CBC 0014 .data lbl_803C9CBC __vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0> */
+.global lbl_803C9CBC
+lbl_803C9CBC:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6cbc */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6ccc */
+

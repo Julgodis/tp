@@ -1,12 +1,12 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80339878
 
-
-.global JMAEulerToQuat
-JMAEulerToQuat:
-/* 80339878 003367B8  3C E0 80 44 */	lis r7, lbl_80439A20@ha
-/* 8033987C 003367BC  38 E7 9A 20 */	addi r7, r7, lbl_80439A20@l
+.section .text, "ax"
+/* 80339878 00C0 .text JMAEulerToQuat__FsssP10Quaternion JMAEulerToQuat__FsssP10Quaternion */
+.global JMAEulerToQuat__FsssP10Quaternion
+JMAEulerToQuat__FsssP10Quaternion:
+/* 80339878 003367B8  3C E0 80 44 */	lis r7, sincosTable___5JMath@ha
+/* 8033987C 003367BC  38 E7 9A 20 */	addi r7, r7, sincosTable___5JMath@l
 /* 80339880 003367C0  39 07 00 04 */	addi r8, r7, 4
 /* 80339884 003367C4  7C 60 07 34 */	extsh r0, r3
 /* 80339888 003367C8  7C 00 0E 70 */	srawi r0, r0, 1
@@ -54,8 +54,9 @@ JMAEulerToQuat:
 /* 80339930 00336870  D0 06 00 08 */	stfs f0, 8(r6)
 /* 80339934 00336874  4E 80 00 20 */	blr 
 
-.global JMAQuatLerp
-JMAQuatLerp:
+/* 80339938 00F8 .text JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion */
+.global JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion
+JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion:
 /* 80339938 00336878  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8033993C 0033687C  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
 /* 80339940 00336880  10 60 00 B2 */	ps_mul f3, f0, f2
@@ -120,8 +121,9 @@ lbl_803399C8:
 /* 80339A28 00336968  D0 05 00 0C */	stfs f0, 0xc(r5)
 /* 80339A2C 0033696C  4E 80 00 20 */	blr 
 
-.global JMAFastVECNormalize
-JMAFastVECNormalize:
+/* 80339A30 002C .text JMAFastVECNormalize__FPC3VecP3Vec JMAFastVECNormalize__FPC3VecP3Vec */
+.global JMAFastVECNormalize__FPC3VecP3Vec
+JMAFastVECNormalize__FPC3VecP3Vec:
 /* 80339A30 00336970  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 80339A34 00336974  10 20 00 32 */	ps_mul f1, f0, f0
 /* 80339A38 00336978  C0 43 00 08 */	lfs f2, 8(r3)
@@ -134,8 +136,9 @@ JMAFastVECNormalize:
 /* 80339A54 00336994  D0 44 00 08 */	stfs f2, 8(r4)
 /* 80339A58 00336998  4E 80 00 20 */	blr 
 
-.global JMAVECScaleAdd
-JMAVECScaleAdd:
+/* 80339A5C 0028 .text JMAVECScaleAdd__FPC3VecPC3VecP3Vecf JMAVECScaleAdd__FPC3VecPC3VecP3Vecf */
+.global JMAVECScaleAdd__FPC3VecPC3VecP3Vecf
+JMAVECScaleAdd__FPC3VecPC3VecP3Vecf:
 /* 80339A5C 0033699C  FC 40 08 90 */	fmr f2, f1
 /* 80339A60 003369A0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 80339A64 003369A4  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
@@ -147,8 +150,9 @@ JMAVECScaleAdd:
 /* 80339A7C 003369BC  F0 05 80 08 */	psq_st f0, 8(r5), 1, qr0
 /* 80339A80 003369C0  4E 80 00 20 */	blr 
 
-.global JMAMTXApplyScale
-JMAMTXApplyScale:
+/* 80339A84 0060 .text JMAMTXApplyScale__FPA4_CfPA4_ffff JMAMTXApplyScale__FPA4_CfPA4_ffff */
+.global JMAMTXApplyScale__FPA4_CfPA4_ffff
+JMAMTXApplyScale__FPA4_CfPA4_ffff:
 /* 80339A84 003369C4  FC 00 10 90 */	fmr f0, f2
 /* 80339A88 003369C8  FC A0 18 90 */	fmr f5, f3
 /* 80339A8C 003369CC  C0 82 CA D0 */	lfs f4, lbl_804564D0-_SDA2_BASE_(r2)
@@ -173,4 +177,18 @@ JMAMTXApplyScale:
 /* 80339AD8 00336A18  F0 44 00 18 */	psq_st f2, 24(r4), 0, qr0
 /* 80339ADC 00336A1C  F0 64 00 28 */	psq_st f3, 40(r4), 0, qr0
 /* 80339AE0 00336A20  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 804564C8 0008 .sdata2 lbl_804564C8 @376 */
+.global lbl_804564C8
+lbl_804564C8:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5328 */
+
+/* 804564D0 0004 .sdata2 lbl_804564D0 @411 */
+.global lbl_804564D0
+lbl_804564D0:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5330 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5334 */
 

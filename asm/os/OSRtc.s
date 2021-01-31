@@ -1,16 +1,16 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033fe90
 
-
+.section .text, "ax"
+/* 8033FE90 0060 .text WriteSramCallback WriteSramCallback */
 .global WriteSramCallback
 WriteSramCallback:
 /* 8033FE90 0033CDD0  7C 08 02 A6 */	mflr r0
-/* 8033FE94 0033CDD4  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 8033FE94 0033CDD4  3C 60 80 45 */	lis r3, Scb@ha
 /* 8033FE98 0033CDD8  90 01 00 04 */	stw r0, 4(r1)
 /* 8033FE9C 0033CDDC  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8033FEA0 0033CDE0  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 8033FEA4 0033CDE4  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
+/* 8033FEA4 0033CDE4  3B E3 BB 20 */	addi r31, r3, Scb@l
 /* 8033FEA8 0033CDE8  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8033FEAC 0033CDEC  3B DF 00 40 */	addi r30, r31, 0x40
 /* 8033FEB0 0033CDF0  80 9F 00 40 */	lwz r4, 0x40(r31)
@@ -31,13 +31,12 @@ lbl_8033FED8:
 /* 8033FEE8 0033CE28  7C 08 03 A6 */	mtlr r0
 /* 8033FEEC 0033CE2C  4E 80 00 20 */	blr 
 
+/* 8033FEF0 0118 .text WriteSram WriteSram */
 .global WriteSram
 WriteSram:
 /* 8033FEF0 0033CE30  7C 08 02 A6 */	mflr r0
-.global WriteSramCallback
 /* 8033FEF4 0033CE34  3C C0 80 34 */	lis r6, WriteSramCallback@ha
 /* 8033FEF8 0033CE38  90 01 00 04 */	stw r0, 4(r1)
-.global WriteSramCallback
 /* 8033FEFC 0033CE3C  38 06 FE 90 */	addi r0, r6, WriteSramCallback@l
 /* 8033FF00 0033CE40  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 8033FF04 0033CE44  93 E1 00 24 */	stw r31, 0x24(r1)
@@ -109,17 +108,18 @@ lbl_8033FFEC:
 /* 80340000 0033CF40  7C 08 03 A6 */	mtlr r0
 /* 80340004 0033CF44  4E 80 00 20 */	blr 
 
+/* 80340008 013C .text __OSInitSram __OSInitSram */
 .global __OSInitSram
 __OSInitSram:
 /* 80340008 0033CF48  7C 08 02 A6 */	mflr r0
-/* 8034000C 0033CF4C  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 8034000C 0033CF4C  3C 60 80 45 */	lis r3, Scb@ha
 /* 80340010 0033CF50  90 01 00 04 */	stw r0, 4(r1)
 /* 80340014 0033CF54  38 80 00 40 */	li r4, 0x40
 /* 80340018 0033CF58  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8034001C 0033CF5C  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80340020 0033CF60  3B E0 00 00 */	li r31, 0
 /* 80340024 0033CF64  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 80340028 0033CF68  3B C3 BB 20 */	addi r30, r3, lbl_8044BB20@l
+/* 80340028 0033CF68  3B C3 BB 20 */	addi r30, r3, Scb@l
 /* 8034002C 0033CF6C  38 7E 00 00 */	addi r3, r30, 0
 /* 80340030 0033CF70  93 FE 00 44 */	stw r31, 0x44(r30)
 /* 80340034 0033CF74  93 FE 00 48 */	stw r31, 0x48(r30)
@@ -194,15 +194,16 @@ lbl_80340118:
 /* 8034013C 0033D07C  7C 08 03 A6 */	mtlr r0
 /* 80340140 0033D080  4E 80 00 20 */	blr 
 
+/* 80340144 005C .text __OSLockSram __OSLockSram */
 .global __OSLockSram
 __OSLockSram:
 /* 80340144 0033D084  7C 08 02 A6 */	mflr r0
-/* 80340148 0033D088  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 80340148 0033D088  3C 60 80 45 */	lis r3, Scb@ha
 /* 8034014C 0033D08C  90 01 00 04 */	stw r0, 4(r1)
 /* 80340150 0033D090  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340154 0033D094  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80340158 0033D098  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
-/* 8034015C 0033D09C  4B FF D5 99 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80340158 0033D098  3B E3 BB 20 */	addi r31, r3, Scb@l
+/* 8034015C 0033D09C  4B FF D5 99 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340160 0033D0A0  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 80340164 0033D0A4  38 9F 00 48 */	addi r4, r31, 0x48
 /* 80340168 0033D0A8  2C 00 00 00 */	cmpwi r0, 0
@@ -222,15 +223,16 @@ lbl_80340188:
 /* 80340198 0033D0D8  7C 08 03 A6 */	mtlr r0
 /* 8034019C 0033D0DC  4E 80 00 20 */	blr 
 
+/* 803401A0 005C .text __OSLockSramEx __OSLockSramEx */
 .global __OSLockSramEx
 __OSLockSramEx:
 /* 803401A0 0033D0E0  7C 08 02 A6 */	mflr r0
-/* 803401A4 0033D0E4  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 803401A4 0033D0E4  3C 60 80 45 */	lis r3, Scb@ha
 /* 803401A8 0033D0E8  90 01 00 04 */	stw r0, 4(r1)
 /* 803401AC 0033D0EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803401B0 0033D0F0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803401B4 0033D0F4  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
-/* 803401B8 0033D0F8  4B FF D5 3D */	bl __RAS_OSDisableInterrupts_begin 
+/* 803401B4 0033D0F4  3B E3 BB 20 */	addi r31, r3, Scb@l
+/* 803401B8 0033D0F8  4B FF D5 3D */	bl __RAS_OSDisableInterrupts_begin
 /* 803401BC 0033D0FC  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 803401C0 0033D100  38 9F 00 48 */	addi r4, r31, 0x48
 /* 803401C4 0033D104  2C 00 00 00 */	cmpwi r0, 0
@@ -250,15 +252,16 @@ lbl_803401E8:
 /* 803401F4 0033D134  7C 08 03 A6 */	mtlr r0
 /* 803401F8 0033D138  4E 80 00 20 */	blr 
 
+/* 803401FC 033C .text UnlockSram UnlockSram */
 .global UnlockSram
 UnlockSram:
 /* 803401FC 0033D13C  7C 08 02 A6 */	mflr r0
 /* 80340200 0033D140  2C 03 00 00 */	cmpwi r3, 0
 /* 80340204 0033D144  90 01 00 04 */	stw r0, 4(r1)
-/* 80340208 0033D148  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 80340208 0033D148  3C 60 80 45 */	lis r3, Scb@ha
 /* 8034020C 0033D14C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80340210 0033D150  BF 61 00 1C */	stmw r27, 0x1c(r1)
-/* 80340214 0033D154  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
+/* 80340214 0033D154  3B E3 BB 20 */	addi r31, r3, Scb@l
 /* 80340218 0033D158  41 82 02 F8 */	beq lbl_80340510
 /* 8034021C 0033D15C  28 04 00 00 */	cmplwi r4, 0
 /* 80340220 0033D160  40 82 01 B0 */	bne lbl_803403D0
@@ -396,9 +399,7 @@ lbl_80340410:
 /* 80340414 0033D354  B0 04 00 28 */	sth r0, 0x28(r4)
 lbl_80340418:
 /* 80340418 0033D358  83 BE 00 00 */	lwz r29, 0(r30)
-.global WriteSramCallback
 /* 8034041C 0033D35C  3C 60 80 34 */	lis r3, WriteSramCallback@ha
-.global WriteSramCallback
 /* 80340420 0033D360  38 A3 FE 90 */	addi r5, r3, WriteSramCallback@l
 /* 80340424 0033D364  23 7D 00 40 */	subfic r27, r29, 0x40
 /* 80340428 0033D368  7F 9F EA 14 */	add r28, r31, r29
@@ -474,6 +475,7 @@ lbl_80340510:
 /* 80340530 0033D470  7C 08 03 A6 */	mtlr r0
 /* 80340534 0033D474  4E 80 00 20 */	blr 
 
+/* 80340538 0024 .text __OSUnlockSram __OSUnlockSram */
 .global __OSUnlockSram
 __OSUnlockSram:
 /* 80340538 0033D478  7C 08 02 A6 */	mflr r0
@@ -486,6 +488,7 @@ __OSUnlockSram:
 /* 80340554 0033D494  7C 08 03 A6 */	mtlr r0
 /* 80340558 0033D498  4E 80 00 20 */	blr 
 
+/* 8034055C 0024 .text __OSUnlockSramEx __OSUnlockSramEx */
 .global __OSUnlockSramEx
 __OSUnlockSramEx:
 /* 8034055C 0033D49C  7C 08 02 A6 */	mflr r0
@@ -498,22 +501,24 @@ __OSUnlockSramEx:
 /* 80340578 0033D4B8  7C 08 03 A6 */	mtlr r0
 /* 8034057C 0033D4BC  4E 80 00 20 */	blr 
 
+/* 80340580 0010 .text __OSSyncSram __OSSyncSram */
 .global __OSSyncSram
 __OSSyncSram:
-/* 80340580 0033D4C0  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
-/* 80340584 0033D4C4  38 63 BB 20 */	addi r3, r3, lbl_8044BB20@l
+/* 80340580 0033D4C0  3C 60 80 45 */	lis r3, Scb@ha
+/* 80340584 0033D4C4  38 63 BB 20 */	addi r3, r3, Scb@l
 /* 80340588 0033D4C8  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 8034058C 0033D4CC  4E 80 00 20 */	blr 
 
+/* 80340590 0080 .text OSGetSoundMode OSGetSoundMode */
 .global OSGetSoundMode
 OSGetSoundMode:
 /* 80340590 0033D4D0  7C 08 02 A6 */	mflr r0
-/* 80340594 0033D4D4  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 80340594 0033D4D4  3C 60 80 45 */	lis r3, Scb@ha
 /* 80340598 0033D4D8  90 01 00 04 */	stw r0, 4(r1)
 /* 8034059C 0033D4DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803405A0 0033D4E0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803405A4 0033D4E4  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
-/* 803405A8 0033D4E8  4B FF D1 4D */	bl __RAS_OSDisableInterrupts_begin 
+/* 803405A4 0033D4E4  3B E3 BB 20 */	addi r31, r3, Scb@l
+/* 803405A8 0033D4E8  4B FF D1 4D */	bl __RAS_OSDisableInterrupts_begin
 /* 803405AC 0033D4EC  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 803405B0 0033D4F0  38 9F 00 48 */	addi r4, r31, 0x48
 /* 803405B4 0033D4F4  2C 00 00 00 */	cmpwi r0, 0
@@ -544,17 +549,18 @@ lbl_803405EC:
 /* 80340608 0033D548  7C 08 03 A6 */	mtlr r0
 /* 8034060C 0033D54C  4E 80 00 20 */	blr 
 
+/* 80340610 00A4 .text OSSetSoundMode OSSetSoundMode */
 .global OSSetSoundMode
 OSSetSoundMode:
 /* 80340610 0033D550  7C 08 02 A6 */	mflr r0
-/* 80340614 0033D554  3C 80 80 45 */	lis r4, lbl_8044BB20@ha
+/* 80340614 0033D554  3C 80 80 45 */	lis r4, Scb@ha
 /* 80340618 0033D558  90 01 00 04 */	stw r0, 4(r1)
 /* 8034061C 0033D55C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80340620 0033D560  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80340624 0033D564  3B E4 BB 20 */	addi r31, r4, lbl_8044BB20@l
+/* 80340624 0033D564  3B E4 BB 20 */	addi r31, r4, Scb@l
 /* 80340628 0033D568  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8034062C 0033D56C  54 7E 17 7A */	rlwinm r30, r3, 2, 0x1d, 0x1d
-/* 80340630 0033D570  4B FF D0 C5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80340630 0033D570  4B FF D0 C5 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340634 0033D574  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 80340638 0033D578  38 9F 00 48 */	addi r4, r31, 0x48
 /* 8034063C 0033D57C  2C 00 00 00 */	cmpwi r0, 0
@@ -592,15 +598,16 @@ lbl_8034069C:
 /* 803406AC 0033D5EC  7C 08 03 A6 */	mtlr r0
 /* 803406B0 0033D5F0  4E 80 00 20 */	blr 
 
+/* 803406B4 0070 .text OSGetProgressiveMode OSGetProgressiveMode */
 .global OSGetProgressiveMode
 OSGetProgressiveMode:
 /* 803406B4 0033D5F4  7C 08 02 A6 */	mflr r0
-/* 803406B8 0033D5F8  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 803406B8 0033D5F8  3C 60 80 45 */	lis r3, Scb@ha
 /* 803406BC 0033D5FC  90 01 00 04 */	stw r0, 4(r1)
 /* 803406C0 0033D600  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 803406C4 0033D604  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 803406C8 0033D608  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
-/* 803406CC 0033D60C  4B FF D0 29 */	bl __RAS_OSDisableInterrupts_begin 
+/* 803406C8 0033D608  3B E3 BB 20 */	addi r31, r3, Scb@l
+/* 803406CC 0033D60C  4B FF D0 29 */	bl __RAS_OSDisableInterrupts_begin
 /* 803406D0 0033D610  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 803406D4 0033D614  38 9F 00 48 */	addi r4, r31, 0x48
 /* 803406D8 0033D618  2C 00 00 00 */	cmpwi r0, 0
@@ -625,17 +632,18 @@ lbl_803406F8:
 /* 8034071C 0033D65C  7C 08 03 A6 */	mtlr r0
 /* 80340720 0033D660  4E 80 00 20 */	blr 
 
+/* 80340724 00A4 .text OSSetProgressiveMode OSSetProgressiveMode */
 .global OSSetProgressiveMode
 OSSetProgressiveMode:
 /* 80340724 0033D664  7C 08 02 A6 */	mflr r0
-/* 80340728 0033D668  3C 80 80 45 */	lis r4, lbl_8044BB20@ha
+/* 80340728 0033D668  3C 80 80 45 */	lis r4, Scb@ha
 /* 8034072C 0033D66C  90 01 00 04 */	stw r0, 4(r1)
 /* 80340730 0033D670  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80340734 0033D674  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80340738 0033D678  3B E4 BB 20 */	addi r31, r4, lbl_8044BB20@l
+/* 80340738 0033D678  3B E4 BB 20 */	addi r31, r4, Scb@l
 /* 8034073C 0033D67C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80340740 0033D680  54 7E 3E 30 */	rlwinm r30, r3, 7, 0x18, 0x18
-/* 80340744 0033D684  4B FF CF B1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80340744 0033D684  4B FF CF B1 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340748 0033D688  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 8034074C 0033D68C  38 9F 00 48 */	addi r4, r31, 0x48
 /* 80340750 0033D690  2C 00 00 00 */	cmpwi r0, 0
@@ -673,17 +681,18 @@ lbl_803407B0:
 /* 803407C0 0033D700  7C 08 03 A6 */	mtlr r0
 /* 803407C4 0033D704  4E 80 00 20 */	blr 
 
+/* 803407C8 0084 .text OSGetWirelessID OSGetWirelessID */
 .global OSGetWirelessID
 OSGetWirelessID:
 /* 803407C8 0033D708  7C 08 02 A6 */	mflr r0
-/* 803407CC 0033D70C  3C 80 80 45 */	lis r4, lbl_8044BB20@ha
+/* 803407CC 0033D70C  3C 80 80 45 */	lis r4, Scb@ha
 /* 803407D0 0033D710  90 01 00 04 */	stw r0, 4(r1)
 /* 803407D4 0033D714  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803407D8 0033D718  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803407DC 0033D71C  3B E4 BB 20 */	addi r31, r4, lbl_8044BB20@l
+/* 803407DC 0033D71C  3B E4 BB 20 */	addi r31, r4, Scb@l
 /* 803407E0 0033D720  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803407E4 0033D724  3B C3 00 00 */	addi r30, r3, 0
-/* 803407E8 0033D728  4B FF CF 0D */	bl __RAS_OSDisableInterrupts_begin 
+/* 803407E8 0033D728  4B FF CF 0D */	bl __RAS_OSDisableInterrupts_begin
 /* 803407EC 0033D72C  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 803407F0 0033D730  38 9F 00 48 */	addi r4, r31, 0x48
 /* 803407F4 0033D734  2C 00 00 00 */	cmpwi r0, 0
@@ -711,19 +720,20 @@ lbl_80340818:
 /* 80340844 0033D784  7C 08 03 A6 */	mtlr r0
 /* 80340848 0033D788  4E 80 00 20 */	blr 
 
+/* 8034084C 00AC .text OSSetWirelessID OSSetWirelessID */
 .global OSSetWirelessID
 OSSetWirelessID:
 /* 8034084C 0033D78C  7C 08 02 A6 */	mflr r0
-/* 80340850 0033D790  3C A0 80 45 */	lis r5, lbl_8044BB20@ha
+/* 80340850 0033D790  3C A0 80 45 */	lis r5, Scb@ha
 /* 80340854 0033D794  90 01 00 04 */	stw r0, 4(r1)
 /* 80340858 0033D798  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 8034085C 0033D79C  93 E1 00 24 */	stw r31, 0x24(r1)
-/* 80340860 0033D7A0  3B E5 BB 20 */	addi r31, r5, lbl_8044BB20@l
+/* 80340860 0033D7A0  3B E5 BB 20 */	addi r31, r5, Scb@l
 /* 80340864 0033D7A4  93 C1 00 20 */	stw r30, 0x20(r1)
 /* 80340868 0033D7A8  3B C4 00 00 */	addi r30, r4, 0
 /* 8034086C 0033D7AC  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 80340870 0033D7B0  3B A3 00 00 */	addi r29, r3, 0
-/* 80340874 0033D7B4  4B FF CE 81 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80340874 0033D7B4  4B FF CE 81 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340878 0033D7B8  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 8034087C 0033D7BC  38 9F 00 48 */	addi r4, r31, 0x48
 /* 80340880 0033D7C0  2C 00 00 00 */	cmpwi r0, 0
@@ -761,15 +771,16 @@ lbl_803408DC:
 /* 803408F0 0033D830  7C 08 03 A6 */	mtlr r0
 /* 803408F4 0033D834  4E 80 00 20 */	blr 
 
+/* 803408F8 0070 .text OSGetGbsMode OSGetGbsMode */
 .global OSGetGbsMode
 OSGetGbsMode:
 /* 803408F8 0033D838  7C 08 02 A6 */	mflr r0
-/* 803408FC 0033D83C  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
+/* 803408FC 0033D83C  3C 60 80 45 */	lis r3, Scb@ha
 /* 80340900 0033D840  90 01 00 04 */	stw r0, 4(r1)
 /* 80340904 0033D844  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80340908 0033D848  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 8034090C 0033D84C  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
-/* 80340910 0033D850  4B FF CD E5 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034090C 0033D84C  3B E3 BB 20 */	addi r31, r3, Scb@l
+/* 80340910 0033D850  4B FF CD E5 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340914 0033D854  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 80340918 0033D858  38 9F 00 48 */	addi r4, r31, 0x48
 /* 8034091C 0033D85C  2C 00 00 00 */	cmpwi r0, 0
@@ -794,6 +805,7 @@ lbl_80340940:
 /* 80340960 0033D8A0  7C 08 03 A6 */	mtlr r0
 /* 80340964 0033D8A4  4E 80 00 20 */	blr 
 
+/* 80340968 00B8 .text OSSetGbsMode OSSetGbsMode */
 .global OSSetGbsMode
 OSSetGbsMode:
 /* 80340968 0033D8A8  7C 08 02 A6 */	mflr r0
@@ -805,8 +817,8 @@ OSSetGbsMode:
 /* 80340980 0033D8C0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80340984 0033D8C4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80340988 0033D8C8  3B C3 00 00 */	addi r30, r3, 0
-/* 8034098C 0033D8CC  3C 60 80 45 */	lis r3, lbl_8044BB20@ha
-/* 80340990 0033D8D0  3B E3 BB 20 */	addi r31, r3, lbl_8044BB20@l
+/* 8034098C 0033D8CC  3C 60 80 45 */	lis r3, Scb@ha
+/* 80340990 0033D8D0  3B E3 BB 20 */	addi r31, r3, Scb@l
 /* 80340994 0033D8D4  41 82 00 10 */	beq lbl_803409A4
 /* 80340998 0033D8D8  54 80 06 32 */	rlwinm r0, r4, 0, 0x18, 0x19
 /* 8034099C 0033D8DC  28 00 00 C0 */	cmplwi r0, 0xc0
@@ -814,7 +826,7 @@ OSSetGbsMode:
 lbl_803409A4:
 /* 803409A4 0033D8E4  3B C0 00 00 */	li r30, 0
 lbl_803409A8:
-/* 803409A8 0033D8E8  4B FF CD 4D */	bl __RAS_OSDisableInterrupts_begin 
+/* 803409A8 0033D8E8  4B FF CD 4D */	bl __RAS_OSDisableInterrupts_begin
 /* 803409AC 0033D8EC  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 803409B0 0033D8F0  38 BF 00 48 */	addi r5, r31, 0x48
 /* 803409B4 0033D8F4  2C 00 00 00 */	cmpwi r0, 0
@@ -848,3 +860,13 @@ lbl_80340A08:
 /* 80340A14 0033D954  38 21 00 20 */	addi r1, r1, 0x20
 /* 80340A18 0033D958  7C 08 03 A6 */	mtlr r0
 /* 80340A1C 0033D95C  4E 80 00 20 */	blr 
+
+
+
+.section .bss, "aw"
+/* 8044BB20 0054 .bss Scb Scb */
+.global Scb
+Scb:
+.skip 0x54
+.skip 0x4 /* padding */
+

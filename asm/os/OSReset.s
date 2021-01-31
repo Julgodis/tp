@@ -1,11 +1,11 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033f660
 
-
+.section .text, "ax"
+/* 8033F660 0084 .text OSRegisterResetFunction OSRegisterResetFunction */
 .global OSRegisterResetFunction
 OSRegisterResetFunction:
-/* 8033F660 0033C5A0  80 AD 91 10 */	lwz r5, lbl_80451690-_SDA_BASE_(r13)
+/* 8033F660 0033C5A0  80 AD 91 10 */	lwz r5, ResetFunctionQueue-_SDA_BASE_(r13)
 /* 8033F664 0033C5A4  48 00 00 08 */	b lbl_8033F66C
 lbl_8033F668:
 /* 8033F668 0033C5A8  80 A5 00 08 */	lwz r5, 8(r5)
@@ -19,11 +19,11 @@ lbl_8033F66C:
 lbl_8033F684:
 /* 8033F684 0033C5C4  28 05 00 00 */	cmplwi r5, 0
 /* 8033F688 0033C5C8  40 82 00 34 */	bne lbl_8033F6BC
-/* 8033F68C 0033C5CC  38 AD 91 10 */	addi r5, r13, lbl_80451690-_SDA_BASE_
+/* 8033F68C 0033C5CC  38 AD 91 10 */	addi r5, r13, ResetFunctionQueue-_SDA_BASE_
 /* 8033F690 0033C5D0  84 85 00 04 */	lwzu r4, 4(r5)
 /* 8033F694 0033C5D4  28 04 00 00 */	cmplwi r4, 0
 /* 8033F698 0033C5D8  40 82 00 0C */	bne lbl_8033F6A4
-/* 8033F69C 0033C5DC  90 6D 91 10 */	stw r3, lbl_80451690-_SDA_BASE_(r13)
+/* 8033F69C 0033C5DC  90 6D 91 10 */	stw r3, ResetFunctionQueue-_SDA_BASE_(r13)
 /* 8033F6A0 0033C5E0  48 00 00 08 */	b lbl_8033F6A8
 lbl_8033F6A4:
 /* 8033F6A4 0033C5E4  90 64 00 08 */	stw r3, 8(r4)
@@ -40,12 +40,13 @@ lbl_8033F6BC:
 /* 8033F6C8 0033C608  28 04 00 00 */	cmplwi r4, 0
 /* 8033F6CC 0033C60C  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8033F6D0 0033C610  40 82 00 0C */	bne lbl_8033F6DC
-/* 8033F6D4 0033C614  90 6D 91 10 */	stw r3, lbl_80451690-_SDA_BASE_(r13)
+/* 8033F6D4 0033C614  90 6D 91 10 */	stw r3, ResetFunctionQueue-_SDA_BASE_(r13)
 /* 8033F6D8 0033C618  4E 80 00 20 */	blr 
 lbl_8033F6DC:
 /* 8033F6DC 0033C61C  90 64 00 08 */	stw r3, 8(r4)
 /* 8033F6E0 0033C620  4E 80 00 20 */	blr 
 
+/* 8033F6E4 00A8 .text __OSCallResetFunctions __OSCallResetFunctions */
 .global __OSCallResetFunctions
 __OSCallResetFunctions:
 /* 8033F6E4 0033C624  7C 08 02 A6 */	mflr r0
@@ -57,7 +58,7 @@ __OSCallResetFunctions:
 /* 8033F6FC 0033C63C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8033F700 0033C640  3B A3 00 00 */	addi r29, r3, 0
 /* 8033F704 0033C644  38 60 00 00 */	li r3, 0
-/* 8033F708 0033C648  83 ED 91 10 */	lwz r31, lbl_80451690-_SDA_BASE_(r13)
+/* 8033F708 0033C648  83 ED 91 10 */	lwz r31, ResetFunctionQueue-_SDA_BASE_(r13)
 /* 8033F70C 0033C64C  48 00 00 3C */	b lbl_8033F748
 lbl_8033F710:
 /* 8033F710 0033C650  2C 1E 00 00 */	cmpwi r30, 0
@@ -97,6 +98,7 @@ lbl_8033F770:
 /* 8033F784 0033C6C4  7C 08 03 A6 */	mtlr r0
 /* 8033F788 0033C6C8  4E 80 00 20 */	blr 
 
+/* 8033F78C 0070 .text Reset Reset */
 .global Reset
 Reset:
 /* 8033F78C 0033C6CC  48 00 00 20 */	b lbl_8033F7AC
@@ -137,6 +139,7 @@ lbl_8033F7F0:
 lbl_8033F7F8:
 /* 8033F7F8 0033C738  4B FF FF 98 */	b lbl_8033F790
 
+/* 8033F7FC 0068 .text KillThreads KillThreads */
 .global KillThreads
 KillThreads:
 /* 8033F7FC 0033C73C  7C 08 02 A6 */	mflr r0
@@ -172,6 +175,7 @@ lbl_8033F848:
 /* 8033F85C 0033C79C  7C 08 03 A6 */	mtlr r0
 /* 8033F860 0033C7A0  4E 80 00 20 */	blr 
 
+/* 8033F864 0048 .text __OSDoHotReset __OSDoHotReset */
 .global __OSDoHotReset
 __OSDoHotReset:
 /* 8033F864 0033C7A4  7C 08 02 A6 */	mflr r0
@@ -179,7 +183,7 @@ __OSDoHotReset:
 /* 8033F86C 0033C7AC  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8033F870 0033C7B0  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8033F874 0033C7B4  7C 7F 1B 78 */	mr r31, r3
-/* 8033F878 0033C7B8  4B FF DE 7D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F878 0033C7B8  4B FF DE 7D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F87C 0033C7BC  3C 60 CC 00 */	lis r3, 0xCC002000@ha
 /* 8033F880 0033C7C0  38 63 20 00 */	addi r3, r3, 0xCC002000@l
 /* 8033F884 0033C7C4  38 00 00 00 */	li r0, 0
@@ -193,6 +197,7 @@ __OSDoHotReset:
 /* 8033F8A4 0033C7E4  7C 08 03 A6 */	mtlr r0
 /* 8033F8A8 0033C7E8  4E 80 00 20 */	blr 
 
+/* 8033F8AC 0200 .text OSResetSystem OSResetSystem */
 .global OSResetSystem
 OSResetSystem:
 /* 8033F8AC 0033C7EC  7C 08 02 A6 */	mflr r0
@@ -222,7 +227,7 @@ lbl_8033F904:
 /* 8033F908 0033C848  41 82 00 24 */	beq lbl_8033F92C
 /* 8033F90C 0033C84C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8033F910 0033C850  40 82 00 78 */	bne lbl_8033F988
-/* 8033F914 0033C854  80 0D 91 18 */	lwz r0, lbl_80451698-_SDA_BASE_(r13)
+/* 8033F914 0033C854  80 0D 91 18 */	lwz r0, bootThisDol-_SDA_BASE_(r13)
 /* 8033F918 0033C858  28 00 00 00 */	cmplwi r0, 0
 /* 8033F91C 0033C85C  40 82 00 10 */	bne lbl_8033F92C
 /* 8033F920 0033C860  3C 1D 3F FF */	addis r0, r29, 0x3fff
@@ -248,7 +253,7 @@ lbl_8033F95C:
 /* 8033F95C 0033C89C  48 00 0C 25 */	bl __OSSyncSram
 /* 8033F960 0033C8A0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033F964 0033C8A4  41 82 FF F8 */	beq lbl_8033F95C
-/* 8033F968 0033C8A8  4B FF DD 8D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F968 0033C8A8  4B FF DD 8D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F96C 0033C8AC  38 60 00 01 */	li r3, 1
 /* 8033F970 0033C8B0  4B FF FD 75 */	bl __OSCallResetFunctions
 /* 8033F974 0033C8B4  4B FF BE 79 */	bl LCDisable
@@ -273,7 +278,7 @@ lbl_8033F9AC:
 /* 8033F9AC 0033C8EC  48 00 0B D5 */	bl __OSSyncSram
 /* 8033F9B0 0033C8F0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033F9B4 0033C8F4  41 82 FF F8 */	beq lbl_8033F9AC
-/* 8033F9B8 0033C8F8  4B FF DD 3D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F9B8 0033C8F8  4B FF DD 3D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F9BC 0033C8FC  38 60 00 01 */	li r3, 1
 /* 8033F9C0 0033C900  4B FF FD 25 */	bl __OSCallResetFunctions
 /* 8033F9C4 0033C904  4B FF BE 29 */	bl LCDisable
@@ -281,7 +286,7 @@ lbl_8033F9AC:
 lbl_8033F9CC:
 /* 8033F9CC 0033C90C  2C 1C 00 01 */	cmpwi r28, 1
 /* 8033F9D0 0033C910  40 82 00 28 */	bne lbl_8033F9F8
-/* 8033F9D4 0033C914  4B FF DD 21 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033F9D4 0033C914  4B FF DD 21 */	bl __RAS_OSDisableInterrupts_begin
 /* 8033F9D8 0033C918  3C 60 CC 00 */	lis r3, 0xCC002000@ha
 /* 8033F9DC 0033C91C  38 63 20 00 */	addi r3, r3, 0xCC002000@l
 /* 8033F9E0 0033C920  38 00 00 00 */	li r0, 0
@@ -302,7 +307,7 @@ lbl_8033F9F8:
 lbl_8033FA18:
 /* 8033FA18 0033C958  48 00 12 ED */	bl OSEnableScheduler
 /* 8033FA1C 0033C95C  7F A3 EB 78 */	mr r3, r29
-/* 8033FA20 0033C960  80 8D 91 18 */	lwz r4, lbl_80451698-_SDA_BASE_(r13)
+/* 8033FA20 0033C960  80 8D 91 18 */	lwz r4, bootThisDol-_SDA_BASE_(r13)
 /* 8033FA24 0033C964  4B FF FB AD */	bl __OSReboot
 lbl_8033FA28:
 /* 8033FA28 0033C968  3F E0 80 00 */	lis r31, 0x80000040@ha
@@ -339,10 +344,11 @@ lbl_8033FA28:
 /* 8033FAA4 0033C9E4  7C 08 03 A6 */	mtlr r0
 /* 8033FAA8 0033C9E8  4E 80 00 20 */	blr 
 
+/* 8033FAAC 0038 .text OSGetResetCode OSGetResetCode */
 .global OSGetResetCode
 OSGetResetCode:
-/* 8033FAAC 0033C9EC  3C 60 80 45 */	lis r3, lbl_8044BAB0@ha
-/* 8033FAB0 0033C9F0  38 63 BA B0 */	addi r3, r3, lbl_8044BAB0@l
+/* 8033FAAC 0033C9EC  3C 60 80 45 */	lis r3, __OSRebootParams@ha
+/* 8033FAB0 0033C9F0  38 63 BA B0 */	addi r3, r3, __OSRebootParams@l
 /* 8033FAB4 0033C9F4  80 03 00 00 */	lwz r0, 0(r3)
 /* 8033FAB8 0033C9F8  2C 00 00 00 */	cmpwi r0, 0
 /* 8033FABC 0033C9FC  41 82 00 10 */	beq lbl_8033FACC
@@ -357,3 +363,31 @@ lbl_8033FACC:
 /* 8033FADC 0033CA1C  54 03 E8 FE */	srwi r3, r0, 3
 lbl_8033FAE0:
 /* 8033FAE0 0033CA20  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D07E8 004E .data lbl_803D07E8 @153 */
+.global lbl_803D07E8
+lbl_803D07E8:
+.byte 0x4f, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x28, 0x29, 0x3a /* baserom.dol+0x3cd7e8 */
+.byte 0x20, 0x59, 0x6f, 0x75, 0x20, 0x63, 0x61, 0x6e, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69 /* baserom.dol+0x3cd7f8 */
+.byte 0x66, 0x79, 0x20, 0x54, 0x52, 0x55, 0x45, 0x20, 0x74, 0x6f, 0x20, 0x66, 0x6f, 0x72, 0x63, 0x65 /* baserom.dol+0x3cd808 */
+.byte 0x4d, 0x65, 0x6e, 0x75, 0x20, 0x69, 0x66, 0x20, 0x79, 0x6f, 0x75, 0x20, 0x72, 0x65, 0x73, 0x74 /* baserom.dol+0x3cd818 */
+.byte 0x61, 0x72, 0x74, 0x2e, 0x20, 0x49, 0x67, 0x6e, 0x6f, 0x72, 0x65, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd828 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cd836 */
+
+
+
+.section .sbss, "aw"
+/* 80451690 0008 .sbss ResetFunctionQueue ResetFunctionQueue */
+.global ResetFunctionQueue
+ResetFunctionQueue:
+.skip 0x8
+
+/* 80451698 0004 .sbss bootThisDol bootThisDol */
+.global bootThisDol
+bootThisDol:
+.skip 0x4
+.skip 0x4 /* padding */
+

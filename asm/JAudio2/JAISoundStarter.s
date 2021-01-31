@@ -1,29 +1,30 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a2f6c
 
-
-.global JAISoundStarter_NS_ctor
-JAISoundStarter_NS_ctor:
+.section .text, "ax"
+/* 802A2F6C 001C .text __ct__15JAISoundStarterFb __ct__15JAISoundStarterFb */
+.global __ct__15JAISoundStarterFb
+__ct__15JAISoundStarterFb:
 /* 802A2F6C 0029FEAC  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 802A2F70 0029FEB0  41 82 00 08 */	beq lbl_802A2F78
 /* 802A2F74 0029FEB4  90 6D 85 F8 */	stw r3, lbl_80450B78-_SDA_BASE_(r13)
 lbl_802A2F78:
-/* 802A2F78 0029FEB8  3C 80 80 3D */	lis r4, lbl_803C99C8@ha
-/* 802A2F7C 0029FEBC  38 04 99 C8 */	addi r0, r4, lbl_803C99C8@l
+/* 802A2F78 0029FEB8  3C 80 80 3D */	lis r4, __vt__15JAISoundStarter@ha
+/* 802A2F7C 0029FEBC  38 04 99 C8 */	addi r0, r4, __vt__15JAISoundStarter@l
 /* 802A2F80 0029FEC0  90 03 00 00 */	stw r0, 0(r3)
 /* 802A2F84 0029FEC4  4E 80 00 20 */	blr 
 
-.global JAISoundStarter_NS_dtor
-JAISoundStarter_NS_dtor:
+/* 802A2F88 0064 .text __dt__15JAISoundStarterFv __dt__15JAISoundStarterFv */
+.global __dt__15JAISoundStarterFv
+__dt__15JAISoundStarterFv:
 /* 802A2F88 0029FEC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2F8C 0029FECC  7C 08 02 A6 */	mflr r0
 /* 802A2F90 0029FED0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A2F94 0029FED4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A2F98 0029FED8  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802A2F9C 0029FEDC  41 82 00 38 */	beq lbl_802A2FD4
-/* 802A2FA0 0029FEE0  3C 60 80 3D */	lis r3, lbl_803C99C8@ha
-/* 802A2FA4 0029FEE4  38 03 99 C8 */	addi r0, r3, lbl_803C99C8@l
+/* 802A2FA0 0029FEE0  3C 60 80 3D */	lis r3, __vt__15JAISoundStarter@ha
+/* 802A2FA4 0029FEE4  38 03 99 C8 */	addi r0, r3, __vt__15JAISoundStarter@l
 /* 802A2FA8 0029FEE8  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A2FAC 0029FEEC  41 82 00 18 */	beq lbl_802A2FC4
 /* 802A2FB0 0029FEF0  80 0D 85 F8 */	lwz r0, lbl_80450B78-_SDA_BASE_(r13)
@@ -44,8 +45,9 @@ lbl_802A2FD4:
 /* 802A2FE4 0029FF24  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2FE8 0029FF28  4E 80 00 20 */	blr 
 
-.global JAISoundStarter_NS_startLevelSound
-JAISoundStarter_NS_startLevelSound:
+/* 802A2FEC 00E8 .text func_802A2FEC startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+.global func_802A2FEC
+func_802A2FEC:
 /* 802A2FEC 0029FF2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A2FF0 0029FF30  7C 08 02 A6 */	mflr r0
 /* 802A2FF4 0029FF34  90 01 00 24 */	stw r0, 0x24(r1)
@@ -108,3 +110,12 @@ lbl_802A30C0:
 /* 802A30C8 002A0008  7C 08 03 A6 */	mtlr r0
 /* 802A30CC 002A000C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A30D0 002A0010  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C99C8 0010 .data __vt__15JAISoundStarter __vt__15JAISoundStarter */
+.global __vt__15JAISoundStarter
+__vt__15JAISoundStarter:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x2f, 0x88, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c69c8 */
+

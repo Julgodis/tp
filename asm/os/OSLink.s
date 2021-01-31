@@ -1,22 +1,25 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033df60
 
-
+.section .text, "ax"
+/* 8033DF60 0004 .text OSNotifyLink OSNotifyLink */
 .global OSNotifyLink
 OSNotifyLink:
 /* 8033DF60 0033AEA0  4E 80 00 20 */	blr 
 
+/* 8033DF64 0004 .text OSNotifyUnlink OSNotifyUnlink */
 .global OSNotifyUnlink
 OSNotifyUnlink:
 /* 8033DF64 0033AEA4  4E 80 00 20 */	blr 
 
+/* 8033DF68 000C .text OSSetStringTable OSSetStringTable */
 .global OSSetStringTable
 OSSetStringTable:
 /* 8033DF68 0033AEA8  3C 80 80 00 */	lis r4, 0x800030D0@ha
 /* 8033DF6C 0033AEAC  90 64 30 D0 */	stw r3, 0x800030D0@l(r4)
 /* 8033DF70 0033AEB0  4E 80 00 20 */	blr 
 
+/* 8033DF74 02BC .text Relocate Relocate */
 .global Relocate
 Relocate:
 /* 8033DF74 0033AEB4  7C 08 02 A6 */	mflr r0
@@ -226,6 +229,7 @@ lbl_8033E21C:
 /* 8033E228 0033B168  7C 08 03 A6 */	mtlr r0
 /* 8033E22C 0033B16C  4E 80 00 20 */	blr 
 
+/* 8033E230 02E0 .text Link Link */
 .global Link
 Link:
 /* 8033E230 0033B170  7C 08 02 A6 */	mflr r0
@@ -437,6 +441,7 @@ lbl_8033E4F0:
 /* 8033E508 0033B448  7C 08 03 A6 */	mtlr r0
 /* 8033E50C 0033B44C  4E 80 00 20 */	blr 
 
+/* 8033E510 0024 .text OSLink OSLink */
 .global OSLink
 OSLink:
 /* 8033E510 0033B450  7C 08 02 A6 */	mflr r0
@@ -449,6 +454,7 @@ OSLink:
 /* 8033E52C 0033B46C  7C 08 03 A6 */	mtlr r0
 /* 8033E530 0033B470  4E 80 00 20 */	blr 
 
+/* 8033E534 003C .text OSLinkFixed OSLinkFixed */
 .global OSLinkFixed
 OSLinkFixed:
 /* 8033E534 0033B474  7C 08 02 A6 */	mflr r0
@@ -470,6 +476,7 @@ lbl_8033E560:
 /* 8033E568 0033B4A8  7C 08 03 A6 */	mtlr r0
 /* 8033E56C 0033B4AC  4E 80 00 20 */	blr 
 
+/* 8033E570 0238 .text Undo Undo */
 .global Undo
 Undo:
 /* 8033E570 0033B4B0  7C 08 02 A6 */	mflr r0
@@ -641,6 +648,7 @@ lbl_8033E794:
 /* 8033E7A0 0033B6E0  7C 08 03 A6 */	mtlr r0
 /* 8033E7A4 0033B6E4  4E 80 00 20 */	blr 
 
+/* 8033E7A8 01D4 .text OSUnlink OSUnlink */
 .global OSUnlink
 OSUnlink:
 /* 8033E7A8 0033B6E8  7C 08 02 A6 */	mflr r0
@@ -777,6 +785,7 @@ lbl_8033E930:
 /* 8033E974 0033B8B4  7C 08 03 A6 */	mtlr r0
 /* 8033E978 0033B8B8  4E 80 00 20 */	blr 
 
+/* 8033E97C 0018 .text __OSModuleInit __OSModuleInit */
 .global __OSModuleInit
 __OSModuleInit:
 /* 8033E97C 0033B8BC  3C 80 80 00 */	lis r4, 0x800030CC@ha
@@ -785,4 +794,23 @@ __OSModuleInit:
 /* 8033E988 0033B8C8  90 04 30 C8 */	stw r0, 0x30c8(r4)
 /* 8033E98C 0033B8CC  90 04 30 D0 */	stw r0, 0x30d0(r4)
 /* 8033E990 0033B8D0  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D0788 0025 .data lbl_803D0788 @62 */
+.global lbl_803D0788
+lbl_803D0788:
+.byte 0x4f, 0x53, 0x4c, 0x69, 0x6e, 0x6b, 0x3a, 0x20, 0x75, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x20 /* baserom.dol+0x3cd788 */
+.byte 0x72, 0x65, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x74, 0x79, 0x70, 0x65, 0x20 /* baserom.dol+0x3cd798 */
+.byte 0x25, 0x33, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd7a8 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cd7ad */
+
+/* 803D07B0 0027 .data lbl_803D07B0 @189 */
+.global lbl_803D07B0
+lbl_803D07B0:
+.byte 0x4f, 0x53, 0x55, 0x6e, 0x6c, 0x69, 0x6e, 0x6b, 0x3a, 0x20, 0x75, 0x6e, 0x6b, 0x6e, 0x6f, 0x77 /* baserom.dol+0x3cd7b0 */
+.byte 0x6e, 0x20, 0x72, 0x65, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x74, 0x79, 0x70 /* baserom.dol+0x3cd7c0 */
+.byte 0x65, 0x20, 0x25, 0x33, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd7d0 */
+.byte 0x00 /* baserom.dol+0x3cd7d7 */
 

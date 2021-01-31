@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802859dc
 
-
-.global JStudio_NS_math_NS_getRotation_xyz
-JStudio_NS_math_NS_getRotation_xyz:
+.section .text, "ax"
+/* 802859DC 0168 .text getRotation_xyz__Q27JStudio4mathFPA4_ffff getRotation_xyz__Q27JStudio4mathFPA4_ffff */
+.global getRotation_xyz__Q27JStudio4mathFPA4_ffff
+getRotation_xyz__Q27JStudio4mathFPA4_ffff:
 /* 802859DC 0028291C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802859E0 00282920  7C 08 02 A6 */	mflr r0
 /* 802859E4 00282924  90 01 00 74 */	stw r0, 0x74(r1)
@@ -27,26 +27,26 @@ JStudio_NS_math_NS_getRotation_xyz:
 /* 80285A28 00282968  C0 02 BA 68 */	lfs f0, lbl_80455468-_SDA2_BASE_(r2)
 /* 80285A2C 0028296C  EF 60 00 72 */	fmuls f27, f0, f1
 /* 80285A30 00282970  FC 20 D8 90 */	fmr f1, f27
-/* 80285A34 00282974  48 0E 65 F5 */	bl func_8036C028
+/* 80285A34 00282974  48 0E 65 F5 */	bl cos
 /* 80285A38 00282978  FF E0 08 18 */	frsp f31, f1
 /* 80285A3C 0028297C  FC 20 D8 90 */	fmr f1, f27
-/* 80285A40 00282980  48 0E 6B 51 */	bl func_8036C590
+/* 80285A40 00282980  48 0E 6B 51 */	bl sin
 /* 80285A44 00282984  FF C0 08 18 */	frsp f30, f1
 /* 80285A48 00282988  C0 02 BA 68 */	lfs f0, lbl_80455468-_SDA2_BASE_(r2)
 /* 80285A4C 0028298C  EF 60 07 32 */	fmuls f27, f0, f28
 /* 80285A50 00282990  FC 20 D8 90 */	fmr f1, f27
-/* 80285A54 00282994  48 0E 65 D5 */	bl func_8036C028
+/* 80285A54 00282994  48 0E 65 D5 */	bl cos
 /* 80285A58 00282998  FF A0 08 18 */	frsp f29, f1
 /* 80285A5C 0028299C  FC 20 D8 90 */	fmr f1, f27
-/* 80285A60 002829A0  48 0E 6B 31 */	bl func_8036C590
+/* 80285A60 002829A0  48 0E 6B 31 */	bl sin
 /* 80285A64 002829A4  FF 80 08 18 */	frsp f28, f1
 /* 80285A68 002829A8  C0 02 BA 68 */	lfs f0, lbl_80455468-_SDA2_BASE_(r2)
 /* 80285A6C 002829AC  EF 40 06 B2 */	fmuls f26, f0, f26
 /* 80285A70 002829B0  FC 20 D0 90 */	fmr f1, f26
-/* 80285A74 002829B4  48 0E 65 B5 */	bl func_8036C028
+/* 80285A74 002829B4  48 0E 65 B5 */	bl cos
 /* 80285A78 002829B8  FF 60 08 18 */	frsp f27, f1
 /* 80285A7C 002829BC  FC 20 D0 90 */	fmr f1, f26
-/* 80285A80 002829C0  48 0E 6B 11 */	bl func_8036C590
+/* 80285A80 002829C0  48 0E 6B 11 */	bl sin
 /* 80285A84 002829C4  FC 20 08 18 */	frsp f1, f1
 /* 80285A88 002829C8  EC 5F 06 F2 */	fmuls f2, f31, f27
 /* 80285A8C 002829CC  EC 7F 00 72 */	fmuls f3, f31, f1
@@ -96,8 +96,9 @@ JStudio_NS_math_NS_getRotation_xyz:
 /* 80285B3C 00282A7C  38 21 00 70 */	addi r1, r1, 0x70
 /* 80285B40 00282A80  4E 80 00 20 */	blr 
 
-.global JStudio_NS_math_NS_getTransformation_SRxyzT
-JStudio_NS_math_NS_getTransformation_SRxyzT:
+/* 80285B44 0088 .text getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec */
+.global getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec
+getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec:
 /* 80285B44 00282A84  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 80285B48 00282A88  7C 08 02 A6 */	mflr r0
 /* 80285B4C 00282A8C  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -115,7 +116,7 @@ JStudio_NS_math_NS_getTransformation_SRxyzT:
 /* 80285B7C 00282ABC  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 80285B80 00282AC0  C0 5E 00 04 */	lfs f2, 4(r30)
 /* 80285B84 00282AC4  C0 7E 00 08 */	lfs f3, 8(r30)
-/* 80285B88 00282AC8  4B FF FE 55 */	bl JStudio_NS_math_NS_getRotation_xyz
+/* 80285B88 00282AC8  4B FF FE 55 */	bl getRotation_xyz__Q27JStudio4mathFPA4_ffff
 /* 80285B8C 00282ACC  38 61 00 08 */	addi r3, r1, 8
 /* 80285B90 00282AD0  38 81 00 68 */	addi r4, r1, 0x68
 /* 80285B94 00282AD4  38 A1 00 38 */	addi r5, r1, 0x38
@@ -133,8 +134,9 @@ JStudio_NS_math_NS_getTransformation_SRxyzT:
 /* 80285BC4 00282B04  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80285BC8 00282B08  4E 80 00 20 */	blr 
 
-.global JStudio_NS_math_NS_getFromTransformation_SRxyzT
-JStudio_NS_math_NS_getFromTransformation_SRxyzT:
+/* 80285BCC 0240 .text getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
+.global getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf
+getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf:
 /* 80285BCC 00282B0C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80285BD0 00282B10  7C 08 02 A6 */	mflr r0
 /* 80285BD4 00282B14  90 01 00 84 */	stw r0, 0x84(r1)
@@ -226,15 +228,15 @@ lbl_80285CE8:
 /* 80285D20 00282C60  C8 A2 BA 78 */	lfd f5, lbl_80455478-_SDA2_BASE_(r2)
 /* 80285D24 00282C64  FC 9F 28 28 */	fsub f4, f31, f5
 /* 80285D28 00282C68  C0 62 BA 80 */	lfs f3, lbl_80455480-_SDA2_BASE_(r2)
-/* 80285D2C 00282C6C  3C 60 80 45 */	lis r3, lbl_80450AEC@ha
-/* 80285D30 00282C70  C0 03 0A EC */	lfs f0, lbl_80450AEC@l(r3)
+/* 80285D2C 00282C6C  3C 60 80 45 */	lis r3, __float_epsilon@ha
+/* 80285D30 00282C70  C0 03 0A EC */	lfs f0, __float_epsilon@l(r3)
 /* 80285D34 00282C74  EC 63 00 32 */	fmuls f3, f3, f0
 /* 80285D38 00282C78  FC 00 18 50 */	fneg f0, f3
 /* 80285D3C 00282C7C  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 80285D40 00282C80  4C 41 13 82 */	cror 2, 1, 2
 /* 80285D44 00282C84  40 82 00 1C */	bne lbl_80285D60
 /* 80285D48 00282C88  FC 20 08 50 */	fneg f1, f1
-/* 80285D4C 00282C8C  48 0E 69 D5 */	bl func_8036C720
+/* 80285D4C 00282C8C  48 0E 69 D5 */	bl atan2
 /* 80285D50 00282C90  FF 80 08 90 */	fmr f28, f1
 /* 80285D54 00282C94  C8 22 BA 88 */	lfd f1, lbl_80455488-_SDA2_BASE_(r2)
 /* 80285D58 00282C98  CB A2 BA 70 */	lfd f29, lbl_80455470-_SDA2_BASE_(r2)
@@ -244,7 +246,7 @@ lbl_80285D60:
 /* 80285D64 00282CA4  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 80285D68 00282CA8  4C 40 13 82 */	cror 2, 0, 2
 /* 80285D6C 00282CAC  40 82 00 18 */	bne lbl_80285D84
-/* 80285D70 00282CB0  48 0E 69 B1 */	bl func_8036C720
+/* 80285D70 00282CB0  48 0E 69 B1 */	bl atan2
 /* 80285D74 00282CB4  FF 80 08 90 */	fmr f28, f1
 /* 80285D78 00282CB8  C8 22 BA 90 */	lfd f1, lbl_80455490-_SDA2_BASE_(r2)
 /* 80285D7C 00282CBC  CB A2 BA 70 */	lfd f29, lbl_80455470-_SDA2_BASE_(r2)
@@ -252,14 +254,14 @@ lbl_80285D60:
 lbl_80285D84:
 /* 80285D84 00282CC4  FC 20 30 90 */	fmr f1, f6
 /* 80285D88 00282CC8  FC 40 38 90 */	fmr f2, f7
-/* 80285D8C 00282CCC  48 0E 69 95 */	bl func_8036C720
+/* 80285D8C 00282CCC  48 0E 69 95 */	bl atan2
 /* 80285D90 00282CD0  FF 80 08 90 */	fmr f28, f1
 /* 80285D94 00282CD4  FC 20 E8 90 */	fmr f1, f29
 /* 80285D98 00282CD8  FC 40 F0 90 */	fmr f2, f30
-/* 80285D9C 00282CDC  48 0E 69 85 */	bl func_8036C720
+/* 80285D9C 00282CDC  48 0E 69 85 */	bl atan2
 /* 80285DA0 00282CE0  FF A0 08 90 */	fmr f29, f1
 /* 80285DA4 00282CE4  FC 20 F8 50 */	fneg f1, f31
-/* 80285DA8 00282CE8  48 0E 69 59 */	bl func_8036C700
+/* 80285DA8 00282CE8  48 0E 69 59 */	bl asin
 lbl_80285DAC:
 /* 80285DAC 00282CEC  C8 02 BA 98 */	lfd f0, lbl_80455498-_SDA2_BASE_(r2)
 /* 80285DB0 00282CF0  FF 9C 00 32 */	fmul f28, f28, f0
@@ -285,4 +287,48 @@ lbl_80285DAC:
 /* 80285E00 00282D40  7C 08 03 A6 */	mtlr r0
 /* 80285E04 00282D44  38 21 00 80 */	addi r1, r1, 0x80
 /* 80285E08 00282D48  4E 80 00 20 */	blr 
+
+
+
+.section .sdata2, "a"
+/* 80455468 0004 .sdata2 lbl_80455468 @488 */
+.global lbl_80455468
+lbl_80455468:
+.byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d42c8 */
+
+/* 8045546C 0004 .sdata2 lbl_8045546C @489 */
+.global lbl_8045546C
+lbl_8045546C:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42cc */
+
+/* 80455470 0008 .sdata2 lbl_80455470 @623 */
+.global lbl_80455470
+lbl_80455470:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42d0 */
+
+/* 80455478 0008 .sdata2 lbl_80455478 @624 */
+.global lbl_80455478
+lbl_80455478:
+.byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42d8 */
+
+/* 80455480 0004 .sdata2 lbl_80455480 @625 */
+.global lbl_80455480
+lbl_80455480:
+.byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42e0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42e4 */
+
+/* 80455488 0008 .sdata2 lbl_80455488 @626 */
+.global lbl_80455488
+lbl_80455488:
+.byte 0xbf, 0xf9, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d42e8 */
+
+/* 80455490 0008 .sdata2 lbl_80455490 @627 */
+.global lbl_80455490
+lbl_80455490:
+.byte 0x3f, 0xf9, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d42f0 */
+
+/* 80455498 0008 .sdata2 lbl_80455498 @628 */
+.global lbl_80455498
+lbl_80455498:
+.byte 0x40, 0x4c, 0xa5, 0xdc, 0x1a, 0x63, 0xc1, 0xf8 /* baserom.dol+0x3d42f8 */
 

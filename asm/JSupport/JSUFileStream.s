@@ -1,27 +1,31 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802dc638
 
-
-.global JSUFileInputStream_ct
-JSUFileInputStream_ct:
-/* 802DC638 002D9578  3C A0 80 3C */	lis r5, lbl_803C2DF8@ha
-/* 802DC63C 002D957C  38 05 2D F8 */	addi r0, r5, lbl_803C2DF8@l
+.section .text, "ax"
+/* 802DC638 0044 .text __ct__18JSUFileInputStreamFP7JKRFile __ct__18JSUFileInputStreamFP7JKRFile */
+.global __ct__18JSUFileInputStreamFP7JKRFile
+__ct__18JSUFileInputStreamFP7JKRFile:
+/* 802DC638 002D9578  3C A0 80 3C */	lis r5, __vt__10JSUIosBase@ha
+/* 802DC63C 002D957C  38 05 2D F8 */	addi r0, r5, __vt__10JSUIosBase@l
 /* 802DC640 002D9580  90 03 00 00 */	stw r0, 0(r3)
 /* 802DC644 002D9584  38 C0 00 00 */	li r6, 0
 /* 802DC648 002D9588  98 C3 00 04 */	stb r6, 4(r3)
-/* 802DC64C 002D958C  3C A0 80 3D */	lis r5, lbl_803CC4D4@ha
-/* 802DC650 002D9590  38 05 C4 D4 */	addi r0, r5, lbl_803CC4D4@l
+/* 802DC64C 002D958C  3C A0 80 3D */	lis r5, __vt__14JSUInputStream@ha
+/* 802DC650 002D9590  38 05 C4 D4 */	addi r0, r5, __vt__14JSUInputStream@l
 /* 802DC654 002D9594  90 03 00 00 */	stw r0, 0(r3)
-/* 802DC658 002D9598  3C A0 80 3D */	lis r5, lbl_803CC4B0@ha
-/* 802DC65C 002D959C  38 05 C4 B0 */	addi r0, r5, lbl_803CC4B0@l
+/* 802DC658 002D9598  3C A0 80 3D */	lis r5, __vt__20JSURandomInputStream@ha
+/* 802DC65C 002D959C  38 05 C4 B0 */	addi r0, r5, __vt__20JSURandomInputStream@l
 /* 802DC660 002D95A0  90 03 00 00 */	stw r0, 0(r3)
-/* 802DC664 002D95A4  3C A0 80 3D */	lis r5, lbl_803CC518@ha
-/* 802DC668 002D95A8  38 05 C5 18 */	addi r0, r5, lbl_803CC518@l
+/* 802DC664 002D95A4  3C A0 80 3D */	lis r5, __vt__18JSUFileInputStream@ha
+/* 802DC668 002D95A8  38 05 C5 18 */	addi r0, r5, __vt__18JSUFileInputStream@l
 /* 802DC66C 002D95AC  90 03 00 00 */	stw r0, 0(r3)
 /* 802DC670 002D95B0  90 83 00 08 */	stw r4, 8(r3)
 /* 802DC674 002D95B4  90 C3 00 0C */	stw r6, 0xc(r3)
 /* 802DC678 002D95B8  4E 80 00 20 */	blr 
+
+/* 802DC67C 00D0 .text readData__18JSUFileInputStreamFPvl readData__18JSUFileInputStreamFPvl */
+.global readData__18JSUFileInputStreamFPvl
+readData__18JSUFileInputStreamFPvl:
 /* 802DC67C 002D95BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC680 002D95C0  7C 08 02 A6 */	mflr r0
 /* 802DC684 002D95C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -78,6 +82,10 @@ lbl_802DC734:
 /* 802DC740 002D9680  7C 08 03 A6 */	mtlr r0
 /* 802DC744 002D9684  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC748 002D9688  4E 80 00 20 */	blr 
+
+/* 802DC74C 00E0 .text seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom */
+.global seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom
+seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom:
 /* 802DC74C 002D968C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC750 002D9690  7C 08 02 A6 */	mflr r0
 /* 802DC754 002D9694  90 01 00 24 */	stw r0, 0x24(r1)
@@ -141,6 +149,10 @@ lbl_802DC80C:
 /* 802DC820 002D9760  7C 08 03 A6 */	mtlr r0
 /* 802DC824 002D9764  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC828 002D9768  4E 80 00 20 */	blr 
+
+/* 802DC82C 0030 .text getLength__18JSUFileInputStreamCFv getLength__18JSUFileInputStreamCFv */
+.global getLength__18JSUFileInputStreamCFv
+getLength__18JSUFileInputStreamCFv:
 /* 802DC82C 002D976C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC830 002D9770  7C 08 02 A6 */	mflr r0
 /* 802DC834 002D9774  90 01 00 14 */	stw r0, 0x14(r1)
@@ -153,6 +165,21 @@ lbl_802DC80C:
 /* 802DC850 002D9790  7C 08 03 A6 */	mtlr r0
 /* 802DC854 002D9794  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC858 002D9798  4E 80 00 20 */	blr 
+
+/* 802DC85C 0008 .text getPosition__18JSUFileInputStreamCFv getPosition__18JSUFileInputStreamCFv */
+.global getPosition__18JSUFileInputStreamCFv
+getPosition__18JSUFileInputStreamCFv:
 /* 802DC85C 002D979C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 802DC860 002D97A0  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC518 0024 .data __vt__18JSUFileInputStream __vt__18JSUFileInputStream */
+.global __vt__18JSUFileInputStream
+__vt__18JSUFileInputStream:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0xad, 0xd8, 0x80, 0x2d, 0x40, 0x94 /* baserom.dol+0x3c9518 */
+.byte 0x80, 0x2d, 0xc3, 0xfc, 0x80, 0x2d, 0xc6, 0x7c, 0x80, 0x2d, 0xc8, 0x2c, 0x80, 0x2d, 0xc8, 0x5c /* baserom.dol+0x3c9528 */
+.byte 0x80, 0x2d, 0xc7, 0x4c /* baserom.dol+0x3c9538 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c953c */
 

@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80358c90
 
-
+.section .text, "ax"
+/* 80358C90 01F8 .text UpdateIconOffsets UpdateIconOffsets */
 .global UpdateIconOffsets
 UpdateIconOffsets:
 /* 80358C90 00355BD0  81 03 00 2C */	lwz r8, 0x2c(r3)
@@ -156,6 +156,7 @@ lbl_80358E80:
 /* 80358E80 00355DC0  91 04 00 68 */	stw r8, 0x68(r4)
 /* 80358E84 00355DC4  4E 80 00 20 */	blr 
 
+/* 80358E88 0114 .text CARDGetStatus CARDGetStatus */
 .global CARDGetStatus
 CARDGetStatus:
 /* 80358E88 00355DC8  7C 08 02 A6 */	mflr r0
@@ -233,6 +234,7 @@ lbl_80358F80:
 /* 80358F94 00355ED4  7C 08 03 A6 */	mtlr r0
 /* 80358F98 00355ED8  4E 80 00 20 */	blr 
 
+/* 80358F9C 0174 .text CARDSetStatusAsync CARDSetStatusAsync */
 .global CARDSetStatusAsync
 CARDSetStatusAsync:
 /* 80358F9C 00355EDC  7C 08 02 A6 */	mflr r0
@@ -315,7 +317,7 @@ lbl_803590AC:
 /* 803590B8 00355FF8  4B FE 96 45 */	bl OSGetTime
 /* 803590BC 00355FFC  38 DD 00 00 */	addi r6, r29, 0
 /* 803590C0 00356000  38 A0 00 00 */	li r5, 0
-/* 803590C4 00356004  48 00 92 61 */	bl func_80362324
+/* 803590C4 00356004  48 00 92 61 */	bl __div2i
 /* 803590C8 00356008  90 9F 00 28 */	stw r4, 0x28(r31)
 /* 803590CC 0035600C  38 7C 00 00 */	addi r3, r28, 0
 /* 803590D0 00356010  38 9E 00 00 */	addi r4, r30, 0
@@ -337,13 +339,12 @@ lbl_803590F0:
 /* 80359108 00356048  7C 08 03 A6 */	mtlr r0
 /* 8035910C 0035604C  4E 80 00 20 */	blr 
 
+/* 80359110 0048 .text CARDSetStatus CARDSetStatus */
 .global CARDSetStatus
 CARDSetStatus:
 /* 80359110 00356050  7C 08 02 A6 */	mflr r0
-.global __CARDSyncCallback
 /* 80359114 00356054  3C C0 80 35 */	lis r6, __CARDSyncCallback@ha
 /* 80359118 00356058  90 01 00 04 */	stw r0, 4(r1)
-.global __CARDSyncCallback
 /* 8035911C 0035605C  38 C6 2A 34 */	addi r6, r6, __CARDSyncCallback@l
 /* 80359120 00356060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359124 00356064  93 E1 00 1C */	stw r31, 0x1c(r1)

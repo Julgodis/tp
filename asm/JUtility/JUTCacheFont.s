@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802dd188
 
-
-.global JUTCacheFont
-JUTCacheFont:
+.section .text, "ax"
+/* 802DD188 0080 .text __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap */
+.global __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap
+__ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap:
 /* 802DD188 002DA0C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD18C 002DA0CC  7C 08 02 A6 */	mflr r0
 /* 802DD190 002DA0D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -15,11 +15,11 @@ JUTCacheFont:
 /* 802DD1A4 002DA0E4  7C BE 2B 78 */	mr r30, r5
 /* 802DD1A8 002DA0E8  7C DF 33 78 */	mr r31, r6
 /* 802DD1AC 002DA0EC  48 00 1D 9D */	bl __ct__10JUTResFontFv
-/* 802DD1B0 002DA0F0  3C 60 80 3D */	lis r3, lbl_803CC540@ha
-/* 802DD1B4 002DA0F4  38 03 C5 40 */	addi r0, r3, lbl_803CC540@l
+/* 802DD1B0 002DA0F0  3C 60 80 3D */	lis r3, __vt__12JUTCacheFont@ha
+/* 802DD1B4 002DA0F4  38 03 C5 40 */	addi r0, r3, __vt__12JUTCacheFont@l
 /* 802DD1B8 002DA0F8  90 1C 00 00 */	stw r0, 0(r28)
 /* 802DD1BC 002DA0FC  7F 83 E3 78 */	mr r3, r28
-/* 802DD1C0 002DA100  48 00 01 61 */	bl JUTCacheFont_NS_initialize_state
+/* 802DD1C0 002DA100  48 00 01 61 */	bl initialize_state__12JUTCacheFontFv
 /* 802DD1C4 002DA104  7F 83 E3 78 */	mr r3, r28
 /* 802DD1C8 002DA108  48 00 1E E9 */	bl initialize_state__10JUTResFontFv
 /* 802DD1CC 002DA10C  7F 83 E3 78 */	mr r3, r28
@@ -29,7 +29,7 @@ JUTCacheFont:
 /* 802DD1DC 002DA11C  38 A0 00 00 */	li r5, 0
 /* 802DD1E0 002DA120  7F C6 F3 78 */	mr r6, r30
 /* 802DD1E4 002DA124  7F E7 FB 78 */	mr r7, r31
-/* 802DD1E8 002DA128  48 00 03 05 */	bl JUTCacheFont_NS_initiate
+/* 802DD1E8 002DA128  48 00 03 05 */	bl initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap
 /* 802DD1EC 002DA12C  7F 83 E3 78 */	mr r3, r28
 /* 802DD1F0 002DA130  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DD1F4 002DA134  48 08 50 31 */	bl _restgpr_28
@@ -37,6 +37,10 @@ JUTCacheFont:
 /* 802DD1FC 002DA13C  7C 08 03 A6 */	mtlr r0
 /* 802DD200 002DA140  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD204 002DA144  4E 80 00 20 */	blr 
+
+/* 802DD208 0094 .text __dt__12JUTCacheFontFv __dt__12JUTCacheFontFv */
+.global __dt__12JUTCacheFontFv
+__dt__12JUTCacheFontFv:
 /* 802DD208 002DA148  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD20C 002DA14C  7C 08 02 A6 */	mflr r0
 /* 802DD210 002DA150  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,15 +49,15 @@ JUTCacheFont:
 /* 802DD21C 002DA15C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802DD220 002DA160  7C 9F 23 78 */	mr r31, r4
 /* 802DD224 002DA164  41 82 00 5C */	beq lbl_802DD280
-/* 802DD228 002DA168  3C 80 80 3D */	lis r4, lbl_803CC540@ha
-/* 802DD22C 002DA16C  38 04 C5 40 */	addi r0, r4, lbl_803CC540@l
+/* 802DD228 002DA168  3C 80 80 3D */	lis r4, __vt__12JUTCacheFont@ha
+/* 802DD22C 002DA16C  38 04 C5 40 */	addi r0, r4, __vt__12JUTCacheFont@l
 /* 802DD230 002DA170  90 1E 00 00 */	stw r0, 0(r30)
 /* 802DD234 002DA174  88 1E 00 04 */	lbz r0, 4(r30)
 /* 802DD238 002DA178  28 00 00 00 */	cmplwi r0, 0
 /* 802DD23C 002DA17C  41 82 00 28 */	beq lbl_802DD264
-/* 802DD240 002DA180  48 00 00 5D */	bl JUTCacheFont_NS_deleteMemBlocks_CacheFont
+/* 802DD240 002DA180  48 00 00 5D */	bl deleteMemBlocks_CacheFont__12JUTCacheFontFv
 /* 802DD244 002DA184  7F C3 F3 78 */	mr r3, r30
-/* 802DD248 002DA188  48 00 00 D9 */	bl JUTCacheFont_NS_initialize_state
+/* 802DD248 002DA188  48 00 00 D9 */	bl initialize_state__12JUTCacheFontFv
 /* 802DD24C 002DA18C  7F C3 F3 78 */	mr r3, r30
 /* 802DD250 002DA190  48 00 1E 3D */	bl deleteMemBlocks_ResFont__10JUTResFontFv
 /* 802DD254 002DA194  7F C3 F3 78 */	mr r3, r30
@@ -77,8 +81,9 @@ lbl_802DD280:
 /* 802DD294 002DA1D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD298 002DA1D8  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_deleteMemBlocks_CacheFont
-JUTCacheFont_NS_deleteMemBlocks_CacheFont:
+/* 802DD29C 0084 .text deleteMemBlocks_CacheFont__12JUTCacheFontFv deleteMemBlocks_CacheFont__12JUTCacheFontFv */
+.global deleteMemBlocks_CacheFont__12JUTCacheFontFv
+deleteMemBlocks_CacheFont__12JUTCacheFontFv:
 /* 802DD29C 002DA1DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD2A0 002DA1E0  7C 08 02 A6 */	mflr r0
 /* 802DD2A4 002DA1E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -115,8 +120,9 @@ lbl_802DD2E4:
 /* 802DD318 002DA258  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD31C 002DA25C  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_initialize_state
-JUTCacheFont_NS_initialize_state:
+/* 802DD320 003C .text initialize_state__12JUTCacheFontFv initialize_state__12JUTCacheFontFv */
+.global initialize_state__12JUTCacheFontFv
+initialize_state__12JUTCacheFontFv:
 /* 802DD320 002DA260  38 00 00 00 */	li r0, 0
 /* 802DD324 002DA264  98 03 00 B0 */	stb r0, 0xb0(r3)
 /* 802DD328 002DA268  90 03 00 90 */	stw r0, 0x90(r3)
@@ -133,8 +139,9 @@ JUTCacheFont_NS_initialize_state:
 /* 802DD354 002DA294  90 03 00 A0 */	stw r0, 0xa0(r3)
 /* 802DD358 002DA298  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_getMemorySize
-JUTCacheFont_NS_getMemorySize:
+/* 802DD35C 0190 .text getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl */
+.global getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl
+getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl:
 /* 802DD35C 002DA29C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802DD360 002DA2A0  7C 08 02 A6 */	mflr r0
 /* 802DD364 002DA2A4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -253,18 +260,19 @@ lbl_802DD4D4:
 /* 802DD4E4 002DA424  38 21 00 50 */	addi r1, r1, 0x50
 /* 802DD4E8 002DA428  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_initiate
-JUTCacheFont_NS_initiate:
+/* 802DD4EC 0060 .text initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap */
+.global initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap
+initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap:
 /* 802DD4EC 002DA42C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD4F0 002DA430  7C 08 02 A6 */	mflr r0
 /* 802DD4F4 002DA434  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DD4F8 002DA438  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DD4FC 002DA43C  7C 7F 1B 78 */	mr r31, r3
-/* 802DD500 002DA440  48 00 00 4D */	bl JUTCacheFont_NS_internal_initiate
+/* 802DD500 002DA440  48 00 00 4D */	bl internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap
 /* 802DD504 002DA444  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802DD508 002DA448  40 82 00 2C */	bne lbl_802DD534
 /* 802DD50C 002DA44C  7F E3 FB 78 */	mr r3, r31
-/* 802DD510 002DA450  4B FF FD 8D */	bl JUTCacheFont_NS_deleteMemBlocks_CacheFont
+/* 802DD510 002DA450  4B FF FD 8D */	bl deleteMemBlocks_CacheFont__12JUTCacheFontFv
 /* 802DD514 002DA454  7F E3 FB 78 */	mr r3, r31
 /* 802DD518 002DA458  48 00 1B 75 */	bl deleteMemBlocks_ResFont__10JUTResFontFv
 /* 802DD51C 002DA45C  7F E3 FB 78 */	mr r3, r31
@@ -282,8 +290,9 @@ lbl_802DD538:
 /* 802DD544 002DA484  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD548 002DA488  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_internal_initiate
-JUTCacheFont_NS_internal_initiate:
+/* 802DD54C 0104 .text internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap */
+.global internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap
+internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap:
 /* 802DD54C 002DA48C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DD550 002DA490  7C 08 02 A6 */	mflr r0
 /* 802DD554 002DA494  90 01 00 34 */	stw r0, 0x34(r1)
@@ -294,9 +303,9 @@ JUTCacheFont_NS_internal_initiate:
 /* 802DD568 002DA4A8  7C BD 2B 78 */	mr r29, r5
 /* 802DD56C 002DA4AC  7C DE 33 78 */	mr r30, r6
 /* 802DD570 002DA4B0  7C FF 3B 78 */	mr r31, r7
-/* 802DD574 002DA4B4  4B FF FD 29 */	bl JUTCacheFont_NS_deleteMemBlocks_CacheFont
+/* 802DD574 002DA4B4  4B FF FD 29 */	bl deleteMemBlocks_CacheFont__12JUTCacheFontFv
 /* 802DD578 002DA4B8  7F 63 DB 78 */	mr r3, r27
-/* 802DD57C 002DA4BC  4B FF FD A5 */	bl JUTCacheFont_NS_initialize_state
+/* 802DD57C 002DA4BC  4B FF FD A5 */	bl initialize_state__12JUTCacheFontFv
 /* 802DD580 002DA4C0  7F 63 DB 78 */	mr r3, r27
 /* 802DD584 002DA4C4  48 00 1B 09 */	bl deleteMemBlocks_ResFont__10JUTResFontFv
 /* 802DD588 002DA4C8  7F 63 DB 78 */	mr r3, r27
@@ -321,12 +330,12 @@ lbl_802DD5A8:
 /* 802DD5D0 002DA510  39 1B 00 74 */	addi r8, r27, 0x74
 /* 802DD5D4 002DA514  39 3B 00 64 */	addi r9, r27, 0x64
 /* 802DD5D8 002DA518  39 5B 00 78 */	addi r10, r27, 0x78
-/* 802DD5DC 002DA51C  4B FF FD 81 */	bl JUTCacheFont_NS_getMemorySize
+/* 802DD5DC 002DA51C  4B FF FD 81 */	bl getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl
 /* 802DD5E0 002DA520  7F 63 DB 78 */	mr r3, r27
 /* 802DD5E4 002DA524  7F A4 EB 78 */	mr r4, r29
 /* 802DD5E8 002DA528  7F C5 F3 78 */	mr r5, r30
 /* 802DD5EC 002DA52C  7F E6 FB 78 */	mr r6, r31
-/* 802DD5F0 002DA530  48 00 00 61 */	bl JUTCacheFont_NS_allocArea
+/* 802DD5F0 002DA530  48 00 00 61 */	bl allocArea__12JUTCacheFontFPvUlP7JKRHeap
 /* 802DD5F4 002DA534  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802DD5F8 002DA538  40 82 00 0C */	bne lbl_802DD604
 /* 802DD5FC 002DA53C  38 60 00 00 */	li r3, 0
@@ -334,7 +343,7 @@ lbl_802DD5A8:
 lbl_802DD604:
 /* 802DD604 002DA544  7F 63 DB 78 */	mr r3, r27
 /* 802DD608 002DA548  7F E4 FB 78 */	mr r4, r31
-/* 802DD60C 002DA54C  48 00 01 F9 */	bl JUTCacheFont_NS_allocArray
+/* 802DD60C 002DA54C  48 00 01 F9 */	bl allocArray__12JUTCacheFontFP7JKRHeap
 /* 802DD610 002DA550  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802DD614 002DA554  40 82 00 0C */	bne lbl_802DD620
 /* 802DD618 002DA558  38 60 00 00 */	li r3, 0
@@ -354,8 +363,9 @@ lbl_802DD638:
 /* 802DD648 002DA588  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DD64C 002DA58C  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_allocArea
-JUTCacheFont_NS_allocArea:
+/* 802DD650 01B4 .text allocArea__12JUTCacheFontFPvUlP7JKRHeap allocArea__12JUTCacheFontFPvUlP7JKRHeap */
+.global allocArea__12JUTCacheFontFPvUlP7JKRHeap
+allocArea__12JUTCacheFontFPvUlP7JKRHeap:
 /* 802DD650 002DA590  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD654 002DA594  7C 08 02 A6 */	mflr r0
 /* 802DD658 002DA598  90 01 00 24 */	stw r0, 0x24(r1)
@@ -466,7 +476,7 @@ lbl_802DD7D8:
 /* 802DD7DC 002DA71C  98 1C 00 B0 */	stb r0, 0xb0(r28)
 lbl_802DD7E0:
 /* 802DD7E0 002DA720  7F 83 E3 78 */	mr r3, r28
-/* 802DD7E4 002DA724  48 00 06 FD */	bl JUTCacheFont_NS_invalidiateAllCache
+/* 802DD7E4 002DA724  48 00 06 FD */	bl invalidiateAllCache__12JUTCacheFontFv
 /* 802DD7E8 002DA728  38 60 00 01 */	li r3, 1
 lbl_802DD7EC:
 /* 802DD7EC 002DA72C  39 61 00 20 */	addi r11, r1, 0x20
@@ -476,8 +486,9 @@ lbl_802DD7EC:
 /* 802DD7FC 002DA73C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD800 002DA740  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_allocArray
-JUTCacheFont_NS_allocArray:
+/* 802DD804 00E8 .text allocArray__12JUTCacheFontFP7JKRHeap allocArray__12JUTCacheFontFP7JKRHeap */
+.global allocArray__12JUTCacheFontFP7JKRHeap
+allocArray__12JUTCacheFontFP7JKRHeap:
 /* 802DD804 002DA744  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD808 002DA748  7C 08 02 A6 */	mflr r0
 /* 802DD80C 002DA74C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -543,6 +554,10 @@ lbl_802DD8D8:
 /* 802DD8E0 002DA820  7C 08 03 A6 */	mtlr r0
 /* 802DD8E4 002DA824  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD8E8 002DA828  4E 80 00 20 */	blr 
+
+/* 802DD8EC 0220 .text setBlock__12JUTCacheFontFv setBlock__12JUTCacheFontFv */
+.global setBlock__12JUTCacheFontFv
+setBlock__12JUTCacheFontFv:
 /* 802DD8EC 002DA82C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802DD8F0 002DA830  7C 08 02 A6 */	mflr r0
 /* 802DD8F4 002DA834  90 01 00 44 */	stw r0, 0x44(r1)
@@ -595,8 +610,8 @@ lbl_802DD994:
 /* 802DD9A4 002DA8E4  80 78 00 4C */	lwz r3, 0x4c(r24)
 /* 802DD9A8 002DA8E8  A0 03 00 08 */	lhz r0, 8(r3)
 /* 802DD9AC 002DA8EC  54 04 10 3A */	slwi r4, r0, 2
-/* 802DD9B0 002DA8F0  3C 60 80 3A */	lis r3, lbl_8039D390@ha
-/* 802DD9B4 002DA8F4  38 03 D3 90 */	addi r0, r3, lbl_8039D390@l
+/* 802DD9B0 002DA8F0  3C 60 80 3A */	lis r3, saoAboutEncoding___10JUTResFont@ha
+/* 802DD9B4 002DA8F4  38 03 D3 90 */	addi r0, r3, saoAboutEncoding___10JUTResFont@l
 /* 802DD9B8 002DA8F8  7C 00 22 14 */	add r0, r0, r4
 /* 802DD9BC 002DA8FC  90 18 00 6C */	stw r0, 0x6c(r24)
 /* 802DD9C0 002DA900  48 00 01 18 */	b lbl_802DDAD8
@@ -635,7 +650,7 @@ lbl_802DD9EC:
 /* 802DDA3C 002DA97C  38 A6 00 33 */	addi r5, r6, 0x33
 /* 802DDA40 002DA980  38 C6 00 36 */	addi r6, r6, 0x36
 /* 802DDA44 002DA984  4C C6 31 82 */	crclr 6
-/* 802DDA48 002DA988  48 00 47 B5 */	bl JUTException_NS_panic_f
+/* 802DDA48 002DA988  48 00 47 B5 */	bl panic_f__12JUTExceptionFPCciPCce
 lbl_802DDA4C:
 /* 802DDA4C 002DA98C  93 7D 00 00 */	stw r27, 0(r29)
 /* 802DDA50 002DA990  80 7D 00 10 */	lwz r3, 0x10(r29)
@@ -692,8 +707,9 @@ lbl_802DDAE4:
 /* 802DDB04 002DAA44  38 21 00 40 */	addi r1, r1, 0x40
 /* 802DDB08 002DAA48  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_determineBlankPage
-JUTCacheFont_NS_determineBlankPage:
+/* 802DDB0C 00B0 .text determineBlankPage__12JUTCacheFontFv determineBlankPage__12JUTCacheFontFv */
+.global determineBlankPage__12JUTCacheFontFv
+determineBlankPage__12JUTCacheFontFv:
 /* 802DDB0C 002DAA4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DDB10 002DAA50  7C 08 02 A6 */	mflr r0
 /* 802DDB14 002DAA54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -725,7 +741,7 @@ lbl_802DDB64:
 /* 802DDB70 002DAAB0  40 82 00 24 */	bne lbl_802DDB94
 /* 802DDB74 002DAAB4  7F C3 F3 78 */	mr r3, r30
 /* 802DDB78 002DAAB8  7F E4 FB 78 */	mr r4, r31
-/* 802DDB7C 002DAABC  48 00 03 ED */	bl JUTCacheFont_NS_unlink
+/* 802DDB7C 002DAABC  48 00 03 ED */	bl unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
 /* 802DDB80 002DAAC0  80 7E 00 B4 */	lwz r3, 0xb4(r30)
 /* 802DDB84 002DAAC4  38 03 00 01 */	addi r0, r3, 1
 /* 802DDB88 002DAAC8  90 1E 00 B4 */	stw r0, 0xb4(r30)
@@ -745,8 +761,9 @@ lbl_802DDBA4:
 /* 802DDBB4 002DAAF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDBB8 002DAAF8  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_getGlyphFromAram
-JUTCacheFont_NS_getGlyphFromAram:
+/* 802DDBBC 0128 .text getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi */
+.global getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi
+getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi:
 /* 802DDBBC 002DAAFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DDBC0 002DAB00  7C 08 02 A6 */	mflr r0
 /* 802DDBC4 002DAB04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -762,7 +779,7 @@ JUTCacheFont_NS_getGlyphFromAram:
 /* 802DDBEC 002DAB2C  4B D2 59 55 */	bl memcpy
 /* 802DDBF0 002DAB30  7F 63 DB 78 */	mr r3, r27
 /* 802DDBF4 002DAB34  7F E4 FB 78 */	mr r4, r31
-/* 802DDBF8 002DAB38  48 00 03 B5 */	bl JUTCacheFont_NS_prepend
+/* 802DDBF8 002DAB38  48 00 03 B5 */	bl prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
 /* 802DDBFC 002DAB3C  A0 7F 00 16 */	lhz r3, 0x16(r31)
 /* 802DDC00 002DAB40  A0 1F 00 18 */	lhz r0, 0x18(r31)
 /* 802DDC04 002DAB44  7C A3 01 D6 */	mullw r5, r3, r0
@@ -822,6 +839,10 @@ lbl_802DDC40:
 /* 802DDCD8 002DAC18  7C 08 03 A6 */	mtlr r0
 /* 802DDCDC 002DAC1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DDCE0 002DAC20  4E 80 00 20 */	blr 
+
+/* 802DDCE4 00B4 .text loadImage__12JUTCacheFontFi11_GXTexMapID loadImage__12JUTCacheFontFi11_GXTexMapID */
+.global loadImage__12JUTCacheFontFi11_GXTexMapID
+loadImage__12JUTCacheFontFi11_GXTexMapID:
 /* 802DDCE4 002DAC24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DDCE8 002DAC28  7C 08 02 A6 */	mflr r0
 /* 802DDCEC 002DAC2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -832,7 +853,7 @@ lbl_802DDC40:
 /* 802DDD00 002DAC40  7C BE 2B 78 */	mr r30, r5
 /* 802DDD04 002DAC44  38 81 00 08 */	addi r4, r1, 8
 /* 802DDD08 002DAC48  38 A0 00 00 */	li r5, 0
-/* 802DDD0C 002DAC4C  48 00 00 8D */	bl JUTCacheFont_NS_loadCache_char_subroutine
+/* 802DDD0C 002DAC4C  48 00 00 8D */	bl loadCache_char_subroutine__12JUTCacheFontFPib
 /* 802DDD10 002DAC50  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802DDD14 002DAC54  41 82 00 6C */	beq lbl_802DDD80
 /* 802DDD18 002DAC58  A0 BF 00 0C */	lhz r5, 0xc(r31)
@@ -857,10 +878,10 @@ lbl_802DDC40:
 /* 802DDD64 002DACA4  40 82 00 1C */	bne lbl_802DDD80
 /* 802DDD68 002DACA8  7F A3 EB 78 */	mr r3, r29
 /* 802DDD6C 002DACAC  7F E4 FB 78 */	mr r4, r31
-/* 802DDD70 002DACB0  48 00 01 F9 */	bl JUTCacheFont_NS_unlink
+/* 802DDD70 002DACB0  48 00 01 F9 */	bl unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
 /* 802DDD74 002DACB4  7F A3 EB 78 */	mr r3, r29
 /* 802DDD78 002DACB8  7F E4 FB 78 */	mr r4, r31
-/* 802DDD7C 002DACBC  48 00 02 31 */	bl JUTCacheFont_NS_prepend
+/* 802DDD7C 002DACBC  48 00 02 31 */	bl prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
 lbl_802DDD80:
 /* 802DDD80 002DACC0  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DDD84 002DACC4  48 08 44 A5 */	bl _restgpr_29
@@ -869,8 +890,9 @@ lbl_802DDD80:
 /* 802DDD90 002DACD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DDD94 002DACD4  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_loadCache_char_subroutine
-JUTCacheFont_NS_loadCache_char_subroutine:
+/* 802DDD98 0148 .text loadCache_char_subroutine__12JUTCacheFontFPib loadCache_char_subroutine__12JUTCacheFontFPib */
+.global loadCache_char_subroutine__12JUTCacheFontFPib
+loadCache_char_subroutine__12JUTCacheFontFPib:
 /* 802DDD98 002DACD8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DDD9C 002DACDC  7C 08 02 A6 */	mflr r0
 /* 802DDDA0 002DACE0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -930,7 +952,7 @@ lbl_802DDE58:
 /* 802DDE5C 002DAD9C  7C 1C 00 00 */	cmpw r28, r0
 /* 802DDE60 002DADA0  40 80 00 50 */	bge lbl_802DDEB0
 /* 802DDE64 002DADA4  7F A3 EB 78 */	mr r3, r29
-/* 802DDE68 002DADA8  4B FF FC A5 */	bl JUTCacheFont_NS_determineBlankPage
+/* 802DDE68 002DADA8  4B FF FC A5 */	bl determineBlankPage__12JUTCacheFontFv
 /* 802DDE6C 002DADAC  7C 7B 1B 79 */	or. r27, r3, r3
 /* 802DDE70 002DADB0  40 82 00 0C */	bne lbl_802DDE7C
 /* 802DDE74 002DADB4  38 60 00 00 */	li r3, 0
@@ -943,7 +965,7 @@ lbl_802DDE7C:
 /* 802DDE8C 002DADCC  7F 65 DB 78 */	mr r5, r27
 /* 802DDE90 002DADD0  7F C6 F3 78 */	mr r6, r30
 /* 802DDE94 002DADD4  38 E1 00 08 */	addi r7, r1, 8
-/* 802DDE98 002DADD8  4B FF FD 25 */	bl JUTCacheFont_NS_getGlyphFromAram
+/* 802DDE98 002DADD8  4B FF FD 25 */	bl getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi
 /* 802DDE9C 002DADDC  80 01 00 08 */	lwz r0, 8(r1)
 /* 802DDEA0 002DADE0  90 1D 00 44 */	stw r0, 0x44(r29)
 /* 802DDEA4 002DADE4  B3 9D 00 66 */	sth r28, 0x66(r29)
@@ -965,8 +987,9 @@ lbl_802DDEC8:
 /* 802DDED8 002DAE18  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DDEDC 002DAE1C  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_invalidiateAllCache
-JUTCacheFont_NS_invalidiateAllCache:
+/* 802DDEE0 0088 .text invalidiateAllCache__12JUTCacheFontFv invalidiateAllCache__12JUTCacheFontFv */
+.global invalidiateAllCache__12JUTCacheFontFv
+invalidiateAllCache__12JUTCacheFontFv:
 /* 802DDEE0 002DAE20  80 A3 00 90 */	lwz r5, 0x90(r3)
 /* 802DDEE4 002DAE24  38 C0 00 00 */	li r6, 0
 /* 802DDEE8 002DAE28  48 00 00 50 */	b lbl_802DDF38
@@ -1008,8 +1031,9 @@ lbl_802DDF38:
 /* 802DDF60 002DAEA0  90 03 00 A0 */	stw r0, 0xa0(r3)
 /* 802DDF64 002DAEA4  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_unlink
-JUTCacheFont_NS_unlink:
+/* 802DDF68 0044 .text unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo */
+.global unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
+unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo:
 /* 802DDF68 002DAEA8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802DDF6C 002DAEAC  28 05 00 00 */	cmplwi r5, 0
 /* 802DDF70 002DAEB0  40 82 00 10 */	bne lbl_802DDF80
@@ -1031,8 +1055,9 @@ lbl_802DDFA0:
 /* 802DDFA4 002DAEE4  90 05 00 00 */	stw r0, 0(r5)
 /* 802DDFA8 002DAEE8  4E 80 00 20 */	blr 
 
-.global JUTCacheFont_NS_prepend
-JUTCacheFont_NS_prepend:
+/* 802DDFAC 002C .text prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo */
+.global prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo
+prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo:
 /* 802DDFAC 002DAEEC  80 A3 00 9C */	lwz r5, 0x9c(r3)
 /* 802DDFB0 002DAEF0  90 83 00 9C */	stw r4, 0x9c(r3)
 /* 802DDFB4 002DAEF4  38 00 00 00 */	li r0, 0
@@ -1045,23 +1070,51 @@ JUTCacheFont_NS_prepend:
 lbl_802DDFD0:
 /* 802DDFD0 002DAF10  90 85 00 00 */	stw r4, 0(r5)
 /* 802DDFD4 002DAF14  4E 80 00 20 */	blr 
+
+/* 802DDFD8 0008 .text getResFont__10JUTResFontCFv getResFont__10JUTResFontCFv */
+.global getResFont__10JUTResFontCFv
+getResFont__10JUTResFontCFv:
 /* 802DDFD8 002DAF18  80 63 00 48 */	lwz r3, 0x48(r3)
 /* 802DDFDC 002DAF1C  4E 80 00 20 */	blr 
+
+/* 802DDFE0 000C .text getFontType__10JUTResFontCFv getFontType__10JUTResFontCFv */
+.global getFontType__10JUTResFontCFv
+getFontType__10JUTResFontCFv:
 /* 802DDFE0 002DAF20  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 802DDFE4 002DAF24  A0 63 00 08 */	lhz r3, 8(r3)
 /* 802DDFE8 002DAF28  4E 80 00 20 */	blr 
+
+/* 802DDFEC 000C .text getLeading__10JUTResFontCFv getLeading__10JUTResFontCFv */
+.global getLeading__10JUTResFontCFv
+getLeading__10JUTResFontCFv:
 /* 802DDFEC 002DAF2C  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 802DDFF0 002DAF30  A0 63 00 10 */	lhz r3, 0x10(r3)
 /* 802DDFF4 002DAF34  4E 80 00 20 */	blr 
+
+/* 802DDFF8 000C .text getWidth__10JUTResFontCFv getWidth__10JUTResFontCFv */
+.global getWidth__10JUTResFontCFv
+getWidth__10JUTResFontCFv:
 /* 802DDFF8 002DAF38  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 802DDFFC 002DAF3C  A0 63 00 0E */	lhz r3, 0xe(r3)
 /* 802DE000 002DAF40  4E 80 00 20 */	blr 
+
+/* 802DE004 000C .text getAscent__10JUTResFontCFv getAscent__10JUTResFontCFv */
+.global getAscent__10JUTResFontCFv
+getAscent__10JUTResFontCFv:
 /* 802DE004 002DAF44  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 802DE008 002DAF48  A0 63 00 0A */	lhz r3, 0xa(r3)
 /* 802DE00C 002DAF4C  4E 80 00 20 */	blr 
+
+/* 802DE010 000C .text getDescent__10JUTResFontCFv getDescent__10JUTResFontCFv */
+.global getDescent__10JUTResFontCFv
+getDescent__10JUTResFontCFv:
 /* 802DE010 002DAF50  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 802DE014 002DAF54  A0 63 00 0C */	lhz r3, 0xc(r3)
 /* 802DE018 002DAF58  4E 80 00 20 */	blr 
+
+/* 802DE01C 005C .text getHeight__10JUTResFontCFv getHeight__10JUTResFontCFv */
+.global getHeight__10JUTResFontCFv
+getHeight__10JUTResFontCFv:
 /* 802DE01C 002DAF5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DE020 002DAF60  7C 08 02 A6 */	mflr r0
 /* 802DE024 002DAF64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1085,4 +1138,40 @@ lbl_802DDFD0:
 /* 802DE06C 002DAFAC  7C 08 03 A6 */	mtlr r0
 /* 802DE070 002DAFB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE074 002DAFB4  4E 80 00 20 */	blr 
+
+
+
+.section .rodata, "a"
+/* 8039D2F0 0070 .rodata lbl_8039D2F0 @stringBase0 */
+.global lbl_8039D2F0
+lbl_8039D2F0:
+.byte 0x4a, 0x55, 0x54, 0x43, 0x61, 0x63, 0x68, 0x65, 0x46, 0x6f, 0x6e, 0x74, 0x3a, 0x20, 0x55, 0x6e /* baserom.dol+0x39a2f0 */
+.byte 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x62, 0x6c, 0x6f, 0x63, 0x6b /* baserom.dol+0x39a300 */
+.byte 0x0a, 0x00, 0x4a, 0x55, 0x54, 0x43, 0x61, 0x63, 0x68, 0x65, 0x46, 0x6f, 0x6e, 0x74, 0x2e, 0x63 /* baserom.dol+0x39a310 */
+.byte 0x70, 0x70, 0x00, 0x25, 0x73, 0x00, 0x74, 0x72, 0x6f, 0x75, 0x62, 0x6c, 0x65, 0x20, 0x6f, 0x63 /* baserom.dol+0x39a320 */
+.byte 0x63, 0x75, 0x72, 0x72, 0x65, 0x64, 0x20, 0x69, 0x6e, 0x20, 0x4a, 0x4b, 0x52, 0x4d, 0x61, 0x69 /* baserom.dol+0x39a330 */
+.byte 0x6e, 0x52, 0x61, 0x6d, 0x54, 0x6f, 0x41, 0x72, 0x61, 0x6d, 0x2e, 0x00, 0x55, 0x6e, 0x6b, 0x6e /* baserom.dol+0x39a340 */
+.byte 0x6f, 0x77, 0x6e, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x0a, 0x00 /* baserom.dol+0x39a350 */
+
+
+
+.section .data, "aw"
+/* 803CC540 004C .data __vt__12JUTCacheFont __vt__12JUTCacheFont */
+.global __vt__12JUTCacheFont
+__vt__12JUTCacheFont:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0xd2, 0x08, 0x80, 0x2d, 0xf4, 0x8c /* baserom.dol+0x3c9540 */
+.byte 0x80, 0x2d, 0xf5, 0x84, 0x80, 0x2d, 0xf7, 0xc4, 0x80, 0x2d, 0xdf, 0xec, 0x80, 0x2d, 0xe0, 0x04 /* baserom.dol+0x3c9550 */
+.byte 0x80, 0x2d, 0xe0, 0x10, 0x80, 0x2d, 0xe0, 0x1c, 0x80, 0x2d, 0xdf, 0xf8, 0x80, 0x2d, 0xfc, 0x64 /* baserom.dol+0x3c9560 */
+.byte 0x80, 0x2d, 0xfd, 0x0c, 0x80, 0x2d, 0xfd, 0x58, 0x80, 0x2d, 0xdf, 0xe0, 0x80, 0x2d, 0xdf, 0xd8 /* baserom.dol+0x3c9570 */
+.byte 0x80, 0x2d, 0xfd, 0xa4, 0x80, 0x2d, 0xdc, 0xe4, 0x80, 0x2d, 0xd8, 0xec /* baserom.dol+0x3c9580 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c958c */
+
+
+
+.section .sdata2, "a"
+/* 80455FD0 0004 .sdata2 lbl_80455FD0 @721 */
+.global lbl_80455FD0
+lbl_80455FD0:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e30 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e34 */
 

@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8028f6c4
 
-
-.global JASTaskThread
-JASTaskThread:
+.section .text, "ax"
+/* 8028F6C4 0060 .text __ct__13JASTaskThreadFiiUl __ct__13JASTaskThreadFiiUl */
+.global __ct__13JASTaskThreadFiiUl
+__ct__13JASTaskThreadFiiUl:
 /* 8028F6C4 0028C604  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028F6C8 0028C608  7C 08 02 A6 */	mflr r0
 /* 8028F6CC 0028C60C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -12,12 +12,12 @@ JASTaskThread:
 /* 8028F6D4 0028C614  7C 7F 1B 78 */	mr r31, r3
 /* 8028F6D8 0028C618  7C 87 23 78 */	mr r7, r4
 /* 8028F6DC 0028C61C  7C A0 2B 78 */	mr r0, r5
-/* 8028F6E0 0028C620  80 8D 8C 90 */	lwz r4, lbl_80451210-_SDA_BASE_(r13)
+/* 8028F6E0 0028C620  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8028F6E4 0028C624  7C C5 33 78 */	mr r5, r6
 /* 8028F6E8 0028C628  7C 06 03 78 */	mr r6, r0
 /* 8028F6EC 0028C62C  48 04 1F 25 */	bl __ct__9JKRThreadFP7JKRHeapUlii
-/* 8028F6F0 0028C630  3C 60 80 3C */	lis r3, lbl_803C5B58@ha
-/* 8028F6F4 0028C634  38 03 5B 58 */	addi r0, r3, lbl_803C5B58@l
+/* 8028F6F0 0028C630  3C 60 80 3C */	lis r3, __vt__13JASTaskThread@ha
+/* 8028F6F4 0028C634  38 03 5B 58 */	addi r0, r3, __vt__13JASTaskThread@l
 /* 8028F6F8 0028C638  90 1F 00 00 */	stw r0, 0(r31)
 /* 8028F6FC 0028C63C  38 00 00 00 */	li r0, 0
 /* 8028F700 0028C640  98 1F 00 84 */	stb r0, 0x84(r31)
@@ -29,6 +29,10 @@ JASTaskThread:
 /* 8028F718 0028C658  7C 08 03 A6 */	mtlr r0
 /* 8028F71C 0028C65C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028F720 0028C660  4E 80 00 20 */	blr 
+
+/* 8028F724 012C .text __dt__13JASTaskThreadFv __dt__13JASTaskThreadFv */
+.global __dt__13JASTaskThreadFv
+__dt__13JASTaskThreadFv:
 /* 8028F724 0028C664  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028F728 0028C668  7C 08 02 A6 */	mflr r0
 /* 8028F72C 0028C66C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -37,8 +41,8 @@ JASTaskThread:
 /* 8028F738 0028C678  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028F73C 0028C67C  7C 9F 23 78 */	mr r31, r4
 /* 8028F740 0028C680  41 82 00 F4 */	beq lbl_8028F834
-/* 8028F744 0028C684  3C 60 80 3C */	lis r3, lbl_803C5B58@ha
-/* 8028F748 0028C688  38 03 5B 58 */	addi r0, r3, lbl_803C5B58@l
+/* 8028F744 0028C684  3C 60 80 3C */	lis r3, __vt__13JASTaskThread@ha
+/* 8028F748 0028C688  38 03 5B 58 */	addi r0, r3, __vt__13JASTaskThread@l
 /* 8028F74C 0028C68C  90 1E 00 00 */	stw r0, 0(r30)
 lbl_8028F750:
 /* 8028F750 0028C690  38 7E 00 30 */	addi r3, r30, 0x30
@@ -53,7 +57,7 @@ lbl_8028F76C:
 /* 8028F770 0028C6B0  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 8028F774 0028C6B4  2C 00 00 00 */	cmpwi r0, 0
 /* 8028F778 0028C6B8  41 82 00 A0 */	beq lbl_8028F818
-/* 8028F77C 0028C6BC  48 00 13 4D */	bl JASKernel_NS_getCommandHeap
+/* 8028F77C 0028C6BC  48 00 13 4D */	bl getCommandHeap__9JASKernelFv
 /* 8028F780 0028C6C0  7C 7D 1B 78 */	mr r29, r3
 /* 8028F784 0028C6C4  93 A1 00 08 */	stw r29, 8(r1)
 /* 8028F788 0028C6C8  48 0A F8 B9 */	bl OSLockMutex
@@ -114,8 +118,9 @@ lbl_8028F834:
 /* 8028F848 0028C788  38 21 00 30 */	addi r1, r1, 0x30
 /* 8028F84C 0028C78C  4E 80 00 20 */	blr 
 
-.global JASTaskThread_NS_allocCallStack
-JASTaskThread_NS_allocCallStack:
+/* 8028F850 019C .text allocCallStack__13JASTaskThreadFPFPv_vPCvUl allocCallStack__13JASTaskThreadFPFPv_vPCvUl */
+.global allocCallStack__13JASTaskThreadFPFPv_vPCvUl
+allocCallStack__13JASTaskThreadFPFPv_vPCvUl:
 /* 8028F850 0028C790  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028F854 0028C794  7C 08 02 A6 */	mflr r0
 /* 8028F858 0028C798  90 01 00 34 */	stw r0, 0x34(r1)
@@ -125,7 +130,7 @@ JASTaskThread_NS_allocCallStack:
 /* 8028F868 0028C7A8  7C BD 2B 78 */	mr r29, r5
 /* 8028F86C 0028C7AC  7C DE 33 78 */	mr r30, r6
 /* 8028F870 0028C7B0  3B FE 00 08 */	addi r31, r30, 8
-/* 8028F874 0028C7B4  48 00 12 55 */	bl JASKernel_NS_getCommandHeap
+/* 8028F874 0028C7B4  48 00 12 55 */	bl getCommandHeap__9JASKernelFv
 /* 8028F878 0028C7B8  7C 7B 1B 78 */	mr r27, r3
 /* 8028F87C 0028C7BC  93 61 00 08 */	stw r27, 8(r1)
 /* 8028F880 0028C7C0  48 0A F7 C1 */	bl OSLockMutex
@@ -151,7 +156,7 @@ lbl_8028F8B0:
 /* 8028F8CC 0028C80C  38 00 00 01 */	li r0, 1
 /* 8028F8D0 0028C810  48 00 00 90 */	b lbl_8028F960
 lbl_8028F8D4:
-/* 8028F8D4 0028C814  48 00 11 ED */	bl JASKernel_NS_getSystemHeap
+/* 8028F8D4 0028C814  48 00 11 ED */	bl getSystemHeap__9JASKernelFv
 /* 8028F8D8 0028C818  7C 64 1B 78 */	mr r4, r3
 /* 8028F8DC 0028C81C  38 60 04 0C */	li r3, 0x40c
 /* 8028F8E0 0028C820  38 A0 00 00 */	li r5, 0
@@ -220,7 +225,7 @@ lbl_8028F9B4:
 /* 8028F9BC 0028C8FC  7F A3 EB 78 */	mr r3, r29
 /* 8028F9C0 0028C900  38 9B 00 08 */	addi r4, r27, 8
 /* 8028F9C4 0028C904  7F C5 F3 78 */	mr r5, r30
-/* 8028F9C8 0028C908  4B FF F9 8D */	bl JASCalc_NS_bcopy
+/* 8028F9C8 0028C908  4B FF F9 8D */	bl bcopy__7JASCalcFPCvPvUl
 /* 8028F9CC 0028C90C  93 9B 00 00 */	stw r28, 0(r27)
 /* 8028F9D0 0028C910  7F 63 DB 78 */	mr r3, r27
 lbl_8028F9D4:
@@ -231,8 +236,9 @@ lbl_8028F9D4:
 /* 8028F9E4 0028C924  38 21 00 30 */	addi r1, r1, 0x30
 /* 8028F9E8 0028C928  4E 80 00 20 */	blr 
 
-.global JASTaskThread_NS_allocCallStack_X1_
-JASTaskThread_NS_allocCallStack_X1_:
+/* 8028F9EC 0170 .text allocCallStack__13JASTaskThreadFPFPv_vPv allocCallStack__13JASTaskThreadFPFPv_vPv */
+.global allocCallStack__13JASTaskThreadFPFPv_vPv
+allocCallStack__13JASTaskThreadFPFPv_vPv:
 /* 8028F9EC 0028C92C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028F9F0 0028C930  7C 08 02 A6 */	mflr r0
 /* 8028F9F4 0028C934  90 01 00 24 */	stw r0, 0x24(r1)
@@ -240,7 +246,7 @@ JASTaskThread_NS_allocCallStack_X1_:
 /* 8028F9FC 0028C93C  48 0D 27 DD */	bl _savegpr_28
 /* 8028FA00 0028C940  7C 9E 23 78 */	mr r30, r4
 /* 8028FA04 0028C944  7C BF 2B 78 */	mr r31, r5
-/* 8028FA08 0028C948  48 00 10 C1 */	bl JASKernel_NS_getCommandHeap
+/* 8028FA08 0028C948  48 00 10 C1 */	bl getCommandHeap__9JASKernelFv
 /* 8028FA0C 0028C94C  7C 7D 1B 78 */	mr r29, r3
 /* 8028FA10 0028C950  93 A1 00 08 */	stw r29, 8(r1)
 /* 8028FA14 0028C954  48 0A F6 2D */	bl OSLockMutex
@@ -259,7 +265,7 @@ JASTaskThread_NS_allocCallStack_X1_:
 /* 8028FA48 0028C988  38 00 00 01 */	li r0, 1
 /* 8028FA4C 0028C98C  48 00 00 90 */	b lbl_8028FADC
 lbl_8028FA50:
-/* 8028FA50 0028C990  48 00 10 71 */	bl JASKernel_NS_getSystemHeap
+/* 8028FA50 0028C990  48 00 10 71 */	bl getSystemHeap__9JASKernelFv
 /* 8028FA54 0028C994  7C 64 1B 78 */	mr r4, r3
 /* 8028FA58 0028C998  38 60 04 0C */	li r3, 0x40c
 /* 8028FA5C 0028C99C  38 A0 00 00 */	li r5, 0
@@ -336,15 +342,16 @@ lbl_8028FB44:
 /* 8028FB54 0028CA94  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028FB58 0028CA98  4E 80 00 20 */	blr 
 
-.global JASTaskThread_NS_sendCmdMsg
-JASTaskThread_NS_sendCmdMsg:
+/* 8028FB5C 00F8 .text sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl */
+.global sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl
+sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl:
 /* 8028FB5C 0028CA9C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FB60 0028CAA0  7C 08 02 A6 */	mflr r0
 /* 8028FB64 0028CAA4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8028FB68 0028CAA8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8028FB6C 0028CAAC  48 0D 26 6D */	bl _savegpr_28
 /* 8028FB70 0028CAB0  7C 7D 1B 78 */	mr r29, r3
-/* 8028FB74 0028CAB4  4B FF FC DD */	bl JASTaskThread_NS_allocCallStack
+/* 8028FB74 0028CAB4  4B FF FC DD */	bl allocCallStack__13JASTaskThreadFPFPv_vPCvUl
 /* 8028FB78 0028CAB8  7C 7C 1B 79 */	or. r28, r3, r3
 /* 8028FB7C 0028CABC  40 82 00 0C */	bne lbl_8028FB88
 /* 8028FB80 0028CAC0  38 60 00 00 */	li r3, 0
@@ -356,7 +363,7 @@ lbl_8028FB88:
 /* 8028FB94 0028CAD4  48 0A EE 61 */	bl OSSendMessage
 /* 8028FB98 0028CAD8  7C 7D 1B 79 */	or. r29, r3, r3
 /* 8028FB9C 0028CADC  40 82 00 9C */	bne lbl_8028FC38
-/* 8028FBA0 0028CAE0  48 00 0F 29 */	bl JASKernel_NS_getCommandHeap
+/* 8028FBA0 0028CAE0  48 00 0F 29 */	bl getCommandHeap__9JASKernelFv
 /* 8028FBA4 0028CAE4  7C 7F 1B 78 */	mr r31, r3
 /* 8028FBA8 0028CAE8  93 E1 00 08 */	stw r31, 8(r1)
 /* 8028FBAC 0028CAEC  48 0A F4 95 */	bl OSLockMutex
@@ -409,15 +416,16 @@ lbl_8028FC3C:
 /* 8028FC4C 0028CB8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028FC50 0028CB90  4E 80 00 20 */	blr 
 
-.global JASTaskThread_NS_sendCmdMsg_X1_
-JASTaskThread_NS_sendCmdMsg_X1_:
+/* 8028FC54 00F8 .text sendCmdMsg__13JASTaskThreadFPFPv_vPv sendCmdMsg__13JASTaskThreadFPFPv_vPv */
+.global sendCmdMsg__13JASTaskThreadFPFPv_vPv
+sendCmdMsg__13JASTaskThreadFPFPv_vPv:
 /* 8028FC54 0028CB94  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FC58 0028CB98  7C 08 02 A6 */	mflr r0
 /* 8028FC5C 0028CB9C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8028FC60 0028CBA0  39 61 00 20 */	addi r11, r1, 0x20
 /* 8028FC64 0028CBA4  48 0D 25 75 */	bl _savegpr_28
 /* 8028FC68 0028CBA8  7C 7D 1B 78 */	mr r29, r3
-/* 8028FC6C 0028CBAC  4B FF FD 81 */	bl JASTaskThread_NS_allocCallStack_X1_
+/* 8028FC6C 0028CBAC  4B FF FD 81 */	bl allocCallStack__13JASTaskThreadFPFPv_vPv
 /* 8028FC70 0028CBB0  7C 7C 1B 79 */	or. r28, r3, r3
 /* 8028FC74 0028CBB4  40 82 00 0C */	bne lbl_8028FC80
 /* 8028FC78 0028CBB8  38 60 00 00 */	li r3, 0
@@ -429,7 +437,7 @@ lbl_8028FC80:
 /* 8028FC8C 0028CBCC  48 0A ED 69 */	bl OSSendMessage
 /* 8028FC90 0028CBD0  7C 7D 1B 79 */	or. r29, r3, r3
 /* 8028FC94 0028CBD4  40 82 00 9C */	bne lbl_8028FD30
-/* 8028FC98 0028CBD8  48 00 0E 31 */	bl JASKernel_NS_getCommandHeap
+/* 8028FC98 0028CBD8  48 00 0E 31 */	bl getCommandHeap__9JASKernelFv
 /* 8028FC9C 0028CBDC  7C 7F 1B 78 */	mr r31, r3
 /* 8028FCA0 0028CBE0  93 E1 00 08 */	stw r31, 8(r1)
 /* 8028FCA4 0028CBE4  48 0A F3 9D */	bl OSLockMutex
@@ -481,6 +489,10 @@ lbl_8028FD34:
 /* 8028FD40 0028CC80  7C 08 03 A6 */	mtlr r0
 /* 8028FD44 0028CC84  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028FD48 0028CC88  4E 80 00 20 */	blr 
+
+/* 8028FD4C 013C .text run__13JASTaskThreadFv run__13JASTaskThreadFv */
+.global run__13JASTaskThreadFv
+run__13JASTaskThreadFv:
 /* 8028FD4C 0028CC8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FD50 0028CC90  7C 08 02 A6 */	mflr r0
 /* 8028FD54 0028CC94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -525,7 +537,7 @@ lbl_8028FDDC:
 /* 8028FDE4 0028CD24  7D 89 03 A6 */	mtctr r12
 /* 8028FDE8 0028CD28  4E 80 04 21 */	bctrl 
 lbl_8028FDEC:
-/* 8028FDEC 0028CD2C  48 00 0C DD */	bl JASKernel_NS_getCommandHeap
+/* 8028FDEC 0028CD2C  48 00 0C DD */	bl getCommandHeap__9JASKernelFv
 /* 8028FDF0 0028CD30  7C 7E 1B 78 */	mr r30, r3
 /* 8028FDF4 0028CD34  93 C1 00 08 */	stw r30, 8(r1)
 /* 8028FDF8 0028CD38  48 0A F2 49 */	bl OSLockMutex
@@ -570,8 +582,9 @@ lbl_8028FE74:
 /* 8028FE80 0028CDC0  48 0A F2 9D */	bl OSUnlockMutex
 /* 8028FE84 0028CDC4  4B FF FF 10 */	b lbl_8028FD94
 
-.global JASTaskThread_NS_pause
-JASTaskThread_NS_pause:
+/* 8028FE88 0074 .text pause__13JASTaskThreadFb pause__13JASTaskThreadFb */
+.global pause__13JASTaskThreadFb
+pause__13JASTaskThreadFb:
 /* 8028FE88 0028CDC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FE8C 0028CDCC  7C 08 02 A6 */	mflr r0
 /* 8028FE90 0028CDD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -579,7 +592,7 @@ JASTaskThread_NS_pause:
 /* 8028FE98 0028CDD8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8028FE9C 0028CDDC  7C 7E 1B 78 */	mr r30, r3
 /* 8028FEA0 0028CDE0  7C 9F 23 78 */	mr r31, r4
-/* 8028FEA4 0028CDE4  48 0A D8 51 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8028FEA4 0028CDE4  48 0A D8 51 */	bl __RAS_OSDisableInterrupts_begin
 /* 8028FEA8 0028CDE8  90 61 00 08 */	stw r3, 8(r1)
 /* 8028FEAC 0028CDEC  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 8028FEB0 0028CDF0  41 82 00 10 */	beq lbl_8028FEC0
@@ -604,4 +617,12 @@ lbl_8028FEDC:
 /* 8028FEF0 0028CE30  7C 08 03 A6 */	mtlr r0
 /* 8028FEF4 0028CE34  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028FEF8 0028CE38  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C5B58 0010 .data __vt__13JASTaskThread __vt__13JASTaskThread */
+.global __vt__13JASTaskThread
+__vt__13JASTaskThread:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0xf7, 0x24, 0x80, 0x28, 0xfd, 0x4c /* baserom.dol+0x3c2b58 */
 

@@ -1,17 +1,17 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802e8b08
 
-
-.global J2DGrafContext
-J2DGrafContext:
+.section .text, "ax"
+/* 802E8B08 00AC .text __ct__14J2DGrafContextFffff __ct__14J2DGrafContextFffff */
+.global __ct__14J2DGrafContextFffff
+__ct__14J2DGrafContextFffff:
 /* 802E8B08 002E5A48  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E8B0C 002E5A4C  7C 08 02 A6 */	mflr r0
 /* 802E8B10 002E5A50  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802E8B14 002E5A54  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 802E8B18 002E5A58  7C 7F 1B 78 */	mr r31, r3
-/* 802E8B1C 002E5A5C  3C 80 80 3D */	lis r4, lbl_803CC9B8@ha
-/* 802E8B20 002E5A60  38 04 C9 B8 */	addi r0, r4, lbl_803CC9B8@l
+/* 802E8B1C 002E5A5C  3C 80 80 3D */	lis r4, __vt__14J2DGrafContext@ha
+/* 802E8B20 002E5A60  38 04 C9 B8 */	addi r0, r4, __vt__14J2DGrafContext@l
 /* 802E8B24 002E5A64  90 03 00 00 */	stw r0, 0(r3)
 /* 802E8B28 002E5A68  D0 23 00 04 */	stfs f1, 4(r3)
 /* 802E8B2C 002E5A6C  D0 43 00 08 */	stfs f2, 8(r3)
@@ -38,10 +38,10 @@ J2DGrafContext:
 /* 802E8B80 002E5AC0  38 A1 00 10 */	addi r5, r1, 0x10
 /* 802E8B84 002E5AC4  38 C1 00 14 */	addi r6, r1, 0x14
 /* 802E8B88 002E5AC8  38 E1 00 18 */	addi r7, r1, 0x18
-/* 802E8B8C 002E5ACC  48 00 05 8D */	bl J2DGrafContext_NS_setColor
+/* 802E8B8C 002E5ACC  48 00 05 8D */	bl setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
 /* 802E8B90 002E5AD0  7F E3 FB 78 */	mr r3, r31
 /* 802E8B94 002E5AD4  38 80 00 06 */	li r4, 6
-/* 802E8B98 002E5AD8  48 00 06 9D */	bl J2DGrafContext_NS_setLineWidth
+/* 802E8B98 002E5AD8  48 00 06 9D */	bl setLineWidth__14J2DGrafContextFUc
 /* 802E8B9C 002E5ADC  7F E3 FB 78 */	mr r3, r31
 /* 802E8BA0 002E5AE0  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 802E8BA4 002E5AE4  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -49,8 +49,9 @@ J2DGrafContext:
 /* 802E8BAC 002E5AEC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E8BB0 002E5AF0  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_setPort
-J2DGrafContext_NS_setPort:
+/* 802E8BB4 0090 .text setPort__14J2DGrafContextFv setPort__14J2DGrafContextFv */
+.global setPort__14J2DGrafContextFv
+setPort__14J2DGrafContextFv:
 /* 802E8BB4 002E5AF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8BB8 002E5AF8  7C 08 02 A6 */	mflr r0
 /* 802E8BBC 002E5AFC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -89,6 +90,10 @@ lbl_802E8C1C:
 /* 802E8C38 002E5B78  7C 08 03 A6 */	mtlr r0
 /* 802E8C3C 002E5B7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8C40 002E5B80  4E 80 00 20 */	blr 
+
+/* 802E8C44 01DC .text setup2D__14J2DGrafContextFv setup2D__14J2DGrafContextFv */
+.global setup2D__14J2DGrafContextFv
+setup2D__14J2DGrafContextFv:
 /* 802E8C44 002E5B84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E8C48 002E5B88  7C 08 02 A6 */	mflr r0
 /* 802E8C4C 002E5B8C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -210,8 +215,9 @@ lbl_802E8C68:
 /* 802E8E18 002E5D58  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E8E1C 002E5D5C  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_setScissor
-J2DGrafContext_NS_setScissor:
+/* 802E8E20 02A0 .text setScissor__14J2DGrafContextFv setScissor__14J2DGrafContextFv */
+.global setScissor__14J2DGrafContextFv
+setScissor__14J2DGrafContextFv:
 /* 802E8E20 002E5D60  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802E8E24 002E5D64  7C 08 02 A6 */	mflr r0
 /* 802E8E28 002E5D68  90 01 00 74 */	stw r0, 0x74(r1)
@@ -340,7 +346,7 @@ lbl_802E8FB8:
 lbl_802E8FD8:
 /* 802E8FD8 002E5F18  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 802E8FDC 002E5F1C  41 82 00 98 */	beq lbl_802E9074
-/* 802E8FE0 002E5F20  48 07 90 CD */	bl func_803620AC
+/* 802E8FE0 002E5F20  48 07 90 CD */	bl __cvt_fp2unsigned
 /* 802E8FE4 002E5F24  C8 22 C7 58 */	lfd f1, lbl_80456158-_SDA2_BASE_(r2)
 /* 802E8FE8 002E5F28  90 61 00 0C */	stw r3, 0xc(r1)
 /* 802E8FEC 002E5F2C  3C 00 43 30 */	lis r0, 0x4330
@@ -348,7 +354,7 @@ lbl_802E8FD8:
 /* 802E8FF4 002E5F34  C8 01 00 08 */	lfd f0, 8(r1)
 /* 802E8FF8 002E5F38  EF 80 08 28 */	fsubs f28, f0, f1
 /* 802E8FFC 002E5F3C  FC 20 E8 90 */	fmr f1, f29
-/* 802E9000 002E5F40  48 07 90 AD */	bl func_803620AC
+/* 802E9000 002E5F40  48 07 90 AD */	bl __cvt_fp2unsigned
 /* 802E9004 002E5F44  C8 22 C7 58 */	lfd f1, lbl_80456158-_SDA2_BASE_(r2)
 /* 802E9008 002E5F48  90 61 00 14 */	stw r3, 0x14(r1)
 /* 802E900C 002E5F4C  3C 00 43 30 */	lis r0, 0x4330
@@ -356,22 +362,22 @@ lbl_802E8FD8:
 /* 802E9014 002E5F54  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 802E9018 002E5F58  EF A0 08 28 */	fsubs f29, f0, f1
 /* 802E901C 002E5F5C  FC 20 F8 90 */	fmr f1, f31
-/* 802E9020 002E5F60  48 08 2E 9D */	bl func_8036BEBC
+/* 802E9020 002E5F60  48 08 2E 9D */	bl ceil
 /* 802E9024 002E5F64  FF E0 08 18 */	frsp f31, f1
 /* 802E9028 002E5F68  FC 20 F0 90 */	fmr f1, f30
-/* 802E902C 002E5F6C  48 08 2E 91 */	bl func_8036BEBC
+/* 802E902C 002E5F6C  48 08 2E 91 */	bl ceil
 /* 802E9030 002E5F70  FC 00 08 18 */	frsp f0, f1
 /* 802E9034 002E5F74  EC 20 E8 28 */	fsubs f1, f0, f29
-/* 802E9038 002E5F78  48 07 90 75 */	bl func_803620AC
+/* 802E9038 002E5F78  48 07 90 75 */	bl __cvt_fp2unsigned
 /* 802E903C 002E5F7C  7C 7D 1B 78 */	mr r29, r3
 /* 802E9040 002E5F80  EC 3F E0 28 */	fsubs f1, f31, f28
-/* 802E9044 002E5F84  48 07 90 69 */	bl func_803620AC
+/* 802E9044 002E5F84  48 07 90 69 */	bl __cvt_fp2unsigned
 /* 802E9048 002E5F88  7C 7E 1B 78 */	mr r30, r3
 /* 802E904C 002E5F8C  FC 20 E8 90 */	fmr f1, f29
-/* 802E9050 002E5F90  48 07 90 5D */	bl func_803620AC
+/* 802E9050 002E5F90  48 07 90 5D */	bl __cvt_fp2unsigned
 /* 802E9054 002E5F94  7C 7F 1B 78 */	mr r31, r3
 /* 802E9058 002E5F98  FC 20 E0 90 */	fmr f1, f28
-/* 802E905C 002E5F9C  48 07 90 51 */	bl func_803620AC
+/* 802E905C 002E5F9C  48 07 90 51 */	bl __cvt_fp2unsigned
 /* 802E9060 002E5FA0  7F E4 FB 78 */	mr r4, r31
 /* 802E9064 002E5FA4  7F C5 F3 78 */	mr r5, r30
 /* 802E9068 002E5FA8  7F A6 EB 78 */	mr r6, r29
@@ -399,8 +405,9 @@ lbl_802E9088:
 /* 802E90B8 002E5FF8  38 21 00 70 */	addi r1, r1, 0x70
 /* 802E90BC 002E5FFC  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_scissor
-J2DGrafContext_NS_scissor:
+/* 802E90C0 0024 .text func_802E90C0 scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+.global func_802E90C0
+func_802E90C0:
 /* 802E90C0 002E6000  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802E90C4 002E6004  80 04 00 04 */	lwz r0, 4(r4)
 /* 802E90C8 002E6008  90 A3 00 14 */	stw r5, 0x14(r3)
@@ -410,6 +417,10 @@ J2DGrafContext_NS_scissor:
 /* 802E90D8 002E6018  90 A3 00 1C */	stw r5, 0x1c(r3)
 /* 802E90DC 002E601C  90 03 00 20 */	stw r0, 0x20(r3)
 /* 802E90E0 002E6020  4E 80 00 20 */	blr 
+
+/* 802E90E4 0034 .text func_802E90E4 place__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+.global func_802E90E4
+func_802E90E4:
 /* 802E90E4 002E6024  80 E4 00 00 */	lwz r7, 0(r4)
 /* 802E90E8 002E6028  80 C4 00 04 */	lwz r6, 4(r4)
 /* 802E90EC 002E602C  90 E3 00 04 */	stw r7, 4(r3)
@@ -424,8 +435,9 @@ J2DGrafContext_NS_scissor:
 /* 802E9110 002E6050  90 03 00 20 */	stw r0, 0x20(r3)
 /* 802E9114 002E6054  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_setColor
-J2DGrafContext_NS_setColor:
+/* 802E9118 011C .text setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
+.global setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
+setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor:
 /* 802E9118 002E6058  88 04 00 00 */	lbz r0, 0(r4)
 /* 802E911C 002E605C  98 03 00 24 */	stb r0, 0x24(r3)
 /* 802E9120 002E6060  88 04 00 01 */	lbz r0, 1(r4)
@@ -498,8 +510,9 @@ J2DGrafContext_NS_setColor:
 /* 802E922C 002E616C  98 83 00 B8 */	stb r4, 0xb8(r3)
 /* 802E9230 002E6170  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_setLineWidth
-J2DGrafContext_NS_setLineWidth:
+/* 802E9234 002C .text setLineWidth__14J2DGrafContextFUc setLineWidth__14J2DGrafContextFUc */
+.global setLineWidth__14J2DGrafContextFUc
+setLineWidth__14J2DGrafContextFUc:
 /* 802E9234 002E6174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9238 002E6178  7C 08 02 A6 */	mflr r0
 /* 802E923C 002E617C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -512,8 +525,9 @@ J2DGrafContext_NS_setLineWidth:
 /* 802E9258 002E6198  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E925C 002E619C  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_fillBox
-J2DGrafContext_NS_fillBox:
+/* 802E9260 0108 .text func_802E9260 fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+.global func_802E9260
+func_802E9260:
 /* 802E9260 002E61A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9264 002E61A4  7C 08 02 A6 */	mflr r0
 /* 802E9268 002E61A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -581,8 +595,9 @@ J2DGrafContext_NS_fillBox:
 /* 802E9360 002E62A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9364 002E62A4  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_drawFrame
-J2DGrafContext_NS_drawFrame:
+/* 802E9368 0120 .text func_802E9368 drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+.global func_802E9368
+func_802E9368:
 /* 802E9368 002E62A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E936C 002E62AC  7C 08 02 A6 */	mflr r0
 /* 802E9370 002E62B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -656,8 +671,9 @@ J2DGrafContext_NS_drawFrame:
 /* 802E9480 002E63C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9484 002E63C4  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_line
-J2DGrafContext_NS_line:
+/* 802E9488 00DC .text func_802E9488 line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
+.global func_802E9488
+func_802E9488:
 /* 802E9488 002E63C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E948C 002E63CC  7C 08 02 A6 */	mflr r0
 /* 802E9490 002E63D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -714,8 +730,9 @@ J2DGrafContext_NS_line:
 /* 802E955C 002E649C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9560 002E64A0  4E 80 00 20 */	blr 
 
-.global J2DGrafContext_NS_lineTo
-J2DGrafContext_NS_lineTo:
+/* 802E9564 0070 .text func_802E9564 lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f> */
+.global func_802E9564
+func_802E9564:
 /* 802E9564 002E64A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9568 002E64A8  7C 08 02 A6 */	mflr r0
 /* 802E956C 002E64AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -733,7 +750,7 @@ J2DGrafContext_NS_lineTo:
 /* 802E959C 002E64DC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E95A0 002E64E0  38 81 00 10 */	addi r4, r1, 0x10
 /* 802E95A4 002E64E4  38 A1 00 08 */	addi r5, r1, 8
-/* 802E95A8 002E64E8  4B FF FE E1 */	bl J2DGrafContext_NS_line
+/* 802E95A8 002E64E8  4B FF FE E1 */	bl func_802E9488
 /* 802E95AC 002E64EC  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 802E95B0 002E64F0  D0 1E 00 38 */	stfs f0, 0x38(r30)
 /* 802E95B4 002E64F4  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -744,14 +761,18 @@ J2DGrafContext_NS_lineTo:
 /* 802E95C8 002E6508  7C 08 03 A6 */	mtlr r0
 /* 802E95CC 002E650C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E95D0 002E6510  4E 80 00 20 */	blr 
+
+/* 802E95D4 0048 .text __dt__14J2DGrafContextFv __dt__14J2DGrafContextFv */
+.global __dt__14J2DGrafContextFv
+__dt__14J2DGrafContextFv:
 /* 802E95D4 002E6514  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E95D8 002E6518  7C 08 02 A6 */	mflr r0
 /* 802E95DC 002E651C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E95E0 002E6520  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E95E4 002E6524  7C 7F 1B 79 */	or. r31, r3, r3
 /* 802E95E8 002E6528  41 82 00 1C */	beq lbl_802E9604
-/* 802E95EC 002E652C  3C A0 80 3D */	lis r5, lbl_803CC9B8@ha
-/* 802E95F0 002E6530  38 05 C9 B8 */	addi r0, r5, lbl_803CC9B8@l
+/* 802E95EC 002E652C  3C A0 80 3D */	lis r5, __vt__14J2DGrafContext@ha
+/* 802E95F0 002E6530  38 05 C9 B8 */	addi r0, r5, __vt__14J2DGrafContext@l
 /* 802E95F4 002E6534  90 1F 00 00 */	stw r0, 0(r31)
 /* 802E95F8 002E6538  7C 80 07 35 */	extsh. r0, r4
 /* 802E95FC 002E653C  40 81 00 08 */	ble lbl_802E9604
@@ -763,6 +784,10 @@ lbl_802E9604:
 /* 802E9610 002E6550  7C 08 03 A6 */	mtlr r0
 /* 802E9614 002E6554  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9618 002E6558  4E 80 00 20 */	blr 
+
+/* 802E961C 0048 .text place__14J2DGrafContextFffff place__14J2DGrafContextFffff */
+.global place__14J2DGrafContextFffff
+place__14J2DGrafContextFffff:
 /* 802E961C 002E655C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9620 002E6560  7C 08 02 A6 */	mflr r0
 /* 802E9624 002E6564  90 01 00 24 */	stw r0, 0x24(r1)
@@ -781,7 +806,49 @@ lbl_802E9604:
 /* 802E9658 002E6598  7C 08 03 A6 */	mtlr r0
 /* 802E965C 002E659C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9660 002E65A0  4E 80 00 20 */	blr 
+
+/* 802E9664 0008 .text getGrafType__14J2DGrafContextCFv getGrafType__14J2DGrafContextCFv */
+.global getGrafType__14J2DGrafContextCFv
+getGrafType__14J2DGrafContextCFv:
 /* 802E9664 002E65A4  38 60 00 00 */	li r3, 0
 /* 802E9668 002E65A8  4E 80 00 20 */	blr 
+
+/* 802E966C 0004 .text setLookat__14J2DGrafContextFv setLookat__14J2DGrafContextFv */
+.global setLookat__14J2DGrafContextFv
+setLookat__14J2DGrafContextFv:
 /* 802E966C 002E65AC  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC9B8 0028 .data __vt__14J2DGrafContext __vt__14J2DGrafContext */
+.global __vt__14J2DGrafContext
+__vt__14J2DGrafContext:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x95, 0xd4, 0x80, 0x2e, 0x90, 0xe4 /* baserom.dol+0x3c99b8 */
+.byte 0x80, 0x2e, 0x96, 0x1c, 0x80, 0x2e, 0x8b, 0xb4, 0x80, 0x2e, 0x8c, 0x44, 0x80, 0x2e, 0x8e, 0x20 /* baserom.dol+0x3c99c8 */
+.byte 0x80, 0x2e, 0x96, 0x64, 0x80, 0x2e, 0x96, 0x6c /* baserom.dol+0x3c99d8 */
+
+
+
+.section .sdata2, "a"
+/* 80456148 0004 .sdata2 lbl_80456148 @627 */
+.global lbl_80456148
+lbl_80456148:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fa8 */
+
+/* 8045614C 0004 .sdata2 lbl_8045614C @628 */
+.global lbl_8045614C
+lbl_8045614C:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4fac */
+
+/* 80456150 0004 .sdata2 lbl_80456150 @730 */
+.global lbl_80456150
+lbl_80456150:
+.byte 0x44, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4fb0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fb4 */
+
+/* 80456158 0008 .sdata2 lbl_80456158 @732 */
+.global lbl_80456158
+lbl_80456158:
+.byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fb8 */
 

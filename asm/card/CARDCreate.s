@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80358108
 
-
+.section .text, "ax"
+/* 80358108 0130 .text CreateCallbackFat CreateCallbackFat */
 .global CreateCallbackFat
 CreateCallbackFat:
 /* 80358108 00355048  7C 08 02 A6 */	mflr r0
@@ -10,9 +10,9 @@ CreateCallbackFat:
 /* 80358110 00355050  94 21 FF D8 */	stwu r1, -0x28(r1)
 /* 80358114 00355054  BF 61 00 14 */	stmw r27, 0x14(r1)
 /* 80358118 00355058  3B 83 00 00 */	addi r28, r3, 0
-/* 8035811C 0035505C  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
+/* 8035811C 0035505C  3C 60 80 45 */	lis r3, __CARDBlock@ha
 /* 80358120 00355060  1C BC 01 10 */	mulli r5, r28, 0x110
-/* 80358124 00355064  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80358124 00355064  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80358128 00355068  7F E0 2A 14 */	add r31, r0, r5
 /* 8035812C 0035506C  83 BF 00 D0 */	lwz r29, 0xd0(r31)
 /* 80358130 00355070  3B 60 00 00 */	li r27, 0
@@ -59,7 +59,7 @@ CreateCallbackFat:
 /* 803581D4 00355114  4B FE A5 29 */	bl OSGetTime
 /* 803581D8 00355118  38 DB 00 00 */	addi r6, r27, 0
 /* 803581DC 0035511C  38 A0 00 00 */	li r5, 0
-/* 803581E0 00355120  48 00 A1 45 */	bl func_80362324
+/* 803581E0 00355120  48 00 A1 45 */	bl __div2i
 /* 803581E4 00355124  90 9E 00 28 */	stw r4, 0x28(r30)
 /* 803581E8 00355128  38 7C 00 00 */	addi r3, r28, 0
 /* 803581EC 0035512C  38 9D 00 00 */	addi r4, r29, 0
@@ -84,6 +84,7 @@ lbl_80358224:
 /* 80358230 00355170  7C 08 03 A6 */	mtlr r0
 /* 80358234 00355174  4E 80 00 20 */	blr 
 
+/* 80358238 0220 .text CARDCreateAsync CARDCreateAsync */
 .global CARDCreateAsync
 CARDCreateAsync:
 /* 80358238 00355178  7C 08 02 A6 */	mflr r0
@@ -142,7 +143,7 @@ lbl_803582F0:
 /* 803582F4 00355234  38 78 00 00 */	addi r3, r24, 0
 /* 803582F8 00355238  38 A0 00 04 */	li r5, 4
 /* 803582FC 0035523C  80 84 01 0C */	lwz r4, 0x10c(r4)
-/* 80358300 00355240  48 00 DD 8D */	bl func_8036608C
+/* 80358300 00355240  48 00 DD 8D */	bl memcmp
 /* 80358304 00355244  2C 03 00 00 */	cmpwi r3, 0
 /* 80358308 00355248  40 82 00 48 */	bne lbl_80358350
 /* 8035830C 0035524C  80 81 00 1C */	lwz r4, 0x1c(r1)
@@ -150,7 +151,7 @@ lbl_803582F0:
 /* 80358314 00355254  38 A0 00 02 */	li r5, 2
 /* 80358318 00355258  80 84 01 0C */	lwz r4, 0x10c(r4)
 /* 8035831C 0035525C  38 84 00 04 */	addi r4, r4, 4
-/* 80358320 00355260  48 00 DD 6D */	bl func_8036608C
+/* 80358320 00355260  48 00 DD 6D */	bl memcmp
 /* 80358324 00355264  2C 03 00 00 */	cmpwi r3, 0
 /* 80358328 00355268  40 82 00 28 */	bne lbl_80358350
 /* 8035832C 0035526C  38 78 00 00 */	addi r3, r24, 0
@@ -195,9 +196,7 @@ lbl_803583B0:
 /* 803583B8 003552F8  7F A0 EB 78 */	mr r0, r29
 /* 803583BC 003552FC  48 00 00 0C */	b lbl_803583C8
 lbl_803583C0:
-.global __CARDDefaultApiCallback
 /* 803583C0 00355300  3C 60 80 35 */	lis r3, __CARDDefaultApiCallback@ha
-.global __CARDDefaultApiCallback
 /* 803583C4 00355304  38 03 2A 30 */	addi r0, r3, __CARDDefaultApiCallback@l
 lbl_803583C8:
 /* 803583C8 00355308  90 04 00 D0 */	stw r0, 0xd0(r4)
@@ -213,11 +212,9 @@ lbl_803583C8:
 /* 803583F0 00355330  80 06 00 0C */	lwz r0, 0xc(r6)
 /* 803583F4 00355334  7C 1B 03 96 */	divwu r0, r27, r0
 /* 803583F8 00355338  B0 07 00 38 */	sth r0, 0x38(r7)
-/* 803583FC 0035533C  48 01 06 ED */	bl func_80368AE8
+/* 803583FC 0035533C  48 01 06 ED */	bl strncpy
 /* 80358400 00355340  80 81 00 1C */	lwz r4, 0x1c(r1)
-.global CreateCallbackFat
 /* 80358404 00355344  3C 60 80 36 */	lis r3, CreateCallbackFat@ha
-.global CreateCallbackFat
 /* 80358408 00355348  38 A3 81 08 */	addi r5, r3, CreateCallbackFat@l
 /* 8035840C 0035534C  93 84 00 C0 */	stw r28, 0xc0(r4)
 /* 80358410 00355350  7F 23 CB 78 */	mr r3, r25
@@ -241,13 +238,12 @@ lbl_80358444:
 /* 80358450 00355390  7C 08 03 A6 */	mtlr r0
 /* 80358454 00355394  4E 80 00 20 */	blr 
 
+/* 80358458 0048 .text CARDCreate CARDCreate */
 .global CARDCreate
 CARDCreate:
 /* 80358458 00355398  7C 08 02 A6 */	mflr r0
-.global __CARDSyncCallback
 /* 8035845C 0035539C  3C E0 80 35 */	lis r7, __CARDSyncCallback@ha
 /* 80358460 003553A0  90 01 00 04 */	stw r0, 4(r1)
-.global __CARDSyncCallback
 /* 80358464 003553A4  38 E7 2A 34 */	addi r7, r7, __CARDSyncCallback@l
 /* 80358468 003553A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035846C 003553AC  93 E1 00 1C */	stw r31, 0x1c(r1)

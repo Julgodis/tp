@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8029bd14
 
-
-.global JASLfo
-JASLfo:
+.section .text, "ax"
+/* 8029BD14 0030 .text __ct__6JASLfoFv __ct__6JASLfoFv */
+.global __ct__6JASLfoFv
+__ct__6JASLfoFv:
 /* 8029BD14 00298C54  38 80 00 00 */	li r4, 0
 /* 8029BD18 00298C58  90 83 00 00 */	stw r4, 0(r3)
 /* 8029BD1C 00298C5C  38 00 00 01 */	li r0, 1
@@ -18,8 +18,9 @@ JASLfo:
 /* 8029BD3C 00298C7C  B0 83 00 16 */	sth r4, 0x16(r3)
 /* 8029BD40 00298C80  4E 80 00 20 */	blr 
 
-.global JASLfo_NS_getValue
-JASLfo_NS_getValue:
+/* 8029BD44 0094 .text getValue__6JASLfoCFv getValue__6JASLfoCFv */
+.global getValue__6JASLfoCFv
+getValue__6JASLfoCFv:
 /* 8029BD44 00298C84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029BD48 00298C88  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 8029BD4C 00298C8C  28 00 00 00 */	cmplwi r0, 0
@@ -42,8 +43,8 @@ lbl_8029BD70:
 /* 8029BD88 00298CC8  D8 01 00 08 */	stfd f0, 8(r1)
 /* 8029BD8C 00298CCC  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8029BD90 00298CD0  54 00 1C 38 */	rlwinm r0, r0, 3, 0x10, 0x1c
-/* 8029BD94 00298CD4  3C 60 80 44 */	lis r3, lbl_80439A20@ha
-/* 8029BD98 00298CD8  38 63 9A 20 */	addi r3, r3, lbl_80439A20@l
+/* 8029BD94 00298CD4  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 8029BD98 00298CD8  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BD9C 00298CDC  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8029BDA0 00298CE0  FC 00 00 50 */	fneg f0, f0
 /* 8029BDA4 00298CE4  48 00 00 28 */	b lbl_8029BDCC
@@ -54,8 +55,8 @@ lbl_8029BDA8:
 /* 8029BDB4 00298CF4  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8029BDB8 00298CF8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029BDBC 00298CFC  54 00 1C 38 */	rlwinm r0, r0, 3, 0x10, 0x1c
-/* 8029BDC0 00298D00  3C 60 80 44 */	lis r3, lbl_80439A20@ha
-/* 8029BDC4 00298D04  38 63 9A 20 */	addi r3, r3, lbl_80439A20@l
+/* 8029BDC0 00298D00  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
+/* 8029BDC4 00298D04  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BDC8 00298D08  7C 03 04 2E */	lfsx f0, r3, r0
 lbl_8029BDCC:
 /* 8029BDCC 00298D0C  EC 23 00 32 */	fmuls f1, f3, f0
@@ -63,8 +64,9 @@ lbl_8029BDD0:
 /* 8029BDD0 00298D10  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029BDD4 00298D14  4E 80 00 20 */	blr 
 
-.global JASLfo_NS_incCounter
-JASLfo_NS_incCounter:
+/* 8029BDD8 0054 .text incCounter__6JASLfoFf incCounter__6JASLfoFf */
+.global incCounter__6JASLfoFf
+incCounter__6JASLfoFf:
 /* 8029BDD8 00298D18  A0 83 00 16 */	lhz r4, 0x16(r3)
 /* 8029BDDC 00298D1C  28 04 00 00 */	cmplwi r4, 0
 /* 8029BDE0 00298D20  41 82 00 10 */	beq lbl_8029BDF0
@@ -88,8 +90,9 @@ lbl_8029BDF0:
 /* 8029BE24 00298D64  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029BE28 00298D68  4E 80 00 20 */	blr 
 
-.global JASLfo_NS_resetCounter
-JASLfo_NS_resetCounter:
+/* 8029BE2C 0040 .text resetCounter__6JASLfoFv resetCounter__6JASLfoFv */
+.global resetCounter__6JASLfoFv
+resetCounter__6JASLfoFv:
 /* 8029BE2C 00298D6C  A0 03 00 14 */	lhz r0, 0x14(r3)
 /* 8029BE30 00298D70  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 8029BE34 00298D74  80 03 00 04 */	lwz r0, 4(r3)
@@ -98,8 +101,8 @@ JASLfo_NS_resetCounter:
 /* 8029BE40 00298D80  4C 80 00 20 */	bgelr 
 /* 8029BE44 00298D84  2C 00 00 00 */	cmpwi r0, 0
 /* 8029BE48 00298D88  4D 80 00 20 */	bltlr 
-/* 8029BE4C 00298D8C  3C 80 80 43 */	lis r4, lbl_80431C40@ha
-/* 8029BE50 00298D90  38 84 1C 40 */	addi r4, r4, lbl_80431C40@l
+/* 8029BE4C 00298D8C  3C 80 80 43 */	lis r4, sFreeRunLfo__6JASLfo@ha
+/* 8029BE50 00298D90  38 84 1C 40 */	addi r4, r4, sFreeRunLfo__6JASLfo@l
 /* 8029BE54 00298D94  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8029BE58 00298D98  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029BE5C 00298D9C  4E 80 00 20 */	blr 
@@ -107,13 +110,55 @@ lbl_8029BE60:
 /* 8029BE60 00298DA0  C0 02 BC E0 */	lfs f0, lbl_804556E0-_SDA2_BASE_(r2)
 /* 8029BE64 00298DA4  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029BE68 00298DA8  4E 80 00 20 */	blr 
+
+/* 8029BE6C 0028 .text __sinit_JASLfo_cpp __sinit_JASLfo_cpp */
+.global __sinit_JASLfo_cpp
+__sinit_JASLfo_cpp:
 /* 8029BE6C 00298DAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029BE70 00298DB0  7C 08 02 A6 */	mflr r0
 /* 8029BE74 00298DB4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029BE78 00298DB8  3C 60 80 43 */	lis r3, lbl_80431C40@ha
-/* 8029BE7C 00298DBC  38 63 1C 40 */	addi r3, r3, lbl_80431C40@l
-/* 8029BE80 00298DC0  4B FF FE 95 */	bl JASLfo
+/* 8029BE78 00298DB8  3C 60 80 43 */	lis r3, sFreeRunLfo__6JASLfo@ha
+/* 8029BE7C 00298DBC  38 63 1C 40 */	addi r3, r3, sFreeRunLfo__6JASLfo@l
+/* 8029BE80 00298DC0  4B FF FE 95 */	bl __ct__6JASLfoFv
 /* 8029BE84 00298DC4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029BE88 00298DC8  7C 08 03 A6 */	mtlr r0
 /* 8029BE8C 00298DCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029BE90 00298DD0  4E 80 00 20 */	blr 
+
+
+
+.section .bss, "aw"
+/* 80431C40 0018 .bss sFreeRunLfo__6JASLfo sFreeRunLfo__6JASLfo */
+.global sFreeRunLfo__6JASLfo
+sFreeRunLfo__6JASLfo:
+.skip 0x18
+
+
+
+.section .sdata2, "a"
+/* 804556E0 0004 .sdata2 lbl_804556E0 @341 */
+.global lbl_804556E0
+lbl_804556E0:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4540 */
+
+/* 804556E4 0004 .sdata2 lbl_804556E4 @342 */
+.global lbl_804556E4
+lbl_804556E4:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4544 */
+
+/* 804556E8 0004 .sdata2 lbl_804556E8 @363 */
+.global lbl_804556E8
+lbl_804556E8:
+.byte 0xc6, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4548 */
+
+/* 804556EC 0004 .sdata2 lbl_804556EC @364 */
+.global lbl_804556EC
+lbl_804556EC:
+.byte 0x46, 0x00, 0x00, 0x00 /* baserom.dol+0x3d454c */
+
+/* 804556F0 0004 .sdata2 lbl_804556F0 @376 */
+.global lbl_804556F0
+lbl_804556F0:
+.byte 0x3c, 0x63, 0x8e, 0x39 /* baserom.dol+0x3d4550 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4554 */
+

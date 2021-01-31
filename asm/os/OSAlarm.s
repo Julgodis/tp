@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 8033a8a0
 
-
+.section .text, "ax"
+/* 8033A8A0 0058 .text OSInitAlarm OSInitAlarm */
 .global OSInitAlarm
 OSInitAlarm:
 /* 8033A8A0 003377E0  7C 08 02 A6 */	mflr r0
@@ -10,18 +10,16 @@ OSInitAlarm:
 /* 8033A8A8 003377E8  90 01 00 04 */	stw r0, 4(r1)
 /* 8033A8AC 003377EC  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8033A8B0 003377F0  4B FF FE 55 */	bl __OSGetExceptionHandler
-.global DecrementerExceptionHandler
 /* 8033A8B4 003377F4  3C 80 80 34 */	lis r4, DecrementerExceptionHandler@ha
-.global DecrementerExceptionHandler
 /* 8033A8B8 003377F8  38 84 AF 88 */	addi r4, r4, DecrementerExceptionHandler@l
 /* 8033A8BC 003377FC  7C 03 20 40 */	cmplw r3, r4
 /* 8033A8C0 00337800  41 82 00 28 */	beq lbl_8033A8E8
 /* 8033A8C4 00337804  38 00 00 00 */	li r0, 0
-/* 8033A8C8 00337808  38 6D 90 B8 */	addi r3, r13, lbl_80451638-_SDA_BASE_
+/* 8033A8C8 00337808  38 6D 90 B8 */	addi r3, r13, AlarmQueue-_SDA_BASE_
 /* 8033A8CC 0033780C  90 03 00 04 */	stw r0, 4(r3)
 /* 8033A8D0 00337810  38 60 00 08 */	li r3, 8
-/* 8033A8D4 00337814  90 0D 90 B8 */	stw r0, lbl_80451638-_SDA_BASE_(r13)
-/* 8033A8D8 00337818  4B FF FE 11 */	bl __OSDBJUMPEND 
+/* 8033A8D4 00337814  90 0D 90 B8 */	stw r0, AlarmQueue-_SDA_BASE_(r13)
+/* 8033A8D8 00337818  4B FF FE 11 */	bl __OSDBJUMPEND
 /* 8033A8DC 0033781C  3C 60 80 3D */	lis r3, lbl_803CF480@ha
 /* 8033A8E0 00337820  38 63 F4 80 */	addi r3, r3, lbl_803CF480@l
 /* 8033A8E4 00337824  48 00 4D 7D */	bl OSRegisterResetFunction
@@ -31,6 +29,7 @@ lbl_8033A8E8:
 /* 8033A8F0 00337830  7C 08 03 A6 */	mtlr r0
 /* 8033A8F4 00337834  4E 80 00 20 */	blr 
 
+/* 8033A8F8 0010 .text OSCreateAlarm OSCreateAlarm */
 .global OSCreateAlarm
 OSCreateAlarm:
 /* 8033A8F8 00337838  38 00 00 00 */	li r0, 0
@@ -38,6 +37,7 @@ OSCreateAlarm:
 /* 8033A900 00337840  90 03 00 04 */	stw r0, 4(r3)
 /* 8033A904 00337844  4E 80 00 20 */	blr 
 
+/* 8033A908 0250 .text InsertAlarm InsertAlarm */
 .global InsertAlarm
 InsertAlarm:
 /* 8033A908 00337848  7C 08 02 A6 */	mflr r0
@@ -76,7 +76,7 @@ InsertAlarm:
 /* 8033A98C 003378CC  7C 67 19 10 */	subfe r3, r7, r3
 /* 8033A990 003378D0  38 BB 00 00 */	addi r5, r27, 0
 /* 8033A994 003378D4  38 DA 00 00 */	addi r6, r26, 0
-/* 8033A998 003378D8  48 02 79 8D */	bl func_80362324
+/* 8033A998 003378D8  48 02 79 8D */	bl __div2i
 /* 8033A99C 003378DC  38 00 00 01 */	li r0, 1
 /* 8033A9A0 003378E0  7C A4 00 14 */	addc r5, r4, r0
 /* 8033A9A4 003378E4  7C 9B 29 D6 */	mullw r4, r27, r5
@@ -93,7 +93,7 @@ lbl_8033A9C8:
 /* 8033A9CC 0033790C  6F 24 80 00 */	xoris r4, r25, 0x8000
 /* 8033A9D0 00337910  93 DD 00 0C */	stw r30, 0xc(r29)
 /* 8033A9D4 00337914  93 3D 00 08 */	stw r25, 8(r29)
-/* 8033A9D8 00337918  80 CD 90 B8 */	lwz r6, lbl_80451638-_SDA_BASE_(r13)
+/* 8033A9D8 00337918  80 CD 90 B8 */	lwz r6, AlarmQueue-_SDA_BASE_(r13)
 /* 8033A9DC 0033791C  48 00 00 C4 */	b lbl_8033AAA0
 lbl_8033A9E0:
 /* 8033A9E0 00337920  80 06 00 08 */	lwz r0, 8(r6)
@@ -114,7 +114,7 @@ lbl_8033A9E0:
 /* 8033AA1C 0033795C  93 A3 00 14 */	stw r29, 0x14(r3)
 /* 8033AA20 00337960  48 00 01 24 */	b lbl_8033AB44
 lbl_8033AA24:
-/* 8033AA24 00337964  93 AD 90 B8 */	stw r29, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AA24 00337964  93 AD 90 B8 */	stw r29, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AA28 00337968  48 00 7C F5 */	bl __OSGetSystemTime
 /* 8033AA2C 0033796C  80 DD 00 0C */	lwz r6, 0xc(r29)
 /* 8033AA30 00337970  38 E0 00 00 */	li r7, 0
@@ -153,7 +153,7 @@ lbl_8033AAA0:
 /* 8033AAA4 003379E4  40 82 FF 3C */	bne lbl_8033A9E0
 /* 8033AAA8 003379E8  3B C0 00 00 */	li r30, 0
 /* 8033AAAC 003379EC  93 DD 00 14 */	stw r30, 0x14(r29)
-/* 8033AAB0 003379F0  38 6D 90 B8 */	addi r3, r13, lbl_80451638-_SDA_BASE_
+/* 8033AAB0 003379F0  38 6D 90 B8 */	addi r3, r13, AlarmQueue-_SDA_BASE_
 /* 8033AAB4 003379F4  80 83 00 04 */	lwz r4, 4(r3)
 /* 8033AAB8 003379F8  97 A3 00 04 */	stwu r29, 4(r3)
 /* 8033AABC 003379FC  28 04 00 00 */	cmplwi r4, 0
@@ -163,7 +163,7 @@ lbl_8033AAA0:
 /* 8033AACC 00337A0C  48 00 00 78 */	b lbl_8033AB44
 lbl_8033AAD0:
 /* 8033AAD0 00337A10  93 A3 00 00 */	stw r29, 0(r3)
-/* 8033AAD4 00337A14  93 AD 90 B8 */	stw r29, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AAD4 00337A14  93 AD 90 B8 */	stw r29, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AAD8 00337A18  48 00 7C 45 */	bl __OSGetSystemTime
 /* 8033AADC 00337A1C  80 DD 00 0C */	lwz r6, 0xc(r29)
 /* 8033AAE0 00337A20  6F C5 80 00 */	xoris r5, r30, 0x8000
@@ -200,6 +200,7 @@ lbl_8033AB44:
 /* 8033AB50 00337A90  7C 08 03 A6 */	mtlr r0
 /* 8033AB54 00337A94  4E 80 00 20 */	blr 
 
+/* 8033AB58 0068 .text OSSetAlarm OSSetAlarm */
 .global OSSetAlarm
 OSSetAlarm:
 /* 8033AB58 00337A98  7C 08 02 A6 */	mflr r0
@@ -210,7 +211,7 @@ OSSetAlarm:
 /* 8033AB6C 00337AAC  3B A5 00 00 */	addi r29, r5, 0
 /* 8033AB70 00337AB0  3B 86 00 00 */	addi r28, r6, 0
 /* 8033AB74 00337AB4  3B C7 00 00 */	addi r30, r7, 0
-/* 8033AB78 00337AB8  48 00 2B 7D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033AB78 00337AB8  48 00 2B 7D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033AB7C 00337ABC  38 00 00 00 */	li r0, 0
 /* 8033AB80 00337AC0  90 1B 00 1C */	stw r0, 0x1c(r27)
 /* 8033AB84 00337AC4  7C 7F 1B 78 */	mr r31, r3
@@ -229,6 +230,7 @@ OSSetAlarm:
 /* 8033ABB8 00337AF8  7C 08 03 A6 */	mtlr r0
 /* 8033ABBC 00337AFC  4E 80 00 20 */	blr 
 
+/* 8033ABC0 007C .text OSSetPeriodicAlarm OSSetPeriodicAlarm */
 .global OSSetPeriodicAlarm
 OSSetPeriodicAlarm:
 /* 8033ABC0 00337B00  7C 08 02 A6 */	mflr r0
@@ -241,7 +243,7 @@ OSSetPeriodicAlarm:
 /* 8033ABDC 00337B1C  3B A7 00 00 */	addi r29, r7, 0
 /* 8033ABE0 00337B20  3B E8 00 00 */	addi r31, r8, 0
 /* 8033ABE4 00337B24  3B C9 00 00 */	addi r30, r9, 0
-/* 8033ABE8 00337B28  48 00 2B 0D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033ABE8 00337B28  48 00 2B 0D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033ABEC 00337B2C  93 FA 00 1C */	stw r31, 0x1c(r26)
 /* 8033ABF0 00337B30  7C 7F 1B 78 */	mr r31, r3
 /* 8033ABF4 00337B34  38 9B 00 00 */	addi r4, r27, 0
@@ -263,6 +265,7 @@ OSSetPeriodicAlarm:
 /* 8033AC34 00337B74  7C 08 03 A6 */	mtlr r0
 /* 8033AC38 00337B78  4E 80 00 20 */	blr 
 
+/* 8033AC3C 011C .text OSCancelAlarm OSCancelAlarm */
 .global OSCancelAlarm
 OSCancelAlarm:
 /* 8033AC3C 00337B7C  7C 08 02 A6 */	mflr r0
@@ -272,7 +275,7 @@ OSCancelAlarm:
 /* 8033AC4C 00337B8C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8033AC50 00337B90  7C 7E 1B 78 */	mr r30, r3
 /* 8033AC54 00337B94  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8033AC58 00337B98  48 00 2A 9D */	bl __RAS_OSDisableInterrupts_begin 
+/* 8033AC58 00337B98  48 00 2A 9D */	bl __RAS_OSDisableInterrupts_begin
 /* 8033AC5C 00337B9C  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8033AC60 00337BA0  3B E3 00 00 */	addi r31, r3, 0
 /* 8033AC64 00337BA4  28 00 00 00 */	cmplwi r0, 0
@@ -285,7 +288,7 @@ lbl_8033AC78:
 /* 8033AC7C 00337BBC  28 1D 00 00 */	cmplwi r29, 0
 /* 8033AC80 00337BC0  40 82 00 14 */	bne lbl_8033AC94
 /* 8033AC84 00337BC4  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 8033AC88 00337BC8  38 6D 90 B8 */	addi r3, r13, lbl_80451638-_SDA_BASE_
+/* 8033AC88 00337BC8  38 6D 90 B8 */	addi r3, r13, AlarmQueue-_SDA_BASE_
 /* 8033AC8C 00337BCC  90 03 00 04 */	stw r0, 4(r3)
 /* 8033AC90 00337BD0  48 00 00 0C */	b lbl_8033AC9C
 lbl_8033AC94:
@@ -299,7 +302,7 @@ lbl_8033AC9C:
 /* 8033ACAC 00337BEC  48 00 00 80 */	b lbl_8033AD2C
 lbl_8033ACB0:
 /* 8033ACB0 00337BF0  28 1D 00 00 */	cmplwi r29, 0
-/* 8033ACB4 00337BF4  93 AD 90 B8 */	stw r29, lbl_80451638-_SDA_BASE_(r13)
+/* 8033ACB4 00337BF4  93 AD 90 B8 */	stw r29, AlarmQueue-_SDA_BASE_(r13)
 /* 8033ACB8 00337BF8  41 82 00 74 */	beq lbl_8033AD2C
 /* 8033ACBC 00337BFC  48 00 7A 61 */	bl __OSGetSystemTime
 /* 8033ACC0 00337C00  80 DD 00 0C */	lwz r6, 0xc(r29)
@@ -344,6 +347,8 @@ lbl_8033AD3C:
 /* 8033AD4C 00337C8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8033AD50 00337C90  7C 08 03 A6 */	mtlr r0
 /* 8033AD54 00337C94  4E 80 00 20 */	blr 
+
+/* 8033AD58 0230 .text DecrementerExceptionCallback DecrementerExceptionCallback */
 .global DecrementerExceptionCallback
 DecrementerExceptionCallback:
 /* 8033AD58 00337C98  7C 08 02 A6 */	mflr r0
@@ -355,7 +360,7 @@ DecrementerExceptionCallback:
 /* 8033AD70 00337CB0  7C 9D 23 78 */	mr r29, r4
 /* 8033AD74 00337CB4  93 81 02 E0 */	stw r28, 0x2e0(r1)
 /* 8033AD78 00337CB8  48 00 79 A5 */	bl __OSGetSystemTime
-/* 8033AD7C 00337CBC  80 0D 90 B8 */	lwz r0, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AD7C 00337CBC  80 0D 90 B8 */	lwz r0, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AD80 00337CC0  3B 84 00 00 */	addi r28, r4, 0
 /* 8033AD84 00337CC4  3B C3 00 00 */	addi r30, r3, 0
 /* 8033AD88 00337CC8  28 00 00 00 */	cmplwi r0, 0
@@ -409,10 +414,10 @@ lbl_8033AE30:
 lbl_8033AE38:
 /* 8033AE38 00337D78  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 8033AE3C 00337D7C  28 03 00 00 */	cmplwi r3, 0
-/* 8033AE40 00337D80  90 6D 90 B8 */	stw r3, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AE40 00337D80  90 6D 90 B8 */	stw r3, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AE44 00337D84  40 82 00 14 */	bne lbl_8033AE58
 /* 8033AE48 00337D88  38 00 00 00 */	li r0, 0
-/* 8033AE4C 00337D8C  38 6D 90 B8 */	addi r3, r13, lbl_80451638-_SDA_BASE_
+/* 8033AE4C 00337D8C  38 6D 90 B8 */	addi r3, r13, AlarmQueue-_SDA_BASE_
 /* 8033AE50 00337D90  90 03 00 04 */	stw r0, 4(r3)
 /* 8033AE54 00337D94  48 00 00 0C */	b lbl_8033AE60
 lbl_8033AE58:
@@ -437,7 +442,7 @@ lbl_8033AE60:
 /* 8033AE9C 00337DDC  38 A0 00 00 */	li r5, 0
 /* 8033AEA0 00337DE0  4B FF FA 69 */	bl InsertAlarm
 lbl_8033AEA4:
-/* 8033AEA4 00337DE4  83 8D 90 B8 */	lwz r28, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AEA4 00337DE4  83 8D 90 B8 */	lwz r28, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AEA8 00337DE8  28 1C 00 00 */	cmplwi r28, 0
 /* 8033AEAC 00337DEC  41 82 00 74 */	beq lbl_8033AF20
 /* 8033AEB0 00337DF0  48 00 78 6D */	bl __OSGetSystemTime
@@ -497,6 +502,8 @@ lbl_8033AF20:
 /* 8033AF7C 00337EBC  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 8033AF80 00337EC0  7C 08 03 A6 */	mtlr r0
 /* 8033AF84 00337EC4  4E 80 00 20 */	blr 
+
+/* 8033AF88 0050 .text DecrementerExceptionHandler DecrementerExceptionHandler */
 .global DecrementerExceptionHandler
 DecrementerExceptionHandler:
 /* 8033AF88 00337EC8  90 04 00 00 */	stw r0, 0(r4)
@@ -518,8 +525,11 @@ DecrementerExceptionHandler:
 /* 8033AFC8 00337F08  7C 17 E2 A6 */	mfspr r0, 0x397
 /* 8033AFCC 00337F0C  90 04 01 C0 */	stw r0, 0x1c0(r4)
 /* 8033AFD0 00337F10  94 21 FF F8 */	stwu r1, -8(r1)
-.global DecrementerExceptionCallback
 /* 8033AFD4 00337F14  4B FF FD 84 */	b DecrementerExceptionCallback
+
+/* 8033AFD8 00A0 .text func_8033AFD8 OnReset */
+.global func_8033AFD8
+func_8033AFD8:
 /* 8033AFD8 00337F18  7C 08 02 A6 */	mflr r0
 /* 8033AFDC 00337F1C  90 01 00 04 */	stw r0, 4(r1)
 /* 8033AFE0 00337F20  94 21 FF E8 */	stwu r1, -0x18(r1)
@@ -527,7 +537,7 @@ DecrementerExceptionHandler:
 /* 8033AFE8 00337F28  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 8033AFEC 00337F2C  2C 03 00 00 */	cmpwi r3, 0
 /* 8033AFF0 00337F30  41 82 00 6C */	beq lbl_8033B05C
-/* 8033AFF4 00337F34  80 0D 90 B8 */	lwz r0, lbl_80451638-_SDA_BASE_(r13)
+/* 8033AFF4 00337F34  80 0D 90 B8 */	lwz r0, AlarmQueue-_SDA_BASE_(r13)
 /* 8033AFF8 00337F38  28 00 00 00 */	cmplwi r0, 0
 /* 8033AFFC 00337F3C  7C 1F 03 78 */	mr r31, r0
 /* 8033B000 00337F40  41 82 00 0C */	beq lbl_8033B00C
@@ -570,4 +580,20 @@ lbl_8033B05C:
 /* 8033B06C 00337FAC  38 21 00 18 */	addi r1, r1, 0x18
 /* 8033B070 00337FB0  7C 08 03 A6 */	mtlr r0
 /* 8033B074 00337FB4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CF480 0010 .data lbl_803CF480 ResetFunctionInfo */
+.global lbl_803CF480
+lbl_803CF480:
+.byte 0x80, 0x33, 0xaf, 0xd8, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cc480 */
+
+
+
+.section .sbss, "aw"
+/* 80451638 0008 .sbss AlarmQueue AlarmQueue */
+.global AlarmQueue
+AlarmQueue:
+.skip 0x8
 

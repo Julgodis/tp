@@ -1,32 +1,36 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802982ec
 
-
-.global JASDrumSet
-JASDrumSet:
-/* 802982EC 0029522C  3C 80 80 3C */	lis r4, lbl_803C76FC@ha
-/* 802982F0 00295230  38 04 76 FC */	addi r0, r4, lbl_803C76FC@l
+.section .text, "ax"
+/* 802982EC 0028 .text __ct__10JASDrumSetFv __ct__10JASDrumSetFv */
+.global __ct__10JASDrumSetFv
+__ct__10JASDrumSetFv:
+/* 802982EC 0029522C  3C 80 80 3C */	lis r4, __vt__7JASInst@ha
+/* 802982F0 00295230  38 04 76 FC */	addi r0, r4, __vt__7JASInst@l
 /* 802982F4 00295234  90 03 00 00 */	stw r0, 0(r3)
-/* 802982F8 00295238  3C 80 80 3C */	lis r4, lbl_803C7710@ha
-/* 802982FC 0029523C  38 04 77 10 */	addi r0, r4, lbl_803C7710@l
+/* 802982F8 00295238  3C 80 80 3C */	lis r4, __vt__10JASDrumSet@ha
+/* 802982FC 0029523C  38 04 77 10 */	addi r0, r4, __vt__10JASDrumSet@l
 /* 80298300 00295240  90 03 00 00 */	stw r0, 0(r3)
 /* 80298304 00295244  38 00 00 00 */	li r0, 0
 /* 80298308 00295248  90 03 00 04 */	stw r0, 4(r3)
 /* 8029830C 0029524C  98 03 00 08 */	stb r0, 8(r3)
 /* 80298310 00295250  4E 80 00 20 */	blr 
+
+/* 80298314 005C .text __dt__10JASDrumSetFv __dt__10JASDrumSetFv */
+.global __dt__10JASDrumSetFv
+__dt__10JASDrumSetFv:
 /* 80298314 00295254  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298318 00295258  7C 08 02 A6 */	mflr r0
 /* 8029831C 0029525C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80298320 00295260  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80298324 00295264  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80298328 00295268  41 82 00 30 */	beq lbl_80298358
-/* 8029832C 0029526C  3C 60 80 3C */	lis r3, lbl_803C7710@ha
-/* 80298330 00295270  38 03 77 10 */	addi r0, r3, lbl_803C7710@l
+/* 8029832C 0029526C  3C 60 80 3C */	lis r3, __vt__10JASDrumSet@ha
+/* 80298330 00295270  38 03 77 10 */	addi r0, r3, __vt__10JASDrumSet@l
 /* 80298334 00295274  90 1F 00 00 */	stw r0, 0(r31)
 /* 80298338 00295278  41 82 00 10 */	beq lbl_80298348
-/* 8029833C 0029527C  3C 60 80 3C */	lis r3, lbl_803C76FC@ha
-/* 80298340 00295280  38 03 76 FC */	addi r0, r3, lbl_803C76FC@l
+/* 8029833C 0029527C  3C 60 80 3C */	lis r3, __vt__7JASInst@ha
+/* 80298340 00295280  38 03 76 FC */	addi r0, r3, __vt__7JASInst@l
 /* 80298344 00295284  90 1F 00 00 */	stw r0, 0(r31)
 lbl_80298348:
 /* 80298348 00295288  7C 80 07 35 */	extsh. r0, r4
@@ -41,8 +45,9 @@ lbl_80298358:
 /* 80298368 002952A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029836C 002952AC  4E 80 00 20 */	blr 
 
-.global JASDrumSet_NS_newPercArray
-JASDrumSet_NS_newPercArray:
+/* 80298370 005C .text newPercArray__10JASDrumSetFUcP7JKRHeap newPercArray__10JASDrumSetFUcP7JKRHeap */
+.global newPercArray__10JASDrumSetFUcP7JKRHeap
+newPercArray__10JASDrumSetFUcP7JKRHeap:
 /* 80298370 002952B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298374 002952B4  7C 08 02 A6 */	mflr r0
 /* 80298378 002952B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -60,13 +65,17 @@ JASDrumSet_NS_newPercArray:
 /* 802983A8 002952E8  80 7F 00 04 */	lwz r3, 4(r31)
 /* 802983AC 002952EC  88 1F 00 08 */	lbz r0, 8(r31)
 /* 802983B0 002952F0  54 04 10 3A */	slwi r4, r0, 2
-/* 802983B4 002952F4  4B FF 70 CD */	bl JASCalc_NS_bzero
+/* 802983B4 002952F4  4B FF 70 CD */	bl bzero__7JASCalcFPvUl
 lbl_802983B8:
 /* 802983B8 002952F8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802983BC 002952FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802983C0 00295300  7C 08 03 A6 */	mtlr r0
 /* 802983C4 00295304  38 21 00 10 */	addi r1, r1, 0x10
 /* 802983C8 00295308  4E 80 00 20 */	blr 
+
+/* 802983CC 00E8 .text getParam__10JASDrumSetCFiiP12JASInstParam getParam__10JASDrumSetCFiiP12JASInstParam */
+.global getParam__10JASDrumSetCFiiP12JASInstParam
+getParam__10JASDrumSetCFiiP12JASInstParam:
 /* 802983CC 0029530C  80 A3 00 04 */	lwz r5, 4(r3)
 /* 802983D0 00295310  28 05 00 00 */	cmplwi r5, 0
 /* 802983D4 00295314  40 82 00 0C */	bne lbl_802983E0
@@ -130,15 +139,17 @@ lbl_80298474:
 /* 802984AC 002953EC  38 60 00 01 */	li r3, 1
 /* 802984B0 002953F0  4E 80 00 20 */	blr 
 
-.global JASDrumSet_NS_setPerc
-JASDrumSet_NS_setPerc:
+/* 802984B4 0010 .text setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc */
+.global setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc
+setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc:
 /* 802984B4 002953F4  80 63 00 04 */	lwz r3, 4(r3)
 /* 802984B8 002953F8  54 80 10 3A */	slwi r0, r4, 2
 /* 802984BC 002953FC  7C A3 01 2E */	stwx r5, r3, r0
 /* 802984C0 00295400  4E 80 00 20 */	blr 
 
-.global JASDrumSet_NS_TPerc
-JASDrumSet_NS_TPerc:
+/* 802984C4 0020 .text __ct__Q210JASDrumSet5TPercFv __ct__Q210JASDrumSet5TPercFv */
+.global __ct__Q210JASDrumSet5TPercFv
+__ct__Q210JASDrumSet5TPercFv:
 /* 802984C4 00295404  C0 02 BC 48 */	lfs f0, lbl_80455648-_SDA2_BASE_(r2)
 /* 802984C8 00295408  D0 03 00 00 */	stfs f0, 0(r3)
 /* 802984CC 0029540C  D0 03 00 04 */	stfs f0, 4(r3)
@@ -148,11 +159,66 @@ JASDrumSet_NS_TPerc:
 /* 802984DC 0029541C  B0 03 00 0C */	sth r0, 0xc(r3)
 /* 802984E0 00295420  4E 80 00 20 */	blr 
 
-.global JASDrumSet_NS_TPerc_NS_setRelease
-JASDrumSet_NS_TPerc_NS_setRelease:
+/* 802984E4 0008 .text setRelease__Q210JASDrumSet5TPercFUl setRelease__Q210JASDrumSet5TPercFUl */
+.global setRelease__Q210JASDrumSet5TPercFUl
+setRelease__Q210JASDrumSet5TPercFUl:
 /* 802984E4 00295424  B0 83 00 0C */	sth r4, 0xc(r3)
 /* 802984E8 00295428  4E 80 00 20 */	blr 
+
+/* 802984EC 000C .text getType__10JASDrumSetCFv getType__10JASDrumSetCFv */
+.global getType__10JASDrumSetCFv
+getType__10JASDrumSetCFv:
 /* 802984EC 0029542C  3C 60 50 45 */	lis r3, 0x50455243@ha
 /* 802984F0 00295430  38 63 52 43 */	addi r3, r3, 0x50455243@l
 /* 802984F4 00295434  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C7710 0014 .data __vt__10JASDrumSet __vt__10JASDrumSet */
+.global __vt__10JASDrumSet
+__vt__10JASDrumSet:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x83, 0x14, 0x80, 0x29, 0x83, 0xcc /* baserom.dol+0x3c4710 */
+.byte 0x80, 0x29, 0x84, 0xec /* baserom.dol+0x3c4720 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4724 */
+
+
+
+.section .bss, "aw"
+/* 80431B58 0018 .bss lbl_80431B58 osc$213 */
+.global lbl_80431B58
+lbl_80431B58:
+.skip 0x18
+
+
+
+.section .sbss, "aw"
+/* 80451270 0004 .sbss lbl_80451270 oscp$214 */
+.global lbl_80451270
+lbl_80451270:
+.skip 0x4
+
+/* 80451274 0004 .sbss lbl_80451274 lbl_80451274 */
+.global lbl_80451274
+lbl_80451274:
+.skip 0x4
+
+
+
+.section .sdata2, "a"
+/* 80455648 0004 .sdata2 lbl_80455648 @219 */
+.global lbl_80455648
+lbl_80455648:
+.byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d44a8 */
+
+/* 8045564C 0004 .sdata2 lbl_8045564C @220 */
+.global lbl_8045564C
+lbl_8045564C:
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44ac */
+
+/* 80455650 0004 .sdata2 lbl_80455650 @253 */
+.global lbl_80455650
+lbl_80455650:
+.byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44b0 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44b4 */
 

@@ -1,18 +1,18 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80280f18
 
-
-.global JStudio_NS_ctb_NS_TObject_NS_dtor
-JStudio_NS_ctb_NS_TObject_NS_dtor:
+.section .text, "ax"
+/* 80280F18 0048 .text __dt__Q37JStudio3ctb7TObjectFv __dt__Q37JStudio3ctb7TObjectFv */
+.global __dt__Q37JStudio3ctb7TObjectFv
+__dt__Q37JStudio3ctb7TObjectFv:
 /* 80280F18 0027DE58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80280F1C 0027DE5C  7C 08 02 A6 */	mflr r0
 /* 80280F20 0027DE60  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80280F24 0027DE64  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80280F28 0027DE68  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80280F2C 0027DE6C  41 82 00 1C */	beq lbl_80280F48
-/* 80280F30 0027DE70  3C A0 80 3C */	lis r5, lbl_803C48D0@ha
-/* 80280F34 0027DE74  38 05 48 D0 */	addi r0, r5, lbl_803C48D0@l
+/* 80280F30 0027DE70  3C A0 80 3C */	lis r5, __vt__Q37JStudio3ctb7TObject@ha
+/* 80280F34 0027DE74  38 05 48 D0 */	addi r0, r5, __vt__Q37JStudio3ctb7TObject@l
 /* 80280F38 0027DE78  90 1F 00 08 */	stw r0, 8(r31)
 /* 80280F3C 0027DE7C  7C 80 07 35 */	extsh. r0, r4
 /* 80280F40 0027DE80  40 81 00 08 */	ble lbl_80280F48
@@ -25,8 +25,9 @@ lbl_80280F48:
 /* 80280F58 0027DE98  38 21 00 10 */	addi r1, r1, 0x10
 /* 80280F5C 0027DE9C  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TObject_TxyzRy
-JStudio_NS_ctb_NS_TObject_TxyzRy:
+/* 80280F60 005C .text __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock */
+.global __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock
+__ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock:
 /* 80280F60 0027DEA0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80280F64 0027DEA4  A0 85 00 06 */	lhz r4, 6(r5)
 /* 80280F68 0027DEA8  38 04 00 03 */	addi r0, r4, 3
@@ -40,24 +41,29 @@ JStudio_NS_ctb_NS_TObject_TxyzRy:
 lbl_80280F88:
 /* 80280F88 0027DEC8  90 03 00 00 */	stw r0, 0(r3)
 /* 80280F8C 0027DECC  90 83 00 04 */	stw r4, 4(r3)
-/* 80280F90 0027DED0  3C 80 80 3C */	lis r4, lbl_803C48D0@ha
-/* 80280F94 0027DED4  38 04 48 D0 */	addi r0, r4, lbl_803C48D0@l
+/* 80280F90 0027DED0  3C 80 80 3C */	lis r4, __vt__Q37JStudio3ctb7TObject@ha
+/* 80280F94 0027DED4  38 04 48 D0 */	addi r0, r4, __vt__Q37JStudio3ctb7TObject@l
 /* 80280F98 0027DED8  90 03 00 08 */	stw r0, 8(r3)
 /* 80280F9C 0027DEDC  38 00 00 00 */	li r0, 0
 /* 80280FA0 0027DEE0  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80280FA4 0027DEE4  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80280FA8 0027DEE8  90 A3 00 14 */	stw r5, 0x14(r3)
-/* 80280FAC 0027DEEC  3C 80 80 3C */	lis r4, lbl_803C48C0@ha
-/* 80280FB0 0027DEF0  38 04 48 C0 */	addi r0, r4, lbl_803C48C0@l
+/* 80280FAC 0027DEEC  3C 80 80 3C */	lis r4, __vt__Q37JStudio3ctb14TObject_TxyzRy@ha
+/* 80280FB0 0027DEF0  38 04 48 C0 */	addi r0, r4, __vt__Q37JStudio3ctb14TObject_TxyzRy@l
 /* 80280FB4 0027DEF4  90 03 00 08 */	stw r0, 8(r3)
 /* 80280FB8 0027DEF8  4E 80 00 20 */	blr 
+
+/* 80280FBC 0008 .text getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv */
+.global getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv
+getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv:
 /* 80280FBC 0027DEFC  38 60 00 01 */	li r3, 1
 /* 80280FC0 0027DF00  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl
-JStudio_NS_ctb_NS_TControl:
-/* 80280FC4 0027DF04  3C 80 80 3C */	lis r4, lbl_803C48B4@ha
-/* 80280FC8 0027DF08  38 04 48 B4 */	addi r0, r4, lbl_803C48B4@l
+/* 80280FC4 0030 .text __ct__Q37JStudio3ctb8TControlFv __ct__Q37JStudio3ctb8TControlFv */
+.global __ct__Q37JStudio3ctb8TControlFv
+__ct__Q37JStudio3ctb8TControlFv:
+/* 80280FC4 0027DF04  3C 80 80 3C */	lis r4, __vt__Q37JStudio3ctb8TControl@ha
+/* 80280FC8 0027DF08  38 04 48 B4 */	addi r0, r4, __vt__Q37JStudio3ctb8TControl@l
 /* 80280FCC 0027DF0C  90 03 00 00 */	stw r0, 0(r3)
 /* 80280FD0 0027DF10  38 00 00 00 */	li r0, 0
 /* 80280FD4 0027DF14  90 03 00 04 */	stw r0, 4(r3)
@@ -69,8 +75,9 @@ JStudio_NS_ctb_NS_TControl:
 /* 80280FEC 0027DF2C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80280FF0 0027DF30  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_dtor
-JStudio_NS_ctb_NS_TControl_NS_dtor:
+/* 80280FF4 006C .text __dt__Q37JStudio3ctb8TControlFv __dt__Q37JStudio3ctb8TControlFv */
+.global __dt__Q37JStudio3ctb8TControlFv
+__dt__Q37JStudio3ctb8TControlFv:
 /* 80280FF4 0027DF34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80280FF8 0027DF38  7C 08 02 A6 */	mflr r0
 /* 80280FFC 0027DF3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -79,8 +86,8 @@ JStudio_NS_ctb_NS_TControl_NS_dtor:
 /* 80281008 0027DF48  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028100C 0027DF4C  7C 9F 23 78 */	mr r31, r4
 /* 80281010 0027DF50  41 82 00 34 */	beq lbl_80281044
-/* 80281014 0027DF54  3C 60 80 3C */	lis r3, lbl_803C48B4@ha
-/* 80281018 0027DF58  38 03 48 B4 */	addi r0, r3, lbl_803C48B4@l
+/* 80281014 0027DF54  3C 60 80 3C */	lis r3, __vt__Q37JStudio3ctb8TControl@ha
+/* 80281018 0027DF58  38 03 48 B4 */	addi r0, r3, __vt__Q37JStudio3ctb8TControl@l
 /* 8028101C 0027DF5C  90 1E 00 00 */	stw r0, 0(r30)
 /* 80281020 0027DF60  34 1E 00 08 */	addic. r0, r30, 8
 /* 80281024 0027DF64  41 82 00 10 */	beq lbl_80281034
@@ -101,8 +108,9 @@ lbl_80281044:
 /* 80281058 0027DF98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028105C 0027DF9C  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_appendObject
-JStudio_NS_ctb_NS_TControl_NS_appendObject:
+/* 80281060 004C .text appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+.global appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
+appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject:
 /* 80281060 0027DFA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80281064 0027DFA4  7C 08 02 A6 */	mflr r0
 /* 80281068 0027DFA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -123,8 +131,9 @@ JStudio_NS_ctb_NS_TControl_NS_appendObject:
 /* 802810A4 0027DFE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802810A8 0027DFE8  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_removeObject
-JStudio_NS_ctb_NS_TControl_NS_removeObject:
+/* 802810AC 0030 .text removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+.global removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
+removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject:
 /* 802810AC 0027DFEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802810B0 0027DFF0  7C 08 02 A6 */	mflr r0
 /* 802810B4 0027DFF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -132,14 +141,15 @@ JStudio_NS_ctb_NS_TControl_NS_removeObject:
 /* 802810BC 0027DFFC  38 A4 00 0C */	addi r5, r4, 0xc
 /* 802810C0 0027E000  38 61 00 08 */	addi r3, r1, 8
 /* 802810C4 0027E004  38 86 00 08 */	addi r4, r6, 8
-/* 802810C8 0027E008  48 05 BB 0D */	bl JGadget_NS_TNodeLinkList_NS_Erase
+/* 802810C8 0027E008  48 05 BB 0D */	bl Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode
 /* 802810CC 0027E00C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802810D0 0027E010  7C 08 03 A6 */	mtlr r0
 /* 802810D4 0027E014  38 21 00 10 */	addi r1, r1, 0x10
 /* 802810D8 0027E018  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_destroyObject
-JStudio_NS_ctb_NS_TControl_NS_destroyObject:
+/* 802810DC 0050 .text destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject */
+.global destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
+destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject:
 /* 802810DC 0027E01C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802810E0 0027E020  7C 08 02 A6 */	mflr r0
 /* 802810E4 0027E024  90 01 00 14 */	stw r0, 0x14(r1)
@@ -147,7 +157,7 @@ JStudio_NS_ctb_NS_TControl_NS_destroyObject:
 /* 802810EC 0027E02C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802810F0 0027E030  7C 7E 1B 78 */	mr r30, r3
 /* 802810F4 0027E034  7C 9F 23 78 */	mr r31, r4
-/* 802810F8 0027E038  4B FF FF B5 */	bl JStudio_NS_ctb_NS_TControl_NS_removeObject
+/* 802810F8 0027E038  4B FF FF B5 */	bl removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
 /* 802810FC 0027E03C  80 7E 00 04 */	lwz r3, 4(r30)
 /* 80281100 0027E040  7F E4 FB 78 */	mr r4, r31
 /* 80281104 0027E044  81 83 00 00 */	lwz r12, 0(r3)
@@ -161,8 +171,9 @@ JStudio_NS_ctb_NS_TControl_NS_destroyObject:
 /* 80281124 0027E064  38 21 00 10 */	addi r1, r1, 0x10
 /* 80281128 0027E068  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_destroyObject_all
-JStudio_NS_ctb_NS_TControl_NS_destroyObject_all:
+/* 8028112C 0064 .text destroyObject_all__Q37JStudio3ctb8TControlFv destroyObject_all__Q37JStudio3ctb8TControlFv */
+.global destroyObject_all__Q37JStudio3ctb8TControlFv
+destroyObject_all__Q37JStudio3ctb8TControlFv:
 /* 8028112C 0027E06C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80281130 0027E070  7C 08 02 A6 */	mflr r0
 /* 80281134 0027E074  90 01 00 24 */	stw r0, 0x24(r1)
@@ -179,7 +190,7 @@ lbl_80281158:
 /* 8028115C 0027E09C  90 61 00 08 */	stw r3, 8(r1)
 /* 80281160 0027E0A0  38 83 FF F4 */	addi r4, r3, -12
 /* 80281164 0027E0A4  7F C3 F3 78 */	mr r3, r30
-/* 80281168 0027E0A8  4B FF FF 75 */	bl JStudio_NS_ctb_NS_TControl_NS_destroyObject
+/* 80281168 0027E0A8  4B FF FF 75 */	bl destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
 lbl_8028116C:
 /* 8028116C 0027E0AC  80 1E 00 08 */	lwz r0, 8(r30)
 /* 80281170 0027E0B0  28 00 00 00 */	cmplwi r0, 0
@@ -191,8 +202,9 @@ lbl_8028116C:
 /* 80281188 0027E0C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028118C 0027E0CC  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_getObject
-JStudio_NS_ctb_NS_TControl_NS_getObject:
+/* 80281190 00A0 .text getObject__Q37JStudio3ctb8TControlFPCvUl getObject__Q37JStudio3ctb8TControlFPCvUl */
+.global getObject__Q37JStudio3ctb8TControlFPCvUl
+getObject__Q37JStudio3ctb8TControlFPCvUl:
 /* 80281190 0027E0D0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80281194 0027E0D4  7C 08 02 A6 */	mflr r0
 /* 80281198 0027E0D8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -212,7 +224,7 @@ JStudio_NS_ctb_NS_TControl_NS_getObject:
 /* 802811D0 0027E110  38 81 00 2C */	addi r4, r1, 0x2c
 /* 802811D4 0027E114  38 A1 00 28 */	addi r5, r1, 0x28
 /* 802811D8 0027E118  38 C1 00 40 */	addi r6, r1, 0x40
-/* 802811DC 0027E11C  48 00 03 D9 */	bl std_NS_find_if
+/* 802811DC 0027E11C  48 00 03 D9 */	bl func_802815B4
 /* 802811E0 0027E120  80 61 00 30 */	lwz r3, 0x30(r1)
 /* 802811E4 0027E124  90 61 00 34 */	stw r3, 0x34(r1)
 /* 802811E8 0027E128  80 01 00 38 */	lwz r0, 0x38(r1)
@@ -236,8 +248,9 @@ lbl_80281220:
 /* 80281228 0027E168  38 21 00 50 */	addi r1, r1, 0x50
 /* 8028122C 0027E16C  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TControl_NS_getObject_index
-JStudio_NS_ctb_NS_TControl_NS_getObject_index:
+/* 80281230 0044 .text getObject_index__Q37JStudio3ctb8TControlFUl getObject_index__Q37JStudio3ctb8TControlFUl */
+.global getObject_index__Q37JStudio3ctb8TControlFUl
+getObject_index__Q37JStudio3ctb8TControlFUl:
 /* 80281230 0027E170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281234 0027E174  80 03 00 08 */	lwz r0, 8(r3)
 /* 80281238 0027E178  7C 04 00 40 */	cmplw r4, r0
@@ -260,16 +273,17 @@ lbl_8028126C:
 /* 8028126C 0027E1AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80281270 0027E1B0  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TFactory_NS_dtor
-JStudio_NS_ctb_NS_TFactory_NS_dtor:
+/* 80281274 0048 .text __dt__Q37JStudio3ctb8TFactoryFv __dt__Q37JStudio3ctb8TFactoryFv */
+.global __dt__Q37JStudio3ctb8TFactoryFv
+__dt__Q37JStudio3ctb8TFactoryFv:
 /* 80281274 0027E1B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281278 0027E1B8  7C 08 02 A6 */	mflr r0
 /* 8028127C 0027E1BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80281280 0027E1C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80281284 0027E1C4  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80281288 0027E1C8  41 82 00 1C */	beq lbl_802812A4
-/* 8028128C 0027E1CC  3C A0 80 3C */	lis r5, lbl_803C48A0@ha
-/* 80281290 0027E1D0  38 05 48 A0 */	addi r0, r5, lbl_803C48A0@l
+/* 8028128C 0027E1CC  3C A0 80 3C */	lis r5, __vt__Q37JStudio3ctb8TFactory@ha
+/* 80281290 0027E1D0  38 05 48 A0 */	addi r0, r5, __vt__Q37JStudio3ctb8TFactory@l
 /* 80281294 0027E1D4  90 1F 00 00 */	stw r0, 0(r31)
 /* 80281298 0027E1D8  7C 80 07 35 */	extsh. r0, r4
 /* 8028129C 0027E1DC  40 81 00 08 */	ble lbl_802812A4
@@ -281,6 +295,10 @@ lbl_802812A4:
 /* 802812B0 0027E1F0  7C 08 03 A6 */	mtlr r0
 /* 802812B4 0027E1F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802812B8 0027E1F8  4E 80 00 20 */	blr 
+
+/* 802812BC 0064 .text create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock */
+.global create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock
+create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock:
 /* 802812BC 0027E1FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802812C0 0027E200  7C 08 02 A6 */	mflr r0
 /* 802812C4 0027E204  90 01 00 14 */	stw r0, 0x14(r1)
@@ -297,7 +315,7 @@ lbl_802812E4:
 /* 802812EC 0027E22C  7C 60 1B 79 */	or. r0, r3, r3
 /* 802812F0 0027E230  41 82 00 10 */	beq lbl_80281300
 /* 802812F4 0027E234  7F E4 FB 78 */	mr r4, r31
-/* 802812F8 0027E238  4B FF FC 69 */	bl JStudio_NS_ctb_NS_TObject_TxyzRy
+/* 802812F8 0027E238  4B FF FC 69 */	bl __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock
 /* 802812FC 0027E23C  7C 60 1B 78 */	mr r0, r3
 lbl_80281300:
 /* 80281300 0027E240  7C 03 03 78 */	mr r3, r0
@@ -310,6 +328,10 @@ lbl_8028130C:
 /* 80281314 0027E254  7C 08 03 A6 */	mtlr r0
 /* 80281318 0027E258  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028131C 0027E25C  4E 80 00 20 */	blr 
+
+/* 80281320 003C .text destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject */
+.global destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject
+destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject:
 /* 80281320 0027E260  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281324 0027E264  7C 08 02 A6 */	mflr r0
 /* 80281328 0027E268  90 01 00 14 */	stw r0, 0x14(r1)
@@ -327,19 +349,21 @@ lbl_8028134C:
 /* 80281354 0027E294  38 21 00 10 */	addi r1, r1, 0x10
 /* 80281358 0027E298  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TParse
-JStudio_NS_ctb_NS_TParse:
-/* 8028135C 0027E29C  3C A0 80 3C */	lis r5, lbl_803C488C@ha
-/* 80281360 0027E2A0  38 05 48 8C */	addi r0, r5, lbl_803C488C@l
+/* 8028135C 0020 .text __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl */
+.global __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl
+__ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl:
+/* 8028135C 0027E29C  3C A0 80 3C */	lis r5, __vt__Q37JGadget6binary19TParse_header_block@ha
+/* 80281360 0027E2A0  38 05 48 8C */	addi r0, r5, __vt__Q37JGadget6binary19TParse_header_block@l
 /* 80281364 0027E2A4  90 03 00 00 */	stw r0, 0(r3)
-/* 80281368 0027E2A8  3C A0 80 3C */	lis r5, lbl_803C4878@ha
-/* 8028136C 0027E2AC  38 05 48 78 */	addi r0, r5, lbl_803C4878@l
+/* 80281368 0027E2A8  3C A0 80 3C */	lis r5, __vt__Q37JStudio3ctb6TParse@ha
+/* 8028136C 0027E2AC  38 05 48 78 */	addi r0, r5, __vt__Q37JStudio3ctb6TParse@l
 /* 80281370 0027E2B0  90 03 00 00 */	stw r0, 0(r3)
 /* 80281374 0027E2B4  90 83 00 04 */	stw r4, 4(r3)
 /* 80281378 0027E2B8  4E 80 00 20 */	blr 
 
-.global JStudio_NS_ctb_NS_TParse_NS_dtor
-JStudio_NS_ctb_NS_TParse_NS_dtor:
+/* 8028137C 0060 .text __dt__Q37JStudio3ctb6TParseFv __dt__Q37JStudio3ctb6TParseFv */
+.global __dt__Q37JStudio3ctb6TParseFv
+__dt__Q37JStudio3ctb6TParseFv:
 /* 8028137C 0027E2BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281380 0027E2C0  7C 08 02 A6 */	mflr r0
 /* 80281384 0027E2C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -348,8 +372,8 @@ JStudio_NS_ctb_NS_TParse_NS_dtor:
 /* 80281390 0027E2D0  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80281394 0027E2D4  7C 9F 23 78 */	mr r31, r4
 /* 80281398 0027E2D8  41 82 00 28 */	beq lbl_802813C0
-/* 8028139C 0027E2DC  3C 80 80 3C */	lis r4, lbl_803C4878@ha
-/* 802813A0 0027E2E0  38 04 48 78 */	addi r0, r4, lbl_803C4878@l
+/* 8028139C 0027E2DC  3C 80 80 3C */	lis r4, __vt__Q37JStudio3ctb6TParse@ha
+/* 802813A0 0027E2E0  38 04 48 78 */	addi r0, r4, __vt__Q37JStudio3ctb6TParse@l
 /* 802813A4 0027E2E4  90 1E 00 00 */	stw r0, 0(r30)
 /* 802813A8 0027E2E8  38 80 00 00 */	li r4, 0
 /* 802813AC 0027E2EC  48 05 B5 1D */	bl __dt__Q37JGadget6binary19TParse_header_blockFv
@@ -365,6 +389,10 @@ lbl_802813C0:
 /* 802813D0 0027E310  7C 08 03 A6 */	mtlr r0
 /* 802813D4 0027E314  38 21 00 10 */	addi r1, r1, 0x10
 /* 802813D8 0027E318  4E 80 00 20 */	blr 
+
+/* 802813DC 0094 .text parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl */
+.global parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl
+parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl:
 /* 802813DC 0027E31C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802813E0 0027E320  7C 08 02 A6 */	mflr r0
 /* 802813E4 0027E324  90 01 00 14 */	stw r0, 0x14(r1)
@@ -375,9 +403,9 @@ lbl_802813C0:
 /* 802813F8 0027E338  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 802813FC 0027E33C  90 05 00 00 */	stw r0, 0(r5)
 /* 80281400 0027E340  7F E3 FB 78 */	mr r3, r31
-/* 80281404 0027E344  38 82 B9 F8 */	addi r4, r2, lbl_804553F8-_SDA2_BASE_
+/* 80281404 0027E344  38 82 B9 F8 */	addi r4, r2, ga4cSignature__Q37JStudio3ctb4data-_SDA2_BASE_
 /* 80281408 0027E348  38 A0 00 04 */	li r5, 4
-/* 8028140C 0027E34C  48 0E 4C 81 */	bl func_8036608C
+/* 8028140C 0027E34C  48 0E 4C 81 */	bl memcmp
 /* 80281410 0027E350  2C 03 00 00 */	cmpwi r3, 0
 /* 80281414 0027E354  41 82 00 0C */	beq lbl_80281420
 /* 80281418 0027E358  38 60 00 00 */	li r3, 0
@@ -406,6 +434,10 @@ lbl_8028145C:
 /* 80281464 0027E3A4  7C 08 03 A6 */	mtlr r0
 /* 80281468 0027E3A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028146C 0027E3AC  4E 80 00 20 */	blr 
+
+/* 80281470 00E4 .text parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl */
+.global parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl
+parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl:
 /* 80281470 0027E3B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80281474 0027E3B4  7C 08 02 A6 */	mflr r0
 /* 80281478 0027E3B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -432,7 +464,7 @@ lbl_8028145C:
 lbl_802814CC:
 /* 802814CC 0027E40C  7F E3 FB 78 */	mr r3, r31
 /* 802814D0 0027E410  54 05 04 3E */	clrlwi r5, r0, 0x10
-/* 802814D4 0027E414  4B FF FC BD */	bl JStudio_NS_ctb_NS_TControl_NS_getObject
+/* 802814D4 0027E414  4B FF FC BD */	bl getObject__Q37JStudio3ctb8TControlFPCvUl
 /* 802814D8 0027E418  28 03 00 00 */	cmplwi r3, 0
 /* 802814DC 0027E41C  41 82 00 0C */	beq lbl_802814E8
 /* 802814E0 0027E420  38 60 00 01 */	li r3, 1
@@ -460,7 +492,7 @@ lbl_8028150C:
 /* 8028152C 0027E46C  48 00 00 10 */	b lbl_8028153C
 lbl_80281530:
 /* 80281530 0027E470  7F E3 FB 78 */	mr r3, r31
-/* 80281534 0027E474  4B FF FB 2D */	bl JStudio_NS_ctb_NS_TControl_NS_appendObject
+/* 80281534 0027E474  4B FF FB 2D */	bl appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject
 /* 80281538 0027E478  38 60 00 01 */	li r3, 1
 lbl_8028153C:
 /* 8028153C 0027E47C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -469,6 +501,10 @@ lbl_8028153C:
 /* 80281548 0027E488  7C 08 03 A6 */	mtlr r0
 /* 8028154C 0027E48C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80281550 0027E490  4E 80 00 20 */	blr 
+
+/* 80281554 0060 .text __dt__Q37JStudio3ctb14TObject_TxyzRyFv __dt__Q37JStudio3ctb14TObject_TxyzRyFv */
+.global __dt__Q37JStudio3ctb14TObject_TxyzRyFv
+__dt__Q37JStudio3ctb14TObject_TxyzRyFv:
 /* 80281554 0027E494  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80281558 0027E498  7C 08 02 A6 */	mflr r0
 /* 8028155C 0027E49C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -477,11 +513,11 @@ lbl_8028153C:
 /* 80281568 0027E4A8  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028156C 0027E4AC  7C 9F 23 78 */	mr r31, r4
 /* 80281570 0027E4B0  41 82 00 28 */	beq lbl_80281598
-/* 80281574 0027E4B4  3C 80 80 3C */	lis r4, lbl_803C48C0@ha
-/* 80281578 0027E4B8  38 04 48 C0 */	addi r0, r4, lbl_803C48C0@l
+/* 80281574 0027E4B4  3C 80 80 3C */	lis r4, __vt__Q37JStudio3ctb14TObject_TxyzRy@ha
+/* 80281578 0027E4B8  38 04 48 C0 */	addi r0, r4, __vt__Q37JStudio3ctb14TObject_TxyzRy@l
 /* 8028157C 0027E4BC  90 1E 00 08 */	stw r0, 8(r30)
 /* 80281580 0027E4C0  38 80 00 00 */	li r4, 0
-/* 80281584 0027E4C4  4B FF F9 95 */	bl JStudio_NS_ctb_NS_TObject_NS_dtor
+/* 80281584 0027E4C4  4B FF F9 95 */	bl __dt__Q37JStudio3ctb7TObjectFv
 /* 80281588 0027E4C8  7F E0 07 35 */	extsh. r0, r31
 /* 8028158C 0027E4CC  40 81 00 0C */	ble lbl_80281598
 /* 80281590 0027E4D0  7F C3 F3 78 */	mr r3, r30
@@ -495,8 +531,9 @@ lbl_80281598:
 /* 802815AC 0027E4EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802815B0 0027E4F0  4E 80 00 20 */	blr 
 
-.global std_NS_find_if
-std_NS_find_if:
+/* 802815B4 0094 .text func_802815B4 find_if<Q37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iterator,Q37JStudio6object18TPRObject_ID_equal>__3stdFQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JGadget37TLinkList<Q37JStudio3ctb7TObject,-12>8iteratorQ37JStudio6object18TPRObject_ID_equal */
+.global func_802815B4
+func_802815B4:
 /* 802815B4 0027E4F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802815B8 0027E4F8  7C 08 02 A6 */	mflr r0
 /* 802815BC 0027E4FC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -525,7 +562,7 @@ lbl_802815E8:
 /* 80281610 0027E550  80 7D 00 00 */	lwz r3, 0(r29)
 /* 80281614 0027E554  38 63 FF F4 */	addi r3, r3, -12
 /* 80281618 0027E558  7F E4 FB 78 */	mr r4, r31
-/* 8028161C 0027E55C  48 00 73 6D */	bl JStudio_NS_object_NS_TIDData_NS_isEqual
+/* 8028161C 0027E55C  48 00 73 6D */	bl isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData
 /* 80281620 0027E560  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80281624 0027E564  41 82 FF B8 */	beq lbl_802815DC
 lbl_80281628:
@@ -537,4 +574,40 @@ lbl_80281628:
 /* 8028163C 0027E57C  7C 08 03 A6 */	mtlr r0
 /* 80281640 0027E580  38 21 00 30 */	addi r1, r1, 0x30
 /* 80281644 0027E584  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C4878 0014 .data __vt__Q37JStudio3ctb6TParse __vt__Q37JStudio3ctb6TParse */
+.global __vt__Q37JStudio3ctb6TParse
+__vt__Q37JStudio3ctb6TParse:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x13, 0x7c, 0x80, 0x28, 0x13, 0xdc /* baserom.dol+0x3c1878 */
+.byte 0x80, 0x28, 0x14, 0x70 /* baserom.dol+0x3c1888 */
+
+/* 803C488C 0014 .data __vt__Q37JGadget6binary19TParse_header_block __vt__Q37JGadget6binary19TParse_header_block */
+.global __vt__Q37JGadget6binary19TParse_header_block
+__vt__Q37JGadget6binary19TParse_header_block:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c188c */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c189c */
+
+/* 803C48A0 0014 .data __vt__Q37JStudio3ctb8TFactory __vt__Q37JStudio3ctb8TFactory */
+.global __vt__Q37JStudio3ctb8TFactory
+__vt__Q37JStudio3ctb8TFactory:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x12, 0x74, 0x80, 0x28, 0x12, 0xbc /* baserom.dol+0x3c18a0 */
+.byte 0x80, 0x28, 0x13, 0x20 /* baserom.dol+0x3c18b0 */
+
+/* 803C48B4 000C .data __vt__Q37JStudio3ctb8TControl __vt__Q37JStudio3ctb8TControl */
+.global __vt__Q37JStudio3ctb8TControl
+__vt__Q37JStudio3ctb8TControl:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x0f, 0xf4 /* baserom.dol+0x3c18b4 */
+
+/* 803C48C0 0010 .data __vt__Q37JStudio3ctb14TObject_TxyzRy __vt__Q37JStudio3ctb14TObject_TxyzRy */
+.global __vt__Q37JStudio3ctb14TObject_TxyzRy
+__vt__Q37JStudio3ctb14TObject_TxyzRy:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x15, 0x54, 0x80, 0x28, 0x0f, 0xbc /* baserom.dol+0x3c18c0 */
+
+/* 803C48D0 0010 .data __vt__Q37JStudio3ctb7TObject __vt__Q37JStudio3ctb7TObject */
+.global __vt__Q37JStudio3ctb7TObject
+__vt__Q37JStudio3ctb7TObject:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c18d0 */
 

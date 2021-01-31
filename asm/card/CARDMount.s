@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80356948
 
-
+.section .text, "ax"
+/* 80356948 00CC .text IsCard IsCard */
 .global IsCard
 IsCard:
 /* 80356948 00353888  54 60 00 1F */	rlwinm. r0, r3, 0, 0, 0xf
@@ -10,7 +10,7 @@ IsCard:
 /* 80356950 00353890  3C 03 80 00 */	addis r0, r3, 0x8000
 /* 80356954 00353894  28 00 00 04 */	cmplwi r0, 4
 /* 80356958 00353898  40 82 00 10 */	bne lbl_80356968
-/* 8035695C 0035389C  A0 0D 84 F0 */	lhz r0, lbl_80450A70-_SDA_BASE_(r13)
+/* 8035695C 0035389C  A0 0D 84 F0 */	lhz r0, __CARDVendorID-_SDA_BASE_(r13)
 /* 80356960 003538A0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80356964 003538A4  40 82 00 0C */	bne lbl_80356970
 lbl_80356968:
@@ -46,9 +46,9 @@ lbl_803569C8:
 /* 803569C8 00353908  38 60 00 00 */	li r3, 0
 /* 803569CC 0035390C  4E 80 00 20 */	blr 
 lbl_803569D0:
-/* 803569D0 00353910  3C 80 80 3D */	lis r4, lbl_803D2000@ha
+/* 803569D0 00353910  3C 80 80 3D */	lis r4, SectorSizeTable@ha
 /* 803569D4 00353914  54 63 BE FA */	rlwinm r3, r3, 0x17, 0x1b, 0x1d
-/* 803569D8 00353918  38 04 20 00 */	addi r0, r4, lbl_803D2000@l
+/* 803569D8 00353918  38 04 20 00 */	addi r0, r4, SectorSizeTable@l
 /* 803569DC 0035391C  7C 60 1A 14 */	add r3, r0, r3
 /* 803569E0 00353920  80 63 00 00 */	lwz r3, 0(r3)
 /* 803569E4 00353924  2C 03 00 00 */	cmpwi r3, 0
@@ -66,6 +66,7 @@ lbl_80356A0C:
 /* 80356A0C 0035394C  38 60 00 01 */	li r3, 1
 /* 80356A10 00353950  4E 80 00 20 */	blr 
 
+/* 80356A14 0038 .text CARDProbe CARDProbe */
 .global CARDProbe
 CARDProbe:
 /* 80356A14 00353954  7C 08 02 A6 */	mflr r0
@@ -85,6 +86,7 @@ lbl_80356A3C:
 /* 80356A44 00353984  7C 08 03 A6 */	mtlr r0
 /* 80356A48 00353988  4E 80 00 20 */	blr 
 
+/* 80356A4C 017C .text CARDProbeEx CARDProbeEx */
 .global CARDProbeEx
 CARDProbeEx:
 /* 80356A4C 0035398C  7C 08 02 A6 */	mflr r0
@@ -109,10 +111,10 @@ lbl_80356A7C:
 /* 80356A90 003539D0  48 00 01 24 */	b lbl_80356BB4
 lbl_80356A94:
 /* 80356A94 003539D4  1C 9B 01 10 */	mulli r4, r27, 0x110
-/* 80356A98 003539D8  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 80356A9C 003539DC  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80356A98 003539D8  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 80356A9C 003539DC  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80356AA0 003539E0  7F C0 22 14 */	add r30, r0, r4
-/* 80356AA4 003539E4  4B FE 6C 51 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80356AA4 003539E4  4B FE 6C 51 */	bl __RAS_OSDisableInterrupts_begin
 /* 80356AA8 003539E8  3B A3 00 00 */	addi r29, r3, 0
 /* 80356AAC 003539EC  38 7B 00 00 */	addi r3, r27, 0
 /* 80356AB0 003539F0  4B FE CB 3D */	bl EXIProbeEx
@@ -177,8 +179,8 @@ lbl_80356B78:
 /* 80356B78 00353AB8  28 1F 00 00 */	cmplwi r31, 0
 /* 80356B7C 00353ABC  41 82 00 20 */	beq lbl_80356B9C
 /* 80356B80 00353AC0  80 81 00 14 */	lwz r4, 0x14(r1)
-/* 80356B84 00353AC4  3C 60 80 3D */	lis r3, lbl_803D2000@ha
-/* 80356B88 00353AC8  38 03 20 00 */	addi r0, r3, lbl_803D2000@l
+/* 80356B84 00353AC4  3C 60 80 3D */	lis r3, SectorSizeTable@ha
+/* 80356B88 00353AC8  38 03 20 00 */	addi r0, r3, SectorSizeTable@l
 /* 80356B8C 00353ACC  54 83 BE FA */	rlwinm r3, r4, 0x17, 0x1b, 0x1d
 /* 80356B90 00353AD0  7C 60 1A 14 */	add r3, r0, r3
 /* 80356B94 00353AD4  80 03 00 00 */	lwz r0, 0(r3)
@@ -199,6 +201,7 @@ lbl_80356BB4:
 /* 80356BC0 00353B00  7C 08 03 A6 */	mtlr r0
 /* 80356BC4 00353B04  4E 80 00 20 */	blr 
 
+/* 80356BC8 0454 .text DoMount DoMount */
 .global DoMount
 DoMount:
 /* 80356BC8 00353B08  7C 08 02 A6 */	mflr r0
@@ -210,8 +213,8 @@ DoMount:
 /* 80356BE0 00353B20  3B A3 00 00 */	addi r29, r3, 0
 /* 80356BE4 00353B24  1C 9D 01 10 */	mulli r4, r29, 0x110
 /* 80356BE8 00353B28  93 81 00 20 */	stw r28, 0x20(r1)
-/* 80356BEC 00353B2C  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 80356BF0 00353B30  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80356BEC 00353B2C  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 80356BF0 00353B30  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80356BF4 00353B34  7C 60 22 14 */	add r3, r0, r4
 /* 80356BF8 00353B38  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 80356BFC 00353B3C  3B E3 00 00 */	addi r31, r3, 0
@@ -238,11 +241,11 @@ lbl_80356C44:
 /* 80356C44 00353B84  2C 1E 00 00 */	cmpwi r30, 0
 /* 80356C48 00353B88  41 80 03 88 */	blt lbl_80356FD0
 /* 80356C4C 00353B8C  80 01 00 18 */	lwz r0, 0x18(r1)
-/* 80356C50 00353B90  3C 80 80 3D */	lis r4, lbl_803D2000@ha
-/* 80356C54 00353B94  38 A4 20 00 */	addi r5, r4, lbl_803D2000@l
+/* 80356C50 00353B90  3C 80 80 3D */	lis r4, SectorSizeTable@ha
+/* 80356C54 00353B94  38 A4 20 00 */	addi r5, r4, SectorSizeTable@l
 /* 80356C58 00353B98  90 1F 01 08 */	stw r0, 0x108(r31)
-/* 80356C5C 00353B9C  3C 60 80 3D */	lis r3, lbl_803D2020@ha
-/* 80356C60 00353BA0  38 03 20 20 */	addi r0, r3, lbl_803D2020@l
+/* 80356C5C 00353B9C  3C 60 80 3D */	lis r3, LatencyTable@ha
+/* 80356C60 00353BA0  38 03 20 20 */	addi r0, r3, LatencyTable@l
 /* 80356C64 00353BA4  80 C1 00 18 */	lwz r6, 0x18(r1)
 /* 80356C68 00353BA8  38 7D 00 00 */	addi r3, r29, 0
 /* 80356C6C 00353BAC  38 9F 00 12 */	addi r4, r31, 0x12
@@ -430,7 +433,7 @@ lbl_80356EF4:
 /* 80356F18 00353E58  7F 83 02 2E */	lhzx r28, r3, r0
 /* 80356F1C 00353E5C  38 60 00 00 */	li r3, 0
 /* 80356F20 00353E60  4B FE 96 3D */	bl __OSUnlockSramEx
-/* 80356F24 00353E64  A0 0D 84 F0 */	lhz r0, lbl_80450A70-_SDA_BASE_(r13)
+/* 80356F24 00353E64  A0 0D 84 F0 */	lhz r0, __CARDVendorID-_SDA_BASE_(r13)
 /* 80356F28 00353E68  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80356F2C 00353E6C  41 82 00 0C */	beq lbl_80356F38
 /* 80356F30 00353E70  7C 1C 00 40 */	cmplw r28, r0
@@ -446,9 +449,7 @@ lbl_80356F40:
 /* 80356F50 00353E90  4B FF BE 35 */	bl __CARDEnableInterrupt
 /* 80356F54 00353E94  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80356F58 00353E98  41 80 00 78 */	blt lbl_80356FD0
-.global __CARDExiHandler
 /* 80356F5C 00353E9C  3C 60 80 35 */	lis r3, __CARDExiHandler@ha
-.global __CARDExiHandler
 /* 80356F60 00353EA0  38 83 2B 40 */	addi r4, r3, __CARDExiHandler@l
 /* 80356F64 00353EA4  38 7D 00 00 */	addi r3, r29, 0
 /* 80356F68 00353EA8  4B FE C4 15 */	bl EXISetExiCallback
@@ -503,6 +504,7 @@ lbl_80356FFC:
 /* 80357014 00353F54  7C 08 03 A6 */	mtlr r0
 /* 80357018 00353F58  4E 80 00 20 */	blr 
 
+/* 8035701C 0138 .text __CARDMountCallback __CARDMountCallback */
 .global __CARDMountCallback
 __CARDMountCallback:
 /* 8035701C 00353F5C  7C 08 02 A6 */	mflr r0
@@ -516,8 +518,8 @@ __CARDMountCallback:
 /* 8035703C 00353F7C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80357040 00353F80  3B 83 00 00 */	addi r28, r3, 0
 /* 80357044 00353F84  1C BC 01 10 */	mulli r5, r28, 0x110
-/* 80357048 00353F88  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 8035704C 00353F8C  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80357048 00353F88  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 8035704C 00353F8C  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80357050 00353F90  7F E0 2A 14 */	add r31, r0, r5
 /* 80357054 00353F94  41 82 00 A8 */	beq lbl_803570FC
 /* 80357058 00353F98  40 80 00 10 */	bge lbl_80357068
@@ -550,10 +552,8 @@ lbl_803570A8:
 lbl_803570B8:
 /* 803570B8 00353FF8  3C 60 80 35 */	lis r3, __CARDMountCallback@ha
 /* 803570BC 00353FFC  38 03 70 1C */	addi r0, r3, __CARDMountCallback@l
-.global __CARDUnlockedHandler
 /* 803570C0 00354000  3C 60 80 35 */	lis r3, __CARDUnlockedHandler@ha
 /* 803570C4 00354004  90 1F 00 DC */	stw r0, 0xdc(r31)
-.global __CARDUnlockedHandler
 /* 803570C8 00354008  38 A3 2D 00 */	addi r5, r3, __CARDUnlockedHandler@l
 /* 803570CC 0035400C  38 7C 00 00 */	addi r3, r28, 0
 /* 803570D0 00354010  38 80 00 00 */	li r4, 0
@@ -593,6 +593,7 @@ lbl_80357134:
 /* 8035714C 0035408C  7C 08 03 A6 */	mtlr r0
 /* 80357150 00354090  4E 80 00 20 */	blr 
 
+/* 80357154 01A0 .text CARDMountAsync CARDMountAsync */
 .global CARDMountAsync
 CARDMountAsync:
 /* 80357154 00354094  7C 08 02 A6 */	mflr r0
@@ -618,10 +619,10 @@ lbl_80357188:
 /* 8035719C 003540DC  48 00 01 44 */	b lbl_803572E0
 lbl_803571A0:
 /* 803571A0 003540E0  1C 9E 01 10 */	mulli r4, r30, 0x110
-/* 803571A4 003540E4  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 803571A8 003540E8  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 803571A4 003540E4  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 803571A8 003540E8  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 803571AC 003540EC  7F E0 22 14 */	add r31, r0, r4
-/* 803571B0 003540F0  4B FE 65 45 */	bl __RAS_OSDisableInterrupts_begin 
+/* 803571B0 003540F0  4B FE 65 45 */	bl __RAS_OSDisableInterrupts_begin
 /* 803571B4 003540F4  80 1F 00 04 */	lwz r0, 4(r31)
 /* 803571B8 003540F8  3B 83 00 00 */	addi r28, r3, 0
 /* 803571BC 003540FC  2C 00 FF FF */	cmpwi r0, -1
@@ -652,9 +653,7 @@ lbl_80357200:
 /* 80357218 00354158  7F A0 EB 78 */	mr r0, r29
 /* 8035721C 0035415C  48 00 00 0C */	b lbl_80357228
 lbl_80357220:
-.global __CARDDefaultApiCallback
 /* 80357220 00354160  3C 60 80 35 */	lis r3, __CARDDefaultApiCallback@ha
-.global __CARDDefaultApiCallback
 /* 80357224 00354164  38 03 2A 30 */	addi r0, r3, __CARDDefaultApiCallback@l
 lbl_80357228:
 /* 80357228 00354168  90 1F 00 D0 */	stw r0, 0xd0(r31)
@@ -663,9 +662,7 @@ lbl_80357228:
 /* 80357234 00354174  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80357238 00354178  2C 00 00 00 */	cmpwi r0, 0
 /* 8035723C 0035417C  40 82 00 34 */	bne lbl_80357270
-.global __CARDExtHandler
 /* 80357240 00354180  3C 60 80 35 */	lis r3, __CARDExtHandler@ha
-.global __CARDExtHandler
 /* 80357244 00354184  38 83 2A 68 */	addi r4, r3, __CARDExtHandler@l
 /* 80357248 00354188  38 7E 00 00 */	addi r3, r30, 0
 /* 8035724C 0035418C  4B FE C4 55 */	bl EXIAttach
@@ -693,10 +690,8 @@ lbl_80357270:
 /* 803572A0 003541E0  4B FE 64 7D */	bl OSRestoreInterrupts
 /* 803572A4 003541E4  3C 60 80 35 */	lis r3, __CARDMountCallback@ha
 /* 803572A8 003541E8  38 03 70 1C */	addi r0, r3, __CARDMountCallback@l
-.global __CARDUnlockedHandler
 /* 803572AC 003541EC  3C 60 80 35 */	lis r3, __CARDUnlockedHandler@ha
 /* 803572B0 003541F0  90 1F 00 DC */	stw r0, 0xdc(r31)
-.global __CARDUnlockedHandler
 /* 803572B4 003541F4  38 A3 2D 00 */	addi r5, r3, __CARDUnlockedHandler@l
 /* 803572B8 003541F8  38 7E 00 00 */	addi r3, r30, 0
 /* 803572BC 003541FC  38 80 00 00 */	li r4, 0
@@ -716,13 +711,12 @@ lbl_803572E0:
 /* 803572EC 0035422C  7C 08 03 A6 */	mtlr r0
 /* 803572F0 00354230  4E 80 00 20 */	blr 
 
+/* 803572F4 0048 .text CARDMount CARDMount */
 .global CARDMount
 CARDMount:
 /* 803572F4 00354234  7C 08 02 A6 */	mflr r0
-.global __CARDSyncCallback
 /* 803572F8 00354238  3C C0 80 35 */	lis r6, __CARDSyncCallback@ha
 /* 803572FC 0035423C  90 01 00 04 */	stw r0, 4(r1)
-.global __CARDSyncCallback
 /* 80357300 00354240  38 C6 2A 34 */	addi r6, r6, __CARDSyncCallback@l
 /* 80357304 00354244  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80357308 00354248  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -741,6 +735,7 @@ lbl_80357328:
 /* 80357334 00354274  7C 08 03 A6 */	mtlr r0
 /* 80357338 00354278  4E 80 00 20 */	blr 
 
+/* 8035733C 009C .text DoUnmount DoUnmount */
 .global DoUnmount
 DoUnmount:
 /* 8035733C 0035427C  7C 08 02 A6 */	mflr r0
@@ -753,10 +748,10 @@ DoUnmount:
 /* 80357358 00354298  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8035735C 0035429C  3B 83 00 00 */	addi r28, r3, 0
 /* 80357360 003542A0  1C BC 01 10 */	mulli r5, r28, 0x110
-/* 80357364 003542A4  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 80357368 003542A8  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 80357364 003542A4  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 80357368 003542A8  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 8035736C 003542AC  7F E0 2A 14 */	add r31, r0, r5
-/* 80357370 003542B0  4B FE 63 85 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80357370 003542B0  4B FE 63 85 */	bl __RAS_OSDisableInterrupts_begin
 /* 80357374 003542B4  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80357378 003542B8  3B C3 00 00 */	addi r30, r3, 0
 /* 8035737C 003542BC  2C 00 00 00 */	cmpwi r0, 0
@@ -784,6 +779,7 @@ lbl_803573B0:
 /* 803573D0 00354310  7C 08 03 A6 */	mtlr r0
 /* 803573D4 00354314  4E 80 00 20 */	blr 
 
+/* 803573D8 00AC .text CARDUnmount CARDUnmount */
 .global CARDUnmount
 CARDUnmount:
 /* 803573D8 00354318  7C 08 02 A6 */	mflr r0
@@ -800,10 +796,10 @@ CARDUnmount:
 /* 80357404 00354344  48 00 00 64 */	b lbl_80357468
 lbl_80357408:
 /* 80357408 00354348  1C 9D 01 10 */	mulli r4, r29, 0x110
-/* 8035740C 0035434C  3C 60 80 45 */	lis r3, lbl_8044CBC0@ha
-/* 80357410 00354350  38 03 CB C0 */	addi r0, r3, lbl_8044CBC0@l
+/* 8035740C 0035434C  3C 60 80 45 */	lis r3, __CARDBlock@ha
+/* 80357410 00354350  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 80357414 00354354  7F C0 22 14 */	add r30, r0, r4
-/* 80357418 00354358  4B FE 62 DD */	bl __RAS_OSDisableInterrupts_begin 
+/* 80357418 00354358  4B FE 62 DD */	bl __RAS_OSDisableInterrupts_begin
 /* 8035741C 0035435C  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80357420 00354360  3B E3 00 00 */	addi r31, r3, 0
 /* 80357424 00354364  2C 00 00 00 */	cmpwi r0, 0
@@ -832,3 +828,19 @@ lbl_80357468:
 /* 80357478 003543B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035747C 003543BC  7C 08 03 A6 */	mtlr r0
 /* 80357480 003543C0  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D2000 0020 .data SectorSizeTable SectorSizeTable */
+.global SectorSizeTable
+SectorSizeTable:
+.byte 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00 /* baserom.dol+0x3cf000 */
+.byte 0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cf010 */
+
+/* 803D2020 0020 .data LatencyTable LatencyTable */
+.global LatencyTable
+LatencyTable:
+.byte 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20 /* baserom.dol+0x3cf020 */
+.byte 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00 /* baserom.dol+0x3cf030 */
+

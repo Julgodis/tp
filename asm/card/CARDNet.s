@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80359158
 
-
+.section .text, "ax"
+/* 80359158 00C4 .text CARDGetSerialNo CARDGetSerialNo */
 .global CARDGetSerialNo
 CARDGetSerialNo:
 /* 80359158 00356098  7C 08 02 A6 */	mflr r0
@@ -58,3 +58,17 @@ lbl_80359208:
 /* 80359210 00356150  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359214 00356154  7C 08 03 A6 */	mtlr r0
 /* 80359218 00356158  4E 80 00 20 */	blr 
+
+
+
+.section .sdata, "a"
+/* 80450A70 0002 .sdata __CARDVendorID __CARDVendorID */
+.global __CARDVendorID
+__CARDVendorID:
+.byte 0xff, 0xff /* baserom.dol+0x3d07d0 */
+
+/* 80450A72 0006 .sdata lbl_80450A72 lbl_80450A72 */
+.global lbl_80450A72
+lbl_80450A72:
+.byte 0x1c, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d07d2 */
+

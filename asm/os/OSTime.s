@@ -1,8 +1,8 @@
 .include "macros.inc"
 
-.section .text, "ax" # 803426fc
 
-
+.section .text, "ax"
+/* 803426FC 0018 .text OSGetTime OSGetTime */
 .global OSGetTime
 OSGetTime:
 /* 803426FC 0033F63C  7C 6D 42 E6 */	mftbu r3
@@ -12,11 +12,13 @@ OSGetTime:
 /* 8034270C 0033F64C  40 82 FF F0 */	bne OSGetTime
 /* 80342710 0033F650  4E 80 00 20 */	blr 
 
+/* 80342714 0008 .text OSGetTick OSGetTick */
 .global OSGetTick
 OSGetTick:
 /* 80342714 0033F654  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 80342718 0033F658  4E 80 00 20 */	blr 
 
+/* 8034271C 0064 .text __OSGetSystemTime __OSGetSystemTime */
 .global __OSGetSystemTime
 __OSGetSystemTime:
 /* 8034271C 0033F65C  7C 08 02 A6 */	mflr r0
@@ -25,7 +27,7 @@ __OSGetSystemTime:
 /* 80342728 0033F668  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8034272C 0033F66C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80342730 0033F670  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80342734 0033F674  4B FF AF C1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80342734 0033F674  4B FF AF C1 */	bl __RAS_OSDisableInterrupts_begin
 /* 80342738 0033F678  7C 7F 1B 78 */	mr r31, r3
 /* 8034273C 0033F67C  4B FF FF C1 */	bl OSGetTime
 /* 80342740 0033F680  3C C0 80 00 */	lis r6, 0x800030DC@ha
@@ -45,6 +47,7 @@ __OSGetSystemTime:
 /* 80342778 0033F6B8  7C 08 03 A6 */	mtlr r0
 /* 8034277C 0033F6BC  4E 80 00 20 */	blr 
 
+/* 80342780 0058 .text __OSTimeToSystemTime __OSTimeToSystemTime */
 .global __OSTimeToSystemTime
 __OSTimeToSystemTime:
 /* 80342780 0033F6C0  7C 08 02 A6 */	mflr r0
@@ -54,7 +57,7 @@ __OSTimeToSystemTime:
 /* 80342790 0033F6D0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80342794 0033F6D4  7C 7F 1B 78 */	mr r31, r3
 /* 80342798 0033F6D8  7C 9E 23 78 */	mr r30, r4
-/* 8034279C 0033F6DC  4B FF AF 59 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034279C 0033F6DC  4B FF AF 59 */	bl __RAS_OSDisableInterrupts_begin
 /* 803427A0 0033F6E0  3C A0 80 00 */	lis r5, 0x800030DC@ha
 /* 803427A4 0033F6E4  80 85 30 DC */	lwz r4, 0x800030DC@l(r5)
 /* 803427A8 0033F6E8  80 05 30 D8 */	lwz r0, 0x30d8(r5)
@@ -70,6 +73,7 @@ __OSTimeToSystemTime:
 /* 803427D0 0033F710  7C 08 03 A6 */	mtlr r0
 /* 803427D4 0033F714  4E 80 00 20 */	blr 
 
+/* 803427D8 019C .text GetDates GetDates */
 .global GetDates
 GetDates:
 /* 803427D8 0033F718  3C A0 92 49 */	lis r5, 0x92492493@ha
@@ -163,12 +167,12 @@ lbl_803428E8:
 lbl_8034291C:
 /* 8034291C 0033F85C  2C 07 00 00 */	cmpwi r7, 0
 /* 80342920 0033F860  41 82 00 10 */	beq lbl_80342930
-/* 80342924 0033F864  3C 60 80 3D */	lis r3, lbl_803D1078@ha
-/* 80342928 0033F868  38 C3 10 78 */	addi r6, r3, lbl_803D1078@l
+/* 80342924 0033F864  3C 60 80 3D */	lis r3, LeapYearDays@ha
+/* 80342928 0033F868  38 C3 10 78 */	addi r6, r3, LeapYearDays@l
 /* 8034292C 0033F86C  48 00 00 0C */	b lbl_80342938
 lbl_80342930:
-/* 80342930 0033F870  3C 60 80 3D */	lis r3, lbl_803D1048@ha
-/* 80342934 0033F874  38 C3 10 48 */	addi r6, r3, lbl_803D1048@l
+/* 80342930 0033F870  3C 60 80 3D */	lis r3, YearDays@ha
+/* 80342934 0033F874  38 C3 10 48 */	addi r6, r3, YearDays@l
 lbl_80342938:
 /* 80342938 0033F878  38 E0 00 0C */	li r7, 0xc
 /* 8034293C 0033F87C  38 60 00 30 */	li r3, 0x30
@@ -188,6 +192,7 @@ lbl_80342948:
 /* 8034296C 0033F8AC  90 04 00 0C */	stw r0, 0xc(r4)
 /* 80342970 0033F8B0  4E 80 00 20 */	blr 
 
+/* 80342974 0204 .text OSTicksToCalendarTime OSTicksToCalendarTime */
 .global OSTicksToCalendarTime
 OSTicksToCalendarTime:
 /* 80342974 0033F8B4  7C 08 02 A6 */	mflr r0
@@ -203,7 +208,7 @@ OSTicksToCalendarTime:
 /* 8034299C 0033F8DC  7F C4 F3 78 */	mr r4, r30
 /* 803429A0 0033F8E0  54 06 F0 BE */	srwi r6, r0, 2
 /* 803429A4 0033F8E4  38 A0 00 00 */	li r5, 0
-/* 803429A8 0033F8E8  48 01 FB 99 */	bl func_80362540
+/* 803429A8 0033F8E8  48 01 FB 99 */	bl __mod2i
 /* 803429AC 0033F8EC  7C 7A 1B 78 */	mr r26, r3
 /* 803429B0 0033F8F0  38 A0 00 00 */	li r5, 0
 /* 803429B4 0033F8F4  7C 99 23 78 */	mr r25, r4
@@ -236,10 +241,10 @@ lbl_803429E8:
 /* 80342A1C 0033F95C  7C 99 21 D6 */	mullw r4, r25, r4
 /* 80342A20 0033F960  7C 63 02 14 */	add r3, r3, r0
 /* 80342A24 0033F964  38 A0 00 00 */	li r5, 0
-/* 80342A28 0033F968  48 01 F8 FD */	bl func_80362324
+/* 80342A28 0033F968  48 01 F8 FD */	bl __div2i
 /* 80342A2C 0033F96C  38 A0 00 00 */	li r5, 0
 /* 80342A30 0033F970  38 C0 03 E8 */	li r6, 0x3e8
-/* 80342A34 0033F974  48 01 FB 0D */	bl func_80362540
+/* 80342A34 0033F974  48 01 FB 0D */	bl __mod2i
 /* 80342A38 0033F978  90 9F 00 24 */	stw r4, 0x24(r31)
 /* 80342A3C 0033F97C  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80342A40 0033F980  38 A3 4D D3 */	addi r5, r3, 0x10624DD3@l
@@ -250,10 +255,10 @@ lbl_803429E8:
 /* 80342A54 0033F994  7C 05 00 16 */	mulhwu r0, r5, r0
 /* 80342A58 0033F998  54 06 D1 BE */	srwi r6, r0, 6
 /* 80342A5C 0033F99C  38 A0 00 00 */	li r5, 0
-/* 80342A60 0033F9A0  48 01 F8 C5 */	bl func_80362324
+/* 80342A60 0033F9A0  48 01 F8 C5 */	bl __div2i
 /* 80342A64 0033F9A4  38 A0 00 00 */	li r5, 0
 /* 80342A68 0033F9A8  38 C0 03 E8 */	li r6, 0x3e8
-/* 80342A6C 0033F9AC  48 01 FA D5 */	bl func_80362540
+/* 80342A6C 0033F9AC  48 01 FA D5 */	bl __mod2i
 /* 80342A70 0033F9B0  90 9F 00 20 */	stw r4, 0x20(r31)
 /* 80342A74 0033F9B4  7F D9 F0 10 */	subfc r30, r25, r30
 /* 80342A78 0033F9B8  7F BA E9 10 */	subfe r29, r26, r29
@@ -264,10 +269,10 @@ lbl_803429E8:
 /* 80342A8C 0033F9CC  54 06 F0 BE */	srwi r6, r0, 2
 /* 80342A90 0033F9D0  7F C4 F3 78 */	mr r4, r30
 /* 80342A94 0033F9D4  38 A0 00 00 */	li r5, 0
-/* 80342A98 0033F9D8  48 01 F8 8D */	bl func_80362324
+/* 80342A98 0033F9D8  48 01 F8 8D */	bl __div2i
 /* 80342A9C 0033F9DC  7F 26 CB 78 */	mr r6, r25
 /* 80342AA0 0033F9E0  38 A0 00 00 */	li r5, 0
-/* 80342AA4 0033F9E4  48 01 F8 81 */	bl func_80362324
+/* 80342AA4 0033F9E4  48 01 F8 81 */	bl __div2i
 /* 80342AA8 0033F9E8  3C A0 00 0B */	lis r5, 0x000B2575@ha
 /* 80342AAC 0033F9EC  80 1B 00 F8 */	lwz r0, 0xf8(r27)
 /* 80342AB0 0033F9F0  38 A5 25 75 */	addi r5, r5, 0x000B2575@l
@@ -277,10 +282,10 @@ lbl_803429E8:
 /* 80342AC0 0033FA00  7F A3 EB 78 */	mr r3, r29
 /* 80342AC4 0033FA04  7F C4 F3 78 */	mr r4, r30
 /* 80342AC8 0033FA08  38 A0 00 00 */	li r5, 0
-/* 80342ACC 0033FA0C  48 01 F8 59 */	bl func_80362324
+/* 80342ACC 0033FA0C  48 01 F8 59 */	bl __div2i
 /* 80342AD0 0033FA10  7F 26 CB 78 */	mr r6, r25
 /* 80342AD4 0033FA14  38 A0 00 00 */	li r5, 0
-/* 80342AD8 0033FA18  48 01 FA 69 */	bl func_80362540
+/* 80342AD8 0033FA18  48 01 FA 69 */	bl __mod2i
 /* 80342ADC 0033FA1C  7C 9B 23 78 */	mr r27, r4
 /* 80342AE0 0033FA20  2C 1B 00 00 */	cmpwi r27, 0
 /* 80342AE4 0033FA24  40 80 00 10 */	bge lbl_80342AF4
@@ -321,4 +326,21 @@ lbl_80342AF4:
 /* 80342B6C 0033FAAC  38 21 00 38 */	addi r1, r1, 0x38
 /* 80342B70 0033FAB0  7C 08 03 A6 */	mtlr r0
 /* 80342B74 0033FAB4  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D1048 0030 .data YearDays YearDays */
+.global YearDays
+YearDays:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0x00, 0x00, 0x00, 0x3b, 0x00, 0x00, 0x00, 0x5a /* baserom.dol+0x3ce048 */
+.byte 0x00, 0x00, 0x00, 0x78, 0x00, 0x00, 0x00, 0x97, 0x00, 0x00, 0x00, 0xb5, 0x00, 0x00, 0x00, 0xd4 /* baserom.dol+0x3ce058 */
+.byte 0x00, 0x00, 0x00, 0xf3, 0x00, 0x00, 0x01, 0x11, 0x00, 0x00, 0x01, 0x30, 0x00, 0x00, 0x01, 0x4e /* baserom.dol+0x3ce068 */
+
+/* 803D1078 0030 .data LeapYearDays LeapYearDays */
+.global LeapYearDays
+LeapYearDays:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0x00, 0x00, 0x00, 0x3c, 0x00, 0x00, 0x00, 0x5b /* baserom.dol+0x3ce078 */
+.byte 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x98, 0x00, 0x00, 0x00, 0xb6, 0x00, 0x00, 0x00, 0xd5 /* baserom.dol+0x3ce088 */
+.byte 0x00, 0x00, 0x00, 0xf4, 0x00, 0x00, 0x01, 0x12, 0x00, 0x00, 0x01, 0x31, 0x00, 0x00, 0x01, 0x4f /* baserom.dol+0x3ce098 */
 

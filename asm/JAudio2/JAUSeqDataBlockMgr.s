@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802a68f4
 
-
-.global JAUSeqDataBlock
-JAUSeqDataBlock:
+.section .text, "ax"
+/* 802A68F4 0034 .text __ct__15JAUSeqDataBlockFv __ct__15JAUSeqDataBlockFv */
+.global __ct__15JAUSeqDataBlockFv
+__ct__15JAUSeqDataBlockFv:
 /* 802A68F4 002A3834  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A68F8 002A3838  7C 08 02 A6 */	mflr r0
 /* 802A68FC 002A383C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,8 +19,9 @@ JAUSeqDataBlock:
 /* 802A6920 002A3860  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6924 002A3864  4E 80 00 20 */	blr 
 
-.global JAUSeqDataBlocks_NS_getSeqData
-JAUSeqDataBlocks_NS_getSeqData:
+/* 802A6928 004C .text getSeqData__16JAUSeqDataBlocksF10JAISoundID getSeqData__16JAUSeqDataBlocksF10JAISoundID */
+.global getSeqData__16JAUSeqDataBlocksF10JAISoundID
+getSeqData__16JAUSeqDataBlocksF10JAISoundID:
 /* 802A6928 002A3868  80 84 00 00 */	lwz r4, 0(r4)
 /* 802A692C 002A386C  3C 04 00 01 */	addis r0, r4, 1
 /* 802A6930 002A3870  28 00 FF FF */	cmplwi r0, 0xffff
@@ -45,8 +46,9 @@ lbl_802A6964:
 /* 802A696C 002A38AC  38 60 00 00 */	li r3, 0
 /* 802A6970 002A38B0  4E 80 00 20 */	blr 
 
-.global JAUSeqDataBlocks_NS_seekFreeBlock
-JAUSeqDataBlocks_NS_seekFreeBlock:
+/* 802A6974 0064 .text seekFreeBlock__16JAUSeqDataBlocksFUl seekFreeBlock__16JAUSeqDataBlocksFUl */
+.global seekFreeBlock__16JAUSeqDataBlocksFUl
+seekFreeBlock__16JAUSeqDataBlocksFUl:
 /* 802A6974 002A38B4  38 C0 FF FF */	li r6, -1
 /* 802A6978 002A38B8  38 E0 00 00 */	li r7, 0
 /* 802A697C 002A38BC  81 03 00 00 */	lwz r8, 0(r3)
@@ -77,8 +79,9 @@ lbl_802A69D0:
 /* 802A69D0 002A3910  38 60 00 00 */	li r3, 0
 /* 802A69D4 002A3914  4E 80 00 20 */	blr 
 
-.global JAUSeqDataBlocks_NS_append
-JAUSeqDataBlocks_NS_append:
+/* 802A69D8 0020 .text func_802A69D8 append__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock> */
+.global func_802A69D8
+func_802A69D8:
 /* 802A69D8 002A3918  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A69DC 002A391C  7C 08 02 A6 */	mflr r0
 /* 802A69E0 002A3920  90 01 00 14 */	stw r0, 0x14(r1)
@@ -88,8 +91,9 @@ JAUSeqDataBlocks_NS_append:
 /* 802A69F0 002A3930  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A69F4 002A3934  4E 80 00 20 */	blr 
 
-.global JAUSeqDataBlocks_NS_remove
-JAUSeqDataBlocks_NS_remove:
+/* 802A69F8 0020 .text func_802A69F8 remove__16JAUSeqDataBlocksFP26JSULink<15JAUSeqDataBlock> */
+.global func_802A69F8
+func_802A69F8:
 /* 802A69F8 002A3938  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A69FC 002A393C  7C 08 02 A6 */	mflr r0
 /* 802A6A00 002A3940  90 01 00 14 */	stw r0, 0x14(r1)
@@ -99,8 +103,9 @@ JAUSeqDataBlocks_NS_remove:
 /* 802A6A10 002A3950  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6A14 002A3954  4E 80 00 20 */	blr 
 
-.global JAUSeqDataBlocks_NS_hasFailedBlock
-JAUSeqDataBlocks_NS_hasFailedBlock:
+/* 802A6A18 0040 .text hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID */
+.global hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID
+hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID:
 /* 802A6A18 002A3958  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802A6A1C 002A395C  80 04 00 00 */	lwz r0, 0(r4)
 /* 802A6A20 002A3960  48 00 00 28 */	b lbl_802A6A48
@@ -121,8 +126,9 @@ lbl_802A6A48:
 /* 802A6A50 002A3990  38 60 00 00 */	li r3, 0
 /* 802A6A54 002A3994  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks
-JAUDynamicSeqDataBlocks:
+/* 802A6A58 0048 .text __ct__23JAUDynamicSeqDataBlocksFv __ct__23JAUDynamicSeqDataBlocksFv */
+.global __ct__23JAUDynamicSeqDataBlocksFv
+__ct__23JAUDynamicSeqDataBlocksFv:
 /* 802A6A58 002A3998  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6A5C 002A399C  7C 08 02 A6 */	mflr r0
 /* 802A6A60 002A39A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -142,13 +148,15 @@ JAUDynamicSeqDataBlocks:
 /* 802A6A98 002A39D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6A9C 002A39DC  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_setSeqDataArchive
-JAUDynamicSeqDataBlocks_NS_setSeqDataArchive:
+/* 802A6AA0 0008 .text setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive */
+.global setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive
+setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive:
 /* 802A6AA0 002A39E0  90 83 00 24 */	stw r4, 0x24(r3)
 /* 802A6AA4 002A39E4  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_getSeqData
-JAUDynamicSeqDataBlocks_NS_getSeqData:
+/* 802A6AA8 00E4 .text getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab */
+.global getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab
+getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab:
 /* 802A6AA8 002A39E8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6AAC 002A39EC  7C 08 02 A6 */	mflr r0
 /* 802A6AB0 002A39F0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -159,12 +167,12 @@ JAUDynamicSeqDataBlocks_NS_getSeqData:
 /* 802A6AC4 002A3A04  7C BD 2B 78 */	mr r29, r5
 /* 802A6AC8 002A3A08  7C DE 33 78 */	mr r30, r6
 /* 802A6ACC 002A3A0C  7C FF 3B 78 */	mr r31, r7
-/* 802A6AD0 002A3A10  48 00 04 0D */	bl JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_
+/* 802A6AD0 002A3A10  48 00 04 0D */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
 /* 802A6AD4 002A3A14  80 1C 00 00 */	lwz r0, 0(r28)
 /* 802A6AD8 002A3A18  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A6ADC 002A3A1C  7F 63 DB 78 */	mr r3, r27
 /* 802A6AE0 002A3A20  38 81 00 14 */	addi r4, r1, 0x14
-/* 802A6AE4 002A3A24  4B FF FF 35 */	bl JAUSeqDataBlocks_NS_hasFailedBlock
+/* 802A6AE4 002A3A24  4B FF FF 35 */	bl hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID
 /* 802A6AE8 002A3A28  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802A6AEC 002A3A2C  41 82 00 0C */	beq lbl_802A6AF8
 /* 802A6AF0 002A3A30  38 60 00 00 */	li r3, 0
@@ -174,7 +182,7 @@ lbl_802A6AF8:
 /* 802A6AFC 002A3A3C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802A6B00 002A3A40  38 7B 00 0C */	addi r3, r27, 0xc
 /* 802A6B04 002A3A44  38 81 00 10 */	addi r4, r1, 0x10
-/* 802A6B08 002A3A48  4B FF FE 21 */	bl JAUSeqDataBlocks_NS_getSeqData
+/* 802A6B08 002A3A48  4B FF FE 21 */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID
 /* 802A6B0C 002A3A4C  28 03 00 00 */	cmplwi r3, 0
 /* 802A6B10 002A3A50  41 82 00 0C */	beq lbl_802A6B1C
 /* 802A6B14 002A3A54  38 60 00 01 */	li r3, 1
@@ -184,7 +192,7 @@ lbl_802A6B1C:
 /* 802A6B20 002A3A60  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802A6B24 002A3A64  38 7B 00 18 */	addi r3, r27, 0x18
 /* 802A6B28 002A3A68  38 81 00 0C */	addi r4, r1, 0xc
-/* 802A6B2C 002A3A6C  4B FF FD FD */	bl JAUSeqDataBlocks_NS_getSeqData
+/* 802A6B2C 002A3A6C  4B FF FD FD */	bl getSeqData__16JAUSeqDataBlocksF10JAISoundID
 /* 802A6B30 002A3A70  28 03 00 00 */	cmplwi r3, 0
 /* 802A6B34 002A3A74  41 82 00 18 */	beq lbl_802A6B4C
 /* 802A6B38 002A3A78  90 7E 00 00 */	stw r3, 0(r30)
@@ -199,7 +207,7 @@ lbl_802A6B4C:
 /* 802A6B58 002A3A98  38 81 00 08 */	addi r4, r1, 8
 /* 802A6B5C 002A3A9C  7F E5 FB 78 */	mr r5, r31
 /* 802A6B60 002A3AA0  7F A6 EB 78 */	mr r6, r29
-/* 802A6B64 002A3AA4  48 00 00 B5 */	bl JAUDynamicSeqDataBlocks_NS_loadDynamicSeq
+/* 802A6B64 002A3AA4  48 00 00 B5 */	bl loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser
 /* 802A6B68 002A3AA8  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 802A6B6C 002A3AAC  30 03 FF FF */	addic r0, r3, -1
 /* 802A6B70 002A3AB0  7C 60 19 10 */	subfe r3, r0, r3
@@ -211,8 +219,9 @@ lbl_802A6B74:
 /* 802A6B84 002A3AC4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A6B88 002A3AC8  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_appendDynamicSeqDataBlock
-JAUDynamicSeqDataBlocks_NS_appendDynamicSeqDataBlock:
+/* 802A6B8C 0068 .text appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock */
+.global appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock
+appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock:
 /* 802A6B8C 002A3ACC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A6B90 002A3AD0  7C 08 02 A6 */	mflr r0
 /* 802A6B94 002A3AD4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -220,19 +229,19 @@ JAUDynamicSeqDataBlocks_NS_appendDynamicSeqDataBlock:
 /* 802A6B9C 002A3ADC  93 C1 00 08 */	stw r30, 8(r1)
 /* 802A6BA0 002A3AE0  7C 7E 1B 78 */	mr r30, r3
 /* 802A6BA4 002A3AE4  7C 9F 23 78 */	mr r31, r4
-/* 802A6BA8 002A3AE8  48 00 03 35 */	bl JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_
+/* 802A6BA8 002A3AE8  48 00 03 35 */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
 /* 802A6BAC 002A3AEC  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 802A6BB0 002A3AF0  3C 03 00 01 */	addis r0, r3, 1
 /* 802A6BB4 002A3AF4  28 00 FF FF */	cmplwi r0, 0xffff
 /* 802A6BB8 002A3AF8  40 82 00 14 */	bne lbl_802A6BCC
 /* 802A6BBC 002A3AFC  7F C3 F3 78 */	mr r3, r30
 /* 802A6BC0 002A3B00  7F E4 FB 78 */	mr r4, r31
-/* 802A6BC4 002A3B04  4B FF FE 15 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6BC4 002A3B04  4B FF FE 15 */	bl func_802A69D8
 /* 802A6BC8 002A3B08  48 00 00 10 */	b lbl_802A6BD8
 lbl_802A6BCC:
 /* 802A6BCC 002A3B0C  38 7E 00 18 */	addi r3, r30, 0x18
 /* 802A6BD0 002A3B10  7F E4 FB 78 */	mr r4, r31
-/* 802A6BD4 002A3B14  4B FF FE 05 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6BD4 002A3B14  4B FF FE 05 */	bl func_802A69D8
 lbl_802A6BD8:
 /* 802A6BD8 002A3B18  38 60 00 01 */	li r3, 1
 /* 802A6BDC 002A3B1C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -241,8 +250,10 @@ lbl_802A6BD8:
 /* 802A6BE8 002A3B28  7C 08 03 A6 */	mtlr r0
 /* 802A6BEC 002A3B2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A6BF0 002A3B30  4E 80 00 20 */	blr 
-.global JAUDynamicSeqDataBlocks_receiveLoaded_
-JAUDynamicSeqDataBlocks_receiveLoaded_:
+
+/* 802A6BF4 0024 .text JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl */
+.global JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl
+JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl:
 /* 802A6BF4 002A3B34  80 84 00 00 */	lwz r4, 0(r4)
 /* 802A6BF8 002A3B38  28 03 00 00 */	cmplwi r3, 0
 /* 802A6BFC 002A3B3C  41 82 00 10 */	beq lbl_802A6C0C
@@ -254,8 +265,9 @@ lbl_802A6C0C:
 /* 802A6C10 002A3B50  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 802A6C14 002A3B54  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_loadDynamicSeq
-JAUDynamicSeqDataBlocks_NS_loadDynamicSeq:
+/* 802A6C18 0130 .text loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser */
+.global loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser
+loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser:
 /* 802A6C18 002A3B58  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6C1C 002A3B5C  7C 08 02 A6 */	mflr r0
 /* 802A6C20 002A3B60  90 01 00 34 */	stw r0, 0x34(r1)
@@ -287,11 +299,11 @@ lbl_802A6C64:
 /* 802A6C80 002A3BC0  7C 7E 1B 78 */	mr r30, r3
 /* 802A6C84 002A3BC4  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 802A6C88 002A3BC8  7F C4 F3 78 */	mr r4, r30
-/* 802A6C8C 002A3BCC  4B FE 9F 45 */	bl JASResArcLoader_NS_getResSize
+/* 802A6C8C 002A3BCC  4B FE 9F 45 */	bl getResSize__15JASResArcLoaderFPC10JKRArchiveUs
 /* 802A6C90 002A3BD0  7C 7D 1B 78 */	mr r29, r3
 /* 802A6C94 002A3BD4  7F E3 FB 78 */	mr r3, r31
 /* 802A6C98 002A3BD8  7F A4 EB 78 */	mr r4, r29
-/* 802A6C9C 002A3BDC  4B FF FC D9 */	bl JAUSeqDataBlocks_NS_seekFreeBlock
+/* 802A6C9C 002A3BDC  4B FF FC D9 */	bl seekFreeBlock__16JAUSeqDataBlocksFUl
 /* 802A6CA0 002A3BE0  7C 7C 1B 79 */	or. r28, r3, r3
 /* 802A6CA4 002A3BE4  40 82 00 34 */	bne lbl_802A6CD8
 /* 802A6CA8 002A3BE8  57 40 06 3F */	clrlwi. r0, r26, 0x18
@@ -299,7 +311,7 @@ lbl_802A6C64:
 /* 802A6CB0 002A3BF0  7F E3 FB 78 */	mr r3, r31
 /* 802A6CB4 002A3BF4  7F 64 DB 78 */	mr r4, r27
 /* 802A6CB8 002A3BF8  7F A5 EB 78 */	mr r5, r29
-/* 802A6CBC 002A3BFC  48 00 01 45 */	bl JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock_
+/* 802A6CBC 002A3BFC  48 00 01 45 */	bl releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl
 /* 802A6CC0 002A3C00  7C 7C 1B 79 */	or. r28, r3, r3
 /* 802A6CC4 002A3C04  40 82 00 14 */	bne lbl_802A6CD8
 /* 802A6CC8 002A3C08  38 60 00 00 */	li r3, 0
@@ -310,7 +322,7 @@ lbl_802A6CD0:
 lbl_802A6CD8:
 /* 802A6CD8 002A3C18  7F E3 FB 78 */	mr r3, r31
 /* 802A6CDC 002A3C1C  7F 84 E3 78 */	mr r4, r28
-/* 802A6CE0 002A3C20  4B FF FD 19 */	bl JAUSeqDataBlocks_NS_remove
+/* 802A6CE0 002A3C20  4B FF FD 19 */	bl func_802A69F8
 /* 802A6CE4 002A3C24  80 7C 00 00 */	lwz r3, 0(r28)
 /* 802A6CE8 002A3C28  80 19 00 00 */	lwz r0, 0(r25)
 /* 802A6CEC 002A3C2C  90 03 00 10 */	stw r0, 0x10(r3)
@@ -319,18 +331,16 @@ lbl_802A6CD8:
 /* 802A6CF8 002A3C38  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 802A6CFC 002A3C3C  38 7F 00 0C */	addi r3, r31, 0xc
 /* 802A6D00 002A3C40  7F 84 E3 78 */	mr r4, r28
-/* 802A6D04 002A3C44  4B FF FC D5 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6D04 002A3C44  4B FF FC D5 */	bl func_802A69D8
 /* 802A6D08 002A3C48  80 DC 00 00 */	lwz r6, 0(r28)
 /* 802A6D0C 002A3C4C  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 802A6D10 002A3C50  7F C4 F3 78 */	mr r4, r30
 /* 802A6D14 002A3C54  80 A6 00 14 */	lwz r5, 0x14(r6)
 /* 802A6D18 002A3C58  80 C6 00 18 */	lwz r6, 0x18(r6)
-.global JAUDynamicSeqDataBlocks_receiveLoaded_
-/* 802A6D1C 002A3C5C  3C E0 80 2A */	lis r7, JAUDynamicSeqDataBlocks_receiveLoaded_@ha
-.global JAUDynamicSeqDataBlocks_receiveLoaded_
-/* 802A6D20 002A3C60  38 E7 6B F4 */	addi r7, r7, JAUDynamicSeqDataBlocks_receiveLoaded_@l
+/* 802A6D1C 002A3C5C  3C E0 80 2A */	lis r7, JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl@ha
+/* 802A6D20 002A3C60  38 E7 6B F4 */	addi r7, r7, JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl@l
 /* 802A6D24 002A3C64  7F 88 E3 78 */	mr r8, r28
-/* 802A6D28 002A3C68  4B FE 9F F1 */	bl JASResArcLoader_NS_loadResourceAsync
+/* 802A6D28 002A3C68  4B FE 9F F1 */	bl loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl
 /* 802A6D2C 002A3C6C  38 60 00 01 */	li r3, 1
 lbl_802A6D30:
 /* 802A6D30 002A3C70  39 61 00 30 */	addi r11, r1, 0x30
@@ -340,8 +350,9 @@ lbl_802A6D30:
 /* 802A6D40 002A3C80  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A6D44 002A3C84  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock
-JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock:
+/* 802A6D48 00B8 .text releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser */
+.global releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser
+releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser:
 /* 802A6D48 002A3C88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A6D4C 002A3C8C  7C 08 02 A6 */	mflr r0
 /* 802A6D50 002A3C90  90 01 00 24 */	stw r0, 0x24(r1)
@@ -349,7 +360,7 @@ JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock:
 /* 802A6D58 002A3C98  48 0B B4 7D */	bl _savegpr_27
 /* 802A6D5C 002A3C9C  7C 7B 1B 78 */	mr r27, r3
 /* 802A6D60 002A3CA0  7C 9C 23 78 */	mr r28, r4
-/* 802A6D64 002A3CA4  48 00 01 79 */	bl JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_
+/* 802A6D64 002A3CA4  48 00 01 79 */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
 /* 802A6D68 002A3CA8  3B C0 00 00 */	li r30, 0
 /* 802A6D6C 002A3CAC  83 BB 00 18 */	lwz r29, 0x18(r27)
 /* 802A6D70 002A3CB0  48 00 00 6C */	b lbl_802A6DDC
@@ -369,7 +380,7 @@ lbl_802A6D74:
 lbl_802A6DA4:
 /* 802A6DA4 002A3CE4  38 7B 00 18 */	addi r3, r27, 0x18
 /* 802A6DA8 002A3CE8  7F A4 EB 78 */	mr r4, r29
-/* 802A6DAC 002A3CEC  4B FF FC 4D */	bl JAUSeqDataBlocks_NS_remove
+/* 802A6DAC 002A3CEC  4B FF FC 4D */	bl func_802A69F8
 /* 802A6DB0 002A3CF0  80 7D 00 00 */	lwz r3, 0(r29)
 /* 802A6DB4 002A3CF4  38 00 FF FF */	li r0, -1
 /* 802A6DB8 002A3CF8  90 03 00 10 */	stw r0, 0x10(r3)
@@ -380,7 +391,7 @@ lbl_802A6DA4:
 lbl_802A6DCC:
 /* 802A6DCC 002A3D0C  7F 63 DB 78 */	mr r3, r27
 /* 802A6DD0 002A3D10  7F A4 EB 78 */	mr r4, r29
-/* 802A6DD4 002A3D14  4B FF FC 05 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6DD4 002A3D14  4B FF FC 05 */	bl func_802A69D8
 lbl_802A6DD8:
 /* 802A6DD8 002A3D18  7F FD FB 78 */	mr r29, r31
 lbl_802A6DDC:
@@ -394,8 +405,9 @@ lbl_802A6DDC:
 /* 802A6DF8 002A3D38  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A6DFC 002A3D3C  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock_
-JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock_:
+/* 802A6E00 00DC .text releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl */
+.global releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl
+releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl:
 /* 802A6E00 002A3D40  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6E04 002A3D44  7C 08 02 A6 */	mflr r0
 /* 802A6E08 002A3D48  90 01 00 34 */	stw r0, 0x34(r1)
@@ -404,7 +416,7 @@ JAUDynamicSeqDataBlocks_NS_releaseIdleDynamicSeqDataBlock_:
 /* 802A6E14 002A3D54  7C 78 1B 78 */	mr r24, r3
 /* 802A6E18 002A3D58  7C 99 23 78 */	mr r25, r4
 /* 802A6E1C 002A3D5C  7C BA 2B 78 */	mr r26, r5
-/* 802A6E20 002A3D60  48 00 00 BD */	bl JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_
+/* 802A6E20 002A3D60  48 00 00 BD */	bl rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
 /* 802A6E24 002A3D64  3B A0 FF FF */	li r29, -1
 /* 802A6E28 002A3D68  3B 80 00 00 */	li r28, 0
 /* 802A6E2C 002A3D6C  83 78 00 18 */	lwz r27, 0x18(r24)
@@ -439,13 +451,13 @@ lbl_802A6E84:
 /* 802A6E90 002A3DD0  41 82 00 30 */	beq lbl_802A6EC0
 /* 802A6E94 002A3DD4  38 78 00 18 */	addi r3, r24, 0x18
 /* 802A6E98 002A3DD8  7F 84 E3 78 */	mr r4, r28
-/* 802A6E9C 002A3DDC  4B FF FB 5D */	bl JAUSeqDataBlocks_NS_remove
+/* 802A6E9C 002A3DDC  4B FF FB 5D */	bl func_802A69F8
 /* 802A6EA0 002A3DE0  80 7C 00 00 */	lwz r3, 0(r28)
 /* 802A6EA4 002A3DE4  38 00 FF FF */	li r0, -1
 /* 802A6EA8 002A3DE8  90 03 00 10 */	stw r0, 0x10(r3)
 /* 802A6EAC 002A3DEC  7F 03 C3 78 */	mr r3, r24
 /* 802A6EB0 002A3DF0  7F 84 E3 78 */	mr r4, r28
-/* 802A6EB4 002A3DF4  4B FF FB 25 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6EB4 002A3DF4  4B FF FB 25 */	bl func_802A69D8
 /* 802A6EB8 002A3DF8  80 7C 00 00 */	lwz r3, 0(r28)
 /* 802A6EBC 002A3DFC  48 00 00 08 */	b lbl_802A6EC4
 lbl_802A6EC0:
@@ -458,8 +470,9 @@ lbl_802A6EC4:
 /* 802A6ED4 002A3E14  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A6ED8 002A3E18  4E 80 00 20 */	blr 
 
-.global JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_
-JAUDynamicSeqDataBlocks_NS_rearrangeLoadingSeqs_:
+/* 802A6EDC 0094 .text rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv */
+.global rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv
+rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv:
 /* 802A6EDC 002A3E1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A6EE0 002A3E20  7C 08 02 A6 */	mflr r0
 /* 802A6EE4 002A3E24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -476,20 +489,20 @@ lbl_802A6EFC:
 /* 802A6F0C 002A3E4C  40 82 00 20 */	bne lbl_802A6F2C
 /* 802A6F10 002A3E50  38 7D 00 0C */	addi r3, r29, 0xc
 /* 802A6F14 002A3E54  7F C4 F3 78 */	mr r4, r30
-/* 802A6F18 002A3E58  4B FF FA E1 */	bl JAUSeqDataBlocks_NS_remove
+/* 802A6F18 002A3E58  4B FF FA E1 */	bl func_802A69F8
 /* 802A6F1C 002A3E5C  7F A3 EB 78 */	mr r3, r29
 /* 802A6F20 002A3E60  7F C4 F3 78 */	mr r4, r30
-/* 802A6F24 002A3E64  4B FF FA B5 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6F24 002A3E64  4B FF FA B5 */	bl func_802A69D8
 /* 802A6F28 002A3E68  48 00 00 24 */	b lbl_802A6F4C
 lbl_802A6F2C:
 /* 802A6F2C 002A3E6C  2C 00 00 02 */	cmpwi r0, 2
 /* 802A6F30 002A3E70  40 82 00 1C */	bne lbl_802A6F4C
 /* 802A6F34 002A3E74  38 7D 00 0C */	addi r3, r29, 0xc
 /* 802A6F38 002A3E78  7F C4 F3 78 */	mr r4, r30
-/* 802A6F3C 002A3E7C  4B FF FA BD */	bl JAUSeqDataBlocks_NS_remove
+/* 802A6F3C 002A3E7C  4B FF FA BD */	bl func_802A69F8
 /* 802A6F40 002A3E80  38 7D 00 18 */	addi r3, r29, 0x18
 /* 802A6F44 002A3E84  7F C4 F3 78 */	mr r4, r30
-/* 802A6F48 002A3E88  4B FF FA 91 */	bl JAUSeqDataBlocks_NS_append
+/* 802A6F48 002A3E88  4B FF FA 91 */	bl func_802A69D8
 lbl_802A6F4C:
 /* 802A6F4C 002A3E8C  7F FE FB 78 */	mr r30, r31
 lbl_802A6F50:

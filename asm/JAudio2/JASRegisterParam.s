@@ -1,10 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80293644
 
-
-.global JASRegisterParam
-JASRegisterParam:
+.section .text, "ax"
+/* 80293644 0020 .text __ct__16JASRegisterParamFv __ct__16JASRegisterParamFv */
+.global __ct__16JASRegisterParamFv
+__ct__16JASRegisterParamFv:
 /* 80293644 00290584  38 80 00 00 */	li r4, 0
 /* 80293648 00290588  7C 85 23 78 */	mr r5, r4
 /* 8029364C 0029058C  38 00 00 0E */	li r0, 0xe
@@ -15,8 +15,9 @@ lbl_80293654:
 /* 8029365C 0029059C  42 00 FF F8 */	bdnz lbl_80293654
 /* 80293660 002905A0  4E 80 00 20 */	blr 
 
-.global JASRegisterParam_NS_init
-JASRegisterParam_NS_init:
+/* 80293664 0020 .text init__16JASRegisterParamFv init__16JASRegisterParamFv */
+.global init__16JASRegisterParamFv
+init__16JASRegisterParamFv:
 /* 80293664 002905A4  38 80 00 00 */	li r4, 0
 /* 80293668 002905A8  7C 85 23 78 */	mr r5, r4
 /* 8029366C 002905AC  38 00 00 0E */	li r0, 0xe
@@ -27,8 +28,9 @@ lbl_80293674:
 /* 8029367C 002905BC  42 00 FF F8 */	bdnz lbl_80293674
 /* 80293680 002905C0  4E 80 00 20 */	blr 
 
-.global JASRegisterParam_NS_write
-JASRegisterParam_NS_write:
+/* 80293684 0134 .text write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl */
+.global write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl
+write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl:
 /* 80293684 002905C4  2C 04 00 0E */	cmpwi r4, 0xe
 /* 80293688 002905C8  40 80 00 28 */	bge lbl_802936B0
 /* 8029368C 002905CC  2C 04 00 02 */	cmpwi r4, 2
@@ -109,8 +111,9 @@ lbl_802936B0:
 /* 802937B0 002906F0  B0 A3 00 1A */	sth r5, 0x1a(r3)
 /* 802937B4 002906F4  4E 80 00 20 */	blr 
 
-.global JASRegisterParam_NS_read
-JASRegisterParam_NS_read:
+/* 802937B8 0104 .text read__16JASRegisterParamFQ216JASRegisterParam5RegID read__16JASRegisterParamFQ216JASRegisterParam5RegID */
+.global read__16JASRegisterParamFQ216JASRegisterParam5RegID
+read__16JASRegisterParamFQ216JASRegisterParam5RegID:
 /* 802937B8 002906F8  2C 04 00 0E */	cmpwi r4, 0xe
 /* 802937BC 002906FC  40 80 00 10 */	bge lbl_802937CC
 /* 802937C0 00290700  54 80 08 3C */	slwi r0, r4, 1
@@ -178,4 +181,21 @@ lbl_802937CC:
 lbl_802938B4:
 /* 802938B4 002907F4  7C A3 2B 78 */	mr r3, r5
 /* 802938B8 002907F8  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803C5B90 0028 .data lbl_803C5B90 @56 */
+.global lbl_803C5B90
+lbl_803C5B90:
+.byte 0x80, 0x29, 0x36, 0xd4, 0x80, 0x29, 0x36, 0xe8, 0x80, 0x29, 0x36, 0xf8, 0x80, 0x29, 0x37, 0x18 /* baserom.dol+0x3c2b90 */
+.byte 0x80, 0x29, 0x37, 0x38, 0x80, 0x29, 0x37, 0x58, 0x80, 0x29, 0x37, 0x78, 0x80, 0x29, 0x37, 0x88 /* baserom.dol+0x3c2ba0 */
+.byte 0x80, 0x29, 0x37, 0x98, 0x80, 0x29, 0x37, 0xa8 /* baserom.dol+0x3c2bb0 */
+
+/* 803C5BB8 0028 .data lbl_803C5BB8 @87 */
+.global lbl_803C5BB8
+lbl_803C5BB8:
+.byte 0x80, 0x29, 0x37, 0xf4, 0x80, 0x29, 0x38, 0x0c, 0x80, 0x29, 0x38, 0x20, 0x80, 0x29, 0x38, 0x34 /* baserom.dol+0x3c2bb8 */
+.byte 0x80, 0x29, 0x38, 0x44, 0x80, 0x29, 0x38, 0x58, 0x80, 0x29, 0x38, 0x68, 0x80, 0x29, 0x38, 0x7c /* baserom.dol+0x3c2bc8 */
+.byte 0x80, 0x29, 0x38, 0x90, 0x80, 0x29, 0x38, 0xa4 /* baserom.dol+0x3c2bd8 */
 

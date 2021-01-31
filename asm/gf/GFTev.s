@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802ce0d0
 
-
+.section .text, "ax"
+/* 802CE0D0 0068 .text GFSetTevColorS10__F11_GXTevRegID11_GXColorS10 GFSetTevColorS10__F11_GXTevRegID11_GXColorS10 */
+.global GFSetTevColorS10__F11_GXTevRegID11_GXColorS10
+GFSetTevColorS10__F11_GXTevRegID11_GXColorS10:
 /* 802CE0D0 002CB010  A8 C4 00 00 */	lha r6, 0(r4)
 /* 802CE0D4 002CB014  A8 04 00 06 */	lha r0, 6(r4)
 /* 802CE0D8 002CB018  54 05 62 66 */	rlwinm r5, r0, 0xc, 9, 0x13

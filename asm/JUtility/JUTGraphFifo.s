@@ -1,17 +1,17 @@
 .include "macros.inc"
 
-.section .text, "ax" # 802deb58
 
-
-.global JUTGraphFifo
-JUTGraphFifo:
+.section .text, "ax"
+/* 802DEB58 00DC .text __ct__12JUTGraphFifoFUl __ct__12JUTGraphFifoFUl */
+.global __ct__12JUTGraphFifoFUl
+__ct__12JUTGraphFifoFUl:
 /* 802DEB58 002DBA98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DEB5C 002DBA9C  7C 08 02 A6 */	mflr r0
 /* 802DEB60 002DBAA0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DEB64 002DBAA4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DEB68 002DBAA8  7C 7F 1B 78 */	mr r31, r3
-/* 802DEB6C 002DBAAC  3C 60 80 3D */	lis r3, lbl_803CC590@ha
-/* 802DEB70 002DBAB0  38 03 C5 90 */	addi r0, r3, lbl_803CC590@l
+/* 802DEB6C 002DBAAC  3C 60 80 3D */	lis r3, __vt__12JUTGraphFifo@ha
+/* 802DEB70 002DBAB0  38 03 C5 90 */	addi r0, r3, __vt__12JUTGraphFifo@l
 /* 802DEB74 002DBAB4  90 1F 00 00 */	stw r0, 0(r31)
 /* 802DEB78 002DBAB8  38 04 00 1F */	addi r0, r4, 0x1f
 /* 802DEB7C 002DBABC  54 00 00 34 */	rlwinm r0, r0, 0, 0, 0x1a
@@ -54,7 +54,7 @@ lbl_802DEBD8:
 /* 802DEC0C 002DBB4C  90 7F 00 04 */	stw r3, 4(r31)
 /* 802DEC10 002DBB50  38 00 00 01 */	li r0, 1
 /* 802DEC14 002DBB54  98 0D 8F 38 */	stb r0, lbl_804514B8-_SDA_BASE_(r13)
-/* 802DEC18 002DBB58  93 ED 8F 3C */	stw r31, lbl_804514BC-_SDA_BASE_(r13)
+/* 802DEC18 002DBB58  93 ED 8F 3C */	stw r31, sCurrentFifo__12JUTGraphFifo-_SDA_BASE_(r13)
 lbl_802DEC1C:
 /* 802DEC1C 002DBB5C  7F E3 FB 78 */	mr r3, r31
 /* 802DEC20 002DBB60  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -62,6 +62,10 @@ lbl_802DEC1C:
 /* 802DEC28 002DBB68  7C 08 03 A6 */	mtlr r0
 /* 802DEC2C 002DBB6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DEC30 002DBB70  4E 80 00 20 */	blr 
+
+/* 802DEC34 00C4 .text __dt__12JUTGraphFifoFv __dt__12JUTGraphFifoFv */
+.global __dt__12JUTGraphFifoFv
+__dt__12JUTGraphFifoFv:
 /* 802DEC34 002DBB74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DEC38 002DBB78  7C 08 02 A6 */	mflr r0
 /* 802DEC3C 002DBB7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -70,13 +74,13 @@ lbl_802DEC1C:
 /* 802DEC48 002DBB88  7C 7A 1B 79 */	or. r26, r3, r3
 /* 802DEC4C 002DBB8C  7C 9B 23 78 */	mr r27, r4
 /* 802DEC50 002DBB90  41 82 00 8C */	beq lbl_802DECDC
-/* 802DEC54 002DBB94  3C 60 80 3D */	lis r3, lbl_803CC590@ha
-/* 802DEC58 002DBB98  38 03 C5 90 */	addi r0, r3, lbl_803CC590@l
+/* 802DEC54 002DBB94  3C 60 80 3D */	lis r3, __vt__12JUTGraphFifo@ha
+/* 802DEC58 002DBB98  38 03 C5 90 */	addi r0, r3, __vt__12JUTGraphFifo@l
 /* 802DEC5C 002DBB9C  90 1A 00 00 */	stw r0, 0(r26)
-/* 802DEC60 002DBBA0  80 6D 8F 3C */	lwz r3, lbl_804514BC-_SDA_BASE_(r13)
+/* 802DEC60 002DBBA0  80 6D 8F 3C */	lwz r3, sCurrentFifo__12JUTGraphFifo-_SDA_BASE_(r13)
 /* 802DEC64 002DBBA4  80 63 00 04 */	lwz r3, 4(r3)
 /* 802DEC68 002DBBA8  48 07 BE 25 */	bl GXSaveCPUFifo
-/* 802DEC6C 002DBBAC  3B ED 8F 40 */	addi r31, r13, lbl_804514C0-_SDA_BASE_
+/* 802DEC6C 002DBBAC  3B ED 8F 40 */	addi r31, r13, mGpStatus__12JUTGraphFifo-_SDA_BASE_
 /* 802DEC70 002DBBB0  7F FE FB 78 */	mr r30, r31
 /* 802DEC74 002DBBB4  7F FD FB 78 */	mr r29, r31
 /* 802DEC78 002DBBB8  3B 9F 00 01 */	addi r28, r31, 1
@@ -84,7 +88,7 @@ lbl_802DEC1C:
 /* 802DEC80 002DBBC0  3B DE 00 03 */	addi r30, r30, 3
 /* 802DEC84 002DBBC4  3B BD 00 02 */	addi r29, r29, 2
 lbl_802DEC88:
-/* 802DEC88 002DBBC8  38 6D 8F 40 */	addi r3, r13, lbl_804514C0-_SDA_BASE_
+/* 802DEC88 002DBBC8  38 6D 8F 40 */	addi r3, r13, mGpStatus__12JUTGraphFifo-_SDA_BASE_
 /* 802DEC8C 002DBBCC  7F 84 E3 78 */	mr r4, r28
 /* 802DEC90 002DBBD0  7F A5 EB 78 */	mr r5, r29
 /* 802DEC94 002DBBD4  7F C6 F3 78 */	mr r6, r30
@@ -93,11 +97,11 @@ lbl_802DEC88:
 /* 802DECA0 002DBBE0  88 1D 00 00 */	lbz r0, 0(r29)
 /* 802DECA4 002DBBE4  28 00 00 00 */	cmplwi r0, 0
 /* 802DECA8 002DBBE8  41 82 FF E0 */	beq lbl_802DEC88
-/* 802DECAC 002DBBEC  80 0D 8F 3C */	lwz r0, lbl_804514BC-_SDA_BASE_(r13)
+/* 802DECAC 002DBBEC  80 0D 8F 3C */	lwz r0, sCurrentFifo__12JUTGraphFifo-_SDA_BASE_(r13)
 /* 802DECB0 002DBBF0  7C 00 D0 40 */	cmplw r0, r26
 /* 802DECB4 002DBBF4  40 82 00 0C */	bne lbl_802DECC0
 /* 802DECB8 002DBBF8  38 00 00 00 */	li r0, 0
-/* 802DECBC 002DBBFC  90 0D 8F 3C */	stw r0, lbl_804514BC-_SDA_BASE_(r13)
+/* 802DECBC 002DBBFC  90 0D 8F 3C */	stw r0, sCurrentFifo__12JUTGraphFifo-_SDA_BASE_(r13)
 lbl_802DECC0:
 /* 802DECC0 002DBC00  80 6D 8D F0 */	lwz r3, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 802DECC4 002DBC04  80 9A 00 08 */	lwz r4, 8(r26)
@@ -114,4 +118,27 @@ lbl_802DECDC:
 /* 802DECEC 002DBC2C  7C 08 03 A6 */	mtlr r0
 /* 802DECF0 002DBC30  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DECF4 002DBC34  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803CC590 000C .data __vt__12JUTGraphFifo __vt__12JUTGraphFifo */
+.global __vt__12JUTGraphFifo
+__vt__12JUTGraphFifo:
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0xec, 0x34 /* baserom.dol+0x3c9590 */
+.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c959c */
+
+
+
+.section .sbss, "aw"
+/* 804514BC 0004 .sbss sCurrentFifo__12JUTGraphFifo sCurrentFifo__12JUTGraphFifo */
+.global sCurrentFifo__12JUTGraphFifo
+sCurrentFifo__12JUTGraphFifo:
+.skip 0x4
+
+/* 804514C0 0005 .sbss mGpStatus__12JUTGraphFifo mGpStatus__12JUTGraphFifo */
+.global mGpStatus__12JUTGraphFifo
+mGpStatus__12JUTGraphFifo:
+.skip 0x5
+.skip 0x3 /* padding */
 

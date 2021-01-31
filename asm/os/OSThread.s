@@ -1,12 +1,13 @@
 .include "macros.inc"
 
-.section .text, "ax" # 80340aa4
 
-
+.section .text, "ax"
+/* 80340AA4 0004 .text DefaultSwitchThreadCallback DefaultSwitchThreadCallback */
 .global DefaultSwitchThreadCallback
 DefaultSwitchThreadCallback:
 /* 80340AA4 0033D9E4  4E 80 00 20 */	blr 
 
+/* 80340AA8 0074 .text OSSetSwitchThreadCallback OSSetSwitchThreadCallback */
 .global OSSetSwitchThreadCallback
 OSSetSwitchThreadCallback:
 /* 80340AA8 0033D9E8  7C 08 02 A6 */	mflr r0
@@ -15,23 +16,19 @@ OSSetSwitchThreadCallback:
 /* 80340AB4 0033D9F4  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80340AB8 0033D9F8  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80340ABC 0033D9FC  7C 7E 1B 78 */	mr r30, r3
-/* 80340AC0 0033DA00  4B FF CC 35 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80340AC0 0033DA00  4B FF CC 35 */	bl __RAS_OSDisableInterrupts_begin
 /* 80340AC4 0033DA04  28 1E 00 00 */	cmplwi r30, 0
-/* 80340AC8 0033DA08  83 ED 84 38 */	lwz r31, lbl_804509B8-_SDA_BASE_(r13)
+/* 80340AC8 0033DA08  83 ED 84 38 */	lwz r31, SwitchThreadCallback-_SDA_BASE_(r13)
 /* 80340ACC 0033DA0C  41 82 00 0C */	beq lbl_80340AD8
 /* 80340AD0 0033DA10  7F C0 F3 78 */	mr r0, r30
 /* 80340AD4 0033DA14  48 00 00 0C */	b lbl_80340AE0
 lbl_80340AD8:
-.global DefaultSwitchThreadCallback
 /* 80340AD8 0033DA18  3C 80 80 34 */	lis r4, DefaultSwitchThreadCallback@ha
-.global DefaultSwitchThreadCallback
 /* 80340ADC 0033DA1C  38 04 0A A4 */	addi r0, r4, DefaultSwitchThreadCallback@l
 lbl_80340AE0:
-/* 80340AE0 0033DA20  90 0D 84 38 */	stw r0, lbl_804509B8-_SDA_BASE_(r13)
+/* 80340AE0 0033DA20  90 0D 84 38 */	stw r0, SwitchThreadCallback-_SDA_BASE_(r13)
 /* 80340AE4 0033DA24  4B FF CC 39 */	bl OSRestoreInterrupts
-.global DefaultSwitchThreadCallback
 /* 80340AE8 0033DA28  3C 60 80 34 */	lis r3, DefaultSwitchThreadCallback@ha
-.global DefaultSwitchThreadCallback
 /* 80340AEC 0033DA2C  38 03 0A A4 */	addi r0, r3, DefaultSwitchThreadCallback@l
 /* 80340AF0 0033DA30  7C 1F 00 40 */	cmplw r31, r0
 /* 80340AF4 0033DA34  40 82 00 0C */	bne lbl_80340B00
@@ -47,10 +44,11 @@ lbl_80340B04:
 /* 80340B14 0033DA54  7C 08 03 A6 */	mtlr r0
 /* 80340B18 0033DA58  4E 80 00 20 */	blr 
 
+/* 80340B1C 0158 .text __OSThreadInit __OSThreadInit */
 .global __OSThreadInit
 __OSThreadInit:
 /* 80340B1C 0033DA5C  7C 08 02 A6 */	mflr r0
-/* 80340B20 0033DA60  3C 60 80 45 */	lis r3, lbl_8044BB78@ha
+/* 80340B20 0033DA60  3C 60 80 45 */	lis r3, RunQueue@ha
 /* 80340B24 0033DA64  90 01 00 04 */	stw r0, 4(r1)
 /* 80340B28 0033DA68  38 00 00 02 */	li r0, 2
 /* 80340B2C 0033DA6C  38 80 00 10 */	li r4, 0x10
@@ -60,7 +58,7 @@ __OSThreadInit:
 /* 80340B3C 0033DA7C  93 A1 00 0C */	stw r29, 0xc(r1)
 /* 80340B40 0033DA80  3B A0 00 00 */	li r29, 0
 /* 80340B44 0033DA84  93 81 00 08 */	stw r28, 8(r1)
-/* 80340B48 0033DA88  3B 83 BB 78 */	addi r28, r3, lbl_8044BB78@l
+/* 80340B48 0033DA88  3B 83 BB 78 */	addi r28, r3, RunQueue@l
 /* 80340B4C 0033DA8C  3B FC 04 18 */	addi r31, r28, 0x418
 /* 80340B50 0033DA90  B0 1C 06 E0 */	sth r0, 0x6e0(r28)
 /* 80340B54 0033DA94  38 00 00 01 */	li r0, 1
@@ -92,17 +90,17 @@ __OSThreadInit:
 /* 80340BBC 0033DAFC  80 7C 07 20 */	lwz r3, 0x720(r28)
 /* 80340BC0 0033DB00  7F E4 FB 78 */	mr r4, r31
 /* 80340BC4 0033DB04  90 03 00 00 */	stw r0, 0(r3)
-/* 80340BC8 0033DB08  81 8D 84 38 */	lwz r12, lbl_804509B8-_SDA_BASE_(r13)
+/* 80340BC8 0033DB08  81 8D 84 38 */	lwz r12, SwitchThreadCallback-_SDA_BASE_(r13)
 /* 80340BCC 0033DB0C  80 7E 00 E4 */	lwz r3, 0xe4(r30)
 /* 80340BD0 0033DB10  7D 88 03 A6 */	mtlr r12
 /* 80340BD4 0033DB14  4E 80 00 21 */	blrl 
 /* 80340BD8 0033DB18  93 FE 00 E4 */	stw r31, 0xe4(r30)
 /* 80340BDC 0033DB1C  38 60 00 00 */	li r3, 0
 /* 80340BE0 0033DB20  48 00 1A 71 */	bl OSClearStack
-/* 80340BE4 0033DB24  93 AD 91 40 */	stw r29, lbl_804516C0-_SDA_BASE_(r13)
+/* 80340BE4 0033DB24  93 AD 91 40 */	stw r29, RunQueueBits-_SDA_BASE_(r13)
 /* 80340BE8 0033DB28  3B C0 00 00 */	li r30, 0
 /* 80340BEC 0033DB2C  57 C0 18 38 */	slwi r0, r30, 3
-/* 80340BF0 0033DB30  93 AD 91 44 */	stw r29, lbl_804516C4-_SDA_BASE_(r13)
+/* 80340BF0 0033DB30  93 AD 91 44 */	stw r29, RunQueueHint-_SDA_BASE_(r13)
 /* 80340BF4 0033DB34  7F BC 02 14 */	add r29, r28, r0
 lbl_80340BF8:
 /* 80340BF8 0033DB38  7F A3 EB 78 */	mr r3, r29
@@ -129,7 +127,7 @@ lbl_80340C38:
 /* 80340C44 0033DB84  93 DF 02 FC */	stw r30, 0x2fc(r31)
 /* 80340C48 0033DB88  93 E4 00 00 */	stw r31, 0(r4)
 /* 80340C4C 0033DB8C  4B FF B3 B5 */	bl OSClearContext
-/* 80340C50 0033DB90  93 CD 91 48 */	stw r30, lbl_804516C8-_SDA_BASE_(r13)
+/* 80340C50 0033DB90  93 CD 91 48 */	stw r30, Reschedule-_SDA_BASE_(r13)
 /* 80340C54 0033DB94  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80340C58 0033DB98  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80340C5C 0033DB9C  83 C1 00 10 */	lwz r30, 0x10(r1)
@@ -139,6 +137,7 @@ lbl_80340C38:
 /* 80340C6C 0033DBAC  7C 08 03 A6 */	mtlr r0
 /* 80340C70 0033DBB0  4E 80 00 20 */	blr 
 
+/* 80340C74 0010 .text OSInitThreadQueue OSInitThreadQueue */
 .global OSInitThreadQueue
 OSInitThreadQueue:
 /* 80340C74 0033DBB4  38 00 00 00 */	li r0, 0
@@ -146,12 +145,14 @@ OSInitThreadQueue:
 /* 80340C7C 0033DBBC  90 03 00 00 */	stw r0, 0(r3)
 /* 80340C80 0033DBC0  4E 80 00 20 */	blr 
 
+/* 80340C84 000C .text OSGetCurrentThread OSGetCurrentThread */
 .global OSGetCurrentThread
 OSGetCurrentThread:
 /* 80340C84 0033DBC4  3C 60 80 00 */	lis r3, 0x800000E4@ha
 /* 80340C88 0033DBC8  80 63 00 E4 */	lwz r3, 0x800000E4@l(r3)
 /* 80340C8C 0033DBCC  4E 80 00 20 */	blr 
 
+/* 80340C90 0034 .text OSIsThreadTerminated OSIsThreadTerminated */
 .global OSIsThreadTerminated
 OSIsThreadTerminated:
 /* 80340C90 0033DBD0  A0 63 02 C8 */	lhz r3, 0x2c8(r3)
@@ -170,16 +171,17 @@ lbl_80340CBC:
 /* 80340CBC 0033DBFC  38 60 00 00 */	li r3, 0
 /* 80340CC0 0033DC00  4E 80 00 20 */	blr 
 
+/* 80340CC4 0040 .text OSDisableScheduler OSDisableScheduler */
 .global OSDisableScheduler
 OSDisableScheduler:
 /* 80340CC4 0033DC04  7C 08 02 A6 */	mflr r0
 /* 80340CC8 0033DC08  90 01 00 04 */	stw r0, 4(r1)
 /* 80340CCC 0033DC0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340CD0 0033DC10  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80340CD4 0033DC14  4B FF CA 21 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80340CD8 0033DC18  80 8D 91 48 */	lwz r4, lbl_804516C8-_SDA_BASE_(r13)
+/* 80340CD4 0033DC14  4B FF CA 21 */	bl __RAS_OSDisableInterrupts_begin
+/* 80340CD8 0033DC18  80 8D 91 48 */	lwz r4, Reschedule-_SDA_BASE_(r13)
 /* 80340CDC 0033DC1C  38 04 00 01 */	addi r0, r4, 1
-/* 80340CE0 0033DC20  90 0D 91 48 */	stw r0, lbl_804516C8-_SDA_BASE_(r13)
+/* 80340CE0 0033DC20  90 0D 91 48 */	stw r0, Reschedule-_SDA_BASE_(r13)
 /* 80340CE4 0033DC24  7C 9F 23 78 */	mr r31, r4
 /* 80340CE8 0033DC28  4B FF CA 35 */	bl OSRestoreInterrupts
 /* 80340CEC 0033DC2C  7F E3 FB 78 */	mr r3, r31
@@ -189,16 +191,17 @@ OSDisableScheduler:
 /* 80340CFC 0033DC3C  7C 08 03 A6 */	mtlr r0
 /* 80340D00 0033DC40  4E 80 00 20 */	blr 
 
+/* 80340D04 0040 .text OSEnableScheduler OSEnableScheduler */
 .global OSEnableScheduler
 OSEnableScheduler:
 /* 80340D04 0033DC44  7C 08 02 A6 */	mflr r0
 /* 80340D08 0033DC48  90 01 00 04 */	stw r0, 4(r1)
 /* 80340D0C 0033DC4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340D10 0033DC50  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80340D14 0033DC54  4B FF C9 E1 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80340D18 0033DC58  80 8D 91 48 */	lwz r4, lbl_804516C8-_SDA_BASE_(r13)
+/* 80340D14 0033DC54  4B FF C9 E1 */	bl __RAS_OSDisableInterrupts_begin
+/* 80340D18 0033DC58  80 8D 91 48 */	lwz r4, Reschedule-_SDA_BASE_(r13)
 /* 80340D1C 0033DC5C  38 04 FF FF */	addi r0, r4, -1
-/* 80340D20 0033DC60  90 0D 91 48 */	stw r0, lbl_804516C8-_SDA_BASE_(r13)
+/* 80340D20 0033DC60  90 0D 91 48 */	stw r0, Reschedule-_SDA_BASE_(r13)
 /* 80340D24 0033DC64  7C 9F 23 78 */	mr r31, r4
 /* 80340D28 0033DC68  4B FF C9 F5 */	bl OSRestoreInterrupts
 /* 80340D2C 0033DC6C  7F E3 FB 78 */	mr r3, r31
@@ -208,6 +211,7 @@ OSEnableScheduler:
 /* 80340D3C 0033DC7C  7C 08 03 A6 */	mtlr r0
 /* 80340D40 0033DC80  4E 80 00 20 */	blr 
 
+/* 80340D44 0068 .text UnsetRun UnsetRun */
 .global UnsetRun
 UnsetRun:
 /* 80340D44 0033DC84  80 83 02 E0 */	lwz r4, 0x2e0(r3)
@@ -232,16 +236,17 @@ lbl_80340D78:
 /* 80340D80 0033DCC0  40 82 00 20 */	bne lbl_80340DA0
 /* 80340D84 0033DCC4  80 03 02 D0 */	lwz r0, 0x2d0(r3)
 /* 80340D88 0033DCC8  38 80 00 01 */	li r4, 1
-/* 80340D8C 0033DCCC  80 AD 91 40 */	lwz r5, lbl_804516C0-_SDA_BASE_(r13)
+/* 80340D8C 0033DCCC  80 AD 91 40 */	lwz r5, RunQueueBits-_SDA_BASE_(r13)
 /* 80340D90 0033DCD0  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 80340D94 0033DCD4  7C 80 00 30 */	slw r0, r4, r0
 /* 80340D98 0033DCD8  7C A0 00 78 */	andc r0, r5, r0
-/* 80340D9C 0033DCDC  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 80340D9C 0033DCDC  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
 lbl_80340DA0:
 /* 80340DA0 0033DCE0  38 00 00 00 */	li r0, 0
 /* 80340DA4 0033DCE4  90 03 02 DC */	stw r0, 0x2dc(r3)
 /* 80340DA8 0033DCE8  4E 80 00 20 */	blr 
 
+/* 80340DAC 003C .text __OSGetEffectivePriority __OSGetEffectivePriority */
 .global __OSGetEffectivePriority
 __OSGetEffectivePriority:
 /* 80340DAC 0033DCEC  80 83 02 D4 */	lwz r4, 0x2d4(r3)
@@ -263,6 +268,7 @@ lbl_80340DD8:
 /* 80340DE0 0033DD20  7C 83 23 78 */	mr r3, r4
 /* 80340DE4 0033DD24  4E 80 00 20 */	blr 
 
+/* 80340DE8 01C0 .text SetEffectivePriority SetEffectivePriority */
 .global SetEffectivePriority
 SetEffectivePriority:
 /* 80340DE8 0033DD28  7C 08 02 A6 */	mflr r0
@@ -288,8 +294,8 @@ lbl_80340E30:
 /* 80340E30 0033DD70  7F E3 FB 78 */	mr r3, r31
 /* 80340E34 0033DD74  4B FF FF 11 */	bl UnsetRun
 /* 80340E38 0033DD78  93 DF 02 D0 */	stw r30, 0x2d0(r31)
-/* 80340E3C 0033DD7C  3C 60 80 45 */	lis r3, lbl_8044BB78@ha
-/* 80340E40 0033DD80  38 03 BB 78 */	addi r0, r3, lbl_8044BB78@l
+/* 80340E3C 0033DD7C  3C 60 80 45 */	lis r3, RunQueue@ha
+/* 80340E40 0033DD80  38 03 BB 78 */	addi r0, r3, RunQueue@l
 /* 80340E44 0033DD84  80 7F 02 D0 */	lwz r3, 0x2d0(r31)
 /* 80340E48 0033DD88  54 63 18 38 */	slwi r3, r3, 3
 /* 80340E4C 0033DD8C  7C 00 1A 14 */	add r0, r0, r3
@@ -310,12 +316,12 @@ lbl_80340E70:
 /* 80340E80 0033DDC0  80 9F 02 DC */	lwz r4, 0x2dc(r31)
 /* 80340E84 0033DDC4  93 E4 00 04 */	stw r31, 4(r4)
 /* 80340E88 0033DDC8  80 1F 02 D0 */	lwz r0, 0x2d0(r31)
-/* 80340E8C 0033DDCC  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 80340E8C 0033DDCC  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 80340E90 0033DDD0  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 80340E94 0033DDD4  7C 60 00 30 */	slw r0, r3, r0
 /* 80340E98 0033DDD8  7C 80 03 78 */	or r0, r4, r0
-/* 80340E9C 0033DDDC  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
-/* 80340EA0 0033DDE0  90 6D 91 44 */	stw r3, lbl_804516C4-_SDA_BASE_(r13)
+/* 80340E9C 0033DDDC  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
+/* 80340EA0 0033DDE0  90 6D 91 44 */	stw r3, RunQueueHint-_SDA_BASE_(r13)
 /* 80340EA4 0033DDE4  48 00 00 E8 */	b lbl_80340F8C
 lbl_80340EA8:
 /* 80340EA8 0033DDE8  80 9F 02 E0 */	lwz r4, 0x2e0(r31)
@@ -386,7 +392,7 @@ lbl_80340F6C:
 /* 80340F7C 0033DEBC  48 00 00 14 */	b lbl_80340F90
 lbl_80340F80:
 /* 80340F80 0033DEC0  38 00 00 01 */	li r0, 1
-/* 80340F84 0033DEC4  90 0D 91 44 */	stw r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80340F84 0033DEC4  90 0D 91 44 */	stw r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80340F88 0033DEC8  93 DF 02 D0 */	stw r30, 0x2d0(r31)
 lbl_80340F8C:
 /* 80340F8C 0033DECC  38 60 00 00 */	li r3, 0
@@ -398,6 +404,7 @@ lbl_80340F90:
 /* 80340FA0 0033DEE0  7C 08 03 A6 */	mtlr r0
 /* 80340FA4 0033DEE4  4E 80 00 20 */	blr 
 
+/* 80340FA8 0050 .text __OSPromoteThread __OSPromoteThread */
 .global __OSPromoteThread
 __OSPromoteThread:
 /* 80340FA8 0033DEE8  7C 08 02 A6 */	mflr r0
@@ -423,17 +430,18 @@ lbl_80340FE4:
 /* 80340FF0 0033DF30  7C 08 03 A6 */	mtlr r0
 /* 80340FF4 0033DF34  4E 80 00 20 */	blr 
 
+/* 80340FF8 0228 .text SelectThread SelectThread */
 .global SelectThread
 SelectThread:
 /* 80340FF8 0033DF38  7C 08 02 A6 */	mflr r0
-/* 80340FFC 0033DF3C  3C 80 80 45 */	lis r4, lbl_8044BB78@ha
+/* 80340FFC 0033DF3C  3C 80 80 45 */	lis r4, RunQueue@ha
 /* 80341000 0033DF40  90 01 00 04 */	stw r0, 4(r1)
 /* 80341004 0033DF44  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80341008 0033DF48  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 8034100C 0033DF4C  3B E4 BB 78 */	addi r31, r4, lbl_8044BB78@l
+/* 8034100C 0033DF4C  3B E4 BB 78 */	addi r31, r4, RunQueue@l
 /* 80341010 0033DF50  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80341014 0033DF54  3B C3 00 00 */	addi r30, r3, 0
-/* 80341018 0033DF58  80 0D 91 48 */	lwz r0, lbl_804516C8-_SDA_BASE_(r13)
+/* 80341018 0033DF58  80 0D 91 48 */	lwz r0, Reschedule-_SDA_BASE_(r13)
 /* 8034101C 0033DF5C  2C 00 00 00 */	cmpwi r0, 0
 /* 80341020 0033DF60  40 81 00 0C */	ble lbl_8034102C
 /* 80341024 0033DF64  38 60 00 00 */	li r3, 0
@@ -455,7 +463,7 @@ lbl_8034104C:
 /* 8034105C 0033DF9C  40 82 00 90 */	bne lbl_803410EC
 /* 80341060 0033DFA0  2C 1E 00 00 */	cmpwi r30, 0
 /* 80341064 0033DFA4  40 82 00 20 */	bne lbl_80341084
-/* 80341068 0033DFA8  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 80341068 0033DFA8  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 8034106C 0033DFAC  80 06 02 D0 */	lwz r0, 0x2d0(r6)
 /* 80341070 0033DFB0  7C 84 00 34 */	cntlzw r4, r4
 /* 80341074 0033DFB4  7C 00 20 00 */	cmpw r0, r4
@@ -485,12 +493,12 @@ lbl_803410B8:
 /* 803410C8 0033E008  80 A6 02 DC */	lwz r5, 0x2dc(r6)
 /* 803410CC 0033E00C  90 C5 00 04 */	stw r6, 4(r5)
 /* 803410D0 0033E010  80 06 02 D0 */	lwz r0, 0x2d0(r6)
-/* 803410D4 0033E014  80 AD 91 40 */	lwz r5, lbl_804516C0-_SDA_BASE_(r13)
+/* 803410D4 0033E014  80 AD 91 40 */	lwz r5, RunQueueBits-_SDA_BASE_(r13)
 /* 803410D8 0033E018  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 803410DC 0033E01C  7C 80 00 30 */	slw r0, r4, r0
 /* 803410E0 0033E020  7C A0 03 78 */	or r0, r5, r0
-/* 803410E4 0033E024  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
-/* 803410E8 0033E028  90 8D 91 44 */	stw r4, lbl_804516C4-_SDA_BASE_(r13)
+/* 803410E4 0033E024  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
+/* 803410E8 0033E028  90 8D 91 44 */	stw r4, RunQueueHint-_SDA_BASE_(r13)
 lbl_803410EC:
 /* 803410EC 0033E02C  A0 06 01 A2 */	lhz r0, 0x1a2(r6)
 /* 803410F0 0033E030  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
@@ -501,10 +509,10 @@ lbl_803410EC:
 /* 80341104 0033E044  38 60 00 00 */	li r3, 0
 /* 80341108 0033E048  48 00 01 00 */	b lbl_80341208
 lbl_8034110C:
-/* 8034110C 0033E04C  80 0D 91 40 */	lwz r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 8034110C 0033E04C  80 0D 91 40 */	lwz r0, RunQueueBits-_SDA_BASE_(r13)
 /* 80341110 0033E050  28 00 00 00 */	cmplwi r0, 0
 /* 80341114 0033E054  40 82 00 54 */	bne lbl_80341168
-/* 80341118 0033E058  81 8D 84 38 */	lwz r12, lbl_804509B8-_SDA_BASE_(r13)
+/* 80341118 0033E058  81 8D 84 38 */	lwz r12, SwitchThreadCallback-_SDA_BASE_(r13)
 /* 8034111C 0033E05C  3F C0 80 00 */	lis r30, 0x800000E4@ha
 /* 80341120 0033E060  80 7E 00 E4 */	lwz r3, 0x800000E4@l(r30)
 /* 80341124 0033E064  38 80 00 00 */	li r4, 0
@@ -517,19 +525,19 @@ lbl_8034110C:
 lbl_80341140:
 /* 80341140 0033E080  4B FF C5 C9 */	bl OSEnableInterrupts
 lbl_80341144:
-/* 80341144 0033E084  80 0D 91 40 */	lwz r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 80341144 0033E084  80 0D 91 40 */	lwz r0, RunQueueBits-_SDA_BASE_(r13)
 /* 80341148 0033E088  28 00 00 00 */	cmplwi r0, 0
 /* 8034114C 0033E08C  41 82 FF F8 */	beq lbl_80341144
-/* 80341150 0033E090  4B FF C5 A5 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80341154 0033E094  80 0D 91 40 */	lwz r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 80341150 0033E090  4B FF C5 A5 */	bl __RAS_OSDisableInterrupts_begin
+/* 80341154 0033E094  80 0D 91 40 */	lwz r0, RunQueueBits-_SDA_BASE_(r13)
 /* 80341158 0033E098  28 00 00 00 */	cmplwi r0, 0
 /* 8034115C 0033E09C  41 82 FF E4 */	beq lbl_80341140
 /* 80341160 0033E0A0  38 7F 07 30 */	addi r3, r31, 0x730
 /* 80341164 0033E0A4  4B FF AE 9D */	bl OSClearContext
 lbl_80341168:
 /* 80341168 0033E0A8  38 60 00 00 */	li r3, 0
-/* 8034116C 0033E0AC  90 6D 91 44 */	stw r3, lbl_804516C4-_SDA_BASE_(r13)
-/* 80341170 0033E0B0  80 0D 91 40 */	lwz r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 8034116C 0033E0AC  90 6D 91 44 */	stw r3, RunQueueHint-_SDA_BASE_(r13)
+/* 80341170 0033E0B0  80 0D 91 40 */	lwz r0, RunQueueBits-_SDA_BASE_(r13)
 /* 80341174 0033E0B4  7C 07 00 34 */	cntlzw r7, r0
 /* 80341178 0033E0B8  54 E0 18 38 */	slwi r0, r7, 3
 /* 8034117C 0033E0BC  7C 9F 02 14 */	add r4, r31, r0
@@ -548,11 +556,11 @@ lbl_803411A0:
 /* 803411A8 0033E0E8  28 00 00 00 */	cmplwi r0, 0
 /* 803411AC 0033E0EC  40 82 00 1C */	bne lbl_803411C8
 /* 803411B0 0033E0F0  20 07 00 1F */	subfic r0, r7, 0x1f
-/* 803411B4 0033E0F4  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 803411B4 0033E0F4  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 803411B8 0033E0F8  38 60 00 01 */	li r3, 1
 /* 803411BC 0033E0FC  7C 60 00 30 */	slw r0, r3, r0
 /* 803411C0 0033E100  7C 80 00 78 */	andc r0, r4, r0
-/* 803411C4 0033E104  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
+/* 803411C4 0033E104  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
 lbl_803411C8:
 /* 803411C8 0033E108  38 00 00 00 */	li r0, 0
 /* 803411CC 0033E10C  90 1E 02 DC */	stw r0, 0x2dc(r30)
@@ -560,7 +568,7 @@ lbl_803411C8:
 /* 803411D4 0033E114  3F E0 80 00 */	lis r31, 0x800000E4@ha
 /* 803411D8 0033E118  B0 1E 02 C8 */	sth r0, 0x2c8(r30)
 /* 803411DC 0033E11C  7F C4 F3 78 */	mr r4, r30
-/* 803411E0 0033E120  81 8D 84 38 */	lwz r12, lbl_804509B8-_SDA_BASE_(r13)
+/* 803411E0 0033E120  81 8D 84 38 */	lwz r12, SwitchThreadCallback-_SDA_BASE_(r13)
 /* 803411E4 0033E124  80 7F 00 E4 */	lwz r3, 0x800000E4@l(r31)
 /* 803411E8 0033E128  7D 88 03 A6 */	mtlr r12
 /* 803411EC 0033E12C  4E 80 00 21 */	blrl 
@@ -578,12 +586,13 @@ lbl_80341208:
 /* 80341218 0033E158  7C 08 03 A6 */	mtlr r0
 /* 8034121C 0033E15C  4E 80 00 20 */	blr 
 
+/* 80341220 0030 .text __OSReschedule __OSReschedule */
 .global __OSReschedule
 __OSReschedule:
 /* 80341220 0033E160  7C 08 02 A6 */	mflr r0
 /* 80341224 0033E164  90 01 00 04 */	stw r0, 4(r1)
 /* 80341228 0033E168  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034122C 0033E16C  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 8034122C 0033E16C  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341230 0033E170  2C 00 00 00 */	cmpwi r0, 0
 /* 80341234 0033E174  41 82 00 0C */	beq lbl_80341240
 /* 80341238 0033E178  38 60 00 00 */	li r3, 0
@@ -594,13 +603,14 @@ lbl_80341240:
 /* 80341248 0033E188  7C 08 03 A6 */	mtlr r0
 /* 8034124C 0033E18C  4E 80 00 20 */	blr 
 
+/* 80341250 003C .text OSYieldThread OSYieldThread */
 .global OSYieldThread
 OSYieldThread:
 /* 80341250 0033E190  7C 08 02 A6 */	mflr r0
 /* 80341254 0033E194  90 01 00 04 */	stw r0, 4(r1)
 /* 80341258 0033E198  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034125C 0033E19C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80341260 0033E1A0  4B FF C4 95 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341260 0033E1A0  4B FF C4 95 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341264 0033E1A4  3B E3 00 00 */	addi r31, r3, 0
 /* 80341268 0033E1A8  38 60 00 01 */	li r3, 1
 /* 8034126C 0033E1AC  4B FF FD 8D */	bl SelectThread
@@ -612,6 +622,7 @@ OSYieldThread:
 /* 80341284 0033E1C4  7C 08 03 A6 */	mtlr r0
 /* 80341288 0033E1C8  4E 80 00 20 */	blr 
 
+/* 8034128C 01E8 .text OSCreateThread OSCreateThread */
 .global OSCreateThread
 OSCreateThread:
 /* 8034128C 0033E1CC  7C 08 02 A6 */	mflr r0
@@ -665,9 +676,9 @@ lbl_803412C4:
 /* 80341344 0033E284  93 DF 03 0C */	stw r30, 0x30c(r31)
 /* 80341348 0033E288  93 DF 03 10 */	stw r30, 0x310(r31)
 /* 8034134C 0033E28C  93 DF 03 14 */	stw r30, 0x314(r31)
-/* 80341350 0033E290  4B FF C3 A5 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80341354 0033E294  3C 80 80 45 */	lis r4, lbl_8044BAD0@ha
-/* 80341358 0033E298  38 84 BA D0 */	addi r4, r4, lbl_8044BAD0@l
+/* 80341350 0033E290  4B FF C3 A5 */	bl __RAS_OSDisableInterrupts_begin
+/* 80341354 0033E294  3C 80 80 45 */	lis r4, __OSErrorTable@ha
+/* 80341358 0033E298  38 84 BA D0 */	addi r4, r4, __OSErrorTable@l
 /* 8034135C 0033E29C  80 04 00 40 */	lwz r0, 0x40(r4)
 /* 80341360 0033E2A0  28 00 00 00 */	cmplwi r0, 0
 /* 80341364 0033E2A4  41 82 00 C4 */	beq lbl_80341428
@@ -680,7 +691,7 @@ lbl_803412C4:
 /* 80341380 0033E2C0  A0 1F 01 A2 */	lhz r0, 0x1a2(r31)
 /* 80341384 0033E2C4  60 00 00 01 */	ori r0, r0, 1
 /* 80341388 0033E2C8  B0 1F 01 A2 */	sth r0, 0x1a2(r31)
-/* 8034138C 0033E2CC  80 0D 84 20 */	lwz r0, lbl_804509A0-_SDA_BASE_(r13)
+/* 8034138C 0033E2CC  80 0D 84 20 */	lwz r0, __OSFpscrEnableBits-_SDA_BASE_(r13)
 /* 80341390 0033E2D0  54 00 06 38 */	rlwinm r0, r0, 0, 0x18, 0x1c
 /* 80341394 0033E2D4  60 00 00 04 */	ori r0, r0, 4
 /* 80341398 0033E2D8  90 1F 01 94 */	stw r0, 0x194(r31)
@@ -744,6 +755,7 @@ lbl_80341460:
 /* 8034146C 0033E3AC  7C 08 03 A6 */	mtlr r0
 /* 80341470 0033E3B0  4E 80 00 20 */	blr 
 
+/* 80341474 00E4 .text OSExitThread OSExitThread */
 .global OSExitThread
 OSExitThread:
 /* 80341474 0033E3B4  7C 08 02 A6 */	mflr r0
@@ -754,7 +766,7 @@ OSExitThread:
 /* 80341488 0033E3C8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8034148C 0033E3CC  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80341490 0033E3D0  7C 7C 1B 78 */	mr r28, r3
-/* 80341494 0033E3D4  4B FF C2 61 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341494 0033E3D4  4B FF C2 61 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341498 0033E3D8  3F E0 80 00 */	lis r31, 0x800000E4@ha
 /* 8034149C 0033E3DC  83 DF 00 E4 */	lwz r30, 0x800000E4@l(r31)
 /* 803414A0 0033E3E0  3B A3 00 00 */	addi r29, r3, 0
@@ -793,8 +805,8 @@ lbl_80341504:
 /* 8034150C 0033E44C  38 7E 02 E8 */	addi r3, r30, 0x2e8
 /* 80341510 0033E450  48 00 07 89 */	bl OSWakeupThread
 /* 80341514 0033E454  38 00 00 01 */	li r0, 1
-/* 80341518 0033E458  90 0D 91 44 */	stw r0, lbl_804516C4-_SDA_BASE_(r13)
-/* 8034151C 0033E45C  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341518 0033E458  90 0D 91 44 */	stw r0, RunQueueHint-_SDA_BASE_(r13)
+/* 8034151C 0033E45C  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341520 0033E460  2C 00 00 00 */	cmpwi r0, 0
 /* 80341524 0033E464  41 82 00 0C */	beq lbl_80341530
 /* 80341528 0033E468  38 60 00 00 */	li r3, 0
@@ -811,6 +823,7 @@ lbl_80341530:
 /* 80341550 0033E490  7C 08 03 A6 */	mtlr r0
 /* 80341554 0033E494  4E 80 00 20 */	blr 
 
+/* 80341558 01BC .text OSCancelThread OSCancelThread */
 .global OSCancelThread
 OSCancelThread:
 /* 80341558 0033E498  7C 08 02 A6 */	mflr r0
@@ -820,7 +833,7 @@ OSCancelThread:
 /* 80341568 0033E4A8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8034156C 0033E4AC  7C 7E 1B 78 */	mr r30, r3
 /* 80341570 0033E4B0  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80341574 0033E4B4  4B FF C1 81 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341574 0033E4B4  4B FF C1 81 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341578 0033E4B8  A0 1E 02 C8 */	lhz r0, 0x2c8(r30)
 /* 8034157C 0033E4BC  3B E3 00 00 */	addi r31, r3, 0
 /* 80341580 0033E4C0  2C 00 00 03 */	cmpwi r0, 3
@@ -843,7 +856,7 @@ lbl_803415A8:
 /* 803415BC 0033E4FC  48 00 00 B0 */	b lbl_8034166C
 lbl_803415C0:
 /* 803415C0 0033E500  38 00 00 01 */	li r0, 1
-/* 803415C4 0033E504  90 0D 91 44 */	stw r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 803415C4 0033E504  90 0D 91 44 */	stw r0, RunQueueHint-_SDA_BASE_(r13)
 /* 803415C8 0033E508  48 00 00 A4 */	b lbl_8034166C
 lbl_803415CC:
 /* 803415CC 0033E50C  80 9E 02 E0 */	lwz r4, 0x2e0(r30)
@@ -927,7 +940,7 @@ lbl_803416CC:
 /* 803416D0 0033E610  4B FF DB 15 */	bl __OSUnlockAllMutex
 /* 803416D4 0033E614  38 7E 02 E8 */	addi r3, r30, 0x2e8
 /* 803416D8 0033E618  48 00 05 C1 */	bl OSWakeupThread
-/* 803416DC 0033E61C  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 803416DC 0033E61C  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 803416E0 0033E620  2C 00 00 00 */	cmpwi r0, 0
 /* 803416E4 0033E624  41 82 00 0C */	beq lbl_803416F0
 /* 803416E8 0033E628  38 60 00 00 */	li r3, 0
@@ -944,6 +957,7 @@ lbl_803416F8:
 /* 8034170C 0033E64C  7C 08 03 A6 */	mtlr r0
 /* 80341710 0033E650  4E 80 00 20 */	blr 
 
+/* 80341714 00A0 .text OSDetachThread OSDetachThread */
 .global OSDetachThread
 OSDetachThread:
 /* 80341714 0033E654  7C 08 02 A6 */	mflr r0
@@ -952,7 +966,7 @@ OSDetachThread:
 /* 80341720 0033E660  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80341724 0033E664  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80341728 0033E668  7C 7E 1B 78 */	mr r30, r3
-/* 8034172C 0033E66C  4B FF BF C9 */	bl __RAS_OSDisableInterrupts_begin 
+/* 8034172C 0033E66C  4B FF BF C9 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341730 0033E670  A0 1E 02 CA */	lhz r0, 0x2ca(r30)
 /* 80341734 0033E674  3B E3 00 00 */	addi r31, r3, 0
 /* 80341738 0033E678  60 00 00 01 */	ori r0, r0, 1
@@ -992,6 +1006,7 @@ lbl_8034178C:
 /* 803417AC 0033E6EC  7C 08 03 A6 */	mtlr r0
 /* 803417B0 0033E6F0  4E 80 00 20 */	blr 
 
+/* 803417B4 0288 .text OSResumeThread OSResumeThread */
 .global OSResumeThread
 OSResumeThread:
 /* 803417B4 0033E6F4  7C 08 02 A6 */	mflr r0
@@ -1001,7 +1016,7 @@ OSResumeThread:
 /* 803417C4 0033E704  93 C1 00 20 */	stw r30, 0x20(r1)
 /* 803417C8 0033E708  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 803417CC 0033E70C  7C 7D 1B 78 */	mr r29, r3
-/* 803417D0 0033E710  4B FF BF 25 */	bl __RAS_OSDisableInterrupts_begin 
+/* 803417D0 0033E710  4B FF BF 25 */	bl __RAS_OSDisableInterrupts_begin
 /* 803417D4 0033E714  80 9D 02 CC */	lwz r4, 0x2cc(r29)
 /* 803417D8 0033E718  3B E3 00 00 */	addi r31, r3, 0
 /* 803417DC 0033E71C  38 04 FF FF */	addi r0, r4, -1
@@ -1040,8 +1055,8 @@ lbl_8034184C:
 /* 8034184C 0033E78C  28 03 00 00 */	cmplwi r3, 0
 /* 80341850 0033E790  40 82 FF DC */	bne lbl_8034182C
 /* 80341854 0033E794  90 1D 02 D0 */	stw r0, 0x2d0(r29)
-/* 80341858 0033E798  3C 60 80 45 */	lis r3, lbl_8044BB78@ha
-/* 8034185C 0033E79C  38 03 BB 78 */	addi r0, r3, lbl_8044BB78@l
+/* 80341858 0033E798  3C 60 80 45 */	lis r3, RunQueue@ha
+/* 8034185C 0033E79C  38 03 BB 78 */	addi r0, r3, RunQueue@l
 /* 80341860 0033E7A0  80 7D 02 D0 */	lwz r3, 0x2d0(r29)
 /* 80341864 0033E7A4  54 63 18 38 */	slwi r3, r3, 3
 /* 80341868 0033E7A8  7C 00 1A 14 */	add r0, r0, r3
@@ -1062,12 +1077,12 @@ lbl_8034188C:
 /* 8034189C 0033E7DC  80 9D 02 DC */	lwz r4, 0x2dc(r29)
 /* 803418A0 0033E7E0  93 A4 00 04 */	stw r29, 4(r4)
 /* 803418A4 0033E7E4  80 1D 02 D0 */	lwz r0, 0x2d0(r29)
-/* 803418A8 0033E7E8  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 803418A8 0033E7E8  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 803418AC 0033E7EC  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 803418B0 0033E7F0  7C 60 00 30 */	slw r0, r3, r0
 /* 803418B4 0033E7F4  7C 80 03 78 */	or r0, r4, r0
-/* 803418B8 0033E7F8  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
-/* 803418BC 0033E7FC  90 6D 91 44 */	stw r3, lbl_804516C4-_SDA_BASE_(r13)
+/* 803418B8 0033E7F8  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
+/* 803418BC 0033E7FC  90 6D 91 44 */	stw r3, RunQueueHint-_SDA_BASE_(r13)
 /* 803418C0 0033E800  48 00 01 40 */	b lbl_80341A00
 lbl_803418C4:
 /* 803418C4 0033E804  80 9D 02 E0 */	lwz r4, 0x2e0(r29)
@@ -1166,7 +1181,7 @@ lbl_803419CC:
 /* 803419F8 0033E938  7C 7D 1B 79 */	or. r29, r3, r3
 /* 803419FC 0033E93C  40 82 FF D0 */	bne lbl_803419CC
 lbl_80341A00:
-/* 80341A00 0033E940  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341A00 0033E940  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341A04 0033E944  2C 00 00 00 */	cmpwi r0, 0
 /* 80341A08 0033E948  41 82 00 0C */	beq lbl_80341A14
 /* 80341A0C 0033E94C  38 60 00 00 */	li r3, 0
@@ -1183,6 +1198,7 @@ lbl_80341A14:
 /* 80341A34 0033E974  7C 08 03 A6 */	mtlr r0
 /* 80341A38 0033E978  4E 80 00 20 */	blr 
 
+/* 80341A3C 0170 .text OSSuspendThread OSSuspendThread */
 .global OSSuspendThread
 OSSuspendThread:
 /* 80341A3C 0033E97C  7C 08 02 A6 */	mflr r0
@@ -1192,7 +1208,7 @@ OSSuspendThread:
 /* 80341A4C 0033E98C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80341A50 0033E990  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80341A54 0033E994  7C 7D 1B 78 */	mr r29, r3
-/* 80341A58 0033E998  4B FF BC 9D */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341A58 0033E998  4B FF BC 9D */	bl __RAS_OSDisableInterrupts_begin
 /* 80341A5C 0033E99C  80 9D 02 CC */	lwz r4, 0x2cc(r29)
 /* 80341A60 0033E9A0  3B E3 00 00 */	addi r31, r3, 0
 /* 80341A64 0033E9A4  38 04 00 01 */	addi r0, r4, 1
@@ -1213,7 +1229,7 @@ lbl_80341A94:
 /* 80341A9C 0033E9DC  48 00 00 20 */	b lbl_80341ABC
 lbl_80341AA0:
 /* 80341AA0 0033E9E0  38 00 00 01 */	li r0, 1
-/* 80341AA4 0033E9E4  90 0D 91 44 */	stw r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341AA4 0033E9E4  90 0D 91 44 */	stw r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341AA8 0033E9E8  B0 1D 02 C8 */	sth r0, 0x2c8(r29)
 /* 80341AAC 0033E9EC  48 00 00 C4 */	b lbl_80341B70
 lbl_80341AB0:
@@ -1274,7 +1290,7 @@ lbl_80341B3C:
 /* 80341B68 0033EAA8  7C 7D 1B 79 */	or. r29, r3, r3
 /* 80341B6C 0033EAAC  40 82 FF D0 */	bne lbl_80341B3C
 lbl_80341B70:
-/* 80341B70 0033EAB0  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341B70 0033EAB0  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341B74 0033EAB4  2C 00 00 00 */	cmpwi r0, 0
 /* 80341B78 0033EAB8  41 82 00 0C */	beq lbl_80341B84
 /* 80341B7C 0033EABC  38 60 00 00 */	li r3, 0
@@ -1291,6 +1307,7 @@ lbl_80341B84:
 /* 80341BA4 0033EAE4  7C 08 03 A6 */	mtlr r0
 /* 80341BA8 0033EAE8  4E 80 00 20 */	blr 
 
+/* 80341BAC 00EC .text OSSleepThread OSSleepThread */
 .global OSSleepThread
 OSSleepThread:
 /* 80341BAC 0033EAEC  7C 08 02 A6 */	mflr r0
@@ -1299,7 +1316,7 @@ OSSleepThread:
 /* 80341BB8 0033EAF8  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80341BBC 0033EAFC  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80341BC0 0033EB00  7C 7E 1B 78 */	mr r30, r3
-/* 80341BC4 0033EB04  4B FF BB 31 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341BC4 0033EB04  4B FF BB 31 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341BC8 0033EB08  3C 80 80 00 */	lis r4, 0x800000E4@ha
 /* 80341BCC 0033EB0C  80 84 00 E4 */	lwz r4, 0x800000E4@l(r4)
 /* 80341BD0 0033EB10  38 00 00 04 */	li r0, 4
@@ -1346,8 +1363,8 @@ lbl_80341C58:
 /* 80341C58 0033EB98  90 83 02 E0 */	stw r4, 0x2e0(r3)
 lbl_80341C5C:
 /* 80341C5C 0033EB9C  38 00 00 01 */	li r0, 1
-/* 80341C60 0033EBA0  90 0D 91 44 */	stw r0, lbl_804516C4-_SDA_BASE_(r13)
-/* 80341C64 0033EBA4  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341C60 0033EBA0  90 0D 91 44 */	stw r0, RunQueueHint-_SDA_BASE_(r13)
+/* 80341C64 0033EBA4  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341C68 0033EBA8  2C 00 00 00 */	cmpwi r0, 0
 /* 80341C6C 0033EBAC  41 82 00 0C */	beq lbl_80341C78
 /* 80341C70 0033EBB0  38 60 00 00 */	li r3, 0
@@ -1362,6 +1379,7 @@ lbl_80341C78:
 /* 80341C90 0033EBD0  7C 08 03 A6 */	mtlr r0
 /* 80341C94 0033EBD4  4E 80 00 20 */	blr 
 
+/* 80341C98 0104 .text OSWakeupThread OSWakeupThread */
 .global OSWakeupThread
 OSWakeupThread:
 /* 80341C98 0033EBD8  7C 08 02 A6 */	mflr r0
@@ -1370,10 +1388,10 @@ OSWakeupThread:
 /* 80341CA4 0033EBE4  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 80341CA8 0033EBE8  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80341CAC 0033EBEC  7C 7E 1B 78 */	mr r30, r3
-/* 80341CB0 0033EBF0  4B FF BA 45 */	bl __RAS_OSDisableInterrupts_begin 
-/* 80341CB4 0033EBF4  3C 80 80 45 */	lis r4, lbl_8044BB78@ha
+/* 80341CB0 0033EBF0  4B FF BA 45 */	bl __RAS_OSDisableInterrupts_begin
+/* 80341CB4 0033EBF4  3C 80 80 45 */	lis r4, RunQueue@ha
 /* 80341CB8 0033EBF8  3B E3 00 00 */	addi r31, r3, 0
-/* 80341CBC 0033EBFC  38 A4 BB 78 */	addi r5, r4, lbl_8044BB78@l
+/* 80341CBC 0033EBFC  38 A4 BB 78 */	addi r5, r4, RunQueue@l
 /* 80341CC0 0033EC00  48 00 00 9C */	b lbl_80341D5C
 lbl_80341CC4:
 /* 80341CC4 0033EC04  80 66 02 E0 */	lwz r3, 0x2e0(r6)
@@ -1412,17 +1430,17 @@ lbl_80341D28:
 /* 80341D38 0033EC78  80 86 02 DC */	lwz r4, 0x2dc(r6)
 /* 80341D3C 0033EC7C  90 C4 00 04 */	stw r6, 4(r4)
 /* 80341D40 0033EC80  80 06 02 D0 */	lwz r0, 0x2d0(r6)
-/* 80341D44 0033EC84  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 80341D44 0033EC84  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 80341D48 0033EC88  20 00 00 1F */	subfic r0, r0, 0x1f
 /* 80341D4C 0033EC8C  7C 60 00 30 */	slw r0, r3, r0
 /* 80341D50 0033EC90  7C 80 03 78 */	or r0, r4, r0
-/* 80341D54 0033EC94  90 0D 91 40 */	stw r0, lbl_804516C0-_SDA_BASE_(r13)
-/* 80341D58 0033EC98  90 6D 91 44 */	stw r3, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341D54 0033EC94  90 0D 91 40 */	stw r0, RunQueueBits-_SDA_BASE_(r13)
+/* 80341D58 0033EC98  90 6D 91 44 */	stw r3, RunQueueHint-_SDA_BASE_(r13)
 lbl_80341D5C:
 /* 80341D5C 0033EC9C  80 DE 00 00 */	lwz r6, 0(r30)
 /* 80341D60 0033ECA0  28 06 00 00 */	cmplwi r6, 0
 /* 80341D64 0033ECA4  40 82 FF 60 */	bne lbl_80341CC4
-/* 80341D68 0033ECA8  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341D68 0033ECA8  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341D6C 0033ECAC  2C 00 00 00 */	cmpwi r0, 0
 /* 80341D70 0033ECB0  41 82 00 0C */	beq lbl_80341D7C
 /* 80341D74 0033ECB4  38 60 00 00 */	li r3, 0
@@ -1437,6 +1455,7 @@ lbl_80341D7C:
 /* 80341D94 0033ECD4  7C 08 03 A6 */	mtlr r0
 /* 80341D98 0033ECD8  4E 80 00 20 */	blr 
 
+/* 80341D9C 00C0 .text OSSetThreadPriority OSSetThreadPriority */
 .global OSSetThreadPriority
 OSSetThreadPriority:
 /* 80341D9C 0033ECDC  7C 08 02 A6 */	mflr r0
@@ -1454,7 +1473,7 @@ lbl_80341DC8:
 /* 80341DC8 0033ED08  38 60 00 00 */	li r3, 0
 /* 80341DCC 0033ED0C  48 00 00 74 */	b lbl_80341E40
 lbl_80341DD0:
-/* 80341DD0 0033ED10  4B FF B9 25 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341DD0 0033ED10  4B FF B9 25 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341DD4 0033ED14  80 1D 02 D4 */	lwz r0, 0x2d4(r29)
 /* 80341DD8 0033ED18  3B C3 00 00 */	addi r30, r3, 0
 /* 80341DDC 0033ED1C  7C 00 F8 00 */	cmpw r0, r31
@@ -1476,7 +1495,7 @@ lbl_80341DEC:
 /* 80341E18 0033ED58  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80341E1C 0033ED5C  40 82 FF D0 */	bne lbl_80341DEC
 lbl_80341E20:
-/* 80341E20 0033ED60  80 0D 91 44 */	lwz r0, lbl_804516C4-_SDA_BASE_(r13)
+/* 80341E20 0033ED60  80 0D 91 44 */	lwz r0, RunQueueHint-_SDA_BASE_(r13)
 /* 80341E24 0033ED64  2C 00 00 00 */	cmpwi r0, 0
 /* 80341E28 0033ED68  41 82 00 0C */	beq lbl_80341E34
 /* 80341E2C 0033ED6C  38 60 00 00 */	li r3, 0
@@ -1494,11 +1513,13 @@ lbl_80341E40:
 /* 80341E54 0033ED94  7C 08 03 A6 */	mtlr r0
 /* 80341E58 0033ED98  4E 80 00 20 */	blr 
 
+/* 80341E5C 0008 .text OSGetThreadPriority OSGetThreadPriority */
 .global OSGetThreadPriority
 OSGetThreadPriority:
 /* 80341E5C 0033ED9C  80 63 02 D4 */	lwz r3, 0x2d4(r3)
 /* 80341E60 0033EDA0  4E 80 00 20 */	blr 
 
+/* 80341E64 009C .text CheckThreadQueue CheckThreadQueue */
 .global CheckThreadQueue
 CheckThreadQueue:
 /* 80341E64 0033EDA4  80 83 00 00 */	lwz r4, 0(r3)
@@ -1547,24 +1568,25 @@ lbl_80341EF0:
 /* 80341EF8 0033EE38  38 60 00 01 */	li r3, 1
 /* 80341EFC 0033EE3C  4E 80 00 20 */	blr 
 
+/* 80341F00 0750 .text OSCheckActiveThreads OSCheckActiveThreads */
 .global OSCheckActiveThreads
 OSCheckActiveThreads:
 /* 80341F00 0033EE40  7C 08 02 A6 */	mflr r0
 /* 80341F04 0033EE44  3C 80 80 3D */	lis r4, lbl_803D0838@ha
 /* 80341F08 0033EE48  90 01 00 04 */	stw r0, 4(r1)
-/* 80341F0C 0033EE4C  3C 60 80 45 */	lis r3, lbl_8044BB78@ha
+/* 80341F0C 0033EE4C  3C 60 80 45 */	lis r3, RunQueue@ha
 /* 80341F10 0033EE50  94 21 FF C8 */	stwu r1, -0x38(r1)
 /* 80341F14 0033EE54  BF 41 00 20 */	stmw r26, 0x20(r1)
 /* 80341F18 0033EE58  3B C4 08 38 */	addi r30, r4, lbl_803D0838@l
-/* 80341F1C 0033EE5C  3B E3 BB 78 */	addi r31, r3, lbl_8044BB78@l
+/* 80341F1C 0033EE5C  3B E3 BB 78 */	addi r31, r3, RunQueue@l
 /* 80341F20 0033EE60  3B 80 00 00 */	li r28, 0
-/* 80341F24 0033EE64  4B FF B7 D1 */	bl __RAS_OSDisableInterrupts_begin 
+/* 80341F24 0033EE64  4B FF B7 D1 */	bl __RAS_OSDisableInterrupts_begin
 /* 80341F28 0033EE68  3B 63 00 00 */	addi r27, r3, 0
 /* 80341F2C 0033EE6C  3B BF 00 00 */	addi r29, r31, 0
 /* 80341F30 0033EE70  3B 40 00 00 */	li r26, 0
 lbl_80341F34:
 /* 80341F34 0033EE74  20 1A 00 1F */	subfic r0, r26, 0x1f
-/* 80341F38 0033EE78  80 8D 91 40 */	lwz r4, lbl_804516C0-_SDA_BASE_(r13)
+/* 80341F38 0033EE78  80 8D 91 40 */	lwz r4, RunQueueBits-_SDA_BASE_(r13)
 /* 80341F3C 0033EE7C  38 60 00 01 */	li r3, 1
 /* 80341F40 0033EE80  7C 60 00 30 */	slw r0, r3, r0
 /* 80341F44 0033EE84  7C 80 00 39 */	and. r0, r4, r0
@@ -2070,6 +2092,7 @@ lbl_80342628:
 /* 80342648 0033F588  7C 08 03 A6 */	mtlr r0
 /* 8034264C 0033F58C  4E 80 00 20 */	blr 
 
+/* 80342650 00AC .text OSClearStack OSClearStack */
 .global OSClearStack
 OSClearStack:
 /* 80342650 0033F590  7C 08 02 A6 */	mflr r0
@@ -2119,4 +2142,329 @@ lbl_803426E8:
 /* 803426F0 0033F630  38 21 00 18 */	addi r1, r1, 0x18
 /* 803426F4 0033F634  7C 08 03 A6 */	mtlr r0
 /* 803426F8 0033F638  4E 80 00 20 */	blr 
+
+
+
+.section .data, "aw"
+/* 803D0838 005F .data lbl_803D0838 @831 */
+.global lbl_803D0838
+lbl_803D0838:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd838 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6e /* baserom.dol+0x3cd848 */
+.byte 0x51, 0x75, 0x65, 0x75, 0x65, 0x5b, 0x70, 0x72, 0x69, 0x6f, 0x5d, 0x2e, 0x68, 0x65, 0x61, 0x64 /* baserom.dol+0x3cd858 */
+.byte 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x26, 0x26, 0x20, 0x52, 0x75, 0x6e, 0x51 /* baserom.dol+0x3cd868 */
+.byte 0x75, 0x65, 0x75, 0x65, 0x5b, 0x70, 0x72, 0x69, 0x6f, 0x5d, 0x2e, 0x74, 0x61, 0x69, 0x6c, 0x20 /* baserom.dol+0x3cd878 */
+.byte 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd888 */
+.byte 0x00 /* baserom.dol+0x3cd897 */
+
+/* 803D0898 000B .data lbl_803D0898 @832 */
+.global lbl_803D0898
+lbl_803D0898:
+.byte 0x4f, 0x53, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2e, 0x63, 0x00 /* baserom.dol+0x3cd898 */
+.byte 0x00 /* baserom.dol+0x3cd8a3 */
+
+/* 803D08A4 005F .data lbl_803D08A4 @834 */
+.global lbl_803D08A4
+lbl_803D08A4:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd8a4 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x52, 0x75, 0x6e /* baserom.dol+0x3cd8b4 */
+.byte 0x51, 0x75, 0x65, 0x75, 0x65, 0x5b, 0x70, 0x72, 0x69, 0x6f, 0x5d, 0x2e, 0x68, 0x65, 0x61, 0x64 /* baserom.dol+0x3cd8c4 */
+.byte 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x26, 0x26, 0x20, 0x52, 0x75, 0x6e, 0x51 /* baserom.dol+0x3cd8d4 */
+.byte 0x75, 0x65, 0x75, 0x65, 0x5b, 0x70, 0x72, 0x69, 0x6f, 0x5d, 0x2e, 0x74, 0x61, 0x69, 0x6c, 0x20 /* baserom.dol+0x3cd8e4 */
+.byte 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd8f4 */
+.byte 0x00 /* baserom.dol+0x3cd903 */
+
+/* 803D0904 0046 .data lbl_803D0904 @835 */
+.global lbl_803D0904
+lbl_803D0904:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd904 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65 /* baserom.dol+0x3cd914 */
+.byte 0x63, 0x6b, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x52 /* baserom.dol+0x3cd924 */
+.byte 0x75, 0x6e, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5b, 0x70, 0x72, 0x69, 0x6f, 0x5d, 0x29, 0x20, 0x69 /* baserom.dol+0x3cd934 */
+.byte 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd944 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cd94a */
+
+/* 803D094C 007E .data lbl_803D094C @836 */
+.global lbl_803D094C
+lbl_803D094C:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd94c */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x5f, 0x5f, 0x4f /* baserom.dol+0x3cd95c */
+.byte 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65 /* baserom.dol+0x3cd96c */
+.byte 0x75, 0x65, 0x2e, 0x68, 0x65, 0x61, 0x64, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20 /* baserom.dol+0x3cd97c */
+.byte 0x7c, 0x7c, 0x20, 0x5f, 0x5f, 0x4f, 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd98c */
+.byte 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x2e, 0x68, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x6c /* baserom.dol+0x3cd99c */
+.byte 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x70, 0x72, 0x65, 0x76, 0x20, 0x3d /* baserom.dol+0x3cd9ac */
+.byte 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cd9bc */
+.byte 0x00, 0x00 /* baserom.dol+0x3cd9ca */
+
+/* 803D09CC 007E .data lbl_803D09CC @837 */
+.global lbl_803D09CC
+lbl_803D09CC:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cd9cc */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x5f, 0x5f, 0x4f /* baserom.dol+0x3cd9dc */
+.byte 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65 /* baserom.dol+0x3cd9ec */
+.byte 0x75, 0x65, 0x2e, 0x74, 0x61, 0x69, 0x6c, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20 /* baserom.dol+0x3cd9fc */
+.byte 0x7c, 0x7c, 0x20, 0x5f, 0x5f, 0x4f, 0x53, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cda0c */
+.byte 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x2e, 0x74, 0x61, 0x69, 0x6c, 0x2d, 0x3e, 0x6c /* baserom.dol+0x3cda1c */
+.byte 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x6e, 0x65, 0x78, 0x74, 0x20, 0x3d /* baserom.dol+0x3cda2c */
+.byte 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cda3c */
+.byte 0x00, 0x00 /* baserom.dol+0x3cda4a */
+
+/* 803D0A4C 007A .data lbl_803D0A4C @838 */
+.global lbl_803D0A4C
+lbl_803D0A4C:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cda4c */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cda5c */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e /* baserom.dol+0x3cda6c */
+.byte 0x6e, 0x65, 0x78, 0x74, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x7c, 0x7c, 0x20 /* baserom.dol+0x3cda7c */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3d, 0x3d, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x3cda8c */
+.byte 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x6e, 0x65, 0x78 /* baserom.dol+0x3cda9c */
+.byte 0x74, 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x70, 0x72 /* baserom.dol+0x3cdaac */
+.byte 0x65, 0x76, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdabc */
+.byte 0x00, 0x00 /* baserom.dol+0x3cdac6 */
+
+/* 803D0AC8 007A .data lbl_803D0AC8 @839 */
+.global lbl_803D0AC8
+lbl_803D0AC8:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdac8 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cdad8 */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e /* baserom.dol+0x3cdae8 */
+.byte 0x70, 0x72, 0x65, 0x76, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x7c, 0x7c, 0x20 /* baserom.dol+0x3cdaf8 */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x3d, 0x3d, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x3cdb08 */
+.byte 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x70, 0x72, 0x65 /* baserom.dol+0x3cdb18 */
+.byte 0x76, 0x2d, 0x3e, 0x6c, 0x69, 0x6e, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x2e, 0x6e, 0x65 /* baserom.dol+0x3cdb28 */
+.byte 0x78, 0x74, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdb38 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cdb42 */
+
+/* 803D0B44 0051 .data lbl_803D0B44 @840 */
+.global lbl_803D0B44
+lbl_803D0B44:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdb44 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x2a, 0x28, 0x74 /* baserom.dol+0x3cdb54 */
+.byte 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x73, 0x74, 0x61, 0x63, 0x6b, 0x45, 0x6e, 0x64, 0x29 /* baserom.dol+0x3cdb64 */
+.byte 0x20, 0x3d, 0x3d, 0x20, 0x4f, 0x53, 0x5f, 0x54, 0x48, 0x52, 0x45, 0x41, 0x44, 0x5f, 0x53, 0x54 /* baserom.dol+0x3cdb74 */
+.byte 0x41, 0x43, 0x4b, 0x5f, 0x4d, 0x41, 0x47, 0x49, 0x43, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a /* baserom.dol+0x3cdb84 */
+.byte 0x00 /* baserom.dol+0x3cdb94 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdb95 */
+
+/* 803D0B98 0071 .data lbl_803D0B98 @841 */
+.global lbl_803D0B98
+lbl_803D0B98:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdb98 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x4f, 0x53, 0x5f /* baserom.dol+0x3cdba8 */
+.byte 0x50, 0x52, 0x49, 0x4f, 0x52, 0x49, 0x54, 0x59, 0x5f, 0x4d, 0x49, 0x4e, 0x20, 0x3c, 0x3d, 0x20 /* baserom.dol+0x3cdbb8 */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x70, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79 /* baserom.dol+0x3cdbc8 */
+.byte 0x20, 0x26, 0x26, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x70, 0x72, 0x69, 0x6f /* baserom.dol+0x3cdbd8 */
+.byte 0x72, 0x69, 0x74, 0x79, 0x20, 0x3c, 0x3d, 0x20, 0x4f, 0x53, 0x5f, 0x50, 0x52, 0x49, 0x4f, 0x52 /* baserom.dol+0x3cdbe8 */
+.byte 0x49, 0x54, 0x59, 0x5f, 0x4d, 0x41, 0x58, 0x2b, 0x31, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a /* baserom.dol+0x3cdbf8 */
+.byte 0x00 /* baserom.dol+0x3cdc08 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdc09 */
+
+/* 803D0C0C 0039 .data lbl_803D0C0C @842 */
+.global lbl_803D0C0C
+lbl_803D0C0C:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdc0c */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x30, 0x20, 0x3c /* baserom.dol+0x3cdc1c */
+.byte 0x3d, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x73, 0x75, 0x73, 0x70, 0x65, 0x6e /* baserom.dol+0x3cdc2c */
+.byte 0x64, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdc3c */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdc45 */
+
+/* 803D0C48 0049 .data lbl_803D0C48 @843 */
+.global lbl_803D0C48
+lbl_803D0C48:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdc48 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65 /* baserom.dol+0x3cdc58 */
+.byte 0x63, 0x6b, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x26, 0x74 /* baserom.dol+0x3cdc68 */
+.byte 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4a, 0x6f, 0x69, 0x6e /* baserom.dol+0x3cdc78 */
+.byte 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdc88 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdc91 */
+
+/* 803D0C94 0051 .data lbl_803D0C94 @844 */
+.global lbl_803D0C94
+lbl_803D0C94:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdc94 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cdca4 */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3d, 0x3d, 0x20, 0x26, 0x52 /* baserom.dol+0x3cdcb4 */
+.byte 0x75, 0x6e, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5b, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e /* baserom.dol+0x3cdcc4 */
+.byte 0x70, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x5d, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a /* baserom.dol+0x3cdcd4 */
+.byte 0x00 /* baserom.dol+0x3cdce4 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdce5 */
+
+/* 803D0CE8 0052 .data lbl_803D0CE8 @845 */
+.global lbl_803D0CE8
+lbl_803D0CE8:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdce8 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4d /* baserom.dol+0x3cdcf8 */
+.byte 0x65, 0x6d, 0x62, 0x65, 0x72, 0x28, 0x26, 0x52, 0x75, 0x6e, 0x51, 0x75, 0x65, 0x75, 0x65, 0x5b /* baserom.dol+0x3cdd08 */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x70, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79 /* baserom.dol+0x3cdd18 */
+.byte 0x5d, 0x2c, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64 /* baserom.dol+0x3cdd28 */
+.byte 0x0a, 0x00 /* baserom.dol+0x3cdd38 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cdd3a */
+
+/* 803D0D3C 0059 .data lbl_803D0D3C @846 */
+.global lbl_803D0D3C
+lbl_803D0D3C:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdd3c */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cdd4c */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x70, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3d, 0x3d /* baserom.dol+0x3cdd5c */
+.byte 0x20, 0x5f, 0x5f, 0x4f, 0x53, 0x47, 0x65, 0x74, 0x45, 0x66, 0x66, 0x65, 0x63, 0x74, 0x69, 0x76 /* baserom.dol+0x3cdd6c */
+.byte 0x65, 0x50, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x3cdd7c */
+.byte 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdd8c */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cdd95 */
+
+/* 803D0D98 0042 .data lbl_803D0D98 @847 */
+.global lbl_803D0D98
+lbl_803D0D98:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdd98 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x21, 0x49, 0x73 /* baserom.dol+0x3cdda8 */
+.byte 0x53, 0x75, 0x73, 0x70, 0x65, 0x6e, 0x64, 0x65, 0x64, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x3cddb8 */
+.byte 0x2d, 0x3e, 0x73, 0x75, 0x73, 0x70, 0x65, 0x6e, 0x64, 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64 /* baserom.dol+0x3cddc8 */
+.byte 0x0a, 0x00 /* baserom.dol+0x3cddd8 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cddda */
+
+/* 803D0DDC 003A .data lbl_803D0DDC @848 */
+.global lbl_803D0DDC
+lbl_803D0DDC:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdddc */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cddec */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55 /* baserom.dol+0x3cddfc */
+.byte 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cde0c */
+.byte 0x00, 0x00 /* baserom.dol+0x3cde16 */
+
+/* 803D0E18 003A .data lbl_803D0E18 @849 */
+.global lbl_803D0E18
+lbl_803D0E18:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cde18 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cde28 */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55 /* baserom.dol+0x3cde38 */
+.byte 0x4c, 0x4c, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cde48 */
+.byte 0x00, 0x00 /* baserom.dol+0x3cde52 */
+
+/* 803D0E54 0044 .data lbl_803D0E54 @850 */
+.global lbl_803D0E54
+lbl_803D0E54:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cde54 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x43, 0x68, 0x65 /* baserom.dol+0x3cde64 */
+.byte 0x63, 0x6b, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64, 0x51, 0x75, 0x65, 0x75, 0x65, 0x28, 0x74, 0x68 /* baserom.dol+0x3cde74 */
+.byte 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x29, 0x20, 0x69, 0x6e, 0x20 /* baserom.dol+0x3cde84 */
+.byte 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cde94 */
+
+/* 803D0E98 0044 .data lbl_803D0E98 @851 */
+.global lbl_803D0E98
+lbl_803D0E98:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cde98 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x49, 0x73, 0x4d /* baserom.dol+0x3cdea8 */
+.byte 0x65, 0x6d, 0x62, 0x65, 0x72, 0x28, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75 /* baserom.dol+0x3cdeb8 */
+.byte 0x65, 0x75, 0x65, 0x2c, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6e, 0x20 /* baserom.dol+0x3cdec8 */
+.byte 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cded8 */
+
+/* 803D0EDC 003B .data lbl_803D0EDC @852 */
+.global lbl_803D0EDC
+lbl_803D0EDC:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdedc */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cdeec */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x70, 0x72, 0x69, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x20, 0x3d, 0x3d /* baserom.dol+0x3cdefc */
+.byte 0x20, 0x33, 0x32, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdf0c */
+.byte 0x00 /* baserom.dol+0x3cdf17 */
+
+/* 803D0F18 003F .data lbl_803D0F18 @853 */
+.global lbl_803D0F18
+lbl_803D0F18:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdf18 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x21, 0x5f, 0x5f /* baserom.dol+0x3cdf28 */
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x44, 0x65, 0x61, 0x64, 0x4c, 0x6f, 0x63, 0x6b, 0x28 /* baserom.dol+0x3cdf38 */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdf48 */
+.byte 0x00 /* baserom.dol+0x3cdf57 */
+
+/* 803D0F58 0067 .data lbl_803D0F58 @854 */
+.global lbl_803D0F58
+lbl_803D0F58:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdf58 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x74, 0x68, 0x72 /* baserom.dol+0x3cdf68 */
+.byte 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4d, 0x75, 0x74, 0x65, 0x78, 0x2e /* baserom.dol+0x3cdf78 */
+.byte 0x68, 0x65, 0x61, 0x64, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x26, 0x26, 0x20 /* baserom.dol+0x3cdf88 */
+.byte 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x2d, 0x3e, 0x71, 0x75, 0x65, 0x75, 0x65, 0x4d, 0x75, 0x74 /* baserom.dol+0x3cdf98 */
+.byte 0x65, 0x78, 0x2e, 0x74, 0x61, 0x69, 0x6c, 0x20, 0x3d, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20 /* baserom.dol+0x3cdfa8 */
+.byte 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3cdfb8 */
+.byte 0x00 /* baserom.dol+0x3cdfbf */
+
+/* 803D0FC0 0045 .data lbl_803D0FC0 @855 */
+.global lbl_803D0FC0
+lbl_803D0FC0:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3cdfc0 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x2e, 0x20, 0x75, 0x6e /* baserom.dol+0x3cdfd0 */
+.byte 0x6b, 0x6f, 0x77, 0x6e, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64, 0x20, 0x73, 0x74, 0x61, 0x74 /* baserom.dol+0x3cdfe0 */
+.byte 0x65, 0x20, 0x28, 0x25, 0x64, 0x29, 0x20, 0x6f, 0x66, 0x20, 0x74, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x3cdff0 */
+.byte 0x20, 0x25, 0x70, 0x0a, 0x00 /* baserom.dol+0x3ce000 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce005 */
+
+/* 803D1008 003D .data lbl_803D1008 @856 */
+.global lbl_803D1008
+lbl_803D1008:
+.byte 0x4f, 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x41, 0x63, 0x74, 0x69, 0x76, 0x65, 0x54, 0x68, 0x72 /* baserom.dol+0x3ce008 */
+.byte 0x65, 0x61, 0x64, 0x73, 0x3a, 0x20, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x20, 0x5f, 0x5f, 0x4f /* baserom.dol+0x3ce018 */
+.byte 0x53, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x4d, 0x75, 0x74, 0x65, 0x78, 0x65, 0x73, 0x28, 0x74, 0x68 /* baserom.dol+0x3ce028 */
+.byte 0x72, 0x65, 0x61, 0x64, 0x29, 0x20, 0x69, 0x6e, 0x20, 0x25, 0x64, 0x0a, 0x00 /* baserom.dol+0x3ce038 */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce045 */
+
+
+
+.section .bss, "aw"
+/* 8044BB78 0100 .bss RunQueue RunQueue */
+.global RunQueue
+RunQueue:
+.skip 0x100
+
+/* 8044BC78 0318 .bss IdleThread IdleThread */
+.global IdleThread
+IdleThread:
+.skip 0x318
+
+/* 8044BF90 0318 .bss DefaultThread DefaultThread */
+.global DefaultThread
+DefaultThread:
+.skip 0x318
+
+/* 8044C2A8 02C8 .bss IdleContext IdleContext */
+.global IdleContext
+IdleContext:
+.skip 0x2c8
+
+
+
+.section .sdata, "a"
+/* 804509B8 0004 .sdata SwitchThreadCallback SwitchThreadCallback */
+.global SwitchThreadCallback
+SwitchThreadCallback:
+.byte 0x80, 0x34, 0x0a, 0xa4 /* baserom.dol+0x3d0718 */
+
+/* 804509BC 0001 .sdata lbl_804509BC @833 */
+.global lbl_804509BC
+lbl_804509BC:
+.byte 0x00 /* baserom.dol+0x3d071c */
+.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3d071d */
+
+
+
+.section .sbss, "aw"
+/* 804516C0 0004 .sbss RunQueueBits RunQueueBits */
+.global RunQueueBits
+RunQueueBits:
+.skip 0x4
+
+/* 804516C4 0004 .sbss RunQueueHint RunQueueHint */
+.global RunQueueHint
+RunQueueHint:
+.skip 0x4
+
+/* 804516C8 0004 .sbss Reschedule Reschedule */
+.global Reschedule
+Reschedule:
+.skip 0x4
+.skip 0x4 /* padding */
+
+/* 804516D0 0008 .sbss lbl_804516D0 lbl_804516D0 */
+.global lbl_804516D0
+lbl_804516D0:
+.skip 0x8
 
