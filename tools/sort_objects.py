@@ -116,6 +116,15 @@ class Node:
         self.name = name
         self.depth = 0
 
+    def __eq__(self, other):
+        return other.lib == self.lib and other.name == self.name
+
+    def __hash__(self):
+        return hash((self.lib, self.name))
+
+    def __repr__(self):
+        return self.__str__()
+        
     def __str__(self):
         return str((self.depth, self.lib, self.name))
 

@@ -4,6 +4,7 @@ from capstone import *
 from capstone.ppc import *
 import sys
 from collections import defaultdict
+from collections import deque
 
 r13_addr = 0x80458580
 r2_addr = 0x80459A00
@@ -264,25 +265,29 @@ blacklistedInsns = {
 # Calls callback for every instruction in the specified code section
 
 
-def disasm_iter(offset, address, size, callback):
+def disasm_iter(offset, address, size, callback, data=None):
     if size == 0:
         return
     start = address
     end = address + size
     while address < end:
+        current = address
         code = filecontent[offset + (address-start): offset + size]
         for insn in cs.disasm(code, address):
             address = insn.address
             if insn.id in blacklistedInsns:
-                callback(address, offset + address - start, None, insn.bytes)
+                callback(address, offset + address - start, None, insn.bytes, data)
             else:
-                callback(address, offset + address - start, insn, insn.bytes)
+                callback(address, offset + address - start, insn, insn.bytes, data)
             address += 4
         if address < end:
             o = offset + address - start
-            callback(address, offset + address - start,
-                     None, filecontent[o: o + 4])
+            callback(address, offset + address - start, None, filecontent[o: o + 4], data)
             address += 4
+        yield current, start, end
+
+def disasm(offset, address, size, callback, data=None):
+    deque(disasm_iter(offset, address, size, callback, data), maxlen=0)
 
 
 lisInsns = {}  # register : insn
@@ -336,7 +341,7 @@ def is_store_insn(insn):
 # Get labels
 
 
-def get_label_callback(address, offset, insn, bytes):
+def get_label_callback(address, offset, insn, bytes, data=None):
     global r13_addr
     global r2_addr
     if insn == None:
@@ -637,12 +642,12 @@ disasemble_output = None
 # Disassemble code
 
 
-def disassemble_callback(address, offset, insn, bytes):
+def disassemble_callback(address, offset, insn, bytes, builder):
     # Output label (if any)
     if address in labels:
         if address in labelNames:
-            disasemble_output.write(".global %s\n" % addr_to_label(address))
-        disasemble_output.write("%s:\n" % addr_to_label(address))
+            builder.write(".global %s" % addr_to_label(address))
+        builder.write("%s:" % addr_to_label(address))
     prefixComment = '/* %08X %08X  %02X %02X %02X %02X */' % (
         address, offset, bytes[0], bytes[1], bytes[2], bytes[3])
     asm = None
@@ -671,4 +676,4 @@ def disassemble_callback(address, offset, insn, bytes):
             asm = disasm_ps_mem(raw, idx)
     if asm == None:
         asm = '.4byte 0x%08X  /* unknown instruction */' % raw
-    disasemble_output.write('%s\t%s\n' % (prefixComment, asm))
+    builder.write('%s\t%s' % (prefixComment, asm))
