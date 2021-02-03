@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802982EC 0028 .text __ct__10JASDrumSetFv __ct__10JASDrumSetFv */
+/* 802982EC 0028 .text      __ct__10JASDrumSetFv           __ct__10JASDrumSetFv           */
 .global __ct__10JASDrumSetFv
 __ct__10JASDrumSetFv:
 /* 802982EC 0029522C  3C 80 80 3C */	lis r4, __vt__7JASInst@ha
@@ -16,7 +18,7 @@ __ct__10JASDrumSetFv:
 /* 8029830C 0029524C  98 03 00 08 */	stb r0, 8(r3)
 /* 80298310 00295250  4E 80 00 20 */	blr 
 
-/* 80298314 005C .text __dt__10JASDrumSetFv __dt__10JASDrumSetFv */
+/* 80298314 0034 .text      __dt__10JASDrumSetFv           __dt__10JASDrumSetFv           */
 .global __dt__10JASDrumSetFv
 __dt__10JASDrumSetFv:
 /* 80298314 00295254  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -24,20 +26,26 @@ __dt__10JASDrumSetFv:
 /* 8029831C 0029525C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80298320 00295260  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80298324 00295264  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80298328 00295268  41 82 00 30 */	beq lbl_80298358
+/* 80298328 00295268  41 82 00 30 */	beq func_80298358
 /* 8029832C 0029526C  3C 60 80 3C */	lis r3, __vt__10JASDrumSet@ha
 /* 80298330 00295270  38 03 77 10 */	addi r0, r3, __vt__10JASDrumSet@l
 /* 80298334 00295274  90 1F 00 00 */	stw r0, 0(r31)
-/* 80298338 00295278  41 82 00 10 */	beq lbl_80298348
+/* 80298338 00295278  41 82 00 10 */	beq func_80298348
 /* 8029833C 0029527C  3C 60 80 3C */	lis r3, __vt__7JASInst@ha
 /* 80298340 00295280  38 03 76 FC */	addi r0, r3, __vt__7JASInst@l
 /* 80298344 00295284  90 1F 00 00 */	stw r0, 0(r31)
-lbl_80298348:
+
+/* 80298348 0010 .text      func_80298348                  func_80298348                  */
+.global func_80298348
+func_80298348:
 /* 80298348 00295288  7C 80 07 35 */	extsh. r0, r4
-/* 8029834C 0029528C  40 81 00 0C */	ble lbl_80298358
+/* 8029834C 0029528C  40 81 00 0C */	ble func_80298358
 /* 80298350 00295290  7F E3 FB 78 */	mr r3, r31
 /* 80298354 00295294  48 03 69 E9 */	bl __dl__FPv
-lbl_80298358:
+
+/* 80298358 0018 .text      func_80298358                  func_80298358                  */
+.global func_80298358
+func_80298358:
 /* 80298358 00295298  7F E3 FB 78 */	mr r3, r31
 /* 8029835C 0029529C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80298360 002952A0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -45,7 +53,7 @@ lbl_80298358:
 /* 80298368 002952A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029836C 002952AC  4E 80 00 20 */	blr 
 
-/* 80298370 005C .text newPercArray__10JASDrumSetFUcP7JKRHeap newPercArray__10JASDrumSetFUcP7JKRHeap */
+/* 80298370 0048 .text      newPercArray__10JASDrumSetFUcP7JKRHeap newPercArray__10JASDrumSetFUcP7JKRHeap */
 .global newPercArray__10JASDrumSetFUcP7JKRHeap
 newPercArray__10JASDrumSetFUcP7JKRHeap:
 /* 80298370 002952B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -54,7 +62,7 @@ newPercArray__10JASDrumSetFUcP7JKRHeap:
 /* 8029837C 002952BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80298380 002952C0  7C 7F 1B 78 */	mr r31, r3
 /* 80298384 002952C4  54 80 06 3F */	clrlwi. r0, r4, 0x18
-/* 80298388 002952C8  41 82 00 30 */	beq lbl_802983B8
+/* 80298388 002952C8  41 82 00 30 */	beq func_802983B8
 /* 8029838C 002952CC  98 9F 00 08 */	stb r4, 8(r31)
 /* 80298390 002952D0  88 1F 00 08 */	lbz r0, 8(r31)
 /* 80298394 002952D4  54 03 10 3A */	slwi r3, r0, 2
@@ -66,35 +74,47 @@ newPercArray__10JASDrumSetFUcP7JKRHeap:
 /* 802983AC 002952EC  88 1F 00 08 */	lbz r0, 8(r31)
 /* 802983B0 002952F0  54 04 10 3A */	slwi r4, r0, 2
 /* 802983B4 002952F4  4B FF 70 CD */	bl bzero__7JASCalcFPvUl
-lbl_802983B8:
+
+/* 802983B8 0014 .text      func_802983B8                  func_802983B8                  */
+.global func_802983B8
+func_802983B8:
 /* 802983B8 002952F8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802983BC 002952FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802983C0 00295300  7C 08 03 A6 */	mtlr r0
 /* 802983C4 00295304  38 21 00 10 */	addi r1, r1, 0x10
 /* 802983C8 00295308  4E 80 00 20 */	blr 
 
-/* 802983CC 00E8 .text getParam__10JASDrumSetCFiiP12JASInstParam getParam__10JASDrumSetCFiiP12JASInstParam */
+/* 802983CC 0014 .text      getParam__10JASDrumSetCFiiP12JASInstParam getParam__10JASDrumSetCFiiP12JASInstParam */
 .global getParam__10JASDrumSetCFiiP12JASInstParam
 getParam__10JASDrumSetCFiiP12JASInstParam:
 /* 802983CC 0029530C  80 A3 00 04 */	lwz r5, 4(r3)
 /* 802983D0 00295310  28 05 00 00 */	cmplwi r5, 0
-/* 802983D4 00295314  40 82 00 0C */	bne lbl_802983E0
+/* 802983D4 00295314  40 82 00 0C */	bne func_802983E0
 /* 802983D8 00295318  38 60 00 00 */	li r3, 0
 /* 802983DC 0029531C  4E 80 00 20 */	blr 
-lbl_802983E0:
+
+/* 802983E0 0014 .text      func_802983E0                  func_802983E0                  */
+.global func_802983E0
+func_802983E0:
 /* 802983E0 00295320  88 03 00 08 */	lbz r0, 8(r3)
 /* 802983E4 00295324  7C 04 00 00 */	cmpw r4, r0
-/* 802983E8 00295328  41 80 00 0C */	blt lbl_802983F4
+/* 802983E8 00295328  41 80 00 0C */	blt func_802983F4
 /* 802983EC 0029532C  38 60 00 00 */	li r3, 0
 /* 802983F0 00295330  4E 80 00 20 */	blr 
-lbl_802983F4:
+
+/* 802983F4 0018 .text      func_802983F4                  func_802983F4                  */
+.global func_802983F4
+func_802983F4:
 /* 802983F4 00295334  54 80 10 3A */	slwi r0, r4, 2
 /* 802983F8 00295338  7C E5 00 2E */	lwzx r7, r5, r0
 /* 802983FC 0029533C  28 07 00 00 */	cmplwi r7, 0
-/* 80298400 00295340  40 82 00 0C */	bne lbl_8029840C
+/* 80298400 00295340  40 82 00 0C */	bne func_8029840C
 /* 80298404 00295344  38 60 00 00 */	li r3, 0
 /* 80298408 00295348  4E 80 00 20 */	blr 
-lbl_8029840C:
+
+/* 8029840C 0068 .text      func_8029840C                  func_8029840C                  */
+.global func_8029840C
+func_8029840C:
 /* 8029840C 0029534C  38 A0 00 00 */	li r5, 0
 /* 80298410 00295350  98 A6 00 1C */	stb r5, 0x1c(r6)
 /* 80298414 00295354  38 80 00 01 */	li r4, 1
@@ -107,22 +127,25 @@ lbl_8029840C:
 /* 80298430 00295370  D0 06 00 0C */	stfs f0, 0xc(r6)
 /* 80298434 00295374  A0 07 00 0C */	lhz r0, 0xc(r7)
 /* 80298438 00295378  B0 06 00 18 */	sth r0, 0x18(r6)
-/* 8029843C 0029537C  3C 60 80 43 */	lis r3, lbl_80431B58@ha
-/* 80298440 00295380  94 A3 1B 58 */	stwu r5, lbl_80431B58@l(r3)
-/* 80298444 00295384  C0 02 BC 48 */	lfs f0, lbl_80455648-_SDA2_BASE_(r2)
+/* 8029843C 0029537C  3C 60 80 43 */	lis r3, sym_80431B58@ha
+/* 80298440 00295380  94 A3 1B 58 */	stwu r5, sym_80431B58@l(r3)
+/* 80298444 00295384  C0 02 BC 48 */	lfs f0, JASDrumSet__LIT_219-_SDA2_BASE_(r2)
 /* 80298448 00295388  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029844C 0029538C  90 A3 00 08 */	stw r5, 8(r3)
 /* 80298450 00295390  90 A3 00 0C */	stw r5, 0xc(r3)
 /* 80298454 00295394  D0 03 00 10 */	stfs f0, 0x10(r3)
-/* 80298458 00295398  C0 02 BC 4C */	lfs f0, lbl_8045564C-_SDA2_BASE_(r2)
+/* 80298458 00295398  C0 02 BC 4C */	lfs f0, JASDrumSet__LIT_220-_SDA2_BASE_(r2)
 /* 8029845C 0029539C  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 80298460 002953A0  88 0D 8C F4 */	lbz r0, lbl_80451274-_SDA_BASE_(r13)
+/* 80298460 002953A0  88 0D 8C F4 */	lbz r0, sym_80451274-_SDA_BASE_(r13)
 /* 80298464 002953A4  7C 00 07 75 */	extsb. r0, r0
-/* 80298468 002953A8  40 82 00 0C */	bne lbl_80298474
-/* 8029846C 002953AC  90 6D 8C F0 */	stw r3, lbl_80451270-_SDA_BASE_(r13)
-/* 80298470 002953B0  98 8D 8C F4 */	stb r4, lbl_80451274-_SDA_BASE_(r13)
-lbl_80298474:
-/* 80298474 002953B4  38 0D 8C F0 */	addi r0, r13, lbl_80451270-_SDA_BASE_
+/* 80298468 002953A8  40 82 00 0C */	bne func_80298474
+/* 8029846C 002953AC  90 6D 8C F0 */	stw r3, sym_80451270-_SDA_BASE_(r13)
+/* 80298470 002953B0  98 8D 8C F4 */	stb r4, sym_80451274-_SDA_BASE_(r13)
+
+/* 80298474 0040 .text      func_80298474                  func_80298474                  */
+.global func_80298474
+func_80298474:
+/* 80298474 002953B4  38 0D 8C F0 */	addi r0, r13, sym_80451270-_SDA_BASE_
 /* 80298478 002953B8  90 06 00 14 */	stw r0, 0x14(r6)
 /* 8029847C 002953BC  38 00 00 01 */	li r0, 1
 /* 80298480 002953C0  98 06 00 1D */	stb r0, 0x1d(r6)
@@ -139,7 +162,7 @@ lbl_80298474:
 /* 802984AC 002953EC  38 60 00 01 */	li r3, 1
 /* 802984B0 002953F0  4E 80 00 20 */	blr 
 
-/* 802984B4 0010 .text setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc */
+/* 802984B4 0010 .text      setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc */
 .global setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc
 setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc:
 /* 802984B4 002953F4  80 63 00 04 */	lwz r3, 4(r3)
@@ -147,25 +170,25 @@ setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc:
 /* 802984BC 002953FC  7C A3 01 2E */	stwx r5, r3, r0
 /* 802984C0 00295400  4E 80 00 20 */	blr 
 
-/* 802984C4 0020 .text __ct__Q210JASDrumSet5TPercFv __ct__Q210JASDrumSet5TPercFv */
+/* 802984C4 0020 .text      __ct__Q210JASDrumSet5TPercFv   __ct__Q210JASDrumSet5TPercFv   */
 .global __ct__Q210JASDrumSet5TPercFv
 __ct__Q210JASDrumSet5TPercFv:
-/* 802984C4 00295404  C0 02 BC 48 */	lfs f0, lbl_80455648-_SDA2_BASE_(r2)
+/* 802984C4 00295404  C0 02 BC 48 */	lfs f0, JASDrumSet__LIT_219-_SDA2_BASE_(r2)
 /* 802984C8 00295408  D0 03 00 00 */	stfs f0, 0(r3)
 /* 802984CC 0029540C  D0 03 00 04 */	stfs f0, 4(r3)
-/* 802984D0 00295410  C0 02 BC 50 */	lfs f0, lbl_80455650-_SDA2_BASE_(r2)
+/* 802984D0 00295410  C0 02 BC 50 */	lfs f0, LIT_253-_SDA2_BASE_(r2)
 /* 802984D4 00295414  D0 03 00 08 */	stfs f0, 8(r3)
 /* 802984D8 00295418  38 00 03 E8 */	li r0, 0x3e8
 /* 802984DC 0029541C  B0 03 00 0C */	sth r0, 0xc(r3)
 /* 802984E0 00295420  4E 80 00 20 */	blr 
 
-/* 802984E4 0008 .text setRelease__Q210JASDrumSet5TPercFUl setRelease__Q210JASDrumSet5TPercFUl */
+/* 802984E4 0008 .text      setRelease__Q210JASDrumSet5TPercFUl setRelease__Q210JASDrumSet5TPercFUl */
 .global setRelease__Q210JASDrumSet5TPercFUl
 setRelease__Q210JASDrumSet5TPercFUl:
 /* 802984E4 00295424  B0 83 00 0C */	sth r4, 0xc(r3)
 /* 802984E8 00295428  4E 80 00 20 */	blr 
 
-/* 802984EC 000C .text getType__10JASDrumSetCFv getType__10JASDrumSetCFv */
+/* 802984EC 000C .text      getType__10JASDrumSetCFv       getType__10JASDrumSetCFv       */
 .global getType__10JASDrumSetCFv
 getType__10JASDrumSetCFv:
 /* 802984EC 0029542C  3C 60 50 45 */	lis r3, 0x50455243@ha
@@ -173,9 +196,11 @@ getType__10JASDrumSetCFv:
 /* 802984F4 00295434  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C7710 0014 .data __vt__10JASDrumSet __vt__10JASDrumSet */
+/* 803C7710 0014 .data      __vt__10JASDrumSet             __vt__10JASDrumSet             */
 .global __vt__10JASDrumSet
 __vt__10JASDrumSet:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x83, 0x14, 0x80, 0x29, 0x83, 0xcc /* baserom.dol+0x3c4710 */
@@ -183,42 +208,48 @@ __vt__10JASDrumSet:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c4724 */
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 80431B58 0018 .bss lbl_80431B58 osc$213 */
-.global lbl_80431B58
-lbl_80431B58:
+/* 80431B58 0018 .bss       sym_80431B58                   osc$213                        */
+.global sym_80431B58
+sym_80431B58:
 .skip 0x18
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451270 0004 .sbss lbl_80451270 oscp$214 */
-.global lbl_80451270
-lbl_80451270:
+/* 80451270 0004 .sbss      sym_80451270                   oscp$214                       */
+.global sym_80451270
+sym_80451270:
 .skip 0x4
 
-/* 80451274 0004 .sbss lbl_80451274 lbl_80451274 */
-.global lbl_80451274
-lbl_80451274:
+/* 80451274 0004 .sbss      sym_80451274                   sym_80451274                   */
+.global sym_80451274
+sym_80451274:
 .skip 0x4
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455648 0004 .sdata2 lbl_80455648 @219 */
-.global lbl_80455648
-lbl_80455648:
+/* 80455648 0004 .sdata2    JASDrumSet__LIT_219            @219                           */
+.global JASDrumSet__LIT_219
+JASDrumSet__LIT_219:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d44a8 */
 
-/* 8045564C 0004 .sdata2 lbl_8045564C @220 */
-.global lbl_8045564C
-lbl_8045564C:
+/* 8045564C 0004 .sdata2    JASDrumSet__LIT_220            @220                           */
+.global JASDrumSet__LIT_220
+JASDrumSet__LIT_220:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44ac */
 
-/* 80455650 0004 .sdata2 lbl_80455650 @253 */
-.global lbl_80455650
-lbl_80455650:
+/* 80455650 0004 .sdata2    LIT_253                        @253                           */
+.global LIT_253
+LIT_253:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44b0 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44b4 */
 

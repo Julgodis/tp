@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 803726A0 0108 .text CircleBufferReadBytes CircleBufferReadBytes */
+/* 803726A0 003C .text      CircleBufferReadBytes          CircleBufferReadBytes          */
 .global CircleBufferReadBytes
 CircleBufferReadBytes:
 /* 803726A0 0036F5E0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -17,10 +19,13 @@ CircleBufferReadBytes:
 /* 803726C4 0036F604  7C 9C 23 78 */	mr r28, r4
 /* 803726C8 0036F608  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803726CC 0036F60C  7C 1F 00 40 */	cmplw r31, r0
-/* 803726D0 0036F610  40 81 00 0C */	ble lbl_803726DC
+/* 803726D0 0036F610  40 81 00 0C */	ble func_803726DC
 /* 803726D4 0036F614  38 60 FF FF */	li r3, -1
-/* 803726D8 0036F618  48 00 00 B0 */	b lbl_80372788
-lbl_803726DC:
+/* 803726D8 0036F618  48 00 00 B0 */	b func_80372788
+
+/* 803726DC 0040 .text      func_803726DC                  func_803726DC                  */
+.global func_803726DC
+func_803726DC:
 /* 803726DC 0036F61C  38 7E 00 18 */	addi r3, r30, 0x18
 /* 803726E0 0036F620  48 00 05 E9 */	bl MWEnterCriticalSection
 /* 803726E4 0036F624  80 7E 00 08 */	lwz r3, 8(r30)
@@ -29,15 +34,18 @@ lbl_803726DC:
 /* 803726F0 0036F630  7C 63 20 50 */	subf r3, r3, r4
 /* 803726F4 0036F634  7F A3 00 50 */	subf r29, r3, r0
 /* 803726F8 0036F638  7C 1F E8 40 */	cmplw r31, r29
-/* 803726FC 0036F63C  40 80 00 20 */	bge lbl_8037271C
+/* 803726FC 0036F63C  40 80 00 20 */	bge func_8037271C
 /* 80372700 0036F640  7F 83 E3 78 */	mr r3, r28
 /* 80372704 0036F644  7F E5 FB 78 */	mr r5, r31
 /* 80372708 0036F648  4B C9 0E 39 */	bl memcpy
 /* 8037270C 0036F64C  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80372710 0036F650  7C 00 FA 14 */	add r0, r0, r31
 /* 80372714 0036F654  90 1E 00 00 */	stw r0, 0(r30)
-/* 80372718 0036F658  48 00 00 30 */	b lbl_80372748
-lbl_8037271C:
+/* 80372718 0036F658  48 00 00 30 */	b func_80372748
+
+/* 8037271C 002C .text      func_8037271C                  func_8037271C                  */
+.global func_8037271C
+func_8037271C:
 /* 8037271C 0036F65C  7F 83 E3 78 */	mr r3, r28
 /* 80372720 0036F660  7F A5 EB 78 */	mr r5, r29
 /* 80372724 0036F664  4B C9 0E 1D */	bl memcpy
@@ -49,15 +57,21 @@ lbl_8037271C:
 /* 8037273C 0036F67C  7C 00 FA 14 */	add r0, r0, r31
 /* 80372740 0036F680  7C 1D 00 50 */	subf r0, r29, r0
 /* 80372744 0036F684  90 1E 00 00 */	stw r0, 0(r30)
-lbl_80372748:
+
+/* 80372748 001C .text      func_80372748                  func_80372748                  */
+.global func_80372748
+func_80372748:
 /* 80372748 0036F688  80 9E 00 08 */	lwz r4, 8(r30)
 /* 8037274C 0036F68C  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80372750 0036F690  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80372754 0036F694  7C 04 00 50 */	subf r0, r4, r0
 /* 80372758 0036F698  7C 03 00 40 */	cmplw r3, r0
-/* 8037275C 0036F69C  40 82 00 08 */	bne lbl_80372764
+/* 8037275C 0036F69C  40 82 00 08 */	bne func_80372764
 /* 80372760 0036F6A0  90 9E 00 00 */	stw r4, 0(r30)
-lbl_80372764:
+
+/* 80372764 0024 .text      func_80372764                  func_80372764                  */
+.global func_80372764
+func_80372764:
 /* 80372764 0036F6A4  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 80372768 0036F6A8  38 7E 00 18 */	addi r3, r30, 0x18
 /* 8037276C 0036F6AC  7C 00 FA 14 */	add r0, r0, r31
@@ -67,7 +81,10 @@ lbl_80372764:
 /* 8037277C 0036F6BC  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80372780 0036F6C0  48 00 05 25 */	bl MWExitCriticalSection
 /* 80372784 0036F6C4  38 60 00 00 */	li r3, 0
-lbl_80372788:
+
+/* 80372788 0020 .text      func_80372788                  func_80372788                  */
+.global func_80372788
+func_80372788:
 /* 80372788 0036F6C8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8037278C 0036F6CC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80372790 0036F6D0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -77,7 +94,7 @@ lbl_80372788:
 /* 803727A0 0036F6E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803727A4 0036F6E4  4E 80 00 20 */	blr 
 
-/* 803727A8 0108 .text CircleBufferWriteBytes CircleBufferWriteBytes */
+/* 803727A8 003C .text      CircleBufferWriteBytes         CircleBufferWriteBytes         */
 .global CircleBufferWriteBytes
 CircleBufferWriteBytes:
 /* 803727A8 0036F6E8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -92,10 +109,13 @@ CircleBufferWriteBytes:
 /* 803727CC 0036F70C  7C 9C 23 78 */	mr r28, r4
 /* 803727D0 0036F710  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803727D4 0036F714  7C 1F 00 40 */	cmplw r31, r0
-/* 803727D8 0036F718  40 81 00 0C */	ble lbl_803727E4
+/* 803727D8 0036F718  40 81 00 0C */	ble func_803727E4
 /* 803727DC 0036F71C  38 60 FF FF */	li r3, -1
-/* 803727E0 0036F720  48 00 00 B0 */	b lbl_80372890
-lbl_803727E4:
+/* 803727E0 0036F720  48 00 00 B0 */	b func_80372890
+
+/* 803727E4 0040 .text      func_803727E4                  func_803727E4                  */
+.global func_803727E4
+func_803727E4:
 /* 803727E4 0036F724  38 7E 00 18 */	addi r3, r30, 0x18
 /* 803727E8 0036F728  48 00 04 E1 */	bl MWEnterCriticalSection
 /* 803727EC 0036F72C  80 9E 00 08 */	lwz r4, 8(r30)
@@ -104,15 +124,18 @@ lbl_803727E4:
 /* 803727F8 0036F738  7C 84 18 50 */	subf r4, r4, r3
 /* 803727FC 0036F73C  7F A4 00 50 */	subf r29, r4, r0
 /* 80372800 0036F740  7C 1D F8 40 */	cmplw r29, r31
-/* 80372804 0036F744  41 80 00 20 */	blt lbl_80372824
+/* 80372804 0036F744  41 80 00 20 */	blt func_80372824
 /* 80372808 0036F748  7F 84 E3 78 */	mr r4, r28
 /* 8037280C 0036F74C  7F E5 FB 78 */	mr r5, r31
 /* 80372810 0036F750  4B C9 0D 31 */	bl memcpy
 /* 80372814 0036F754  80 1E 00 04 */	lwz r0, 4(r30)
 /* 80372818 0036F758  7C 00 FA 14 */	add r0, r0, r31
 /* 8037281C 0036F75C  90 1E 00 04 */	stw r0, 4(r30)
-/* 80372820 0036F760  48 00 00 30 */	b lbl_80372850
-lbl_80372824:
+/* 80372820 0036F760  48 00 00 30 */	b func_80372850
+
+/* 80372824 002C .text      func_80372824                  func_80372824                  */
+.global func_80372824
+func_80372824:
 /* 80372824 0036F764  7F 84 E3 78 */	mr r4, r28
 /* 80372828 0036F768  7F A5 EB 78 */	mr r5, r29
 /* 8037282C 0036F76C  4B C9 0D 15 */	bl memcpy
@@ -124,15 +147,21 @@ lbl_80372824:
 /* 80372844 0036F784  7C 00 FA 14 */	add r0, r0, r31
 /* 80372848 0036F788  7C 1D 00 50 */	subf r0, r29, r0
 /* 8037284C 0036F78C  90 1E 00 04 */	stw r0, 4(r30)
-lbl_80372850:
+
+/* 80372850 001C .text      func_80372850                  func_80372850                  */
+.global func_80372850
+func_80372850:
 /* 80372850 0036F790  80 9E 00 08 */	lwz r4, 8(r30)
 /* 80372854 0036F794  80 1E 00 04 */	lwz r0, 4(r30)
 /* 80372858 0036F798  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8037285C 0036F79C  7C 04 00 50 */	subf r0, r4, r0
 /* 80372860 0036F7A0  7C 03 00 40 */	cmplw r3, r0
-/* 80372864 0036F7A4  40 82 00 08 */	bne lbl_8037286C
+/* 80372864 0036F7A4  40 82 00 08 */	bne func_8037286C
 /* 80372868 0036F7A8  90 9E 00 04 */	stw r4, 4(r30)
-lbl_8037286C:
+
+/* 8037286C 0024 .text      func_8037286C                  func_8037286C                  */
+.global func_8037286C
+func_8037286C:
 /* 8037286C 0036F7AC  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 80372870 0036F7B0  38 7E 00 18 */	addi r3, r30, 0x18
 /* 80372874 0036F7B4  7C 1F 00 50 */	subf r0, r31, r0
@@ -142,7 +171,10 @@ lbl_8037286C:
 /* 80372884 0036F7C4  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80372888 0036F7C8  48 00 04 1D */	bl MWExitCriticalSection
 /* 8037288C 0036F7CC  38 60 00 00 */	li r3, 0
-lbl_80372890:
+
+/* 80372890 0020 .text      func_80372890                  func_80372890                  */
+.global func_80372890
+func_80372890:
 /* 80372890 0036F7D0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80372894 0036F7D4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80372898 0036F7D8  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -152,7 +184,7 @@ lbl_80372890:
 /* 803728A8 0036F7E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803728AC 0036F7EC  4E 80 00 20 */	blr 
 
-/* 803728B0 0050 .text CircleBufferInitialize CircleBufferInitialize */
+/* 803728B0 0050 .text      CircleBufferInitialize         CircleBufferInitialize         */
 .global CircleBufferInitialize
 CircleBufferInitialize:
 /* 803728B0 0036F7F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -176,7 +208,7 @@ CircleBufferInitialize:
 /* 803728F8 0036F838  38 21 00 10 */	addi r1, r1, 0x10
 /* 803728FC 0036F83C  4E 80 00 20 */	blr 
 
-/* 80372900 0008 .text CBGetBytesAvailableForRead CBGetBytesAvailableForRead */
+/* 80372900 0008 .text      CBGetBytesAvailableForRead     CBGetBytesAvailableForRead     */
 .global CBGetBytesAvailableForRead
 CBGetBytesAvailableForRead:
 /* 80372900 0036F840  80 63 00 10 */	lwz r3, 0x10(r3)

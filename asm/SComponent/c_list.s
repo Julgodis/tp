@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80265E64 0014 .text cLs_Init__FP15node_list_class cLs_Init__FP15node_list_class */
+/* 80265E64 0014 .text      cLs_Init__FP15node_list_class  cLs_Init__FP15node_list_class  */
 .global cLs_Init__FP15node_list_class
 cLs_Init__FP15node_list_class:
 /* 80265E64 00262DA4  38 00 00 00 */	li r0, 0
@@ -11,7 +13,7 @@ cLs_Init__FP15node_list_class:
 /* 80265E70 00262DB0  90 03 00 08 */	stw r0, 8(r3)
 /* 80265E74 00262DB4  4E 80 00 20 */	blr 
 
-/* 80265E78 0084 .text cLs_SingleCut__FP10node_class cLs_SingleCut__FP10node_class */
+/* 80265E78 0030 .text      cLs_SingleCut__FP10node_class  cLs_SingleCut__FP10node_class  */
 .global cLs_SingleCut__FP10node_class
 cLs_SingleCut__FP10node_class:
 /* 80265E78 00262DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -23,16 +25,22 @@ cLs_SingleCut__FP10node_class:
 /* 80265E90 00262DD0  83 E3 00 04 */	lwz r31, 4(r3)
 /* 80265E94 00262DD4  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80265E98 00262DD8  7C 1E 00 40 */	cmplw r30, r0
-/* 80265E9C 00262DDC  40 82 00 0C */	bne lbl_80265EA8
+/* 80265E9C 00262DDC  40 82 00 0C */	bne func_80265EA8
 /* 80265EA0 00262DE0  80 1E 00 08 */	lwz r0, 8(r30)
 /* 80265EA4 00262DE4  90 1F 00 00 */	stw r0, 0(r31)
-lbl_80265EA8:
+
+/* 80265EA8 0014 .text      func_80265EA8                  func_80265EA8                  */
+.global func_80265EA8
+func_80265EA8:
 /* 80265EA8 00262DE8  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80265EAC 00262DEC  7C 1E 00 40 */	cmplw r30, r0
-/* 80265EB0 00262DF0  40 82 00 0C */	bne lbl_80265EBC
+/* 80265EB0 00262DF0  40 82 00 0C */	bne func_80265EBC
 /* 80265EB4 00262DF4  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80265EB8 00262DF8  90 1F 00 04 */	stw r0, 4(r31)
-lbl_80265EBC:
+
+/* 80265EBC 0040 .text      func_80265EBC                  func_80265EBC                  */
+.global func_80265EBC
+func_80265EBC:
 /* 80265EBC 00262DFC  7F C3 F3 78 */	mr r3, r30
 /* 80265EC0 00262E00  48 00 02 FD */	bl cNd_SingleCut__FP10node_class
 /* 80265EC4 00262E04  7F C3 F3 78 */	mr r3, r30
@@ -50,7 +58,7 @@ lbl_80265EBC:
 /* 80265EF4 00262E34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80265EF8 00262E38  4E 80 00 20 */	blr 
 
-/* 80265EFC 0074 .text cLs_Addition__FP15node_list_classP10node_class cLs_Addition__FP15node_list_classP10node_class */
+/* 80265EFC 0030 .text      cLs_Addition__FP15node_list_classP10node_class cLs_Addition__FP15node_list_classP10node_class */
 .global cLs_Addition__FP15node_list_classP10node_class
 cLs_Addition__FP15node_list_classP10node_class:
 /* 80265EFC 00262E3C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -62,12 +70,18 @@ cLs_Addition__FP15node_list_classP10node_class:
 /* 80265F14 00262E54  7C 9F 23 78 */	mr r31, r4
 /* 80265F18 00262E58  80 63 00 04 */	lwz r3, 4(r3)
 /* 80265F1C 00262E5C  28 03 00 00 */	cmplwi r3, 0
-/* 80265F20 00262E60  40 82 00 0C */	bne lbl_80265F2C
+/* 80265F20 00262E60  40 82 00 0C */	bne func_80265F2C
 /* 80265F24 00262E64  93 FE 00 00 */	stw r31, 0(r30)
-/* 80265F28 00262E68  48 00 00 08 */	b lbl_80265F30
-lbl_80265F2C:
+/* 80265F28 00262E68  48 00 00 08 */	b func_80265F30
+
+/* 80265F2C 0004 .text      func_80265F2C                  func_80265F2C                  */
+.global func_80265F2C
+func_80265F2C:
 /* 80265F2C 00262E6C  48 00 02 E5 */	bl cNd_Addition__FP10node_classP10node_class
-lbl_80265F30:
+
+/* 80265F30 0040 .text      func_80265F30                  func_80265F30                  */
+.global func_80265F30
+func_80265F30:
 /* 80265F30 00262E70  7F E3 FB 78 */	mr r3, r31
 /* 80265F34 00262E74  48 00 02 09 */	bl cNd_Last__FP10node_class
 /* 80265F38 00262E78  90 7E 00 04 */	stw r3, 4(r30)
@@ -85,7 +99,7 @@ lbl_80265F30:
 /* 80265F68 00262EA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80265F6C 00262EAC  4E 80 00 20 */	blr 
 
-/* 80265F70 0088 .text cLs_Insert__FP15node_list_classiP10node_class cLs_Insert__FP15node_list_classiP10node_class */
+/* 80265F70 003C .text      cLs_Insert__FP15node_list_classiP10node_class cLs_Insert__FP15node_list_classiP10node_class */
 .global cLs_Insert__FP15node_list_classiP10node_class
 cLs_Insert__FP15node_list_classiP10node_class:
 /* 80265F70 00262EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -98,12 +112,15 @@ cLs_Insert__FP15node_list_classiP10node_class:
 /* 80265F8C 00262ECC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80265F90 00262ED0  48 00 01 DD */	bl cNd_Order__FP10node_classi
 /* 80265F94 00262ED4  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80265F98 00262ED8  40 82 00 14 */	bne lbl_80265FAC
+/* 80265F98 00262ED8  40 82 00 14 */	bne func_80265FAC
 /* 80265F9C 00262EDC  7F A3 EB 78 */	mr r3, r29
 /* 80265FA0 00262EE0  7F C4 F3 78 */	mr r4, r30
 /* 80265FA4 00262EE4  4B FF FF 59 */	bl cLs_Addition__FP15node_list_classP10node_class
-/* 80265FA8 00262EE8  48 00 00 38 */	b lbl_80265FE0
-lbl_80265FAC:
+/* 80265FA8 00262EE8  48 00 00 38 */	b func_80265FE0
+
+/* 80265FAC 0034 .text      func_80265FAC                  func_80265FAC                  */
+.global func_80265FAC
+func_80265FAC:
 /* 80265FAC 00262EEC  7F C3 F3 78 */	mr r3, r30
 /* 80265FB0 00262EF0  7F A4 EB 78 */	mr r4, r29
 /* 80265FB4 00262EF4  48 00 02 FD */	bl cNd_SetObject__FP10node_classPv
@@ -117,7 +134,10 @@ lbl_80265FAC:
 /* 80265FD4 00262F14  48 00 01 09 */	bl cNd_LengthOf__FP10node_class
 /* 80265FD8 00262F18  90 7D 00 08 */	stw r3, 8(r29)
 /* 80265FDC 00262F1C  80 7D 00 08 */	lwz r3, 8(r29)
-lbl_80265FE0:
+
+/* 80265FE0 0018 .text      func_80265FE0                  func_80265FE0                  */
+.global func_80265FE0
+func_80265FE0:
 /* 80265FE0 00262F20  39 61 00 20 */	addi r11, r1, 0x20
 /* 80265FE4 00262F24  48 0F C2 45 */	bl _restgpr_29
 /* 80265FE8 00262F28  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -125,7 +145,7 @@ lbl_80265FE0:
 /* 80265FF0 00262F30  38 21 00 20 */	addi r1, r1, 0x20
 /* 80265FF4 00262F34  4E 80 00 20 */	blr 
 
-/* 80265FF8 0048 .text cLs_GetFirst__FP15node_list_class cLs_GetFirst__FP15node_list_class */
+/* 80265FF8 0030 .text      cLs_GetFirst__FP15node_list_class cLs_GetFirst__FP15node_list_class */
 .global cLs_GetFirst__FP15node_list_class
 cLs_GetFirst__FP15node_list_class:
 /* 80265FF8 00262F38  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -134,22 +154,28 @@ cLs_GetFirst__FP15node_list_class:
 /* 80266004 00262F44  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80266008 00262F48  80 03 00 08 */	lwz r0, 8(r3)
 /* 8026600C 00262F4C  2C 00 00 00 */	cmpwi r0, 0
-/* 80266010 00262F50  41 82 00 18 */	beq lbl_80266028
+/* 80266010 00262F50  41 82 00 18 */	beq func_80266028
 /* 80266014 00262F54  83 E3 00 00 */	lwz r31, 0(r3)
 /* 80266018 00262F58  7F E3 FB 78 */	mr r3, r31
 /* 8026601C 00262F5C  4B FF FE 5D */	bl cLs_SingleCut__FP10node_class
 /* 80266020 00262F60  7F E3 FB 78 */	mr r3, r31
-/* 80266024 00262F64  48 00 00 08 */	b lbl_8026602C
-lbl_80266028:
+/* 80266024 00262F64  48 00 00 08 */	b func_8026602C
+
+/* 80266028 0004 .text      func_80266028                  func_80266028                  */
+.global func_80266028
+func_80266028:
 /* 80266028 00262F68  38 60 00 00 */	li r3, 0
-lbl_8026602C:
+
+/* 8026602C 0014 .text      func_8026602C                  func_8026602C                  */
+.global func_8026602C
+func_8026602C:
 /* 8026602C 00262F6C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80266030 00262F70  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80266034 00262F74  7C 08 03 A6 */	mtlr r0
 /* 80266038 00262F78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026603C 00262F7C  4E 80 00 20 */	blr 
 
-/* 80266040 0020 .text cLs_Create__FP15node_list_class cLs_Create__FP15node_list_class */
+/* 80266040 0020 .text      cLs_Create__FP15node_list_class cLs_Create__FP15node_list_class */
 .global cLs_Create__FP15node_list_class
 cLs_Create__FP15node_list_class:
 /* 80266040 00262F80  94 21 FF F0 */	stwu r1, -0x10(r1)

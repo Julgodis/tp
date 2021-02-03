@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80273E10 0058 .text __ct__18JPAResourceManagerFPCvP7JKRHeap __ct__18JPAResourceManagerFPCvP7JKRHeap */
+/* 80273E10 0058 .text      __ct__18JPAResourceManagerFPCvP7JKRHeap __ct__18JPAResourceManagerFPCvP7JKRHeap */
 .global __ct__18JPAResourceManagerFPCvP7JKRHeap
 __ct__18JPAResourceManagerFPCvP7JKRHeap:
 /* 80273E10 00270D50  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -28,29 +30,35 @@ __ct__18JPAResourceManagerFPCvP7JKRHeap:
 /* 80273E60 00270DA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80273E64 00270DA4  4E 80 00 20 */	blr 
 
-/* 80273E68 0040 .text getResource__18JPAResourceManagerCFUs getResource__18JPAResourceManagerCFUs */
+/* 80273E68 0014 .text      getResource__18JPAResourceManagerCFUs getResource__18JPAResourceManagerCFUs */
 .global getResource__18JPAResourceManagerCFUs
 getResource__18JPAResourceManagerCFUs:
 /* 80273E68 00270DA8  38 E0 00 00 */	li r7, 0
 /* 80273E6C 00270DAC  A0 C3 00 0E */	lhz r6, 0xe(r3)
 /* 80273E70 00270DB0  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80273E74 00270DB4  54 84 04 3E */	clrlwi r4, r4, 0x10
-/* 80273E78 00270DB8  48 00 00 1C */	b lbl_80273E94
-lbl_80273E7C:
+/* 80273E78 00270DB8  48 00 00 1C */	b func_80273E94
+
+/* 80273E7C 0018 .text      func_80273E7C                  func_80273E7C                  */
+.global func_80273E7C
+func_80273E7C:
 /* 80273E7C 00270DBC  54 E0 13 BA */	rlwinm r0, r7, 2, 0xe, 0x1d
 /* 80273E80 00270DC0  7C 65 00 2E */	lwzx r3, r5, r0
 /* 80273E84 00270DC4  A0 03 00 3C */	lhz r0, 0x3c(r3)
 /* 80273E88 00270DC8  7C 04 00 40 */	cmplw r4, r0
 /* 80273E8C 00270DCC  4D 82 00 20 */	beqlr 
 /* 80273E90 00270DD0  38 E7 00 01 */	addi r7, r7, 1
-lbl_80273E94:
+
+/* 80273E94 0014 .text      func_80273E94                  func_80273E94                  */
+.global func_80273E94
+func_80273E94:
 /* 80273E94 00270DD4  54 E0 04 3E */	clrlwi r0, r7, 0x10
 /* 80273E98 00270DD8  7C 00 30 40 */	cmplw r0, r6
-/* 80273E9C 00270DDC  41 80 FF E0 */	blt lbl_80273E7C
+/* 80273E9C 00270DDC  41 80 FF E0 */	blt func_80273E7C
 /* 80273EA0 00270DE0  38 60 00 00 */	li r3, 0
 /* 80273EA4 00270DE4  4E 80 00 20 */	blr 
 
-/* 80273EA8 0044 .text checkUserIndexDuplication__18JPAResourceManagerCFUs checkUserIndexDuplication__18JPAResourceManagerCFUs */
+/* 80273EA8 001C .text      checkUserIndexDuplication__18JPAResourceManagerCFUs checkUserIndexDuplication__18JPAResourceManagerCFUs */
 .global checkUserIndexDuplication__18JPAResourceManagerCFUs
 checkUserIndexDuplication__18JPAResourceManagerCFUs:
 /* 80273EA8 00270DE8  38 A0 00 00 */	li r5, 0
@@ -59,22 +67,31 @@ checkUserIndexDuplication__18JPAResourceManagerCFUs:
 /* 80273EB4 00270DF4  54 80 04 3E */	clrlwi r0, r4, 0x10
 /* 80273EB8 00270DF8  7C E9 03 A6 */	mtctr r7
 /* 80273EBC 00270DFC  2C 07 00 00 */	cmpwi r7, 0
-/* 80273EC0 00270E00  40 81 00 24 */	ble lbl_80273EE4
-lbl_80273EC4:
+/* 80273EC0 00270E00  40 81 00 24 */	ble func_80273EE4
+
+/* 80273EC4 0018 .text      func_80273EC4                  func_80273EC4                  */
+.global func_80273EC4
+func_80273EC4:
 /* 80273EC4 00270E04  7C 66 28 2E */	lwzx r3, r6, r5
 /* 80273EC8 00270E08  A0 63 00 3C */	lhz r3, 0x3c(r3)
 /* 80273ECC 00270E0C  7C 00 18 40 */	cmplw r0, r3
-/* 80273ED0 00270E10  40 82 00 0C */	bne lbl_80273EDC
+/* 80273ED0 00270E10  40 82 00 0C */	bne func_80273EDC
 /* 80273ED4 00270E14  38 60 00 01 */	li r3, 1
 /* 80273ED8 00270E18  4E 80 00 20 */	blr 
-lbl_80273EDC:
+
+/* 80273EDC 0008 .text      func_80273EDC                  func_80273EDC                  */
+.global func_80273EDC
+func_80273EDC:
 /* 80273EDC 00270E1C  38 A5 00 04 */	addi r5, r5, 4
-/* 80273EE0 00270E20  42 00 FF E4 */	bdnz lbl_80273EC4
-lbl_80273EE4:
+/* 80273EE0 00270E20  42 00 FF E4 */	bdnz func_80273EC4
+
+/* 80273EE4 0008 .text      func_80273EE4                  func_80273EE4                  */
+.global func_80273EE4
+func_80273EE4:
 /* 80273EE4 00270E24  38 60 00 00 */	li r3, 0
 /* 80273EE8 00270E28  4E 80 00 20 */	blr 
 
-/* 80273EEC 00A0 .text swapTexture__18JPAResourceManagerFPC7ResTIMGPCc swapTexture__18JPAResourceManagerFPC7ResTIMGPCc */
+/* 80273EEC 0030 .text      swapTexture__18JPAResourceManagerFPC7ResTIMGPCc swapTexture__18JPAResourceManagerFPC7ResTIMGPCc */
 .global swapTexture__18JPAResourceManagerFPC7ResTIMGPCc
 swapTexture__18JPAResourceManagerFPC7ResTIMGPCc:
 /* 80273EEC 00270E2C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -88,8 +105,11 @@ swapTexture__18JPAResourceManagerFPC7ResTIMGPCc:
 /* 80273F0C 00270E4C  3B C0 00 00 */	li r30, 0
 /* 80273F10 00270E50  3B A0 00 00 */	li r29, 0
 /* 80273F14 00270E54  3B E0 00 00 */	li r31, 0
-/* 80273F18 00270E58  48 00 00 4C */	b lbl_80273F64
-lbl_80273F1C:
+/* 80273F18 00270E58  48 00 00 4C */	b func_80273F64
+
+/* 80273F1C 0040 .text      func_80273F1C                  func_80273F1C                  */
+.global func_80273F1C
+func_80273F1C:
 /* 80273F1C 00270E5C  80 7A 00 08 */	lwz r3, 8(r26)
 /* 80273F20 00270E60  7C 63 F8 2E */	lwzx r3, r3, r31
 /* 80273F24 00270E64  80 63 00 44 */	lwz r3, 0x44(r3)
@@ -97,7 +117,7 @@ lbl_80273F1C:
 /* 80273F2C 00270E6C  7F 83 E3 78 */	mr r3, r28
 /* 80273F30 00270E70  48 0F 4A 65 */	bl strcmp
 /* 80273F34 00270E74  2C 03 00 00 */	cmpwi r3, 0
-/* 80273F38 00270E78  40 82 00 24 */	bne lbl_80273F5C
+/* 80273F38 00270E78  40 82 00 24 */	bne func_80273F5C
 /* 80273F3C 00270E7C  80 7A 00 08 */	lwz r3, 8(r26)
 /* 80273F40 00270E80  7C 63 F8 2E */	lwzx r3, r3, r31
 /* 80273F44 00270E84  38 63 00 04 */	addi r3, r3, 4
@@ -105,15 +125,24 @@ lbl_80273F1C:
 /* 80273F4C 00270E8C  7F 64 DB 78 */	mr r4, r27
 /* 80273F50 00270E90  38 A0 00 00 */	li r5, 0
 /* 80273F54 00270E94  48 06 A3 55 */	bl storeTIMG__10JUTTextureFPC7ResTIMGUc
-/* 80273F58 00270E98  48 00 00 18 */	b lbl_80273F70
-lbl_80273F5C:
+/* 80273F58 00270E98  48 00 00 18 */	b func_80273F70
+
+/* 80273F5C 0008 .text      func_80273F5C                  func_80273F5C                  */
+.global func_80273F5C
+func_80273F5C:
 /* 80273F5C 00270E9C  3B BD 00 01 */	addi r29, r29, 1
 /* 80273F60 00270EA0  3B FF 00 04 */	addi r31, r31, 4
-lbl_80273F64:
+
+/* 80273F64 000C .text      func_80273F64                  func_80273F64                  */
+.global func_80273F64
+func_80273F64:
 /* 80273F64 00270EA4  A0 1A 00 12 */	lhz r0, 0x12(r26)
 /* 80273F68 00270EA8  7C 1D 00 00 */	cmpw r29, r0
-/* 80273F6C 00270EAC  41 80 FF B0 */	blt lbl_80273F1C
-lbl_80273F70:
+/* 80273F6C 00270EAC  41 80 FF B0 */	blt func_80273F1C
+
+/* 80273F70 001C .text      func_80273F70                  func_80273F70                  */
+.global func_80273F70
+func_80273F70:
 /* 80273F70 00270EB0  7F C3 F3 78 */	mr r3, r30
 /* 80273F74 00270EB4  39 61 00 20 */	addi r11, r1, 0x20
 /* 80273F78 00270EB8  48 0E E2 A5 */	bl _restgpr_26
@@ -122,7 +151,7 @@ lbl_80273F70:
 /* 80273F84 00270EC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80273F88 00270EC8  4E 80 00 20 */	blr 
 
-/* 80273F8C 0020 .text registRes__18JPAResourceManagerFP11JPAResource registRes__18JPAResourceManagerFP11JPAResource */
+/* 80273F8C 0020 .text      registRes__18JPAResourceManagerFP11JPAResource registRes__18JPAResourceManagerFP11JPAResource */
 .global registRes__18JPAResourceManagerFP11JPAResource
 registRes__18JPAResourceManagerFP11JPAResource:
 /* 80273F8C 00270ECC  80 A3 00 04 */	lwz r5, 4(r3)
@@ -134,7 +163,7 @@ registRes__18JPAResourceManagerFP11JPAResource:
 /* 80273FA4 00270EE4  B0 03 00 0E */	sth r0, 0xe(r3)
 /* 80273FA8 00270EE8  4E 80 00 20 */	blr 
 
-/* 80273FAC 0020 .text registTex__18JPAResourceManagerFP10JPATexture registTex__18JPAResourceManagerFP10JPATexture */
+/* 80273FAC 0020 .text      registTex__18JPAResourceManagerFP10JPATexture registTex__18JPAResourceManagerFP10JPATexture */
 .global registTex__18JPAResourceManagerFP10JPATexture
 registTex__18JPAResourceManagerFP10JPATexture:
 /* 80273FAC 00270EEC  80 A3 00 08 */	lwz r5, 8(r3)
@@ -146,7 +175,7 @@ registTex__18JPAResourceManagerFP10JPATexture:
 /* 80273FC4 00270F04  B0 03 00 12 */	sth r0, 0x12(r3)
 /* 80273FC8 00270F08  4E 80 00 20 */	blr 
 
-/* 80273FCC 0044 .text getResUserWork__18JPAResourceManagerCFUs getResUserWork__18JPAResourceManagerCFUs */
+/* 80273FCC 002C .text      getResUserWork__18JPAResourceManagerCFUs getResUserWork__18JPAResourceManagerCFUs */
 .global getResUserWork__18JPAResourceManagerCFUs
 getResUserWork__18JPAResourceManagerCFUs:
 /* 80273FCC 00270F0C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -156,11 +185,14 @@ getResUserWork__18JPAResourceManagerCFUs:
 /* 80273FDC 00270F1C  3B E0 00 00 */	li r31, 0
 /* 80273FE0 00270F20  4B FF FE 89 */	bl getResource__18JPAResourceManagerCFUs
 /* 80273FE4 00270F24  28 03 00 00 */	cmplwi r3, 0
-/* 80273FE8 00270F28  41 82 00 10 */	beq lbl_80273FF8
+/* 80273FE8 00270F28  41 82 00 10 */	beq func_80273FF8
 /* 80273FEC 00270F2C  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 80273FF0 00270F30  80 63 00 00 */	lwz r3, 0(r3)
 /* 80273FF4 00270F34  83 E3 00 0C */	lwz r31, 0xc(r3)
-lbl_80273FF8:
+
+/* 80273FF8 0018 .text      func_80273FF8                  func_80273FF8                  */
+.global func_80273FF8
+func_80273FF8:
 /* 80273FF8 00270F38  7F E3 FB 78 */	mr r3, r31
 /* 80273FFC 00270F3C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80274000 00270F40  80 01 00 14 */	lwz r0, 0x14(r1)

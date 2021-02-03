@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8035F8B8 0214 .text GXSetFog GXSetFog */
+/* 8035F8B8 0048 .text      GXSetFog                       GXSetFog                       */
 .global GXSetFog
 GXSetFog:
 /* 8035F8B8 0035C7F8  7C 08 02 A6 */	mflr r0
@@ -18,19 +20,25 @@ GXSetFog:
 /* 8035F8E0 0035C820  3B 80 00 00 */	li r28, 0
 /* 8035F8E4 0035C824  3B 60 00 00 */	li r27, 0
 /* 8035F8E8 0035C828  3B 40 00 00 */	li r26, 0
-/* 8035F8EC 0035C82C  41 82 00 4C */	beq lbl_8035F938
+/* 8035F8EC 0035C82C  41 82 00 4C */	beq func_8035F938
 /* 8035F8F0 0035C830  FC 04 18 00 */	fcmpu cr0, f4, f3
-/* 8035F8F4 0035C834  41 82 00 0C */	beq lbl_8035F900
+/* 8035F8F4 0035C834  41 82 00 0C */	beq func_8035F900
 /* 8035F8F8 0035C838  FC 02 08 00 */	fcmpu cr0, f2, f1
-/* 8035F8FC 0035C83C  40 82 00 14 */	bne lbl_8035F910
-lbl_8035F900:
-/* 8035F900 0035C840  C0 02 CC 18 */	lfs f0, lbl_80456618-_SDA2_BASE_(r2)
+/* 8035F8FC 0035C83C  40 82 00 14 */	bne func_8035F910
+
+/* 8035F900 0010 .text      func_8035F900                  func_8035F900                  */
+.global func_8035F900
+func_8035F900:
+/* 8035F900 0035C840  C0 02 CC 18 */	lfs f0, GXPixel__LIT_211-_SDA2_BASE_(r2)
 /* 8035F904 0035C844  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8035F908 0035C848  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8035F90C 0035C84C  48 00 01 18 */	b lbl_8035FA24
-lbl_8035F910:
+/* 8035F90C 0035C84C  48 00 01 18 */	b func_8035FA24
+
+/* 8035F910 0028 .text      func_8035F910                  func_8035F910                  */
+.global func_8035F910
+func_8035F910:
 /* 8035F910 0035C850  EC A2 08 28 */	fsubs f5, f2, f1
-/* 8035F914 0035C854  C0 C2 CC 1C */	lfs f6, lbl_8045661C-_SDA2_BASE_(r2)
+/* 8035F914 0035C854  C0 C2 CC 1C */	lfs f6, LIT_212-_SDA2_BASE_(r2)
 /* 8035F918 0035C858  EC 44 18 28 */	fsubs f2, f4, f3
 /* 8035F91C 0035C85C  EC 01 18 28 */	fsubs f0, f1, f3
 /* 8035F920 0035C860  EC 66 28 24 */	fdivs f3, f6, f5
@@ -38,18 +46,27 @@ lbl_8035F910:
 /* 8035F928 0035C868  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8035F92C 0035C86C  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 8035F930 0035C870  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8035F934 0035C874  48 00 00 F0 */	b lbl_8035FA24
-lbl_8035F938:
+/* 8035F934 0035C874  48 00 00 F0 */	b func_8035FA24
+
+/* 8035F938 0010 .text      func_8035F938                  func_8035F938                  */
+.global func_8035F938
+func_8035F938:
 /* 8035F938 0035C878  FC 04 18 00 */	fcmpu cr0, f4, f3
-/* 8035F93C 0035C87C  41 82 00 0C */	beq lbl_8035F948
+/* 8035F93C 0035C87C  41 82 00 0C */	beq func_8035F948
 /* 8035F940 0035C880  FC 02 08 00 */	fcmpu cr0, f2, f1
-/* 8035F944 0035C884  40 82 00 14 */	bne lbl_8035F958
-lbl_8035F948:
-/* 8035F948 0035C888  C0 62 CC 18 */	lfs f3, lbl_80456618-_SDA2_BASE_(r2)
-/* 8035F94C 0035C88C  C0 82 CC 20 */	lfs f4, lbl_80456620-_SDA2_BASE_(r2)
+/* 8035F944 0035C884  40 82 00 14 */	bne func_8035F958
+
+/* 8035F948 0010 .text      func_8035F948                  func_8035F948                  */
+.global func_8035F948
+func_8035F948:
+/* 8035F948 0035C888  C0 62 CC 18 */	lfs f3, GXPixel__LIT_211-_SDA2_BASE_(r2)
+/* 8035F94C 0035C88C  C0 82 CC 20 */	lfs f4, GXPixel__LIT_213-_SDA2_BASE_(r2)
 /* 8035F950 0035C890  FF E0 18 90 */	fmr f31, f3
-/* 8035F954 0035C894  48 00 00 20 */	b lbl_8035F974
-lbl_8035F958:
+/* 8035F954 0035C894  48 00 00 20 */	b func_8035F974
+
+/* 8035F958 001C .text      func_8035F958                  func_8035F958                  */
+.global func_8035F958
+func_8035F958:
 /* 8035F958 0035C898  EC 04 18 28 */	fsubs f0, f4, f3
 /* 8035F95C 0035C89C  EC A2 08 28 */	fsubs f5, f2, f1
 /* 8035F960 0035C8A0  EC 44 00 F2 */	fmuls f2, f4, f3
@@ -57,34 +74,52 @@ lbl_8035F958:
 /* 8035F968 0035C8A8  EC 00 01 72 */	fmuls f0, f0, f5
 /* 8035F96C 0035C8AC  EF E1 28 24 */	fdivs f31, f1, f5
 /* 8035F970 0035C8B0  EC 62 00 24 */	fdivs f3, f2, f0
-lbl_8035F974:
-/* 8035F974 0035C8B4  C0 22 CC 20 */	lfs f1, lbl_80456620-_SDA2_BASE_(r2)
+
+/* 8035F974 0010 .text      func_8035F974                  func_8035F974                  */
+.global func_8035F974
+func_8035F974:
+/* 8035F974 0035C8B4  C0 22 CC 20 */	lfs f1, GXPixel__LIT_213-_SDA2_BASE_(r2)
 /* 8035F978 0035C8B8  38 60 00 00 */	li r3, 0
-/* 8035F97C 0035C8BC  C8 02 CC 28 */	lfd f0, lbl_80456628-_SDA2_BASE_(r2)
-/* 8035F980 0035C8C0  48 00 00 0C */	b lbl_8035F98C
-lbl_8035F984:
+/* 8035F97C 0035C8BC  C8 02 CC 28 */	lfd f0, LIT_214-_SDA2_BASE_(r2)
+/* 8035F980 0035C8C0  48 00 00 0C */	b func_8035F98C
+
+/* 8035F984 0008 .text      func_8035F984                  func_8035F984                  */
+.global func_8035F984
+func_8035F984:
 /* 8035F984 0035C8C4  EC 84 00 72 */	fmuls f4, f4, f1
 /* 8035F988 0035C8C8  38 63 00 01 */	addi r3, r3, 1
-lbl_8035F98C:
+
+/* 8035F98C 0018 .text      func_8035F98C                  func_8035F98C                  */
+.global func_8035F98C
+func_8035F98C:
 /* 8035F98C 0035C8CC  FC 04 00 40 */	fcmpo cr0, f4, f0
-/* 8035F990 0035C8D0  41 81 FF F4 */	bgt lbl_8035F984
-/* 8035F994 0035C8D4  C8 02 CC 38 */	lfd f0, lbl_80456638-_SDA2_BASE_(r2)
-/* 8035F998 0035C8D8  C0 42 CC 30 */	lfs f2, lbl_80456630-_SDA2_BASE_(r2)
-/* 8035F99C 0035C8DC  C0 22 CC 18 */	lfs f1, lbl_80456618-_SDA2_BASE_(r2)
-/* 8035F9A0 0035C8E0  48 00 00 0C */	b lbl_8035F9AC
-lbl_8035F9A4:
+/* 8035F990 0035C8D0  41 81 FF F4 */	bgt func_8035F984
+/* 8035F994 0035C8D4  C8 02 CC 38 */	lfd f0, GXPixel__LIT_216-_SDA2_BASE_(r2)
+/* 8035F998 0035C8D8  C0 42 CC 30 */	lfs f2, GXPixel__LIT_215-_SDA2_BASE_(r2)
+/* 8035F99C 0035C8DC  C0 22 CC 18 */	lfs f1, GXPixel__LIT_211-_SDA2_BASE_(r2)
+/* 8035F9A0 0035C8E0  48 00 00 0C */	b func_8035F9AC
+
+/* 8035F9A4 0008 .text      func_8035F9A4                  func_8035F9A4                  */
+.global func_8035F9A4
+func_8035F9A4:
 /* 8035F9A4 0035C8E4  EC 84 00 B2 */	fmuls f4, f4, f2
 /* 8035F9A8 0035C8E8  38 63 FF FF */	addi r3, r3, -1
-lbl_8035F9AC:
+
+/* 8035F9AC 0010 .text      func_8035F9AC                  func_8035F9AC                  */
+.global func_8035F9AC
+func_8035F9AC:
 /* 8035F9AC 0035C8EC  FC 04 08 40 */	fcmpo cr0, f4, f1
-/* 8035F9B0 0035C8F0  40 81 00 0C */	ble lbl_8035F9BC
+/* 8035F9B0 0035C8F0  40 81 00 0C */	ble func_8035F9BC
 /* 8035F9B4 0035C8F4  FC 04 00 40 */	fcmpo cr0, f4, f0
-/* 8035F9B8 0035C8F8  41 80 FF EC */	blt lbl_8035F9A4
-lbl_8035F9BC:
+/* 8035F9B8 0035C8F8  41 80 FF EC */	blt func_8035F9A4
+
+/* 8035F9BC 0068 .text      func_8035F9BC                  func_8035F9BC                  */
+.global func_8035F9BC
+func_8035F9BC:
 /* 8035F9BC 0035C8FC  3A E3 00 01 */	addi r23, r3, 1
-/* 8035F9C0 0035C900  C0 02 CC 40 */	lfs f0, lbl_80456640-_SDA2_BASE_(r2)
+/* 8035F9C0 0035C900  C0 02 CC 40 */	lfs f0, GXPixel__LIT_217-_SDA2_BASE_(r2)
 /* 8035F9C4 0035C904  38 00 00 01 */	li r0, 1
-/* 8035F9C8 0035C908  C8 42 CC 48 */	lfd f2, lbl_80456648-_SDA2_BASE_(r2)
+/* 8035F9C8 0035C908  C8 42 CC 48 */	lfd f2, GXPixel__LIT_219-_SDA2_BASE_(r2)
 /* 8035F9CC 0035C90C  7C 00 B8 30 */	slw r0, r0, r23
 /* 8035F9D0 0035C910  EC 20 01 32 */	fmuls f1, f0, f4
 /* 8035F9D4 0035C914  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -107,7 +142,10 @@ lbl_8035F9BC:
 /* 8035FA18 0035C958  50 04 C0 0E */	rlwimi r4, r0, 0x18, 0, 7
 /* 8035FA1C 0035C95C  3B C3 00 00 */	addi r30, r3, 0
 /* 8035FA20 0035C960  3B A4 00 00 */	addi r29, r4, 0
-lbl_8035FA24:
+
+/* 8035FA24 00A8 .text      func_8035FA24                  func_8035FA24                  */
+.global func_8035FA24
+func_8035FA24:
 /* 8035FA24 0035C964  80 E1 00 24 */	lwz r7, 0x24(r1)
 /* 8035FA28 0035C968  38 00 00 61 */	li r0, 0x61
 /* 8035FA2C 0035C96C  81 38 00 00 */	lwz r9, 0(r24)
@@ -151,11 +189,11 @@ lbl_8035FA24:
 /* 8035FAC4 0035CA04  7C 08 03 A6 */	mtlr r0
 /* 8035FAC8 0035CA08  4E 80 00 20 */	blr 
 
-/* 8035FACC 0124 .text GXSetFogRangeAdj GXSetFogRangeAdj */
+/* 8035FACC 00E8 .text      GXSetFogRangeAdj               GXSetFogRangeAdj               */
 .global GXSetFogRangeAdj
 GXSetFogRangeAdj:
 /* 8035FACC 0035CA0C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8035FAD0 0035CA10  41 82 00 E4 */	beq lbl_8035FBB4
+/* 8035FAD0 0035CA10  41 82 00 E4 */	beq func_8035FBB4
 /* 8035FAD4 0035CA14  38 C0 00 00 */	li r6, 0
 /* 8035FAD8 0035CA18  54 C0 08 3C */	slwi r0, r6, 1
 /* 8035FADC 0035CA1C  7D 25 02 14 */	add r9, r5, r0
@@ -212,7 +250,10 @@ GXSetFogRangeAdj:
 /* 8035FBA8 0035CAE8  50 E8 62 26 */	rlwimi r8, r7, 0xc, 8, 0x13
 /* 8035FBAC 0035CAEC  50 C8 C0 0E */	rlwimi r8, r6, 0x18, 0, 7
 /* 8035FBB0 0035CAF0  91 05 80 00 */	stw r8, -0x8000(r5)
-lbl_8035FBB4:
+
+/* 8035FBB4 003C .text      func_8035FBB4                  func_8035FBB4                  */
+.global func_8035FBB4
+func_8035FBB4:
 /* 8035FBB4 0035CAF4  54 85 04 3E */	clrlwi r5, r4, 0x10
 /* 8035FBB8 0035CAF8  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 8035FBBC 0035CAFC  38 05 01 56 */	addi r0, r5, 0x156
@@ -229,7 +270,7 @@ lbl_8035FBB4:
 /* 8035FBE8 0035CB28  B0 04 00 02 */	sth r0, 2(r4)
 /* 8035FBEC 0035CB2C  4E 80 00 20 */	blr 
 
-/* 8035FBF0 0054 .text GXSetBlendMode GXSetBlendMode */
+/* 8035FBF0 0054 .text      GXSetBlendMode                 GXSetBlendMode                 */
 .global GXSetBlendMode
 GXSetBlendMode:
 /* 8035FBF0 0035CB30  81 02 CB 80 */	lwz r8, __GXData-_SDA2_BASE_(r2)
@@ -254,7 +295,7 @@ GXSetBlendMode:
 /* 8035FC3C 0035CB7C  B0 08 00 02 */	sth r0, 2(r8)
 /* 8035FC40 0035CB80  4E 80 00 20 */	blr 
 
-/* 8035FC44 002C .text GXSetColorUpdate GXSetColorUpdate */
+/* 8035FC44 002C .text      GXSetColorUpdate               GXSetColorUpdate               */
 .global GXSetColorUpdate
 GXSetColorUpdate:
 /* 8035FC44 0035CB84  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
@@ -269,7 +310,7 @@ GXSetColorUpdate:
 /* 8035FC68 0035CBA8  B0 05 00 02 */	sth r0, 2(r5)
 /* 8035FC6C 0035CBAC  4E 80 00 20 */	blr 
 
-/* 8035FC70 002C .text GXSetAlphaUpdate GXSetAlphaUpdate */
+/* 8035FC70 002C .text      GXSetAlphaUpdate               GXSetAlphaUpdate               */
 .global GXSetAlphaUpdate
 GXSetAlphaUpdate:
 /* 8035FC70 0035CBB0  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
@@ -284,7 +325,7 @@ GXSetAlphaUpdate:
 /* 8035FC94 0035CBD4  B0 05 00 02 */	sth r0, 2(r5)
 /* 8035FC98 0035CBD8  4E 80 00 20 */	blr 
 
-/* 8035FC9C 0034 .text GXSetZMode GXSetZMode */
+/* 8035FC9C 0034 .text      GXSetZMode                     GXSetZMode                     */
 .global GXSetZMode
 GXSetZMode:
 /* 8035FC9C 0035CBDC  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
@@ -301,7 +342,7 @@ GXSetZMode:
 /* 8035FCC8 0035CC08  B0 06 00 02 */	sth r0, 2(r6)
 /* 8035FCCC 0035CC0C  4E 80 00 20 */	blr 
 
-/* 8035FCD0 0034 .text GXSetZCompLoc GXSetZCompLoc */
+/* 8035FCD0 0034 .text      GXSetZCompLoc                  GXSetZCompLoc                  */
 .global GXSetZCompLoc
 GXSetZCompLoc:
 /* 8035FCD0 0035CC10  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
@@ -318,13 +359,13 @@ GXSetZCompLoc:
 /* 8035FCFC 0035CC3C  B0 06 00 02 */	sth r0, 2(r6)
 /* 8035FD00 0035CC40  4E 80 00 20 */	blr 
 
-/* 8035FD04 00D4 .text GXSetPixelFmt GXSetPixelFmt */
+/* 8035FD04 0060 .text      GXSetPixelFmt                  GXSetPixelFmt                  */
 .global GXSetPixelFmt
 GXSetPixelFmt:
-/* 8035FD04 0035CC44  3C A0 80 3D */	lis r5, lbl_803D2838@ha
+/* 8035FD04 0035CC44  3C A0 80 3D */	lis r5, sym_803D2838@ha
 /* 8035FD08 0035CC48  80 E2 CB 80 */	lwz r7, __GXData-_SDA2_BASE_(r2)
 /* 8035FD0C 0035CC4C  54 66 10 3A */	slwi r6, r3, 2
-/* 8035FD10 0035CC50  38 05 28 38 */	addi r0, r5, lbl_803D2838@l
+/* 8035FD10 0035CC50  38 05 28 38 */	addi r0, r5, sym_803D2838@l
 /* 8035FD14 0035CC54  80 A7 01 DC */	lwz r5, 0x1dc(r7)
 /* 8035FD18 0035CC58  7C C0 32 14 */	add r6, r0, r6
 /* 8035FD1C 0035CC5C  80 06 00 00 */	lwz r0, 0(r6)
@@ -336,18 +377,24 @@ GXSetPixelFmt:
 /* 8035FD34 0035CC74  90 07 01 DC */	stw r0, 0x1dc(r7)
 /* 8035FD38 0035CC78  80 A7 01 DC */	lwz r5, 0x1dc(r7)
 /* 8035FD3C 0035CC7C  7C 08 28 40 */	cmplw r8, r5
-/* 8035FD40 0035CC80  41 82 00 44 */	beq lbl_8035FD84
+/* 8035FD40 0035CC80  41 82 00 44 */	beq func_8035FD84
 /* 8035FD44 0035CC84  38 00 00 61 */	li r0, 0x61
 /* 8035FD48 0035CC88  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8035FD4C 0035CC8C  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
 /* 8035FD50 0035CC90  2C 03 00 02 */	cmpwi r3, 2
 /* 8035FD54 0035CC94  90 A4 80 00 */	stw r5, -0x8000(r4)
-/* 8035FD58 0035CC98  40 82 00 0C */	bne lbl_8035FD64
+/* 8035FD58 0035CC98  40 82 00 0C */	bne func_8035FD64
 /* 8035FD5C 0035CC9C  38 00 00 01 */	li r0, 1
-/* 8035FD60 0035CCA0  48 00 00 08 */	b lbl_8035FD68
-lbl_8035FD64:
+/* 8035FD60 0035CCA0  48 00 00 08 */	b func_8035FD68
+
+/* 8035FD64 0004 .text      func_8035FD64                  func_8035FD64                  */
+.global func_8035FD64
+func_8035FD64:
 /* 8035FD64 0035CCA4  38 00 00 00 */	li r0, 0
-lbl_8035FD68:
+
+/* 8035FD68 001C .text      func_8035FD68                  func_8035FD68                  */
+.global func_8035FD68
+func_8035FD68:
 /* 8035FD68 0035CCA8  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 8035FD6C 0035CCAC  80 85 02 04 */	lwz r4, 0x204(r5)
 /* 8035FD70 0035CCB0  50 04 4D AC */	rlwimi r4, r0, 9, 0x16, 0x16
@@ -355,10 +402,13 @@ lbl_8035FD68:
 /* 8035FD78 0035CCB8  80 05 05 AC */	lwz r0, 0x5ac(r5)
 /* 8035FD7C 0035CCBC  60 00 00 04 */	ori r0, r0, 4
 /* 8035FD80 0035CCC0  90 05 05 AC */	stw r0, 0x5ac(r5)
-lbl_8035FD84:
+
+/* 8035FD84 0044 .text      func_8035FD84                  func_8035FD84                  */
+.global func_8035FD84
+func_8035FD84:
 /* 8035FD84 0035CCC4  80 06 00 00 */	lwz r0, 0(r6)
 /* 8035FD88 0035CCC8  28 00 00 04 */	cmplwi r0, 4
-/* 8035FD8C 0035CCCC  40 82 00 3C */	bne lbl_8035FDC8
+/* 8035FD8C 0035CCCC  40 82 00 3C */	bne func_8035FDC8
 /* 8035FD90 0035CCD0  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
 /* 8035FD94 0035CCD4  38 03 FF FC */	addi r0, r3, -4
 /* 8035FD98 0035CCD8  38 80 00 42 */	li r4, 0x42
@@ -373,13 +423,16 @@ lbl_8035FD84:
 /* 8035FDBC 0035CCFC  98 03 80 00 */	stb r0, 0xCC008000@l(r3)
 /* 8035FDC0 0035CD00  80 06 01 D4 */	lwz r0, 0x1d4(r6)
 /* 8035FDC4 0035CD04  90 03 80 00 */	stw r0, -0x8000(r3)
-lbl_8035FDC8:
+
+/* 8035FDC8 0010 .text      func_8035FDC8                  func_8035FDC8                  */
+.global func_8035FDC8
+func_8035FDC8:
 /* 8035FDC8 0035CD08  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 8035FDCC 0035CD0C  38 00 00 00 */	li r0, 0
 /* 8035FDD0 0035CD10  B0 03 00 02 */	sth r0, 2(r3)
 /* 8035FDD4 0035CD14  4E 80 00 20 */	blr 
 
-/* 8035FDD8 002C .text GXSetDither GXSetDither */
+/* 8035FDD8 002C .text      GXSetDither                    GXSetDither                    */
 .global GXSetDither
 GXSetDither:
 /* 8035FDD8 0035CD18  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
@@ -394,7 +447,7 @@ GXSetDither:
 /* 8035FDFC 0035CD3C  B0 05 00 02 */	sth r0, 2(r5)
 /* 8035FE00 0035CD40  4E 80 00 20 */	blr 
 
-/* 8035FE04 003C .text GXSetDstAlpha GXSetDstAlpha */
+/* 8035FE04 003C .text      GXSetDstAlpha                  GXSetDstAlpha                  */
 .global GXSetDstAlpha
 GXSetDstAlpha:
 /* 8035FE04 0035CD44  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
@@ -413,7 +466,7 @@ GXSetDstAlpha:
 /* 8035FE38 0035CD78  B0 06 00 02 */	sth r0, 2(r6)
 /* 8035FE3C 0035CD7C  4E 80 00 20 */	blr 
 
-/* 8035FE40 0038 .text GXSetFieldMask GXSetFieldMask */
+/* 8035FE40 0038 .text      GXSetFieldMask                 GXSetFieldMask                 */
 .global GXSetFieldMask
 GXSetFieldMask:
 /* 8035FE40 0035CD80  54 80 06 3E */	clrlwi r0, r4, 0x18
@@ -431,7 +484,7 @@ GXSetFieldMask:
 /* 8035FE70 0035CDB0  B0 04 00 02 */	sth r0, 2(r4)
 /* 8035FE74 0035CDB4  4E 80 00 20 */	blr 
 
-/* 8035FE78 0078 .text GXSetFieldMode GXSetFieldMode */
+/* 8035FE78 0078 .text      GXSetFieldMode                 GXSetFieldMode                 */
 .global GXSetFieldMode
 GXSetFieldMode:
 /* 8035FE78 0035CDB8  7C 08 02 A6 */	mflr r0
@@ -466,57 +519,61 @@ GXSetFieldMode:
 /* 8035FEEC 0035CE2C  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D2838 0020 .data lbl_803D2838 p2f$358 */
-.global lbl_803D2838
-lbl_803D2838:
+/* 803D2838 0020 .data      sym_803D2838                   p2f$358                        */
+.global sym_803D2838
+sym_803D2838:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03 /* baserom.dol+0x3cf838 */
 .byte 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x05 /* baserom.dol+0x3cf848 */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456618 0004 .sdata2 lbl_80456618 @211 */
-.global lbl_80456618
-lbl_80456618:
+/* 80456618 0004 .sdata2    GXPixel__LIT_211               @211                           */
+.global GXPixel__LIT_211
+GXPixel__LIT_211:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5478 */
 
-/* 8045661C 0004 .sdata2 lbl_8045661C @212 */
-.global lbl_8045661C
-lbl_8045661C:
+/* 8045661C 0004 .sdata2    LIT_212                        @212                           */
+.global LIT_212
+LIT_212:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d547c */
 
-/* 80456620 0004 .sdata2 lbl_80456620 @213 */
-.global lbl_80456620
-lbl_80456620:
+/* 80456620 0004 .sdata2    GXPixel__LIT_213               @213                           */
+.global GXPixel__LIT_213
+GXPixel__LIT_213:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5480 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5484 */
 
-/* 80456628 0008 .sdata2 lbl_80456628 @214 */
-.global lbl_80456628
-lbl_80456628:
+/* 80456628 0008 .sdata2    LIT_214                        @214                           */
+.global LIT_214
+LIT_214:
 .byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5488 */
 
-/* 80456630 0004 .sdata2 lbl_80456630 @215 */
-.global lbl_80456630
-lbl_80456630:
+/* 80456630 0004 .sdata2    GXPixel__LIT_215               @215                           */
+.global GXPixel__LIT_215
+GXPixel__LIT_215:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5490 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5494 */
 
-/* 80456638 0008 .sdata2 lbl_80456638 @216 */
-.global lbl_80456638
-lbl_80456638:
+/* 80456638 0008 .sdata2    GXPixel__LIT_216               @216                           */
+.global GXPixel__LIT_216
+GXPixel__LIT_216:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5498 */
 
-/* 80456640 0004 .sdata2 lbl_80456640 @217 */
-.global lbl_80456640
-lbl_80456640:
+/* 80456640 0004 .sdata2    GXPixel__LIT_217               @217                           */
+.global GXPixel__LIT_217
+GXPixel__LIT_217:
 .byte 0x4b, 0x00, 0x00, 0x1e /* baserom.dol+0x3d54a0 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d54a4 */
 
-/* 80456648 0008 .sdata2 lbl_80456648 @219 */
-.global lbl_80456648
-lbl_80456648:
+/* 80456648 0008 .sdata2    GXPixel__LIT_219               @219                           */
+.global GXPixel__LIT_219
+GXPixel__LIT_219:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d54a8 */
 

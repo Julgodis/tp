@@ -1,13 +1,15 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 803490EC 0004 .text defaultOptionalCommandChecker defaultOptionalCommandChecker */
+/* 803490EC 0004 .text      defaultOptionalCommandChecker  defaultOptionalCommandChecker  */
 .global defaultOptionalCommandChecker
 defaultOptionalCommandChecker:
 /* 803490EC 0034602C  4E 80 00 20 */	blr 
 
-/* 803490F0 00D8 .text DVDInit DVDInit */
+/* 803490F0 00B0 .text      DVDInit                        DVDInit                        */
 .global DVDInit
 DVDInit:
 /* 803490F0 00346030  7C 08 02 A6 */	mflr r0
@@ -17,7 +19,7 @@ DVDInit:
 /* 80349100 00346040  93 C1 00 08 */	stw r30, 8(r1)
 /* 80349104 00346044  80 0D 92 3C */	lwz r0, DVDInitialized-_SDA_BASE_(r13)
 /* 80349108 00346048  2C 00 00 00 */	cmpwi r0, 0
-/* 8034910C 0034604C  40 82 00 A4 */	bne lbl_803491B0
+/* 8034910C 0034604C  40 82 00 A4 */	bne func_803491B0
 /* 80349110 00346050  80 6D 84 68 */	lwz r3, __DVDVersion-_SDA_BASE_(r13)
 /* 80349114 00346054  4B FF 17 61 */	bl OSRegisterVersion
 /* 80349118 00346058  3B C0 00 01 */	li r30, 1
@@ -47,19 +49,25 @@ DVDInit:
 /* 80349178 003460B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8034917C 003460BC  3C 03 1A E0 */	addis r0, r3, 0x1ae0
 /* 80349180 003460C0  28 00 7C 22 */	cmplwi r0, 0x7c22
-/* 80349184 003460C4  40 82 00 1C */	bne lbl_803491A0
-/* 80349188 003460C8  3C 60 80 3D */	lis r3, lbl_803D1568@ha
+/* 80349184 003460C4  40 82 00 1C */	bne func_803491A0
+/* 80349188 003460C8  3C 60 80 3D */	lis r3, LIT_18@ha
 /* 8034918C 003460CC  4C C6 31 82 */	crclr 6
-/* 80349190 003460D0  38 63 15 68 */	addi r3, r3, lbl_803D1568@l
+/* 80349190 003460D0  38 63 15 68 */	addi r3, r3, LIT_18@l
 /* 80349194 003460D4  4B CB D9 29 */	bl OSReport
 /* 80349198 003460D8  48 00 2C 6D */	bl __fstLoad
-/* 8034919C 003460DC  48 00 00 14 */	b lbl_803491B0
-lbl_803491A0:
+/* 8034919C 003460DC  48 00 00 14 */	b func_803491B0
+
+/* 803491A0 0010 .text      func_803491A0                  func_803491A0                  */
+.global func_803491A0
+func_803491A0:
 /* 803491A0 003460E0  3C 03 F2 EB */	addis r0, r3, 0xf2eb
 /* 803491A4 003460E4  28 00 EA 5E */	cmplwi r0, 0xea5e
-/* 803491A8 003460E8  41 82 00 08 */	beq lbl_803491B0
+/* 803491A8 003460E8  41 82 00 08 */	beq func_803491B0
 /* 803491AC 003460EC  93 CD 92 34 */	stw r30, FirstTimeInBootrom-_SDA_BASE_(r13)
-lbl_803491B0:
+
+/* 803491B0 0018 .text      func_803491B0                  func_803491B0                  */
+.global func_803491B0
+func_803491B0:
 /* 803491B0 003460F0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803491B4 003460F4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803491B8 003460F8  83 C1 00 08 */	lwz r30, 8(r1)
@@ -67,7 +75,7 @@ lbl_803491B0:
 /* 803491C0 00346100  7C 08 03 A6 */	mtlr r0
 /* 803491C4 00346104  4E 80 00 20 */	blr 
 
-/* 803491C8 0094 .text stateReadingFST stateReadingFST */
+/* 803491C8 0054 .text      stateReadingFST                stateReadingFST                */
 .global stateReadingFST
 stateReadingFST:
 /* 803491C8 00346108  7C 08 02 A6 */	mflr r0
@@ -79,19 +87,22 @@ stateReadingFST:
 /* 803491E0 00346120  38 63 C9 00 */	addi r3, r3, BB2@l
 /* 803491E4 00346124  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803491E8 00346128  3B E3 00 08 */	addi r31, r3, 8
-/* 803491EC 0034612C  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 803491EC 0034612C  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 803491F0 00346130  80 8D 92 00 */	lwz r4, bootInfo-_SDA_BASE_(r13)
 /* 803491F4 00346134  80 1F 00 00 */	lwz r0, 0(r31)
 /* 803491F8 00346138  80 64 00 3C */	lwz r3, 0x3c(r4)
 /* 803491FC 0034613C  7C 03 00 40 */	cmplw r3, r0
-/* 80349200 00346140  40 80 00 1C */	bge lbl_8034921C
-/* 80349204 00346144  3C 60 80 3D */	lis r3, lbl_803D1574@ha
+/* 80349200 00346140  40 80 00 1C */	bge func_8034921C
+/* 80349204 00346144  3C 60 80 3D */	lis r3, LIT_24@ha
 /* 80349208 00346148  4C C6 31 82 */	crclr 6
-/* 8034920C 0034614C  38 A3 15 74 */	addi r5, r3, lbl_803D1574@l
-/* 80349210 00346150  38 6D 84 74 */	addi r3, r13, lbl_804509F4-_SDA_BASE_
+/* 8034920C 0034614C  38 A3 15 74 */	addi r5, r3, LIT_24@l
+/* 80349210 00346150  38 6D 84 74 */	addi r3, r13, LIT_23-_SDA_BASE_
 /* 80349214 00346154  38 80 02 95 */	li r4, 0x295
 /* 80349218 00346158  4B CB DC 65 */	bl OSPanic
-lbl_8034921C:
+
+/* 8034921C 0040 .text      func_8034921C                  func_8034921C                  */
+.global func_8034921C
+func_8034921C:
 /* 8034921C 0034615C  3C 60 80 45 */	lis r3, BB2@ha
 /* 80349220 00346160  80 DF 00 00 */	lwz r6, 0(r31)
 /* 80349224 00346164  38 A3 C9 00 */	addi r5, r3, BB2@l
@@ -109,7 +120,7 @@ lbl_8034921C:
 /* 80349254 00346194  7C 08 03 A6 */	mtlr r0
 /* 80349258 00346198  4E 80 00 20 */	blr 
 
-/* 8034925C 0080 .text cbForStateReadingFST cbForStateReadingFST */
+/* 8034925C 0020 .text      cbForStateReadingFST           cbForStateReadingFST           */
 .global cbForStateReadingFST
 cbForStateReadingFST:
 /* 8034925C 0034619C  7C 08 02 A6 */	mflr r0
@@ -117,12 +128,15 @@ cbForStateReadingFST:
 /* 80349264 003461A4  90 01 00 04 */	stw r0, 4(r1)
 /* 80349268 003461A8  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8034926C 003461AC  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 80349270 003461B0  40 82 00 0C */	bne lbl_8034927C
+/* 80349270 003461B0  40 82 00 0C */	bne func_8034927C
 /* 80349274 003461B4  48 00 01 15 */	bl stateTimeout
-/* 80349278 003461B8  48 00 00 50 */	b lbl_803492C8
-lbl_8034927C:
+/* 80349278 003461B8  48 00 00 50 */	b func_803492C8
+
+/* 8034927C 0040 .text      func_8034927C                  func_8034927C                  */
+.global func_8034927C
+func_8034927C:
 /* 8034927C 003461BC  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349280 003461C0  41 82 00 44 */	beq lbl_803492C4
+/* 80349280 003461C0  41 82 00 44 */	beq func_803492C4
 /* 80349284 003461C4  3B E0 00 00 */	li r31, 0
 /* 80349288 003461C8  93 ED 92 2C */	stw r31, NumInternalRetry-_SDA_BASE_(r13)
 /* 8034928C 003461CC  4B FF F2 65 */	bl __DVDFSInit
@@ -133,23 +147,32 @@ lbl_8034927C:
 /* 803492A0 003461E0  93 E4 00 0C */	stw r31, 0xc(r4)
 /* 803492A4 003461E4  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 803492A8 003461E8  28 0C 00 00 */	cmplwi r12, 0
-/* 803492AC 003461EC  41 82 00 10 */	beq lbl_803492BC
+/* 803492AC 003461EC  41 82 00 10 */	beq func_803492BC
 /* 803492B0 003461F0  7D 88 03 A6 */	mtlr r12
 /* 803492B4 003461F4  38 60 00 00 */	li r3, 0
 /* 803492B8 003461F8  4E 80 00 21 */	blrl 
-lbl_803492BC:
+
+/* 803492BC 0008 .text      func_803492BC                  func_803492BC                  */
+.global func_803492BC
+func_803492BC:
 /* 803492BC 003461FC  48 00 0D F1 */	bl stateReady
-/* 803492C0 00346200  48 00 00 08 */	b lbl_803492C8
-lbl_803492C4:
+/* 803492C0 00346200  48 00 00 08 */	b func_803492C8
+
+/* 803492C4 0004 .text      func_803492C4                  func_803492C4                  */
+.global func_803492C4
+func_803492C4:
 /* 803492C4 00346204  48 00 00 F9 */	bl stateGettingError
-lbl_803492C8:
+
+/* 803492C8 0014 .text      func_803492C8                  func_803492C8                  */
+.global func_803492C8
+func_803492C8:
 /* 803492C8 00346208  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 803492CC 0034620C  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 803492D0 00346210  38 21 00 18 */	addi r1, r1, 0x18
 /* 803492D4 00346214  7C 08 03 A6 */	mtlr r0
 /* 803492D8 00346218  4E 80 00 20 */	blr 
 
-/* 803492DC 00AC .text cbForStateError cbForStateError */
+/* 803492DC 002C .text      cbForStateError                cbForStateError                */
 .global cbForStateError
 cbForStateError:
 /* 803492DC 0034621C  7C 08 02 A6 */	mflr r0
@@ -160,10 +183,13 @@ cbForStateError:
 /* 803492F0 00346230  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 803492F4 00346234  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 803492F8 00346238  90 04 00 0C */	stw r0, 0xc(r4)
-/* 803492FC 0034623C  40 82 00 0C */	bne lbl_80349308
+/* 803492FC 0034623C  40 82 00 0C */	bne func_80349308
 /* 80349300 00346240  48 00 00 89 */	bl stateTimeout
-/* 80349304 00346244  48 00 00 70 */	b lbl_80349374
-lbl_80349308:
+/* 80349304 00346244  48 00 00 70 */	b func_80349374
+
+/* 80349308 0038 .text      func_80349308                  func_80349308                  */
+.global func_80349308
+func_80349308:
 /* 80349308 00346248  48 00 29 F5 */	bl __DVDPrintFatalMessage
 /* 8034930C 0034624C  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 80349310 00346250  83 ED 91 F8 */	lwz r31, executing-_SDA_BASE_(r13)
@@ -173,34 +199,43 @@ lbl_80349308:
 /* 80349320 00346260  90 6D 92 10 */	stw r3, FatalErrorFlag-_SDA_BASE_(r13)
 /* 80349324 00346264  81 9F 00 28 */	lwz r12, 0x28(r31)
 /* 80349328 00346268  28 0C 00 00 */	cmplwi r12, 0
-/* 8034932C 0034626C  41 82 00 14 */	beq lbl_80349340
+/* 8034932C 0034626C  41 82 00 14 */	beq func_80349340
 /* 80349330 00346270  7D 88 03 A6 */	mtlr r12
 /* 80349334 00346274  38 9F 00 00 */	addi r4, r31, 0
 /* 80349338 00346278  38 60 FF FF */	li r3, -1
 /* 8034933C 0034627C  4E 80 00 21 */	blrl 
-lbl_80349340:
+
+/* 80349340 0030 .text      func_80349340                  func_80349340                  */
+.global func_80349340
+func_80349340:
 /* 80349340 00346280  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 80349344 00346284  28 00 00 00 */	cmplwi r0, 0
-/* 80349348 00346288  41 82 00 28 */	beq lbl_80349370
+/* 80349348 00346288  41 82 00 28 */	beq func_80349370
 /* 8034934C 0034628C  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 80349350 00346290  38 00 00 00 */	li r0, 0
 /* 80349354 00346294  90 0D 92 18 */	stw r0, Canceling-_SDA_BASE_(r13)
 /* 80349358 00346298  28 0C 00 00 */	cmplwi r12, 0
-/* 8034935C 0034629C  41 82 00 14 */	beq lbl_80349370
+/* 8034935C 0034629C  41 82 00 14 */	beq func_80349370
 /* 80349360 003462A0  7D 88 03 A6 */	mtlr r12
 /* 80349364 003462A4  38 9F 00 00 */	addi r4, r31, 0
 /* 80349368 003462A8  38 60 00 00 */	li r3, 0
 /* 8034936C 003462AC  4E 80 00 21 */	blrl 
-lbl_80349370:
+
+/* 80349370 0004 .text      func_80349370                  func_80349370                  */
+.global func_80349370
+func_80349370:
 /* 80349370 003462B0  48 00 0D 3D */	bl stateReady
-lbl_80349374:
+
+/* 80349374 0014 .text      func_80349374                  func_80349374                  */
+.global func_80349374
+func_80349374:
 /* 80349374 003462B4  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80349378 003462B8  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 8034937C 003462BC  38 21 00 18 */	addi r1, r1, 0x18
 /* 80349380 003462C0  7C 08 03 A6 */	mtlr r0
 /* 80349384 003462C4  4E 80 00 20 */	blr 
 
-/* 80349388 0034 .text stateTimeout stateTimeout */
+/* 80349388 0034 .text      stateTimeout                   stateTimeout                   */
 .global stateTimeout
 stateTimeout:
 /* 80349388 003462C8  7C 08 02 A6 */	mflr r0
@@ -217,7 +252,7 @@ stateTimeout:
 /* 803493B4 003462F4  7C 08 03 A6 */	mtlr r0
 /* 803493B8 003462F8  4E 80 00 20 */	blr 
 
-/* 803493BC 0028 .text stateGettingError stateGettingError */
+/* 803493BC 0028 .text      stateGettingError              stateGettingError              */
 .global stateGettingError
 stateGettingError:
 /* 803493BC 003462FC  7C 08 02 A6 */	mflr r0
@@ -231,63 +266,84 @@ stateGettingError:
 /* 803493DC 0034631C  7C 08 03 A6 */	mtlr r0
 /* 803493E0 00346320  4E 80 00 20 */	blr 
 
-/* 803493E4 00B4 .text CategorizeError CategorizeError */
+/* 803493E4 0018 .text      CategorizeError                CategorizeError                */
 .global CategorizeError
 CategorizeError:
 /* 803493E4 00346324  3C 03 FF FE */	addis r0, r3, 0xfffe
 /* 803493E8 00346328  28 00 04 00 */	cmplwi r0, 0x400
-/* 803493EC 0034632C  40 82 00 10 */	bne lbl_803493FC
+/* 803493EC 0034632C  40 82 00 10 */	bne func_803493FC
 /* 803493F0 00346330  90 6D 92 28 */	stw r3, LastError-_SDA_BASE_(r13)
 /* 803493F4 00346334  38 60 00 01 */	li r3, 1
 /* 803493F8 00346338  4E 80 00 20 */	blr 
-lbl_803493FC:
+
+/* 803493FC 0028 .text      func_803493FC                  func_803493FC                  */
+.global func_803493FC
+func_803493FC:
 /* 803493FC 0034633C  54 64 02 3E */	clrlwi r4, r3, 8
 /* 80349400 00346340  3C 04 FF FA */	addis r0, r4, 0xfffa
 /* 80349404 00346344  28 00 28 00 */	cmplwi r0, 0x2800
-/* 80349408 00346348  41 82 00 1C */	beq lbl_80349424
+/* 80349408 00346348  41 82 00 1C */	beq func_80349424
 /* 8034940C 0034634C  3C 04 FF FE */	addis r0, r4, 0xfffe
 /* 80349410 00346350  28 00 3A 00 */	cmplwi r0, 0x3a00
-/* 80349414 00346354  41 82 00 10 */	beq lbl_80349424
+/* 80349414 00346354  41 82 00 10 */	beq func_80349424
 /* 80349418 00346358  3C 04 FF F5 */	addis r0, r4, 0xfff5
 /* 8034941C 0034635C  28 00 5A 01 */	cmplwi r0, 0x5a01
-/* 80349420 00346360  40 82 00 0C */	bne lbl_8034942C
-lbl_80349424:
+/* 80349420 00346360  40 82 00 0C */	bne func_8034942C
+
+/* 80349424 0008 .text      func_80349424                  func_80349424                  */
+.global func_80349424
+func_80349424:
 /* 80349424 00346364  38 60 00 00 */	li r3, 0
 /* 80349428 00346368  4E 80 00 20 */	blr 
-lbl_8034942C:
+
+/* 8034942C 0030 .text      func_8034942C                  func_8034942C                  */
+.global func_8034942C
+func_8034942C:
 /* 8034942C 0034636C  80 6D 92 2C */	lwz r3, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349430 00346370  38 03 00 01 */	addi r0, r3, 1
 /* 80349434 00346374  90 0D 92 2C */	stw r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349438 00346378  80 0D 92 2C */	lwz r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 8034943C 0034637C  2C 00 00 02 */	cmpwi r0, 2
-/* 80349440 00346380  40 82 00 28 */	bne lbl_80349468
+/* 80349440 00346380  40 82 00 28 */	bne func_80349468
 /* 80349444 00346384  80 0D 92 28 */	lwz r0, LastError-_SDA_BASE_(r13)
 /* 80349448 00346388  7C 04 00 40 */	cmplw r4, r0
-/* 8034944C 0034638C  40 82 00 10 */	bne lbl_8034945C
+/* 8034944C 0034638C  40 82 00 10 */	bne func_8034945C
 /* 80349450 00346390  90 8D 92 28 */	stw r4, LastError-_SDA_BASE_(r13)
 /* 80349454 00346394  38 60 00 01 */	li r3, 1
 /* 80349458 00346398  4E 80 00 20 */	blr 
-lbl_8034945C:
+
+/* 8034945C 000C .text      func_8034945C                  func_8034945C                  */
+.global func_8034945C
+func_8034945C:
 /* 8034945C 0034639C  90 8D 92 28 */	stw r4, LastError-_SDA_BASE_(r13)
 /* 80349460 003463A0  38 60 00 02 */	li r3, 2
 /* 80349464 003463A4  4E 80 00 20 */	blr 
-lbl_80349468:
+
+/* 80349468 0020 .text      func_80349468                  func_80349468                  */
+.global func_80349468
+func_80349468:
 /* 80349468 003463A8  3C 04 FF FD */	addis r0, r4, 0xfffd
 /* 8034946C 003463AC  90 8D 92 28 */	stw r4, LastError-_SDA_BASE_(r13)
 /* 80349470 003463B0  28 00 11 00 */	cmplwi r0, 0x1100
-/* 80349474 003463B4  41 82 00 14 */	beq lbl_80349488
+/* 80349474 003463B4  41 82 00 14 */	beq func_80349488
 /* 80349478 003463B8  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034947C 003463BC  80 03 00 08 */	lwz r0, 8(r3)
 /* 80349480 003463C0  28 00 00 05 */	cmplwi r0, 5
-/* 80349484 003463C4  40 82 00 0C */	bne lbl_80349490
-lbl_80349488:
+/* 80349484 003463C4  40 82 00 0C */	bne func_80349490
+
+/* 80349488 0008 .text      func_80349488                  func_80349488                  */
+.global func_80349488
+func_80349488:
 /* 80349488 003463C8  38 60 00 02 */	li r3, 2
 /* 8034948C 003463CC  4E 80 00 20 */	blr 
-lbl_80349490:
+
+/* 80349490 0008 .text      func_80349490                  func_80349490                  */
+.global func_80349490
+func_80349490:
 /* 80349490 003463D0  38 60 00 03 */	li r3, 3
 /* 80349494 003463D4  4E 80 00 20 */	blr 
 
-/* 80349498 0264 .text cbForStateGettingError cbForStateGettingError */
+/* 80349498 0040 .text      cbForStateGettingError         cbForStateGettingError         */
 .global cbForStateGettingError
 cbForStateGettingError:
 /* 80349498 003463D8  7C 08 02 A6 */	mflr r0
@@ -298,25 +354,31 @@ cbForStateGettingError:
 /* 803494AC 003463EC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803494B0 003463F0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803494B4 003463F4  93 81 00 10 */	stw r28, 0x10(r1)
-/* 803494B8 003463F8  40 82 00 20 */	bne lbl_803494D8
+/* 803494B8 003463F8  40 82 00 20 */	bne func_803494D8
 /* 803494BC 003463FC  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 803494C0 00346400  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 803494C4 00346404  48 00 26 C5 */	bl __DVDStoreErrorCode
 /* 803494C8 00346408  48 00 1C 71 */	bl DVDReset
 /* 803494CC 0034640C  38 60 00 00 */	li r3, 0
 /* 803494D0 00346410  4B FF FE 0D */	bl cbForStateError
-/* 803494D4 00346414  48 00 02 08 */	b lbl_803496DC
-lbl_803494D8:
+/* 803494D4 00346414  48 00 02 08 */	b func_803496DC
+
+/* 803494D8 0024 .text      func_803494D8                  func_803494D8                  */
+.global func_803494D8
+func_803494D8:
 /* 803494D8 00346418  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 803494DC 0034641C  41 82 00 20 */	beq lbl_803494FC
+/* 803494DC 0034641C  41 82 00 20 */	beq func_803494FC
 /* 803494E0 00346420  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 803494E4 00346424  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 803494E8 00346428  48 00 26 A1 */	bl __DVDStoreErrorCode
 /* 803494EC 0034642C  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 803494F0 00346430  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 803494F4 00346434  4B FF EB 21 */	bl DVDLowStopMotor
-/* 803494F8 00346438  48 00 01 E4 */	b lbl_803496DC
-lbl_803494FC:
+/* 803494F8 00346438  48 00 01 E4 */	b func_803496DC
+
+/* 803494FC 0038 .text      func_803494FC                  func_803494FC                  */
+.global func_803494FC
+func_803494FC:
 /* 803494FC 0034643C  3C 60 CC 00 */	lis r3, 0xCC006020@ha
 /* 80349500 00346440  83 A3 60 20 */	lwz r29, 0xCC006020@l(r3)
 /* 80349504 00346444  38 7D 00 00 */	addi r3, r29, 0
@@ -324,43 +386,61 @@ lbl_803494FC:
 /* 8034950C 0034644C  4B FF FE D9 */	bl CategorizeError
 /* 80349510 00346450  3B E3 00 00 */	addi r31, r3, 0
 /* 80349514 00346454  28 1F 00 01 */	cmplwi r31, 1
-/* 80349518 00346458  40 82 00 1C */	bne lbl_80349534
+/* 80349518 00346458  40 82 00 1C */	bne func_80349534
 /* 8034951C 0034645C  7F A3 EB 78 */	mr r3, r29
 /* 80349520 00346460  48 00 26 69 */	bl __DVDStoreErrorCode
 /* 80349524 00346464  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 80349528 00346468  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 8034952C 0034646C  4B FF EA E9 */	bl DVDLowStopMotor
-/* 80349530 00346470  48 00 01 AC */	b lbl_803496DC
-lbl_80349534:
+/* 80349530 00346470  48 00 01 AC */	b func_803496DC
+
+/* 80349534 0014 .text      func_80349534                  func_80349534                  */
+.global func_80349534
+func_80349534:
 /* 80349534 00346474  38 1F FF FE */	addi r0, r31, -2
 /* 80349538 00346478  28 00 00 01 */	cmplwi r0, 1
-/* 8034953C 0034647C  41 81 00 0C */	bgt lbl_80349548
+/* 8034953C 0034647C  41 81 00 0C */	bgt func_80349548
 /* 80349540 00346480  38 80 00 00 */	li r4, 0
-/* 80349544 00346484  48 00 00 44 */	b lbl_80349588
-lbl_80349548:
+/* 80349544 00346484  48 00 00 44 */	b func_80349588
+
+/* 80349548 0014 .text      func_80349548                  func_80349548                  */
+.global func_80349548
+func_80349548:
 /* 80349548 00346488  3C 1C FF 00 */	addis r0, r28, 0xff00
 /* 8034954C 0034648C  28 00 00 00 */	cmplwi r0, 0
-/* 80349550 00346490  40 82 00 0C */	bne lbl_8034955C
+/* 80349550 00346490  40 82 00 0C */	bne func_8034955C
 /* 80349554 00346494  38 80 00 04 */	li r4, 4
-/* 80349558 00346498  48 00 00 30 */	b lbl_80349588
-lbl_8034955C:
+/* 80349558 00346498  48 00 00 30 */	b func_80349588
+
+/* 8034955C 0014 .text      func_8034955C                  func_8034955C                  */
+.global func_8034955C
+func_8034955C:
 /* 8034955C 0034649C  3C 1C FE 00 */	addis r0, r28, 0xfe00
 /* 80349560 003464A0  28 00 00 00 */	cmplwi r0, 0
-/* 80349564 003464A4  40 82 00 0C */	bne lbl_80349570
+/* 80349564 003464A4  40 82 00 0C */	bne func_80349570
 /* 80349568 003464A8  38 80 00 06 */	li r4, 6
-/* 8034956C 003464AC  48 00 00 1C */	b lbl_80349588
-lbl_80349570:
+/* 8034956C 003464AC  48 00 00 1C */	b func_80349588
+
+/* 80349570 0014 .text      func_80349570                  func_80349570                  */
+.global func_80349570
+func_80349570:
 /* 80349570 003464B0  3C 1C FD 00 */	addis r0, r28, 0xfd00
 /* 80349574 003464B4  28 00 00 00 */	cmplwi r0, 0
-/* 80349578 003464B8  40 82 00 0C */	bne lbl_80349584
+/* 80349578 003464B8  40 82 00 0C */	bne func_80349584
 /* 8034957C 003464BC  38 80 00 03 */	li r4, 3
-/* 80349580 003464C0  48 00 00 08 */	b lbl_80349588
-lbl_80349584:
+/* 80349580 003464C0  48 00 00 08 */	b func_80349588
+
+/* 80349584 0004 .text      func_80349584                  func_80349584                  */
+.global func_80349584
+func_80349584:
 /* 80349584 003464C4  38 80 00 05 */	li r4, 5
-lbl_80349588:
+
+/* 80349588 004C .text      func_80349588                  func_80349588                  */
+.global func_80349588
+func_80349588:
 /* 80349588 003464C8  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034958C 003464CC  28 00 00 00 */	cmplwi r0, 0
-/* 80349590 003464D0  41 82 00 6C */	beq lbl_803495FC
+/* 80349590 003464D0  41 82 00 6C */	beq func_803495FC
 /* 80349594 003464D4  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 80349598 003464D8  90 8D 92 20 */	stw r4, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034959C 003464DC  38 00 00 00 */	li r0, 0
@@ -372,88 +452,121 @@ lbl_80349588:
 /* 803495B4 003464F4  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 803495B8 003464F8  81 9E 00 28 */	lwz r12, 0x28(r30)
 /* 803495BC 003464FC  28 0C 00 00 */	cmplwi r12, 0
-/* 803495C0 00346500  41 82 00 14 */	beq lbl_803495D4
+/* 803495C0 00346500  41 82 00 14 */	beq func_803495D4
 /* 803495C4 00346504  7D 88 03 A6 */	mtlr r12
 /* 803495C8 00346508  38 9E 00 00 */	addi r4, r30, 0
 /* 803495CC 0034650C  38 60 FF FD */	li r3, -3
 /* 803495D0 00346510  4E 80 00 21 */	blrl 
-lbl_803495D4:
+
+/* 803495D4 001C .text      func_803495D4                  func_803495D4                  */
+.global func_803495D4
+func_803495D4:
 /* 803495D4 00346514  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 803495D8 00346518  28 0C 00 00 */	cmplwi r12, 0
-/* 803495DC 0034651C  41 82 00 14 */	beq lbl_803495F0
+/* 803495DC 0034651C  41 82 00 14 */	beq func_803495F0
 /* 803495E0 00346520  7D 88 03 A6 */	mtlr r12
 /* 803495E4 00346524  38 9E 00 00 */	addi r4, r30, 0
 /* 803495E8 00346528  38 60 00 00 */	li r3, 0
 /* 803495EC 0034652C  4E 80 00 21 */	blrl 
-lbl_803495F0:
+
+/* 803495F0 000C .text      func_803495F0                  func_803495F0                  */
+.global func_803495F0
+func_803495F0:
 /* 803495F0 00346530  48 00 0A BD */	bl stateReady
 /* 803495F4 00346534  38 00 00 01 */	li r0, 1
-/* 803495F8 00346538  48 00 00 08 */	b lbl_80349600
-lbl_803495FC:
+/* 803495F8 00346538  48 00 00 08 */	b func_80349600
+
+/* 803495FC 0004 .text      func_803495FC                  func_803495FC                  */
+.global func_803495FC
+func_803495FC:
 /* 803495FC 0034653C  38 00 00 00 */	li r0, 0
-lbl_80349600:
+
+/* 80349600 0020 .text      func_80349600                  func_80349600                  */
+.global func_80349600
+func_80349600:
 /* 80349600 00346540  2C 00 00 00 */	cmpwi r0, 0
-/* 80349604 00346544  40 82 00 D8 */	bne lbl_803496DC
+/* 80349604 00346544  40 82 00 D8 */	bne func_803496DC
 /* 80349608 00346548  28 1F 00 02 */	cmplwi r31, 2
-/* 8034960C 0034654C  40 82 00 14 */	bne lbl_80349620
+/* 8034960C 0034654C  40 82 00 14 */	bne func_80349620
 /* 80349610 00346550  7F A3 EB 78 */	mr r3, r29
 /* 80349614 00346554  48 00 25 75 */	bl __DVDStoreErrorCode
 /* 80349618 00346558  48 00 01 C1 */	bl stateGoToRetry
-/* 8034961C 0034655C  48 00 00 C0 */	b lbl_803496DC
-lbl_80349620:
+/* 8034961C 0034655C  48 00 00 C0 */	b func_803496DC
+
+/* 80349620 0030 .text      func_80349620                  func_80349620                  */
+.global func_80349620
+func_80349620:
 /* 80349620 00346560  28 1F 00 03 */	cmplwi r31, 3
-/* 80349624 00346564  40 82 00 40 */	bne lbl_80349664
+/* 80349624 00346564  40 82 00 40 */	bne func_80349664
 /* 80349628 00346568  57 A3 02 3E */	clrlwi r3, r29, 8
 /* 8034962C 0034656C  3C 03 FF FD */	addis r0, r3, 0xfffd
 /* 80349630 00346570  28 00 11 00 */	cmplwi r0, 0x1100
-/* 80349634 00346574  40 82 00 1C */	bne lbl_80349650
+/* 80349634 00346574  40 82 00 1C */	bne func_80349650
 /* 80349638 00346578  80 AD 91 F8 */	lwz r5, executing-_SDA_BASE_(r13)
 /* 8034963C 0034657C  3C 60 80 35 */	lis r3, cbForUnrecoveredError@ha
 /* 80349640 00346580  38 83 96 FC */	addi r4, r3, cbForUnrecoveredError@l
 /* 80349644 00346584  80 65 00 10 */	lwz r3, 0x10(r5)
 /* 80349648 00346588  4B FF E8 69 */	bl DVDLowSeek
-/* 8034964C 0034658C  48 00 00 90 */	b lbl_803496DC
-lbl_80349650:
-/* 80349650 00346590  81 8D 92 40 */	lwz r12, lbl_804517C0-_SDA_BASE_(r13)
+/* 8034964C 0034658C  48 00 00 90 */	b func_803496DC
+
+/* 80349650 0014 .text      func_80349650                  func_80349650                  */
+.global func_80349650
+func_80349650:
+/* 80349650 00346590  81 8D 92 40 */	lwz r12, dvd__LastState-_SDA_BASE_(r13)
 /* 80349654 00346594  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349658 00346598  7D 88 03 A6 */	mtlr r12
 /* 8034965C 0034659C  4E 80 00 21 */	blrl 
-/* 80349660 003465A0  48 00 00 7C */	b lbl_803496DC
-lbl_80349664:
+/* 80349660 003465A0  48 00 00 7C */	b func_803496DC
+
+/* 80349664 0020 .text      func_80349664                  func_80349664                  */
+.global func_80349664
+func_80349664:
 /* 80349664 003465A4  3C 1C FF 00 */	addis r0, r28, 0xff00
 /* 80349668 003465A8  28 00 00 00 */	cmplwi r0, 0
-/* 8034966C 003465AC  40 82 00 18 */	bne lbl_80349684
+/* 8034966C 003465AC  40 82 00 18 */	bne func_80349684
 /* 80349670 003465B0  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349674 003465B4  38 00 00 05 */	li r0, 5
 /* 80349678 003465B8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8034967C 003465BC  48 00 09 1D */	bl stateMotorStopped
-/* 80349680 003465C0  48 00 00 5C */	b lbl_803496DC
-lbl_80349684:
+/* 80349680 003465C0  48 00 00 5C */	b func_803496DC
+
+/* 80349684 0020 .text      func_80349684                  func_80349684                  */
+.global func_80349684
+func_80349684:
 /* 80349684 003465C4  3C 1C FE 00 */	addis r0, r28, 0xfe00
 /* 80349688 003465C8  28 00 00 00 */	cmplwi r0, 0
-/* 8034968C 003465CC  40 82 00 18 */	bne lbl_803496A4
+/* 8034968C 003465CC  40 82 00 18 */	bne func_803496A4
 /* 80349690 003465D0  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349694 003465D4  38 00 00 03 */	li r0, 3
 /* 80349698 003465D8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8034969C 003465DC  48 00 07 95 */	bl stateCoverClosed
-/* 803496A0 003465E0  48 00 00 3C */	b lbl_803496DC
-lbl_803496A4:
+/* 803496A0 003465E0  48 00 00 3C */	b func_803496DC
+
+/* 803496A4 0020 .text      func_803496A4                  func_803496A4                  */
+.global func_803496A4
+func_803496A4:
 /* 803496A4 003465E4  3C 1C FD 00 */	addis r0, r28, 0xfd00
 /* 803496A8 003465E8  28 00 00 00 */	cmplwi r0, 0
-/* 803496AC 003465EC  40 82 00 18 */	bne lbl_803496C4
+/* 803496AC 003465EC  40 82 00 18 */	bne func_803496C4
 /* 803496B0 003465F0  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 803496B4 003465F4  38 00 00 04 */	li r0, 4
 /* 803496B8 003465F8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803496BC 003465FC  48 00 08 DD */	bl stateMotorStopped
-/* 803496C0 00346600  48 00 00 1C */	b lbl_803496DC
-lbl_803496C4:
+/* 803496C0 00346600  48 00 00 1C */	b func_803496DC
+
+/* 803496C4 0018 .text      func_803496C4                  func_803496C4                  */
+.global func_803496C4
+func_803496C4:
 /* 803496C4 00346604  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 803496C8 00346608  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 803496CC 0034660C  48 00 24 BD */	bl __DVDStoreErrorCode
 /* 803496D0 00346610  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 803496D4 00346614  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 803496D8 00346618  4B FF E9 3D */	bl DVDLowStopMotor
-lbl_803496DC:
+
+/* 803496DC 0020 .text      func_803496DC                  func_803496DC                  */
+.global func_803496DC
+func_803496DC:
 /* 803496DC 0034661C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803496E0 00346620  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 803496E4 00346624  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -463,62 +576,77 @@ lbl_803496DC:
 /* 803496F4 00346634  7C 08 03 A6 */	mtlr r0
 /* 803496F8 00346638  4E 80 00 20 */	blr 
 
-/* 803496FC 005C .text cbForUnrecoveredError cbForUnrecoveredError */
+/* 803496FC 0030 .text      cbForUnrecoveredError          cbForUnrecoveredError          */
 .global cbForUnrecoveredError
 cbForUnrecoveredError:
 /* 803496FC 0034663C  7C 08 02 A6 */	mflr r0
 /* 80349700 00346640  28 03 00 10 */	cmplwi r3, 0x10
 /* 80349704 00346644  90 01 00 04 */	stw r0, 4(r1)
 /* 80349708 00346648  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034970C 0034664C  40 82 00 20 */	bne lbl_8034972C
+/* 8034970C 0034664C  40 82 00 20 */	bne func_8034972C
 /* 80349710 00346650  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349714 00346654  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349718 00346658  48 00 24 71 */	bl __DVDStoreErrorCode
 /* 8034971C 0034665C  48 00 1A 1D */	bl DVDReset
 /* 80349720 00346660  38 60 00 00 */	li r3, 0
 /* 80349724 00346664  4B FF FB B9 */	bl cbForStateError
-/* 80349728 00346668  48 00 00 20 */	b lbl_80349748
-lbl_8034972C:
+/* 80349728 00346668  48 00 00 20 */	b func_80349748
+
+/* 8034972C 0010 .text      func_8034972C                  func_8034972C                  */
+.global func_8034972C
+func_8034972C:
 /* 8034972C 0034666C  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349730 00346670  41 82 00 0C */	beq lbl_8034973C
+/* 80349730 00346670  41 82 00 0C */	beq func_8034973C
 /* 80349734 00346674  48 00 00 A5 */	bl stateGoToRetry
-/* 80349738 00346678  48 00 00 10 */	b lbl_80349748
-lbl_8034973C:
+/* 80349738 00346678  48 00 00 10 */	b func_80349748
+
+/* 8034973C 000C .text      func_8034973C                  func_8034973C                  */
+.global func_8034973C
+func_8034973C:
 /* 8034973C 0034667C  3C 60 80 35 */	lis r3, cbForUnrecoveredErrorRetry@ha
 /* 80349740 00346680  38 63 97 58 */	addi r3, r3, cbForUnrecoveredErrorRetry@l
 /* 80349744 00346684  4B FF E9 5D */	bl DVDLowRequestError
-lbl_80349748:
+
+/* 80349748 0010 .text      func_80349748                  func_80349748                  */
+.global func_80349748
+func_80349748:
 /* 80349748 00346688  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8034974C 0034668C  38 21 00 08 */	addi r1, r1, 8
 /* 80349750 00346690  7C 08 03 A6 */	mtlr r0
 /* 80349754 00346694  4E 80 00 20 */	blr 
 
-/* 80349758 0080 .text cbForUnrecoveredErrorRetry cbForUnrecoveredErrorRetry */
+/* 80349758 0030 .text      cbForUnrecoveredErrorRetry     cbForUnrecoveredErrorRetry     */
 .global cbForUnrecoveredErrorRetry
 cbForUnrecoveredErrorRetry:
 /* 80349758 00346698  7C 08 02 A6 */	mflr r0
 /* 8034975C 0034669C  28 03 00 10 */	cmplwi r3, 0x10
 /* 80349760 003466A0  90 01 00 04 */	stw r0, 4(r1)
 /* 80349764 003466A4  94 21 FF F8 */	stwu r1, -8(r1)
-/* 80349768 003466A8  40 82 00 20 */	bne lbl_80349788
+/* 80349768 003466A8  40 82 00 20 */	bne func_80349788
 /* 8034976C 003466AC  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349770 003466B0  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349774 003466B4  48 00 24 15 */	bl __DVDStoreErrorCode
 /* 80349778 003466B8  48 00 19 C1 */	bl DVDReset
 /* 8034977C 003466BC  38 60 00 00 */	li r3, 0
 /* 80349780 003466C0  4B FF FB 5D */	bl cbForStateError
-/* 80349784 003466C4  48 00 00 44 */	b lbl_803497C8
-lbl_80349788:
+/* 80349784 003466C4  48 00 00 44 */	b func_803497C8
+
+/* 80349788 0024 .text      func_80349788                  func_80349788                  */
+.global func_80349788
+func_80349788:
 /* 80349788 003466C8  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 8034978C 003466CC  41 82 00 20 */	beq lbl_803497AC
+/* 8034978C 003466CC  41 82 00 20 */	beq func_803497AC
 /* 80349790 003466D0  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 80349794 003466D4  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 80349798 003466D8  48 00 23 F1 */	bl __DVDStoreErrorCode
 /* 8034979C 003466DC  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 803497A0 003466E0  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 803497A4 003466E4  4B FF E8 71 */	bl DVDLowStopMotor
-/* 803497A8 003466E8  48 00 00 20 */	b lbl_803497C8
-lbl_803497AC:
+/* 803497A8 003466E8  48 00 00 20 */	b func_803497C8
+
+/* 803497AC 001C .text      func_803497AC                  func_803497AC                  */
+.global func_803497AC
+func_803497AC:
 /* 803497AC 003466EC  3C 60 CC 00 */	lis r3, 0xCC006000@ha
 /* 803497B0 003466F0  38 63 60 00 */	addi r3, r3, 0xCC006000@l
 /* 803497B4 003466F4  80 63 00 20 */	lwz r3, 0x20(r3)
@@ -526,13 +654,16 @@ lbl_803497AC:
 /* 803497BC 003466FC  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 803497C0 00346700  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 803497C4 00346704  4B FF E8 51 */	bl DVDLowStopMotor
-lbl_803497C8:
+
+/* 803497C8 0010 .text      func_803497C8                  func_803497C8                  */
+.global func_803497C8
+func_803497C8:
 /* 803497C8 00346708  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 803497CC 0034670C  38 21 00 08 */	addi r1, r1, 8
 /* 803497D0 00346710  7C 08 03 A6 */	mtlr r0
 /* 803497D4 00346714  4E 80 00 20 */	blr 
 
-/* 803497D8 0028 .text stateGoToRetry stateGoToRetry */
+/* 803497D8 0028 .text      stateGoToRetry                 stateGoToRetry                 */
 .global stateGoToRetry
 stateGoToRetry:
 /* 803497D8 00346718  7C 08 02 A6 */	mflr r0
@@ -546,7 +677,7 @@ stateGoToRetry:
 /* 803497F8 00346738  7C 08 03 A6 */	mtlr r0
 /* 803497FC 0034673C  4E 80 00 20 */	blr 
 
-/* 80349800 0140 .text cbForStateGoToRetry cbForStateGoToRetry */
+/* 80349800 0034 .text      cbForStateGoToRetry            cbForStateGoToRetry            */
 .global cbForStateGoToRetry
 cbForStateGoToRetry:
 /* 80349800 00346740  7C 08 02 A6 */	mflr r0
@@ -554,46 +685,58 @@ cbForStateGoToRetry:
 /* 80349808 00346748  90 01 00 04 */	stw r0, 4(r1)
 /* 8034980C 0034674C  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80349810 00346750  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 80349814 00346754  40 82 00 20 */	bne lbl_80349834
+/* 80349814 00346754  40 82 00 20 */	bne func_80349834
 /* 80349818 00346758  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 8034981C 0034675C  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349820 00346760  48 00 23 69 */	bl __DVDStoreErrorCode
 /* 80349824 00346764  48 00 19 15 */	bl DVDReset
 /* 80349828 00346768  38 60 00 00 */	li r3, 0
 /* 8034982C 0034676C  4B FF FA B1 */	bl cbForStateError
-/* 80349830 00346770  48 00 00 FC */	b lbl_8034992C
-lbl_80349834:
+/* 80349830 00346770  48 00 00 FC */	b func_8034992C
+
+/* 80349834 0024 .text      func_80349834                  func_80349834                  */
+.global func_80349834
+func_80349834:
 /* 80349834 00346774  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 80349838 00346778  41 82 00 20 */	beq lbl_80349858
+/* 80349838 00346778  41 82 00 20 */	beq func_80349858
 /* 8034983C 0034677C  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 80349840 00346780  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 80349844 00346784  48 00 23 45 */	bl __DVDStoreErrorCode
 /* 80349848 00346788  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 8034984C 0034678C  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 80349850 00346790  4B FF E7 C5 */	bl DVDLowStopMotor
-/* 80349854 00346794  48 00 00 D8 */	b lbl_8034992C
-lbl_80349858:
+/* 80349854 00346794  48 00 00 D8 */	b func_8034992C
+
+/* 80349858 0038 .text      func_80349858                  func_80349858                  */
+.global func_80349858
+func_80349858:
 /* 80349858 00346798  38 00 00 00 */	li r0, 0
 /* 8034985C 0034679C  90 0D 92 2C */	stw r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349860 003467A0  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 80349864 003467A4  28 00 00 04 */	cmplwi r0, 4
-/* 80349868 003467A8  41 82 00 28 */	beq lbl_80349890
+/* 80349868 003467A8  41 82 00 28 */	beq func_80349890
 /* 8034986C 003467AC  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 80349870 003467B0  28 00 00 05 */	cmplwi r0, 5
-/* 80349874 003467B4  41 82 00 1C */	beq lbl_80349890
+/* 80349874 003467B4  41 82 00 1C */	beq func_80349890
 /* 80349878 003467B8  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034987C 003467BC  28 00 00 0D */	cmplwi r0, 0xd
-/* 80349880 003467C0  41 82 00 10 */	beq lbl_80349890
+/* 80349880 003467C0  41 82 00 10 */	beq func_80349890
 /* 80349884 003467C4  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 80349888 003467C8  28 00 00 0F */	cmplwi r0, 0xf
-/* 8034988C 003467CC  40 82 00 0C */	bne lbl_80349898
-lbl_80349890:
+/* 8034988C 003467CC  40 82 00 0C */	bne func_80349898
+
+/* 80349890 0008 .text      func_80349890                  func_80349890                  */
+.global func_80349890
+func_80349890:
 /* 80349890 003467D0  38 00 00 01 */	li r0, 1
 /* 80349894 003467D4  90 0D 92 30 */	stw r0, ResetRequired-_SDA_BASE_(r13)
-lbl_80349898:
+
+/* 80349898 0050 .text      func_80349898                  func_80349898                  */
+.global func_80349898
+func_80349898:
 /* 80349898 003467D8  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034989C 003467DC  28 00 00 00 */	cmplwi r0, 0
-/* 803498A0 003467E0  41 82 00 70 */	beq lbl_80349910
+/* 803498A0 003467E0  41 82 00 70 */	beq func_80349910
 /* 803498A4 003467E4  38 00 00 02 */	li r0, 2
 /* 803498A8 003467E8  83 ED 91 F8 */	lwz r31, executing-_SDA_BASE_(r13)
 /* 803498AC 003467EC  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
@@ -606,40 +749,55 @@ lbl_80349898:
 /* 803498C8 00346808  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 803498CC 0034680C  81 9F 00 28 */	lwz r12, 0x28(r31)
 /* 803498D0 00346810  28 0C 00 00 */	cmplwi r12, 0
-/* 803498D4 00346814  41 82 00 14 */	beq lbl_803498E8
+/* 803498D4 00346814  41 82 00 14 */	beq func_803498E8
 /* 803498D8 00346818  7D 88 03 A6 */	mtlr r12
 /* 803498DC 0034681C  38 9F 00 00 */	addi r4, r31, 0
 /* 803498E0 00346820  38 60 FF FD */	li r3, -3
 /* 803498E4 00346824  4E 80 00 21 */	blrl 
-lbl_803498E8:
+
+/* 803498E8 001C .text      func_803498E8                  func_803498E8                  */
+.global func_803498E8
+func_803498E8:
 /* 803498E8 00346828  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 803498EC 0034682C  28 0C 00 00 */	cmplwi r12, 0
-/* 803498F0 00346830  41 82 00 14 */	beq lbl_80349904
+/* 803498F0 00346830  41 82 00 14 */	beq func_80349904
 /* 803498F4 00346834  7D 88 03 A6 */	mtlr r12
 /* 803498F8 00346838  38 9F 00 00 */	addi r4, r31, 0
 /* 803498FC 0034683C  38 60 00 00 */	li r3, 0
 /* 80349900 00346840  4E 80 00 21 */	blrl 
-lbl_80349904:
+
+/* 80349904 000C .text      func_80349904                  func_80349904                  */
+.global func_80349904
+func_80349904:
 /* 80349904 00346844  48 00 07 A9 */	bl stateReady
 /* 80349908 00346848  38 00 00 01 */	li r0, 1
-/* 8034990C 0034684C  48 00 00 08 */	b lbl_80349914
-lbl_80349910:
+/* 8034990C 0034684C  48 00 00 08 */	b func_80349914
+
+/* 80349910 0004 .text      func_80349910                  func_80349910                  */
+.global func_80349910
+func_80349910:
 /* 80349910 00346850  38 00 00 00 */	li r0, 0
-lbl_80349914:
+
+/* 80349914 0018 .text      func_80349914                  func_80349914                  */
+.global func_80349914
+func_80349914:
 /* 80349914 00346854  2C 00 00 00 */	cmpwi r0, 0
-/* 80349918 00346858  40 82 00 14 */	bne lbl_8034992C
+/* 80349918 00346858  40 82 00 14 */	bne func_8034992C
 /* 8034991C 0034685C  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349920 00346860  38 00 00 0B */	li r0, 0xb
 /* 80349924 00346864  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349928 00346868  48 00 06 71 */	bl stateMotorStopped
-lbl_8034992C:
+
+/* 8034992C 0014 .text      func_8034992C                  func_8034992C                  */
+.global func_8034992C
+func_8034992C:
 /* 8034992C 0034686C  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80349930 00346870  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80349934 00346874  38 21 00 18 */	addi r1, r1, 0x18
 /* 80349938 00346878  7C 08 03 A6 */	mtlr r0
 /* 8034993C 0034687C  4E 80 00 20 */	blr 
 
-/* 80349940 00E0 .text stateCheckID stateCheckID */
+/* 80349940 0028 .text      stateCheckID                   stateCheckID                   */
 .global stateCheckID
 stateCheckID:
 /* 80349940 00346880  7C 08 02 A6 */	mflr r0
@@ -650,15 +808,18 @@ stateCheckID:
 /* 80349954 00346894  3B E3 C9 00 */	addi r31, r3, BB2@l
 /* 80349958 00346898  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034995C 0034689C  2C 00 00 03 */	cmpwi r0, 3
-/* 80349960 003468A0  41 82 00 08 */	beq lbl_80349968
-/* 80349964 003468A4  48 00 00 6C */	b lbl_803499D0
-lbl_80349968:
+/* 80349960 003468A0  41 82 00 08 */	beq func_80349968
+/* 80349964 003468A4  48 00 00 6C */	b func_803499D0
+
+/* 80349968 0058 .text      func_80349968                  func_80349968                  */
+.global func_80349968
+func_80349968:
 /* 80349968 003468A8  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034996C 003468AC  38 7F 00 20 */	addi r3, r31, 0x20
 /* 80349970 003468B0  80 84 00 24 */	lwz r4, 0x24(r4)
 /* 80349974 003468B4  48 00 22 91 */	bl DVDCompareDiskID
 /* 80349978 003468B8  2C 03 00 00 */	cmpwi r3, 0
-/* 8034997C 003468BC  41 82 00 44 */	beq lbl_803499C0
+/* 8034997C 003468BC  41 82 00 44 */	beq func_803499C0
 /* 80349980 003468C0  80 6D 91 FC */	lwz r3, IDShouldBe-_SDA_BASE_(r13)
 /* 80349984 003468C4  38 9F 00 20 */	addi r4, r31, 0x20
 /* 80349988 003468C8  38 A0 00 20 */	li r5, 0x20
@@ -672,39 +833,51 @@ lbl_80349968:
 /* 803499A8 003468E8  3C 80 80 35 */	lis r4, stateCheckID2a@ha
 /* 803499AC 003468EC  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 803499B0 003468F0  38 04 9A 54 */	addi r0, r4, stateCheckID2a@l
-/* 803499B4 003468F4  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 803499B4 003468F4  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 803499B8 003468F8  48 00 00 9D */	bl stateCheckID2a
-/* 803499BC 003468FC  48 00 00 50 */	b lbl_80349A0C
-lbl_803499C0:
+/* 803499BC 003468FC  48 00 00 50 */	b func_80349A0C
+
+/* 803499C0 0010 .text      func_803499C0                  func_803499C0                  */
+.global func_803499C0
+func_803499C0:
 /* 803499C0 00346900  3C 60 80 35 */	lis r3, cbForStateCheckID1@ha
 /* 803499C4 00346904  38 63 9B 28 */	addi r3, r3, cbForStateCheckID1@l
 /* 803499C8 00346908  4B FF E6 4D */	bl DVDLowStopMotor
-/* 803499CC 0034690C  48 00 00 40 */	b lbl_80349A0C
-lbl_803499D0:
+/* 803499CC 0034690C  48 00 00 40 */	b func_80349A0C
+
+/* 803499D0 0028 .text      func_803499D0                  func_803499D0                  */
+.global func_803499D0
+func_803499D0:
 /* 803499D0 00346910  80 8D 91 FC */	lwz r4, IDShouldBe-_SDA_BASE_(r13)
 /* 803499D4 00346914  38 7F 00 20 */	addi r3, r31, 0x20
 /* 803499D8 00346918  38 A0 00 20 */	li r5, 0x20
 /* 803499DC 0034691C  48 01 C6 B1 */	bl memcmp
 /* 803499E0 00346920  2C 03 00 00 */	cmpwi r3, 0
-/* 803499E4 00346924  41 82 00 14 */	beq lbl_803499F8
+/* 803499E4 00346924  41 82 00 14 */	beq func_803499F8
 /* 803499E8 00346928  3C 60 80 35 */	lis r3, cbForStateCheckID1@ha
 /* 803499EC 0034692C  38 63 9B 28 */	addi r3, r3, cbForStateCheckID1@l
 /* 803499F0 00346930  4B FF E6 25 */	bl DVDLowStopMotor
-/* 803499F4 00346934  48 00 00 18 */	b lbl_80349A0C
-lbl_803499F8:
+/* 803499F4 00346934  48 00 00 18 */	b func_80349A0C
+
+/* 803499F8 0014 .text      func_803499F8                  func_803499F8                  */
+.global func_803499F8
+func_803499F8:
 /* 803499F8 00346938  3C 80 80 35 */	lis r4, stateCheckID3@ha
 /* 803499FC 0034693C  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349A00 00346940  38 04 9A 20 */	addi r0, r4, stateCheckID3@l
-/* 80349A04 00346944  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 80349A04 00346944  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 80349A08 00346948  48 00 00 19 */	bl stateCheckID3
-lbl_80349A0C:
+
+/* 80349A0C 0014 .text      func_80349A0C                  func_80349A0C                  */
+.global func_80349A0C
+func_80349A0C:
 /* 80349A0C 0034694C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80349A10 00346950  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80349A14 00346954  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349A18 00346958  7C 08 03 A6 */	mtlr r0
 /* 80349A1C 0034695C  4E 80 00 20 */	blr 
 
-/* 80349A20 0034 .text stateCheckID3 stateCheckID3 */
+/* 80349A20 0034 .text      stateCheckID3                  stateCheckID3                  */
 .global stateCheckID3
 stateCheckID3:
 /* 80349A20 00346960  7C 08 02 A6 */	mflr r0
@@ -721,7 +894,7 @@ stateCheckID3:
 /* 80349A4C 0034698C  7C 08 03 A6 */	mtlr r0
 /* 80349A50 00346990  4E 80 00 20 */	blr 
 
-/* 80349A54 0034 .text stateCheckID2a stateCheckID2a */
+/* 80349A54 0034 .text      stateCheckID2a                 stateCheckID2a                 */
 .global stateCheckID2a
 stateCheckID2a:
 /* 80349A54 00346994  7C 08 02 A6 */	mflr r0
@@ -738,40 +911,49 @@ stateCheckID2a:
 /* 80349A80 003469C0  7C 08 03 A6 */	mtlr r0
 /* 80349A84 003469C4  4E 80 00 20 */	blr 
 
-/* 80349A88 0068 .text cbForStateCheckID2a cbForStateCheckID2a */
+/* 80349A88 0030 .text      cbForStateCheckID2a            cbForStateCheckID2a            */
 .global cbForStateCheckID2a
 cbForStateCheckID2a:
 /* 80349A88 003469C8  7C 08 02 A6 */	mflr r0
 /* 80349A8C 003469CC  28 03 00 10 */	cmplwi r3, 0x10
 /* 80349A90 003469D0  90 01 00 04 */	stw r0, 4(r1)
 /* 80349A94 003469D4  94 21 FF F8 */	stwu r1, -8(r1)
-/* 80349A98 003469D8  40 82 00 20 */	bne lbl_80349AB8
+/* 80349A98 003469D8  40 82 00 20 */	bne func_80349AB8
 /* 80349A9C 003469DC  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349AA0 003469E0  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349AA4 003469E4  48 00 20 E5 */	bl __DVDStoreErrorCode
 /* 80349AA8 003469E8  48 00 16 91 */	bl DVDReset
 /* 80349AAC 003469EC  38 60 00 00 */	li r3, 0
 /* 80349AB0 003469F0  4B FF F8 2D */	bl cbForStateError
-/* 80349AB4 003469F4  48 00 00 2C */	b lbl_80349AE0
-lbl_80349AB8:
+/* 80349AB4 003469F4  48 00 00 2C */	b func_80349AE0
+
+/* 80349AB8 001C .text      func_80349AB8                  func_80349AB8                  */
+.global func_80349AB8
+func_80349AB8:
 /* 80349AB8 003469F8  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349ABC 003469FC  41 82 00 18 */	beq lbl_80349AD4
+/* 80349ABC 003469FC  41 82 00 18 */	beq func_80349AD4
 /* 80349AC0 00346A00  38 00 00 00 */	li r0, 0
 /* 80349AC4 00346A04  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349AC8 00346A08  90 0D 92 2C */	stw r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349ACC 00346A0C  48 00 00 25 */	bl stateCheckID2
-/* 80349AD0 00346A10  48 00 00 10 */	b lbl_80349AE0
-lbl_80349AD4:
+/* 80349AD0 00346A10  48 00 00 10 */	b func_80349AE0
+
+/* 80349AD4 000C .text      func_80349AD4                  func_80349AD4                  */
+.global func_80349AD4
+func_80349AD4:
 /* 80349AD4 00346A14  3C 60 80 35 */	lis r3, cbForStateGettingError@ha
 /* 80349AD8 00346A18  38 63 94 98 */	addi r3, r3, cbForStateGettingError@l
 /* 80349ADC 00346A1C  4B FF E5 C5 */	bl DVDLowRequestError
-lbl_80349AE0:
+
+/* 80349AE0 0010 .text      func_80349AE0                  func_80349AE0                  */
+.global func_80349AE0
+func_80349AE0:
 /* 80349AE0 00346A20  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80349AE4 00346A24  38 21 00 08 */	addi r1, r1, 8
 /* 80349AE8 00346A28  7C 08 03 A6 */	mtlr r0
 /* 80349AEC 00346A2C  4E 80 00 20 */	blr 
 
-/* 80349AF0 0038 .text stateCheckID2 stateCheckID2 */
+/* 80349AF0 0038 .text      stateCheckID2                  stateCheckID2                  */
 .global stateCheckID2
 stateCheckID2:
 /* 80349AF0 00346A30  7C 08 02 A6 */	mflr r0
@@ -789,7 +971,7 @@ stateCheckID2:
 /* 80349B20 00346A60  7C 08 03 A6 */	mtlr r0
 /* 80349B24 00346A64  4E 80 00 20 */	blr 
 
-/* 80349B28 00FC .text cbForStateCheckID1 cbForStateCheckID1 */
+/* 80349B28 0034 .text      cbForStateCheckID1             cbForStateCheckID1             */
 .global cbForStateCheckID1
 cbForStateCheckID1:
 /* 80349B28 00346A68  7C 08 02 A6 */	mflr r0
@@ -797,30 +979,36 @@ cbForStateCheckID1:
 /* 80349B30 00346A70  90 01 00 04 */	stw r0, 4(r1)
 /* 80349B34 00346A74  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80349B38 00346A78  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 80349B3C 00346A7C  40 82 00 20 */	bne lbl_80349B5C
+/* 80349B3C 00346A7C  40 82 00 20 */	bne func_80349B5C
 /* 80349B40 00346A80  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349B44 00346A84  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349B48 00346A88  48 00 20 41 */	bl __DVDStoreErrorCode
 /* 80349B4C 00346A8C  48 00 15 ED */	bl DVDReset
 /* 80349B50 00346A90  38 60 00 00 */	li r3, 0
 /* 80349B54 00346A94  4B FF F7 89 */	bl cbForStateError
-/* 80349B58 00346A98  48 00 00 B8 */	b lbl_80349C10
-lbl_80349B5C:
+/* 80349B58 00346A98  48 00 00 B8 */	b func_80349C10
+
+/* 80349B5C 0024 .text      func_80349B5C                  func_80349B5C                  */
+.global func_80349B5C
+func_80349B5C:
 /* 80349B5C 00346A9C  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 80349B60 00346AA0  41 82 00 20 */	beq lbl_80349B80
+/* 80349B60 00346AA0  41 82 00 20 */	beq func_80349B80
 /* 80349B64 00346AA4  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 80349B68 00346AA8  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 80349B6C 00346AAC  48 00 20 1D */	bl __DVDStoreErrorCode
 /* 80349B70 00346AB0  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 80349B74 00346AB4  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 80349B78 00346AB8  4B FF E4 9D */	bl DVDLowStopMotor
-/* 80349B7C 00346ABC  48 00 00 94 */	b lbl_80349C10
-lbl_80349B80:
+/* 80349B7C 00346ABC  48 00 00 94 */	b func_80349C10
+
+/* 80349B80 0054 .text      func_80349B80                  func_80349B80                  */
+.global func_80349B80
+func_80349B80:
 /* 80349B80 00346AC0  38 80 00 00 */	li r4, 0
 /* 80349B84 00346AC4  90 8D 92 2C */	stw r4, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349B88 00346AC8  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 80349B8C 00346ACC  28 00 00 00 */	cmplwi r0, 0
-/* 80349B90 00346AD0  41 82 00 68 */	beq lbl_80349BF8
+/* 80349B90 00346AD0  41 82 00 68 */	beq func_80349BF8
 /* 80349B94 00346AD4  38 00 00 01 */	li r0, 1
 /* 80349B98 00346AD8  83 ED 91 F8 */	lwz r31, executing-_SDA_BASE_(r13)
 /* 80349B9C 00346ADC  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
@@ -832,37 +1020,49 @@ lbl_80349B80:
 /* 80349BB4 00346AF4  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 80349BB8 00346AF8  81 9F 00 28 */	lwz r12, 0x28(r31)
 /* 80349BBC 00346AFC  28 0C 00 00 */	cmplwi r12, 0
-/* 80349BC0 00346B00  41 82 00 14 */	beq lbl_80349BD4
+/* 80349BC0 00346B00  41 82 00 14 */	beq func_80349BD4
 /* 80349BC4 00346B04  7D 88 03 A6 */	mtlr r12
 /* 80349BC8 00346B08  38 9F 00 00 */	addi r4, r31, 0
 /* 80349BCC 00346B0C  38 60 FF FD */	li r3, -3
 /* 80349BD0 00346B10  4E 80 00 21 */	blrl 
-lbl_80349BD4:
+
+/* 80349BD4 001C .text      func_80349BD4                  func_80349BD4                  */
+.global func_80349BD4
+func_80349BD4:
 /* 80349BD4 00346B14  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 80349BD8 00346B18  28 0C 00 00 */	cmplwi r12, 0
-/* 80349BDC 00346B1C  41 82 00 14 */	beq lbl_80349BF0
+/* 80349BDC 00346B1C  41 82 00 14 */	beq func_80349BF0
 /* 80349BE0 00346B20  7D 88 03 A6 */	mtlr r12
 /* 80349BE4 00346B24  38 9F 00 00 */	addi r4, r31, 0
 /* 80349BE8 00346B28  38 60 00 00 */	li r3, 0
 /* 80349BEC 00346B2C  4E 80 00 21 */	blrl 
-lbl_80349BF0:
+
+/* 80349BF0 0008 .text      func_80349BF0                  func_80349BF0                  */
+.global func_80349BF0
+func_80349BF0:
 /* 80349BF0 00346B30  48 00 04 BD */	bl stateReady
 /* 80349BF4 00346B34  38 80 00 01 */	li r4, 1
-lbl_80349BF8:
+
+/* 80349BF8 0018 .text      func_80349BF8                  func_80349BF8                  */
+.global func_80349BF8
+func_80349BF8:
 /* 80349BF8 00346B38  2C 04 00 00 */	cmpwi r4, 0
-/* 80349BFC 00346B3C  40 82 00 14 */	bne lbl_80349C10
+/* 80349BFC 00346B3C  40 82 00 14 */	bne func_80349C10
 /* 80349C00 00346B40  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349C04 00346B44  38 00 00 06 */	li r0, 6
 /* 80349C08 00346B48  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349C0C 00346B4C  48 00 03 8D */	bl stateMotorStopped
-lbl_80349C10:
+
+/* 80349C10 0014 .text      func_80349C10                  func_80349C10                  */
+.global func_80349C10
+func_80349C10:
 /* 80349C10 00346B50  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80349C14 00346B54  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80349C18 00346B58  38 21 00 18 */	addi r1, r1, 0x18
 /* 80349C1C 00346B5C  7C 08 03 A6 */	mtlr r0
 /* 80349C20 00346B60  4E 80 00 20 */	blr 
 
-/* 80349C24 00D8 .text cbForStateCheckID2 cbForStateCheckID2 */
+/* 80349C24 0034 .text      cbForStateCheckID2             cbForStateCheckID2             */
 .global cbForStateCheckID2
 cbForStateCheckID2:
 /* 80349C24 00346B64  7C 08 02 A6 */	mflr r0
@@ -870,22 +1070,25 @@ cbForStateCheckID2:
 /* 80349C2C 00346B6C  90 01 00 04 */	stw r0, 4(r1)
 /* 80349C30 00346B70  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80349C34 00346B74  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 80349C38 00346B78  40 82 00 20 */	bne lbl_80349C58
+/* 80349C38 00346B78  40 82 00 20 */	bne func_80349C58
 /* 80349C3C 00346B7C  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349C40 00346B80  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349C44 00346B84  48 00 1F 45 */	bl __DVDStoreErrorCode
 /* 80349C48 00346B88  48 00 14 F1 */	bl DVDReset
 /* 80349C4C 00346B8C  38 60 00 00 */	li r3, 0
 /* 80349C50 00346B90  4B FF F6 8D */	bl cbForStateError
-/* 80349C54 00346B94  48 00 00 94 */	b lbl_80349CE8
-lbl_80349C58:
+/* 80349C54 00346B94  48 00 00 94 */	b func_80349CE8
+
+/* 80349C58 0054 .text      func_80349C58                  func_80349C58                  */
+.global func_80349C58
+func_80349C58:
 /* 80349C58 00346B98  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349C5C 00346B9C  41 82 00 80 */	beq lbl_80349CDC
+/* 80349C5C 00346B9C  41 82 00 80 */	beq func_80349CDC
 /* 80349C60 00346BA0  3C 60 80 35 */	lis r3, stateReadingFST@ha
 /* 80349C64 00346BA4  80 8D 92 00 */	lwz r4, bootInfo-_SDA_BASE_(r13)
 /* 80349C68 00346BA8  38 03 91 C8 */	addi r0, r3, stateReadingFST@l
 /* 80349C6C 00346BAC  38 A0 00 00 */	li r5, 0
-/* 80349C70 00346BB0  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 80349C70 00346BB0  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 80349C74 00346BB4  3C 60 80 45 */	lis r3, BB2@ha
 /* 80349C78 00346BB8  90 AD 92 2C */	stw r5, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349C7C 00346BBC  38 63 C9 00 */	addi r3, r3, BB2@l
@@ -893,14 +1096,17 @@ lbl_80349C58:
 /* 80349C84 00346BC4  80 64 00 3C */	lwz r3, 0x3c(r4)
 /* 80349C88 00346BC8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80349C8C 00346BCC  7C 03 00 40 */	cmplw r3, r0
-/* 80349C90 00346BD0  40 80 00 1C */	bge lbl_80349CAC
-/* 80349C94 00346BD4  3C 60 80 3D */	lis r3, lbl_803D1574@ha
+/* 80349C90 00346BD0  40 80 00 1C */	bge func_80349CAC
+/* 80349C94 00346BD4  3C 60 80 3D */	lis r3, LIT_24@ha
 /* 80349C98 00346BD8  4C C6 31 82 */	crclr 6
-/* 80349C9C 00346BDC  38 A3 15 74 */	addi r5, r3, lbl_803D1574@l
-/* 80349CA0 00346BE0  38 6D 84 74 */	addi r3, r13, lbl_804509F4-_SDA_BASE_
+/* 80349C9C 00346BDC  38 A3 15 74 */	addi r5, r3, LIT_24@l
+/* 80349CA0 00346BE0  38 6D 84 74 */	addi r3, r13, LIT_23-_SDA_BASE_
 /* 80349CA4 00346BE4  38 80 02 95 */	li r4, 0x295
 /* 80349CA8 00346BE8  4B CB D1 D5 */	bl OSPanic
-lbl_80349CAC:
+
+/* 80349CAC 0030 .text      func_80349CAC                  func_80349CAC                  */
+.global func_80349CAC
+func_80349CAC:
 /* 80349CAC 00346BEC  3C 60 80 45 */	lis r3, BB2@ha
 /* 80349CB0 00346BF0  80 DF 00 00 */	lwz r6, 0(r31)
 /* 80349CB4 00346BF4  38 A3 C9 00 */	addi r5, r3, BB2@l
@@ -912,19 +1118,25 @@ lbl_80349CAC:
 /* 80349CCC 00346C0C  38 C4 92 5C */	addi r6, r4, cbForStateReadingFST@l
 /* 80349CD0 00346C10  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
 /* 80349CD4 00346C14  4B FF DF 45 */	bl DVDLowRead
-/* 80349CD8 00346C18  48 00 00 10 */	b lbl_80349CE8
-lbl_80349CDC:
+/* 80349CD8 00346C18  48 00 00 10 */	b func_80349CE8
+
+/* 80349CDC 000C .text      func_80349CDC                  func_80349CDC                  */
+.global func_80349CDC
+func_80349CDC:
 /* 80349CDC 00346C1C  3C 60 80 35 */	lis r3, cbForStateGettingError@ha
 /* 80349CE0 00346C20  38 63 94 98 */	addi r3, r3, cbForStateGettingError@l
 /* 80349CE4 00346C24  4B FF E3 BD */	bl DVDLowRequestError
-lbl_80349CE8:
+
+/* 80349CE8 0014 .text      func_80349CE8                  func_80349CE8                  */
+.global func_80349CE8
+func_80349CE8:
 /* 80349CE8 00346C28  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80349CEC 00346C2C  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80349CF0 00346C30  38 21 00 18 */	addi r1, r1, 0x18
 /* 80349CF4 00346C34  7C 08 03 A6 */	mtlr r0
 /* 80349CF8 00346C38  4E 80 00 20 */	blr 
 
-/* 80349CFC 00F0 .text cbForStateCheckID3 cbForStateCheckID3 */
+/* 80349CFC 0034 .text      cbForStateCheckID3             cbForStateCheckID3             */
 .global cbForStateCheckID3
 cbForStateCheckID3:
 /* 80349CFC 00346C3C  7C 08 02 A6 */	mflr r0
@@ -932,22 +1144,25 @@ cbForStateCheckID3:
 /* 80349D04 00346C44  90 01 00 04 */	stw r0, 4(r1)
 /* 80349D08 00346C48  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 80349D0C 00346C4C  93 E1 00 14 */	stw r31, 0x14(r1)
-/* 80349D10 00346C50  40 82 00 20 */	bne lbl_80349D30
+/* 80349D10 00346C50  40 82 00 20 */	bne func_80349D30
 /* 80349D14 00346C54  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349D18 00346C58  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349D1C 00346C5C  48 00 1E 6D */	bl __DVDStoreErrorCode
 /* 80349D20 00346C60  48 00 14 19 */	bl DVDReset
 /* 80349D24 00346C64  38 60 00 00 */	li r3, 0
 /* 80349D28 00346C68  4B FF F5 B5 */	bl cbForStateError
-/* 80349D2C 00346C6C  48 00 00 AC */	b lbl_80349DD8
-lbl_80349D30:
+/* 80349D2C 00346C6C  48 00 00 AC */	b func_80349DD8
+
+/* 80349D30 0058 .text      func_80349D30                  func_80349D30                  */
+.global func_80349D30
+func_80349D30:
 /* 80349D30 00346C70  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349D34 00346C74  41 82 00 98 */	beq lbl_80349DCC
+/* 80349D34 00346C74  41 82 00 98 */	beq func_80349DCC
 /* 80349D38 00346C78  38 80 00 00 */	li r4, 0
 /* 80349D3C 00346C7C  90 8D 92 2C */	stw r4, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349D40 00346C80  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 80349D44 00346C84  28 00 00 00 */	cmplwi r0, 0
-/* 80349D48 00346C88  41 82 00 64 */	beq lbl_80349DAC
+/* 80349D48 00346C88  41 82 00 64 */	beq func_80349DAC
 /* 80349D4C 00346C8C  90 8D 92 20 */	stw r4, ResumeFromHere-_SDA_BASE_(r13)
 /* 80349D50 00346C90  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 80349D54 00346C94  83 ED 91 F8 */	lwz r31, executing-_SDA_BASE_(r13)
@@ -958,45 +1173,60 @@ lbl_80349D30:
 /* 80349D68 00346CA8  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 80349D6C 00346CAC  81 9F 00 28 */	lwz r12, 0x28(r31)
 /* 80349D70 00346CB0  28 0C 00 00 */	cmplwi r12, 0
-/* 80349D74 00346CB4  41 82 00 14 */	beq lbl_80349D88
+/* 80349D74 00346CB4  41 82 00 14 */	beq func_80349D88
 /* 80349D78 00346CB8  7D 88 03 A6 */	mtlr r12
 /* 80349D7C 00346CBC  38 9F 00 00 */	addi r4, r31, 0
 /* 80349D80 00346CC0  38 60 FF FD */	li r3, -3
 /* 80349D84 00346CC4  4E 80 00 21 */	blrl 
-lbl_80349D88:
+
+/* 80349D88 001C .text      func_80349D88                  func_80349D88                  */
+.global func_80349D88
+func_80349D88:
 /* 80349D88 00346CC8  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 80349D8C 00346CCC  28 0C 00 00 */	cmplwi r12, 0
-/* 80349D90 00346CD0  41 82 00 14 */	beq lbl_80349DA4
+/* 80349D90 00346CD0  41 82 00 14 */	beq func_80349DA4
 /* 80349D94 00346CD4  7D 88 03 A6 */	mtlr r12
 /* 80349D98 00346CD8  38 9F 00 00 */	addi r4, r31, 0
 /* 80349D9C 00346CDC  38 60 00 00 */	li r3, 0
 /* 80349DA0 00346CE0  4E 80 00 21 */	blrl 
-lbl_80349DA4:
+
+/* 80349DA4 0008 .text      func_80349DA4                  func_80349DA4                  */
+.global func_80349DA4
+func_80349DA4:
 /* 80349DA4 00346CE4  48 00 03 09 */	bl stateReady
 /* 80349DA8 00346CE8  38 80 00 01 */	li r4, 1
-lbl_80349DAC:
+
+/* 80349DAC 0020 .text      func_80349DAC                  func_80349DAC                  */
+.global func_80349DAC
+func_80349DAC:
 /* 80349DAC 00346CEC  2C 04 00 00 */	cmpwi r4, 0
-/* 80349DB0 00346CF0  40 82 00 28 */	bne lbl_80349DD8
+/* 80349DB0 00346CF0  40 82 00 28 */	bne func_80349DD8
 /* 80349DB4 00346CF4  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349DB8 00346CF8  38 00 00 01 */	li r0, 1
 /* 80349DBC 00346CFC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349DC0 00346D00  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349DC4 00346D04  48 00 05 D1 */	bl stateBusy
-/* 80349DC8 00346D08  48 00 00 10 */	b lbl_80349DD8
-lbl_80349DCC:
+/* 80349DC8 00346D08  48 00 00 10 */	b func_80349DD8
+
+/* 80349DCC 000C .text      func_80349DCC                  func_80349DCC                  */
+.global func_80349DCC
+func_80349DCC:
 /* 80349DCC 00346D0C  3C 60 80 35 */	lis r3, cbForStateGettingError@ha
 /* 80349DD0 00346D10  38 63 94 98 */	addi r3, r3, cbForStateGettingError@l
 /* 80349DD4 00346D14  4B FF E2 CD */	bl DVDLowRequestError
-lbl_80349DD8:
+
+/* 80349DD8 0014 .text      func_80349DD8                  func_80349DD8                  */
+.global func_80349DD8
+func_80349DD8:
 /* 80349DD8 00346D18  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80349DDC 00346D1C  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80349DE0 00346D20  38 21 00 18 */	addi r1, r1, 0x18
 /* 80349DE4 00346D24  7C 08 03 A6 */	mtlr r0
 /* 80349DE8 00346D28  4E 80 00 20 */	blr 
 
-/* 80349DEC 0044 .text func_80349DEC AlarmHandler */
-.global func_80349DEC
-func_80349DEC:
+/* 80349DEC 0044 .text      dvd__AlarmHandler              AlarmHandler                   */
+.global dvd__AlarmHandler
+dvd__AlarmHandler:
 /* 80349DEC 00346D2C  7C 08 02 A6 */	mflr r0
 /* 80349DF0 00346D30  90 01 00 04 */	stw r0, 4(r1)
 /* 80349DF4 00346D34  94 21 FF F8 */	stwu r1, -8(r1)
@@ -1008,14 +1238,14 @@ func_80349DEC:
 /* 80349E0C 00346D4C  3C 80 80 35 */	lis r4, stateCoverClosed_CMD@ha
 /* 80349E10 00346D50  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 80349E14 00346D54  38 04 9F 04 */	addi r0, r4, stateCoverClosed_CMD@l
-/* 80349E18 00346D58  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 80349E18 00346D58  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 80349E1C 00346D5C  48 00 00 E9 */	bl stateCoverClosed_CMD
 /* 80349E20 00346D60  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80349E24 00346D64  38 21 00 08 */	addi r1, r1, 8
 /* 80349E28 00346D68  7C 08 03 A6 */	mtlr r0
 /* 80349E2C 00346D6C  4E 80 00 20 */	blr 
 
-/* 80349E30 00D4 .text stateCoverClosed stateCoverClosed */
+/* 80349E30 003C .text      stateCoverClosed               stateCoverClosed               */
 .global stateCoverClosed
 stateCoverClosed:
 /* 80349E30 00346D70  7C 08 02 A6 */	mflr r0
@@ -1026,32 +1256,44 @@ stateCoverClosed:
 /* 80349E44 00346D84  3B E3 C9 00 */	addi r31, r3, BB2@l
 /* 80349E48 00346D88  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 80349E4C 00346D8C  2C 00 00 0D */	cmpwi r0, 0xd
-/* 80349E50 00346D90  41 82 00 28 */	beq lbl_80349E78
-/* 80349E54 00346D94  40 80 00 18 */	bge lbl_80349E6C
+/* 80349E50 00346D90  41 82 00 28 */	beq func_80349E78
+/* 80349E54 00346D94  40 80 00 18 */	bge func_80349E6C
 /* 80349E58 00346D98  2C 00 00 06 */	cmpwi r0, 6
-/* 80349E5C 00346D9C  40 80 00 4C */	bge lbl_80349EA8
+/* 80349E5C 00346D9C  40 80 00 4C */	bge func_80349EA8
 /* 80349E60 00346DA0  2C 00 00 04 */	cmpwi r0, 4
-/* 80349E64 00346DA4  40 80 00 14 */	bge lbl_80349E78
-/* 80349E68 00346DA8  48 00 00 40 */	b lbl_80349EA8
-lbl_80349E6C:
+/* 80349E64 00346DA4  40 80 00 14 */	bge func_80349E78
+/* 80349E68 00346DA8  48 00 00 40 */	b func_80349EA8
+
+/* 80349E6C 000C .text      func_80349E6C                  func_80349E6C                  */
+.global func_80349E6C
+func_80349E6C:
 /* 80349E6C 00346DAC  2C 00 00 0F */	cmpwi r0, 0xf
-/* 80349E70 00346DB0  41 82 00 08 */	beq lbl_80349E78
-/* 80349E74 00346DB4  48 00 00 34 */	b lbl_80349EA8
-lbl_80349E78:
+/* 80349E70 00346DB0  41 82 00 08 */	beq func_80349E78
+/* 80349E74 00346DB4  48 00 00 34 */	b func_80349EA8
+
+/* 80349E78 0028 .text      func_80349E78                  func_80349E78                  */
+.global func_80349E78
+func_80349E78:
 /* 80349E78 00346DB8  48 00 19 FD */	bl __DVDClearWaitingQueue
 /* 80349E7C 00346DBC  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 80349E80 00346DC0  38 1F 00 40 */	addi r0, r31, 0x40
 /* 80349E84 00346DC4  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 80349E88 00346DC8  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 80349E8C 00346DCC  28 0C 00 00 */	cmplwi r12, 0
-/* 80349E90 00346DD0  41 82 00 10 */	beq lbl_80349EA0
+/* 80349E90 00346DD0  41 82 00 10 */	beq func_80349EA0
 /* 80349E94 00346DD4  7D 88 03 A6 */	mtlr r12
 /* 80349E98 00346DD8  38 60 FF FC */	li r3, -4
 /* 80349E9C 00346DDC  4E 80 00 21 */	blrl 
-lbl_80349EA0:
+
+/* 80349EA0 0008 .text      func_80349EA0                  func_80349EA0                  */
+.global func_80349EA0
+func_80349EA0:
 /* 80349EA0 00346DE0  48 00 02 0D */	bl stateReady
-/* 80349EA4 00346DE4  48 00 00 4C */	b lbl_80349EF0
-lbl_80349EA8:
+/* 80349EA4 00346DE4  48 00 00 4C */	b func_80349EF0
+
+/* 80349EA8 0048 .text      func_80349EA8                  func_80349EA8                  */
+.global func_80349EA8
+func_80349EA8:
 /* 80349EA8 00346DE8  38 00 00 00 */	li r0, 0
 /* 80349EAC 00346DEC  90 0D 92 38 */	stw r0, MotorState-_SDA_BASE_(r13)
 /* 80349EB0 00346DF0  48 00 12 89 */	bl DVDReset
@@ -1060,24 +1302,27 @@ lbl_80349EA8:
 /* 80349EBC 00346DFC  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 80349EC0 00346E00  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 80349EC4 00346E04  3C 80 10 62 */	lis r4, 0x10624DD3@ha
-/* 80349EC8 00346E08  3C 60 80 35 */	lis r3, func_80349DEC@ha
+/* 80349EC8 00346E08  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
 /* 80349ECC 00346E0C  54 00 F0 BE */	srwi r0, r0, 2
 /* 80349ED0 00346E10  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 80349ED4 00346E14  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 80349ED8 00346E18  54 00 D1 BE */	srwi r0, r0, 6
 /* 80349EDC 00346E1C  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 80349EE0 00346E20  38 E3 9D EC */	addi r7, r3, func_80349DEC@l
+/* 80349EE0 00346E20  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
 /* 80349EE4 00346E24  38 7F 00 70 */	addi r3, r31, 0x70
 /* 80349EE8 00346E28  38 A0 00 00 */	li r5, 0
 /* 80349EEC 00346E2C  4B FF 0C 6D */	bl OSSetAlarm
-lbl_80349EF0:
+
+/* 80349EF0 0014 .text      func_80349EF0                  func_80349EF0                  */
+.global func_80349EF0
+func_80349EF0:
 /* 80349EF0 00346E30  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80349EF4 00346E34  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80349EF8 00346E38  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349EFC 00346E3C  7C 08 03 A6 */	mtlr r0
 /* 80349F00 00346E40  4E 80 00 20 */	blr 
 
-/* 80349F04 0030 .text stateCoverClosed_CMD stateCoverClosed_CMD */
+/* 80349F04 0030 .text      stateCoverClosed_CMD           stateCoverClosed_CMD           */
 .global stateCoverClosed_CMD
 stateCoverClosed_CMD:
 /* 80349F04 00346E44  7C 08 02 A6 */	mflr r0
@@ -1093,39 +1338,48 @@ stateCoverClosed_CMD:
 /* 80349F2C 00346E6C  7C 08 03 A6 */	mtlr r0
 /* 80349F30 00346E70  4E 80 00 20 */	blr 
 
-/* 80349F34 0064 .text cbForStateCoverClosed cbForStateCoverClosed */
+/* 80349F34 0030 .text      cbForStateCoverClosed          cbForStateCoverClosed          */
 .global cbForStateCoverClosed
 cbForStateCoverClosed:
 /* 80349F34 00346E74  7C 08 02 A6 */	mflr r0
 /* 80349F38 00346E78  28 03 00 10 */	cmplwi r3, 0x10
 /* 80349F3C 00346E7C  90 01 00 04 */	stw r0, 4(r1)
 /* 80349F40 00346E80  94 21 FF F8 */	stwu r1, -8(r1)
-/* 80349F44 00346E84  40 82 00 20 */	bne lbl_80349F64
+/* 80349F44 00346E84  40 82 00 20 */	bne func_80349F64
 /* 80349F48 00346E88  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 80349F4C 00346E8C  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 80349F50 00346E90  48 00 1C 39 */	bl __DVDStoreErrorCode
 /* 80349F54 00346E94  48 00 11 E5 */	bl DVDReset
 /* 80349F58 00346E98  38 60 00 00 */	li r3, 0
 /* 80349F5C 00346E9C  4B FF F3 81 */	bl cbForStateError
-/* 80349F60 00346EA0  48 00 00 28 */	b lbl_80349F88
-lbl_80349F64:
+/* 80349F60 00346EA0  48 00 00 28 */	b func_80349F88
+
+/* 80349F64 0018 .text      func_80349F64                  func_80349F64                  */
+.global func_80349F64
+func_80349F64:
 /* 80349F64 00346EA4  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 80349F68 00346EA8  41 82 00 14 */	beq lbl_80349F7C
+/* 80349F68 00346EA8  41 82 00 14 */	beq func_80349F7C
 /* 80349F6C 00346EAC  38 00 00 00 */	li r0, 0
 /* 80349F70 00346EB0  90 0D 92 2C */	stw r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 80349F74 00346EB4  4B FF F9 CD */	bl stateCheckID
-/* 80349F78 00346EB8  48 00 00 10 */	b lbl_80349F88
-lbl_80349F7C:
+/* 80349F78 00346EB8  48 00 00 10 */	b func_80349F88
+
+/* 80349F7C 000C .text      func_80349F7C                  func_80349F7C                  */
+.global func_80349F7C
+func_80349F7C:
 /* 80349F7C 00346EBC  3C 60 80 35 */	lis r3, cbForStateGettingError@ha
 /* 80349F80 00346EC0  38 63 94 98 */	addi r3, r3, cbForStateGettingError@l
 /* 80349F84 00346EC4  4B FF E1 1D */	bl DVDLowRequestError
-lbl_80349F88:
+
+/* 80349F88 0010 .text      func_80349F88                  func_80349F88                  */
+.global func_80349F88
+func_80349F88:
 /* 80349F88 00346EC8  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80349F8C 00346ECC  38 21 00 08 */	addi r1, r1, 8
 /* 80349F90 00346ED0  7C 08 03 A6 */	mtlr r0
 /* 80349F94 00346ED4  4E 80 00 20 */	blr 
 
-/* 80349F98 0028 .text stateMotorStopped stateMotorStopped */
+/* 80349F98 0028 .text      stateMotorStopped              stateMotorStopped              */
 .global stateMotorStopped
 stateMotorStopped:
 /* 80349F98 00346ED8  7C 08 02 A6 */	mflr r0
@@ -1139,7 +1393,7 @@ stateMotorStopped:
 /* 80349FB8 00346EF8  7C 08 03 A6 */	mtlr r0
 /* 80349FBC 00346EFC  4E 80 00 20 */	blr 
 
-/* 80349FC0 00EC .text cbForStateMotorStopped cbForStateMotorStopped */
+/* 80349FC0 0054 .text      cbForStateMotorStopped         cbForStateMotorStopped         */
 .global cbForStateMotorStopped
 cbForStateMotorStopped:
 /* 80349FC0 00346F00  7C 08 02 A6 */	mflr r0
@@ -1156,32 +1410,44 @@ cbForStateMotorStopped:
 /* 80349FEC 00346F2C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80349FF0 00346F30  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 80349FF4 00346F34  2C 00 00 0D */	cmpwi r0, 0xd
-/* 80349FF8 00346F38  41 82 00 28 */	beq lbl_8034A020
-/* 80349FFC 00346F3C  40 80 00 18 */	bge lbl_8034A014
+/* 80349FF8 00346F38  41 82 00 28 */	beq func_8034A020
+/* 80349FFC 00346F3C  40 80 00 18 */	bge func_8034A014
 /* 8034A000 00346F40  2C 00 00 06 */	cmpwi r0, 6
-/* 8034A004 00346F44  40 80 00 4C */	bge lbl_8034A050
+/* 8034A004 00346F44  40 80 00 4C */	bge func_8034A050
 /* 8034A008 00346F48  2C 00 00 04 */	cmpwi r0, 4
-/* 8034A00C 00346F4C  40 80 00 14 */	bge lbl_8034A020
-/* 8034A010 00346F50  48 00 00 40 */	b lbl_8034A050
-lbl_8034A014:
+/* 8034A00C 00346F4C  40 80 00 14 */	bge func_8034A020
+/* 8034A010 00346F50  48 00 00 40 */	b func_8034A050
+
+/* 8034A014 000C .text      func_8034A014                  func_8034A014                  */
+.global func_8034A014
+func_8034A014:
 /* 8034A014 00346F54  2C 00 00 0F */	cmpwi r0, 0xf
-/* 8034A018 00346F58  41 82 00 08 */	beq lbl_8034A020
-/* 8034A01C 00346F5C  48 00 00 34 */	b lbl_8034A050
-lbl_8034A020:
+/* 8034A018 00346F58  41 82 00 08 */	beq func_8034A020
+/* 8034A01C 00346F5C  48 00 00 34 */	b func_8034A050
+
+/* 8034A020 0028 .text      func_8034A020                  func_8034A020                  */
+.global func_8034A020
+func_8034A020:
 /* 8034A020 00346F60  48 00 18 55 */	bl __DVDClearWaitingQueue
 /* 8034A024 00346F64  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A028 00346F68  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034A02C 00346F6C  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034A030 00346F70  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A034 00346F74  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A038 00346F78  41 82 00 10 */	beq lbl_8034A048
+/* 8034A038 00346F78  41 82 00 10 */	beq func_8034A048
 /* 8034A03C 00346F7C  7D 88 03 A6 */	mtlr r12
 /* 8034A040 00346F80  38 60 FF FC */	li r3, -4
 /* 8034A044 00346F84  4E 80 00 21 */	blrl 
-lbl_8034A048:
+
+/* 8034A048 0008 .text      func_8034A048                  func_8034A048                  */
+.global func_8034A048
+func_8034A048:
 /* 8034A048 00346F88  48 00 00 65 */	bl stateReady
-/* 8034A04C 00346F8C  48 00 00 4C */	b lbl_8034A098
-lbl_8034A050:
+/* 8034A04C 00346F8C  48 00 00 4C */	b func_8034A098
+
+/* 8034A050 0048 .text      func_8034A050                  func_8034A050                  */
+.global func_8034A050
+func_8034A050:
 /* 8034A050 00346F90  38 00 00 00 */	li r0, 0
 /* 8034A054 00346F94  90 0D 92 38 */	stw r0, MotorState-_SDA_BASE_(r13)
 /* 8034A058 00346F98  48 00 10 E1 */	bl DVDReset
@@ -1190,24 +1456,27 @@ lbl_8034A050:
 /* 8034A064 00346FA4  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 8034A068 00346FA8  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 8034A06C 00346FAC  3C 80 10 62 */	lis r4, 0x10624DD3@ha
-/* 8034A070 00346FB0  3C 60 80 35 */	lis r3, func_80349DEC@ha
+/* 8034A070 00346FB0  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
 /* 8034A074 00346FB4  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A078 00346FB8  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8034A07C 00346FBC  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A080 00346FC0  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A084 00346FC4  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A088 00346FC8  38 E3 9D EC */	addi r7, r3, func_80349DEC@l
+/* 8034A088 00346FC8  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
 /* 8034A08C 00346FCC  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A090 00346FD0  38 A0 00 00 */	li r5, 0
 /* 8034A094 00346FD4  4B FF 0A C5 */	bl OSSetAlarm
-lbl_8034A098:
+
+/* 8034A098 0014 .text      func_8034A098                  func_8034A098                  */
+.global func_8034A098
+func_8034A098:
 /* 8034A098 00346FD8  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8034A09C 00346FDC  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 8034A0A0 00346FE0  38 21 00 18 */	addi r1, r1, 0x18
 /* 8034A0A4 00346FE4  7C 08 03 A6 */	mtlr r0
 /* 8034A0A8 00346FE8  4E 80 00 20 */	blr 
 
-/* 8034A0AC 02E8 .text stateReady stateReady */
+/* 8034A0AC 0030 .text      stateReady                     stateReady                     */
 .global stateReady
 stateReady:
 /* 8034A0AC 00346FEC  7C 08 02 A6 */	mflr r0
@@ -1218,25 +1487,31 @@ stateReady:
 /* 8034A0C0 00347000  3B E3 C9 00 */	addi r31, r3, BB2@l
 /* 8034A0C4 00347004  48 00 18 F1 */	bl __DVDCheckWaitingQueue
 /* 8034A0C8 00347008  2C 03 00 00 */	cmpwi r3, 0
-/* 8034A0CC 0034700C  40 82 00 10 */	bne lbl_8034A0DC
+/* 8034A0CC 0034700C  40 82 00 10 */	bne func_8034A0DC
 /* 8034A0D0 00347010  38 00 00 00 */	li r0, 0
 /* 8034A0D4 00347014  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
-/* 8034A0D8 00347018  48 00 02 A8 */	b lbl_8034A380
-lbl_8034A0DC:
+/* 8034A0D8 00347018  48 00 02 A8 */	b func_8034A380
+
+/* 8034A0DC 0020 .text      func_8034A0DC                  func_8034A0DC                  */
+.global func_8034A0DC
+func_8034A0DC:
 /* 8034A0DC 0034701C  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034A0E0 00347020  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A0E4 00347024  41 82 00 18 */	beq lbl_8034A0FC
+/* 8034A0E4 00347024  41 82 00 18 */	beq func_8034A0FC
 /* 8034A0E8 00347028  38 60 00 01 */	li r3, 1
 /* 8034A0EC 0034702C  38 00 00 00 */	li r0, 0
 /* 8034A0F0 00347030  90 6D 92 08 */	stw r3, PausingFlag-_SDA_BASE_(r13)
 /* 8034A0F4 00347034  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
-/* 8034A0F8 00347038  48 00 02 88 */	b lbl_8034A380
-lbl_8034A0FC:
+/* 8034A0F8 00347038  48 00 02 88 */	b func_8034A380
+
+/* 8034A0FC 0044 .text      func_8034A0FC                  func_8034A0FC                  */
+.global func_8034A0FC
+func_8034A0FC:
 /* 8034A0FC 0034703C  48 00 18 19 */	bl __DVDPopWaitingQueue
 /* 8034A100 00347040  80 0D 92 10 */	lwz r0, FatalErrorFlag-_SDA_BASE_(r13)
 /* 8034A104 00347044  90 6D 91 F8 */	stw r3, executing-_SDA_BASE_(r13)
 /* 8034A108 00347048  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A10C 0034704C  41 82 00 3C */	beq lbl_8034A148
+/* 8034A10C 0034704C  41 82 00 3C */	beq func_8034A148
 /* 8034A110 00347050  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034A114 00347054  38 80 FF FF */	li r4, -1
 /* 8034A118 00347058  38 1F 00 40 */	addi r0, r31, 0x40
@@ -1245,88 +1520,121 @@ lbl_8034A0FC:
 /* 8034A124 00347064  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034A128 00347068  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A12C 0034706C  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A130 00347070  41 82 00 10 */	beq lbl_8034A140
+/* 8034A130 00347070  41 82 00 10 */	beq func_8034A140
 /* 8034A134 00347074  7D 88 03 A6 */	mtlr r12
 /* 8034A138 00347078  38 60 FF FF */	li r3, -1
 /* 8034A13C 0034707C  4E 80 00 21 */	blrl 
-lbl_8034A140:
+
+/* 8034A140 0008 .text      func_8034A140                  func_8034A140                  */
+.global func_8034A140
+func_8034A140:
 /* 8034A140 00347080  4B FF FF 6D */	bl stateReady
-/* 8034A144 00347084  48 00 02 3C */	b lbl_8034A380
-lbl_8034A148:
+/* 8034A144 00347084  48 00 02 3C */	b func_8034A380
+
+/* 8034A148 0040 .text      func_8034A148                  func_8034A148                  */
+.global func_8034A148
+func_8034A148:
 /* 8034A148 00347088  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A14C 0034708C  80 04 00 08 */	lwz r0, 8(r4)
 /* 8034A150 00347090  90 0D 92 14 */	stw r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A154 00347094  80 0D 92 20 */	lwz r0, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034A158 00347098  28 00 00 00 */	cmplwi r0, 0
-/* 8034A15C 0034709C  41 82 01 5C */	beq lbl_8034A2B8
+/* 8034A15C 0034709C  41 82 01 5C */	beq func_8034A2B8
 /* 8034A160 003470A0  80 0D 92 20 */	lwz r0, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034A164 003470A4  2C 00 00 04 */	cmpwi r0, 4
-/* 8034A168 003470A8  41 82 00 64 */	beq lbl_8034A1CC
-/* 8034A16C 003470AC  40 80 00 1C */	bge lbl_8034A188
+/* 8034A168 003470A8  41 82 00 64 */	beq func_8034A1CC
+/* 8034A16C 003470AC  40 80 00 1C */	bge func_8034A188
 /* 8034A170 003470B0  2C 00 00 02 */	cmpwi r0, 2
-/* 8034A174 003470B4  41 82 00 28 */	beq lbl_8034A19C
-/* 8034A178 003470B8  40 80 00 3C */	bge lbl_8034A1B4
+/* 8034A174 003470B4  41 82 00 28 */	beq func_8034A19C
+/* 8034A178 003470B8  40 80 00 3C */	bge func_8034A1B4
 /* 8034A17C 003470BC  2C 00 00 01 */	cmpwi r0, 1
-/* 8034A180 003470C0  40 80 00 64 */	bge lbl_8034A1E4
-/* 8034A184 003470C4  48 00 01 28 */	b lbl_8034A2AC
-lbl_8034A188:
+/* 8034A180 003470C0  40 80 00 64 */	bge func_8034A1E4
+/* 8034A184 003470C4  48 00 01 28 */	b func_8034A2AC
+
+/* 8034A188 0014 .text      func_8034A188                  func_8034A188                  */
+.global func_8034A188
+func_8034A188:
 /* 8034A188 003470C8  2C 00 00 08 */	cmpwi r0, 8
-/* 8034A18C 003470CC  40 80 01 20 */	bge lbl_8034A2AC
+/* 8034A18C 003470CC  40 80 01 20 */	bge func_8034A2AC
 /* 8034A190 003470D0  2C 00 00 06 */	cmpwi r0, 6
-/* 8034A194 003470D4  40 80 00 50 */	bge lbl_8034A1E4
-/* 8034A198 003470D8  48 00 01 00 */	b lbl_8034A298
-lbl_8034A19C:
+/* 8034A194 003470D4  40 80 00 50 */	bge func_8034A1E4
+/* 8034A198 003470D8  48 00 01 00 */	b func_8034A298
+
+/* 8034A19C 0018 .text      func_8034A19C                  func_8034A19C                  */
+.global func_8034A19C
+func_8034A19C:
 /* 8034A19C 003470DC  38 00 00 0B */	li r0, 0xb
 /* 8034A1A0 003470E0  3C 60 80 35 */	lis r3, cbForStateMotorStopped@ha
 /* 8034A1A4 003470E4  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A1A8 003470E8  38 63 9F C0 */	addi r3, r3, cbForStateMotorStopped@l
 /* 8034A1AC 003470EC  4B FF DD 99 */	bl DVDLowWaitCoverClose
-/* 8034A1B0 003470F0  48 00 00 FC */	b lbl_8034A2AC
-lbl_8034A1B4:
+/* 8034A1B0 003470F0  48 00 00 FC */	b func_8034A2AC
+
+/* 8034A1B4 0018 .text      func_8034A1B4                  func_8034A1B4                  */
+.global func_8034A1B4
+func_8034A1B4:
 /* 8034A1B4 003470F4  38 00 00 04 */	li r0, 4
 /* 8034A1B8 003470F8  3C 60 80 35 */	lis r3, cbForStateMotorStopped@ha
 /* 8034A1BC 003470FC  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A1C0 00347100  38 63 9F C0 */	addi r3, r3, cbForStateMotorStopped@l
 /* 8034A1C4 00347104  4B FF DD 81 */	bl DVDLowWaitCoverClose
-/* 8034A1C8 00347108  48 00 00 E4 */	b lbl_8034A2AC
-lbl_8034A1CC:
+/* 8034A1C8 00347108  48 00 00 E4 */	b func_8034A2AC
+
+/* 8034A1CC 0018 .text      func_8034A1CC                  func_8034A1CC                  */
+.global func_8034A1CC
+func_8034A1CC:
 /* 8034A1CC 0034710C  38 00 00 05 */	li r0, 5
 /* 8034A1D0 00347110  3C 60 80 35 */	lis r3, cbForStateMotorStopped@ha
 /* 8034A1D4 00347114  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A1D8 00347118  38 63 9F C0 */	addi r3, r3, cbForStateMotorStopped@l
 /* 8034A1DC 0034711C  4B FF DD 69 */	bl DVDLowWaitCoverClose
-/* 8034A1E0 00347120  48 00 00 CC */	b lbl_8034A2AC
-lbl_8034A1E4:
+/* 8034A1E0 00347120  48 00 00 CC */	b func_8034A2AC
+
+/* 8034A1E4 002C .text      func_8034A1E4                  func_8034A1E4                  */
+.global func_8034A1E4
+func_8034A1E4:
 /* 8034A1E4 00347124  38 00 00 03 */	li r0, 3
 /* 8034A1E8 00347128  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A1EC 0034712C  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A1F0 00347130  2C 00 00 0D */	cmpwi r0, 0xd
-/* 8034A1F4 00347134  41 82 00 28 */	beq lbl_8034A21C
-/* 8034A1F8 00347138  40 80 00 18 */	bge lbl_8034A210
+/* 8034A1F4 00347134  41 82 00 28 */	beq func_8034A21C
+/* 8034A1F8 00347138  40 80 00 18 */	bge func_8034A210
 /* 8034A1FC 0034713C  2C 00 00 06 */	cmpwi r0, 6
-/* 8034A200 00347140  40 80 00 4C */	bge lbl_8034A24C
+/* 8034A200 00347140  40 80 00 4C */	bge func_8034A24C
 /* 8034A204 00347144  2C 00 00 04 */	cmpwi r0, 4
-/* 8034A208 00347148  40 80 00 14 */	bge lbl_8034A21C
-/* 8034A20C 0034714C  48 00 00 40 */	b lbl_8034A24C
-lbl_8034A210:
+/* 8034A208 00347148  40 80 00 14 */	bge func_8034A21C
+/* 8034A20C 0034714C  48 00 00 40 */	b func_8034A24C
+
+/* 8034A210 000C .text      func_8034A210                  func_8034A210                  */
+.global func_8034A210
+func_8034A210:
 /* 8034A210 00347150  2C 00 00 0F */	cmpwi r0, 0xf
-/* 8034A214 00347154  41 82 00 08 */	beq lbl_8034A21C
-/* 8034A218 00347158  48 00 00 34 */	b lbl_8034A24C
-lbl_8034A21C:
+/* 8034A214 00347154  41 82 00 08 */	beq func_8034A21C
+/* 8034A218 00347158  48 00 00 34 */	b func_8034A24C
+
+/* 8034A21C 0028 .text      func_8034A21C                  func_8034A21C                  */
+.global func_8034A21C
+func_8034A21C:
 /* 8034A21C 0034715C  48 00 16 59 */	bl __DVDClearWaitingQueue
 /* 8034A220 00347160  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A224 00347164  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034A228 00347168  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034A22C 0034716C  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A230 00347170  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A234 00347174  41 82 00 10 */	beq lbl_8034A244
+/* 8034A234 00347174  41 82 00 10 */	beq func_8034A244
 /* 8034A238 00347178  7D 88 03 A6 */	mtlr r12
 /* 8034A23C 0034717C  38 60 FF FC */	li r3, -4
 /* 8034A240 00347180  4E 80 00 21 */	blrl 
-lbl_8034A244:
+
+/* 8034A244 0008 .text      func_8034A244                  func_8034A244                  */
+.global func_8034A244
+func_8034A244:
 /* 8034A244 00347184  4B FF FE 69 */	bl stateReady
-/* 8034A248 00347188  48 00 00 64 */	b lbl_8034A2AC
-lbl_8034A24C:
+/* 8034A248 00347188  48 00 00 64 */	b func_8034A2AC
+
+/* 8034A24C 004C .text      func_8034A24C                  func_8034A24C                  */
+.global func_8034A24C
+func_8034A24C:
 /* 8034A24C 0034718C  38 00 00 00 */	li r0, 0
 /* 8034A250 00347190  90 0D 92 38 */	stw r0, MotorState-_SDA_BASE_(r13)
 /* 8034A254 00347194  48 00 0E E5 */	bl DVDReset
@@ -1335,65 +1643,89 @@ lbl_8034A24C:
 /* 8034A260 003471A0  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 8034A264 003471A4  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 8034A268 003471A8  3C 80 10 62 */	lis r4, 0x10624DD3@ha
-/* 8034A26C 003471AC  3C 60 80 35 */	lis r3, func_80349DEC@ha
+/* 8034A26C 003471AC  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
 /* 8034A270 003471B0  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A274 003471B4  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8034A278 003471B8  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A27C 003471BC  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A280 003471C0  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A284 003471C4  38 E3 9D EC */	addi r7, r3, func_80349DEC@l
+/* 8034A284 003471C4  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
 /* 8034A288 003471C8  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A28C 003471CC  38 A0 00 00 */	li r5, 0
 /* 8034A290 003471D0  4B FF 08 C9 */	bl OSSetAlarm
-/* 8034A294 003471D4  48 00 00 18 */	b lbl_8034A2AC
-lbl_8034A298:
+/* 8034A294 003471D4  48 00 00 18 */	b func_8034A2AC
+
+/* 8034A298 0014 .text      func_8034A298                  func_8034A298                  */
+.global func_8034A298
+func_8034A298:
 /* 8034A298 003471D8  80 6D 92 24 */	lwz r3, CancelLastError-_SDA_BASE_(r13)
 /* 8034A29C 003471DC  48 00 18 ED */	bl __DVDStoreErrorCode
 /* 8034A2A0 003471E0  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 8034A2A4 003471E4  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 8034A2A8 003471E8  4B FF DD 6D */	bl DVDLowStopMotor
-lbl_8034A2AC:
+
+/* 8034A2AC 000C .text      func_8034A2AC                  func_8034A2AC                  */
+.global func_8034A2AC
+func_8034A2AC:
 /* 8034A2AC 003471EC  38 00 00 00 */	li r0, 0
 /* 8034A2B0 003471F0  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-/* 8034A2B4 003471F4  48 00 00 CC */	b lbl_8034A380
-lbl_8034A2B8:
+/* 8034A2B4 003471F4  48 00 00 CC */	b func_8034A380
+
+/* 8034A2B8 0020 .text      func_8034A2B8                  func_8034A2B8                  */
+.global func_8034A2B8
+func_8034A2B8:
 /* 8034A2B8 003471F8  80 0D 92 38 */	lwz r0, MotorState-_SDA_BASE_(r13)
 /* 8034A2BC 003471FC  28 00 00 00 */	cmplwi r0, 0
-/* 8034A2C0 00347200  40 82 00 18 */	bne lbl_8034A2D8
+/* 8034A2C0 00347200  40 82 00 18 */	bne func_8034A2D8
 /* 8034A2C4 00347204  38 00 00 01 */	li r0, 1
 /* 8034A2C8 00347208  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A2CC 0034720C  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034A2D0 00347210  48 00 00 C5 */	bl stateBusy
-/* 8034A2D4 00347214  48 00 00 AC */	b lbl_8034A380
-lbl_8034A2D8:
+/* 8034A2D4 00347214  48 00 00 AC */	b func_8034A380
+
+/* 8034A2D8 0024 .text      func_8034A2D8                  func_8034A2D8                  */
+.global func_8034A2D8
+func_8034A2D8:
 /* 8034A2D8 00347218  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A2DC 0034721C  2C 00 00 0D */	cmpwi r0, 0xd
-/* 8034A2E0 00347220  41 82 00 28 */	beq lbl_8034A308
-/* 8034A2E4 00347224  40 80 00 18 */	bge lbl_8034A2FC
+/* 8034A2E0 00347220  41 82 00 28 */	beq func_8034A308
+/* 8034A2E4 00347224  40 80 00 18 */	bge func_8034A2FC
 /* 8034A2E8 00347228  2C 00 00 06 */	cmpwi r0, 6
-/* 8034A2EC 0034722C  40 80 00 4C */	bge lbl_8034A338
+/* 8034A2EC 0034722C  40 80 00 4C */	bge func_8034A338
 /* 8034A2F0 00347230  2C 00 00 04 */	cmpwi r0, 4
-/* 8034A2F4 00347234  40 80 00 14 */	bge lbl_8034A308
-/* 8034A2F8 00347238  48 00 00 40 */	b lbl_8034A338
-lbl_8034A2FC:
+/* 8034A2F4 00347234  40 80 00 14 */	bge func_8034A308
+/* 8034A2F8 00347238  48 00 00 40 */	b func_8034A338
+
+/* 8034A2FC 000C .text      func_8034A2FC                  func_8034A2FC                  */
+.global func_8034A2FC
+func_8034A2FC:
 /* 8034A2FC 0034723C  2C 00 00 0F */	cmpwi r0, 0xf
-/* 8034A300 00347240  41 82 00 08 */	beq lbl_8034A308
-/* 8034A304 00347244  48 00 00 34 */	b lbl_8034A338
-lbl_8034A308:
+/* 8034A300 00347240  41 82 00 08 */	beq func_8034A308
+/* 8034A304 00347244  48 00 00 34 */	b func_8034A338
+
+/* 8034A308 0028 .text      func_8034A308                  func_8034A308                  */
+.global func_8034A308
+func_8034A308:
 /* 8034A308 00347248  48 00 15 6D */	bl __DVDClearWaitingQueue
 /* 8034A30C 0034724C  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A310 00347250  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034A314 00347254  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034A318 00347258  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A31C 0034725C  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A320 00347260  41 82 00 10 */	beq lbl_8034A330
+/* 8034A320 00347260  41 82 00 10 */	beq func_8034A330
 /* 8034A324 00347264  7D 88 03 A6 */	mtlr r12
 /* 8034A328 00347268  38 60 FF FC */	li r3, -4
 /* 8034A32C 0034726C  4E 80 00 21 */	blrl 
-lbl_8034A330:
+
+/* 8034A330 0008 .text      func_8034A330                  func_8034A330                  */
+.global func_8034A330
+func_8034A330:
 /* 8034A330 00347270  4B FF FD 7D */	bl stateReady
-/* 8034A334 00347274  48 00 00 4C */	b lbl_8034A380
-lbl_8034A338:
+/* 8034A334 00347274  48 00 00 4C */	b func_8034A380
+
+/* 8034A338 0048 .text      func_8034A338                  func_8034A338                  */
+.global func_8034A338
+func_8034A338:
 /* 8034A338 00347278  38 00 00 00 */	li r0, 0
 /* 8034A33C 0034727C  90 0D 92 38 */	stw r0, MotorState-_SDA_BASE_(r13)
 /* 8034A340 00347280  48 00 0D F9 */	bl DVDReset
@@ -1402,24 +1734,27 @@ lbl_8034A338:
 /* 8034A34C 0034728C  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 8034A350 00347290  80 03 00 F8 */	lwz r0, 0x800000F8@l(r3)
 /* 8034A354 00347294  3C 80 10 62 */	lis r4, 0x10624DD3@ha
-/* 8034A358 00347298  3C 60 80 35 */	lis r3, func_80349DEC@ha
+/* 8034A358 00347298  3C 60 80 35 */	lis r3, dvd__AlarmHandler@ha
 /* 8034A35C 0034729C  54 00 F0 BE */	srwi r0, r0, 2
 /* 8034A360 003472A0  38 84 4D D3 */	addi r4, r4, 0x10624DD3@l
 /* 8034A364 003472A4  7C 04 00 16 */	mulhwu r0, r4, r0
 /* 8034A368 003472A8  54 00 D1 BE */	srwi r0, r0, 6
 /* 8034A36C 003472AC  1C C0 04 7E */	mulli r6, r0, 0x47e
-/* 8034A370 003472B0  38 E3 9D EC */	addi r7, r3, func_80349DEC@l
+/* 8034A370 003472B0  38 E3 9D EC */	addi r7, r3, dvd__AlarmHandler@l
 /* 8034A374 003472B4  38 7F 00 70 */	addi r3, r31, 0x70
 /* 8034A378 003472B8  38 A0 00 00 */	li r5, 0
 /* 8034A37C 003472BC  4B FF 07 DD */	bl OSSetAlarm
-lbl_8034A380:
+
+/* 8034A380 0014 .text      func_8034A380                  func_8034A380                  */
+.global func_8034A380
+func_8034A380:
 /* 8034A380 003472C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8034A384 003472C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8034A388 003472C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034A38C 003472CC  7C 08 03 A6 */	mtlr r0
 /* 8034A390 003472D0  4E 80 00 20 */	blr 
 
-/* 8034A394 0340 .text stateBusy stateBusy */
+/* 8034A394 00A8 .text      stateBusy                      stateBusy                      */
 .global stateBusy
 stateBusy:
 /* 8034A394 003472D4  7C 08 02 A6 */	mflr r0
@@ -1428,12 +1763,12 @@ stateBusy:
 /* 8034A3A0 003472E0  38 04 A3 94 */	addi r0, r4, stateBusy@l
 /* 8034A3A4 003472E4  7C 67 1B 78 */	mr r7, r3
 /* 8034A3A8 003472E8  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034A3AC 003472EC  90 0D 92 40 */	stw r0, lbl_804517C0-_SDA_BASE_(r13)
+/* 8034A3AC 003472EC  90 0D 92 40 */	stw r0, dvd__LastState-_SDA_BASE_(r13)
 /* 8034A3B0 003472F0  80 03 00 08 */	lwz r0, 8(r3)
 /* 8034A3B4 003472F4  28 00 00 10 */	cmplwi r0, 0x10
-/* 8034A3B8 003472F8  41 81 02 F4 */	bgt lbl_8034A6AC
-/* 8034A3BC 003472FC  3C 60 80 3D */	lis r3, lbl_803D15A8@ha
-/* 8034A3C0 00347300  38 63 15 A8 */	addi r3, r3, lbl_803D15A8@l
+/* 8034A3B8 003472F8  41 81 02 F4 */	bgt func_8034A6AC
+/* 8034A3BC 003472FC  3C 60 80 3D */	lis r3, dvd__LIT_359@ha
+/* 8034A3C0 00347300  38 63 15 A8 */	addi r3, r3, dvd__LIT_359@l
 /* 8034A3C4 00347304  54 00 10 3A */	slwi r0, r0, 2
 /* 8034A3C8 00347308  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8034A3CC 0034730C  7C 09 03 A6 */	mtctr r0
@@ -1448,10 +1783,10 @@ stateBusy:
 /* 8034A3F0 00347330  90 07 00 1C */	stw r0, 0x1c(r7)
 /* 8034A3F4 00347334  80 67 00 18 */	lwz r3, 0x18(r7)
 /* 8034A3F8 00347338  4B FF DB 79 */	bl DVDLowReadDiskID
-/* 8034A3FC 0034733C  48 00 02 C8 */	b lbl_8034A6C4
+/* 8034A3FC 0034733C  48 00 02 C8 */	b func_8034A6C4
 /* 8034A400 00347340  80 07 00 14 */	lwz r0, 0x14(r7)
 /* 8034A404 00347344  28 00 00 00 */	cmplwi r0, 0
-/* 8034A408 00347348  40 82 00 3C */	bne lbl_8034A444
+/* 8034A408 00347348  40 82 00 3C */	bne func_8034A444
 /* 8034A40C 0034734C  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 8034A410 00347350  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A414 00347354  38 03 C9 40 */	addi r0, r3, DummyCommandBlock@l
@@ -1460,14 +1795,20 @@ stateBusy:
 /* 8034A420 00347360  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A424 00347364  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A428 00347368  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A42C 0034736C  41 82 00 10 */	beq lbl_8034A43C
+/* 8034A42C 0034736C  41 82 00 10 */	beq func_8034A43C
 /* 8034A430 00347370  7D 88 03 A6 */	mtlr r12
 /* 8034A434 00347374  38 60 00 00 */	li r3, 0
 /* 8034A438 00347378  4E 80 00 21 */	blrl 
-lbl_8034A43C:
+
+/* 8034A43C 0008 .text      func_8034A43C                  func_8034A43C                  */
+.global func_8034A43C
+func_8034A43C:
 /* 8034A43C 0034737C  4B FF FC 71 */	bl stateReady
-/* 8034A440 00347380  48 00 02 84 */	b lbl_8034A6C4
-lbl_8034A444:
+/* 8034A440 00347380  48 00 02 84 */	b func_8034A6C4
+
+/* 8034A444 002C .text      func_8034A444                  func_8034A444                  */
+.global func_8034A444
+func_8034A444:
 /* 8034A444 00347384  3C 60 CC 00 */	lis r3, 0xCC006000@ha
 /* 8034A448 00347388  38 63 60 00 */	addi r3, r3, 0xCC006000@l
 /* 8034A44C 0034738C  80 03 00 04 */	lwz r0, 4(r3)
@@ -1477,11 +1818,17 @@ lbl_8034A444:
 /* 8034A45C 0034739C  80 07 00 14 */	lwz r0, 0x14(r7)
 /* 8034A460 003473A0  7C 03 00 50 */	subf r0, r3, r0
 /* 8034A464 003473A4  7C 00 20 40 */	cmplw r0, r4
-/* 8034A468 003473A8  40 81 00 08 */	ble lbl_8034A470
-/* 8034A46C 003473AC  48 00 00 08 */	b lbl_8034A474
-lbl_8034A470:
+/* 8034A468 003473A8  40 81 00 08 */	ble func_8034A470
+/* 8034A46C 003473AC  48 00 00 08 */	b func_8034A474
+
+/* 8034A470 0004 .text      func_8034A470                  func_8034A470                  */
+.global func_8034A470
+func_8034A470:
 /* 8034A470 003473B0  7C 04 03 78 */	mr r4, r0
-lbl_8034A474:
+
+/* 8034A474 00AC .text      func_8034A474                  func_8034A474                  */
+.global func_8034A474
+func_8034A474:
 /* 8034A474 003473B4  90 87 00 1C */	stw r4, 0x1c(r7)
 /* 8034A478 003473B8  3C 60 80 35 */	lis r3, cbForStateBusy@ha
 /* 8034A47C 003473BC  38 C3 A6 D4 */	addi r6, r3, cbForStateBusy@l
@@ -1492,7 +1839,7 @@ lbl_8034A474:
 /* 8034A490 003473D0  80 87 00 1C */	lwz r4, 0x1c(r7)
 /* 8034A494 003473D4  7C A0 2A 14 */	add r5, r0, r5
 /* 8034A498 003473D8  4B FF D7 81 */	bl DVDLowRead
-/* 8034A49C 003473DC  48 00 02 28 */	b lbl_8034A6C4
+/* 8034A49C 003473DC  48 00 02 28 */	b func_8034A6C4
 /* 8034A4A0 003473E0  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A4A4 003473E4  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A4A8 003473E8  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1501,22 +1848,22 @@ lbl_8034A474:
 /* 8034A4B4 003473F4  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A4B8 003473F8  80 67 00 10 */	lwz r3, 0x10(r7)
 /* 8034A4BC 003473FC  4B FF D9 F5 */	bl DVDLowSeek
-/* 8034A4C0 00347400  48 00 02 04 */	b lbl_8034A6C4
+/* 8034A4C0 00347400  48 00 02 04 */	b func_8034A6C4
 /* 8034A4C4 00347404  3C 60 80 35 */	lis r3, cbForStateBusy@ha
 /* 8034A4C8 00347408  38 63 A6 D4 */	addi r3, r3, cbForStateBusy@l
 /* 8034A4CC 0034740C  4B FF DB 49 */	bl DVDLowStopMotor
-/* 8034A4D0 00347410  48 00 01 F4 */	b lbl_8034A6C4
+/* 8034A4D0 00347410  48 00 01 F4 */	b func_8034A6C4
 /* 8034A4D4 00347414  3C 60 80 35 */	lis r3, cbForStateBusy@ha
 /* 8034A4D8 00347418  38 63 A6 D4 */	addi r3, r3, cbForStateBusy@l
 /* 8034A4DC 0034741C  4B FF DB 39 */	bl DVDLowStopMotor
-/* 8034A4E0 00347420  48 00 01 E4 */	b lbl_8034A6C4
+/* 8034A4E0 00347420  48 00 01 E4 */	b func_8034A6C4
 /* 8034A4E4 00347424  3C 60 CC 00 */	lis r3, 0xCC006000@ha
 /* 8034A4E8 00347428  38 63 60 00 */	addi r3, r3, 0xCC006000@l
 /* 8034A4EC 0034742C  80 03 00 04 */	lwz r0, 4(r3)
 /* 8034A4F0 00347430  90 03 00 04 */	stw r0, 4(r3)
 /* 8034A4F4 00347434  80 0D 92 0C */	lwz r0, AutoFinishing-_SDA_BASE_(r13)
 /* 8034A4F8 00347438  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A4FC 0034743C  41 82 00 24 */	beq lbl_8034A520
+/* 8034A4FC 0034743C  41 82 00 24 */	beq func_8034A520
 /* 8034A500 00347440  80 AD 91 F8 */	lwz r5, executing-_SDA_BASE_(r13)
 /* 8034A504 00347444  38 00 00 00 */	li r0, 0
 /* 8034A508 00347448  3C 60 80 35 */	lis r3, cbForStateBusy@ha
@@ -1524,8 +1871,11 @@ lbl_8034A474:
 /* 8034A510 00347450  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A514 00347454  38 60 00 00 */	li r3, 0
 /* 8034A518 00347458  4B FF DD 49 */	bl DVDLowRequestAudioStatus
-/* 8034A51C 0034745C  48 00 01 A8 */	b lbl_8034A6C4
-lbl_8034A520:
+/* 8034A51C 0034745C  48 00 01 A8 */	b func_8034A6C4
+
+/* 8034A520 018C .text      func_8034A520                  func_8034A520                  */
+.global func_8034A520
+func_8034A520:
 /* 8034A520 00347460  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A524 00347464  38 00 00 01 */	li r0, 1
 /* 8034A528 00347468  3C 60 80 35 */	lis r3, cbForStateBusy@ha
@@ -1535,7 +1885,7 @@ lbl_8034A520:
 /* 8034A538 00347478  80 87 00 14 */	lwz r4, 0x14(r7)
 /* 8034A53C 0034747C  80 A7 00 10 */	lwz r5, 0x10(r7)
 /* 8034A540 00347480  4B FF DC 89 */	bl DVDLowAudioStream
-/* 8034A544 00347484  48 00 01 80 */	b lbl_8034A6C4
+/* 8034A544 00347484  48 00 01 80 */	b func_8034A6C4
 /* 8034A548 00347488  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A54C 0034748C  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A550 00347490  38 83 60 00 */	addi r4, r3, 0x6000
@@ -1546,7 +1896,7 @@ lbl_8034A520:
 /* 8034A564 003474A4  38 80 00 00 */	li r4, 0
 /* 8034A568 003474A8  38 A0 00 00 */	li r5, 0
 /* 8034A56C 003474AC  4B FF DC 5D */	bl DVDLowAudioStream
-/* 8034A570 003474B0  48 00 01 54 */	b lbl_8034A6C4
+/* 8034A570 003474B0  48 00 01 54 */	b func_8034A6C4
 /* 8034A574 003474B4  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A578 003474B8  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A57C 003474BC  38 83 60 00 */	addi r4, r3, 0x6000
@@ -1559,7 +1909,7 @@ lbl_8034A520:
 /* 8034A598 003474D8  38 80 00 00 */	li r4, 0
 /* 8034A59C 003474DC  38 A0 00 00 */	li r5, 0
 /* 8034A5A0 003474E0  4B FF DC 29 */	bl DVDLowAudioStream
-/* 8034A5A4 003474E4  48 00 01 20 */	b lbl_8034A6C4
+/* 8034A5A4 003474E4  48 00 01 20 */	b func_8034A6C4
 /* 8034A5A8 003474E8  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A5AC 003474EC  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A5B0 003474F0  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1568,7 +1918,7 @@ lbl_8034A520:
 /* 8034A5BC 003474FC  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A5C0 00347500  38 60 00 00 */	li r3, 0
 /* 8034A5C4 00347504  4B FF DC 9D */	bl DVDLowRequestAudioStatus
-/* 8034A5C8 00347508  48 00 00 FC */	b lbl_8034A6C4
+/* 8034A5C8 00347508  48 00 00 FC */	b func_8034A6C4
 /* 8034A5CC 0034750C  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A5D0 00347510  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A5D4 00347514  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1577,7 +1927,7 @@ lbl_8034A520:
 /* 8034A5E0 00347520  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A5E4 00347524  3C 60 00 01 */	lis r3, 1
 /* 8034A5E8 00347528  4B FF DC 79 */	bl DVDLowRequestAudioStatus
-/* 8034A5EC 0034752C  48 00 00 D8 */	b lbl_8034A6C4
+/* 8034A5EC 0034752C  48 00 00 D8 */	b func_8034A6C4
 /* 8034A5F0 00347530  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A5F4 00347534  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A5F8 00347538  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1586,7 +1936,7 @@ lbl_8034A520:
 /* 8034A604 00347544  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A608 00347548  3C 60 00 02 */	lis r3, 2
 /* 8034A60C 0034754C  4B FF DC 55 */	bl DVDLowRequestAudioStatus
-/* 8034A610 00347550  48 00 00 B4 */	b lbl_8034A6C4
+/* 8034A610 00347550  48 00 00 B4 */	b func_8034A6C4
 /* 8034A614 00347554  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A618 00347558  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A61C 0034755C  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1595,7 +1945,7 @@ lbl_8034A520:
 /* 8034A628 00347568  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A62C 0034756C  3C 60 00 03 */	lis r3, 3
 /* 8034A630 00347570  4B FF DC 31 */	bl DVDLowRequestAudioStatus
-/* 8034A634 00347574  48 00 00 90 */	b lbl_8034A6C4
+/* 8034A634 00347574  48 00 00 90 */	b func_8034A6C4
 /* 8034A638 00347578  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A63C 0034757C  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A640 00347580  38 83 60 00 */	addi r4, r3, 0x6000
@@ -1605,7 +1955,7 @@ lbl_8034A520:
 /* 8034A650 00347590  80 67 00 10 */	lwz r3, 0x10(r7)
 /* 8034A654 00347594  80 87 00 14 */	lwz r4, 0x14(r7)
 /* 8034A658 00347598  4B FF DC 95 */	bl DVDLowAudioBufferConfig
-/* 8034A65C 0034759C  48 00 00 68 */	b lbl_8034A6C4
+/* 8034A65C 0034759C  48 00 00 68 */	b func_8034A6C4
 /* 8034A660 003475A0  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A664 003475A4  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A668 003475A8  38 A3 60 00 */	addi r5, r3, 0x6000
@@ -1616,7 +1966,7 @@ lbl_8034A520:
 /* 8034A67C 003475BC  90 07 00 1C */	stw r0, 0x1c(r7)
 /* 8034A680 003475C0  80 67 00 18 */	lwz r3, 0x18(r7)
 /* 8034A684 003475C4  4B FF DA A9 */	bl DVDLowInquiry
-/* 8034A688 003475C8  48 00 00 3C */	b lbl_8034A6C4
+/* 8034A688 003475C8  48 00 00 3C */	b func_8034A6C4
 /* 8034A68C 003475CC  3C 60 CC 00 */	lis r3, 0xCC006004@ha
 /* 8034A690 003475D0  80 03 60 04 */	lwz r0, 0xCC006004@l(r3)
 /* 8034A694 003475D4  38 83 60 00 */	addi r4, r3, 0x6000
@@ -1624,21 +1974,27 @@ lbl_8034A520:
 /* 8034A69C 003475DC  90 04 00 04 */	stw r0, 4(r4)
 /* 8034A6A0 003475E0  38 63 A6 D4 */	addi r3, r3, cbForStateBusy@l
 /* 8034A6A4 003475E4  4B FF D9 71 */	bl DVDLowStopMotor
-/* 8034A6A8 003475E8  48 00 00 1C */	b lbl_8034A6C4
-lbl_8034A6AC:
+/* 8034A6A8 003475E8  48 00 00 1C */	b func_8034A6C4
+
+/* 8034A6AC 0018 .text      func_8034A6AC                  func_8034A6AC                  */
+.global func_8034A6AC
+func_8034A6AC:
 /* 8034A6AC 003475EC  81 8D 84 70 */	lwz r12, checkOptionalCommand-_SDA_BASE_(r13)
 /* 8034A6B0 003475F0  3C 60 80 35 */	lis r3, cbForStateBusy@ha
 /* 8034A6B4 003475F4  38 83 A6 D4 */	addi r4, r3, cbForStateBusy@l
 /* 8034A6B8 003475F8  7D 88 03 A6 */	mtlr r12
 /* 8034A6BC 003475FC  38 67 00 00 */	addi r3, r7, 0
 /* 8034A6C0 00347600  4E 80 00 21 */	blrl 
-lbl_8034A6C4:
+
+/* 8034A6C4 0010 .text      func_8034A6C4                  func_8034A6C4                  */
+.global func_8034A6C4
+func_8034A6C4:
 /* 8034A6C4 00347604  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8034A6C8 00347608  38 21 00 08 */	addi r1, r1, 8
 /* 8034A6CC 0034760C  7C 08 03 A6 */	mtlr r0
 /* 8034A6D0 00347610  4E 80 00 20 */	blr 
 
-/* 8034A6D4 0658 .text cbForStateBusy cbForStateBusy */
+/* 8034A6D4 0040 .text      cbForStateBusy                 cbForStateBusy                 */
 .global cbForStateBusy
 cbForStateBusy:
 /* 8034A6D4 00347614  7C 08 02 A6 */	mflr r0
@@ -1649,43 +2005,55 @@ cbForStateBusy:
 /* 8034A6E8 00347628  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8034A6EC 0034762C  3B E4 C9 00 */	addi r31, r4, BB2@l
 /* 8034A6F0 00347630  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 8034A6F4 00347634  40 82 00 20 */	bne lbl_8034A714
+/* 8034A6F4 00347634  40 82 00 20 */	bne func_8034A714
 /* 8034A6F8 00347638  3C 60 01 23 */	lis r3, 0x01234568@ha
 /* 8034A6FC 0034763C  38 63 45 68 */	addi r3, r3, 0x01234568@l
 /* 8034A700 00347640  48 00 14 89 */	bl __DVDStoreErrorCode
 /* 8034A704 00347644  48 00 0A 35 */	bl DVDReset
 /* 8034A708 00347648  38 60 00 00 */	li r3, 0
 /* 8034A70C 0034764C  4B FF EB D1 */	bl cbForStateError
-/* 8034A710 00347650  48 00 06 04 */	b lbl_8034AD14
-lbl_8034A714:
+/* 8034A710 00347650  48 00 06 04 */	b func_8034AD14
+
+/* 8034A714 0018 .text      func_8034A714                  func_8034A714                  */
+.global func_8034A714
+func_8034A714:
 /* 8034A714 00347654  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A718 00347658  28 00 00 03 */	cmplwi r0, 3
-/* 8034A71C 0034765C  41 82 00 10 */	beq lbl_8034A72C
+/* 8034A71C 0034765C  41 82 00 10 */	beq func_8034A72C
 /* 8034A720 00347660  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A724 00347664  28 00 00 0F */	cmplwi r0, 0xf
-/* 8034A728 00347668  40 82 00 E0 */	bne lbl_8034A808
-lbl_8034A72C:
+/* 8034A728 00347668  40 82 00 E0 */	bne func_8034A808
+
+/* 8034A72C 0024 .text      func_8034A72C                  func_8034A72C                  */
+.global func_8034A72C
+func_8034A72C:
 /* 8034A72C 0034766C  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 8034A730 00347670  41 82 00 20 */	beq lbl_8034A750
+/* 8034A730 00347670  41 82 00 20 */	beq func_8034A750
 /* 8034A734 00347674  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 8034A738 00347678  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8034A73C 0034767C  48 00 14 4D */	bl __DVDStoreErrorCode
 /* 8034A740 00347680  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 8034A744 00347684  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 8034A748 00347688  4B FF D8 CD */	bl DVDLowStopMotor
-/* 8034A74C 0034768C  48 00 05 C8 */	b lbl_8034AD14
-lbl_8034A750:
+/* 8034A74C 0034768C  48 00 05 C8 */	b func_8034AD14
+
+/* 8034A750 001C .text      func_8034A750                  func_8034A750                  */
+.global func_8034A750
+func_8034A750:
 /* 8034A750 00347690  38 00 00 00 */	li r0, 0
 /* 8034A754 00347694  90 0D 92 2C */	stw r0, NumInternalRetry-_SDA_BASE_(r13)
 /* 8034A758 00347698  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A75C 0034769C  28 00 00 0F */	cmplwi r0, 0xf
-/* 8034A760 003476A0  40 82 00 0C */	bne lbl_8034A76C
+/* 8034A760 003476A0  40 82 00 0C */	bne func_8034A76C
 /* 8034A764 003476A4  38 00 00 01 */	li r0, 1
 /* 8034A768 003476A8  90 0D 92 30 */	stw r0, ResetRequired-_SDA_BASE_(r13)
-lbl_8034A76C:
+
+/* 8034A76C 004C .text      func_8034A76C                  func_8034A76C                  */
+.global func_8034A76C
+func_8034A76C:
 /* 8034A76C 003476AC  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034A770 003476B0  28 00 00 00 */	cmplwi r0, 0
-/* 8034A774 003476B4  41 82 00 6C */	beq lbl_8034A7E0
+/* 8034A774 003476B4  41 82 00 6C */	beq func_8034A7E0
 /* 8034A778 003476B8  38 00 00 07 */	li r0, 7
 /* 8034A77C 003476BC  83 CD 91 F8 */	lwz r30, executing-_SDA_BASE_(r13)
 /* 8034A780 003476C0  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
@@ -1697,58 +2065,85 @@ lbl_8034A76C:
 /* 8034A798 003476D8  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8034A79C 003476DC  81 9E 00 28 */	lwz r12, 0x28(r30)
 /* 8034A7A0 003476E0  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A7A4 003476E4  41 82 00 14 */	beq lbl_8034A7B8
+/* 8034A7A4 003476E4  41 82 00 14 */	beq func_8034A7B8
 /* 8034A7A8 003476E8  7D 88 03 A6 */	mtlr r12
 /* 8034A7AC 003476EC  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A7B0 003476F0  38 60 FF FD */	li r3, -3
 /* 8034A7B4 003476F4  4E 80 00 21 */	blrl 
-lbl_8034A7B8:
+
+/* 8034A7B8 001C .text      func_8034A7B8                  func_8034A7B8                  */
+.global func_8034A7B8
+func_8034A7B8:
 /* 8034A7B8 003476F8  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 8034A7BC 003476FC  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A7C0 00347700  41 82 00 14 */	beq lbl_8034A7D4
+/* 8034A7C0 00347700  41 82 00 14 */	beq func_8034A7D4
 /* 8034A7C4 00347704  7D 88 03 A6 */	mtlr r12
 /* 8034A7C8 00347708  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A7CC 0034770C  38 60 00 00 */	li r3, 0
 /* 8034A7D0 00347710  4E 80 00 21 */	blrl 
-lbl_8034A7D4:
+
+/* 8034A7D4 000C .text      func_8034A7D4                  func_8034A7D4                  */
+.global func_8034A7D4
+func_8034A7D4:
 /* 8034A7D4 00347714  4B FF F8 D9 */	bl stateReady
 /* 8034A7D8 00347718  38 00 00 01 */	li r0, 1
-/* 8034A7DC 0034771C  48 00 00 08 */	b lbl_8034A7E4
-lbl_8034A7E0:
+/* 8034A7DC 0034771C  48 00 00 08 */	b func_8034A7E4
+
+/* 8034A7E0 0004 .text      func_8034A7E0                  func_8034A7E0                  */
+.global func_8034A7E0
+func_8034A7E0:
 /* 8034A7E0 00347720  38 00 00 00 */	li r0, 0
-lbl_8034A7E4:
+
+/* 8034A7E4 0024 .text      func_8034A7E4                  func_8034A7E4                  */
+.global func_8034A7E4
+func_8034A7E4:
 /* 8034A7E4 00347724  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A7E8 00347728  40 82 05 2C */	bne lbl_8034AD14
+/* 8034A7E8 00347728  40 82 05 2C */	bne func_8034AD14
 /* 8034A7EC 0034772C  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A7F0 00347730  38 00 00 07 */	li r0, 7
 /* 8034A7F4 00347734  3C 60 80 35 */	lis r3, cbForStateMotorStopped@ha
 /* 8034A7F8 00347738  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034A7FC 0034773C  38 63 9F C0 */	addi r3, r3, cbForStateMotorStopped@l
 /* 8034A800 00347740  4B FF D7 45 */	bl DVDLowWaitCoverClose
-/* 8034A804 00347744  48 00 05 10 */	b lbl_8034AD14
-lbl_8034A808:
+/* 8034A804 00347744  48 00 05 10 */	b func_8034AD14
+
+/* 8034A808 0020 .text      func_8034A808                  func_8034A808                  */
+.global func_8034A808
+func_8034A808:
 /* 8034A808 00347748  80 8D 92 14 */	lwz r4, CurrCommand-_SDA_BASE_(r13)
 /* 8034A80C 0034774C  28 04 00 01 */	cmplwi r4, 1
-/* 8034A810 00347750  41 82 00 18 */	beq lbl_8034A828
+/* 8034A810 00347750  41 82 00 18 */	beq func_8034A828
 /* 8034A814 00347754  38 04 FF FC */	addi r0, r4, -4
 /* 8034A818 00347758  28 00 00 01 */	cmplwi r0, 1
-/* 8034A81C 0034775C  40 81 00 0C */	ble lbl_8034A828
+/* 8034A81C 0034775C  40 81 00 0C */	ble func_8034A828
 /* 8034A820 00347760  28 04 00 0E */	cmplwi r4, 0xe
-/* 8034A824 00347764  40 82 00 0C */	bne lbl_8034A830
-lbl_8034A828:
+/* 8034A824 00347764  40 82 00 0C */	bne func_8034A830
+
+/* 8034A828 0008 .text      func_8034A828                  func_8034A828                  */
+.global func_8034A828
+func_8034A828:
 /* 8034A828 00347768  38 00 00 01 */	li r0, 1
-/* 8034A82C 0034776C  48 00 00 1C */	b lbl_8034A848
-lbl_8034A830:
+/* 8034A82C 0034776C  48 00 00 1C */	b func_8034A848
+
+/* 8034A830 0014 .text      func_8034A830                  func_8034A830                  */
+.global func_8034A830
+func_8034A830:
 /* 8034A830 00347770  80 0D 84 7C */	lwz r0, DmaCommand-_SDA_BASE_(r13)
 /* 8034A834 00347774  7C 04 00 40 */	cmplw r4, r0
-/* 8034A838 00347778  40 82 00 0C */	bne lbl_8034A844
+/* 8034A838 00347778  40 82 00 0C */	bne func_8034A844
 /* 8034A83C 0034777C  38 00 00 01 */	li r0, 1
-/* 8034A840 00347780  48 00 00 08 */	b lbl_8034A848
-lbl_8034A844:
+/* 8034A840 00347780  48 00 00 08 */	b func_8034A848
+
+/* 8034A844 0004 .text      func_8034A844                  func_8034A844                  */
+.global func_8034A844
+func_8034A844:
 /* 8034A844 00347784  38 00 00 00 */	li r0, 0
-lbl_8034A848:
+
+/* 8034A848 002C .text      func_8034A848                  func_8034A848                  */
+.global func_8034A848
+func_8034A848:
 /* 8034A848 00347788  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A84C 0034778C  41 82 00 28 */	beq lbl_8034A874
+/* 8034A84C 0034778C  41 82 00 28 */	beq func_8034A874
 /* 8034A850 00347790  80 CD 91 F8 */	lwz r6, executing-_SDA_BASE_(r13)
 /* 8034A854 00347794  3C 80 CC 00 */	lis r4, 0xCC006000@ha
 /* 8034A858 00347798  38 84 60 00 */	addi r4, r4, 0xCC006000@l
@@ -1758,9 +2153,12 @@ lbl_8034A848:
 /* 8034A868 003477A8  7C 04 00 50 */	subf r0, r4, r0
 /* 8034A86C 003477AC  7C 05 02 14 */	add r0, r5, r0
 /* 8034A870 003477B0  90 06 00 20 */	stw r0, 0x20(r6)
-lbl_8034A874:
+
+/* 8034A874 0040 .text      func_8034A874                  func_8034A874                  */
+.global func_8034A874
+func_8034A874:
 /* 8034A874 003477B4  54 60 07 39 */	rlwinm. r0, r3, 0, 0x1c, 0x1c
-/* 8034A878 003477B8  41 82 00 60 */	beq lbl_8034A8D8
+/* 8034A878 003477B8  41 82 00 60 */	beq func_8034A8D8
 /* 8034A87C 003477BC  83 CD 91 F8 */	lwz r30, executing-_SDA_BASE_(r13)
 /* 8034A880 003477C0  38 7F 00 40 */	addi r3, r31, 0x40
 /* 8034A884 003477C4  38 00 00 00 */	li r0, 0
@@ -1770,30 +2168,39 @@ lbl_8034A874:
 /* 8034A894 003477D4  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8034A898 003477D8  81 9E 00 28 */	lwz r12, 0x28(r30)
 /* 8034A89C 003477DC  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A8A0 003477E0  41 82 00 14 */	beq lbl_8034A8B4
+/* 8034A8A0 003477E0  41 82 00 14 */	beq func_8034A8B4
 /* 8034A8A4 003477E4  7D 88 03 A6 */	mtlr r12
 /* 8034A8A8 003477E8  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A8AC 003477EC  38 60 FF FD */	li r3, -3
 /* 8034A8B0 003477F0  4E 80 00 21 */	blrl 
-lbl_8034A8B4:
+
+/* 8034A8B4 001C .text      func_8034A8B4                  func_8034A8B4                  */
+.global func_8034A8B4
+func_8034A8B4:
 /* 8034A8B4 003477F4  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 8034A8B8 003477F8  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A8BC 003477FC  41 82 00 14 */	beq lbl_8034A8D0
+/* 8034A8BC 003477FC  41 82 00 14 */	beq func_8034A8D0
 /* 8034A8C0 00347800  7D 88 03 A6 */	mtlr r12
 /* 8034A8C4 00347804  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A8C8 00347808  38 60 00 00 */	li r3, 0
 /* 8034A8CC 0034780C  4E 80 00 21 */	blrl 
-lbl_8034A8D0:
+
+/* 8034A8D0 0008 .text      func_8034A8D0                  func_8034A8D0                  */
+.global func_8034A8D0
+func_8034A8D0:
 /* 8034A8D0 00347810  4B FF F7 DD */	bl stateReady
-/* 8034A8D4 00347814  48 00 04 40 */	b lbl_8034AD14
-lbl_8034A8D8:
+/* 8034A8D4 00347814  48 00 04 40 */	b func_8034AD14
+
+/* 8034A8D8 004C .text      func_8034A8D8                  func_8034A8D8                  */
+.global func_8034A8D8
+func_8034A8D8:
 /* 8034A8D8 00347818  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 8034A8DC 0034781C  41 82 03 14 */	beq lbl_8034ABF0
+/* 8034A8DC 0034781C  41 82 03 14 */	beq func_8034ABF0
 /* 8034A8E0 00347820  38 A0 00 00 */	li r5, 0
 /* 8034A8E4 00347824  90 AD 92 2C */	stw r5, NumInternalRetry-_SDA_BASE_(r13)
 /* 8034A8E8 00347828  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034A8EC 0034782C  28 00 00 10 */	cmplwi r0, 0x10
-/* 8034A8F0 00347830  40 82 00 3C */	bne lbl_8034A92C
+/* 8034A8F0 00347830  40 82 00 3C */	bne func_8034A92C
 /* 8034A8F4 00347834  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034A8F8 00347838  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034A8FC 0034783C  38 60 00 01 */	li r3, 1
@@ -1802,17 +2209,23 @@ lbl_8034A8D8:
 /* 8034A908 00347848  90 A4 00 0C */	stw r5, 0xc(r4)
 /* 8034A90C 0034784C  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034A910 00347850  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A914 00347854  41 82 00 10 */	beq lbl_8034A924
+/* 8034A914 00347854  41 82 00 10 */	beq func_8034A924
 /* 8034A918 00347858  7D 88 03 A6 */	mtlr r12
 /* 8034A91C 0034785C  38 60 00 00 */	li r3, 0
 /* 8034A920 00347860  4E 80 00 21 */	blrl 
-lbl_8034A924:
+
+/* 8034A924 0008 .text      func_8034A924                  func_8034A924                  */
+.global func_8034A924
+func_8034A924:
 /* 8034A924 00347864  4B FF F7 89 */	bl stateReady
-/* 8034A928 00347868  48 00 03 EC */	b lbl_8034AD14
-lbl_8034A92C:
+/* 8034A928 00347868  48 00 03 EC */	b func_8034AD14
+
+/* 8034A92C 0044 .text      func_8034A92C                  func_8034A92C                  */
+.global func_8034A92C
+func_8034A92C:
 /* 8034A92C 0034786C  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034A930 00347870  28 00 00 00 */	cmplwi r0, 0
-/* 8034A934 00347874  41 82 00 60 */	beq lbl_8034A994
+/* 8034A934 00347874  41 82 00 60 */	beq func_8034A994
 /* 8034A938 00347878  90 AD 92 20 */	stw r5, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034A93C 0034787C  38 7F 00 40 */	addi r3, r31, 0x40
 /* 8034A940 00347880  83 CD 91 F8 */	lwz r30, executing-_SDA_BASE_(r13)
@@ -1822,55 +2235,79 @@ lbl_8034A92C:
 /* 8034A950 00347890  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8034A954 00347894  81 9E 00 28 */	lwz r12, 0x28(r30)
 /* 8034A958 00347898  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A95C 0034789C  41 82 00 14 */	beq lbl_8034A970
+/* 8034A95C 0034789C  41 82 00 14 */	beq func_8034A970
 /* 8034A960 003478A0  7D 88 03 A6 */	mtlr r12
 /* 8034A964 003478A4  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A968 003478A8  38 60 FF FD */	li r3, -3
 /* 8034A96C 003478AC  4E 80 00 21 */	blrl 
-lbl_8034A970:
+
+/* 8034A970 001C .text      func_8034A970                  func_8034A970                  */
+.global func_8034A970
+func_8034A970:
 /* 8034A970 003478B0  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 8034A974 003478B4  28 0C 00 00 */	cmplwi r12, 0
-/* 8034A978 003478B8  41 82 00 14 */	beq lbl_8034A98C
+/* 8034A978 003478B8  41 82 00 14 */	beq func_8034A98C
 /* 8034A97C 003478BC  7D 88 03 A6 */	mtlr r12
 /* 8034A980 003478C0  38 9E 00 00 */	addi r4, r30, 0
 /* 8034A984 003478C4  38 60 00 00 */	li r3, 0
 /* 8034A988 003478C8  4E 80 00 21 */	blrl 
-lbl_8034A98C:
+
+/* 8034A98C 0008 .text      func_8034A98C                  func_8034A98C                  */
+.global func_8034A98C
+func_8034A98C:
 /* 8034A98C 003478CC  4B FF F7 21 */	bl stateReady
 /* 8034A990 003478D0  38 A0 00 01 */	li r5, 1
-lbl_8034A994:
+
+/* 8034A994 0028 .text      func_8034A994                  func_8034A994                  */
+.global func_8034A994
+func_8034A994:
 /* 8034A994 003478D4  2C 05 00 00 */	cmpwi r5, 0
-/* 8034A998 003478D8  40 82 03 7C */	bne lbl_8034AD14
+/* 8034A998 003478D8  40 82 03 7C */	bne func_8034AD14
 /* 8034A99C 003478DC  80 6D 92 14 */	lwz r3, CurrCommand-_SDA_BASE_(r13)
 /* 8034A9A0 003478E0  28 03 00 01 */	cmplwi r3, 1
-/* 8034A9A4 003478E4  41 82 00 18 */	beq lbl_8034A9BC
+/* 8034A9A4 003478E4  41 82 00 18 */	beq func_8034A9BC
 /* 8034A9A8 003478E8  38 03 FF FC */	addi r0, r3, -4
 /* 8034A9AC 003478EC  28 00 00 01 */	cmplwi r0, 1
-/* 8034A9B0 003478F0  40 81 00 0C */	ble lbl_8034A9BC
+/* 8034A9B0 003478F0  40 81 00 0C */	ble func_8034A9BC
 /* 8034A9B4 003478F4  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034A9B8 003478F8  40 82 00 0C */	bne lbl_8034A9C4
-lbl_8034A9BC:
+/* 8034A9B8 003478F8  40 82 00 0C */	bne func_8034A9C4
+
+/* 8034A9BC 0008 .text      func_8034A9BC                  func_8034A9BC                  */
+.global func_8034A9BC
+func_8034A9BC:
 /* 8034A9BC 003478FC  38 00 00 01 */	li r0, 1
-/* 8034A9C0 00347900  48 00 00 1C */	b lbl_8034A9DC
-lbl_8034A9C4:
+/* 8034A9C0 00347900  48 00 00 1C */	b func_8034A9DC
+
+/* 8034A9C4 0014 .text      func_8034A9C4                  func_8034A9C4                  */
+.global func_8034A9C4
+func_8034A9C4:
 /* 8034A9C4 00347904  80 0D 84 7C */	lwz r0, DmaCommand-_SDA_BASE_(r13)
 /* 8034A9C8 00347908  7C 03 00 40 */	cmplw r3, r0
-/* 8034A9CC 0034790C  40 82 00 0C */	bne lbl_8034A9D8
+/* 8034A9CC 0034790C  40 82 00 0C */	bne func_8034A9D8
 /* 8034A9D0 00347910  38 00 00 01 */	li r0, 1
-/* 8034A9D4 00347914  48 00 00 08 */	b lbl_8034A9DC
-lbl_8034A9D8:
+/* 8034A9D4 00347914  48 00 00 08 */	b func_8034A9DC
+
+/* 8034A9D8 0004 .text      func_8034A9D8                  func_8034A9D8                  */
+.global func_8034A9D8
+func_8034A9D8:
 /* 8034A9D8 00347918  38 00 00 00 */	li r0, 0
-lbl_8034A9DC:
+
+/* 8034A9DC 0024 .text      func_8034A9DC                  func_8034A9DC                  */
+.global func_8034A9DC
+func_8034A9DC:
 /* 8034A9DC 0034791C  2C 00 00 00 */	cmpwi r0, 0
-/* 8034A9E0 00347920  41 82 00 54 */	beq lbl_8034AA34
+/* 8034A9E0 00347920  41 82 00 54 */	beq func_8034AA34
 /* 8034A9E4 00347924  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034A9E8 00347928  80 83 00 20 */	lwz r4, 0x20(r3)
 /* 8034A9EC 0034792C  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8034A9F0 00347930  7C 04 00 40 */	cmplw r4, r0
-/* 8034A9F4 00347934  41 82 00 0C */	beq lbl_8034AA00
+/* 8034A9F4 00347934  41 82 00 0C */	beq func_8034AA00
 /* 8034A9F8 00347938  4B FF F9 9D */	bl stateBusy
-/* 8034A9FC 0034793C  48 00 03 18 */	b lbl_8034AD14
-lbl_8034AA00:
+/* 8034A9FC 0034793C  48 00 03 18 */	b func_8034AD14
+
+/* 8034AA00 002C .text      func_8034AA00                  func_8034AA00                  */
+.global func_8034AA00
+func_8034AA00:
 /* 8034AA00 00347940  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034AA04 00347944  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034AA08 00347948  38 00 00 00 */	li r0, 0
@@ -1878,60 +2315,90 @@ lbl_8034AA00:
 /* 8034AA10 00347950  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8034AA14 00347954  81 83 00 28 */	lwz r12, 0x28(r3)
 /* 8034AA18 00347958  28 0C 00 00 */	cmplwi r12, 0
-/* 8034AA1C 0034795C  41 82 00 10 */	beq lbl_8034AA2C
+/* 8034AA1C 0034795C  41 82 00 10 */	beq func_8034AA2C
 /* 8034AA20 00347960  80 64 00 20 */	lwz r3, 0x20(r4)
 /* 8034AA24 00347964  7D 88 03 A6 */	mtlr r12
 /* 8034AA28 00347968  4E 80 00 21 */	blrl 
-lbl_8034AA2C:
+
+/* 8034AA2C 0008 .text      func_8034AA2C                  func_8034AA2C                  */
+.global func_8034AA2C
+func_8034AA2C:
 /* 8034AA2C 0034796C  4B FF F6 81 */	bl stateReady
-/* 8034AA30 00347970  48 00 02 E4 */	b lbl_8034AD14
-lbl_8034AA34:
+/* 8034AA30 00347970  48 00 02 E4 */	b func_8034AD14
+
+/* 8034AA34 0018 .text      func_8034AA34                  func_8034AA34                  */
+.global func_8034AA34
+func_8034AA34:
 /* 8034AA34 00347974  80 8D 92 14 */	lwz r4, CurrCommand-_SDA_BASE_(r13)
 /* 8034AA38 00347978  38 04 FF F7 */	addi r0, r4, -9
 /* 8034AA3C 0034797C  28 00 00 03 */	cmplwi r0, 3
-/* 8034AA40 00347980  41 81 00 0C */	bgt lbl_8034AA4C
+/* 8034AA40 00347980  41 81 00 0C */	bgt func_8034AA4C
 /* 8034AA44 00347984  38 00 00 01 */	li r0, 1
-/* 8034AA48 00347988  48 00 00 48 */	b lbl_8034AA90
-lbl_8034AA4C:
+/* 8034AA48 00347988  48 00 00 48 */	b func_8034AA90
+
+/* 8034AA4C 0018 .text      func_8034AA4C                  func_8034AA4C                  */
+.global func_8034AA4C
+func_8034AA4C:
 /* 8034AA4C 0034798C  3C 60 80 3D */	lis r3, 0x803d
 /* 8034AA50 00347990  84 03 15 EC */	lwzu r0, 0x15ec(r3)
 /* 8034AA54 00347994  7C 04 00 40 */	cmplw r4, r0
-/* 8034AA58 00347998  40 82 00 0C */	bne lbl_8034AA64
+/* 8034AA58 00347998  40 82 00 0C */	bne func_8034AA64
 /* 8034AA5C 0034799C  38 00 00 01 */	li r0, 1
-/* 8034AA60 003479A0  48 00 00 30 */	b lbl_8034AA90
-lbl_8034AA64:
+/* 8034AA60 003479A0  48 00 00 30 */	b func_8034AA90
+
+/* 8034AA64 0014 .text      func_8034AA64                  func_8034AA64                  */
+.global func_8034AA64
+func_8034AA64:
 /* 8034AA64 003479A4  84 03 00 04 */	lwzu r0, 4(r3)
 /* 8034AA68 003479A8  7C 04 00 40 */	cmplw r4, r0
-/* 8034AA6C 003479AC  40 82 00 0C */	bne lbl_8034AA78
+/* 8034AA6C 003479AC  40 82 00 0C */	bne func_8034AA78
 /* 8034AA70 003479B0  38 00 00 01 */	li r0, 1
-/* 8034AA74 003479B4  48 00 00 1C */	b lbl_8034AA90
-lbl_8034AA78:
+/* 8034AA74 003479B4  48 00 00 1C */	b func_8034AA90
+
+/* 8034AA78 0014 .text      func_8034AA78                  func_8034AA78                  */
+.global func_8034AA78
+func_8034AA78:
 /* 8034AA78 003479B8  80 03 00 04 */	lwz r0, 4(r3)
 /* 8034AA7C 003479BC  7C 04 00 40 */	cmplw r4, r0
-/* 8034AA80 003479C0  40 82 00 0C */	bne lbl_8034AA8C
+/* 8034AA80 003479C0  40 82 00 0C */	bne func_8034AA8C
 /* 8034AA84 003479C4  38 00 00 01 */	li r0, 1
-/* 8034AA88 003479C8  48 00 00 08 */	b lbl_8034AA90
-lbl_8034AA8C:
+/* 8034AA88 003479C8  48 00 00 08 */	b func_8034AA90
+
+/* 8034AA8C 0004 .text      func_8034AA8C                  func_8034AA8C                  */
+.global func_8034AA8C
+func_8034AA8C:
 /* 8034AA8C 003479CC  38 00 00 00 */	li r0, 0
-lbl_8034AA90:
+
+/* 8034AA90 0020 .text      func_8034AA90                  func_8034AA90                  */
+.global func_8034AA90
+func_8034AA90:
 /* 8034AA90 003479D0  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AA94 003479D4  41 82 00 68 */	beq lbl_8034AAFC
+/* 8034AA94 003479D4  41 82 00 68 */	beq func_8034AAFC
 /* 8034AA98 003479D8  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AA9C 003479DC  28 00 00 0B */	cmplwi r0, 0xb
-/* 8034AAA0 003479E0  41 82 00 10 */	beq lbl_8034AAB0
+/* 8034AAA0 003479E0  41 82 00 10 */	beq func_8034AAB0
 /* 8034AAA4 003479E4  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AAA8 003479E8  28 00 00 0A */	cmplwi r0, 0xa
-/* 8034AAAC 003479EC  40 82 00 14 */	bne lbl_8034AAC0
-lbl_8034AAB0:
+/* 8034AAAC 003479EC  40 82 00 14 */	bne func_8034AAC0
+
+/* 8034AAB0 0010 .text      func_8034AAB0                  func_8034AAB0                  */
+.global func_8034AAB0
+func_8034AAB0:
 /* 8034AAB0 003479F0  3C 60 CC 00 */	lis r3, 0xCC006020@ha
 /* 8034AAB4 003479F4  80 03 60 20 */	lwz r0, 0xCC006020@l(r3)
 /* 8034AAB8 003479F8  54 03 10 3A */	slwi r3, r0, 2
-/* 8034AABC 003479FC  48 00 00 10 */	b lbl_8034AACC
-lbl_8034AAC0:
+/* 8034AABC 003479FC  48 00 00 10 */	b func_8034AACC
+
+/* 8034AAC0 000C .text      func_8034AAC0                  func_8034AAC0                  */
+.global func_8034AAC0
+func_8034AAC0:
 /* 8034AAC0 00347A00  3C 60 CC 00 */	lis r3, 0xCC006000@ha
 /* 8034AAC4 00347A04  38 63 60 00 */	addi r3, r3, 0xCC006000@l
 /* 8034AAC8 00347A08  80 63 00 20 */	lwz r3, 0x20(r3)
-lbl_8034AACC:
+
+/* 8034AACC 0028 .text      func_8034AACC                  func_8034AACC                  */
+.global func_8034AACC
+func_8034AACC:
 /* 8034AACC 00347A0C  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034AAD0 00347A10  38 BF 00 40 */	addi r5, r31, 0x40
 /* 8034AAD4 00347A14  38 00 00 00 */	li r0, 0
@@ -1939,39 +2406,51 @@ lbl_8034AACC:
 /* 8034AADC 00347A1C  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034AAE0 00347A20  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034AAE4 00347A24  28 0C 00 00 */	cmplwi r12, 0
-/* 8034AAE8 00347A28  41 82 00 0C */	beq lbl_8034AAF4
+/* 8034AAE8 00347A28  41 82 00 0C */	beq func_8034AAF4
 /* 8034AAEC 00347A2C  7D 88 03 A6 */	mtlr r12
 /* 8034AAF0 00347A30  4E 80 00 21 */	blrl 
-lbl_8034AAF4:
+
+/* 8034AAF4 0008 .text      func_8034AAF4                  func_8034AAF4                  */
+.global func_8034AAF4
+func_8034AAF4:
 /* 8034AAF4 00347A34  4B FF F5 B9 */	bl stateReady
-/* 8034AAF8 00347A38  48 00 02 1C */	b lbl_8034AD14
-lbl_8034AAFC:
+/* 8034AAF8 00347A38  48 00 02 1C */	b func_8034AD14
+
+/* 8034AAFC 0058 .text      func_8034AAFC                  func_8034AAFC                  */
+.global func_8034AAFC
+func_8034AAFC:
 /* 8034AAFC 00347A3C  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AB00 00347A40  28 00 00 06 */	cmplwi r0, 6
-/* 8034AB04 00347A44  40 82 00 B8 */	bne lbl_8034ABBC
+/* 8034AB04 00347A44  40 82 00 B8 */	bne func_8034ABBC
 /* 8034AB08 00347A48  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034AB0C 00347A4C  38 A4 00 1C */	addi r5, r4, 0x1c
 /* 8034AB10 00347A50  80 04 00 1C */	lwz r0, 0x1c(r4)
 /* 8034AB14 00347A54  28 00 00 00 */	cmplwi r0, 0
-/* 8034AB18 00347A58  40 82 00 74 */	bne lbl_8034AB8C
+/* 8034AB18 00347A58  40 82 00 74 */	bne func_8034AB8C
 /* 8034AB1C 00347A5C  3C 60 CC 00 */	lis r3, 0xCC006020@ha
 /* 8034AB20 00347A60  80 03 60 20 */	lwz r0, 0xCC006020@l(r3)
 /* 8034AB24 00347A64  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8034AB28 00347A68  41 82 00 34 */	beq lbl_8034AB5C
+/* 8034AB28 00347A68  41 82 00 34 */	beq func_8034AB5C
 /* 8034AB2C 00347A6C  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034AB30 00347A70  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034AB34 00347A74  38 00 00 09 */	li r0, 9
 /* 8034AB38 00347A78  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034AB3C 00347A7C  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034AB40 00347A80  28 0C 00 00 */	cmplwi r12, 0
-/* 8034AB44 00347A84  41 82 00 10 */	beq lbl_8034AB54
+/* 8034AB44 00347A84  41 82 00 10 */	beq func_8034AB54
 /* 8034AB48 00347A88  7D 88 03 A6 */	mtlr r12
 /* 8034AB4C 00347A8C  38 60 FF FE */	li r3, -2
 /* 8034AB50 00347A90  4E 80 00 21 */	blrl 
-lbl_8034AB54:
+
+/* 8034AB54 0008 .text      func_8034AB54                  func_8034AB54                  */
+.global func_8034AB54
+func_8034AB54:
 /* 8034AB54 00347A94  4B FF F5 59 */	bl stateReady
-/* 8034AB58 00347A98  48 00 01 BC */	b lbl_8034AD14
-lbl_8034AB5C:
+/* 8034AB58 00347A98  48 00 01 BC */	b func_8034AD14
+
+/* 8034AB5C 0030 .text      func_8034AB5C                  func_8034AB5C                  */
+.global func_8034AB5C
+func_8034AB5C:
 /* 8034AB5C 00347A9C  38 00 00 00 */	li r0, 0
 /* 8034AB60 00347AA0  90 0D 92 0C */	stw r0, AutoFinishing-_SDA_BASE_(r13)
 /* 8034AB64 00347AA4  38 00 00 01 */	li r0, 1
@@ -1983,22 +2462,31 @@ lbl_8034AB5C:
 /* 8034AB7C 00347ABC  80 85 00 14 */	lwz r4, 0x14(r5)
 /* 8034AB80 00347AC0  80 A5 00 10 */	lwz r5, 0x10(r5)
 /* 8034AB84 00347AC4  4B FF D6 45 */	bl DVDLowAudioStream
-/* 8034AB88 00347AC8  48 00 01 8C */	b lbl_8034AD14
-lbl_8034AB8C:
+/* 8034AB88 00347AC8  48 00 01 8C */	b func_8034AD14
+
+/* 8034AB8C 0028 .text      func_8034AB8C                  func_8034AB8C                  */
+.global func_8034AB8C
+func_8034AB8C:
 /* 8034AB8C 00347ACC  38 1F 00 40 */	addi r0, r31, 0x40
 /* 8034AB90 00347AD0  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
 /* 8034AB94 00347AD4  38 00 00 00 */	li r0, 0
 /* 8034AB98 00347AD8  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034AB9C 00347ADC  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034ABA0 00347AE0  28 0C 00 00 */	cmplwi r12, 0
-/* 8034ABA4 00347AE4  41 82 00 10 */	beq lbl_8034ABB4
+/* 8034ABA4 00347AE4  41 82 00 10 */	beq func_8034ABB4
 /* 8034ABA8 00347AE8  7D 88 03 A6 */	mtlr r12
 /* 8034ABAC 00347AEC  38 60 00 00 */	li r3, 0
 /* 8034ABB0 00347AF0  4E 80 00 21 */	blrl 
-lbl_8034ABB4:
+
+/* 8034ABB4 0008 .text      func_8034ABB4                  func_8034ABB4                  */
+.global func_8034ABB4
+func_8034ABB4:
 /* 8034ABB4 00347AF4  4B FF F4 F9 */	bl stateReady
-/* 8034ABB8 00347AF8  48 00 01 5C */	b lbl_8034AD14
-lbl_8034ABBC:
+/* 8034ABB8 00347AF8  48 00 01 5C */	b func_8034AD14
+
+/* 8034ABBC 002C .text      func_8034ABBC                  func_8034ABBC                  */
+.global func_8034ABBC
+func_8034ABBC:
 /* 8034ABBC 00347AFC  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034ABC0 00347B00  38 7F 00 40 */	addi r3, r31, 0x40
 /* 8034ABC4 00347B04  38 00 00 00 */	li r0, 0
@@ -2006,46 +2494,58 @@ lbl_8034ABBC:
 /* 8034ABCC 00347B0C  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034ABD0 00347B10  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034ABD4 00347B14  28 0C 00 00 */	cmplwi r12, 0
-/* 8034ABD8 00347B18  41 82 00 10 */	beq lbl_8034ABE8
+/* 8034ABD8 00347B18  41 82 00 10 */	beq func_8034ABE8
 /* 8034ABDC 00347B1C  7D 88 03 A6 */	mtlr r12
 /* 8034ABE0 00347B20  38 60 00 00 */	li r3, 0
 /* 8034ABE4 00347B24  4E 80 00 21 */	blrl 
-lbl_8034ABE8:
+
+/* 8034ABE8 0008 .text      func_8034ABE8                  func_8034ABE8                  */
+.global func_8034ABE8
+func_8034ABE8:
 /* 8034ABE8 00347B28  4B FF F4 C5 */	bl stateReady
-/* 8034ABEC 00347B2C  48 00 01 28 */	b lbl_8034AD14
-lbl_8034ABF0:
+/* 8034ABEC 00347B2C  48 00 01 28 */	b func_8034AD14
+
+/* 8034ABF0 0028 .text      func_8034ABF0                  func_8034ABF0                  */
+.global func_8034ABF0
+func_8034ABF0:
 /* 8034ABF0 00347B30  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034ABF4 00347B34  28 00 00 0E */	cmplwi r0, 0xe
-/* 8034ABF8 00347B38  40 82 00 20 */	bne lbl_8034AC18
+/* 8034ABF8 00347B38  40 82 00 20 */	bne func_8034AC18
 /* 8034ABFC 00347B3C  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 8034AC00 00347B40  38 63 45 67 */	addi r3, r3, 0x01234567@l
 /* 8034AC04 00347B44  48 00 0F 85 */	bl __DVDStoreErrorCode
 /* 8034AC08 00347B48  3C 60 80 35 */	lis r3, cbForStateError@ha
 /* 8034AC0C 00347B4C  38 63 92 DC */	addi r3, r3, cbForStateError@l
 /* 8034AC10 00347B50  4B FF D4 05 */	bl DVDLowStopMotor
-/* 8034AC14 00347B54  48 00 01 00 */	b lbl_8034AD14
-lbl_8034AC18:
+/* 8034AC14 00347B54  48 00 01 00 */	b func_8034AD14
+
+/* 8034AC18 0030 .text      func_8034AC18                  func_8034AC18                  */
+.global func_8034AC18
+func_8034AC18:
 /* 8034AC18 00347B58  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AC1C 00347B5C  28 00 00 01 */	cmplwi r0, 1
-/* 8034AC20 00347B60  41 82 00 28 */	beq lbl_8034AC48
+/* 8034AC20 00347B60  41 82 00 28 */	beq func_8034AC48
 /* 8034AC24 00347B64  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AC28 00347B68  28 00 00 04 */	cmplwi r0, 4
-/* 8034AC2C 00347B6C  41 82 00 1C */	beq lbl_8034AC48
+/* 8034AC2C 00347B6C  41 82 00 1C */	beq func_8034AC48
 /* 8034AC30 00347B70  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AC34 00347B74  28 00 00 05 */	cmplwi r0, 5
-/* 8034AC38 00347B78  41 82 00 10 */	beq lbl_8034AC48
+/* 8034AC38 00347B78  41 82 00 10 */	beq func_8034AC48
 /* 8034AC3C 00347B7C  80 0D 92 14 */	lwz r0, CurrCommand-_SDA_BASE_(r13)
 /* 8034AC40 00347B80  28 00 00 0E */	cmplwi r0, 0xe
-/* 8034AC44 00347B84  40 82 00 C4 */	bne lbl_8034AD08
-lbl_8034AC48:
+/* 8034AC44 00347B84  40 82 00 C4 */	bne func_8034AD08
+
+/* 8034AC48 0058 .text      func_8034AC48                  func_8034AC48                  */
+.global func_8034AC48
+func_8034AC48:
 /* 8034AC48 00347B88  83 CD 91 F8 */	lwz r30, executing-_SDA_BASE_(r13)
 /* 8034AC4C 00347B8C  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 8034AC50 00347B90  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 8034AC54 00347B94  7C 03 00 40 */	cmplw r3, r0
-/* 8034AC58 00347B98  40 82 00 B0 */	bne lbl_8034AD08
+/* 8034AC58 00347B98  40 82 00 B0 */	bne func_8034AD08
 /* 8034AC5C 00347B9C  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034AC60 00347BA0  28 00 00 00 */	cmplwi r0, 0
-/* 8034AC64 00347BA4  41 82 00 64 */	beq lbl_8034ACC8
+/* 8034AC64 00347BA4  41 82 00 64 */	beq func_8034ACC8
 /* 8034AC68 00347BA8  38 80 00 00 */	li r4, 0
 /* 8034AC6C 00347BAC  90 8D 92 20 */	stw r4, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034AC70 00347BB0  38 7F 00 40 */	addi r3, r31, 0x40
@@ -2055,28 +2555,40 @@ lbl_8034AC48:
 /* 8034AC80 00347BC0  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 8034AC84 00347BC4  81 9E 00 28 */	lwz r12, 0x28(r30)
 /* 8034AC88 00347BC8  28 0C 00 00 */	cmplwi r12, 0
-/* 8034AC8C 00347BCC  41 82 00 14 */	beq lbl_8034ACA0
+/* 8034AC8C 00347BCC  41 82 00 14 */	beq func_8034ACA0
 /* 8034AC90 00347BD0  7D 88 03 A6 */	mtlr r12
 /* 8034AC94 00347BD4  38 9E 00 00 */	addi r4, r30, 0
 /* 8034AC98 00347BD8  38 60 FF FD */	li r3, -3
 /* 8034AC9C 00347BDC  4E 80 00 21 */	blrl 
-lbl_8034ACA0:
+
+/* 8034ACA0 001C .text      func_8034ACA0                  func_8034ACA0                  */
+.global func_8034ACA0
+func_8034ACA0:
 /* 8034ACA0 00347BE0  81 8D 92 1C */	lwz r12, CancelCallback-_SDA_BASE_(r13)
 /* 8034ACA4 00347BE4  28 0C 00 00 */	cmplwi r12, 0
-/* 8034ACA8 00347BE8  41 82 00 14 */	beq lbl_8034ACBC
+/* 8034ACA8 00347BE8  41 82 00 14 */	beq func_8034ACBC
 /* 8034ACAC 00347BEC  7D 88 03 A6 */	mtlr r12
 /* 8034ACB0 00347BF0  38 9E 00 00 */	addi r4, r30, 0
 /* 8034ACB4 00347BF4  38 60 00 00 */	li r3, 0
 /* 8034ACB8 00347BF8  4E 80 00 21 */	blrl 
-lbl_8034ACBC:
+
+/* 8034ACBC 000C .text      func_8034ACBC                  func_8034ACBC                  */
+.global func_8034ACBC
+func_8034ACBC:
 /* 8034ACBC 00347BFC  4B FF F3 F1 */	bl stateReady
 /* 8034ACC0 00347C00  38 00 00 01 */	li r0, 1
-/* 8034ACC4 00347C04  48 00 00 08 */	b lbl_8034ACCC
-lbl_8034ACC8:
+/* 8034ACC4 00347C04  48 00 00 08 */	b func_8034ACCC
+
+/* 8034ACC8 0004 .text      func_8034ACC8                  func_8034ACC8                  */
+.global func_8034ACC8
+func_8034ACC8:
 /* 8034ACC8 00347C08  38 00 00 00 */	li r0, 0
-lbl_8034ACCC:
+
+/* 8034ACCC 0034 .text      func_8034ACCC                  func_8034ACCC                  */
+.global func_8034ACCC
+func_8034ACCC:
 /* 8034ACCC 00347C0C  2C 00 00 00 */	cmpwi r0, 0
-/* 8034ACD0 00347C10  40 82 00 44 */	bne lbl_8034AD14
+/* 8034ACD0 00347C10  40 82 00 44 */	bne func_8034AD14
 /* 8034ACD4 00347C14  80 8D 91 F8 */	lwz r4, executing-_SDA_BASE_(r13)
 /* 8034ACD8 00347C18  38 7F 00 40 */	addi r3, r31, 0x40
 /* 8034ACDC 00347C1C  38 00 00 00 */	li r0, 0
@@ -2084,18 +2596,27 @@ lbl_8034ACCC:
 /* 8034ACE4 00347C24  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8034ACE8 00347C28  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 8034ACEC 00347C2C  28 0C 00 00 */	cmplwi r12, 0
-/* 8034ACF0 00347C30  41 82 00 10 */	beq lbl_8034AD00
+/* 8034ACF0 00347C30  41 82 00 10 */	beq func_8034AD00
 /* 8034ACF4 00347C34  80 64 00 20 */	lwz r3, 0x20(r4)
 /* 8034ACF8 00347C38  7D 88 03 A6 */	mtlr r12
 /* 8034ACFC 00347C3C  4E 80 00 21 */	blrl 
-lbl_8034AD00:
+
+/* 8034AD00 0008 .text      func_8034AD00                  func_8034AD00                  */
+.global func_8034AD00
+func_8034AD00:
 /* 8034AD00 00347C40  4B FF F3 AD */	bl stateReady
-/* 8034AD04 00347C44  48 00 00 10 */	b lbl_8034AD14
-lbl_8034AD08:
+/* 8034AD04 00347C44  48 00 00 10 */	b func_8034AD14
+
+/* 8034AD08 000C .text      func_8034AD08                  func_8034AD08                  */
+.global func_8034AD08
+func_8034AD08:
 /* 8034AD08 00347C48  3C 60 80 35 */	lis r3, cbForStateGettingError@ha
 /* 8034AD0C 00347C4C  38 63 94 98 */	addi r3, r3, cbForStateGettingError@l
 /* 8034AD10 00347C50  4B FF D3 91 */	bl DVDLowRequestError
-lbl_8034AD14:
+
+/* 8034AD14 0018 .text      func_8034AD14                  func_8034AD14                  */
+.global func_8034AD14
+func_8034AD14:
 /* 8034AD14 00347C54  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8034AD18 00347C58  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 8034AD1C 00347C5C  83 C1 00 10 */	lwz r30, 0x10(r1)
@@ -2103,7 +2624,7 @@ lbl_8034AD14:
 /* 8034AD24 00347C64  7C 08 03 A6 */	mtlr r0
 /* 8034AD28 00347C68  4E 80 00 20 */	blr 
 
-/* 8034AD2C 00DC .text DVDReadAbsAsyncPrio DVDReadAbsAsyncPrio */
+/* 8034AD2C 006C .text      DVDReadAbsAsyncPrio            DVDReadAbsAsyncPrio            */
 .global DVDReadAbsAsyncPrio
 DVDReadAbsAsyncPrio:
 /* 8034AD2C 00347C6C  7C 08 02 A6 */	mflr r0
@@ -2124,21 +2645,27 @@ DVDReadAbsAsyncPrio:
 /* 8034AD68 00347CA8  90 E3 00 28 */	stw r7, 0x28(r3)
 /* 8034AD6C 00347CAC  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
 /* 8034AD70 00347CB0  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AD74 00347CB4  41 82 00 30 */	beq lbl_8034ADA4
+/* 8034AD74 00347CB4  41 82 00 30 */	beq func_8034ADA4
 /* 8034AD78 00347CB8  80 7D 00 08 */	lwz r3, 8(r29)
 /* 8034AD7C 00347CBC  28 03 00 01 */	cmplwi r3, 1
-/* 8034AD80 00347CC0  41 82 00 18 */	beq lbl_8034AD98
+/* 8034AD80 00347CC0  41 82 00 18 */	beq func_8034AD98
 /* 8034AD84 00347CC4  38 03 FF FC */	addi r0, r3, -4
 /* 8034AD88 00347CC8  28 00 00 01 */	cmplwi r0, 1
-/* 8034AD8C 00347CCC  40 81 00 0C */	ble lbl_8034AD98
+/* 8034AD8C 00347CCC  40 81 00 0C */	ble func_8034AD98
 /* 8034AD90 00347CD0  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034AD94 00347CD4  40 82 00 10 */	bne lbl_8034ADA4
-lbl_8034AD98:
+/* 8034AD94 00347CD4  40 82 00 10 */	bne func_8034ADA4
+
+/* 8034AD98 000C .text      func_8034AD98                  func_8034AD98                  */
+.global func_8034AD98
+func_8034AD98:
 /* 8034AD98 00347CD8  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 8034AD9C 00347CDC  80 9D 00 14 */	lwz r4, 0x14(r29)
 /* 8034ADA0 00347CE0  4B FF 07 E1 */	bl DCInvalidateRange
-lbl_8034ADA4:
-/* 8034ADA4 00347CE4  4B FF 29 51 */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034ADA4 003C .text      func_8034ADA4                  func_8034ADA4                  */
+.global func_8034ADA4
+func_8034ADA4:
+/* 8034ADA4 00347CE4  4B FF 29 51 */	bl OSDisableInterrupts
 /* 8034ADA8 00347CE8  38 00 00 02 */	li r0, 2
 /* 8034ADAC 00347CEC  90 1D 00 0C */	stw r0, 0xc(r29)
 /* 8034ADB0 00347CF0  3B C3 00 00 */	addi r30, r3, 0
@@ -2148,12 +2675,15 @@ lbl_8034ADA4:
 /* 8034ADC0 00347D00  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034ADC4 00347D04  3B E3 00 00 */	addi r31, r3, 0
 /* 8034ADC8 00347D08  28 00 00 00 */	cmplwi r0, 0
-/* 8034ADCC 00347D0C  40 82 00 14 */	bne lbl_8034ADE0
+/* 8034ADCC 00347D0C  40 82 00 14 */	bne func_8034ADE0
 /* 8034ADD0 00347D10  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034ADD4 00347D14  2C 00 00 00 */	cmpwi r0, 0
-/* 8034ADD8 00347D18  40 82 00 08 */	bne lbl_8034ADE0
+/* 8034ADD8 00347D18  40 82 00 08 */	bne func_8034ADE0
 /* 8034ADDC 00347D1C  4B FF F2 D1 */	bl stateReady
-lbl_8034ADE0:
+
+/* 8034ADE0 0028 .text      func_8034ADE0                  func_8034ADE0                  */
+.global func_8034ADE0
+func_8034ADE0:
 /* 8034ADE0 00347D20  7F C3 F3 78 */	mr r3, r30
 /* 8034ADE4 00347D24  4B FF 29 39 */	bl OSRestoreInterrupts
 /* 8034ADE8 00347D28  7F E3 FB 78 */	mr r3, r31
@@ -2165,7 +2695,7 @@ lbl_8034ADE0:
 /* 8034AE00 00347D40  7C 08 03 A6 */	mtlr r0
 /* 8034AE04 00347D44  4E 80 00 20 */	blr 
 
-/* 8034AE08 00D0 .text DVDReadAbsAsyncForBS DVDReadAbsAsyncForBS */
+/* 8034AE08 0064 .text      DVDReadAbsAsyncForBS           DVDReadAbsAsyncForBS           */
 .global DVDReadAbsAsyncForBS
 DVDReadAbsAsyncForBS:
 /* 8034AE08 00347D48  7C 08 02 A6 */	mflr r0
@@ -2184,21 +2714,27 @@ DVDReadAbsAsyncForBS:
 /* 8034AE3C 00347D7C  90 E3 00 28 */	stw r7, 0x28(r3)
 /* 8034AE40 00347D80  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
 /* 8034AE44 00347D84  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AE48 00347D88  41 82 00 30 */	beq lbl_8034AE78
+/* 8034AE48 00347D88  41 82 00 30 */	beq func_8034AE78
 /* 8034AE4C 00347D8C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8034AE50 00347D90  28 03 00 01 */	cmplwi r3, 1
-/* 8034AE54 00347D94  41 82 00 18 */	beq lbl_8034AE6C
+/* 8034AE54 00347D94  41 82 00 18 */	beq func_8034AE6C
 /* 8034AE58 00347D98  38 03 FF FC */	addi r0, r3, -4
 /* 8034AE5C 00347D9C  28 00 00 01 */	cmplwi r0, 1
-/* 8034AE60 00347DA0  40 81 00 0C */	ble lbl_8034AE6C
+/* 8034AE60 00347DA0  40 81 00 0C */	ble func_8034AE6C
 /* 8034AE64 00347DA4  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034AE68 00347DA8  40 82 00 10 */	bne lbl_8034AE78
-lbl_8034AE6C:
+/* 8034AE68 00347DA8  40 82 00 10 */	bne func_8034AE78
+
+/* 8034AE6C 000C .text      func_8034AE6C                  func_8034AE6C                  */
+.global func_8034AE6C
+func_8034AE6C:
 /* 8034AE6C 00347DAC  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8034AE70 00347DB0  80 9F 00 14 */	lwz r4, 0x14(r31)
 /* 8034AE74 00347DB4  4B FF 07 0D */	bl DCInvalidateRange
-lbl_8034AE78:
-/* 8034AE78 00347DB8  4B FF 28 7D */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034AE78 003C .text      func_8034AE78                  func_8034AE78                  */
+.global func_8034AE78
+func_8034AE78:
+/* 8034AE78 00347DB8  4B FF 28 7D */	bl OSDisableInterrupts
 /* 8034AE7C 00347DBC  38 00 00 02 */	li r0, 2
 /* 8034AE80 00347DC0  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8034AE84 00347DC4  3B C3 00 00 */	addi r30, r3, 0
@@ -2208,12 +2744,15 @@ lbl_8034AE78:
 /* 8034AE94 00347DD4  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034AE98 00347DD8  3B E3 00 00 */	addi r31, r3, 0
 /* 8034AE9C 00347DDC  28 00 00 00 */	cmplwi r0, 0
-/* 8034AEA0 00347DE0  40 82 00 14 */	bne lbl_8034AEB4
+/* 8034AEA0 00347DE0  40 82 00 14 */	bne func_8034AEB4
 /* 8034AEA4 00347DE4  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034AEA8 00347DE8  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AEAC 00347DEC  40 82 00 08 */	bne lbl_8034AEB4
+/* 8034AEAC 00347DEC  40 82 00 08 */	bne func_8034AEB4
 /* 8034AEB0 00347DF0  4B FF F1 FD */	bl stateReady
-lbl_8034AEB4:
+
+/* 8034AEB4 0024 .text      func_8034AEB4                  func_8034AEB4                  */
+.global func_8034AEB4
+func_8034AEB4:
 /* 8034AEB4 00347DF4  7F C3 F3 78 */	mr r3, r30
 /* 8034AEB8 00347DF8  4B FF 28 65 */	bl OSRestoreInterrupts
 /* 8034AEBC 00347DFC  7F E3 FB 78 */	mr r3, r31
@@ -2224,7 +2763,7 @@ lbl_8034AEB4:
 /* 8034AED0 00347E10  7C 08 03 A6 */	mtlr r0
 /* 8034AED4 00347E14  4E 80 00 20 */	blr 
 
-/* 8034AED8 00D4 .text DVDReadDiskID DVDReadDiskID */
+/* 8034AED8 0068 .text      DVDReadDiskID                  DVDReadDiskID                  */
 .global DVDReadDiskID
 DVDReadDiskID:
 /* 8034AED8 00347E18  7C 08 02 A6 */	mflr r0
@@ -2244,21 +2783,27 @@ DVDReadDiskID:
 /* 8034AF10 00347E50  90 BF 00 28 */	stw r5, 0x28(r31)
 /* 8034AF14 00347E54  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
 /* 8034AF18 00347E58  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AF1C 00347E5C  41 82 00 30 */	beq lbl_8034AF4C
+/* 8034AF1C 00347E5C  41 82 00 30 */	beq func_8034AF4C
 /* 8034AF20 00347E60  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8034AF24 00347E64  28 03 00 01 */	cmplwi r3, 1
-/* 8034AF28 00347E68  41 82 00 18 */	beq lbl_8034AF40
+/* 8034AF28 00347E68  41 82 00 18 */	beq func_8034AF40
 /* 8034AF2C 00347E6C  38 03 FF FC */	addi r0, r3, -4
 /* 8034AF30 00347E70  28 00 00 01 */	cmplwi r0, 1
-/* 8034AF34 00347E74  40 81 00 0C */	ble lbl_8034AF40
+/* 8034AF34 00347E74  40 81 00 0C */	ble func_8034AF40
 /* 8034AF38 00347E78  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034AF3C 00347E7C  40 82 00 10 */	bne lbl_8034AF4C
-lbl_8034AF40:
+/* 8034AF3C 00347E7C  40 82 00 10 */	bne func_8034AF4C
+
+/* 8034AF40 000C .text      func_8034AF40                  func_8034AF40                  */
+.global func_8034AF40
+func_8034AF40:
 /* 8034AF40 00347E80  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8034AF44 00347E84  80 9F 00 14 */	lwz r4, 0x14(r31)
 /* 8034AF48 00347E88  4B FF 06 39 */	bl DCInvalidateRange
-lbl_8034AF4C:
-/* 8034AF4C 00347E8C  4B FF 27 A9 */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034AF4C 003C .text      func_8034AF4C                  func_8034AF4C                  */
+.global func_8034AF4C
+func_8034AF4C:
+/* 8034AF4C 00347E8C  4B FF 27 A9 */	bl OSDisableInterrupts
 /* 8034AF50 00347E90  38 00 00 02 */	li r0, 2
 /* 8034AF54 00347E94  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8034AF58 00347E98  3B C3 00 00 */	addi r30, r3, 0
@@ -2268,12 +2813,15 @@ lbl_8034AF4C:
 /* 8034AF68 00347EA8  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034AF6C 00347EAC  3B E3 00 00 */	addi r31, r3, 0
 /* 8034AF70 00347EB0  28 00 00 00 */	cmplwi r0, 0
-/* 8034AF74 00347EB4  40 82 00 14 */	bne lbl_8034AF88
+/* 8034AF74 00347EB4  40 82 00 14 */	bne func_8034AF88
 /* 8034AF78 00347EB8  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034AF7C 00347EBC  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AF80 00347EC0  40 82 00 08 */	bne lbl_8034AF88
+/* 8034AF80 00347EC0  40 82 00 08 */	bne func_8034AF88
 /* 8034AF84 00347EC4  4B FF F1 29 */	bl stateReady
-lbl_8034AF88:
+
+/* 8034AF88 0024 .text      func_8034AF88                  func_8034AF88                  */
+.global func_8034AF88
+func_8034AF88:
 /* 8034AF88 00347EC8  7F C3 F3 78 */	mr r3, r30
 /* 8034AF8C 00347ECC  4B FF 27 91 */	bl OSRestoreInterrupts
 /* 8034AF90 00347ED0  7F E3 FB 78 */	mr r3, r31
@@ -2284,7 +2832,7 @@ lbl_8034AF88:
 /* 8034AFA4 00347EE4  7C 08 03 A6 */	mtlr r0
 /* 8034AFA8 00347EE8  4E 80 00 20 */	blr 
 
-/* 8034AFAC 00BC .text DVDCancelStreamAsync DVDCancelStreamAsync */
+/* 8034AFAC 0050 .text      DVDCancelStreamAsync           DVDCancelStreamAsync           */
 .global DVDCancelStreamAsync
 DVDCancelStreamAsync:
 /* 8034AFAC 00347EEC  7C 08 02 A6 */	mflr r0
@@ -2298,21 +2846,27 @@ DVDCancelStreamAsync:
 /* 8034AFCC 00347F0C  90 83 00 28 */	stw r4, 0x28(r3)
 /* 8034AFD0 00347F10  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
 /* 8034AFD4 00347F14  2C 00 00 00 */	cmpwi r0, 0
-/* 8034AFD8 00347F18  41 82 00 30 */	beq lbl_8034B008
+/* 8034AFD8 00347F18  41 82 00 30 */	beq func_8034B008
 /* 8034AFDC 00347F1C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8034AFE0 00347F20  28 03 00 01 */	cmplwi r3, 1
-/* 8034AFE4 00347F24  41 82 00 18 */	beq lbl_8034AFFC
+/* 8034AFE4 00347F24  41 82 00 18 */	beq func_8034AFFC
 /* 8034AFE8 00347F28  38 03 FF FC */	addi r0, r3, -4
 /* 8034AFEC 00347F2C  28 00 00 01 */	cmplwi r0, 1
-/* 8034AFF0 00347F30  40 81 00 0C */	ble lbl_8034AFFC
+/* 8034AFF0 00347F30  40 81 00 0C */	ble func_8034AFFC
 /* 8034AFF4 00347F34  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034AFF8 00347F38  40 82 00 10 */	bne lbl_8034B008
-lbl_8034AFFC:
+/* 8034AFF8 00347F38  40 82 00 10 */	bne func_8034B008
+
+/* 8034AFFC 000C .text      func_8034AFFC                  func_8034AFFC                  */
+.global func_8034AFFC
+func_8034AFFC:
 /* 8034AFFC 00347F3C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8034B000 00347F40  80 9F 00 14 */	lwz r4, 0x14(r31)
 /* 8034B004 00347F44  4B FF 05 7D */	bl DCInvalidateRange
-lbl_8034B008:
-/* 8034B008 00347F48  4B FF 26 ED */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034B008 003C .text      func_8034B008                  func_8034B008                  */
+.global func_8034B008
+func_8034B008:
+/* 8034B008 00347F48  4B FF 26 ED */	bl OSDisableInterrupts
 /* 8034B00C 00347F4C  38 00 00 02 */	li r0, 2
 /* 8034B010 00347F50  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8034B014 00347F54  3B C3 00 00 */	addi r30, r3, 0
@@ -2322,12 +2876,15 @@ lbl_8034B008:
 /* 8034B024 00347F64  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034B028 00347F68  3B E3 00 00 */	addi r31, r3, 0
 /* 8034B02C 00347F6C  28 00 00 00 */	cmplwi r0, 0
-/* 8034B030 00347F70  40 82 00 14 */	bne lbl_8034B044
+/* 8034B030 00347F70  40 82 00 14 */	bne func_8034B044
 /* 8034B034 00347F74  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034B038 00347F78  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B03C 00347F7C  40 82 00 08 */	bne lbl_8034B044
+/* 8034B03C 00347F7C  40 82 00 08 */	bne func_8034B044
 /* 8034B040 00347F80  4B FF F0 6D */	bl stateReady
-lbl_8034B044:
+
+/* 8034B044 0024 .text      func_8034B044                  func_8034B044                  */
+.global func_8034B044
+func_8034B044:
 /* 8034B044 00347F84  7F C3 F3 78 */	mr r3, r30
 /* 8034B048 00347F88  4B FF 26 D5 */	bl OSRestoreInterrupts
 /* 8034B04C 00347F8C  7F E3 FB 78 */	mr r3, r31
@@ -2338,7 +2895,7 @@ lbl_8034B044:
 /* 8034B060 00347FA0  7C 08 03 A6 */	mtlr r0
 /* 8034B064 00347FA4  4E 80 00 20 */	blr 
 
-/* 8034B068 00D0 .text DVDInquiryAsync DVDInquiryAsync */
+/* 8034B068 0064 .text      DVDInquiryAsync                DVDInquiryAsync                */
 .global DVDInquiryAsync
 DVDInquiryAsync:
 /* 8034B068 00347FA8  7C 08 02 A6 */	mflr r0
@@ -2357,21 +2914,27 @@ DVDInquiryAsync:
 /* 8034B09C 00347FDC  90 BF 00 28 */	stw r5, 0x28(r31)
 /* 8034B0A0 00347FE0  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
 /* 8034B0A4 00347FE4  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B0A8 00347FE8  41 82 00 30 */	beq lbl_8034B0D8
+/* 8034B0A8 00347FE8  41 82 00 30 */	beq func_8034B0D8
 /* 8034B0AC 00347FEC  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8034B0B0 00347FF0  28 03 00 01 */	cmplwi r3, 1
-/* 8034B0B4 00347FF4  41 82 00 18 */	beq lbl_8034B0CC
+/* 8034B0B4 00347FF4  41 82 00 18 */	beq func_8034B0CC
 /* 8034B0B8 00347FF8  38 03 FF FC */	addi r0, r3, -4
 /* 8034B0BC 00347FFC  28 00 00 01 */	cmplwi r0, 1
-/* 8034B0C0 00348000  40 81 00 0C */	ble lbl_8034B0CC
+/* 8034B0C0 00348000  40 81 00 0C */	ble func_8034B0CC
 /* 8034B0C4 00348004  28 03 00 0E */	cmplwi r3, 0xe
-/* 8034B0C8 00348008  40 82 00 10 */	bne lbl_8034B0D8
-lbl_8034B0CC:
+/* 8034B0C8 00348008  40 82 00 10 */	bne func_8034B0D8
+
+/* 8034B0CC 000C .text      func_8034B0CC                  func_8034B0CC                  */
+.global func_8034B0CC
+func_8034B0CC:
 /* 8034B0CC 0034800C  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8034B0D0 00348010  80 9F 00 14 */	lwz r4, 0x14(r31)
 /* 8034B0D4 00348014  4B FF 04 AD */	bl DCInvalidateRange
-lbl_8034B0D8:
-/* 8034B0D8 00348018  4B FF 26 1D */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034B0D8 003C .text      func_8034B0D8                  func_8034B0D8                  */
+.global func_8034B0D8
+func_8034B0D8:
+/* 8034B0D8 00348018  4B FF 26 1D */	bl OSDisableInterrupts
 /* 8034B0DC 0034801C  38 00 00 02 */	li r0, 2
 /* 8034B0E0 00348020  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8034B0E4 00348024  3B C3 00 00 */	addi r30, r3, 0
@@ -2381,12 +2944,15 @@ lbl_8034B0D8:
 /* 8034B0F4 00348034  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034B0F8 00348038  3B E3 00 00 */	addi r31, r3, 0
 /* 8034B0FC 0034803C  28 00 00 00 */	cmplwi r0, 0
-/* 8034B100 00348040  40 82 00 14 */	bne lbl_8034B114
+/* 8034B100 00348040  40 82 00 14 */	bne func_8034B114
 /* 8034B104 00348044  80 0D 92 04 */	lwz r0, PauseFlag-_SDA_BASE_(r13)
 /* 8034B108 00348048  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B10C 0034804C  40 82 00 08 */	bne lbl_8034B114
+/* 8034B10C 0034804C  40 82 00 08 */	bne func_8034B114
 /* 8034B110 00348050  4B FF EF 9D */	bl stateReady
-lbl_8034B114:
+
+/* 8034B114 0024 .text      func_8034B114                  func_8034B114                  */
+.global func_8034B114
+func_8034B114:
 /* 8034B114 00348054  7F C3 F3 78 */	mr r3, r30
 /* 8034B118 00348058  4B FF 26 05 */	bl OSRestoreInterrupts
 /* 8034B11C 0034805C  7F E3 FB 78 */	mr r3, r31
@@ -2397,7 +2963,7 @@ lbl_8034B114:
 /* 8034B130 00348070  7C 08 03 A6 */	mtlr r0
 /* 8034B134 00348074  4E 80 00 20 */	blr 
 
-/* 8034B138 0044 .text DVDReset DVDReset */
+/* 8034B138 0044 .text      DVDReset                       DVDReset                       */
 .global DVDReset
 DVDReset:
 /* 8034B138 00348078  7C 08 02 A6 */	mflr r0
@@ -2418,7 +2984,7 @@ DVDReset:
 /* 8034B174 003480B4  7C 08 03 A6 */	mtlr r0
 /* 8034B178 003480B8  4E 80 00 20 */	blr 
 
-/* 8034B17C 004C .text DVDGetCommandBlockStatus DVDGetCommandBlockStatus */
+/* 8034B17C 002C .text      DVDGetCommandBlockStatus       DVDGetCommandBlockStatus       */
 .global DVDGetCommandBlockStatus
 DVDGetCommandBlockStatus:
 /* 8034B17C 003480BC  7C 08 02 A6 */	mflr r0
@@ -2426,15 +2992,21 @@ DVDGetCommandBlockStatus:
 /* 8034B184 003480C4  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8034B188 003480C8  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8034B18C 003480CC  7C 7F 1B 78 */	mr r31, r3
-/* 8034B190 003480D0  4B FF 25 65 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B190 003480D0  4B FF 25 65 */	bl OSDisableInterrupts
 /* 8034B194 003480D4  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 8034B198 003480D8  2C 00 00 03 */	cmpwi r0, 3
-/* 8034B19C 003480DC  40 82 00 0C */	bne lbl_8034B1A8
+/* 8034B19C 003480DC  40 82 00 0C */	bne func_8034B1A8
 /* 8034B1A0 003480E0  3B E0 00 01 */	li r31, 1
-/* 8034B1A4 003480E4  48 00 00 08 */	b lbl_8034B1AC
-lbl_8034B1A8:
+/* 8034B1A4 003480E4  48 00 00 08 */	b func_8034B1AC
+
+/* 8034B1A8 0004 .text      func_8034B1A8                  func_8034B1A8                  */
+.global func_8034B1A8
+func_8034B1A8:
 /* 8034B1A8 003480E8  7C 1F 03 78 */	mr r31, r0
-lbl_8034B1AC:
+
+/* 8034B1AC 001C .text      func_8034B1AC                  func_8034B1AC                  */
+.global func_8034B1AC
+func_8034B1AC:
 /* 8034B1AC 003480EC  4B FF 25 71 */	bl OSRestoreInterrupts
 /* 8034B1B0 003480F0  7F E3 FB 78 */	mr r3, r31
 /* 8034B1B4 003480F4  80 01 00 1C */	lwz r0, 0x1c(r1)
@@ -2443,7 +3015,7 @@ lbl_8034B1AC:
 /* 8034B1C0 00348100  7C 08 03 A6 */	mtlr r0
 /* 8034B1C4 00348104  4E 80 00 20 */	blr 
 
-/* 8034B1C8 00AC .text DVDGetDriveStatus DVDGetDriveStatus */
+/* 8034B1C8 0030 .text      DVDGetDriveStatus              DVDGetDriveStatus              */
 .global DVDGetDriveStatus
 DVDGetDriveStatus:
 /* 8034B1C8 00348108  7C 08 02 A6 */	mflr r0
@@ -2451,41 +3023,59 @@ DVDGetDriveStatus:
 /* 8034B1D0 00348110  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8034B1D4 00348114  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8034B1D8 00348118  93 C1 00 10 */	stw r30, 0x10(r1)
-/* 8034B1DC 0034811C  4B FF 25 19 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B1DC 0034811C  4B FF 25 19 */	bl OSDisableInterrupts
 /* 8034B1E0 00348120  80 0D 92 10 */	lwz r0, FatalErrorFlag-_SDA_BASE_(r13)
 /* 8034B1E4 00348124  3B C3 00 00 */	addi r30, r3, 0
 /* 8034B1E8 00348128  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B1EC 0034812C  41 82 00 0C */	beq lbl_8034B1F8
+/* 8034B1EC 0034812C  41 82 00 0C */	beq func_8034B1F8
 /* 8034B1F0 00348130  3B E0 FF FF */	li r31, -1
-/* 8034B1F4 00348134  48 00 00 5C */	b lbl_8034B250
-lbl_8034B1F8:
+/* 8034B1F4 00348134  48 00 00 5C */	b func_8034B250
+
+/* 8034B1F8 0014 .text      func_8034B1F8                  func_8034B1F8                  */
+.global func_8034B1F8
+func_8034B1F8:
 /* 8034B1F8 00348138  80 0D 92 08 */	lwz r0, PausingFlag-_SDA_BASE_(r13)
 /* 8034B1FC 0034813C  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B200 00348140  41 82 00 0C */	beq lbl_8034B20C
+/* 8034B200 00348140  41 82 00 0C */	beq func_8034B20C
 /* 8034B204 00348144  3B E0 00 08 */	li r31, 8
-/* 8034B208 00348148  48 00 00 48 */	b lbl_8034B250
-lbl_8034B20C:
+/* 8034B208 00348148  48 00 00 48 */	b func_8034B250
+
+/* 8034B20C 0014 .text      func_8034B20C                  func_8034B20C                  */
+.global func_8034B20C
+func_8034B20C:
 /* 8034B20C 0034814C  83 ED 91 F8 */	lwz r31, executing-_SDA_BASE_(r13)
 /* 8034B210 00348150  28 1F 00 00 */	cmplwi r31, 0
-/* 8034B214 00348154  40 82 00 0C */	bne lbl_8034B220
+/* 8034B214 00348154  40 82 00 0C */	bne func_8034B220
 /* 8034B218 00348158  3B E0 00 00 */	li r31, 0
-/* 8034B21C 0034815C  48 00 00 34 */	b lbl_8034B250
-lbl_8034B220:
+/* 8034B21C 0034815C  48 00 00 34 */	b func_8034B250
+
+/* 8034B220 0018 .text      func_8034B220                  func_8034B220                  */
+.global func_8034B220
+func_8034B220:
 /* 8034B220 00348160  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 8034B224 00348164  38 03 C9 40 */	addi r0, r3, DummyCommandBlock@l
 /* 8034B228 00348168  7C 1F 00 40 */	cmplw r31, r0
-/* 8034B22C 0034816C  40 82 00 0C */	bne lbl_8034B238
+/* 8034B22C 0034816C  40 82 00 0C */	bne func_8034B238
 /* 8034B230 00348170  3B E0 00 00 */	li r31, 0
-/* 8034B234 00348174  48 00 00 1C */	b lbl_8034B250
-lbl_8034B238:
-/* 8034B238 00348178  4B FF 24 BD */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B234 00348174  48 00 00 1C */	b func_8034B250
+
+/* 8034B238 0014 .text      func_8034B238                  func_8034B238                  */
+.global func_8034B238
+func_8034B238:
+/* 8034B238 00348178  4B FF 24 BD */	bl OSDisableInterrupts
 /* 8034B23C 0034817C  83 FF 00 0C */	lwz r31, 0xc(r31)
 /* 8034B240 00348180  2C 1F 00 03 */	cmpwi r31, 3
-/* 8034B244 00348184  40 82 00 08 */	bne lbl_8034B24C
+/* 8034B244 00348184  40 82 00 08 */	bne func_8034B24C
 /* 8034B248 00348188  3B E0 00 01 */	li r31, 1
-lbl_8034B24C:
+
+/* 8034B24C 0004 .text      func_8034B24C                  func_8034B24C                  */
+.global func_8034B24C
+func_8034B24C:
 /* 8034B24C 0034818C  4B FF 24 D1 */	bl OSRestoreInterrupts
-lbl_8034B250:
+
+/* 8034B250 0024 .text      func_8034B250                  func_8034B250                  */
+.global func_8034B250
+func_8034B250:
 /* 8034B250 00348190  7F C3 F3 78 */	mr r3, r30
 /* 8034B254 00348194  4B FF 24 C9 */	bl OSRestoreInterrupts
 /* 8034B258 00348198  7F E3 FB 78 */	mr r3, r31
@@ -2496,7 +3086,7 @@ lbl_8034B250:
 /* 8034B26C 003481AC  7C 08 03 A6 */	mtlr r0
 /* 8034B270 003481B0  4E 80 00 20 */	blr 
 
-/* 8034B274 0010 .text DVDSetAutoInvalidation DVDSetAutoInvalidation */
+/* 8034B274 0010 .text      DVDSetAutoInvalidation         DVDSetAutoInvalidation         */
 .global DVDSetAutoInvalidation
 DVDSetAutoInvalidation:
 /* 8034B274 003481B4  80 0D 84 6C */	lwz r0, autoInvalidation-_SDA_BASE_(r13)
@@ -2504,23 +3094,26 @@ DVDSetAutoInvalidation:
 /* 8034B27C 003481BC  7C 03 03 78 */	mr r3, r0
 /* 8034B280 003481C0  4E 80 00 20 */	blr 
 
-/* 8034B284 0050 .text DVDResume DVDResume */
+/* 8034B284 0034 .text      DVDResume                      DVDResume                      */
 .global DVDResume
 DVDResume:
 /* 8034B284 003481C4  7C 08 02 A6 */	mflr r0
 /* 8034B288 003481C8  90 01 00 04 */	stw r0, 4(r1)
 /* 8034B28C 003481CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034B290 003481D0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8034B294 003481D4  4B FF 24 61 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B294 003481D4  4B FF 24 61 */	bl OSDisableInterrupts
 /* 8034B298 003481D8  38 80 00 00 */	li r4, 0
 /* 8034B29C 003481DC  90 8D 92 04 */	stw r4, PauseFlag-_SDA_BASE_(r13)
 /* 8034B2A0 003481E0  7C 7F 1B 78 */	mr r31, r3
 /* 8034B2A4 003481E4  80 0D 92 08 */	lwz r0, PausingFlag-_SDA_BASE_(r13)
 /* 8034B2A8 003481E8  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B2AC 003481EC  41 82 00 0C */	beq lbl_8034B2B8
+/* 8034B2AC 003481EC  41 82 00 0C */	beq func_8034B2B8
 /* 8034B2B0 003481F0  90 8D 92 08 */	stw r4, PausingFlag-_SDA_BASE_(r13)
 /* 8034B2B4 003481F4  4B FF ED F9 */	bl stateReady
-lbl_8034B2B8:
+
+/* 8034B2B8 001C .text      func_8034B2B8                  func_8034B2B8                  */
+.global func_8034B2B8
+func_8034B2B8:
 /* 8034B2B8 003481F8  7F E3 FB 78 */	mr r3, r31
 /* 8034B2BC 003481FC  4B FF 24 61 */	bl OSRestoreInterrupts
 /* 8034B2C0 00348200  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2529,7 +3122,7 @@ lbl_8034B2B8:
 /* 8034B2CC 0034820C  7C 08 03 A6 */	mtlr r0
 /* 8034B2D0 00348210  4E 80 00 20 */	blr 
 
-/* 8034B2D4 027C .text DVDCancelAsync DVDCancelAsync */
+/* 8034B2D4 008C .text      DVDCancelAsync                 DVDCancelAsync                 */
 .global DVDCancelAsync
 DVDCancelAsync:
 /* 8034B2D4 00348214  7C 08 02 A6 */	mflr r0
@@ -2540,140 +3133,179 @@ DVDCancelAsync:
 /* 8034B2E8 00348228  3B C4 00 00 */	addi r30, r4, 0
 /* 8034B2EC 0034822C  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8034B2F0 00348230  3B A3 00 00 */	addi r29, r3, 0
-/* 8034B2F4 00348234  4B FF 24 01 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B2F4 00348234  4B FF 24 01 */	bl OSDisableInterrupts
 /* 8034B2F8 00348238  80 9D 00 0C */	lwz r4, 0xc(r29)
 /* 8034B2FC 0034823C  3B E3 00 00 */	addi r31, r3, 0
 /* 8034B300 00348240  38 04 00 01 */	addi r0, r4, 1
 /* 8034B304 00348244  28 00 00 0C */	cmplwi r0, 0xc
-/* 8034B308 00348248  41 81 02 20 */	bgt lbl_8034B528
-/* 8034B30C 0034824C  3C 60 80 3D */	lis r3, lbl_803D163C@ha
-/* 8034B310 00348250  38 63 16 3C */	addi r3, r3, lbl_803D163C@l
+/* 8034B308 00348248  41 81 02 20 */	bgt func_8034B528
+/* 8034B30C 0034824C  3C 60 80 3D */	lis r3, LIT_956@ha
+/* 8034B310 00348250  38 63 16 3C */	addi r3, r3, LIT_956@l
 /* 8034B314 00348254  54 00 10 3A */	slwi r0, r0, 2
 /* 8034B318 00348258  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8034B31C 0034825C  7C 09 03 A6 */	mtctr r0
 /* 8034B320 00348260  4E 80 04 20 */	bctr 
 /* 8034B324 00348264  28 1E 00 00 */	cmplwi r30, 0
-/* 8034B328 00348268  41 82 02 00 */	beq lbl_8034B528
+/* 8034B328 00348268  41 82 02 00 */	beq func_8034B528
 /* 8034B32C 0034826C  39 9E 00 00 */	addi r12, r30, 0
 /* 8034B330 00348270  7D 88 03 A6 */	mtlr r12
 /* 8034B334 00348274  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B338 00348278  38 60 00 00 */	li r3, 0
 /* 8034B33C 0034827C  4E 80 00 21 */	blrl 
-/* 8034B340 00348280  48 00 01 E8 */	b lbl_8034B528
+/* 8034B340 00348280  48 00 01 E8 */	b func_8034B528
 /* 8034B344 00348284  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034B348 00348288  28 00 00 00 */	cmplwi r0, 0
-/* 8034B34C 0034828C  41 82 00 14 */	beq lbl_8034B360
+/* 8034B34C 0034828C  41 82 00 14 */	beq func_8034B360
 /* 8034B350 00348290  7F E3 FB 78 */	mr r3, r31
 /* 8034B354 00348294  4B FF 23 C9 */	bl OSRestoreInterrupts
 /* 8034B358 00348298  38 60 00 00 */	li r3, 0
-/* 8034B35C 0034829C  48 00 01 D8 */	b lbl_8034B534
-lbl_8034B360:
+/* 8034B35C 0034829C  48 00 01 D8 */	b func_8034B534
+
+/* 8034B360 0020 .text      func_8034B360                  func_8034B360                  */
+.global func_8034B360
+func_8034B360:
 /* 8034B360 003482A0  38 00 00 01 */	li r0, 1
 /* 8034B364 003482A4  93 CD 92 1C */	stw r30, CancelCallback-_SDA_BASE_(r13)
 /* 8034B368 003482A8  90 0D 92 18 */	stw r0, Canceling-_SDA_BASE_(r13)
 /* 8034B36C 003482AC  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8034B370 003482B0  28 00 00 04 */	cmplwi r0, 4
-/* 8034B374 003482B4  41 82 00 0C */	beq lbl_8034B380
+/* 8034B374 003482B4  41 82 00 0C */	beq func_8034B380
 /* 8034B378 003482B8  28 00 00 01 */	cmplwi r0, 1
-/* 8034B37C 003482BC  40 82 01 AC */	bne lbl_8034B528
-lbl_8034B380:
+/* 8034B37C 003482BC  40 82 01 AC */	bne func_8034B528
+
+/* 8034B380 0034 .text      func_8034B380                  func_8034B380                  */
+.global func_8034B380
+func_8034B380:
 /* 8034B380 003482C0  4B FF D0 C5 */	bl DVDLowBreak
-/* 8034B384 003482C4  48 00 01 A4 */	b lbl_8034B528
+/* 8034B384 003482C4  48 00 01 A4 */	b func_8034B528
 /* 8034B388 003482C8  7F A3 EB 78 */	mr r3, r29
 /* 8034B38C 003482CC  48 00 06 81 */	bl __DVDDequeueWaitingQueue
 /* 8034B390 003482D0  38 00 00 0A */	li r0, 0xa
 /* 8034B394 003482D4  90 1D 00 0C */	stw r0, 0xc(r29)
 /* 8034B398 003482D8  81 9D 00 28 */	lwz r12, 0x28(r29)
 /* 8034B39C 003482DC  28 0C 00 00 */	cmplwi r12, 0
-/* 8034B3A0 003482E0  41 82 00 14 */	beq lbl_8034B3B4
+/* 8034B3A0 003482E0  41 82 00 14 */	beq func_8034B3B4
 /* 8034B3A4 003482E4  7D 88 03 A6 */	mtlr r12
 /* 8034B3A8 003482E8  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B3AC 003482EC  38 60 FF FD */	li r3, -3
 /* 8034B3B0 003482F0  4E 80 00 21 */	blrl 
-lbl_8034B3B4:
+
+/* 8034B3B4 0044 .text      func_8034B3B4                  func_8034B3B4                  */
+.global func_8034B3B4
+func_8034B3B4:
 /* 8034B3B4 003482F4  28 1E 00 00 */	cmplwi r30, 0
-/* 8034B3B8 003482F8  41 82 01 70 */	beq lbl_8034B528
+/* 8034B3B8 003482F8  41 82 01 70 */	beq func_8034B528
 /* 8034B3BC 003482FC  39 9E 00 00 */	addi r12, r30, 0
 /* 8034B3C0 00348300  7D 88 03 A6 */	mtlr r12
 /* 8034B3C4 00348304  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B3C8 00348308  38 60 00 00 */	li r3, 0
 /* 8034B3CC 0034830C  4E 80 00 21 */	blrl 
-/* 8034B3D0 00348310  48 00 01 58 */	b lbl_8034B528
+/* 8034B3D0 00348310  48 00 01 58 */	b func_8034B528
 /* 8034B3D4 00348314  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8034B3D8 00348318  2C 00 00 0D */	cmpwi r0, 0xd
-/* 8034B3DC 0034831C  41 82 00 28 */	beq lbl_8034B404
-/* 8034B3E0 00348320  40 80 00 18 */	bge lbl_8034B3F8
+/* 8034B3DC 0034831C  41 82 00 28 */	beq func_8034B404
+/* 8034B3E0 00348320  40 80 00 18 */	bge func_8034B3F8
 /* 8034B3E4 00348324  2C 00 00 06 */	cmpwi r0, 6
-/* 8034B3E8 00348328  40 80 00 3C */	bge lbl_8034B424
+/* 8034B3E8 00348328  40 80 00 3C */	bge func_8034B424
 /* 8034B3EC 0034832C  2C 00 00 04 */	cmpwi r0, 4
-/* 8034B3F0 00348330  40 80 00 14 */	bge lbl_8034B404
-/* 8034B3F4 00348334  48 00 00 30 */	b lbl_8034B424
-lbl_8034B3F8:
+/* 8034B3F0 00348330  40 80 00 14 */	bge func_8034B404
+/* 8034B3F4 00348334  48 00 00 30 */	b func_8034B424
+
+/* 8034B3F8 000C .text      func_8034B3F8                  func_8034B3F8                  */
+.global func_8034B3F8
+func_8034B3F8:
 /* 8034B3F8 00348338  2C 00 00 0F */	cmpwi r0, 0xf
-/* 8034B3FC 0034833C  41 82 00 08 */	beq lbl_8034B404
-/* 8034B400 00348340  48 00 00 24 */	b lbl_8034B424
-lbl_8034B404:
+/* 8034B3FC 0034833C  41 82 00 08 */	beq func_8034B404
+/* 8034B400 00348340  48 00 00 24 */	b func_8034B424
+
+/* 8034B404 0020 .text      func_8034B404                  func_8034B404                  */
+.global func_8034B404
+func_8034B404:
 /* 8034B404 00348344  28 1E 00 00 */	cmplwi r30, 0
-/* 8034B408 00348348  41 82 01 20 */	beq lbl_8034B528
+/* 8034B408 00348348  41 82 01 20 */	beq func_8034B528
 /* 8034B40C 0034834C  39 9E 00 00 */	addi r12, r30, 0
 /* 8034B410 00348350  7D 88 03 A6 */	mtlr r12
 /* 8034B414 00348354  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B418 00348358  38 60 00 00 */	li r3, 0
 /* 8034B41C 0034835C  4E 80 00 21 */	blrl 
-/* 8034B420 00348360  48 00 01 08 */	b lbl_8034B528
-lbl_8034B424:
+/* 8034B420 00348360  48 00 01 08 */	b func_8034B528
+
+/* 8034B424 001C .text      func_8034B424                  func_8034B424                  */
+.global func_8034B424
+func_8034B424:
 /* 8034B424 00348364  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034B428 00348368  28 00 00 00 */	cmplwi r0, 0
-/* 8034B42C 0034836C  41 82 00 14 */	beq lbl_8034B440
+/* 8034B42C 0034836C  41 82 00 14 */	beq func_8034B440
 /* 8034B430 00348370  7F E3 FB 78 */	mr r3, r31
 /* 8034B434 00348374  4B FF 22 E9 */	bl OSRestoreInterrupts
 /* 8034B438 00348378  38 60 00 00 */	li r3, 0
-/* 8034B43C 0034837C  48 00 00 F8 */	b lbl_8034B534
-lbl_8034B440:
+/* 8034B43C 0034837C  48 00 00 F8 */	b func_8034B534
+
+/* 8034B440 0034 .text      func_8034B440                  func_8034B440                  */
+.global func_8034B440
+func_8034B440:
 /* 8034B440 00348380  38 00 00 01 */	li r0, 1
 /* 8034B444 00348384  93 CD 92 1C */	stw r30, CancelCallback-_SDA_BASE_(r13)
 /* 8034B448 00348388  90 0D 92 18 */	stw r0, Canceling-_SDA_BASE_(r13)
-/* 8034B44C 0034838C  48 00 00 DC */	b lbl_8034B528
+/* 8034B44C 0034838C  48 00 00 DC */	b func_8034B528
 /* 8034B450 00348390  4B FF D0 09 */	bl DVDLowClearCallback
 /* 8034B454 00348394  3C 80 80 35 */	lis r4, cbForStateMotorStopped@ha
 /* 8034B458 00348398  38 04 9F C0 */	addi r0, r4, cbForStateMotorStopped@l
 /* 8034B45C 0034839C  7C 03 00 40 */	cmplw r3, r0
-/* 8034B460 003483A0  41 82 00 14 */	beq lbl_8034B474
+/* 8034B460 003483A0  41 82 00 14 */	beq func_8034B474
 /* 8034B464 003483A4  7F E3 FB 78 */	mr r3, r31
 /* 8034B468 003483A8  4B FF 22 B5 */	bl OSRestoreInterrupts
 /* 8034B46C 003483AC  38 60 00 00 */	li r3, 0
-/* 8034B470 003483B0  48 00 00 C4 */	b lbl_8034B534
-lbl_8034B474:
+/* 8034B470 003483B0  48 00 00 C4 */	b func_8034B534
+
+/* 8034B474 0014 .text      func_8034B474                  func_8034B474                  */
+.global func_8034B474
+func_8034B474:
 /* 8034B474 003483B4  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8034B478 003483B8  2C 00 00 04 */	cmpwi r0, 4
-/* 8034B47C 003483BC  40 82 00 0C */	bne lbl_8034B488
+/* 8034B47C 003483BC  40 82 00 0C */	bne func_8034B488
 /* 8034B480 003483C0  38 00 00 03 */	li r0, 3
 /* 8034B484 003483C4  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-lbl_8034B488:
+
+/* 8034B488 0014 .text      func_8034B488                  func_8034B488                  */
+.global func_8034B488
+func_8034B488:
 /* 8034B488 003483C8  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8034B48C 003483CC  2C 00 00 05 */	cmpwi r0, 5
-/* 8034B490 003483D0  40 82 00 0C */	bne lbl_8034B49C
+/* 8034B490 003483D0  40 82 00 0C */	bne func_8034B49C
 /* 8034B494 003483D4  38 00 00 04 */	li r0, 4
 /* 8034B498 003483D8  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-lbl_8034B49C:
+
+/* 8034B49C 0014 .text      func_8034B49C                  func_8034B49C                  */
+.global func_8034B49C
+func_8034B49C:
 /* 8034B49C 003483DC  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8034B4A0 003483E0  2C 00 00 06 */	cmpwi r0, 6
-/* 8034B4A4 003483E4  40 82 00 0C */	bne lbl_8034B4B0
+/* 8034B4A4 003483E4  40 82 00 0C */	bne func_8034B4B0
 /* 8034B4A8 003483E8  38 00 00 01 */	li r0, 1
 /* 8034B4AC 003483EC  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-lbl_8034B4B0:
+
+/* 8034B4B0 0014 .text      func_8034B4B0                  func_8034B4B0                  */
+.global func_8034B4B0
+func_8034B4B0:
 /* 8034B4B0 003483F0  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8034B4B4 003483F4  2C 00 00 0B */	cmpwi r0, 0xb
-/* 8034B4B8 003483F8  40 82 00 0C */	bne lbl_8034B4C4
+/* 8034B4B8 003483F8  40 82 00 0C */	bne func_8034B4C4
 /* 8034B4BC 003483FC  38 00 00 02 */	li r0, 2
 /* 8034B4C0 00348400  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-lbl_8034B4C4:
+
+/* 8034B4C4 0014 .text      func_8034B4C4                  func_8034B4C4                  */
+.global func_8034B4C4
+func_8034B4C4:
 /* 8034B4C4 00348404  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8034B4C8 00348408  2C 00 00 07 */	cmpwi r0, 7
-/* 8034B4CC 0034840C  40 82 00 0C */	bne lbl_8034B4D8
+/* 8034B4CC 0034840C  40 82 00 0C */	bne func_8034B4D8
 /* 8034B4D0 00348410  38 00 00 07 */	li r0, 7
 /* 8034B4D4 00348414  90 0D 92 20 */	stw r0, ResumeFromHere-_SDA_BASE_(r13)
-lbl_8034B4D8:
+
+/* 8034B4D8 0030 .text      func_8034B4D8                  func_8034B4D8                  */
+.global func_8034B4D8
+func_8034B4D8:
 /* 8034B4D8 00348418  3C 60 80 45 */	lis r3, DummyCommandBlock@ha
 /* 8034B4DC 0034841C  38 03 C9 40 */	addi r0, r3, DummyCommandBlock@l
 /* 8034B4E0 00348420  90 0D 91 F8 */	stw r0, executing-_SDA_BASE_(r13)
@@ -2681,26 +3313,38 @@ lbl_8034B4D8:
 /* 8034B4E8 00348428  90 1D 00 0C */	stw r0, 0xc(r29)
 /* 8034B4EC 0034842C  81 9D 00 28 */	lwz r12, 0x28(r29)
 /* 8034B4F0 00348430  28 0C 00 00 */	cmplwi r12, 0
-/* 8034B4F4 00348434  41 82 00 14 */	beq lbl_8034B508
+/* 8034B4F4 00348434  41 82 00 14 */	beq func_8034B508
 /* 8034B4F8 00348438  7D 88 03 A6 */	mtlr r12
 /* 8034B4FC 0034843C  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B500 00348440  38 60 FF FD */	li r3, -3
 /* 8034B504 00348444  4E 80 00 21 */	blrl 
-lbl_8034B508:
+
+/* 8034B508 001C .text      func_8034B508                  func_8034B508                  */
+.global func_8034B508
+func_8034B508:
 /* 8034B508 00348448  28 1E 00 00 */	cmplwi r30, 0
-/* 8034B50C 0034844C  41 82 00 18 */	beq lbl_8034B524
+/* 8034B50C 0034844C  41 82 00 18 */	beq func_8034B524
 /* 8034B510 00348450  39 9E 00 00 */	addi r12, r30, 0
 /* 8034B514 00348454  7D 88 03 A6 */	mtlr r12
 /* 8034B518 00348458  38 9D 00 00 */	addi r4, r29, 0
 /* 8034B51C 0034845C  38 60 00 00 */	li r3, 0
 /* 8034B520 00348460  4E 80 00 21 */	blrl 
-lbl_8034B524:
+
+/* 8034B524 0004 .text      func_8034B524                  func_8034B524                  */
+.global func_8034B524
+func_8034B524:
 /* 8034B524 00348464  4B FF EB 89 */	bl stateReady
-lbl_8034B528:
+
+/* 8034B528 000C .text      func_8034B528                  func_8034B528                  */
+.global func_8034B528
+func_8034B528:
 /* 8034B528 00348468  7F E3 FB 78 */	mr r3, r31
 /* 8034B52C 0034846C  4B FF 21 F1 */	bl OSRestoreInterrupts
 /* 8034B530 00348470  38 60 00 01 */	li r3, 1
-lbl_8034B534:
+
+/* 8034B534 001C .text      func_8034B534                  func_8034B534                  */
+.global func_8034B534
+func_8034B534:
 /* 8034B534 00348474  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8034B538 00348478  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 8034B53C 0034847C  83 C1 00 20 */	lwz r30, 0x20(r1)
@@ -2709,7 +3353,7 @@ lbl_8034B534:
 /* 8034B548 00348488  7C 08 03 A6 */	mtlr r0
 /* 8034B54C 0034848C  4E 80 00 20 */	blr 
 
-/* 8034B550 00AC .text DVDCancel DVDCancel */
+/* 8034B550 0034 .text      DVDCancel                      DVDCancel                      */
 .global DVDCancel
 DVDCancel:
 /* 8034B550 00348490  7C 08 02 A6 */	mflr r0
@@ -2722,38 +3366,53 @@ DVDCancel:
 /* 8034B56C 003484AC  3B C3 00 00 */	addi r30, r3, 0
 /* 8034B570 003484B0  4B FF FD 65 */	bl DVDCancelAsync
 /* 8034B574 003484B4  2C 03 00 00 */	cmpwi r3, 0
-/* 8034B578 003484B8  40 82 00 0C */	bne lbl_8034B584
+/* 8034B578 003484B8  40 82 00 0C */	bne func_8034B584
 /* 8034B57C 003484BC  38 60 FF FF */	li r3, -1
-/* 8034B580 003484C0  48 00 00 64 */	b lbl_8034B5E4
-lbl_8034B584:
-/* 8034B584 003484C4  4B FF 21 71 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B580 003484C0  48 00 00 64 */	b func_8034B5E4
+
+/* 8034B584 0008 .text      func_8034B584                  func_8034B584                  */
+.global func_8034B584
+func_8034B584:
+/* 8034B584 003484C4  4B FF 21 71 */	bl OSDisableInterrupts
 /* 8034B588 003484C8  7C 7F 1B 78 */	mr r31, r3
-lbl_8034B58C:
+
+/* 8034B58C 0040 .text      func_8034B58C                  func_8034B58C                  */
+.global func_8034B58C
+func_8034B58C:
 /* 8034B58C 003484CC  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8034B590 003484D0  38 03 00 01 */	addi r0, r3, 1
 /* 8034B594 003484D4  28 00 00 01 */	cmplwi r0, 1
-/* 8034B598 003484D8  40 81 00 40 */	ble lbl_8034B5D8
+/* 8034B598 003484D8  40 81 00 40 */	ble func_8034B5D8
 /* 8034B59C 003484DC  2C 03 00 0A */	cmpwi r3, 0xa
-/* 8034B5A0 003484E0  41 82 00 38 */	beq lbl_8034B5D8
+/* 8034B5A0 003484E0  41 82 00 38 */	beq func_8034B5D8
 /* 8034B5A4 003484E4  2C 03 00 03 */	cmpwi r3, 3
-/* 8034B5A8 003484E8  40 82 00 24 */	bne lbl_8034B5CC
+/* 8034B5A8 003484E8  40 82 00 24 */	bne func_8034B5CC
 /* 8034B5AC 003484EC  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8034B5B0 003484F0  38 03 FF FC */	addi r0, r3, -4
 /* 8034B5B4 003484F4  28 00 00 01 */	cmplwi r0, 1
-/* 8034B5B8 003484F8  40 81 00 20 */	ble lbl_8034B5D8
+/* 8034B5B8 003484F8  40 81 00 20 */	ble func_8034B5D8
 /* 8034B5BC 003484FC  28 03 00 0D */	cmplwi r3, 0xd
-/* 8034B5C0 00348500  41 82 00 18 */	beq lbl_8034B5D8
+/* 8034B5C0 00348500  41 82 00 18 */	beq func_8034B5D8
 /* 8034B5C4 00348504  28 03 00 0F */	cmplwi r3, 0xf
-/* 8034B5C8 00348508  41 82 00 10 */	beq lbl_8034B5D8
-lbl_8034B5CC:
+/* 8034B5C8 00348508  41 82 00 10 */	beq func_8034B5D8
+
+/* 8034B5CC 000C .text      func_8034B5CC                  func_8034B5CC                  */
+.global func_8034B5CC
+func_8034B5CC:
 /* 8034B5CC 0034850C  38 6D 91 F0 */	addi r3, r13, __DVDThreadQueue-_SDA_BASE_
 /* 8034B5D0 00348510  4B FF 65 DD */	bl OSSleepThread
-/* 8034B5D4 00348514  4B FF FF B8 */	b lbl_8034B58C
-lbl_8034B5D8:
+/* 8034B5D4 00348514  4B FF FF B8 */	b func_8034B58C
+
+/* 8034B5D8 000C .text      func_8034B5D8                  func_8034B5D8                  */
+.global func_8034B5D8
+func_8034B5D8:
 /* 8034B5D8 00348518  7F E3 FB 78 */	mr r3, r31
 /* 8034B5DC 0034851C  4B FF 21 41 */	bl OSRestoreInterrupts
 /* 8034B5E0 00348520  38 60 00 00 */	li r3, 0
-lbl_8034B5E4:
+
+/* 8034B5E4 0018 .text      func_8034B5E4                  func_8034B5E4                  */
+.global func_8034B5E4
+func_8034B5E4:
 /* 8034B5E4 00348524  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8034B5E8 00348528  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 8034B5EC 0034852C  83 C1 00 10 */	lwz r30, 0x10(r1)
@@ -2761,7 +3420,7 @@ lbl_8034B5E4:
 /* 8034B5F4 00348534  7C 08 03 A6 */	mtlr r0
 /* 8034B5F8 00348538  4E 80 00 20 */	blr 
 
-/* 8034B5FC 0024 .text cbForCancelSync cbForCancelSync */
+/* 8034B5FC 0024 .text      cbForCancelSync                cbForCancelSync                */
 .global cbForCancelSync
 cbForCancelSync:
 /* 8034B5FC 0034853C  7C 08 02 A6 */	mflr r0
@@ -2774,79 +3433,106 @@ cbForCancelSync:
 /* 8034B618 00348558  7C 08 03 A6 */	mtlr r0
 /* 8034B61C 0034855C  4E 80 00 20 */	blr 
 
-/* 8034B620 0008 .text DVDGetCurrentDiskID DVDGetCurrentDiskID */
+/* 8034B620 0008 .text      DVDGetCurrentDiskID            DVDGetCurrentDiskID            */
 .global DVDGetCurrentDiskID
 DVDGetCurrentDiskID:
 /* 8034B620 00348560  3C 60 80 00 */	lis r3, 0x8000
 /* 8034B624 00348564  4E 80 00 20 */	blr 
 
-/* 8034B628 00F8 .text DVDCheckDisk DVDCheckDisk */
+/* 8034B628 0028 .text      DVDCheckDisk                   DVDCheckDisk                   */
 .global DVDCheckDisk
 DVDCheckDisk:
 /* 8034B628 00348568  7C 08 02 A6 */	mflr r0
 /* 8034B62C 0034856C  90 01 00 04 */	stw r0, 4(r1)
 /* 8034B630 00348570  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034B634 00348574  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8034B638 00348578  4B FF 20 BD */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B638 00348578  4B FF 20 BD */	bl OSDisableInterrupts
 /* 8034B63C 0034857C  80 0D 92 10 */	lwz r0, FatalErrorFlag-_SDA_BASE_(r13)
 /* 8034B640 00348580  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B644 00348584  41 82 00 0C */	beq lbl_8034B650
+/* 8034B644 00348584  41 82 00 0C */	beq func_8034B650
 /* 8034B648 00348588  38 80 FF FF */	li r4, -1
-/* 8034B64C 0034858C  48 00 00 48 */	b lbl_8034B694
-lbl_8034B650:
+/* 8034B64C 0034858C  48 00 00 48 */	b func_8034B694
+
+/* 8034B650 0014 .text      func_8034B650                  func_8034B650                  */
+.global func_8034B650
+func_8034B650:
 /* 8034B650 00348590  80 0D 92 08 */	lwz r0, PausingFlag-_SDA_BASE_(r13)
 /* 8034B654 00348594  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B658 00348598  41 82 00 0C */	beq lbl_8034B664
+/* 8034B658 00348598  41 82 00 0C */	beq func_8034B664
 /* 8034B65C 0034859C  38 80 00 08 */	li r4, 8
-/* 8034B660 003485A0  48 00 00 34 */	b lbl_8034B694
-lbl_8034B664:
+/* 8034B660 003485A0  48 00 00 34 */	b func_8034B694
+
+/* 8034B664 0014 .text      func_8034B664                  func_8034B664                  */
+.global func_8034B664
+func_8034B664:
 /* 8034B664 003485A4  80 AD 91 F8 */	lwz r5, executing-_SDA_BASE_(r13)
 /* 8034B668 003485A8  28 05 00 00 */	cmplwi r5, 0
-/* 8034B66C 003485AC  40 82 00 0C */	bne lbl_8034B678
+/* 8034B66C 003485AC  40 82 00 0C */	bne func_8034B678
 /* 8034B670 003485B0  38 80 00 00 */	li r4, 0
-/* 8034B674 003485B4  48 00 00 20 */	b lbl_8034B694
-lbl_8034B678:
+/* 8034B674 003485B4  48 00 00 20 */	b func_8034B694
+
+/* 8034B678 0018 .text      func_8034B678                  func_8034B678                  */
+.global func_8034B678
+func_8034B678:
 /* 8034B678 003485B8  3C 80 80 45 */	lis r4, DummyCommandBlock@ha
 /* 8034B67C 003485BC  38 04 C9 40 */	addi r0, r4, DummyCommandBlock@l
 /* 8034B680 003485C0  7C 05 00 40 */	cmplw r5, r0
-/* 8034B684 003485C4  40 82 00 0C */	bne lbl_8034B690
+/* 8034B684 003485C4  40 82 00 0C */	bne func_8034B690
 /* 8034B688 003485C8  38 80 00 00 */	li r4, 0
-/* 8034B68C 003485CC  48 00 00 08 */	b lbl_8034B694
-lbl_8034B690:
+/* 8034B68C 003485CC  48 00 00 08 */	b func_8034B694
+
+/* 8034B690 0004 .text      func_8034B690                  func_8034B690                  */
+.global func_8034B690
+func_8034B690:
 /* 8034B690 003485D0  80 85 00 0C */	lwz r4, 0xc(r5)
-lbl_8034B694:
+
+/* 8034B694 0050 .text      func_8034B694                  func_8034B694                  */
+.global func_8034B694
+func_8034B694:
 /* 8034B694 003485D4  38 04 00 01 */	addi r0, r4, 1
 /* 8034B698 003485D8  28 00 00 0C */	cmplwi r0, 0xc
-/* 8034B69C 003485DC  41 81 00 68 */	bgt lbl_8034B704
-/* 8034B6A0 003485E0  3C 80 80 3D */	lis r4, lbl_803D1670@ha
-/* 8034B6A4 003485E4  38 84 16 70 */	addi r4, r4, lbl_803D1670@l
+/* 8034B69C 003485DC  41 81 00 68 */	bgt func_8034B704
+/* 8034B6A0 003485E0  3C 80 80 3D */	lis r4, dvd__LIT_1060@ha
+/* 8034B6A4 003485E4  38 84 16 70 */	addi r4, r4, dvd__LIT_1060@l
 /* 8034B6A8 003485E8  54 00 10 3A */	slwi r0, r0, 2
 /* 8034B6AC 003485EC  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8034B6B0 003485F0  7C 09 03 A6 */	mtctr r0
 /* 8034B6B4 003485F4  4E 80 04 20 */	bctr 
 /* 8034B6B8 003485F8  3B E0 00 01 */	li r31, 1
-/* 8034B6BC 003485FC  48 00 00 48 */	b lbl_8034B704
+/* 8034B6BC 003485FC  48 00 00 48 */	b func_8034B704
 /* 8034B6C0 00348600  3B E0 00 00 */	li r31, 0
-/* 8034B6C4 00348604  48 00 00 40 */	b lbl_8034B704
+/* 8034B6C4 00348604  48 00 00 40 */	b func_8034B704
 /* 8034B6C8 00348608  3C 80 CC 00 */	lis r4, 0xCC006000@ha
 /* 8034B6CC 0034860C  38 84 60 00 */	addi r4, r4, 0xCC006000@l
 /* 8034B6D0 00348610  80 84 00 04 */	lwz r4, 4(r4)
 /* 8034B6D4 00348614  54 80 F7 FF */	rlwinm. r0, r4, 0x1e, 0x1f, 0x1f
-/* 8034B6D8 00348618  40 82 00 0C */	bne lbl_8034B6E4
+/* 8034B6D8 00348618  40 82 00 0C */	bne func_8034B6E4
 /* 8034B6DC 0034861C  54 80 07 FF */	clrlwi. r0, r4, 0x1f
-/* 8034B6E0 00348620  41 82 00 0C */	beq lbl_8034B6EC
-lbl_8034B6E4:
+/* 8034B6E0 00348620  41 82 00 0C */	beq func_8034B6EC
+
+/* 8034B6E4 0008 .text      func_8034B6E4                  func_8034B6E4                  */
+.global func_8034B6E4
+func_8034B6E4:
 /* 8034B6E4 00348624  3B E0 00 00 */	li r31, 0
-/* 8034B6E8 00348628  48 00 00 1C */	b lbl_8034B704
-lbl_8034B6EC:
+/* 8034B6E8 00348628  48 00 00 1C */	b func_8034B704
+
+/* 8034B6EC 0014 .text      func_8034B6EC                  func_8034B6EC                  */
+.global func_8034B6EC
+func_8034B6EC:
 /* 8034B6EC 0034862C  80 0D 92 20 */	lwz r0, ResumeFromHere-_SDA_BASE_(r13)
 /* 8034B6F0 00348630  28 00 00 00 */	cmplwi r0, 0
-/* 8034B6F4 00348634  41 82 00 0C */	beq lbl_8034B700
+/* 8034B6F4 00348634  41 82 00 0C */	beq func_8034B700
 /* 8034B6F8 00348638  3B E0 00 00 */	li r31, 0
-/* 8034B6FC 0034863C  48 00 00 08 */	b lbl_8034B704
-lbl_8034B700:
+/* 8034B6FC 0034863C  48 00 00 08 */	b func_8034B704
+
+/* 8034B700 0004 .text      func_8034B700                  func_8034B700                  */
+.global func_8034B700
+func_8034B700:
 /* 8034B700 00348640  3B E0 00 01 */	li r31, 1
-lbl_8034B704:
+
+/* 8034B704 001C .text      func_8034B704                  func_8034B704                  */
+.global func_8034B704
+func_8034B704:
 /* 8034B704 00348644  4B FF 20 19 */	bl OSRestoreInterrupts
 /* 8034B708 00348648  7F E3 FB 78 */	mr r3, r31
 /* 8034B70C 0034864C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2855,7 +3541,7 @@ lbl_8034B704:
 /* 8034B718 00348658  7C 08 03 A6 */	mtlr r0
 /* 8034B71C 0034865C  4E 80 00 20 */	blr 
 
-/* 8034B720 011C .text __DVDPrepareResetAsync __DVDPrepareResetAsync */
+/* 8034B720 003C .text      __DVDPrepareResetAsync         __DVDPrepareResetAsync         */
 .global __DVDPrepareResetAsync
 __DVDPrepareResetAsync:
 /* 8034B720 00348660  7C 08 02 A6 */	mflr r0
@@ -2865,70 +3551,97 @@ __DVDPrepareResetAsync:
 /* 8034B730 00348670  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8034B734 00348674  7C 7E 1B 78 */	mr r30, r3
 /* 8034B738 00348678  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 8034B73C 0034867C  4B FF 1F B9 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B73C 0034867C  4B FF 1F B9 */	bl OSDisableInterrupts
 /* 8034B740 00348680  7C 7D 1B 78 */	mr r29, r3
 /* 8034B744 00348684  48 00 01 31 */	bl __DVDClearWaitingQueue
 /* 8034B748 00348688  80 0D 92 18 */	lwz r0, Canceling-_SDA_BASE_(r13)
 /* 8034B74C 0034868C  28 00 00 00 */	cmplwi r0, 0
-/* 8034B750 00348690  41 82 00 0C */	beq lbl_8034B75C
+/* 8034B750 00348690  41 82 00 0C */	beq func_8034B75C
 /* 8034B754 00348694  93 CD 92 1C */	stw r30, CancelCallback-_SDA_BASE_(r13)
-/* 8034B758 00348698  48 00 00 C0 */	b lbl_8034B818
-lbl_8034B75C:
+/* 8034B758 00348698  48 00 00 C0 */	b func_8034B818
+
+/* 8034B75C 0014 .text      func_8034B75C                  func_8034B75C                  */
+.global func_8034B75C
+func_8034B75C:
 /* 8034B75C 0034869C  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034B760 003486A0  28 03 00 00 */	cmplwi r3, 0
-/* 8034B764 003486A4  41 82 00 0C */	beq lbl_8034B770
+/* 8034B764 003486A4  41 82 00 0C */	beq func_8034B770
 /* 8034B768 003486A8  38 00 00 00 */	li r0, 0
 /* 8034B76C 003486AC  90 03 00 28 */	stw r0, 0x28(r3)
-lbl_8034B770:
-/* 8034B770 003486B0  4B FF 1F 85 */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034B770 0024 .text      func_8034B770                  func_8034B770                  */
+.global func_8034B770
+func_8034B770:
+/* 8034B770 003486B0  4B FF 1F 85 */	bl OSDisableInterrupts
 /* 8034B774 003486B4  7C 7F 1B 78 */	mr r31, r3
-/* 8034B778 003486B8  4B FF 1F 7D */	bl __RAS_OSDisableInterrupts_begin
+/* 8034B778 003486B8  4B FF 1F 7D */	bl OSDisableInterrupts
 /* 8034B77C 003486BC  80 0D 91 F8 */	lwz r0, executing-_SDA_BASE_(r13)
 /* 8034B780 003486C0  38 80 00 01 */	li r4, 1
 /* 8034B784 003486C4  90 8D 92 04 */	stw r4, PauseFlag-_SDA_BASE_(r13)
 /* 8034B788 003486C8  28 00 00 00 */	cmplwi r0, 0
-/* 8034B78C 003486CC  40 82 00 08 */	bne lbl_8034B794
+/* 8034B78C 003486CC  40 82 00 08 */	bne func_8034B794
 /* 8034B790 003486D0  90 8D 92 08 */	stw r4, PausingFlag-_SDA_BASE_(r13)
-lbl_8034B794:
+
+/* 8034B794 0008 .text      func_8034B794                  func_8034B794                  */
+.global func_8034B794
+func_8034B794:
 /* 8034B794 003486D4  4B FF 1F 89 */	bl OSRestoreInterrupts
-/* 8034B798 003486D8  48 00 00 0C */	b lbl_8034B7A4
-lbl_8034B79C:
+/* 8034B798 003486D8  48 00 00 0C */	b func_8034B7A4
+
+/* 8034B79C 0008 .text      func_8034B79C                  func_8034B79C                  */
+.global func_8034B79C
+func_8034B79C:
 /* 8034B79C 003486DC  38 80 00 00 */	li r4, 0
 /* 8034B7A0 003486E0  4B FF FB 35 */	bl DVDCancelAsync
-lbl_8034B7A4:
+
+/* 8034B7A4 0024 .text      func_8034B7A4                  func_8034B7A4                  */
+.global func_8034B7A4
+func_8034B7A4:
 /* 8034B7A4 003486E4  48 00 01 71 */	bl __DVDPopWaitingQueue
 /* 8034B7A8 003486E8  28 03 00 00 */	cmplwi r3, 0
-/* 8034B7AC 003486EC  40 82 FF F0 */	bne lbl_8034B79C
+/* 8034B7AC 003486EC  40 82 FF F0 */	bne func_8034B79C
 /* 8034B7B0 003486F0  80 6D 91 F8 */	lwz r3, executing-_SDA_BASE_(r13)
 /* 8034B7B4 003486F4  28 03 00 00 */	cmplwi r3, 0
-/* 8034B7B8 003486F8  41 82 00 10 */	beq lbl_8034B7C8
+/* 8034B7B8 003486F8  41 82 00 10 */	beq func_8034B7C8
 /* 8034B7BC 003486FC  7F C4 F3 78 */	mr r4, r30
 /* 8034B7C0 00348700  4B FF FB 15 */	bl DVDCancelAsync
-/* 8034B7C4 00348704  48 00 00 20 */	b lbl_8034B7E4
-lbl_8034B7C8:
+/* 8034B7C4 00348704  48 00 00 20 */	b func_8034B7E4
+
+/* 8034B7C8 001C .text      func_8034B7C8                  func_8034B7C8                  */
+.global func_8034B7C8
+func_8034B7C8:
 /* 8034B7C8 00348708  28 1E 00 00 */	cmplwi r30, 0
-/* 8034B7CC 0034870C  41 82 00 18 */	beq lbl_8034B7E4
+/* 8034B7CC 0034870C  41 82 00 18 */	beq func_8034B7E4
 /* 8034B7D0 00348710  39 9E 00 00 */	addi r12, r30, 0
 /* 8034B7D4 00348714  7D 88 03 A6 */	mtlr r12
 /* 8034B7D8 00348718  38 60 00 00 */	li r3, 0
 /* 8034B7DC 0034871C  38 80 00 00 */	li r4, 0
 /* 8034B7E0 00348720  4E 80 00 21 */	blrl 
-lbl_8034B7E4:
-/* 8034B7E4 00348724  4B FF 1F 11 */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8034B7E4 0024 .text      func_8034B7E4                  func_8034B7E4                  */
+.global func_8034B7E4
+func_8034B7E4:
+/* 8034B7E4 00348724  4B FF 1F 11 */	bl OSDisableInterrupts
 /* 8034B7E8 00348728  38 80 00 00 */	li r4, 0
 /* 8034B7EC 0034872C  90 8D 92 04 */	stw r4, PauseFlag-_SDA_BASE_(r13)
 /* 8034B7F0 00348730  7C 7E 1B 78 */	mr r30, r3
 /* 8034B7F4 00348734  80 0D 92 08 */	lwz r0, PausingFlag-_SDA_BASE_(r13)
 /* 8034B7F8 00348738  2C 00 00 00 */	cmpwi r0, 0
-/* 8034B7FC 0034873C  41 82 00 0C */	beq lbl_8034B808
+/* 8034B7FC 0034873C  41 82 00 0C */	beq func_8034B808
 /* 8034B800 00348740  90 8D 92 08 */	stw r4, PausingFlag-_SDA_BASE_(r13)
 /* 8034B804 00348744  4B FF E8 A9 */	bl stateReady
-lbl_8034B808:
+
+/* 8034B808 0010 .text      func_8034B808                  func_8034B808                  */
+.global func_8034B808
+func_8034B808:
 /* 8034B808 00348748  7F C3 F3 78 */	mr r3, r30
 /* 8034B80C 0034874C  4B FF 1F 11 */	bl OSRestoreInterrupts
 /* 8034B810 00348750  7F E3 FB 78 */	mr r3, r31
 /* 8034B814 00348754  4B FF 1F 09 */	bl OSRestoreInterrupts
-lbl_8034B818:
+
+/* 8034B818 0024 .text      func_8034B818                  func_8034B818                  */
+.global func_8034B818
+func_8034B818:
 /* 8034B818 00348758  7F A3 EB 78 */	mr r3, r29
 /* 8034B81C 0034875C  4B FF 1F 01 */	bl OSRestoreInterrupts
 /* 8034B820 00348760  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -2939,7 +3652,7 @@ lbl_8034B818:
 /* 8034B834 00348774  7C 08 03 A6 */	mtlr r0
 /* 8034B838 00348778  4E 80 00 20 */	blr 
 
-/* 8034B83C 0038 .text __DVDTestAlarm __DVDTestAlarm */
+/* 8034B83C 0024 .text      __DVDTestAlarm                 __DVDTestAlarm                 */
 .global __DVDTestAlarm
 __DVDTestAlarm:
 /* 8034B83C 0034877C  7C 08 02 A6 */	mflr r0
@@ -2948,23 +3661,35 @@ __DVDTestAlarm:
 /* 8034B848 00348788  38 04 C9 70 */	addi r0, r4, ResetAlarm@l
 /* 8034B84C 0034878C  7C 03 00 40 */	cmplw r3, r0
 /* 8034B850 00348790  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8034B854 00348794  40 82 00 0C */	bne lbl_8034B860
+/* 8034B854 00348794  40 82 00 0C */	bne func_8034B860
 /* 8034B858 00348798  38 60 00 01 */	li r3, 1
-/* 8034B85C 0034879C  48 00 00 08 */	b lbl_8034B864
-lbl_8034B860:
+/* 8034B85C 0034879C  48 00 00 08 */	b func_8034B864
+
+/* 8034B860 0004 .text      func_8034B860                  func_8034B860                  */
+.global func_8034B860
+func_8034B860:
 /* 8034B860 003487A0  4B FF CC 59 */	bl __DVDLowTestAlarm
-lbl_8034B864:
+
+/* 8034B864 0010 .text      func_8034B864                  func_8034B864                  */
+.global func_8034B864
+func_8034B864:
 /* 8034B864 003487A4  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8034B868 003487A8  38 21 00 08 */	addi r1, r1, 8
 /* 8034B86C 003487AC  7C 08 03 A6 */	mtlr r0
 /* 8034B870 003487B0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D1520 0045 .data lbl_803D1520 @1 */
-.global lbl_803D1520
-lbl_803D1520:
+/* 803D1520 0000 .data      sym_803D1520                   ...data.0                      */
+.global sym_803D1520
+sym_803D1520:
+
+/* 803D1520 0045 .data      dvd__LIT_1                     @1                             */
+.global dvd__LIT_1
+dvd__LIT_1:
 .byte 0x3c, 0x3c, 0x20, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x53, 0x44, 0x4b, 0x20, 0x2d /* baserom.dol+0x3ce520 */
 .byte 0x20, 0x44, 0x56, 0x44, 0x09, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69 /* baserom.dol+0x3ce530 */
 .byte 0x6c, 0x64, 0x3a, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20 /* baserom.dol+0x3ce540 */
@@ -2972,37 +3697,37 @@ lbl_803D1520:
 .byte 0x29, 0x20, 0x3e, 0x3e, 0x00 /* baserom.dol+0x3ce560 */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce565 */
 
-/* 803D1568 000A .data lbl_803D1568 @18 */
-.global lbl_803D1568
-lbl_803D1568:
+/* 803D1568 000A .data      LIT_18                         @18                            */
+.global LIT_18
+LIT_18:
 .byte 0x6c, 0x6f, 0x61, 0x64, 0x20, 0x66, 0x73, 0x74, 0x0a, 0x00 /* baserom.dol+0x3ce568 */
 .byte 0x00, 0x00 /* baserom.dol+0x3ce572 */
 
-/* 803D1574 0034 .data lbl_803D1574 @24 */
-.global lbl_803D1574
-lbl_803D1574:
+/* 803D1574 0034 .data      LIT_24                         @24                            */
+.global LIT_24
+LIT_24:
 .byte 0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6b, 0x28, 0x29, 0x3a /* baserom.dol+0x3ce574 */
 .byte 0x20, 0x46, 0x53, 0x54, 0x20, 0x69, 0x6e, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6e, 0x65, 0x77, 0x20 /* baserom.dol+0x3ce584 */
 .byte 0x64, 0x69, 0x73, 0x63, 0x20, 0x69, 0x73, 0x20, 0x74, 0x6f, 0x6f, 0x20, 0x62, 0x69, 0x67, 0x2e /* baserom.dol+0x3ce594 */
 .byte 0x20, 0x20, 0x20, 0x00 /* baserom.dol+0x3ce5a4 */
 
-/* 803D15A8 0044 .data lbl_803D15A8 @359 */
-.global lbl_803D15A8
-lbl_803D15A8:
+/* 803D15A8 0044 .data      dvd__LIT_359                   @359                           */
+.global dvd__LIT_359
+dvd__LIT_359:
 .byte 0x80, 0x34, 0xa6, 0xac, 0x80, 0x34, 0xa4, 0x00, 0x80, 0x34, 0xa4, 0xa0, 0x80, 0x34, 0xa4, 0xc4 /* baserom.dol+0x3ce5a8 */
 .byte 0x80, 0x34, 0xa4, 0x00, 0x80, 0x34, 0xa3, 0xd4, 0x80, 0x34, 0xa4, 0xe4, 0x80, 0x34, 0xa5, 0x48 /* baserom.dol+0x3ce5b8 */
 .byte 0x80, 0x34, 0xa5, 0x74, 0x80, 0x34, 0xa5, 0xa8, 0x80, 0x34, 0xa5, 0xcc, 0x80, 0x34, 0xa5, 0xf0 /* baserom.dol+0x3ce5c8 */
 .byte 0x80, 0x34, 0xa6, 0x14, 0x80, 0x34, 0xa6, 0x38, 0x80, 0x34, 0xa6, 0x60, 0x80, 0x34, 0xa4, 0xd4 /* baserom.dol+0x3ce5d8 */
 .byte 0x80, 0x34, 0xa6, 0x8c /* baserom.dol+0x3ce5e8 */
 
-/* 803D15EC 000C .data ImmCommand ImmCommand */
+/* 803D15EC 000C .data      ImmCommand                     ImmCommand                     */
 .global ImmCommand
 ImmCommand:
 .byte 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3ce5ec */
 
-/* 803D15F8 0041 .data lbl_803D15F8 @789 */
-.global lbl_803D15F8
-lbl_803D15F8:
+/* 803D15F8 0041 .data      LIT_789                        @789                           */
+.global LIT_789
+LIT_789:
 .byte 0x44, 0x56, 0x44, 0x43, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x44, 0x69, 0x73, 0x6b, 0x41, 0x73, 0x79 /* baserom.dol+0x3ce5f8 */
 .byte 0x6e, 0x63, 0x28, 0x29, 0x3a, 0x20, 0x59, 0x6f, 0x75, 0x20, 0x63, 0x61, 0x6e, 0x27, 0x74, 0x20 /* baserom.dol+0x3ce608 */
 .byte 0x73, 0x70, 0x65, 0x63, 0x69, 0x66, 0x79, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x20, 0x74, 0x6f, 0x20 /* baserom.dol+0x3ce618 */
@@ -3010,17 +3735,17 @@ lbl_803D15F8:
 .byte 0x00 /* baserom.dol+0x3ce638 */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ce639 */
 
-/* 803D163C 0034 .data lbl_803D163C @956 */
-.global lbl_803D163C
-lbl_803D163C:
+/* 803D163C 0034 .data      LIT_956                        @956                           */
+.global LIT_956
+LIT_956:
 .byte 0x80, 0x34, 0xb3, 0x24, 0x80, 0x34, 0xb3, 0x24, 0x80, 0x34, 0xb3, 0x44, 0x80, 0x34, 0xb3, 0x88 /* baserom.dol+0x3ce63c */
 .byte 0x80, 0x34, 0xb3, 0xd4, 0x80, 0x34, 0xb4, 0x50, 0x80, 0x34, 0xb4, 0x50, 0x80, 0x34, 0xb4, 0x50 /* baserom.dol+0x3ce64c */
 .byte 0x80, 0x34, 0xb4, 0x50, 0x80, 0x34, 0xb5, 0x28, 0x80, 0x34, 0xb5, 0x28, 0x80, 0x34, 0xb3, 0x24 /* baserom.dol+0x3ce65c */
 .byte 0x80, 0x34, 0xb4, 0x50 /* baserom.dol+0x3ce66c */
 
-/* 803D1670 0034 .data lbl_803D1670 @1060 */
-.global lbl_803D1670
-lbl_803D1670:
+/* 803D1670 0034 .data      dvd__LIT_1060                  @1060                          */
+.global dvd__LIT_1060
+dvd__LIT_1060:
 .byte 0x80, 0x34, 0xb6, 0xc0, 0x80, 0x34, 0xb6, 0xc8, 0x80, 0x34, 0xb6, 0xb8, 0x80, 0x34, 0xb6, 0xb8 /* baserom.dol+0x3ce670 */
 .byte 0x80, 0x34, 0xb6, 0xc0, 0x80, 0x34, 0xb6, 0xc0, 0x80, 0x34, 0xb6, 0xc0, 0x80, 0x34, 0xb6, 0xc0 /* baserom.dol+0x3ce680 */
 .byte 0x80, 0x34, 0xb6, 0xc0, 0x80, 0x34, 0xb6, 0xc8, 0x80, 0x34, 0xb6, 0xb8, 0x80, 0x34, 0xb6, 0xb8 /* baserom.dol+0x3ce690 */
@@ -3028,153 +3753,163 @@ lbl_803D1670:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ce6a4 */
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 8044C900 0020 .bss BB2 BB2 */
+/* 8044C900 0000 .bss       sym_8044C900                   ...bss.0                       */
+.global sym_8044C900
+sym_8044C900:
+
+/* 8044C900 0020 .bss       BB2                            BB2                            */
 .global BB2
 BB2:
 .skip 0x20
 
-/* 8044C920 0020 .bss CurrDiskID CurrDiskID */
+/* 8044C920 0020 .bss       CurrDiskID                     CurrDiskID                     */
 .global CurrDiskID
 CurrDiskID:
 .skip 0x20
 
-/* 8044C940 0030 .bss DummyCommandBlock DummyCommandBlock */
+/* 8044C940 0030 .bss       DummyCommandBlock              DummyCommandBlock              */
 .global DummyCommandBlock
 DummyCommandBlock:
 .skip 0x30
 
-/* 8044C970 0028 .bss ResetAlarm ResetAlarm */
+/* 8044C970 0028 .bss       ResetAlarm                     ResetAlarm                     */
 .global ResetAlarm
 ResetAlarm:
 .skip 0x28
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 804509E8 0004 .sdata __DVDVersion __DVDVersion */
+/* 804509E8 0004 .sdata     __DVDVersion                   __DVDVersion                   */
 .global __DVDVersion
 __DVDVersion:
 .byte 0x80, 0x3d, 0x15, 0x20 /* baserom.dol+0x3d0748 */
 
-/* 804509EC 0004 .sdata autoInvalidation autoInvalidation */
+/* 804509EC 0004 .sdata     autoInvalidation               autoInvalidation               */
 .global autoInvalidation
 autoInvalidation:
 .byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d074c */
 
-/* 804509F0 0004 .sdata checkOptionalCommand checkOptionalCommand */
+/* 804509F0 0004 .sdata     checkOptionalCommand           checkOptionalCommand           */
 .global checkOptionalCommand
 checkOptionalCommand:
 .byte 0x80, 0x34, 0x90, 0xec /* baserom.dol+0x3d0750 */
 
-/* 804509F4 0006 .sdata lbl_804509F4 @23 */
-.global lbl_804509F4
-lbl_804509F4:
+/* 804509F4 0006 .sdata     LIT_23                         @23                            */
+.global LIT_23
+LIT_23:
 .byte 0x64, 0x76, 0x64, 0x2e, 0x63, 0x00 /* baserom.dol+0x3d0754 */
 .byte 0x00, 0x00 /* baserom.dol+0x3d075a */
 
-/* 804509FC 0004 .sdata DmaCommand DmaCommand */
+/* 804509FC 0004 .sdata     DmaCommand                     DmaCommand                     */
 .global DmaCommand
 DmaCommand:
 .byte 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3d075c */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451778 0004 .sbss executing executing */
+/* 80451778 0004 .sbss      executing                      executing                      */
 .global executing
 executing:
 .skip 0x4
 
-/* 8045177C 0004 .sbss IDShouldBe IDShouldBe */
+/* 8045177C 0004 .sbss      IDShouldBe                     IDShouldBe                     */
 .global IDShouldBe
 IDShouldBe:
 .skip 0x4
 
-/* 80451780 0004 .sbss bootInfo bootInfo */
+/* 80451780 0004 .sbss      bootInfo                       bootInfo                       */
 .global bootInfo
 bootInfo:
 .skip 0x4
 
-/* 80451784 0004 .sbss PauseFlag PauseFlag */
+/* 80451784 0004 .sbss      PauseFlag                      PauseFlag                      */
 .global PauseFlag
 PauseFlag:
 .skip 0x4
 
-/* 80451788 0004 .sbss PausingFlag PausingFlag */
+/* 80451788 0004 .sbss      PausingFlag                    PausingFlag                    */
 .global PausingFlag
 PausingFlag:
 .skip 0x4
 
-/* 8045178C 0004 .sbss AutoFinishing AutoFinishing */
+/* 8045178C 0004 .sbss      AutoFinishing                  AutoFinishing                  */
 .global AutoFinishing
 AutoFinishing:
 .skip 0x4
 
-/* 80451790 0004 .sbss FatalErrorFlag FatalErrorFlag */
+/* 80451790 0004 .sbss      FatalErrorFlag                 FatalErrorFlag                 */
 .global FatalErrorFlag
 FatalErrorFlag:
 .skip 0x4
 
-/* 80451794 0004 .sbss CurrCommand CurrCommand */
+/* 80451794 0004 .sbss      CurrCommand                    CurrCommand                    */
 .global CurrCommand
 CurrCommand:
 .skip 0x4
 
-/* 80451798 0004 .sbss Canceling Canceling */
+/* 80451798 0004 .sbss      Canceling                      Canceling                      */
 .global Canceling
 Canceling:
 .skip 0x4
 
-/* 8045179C 0004 .sbss CancelCallback CancelCallback */
+/* 8045179C 0004 .sbss      CancelCallback                 CancelCallback                 */
 .global CancelCallback
 CancelCallback:
 .skip 0x4
 
-/* 804517A0 0004 .sbss ResumeFromHere ResumeFromHere */
+/* 804517A0 0004 .sbss      ResumeFromHere                 ResumeFromHere                 */
 .global ResumeFromHere
 ResumeFromHere:
 .skip 0x4
 
-/* 804517A4 0004 .sbss CancelLastError CancelLastError */
+/* 804517A4 0004 .sbss      CancelLastError                CancelLastError                */
 .global CancelLastError
 CancelLastError:
 .skip 0x4
 
-/* 804517A8 0004 .sbss LastError LastError */
+/* 804517A8 0004 .sbss      LastError                      LastError                      */
 .global LastError
 LastError:
 .skip 0x4
 
-/* 804517AC 0004 .sbss NumInternalRetry NumInternalRetry */
+/* 804517AC 0004 .sbss      NumInternalRetry               NumInternalRetry               */
 .global NumInternalRetry
 NumInternalRetry:
 .skip 0x4
 
-/* 804517B0 0004 .sbss ResetRequired ResetRequired */
+/* 804517B0 0004 .sbss      ResetRequired                  ResetRequired                  */
 .global ResetRequired
 ResetRequired:
 .skip 0x4
 
-/* 804517B4 0004 .sbss FirstTimeInBootrom FirstTimeInBootrom */
+/* 804517B4 0004 .sbss      FirstTimeInBootrom             FirstTimeInBootrom             */
 .global FirstTimeInBootrom
 FirstTimeInBootrom:
 .skip 0x4
 
-/* 804517B8 0004 .sbss MotorState MotorState */
+/* 804517B8 0004 .sbss      MotorState                     MotorState                     */
 .global MotorState
 MotorState:
 .skip 0x4
 
-/* 804517BC 0004 .sbss DVDInitialized DVDInitialized */
+/* 804517BC 0004 .sbss      DVDInitialized                 DVDInitialized                 */
 .global DVDInitialized
 DVDInitialized:
 .skip 0x4
 
-/* 804517C0 0004 .sbss lbl_804517C0 LastState */
-.global lbl_804517C0
-lbl_804517C0:
+/* 804517C0 0004 .sbss      dvd__LastState                 LastState                      */
+.global dvd__LastState
+dvd__LastState:
 .skip 0x4
 .skip 0x4 /* padding */
 

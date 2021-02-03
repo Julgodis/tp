@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802CDE9C 0168 .text GFSetFog__F10_GXFogTypeffff8_GXColor GFSetFog__F10_GXFogTypeffff8_GXColor */
+/* 802CDE9C 002C .text      GFSetFog__F10_GXFogTypeffff8_GXColor GFSetFog__F10_GXFogTypeffff8_GXColor */
 .global GFSetFog__F10_GXFogTypeffff8_GXColor
 GFSetFog__F10_GXFogTypeffff8_GXColor:
 /* 802CDE9C 002CADDC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -13,15 +15,21 @@ GFSetFog__F10_GXFogTypeffff8_GXColor:
 /* 802CDEB0 002CADF0  7C 7C 1B 78 */	mr r28, r3
 /* 802CDEB4 002CADF4  7C 9F 23 78 */	mr r31, r4
 /* 802CDEB8 002CADF8  FC 04 18 00 */	fcmpu cr0, f4, f3
-/* 802CDEBC 002CADFC  41 82 00 0C */	beq lbl_802CDEC8
+/* 802CDEBC 002CADFC  41 82 00 0C */	beq func_802CDEC8
 /* 802CDEC0 002CAE00  FC 02 08 00 */	fcmpu cr0, f2, f1
-/* 802CDEC4 002CAE04  40 82 00 14 */	bne lbl_802CDED8
-lbl_802CDEC8:
-/* 802CDEC8 002CAE08  C0 A2 C5 68 */	lfs f5, lbl_80455F68-_SDA2_BASE_(r2)
-/* 802CDECC 002CAE0C  C0 62 C5 6C */	lfs f3, lbl_80455F6C-_SDA2_BASE_(r2)
+/* 802CDEC4 002CAE04  40 82 00 14 */	bne func_802CDED8
+
+/* 802CDEC8 0010 .text      func_802CDEC8                  func_802CDEC8                  */
+.global func_802CDEC8
+func_802CDEC8:
+/* 802CDEC8 002CAE08  C0 A2 C5 68 */	lfs f5, GFPixel__LIT_293-_SDA2_BASE_(r2)
+/* 802CDECC 002CAE0C  C0 62 C5 6C */	lfs f3, GFPixel__LIT_294-_SDA2_BASE_(r2)
 /* 802CDED0 002CAE10  D0 A1 00 0C */	stfs f5, 0xc(r1)
-/* 802CDED4 002CAE14  48 00 00 24 */	b lbl_802CDEF8
-lbl_802CDED8:
+/* 802CDED4 002CAE14  48 00 00 24 */	b func_802CDEF8
+
+/* 802CDED8 0020 .text      func_802CDED8                  func_802CDED8                  */
+.global func_802CDED8
+func_802CDED8:
 /* 802CDED8 002CAE18  EC A4 00 F2 */	fmuls f5, f4, f3
 /* 802CDEDC 002CAE1C  EC 64 18 28 */	fsubs f3, f4, f3
 /* 802CDEE0 002CAE20  EC 42 08 28 */	fsubs f2, f2, f1
@@ -30,33 +38,51 @@ lbl_802CDED8:
 /* 802CDEEC 002CAE2C  EC 64 18 24 */	fdivs f3, f4, f3
 /* 802CDEF0 002CAE30  EC 01 10 24 */	fdivs f0, f1, f2
 /* 802CDEF4 002CAE34  D0 01 00 0C */	stfs f0, 0xc(r1)
-lbl_802CDEF8:
+
+/* 802CDEF8 0010 .text      func_802CDEF8                  func_802CDEF8                  */
+.global func_802CDEF8
+func_802CDEF8:
 /* 802CDEF8 002CAE38  3B C0 00 01 */	li r30, 1
-/* 802CDEFC 002CAE3C  C0 22 C5 6C */	lfs f1, lbl_80455F6C-_SDA2_BASE_(r2)
-/* 802CDF00 002CAE40  C8 02 C5 70 */	lfd f0, lbl_80455F70-_SDA2_BASE_(r2)
-/* 802CDF04 002CAE44  48 00 00 0C */	b lbl_802CDF10
-lbl_802CDF08:
+/* 802CDEFC 002CAE3C  C0 22 C5 6C */	lfs f1, GFPixel__LIT_294-_SDA2_BASE_(r2)
+/* 802CDF00 002CAE40  C8 02 C5 70 */	lfd f0, LIT_295-_SDA2_BASE_(r2)
+/* 802CDF04 002CAE44  48 00 00 0C */	b func_802CDF10
+
+/* 802CDF08 0008 .text      func_802CDF08                  func_802CDF08                  */
+.global func_802CDF08
+func_802CDF08:
 /* 802CDF08 002CAE48  EC 63 00 72 */	fmuls f3, f3, f1
 /* 802CDF0C 002CAE4C  3B DE 00 01 */	addi r30, r30, 1
-lbl_802CDF10:
+
+/* 802CDF10 0018 .text      func_802CDF10                  func_802CDF10                  */
+.global func_802CDF10
+func_802CDF10:
 /* 802CDF10 002CAE50  FC 03 00 40 */	fcmpo cr0, f3, f0
-/* 802CDF14 002CAE54  41 81 FF F4 */	bgt lbl_802CDF08
-/* 802CDF18 002CAE58  C8 02 C5 80 */	lfd f0, lbl_80455F80-_SDA2_BASE_(r2)
-/* 802CDF1C 002CAE5C  C0 42 C5 78 */	lfs f2, lbl_80455F78-_SDA2_BASE_(r2)
-/* 802CDF20 002CAE60  C0 22 C5 68 */	lfs f1, lbl_80455F68-_SDA2_BASE_(r2)
-/* 802CDF24 002CAE64  48 00 00 0C */	b lbl_802CDF30
-lbl_802CDF28:
+/* 802CDF14 002CAE54  41 81 FF F4 */	bgt func_802CDF08
+/* 802CDF18 002CAE58  C8 02 C5 80 */	lfd f0, GFPixel__LIT_297-_SDA2_BASE_(r2)
+/* 802CDF1C 002CAE5C  C0 42 C5 78 */	lfs f2, LIT_296-_SDA2_BASE_(r2)
+/* 802CDF20 002CAE60  C0 22 C5 68 */	lfs f1, GFPixel__LIT_293-_SDA2_BASE_(r2)
+/* 802CDF24 002CAE64  48 00 00 0C */	b func_802CDF30
+
+/* 802CDF28 0008 .text      func_802CDF28                  func_802CDF28                  */
+.global func_802CDF28
+func_802CDF28:
 /* 802CDF28 002CAE68  EC 63 00 B2 */	fmuls f3, f3, f2
 /* 802CDF2C 002CAE6C  3B DE FF FF */	addi r30, r30, -1
-lbl_802CDF30:
+
+/* 802CDF30 0010 .text      func_802CDF30                  func_802CDF30                  */
+.global func_802CDF30
+func_802CDF30:
 /* 802CDF30 002CAE70  FC 03 08 40 */	fcmpo cr0, f3, f1
-/* 802CDF34 002CAE74  40 81 00 0C */	ble lbl_802CDF40
+/* 802CDF34 002CAE74  40 81 00 0C */	ble func_802CDF40
 /* 802CDF38 002CAE78  FC 03 00 40 */	fcmpo cr0, f3, f0
-/* 802CDF3C 002CAE7C  41 80 FF EC */	blt lbl_802CDF28
-lbl_802CDF40:
+/* 802CDF3C 002CAE7C  41 80 FF EC */	blt func_802CDF28
+
+/* 802CDF40 00C4 .text      func_802CDF40                  func_802CDF40                  */
+.global func_802CDF40
+func_802CDF40:
 /* 802CDF40 002CAE80  38 00 00 01 */	li r0, 1
 /* 802CDF44 002CAE84  7C 00 F0 30 */	slw r0, r0, r30
-/* 802CDF48 002CAE88  C8 22 C5 90 */	lfd f1, lbl_80455F90-_SDA2_BASE_(r2)
+/* 802CDF48 002CAE88  C8 22 C5 90 */	lfd f1, GFPixel__LIT_301-_SDA2_BASE_(r2)
 /* 802CDF4C 002CAE8C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 802CDF50 002CAE90  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CDF54 002CAE94  3C 00 43 30 */	lis r0, 0x4330
@@ -74,7 +100,7 @@ lbl_802CDF40:
 /* 802CDF84 002CAEC4  64 00 EE 00 */	oris r0, r0, 0xee00
 /* 802CDF88 002CAEC8  90 03 80 00 */	stw r0, -0x8000(r3)
 /* 802CDF8C 002CAECC  98 83 80 00 */	stb r4, -0x8000(r3)
-/* 802CDF90 002CAED0  C0 02 C5 88 */	lfs f0, lbl_80455F88-_SDA2_BASE_(r2)
+/* 802CDF90 002CAED0  C0 02 C5 88 */	lfs f0, LIT_298-_SDA2_BASE_(r2)
 /* 802CDF94 002CAED4  EC 20 00 F2 */	fmuls f1, f0, f3
 /* 802CDF98 002CAED8  48 09 41 15 */	bl __cvt_fp2unsigned
 /* 802CDF9C 002CAEDC  64 60 EF 00 */	oris r0, r3, 0xef00
@@ -104,7 +130,7 @@ lbl_802CDF40:
 /* 802CDFFC 002CAF3C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CE000 002CAF40  4E 80 00 20 */	blr 
 
-/* 802CE004 00A0 .text GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
+/* 802CE004 002C .text      GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc */
 .global GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc
 GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc:
 /* 802CE004 002CAF44  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -115,12 +141,18 @@ GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUc
 /* 802CE018 002CAF58  98 0A 80 00 */	stb r0, 0xCC008000@l(r10)
 /* 802CE01C 002CAF5C  3B C0 00 00 */	li r30, 0
 /* 802CE020 002CAF60  2C 03 00 01 */	cmpwi r3, 1
-/* 802CE024 002CAF64  41 82 00 0C */	beq lbl_802CE030
+/* 802CE024 002CAF64  41 82 00 0C */	beq func_802CE030
 /* 802CE028 002CAF68  2C 03 00 03 */	cmpwi r3, 3
-/* 802CE02C 002CAF6C  40 82 00 08 */	bne lbl_802CE034
-lbl_802CE030:
+/* 802CE02C 002CAF6C  40 82 00 08 */	bne func_802CE034
+
+/* 802CE030 0004 .text      func_802CE030                  func_802CE030                  */
+.global func_802CE030
+func_802CE030:
 /* 802CE030 002CAF70  3B C0 00 01 */	li r30, 1
-lbl_802CE034:
+
+/* 802CE034 0070 .text      func_802CE034                  func_802CE034                  */
+.global func_802CE034
+func_802CE034:
 /* 802CE034 002CAF74  54 DF 60 26 */	slwi r31, r6, 0xc
 /* 802CE038 002CAF78  20 03 00 03 */	subfic r0, r3, 3
 /* 802CE03C 002CAF7C  7C 00 00 34 */	cntlzw r0, r0
@@ -150,7 +182,7 @@ lbl_802CE034:
 /* 802CE09C 002CAFDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CE0A0 002CAFE0  4E 80 00 20 */	blr 
 
-/* 802CE0A4 002C .text GFSetZMode__FUc10_GXCompareUc GFSetZMode__FUc10_GXCompareUc */
+/* 802CE0A4 002C .text      GFSetZMode__FUc10_GXCompareUc  GFSetZMode__FUc10_GXCompareUc  */
 .global GFSetZMode__FUc10_GXCompareUc
 GFSetZMode__FUc10_GXCompareUc:
 /* 802CE0A4 002CAFE4  38 00 00 61 */	li r0, 0x61
@@ -166,42 +198,44 @@ GFSetZMode__FUc10_GXCompareUc:
 /* 802CE0CC 002CB00C  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455F68 0004 .sdata2 lbl_80455F68 @293 */
-.global lbl_80455F68
-lbl_80455F68:
+/* 80455F68 0004 .sdata2    GFPixel__LIT_293               @293                           */
+.global GFPixel__LIT_293
+GFPixel__LIT_293:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dc8 */
 
-/* 80455F6C 0004 .sdata2 lbl_80455F6C @294 */
-.global lbl_80455F6C
-lbl_80455F6C:
+/* 80455F6C 0004 .sdata2    GFPixel__LIT_294               @294                           */
+.global GFPixel__LIT_294
+GFPixel__LIT_294:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dcc */
 
-/* 80455F70 0008 .sdata2 lbl_80455F70 @295 */
-.global lbl_80455F70
-lbl_80455F70:
+/* 80455F70 0008 .sdata2    LIT_295                        @295                           */
+.global LIT_295
+LIT_295:
 .byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dd0 */
 
-/* 80455F78 0004 .sdata2 lbl_80455F78 @296 */
-.global lbl_80455F78
-lbl_80455F78:
+/* 80455F78 0004 .sdata2    LIT_296                        @296                           */
+.global LIT_296
+LIT_296:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dd8 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4ddc */
 
-/* 80455F80 0008 .sdata2 lbl_80455F80 @297 */
-.global lbl_80455F80
-lbl_80455F80:
+/* 80455F80 0008 .sdata2    GFPixel__LIT_297               @297                           */
+.global GFPixel__LIT_297
+GFPixel__LIT_297:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4de0 */
 
-/* 80455F88 0004 .sdata2 lbl_80455F88 @298 */
-.global lbl_80455F88
-lbl_80455F88:
+/* 80455F88 0004 .sdata2    LIT_298                        @298                           */
+.global LIT_298
+LIT_298:
 .byte 0x4b, 0x00, 0x00, 0x1e /* baserom.dol+0x3d4de8 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4dec */
 
-/* 80455F90 0008 .sdata2 lbl_80455F90 @301 */
-.global lbl_80455F90
-lbl_80455F90:
+/* 80455F90 0008 .sdata2    GFPixel__LIT_301               @301                           */
+.global GFPixel__LIT_301
+GFPixel__LIT_301:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4df0 */
 

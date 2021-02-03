@@ -55,22 +55,23 @@ bssAddress = read_u32(0xD8)
 bssSize = read_u32(0xDC)
 entryPoint = read_u32(0xE0)
 
-print('/*')
-print('Code sections:')
-for i in range(0, 7):
-    if textOffsets[i] != 0 and textAddresses[i] != 0 and textSizes[i] != 0:
-        print('\t.text%i:\t0x%08X\t0x%08X\t0x%08X' % (
-            i, textOffsets[i], textAddresses[i], textAddresses[i] + textSizes[i]))
-print('Data sections:')
-for i in range(0, 11):
-    if dataOffsets[i] != 0 and dataAddresses[i] != 0 and dataSizes[i] != 0:
-        print('\t.data%i:\t0x%08X\t0x%08X\t0x%08X' % (
-            i, dataOffsets[i], dataAddresses[i], dataAddresses[i] + dataSizes[i]))
-print('BSS section:')
-print('\t.bss:\t0x%08X\t0x%08X\t0x%08X' %
-      (0, bssAddress, bssAddress + bssSize))
-print('Entry Point: 0x%08X' % entryPoint)
-print('*/')
+if False:
+    print('/*')
+    print('Code sections:')
+    for i in range(0, 7):
+        if textOffsets[i] != 0 and textAddresses[i] != 0 and textSizes[i] != 0:
+            print('\t.text%i:\t0x%08X\t0x%08X\t0x%08X' % (
+                i, textOffsets[i], textAddresses[i], textAddresses[i] + textSizes[i]))
+    print('Data sections:')
+    for i in range(0, 11):
+        if dataOffsets[i] != 0 and dataAddresses[i] != 0 and dataSizes[i] != 0:
+            print('\t.data%i:\t0x%08X\t0x%08X\t0x%08X' % (
+                i, dataOffsets[i], dataAddresses[i], dataAddresses[i] + dataSizes[i]))
+    print('BSS section:')
+    print('\t.bss:\t0x%08X\t0x%08X\t0x%08X' %
+        (0, bssAddress, bssAddress + bssSize))
+    print('Entry Point: 0x%08X' % entryPoint)
+    print('*/')
 
 labels = set()
 functions = set()
@@ -479,10 +480,12 @@ def insn_to_text(address, insn, raw):
             value = r13_addr + sign_extend_16(insn.operands[2].imm)
             if value in labels:
                 return "%s %s, %s, %s-_SDA_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                #return "%s %s, %s, %s(r13)" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
         if is_load_store_reg_offset(insn, PPC_REG_R13):
             value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
             if value in labels:
                 return "%s %s, %s-_SDA_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                #return "%s %s, %s(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
 
     # r2 offset loads
     if r2_addr != None:

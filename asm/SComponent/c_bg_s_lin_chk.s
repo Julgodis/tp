@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80267D5C 0060 .text __ct__11cBgS_LinChkFv __ct__11cBgS_LinChkFv */
+/* 80267D5C 0060 .text      __ct__11cBgS_LinChkFv          __ct__11cBgS_LinChkFv          */
 .global __ct__11cBgS_LinChkFv
 __ct__11cBgS_LinChkFv:
 /* 80267D5C 00264C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -30,7 +32,7 @@ __ct__11cBgS_LinChkFv:
 /* 80267DB4 00264CF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80267DB8 00264CF8  4E 80 00 20 */	blr 
 
-/* 80267DBC 008C .text __dt__11cBgS_LinChkFv __dt__11cBgS_LinChkFv */
+/* 80267DBC 0048 .text      __dt__11cBgS_LinChkFv          __dt__11cBgS_LinChkFv          */
 .global __dt__11cBgS_LinChkFv
 __dt__11cBgS_LinChkFv:
 /* 80267DBC 00264CFC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -40,18 +42,21 @@ __dt__11cBgS_LinChkFv:
 /* 80267DCC 00264D0C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80267DD0 00264D10  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80267DD4 00264D14  7C 9F 23 78 */	mr r31, r4
-/* 80267DD8 00264D18  41 82 00 54 */	beq lbl_80267E2C
+/* 80267DD8 00264D18  41 82 00 54 */	beq func_80267E2C
 /* 80267DDC 00264D1C  3C 60 80 3C */	lis r3, __vt__11cBgS_LinChk@ha
 /* 80267DE0 00264D20  38 63 3F A8 */	addi r3, r3, __vt__11cBgS_LinChk@l
 /* 80267DE4 00264D24  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80267DE8 00264D28  38 03 00 0C */	addi r0, r3, 0xc
 /* 80267DEC 00264D2C  90 1E 00 20 */	stw r0, 0x20(r30)
 /* 80267DF0 00264D30  34 1E 00 24 */	addic. r0, r30, 0x24
-/* 80267DF4 00264D34  41 82 00 10 */	beq lbl_80267E04
+/* 80267DF4 00264D34  41 82 00 10 */	beq func_80267E04
 /* 80267DF8 00264D38  3C 60 80 3A */	lis r3, __vt__8cM3dGLin@ha
 /* 80267DFC 00264D3C  38 03 78 F8 */	addi r0, r3, __vt__8cM3dGLin@l
 /* 80267E00 00264D40  90 1E 00 3C */	stw r0, 0x3c(r30)
-lbl_80267E04:
+
+/* 80267E04 0028 .text      func_80267E04                  func_80267E04                  */
+.global func_80267E04
+func_80267E04:
 /* 80267E04 00264D44  38 7E 00 14 */	addi r3, r30, 0x14
 /* 80267E08 00264D48  38 80 00 00 */	li r4, 0
 /* 80267E0C 00264D4C  48 00 02 A5 */	bl __dt__13cBgS_PolyInfoFv
@@ -59,10 +64,13 @@ lbl_80267E04:
 /* 80267E14 00264D54  38 80 00 00 */	li r4, 0
 /* 80267E18 00264D58  4B FF FD 59 */	bl __dt__8cBgS_ChkFv
 /* 80267E1C 00264D5C  7F E0 07 35 */	extsh. r0, r31
-/* 80267E20 00264D60  40 81 00 0C */	ble lbl_80267E2C
+/* 80267E20 00264D60  40 81 00 0C */	ble func_80267E2C
 /* 80267E24 00264D64  7F C3 F3 78 */	mr r3, r30
 /* 80267E28 00264D68  48 06 6F 15 */	bl __dl__FPv
-lbl_80267E2C:
+
+/* 80267E2C 001C .text      func_80267E2C                  func_80267E2C                  */
+.global func_80267E2C
+func_80267E2C:
 /* 80267E2C 00264D6C  7F C3 F3 78 */	mr r3, r30
 /* 80267E30 00264D70  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80267E34 00264D74  83 C1 00 08 */	lwz r30, 8(r1)
@@ -71,7 +79,7 @@ lbl_80267E2C:
 /* 80267E40 00264D80  38 21 00 10 */	addi r1, r1, 0x10
 /* 80267E44 00264D84  4E 80 00 20 */	blr 
 
-/* 80267E48 0088 .text ct__11cBgS_LinChkFv ct__11cBgS_LinChkFv */
+/* 80267E48 0088 .text      ct__11cBgS_LinChkFv            ct__11cBgS_LinChkFv            */
 .global ct__11cBgS_LinChkFv
 ct__11cBgS_LinChkFv:
 /* 80267E48 00264D88  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -109,7 +117,7 @@ ct__11cBgS_LinChkFv:
 /* 80267EC8 00264E08  38 21 00 20 */	addi r1, r1, 0x20
 /* 80267ECC 00264E0C  4E 80 00 20 */	blr 
 
-/* 80267ED0 0070 .text Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi */
+/* 80267ED0 0070 .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi */
 .global Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi
 Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi:
 /* 80267ED0 00264E10  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -141,7 +149,7 @@ Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi:
 /* 80267F38 00264E78  38 21 00 20 */	addi r1, r1, 0x20
 /* 80267F3C 00264E7C  4E 80 00 20 */	blr 
 
-/* 80267F40 0040 .text PreCalc__11cBgS_LinChkFv PreCalc__11cBgS_LinChkFv */
+/* 80267F40 0040 .text      PreCalc__11cBgS_LinChkFv       PreCalc__11cBgS_LinChkFv       */
 .global PreCalc__11cBgS_LinChkFv
 PreCalc__11cBgS_LinChkFv:
 /* 80267F40 00264E80  80 03 00 4C */	lwz r0, 0x4c(r3)
@@ -161,16 +169,18 @@ PreCalc__11cBgS_LinChkFv:
 /* 80267F78 00264EB8  98 03 00 52 */	stb r0, 0x52(r3)
 /* 80267F7C 00264EBC  4E 80 00 20 */	blr 
 
-/* 80267F80 0008 .text lbl_80267F80 @20@__dt__11cBgS_LinChkFv */
-.global lbl_80267F80
-lbl_80267F80:
+/* 80267F80 0008 .text      func_80267F80                  @20@__dt__11cBgS_LinChkFv      */
+.global func_80267F80
+func_80267F80:
 /* 80267F80 00264EC0  38 63 FF EC */	addi r3, r3, -20
 /* 80267F84 00264EC4  4B FF FE 38 */	b __dt__11cBgS_LinChkFv
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C3FA8 0018 .data __vt__11cBgS_LinChk __vt__11cBgS_LinChk */
+/* 803C3FA8 0018 .data      __vt__11cBgS_LinChk            __vt__11cBgS_LinChk            */
 .global __vt__11cBgS_LinChk
 __vt__11cBgS_LinChk:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x26, 0x7d, 0xbc, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c0fa8 */

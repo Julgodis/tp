@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802673F4 0010 .text __ct__5csXyzFsss __ct__5csXyzFsss */
+/* 802673F4 0010 .text      __ct__5csXyzFsss               __ct__5csXyzFsss               */
 .global __ct__5csXyzFsss
 __ct__5csXyzFsss:
 /* 802673F4 00264334  B0 83 00 00 */	sth r4, 0(r3)
@@ -10,7 +12,7 @@ __ct__5csXyzFsss:
 /* 802673FC 0026433C  B0 C3 00 04 */	sth r6, 4(r3)
 /* 80267400 00264340  4E 80 00 20 */	blr 
 
-/* 80267404 0058 .text __pl__5csXyzFR5csXyz __pl__5csXyzFR5csXyz */
+/* 80267404 0058 .text      __pl__5csXyzFR5csXyz           __pl__5csXyzFR5csXyz           */
 .global __pl__5csXyzFR5csXyz
 __pl__5csXyzFR5csXyz:
 /* 80267404 00264344  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -36,7 +38,7 @@ __pl__5csXyzFR5csXyz:
 /* 80267454 00264394  38 21 00 10 */	addi r1, r1, 0x10
 /* 80267458 00264398  4E 80 00 20 */	blr 
 
-/* 8026745C 0034 .text __apl__5csXyzFR5csXyz __apl__5csXyzFR5csXyz */
+/* 8026745C 0034 .text      __apl__5csXyzFR5csXyz          __apl__5csXyzFR5csXyz          */
 .global __apl__5csXyzFR5csXyz
 __apl__5csXyzFR5csXyz:
 /* 8026745C 0026439C  A8 A3 00 00 */	lha r5, 0(r3)
@@ -53,7 +55,7 @@ __apl__5csXyzFR5csXyz:
 /* 80267488 002643C8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8026748C 002643CC  4E 80 00 20 */	blr 
 
-/* 80267490 0058 .text __mi__5csXyzFR5csXyz __mi__5csXyzFR5csXyz */
+/* 80267490 0058 .text      __mi__5csXyzFR5csXyz           __mi__5csXyzFR5csXyz           */
 .global __mi__5csXyzFR5csXyz
 __mi__5csXyzFR5csXyz:
 /* 80267490 002643D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -79,7 +81,7 @@ __mi__5csXyzFR5csXyz:
 /* 802674E0 00264420  38 21 00 10 */	addi r1, r1, 0x10
 /* 802674E4 00264424  4E 80 00 20 */	blr 
 
-/* 802674E8 00A4 .text __ml__5csXyzFf __ml__5csXyzFf */
+/* 802674E8 00A4 .text      __ml__5csXyzFf                 __ml__5csXyzFf                 */
 .global __ml__5csXyzFf
 __ml__5csXyzFf:
 /* 802674E8 00264428  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -87,7 +89,7 @@ __ml__5csXyzFf:
 /* 802674F0 00264430  90 01 00 44 */	stw r0, 0x44(r1)
 /* 802674F4 00264434  7C 87 23 78 */	mr r7, r4
 /* 802674F8 00264438  A8 04 00 00 */	lha r0, 0(r4)
-/* 802674FC 0026443C  C8 42 B6 A0 */	lfd f2, lbl_804550A0-_SDA2_BASE_(r2)
+/* 802674FC 0026443C  C8 42 B6 A0 */	lfd f2, c_sxyz__LIT_151-_SDA2_BASE_(r2)
 /* 80267500 00264440  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80267504 00264444  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80267508 00264448  3C C0 43 30 */	lis r6, 0x4330
@@ -124,7 +126,7 @@ __ml__5csXyzFf:
 /* 80267584 002644C4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80267588 002644C8  4E 80 00 20 */	blr 
 
-/* 8026758C 0058 .text __sinit_c_sxyz_cpp __sinit_c_sxyz_cpp */
+/* 8026758C 0058 .text      __sinit_c_sxyz_cpp             __sinit_c_sxyz_cpp             */
 .global __sinit_c_sxyz_cpp
 __sinit_c_sxyz_cpp:
 /* 8026758C 002644CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -138,12 +140,12 @@ __sinit_c_sxyz_cpp:
 /* 802675AC 002644EC  80 01 00 08 */	lwz r0, 8(r1)
 /* 802675B0 002644F0  90 0D 8B E0 */	stw r0, Zero__5csXyz-_SDA_BASE_(r13)
 /* 802675B4 002644F4  A0 01 00 0C */	lhz r0, 0xc(r1)
-/* 802675B8 002644F8  B0 0D 8B E4 */	sth r0, lbl_80451164-_SDA_BASE_(r13)
+/* 802675B8 002644F8  B0 0D 8B E4 */	sth r0, sym_80451164-_SDA_BASE_(r13)
 /* 802675BC 002644FC  38 6D 8B E0 */	addi r3, r13, Zero__5csXyz-_SDA_BASE_
 /* 802675C0 00264500  3C 80 80 02 */	lis r4, __dt__5csXyzFv@ha
 /* 802675C4 00264504  38 84 8B D0 */	addi r4, r4, __dt__5csXyzFv@l
-/* 802675C8 00264508  3C A0 80 43 */	lis r5, lbl_80430DA8@ha
-/* 802675CC 0026450C  38 A5 0D A8 */	addi r5, r5, lbl_80430DA8@l
+/* 802675C8 00264508  3C A0 80 43 */	lis r5, LIT_262@ha
+/* 802675CC 0026450C  38 A5 0D A8 */	addi r5, r5, LIT_262@l
 /* 802675D0 00264510  48 0F A6 55 */	bl __register_global_object
 /* 802675D4 00264514  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802675D8 00264518  7C 08 03 A6 */	mtlr r0
@@ -151,32 +153,38 @@ __sinit_c_sxyz_cpp:
 /* 802675E0 00264520  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 80430DA8 000C .bss lbl_80430DA8 @262 */
-.global lbl_80430DA8
-lbl_80430DA8:
+/* 80430DA8 000C .bss       LIT_262                        @262                           */
+.global LIT_262
+LIT_262:
 .skip 0xc
 .skip 0x4 /* padding */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451160 0004 .sbss Zero__5csXyz Zero__5csXyz */
+/* 80451160 0004 .sbss      Zero__5csXyz                   Zero__5csXyz                   */
 .global Zero__5csXyz
 Zero__5csXyz:
 .skip 0x4
 
-/* 80451164 0004 .sbss lbl_80451164 lbl_80451164 */
-.global lbl_80451164
-lbl_80451164:
+/* 80451164 0004 .sbss      sym_80451164                   sym_80451164                   */
+.global sym_80451164
+sym_80451164:
 .skip 0x4
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 804550A0 0008 .sdata2 lbl_804550A0 @151 */
-.global lbl_804550A0
-lbl_804550A0:
+/* 804550A0 0008 .sdata2    c_sxyz__LIT_151                @151                           */
+.global c_sxyz__LIT_151
+c_sxyz__LIT_151:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3f00 */
 

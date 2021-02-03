@@ -1,72 +1,101 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8029E3B0 00CC .text clamp__14JASSoundParamsFv clamp__14JASSoundParamsFv */
+/* 8029E3B0 0018 .text      clamp__14JASSoundParamsFv      clamp__14JASSoundParamsFv      */
 .global clamp__14JASSoundParamsFv
 clamp__14JASSoundParamsFv:
 /* 8029E3B0 0029B2F0  C0 23 00 00 */	lfs f1, 0(r3)
-/* 8029E3B4 0029B2F4  C0 02 BD 60 */	lfs f0, lbl_80455760-_SDA2_BASE_(r2)
+/* 8029E3B4 0029B2F4  C0 02 BD 60 */	lfs f0, LIT_299-_SDA2_BASE_(r2)
 /* 8029E3B8 0029B2F8  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E3BC 0029B2FC  40 80 00 0C */	bge lbl_8029E3C8
+/* 8029E3BC 0029B2FC  40 80 00 0C */	bge func_8029E3C8
 /* 8029E3C0 0029B300  D0 03 00 00 */	stfs f0, 0(r3)
-/* 8029E3C4 0029B304  48 00 00 14 */	b lbl_8029E3D8
-lbl_8029E3C8:
-/* 8029E3C8 0029B308  C0 02 BD 64 */	lfs f0, lbl_80455764-_SDA2_BASE_(r2)
+/* 8029E3C4 0029B304  48 00 00 14 */	b func_8029E3D8
+
+/* 8029E3C8 0010 .text      func_8029E3C8                  func_8029E3C8                  */
+.global func_8029E3C8
+func_8029E3C8:
+/* 8029E3C8 0029B308  C0 02 BD 64 */	lfs f0, LIT_300-_SDA2_BASE_(r2)
 /* 8029E3CC 0029B30C  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E3D0 0029B310  40 81 00 08 */	ble lbl_8029E3D8
+/* 8029E3D0 0029B310  40 81 00 08 */	ble func_8029E3D8
 /* 8029E3D4 0029B314  D0 03 00 00 */	stfs f0, 0(r3)
-lbl_8029E3D8:
+
+/* 8029E3D8 0018 .text      func_8029E3D8                  func_8029E3D8                  */
+.global func_8029E3D8
+func_8029E3D8:
 /* 8029E3D8 0029B318  C0 23 00 08 */	lfs f1, 8(r3)
-/* 8029E3DC 0029B31C  C0 02 BD 60 */	lfs f0, lbl_80455760-_SDA2_BASE_(r2)
+/* 8029E3DC 0029B31C  C0 02 BD 60 */	lfs f0, LIT_299-_SDA2_BASE_(r2)
 /* 8029E3E0 0029B320  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E3E4 0029B324  40 80 00 0C */	bge lbl_8029E3F0
+/* 8029E3E4 0029B324  40 80 00 0C */	bge func_8029E3F0
 /* 8029E3E8 0029B328  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8029E3EC 0029B32C  48 00 00 14 */	b lbl_8029E400
-lbl_8029E3F0:
-/* 8029E3F0 0029B330  C0 02 BD 68 */	lfs f0, lbl_80455768-_SDA2_BASE_(r2)
+/* 8029E3EC 0029B32C  48 00 00 14 */	b func_8029E400
+
+/* 8029E3F0 0010 .text      func_8029E3F0                  func_8029E3F0                  */
+.global func_8029E3F0
+func_8029E3F0:
+/* 8029E3F0 0029B330  C0 02 BD 68 */	lfs f0, JASSoundParams__LIT_301-_SDA2_BASE_(r2)
 /* 8029E3F4 0029B334  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E3F8 0029B338  40 81 00 08 */	ble lbl_8029E400
+/* 8029E3F8 0029B338  40 81 00 08 */	ble func_8029E400
 /* 8029E3FC 0029B33C  D0 03 00 08 */	stfs f0, 8(r3)
-lbl_8029E400:
+
+/* 8029E400 0018 .text      func_8029E400                  func_8029E400                  */
+.global func_8029E400
+func_8029E400:
 /* 8029E400 0029B340  C0 23 00 04 */	lfs f1, 4(r3)
-/* 8029E404 0029B344  C0 02 BD 60 */	lfs f0, lbl_80455760-_SDA2_BASE_(r2)
+/* 8029E404 0029B344  C0 02 BD 60 */	lfs f0, LIT_299-_SDA2_BASE_(r2)
 /* 8029E408 0029B348  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E40C 0029B34C  40 80 00 0C */	bge lbl_8029E418
+/* 8029E40C 0029B34C  40 80 00 0C */	bge func_8029E418
 /* 8029E410 0029B350  D0 03 00 04 */	stfs f0, 4(r3)
-/* 8029E414 0029B354  48 00 00 14 */	b lbl_8029E428
-lbl_8029E418:
-/* 8029E418 0029B358  C0 02 BD 64 */	lfs f0, lbl_80455764-_SDA2_BASE_(r2)
+/* 8029E414 0029B354  48 00 00 14 */	b func_8029E428
+
+/* 8029E418 0010 .text      func_8029E418                  func_8029E418                  */
+.global func_8029E418
+func_8029E418:
+/* 8029E418 0029B358  C0 02 BD 64 */	lfs f0, LIT_300-_SDA2_BASE_(r2)
 /* 8029E41C 0029B35C  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E420 0029B360  40 81 00 08 */	ble lbl_8029E428
+/* 8029E420 0029B360  40 81 00 08 */	ble func_8029E428
 /* 8029E424 0029B364  D0 03 00 04 */	stfs f0, 4(r3)
-lbl_8029E428:
+
+/* 8029E428 0018 .text      func_8029E428                  func_8029E428                  */
+.global func_8029E428
+func_8029E428:
 /* 8029E428 0029B368  C0 23 00 0C */	lfs f1, 0xc(r3)
-/* 8029E42C 0029B36C  C0 02 BD 60 */	lfs f0, lbl_80455760-_SDA2_BASE_(r2)
+/* 8029E42C 0029B36C  C0 02 BD 60 */	lfs f0, LIT_299-_SDA2_BASE_(r2)
 /* 8029E430 0029B370  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E434 0029B374  40 80 00 0C */	bge lbl_8029E440
+/* 8029E434 0029B374  40 80 00 0C */	bge func_8029E440
 /* 8029E438 0029B378  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 8029E43C 0029B37C  48 00 00 14 */	b lbl_8029E450
-lbl_8029E440:
-/* 8029E440 0029B380  C0 02 BD 64 */	lfs f0, lbl_80455764-_SDA2_BASE_(r2)
+/* 8029E43C 0029B37C  48 00 00 14 */	b func_8029E450
+
+/* 8029E440 0010 .text      func_8029E440                  func_8029E440                  */
+.global func_8029E440
+func_8029E440:
+/* 8029E440 0029B380  C0 02 BD 64 */	lfs f0, LIT_300-_SDA2_BASE_(r2)
 /* 8029E444 0029B384  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E448 0029B388  40 81 00 08 */	ble lbl_8029E450
+/* 8029E448 0029B388  40 81 00 08 */	ble func_8029E450
 /* 8029E44C 0029B38C  D0 03 00 0C */	stfs f0, 0xc(r3)
-lbl_8029E450:
+
+/* 8029E450 0018 .text      func_8029E450                  func_8029E450                  */
+.global func_8029E450
+func_8029E450:
 /* 8029E450 0029B390  C0 23 00 10 */	lfs f1, 0x10(r3)
-/* 8029E454 0029B394  C0 02 BD 60 */	lfs f0, lbl_80455760-_SDA2_BASE_(r2)
+/* 8029E454 0029B394  C0 02 BD 60 */	lfs f0, LIT_299-_SDA2_BASE_(r2)
 /* 8029E458 0029B398  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029E45C 0029B39C  40 80 00 0C */	bge lbl_8029E468
+/* 8029E45C 0029B39C  40 80 00 0C */	bge func_8029E468
 /* 8029E460 0029B3A0  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029E464 0029B3A4  4E 80 00 20 */	blr 
-lbl_8029E468:
-/* 8029E468 0029B3A8  C0 02 BD 64 */	lfs f0, lbl_80455764-_SDA2_BASE_(r2)
+
+/* 8029E468 0014 .text      func_8029E468                  func_8029E468                  */
+.global func_8029E468
+func_8029E468:
+/* 8029E468 0029B3A8  C0 02 BD 64 */	lfs f0, LIT_300-_SDA2_BASE_(r2)
 /* 8029E46C 0029B3AC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029E470 0029B3B0  4C 81 00 20 */	blelr 
 /* 8029E474 0029B3B4  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029E478 0029B3B8  4E 80 00 20 */	blr 
 
-/* 8029E47C 005C .text combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
+/* 8029E47C 005C .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
 .global combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams
 combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams:
 /* 8029E47C 0029B3BC  C0 24 00 00 */	lfs f1, 0(r4)
@@ -84,7 +113,7 @@ combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams:
 /* 8029E4AC 0029B3EC  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8029E4B0 0029B3F0  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 8029E4B4 0029B3F4  EC 21 00 2A */	fadds f1, f1, f0
-/* 8029E4B8 0029B3F8  C0 02 BD 6C */	lfs f0, lbl_8045576C-_SDA2_BASE_(r2)
+/* 8029E4B8 0029B3F8  C0 02 BD 6C */	lfs f0, JASSoundParams__LIT_311-_SDA2_BASE_(r2)
 /* 8029E4BC 0029B3FC  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8029E4C0 0029B400  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8029E4C4 0029B404  C0 24 00 10 */	lfs f1, 0x10(r4)
@@ -92,28 +121,30 @@ combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams:
 /* 8029E4CC 0029B40C  EC 01 00 2A */	fadds f0, f1, f0
 /* 8029E4D0 0029B410  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029E4D4 0029B414  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455760 0004 .sdata2 lbl_80455760 @299 */
-.global lbl_80455760
-lbl_80455760:
+/* 80455760 0004 .sdata2    LIT_299                        @299                           */
+.global LIT_299
+LIT_299:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45c0 */
 
-/* 80455764 0004 .sdata2 lbl_80455764 @300 */
-.global lbl_80455764
-lbl_80455764:
+/* 80455764 0004 .sdata2    LIT_300                        @300                           */
+.global LIT_300
+LIT_300:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d45c4 */
 
-/* 80455768 0004 .sdata2 lbl_80455768 @301 */
-.global lbl_80455768
-lbl_80455768:
+/* 80455768 0004 .sdata2    JASSoundParams__LIT_301        @301                           */
+.global JASSoundParams__LIT_301
+JASSoundParams__LIT_301:
 .byte 0x41, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45c8 */
 
-/* 8045576C 0004 .sdata2 lbl_8045576C @311 */
-.global lbl_8045576C
-lbl_8045576C:
+/* 8045576C 0004 .sdata2    JASSoundParams__LIT_311        @311                           */
+.global JASSoundParams__LIT_311
+JASSoundParams__LIT_311:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45cc */
 

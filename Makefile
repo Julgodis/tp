@@ -34,8 +34,6 @@ MAP     := $(BUILD_DIR)/dolzel2.map
 
 include obj_files.mk
 
-O_FILES := $(INIT_O_FILES) $(EXTAB_O_FILES) $(EXTABINDEX_O_FILES) $(TEXT_O_FILES)
-
 #-------------------------------------------------------------------------------
 # Tools
 #-------------------------------------------------------------------------------
@@ -67,13 +65,6 @@ ELF2DOL := tools/elf2dol
 PYTHON  := python3
 DOXYGEN := doxygen
 
-# Library order matters!
-LIBS     := 
-#-lbase -los -lexi -lsi -ldb \
-#-lmtx -ldvd -lvi -lpad -lai -lar -ldsp \
-#-lcard -lgx -lgd -lRuntime.PPCEABI.H
-LIB_PATH := $(BUILD_DIR)
-
 POSTPROC := tools/postprocess.py
 
 # Options
@@ -83,8 +74,8 @@ INCLUDES := -i include -i include/dolphin/ -i src
 ASFLAGS := -mgekko -I include
 
 # Linker flags
-LDFLAGS     := -map $(MAP) -fp hard -nodefaults -w off -lr $(LIB_PATH) $(LIBS)
-LIB_LDFLAGS := -library -fp hard -nodefaults -w off 
+LDFLAGS     := -map $(MAP) -fp hard -nodefaults 
+LIB_LDFLAGS := -library -fp hard -nodefaults 
 
 # Compiler flags
 CFLAGS  += -Cpp_exceptions off -proc gekko -fp hard -O3 -nodefaults -msgstyle gcc -str pool,readonly,reuse -RTTI off -maxerrors 5 -enum int  $(INCLUDES)
@@ -124,21 +115,18 @@ clean:
 	rm -f -d -r build
 	$(MAKE) -C tools clean
 
+clean_elf:
+	rm $(ELF)
+
 tools:
 	$(MAKE) -C tools
 
 docs:
 	$(DOXYGEN) Doxyfile
 
-
-# libraries
-libs: 
-
 # elf
-$(ELF): $(O_FILES) $(LDSCRIPT) libs
+$(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo $(O_FILES) > build/o_files
-	#powerpc-linux-gnu-objdump -h $(O_FILES) -j .ctors -s
-	#$(LD) $(LIB_LDFLAGS) -r1 -o test.a -lcf $(LDSCRIPT) @build/o_files
 	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 #	$(OBJCOPY) $@ $@

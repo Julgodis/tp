@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8026F648 001C .text SetC__8cM3dGSphFRC4cXyz SetC__8cM3dGSphFRC4cXyz */
+/* 8026F648 001C .text      SetC__8cM3dGSphFRC4cXyz        SetC__8cM3dGSphFRC4cXyz        */
 .global SetC__8cM3dGSphFRC4cXyz
 SetC__8cM3dGSphFRC4cXyz:
 /* 8026F648 0026C588  C0 04 00 00 */	lfs f0, 0(r4)
@@ -13,7 +15,7 @@ SetC__8cM3dGSphFRC4cXyz:
 /* 8026F65C 0026C59C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8026F660 0026C5A0  4E 80 00 20 */	blr 
 
-/* 8026F664 0044 .text Set__8cM3dGSphFRC4cXyzf Set__8cM3dGSphFRC4cXyzf */
+/* 8026F664 0044 .text      Set__8cM3dGSphFRC4cXyzf        Set__8cM3dGSphFRC4cXyzf        */
 .global Set__8cM3dGSphFRC4cXyzf
 Set__8cM3dGSphFRC4cXyzf:
 /* 8026F664 0026C5A4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -34,7 +36,7 @@ Set__8cM3dGSphFRC4cXyzf:
 /* 8026F6A0 0026C5E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8026F6A4 0026C5E4  4E 80 00 20 */	blr 
 
-/* 8026F6A8 0060 .text Set__8cM3dGSphFRC9cM3dGSphS Set__8cM3dGSphFRC9cM3dGSphS */
+/* 8026F6A8 0060 .text      Set__8cM3dGSphFRC9cM3dGSphS    Set__8cM3dGSphFRC9cM3dGSphS    */
 .global Set__8cM3dGSphFRC9cM3dGSphS
 Set__8cM3dGSphFRC9cM3dGSphS:
 /* 8026F6A8 0026C5E8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -62,13 +64,13 @@ Set__8cM3dGSphFRC9cM3dGSphS:
 /* 8026F700 0026C640  38 21 00 20 */	addi r1, r1, 0x20
 /* 8026F704 0026C644  4E 80 00 20 */	blr 
 
-/* 8026F708 0008 .text SetR__8cM3dGSphFf SetR__8cM3dGSphFf */
+/* 8026F708 0008 .text      SetR__8cM3dGSphFf              SetR__8cM3dGSphFf              */
 .global SetR__8cM3dGSphFf
 SetR__8cM3dGSphFf:
 /* 8026F708 0026C648  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8026F70C 0026C64C  4E 80 00 20 */	blr 
 
-/* 8026F710 002C .text cross__8cM3dGSphCFPC8cM3dGSphP4cXyz cross__8cM3dGSphCFPC8cM3dGSphP4cXyz */
+/* 8026F710 002C .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz cross__8cM3dGSphCFPC8cM3dGSphP4cXyz */
 .global cross__8cM3dGSphCFPC8cM3dGSphP4cXyz
 cross__8cM3dGSphCFPC8cM3dGSphP4cXyz:
 /* 8026F710 0026C650  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -83,7 +85,7 @@ cross__8cM3dGSphCFPC8cM3dGSphP4cXyz:
 /* 8026F734 0026C674  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F738 0026C678  4E 80 00 20 */	blr 
 
-/* 8026F73C 0030 .text cross__8cM3dGSphCFPC8cM3dGCylP4cXyz cross__8cM3dGSphCFPC8cM3dGCylP4cXyz */
+/* 8026F73C 0030 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz cross__8cM3dGSphCFPC8cM3dGCylP4cXyz */
 .global cross__8cM3dGSphCFPC8cM3dGCylP4cXyz
 cross__8cM3dGSphCFPC8cM3dGCylP4cXyz:
 /* 8026F73C 0026C67C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -99,7 +101,7 @@ cross__8cM3dGSphCFPC8cM3dGCylP4cXyz:
 /* 8026F764 0026C6A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F768 0026C6A8  4E 80 00 20 */	blr 
 
-/* 8026F76C 0044 .text GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz */
+/* 8026F76C 0044 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz */
 .global GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz
 GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz:
 /* 8026F76C 0026C6AC  C0 83 00 00 */	lfs f4, 0(r3)

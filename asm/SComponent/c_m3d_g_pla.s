@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8026F3DC 002C .text __ct__8cM3dGPlaFPC4cXyzf __ct__8cM3dGPlaFPC4cXyzf */
+/* 8026F3DC 002C .text      __ct__8cM3dGPlaFPC4cXyzf       __ct__8cM3dGPlaFPC4cXyzf       */
 .global __ct__8cM3dGPlaFPC4cXyzf
 __ct__8cM3dGPlaFPC4cXyzf:
 /* 8026F3DC 0026C31C  3C A0 80 3A */	lis r5, __vt__8cM3dGPla@ha
@@ -17,7 +19,7 @@ __ct__8cM3dGPlaFPC4cXyzf:
 /* 8026F400 0026C340  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8026F404 0026C344  4E 80 00 20 */	blr 
 
-/* 8026F408 00BC .text crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz */
+/* 8026F408 0084 .text      crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz */
 .global crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz
 crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz:
 /* 8026F408 0026C348  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -44,7 +46,7 @@ crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz:
 /* 8026F45C 0026C39C  FC 20 00 18 */	frsp f1, f0
 /* 8026F460 0026C3A0  C0 0D 8C 00 */	lfs f0, G_CM3D_F_ABS_MIN-_SDA_BASE_(r13)
 /* 8026F464 0026C3A4  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8026F468 0026C3A8  40 80 00 24 */	bge lbl_8026F48C
+/* 8026F468 0026C3A8  40 80 00 24 */	bge func_8026F48C
 /* 8026F46C 0026C3AC  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 8026F470 0026C3B0  D0 1F 00 00 */	stfs f0, 0(r31)
 /* 8026F474 0026C3B4  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -52,15 +54,21 @@ crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz:
 /* 8026F47C 0026C3BC  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 8026F480 0026C3C0  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 8026F484 0026C3C4  38 60 00 00 */	li r3, 0
-/* 8026F488 0026C3C8  48 00 00 1C */	b lbl_8026F4A4
-lbl_8026F48C:
+/* 8026F488 0026C3C8  48 00 00 1C */	b func_8026F4A4
+
+/* 8026F48C 0018 .text      func_8026F48C                  func_8026F48C                  */
+.global func_8026F48C
+func_8026F48C:
 /* 8026F48C 0026C3CC  7F A3 EB 78 */	mr r3, r29
 /* 8026F490 0026C3D0  7F C4 F3 78 */	mr r4, r30
 /* 8026F494 0026C3D4  EC 3F 10 24 */	fdivs f1, f31, f2
 /* 8026F498 0026C3D8  7F E5 FB 78 */	mr r5, r31
 /* 8026F49C 0026C3DC  4B FF 91 15 */	bl cM3d_InDivPos2__FPC3VecPC3VecfP3Vec
 /* 8026F4A0 0026C3E0  38 60 00 01 */	li r3, 1
-lbl_8026F4A4:
+
+/* 8026F4A4 0020 .text      func_8026F4A4                  func_8026F4A4                  */
+.global func_8026F4A4
+func_8026F4A4:
 /* 8026F4A4 0026C3E4  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 8026F4A8 0026C3E8  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 8026F4AC 0026C3EC  39 61 00 20 */	addi r11, r1, 0x20
@@ -70,7 +78,7 @@ lbl_8026F4A4:
 /* 8026F4BC 0026C3FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 8026F4C0 0026C400  4E 80 00 20 */	blr 
 
-/* 8026F4C4 0068 .text SetupNP0__8cM3dGPlaFRC3VecRC3Vec SetupNP0__8cM3dGPlaFRC3VecRC3Vec */
+/* 8026F4C4 0068 .text      SetupNP0__8cM3dGPlaFRC3VecRC3Vec SetupNP0__8cM3dGPlaFRC3VecRC3Vec */
 .global SetupNP0__8cM3dGPlaFRC3VecRC3Vec
 SetupNP0__8cM3dGPlaFRC3VecRC3Vec:
 /* 8026F4C4 0026C404  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -100,7 +108,7 @@ SetupNP0__8cM3dGPlaFRC3VecRC3Vec:
 /* 8026F524 0026C464  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F528 0026C468  4E 80 00 20 */	blr 
 
-/* 8026F52C 0050 .text SetupNP__8cM3dGPlaFRC3VecRC3Vec SetupNP__8cM3dGPlaFRC3VecRC3Vec */
+/* 8026F52C 0050 .text      SetupNP__8cM3dGPlaFRC3VecRC3Vec SetupNP__8cM3dGPlaFRC3VecRC3Vec */
 .global SetupNP__8cM3dGPlaFRC3VecRC3Vec
 SetupNP__8cM3dGPlaFRC3VecRC3Vec:
 /* 8026F52C 0026C46C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -124,7 +132,7 @@ SetupNP__8cM3dGPlaFRC3VecRC3Vec:
 /* 8026F574 0026C4B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F578 0026C4B8  4E 80 00 20 */	blr 
 
-/* 8026F57C 0058 .text getCrossY__8cM3dGPlaCFRC4cXyzPf getCrossY__8cM3dGPlaCFRC4cXyzPf */
+/* 8026F57C 0020 .text      getCrossY__8cM3dGPlaCFRC4cXyzPf getCrossY__8cM3dGPlaCFRC4cXyzPf */
 .global getCrossY__8cM3dGPlaCFRC4cXyzPf
 getCrossY__8cM3dGPlaCFRC4cXyzPf:
 /* 8026F57C 0026C4BC  C0 63 00 04 */	lfs f3, 4(r3)
@@ -132,10 +140,13 @@ getCrossY__8cM3dGPlaCFRC4cXyzPf:
 /* 8026F584 0026C4C4  FC 20 00 18 */	frsp f1, f0
 /* 8026F588 0026C4C8  C0 0D 8C 00 */	lfs f0, G_CM3D_F_ABS_MIN-_SDA_BASE_(r13)
 /* 8026F58C 0026C4CC  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8026F590 0026C4D0  40 80 00 0C */	bge lbl_8026F59C
+/* 8026F590 0026C4D0  40 80 00 0C */	bge func_8026F59C
 /* 8026F594 0026C4D4  38 60 00 00 */	li r3, 0
 /* 8026F598 0026C4D8  4E 80 00 20 */	blr 
-lbl_8026F59C:
+
+/* 8026F59C 0038 .text      func_8026F59C                  func_8026F59C                  */
+.global func_8026F59C
+func_8026F59C:
 /* 8026F59C 0026C4DC  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8026F5A0 0026C4E0  FC 20 00 50 */	fneg f1, f0
 /* 8026F5A4 0026C4E4  C0 04 00 00 */	lfs f0, 0(r4)
@@ -151,7 +162,7 @@ lbl_8026F59C:
 /* 8026F5CC 0026C50C  38 60 00 01 */	li r3, 1
 /* 8026F5D0 0026C510  4E 80 00 20 */	blr 
 
-/* 8026F5D4 0050 .text getCrossYLessD__8cM3dGPlaCFRC3VecPf getCrossYLessD__8cM3dGPlaCFRC3VecPf */
+/* 8026F5D4 0020 .text      getCrossYLessD__8cM3dGPlaCFRC3VecPf getCrossYLessD__8cM3dGPlaCFRC3VecPf */
 .global getCrossYLessD__8cM3dGPlaCFRC3VecPf
 getCrossYLessD__8cM3dGPlaCFRC3VecPf:
 /* 8026F5D4 0026C514  C0 63 00 04 */	lfs f3, 4(r3)
@@ -159,10 +170,13 @@ getCrossYLessD__8cM3dGPlaCFRC3VecPf:
 /* 8026F5DC 0026C51C  FC 20 00 18 */	frsp f1, f0
 /* 8026F5E0 0026C520  C0 0D 8C 00 */	lfs f0, G_CM3D_F_ABS_MIN-_SDA_BASE_(r13)
 /* 8026F5E4 0026C524  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8026F5E8 0026C528  40 80 00 0C */	bge lbl_8026F5F4
+/* 8026F5E8 0026C528  40 80 00 0C */	bge func_8026F5F4
 /* 8026F5EC 0026C52C  38 60 00 00 */	li r3, 0
 /* 8026F5F0 0026C530  4E 80 00 20 */	blr 
-lbl_8026F5F4:
+
+/* 8026F5F4 0030 .text      func_8026F5F4                  func_8026F5F4                  */
+.global func_8026F5F4
+func_8026F5F4:
 /* 8026F5F4 0026C534  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8026F5F8 0026C538  FC 20 00 50 */	fneg f1, f0
 /* 8026F5FC 0026C53C  C0 04 00 00 */	lfs f0, 0(r4)
@@ -176,7 +190,7 @@ lbl_8026F5F4:
 /* 8026F61C 0026C55C  38 60 00 01 */	li r3, 1
 /* 8026F620 0026C560  4E 80 00 20 */	blr 
 
-/* 8026F624 0024 .text Set__8cM3dGPlaFPC8cM3dGPla Set__8cM3dGPlaFPC8cM3dGPla */
+/* 8026F624 0024 .text      Set__8cM3dGPlaFPC8cM3dGPla     Set__8cM3dGPlaFPC8cM3dGPla     */
 .global Set__8cM3dGPlaFPC8cM3dGPla
 Set__8cM3dGPlaFPC8cM3dGPla:
 /* 8026F624 0026C564  C0 04 00 00 */	lfs f0, 0(r4)

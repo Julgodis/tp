@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8036CC18 0024 .text TRKDestructEvent TRKDestructEvent */
+/* 8036CC18 0024 .text      TRKDestructEvent               TRKDestructEvent               */
 .global TRKDestructEvent
 TRKDestructEvent:
 /* 8036CC18 00369B58  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,7 +17,7 @@ TRKDestructEvent:
 /* 8036CC34 00369B74  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036CC38 00369B78  4E 80 00 20 */	blr 
 
-/* 8036CC3C 0018 .text TRKConstructEvent TRKConstructEvent */
+/* 8036CC3C 0018 .text      TRKConstructEvent              TRKConstructEvent              */
 .global TRKConstructEvent
 TRKConstructEvent:
 /* 8036CC3C 00369B7C  90 83 00 00 */	stw r4, 0(r3)
@@ -25,7 +27,7 @@ TRKConstructEvent:
 /* 8036CC4C 00369B8C  90 03 00 08 */	stw r0, 8(r3)
 /* 8036CC50 00369B90  4E 80 00 20 */	blr 
 
-/* 8036CC54 00E0 .text TRKPostEvent TRKPostEvent */
+/* 8036CC54 0048 .text      TRKPostEvent                   TRKPostEvent                   */
 .global TRKPostEvent
 TRKPostEvent:
 /* 8036CC54 00369B94  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -43,10 +45,13 @@ TRKPostEvent:
 /* 8036CC84 00369BC4  3B C3 D8 90 */	addi r30, r3, gTRKEventQueue@l
 /* 8036CC88 00369BC8  80 7E 00 04 */	lwz r3, 4(r30)
 /* 8036CC8C 00369BCC  2C 03 00 02 */	cmpwi r3, 2
-/* 8036CC90 00369BD0  40 82 00 0C */	bne lbl_8036CC9C
+/* 8036CC90 00369BD0  40 82 00 0C */	bne func_8036CC9C
 /* 8036CC94 00369BD4  3B E0 01 00 */	li r31, 0x100
-/* 8036CC98 00369BD8  48 00 00 70 */	b lbl_8036CD08
-lbl_8036CC9C:
+/* 8036CC98 00369BD8  48 00 00 70 */	b func_8036CD08
+
+/* 8036CC9C 0060 .text      func_8036CC9C                  func_8036CC9C                  */
+.global func_8036CC9C
+func_8036CC9C:
 /* 8036CC9C 00369BDC  80 1E 00 08 */	lwz r0, 8(r30)
 /* 8036CCA0 00369BE0  7F A4 EB 78 */	mr r4, r29
 /* 8036CCA4 00369BE4  38 A0 00 0C */	li r5, 0xc
@@ -68,14 +73,20 @@ lbl_8036CC9C:
 /* 8036CCE4 00369C24  38 03 00 01 */	addi r0, r3, 1
 /* 8036CCE8 00369C28  28 00 01 00 */	cmplwi r0, 0x100
 /* 8036CCEC 00369C2C  90 04 00 24 */	stw r0, 0x24(r4)
-/* 8036CCF0 00369C30  40 80 00 0C */	bge lbl_8036CCFC
+/* 8036CCF0 00369C30  40 80 00 0C */	bge func_8036CCFC
 /* 8036CCF4 00369C34  38 00 01 00 */	li r0, 0x100
 /* 8036CCF8 00369C38  90 04 00 24 */	stw r0, 0x24(r4)
-lbl_8036CCFC:
+
+/* 8036CCFC 000C .text      func_8036CCFC                  func_8036CCFC                  */
+.global func_8036CCFC
+func_8036CCFC:
 /* 8036CCFC 00369C3C  80 7E 00 04 */	lwz r3, 4(r30)
 /* 8036CD00 00369C40  38 03 00 01 */	addi r0, r3, 1
 /* 8036CD04 00369C44  90 1E 00 04 */	stw r0, 4(r30)
-lbl_8036CD08:
+
+/* 8036CD08 002C .text      func_8036CD08                  func_8036CD08                  */
+.global func_8036CD08
+func_8036CD08:
 /* 8036CD08 00369C48  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CD0C 00369C4C  38 63 D8 90 */	addi r3, r3, gTRKEventQueue@l
 /* 8036CD10 00369C50  48 00 27 89 */	bl TRKReleaseMutex
@@ -88,7 +99,7 @@ lbl_8036CD08:
 /* 8036CD2C 00369C6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036CD30 00369C70  4E 80 00 20 */	blr 
 
-/* 8036CD34 00B4 .text TRKGetNextEvent TRKGetNextEvent */
+/* 8036CD34 0084 .text      TRKGetNextEvent                TRKGetNextEvent                */
 .global TRKGetNextEvent
 TRKGetNextEvent:
 /* 8036CD34 00369C74  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -106,7 +117,7 @@ TRKGetNextEvent:
 /* 8036CD64 00369CA4  3B E3 D8 90 */	addi r31, r3, gTRKEventQueue@l
 /* 8036CD68 00369CA8  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8036CD6C 00369CAC  2C 00 00 00 */	cmpwi r0, 0
-/* 8036CD70 00369CB0  40 81 00 4C */	ble lbl_8036CDBC
+/* 8036CD70 00369CB0  40 81 00 4C */	ble func_8036CDBC
 /* 8036CD74 00369CB4  80 1F 00 08 */	lwz r0, 8(r31)
 /* 8036CD78 00369CB8  7F A3 EB 78 */	mr r3, r29
 /* 8036CD7C 00369CBC  38 A0 00 0C */	li r5, 0xc
@@ -121,12 +132,18 @@ TRKGetNextEvent:
 /* 8036CDA0 00369CE0  90 1F 00 08 */	stw r0, 8(r31)
 /* 8036CDA4 00369CE4  2C 00 00 02 */	cmpwi r0, 2
 /* 8036CDA8 00369CE8  90 7F 00 04 */	stw r3, 4(r31)
-/* 8036CDAC 00369CEC  40 82 00 0C */	bne lbl_8036CDB8
+/* 8036CDAC 00369CEC  40 82 00 0C */	bne func_8036CDB8
 /* 8036CDB0 00369CF0  38 00 00 00 */	li r0, 0
 /* 8036CDB4 00369CF4  90 1F 00 08 */	stw r0, 8(r31)
-lbl_8036CDB8:
+
+/* 8036CDB8 0004 .text      func_8036CDB8                  func_8036CDB8                  */
+.global func_8036CDB8
+func_8036CDB8:
 /* 8036CDB8 00369CF8  3B C0 00 01 */	li r30, 1
-lbl_8036CDBC:
+
+/* 8036CDBC 002C .text      func_8036CDBC                  func_8036CDBC                  */
+.global func_8036CDBC
+func_8036CDBC:
 /* 8036CDBC 00369CFC  3C 60 80 45 */	lis r3, gTRKEventQueue@ha
 /* 8036CDC0 00369D00  38 63 D8 90 */	addi r3, r3, gTRKEventQueue@l
 /* 8036CDC4 00369D04  48 00 26 D5 */	bl TRKReleaseMutex
@@ -139,7 +156,7 @@ lbl_8036CDBC:
 /* 8036CDE0 00369D20  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036CDE4 00369D24  4E 80 00 20 */	blr 
 
-/* 8036CDE8 0058 .text TRKInitializeEventQueue TRKInitializeEventQueue */
+/* 8036CDE8 0058 .text      TRKInitializeEventQueue        TRKInitializeEventQueue        */
 .global TRKInitializeEventQueue
 TRKInitializeEventQueue:
 /* 8036CDE8 00369D28  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -166,9 +183,11 @@ TRKInitializeEventQueue:
 /* 8036CE3C 00369D7C  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 8044D890 0028 .bss gTRKEventQueue gTRKEventQueue */
+/* 8044D890 0028 .bss       gTRKEventQueue                 gTRKEventQueue                 */
 .global gTRKEventQueue
 gTRKEventQueue:
 .skip 0x28

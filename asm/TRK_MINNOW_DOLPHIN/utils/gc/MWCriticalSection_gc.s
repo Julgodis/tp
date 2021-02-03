@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80372CA4 0024 .text MWExitCriticalSection MWExitCriticalSection */
+/* 80372CA4 0024 .text      MWExitCriticalSection          MWExitCriticalSection          */
 .global MWExitCriticalSection
 MWExitCriticalSection:
 /* 80372CA4 0036FBE4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,7 +17,7 @@ MWExitCriticalSection:
 /* 80372CC0 0036FC00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80372CC4 0036FC04  4E 80 00 20 */	blr 
 
-/* 80372CC8 0030 .text MWEnterCriticalSection MWEnterCriticalSection */
+/* 80372CC8 0030 .text      MWEnterCriticalSection         MWEnterCriticalSection         */
 .global MWEnterCriticalSection
 MWEnterCriticalSection:
 /* 80372CC8 0036FC08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -23,7 +25,7 @@ MWEnterCriticalSection:
 /* 80372CD0 0036FC10  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80372CD4 0036FC14  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80372CD8 0036FC18  7C 7F 1B 78 */	mr r31, r3
-/* 80372CDC 0036FC1C  4B FC AA 19 */	bl __RAS_OSDisableInterrupts_begin
+/* 80372CDC 0036FC1C  4B FC AA 19 */	bl OSDisableInterrupts
 /* 80372CE0 0036FC20  90 7F 00 00 */	stw r3, 0(r31)
 /* 80372CE4 0036FC24  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80372CE8 0036FC28  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -31,7 +33,7 @@ MWEnterCriticalSection:
 /* 80372CF0 0036FC30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80372CF4 0036FC34  4E 80 00 20 */	blr 
 
-/* 80372CF8 0004 .text MWInitializeCriticalSection MWInitializeCriticalSection */
+/* 80372CF8 0004 .text      MWInitializeCriticalSection    MWInitializeCriticalSection    */
 .global MWInitializeCriticalSection
 MWInitializeCriticalSection:
 /* 80372CF8 0036FC38  4E 80 00 20 */	blr 

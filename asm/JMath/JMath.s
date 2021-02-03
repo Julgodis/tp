@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80339878 00C0 .text JMAEulerToQuat__FsssP10Quaternion JMAEulerToQuat__FsssP10Quaternion */
+/* 80339878 00C0 .text      JMAEulerToQuat__FsssP10Quaternion JMAEulerToQuat__FsssP10Quaternion */
 .global JMAEulerToQuat__FsssP10Quaternion
 JMAEulerToQuat__FsssP10Quaternion:
 /* 80339878 003367B8  3C E0 80 44 */	lis r7, sincosTable___5JMath@ha
@@ -54,7 +56,7 @@ JMAEulerToQuat__FsssP10Quaternion:
 /* 80339930 00336870  D0 06 00 08 */	stfs f0, 8(r6)
 /* 80339934 00336874  4E 80 00 20 */	blr 
 
-/* 80339938 00F8 .text JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion */
+/* 80339938 0090 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion */
 .global JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion
 JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion:
 /* 80339938 00336878  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -64,9 +66,9 @@ JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion:
 /* 80339948 00336888  E0 44 00 08 */	psq_l f2, 8(r4), 0, qr0
 /* 8033994C 0033688C  10 60 18 BA */	ps_madd f3, f0, f2, f3
 /* 80339950 00336890  10 63 18 D4 */	ps_sum0 f3, f3, f3, f3
-/* 80339954 00336894  C8 02 CA C8 */	lfd f0, lbl_804564C8-_SDA2_BASE_(r2)
+/* 80339954 00336894  C8 02 CA C8 */	lfd f0, JMath__LIT_376-_SDA2_BASE_(r2)
 /* 80339958 00336898  FC 03 00 40 */	fcmpo cr0, f3, f0
-/* 8033995C 0033689C  40 80 00 6C */	bge lbl_803399C8
+/* 8033995C 0033689C  40 80 00 6C */	bge func_803399C8
 /* 80339960 003368A0  C0 43 00 00 */	lfs f2, 0(r3)
 /* 80339964 003368A4  FC 20 08 50 */	fneg f1, f1
 /* 80339968 003368A8  C0 04 00 00 */	lfs f0, 0(r4)
@@ -93,7 +95,10 @@ JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion:
 /* 803399BC 003368FC  EC 02 00 2A */	fadds f0, f2, f0
 /* 803399C0 00336900  D0 05 00 0C */	stfs f0, 0xc(r5)
 /* 803399C4 00336904  4E 80 00 20 */	blr 
-lbl_803399C8:
+
+/* 803399C8 0068 .text      func_803399C8                  func_803399C8                  */
+.global func_803399C8
+func_803399C8:
 /* 803399C8 00336908  C0 43 00 00 */	lfs f2, 0(r3)
 /* 803399CC 0033690C  FC 20 08 50 */	fneg f1, f1
 /* 803399D0 00336910  C0 04 00 00 */	lfs f0, 0(r4)
@@ -121,7 +126,7 @@ lbl_803399C8:
 /* 80339A28 00336968  D0 05 00 0C */	stfs f0, 0xc(r5)
 /* 80339A2C 0033696C  4E 80 00 20 */	blr 
 
-/* 80339A30 002C .text JMAFastVECNormalize__FPC3VecP3Vec JMAFastVECNormalize__FPC3VecP3Vec */
+/* 80339A30 002C .text      JMAFastVECNormalize__FPC3VecP3Vec JMAFastVECNormalize__FPC3VecP3Vec */
 .global JMAFastVECNormalize__FPC3VecP3Vec
 JMAFastVECNormalize__FPC3VecP3Vec:
 /* 80339A30 00336970  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -136,7 +141,7 @@ JMAFastVECNormalize__FPC3VecP3Vec:
 /* 80339A54 00336994  D0 44 00 08 */	stfs f2, 8(r4)
 /* 80339A58 00336998  4E 80 00 20 */	blr 
 
-/* 80339A5C 0028 .text JMAVECScaleAdd__FPC3VecPC3VecP3Vecf JMAVECScaleAdd__FPC3VecPC3VecP3Vecf */
+/* 80339A5C 0028 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf JMAVECScaleAdd__FPC3VecPC3VecP3Vecf */
 .global JMAVECScaleAdd__FPC3VecPC3VecP3Vecf
 JMAVECScaleAdd__FPC3VecPC3VecP3Vecf:
 /* 80339A5C 0033699C  FC 40 08 90 */	fmr f2, f1
@@ -150,12 +155,12 @@ JMAVECScaleAdd__FPC3VecPC3VecP3Vecf:
 /* 80339A7C 003369BC  F0 05 80 08 */	psq_st f0, 8(r5), 1, qr0
 /* 80339A80 003369C0  4E 80 00 20 */	blr 
 
-/* 80339A84 0060 .text JMAMTXApplyScale__FPA4_CfPA4_ffff JMAMTXApplyScale__FPA4_CfPA4_ffff */
+/* 80339A84 0060 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff JMAMTXApplyScale__FPA4_CfPA4_ffff */
 .global JMAMTXApplyScale__FPA4_CfPA4_ffff
 JMAMTXApplyScale__FPA4_CfPA4_ffff:
 /* 80339A84 003369C4  FC 00 10 90 */	fmr f0, f2
 /* 80339A88 003369C8  FC A0 18 90 */	fmr f5, f3
-/* 80339A8C 003369CC  C0 82 CA D0 */	lfs f4, lbl_804564D0-_SDA2_BASE_(r2)
+/* 80339A8C 003369CC  C0 82 CA D0 */	lfs f4, LIT_411-_SDA2_BASE_(r2)
 /* 80339A90 003369D0  10 01 04 20 */	ps_merge00 f0, f1, f0
 /* 80339A94 003369D4  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
 /* 80339A98 003369D8  E0 43 00 10 */	psq_l f2, 16(r3), 0, qr0
@@ -179,16 +184,18 @@ JMAMTXApplyScale__FPA4_CfPA4_ffff:
 /* 80339AE0 00336A20  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 804564C8 0008 .sdata2 lbl_804564C8 @376 */
-.global lbl_804564C8
-lbl_804564C8:
+/* 804564C8 0008 .sdata2    JMath__LIT_376                 @376                           */
+.global JMath__LIT_376
+JMath__LIT_376:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5328 */
 
-/* 804564D0 0004 .sdata2 lbl_804564D0 @411 */
-.global lbl_804564D0
-lbl_804564D0:
+/* 804564D0 0004 .sdata2    LIT_411                        @411                           */
+.global LIT_411
+LIT_411:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5330 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5334 */
 

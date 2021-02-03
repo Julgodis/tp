@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80271CD0 0048 .text firstInit__9JFWSystemFv firstInit__9JFWSystemFv */
+/* 80271CD0 0048 .text      firstInit__9JFWSystemFv        firstInit__9JFWSystemFv        */
 .global firstInit__9JFWSystemFv
 firstInit__9JFWSystemFv:
 /* 80271CD0 0026EC10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -24,7 +26,7 @@ firstInit__9JFWSystemFv:
 /* 80271D10 0026EC50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80271D14 0026EC54  4E 80 00 20 */	blr 
 
-/* 80271D18 0328 .text init__9JFWSystemFv init__9JFWSystemFv */
+/* 80271D18 002C .text      init__9JFWSystemFv             init__9JFWSystemFv             */
 .global init__9JFWSystemFv
 init__9JFWSystemFv:
 /* 80271D18 0026EC58  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -36,11 +38,14 @@ init__9JFWSystemFv:
 /* 80271D30 0026EC70  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80271D34 0026EC74  80 0D 8C 20 */	lwz r0, rootHeap__9JFWSystem-_SDA_BASE_(r13)
 /* 80271D38 0026EC78  28 00 00 00 */	cmplwi r0, 0
-/* 80271D3C 0026EC7C  40 82 00 08 */	bne lbl_80271D44
+/* 80271D3C 0026EC7C  40 82 00 08 */	bne func_80271D44
 /* 80271D40 0026EC80  4B FF FF 91 */	bl firstInit__9JFWSystemFv
-lbl_80271D44:
+
+/* 80271D44 0048 .text      func_80271D44                  func_80271D44                  */
+.global func_80271D44
+func_80271D44:
 /* 80271D44 0026EC84  38 00 00 01 */	li r0, 1
-/* 80271D48 0026EC88  98 0D 8C 3C */	stb r0, lbl_804511BC-_SDA_BASE_(r13)
+/* 80271D48 0026EC88  98 0D 8C 3C */	stb r0, sym_804511BC-_SDA_BASE_(r13)
 /* 80271D4C 0026EC8C  80 6D 81 FC */	lwz r3, aramAudioBufSize__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 80271D50 0026EC90  80 8D 82 00 */	lwz r4, aramGraphBufSize__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 80271D54 0026EC94  80 AD 82 04 */	lwz r5, streamPriority__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
@@ -50,14 +55,17 @@ lbl_80271D44:
 /* 80271D64 0026ECA4  38 60 00 7C */	li r3, 0x7c
 /* 80271D68 0026ECA8  48 05 CE E5 */	bl __nw__FUl
 /* 80271D6C 0026ECAC  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80271D70 0026ECB0  41 82 00 1C */	beq lbl_80271D8C
+/* 80271D70 0026ECB0  41 82 00 1C */	beq func_80271D8C
 /* 80271D74 0026ECB4  48 0C EF 11 */	bl OSGetCurrentThread
 /* 80271D78 0026ECB8  7C 64 1B 78 */	mr r4, r3
 /* 80271D7C 0026ECBC  7F E3 FB 78 */	mr r3, r31
 /* 80271D80 0026ECC0  38 A0 00 04 */	li r5, 4
 /* 80271D84 0026ECC4  48 05 F9 35 */	bl __ct__9JKRThreadFP8OSThreadi
 /* 80271D88 0026ECC8  7C 7F 1B 78 */	mr r31, r3
-lbl_80271D8C:
+
+/* 80271D8C 0028 .text      func_80271D8C                  func_80271D8C                  */
+.global func_80271D8C
+func_80271D8C:
 /* 80271D8C 0026ECCC  93 ED 8C 28 */	stw r31, mainThread__9JFWSystem-_SDA_BASE_(r13)
 /* 80271D90 0026ECD0  80 6D 82 14 */	lwz r3, renderMode__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 80271D94 0026ECD4  48 07 2E C1 */	bl createManager__8JUTVideoFPC16_GXRenderModeObj
@@ -65,10 +73,13 @@ lbl_80271D8C:
 /* 80271D9C 0026ECDC  38 60 00 1C */	li r3, 0x1c
 /* 80271DA0 0026ECE0  48 05 CE AD */	bl __nw__FUl
 /* 80271DA4 0026ECE4  28 03 00 00 */	cmplwi r3, 0
-/* 80271DA8 0026ECE8  41 82 00 0C */	beq lbl_80271DB4
+/* 80271DA8 0026ECE8  41 82 00 0C */	beq func_80271DB4
 /* 80271DAC 0026ECEC  7F E4 FB 78 */	mr r4, r31
 /* 80271DB0 0026ECF0  48 06 CD A9 */	bl __ct__12JUTGraphFifoFUl
-lbl_80271DB4:
+
+/* 80271DB4 0038 .text      func_80271DB4                  func_80271DB4                  */
+.global func_80271DB4
+func_80271DB4:
 /* 80271DB4 0026ECF4  48 06 EA E5 */	bl init__10JUTGamePadFv
 /* 80271DB8 0026ECF8  48 07 24 89 */	bl start__14JUTDirectPrintFv
 /* 80271DBC 0026ECFC  7C 7E 1B 78 */	mr r30, r3
@@ -78,12 +89,15 @@ lbl_80271DB4:
 /* 80271DCC 0026ED0C  38 60 00 70 */	li r3, 0x70
 /* 80271DD0 0026ED10  48 05 CE 7D */	bl __nw__FUl
 /* 80271DD4 0026ED14  7C 60 1B 79 */	or. r0, r3, r3
-/* 80271DD8 0026ED18  41 82 00 14 */	beq lbl_80271DEC
+/* 80271DD8 0026ED18  41 82 00 14 */	beq func_80271DEC
 /* 80271DDC 0026ED1C  80 8D 82 10 */	lwz r4, systemFontRes__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 80271DE0 0026ED20  38 A0 00 00 */	li r5, 0
 /* 80271DE4 0026ED24  48 06 D1 B1 */	bl __ct__10JUTResFontFPC7ResFONTP7JKRHeap
 /* 80271DE8 0026ED28  7C 60 1B 78 */	mr r0, r3
-lbl_80271DEC:
+
+/* 80271DEC 0154 .text      func_80271DEC                  func_80271DEC                  */
+.global func_80271DEC
+func_80271DEC:
 /* 80271DEC 0026ED2C  90 0D 8C 30 */	stw r0, systemFont__9JFWSystem-_SDA_BASE_(r13)
 /* 80271DF0 0026ED30  38 60 00 00 */	li r3, 0
 /* 80271DF4 0026ED34  38 80 00 00 */	li r4, 0
@@ -107,7 +121,7 @@ lbl_80271DEC:
 /* 80271E3C 0026ED7C  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 80271E40 0026ED80  7D 89 03 A6 */	mtctr r12
 /* 80271E44 0026ED84  4E 80 04 21 */	bctrl 
-/* 80271E48 0026ED88  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271E48 0026ED88  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271E4C 0026ED8C  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271E50 0026ED90  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80271E54 0026ED94  3C 00 43 30 */	lis r0, 0x4330
@@ -119,7 +133,7 @@ lbl_80271DEC:
 /* 80271E6C 0026EDAC  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 80271E70 0026EDB0  7D 89 03 A6 */	mtctr r12
 /* 80271E74 0026EDB4  4E 80 04 21 */	bctrl 
-/* 80271E78 0026EDB8  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271E78 0026EDB8  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271E7C 0026EDBC  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271E80 0026EDC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80271E84 0026EDC4  3C 00 43 30 */	lis r0, 0x4330
@@ -131,34 +145,34 @@ lbl_80271DEC:
 /* 80271E9C 0026EDDC  80 6D 82 14 */	lwz r3, renderMode__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 80271EA0 0026EDE0  A0 03 00 06 */	lhz r0, 6(r3)
 /* 80271EA4 0026EDE4  28 00 01 2C */	cmplwi r0, 0x12c
-/* 80271EA8 0026EDE8  40 80 00 98 */	bge lbl_80271F40
+/* 80271EA8 0026EDE8  40 80 00 98 */	bge func_80271F40
 /* 80271EAC 0026EDEC  80 6D 8C 30 */	lwz r3, systemFont__9JFWSystem-_SDA_BASE_(r13)
 /* 80271EB0 0026EDF0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80271EB4 0026EDF4  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 80271EB8 0026EDF8  7D 89 03 A6 */	mtctr r12
 /* 80271EBC 0026EDFC  4E 80 04 21 */	bctrl 
-/* 80271EC0 0026EE00  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271EC0 0026EE00  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271EC4 0026EE04  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271EC8 0026EE08  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80271ECC 0026EE0C  3C 00 43 30 */	lis r0, 0x4330
 /* 80271ED0 0026EE10  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80271ED4 0026EE14  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80271ED8 0026EE18  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80271EDC 0026EE1C  C0 02 B8 40 */	lfs f0, lbl_80455240-_SDA2_BASE_(r2)
+/* 80271EDC 0026EE1C  C0 02 B8 40 */	lfs f0, JFWSystem__LIT_2242-_SDA2_BASE_(r2)
 /* 80271EE0 0026EE20  EF E0 00 72 */	fmuls f31, f0, f1
 /* 80271EE4 0026EE24  80 6D 8C 30 */	lwz r3, systemFont__9JFWSystem-_SDA_BASE_(r13)
 /* 80271EE8 0026EE28  81 83 00 00 */	lwz r12, 0(r3)
 /* 80271EEC 0026EE2C  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 80271EF0 0026EE30  7D 89 03 A6 */	mtctr r12
 /* 80271EF4 0026EE34  4E 80 04 21 */	bctrl 
-/* 80271EF8 0026EE38  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271EF8 0026EE38  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271EFC 0026EE3C  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271F00 0026EE40  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80271F04 0026EE44  3C 00 43 30 */	lis r0, 0x4330
 /* 80271F08 0026EE48  90 01 00 08 */	stw r0, 8(r1)
 /* 80271F0C 0026EE4C  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80271F10 0026EE50  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80271F14 0026EE54  C0 02 B8 44 */	lfs f0, lbl_80455244-_SDA2_BASE_(r2)
+/* 80271F14 0026EE54  C0 02 B8 44 */	lfs f0, LIT_2243-_SDA2_BASE_(r2)
 /* 80271F18 0026EE58  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80271F1C 0026EE5C  80 6D 8C 38 */	lwz r3, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 80271F20 0026EE60  D0 03 00 50 */	stfs f0, 0x50(r3)
@@ -168,14 +182,17 @@ lbl_80271DEC:
 /* 80271F30 0026EE70  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80271F34 0026EE74  38 00 00 19 */	li r0, 0x19
 /* 80271F38 0026EE78  90 03 00 44 */	stw r0, 0x44(r3)
-/* 80271F3C 0026EE7C  48 00 00 84 */	b lbl_80271FC0
-lbl_80271F40:
+/* 80271F3C 0026EE7C  48 00 00 84 */	b func_80271FC0
+
+/* 80271F40 0080 .text      func_80271F40                  func_80271F40                  */
+.global func_80271F40
+func_80271F40:
 /* 80271F40 0026EE80  80 6D 8C 30 */	lwz r3, systemFont__9JFWSystem-_SDA_BASE_(r13)
 /* 80271F44 0026EE84  81 83 00 00 */	lwz r12, 0(r3)
 /* 80271F48 0026EE88  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 80271F4C 0026EE8C  7D 89 03 A6 */	mtctr r12
 /* 80271F50 0026EE90  4E 80 04 21 */	bctrl 
-/* 80271F54 0026EE94  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271F54 0026EE94  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271F58 0026EE98  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271F5C 0026EE9C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80271F60 0026EEA0  3C 00 43 30 */	lis r0, 0x4330
@@ -187,7 +204,7 @@ lbl_80271F40:
 /* 80271F78 0026EEB8  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 80271F7C 0026EEBC  7D 89 03 A6 */	mtctr r12
 /* 80271F80 0026EEC0  4E 80 04 21 */	bctrl 
-/* 80271F84 0026EEC4  C8 22 B8 48 */	lfd f1, lbl_80455248-_SDA2_BASE_(r2)
+/* 80271F84 0026EEC4  C8 22 B8 48 */	lfd f1, LIT_2245-_SDA2_BASE_(r2)
 /* 80271F88 0026EEC8  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 80271F8C 0026EECC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80271F90 0026EED0  3C 00 43 30 */	lis r0, 0x4330
@@ -202,16 +219,22 @@ lbl_80271F40:
 /* 80271FB4 0026EEF4  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80271FB8 0026EEF8  38 00 00 32 */	li r0, 0x32
 /* 80271FBC 0026EEFC  90 03 00 44 */	stw r0, 0x44(r3)
-lbl_80271FC0:
+
+/* 80271FC0 0020 .text      func_80271FC0                  func_80271FC0                  */
+.global func_80271FC0
+func_80271FC0:
 /* 80271FC0 0026EF00  80 6D 8C 38 */	lwz r3, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 80271FC4 0026EF04  38 00 00 19 */	li r0, 0x19
 /* 80271FC8 0026EF08  90 03 00 48 */	stw r0, 0x48(r3)
 /* 80271FCC 0026EF0C  80 03 00 48 */	lwz r0, 0x48(r3)
 /* 80271FD0 0026EF10  80 83 00 24 */	lwz r4, 0x24(r3)
 /* 80271FD4 0026EF14  7C 00 20 40 */	cmplw r0, r4
-/* 80271FD8 0026EF18  40 81 00 08 */	ble lbl_80271FE0
+/* 80271FD8 0026EF18  40 81 00 08 */	ble func_80271FE0
 /* 80271FDC 0026EF1C  90 83 00 48 */	stw r4, 0x48(r3)
-lbl_80271FE0:
+
+/* 80271FE0 0060 .text      func_80271FE0                  func_80271FE0                  */
+.global func_80271FE0
+func_80271FE0:
 /* 80271FE0 0026EF20  38 00 00 00 */	li r0, 0
 /* 80271FE4 0026EF24  80 6D 8C 38 */	lwz r3, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 80271FE8 0026EF28  98 03 00 68 */	stb r0, 0x68(r3)
@@ -238,122 +261,128 @@ lbl_80271FE0:
 /* 8027203C 0026EF7C  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 80450770 0004 .sdata maxStdHeaps__Q29JFWSystem11CSetUpParam maxStdHeaps__Q29JFWSystem11CSetUpParam */
+/* 80450770 0004 .sdata     maxStdHeaps__Q29JFWSystem11CSetUpParam maxStdHeaps__Q29JFWSystem11CSetUpParam */
 .global maxStdHeaps__Q29JFWSystem11CSetUpParam
 maxStdHeaps__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x00, 0x00, 0x02 /* baserom.dol+0x3d04d0 */
 
-/* 80450774 0004 .sdata sysHeapSize__Q29JFWSystem11CSetUpParam sysHeapSize__Q29JFWSystem11CSetUpParam */
+/* 80450774 0004 .sdata     sysHeapSize__Q29JFWSystem11CSetUpParam sysHeapSize__Q29JFWSystem11CSetUpParam */
 .global sysHeapSize__Q29JFWSystem11CSetUpParam
 sysHeapSize__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x40, 0x00, 0x00 /* baserom.dol+0x3d04d4 */
 
-/* 80450778 0004 .sdata fifoBufSize__Q29JFWSystem11CSetUpParam fifoBufSize__Q29JFWSystem11CSetUpParam */
+/* 80450778 0004 .sdata     fifoBufSize__Q29JFWSystem11CSetUpParam fifoBufSize__Q29JFWSystem11CSetUpParam */
 .global fifoBufSize__Q29JFWSystem11CSetUpParam
 fifoBufSize__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x04, 0x00, 0x00 /* baserom.dol+0x3d04d8 */
 
-/* 8045077C 0004 .sdata aramAudioBufSize__Q29JFWSystem11CSetUpParam aramAudioBufSize__Q29JFWSystem11CSetUpParam */
+/* 8045077C 0004 .sdata     aramAudioBufSize__Q29JFWSystem11CSetUpParam aramAudioBufSize__Q29JFWSystem11CSetUpParam */
 .global aramAudioBufSize__Q29JFWSystem11CSetUpParam
 aramAudioBufSize__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x80, 0x00, 0x00 /* baserom.dol+0x3d04dc */
 
-/* 80450780 0004 .sdata aramGraphBufSize__Q29JFWSystem11CSetUpParam aramGraphBufSize__Q29JFWSystem11CSetUpParam */
+/* 80450780 0004 .sdata     aramGraphBufSize__Q29JFWSystem11CSetUpParam aramGraphBufSize__Q29JFWSystem11CSetUpParam */
 .global aramGraphBufSize__Q29JFWSystem11CSetUpParam
 aramGraphBufSize__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x60, 0x00, 0x00 /* baserom.dol+0x3d04e0 */
 
-/* 80450784 0004 .sdata streamPriority__Q29JFWSystem11CSetUpParam streamPriority__Q29JFWSystem11CSetUpParam */
+/* 80450784 0004 .sdata     streamPriority__Q29JFWSystem11CSetUpParam streamPriority__Q29JFWSystem11CSetUpParam */
 .global streamPriority__Q29JFWSystem11CSetUpParam
 streamPriority__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x00, 0x00, 0x08 /* baserom.dol+0x3d04e4 */
 
-/* 80450788 0004 .sdata decompPriority__Q29JFWSystem11CSetUpParam decompPriority__Q29JFWSystem11CSetUpParam */
+/* 80450788 0004 .sdata     decompPriority__Q29JFWSystem11CSetUpParam decompPriority__Q29JFWSystem11CSetUpParam */
 .global decompPriority__Q29JFWSystem11CSetUpParam
 decompPriority__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x00, 0x00, 0x07 /* baserom.dol+0x3d04e8 */
 
-/* 8045078C 0004 .sdata aPiecePriority__Q29JFWSystem11CSetUpParam aPiecePriority__Q29JFWSystem11CSetUpParam */
+/* 8045078C 0004 .sdata     aPiecePriority__Q29JFWSystem11CSetUpParam aPiecePriority__Q29JFWSystem11CSetUpParam */
 .global aPiecePriority__Q29JFWSystem11CSetUpParam
 aPiecePriority__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x00, 0x00, 0x06 /* baserom.dol+0x3d04ec */
 
-/* 80450790 0004 .sdata systemFontRes__Q29JFWSystem11CSetUpParam systemFontRes__Q29JFWSystem11CSetUpParam */
+/* 80450790 0004 .sdata     systemFontRes__Q29JFWSystem11CSetUpParam systemFontRes__Q29JFWSystem11CSetUpParam */
 .global systemFontRes__Q29JFWSystem11CSetUpParam
 systemFontRes__Q29JFWSystem11CSetUpParam:
 .byte 0x80, 0x39, 0xda, 0x20 /* baserom.dol+0x3d04f0 */
 
-/* 80450794 0004 .sdata renderMode__Q29JFWSystem11CSetUpParam renderMode__Q29JFWSystem11CSetUpParam */
+/* 80450794 0004 .sdata     renderMode__Q29JFWSystem11CSetUpParam renderMode__Q29JFWSystem11CSetUpParam */
 .global renderMode__Q29JFWSystem11CSetUpParam
 renderMode__Q29JFWSystem11CSetUpParam:
 .byte 0x80, 0x3d, 0x24, 0x48 /* baserom.dol+0x3d04f4 */
 
-/* 80450798 0004 .sdata exConsoleBufferSize__Q29JFWSystem11CSetUpParam exConsoleBufferSize__Q29JFWSystem11CSetUpParam */
+/* 80450798 0004 .sdata     exConsoleBufferSize__Q29JFWSystem11CSetUpParam exConsoleBufferSize__Q29JFWSystem11CSetUpParam */
 .global exConsoleBufferSize__Q29JFWSystem11CSetUpParam
 exConsoleBufferSize__Q29JFWSystem11CSetUpParam:
 .byte 0x00, 0x00, 0x24, 0xfc /* baserom.dol+0x3d04f8 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d04fc */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 804511A0 0004 .sbss rootHeap__9JFWSystem rootHeap__9JFWSystem */
+/* 804511A0 0004 .sbss      rootHeap__9JFWSystem           rootHeap__9JFWSystem           */
 .global rootHeap__9JFWSystem
 rootHeap__9JFWSystem:
 .skip 0x4
 
-/* 804511A4 0004 .sbss systemHeap__9JFWSystem systemHeap__9JFWSystem */
+/* 804511A4 0004 .sbss      systemHeap__9JFWSystem         systemHeap__9JFWSystem         */
 .global systemHeap__9JFWSystem
 systemHeap__9JFWSystem:
 .skip 0x4
 
-/* 804511A8 0004 .sbss mainThread__9JFWSystem mainThread__9JFWSystem */
+/* 804511A8 0004 .sbss      mainThread__9JFWSystem         mainThread__9JFWSystem         */
 .global mainThread__9JFWSystem
 mainThread__9JFWSystem:
 .skip 0x4
 
-/* 804511AC 0004 .sbss debugPrint__9JFWSystem debugPrint__9JFWSystem */
+/* 804511AC 0004 .sbss      debugPrint__9JFWSystem         debugPrint__9JFWSystem         */
 .global debugPrint__9JFWSystem
 debugPrint__9JFWSystem:
 .skip 0x4
 
-/* 804511B0 0004 .sbss systemFont__9JFWSystem systemFont__9JFWSystem */
+/* 804511B0 0004 .sbss      systemFont__9JFWSystem         systemFont__9JFWSystem         */
 .global systemFont__9JFWSystem
 systemFont__9JFWSystem:
 .skip 0x4
 
-/* 804511B4 0004 .sbss systemConsoleManager__9JFWSystem systemConsoleManager__9JFWSystem */
+/* 804511B4 0004 .sbss      systemConsoleManager__9JFWSystem systemConsoleManager__9JFWSystem */
 .global systemConsoleManager__9JFWSystem
 systemConsoleManager__9JFWSystem:
 .skip 0x4
 
-/* 804511B8 0004 .sbss systemConsole__9JFWSystem systemConsole__9JFWSystem */
+/* 804511B8 0004 .sbss      systemConsole__9JFWSystem      systemConsole__9JFWSystem      */
 .global systemConsole__9JFWSystem
 systemConsole__9JFWSystem:
 .skip 0x4
 
-/* 804511BC 0004 .sbss lbl_804511BC lbl_804511BC */
-.global lbl_804511BC
-lbl_804511BC:
+/* 804511BC 0004 .sbss      sym_804511BC                   sym_804511BC                   */
+.global sym_804511BC
+sym_804511BC:
 .skip 0x4
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455240 0004 .sdata2 lbl_80455240 @2242 */
-.global lbl_80455240
-lbl_80455240:
+/* 80455240 0004 .sdata2    JFWSystem__LIT_2242            @2242                          */
+.global JFWSystem__LIT_2242
+JFWSystem__LIT_2242:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40a0 */
 
-/* 80455244 0004 .sdata2 lbl_80455244 @2243 */
-.global lbl_80455244
-lbl_80455244:
+/* 80455244 0004 .sdata2    LIT_2243                       @2243                          */
+.global LIT_2243
+LIT_2243:
 .byte 0x3f, 0x59, 0x99, 0x9a /* baserom.dol+0x3d40a4 */
 
-/* 80455248 0008 .sdata2 lbl_80455248 @2245 */
-.global lbl_80455248
-lbl_80455248:
+/* 80455248 0008 .sdata2    LIT_2245                       @2245                          */
+.global LIT_2245
+LIT_2245:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d40a8 */
 

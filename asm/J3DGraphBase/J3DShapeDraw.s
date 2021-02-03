@@ -1,36 +1,50 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80314924 0050 .text countVertex__12J3DShapeDrawFUl countVertex__12J3DShapeDrawFUl */
+/* 80314924 0014 .text      countVertex__12J3DShapeDrawFUl countVertex__12J3DShapeDrawFUl */
 .global countVertex__12J3DShapeDrawFUl
 countVertex__12J3DShapeDrawFUl:
 /* 80314924 00311864  38 A0 00 00 */	li r5, 0
 /* 80314928 00311868  80 C3 00 08 */	lwz r6, 8(r3)
 /* 8031492C 0031186C  7C C7 33 78 */	mr r7, r6
 /* 80314930 00311870  80 63 00 04 */	lwz r3, 4(r3)
-/* 80314934 00311874  48 00 00 2C */	b lbl_80314960
-lbl_80314938:
+/* 80314934 00311874  48 00 00 2C */	b func_80314960
+
+/* 80314938 0014 .text      func_80314938                  func_80314938                  */
+.global func_80314938
+func_80314938:
 /* 80314938 00311878  88 07 00 00 */	lbz r0, 0(r7)
 /* 8031493C 0031187C  28 00 00 A0 */	cmplwi r0, 0xa0
-/* 80314940 00311880  41 82 00 0C */	beq lbl_8031494C
+/* 80314940 00311880  41 82 00 0C */	beq func_8031494C
 /* 80314944 00311884  28 00 00 98 */	cmplwi r0, 0x98
-/* 80314948 00311888  40 82 00 24 */	bne lbl_8031496C
-lbl_8031494C:
+/* 80314948 00311888  40 82 00 24 */	bne func_8031496C
+
+/* 8031494C 0014 .text      func_8031494C                  func_8031494C                  */
+.global func_8031494C
+func_8031494C:
 /* 8031494C 0031188C  A0 07 00 01 */	lhz r0, 1(r7)
 /* 80314950 00311890  7C A5 02 14 */	add r5, r5, r0
 /* 80314954 00311894  7C 04 01 D6 */	mullw r0, r4, r0
 /* 80314958 00311898  7C E7 02 14 */	add r7, r7, r0
 /* 8031495C 0031189C  38 E7 00 03 */	addi r7, r7, 3
-lbl_80314960:
+
+/* 80314960 000C .text      func_80314960                  func_80314960                  */
+.global func_80314960
+func_80314960:
 /* 80314960 003118A0  7C 06 38 50 */	subf r0, r6, r7
 /* 80314964 003118A4  7C 00 18 40 */	cmplw r0, r3
-/* 80314968 003118A8  41 80 FF D0 */	blt lbl_80314938
-lbl_8031496C:
+/* 80314968 003118A8  41 80 FF D0 */	blt func_80314938
+
+/* 8031496C 0008 .text      func_8031496C                  func_8031496C                  */
+.global func_8031496C
+func_8031496C:
 /* 8031496C 003118AC  7C A3 2B 78 */	mr r3, r5
 /* 80314970 003118B0  4E 80 00 20 */	blr 
 
-/* 80314974 0148 .text addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl */
+/* 80314974 005C .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl */
 .global addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl
 addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl:
 /* 80314974 003118B4  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -55,22 +69,31 @@ addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl:
 /* 803149C0 00311900  7E F6 BB 78 */	mr r22, r23
 /* 803149C4 00311904  7F DD F3 78 */	mr r29, r30
 /* 803149C8 00311908  7F 1B D0 50 */	subf r24, r27, r26
-/* 803149CC 0031190C  48 00 00 8C */	b lbl_80314A58
-lbl_803149D0:
+/* 803149CC 0031190C  48 00 00 8C */	b func_80314A58
+
+/* 803149D0 001C .text      func_803149D0                  func_803149D0                  */
+.global func_803149D0
+func_803149D0:
 /* 803149D0 00311910  88 16 00 00 */	lbz r0, 0(r22)
 /* 803149D4 00311914  98 1D 00 00 */	stb r0, 0(r29)
 /* 803149D8 00311918  28 00 00 A0 */	cmplwi r0, 0xa0
 /* 803149DC 0031191C  3B BD 00 01 */	addi r29, r29, 1
-/* 803149E0 00311920  41 82 00 0C */	beq lbl_803149EC
+/* 803149E0 00311920  41 82 00 0C */	beq func_803149EC
 /* 803149E4 00311924  28 00 00 98 */	cmplwi r0, 0x98
-/* 803149E8 00311928  40 82 00 80 */	bne lbl_80314A68
-lbl_803149EC:
+/* 803149E8 00311928  40 82 00 80 */	bne func_80314A68
+
+/* 803149EC 0014 .text      func_803149EC                  func_803149EC                  */
+.global func_803149EC
+func_803149EC:
 /* 803149EC 0031192C  A2 B6 00 01 */	lhz r21, 1(r22)
 /* 803149F0 00311930  B2 BD 00 00 */	sth r21, 0(r29)
 /* 803149F4 00311934  3A 80 00 00 */	li r20, 0
 /* 803149F8 00311938  3B BD 00 02 */	addi r29, r29, 2
-/* 803149FC 0031193C  48 00 00 48 */	b lbl_80314A44
-lbl_80314A00:
+/* 803149FC 0031193C  48 00 00 48 */	b func_80314A44
+
+/* 80314A00 0044 .text      func_80314A00                  func_80314A00                  */
+.global func_80314A00
+func_80314A00:
 /* 80314A00 00311940  7C 1A A1 D6 */	mullw r0, r26, r20
 /* 80314A04 00311944  7E 76 02 14 */	add r19, r22, r0
 /* 80314A08 00311948  8E 53 00 03 */	lbzu r18, 3(r19)
@@ -88,30 +111,45 @@ lbl_80314A00:
 /* 80314A38 00311978  4B CE EB 09 */	bl memcpy
 /* 80314A3C 0031197C  7F BD C2 14 */	add r29, r29, r24
 /* 80314A40 00311980  3A 94 00 01 */	addi r20, r20, 1
-lbl_80314A44:
+
+/* 80314A44 0014 .text      func_80314A44                  func_80314A44                  */
+.global func_80314A44
+func_80314A44:
 /* 80314A44 00311984  7C 14 A8 00 */	cmpw r20, r21
-/* 80314A48 00311988  41 80 FF B8 */	blt lbl_80314A00
+/* 80314A48 00311988  41 80 FF B8 */	blt func_80314A00
 /* 80314A4C 0031198C  7C 1A A9 D6 */	mullw r0, r26, r21
 /* 80314A50 00311990  7E D6 02 14 */	add r22, r22, r0
 /* 80314A54 00311994  3A D6 00 03 */	addi r22, r22, 3
-lbl_80314A58:
+
+/* 80314A58 0010 .text      func_80314A58                  func_80314A58                  */
+.global func_80314A58
+func_80314A58:
 /* 80314A58 00311998  7C 77 B0 50 */	subf r3, r23, r22
 /* 80314A5C 0031199C  80 19 00 04 */	lwz r0, 4(r25)
 /* 80314A60 003119A0  7C 03 00 40 */	cmplw r3, r0
-/* 80314A64 003119A4  41 80 FF 6C */	blt lbl_803149D0
-lbl_80314A68:
+/* 80314A64 003119A4  41 80 FF 6C */	blt func_803149D0
+
+/* 80314A68 0014 .text      func_80314A68                  func_80314A68                  */
+.global func_80314A68
+func_80314A68:
 /* 80314A68 003119A8  7C 7E E8 50 */	subf r3, r30, r29
 /* 80314A6C 003119AC  38 03 00 1F */	addi r0, r3, 0x1f
 /* 80314A70 003119B0  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
 /* 80314A74 003119B4  38 60 00 00 */	li r3, 0
-/* 80314A78 003119B8  48 00 00 0C */	b lbl_80314A84
-lbl_80314A7C:
+/* 80314A78 003119B8  48 00 00 0C */	b func_80314A84
+
+/* 80314A7C 0008 .text      func_80314A7C                  func_80314A7C                  */
+.global func_80314A7C
+func_80314A7C:
 /* 80314A7C 003119BC  98 7D 00 00 */	stb r3, 0(r29)
 /* 80314A80 003119C0  3B BD 00 01 */	addi r29, r29, 1
-lbl_80314A84:
+
+/* 80314A84 0038 .text      func_80314A84                  func_80314A84                  */
+.global func_80314A84
+func_80314A84:
 /* 80314A84 003119C4  7C 1E E8 50 */	subf r0, r30, r29
 /* 80314A88 003119C8  7C 00 F8 40 */	cmplw r0, r31
-/* 80314A8C 003119CC  41 80 FF F0 */	blt lbl_80314A7C
+/* 80314A8C 003119CC  41 80 FF F0 */	blt func_80314A7C
 /* 80314A90 003119D0  90 99 00 04 */	stw r4, 4(r25)
 /* 80314A94 003119D4  93 D9 00 08 */	stw r30, 8(r25)
 /* 80314A98 003119D8  7F C3 F3 78 */	mr r3, r30
@@ -124,7 +162,7 @@ lbl_80314A84:
 /* 80314AB4 003119F4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80314AB8 003119F8  4E 80 00 20 */	blr 
 
-/* 80314ABC 0018 .text __ct__12J3DShapeDrawFPCUcUl __ct__12J3DShapeDrawFPCUcUl */
+/* 80314ABC 0018 .text      __ct__12J3DShapeDrawFPCUcUl    __ct__12J3DShapeDrawFPCUcUl    */
 .global __ct__12J3DShapeDrawFPCUcUl
 __ct__12J3DShapeDrawFPCUcUl:
 /* 80314ABC 003119FC  3C C0 80 3D */	lis r6, __vt__12J3DShapeDraw@ha
@@ -134,7 +172,7 @@ __ct__12J3DShapeDrawFPCUcUl:
 /* 80314ACC 00311A0C  90 A3 00 04 */	stw r5, 4(r3)
 /* 80314AD0 00311A10  4E 80 00 20 */	blr 
 
-/* 80314AD4 002C .text draw__12J3DShapeDrawCFv draw__12J3DShapeDrawCFv */
+/* 80314AD4 002C .text      draw__12J3DShapeDrawCFv        draw__12J3DShapeDrawCFv        */
 .global draw__12J3DShapeDrawCFv
 draw__12J3DShapeDrawCFv:
 /* 80314AD4 00311A14  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -149,7 +187,7 @@ draw__12J3DShapeDrawCFv:
 /* 80314AF8 00311A38  38 21 00 10 */	addi r1, r1, 0x10
 /* 80314AFC 00311A3C  4E 80 00 20 */	blr 
 
-/* 80314B00 0048 .text __dt__12J3DShapeDrawFv __dt__12J3DShapeDrawFv */
+/* 80314B00 0030 .text      __dt__12J3DShapeDrawFv         __dt__12J3DShapeDrawFv         */
 .global __dt__12J3DShapeDrawFv
 __dt__12J3DShapeDrawFv:
 /* 80314B00 00311A40  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -157,14 +195,17 @@ __dt__12J3DShapeDrawFv:
 /* 80314B08 00311A48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80314B0C 00311A4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80314B10 00311A50  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80314B14 00311A54  41 82 00 1C */	beq lbl_80314B30
+/* 80314B14 00311A54  41 82 00 1C */	beq func_80314B30
 /* 80314B18 00311A58  3C A0 80 3D */	lis r5, __vt__12J3DShapeDraw@ha
 /* 80314B1C 00311A5C  38 05 DC 68 */	addi r0, r5, __vt__12J3DShapeDraw@l
 /* 80314B20 00311A60  90 1F 00 00 */	stw r0, 0(r31)
 /* 80314B24 00311A64  7C 80 07 35 */	extsh. r0, r4
-/* 80314B28 00311A68  40 81 00 08 */	ble lbl_80314B30
+/* 80314B28 00311A68  40 81 00 08 */	ble func_80314B30
 /* 80314B2C 00311A6C  4B FB A2 11 */	bl __dl__FPv
-lbl_80314B30:
+
+/* 80314B30 0018 .text      func_80314B30                  func_80314B30                  */
+.global func_80314B30
+func_80314B30:
 /* 80314B30 00311A70  7F E3 FB 78 */	mr r3, r31
 /* 80314B34 00311A74  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80314B38 00311A78  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -173,9 +214,11 @@ lbl_80314B30:
 /* 80314B44 00311A84  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803CDC68 000C .data __vt__12J3DShapeDraw __vt__12J3DShapeDraw */
+/* 803CDC68 000C .data      __vt__12J3DShapeDraw           __vt__12J3DShapeDraw           */
 .global __vt__12J3DShapeDraw
 __vt__12J3DShapeDraw:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x31, 0x4b, 0x00 /* baserom.dol+0x3cac68 */

@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80342B78 0020 .text __init_user __init_user */
+/* 80342B78 0020 .text      __init_user                    __init_user                    */
 .global __init_user
 __init_user:
 /* 80342B78 0033FAB8  7C 08 02 A6 */	mflr r0
@@ -14,7 +16,7 @@ __init_user:
 /* 80342B90 0033FAD0  7C 08 03 A6 */	mtlr r0
 /* 80342B94 0033FAD4  4E 80 00 20 */	blr 
 
-/* 80342B98 0054 .text __init_cpp __init_cpp */
+/* 80342B98 0020 .text      __init_cpp                     __init_cpp                     */
 .global __init_cpp
 __init_cpp:
 /* 80342B98 0033FAD8  7C 08 02 A6 */	mflr r0
@@ -24,26 +26,38 @@ __init_cpp:
 /* 80342BA8 0033FAE8  3C 60 80 37 */	lis r3, __init_cpp_exceptions_reference@ha
 /* 80342BAC 0033FAEC  38 03 37 C0 */	addi r0, r3, __init_cpp_exceptions_reference@l
 /* 80342BB0 0033FAF0  7C 1F 03 78 */	mr r31, r0
-/* 80342BB4 0033FAF4  48 00 00 04 */	b lbl_80342BB8
-lbl_80342BB8:
-/* 80342BB8 0033FAF8  48 00 00 04 */	b lbl_80342BBC
-lbl_80342BBC:
-/* 80342BBC 0033FAFC  48 00 00 10 */	b lbl_80342BCC
-lbl_80342BC0:
+/* 80342BB4 0033FAF4  48 00 00 04 */	b func_80342BB8
+
+/* 80342BB8 0004 .text      func_80342BB8                  func_80342BB8                  */
+.global func_80342BB8
+func_80342BB8:
+/* 80342BB8 0033FAF8  48 00 00 04 */	b func_80342BBC
+
+/* 80342BBC 0004 .text      func_80342BBC                  func_80342BBC                  */
+.global func_80342BBC
+func_80342BBC:
+/* 80342BBC 0033FAFC  48 00 00 10 */	b func_80342BCC
+
+/* 80342BC0 000C .text      func_80342BC0                  func_80342BC0                  */
+.global func_80342BC0
+func_80342BC0:
 /* 80342BC0 0033FB00  7D 88 03 A6 */	mtlr r12
 /* 80342BC4 0033FB04  4E 80 00 21 */	blrl 
 /* 80342BC8 0033FB08  3B FF 00 04 */	addi r31, r31, 4
-lbl_80342BCC:
+
+/* 80342BCC 0020 .text      func_80342BCC                  func_80342BCC                  */
+.global func_80342BCC
+func_80342BCC:
 /* 80342BCC 0033FB0C  81 9F 00 00 */	lwz r12, 0(r31)
 /* 80342BD0 0033FB10  28 0C 00 00 */	cmplwi r12, 0
-/* 80342BD4 0033FB14  40 82 FF EC */	bne lbl_80342BC0
+/* 80342BD4 0033FB14  40 82 FF EC */	bne func_80342BC0
 /* 80342BD8 0033FB18  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80342BDC 0033FB1C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80342BE0 0033FB20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80342BE4 0033FB24  7C 08 03 A6 */	mtlr r0
 /* 80342BE8 0033FB28  4E 80 00 20 */	blr 
 
-/* 80342BEC 0020 .text _ExitProcess _ExitProcess */
+/* 80342BEC 0020 .text      _ExitProcess                   _ExitProcess                   */
 .global _ExitProcess
 _ExitProcess:
 /* 80342BEC 0033FB2C  7C 08 02 A6 */	mflr r0

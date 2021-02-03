@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8028FFA8 0088 .text regist__14JASCallbackMgrFPFPv_lPv regist__14JASCallbackMgrFPFPv_lPv */
+/* 8028FFA8 0034 .text      regist__14JASCallbackMgrFPFPv_lPv regist__14JASCallbackMgrFPFPv_lPv */
 .global regist__14JASCallbackMgrFPFPv_lPv
 regist__14JASCallbackMgrFPFPv_lPv:
 /* 8028FFA8 0028CEE8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -13,29 +15,38 @@ regist__14JASCallbackMgrFPFPv_lPv:
 /* 8028FFBC 0028CEFC  7C 7D 1B 78 */	mr r29, r3
 /* 8028FFC0 0028CF00  7C 9E 23 78 */	mr r30, r4
 /* 8028FFC4 0028CF04  7C BF 2B 78 */	mr r31, r5
-/* 8028FFC8 0028CF08  48 0A D7 2D */	bl __RAS_OSDisableInterrupts_begin
+/* 8028FFC8 0028CF08  48 0A D7 2D */	bl OSDisableInterrupts
 /* 8028FFCC 0028CF0C  90 61 00 08 */	stw r3, 8(r1)
 /* 8028FFD0 0028CF10  38 60 00 00 */	li r3, 0
 /* 8028FFD4 0028CF14  38 00 00 20 */	li r0, 0x20
 /* 8028FFD8 0028CF18  7C 09 03 A6 */	mtctr r0
-lbl_8028FFDC:
+
+/* 8028FFDC 0028 .text      func_8028FFDC                  func_8028FFDC                  */
+.global func_8028FFDC
+func_8028FFDC:
 /* 8028FFDC 0028CF1C  7C 9D 1A 14 */	add r4, r29, r3
 /* 8028FFE0 0028CF20  80 04 00 00 */	lwz r0, 0(r4)
 /* 8028FFE4 0028CF24  28 00 00 00 */	cmplwi r0, 0
-/* 8028FFE8 0028CF28  40 82 00 1C */	bne lbl_80290004
+/* 8028FFE8 0028CF28  40 82 00 1C */	bne func_80290004
 /* 8028FFEC 0028CF2C  93 C4 00 00 */	stw r30, 0(r4)
 /* 8028FFF0 0028CF30  93 E4 00 04 */	stw r31, 4(r4)
 /* 8028FFF4 0028CF34  80 61 00 08 */	lwz r3, 8(r1)
 /* 8028FFF8 0028CF38  48 0A D7 25 */	bl OSRestoreInterrupts
 /* 8028FFFC 0028CF3C  38 60 00 01 */	li r3, 1
-/* 80290000 0028CF40  48 00 00 18 */	b lbl_80290018
-lbl_80290004:
+/* 80290000 0028CF40  48 00 00 18 */	b func_80290018
+
+/* 80290004 0014 .text      func_80290004                  func_80290004                  */
+.global func_80290004
+func_80290004:
 /* 80290004 0028CF44  38 63 00 08 */	addi r3, r3, 8
-/* 80290008 0028CF48  42 00 FF D4 */	bdnz lbl_8028FFDC
+/* 80290008 0028CF48  42 00 FF D4 */	bdnz func_8028FFDC
 /* 8029000C 0028CF4C  80 61 00 08 */	lwz r3, 8(r1)
 /* 80290010 0028CF50  48 0A D7 0D */	bl OSRestoreInterrupts
 /* 80290014 0028CF54  38 60 00 00 */	li r3, 0
-lbl_80290018:
+
+/* 80290018 0018 .text      func_80290018                  func_80290018                  */
+.global func_80290018
+func_80290018:
 /* 80290018 0028CF58  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029001C 0028CF5C  48 0D 22 0D */	bl _restgpr_29
 /* 80290020 0028CF60  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -43,7 +54,7 @@ lbl_80290018:
 /* 80290028 0028CF68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029002C 0028CF6C  4E 80 00 20 */	blr 
 
-/* 80290030 0094 .text reject__14JASCallbackMgrFPFPv_lPv reject__14JASCallbackMgrFPFPv_lPv */
+/* 80290030 0040 .text      reject__14JASCallbackMgrFPFPv_lPv reject__14JASCallbackMgrFPFPv_lPv */
 .global reject__14JASCallbackMgrFPFPv_lPv
 reject__14JASCallbackMgrFPFPv_lPv:
 /* 80290030 0028CF70  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -55,27 +66,33 @@ reject__14JASCallbackMgrFPFPv_lPv:
 /* 80290048 0028CF88  7C 9D 23 78 */	mr r29, r4
 /* 8029004C 0028CF8C  7C BE 2B 78 */	mr r30, r5
 /* 80290050 0028CF90  3B E0 00 00 */	li r31, 0
-/* 80290054 0028CF94  48 0A D6 A1 */	bl __RAS_OSDisableInterrupts_begin
+/* 80290054 0028CF94  48 0A D6 A1 */	bl OSDisableInterrupts
 /* 80290058 0028CF98  90 61 00 08 */	stw r3, 8(r1)
 /* 8029005C 0028CF9C  38 60 00 00 */	li r3, 0
 /* 80290060 0028CFA0  7C 65 1B 78 */	mr r5, r3
 /* 80290064 0028CFA4  7C 64 1B 78 */	mr r4, r3
 /* 80290068 0028CFA8  38 00 00 20 */	li r0, 0x20
 /* 8029006C 0028CFAC  7C 09 03 A6 */	mtctr r0
-lbl_80290070:
+
+/* 80290070 0028 .text      func_80290070                  func_80290070                  */
+.global func_80290070
+func_80290070:
 /* 80290070 0028CFB0  7C DC 1A 14 */	add r6, r28, r3
 /* 80290074 0028CFB4  80 06 00 00 */	lwz r0, 0(r6)
 /* 80290078 0028CFB8  7C 00 E8 40 */	cmplw r0, r29
-/* 8029007C 0028CFBC  40 82 00 1C */	bne lbl_80290098
+/* 8029007C 0028CFBC  40 82 00 1C */	bne func_80290098
 /* 80290080 0028CFC0  80 06 00 04 */	lwz r0, 4(r6)
 /* 80290084 0028CFC4  7C 00 F0 40 */	cmplw r0, r30
-/* 80290088 0028CFC8  40 82 00 10 */	bne lbl_80290098
+/* 80290088 0028CFC8  40 82 00 10 */	bne func_80290098
 /* 8029008C 0028CFCC  90 A6 00 00 */	stw r5, 0(r6)
 /* 80290090 0028CFD0  90 86 00 04 */	stw r4, 4(r6)
 /* 80290094 0028CFD4  3B FF 00 01 */	addi r31, r31, 1
-lbl_80290098:
+
+/* 80290098 002C .text      func_80290098                  func_80290098                  */
+.global func_80290098
+func_80290098:
 /* 80290098 0028CFD8  38 63 00 08 */	addi r3, r3, 8
-/* 8029009C 0028CFDC  42 00 FF D4 */	bdnz lbl_80290070
+/* 8029009C 0028CFDC  42 00 FF D4 */	bdnz func_80290070
 /* 802900A0 0028CFE0  80 61 00 08 */	lwz r3, 8(r1)
 /* 802900A4 0028CFE4  48 0A D6 79 */	bl OSRestoreInterrupts
 /* 802900A8 0028CFE8  7F E3 FB 78 */	mr r3, r31
@@ -86,7 +103,7 @@ lbl_80290098:
 /* 802900BC 0028CFFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802900C0 0028D000  4E 80 00 20 */	blr 
 
-/* 802900C4 007C .text callback__14JASCallbackMgrFv callback__14JASCallbackMgrFv */
+/* 802900C4 0028 .text      callback__14JASCallbackMgrFv   callback__14JASCallbackMgrFv   */
 .global callback__14JASCallbackMgrFv
 callback__14JASCallbackMgrFv:
 /* 802900C4 0028D004  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -99,23 +116,29 @@ callback__14JASCallbackMgrFv:
 /* 802900E0 0028D020  3B E0 00 00 */	li r31, 0
 /* 802900E4 0028D024  7F FD FB 78 */	mr r29, r31
 /* 802900E8 0028D028  7F FE FB 78 */	mr r30, r31
-lbl_802900EC:
+
+/* 802900EC 002C .text      func_802900EC                  func_802900EC                  */
+.global func_802900EC
+func_802900EC:
 /* 802900EC 0028D02C  7F 9A FA 14 */	add r28, r26, r31
 /* 802900F0 0028D030  81 9C 00 00 */	lwz r12, 0(r28)
 /* 802900F4 0028D034  28 0C 00 00 */	cmplwi r12, 0
-/* 802900F8 0028D038  41 82 00 20 */	beq lbl_80290118
+/* 802900F8 0028D038  41 82 00 20 */	beq func_80290118
 /* 802900FC 0028D03C  80 7C 00 04 */	lwz r3, 4(r28)
 /* 80290100 0028D040  7D 89 03 A6 */	mtctr r12
 /* 80290104 0028D044  4E 80 04 21 */	bctrl 
 /* 80290108 0028D048  2C 03 00 00 */	cmpwi r3, 0
-/* 8029010C 0028D04C  40 80 00 0C */	bge lbl_80290118
+/* 8029010C 0028D04C  40 80 00 0C */	bge func_80290118
 /* 80290110 0028D050  93 BC 00 00 */	stw r29, 0(r28)
 /* 80290114 0028D054  93 DC 00 04 */	stw r30, 4(r28)
-lbl_80290118:
+
+/* 80290118 0028 .text      func_80290118                  func_80290118                  */
+.global func_80290118
+func_80290118:
 /* 80290118 0028D058  3B 7B 00 01 */	addi r27, r27, 1
 /* 8029011C 0028D05C  2C 1B 00 20 */	cmpwi r27, 0x20
 /* 80290120 0028D060  3B FF 00 08 */	addi r31, r31, 8
-/* 80290124 0028D064  41 80 FF C8 */	blt lbl_802900EC
+/* 80290124 0028D064  41 80 FF C8 */	blt func_802900EC
 /* 80290128 0028D068  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029012C 0028D06C  48 0D 20 F1 */	bl _restgpr_26
 /* 80290130 0028D070  80 01 00 24 */	lwz r0, 0x24(r1)

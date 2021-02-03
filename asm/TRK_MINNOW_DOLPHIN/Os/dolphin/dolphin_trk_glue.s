@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80371BF4 0088 .text TRKLoadContext TRKLoadContext */
+/* 80371BF4 0028 .text      TRKLoadContext                 TRKLoadContext                 */
 .global TRKLoadContext
 TRKLoadContext:
 /* 80371BF4 0036EB34  80 03 00 00 */	lwz r0, 0(r3)
@@ -10,14 +12,20 @@ TRKLoadContext:
 /* 80371BFC 0036EB3C  80 43 00 08 */	lwz r2, 8(r3)
 /* 80371C00 0036EB40  A0 A3 01 A2 */	lhz r5, 0x1a2(r3)
 /* 80371C04 0036EB44  54 A6 07 BD */	rlwinm. r6, r5, 0, 0x1e, 0x1e
-/* 80371C08 0036EB48  41 82 00 14 */	beq lbl_80371C1C
+/* 80371C08 0036EB48  41 82 00 14 */	beq func_80371C1C
 /* 80371C0C 0036EB4C  54 A5 07 FA */	rlwinm r5, r5, 0, 0x1f, 0x1d
 /* 80371C10 0036EB50  B0 A3 01 A2 */	sth r5, 0x1a2(r3)
 /* 80371C14 0036EB54  B8 A3 00 14 */	lmw r5, 0x14(r3)
-/* 80371C18 0036EB58  48 00 00 08 */	b lbl_80371C20
-lbl_80371C1C:
+/* 80371C18 0036EB58  48 00 00 08 */	b func_80371C20
+
+/* 80371C1C 0004 .text      func_80371C1C                  func_80371C1C                  */
+.global func_80371C1C
+func_80371C1C:
 /* 80371C1C 0036EB5C  B9 A3 00 34 */	lmw r13, 0x34(r3)
-lbl_80371C20:
+
+/* 80371C20 005C .text      func_80371C20                  func_80371C20                  */
+.global func_80371C20
+func_80371C20:
 /* 80371C20 0036EB60  7C 7F 1B 78 */	mr r31, r3
 /* 80371C24 0036EB64  7C 83 23 78 */	mr r3, r4
 /* 80371C28 0036EB68  80 9F 00 80 */	lwz r4, 0x80(r31)
@@ -42,23 +50,23 @@ lbl_80371C20:
 /* 80371C74 0036EBB4  83 FF 00 7C */	lwz r31, 0x7c(r31)
 /* 80371C78 0036EBB8  4B FF DA 0C */	b TRKInterruptHandler
 
-/* 80371C7C 0004 .text TRKUARTInterruptHandler TRKUARTInterruptHandler */
+/* 80371C7C 0004 .text      TRKUARTInterruptHandler        TRKUARTInterruptHandler        */
 .global TRKUARTInterruptHandler
 TRKUARTInterruptHandler:
 /* 80371C7C 0036EBBC  4E 80 00 20 */	blr 
 
-/* 80371C80 0058 .text InitializeProgramEndTrap InitializeProgramEndTrap */
+/* 80371C80 0058 .text      InitializeProgramEndTrap       InitializeProgramEndTrap       */
 .global InitializeProgramEndTrap
 InitializeProgramEndTrap:
 /* 80371C80 0036EBC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371C84 0036EBC4  7C 08 02 A6 */	mflr r0
 /* 80371C88 0036EBC8  3C 80 80 34 */	lis r4, PPCHalt@ha
-/* 80371C8C 0036EBCC  3C 60 80 3A */	lis r3, lbl_803A2C08@ha
+/* 80371C8C 0036EBCC  3C 60 80 3A */	lis r3, Os_dolphin_dolphin_trk_glue__sym_803A2C08@ha
 /* 80371C90 0036EBD0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80371C94 0036EBD4  38 A0 00 04 */	li r5, 4
 /* 80371C98 0036EBD8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80371C9C 0036EBDC  3B E4 9D 00 */	addi r31, r4, PPCHalt@l
-/* 80371CA0 0036EBE0  38 83 2C 08 */	addi r4, r3, lbl_803A2C08@l
+/* 80371CA0 0036EBE0  38 83 2C 08 */	addi r4, r3, Os_dolphin_dolphin_trk_glue__sym_803A2C08@l
 /* 80371CA4 0036EBE4  38 7F 00 04 */	addi r3, r31, 4
 /* 80371CA8 0036EBE8  4B C9 19 19 */	bl TRK_memcpy
 /* 80371CAC 0036EBEC  38 7F 00 04 */	addi r3, r31, 4
@@ -73,15 +81,15 @@ InitializeProgramEndTrap:
 /* 80371CD0 0036EC10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371CD4 0036EC14  4E 80 00 20 */	blr 
 
-/* 80371CD8 0030 .text TRK_board_display TRK_board_display */
+/* 80371CD8 0030 .text      TRK_board_display              TRK_board_display              */
 .global TRK_board_display
 TRK_board_display:
 /* 80371CD8 0036EC18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371CDC 0036EC1C  7C 08 02 A6 */	mflr r0
-/* 80371CE0 0036EC20  3C A0 80 3A */	lis r5, lbl_803A2C0C@ha
+/* 80371CE0 0036EC20  3C A0 80 3A */	lis r5, LIT_165@ha
 /* 80371CE4 0036EC24  7C 64 1B 78 */	mr r4, r3
 /* 80371CE8 0036EC28  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80371CEC 0036EC2C  38 65 2C 0C */	addi r3, r5, lbl_803A2C0C@l
+/* 80371CEC 0036EC2C  38 65 2C 0C */	addi r3, r5, LIT_165@l
 /* 80371CF0 0036EC30  4C C6 31 82 */	crclr 6
 /* 80371CF4 0036EC34  4B C9 4D C9 */	bl OSReport
 /* 80371CF8 0036EC38  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -89,7 +97,7 @@ TRK_board_display:
 /* 80371D00 0036EC40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371D04 0036EC44  4E 80 00 20 */	blr 
 
-/* 80371D08 0030 .text UnreserveEXI2Port UnreserveEXI2Port */
+/* 80371D08 0030 .text      UnreserveEXI2Port              UnreserveEXI2Port              */
 .global UnreserveEXI2Port
 UnreserveEXI2Port:
 /* 80371D08 0036EC48  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -105,7 +113,7 @@ UnreserveEXI2Port:
 /* 80371D30 0036EC70  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371D34 0036EC74  4E 80 00 20 */	blr 
 
-/* 80371D38 0030 .text ReserveEXI2Port ReserveEXI2Port */
+/* 80371D38 0030 .text      ReserveEXI2Port                ReserveEXI2Port                */
 .global ReserveEXI2Port
 ReserveEXI2Port:
 /* 80371D38 0036EC78  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -121,7 +129,7 @@ ReserveEXI2Port:
 /* 80371D60 0036ECA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371D64 0036ECA4  4E 80 00 20 */	blr 
 
-/* 80371D68 003C .text TRKWriteUARTN TRKWriteUARTN */
+/* 80371D68 003C .text      TRKWriteUARTN                  TRKWriteUARTN                  */
 .global TRKWriteUARTN
 TRKWriteUARTN:
 /* 80371D68 0036ECA8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -140,7 +148,7 @@ TRKWriteUARTN:
 /* 80371D9C 0036ECDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371DA0 0036ECE0  4E 80 00 20 */	blr 
 
-/* 80371DA4 003C .text TRKReadUARTN TRKReadUARTN */
+/* 80371DA4 003C .text      TRKReadUARTN                   TRKReadUARTN                   */
 .global TRKReadUARTN
 TRKReadUARTN:
 /* 80371DA4 0036ECE4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -159,7 +167,7 @@ TRKReadUARTN:
 /* 80371DD8 0036ED18  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371DDC 0036ED1C  4E 80 00 20 */	blr 
 
-/* 80371DE0 0030 .text TRKPollUART TRKPollUART */
+/* 80371DE0 0030 .text      TRKPollUART                    TRKPollUART                    */
 .global TRKPollUART
 TRKPollUART:
 /* 80371DE0 0036ED20  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -175,30 +183,33 @@ TRKPollUART:
 /* 80371E08 0036ED48  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371E0C 0036ED4C  4E 80 00 20 */	blr 
 
-/* 80371E10 0048 .text EnableEXI2Interrupts EnableEXI2Interrupts */
+/* 80371E10 0038 .text      EnableEXI2Interrupts           EnableEXI2Interrupts           */
 .global EnableEXI2Interrupts
 EnableEXI2Interrupts:
 /* 80371E10 0036ED50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371E14 0036ED54  7C 08 02 A6 */	mflr r0
-/* 80371E18 0036ED58  3C 60 80 45 */	lis r3, lbl_8044F820@ha
+/* 80371E18 0036ED58  3C 60 80 45 */	lis r3, sym_8044F820@ha
 /* 80371E1C 0036ED5C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80371E20 0036ED60  88 03 F8 20 */	lbz r0, lbl_8044F820@l(r3)
+/* 80371E20 0036ED60  88 03 F8 20 */	lbz r0, sym_8044F820@l(r3)
 /* 80371E24 0036ED64  28 00 00 00 */	cmplwi r0, 0
-/* 80371E28 0036ED68  40 82 00 20 */	bne lbl_80371E48
+/* 80371E28 0036ED68  40 82 00 20 */	bne func_80371E48
 /* 80371E2C 0036ED6C  3C 60 80 3D */	lis r3, gDBCommTable@ha
 /* 80371E30 0036ED70  38 63 32 A8 */	addi r3, r3, gDBCommTable@l
 /* 80371E34 0036ED74  81 83 00 04 */	lwz r12, 4(r3)
 /* 80371E38 0036ED78  28 0C 00 00 */	cmplwi r12, 0
-/* 80371E3C 0036ED7C  41 82 00 0C */	beq lbl_80371E48
+/* 80371E3C 0036ED7C  41 82 00 0C */	beq func_80371E48
 /* 80371E40 0036ED80  7D 89 03 A6 */	mtctr r12
 /* 80371E44 0036ED84  4E 80 04 21 */	bctrl 
-lbl_80371E48:
+
+/* 80371E48 0010 .text      func_80371E48                  func_80371E48                  */
+.global func_80371E48
+func_80371E48:
 /* 80371E48 0036ED88  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80371E4C 0036ED8C  7C 08 03 A6 */	mtlr r0
 /* 80371E50 0036ED90  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371E54 0036ED94  4E 80 00 20 */	blr 
 
-/* 80371E58 0050 .text TRKInitializeIntDrivenUART TRKInitializeIntDrivenUART */
+/* 80371E58 0050 .text      TRKInitializeIntDrivenUART     TRKInitializeIntDrivenUART     */
 .global TRKInitializeIntDrivenUART
 TRKInitializeIntDrivenUART:
 /* 80371E58 0036ED98  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -222,32 +233,32 @@ TRKInitializeIntDrivenUART:
 /* 80371EA0 0036EDE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371EA4 0036EDE4  4E 80 00 20 */	blr 
 
-/* 80371EA8 026C .text InitMetroTRKCommTable InitMetroTRKCommTable */
+/* 80371EA8 00EC .text      InitMetroTRKCommTable          InitMetroTRKCommTable          */
 .global InitMetroTRKCommTable
 InitMetroTRKCommTable:
 /* 80371EA8 0036EDE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371EAC 0036EDEC  7C 08 02 A6 */	mflr r0
-/* 80371EB0 0036EDF0  3C 80 80 3A */	lis r4, lbl_803A2C08@ha
+/* 80371EB0 0036EDF0  3C 80 80 3A */	lis r4, Os_dolphin_dolphin_trk_glue__sym_803A2C08@ha
 /* 80371EB4 0036EDF4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80371EB8 0036EDF8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80371EBC 0036EDFC  3B E0 00 01 */	li r31, 1
 /* 80371EC0 0036EE00  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80371EC4 0036EE04  7C 7E 1B 78 */	mr r30, r3
 /* 80371EC8 0036EE08  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80371ECC 0036EE0C  3B A4 2C 08 */	addi r29, r4, lbl_803A2C08@l
+/* 80371ECC 0036EE0C  3B A4 2C 08 */	addi r29, r4, Os_dolphin_dolphin_trk_glue__sym_803A2C08@l
 /* 80371ED0 0036EE10  7F C4 F3 78 */	mr r4, r30
 /* 80371ED4 0036EE14  38 7D 00 08 */	addi r3, r29, 8
 /* 80371ED8 0036EE18  4C C6 31 82 */	crclr 6
 /* 80371EDC 0036EE1C  4B C9 4B E1 */	bl OSReport
-/* 80371EE0 0036EE20  3C 60 80 45 */	lis r3, lbl_8044F820@ha
+/* 80371EE0 0036EE20  3C 60 80 45 */	lis r3, sym_8044F820@ha
 /* 80371EE4 0036EE24  38 00 00 00 */	li r0, 0
 /* 80371EE8 0036EE28  2C 1E 00 02 */	cmpwi r30, 2
-/* 80371EEC 0036EE2C  98 03 F8 20 */	stb r0, lbl_8044F820@l(r3)
-/* 80371EF0 0036EE30  40 82 00 A4 */	bne lbl_80371F94
+/* 80371EEC 0036EE2C  98 03 F8 20 */	stb r0, sym_8044F820@l(r3)
+/* 80371EF0 0036EE30  40 82 00 A4 */	bne func_80371F94
 /* 80371EF4 0036EE34  38 7D 00 20 */	addi r3, r29, 0x20
 /* 80371EF8 0036EE38  4C C6 31 82 */	crclr 6
 /* 80371EFC 0036EE3C  4B C9 4B C1 */	bl OSReport
-/* 80371F00 0036EE40  3F C0 80 45 */	lis r30, lbl_8044F820@ha
+/* 80371F00 0036EE40  3F C0 80 45 */	lis r30, sym_8044F820@ha
 /* 80371F04 0036EE44  3D 80 80 37 */	lis r12, udp_cc_initialize@ha
 /* 80371F08 0036EE48  3D 60 80 3D */	lis r11, gDBCommTable@ha
 /* 80371F0C 0036EE4C  3D 40 80 37 */	lis r10, udp_cc_open@ha
@@ -258,7 +269,7 @@ InitMetroTRKCommTable:
 /* 80371F20 0036EE60  3C A0 80 37 */	lis r5, udp_cc_peek@ha
 /* 80371F24 0036EE64  3C 80 80 37 */	lis r4, udp_cc_pre_continue@ha
 /* 80371F28 0036EE68  3C 60 80 37 */	lis r3, udp_cc_post_stop@ha
-/* 80371F2C 0036EE6C  3B FE F8 20 */	addi r31, r30, lbl_8044F820@l
+/* 80371F2C 0036EE6C  3B FE F8 20 */	addi r31, r30, sym_8044F820@l
 /* 80371F30 0036EE70  3B A0 00 01 */	li r29, 1
 /* 80371F34 0036EE74  3B CC 23 54 */	addi r30, r12, udp_cc_initialize@l
 /* 80371F38 0036EE78  39 8B 32 A8 */	addi r12, r11, gDBCommTable@l
@@ -283,10 +294,13 @@ InitMetroTRKCommTable:
 /* 80371F84 0036EEC4  90 AC 00 20 */	stw r5, 0x20(r12)
 /* 80371F88 0036EEC8  90 8C 00 24 */	stw r4, 0x24(r12)
 /* 80371F8C 0036EECC  90 0C 00 04 */	stw r0, 4(r12)
-/* 80371F90 0036EED0  48 00 01 68 */	b lbl_803720F8
-lbl_80371F94:
+/* 80371F90 0036EED0  48 00 01 68 */	b func_803720F8
+
+/* 80371F94 009C .text      func_80371F94                  func_80371F94                  */
+.global func_80371F94
+func_80371F94:
 /* 80371F94 0036EED4  2C 1E 00 01 */	cmpwi r30, 1
-/* 80371F98 0036EED8  40 82 00 98 */	bne lbl_80372030
+/* 80371F98 0036EED8  40 82 00 98 */	bne func_80372030
 /* 80371F9C 0036EEDC  38 7D 00 38 */	addi r3, r29, 0x38
 /* 80371FA0 0036EEE0  4C C6 31 82 */	crclr 6
 /* 80371FA4 0036EEE4  4B C9 4B 19 */	bl OSReport
@@ -323,10 +337,13 @@ lbl_80371F94:
 /* 80372020 0036EF60  90 DE 00 20 */	stw r6, 0x20(r30)
 /* 80372024 0036EF64  90 BE 00 24 */	stw r5, 0x24(r30)
 /* 80372028 0036EF68  90 1E 00 04 */	stw r0, 4(r30)
-/* 8037202C 0036EF6C  48 00 00 C8 */	b lbl_803720F4
-lbl_80372030:
+/* 8037202C 0036EF6C  48 00 00 C8 */	b func_803720F4
+
+/* 80372030 009C .text      func_80372030                  func_80372030                  */
+.global func_80372030
+func_80372030:
 /* 80372030 0036EF70  2C 1E 00 00 */	cmpwi r30, 0
-/* 80372034 0036EF74  40 82 00 98 */	bne lbl_803720CC
+/* 80372034 0036EF74  40 82 00 98 */	bne func_803720CC
 /* 80372038 0036EF78  38 7D 00 5C */	addi r3, r29, 0x5c
 /* 8037203C 0036EF7C  4C C6 31 82 */	crclr 6
 /* 80372040 0036EF80  4B C9 4A 7D */	bl OSReport
@@ -363,8 +380,11 @@ lbl_80372030:
 /* 803720BC 0036EFFC  90 DE 00 20 */	stw r6, 0x20(r30)
 /* 803720C0 0036F000  90 BE 00 24 */	stw r5, 0x24(r30)
 /* 803720C4 0036F004  90 1E 00 04 */	stw r0, 4(r30)
-/* 803720C8 0036F008  48 00 00 2C */	b lbl_803720F4
-lbl_803720CC:
+/* 803720C8 0036F008  48 00 00 2C */	b func_803720F4
+
+/* 803720CC 0028 .text      func_803720CC                  func_803720CC                  */
+.global func_803720CC
+func_803720CC:
 /* 803720CC 0036F00C  7F C4 F3 78 */	mr r4, r30
 /* 803720D0 0036F010  38 7D 00 80 */	addi r3, r29, 0x80
 /* 803720D4 0036F014  4C C6 31 82 */	crclr 6
@@ -375,9 +395,15 @@ lbl_803720CC:
 /* 803720E8 0036F028  38 7D 00 DC */	addi r3, r29, 0xdc
 /* 803720EC 0036F02C  4C C6 31 82 */	crclr 6
 /* 803720F0 0036F030  4B C9 49 CD */	bl OSReport
-lbl_803720F4:
+
+/* 803720F4 0004 .text      func_803720F4                  func_803720F4                  */
+.global func_803720F4
+func_803720F4:
 /* 803720F4 0036F034  7F E3 FB 78 */	mr r3, r31
-lbl_803720F8:
+
+/* 803720F8 001C .text      func_803720F8                  func_803720F8                  */
+.global func_803720F8
+func_803720F8:
 /* 803720F8 0036F038  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803720FC 0036F03C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80372100 0036F040  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -386,7 +412,7 @@ lbl_803720F8:
 /* 8037210C 0036F04C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80372110 0036F050  4E 80 00 20 */	blr 
 
-/* 80372114 0038 .text TRKEXICallBack TRKEXICallBack */
+/* 80372114 0038 .text      TRKEXICallBack                 TRKEXICallBack                 */
 .global TRKEXICallBack
 TRKEXICallBack:
 /* 80372114 0036F054  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -405,75 +431,83 @@ TRKEXICallBack:
 /* 80372148 0036F088  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .rodata                                         */
+/* ###################################################################################### */
 .section .rodata, "a"
-/* 803A2C08 0004 .rodata lbl_803A2C08 EndofProgramInstruction$162 */
-.global lbl_803A2C08
-lbl_803A2C08:
+/* 803A2C08 0000 .rodata    Os_dolphin_dolphin_trk_glue__sym_803A2C08 ...rodata.0                    */
+.global Os_dolphin_dolphin_trk_glue__sym_803A2C08
+Os_dolphin_dolphin_trk_glue__sym_803A2C08:
+
+/* 803A2C08 0004 .rodata    Os_dolphin_dolphin_trk_glue__sym_803A2C08 EndofProgramInstruction$162    */
+.global Os_dolphin_dolphin_trk_glue__sym_803A2C08
+Os_dolphin_dolphin_trk_glue__sym_803A2C08:
 .byte 0x00, 0x45, 0x4e, 0x44 /* baserom.dol+0x39fc08 */
 
-/* 803A2C0C 0004 .rodata lbl_803A2C0C @165 */
-.global lbl_803A2C0C
-lbl_803A2C0C:
+/* 803A2C0C 0004 .rodata    LIT_165                        @165                           */
+.global LIT_165
+LIT_165:
 .byte 0x25, 0x73, 0x0a, 0x00 /* baserom.dol+0x39fc0c */
 
-/* 803A2C10 0015 .rodata lbl_803A2C10 @215 */
-.global lbl_803A2C10
-lbl_803A2C10:
+/* 803A2C10 0015 .rodata    Os_dolphin_dolphin_trk_glue__LIT_215 @215                           */
+.global Os_dolphin_dolphin_trk_glue__LIT_215
+Os_dolphin_dolphin_trk_glue__LIT_215:
 .byte 0x44, 0x65, 0x76, 0x6b, 0x69, 0x74, 0x20, 0x73, 0x65, 0x74, 0x20, 0x74, 0x6f, 0x20, 0x3a, 0x20 /* baserom.dol+0x39fc10 */
 .byte 0x25, 0x6c, 0x64, 0x0a, 0x00 /* baserom.dol+0x39fc20 */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x39fc25 */
 
-/* 803A2C28 0017 .rodata lbl_803A2C28 @216 */
-.global lbl_803A2C28
-lbl_803A2C28:
+/* 803A2C28 0017 .rodata    Os_dolphin_dolphin_trk_glue__LIT_216 @216                           */
+.global Os_dolphin_dolphin_trk_glue__LIT_216
+Os_dolphin_dolphin_trk_glue__LIT_216:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74 /* baserom.dol+0x39fc28 */
 .byte 0x6f, 0x20, 0x42, 0x42, 0x41, 0x0a, 0x00 /* baserom.dol+0x39fc38 */
 .byte 0x00 /* baserom.dol+0x39fc3f */
 
-/* 803A2C40 0021 .rodata lbl_803A2C40 @217 */
-.global lbl_803A2C40
-lbl_803A2C40:
+/* 803A2C40 0021 .rodata    Os_dolphin_dolphin_trk_glue__LIT_217 @217                           */
+.global Os_dolphin_dolphin_trk_glue__LIT_217
+Os_dolphin_dolphin_trk_glue__LIT_217:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74 /* baserom.dol+0x39fc40 */
 .byte 0x6f, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0a /* baserom.dol+0x39fc50 */
 .byte 0x00 /* baserom.dol+0x39fc60 */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x39fc61 */
 
-/* 803A2C64 0024 .rodata lbl_803A2C64 @218 */
-.global lbl_803A2C64
-lbl_803A2C64:
+/* 803A2C64 0024 .rodata    LIT_218                        @218                           */
+.global LIT_218
+LIT_218:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74 /* baserom.dol+0x39fc64 */
 .byte 0x6f, 0x20, 0x41, 0x4d, 0x43, 0x20, 0x44, 0x44, 0x48, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61 /* baserom.dol+0x39fc74 */
 .byte 0x72, 0x65, 0x0a, 0x00 /* baserom.dol+0x39fc84 */
 
-/* 803A2C88 002B .rodata lbl_803A2C88 @219 */
-.global lbl_803A2C88
-lbl_803A2C88:
+/* 803A2C88 002B .rodata    Os_dolphin_dolphin_trk_glue__LIT_219 @219                           */
+.global Os_dolphin_dolphin_trk_glue__LIT_219
+Os_dolphin_dolphin_trk_glue__LIT_219:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74 /* baserom.dol+0x39fc88 */
 .byte 0x6f, 0x20, 0x55, 0x4e, 0x4b, 0x4e, 0x4f, 0x57, 0x4e, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61 /* baserom.dol+0x39fc98 */
 .byte 0x72, 0x65, 0x2e, 0x20, 0x28, 0x25, 0x6c, 0x64, 0x29, 0x0a, 0x00 /* baserom.dol+0x39fca8 */
 .byte 0x00 /* baserom.dol+0x39fcb3 */
 
-/* 803A2CB4 002F .rodata lbl_803A2CB4 @220 */
-.global lbl_803A2CB4
-lbl_803A2CB4:
+/* 803A2CB4 002F .rodata    Os_dolphin_dolphin_trk_glue__LIT_220 @220                           */
+.global Os_dolphin_dolphin_trk_glue__LIT_220
+Os_dolphin_dolphin_trk_glue__LIT_220:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x49, 0x6e, 0x76, 0x61, 0x6c /* baserom.dol+0x39fcb4 */
 .byte 0x69, 0x64, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x20, 0x49, 0x44, 0x20, 0x70 /* baserom.dol+0x39fcc4 */
 .byte 0x61, 0x73, 0x73, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x4f, 0x53, 0x0a, 0x00 /* baserom.dol+0x39fcd4 */
 .byte 0x00 /* baserom.dol+0x39fce3 */
 
-/* 803A2CE4 0028 .rodata lbl_803A2CE4 @221 */
-.global lbl_803A2CE4
-lbl_803A2CE4:
+/* 803A2CE4 0028 .rodata    LIT_221                        @221                           */
+.global LIT_221
+LIT_221:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x54, 0x52, 0x4b, 0x20, 0x3a, 0x20, 0x44, 0x65, 0x66, 0x61, 0x75 /* baserom.dol+0x39fce4 */
 .byte 0x6c, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x6f, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x48, 0x61 /* baserom.dol+0x39fcf4 */
 .byte 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0a, 0x00 /* baserom.dol+0x39fd04 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39fd0c */
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D32A8 0028 .data gDBCommTable gDBCommTable */
+/* 803D32A8 0028 .data      gDBCommTable                   gDBCommTable                   */
 .global gDBCommTable
 gDBCommTable:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d02a8 */
@@ -482,15 +516,17 @@ gDBCommTable:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d02d0 */
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 8044F824 0004 .bss _MetroTRK_Has_Framing _MetroTRK_Has_Framing */
+/* 8044F824 0004 .bss       _MetroTRK_Has_Framing          _MetroTRK_Has_Framing          */
 .global _MetroTRK_Has_Framing
 _MetroTRK_Has_Framing:
 .skip 0x4
 
-/* 8044F828 0008 .bss lbl_8044F828 lbl_8044F828 */
-.global lbl_8044F828
-lbl_8044F828:
+/* 8044F828 0008 .bss       sym_8044F828                   sym_8044F828                   */
+.global sym_8044F828
+sym_8044F828:
 .skip 0x8
 

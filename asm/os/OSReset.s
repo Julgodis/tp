@@ -1,52 +1,75 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8033F660 0084 .text OSRegisterResetFunction OSRegisterResetFunction */
+/* 8033F660 0008 .text      OSRegisterResetFunction        OSRegisterResetFunction        */
 .global OSRegisterResetFunction
 OSRegisterResetFunction:
 /* 8033F660 0033C5A0  80 AD 91 10 */	lwz r5, ResetFunctionQueue-_SDA_BASE_(r13)
-/* 8033F664 0033C5A4  48 00 00 08 */	b lbl_8033F66C
-lbl_8033F668:
+/* 8033F664 0033C5A4  48 00 00 08 */	b func_8033F66C
+
+/* 8033F668 0004 .text      func_8033F668                  func_8033F668                  */
+.global func_8033F668
+func_8033F668:
 /* 8033F668 0033C5A8  80 A5 00 08 */	lwz r5, 8(r5)
-lbl_8033F66C:
+
+/* 8033F66C 0018 .text      func_8033F66C                  func_8033F66C                  */
+.global func_8033F66C
+func_8033F66C:
 /* 8033F66C 0033C5AC  28 05 00 00 */	cmplwi r5, 0
-/* 8033F670 0033C5B0  41 82 00 14 */	beq lbl_8033F684
+/* 8033F670 0033C5B0  41 82 00 14 */	beq func_8033F684
 /* 8033F674 0033C5B4  80 85 00 04 */	lwz r4, 4(r5)
 /* 8033F678 0033C5B8  80 03 00 04 */	lwz r0, 4(r3)
 /* 8033F67C 0033C5BC  7C 04 00 40 */	cmplw r4, r0
-/* 8033F680 0033C5C0  40 81 FF E8 */	ble lbl_8033F668
-lbl_8033F684:
+/* 8033F680 0033C5C0  40 81 FF E8 */	ble func_8033F668
+
+/* 8033F684 0020 .text      func_8033F684                  func_8033F684                  */
+.global func_8033F684
+func_8033F684:
 /* 8033F684 0033C5C4  28 05 00 00 */	cmplwi r5, 0
-/* 8033F688 0033C5C8  40 82 00 34 */	bne lbl_8033F6BC
+/* 8033F688 0033C5C8  40 82 00 34 */	bne func_8033F6BC
 /* 8033F68C 0033C5CC  38 AD 91 10 */	addi r5, r13, ResetFunctionQueue-_SDA_BASE_
 /* 8033F690 0033C5D0  84 85 00 04 */	lwzu r4, 4(r5)
 /* 8033F694 0033C5D4  28 04 00 00 */	cmplwi r4, 0
-/* 8033F698 0033C5D8  40 82 00 0C */	bne lbl_8033F6A4
+/* 8033F698 0033C5D8  40 82 00 0C */	bne func_8033F6A4
 /* 8033F69C 0033C5DC  90 6D 91 10 */	stw r3, ResetFunctionQueue-_SDA_BASE_(r13)
-/* 8033F6A0 0033C5E0  48 00 00 08 */	b lbl_8033F6A8
-lbl_8033F6A4:
+/* 8033F6A0 0033C5E0  48 00 00 08 */	b func_8033F6A8
+
+/* 8033F6A4 0004 .text      func_8033F6A4                  func_8033F6A4                  */
+.global func_8033F6A4
+func_8033F6A4:
 /* 8033F6A4 0033C5E4  90 64 00 08 */	stw r3, 8(r4)
-lbl_8033F6A8:
+
+/* 8033F6A8 0014 .text      func_8033F6A8                  func_8033F6A8                  */
+.global func_8033F6A8
+func_8033F6A8:
 /* 8033F6A8 0033C5E8  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8033F6AC 0033C5EC  38 00 00 00 */	li r0, 0
 /* 8033F6B0 0033C5F0  90 03 00 08 */	stw r0, 8(r3)
 /* 8033F6B4 0033C5F4  90 65 00 00 */	stw r3, 0(r5)
 /* 8033F6B8 0033C5F8  4E 80 00 20 */	blr 
-lbl_8033F6BC:
+
+/* 8033F6BC 0020 .text      func_8033F6BC                  func_8033F6BC                  */
+.global func_8033F6BC
+func_8033F6BC:
 /* 8033F6BC 0033C5FC  90 A3 00 08 */	stw r5, 8(r3)
 /* 8033F6C0 0033C600  80 85 00 0C */	lwz r4, 0xc(r5)
 /* 8033F6C4 0033C604  90 65 00 0C */	stw r3, 0xc(r5)
 /* 8033F6C8 0033C608  28 04 00 00 */	cmplwi r4, 0
 /* 8033F6CC 0033C60C  90 83 00 0C */	stw r4, 0xc(r3)
-/* 8033F6D0 0033C610  40 82 00 0C */	bne lbl_8033F6DC
+/* 8033F6D0 0033C610  40 82 00 0C */	bne func_8033F6DC
 /* 8033F6D4 0033C614  90 6D 91 10 */	stw r3, ResetFunctionQueue-_SDA_BASE_(r13)
 /* 8033F6D8 0033C618  4E 80 00 20 */	blr 
-lbl_8033F6DC:
+
+/* 8033F6DC 0008 .text      func_8033F6DC                  func_8033F6DC                  */
+.global func_8033F6DC
+func_8033F6DC:
 /* 8033F6DC 0033C61C  90 64 00 08 */	stw r3, 8(r4)
 /* 8033F6E0 0033C620  4E 80 00 20 */	blr 
 
-/* 8033F6E4 00A8 .text __OSCallResetFunctions __OSCallResetFunctions */
+/* 8033F6E4 002C .text      __OSCallResetFunctions         __OSCallResetFunctions         */
 .global __OSCallResetFunctions
 __OSCallResetFunctions:
 /* 8033F6E4 0033C624  7C 08 02 A6 */	mflr r0
@@ -59,14 +82,20 @@ __OSCallResetFunctions:
 /* 8033F700 0033C640  3B A3 00 00 */	addi r29, r3, 0
 /* 8033F704 0033C644  38 60 00 00 */	li r3, 0
 /* 8033F708 0033C648  83 ED 91 10 */	lwz r31, ResetFunctionQueue-_SDA_BASE_(r13)
-/* 8033F70C 0033C64C  48 00 00 3C */	b lbl_8033F748
-lbl_8033F710:
+/* 8033F70C 0033C64C  48 00 00 3C */	b func_8033F748
+
+/* 8033F710 0014 .text      func_8033F710                  func_8033F710                  */
+.global func_8033F710
+func_8033F710:
 /* 8033F710 0033C650  2C 1E 00 00 */	cmpwi r30, 0
-/* 8033F714 0033C654  41 82 00 10 */	beq lbl_8033F724
+/* 8033F714 0033C654  41 82 00 10 */	beq func_8033F724
 /* 8033F718 0033C658  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8033F71C 0033C65C  7C 03 00 40 */	cmplw r3, r0
-/* 8033F720 0033C660  40 82 00 30 */	bne lbl_8033F750
-lbl_8033F724:
+/* 8033F720 0033C660  40 82 00 30 */	bne func_8033F750
+
+/* 8033F724 0024 .text      func_8033F724                  func_8033F724                  */
+.global func_8033F724
+func_8033F724:
 /* 8033F724 0033C664  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8033F728 0033C668  38 7D 00 00 */	addi r3, r29, 0
 /* 8033F72C 0033C66C  7D 88 03 A6 */	mtlr r12
@@ -76,20 +105,32 @@ lbl_8033F724:
 /* 8033F73C 0033C67C  54 00 D9 7E */	srwi r0, r0, 5
 /* 8033F740 0033C680  83 FF 00 08 */	lwz r31, 8(r31)
 /* 8033F744 0033C684  7F DE 03 78 */	or r30, r30, r0
-lbl_8033F748:
+
+/* 8033F748 0008 .text      func_8033F748                  func_8033F748                  */
+.global func_8033F748
+func_8033F748:
 /* 8033F748 0033C688  28 1F 00 00 */	cmplwi r31, 0
-/* 8033F74C 0033C68C  40 82 FF C4 */	bne lbl_8033F710
-lbl_8033F750:
+/* 8033F74C 0033C68C  40 82 FF C4 */	bne func_8033F710
+
+/* 8033F750 001C .text      func_8033F750                  func_8033F750                  */
+.global func_8033F750
+func_8033F750:
 /* 8033F750 0033C690  48 00 0E 31 */	bl __OSSyncSram
 /* 8033F754 0033C694  7C 60 00 34 */	cntlzw r0, r3
 /* 8033F758 0033C698  54 00 D9 7E */	srwi r0, r0, 5
 /* 8033F75C 0033C69C  7F DE 03 79 */	or. r30, r30, r0
-/* 8033F760 0033C6A0  41 82 00 0C */	beq lbl_8033F76C
+/* 8033F760 0033C6A0  41 82 00 0C */	beq func_8033F76C
 /* 8033F764 0033C6A4  38 60 00 00 */	li r3, 0
-/* 8033F768 0033C6A8  48 00 00 08 */	b lbl_8033F770
-lbl_8033F76C:
+/* 8033F768 0033C6A8  48 00 00 08 */	b func_8033F770
+
+/* 8033F76C 0004 .text      func_8033F76C                  func_8033F76C                  */
+.global func_8033F76C
+func_8033F76C:
 /* 8033F76C 0033C6AC  38 60 00 01 */	li r3, 1
-lbl_8033F770:
+
+/* 8033F770 001C .text      func_8033F770                  func_8033F770                  */
+.global func_8033F770
+func_8033F770:
 /* 8033F770 0033C6B0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8033F774 0033C6B4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8033F778 0033C6B8  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -98,48 +139,75 @@ lbl_8033F770:
 /* 8033F784 0033C6C4  7C 08 03 A6 */	mtlr r0
 /* 8033F788 0033C6C8  4E 80 00 20 */	blr 
 
-/* 8033F78C 0070 .text Reset Reset */
+/* 8033F78C 0004 .text      Reset                          Reset                          */
 .global Reset
 Reset:
-/* 8033F78C 0033C6CC  48 00 00 20 */	b lbl_8033F7AC
-lbl_8033F790:
+/* 8033F78C 0033C6CC  48 00 00 20 */	b func_8033F7AC
+
+/* 8033F790 001C .text      func_8033F790                  func_8033F790                  */
+.global func_8033F790
+func_8033F790:
 /* 8033F790 0033C6D0  7D 10 FA A6 */	mfspr r8, 0x3f0
 /* 8033F794 0033C6D4  61 08 00 08 */	ori r8, r8, 8
 /* 8033F798 0033C6D8  7D 10 FB A6 */	mtspr 0x3f0, r8
 /* 8033F79C 0033C6DC  4C 00 01 2C */	isync 
 /* 8033F7A0 0033C6E0  7C 00 04 AC */	sync 0
 /* 8033F7A4 0033C6E4  60 00 00 00 */	nop 
-/* 8033F7A8 0033C6E8  48 00 00 08 */	b lbl_8033F7B0
-lbl_8033F7AC:
-/* 8033F7AC 0033C6EC  48 00 00 20 */	b lbl_8033F7CC
-lbl_8033F7B0:
+/* 8033F7A8 0033C6E8  48 00 00 08 */	b func_8033F7B0
+
+/* 8033F7AC 0004 .text      func_8033F7AC                  func_8033F7AC                  */
+.global func_8033F7AC
+func_8033F7AC:
+/* 8033F7AC 0033C6EC  48 00 00 20 */	b func_8033F7CC
+
+/* 8033F7B0 0004 .text      func_8033F7B0                  func_8033F7B0                  */
+.global func_8033F7B0
+func_8033F7B0:
 /* 8033F7B0 0033C6F0  7C AC 42 E6 */	mftb r5, 0x10c
-lbl_8033F7B4:
+
+/* 8033F7B4 0018 .text      func_8033F7B4                  func_8033F7B4                  */
+.global func_8033F7B4
+func_8033F7B4:
 /* 8033F7B4 0033C6F4  7C CC 42 E6 */	mftb r6, 0x10c
 /* 8033F7B8 0033C6F8  7C E5 30 50 */	subf r7, r5, r6
 /* 8033F7BC 0033C6FC  28 07 11 24 */	cmplwi r7, 0x1124
-/* 8033F7C0 0033C700  41 80 FF F4 */	blt lbl_8033F7B4
+/* 8033F7C0 0033C700  41 80 FF F4 */	blt func_8033F7B4
 /* 8033F7C4 0033C704  60 00 00 00 */	nop 
-/* 8033F7C8 0033C708  48 00 00 08 */	b lbl_8033F7D0
-lbl_8033F7CC:
-/* 8033F7CC 0033C70C  48 00 00 20 */	b lbl_8033F7EC
-lbl_8033F7D0:
+/* 8033F7C8 0033C708  48 00 00 08 */	b func_8033F7D0
+
+/* 8033F7CC 0004 .text      func_8033F7CC                  func_8033F7CC                  */
+.global func_8033F7CC
+func_8033F7CC:
+/* 8033F7CC 0033C70C  48 00 00 20 */	b func_8033F7EC
+
+/* 8033F7D0 001C .text      func_8033F7D0                  func_8033F7D0                  */
+.global func_8033F7D0
+func_8033F7D0:
 /* 8033F7D0 0033C710  3D 00 CC 00 */	lis r8, 0xCC003000@h
 /* 8033F7D4 0033C714  61 08 30 00 */	ori r8, r8, 0xCC003000@l
 /* 8033F7D8 0033C718  38 80 00 03 */	li r4, 3
 /* 8033F7DC 0033C71C  90 88 00 24 */	stw r4, 0x24(r8)
 /* 8033F7E0 0033C720  90 68 00 24 */	stw r3, 0x24(r8)
 /* 8033F7E4 0033C724  60 00 00 00 */	nop 
-/* 8033F7E8 0033C728  48 00 00 08 */	b lbl_8033F7F0
-lbl_8033F7EC:
-/* 8033F7EC 0033C72C  48 00 00 0C */	b lbl_8033F7F8
-lbl_8033F7F0:
-/* 8033F7F0 0033C730  60 00 00 00 */	nop 
-/* 8033F7F4 0033C734  4B FF FF FC */	b lbl_8033F7F0
-lbl_8033F7F8:
-/* 8033F7F8 0033C738  4B FF FF 98 */	b lbl_8033F790
+/* 8033F7E8 0033C728  48 00 00 08 */	b func_8033F7F0
 
-/* 8033F7FC 0068 .text KillThreads KillThreads */
+/* 8033F7EC 0004 .text      func_8033F7EC                  func_8033F7EC                  */
+.global func_8033F7EC
+func_8033F7EC:
+/* 8033F7EC 0033C72C  48 00 00 0C */	b func_8033F7F8
+
+/* 8033F7F0 0008 .text      func_8033F7F0                  func_8033F7F0                  */
+.global func_8033F7F0
+func_8033F7F0:
+/* 8033F7F0 0033C730  60 00 00 00 */	nop 
+/* 8033F7F4 0033C734  4B FF FF FC */	b func_8033F7F0
+
+/* 8033F7F8 0004 .text      func_8033F7F8                  func_8033F7F8                  */
+.global func_8033F7F8
+func_8033F7F8:
+/* 8033F7F8 0033C738  4B FF FF 98 */	b func_8033F790
+
+/* 8033F7FC 001C .text      KillThreads                    KillThreads                    */
 .global KillThreads
 KillThreads:
 /* 8033F7FC 0033C73C  7C 08 02 A6 */	mflr r0
@@ -148,34 +216,52 @@ KillThreads:
 /* 8033F808 0033C748  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8033F80C 0033C74C  3C 60 80 00 */	lis r3, 0x800000DC@ha
 /* 8033F810 0033C750  80 63 00 DC */	lwz r3, 0x800000DC@l(r3)
-/* 8033F814 0033C754  48 00 00 04 */	b lbl_8033F818
-lbl_8033F818:
-/* 8033F818 0033C758  48 00 00 04 */	b lbl_8033F81C
-lbl_8033F81C:
-/* 8033F81C 0033C75C  48 00 00 2C */	b lbl_8033F848
-lbl_8033F820:
+/* 8033F814 0033C754  48 00 00 04 */	b func_8033F818
+
+/* 8033F818 0004 .text      func_8033F818                  func_8033F818                  */
+.global func_8033F818
+func_8033F818:
+/* 8033F818 0033C758  48 00 00 04 */	b func_8033F81C
+
+/* 8033F81C 0004 .text      func_8033F81C                  func_8033F81C                  */
+.global func_8033F81C
+func_8033F81C:
+/* 8033F81C 0033C75C  48 00 00 2C */	b func_8033F848
+
+/* 8033F820 0020 .text      func_8033F820                  func_8033F820                  */
+.global func_8033F820
+func_8033F820:
 /* 8033F820 0033C760  A0 03 02 C8 */	lhz r0, 0x2c8(r3)
 /* 8033F824 0033C764  83 E3 02 FC */	lwz r31, 0x2fc(r3)
 /* 8033F828 0033C768  2C 00 00 04 */	cmpwi r0, 4
-/* 8033F82C 0033C76C  41 82 00 14 */	beq lbl_8033F840
-/* 8033F830 0033C770  40 80 00 14 */	bge lbl_8033F844
+/* 8033F82C 0033C76C  41 82 00 14 */	beq func_8033F840
+/* 8033F830 0033C770  40 80 00 14 */	bge func_8033F844
 /* 8033F834 0033C774  2C 00 00 01 */	cmpwi r0, 1
-/* 8033F838 0033C778  41 82 00 08 */	beq lbl_8033F840
-/* 8033F83C 0033C77C  48 00 00 08 */	b lbl_8033F844
-lbl_8033F840:
+/* 8033F838 0033C778  41 82 00 08 */	beq func_8033F840
+/* 8033F83C 0033C77C  48 00 00 08 */	b func_8033F844
+
+/* 8033F840 0004 .text      func_8033F840                  func_8033F840                  */
+.global func_8033F840
+func_8033F840:
 /* 8033F840 0033C780  48 00 1D 19 */	bl OSCancelThread
-lbl_8033F844:
+
+/* 8033F844 0004 .text      func_8033F844                  func_8033F844                  */
+.global func_8033F844
+func_8033F844:
 /* 8033F844 0033C784  7F E3 FB 78 */	mr r3, r31
-lbl_8033F848:
+
+/* 8033F848 001C .text      func_8033F848                  func_8033F848                  */
+.global func_8033F848
+func_8033F848:
 /* 8033F848 0033C788  28 03 00 00 */	cmplwi r3, 0
-/* 8033F84C 0033C78C  40 82 FF D4 */	bne lbl_8033F820
+/* 8033F84C 0033C78C  40 82 FF D4 */	bne func_8033F820
 /* 8033F850 0033C790  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8033F854 0033C794  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8033F858 0033C798  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033F85C 0033C79C  7C 08 03 A6 */	mtlr r0
 /* 8033F860 0033C7A0  4E 80 00 20 */	blr 
 
-/* 8033F864 0048 .text __OSDoHotReset __OSDoHotReset */
+/* 8033F864 0048 .text      __OSDoHotReset                 __OSDoHotReset                 */
 .global __OSDoHotReset
 __OSDoHotReset:
 /* 8033F864 0033C7A4  7C 08 02 A6 */	mflr r0
@@ -183,7 +269,7 @@ __OSDoHotReset:
 /* 8033F86C 0033C7AC  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 8033F870 0033C7B0  93 E1 00 14 */	stw r31, 0x14(r1)
 /* 8033F874 0033C7B4  7C 7F 1B 78 */	mr r31, r3
-/* 8033F878 0033C7B8  4B FF DE 7D */	bl __RAS_OSDisableInterrupts_begin
+/* 8033F878 0033C7B8  4B FF DE 7D */	bl OSDisableInterrupts
 /* 8033F87C 0033C7BC  3C 60 CC 00 */	lis r3, 0xCC002000@ha
 /* 8033F880 0033C7C0  38 63 20 00 */	addi r3, r3, 0xCC002000@l
 /* 8033F884 0033C7C4  38 00 00 00 */	li r0, 0
@@ -197,7 +283,7 @@ __OSDoHotReset:
 /* 8033F8A4 0033C7E4  7C 08 03 A6 */	mtlr r0
 /* 8033F8A8 0033C7E8  4E 80 00 20 */	blr 
 
-/* 8033F8AC 0200 .text OSResetSystem OSResetSystem */
+/* 8033F8AC 0058 .text      OSResetSystem                  OSResetSystem                  */
 .global OSResetSystem
 OSResetSystem:
 /* 8033F8AC 0033C7EC  7C 08 02 A6 */	mflr r0
@@ -212,9 +298,9 @@ OSResetSystem:
 /* 8033F8D0 0033C810  7C BE 2B 78 */	mr r30, r5
 /* 8033F8D4 0033C814  48 00 13 F1 */	bl OSDisableScheduler
 /* 8033F8D8 0033C818  2C 1C 00 01 */	cmpwi r28, 1
-/* 8033F8DC 0033C81C  40 82 00 28 */	bne lbl_8033F904
+/* 8033F8DC 0033C81C  40 82 00 28 */	bne func_8033F904
 /* 8033F8E0 0033C820  2C 1E 00 00 */	cmpwi r30, 0
-/* 8033F8E4 0033C824  41 82 00 20 */	beq lbl_8033F904
+/* 8033F8E4 0033C824  41 82 00 20 */	beq func_8033F904
 /* 8033F8E8 0033C828  48 00 08 5D */	bl __OSLockSram
 /* 8033F8EC 0033C82C  88 03 00 13 */	lbz r0, 0x13(r3)
 /* 8033F8F0 0033C830  60 00 00 40 */	ori r0, r0, 0x40
@@ -222,71 +308,107 @@ OSResetSystem:
 /* 8033F8F8 0033C838  38 60 00 01 */	li r3, 1
 /* 8033F8FC 0033C83C  48 00 0C 3D */	bl __OSUnlockSram
 /* 8033F900 0033C840  3B A0 00 00 */	li r29, 0
-lbl_8033F904:
+
+/* 8033F904 0028 .text      func_8033F904                  func_8033F904                  */
+.global func_8033F904
+func_8033F904:
 /* 8033F904 0033C844  2C 1C 00 02 */	cmpwi r28, 2
-/* 8033F908 0033C848  41 82 00 24 */	beq lbl_8033F92C
+/* 8033F908 0033C848  41 82 00 24 */	beq func_8033F92C
 /* 8033F90C 0033C84C  2C 1C 00 00 */	cmpwi r28, 0
-/* 8033F910 0033C850  40 82 00 78 */	bne lbl_8033F988
+/* 8033F910 0033C850  40 82 00 78 */	bne func_8033F988
 /* 8033F914 0033C854  80 0D 91 18 */	lwz r0, bootThisDol-_SDA_BASE_(r13)
 /* 8033F918 0033C858  28 00 00 00 */	cmplwi r0, 0
-/* 8033F91C 0033C85C  40 82 00 10 */	bne lbl_8033F92C
+/* 8033F91C 0033C85C  40 82 00 10 */	bne func_8033F92C
 /* 8033F920 0033C860  3C 1D 3F FF */	addis r0, r29, 0x3fff
 /* 8033F924 0033C864  28 00 00 00 */	cmplwi r0, 0
-/* 8033F928 0033C868  40 82 00 60 */	bne lbl_8033F988
-lbl_8033F92C:
+/* 8033F928 0033C868  40 82 00 60 */	bne func_8033F988
+
+/* 8033F92C 0014 .text      func_8033F92C                  func_8033F92C                  */
+.global func_8033F92C
+func_8033F92C:
 /* 8033F92C 0033C86C  4B FF BB 69 */	bl __OSStopAudioSystem
 /* 8033F930 0033C870  38 60 00 01 */	li r3, 1
 /* 8033F934 0033C874  48 01 02 C1 */	bl __PADDisableRecalibration
 /* 8033F938 0033C878  7C 7F 1B 78 */	mr r31, r3
-/* 8033F93C 0033C87C  48 00 00 04 */	b lbl_8033F940
-lbl_8033F940:
-/* 8033F940 0033C880  48 00 00 04 */	b lbl_8033F944
-lbl_8033F944:
+/* 8033F93C 0033C87C  48 00 00 04 */	b func_8033F940
+
+/* 8033F940 0004 .text      func_8033F940                  func_8033F940                  */
+.global func_8033F940
+func_8033F940:
+/* 8033F940 0033C880  48 00 00 04 */	b func_8033F944
+
+/* 8033F944 0014 .text      func_8033F944                  func_8033F944                  */
+.global func_8033F944
+func_8033F944:
 /* 8033F944 0033C884  38 60 00 00 */	li r3, 0
 /* 8033F948 0033C888  4B FF FD 9D */	bl __OSCallResetFunctions
 /* 8033F94C 0033C88C  2C 03 00 00 */	cmpwi r3, 0
-/* 8033F950 0033C890  41 82 FF F4 */	beq lbl_8033F944
-/* 8033F954 0033C894  48 00 00 04 */	b lbl_8033F958
-lbl_8033F958:
-/* 8033F958 0033C898  48 00 00 04 */	b lbl_8033F95C
-lbl_8033F95C:
+/* 8033F950 0033C890  41 82 FF F4 */	beq func_8033F944
+/* 8033F954 0033C894  48 00 00 04 */	b func_8033F958
+
+/* 8033F958 0004 .text      func_8033F958                  func_8033F958                  */
+.global func_8033F958
+func_8033F958:
+/* 8033F958 0033C898  48 00 00 04 */	b func_8033F95C
+
+/* 8033F95C 002C .text      func_8033F95C                  func_8033F95C                  */
+.global func_8033F95C
+func_8033F95C:
 /* 8033F95C 0033C89C  48 00 0C 25 */	bl __OSSyncSram
 /* 8033F960 0033C8A0  2C 03 00 00 */	cmpwi r3, 0
-/* 8033F964 0033C8A4  41 82 FF F8 */	beq lbl_8033F95C
-/* 8033F968 0033C8A8  4B FF DD 8D */	bl __RAS_OSDisableInterrupts_begin
+/* 8033F964 0033C8A4  41 82 FF F8 */	beq func_8033F95C
+/* 8033F968 0033C8A8  4B FF DD 8D */	bl OSDisableInterrupts
 /* 8033F96C 0033C8AC  38 60 00 01 */	li r3, 1
 /* 8033F970 0033C8B0  4B FF FD 75 */	bl __OSCallResetFunctions
 /* 8033F974 0033C8B4  4B FF BE 79 */	bl LCDisable
 /* 8033F978 0033C8B8  7F E3 FB 78 */	mr r3, r31
 /* 8033F97C 0033C8BC  48 01 02 79 */	bl __PADDisableRecalibration
 /* 8033F980 0033C8C0  4B FF FE 7D */	bl KillThreads
-/* 8033F984 0033C8C4  48 00 00 48 */	b lbl_8033F9CC
-lbl_8033F988:
+/* 8033F984 0033C8C4  48 00 00 48 */	b func_8033F9CC
+
+/* 8033F988 0008 .text      func_8033F988                  func_8033F988                  */
+.global func_8033F988
+func_8033F988:
 /* 8033F988 0033C8C8  4B FF BB 0D */	bl __OSStopAudioSystem
-/* 8033F98C 0033C8CC  48 00 00 04 */	b lbl_8033F990
-lbl_8033F990:
-/* 8033F990 0033C8D0  48 00 00 04 */	b lbl_8033F994
-lbl_8033F994:
+/* 8033F98C 0033C8CC  48 00 00 04 */	b func_8033F990
+
+/* 8033F990 0004 .text      func_8033F990                  func_8033F990                  */
+.global func_8033F990
+func_8033F990:
+/* 8033F990 0033C8D0  48 00 00 04 */	b func_8033F994
+
+/* 8033F994 0014 .text      func_8033F994                  func_8033F994                  */
+.global func_8033F994
+func_8033F994:
 /* 8033F994 0033C8D4  38 60 00 00 */	li r3, 0
 /* 8033F998 0033C8D8  4B FF FD 4D */	bl __OSCallResetFunctions
 /* 8033F99C 0033C8DC  2C 03 00 00 */	cmpwi r3, 0
-/* 8033F9A0 0033C8E0  41 82 FF F4 */	beq lbl_8033F994
-/* 8033F9A4 0033C8E4  48 00 00 04 */	b lbl_8033F9A8
-lbl_8033F9A8:
-/* 8033F9A8 0033C8E8  48 00 00 04 */	b lbl_8033F9AC
-lbl_8033F9AC:
+/* 8033F9A0 0033C8E0  41 82 FF F4 */	beq func_8033F994
+/* 8033F9A4 0033C8E4  48 00 00 04 */	b func_8033F9A8
+
+/* 8033F9A8 0004 .text      func_8033F9A8                  func_8033F9A8                  */
+.global func_8033F9A8
+func_8033F9A8:
+/* 8033F9A8 0033C8E8  48 00 00 04 */	b func_8033F9AC
+
+/* 8033F9AC 0020 .text      func_8033F9AC                  func_8033F9AC                  */
+.global func_8033F9AC
+func_8033F9AC:
 /* 8033F9AC 0033C8EC  48 00 0B D5 */	bl __OSSyncSram
 /* 8033F9B0 0033C8F0  2C 03 00 00 */	cmpwi r3, 0
-/* 8033F9B4 0033C8F4  41 82 FF F8 */	beq lbl_8033F9AC
-/* 8033F9B8 0033C8F8  4B FF DD 3D */	bl __RAS_OSDisableInterrupts_begin
+/* 8033F9B4 0033C8F4  41 82 FF F8 */	beq func_8033F9AC
+/* 8033F9B8 0033C8F8  4B FF DD 3D */	bl OSDisableInterrupts
 /* 8033F9BC 0033C8FC  38 60 00 01 */	li r3, 1
 /* 8033F9C0 0033C900  4B FF FD 25 */	bl __OSCallResetFunctions
 /* 8033F9C4 0033C904  4B FF BE 29 */	bl LCDisable
 /* 8033F9C8 0033C908  4B FF FE 35 */	bl KillThreads
-lbl_8033F9CC:
+
+/* 8033F9CC 002C .text      func_8033F9CC                  func_8033F9CC                  */
+.global func_8033F9CC
+func_8033F9CC:
 /* 8033F9CC 0033C90C  2C 1C 00 01 */	cmpwi r28, 1
-/* 8033F9D0 0033C910  40 82 00 28 */	bne lbl_8033F9F8
-/* 8033F9D4 0033C914  4B FF DD 21 */	bl __RAS_OSDisableInterrupts_begin
+/* 8033F9D0 0033C910  40 82 00 28 */	bne func_8033F9F8
+/* 8033F9D4 0033C914  4B FF DD 21 */	bl OSDisableInterrupts
 /* 8033F9D8 0033C918  3C 60 CC 00 */	lis r3, 0xCC002000@ha
 /* 8033F9DC 0033C91C  38 63 20 00 */	addi r3, r3, 0xCC002000@l
 /* 8033F9E0 0033C920  38 00 00 00 */	li r0, 0
@@ -294,22 +416,31 @@ lbl_8033F9CC:
 /* 8033F9E8 0033C928  4B FF BC DD */	bl ICFlashInvalidate
 /* 8033F9EC 0033C92C  57 A3 18 38 */	slwi r3, r29, 3
 /* 8033F9F0 0033C930  4B FF FD 9D */	bl Reset
-/* 8033F9F4 0033C934  48 00 00 34 */	b lbl_8033FA28
-lbl_8033F9F8:
+/* 8033F9F4 0033C934  48 00 00 34 */	b func_8033FA28
+
+/* 8033F9F8 0020 .text      func_8033F9F8                  func_8033F9F8                  */
+.global func_8033F9F8
+func_8033F9F8:
 /* 8033F9F8 0033C938  2C 1C 00 00 */	cmpwi r28, 0
-/* 8033F9FC 0033C93C  40 82 00 2C */	bne lbl_8033FA28
+/* 8033F9FC 0033C93C  40 82 00 2C */	bne func_8033FA28
 /* 8033FA00 0033C940  2C 1E 00 01 */	cmpwi r30, 1
-/* 8033FA04 0033C944  40 82 00 14 */	bne lbl_8033FA18
-/* 8033FA08 0033C948  3C 60 80 3D */	lis r3, lbl_803D07E8@ha
+/* 8033FA04 0033C944  40 82 00 14 */	bne func_8033FA18
+/* 8033FA08 0033C948  3C 60 80 3D */	lis r3, OSReset__LIT_153@ha
 /* 8033FA0C 0033C94C  4C C6 31 82 */	crclr 6
-/* 8033FA10 0033C950  38 63 07 E8 */	addi r3, r3, lbl_803D07E8@l
+/* 8033FA10 0033C950  38 63 07 E8 */	addi r3, r3, OSReset__LIT_153@l
 /* 8033FA14 0033C954  4B CC 70 A9 */	bl OSReport
-lbl_8033FA18:
+
+/* 8033FA18 0010 .text      func_8033FA18                  func_8033FA18                  */
+.global func_8033FA18
+func_8033FA18:
 /* 8033FA18 0033C958  48 00 12 ED */	bl OSEnableScheduler
 /* 8033FA1C 0033C95C  7F A3 EB 78 */	mr r3, r29
 /* 8033FA20 0033C960  80 8D 91 18 */	lwz r4, bootThisDol-_SDA_BASE_(r13)
 /* 8033FA24 0033C964  4B FF FB AD */	bl __OSReboot
-lbl_8033FA28:
+
+/* 8033FA28 0084 .text      func_8033FA28                  func_8033FA28                  */
+.global func_8033FA28
+func_8033FA28:
 /* 8033FA28 0033C968  3F E0 80 00 */	lis r31, 0x80000040@ha
 /* 8033FA2C 0033C96C  38 7F 00 40 */	addi r3, r31, 0x80000040@l
 /* 8033FA30 0033C970  38 80 00 00 */	li r4, 0
@@ -344,32 +475,40 @@ lbl_8033FA28:
 /* 8033FAA4 0033C9E4  7C 08 03 A6 */	mtlr r0
 /* 8033FAA8 0033C9E8  4E 80 00 20 */	blr 
 
-/* 8033FAAC 0038 .text OSGetResetCode OSGetResetCode */
+/* 8033FAAC 0020 .text      OSGetResetCode                 OSGetResetCode                 */
 .global OSGetResetCode
 OSGetResetCode:
 /* 8033FAAC 0033C9EC  3C 60 80 45 */	lis r3, __OSRebootParams@ha
 /* 8033FAB0 0033C9F0  38 63 BA B0 */	addi r3, r3, __OSRebootParams@l
 /* 8033FAB4 0033C9F4  80 03 00 00 */	lwz r0, 0(r3)
 /* 8033FAB8 0033C9F8  2C 00 00 00 */	cmpwi r0, 0
-/* 8033FABC 0033C9FC  41 82 00 10 */	beq lbl_8033FACC
+/* 8033FABC 0033C9FC  41 82 00 10 */	beq func_8033FACC
 /* 8033FAC0 0033CA00  80 03 00 04 */	lwz r0, 4(r3)
 /* 8033FAC4 0033CA04  64 03 80 00 */	oris r3, r0, 0x8000
-/* 8033FAC8 0033CA08  48 00 00 18 */	b lbl_8033FAE0
-lbl_8033FACC:
+/* 8033FAC8 0033CA08  48 00 00 18 */	b func_8033FAE0
+
+/* 8033FACC 0014 .text      func_8033FACC                  func_8033FACC                  */
+.global func_8033FACC
+func_8033FACC:
 /* 8033FACC 0033CA0C  3C 60 CC 00 */	lis r3, 0xCC003000@ha
 /* 8033FAD0 0033CA10  38 63 30 00 */	addi r3, r3, 0xCC003000@l
 /* 8033FAD4 0033CA14  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8033FAD8 0033CA18  54 00 00 38 */	rlwinm r0, r0, 0, 0, 0x1c
 /* 8033FADC 0033CA1C  54 03 E8 FE */	srwi r3, r0, 3
-lbl_8033FAE0:
+
+/* 8033FAE0 0004 .text      func_8033FAE0                  func_8033FAE0                  */
+.global func_8033FAE0
+func_8033FAE0:
 /* 8033FAE0 0033CA20  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D07E8 004E .data lbl_803D07E8 @153 */
-.global lbl_803D07E8
-lbl_803D07E8:
+/* 803D07E8 004E .data      OSReset__LIT_153               @153                           */
+.global OSReset__LIT_153
+OSReset__LIT_153:
 .byte 0x4f, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x28, 0x29, 0x3a /* baserom.dol+0x3cd7e8 */
 .byte 0x20, 0x59, 0x6f, 0x75, 0x20, 0x63, 0x61, 0x6e, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69 /* baserom.dol+0x3cd7f8 */
 .byte 0x66, 0x79, 0x20, 0x54, 0x52, 0x55, 0x45, 0x20, 0x74, 0x6f, 0x20, 0x66, 0x6f, 0x72, 0x63, 0x65 /* baserom.dol+0x3cd808 */
@@ -378,14 +517,16 @@ lbl_803D07E8:
 .byte 0x00, 0x00 /* baserom.dol+0x3cd836 */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451690 0008 .sbss ResetFunctionQueue ResetFunctionQueue */
+/* 80451690 0008 .sbss      ResetFunctionQueue             ResetFunctionQueue             */
 .global ResetFunctionQueue
 ResetFunctionQueue:
 .skip 0x8
 
-/* 80451698 0004 .sbss bootThisDol bootThisDol */
+/* 80451698 0004 .sbss      bootThisDol                    bootThisDol                    */
 .global bootThisDol
 bootThisDol:
 .skip 0x4

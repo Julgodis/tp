@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8028A1F8 0098 .text transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A1F8 002C .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 .global transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl
 transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl:
 /* 8028A1F8 00287138  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -13,10 +15,13 @@ transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTrans
 /* 8028A20C 0028714C  7C 7E 1B 78 */	mr r30, r3
 /* 8028A210 00287150  7C 9F 23 78 */	mr r31, r4
 /* 8028A214 00287154  28 05 00 00 */	cmplwi r5, 0
-/* 8028A218 00287158  40 82 00 0C */	bne lbl_8028A224
+/* 8028A218 00287158  40 82 00 0C */	bne func_8028A224
 /* 8028A21C 0028715C  38 60 00 00 */	li r3, 0
-/* 8028A220 00287160  48 00 00 58 */	b lbl_8028A278
-lbl_8028A224:
+/* 8028A220 00287160  48 00 00 58 */	b func_8028A278
+
+/* 8028A224 002C .text      func_8028A224                  func_8028A224                  */
+.global func_8028A224
+func_8028A224:
 /* 8028A224 00287164  7C A3 2B 78 */	mr r3, r5
 /* 8028A228 00287168  7C C4 33 78 */	mr r4, r6
 /* 8028A22C 0028716C  38 A1 00 38 */	addi r5, r1, 0x38
@@ -25,10 +30,13 @@ lbl_8028A224:
 /* 8028A238 00287178  7D 89 03 A6 */	mtctr r12
 /* 8028A23C 0028717C  4E 80 04 21 */	bctrl 
 /* 8028A240 00287180  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8028A244 00287184  40 82 00 0C */	bne lbl_8028A250
+/* 8028A244 00287184  40 82 00 0C */	bne func_8028A250
 /* 8028A248 00287188  38 60 00 00 */	li r3, 0
-/* 8028A24C 0028718C  48 00 00 2C */	b lbl_8028A278
-lbl_8028A250:
+/* 8028A24C 0028718C  48 00 00 2C */	b func_8028A278
+
+/* 8028A250 0028 .text      func_8028A250                  func_8028A250                  */
+.global func_8028A250
+func_8028A250:
 /* 8028A250 00287190  38 61 00 08 */	addi r3, r1, 8
 /* 8028A254 00287194  38 9F 00 18 */	addi r4, r31, 0x18
 /* 8028A258 00287198  38 BF 00 0C */	addi r5, r31, 0xc
@@ -39,7 +47,10 @@ lbl_8028A250:
 /* 8028A26C 002871AC  7F C5 F3 78 */	mr r5, r30
 /* 8028A270 002871B0  48 0B C2 75 */	bl PSMTXConcat
 /* 8028A274 002871B4  38 60 00 01 */	li r3, 1
-lbl_8028A278:
+
+/* 8028A278 0018 .text      func_8028A278                  func_8028A278                  */
+.global func_8028A278
+func_8028A278:
 /* 8028A278 002871B8  83 E1 00 6C */	lwz r31, 0x6c(r1)
 /* 8028A27C 002871BC  83 C1 00 68 */	lwz r30, 0x68(r1)
 /* 8028A280 002871C0  80 01 00 74 */	lwz r0, 0x74(r1)
@@ -47,7 +58,7 @@ lbl_8028A278:
 /* 8028A288 002871C8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8028A28C 002871CC  4E 80 00 20 */	blr 
 
-/* 8028A290 0098 .text transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A290 002C .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 .global transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl
 transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl:
 /* 8028A290 002871D0  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -58,10 +69,13 @@ transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTrans
 /* 8028A2A4 002871E4  7C 7E 1B 78 */	mr r30, r3
 /* 8028A2A8 002871E8  7C 9F 23 78 */	mr r31, r4
 /* 8028A2AC 002871EC  28 05 00 00 */	cmplwi r5, 0
-/* 8028A2B0 002871F0  40 82 00 0C */	bne lbl_8028A2BC
+/* 8028A2B0 002871F0  40 82 00 0C */	bne func_8028A2BC
 /* 8028A2B4 002871F4  38 60 00 00 */	li r3, 0
-/* 8028A2B8 002871F8  48 00 00 58 */	b lbl_8028A310
-lbl_8028A2BC:
+/* 8028A2B8 002871F8  48 00 00 58 */	b func_8028A310
+
+/* 8028A2BC 002C .text      func_8028A2BC                  func_8028A2BC                  */
+.global func_8028A2BC
+func_8028A2BC:
 /* 8028A2BC 002871FC  7C A3 2B 78 */	mr r3, r5
 /* 8028A2C0 00287200  7C C4 33 78 */	mr r4, r6
 /* 8028A2C4 00287204  38 A1 00 38 */	addi r5, r1, 0x38
@@ -70,10 +84,13 @@ lbl_8028A2BC:
 /* 8028A2D0 00287210  7D 89 03 A6 */	mtctr r12
 /* 8028A2D4 00287214  4E 80 04 21 */	bctrl 
 /* 8028A2D8 00287218  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8028A2DC 0028721C  40 82 00 0C */	bne lbl_8028A2E8
+/* 8028A2DC 0028721C  40 82 00 0C */	bne func_8028A2E8
 /* 8028A2E0 00287220  38 60 00 00 */	li r3, 0
-/* 8028A2E4 00287224  48 00 00 2C */	b lbl_8028A310
-lbl_8028A2E8:
+/* 8028A2E4 00287224  48 00 00 2C */	b func_8028A310
+
+/* 8028A2E8 0028 .text      func_8028A2E8                  func_8028A2E8                  */
+.global func_8028A2E8
+func_8028A2E8:
 /* 8028A2E8 00287228  38 61 00 08 */	addi r3, r1, 8
 /* 8028A2EC 0028722C  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8028A2F0 00287230  C0 5F 00 04 */	lfs f2, 4(r31)
@@ -84,7 +101,10 @@ lbl_8028A2E8:
 /* 8028A304 00287244  7F C5 F3 78 */	mr r5, r30
 /* 8028A308 00287248  48 0B C1 DD */	bl PSMTXConcat
 /* 8028A30C 0028724C  38 60 00 01 */	li r3, 1
-lbl_8028A310:
+
+/* 8028A310 0018 .text      func_8028A310                  func_8028A310                  */
+.global func_8028A310
+func_8028A310:
 /* 8028A310 00287250  83 E1 00 6C */	lwz r31, 0x6c(r1)
 /* 8028A314 00287254  83 C1 00 68 */	lwz r30, 0x68(r1)
 /* 8028A318 00287258  80 01 00 74 */	lwz r0, 0x74(r1)
@@ -92,7 +112,7 @@ lbl_8028A310:
 /* 8028A320 00287260  38 21 00 70 */	addi r1, r1, 0x70
 /* 8028A324 00287264  4E 80 00 20 */	blr 
 
-/* 8028A328 00A4 .text transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A328 002C .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
 .global transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl
 transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl:
 /* 8028A328 00287268  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -103,10 +123,13 @@ transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTrans
 /* 8028A33C 0028727C  7C 7E 1B 78 */	mr r30, r3
 /* 8028A340 00287280  7C 9F 23 78 */	mr r31, r4
 /* 8028A344 00287284  28 05 00 00 */	cmplwi r5, 0
-/* 8028A348 00287288  40 82 00 0C */	bne lbl_8028A354
+/* 8028A348 00287288  40 82 00 0C */	bne func_8028A354
 /* 8028A34C 0028728C  38 60 00 00 */	li r3, 0
-/* 8028A350 00287290  48 00 00 64 */	b lbl_8028A3B4
-lbl_8028A354:
+/* 8028A350 00287290  48 00 00 64 */	b func_8028A3B4
+
+/* 8028A354 002C .text      func_8028A354                  func_8028A354                  */
+.global func_8028A354
+func_8028A354:
 /* 8028A354 00287294  7C A3 2B 78 */	mr r3, r5
 /* 8028A358 00287298  7C C4 33 78 */	mr r4, r6
 /* 8028A35C 0028729C  38 A1 00 68 */	addi r5, r1, 0x68
@@ -115,10 +138,13 @@ lbl_8028A354:
 /* 8028A368 002872A8  7D 89 03 A6 */	mtctr r12
 /* 8028A36C 002872AC  4E 80 04 21 */	bctrl 
 /* 8028A370 002872B0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8028A374 002872B4  40 82 00 0C */	bne lbl_8028A380
+/* 8028A374 002872B4  40 82 00 0C */	bne func_8028A380
 /* 8028A378 002872B8  38 60 00 00 */	li r3, 0
-/* 8028A37C 002872BC  48 00 00 38 */	b lbl_8028A3B4
-lbl_8028A380:
+/* 8028A37C 002872BC  48 00 00 38 */	b func_8028A3B4
+
+/* 8028A380 0034 .text      func_8028A380                  func_8028A380                  */
+.global func_8028A380
+func_8028A380:
 /* 8028A380 002872C0  38 61 00 38 */	addi r3, r1, 0x38
 /* 8028A384 002872C4  38 9F 00 18 */	addi r4, r31, 0x18
 /* 8028A388 002872C8  38 BF 00 0C */	addi r5, r31, 0xc
@@ -132,7 +158,10 @@ lbl_8028A380:
 /* 8028A3A8 002872E8  7F C5 F3 78 */	mr r5, r30
 /* 8028A3AC 002872EC  48 0B C1 39 */	bl PSMTXConcat
 /* 8028A3B0 002872F0  38 60 00 01 */	li r3, 1
-lbl_8028A3B4:
+
+/* 8028A3B4 0018 .text      func_8028A3B4                  func_8028A3B4                  */
+.global func_8028A3B4
+func_8028A3B4:
 /* 8028A3B4 002872F4  83 E1 00 9C */	lwz r31, 0x9c(r1)
 /* 8028A3B8 002872F8  83 C1 00 98 */	lwz r30, 0x98(r1)
 /* 8028A3BC 002872FC  80 01 00 A4 */	lwz r0, 0xa4(r1)
@@ -140,7 +169,7 @@ lbl_8028A3B4:
 /* 8028A3C4 00287304  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8028A3C8 00287308  4E 80 00 20 */	blr 
 
-/* 8028A3CC 00A4 .text transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A3CC 002C .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
 .global transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl
 transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl:
 /* 8028A3CC 0028730C  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -151,10 +180,13 @@ transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTrans
 /* 8028A3E0 00287320  7C 7E 1B 78 */	mr r30, r3
 /* 8028A3E4 00287324  7C 9F 23 78 */	mr r31, r4
 /* 8028A3E8 00287328  28 05 00 00 */	cmplwi r5, 0
-/* 8028A3EC 0028732C  40 82 00 0C */	bne lbl_8028A3F8
+/* 8028A3EC 0028732C  40 82 00 0C */	bne func_8028A3F8
 /* 8028A3F0 00287330  38 60 00 00 */	li r3, 0
-/* 8028A3F4 00287334  48 00 00 64 */	b lbl_8028A458
-lbl_8028A3F8:
+/* 8028A3F4 00287334  48 00 00 64 */	b func_8028A458
+
+/* 8028A3F8 002C .text      func_8028A3F8                  func_8028A3F8                  */
+.global func_8028A3F8
+func_8028A3F8:
 /* 8028A3F8 00287338  7C A3 2B 78 */	mr r3, r5
 /* 8028A3FC 0028733C  7C C4 33 78 */	mr r4, r6
 /* 8028A400 00287340  38 A1 00 68 */	addi r5, r1, 0x68
@@ -163,10 +195,13 @@ lbl_8028A3F8:
 /* 8028A40C 0028734C  7D 89 03 A6 */	mtctr r12
 /* 8028A410 00287350  4E 80 04 21 */	bctrl 
 /* 8028A414 00287354  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8028A418 00287358  40 82 00 0C */	bne lbl_8028A424
+/* 8028A418 00287358  40 82 00 0C */	bne func_8028A424
 /* 8028A41C 0028735C  38 60 00 00 */	li r3, 0
-/* 8028A420 00287360  48 00 00 38 */	b lbl_8028A458
-lbl_8028A424:
+/* 8028A420 00287360  48 00 00 38 */	b func_8028A458
+
+/* 8028A424 0034 .text      func_8028A424                  func_8028A424                  */
+.global func_8028A424
+func_8028A424:
 /* 8028A424 00287364  38 61 00 38 */	addi r3, r1, 0x38
 /* 8028A428 00287368  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8028A42C 0028736C  C0 5F 00 04 */	lfs f2, 4(r31)
@@ -180,7 +215,10 @@ lbl_8028A424:
 /* 8028A44C 0028738C  7F C5 F3 78 */	mr r5, r30
 /* 8028A450 00287390  48 0B C0 95 */	bl PSMTXConcat
 /* 8028A454 00287394  38 60 00 01 */	li r3, 1
-lbl_8028A458:
+
+/* 8028A458 0018 .text      func_8028A458                  func_8028A458                  */
+.global func_8028A458
+func_8028A458:
 /* 8028A458 00287398  83 E1 00 9C */	lwz r31, 0x9c(r1)
 /* 8028A45C 0028739C  83 C1 00 98 */	lwz r30, 0x98(r1)
 /* 8028A460 002873A0  80 01 00 A4 */	lwz r0, 0xa4(r1)
@@ -188,7 +226,7 @@ lbl_8028A458:
 /* 8028A468 002873A8  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8028A46C 002873AC  4E 80 00 20 */	blr 
 
-/* 8028A470 004C .text adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
+/* 8028A470 0020 .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
 .global adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl
 adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl:
 /* 8028A470 002873B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -196,12 +234,18 @@ adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl:
 /* 8028A478 002873B8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8028A47C 002873BC  80 63 00 04 */	lwz r3, 4(r3)
 /* 8028A480 002873C0  28 05 00 00 */	cmplwi r5, 0
-/* 8028A484 002873C4  40 82 00 0C */	bne lbl_8028A490
+/* 8028A484 002873C4  40 82 00 0C */	bne func_8028A490
 /* 8028A488 002873C8  38 80 FF FF */	li r4, -1
-/* 8028A48C 002873CC  48 00 00 08 */	b lbl_8028A494
-lbl_8028A490:
+/* 8028A48C 002873CC  48 00 00 08 */	b func_8028A494
+
+/* 8028A490 0004 .text      func_8028A490                  func_8028A490                  */
+.global func_8028A490
+func_8028A490:
 /* 8028A490 002873D0  80 84 00 00 */	lwz r4, 0(r4)
-lbl_8028A494:
+
+/* 8028A494 0028 .text      func_8028A494                  func_8028A494                  */
+.global func_8028A494
+func_8028A494:
 /* 8028A494 002873D4  7C C5 33 78 */	mr r5, r6
 /* 8028A498 002873D8  7C E6 3B 78 */	mr r6, r7
 /* 8028A49C 002873DC  81 83 00 00 */	lwz r12, 0(r3)
@@ -213,7 +257,7 @@ lbl_8028A494:
 /* 8028A4B4 002873F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028A4B8 002873F8  4E 80 00 20 */	blr 
 
-/* 8028A4BC 0050 .text adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
+/* 8028A4BC 003C .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
 .global adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc
 adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc:
 /* 8028A4BC 002873FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -228,41 +272,53 @@ adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc:
 /* 8028A4E0 00287420  7D 89 03 A6 */	mtctr r12
 /* 8028A4E4 00287424  4E 80 04 21 */	bctrl 
 /* 8028A4E8 00287428  2C 03 00 00 */	cmpwi r3, 0
-/* 8028A4EC 0028742C  41 82 00 0C */	beq lbl_8028A4F8
+/* 8028A4EC 0028742C  41 82 00 0C */	beq func_8028A4F8
 /* 8028A4F0 00287430  38 60 00 00 */	li r3, 0
-/* 8028A4F4 00287434  48 00 00 08 */	b lbl_8028A4FC
-lbl_8028A4F8:
+/* 8028A4F4 00287434  48 00 00 08 */	b func_8028A4FC
+
+/* 8028A4F8 0004 .text      func_8028A4F8                  func_8028A4F8                  */
+.global func_8028A4F8
+func_8028A4F8:
 /* 8028A4F8 00287438  80 61 00 08 */	lwz r3, 8(r1)
-lbl_8028A4FC:
+
+/* 8028A4FC 0010 .text      func_8028A4FC                  func_8028A4FC                  */
+.global func_8028A4FC
+func_8028A4FC:
 /* 8028A4FC 0028743C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8028A500 00287440  7C 08 03 A6 */	mtlr r0
 /* 8028A504 00287444  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028A508 00287448  4E 80 00 20 */	blr 
 
-/* 8028A50C 0044 .text adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
+/* 8028A50C 001C .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
 .global adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc
 adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc:
 /* 8028A50C 0028744C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028A510 00287450  7C 08 02 A6 */	mflr r0
 /* 8028A514 00287454  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8028A518 00287458  28 04 00 00 */	cmplwi r4, 0
-/* 8028A51C 0028745C  40 82 00 0C */	bne lbl_8028A528
+/* 8028A51C 0028745C  40 82 00 0C */	bne func_8028A528
 /* 8028A520 00287460  38 60 FF FF */	li r3, -1
-/* 8028A524 00287464  48 00 00 1C */	b lbl_8028A540
-lbl_8028A528:
+/* 8028A524 00287464  48 00 00 1C */	b func_8028A540
+
+/* 8028A528 0018 .text      func_8028A528                  func_8028A528                  */
+.global func_8028A528
+func_8028A528:
 /* 8028A528 00287468  7C 83 23 78 */	mr r3, r4
 /* 8028A52C 0028746C  7C A4 2B 78 */	mr r4, r5
 /* 8028A530 00287470  81 83 00 00 */	lwz r12, 0(r3)
 /* 8028A534 00287474  81 8C 00 34 */	lwz r12, 0x34(r12)
 /* 8028A538 00287478  7D 89 03 A6 */	mtctr r12
 /* 8028A53C 0028747C  4E 80 04 21 */	bctrl 
-lbl_8028A540:
+
+/* 8028A540 0010 .text      func_8028A540                  func_8028A540                  */
+.global func_8028A540
+func_8028A540:
 /* 8028A540 00287480  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8028A544 00287484  7C 08 03 A6 */	mtlr r0
 /* 8028A548 00287488  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028A54C 0028748C  4E 80 00 20 */	blr 
 
-/* 8028A550 00A0 .text adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A550 001C .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
 .global adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl
 adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl:
 /* 8028A550 00287490  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -270,12 +326,15 @@ adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TE
 /* 8028A558 00287498  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8028A55C 0028749C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8028A560 002874A0  2C 04 00 02 */	cmpwi r4, 2
-/* 8028A564 002874A4  41 82 00 08 */	beq lbl_8028A56C
-/* 8028A568 002874A8  48 00 00 74 */	b lbl_8028A5DC
-lbl_8028A56C:
+/* 8028A564 002874A4  41 82 00 08 */	beq func_8028A56C
+/* 8028A568 002874A8  48 00 00 74 */	b func_8028A5DC
+
+/* 8028A56C 0040 .text      func_8028A56C                  func_8028A56C                  */
+.global func_8028A56C
+func_8028A56C:
 /* 8028A56C 002874AC  80 05 00 00 */	lwz r0, 0(r5)
 /* 8028A570 002874B0  28 00 00 00 */	cmplwi r0, 0
-/* 8028A574 002874B4  41 82 00 38 */	beq lbl_8028A5AC
+/* 8028A574 002874B4  41 82 00 38 */	beq func_8028A5AC
 /* 8028A578 002874B8  83 E3 00 04 */	lwz r31, 4(r3)
 /* 8028A57C 002874BC  7F E3 FB 78 */	mr r3, r31
 /* 8028A580 002874C0  81 9F 00 00 */	lwz r12, 0(r31)
@@ -288,8 +347,11 @@ lbl_8028A56C:
 /* 8028A59C 002874DC  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 8028A5A0 002874E0  7D 89 03 A6 */	mtctr r12
 /* 8028A5A4 002874E4  4E 80 04 21 */	bctrl 
-/* 8028A5A8 002874E8  48 00 00 34 */	b lbl_8028A5DC
-lbl_8028A5AC:
+/* 8028A5A8 002874E8  48 00 00 34 */	b func_8028A5DC
+
+/* 8028A5AC 0030 .text      func_8028A5AC                  func_8028A5AC                  */
+.global func_8028A5AC
+func_8028A5AC:
 /* 8028A5AC 002874EC  83 E3 00 04 */	lwz r31, 4(r3)
 /* 8028A5B0 002874F0  7F E3 FB 78 */	mr r3, r31
 /* 8028A5B4 002874F4  81 9F 00 00 */	lwz r12, 0(r31)
@@ -302,7 +364,10 @@ lbl_8028A5AC:
 /* 8028A5D0 00287510  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 8028A5D4 00287514  7D 89 03 A6 */	mtctr r12
 /* 8028A5D8 00287518  4E 80 04 21 */	bctrl 
-lbl_8028A5DC:
+
+/* 8028A5DC 0014 .text      func_8028A5DC                  func_8028A5DC                  */
+.global func_8028A5DC
+func_8028A5DC:
 /* 8028A5DC 0028751C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8028A5E0 00287520  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8028A5E4 00287524  7C 08 03 A6 */	mtlr r0

@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80346F28 00D0 .text C_MTXPerspective C_MTXPerspective */
+/* 80346F28 00D0 .text      C_MTXPerspective               C_MTXPerspective               */
 .global C_MTXPerspective
 C_MTXPerspective:
 /* 80346F28 00343E68  7C 08 02 A6 */	mflr r0
@@ -16,19 +18,19 @@ C_MTXPerspective:
 /* 80346F48 00343E88  FF A0 10 90 */	fmr f29, f2
 /* 80346F4C 00343E8C  93 E1 00 24 */	stw r31, 0x24(r1)
 /* 80346F50 00343E90  7C 7F 1B 78 */	mr r31, r3
-/* 80346F54 00343E94  C0 A2 CB 38 */	lfs f5, lbl_80456538-_SDA2_BASE_(r2)
-/* 80346F58 00343E98  C0 02 CB 3C */	lfs f0, lbl_8045653C-_SDA2_BASE_(r2)
+/* 80346F54 00343E94  C0 A2 CB 38 */	lfs f5, mtx44__LIT_105-_SDA2_BASE_(r2)
+/* 80346F58 00343E98  C0 02 CB 3C */	lfs f0, mtx44__LIT_106-_SDA2_BASE_(r2)
 /* 80346F5C 00343E9C  EC 25 00 72 */	fmuls f1, f5, f1
 /* 80346F60 00343EA0  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80346F64 00343EA4  48 02 5A 61 */	bl tanf
-/* 80346F68 00343EA8  C0 62 CB 28 */	lfs f3, lbl_80456528-_SDA2_BASE_(r2)
+/* 80346F68 00343EA8  C0 62 CB 28 */	lfs f3, mtx44__LIT_99-_SDA2_BASE_(r2)
 /* 80346F6C 00343EAC  EC 5F F0 28 */	fsubs f2, f31, f30
 /* 80346F70 00343EB0  EC 1F 07 B2 */	fmuls f0, f31, f30
 /* 80346F74 00343EB4  EC 83 08 24 */	fdivs f4, f3, f1
 /* 80346F78 00343EB8  EC 24 E8 24 */	fdivs f1, f4, f29
 /* 80346F7C 00343EBC  D0 3F 00 00 */	stfs f1, 0(r31)
 /* 80346F80 00343EC0  EC 63 10 24 */	fdivs f3, f3, f2
-/* 80346F84 00343EC4  C0 42 CB 30 */	lfs f2, lbl_80456530-_SDA2_BASE_(r2)
+/* 80346F84 00343EC4  C0 42 CB 30 */	lfs f2, mtx44__LIT_101-_SDA2_BASE_(r2)
 /* 80346F88 00343EC8  D0 5F 00 04 */	stfs f2, 4(r31)
 /* 80346F8C 00343ECC  D0 5F 00 08 */	stfs f2, 8(r31)
 /* 80346F90 00343ED0  D0 5F 00 0C */	stfs f2, 0xc(r31)
@@ -46,7 +48,7 @@ C_MTXPerspective:
 /* 80346FC0 00343F00  D0 1F 00 2C */	stfs f0, 0x2c(r31)
 /* 80346FC4 00343F04  D0 5F 00 30 */	stfs f2, 0x30(r31)
 /* 80346FC8 00343F08  D0 5F 00 34 */	stfs f2, 0x34(r31)
-/* 80346FCC 00343F0C  C0 02 CB 34 */	lfs f0, lbl_80456534-_SDA2_BASE_(r2)
+/* 80346FCC 00343F0C  C0 02 CB 34 */	lfs f0, mtx44__LIT_102-_SDA2_BASE_(r2)
 /* 80346FD0 00343F10  D0 1F 00 38 */	stfs f0, 0x38(r31)
 /* 80346FD4 00343F14  D0 5F 00 3C */	stfs f2, 0x3c(r31)
 /* 80346FD8 00343F18  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -58,13 +60,13 @@ C_MTXPerspective:
 /* 80346FF0 00343F30  7C 08 03 A6 */	mtlr r0
 /* 80346FF4 00343F34  4E 80 00 20 */	blr 
 
-/* 80346FF8 0098 .text C_MTXOrtho C_MTXOrtho */
+/* 80346FF8 0098 .text      C_MTXOrtho                     C_MTXOrtho                     */
 .global C_MTXOrtho
 C_MTXOrtho:
 /* 80346FF8 00343F38  ED 04 18 28 */	fsubs f8, f4, f3
-/* 80346FFC 00343F3C  C1 22 CB 28 */	lfs f9, lbl_80456528-_SDA2_BASE_(r2)
+/* 80346FFC 00343F3C  C1 22 CB 28 */	lfs f9, mtx44__LIT_99-_SDA2_BASE_(r2)
 /* 80347000 00343F40  EC 01 10 28 */	fsubs f0, f1, f2
-/* 80347004 00343F44  C0 E2 CB 2C */	lfs f7, lbl_8045652C-_SDA2_BASE_(r2)
+/* 80347004 00343F44  C0 E2 CB 2C */	lfs f7, mtx44__LIT_100-_SDA2_BASE_(r2)
 /* 80347008 00343F48  EC 64 18 2A */	fadds f3, f4, f3
 /* 8034700C 00343F4C  ED 49 40 24 */	fdivs f10, f9, f8
 /* 80347010 00343F50  ED 09 00 24 */	fdivs f8, f9, f0
@@ -74,7 +76,7 @@ C_MTXOrtho:
 /* 80347020 00343F60  D0 83 00 00 */	stfs f4, 0(r3)
 /* 80347024 00343F64  EC 21 10 2A */	fadds f1, f1, f2
 /* 80347028 00343F68  EC 4A 00 F2 */	fmuls f2, f10, f3
-/* 8034702C 00343F6C  C0 62 CB 30 */	lfs f3, lbl_80456530-_SDA2_BASE_(r2)
+/* 8034702C 00343F6C  C0 62 CB 30 */	lfs f3, mtx44__LIT_101-_SDA2_BASE_(r2)
 /* 80347030 00343F70  FC 20 08 50 */	fneg f1, f1
 /* 80347034 00343F74  D0 63 00 04 */	stfs f3, 4(r3)
 /* 80347038 00343F78  EC 89 00 24 */	fdivs f4, f9, f0
@@ -90,7 +92,7 @@ C_MTXOrtho:
 /* 80347060 00343FA0  D0 23 00 1C */	stfs f1, 0x1c(r3)
 /* 80347064 00343FA4  D0 63 00 20 */	stfs f3, 0x20(r3)
 /* 80347068 00343FA8  D0 63 00 24 */	stfs f3, 0x24(r3)
-/* 8034706C 00343FAC  C0 22 CB 34 */	lfs f1, lbl_80456534-_SDA2_BASE_(r2)
+/* 8034706C 00343FAC  C0 22 CB 34 */	lfs f1, mtx44__LIT_102-_SDA2_BASE_(r2)
 /* 80347070 00343FB0  EC 21 01 32 */	fmuls f1, f1, f4
 /* 80347074 00343FB4  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 80347078 00343FB8  D0 03 00 2C */	stfs f0, 0x2c(r3)
@@ -101,35 +103,37 @@ C_MTXOrtho:
 /* 8034708C 00343FCC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456528 0004 .sdata2 lbl_80456528 @99 */
-.global lbl_80456528
-lbl_80456528:
+/* 80456528 0004 .sdata2    mtx44__LIT_99                  @99                            */
+.global mtx44__LIT_99
+mtx44__LIT_99:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5388 */
 
-/* 8045652C 0004 .sdata2 lbl_8045652C @100 */
-.global lbl_8045652C
-lbl_8045652C:
+/* 8045652C 0004 .sdata2    mtx44__LIT_100                 @100                           */
+.global mtx44__LIT_100
+mtx44__LIT_100:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d538c */
 
-/* 80456530 0004 .sdata2 lbl_80456530 @101 */
-.global lbl_80456530
-lbl_80456530:
+/* 80456530 0004 .sdata2    mtx44__LIT_101                 @101                           */
+.global mtx44__LIT_101
+mtx44__LIT_101:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5390 */
 
-/* 80456534 0004 .sdata2 lbl_80456534 @102 */
-.global lbl_80456534
-lbl_80456534:
+/* 80456534 0004 .sdata2    mtx44__LIT_102                 @102                           */
+.global mtx44__LIT_102
+mtx44__LIT_102:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5394 */
 
-/* 80456538 0004 .sdata2 lbl_80456538 @105 */
-.global lbl_80456538
-lbl_80456538:
+/* 80456538 0004 .sdata2    mtx44__LIT_105                 @105                           */
+.global mtx44__LIT_105
+mtx44__LIT_105:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5398 */
 
-/* 8045653C 0004 .sdata2 lbl_8045653C @106 */
-.global lbl_8045653C
-lbl_8045653C:
+/* 8045653C 0004 .sdata2    mtx44__LIT_106                 @106                           */
+.global mtx44__LIT_106
+mtx44__LIT_106:
 .byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d539c */
 

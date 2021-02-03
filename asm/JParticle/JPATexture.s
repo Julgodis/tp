@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8027D7D4 0068 .text __ct__10JPATextureFPCUc __ct__10JPATextureFPCUc */
+/* 8027D7D4 0068 .text      __ct__10JPATextureFPCUc        __ct__10JPATextureFPCUc        */
 .global __ct__10JPATextureFPCUc
 __ct__10JPATextureFPCUc:
 /* 8027D7D4 0027A714  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -32,7 +34,7 @@ __ct__10JPATextureFPCUc:
 /* 8027D834 0027A774  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027D838 0027A778  4E 80 00 20 */	blr 
 
-/* 8027D83C 0064 .text __dt__10JPATextureFv __dt__10JPATextureFv */
+/* 8027D83C 0048 .text      __dt__10JPATextureFv           __dt__10JPATextureFv           */
 .global __dt__10JPATextureFv
 __dt__10JPATextureFv:
 /* 8027D83C 0027A77C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -42,7 +44,7 @@ __dt__10JPATextureFv:
 /* 8027D84C 0027A78C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027D850 0027A790  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8027D854 0027A794  7C 9F 23 78 */	mr r31, r4
-/* 8027D858 0027A798  41 82 00 2C */	beq lbl_8027D884
+/* 8027D858 0027A798  41 82 00 2C */	beq func_8027D884
 /* 8027D85C 0027A79C  3C 60 80 3C */	lis r3, __vt__10JPATexture@ha
 /* 8027D860 0027A7A0  38 03 45 98 */	addi r0, r3, __vt__10JPATexture@l
 /* 8027D864 0027A7A4  90 1E 00 00 */	stw r0, 0(r30)
@@ -50,10 +52,13 @@ __dt__10JPATextureFv:
 /* 8027D86C 0027A7AC  38 80 FF FF */	li r4, -1
 /* 8027D870 0027A7B0  48 06 09 C5 */	bl __dt__10JUTTextureFv
 /* 8027D874 0027A7B4  7F E0 07 35 */	extsh. r0, r31
-/* 8027D878 0027A7B8  40 81 00 0C */	ble lbl_8027D884
+/* 8027D878 0027A7B8  40 81 00 0C */	ble func_8027D884
 /* 8027D87C 0027A7BC  7F C3 F3 78 */	mr r3, r30
 /* 8027D880 0027A7C0  48 05 14 BD */	bl __dl__FPv
-lbl_8027D884:
+
+/* 8027D884 001C .text      func_8027D884                  func_8027D884                  */
+.global func_8027D884
+func_8027D884:
 /* 8027D884 0027A7C4  7F C3 F3 78 */	mr r3, r30
 /* 8027D888 0027A7C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027D88C 0027A7CC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -63,9 +68,11 @@ lbl_8027D884:
 /* 8027D89C 0027A7DC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C4598 000C .data __vt__10JPATexture __vt__10JPATexture */
+/* 803C4598 000C .data      __vt__10JPATexture             __vt__10JPATexture             */
 .global __vt__10JPATexture
 __vt__10JPATexture:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x27, 0xd8, 0x3c /* baserom.dol+0x3c1598 */

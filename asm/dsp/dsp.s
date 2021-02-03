@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80352430 0010 .text DSPCheckMailToDSP DSPCheckMailToDSP */
+/* 80352430 0010 .text      DSPCheckMailToDSP              DSPCheckMailToDSP              */
 .global DSPCheckMailToDSP
 DSPCheckMailToDSP:
 /* 80352430 0034F370  3C 60 CC 00 */	lis r3, 0xCC005000@ha
@@ -10,7 +12,7 @@ DSPCheckMailToDSP:
 /* 80352438 0034F378  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
 /* 8035243C 0034F37C  4E 80 00 20 */	blr 
 
-/* 80352440 0010 .text DSPCheckMailFromDSP DSPCheckMailFromDSP */
+/* 80352440 0010 .text      DSPCheckMailFromDSP            DSPCheckMailFromDSP            */
 .global DSPCheckMailFromDSP
 DSPCheckMailFromDSP:
 /* 80352440 0034F380  3C 60 CC 00 */	lis r3, 0xCC005004@ha
@@ -18,7 +20,7 @@ DSPCheckMailFromDSP:
 /* 80352448 0034F388  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
 /* 8035244C 0034F38C  4E 80 00 20 */	blr 
 
-/* 80352450 0018 .text DSPReadMailFromDSP DSPReadMailFromDSP */
+/* 80352450 0018 .text      DSPReadMailFromDSP             DSPReadMailFromDSP             */
 .global DSPReadMailFromDSP
 DSPReadMailFromDSP:
 /* 80352450 0034F390  3C 60 CC 00 */	lis r3, 0xCC005000@ha
@@ -28,7 +30,7 @@ DSPReadMailFromDSP:
 /* 80352460 0034F3A0  50 03 80 1E */	rlwimi r3, r0, 0x10, 0, 0xf
 /* 80352464 0034F3A4  4E 80 00 20 */	blr 
 
-/* 80352468 0014 .text DSPSendMailToDSP DSPSendMailToDSP */
+/* 80352468 0014 .text      DSPSendMailToDSP               DSPSendMailToDSP               */
 .global DSPSendMailToDSP
 DSPSendMailToDSP:
 /* 80352468 0034F3A8  3C 80 CC 00 */	lis r4, 0xCC005000@ha
@@ -37,13 +39,13 @@ DSPSendMailToDSP:
 /* 80352474 0034F3B4  B0 64 50 02 */	sth r3, 0x5002(r4)
 /* 80352478 0034F3B8  4E 80 00 20 */	blr 
 
-/* 8035247C 0040 .text DSPAssertInt DSPAssertInt */
+/* 8035247C 0040 .text      DSPAssertInt                   DSPAssertInt                   */
 .global DSPAssertInt
 DSPAssertInt:
 /* 8035247C 0034F3BC  7C 08 02 A6 */	mflr r0
 /* 80352480 0034F3C0  90 01 00 04 */	stw r0, 4(r1)
 /* 80352484 0034F3C4  94 21 FF F8 */	stwu r1, -8(r1)
-/* 80352488 0034F3C8  4B FE B2 6D */	bl __RAS_OSDisableInterrupts_begin
+/* 80352488 0034F3C8  4B FE B2 6D */	bl OSDisableInterrupts
 /* 8035248C 0034F3CC  3C 80 CC 00 */	lis r4, 0xCC005000@ha
 /* 80352490 0034F3D0  38 84 50 00 */	addi r4, r4, 0xCC005000@l
 /* 80352494 0034F3D4  A0 A4 00 0A */	lhz r5, 0xa(r4)
@@ -57,13 +59,13 @@ DSPAssertInt:
 /* 803524B4 0034F3F4  7C 08 03 A6 */	mtlr r0
 /* 803524B8 0034F3F8  4E 80 00 20 */	blr 
 
-/* 803524BC 00C4 .text DSPInit DSPInit */
+/* 803524BC 00B0 .text      DSPInit                        DSPInit                        */
 .global DSPInit
 DSPInit:
 /* 803524BC 0034F3FC  7C 08 02 A6 */	mflr r0
-/* 803524C0 0034F400  3C 60 80 3D */	lis r3, lbl_803D1C78@ha
+/* 803524C0 0034F400  3C 60 80 3D */	lis r3, dsp__LIT_1@ha
 /* 803524C4 0034F404  90 01 00 04 */	stw r0, 4(r1)
-/* 803524C8 0034F408  38 A3 1C 78 */	addi r5, r3, lbl_803D1C78@l
+/* 803524C8 0034F408  38 A3 1C 78 */	addi r5, r3, dsp__LIT_1@l
 /* 803524CC 0034F40C  4C C6 31 82 */	crclr 6
 /* 803524D0 0034F410  38 65 00 48 */	addi r3, r5, 0x48
 /* 803524D4 0034F414  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -73,10 +75,10 @@ DSPInit:
 /* 803524E4 0034F424  48 00 00 9D */	bl __DSP_debug_printf
 /* 803524E8 0034F428  80 0D 93 80 */	lwz r0, __DSP_init_flag-_SDA_BASE_(r13)
 /* 803524EC 0034F42C  2C 00 00 01 */	cmpwi r0, 1
-/* 803524F0 0034F430  41 82 00 7C */	beq lbl_8035256C
+/* 803524F0 0034F430  41 82 00 7C */	beq func_8035256C
 /* 803524F4 0034F434  80 6D 84 D8 */	lwz r3, __DSPVersion-_SDA_BASE_(r13)
 /* 803524F8 0034F438  4B FE 83 7D */	bl OSRegisterVersion
-/* 803524FC 0034F43C  4B FE B1 F9 */	bl __RAS_OSDisableInterrupts_begin
+/* 803524FC 0034F43C  4B FE B1 F9 */	bl OSDisableInterrupts
 /* 80352500 0034F440  3C 80 80 2A */	lis r4, __DSPHandler@ha
 /* 80352504 0034F444  3B E3 00 00 */	addi r31, r3, 0
 /* 80352508 0034F448  38 84 EB 20 */	addi r4, r4, __DSPHandler@l
@@ -104,7 +106,10 @@ DSPInit:
 /* 80352560 0034F4A0  90 8D 93 90 */	stw r4, __DSP_first_task-_SDA_BASE_(r13)
 /* 80352564 0034F4A4  90 0D 93 80 */	stw r0, __DSP_init_flag-_SDA_BASE_(r13)
 /* 80352568 0034F4A8  4B FE B1 B5 */	bl OSRestoreInterrupts
-lbl_8035256C:
+
+/* 8035256C 0014 .text      func_8035256C                  func_8035256C                  */
+.global func_8035256C
+func_8035256C:
 /* 8035256C 0034F4AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80352570 0034F4B0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80352574 0034F4B4  38 21 00 10 */	addi r1, r1, 0x10
@@ -112,11 +117,17 @@ lbl_8035256C:
 /* 8035257C 0034F4BC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D1C78 0045 .data lbl_803D1C78 @1 */
-.global lbl_803D1C78
-lbl_803D1C78:
+/* 803D1C78 0000 .data      sym_803D1C78                   ...data.0                      */
+.global sym_803D1C78
+sym_803D1C78:
+
+/* 803D1C78 0045 .data      dsp__LIT_1                     @1                             */
+.global dsp__LIT_1
+dsp__LIT_1:
 .byte 0x3c, 0x3c, 0x20, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x53, 0x44, 0x4b, 0x20, 0x2d /* baserom.dol+0x3cec78 */
 .byte 0x20, 0x44, 0x53, 0x50, 0x09, 0x72, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69 /* baserom.dol+0x3cec88 */
 .byte 0x6c, 0x64, 0x3a, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20 /* baserom.dol+0x3cec98 */
@@ -124,37 +135,41 @@ lbl_803D1C78:
 .byte 0x29, 0x20, 0x3e, 0x3e, 0x00 /* baserom.dol+0x3cecb8 */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cecbd */
 
-/* 803D1CC0 001E .data lbl_803D1CC0 @19 */
-.global lbl_803D1CC0
-lbl_803D1CC0:
+/* 803D1CC0 001E .data      LIT_19                         @19                            */
+.global LIT_19
+LIT_19:
 .byte 0x44, 0x53, 0x50, 0x49, 0x6e, 0x69, 0x74, 0x28, 0x29, 0x3a, 0x20, 0x42, 0x75, 0x69, 0x6c, 0x64 /* baserom.dol+0x3cecc0 */
 .byte 0x20, 0x44, 0x61, 0x74, 0x65, 0x3a, 0x20, 0x25, 0x73, 0x20, 0x25, 0x73, 0x0a, 0x00 /* baserom.dol+0x3cecd0 */
 .byte 0x00, 0x00 /* baserom.dol+0x3cecde */
 
-/* 803D1CE0 000C .data lbl_803D1CE0 @20 */
-.global lbl_803D1CE0
-lbl_803D1CE0:
+/* 803D1CE0 000C .data      LIT_20                         @20                            */
+.global LIT_20
+LIT_20:
 .byte 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00 /* baserom.dol+0x3cece0 */
 
-/* 803D1CEC 0009 .data lbl_803D1CEC @21 */
-.global lbl_803D1CEC
-lbl_803D1CEC:
+/* 803D1CEC 0009 .data      LIT_21                         @21                            */
+.global LIT_21
+LIT_21:
 .byte 0x30, 0x34, 0x3a, 0x31, 0x35, 0x3a, 0x33, 0x32, 0x00 /* baserom.dol+0x3cecec */
 .byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cecf5 */
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 80450A58 0004 .sdata __DSPVersion __DSPVersion */
+/* 80450A58 0004 .sdata     __DSPVersion                   __DSPVersion                   */
 .global __DSPVersion
 __DSPVersion:
 .byte 0x80, 0x3d, 0x1c, 0x78 /* baserom.dol+0x3d07b8 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d07bc */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451900 0004 .sbss __DSP_init_flag __DSP_init_flag */
+/* 80451900 0004 .sbss      __DSP_init_flag                __DSP_init_flag                */
 .global __DSP_init_flag
 __DSP_init_flag:
 .skip 0x4

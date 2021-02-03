@@ -41,7 +41,7 @@ class Section:
             objs += [ obj ]
         return objs
 
-def read_frameworkF(section_names):
+def read_frameworkF(folders, section_names):
     file = open('frameworkF.map', 'r') 
     lines = file.readlines() 
 
@@ -83,6 +83,11 @@ def read_frameworkF(section_names):
             print(data)
 
         if obj:
+            if not lib:
+                for k,v in folders:
+                    if obj.startswith(k):
+                        obj = v + obj
+                        break
             if "\\" in obj:
                 obj = obj.replace("\\", "/")
             if "/" in obj:

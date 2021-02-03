@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80266A7C 0034 .text cTgIt_MethodCall__FP16create_tag_classP13method_filter cTgIt_MethodCall__FP16create_tag_classP13method_filter */
+/* 80266A7C 0034 .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter cTgIt_MethodCall__FP16create_tag_classP13method_filter */
 .global cTgIt_MethodCall__FP16create_tag_classP13method_filter
 cTgIt_MethodCall__FP16create_tag_classP13method_filter:
 /* 80266A7C 002639BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -19,7 +21,7 @@ cTgIt_MethodCall__FP16create_tag_classP13method_filter:
 /* 80266AA8 002639E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266AAC 002639EC  4E 80 00 20 */	blr 
 
-/* 80266AB0 0034 .text cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
+/* 80266AB0 0034 .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
 .global cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter
 cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter:
 /* 80266AB0 002639F0  94 21 FF F0 */	stwu r1, -0x10(r1)

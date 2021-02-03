@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80357484 0144 .text FormatCallback FormatCallback */
+/* 80357484 0074 .text      FormatCallback                 FormatCallback                 */
 .global FormatCallback
 FormatCallback:
 /* 80357484 003543C4  7C 08 02 A6 */	mflr r0
@@ -18,13 +20,13 @@ FormatCallback:
 /* 803574AC 003543EC  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 803574B0 003543F0  7C 9C 23 79 */	or. r28, r4, r4
 /* 803574B4 003543F4  7F E0 2A 14 */	add r31, r0, r5
-/* 803574B8 003543F8  41 80 00 C4 */	blt lbl_8035757C
+/* 803574B8 003543F8  41 80 00 C4 */	blt func_8035757C
 /* 803574BC 003543FC  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 803574C0 00354400  38 03 00 01 */	addi r0, r3, 1
 /* 803574C4 00354404  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 803574C8 00354408  80 9F 00 28 */	lwz r4, 0x28(r31)
 /* 803574CC 0035440C  2C 04 00 05 */	cmpwi r4, 5
-/* 803574D0 00354410  40 80 00 28 */	bge lbl_803574F8
+/* 803574D0 00354410  40 80 00 28 */	bge func_803574F8
 /* 803574D4 00354414  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 803574D8 00354418  3C 60 80 35 */	lis r3, FormatCallback@ha
 /* 803574DC 0035441C  38 A3 74 84 */	addi r5, r3, FormatCallback@l
@@ -32,11 +34,14 @@ FormatCallback:
 /* 803574E4 00354424  38 7E 00 00 */	addi r3, r30, 0
 /* 803574E8 00354428  4B FF C4 D1 */	bl __CARDEraseSector
 /* 803574EC 0035442C  7C 7C 1B 79 */	or. r28, r3, r3
-/* 803574F0 00354430  41 80 00 8C */	blt lbl_8035757C
-/* 803574F4 00354434  48 00 00 B4 */	b lbl_803575A8
-lbl_803574F8:
+/* 803574F0 00354430  41 80 00 8C */	blt func_8035757C
+/* 803574F4 00354434  48 00 00 B4 */	b func_803575A8
+
+/* 803574F8 0040 .text      func_803574F8                  func_803574F8                  */
+.global func_803574F8
+func_803574F8:
 /* 803574F8 00354438  2C 04 00 0A */	cmpwi r4, 0xa
-/* 803574FC 0035443C  40 80 00 3C */	bge lbl_80357538
+/* 803574FC 0035443C  40 80 00 3C */	bge func_80357538
 /* 80357500 00354440  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80357504 00354444  38 C4 FF FB */	addi r6, r4, -5
 /* 80357508 00354448  3C 60 80 35 */	lis r3, FormatCallback@ha
@@ -49,9 +54,12 @@ lbl_803574F8:
 /* 80357524 00354464  38 A0 20 00 */	li r5, 0x2000
 /* 80357528 00354468  4B FF DE 85 */	bl __CARDWrite
 /* 8035752C 0035446C  7C 7C 1B 79 */	or. r28, r3, r3
-/* 80357530 00354470  41 80 00 4C */	blt lbl_8035757C
-/* 80357534 00354474  48 00 00 74 */	b lbl_803575A8
-lbl_80357538:
+/* 80357530 00354470  41 80 00 4C */	blt func_8035757C
+/* 80357534 00354474  48 00 00 74 */	b func_803575A8
+
+/* 80357538 0044 .text      func_80357538                  func_80357538                  */
+.global func_80357538
+func_80357538:
 /* 80357538 00354478  80 7F 00 80 */	lwz r3, 0x80(r31)
 /* 8035753C 0035447C  38 A0 20 00 */	li r5, 0x2000
 /* 80357540 00354480  38 03 20 00 */	addi r0, r3, 0x2000
@@ -69,7 +77,10 @@ lbl_80357538:
 /* 80357570 003544B0  3C 84 00 01 */	addis r4, r4, 1
 /* 80357574 003544B4  38 84 80 00 */	addi r4, r4, -32768
 /* 80357578 003544B8  4B CA BF C9 */	bl memcpy
-lbl_8035757C:
+
+/* 8035757C 002C .text      func_8035757C                  func_8035757C                  */
+.global func_8035757C
+func_8035757C:
 /* 8035757C 003544BC  83 BF 00 D0 */	lwz r29, 0xd0(r31)
 /* 80357580 003544C0  38 00 00 00 */	li r0, 0
 /* 80357584 003544C4  38 7F 00 00 */	addi r3, r31, 0
@@ -81,7 +92,10 @@ lbl_8035757C:
 /* 8035759C 003544DC  38 7E 00 00 */	addi r3, r30, 0
 /* 803575A0 003544E0  38 9C 00 00 */	addi r4, r28, 0
 /* 803575A4 003544E4  4E 80 00 21 */	blrl 
-lbl_803575A8:
+
+/* 803575A8 0020 .text      func_803575A8                  func_803575A8                  */
+.global func_803575A8
+func_803575A8:
 /* 803575A8 003544E8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 803575AC 003544EC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 803575B0 003544F0  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -91,7 +105,7 @@ lbl_803575A8:
 /* 803575C0 00354500  7C 08 03 A6 */	mtlr r0
 /* 803575C4 00354504  4E 80 00 20 */	blr 
 
-/* 803575C8 0658 .text __CARDFormatRegionAsync __CARDFormatRegionAsync */
+/* 803575C8 0030 .text      __CARDFormatRegionAsync        __CARDFormatRegionAsync        */
 .global __CARDFormatRegionAsync
 __CARDFormatRegionAsync:
 /* 803575C8 00354508  7C 08 02 A6 */	mflr r0
@@ -104,9 +118,12 @@ __CARDFormatRegionAsync:
 /* 803575E4 00354524  38 81 00 18 */	addi r4, r1, 0x18
 /* 803575E8 00354528  4B FF C5 CD */	bl __CARDGetControlBlock
 /* 803575EC 0035452C  2C 03 00 00 */	cmpwi r3, 0
-/* 803575F0 00354530  40 80 00 08 */	bge lbl_803575F8
-/* 803575F4 00354534  48 00 06 18 */	b lbl_80357C0C
-lbl_803575F8:
+/* 803575F0 00354530  40 80 00 08 */	bge func_803575F8
+/* 803575F4 00354534  48 00 06 18 */	b func_80357C0C
+
+/* 803575F8 0078 .text      func_803575F8                  func_803575F8                  */
+.global func_803575F8
+func_803575F8:
 /* 803575F8 00354538  80 61 00 18 */	lwz r3, 0x18(r1)
 /* 803575FC 0035453C  38 80 00 FF */	li r4, 0xff
 /* 80357600 00354540  38 A0 20 00 */	li r5, 0x2000
@@ -136,8 +153,11 @@ lbl_803575F8:
 /* 80357660 003545A0  3B E3 4E 6D */	addi r31, r3, 0x41C64E6D@l
 /* 80357664 003545A4  3B 80 00 00 */	li r28, 0
 /* 80357668 003545A8  3A E0 00 04 */	li r23, 4
-/* 8035766C 003545AC  48 00 03 74 */	b lbl_803579E0
-lbl_80357670:
+/* 8035766C 003545AC  48 00 03 74 */	b func_803579E0
+
+/* 80357670 0370 .text      func_80357670                  func_80357670                  */
+.global func_80357670
+func_80357670:
 /* 80357670 003545B0  7C BE F9 D6 */	mullw r5, r30, r31
 /* 80357674 003545B4  7C 7A F8 16 */	mulhwu r3, r26, r31
 /* 80357678 003545B8  3B C0 00 00 */	li r30, 0
@@ -358,16 +378,25 @@ lbl_80357670:
 /* 803579D4 00354914  7C 7E F0 38 */	and r30, r3, r30
 /* 803579D8 00354918  3B 18 00 08 */	addi r24, r24, 8
 /* 803579DC 0035491C  3B 9C 00 08 */	addi r28, r28, 8
-lbl_803579E0:
+
+/* 803579E0 0010 .text      func_803579E0                  func_803579E0                  */
+.global func_803579E0
+func_803579E0:
 /* 803579E0 00354920  7F 80 07 34 */	extsh r0, r28
 /* 803579E4 00354924  7C 00 B8 00 */	cmpw r0, r23
-/* 803579E8 00354928  41 80 FC 88 */	blt lbl_80357670
-/* 803579EC 0035492C  48 00 02 18 */	b lbl_80357C04
-lbl_803579F0:
+/* 803579E8 00354928  41 80 FC 88 */	blt func_80357670
+/* 803579EC 0035492C  48 00 02 18 */	b func_80357C04
+
+/* 803579F0 000C .text      func_803579F0                  func_803579F0                  */
+.global func_803579F0
+func_803579F0:
 /* 803579F0 00354930  3C 60 41 C6 */	lis r3, 0x41C64E6D@ha
 /* 803579F4 00354934  3B 23 4E 6D */	addi r25, r3, 0x41C64E6D@l
-/* 803579F8 00354938  48 00 00 80 */	b lbl_80357A78
-lbl_803579FC:
+/* 803579F8 00354938  48 00 00 80 */	b func_80357A78
+
+/* 803579FC 007C .text      func_803579FC                  func_803579FC                  */
+.global func_803579FC
+func_803579FC:
 /* 803579FC 0035493C  7C BE C9 D6 */	mullw r5, r30, r25
 /* 80357A00 00354940  7C 7A C8 16 */	mulhwu r3, r26, r25
 /* 80357A04 00354944  3B 00 00 00 */	li r24, 0
@@ -399,10 +428,13 @@ lbl_803579FC:
 /* 80357A6C 003549AC  7C 7E C0 38 */	and r30, r3, r24
 /* 80357A70 003549B0  3B BD 00 01 */	addi r29, r29, 1
 /* 80357A74 003549B4  3B 9C 00 01 */	addi r28, r28, 1
-lbl_80357A78:
+
+/* 80357A78 004C .text      func_80357A78                  func_80357A78                  */
+.global func_80357A78
+func_80357A78:
 /* 80357A78 003549B8  7F 80 07 34 */	extsh r0, r28
 /* 80357A7C 003549BC  2C 00 00 0C */	cmpwi r0, 0xc
-/* 80357A80 003549C0  41 80 FF 7C */	blt lbl_803579FC
+/* 80357A80 003549C0  41 80 FF 7C */	blt func_803579FC
 /* 80357A84 003549C4  38 60 00 00 */	li r3, 0
 /* 80357A88 003549C8  4B FE 8A D5 */	bl __OSUnlockSramEx
 /* 80357A8C 003549CC  92 5B 00 1C */	stw r18, 0x1c(r27)
@@ -418,8 +450,11 @@ lbl_80357A78:
 /* 80357AB4 003549F4  A0 07 00 08 */	lhz r0, 8(r7)
 /* 80357AB8 003549F8  B0 1B 00 22 */	sth r0, 0x22(r27)
 /* 80357ABC 003549FC  4B FF DF 25 */	bl __CARDCheckSum
-/* 80357AC0 00354A00  48 00 00 4C */	b lbl_80357B0C
-lbl_80357AC4:
+/* 80357AC0 00354A00  48 00 00 4C */	b func_80357B0C
+
+/* 80357AC4 0048 .text      func_80357AC4                  func_80357AC4                  */
+.global func_80357AC4
+func_80357AC4:
 /* 80357AC4 00354A04  80 81 00 18 */	lwz r4, 0x18(r1)
 /* 80357AC8 00354A08  7E 43 07 34 */	extsh r3, r18
 /* 80357ACC 00354A0C  38 03 00 01 */	addi r0, r3, 1
@@ -438,13 +473,19 @@ lbl_80357AC4:
 /* 80357B00 00354A40  38 80 1F FC */	li r4, 0x1ffc
 /* 80357B04 00354A44  4B FF DE DD */	bl __CARDCheckSum
 /* 80357B08 00354A48  3A 52 00 01 */	addi r18, r18, 1
-lbl_80357B0C:
+
+/* 80357B0C 0014 .text      func_80357B0C                  func_80357B0C                  */
+.global func_80357B0C
+func_80357B0C:
 /* 80357B0C 00354A4C  7E 40 07 34 */	extsh r0, r18
 /* 80357B10 00354A50  2C 00 00 02 */	cmpwi r0, 2
-/* 80357B14 00354A54  41 80 FF B0 */	blt lbl_80357AC4
+/* 80357B14 00354A54  41 80 FF B0 */	blt func_80357AC4
 /* 80357B18 00354A58  3A 40 00 00 */	li r18, 0
-/* 80357B1C 00354A5C  48 00 00 60 */	b lbl_80357B7C
-lbl_80357B20:
+/* 80357B1C 00354A5C  48 00 00 60 */	b func_80357B7C
+
+/* 80357B20 005C .text      func_80357B20                  func_80357B20                  */
+.global func_80357B20
+func_80357B20:
 /* 80357B20 00354A60  80 81 00 18 */	lwz r4, 0x18(r1)
 /* 80357B24 00354A64  7E 43 07 34 */	extsh r3, r18
 /* 80357B28 00354A68  38 03 00 03 */	addi r0, r3, 3
@@ -468,18 +509,27 @@ lbl_80357B20:
 /* 80357B70 00354AB0  B0 14 00 08 */	sth r0, 8(r20)
 /* 80357B74 00354AB4  4B FF DE 6D */	bl __CARDCheckSum
 /* 80357B78 00354AB8  3A 52 00 01 */	addi r18, r18, 1
-lbl_80357B7C:
+
+/* 80357B7C 001C .text      func_80357B7C                  func_80357B7C                  */
+.global func_80357B7C
+func_80357B7C:
 /* 80357B7C 00354ABC  7E 40 07 34 */	extsh r0, r18
 /* 80357B80 00354AC0  2C 00 00 02 */	cmpwi r0, 2
-/* 80357B84 00354AC4  41 80 FF 9C */	blt lbl_80357B20
+/* 80357B84 00354AC4  41 80 FF 9C */	blt func_80357B20
 /* 80357B88 00354AC8  28 13 00 00 */	cmplwi r19, 0
-/* 80357B8C 00354ACC  41 82 00 0C */	beq lbl_80357B98
+/* 80357B8C 00354ACC  41 82 00 0C */	beq func_80357B98
 /* 80357B90 00354AD0  7E 60 9B 78 */	mr r0, r19
-/* 80357B94 00354AD4  48 00 00 0C */	b lbl_80357BA0
-lbl_80357B98:
+/* 80357B94 00354AD4  48 00 00 0C */	b func_80357BA0
+
+/* 80357B98 0008 .text      func_80357B98                  func_80357B98                  */
+.global func_80357B98
+func_80357B98:
 /* 80357B98 00354AD8  3C 60 80 35 */	lis r3, __CARDDefaultApiCallback@ha
 /* 80357B9C 00354ADC  38 03 2A 30 */	addi r0, r3, __CARDDefaultApiCallback@l
-lbl_80357BA0:
+
+/* 80357BA0 005C .text      func_80357BA0                  func_80357BA0                  */
+.global func_80357BA0
+func_80357BA0:
 /* 80357BA0 00354AE0  80 A1 00 18 */	lwz r5, 0x18(r1)
 /* 80357BA4 00354AE4  3C 60 00 01 */	lis r3, 0x0000A000@ha
 /* 80357BA8 00354AE8  38 83 A0 00 */	addi r4, r3, 0x0000A000@l
@@ -499,24 +549,33 @@ lbl_80357BA0:
 /* 80357BE0 00354B20  7C 84 01 D6 */	mullw r4, r4, r0
 /* 80357BE4 00354B24  4B FF BD D5 */	bl __CARDEraseSector
 /* 80357BE8 00354B28  7C 72 1B 79 */	or. r18, r3, r3
-/* 80357BEC 00354B2C  40 80 00 10 */	bge lbl_80357BFC
+/* 80357BEC 00354B2C  40 80 00 10 */	bge func_80357BFC
 /* 80357BF0 00354B30  80 61 00 18 */	lwz r3, 0x18(r1)
 /* 80357BF4 00354B34  7E 44 93 78 */	mr r4, r18
 /* 80357BF8 00354B38  4B FF C0 75 */	bl __CARDPutControlBlock
-lbl_80357BFC:
+
+/* 80357BFC 0008 .text      func_80357BFC                  func_80357BFC                  */
+.global func_80357BFC
+func_80357BFC:
 /* 80357BFC 00354B3C  7E 43 93 78 */	mr r3, r18
-/* 80357C00 00354B40  48 00 00 0C */	b lbl_80357C0C
-lbl_80357C04:
+/* 80357C00 00354B40  48 00 00 0C */	b func_80357C0C
+
+/* 80357C04 0008 .text      func_80357C04                  func_80357C04                  */
+.global func_80357C04
+func_80357C04:
 /* 80357C04 00354B44  7F B9 02 14 */	add r29, r25, r0
-/* 80357C08 00354B48  4B FF FD E8 */	b lbl_803579F0
-lbl_80357C0C:
+/* 80357C08 00354B48  4B FF FD E8 */	b func_803579F0
+
+/* 80357C0C 0014 .text      func_80357C0C                  func_80357C0C                  */
+.global func_80357C0C
+func_80357C0C:
 /* 80357C0C 00354B4C  BA 41 00 20 */	lmw r18, 0x20(r1)
 /* 80357C10 00354B50  80 01 00 5C */	lwz r0, 0x5c(r1)
 /* 80357C14 00354B54  38 21 00 58 */	addi r1, r1, 0x58
 /* 80357C18 00354B58  7C 08 03 A6 */	mtlr r0
 /* 80357C1C 00354B5C  4E 80 00 20 */	blr 
 
-/* 80357C20 0054 .text CARDFormat CARDFormat */
+/* 80357C20 0038 .text      CARDFormat                     CARDFormat                     */
 .global CARDFormat
 CARDFormat:
 /* 80357C20 00354B60  7C 08 02 A6 */	mflr r0
@@ -531,12 +590,18 @@ CARDFormat:
 /* 80357C44 00354B84  38 7F 00 00 */	addi r3, r31, 0
 /* 80357C48 00354B88  4B FF F9 81 */	bl __CARDFormatRegionAsync
 /* 80357C4C 00354B8C  2C 03 00 00 */	cmpwi r3, 0
-/* 80357C50 00354B90  40 80 00 08 */	bge lbl_80357C58
-/* 80357C54 00354B94  48 00 00 0C */	b lbl_80357C60
-lbl_80357C58:
+/* 80357C50 00354B90  40 80 00 08 */	bge func_80357C58
+/* 80357C54 00354B94  48 00 00 0C */	b func_80357C60
+
+/* 80357C58 0008 .text      func_80357C58                  func_80357C58                  */
+.global func_80357C58
+func_80357C58:
 /* 80357C58 00354B98  7F E3 FB 78 */	mr r3, r31
 /* 80357C5C 00354B9C  4B FF C1 C5 */	bl __CARDSync
-lbl_80357C60:
+
+/* 80357C60 0014 .text      func_80357C60                  func_80357C60                  */
+.global func_80357C60
+func_80357C60:
 /* 80357C60 00354BA0  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 80357C64 00354BA4  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80357C68 00354BA8  38 21 00 18 */	addi r1, r1, 0x18

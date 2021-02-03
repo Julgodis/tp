@@ -1,15 +1,20 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80365470 0024 .text tolower tolower */
+/* 80365470 0010 .text      tolower                        tolower                        */
 .global tolower
 tolower:
 /* 80365470 003623B0  2C 03 FF FF */	cmpwi r3, -1
-/* 80365474 003623B4  40 82 00 0C */	bne lbl_80365480
+/* 80365474 003623B4  40 82 00 0C */	bne func_80365480
 /* 80365478 003623B8  38 60 FF FF */	li r3, -1
 /* 8036547C 003623BC  4E 80 00 20 */	blr 
-lbl_80365480:
+
+/* 80365480 0014 .text      func_80365480                  func_80365480                  */
+.global func_80365480
+func_80365480:
 /* 80365480 003623C0  3C 80 80 3D */	lis r4, __lower_map@ha
 /* 80365484 003623C4  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80365488 003623C8  38 64 2D 18 */	addi r3, r4, __lower_map@l
@@ -17,9 +22,11 @@ lbl_80365480:
 /* 80365490 003623D0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D2C18 0100 .data __ctype_map __ctype_map */
+/* 803D2C18 0100 .data      __ctype_map                    __ctype_map                    */
 .global __ctype_map
 __ctype_map:
 .byte 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x02, 0x02, 0x02, 0x02, 0x02, 0x01, 0x01 /* baserom.dol+0x3cfc18 */
@@ -39,7 +46,7 @@ __ctype_map:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cfcf8 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cfd08 */
 
-/* 803D2D18 0100 .data __lower_map __lower_map */
+/* 803D2D18 0100 .data      __lower_map                    __lower_map                    */
 .global __lower_map
 __lower_map:
 .byte 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f /* baserom.dol+0x3cfd18 */
@@ -59,7 +66,7 @@ __lower_map:
 .byte 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8, 0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef /* baserom.dol+0x3cfdf8 */
 .byte 0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xf5, 0xf6, 0xf7, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff /* baserom.dol+0x3cfe08 */
 
-/* 803D2E18 0100 .data __upper_map __upper_map */
+/* 803D2E18 0100 .data      __upper_map                    __upper_map                    */
 .global __upper_map
 __upper_map:
 .byte 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f /* baserom.dol+0x3cfe18 */

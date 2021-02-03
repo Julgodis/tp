@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802CDE54 0048 .text GFSetChanAmbColor__F12_GXChannelID8_GXColor GFSetChanAmbColor__F12_GXChannelID8_GXColor */
+/* 802CDE54 0048 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor GFSetChanAmbColor__F12_GXChannelID8_GXColor */
 .global GFSetChanAmbColor__F12_GXChannelID8_GXColor
 GFSetChanAmbColor__F12_GXChannelID8_GXColor:
 /* 802CDE54 002CAD94  88 E4 00 03 */	lbz r7, 3(r4)

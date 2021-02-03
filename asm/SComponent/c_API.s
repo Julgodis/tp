@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C3528 0018 .data g_cAPI_Interface g_cAPI_Interface */
+/* 803C3528 0018 .data      g_cAPI_Interface               g_cAPI_Interface               */
 .global g_cAPI_Interface
 g_cAPI_Interface:
 .byte 0x80, 0x00, 0xb1, 0x74, 0x80, 0x00, 0x84, 0x50, 0x80, 0x00, 0x84, 0x74, 0x80, 0x00, 0xa6, 0x04 /* baserom.dol+0x3c0528 */

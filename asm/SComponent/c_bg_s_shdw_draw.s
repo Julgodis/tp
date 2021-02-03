@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80267F88 0048 .text __ct__13cBgS_ShdwDrawFv __ct__13cBgS_ShdwDrawFv */
+/* 80267F88 0048 .text      __ct__13cBgS_ShdwDrawFv        __ct__13cBgS_ShdwDrawFv        */
 .global __ct__13cBgS_ShdwDrawFv
 __ct__13cBgS_ShdwDrawFv:
 /* 80267F88 00264EC8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -24,7 +26,7 @@ __ct__13cBgS_ShdwDrawFv:
 /* 80267FC8 00264F08  38 21 00 10 */	addi r1, r1, 0x10
 /* 80267FCC 00264F0C  4E 80 00 20 */	blr 
 
-/* 80267FD0 0078 .text __dt__13cBgS_ShdwDrawFv __dt__13cBgS_ShdwDrawFv */
+/* 80267FD0 0040 .text      __dt__13cBgS_ShdwDrawFv        __dt__13cBgS_ShdwDrawFv        */
 .global __dt__13cBgS_ShdwDrawFv
 __dt__13cBgS_ShdwDrawFv:
 /* 80267FD0 00264F10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -34,24 +36,30 @@ __dt__13cBgS_ShdwDrawFv:
 /* 80267FE0 00264F20  93 C1 00 08 */	stw r30, 8(r1)
 /* 80267FE4 00264F24  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80267FE8 00264F28  7C 9F 23 78 */	mr r31, r4
-/* 80267FEC 00264F2C  41 82 00 40 */	beq lbl_8026802C
+/* 80267FEC 00264F2C  41 82 00 40 */	beq func_8026802C
 /* 80267FF0 00264F30  3C 60 80 3C */	lis r3, __vt__13cBgS_ShdwDraw@ha
 /* 80267FF4 00264F34  38 03 3F C0 */	addi r0, r3, __vt__13cBgS_ShdwDraw@l
 /* 80267FF8 00264F38  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80267FFC 00264F3C  34 1E 00 14 */	addic. r0, r30, 0x14
-/* 80268000 00264F40  41 82 00 10 */	beq lbl_80268010
+/* 80268000 00264F40  41 82 00 10 */	beq func_80268010
 /* 80268004 00264F44  3C 60 80 3A */	lis r3, __vt__8cM3dGAab@ha
 /* 80268008 00264F48  38 03 72 18 */	addi r0, r3, __vt__8cM3dGAab@l
 /* 8026800C 00264F4C  90 1E 00 2C */	stw r0, 0x2c(r30)
-lbl_80268010:
+
+/* 80268010 001C .text      func_80268010                  func_80268010                  */
+.global func_80268010
+func_80268010:
 /* 80268010 00264F50  7F C3 F3 78 */	mr r3, r30
 /* 80268014 00264F54  38 80 00 00 */	li r4, 0
 /* 80268018 00264F58  4B FF FB 59 */	bl __dt__8cBgS_ChkFv
 /* 8026801C 00264F5C  7F E0 07 35 */	extsh. r0, r31
-/* 80268020 00264F60  40 81 00 0C */	ble lbl_8026802C
+/* 80268020 00264F60  40 81 00 0C */	ble func_8026802C
 /* 80268024 00264F64  7F C3 F3 78 */	mr r3, r30
 /* 80268028 00264F68  48 06 6D 15 */	bl __dl__FPv
-lbl_8026802C:
+
+/* 8026802C 001C .text      func_8026802C                  func_8026802C                  */
+.global func_8026802C
+func_8026802C:
 /* 8026802C 00264F6C  7F C3 F3 78 */	mr r3, r30
 /* 80268030 00264F70  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80268034 00264F74  83 C1 00 08 */	lwz r30, 8(r1)
@@ -60,7 +68,7 @@ lbl_8026802C:
 /* 80268040 00264F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 80268044 00264F84  4E 80 00 20 */	blr 
 
-/* 80268048 0024 .text Set__13cBgS_ShdwDrawFR4cXyzR4cXyz Set__13cBgS_ShdwDrawFR4cXyzR4cXyz */
+/* 80268048 0024 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz Set__13cBgS_ShdwDrawFR4cXyzR4cXyz */
 .global Set__13cBgS_ShdwDrawFR4cXyzR4cXyz
 Set__13cBgS_ShdwDrawFR4cXyzR4cXyz:
 /* 80268048 00264F88  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -73,16 +81,18 @@ Set__13cBgS_ShdwDrawFR4cXyzR4cXyz:
 /* 80268064 00264FA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80268068 00264FA8  4E 80 00 20 */	blr 
 
-/* 8026806C 0008 .text SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
+/* 8026806C 0008 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
 .global SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i
 SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i:
 /* 8026806C 00264FAC  90 83 00 30 */	stw r4, 0x30(r3)
 /* 80268070 00264FB0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C3FC0 000C .data __vt__13cBgS_ShdwDraw __vt__13cBgS_ShdwDraw */
+/* 803C3FC0 000C .data      __vt__13cBgS_ShdwDraw          __vt__13cBgS_ShdwDraw          */
 .global __vt__13cBgS_ShdwDraw
 __vt__13cBgS_ShdwDraw:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x26, 0x7f, 0xd0 /* baserom.dol+0x3c0fc0 */

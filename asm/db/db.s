@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80346398 0028 .text DBInit DBInit */
+/* 80346398 0028 .text      DBInit                         DBInit                         */
 .global DBInit
 DBInit:
 /* 80346398 003432D8  3C 80 80 00 */	lis r4, 0x80000040@ha
@@ -16,13 +18,13 @@ DBInit:
 /* 803463B8 003432F8  90 0D 91 8C */	stw r0, DBVerbose-_SDA_BASE_(r13)
 /* 803463BC 003432FC  4E 80 00 20 */	blr 
 
-/* 803463C0 0048 .text __DBExceptionDestinationAux __DBExceptionDestinationAux */
+/* 803463C0 0048 .text      __DBExceptionDestinationAux    __DBExceptionDestinationAux    */
 .global __DBExceptionDestinationAux
 __DBExceptionDestinationAux:
 /* 803463C0 00343300  7C 08 02 A6 */	mflr r0
-/* 803463C4 00343304  3C 60 80 3D */	lis r3, lbl_803D1368@ha
+/* 803463C4 00343304  3C 60 80 3D */	lis r3, LIT_9@ha
 /* 803463C8 00343308  90 01 00 04 */	stw r0, 4(r1)
-/* 803463CC 0034330C  38 63 13 68 */	addi r3, r3, lbl_803D1368@l
+/* 803463CC 0034330C  38 63 13 68 */	addi r3, r3, LIT_9@l
 /* 803463D0 00343310  4C C6 31 82 */	crclr 6
 /* 803463D4 00343314  94 21 FF E8 */	stwu r1, -0x18(r1)
 /* 803463D8 00343318  93 E1 00 14 */	stw r31, 0x14(r1)
@@ -38,7 +40,7 @@ __DBExceptionDestinationAux:
 /* 80346400 00343340  7C 08 03 A6 */	mtlr r0
 /* 80346404 00343344  4E 80 00 20 */	blr 
 
-/* 80346408 0010 .text __DBExceptionDestination __DBExceptionDestination */
+/* 80346408 0010 .text      __DBExceptionDestination       __DBExceptionDestination       */
 .global __DBExceptionDestination
 __DBExceptionDestination:
 /* 80346408 00343348  7C 60 00 A6 */	mfmsr r3
@@ -46,7 +48,7 @@ __DBExceptionDestination:
 /* 80346410 00343350  7C 60 01 24 */	mtmsr r3
 /* 80346414 00343354  4B FF FF AC */	b __DBExceptionDestinationAux
 
-/* 80346418 001C .text __DBIsExceptionMarked __DBIsExceptionMarked */
+/* 80346418 001C .text      __DBIsExceptionMarked          __DBIsExceptionMarked          */
 .global __DBIsExceptionMarked
 __DBIsExceptionMarked:
 /* 80346418 00343358  80 8D 91 88 */	lwz r4, __DBInterface-_SDA_BASE_(r13)
@@ -57,11 +59,11 @@ __DBIsExceptionMarked:
 /* 8034642C 0034336C  7C 83 00 38 */	and r3, r4, r0
 /* 80346430 00343370  4E 80 00 20 */	blr 
 
-/* 80346434 0050 .text DBPrintf DBPrintf */
+/* 80346434 0028 .text      DBPrintf                       DBPrintf                       */
 .global DBPrintf
 DBPrintf:
 /* 80346434 00343374  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 80346438 00343378  40 86 00 24 */	bne cr1, lbl_8034645C
+/* 80346438 00343378  40 86 00 24 */	bne cr1, func_8034645C
 /* 8034643C 0034337C  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80346440 00343380  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80346444 00343384  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -70,7 +72,10 @@ DBPrintf:
 /* 80346450 00343390  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80346454 00343394  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80346458 00343398  D9 01 00 60 */	stfd f8, 0x60(r1)
-lbl_8034645C:
+
+/* 8034645C 0028 .text      func_8034645C                  func_8034645C                  */
+.global func_8034645C
+func_8034645C:
 /* 8034645C 0034339C  90 61 00 08 */	stw r3, 8(r1)
 /* 80346460 003433A0  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80346464 003433A4  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -83,23 +88,27 @@ lbl_8034645C:
 /* 80346480 003433C0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D1368 0018 .data lbl_803D1368 @9 */
-.global lbl_803D1368
-lbl_803D1368:
+/* 803D1368 0018 .data      LIT_9                          @9                             */
+.global LIT_9
+LIT_9:
 .byte 0x44, 0x42, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x44, 0x65, 0x73, 0x74, 0x69 /* baserom.dol+0x3ce368 */
 .byte 0x6e, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x0a, 0x00 /* baserom.dol+0x3ce378 */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451708 0004 .sbss __DBInterface __DBInterface */
+/* 80451708 0004 .sbss      __DBInterface                  __DBInterface                  */
 .global __DBInterface
 __DBInterface:
 .skip 0x4
 
-/* 8045170C 0004 .sbss DBVerbose DBVerbose */
+/* 8045170C 0004 .sbss      DBVerbose                      DBVerbose                      */
 .global DBVerbose
 DBVerbose:
 .skip 0x4

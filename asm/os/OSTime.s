@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 803426FC 0018 .text OSGetTime OSGetTime */
+/* 803426FC 0018 .text      OSGetTime                      OSGetTime                      */
 .global OSGetTime
 OSGetTime:
 /* 803426FC 0033F63C  7C 6D 42 E6 */	mftbu r3
@@ -12,13 +14,13 @@ OSGetTime:
 /* 8034270C 0033F64C  40 82 FF F0 */	bne OSGetTime
 /* 80342710 0033F650  4E 80 00 20 */	blr 
 
-/* 80342714 0008 .text OSGetTick OSGetTick */
+/* 80342714 0008 .text      OSGetTick                      OSGetTick                      */
 .global OSGetTick
 OSGetTick:
 /* 80342714 0033F654  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 80342718 0033F658  4E 80 00 20 */	blr 
 
-/* 8034271C 0064 .text __OSGetSystemTime __OSGetSystemTime */
+/* 8034271C 0064 .text      __OSGetSystemTime              __OSGetSystemTime              */
 .global __OSGetSystemTime
 __OSGetSystemTime:
 /* 8034271C 0033F65C  7C 08 02 A6 */	mflr r0
@@ -27,7 +29,7 @@ __OSGetSystemTime:
 /* 80342728 0033F668  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8034272C 0033F66C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80342730 0033F670  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80342734 0033F674  4B FF AF C1 */	bl __RAS_OSDisableInterrupts_begin
+/* 80342734 0033F674  4B FF AF C1 */	bl OSDisableInterrupts
 /* 80342738 0033F678  7C 7F 1B 78 */	mr r31, r3
 /* 8034273C 0033F67C  4B FF FF C1 */	bl OSGetTime
 /* 80342740 0033F680  3C C0 80 00 */	lis r6, 0x800030DC@ha
@@ -47,7 +49,7 @@ __OSGetSystemTime:
 /* 80342778 0033F6B8  7C 08 03 A6 */	mtlr r0
 /* 8034277C 0033F6BC  4E 80 00 20 */	blr 
 
-/* 80342780 0058 .text __OSTimeToSystemTime __OSTimeToSystemTime */
+/* 80342780 0058 .text      __OSTimeToSystemTime           __OSTimeToSystemTime           */
 .global __OSTimeToSystemTime
 __OSTimeToSystemTime:
 /* 80342780 0033F6C0  7C 08 02 A6 */	mflr r0
@@ -57,7 +59,7 @@ __OSTimeToSystemTime:
 /* 80342790 0033F6D0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80342794 0033F6D4  7C 7F 1B 78 */	mr r31, r3
 /* 80342798 0033F6D8  7C 9E 23 78 */	mr r30, r4
-/* 8034279C 0033F6DC  4B FF AF 59 */	bl __RAS_OSDisableInterrupts_begin
+/* 8034279C 0033F6DC  4B FF AF 59 */	bl OSDisableInterrupts
 /* 803427A0 0033F6E0  3C A0 80 00 */	lis r5, 0x800030DC@ha
 /* 803427A4 0033F6E4  80 85 30 DC */	lwz r4, 0x800030DC@l(r5)
 /* 803427A8 0033F6E8  80 05 30 D8 */	lwz r0, 0x30d8(r5)
@@ -73,7 +75,7 @@ __OSTimeToSystemTime:
 /* 803427D0 0033F710  7C 08 03 A6 */	mtlr r0
 /* 803427D4 0033F714  4E 80 00 20 */	blr 
 
-/* 803427D8 019C .text GetDates GetDates */
+/* 803427D8 0050 .text      GetDates                       GetDates                       */
 .global GetDates
 GetDates:
 /* 803427D8 0033F718  3C A0 92 49 */	lis r5, 0x92492493@ha
@@ -95,22 +97,37 @@ GetDates:
 /* 80342818 0033F758  7C 06 38 50 */	subf r0, r6, r7
 /* 8034281C 0033F75C  1D 65 01 6D */	mulli r11, r5, 0x16d
 /* 80342820 0033F760  90 04 00 18 */	stw r0, 0x18(r4)
-/* 80342824 0033F764  48 00 00 04 */	b lbl_80342828
-lbl_80342828:
+/* 80342824 0033F764  48 00 00 04 */	b func_80342828
+
+/* 80342828 000C .text      func_80342828                  func_80342828                  */
+.global func_80342828
+func_80342828:
 /* 80342828 0033F768  3C C0 51 EC */	lis r6, 0x51EB851F@ha
 /* 8034282C 0033F76C  39 46 85 1F */	addi r10, r6, 0x51EB851F@l
-/* 80342830 0033F770  48 00 00 04 */	b lbl_80342834
-lbl_80342834:
-/* 80342834 0033F774  48 00 00 0C */	b lbl_80342840
-lbl_80342838:
+/* 80342830 0033F770  48 00 00 04 */	b func_80342834
+
+/* 80342834 0004 .text      func_80342834                  func_80342834                  */
+.global func_80342834
+func_80342834:
+/* 80342834 0033F774  48 00 00 0C */	b func_80342840
+
+/* 80342838 0008 .text      func_80342838                  func_80342838                  */
+.global func_80342838
+func_80342838:
 /* 80342838 0033F778  39 6B FE 93 */	addi r11, r11, -365
 /* 8034283C 0033F77C  38 A5 FF FF */	addi r5, r5, -1
-lbl_80342840:
+
+/* 80342840 0010 .text      func_80342840                  func_80342840                  */
+.global func_80342840
+func_80342840:
 /* 80342840 0033F780  2C 05 00 01 */	cmpwi r5, 1
-/* 80342844 0033F784  40 80 00 0C */	bge lbl_80342850
+/* 80342844 0033F784  40 80 00 0C */	bge func_80342850
 /* 80342848 0033F788  38 00 00 00 */	li r0, 0
-/* 8034284C 0033F78C  48 00 00 38 */	b lbl_80342884
-lbl_80342850:
+/* 8034284C 0033F78C  48 00 00 38 */	b func_80342884
+
+/* 80342850 0034 .text      func_80342850                  func_80342850                  */
+.global func_80342850
+func_80342850:
 /* 80342850 0033F790  38 05 FF FF */	addi r0, r5, -1
 /* 80342854 0033F794  7C 0A 00 96 */	mulhw r0, r10, r0
 /* 80342858 0033F798  7C 08 3E 70 */	srawi r8, r0, 7
@@ -124,10 +141,13 @@ lbl_80342850:
 /* 80342878 0033F7B8  7C E8 4A 14 */	add r7, r8, r9
 /* 8034287C 0033F7BC  7C 06 00 50 */	subf r0, r6, r0
 /* 80342880 0033F7C0  7C 07 02 14 */	add r0, r7, r0
-lbl_80342884:
+
+/* 80342884 0064 .text      func_80342884                  func_80342884                  */
+.global func_80342884
+func_80342884:
 /* 80342884 0033F7C4  7C 0B 02 14 */	add r0, r11, r0
 /* 80342888 0033F7C8  7C 03 00 00 */	cmpw r3, r0
-/* 8034288C 0033F7CC  41 80 FF AC */	blt lbl_80342838
+/* 8034288C 0033F7CC  41 80 FF AC */	blt func_80342838
 /* 80342890 0033F7D0  7C A6 16 70 */	srawi r6, r5, 2
 /* 80342894 0033F7D4  90 A4 00 14 */	stw r5, 0x14(r4)
 /* 80342898 0033F7D8  7C C6 01 94 */	addze r6, r6
@@ -138,7 +158,7 @@ lbl_80342884:
 /* 803428AC 0033F7EC  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 803428B0 0033F7F0  38 E0 00 01 */	li r7, 1
 /* 803428B4 0033F7F4  39 00 00 00 */	li r8, 0
-/* 803428B8 0033F7F8  40 82 00 30 */	bne lbl_803428E8
+/* 803428B8 0033F7F8  40 82 00 30 */	bne func_803428E8
 /* 803428BC 0033F7FC  3C 60 51 EC */	lis r3, 0x51EB851F@ha
 /* 803428C0 0033F800  38 63 85 1F */	addi r3, r3, 0x51EB851F@l
 /* 803428C4 0033F804  7C 63 28 96 */	mulhw r3, r3, r5
@@ -148,11 +168,14 @@ lbl_80342884:
 /* 803428D4 0033F814  1C 63 00 64 */	mulli r3, r3, 0x64
 /* 803428D8 0033F818  7C 63 28 50 */	subf r3, r3, r5
 /* 803428DC 0033F81C  2C 03 00 00 */	cmpwi r3, 0
-/* 803428E0 0033F820  41 82 00 08 */	beq lbl_803428E8
+/* 803428E0 0033F820  41 82 00 08 */	beq func_803428E8
 /* 803428E4 0033F824  7C E8 3B 78 */	mr r8, r7
-lbl_803428E8:
+
+/* 803428E8 0034 .text      func_803428E8                  func_803428E8                  */
+.global func_803428E8
+func_803428E8:
 /* 803428E8 0033F828  2C 08 00 00 */	cmpwi r8, 0
-/* 803428EC 0033F82C  40 82 00 30 */	bne lbl_8034291C
+/* 803428EC 0033F82C  40 82 00 30 */	bne func_8034291C
 /* 803428F0 0033F830  3C 60 51 EC */	lis r3, 0x51EB851F@ha
 /* 803428F4 0033F834  38 63 85 1F */	addi r3, r3, 0x51EB851F@l
 /* 803428F8 0033F838  7C 63 28 96 */	mulhw r3, r3, r5
@@ -162,29 +185,44 @@ lbl_803428E8:
 /* 80342908 0033F848  1C 63 01 90 */	mulli r3, r3, 0x190
 /* 8034290C 0033F84C  7C 63 28 50 */	subf r3, r3, r5
 /* 80342910 0033F850  2C 03 00 00 */	cmpwi r3, 0
-/* 80342914 0033F854  41 82 00 08 */	beq lbl_8034291C
+/* 80342914 0033F854  41 82 00 08 */	beq func_8034291C
 /* 80342918 0033F858  38 E0 00 00 */	li r7, 0
-lbl_8034291C:
+
+/* 8034291C 0014 .text      func_8034291C                  func_8034291C                  */
+.global func_8034291C
+func_8034291C:
 /* 8034291C 0033F85C  2C 07 00 00 */	cmpwi r7, 0
-/* 80342920 0033F860  41 82 00 10 */	beq lbl_80342930
+/* 80342920 0033F860  41 82 00 10 */	beq func_80342930
 /* 80342924 0033F864  3C 60 80 3D */	lis r3, LeapYearDays@ha
 /* 80342928 0033F868  38 C3 10 78 */	addi r6, r3, LeapYearDays@l
-/* 8034292C 0033F86C  48 00 00 0C */	b lbl_80342938
-lbl_80342930:
+/* 8034292C 0033F86C  48 00 00 0C */	b func_80342938
+
+/* 80342930 0008 .text      func_80342930                  func_80342930                  */
+.global func_80342930
+func_80342930:
 /* 80342930 0033F870  3C 60 80 3D */	lis r3, YearDays@ha
 /* 80342934 0033F874  38 C3 10 48 */	addi r6, r3, YearDays@l
-lbl_80342938:
+
+/* 80342938 000C .text      func_80342938                  func_80342938                  */
+.global func_80342938
+func_80342938:
 /* 80342938 0033F878  38 E0 00 0C */	li r7, 0xc
 /* 8034293C 0033F87C  38 60 00 30 */	li r3, 0x30
-/* 80342940 0033F880  48 00 00 04 */	b lbl_80342944
-lbl_80342944:
-/* 80342944 0033F884  48 00 00 04 */	b lbl_80342948
-lbl_80342948:
+/* 80342940 0033F880  48 00 00 04 */	b func_80342944
+
+/* 80342944 0004 .text      func_80342944                  func_80342944                  */
+.global func_80342944
+func_80342944:
+/* 80342944 0033F884  48 00 00 04 */	b func_80342948
+
+/* 80342948 002C .text      func_80342948                  func_80342948                  */
+.global func_80342948
+func_80342948:
 /* 80342948 0033F888  38 63 FF FC */	addi r3, r3, -4
 /* 8034294C 0033F88C  7C A6 18 2E */	lwzx r5, r6, r3
 /* 80342950 0033F890  38 E7 FF FF */	addi r7, r7, -1
 /* 80342954 0033F894  7C 00 28 00 */	cmpw r0, r5
-/* 80342958 0033F898  41 80 FF F0 */	blt lbl_80342948
+/* 80342958 0033F898  41 80 FF F0 */	blt func_80342948
 /* 8034295C 0033F89C  90 E4 00 10 */	stw r7, 0x10(r4)
 /* 80342960 0033F8A0  7C 66 18 2E */	lwzx r3, r6, r3
 /* 80342964 0033F8A4  7C 63 00 50 */	subf r3, r3, r0
@@ -192,7 +230,7 @@ lbl_80342948:
 /* 8034296C 0033F8AC  90 04 00 0C */	stw r0, 0xc(r4)
 /* 80342970 0033F8B0  4E 80 00 20 */	blr 
 
-/* 80342974 0204 .text OSTicksToCalendarTime OSTicksToCalendarTime */
+/* 80342974 0074 .text      OSTicksToCalendarTime          OSTicksToCalendarTime          */
 .global OSTicksToCalendarTime
 OSTicksToCalendarTime:
 /* 80342974 0033F8B4  7C 08 02 A6 */	mflr r0
@@ -219,12 +257,15 @@ OSTicksToCalendarTime:
 /* 803429C8 0033F908  7C 64 21 10 */	subfe r3, r4, r4
 /* 803429CC 0033F90C  7C 63 00 D0 */	neg r3, r3
 /* 803429D0 0033F910  2C 03 00 00 */	cmpwi r3, 0
-/* 803429D4 0033F914  41 82 00 14 */	beq lbl_803429E8
+/* 803429D4 0033F914  41 82 00 14 */	beq func_803429E8
 /* 803429D8 0033F918  80 1B 00 F8 */	lwz r0, 0xf8(r27)
 /* 803429DC 0033F91C  54 00 F0 BE */	srwi r0, r0, 2
 /* 803429E0 0033F920  7F 39 00 14 */	addc r25, r25, r0
 /* 803429E4 0033F924  7F 5A 29 14 */	adde r26, r26, r5
-lbl_803429E8:
+
+/* 803429E8 010C .text      func_803429E8                  func_803429E8                  */
+.global func_803429E8
+func_803429E8:
 /* 803429E8 0033F928  38 80 00 08 */	li r4, 8
 /* 803429EC 0033F92C  7C 7A 21 D6 */	mullw r3, r26, r4
 /* 803429F0 0033F930  7C 19 20 16 */	mulhwu r0, r25, r4
@@ -288,11 +329,14 @@ lbl_803429E8:
 /* 80342AD8 0033FA18  48 01 FA 69 */	bl __mod2i
 /* 80342ADC 0033FA1C  7C 9B 23 78 */	mr r27, r4
 /* 80342AE0 0033FA20  2C 1B 00 00 */	cmpwi r27, 0
-/* 80342AE4 0033FA24  40 80 00 10 */	bge lbl_80342AF4
+/* 80342AE4 0033FA24  40 80 00 10 */	bge func_80342AF4
 /* 80342AE8 0033FA28  3F 7B 00 01 */	addis r27, r27, 1
 /* 80342AEC 0033FA2C  3B 5A FF FF */	addi r26, r26, -1
 /* 80342AF0 0033FA30  3B 7B 51 80 */	addi r27, r27, 0x5180
-lbl_80342AF4:
+
+/* 80342AF4 0084 .text      func_80342AF4                  func_80342AF4                  */
+.global func_80342AF4
+func_80342AF4:
 /* 80342AF4 0033FA34  7F 43 D3 78 */	mr r3, r26
 /* 80342AF8 0033FA38  7F E4 FB 78 */	mr r4, r31
 /* 80342AFC 0033FA3C  4B FF FC DD */	bl GetDates
@@ -328,16 +372,18 @@ lbl_80342AF4:
 /* 80342B74 0033FAB4  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803D1048 0030 .data YearDays YearDays */
+/* 803D1048 0030 .data      YearDays                       YearDays                       */
 .global YearDays
 YearDays:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0x00, 0x00, 0x00, 0x3b, 0x00, 0x00, 0x00, 0x5a /* baserom.dol+0x3ce048 */
 .byte 0x00, 0x00, 0x00, 0x78, 0x00, 0x00, 0x00, 0x97, 0x00, 0x00, 0x00, 0xb5, 0x00, 0x00, 0x00, 0xd4 /* baserom.dol+0x3ce058 */
 .byte 0x00, 0x00, 0x00, 0xf3, 0x00, 0x00, 0x01, 0x11, 0x00, 0x00, 0x01, 0x30, 0x00, 0x00, 0x01, 0x4e /* baserom.dol+0x3ce068 */
 
-/* 803D1078 0030 .data LeapYearDays LeapYearDays */
+/* 803D1078 0030 .data      LeapYearDays                   LeapYearDays                   */
 .global LeapYearDays
 LeapYearDays:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1f, 0x00, 0x00, 0x00, 0x3c, 0x00, 0x00, 0x00, 0x5b /* baserom.dol+0x3ce078 */

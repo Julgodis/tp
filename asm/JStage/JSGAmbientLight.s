@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80280B20 0060 .text __dt__Q26JStage13TAmbientLightFv __dt__Q26JStage13TAmbientLightFv */
+/* 80280B20 0044 .text      __dt__Q26JStage13TAmbientLightFv __dt__Q26JStage13TAmbientLightFv */
 .global __dt__Q26JStage13TAmbientLightFv
 __dt__Q26JStage13TAmbientLightFv:
 /* 80280B20 0027DA60  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -12,17 +14,20 @@ __dt__Q26JStage13TAmbientLightFv:
 /* 80280B30 0027DA70  93 C1 00 08 */	stw r30, 8(r1)
 /* 80280B34 0027DA74  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80280B38 0027DA78  7C 9F 23 78 */	mr r31, r4
-/* 80280B3C 0027DA7C  41 82 00 28 */	beq lbl_80280B64
+/* 80280B3C 0027DA7C  41 82 00 28 */	beq func_80280B64
 /* 80280B40 0027DA80  3C 80 80 3C */	lis r4, __vt__Q26JStage13TAmbientLight@ha
 /* 80280B44 0027DA84  38 04 46 38 */	addi r0, r4, __vt__Q26JStage13TAmbientLight@l
 /* 80280B48 0027DA88  90 1E 00 00 */	stw r0, 0(r30)
 /* 80280B4C 0027DA8C  38 80 00 00 */	li r4, 0
 /* 80280B50 0027DA90  48 00 02 85 */	bl __dt__Q26JStage7TObjectFv
 /* 80280B54 0027DA94  7F E0 07 35 */	extsh. r0, r31
-/* 80280B58 0027DA98  40 81 00 0C */	ble lbl_80280B64
+/* 80280B58 0027DA98  40 81 00 0C */	ble func_80280B64
 /* 80280B5C 0027DA9C  7F C3 F3 78 */	mr r3, r30
 /* 80280B60 0027DAA0  48 04 E1 DD */	bl __dl__FPv
-lbl_80280B64:
+
+/* 80280B64 001C .text      func_80280B64                  func_80280B64                  */
+.global func_80280B64
+func_80280B64:
 /* 80280B64 0027DAA4  7F C3 F3 78 */	mr r3, r30
 /* 80280B68 0027DAA8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80280B6C 0027DAAC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -31,30 +36,32 @@ lbl_80280B64:
 /* 80280B78 0027DAB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80280B7C 0027DABC  4E 80 00 20 */	blr 
 
-/* 80280B80 0008 .text JSGFGetType__Q26JStage13TAmbientLightCFv JSGFGetType__Q26JStage13TAmbientLightCFv */
+/* 80280B80 0008 .text      JSGFGetType__Q26JStage13TAmbientLightCFv JSGFGetType__Q26JStage13TAmbientLightCFv */
 .global JSGFGetType__Q26JStage13TAmbientLightCFv
 JSGFGetType__Q26JStage13TAmbientLightCFv:
 /* 80280B80 0027DAC0  38 60 00 04 */	li r3, 4
 /* 80280B84 0027DAC4  4E 80 00 20 */	blr 
 
-/* 80280B88 0014 .text JSGGetColor__Q26JStage13TAmbientLightCFv JSGGetColor__Q26JStage13TAmbientLightCFv */
+/* 80280B88 0014 .text      JSGGetColor__Q26JStage13TAmbientLightCFv JSGGetColor__Q26JStage13TAmbientLightCFv */
 .global JSGGetColor__Q26JStage13TAmbientLightCFv
 JSGGetColor__Q26JStage13TAmbientLightCFv:
 /* 80280B88 0027DAC8  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80280B8C 0027DACC  80 62 B9 D0 */	lwz r3, lbl_804553D0-_SDA2_BASE_(r2)
+/* 80280B8C 0027DACC  80 62 B9 D0 */	lwz r3, LIT_302-_SDA2_BASE_(r2)
 /* 80280B90 0027DAD0  90 61 00 08 */	stw r3, 8(r1)
 /* 80280B94 0027DAD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80280B98 0027DAD8  4E 80 00 20 */	blr 
 
-/* 80280B9C 0004 .text JSGSetColor__Q26JStage13TAmbientLightF8_GXColor JSGSetColor__Q26JStage13TAmbientLightF8_GXColor */
+/* 80280B9C 0004 .text      JSGSetColor__Q26JStage13TAmbientLightF8_GXColor JSGSetColor__Q26JStage13TAmbientLightF8_GXColor */
 .global JSGSetColor__Q26JStage13TAmbientLightF8_GXColor
 JSGSetColor__Q26JStage13TAmbientLightF8_GXColor:
 /* 80280B9C 0027DADC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C4638 0044 .data __vt__Q26JStage13TAmbientLight __vt__Q26JStage13TAmbientLight */
+/* 803C4638 0044 .data      __vt__Q26JStage13TAmbientLight __vt__Q26JStage13TAmbientLight */
 .global __vt__Q26JStage13TAmbientLight
 __vt__Q26JStage13TAmbientLight:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x0b, 0x80 /* baserom.dol+0x3c1638 */
@@ -65,11 +72,13 @@ __vt__Q26JStage13TAmbientLight:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c167c */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 804553D0 0004 .sdata2 lbl_804553D0 @302 */
-.global lbl_804553D0
-lbl_804553D0:
+/* 804553D0 0004 .sdata2    LIT_302                        @302                           */
+.global LIT_302
+LIT_302:
 .byte 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3d4230 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4234 */
 

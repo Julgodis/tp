@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8029E4E0 0048 .text DSPReleaseHalt2__FUl DSPReleaseHalt2__FUl */
+/* 8029E4E0 0048 .text      DSPReleaseHalt2__FUl           DSPReleaseHalt2__FUl           */
 .global DSPReleaseHalt2__FUl
 DSPReleaseHalt2__FUl:
 /* 8029E4E0 0029B420  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -23,21 +25,19 @@ DSPReleaseHalt2__FUl:
 /* 8029E51C 0029B45C  7C 08 03 A6 */	mtlr r0
 /* 8029E520 0029B460  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029E524 0029B464  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 8029E540 000C .text setup_callback__FUs setup_callback__FUs */
+/* 8029E540 000C .text      setup_callback__FUs            setup_callback__FUs            */
 .global setup_callback__FUs
 setup_callback__FUs:
 /* 8029E540 0029B480  38 00 00 00 */	li r0, 0
 /* 8029E544 0029B484  90 0D 8D 78 */	stw r0, flag-_SDA_BASE_(r13)
 /* 8029E548 0029B488  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 8029E560 0064 .text DsetupTable__FUlUlUlUlUl DsetupTable__FUlUlUlUlUl */
+/* 8029E560 0048 .text      DsetupTable__FUlUlUlUlUl       DsetupTable__FUlUlUlUlUl       */
 .global DsetupTable__FUlUlUlUlUl
 DsetupTable__FUlUlUlUlUl:
 /* 8029E560 0029B4A0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -58,23 +58,29 @@ DsetupTable__FUlUlUlUlUl:
 /* 8029E59C 0029B4DC  90 E1 00 18 */	stw r7, 0x18(r1)
 /* 8029E5A0 0029B4E0  91 0D 8D 78 */	stw r8, flag-_SDA_BASE_(r13)
 /* 8029E5A4 0029B4E4  48 00 02 3D */	bl DSPSendCommands2__FPUlUlPFUs_v
-lbl_8029E5A8:
+
+/* 8029E5A8 0038 .text      func_8029E5A8                  func_8029E5A8                  */
+.global func_8029E5A8
+func_8029E5A8:
 /* 8029E5A8 0029B4E8  80 0D 8D 78 */	lwz r0, flag-_SDA_BASE_(r13)
 /* 8029E5AC 0029B4EC  2C 00 00 00 */	cmpwi r0, 0
-/* 8029E5B0 0029B4F0  40 82 FF F8 */	bne lbl_8029E5A8
+/* 8029E5B0 0029B4F0  40 82 FF F8 */	bne func_8029E5A8
 /* 8029E5B4 0029B4F4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8029E5B8 0029B4F8  7C 08 03 A6 */	mtlr r0
 /* 8029E5BC 0029B4FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029E5C0 0029B500  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00
+/* 8029E5C4 0029B504  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5C8 0029B508  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5CC 0029B50C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5D0 0029B510  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5D4 0029B514  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5D8 0029B518  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+/* 8029E5DC 0029B51C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-/* 8029E5E0 0024 .text DsetMixerLevel__Ff DsetMixerLevel__Ff */
+/* 8029E5E0 0024 .text      DsetMixerLevel__Ff             DsetMixerLevel__Ff             */
 .global DsetMixerLevel__Ff
 DsetMixerLevel__Ff:
-/* 8029E5E0 0029B520  C0 02 BD 70 */	lfs f0, lbl_80455770-_SDA2_BASE_(r2)
+/* 8029E5E0 0029B520  C0 02 BD 70 */	lfs f0, dspproc__LIT_333-_SDA2_BASE_(r2)
 /* 8029E5E4 0029B524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E5E8 0029B528  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029E5EC 0029B52C  FC 00 00 1E */	fctiwz f0, f0
@@ -83,12 +89,10 @@ DsetMixerLevel__Ff:
 /* 8029E5F8 0029B538  B0 0D 82 48 */	sth r0, DSP_MIXERLEVEL-_SDA_BASE_(r13)
 /* 8029E5FC 0029B53C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029E600 0029B540  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 8029E620 0054 .text DsyncFrame2ch__FUlUlUl DsyncFrame2ch__FUlUlUl */
+/* 8029E620 0054 .text      DsyncFrame2ch__FUlUlUl         DsyncFrame2ch__FUlUlUl         */
 .global DsyncFrame2ch__FUlUlUl
 DsyncFrame2ch__FUlUlUl:
 /* 8029E620 0029B560  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -112,10 +116,9 @@ DsyncFrame2ch__FUlUlUl:
 /* 8029E668 0029B5A8  7C 08 03 A6 */	mtlr r0
 /* 8029E66C 0029B5AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029E670 0029B5B0  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 8029E680 0050 .text DsyncFrame4ch__FUlUlUlUlUl DsyncFrame4ch__FUlUlUlUlUl */
+/* 8029E680 0050 .text      DsyncFrame4ch__FUlUlUlUlUl     DsyncFrame4ch__FUlUlUlUlUl     */
 .global DsyncFrame4ch__FUlUlUlUlUl
 DsyncFrame4ch__FUlUlUlUlUl:
 /* 8029E680 0029B5C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -138,33 +141,38 @@ DsyncFrame4ch__FUlUlUlUlUl:
 /* 8029E6C4 0029B604  7C 08 03 A6 */	mtlr r0
 /* 8029E6C8 0029B608  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029E6CC 0029B60C  4E 80 00 20 */	blr 
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 804507C8 0002 .sdata DSP_MIXERLEVEL DSP_MIXERLEVEL */
+/* 804507C8 0002 .sdata     DSP_MIXERLEVEL                 DSP_MIXERLEVEL                 */
 .global DSP_MIXERLEVEL
 DSP_MIXERLEVEL:
 .byte 0x40, 0x00 /* baserom.dol+0x3d0528 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d052a */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 804512F8 0004 .sbss flag flag */
+/* 804512F8 0004 .sbss      flag                           flag                           */
 .global flag
 flag:
 .skip 0x4
 .skip 0x4 /* padding */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455770 0004 .sdata2 lbl_80455770 @333 */
-.global lbl_80455770
-lbl_80455770:
+/* 80455770 0004 .sdata2    dspproc__LIT_333               @333                           */
+.global dspproc__LIT_333
+dspproc__LIT_333:
 .byte 0x45, 0x80, 0x00, 0x00 /* baserom.dol+0x3d45d0 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45d4 */
 

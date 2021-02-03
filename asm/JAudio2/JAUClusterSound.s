@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802A4AC4 000C .text __ct__14JAISoundHandleFv __ct__14JAISoundHandleFv */
+/* 802A4AC4 000C .text      __ct__14JAISoundHandleFv       __ct__14JAISoundHandleFv       */
 .global __ct__14JAISoundHandleFv
 __ct__14JAISoundHandleFv:
 /* 802A4AC4 002A1A04  38 00 00 00 */	li r0, 0

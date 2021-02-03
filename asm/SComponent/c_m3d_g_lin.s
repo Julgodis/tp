@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8026F2A8 0040 .text __ct__8cM3dGLinFRC4cXyzRC4cXyz __ct__8cM3dGLinFRC4cXyzRC4cXyz */
+/* 8026F2A8 0040 .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz __ct__8cM3dGLinFRC4cXyzRC4cXyz */
 .global __ct__8cM3dGLinFRC4cXyzRC4cXyz
 __ct__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2A8 0026C1E8  3C C0 80 3A */	lis r6, __vt__8cM3dGLin@ha
@@ -22,7 +24,7 @@ __ct__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2E0 0026C220  D0 03 00 14 */	stfs f0, 0x14(r3)
 /* 8026F2E4 0026C224  4E 80 00 20 */	blr 
 
-/* 8026F2E8 0034 .text SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz */
+/* 8026F2E8 0034 .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz */
 .global SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz
 SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2E8 0026C228  C0 04 00 00 */	lfs f0, 0(r4)
@@ -39,7 +41,7 @@ SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F314 0026C254  D0 03 00 14 */	stfs f0, 0x14(r3)
 /* 8026F318 0026C258  4E 80 00 20 */	blr 
 
-/* 8026F31C 0034 .text SetStartEnd__8cM3dGLinFRC3VecRC3Vec SetStartEnd__8cM3dGLinFRC3VecRC3Vec */
+/* 8026F31C 0034 .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec SetStartEnd__8cM3dGLinFRC3VecRC3Vec */
 .global SetStartEnd__8cM3dGLinFRC3VecRC3Vec
 SetStartEnd__8cM3dGLinFRC3VecRC3Vec:
 /* 8026F31C 0026C25C  C0 04 00 00 */	lfs f0, 0(r4)
@@ -56,7 +58,7 @@ SetStartEnd__8cM3dGLinFRC3VecRC3Vec:
 /* 8026F348 0026C288  D0 03 00 14 */	stfs f0, 0x14(r3)
 /* 8026F34C 0026C28C  4E 80 00 20 */	blr 
 
-/* 8026F350 0070 .text CalcPos__8cM3dGLinCFP3Vecf CalcPos__8cM3dGLinCFP3Vecf */
+/* 8026F350 0070 .text      CalcPos__8cM3dGLinCFP3Vecf     CalcPos__8cM3dGLinCFP3Vecf     */
 .global CalcPos__8cM3dGLinCFP3Vecf
 CalcPos__8cM3dGLinCFP3Vecf:
 /* 8026F350 0026C290  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -88,7 +90,7 @@ CalcPos__8cM3dGLinCFP3Vecf:
 /* 8026F3B8 0026C2F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8026F3BC 0026C2FC  4E 80 00 20 */	blr 
 
-/* 8026F3C0 001C .text SetEnd__8cM3dGLinFRC4cXyz SetEnd__8cM3dGLinFRC4cXyz */
+/* 8026F3C0 001C .text      SetEnd__8cM3dGLinFRC4cXyz      SetEnd__8cM3dGLinFRC4cXyz      */
 .global SetEnd__8cM3dGLinFRC4cXyz
 SetEnd__8cM3dGLinFRC4cXyz:
 /* 8026F3C0 0026C300  C0 04 00 00 */	lfs f0, 0(r4)

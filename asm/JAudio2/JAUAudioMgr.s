@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802A4A5C 0024 .text __defctor__7JASHeapFv __defctor__7JASHeapFv */
+/* 802A4A5C 0024 .text      __defctor__7JASHeapFv          __defctor__7JASHeapFv          */
 .global __defctor__7JASHeapFv
 __defctor__7JASHeapFv:
 /* 802A4A5C 002A199C  94 21 FF F0 */	stwu r1, -0x10(r1)

@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8036C9C4 0024 .text tanf tanf */
+/* 8036C9C4 0024 .text      tanf                           tanf                           */
 .global tanf
 tanf:
 /* 8036C9C4 00369904  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15,7 +17,7 @@ tanf:
 /* 8036C9E0 00369920  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036C9E4 00369924  4E 80 00 20 */	blr 
 
-/* 8036C9E8 0024 .text sinf sinf */
+/* 8036C9E8 0024 .text      sinf                           sinf                           */
 .global sinf
 sinf:
 /* 8036C9E8 00369928  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -28,7 +30,7 @@ sinf:
 /* 8036CA04 00369944  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036CA08 00369948  4E 80 00 20 */	blr 
 
-/* 8036CA0C 0024 .text cosf cosf */
+/* 8036CA0C 0024 .text      cosf                           cosf                           */
 .global cosf
 cosf:
 /* 8036CA0C 0036994C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -41,7 +43,7 @@ cosf:
 /* 8036CA28 00369968  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036CA2C 0036996C  4E 80 00 20 */	blr 
 
-/* 8036CA30 0024 .text acosf acosf */
+/* 8036CA30 0024 .text      acosf                          acosf                          */
 .global acosf
 acosf:
 /* 8036CA30 00369970  94 21 FF F0 */	stwu r1, -0x10(r1)

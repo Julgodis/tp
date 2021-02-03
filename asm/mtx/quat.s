@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80347418 005C .text PSQUATMultiply PSQUATMultiply */
+/* 80347418 005C .text      PSQUATMultiply                 PSQUATMultiply                 */
 .global PSQUATMultiply
 PSQUATMultiply:
 /* 80347418 00344358  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -29,7 +31,7 @@ PSQUATMultiply:
 /* 8034746C 003443AC  F0 A5 00 08 */	psq_st f5, 8(r5), 0, qr0
 /* 80347470 003443B0  4E 80 00 20 */	blr 
 
-/* 80347474 008C .text C_QUATRotAxisRad C_QUATRotAxisRad */
+/* 80347474 008C .text      C_QUATRotAxisRad               C_QUATRotAxisRad               */
 .global C_QUATRotAxisRad
 C_QUATRotAxisRad:
 /* 80347474 003443B4  7C 08 02 A6 */	mflr r0
@@ -43,7 +45,7 @@ C_QUATRotAxisRad:
 /* 80347494 003443D4  38 64 00 00 */	addi r3, r4, 0
 /* 80347498 003443D8  38 81 00 14 */	addi r4, r1, 0x14
 /* 8034749C 003443DC  4B FF FC 59 */	bl PSVECNormalize
-/* 803474A0 003443E0  C0 02 CB 58 */	lfs f0, lbl_80456558-_SDA2_BASE_(r2)
+/* 803474A0 003443E0  C0 02 CB 58 */	lfs f0, quat__LIT_135-_SDA2_BASE_(r2)
 /* 803474A4 003443E4  EF C0 07 B2 */	fmuls f30, f0, f30
 /* 803474A8 003443E8  FC 20 F0 90 */	fmr f1, f30
 /* 803474AC 003443EC  48 02 55 3D */	bl sinf
@@ -68,7 +70,7 @@ C_QUATRotAxisRad:
 /* 803474F8 00344438  7C 08 03 A6 */	mtlr r0
 /* 803474FC 0034443C  4E 80 00 20 */	blr 
 
-/* 80347500 0174 .text C_QUATSlerp C_QUATSlerp */
+/* 80347500 0090 .text      C_QUATSlerp                    C_QUATSlerp                    */
 .global C_QUATSlerp
 C_QUATSlerp:
 /* 80347500 00344440  7C 08 02 A6 */	mflr r0
@@ -98,24 +100,27 @@ C_QUATSlerp:
 /* 80347560 003444A0  EC 44 00 B2 */	fmuls f2, f4, f2
 /* 80347564 003444A4  C0 A4 00 0C */	lfs f5, 0xc(r4)
 /* 80347568 003444A8  EC 23 08 2A */	fadds f1, f3, f1
-/* 8034756C 003444AC  C0 02 CB 50 */	lfs f0, lbl_80456550-_SDA2_BASE_(r2)
+/* 8034756C 003444AC  C0 02 CB 50 */	lfs f0, LIT_130-_SDA2_BASE_(r2)
 /* 80347570 003444B0  EC 66 01 72 */	fmuls f3, f6, f5
-/* 80347574 003444B4  C3 C2 CB 54 */	lfs f30, lbl_80456554-_SDA2_BASE_(r2)
+/* 80347574 003444B4  C3 C2 CB 54 */	lfs f30, quat__LIT_133-_SDA2_BASE_(r2)
 /* 80347578 003444B8  EC 22 08 2A */	fadds f1, f2, f1
 /* 8034757C 003444BC  EC 23 08 2A */	fadds f1, f3, f1
 /* 80347580 003444C0  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80347584 003444C4  40 80 00 0C */	bge lbl_80347590
+/* 80347584 003444C4  40 80 00 0C */	bge func_80347590
 /* 80347588 003444C8  FC 20 08 50 */	fneg f1, f1
 /* 8034758C 003444CC  FF C0 F0 50 */	fneg f30, f30
-lbl_80347590:
-/* 80347590 003444D0  C0 02 CB 5C */	lfs f0, lbl_8045655C-_SDA2_BASE_(r2)
+
+/* 80347590 0048 .text      func_80347590                  func_80347590                  */
+.global func_80347590
+func_80347590:
+/* 80347590 003444D0  C0 02 CB 5C */	lfs f0, LIT_261-_SDA2_BASE_(r2)
 /* 80347594 003444D4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80347598 003444D8  4C 40 13 82 */	cror 2, 0, 2
-/* 8034759C 003444DC  40 82 00 3C */	bne lbl_803475D8
+/* 8034759C 003444DC  40 82 00 3C */	bne func_803475D8
 /* 803475A0 003444E0  48 02 54 91 */	bl acosf
 /* 803475A4 003444E4  FF 60 08 90 */	fmr f27, f1
 /* 803475A8 003444E8  48 02 54 41 */	bl sinf
-/* 803475AC 003444EC  C0 02 CB 54 */	lfs f0, lbl_80456554-_SDA2_BASE_(r2)
+/* 803475AC 003444EC  C0 02 CB 54 */	lfs f0, quat__LIT_133-_SDA2_BASE_(r2)
 /* 803475B0 003444F0  FF 80 08 90 */	fmr f28, f1
 /* 803475B4 003444F4  EC 00 E8 28 */	fsubs f0, f0, f29
 /* 803475B8 003444F8  EC 20 06 F2 */	fmuls f1, f0, f27
@@ -125,12 +130,18 @@ lbl_80347590:
 /* 803475C8 00344508  48 02 54 21 */	bl sinf
 /* 803475CC 0034450C  EC 01 E0 24 */	fdivs f0, f1, f28
 /* 803475D0 00344510  EF DE 00 32 */	fmuls f30, f30, f0
-/* 803475D4 00344514  48 00 00 10 */	b lbl_803475E4
-lbl_803475D8:
-/* 803475D8 00344518  C0 02 CB 54 */	lfs f0, lbl_80456554-_SDA2_BASE_(r2)
+/* 803475D4 00344514  48 00 00 10 */	b func_803475E4
+
+/* 803475D8 000C .text      func_803475D8                  func_803475D8                  */
+.global func_803475D8
+func_803475D8:
+/* 803475D8 00344518  C0 02 CB 54 */	lfs f0, quat__LIT_133-_SDA2_BASE_(r2)
 /* 803475DC 0034451C  EF DE 07 72 */	fmuls f30, f30, f29
 /* 803475E0 00344520  EF E0 E8 28 */	fsubs f31, f0, f29
-lbl_803475E4:
+
+/* 803475E4 0090 .text      func_803475E4                  func_803475E4                  */
+.global func_803475E4
+func_803475E4:
 /* 803475E4 00344524  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 803475E8 00344528  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 803475EC 0034452C  EC 3F 00 72 */	fmuls f1, f31, f1
@@ -169,25 +180,27 @@ lbl_803475E4:
 /* 80347670 003445B0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456550 0004 .sdata2 lbl_80456550 @130 */
-.global lbl_80456550
-lbl_80456550:
+/* 80456550 0004 .sdata2    LIT_130                        @130                           */
+.global LIT_130
+LIT_130:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53b0 */
 
-/* 80456554 0004 .sdata2 lbl_80456554 @133 */
-.global lbl_80456554
-lbl_80456554:
+/* 80456554 0004 .sdata2    quat__LIT_133                  @133                           */
+.global quat__LIT_133
+quat__LIT_133:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d53b4 */
 
-/* 80456558 0004 .sdata2 lbl_80456558 @135 */
-.global lbl_80456558
-lbl_80456558:
+/* 80456558 0004 .sdata2    quat__LIT_135                  @135                           */
+.global quat__LIT_135
+quat__LIT_135:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53b8 */
 
-/* 8045655C 0004 .sdata2 lbl_8045655C @261 */
-.global lbl_8045655C
-lbl_8045655C:
+/* 8045655C 0004 .sdata2    LIT_261                        @261                           */
+.global LIT_261
+LIT_261:
 .byte 0x3f, 0x7f, 0xff, 0x58 /* baserom.dol+0x3d53bc */
 

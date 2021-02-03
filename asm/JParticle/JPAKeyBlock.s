@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8027D730 0010 .text __ct__11JPAKeyBlockFPCUc __ct__11JPAKeyBlockFPCUc */
+/* 8027D730 0010 .text      __ct__11JPAKeyBlockFPCUc       __ct__11JPAKeyBlockFPCUc       */
 .global __ct__11JPAKeyBlockFPCUc
 __ct__11JPAKeyBlockFPCUc:
 /* 8027D730 0027A670  90 83 00 00 */	stw r4, 0(r3)
@@ -10,7 +12,7 @@ __ct__11JPAKeyBlockFPCUc:
 /* 8027D738 0027A678  90 03 00 04 */	stw r0, 4(r3)
 /* 8027D73C 0027A67C  4E 80 00 20 */	blr 
 
-/* 8027D740 0094 .text calc__11JPAKeyBlockFf calc__11JPAKeyBlockFf */
+/* 8027D740 0078 .text      calc__11JPAKeyBlockFf          calc__11JPAKeyBlockFf          */
 .global calc__11JPAKeyBlockFf
 calc__11JPAKeyBlockFf:
 /* 8027D740 0027A680  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -20,7 +22,7 @@ calc__11JPAKeyBlockFf:
 /* 8027D750 0027A690  80 A3 00 00 */	lwz r5, 0(r3)
 /* 8027D754 0027A694  88 05 00 0B */	lbz r0, 0xb(r5)
 /* 8027D758 0027A698  2C 00 00 00 */	cmpwi r0, 0
-/* 8027D75C 0027A69C  41 82 00 5C */	beq lbl_8027D7B8
+/* 8027D75C 0027A69C  41 82 00 5C */	beq func_8027D7B8
 /* 8027D760 0027A6A0  80 86 00 04 */	lwz r4, 4(r6)
 /* 8027D764 0027A6A4  88 65 00 09 */	lbz r3, 9(r5)
 /* 8027D768 0027A6A8  38 03 FF FF */	addi r0, r3, -1
@@ -35,7 +37,7 @@ calc__11JPAKeyBlockFf:
 /* 8027D78C 0027A6CC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8027D790 0027A6D0  7C 00 1B D6 */	divw r0, r0, r3
 /* 8027D794 0027A6D4  7C 00 19 D6 */	mullw r0, r0, r3
-/* 8027D798 0027A6D8  C8 42 B9 50 */	lfd f2, lbl_80455350-_SDA2_BASE_(r2)
+/* 8027D798 0027A6D8  C8 42 B9 50 */	lfd f2, JPAKeyBlock__LIT_2215-_SDA2_BASE_(r2)
 /* 8027D79C 0027A6DC  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8027D7A0 0027A6E0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 8027D7A4 0027A6E4  3C 00 43 30 */	lis r0, 0x4330
@@ -43,7 +45,10 @@ calc__11JPAKeyBlockFf:
 /* 8027D7AC 0027A6EC  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 8027D7B0 0027A6F0  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8027D7B4 0027A6F4  EC 21 00 28 */	fsubs f1, f1, f0
-lbl_8027D7B8:
+
+/* 8027D7B8 001C .text      func_8027D7B8                  func_8027D7B8                  */
+.global func_8027D7B8
+func_8027D7B8:
 /* 8027D7B8 0027A6F8  88 65 00 09 */	lbz r3, 9(r5)
 /* 8027D7BC 0027A6FC  80 86 00 04 */	lwz r4, 4(r6)
 /* 8027D7C0 0027A700  48 00 31 C5 */	bl JPACalcKeyAnmValue__FfUsPCf
@@ -53,10 +58,12 @@ lbl_8027D7B8:
 /* 8027D7D0 0027A710  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455350 0008 .sdata2 lbl_80455350 @2215 */
-.global lbl_80455350
-lbl_80455350:
+/* 80455350 0008 .sdata2    JPAKeyBlock__LIT_2215          @2215                          */
+.global JPAKeyBlock__LIT_2215
+JPAKeyBlock__LIT_2215:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d41b0 */
 

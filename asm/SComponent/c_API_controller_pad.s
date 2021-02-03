@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8026328C 0020 .text cAPICPad_recalibrate__Fv cAPICPad_recalibrate__Fv */
+/* 8026328C 0020 .text      cAPICPad_recalibrate__Fv       cAPICPad_recalibrate__Fv       */
 .global cAPICPad_recalibrate__Fv
 cAPICPad_recalibrate__Fv:
 /* 8026328C 002601CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -14,7 +16,7 @@ cAPICPad_recalibrate__Fv:
 /* 802632A4 002601E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802632A8 002601E8  4E 80 00 20 */	blr 
 
-/* 802632AC 001C .text cAPICPad_ANY_BUTTON__FUl cAPICPad_ANY_BUTTON__FUl */
+/* 802632AC 001C .text      cAPICPad_ANY_BUTTON__FUl       cAPICPad_ANY_BUTTON__FUl       */
 .global cAPICPad_ANY_BUTTON__FUl
 cAPICPad_ANY_BUTTON__FUl:
 /* 802632AC 002601EC  54 64 30 32 */	slwi r4, r3, 6

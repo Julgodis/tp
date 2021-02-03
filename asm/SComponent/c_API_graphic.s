@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802632C8 0030 .text cAPIGph_Painter__Fv cAPIGph_Painter__Fv */
+/* 802632C8 0030 .text      cAPIGph_Painter__Fv            cAPIGph_Painter__Fv            */
 .global cAPIGph_Painter__Fv
 cAPIGph_Painter__Fv:
 /* 802632C8 00260208  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -18,7 +20,7 @@ cAPIGph_Painter__Fv:
 /* 802632F0 00260230  38 21 00 10 */	addi r1, r1, 0x10
 /* 802632F4 00260234  4E 80 00 20 */	blr 
 
-/* 802632F8 0030 .text cAPIGph_BeforeOfDraw__Fv cAPIGph_BeforeOfDraw__Fv */
+/* 802632F8 0030 .text      cAPIGph_BeforeOfDraw__Fv       cAPIGph_BeforeOfDraw__Fv       */
 .global cAPIGph_BeforeOfDraw__Fv
 cAPIGph_BeforeOfDraw__Fv:
 /* 802632F8 00260238  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -34,7 +36,7 @@ cAPIGph_BeforeOfDraw__Fv:
 /* 80263320 00260260  38 21 00 10 */	addi r1, r1, 0x10
 /* 80263324 00260264  4E 80 00 20 */	blr 
 
-/* 80263328 0030 .text cAPIGph_AfterOfDraw__Fv cAPIGph_AfterOfDraw__Fv */
+/* 80263328 0030 .text      cAPIGph_AfterOfDraw__Fv        cAPIGph_AfterOfDraw__Fv        */
 .global cAPIGph_AfterOfDraw__Fv
 cAPIGph_AfterOfDraw__Fv:
 /* 80263328 00260268  94 21 FF F0 */	stwu r1, -0x10(r1)

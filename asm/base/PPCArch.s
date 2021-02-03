@@ -1,102 +1,107 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80339CC0 0008 .text PPCMfmsr PPCMfmsr */
+/* 80339CC0 0008 .text      PPCMfmsr                       PPCMfmsr                       */
 .global PPCMfmsr
 PPCMfmsr:
 /* 80339CC0 00336C00  7C 60 00 A6 */	mfmsr r3
 /* 80339CC4 00336C04  4E 80 00 20 */	blr 
 
-/* 80339CC8 0008 .text PPCMtmsr PPCMtmsr */
+/* 80339CC8 0008 .text      PPCMtmsr                       PPCMtmsr                       */
 .global PPCMtmsr
 PPCMtmsr:
 /* 80339CC8 00336C08  7C 60 01 24 */	mtmsr r3
 /* 80339CCC 00336C0C  4E 80 00 20 */	blr 
 
-/* 80339CD0 0008 .text PPCMfhid0 PPCMfhid0 */
+/* 80339CD0 0008 .text      PPCMfhid0                      PPCMfhid0                      */
 .global PPCMfhid0
 PPCMfhid0:
 /* 80339CD0 00336C10  7C 70 FA A6 */	mfspr r3, 0x3f0
 /* 80339CD4 00336C14  4E 80 00 20 */	blr 
 
-/* 80339CD8 0008 .text PPCMthid0 PPCMthid0 */
+/* 80339CD8 0008 .text      PPCMthid0                      PPCMthid0                      */
 .global PPCMthid0
 PPCMthid0:
 /* 80339CD8 00336C18  7C 70 FB A6 */	mtspr 0x3f0, r3
 /* 80339CDC 00336C1C  4E 80 00 20 */	blr 
 
-/* 80339CE0 0008 .text PPCMfl2cr PPCMfl2cr */
+/* 80339CE0 0008 .text      PPCMfl2cr                      PPCMfl2cr                      */
 .global PPCMfl2cr
 PPCMfl2cr:
 /* 80339CE0 00336C20  7C 79 FA A6 */	mfspr r3, 0x3f9
 /* 80339CE4 00336C24  4E 80 00 20 */	blr 
 
-/* 80339CE8 0008 .text PPCMtl2cr PPCMtl2cr */
+/* 80339CE8 0008 .text      PPCMtl2cr                      PPCMtl2cr                      */
 .global PPCMtl2cr
 PPCMtl2cr:
 /* 80339CE8 00336C28  7C 79 FB A6 */	mtspr 0x3f9, r3
 /* 80339CEC 00336C2C  4E 80 00 20 */	blr 
 
-/* 80339CF0 0008 .text PPCMtdec PPCMtdec */
+/* 80339CF0 0008 .text      PPCMtdec                       PPCMtdec                       */
 .global PPCMtdec
 PPCMtdec:
 /* 80339CF0 00336C30  7C 76 03 A6 */	mtspr 0x16, r3
 /* 80339CF4 00336C34  4E 80 00 20 */	blr 
 
-/* 80339CF8 0008 .text PPCSync PPCSync */
+/* 80339CF8 0008 .text      PPCSync                        PPCSync                        */
 .global PPCSync
 PPCSync:
 /* 80339CF8 00336C38  44 00 00 02 */	sc 
 /* 80339CFC 00336C3C  4E 80 00 20 */	blr 
 
-/* 80339D00 0014 .text PPCHalt PPCHalt */
+/* 80339D00 0004 .text      PPCHalt                        PPCHalt                        */
 .global PPCHalt
 PPCHalt:
 /* 80339D00 00336C40  7C 00 04 AC */	sync 0
-lbl_80339D04:
+
+/* 80339D04 0010 .text      func_80339D04                  func_80339D04                  */
+.global func_80339D04
+func_80339D04:
 /* 80339D04 00336C44  60 00 00 00 */	nop 
 /* 80339D08 00336C48  38 60 00 00 */	li r3, 0
 /* 80339D0C 00336C4C  60 00 00 00 */	nop 
-/* 80339D10 00336C50  4B FF FF F4 */	b lbl_80339D04
+/* 80339D10 00336C50  4B FF FF F4 */	b func_80339D04
 
-/* 80339D14 0008 .text PPCMtmmcr0 PPCMtmmcr0 */
+/* 80339D14 0008 .text      PPCMtmmcr0                     PPCMtmmcr0                     */
 .global PPCMtmmcr0
 PPCMtmmcr0:
 /* 80339D14 00336C54  7C 78 EB A6 */	mtspr 0x3b8, r3
 /* 80339D18 00336C58  4E 80 00 20 */	blr 
 
-/* 80339D1C 0008 .text PPCMtmmcr1 PPCMtmmcr1 */
+/* 80339D1C 0008 .text      PPCMtmmcr1                     PPCMtmmcr1                     */
 .global PPCMtmmcr1
 PPCMtmmcr1:
 /* 80339D1C 00336C5C  7C 7C EB A6 */	mtspr 0x3bc, r3
 /* 80339D20 00336C60  4E 80 00 20 */	blr 
 
-/* 80339D24 0008 .text PPCMtpmc1 PPCMtpmc1 */
+/* 80339D24 0008 .text      PPCMtpmc1                      PPCMtpmc1                      */
 .global PPCMtpmc1
 PPCMtpmc1:
 /* 80339D24 00336C64  7C 79 EB A6 */	mtspr 0x3b9, r3
 /* 80339D28 00336C68  4E 80 00 20 */	blr 
 
-/* 80339D2C 0008 .text PPCMtpmc2 PPCMtpmc2 */
+/* 80339D2C 0008 .text      PPCMtpmc2                      PPCMtpmc2                      */
 .global PPCMtpmc2
 PPCMtpmc2:
 /* 80339D2C 00336C6C  7C 7A EB A6 */	mtspr 0x3ba, r3
 /* 80339D30 00336C70  4E 80 00 20 */	blr 
 
-/* 80339D34 0008 .text PPCMtpmc3 PPCMtpmc3 */
+/* 80339D34 0008 .text      PPCMtpmc3                      PPCMtpmc3                      */
 .global PPCMtpmc3
 PPCMtpmc3:
 /* 80339D34 00336C74  7C 7D EB A6 */	mtspr 0x3bd, r3
 /* 80339D38 00336C78  4E 80 00 20 */	blr 
 
-/* 80339D3C 0008 .text PPCMtpmc4 PPCMtpmc4 */
+/* 80339D3C 0008 .text      PPCMtpmc4                      PPCMtpmc4                      */
 .global PPCMtpmc4
 PPCMtpmc4:
 /* 80339D3C 00336C7C  7C 7E EB A6 */	mtspr 0x3be, r3
 /* 80339D40 00336C80  4E 80 00 20 */	blr 
 
-/* 80339D44 0020 .text PPCMffpscr PPCMffpscr */
+/* 80339D44 0020 .text      PPCMffpscr                     PPCMffpscr                     */
 .global PPCMffpscr
 PPCMffpscr:
 /* 80339D44 00336C84  94 21 FF E8 */	stwu r1, -0x18(r1)
@@ -108,7 +113,7 @@ PPCMffpscr:
 /* 80339D5C 00336C9C  38 21 00 18 */	addi r1, r1, 0x18
 /* 80339D60 00336CA0  4E 80 00 20 */	blr 
 
-/* 80339D64 0028 .text PPCMtfpscr PPCMtfpscr */
+/* 80339D64 0028 .text      PPCMtfpscr                     PPCMtfpscr                     */
 .global PPCMtfpscr
 PPCMtfpscr:
 /* 80339D64 00336CA4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -122,25 +127,25 @@ PPCMtfpscr:
 /* 80339D84 00336CC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80339D88 00336CC8  4E 80 00 20 */	blr 
 
-/* 80339D8C 0008 .text PPCMfhid2 PPCMfhid2 */
+/* 80339D8C 0008 .text      PPCMfhid2                      PPCMfhid2                      */
 .global PPCMfhid2
 PPCMfhid2:
 /* 80339D8C 00336CCC  7C 78 E2 A6 */	mfspr r3, 0x398
 /* 80339D90 00336CD0  4E 80 00 20 */	blr 
 
-/* 80339D94 0008 .text PPCMthid2 PPCMthid2 */
+/* 80339D94 0008 .text      PPCMthid2                      PPCMthid2                      */
 .global PPCMthid2
 PPCMthid2:
 /* 80339D94 00336CD4  7C 78 E3 A6 */	mtspr 0x398, r3
 /* 80339D98 00336CD8  4E 80 00 20 */	blr 
 
-/* 80339D9C 0008 .text PPCMtwpar PPCMtwpar */
+/* 80339D9C 0008 .text      PPCMtwpar                      PPCMtwpar                      */
 .global PPCMtwpar
 PPCMtwpar:
 /* 80339D9C 00336CDC  7C 79 E3 A6 */	mtspr 0x399, r3
 /* 80339DA0 00336CE0  4E 80 00 20 */	blr 
 
-/* 80339DA4 0028 .text PPCDisableSpeculation PPCDisableSpeculation */
+/* 80339DA4 0028 .text      PPCDisableSpeculation          PPCDisableSpeculation          */
 .global PPCDisableSpeculation
 PPCDisableSpeculation:
 /* 80339DA4 00336CE4  7C 08 02 A6 */	mflr r0
@@ -154,7 +159,7 @@ PPCDisableSpeculation:
 /* 80339DC4 00336D04  7C 08 03 A6 */	mtlr r0
 /* 80339DC8 00336D08  4E 80 00 20 */	blr 
 
-/* 80339DCC 0008 .text PPCSetFpNonIEEEMode PPCSetFpNonIEEEMode */
+/* 80339DCC 0008 .text      PPCSetFpNonIEEEMode            PPCSetFpNonIEEEMode            */
 .global PPCSetFpNonIEEEMode
 PPCSetFpNonIEEEMode:
 /* 80339DCC 00336D0C  FF A0 00 4C */	mtfsb1 0x1d

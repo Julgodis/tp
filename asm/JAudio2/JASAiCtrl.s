@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8029C388 015C .text initAI__9JASDriverFPFv_v initAI__9JASDriverFPFv_v */
+/* 8029C388 0044 .text      initAI__9JASDriverFPFv_v       initAI__9JASDriverFPFv_v       */
 .global initAI__9JASDriverFPFv_v
 initAI__9JASDriverFPFv_v:
 /* 8029C388 002992C8  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -22,7 +24,10 @@ initAI__9JASDriverFPFv_v:
 /* 8029C3C0 00299300  7C 1B 03 78 */	mr r27, r0
 /* 8029C3C4 00299304  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C3C8 00299308  3B A3 1C 58 */	addi r29, r3, sDmaDacBuffer__9JASDriver@l
-lbl_8029C3CC:
+
+/* 8029C3CC 0060 .text      func_8029C3CC                  func_8029C3CC                  */
+.global func_8029C3CC
+func_8029C3CC:
 /* 8029C3CC 0029930C  7F 83 E3 78 */	mr r3, r28
 /* 8029C3D0 00299310  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029C3D4 00299314  38 A0 00 20 */	li r5, 0x20
@@ -37,8 +42,8 @@ lbl_8029C3CC:
 /* 8029C3F8 00299338  3B 39 00 01 */	addi r25, r25, 1
 /* 8029C3FC 0029933C  2C 19 00 03 */	cmpwi r25, 3
 /* 8029C400 00299340  3B DE 00 04 */	addi r30, r30, 4
-/* 8029C404 00299344  41 80 FF C8 */	blt lbl_8029C3CC
-/* 8029C408 00299348  88 0D 82 28 */	lbz r0, lbl_804507A8-_SDA_BASE_(r13)
+/* 8029C404 00299344  41 80 FF C8 */	blt func_8029C3CC
+/* 8029C408 00299348  88 0D 82 28 */	lbz r0, sym_804507A8-_SDA_BASE_(r13)
 /* 8029C40C 0029934C  54 03 10 3A */	slwi r3, r0, 2
 /* 8029C410 00299350  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8029C414 00299354  38 A0 00 00 */	li r5, 0
@@ -46,8 +51,11 @@ lbl_8029C3CC:
 /* 8029C41C 0029935C  90 6D 8D 20 */	stw r3, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C420 00299360  3B 20 00 00 */	li r25, 0
 /* 8029C424 00299364  3B C0 00 00 */	li r30, 0
-/* 8029C428 00299368  48 00 00 48 */	b lbl_8029C470
-lbl_8029C42C:
+/* 8029C428 00299368  48 00 00 48 */	b func_8029C470
+
+/* 8029C42C 0044 .text      func_8029C42C                  func_8029C42C                  */
+.global func_8029C42C
+func_8029C42C:
 /* 8029C42C 0029936C  48 00 05 CD */	bl getDacSize__9JASDriverFv
 /* 8029C430 00299370  54 63 08 3C */	slwi r3, r3, 1
 /* 8029C434 00299374  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
@@ -65,10 +73,13 @@ lbl_8029C42C:
 /* 8029C464 002993A4  48 09 F1 79 */	bl DCStoreRange
 /* 8029C468 002993A8  3B 39 00 01 */	addi r25, r25, 1
 /* 8029C46C 002993AC  3B DE 00 04 */	addi r30, r30, 4
-lbl_8029C470:
-/* 8029C470 002993B0  88 6D 82 28 */	lbz r3, lbl_804507A8-_SDA_BASE_(r13)
+
+/* 8029C470 0074 .text      func_8029C470                  func_8029C470                  */
+.global func_8029C470
+func_8029C470:
+/* 8029C470 002993B0  88 6D 82 28 */	lbz r3, sym_804507A8-_SDA_BASE_(r13)
 /* 8029C474 002993B4  7C 19 18 00 */	cmpw r25, r3
-/* 8029C478 002993B8  41 80 FF B4 */	blt lbl_8029C42C
+/* 8029C478 002993B8  41 80 FF B4 */	blt func_8029C42C
 /* 8029C47C 002993BC  38 03 FF FF */	addi r0, r3, -1
 /* 8029C480 002993C0  90 0D 8D 24 */	stw r0, sDspDacWriteBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C484 002993C4  38 00 00 00 */	li r0, 0
@@ -96,7 +107,7 @@ lbl_8029C470:
 /* 8029C4DC 0029941C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8029C4E0 00299420  4E 80 00 20 */	blr 
 
-/* 8029C4E4 0020 .text startDMA__9JASDriverFv startDMA__9JASDriverFv */
+/* 8029C4E4 0020 .text      startDMA__9JASDriverFv         startDMA__9JASDriverFv         */
 .global startDMA__9JASDriverFv
 startDMA__9JASDriverFv:
 /* 8029C4E4 00299424  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -108,7 +119,7 @@ startDMA__9JASDriverFv:
 /* 8029C4FC 0029943C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C500 00299440  4E 80 00 20 */	blr 
 
-/* 8029C504 0020 .text stopDMA__9JASDriverFv stopDMA__9JASDriverFv */
+/* 8029C504 0020 .text      stopDMA__9JASDriverFv          stopDMA__9JASDriverFv          */
 .global stopDMA__9JASDriverFv
 stopDMA__9JASDriverFv:
 /* 8029C504 00299444  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -120,57 +131,69 @@ stopDMA__9JASDriverFv:
 /* 8029C51C 0029945C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C520 00299460  4E 80 00 20 */	blr 
 
-/* 8029C524 0044 .text setOutputRate__9JASDriverF13JASOutputRate setOutputRate__9JASDriverF13JASOutputRate */
+/* 8029C524 0020 .text      setOutputRate__9JASDriverF13JASOutputRate setOutputRate__9JASDriverF13JASOutputRate */
 .global setOutputRate__9JASDriverF13JASOutputRate
 setOutputRate__9JASDriverF13JASOutputRate:
 /* 8029C524 00299464  90 6D 8D 40 */	stw r3, sOutputRate__9JASDriver-_SDA_BASE_(r13)
 /* 8029C528 00299468  2C 03 00 00 */	cmpwi r3, 0
-/* 8029C52C 0029946C  40 82 00 18 */	bne lbl_8029C544
+/* 8029C52C 0029946C  40 82 00 18 */	bne func_8029C544
 /* 8029C530 00299470  38 00 00 07 */	li r0, 7
 /* 8029C534 00299474  90 0D 82 34 */	stw r0, sSubFrames__9JASDriver-_SDA_BASE_(r13)
-/* 8029C538 00299478  C0 02 BD 20 */	lfs f0, lbl_80455720-_SDA2_BASE_(r2)
+/* 8029C538 00299478  C0 02 BD 20 */	lfs f0, LIT_233-_SDA2_BASE_(r2)
 /* 8029C53C 0029947C  D0 0D 82 30 */	stfs f0, sDacRate__9JASDriver-_SDA_BASE_(r13)
-/* 8029C540 00299480  48 00 00 14 */	b lbl_8029C554
-lbl_8029C544:
+/* 8029C540 00299480  48 00 00 14 */	b func_8029C554
+
+/* 8029C544 0010 .text      func_8029C544                  func_8029C544                  */
+.global func_8029C544
+func_8029C544:
 /* 8029C544 00299484  38 00 00 0A */	li r0, 0xa
 /* 8029C548 00299488  90 0D 82 34 */	stw r0, sSubFrames__9JASDriver-_SDA_BASE_(r13)
-/* 8029C54C 0029948C  C0 02 BD 24 */	lfs f0, lbl_80455724-_SDA2_BASE_(r2)
+/* 8029C54C 0029948C  C0 02 BD 24 */	lfs f0, JASAiCtrl__LIT_234-_SDA2_BASE_(r2)
 /* 8029C550 00299490  D0 0D 82 30 */	stfs f0, sDacRate__9JASDriver-_SDA_BASE_(r13)
-lbl_8029C554:
+
+/* 8029C554 0014 .text      func_8029C554                  func_8029C554                  */
+.global func_8029C554
+func_8029C554:
 /* 8029C554 00299494  C0 2D 82 30 */	lfs f1, sDacRate__9JASDriver-_SDA_BASE_(r13)
-/* 8029C558 00299498  C0 02 BD 28 */	lfs f0, lbl_80455728-_SDA2_BASE_(r2)
+/* 8029C558 00299498  C0 02 BD 28 */	lfs f0, LIT_235-_SDA2_BASE_(r2)
 /* 8029C55C 0029949C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029C560 002994A0  D0 0D 82 30 */	stfs f0, sDacRate__9JASDriver-_SDA_BASE_(r13)
 /* 8029C564 002994A4  4E 80 00 20 */	blr 
 
-/* 8029C568 015C .text updateDac__9JASDriverFv updateDac__9JASDriverFv */
+/* 8029C568 002C .text      updateDac__9JASDriverFv        updateDac__9JASDriverFv        */
 .global updateDac__9JASDriverFv
 updateDac__9JASDriverFv:
 /* 8029C568 002994A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029C56C 002994AC  7C 08 02 A6 */	mflr r0
 /* 8029C570 002994B0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8029C574 002994B4  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8029C578 002994B8  88 0D 8D 4C */	lbz r0, lbl_804512CC-_SDA_BASE_(r13)
+/* 8029C578 002994B8  88 0D 8D 4C */	lbz r0, sym_804512CC-_SDA_BASE_(r13)
 /* 8029C57C 002994BC  7C 00 07 75 */	extsb. r0, r0
-/* 8029C580 002994C0  40 82 00 14 */	bne lbl_8029C594
+/* 8029C580 002994C0  40 82 00 14 */	bne func_8029C594
 /* 8029C584 002994C4  38 00 00 00 */	li r0, 0
-/* 8029C588 002994C8  90 0D 8D 48 */	stw r0, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C588 002994C8  90 0D 8D 48 */	stw r0, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C58C 002994CC  38 00 00 01 */	li r0, 1
-/* 8029C590 002994D0  98 0D 8D 4C */	stb r0, lbl_804512CC-_SDA_BASE_(r13)
-lbl_8029C594:
+/* 8029C590 002994D0  98 0D 8D 4C */	stb r0, sym_804512CC-_SDA_BASE_(r13)
+
+/* 8029C594 0024 .text      func_8029C594                  func_8029C594                  */
+.global func_8029C594
+func_8029C594:
 /* 8029C594 002994D4  83 ED 8D 34 */	lwz r31, lastRspMadep__9JASDriver-_SDA_BASE_(r13)
 /* 8029C598 002994D8  38 00 00 00 */	li r0, 0
 /* 8029C59C 002994DC  90 0D 8D 34 */	stw r0, lastRspMadep__9JASDriver-_SDA_BASE_(r13)
 /* 8029C5A0 002994E0  28 1F 00 00 */	cmplwi r31, 0
-/* 8029C5A4 002994E4  41 82 00 14 */	beq lbl_8029C5B8
+/* 8029C5A4 002994E4  41 82 00 14 */	beq func_8029C5B8
 /* 8029C5A8 002994E8  48 00 04 51 */	bl getDacSize__9JASDriverFv
 /* 8029C5AC 002994EC  54 64 08 3C */	slwi r4, r3, 1
 /* 8029C5B0 002994F0  7F E3 FB 78 */	mr r3, r31
 /* 8029C5B4 002994F4  48 0B 37 01 */	bl AIInitDMA
-lbl_8029C5B8:
+
+/* 8029C5B8 0034 .text      func_8029C5B8                  func_8029C5B8                  */
+.global func_8029C5B8
+func_8029C5B8:
 /* 8029C5B8 002994F8  48 00 04 4D */	bl getFrameSamples__9JASDriverFv
 /* 8029C5BC 002994FC  7C 64 1B 78 */	mr r4, r3
-/* 8029C5C0 00299500  80 0D 8D 48 */	lwz r0, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C5C0 00299500  80 0D 8D 48 */	lwz r0, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C5C4 00299504  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C5C8 00299508  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C5CC 0029950C  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -179,13 +202,16 @@ lbl_8029C5B8:
 /* 8029C5D8 00299518  48 00 02 09 */	bl readDspBuffer__9JASDriverFPsUl
 /* 8029C5DC 0029951C  80 0D 8D 2C */	lwz r0, sDspStatus__9JASDriver-_SDA_BASE_(r13)
 /* 8029C5E0 00299520  2C 00 00 00 */	cmpwi r0, 0
-/* 8029C5E4 00299524  40 82 00 08 */	bne lbl_8029C5EC
+/* 8029C5E4 00299524  40 82 00 08 */	bne func_8029C5EC
 /* 8029C5E8 00299528  48 00 03 19 */	bl finishDSPFrame__9JASDriverFv
-lbl_8029C5EC:
+
+/* 8029C5EC 0040 .text      func_8029C5EC                  func_8029C5EC                  */
+.global func_8029C5EC
+func_8029C5EC:
 /* 8029C5EC 0029952C  80 AD 8D 3C */	lwz r5, extMixCallback__9JASDriver-_SDA_BASE_(r13)
 /* 8029C5F0 00299530  28 05 00 00 */	cmplwi r5, 0
-/* 8029C5F4 00299534  41 82 00 38 */	beq lbl_8029C62C
-/* 8029C5F8 00299538  80 0D 8D 48 */	lwz r0, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C5F4 00299534  41 82 00 38 */	beq func_8029C62C
+/* 8029C5F8 00299538  80 0D 8D 48 */	lwz r0, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C5FC 0029953C  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C600 00299540  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C604 00299544  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -198,12 +224,15 @@ lbl_8029C5EC:
 /* 8029C620 00299560  7D 86 00 2E */	lwzx r12, r6, r0
 /* 8029C624 00299564  7D 89 03 A6 */	mtctr r12
 /* 8029C628 00299568  4E 80 04 21 */	bctrl 
-lbl_8029C62C:
-/* 8029C62C 0029956C  48 0A 10 C9 */	bl __RAS_OSDisableInterrupts_begin
+
+/* 8029C62C 0060 .text      func_8029C62C                  func_8029C62C                  */
+.global func_8029C62C
+func_8029C62C:
+/* 8029C62C 0029956C  48 0A 10 C9 */	bl OSDisableInterrupts
 /* 8029C630 00299570  90 61 00 08 */	stw r3, 8(r1)
 /* 8029C634 00299574  48 00 03 C5 */	bl getDacSize__9JASDriverFv
 /* 8029C638 00299578  54 64 08 3C */	slwi r4, r3, 1
-/* 8029C63C 0029957C  80 0D 8D 48 */	lwz r0, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C63C 0029957C  80 0D 8D 48 */	lwz r0, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C640 00299580  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C644 00299584  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C648 00299588  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
@@ -211,36 +240,42 @@ lbl_8029C62C:
 /* 8029C650 00299590  48 09 EF 8D */	bl DCStoreRange
 /* 8029C654 00299594  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029C658 00299598  48 0A 10 C5 */	bl OSRestoreInterrupts
-/* 8029C65C 0029959C  80 8D 8D 48 */	lwz r4, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C65C 0029959C  80 8D 8D 48 */	lwz r4, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C660 002995A0  54 80 10 3A */	slwi r0, r4, 2
 /* 8029C664 002995A4  3C 60 80 43 */	lis r3, sDmaDacBuffer__9JASDriver@ha
 /* 8029C668 002995A8  38 63 1C 58 */	addi r3, r3, sDmaDacBuffer__9JASDriver@l
 /* 8029C66C 002995AC  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8029C670 002995B0  90 0D 8D 34 */	stw r0, lastRspMadep__9JASDriver-_SDA_BASE_(r13)
 /* 8029C674 002995B4  38 04 00 01 */	addi r0, r4, 1
-/* 8029C678 002995B8  90 0D 8D 48 */	stw r0, lbl_804512C8-_SDA_BASE_(r13)
+/* 8029C678 002995B8  90 0D 8D 48 */	stw r0, sym_804512C8-_SDA_BASE_(r13)
 /* 8029C67C 002995BC  28 00 00 03 */	cmplwi r0, 3
-/* 8029C680 002995C0  41 80 00 0C */	blt lbl_8029C68C
+/* 8029C680 002995C0  41 80 00 0C */	blt func_8029C68C
 /* 8029C684 002995C4  38 00 00 00 */	li r0, 0
-/* 8029C688 002995C8  90 0D 8D 48 */	stw r0, lbl_804512C8-_SDA_BASE_(r13)
-lbl_8029C68C:
+/* 8029C688 002995C8  90 0D 8D 48 */	stw r0, sym_804512C8-_SDA_BASE_(r13)
+
+/* 8029C68C 0024 .text      func_8029C68C                  func_8029C68C                  */
+.global func_8029C68C
+func_8029C68C:
 /* 8029C68C 002995CC  80 0D 8D 38 */	lwz r0, dacCallbackFunc__9JASDriver-_SDA_BASE_(r13)
 /* 8029C690 002995D0  28 00 00 00 */	cmplwi r0, 0
-/* 8029C694 002995D4  41 82 00 1C */	beq lbl_8029C6B0
+/* 8029C694 002995D4  41 82 00 1C */	beq func_8029C6B0
 /* 8029C698 002995D8  48 00 03 6D */	bl getFrameSamples__9JASDriverFv
 /* 8029C69C 002995DC  7C 64 1B 78 */	mr r4, r3
 /* 8029C6A0 002995E0  80 6D 8D 34 */	lwz r3, lastRspMadep__9JASDriver-_SDA_BASE_(r13)
 /* 8029C6A4 002995E4  81 8D 8D 38 */	lwz r12, dacCallbackFunc__9JASDriver-_SDA_BASE_(r13)
 /* 8029C6A8 002995E8  7D 89 03 A6 */	mtctr r12
 /* 8029C6AC 002995EC  4E 80 04 21 */	bctrl 
-lbl_8029C6B0:
+
+/* 8029C6B0 0014 .text      func_8029C6B0                  func_8029C6B0                  */
+.global func_8029C6B0
+func_8029C6B0:
 /* 8029C6B0 002995F0  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029C6B4 002995F4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8029C6B8 002995F8  7C 08 03 A6 */	mtlr r0
 /* 8029C6BC 002995FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029C6C0 00299600  4E 80 00 20 */	blr 
 
-/* 8029C6C4 011C .text updateDSP__9JASDriverFv updateDSP__9JASDriverFv */
+/* 8029C6C4 0048 .text      updateDSP__9JASDriverFv        updateDSP__9JASDriverFv        */
 .global updateDSP__9JASDriverFv
 updateDSP__9JASDriverFv:
 /* 8029C6C4 00299604  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -248,35 +283,38 @@ updateDSP__9JASDriverFv:
 /* 8029C6CC 0029960C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8029C6D0 00299610  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8029C6D4 00299614  38 60 00 03 */	li r3, 3
-/* 8029C6D8 00299618  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029C6DC 0029961C  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029C6D8 00299618  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029C6DC 0029961C  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029C6E0 00299620  4B FF 48 05 */	bl start__8JASProbeFlPCc
 /* 8029C6E4 00299624  48 00 13 BD */	bl invalChannelAll__6JASDspFv
 /* 8029C6E8 00299628  4B FF 49 79 */	bl execAllCommand__10JASPortCmdFv
 /* 8029C6EC 0029962C  48 00 1B E5 */	bl DSPSyncCallback__9JASDriverFv
-/* 8029C6F0 00299630  88 0D 8D 54 */	lbz r0, lbl_804512D4-_SDA_BASE_(r13)
+/* 8029C6F0 00299630  88 0D 8D 54 */	lbz r0, sym_804512D4-_SDA_BASE_(r13)
 /* 8029C6F4 00299634  7C 00 07 75 */	extsb. r0, r0
-/* 8029C6F8 00299638  40 82 00 14 */	bne lbl_8029C70C
+/* 8029C6F8 00299638  40 82 00 14 */	bne func_8029C70C
 /* 8029C6FC 0029963C  38 00 00 00 */	li r0, 0
-/* 8029C700 00299640  90 0D 8D 50 */	stw r0, lbl_804512D0-_SDA_BASE_(r13)
+/* 8029C700 00299640  90 0D 8D 50 */	stw r0, sym_804512D0-_SDA_BASE_(r13)
 /* 8029C704 00299644  38 00 00 01 */	li r0, 1
-/* 8029C708 00299648  98 0D 8D 54 */	stb r0, lbl_804512D4-_SDA_BASE_(r13)
-lbl_8029C70C:
+/* 8029C708 00299648  98 0D 8D 54 */	stb r0, sym_804512D4-_SDA_BASE_(r13)
+
+/* 8029C70C 0088 .text      func_8029C70C                  func_8029C70C                  */
+.global func_8029C70C
+func_8029C70C:
 /* 8029C70C 0029964C  48 0A 60 09 */	bl OSGetTick
-/* 8029C710 00299650  80 0D 8D 50 */	lwz r0, lbl_804512D0-_SDA_BASE_(r13)
+/* 8029C710 00299650  80 0D 8D 50 */	lwz r0, sym_804512D0-_SDA_BASE_(r13)
 /* 8029C714 00299654  7F E0 18 50 */	subf r31, r0, r3
-/* 8029C718 00299658  90 6D 8D 50 */	stw r3, lbl_804512D0-_SDA_BASE_(r13)
+/* 8029C718 00299658  90 6D 8D 50 */	stw r3, sym_804512D0-_SDA_BASE_(r13)
 /* 8029C71C 0029965C  48 00 02 D5 */	bl getSubFrames__9JASDriverFv
 /* 8029C720 00299660  80 AD 8D 58 */	lwz r5, snIntCount__14JASAudioThread-_SDA_BASE_(r13)
 /* 8029C724 00299664  7C 05 18 50 */	subf r0, r5, r3
 /* 8029C728 00299668  54 00 10 3A */	slwi r0, r0, 2
-/* 8029C72C 0029966C  3C 80 80 3C */	lis r4, lbl_803C78B8@ha
-/* 8029C730 00299670  38 84 78 B8 */	addi r4, r4, lbl_803C78B8@l
+/* 8029C72C 0029966C  3C 80 80 3C */	lis r4, sym_803C78B8@ha
+/* 8029C730 00299670  38 84 78 B8 */	addi r4, r4, sym_803C78B8@l
 /* 8029C734 00299674  7F E4 01 2E */	stwx r31, r4, r0
 /* 8029C738 00299678  7C 03 28 40 */	cmplw r3, r5
-/* 8029C73C 0029967C  41 82 00 58 */	beq lbl_8029C794
+/* 8029C73C 0029967C  41 82 00 58 */	beq func_8029C794
 /* 8029C740 00299680  80 04 00 00 */	lwz r0, 0(r4)
-/* 8029C744 00299684  C8 42 BD 38 */	lfd f2, lbl_80455738-_SDA2_BASE_(r2)
+/* 8029C744 00299684  C8 42 BD 38 */	lfd f2, LIT_278-_SDA2_BASE_(r2)
 /* 8029C748 00299688  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8029C74C 0029968C  3C 00 43 30 */	lis r0, 0x4330
 /* 8029C750 00299690  90 01 00 08 */	stw r0, 8(r1)
@@ -287,21 +325,24 @@ lbl_8029C70C:
 /* 8029C764 002996A4  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 8029C768 002996A8  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8029C76C 002996AC  EC 21 00 24 */	fdivs f1, f1, f0
-/* 8029C770 002996B0  C0 02 BD 2C */	lfs f0, lbl_8045572C-_SDA2_BASE_(r2)
+/* 8029C770 002996B0  C0 02 BD 2C */	lfs f0, JASAiCtrl__LIT_275-_SDA2_BASE_(r2)
 /* 8029C774 002996B4  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029C778 002996B8  40 80 00 1C */	bge lbl_8029C794
-/* 8029C77C 002996BC  3C 60 80 3A */	lis r3, lbl_8039B2F0@ha
-/* 8029C780 002996C0  38 63 B2 F0 */	addi r3, r3, lbl_8039B2F0@l
+/* 8029C778 002996B8  40 80 00 1C */	bge func_8029C794
+/* 8029C77C 002996BC  3C 60 80 3A */	lis r3, JASAiCtrl__stringBase0@ha
+/* 8029C780 002996C0  38 63 B2 F0 */	addi r3, r3, JASAiCtrl__stringBase0@l
 /* 8029C784 002996C4  38 63 00 0B */	addi r3, r3, 0xb
 /* 8029C788 002996C8  4C C6 31 82 */	crclr 6
 /* 8029C78C 002996CC  4B FF 47 D9 */	bl JASReport__FPCce
 /* 8029C790 002996D0  48 00 11 81 */	bl killActiveChannel__13JASDSPChannelFv
-lbl_8029C794:
+
+/* 8029C794 004C .text      func_8029C794                  func_8029C794                  */
+.global func_8029C794
+func_8029C794:
 /* 8029C794 002996D4  4B FF F4 B5 */	bl receiveBankDisposeMsg__10JASChannelFv
 /* 8029C798 002996D8  48 00 11 05 */	bl updateAll__13JASDSPChannelFv
 /* 8029C79C 002996DC  48 00 1B 0D */	bl subframeCallback__9JASDriverFv
 /* 8029C7A0 002996E0  48 00 02 49 */	bl getDacRate__9JASDriverFv
-/* 8029C7A4 002996E4  C0 02 BD 30 */	lfs f0, lbl_80455730-_SDA2_BASE_(r2)
+/* 8029C7A4 002996E4  C0 02 BD 30 */	lfs f0, JASAiCtrl__LIT_276-_SDA2_BASE_(r2)
 /* 8029C7A8 002996E8  EC 20 08 24 */	fdivs f1, f0, f1
 /* 8029C7AC 002996EC  3C 60 80 43 */	lis r3, sFreeRunLfo__6JASLfo@ha
 /* 8029C7B0 002996F0  38 63 1C 40 */	addi r3, r3, sFreeRunLfo__6JASLfo@l
@@ -317,7 +358,7 @@ lbl_8029C794:
 /* 8029C7D8 00299718  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029C7DC 0029971C  4E 80 00 20 */	blr 
 
-/* 8029C7E0 0120 .text readDspBuffer__9JASDriverFPsUl readDspBuffer__9JASDriverFPsUl */
+/* 8029C7E0 0034 .text      readDspBuffer__9JASDriverFPsUl readDspBuffer__9JASDriverFPsUl */
 .global readDspBuffer__9JASDriverFPsUl
 readDspBuffer__9JASDriverFPsUl:
 /* 8029C7E0 00299720  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -329,16 +370,19 @@ readDspBuffer__9JASDriverFPsUl:
 /* 8029C7F8 00299738  7C 9F 23 78 */	mr r31, r4
 /* 8029C7FC 0029973C  80 8D 8D 28 */	lwz r4, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C800 00299740  38 A4 00 01 */	addi r5, r4, 1
-/* 8029C804 00299744  88 6D 82 28 */	lbz r3, lbl_804507A8-_SDA_BASE_(r13)
+/* 8029C804 00299744  88 6D 82 28 */	lbz r3, sym_804507A8-_SDA_BASE_(r13)
 /* 8029C808 00299748  7C 05 18 00 */	cmpw r5, r3
-/* 8029C80C 0029974C  40 82 00 08 */	bne lbl_8029C814
+/* 8029C80C 0029974C  40 82 00 08 */	bne func_8029C814
 /* 8029C810 00299750  38 A0 00 00 */	li r5, 0
-lbl_8029C814:
+
+/* 8029C814 0044 .text      func_8029C814                  func_8029C814                  */
+.global func_8029C814
+func_8029C814:
 /* 8029C814 00299754  80 0D 8D 24 */	lwz r0, sDspDacWriteBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C818 00299758  7C 05 00 00 */	cmpw r5, r0
-/* 8029C81C 0029975C  40 82 00 90 */	bne lbl_8029C8AC
+/* 8029C81C 0029975C  40 82 00 90 */	bne func_8029C8AC
 /* 8029C820 00299760  28 03 00 03 */	cmplwi r3, 3
-/* 8029C824 00299764  41 80 00 88 */	blt lbl_8029C8AC
+/* 8029C824 00299764  41 80 00 88 */	blt func_8029C8AC
 /* 8029C828 00299768  80 6D 8D 20 */	lwz r3, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C82C 0029976C  54 80 10 3A */	slwi r0, r4, 2
 /* 8029C830 00299770  7C 63 00 2E */	lwzx r3, r3, r0
@@ -350,39 +394,54 @@ lbl_8029C814:
 /* 8029C848 00299788  38 60 00 00 */	li r3, 0
 /* 8029C84C 0029978C  7F E9 03 A6 */	mtctr r31
 /* 8029C850 00299790  28 1F 00 00 */	cmplwi r31, 0
-/* 8029C854 00299794  40 81 00 20 */	ble lbl_8029C874
-lbl_8029C858:
+/* 8029C854 00299794  40 81 00 20 */	ble func_8029C874
+
+/* 8029C858 001C .text      func_8029C858                  func_8029C858                  */
+.global func_8029C858
+func_8029C858:
 /* 8029C858 00299798  80 8D 8D 20 */	lwz r4, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C85C 0029979C  80 0D 8D 28 */	lwz r0, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C860 002997A0  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C864 002997A4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8029C868 002997A8  7C A4 1B 2E */	sthx r5, r4, r3
 /* 8029C86C 002997AC  38 63 00 02 */	addi r3, r3, 2
-/* 8029C870 002997B0  42 00 FF E8 */	bdnz lbl_8029C858
-lbl_8029C874:
+/* 8029C870 002997B0  42 00 FF E8 */	bdnz func_8029C858
+
+/* 8029C874 0018 .text      func_8029C874                  func_8029C874                  */
+.global func_8029C874
+func_8029C874:
 /* 8029C874 002997B4  7C E5 07 34 */	extsh r5, r7
 /* 8029C878 002997B8  57 E3 08 3C */	slwi r3, r31, 1
 /* 8029C87C 002997BC  7C 1F 30 50 */	subf r0, r31, r6
 /* 8029C880 002997C0  7C 09 03 A6 */	mtctr r0
 /* 8029C884 002997C4  7C 1F 30 40 */	cmplw r31, r6
-/* 8029C888 002997C8  40 80 00 3C */	bge lbl_8029C8C4
-lbl_8029C88C:
+/* 8029C888 002997C8  40 80 00 3C */	bge func_8029C8C4
+
+/* 8029C88C 0020 .text      func_8029C88C                  func_8029C88C                  */
+.global func_8029C88C
+func_8029C88C:
 /* 8029C88C 002997CC  80 8D 8D 20 */	lwz r4, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C890 002997D0  80 0D 8D 28 */	lwz r0, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C894 002997D4  54 00 10 3A */	slwi r0, r0, 2
 /* 8029C898 002997D8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8029C89C 002997DC  7C A4 1B 2E */	sthx r5, r4, r3
 /* 8029C8A0 002997E0  38 63 00 02 */	addi r3, r3, 2
-/* 8029C8A4 002997E4  42 00 FF E8 */	bdnz lbl_8029C88C
-/* 8029C8A8 002997E8  48 00 00 1C */	b lbl_8029C8C4
-lbl_8029C8AC:
+/* 8029C8A4 002997E4  42 00 FF E8 */	bdnz func_8029C88C
+/* 8029C8A8 002997E8  48 00 00 1C */	b func_8029C8C4
+
+/* 8029C8AC 0018 .text      func_8029C8AC                  func_8029C8AC                  */
+.global func_8029C8AC
+func_8029C8AC:
 /* 8029C8AC 002997EC  90 AD 8D 28 */	stw r5, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C8B0 002997F0  80 6D 8D 20 */	lwz r3, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C8B4 002997F4  54 A0 10 3A */	slwi r0, r5, 2
 /* 8029C8B8 002997F8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8029C8BC 002997FC  57 E4 10 3A */	slwi r4, r31, 2
 /* 8029C8C0 00299800  48 09 EC C1 */	bl DCInvalidateRange
-lbl_8029C8C4:
+
+/* 8029C8C4 003C .text      func_8029C8C4                  func_8029C8C4                  */
+.global func_8029C8C4
+func_8029C8C4:
 /* 8029C8C4 00299804  80 6D 8D 20 */	lwz r3, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C8C8 00299808  80 0D 8D 28 */	lwz r0, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C8CC 0029980C  54 00 10 3A */	slwi r0, r0, 2
@@ -399,7 +458,7 @@ lbl_8029C8C4:
 /* 8029C8F8 00299838  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C8FC 0029983C  4E 80 00 20 */	blr 
 
-/* 8029C900 00DC .text finishDSPFrame__9JASDriverFv finishDSPFrame__9JASDriverFv */
+/* 8029C900 002C .text      finishDSPFrame__9JASDriverFv   finishDSPFrame__9JASDriverFv   */
 .global finishDSPFrame__9JASDriverFv
 finishDSPFrame__9JASDriverFv:
 /* 8029C900 00299840  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -409,24 +468,30 @@ finishDSPFrame__9JASDriverFv:
 /* 8029C910 00299850  93 C1 00 08 */	stw r30, 8(r1)
 /* 8029C914 00299854  80 6D 8D 24 */	lwz r3, sDspDacWriteBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C918 00299858  38 63 00 01 */	addi r3, r3, 1
-/* 8029C91C 0029985C  88 0D 82 28 */	lbz r0, lbl_804507A8-_SDA_BASE_(r13)
+/* 8029C91C 0029985C  88 0D 82 28 */	lbz r0, sym_804507A8-_SDA_BASE_(r13)
 /* 8029C920 00299860  7C 03 00 00 */	cmpw r3, r0
-/* 8029C924 00299864  40 82 00 08 */	bne lbl_8029C92C
+/* 8029C924 00299864  40 82 00 08 */	bne func_8029C92C
 /* 8029C928 00299868  38 60 00 00 */	li r3, 0
-lbl_8029C92C:
+
+/* 8029C92C 0018 .text      func_8029C92C                  func_8029C92C                  */
+.global func_8029C92C
+func_8029C92C:
 /* 8029C92C 0029986C  80 0D 8D 28 */	lwz r0, sDspDacReadBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C930 00299870  7C 03 00 00 */	cmpw r3, r0
-/* 8029C934 00299874  40 82 00 10 */	bne lbl_8029C944
+/* 8029C934 00299874  40 82 00 10 */	bne func_8029C944
 /* 8029C938 00299878  38 00 00 00 */	li r0, 0
 /* 8029C93C 0029987C  90 0D 8D 2C */	stw r0, sDspStatus__9JASDriver-_SDA_BASE_(r13)
-/* 8029C940 00299880  48 00 00 84 */	b lbl_8029C9C4
-lbl_8029C944:
+/* 8029C940 00299880  48 00 00 84 */	b func_8029C9C4
+
+/* 8029C944 0080 .text      func_8029C944                  func_8029C944                  */
+.global func_8029C944
+func_8029C944:
 /* 8029C944 00299884  90 6D 8D 24 */	stw r3, sDspDacWriteBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C948 00299888  48 00 00 A9 */	bl getSubFrames__9JASDriverFv
 /* 8029C94C 0029988C  90 6D 8D 58 */	stw r3, snIntCount__14JASAudioThread-_SDA_BASE_(r13)
 /* 8029C950 00299890  38 60 00 07 */	li r3, 7
-/* 8029C954 00299894  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029C958 00299898  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029C954 00299894  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029C958 00299898  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029C95C 0029989C  38 84 00 1C */	addi r4, r4, 0x1c
 /* 8029C960 002998A0  4B FF 45 85 */	bl start__8JASProbeFlPCc
 /* 8029C964 002998A4  48 00 00 A1 */	bl getFrameSamples__9JASDriverFv
@@ -445,7 +510,7 @@ lbl_8029C944:
 /* 8029C998 002998D8  4B FF FD 2D */	bl updateDSP__9JASDriverFv
 /* 8029C99C 002998DC  81 8D 8D 30 */	lwz r12, sDspDacCallback__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9A0 002998E0  28 0C 00 00 */	cmplwi r12, 0
-/* 8029C9A4 002998E4  41 82 00 20 */	beq lbl_8029C9C4
+/* 8029C9A4 002998E4  41 82 00 20 */	beq func_8029C9C4
 /* 8029C9A8 002998E8  80 6D 8D 20 */	lwz r3, sDspDacBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9AC 002998EC  80 0D 8D 24 */	lwz r0, sDspDacWriteBuffer__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9B0 002998F0  54 00 10 3A */	slwi r0, r0, 2
@@ -453,7 +518,10 @@ lbl_8029C944:
 /* 8029C9B8 002998F8  7F C4 F3 78 */	mr r4, r30
 /* 8029C9BC 002998FC  7D 89 03 A6 */	mtctr r12
 /* 8029C9C0 00299900  4E 80 04 21 */	bctrl 
-lbl_8029C9C4:
+
+/* 8029C9C4 0018 .text      func_8029C9C4                  func_8029C9C4                  */
+.global func_8029C9C4
+func_8029C9C4:
 /* 8029C9C4 00299904  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029C9C8 00299908  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8029C9CC 0029990C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -461,40 +529,40 @@ lbl_8029C9C4:
 /* 8029C9D4 00299914  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C9D8 00299918  4E 80 00 20 */	blr 
 
-/* 8029C9DC 000C .text registerMixCallback__9JASDriverFPFl_Ps10JASMixMode registerMixCallback__9JASDriverFPFl_Ps10JASMixMode */
+/* 8029C9DC 000C .text      registerMixCallback__9JASDriverFPFl_Ps10JASMixMode registerMixCallback__9JASDriverFPFl_Ps10JASMixMode */
 .global registerMixCallback__9JASDriverFPFl_Ps10JASMixMode
 registerMixCallback__9JASDriverFPFl_Ps10JASMixMode:
 /* 8029C9DC 0029991C  90 6D 8D 3C */	stw r3, extMixCallback__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9E0 00299920  90 8D 82 2C */	stw r4, sMixMode__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9E4 00299924  4E 80 00 20 */	blr 
 
-/* 8029C9E8 0008 .text getDacRate__9JASDriverFv getDacRate__9JASDriverFv */
+/* 8029C9E8 0008 .text      getDacRate__9JASDriverFv       getDacRate__9JASDriverFv       */
 .global getDacRate__9JASDriverFv
 getDacRate__9JASDriverFv:
 /* 8029C9E8 00299928  C0 2D 82 30 */	lfs f1, sDacRate__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9EC 0029992C  4E 80 00 20 */	blr 
 
-/* 8029C9F0 0008 .text getSubFrames__9JASDriverFv getSubFrames__9JASDriverFv */
+/* 8029C9F0 0008 .text      getSubFrames__9JASDriverFv     getSubFrames__9JASDriverFv     */
 .global getSubFrames__9JASDriverFv
 getSubFrames__9JASDriverFv:
 /* 8029C9F0 00299930  80 6D 82 34 */	lwz r3, sSubFrames__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9F4 00299934  4E 80 00 20 */	blr 
 
-/* 8029C9F8 000C .text getDacSize__9JASDriverFv getDacSize__9JASDriverFv */
+/* 8029C9F8 000C .text      getDacSize__9JASDriverFv       getDacSize__9JASDriverFv       */
 .global getDacSize__9JASDriverFv
 getDacSize__9JASDriverFv:
 /* 8029C9F8 00299938  80 0D 82 34 */	lwz r0, sSubFrames__9JASDriver-_SDA_BASE_(r13)
 /* 8029C9FC 0029993C  1C 60 00 A0 */	mulli r3, r0, 0xa0
 /* 8029CA00 00299940  4E 80 00 20 */	blr 
 
-/* 8029CA04 000C .text getFrameSamples__9JASDriverFv getFrameSamples__9JASDriverFv */
+/* 8029CA04 000C .text      getFrameSamples__9JASDriverFv  getFrameSamples__9JASDriverFv  */
 .global getFrameSamples__9JASDriverFv
 getFrameSamples__9JASDriverFv:
 /* 8029CA04 00299944  80 0D 82 34 */	lwz r0, sSubFrames__9JASDriver-_SDA_BASE_(r13)
 /* 8029CA08 00299948  1C 60 00 50 */	mulli r3, r0, 0x50
 /* 8029CA0C 0029994C  4E 80 00 20 */	blr 
 
-/* 8029CA10 00B0 .text mixMonoTrack__9JASDriverFPsUlPFl_Ps mixMonoTrack__9JASDriverFPsUlPFl_Ps */
+/* 8029CA10 005C .text      mixMonoTrack__9JASDriverFPsUlPFl_Ps mixMonoTrack__9JASDriverFPsUlPFl_Ps */
 .global mixMonoTrack__9JASDriverFPsUlPFl_Ps
 mixMonoTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CA10 00299950  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -506,8 +574,8 @@ mixMonoTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CA28 00299968  7C 9C 23 78 */	mr r28, r4
 /* 8029CA2C 0029996C  7C BD 2B 78 */	mr r29, r5
 /* 8029CA30 00299970  38 60 00 05 */	li r3, 5
-/* 8029CA34 00299974  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029CA38 00299978  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029CA34 00299974  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CA38 00299978  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CA3C 0029997C  38 84 00 25 */	addi r4, r4, 0x25
 /* 8029CA40 00299980  4B FF 44 A5 */	bl start__8JASProbeFlPCc
 /* 8029CA44 00299984  7F 83 E3 78 */	mr r3, r28
@@ -515,29 +583,38 @@ mixMonoTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CA4C 0029998C  7D 89 03 A6 */	mtctr r12
 /* 8029CA50 00299990  4E 80 04 21 */	bctrl 
 /* 8029CA54 00299994  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8029CA58 00299998  41 82 00 50 */	beq lbl_8029CAA8
+/* 8029CA58 00299998  41 82 00 50 */	beq func_8029CAA8
 /* 8029CA5C 0029999C  38 60 00 05 */	li r3, 5
 /* 8029CA60 002999A0  4B FF 44 C5 */	bl stop__8JASProbeFl
 /* 8029CA64 002999A4  7F 9D E3 78 */	mr r29, r28
-/* 8029CA68 002999A8  48 00 00 38 */	b lbl_8029CAA0
-lbl_8029CA6C:
+/* 8029CA68 002999A8  48 00 00 38 */	b func_8029CAA0
+
+/* 8029CA6C 0034 .text      func_8029CA6C                  func_8029CA6C                  */
+.global func_8029CA6C
+func_8029CA6C:
 /* 8029CA6C 002999AC  A8 7E 00 00 */	lha r3, 0(r30)
 /* 8029CA70 002999B0  A8 1F 00 00 */	lha r0, 0(r31)
 /* 8029CA74 002999B4  7C 63 02 14 */	add r3, r3, r0
-/* 8029CA78 002999B8  4B FF 2C 25 */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CA78 002999B8  4B FF 2C 25 */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CA7C 002999BC  B0 7E 00 00 */	sth r3, 0(r30)
 /* 8029CA80 002999C0  A8 7E 00 02 */	lha r3, 2(r30)
 /* 8029CA84 002999C4  A8 1F 00 00 */	lha r0, 0(r31)
 /* 8029CA88 002999C8  7C 63 02 14 */	add r3, r3, r0
-/* 8029CA8C 002999CC  4B FF 2C 11 */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CA8C 002999CC  4B FF 2C 11 */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CA90 002999D0  B0 7E 00 02 */	sth r3, 2(r30)
 /* 8029CA94 002999D4  3B DE 00 04 */	addi r30, r30, 4
 /* 8029CA98 002999D8  3B FF 00 02 */	addi r31, r31, 2
 /* 8029CA9C 002999DC  3B BD FF FF */	addi r29, r29, -1
-lbl_8029CAA0:
+
+/* 8029CAA0 0008 .text      func_8029CAA0                  func_8029CAA0                  */
+.global func_8029CAA0
+func_8029CAA0:
 /* 8029CAA0 002999E0  28 1D 00 00 */	cmplwi r29, 0
-/* 8029CAA4 002999E4  40 82 FF C8 */	bne lbl_8029CA6C
-lbl_8029CAA8:
+/* 8029CAA4 002999E4  40 82 FF C8 */	bne func_8029CA6C
+
+/* 8029CAA8 0018 .text      func_8029CAA8                  func_8029CAA8                  */
+.global func_8029CAA8
+func_8029CAA8:
 /* 8029CAA8 002999E8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029CAAC 002999EC  48 0C 57 79 */	bl _restgpr_28
 /* 8029CAB0 002999F0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -545,7 +622,7 @@ lbl_8029CAA8:
 /* 8029CAB8 002999F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029CABC 002999FC  4E 80 00 20 */	blr 
 
-/* 8029CAC0 00B0 .text mixMonoTrackWide__9JASDriverFPsUlPFl_Ps mixMonoTrackWide__9JASDriverFPsUlPFl_Ps */
+/* 8029CAC0 005C .text      mixMonoTrackWide__9JASDriverFPsUlPFl_Ps mixMonoTrackWide__9JASDriverFPsUlPFl_Ps */
 .global mixMonoTrackWide__9JASDriverFPsUlPFl_Ps
 mixMonoTrackWide__9JASDriverFPsUlPFl_Ps:
 /* 8029CAC0 00299A00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -557,8 +634,8 @@ mixMonoTrackWide__9JASDriverFPsUlPFl_Ps:
 /* 8029CAD8 00299A18  7C 9C 23 78 */	mr r28, r4
 /* 8029CADC 00299A1C  7C BD 2B 78 */	mr r29, r5
 /* 8029CAE0 00299A20  38 60 00 05 */	li r3, 5
-/* 8029CAE4 00299A24  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029CAE8 00299A28  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029CAE4 00299A24  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CAE8 00299A28  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CAEC 00299A2C  38 84 00 2E */	addi r4, r4, 0x2e
 /* 8029CAF0 00299A30  4B FF 43 F5 */	bl start__8JASProbeFlPCc
 /* 8029CAF4 00299A34  7F 83 E3 78 */	mr r3, r28
@@ -566,29 +643,38 @@ mixMonoTrackWide__9JASDriverFPsUlPFl_Ps:
 /* 8029CAFC 00299A3C  7D 89 03 A6 */	mtctr r12
 /* 8029CB00 00299A40  4E 80 04 21 */	bctrl 
 /* 8029CB04 00299A44  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8029CB08 00299A48  41 82 00 50 */	beq lbl_8029CB58
+/* 8029CB08 00299A48  41 82 00 50 */	beq func_8029CB58
 /* 8029CB0C 00299A4C  38 60 00 05 */	li r3, 5
 /* 8029CB10 00299A50  4B FF 44 15 */	bl stop__8JASProbeFl
 /* 8029CB14 00299A54  7F 9D E3 78 */	mr r29, r28
-/* 8029CB18 00299A58  48 00 00 38 */	b lbl_8029CB50
-lbl_8029CB1C:
+/* 8029CB18 00299A58  48 00 00 38 */	b func_8029CB50
+
+/* 8029CB1C 0034 .text      func_8029CB1C                  func_8029CB1C                  */
+.global func_8029CB1C
+func_8029CB1C:
 /* 8029CB1C 00299A5C  A8 7E 00 00 */	lha r3, 0(r30)
 /* 8029CB20 00299A60  A8 1F 00 00 */	lha r0, 0(r31)
 /* 8029CB24 00299A64  7C 63 02 14 */	add r3, r3, r0
-/* 8029CB28 00299A68  4B FF 2B 75 */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CB28 00299A68  4B FF 2B 75 */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CB2C 00299A6C  B0 7E 00 00 */	sth r3, 0(r30)
 /* 8029CB30 00299A70  A8 7E 00 02 */	lha r3, 2(r30)
 /* 8029CB34 00299A74  A8 1F 00 00 */	lha r0, 0(r31)
 /* 8029CB38 00299A78  7C 60 18 50 */	subf r3, r0, r3
-/* 8029CB3C 00299A7C  4B FF 2B 61 */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CB3C 00299A7C  4B FF 2B 61 */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CB40 00299A80  B0 7E 00 02 */	sth r3, 2(r30)
 /* 8029CB44 00299A84  3B DE 00 04 */	addi r30, r30, 4
 /* 8029CB48 00299A88  3B FF 00 02 */	addi r31, r31, 2
 /* 8029CB4C 00299A8C  3B BD FF FF */	addi r29, r29, -1
-lbl_8029CB50:
+
+/* 8029CB50 0008 .text      func_8029CB50                  func_8029CB50                  */
+.global func_8029CB50
+func_8029CB50:
 /* 8029CB50 00299A90  28 1D 00 00 */	cmplwi r29, 0
-/* 8029CB54 00299A94  40 82 FF C8 */	bne lbl_8029CB1C
-lbl_8029CB58:
+/* 8029CB54 00299A94  40 82 FF C8 */	bne func_8029CB1C
+
+/* 8029CB58 0018 .text      func_8029CB58                  func_8029CB58                  */
+.global func_8029CB58
+func_8029CB58:
 /* 8029CB58 00299A98  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029CB5C 00299A9C  48 0C 56 C9 */	bl _restgpr_28
 /* 8029CB60 00299AA0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -596,7 +682,7 @@ lbl_8029CB58:
 /* 8029CB68 00299AA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029CB6C 00299AAC  4E 80 00 20 */	blr 
 
-/* 8029CB70 00E0 .text mixExtraTrack__9JASDriverFPsUlPFl_Ps mixExtraTrack__9JASDriverFPsUlPFl_Ps */
+/* 8029CB70 0080 .text      mixExtraTrack__9JASDriverFPsUlPFl_Ps mixExtraTrack__9JASDriverFPsUlPFl_Ps */
 .global mixExtraTrack__9JASDriverFPsUlPFl_Ps
 mixExtraTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CB70 00299AB0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -608,8 +694,8 @@ mixExtraTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CB88 00299AC8  7C 9B 23 78 */	mr r27, r4
 /* 8029CB8C 00299ACC  7C BC 2B 78 */	mr r28, r5
 /* 8029CB90 00299AD0  38 60 00 05 */	li r3, 5
-/* 8029CB94 00299AD4  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029CB98 00299AD8  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029CB94 00299AD4  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CB98 00299AD8  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CB9C 00299ADC  38 84 00 3A */	addi r4, r4, 0x3a
 /* 8029CBA0 00299AE0  4B FF 43 45 */	bl start__8JASProbeFlPCc
 /* 8029CBA4 00299AE4  7F 63 DB 78 */	mr r3, r27
@@ -617,12 +703,12 @@ mixExtraTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CBAC 00299AEC  7D 89 03 A6 */	mtctr r12
 /* 8029CBB0 00299AF0  4E 80 04 21 */	bctrl 
 /* 8029CBB4 00299AF4  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8029CBB8 00299AF8  41 82 00 80 */	beq lbl_8029CC38
+/* 8029CBB8 00299AF8  41 82 00 80 */	beq func_8029CC38
 /* 8029CBBC 00299AFC  38 60 00 05 */	li r3, 5
 /* 8029CBC0 00299B00  4B FF 43 65 */	bl stop__8JASProbeFl
 /* 8029CBC4 00299B04  38 60 00 06 */	li r3, 6
-/* 8029CBC8 00299B08  3C 80 80 3A */	lis r4, lbl_8039B2F0@ha
-/* 8029CBCC 00299B0C  38 84 B2 F0 */	addi r4, r4, lbl_8039B2F0@l
+/* 8029CBC8 00299B08  3C 80 80 3A */	lis r4, JASAiCtrl__stringBase0@ha
+/* 8029CBCC 00299B0C  38 84 B2 F0 */	addi r4, r4, JASAiCtrl__stringBase0@l
 /* 8029CBD0 00299B10  38 84 00 41 */	addi r4, r4, 0x41
 /* 8029CBD4 00299B14  4B FF 43 11 */	bl start__8JASProbeFlPCc
 /* 8029CBD8 00299B18  7F BE EB 78 */	mr r30, r29
@@ -630,28 +716,37 @@ mixExtraTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CBE0 00299B20  54 60 08 3C */	slwi r0, r3, 1
 /* 8029CBE4 00299B24  7F BF 02 14 */	add r29, r31, r0
 /* 8029CBE8 00299B28  7F 7C DB 78 */	mr r28, r27
-/* 8029CBEC 00299B2C  48 00 00 3C */	b lbl_8029CC28
-lbl_8029CBF0:
+/* 8029CBEC 00299B2C  48 00 00 3C */	b func_8029CC28
+
+/* 8029CBF0 0038 .text      func_8029CBF0                  func_8029CBF0                  */
+.global func_8029CBF0
+func_8029CBF0:
 /* 8029CBF0 00299B30  A8 7E 00 00 */	lha r3, 0(r30)
 /* 8029CBF4 00299B34  A8 1D 00 00 */	lha r0, 0(r29)
 /* 8029CBF8 00299B38  7C 63 02 14 */	add r3, r3, r0
-/* 8029CBFC 00299B3C  4B FF 2A A1 */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CBFC 00299B3C  4B FF 2A A1 */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CC00 00299B40  B0 7E 00 00 */	sth r3, 0(r30)
 /* 8029CC04 00299B44  A8 7E 00 02 */	lha r3, 2(r30)
 /* 8029CC08 00299B48  A8 1F 00 00 */	lha r0, 0(r31)
 /* 8029CC0C 00299B4C  7C 63 02 14 */	add r3, r3, r0
-/* 8029CC10 00299B50  4B FF 2A 8D */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CC10 00299B50  4B FF 2A 8D */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CC14 00299B54  B0 7E 00 02 */	sth r3, 2(r30)
 /* 8029CC18 00299B58  3B DE 00 04 */	addi r30, r30, 4
 /* 8029CC1C 00299B5C  3B BD 00 02 */	addi r29, r29, 2
 /* 8029CC20 00299B60  3B FF 00 02 */	addi r31, r31, 2
 /* 8029CC24 00299B64  3B 9C FF FF */	addi r28, r28, -1
-lbl_8029CC28:
+
+/* 8029CC28 0010 .text      func_8029CC28                  func_8029CC28                  */
+.global func_8029CC28
+func_8029CC28:
 /* 8029CC28 00299B68  28 1C 00 00 */	cmplwi r28, 0
-/* 8029CC2C 00299B6C  40 82 FF C4 */	bne lbl_8029CBF0
+/* 8029CC2C 00299B6C  40 82 FF C4 */	bne func_8029CBF0
 /* 8029CC30 00299B70  38 60 00 06 */	li r3, 6
 /* 8029CC34 00299B74  4B FF 42 F1 */	bl stop__8JASProbeFl
-lbl_8029CC38:
+
+/* 8029CC38 0018 .text      func_8029CC38                  func_8029CC38                  */
+.global func_8029CC38
+func_8029CC38:
 /* 8029CC38 00299B78  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029CC3C 00299B7C  48 0C 55 E5 */	bl _restgpr_27
 /* 8029CC40 00299B80  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -659,7 +754,7 @@ lbl_8029CC38:
 /* 8029CC48 00299B88  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029CC4C 00299B8C  4E 80 00 20 */	blr 
 
-/* 8029CC50 0084 .text mixInterleaveTrack__9JASDriverFPsUlPFl_Ps mixInterleaveTrack__9JASDriverFPsUlPFl_Ps */
+/* 8029CC50 0044 .text      mixInterleaveTrack__9JASDriverFPsUlPFl_Ps mixInterleaveTrack__9JASDriverFPsUlPFl_Ps */
 .global mixInterleaveTrack__9JASDriverFPsUlPFl_Ps
 mixInterleaveTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CC50 00299B90  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -674,24 +769,33 @@ mixInterleaveTrack__9JASDriverFPsUlPFl_Ps:
 /* 8029CC74 00299BB4  7D 89 03 A6 */	mtctr r12
 /* 8029CC78 00299BB8  4E 80 04 21 */	bctrl 
 /* 8029CC7C 00299BBC  28 03 00 00 */	cmplwi r3, 0
-/* 8029CC80 00299BC0  41 82 00 3C */	beq lbl_8029CCBC
+/* 8029CC80 00299BC0  41 82 00 3C */	beq func_8029CCBC
 /* 8029CC84 00299BC4  7F DF F3 78 */	mr r31, r30
 /* 8029CC88 00299BC8  7C 7E 1B 78 */	mr r30, r3
 /* 8029CC8C 00299BCC  57 BD 08 3C */	slwi r29, r29, 1
-/* 8029CC90 00299BD0  48 00 00 24 */	b lbl_8029CCB4
-lbl_8029CC94:
+/* 8029CC90 00299BD0  48 00 00 24 */	b func_8029CCB4
+
+/* 8029CC94 0020 .text      func_8029CC94                  func_8029CC94                  */
+.global func_8029CC94
+func_8029CC94:
 /* 8029CC94 00299BD4  A8 7F 00 00 */	lha r3, 0(r31)
 /* 8029CC98 00299BD8  A8 1E 00 00 */	lha r0, 0(r30)
 /* 8029CC9C 00299BDC  7C 63 02 14 */	add r3, r3, r0
-/* 8029CCA0 00299BE0  4B FF 29 FD */	bl "clamp<s,l>__7JASCalcFl"
+/* 8029CCA0 00299BE0  4B FF 29 FD */	bl clamp_SUB_0s_SUB_4l_SUB_1__7JASCalcFl
 /* 8029CCA4 00299BE4  B0 7F 00 00 */	sth r3, 0(r31)
 /* 8029CCA8 00299BE8  3B FF 00 02 */	addi r31, r31, 2
 /* 8029CCAC 00299BEC  3B DE 00 02 */	addi r30, r30, 2
 /* 8029CCB0 00299BF0  3B BD FF FF */	addi r29, r29, -1
-lbl_8029CCB4:
+
+/* 8029CCB4 0008 .text      func_8029CCB4                  func_8029CCB4                  */
+.global func_8029CCB4
+func_8029CCB4:
 /* 8029CCB4 00299BF4  28 1D 00 00 */	cmplwi r29, 0
-/* 8029CCB8 00299BF8  40 82 FF DC */	bne lbl_8029CC94
-lbl_8029CCBC:
+/* 8029CCB8 00299BF8  40 82 FF DC */	bne func_8029CC94
+
+/* 8029CCBC 0018 .text      func_8029CCBC                  func_8029CCBC                  */
+.global func_8029CCBC
+func_8029CCBC:
 /* 8029CCBC 00299BFC  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029CCC0 00299C00  48 0C 55 69 */	bl _restgpr_29
 /* 8029CCC4 00299C04  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -699,23 +803,25 @@ lbl_8029CCBC:
 /* 8029CCCC 00299C0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029CCD0 00299C10  4E 80 00 20 */	blr 
 
-/* 8029CCD4 0008 .text getSubFrameCounter__9JASDriverFv getSubFrameCounter__9JASDriverFv */
+/* 8029CCD4 0008 .text      getSubFrameCounter__9JASDriverFv getSubFrameCounter__9JASDriverFv */
 .global getSubFrameCounter__9JASDriverFv
 getSubFrameCounter__9JASDriverFv:
 /* 8029CCD4 00299C14  80 6D 8D 44 */	lwz r3, sSubFrameCounter__9JASDriver-_SDA_BASE_(r13)
 /* 8029CCD8 00299C18  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .rodata                                         */
+/* ###################################################################################### */
 .section .rodata, "a"
-/* 8039B2E0 0010 .rodata sMixFuncs__9JASDriver sMixFuncs__9JASDriver */
+/* 8039B2E0 0010 .rodata    sMixFuncs__9JASDriver          sMixFuncs__9JASDriver          */
 .global sMixFuncs__9JASDriver
 sMixFuncs__9JASDriver:
 .byte 0x80, 0x29, 0xca, 0x10, 0x80, 0x29, 0xca, 0xc0, 0x80, 0x29, 0xcb, 0x70, 0x80, 0x29, 0xcc, 0x50 /* baserom.dol+0x3982e0 */
 
-/* 8039B2F0 0048 .rodata lbl_8039B2F0 @stringBase0 */
-.global lbl_8039B2F0
-lbl_8039B2F0:
+/* 8039B2F0 0048 .rodata    JASAiCtrl__stringBase0         @stringBase0                   */
+.global JASAiCtrl__stringBase0
+JASAiCtrl__stringBase0:
 .byte 0x53, 0x46, 0x52, 0x2d, 0x55, 0x50, 0x44, 0x41, 0x54, 0x45, 0x00, 0x6b, 0x69, 0x6c, 0x6c, 0x20 /* baserom.dol+0x3982f0 */
 .byte 0x44, 0x53, 0x50, 0x20, 0x63, 0x68, 0x61, 0x6e, 0x6e, 0x65, 0x6c, 0x00, 0x44, 0x53, 0x50, 0x2d /* baserom.dol+0x398300 */
 .byte 0x4d, 0x41, 0x49, 0x4e, 0x00, 0x4d, 0x4f, 0x4e, 0x4f, 0x2d, 0x4d, 0x49, 0x58, 0x00, 0x4d, 0x4f /* baserom.dol+0x398310 */
@@ -723,146 +829,156 @@ lbl_8039B2F0:
 .byte 0x00, 0x4d, 0x49, 0x58, 0x49, 0x4e, 0x47, 0x00 /* baserom.dol+0x398330 */
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C78B8 0028 .data lbl_803C78B8 history$267 */
-.global lbl_803C78B8
-lbl_803C78B8:
+/* 803C78B8 0028 .data      sym_803C78B8                   history$267                    */
+.global sym_803C78B8
+sym_803C78B8:
 .byte 0x00, 0x0f, 0x42, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c48b8 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c48c8 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c48d8 */
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 80431C58 000C .bss sDmaDacBuffer__9JASDriver sDmaDacBuffer__9JASDriver */
+/* 80431C58 000C .bss       sDmaDacBuffer__9JASDriver      sDmaDacBuffer__9JASDriver      */
 .global sDmaDacBuffer__9JASDriver
 sDmaDacBuffer__9JASDriver:
 .skip 0xc
 .skip 0x4 /* padding */
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 804507AC 0004 .sdata sMixMode__9JASDriver sMixMode__9JASDriver */
+/* 804507AC 0004 .sdata     sMixMode__9JASDriver           sMixMode__9JASDriver           */
 .global sMixMode__9JASDriver
 sMixMode__9JASDriver:
 .byte 0x00, 0x00, 0x00, 0x02 /* baserom.dol+0x3d050c */
 
-/* 804507B0 0004 .sdata sDacRate__9JASDriver sDacRate__9JASDriver */
+/* 804507B0 0004 .sdata     sDacRate__9JASDriver           sDacRate__9JASDriver           */
 .global sDacRate__9JASDriver
 sDacRate__9JASDriver:
 .byte 0x46, 0xfa, 0x39, 0x00 /* baserom.dol+0x3d0510 */
 
-/* 804507B4 0004 .sdata sSubFrames__9JASDriver sSubFrames__9JASDriver */
+/* 804507B4 0004 .sdata     sSubFrames__9JASDriver         sSubFrames__9JASDriver         */
 .global sSubFrames__9JASDriver
 sSubFrames__9JASDriver:
 .byte 0x00, 0x00, 0x00, 0x07 /* baserom.dol+0x3d0514 */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 804512A0 0004 .sbss sDspDacBuffer__9JASDriver sDspDacBuffer__9JASDriver */
+/* 804512A0 0004 .sbss      sDspDacBuffer__9JASDriver      sDspDacBuffer__9JASDriver      */
 .global sDspDacBuffer__9JASDriver
 sDspDacBuffer__9JASDriver:
 .skip 0x4
 
-/* 804512A4 0004 .sbss sDspDacWriteBuffer__9JASDriver sDspDacWriteBuffer__9JASDriver */
+/* 804512A4 0004 .sbss      sDspDacWriteBuffer__9JASDriver sDspDacWriteBuffer__9JASDriver */
 .global sDspDacWriteBuffer__9JASDriver
 sDspDacWriteBuffer__9JASDriver:
 .skip 0x4
 
-/* 804512A8 0004 .sbss sDspDacReadBuffer__9JASDriver sDspDacReadBuffer__9JASDriver */
+/* 804512A8 0004 .sbss      sDspDacReadBuffer__9JASDriver  sDspDacReadBuffer__9JASDriver  */
 .global sDspDacReadBuffer__9JASDriver
 sDspDacReadBuffer__9JASDriver:
 .skip 0x4
 
-/* 804512AC 0004 .sbss sDspStatus__9JASDriver sDspStatus__9JASDriver */
+/* 804512AC 0004 .sbss      sDspStatus__9JASDriver         sDspStatus__9JASDriver         */
 .global sDspStatus__9JASDriver
 sDspStatus__9JASDriver:
 .skip 0x4
 
-/* 804512B0 0004 .sbss sDspDacCallback__9JASDriver sDspDacCallback__9JASDriver */
+/* 804512B0 0004 .sbss      sDspDacCallback__9JASDriver    sDspDacCallback__9JASDriver    */
 .global sDspDacCallback__9JASDriver
 sDspDacCallback__9JASDriver:
 .skip 0x4
 
-/* 804512B4 0004 .sbss lastRspMadep__9JASDriver lastRspMadep__9JASDriver */
+/* 804512B4 0004 .sbss      lastRspMadep__9JASDriver       lastRspMadep__9JASDriver       */
 .global lastRspMadep__9JASDriver
 lastRspMadep__9JASDriver:
 .skip 0x4
 
-/* 804512B8 0004 .sbss dacCallbackFunc__9JASDriver dacCallbackFunc__9JASDriver */
+/* 804512B8 0004 .sbss      dacCallbackFunc__9JASDriver    dacCallbackFunc__9JASDriver    */
 .global dacCallbackFunc__9JASDriver
 dacCallbackFunc__9JASDriver:
 .skip 0x4
 
-/* 804512BC 0004 .sbss extMixCallback__9JASDriver extMixCallback__9JASDriver */
+/* 804512BC 0004 .sbss      extMixCallback__9JASDriver     extMixCallback__9JASDriver     */
 .global extMixCallback__9JASDriver
 extMixCallback__9JASDriver:
 .skip 0x4
 
-/* 804512C0 0004 .sbss sOutputRate__9JASDriver sOutputRate__9JASDriver */
+/* 804512C0 0004 .sbss      sOutputRate__9JASDriver        sOutputRate__9JASDriver        */
 .global sOutputRate__9JASDriver
 sOutputRate__9JASDriver:
 .skip 0x4
 
-/* 804512C4 0004 .sbss sSubFrameCounter__9JASDriver sSubFrameCounter__9JASDriver */
+/* 804512C4 0004 .sbss      sSubFrameCounter__9JASDriver   sSubFrameCounter__9JASDriver   */
 .global sSubFrameCounter__9JASDriver
 sSubFrameCounter__9JASDriver:
 .skip 0x4
 
-/* 804512C8 0004 .sbss lbl_804512C8 dacp$239 */
-.global lbl_804512C8
-lbl_804512C8:
+/* 804512C8 0004 .sbss      sym_804512C8                   dacp$239                       */
+.global sym_804512C8
+sym_804512C8:
 .skip 0x4
 
-/* 804512CC 0004 .sbss lbl_804512CC lbl_804512CC */
-.global lbl_804512CC
-lbl_804512CC:
+/* 804512CC 0004 .sbss      sym_804512CC                   sym_804512CC                   */
+.global sym_804512CC
+sym_804512CC:
 .skip 0x4
 
-/* 804512D0 0004 .sbss lbl_804512D0 old_time$264 */
-.global lbl_804512D0
-lbl_804512D0:
+/* 804512D0 0004 .sbss      sym_804512D0                   old_time$264                   */
+.global sym_804512D0
+sym_804512D0:
 .skip 0x4
 
-/* 804512D4 0004 .sbss lbl_804512D4 lbl_804512D4 */
-.global lbl_804512D4
-lbl_804512D4:
+/* 804512D4 0004 .sbss      sym_804512D4                   sym_804512D4                   */
+.global sym_804512D4
+sym_804512D4:
 .skip 0x4
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455720 0004 .sdata2 lbl_80455720 @233 */
-.global lbl_80455720
-lbl_80455720:
+/* 80455720 0004 .sdata2    LIT_233                        @233                           */
+.global LIT_233
+LIT_233:
 .byte 0x46, 0xfa, 0x00, 0x00 /* baserom.dol+0x3d4580 */
 
-/* 80455724 0004 .sdata2 lbl_80455724 @234 */
-.global lbl_80455724
-lbl_80455724:
+/* 80455724 0004 .sdata2    JASAiCtrl__LIT_234             @234                           */
+.global JASAiCtrl__LIT_234
+JASAiCtrl__LIT_234:
 .byte 0x47, 0x3b, 0x80, 0x00 /* baserom.dol+0x3d4584 */
 
-/* 80455728 0004 .sdata2 lbl_80455728 @235 */
-.global lbl_80455728
-lbl_80455728:
+/* 80455728 0004 .sdata2    LIT_235                        @235                           */
+.global LIT_235
+LIT_235:
 .byte 0x3f, 0x80, 0x1d, 0x27 /* baserom.dol+0x3d4588 */
 
-/* 8045572C 0004 .sdata2 lbl_8045572C @275 */
-.global lbl_8045572C
-lbl_8045572C:
+/* 8045572C 0004 .sdata2    JASAiCtrl__LIT_275             @275                           */
+.global JASAiCtrl__LIT_275
+JASAiCtrl__LIT_275:
 .byte 0x3f, 0x8c, 0xcc, 0xcd /* baserom.dol+0x3d458c */
 
-/* 80455730 0004 .sdata2 lbl_80455730 @276 */
-.global lbl_80455730
-lbl_80455730:
+/* 80455730 0004 .sdata2    JASAiCtrl__LIT_276             @276                           */
+.global JASAiCtrl__LIT_276
+JASAiCtrl__LIT_276:
 .byte 0x46, 0xfa, 0x39, 0x00 /* baserom.dol+0x3d4590 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4594 */
 
-/* 80455738 0008 .sdata2 lbl_80455738 @278 */
-.global lbl_80455738
-lbl_80455738:
+/* 80455738 0008 .sdata2    LIT_278                        @278                           */
+.global LIT_278
+LIT_278:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4598 */
 

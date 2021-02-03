@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802DE890 008C .text storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT */
+/* 802DE890 003C .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT */
 .global storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT
 storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT:
 /* 802DE890 002DB7D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -13,14 +15,17 @@ storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT:
 /* 802DE8A4 002DB7E4  7C 7D 1B 78 */	mr r29, r3
 /* 802DE8A8 002DB7E8  7C 9E 23 78 */	mr r30, r4
 /* 802DE8AC 002DB7EC  7C BF 2B 79 */	or. r31, r5, r5
-/* 802DE8B0 002DB7F0  40 82 00 1C */	bne lbl_802DE8CC
-/* 802DE8B4 002DB7F4  3C 60 80 3A */	lis r3, lbl_8039D360@ha
-/* 802DE8B8 002DB7F8  38 63 D3 60 */	addi r3, r3, lbl_8039D360@l
+/* 802DE8B0 002DB7F0  40 82 00 1C */	bne func_802DE8CC
+/* 802DE8B4 002DB7F4  3C 60 80 3A */	lis r3, JUTPalette__stringBase0@ha
+/* 802DE8B8 002DB7F8  38 63 D3 60 */	addi r3, r3, JUTPalette__stringBase0@l
 /* 802DE8BC 002DB7FC  38 80 00 23 */	li r4, 0x23
 /* 802DE8C0 002DB800  38 A3 00 0F */	addi r5, r3, 0xf
 /* 802DE8C4 002DB804  4C C6 31 82 */	crclr 6
 /* 802DE8C8 002DB808  4B D2 85 B5 */	bl OSPanic
-lbl_802DE8CC:
+
+/* 802DE8CC 0050 .text      func_802DE8CC                  func_802DE8CC                  */
+.global func_802DE8CC
+func_802DE8CC:
 /* 802DE8CC 002DB80C  9B DD 00 0C */	stb r30, 0xc(r29)
 /* 802DE8D0 002DB810  88 1F 00 00 */	lbz r0, 0(r31)
 /* 802DE8D4 002DB814  98 1D 00 0D */	stb r0, 0xd(r29)
@@ -42,7 +47,7 @@ lbl_802DE8CC:
 /* 802DE914 002DB854  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DE918 002DB858  4E 80 00 20 */	blr 
 
-/* 802DE91C 0040 .text storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
+/* 802DE91C 0040 .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
 .global storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv
 storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv:
 /* 802DE91C 002DB85C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -62,7 +67,7 @@ storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv:
 /* 802DE954 002DB894  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE958 002DB898  4E 80 00 20 */	blr 
 
-/* 802DE95C 0044 .text load__10JUTPaletteFv load__10JUTPaletteFv */
+/* 802DE95C 002C .text      load__10JUTPaletteFv           load__10JUTPaletteFv           */
 .global load__10JUTPaletteFv
 load__10JUTPaletteFv:
 /* 802DE95C 002DB89C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -73,10 +78,13 @@ load__10JUTPaletteFv:
 /* 802DE970 002DB8B0  30 04 FF FF */	addic r0, r4, -1
 /* 802DE974 002DB8B4  7F E0 21 10 */	subfe r31, r0, r4
 /* 802DE978 002DB8B8  57 E0 06 3F */	clrlwi. r0, r31, 0x18
-/* 802DE97C 002DB8BC  41 82 00 0C */	beq lbl_802DE988
+/* 802DE97C 002DB8BC  41 82 00 0C */	beq func_802DE988
 /* 802DE980 002DB8C0  88 83 00 0C */	lbz r4, 0xc(r3)
 /* 802DE984 002DB8C4  48 07 FB 1D */	bl GXLoadTlut
-lbl_802DE988:
+
+/* 802DE988 0018 .text      func_802DE988                  func_802DE988                  */
+.global func_802DE988
+func_802DE988:
 /* 802DE988 002DB8C8  7F E3 FB 78 */	mr r3, r31
 /* 802DE98C 002DB8CC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DE990 002DB8D0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -85,11 +93,13 @@ lbl_802DE988:
 /* 802DE99C 002DB8DC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .rodata                                         */
+/* ###################################################################################### */
 .section .rodata, "a"
-/* 8039D360 0029 .rodata lbl_8039D360 @stringBase0 */
-.global lbl_8039D360
-lbl_8039D360:
+/* 8039D360 0029 .rodata    JUTPalette__stringBase0        @stringBase0                   */
+.global JUTPalette__stringBase0
+JUTPalette__stringBase0:
 .byte 0x4a, 0x55, 0x54, 0x50, 0x61, 0x6c, 0x65, 0x74, 0x74, 0x65, 0x2e, 0x63, 0x70, 0x70, 0x00, 0x4a /* baserom.dol+0x39a360 */
 .byte 0x55, 0x54, 0x54, 0x65, 0x78, 0x74, 0x75, 0x72, 0x65, 0x3a, 0x20, 0x54, 0x4c, 0x55, 0x54, 0x20 /* baserom.dol+0x39a370 */
 .byte 0x69, 0x73, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x0a, 0x00 /* baserom.dol+0x39a380 */

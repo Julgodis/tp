@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8033E994 0060 .text OSInitMessageQueue OSInitMessageQueue */
+/* 8033E994 0060 .text      OSInitMessageQueue             OSInitMessageQueue             */
 .global OSInitMessageQueue
 OSInitMessageQueue:
 /* 8033E994 0033B8D4  7C 08 02 A6 */	mflr r0
@@ -30,7 +32,7 @@ OSInitMessageQueue:
 /* 8033E9EC 0033B92C  7C 08 03 A6 */	mtlr r0
 /* 8033E9F0 0033B930  4E 80 00 20 */	blr 
 
-/* 8033E9F4 00C8 .text OSSendMessage OSSendMessage */
+/* 8033E9F4 0038 .text      OSSendMessage                  OSSendMessage                  */
 .global OSSendMessage
 OSSendMessage:
 /* 8033E9F4 0033B934  7C 08 02 A6 */	mflr r0
@@ -43,25 +45,34 @@ OSSendMessage:
 /* 8033EA10 0033B950  3B A4 00 00 */	addi r29, r4, 0
 /* 8033EA14 0033B954  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EA18 0033B958  3B 83 00 00 */	addi r28, r3, 0
-/* 8033EA1C 0033B95C  4B FF EC D9 */	bl __RAS_OSDisableInterrupts_begin
+/* 8033EA1C 0033B95C  4B FF EC D9 */	bl OSDisableInterrupts
 /* 8033EA20 0033B960  3B C3 00 00 */	addi r30, r3, 0
 /* 8033EA24 0033B964  57 FF 07 FE */	clrlwi r31, r31, 0x1f
-/* 8033EA28 0033B968  48 00 00 24 */	b lbl_8033EA4C
-lbl_8033EA2C:
+/* 8033EA28 0033B968  48 00 00 24 */	b func_8033EA4C
+
+/* 8033EA2C 0018 .text      func_8033EA2C                  func_8033EA2C                  */
+.global func_8033EA2C
+func_8033EA2C:
 /* 8033EA2C 0033B96C  2C 1F 00 00 */	cmpwi r31, 0
-/* 8033EA30 0033B970  40 82 00 14 */	bne lbl_8033EA44
+/* 8033EA30 0033B970  40 82 00 14 */	bne func_8033EA44
 /* 8033EA34 0033B974  7F C3 F3 78 */	mr r3, r30
 /* 8033EA38 0033B978  4B FF EC E5 */	bl OSRestoreInterrupts
 /* 8033EA3C 0033B97C  38 60 00 00 */	li r3, 0
-/* 8033EA40 0033B980  48 00 00 5C */	b lbl_8033EA9C
-lbl_8033EA44:
+/* 8033EA40 0033B980  48 00 00 5C */	b func_8033EA9C
+
+/* 8033EA44 0008 .text      func_8033EA44                  func_8033EA44                  */
+.global func_8033EA44
+func_8033EA44:
 /* 8033EA44 0033B984  7F 83 E3 78 */	mr r3, r28
 /* 8033EA48 0033B988  48 00 31 65 */	bl OSSleepThread
-lbl_8033EA4C:
+
+/* 8033EA4C 0050 .text      func_8033EA4C                  func_8033EA4C                  */
+.global func_8033EA4C
+func_8033EA4C:
 /* 8033EA4C 0033B98C  80 DC 00 14 */	lwz r6, 0x14(r28)
 /* 8033EA50 0033B990  80 9C 00 1C */	lwz r4, 0x1c(r28)
 /* 8033EA54 0033B994  7C 06 20 00 */	cmpw r6, r4
-/* 8033EA58 0033B998  40 81 FF D4 */	ble lbl_8033EA2C
+/* 8033EA58 0033B998  40 81 FF D4 */	ble func_8033EA2C
 /* 8033EA5C 0033B99C  80 1C 00 18 */	lwz r0, 0x18(r28)
 /* 8033EA60 0033B9A0  38 7C 00 08 */	addi r3, r28, 8
 /* 8033EA64 0033B9A4  80 BC 00 10 */	lwz r5, 0x10(r28)
@@ -78,7 +89,10 @@ lbl_8033EA4C:
 /* 8033EA90 0033B9D0  7F C3 F3 78 */	mr r3, r30
 /* 8033EA94 0033B9D4  4B FF EC 89 */	bl OSRestoreInterrupts
 /* 8033EA98 0033B9D8  38 60 00 01 */	li r3, 1
-lbl_8033EA9C:
+
+/* 8033EA9C 0020 .text      func_8033EA9C                  func_8033EA9C                  */
+.global func_8033EA9C
+func_8033EA9C:
 /* 8033EA9C 0033B9DC  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8033EAA0 0033B9E0  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 8033EAA4 0033B9E4  83 C1 00 20 */	lwz r30, 0x20(r1)
@@ -88,7 +102,7 @@ lbl_8033EA9C:
 /* 8033EAB4 0033B9F4  7C 08 03 A6 */	mtlr r0
 /* 8033EAB8 0033B9F8  4E 80 00 20 */	blr 
 
-/* 8033EABC 00DC .text OSReceiveMessage OSReceiveMessage */
+/* 8033EABC 0038 .text      OSReceiveMessage               OSReceiveMessage               */
 .global OSReceiveMessage
 OSReceiveMessage:
 /* 8033EABC 0033B9FC  7C 08 02 A6 */	mflr r0
@@ -101,32 +115,44 @@ OSReceiveMessage:
 /* 8033EAD8 0033BA18  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8033EADC 0033BA1C  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EAE0 0033BA20  3B 84 00 00 */	addi r28, r4, 0
-/* 8033EAE4 0033BA24  4B FF EC 11 */	bl __RAS_OSDisableInterrupts_begin
+/* 8033EAE4 0033BA24  4B FF EC 11 */	bl OSDisableInterrupts
 /* 8033EAE8 0033BA28  3B A3 00 00 */	addi r29, r3, 0
 /* 8033EAEC 0033BA2C  57 DE 07 FE */	clrlwi r30, r30, 0x1f
-/* 8033EAF0 0033BA30  48 00 00 24 */	b lbl_8033EB14
-lbl_8033EAF4:
+/* 8033EAF0 0033BA30  48 00 00 24 */	b func_8033EB14
+
+/* 8033EAF4 0018 .text      func_8033EAF4                  func_8033EAF4                  */
+.global func_8033EAF4
+func_8033EAF4:
 /* 8033EAF4 0033BA34  2C 1E 00 00 */	cmpwi r30, 0
-/* 8033EAF8 0033BA38  40 82 00 14 */	bne lbl_8033EB0C
+/* 8033EAF8 0033BA38  40 82 00 14 */	bne func_8033EB0C
 /* 8033EAFC 0033BA3C  7F A3 EB 78 */	mr r3, r29
 /* 8033EB00 0033BA40  4B FF EC 1D */	bl OSRestoreInterrupts
 /* 8033EB04 0033BA44  38 60 00 00 */	li r3, 0
-/* 8033EB08 0033BA48  48 00 00 70 */	b lbl_8033EB78
-lbl_8033EB0C:
+/* 8033EB08 0033BA48  48 00 00 70 */	b func_8033EB78
+
+/* 8033EB0C 0008 .text      func_8033EB0C                  func_8033EB0C                  */
+.global func_8033EB0C
+func_8033EB0C:
 /* 8033EB0C 0033BA4C  38 7F 00 08 */	addi r3, r31, 8
 /* 8033EB10 0033BA50  48 00 30 9D */	bl OSSleepThread
-lbl_8033EB14:
+
+/* 8033EB14 0028 .text      func_8033EB14                  func_8033EB14                  */
+.global func_8033EB14
+func_8033EB14:
 /* 8033EB14 0033BA54  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 8033EB18 0033BA58  2C 00 00 00 */	cmpwi r0, 0
-/* 8033EB1C 0033BA5C  41 82 FF D8 */	beq lbl_8033EAF4
+/* 8033EB1C 0033BA5C  41 82 FF D8 */	beq func_8033EAF4
 /* 8033EB20 0033BA60  28 1C 00 00 */	cmplwi r28, 0
-/* 8033EB24 0033BA64  41 82 00 18 */	beq lbl_8033EB3C
+/* 8033EB24 0033BA64  41 82 00 18 */	beq func_8033EB3C
 /* 8033EB28 0033BA68  80 1F 00 18 */	lwz r0, 0x18(r31)
 /* 8033EB2C 0033BA6C  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 8033EB30 0033BA70  54 00 10 3A */	slwi r0, r0, 2
 /* 8033EB34 0033BA74  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8033EB38 0033BA78  90 1C 00 00 */	stw r0, 0(r28)
-lbl_8033EB3C:
+
+/* 8033EB3C 003C .text      func_8033EB3C                  func_8033EB3C                  */
+.global func_8033EB3C
+func_8033EB3C:
 /* 8033EB3C 0033BA7C  80 BF 00 18 */	lwz r5, 0x18(r31)
 /* 8033EB40 0033BA80  7F E3 FB 78 */	mr r3, r31
 /* 8033EB44 0033BA84  80 9F 00 14 */	lwz r4, 0x14(r31)
@@ -142,7 +168,10 @@ lbl_8033EB3C:
 /* 8033EB6C 0033BAAC  7F A3 EB 78 */	mr r3, r29
 /* 8033EB70 0033BAB0  4B FF EB AD */	bl OSRestoreInterrupts
 /* 8033EB74 0033BAB4  38 60 00 01 */	li r3, 1
-lbl_8033EB78:
+
+/* 8033EB78 0020 .text      func_8033EB78                  func_8033EB78                  */
+.global func_8033EB78
+func_8033EB78:
 /* 8033EB78 0033BAB8  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8033EB7C 0033BABC  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 8033EB80 0033BAC0  83 C1 00 20 */	lwz r30, 0x20(r1)
@@ -152,7 +181,7 @@ lbl_8033EB78:
 /* 8033EB90 0033BAD0  7C 08 03 A6 */	mtlr r0
 /* 8033EB94 0033BAD4  4E 80 00 20 */	blr 
 
-/* 8033EB98 00D4 .text OSJamMessage OSJamMessage */
+/* 8033EB98 0038 .text      OSJamMessage                   OSJamMessage                   */
 .global OSJamMessage
 OSJamMessage:
 /* 8033EB98 0033BAD8  7C 08 02 A6 */	mflr r0
@@ -165,25 +194,34 @@ OSJamMessage:
 /* 8033EBB4 0033BAF4  93 A1 00 1C */	stw r29, 0x1c(r1)
 /* 8033EBB8 0033BAF8  93 81 00 18 */	stw r28, 0x18(r1)
 /* 8033EBBC 0033BAFC  3B 84 00 00 */	addi r28, r4, 0
-/* 8033EBC0 0033BB00  4B FF EB 35 */	bl __RAS_OSDisableInterrupts_begin
+/* 8033EBC0 0033BB00  4B FF EB 35 */	bl OSDisableInterrupts
 /* 8033EBC4 0033BB04  3B A3 00 00 */	addi r29, r3, 0
 /* 8033EBC8 0033BB08  57 DE 07 FE */	clrlwi r30, r30, 0x1f
-/* 8033EBCC 0033BB0C  48 00 00 24 */	b lbl_8033EBF0
-lbl_8033EBD0:
+/* 8033EBCC 0033BB0C  48 00 00 24 */	b func_8033EBF0
+
+/* 8033EBD0 0018 .text      func_8033EBD0                  func_8033EBD0                  */
+.global func_8033EBD0
+func_8033EBD0:
 /* 8033EBD0 0033BB10  2C 1E 00 00 */	cmpwi r30, 0
-/* 8033EBD4 0033BB14  40 82 00 14 */	bne lbl_8033EBE8
+/* 8033EBD4 0033BB14  40 82 00 14 */	bne func_8033EBE8
 /* 8033EBD8 0033BB18  7F A3 EB 78 */	mr r3, r29
 /* 8033EBDC 0033BB1C  4B FF EB 41 */	bl OSRestoreInterrupts
 /* 8033EBE0 0033BB20  38 60 00 00 */	li r3, 0
-/* 8033EBE4 0033BB24  48 00 00 68 */	b lbl_8033EC4C
-lbl_8033EBE8:
+/* 8033EBE4 0033BB24  48 00 00 68 */	b func_8033EC4C
+
+/* 8033EBE8 0008 .text      func_8033EBE8                  func_8033EBE8                  */
+.global func_8033EBE8
+func_8033EBE8:
 /* 8033EBE8 0033BB28  7F E3 FB 78 */	mr r3, r31
 /* 8033EBEC 0033BB2C  48 00 2F C1 */	bl OSSleepThread
-lbl_8033EBF0:
+
+/* 8033EBF0 005C .text      func_8033EBF0                  func_8033EBF0                  */
+.global func_8033EBF0
+func_8033EBF0:
 /* 8033EBF0 0033BB30  80 BF 00 14 */	lwz r5, 0x14(r31)
 /* 8033EBF4 0033BB34  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 8033EBF8 0033BB38  7C 05 00 00 */	cmpw r5, r0
-/* 8033EBFC 0033BB3C  40 81 FF D4 */	ble lbl_8033EBD0
+/* 8033EBFC 0033BB3C  40 81 FF D4 */	ble func_8033EBD0
 /* 8033EC00 0033BB40  80 9F 00 18 */	lwz r4, 0x18(r31)
 /* 8033EC04 0033BB44  38 05 FF FF */	addi r0, r5, -1
 /* 8033EC08 0033BB48  38 7F 00 08 */	addi r3, r31, 8
@@ -203,7 +241,10 @@ lbl_8033EBF0:
 /* 8033EC40 0033BB80  7F A3 EB 78 */	mr r3, r29
 /* 8033EC44 0033BB84  4B FF EA D9 */	bl OSRestoreInterrupts
 /* 8033EC48 0033BB88  38 60 00 01 */	li r3, 1
-lbl_8033EC4C:
+
+/* 8033EC4C 0020 .text      func_8033EC4C                  func_8033EC4C                  */
+.global func_8033EC4C
+func_8033EC4C:
 /* 8033EC4C 0033BB8C  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8033EC50 0033BB90  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 8033EC54 0033BB94  83 C1 00 20 */	lwz r30, 0x20(r1)

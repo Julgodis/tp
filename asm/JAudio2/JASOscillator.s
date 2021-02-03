@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8029BE94 0030 .text __ct__13JASOscillatorFv __ct__13JASOscillatorFv */
+/* 8029BE94 0030 .text      __ct__13JASOscillatorFv        __ct__13JASOscillatorFv        */
 .global __ct__13JASOscillatorFv
 __ct__13JASOscillatorFv:
 /* 8029BE94 00298DD4  38 00 00 00 */	li r0, 0
@@ -11,19 +13,19 @@ __ct__13JASOscillatorFv:
 /* 8029BEA0 00298DE0  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 8029BEA4 00298DE4  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8029BEA8 00298DE8  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029BEAC 00298DEC  C0 02 BC F8 */	lfs f0, lbl_804556F8-_SDA2_BASE_(r2)
+/* 8029BEAC 00298DEC  C0 02 BC F8 */	lfs f0, JASOscillator__LIT_77-_SDA2_BASE_(r2)
 /* 8029BEB0 00298DF0  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8029BEB4 00298DF4  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029BEB8 00298DF8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029BEBC 00298DFC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029BEC0 00298E00  4E 80 00 20 */	blr 
 
-/* 8029BEC4 00A4 .text initStart__13JASOscillatorFPCQ213JASOscillator4Data initStart__13JASOscillatorFPCQ213JASOscillator4Data */
+/* 8029BEC4 0034 .text      initStart__13JASOscillatorFPCQ213JASOscillator4Data initStart__13JASOscillatorFPCQ213JASOscillator4Data */
 .global initStart__13JASOscillatorFPCQ213JASOscillator4Data
 initStart__13JASOscillatorFPCQ213JASOscillator4Data:
 /* 8029BEC4 00298E04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029BEC8 00298E08  90 83 00 00 */	stw r4, 0(r3)
-/* 8029BECC 00298E0C  C0 02 BC F8 */	lfs f0, lbl_804556F8-_SDA2_BASE_(r2)
+/* 8029BECC 00298E0C  C0 02 BC F8 */	lfs f0, JASOscillator__LIT_77-_SDA2_BASE_(r2)
 /* 8029BED0 00298E10  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029BED4 00298E14  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029BED8 00298E18  D0 03 00 0C */	stfs f0, 0xc(r3)
@@ -31,29 +33,35 @@ initStart__13JASOscillatorFPCQ213JASOscillator4Data:
 /* 8029BEE0 00298E20  B0 03 00 14 */	sth r0, 0x14(r3)
 /* 8029BEE4 00298E24  B0 03 00 16 */	sth r0, 0x16(r3)
 /* 8029BEE8 00298E28  28 04 00 00 */	cmplwi r4, 0
-/* 8029BEEC 00298E2C  40 82 00 0C */	bne lbl_8029BEF8
+/* 8029BEEC 00298E2C  40 82 00 0C */	bne func_8029BEF8
 /* 8029BEF0 00298E30  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029BEF4 00298E34  48 00 00 6C */	b lbl_8029BF60
-lbl_8029BEF8:
+/* 8029BEF4 00298E34  48 00 00 6C */	b func_8029BF60
+
+/* 8029BEF8 0024 .text      func_8029BEF8                  func_8029BEF8                  */
+.global func_8029BEF8
+func_8029BEF8:
 /* 8029BEF8 00298E38  80 83 00 00 */	lwz r4, 0(r3)
 /* 8029BEFC 00298E3C  80 84 00 08 */	lwz r4, 8(r4)
 /* 8029BF00 00298E40  28 04 00 00 */	cmplwi r4, 0
-/* 8029BF04 00298E44  40 82 00 18 */	bne lbl_8029BF1C
+/* 8029BF04 00298E44  40 82 00 18 */	bne func_8029BF1C
 /* 8029BF08 00298E48  38 00 00 02 */	li r0, 2
 /* 8029BF0C 00298E4C  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029BF10 00298E50  C0 02 BC FC */	lfs f0, lbl_804556FC-_SDA2_BASE_(r2)
+/* 8029BF10 00298E50  C0 02 BC FC */	lfs f0, JASOscillator__LIT_87-_SDA2_BASE_(r2)
 /* 8029BF14 00298E54  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8029BF18 00298E58  48 00 00 48 */	b lbl_8029BF60
-lbl_8029BF1C:
+/* 8029BF18 00298E58  48 00 00 48 */	b func_8029BF60
+
+/* 8029BF1C 0044 .text      func_8029BF1C                  func_8029BF1C                  */
+.global func_8029BF1C
+func_8029BF1C:
 /* 8029BF1C 00298E5C  A8 04 00 04 */	lha r0, 4(r4)
-/* 8029BF20 00298E60  C8 22 BD 08 */	lfd f1, lbl_80455708-_SDA2_BASE_(r2)
+/* 8029BF20 00298E60  C8 22 BD 08 */	lfd f1, JASOscillator__LIT_91-_SDA2_BASE_(r2)
 /* 8029BF24 00298E64  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8029BF28 00298E68  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8029BF2C 00298E6C  3C 00 43 30 */	lis r0, 0x4330
 /* 8029BF30 00298E70  90 01 00 08 */	stw r0, 8(r1)
 /* 8029BF34 00298E74  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029BF38 00298E78  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8029BF3C 00298E7C  C0 02 BD 00 */	lfs f0, lbl_80455700-_SDA2_BASE_(r2)
+/* 8029BF3C 00298E7C  C0 02 BD 00 */	lfs f0, JASOscillator__LIT_88-_SDA2_BASE_(r2)
 /* 8029BF40 00298E80  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8029BF44 00298E84  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029BF48 00298E88  80 83 00 00 */	lwz r4, 0(r3)
@@ -62,11 +70,14 @@ lbl_8029BF1C:
 /* 8029BF54 00298E94  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8029BF58 00298E98  38 00 00 01 */	li r0, 1
 /* 8029BF5C 00298E9C  90 03 00 1C */	stw r0, 0x1c(r3)
-lbl_8029BF60:
+
+/* 8029BF60 0008 .text      func_8029BF60                  func_8029BF60                  */
+.global func_8029BF60
+func_8029BF60:
 /* 8029BF60 00298EA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029BF64 00298EA4  4E 80 00 20 */	blr 
 
-/* 8029BF68 0060 .text incCounter__13JASOscillatorFf incCounter__13JASOscillatorFf */
+/* 8029BF68 0028 .text      incCounter__13JASOscillatorFf  incCounter__13JASOscillatorFf  */
 .global incCounter__13JASOscillatorFf
 incCounter__13JASOscillatorFf:
 /* 8029BF68 00298EA8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -74,16 +85,22 @@ incCounter__13JASOscillatorFf:
 /* 8029BF70 00298EB0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029BF74 00298EB4  80 03 00 1C */	lwz r0, 0x1c(r3)
 /* 8029BF78 00298EB8  2C 00 00 01 */	cmpwi r0, 1
-/* 8029BF7C 00298EBC  41 82 00 20 */	beq lbl_8029BF9C
-/* 8029BF80 00298EC0  40 80 00 10 */	bge lbl_8029BF90
+/* 8029BF7C 00298EBC  41 82 00 20 */	beq func_8029BF9C
+/* 8029BF80 00298EC0  40 80 00 10 */	bge func_8029BF90
 /* 8029BF84 00298EC4  2C 00 00 00 */	cmpwi r0, 0
-/* 8029BF88 00298EC8  40 80 00 30 */	bge lbl_8029BFB8
-/* 8029BF8C 00298ECC  48 00 00 10 */	b lbl_8029BF9C
-lbl_8029BF90:
+/* 8029BF88 00298EC8  40 80 00 30 */	bge func_8029BFB8
+/* 8029BF8C 00298ECC  48 00 00 10 */	b func_8029BF9C
+
+/* 8029BF90 000C .text      func_8029BF90                  func_8029BF90                  */
+.global func_8029BF90
+func_8029BF90:
 /* 8029BF90 00298ED0  2C 00 00 03 */	cmpwi r0, 3
-/* 8029BF94 00298ED4  40 80 00 08 */	bge lbl_8029BF9C
-/* 8029BF98 00298ED8  48 00 00 20 */	b lbl_8029BFB8
-lbl_8029BF9C:
+/* 8029BF94 00298ED4  40 80 00 08 */	bge func_8029BF9C
+/* 8029BF98 00298ED8  48 00 00 20 */	b func_8029BFB8
+
+/* 8029BF9C 001C .text      func_8029BF9C                  func_8029BF9C                  */
+.global func_8029BF9C
+func_8029BF9C:
 /* 8029BF9C 00298EDC  C0 43 00 04 */	lfs f2, 4(r3)
 /* 8029BFA0 00298EE0  80 83 00 00 */	lwz r4, 0(r3)
 /* 8029BFA4 00298EE4  C0 04 00 04 */	lfs f0, 4(r4)
@@ -91,13 +108,16 @@ lbl_8029BF9C:
 /* 8029BFAC 00298EEC  EC 02 00 2A */	fadds f0, f2, f0
 /* 8029BFB0 00298EF0  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029BFB4 00298EF4  48 00 01 2D */	bl update__13JASOscillatorFv
-lbl_8029BFB8:
+
+/* 8029BFB8 0010 .text      func_8029BFB8                  func_8029BFB8                  */
+.global func_8029BFB8
+func_8029BFB8:
 /* 8029BFB8 00298EF8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029BFBC 00298EFC  7C 08 03 A6 */	mtlr r0
 /* 8029BFC0 00298F00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029BFC4 00298F04  4E 80 00 20 */	blr 
 
-/* 8029BFC8 001C .text getValue__13JASOscillatorCFv getValue__13JASOscillatorCFv */
+/* 8029BFC8 001C .text      getValue__13JASOscillatorCFv   getValue__13JASOscillatorCFv   */
 .global getValue__13JASOscillatorCFv
 getValue__13JASOscillatorCFv:
 /* 8029BFC8 00298F08  80 83 00 00 */	lwz r4, 0(r3)
@@ -108,7 +128,7 @@ getValue__13JASOscillatorCFv:
 /* 8029BFDC 00298F1C  EC 22 00 2A */	fadds f1, f2, f0
 /* 8029BFE0 00298F20  4E 80 00 20 */	blr 
 
-/* 8029BFE4 00FC .text release__13JASOscillatorFv release__13JASOscillatorFv */
+/* 8029BFE4 0034 .text      release__13JASOscillatorFv     release__13JASOscillatorFv     */
 .global release__13JASOscillatorFv
 release__13JASOscillatorFv:
 /* 8029BFE4 00298F24  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -117,18 +137,21 @@ release__13JASOscillatorFv:
 /* 8029BFF0 00298F30  80 A3 00 00 */	lwz r5, 0(r3)
 /* 8029BFF4 00298F34  80 85 00 0C */	lwz r4, 0xc(r5)
 /* 8029BFF8 00298F38  28 04 00 00 */	cmplwi r4, 0
-/* 8029BFFC 00298F3C  40 82 00 1C */	bne lbl_8029C018
+/* 8029BFFC 00298F3C  40 82 00 1C */	bne func_8029C018
 /* 8029C000 00298F40  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 8029C004 00298F44  28 00 00 00 */	cmplwi r0, 0
-/* 8029C008 00298F48  40 82 00 10 */	bne lbl_8029C018
+/* 8029C008 00298F48  40 82 00 10 */	bne func_8029C018
 /* 8029C00C 00298F4C  38 00 00 00 */	li r0, 0
 /* 8029C010 00298F50  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029C014 00298F54  48 00 00 BC */	b lbl_8029C0D0
-lbl_8029C018:
+/* 8029C014 00298F54  48 00 00 BC */	b func_8029C0D0
+
+/* 8029C018 0044 .text      func_8029C018                  func_8029C018                  */
+.global func_8029C018
+func_8029C018:
 /* 8029C018 00298F58  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 8029C01C 00298F5C  28 00 00 00 */	cmplwi r0, 0
-/* 8029C020 00298F60  41 82 00 3C */	beq lbl_8029C05C
-/* 8029C024 00298F64  C0 22 BC F8 */	lfs f1, lbl_804556F8-_SDA2_BASE_(r2)
+/* 8029C020 00298F60  41 82 00 3C */	beq func_8029C05C
+/* 8029C024 00298F64  C0 22 BC F8 */	lfs f1, JASOscillator__LIT_77-_SDA2_BASE_(r2)
 /* 8029C028 00298F68  D0 23 00 04 */	stfs f1, 4(r3)
 /* 8029C02C 00298F6C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8029C030 00298F70  D0 03 00 0C */	stfs f0, 0xc(r3)
@@ -141,26 +164,29 @@ lbl_8029C018:
 /* 8029C04C 00298F8C  38 00 00 04 */	li r0, 4
 /* 8029C050 00298F90  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 8029C054 00298F94  48 00 00 8D */	bl update__13JASOscillatorFv
-/* 8029C058 00298F98  48 00 00 78 */	b lbl_8029C0D0
-lbl_8029C05C:
+/* 8029C058 00298F98  48 00 00 78 */	b func_8029C0D0
+
+/* 8029C05C 0068 .text      func_8029C05C                  func_8029C05C                  */
+.global func_8029C05C
+func_8029C05C:
 /* 8029C05C 00298F9C  80 05 00 08 */	lwz r0, 8(r5)
 /* 8029C060 00298FA0  7C 00 20 40 */	cmplw r0, r4
-/* 8029C064 00298FA4  41 82 00 60 */	beq lbl_8029C0C4
-/* 8029C068 00298FA8  C0 02 BC F8 */	lfs f0, lbl_804556F8-_SDA2_BASE_(r2)
+/* 8029C064 00298FA4  41 82 00 60 */	beq func_8029C0C4
+/* 8029C068 00298FA8  C0 02 BC F8 */	lfs f0, JASOscillator__LIT_77-_SDA2_BASE_(r2)
 /* 8029C06C 00298FAC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 8029C070 00298FB0  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8029C074 00298FB4  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8029C078 00298FB8  80 83 00 00 */	lwz r4, 0(r3)
 /* 8029C07C 00298FBC  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 8029C080 00298FC0  A8 04 00 04 */	lha r0, 4(r4)
-/* 8029C084 00298FC4  C8 22 BD 08 */	lfd f1, lbl_80455708-_SDA2_BASE_(r2)
+/* 8029C084 00298FC4  C8 22 BD 08 */	lfd f1, JASOscillator__LIT_91-_SDA2_BASE_(r2)
 /* 8029C088 00298FC8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8029C08C 00298FCC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8029C090 00298FD0  3C 00 43 30 */	lis r0, 0x4330
 /* 8029C094 00298FD4  90 01 00 08 */	stw r0, 8(r1)
 /* 8029C098 00298FD8  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029C09C 00298FDC  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8029C0A0 00298FE0  C0 02 BD 00 */	lfs f0, lbl_80455700-_SDA2_BASE_(r2)
+/* 8029C0A0 00298FE0  C0 02 BD 00 */	lfs f0, JASOscillator__LIT_88-_SDA2_BASE_(r2)
 /* 8029C0A4 00298FE4  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8029C0A8 00298FE8  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8029C0AC 00298FEC  38 00 00 00 */	li r0, 0
@@ -169,17 +195,23 @@ lbl_8029C05C:
 /* 8029C0B8 00298FF8  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 8029C0BC 00298FFC  A8 04 00 00 */	lha r0, 0(r4)
 /* 8029C0C0 00299000  98 03 00 18 */	stb r0, 0x18(r3)
-lbl_8029C0C4:
+
+/* 8029C0C4 000C .text      func_8029C0C4                  func_8029C0C4                  */
+.global func_8029C0C4
+func_8029C0C4:
 /* 8029C0C4 00299004  38 00 00 03 */	li r0, 3
 /* 8029C0C8 00299008  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 8029C0CC 0029900C  48 00 00 15 */	bl update__13JASOscillatorFv
-lbl_8029C0D0:
+
+/* 8029C0D0 0010 .text      func_8029C0D0                  func_8029C0D0                  */
+.global func_8029C0D0
+func_8029C0D0:
 /* 8029C0D0 00299010  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029C0D4 00299014  7C 08 03 A6 */	mtlr r0
 /* 8029C0D8 00299018  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C0DC 0029901C  4E 80 00 20 */	blr 
 
-/* 8029C0E0 01E0 .text update__13JASOscillatorFv update__13JASOscillatorFv */
+/* 8029C0E0 0060 .text      update__13JASOscillatorFv      update__13JASOscillatorFv      */
 .global update__13JASOscillatorFv
 update__13JASOscillatorFv:
 /* 8029C0E0 00299020  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -187,11 +219,11 @@ update__13JASOscillatorFv:
 /* 8029C0E8 00299028  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029C0EC 0029902C  80 03 00 1C */	lwz r0, 0x1c(r3)
 /* 8029C0F0 00299030  2C 00 00 04 */	cmpwi r0, 4
-/* 8029C0F4 00299034  40 82 00 60 */	bne lbl_8029C154
+/* 8029C0F4 00299034  40 82 00 60 */	bne func_8029C154
 /* 8029C0F8 00299038  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 8029C0FC 0029903C  54 00 04 BE */	clrlwi r0, r0, 0x12
 /* 8029C100 00299040  C0 43 00 04 */	lfs f2, 4(r3)
-/* 8029C104 00299044  C8 22 BD 08 */	lfd f1, lbl_80455708-_SDA2_BASE_(r2)
+/* 8029C104 00299044  C8 22 BD 08 */	lfd f1, JASOscillator__LIT_91-_SDA2_BASE_(r2)
 /* 8029C108 00299048  6C 04 80 00 */	xoris r4, r0, 0x8000
 /* 8029C10C 0029904C  90 81 00 0C */	stw r4, 0xc(r1)
 /* 8029C110 00299050  3C 00 43 30 */	lis r0, 0x4330
@@ -199,41 +231,59 @@ update__13JASOscillatorFv:
 /* 8029C118 00299058  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029C11C 0029905C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8029C120 00299060  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 8029C124 00299064  40 80 00 1C */	bge lbl_8029C140
+/* 8029C124 00299064  40 80 00 1C */	bge func_8029C140
 /* 8029C128 00299068  90 81 00 0C */	stw r4, 0xc(r1)
 /* 8029C12C 0029906C  90 01 00 08 */	stw r0, 8(r1)
 /* 8029C130 00299070  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029C134 00299074  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8029C138 00299078  48 00 01 89 */	bl updateCurrentValue__13JASOscillatorFf
-/* 8029C13C 0029907C  48 00 01 74 */	b lbl_8029C2B0
-lbl_8029C140:
+/* 8029C13C 0029907C  48 00 01 74 */	b func_8029C2B0
+
+/* 8029C140 0014 .text      func_8029C140                  func_8029C140                  */
+.global func_8029C140
+func_8029C140:
 /* 8029C140 00299080  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8029C144 00299084  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8029C148 00299088  38 00 00 00 */	li r0, 0
 /* 8029C14C 0029908C  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029C150 00299090  48 00 01 60 */	b lbl_8029C2B0
-lbl_8029C154:
+/* 8029C150 00299090  48 00 01 60 */	b func_8029C2B0
+
+/* 8029C154 001C .text      func_8029C154                  func_8029C154                  */
+.global func_8029C154
+func_8029C154:
 /* 8029C154 00299094  2C 00 00 02 */	cmpwi r0, 2
-/* 8029C158 00299098  41 82 01 58 */	beq lbl_8029C2B0
+/* 8029C158 00299098  41 82 01 58 */	beq func_8029C2B0
 /* 8029C15C 0029909C  2C 00 00 01 */	cmpwi r0, 1
-/* 8029C160 002990A0  40 82 00 10 */	bne lbl_8029C170
+/* 8029C160 002990A0  40 82 00 10 */	bne func_8029C170
 /* 8029C164 002990A4  80 83 00 00 */	lwz r4, 0(r3)
 /* 8029C168 002990A8  80 E4 00 08 */	lwz r7, 8(r4)
-/* 8029C16C 002990AC  48 00 00 0C */	b lbl_8029C178
-lbl_8029C170:
+/* 8029C16C 002990AC  48 00 00 0C */	b func_8029C178
+
+/* 8029C170 0008 .text      func_8029C170                  func_8029C170                  */
+.global func_8029C170
+func_8029C170:
 /* 8029C170 002990B0  80 83 00 00 */	lwz r4, 0(r3)
 /* 8029C174 002990B4  80 E4 00 0C */	lwz r7, 0xc(r4)
-lbl_8029C178:
+
+/* 8029C178 0014 .text      func_8029C178                  func_8029C178                  */
+.global func_8029C178
+func_8029C178:
 /* 8029C178 002990B8  28 07 00 00 */	cmplwi r7, 0
-/* 8029C17C 002990BC  40 82 00 10 */	bne lbl_8029C18C
+/* 8029C17C 002990BC  40 82 00 10 */	bne func_8029C18C
 /* 8029C180 002990C0  38 00 00 02 */	li r0, 2
 /* 8029C184 002990C4  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029C188 002990C8  48 00 01 28 */	b lbl_8029C2B0
-lbl_8029C18C:
-/* 8029C18C 002990CC  C8 42 BD 08 */	lfd f2, lbl_80455708-_SDA2_BASE_(r2)
+/* 8029C188 002990C8  48 00 01 28 */	b func_8029C2B0
+
+/* 8029C18C 000C .text      func_8029C18C                  func_8029C18C                  */
+.global func_8029C18C
+func_8029C18C:
+/* 8029C18C 002990CC  C8 42 BD 08 */	lfd f2, JASOscillator__LIT_91-_SDA2_BASE_(r2)
 /* 8029C190 002990D0  3C A0 43 30 */	lis r5, 0x4330
-/* 8029C194 002990D4  48 00 00 C4 */	b lbl_8029C258
-lbl_8029C198:
+/* 8029C194 002990D4  48 00 00 C4 */	b func_8029C258
+
+/* 8029C198 0064 .text      func_8029C198                  func_8029C198                  */
+.global func_8029C198
+func_8029C198:
 /* 8029C198 002990D8  C0 23 00 04 */	lfs f1, 4(r3)
 /* 8029C19C 002990DC  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 8029C1A0 002990E0  90 01 00 0C */	stw r0, 0xc(r1)
@@ -254,39 +304,54 @@ lbl_8029C198:
 /* 8029C1DC 0029911C  7C 87 02 14 */	add r4, r7, r0
 /* 8029C1E0 00299120  A8 04 00 00 */	lha r0, 0(r4)
 /* 8029C1E4 00299124  2C 00 00 0E */	cmpwi r0, 0xe
-/* 8029C1E8 00299128  41 82 00 28 */	beq lbl_8029C210
-/* 8029C1EC 0029912C  40 80 00 10 */	bge lbl_8029C1FC
+/* 8029C1E8 00299128  41 82 00 28 */	beq func_8029C210
+/* 8029C1EC 0029912C  40 80 00 10 */	bge func_8029C1FC
 /* 8029C1F0 00299130  2C 00 00 0D */	cmpwi r0, 0xd
-/* 8029C1F4 00299134  40 80 00 28 */	bge lbl_8029C21C
-/* 8029C1F8 00299138  48 00 00 30 */	b lbl_8029C228
-lbl_8029C1FC:
+/* 8029C1F4 00299134  40 80 00 28 */	bge func_8029C21C
+/* 8029C1F8 00299138  48 00 00 30 */	b func_8029C228
+
+/* 8029C1FC 0014 .text      func_8029C1FC                  func_8029C1FC                  */
+.global func_8029C1FC
+func_8029C1FC:
 /* 8029C1FC 0029913C  2C 00 00 10 */	cmpwi r0, 0x10
-/* 8029C200 00299140  40 80 00 28 */	bge lbl_8029C228
+/* 8029C200 00299140  40 80 00 28 */	bge func_8029C228
 /* 8029C204 00299144  38 00 00 00 */	li r0, 0
 /* 8029C208 00299148  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029C20C 0029914C  48 00 00 A4 */	b lbl_8029C2B0
-lbl_8029C210:
+/* 8029C20C 0029914C  48 00 00 A4 */	b func_8029C2B0
+
+/* 8029C210 000C .text      func_8029C210                  func_8029C210                  */
+.global func_8029C210
+func_8029C210:
 /* 8029C210 00299150  38 00 00 02 */	li r0, 2
 /* 8029C214 00299154  90 03 00 1C */	stw r0, 0x1c(r3)
-/* 8029C218 00299158  48 00 00 98 */	b lbl_8029C2B0
-lbl_8029C21C:
+/* 8029C218 00299158  48 00 00 98 */	b func_8029C2B0
+
+/* 8029C21C 000C .text      func_8029C21C                  func_8029C21C                  */
+.global func_8029C21C
+func_8029C21C:
 /* 8029C21C 0029915C  A8 04 00 04 */	lha r0, 4(r4)
 /* 8029C220 00299160  B0 03 00 14 */	sth r0, 0x14(r3)
-/* 8029C224 00299164  48 00 00 34 */	b lbl_8029C258
-lbl_8029C228:
+/* 8029C224 00299164  48 00 00 34 */	b func_8029C258
+
+/* 8029C228 0030 .text      func_8029C228                  func_8029C228                  */
+.global func_8029C228
+func_8029C228:
 /* 8029C228 00299168  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8029C22C 0029916C  A8 04 00 04 */	lha r0, 4(r4)
-/* 8029C230 00299170  C8 22 BD 08 */	lfd f1, lbl_80455708-_SDA2_BASE_(r2)
+/* 8029C230 00299170  C8 22 BD 08 */	lfd f1, JASOscillator__LIT_91-_SDA2_BASE_(r2)
 /* 8029C234 00299174  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8029C238 00299178  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8029C23C 0029917C  3C 00 43 30 */	lis r0, 0x4330
 /* 8029C240 00299180  90 01 00 08 */	stw r0, 8(r1)
 /* 8029C244 00299184  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029C248 00299188  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8029C24C 0029918C  C0 02 BD 00 */	lfs f0, lbl_80455700-_SDA2_BASE_(r2)
+/* 8029C24C 0029918C  C0 02 BD 00 */	lfs f0, JASOscillator__LIT_88-_SDA2_BASE_(r2)
 /* 8029C250 00299190  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8029C254 00299194  D0 03 00 10 */	stfs f0, 0x10(r3)
-lbl_8029C258:
+
+/* 8029C258 0058 .text      func_8029C258                  func_8029C258                  */
+.global func_8029C258
+func_8029C258:
 /* 8029C258 00299198  C0 23 00 04 */	lfs f1, 4(r3)
 /* 8029C25C 0029919C  A0 03 00 14 */	lhz r0, 0x14(r3)
 /* 8029C260 002991A0  1C C0 00 06 */	mulli r6, r0, 6
@@ -299,7 +364,7 @@ lbl_8029C258:
 /* 8029C27C 002991BC  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8029C280 002991C0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8029C284 002991C4  4C 41 13 82 */	cror 2, 1, 2
-/* 8029C288 002991C8  41 82 FF 10 */	beq lbl_8029C198
+/* 8029C288 002991C8  41 82 FF 10 */	beq func_8029C198
 /* 8029C28C 002991CC  7C 87 32 14 */	add r4, r7, r6
 /* 8029C290 002991D0  A8 04 00 02 */	lha r0, 2(r4)
 /* 8029C294 002991D4  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -309,13 +374,16 @@ lbl_8029C258:
 /* 8029C2A4 002991E4  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029C2A8 002991E8  EC 20 10 28 */	fsubs f1, f0, f2
 /* 8029C2AC 002991EC  48 00 00 15 */	bl updateCurrentValue__13JASOscillatorFf
-lbl_8029C2B0:
+
+/* 8029C2B0 0010 .text      func_8029C2B0                  func_8029C2B0                  */
+.global func_8029C2B0
+func_8029C2B0:
 /* 8029C2B0 002991F0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029C2B4 002991F4  7C 08 03 A6 */	mtlr r0
 /* 8029C2B8 002991F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C2BC 002991FC  4E 80 00 20 */	blr 
 
-/* 8029C2C0 00C8 .text updateCurrentValue__13JASOscillatorFf updateCurrentValue__13JASOscillatorFf */
+/* 8029C2C0 00C8 .text      updateCurrentValue__13JASOscillatorFf updateCurrentValue__13JASOscillatorFf */
 .global updateCurrentValue__13JASOscillatorFf
 updateCurrentValue__13JASOscillatorFf:
 /* 8029C2C0 00299200  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -328,16 +396,16 @@ updateCurrentValue__13JASOscillatorFf:
 /* 8029C2DC 0029921C  7C 7E 1B 78 */	mr r30, r3
 /* 8029C2E0 00299220  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 8029C2E4 00299224  54 00 10 3A */	slwi r0, r0, 2
-/* 8029C2E8 00299228  3C 60 80 3C */	lis r3, lbl_803C78A8@ha
-/* 8029C2EC 0029922C  38 63 78 A8 */	addi r3, r3, lbl_803C78A8@l
+/* 8029C2E8 00299228  3C 60 80 3C */	lis r3, sym_803C78A8@ha
+/* 8029C2EC 0029922C  38 63 78 A8 */	addi r3, r3, sym_803C78A8@l
 /* 8029C2F0 00299230  7F E3 00 2E */	lwzx r31, r3, r0
-/* 8029C2F4 00299234  C0 42 BD 10 */	lfs f2, lbl_80455710-_SDA2_BASE_(r2)
+/* 8029C2F4 00299234  C0 42 BD 10 */	lfs f2, JASOscillator__LIT_154-_SDA2_BASE_(r2)
 /* 8029C2F8 00299238  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8029C2FC 0029923C  EC 00 08 24 */	fdivs f0, f0, f1
 /* 8029C300 00299240  EF E2 00 32 */	fmuls f31, f2, f0
 /* 8029C304 00299244  FC 20 F8 90 */	fmr f1, f31
 /* 8029C308 00299248  48 0C 5D A5 */	bl __cvt_fp2unsigned
-/* 8029C30C 0029924C  C8 22 BD 18 */	lfd f1, lbl_80455718-_SDA2_BASE_(r2)
+/* 8029C30C 0029924C  C8 22 BD 18 */	lfd f1, JASOscillator__LIT_156-_SDA2_BASE_(r2)
 /* 8029C310 00299250  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8029C314 00299254  3C 00 43 30 */	lis r0, 0x4330
 /* 8029C318 00299258  90 01 00 08 */	stw r0, 8(r1)
@@ -345,7 +413,7 @@ updateCurrentValue__13JASOscillatorFf:
 /* 8029C320 00299260  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8029C324 00299264  EC 5F 00 28 */	fsubs f2, f31, f0
 /* 8029C328 00299268  54 60 10 3A */	slwi r0, r3, 2
-/* 8029C32C 0029926C  C0 62 BC FC */	lfs f3, lbl_804556FC-_SDA2_BASE_(r2)
+/* 8029C32C 0029926C  C0 62 BC FC */	lfs f3, JASOscillator__LIT_87-_SDA2_BASE_(r2)
 /* 8029C330 00299270  EC 23 10 28 */	fsubs f1, f3, f2
 /* 8029C334 00299274  7C 1F 04 2E */	lfsx f0, r31, r0
 /* 8029C338 00299278  EC 21 00 32 */	fmuls f1, f1, f0
@@ -370,9 +438,11 @@ updateCurrentValue__13JASOscillatorFf:
 /* 8029C384 002992C4  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .rodata                                         */
+/* ###################################################################################### */
 .section .rodata, "a"
-/* 8039B1D0 0044 .rodata sCurveTableLinear__13JASOscillator sCurveTableLinear__13JASOscillator */
+/* 8039B1D0 0044 .rodata    sCurveTableLinear__13JASOscillator sCurveTableLinear__13JASOscillator */
 .global sCurveTableLinear__13JASOscillator
 sCurveTableLinear__13JASOscillator:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x70, 0x00, 0x00, 0x3f, 0x60, 0x00, 0x00, 0x3f, 0x50, 0x00, 0x00 /* baserom.dol+0x3981d0 */
@@ -381,7 +451,7 @@ sCurveTableLinear__13JASOscillator:
 .byte 0x3e, 0x80, 0x00, 0x00, 0x3e, 0x40, 0x00, 0x00, 0x3e, 0x00, 0x00, 0x00, 0x3d, 0x80, 0x00, 0x00 /* baserom.dol+0x398200 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398210 */
 
-/* 8039B214 0044 .rodata sCurveTableSampleCell__13JASOscillator sCurveTableSampleCell__13JASOscillator */
+/* 8039B214 0044 .rodata    sCurveTableSampleCell__13JASOscillator sCurveTableSampleCell__13JASOscillator */
 .global sCurveTableSampleCell__13JASOscillator
 sCurveTableSampleCell__13JASOscillator:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x78, 0x71, 0xf8, 0x3f, 0x48, 0x01, 0x93, 0x3f, 0x0b, 0xd9, 0x12 /* baserom.dol+0x398214 */
@@ -390,7 +460,7 @@ sCurveTableSampleCell__13JASOscillator:
 .byte 0x3c, 0xfc, 0x81, 0xfc, 0x3c, 0xc2, 0x41, 0x8e, 0x3c, 0x7a, 0x02, 0x25, 0x3c, 0x16, 0x01, 0x29 /* baserom.dol+0x398244 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398254 */
 
-/* 8039B258 0044 .rodata sCurveTableSqRoot__13JASOscillator sCurveTableSqRoot__13JASOscillator */
+/* 8039B258 0044 .rodata    sCurveTableSqRoot__13JASOscillator sCurveTableSqRoot__13JASOscillator */
 .global sCurveTableSqRoot__13JASOscillator
 sCurveTableSqRoot__13JASOscillator:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x60, 0xff, 0xfc, 0x3f, 0x44, 0x00, 0x00, 0x3f, 0x28, 0xff, 0xfc /* baserom.dol+0x398258 */
@@ -399,7 +469,7 @@ sCurveTableSqRoot__13JASOscillator:
 .byte 0x3d, 0x80, 0x00, 0x00, 0x3d, 0x0f, 0xff, 0xf3, 0x3c, 0x80, 0x00, 0x00, 0x3b, 0x80, 0x00, 0x00 /* baserom.dol+0x398288 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398298 */
 
-/* 8039B29C 0044 .rodata sCurveTableSquare__13JASOscillator sCurveTableSquare__13JASOscillator */
+/* 8039B29C 0044 .rodata    sCurveTableSquare__13JASOscillator sCurveTableSquare__13JASOscillator */
 .global sCurveTableSquare__13JASOscillator
 sCurveTableSquare__13JASOscillator:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x77, 0xde, 0xf8, 0x3f, 0x6f, 0x77, 0x4b, 0x3f, 0x66, 0xc1, 0x5d /* baserom.dol+0x39829c */
@@ -409,45 +479,49 @@ sCurveTableSquare__13JASOscillator:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3982dc */
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C78A8 0010 .data lbl_803C78A8 table_list$151 */
-.global lbl_803C78A8
-lbl_803C78A8:
+/* 803C78A8 0010 .data      sym_803C78A8                   table_list$151                 */
+.global sym_803C78A8
+sym_803C78A8:
 .byte 0x80, 0x39, 0xb1, 0xd0, 0x80, 0x39, 0xb2, 0x9c, 0x80, 0x39, 0xb2, 0x58, 0x80, 0x39, 0xb2, 0x14 /* baserom.dol+0x3c48a8 */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 804556F8 0004 .sdata2 lbl_804556F8 @77 */
-.global lbl_804556F8
-lbl_804556F8:
+/* 804556F8 0004 .sdata2    JASOscillator__LIT_77          @77                            */
+.global JASOscillator__LIT_77
+JASOscillator__LIT_77:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4558 */
 
-/* 804556FC 0004 .sdata2 lbl_804556FC @87 */
-.global lbl_804556FC
-lbl_804556FC:
+/* 804556FC 0004 .sdata2    JASOscillator__LIT_87          @87                            */
+.global JASOscillator__LIT_87
+JASOscillator__LIT_87:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d455c */
 
-/* 80455700 0004 .sdata2 lbl_80455700 @88 */
-.global lbl_80455700
-lbl_80455700:
+/* 80455700 0004 .sdata2    JASOscillator__LIT_88          @88                            */
+.global JASOscillator__LIT_88
+JASOscillator__LIT_88:
 .byte 0x47, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4560 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4564 */
 
-/* 80455708 0008 .sdata2 lbl_80455708 @91 */
-.global lbl_80455708
-lbl_80455708:
+/* 80455708 0008 .sdata2    JASOscillator__LIT_91          @91                            */
+.global JASOscillator__LIT_91
+JASOscillator__LIT_91:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4568 */
 
-/* 80455710 0004 .sdata2 lbl_80455710 @154 */
-.global lbl_80455710
-lbl_80455710:
+/* 80455710 0004 .sdata2    JASOscillator__LIT_154         @154                           */
+.global JASOscillator__LIT_154
+JASOscillator__LIT_154:
 .byte 0x41, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4570 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4574 */
 
-/* 80455718 0008 .sdata2 lbl_80455718 @156 */
-.global lbl_80455718
-lbl_80455718:
+/* 80455718 0008 .sdata2    JASOscillator__LIT_156         @156                           */
+.global JASOscillator__LIT_156
+JASOscillator__LIT_156:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4578 */
 

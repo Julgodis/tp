@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8037214C 0034 .text TRKTargetContinue TRKTargetContinue */
+/* 8037214C 0034 .text      TRKTargetContinue              TRKTargetContinue              */
 .global TRKTargetContinue
 TRKTargetContinue:
 /* 8037214C 0036F08C  94 21 FF F0 */	stwu r1, -0x10(r1)

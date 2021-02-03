@@ -1,42 +1,56 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8033B078 00AC .text DLInsert DLInsert */
+/* 8033B078 000C .text      DLInsert                       DLInsert                       */
 .global DLInsert
 DLInsert:
 /* 8033B078 00337FB8  38 E3 00 00 */	addi r7, r3, 0
 /* 8033B07C 00337FBC  38 C0 00 00 */	li r6, 0
-/* 8033B080 00337FC0  48 00 00 14 */	b lbl_8033B094
-lbl_8033B084:
+/* 8033B080 00337FC0  48 00 00 14 */	b func_8033B094
+
+/* 8033B084 0010 .text      func_8033B084                  func_8033B084                  */
+.global func_8033B084
+func_8033B084:
 /* 8033B084 00337FC4  7C 04 38 40 */	cmplw r4, r7
-/* 8033B088 00337FC8  40 81 00 14 */	ble lbl_8033B09C
+/* 8033B088 00337FC8  40 81 00 14 */	ble func_8033B09C
 /* 8033B08C 00337FCC  7C E6 3B 78 */	mr r6, r7
 /* 8033B090 00337FD0  80 E7 00 04 */	lwz r7, 4(r7)
-lbl_8033B094:
+
+/* 8033B094 0008 .text      func_8033B094                  func_8033B094                  */
+.global func_8033B094
+func_8033B094:
 /* 8033B094 00337FD4  28 07 00 00 */	cmplwi r7, 0
-/* 8033B098 00337FD8  40 82 FF EC */	bne lbl_8033B084
-lbl_8033B09C:
+/* 8033B098 00337FD8  40 82 FF EC */	bne func_8033B084
+
+/* 8033B09C 0044 .text      func_8033B09C                  func_8033B09C                  */
+.global func_8033B09C
+func_8033B09C:
 /* 8033B09C 00337FDC  90 E4 00 04 */	stw r7, 4(r4)
 /* 8033B0A0 00337FE0  28 07 00 00 */	cmplwi r7, 0
 /* 8033B0A4 00337FE4  90 C4 00 00 */	stw r6, 0(r4)
-/* 8033B0A8 00337FE8  41 82 00 38 */	beq lbl_8033B0E0
+/* 8033B0A8 00337FE8  41 82 00 38 */	beq func_8033B0E0
 /* 8033B0AC 00337FEC  90 87 00 00 */	stw r4, 0(r7)
 /* 8033B0B0 00337FF0  80 A4 00 08 */	lwz r5, 8(r4)
 /* 8033B0B4 00337FF4  7C 04 2A 14 */	add r0, r4, r5
 /* 8033B0B8 00337FF8  7C 00 38 40 */	cmplw r0, r7
-/* 8033B0BC 00337FFC  40 82 00 24 */	bne lbl_8033B0E0
+/* 8033B0BC 00337FFC  40 82 00 24 */	bne func_8033B0E0
 /* 8033B0C0 00338000  80 07 00 08 */	lwz r0, 8(r7)
 /* 8033B0C4 00338004  7C 05 02 14 */	add r0, r5, r0
 /* 8033B0C8 00338008  90 04 00 08 */	stw r0, 8(r4)
 /* 8033B0CC 0033800C  80 E7 00 04 */	lwz r7, 4(r7)
 /* 8033B0D0 00338010  28 07 00 00 */	cmplwi r7, 0
 /* 8033B0D4 00338014  90 E4 00 04 */	stw r7, 4(r4)
-/* 8033B0D8 00338018  41 82 00 08 */	beq lbl_8033B0E0
+/* 8033B0D8 00338018  41 82 00 08 */	beq func_8033B0E0
 /* 8033B0DC 0033801C  90 87 00 00 */	stw r4, 0(r7)
-lbl_8033B0E0:
+
+/* 8033B0E0 003C .text      func_8033B0E0                  func_8033B0E0                  */
+.global func_8033B0E0
+func_8033B0E0:
 /* 8033B0E0 00338020  28 06 00 00 */	cmplwi r6, 0
-/* 8033B0E4 00338024  41 82 00 38 */	beq lbl_8033B11C
+/* 8033B0E4 00338024  41 82 00 38 */	beq func_8033B11C
 /* 8033B0E8 00338028  90 86 00 04 */	stw r4, 4(r6)
 /* 8033B0EC 0033802C  80 A6 00 08 */	lwz r5, 8(r6)
 /* 8033B0F0 00338030  7C 06 2A 14 */	add r0, r6, r5
@@ -50,11 +64,14 @@ lbl_8033B0E0:
 /* 8033B110 00338050  4D 82 00 20 */	beqlr 
 /* 8033B114 00338054  90 C7 00 00 */	stw r6, 0(r7)
 /* 8033B118 00338058  4E 80 00 20 */	blr 
-lbl_8033B11C:
+
+/* 8033B11C 0008 .text      func_8033B11C                  func_8033B11C                  */
+.global func_8033B11C
+func_8033B11C:
 /* 8033B11C 0033805C  7C 83 23 78 */	mr r3, r4
 /* 8033B120 00338060  4E 80 00 20 */	blr 
 
-/* 8033B124 007C .text OSFreeToHeap OSFreeToHeap */
+/* 8033B124 003C .text      OSFreeToHeap                   OSFreeToHeap                   */
 .global OSFreeToHeap
 OSFreeToHeap:
 /* 8033B124 00338064  7C 08 02 A6 */	mflr r0
@@ -69,19 +86,28 @@ OSFreeToHeap:
 /* 8033B148 00338088  28 03 00 00 */	cmplwi r3, 0
 /* 8033B14C 0033808C  80 BF 00 08 */	lwz r5, 8(r31)
 /* 8033B150 00338090  7C C4 33 78 */	mr r4, r6
-/* 8033B154 00338094  41 82 00 0C */	beq lbl_8033B160
+/* 8033B154 00338094  41 82 00 0C */	beq func_8033B160
 /* 8033B158 00338098  80 04 00 00 */	lwz r0, 0(r4)
 /* 8033B15C 0033809C  90 03 00 00 */	stw r0, 0(r3)
-lbl_8033B160:
+
+/* 8033B160 0014 .text      func_8033B160                  func_8033B160                  */
+.global func_8033B160
+func_8033B160:
 /* 8033B160 003380A0  80 64 00 00 */	lwz r3, 0(r4)
 /* 8033B164 003380A4  28 03 00 00 */	cmplwi r3, 0
-/* 8033B168 003380A8  40 82 00 0C */	bne lbl_8033B174
+/* 8033B168 003380A8  40 82 00 0C */	bne func_8033B174
 /* 8033B16C 003380AC  80 A4 00 04 */	lwz r5, 4(r4)
-/* 8033B170 003380B0  48 00 00 0C */	b lbl_8033B17C
-lbl_8033B174:
+/* 8033B170 003380B0  48 00 00 0C */	b func_8033B17C
+
+/* 8033B174 0008 .text      func_8033B174                  func_8033B174                  */
+.global func_8033B174
+func_8033B174:
 /* 8033B174 003380B4  80 04 00 04 */	lwz r0, 4(r4)
 /* 8033B178 003380B8  90 03 00 04 */	stw r0, 4(r3)
-lbl_8033B17C:
+
+/* 8033B17C 0024 .text      func_8033B17C                  func_8033B17C                  */
+.global func_8033B17C
+func_8033B17C:
 /* 8033B17C 003380BC  90 BF 00 08 */	stw r5, 8(r31)
 /* 8033B180 003380C0  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8033B184 003380C4  4B FF FE F5 */	bl DLInsert
@@ -92,7 +118,7 @@ lbl_8033B17C:
 /* 8033B198 003380D8  7C 08 03 A6 */	mtlr r0
 /* 8033B19C 003380DC  4E 80 00 20 */	blr 
 
-/* 8033B1A0 0010 .text OSSetCurrentHeap OSSetCurrentHeap */
+/* 8033B1A0 0010 .text      OSSetCurrentHeap               OSSetCurrentHeap               */
 .global OSSetCurrentHeap
 OSSetCurrentHeap:
 /* 8033B1A0 003380E0  80 0D 84 10 */	lwz r0, __OSCurrHeap-_SDA_BASE_(r13)
@@ -100,7 +126,7 @@ OSSetCurrentHeap:
 /* 8033B1A8 003380E8  7C 03 03 78 */	mr r3, r0
 /* 8033B1AC 003380EC  4E 80 00 20 */	blr 
 
-/* 8033B1B0 0070 .text OSInitAlloc OSInitAlloc */
+/* 8033B1B0 0020 .text      OSInitAlloc                    OSInitAlloc                    */
 .global OSInitAlloc
 OSInitAlloc:
 /* 8033B1B0 003380F0  1C E5 00 0C */	mulli r7, r5, 0xc
@@ -110,8 +136,11 @@ OSInitAlloc:
 /* 8033B1C0 00338100  38 66 00 00 */	addi r3, r6, 0
 /* 8033B1C4 00338104  39 00 00 00 */	li r8, 0
 /* 8033B1C8 00338108  38 A0 FF FF */	li r5, -1
-/* 8033B1CC 0033810C  48 00 00 20 */	b lbl_8033B1EC
-lbl_8033B1D0:
+/* 8033B1CC 0033810C  48 00 00 20 */	b func_8033B1EC
+
+/* 8033B1D0 001C .text      func_8033B1D0                  func_8033B1D0                  */
+.global func_8033B1D0
+func_8033B1D0:
 /* 8033B1D0 00338110  80 0D 90 C0 */	lwz r0, HeapArray-_SDA_BASE_(r13)
 /* 8033B1D4 00338114  39 08 00 01 */	addi r8, r8, 1
 /* 8033B1D8 00338118  7D 20 32 14 */	add r9, r0, r6
@@ -119,10 +148,13 @@ lbl_8033B1D0:
 /* 8033B1E0 00338120  38 C6 00 0C */	addi r6, r6, 0xc
 /* 8033B1E4 00338124  90 69 00 08 */	stw r3, 8(r9)
 /* 8033B1E8 00338128  90 69 00 04 */	stw r3, 4(r9)
-lbl_8033B1EC:
+
+/* 8033B1EC 0034 .text      func_8033B1EC                  func_8033B1EC                  */
+.global func_8033B1EC
+func_8033B1EC:
 /* 8033B1EC 0033812C  80 0D 90 C4 */	lwz r0, NumHeaps-_SDA_BASE_(r13)
 /* 8033B1F0 00338130  7C 08 00 00 */	cmpw r8, r0
-/* 8033B1F4 00338134  41 80 FF DC */	blt lbl_8033B1D0
+/* 8033B1F4 00338134  41 80 FF DC */	blt func_8033B1D0
 /* 8033B1F8 00338138  80 6D 90 C0 */	lwz r3, HeapArray-_SDA_BASE_(r13)
 /* 8033B1FC 0033813C  54 80 00 34 */	rlwinm r0, r4, 0, 0, 0x1a
 /* 8033B200 00338140  38 80 FF FF */	li r4, -1
@@ -134,7 +166,7 @@ lbl_8033B1EC:
 /* 8033B218 00338158  90 6D 90 C8 */	stw r3, ArenaStart-_SDA_BASE_(r13)
 /* 8033B21C 0033815C  4E 80 00 20 */	blr 
 
-/* 8033B220 006C .text OSCreateHeap OSCreateHeap */
+/* 8033B220 0024 .text      OSCreateHeap                   OSCreateHeap                   */
 .global OSCreateHeap
 OSCreateHeap:
 /* 8033B220 00338160  80 CD 90 C4 */	lwz r6, NumHeaps-_SDA_BASE_(r13)
@@ -145,11 +177,14 @@ OSCreateHeap:
 /* 8033B234 00338174  7C C9 03 A6 */	mtctr r6
 /* 8033B238 00338178  54 84 00 34 */	rlwinm r4, r4, 0, 0, 0x1a
 /* 8033B23C 0033817C  38 60 00 00 */	li r3, 0
-/* 8033B240 00338180  40 81 00 44 */	ble lbl_8033B284
-lbl_8033B244:
+/* 8033B240 00338180  40 81 00 44 */	ble func_8033B284
+
+/* 8033B244 0034 .text      func_8033B244                  func_8033B244                  */
+.global func_8033B244
+func_8033B244:
 /* 8033B244 00338184  80 05 00 00 */	lwz r0, 0(r5)
 /* 8033B248 00338188  2C 00 00 00 */	cmpwi r0, 0
-/* 8033B24C 0033818C  40 80 00 2C */	bge lbl_8033B278
+/* 8033B24C 0033818C  40 80 00 2C */	bge func_8033B278
 /* 8033B250 00338190  7C 07 20 50 */	subf r0, r7, r4
 /* 8033B254 00338194  90 05 00 00 */	stw r0, 0(r5)
 /* 8033B258 00338198  38 80 00 00 */	li r4, 0
@@ -160,42 +195,52 @@ lbl_8033B244:
 /* 8033B26C 003381AC  90 E5 00 04 */	stw r7, 4(r5)
 /* 8033B270 003381B0  90 85 00 08 */	stw r4, 8(r5)
 /* 8033B274 003381B4  4E 80 00 20 */	blr 
-lbl_8033B278:
+
+/* 8033B278 000C .text      func_8033B278                  func_8033B278                  */
+.global func_8033B278
+func_8033B278:
 /* 8033B278 003381B8  38 A5 00 0C */	addi r5, r5, 0xc
 /* 8033B27C 003381BC  38 63 00 01 */	addi r3, r3, 1
-/* 8033B280 003381C0  42 00 FF C4 */	bdnz lbl_8033B244
-lbl_8033B284:
+/* 8033B280 003381C0  42 00 FF C4 */	bdnz func_8033B244
+
+/* 8033B284 0008 .text      func_8033B284                  func_8033B284                  */
+.global func_8033B284
+func_8033B284:
 /* 8033B284 003381C4  38 60 FF FF */	li r3, -1
 /* 8033B288 003381C8  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 80450990 0004 .sdata __OSCurrHeap __OSCurrHeap */
+/* 80450990 0004 .sdata     __OSCurrHeap                   __OSCurrHeap                   */
 .global __OSCurrHeap
 __OSCurrHeap:
 .byte 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3d06f0 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d06f4 */
 
 
-
+/* ###################################################################################### */
+/*                                         .sbss                                          */
+/* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451640 0004 .sbss HeapArray HeapArray */
+/* 80451640 0004 .sbss      HeapArray                      HeapArray                      */
 .global HeapArray
 HeapArray:
 .skip 0x4
 
-/* 80451644 0004 .sbss NumHeaps NumHeaps */
+/* 80451644 0004 .sbss      NumHeaps                       NumHeaps                       */
 .global NumHeaps
 NumHeaps:
 .skip 0x4
 
-/* 80451648 0004 .sbss ArenaStart ArenaStart */
+/* 80451648 0004 .sbss      ArenaStart                     ArenaStart                     */
 .global ArenaStart
 ArenaStart:
 .skip 0x4
 
-/* 8045164C 0004 .sbss ArenaEnd ArenaEnd */
+/* 8045164C 0004 .sbss      ArenaEnd                       ArenaEnd                       */
 .global ArenaEnd
 ArenaEnd:
 .skip 0x4

@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80290D74 0050 .text start__8JASProbeFPCc start__8JASProbeFPCc */
+/* 80290D74 0050 .text      start__8JASProbeFPCc           start__8JASProbeFPCc           */
 .global start__8JASProbeFPCc
 start__8JASProbeFPCc:
 /* 80290D74 0028DCB4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -12,7 +14,7 @@ start__8JASProbeFPCc:
 /* 80290D84 0028DCC4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80290D88 0028DCC8  7C 7E 1B 78 */	mr r30, r3
 /* 80290D8C 0028DCCC  7C 9F 23 78 */	mr r31, r4
-/* 80290D90 0028DCD0  48 0A C9 65 */	bl __RAS_OSDisableInterrupts_begin
+/* 80290D90 0028DCD0  48 0A C9 65 */	bl OSDisableInterrupts
 /* 80290D94 0028DCD4  90 61 00 08 */	stw r3, 8(r1)
 /* 80290D98 0028DCD8  93 FE 00 00 */	stw r31, 0(r30)
 /* 80290D9C 0028DCDC  48 0B 19 61 */	bl OSGetTime
@@ -26,7 +28,7 @@ start__8JASProbeFPCc:
 /* 80290DBC 0028DCFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80290DC0 0028DD00  4E 80 00 20 */	blr 
 
-/* 80290DC4 0120 .text stop__8JASProbeFv stop__8JASProbeFv */
+/* 80290DC4 0094 .text      stop__8JASProbeFv              stop__8JASProbeFv              */
 .global stop__8JASProbeFv
 stop__8JASProbeFv:
 /* 80290DC4 0028DD04  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -34,12 +36,12 @@ stop__8JASProbeFv:
 /* 80290DCC 0028DD0C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80290DD0 0028DD10  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80290DD4 0028DD14  7C 7F 1B 78 */	mr r31, r3
-/* 80290DD8 0028DD18  48 0A C9 1D */	bl __RAS_OSDisableInterrupts_begin
+/* 80290DD8 0028DD18  48 0A C9 1D */	bl OSDisableInterrupts
 /* 80290DDC 0028DD1C  90 61 00 08 */	stw r3, 8(r1)
 /* 80290DE0 0028DD20  48 0B 19 1D */	bl OSGetTime
 /* 80290DE4 0028DD24  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80290DE8 0028DD28  7C 00 20 50 */	subf r0, r0, r4
-/* 80290DEC 0028DD2C  C8 22 BB 98 */	lfd f1, lbl_80455598-_SDA2_BASE_(r2)
+/* 80290DEC 0028DD2C  C8 22 BB 98 */	lfd f1, LIT_129-_SDA2_BASE_(r2)
 /* 80290DF0 0028DD30  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80290DF4 0028DD34  3C 80 43 30 */	lis r4, 0x4330
 /* 80290DF8 0028DD38  90 81 00 10 */	stw r4, 0x10(r1)
@@ -54,23 +56,26 @@ stop__8JASProbeFv:
 /* 80290E1C 0028DD5C  90 81 00 18 */	stw r4, 0x18(r1)
 /* 80290E20 0028DD60  C8 01 00 18 */	lfd f0, 0x18(r1)
 /* 80290E24 0028DD64  EC 20 08 28 */	fsubs f1, f0, f1
-/* 80290E28 0028DD68  C0 02 BB 88 */	lfs f0, lbl_80455588-_SDA2_BASE_(r2)
+/* 80290E28 0028DD68  C0 02 BB 88 */	lfs f0, JASProbe__LIT_125-_SDA2_BASE_(r2)
 /* 80290E2C 0028DD6C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80290E30 0028DD70  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80290E34 0028DD74  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 80290E38 0028DD78  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80290E3C 0028DD7C  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80290E40 0028DD80  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 80290E44 0028DD84  40 80 00 14 */	bge lbl_80290E58
+/* 80290E44 0028DD84  40 80 00 14 */	bge func_80290E58
 /* 80290E48 0028DD88  80 1F 01 A8 */	lwz r0, 0x1a8(r31)
 /* 80290E4C 0028DD8C  28 00 00 64 */	cmplwi r0, 0x64
-/* 80290E50 0028DD90  40 81 00 08 */	ble lbl_80290E58
+/* 80290E50 0028DD90  40 81 00 08 */	ble func_80290E58
 /* 80290E54 0028DD94  D0 3F 00 10 */	stfs f1, 0x10(r31)
-lbl_80290E58:
-/* 80290E58 0028DD98  C0 22 BB 8C */	lfs f1, lbl_8045558C-_SDA2_BASE_(r2)
+
+/* 80290E58 008C .text      func_80290E58                  func_80290E58                  */
+.global func_80290E58
+func_80290E58:
+/* 80290E58 0028DD98  C0 22 BB 8C */	lfs f1, JASProbe__LIT_126-_SDA2_BASE_(r2)
 /* 80290E5C 0028DD9C  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80290E60 0028DDA0  EC 41 00 32 */	fmuls f2, f1, f0
-/* 80290E64 0028DDA4  C0 22 BB 90 */	lfs f1, lbl_80455590-_SDA2_BASE_(r2)
+/* 80290E64 0028DDA4  C0 22 BB 90 */	lfs f1, JASProbe__LIT_127-_SDA2_BASE_(r2)
 /* 80290E68 0028DDA8  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80290E6C 0028DDAC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80290E70 0028DDB0  EC 02 00 2A */	fadds f0, f2, f0
@@ -103,77 +108,87 @@ lbl_80290E58:
 /* 80290EDC 0028DE1C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80290EE0 0028DE20  4E 80 00 20 */	blr 
 
-/* 80290EE4 0040 .text start__8JASProbeFlPCc start__8JASProbeFlPCc */
+/* 80290EE4 0030 .text      start__8JASProbeFlPCc          start__8JASProbeFlPCc          */
 .global start__8JASProbeFlPCc
 start__8JASProbeFlPCc:
 /* 80290EE4 0028DE24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80290EE8 0028DE28  7C 08 02 A6 */	mflr r0
 /* 80290EEC 0028DE2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80290EF0 0028DE30  2C 03 00 10 */	cmpwi r3, 0x10
-/* 80290EF4 0028DE34  40 80 00 20 */	bge lbl_80290F14
+/* 80290EF4 0028DE34  40 80 00 20 */	bge func_80290F14
 /* 80290EF8 0028DE38  54 60 10 3A */	slwi r0, r3, 2
 /* 80290EFC 0028DE3C  3C 60 80 43 */	lis r3, sProbeTable__8JASProbe@ha
 /* 80290F00 0028DE40  38 63 16 20 */	addi r3, r3, sProbeTable__8JASProbe@l
 /* 80290F04 0028DE44  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80290F08 0028DE48  28 03 00 00 */	cmplwi r3, 0
-/* 80290F0C 0028DE4C  41 82 00 08 */	beq lbl_80290F14
+/* 80290F0C 0028DE4C  41 82 00 08 */	beq func_80290F14
 /* 80290F10 0028DE50  4B FF FE 65 */	bl start__8JASProbeFPCc
-lbl_80290F14:
+
+/* 80290F14 0010 .text      func_80290F14                  func_80290F14                  */
+.global func_80290F14
+func_80290F14:
 /* 80290F14 0028DE54  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80290F18 0028DE58  7C 08 03 A6 */	mtlr r0
 /* 80290F1C 0028DE5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80290F20 0028DE60  4E 80 00 20 */	blr 
 
-/* 80290F24 0040 .text stop__8JASProbeFl stop__8JASProbeFl */
+/* 80290F24 0030 .text      stop__8JASProbeFl              stop__8JASProbeFl              */
 .global stop__8JASProbeFl
 stop__8JASProbeFl:
 /* 80290F24 0028DE64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80290F28 0028DE68  7C 08 02 A6 */	mflr r0
 /* 80290F2C 0028DE6C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80290F30 0028DE70  2C 03 00 10 */	cmpwi r3, 0x10
-/* 80290F34 0028DE74  40 80 00 20 */	bge lbl_80290F54
+/* 80290F34 0028DE74  40 80 00 20 */	bge func_80290F54
 /* 80290F38 0028DE78  54 60 10 3A */	slwi r0, r3, 2
 /* 80290F3C 0028DE7C  3C 60 80 43 */	lis r3, sProbeTable__8JASProbe@ha
 /* 80290F40 0028DE80  38 63 16 20 */	addi r3, r3, sProbeTable__8JASProbe@l
 /* 80290F44 0028DE84  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80290F48 0028DE88  28 03 00 00 */	cmplwi r3, 0
-/* 80290F4C 0028DE8C  41 82 00 08 */	beq lbl_80290F54
+/* 80290F4C 0028DE8C  41 82 00 08 */	beq func_80290F54
 /* 80290F50 0028DE90  4B FF FE 75 */	bl stop__8JASProbeFv
-lbl_80290F54:
+
+/* 80290F54 0010 .text      func_80290F54                  func_80290F54                  */
+.global func_80290F54
+func_80290F54:
 /* 80290F54 0028DE94  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80290F58 0028DE98  7C 08 03 A6 */	mtlr r0
 /* 80290F5C 0028DE9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80290F60 0028DEA0  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                          .bss                                          */
+/* ###################################################################################### */
 .section .bss, "aw"
-/* 80431620 0040 .bss sProbeTable__8JASProbe sProbeTable__8JASProbe */
+/* 80431620 0040 .bss       sProbeTable__8JASProbe         sProbeTable__8JASProbe         */
 .global sProbeTable__8JASProbe
 sProbeTable__8JASProbe:
 .skip 0x40
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455588 0004 .sdata2 lbl_80455588 @125 */
-.global lbl_80455588
-lbl_80455588:
+/* 80455588 0004 .sdata2    JASProbe__LIT_125              @125                           */
+.global JASProbe__LIT_125
+JASProbe__LIT_125:
 .byte 0x42, 0x6f, 0xc2, 0x8f /* baserom.dol+0x3d43e8 */
 
-/* 8045558C 0004 .sdata2 lbl_8045558C @126 */
-.global lbl_8045558C
-lbl_8045558C:
+/* 8045558C 0004 .sdata2    JASProbe__LIT_126              @126                           */
+.global JASProbe__LIT_126
+JASProbe__LIT_126:
 .byte 0x3f, 0x75, 0xc2, 0x8f /* baserom.dol+0x3d43ec */
 
-/* 80455590 0004 .sdata2 lbl_80455590 @127 */
-.global lbl_80455590
-lbl_80455590:
+/* 80455590 0004 .sdata2    JASProbe__LIT_127              @127                           */
+.global JASProbe__LIT_127
+JASProbe__LIT_127:
 .byte 0x3d, 0x23, 0xd7, 0x0a /* baserom.dol+0x3d43f0 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d43f4 */
 
-/* 80455598 0008 .sdata2 lbl_80455598 @129 */
-.global lbl_80455598
-lbl_80455598:
+/* 80455598 0008 .sdata2    LIT_129                        @129                           */
+.global LIT_129
+LIT_129:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d43f8 */
 

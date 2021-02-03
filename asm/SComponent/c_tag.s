@@ -1,15 +1,17 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80266880 000C .text cTg_IsUse__FP16create_tag_class cTg_IsUse__FP16create_tag_class */
+/* 80266880 000C .text      cTg_IsUse__FP16create_tag_class cTg_IsUse__FP16create_tag_class */
 .global cTg_IsUse__FP16create_tag_class
 cTg_IsUse__FP16create_tag_class:
 /* 80266880 002637C0  88 63 00 10 */	lbz r3, 0x10(r3)
 /* 80266884 002637C4  7C 63 07 74 */	extsb r3, r3
 /* 80266888 002637C8  4E 80 00 20 */	blr 
 
-/* 8026688C 0040 .text cTg_SingleCutFromTree__FP16create_tag_class cTg_SingleCutFromTree__FP16create_tag_class */
+/* 8026688C 002C .text      cTg_SingleCutFromTree__FP16create_tag_class cTg_SingleCutFromTree__FP16create_tag_class */
 .global cTg_SingleCutFromTree__FP16create_tag_class
 cTg_SingleCutFromTree__FP16create_tag_class:
 /* 8026688C 002637CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -17,21 +19,27 @@ cTg_SingleCutFromTree__FP16create_tag_class:
 /* 80266894 002637D4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80266898 002637D8  88 03 00 10 */	lbz r0, 0x10(r3)
 /* 8026689C 002637DC  2C 00 00 01 */	cmpwi r0, 1
-/* 802668A0 002637E0  40 82 00 18 */	bne lbl_802668B8
+/* 802668A0 002637E0  40 82 00 18 */	bne func_802668B8
 /* 802668A4 002637E4  38 00 00 00 */	li r0, 0
 /* 802668A8 002637E8  98 03 00 10 */	stb r0, 0x10(r3)
 /* 802668AC 002637EC  4B FF FB 95 */	bl cTr_SingleCut__FP10node_class
 /* 802668B0 002637F0  38 60 00 01 */	li r3, 1
-/* 802668B4 002637F4  48 00 00 08 */	b lbl_802668BC
-lbl_802668B8:
+/* 802668B4 002637F4  48 00 00 08 */	b func_802668BC
+
+/* 802668B8 0004 .text      func_802668B8                  func_802668B8                  */
+.global func_802668B8
+func_802668B8:
 /* 802668B8 002637F8  38 60 00 00 */	li r3, 0
-lbl_802668BC:
+
+/* 802668BC 0010 .text      func_802668BC                  func_802668BC                  */
+.global func_802668BC
+func_802668BC:
 /* 802668BC 002637FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802668C0 00263800  7C 08 03 A6 */	mtlr r0
 /* 802668C4 00263804  38 21 00 10 */	addi r1, r1, 0x10
 /* 802668C8 00263808  4E 80 00 20 */	blr 
 
-/* 802668CC 0050 .text cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
+/* 802668CC 0038 .text      cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
 .global cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class
 cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class:
 /* 802668CC 0026380C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -41,23 +49,29 @@ cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class:
 /* 802668DC 0026381C  7C BF 2B 78 */	mr r31, r5
 /* 802668E0 00263820  88 05 00 10 */	lbz r0, 0x10(r5)
 /* 802668E4 00263824  7C 00 07 75 */	extsb. r0, r0
-/* 802668E8 00263828  40 82 00 1C */	bne lbl_80266904
+/* 802668E8 00263828  40 82 00 1C */	bne func_80266904
 /* 802668EC 0026382C  4B FF FB 75 */	bl cTr_Addition__FP21node_lists_tree_classiP10node_class
 /* 802668F0 00263830  2C 03 00 00 */	cmpwi r3, 0
-/* 802668F4 00263834  41 82 00 10 */	beq lbl_80266904
+/* 802668F4 00263834  41 82 00 10 */	beq func_80266904
 /* 802668F8 00263838  38 00 00 01 */	li r0, 1
 /* 802668FC 0026383C  98 1F 00 10 */	stb r0, 0x10(r31)
-/* 80266900 00263840  48 00 00 08 */	b lbl_80266908
-lbl_80266904:
+/* 80266900 00263840  48 00 00 08 */	b func_80266908
+
+/* 80266904 0004 .text      func_80266904                  func_80266904                  */
+.global func_80266904
+func_80266904:
 /* 80266904 00263844  38 60 00 00 */	li r3, 0
-lbl_80266908:
+
+/* 80266908 0014 .text      func_80266908                  func_80266908                  */
+.global func_80266908
+func_80266908:
 /* 80266908 00263848  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8026690C 0026384C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80266910 00263850  7C 08 03 A6 */	mtlr r0
 /* 80266914 00263854  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266918 00263858  4E 80 00 20 */	blr 
 
-/* 8026691C 0050 .text cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
+/* 8026691C 0038 .text      cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
 .global cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi
 cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi:
 /* 8026691C 0026385C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -67,23 +81,29 @@ cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi:
 /* 8026692C 0026386C  7C BF 2B 78 */	mr r31, r5
 /* 80266930 00263870  88 05 00 10 */	lbz r0, 0x10(r5)
 /* 80266934 00263874  7C 00 07 75 */	extsb. r0, r0
-/* 80266938 00263878  40 82 00 1C */	bne lbl_80266954
+/* 80266938 00263878  40 82 00 1C */	bne func_80266954
 /* 8026693C 0026387C  4B FF FB 69 */	bl cTr_Insert__FP21node_lists_tree_classiP10node_classi
 /* 80266940 00263880  2C 03 00 00 */	cmpwi r3, 0
-/* 80266944 00263884  41 82 00 10 */	beq lbl_80266954
+/* 80266944 00263884  41 82 00 10 */	beq func_80266954
 /* 80266948 00263888  38 00 00 01 */	li r0, 1
 /* 8026694C 0026388C  98 1F 00 10 */	stb r0, 0x10(r31)
-/* 80266950 00263890  48 00 00 08 */	b lbl_80266958
-lbl_80266954:
+/* 80266950 00263890  48 00 00 08 */	b func_80266958
+
+/* 80266954 0004 .text      func_80266954                  func_80266954                  */
+.global func_80266954
+func_80266954:
 /* 80266954 00263894  38 60 00 00 */	li r3, 0
-lbl_80266958:
+
+/* 80266958 0014 .text      func_80266958                  func_80266958                  */
+.global func_80266958
+func_80266958:
 /* 80266958 00263898  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8026695C 0026389C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80266960 002638A0  7C 08 03 A6 */	mtlr r0
 /* 80266964 002638A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266968 002638A8  4E 80 00 20 */	blr 
 
-/* 8026696C 0038 .text cTg_GetFirst__FP15node_list_class cTg_GetFirst__FP15node_list_class */
+/* 8026696C 0024 .text      cTg_GetFirst__FP15node_list_class cTg_GetFirst__FP15node_list_class */
 .global cTg_GetFirst__FP15node_list_class
 cTg_GetFirst__FP15node_list_class:
 /* 8026696C 002638AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -91,19 +111,25 @@ cTg_GetFirst__FP15node_list_class:
 /* 80266974 002638B4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80266978 002638B8  4B FF F6 81 */	bl cLs_GetFirst__FP15node_list_class
 /* 8026697C 002638BC  28 03 00 00 */	cmplwi r3, 0
-/* 80266980 002638C0  41 82 00 10 */	beq lbl_80266990
+/* 80266980 002638C0  41 82 00 10 */	beq func_80266990
 /* 80266984 002638C4  38 00 00 00 */	li r0, 0
 /* 80266988 002638C8  98 03 00 10 */	stb r0, 0x10(r3)
-/* 8026698C 002638CC  48 00 00 08 */	b lbl_80266994
-lbl_80266990:
+/* 8026698C 002638CC  48 00 00 08 */	b func_80266994
+
+/* 80266990 0004 .text      func_80266990                  func_80266990                  */
+.global func_80266990
+func_80266990:
 /* 80266990 002638D0  38 60 00 00 */	li r3, 0
-lbl_80266994:
+
+/* 80266994 0010 .text      func_80266994                  func_80266994                  */
+.global func_80266994
+func_80266994:
 /* 80266994 002638D4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80266998 002638D8  7C 08 03 A6 */	mtlr r0
 /* 8026699C 002638DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802669A0 002638E0  4E 80 00 20 */	blr 
 
-/* 802669A4 0040 .text cTg_SingleCut__FP16create_tag_class cTg_SingleCut__FP16create_tag_class */
+/* 802669A4 002C .text      cTg_SingleCut__FP16create_tag_class cTg_SingleCut__FP16create_tag_class */
 .global cTg_SingleCut__FP16create_tag_class
 cTg_SingleCut__FP16create_tag_class:
 /* 802669A4 002638E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -111,21 +137,27 @@ cTg_SingleCut__FP16create_tag_class:
 /* 802669AC 002638EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802669B0 002638F0  88 03 00 10 */	lbz r0, 0x10(r3)
 /* 802669B4 002638F4  2C 00 00 01 */	cmpwi r0, 1
-/* 802669B8 002638F8  40 82 00 18 */	bne lbl_802669D0
+/* 802669B8 002638F8  40 82 00 18 */	bne func_802669D0
 /* 802669BC 002638FC  38 00 00 00 */	li r0, 0
 /* 802669C0 00263900  98 03 00 10 */	stb r0, 0x10(r3)
 /* 802669C4 00263904  4B FF F4 B5 */	bl cLs_SingleCut__FP10node_class
 /* 802669C8 00263908  38 60 00 01 */	li r3, 1
-/* 802669CC 0026390C  48 00 00 08 */	b lbl_802669D4
-lbl_802669D0:
+/* 802669CC 0026390C  48 00 00 08 */	b func_802669D4
+
+/* 802669D0 0004 .text      func_802669D0                  func_802669D0                  */
+.global func_802669D0
+func_802669D0:
 /* 802669D0 00263910  38 60 00 00 */	li r3, 0
-lbl_802669D4:
+
+/* 802669D4 0010 .text      func_802669D4                  func_802669D4                  */
+.global func_802669D4
+func_802669D4:
 /* 802669D4 00263914  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802669D8 00263918  7C 08 03 A6 */	mtlr r0
 /* 802669DC 0026391C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802669E0 00263920  4E 80 00 20 */	blr 
 
-/* 802669E4 0050 .text cTg_Addition__FP15node_list_classP16create_tag_class cTg_Addition__FP15node_list_classP16create_tag_class */
+/* 802669E4 0038 .text      cTg_Addition__FP15node_list_classP16create_tag_class cTg_Addition__FP15node_list_classP16create_tag_class */
 .global cTg_Addition__FP15node_list_classP16create_tag_class
 cTg_Addition__FP15node_list_classP16create_tag_class:
 /* 802669E4 00263924  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -135,23 +167,29 @@ cTg_Addition__FP15node_list_classP16create_tag_class:
 /* 802669F4 00263934  7C 9F 23 78 */	mr r31, r4
 /* 802669F8 00263938  88 04 00 10 */	lbz r0, 0x10(r4)
 /* 802669FC 0026393C  7C 00 07 75 */	extsb. r0, r0
-/* 80266A00 00263940  40 82 00 1C */	bne lbl_80266A1C
+/* 80266A00 00263940  40 82 00 1C */	bne func_80266A1C
 /* 80266A04 00263944  4B FF F4 F9 */	bl cLs_Addition__FP15node_list_classP10node_class
 /* 80266A08 00263948  2C 03 00 00 */	cmpwi r3, 0
-/* 80266A0C 0026394C  41 82 00 10 */	beq lbl_80266A1C
+/* 80266A0C 0026394C  41 82 00 10 */	beq func_80266A1C
 /* 80266A10 00263950  38 00 00 01 */	li r0, 1
 /* 80266A14 00263954  98 1F 00 10 */	stb r0, 0x10(r31)
-/* 80266A18 00263958  48 00 00 08 */	b lbl_80266A20
-lbl_80266A1C:
+/* 80266A18 00263958  48 00 00 08 */	b func_80266A20
+
+/* 80266A1C 0004 .text      func_80266A1C                  func_80266A1C                  */
+.global func_80266A1C
+func_80266A1C:
 /* 80266A1C 0026395C  38 60 00 00 */	li r3, 0
-lbl_80266A20:
+
+/* 80266A20 0014 .text      func_80266A20                  func_80266A20                  */
+.global func_80266A20
+func_80266A20:
 /* 80266A20 00263960  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80266A24 00263964  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80266A28 00263968  7C 08 03 A6 */	mtlr r0
 /* 80266A2C 0026396C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266A30 00263970  4E 80 00 20 */	blr 
 
-/* 80266A34 0048 .text cTg_Create__FP16create_tag_classPv cTg_Create__FP16create_tag_classPv */
+/* 80266A34 0048 .text      cTg_Create__FP16create_tag_classPv cTg_Create__FP16create_tag_classPv */
 .global cTg_Create__FP16create_tag_classPv
 cTg_Create__FP16create_tag_classPv:
 /* 80266A34 00263974  94 21 FF F0 */	stwu r1, -0x10(r1)

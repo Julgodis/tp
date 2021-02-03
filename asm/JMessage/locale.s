@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802A9528 0064 .text parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc */
+/* 802A9528 0038 .text      parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc */
 .global parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc
 parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc:
 /* 802A9528 002A6468  80 A3 00 00 */	lwz r5, 0(r3)
@@ -12,29 +14,38 @@ parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc:
 /* 802A9538 002A6478  90 03 00 00 */	stw r0, 0(r3)
 /* 802A953C 002A647C  38 00 00 00 */	li r0, 0
 /* 802A9540 002A6480  2C 04 00 81 */	cmpwi r4, 0x81
-/* 802A9544 002A6484  41 80 00 20 */	blt lbl_802A9564
+/* 802A9544 002A6484  41 80 00 20 */	blt func_802A9564
 /* 802A9548 002A6488  2C 04 00 9F */	cmpwi r4, 0x9f
-/* 802A954C 002A648C  40 81 00 14 */	ble lbl_802A9560
+/* 802A954C 002A648C  40 81 00 14 */	ble func_802A9560
 /* 802A9550 002A6490  2C 04 00 E0 */	cmpwi r4, 0xe0
-/* 802A9554 002A6494  41 80 00 10 */	blt lbl_802A9564
+/* 802A9554 002A6494  41 80 00 10 */	blt func_802A9564
 /* 802A9558 002A6498  2C 04 00 FC */	cmpwi r4, 0xfc
-/* 802A955C 002A649C  41 81 00 08 */	bgt lbl_802A9564
-lbl_802A9560:
+/* 802A955C 002A649C  41 81 00 08 */	bgt func_802A9564
+
+/* 802A9560 0004 .text      func_802A9560                  func_802A9560                  */
+.global func_802A9560
+func_802A9560:
 /* 802A9560 002A64A0  38 00 00 01 */	li r0, 1
-lbl_802A9564:
+
+/* 802A9564 0020 .text      func_802A9564                  func_802A9564                  */
+.global func_802A9564
+func_802A9564:
 /* 802A9564 002A64A4  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 802A9568 002A64A8  41 82 00 1C */	beq lbl_802A9584
+/* 802A9568 002A64A8  41 82 00 1C */	beq func_802A9584
 /* 802A956C 002A64AC  54 C6 40 2E */	slwi r6, r6, 8
 /* 802A9570 002A64B0  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A9574 002A64B4  88 04 00 00 */	lbz r0, 0(r4)
 /* 802A9578 002A64B8  7C C6 03 78 */	or r6, r6, r0
 /* 802A957C 002A64BC  38 04 00 01 */	addi r0, r4, 1
 /* 802A9580 002A64C0  90 03 00 00 */	stw r0, 0(r3)
-lbl_802A9584:
+
+/* 802A9584 0008 .text      func_802A9584                  func_802A9584                  */
+.global func_802A9584
+func_802A9584:
 /* 802A9584 002A64C4  7C C3 33 78 */	mr r3, r6
 /* 802A9588 002A64C8  4E 80 00 20 */	blr 
 
-/* 802A958C 0100 .text parseCharacter_UTF8__Q28JMessage6localeFPPCc parseCharacter_UTF8__Q28JMessage6localeFPPCc */
+/* 802A958C 0048 .text      parseCharacter_UTF8__Q28JMessage6localeFPPCc parseCharacter_UTF8__Q28JMessage6localeFPPCc */
 .global parseCharacter_UTF8__Q28JMessage6localeFPPCc
 parseCharacter_UTF8__Q28JMessage6localeFPPCc:
 /* 802A958C 002A64CC  80 83 00 00 */	lwz r4, 0(r3)
@@ -43,10 +54,10 @@ parseCharacter_UTF8__Q28JMessage6localeFPPCc:
 /* 802A9598 002A64D8  38 04 00 01 */	addi r0, r4, 1
 /* 802A959C 002A64DC  90 03 00 00 */	stw r0, 0(r3)
 /* 802A95A0 002A64E0  54 A0 06 31 */	rlwinm. r0, r5, 0, 0x18, 0x18
-/* 802A95A4 002A64E4  41 82 00 E0 */	beq lbl_802A9684
+/* 802A95A4 002A64E4  41 82 00 E0 */	beq func_802A9684
 /* 802A95A8 002A64E8  54 A0 06 34 */	rlwinm r0, r5, 0, 0x18, 0x1a
 /* 802A95AC 002A64EC  2C 00 00 C0 */	cmpwi r0, 0xc0
-/* 802A95B0 002A64F0  40 82 00 24 */	bne lbl_802A95D4
+/* 802A95B0 002A64F0  40 82 00 24 */	bne func_802A95D4
 /* 802A95B4 002A64F4  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A95B8 002A64F8  88 04 00 00 */	lbz r0, 0(r4)
 /* 802A95BC 002A64FC  54 00 06 BE */	clrlwi r0, r0, 0x1a
@@ -54,11 +65,14 @@ parseCharacter_UTF8__Q28JMessage6localeFPPCc:
 /* 802A95C4 002A6504  50 A6 35 72 */	rlwimi r6, r5, 6, 0x15, 0x19
 /* 802A95C8 002A6508  38 04 00 01 */	addi r0, r4, 1
 /* 802A95CC 002A650C  90 03 00 00 */	stw r0, 0(r3)
-/* 802A95D0 002A6510  48 00 00 B4 */	b lbl_802A9684
-lbl_802A95D4:
+/* 802A95D0 002A6510  48 00 00 B4 */	b func_802A9684
+
+/* 802A95D4 0048 .text      func_802A95D4                  func_802A95D4                  */
+.global func_802A95D4
+func_802A95D4:
 /* 802A95D4 002A6514  54 A0 06 36 */	rlwinm r0, r5, 0, 0x18, 0x1b
 /* 802A95D8 002A6518  2C 00 00 E0 */	cmpwi r0, 0xe0
-/* 802A95DC 002A651C  40 82 00 40 */	bne lbl_802A961C
+/* 802A95DC 002A651C  40 82 00 40 */	bne func_802A961C
 /* 802A95E0 002A6520  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A95E4 002A6524  88 04 00 00 */	lbz r0, 0(r4)
 /* 802A95E8 002A6528  54 00 06 BE */	clrlwi r0, r0, 0x1a
@@ -73,11 +87,14 @@ lbl_802A95D4:
 /* 802A960C 002A654C  7C C6 03 78 */	or r6, r6, r0
 /* 802A9610 002A6550  38 04 00 01 */	addi r0, r4, 1
 /* 802A9614 002A6554  90 03 00 00 */	stw r0, 0(r3)
-/* 802A9618 002A6558  48 00 00 6C */	b lbl_802A9684
-lbl_802A961C:
+/* 802A9618 002A6558  48 00 00 6C */	b func_802A9684
+
+/* 802A961C 0064 .text      func_802A961C                  func_802A961C                  */
+.global func_802A961C
+func_802A961C:
 /* 802A961C 002A655C  54 A0 06 38 */	rlwinm r0, r5, 0, 0x18, 0x1c
 /* 802A9620 002A6560  2C 00 00 F0 */	cmpwi r0, 0xf0
-/* 802A9624 002A6564  40 82 00 5C */	bne lbl_802A9680
+/* 802A9624 002A6564  40 82 00 5C */	bne func_802A9680
 /* 802A9628 002A6568  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A962C 002A656C  88 04 00 00 */	lbz r0, 0(r4)
 /* 802A9630 002A6570  54 00 06 BE */	clrlwi r0, r0, 0x1a
@@ -99,10 +116,16 @@ lbl_802A961C:
 /* 802A9670 002A65B0  7C C6 03 78 */	or r6, r6, r0
 /* 802A9674 002A65B4  38 04 00 01 */	addi r0, r4, 1
 /* 802A9678 002A65B8  90 03 00 00 */	stw r0, 0(r3)
-/* 802A967C 002A65BC  48 00 00 08 */	b lbl_802A9684
-lbl_802A9680:
+/* 802A967C 002A65BC  48 00 00 08 */	b func_802A9684
+
+/* 802A9680 0004 .text      func_802A9680                  func_802A9680                  */
+.global func_802A9680
+func_802A9680:
 /* 802A9680 002A65C0  38 C0 FF FF */	li r6, -1
-lbl_802A9684:
+
+/* 802A9684 0008 .text      func_802A9684                  func_802A9684                  */
+.global func_802A9684
+func_802A9684:
 /* 802A9684 002A65C4  7C C3 33 78 */	mr r3, r6
 /* 802A9688 002A65C8  4E 80 00 20 */	blr 
 

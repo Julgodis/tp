@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8027B040 00FC .text JPALoadExTex__FP18JPAEmitterWorkData JPALoadExTex__FP18JPAEmitterWorkData */
+/* 8027B040 0088 .text      JPALoadExTex__FP18JPAEmitterWorkData JPALoadExTex__FP18JPAEmitterWorkData */
 .global JPALoadExTex__FP18JPAEmitterWorkData
 JPALoadExTex__FP18JPAEmitterWorkData:
 /* 8027B040 00277F80  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -17,7 +19,7 @@ JPALoadExTex__FP18JPAEmitterWorkData:
 /* 8027B064 00277FA4  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8027B068 00277FA8  80 04 00 08 */	lwz r0, 8(r4)
 /* 8027B06C 00277FAC  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8027B070 00277FB0  41 82 00 58 */	beq lbl_8027B0C8
+/* 8027B070 00277FB0  41 82 00 58 */	beq func_8027B0C8
 /* 8027B074 00277FB4  38 60 00 01 */	li r3, 1
 /* 8027B078 00277FB8  38 80 00 01 */	li r4, 1
 /* 8027B07C 00277FBC  38 A0 00 04 */	li r5, 4
@@ -39,11 +41,14 @@ JPALoadExTex__FP18JPAEmitterWorkData:
 /* 8027B0BC 00277FFC  38 80 00 02 */	li r4, 2
 /* 8027B0C0 00278000  48 06 37 81 */	bl load__10JUTTextureF11_GXTexMapID
 /* 8027B0C4 00278004  38 60 00 02 */	li r3, 2
-lbl_8027B0C8:
+
+/* 8027B0C8 005C .text      func_8027B0C8                  func_8027B0C8                  */
+.global func_8027B0C8
+func_8027B0C8:
 /* 8027B0C8 00278008  80 9E 00 00 */	lwz r4, 0(r30)
 /* 8027B0CC 0027800C  80 04 00 08 */	lwz r0, 8(r4)
 /* 8027B0D0 00278010  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
-/* 8027B0D4 00278014  41 82 00 50 */	beq lbl_8027B124
+/* 8027B0D4 00278014  41 82 00 50 */	beq func_8027B124
 /* 8027B0D8 00278018  38 80 00 01 */	li r4, 1
 /* 8027B0DC 0027801C  38 A0 00 04 */	li r5, 4
 /* 8027B0E0 00278020  38 C0 00 3C */	li r6, 0x3c
@@ -63,7 +68,10 @@ lbl_8027B0C8:
 /* 8027B118 00278058  38 63 00 04 */	addi r3, r3, 4
 /* 8027B11C 0027805C  38 80 00 03 */	li r4, 3
 /* 8027B120 00278060  48 06 37 21 */	bl load__10JUTTextureF11_GXTexMapID
-lbl_8027B124:
+
+/* 8027B124 0018 .text      func_8027B124                  func_8027B124                  */
+.global func_8027B124
+func_8027B124:
 /* 8027B124 00278064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027B128 00278068  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8027B12C 0027806C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -71,7 +79,7 @@ lbl_8027B124:
 /* 8027B134 00278074  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027B138 00278078  4E 80 00 20 */	blr 
 
-/* 8027B13C 0008 .text __ct__13JPAExTexShapeFPCUc __ct__13JPAExTexShapeFPCUc */
+/* 8027B13C 0008 .text      __ct__13JPAExTexShapeFPCUc     __ct__13JPAExTexShapeFPCUc     */
 .global __ct__13JPAExTexShapeFPCUc
 __ct__13JPAExTexShapeFPCUc:
 /* 8027B13C 0027807C  90 83 00 00 */	stw r4, 0(r3)

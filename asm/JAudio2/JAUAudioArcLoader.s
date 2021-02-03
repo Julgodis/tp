@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802A4740 004C .text __ct__17JAUAudioArcLoaderFP10JAUSection __ct__17JAUAudioArcLoaderFP10JAUSection */
+/* 802A4740 004C .text      __ct__17JAUAudioArcLoaderFP10JAUSection __ct__17JAUAudioArcLoaderFP10JAUSection */
 .global __ct__17JAUAudioArcLoaderFP10JAUSection
 __ct__17JAUAudioArcLoaderFP10JAUSection:
 /* 802A4740 002A1680  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -25,7 +27,7 @@ __ct__17JAUAudioArcLoaderFP10JAUSection:
 /* 802A4784 002A16C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A4788 002A16C8  4E 80 00 20 */	blr 
 
-/* 802A478C 0020 .text load__17JAUAudioArcLoaderFPCv load__17JAUAudioArcLoaderFPCv */
+/* 802A478C 0020 .text      load__17JAUAudioArcLoaderFPCv  load__17JAUAudioArcLoaderFPCv  */
 .global load__17JAUAudioArcLoaderFPCv
 load__17JAUAudioArcLoaderFPCv:
 /* 802A478C 002A16CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -37,7 +39,7 @@ load__17JAUAudioArcLoaderFPCv:
 /* 802A47A4 002A16E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A47A8 002A16E8  4E 80 00 20 */	blr 
 
-/* 802A47AC 0058 .text readWS__17JAUAudioArcLoaderFUlPCvUl readWS__17JAUAudioArcLoaderFUlPCvUl */
+/* 802A47AC 0040 .text      readWS__17JAUAudioArcLoaderFUlPCvUl readWS__17JAUAudioArcLoaderFUlPCvUl */
 .global readWS__17JAUAudioArcLoaderFUlPCvUl
 readWS__17JAUAudioArcLoaderFUlPCvUl:
 /* 802A47AC 002A16EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -51,12 +53,15 @@ readWS__17JAUAudioArcLoaderFUlPCvUl:
 /* 802A47CC 002A170C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 802A47D0 002A1710  48 00 10 85 */	bl newWaveBank__10JAUSectionFUlPCv
 /* 802A47D4 002A1714  28 1F 00 00 */	cmplwi r31, 0
-/* 802A47D8 002A1718  41 82 00 14 */	beq lbl_802A47EC
+/* 802A47D8 002A1718  41 82 00 14 */	beq func_802A47EC
 /* 802A47DC 002A171C  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 802A47E0 002A1720  7F C4 F3 78 */	mr r4, r30
 /* 802A47E4 002A1724  7F E5 FB 78 */	mr r5, r31
 /* 802A47E8 002A1728  48 00 11 61 */	bl loadWaveArc__10JAUSectionFUlUl
-lbl_802A47EC:
+
+/* 802A47EC 0018 .text      func_802A47EC                  func_802A47EC                  */
+.global func_802A47EC
+func_802A47EC:
 /* 802A47EC 002A172C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802A47F0 002A1730  48 0B DA 39 */	bl _restgpr_29
 /* 802A47F4 002A1734  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -64,7 +69,7 @@ lbl_802A47EC:
 /* 802A47FC 002A173C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A4800 002A1740  4E 80 00 20 */	blr 
 
-/* 802A4804 0030 .text readBNK__17JAUAudioArcLoaderFUlPCv readBNK__17JAUAudioArcLoaderFUlPCv */
+/* 802A4804 0030 .text      readBNK__17JAUAudioArcLoaderFUlPCv readBNK__17JAUAudioArcLoaderFUlPCv */
 .global readBNK__17JAUAudioArcLoaderFUlPCv
 readBNK__17JAUAudioArcLoaderFUlPCv:
 /* 802A4804 002A1744  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -80,7 +85,7 @@ readBNK__17JAUAudioArcLoaderFUlPCv:
 /* 802A482C 002A176C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A4830 002A1770  4E 80 00 20 */	blr 
 
-/* 802A4834 0024 .text readBSC__17JAUAudioArcLoaderFPCvUl readBSC__17JAUAudioArcLoaderFPCvUl */
+/* 802A4834 0024 .text      readBSC__17JAUAudioArcLoaderFPCvUl readBSC__17JAUAudioArcLoaderFPCvUl */
 .global readBSC__17JAUAudioArcLoaderFPCvUl
 readBSC__17JAUAudioArcLoaderFPCvUl:
 /* 802A4834 002A1774  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -93,7 +98,7 @@ readBSC__17JAUAudioArcLoaderFPCvUl:
 /* 802A4850 002A1790  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A4854 002A1794  4E 80 00 20 */	blr 
 
-/* 802A4858 0028 .text readBST__17JAUAudioArcLoaderFPCvUl readBST__17JAUAudioArcLoaderFPCvUl */
+/* 802A4858 0028 .text      readBST__17JAUAudioArcLoaderFPCvUl readBST__17JAUAudioArcLoaderFPCvUl */
 .global readBST__17JAUAudioArcLoaderFPCvUl
 readBST__17JAUAudioArcLoaderFPCvUl:
 /* 802A4858 002A1798  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -107,7 +112,7 @@ readBST__17JAUAudioArcLoaderFPCvUl:
 /* 802A4878 002A17B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A487C 002A17BC  4E 80 00 20 */	blr 
 
-/* 802A4880 0028 .text readBSTN__17JAUAudioArcLoaderFPCvUl readBSTN__17JAUAudioArcLoaderFPCvUl */
+/* 802A4880 0028 .text      readBSTN__17JAUAudioArcLoaderFPCvUl readBSTN__17JAUAudioArcLoaderFPCvUl */
 .global readBSTN__17JAUAudioArcLoaderFPCvUl
 readBSTN__17JAUAudioArcLoaderFPCvUl:
 /* 802A4880 002A17C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -121,7 +126,7 @@ readBSTN__17JAUAudioArcLoaderFPCvUl:
 /* 802A48A0 002A17E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A48A4 002A17E4  4E 80 00 20 */	blr 
 
-/* 802A48A8 002C .text readBMS__17JAUAudioArcLoaderFUlPCvUl readBMS__17JAUAudioArcLoaderFUlPCvUl */
+/* 802A48A8 002C .text      readBMS__17JAUAudioArcLoaderFUlPCvUl readBMS__17JAUAudioArcLoaderFUlPCvUl */
 .global readBMS__17JAUAudioArcLoaderFUlPCvUl
 readBMS__17JAUAudioArcLoaderFUlPCvUl:
 /* 802A48A8 002A17E8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -136,7 +141,7 @@ readBMS__17JAUAudioArcLoaderFUlPCvUl:
 /* 802A48CC 002A180C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A48D0 002A1810  4E 80 00 20 */	blr 
 
-/* 802A48D4 002C .text readBMS_fromArchive__17JAUAudioArcLoaderFUl readBMS_fromArchive__17JAUAudioArcLoaderFUl */
+/* 802A48D4 002C .text      readBMS_fromArchive__17JAUAudioArcLoaderFUl readBMS_fromArchive__17JAUAudioArcLoaderFUl */
 .global readBMS_fromArchive__17JAUAudioArcLoaderFUl
 readBMS_fromArchive__17JAUAudioArcLoaderFUl:
 /* 802A48D4 002A1814  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -151,7 +156,7 @@ readBMS_fromArchive__17JAUAudioArcLoaderFUl:
 /* 802A48F8 002A1838  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A48FC 002A183C  4E 80 00 20 */	blr 
 
-/* 802A4900 0030 .text newVoiceBank__17JAUAudioArcLoaderFUlUl newVoiceBank__17JAUAudioArcLoaderFUlUl */
+/* 802A4900 0030 .text      newVoiceBank__17JAUAudioArcLoaderFUlUl newVoiceBank__17JAUAudioArcLoaderFUlUl */
 .global newVoiceBank__17JAUAudioArcLoaderFUlUl
 newVoiceBank__17JAUAudioArcLoaderFUlUl:
 /* 802A4900 002A1840  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -167,7 +172,7 @@ newVoiceBank__17JAUAudioArcLoaderFUlUl:
 /* 802A4928 002A1868  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A492C 002A186C  4E 80 00 20 */	blr 
 
-/* 802A4930 0038 .text newDynamicSeqBlock__17JAUAudioArcLoaderFUl newDynamicSeqBlock__17JAUAudioArcLoaderFUl */
+/* 802A4930 0020 .text      newDynamicSeqBlock__17JAUAudioArcLoaderFUl newDynamicSeqBlock__17JAUAudioArcLoaderFUl */
 .global newDynamicSeqBlock__17JAUAudioArcLoaderFUl
 newDynamicSeqBlock__17JAUAudioArcLoaderFUl:
 /* 802A4930 002A1870  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -176,18 +181,24 @@ newDynamicSeqBlock__17JAUAudioArcLoaderFUl:
 /* 802A493C 002A187C  80 A3 00 0C */	lwz r5, 0xc(r3)
 /* 802A4940 002A1880  80 65 00 30 */	lwz r3, 0x30(r5)
 /* 802A4944 002A1884  7C 03 28 40 */	cmplw r3, r5
-/* 802A4948 002A1888  40 82 00 08 */	bne lbl_802A4950
-/* 802A494C 002A188C  48 00 00 08 */	b lbl_802A4954
-lbl_802A4950:
+/* 802A4948 002A1888  40 82 00 08 */	bne func_802A4950
+/* 802A494C 002A188C  48 00 00 08 */	b func_802A4954
+
+/* 802A4950 0004 .text      func_802A4950                  func_802A4950                  */
+.global func_802A4950
+func_802A4950:
 /* 802A4950 002A1890  38 60 00 00 */	li r3, 0
-lbl_802A4954:
+
+/* 802A4954 0014 .text      func_802A4954                  func_802A4954                  */
+.global func_802A4954
+func_802A4954:
 /* 802A4954 002A1894  48 00 17 59 */	bl newDynamicSeqBlock__14JAUSectionHeapFUl
 /* 802A4958 002A1898  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802A495C 002A189C  7C 08 03 A6 */	mtlr r0
 /* 802A4960 002A18A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A4964 002A18A4  4E 80 00 20 */	blr 
 
-/* 802A4968 0028 .text readBSFT__17JAUAudioArcLoaderFPCv readBSFT__17JAUAudioArcLoaderFPCv */
+/* 802A4968 0028 .text      readBSFT__17JAUAudioArcLoaderFPCv readBSFT__17JAUAudioArcLoaderFPCv */
 .global readBSFT__17JAUAudioArcLoaderFPCv
 readBSFT__17JAUAudioArcLoaderFPCv:
 /* 802A4968 002A18A8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -201,7 +212,7 @@ readBSFT__17JAUAudioArcLoaderFPCv:
 /* 802A4988 002A18C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A498C 002A18CC  4E 80 00 20 */	blr 
 
-/* 802A4990 0024 .text beginBNKList__17JAUAudioArcLoaderFUlUl beginBNKList__17JAUAudioArcLoaderFUlUl */
+/* 802A4990 0024 .text      beginBNKList__17JAUAudioArcLoaderFUlUl beginBNKList__17JAUAudioArcLoaderFUlUl */
 .global beginBNKList__17JAUAudioArcLoaderFUlUl
 beginBNKList__17JAUAudioArcLoaderFUlUl:
 /* 802A4990 002A18D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -214,7 +225,7 @@ beginBNKList__17JAUAudioArcLoaderFUlUl:
 /* 802A49AC 002A18EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A49B0 002A18F0  4E 80 00 20 */	blr 
 
-/* 802A49B4 0024 .text endBNKList__17JAUAudioArcLoaderFv endBNKList__17JAUAudioArcLoaderFv */
+/* 802A49B4 0024 .text      endBNKList__17JAUAudioArcLoaderFv endBNKList__17JAUAudioArcLoaderFv */
 .global endBNKList__17JAUAudioArcLoaderFv
 endBNKList__17JAUAudioArcLoaderFv:
 /* 802A49B4 002A18F4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -227,10 +238,10 @@ endBNKList__17JAUAudioArcLoaderFv:
 /* 802A49D0 002A1910  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A49D4 002A1914  4E 80 00 20 */	blr 
 
-/* 802A49D8 0024 .text readMaxSeCategory__17JAUAudioArcLoaderFiii readMaxSeCategory__17JAUAudioArcLoaderFiii */
+/* 802A49D8 0024 .text      readMaxSeCategory__17JAUAudioArcLoaderFiii readMaxSeCategory__17JAUAudioArcLoaderFiii */
 .global readMaxSeCategory__17JAUAudioArcLoaderFiii
 readMaxSeCategory__17JAUAudioArcLoaderFiii:
-/* 802A49D8 002A1918  80 0D 85 EC */	lwz r0, "sInstance__28JASGlobalInstance<8JAISeMgr>"-_SDA_BASE_(r13)
+/* 802A49D8 002A1918  80 0D 85 EC */	lwz r0, sInstance__28JASGlobalInstance_SUB_08JAISeMgr_SUB_1-_SDA_BASE_(r13)
 /* 802A49DC 002A191C  28 00 00 00 */	cmplwi r0, 0
 /* 802A49E0 002A1920  4D 82 00 20 */	beqlr 
 /* 802A49E4 002A1924  1C 64 00 6C */	mulli r3, r4, 0x6c
@@ -240,7 +251,7 @@ readMaxSeCategory__17JAUAudioArcLoaderFiii:
 /* 802A49F4 002A1934  90 C3 00 64 */	stw r6, 0x64(r3)
 /* 802A49F8 002A1938  4E 80 00 20 */	blr 
 
-/* 802A49FC 0060 .text __dt__17JAUAudioArcLoaderFv __dt__17JAUAudioArcLoaderFv */
+/* 802A49FC 0044 .text      __dt__17JAUAudioArcLoaderFv    __dt__17JAUAudioArcLoaderFv    */
 .global __dt__17JAUAudioArcLoaderFv
 __dt__17JAUAudioArcLoaderFv:
 /* 802A49FC 002A193C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -250,17 +261,20 @@ __dt__17JAUAudioArcLoaderFv:
 /* 802A4A0C 002A194C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802A4A10 002A1950  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802A4A14 002A1954  7C 9F 23 78 */	mr r31, r4
-/* 802A4A18 002A1958  41 82 00 28 */	beq lbl_802A4A40
+/* 802A4A18 002A1958  41 82 00 28 */	beq func_802A4A40
 /* 802A4A1C 002A195C  3C 80 80 3D */	lis r4, __vt__17JAUAudioArcLoader@ha
 /* 802A4A20 002A1960  38 04 9A 78 */	addi r0, r4, __vt__17JAUAudioArcLoader@l
 /* 802A4A24 002A1964  90 1E 00 00 */	stw r0, 0(r30)
 /* 802A4A28 002A1968  38 80 00 00 */	li r4, 0
 /* 802A4A2C 002A196C  4B FF F8 35 */	bl __dt__22JAUAudioArcInterpreterFv
 /* 802A4A30 002A1970  7F E0 07 35 */	extsh. r0, r31
-/* 802A4A34 002A1974  40 81 00 0C */	ble lbl_802A4A40
+/* 802A4A34 002A1974  40 81 00 0C */	ble func_802A4A40
 /* 802A4A38 002A1978  7F C3 F3 78 */	mr r3, r30
 /* 802A4A3C 002A197C  48 02 A3 01 */	bl __dl__FPv
-lbl_802A4A40:
+
+/* 802A4A40 001C .text      func_802A4A40                  func_802A4A40                  */
+.global func_802A4A40
+func_802A4A40:
 /* 802A4A40 002A1980  7F C3 F3 78 */	mr r3, r30
 /* 802A4A44 002A1984  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802A4A48 002A1988  83 C1 00 08 */	lwz r30, 8(r1)
@@ -270,9 +284,11 @@ lbl_802A4A40:
 /* 802A4A58 002A1998  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C9A78 0044 .data __vt__17JAUAudioArcLoader __vt__17JAUAudioArcLoader */
+/* 803C9A78 0044 .data      __vt__17JAUAudioArcLoader      __vt__17JAUAudioArcLoader      */
 .global __vt__17JAUAudioArcLoader
 __vt__17JAUAudioArcLoader:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x49, 0xfc, 0x80, 0x2a, 0x47, 0xac /* baserom.dol+0x3c6a78 */

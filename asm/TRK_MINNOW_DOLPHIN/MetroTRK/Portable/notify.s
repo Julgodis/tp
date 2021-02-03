@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8036F4B0 0098 .text TRKDoNotifyStopped TRKDoNotifyStopped */
+/* 8036F4B0 0044 .text      TRKDoNotifyStopped             TRKDoNotifyStopped             */
 .global TRKDoNotifyStopped
 TRKDoNotifyStopped:
 /* 8036F4B0 0036C3F0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -15,17 +17,23 @@ TRKDoNotifyStopped:
 /* 8036F4CC 0036C40C  38 61 00 0C */	addi r3, r1, 0xc
 /* 8036F4D0 0036C410  4B FF E2 4D */	bl TRKGetFreeBuffer
 /* 8036F4D4 0036C414  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8036F4D8 0036C418  40 82 00 54 */	bne lbl_8036F52C
-/* 8036F4DC 0036C41C  40 82 00 20 */	bne lbl_8036F4FC
+/* 8036F4D8 0036C418  40 82 00 54 */	bne func_8036F52C
+/* 8036F4DC 0036C41C  40 82 00 20 */	bne func_8036F4FC
 /* 8036F4E0 0036C420  2C 1E 00 90 */	cmpwi r30, 0x90
-/* 8036F4E4 0036C424  40 82 00 10 */	bne lbl_8036F4F4
+/* 8036F4E4 0036C424  40 82 00 10 */	bne func_8036F4F4
 /* 8036F4E8 0036C428  80 61 00 08 */	lwz r3, 8(r1)
 /* 8036F4EC 0036C42C  48 00 0A 2D */	bl TRKTargetAddStopInfo
-/* 8036F4F0 0036C430  48 00 00 0C */	b lbl_8036F4FC
-lbl_8036F4F4:
+/* 8036F4F0 0036C430  48 00 00 0C */	b func_8036F4FC
+
+/* 8036F4F4 0008 .text      func_8036F4F4                  func_8036F4F4                  */
+.global func_8036F4F4
+func_8036F4F4:
 /* 8036F4F4 0036C434  80 61 00 08 */	lwz r3, 8(r1)
 /* 8036F4F8 0036C438  48 00 09 9D */	bl TRKTargetAddExceptionInfo
-lbl_8036F4FC:
+
+/* 8036F4FC 0028 .text      func_8036F4FC                  func_8036F4FC                  */
+.global func_8036F4FC
+func_8036F4FC:
 /* 8036F4FC 0036C43C  80 61 00 08 */	lwz r3, 8(r1)
 /* 8036F500 0036C440  38 81 00 10 */	addi r4, r1, 0x10
 /* 8036F504 0036C444  38 A0 00 02 */	li r5, 2
@@ -33,13 +41,19 @@ lbl_8036F4FC:
 /* 8036F50C 0036C44C  38 E0 00 01 */	li r7, 1
 /* 8036F510 0036C450  4B FF FB 89 */	bl TRKRequestSend
 /* 8036F514 0036C454  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8036F518 0036C458  40 82 00 0C */	bne lbl_8036F524
+/* 8036F518 0036C458  40 82 00 0C */	bne func_8036F524
 /* 8036F51C 0036C45C  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 8036F520 0036C460  4B FF E1 6D */	bl TRKReleaseBuffer
-lbl_8036F524:
+
+/* 8036F524 0008 .text      func_8036F524                  func_8036F524                  */
+.global func_8036F524
+func_8036F524:
 /* 8036F524 0036C464  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 8036F528 0036C468  4B FF E1 65 */	bl TRKReleaseBuffer
-lbl_8036F52C:
+
+/* 8036F52C 001C .text      func_8036F52C                  func_8036F52C                  */
+.global func_8036F52C
+func_8036F52C:
 /* 8036F52C 0036C46C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8036F530 0036C470  7F E3 FB 78 */	mr r3, r31
 /* 8036F534 0036C474  83 E1 00 1C */	lwz r31, 0x1c(r1)

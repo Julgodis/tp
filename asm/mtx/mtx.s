@@ -1,12 +1,14 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 80346484 002C .text PSMTXIdentity PSMTXIdentity */
+/* 80346484 002C .text      PSMTXIdentity                  PSMTXIdentity                  */
 .global PSMTXIdentity
 PSMTXIdentity:
-/* 80346484 003433C4  C0 02 CB 0C */	lfs f0, lbl_8045650C-_SDA2_BASE_(r2)
-/* 80346488 003433C8  C0 22 CB 08 */	lfs f1, lbl_80456508-_SDA2_BASE_(r2)
+/* 80346484 003433C4  C0 02 CB 0C */	lfs f0, mtx__LIT_97-_SDA2_BASE_(r2)
+/* 80346488 003433C8  C0 22 CB 08 */	lfs f1, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 8034648C 003433CC  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 80346490 003433D0  10 40 0C 60 */	ps_merge01 f2, f0, f1
 /* 80346494 003433D4  F0 03 00 18 */	psq_st f0, 24(r3), 0, qr0
@@ -17,7 +19,7 @@ PSMTXIdentity:
 /* 803464A8 003433E8  F0 23 00 28 */	psq_st f1, 40(r3), 0, qr0
 /* 803464AC 003433EC  4E 80 00 20 */	blr 
 
-/* 803464B0 0034 .text PSMTXCopy PSMTXCopy */
+/* 803464B0 0034 .text      PSMTXCopy                      PSMTXCopy                      */
 .global PSMTXCopy
 PSMTXCopy:
 /* 803464B0 003433F0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -34,17 +36,17 @@ PSMTXCopy:
 /* 803464DC 0034341C  F0 A4 00 28 */	psq_st f5, 40(r4), 0, qr0
 /* 803464E0 00343420  4E 80 00 20 */	blr 
 
-/* 803464E4 00CC .text PSMTXConcat PSMTXConcat */
+/* 803464E4 00CC .text      PSMTXConcat                    PSMTXConcat                    */
 .global PSMTXConcat
 PSMTXConcat:
 /* 803464E4 00343424  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803464E8 00343428  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 803464EC 0034342C  D9 C1 00 08 */	stfd f14, 8(r1)
 /* 803464F0 00343430  E0 C4 00 00 */	psq_l f6, 0(r4), 0, qr0
-/* 803464F4 00343434  3C C0 80 45 */	lis r6, lbl_804509D0@ha
+/* 803464F4 00343434  3C C0 80 45 */	lis r6, mtx__Unit01@ha
 /* 803464F8 00343438  E0 E4 00 08 */	psq_l f7, 8(r4), 0, qr0
 /* 803464FC 0034343C  D9 E1 00 10 */	stfd f15, 0x10(r1)
-/* 80346500 00343440  38 C6 09 D0 */	addi r6, r6, lbl_804509D0@l
+/* 80346500 00343440  38 C6 09 D0 */	addi r6, r6, mtx__Unit01@l
 /* 80346504 00343444  DB E1 00 28 */	stfd f31, 0x28(r1)
 /* 80346508 00343448  E1 04 00 10 */	psq_l f8, 16(r4), 0, qr0
 /* 8034650C 0034344C  11 86 00 18 */	ps_muls0 f12, f6, f0
@@ -89,7 +91,7 @@ PSMTXConcat:
 /* 803465A8 003434E8  38 21 00 40 */	addi r1, r1, 0x40
 /* 803465AC 003434EC  4E 80 00 20 */	blr 
 
-/* 803465B0 00F8 .text PSMTXInverse PSMTXInverse */
+/* 803465B0 0074 .text      PSMTXInverse                   PSMTXInverse                   */
 .global PSMTXInverse
 PSMTXInverse:
 /* 803465B0 003434F0  E0 03 80 00 */	psq_l f0, 0(r3), 1, qr0
@@ -118,10 +120,13 @@ PSMTXInverse:
 /* 8034660C 0034354C  11 00 40 F8 */	ps_msub f8, f0, f3, f8
 /* 80346610 00343550  10 E4 3A FA */	ps_madd f7, f4, f11, f7
 /* 80346614 00343554  10 07 30 40 */	ps_cmpo0 cr0, f7, f6
-/* 80346618 00343558  40 82 00 0C */	bne lbl_80346624
+/* 80346618 00343558  40 82 00 0C */	bne func_80346624
 /* 8034661C 0034355C  38 60 00 00 */	li r3, 0
 /* 80346620 00343560  4E 80 00 20 */	blr 
-lbl_80346624:
+
+/* 80346624 0084 .text      func_80346624                  func_80346624                  */
+.global func_80346624
+func_80346624:
 /* 80346624 00343564  EC 00 38 30 */	fres f0, f7
 /* 80346628 00343568  10 C0 00 2A */	ps_add f6, f0, f0
 /* 8034662C 0034356C  10 A0 00 32 */	ps_mul f5, f0, f0
@@ -156,7 +161,7 @@ lbl_80346624:
 /* 803466A0 003435E0  F0 E4 80 2C */	psq_st f7, 44(r4), 1, qr0
 /* 803466A4 003435E4  4E 80 00 20 */	blr 
 
-/* 803466A8 0070 .text PSMTXRotRad PSMTXRotRad */
+/* 803466A8 0070 .text      PSMTXRotRad                    PSMTXRotRad                    */
 .global PSMTXRotRad
 PSMTXRotRad:
 /* 803466A8 003435E8  7C 08 02 A6 */	mflr r0
@@ -188,23 +193,26 @@ PSMTXRotRad:
 /* 80346710 00343650  7C 08 03 A6 */	mtlr r0
 /* 80346714 00343654  4E 80 00 20 */	blr 
 
-/* 80346718 00B0 .text PSMTXRotTrig PSMTXRotTrig */
+/* 80346718 0034 .text      PSMTXRotTrig                   PSMTXRotTrig                   */
 .global PSMTXRotTrig
 PSMTXRotTrig:
 /* 80346718 00343658  FC A0 08 18 */	frsp f5, f1
 /* 8034671C 0034365C  FC 80 10 18 */	frsp f4, f2
-/* 80346720 00343660  C0 02 CB 0C */	lfs f0, lbl_8045650C-_SDA2_BASE_(r2)
-/* 80346724 00343664  C0 22 CB 08 */	lfs f1, lbl_80456508-_SDA2_BASE_(r2)
+/* 80346720 00343660  C0 02 CB 0C */	lfs f0, mtx__LIT_97-_SDA2_BASE_(r2)
+/* 80346724 00343664  C0 22 CB 08 */	lfs f1, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 80346728 00343668  60 80 00 20 */	ori r0, r4, 0x20
 /* 8034672C 0034366C  10 40 28 50 */	ps_neg f2, f5
 /* 80346730 00343670  28 00 00 78 */	cmplwi r0, 0x78
-/* 80346734 00343674  41 82 00 18 */	beq lbl_8034674C
+/* 80346734 00343674  41 82 00 18 */	beq func_8034674C
 /* 80346738 00343678  28 00 00 79 */	cmplwi r0, 0x79
-/* 8034673C 0034367C  41 82 00 38 */	beq lbl_80346774
+/* 8034673C 0034367C  41 82 00 38 */	beq func_80346774
 /* 80346740 00343680  28 00 00 7A */	cmplwi r0, 0x7a
-/* 80346744 00343684  41 82 00 5C */	beq lbl_803467A0
-/* 80346748 00343688  48 00 00 7C */	b lbl_803467C4
-lbl_8034674C:
+/* 80346744 00343684  41 82 00 5C */	beq func_803467A0
+/* 80346748 00343688  48 00 00 7C */	b func_803467C4
+
+/* 8034674C 0028 .text      func_8034674C                  func_8034674C                  */
+.global func_8034674C
+func_8034674C:
 /* 8034674C 0034368C  F0 23 80 00 */	psq_st f1, 0(r3), 1, qr0
 /* 80346750 00343690  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
 /* 80346754 00343694  10 65 24 20 */	ps_merge00 f3, f5, f4
@@ -214,8 +222,11 @@ lbl_8034674C:
 /* 80346764 003436A4  F0 03 80 2C */	psq_st f0, 44(r3), 1, qr0
 /* 80346768 003436A8  F0 63 00 24 */	psq_st f3, 36(r3), 0, qr0
 /* 8034676C 003436AC  F0 23 00 14 */	psq_st f1, 20(r3), 0, qr0
-/* 80346770 003436B0  48 00 00 54 */	b lbl_803467C4
-lbl_80346774:
+/* 80346770 003436B0  48 00 00 54 */	b func_803467C4
+
+/* 80346774 002C .text      func_80346774                  func_80346774                  */
+.global func_80346774
+func_80346774:
 /* 80346774 003436B4  10 64 04 20 */	ps_merge00 f3, f4, f0
 /* 80346778 003436B8  10 20 0C 20 */	ps_merge00 f1, f0, f1
 /* 8034677C 003436BC  F0 03 00 18 */	psq_st f0, 24(r3), 0, qr0
@@ -226,8 +237,11 @@ lbl_80346774:
 /* 80346790 003436D0  F0 23 00 10 */	psq_st f1, 16(r3), 0, qr0
 /* 80346794 003436D4  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 80346798 003436D8  F0 43 00 20 */	psq_st f2, 32(r3), 0, qr0
-/* 8034679C 003436DC  48 00 00 28 */	b lbl_803467C4
-lbl_803467A0:
+/* 8034679C 003436DC  48 00 00 28 */	b func_803467C4
+
+/* 803467A0 0024 .text      func_803467A0                  func_803467A0                  */
+.global func_803467A0
+func_803467A0:
 /* 803467A0 003436E0  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
 /* 803467A4 003436E4  10 65 24 20 */	ps_merge00 f3, f5, f4
 /* 803467A8 003436E8  10 44 14 20 */	ps_merge00 f2, f4, f2
@@ -237,14 +251,17 @@ lbl_803467A0:
 /* 803467B8 003436F8  F0 63 00 10 */	psq_st f3, 16(r3), 0, qr0
 /* 803467BC 003436FC  F0 43 00 00 */	psq_st f2, 0(r3), 0, qr0
 /* 803467C0 00343700  F0 23 00 28 */	psq_st f1, 40(r3), 0, qr0
-lbl_803467C4:
+
+/* 803467C4 0004 .text      func_803467C4                  func_803467C4                  */
+.global func_803467C4
+func_803467C4:
 /* 803467C4 00343704  4E 80 00 20 */	blr 
 
-/* 803467C8 00B0 .text __PSMTXRotAxisRadInternal __PSMTXRotAxisRadInternal */
+/* 803467C8 00B0 .text      __PSMTXRotAxisRadInternal      __PSMTXRotAxisRadInternal      */
 .global __PSMTXRotAxisRadInternal
 __PSMTXRotAxisRadInternal:
-/* 803467C8 00343708  C1 42 CB 10 */	lfs f10, lbl_80456510-_SDA2_BASE_(r2)
-/* 803467CC 0034370C  C1 22 CB 14 */	lfs f9, lbl_80456514-_SDA2_BASE_(r2)
+/* 803467C8 00343708  C1 42 CB 10 */	lfs f10, LIT_190-_SDA2_BASE_(r2)
+/* 803467CC 0034370C  C1 22 CB 14 */	lfs f9, LIT_191-_SDA2_BASE_(r2)
 /* 803467D0 00343710  FD 60 10 18 */	frsp f11, f2
 /* 803467D4 00343714  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
 /* 803467D8 00343718  FD 80 08 18 */	frsp f12, f1
@@ -288,7 +305,7 @@ __PSMTXRotAxisRadInternal:
 /* 80346870 003437B0  F0 E3 00 28 */	psq_st f7, 40(r3), 0, qr0
 /* 80346874 003437B4  4E 80 00 20 */	blr 
 
-/* 80346878 0070 .text PSMTXRotAxisRad PSMTXRotAxisRad */
+/* 80346878 0070 .text      PSMTXRotAxisRad                PSMTXRotAxisRad                */
 .global PSMTXRotAxisRad
 PSMTXRotAxisRad:
 /* 80346878 003437B8  7C 08 02 A6 */	mflr r0
@@ -320,11 +337,11 @@ PSMTXRotAxisRad:
 /* 803468E0 00343820  7C 08 03 A6 */	mtlr r0
 /* 803468E4 00343824  4E 80 00 20 */	blr 
 
-/* 803468E8 0034 .text PSMTXTrans PSMTXTrans */
+/* 803468E8 0034 .text      PSMTXTrans                     PSMTXTrans                     */
 .global PSMTXTrans
 PSMTXTrans:
-/* 803468E8 00343828  C0 02 CB 0C */	lfs f0, lbl_8045650C-_SDA2_BASE_(r2)
-/* 803468EC 0034382C  C0 82 CB 08 */	lfs f4, lbl_80456508-_SDA2_BASE_(r2)
+/* 803468E8 00343828  C0 02 CB 0C */	lfs f0, mtx__LIT_97-_SDA2_BASE_(r2)
+/* 803468EC 0034382C  C0 82 CB 08 */	lfs f4, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 803468F0 00343830  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 803468F4 00343834  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 803468F8 00343838  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
@@ -337,7 +354,7 @@ PSMTXTrans:
 /* 80346914 00343854  D0 83 00 00 */	stfs f4, 0(r3)
 /* 80346918 00343858  4E 80 00 20 */	blr 
 
-/* 8034691C 004C .text PSMTXTransApply PSMTXTransApply */
+/* 8034691C 004C .text      PSMTXTransApply                PSMTXTransApply                */
 .global PSMTXTransApply
 PSMTXTransApply:
 /* 8034691C 0034385C  E0 83 00 00 */	psq_l f4, 0(r3), 0, qr0
@@ -360,10 +377,10 @@ PSMTXTransApply:
 /* 80346960 003438A0  F1 04 00 28 */	psq_st f8, 40(r4), 0, qr0
 /* 80346964 003438A4  4E 80 00 20 */	blr 
 
-/* 80346968 0028 .text PSMTXScale PSMTXScale */
+/* 80346968 0028 .text      PSMTXScale                     PSMTXScale                     */
 .global PSMTXScale
 PSMTXScale:
-/* 80346968 003438A8  C0 02 CB 0C */	lfs f0, lbl_8045650C-_SDA2_BASE_(r2)
+/* 80346968 003438A8  C0 02 CB 0C */	lfs f0, mtx__LIT_97-_SDA2_BASE_(r2)
 /* 8034696C 003438AC  D0 23 00 00 */	stfs f1, 0(r3)
 /* 80346970 003438B0  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
 /* 80346974 003438B4  F0 03 00 0C */	psq_st f0, 12(r3), 0, qr0
@@ -374,7 +391,7 @@ PSMTXScale:
 /* 80346988 003438C8  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 8034698C 003438CC  4E 80 00 20 */	blr 
 
-/* 80346990 0058 .text PSMTXScaleApply PSMTXScaleApply */
+/* 80346990 0058 .text      PSMTXScaleApply                PSMTXScaleApply                */
 .global PSMTXScaleApply
 PSMTXScaleApply:
 /* 80346990 003438D0  FC 20 08 18 */	frsp f1, f1
@@ -400,10 +417,10 @@ PSMTXScaleApply:
 /* 803469E0 00343920  F0 44 00 28 */	psq_st f2, 40(r4), 0, qr0
 /* 803469E4 00343924  4E 80 00 20 */	blr 
 
-/* 803469E8 00A4 .text PSMTXQuat PSMTXQuat */
+/* 803469E8 00A4 .text      PSMTXQuat                      PSMTXQuat                      */
 .global PSMTXQuat
 PSMTXQuat:
-/* 803469E8 00343928  C0 22 CB 08 */	lfs f1, lbl_80456508-_SDA2_BASE_(r2)
+/* 803469E8 00343928  C0 22 CB 08 */	lfs f1, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 803469EC 0034392C  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 803469F0 00343930  E0 A4 00 08 */	psq_l f5, 8(r4), 0, qr0
 /* 803469F4 00343934  EC 01 08 28 */	fsubs f0, f1, f1
@@ -445,7 +462,7 @@ PSMTXQuat:
 /* 80346A84 003439C4  F1 63 00 20 */	psq_st f11, 32(r3), 0, qr0
 /* 80346A88 003439C8  4E 80 00 20 */	blr 
 
-/* 80346A8C 018C .text C_MTXLookAt C_MTXLookAt */
+/* 80346A8C 018C .text      C_MTXLookAt                    C_MTXLookAt                    */
 .global C_MTXLookAt
 C_MTXLookAt:
 /* 80346A8C 003439CC  7C 08 02 A6 */	mflr r0
@@ -548,7 +565,7 @@ C_MTXLookAt:
 /* 80346C10 00343B50  7C 08 03 A6 */	mtlr r0
 /* 80346C14 00343B54  4E 80 00 20 */	blr 
 
-/* 80346C18 00CC .text C_MTXLightPerspective C_MTXLightPerspective */
+/* 80346C18 00CC .text      C_MTXLightPerspective          C_MTXLightPerspective          */
 .global C_MTXLightPerspective
 C_MTXLightPerspective:
 /* 80346C18 00343B58  7C 08 02 A6 */	mflr r0
@@ -566,12 +583,12 @@ C_MTXLightPerspective:
 /* 80346C48 00343B88  FF A0 20 90 */	fmr f29, f4
 /* 80346C4C 00343B8C  FF C0 28 90 */	fmr f30, f5
 /* 80346C50 00343B90  FF E0 30 90 */	fmr f31, f6
-/* 80346C54 00343B94  C0 42 CB 10 */	lfs f2, lbl_80456510-_SDA2_BASE_(r2)
-/* 80346C58 00343B98  C0 02 CB 20 */	lfs f0, lbl_80456520-_SDA2_BASE_(r2)
+/* 80346C54 00343B94  C0 42 CB 10 */	lfs f2, LIT_190-_SDA2_BASE_(r2)
+/* 80346C58 00343B98  C0 02 CB 20 */	lfs f0, LIT_230-_SDA2_BASE_(r2)
 /* 80346C5C 00343B9C  EC 22 00 72 */	fmuls f1, f2, f1
 /* 80346C60 00343BA0  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80346C64 00343BA4  48 02 5D 61 */	bl tanf
-/* 80346C68 00343BA8  C0 62 CB 08 */	lfs f3, lbl_80456508-_SDA2_BASE_(r2)
+/* 80346C68 00343BA8  C0 62 CB 08 */	lfs f3, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 80346C6C 00343BAC  FC 40 F0 50 */	fneg f2, f30
 /* 80346C70 00343BB0  FC 00 F8 50 */	fneg f0, f31
 /* 80346C74 00343BB4  EC 83 08 24 */	fdivs f4, f3, f1
@@ -579,7 +596,7 @@ C_MTXLightPerspective:
 /* 80346C7C 00343BBC  EC 7C 00 72 */	fmuls f3, f28, f1
 /* 80346C80 00343BC0  EC 24 07 72 */	fmuls f1, f4, f29
 /* 80346C84 00343BC4  D0 7F 00 00 */	stfs f3, 0(r31)
-/* 80346C88 00343BC8  C0 62 CB 0C */	lfs f3, lbl_8045650C-_SDA2_BASE_(r2)
+/* 80346C88 00343BC8  C0 62 CB 0C */	lfs f3, mtx__LIT_97-_SDA2_BASE_(r2)
 /* 80346C8C 00343BCC  D0 7F 00 04 */	stfs f3, 4(r31)
 /* 80346C90 00343BD0  D0 5F 00 08 */	stfs f2, 8(r31)
 /* 80346C94 00343BD4  D0 7F 00 0C */	stfs f3, 0xc(r31)
@@ -589,7 +606,7 @@ C_MTXLightPerspective:
 /* 80346CA4 00343BE4  D0 7F 00 1C */	stfs f3, 0x1c(r31)
 /* 80346CA8 00343BE8  D0 7F 00 20 */	stfs f3, 0x20(r31)
 /* 80346CAC 00343BEC  D0 7F 00 24 */	stfs f3, 0x24(r31)
-/* 80346CB0 00343BF0  C0 02 CB 1C */	lfs f0, lbl_8045651C-_SDA2_BASE_(r2)
+/* 80346CB0 00343BF0  C0 02 CB 1C */	lfs f0, LIT_227-_SDA2_BASE_(r2)
 /* 80346CB4 00343BF4  D0 1F 00 28 */	stfs f0, 0x28(r31)
 /* 80346CB8 00343BF8  D0 7F 00 2C */	stfs f3, 0x2c(r31)
 /* 80346CBC 00343BFC  80 01 00 5C */	lwz r0, 0x5c(r1)
@@ -603,13 +620,13 @@ C_MTXLightPerspective:
 /* 80346CDC 00343C1C  7C 08 03 A6 */	mtlr r0
 /* 80346CE0 00343C20  4E 80 00 20 */	blr 
 
-/* 80346CE4 0088 .text C_MTXLightOrtho C_MTXLightOrtho */
+/* 80346CE4 0088 .text      C_MTXLightOrtho                C_MTXLightOrtho                */
 .global C_MTXLightOrtho
 C_MTXLightOrtho:
 /* 80346CE4 00343C24  ED 44 18 28 */	fsubs f10, f4, f3
-/* 80346CE8 00343C28  C1 62 CB 08 */	lfs f11, lbl_80456508-_SDA2_BASE_(r2)
+/* 80346CE8 00343C28  C1 62 CB 08 */	lfs f11, mtx__LIT_96-_SDA2_BASE_(r2)
 /* 80346CEC 00343C2C  EC 01 10 28 */	fsubs f0, f1, f2
-/* 80346CF0 00343C30  C1 22 CB 18 */	lfs f9, lbl_80456518-_SDA2_BASE_(r2)
+/* 80346CF0 00343C30  C1 22 CB 18 */	lfs f9, mtx__LIT_206-_SDA2_BASE_(r2)
 /* 80346CF4 00343C34  EC 64 18 2A */	fadds f3, f4, f3
 /* 80346CF8 00343C38  ED 8B 50 24 */	fdivs f12, f11, f10
 /* 80346CFC 00343C3C  ED 4B 00 24 */	fdivs f10, f11, f0
@@ -622,7 +639,7 @@ C_MTXLightOrtho:
 /* 80346D18 00343C58  D0 23 00 00 */	stfs f1, 0(r3)
 /* 80346D1C 00343C5C  EC 29 02 B2 */	fmuls f1, f9, f10
 /* 80346D20 00343C60  EC 45 00 B2 */	fmuls f2, f5, f2
-/* 80346D24 00343C64  C0 62 CB 0C */	lfs f3, lbl_8045650C-_SDA2_BASE_(r2)
+/* 80346D24 00343C64  C0 62 CB 0C */	lfs f3, mtx__LIT_97-_SDA2_BASE_(r2)
 /* 80346D28 00343C68  EC 0A 00 32 */	fmuls f0, f10, f0
 /* 80346D2C 00343C6C  D0 63 00 04 */	stfs f3, 4(r3)
 /* 80346D30 00343C70  EC 47 10 2A */	fadds f2, f7, f2
@@ -642,49 +659,53 @@ C_MTXLightOrtho:
 /* 80346D68 00343CA8  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .sdata                                         */
+/* ###################################################################################### */
 .section .sdata, "a"
-/* 804509D0 0008 .sdata lbl_804509D0 Unit01 */
-.global lbl_804509D0
-lbl_804509D0:
+/* 804509D0 0008 .sdata     mtx__Unit01                    Unit01                         */
+.global mtx__Unit01
+mtx__Unit01:
 .byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d0730 */
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456508 0004 .sdata2 lbl_80456508 @96 */
-.global lbl_80456508
-lbl_80456508:
+/* 80456508 0004 .sdata2    mtx__LIT_96                    @96                            */
+.global mtx__LIT_96
+mtx__LIT_96:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5368 */
 
-/* 8045650C 0004 .sdata2 lbl_8045650C @97 */
-.global lbl_8045650C
-lbl_8045650C:
+/* 8045650C 0004 .sdata2    mtx__LIT_97                    @97                            */
+.global mtx__LIT_97
+mtx__LIT_97:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d536c */
 
-/* 80456510 0004 .sdata2 lbl_80456510 @190 */
-.global lbl_80456510
-lbl_80456510:
+/* 80456510 0004 .sdata2    LIT_190                        @190                           */
+.global LIT_190
+LIT_190:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5370 */
 
-/* 80456514 0004 .sdata2 lbl_80456514 @191 */
-.global lbl_80456514
-lbl_80456514:
+/* 80456514 0004 .sdata2    LIT_191                        @191                           */
+.global LIT_191
+LIT_191:
 .byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d5374 */
 
-/* 80456518 0004 .sdata2 lbl_80456518 @206 */
-.global lbl_80456518
-lbl_80456518:
+/* 80456518 0004 .sdata2    mtx__LIT_206                   @206                           */
+.global mtx__LIT_206
+mtx__LIT_206:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5378 */
 
-/* 8045651C 0004 .sdata2 lbl_8045651C @227 */
-.global lbl_8045651C
-lbl_8045651C:
+/* 8045651C 0004 .sdata2    LIT_227                        @227                           */
+.global LIT_227
+LIT_227:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d537c */
 
-/* 80456520 0004 .sdata2 lbl_80456520 @230 */
-.global lbl_80456520
-lbl_80456520:
+/* 80456520 0004 .sdata2    LIT_230                        @230                           */
+.global LIT_230
+LIT_230:
 .byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d5380 */
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5384 */
 

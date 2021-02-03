@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8026F0A8 006C .text __ct__8cM3dGCylFPC4cXyzff __ct__8cM3dGCylFPC4cXyzff */
+/* 8026F0A8 006C .text      __ct__8cM3dGCylFPC4cXyzff      __ct__8cM3dGCylFPC4cXyzff      */
 .global __ct__8cM3dGCylFPC4cXyzff
 __ct__8cM3dGCylFPC4cXyzff:
 /* 8026F0A8 0026BFE8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -33,7 +35,7 @@ __ct__8cM3dGCylFPC4cXyzff:
 /* 8026F10C 0026C04C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8026F110 0026C050  4E 80 00 20 */	blr 
 
-/* 8026F114 006C .text Set__8cM3dGCylFRC9cM3dGCylS Set__8cM3dGCylFRC9cM3dGCylS */
+/* 8026F114 006C .text      Set__8cM3dGCylFRC9cM3dGCylS    Set__8cM3dGCylFRC9cM3dGCylS    */
 .global Set__8cM3dGCylFRC9cM3dGCylS
 Set__8cM3dGCylFRC9cM3dGCylS:
 /* 8026F114 0026C054  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -64,7 +66,7 @@ Set__8cM3dGCylFRC9cM3dGCylS:
 /* 8026F178 0026C0B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8026F17C 0026C0BC  4E 80 00 20 */	blr 
 
-/* 8026F180 005C .text Set__8cM3dGCylFRC4cXyzff Set__8cM3dGCylFRC4cXyzff */
+/* 8026F180 005C .text      Set__8cM3dGCylFRC4cXyzff       Set__8cM3dGCylFRC4cXyzff       */
 .global Set__8cM3dGCylFRC4cXyzff
 Set__8cM3dGCylFRC4cXyzff:
 /* 8026F180 0026C0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -91,7 +93,7 @@ Set__8cM3dGCylFRC4cXyzff:
 /* 8026F1D4 0026C114  38 21 00 20 */	addi r1, r1, 0x20
 /* 8026F1D8 0026C118  4E 80 00 20 */	blr 
 
-/* 8026F1DC 001C .text SetC__8cM3dGCylFRC4cXyz SetC__8cM3dGCylFRC4cXyz */
+/* 8026F1DC 001C .text      SetC__8cM3dGCylFRC4cXyz        SetC__8cM3dGCylFRC4cXyz        */
 .global SetC__8cM3dGCylFRC4cXyz
 SetC__8cM3dGCylFRC4cXyz:
 /* 8026F1DC 0026C11C  C0 04 00 00 */	lfs f0, 0(r4)
@@ -102,19 +104,19 @@ SetC__8cM3dGCylFRC4cXyz:
 /* 8026F1F0 0026C130  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8026F1F4 0026C134  4E 80 00 20 */	blr 
 
-/* 8026F1F8 0008 .text SetH__8cM3dGCylFf SetH__8cM3dGCylFf */
+/* 8026F1F8 0008 .text      SetH__8cM3dGCylFf              SetH__8cM3dGCylFf              */
 .global SetH__8cM3dGCylFf
 SetH__8cM3dGCylFf:
 /* 8026F1F8 0026C138  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 8026F1FC 0026C13C  4E 80 00 20 */	blr 
 
-/* 8026F200 0008 .text SetR__8cM3dGCylFf SetR__8cM3dGCylFf */
+/* 8026F200 0008 .text      SetR__8cM3dGCylFf              SetR__8cM3dGCylFf              */
 .global SetR__8cM3dGCylFf
 SetR__8cM3dGCylFf:
 /* 8026F200 0026C140  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8026F204 0026C144  4E 80 00 20 */	blr 
 
-/* 8026F208 0024 .text cross__8cM3dGCylCFPC8cM3dGSphP4cXyz cross__8cM3dGCylCFPC8cM3dGSphP4cXyz */
+/* 8026F208 0024 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz cross__8cM3dGCylCFPC8cM3dGSphP4cXyz */
 .global cross__8cM3dGCylCFPC8cM3dGSphP4cXyz
 cross__8cM3dGCylCFPC8cM3dGSphP4cXyz:
 /* 8026F208 0026C148  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -127,7 +129,7 @@ cross__8cM3dGCylCFPC8cM3dGSphP4cXyz:
 /* 8026F224 0026C164  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F228 0026C168  4E 80 00 20 */	blr 
 
-/* 8026F22C 0020 .text cross__8cM3dGCylCFPC8cM3dGCylP4cXyz cross__8cM3dGCylCFPC8cM3dGCylP4cXyz */
+/* 8026F22C 0020 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz cross__8cM3dGCylCFPC8cM3dGCylP4cXyz */
 .global cross__8cM3dGCylCFPC8cM3dGCylP4cXyz
 cross__8cM3dGCylCFPC8cM3dGCylP4cXyz:
 /* 8026F22C 0026C16C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -139,7 +141,7 @@ cross__8cM3dGCylCFPC8cM3dGCylP4cXyz:
 /* 8026F244 0026C184  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F248 0026C188  4E 80 00 20 */	blr 
 
-/* 8026F24C 005C .text calcMinMax__8cM3dGCylFP4cXyzP4cXyz calcMinMax__8cM3dGCylFP4cXyzP4cXyz */
+/* 8026F24C 005C .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz calcMinMax__8cM3dGCylFP4cXyzP4cXyz */
 .global calcMinMax__8cM3dGCylFP4cXyzP4cXyz
 calcMinMax__8cM3dGCylFP4cXyzP4cXyz:
 /* 8026F24C 0026C18C  C0 23 00 00 */	lfs f1, 0(r3)

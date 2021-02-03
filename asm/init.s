@@ -1,7 +1,10 @@
 .include "macros.inc"
 
-.section .init, "ax"  # 0x80003100 - 0x80005600
-
+/* ###################################################################################### */
+/*                                         .init                                          */
+/* ###################################################################################### */
+.section .init, "ax"
+/* 80003100 0040 .init      __check_pad3                   __check_pad3                   */
 .global __check_pad3
 __check_pad3:
 /* 80003100 00000100  7C 08 02 A6 */	mflr r0
@@ -22,17 +25,20 @@ lbl_80003130:
 /* 80003138 00000138  7C 08 03 A6 */	mtlr r0
 /* 8000313C 0000013C  4E 80 00 20 */	blr 
 
+/* 80003140 000C .init      __set_debug_bba                __set_debug_bba                */
 .global __set_debug_bba
 __set_debug_bba:
 /* 80003140 00000140  38 00 00 01 */	li r0, 1
-/* 80003144 00000144  98 0D 91 50 */	stb r0, -0x6eb0(r13)
+/* 80003144 00000144  98 0D 91 50 */	stb r0, sym_804516D0-_SDA_BASE_(r13)
 /* 80003148 00000148  4E 80 00 20 */	blr 
 
+/* 8000314C 0008 .init      __get_debug_bba                __get_debug_bba                */
 .global __get_debug_bba
 __get_debug_bba:
-/* 8000314C 0000014C  88 6D 91 50 */	lbz r3, -0x6eb0(r13)
+/* 8000314C 0000014C  88 6D 91 50 */	lbz r3, sym_804516D0-_SDA_BASE_(r13)
 /* 80003150 00000150  4E 80 00 20 */	blr 
 
+/* 80003154 015C .init      __start                        __start                        */
 .global __start
 __start:
 /* 80003154 00000154  48 00 01 5D */	bl __init_registers
@@ -133,6 +139,7 @@ lbl_8000329C:
 /* 800032A8 000002A8  48 00 31 AD */	bl main
 /* 800032AC 000002AC  48 35 F7 20 */	b exit
 
+/* 800032B0 0090 .init      __init_registers               __init_registers               */
 .global __init_registers
 __init_registers:
 /* 800032B0 000002B0  38 00 00 00 */	li r0, 0
@@ -172,6 +179,7 @@ __init_registers:
 /* 80003338 00000338  61 AD 85 80 */	ori r13, r13, 0x80458580@l
 /* 8000333C 0000033C  4E 80 00 20 */	blr 
 
+/* 80003340 00C0 .init      __init_data                    __init_data                    */
 .global __init_data
 __init_data:
 /* 80003340 00000340  7C 08 02 A6 */	mflr r0
@@ -231,6 +239,7 @@ lbl_800033E4:
 /* 800033F8 000003F8  7C 08 03 A6 */	mtlr r0
 /* 800033FC 000003FC  4E 80 00 20 */	blr 
 
+/* 80003400 0024 .init      __init_hardware                __init_hardware                */
 .global __init_hardware
 __init_hardware:
 /* 80003400 00000400  7C 00 00 A6 */	mfmsr r0
@@ -243,6 +252,7 @@ __init_hardware:
 /* 8000341C 0000041C  7F E8 03 A6 */	mtlr r31
 /* 80003420 00000420  4E 80 00 20 */	blr 
 
+/* 80003424 0034 .init      __flush_cache                  __flush_cache                  */
 .global __flush_cache
 __flush_cache:
 /* 80003424 00000424  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
@@ -260,6 +270,7 @@ lbl_80003438:
 /* 80003450 00000450  4C 00 01 2C */	isync 
 /* 80003454 00000454  4E 80 00 20 */	blr 
 
+/* 80003458 0030 .init      memset                         memset                         */
 .global memset
 memset:
 /* 80003458 00000458  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -275,6 +286,7 @@ memset:
 /* 80003480 00000480  38 21 00 10 */	addi r1, r1, 0x10
 /* 80003484 00000484  4E 80 00 20 */	blr 
 
+/* 80003488 00B8 .init      __fill_mem                     __fill_mem                     */
 .global __fill_mem
 __fill_mem:
 /* 80003488 00000488  28 05 00 20 */	cmplwi r5, 0x20
@@ -333,6 +345,7 @@ lbl_80003530:
 /* 80003538 00000538  40 82 FF F8 */	bne lbl_80003530
 /* 8000353C 0000053C  4E 80 00 20 */	blr 
 
+/* 80003540 0050 .init      memcpy                         memcpy                         */
 .global memcpy
 memcpy:
 /* 80003540 00000540  7C 04 18 40 */	cmplw r4, r3
@@ -361,6 +374,7 @@ lbl_80003584:
 /* 80003588 00000588  40 82 FF F4 */	bne lbl_8000357C
 /* 8000358C 0000058C  4E 80 00 20 */	blr 
 
+/* 80003590 0030 .init      TRK_memset                     TRK_memset                     */
 .global TRK_memset
 TRK_memset:
 /* 80003590 00000590  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -376,6 +390,7 @@ TRK_memset:
 /* 800035B8 000005B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800035BC 000005BC  4E 80 00 20 */	blr 
 
+/* 800035C0 0024 .init      TRK_memcpy                     TRK_memcpy                     */
 .global TRK_memcpy
 TRK_memcpy:
 /* 800035C0 000005C0  38 84 FF FF */	addi r4, r4, -1
@@ -389,6 +404,8 @@ lbl_800035D8:
 /* 800035D8 000005D8  34 A5 FF FF */	addic. r5, r5, -1
 /* 800035DC 000005DC  40 82 FF F4 */	bne lbl_800035D0
 /* 800035E0 000005E0  4E 80 00 20 */	blr 
+
+/* 800035E4 1F34 .init      lbl_800035E4                   lbl_800035E4                   */
 .global lbl_800035E4
 lbl_800035E4:
 /* 800035E4 000005E4  4D 65 74 72 */	.4byte 0x4D657472  /* unknown instruction */
@@ -456,7 +473,7 @@ lbl_80003610:
 /* 800036D8 000006D8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800036DC 000006DC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800036E0 000006E0  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
-/* 800036E4 000006E4  48 00 1E 34 */	b func_80005518
+/* 800036E4 000006E4  48 00 1E 34 */	b __TRK_reset
 /* 800036E8 000006E8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800036EC 000006EC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800036F0 000006F0  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -2394,8 +2411,9 @@ lbl_80004814:
 /* 80005510 00002510  38 60 1F 00 */	li r3, 0x1f00
 /* 80005514 00002514  4C 00 00 64 */	rfi 
 
-.global func_80005518
-func_80005518:
+/* 80005518 00E8 .init      __TRK_reset                    __TRK_reset                    */
+.global __TRK_reset
+__TRK_reset:
 /* 80005518 00002518  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000551C 0000251C  7C 08 02 A6 */	mflr r0
 /* 80005520 00002520  38 60 00 00 */	li r3, 0
@@ -2456,3 +2474,4 @@ lbl_800055C8:
 /* 800055F4 000025F4  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800055F8 000025F8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 800055FC 000025FC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
+

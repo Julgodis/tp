@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 8029D0B4 0048 .text __ct__15JASAudioReseterFv __ct__15JASAudioReseterFv */
+/* 8029D0B4 0048 .text      __ct__15JASAudioReseterFv      __ct__15JASAudioReseterFv      */
 .global __ct__15JASAudioReseterFv
 __ct__15JASAudioReseterFv:
 /* 8029D0B4 00299FF4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -24,7 +26,7 @@ __ct__15JASAudioReseterFv:
 /* 8029D0F4 0029A034  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D0F8 0029A038  4E 80 00 20 */	blr 
 
-/* 8029D0FC 003C .text __dt__15JASAudioReseterFv __dt__15JASAudioReseterFv */
+/* 8029D0FC 0024 .text      __dt__15JASAudioReseterFv      __dt__15JASAudioReseterFv      */
 .global __dt__15JASAudioReseterFv
 __dt__15JASAudioReseterFv:
 /* 8029D0FC 0029A03C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -32,11 +34,14 @@ __dt__15JASAudioReseterFv:
 /* 8029D104 0029A044  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029D108 0029A048  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029D10C 0029A04C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8029D110 0029A050  41 82 00 10 */	beq lbl_8029D120
+/* 8029D110 0029A050  41 82 00 10 */	beq func_8029D120
 /* 8029D114 0029A054  7C 80 07 35 */	extsh. r0, r4
-/* 8029D118 0029A058  40 81 00 08 */	ble lbl_8029D120
+/* 8029D118 0029A058  40 81 00 08 */	ble func_8029D120
 /* 8029D11C 0029A05C  48 03 1C 21 */	bl __dl__FPv
-lbl_8029D120:
+
+/* 8029D120 0018 .text      func_8029D120                  func_8029D120                  */
+.global func_8029D120
+func_8029D120:
 /* 8029D120 0029A060  7F E3 FB 78 */	mr r3, r31
 /* 8029D124 0029A064  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029D128 0029A068  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -44,7 +49,7 @@ lbl_8029D120:
 /* 8029D130 0029A070  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D134 0029A074  4E 80 00 20 */	blr 
 
-/* 8029D138 009C .text start__15JASAudioReseterFUlb start__15JASAudioReseterFUlb */
+/* 8029D138 0030 .text      start__15JASAudioReseterFUlb   start__15JASAudioReseterFUlb   */
 .global start__15JASAudioReseterFUlb
 start__15JASAudioReseterFUlb:
 /* 8029D138 0029A078  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -56,24 +61,30 @@ start__15JASAudioReseterFUlb:
 /* 8029D150 0029A090  7C 9F 23 78 */	mr r31, r4
 /* 8029D154 0029A094  80 03 00 08 */	lwz r0, 8(r3)
 /* 8029D158 0029A098  2C 00 00 00 */	cmpwi r0, 0
-/* 8029D15C 0029A09C  40 82 00 0C */	bne lbl_8029D168
+/* 8029D15C 0029A09C  40 82 00 0C */	bne func_8029D168
 /* 8029D160 0029A0A0  38 60 00 00 */	li r3, 0
-/* 8029D164 0029A0A4  48 00 00 58 */	b lbl_8029D1BC
-lbl_8029D168:
+/* 8029D164 0029A0A4  48 00 00 58 */	b func_8029D1BC
+
+/* 8029D168 0034 .text      func_8029D168                  func_8029D168                  */
+.global func_8029D168
+func_8029D168:
 /* 8029D168 0029A0A8  98 BE 00 0C */	stb r5, 0xc(r30)
-/* 8029D16C 0029A0AC  48 0A 05 89 */	bl __RAS_OSDisableInterrupts_begin
+/* 8029D16C 0029A0AC  48 0A 05 89 */	bl OSDisableInterrupts
 /* 8029D170 0029A0B0  90 61 00 08 */	stw r3, 8(r1)
 /* 8029D174 0029A0B4  3C 60 80 2A */	lis r3, callback__15JASAudioReseterFPv@ha
 /* 8029D178 0029A0B8  38 63 D2 D4 */	addi r3, r3, callback__15JASAudioReseterFPv@l
 /* 8029D17C 0029A0BC  7F C4 F3 78 */	mr r4, r30
 /* 8029D180 0029A0C0  48 00 10 C1 */	bl registerDspSyncCallback__9JASDriverFPFPv_lPv
 /* 8029D184 0029A0C4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8029D188 0029A0C8  40 82 00 14 */	bne lbl_8029D19C
+/* 8029D188 0029A0C8  40 82 00 14 */	bne func_8029D19C
 /* 8029D18C 0029A0CC  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029D190 0029A0D0  48 0A 05 8D */	bl OSRestoreInterrupts
 /* 8029D194 0029A0D4  38 60 00 00 */	li r3, 0
-/* 8029D198 0029A0D8  48 00 00 24 */	b lbl_8029D1BC
-lbl_8029D19C:
+/* 8029D198 0029A0D8  48 00 00 24 */	b func_8029D1BC
+
+/* 8029D19C 0020 .text      func_8029D19C                  func_8029D19C                  */
+.global func_8029D19C
+func_8029D19C:
 /* 8029D19C 0029A0DC  48 00 0F BD */	bl getDSPLevel__9JASDriverFv
 /* 8029D1A0 0029A0E0  D0 3E 00 04 */	stfs f1, 4(r30)
 /* 8029D1A4 0029A0E4  93 FE 00 00 */	stw r31, 0(r30)
@@ -82,7 +93,10 @@ lbl_8029D19C:
 /* 8029D1B0 0029A0F0  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029D1B4 0029A0F4  48 0A 05 69 */	bl OSRestoreInterrupts
 /* 8029D1B8 0029A0F8  38 60 00 01 */	li r3, 1
-lbl_8029D1BC:
+
+/* 8029D1BC 0018 .text      func_8029D1BC                  func_8029D1BC                  */
+.global func_8029D1BC
+func_8029D1BC:
 /* 8029D1BC 0029A0FC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029D1C0 0029A100  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8029D1C4 0029A104  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -90,7 +104,7 @@ lbl_8029D1BC:
 /* 8029D1CC 0029A10C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029D1D0 0029A110  4E 80 00 20 */	blr 
 
-/* 8029D1D4 0024 .text resume__15JASAudioReseterFv resume__15JASAudioReseterFv */
+/* 8029D1D4 0024 .text      resume__15JASAudioReseterFv    resume__15JASAudioReseterFv    */
 .global resume__15JASAudioReseterFv
 resume__15JASAudioReseterFv:
 /* 8029D1D4 0029A114  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -103,13 +117,13 @@ resume__15JASAudioReseterFv:
 /* 8029D1F0 0029A130  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029D1F4 0029A134  4E 80 00 20 */	blr 
 
-/* 8029D1F8 0008 .text checkDone__15JASAudioReseterCFv checkDone__15JASAudioReseterCFv */
+/* 8029D1F8 0008 .text      checkDone__15JASAudioReseterCFv checkDone__15JASAudioReseterCFv */
 .global checkDone__15JASAudioReseterCFv
 checkDone__15JASAudioReseterCFv:
 /* 8029D1F8 0029A138  80 63 00 08 */	lwz r3, 8(r3)
 /* 8029D1FC 0029A13C  4E 80 00 20 */	blr 
 
-/* 8029D200 00D4 .text calc__15JASAudioReseterFv calc__15JASAudioReseterFv */
+/* 8029D200 0028 .text      calc__15JASAudioReseterFv      calc__15JASAudioReseterFv      */
 .global calc__15JASAudioReseterFv
 calc__15JASAudioReseterFv:
 /* 8029D200 0029A140  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -120,35 +134,47 @@ calc__15JASAudioReseterFv:
 /* 8029D214 0029A154  7C 7E 1B 78 */	mr r30, r3
 /* 8029D218 0029A158  80 63 00 00 */	lwz r3, 0(r3)
 /* 8029D21C 0029A15C  28 03 00 00 */	cmplwi r3, 0
-/* 8029D220 0029A160  40 82 00 50 */	bne lbl_8029D270
+/* 8029D220 0029A160  40 82 00 50 */	bne func_8029D270
 /* 8029D224 0029A164  3B E0 00 00 */	li r31, 0
-lbl_8029D228:
+
+/* 8029D228 0018 .text      func_8029D228                  func_8029D228                  */
+.global func_8029D228
+func_8029D228:
 /* 8029D228 0029A168  7F E3 FB 78 */	mr r3, r31
 /* 8029D22C 0029A16C  48 00 07 1D */	bl getHandle__13JASDSPChannelFUl
 /* 8029D230 0029A170  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029D234 0029A174  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8029D238 0029A178  40 82 00 08 */	bne lbl_8029D240
+/* 8029D238 0029A178  40 82 00 08 */	bne func_8029D240
 /* 8029D23C 0029A17C  48 00 01 05 */	bl drop__13JASDSPChannelFv
-lbl_8029D240:
+
+/* 8029D240 0020 .text      func_8029D240                  func_8029D240                  */
+.global func_8029D240
+func_8029D240:
 /* 8029D240 0029A180  3B FF 00 01 */	addi r31, r31, 1
 /* 8029D244 0029A184  28 1F 00 40 */	cmplwi r31, 0x40
-/* 8029D248 0029A188  41 80 FF E0 */	blt lbl_8029D228
+/* 8029D248 0029A188  41 80 FF E0 */	blt func_8029D228
 /* 8029D24C 0029A18C  88 1E 00 0C */	lbz r0, 0xc(r30)
 /* 8029D250 0029A190  28 00 00 00 */	cmplwi r0, 0
-/* 8029D254 0029A194  41 82 00 0C */	beq lbl_8029D260
-/* 8029D258 0029A198  80 6D 86 0C */	lwz r3, "sInstance__35JASGlobalInstance<14JASAudioThread>"-_SDA_BASE_(r13)
+/* 8029D254 0029A194  41 82 00 0C */	beq func_8029D260
+/* 8029D258 0029A198  80 6D 86 0C */	lwz r3, sInstance__35JASGlobalInstance_SUB_014JASAudioThread_SUB_1-_SDA_BASE_(r13)
 /* 8029D25C 0029A19C  4B FF FB 65 */	bl stop__14JASAudioThreadFv
-lbl_8029D260:
+
+/* 8029D260 0010 .text      func_8029D260                  func_8029D260                  */
+.global func_8029D260
+func_8029D260:
 /* 8029D260 0029A1A0  38 00 00 01 */	li r0, 1
 /* 8029D264 0029A1A4  90 1E 00 08 */	stw r0, 8(r30)
 /* 8029D268 0029A1A8  38 60 FF FF */	li r3, -1
-/* 8029D26C 0029A1AC  48 00 00 50 */	b lbl_8029D2BC
-lbl_8029D270:
+/* 8029D26C 0029A1AC  48 00 00 50 */	b func_8029D2BC
+
+/* 8029D270 004C .text      func_8029D270                  func_8029D270                  */
+.global func_8029D270
+func_8029D270:
 /* 8029D270 0029A1B0  38 03 FF FF */	addi r0, r3, -1
 /* 8029D274 0029A1B4  90 1E 00 00 */	stw r0, 0(r30)
 /* 8029D278 0029A1B8  83 FE 00 00 */	lwz r31, 0(r30)
 /* 8029D27C 0029A1BC  48 00 0E DD */	bl getDSPLevel__9JASDriverFv
-/* 8029D280 0029A1C0  C8 42 BD 40 */	lfd f2, lbl_80455740-_SDA2_BASE_(r2)
+/* 8029D280 0029A1C0  C8 42 BD 40 */	lfd f2, JASAudioReseter__LIT_156-_SDA2_BASE_(r2)
 /* 8029D284 0029A1C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029D288 0029A1C8  3C 60 43 30 */	lis r3, 0x4330
 /* 8029D28C 0029A1CC  90 61 00 08 */	stw r3, 8(r1)
@@ -163,7 +189,10 @@ lbl_8029D270:
 /* 8029D2B0 0029A1F0  EC 21 00 24 */	fdivs f1, f1, f0
 /* 8029D2B4 0029A1F4  48 00 0E 7D */	bl setDSPLevel__9JASDriverFf
 /* 8029D2B8 0029A1F8  38 60 00 00 */	li r3, 0
-lbl_8029D2BC:
+
+/* 8029D2BC 0018 .text      func_8029D2BC                  func_8029D2BC                  */
+.global func_8029D2BC
+func_8029D2BC:
 /* 8029D2BC 0029A1FC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029D2C0 0029A200  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8029D2C4 0029A204  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -171,7 +200,7 @@ lbl_8029D2BC:
 /* 8029D2CC 0029A20C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029D2D0 0029A210  4E 80 00 20 */	blr 
 
-/* 8029D2D4 0020 .text callback__15JASAudioReseterFPv callback__15JASAudioReseterFPv */
+/* 8029D2D4 0020 .text      callback__15JASAudioReseterFPv callback__15JASAudioReseterFPv */
 .global callback__15JASAudioReseterFPv
 callback__15JASAudioReseterFPv:
 /* 8029D2D4 0029A214  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -184,10 +213,12 @@ callback__15JASAudioReseterFPv:
 /* 8029D2F0 0029A230  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455740 0008 .sdata2 lbl_80455740 @156 */
-.global lbl_80455740
-lbl_80455740:
+/* 80455740 0008 .sdata2    JASAudioReseter__LIT_156       @156                           */
+.global JASAudioReseter__LIT_156
+JASAudioReseter__LIT_156:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d45a0 */
 

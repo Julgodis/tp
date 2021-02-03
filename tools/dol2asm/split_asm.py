@@ -6,7 +6,7 @@ import re
 import subprocess
 from pathlib import Path
 from collections import defaultdict
-
+from builder import Builder
 from read_map import MapSymbol, read_frameworkF, read_elfSymbols
 import disassembler as dasm
 
@@ -42,6 +42,7 @@ class Section:
         self.symbols = []
         self.start = self.addr
         self.end = (self.addr + self.size + self.alignment - 1) & ~(self.alignment - 1)
+        self.extra_flags = ""
 
         self.flags = "a"
         if name == ".bss" or name == ".sbss":
@@ -49,6 +50,7 @@ class Section:
             self.isBSS = True
         if name == ".sbss2":
             self.isBSS = True
+            self.extra_flags = ", @nobits"
         if name == ".text" or name == ".init":
             self.flags = "ax"
             self.isCode = True
@@ -171,7 +173,9 @@ def escape_name(section, name, addr):
 
 FAST_RUN = False
 DRY_RUN = False
-BASE_PATH = "TEST/"
+GENERATE_MAKEFILES = True
+EXPORT_ASM = True
+BASE_PATH = ""
 
 SECTIONS = {
     ".init":        Section(".init",        0x80003100, 0x00002500, 0x00000100, 32),
@@ -208,13 +212,22 @@ PREDEFINED_SYMBOLS = {
     0x800035E4: "lbl_800035E4",
 }
 
+FOLDERS = [
+    ("d_", "d/"),
+    ("c_", "c/"),
+    ("f_ap_", "f_ap/"),
+    ("f_op_", "f_op/"),
+    ("f_pc_", "f_pc/"),
+    ("m_Do_", "m_Do/"),
+]
+
 with open("baserom.dol", 'rb') as dolfile:
     BASEROM = bytearray(dolfile.read())
 
 # Read symbols from the frameworkF.map file
 print("frameworkF.map:")
-section_names = [x.name for x in SECTIONS.values() if not x.binaryExport]
-map_sections = read_frameworkF(section_names)
+section_names = [x.name for x in SECTIONS.values()]
+map_sections = read_frameworkF(FOLDERS, section_names)
 
 set_mapped = set()
 for k, v in map_sections.items():
@@ -228,7 +241,7 @@ for section in SECTIONS.values():
         last_p = 0
         for c,s,e in dasm.disasm_iter(section.offset, section.addr, section.size, dasm.get_label_callback):
             p = (c - s) / (e - s)
-            if FAST_RUN and p > 0.1:
+            if FAST_RUN and p > 0.05:
                 break
             if not last_p or (p - last_p) > 0.001:
                 sys.stdout.write("\r    %s%3.2f%%" % (section.name.ljust(20, ' '), p * 100))
@@ -239,8 +252,7 @@ for section in SECTIONS.values():
         print()
 
 # Print 
-print("found:")
-
+print("stats:")
 set_functions = dasm.function_get_all() - set_mapped
 set_labels = dasm.label_get_all() - set_functions - set_mapped
 print("    % 8i labels" % len(set_labels))
@@ -272,9 +284,8 @@ for addr in set_labels_and_functions:
         if addr in PREDEFINED_SYMBOLS:
             name = PREDEFINED_SYMBOLS[addr]
 
-        if not section.binaryExport:
-            symbol = MapSymbol(addr, 0, name, lib, obj)
-            map_sections[section.name].symbols.append(symbol)
+        symbol = MapSymbol(addr, 0, name, lib, obj)
+        map_sections[section.name].symbols.append(symbol)
 
 # 
 
@@ -288,8 +299,10 @@ def build_symbols(section, map_symbols):
     final_symbols = []
     for symbol in map_symbols:
         if section.name == ".init":
+            # because .init doesn't have symbol information any symbol without a name
+            # is in fact a label in assembly code. Exporting it as a symbol will 
+            # generate the wrong code.
             if not symbol.name:
-                print("skip " + name_from_addr(section, symbol.addr))
                 continue
 
         label = name_from_addr(section, symbol.addr)
@@ -392,127 +405,223 @@ for section in SECTIONS.values():
         tree[symbol.lib][symbol.obj][section].append(symbol)
 
 # Export as assembly 
-import asm_exporter as asm
-for section in SECTIONS.values():
-    if section.binaryExport:
-        asm.export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section)
+if EXPORT_ASM:
+    import asm_exporter as asm
+    for section in SECTIONS.values():
+        if section.binaryExport:
+            asm.export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section)
 
-for k, v in tree.items():
-    asm.export_library(BASEROM, DRY_RUN, BASE_PATH, k, v)
+    for k, v in tree.items():
+        asm.export_library(BASEROM, DRY_RUN, BASE_PATH, k, v)
 
 # Generate object file list
-class Node:
-    def __init__(self, lib, name):
-        self.lib = lib
-        self.name = name
-        self.depth = 0
-        self.id = name
-        if self.lib:
-            self.id = self.lib + "/" + self.name
+if GENERATE_MAKEFILES:
+    class Node:
+        def __init__(self, lib, name):
+            self.lib = lib
+            self.name = name
+            self.depth = 0
+            self.id = name
+            if self.lib:
+                self.id = self.lib + "/" + self.name
 
-    def __eq__(self, other):
-        return other.id == self.id
+        def __eq__(self, other):
+            return other.id == self.id
 
-    def __hash__(self):
-        return hash(self.id)
+        def __hash__(self):
+            return hash(self.id)
 
-    def __repr__(self):
-        return self.__str__()
+        def __repr__(self):
+            return self.__str__()
+            
+        def __str__(self):
+            return str((self.depth, self.lib, self.name))
+
+    # Create directed graph based on the order of objects in each section
+    nodes = dict()
+    edges = set()
+    graph = defaultdict(list)
+    for lk, lv in tree.items():
+        for ok,ov in lv.items():
+            if ok == "init.o":
+                continue
+            node = Node(lk, ok)
+            if not node.id in nodes:
+                nodes[node.id] = node
+
+    for section in SECTIONS.values():
+        unique_objects = set()
+        objects = list()
+        for symbol in section.symbols:
+            id = Node(symbol.lib, symbol.obj).id
+            if id in unique_objects:
+                continue
+            unique_objects.add(id)
+            objects.append(id)
         
-    def __str__(self):
-        return str((self.depth, self.lib, self.name))
+        for prev,curr,next in mapOverlap(objects, 3):
+            if prev and curr:
+                graph[prev].append(curr)
+                edges.add((prev, curr))
+            if curr and next:
+                graph[curr].append(next)
+                edges.add((curr, next))
 
-# Create directed graph based on the order of objects in each section
-nodes = dict()
-edges = set()
-graph = defaultdict(list)
-for lk, lv in tree.items():
-    for ok,ov in lv.items():
-        if ok == "init.o":
-            continue
-        node = Node(lk, ok)
-        if not node.id in nodes:
-            nodes[node.id] = node
+    predecessor_count = defaultdict(int)
+    for f,t in edges:
+        predecessor_count[t] += 1
 
-for section in SECTIONS.values():
-    unique_objects = set()
-    objects = list()
-    for symbol in section.symbols:
-        id = Node(symbol.lib, symbol.obj).id
-        if id in unique_objects:
-            continue
-        unique_objects.add(id)
-        objects.append(id)
-    
-    for prev,curr,next in mapOverlap(objects, 3):
-        if prev and curr:
-            graph[prev].append(curr)
-            edges.add((prev, curr))
-        if curr and next:
-            graph[curr].append(next)
-            edges.add((curr, next))
+    top_node = None
+    top_nodes = [ x for x in nodes if predecessor_count[x] == 0 ]
+    if len(top_nodes) > 1:
+        top_node = top_nodes[0]
+        print("warning: found multiple top-level nodes (using the first one for new)")
+        for node in top_nodes:
+            print("    " + node)
+    elif len(top_nodes) == 0:
+        print("error: found no top-level node")
+        sys.exit(1)
+    else:
+        top_node = top_nodes[0]
 
-if False:
-    # Output graph
-    from graphviz import Digraph
-    dot = Digraph()
-    for node in nodes:
-        dot.node(node.id, node.id)
+    def calculate_max_depth(k, depth):
+        node = nodes[k]
+        if depth <= node.depth:
+            return
 
-    dot.edges(list(edges))
-    dot.render("test.dot")
+        node.depth = depth
+        for edge in graph[k]:
+            calculate_max_depth(edge, depth + 1)
+    calculate_max_depth(top_node, 1)
 
-predecessor_count = defaultdict(int)
-for f,t in edges:
-    predecessor_count[t] += 1
+    if True:
+        # Output graph
+        from graphviz import Digraph
+        dot = Digraph()
+        for node in nodes.values():
+            dot.node(node.id, str(node.depth) + " " + node.id)
 
-top_node = None
-top_nodes = [ x for x in nodes if predecessor_count[x] == 0 ]
-if len(top_nodes) > 1:
-    top_node = top_nodes[0]
-    print("warning: found multiple top-level nodes (using the first one for new)")
-    for node in top_nodes:
-        print("    " + node)
-elif len(top_nodes) == 0:
-    print("error: found no top-level node")
-    sys.exit(1)
-else:
-    top_node = top_nodes[0]
+        dot.edges(list(edges))
+        dot.render("test.dot")
 
-def calculate_max_depth(k, depth):
-    node = nodes[k]
-    if depth <= node.depth:
-        return
+    sorted_nodes = list(nodes.values())
+    sorted_nodes.sort(key=lambda x: x.depth)
 
-    node.depth = depth
-    for edge in graph[k]:
-        calculate_max_depth(edge, depth + 1)
-calculate_max_depth(top_node, 1)
-
-sorted_nodes = list(nodes.values())
-sorted_nodes.sort(key=lambda x: x.depth)
-
-if False:
-    depth_node_dict =  defaultdict(list)
+    last_lib = "???"
+    lib_order = []
+    lib_groups = defaultdict(list)
+    depth_node_dict = defaultdict(list)
     for node in sorted_nodes:
         depth_node_dict[node.depth].append(node)
-        if node.lib:
-            path = node.lib[:-2] + "/" + node.name
-        else:
-            path = node.name
-        print("$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+        if not node.lib in lib_order:
+            lib_order.append(node.lib)
+        lib_groups[node.lib].append(node)
 
-    node_conflict = [ x for x in depth_node_dict.values() if len(x) > 1 ]
-    if node_conflict:
-        print("warning: not enough information to determine the object file order.")
-        print("         try swaping the order of these elements:")
-        for conflict in node_conflict:
-            print("    " + " <=> ".join([ x.name for x in conflict ]))
+    # export makefiles
+    if False:
+        MAKEFILE_PATH = "makefiles/" 
+        for lib in lib_order:
+            if not lib:
+                continue
+            
+            files = lib[:-2] + "_O_FILES"
+            path = Path(MAKEFILE_PATH)
+            path.mkdir(parents=True, exist_ok=True)
+            builder = Builder("makefiles/" + lib[:-2] + ".mk", False, None)
+            builder.write("%s := \\" % files)
 
-#print(nodes)
 
+            nodes = lib_groups[lib]
+            nodes.sort(key=lambda x: x.depth)
+            for node in nodes:    
+                if node.lib:
+                    path = node.lib[:-2] + "/" + node.name
+                else:
+                    path = node.name
+                builder.write("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+            builder.write("")
 
-# nocheckin REMOVE 
+            builder.write("$(BUILD_DIR)/asm/lib%s.a: $(%s)" % (lib[:-2], files))
+            builder.write("\t$(LD) $(LIB_LDFLAGS) -o $@ $(%s)" % files)
+            builder.write("")
+            builder.close()
+
+    # export obj_files.mk
+    if True:
+        builder = Builder("obj_files.mk", False, None)
+        builder.write("O_FILES := \\")
+        builder.write("\t$(BUILD_DIR)/asm/%sinit.o \\" % (BASE_PATH))
+        for section in SECTIONS.values():
+            if section.binaryExport:
+                builder.write("\t$(BUILD_DIR)/asm/%s%s.o \\" % (BASE_PATH, section.name[1:]))
+
+        for lib in lib_order:
+            nodes = lib_groups[lib]
+            nodes.sort(key=lambda x: x.depth)
+            for node in nodes:    
+                if node.lib:
+                    path = node.lib[:-2] + "/" + node.name
+                else:
+                    path = node.name
+                builder.write("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+            builder.write("\\")
+        builder.write("")
+        builder.close()
+
+    # print lib variables
+    if False:
+        print("LIBS := \\")
+        for lib in lib_order:
+            if lib:
+                print("\t-l%s \\" % lib[:-2])
+        print()
+        print("LIBS_FILES := \\")
+        for lib in lib_order:
+            if lib:
+                print("\t$(BUILD_DIR)/asm/lib%s.a \\" % lib[:-2])
+        print()
+        for lib in lib_order:
+            if lib:
+                print("include %s%s.mk" % (MAKEFILE_PATH, lib[:-2]))
+        print()
+        print("ALL_O_FILES := \\")
+        print("\t$(BUILD_DIR)/asm/%sinit.o \\" % (BASE_PATH))
+        for section in SECTIONS.values():
+            if section.binaryExport:
+                print("\t$(BUILD_DIR)/asm/%s%s.o \\" % (BASE_PATH, section.name[1:]))
+
+        for lib in lib_order:
+            nodes = lib_groups[lib]
+            nodes.sort(key=lambda x: x.depth)
+            for node in nodes:    
+                if node.lib:
+                    path = node.lib[:-2] + "/" + node.name
+                else:
+                    path = node.name
+                print("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
+            print("\t\\")
+        print()
+
+# export lcf symbol address
+if False:
+    builder = Builder("symbols.dump", False, None)
+    for section in SECTIONS.values():
+        for symbol in section.symbols:
+            builder.write("%s = 0x%08X;" % (symbol.label, symbol.addr))
+            if symbol.mwcc_label:
+                builder.write("%s = 0x%08X;" % (symbol.mwcc_label, symbol.addr))
+    builder.close()
+
+# export lcf forceactive symbols
+if False:
+    builder = Builder("symbols_active.dump", False, None)
+    for section in SECTIONS.values():
+        for symbol in section.symbols:
+            builder.write(symbol.label)
+            if symbol.mwcc_label:
+                builder.write(symbol.mwcc_label)
+    builder.close()
+
 
 """
 asm_export_library()
@@ -542,428 +651,3 @@ print(tree)
 """
 
 sys.exit(0)
-
-
-#
-#
-#
-
-
-collision_symbol_names = defaultdict(int)
-
-section_names = [
-    ".init",
-    ".text",
-    ".ctors",
-    ".dtors",
-    ".rodata",
-    ".data",
-    ".bss",
-    ".sdata",
-    ".sbss",
-    ".sdata2",
-    ".sbss2",
-]
-
-sections = read_frameworkF(section_names)
-elf_sections = {}  # read_elfSymbols(section_names)
-section_symbols = {}
-end_alignment = {
-    ".sbss2": 8,
-}
-section_range = {
-    ".rodata": (0x803739a0, 0x0002f540),
-    ".data": (0x803a2ee0, 0x00030400),
-    ".bss": (0x803d32e0, 0x0007d2a0),
-    ".sdata": (0x80450580, 0x00000580),
-    ".sbss": (0x80450b00, 0x00000f00),
-    ".sdata2": (0x80451a00, 0x00005160),
-    ".sbss2": (0x80456b60, 0x00000068),
-    ".init": (0x80003100, 0x00002500),
-    ".text": (0x800056c0, 0x0036e100)
-}
-
-init_names = {
-    0x80003100: "__check_pad3",
-    0x80003140: "__set_debug_bba",
-    0x8000314c: "__get_debug_bba",
-    0x80003154: "__start",
-    0x800032b0: "__init_registers",
-    0x80003340: "__init_data",
-    0x80003400: "__init_hardware",
-    0x80003424: "__flush_cache",
-    0x80003458: "memset",
-    0x80003488: "__fill_mem",
-    0x80003540: "memcpy",
-    0x80003590: "TRK_memset",
-    0x800035c0: "TRK_memcpy",
-}
-
-print("Searching for labels...")
-clear_state()
-disasm_iter(0x00000100, 0x80003100, 0x80005600 -
-            0x80003100, get_label_callback)
-disasm_iter(0x00002600,  0x800056C0, 0x803737C0 -
-            0x800056C0, get_label_callback)
-
-map_labels = set()
-for k, v in sections.items():
-    map_labels.update(set([x.addr for x in v.symbols]))
-
-functions = function_get_all() - map_labels
-labels = label_get_all() - functions - map_labels
-
-print("    %i labels" % len(labels))
-print("    %i functions" % len(functions))
-print("    %i mapped" % len(map_labels))
-
-for function_addr in functions:
-    if function_addr in init_names:
-        name = init_names[function_addr]
-    else:
-        name = addr_to_label(function_addr)
-
-    sections[".init"].symbols += [
-        MapSymbol(function_addr, 0, name, None, "init.o")
-    ]
-
-for label_addr in labels:
-    found = False
-    for k, r in section_range.items():
-        if label_addr < r[0]:
-            continue
-        if label_addr >= r[0]+r[1]:
-            continue
-        if k != ".text":
-            sections[k].symbols += [
-                MapSymbol(label_addr, 0, addr_to_label(label_addr), None, None)
-            ]
-        found = True
-        break
-    if not found:
-        print("warning: no section for symbol 0x%08X (%s)" %
-              (label_addr, addr_to_label(label_addr)))
-
-
-print("Sort and align symbols...")
-for k, v in sections.items():
-    symbols_set = elf_sections[k] if k in elf_sections else set()
-    symbols_map = dict([(x.addr, x) for x in v.symbols])
-
-    for symbol in v.symbols:
-        symbols_set.add(symbol.addr)
-
-    symbols = list(symbols_set)
-    symbols.sort()
-
-    alignment = 32
-    if k in end_alignment:
-        alignment = end_alignment[k]
-
-    last_obj = None
-    last_lib = None
-    no_obj_file = []
-    final_symbols = []
-    for addr in symbols:
-        assert addr in symbols_map
-        symbol = symbols_map[addr]
-
-        if not symbol.obj:
-            if last_obj:
-                symbol.obj = last_obj
-                symbol.lib = last_lib
-            else:
-                no_obj_file += [len(final_symbols)]
-
-        if symbol.obj:
-            for i in no_obj_file:
-                s = final_symbols[i]
-                print("set obj/lib", hex(s.addr),
-                      s.name, symbol.obj, symbol.lib)
-                s.obj = symbol.obj
-                s.lib = symbol.lib
-            no_obj_file = []
-
-        final_symbols += [Symbol(symbol.addr, symbol.size, symbol.name,
-                                 name_from_addr(k, symbol.addr), symbol.lib, symbol.obj)]
-        if symbol.obj:
-            last_obj = symbol.obj
-            last_lib = symbol.lib
-
-    for symbol in final_symbols:
-        if not symbol.obj:
-            print("error: symbol doesn't belong to any object 0x%08X (%s)" %
-                  (symbol.addr, symbol.label))
-            sys.exit(1)
-
-    """
-    final_symbols = []
-    no_obj_file = []
-    for addr in symbols:
-        if not addr in symbols_map:
-            no_obj_file += [addr]
-            continue
-
-        symbol = symbols_map[addr]
-        if k != ".text" and k != ".init":
-            for nof_addr in no_obj_file:
-                final_symbols += [Symbol(nof_addr, 0, "???",
-                                         name(k, nof_addr), symbol.lib, symbol.obj)]
-        no_obj_file = []
-
-        final_symbols += [Symbol(symbol.addr, symbol.size, symbol.name,
-                                 name(k, symbol.addr), symbol.lib, symbol.obj)]
-
-    if no_obj_file:
-        if len(final_symbols) > 0 and final_symbols[-1].addr in symbols_map:
-            symbol = symbols_map[final_symbols[-1].addr]
-            for nof_addr in no_obj_file:
-                final_symbols += [Symbol(nof_addr, 0, "???",
-                                         name(k, nof_addr), symbol.lib, symbol.obj)]
-        else:
-            for nof_addr in no_obj_file:
-                final_symbols += [Symbol(nof_addr, 0, "???",
-                                         name(k, nof_addr), None, "__unknown.o")]
-    """
-
-    final_symbols.sort(key=lambda x: x.addr)
-
-    for i in range(len(final_symbols)):
-        symbol = final_symbols[i]
-        if i + 1 < len(final_symbols):
-            if symbol.size == 0:
-                next_addr = final_symbols[i + 1].addr
-                size = next_addr - symbol.addr
-                symbol.size = size
-            else:
-                next_addr = final_symbols[i + 1].addr
-                expected_addr = symbol.addr + symbol.size
-                if expected_addr > next_addr:
-                    symbol.size = next_addr - symbol.addr
-                elif expected_addr < next_addr:
-                    symbol.padding = next_addr - symbol.addr - symbol.size
-        else:
-            next_addr = (symbol.addr + symbol.size +
-                         alignment - 1) & ~(alignment - 1)
-            size = next_addr - symbol.addr
-            symbol.padding = size - symbol.size
-
-    for s in final_symbols:
-        collision_symbol_names[s.name] += 1
-    section_symbols[k] = final_symbols
-
-for k, v in sections.items():
-    for s in section_symbols[k]:
-        if collision_symbol_names[s.name] == 1:
-            s.label = escape_name(s.name, k, s.addr)
-        else:
-            s.label = name_from_addr(k, s.addr)
-
-for symbol in section_symbols[".init"]:
-    print(hex(symbol.addr), symbol.label)
-
-symbol_addr_set = set()
-structure = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
-for k, symbols in section_symbols.items():
-    for symbol in symbols:
-        structure[symbol.lib][symbol.obj][k] += [symbol]
-        add_label_override(symbol.addr, symbol.label)
-        symbol_addr_set.add(symbol.addr)
-print("    %i symbols" % len(symbol_addr_set))
-
-
-#################################
-
-
-def export_symbol_text(output, section, symbol):
-    disasemble_output_set(output)
-
-    if symbol.size:
-        file_offsets = {
-            ".text": 0x00002600 - 0x800056C0,
-            ".init": 0x00000100 - 0x80003100,
-        }
-
-        offset = file_offsets[section] + symbol.addr
-        disasm_iter(offset, symbol.addr, symbol.size, disassemble_callback)
-    else:
-        output.write(".global %s\n" % symbol.label)
-        output.write("%s:\n" % symbol.label)
-
-    pad = symbol.padding
-    while pad > 0:
-        if pad >= 8:
-            output.write(
-                ".byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00\n")
-            pad -= 8
-        elif pad >= 4:
-            output.write(".byte 0x00, 0x00, 0x00, 0x00\n")
-            pad -= 4
-        else:
-            output.write(".byte 0x00\n")
-            pad -= 1
-    output.write("\n")
-
-
-def export_symbol_bss(output, symbol):
-    output.write(".global %s\n" % symbol.label)
-    output.write("%s:\n" % symbol.label)
-
-    if symbol.size:
-        output.write(".skip %s\n" % (hex(symbol.size)))
-    if symbol.padding:
-        output.write(".skip %s /* padding */\n" % (hex(symbol.padding)))
-    output.write("\n")
-
-
-def export_symbol_data_output(output, data, file_offset):
-    offset = 0
-    for chunk in chunks(data, 16):
-        hex_data = ", ".join(["0x" + hex(x)[2:].rjust(2, '0') for x in chunk])
-        output.write(".byte %s /* baserom.dol+%s */\n" %
-                     (hex_data, hex(file_offset + offset)))
-        offset += len(chunk)
-
-
-def export_symbol_data(output, section, symbol):
-    output.write(".global %s\n" % symbol.label)
-    output.write("%s:\n" % symbol.label)
-
-    file_offsets = {
-        ".rodata": 0x803739A0 - 0x3709A0,
-        ".data": 0x803A2EE0 - 0x39FEE0,
-        ".sdata": 0x80450580 - 0x3D02E0,
-        ".sdata2": 0x80451A00 - 0x3D0860,
-        ".extabindex": 0x80005660 - 0x370760,
-        ".extab": 0x80005600 - 0x370700,
-        ".ctors": 0x803737C0 - 0x3707C0,
-        ".dtors": 0x80373980 - 0x370980
-    }
-
-    file_offset = symbol.addr - file_offsets[section]
-
-    if True:
-        baserom.seek(file_offset, os.SEEK_SET)
-        data = baserom.read(symbol.size)
-        export_symbol_data_output(output, data, file_offset)
-
-        if symbol.padding:
-            pad = baserom.read(symbol.padding)
-            export_symbol_data_output(output, pad, file_offset+symbol.size)
-    else:
-        output.write(".incbin \"baserom.dol\", 0x%08X, 0x%08X\n" %
-                     (file_offset, symbol.size + symbol.padding))
-    output.write("\n")
-
-
-def export_symbol(output, section, symbol):
-    output.write("/* %08X %04X %s %s %s */\n" %
-                 (symbol.addr, symbol.size, section, symbol.label, symbol.name))
-
-    if section == ".text" or section == ".init":
-        export_symbol_text(output, section, symbol)
-    elif section == ".bss" or section == ".sbss" or section == ".sbss2":
-        export_symbol_bss(output, symbol)
-    else:
-        export_symbol_data(output, section, symbol)
-
-
-def export_section(output, name, symbols):
-    flags = "a"
-    if name == ".bss" or name == ".sbss":
-        flags = "aw"
-    if name == ".text" or name == ".init":
-        flags = "ax"
-    if name == ".extabindex" or name == ".extab":
-        flags = "aw"
-    if name == ".data":
-        flags = "aw"
-
-    print_name = name
-    if name == ".extabindex":
-        print_name = "extabindex_"
-    if name == ".extab":
-        print_name = "extab_"
-
-    output.write("\n")
-    output.write("\n")
-    output.write(".section %s, \"%s\"\n" % (print_name, flags))
-
-    if name == ".ctors":
-        # .ctors will not match by default, as the linker will
-        # insert one symbol in the start of .ctors and one in
-        # # the end.
-        for symbol in symbols:
-            if symbol.label == "__init_cpp_exceptions_reference":
-                output.write("/* %08X %04X %s %s %s */\n" %
-                             (symbol.addr, symbol.size, name, symbol.label, symbol.name))
-                output.write(".global %s\n" % symbol.label)
-                output.write("%s:\n" % symbol.label)
-
-                # add the ctors list (skipping the first and last element)
-                output.write(
-                    ".incbin \"baserom.dol\", 0x3707C4, 0x1B8 /* ctors list */ ")
-            else:
-                export_symbol(output, name, symbol)
-    elif name == ".dtors":
-        # .dtors will not match by default, as the linker will
-        # insert a NULL symbol at the end of .dtors
-        for symbol in symbols:
-            if symbol.label == "__destroy_global_chain_reference":
-                output.write("/* %08X %04X %s %s %s */\n" %
-                             (symbol.addr, symbol.size, name, symbol.label, symbol.name))
-                output.write(".global %s\n" % symbol.label)
-                output.write("%s:\n" % symbol.label)
-            elif symbol.label == "__fini_cpp_exceptions_reference":
-                # remove to have room for the linker symbol.
-                assert symbol.padding >= 4
-                symbol.padding -= 4
-                export_symbol(output, name, symbol)
-            else:
-                export_symbol(output, name, symbol)
-    else:
-        for symbol in symbols:
-            export_symbol(output, name, symbol)
-
-
-def export_objects(path, name, sections):
-    if name == "init.o":  # init.o is special and requires manual edits
-        return
-
-    o_file = path + name
-    s_file = o_file.replace(".o", ".s")
-    path = Path("/".join(s_file.split("/")[:-1]))
-    path.mkdir(parents=True, exist_ok=True)
-    print("    ", s_file, path)
-
-    output = open(s_file, 'w')
-    output.write(".include \"macros.inc\"\n")
-
-    for k, v in sections.items():
-        export_section(output, k, v)
-
-    output.close()
-
-
-def export_library(base_path, name, objects):
-    path = "asm/%s" % (base_path)
-    if name:
-        path = "asm/%s%s/" % (base_path, name[:-2])
-
-    print("Exporting", name, path)
-
-    for k, v in objects.items():
-        export_objects(path, k, v)
-
-#################################
-
-
-baserom = open("baserom.dol", "rb")
-
-base_path = ""
-for k, v in structure.items():
-    export_library(base_path, k, v)
-
-baserom.close()
-
-#################################

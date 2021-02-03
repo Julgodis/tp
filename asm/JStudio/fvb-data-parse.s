@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802850AC 0068 .text getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
+/* 802850AC 0040 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
 .global getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData
 getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData:
 /* 802850AC 00281FEC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -16,18 +18,24 @@ getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TP
 /* 802850CC 0028200C  48 05 77 99 */	bl parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit
 /* 802850D0 00282010  80 9F 00 00 */	lwz r4, 0(r31)
 /* 802850D4 00282014  28 04 00 00 */	cmplwi r4, 0
-/* 802850D8 00282018  40 82 00 14 */	bne lbl_802850EC
+/* 802850D8 00282018  40 82 00 14 */	bne func_802850EC
 /* 802850DC 0028201C  38 00 00 00 */	li r0, 0
 /* 802850E0 00282020  90 1F 00 08 */	stw r0, 8(r31)
 /* 802850E4 00282024  90 7F 00 0C */	stw r3, 0xc(r31)
-/* 802850E8 00282028  48 00 00 18 */	b lbl_80285100
-lbl_802850EC:
+/* 802850E8 00282028  48 00 00 18 */	b func_80285100
+
+/* 802850EC 0014 .text      func_802850EC                  func_802850EC                  */
+.global func_802850EC
+func_802850EC:
 /* 802850EC 0028202C  90 7F 00 08 */	stw r3, 8(r31)
 /* 802850F0 00282030  38 04 00 03 */	addi r0, r4, 3
 /* 802850F4 00282034  54 00 00 3A */	rlwinm r0, r0, 0, 0, 0x1d
 /* 802850F8 00282038  7C 03 02 14 */	add r0, r3, r0
 /* 802850FC 0028203C  90 1F 00 0C */	stw r0, 0xc(r31)
-lbl_80285100:
+
+/* 80285100 0014 .text      func_80285100                  func_80285100                  */
+.global func_80285100
+func_80285100:
 /* 80285100 00282040  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80285104 00282044  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80285108 00282048  7C 08 03 A6 */	mtlr r0

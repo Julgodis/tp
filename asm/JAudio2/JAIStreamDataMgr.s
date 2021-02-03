@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 802A3AD8 0048 .text __dt__16JAIStreamDataMgrFv __dt__16JAIStreamDataMgrFv */
+/* 802A3AD8 0030 .text      __dt__16JAIStreamDataMgrFv     __dt__16JAIStreamDataMgrFv     */
 .global __dt__16JAIStreamDataMgrFv
 __dt__16JAIStreamDataMgrFv:
 /* 802A3AD8 002A0A18  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -10,14 +12,17 @@ __dt__16JAIStreamDataMgrFv:
 /* 802A3AE0 002A0A20  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A3AE4 002A0A24  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A3AE8 002A0A28  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802A3AEC 002A0A2C  41 82 00 1C */	beq lbl_802A3B08
+/* 802A3AEC 002A0A2C  41 82 00 1C */	beq func_802A3B08
 /* 802A3AF0 002A0A30  3C A0 80 3D */	lis r5, __vt__16JAIStreamDataMgr@ha
 /* 802A3AF4 002A0A34  38 05 9A 1C */	addi r0, r5, __vt__16JAIStreamDataMgr@l
 /* 802A3AF8 002A0A38  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A3AFC 002A0A3C  7C 80 07 35 */	extsh. r0, r4
-/* 802A3B00 002A0A40  40 81 00 08 */	ble lbl_802A3B08
+/* 802A3B00 002A0A40  40 81 00 08 */	ble func_802A3B08
 /* 802A3B04 002A0A44  48 02 B2 39 */	bl __dl__FPv
-lbl_802A3B08:
+
+/* 802A3B08 0018 .text      func_802A3B08                  func_802A3B08                  */
+.global func_802A3B08
+func_802A3B08:
 /* 802A3B08 002A0A48  7F E3 FB 78 */	mr r3, r31
 /* 802A3B0C 002A0A4C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802A3B10 002A0A50  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -25,7 +30,7 @@ lbl_802A3B08:
 /* 802A3B18 002A0A58  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A3B1C 002A0A5C  4E 80 00 20 */	blr 
 
-/* 802A3B20 0048 .text __dt__16JAIStreamAramMgrFv __dt__16JAIStreamAramMgrFv */
+/* 802A3B20 0030 .text      __dt__16JAIStreamAramMgrFv     __dt__16JAIStreamAramMgrFv     */
 .global __dt__16JAIStreamAramMgrFv
 __dt__16JAIStreamAramMgrFv:
 /* 802A3B20 002A0A60  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -33,14 +38,17 @@ __dt__16JAIStreamAramMgrFv:
 /* 802A3B28 002A0A68  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A3B2C 002A0A6C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A3B30 002A0A70  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802A3B34 002A0A74  41 82 00 1C */	beq lbl_802A3B50
+/* 802A3B34 002A0A74  41 82 00 1C */	beq func_802A3B50
 /* 802A3B38 002A0A78  3C A0 80 3D */	lis r5, __vt__16JAIStreamAramMgr@ha
 /* 802A3B3C 002A0A7C  38 05 9A 08 */	addi r0, r5, __vt__16JAIStreamAramMgr@l
 /* 802A3B40 002A0A80  90 1F 00 00 */	stw r0, 0(r31)
 /* 802A3B44 002A0A84  7C 80 07 35 */	extsh. r0, r4
-/* 802A3B48 002A0A88  40 81 00 08 */	ble lbl_802A3B50
+/* 802A3B48 002A0A88  40 81 00 08 */	ble func_802A3B50
 /* 802A3B4C 002A0A8C  48 02 B1 F1 */	bl __dl__FPv
-lbl_802A3B50:
+
+/* 802A3B50 0018 .text      func_802A3B50                  func_802A3B50                  */
+.global func_802A3B50
+func_802A3B50:
 /* 802A3B50 002A0A90  7F E3 FB 78 */	mr r3, r31
 /* 802A3B54 002A0A94  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802A3B58 002A0A98  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -49,15 +57,17 @@ lbl_802A3B50:
 /* 802A3B64 002A0AA4  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                         .data                                          */
+/* ###################################################################################### */
 .section .data, "aw"
-/* 803C9A08 0014 .data __vt__16JAIStreamAramMgr __vt__16JAIStreamAramMgr */
+/* 803C9A08 0014 .data      __vt__16JAIStreamAramMgr       __vt__16JAIStreamAramMgr       */
 .global __vt__16JAIStreamAramMgr
 __vt__16JAIStreamAramMgr:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c6a08 */
 .byte 0x80, 0x2a, 0x3b, 0x20 /* baserom.dol+0x3c6a18 */
 
-/* 803C9A1C 0010 .data __vt__16JAIStreamDataMgr __vt__16JAIStreamDataMgr */
+/* 803C9A1C 0010 .data      __vt__16JAIStreamDataMgr       __vt__16JAIStreamDataMgr       */
 .global __vt__16JAIStreamDataMgr
 __vt__16JAIStreamDataMgr:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2a, 0x3a, 0xd8 /* baserom.dol+0x3c6a1c */

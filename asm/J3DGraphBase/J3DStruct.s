@@ -1,8 +1,10 @@
 .include "macros.inc"
 
-
+/* ###################################################################################### */
+/*                                         .text                                          */
+/* ###################################################################################### */
 .section .text, "ax"
-/* 803256C4 0054 .text __as__12J3DLightInfoFRC12J3DLightInfo __as__12J3DLightInfoFRC12J3DLightInfo */
+/* 803256C4 0054 .text      __as__12J3DLightInfoFRC12J3DLightInfo __as__12J3DLightInfoFRC12J3DLightInfo */
 .global __as__12J3DLightInfoFRC12J3DLightInfo
 __as__12J3DLightInfoFRC12J3DLightInfo:
 /* 803256C4 00322604  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
@@ -27,7 +29,7 @@ __as__12J3DLightInfoFRC12J3DLightInfo:
 /* 80325710 00322650  F0 03 00 2C */	psq_st f0, 44(r3), 0, qr0
 /* 80325714 00322654  4E 80 00 20 */	blr 
 
-/* 80325718 007C .text __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo */
+/* 80325718 007C .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo */
 .global __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo
 __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo:
 /* 80325718 00322658  88 04 00 00 */	lbz r0, 0(r4)
@@ -62,7 +64,7 @@ __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo:
 /* 8032578C 003226CC  F0 03 00 5C */	psq_st f0, 92(r3), 0, qr0
 /* 80325790 003226D0  4E 80 00 20 */	blr 
 
-/* 80325794 0048 .text setEffectMtx__13J3DTexMtxInfoFPA4_f setEffectMtx__13J3DTexMtxInfoFPA4_f */
+/* 80325794 0048 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f setEffectMtx__13J3DTexMtxInfoFPA4_f */
 .global setEffectMtx__13J3DTexMtxInfoFPA4_f
 setEffectMtx__13J3DTexMtxInfoFPA4_f:
 /* 80325794 003226D4  E0 A4 00 00 */	psq_l f5, 0(r4), 0, qr0
@@ -77,14 +79,14 @@ setEffectMtx__13J3DTexMtxInfoFPA4_f:
 /* 803257B8 003226F8  F0 43 00 3C */	psq_st f2, 60(r3), 0, qr0
 /* 803257BC 003226FC  F0 23 00 44 */	psq_st f1, 68(r3), 0, qr0
 /* 803257C0 00322700  F0 03 00 4C */	psq_st f0, 76(r3), 0, qr0
-/* 803257C4 00322704  C0 C2 CA 14 */	lfs f6, lbl_80456414-_SDA2_BASE_(r2)
+/* 803257C4 00322704  C0 C2 CA 14 */	lfs f6, LIT_410-_SDA2_BASE_(r2)
 /* 803257C8 00322708  F0 C3 00 54 */	psq_st f6, 84(r3), 0, qr0
 /* 803257CC 0032270C  D0 C3 00 5C */	stfs f6, 0x5c(r3)
-/* 803257D0 00322710  C0 02 CA 10 */	lfs f0, lbl_80456410-_SDA2_BASE_(r2)
+/* 803257D0 00322710  C0 02 CA 10 */	lfs f0, LIT_409-_SDA2_BASE_(r2)
 /* 803257D4 00322714  D0 03 00 60 */	stfs f0, 0x60(r3)
 /* 803257D8 00322718  4E 80 00 20 */	blr 
 
-/* 803257DC 0024 .text __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo */
+/* 803257DC 0024 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo */
 .global __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo
 __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo:
 /* 803257DC 0032271C  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
@@ -97,7 +99,7 @@ __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo:
 /* 803257F8 00322738  98 03 00 18 */	stb r0, 0x18(r3)
 /* 803257FC 0032273C  4E 80 00 20 */	blr 
 
-/* 80325800 007C .text __as__10J3DFogInfoFRC10J3DFogInfo __as__10J3DFogInfoFRC10J3DFogInfo */
+/* 80325800 0064 .text      __as__10J3DFogInfoFRC10J3DFogInfo __as__10J3DFogInfoFRC10J3DFogInfo */
 .global __as__10J3DFogInfoFRC10J3DFogInfo
 __as__10J3DFogInfoFRC10J3DFogInfo:
 /* 80325800 00322740  88 04 00 00 */	lbz r0, 0(r4)
@@ -125,15 +127,18 @@ __as__10J3DFogInfoFRC10J3DFogInfo:
 /* 80325858 00322798  38 A0 00 00 */	li r5, 0
 /* 8032585C 0032279C  38 00 00 0A */	li r0, 0xa
 /* 80325860 003227A0  7C 09 03 A6 */	mtctr r0
-lbl_80325864:
+
+/* 80325864 0018 .text      func_80325864                  func_80325864                  */
+.global func_80325864
+func_80325864:
 /* 80325864 003227A4  38 C5 00 18 */	addi r6, r5, 0x18
 /* 80325868 003227A8  7C 04 32 2E */	lhzx r0, r4, r6
 /* 8032586C 003227AC  7C 03 33 2E */	sthx r0, r3, r6
 /* 80325870 003227B0  38 A5 00 02 */	addi r5, r5, 2
-/* 80325874 003227B4  42 00 FF F0 */	bdnz lbl_80325864
+/* 80325874 003227B4  42 00 FF F0 */	bdnz func_80325864
 /* 80325878 003227B8  4E 80 00 20 */	blr 
 
-/* 8032587C 0024 .text __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo */
+/* 8032587C 0024 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo */
 .global __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo
 __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo:
 /* 8032587C 003227BC  88 04 00 00 */	lbz r0, 0(r4)
@@ -147,15 +152,17 @@ __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo:
 /* 8032589C 003227DC  4E 80 00 20 */	blr 
 
 
-
+/* ###################################################################################### */
+/*                                        .sdata2                                         */
+/* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456410 0004 .sdata2 lbl_80456410 @409 */
-.global lbl_80456410
-lbl_80456410:
+/* 80456410 0004 .sdata2    LIT_409                        @409                           */
+.global LIT_409
+LIT_409:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5270 */
 
-/* 80456414 0004 .sdata2 lbl_80456414 @410 */
-.global lbl_80456414
-lbl_80456414:
+/* 80456414 0004 .sdata2    LIT_410                        @410                           */
+.global LIT_410
+LIT_410:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5274 */
 
