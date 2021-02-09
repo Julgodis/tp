@@ -7,6 +7,7 @@
 /* 802553EC 0010 .text      __ct__13CPaneMgrAlphaFv        __ct__13CPaneMgrAlphaFv        */
 .global __ct__13CPaneMgrAlphaFv
 __ct__13CPaneMgrAlphaFv:
+__ct__13CPaneMgrAlphaFv:
 /* 802553EC 0025232C  3C 80 80 3C */	lis r4, __vt__13CPaneMgrAlpha@ha
 /* 802553F0 00252330  38 04 2E 28 */	addi r0, r4, __vt__13CPaneMgrAlpha@l
 /* 802553F4 00252334  90 03 00 00 */	stw r0, 0(r3)
@@ -14,6 +15,7 @@ __ct__13CPaneMgrAlphaFv:
 
 /* 802553FC 0070 .text      __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap */
 .global __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap
+__ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap:
 __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap:
 /* 802553FC 0025233C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80255400 00252340  7C 08 02 A6 */	mflr r0
@@ -44,8 +46,9 @@ __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap:
 /* 80255464 002523A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80255468 002523A8  4E 80 00 20 */	blr 
 
-/* 8025546C 0048 .text      __dt__13CPaneMgrAlphaFv        __dt__13CPaneMgrAlphaFv        */
+/* 8025546C 0074 .text      __dt__13CPaneMgrAlphaFv        __dt__13CPaneMgrAlphaFv        */
 .global __dt__13CPaneMgrAlphaFv
+__dt__13CPaneMgrAlphaFv:
 __dt__13CPaneMgrAlphaFv:
 /* 8025546C 002523AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255470 002523B0  7C 08 02 A6 */	mflr r0
@@ -54,29 +57,23 @@ __dt__13CPaneMgrAlphaFv:
 /* 8025547C 002523BC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80255480 002523C0  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80255484 002523C4  7C 9F 23 78 */	mr r31, r4
-/* 80255488 002523C8  41 82 00 3C */	beq func_802554C4
+/* 80255488 002523C8  41 82 00 3C */	beq lbl_802554C4
 /* 8025548C 002523CC  3C 60 80 3C */	lis r3, __vt__13CPaneMgrAlpha@ha
 /* 80255490 002523D0  38 03 2E 28 */	addi r0, r3, __vt__13CPaneMgrAlpha@l
 /* 80255494 002523D4  90 1E 00 00 */	stw r0, 0(r30)
 /* 80255498 002523D8  80 9E 00 0C */	lwz r4, 0xc(r30)
 /* 8025549C 002523DC  28 04 00 00 */	cmplwi r4, 0
-/* 802554A0 002523E0  41 82 00 14 */	beq func_802554B4
+/* 802554A0 002523E0  41 82 00 14 */	beq lbl_802554B4
 /* 802554A4 002523E4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 802554A8 002523E8  48 07 90 A1 */	bl free__7JKRHeapFPv
 /* 802554AC 002523EC  38 00 00 00 */	li r0, 0
 /* 802554B0 002523F0  90 1E 00 0C */	stw r0, 0xc(r30)
-
-/* 802554B4 0010 .text      func_802554B4                  func_802554B4                  */
-.global func_802554B4
-func_802554B4:
+lbl_802554B4:
 /* 802554B4 002523F4  7F E0 07 35 */	extsh. r0, r31
-/* 802554B8 002523F8  40 81 00 0C */	ble func_802554C4
+/* 802554B8 002523F8  40 81 00 0C */	ble lbl_802554C4
 /* 802554BC 002523FC  7F C3 F3 78 */	mr r3, r30
 /* 802554C0 00252400  48 07 98 7D */	bl __dl__FPv
-
-/* 802554C4 001C .text      func_802554C4                  func_802554C4                  */
-.global func_802554C4
-func_802554C4:
+lbl_802554C4:
 /* 802554C4 00252404  7F C3 F3 78 */	mr r3, r30
 /* 802554C8 00252408  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802554CC 0025240C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -85,8 +82,9 @@ func_802554C4:
 /* 802554D8 00252418  38 21 00 10 */	addi r1, r1, 0x10
 /* 802554DC 0025241C  4E 80 00 20 */	blr 
 
-/* 802554E0 0030 .text      initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap */
+/* 802554E0 00E8 .text      initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap */
 .global initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap
+initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap:
 initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap:
 /* 802554E0 00252420  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802554E4 00252424  7C 08 02 A6 */	mflr r0
@@ -97,26 +95,20 @@ initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap:
 /* 802554F8 00252438  7C 9F 23 78 */	mr r31, r4
 /* 802554FC 0025243C  93 E3 00 04 */	stw r31, 4(r3)
 /* 80255500 00252440  28 05 00 00 */	cmplwi r5, 0
-/* 80255504 00252444  41 82 00 0C */	beq func_80255510
+/* 80255504 00252444  41 82 00 0C */	beq lbl_80255510
 /* 80255508 00252448  90 BE 00 08 */	stw r5, 8(r30)
-/* 8025550C 0025244C  48 00 00 0C */	b func_80255518
-
-/* 80255510 0008 .text      func_80255510                  func_80255510                  */
-.global func_80255510
-func_80255510:
+/* 8025550C 0025244C  48 00 00 0C */	b lbl_80255518
+lbl_80255510:
 /* 80255510 00252450  4B DB 9C DD */	bl mDoExt_getCurrentHeap__Fv
 /* 80255514 00252454  90 7E 00 08 */	stw r3, 8(r30)
-
-/* 80255518 006C .text      func_80255518                  func_80255518                  */
-.global func_80255518
-func_80255518:
+lbl_80255518:
 /* 80255518 00252458  38 00 00 00 */	li r0, 0
 /* 8025551C 0025245C  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 80255520 00252460  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80255524 00252464  B0 1E 00 14 */	sth r0, 0x14(r30)
 /* 80255528 00252468  88 1E 00 19 */	lbz r0, 0x19(r30)
 /* 8025552C 0025246C  28 00 00 00 */	cmplwi r0, 0
-/* 80255530 00252470  41 82 00 54 */	beq func_80255584
+/* 80255530 00252470  41 82 00 54 */	beq lbl_80255584
 /* 80255534 00252474  80 7E 00 04 */	lwz r3, 4(r30)
 /* 80255538 00252478  48 0A 25 55 */	bl getFirstChildPane__7J2DPaneFv
 /* 8025553C 0025247C  7C 64 1B 78 */	mr r4, r3
@@ -124,7 +116,7 @@ func_80255518:
 /* 80255544 00252484  48 00 05 1D */	bl childPaneCount__13CPaneMgrAlphaFP7J2DPane
 /* 80255548 00252488  88 1E 00 19 */	lbz r0, 0x19(r30)
 /* 8025554C 0025248C  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 80255550 00252490  41 82 00 34 */	beq func_80255584
+/* 80255550 00252490  41 82 00 34 */	beq lbl_80255584
 /* 80255554 00252494  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80255558 00252498  A8 9E 00 14 */	lha r4, 0x14(r30)
 /* 8025555C 0025249C  38 A0 00 20 */	li r5, 0x20
@@ -137,27 +129,18 @@ func_80255518:
 /* 80255578 002524B8  7C 64 1B 78 */	mr r4, r3
 /* 8025557C 002524BC  7F C3 F3 78 */	mr r3, r30
 /* 80255580 002524C0  48 00 05 4D */	bl childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane
-
-/* 80255584 001C .text      func_80255584                  func_80255584                  */
-.global func_80255584
-func_80255584:
+lbl_80255584:
 /* 80255584 002524C4  80 7F 00 08 */	lwz r3, 8(r31)
 /* 80255588 002524C8  3C 03 AF BF */	addis r0, r3, 0xafbf
 /* 8025558C 002524CC  28 00 4E 32 */	cmplwi r0, 0x4e32
-/* 80255590 002524D0  40 82 00 10 */	bne func_802555A0
+/* 80255590 002524D0  40 82 00 10 */	bne lbl_802555A0
 /* 80255594 002524D4  38 00 00 FF */	li r0, 0xff
 /* 80255598 002524D8  98 1E 00 18 */	stb r0, 0x18(r30)
-/* 8025559C 002524DC  48 00 00 0C */	b func_802555A8
-
-/* 802555A0 0008 .text      func_802555A0                  func_802555A0                  */
-.global func_802555A0
-func_802555A0:
+/* 8025559C 002524DC  48 00 00 0C */	b lbl_802555A8
+lbl_802555A0:
 /* 802555A0 002524E0  88 1F 00 B2 */	lbz r0, 0xb2(r31)
 /* 802555A4 002524E4  98 1E 00 18 */	stb r0, 0x18(r30)
-
-/* 802555A8 0020 .text      func_802555A8                  func_802555A8                  */
-.global func_802555A8
-func_802555A8:
+lbl_802555A8:
 /* 802555A8 002524E8  38 00 00 00 */	li r0, 0
 /* 802555AC 002524EC  B0 1E 00 16 */	sth r0, 0x16(r30)
 /* 802555B0 002524F0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -167,8 +150,9 @@ func_802555A8:
 /* 802555C0 00252500  38 21 00 10 */	addi r1, r1, 0x10
 /* 802555C4 00252504  4E 80 00 20 */	blr 
 
-/* 802555C8 002C .text      show__13CPaneMgrAlphaFv        show__13CPaneMgrAlphaFv        */
+/* 802555C8 0040 .text      show__13CPaneMgrAlphaFv        show__13CPaneMgrAlphaFv        */
 .global show__13CPaneMgrAlphaFv
+show__13CPaneMgrAlphaFv:
 show__13CPaneMgrAlphaFv:
 /* 802555C8 00252508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802555CC 0025250C  7C 08 02 A6 */	mflr r0
@@ -177,22 +161,20 @@ show__13CPaneMgrAlphaFv:
 /* 802555D8 00252518  7C 7F 1B 78 */	mr r31, r3
 /* 802555DC 0025251C  48 00 00 71 */	bl isVisible__13CPaneMgrAlphaFv
 /* 802555E0 00252520  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802555E4 00252524  40 82 00 10 */	bne func_802555F4
+/* 802555E4 00252524  40 82 00 10 */	bne lbl_802555F4
 /* 802555E8 00252528  38 00 00 01 */	li r0, 1
 /* 802555EC 0025252C  80 7F 00 04 */	lwz r3, 4(r31)
 /* 802555F0 00252530  98 03 00 B0 */	stb r0, 0xb0(r3)
-
-/* 802555F4 0014 .text      func_802555F4                  func_802555F4                  */
-.global func_802555F4
-func_802555F4:
+lbl_802555F4:
 /* 802555F4 00252534  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802555F8 00252538  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802555FC 0025253C  7C 08 03 A6 */	mtlr r0
 /* 80255600 00252540  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255604 00252544  4E 80 00 20 */	blr 
 
-/* 80255608 0030 .text      hide__13CPaneMgrAlphaFv        hide__13CPaneMgrAlphaFv        */
+/* 80255608 0044 .text      hide__13CPaneMgrAlphaFv        hide__13CPaneMgrAlphaFv        */
 .global hide__13CPaneMgrAlphaFv
+hide__13CPaneMgrAlphaFv:
 hide__13CPaneMgrAlphaFv:
 /* 80255608 00252548  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025560C 0025254C  7C 08 02 A6 */	mflr r0
@@ -202,14 +184,11 @@ hide__13CPaneMgrAlphaFv:
 /* 8025561C 0025255C  48 00 00 31 */	bl isVisible__13CPaneMgrAlphaFv
 /* 80255620 00252560  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80255624 00252564  28 00 00 01 */	cmplwi r0, 1
-/* 80255628 00252568  40 82 00 10 */	bne func_80255638
+/* 80255628 00252568  40 82 00 10 */	bne lbl_80255638
 /* 8025562C 0025256C  38 00 00 00 */	li r0, 0
 /* 80255630 00252570  80 7F 00 04 */	lwz r3, 4(r31)
 /* 80255634 00252574  98 03 00 B0 */	stb r0, 0xb0(r3)
-
-/* 80255638 0014 .text      func_80255638                  func_80255638                  */
-.global func_80255638
-func_80255638:
+lbl_80255638:
 /* 80255638 00252578  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8025563C 0025257C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80255640 00252580  7C 08 03 A6 */	mtlr r0
@@ -219,35 +198,31 @@ func_80255638:
 /* 8025564C 000C .text      isVisible__13CPaneMgrAlphaFv   isVisible__13CPaneMgrAlphaFv   */
 .global isVisible__13CPaneMgrAlphaFv
 isVisible__13CPaneMgrAlphaFv:
+isVisible__13CPaneMgrAlphaFv:
 /* 8025564C 0025258C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80255650 00252590  88 63 00 B0 */	lbz r3, 0xb0(r3)
 /* 80255654 00252594  4E 80 00 20 */	blr 
 
-/* 80255658 001C .text      rateCalc__13CPaneMgrAlphaFssUc rateCalc__13CPaneMgrAlphaFssUc */
+/* 80255658 0100 .text      rateCalc__13CPaneMgrAlphaFssUc rateCalc__13CPaneMgrAlphaFssUc */
 .global rateCalc__13CPaneMgrAlphaFssUc
+rateCalc__13CPaneMgrAlphaFssUc:
 rateCalc__13CPaneMgrAlphaFssUc:
 /* 80255658 00252598  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8025565C 0025259C  7C 87 07 34 */	extsh r7, r4
 /* 80255660 002525A0  7C A3 07 34 */	extsh r3, r5
 /* 80255664 002525A4  7C 07 18 00 */	cmpw r7, r3
-/* 80255668 002525A8  41 81 00 0C */	bgt func_80255674
+/* 80255668 002525A8  41 81 00 0C */	bgt lbl_80255674
 /* 8025566C 002525AC  C0 22 B4 B8 */	lfs f1, d_d_pane_class_alpha__LIT_3692-_SDA2_BASE_(r2)
-/* 80255670 002525B0  48 00 00 E0 */	b func_80255750
-
-/* 80255674 001C .text      func_80255674                  func_80255674                  */
-.global func_80255674
-func_80255674:
+/* 80255670 002525B0  48 00 00 E0 */	b lbl_80255750
+lbl_80255674:
 /* 80255674 002525B4  54 C0 06 3E */	clrlwi r0, r6, 0x18
 /* 80255678 002525B8  2C 00 00 02 */	cmpwi r0, 2
-/* 8025567C 002525BC  41 82 00 54 */	beq func_802556D0
-/* 80255680 002525C0  40 80 00 94 */	bge func_80255714
+/* 8025567C 002525BC  41 82 00 54 */	beq lbl_802556D0
+/* 80255680 002525C0  40 80 00 94 */	bge lbl_80255714
 /* 80255684 002525C4  2C 00 00 01 */	cmpwi r0, 1
-/* 80255688 002525C8  40 80 00 08 */	bge func_80255690
-/* 8025568C 002525CC  48 00 00 88 */	b func_80255714
-
-/* 80255690 0040 .text      func_80255690                  func_80255690                  */
-.global func_80255690
-func_80255690:
+/* 80255688 002525C8  40 80 00 08 */	bge lbl_80255690
+/* 8025568C 002525CC  48 00 00 88 */	b lbl_80255714
+lbl_80255690:
 /* 80255690 002525D0  7C 03 19 D6 */	mullw r0, r3, r3
 /* 80255694 002525D4  C8 42 B4 C0 */	lfd f2, d_d_pane_class_alpha__LIT_3694-_SDA2_BASE_(r2)
 /* 80255698 002525D8  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -263,11 +238,8 @@ func_80255690:
 /* 802556C0 00252600  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 802556C4 00252604  EC 00 10 28 */	fsubs f0, f0, f2
 /* 802556C8 00252608  EC 21 00 24 */	fdivs f1, f1, f0
-/* 802556CC 0025260C  48 00 00 84 */	b func_80255750
-
-/* 802556D0 0044 .text      func_802556D0                  func_802556D0                  */
-.global func_802556D0
-func_802556D0:
+/* 802556CC 0025260C  48 00 00 84 */	b lbl_80255750
+lbl_802556D0:
 /* 802556D0 00252610  7C 03 38 50 */	subf r0, r3, r7
 /* 802556D4 00252614  7C 00 01 D6 */	mullw r0, r0, r0
 /* 802556D8 00252618  C8 42 B4 C0 */	lfd f2, d_d_pane_class_alpha__LIT_3694-_SDA2_BASE_(r2)
@@ -284,11 +256,8 @@ func_802556D0:
 /* 80255704 00252644  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80255708 00252648  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8025570C 0025264C  EC 21 00 24 */	fdivs f1, f1, f0
-/* 80255710 00252650  48 00 00 40 */	b func_80255750
-
-/* 80255714 003C .text      func_80255714                  func_80255714                  */
-.global func_80255714
-func_80255714:
+/* 80255710 00252650  48 00 00 40 */	b lbl_80255750
+lbl_80255714:
 /* 80255714 00252654  7C A0 07 34 */	extsh r0, r5
 /* 80255718 00252658  C8 42 B4 C0 */	lfd f2, d_d_pane_class_alpha__LIT_3694-_SDA2_BASE_(r2)
 /* 8025571C 0025265C  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -304,15 +273,13 @@ func_80255714:
 /* 80255744 00252684  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80255748 00252688  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8025574C 0025268C  EC 21 00 24 */	fdivs f1, f1, f0
-
-/* 80255750 0008 .text      func_80255750                  func_80255750                  */
-.global func_80255750
-func_80255750:
+lbl_80255750:
 /* 80255750 00252690  38 21 00 20 */	addi r1, r1, 0x20
 /* 80255754 00252694  4E 80 00 20 */	blr 
 
-/* 80255758 0048 .text      setAlpha__13CPaneMgrAlphaFUc   setAlpha__13CPaneMgrAlphaFUc   */
+/* 80255758 0078 .text      setAlpha__13CPaneMgrAlphaFUc   setAlpha__13CPaneMgrAlphaFUc   */
 .global setAlpha__13CPaneMgrAlphaFUc
+setAlpha__13CPaneMgrAlphaFUc:
 setAlpha__13CPaneMgrAlphaFUc:
 /* 80255758 00252698  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025575C 0025269C  7C 08 02 A6 */	mflr r0
@@ -323,7 +290,7 @@ setAlpha__13CPaneMgrAlphaFUc:
 /* 80255770 002526B0  7C 9F 23 78 */	mr r31, r4
 /* 80255774 002526B4  88 03 00 19 */	lbz r0, 0x43300019@l(r3)
 /* 80255778 002526B8  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8025577C 002526BC  41 82 00 24 */	beq func_802557A0
+/* 8025577C 002526BC  41 82 00 24 */	beq lbl_802557A0
 /* 80255780 002526C0  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 80255784 002526C4  90 1E 00 10 */	stw r0, 0x10(r30)
 /* 80255788 002526C8  80 7E 00 04 */	lwz r3, 4(r30)
@@ -332,10 +299,7 @@ setAlpha__13CPaneMgrAlphaFUc:
 /* 80255794 002526D4  7F C3 F3 78 */	mr r3, r30
 /* 80255798 002526D8  7F E5 FB 78 */	mr r5, r31
 /* 8025579C 002526DC  48 00 03 C1 */	bl childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc
-
-/* 802557A0 0030 .text      func_802557A0                  func_802557A0                  */
-.global func_802557A0
-func_802557A0:
+lbl_802557A0:
 /* 802557A0 002526E0  80 7E 00 04 */	lwz r3, 4(r30)
 /* 802557A4 002526E4  7F E4 FB 78 */	mr r4, r31
 /* 802557A8 002526E8  81 83 00 00 */	lwz r12, 0(r3)
@@ -351,6 +315,7 @@ func_802557A0:
 
 /* 802557D0 0058 .text      setAlphaRate__13CPaneMgrAlphaFf setAlphaRate__13CPaneMgrAlphaFf */
 .global setAlphaRate__13CPaneMgrAlphaFf
+setAlphaRate__13CPaneMgrAlphaFf:
 setAlphaRate__13CPaneMgrAlphaFf:
 /* 802557D0 00252710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802557D4 00252714  7C 08 02 A6 */	mflr r0
@@ -375,14 +340,15 @@ setAlphaRate__13CPaneMgrAlphaFf:
 /* 80255820 00252760  38 21 00 20 */	addi r1, r1, 0x20
 /* 80255824 00252764  4E 80 00 20 */	blr 
 
-/* 80255828 0048 .text      getAlphaRate__13CPaneMgrAlphaFv getAlphaRate__13CPaneMgrAlphaFv */
+/* 80255828 0050 .text      getAlphaRate__13CPaneMgrAlphaFv getAlphaRate__13CPaneMgrAlphaFv */
 .global getAlphaRate__13CPaneMgrAlphaFv
+getAlphaRate__13CPaneMgrAlphaFv:
 getAlphaRate__13CPaneMgrAlphaFv:
 /* 80255828 00252768  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8025582C 0025276C  C0 22 B4 D0 */	lfs f1, d_d_pane_class_alpha__LIT_3721-_SDA2_BASE_(r2)
 /* 80255830 00252770  88 83 00 18 */	lbz r4, 0x18(r3)
 /* 80255834 00252774  28 04 00 00 */	cmplwi r4, 0
-/* 80255838 00252778  41 82 00 38 */	beq func_80255870
+/* 80255838 00252778  41 82 00 38 */	beq lbl_80255870
 /* 8025583C 0025277C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80255840 00252780  88 03 00 B2 */	lbz r0, 0xb2(r3)
 /* 80255844 00252784  C8 42 B4 C8 */	lfd f2, LIT_3708-_SDA2_BASE_(r2)
@@ -396,15 +362,13 @@ getAlphaRate__13CPaneMgrAlphaFv:
 /* 80255864 002527A4  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80255868 002527A8  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8025586C 002527AC  EC 21 00 24 */	fdivs f1, f1, f0
-
-/* 80255870 0008 .text      func_80255870                  func_80255870                  */
-.global func_80255870
-func_80255870:
+lbl_80255870:
 /* 80255870 002527B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80255874 002527B4  4E 80 00 20 */	blr 
 
-/* 80255878 00B0 .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc alphaAnime__13CPaneMgrAlphaFsUcUcUc */
+/* 80255878 00EC .text      alphaAnime__13CPaneMgrAlphaFsUcUcUc alphaAnime__13CPaneMgrAlphaFsUcUcUc */
 .global alphaAnime__13CPaneMgrAlphaFsUcUcUc
+alphaAnime__13CPaneMgrAlphaFsUcUcUc:
 alphaAnime__13CPaneMgrAlphaFsUcUcUc:
 /* 80255878 002527B8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8025587C 002527BC  7C 08 02 A6 */	mflr r0
@@ -418,7 +382,7 @@ alphaAnime__13CPaneMgrAlphaFsUcUcUc:
 /* 8025589C 002527DC  7C 85 07 34 */	extsh r5, r4
 /* 802558A0 002527E0  38 05 FF FF */	addi r0, r5, -1
 /* 802558A4 002527E4  7C 06 00 00 */	cmpw r6, r0
-/* 802558A8 002527E8  40 80 00 80 */	bge func_80255928
+/* 802558A8 002527E8  40 80 00 80 */	bge lbl_80255928
 /* 802558AC 002527EC  38 06 00 01 */	addi r0, r6, 1
 /* 802558B0 002527F0  B0 1D 00 16 */	sth r0, 0x16(r29)
 /* 802558B4 002527F4  A8 BD 00 16 */	lha r5, 0x16(r29)
@@ -449,11 +413,8 @@ alphaAnime__13CPaneMgrAlphaFsUcUcUc:
 /* 80255918 00252858  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8025591C 0025285C  7D 89 03 A6 */	mtctr r12
 /* 80255920 00252860  4E 80 04 21 */	bctrl 
-/* 80255924 00252864  48 00 00 24 */	b func_80255948
-
-/* 80255928 0020 .text      func_80255928                  func_80255928                  */
-.global func_80255928
-func_80255928:
+/* 80255924 00252864  48 00 00 24 */	b lbl_80255948
+lbl_80255928:
 /* 80255928 00252868  B0 9D 00 16 */	sth r4, 0x16(r29)
 /* 8025592C 0025286C  7F E4 FB 78 */	mr r4, r31
 /* 80255930 00252870  81 83 00 00 */	lwz r12, 0(r3)
@@ -461,16 +422,10 @@ func_80255928:
 /* 80255938 00252878  7D 89 03 A6 */	mtctr r12
 /* 8025593C 0025287C  4E 80 04 21 */	bctrl 
 /* 80255940 00252880  38 60 00 01 */	li r3, 1
-/* 80255944 00252884  48 00 00 08 */	b func_8025594C
-
-/* 80255948 0004 .text      func_80255948                  func_80255948                  */
-.global func_80255948
-func_80255948:
+/* 80255944 00252884  48 00 00 08 */	b lbl_8025594C
+lbl_80255948:
 /* 80255948 00252888  38 60 00 00 */	li r3, 0
-
-/* 8025594C 0018 .text      func_8025594C                  func_8025594C                  */
-.global func_8025594C
-func_8025594C:
+lbl_8025594C:
 /* 8025594C 0025288C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80255950 00252890  48 10 C8 D9 */	bl _restgpr_29
 /* 80255954 00252894  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -478,8 +433,9 @@ func_8025594C:
 /* 8025595C 0025289C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80255960 002528A0  4E 80 00 20 */	blr 
 
-/* 80255964 0058 .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc */
+/* 80255964 00FC .text      alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc */
 .global alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc
+alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc:
 alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc:
 /* 80255964 002528A4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80255968 002528A8  7C 08 02 A6 */	mflr r0
@@ -499,24 +455,18 @@ alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc:
 /* 802559A0 002528E0  B0 1C 00 16 */	sth r0, 0x16(r28)
 /* 802559A4 002528E4  A8 1C 00 16 */	lha r0, 0x16(r28)
 /* 802559A8 002528E8  7C 00 28 00 */	cmpw r0, r5
-/* 802559AC 002528EC  41 80 00 10 */	blt func_802559BC
+/* 802559AC 002528EC  41 80 00 10 */	blt lbl_802559BC
 /* 802559B0 002528F0  38 00 00 00 */	li r0, 0
 /* 802559B4 002528F4  B0 1C 00 16 */	sth r0, 0x16(r28)
 /* 802559B8 002528F8  3B E0 00 01 */	li r31, 1
-
-/* 802559BC 0018 .text      func_802559BC                  func_802559BC                  */
-.global func_802559BC
-func_802559BC:
+lbl_802559BC:
 /* 802559BC 002528FC  A8 7C 00 16 */	lha r3, 0x16(r28)
 /* 802559C0 00252900  7C 03 20 00 */	cmpw r3, r4
 /* 802559C4 00252904  7C 03 28 50 */	subf r0, r3, r5
 /* 802559C8 00252908  7C 05 07 34 */	extsh r5, r0
-/* 802559CC 0025290C  40 80 00 08 */	bge func_802559D4
+/* 802559CC 0025290C  40 80 00 08 */	bge lbl_802559D4
 /* 802559D0 00252910  7C 65 1B 78 */	mr r5, r3
-
-/* 802559D4 008C .text      func_802559D4                  func_802559D4                  */
-.global func_802559D4
-func_802559D4:
+lbl_802559D4:
 /* 802559D4 00252914  7F 83 E3 78 */	mr r3, r28
 /* 802559D8 00252918  7C E6 3B 78 */	mr r6, r7
 /* 802559DC 0025291C  4B FF FC 7D */	bl rateCalc__13CPaneMgrAlphaFssUc
@@ -553,8 +503,9 @@ func_802559D4:
 /* 80255A58 00252998  38 21 00 30 */	addi r1, r1, 0x30
 /* 80255A5C 0025299C  4E 80 00 20 */	blr 
 
-/* 80255A60 0054 .text      childPaneCount__13CPaneMgrAlphaFP7J2DPane childPaneCount__13CPaneMgrAlphaFP7J2DPane */
+/* 80255A60 006C .text      childPaneCount__13CPaneMgrAlphaFP7J2DPane childPaneCount__13CPaneMgrAlphaFP7J2DPane */
 .global childPaneCount__13CPaneMgrAlphaFP7J2DPane
+childPaneCount__13CPaneMgrAlphaFP7J2DPane:
 childPaneCount__13CPaneMgrAlphaFP7J2DPane:
 /* 80255A60 002529A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255A64 002529A4  7C 08 02 A6 */	mflr r0
@@ -563,7 +514,7 @@ childPaneCount__13CPaneMgrAlphaFP7J2DPane:
 /* 80255A70 002529B0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80255A74 002529B4  7C 7E 1B 78 */	mr r30, r3
 /* 80255A78 002529B8  7C 9F 23 79 */	or. r31, r4, r4
-/* 80255A7C 002529BC  41 82 00 38 */	beq func_80255AB4
+/* 80255A7C 002529BC  41 82 00 38 */	beq lbl_80255AB4
 /* 80255A80 002529C0  A8 7E 00 14 */	lha r3, 0x14(r30)
 /* 80255A84 002529C4  38 03 00 01 */	addi r0, r3, 1
 /* 80255A88 002529C8  B0 1E 00 14 */	sth r0, 0x14(r30)
@@ -577,10 +528,7 @@ childPaneCount__13CPaneMgrAlphaFP7J2DPane:
 /* 80255AA8 002529E8  7C 64 1B 78 */	mr r4, r3
 /* 80255AAC 002529EC  7F C3 F3 78 */	mr r3, r30
 /* 80255AB0 002529F0  4B FF FF B1 */	bl childPaneCount__13CPaneMgrAlphaFP7J2DPane
-
-/* 80255AB4 0018 .text      func_80255AB4                  func_80255AB4                  */
-.global func_80255AB4
-func_80255AB4:
+lbl_80255AB4:
 /* 80255AB4 002529F4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255AB8 002529F8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80255ABC 002529FC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -588,8 +536,9 @@ func_80255AB4:
 /* 80255AC4 00252A04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255AC8 00252A08  4E 80 00 20 */	blr 
 
-/* 80255ACC 0038 .text      childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane */
+/* 80255ACC 0090 .text      childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane */
 .global childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane
+childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane:
 childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane:
 /* 80255ACC 00252A0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255AD0 00252A10  7C 08 02 A6 */	mflr r0
@@ -598,22 +547,16 @@ childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane:
 /* 80255ADC 00252A1C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80255AE0 00252A20  7C 7E 1B 78 */	mr r30, r3
 /* 80255AE4 00252A24  7C 9F 23 79 */	or. r31, r4, r4
-/* 80255AE8 00252A28  41 82 00 5C */	beq func_80255B44
+/* 80255AE8 00252A28  41 82 00 5C */	beq lbl_80255B44
 /* 80255AEC 00252A2C  80 7F 00 08 */	lwz r3, 8(r31)
 /* 80255AF0 00252A30  3C 03 AF BF */	addis r0, r3, 0xafbf
 /* 80255AF4 00252A34  28 00 4E 32 */	cmplwi r0, 0x4e32
-/* 80255AF8 00252A38  40 82 00 0C */	bne func_80255B04
+/* 80255AF8 00252A38  40 82 00 0C */	bne lbl_80255B04
 /* 80255AFC 00252A3C  38 00 00 FF */	li r0, 0xff
-/* 80255B00 00252A40  48 00 00 08 */	b func_80255B08
-
-/* 80255B04 0004 .text      func_80255B04                  func_80255B04                  */
-.global func_80255B04
-func_80255B04:
+/* 80255B00 00252A40  48 00 00 08 */	b lbl_80255B08
+lbl_80255B04:
 /* 80255B04 00252A44  88 1F 00 B2 */	lbz r0, 0xb2(r31)
-
-/* 80255B08 003C .text      func_80255B08                  func_80255B08                  */
-.global func_80255B08
-func_80255B08:
+lbl_80255B08:
 /* 80255B08 00252A48  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 80255B0C 00252A4C  98 03 00 00 */	stb r0, 0(r3)
 /* 80255B10 00252A50  80 7E 00 10 */	lwz r3, 0x10(r30)
@@ -629,10 +572,7 @@ func_80255B08:
 /* 80255B38 00252A78  7C 64 1B 78 */	mr r4, r3
 /* 80255B3C 00252A7C  7F C3 F3 78 */	mr r3, r30
 /* 80255B40 00252A80  4B FF FF 8D */	bl childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane
-
-/* 80255B44 0018 .text      func_80255B44                  func_80255B44                  */
-.global func_80255B44
-func_80255B44:
+lbl_80255B44:
 /* 80255B44 00252A84  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255B48 00252A88  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80255B4C 00252A8C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -640,8 +580,9 @@ func_80255B44:
 /* 80255B54 00252A94  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255B58 00252A98  4E 80 00 20 */	blr 
 
-/* 80255B5C 0044 .text      childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc */
+/* 80255B5C 010C .text      childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc */
 .global childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc
+childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc:
 childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc:
 /* 80255B5C 00252A9C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80255B60 00252AA0  7C 08 02 A6 */	mflr r0
@@ -651,19 +592,16 @@ childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc:
 /* 80255B70 00252AB0  7C 7D 1B 78 */	mr r29, r3
 /* 80255B74 00252AB4  7C 9E 23 79 */	or. r30, r4, r4
 /* 80255B78 00252AB8  7C BF 2B 78 */	mr r31, r5
-/* 80255B7C 00252ABC  41 82 00 D4 */	beq func_80255C50
+/* 80255B7C 00252ABC  41 82 00 D4 */	beq lbl_80255C50
 /* 80255B80 00252AC0  88 1E 00 B4 */	lbz r0, 0xb4(r30)
 /* 80255B84 00252AC4  28 00 00 00 */	cmplwi r0, 0
-/* 80255B88 00252AC8  40 82 00 8C */	bne func_80255C14
+/* 80255B88 00252AC8  40 82 00 8C */	bne lbl_80255C14
 /* 80255B8C 00252ACC  88 7D 00 18 */	lbz r3, 0x18(r29)
 /* 80255B90 00252AD0  28 03 00 00 */	cmplwi r3, 0
-/* 80255B94 00252AD4  40 82 00 0C */	bne func_80255BA0
+/* 80255B94 00252AD4  40 82 00 0C */	bne lbl_80255BA0
 /* 80255B98 00252AD8  C0 42 B4 D0 */	lfs f2, d_d_pane_class_alpha__LIT_3721-_SDA2_BASE_(r2)
-/* 80255B9C 00252ADC  48 00 00 34 */	b func_80255BD0
-
-/* 80255BA0 0030 .text      func_80255BA0                  func_80255BA0                  */
-.global func_80255BA0
-func_80255BA0:
+/* 80255B9C 00252ADC  48 00 00 34 */	b lbl_80255BD0
+lbl_80255BA0:
 /* 80255BA0 00252AE0  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80255BA4 00252AE4  C8 42 B4 C8 */	lfd f2, LIT_3708-_SDA2_BASE_(r2)
 /* 80255BA8 00252AE8  90 01 00 0C */	stw r0, 0xc(r1)
@@ -676,10 +614,7 @@ func_80255BA0:
 /* 80255BC4 00252B04  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80255BC8 00252B08  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80255BCC 00252B0C  EC 41 00 24 */	fdivs f2, f1, f0
-
-/* 80255BD0 0044 .text      func_80255BD0                  func_80255BD0                  */
-.global func_80255BD0
-func_80255BD0:
+lbl_80255BD0:
 /* 80255BD0 00252B10  7F C3 F3 78 */	mr r3, r30
 /* 80255BD4 00252B14  80 9D 00 10 */	lwz r4, 0x10(r29)
 /* 80255BD8 00252B18  88 04 00 00 */	lbz r0, 0(r4)
@@ -697,10 +632,7 @@ func_80255BD0:
 /* 80255C08 00252B48  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 80255C0C 00252B4C  7D 89 03 A6 */	mtctr r12
 /* 80255C10 00252B50  4E 80 04 21 */	bctrl 
-
-/* 80255C14 003C .text      func_80255C14                  func_80255C14                  */
-.global func_80255C14
-func_80255C14:
+lbl_80255C14:
 /* 80255C14 00252B54  80 7D 00 10 */	lwz r3, 0x10(r29)
 /* 80255C18 00252B58  38 03 00 01 */	addi r0, r3, 1
 /* 80255C1C 00252B5C  90 1D 00 10 */	stw r0, 0x10(r29)
@@ -716,10 +648,7 @@ func_80255C14:
 /* 80255C44 00252B84  7F A3 EB 78 */	mr r3, r29
 /* 80255C48 00252B88  7F E5 FB 78 */	mr r5, r31
 /* 80255C4C 00252B8C  4B FF FF 11 */	bl childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc
-
-/* 80255C50 0018 .text      func_80255C50                  func_80255C50                  */
-.global func_80255C50
-func_80255C50:
+lbl_80255C50:
 /* 80255C50 00252B90  39 61 00 40 */	addi r11, r1, 0x40
 /* 80255C54 00252B94  48 10 C5 D5 */	bl _restgpr_29
 /* 80255C58 00252B98  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -729,6 +658,7 @@ func_80255C50:
 
 /* 80255C68 0044 .text      __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap */
 .global __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap
+__ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap:
 __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap:
 /* 80255C68 00252BA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255C6C 00252BAC  7C 08 02 A6 */	mflr r0
@@ -748,8 +678,9 @@ __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap:
 /* 80255CA4 00252BE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255CA8 00252BE8  4E 80 00 20 */	blr 
 
-/* 80255CAC 0048 .text      __dt__17CPaneMgrAlphaMorfFv    __dt__17CPaneMgrAlphaMorfFv    */
+/* 80255CAC 009C .text      __dt__17CPaneMgrAlphaMorfFv    __dt__17CPaneMgrAlphaMorfFv    */
 .global __dt__17CPaneMgrAlphaMorfFv
+__dt__17CPaneMgrAlphaMorfFv:
 __dt__17CPaneMgrAlphaMorfFv:
 /* 80255CAC 00252BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255CB0 00252BF0  7C 08 02 A6 */	mflr r0
@@ -758,43 +689,34 @@ __dt__17CPaneMgrAlphaMorfFv:
 /* 80255CBC 00252BFC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80255CC0 00252C00  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80255CC4 00252C04  7C 9F 23 78 */	mr r31, r4
-/* 80255CC8 00252C08  41 82 00 64 */	beq func_80255D2C
+/* 80255CC8 00252C08  41 82 00 64 */	beq lbl_80255D2C
 /* 80255CCC 00252C0C  3C 60 80 3C */	lis r3, __vt__17CPaneMgrAlphaMorf@ha
 /* 80255CD0 00252C10  38 03 2E 18 */	addi r0, r3, __vt__17CPaneMgrAlphaMorf@l
 /* 80255CD4 00252C14  90 1E 00 00 */	stw r0, 0(r30)
 /* 80255CD8 00252C18  80 9E 00 1C */	lwz r4, 0x1c(r30)
 /* 80255CDC 00252C1C  28 04 00 00 */	cmplwi r4, 0
-/* 80255CE0 00252C20  41 82 00 14 */	beq func_80255CF4
+/* 80255CE0 00252C20  41 82 00 14 */	beq lbl_80255CF4
 /* 80255CE4 00252C24  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80255CE8 00252C28  48 07 88 61 */	bl free__7JKRHeapFPv
 /* 80255CEC 00252C2C  38 00 00 00 */	li r0, 0
 /* 80255CF0 00252C30  90 1E 00 1C */	stw r0, 0x1c(r30)
-
-/* 80255CF4 001C .text      func_80255CF4                  func_80255CF4                  */
-.global func_80255CF4
-func_80255CF4:
+lbl_80255CF4:
 /* 80255CF4 00252C34  80 9E 00 24 */	lwz r4, 0x24(r30)
 /* 80255CF8 00252C38  28 04 00 00 */	cmplwi r4, 0
-/* 80255CFC 00252C3C  41 82 00 14 */	beq func_80255D10
+/* 80255CFC 00252C3C  41 82 00 14 */	beq lbl_80255D10
 /* 80255D00 00252C40  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80255D04 00252C44  48 07 88 45 */	bl free__7JKRHeapFPv
 /* 80255D08 00252C48  38 00 00 00 */	li r0, 0
 /* 80255D0C 00252C4C  90 1E 00 24 */	stw r0, 0x24(r30)
-
-/* 80255D10 001C .text      func_80255D10                  func_80255D10                  */
-.global func_80255D10
-func_80255D10:
+lbl_80255D10:
 /* 80255D10 00252C50  7F C3 F3 78 */	mr r3, r30
 /* 80255D14 00252C54  38 80 00 00 */	li r4, 0
 /* 80255D18 00252C58  4B FF F7 55 */	bl __dt__13CPaneMgrAlphaFv
 /* 80255D1C 00252C5C  7F E0 07 35 */	extsh. r0, r31
-/* 80255D20 00252C60  40 81 00 0C */	ble func_80255D2C
+/* 80255D20 00252C60  40 81 00 0C */	ble lbl_80255D2C
 /* 80255D24 00252C64  7F C3 F3 78 */	mr r3, r30
 /* 80255D28 00252C68  48 07 90 15 */	bl __dl__FPv
-
-/* 80255D2C 001C .text      func_80255D2C                  func_80255D2C                  */
-.global func_80255D2C
-func_80255D2C:
+lbl_80255D2C:
 /* 80255D2C 00252C6C  7F C3 F3 78 */	mr r3, r30
 /* 80255D30 00252C70  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255D34 00252C74  83 C1 00 08 */	lwz r30, 8(r1)
@@ -803,8 +725,9 @@ func_80255D2C:
 /* 80255D40 00252C80  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255D44 00252C84  4E 80 00 20 */	blr 
 
-/* 80255D48 0074 .text      initiateAlphaMorf__17CPaneMgrAlphaMorfFv initiateAlphaMorf__17CPaneMgrAlphaMorfFv */
+/* 80255D48 0088 .text      initiateAlphaMorf__17CPaneMgrAlphaMorfFv initiateAlphaMorf__17CPaneMgrAlphaMorfFv */
 .global initiateAlphaMorf__17CPaneMgrAlphaMorfFv
+initiateAlphaMorf__17CPaneMgrAlphaMorfFv:
 initiateAlphaMorf__17CPaneMgrAlphaMorfFv:
 /* 80255D48 00252C88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255D4C 00252C8C  7C 08 02 A6 */	mflr r0
@@ -818,7 +741,7 @@ initiateAlphaMorf__17CPaneMgrAlphaMorfFv:
 /* 80255D6C 00252CAC  90 03 00 28 */	stw r0, 0x28(r3)
 /* 80255D70 00252CB0  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80255D74 00252CB4  28 00 00 00 */	cmplwi r0, 0
-/* 80255D78 00252CB8  41 82 00 44 */	beq func_80255DBC
+/* 80255D78 00252CB8  41 82 00 44 */	beq lbl_80255DBC
 /* 80255D7C 00252CBC  80 7F 00 08 */	lwz r3, 8(r31)
 /* 80255D80 00252CC0  A8 9F 00 14 */	lha r4, 0x14(r31)
 /* 80255D84 00252CC4  38 A0 00 20 */	li r5, 0x20
@@ -835,18 +758,16 @@ initiateAlphaMorf__17CPaneMgrAlphaMorfFv:
 /* 80255DB0 00252CF0  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 80255DB4 00252CF4  7F E3 FB 78 */	mr r3, r31
 /* 80255DB8 00252CF8  48 00 00 19 */	bl setBackupAlpha__17CPaneMgrAlphaMorfFv
-
-/* 80255DBC 0014 .text      func_80255DBC                  func_80255DBC                  */
-.global func_80255DBC
-func_80255DBC:
+lbl_80255DBC:
 /* 80255DBC 00252CFC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255DC0 00252D00  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80255DC4 00252D04  7C 08 03 A6 */	mtlr r0
 /* 80255DC8 00252D08  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255DCC 00252D0C  4E 80 00 20 */	blr 
 
-/* 80255DD0 0044 .text      setBackupAlpha__17CPaneMgrAlphaMorfFv setBackupAlpha__17CPaneMgrAlphaMorfFv */
+/* 80255DD0 0058 .text      setBackupAlpha__17CPaneMgrAlphaMorfFv setBackupAlpha__17CPaneMgrAlphaMorfFv */
 .global setBackupAlpha__17CPaneMgrAlphaMorfFv
+setBackupAlpha__17CPaneMgrAlphaMorfFv:
 setBackupAlpha__17CPaneMgrAlphaMorfFv:
 /* 80255DD0 00252D10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255DD4 00252D14  7C 08 02 A6 */	mflr r0
@@ -855,7 +776,7 @@ setBackupAlpha__17CPaneMgrAlphaMorfFv:
 /* 80255DE0 00252D20  7C 7F 1B 78 */	mr r31, r3
 /* 80255DE4 00252D24  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80255DE8 00252D28  28 00 00 00 */	cmplwi r0, 0
-/* 80255DEC 00252D2C  41 82 00 28 */	beq func_80255E14
+/* 80255DEC 00252D2C  41 82 00 28 */	beq lbl_80255E14
 /* 80255DF0 00252D30  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 80255DF4 00252D34  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80255DF8 00252D38  80 1F 00 24 */	lwz r0, 0x24(r31)
@@ -865,18 +786,16 @@ setBackupAlpha__17CPaneMgrAlphaMorfFv:
 /* 80255E08 00252D48  7C 64 1B 78 */	mr r4, r3
 /* 80255E0C 00252D4C  7F E3 FB 78 */	mr r3, r31
 /* 80255E10 00252D50  48 00 00 89 */	bl childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane
-
-/* 80255E14 0014 .text      func_80255E14                  func_80255E14                  */
-.global func_80255E14
-func_80255E14:
+lbl_80255E14:
 /* 80255E14 00252D54  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255E18 00252D58  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80255E1C 00252D5C  7C 08 03 A6 */	mtlr r0
 /* 80255E20 00252D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255E24 00252D64  4E 80 00 20 */	blr 
 
-/* 80255E28 0054 .text      setAlphaMorfRate__17CPaneMgrAlphaMorfFf setAlphaMorfRate__17CPaneMgrAlphaMorfFf */
+/* 80255E28 0070 .text      setAlphaMorfRate__17CPaneMgrAlphaMorfFf setAlphaMorfRate__17CPaneMgrAlphaMorfFf */
 .global setAlphaMorfRate__17CPaneMgrAlphaMorfFf
+setAlphaMorfRate__17CPaneMgrAlphaMorfFf:
 setAlphaMorfRate__17CPaneMgrAlphaMorfFf:
 /* 80255E28 00252D68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80255E2C 00252D6C  7C 08 02 A6 */	mflr r0
@@ -887,7 +806,7 @@ setAlphaMorfRate__17CPaneMgrAlphaMorfFf:
 /* 80255E40 00252D80  FF E0 08 90 */	fmr f31, f1
 /* 80255E44 00252D84  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80255E48 00252D88  28 00 00 00 */	cmplwi r0, 0
-/* 80255E4C 00252D8C  41 82 00 30 */	beq func_80255E7C
+/* 80255E4C 00252D8C  41 82 00 30 */	beq lbl_80255E7C
 /* 80255E50 00252D90  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 80255E54 00252D94  90 1F 00 20 */	stw r0, 0x20(r31)
 /* 80255E58 00252D98  80 1F 00 24 */	lwz r0, 0x24(r31)
@@ -898,16 +817,10 @@ setAlphaMorfRate__17CPaneMgrAlphaMorfFf:
 /* 80255E6C 00252DAC  7F E3 FB 78 */	mr r3, r31
 /* 80255E70 00252DB0  FC 20 F8 90 */	fmr f1, f31
 /* 80255E74 00252DB4  48 00 00 B5 */	bl childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef
-/* 80255E78 00252DB8  48 00 00 08 */	b func_80255E80
-
-/* 80255E7C 0004 .text      func_80255E7C                  func_80255E7C                  */
-.global func_80255E7C
-func_80255E7C:
+/* 80255E78 00252DB8  48 00 00 08 */	b lbl_80255E80
+lbl_80255E7C:
 /* 80255E7C 00252DBC  4B FF F9 55 */	bl setAlphaRate__13CPaneMgrAlphaFf
-
-/* 80255E80 0018 .text      func_80255E80                  func_80255E80                  */
-.global func_80255E80
-func_80255E80:
+lbl_80255E80:
 /* 80255E80 00252DC0  CB E1 00 18 */	lfd f31, 0x18(r1)
 /* 80255E84 00252DC4  83 E1 00 14 */	lwz r31, 0x14(r1)
 /* 80255E88 00252DC8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -915,8 +828,9 @@ func_80255E80:
 /* 80255E90 00252DD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80255E94 00252DD4  4E 80 00 20 */	blr 
 
-/* 80255E98 0078 .text      childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane */
+/* 80255E98 0090 .text      childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane */
 .global childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane
+childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane:
 childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane:
 /* 80255E98 00252DD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80255E9C 00252DDC  7C 08 02 A6 */	mflr r0
@@ -925,7 +839,7 @@ childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane:
 /* 80255EA8 00252DE8  93 C1 00 08 */	stw r30, 8(r1)
 /* 80255EAC 00252DEC  7C 7E 1B 78 */	mr r30, r3
 /* 80255EB0 00252DF0  7C 9F 23 79 */	or. r31, r4, r4
-/* 80255EB4 00252DF4  41 82 00 5C */	beq func_80255F10
+/* 80255EB4 00252DF4  41 82 00 5C */	beq lbl_80255F10
 /* 80255EB8 00252DF8  88 1F 00 B2 */	lbz r0, 0xb2(r31)
 /* 80255EBC 00252DFC  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 80255EC0 00252E00  98 03 00 00 */	stb r0, 0(r3)
@@ -948,10 +862,7 @@ childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane:
 /* 80255F04 00252E44  7C 64 1B 78 */	mr r4, r3
 /* 80255F08 00252E48  7F C3 F3 78 */	mr r3, r30
 /* 80255F0C 00252E4C  4B FF FF 8D */	bl childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane
-
-/* 80255F10 0018 .text      func_80255F10                  func_80255F10                  */
-.global func_80255F10
-func_80255F10:
+lbl_80255F10:
 /* 80255F10 00252E50  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80255F14 00252E54  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80255F18 00252E58  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -959,8 +870,9 @@ func_80255F10:
 /* 80255F20 00252E60  38 21 00 10 */	addi r1, r1, 0x10
 /* 80255F24 00252E64  4E 80 00 20 */	blr 
 
-/* 80255F28 0084 .text      childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef */
+/* 80255F28 00F0 .text      childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef */
 .global childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef
+childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef:
 childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef:
 /* 80255F28 00252E68  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80255F2C 00252E6C  7C 08 02 A6 */	mflr r0
@@ -972,13 +884,13 @@ childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef:
 /* 80255F44 00252E84  7C 7E 1B 78 */	mr r30, r3
 /* 80255F48 00252E88  7C 9F 23 79 */	or. r31, r4, r4
 /* 80255F4C 00252E8C  FF E0 08 90 */	fmr f31, f1
-/* 80255F50 00252E90  41 82 00 A8 */	beq func_80255FF8
+/* 80255F50 00252E90  41 82 00 A8 */	beq lbl_80255FF8
 /* 80255F54 00252E94  80 9E 00 20 */	lwz r4, 0x20(r30)
 /* 80255F58 00252E98  88 04 00 00 */	lbz r0, 0(r4)
 /* 80255F5C 00252E9C  80 7E 00 28 */	lwz r3, 0x28(r30)
 /* 80255F60 00252EA0  88 63 00 00 */	lbz r3, 0(r3)
 /* 80255F64 00252EA4  7C 00 18 40 */	cmplw r0, r3
-/* 80255F68 00252EA8  40 82 00 44 */	bne func_80255FAC
+/* 80255F68 00252EA8  40 82 00 44 */	bne lbl_80255FAC
 /* 80255F6C 00252EAC  7F E3 FB 78 */	mr r3, r31
 /* 80255F70 00252EB0  C8 22 B4 C8 */	lfd f1, LIT_3708-_SDA2_BASE_(r2)
 /* 80255F74 00252EB4  90 01 00 0C */	stw r0, 0xc(r1)
@@ -994,16 +906,10 @@ childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef:
 /* 80255F9C 00252EDC  81 8C 00 24 */	lwz r12, 0x24(r12)
 /* 80255FA0 00252EE0  7D 89 03 A6 */	mtctr r12
 /* 80255FA4 00252EE4  4E 80 04 21 */	bctrl 
-/* 80255FA8 00252EE8  48 00 00 08 */	b func_80255FB0
-
-/* 80255FAC 0004 .text      func_80255FAC                  func_80255FAC                  */
-.global func_80255FAC
-func_80255FAC:
+/* 80255FA8 00252EE8  48 00 00 08 */	b lbl_80255FB0
+lbl_80255FAC:
 /* 80255FAC 00252EEC  98 64 00 00 */	stb r3, 0(r4)
-
-/* 80255FB0 0048 .text      func_80255FB0                  func_80255FB0                  */
-.global func_80255FB0
-func_80255FB0:
+lbl_80255FB0:
 /* 80255FB0 00252EF0  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 80255FB4 00252EF4  38 03 00 01 */	addi r0, r3, 1
 /* 80255FB8 00252EF8  90 1E 00 20 */	stw r0, 0x20(r30)
@@ -1022,10 +928,7 @@ func_80255FB0:
 /* 80255FEC 00252F2C  7F C3 F3 78 */	mr r3, r30
 /* 80255FF0 00252F30  FC 20 F8 90 */	fmr f1, f31
 /* 80255FF4 00252F34  4B FF FF 35 */	bl childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef
-
-/* 80255FF8 0020 .text      func_80255FF8                  func_80255FF8                  */
-.global func_80255FF8
-func_80255FF8:
+lbl_80255FF8:
 /* 80255FF8 00252F38  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 80255FFC 00252F3C  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 80256000 00252F40  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -1043,37 +946,43 @@ func_80255FF8:
 /* 803C2E18 0010 .data      __vt__17CPaneMgrAlphaMorf      __vt__17CPaneMgrAlphaMorf      */
 .global __vt__17CPaneMgrAlphaMorf
 __vt__17CPaneMgrAlphaMorf:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x25, 0x5c, 0xac, 0x80, 0x25, 0x57, 0x58 /* baserom.dol+0x3bfe18 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__17CPaneMgrAlphaMorfFv
+.4byte setAlpha__13CPaneMgrAlphaFUc
 
 /* 803C2E28 0010 .data      __vt__13CPaneMgrAlpha          __vt__13CPaneMgrAlpha          */
 .global __vt__13CPaneMgrAlpha
 __vt__13CPaneMgrAlpha:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x25, 0x54, 0x6c, 0x80, 0x25, 0x57, 0x58 /* baserom.dol+0x3bfe28 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__13CPaneMgrAlphaFv
+.4byte setAlpha__13CPaneMgrAlphaFUc
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80454EB8 0004 .sdata2    d_d_pane_class_alpha__LIT_3692 @3692                          */
+/* 80454EB8 0004 .sdata2    @3692                          d_d_pane_class_alpha__LIT_3692 */
 .global d_d_pane_class_alpha__LIT_3692
 d_d_pane_class_alpha__LIT_3692:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3d18 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3d1c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80454EC0 0008 .sdata2    d_d_pane_class_alpha__LIT_3694 @3694                          */
+/* 80454EC0 0008 .sdata2    @3694                          d_d_pane_class_alpha__LIT_3694 */
 .global d_d_pane_class_alpha__LIT_3694
 d_d_pane_class_alpha__LIT_3694:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3d20 */
 
-/* 80454EC8 0008 .sdata2    LIT_3708                       @3708                          */
+/* 80454EC8 0008 .sdata2    @3708                          LIT_3708                       */
 .global LIT_3708
 LIT_3708:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3d28 */
 
-/* 80454ED0 0004 .sdata2    d_d_pane_class_alpha__LIT_3721 @3721                          */
+/* 80454ED0 0004 .sdata2    @3721                          d_d_pane_class_alpha__LIT_3721 */
 .global d_d_pane_class_alpha__LIT_3721
 d_d_pane_class_alpha__LIT_3721:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3d30 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3d34 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

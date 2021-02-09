@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80018944 0044 .text      __ct__11fapGm_HIO_cFv          __ct__11fapGm_HIO_cFv          */
+/* 80018944 0100 .text      __ct__11fapGm_HIO_cFv          __ct__11fapGm_HIO_cFv          */
 .global __ct__11fapGm_HIO_cFv
+__ct__11fapGm_HIO_cFv:
 __ct__11fapGm_HIO_cFv:
 /* 80018944 00015884  3C 80 80 3A */	lis r4, __vt__11fapGm_HIO_c@ha
 /* 80018948 00015888  38 04 35 A0 */	addi r0, r4, __vt__11fapGm_HIO_c@l
@@ -18,24 +19,18 @@ __ct__11fapGm_HIO_cFv:
 /* 80018964 000158A4  90 03 00 30 */	stw r0, 0x30(r3)
 /* 80018968 000158A8  38 80 00 01 */	li r4, 1
 /* 8001896C 000158AC  98 83 00 14 */	stb r4, 0x14(r3)
-/* 80018970 000158B0  88 0D 80 00 */	lbz r0, sym_80450580-_SDA_BASE_(r13)
+/* 80018970 000158B0  88 0D 80 00 */	lbz r0, data_80450580-_SDA_BASE_(r13)
 /* 80018974 000158B4  7C 00 07 75 */	extsb. r0, r0
-/* 80018978 000158B8  41 82 00 10 */	beq func_80018988
+/* 80018978 000158B8  41 82 00 10 */	beq lbl_80018988
 /* 8001897C 000158BC  98 83 00 15 */	stb r4, 0x15(r3)
 /* 80018980 000158C0  98 83 00 16 */	stb r4, 0x16(r3)
-/* 80018984 000158C4  48 00 00 14 */	b func_80018998
-
-/* 80018988 0010 .text      func_80018988                  func_80018988                  */
-.global func_80018988
-func_80018988:
+/* 80018984 000158C4  48 00 00 14 */	b lbl_80018998
+lbl_80018988:
 /* 80018988 000158C8  38 00 00 00 */	li r0, 0
 /* 8001898C 000158CC  98 03 00 15 */	stb r0, 0x15(r3)
 /* 80018990 000158D0  98 03 00 16 */	stb r0, 0x16(r3)
 /* 80018994 000158D4  98 03 00 17 */	stb r0, 0x17(r3)
-
-/* 80018998 00AC .text      func_80018998                  func_80018998                  */
-.global func_80018998
-func_80018998:
+lbl_80018998:
 /* 80018998 000158D8  38 00 00 01 */	li r0, 1
 /* 8001899C 000158DC  98 03 00 17 */	stb r0, 0x17(r3)
 /* 800189A0 000158E0  98 03 00 18 */	stb r0, 0x18(r3)
@@ -83,6 +78,7 @@ func_80018998:
 /* 80018A44 0028 .text      fapGm_After__Fv                fapGm_After__Fv                */
 .global fapGm_After__Fv
 fapGm_After__Fv:
+fapGm_After__Fv:
 /* 80018A44 00015984  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018A48 00015988  7C 08 02 A6 */	mflr r0
 /* 80018A4C 0001598C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -96,6 +92,7 @@ fapGm_After__Fv:
 
 /* 80018A6C 0034 .text      fapGm_Execute__Fv              fapGm_Execute__Fv              */
 .global fapGm_Execute__Fv
+fapGm_Execute__Fv:
 fapGm_Execute__Fv:
 /* 80018A6C 000159AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018A70 000159B0  7C 08 02 A6 */	mflr r0
@@ -114,6 +111,7 @@ fapGm_Execute__Fv:
 /* 80018AA0 0040 .text      fapGm_Create__Fv               fapGm_Create__Fv               */
 .global fapGm_Create__Fv
 fapGm_Create__Fv:
+fapGm_Create__Fv:
 /* 80018AA0 000159E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018AA4 000159E4  7C 08 02 A6 */	mflr r0
 /* 80018AA8 000159E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -131,25 +129,23 @@ fapGm_Create__Fv:
 /* 80018AD8 00015A18  38 21 00 10 */	addi r1, r1, 0x10
 /* 80018ADC 00015A1C  4E 80 00 20 */	blr 
 
-/* 80018AE0 0030 .text      __dt__11fapGm_HIO_cFv          __dt__11fapGm_HIO_cFv          */
+/* 80018AE0 0048 .text      __dt__11fapGm_HIO_cFv          __dt__11fapGm_HIO_cFv          */
 .global __dt__11fapGm_HIO_cFv
+__dt__11fapGm_HIO_cFv:
 __dt__11fapGm_HIO_cFv:
 /* 80018AE0 00015A20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018AE4 00015A24  7C 08 02 A6 */	mflr r0
 /* 80018AE8 00015A28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80018AEC 00015A2C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80018AF0 00015A30  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80018AF4 00015A34  41 82 00 1C */	beq func_80018B10
+/* 80018AF4 00015A34  41 82 00 1C */	beq lbl_80018B10
 /* 80018AF8 00015A38  3C A0 80 3A */	lis r5, __vt__11fapGm_HIO_c@ha
 /* 80018AFC 00015A3C  38 05 35 A0 */	addi r0, r5, __vt__11fapGm_HIO_c@l
 /* 80018B00 00015A40  90 1F 00 00 */	stw r0, 0(r31)
 /* 80018B04 00015A44  7C 80 07 35 */	extsh. r0, r4
-/* 80018B08 00015A48  40 81 00 08 */	ble func_80018B10
+/* 80018B08 00015A48  40 81 00 08 */	ble lbl_80018B10
 /* 80018B0C 00015A4C  48 2B 62 31 */	bl __dl__FPv
-
-/* 80018B10 0018 .text      func_80018B10                  func_80018B10                  */
-.global func_80018B10
-func_80018B10:
+lbl_80018B10:
 /* 80018B10 00015A50  7F E3 FB 78 */	mr r3, r31
 /* 80018B14 00015A54  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80018B18 00015A58  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -159,6 +155,7 @@ func_80018B10:
 
 /* 80018B28 003C .text      __sinit_f_ap_game_cpp          __sinit_f_ap_game_cpp          */
 .global __sinit_f_ap_game_cpp
+__sinit_f_ap_game_cpp:
 __sinit_f_ap_game_cpp:
 /* 80018B28 00015A68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018B2C 00015A6C  7C 08 02 A6 */	mflr r0
@@ -184,15 +181,17 @@ __sinit_f_ap_game_cpp:
 /* 803A35A0 000C .data      __vt__11fapGm_HIO_c            __vt__11fapGm_HIO_c            */
 .global __vt__11fapGm_HIO_c
 __vt__11fapGm_HIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x8a, 0xe0 /* baserom.dol+0x3a05a0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a05ac */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__11fapGm_HIO_cFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 803F1BB0 000C .bss       f_ap_f_ap_game__LIT_3691       @3691                          */
+/* 803F1BB0 000C .bss       @3691                          f_ap_f_ap_game__LIT_3691       */
 .global f_ap_f_ap_game__LIT_3691
 f_ap_f_ap_game__LIT_3691:
 .skip 0xc
@@ -208,12 +207,12 @@ g_HIO:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80451BC0 0004 .sdata2    f_ap_f_ap_game__LIT_3689       @3689                          */
+/* 80451BC0 0004 .sdata2    @3689                          f_ap_f_ap_game__LIT_3689       */
 .global f_ap_f_ap_game__LIT_3689
 f_ap_f_ap_game__LIT_3689:
 .byte 0x3f, 0x66, 0x66, 0x66 /* baserom.dol+0x3d0a20 */
 
-/* 80451BC4 0004 .sdata2    f_ap_f_ap_game__LIT_3690       @3690                          */
+/* 80451BC4 0004 .sdata2    @3690                          f_ap_f_ap_game__LIT_3690       */
 .global f_ap_f_ap_game__LIT_3690
 f_ap_f_ap_game__LIT_3690:
 .byte 0x3f, 0x19, 0x99, 0x9a /* baserom.dol+0x3d0a24 */

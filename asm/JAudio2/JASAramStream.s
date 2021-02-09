@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8029631C 0048 .text      initSystem__13JASAramStreamFUlUl initSystem__13JASAramStreamFUlUl */
+/* 8029631C 008C .text      initSystem__13JASAramStreamFUlUl initSystem__13JASAramStreamFUlUl */
 .global initSystem__13JASAramStreamFUlUl
+initSystem__13JASAramStreamFUlUl:
 initSystem__13JASAramStreamFUlUl:
 /* 8029631C 0029325C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296320 00293260  7C 08 02 A6 */	mflr r0
@@ -19,16 +20,13 @@ initSystem__13JASAramStreamFUlUl:
 /* 80296340 00293280  38 80 00 00 */	li r4, 0
 /* 80296344 00293284  48 00 7F 31 */	bl registerSubFrameCallback__9JASDriverFPFPv_lPv
 /* 80296348 00293288  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8029634C 0029328C  41 82 00 44 */	beq func_80296390
+/* 8029634C 0029328C  41 82 00 44 */	beq lbl_80296390
 /* 80296350 00293290  80 0D 8C D0 */	lwz r0, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
 /* 80296354 00293294  28 00 00 00 */	cmplwi r0, 0
-/* 80296358 00293298  40 82 00 0C */	bne func_80296364
+/* 80296358 00293298  40 82 00 0C */	bne lbl_80296364
 /* 8029635C 0029329C  4B FF 9B A1 */	bl getThreadPointer__6JASDvdFv
 /* 80296360 002932A0  90 6D 8C D0 */	stw r3, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
-
-/* 80296364 002C .text      func_80296364                  func_80296364                  */
-.global func_80296364
-func_80296364:
+lbl_80296364:
 /* 80296364 002932A4  38 1E 00 20 */	addi r0, r30, 0x20
 /* 80296368 002932A8  7C 60 F9 D6 */	mullw r3, r0, r31
 /* 8029636C 002932AC  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
@@ -38,12 +36,9 @@ func_80296364:
 /* 8029637C 002932BC  93 CD 8C D8 */	stw r30, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80296380 002932C0  93 ED 8C DC */	stw r31, sChannelMax__13JASAramStream-_SDA_BASE_(r13)
 /* 80296384 002932C4  38 00 00 00 */	li r0, 0
-/* 80296388 002932C8  98 0D 8C E0 */	stb r0, sym_80451260-_SDA_BASE_(r13)
-/* 8029638C 002932CC  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-
-/* 80296390 0018 .text      func_80296390                  func_80296390                  */
-.global func_80296390
-func_80296390:
+/* 80296388 002932C8  98 0D 8C E0 */	stb r0, data_80451260-_SDA_BASE_(r13)
+/* 8029638C 002932CC  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+lbl_80296390:
 /* 80296390 002932D0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80296394 002932D4  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80296398 002932D8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -51,8 +46,9 @@ func_80296390:
 /* 802963A0 002932E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802963A4 002932E4  4E 80 00 20 */	blr 
 
-/* 802963A8 00A0 .text      __ct__13JASAramStreamFv        __ct__13JASAramStreamFv        */
+/* 802963A8 00F4 .text      __ct__13JASAramStreamFv        __ct__13JASAramStreamFv        */
 .global __ct__13JASAramStreamFv
+__ct__13JASAramStreamFv:
 __ct__13JASAramStreamFv:
 /* 802963A8 002932E8  38 C0 00 00 */	li r6, 0
 /* 802963AC 002932EC  90 C3 00 A8 */	stw r6, 0xa8(r3)
@@ -94,10 +90,7 @@ __ct__13JASAramStreamFv:
 /* 8029643C 0029337C  C0 02 BC 10 */	lfs f0, LIT_390-_SDA2_BASE_(r2)
 /* 80296440 00293380  38 00 00 06 */	li r0, 6
 /* 80296444 00293384  7C 09 03 A6 */	mtctr r0
-
-/* 80296448 0040 .text      func_80296448                  func_80296448                  */
-.global func_80296448
-func_80296448:
+lbl_80296448:
 /* 80296448 00293388  7D 03 2A 14 */	add r8, r3, r5
 /* 8029644C 0029338C  90 C8 00 90 */	stw r6, 0x90(r8)
 /* 80296450 00293390  7C E3 22 14 */	add r7, r3, r4
@@ -109,23 +102,21 @@ func_80296448:
 /* 80296468 002933A8  D0 08 01 C4 */	stfs f0, 0x1c4(r8)
 /* 8029646C 002933AC  38 84 00 02 */	addi r4, r4, 2
 /* 80296470 002933B0  38 A5 00 04 */	addi r5, r5, 4
-/* 80296474 002933B4  42 00 FF D4 */	bdnz func_80296448
+/* 80296474 002933B4  42 00 FF D4 */	bdnz lbl_80296448
 /* 80296478 002933B8  38 80 00 00 */	li r4, 0
 /* 8029647C 002933BC  38 A0 00 00 */	li r5, 0
 /* 80296480 002933C0  38 00 00 06 */	li r0, 6
 /* 80296484 002933C4  7C 09 03 A6 */	mtctr r0
-
-/* 80296488 0014 .text      func_80296488                  func_80296488                  */
-.global func_80296488
-func_80296488:
+lbl_80296488:
 /* 80296488 002933C8  38 04 01 DC */	addi r0, r4, 0x1dc
 /* 8029648C 002933CC  7C A3 03 2E */	sthx r5, r3, r0
 /* 80296490 002933D0  38 84 00 02 */	addi r4, r4, 2
-/* 80296494 002933D4  42 00 FF F4 */	bdnz func_80296488
+/* 80296494 002933D4  42 00 FF F4 */	bdnz lbl_80296488
 /* 80296498 002933D8  4E 80 00 20 */	blr 
 
-/* 8029649C 0050 .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv */
+/* 8029649C 00C0 .text      init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv */
 .global init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv
+init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv:
 init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv:
 /* 8029649C 002933DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802964A0 002933E0  7C 08 02 A6 */	mflr r0
@@ -147,17 +138,14 @@ init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv:
 /* 802964E0 00293420  C0 02 BC 10 */	lfs f0, LIT_390-_SDA2_BASE_(r2)
 /* 802964E4 00293424  38 00 00 06 */	li r0, 6
 /* 802964E8 00293428  7C 09 03 A6 */	mtctr r0
-
-/* 802964EC 0070 .text      func_802964EC                  func_802964EC                  */
-.global func_802964EC
-func_802964EC:
+lbl_802964EC:
 /* 802964EC 0029342C  7C 9F 1A 14 */	add r4, r31, r3
 /* 802964F0 00293430  D0 44 01 7C */	stfs f2, 0x17c(r4)
 /* 802964F4 00293434  D0 24 01 94 */	stfs f1, 0x194(r4)
 /* 802964F8 00293438  D0 04 01 AC */	stfs f0, 0x1ac(r4)
 /* 802964FC 0029343C  D0 04 01 C4 */	stfs f0, 0x1c4(r4)
 /* 80296500 00293440  38 63 00 04 */	addi r3, r3, 4
-/* 80296504 00293444  42 00 FF E8 */	bdnz func_802964EC
+/* 80296504 00293444  42 00 FF E8 */	bdnz lbl_802964EC
 /* 80296508 00293448  C0 02 BC 14 */	lfs f0, LIT_391-_SDA2_BASE_(r2)
 /* 8029650C 0029344C  D0 1F 01 74 */	stfs f0, 0x174(r31)
 /* 80296510 00293450  D0 1F 01 78 */	stfs f0, 0x178(r31)
@@ -180,8 +168,9 @@ func_802964EC:
 /* 80296554 00293494  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296558 00293498  4E 80 00 20 */	blr 
 
-/* 8029655C 0038 .text      prepare__13JASAramStreamFli    prepare__13JASAramStreamFli    */
+/* 8029655C 00BC .text      prepare__13JASAramStreamFli    prepare__13JASAramStreamFli    */
 .global prepare__13JASAramStreamFli
+prepare__13JASAramStreamFli:
 prepare__13JASAramStreamFli:
 /* 8029655C 0029349C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80296560 002934A0  7C 08 02 A6 */	mflr r0
@@ -194,25 +183,19 @@ prepare__13JASAramStreamFli:
 /* 8029657C 002934BC  38 9E 00 CC */	addi r4, r30, 0xcc
 /* 80296580 002934C0  48 0B 22 9D */	bl DVDFastOpen
 /* 80296584 002934C4  2C 03 00 00 */	cmpwi r3, 0
-/* 80296588 002934C8  40 82 00 0C */	bne func_80296594
+/* 80296588 002934C8  40 82 00 0C */	bne lbl_80296594
 /* 8029658C 002934CC  38 60 00 00 */	li r3, 0
-/* 80296590 002934D0  48 00 00 70 */	b func_80296600
-
-/* 80296594 0020 .text      func_80296594                  func_80296594                  */
-.global func_80296594
-func_80296594:
+/* 80296590 002934D0  48 00 00 70 */	b lbl_80296600
+lbl_80296594:
 /* 80296594 002934D4  3C 60 80 29 */	lis r3, channelProcCallback__13JASAramStreamFPv@ha
 /* 80296598 002934D8  38 63 6D 74 */	addi r3, r3, channelProcCallback__13JASAramStreamFPv@l
 /* 8029659C 002934DC  7F C4 F3 78 */	mr r4, r30
 /* 802965A0 002934E0  48 00 7C D5 */	bl registerSubFrameCallback__9JASDriverFPFPv_lPv
 /* 802965A4 002934E4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802965A8 002934E8  40 82 00 0C */	bne func_802965B4
+/* 802965A8 002934E8  40 82 00 0C */	bne lbl_802965B4
 /* 802965AC 002934EC  38 60 00 00 */	li r3, 0
-/* 802965B0 002934F0  48 00 00 50 */	b func_80296600
-
-/* 802965B4 0048 .text      func_802965B4                  func_802965B4                  */
-.global func_802965B4
-func_802965B4:
+/* 802965B0 002934F0  48 00 00 50 */	b lbl_80296600
+lbl_802965B4:
 /* 802965B4 002934F4  93 C1 00 08 */	stw r30, 8(r1)
 /* 802965B8 002934F8  80 1E 01 4C */	lwz r0, 0x14c(r30)
 /* 802965BC 002934FC  90 01 00 0C */	stw r0, 0xc(r1)
@@ -224,22 +207,16 @@ func_802965B4:
 /* 802965D4 00293514  38 C0 00 0C */	li r6, 0xc
 /* 802965D8 00293518  4B FF 95 85 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl
 /* 802965DC 0029351C  2C 03 00 00 */	cmpwi r3, 0
-/* 802965E0 00293520  40 82 00 1C */	bne func_802965FC
+/* 802965E0 00293520  40 82 00 1C */	bne lbl_802965FC
 /* 802965E4 00293524  3C 60 80 29 */	lis r3, channelProcCallback__13JASAramStreamFPv@ha
 /* 802965E8 00293528  38 63 6D 74 */	addi r3, r3, channelProcCallback__13JASAramStreamFPv@l
 /* 802965EC 0029352C  7F C4 F3 78 */	mr r4, r30
 /* 802965F0 00293530  48 00 7B D5 */	bl rejectCallback__9JASDriverFPFPv_lPv
 /* 802965F4 00293534  38 60 00 00 */	li r3, 0
-/* 802965F8 00293538  48 00 00 08 */	b func_80296600
-
-/* 802965FC 0004 .text      func_802965FC                  func_802965FC                  */
-.global func_802965FC
-func_802965FC:
+/* 802965F8 00293538  48 00 00 08 */	b lbl_80296600
+lbl_802965FC:
 /* 802965FC 0029353C  38 60 00 01 */	li r3, 1
-
-/* 80296600 0018 .text      func_80296600                  func_80296600                  */
-.global func_80296600
-func_80296600:
+lbl_80296600:
 /* 80296600 00293540  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80296604 00293544  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80296608 00293548  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -249,6 +226,7 @@ func_80296600:
 
 /* 80296618 0034 .text      start__13JASAramStreamFv       start__13JASAramStreamFv       */
 .global start__13JASAramStreamFv
+start__13JASAramStreamFv:
 start__13JASAramStreamFv:
 /* 80296618 00293558  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029661C 0029355C  7C 08 02 A6 */	mflr r0
@@ -267,6 +245,7 @@ start__13JASAramStreamFv:
 /* 8029664C 0038 .text      stop__13JASAramStreamFUs       stop__13JASAramStreamFUs       */
 .global stop__13JASAramStreamFUs
 stop__13JASAramStreamFUs:
+stop__13JASAramStreamFUs:
 /* 8029664C 0029358C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296650 00293590  7C 08 02 A6 */	mflr r0
 /* 80296654 00293594  90 01 00 14 */	stw r0, 0x14(r1)
@@ -282,35 +261,27 @@ stop__13JASAramStreamFUs:
 /* 8029667C 002935BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296680 002935C0  4E 80 00 20 */	blr 
 
-/* 80296684 001C .text      pause__13JASAramStreamFb       pause__13JASAramStreamFb       */
+/* 80296684 0048 .text      pause__13JASAramStreamFb       pause__13JASAramStreamFb       */
 .global pause__13JASAramStreamFb
+pause__13JASAramStreamFb:
 pause__13JASAramStreamFb:
 /* 80296684 002935C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296688 002935C8  7C 08 02 A6 */	mflr r0
 /* 8029668C 002935CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80296690 002935D0  54 80 06 3F */	clrlwi. r0, r4, 0x18
 /* 80296694 002935D4  38 80 00 03 */	li r4, 3
-/* 80296698 002935D8  41 82 00 08 */	beq func_802966A0
+/* 80296698 002935D8  41 82 00 08 */	beq lbl_802966A0
 /* 8029669C 002935DC  38 80 00 02 */	li r4, 2
-
-/* 802966A0 0018 .text      func_802966A0                  func_802966A0                  */
-.global func_802966A0
-func_802966A0:
+lbl_802966A0:
 /* 802966A0 002935E0  38 A0 00 00 */	li r5, 0
 /* 802966A4 002935E4  48 0A 83 51 */	bl OSSendMessage
 /* 802966A8 002935E8  2C 03 00 00 */	cmpwi r3, 0
-/* 802966AC 002935EC  40 82 00 0C */	bne func_802966B8
+/* 802966AC 002935EC  40 82 00 0C */	bne lbl_802966B8
 /* 802966B0 002935F0  38 60 00 00 */	li r3, 0
-/* 802966B4 002935F4  48 00 00 08 */	b func_802966BC
-
-/* 802966B8 0004 .text      func_802966B8                  func_802966B8                  */
-.global func_802966B8
-func_802966B8:
+/* 802966B4 002935F4  48 00 00 08 */	b lbl_802966BC
+lbl_802966B8:
 /* 802966B8 002935F8  38 60 00 01 */	li r3, 1
-
-/* 802966BC 0010 .text      func_802966BC                  func_802966BC                  */
-.global func_802966BC
-func_802966BC:
+lbl_802966BC:
 /* 802966BC 002935FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802966C0 00293600  7C 08 03 A6 */	mtlr r0
 /* 802966C4 00293604  38 21 00 10 */	addi r1, r1, 0x10
@@ -318,6 +289,7 @@ func_802966BC:
 
 /* 802966CC 0044 .text      cancel__13JASAramStreamFv      cancel__13JASAramStreamFv      */
 .global cancel__13JASAramStreamFv
+cancel__13JASAramStreamFv:
 cancel__13JASAramStreamFv:
 /* 802966CC 0029360C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802966D0 00293610  7C 08 02 A6 */	mflr r0
@@ -337,27 +309,26 @@ cancel__13JASAramStreamFv:
 /* 80296708 00293648  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029670C 0029364C  4E 80 00 20 */	blr 
 
-/* 80296710 0020 .text      getBlockSamples__13JASAramStreamCFv getBlockSamples__13JASAramStreamCFv */
+/* 80296710 002C .text      getBlockSamples__13JASAramStreamCFv getBlockSamples__13JASAramStreamCFv */
 .global getBlockSamples__13JASAramStreamCFv
+getBlockSamples__13JASAramStreamCFv:
 getBlockSamples__13JASAramStreamCFv:
 /* 80296710 00293650  A0 03 01 58 */	lhz r0, 0x158(r3)
 /* 80296714 00293654  28 00 00 00 */	cmplwi r0, 0
-/* 80296718 00293658  40 82 00 18 */	bne func_80296730
+/* 80296718 00293658  40 82 00 18 */	bne lbl_80296730
 /* 8029671C 0029365C  80 0D 8C D8 */	lwz r0, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80296720 00293660  54 03 20 36 */	slwi r3, r0, 4
 /* 80296724 00293664  38 00 00 09 */	li r0, 9
 /* 80296728 00293668  7C 63 03 96 */	divwu r3, r3, r0
 /* 8029672C 0029366C  4E 80 00 20 */	blr 
-
-/* 80296730 000C .text      func_80296730                  func_80296730                  */
-.global func_80296730
-func_80296730:
+lbl_80296730:
 /* 80296730 00293670  80 0D 8C D8 */	lwz r0, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80296734 00293674  54 03 F8 7E */	srwi r3, r0, 1
 /* 80296738 00293678  4E 80 00 20 */	blr 
 
 /* 8029673C 0030 .text      headerLoadTask__13JASAramStreamFPv headerLoadTask__13JASAramStreamFPv */
 .global headerLoadTask__13JASAramStreamFPv
+headerLoadTask__13JASAramStreamFPv:
 headerLoadTask__13JASAramStreamFPv:
 /* 8029673C 0029367C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296740 00293680  7C 08 02 A6 */	mflr r0
@@ -372,8 +343,9 @@ headerLoadTask__13JASAramStreamFPv:
 /* 80296764 002936A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296768 002936A8  4E 80 00 20 */	blr 
 
-/* 8029676C 0070 .text      firstLoadTask__13JASAramStreamFPv firstLoadTask__13JASAramStreamFPv */
+/* 8029676C 00DC .text      firstLoadTask__13JASAramStreamFPv firstLoadTask__13JASAramStreamFPv */
 .global firstLoadTask__13JASAramStreamFPv
+firstLoadTask__13JASAramStreamFPv:
 firstLoadTask__13JASAramStreamFPv:
 /* 8029676C 002936AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80296770 002936B0  7C 08 02 A6 */	mflr r0
@@ -385,31 +357,28 @@ firstLoadTask__13JASAramStreamFPv:
 /* 80296788 002936C8  7F C3 F3 78 */	mr r3, r30
 /* 8029678C 002936CC  48 00 03 5D */	bl load__13JASAramStreamFv
 /* 80296790 002936D0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80296794 002936D4  41 82 00 9C */	beq func_80296830
+/* 80296794 002936D4  41 82 00 9C */	beq lbl_80296830
 /* 80296798 002936D8  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8029679C 002936DC  2C 03 00 00 */	cmpwi r3, 0
-/* 802967A0 002936E0  40 81 00 3C */	ble func_802967DC
+/* 802967A0 002936E0  40 81 00 3C */	ble lbl_802967DC
 /* 802967A4 002936E4  38 03 FF FF */	addi r0, r3, -1
 /* 802967A8 002936E8  90 1F 00 08 */	stw r0, 8(r31)
 /* 802967AC 002936EC  80 1F 00 08 */	lwz r0, 8(r31)
 /* 802967B0 002936F0  2C 00 00 00 */	cmpwi r0, 0
-/* 802967B4 002936F4  40 82 00 28 */	bne func_802967DC
+/* 802967B4 002936F4  40 82 00 28 */	bne lbl_802967DC
 /* 802967B8 002936F8  80 6D 8C D0 */	lwz r3, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
 /* 802967BC 002936FC  3C 80 80 29 */	lis r4, prepareFinishTask__13JASAramStreamFPv@ha
 /* 802967C0 00293700  38 84 68 C8 */	addi r4, r4, prepareFinishTask__13JASAramStreamFPv@l
 /* 802967C4 00293704  7F C5 F3 78 */	mr r5, r30
 /* 802967C8 00293708  4B FF 94 8D */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPv
 /* 802967CC 0029370C  2C 03 00 00 */	cmpwi r3, 0
-/* 802967D0 00293710  40 82 00 0C */	bne func_802967DC
+/* 802967D0 00293710  40 82 00 0C */	bne lbl_802967DC
 /* 802967D4 00293714  38 00 00 01 */	li r0, 1
-/* 802967D8 00293718  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-
-/* 802967DC 003C .text      func_802967DC                  func_802967DC                  */
-.global func_802967DC
-func_802967DC:
+/* 802967D8 00293718  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+lbl_802967DC:
 /* 802967DC 0029371C  80 7F 00 04 */	lwz r3, 4(r31)
 /* 802967E0 00293720  28 03 00 00 */	cmplwi r3, 0
-/* 802967E4 00293724  41 82 00 4C */	beq func_80296830
+/* 802967E4 00293724  41 82 00 4C */	beq lbl_80296830
 /* 802967E8 00293728  38 03 FF FF */	addi r0, r3, -1
 /* 802967EC 0029372C  90 1F 00 04 */	stw r0, 4(r31)
 /* 802967F0 00293730  80 6D 8C D0 */	lwz r3, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
@@ -419,23 +388,17 @@ func_802967DC:
 /* 80296800 00293740  38 C0 00 0C */	li r6, 0xc
 /* 80296804 00293744  4B FF 93 59 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl
 /* 80296808 00293748  2C 03 00 00 */	cmpwi r3, 0
-/* 8029680C 0029374C  40 82 00 0C */	bne func_80296818
+/* 8029680C 0029374C  40 82 00 0C */	bne lbl_80296818
 /* 80296810 00293750  38 00 00 01 */	li r0, 1
-/* 80296814 00293754  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-
-/* 80296818 0018 .text      func_80296818                  func_80296818                  */
-.global func_80296818
-func_80296818:
+/* 80296814 00293754  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+lbl_80296818:
 /* 80296818 00293758  48 0A 6E DD */	bl OSDisableInterrupts
 /* 8029681C 0029375C  90 61 00 08 */	stw r3, 8(r1)
 /* 80296820 00293760  80 9E 01 18 */	lwz r4, 0x118(r30)
 /* 80296824 00293764  38 04 00 01 */	addi r0, r4, 1
 /* 80296828 00293768  90 1E 01 18 */	stw r0, 0x118(r30)
 /* 8029682C 0029376C  48 0A 6E F1 */	bl OSRestoreInterrupts
-
-/* 80296830 0018 .text      func_80296830                  func_80296830                  */
-.global func_80296830
-func_80296830:
+lbl_80296830:
 /* 80296830 00293770  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80296834 00293774  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80296838 00293778  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -446,6 +409,7 @@ func_80296830:
 /* 80296848 0020 .text      loadToAramTask__13JASAramStreamFPv loadToAramTask__13JASAramStreamFPv */
 .global loadToAramTask__13JASAramStreamFPv
 loadToAramTask__13JASAramStreamFPv:
+loadToAramTask__13JASAramStreamFPv:
 /* 80296848 00293788  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029684C 0029378C  7C 08 02 A6 */	mflr r0
 /* 80296850 00293790  90 01 00 14 */	stw r0, 0x14(r1)
@@ -455,8 +419,9 @@ loadToAramTask__13JASAramStreamFPv:
 /* 80296860 002937A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296864 002937A4  4E 80 00 20 */	blr 
 
-/* 80296868 004C .text      finishTask__13JASAramStreamFPv finishTask__13JASAramStreamFPv */
+/* 80296868 0060 .text      finishTask__13JASAramStreamFPv finishTask__13JASAramStreamFPv */
 .global finishTask__13JASAramStreamFPv
+finishTask__13JASAramStreamFPv:
 finishTask__13JASAramStreamFPv:
 /* 80296868 002937A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029686C 002937AC  7C 08 02 A6 */	mflr r0
@@ -469,7 +434,7 @@ finishTask__13JASAramStreamFPv:
 /* 80296888 002937C8  48 00 79 3D */	bl rejectCallback__9JASDriverFPFPv_lPv
 /* 8029688C 002937CC  81 9F 01 50 */	lwz r12, 0x150(r31)
 /* 80296890 002937D0  28 0C 00 00 */	cmplwi r12, 0
-/* 80296894 002937D4  41 82 00 20 */	beq func_802968B4
+/* 80296894 002937D4  41 82 00 20 */	beq lbl_802968B4
 /* 80296898 002937D8  38 60 00 00 */	li r3, 0
 /* 8029689C 002937DC  7F E4 FB 78 */	mr r4, r31
 /* 802968A0 002937E0  80 BF 01 54 */	lwz r5, 0x154(r31)
@@ -477,18 +442,16 @@ finishTask__13JASAramStreamFPv:
 /* 802968A8 002937E8  4E 80 04 21 */	bctrl 
 /* 802968AC 002937EC  38 00 00 00 */	li r0, 0
 /* 802968B0 002937F0  90 1F 01 50 */	stw r0, 0x150(r31)
-
-/* 802968B4 0014 .text      func_802968B4                  func_802968B4                  */
-.global func_802968B4
-func_802968B4:
+lbl_802968B4:
 /* 802968B4 002937F4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802968B8 002937F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802968BC 002937FC  7C 08 03 A6 */	mtlr r0
 /* 802968C0 00293800  38 21 00 10 */	addi r1, r1, 0x10
 /* 802968C4 00293804  4E 80 00 20 */	blr 
 
-/* 802968C8 0044 .text      prepareFinishTask__13JASAramStreamFPv prepareFinishTask__13JASAramStreamFPv */
+/* 802968C8 0058 .text      prepareFinishTask__13JASAramStreamFPv prepareFinishTask__13JASAramStreamFPv */
 .global prepareFinishTask__13JASAramStreamFPv
+prepareFinishTask__13JASAramStreamFPv:
 prepareFinishTask__13JASAramStreamFPv:
 /* 802968C8 00293808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802968CC 0029380C  7C 08 02 A6 */	mflr r0
@@ -501,24 +464,22 @@ prepareFinishTask__13JASAramStreamFPv:
 /* 802968E8 00293828  48 0A 81 0D */	bl OSSendMessage
 /* 802968EC 0029382C  81 9F 01 50 */	lwz r12, 0x150(r31)
 /* 802968F0 00293830  28 0C 00 00 */	cmplwi r12, 0
-/* 802968F4 00293834  41 82 00 18 */	beq func_8029690C
+/* 802968F4 00293834  41 82 00 18 */	beq lbl_8029690C
 /* 802968F8 00293838  38 60 00 01 */	li r3, 1
 /* 802968FC 0029383C  7F E4 FB 78 */	mr r4, r31
 /* 80296900 00293840  80 BF 01 54 */	lwz r5, 0x154(r31)
 /* 80296904 00293844  7D 89 03 A6 */	mtctr r12
 /* 80296908 00293848  4E 80 04 21 */	bctrl 
-
-/* 8029690C 0014 .text      func_8029690C                  func_8029690C                  */
-.global func_8029690C
-func_8029690C:
+lbl_8029690C:
 /* 8029690C 0029384C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80296910 00293850  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80296914 00293854  7C 08 03 A6 */	mtlr r0
 /* 80296918 00293858  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029691C 0029385C  4E 80 00 20 */	blr 
 
-/* 80296920 0034 .text      headerLoad__13JASAramStreamFUli headerLoad__13JASAramStreamFUli */
+/* 80296920 01C8 .text      headerLoad__13JASAramStreamFUli headerLoad__13JASAramStreamFUli */
 .global headerLoad__13JASAramStreamFUli
+headerLoad__13JASAramStreamFUli:
 headerLoad__13JASAramStreamFUli:
 /* 80296920 00293860  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80296924 00293864  7C 08 02 A6 */	mflr r0
@@ -528,24 +489,18 @@ headerLoad__13JASAramStreamFUli:
 /* 80296934 00293874  7C 7D 1B 78 */	mr r29, r3
 /* 80296938 00293878  7C 9E 23 78 */	mr r30, r4
 /* 8029693C 0029387C  7C BF 2B 78 */	mr r31, r5
-/* 80296940 00293880  88 0D 8C E1 */	lbz r0, sym_80451261-_SDA_BASE_(r13)
+/* 80296940 00293880  88 0D 8C E1 */	lbz r0, data_80451261-_SDA_BASE_(r13)
 /* 80296944 00293884  28 00 00 00 */	cmplwi r0, 0
-/* 80296948 00293888  41 82 00 0C */	beq func_80296954
+/* 80296948 00293888  41 82 00 0C */	beq lbl_80296954
 /* 8029694C 0029388C  38 60 00 00 */	li r3, 0
-/* 80296950 00293890  48 00 01 80 */	b func_80296AD0
-
-/* 80296954 0014 .text      func_80296954                  func_80296954                  */
-.global func_80296954
-func_80296954:
+/* 80296950 00293890  48 00 01 80 */	b lbl_80296AD0
+lbl_80296954:
 /* 80296954 00293894  88 1D 01 14 */	lbz r0, 0x114(r29)
 /* 80296958 00293898  28 00 00 00 */	cmplwi r0, 0
-/* 8029695C 0029389C  41 82 00 0C */	beq func_80296968
+/* 8029695C 0029389C  41 82 00 0C */	beq lbl_80296968
 /* 80296960 002938A0  38 60 00 00 */	li r3, 0
-/* 80296964 002938A4  48 00 01 6C */	b func_80296AD0
-
-/* 80296968 0030 .text      func_80296968                  func_80296968                  */
-.global func_80296968
-func_80296968:
+/* 80296964 002938A4  48 00 01 6C */	b lbl_80296AD0
+lbl_80296968:
 /* 80296968 002938A8  38 7D 00 CC */	addi r3, r29, 0xcc
 /* 8029696C 002938AC  80 8D 8C D4 */	lwz r4, sReadBuffer__13JASAramStream-_SDA_BASE_(r13)
 /* 80296970 002938B0  38 A0 00 40 */	li r5, 0x40
@@ -553,15 +508,12 @@ func_80296968:
 /* 80296978 002938B8  38 E0 00 01 */	li r7, 1
 /* 8029697C 002938BC  48 0B 24 C9 */	bl DVDReadPrio
 /* 80296980 002938C0  2C 03 00 00 */	cmpwi r3, 0
-/* 80296984 002938C4  40 80 00 14 */	bge func_80296998
+/* 80296984 002938C4  40 80 00 14 */	bge lbl_80296998
 /* 80296988 002938C8  38 00 00 01 */	li r0, 1
-/* 8029698C 002938CC  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
+/* 8029698C 002938CC  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
 /* 80296990 002938D0  38 60 00 00 */	li r3, 0
-/* 80296994 002938D4  48 00 01 3C */	b func_80296AD0
-
-/* 80296998 00C0 .text      func_80296998                  func_80296998                  */
-.global func_80296998
-func_80296998:
+/* 80296994 002938D4  48 00 01 3C */	b lbl_80296AD0
+lbl_80296998:
 /* 80296998 002938D8  80 8D 8C D4 */	lwz r4, sReadBuffer__13JASAramStream-_SDA_BASE_(r13)
 /* 8029699C 002938DC  88 04 00 09 */	lbz r0, 9(r4)
 /* 802969A0 002938E0  B0 1D 01 58 */	sth r0, 0x158(r29)
@@ -606,28 +558,19 @@ func_80296998:
 /* 80296A3C 0029397C  7F A3 EB 78 */	mr r3, r29
 /* 80296A40 00293980  4B FF FC D1 */	bl getBlockSamples__13JASAramStreamCFv
 /* 80296A44 00293984  2C 1F 00 00 */	cmpwi r31, 0
-/* 80296A48 00293988  41 80 00 10 */	blt func_80296A58
+/* 80296A48 00293988  41 80 00 10 */	blt lbl_80296A58
 /* 80296A4C 0029398C  80 1D 01 08 */	lwz r0, 0x108(r29)
 /* 80296A50 00293990  7C 1F 00 40 */	cmplw r31, r0
-/* 80296A54 00293994  40 81 00 08 */	ble func_80296A5C
-
-/* 80296A58 0004 .text      func_80296A58                  func_80296A58                  */
-.global func_80296A58
-func_80296A58:
+/* 80296A54 00293994  40 81 00 08 */	ble lbl_80296A5C
+lbl_80296A58:
 /* 80296A58 00293998  83 FD 01 08 */	lwz r31, 0x108(r29)
-
-/* 80296A5C 0014 .text      func_80296A5C                  func_80296A5C                  */
-.global func_80296A5C
-func_80296A5C:
+lbl_80296A5C:
 /* 80296A5C 0029399C  88 1D 01 14 */	lbz r0, 0x114(r29)
 /* 80296A60 002939A0  28 00 00 00 */	cmplwi r0, 0
-/* 80296A64 002939A4  41 82 00 0C */	beq func_80296A70
+/* 80296A64 002939A4  41 82 00 0C */	beq lbl_80296A70
 /* 80296A68 002939A8  38 60 00 00 */	li r3, 0
-/* 80296A6C 002939AC  48 00 00 64 */	b func_80296AD0
-
-/* 80296A70 0044 .text      func_80296A70                  func_80296A70                  */
-.global func_80296A70
-func_80296A70:
+/* 80296A6C 002939AC  48 00 00 64 */	b lbl_80296AD0
+lbl_80296A70:
 /* 80296A70 002939B0  93 A1 00 0C */	stw r29, 0xc(r1)
 /* 80296A74 002939B4  80 7D 01 08 */	lwz r3, 0x108(r29)
 /* 80296A78 002939B8  38 03 FF FF */	addi r0, r3, -1
@@ -640,15 +583,12 @@ func_80296A70:
 /* 80296A94 002939D4  38 C0 00 0C */	li r6, 0xc
 /* 80296A98 002939D8  4B FF 90 C5 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl
 /* 80296A9C 002939DC  2C 03 00 00 */	cmpwi r3, 0
-/* 80296AA0 002939E0  40 82 00 14 */	bne func_80296AB4
+/* 80296AA0 002939E0  40 82 00 14 */	bne lbl_80296AB4
 /* 80296AA4 002939E4  38 00 00 01 */	li r0, 1
-/* 80296AA8 002939E8  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
+/* 80296AA8 002939E8  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
 /* 80296AAC 002939EC  38 60 00 00 */	li r3, 0
-/* 80296AB0 002939F0  48 00 00 20 */	b func_80296AD0
-
-/* 80296AB4 001C .text      func_80296AB4                  func_80296AB4                  */
-.global func_80296AB4
-func_80296AB4:
+/* 80296AB0 002939F0  48 00 00 20 */	b lbl_80296AD0
+lbl_80296AB4:
 /* 80296AB4 002939F4  48 0A 6C 41 */	bl OSDisableInterrupts
 /* 80296AB8 002939F8  90 61 00 08 */	stw r3, 8(r1)
 /* 80296ABC 002939FC  80 9D 01 18 */	lwz r4, 0x118(r29)
@@ -656,10 +596,7 @@ func_80296AB4:
 /* 80296AC4 00293A04  90 1D 01 18 */	stw r0, 0x118(r29)
 /* 80296AC8 00293A08  48 0A 6C 55 */	bl OSRestoreInterrupts
 /* 80296ACC 00293A0C  38 60 00 01 */	li r3, 1
-
-/* 80296AD0 0018 .text      func_80296AD0                  func_80296AD0                  */
-.global func_80296AD0
-func_80296AD0:
+lbl_80296AD0:
 /* 80296AD0 00293A10  39 61 00 30 */	addi r11, r1, 0x30
 /* 80296AD4 00293A14  48 0C B7 55 */	bl _restgpr_29
 /* 80296AD8 00293A18  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -667,8 +604,9 @@ func_80296AD0:
 /* 80296AE0 00293A20  38 21 00 30 */	addi r1, r1, 0x30
 /* 80296AE4 00293A24  4E 80 00 20 */	blr 
 
-/* 80296AE8 0044 .text      load__13JASAramStreamFv        load__13JASAramStreamFv        */
+/* 80296AE8 028C .text      load__13JASAramStreamFv        load__13JASAramStreamFv        */
 .global load__13JASAramStreamFv
+load__13JASAramStreamFv:
 load__13JASAramStreamFv:
 /* 80296AE8 00293A28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80296AEC 00293A2C  7C 08 02 A6 */	mflr r0
@@ -682,24 +620,18 @@ load__13JASAramStreamFv:
 /* 80296B0C 00293A4C  38 04 FF FF */	addi r0, r4, -1
 /* 80296B10 00293A50  90 1C 01 18 */	stw r0, 0x118(r28)
 /* 80296B14 00293A54  48 0A 6C 09 */	bl OSRestoreInterrupts
-/* 80296B18 00293A58  88 0D 8C E1 */	lbz r0, sym_80451261-_SDA_BASE_(r13)
+/* 80296B18 00293A58  88 0D 8C E1 */	lbz r0, data_80451261-_SDA_BASE_(r13)
 /* 80296B1C 00293A5C  28 00 00 00 */	cmplwi r0, 0
-/* 80296B20 00293A60  41 82 00 0C */	beq func_80296B2C
+/* 80296B20 00293A60  41 82 00 0C */	beq lbl_80296B2C
 /* 80296B24 00293A64  38 60 00 00 */	li r3, 0
-/* 80296B28 00293A68  48 00 02 34 */	b func_80296D5C
-
-/* 80296B2C 0014 .text      func_80296B2C                  func_80296B2C                  */
-.global func_80296B2C
-func_80296B2C:
+/* 80296B28 00293A68  48 00 02 34 */	b lbl_80296D5C
+lbl_80296B2C:
 /* 80296B2C 00293A6C  88 1C 01 14 */	lbz r0, 0x114(r28)
 /* 80296B30 00293A70  28 00 00 00 */	cmplwi r0, 0
-/* 80296B34 00293A74  41 82 00 0C */	beq func_80296B40
+/* 80296B34 00293A74  41 82 00 0C */	beq lbl_80296B40
 /* 80296B38 00293A78  38 60 00 00 */	li r3, 0
-/* 80296B3C 00293A7C  48 00 02 20 */	b func_80296D5C
-
-/* 80296B40 0038 .text      func_80296B40                  func_80296B40                  */
-.global func_80296B40
-func_80296B40:
+/* 80296B3C 00293A7C  48 00 02 20 */	b lbl_80296D5C
+lbl_80296B40:
 /* 80296B40 00293A80  7F 83 E3 78 */	mr r3, r28
 /* 80296B44 00293A84  4B FF FB CD */	bl getBlockSamples__13JASAramStreamCFv
 /* 80296B48 00293A88  80 9C 01 70 */	lwz r4, 0x170(r28)
@@ -711,13 +643,10 @@ func_80296B40:
 /* 80296B60 00293AA0  7F C0 1B 96 */	divwu r30, r0, r3
 /* 80296B64 00293AA4  80 9C 01 10 */	lwz r4, 0x110(r28)
 /* 80296B68 00293AA8  7C 04 F8 40 */	cmplw r4, r31
-/* 80296B6C 00293AAC  40 81 00 0C */	ble func_80296B78
+/* 80296B6C 00293AAC  40 81 00 0C */	ble lbl_80296B78
 /* 80296B70 00293AB0  38 60 00 00 */	li r3, 0
-/* 80296B74 00293AB4  48 00 01 E8 */	b func_80296D5C
-
-/* 80296B78 0028 .text      func_80296B78                  func_80296B78                  */
-.global func_80296B78
-func_80296B78:
+/* 80296B74 00293AB4  48 00 01 E8 */	b lbl_80296D5C
+lbl_80296B78:
 /* 80296B78 00293AB8  80 6D 8C D8 */	lwz r3, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80296B7C 00293ABC  A0 1C 01 5A */	lhz r0, 0x15a(r28)
 /* 80296B80 00293AC0  7C 63 01 D6 */	mullw r3, r3, r0
@@ -725,48 +654,36 @@ func_80296B78:
 /* 80296B88 00293AC8  7C 64 01 D6 */	mullw r3, r4, r0
 /* 80296B8C 00293ACC  38 C3 00 40 */	addi r6, r3, 0x40
 /* 80296B90 00293AD0  7C 05 03 78 */	mr r5, r0
-/* 80296B94 00293AD4  40 82 00 0C */	bne func_80296BA0
+/* 80296B94 00293AD4  40 82 00 0C */	bne lbl_80296BA0
 /* 80296B98 00293AD8  80 1C 01 00 */	lwz r0, 0x100(r28)
 /* 80296B9C 00293ADC  7C A6 00 50 */	subf r5, r6, r0
-
-/* 80296BA0 0028 .text      func_80296BA0                  func_80296BA0                  */
-.global func_80296BA0
-func_80296BA0:
+lbl_80296BA0:
 /* 80296BA0 00293AE0  38 7C 00 CC */	addi r3, r28, 0xcc
 /* 80296BA4 00293AE4  80 8D 8C D4 */	lwz r4, sReadBuffer__13JASAramStream-_SDA_BASE_(r13)
 /* 80296BA8 00293AE8  38 E0 00 01 */	li r7, 1
 /* 80296BAC 00293AEC  48 0B 22 99 */	bl DVDReadPrio
 /* 80296BB0 00293AF0  2C 03 00 00 */	cmpwi r3, 0
-/* 80296BB4 00293AF4  40 80 00 14 */	bge func_80296BC8
+/* 80296BB4 00293AF4  40 80 00 14 */	bge lbl_80296BC8
 /* 80296BB8 00293AF8  38 00 00 01 */	li r0, 1
-/* 80296BBC 00293AFC  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
+/* 80296BBC 00293AFC  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
 /* 80296BC0 00293B00  38 60 00 00 */	li r3, 0
-/* 80296BC4 00293B04  48 00 01 98 */	b func_80296D5C
-
-/* 80296BC8 0018 .text      func_80296BC8                  func_80296BC8                  */
-.global func_80296BC8
-func_80296BC8:
+/* 80296BC4 00293B04  48 00 01 98 */	b lbl_80296D5C
+lbl_80296BC8:
 /* 80296BC8 00293B08  83 AD 8C D4 */	lwz r29, sReadBuffer__13JASAramStream-_SDA_BASE_(r13)
 /* 80296BCC 00293B0C  88 1C 01 14 */	lbz r0, 0x114(r28)
 /* 80296BD0 00293B10  28 00 00 00 */	cmplwi r0, 0
-/* 80296BD4 00293B14  41 82 00 0C */	beq func_80296BE0
+/* 80296BD4 00293B14  41 82 00 0C */	beq lbl_80296BE0
 /* 80296BD8 00293B18  38 60 00 00 */	li r3, 0
-/* 80296BDC 00293B1C  48 00 01 80 */	b func_80296D5C
-
-/* 80296BE0 001C .text      func_80296BE0                  func_80296BE0                  */
-.global func_80296BE0
-func_80296BE0:
+/* 80296BDC 00293B1C  48 00 01 80 */	b lbl_80296D5C
+lbl_80296BE0:
 /* 80296BE0 00293B20  80 9C 01 48 */	lwz r4, 0x148(r28)
 /* 80296BE4 00293B24  80 7C 01 0C */	lwz r3, 0x10c(r28)
 /* 80296BE8 00293B28  80 0D 8C D8 */	lwz r0, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80296BEC 00293B2C  7C 03 01 D6 */	mullw r0, r3, r0
 /* 80296BF0 00293B30  7F 64 02 14 */	add r27, r4, r0
 /* 80296BF4 00293B34  3B 40 00 00 */	li r26, 0
-/* 80296BF8 00293B38  48 00 00 60 */	b func_80296C58
-
-/* 80296BFC 0058 .text      func_80296BFC                  func_80296BFC                  */
-.global func_80296BFC
-func_80296BFC:
+/* 80296BF8 00293B38  48 00 00 60 */	b lbl_80296C58
+lbl_80296BFC:
 /* 80296BFC 00293B3C  80 0D 8C D4 */	lwz r0, sReadBuffer__13JASAramStream-_SDA_BASE_(r13)
 /* 80296C00 00293B40  80 BD 00 04 */	lwz r5, 4(r29)
 /* 80296C04 00293B44  7C 65 D1 D6 */	mullw r3, r5, r26
@@ -784,88 +701,61 @@ func_80296BFC:
 /* 80296C34 00293B74  39 40 00 00 */	li r10, 0
 /* 80296C38 00293B78  48 03 B7 05 */	bl mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl
 /* 80296C3C 00293B7C  28 03 00 00 */	cmplwi r3, 0
-/* 80296C40 00293B80  40 82 00 14 */	bne func_80296C54
+/* 80296C40 00293B80  40 82 00 14 */	bne lbl_80296C54
 /* 80296C44 00293B84  38 00 00 01 */	li r0, 1
-/* 80296C48 00293B88  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
+/* 80296C48 00293B88  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
 /* 80296C4C 00293B8C  38 60 00 00 */	li r3, 0
-/* 80296C50 00293B90  48 00 01 0C */	b func_80296D5C
-
-/* 80296C54 0004 .text      func_80296C54                  func_80296C54                  */
-.global func_80296C54
-func_80296C54:
+/* 80296C50 00293B90  48 00 01 0C */	b lbl_80296D5C
+lbl_80296C54:
 /* 80296C54 00293B94  3B 5A 00 01 */	addi r26, r26, 1
-
-/* 80296C58 0044 .text      func_80296C58                  func_80296C58                  */
-.global func_80296C58
-func_80296C58:
+lbl_80296C58:
 /* 80296C58 00293B98  A0 1C 01 5A */	lhz r0, 0x15a(r28)
 /* 80296C5C 00293B9C  7C 1A 00 00 */	cmpw r26, r0
-/* 80296C60 00293BA0  41 80 FF 9C */	blt func_80296BFC
+/* 80296C60 00293BA0  41 80 FF 9C */	blt lbl_80296BFC
 /* 80296C64 00293BA4  80 7C 01 0C */	lwz r3, 0x10c(r28)
 /* 80296C68 00293BA8  38 03 00 01 */	addi r0, r3, 1
 /* 80296C6C 00293BAC  90 1C 01 0C */	stw r0, 0x10c(r28)
 /* 80296C70 00293BB0  80 1C 01 0C */	lwz r0, 0x10c(r28)
 /* 80296C74 00293BB4  80 7C 01 08 */	lwz r3, 0x108(r28)
 /* 80296C78 00293BB8  7C 00 18 40 */	cmplw r0, r3
-/* 80296C7C 00293BBC  41 80 00 B4 */	blt func_80296D30
+/* 80296C7C 00293BBC  41 80 00 B4 */	blt lbl_80296D30
 /* 80296C80 00293BC0  80 9C 01 10 */	lwz r4, 0x110(r28)
 /* 80296C84 00293BC4  7C 83 22 14 */	add r4, r3, r4
 /* 80296C88 00293BC8  88 1C 01 68 */	lbz r0, 0x168(r28)
 /* 80296C8C 00293BCC  28 00 00 00 */	cmplwi r0, 0
 /* 80296C90 00293BD0  38 84 FF FF */	addi r4, r4, -1
-/* 80296C94 00293BD4  41 82 00 18 */	beq func_80296CAC
-/* 80296C98 00293BD8  48 00 00 0C */	b func_80296CA4
-
-/* 80296C9C 0008 .text      func_80296C9C                  func_80296C9C                  */
-.global func_80296C9C
-func_80296C9C:
+/* 80296C94 00293BD4  41 82 00 18 */	beq lbl_80296CAC
+/* 80296C98 00293BD8  48 00 00 0C */	b lbl_80296CA4
+lbl_80296C9C:
 /* 80296C9C 00293BDC  7C 9F 20 50 */	subf r4, r31, r4
 /* 80296CA0 00293BE0  7C 84 F2 14 */	add r4, r4, r30
-
-/* 80296CA4 0008 .text      func_80296CA4                  func_80296CA4                  */
-.global func_80296CA4
-func_80296CA4:
+lbl_80296CA4:
 /* 80296CA4 00293BE4  7C 04 F8 40 */	cmplw r4, r31
-/* 80296CA8 00293BE8  41 81 FF F4 */	bgt func_80296C9C
-
-/* 80296CAC 0014 .text      func_80296CAC                  func_80296CAC                  */
-.global func_80296CAC
-func_80296CAC:
+/* 80296CA8 00293BE8  41 81 FF F4 */	bgt lbl_80296C9C
+lbl_80296CAC:
 /* 80296CAC 00293BEC  7C 04 F8 40 */	cmplw r4, r31
-/* 80296CB0 00293BF0  41 82 00 10 */	beq func_80296CC0
+/* 80296CB0 00293BF0  41 82 00 10 */	beq lbl_80296CC0
 /* 80296CB4 00293BF4  38 04 00 02 */	addi r0, r4, 2
 /* 80296CB8 00293BF8  7C 00 F8 40 */	cmplw r0, r31
-/* 80296CBC 00293BFC  40 82 00 20 */	bne func_80296CDC
-
-/* 80296CC0 001C .text      func_80296CC0                  func_80296CC0                  */
-.global func_80296CC0
-func_80296CC0:
+/* 80296CBC 00293BFC  40 82 00 20 */	bne lbl_80296CDC
+lbl_80296CC0:
 /* 80296CC0 00293C00  80 1C 01 60 */	lwz r0, 0x160(r28)
 /* 80296CC4 00293C04  90 1C 01 08 */	stw r0, 0x108(r28)
 /* 80296CC8 00293C08  38 7C 00 20 */	addi r3, r28, 0x20
 /* 80296CCC 00293C0C  38 80 00 05 */	li r4, 5
 /* 80296CD0 00293C10  38 A0 00 01 */	li r5, 1
 /* 80296CD4 00293C14  48 0A 7D 21 */	bl OSSendMessage
-/* 80296CD8 00293C18  48 00 00 10 */	b func_80296CE8
-
-/* 80296CDC 000C .text      func_80296CDC                  func_80296CDC                  */
-.global func_80296CDC
-func_80296CDC:
+/* 80296CD8 00293C18  48 00 00 10 */	b lbl_80296CE8
+lbl_80296CDC:
 /* 80296CDC 00293C1C  80 7C 01 60 */	lwz r3, 0x160(r28)
 /* 80296CE0 00293C20  38 03 FF FF */	addi r0, r3, -1
 /* 80296CE4 00293C24  90 1C 01 08 */	stw r0, 0x108(r28)
-
-/* 80296CE8 0010 .text      func_80296CE8                  func_80296CE8                  */
-.global func_80296CE8
-func_80296CE8:
+lbl_80296CE8:
 /* 80296CE8 00293C28  38 E0 00 00 */	li r7, 0
 /* 80296CEC 00293C2C  38 60 00 00 */	li r3, 0
 /* 80296CF0 00293C30  38 80 00 00 */	li r4, 0
-/* 80296CF4 00293C34  48 00 00 28 */	b func_80296D1C
-
-/* 80296CF8 0024 .text      func_80296CF8                  func_80296CF8                  */
-.global func_80296CF8
-func_80296CF8:
+/* 80296CF4 00293C34  48 00 00 28 */	b lbl_80296D1C
+lbl_80296CF8:
 /* 80296CF8 00293C38  7C BD 22 14 */	add r5, r29, r4
 /* 80296CFC 00293C3C  A8 05 00 08 */	lha r0, 8(r5)
 /* 80296D00 00293C40  7C DC 1A 14 */	add r6, r28, r3
@@ -875,38 +765,26 @@ func_80296CF8:
 /* 80296D10 00293C50  38 E7 00 01 */	addi r7, r7, 1
 /* 80296D14 00293C54  38 63 00 02 */	addi r3, r3, 2
 /* 80296D18 00293C58  38 84 00 04 */	addi r4, r4, 4
-
-/* 80296D1C 0014 .text      func_80296D1C                  func_80296D1C                  */
-.global func_80296D1C
-func_80296D1C:
+lbl_80296D1C:
 /* 80296D1C 00293C5C  A0 1C 01 5A */	lhz r0, 0x15a(r28)
 /* 80296D20 00293C60  7C 07 00 00 */	cmpw r7, r0
-/* 80296D24 00293C64  41 80 FF D4 */	blt func_80296CF8
+/* 80296D24 00293C64  41 80 FF D4 */	blt lbl_80296CF8
 /* 80296D28 00293C68  38 00 00 00 */	li r0, 0
 /* 80296D2C 00293C6C  90 1C 01 0C */	stw r0, 0x10c(r28)
-
-/* 80296D30 0028 .text      func_80296D30                  func_80296D30                  */
-.global func_80296D30
-func_80296D30:
+lbl_80296D30:
 /* 80296D30 00293C70  80 7C 01 10 */	lwz r3, 0x110(r28)
 /* 80296D34 00293C74  38 03 00 01 */	addi r0, r3, 1
 /* 80296D38 00293C78  90 1C 01 10 */	stw r0, 0x110(r28)
 /* 80296D3C 00293C7C  80 1C 01 10 */	lwz r0, 0x110(r28)
 /* 80296D40 00293C80  7C 00 F8 40 */	cmplw r0, r31
-/* 80296D44 00293C84  40 81 00 14 */	ble func_80296D58
+/* 80296D44 00293C84  40 81 00 14 */	ble lbl_80296D58
 /* 80296D48 00293C88  88 1C 01 68 */	lbz r0, 0x168(r28)
 /* 80296D4C 00293C8C  28 00 00 00 */	cmplwi r0, 0
-/* 80296D50 00293C90  41 82 00 08 */	beq func_80296D58
+/* 80296D50 00293C90  41 82 00 08 */	beq lbl_80296D58
 /* 80296D54 00293C94  93 DC 01 10 */	stw r30, 0x110(r28)
-
-/* 80296D58 0004 .text      func_80296D58                  func_80296D58                  */
-.global func_80296D58
-func_80296D58:
+lbl_80296D58:
 /* 80296D58 00293C98  38 60 00 01 */	li r3, 1
-
-/* 80296D5C 0018 .text      func_80296D5C                  func_80296D5C                  */
-.global func_80296D5C
-func_80296D5C:
+lbl_80296D5C:
 /* 80296D5C 00293C9C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80296D60 00293CA0  48 0C B4 BD */	bl _restgpr_26
 /* 80296D64 00293CA4  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -917,6 +795,7 @@ func_80296D5C:
 /* 80296D74 0020 .text      channelProcCallback__13JASAramStreamFPv channelProcCallback__13JASAramStreamFPv */
 .global channelProcCallback__13JASAramStreamFPv
 channelProcCallback__13JASAramStreamFPv:
+channelProcCallback__13JASAramStreamFPv:
 /* 80296D74 00293CB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296D78 00293CB8  7C 08 02 A6 */	mflr r0
 /* 80296D7C 00293CBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -926,8 +805,9 @@ channelProcCallback__13JASAramStreamFPv:
 /* 80296D8C 00293CCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296D90 00293CD0  4E 80 00 20 */	blr 
 
-/* 80296D94 0040 .text      dvdErrorCheck__13JASAramStreamFPv dvdErrorCheck__13JASAramStreamFPv */
+/* 80296D94 005C .text      dvdErrorCheck__13JASAramStreamFPv dvdErrorCheck__13JASAramStreamFPv */
 .global dvdErrorCheck__13JASAramStreamFPv
+dvdErrorCheck__13JASAramStreamFPv:
 dvdErrorCheck__13JASAramStreamFPv:
 /* 80296D94 00293CD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296D98 00293CD8  7C 08 02 A6 */	mflr r0
@@ -935,7 +815,7 @@ dvdErrorCheck__13JASAramStreamFPv:
 /* 80296DA0 00293CE0  48 0B 44 29 */	bl DVDGetDriveStatus
 /* 80296DA4 00293CE4  38 03 00 01 */	addi r0, r3, 1
 /* 80296DA8 00293CE8  28 00 00 0C */	cmplwi r0, 0xc
-/* 80296DAC 00293CEC  41 81 00 28 */	bgt func_80296DD4
+/* 80296DAC 00293CEC  41 81 00 28 */	bgt lbl_80296DD4
 /* 80296DB0 00293CF0  3C 60 80 3C */	lis r3, LIT_613@ha
 /* 80296DB4 00293CF4  38 63 76 70 */	addi r3, r3, LIT_613@l
 /* 80296DB8 00293CF8  54 00 10 3A */	slwi r0, r0, 2
@@ -943,18 +823,12 @@ dvdErrorCheck__13JASAramStreamFPv:
 /* 80296DC0 00293D00  7C 09 03 A6 */	mtctr r0
 /* 80296DC4 00293D04  4E 80 04 20 */	bctr 
 /* 80296DC8 00293D08  38 00 00 00 */	li r0, 0
-/* 80296DCC 00293D0C  98 0D 8C E0 */	stb r0, sym_80451260-_SDA_BASE_(r13)
-/* 80296DD0 00293D10  48 00 00 0C */	b func_80296DDC
-
-/* 80296DD4 0008 .text      func_80296DD4                  func_80296DD4                  */
-.global func_80296DD4
-func_80296DD4:
+/* 80296DCC 00293D0C  98 0D 8C E0 */	stb r0, data_80451260-_SDA_BASE_(r13)
+/* 80296DD0 00293D10  48 00 00 0C */	b lbl_80296DDC
+lbl_80296DD4:
 /* 80296DD4 00293D14  38 00 00 01 */	li r0, 1
-/* 80296DD8 00293D18  98 0D 8C E0 */	stb r0, sym_80451260-_SDA_BASE_(r13)
-
-/* 80296DDC 0014 .text      func_80296DDC                  func_80296DDC                  */
-.global func_80296DDC
-func_80296DDC:
+/* 80296DD8 00293D18  98 0D 8C E0 */	stb r0, data_80451260-_SDA_BASE_(r13)
+lbl_80296DDC:
 /* 80296DDC 00293D1C  38 60 00 00 */	li r3, 0
 /* 80296DE0 00293D20  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80296DE4 00293D24  7C 08 03 A6 */	mtlr r0
@@ -963,6 +837,7 @@ func_80296DDC:
 
 /* 80296DF0 003C .text      channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv */
 .global channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv
+channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv:
 channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv:
 /* 80296DF0 00293D30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296DF4 00293D34  7C 08 02 A6 */	mflr r0
@@ -980,8 +855,9 @@ channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv:
 /* 80296E24 00293D64  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296E28 00293D68  4E 80 00 20 */	blr 
 
-/* 80296E2C 0044 .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
+/* 80296E2C 0680 .text      updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel */
 .global updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel
+updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel:
 updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel:
 /* 80296E2C 00293D6C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80296E30 00293D70  7C 08 02 A6 */	mflr r0
@@ -995,25 +871,19 @@ updateChannel__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannel:
 /* 80296E50 00293D90  4B FF F8 C1 */	bl getBlockSamples__13JASAramStreamCFv
 /* 80296E54 00293D94  7C 7F 1B 78 */	mr r31, r3
 /* 80296E58 00293D98  2C 19 00 01 */	cmpwi r25, 1
-/* 80296E5C 00293D9C  41 82 00 20 */	beq func_80296E7C
-/* 80296E60 00293DA0  40 80 00 10 */	bge func_80296E70
+/* 80296E5C 00293D9C  41 82 00 20 */	beq lbl_80296E7C
+/* 80296E60 00293DA0  40 80 00 10 */	bge lbl_80296E70
 /* 80296E64 00293DA4  2C 19 00 00 */	cmpwi r25, 0
-/* 80296E68 00293DA8  40 80 00 5C */	bge func_80296EC4
-/* 80296E6C 00293DAC  48 00 06 18 */	b func_80297484
-
-/* 80296E70 000C .text      func_80296E70                  func_80296E70                  */
-.global func_80296E70
-func_80296E70:
+/* 80296E68 00293DA8  40 80 00 5C */	bge lbl_80296EC4
+/* 80296E6C 00293DAC  48 00 06 18 */	b lbl_80297484
+lbl_80296E70:
 /* 80296E70 00293DB0  2C 19 00 03 */	cmpwi r25, 3
-/* 80296E74 00293DB4  40 80 06 10 */	bge func_80297484
-/* 80296E78 00293DB8  48 00 05 94 */	b func_8029740C
-
-/* 80296E7C 0048 .text      func_80296E7C                  func_80296E7C                  */
-.global func_80296E7C
-func_80296E7C:
+/* 80296E74 00293DB4  40 80 06 10 */	bge lbl_80297484
+/* 80296E78 00293DB8  48 00 05 94 */	b lbl_8029740C
+lbl_80296E7C:
 /* 80296E7C 00293DBC  80 1B 00 A8 */	lwz r0, 0xa8(r27)
 /* 80296E80 00293DC0  28 00 00 00 */	cmplwi r0, 0
-/* 80296E84 00293DC4  40 82 06 00 */	bne func_80297484
+/* 80296E84 00293DC4  40 82 06 00 */	bne lbl_80297484
 /* 80296E88 00293DC8  93 9B 00 A8 */	stw r28, 0xa8(r27)
 /* 80296E8C 00293DCC  80 1B 01 5C */	lwz r0, 0x15c(r27)
 /* 80296E90 00293DD0  7C 1F 01 D6 */	mullw r0, r31, r0
@@ -1028,17 +898,14 @@ func_80296E7C:
 /* 80296EB4 00293DF4  98 9B 00 C0 */	stb r4, 0xc0(r27)
 /* 80296EB8 00293DF8  90 9B 00 C4 */	stw r4, 0xc4(r27)
 /* 80296EBC 00293DFC  90 9B 01 2C */	stw r4, 0x12c(r27)
-/* 80296EC0 00293E00  48 00 05 C4 */	b func_80297484
-
-/* 80296EC4 004C .text      func_80296EC4                  func_80296EC4                  */
-.global func_80296EC4
-func_80296EC4:
+/* 80296EC0 00293E00  48 00 05 C4 */	b lbl_80297484
+lbl_80296EC4:
 /* 80296EC4 00293E04  A0 1D 00 08 */	lhz r0, 8(r29)
 /* 80296EC8 00293E08  28 00 00 00 */	cmplwi r0, 0
-/* 80296ECC 00293E0C  40 82 05 B8 */	bne func_80297484
+/* 80296ECC 00293E0C  40 82 05 B8 */	bne lbl_80297484
 /* 80296ED0 00293E10  80 1B 00 A8 */	lwz r0, 0xa8(r27)
 /* 80296ED4 00293E14  7C 1C 00 40 */	cmplw r28, r0
-/* 80296ED8 00293E18  40 82 04 9C */	bne func_80297374
+/* 80296ED8 00293E18  40 82 04 9C */	bne lbl_80297374
 /* 80296EDC 00293E1C  38 A0 00 00 */	li r5, 0
 /* 80296EE0 00293E20  90 BB 01 2C */	stw r5, 0x12c(r27)
 /* 80296EE4 00293E24  80 7D 00 74 */	lwz r3, 0x74(r29)
@@ -1046,19 +913,16 @@ func_80296EC4:
 /* 80296EEC 00293E2C  7C C3 02 14 */	add r6, r3, r0
 /* 80296EF0 00293E30  80 9B 00 B4 */	lwz r4, 0xb4(r27)
 /* 80296EF4 00293E34  7C 06 20 40 */	cmplw r6, r4
-/* 80296EF8 00293E38  41 81 00 18 */	bgt func_80296F10
+/* 80296EF8 00293E38  41 81 00 18 */	bgt lbl_80296F10
 /* 80296EFC 00293E3C  80 7B 00 B8 */	lwz r3, 0xb8(r27)
 /* 80296F00 00293E40  7C 06 20 50 */	subf r0, r6, r4
 /* 80296F04 00293E44  7C 03 02 14 */	add r0, r3, r0
 /* 80296F08 00293E48  90 1B 00 B8 */	stw r0, 0xb8(r27)
-/* 80296F0C 00293E4C  48 00 00 BC */	b func_80296FC8
-
-/* 80296F10 0034 .text      func_80296F10                  func_80296F10                  */
-.global func_80296F10
-func_80296F10:
+/* 80296F0C 00293E4C  48 00 00 BC */	b lbl_80296FC8
+lbl_80296F10:
 /* 80296F10 00293E50  88 1B 00 C0 */	lbz r0, 0xc0(r27)
 /* 80296F14 00293E54  28 00 00 00 */	cmplwi r0, 0
-/* 80296F18 00293E58  40 82 00 2C */	bne func_80296F44
+/* 80296F18 00293E58  40 82 00 2C */	bne lbl_80296F44
 /* 80296F1C 00293E5C  80 1B 00 B8 */	lwz r0, 0xb8(r27)
 /* 80296F20 00293E60  7C 00 22 14 */	add r0, r0, r4
 /* 80296F24 00293E64  90 1B 00 B8 */	stw r0, 0xb8(r27)
@@ -1068,11 +932,8 @@ func_80296F10:
 /* 80296F34 00293E74  7C 06 00 50 */	subf r0, r6, r0
 /* 80296F38 00293E78  7C 03 02 14 */	add r0, r3, r0
 /* 80296F3C 00293E7C  90 1B 00 B8 */	stw r0, 0xb8(r27)
-/* 80296F40 00293E80  48 00 00 88 */	b func_80296FC8
-
-/* 80296F44 007C .text      func_80296F44                  func_80296F44                  */
-.global func_80296F44
-func_80296F44:
+/* 80296F40 00293E80  48 00 00 88 */	b lbl_80296FC8
+lbl_80296F44:
 /* 80296F44 00293E84  80 1B 00 B8 */	lwz r0, 0xb8(r27)
 /* 80296F48 00293E88  7C 00 22 14 */	add r0, r0, r4
 /* 80296F4C 00293E8C  90 1B 00 B8 */	stw r0, 0xb8(r27)
@@ -1100,30 +961,21 @@ func_80296F44:
 /* 80296FA4 00293EE4  80 7B 00 C4 */	lwz r3, 0xc4(r27)
 /* 80296FA8 00293EE8  38 00 FF FF */	li r0, -1
 /* 80296FAC 00293EEC  7C 03 00 40 */	cmplw r3, r0
-/* 80296FB0 00293EF0  40 80 00 10 */	bge func_80296FC0
+/* 80296FB0 00293EF0  40 80 00 10 */	bge lbl_80296FC0
 /* 80296FB4 00293EF4  80 7B 00 C4 */	lwz r3, 0xc4(r27)
 /* 80296FB8 00293EF8  38 03 00 01 */	addi r0, r3, 1
 /* 80296FBC 00293EFC  90 1B 00 C4 */	stw r0, 0xc4(r27)
-
-/* 80296FC0 0008 .text      func_80296FC0                  func_80296FC0                  */
-.global func_80296FC0
-func_80296FC0:
+lbl_80296FC0:
 /* 80296FC0 00293F00  38 00 00 00 */	li r0, 0
 /* 80296FC4 00293F04  98 1B 00 C0 */	stb r0, 0xc0(r27)
-
-/* 80296FC8 0018 .text      func_80296FC8                  func_80296FC8                  */
-.global func_80296FC8
-func_80296FC8:
+lbl_80296FC8:
 /* 80296FC8 00293F08  80 7B 00 B8 */	lwz r3, 0xb8(r27)
 /* 80296FCC 00293F0C  80 1B 01 70 */	lwz r0, 0x170(r27)
 /* 80296FD0 00293F10  7C 03 00 40 */	cmplw r3, r0
-/* 80296FD4 00293F14  40 81 00 0C */	ble func_80296FE0
+/* 80296FD4 00293F14  40 81 00 0C */	ble lbl_80296FE0
 /* 80296FD8 00293F18  38 00 00 01 */	li r0, 1
-/* 80296FDC 00293F1C  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-
-/* 80296FE0 0064 .text      func_80296FE0                  func_80296FE0                  */
-.global func_80296FE0
-func_80296FE0:
+/* 80296FDC 00293F1C  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+lbl_80296FE0:
 /* 80296FE0 00293F20  80 1B 00 C4 */	lwz r0, 0xc4(r27)
 /* 80296FE4 00293F24  C8 22 BC 20 */	lfd f1, JASAramStream__LIT_533-_SDA2_BASE_(r2)
 /* 80296FE8 00293F28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1142,17 +994,14 @@ func_80296FE0:
 /* 8029701C 00293F5C  80 7B 00 C4 */	lwz r3, 0xc4(r27)
 /* 80297020 00293F60  38 00 FF FF */	li r0, -1
 /* 80297024 00293F64  7C 03 00 40 */	cmplw r3, r0
-/* 80297028 00293F68  40 80 00 1C */	bge func_80297044
+/* 80297028 00293F68  40 80 00 1C */	bge lbl_80297044
 /* 8029702C 00293F6C  80 1B 00 B8 */	lwz r0, 0xb8(r27)
 /* 80297030 00293F70  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80297034 00293F74  90 81 00 20 */	stw r4, 0x20(r1)
 /* 80297038 00293F78  C8 01 00 20 */	lfd f0, 0x20(r1)
 /* 8029703C 00293F7C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80297040 00293F80  EC 42 00 2A */	fadds f2, f2, f0
-
-/* 80297044 0068 .text      func_80297044                  func_80297044                  */
-.global func_80297044
-func_80297044:
+lbl_80297044:
 /* 80297044 00293F84  80 1B 01 64 */	lwz r0, 0x164(r27)
 /* 80297048 00293F88  C8 22 BC 20 */	lfd f1, JASAramStream__LIT_533-_SDA2_BASE_(r2)
 /* 8029704C 00293F8C  90 01 00 2C */	stw r0, 0x2c(r1)
@@ -1166,23 +1015,20 @@ func_80297044:
 /* 8029706C 00293FAC  38 63 01 90 */	addi r3, r3, 0x190
 /* 80297070 00293FB0  80 1B 01 70 */	lwz r0, 0x170(r27)
 /* 80297074 00293FB4  7C 03 00 40 */	cmplw r3, r0
-/* 80297078 00293FB8  41 80 00 F8 */	blt func_80297170
+/* 80297078 00293FB8  41 80 00 F8 */	blt lbl_80297170
 /* 8029707C 00293FBC  88 1B 00 C0 */	lbz r0, 0xc0(r27)
 /* 80297080 00293FC0  28 00 00 00 */	cmplwi r0, 0
-/* 80297084 00293FC4  40 82 00 EC */	bne func_80297170
+/* 80297084 00293FC4  40 82 00 EC */	bne lbl_80297170
 /* 80297088 00293FC8  88 1B 01 68 */	lbz r0, 0x168(r27)
 /* 8029708C 00293FCC  28 00 00 00 */	cmplwi r0, 0
-/* 80297090 00293FD0  41 82 00 50 */	beq func_802970E0
+/* 80297090 00293FD0  41 82 00 50 */	beq lbl_802970E0
 /* 80297094 00293FD4  80 7B 00 BC */	lwz r3, 0xbc(r27)
 /* 80297098 00293FD8  38 83 00 01 */	addi r4, r3, 1
 /* 8029709C 00293FDC  80 1B 01 5C */	lwz r0, 0x15c(r27)
 /* 802970A0 00293FE0  7C 04 00 40 */	cmplw r4, r0
-/* 802970A4 00293FE4  41 80 00 08 */	blt func_802970AC
+/* 802970A4 00293FE4  41 80 00 08 */	blt lbl_802970AC
 /* 802970A8 00293FE8  38 80 00 00 */	li r4, 0
-
-/* 802970AC 0034 .text      func_802970AC                  func_802970AC                  */
-.global func_802970AC
-func_802970AC:
+lbl_802970AC:
 /* 802970AC 00293FEC  80 7B 01 6C */	lwz r3, 0x16c(r27)
 /* 802970B0 00293FF0  7C 03 FB 96 */	divwu r0, r3, r31
 /* 802970B4 00293FF4  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -1195,21 +1041,15 @@ func_802970AC:
 /* 802970D0 00294010  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 802970D4 00294014  60 00 00 02 */	ori r0, r0, 2
 /* 802970D8 00294018  90 1B 01 2C */	stw r0, 0x12c(r27)
-/* 802970DC 0029401C  48 00 00 1C */	b func_802970F8
-
-/* 802970E0 0018 .text      func_802970E0                  func_802970E0                  */
-.global func_802970E0
-func_802970E0:
+/* 802970DC 0029401C  48 00 00 1C */	b lbl_802970F8
+lbl_802970E0:
 /* 802970E0 00294020  38 00 00 00 */	li r0, 0
 /* 802970E4 00294024  B0 1D 01 02 */	sth r0, 0x102(r29)
 /* 802970E8 00294028  B0 1B 01 28 */	sth r0, 0x128(r27)
 /* 802970EC 0029402C  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 802970F0 00294030  60 00 00 08 */	ori r0, r0, 8
 /* 802970F4 00294034  90 1B 01 2C */	stw r0, 0x12c(r27)
-
-/* 802970F8 0078 .text      func_802970F8                  func_802970F8                  */
-.global func_802970F8
-func_802970F8:
+lbl_802970F8:
 /* 802970F8 00294038  80 7B 01 70 */	lwz r3, 0x170(r27)
 /* 802970FC 0029403C  7C 03 FB 96 */	divwu r0, r3, r31
 /* 80297100 00294040  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -1240,49 +1080,37 @@ func_802970F8:
 /* 80297164 002940A4  90 1B 00 BC */	stw r0, 0xbc(r27)
 /* 80297168 002940A8  38 00 00 01 */	li r0, 1
 /* 8029716C 002940AC  98 1B 00 C0 */	stb r0, 0xc0(r27)
-
-/* 80297170 0014 .text      func_80297170                  func_80297170                  */
-.global func_80297170
-func_80297170:
+lbl_80297170:
 /* 80297170 002940B0  80 7C 01 04 */	lwz r3, 0x104(r28)
 /* 80297174 002940B4  80 1D 00 70 */	lwz r0, 0x70(r29)
 /* 80297178 002940B8  7C 63 00 51 */	subf. r3, r3, r0
-/* 8029717C 002940BC  41 82 00 08 */	beq func_80297184
+/* 8029717C 002940BC  41 82 00 08 */	beq lbl_80297184
 /* 80297180 002940C0  38 63 FF FF */	addi r3, r3, -1
-
-/* 80297184 0034 .text      func_80297184                  func_80297184                  */
-.global func_80297184
-func_80297184:
+lbl_80297184:
 /* 80297184 002940C4  80 0D 8C D8 */	lwz r0, sBlockSize__13JASAramStream-_SDA_BASE_(r13)
 /* 80297188 002940C8  7F C3 03 96 */	divwu r30, r3, r0
 /* 8029718C 002940CC  7F 63 DB 78 */	mr r3, r27
 /* 80297190 002940D0  4B FF F5 81 */	bl getBlockSamples__13JASAramStreamCFv
 /* 80297194 002940D4  80 1B 00 B0 */	lwz r0, 0xb0(r27)
 /* 80297198 002940D8  7C 1E 00 40 */	cmplw r30, r0
-/* 8029719C 002940DC  41 82 01 74 */	beq func_80297310
+/* 8029719C 002940DC  41 82 01 74 */	beq lbl_80297310
 /* 802971A0 002940E0  7C 00 F0 10 */	subfc r0, r0, r30
 /* 802971A4 002940E4  7C 00 01 10 */	subfe r0, r0, r0
 /* 802971A8 002940E8  7F 20 00 D0 */	neg r25, r0
 /* 802971AC 002940EC  3C 60 80 29 */	lis r3, loadToAramTask__13JASAramStreamFPv@ha
 /* 802971B0 002940F0  3B 43 68 48 */	addi r26, r3, loadToAramTask__13JASAramStreamFPv@l
-/* 802971B4 002940F4  48 00 00 64 */	b func_80297218
-
-/* 802971B8 0024 .text      func_802971B8                  func_802971B8                  */
-.global func_802971B8
-func_802971B8:
+/* 802971B4 002940F4  48 00 00 64 */	b lbl_80297218
+lbl_802971B8:
 /* 802971B8 002940F8  80 6D 8C D0 */	lwz r3, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
 /* 802971BC 002940FC  7F 44 D3 78 */	mr r4, r26
 /* 802971C0 00294100  7F 65 DB 78 */	mr r5, r27
 /* 802971C4 00294104  4B FF 8A 91 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPv
 /* 802971C8 00294108  2C 03 00 00 */	cmpwi r3, 0
-/* 802971CC 0029410C  40 82 00 10 */	bne func_802971DC
+/* 802971CC 0029410C  40 82 00 10 */	bne lbl_802971DC
 /* 802971D0 00294110  38 00 00 01 */	li r0, 1
-/* 802971D4 00294114  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-/* 802971D8 00294118  48 00 00 4C */	b func_80297224
-
-/* 802971DC 003C .text      func_802971DC                  func_802971DC                  */
-.global func_802971DC
-func_802971DC:
+/* 802971D4 00294114  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+/* 802971D8 00294118  48 00 00 4C */	b lbl_80297224
+lbl_802971DC:
 /* 802971DC 0029411C  48 0A 65 19 */	bl OSDisableInterrupts
 /* 802971E0 00294120  90 61 00 08 */	stw r3, 8(r1)
 /* 802971E4 00294124  80 9B 01 18 */	lwz r4, 0x118(r27)
@@ -1295,32 +1123,26 @@ func_802971DC:
 /* 80297200 00294140  80 7B 00 B0 */	lwz r3, 0xb0(r27)
 /* 80297204 00294144  80 1B 01 5C */	lwz r0, 0x15c(r27)
 /* 80297208 00294148  7C 03 00 40 */	cmplw r3, r0
-/* 8029720C 0029414C  41 80 00 0C */	blt func_80297218
+/* 8029720C 0029414C  41 80 00 0C */	blt lbl_80297218
 /* 80297210 00294150  38 00 00 00 */	li r0, 0
 /* 80297214 00294154  90 1B 00 B0 */	stw r0, 0xb0(r27)
-
-/* 80297218 000C .text      func_80297218                  func_80297218                  */
-.global func_80297218
-func_80297218:
+lbl_80297218:
 /* 80297218 00294158  80 1B 00 B0 */	lwz r0, 0xb0(r27)
 /* 8029721C 0029415C  7C 1E 00 40 */	cmplw r30, r0
-/* 80297220 00294160  40 82 FF 98 */	bne func_802971B8
-
-/* 80297224 0050 .text      func_80297224                  func_80297224                  */
-.global func_80297224
-func_80297224:
+/* 80297220 00294160  40 82 FF 98 */	bne lbl_802971B8
+lbl_80297224:
 /* 80297224 00294164  57 20 06 3F */	clrlwi. r0, r25, 0x18
-/* 80297228 00294168  41 82 01 18 */	beq func_80297340
+/* 80297228 00294168  41 82 01 18 */	beq lbl_80297340
 /* 8029722C 0029416C  80 7B 01 5C */	lwz r3, 0x15c(r27)
 /* 80297230 00294170  80 1B 00 BC */	lwz r0, 0xbc(r27)
 /* 80297234 00294174  7C 03 00 50 */	subf r0, r3, r0
 /* 80297238 00294178  90 1B 00 BC */	stw r0, 0xbc(r27)
 /* 8029723C 0029417C  88 1B 00 AD */	lbz r0, 0xad(r27)
 /* 80297240 00294180  28 00 00 00 */	cmplwi r0, 0
-/* 80297244 00294184  41 82 00 64 */	beq func_802972A8
+/* 80297244 00294184  41 82 00 64 */	beq lbl_802972A8
 /* 80297248 00294188  88 1B 00 C0 */	lbz r0, 0xc0(r27)
 /* 8029724C 0029418C  28 00 00 00 */	cmplwi r0, 0
-/* 80297250 00294190  40 82 00 24 */	bne func_80297274
+/* 80297250 00294190  40 82 00 24 */	bne lbl_80297274
 /* 80297254 00294194  80 1D 00 74 */	lwz r0, 0x74(r29)
 /* 80297258 00294198  7C 00 FA 14 */	add r0, r0, r31
 /* 8029725C 0029419C  90 1D 00 74 */	stw r0, 0x74(r29)
@@ -1329,10 +1151,7 @@ func_80297224:
 /* 80297268 002941A8  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 8029726C 002941AC  60 00 00 01 */	ori r0, r0, 1
 /* 80297270 002941B0  90 1B 01 2C */	stw r0, 0x12c(r27)
-
-/* 80297274 0034 .text      func_80297274                  func_80297274                  */
-.global func_80297274
-func_80297274:
+lbl_80297274:
 /* 80297274 002941B4  80 1D 01 14 */	lwz r0, 0x114(r29)
 /* 80297278 002941B8  7C 00 FA 14 */	add r0, r0, r31
 /* 8029727C 002941BC  90 1D 01 14 */	stw r0, 0x114(r29)
@@ -1345,16 +1164,13 @@ func_80297274:
 /* 80297298 002941D8  90 1B 01 5C */	stw r0, 0x15c(r27)
 /* 8029729C 002941DC  38 00 00 00 */	li r0, 0
 /* 802972A0 002941E0  98 1B 00 AD */	stb r0, 0xad(r27)
-/* 802972A4 002941E4  48 00 00 9C */	b func_80297340
-
-/* 802972A8 0068 .text      func_802972A8                  func_802972A8                  */
-.global func_802972A8
-func_802972A8:
+/* 802972A4 002941E4  48 00 00 9C */	b lbl_80297340
+lbl_802972A8:
 /* 802972A8 002941E8  80 1B 01 5C */	lwz r0, 0x15c(r27)
 /* 802972AC 002941EC  80 7B 01 60 */	lwz r3, 0x160(r27)
 /* 802972B0 002941F0  38 63 FF FF */	addi r3, r3, -1
 /* 802972B4 002941F4  7C 00 18 40 */	cmplw r0, r3
-/* 802972B8 002941F8  41 82 00 88 */	beq func_80297340
+/* 802972B8 002941F8  41 82 00 88 */	beq lbl_80297340
 /* 802972BC 002941FC  90 7B 01 5C */	stw r3, 0x15c(r27)
 /* 802972C0 00294200  80 1D 01 14 */	lwz r0, 0x114(r29)
 /* 802972C4 00294204  7C 1F 00 50 */	subf r0, r31, r0
@@ -1366,7 +1182,7 @@ func_802972A8:
 /* 802972DC 0029421C  90 1B 01 2C */	stw r0, 0x12c(r27)
 /* 802972E0 00294220  88 1B 00 C0 */	lbz r0, 0xc0(r27)
 /* 802972E4 00294224  28 00 00 00 */	cmplwi r0, 0
-/* 802972E8 00294228  40 82 00 58 */	bne func_80297340
+/* 802972E8 00294228  40 82 00 58 */	bne lbl_80297340
 /* 802972EC 0029422C  80 1D 00 74 */	lwz r0, 0x74(r29)
 /* 802972F0 00294230  7C 1F 00 50 */	subf r0, r31, r0
 /* 802972F4 00294234  90 1D 00 74 */	stw r0, 0x74(r29)
@@ -1375,27 +1191,21 @@ func_802972A8:
 /* 80297300 00294240  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 80297304 00294244  60 00 00 01 */	ori r0, r0, 1
 /* 80297308 00294248  90 1B 01 2C */	stw r0, 0x12c(r27)
-/* 8029730C 0029424C  48 00 00 34 */	b func_80297340
-
-/* 80297310 0030 .text      func_80297310                  func_80297310                  */
-.global func_80297310
-func_80297310:
+/* 8029730C 0029424C  48 00 00 34 */	b lbl_80297340
+lbl_80297310:
 /* 80297310 00294250  80 1B 01 18 */	lwz r0, 0x118(r27)
 /* 80297314 00294254  28 00 00 00 */	cmplwi r0, 0
-/* 80297318 00294258  40 82 00 28 */	bne func_80297340
-/* 8029731C 0029425C  88 0D 8C E0 */	lbz r0, sym_80451260-_SDA_BASE_(r13)
+/* 80297318 00294258  40 82 00 28 */	bne lbl_80297340
+/* 8029731C 0029425C  88 0D 8C E0 */	lbz r0, data_80451260-_SDA_BASE_(r13)
 /* 80297320 00294260  28 00 00 00 */	cmplwi r0, 0
-/* 80297324 00294264  40 82 00 1C */	bne func_80297340
+/* 80297324 00294264  40 82 00 1C */	bne lbl_80297340
 /* 80297328 00294268  88 1B 00 AE */	lbz r0, 0xae(r27)
 /* 8029732C 0029426C  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
 /* 80297330 00294270  98 1B 00 AE */	stb r0, 0xae(r27)
 /* 80297334 00294274  88 1B 00 AE */	lbz r0, 0xae(r27)
 /* 80297338 00294278  54 00 07 B8 */	rlwinm r0, r0, 0, 0x1e, 0x1c
 /* 8029733C 0029427C  98 1B 00 AE */	stb r0, 0xae(r27)
-
-/* 80297340 0034 .text      func_80297340                  func_80297340                  */
-.global func_80297340
-func_80297340:
+lbl_80297340:
 /* 80297340 00294280  80 7D 00 74 */	lwz r3, 0x74(r29)
 /* 80297344 00294284  A0 1D 00 64 */	lhz r0, 0x64(r29)
 /* 80297348 00294288  7C 03 02 14 */	add r0, r3, r0
@@ -1404,111 +1214,78 @@ func_80297340:
 /* 80297354 00294294  80 7B 01 60 */	lwz r3, 0x160(r27)
 /* 80297358 00294298  38 03 FF FE */	addi r0, r3, -2
 /* 8029735C 0029429C  7C 04 00 40 */	cmplw r4, r0
-/* 80297360 002942A0  41 80 00 64 */	blt func_802973C4
+/* 80297360 002942A0  41 80 00 64 */	blt lbl_802973C4
 /* 80297364 002942A4  88 1B 00 AE */	lbz r0, 0xae(r27)
 /* 80297368 002942A8  60 00 00 04 */	ori r0, r0, 4
 /* 8029736C 002942AC  98 1B 00 AE */	stb r0, 0xae(r27)
-/* 80297370 002942B0  48 00 00 54 */	b func_802973C4
-
-/* 80297374 0014 .text      func_80297374                  func_80297374                  */
-.global func_80297374
-func_80297374:
+/* 80297370 002942B0  48 00 00 54 */	b lbl_802973C4
+lbl_80297374:
 /* 80297374 002942B4  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 80297378 002942B8  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8029737C 002942BC  41 82 00 0C */	beq func_80297388
+/* 8029737C 002942BC  41 82 00 0C */	beq lbl_80297388
 /* 80297380 002942C0  80 1B 01 1C */	lwz r0, 0x11c(r27)
 /* 80297384 002942C4  90 1D 00 74 */	stw r0, 0x74(r29)
-
-/* 80297388 0014 .text      func_80297388                  func_80297388                  */
-.global func_80297388
-func_80297388:
+lbl_80297388:
 /* 80297388 002942C8  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 8029738C 002942CC  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 80297390 002942D0  41 82 00 0C */	beq func_8029739C
+/* 80297390 002942D0  41 82 00 0C */	beq lbl_8029739C
 /* 80297394 002942D4  80 1B 01 20 */	lwz r0, 0x120(r27)
 /* 80297398 002942D8  90 1D 01 10 */	stw r0, 0x110(r29)
-
-/* 8029739C 0014 .text      func_8029739C                  func_8029739C                  */
-.global func_8029739C
-func_8029739C:
+lbl_8029739C:
 /* 8029739C 002942DC  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 802973A0 002942E0  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
-/* 802973A4 002942E4  41 82 00 0C */	beq func_802973B0
+/* 802973A4 002942E4  41 82 00 0C */	beq lbl_802973B0
 /* 802973A8 002942E8  80 1B 01 24 */	lwz r0, 0x124(r27)
 /* 802973AC 002942EC  90 1D 01 14 */	stw r0, 0x114(r29)
-
-/* 802973B0 0014 .text      func_802973B0                  func_802973B0                  */
-.global func_802973B0
-func_802973B0:
+lbl_802973B0:
 /* 802973B0 002942F0  80 1B 01 2C */	lwz r0, 0x12c(r27)
 /* 802973B4 002942F4  54 00 07 39 */	rlwinm. r0, r0, 0, 0x1c, 0x1c
-/* 802973B8 002942F8  41 82 00 0C */	beq func_802973C4
+/* 802973B8 002942F8  41 82 00 0C */	beq lbl_802973C4
 /* 802973BC 002942FC  A0 1B 01 28 */	lhz r0, 0x128(r27)
 /* 802973C0 00294300  B0 1D 01 02 */	sth r0, 0x102(r29)
-
-/* 802973C4 0010 .text      func_802973C4                  func_802973C4                  */
-.global func_802973C4
-func_802973C4:
+lbl_802973C4:
 /* 802973C4 00294304  38 80 00 00 */	li r4, 0
 /* 802973C8 00294308  38 60 00 00 */	li r3, 0
 /* 802973CC 0029430C  38 00 00 06 */	li r0, 6
 /* 802973D0 00294310  7C 09 03 A6 */	mtctr r0
-
-/* 802973D4 001C .text      func_802973D4                  func_802973D4                  */
-.global func_802973D4
-func_802973D4:
+lbl_802973D4:
 /* 802973D4 00294314  38 03 00 90 */	addi r0, r3, 0x90
 /* 802973D8 00294318  7C 1B 00 2E */	lwzx r0, r27, r0
 /* 802973DC 0029431C  7C 1C 00 40 */	cmplw r28, r0
-/* 802973E0 00294320  41 82 00 10 */	beq func_802973F0
+/* 802973E0 00294320  41 82 00 10 */	beq lbl_802973F0
 /* 802973E4 00294324  38 84 00 01 */	addi r4, r4, 1
 /* 802973E8 00294328  38 63 00 04 */	addi r3, r3, 4
-/* 802973EC 0029432C  42 00 FF E8 */	bdnz func_802973D4
-
-/* 802973F0 001C .text      func_802973F0                  func_802973F0                  */
-.global func_802973F0
-func_802973F0:
+/* 802973EC 0029432C  42 00 FF E8 */	bdnz lbl_802973D4
+lbl_802973F0:
 /* 802973F0 00294330  54 80 08 3C */	slwi r0, r4, 1
 /* 802973F4 00294334  7C 7B 02 14 */	add r3, r27, r0
 /* 802973F8 00294338  A8 03 01 30 */	lha r0, 0x130(r3)
 /* 802973FC 0029433C  B0 1D 01 04 */	sth r0, 0x104(r29)
 /* 80297400 00294340  A8 03 01 3C */	lha r0, 0x13c(r3)
 /* 80297404 00294344  B0 1D 01 06 */	sth r0, 0x106(r29)
-/* 80297408 00294348  48 00 00 7C */	b func_80297484
-
-/* 8029740C 0014 .text      func_8029740C                  func_8029740C                  */
-.global func_8029740C
-func_8029740C:
+/* 80297408 00294348  48 00 00 7C */	b lbl_80297484
+lbl_8029740C:
 /* 8029740C 0029434C  38 C0 00 00 */	li r6, 0
 /* 80297410 00294350  38 60 00 00 */	li r3, 0
 /* 80297414 00294354  38 80 00 00 */	li r4, 0
 /* 80297418 00294358  38 00 00 06 */	li r0, 6
 /* 8029741C 0029435C  7C 09 03 A6 */	mtctr r0
-
-/* 80297420 0018 .text      func_80297420                  func_80297420                  */
-.global func_80297420
-func_80297420:
+lbl_80297420:
 /* 80297420 00294360  38 03 00 90 */	addi r0, r3, 0x90
 /* 80297424 00294364  7C BB 00 2E */	lwzx r5, r27, r0
 /* 80297428 00294368  7C 1C 28 40 */	cmplw r28, r5
-/* 8029742C 0029436C  40 82 00 0C */	bne func_80297438
+/* 8029742C 0029436C  40 82 00 0C */	bne lbl_80297438
 /* 80297430 00294370  7C 9B 01 2E */	stwx r4, r27, r0
-/* 80297434 00294374  48 00 00 10 */	b func_80297444
-
-/* 80297438 000C .text      func_80297438                  func_80297438                  */
-.global func_80297438
-func_80297438:
+/* 80297434 00294374  48 00 00 10 */	b lbl_80297444
+lbl_80297438:
 /* 80297438 00294378  28 05 00 00 */	cmplwi r5, 0
-/* 8029743C 0029437C  41 82 00 08 */	beq func_80297444
+/* 8029743C 0029437C  41 82 00 08 */	beq lbl_80297444
 /* 80297440 00294380  38 C0 00 01 */	li r6, 1
-
-/* 80297444 0040 .text      func_80297444                  func_80297444                  */
-.global func_80297444
-func_80297444:
+lbl_80297444:
 /* 80297444 00294384  38 63 00 04 */	addi r3, r3, 4
-/* 80297448 00294388  42 00 FF D8 */	bdnz func_80297420
+/* 80297448 00294388  42 00 FF D8 */	bdnz lbl_80297420
 /* 8029744C 0029438C  54 C0 06 3F */	clrlwi. r0, r6, 0x18
-/* 80297450 00294390  40 82 00 34 */	bne func_80297484
+/* 80297450 00294390  40 82 00 34 */	bne lbl_80297484
 /* 80297454 00294394  38 00 00 01 */	li r0, 1
 /* 80297458 00294398  98 1B 01 14 */	stb r0, 0x114(r27)
 /* 8029745C 0029439C  80 6D 8C D0 */	lwz r3, sLoadThread__13JASAramStream-_SDA_BASE_(r13)
@@ -1517,22 +1294,16 @@ func_80297444:
 /* 80297468 002943A8  7F 65 DB 78 */	mr r5, r27
 /* 8029746C 002943AC  4B FF 87 E9 */	bl sendCmdMsg__13JASTaskThreadFPFPv_vPv
 /* 80297470 002943B0  2C 03 00 00 */	cmpwi r3, 0
-/* 80297474 002943B4  40 82 00 10 */	bne func_80297484
+/* 80297474 002943B4  40 82 00 10 */	bne lbl_80297484
 /* 80297478 002943B8  38 00 00 01 */	li r0, 1
-/* 8029747C 002943BC  98 0D 8C E1 */	stb r0, sym_80451261-_SDA_BASE_(r13)
-/* 80297480 002943C0  48 00 00 14 */	b func_80297494
-
-/* 80297484 0010 .text      func_80297484                  func_80297484                  */
-.global func_80297484
-func_80297484:
+/* 8029747C 002943BC  98 0D 8C E1 */	stb r0, data_80451261-_SDA_BASE_(r13)
+/* 80297480 002943C0  48 00 00 14 */	b lbl_80297494
+lbl_80297484:
 /* 80297484 002943C4  88 7B 00 AE */	lbz r3, 0xae(r27)
 /* 80297488 002943C8  30 03 FF FF */	addic r0, r3, -1
 /* 8029748C 002943CC  7C 00 19 10 */	subfe r0, r0, r3
 /* 80297490 002943D0  98 1C 00 04 */	stb r0, 4(r28)
-
-/* 80297494 0018 .text      func_80297494                  func_80297494                  */
-.global func_80297494
-func_80297494:
+lbl_80297494:
 /* 80297494 002943D4  39 61 00 50 */	addi r11, r1, 0x50
 /* 80297498 002943D8  48 0C AD 81 */	bl _restgpr_25
 /* 8029749C 002943DC  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -1540,8 +1311,9 @@ func_80297494:
 /* 802974A4 002943E4  38 21 00 50 */	addi r1, r1, 0x50
 /* 802974A8 002943E8  4E 80 00 20 */	blr 
 
-/* 802974AC 0020 .text      channelProc__13JASAramStreamFv channelProc__13JASAramStreamFv */
+/* 802974AC 01AC .text      channelProc__13JASAramStreamFv channelProc__13JASAramStreamFv */
 .global channelProc__13JASAramStreamFv
+channelProc__13JASAramStreamFv:
 channelProc__13JASAramStreamFv:
 /* 802974AC 002943EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802974B0 002943F0  7C 08 02 A6 */	mflr r0
@@ -1550,137 +1322,95 @@ channelProc__13JASAramStreamFv:
 /* 802974BC 002943FC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802974C0 00294400  7C 7F 1B 78 */	mr r31, r3
 /* 802974C4 00294404  3B C0 00 01 */	li r30, 1
-/* 802974C8 00294408  48 00 00 2C */	b func_802974F4
-
-/* 802974CC 001C .text      func_802974CC                  func_802974CC                  */
-.global func_802974CC
-func_802974CC:
+/* 802974C8 00294408  48 00 00 2C */	b lbl_802974F4
+lbl_802974CC:
 /* 802974CC 0029440C  80 01 00 08 */	lwz r0, 8(r1)
 /* 802974D0 00294410  2C 00 00 05 */	cmpwi r0, 5
-/* 802974D4 00294414  41 82 00 1C */	beq func_802974F0
-/* 802974D8 00294418  40 80 00 1C */	bge func_802974F4
+/* 802974D4 00294414  41 82 00 1C */	beq lbl_802974F0
+/* 802974D8 00294418  40 80 00 1C */	bge lbl_802974F4
 /* 802974DC 0029441C  2C 00 00 04 */	cmpwi r0, 4
-/* 802974E0 00294420  40 80 00 08 */	bge func_802974E8
-/* 802974E4 00294424  48 00 00 10 */	b func_802974F4
-
-/* 802974E8 0008 .text      func_802974E8                  func_802974E8                  */
-.global func_802974E8
-func_802974E8:
+/* 802974E0 00294420  40 80 00 08 */	bge lbl_802974E8
+/* 802974E4 00294424  48 00 00 10 */	b lbl_802974F4
+lbl_802974E8:
 /* 802974E8 00294428  9B DF 00 AC */	stb r30, 0xac(r31)
-/* 802974EC 0029442C  48 00 00 08 */	b func_802974F4
-
-/* 802974F0 0004 .text      func_802974F0                  func_802974F0                  */
-.global func_802974F0
-func_802974F0:
+/* 802974EC 0029442C  48 00 00 08 */	b lbl_802974F4
+lbl_802974F0:
 /* 802974F0 00294430  9B DF 00 AD */	stb r30, 0xad(r31)
-
-/* 802974F4 0030 .text      func_802974F4                  func_802974F4                  */
-.global func_802974F4
-func_802974F4:
+lbl_802974F4:
 /* 802974F4 00294434  38 7F 00 20 */	addi r3, r31, 0x20
 /* 802974F8 00294438  38 81 00 08 */	addi r4, r1, 8
 /* 802974FC 0029443C  38 A0 00 00 */	li r5, 0
 /* 80297500 00294440  48 0A 75 BD */	bl OSReceiveMessage
 /* 80297504 00294444  2C 03 00 00 */	cmpwi r3, 0
-/* 80297508 00294448  40 82 FF C4 */	bne func_802974CC
+/* 80297508 00294448  40 82 FF C4 */	bne lbl_802974CC
 /* 8029750C 0029444C  88 1F 00 AC */	lbz r0, 0xac(r31)
 /* 80297510 00294450  28 00 00 00 */	cmplwi r0, 0
-/* 80297514 00294454  40 82 00 78 */	bne func_8029758C
+/* 80297514 00294454  40 82 00 78 */	bne lbl_8029758C
 /* 80297518 00294458  38 60 00 00 */	li r3, 0
-/* 8029751C 0029445C  48 00 01 24 */	b func_80297640
-/* 80297520 00294460  48 00 00 6C */	b func_8029758C
-
-/* 80297524 0024 .text      func_80297524                  func_80297524                  */
-.global func_80297524
-func_80297524:
+/* 8029751C 0029445C  48 00 01 24 */	b lbl_80297640
+/* 80297520 00294460  48 00 00 6C */	b lbl_8029758C
+lbl_80297524:
 /* 80297524 00294464  80 61 00 08 */	lwz r3, 8(r1)
 /* 80297528 00294468  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8029752C 0029446C  2C 00 00 02 */	cmpwi r0, 2
-/* 80297530 00294470  41 82 00 40 */	beq func_80297570
-/* 80297534 00294474  40 80 00 14 */	bge func_80297548
+/* 80297530 00294470  41 82 00 40 */	beq lbl_80297570
+/* 80297534 00294474  40 80 00 14 */	bge lbl_80297548
 /* 80297538 00294478  2C 00 00 00 */	cmpwi r0, 0
-/* 8029753C 0029447C  41 82 00 18 */	beq func_80297554
-/* 80297540 00294480  40 80 00 20 */	bge func_80297560
-/* 80297544 00294484  48 00 00 48 */	b func_8029758C
-
-/* 80297548 000C .text      func_80297548                  func_80297548                  */
-.global func_80297548
-func_80297548:
+/* 8029753C 0029447C  41 82 00 18 */	beq lbl_80297554
+/* 80297540 00294480  40 80 00 20 */	bge lbl_80297560
+/* 80297544 00294484  48 00 00 48 */	b lbl_8029758C
+lbl_80297548:
 /* 80297548 00294488  2C 00 00 04 */	cmpwi r0, 4
-/* 8029754C 0029448C  40 80 00 40 */	bge func_8029758C
-/* 80297550 00294490  48 00 00 30 */	b func_80297580
-
-/* 80297554 000C .text      func_80297554                  func_80297554                  */
-.global func_80297554
-func_80297554:
+/* 8029754C 0029448C  40 80 00 40 */	bge lbl_8029758C
+/* 80297550 00294490  48 00 00 30 */	b lbl_80297580
+lbl_80297554:
 /* 80297554 00294494  7F E3 FB 78 */	mr r3, r31
 /* 80297558 00294498  48 00 01 01 */	bl channelStart__13JASAramStreamFv
-/* 8029755C 0029449C  48 00 00 30 */	b func_8029758C
-
-/* 80297560 0010 .text      func_80297560                  func_80297560                  */
-.global func_80297560
-func_80297560:
+/* 8029755C 0029449C  48 00 00 30 */	b lbl_8029758C
+lbl_80297560:
 /* 80297560 002944A0  54 64 84 3E */	srwi r4, r3, 0x10
 /* 80297564 002944A4  7F E3 FB 78 */	mr r3, r31
 /* 80297568 002944A8  48 00 03 09 */	bl channelStop__13JASAramStreamFUs
-/* 8029756C 002944AC  48 00 00 20 */	b func_8029758C
-
-/* 80297570 0010 .text      func_80297570                  func_80297570                  */
-.global func_80297570
-func_80297570:
+/* 8029756C 002944AC  48 00 00 20 */	b lbl_8029758C
+lbl_80297570:
 /* 80297570 002944B0  88 1F 00 AE */	lbz r0, 0xae(r31)
 /* 80297574 002944B4  60 00 00 01 */	ori r0, r0, 1
 /* 80297578 002944B8  98 1F 00 AE */	stb r0, 0xae(r31)
-/* 8029757C 002944BC  48 00 00 10 */	b func_8029758C
-
-/* 80297580 000C .text      func_80297580                  func_80297580                  */
-.global func_80297580
-func_80297580:
+/* 8029757C 002944BC  48 00 00 10 */	b lbl_8029758C
+lbl_80297580:
 /* 80297580 002944C0  88 1F 00 AE */	lbz r0, 0xae(r31)
 /* 80297584 002944C4  54 00 06 3C */	rlwinm r0, r0, 0, 0x18, 0x1e
 /* 80297588 002944C8  98 1F 00 AE */	stb r0, 0xae(r31)
-
-/* 8029758C 0030 .text      func_8029758C                  func_8029758C                  */
-.global func_8029758C
-func_8029758C:
+lbl_8029758C:
 /* 8029758C 002944CC  7F E3 FB 78 */	mr r3, r31
 /* 80297590 002944D0  38 81 00 08 */	addi r4, r1, 8
 /* 80297594 002944D4  38 A0 00 00 */	li r5, 0
 /* 80297598 002944D8  48 0A 75 25 */	bl OSReceiveMessage
 /* 8029759C 002944DC  2C 03 00 00 */	cmpwi r3, 0
-/* 802975A0 002944E0  40 82 FF 84 */	bne func_80297524
-/* 802975A4 002944E4  88 0D 8C E1 */	lbz r0, sym_80451261-_SDA_BASE_(r13)
+/* 802975A0 002944E0  40 82 FF 84 */	bne lbl_80297524
+/* 802975A4 002944E4  88 0D 8C E1 */	lbz r0, data_80451261-_SDA_BASE_(r13)
 /* 802975A8 002944E8  28 00 00 00 */	cmplwi r0, 0
-/* 802975AC 002944EC  41 82 00 10 */	beq func_802975BC
+/* 802975AC 002944EC  41 82 00 10 */	beq lbl_802975BC
 /* 802975B0 002944F0  88 1F 00 AE */	lbz r0, 0xae(r31)
 /* 802975B4 002944F4  60 00 00 08 */	ori r0, r0, 8
 /* 802975B8 002944F8  98 1F 00 AE */	stb r0, 0xae(r31)
-
-/* 802975BC 0018 .text      func_802975BC                  func_802975BC                  */
-.global func_802975BC
-func_802975BC:
-/* 802975BC 002944FC  88 0D 8C E0 */	lbz r0, sym_80451260-_SDA_BASE_(r13)
+lbl_802975BC:
+/* 802975BC 002944FC  88 0D 8C E0 */	lbz r0, data_80451260-_SDA_BASE_(r13)
 /* 802975C0 00294500  28 00 00 00 */	cmplwi r0, 0
-/* 802975C4 00294504  41 82 00 10 */	beq func_802975D4
+/* 802975C4 00294504  41 82 00 10 */	beq lbl_802975D4
 /* 802975C8 00294508  88 1F 00 AE */	lbz r0, 0xae(r31)
 /* 802975CC 0029450C  60 00 00 02 */	ori r0, r0, 2
 /* 802975D0 00294510  98 1F 00 AE */	stb r0, 0xae(r31)
-
-/* 802975D4 0010 .text      func_802975D4                  func_802975D4                  */
-.global func_802975D4
-func_802975D4:
+lbl_802975D4:
 /* 802975D4 00294514  38 A0 00 00 */	li r5, 0
 /* 802975D8 00294518  38 60 00 00 */	li r3, 0
 /* 802975DC 0029451C  C0 02 BC 10 */	lfs f0, LIT_390-_SDA2_BASE_(r2)
-/* 802975E0 00294520  48 00 00 50 */	b func_80297630
-
-/* 802975E4 0044 .text      func_802975E4                  func_802975E4                  */
-.global func_802975E4
-func_802975E4:
+/* 802975E0 00294520  48 00 00 50 */	b lbl_80297630
+lbl_802975E4:
 /* 802975E4 00294524  7C 9F 1A 14 */	add r4, r31, r3
 /* 802975E8 00294528  80 C4 00 90 */	lwz r6, 0x90(r4)
 /* 802975EC 0029452C  28 06 00 00 */	cmplwi r6, 0
-/* 802975F0 00294530  41 82 00 38 */	beq func_80297628
+/* 802975F0 00294530  41 82 00 38 */	beq lbl_80297628
 /* 802975F4 00294534  C0 7F 01 78 */	lfs f3, 0x178(r31)
 /* 802975F8 00294538  C0 84 01 94 */	lfs f4, 0x194(r4)
 /* 802975FC 0029453C  C0 A4 01 AC */	lfs f5, 0x1ac(r4)
@@ -1694,24 +1424,15 @@ func_802975E4:
 /* 8029761C 0029455C  D0 86 00 A8 */	stfs f4, 0xa8(r6)
 /* 80297620 00294560  D0 A6 00 AC */	stfs f5, 0xac(r6)
 /* 80297624 00294564  D0 C6 00 B0 */	stfs f6, 0xb0(r6)
-
-/* 80297628 0008 .text      func_80297628                  func_80297628                  */
-.global func_80297628
-func_80297628:
+lbl_80297628:
 /* 80297628 00294568  38 A5 00 01 */	addi r5, r5, 1
 /* 8029762C 0029456C  38 63 00 04 */	addi r3, r3, 4
-
-/* 80297630 0010 .text      func_80297630                  func_80297630                  */
-.global func_80297630
-func_80297630:
+lbl_80297630:
 /* 80297630 00294570  A0 1F 01 5A */	lhz r0, 0x15a(r31)
 /* 80297634 00294574  7C 05 00 00 */	cmpw r5, r0
-/* 80297638 00294578  41 80 FF AC */	blt func_802975E4
+/* 80297638 00294578  41 80 FF AC */	blt lbl_802975E4
 /* 8029763C 0029457C  38 60 00 00 */	li r3, 0
-
-/* 80297640 0018 .text      func_80297640                  func_80297640                  */
-.global func_80297640
-func_80297640:
+lbl_80297640:
 /* 80297640 00294580  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80297644 00294584  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80297648 00294588  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1719,8 +1440,9 @@ func_80297640:
 /* 80297650 00294590  38 21 00 20 */	addi r1, r1, 0x20
 /* 80297654 00294594  4E 80 00 20 */	blr 
 
-/* 80297658 0044 .text      channelStart__13JASAramStreamFv channelStart__13JASAramStreamFv */
+/* 80297658 0218 .text      channelStart__13JASAramStreamFv channelStart__13JASAramStreamFv */
 .global channelStart__13JASAramStreamFv
+channelStart__13JASAramStreamFv:
 channelStart__13JASAramStreamFv:
 /* 80297658 00294598  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8029765C 0029459C  7C 08 02 A6 */	mflr r0
@@ -1734,63 +1456,48 @@ channelStart__13JASAramStreamFv:
 /* 8029767C 002945BC  7C 7D 1B 78 */	mr r29, r3
 /* 80297680 002945C0  A0 03 01 58 */	lhz r0, 0x158(r3)
 /* 80297684 002945C4  2C 00 00 01 */	cmpwi r0, 1
-/* 80297688 002945C8  41 82 00 1C */	beq func_802976A4
-/* 8029768C 002945CC  40 80 00 1C */	bge func_802976A8
+/* 80297688 002945C8  41 82 00 1C */	beq lbl_802976A4
+/* 8029768C 002945CC  40 80 00 1C */	bge lbl_802976A8
 /* 80297690 002945D0  2C 00 00 00 */	cmpwi r0, 0
-/* 80297694 002945D4  40 80 00 08 */	bge func_8029769C
-/* 80297698 002945D8  48 00 00 10 */	b func_802976A8
-
-/* 8029769C 0008 .text      func_8029769C                  func_8029769C                  */
-.global func_8029769C
-func_8029769C:
+/* 80297694 002945D4  40 80 00 08 */	bge lbl_8029769C
+/* 80297698 002945D8  48 00 00 10 */	b lbl_802976A8
+lbl_8029769C:
 /* 8029769C 002945DC  3B E0 00 00 */	li r31, 0
-/* 802976A0 002945E0  48 00 00 08 */	b func_802976A8
-
-/* 802976A4 0004 .text      func_802976A4                  func_802976A4                  */
-.global func_802976A4
-func_802976A4:
+/* 802976A0 002945E0  48 00 00 08 */	b lbl_802976A8
+lbl_802976A4:
 /* 802976A4 002945E4  3B E0 00 03 */	li r31, 3
-
-/* 802976A8 0024 .text      func_802976A8                  func_802976A8                  */
-.global func_802976A8
-func_802976A8:
+lbl_802976A8:
 /* 802976A8 002945E8  3B C0 00 00 */	li r30, 0
 /* 802976AC 002945EC  3B 80 00 00 */	li r28, 0
-/* 802976B0 002945F0  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 802976B4 002945F4  3B 23 1B 34 */	addi r25, r3, sym_80431B34@l
+/* 802976B0 002945F0  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 802976B4 002945F4  3B 23 1B 34 */	addi r25, r3, data_80431B34@l
 /* 802976B8 002945F8  CB E2 BC 20 */	lfd f31, JASAramStream__LIT_533-_SDA2_BASE_(r2)
 /* 802976BC 002945FC  3F 40 43 30 */	lis r26, 0x4330
 /* 802976C0 00294600  3C 60 80 3A */	lis r3, OSC_ENV@ha
 /* 802976C4 00294604  3B 63 B1 74 */	addi r27, r3, OSC_ENV@l
-/* 802976C8 00294608  48 00 01 6C */	b func_80297834
-
-/* 802976CC 0050 .text      func_802976CC                  func_802976CC                  */
-.global func_802976CC
-func_802976CC:
+/* 802976C8 00294608  48 00 01 6C */	b lbl_80297834
+lbl_802976CC:
 /* 802976CC 0029460C  7F A3 EB 78 */	mr r3, r29
 /* 802976D0 00294610  4B FF F0 41 */	bl getBlockSamples__13JASAramStreamCFv
 /* 802976D4 00294614  80 1D 01 5C */	lwz r0, 0x15c(r29)
 /* 802976D8 00294618  7E E0 19 D6 */	mullw r23, r0, r3
-/* 802976DC 0029461C  3B 02 BC 28 */	addi r24, r2, sym_80455628-_SDA2_BASE_
-/* 802976E0 00294620  88 0D 8C E2 */	lbz r0, sym_80451262-_SDA_BASE_(r13)
+/* 802976DC 0029461C  3B 02 BC 28 */	addi r24, r2, data_80455628-_SDA2_BASE_
+/* 802976E0 00294620  88 0D 8C E2 */	lbz r0, data_80451262-_SDA_BASE_(r13)
 /* 802976E4 00294624  7C 00 07 75 */	extsb. r0, r0
-/* 802976E8 00294628  40 82 00 34 */	bne func_8029771C
-/* 802976EC 0029462C  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 802976F0 00294630  38 63 1B 34 */	addi r3, r3, sym_80431B34@l
+/* 802976E8 00294628  40 82 00 34 */	bne lbl_8029771C
+/* 802976EC 0029462C  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 802976F0 00294630  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 802976F4 00294634  4B FF 91 55 */	bl __ct__17JASGenericMemPoolFv
-/* 802976F8 00294638  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 802976FC 0029463C  38 63 1B 34 */	addi r3, r3, sym_80431B34@l
+/* 802976F8 00294638  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 802976FC 0029463C  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 80297700 00294640  3C 80 80 29 */	lis r4, __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv@ha
 /* 80297704 00294644  38 84 78 DC */	addi r4, r4, __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv@l
 /* 80297708 00294648  3C A0 80 43 */	lis r5, JASAramStream__LIT_792@ha
 /* 8029770C 0029464C  38 A5 1B 28 */	addi r5, r5, JASAramStream__LIT_792@l
 /* 80297710 00294650  48 0C A5 15 */	bl __register_global_object
 /* 80297714 00294654  38 00 00 01 */	li r0, 1
-/* 80297718 00294658  98 0D 8C E2 */	stb r0, sym_80451262-_SDA_BASE_(r13)
-
-/* 8029771C 0040 .text      func_8029771C                  func_8029771C                  */
-.global func_8029771C
-func_8029771C:
+/* 80297718 00294658  98 0D 8C E2 */	stb r0, data_80451262-_SDA_BASE_(r13)
+lbl_8029771C:
 /* 8029771C 0029465C  48 0A 5F D9 */	bl OSDisableInterrupts
 /* 80297720 00294660  90 61 00 08 */	stw r3, 8(r1)
 /* 80297724 00294664  7F 23 CB 78 */	mr r3, r25
@@ -1800,25 +1507,19 @@ func_8029771C:
 /* 80297734 00294674  80 61 00 08 */	lwz r3, 8(r1)
 /* 80297738 00294678  48 0A 5F E5 */	bl OSRestoreInterrupts
 /* 8029773C 0029467C  28 15 00 00 */	cmplwi r21, 0
-/* 80297740 00294680  41 82 00 1C */	beq func_8029775C
+/* 80297740 00294680  41 82 00 1C */	beq lbl_8029775C
 /* 80297744 00294684  7E A3 AB 78 */	mr r3, r21
 /* 80297748 00294688  3C 80 80 29 */	lis r4, channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv@ha
 /* 8029774C 0029468C  38 84 6D F0 */	addi r4, r4, channelCallback__13JASAramStreamFUlP10JASChannelPQ26JASDsp8TChannelPv@l
 /* 80297750 00294690  7F A5 EB 78 */	mr r5, r29
 /* 80297754 00294694  48 00 30 AD */	bl __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
 /* 80297758 00294698  7C 75 1B 78 */	mr r21, r3
-
-/* 8029775C 0010 .text      func_8029775C                  func_8029775C                  */
-.global func_8029775C
-func_8029775C:
+lbl_8029775C:
 /* 8029775C 0029469C  38 00 7F 7F */	li r0, 0x7f7f
 /* 80297760 002946A0  B0 15 00 98 */	sth r0, 0x98(r21)
 /* 80297764 002946A4  3A 60 00 00 */	li r19, 0
 /* 80297768 002946A8  3A 80 00 00 */	li r20, 0
-
-/* 8029776C 00C8 .text      func_8029776C                  func_8029776C                  */
-.global func_8029776C
-func_8029776C:
+lbl_8029776C:
 /* 8029776C 002946AC  7E A3 AB 78 */	mr r3, r21
 /* 80297770 002946B0  7E 64 9B 78 */	mr r4, r19
 /* 80297774 002946B4  38 14 01 DC */	addi r0, r20, 0x1dc
@@ -1827,7 +1528,7 @@ func_8029776C:
 /* 80297780 002946C0  3A 73 00 01 */	addi r19, r19, 1
 /* 80297784 002946C4  28 13 00 06 */	cmplwi r19, 6
 /* 80297788 002946C8  3A 94 00 02 */	addi r20, r20, 2
-/* 8029778C 002946CC  41 80 FF E0 */	blt func_8029776C
+/* 8029778C 002946CC  41 80 FF E0 */	blt lbl_8029776C
 /* 80297790 002946D0  48 00 52 59 */	bl getDacRate__9JASDriverFv
 /* 80297794 002946D4  80 1D 01 64 */	lwz r0, 0x164(r29)
 /* 80297798 002946D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1869,13 +1570,10 @@ func_8029776C:
 /* 80297828 00294768  7E BD 01 2E */	stwx r21, r29, r0
 /* 8029782C 0029476C  3B DE 00 01 */	addi r30, r30, 1
 /* 80297830 00294770  3B 9C 00 04 */	addi r28, r28, 4
-
-/* 80297834 003C .text      func_80297834                  func_80297834                  */
-.global func_80297834
-func_80297834:
+lbl_80297834:
 /* 80297834 00294774  A0 1D 01 5A */	lhz r0, 0x15a(r29)
 /* 80297838 00294778  7C 1E 00 00 */	cmpw r30, r0
-/* 8029783C 0029477C  41 80 FE 90 */	blt func_802976CC
+/* 8029783C 0029477C  41 80 FE 90 */	blt lbl_802976CC
 /* 80297840 00294780  38 00 00 00 */	li r0, 0
 /* 80297844 00294784  90 1D 00 A8 */	stw r0, 0xa8(r29)
 /* 80297848 00294788  E3 E1 00 68 */	psq_l f31, 104(r1), 0, qr0
@@ -1889,8 +1587,9 @@ func_80297834:
 /* 80297868 002947A8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8029786C 002947AC  4E 80 00 20 */	blr 
 
-/* 80297870 0028 .text      channelStop__13JASAramStreamFUs channelStop__13JASAramStreamFUs */
+/* 80297870 006C .text      channelStop__13JASAramStreamFUs channelStop__13JASAramStreamFUs */
 .global channelStop__13JASAramStreamFUs
+channelStop__13JASAramStreamFUs:
 channelStop__13JASAramStreamFUs:
 /* 80297870 002947B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80297874 002947B4  7C 08 02 A6 */	mflr r0
@@ -1901,30 +1600,21 @@ channelStop__13JASAramStreamFUs:
 /* 80297888 002947C8  7C 9D 23 78 */	mr r29, r4
 /* 8029788C 002947CC  3B C0 00 00 */	li r30, 0
 /* 80297890 002947D0  3B E0 00 00 */	li r31, 0
-/* 80297894 002947D4  48 00 00 24 */	b func_802978B8
-
-/* 80297898 0018 .text      func_80297898                  func_80297898                  */
-.global func_80297898
-func_80297898:
+/* 80297894 002947D4  48 00 00 24 */	b lbl_802978B8
+lbl_80297898:
 /* 80297898 002947D8  38 1F 00 90 */	addi r0, r31, 0x90
 /* 8029789C 002947DC  7C 7C 00 2E */	lwzx r3, r28, r0
 /* 802978A0 002947E0  28 03 00 00 */	cmplwi r3, 0
-/* 802978A4 002947E4  41 82 00 0C */	beq func_802978B0
+/* 802978A4 002947E4  41 82 00 0C */	beq lbl_802978B0
 /* 802978A8 002947E8  7F A4 EB 78 */	mr r4, r29
 /* 802978AC 002947EC  48 00 32 25 */	bl release__10JASChannelFUs
-
-/* 802978B0 0008 .text      func_802978B0                  func_802978B0                  */
-.global func_802978B0
-func_802978B0:
+lbl_802978B0:
 /* 802978B0 002947F0  3B DE 00 01 */	addi r30, r30, 1
 /* 802978B4 002947F4  3B FF 00 04 */	addi r31, r31, 4
-
-/* 802978B8 0024 .text      func_802978B8                  func_802978B8                  */
-.global func_802978B8
-func_802978B8:
+lbl_802978B8:
 /* 802978B8 002947F8  A0 1C 01 5A */	lhz r0, 0x15a(r28)
 /* 802978BC 002947FC  7C 1E 00 00 */	cmpw r30, r0
-/* 802978C0 00294800  41 80 FF D8 */	blt func_80297898
+/* 802978C0 00294800  41 80 FF D8 */	blt lbl_80297898
 /* 802978C4 00294804  39 61 00 20 */	addi r11, r1, 0x20
 /* 802978C8 00294808  48 0C A9 5D */	bl _restgpr_28
 /* 802978CC 0029480C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1932,8 +1622,11 @@ func_802978B8:
 /* 802978D4 00294814  38 21 00 20 */	addi r1, r1, 0x20
 /* 802978D8 00294818  4E 80 00 20 */	blr 
 
-/* 802978DC 0038 .text      "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv" __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv */
+/* 802978DC 0054 .text      __dt__38JASMemPool_MultiThreaded<10JASChannel>Fv "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv" */
+.global "__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv"
+"__dt__38JASMemPool_MultiThreaded<10JASChannel>Fv":
 .global __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv
+__dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv:
 __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv:
 /* 802978DC 0029481C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802978E0 00294820  7C 08 02 A6 */	mflr r0
@@ -1942,17 +1635,14 @@ __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv:
 /* 802978EC 0029482C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802978F0 00294830  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802978F4 00294834  7C 9F 23 78 */	mr r31, r4
-/* 802978F8 00294838  41 82 00 1C */	beq func_80297914
+/* 802978F8 00294838  41 82 00 1C */	beq lbl_80297914
 /* 802978FC 0029483C  38 80 00 00 */	li r4, 0
 /* 80297900 00294840  4B FF 8F 61 */	bl __dt__17JASGenericMemPoolFv
 /* 80297904 00294844  7F E0 07 35 */	extsh. r0, r31
-/* 80297908 00294848  40 81 00 0C */	ble func_80297914
+/* 80297908 00294848  40 81 00 0C */	ble lbl_80297914
 /* 8029790C 0029484C  7F C3 F3 78 */	mr r3, r30
 /* 80297910 00294850  48 03 74 2D */	bl __dl__FPv
-
-/* 80297914 001C .text      func_80297914                  func_80297914                  */
-.global func_80297914
-func_80297914:
+lbl_80297914:
 /* 80297914 00294854  7F C3 F3 78 */	mr r3, r30
 /* 80297918 00294858  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029791C 0029485C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1976,35 +1666,35 @@ OSC_RELEASE_TABLE:
 OSC_ENV:
 .byte 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x39, 0xb1, 0x68 /* baserom.dol+0x398174 */
 .byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398184 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39818c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803C7670 0034 .data      LIT_613                        @613                           */
+/* 803C7670 0034 .data      @613                           LIT_613                        */
 .global LIT_613
 LIT_613:
 .byte 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xc8, 0x80, 0x29, 0x6d, 0xdc, 0x80, 0x29, 0x6d, 0xd4 /* baserom.dol+0x3c4670 */
 .byte 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4 /* baserom.dol+0x3c4680 */
 .byte 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4, 0x80, 0x29, 0x6d, 0xd4 /* baserom.dol+0x3c4690 */
 .byte 0x80, 0x29, 0x6d, 0xd4 /* baserom.dol+0x3c46a0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c46a4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80431B28 000C .bss       JASAramStream__LIT_792         @792                           */
+/* 80431B28 000C .bss       @792                           JASAramStream__LIT_792         */
 .global JASAramStream__LIT_792
 JASAramStream__LIT_792:
 .skip 0xc
 
-/* 80431B34 0010 .bss       sym_80431B34                   memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv */
-.global sym_80431B34
-sym_80431B34:
+/* 80431B34 0010 .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv data_80431B34                  */
+.global data_80431B34
+data_80431B34:
 .skip 0x10
 .skip 0x4 /* padding */
 
@@ -2033,19 +1723,19 @@ sBlockSize__13JASAramStream:
 sChannelMax__13JASAramStream:
 .skip 0x4
 
-/* 80451260 0001 .sbss      sym_80451260                   sym_80451260                   */
-.global sym_80451260
-sym_80451260:
+/* 80451260 0001 .sbss      data_80451260                  data_80451260                  */
+.global data_80451260
+data_80451260:
 .skip 0x1
 
-/* 80451261 0001 .sbss      sym_80451261                   sym_80451261                   */
-.global sym_80451261
-sym_80451261:
+/* 80451261 0001 .sbss      data_80451261                  data_80451261                  */
+.global data_80451261
+data_80451261:
 .skip 0x1
 
-/* 80451262 0006 .sbss      sym_80451262                   sym_80451262                   */
-.global sym_80451262
-sym_80451262:
+/* 80451262 0006 .sbss      data_80451262                  data_80451262                  */
+.global data_80451262
+data_80451262:
 .skip 0x6
 
 
@@ -2053,34 +1743,34 @@ sym_80451262:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455610 0004 .sdata2    LIT_390                        @390                           */
+/* 80455610 0004 .sdata2    @390                           LIT_390                        */
 .global LIT_390
 LIT_390:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4470 */
 
-/* 80455614 0004 .sdata2    LIT_391                        @391                           */
+/* 80455614 0004 .sdata2    @391                           LIT_391                        */
 .global LIT_391
 LIT_391:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4474 */
 
-/* 80455618 0004 .sdata2    LIT_392                        @392                           */
+/* 80455618 0004 .sdata2    @392                           LIT_392                        */
 .global LIT_392
 LIT_392:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4478 */
 
-/* 8045561C 0004 .sdata2    JASAramStream__LIT_531         @531                           */
+/* 8045561C 0004 .sdata2    @531                           JASAramStream__LIT_531         */
 .global JASAramStream__LIT_531
 JASAramStream__LIT_531:
 .byte 0x42, 0xfe, 0x00, 0x00 /* baserom.dol+0x3d447c */
 
-/* 80455620 0008 .sdata2    JASAramStream__LIT_533         @533                           */
+/* 80455620 0008 .sdata2    @533                           JASAramStream__LIT_533         */
 .global JASAramStream__LIT_533
 JASAramStream__LIT_533:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4480 */
 
-/* 80455628 0004 .sdata2    sym_80455628                   one$776                        */
-.global sym_80455628
-sym_80455628:
+/* 80455628 0004 .sdata2    one$776                        data_80455628                  */
+.global data_80455628
+data_80455628:
 .byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d4488 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d448c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

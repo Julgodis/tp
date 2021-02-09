@@ -21,7 +21,7 @@ TARGET := dolzel2
 
 BUILD_DIR := build/$(TARGET)
 
-SRC_DIRS := $(shell find src/ libs/ -type f -name '*.cpp')
+SRC_DIRS := $(shell find src/ libs/ cpp/ -type f -name '*.cpp')
 ASM_DIRS := $(shell find asm/ -type f -name '*.s')
 
 # Inputs
@@ -74,8 +74,8 @@ INCLUDES := -i include -i include/dolphin/ -i src
 ASFLAGS := -mgekko -I include
 
 # Linker flags
-LDFLAGS     := -map $(MAP) -fp hard -nodefaults 
-LIB_LDFLAGS := -library -fp hard -nodefaults 
+LDFLAGS     := -map $(MAP) -fp hard -nodefaults -linkmode moreram
+LIB_LDFLAGS := -library -fp hard -nodefaults -proc gekko
 
 # Compiler flags
 CFLAGS  += -Cpp_exceptions off -proc gekko -fp hard -O3 -nodefaults -msgstyle gcc -str pool,readonly,reuse -RTTI off -maxerrors 5 -enum int  $(INCLUDES)
@@ -127,7 +127,7 @@ docs:
 # elf
 $(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo $(O_FILES) > build/o_files
-	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+#$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 #	$(OBJCOPY) $@ $@
 
@@ -139,7 +139,7 @@ $(BUILD_DIR)/%.o: %.c
 
 $(BUILD_DIR)/%.o: %.cpp
 	$(CC) $(CFLAGS) -c -o $@ $<
-	$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
+#$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
 
 ### Debug Print ###
 

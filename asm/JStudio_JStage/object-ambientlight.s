@@ -7,6 +7,7 @@
 /* 8028B610 009C .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */
 .global __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight
 __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight:
+__ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight:
 /* 8028B610 00288550  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B614 00288554  7C 08 02 A6 */	mflr r0
 /* 8028B618 00288558  90 01 00 24 */	stw r0, 0x24(r1)
@@ -47,8 +48,9 @@ __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13T
 /* 8028B6A4 002885E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028B6A8 002885E8  4E 80 00 20 */	blr 
 
-/* 8028B6AC 0058 .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+/* 8028B6AC 0074 .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 .global __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv
+__dt__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B6AC 002885EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B6B0 002885F0  7C 08 02 A6 */	mflr r0
@@ -57,7 +59,7 @@ __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B6BC 002885FC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8028B6C0 00288600  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028B6C4 00288604  7C 9F 23 78 */	mr r31, r4
-/* 8028B6C8 00288608  41 82 00 3C */	beq func_8028B704
+/* 8028B6C8 00288608  41 82 00 3C */	beq lbl_8028B704
 /* 8028B6CC 0028860C  3C 80 80 3C */	lis r4, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@ha
 /* 8028B6D0 00288610  38 04 58 88 */	addi r0, r4, __vt__Q214JStudio_JStage21TAdaptor_ambientLight@l
 /* 8028B6D4 00288614  90 1E 00 00 */	stw r0, 0(r30)
@@ -69,13 +71,10 @@ __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B6EC 0028862C  38 80 00 00 */	li r4, 0
 /* 8028B6F0 00288630  4B FF B5 AD */	bl __dt__Q27JStudio21TAdaptor_ambientLightFv
 /* 8028B6F4 00288634  7F E0 07 35 */	extsh. r0, r31
-/* 8028B6F8 00288638  40 81 00 0C */	ble func_8028B704
+/* 8028B6F8 00288638  40 81 00 0C */	ble lbl_8028B704
 /* 8028B6FC 0028863C  7F C3 F3 78 */	mr r3, r30
 /* 8028B700 00288640  48 04 36 3D */	bl __dl__FPv
-
-/* 8028B704 001C .text      func_8028B704                  func_8028B704                  */
-.global func_8028B704
-func_8028B704:
+lbl_8028B704:
 /* 8028B704 00288644  7F C3 F3 78 */	mr r3, r30
 /* 8028B708 00288648  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8028B70C 0028864C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -87,10 +86,12 @@ func_8028B704:
 /* 8028B720 0004 .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 .global adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv
 adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv:
+adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B720 00288660  4E 80 00 20 */	blr 
 
 /* 8028B724 008C .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 .global adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv
+adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B724 00288664  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B728 00288668  7C 08 02 A6 */	mflr r0
@@ -131,6 +132,7 @@ adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B7B0 0054 .text      adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv */
 .global adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv
 adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv:
+adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 /* 8028B7B0 002886F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B7B4 002886F4  7C 08 02 A6 */	mflr r0
 /* 8028B7B8 002886F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,6 +157,7 @@ adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv:
 
 /* 8028B804 0078 .text      adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl */
 .global adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl
+adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl:
 adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl:
 /* 8028B804 00288744  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028B808 00288748  7C 08 02 A6 */	mflr r0
@@ -190,6 +193,7 @@ adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl:
 /* 8028B87C 0024 .text      adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl */
 .global adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl
 adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl:
+adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl:
 /* 8028B87C 002887BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028B880 002887C0  7C 08 02 A6 */	mflr r0
 /* 8028B884 002887C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -208,6 +212,12 @@ adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl:
 /* 803C5888 0020 .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight __vt__Q214JStudio_JStage21TAdaptor_ambientLight */
 .global __vt__Q214JStudio_JStage21TAdaptor_ambientLight
 __vt__Q214JStudio_JStage21TAdaptor_ambientLight:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0xb6, 0xac, 0x80, 0x28, 0xb7, 0x20 /* baserom.dol+0x3c2888 */
-.byte 0x80, 0x28, 0xb7, 0x24, 0x80, 0x28, 0xb7, 0xb0, 0x80, 0x28, 0xb8, 0x04, 0x80, 0x28, 0xb8, 0x7c /* baserom.dol+0x3c2898 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv
+.4byte adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv
+.4byte adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv
+.4byte adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv
+.4byte adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl
+.4byte adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl
 

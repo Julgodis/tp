@@ -7,6 +7,7 @@
 /* 8026F648 001C .text      SetC__8cM3dGSphFRC4cXyz        SetC__8cM3dGSphFRC4cXyz        */
 .global SetC__8cM3dGSphFRC4cXyz
 SetC__8cM3dGSphFRC4cXyz:
+SetC__8cM3dGSphFRC4cXyz:
 /* 8026F648 0026C588  C0 04 00 00 */	lfs f0, 0(r4)
 /* 8026F64C 0026C58C  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8026F650 0026C590  C0 04 00 04 */	lfs f0, 4(r4)
@@ -17,6 +18,7 @@ SetC__8cM3dGSphFRC4cXyz:
 
 /* 8026F664 0044 .text      Set__8cM3dGSphFRC4cXyzf        Set__8cM3dGSphFRC4cXyzf        */
 .global Set__8cM3dGSphFRC4cXyzf
+Set__8cM3dGSphFRC4cXyzf:
 Set__8cM3dGSphFRC4cXyzf:
 /* 8026F664 0026C5A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026F668 0026C5A8  7C 08 02 A6 */	mflr r0
@@ -38,6 +40,7 @@ Set__8cM3dGSphFRC4cXyzf:
 
 /* 8026F6A8 0060 .text      Set__8cM3dGSphFRC9cM3dGSphS    Set__8cM3dGSphFRC9cM3dGSphS    */
 .global Set__8cM3dGSphFRC9cM3dGSphS
+Set__8cM3dGSphFRC9cM3dGSphS:
 Set__8cM3dGSphFRC9cM3dGSphS:
 /* 8026F6A8 0026C5E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026F6AC 0026C5EC  7C 08 02 A6 */	mflr r0
@@ -67,11 +70,13 @@ Set__8cM3dGSphFRC9cM3dGSphS:
 /* 8026F708 0008 .text      SetR__8cM3dGSphFf              SetR__8cM3dGSphFf              */
 .global SetR__8cM3dGSphFf
 SetR__8cM3dGSphFf:
+SetR__8cM3dGSphFf:
 /* 8026F708 0026C648  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8026F70C 0026C64C  4E 80 00 20 */	blr 
 
 /* 8026F710 002C .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz cross__8cM3dGSphCFPC8cM3dGSphP4cXyz */
 .global cross__8cM3dGSphCFPC8cM3dGSphP4cXyz
+cross__8cM3dGSphCFPC8cM3dGSphP4cXyz:
 cross__8cM3dGSphCFPC8cM3dGSphP4cXyz:
 /* 8026F710 0026C650  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F714 0026C654  7C 08 02 A6 */	mflr r0
@@ -88,6 +93,7 @@ cross__8cM3dGSphCFPC8cM3dGSphP4cXyz:
 /* 8026F73C 0030 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz cross__8cM3dGSphCFPC8cM3dGCylP4cXyz */
 .global cross__8cM3dGSphCFPC8cM3dGCylP4cXyz
 cross__8cM3dGSphCFPC8cM3dGCylP4cXyz:
+cross__8cM3dGSphCFPC8cM3dGCylP4cXyz:
 /* 8026F73C 0026C67C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F740 0026C680  7C 08 02 A6 */	mflr r0
 /* 8026F744 0026C684  90 01 00 14 */	stw r0, 0x14(r1)
@@ -103,6 +109,7 @@ cross__8cM3dGSphCFPC8cM3dGCylP4cXyz:
 
 /* 8026F76C 0044 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz */
 .global GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz
+GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz:
 GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz:
 /* 8026F76C 0026C6AC  C0 83 00 00 */	lfs f4, 0(r3)
 /* 8026F770 0026C6B0  C0 63 00 0C */	lfs f3, 0xc(r3)

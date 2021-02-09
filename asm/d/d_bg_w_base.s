@@ -7,6 +7,7 @@
 /* 8007E5A8 0050 .text      __ct__9dBgW_BaseFv             __ct__9dBgW_BaseFv             */
 .global __ct__9dBgW_BaseFv
 __ct__9dBgW_BaseFv:
+__ct__9dBgW_BaseFv:
 /* 8007E5A8 0007B4E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8007E5AC 0007B4EC  7C 08 02 A6 */	mflr r0
 /* 8007E5B0 0007B4F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -28,25 +29,23 @@ __ct__9dBgW_BaseFv:
 /* 8007E5F0 0007B530  38 21 00 10 */	addi r1, r1, 0x10
 /* 8007E5F4 0007B534  4E 80 00 20 */	blr 
 
-/* 8007E5F8 0030 .text      __dt__9cBgW_BgIdFv             __dt__9cBgW_BgIdFv             */
+/* 8007E5F8 0048 .text      __dt__9cBgW_BgIdFv             __dt__9cBgW_BgIdFv             */
 .global __dt__9cBgW_BgIdFv
+__dt__9cBgW_BgIdFv:
 __dt__9cBgW_BgIdFv:
 /* 8007E5F8 0007B538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8007E5FC 0007B53C  7C 08 02 A6 */	mflr r0
 /* 8007E600 0007B540  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8007E604 0007B544  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8007E608 0007B548  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8007E60C 0007B54C  41 82 00 1C */	beq func_8007E628
+/* 8007E60C 0007B54C  41 82 00 1C */	beq lbl_8007E628
 /* 8007E610 0007B550  3C A0 80 3B */	lis r5, __vt__9cBgW_BgId@ha
 /* 8007E614 0007B554  38 05 BD B8 */	addi r0, r5, __vt__9cBgW_BgId@l
 /* 8007E618 0007B558  90 1F 00 04 */	stw r0, 4(r31)
 /* 8007E61C 0007B55C  7C 80 07 35 */	extsh. r0, r4
-/* 8007E620 0007B560  40 81 00 08 */	ble func_8007E628
+/* 8007E620 0007B560  40 81 00 08 */	ble lbl_8007E628
 /* 8007E624 0007B564  48 25 07 19 */	bl __dl__FPv
-
-/* 8007E628 0018 .text      func_8007E628                  func_8007E628                  */
-.global func_8007E628
-func_8007E628:
+lbl_8007E628:
 /* 8007E628 0007B568  7F E3 FB 78 */	mr r3, r31
 /* 8007E62C 0007B56C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8007E630 0007B570  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -54,34 +53,29 @@ func_8007E628:
 /* 8007E638 0007B578  38 21 00 10 */	addi r1, r1, 0x10
 /* 8007E63C 0007B57C  4E 80 00 20 */	blr 
 
-/* 8007E640 0034 .text      __dt__9dBgW_BaseFv             __dt__9dBgW_BaseFv             */
+/* 8007E640 005C .text      __dt__9dBgW_BaseFv             __dt__9dBgW_BaseFv             */
 .global __dt__9dBgW_BaseFv
+__dt__9dBgW_BaseFv:
 __dt__9dBgW_BaseFv:
 /* 8007E640 0007B580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8007E644 0007B584  7C 08 02 A6 */	mflr r0
 /* 8007E648 0007B588  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8007E64C 0007B58C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8007E650 0007B590  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8007E654 0007B594  41 82 00 30 */	beq func_8007E684
+/* 8007E654 0007B594  41 82 00 30 */	beq lbl_8007E684
 /* 8007E658 0007B598  3C 60 80 3B */	lis r3, __vt__9dBgW_Base@ha
 /* 8007E65C 0007B59C  38 03 BC C8 */	addi r0, r3, __vt__9dBgW_Base@l
 /* 8007E660 0007B5A0  90 1F 00 04 */	stw r0, 4(r31)
-/* 8007E664 0007B5A4  41 82 00 10 */	beq func_8007E674
+/* 8007E664 0007B5A4  41 82 00 10 */	beq lbl_8007E674
 /* 8007E668 0007B5A8  3C 60 80 3B */	lis r3, __vt__9cBgW_BgId@ha
 /* 8007E66C 0007B5AC  38 03 BD B8 */	addi r0, r3, __vt__9cBgW_BgId@l
 /* 8007E670 0007B5B0  90 1F 00 04 */	stw r0, 4(r31)
-
-/* 8007E674 0010 .text      func_8007E674                  func_8007E674                  */
-.global func_8007E674
-func_8007E674:
+lbl_8007E674:
 /* 8007E674 0007B5B4  7C 80 07 35 */	extsh. r0, r4
-/* 8007E678 0007B5B8  40 81 00 0C */	ble func_8007E684
+/* 8007E678 0007B5B8  40 81 00 0C */	ble lbl_8007E684
 /* 8007E67C 0007B5BC  7F E3 FB 78 */	mr r3, r31
 /* 8007E680 0007B5C0  48 25 06 BD */	bl __dl__FPv
-
-/* 8007E684 0018 .text      func_8007E684                  func_8007E684                  */
-.global func_8007E684
-func_8007E684:
+lbl_8007E684:
 /* 8007E684 0007B5C4  7F E3 FB 78 */	mr r3, r31
 /* 8007E688 0007B5C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8007E68C 0007B5CC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -91,6 +85,7 @@ func_8007E684:
 
 /* 8007E69C 0034 .text      ClrDBgWBase__9dBgW_BaseFv      ClrDBgWBase__9dBgW_BaseFv      */
 .global ClrDBgWBase__9dBgW_BaseFv
+ClrDBgWBase__9dBgW_BaseFv:
 ClrDBgWBase__9dBgW_BaseFv:
 /* 8007E69C 0007B5DC  38 80 00 FF */	li r4, 0xff
 /* 8007E6A0 0007B5E0  98 83 00 09 */	stb r4, 9(r3)
@@ -109,21 +104,25 @@ ClrDBgWBase__9dBgW_BaseFv:
 /* 8007E6D0 0008 .text      ChkMemoryError__9dBgW_BaseFv   ChkMemoryError__9dBgW_BaseFv   */
 .global ChkMemoryError__9dBgW_BaseFv
 ChkMemoryError__9dBgW_BaseFv:
+ChkMemoryError__9dBgW_BaseFv:
 /* 8007E6D0 0007B610  38 60 00 00 */	li r3, 0
 /* 8007E6D4 0007B614  4E 80 00 20 */	blr 
 
 /* 8007E6D8 0004 .text      CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c */
 .global CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c
 CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c:
+CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c:
 /* 8007E6D8 0007B618  4E 80 00 20 */	blr 
 
 /* 8007E6DC 0004 .text      CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz */
 .global CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz
 CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz:
+CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz:
 /* 8007E6DC 0007B61C  4E 80 00 20 */	blr 
 
 /* 8007E6E0 0014 .text      CalcDiffShapeAngleY__9dBgW_BaseFs CalcDiffShapeAngleY__9dBgW_BaseFs */
 .global CalcDiffShapeAngleY__9dBgW_BaseFs
+CalcDiffShapeAngleY__9dBgW_BaseFs:
 CalcDiffShapeAngleY__9dBgW_BaseFs:
 /* 8007E6E0 0007B620  A8 03 00 0C */	lha r0, 0xc(r3)
 /* 8007E6E4 0007B624  7C 00 20 50 */	subf r0, r0, r4
@@ -139,25 +138,72 @@ CalcDiffShapeAngleY__9dBgW_BaseFs:
 /* 803ABCC8 00F0 .data      __vt__9dBgW_Base               __vt__9dBgW_Base               */
 .global __vt__9dBgW_Base
 __vt__9dBgW_Base:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0xe6, 0x40, 0x80, 0x07, 0xe6, 0xd0 /* baserom.dol+0x3a8cc8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8cd8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8ce8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x4a, 0xb4, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8cf8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d08 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d18 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d28 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d38 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d48 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d58 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d68 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d78 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d88 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8d98 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0xe6, 0xd8, 0x80, 0x07, 0xe6, 0xdc /* baserom.dol+0x3a8da8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__9dBgW_BaseFv
+.4byte ChkMemoryError__9dBgW_BaseFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte SetOldShapeAngleY__9dBgW_BaseFs
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c
+.4byte CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz
 
 /* 803ABDB8 000C .data      __vt__9cBgW_BgId               __vt__9cBgW_BgId               */
 .global __vt__9cBgW_BgId
 __vt__9cBgW_BgId:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0xe5, 0xf8 /* baserom.dol+0x3a8db8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8dc4 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__9cBgW_BgIdFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

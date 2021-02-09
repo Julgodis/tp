@@ -7,6 +7,7 @@
 /* 8033F5D0 0070 .text      __OSReboot                     __OSReboot                     */
 .global __OSReboot
 __OSReboot:
+__OSReboot:
 /* 8033F5D0 0033C510  7C 08 02 A6 */	mflr r0
 /* 8033F5D4 0033C514  90 01 00 04 */	stw r0, 4(r1)
 /* 8033F5D8 0033C518  94 21 FD 18 */	stwu r1, -0x2e8(r1)
@@ -39,12 +40,14 @@ __OSReboot:
 /* 8033F640 000C .text      OSSetSaveRegion                OSSetSaveRegion                */
 .global OSSetSaveRegion
 OSSetSaveRegion:
+OSSetSaveRegion:
 /* 8033F640 0033C580  90 6D 91 08 */	stw r3, SaveStart-_SDA_BASE_(r13)
 /* 8033F644 0033C584  90 8D 91 0C */	stw r4, SaveEnd-_SDA_BASE_(r13)
 /* 8033F648 0033C588  4E 80 00 20 */	blr 
 
 /* 8033F64C 0014 .text      OSGetSaveRegion                OSGetSaveRegion                */
 .global OSGetSaveRegion
+OSGetSaveRegion:
 OSGetSaveRegion:
 /* 8033F64C 0033C58C  80 0D 91 08 */	lwz r0, SaveStart-_SDA_BASE_(r13)
 /* 8033F650 0033C590  90 03 00 00 */	stw r0, 0(r3)

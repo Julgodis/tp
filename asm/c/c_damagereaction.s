@@ -4,13 +4,14 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8001817C 0048 .text      execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle */
+/* 8001817C 0128 .text      execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle */
 .global execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle
+execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle:
 execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle:
 /* 8001817C 000150BC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80018180 000150C0  A8 65 00 80 */	lha r3, 0x80(r5)
 /* 80018184 000150C4  28 03 00 00 */	cmplwi r3, 0
-/* 80018188 000150C8  41 82 01 14 */	beq func_8001829C
+/* 80018188 000150C8  41 82 01 14 */	beq lbl_8001829C
 /* 8001818C 000150CC  80 84 00 C0 */	lwz r4, 0xc0(r4)
 /* 80018190 000150D0  C0 42 81 A8 */	lfs f2, c_c_damagereaction__LIT_3731-_SDA2_BASE_(r2)
 /* 80018194 000150D4  C8 22 81 B8 */	lfd f1, c_c_damagereaction__LIT_3736-_SDA2_BASE_(r2)
@@ -23,12 +24,9 @@ execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle:
 /* 800181B0 000150F0  EC A0 10 24 */	fdivs f5, f0, f2
 /* 800181B4 000150F4  C0 02 81 AC */	lfs f0, c_c_damagereaction__LIT_3732-_SDA2_BASE_(r2)
 /* 800181B8 000150F8  FC 05 00 40 */	fcmpo cr0, f5, f0
-/* 800181BC 000150FC  40 80 00 08 */	bge func_800181C4
+/* 800181BC 000150FC  40 80 00 08 */	bge lbl_800181C4
 /* 800181C0 00015100  FC A0 00 90 */	fmr f5, f0
-
-/* 800181C4 00D8 .text      func_800181C4                  func_800181C4                  */
-.global func_800181C4
-func_800181C4:
+lbl_800181C4:
 /* 800181C4 00015104  1C 03 00 0C */	mulli r0, r3, 0xc
 /* 800181C8 00015108  7C 64 02 14 */	add r3, r4, r0
 /* 800181CC 0001510C  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
@@ -83,20 +81,19 @@ func_800181C4:
 /* 80018290 000151D0  D0 05 00 1C */	stfs f0, 0x1c(r5)
 /* 80018294 000151D4  C0 01 00 28 */	lfs f0, 0x28(r1)
 /* 80018298 000151D8  D0 05 00 20 */	stfs f0, 0x20(r5)
-
-/* 8001829C 0008 .text      func_8001829C                  func_8001829C                  */
-.global func_8001829C
-func_8001829C:
+lbl_8001829C:
 /* 8001829C 000151DC  38 21 00 50 */	addi r1, r1, 0x50
 /* 800182A0 000151E0  4E 80 00 20 */	blr 
 
 /* 800182A4 0004 .text      draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle */
 .global draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle
 draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle:
+draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle:
 /* 800182A4 000151E4  4E 80 00 20 */	blr 
 
-/* 800182A8 0064 .text      cDmrNowMidnaTalk__Fv           cDmrNowMidnaTalk__Fv           */
+/* 800182A8 0080 .text      cDmrNowMidnaTalk__Fv           cDmrNowMidnaTalk__Fv           */
 .global cDmrNowMidnaTalk__Fv
+cDmrNowMidnaTalk__Fv:
 cDmrNowMidnaTalk__Fv:
 /* 800182A8 000151E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800182AC 000151EC  7C 08 02 A6 */	mflr r0
@@ -105,46 +102,38 @@ cDmrNowMidnaTalk__Fv:
 /* 800182B8 000151F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 800182BC 000151FC  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 800182C0 00015200  28 00 00 00 */	cmplwi r0, 0
-/* 800182C4 00015204  41 82 00 50 */	beq func_80018314
+/* 800182C4 00015204  41 82 00 50 */	beq lbl_80018314
 /* 800182C8 00015208  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 800182CC 0001520C  48 00 38 49 */	bl fopAcM_getTalkEventPartner__FPC10fopAc_ac_c
 /* 800182D0 00015210  28 03 00 00 */	cmplwi r3, 0
-/* 800182D4 00015214  41 82 00 40 */	beq func_80018314
+/* 800182D4 00015214  41 82 00 40 */	beq lbl_80018314
 /* 800182D8 00015218  A8 03 00 08 */	lha r0, 8(r3)
 /* 800182DC 0001521C  2C 00 00 FF */	cmpwi r0, 0xff
-/* 800182E0 00015220  41 82 00 2C */	beq func_8001830C
+/* 800182E0 00015220  41 82 00 2C */	beq lbl_8001830C
 /* 800182E4 00015224  2C 00 02 C1 */	cmpwi r0, 0x2c1
-/* 800182E8 00015228  41 82 00 24 */	beq func_8001830C
+/* 800182E8 00015228  41 82 00 24 */	beq lbl_8001830C
 /* 800182EC 0001522C  2C 00 02 C4 */	cmpwi r0, 0x2c4
-/* 800182F0 00015230  41 82 00 1C */	beq func_8001830C
+/* 800182F0 00015230  41 82 00 1C */	beq lbl_8001830C
 /* 800182F4 00015234  2C 00 00 EC */	cmpwi r0, 0xec
-/* 800182F8 00015238  41 82 00 14 */	beq func_8001830C
+/* 800182F8 00015238  41 82 00 14 */	beq lbl_8001830C
 /* 800182FC 0001523C  2C 00 02 C3 */	cmpwi r0, 0x2c3
-/* 80018300 00015240  41 82 00 0C */	beq func_8001830C
+/* 80018300 00015240  41 82 00 0C */	beq lbl_8001830C
 /* 80018304 00015244  2C 00 02 C7 */	cmpwi r0, 0x2c7
-/* 80018308 00015248  40 82 00 0C */	bne func_80018314
-
-/* 8001830C 0008 .text      func_8001830C                  func_8001830C                  */
-.global func_8001830C
-func_8001830C:
+/* 80018308 00015248  40 82 00 0C */	bne lbl_80018314
+lbl_8001830C:
 /* 8001830C 0001524C  38 60 00 01 */	li r3, 1
-/* 80018310 00015250  48 00 00 08 */	b func_80018318
-
-/* 80018314 0004 .text      func_80018314                  func_80018314                  */
-.global func_80018314
-func_80018314:
+/* 80018310 00015250  48 00 00 08 */	b lbl_80018318
+lbl_80018314:
 /* 80018314 00015254  38 60 00 00 */	li r3, 0
-
-/* 80018318 0010 .text      func_80018318                  func_80018318                  */
-.global func_80018318
-func_80018318:
+lbl_80018318:
 /* 80018318 00015258  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8001831C 0001525C  7C 08 03 A6 */	mtlr r0
 /* 80018320 00015260  38 21 00 10 */	addi r1, r1, 0x10
 /* 80018324 00015264  4E 80 00 20 */	blr 
 
-/* 80018328 0044 .text      __dt__24JPTraceParticleCallBack4Fv __dt__24JPTraceParticleCallBack4Fv */
+/* 80018328 0060 .text      __dt__24JPTraceParticleCallBack4Fv __dt__24JPTraceParticleCallBack4Fv */
 .global __dt__24JPTraceParticleCallBack4Fv
+__dt__24JPTraceParticleCallBack4Fv:
 __dt__24JPTraceParticleCallBack4Fv:
 /* 80018328 00015268  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001832C 0001526C  7C 08 02 A6 */	mflr r0
@@ -153,20 +142,17 @@ __dt__24JPTraceParticleCallBack4Fv:
 /* 80018338 00015278  93 C1 00 08 */	stw r30, 8(r1)
 /* 8001833C 0001527C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80018340 00015280  7C 9F 23 78 */	mr r31, r4
-/* 80018344 00015284  41 82 00 28 */	beq func_8001836C
+/* 80018344 00015284  41 82 00 28 */	beq lbl_8001836C
 /* 80018348 00015288  3C 80 80 3A */	lis r4, __vt__24JPTraceParticleCallBack4@ha
 /* 8001834C 0001528C  38 04 35 68 */	addi r0, r4, __vt__24JPTraceParticleCallBack4@l
 /* 80018350 00015290  90 1E 00 00 */	stw r0, 0(r30)
 /* 80018354 00015294  38 80 00 00 */	li r4, 0
 /* 80018358 00015298  48 26 6C 4D */	bl __dt__19JPAParticleCallBackFv
 /* 8001835C 0001529C  7F E0 07 35 */	extsh. r0, r31
-/* 80018360 000152A0  40 81 00 0C */	ble func_8001836C
+/* 80018360 000152A0  40 81 00 0C */	ble lbl_8001836C
 /* 80018364 000152A4  7F C3 F3 78 */	mr r3, r30
 /* 80018368 000152A8  48 2B 69 D5 */	bl __dl__FPv
-
-/* 8001836C 001C .text      func_8001836C                  func_8001836C                  */
-.global func_8001836C
-func_8001836C:
+lbl_8001836C:
 /* 8001836C 000152AC  7F C3 F3 78 */	mr r3, r30
 /* 80018370 000152B0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80018374 000152B4  83 C1 00 08 */	lwz r30, 8(r1)
@@ -177,6 +163,7 @@ func_8001836C:
 
 /* 80018388 004C .text      __sinit_c_damagereaction_cpp   __sinit_c_damagereaction_cpp   */
 .global __sinit_c_damagereaction_cpp
+__sinit_c_damagereaction_cpp:
 __sinit_c_damagereaction_cpp:
 /* 80018388 000152C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001838C 000152CC  7C 08 02 A6 */	mflr r0
@@ -201,10 +188,12 @@ __sinit_c_damagereaction_cpp:
 /* 800183D4 0004 .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
 .global execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle
 execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle:
+execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle:
 /* 800183D4 00015314  4E 80 00 20 */	blr 
 
 /* 800183D8 0004 .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
 .global draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle
+draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle:
 draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle:
 /* 800183D8 00015318  4E 80 00 20 */	blr 
 
@@ -216,21 +205,27 @@ draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle:
 /* 803A3568 0014 .data      __vt__24JPTraceParticleCallBack4 __vt__24JPTraceParticleCallBack4 */
 .global __vt__24JPTraceParticleCallBack4
 __vt__24JPTraceParticleCallBack4:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x83, 0x28, 0x80, 0x01, 0x81, 0x7c /* baserom.dol+0x3a0568 */
-.byte 0x80, 0x01, 0x82, 0xa4 /* baserom.dol+0x3a0578 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__24JPTraceParticleCallBack4Fv
+.4byte execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle
+.4byte draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle
 
 /* 803A357C 0014 .data      __vt__19JPAParticleCallBack    __vt__19JPAParticleCallBack    */
 .global __vt__19JPAParticleCallBack
 __vt__19JPAParticleCallBack:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x01, 0x83, 0xd4 /* baserom.dol+0x3a057c */
-.byte 0x80, 0x01, 0x83, 0xd8 /* baserom.dol+0x3a058c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle
+.4byte draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 803F0F40 000C .bss       c_c_damagereaction__LIT_3741   @3741                          */
+/* 803F0F40 000C .bss       @3741                          c_c_damagereaction__LIT_3741   */
 .global c_c_damagereaction__LIT_3741
 c_c_damagereaction__LIT_3741:
 .skip 0xc
@@ -246,9 +241,9 @@ c_c_damagereaction__LIT_3741:
 JPTracePCB4:
 .skip 0x4
 
-/* 80450CA8 0004 .sbss      sym_80450CA8                   sym_80450CA8                   */
-.global sym_80450CA8
-sym_80450CA8:
+/* 80450CA8 0004 .sbss      data_80450CA8                  data_80450CA8                  */
+.global data_80450CA8
+data_80450CA8:
 .skip 0x4
 
 
@@ -256,27 +251,27 @@ sym_80450CA8:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80451BA8 0004 .sdata2    c_c_damagereaction__LIT_3731   @3731                          */
+/* 80451BA8 0004 .sdata2    @3731                          c_c_damagereaction__LIT_3731   */
 .global c_c_damagereaction__LIT_3731
 c_c_damagereaction__LIT_3731:
 .byte 0x41, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d0a08 */
 
-/* 80451BAC 0004 .sdata2    c_c_damagereaction__LIT_3732   @3732                          */
+/* 80451BAC 0004 .sdata2    @3732                          c_c_damagereaction__LIT_3732   */
 .global c_c_damagereaction__LIT_3732
 c_c_damagereaction__LIT_3732:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0a0c */
 
-/* 80451BB0 0004 .sdata2    LIT_3733                       @3733                          */
+/* 80451BB0 0004 .sdata2    @3733                          LIT_3733                       */
 .global LIT_3733
 LIT_3733:
 .byte 0x3e, 0x99, 0x99, 0x9a /* baserom.dol+0x3d0a10 */
 
-/* 80451BB4 0004 .sdata2    LIT_3734                       @3734                          */
+/* 80451BB4 0004 .sdata2    @3734                          LIT_3734                       */
 .global LIT_3734
 LIT_3734:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0a14 */
 
-/* 80451BB8 0008 .sdata2    c_c_damagereaction__LIT_3736   @3736                          */
+/* 80451BB8 0008 .sdata2    @3736                          c_c_damagereaction__LIT_3736   */
 .global c_c_damagereaction__LIT_3736
 c_c_damagereaction__LIT_3736:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0a18 */

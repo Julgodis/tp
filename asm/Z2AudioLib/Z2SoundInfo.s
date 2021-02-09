@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802BB00C 005C .text      getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID */
+/* 802BB00C 0084 .text      getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID */
 .global getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID
+getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID:
 getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID:
 /* 802BB00C 002B7F4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BB010 002B7F50  7C 08 02 A6 */	mflr r0
@@ -25,27 +26,18 @@ getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID:
 /* 802BB048 002B7F88  38 81 00 08 */	addi r4, r1, 8
 /* 802BB04C 002B7F8C  4B FE C1 15 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB050 002B7F90  28 1F 00 00 */	cmplwi r31, 0
-/* 802BB054 002B7F94  41 82 00 1C */	beq func_802BB070
+/* 802BB054 002B7F94  41 82 00 1C */	beq lbl_802BB070
 /* 802BB058 002B7F98  54 60 06 36 */	rlwinm r0, r3, 0, 0x18, 0x1b
 /* 802BB05C 002B7F9C  2C 00 00 60 */	cmpwi r0, 0x60
-/* 802BB060 002B7FA0  41 82 00 08 */	beq func_802BB068
-/* 802BB064 002B7FA4  48 00 00 0C */	b func_802BB070
-
-/* 802BB068 0008 .text      func_802BB068                  func_802BB068                  */
-.global func_802BB068
-func_802BB068:
+/* 802BB060 002B7FA0  41 82 00 08 */	beq lbl_802BB068
+/* 802BB064 002B7FA4  48 00 00 0C */	b lbl_802BB070
+lbl_802BB068:
 /* 802BB068 002B7FA8  A0 7F 00 02 */	lhz r3, 2(r31)
-/* 802BB06C 002B7FAC  48 00 00 0C */	b func_802BB078
-
-/* 802BB070 0008 .text      func_802BB070                  func_802BB070                  */
-.global func_802BB070
-func_802BB070:
+/* 802BB06C 002B7FAC  48 00 00 0C */	b lbl_802BB078
+lbl_802BB070:
 /* 802BB070 002B7FB0  3C 60 00 01 */	lis r3, 0x0000FFFF@ha
 /* 802BB074 002B7FB4  38 63 FF FF */	addi r3, r3, 0x0000FFFF@l
-
-/* 802BB078 0018 .text      func_802BB078                  func_802BB078                  */
-.global func_802BB078
-func_802BB078:
+lbl_802BB078:
 /* 802BB078 002B7FB8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802BB07C 002B7FBC  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 802BB080 002B7FC0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -53,56 +45,44 @@ func_802BB078:
 /* 802BB088 002B7FC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BB08C 002B7FCC  4E 80 00 20 */	blr 
 
-/* 802BB090 001C .text      getSoundType__11Z2SoundInfoCF10JAISoundID getSoundType__11Z2SoundInfoCF10JAISoundID */
+/* 802BB090 0048 .text      getSoundType__11Z2SoundInfoCF10JAISoundID getSoundType__11Z2SoundInfoCF10JAISoundID */
 .global getSoundType__11Z2SoundInfoCF10JAISoundID
+getSoundType__11Z2SoundInfoCF10JAISoundID:
 getSoundType__11Z2SoundInfoCF10JAISoundID:
 /* 802BB090 002B7FD0  88 04 00 00 */	lbz r0, 0(r4)
 /* 802BB094 002B7FD4  2C 00 00 01 */	cmpwi r0, 1
-/* 802BB098 002B7FD8  41 82 00 28 */	beq func_802BB0C0
-/* 802BB09C 002B7FDC  40 80 00 10 */	bge func_802BB0AC
+/* 802BB098 002B7FD8  41 82 00 28 */	beq lbl_802BB0C0
+/* 802BB09C 002B7FDC  40 80 00 10 */	bge lbl_802BB0AC
 /* 802BB0A0 002B7FE0  2C 00 00 00 */	cmpwi r0, 0
-/* 802BB0A4 002B7FE4  40 80 00 14 */	bge func_802BB0B8
-/* 802BB0A8 002B7FE8  48 00 00 28 */	b func_802BB0D0
-
-/* 802BB0AC 000C .text      func_802BB0AC                  func_802BB0AC                  */
-.global func_802BB0AC
-func_802BB0AC:
+/* 802BB0A4 002B7FE4  40 80 00 14 */	bge lbl_802BB0B8
+/* 802BB0A8 002B7FE8  48 00 00 28 */	b lbl_802BB0D0
+lbl_802BB0AC:
 /* 802BB0AC 002B7FEC  2C 00 00 03 */	cmpwi r0, 3
-/* 802BB0B0 002B7FF0  40 80 00 20 */	bge func_802BB0D0
-/* 802BB0B4 002B7FF4  48 00 00 14 */	b func_802BB0C8
-
-/* 802BB0B8 0008 .text      func_802BB0B8                  func_802BB0B8                  */
-.global func_802BB0B8
-func_802BB0B8:
+/* 802BB0B0 002B7FF0  40 80 00 20 */	bge lbl_802BB0D0
+/* 802BB0B4 002B7FF4  48 00 00 14 */	b lbl_802BB0C8
+lbl_802BB0B8:
 /* 802BB0B8 002B7FF8  38 60 00 00 */	li r3, 0
 /* 802BB0BC 002B7FFC  4E 80 00 20 */	blr 
-
-/* 802BB0C0 0008 .text      func_802BB0C0                  func_802BB0C0                  */
-.global func_802BB0C0
-func_802BB0C0:
+lbl_802BB0C0:
 /* 802BB0C0 002B8000  38 60 00 01 */	li r3, 1
 /* 802BB0C4 002B8004  4E 80 00 20 */	blr 
-
-/* 802BB0C8 0008 .text      func_802BB0C8                  func_802BB0C8                  */
-.global func_802BB0C8
-func_802BB0C8:
+lbl_802BB0C8:
 /* 802BB0C8 002B8008  38 60 00 02 */	li r3, 2
 /* 802BB0CC 002B800C  4E 80 00 20 */	blr 
-
-/* 802BB0D0 0008 .text      func_802BB0D0                  func_802BB0D0                  */
-.global func_802BB0D0
-func_802BB0D0:
+lbl_802BB0D0:
 /* 802BB0D0 002B8010  38 60 FF FF */	li r3, -1
 /* 802BB0D4 002B8014  4E 80 00 20 */	blr 
 
 /* 802BB0D8 0008 .text      getCategory__11Z2SoundInfoCF10JAISoundID getCategory__11Z2SoundInfoCF10JAISoundID */
 .global getCategory__11Z2SoundInfoCF10JAISoundID
 getCategory__11Z2SoundInfoCF10JAISoundID:
+getCategory__11Z2SoundInfoCF10JAISoundID:
 /* 802BB0D8 002B8018  88 64 00 01 */	lbz r3, 1(r4)
 /* 802BB0DC 002B801C  4E 80 00 20 */	blr 
 
-/* 802BB0E0 005C .text      getPriority__11Z2SoundInfoCF10JAISoundID getPriority__11Z2SoundInfoCF10JAISoundID */
+/* 802BB0E0 0078 .text      getPriority__11Z2SoundInfoCF10JAISoundID getPriority__11Z2SoundInfoCF10JAISoundID */
 .global getPriority__11Z2SoundInfoCF10JAISoundID
+getPriority__11Z2SoundInfoCF10JAISoundID:
 getPriority__11Z2SoundInfoCF10JAISoundID:
 /* 802BB0E0 002B8020  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BB0E4 002B8024  7C 08 02 A6 */	mflr r0
@@ -122,20 +102,14 @@ getPriority__11Z2SoundInfoCF10JAISoundID:
 /* 802BB11C 002B805C  38 81 00 08 */	addi r4, r1, 8
 /* 802BB120 002B8060  4B FE C0 41 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB124 002B8064  28 1F 00 00 */	cmplwi r31, 0
-/* 802BB128 002B8068  41 82 00 14 */	beq func_802BB13C
+/* 802BB128 002B8068  41 82 00 14 */	beq lbl_802BB13C
 /* 802BB12C 002B806C  54 60 06 73 */	rlwinm. r0, r3, 0, 0x19, 0x19
-/* 802BB130 002B8070  41 82 00 0C */	beq func_802BB13C
+/* 802BB130 002B8070  41 82 00 0C */	beq lbl_802BB13C
 /* 802BB134 002B8074  88 7F 00 00 */	lbz r3, 0(r31)
-/* 802BB138 002B8078  48 00 00 08 */	b func_802BB140
-
-/* 802BB13C 0004 .text      func_802BB13C                  func_802BB13C                  */
-.global func_802BB13C
-func_802BB13C:
+/* 802BB138 002B8078  48 00 00 08 */	b lbl_802BB140
+lbl_802BB13C:
 /* 802BB13C 002B807C  38 60 00 00 */	li r3, 0
-
-/* 802BB140 0018 .text      func_802BB140                  func_802BB140                  */
-.global func_802BB140
-func_802BB140:
+lbl_802BB140:
 /* 802BB140 002B8080  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802BB144 002B8084  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 802BB148 002B8088  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -143,8 +117,9 @@ func_802BB140:
 /* 802BB150 002B8090  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BB154 002B8094  4E 80 00 20 */	blr 
 
-/* 802BB158 0040 .text      getAudibleSwFull__11Z2SoundInfoF10JAISoundID getAudibleSwFull__11Z2SoundInfoF10JAISoundID */
+/* 802BB158 02F0 .text      getAudibleSwFull__11Z2SoundInfoF10JAISoundID getAudibleSwFull__11Z2SoundInfoF10JAISoundID */
 .global getAudibleSwFull__11Z2SoundInfoF10JAISoundID
+getAudibleSwFull__11Z2SoundInfoF10JAISoundID:
 getAudibleSwFull__11Z2SoundInfoF10JAISoundID:
 /* 802BB158 002B8098  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802BB15C 002B809C  7C 08 02 A6 */	mflr r0
@@ -160,12 +135,9 @@ getAudibleSwFull__11Z2SoundInfoF10JAISoundID:
 /* 802BB184 002B80C4  4B FE BF DD */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB188 002B80C8  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802BB18C 002B80CC  2C 00 00 51 */	cmpwi r0, 0x51
-/* 802BB190 002B80D0  41 82 00 08 */	beq func_802BB198
-/* 802BB194 002B80D4  48 00 02 2C */	b func_802BB3C0
-
-/* 802BB198 0050 .text      func_802BB198                  func_802BB198                  */
-.global func_802BB198
-func_802BB198:
+/* 802BB190 002B80D0  41 82 00 08 */	beq lbl_802BB198
+/* 802BB194 002B80D4  48 00 02 2C */	b lbl_802BB3C0
+lbl_802BB198:
 /* 802BB198 002B80D8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB19C 002B80DC  90 01 00 30 */	stw r0, 0x30(r1)
 /* 802BB1A0 002B80E0  7F C3 F3 78 */	mr r3, r30
@@ -180,144 +152,108 @@ func_802BB198:
 /* 802BB1C4 002B8104  38 81 00 2C */	addi r4, r1, 0x2c
 /* 802BB1C8 002B8108  48 00 09 01 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB1CC 002B810C  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 802BB1D0 002B8110  41 82 00 18 */	beq func_802BB1E8
+/* 802BB1D0 002B8110  41 82 00 18 */	beq lbl_802BB1E8
 /* 802BB1D4 002B8114  38 60 00 00 */	li r3, 0
 /* 802BB1D8 002B8118  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB1DC 002B811C  50 60 1F 38 */	rlwimi r0, r3, 3, 0x1c, 0x1c
 /* 802BB1E0 002B8120  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB1E4 002B8124  48 00 00 14 */	b func_802BB1F8
-
-/* 802BB1E8 0010 .text      func_802BB1E8                  func_802BB1E8                  */
-.global func_802BB1E8
-func_802BB1E8:
+/* 802BB1E4 002B8124  48 00 00 14 */	b lbl_802BB1F8
+lbl_802BB1E8:
 /* 802BB1E8 002B8128  38 60 00 01 */	li r3, 1
 /* 802BB1EC 002B812C  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB1F0 002B8130  50 60 1F 38 */	rlwimi r0, r3, 3, 0x1c, 0x1c
 /* 802BB1F4 002B8134  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB1F8 0030 .text      func_802BB1F8                  func_802BB1F8                  */
-.global func_802BB1F8
-func_802BB1F8:
+lbl_802BB1F8:
 /* 802BB1F8 002B8138  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB1FC 002B813C  90 01 00 28 */	stw r0, 0x28(r1)
 /* 802BB200 002B8140  7F C3 F3 78 */	mr r3, r30
 /* 802BB204 002B8144  38 81 00 28 */	addi r4, r1, 0x28
 /* 802BB208 002B8148  48 00 08 C1 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB20C 002B814C  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 802BB210 002B8150  41 82 00 18 */	beq func_802BB228
+/* 802BB210 002B8150  41 82 00 18 */	beq lbl_802BB228
 /* 802BB214 002B8154  38 60 00 00 */	li r3, 0
 /* 802BB218 002B8158  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB21C 002B815C  50 60 17 7A */	rlwimi r0, r3, 2, 0x1d, 0x1d
 /* 802BB220 002B8160  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB224 002B8164  48 00 00 14 */	b func_802BB238
-
-/* 802BB228 0010 .text      func_802BB228                  func_802BB228                  */
-.global func_802BB228
-func_802BB228:
+/* 802BB224 002B8164  48 00 00 14 */	b lbl_802BB238
+lbl_802BB228:
 /* 802BB228 002B8168  38 60 00 01 */	li r3, 1
 /* 802BB22C 002B816C  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB230 002B8170  50 60 17 7A */	rlwimi r0, r3, 2, 0x1d, 0x1d
 /* 802BB234 002B8174  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB238 0030 .text      func_802BB238                  func_802BB238                  */
-.global func_802BB238
-func_802BB238:
+lbl_802BB238:
 /* 802BB238 002B8178  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB23C 002B817C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802BB240 002B8180  7F C3 F3 78 */	mr r3, r30
 /* 802BB244 002B8184  38 81 00 24 */	addi r4, r1, 0x24
 /* 802BB248 002B8188  48 00 08 81 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB24C 002B818C  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
-/* 802BB250 002B8190  41 82 00 18 */	beq func_802BB268
+/* 802BB250 002B8190  41 82 00 18 */	beq lbl_802BB268
 /* 802BB254 002B8194  38 60 00 00 */	li r3, 0
 /* 802BB258 002B8198  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB25C 002B819C  50 60 0F BC */	rlwimi r0, r3, 1, 0x1e, 0x1e
 /* 802BB260 002B81A0  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB264 002B81A4  48 00 00 14 */	b func_802BB278
-
-/* 802BB268 0010 .text      func_802BB268                  func_802BB268                  */
-.global func_802BB268
-func_802BB268:
+/* 802BB264 002B81A4  48 00 00 14 */	b lbl_802BB278
+lbl_802BB268:
 /* 802BB268 002B81A8  38 60 00 01 */	li r3, 1
 /* 802BB26C 002B81AC  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB270 002B81B0  50 60 0F BC */	rlwimi r0, r3, 1, 0x1e, 0x1e
 /* 802BB274 002B81B4  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB278 0030 .text      func_802BB278                  func_802BB278                  */
-.global func_802BB278
-func_802BB278:
+lbl_802BB278:
 /* 802BB278 002B81B8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB27C 002B81BC  90 01 00 20 */	stw r0, 0x20(r1)
 /* 802BB280 002B81C0  7F C3 F3 78 */	mr r3, r30
 /* 802BB284 002B81C4  38 81 00 20 */	addi r4, r1, 0x20
 /* 802BB288 002B81C8  48 00 08 41 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB28C 002B81CC  54 60 02 11 */	rlwinm. r0, r3, 0, 8, 8
-/* 802BB290 002B81D0  41 82 00 18 */	beq func_802BB2A8
+/* 802BB290 002B81D0  41 82 00 18 */	beq lbl_802BB2A8
 /* 802BB294 002B81D4  38 60 00 01 */	li r3, 1
 /* 802BB298 002B81D8  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB29C 002B81DC  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
 /* 802BB2A0 002B81E0  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB2A4 002B81E4  48 00 00 14 */	b func_802BB2B8
-
-/* 802BB2A8 0010 .text      func_802BB2A8                  func_802BB2A8                  */
-.global func_802BB2A8
-func_802BB2A8:
+/* 802BB2A4 002B81E4  48 00 00 14 */	b lbl_802BB2B8
+lbl_802BB2A8:
 /* 802BB2A8 002B81E8  38 60 00 00 */	li r3, 0
 /* 802BB2AC 002B81EC  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB2B0 002B81F0  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
 /* 802BB2B4 002B81F4  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB2B8 0030 .text      func_802BB2B8                  func_802BB2B8                  */
-.global func_802BB2B8
-func_802BB2B8:
+lbl_802BB2B8:
 /* 802BB2B8 002B81F8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB2BC 002B81FC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802BB2C0 002B8200  7F C3 F3 78 */	mr r3, r30
 /* 802BB2C4 002B8204  38 81 00 1C */	addi r4, r1, 0x1c
 /* 802BB2C8 002B8208  48 00 08 01 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB2CC 002B820C  54 60 04 E7 */	rlwinm. r0, r3, 0, 0x13, 0x13
-/* 802BB2D0 002B8210  41 82 00 18 */	beq func_802BB2E8
+/* 802BB2D0 002B8210  41 82 00 18 */	beq lbl_802BB2E8
 /* 802BB2D4 002B8214  38 60 00 00 */	li r3, 0
 /* 802BB2D8 002B8218  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB2DC 002B821C  50 60 3E 30 */	rlwimi r0, r3, 7, 0x18, 0x18
 /* 802BB2E0 002B8220  98 01 00 39 */	stb r0, 0x39(r1)
-/* 802BB2E4 002B8224  48 00 00 14 */	b func_802BB2F8
-
-/* 802BB2E8 0010 .text      func_802BB2E8                  func_802BB2E8                  */
-.global func_802BB2E8
-func_802BB2E8:
+/* 802BB2E4 002B8224  48 00 00 14 */	b lbl_802BB2F8
+lbl_802BB2E8:
 /* 802BB2E8 002B8228  38 60 00 01 */	li r3, 1
 /* 802BB2EC 002B822C  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB2F0 002B8230  50 60 3E 30 */	rlwimi r0, r3, 7, 0x18, 0x18
 /* 802BB2F4 002B8234  98 01 00 39 */	stb r0, 0x39(r1)
-
-/* 802BB2F8 0030 .text      func_802BB2F8                  func_802BB2F8                  */
-.global func_802BB2F8
-func_802BB2F8:
+lbl_802BB2F8:
 /* 802BB2F8 002B8238  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB2FC 002B823C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802BB300 002B8240  7F C3 F3 78 */	mr r3, r30
 /* 802BB304 002B8244  38 81 00 18 */	addi r4, r1, 0x18
 /* 802BB308 002B8248  48 00 07 C1 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB30C 002B824C  54 60 04 A5 */	rlwinm. r0, r3, 0, 0x12, 0x12
-/* 802BB310 002B8250  41 82 00 18 */	beq func_802BB328
+/* 802BB310 002B8250  41 82 00 18 */	beq lbl_802BB328
 /* 802BB314 002B8254  38 60 00 00 */	li r3, 0
 /* 802BB318 002B8258  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB31C 002B825C  50 60 36 72 */	rlwimi r0, r3, 6, 0x19, 0x19
 /* 802BB320 002B8260  98 01 00 39 */	stb r0, 0x39(r1)
-/* 802BB324 002B8264  48 00 00 14 */	b func_802BB338
-
-/* 802BB328 0010 .text      func_802BB328                  func_802BB328                  */
-.global func_802BB328
-func_802BB328:
+/* 802BB324 002B8264  48 00 00 14 */	b lbl_802BB338
+lbl_802BB328:
 /* 802BB328 002B8268  38 60 00 01 */	li r3, 1
 /* 802BB32C 002B826C  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB330 002B8270  50 60 36 72 */	rlwimi r0, r3, 6, 0x19, 0x19
 /* 802BB334 002B8274  98 01 00 39 */	stb r0, 0x39(r1)
-
-/* 802BB338 0024 .text      func_802BB338                  func_802BB338                  */
-.global func_802BB338
-func_802BB338:
+lbl_802BB338:
 /* 802BB338 002B8278  3B 80 00 00 */	li r28, 0
 /* 802BB33C 002B827C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB340 002B8280  90 01 00 14 */	stw r0, 0x14(r1)
@@ -325,12 +261,9 @@ func_802BB338:
 /* 802BB348 002B8288  38 81 00 14 */	addi r4, r1, 0x14
 /* 802BB34C 002B828C  48 00 07 7D */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB350 002B8290  54 60 03 19 */	rlwinm. r0, r3, 0, 0xc, 0xc
-/* 802BB354 002B8294  41 82 00 08 */	beq func_802BB35C
+/* 802BB354 002B8294  41 82 00 08 */	beq lbl_802BB35C
 /* 802BB358 002B8298  3B 80 00 08 */	li r28, 8
-
-/* 802BB35C 0064 .text      func_802BB35C                  func_802BB35C                  */
-.global func_802BB35C
-func_802BB35C:
+lbl_802BB35C:
 /* 802BB35C 002B829C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB360 002B82A0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802BB364 002B82A4  7F C3 F3 78 */	mr r3, r30
@@ -355,11 +288,8 @@ func_802BB35C:
 /* 802BB3B0 002B82F0  53 80 06 BE */	rlwimi r0, r28, 0, 0x1a, 0x1f
 /* 802BB3B4 002B82F4  98 01 00 39 */	stb r0, 0x39(r1)
 /* 802BB3B8 002B82F8  B3 A1 00 3A */	sth r29, 0x3a(r1)
-/* 802BB3BC 002B82FC  48 00 00 70 */	b func_802BB42C
-
-/* 802BB3C0 006C .text      func_802BB3C0                  func_802BB3C0                  */
-.global func_802BB3C0
-func_802BB3C0:
+/* 802BB3BC 002B82FC  48 00 00 70 */	b lbl_802BB42C
+lbl_802BB3C0:
 /* 802BB3C0 002B8300  38 80 00 00 */	li r4, 0
 /* 802BB3C4 002B8304  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB3C8 002B8308  50 80 26 36 */	rlwimi r0, r4, 4, 0x18, 0x1b
@@ -387,10 +317,7 @@ func_802BB3C0:
 /* 802BB420 002B8360  50 80 06 BE */	rlwimi r0, r4, 0, 0x1a, 0x1f
 /* 802BB424 002B8364  98 01 00 39 */	stb r0, 0x39(r1)
 /* 802BB428 002B8368  B0 81 00 3A */	sth r4, 0x3a(r1)
-
-/* 802BB42C 001C .text      func_802BB42C                  func_802BB42C                  */
-.global func_802BB42C
-func_802BB42C:
+lbl_802BB42C:
 /* 802BB42C 002B836C  80 61 00 38 */	lwz r3, 0x38(r1)
 /* 802BB430 002B8370  39 61 00 50 */	addi r11, r1, 0x50
 /* 802BB434 002B8374  48 0A 6D F1 */	bl _restgpr_28
@@ -399,8 +326,9 @@ func_802BB42C:
 /* 802BB440 002B8380  38 21 00 50 */	addi r1, r1, 0x50
 /* 802BB444 002B8384  4E 80 00 20 */	blr 
 
-/* 802BB448 0040 .text      getAudibleSw__11Z2SoundInfoCF10JAISoundID getAudibleSw__11Z2SoundInfoCF10JAISoundID */
+/* 802BB448 0294 .text      getAudibleSw__11Z2SoundInfoCF10JAISoundID getAudibleSw__11Z2SoundInfoCF10JAISoundID */
 .global getAudibleSw__11Z2SoundInfoCF10JAISoundID
+getAudibleSw__11Z2SoundInfoCF10JAISoundID:
 getAudibleSw__11Z2SoundInfoCF10JAISoundID:
 /* 802BB448 002B8388  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802BB44C 002B838C  7C 08 02 A6 */	mflr r0
@@ -416,12 +344,9 @@ getAudibleSw__11Z2SoundInfoCF10JAISoundID:
 /* 802BB474 002B83B4  4B FE BC ED */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB478 002B83B8  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802BB47C 002B83BC  2C 00 00 51 */	cmpwi r0, 0x51
-/* 802BB480 002B83C0  41 82 00 08 */	beq func_802BB488
-/* 802BB484 002B83C4  48 00 02 2C */	b func_802BB6B0
-
-/* 802BB488 0050 .text      func_802BB488                  func_802BB488                  */
-.global func_802BB488
-func_802BB488:
+/* 802BB480 002B83C0  41 82 00 08 */	beq lbl_802BB488
+/* 802BB484 002B83C4  48 00 02 2C */	b lbl_802BB6B0
+lbl_802BB488:
 /* 802BB488 002B83C8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB48C 002B83CC  90 01 00 30 */	stw r0, 0x30(r1)
 /* 802BB490 002B83D0  7F C3 F3 78 */	mr r3, r30
@@ -436,144 +361,108 @@ func_802BB488:
 /* 802BB4B4 002B83F4  38 81 00 2C */	addi r4, r1, 0x2c
 /* 802BB4B8 002B83F8  48 00 06 11 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB4BC 002B83FC  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 802BB4C0 002B8400  41 82 00 18 */	beq func_802BB4D8
+/* 802BB4C0 002B8400  41 82 00 18 */	beq lbl_802BB4D8
 /* 802BB4C4 002B8404  38 60 00 00 */	li r3, 0
 /* 802BB4C8 002B8408  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB4CC 002B840C  50 60 1F 38 */	rlwimi r0, r3, 3, 0x1c, 0x1c
 /* 802BB4D0 002B8410  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB4D4 002B8414  48 00 00 14 */	b func_802BB4E8
-
-/* 802BB4D8 0010 .text      func_802BB4D8                  func_802BB4D8                  */
-.global func_802BB4D8
-func_802BB4D8:
+/* 802BB4D4 002B8414  48 00 00 14 */	b lbl_802BB4E8
+lbl_802BB4D8:
 /* 802BB4D8 002B8418  38 60 00 01 */	li r3, 1
 /* 802BB4DC 002B841C  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB4E0 002B8420  50 60 1F 38 */	rlwimi r0, r3, 3, 0x1c, 0x1c
 /* 802BB4E4 002B8424  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB4E8 0030 .text      func_802BB4E8                  func_802BB4E8                  */
-.global func_802BB4E8
-func_802BB4E8:
+lbl_802BB4E8:
 /* 802BB4E8 002B8428  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB4EC 002B842C  90 01 00 28 */	stw r0, 0x28(r1)
 /* 802BB4F0 002B8430  7F C3 F3 78 */	mr r3, r30
 /* 802BB4F4 002B8434  38 81 00 28 */	addi r4, r1, 0x28
 /* 802BB4F8 002B8438  48 00 05 D1 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB4FC 002B843C  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
-/* 802BB500 002B8440  41 82 00 18 */	beq func_802BB518
+/* 802BB500 002B8440  41 82 00 18 */	beq lbl_802BB518
 /* 802BB504 002B8444  38 60 00 00 */	li r3, 0
 /* 802BB508 002B8448  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB50C 002B844C  50 60 17 7A */	rlwimi r0, r3, 2, 0x1d, 0x1d
 /* 802BB510 002B8450  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB514 002B8454  48 00 00 14 */	b func_802BB528
-
-/* 802BB518 0010 .text      func_802BB518                  func_802BB518                  */
-.global func_802BB518
-func_802BB518:
+/* 802BB514 002B8454  48 00 00 14 */	b lbl_802BB528
+lbl_802BB518:
 /* 802BB518 002B8458  38 60 00 01 */	li r3, 1
 /* 802BB51C 002B845C  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB520 002B8460  50 60 17 7A */	rlwimi r0, r3, 2, 0x1d, 0x1d
 /* 802BB524 002B8464  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB528 0030 .text      func_802BB528                  func_802BB528                  */
-.global func_802BB528
-func_802BB528:
+lbl_802BB528:
 /* 802BB528 002B8468  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB52C 002B846C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802BB530 002B8470  7F C3 F3 78 */	mr r3, r30
 /* 802BB534 002B8474  38 81 00 24 */	addi r4, r1, 0x24
 /* 802BB538 002B8478  48 00 05 91 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB53C 002B847C  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
-/* 802BB540 002B8480  41 82 00 18 */	beq func_802BB558
+/* 802BB540 002B8480  41 82 00 18 */	beq lbl_802BB558
 /* 802BB544 002B8484  38 60 00 00 */	li r3, 0
 /* 802BB548 002B8488  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB54C 002B848C  50 60 0F BC */	rlwimi r0, r3, 1, 0x1e, 0x1e
 /* 802BB550 002B8490  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB554 002B8494  48 00 00 14 */	b func_802BB568
-
-/* 802BB558 0010 .text      func_802BB558                  func_802BB558                  */
-.global func_802BB558
-func_802BB558:
+/* 802BB554 002B8494  48 00 00 14 */	b lbl_802BB568
+lbl_802BB558:
 /* 802BB558 002B8498  38 60 00 01 */	li r3, 1
 /* 802BB55C 002B849C  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB560 002B84A0  50 60 0F BC */	rlwimi r0, r3, 1, 0x1e, 0x1e
 /* 802BB564 002B84A4  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB568 0030 .text      func_802BB568                  func_802BB568                  */
-.global func_802BB568
-func_802BB568:
+lbl_802BB568:
 /* 802BB568 002B84A8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB56C 002B84AC  90 01 00 20 */	stw r0, 0x20(r1)
 /* 802BB570 002B84B0  7F C3 F3 78 */	mr r3, r30
 /* 802BB574 002B84B4  38 81 00 20 */	addi r4, r1, 0x20
 /* 802BB578 002B84B8  48 00 05 51 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB57C 002B84BC  54 60 02 11 */	rlwinm. r0, r3, 0, 8, 8
-/* 802BB580 002B84C0  41 82 00 18 */	beq func_802BB598
+/* 802BB580 002B84C0  41 82 00 18 */	beq lbl_802BB598
 /* 802BB584 002B84C4  38 60 00 01 */	li r3, 1
 /* 802BB588 002B84C8  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB58C 002B84CC  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
 /* 802BB590 002B84D0  98 01 00 38 */	stb r0, 0x38(r1)
-/* 802BB594 002B84D4  48 00 00 14 */	b func_802BB5A8
-
-/* 802BB598 0010 .text      func_802BB598                  func_802BB598                  */
-.global func_802BB598
-func_802BB598:
+/* 802BB594 002B84D4  48 00 00 14 */	b lbl_802BB5A8
+lbl_802BB598:
 /* 802BB598 002B84D8  38 60 00 00 */	li r3, 0
 /* 802BB59C 002B84DC  88 01 00 38 */	lbz r0, 0x38(r1)
 /* 802BB5A0 002B84E0  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
 /* 802BB5A4 002B84E4  98 01 00 38 */	stb r0, 0x38(r1)
-
-/* 802BB5A8 0030 .text      func_802BB5A8                  func_802BB5A8                  */
-.global func_802BB5A8
-func_802BB5A8:
+lbl_802BB5A8:
 /* 802BB5A8 002B84E8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB5AC 002B84EC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802BB5B0 002B84F0  7F C3 F3 78 */	mr r3, r30
 /* 802BB5B4 002B84F4  38 81 00 1C */	addi r4, r1, 0x1c
 /* 802BB5B8 002B84F8  48 00 05 11 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB5BC 002B84FC  54 60 04 E7 */	rlwinm. r0, r3, 0, 0x13, 0x13
-/* 802BB5C0 002B8500  41 82 00 18 */	beq func_802BB5D8
+/* 802BB5C0 002B8500  41 82 00 18 */	beq lbl_802BB5D8
 /* 802BB5C4 002B8504  38 60 00 00 */	li r3, 0
 /* 802BB5C8 002B8508  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB5CC 002B850C  50 60 3E 30 */	rlwimi r0, r3, 7, 0x18, 0x18
 /* 802BB5D0 002B8510  98 01 00 39 */	stb r0, 0x39(r1)
-/* 802BB5D4 002B8514  48 00 00 14 */	b func_802BB5E8
-
-/* 802BB5D8 0010 .text      func_802BB5D8                  func_802BB5D8                  */
-.global func_802BB5D8
-func_802BB5D8:
+/* 802BB5D4 002B8514  48 00 00 14 */	b lbl_802BB5E8
+lbl_802BB5D8:
 /* 802BB5D8 002B8518  38 60 00 01 */	li r3, 1
 /* 802BB5DC 002B851C  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB5E0 002B8520  50 60 3E 30 */	rlwimi r0, r3, 7, 0x18, 0x18
 /* 802BB5E4 002B8524  98 01 00 39 */	stb r0, 0x39(r1)
-
-/* 802BB5E8 0030 .text      func_802BB5E8                  func_802BB5E8                  */
-.global func_802BB5E8
-func_802BB5E8:
+lbl_802BB5E8:
 /* 802BB5E8 002B8528  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB5EC 002B852C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802BB5F0 002B8530  7F C3 F3 78 */	mr r3, r30
 /* 802BB5F4 002B8534  38 81 00 18 */	addi r4, r1, 0x18
 /* 802BB5F8 002B8538  48 00 04 D1 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB5FC 002B853C  54 60 04 A5 */	rlwinm. r0, r3, 0, 0x12, 0x12
-/* 802BB600 002B8540  41 82 00 18 */	beq func_802BB618
+/* 802BB600 002B8540  41 82 00 18 */	beq lbl_802BB618
 /* 802BB604 002B8544  38 60 00 00 */	li r3, 0
 /* 802BB608 002B8548  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB60C 002B854C  50 60 36 72 */	rlwimi r0, r3, 6, 0x19, 0x19
 /* 802BB610 002B8550  98 01 00 39 */	stb r0, 0x39(r1)
-/* 802BB614 002B8554  48 00 00 14 */	b func_802BB628
-
-/* 802BB618 0010 .text      func_802BB618                  func_802BB618                  */
-.global func_802BB618
-func_802BB618:
+/* 802BB614 002B8554  48 00 00 14 */	b lbl_802BB628
+lbl_802BB618:
 /* 802BB618 002B8558  38 60 00 01 */	li r3, 1
 /* 802BB61C 002B855C  88 01 00 39 */	lbz r0, 0x39(r1)
 /* 802BB620 002B8560  50 60 36 72 */	rlwimi r0, r3, 6, 0x19, 0x19
 /* 802BB624 002B8564  98 01 00 39 */	stb r0, 0x39(r1)
-
-/* 802BB628 0024 .text      func_802BB628                  func_802BB628                  */
-.global func_802BB628
-func_802BB628:
+lbl_802BB628:
 /* 802BB628 002B8568  3B 80 00 00 */	li r28, 0
 /* 802BB62C 002B856C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB630 002B8570  90 01 00 14 */	stw r0, 0x14(r1)
@@ -581,12 +470,9 @@ func_802BB628:
 /* 802BB638 002B8578  38 81 00 14 */	addi r4, r1, 0x14
 /* 802BB63C 002B857C  48 00 04 8D */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB640 002B8580  54 60 03 19 */	rlwinm. r0, r3, 0, 0xc, 0xc
-/* 802BB644 002B8584  41 82 00 08 */	beq func_802BB64C
+/* 802BB644 002B8584  41 82 00 08 */	beq lbl_802BB64C
 /* 802BB648 002B8588  3B 80 00 08 */	li r28, 8
-
-/* 802BB64C 0064 .text      func_802BB64C                  func_802BB64C                  */
-.global func_802BB64C
-func_802BB64C:
+lbl_802BB64C:
 /* 802BB64C 002B858C  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BB650 002B8590  90 01 00 10 */	stw r0, 0x10(r1)
 /* 802BB654 002B8594  7F C3 F3 78 */	mr r3, r30
@@ -611,19 +497,13 @@ func_802BB64C:
 /* 802BB6A0 002B85E0  53 80 06 BE */	rlwimi r0, r28, 0, 0x1a, 0x1f
 /* 802BB6A4 002B85E4  98 01 00 39 */	stb r0, 0x39(r1)
 /* 802BB6A8 002B85E8  B3 A1 00 3A */	sth r29, 0x3a(r1)
-/* 802BB6AC 002B85EC  48 00 00 14 */	b func_802BB6C0
-
-/* 802BB6B0 0010 .text      func_802BB6B0                  func_802BB6B0                  */
-.global func_802BB6B0
-func_802BB6B0:
+/* 802BB6AC 002B85EC  48 00 00 14 */	b lbl_802BB6C0
+lbl_802BB6B0:
 /* 802BB6B0 002B85F0  3C 60 00 01 */	lis r3, 0x0000FFFF@ha
 /* 802BB6B4 002B85F4  38 03 FF FF */	addi r0, r3, 0x0000FFFF@l
 /* 802BB6B8 002B85F8  B0 01 00 38 */	sth r0, 0x38(r1)
 /* 802BB6BC 002B85FC  B0 01 00 3A */	sth r0, 0x3a(r1)
-
-/* 802BB6C0 001C .text      func_802BB6C0                  func_802BB6C0                  */
-.global func_802BB6C0
-func_802BB6C0:
+lbl_802BB6C0:
 /* 802BB6C0 002B8600  A0 61 00 38 */	lhz r3, 0x38(r1)
 /* 802BB6C4 002B8604  39 61 00 50 */	addi r11, r1, 0x50
 /* 802BB6C8 002B8608  48 0A 6B 5D */	bl _restgpr_28
@@ -632,8 +512,9 @@ func_802BB6C0:
 /* 802BB6D4 002B8614  38 21 00 50 */	addi r1, r1, 0x50
 /* 802BB6D8 002B8618  4E 80 00 20 */	blr 
 
-/* 802BB6DC 0030 .text      getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe */
+/* 802BB6DC 01D8 .text      getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe */
 .global getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe
+getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe:
 getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe:
 /* 802BB6DC 002B861C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802BB6E0 002B8620  7C 08 02 A6 */	mflr r0
@@ -645,12 +526,9 @@ getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe:
 /* 802BB6F8 002B8638  7C 7B 1B 78 */	mr r27, r3
 /* 802BB6FC 002B863C  7C 9C 23 78 */	mr r28, r4
 /* 802BB700 002B8640  7C BD 2B 79 */	or. r29, r5, r5
-/* 802BB704 002B8644  41 82 00 08 */	beq func_802BB70C
+/* 802BB704 002B8644  41 82 00 08 */	beq lbl_802BB70C
 /* 802BB708 002B8648  38 A5 00 10 */	addi r5, r5, 0x10
-
-/* 802BB70C 0058 .text      func_802BB70C                  func_802BB70C                  */
-.global func_802BB70C
-func_802BB70C:
+lbl_802BB70C:
 /* 802BB70C 002B864C  80 1C 00 00 */	lwz r0, 0(r28)
 /* 802BB710 002B8650  90 01 00 18 */	stw r0, 0x18(r1)
 /* 802BB714 002B8654  7F 63 DB 78 */	mr r3, r27
@@ -668,15 +546,12 @@ func_802BB70C:
 /* 802BB744 002B8684  38 81 00 10 */	addi r4, r1, 0x10
 /* 802BB748 002B8688  4B FE BA 19 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB74C 002B868C  28 1F 00 00 */	cmplwi r31, 0
-/* 802BB750 002B8690  41 82 01 44 */	beq func_802BB894
+/* 802BB750 002B8690  41 82 01 44 */	beq lbl_802BB894
 /* 802BB754 002B8694  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802BB758 002B8698  2C 00 00 51 */	cmpwi r0, 0x51
-/* 802BB75C 002B869C  41 82 00 08 */	beq func_802BB764
-/* 802BB760 002B86A0  48 00 01 34 */	b func_802BB894
-
-/* 802BB764 0088 .text      func_802BB764                  func_802BB764                  */
-.global func_802BB764
-func_802BB764:
+/* 802BB75C 002B869C  41 82 00 08 */	beq lbl_802BB764
+/* 802BB760 002B86A0  48 00 01 34 */	b lbl_802BB894
+lbl_802BB764:
 /* 802BB764 002B86A4  3B DD 00 54 */	addi r30, r29, 0x54
 /* 802BB768 002B86A8  C0 3D 00 54 */	lfs f1, 0x54(r29)
 /* 802BB76C 002B86AC  C0 1F 00 08 */	lfs f0, 8(r31)
@@ -689,7 +564,7 @@ func_802BB764:
 /* 802BB788 002B86C8  48 00 03 41 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB78C 002B86CC  54 7F E7 3E */	rlwinm r31, r3, 0x1c, 0x1c, 0x1f
 /* 802BB790 002B86D0  28 1F 00 08 */	cmplwi r31, 8
-/* 802BB794 002B86D4  40 81 00 58 */	ble func_802BB7EC
+/* 802BB794 002B86D4  40 81 00 58 */	ble lbl_802BB7EC
 /* 802BB798 002B86D8  4B FE E1 3D */	bl getRandom_0_1__6Z2CalcFv
 /* 802BB79C 002B86DC  FF E0 08 90 */	fmr f31, f1
 /* 802BB7A0 002B86E0  C8 22 C0 88 */	lfd f1, Z2SoundInfo__LIT_973-_SDA2_BASE_(r2)
@@ -710,11 +585,8 @@ func_802BB764:
 /* 802BB7DC 002B871C  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 802BB7E0 002B8720  EC 00 08 2A */	fadds f0, f0, f1
 /* 802BB7E4 002B8724  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 802BB7E8 002B8728  48 00 00 38 */	b func_802BB820
-
-/* 802BB7EC 0034 .text      func_802BB7EC                  func_802BB7EC                  */
-.global func_802BB7EC
-func_802BB7EC:
+/* 802BB7E8 002B8728  48 00 00 38 */	b lbl_802BB820
+lbl_802BB7EC:
 /* 802BB7EC 002B872C  4B FE E0 E9 */	bl getRandom_0_1__6Z2CalcFv
 /* 802BB7F0 002B8730  C8 42 C0 88 */	lfd f2, Z2SoundInfo__LIT_973-_SDA2_BASE_(r2)
 /* 802BB7F4 002B8734  93 E1 00 24 */	stw r31, 0x24(r1)
@@ -728,17 +600,14 @@ func_802BB7EC:
 /* 802BB814 002B8754  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 802BB818 002B8758  EC 00 08 2A */	fadds f0, f0, f1
 /* 802BB81C 002B875C  D0 1E 00 00 */	stfs f0, 0(r30)
-
-/* 802BB820 0054 .text      func_802BB820                  func_802BB820                  */
-.global func_802BB820
-func_802BB820:
+lbl_802BB820:
 /* 802BB820 002B8760  80 1C 00 00 */	lwz r0, 0(r28)
 /* 802BB824 002B8764  90 01 00 08 */	stw r0, 8(r1)
 /* 802BB828 002B8768  7F 63 DB 78 */	mr r3, r27
 /* 802BB82C 002B876C  38 81 00 08 */	addi r4, r1, 8
 /* 802BB830 002B8770  48 00 02 99 */	bl getSwBit__11Z2SoundInfoCF10JAISoundID
 /* 802BB834 002B8774  54 7E 27 3F */	rlwinm. r30, r3, 4, 0x1c, 0x1f
-/* 802BB838 002B8778  41 82 00 5C */	beq func_802BB894
+/* 802BB838 002B8778  41 82 00 5C */	beq lbl_802BB894
 /* 802BB83C 002B877C  4B FE E0 99 */	bl getRandom_0_1__6Z2CalcFv
 /* 802BB840 002B8780  C8 42 C0 88 */	lfd f2, Z2SoundInfo__LIT_973-_SDA2_BASE_(r2)
 /* 802BB844 002B8784  93 C1 00 24 */	stw r30, 0x24(r1)
@@ -751,32 +620,20 @@ func_802BB820:
 /* 802BB860 002B87A0  EC 00 00 72 */	fmuls f0, f0, f1
 /* 802BB864 002B87A4  C0 22 C0 7C */	lfs f1, LIT_968-_SDA2_BASE_(r2)
 /* 802BB868 002B87A8  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 802BB86C 002B87AC  40 80 00 08 */	bge func_802BB874
-/* 802BB870 002B87B0  48 00 00 18 */	b func_802BB888
-
-/* 802BB874 0010 .text      func_802BB874                  func_802BB874                  */
-.global func_802BB874
-func_802BB874:
+/* 802BB86C 002B87AC  40 80 00 08 */	bge lbl_802BB874
+/* 802BB870 002B87B0  48 00 00 18 */	b lbl_802BB888
+lbl_802BB874:
 /* 802BB874 002B87B4  C0 22 C0 80 */	lfs f1, Z2SoundInfo__LIT_969-_SDA2_BASE_(r2)
 /* 802BB878 002B87B8  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 802BB87C 002B87BC  40 81 00 08 */	ble func_802BB884
-/* 802BB880 002B87C0  48 00 00 08 */	b func_802BB888
-
-/* 802BB884 0004 .text      func_802BB884                  func_802BB884                  */
-.global func_802BB884
-func_802BB884:
+/* 802BB87C 002B87BC  40 81 00 08 */	ble lbl_802BB884
+/* 802BB880 002B87C0  48 00 00 08 */	b lbl_802BB888
+lbl_802BB884:
 /* 802BB884 002B87C4  FC 20 00 90 */	fmr f1, f0
-
-/* 802BB888 000C .text      func_802BB888                  func_802BB888                  */
-.global func_802BB888
-func_802BB888:
+lbl_802BB888:
 /* 802BB888 002B87C8  C0 1D 00 4C */	lfs f0, 0x4c(r29)
 /* 802BB88C 002B87CC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 802BB890 002B87D0  D0 1D 00 4C */	stfs f0, 0x4c(r29)
-
-/* 802BB894 0020 .text      func_802BB894                  func_802BB894                  */
-.global func_802BB894
-func_802BB894:
+lbl_802BB894:
 /* 802BB894 002B87D4  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
 /* 802BB898 002B87D8  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 802BB89C 002B87DC  39 61 00 40 */	addi r11, r1, 0x40
@@ -788,6 +645,7 @@ func_802BB894:
 
 /* 802BB8B4 002C .text      getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq */
 .global getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq
+getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq:
 getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq:
 /* 802BB8B4 002B87F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BB8B8 002B87F8  7C 08 02 A6 */	mflr r0
@@ -801,8 +659,9 @@ getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq:
 /* 802BB8D8 002B8818  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BB8DC 002B881C  4E 80 00 20 */	blr 
 
-/* 802BB8E0 0050 .text      getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream */
+/* 802BB8E0 0130 .text      getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream */
 .global getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream
+getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream:
 getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream:
 /* 802BB8E0 002B8820  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BB8E4 002B8824  7C 08 02 A6 */	mflr r0
@@ -822,12 +681,9 @@ getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream:
 /* 802BB91C 002B885C  4B FE B8 45 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BB920 002B8860  54 60 06 36 */	rlwinm r0, r3, 0, 0x18, 0x1b
 /* 802BB924 002B8864  2C 00 00 70 */	cmpwi r0, 0x70
-/* 802BB928 002B8868  41 82 00 08 */	beq func_802BB930
-/* 802BB92C 002B886C  48 00 00 CC */	b func_802BB9F8
-
-/* 802BB930 003C .text      func_802BB930                  func_802BB930                  */
-.global func_802BB930
-func_802BB930:
+/* 802BB928 002B8868  41 82 00 08 */	beq lbl_802BB930
+/* 802BB92C 002B886C  48 00 00 CC */	b lbl_802BB9F8
+lbl_802BB930:
 /* 802BB930 002B8870  80 1B 00 00 */	lwz r0, 0(r27)
 /* 802BB934 002B8874  90 01 00 08 */	stw r0, 8(r1)
 /* 802BB938 002B8878  80 6D 85 D8 */	lwz r3, sInstance__34JASGlobalInstance_SUB_013JAUSoundTable_SUB_1-_SDA_BASE_(r13)
@@ -842,13 +698,10 @@ func_802BB930:
 /* 802BB95C 002B889C  7C 7E 1B 78 */	mr r30, r3
 /* 802BB960 002B88A0  3B 80 00 00 */	li r28, 0
 /* 802BB964 002B88A4  83 E2 C0 90 */	lwz r31, STRM_CH_SHIFT__20JAUStdSoundTableType-_SDA2_BASE_(r2)
-/* 802BB968 002B88A8  48 00 00 80 */	b func_802BB9E8
-
-/* 802BB96C 0040 .text      func_802BB96C                  func_802BB96C                  */
-.global func_802BB96C
-func_802BB96C:
+/* 802BB968 002B88A8  48 00 00 80 */	b lbl_802BB9E8
+lbl_802BB96C:
 /* 802BB96C 002B88AC  57 BB 07 BF */	clrlwi. r27, r29, 0x1e
-/* 802BB970 002B88B0  41 82 00 68 */	beq func_802BB9D8
+/* 802BB970 002B88B0  41 82 00 68 */	beq lbl_802BB9D8
 /* 802BB974 002B88B4  7F 43 D3 78 */	mr r3, r26
 /* 802BB978 002B88B8  7F 84 E3 78 */	mr r4, r28
 /* 802BB97C 002B88BC  81 9A 00 00 */	lwz r12, 0(r26)
@@ -856,60 +709,39 @@ func_802BB96C:
 /* 802BB984 002B88C4  7D 89 03 A6 */	mtctr r12
 /* 802BB988 002B88C8  4E 80 04 21 */	bctrl 
 /* 802BB98C 002B88CC  28 03 00 00 */	cmplwi r3, 0
-/* 802BB990 002B88D0  41 82 00 48 */	beq func_802BB9D8
+/* 802BB990 002B88D0  41 82 00 48 */	beq lbl_802BB9D8
 /* 802BB994 002B88D4  2C 1B 00 02 */	cmpwi r27, 2
-/* 802BB998 002B88D8  41 82 00 2C */	beq func_802BB9C4
-/* 802BB99C 002B88DC  40 80 00 10 */	bge func_802BB9AC
+/* 802BB998 002B88D8  41 82 00 2C */	beq lbl_802BB9C4
+/* 802BB99C 002B88DC  40 80 00 10 */	bge lbl_802BB9AC
 /* 802BB9A0 002B88E0  2C 1B 00 01 */	cmpwi r27, 1
-/* 802BB9A4 002B88E4  40 80 00 14 */	bge func_802BB9B8
-/* 802BB9A8 002B88E8  48 00 00 30 */	b func_802BB9D8
-
-/* 802BB9AC 000C .text      func_802BB9AC                  func_802BB9AC                  */
-.global func_802BB9AC
-func_802BB9AC:
+/* 802BB9A4 002B88E4  40 80 00 14 */	bge lbl_802BB9B8
+/* 802BB9A8 002B88E8  48 00 00 30 */	b lbl_802BB9D8
+lbl_802BB9AC:
 /* 802BB9AC 002B88EC  2C 1B 00 04 */	cmpwi r27, 4
-/* 802BB9B0 002B88F0  40 80 00 28 */	bge func_802BB9D8
-/* 802BB9B4 002B88F4  48 00 00 1C */	b func_802BB9D0
-
-/* 802BB9B8 000C .text      func_802BB9B8                  func_802BB9B8                  */
-.global func_802BB9B8
-func_802BB9B8:
+/* 802BB9B0 002B88F0  40 80 00 28 */	bge lbl_802BB9D8
+/* 802BB9B4 002B88F4  48 00 00 1C */	b lbl_802BB9D0
+lbl_802BB9B8:
 /* 802BB9B8 002B88F8  C0 02 C0 94 */	lfs f0, LIT_1010-_SDA2_BASE_(r2)
 /* 802BB9BC 002B88FC  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 802BB9C0 002B8900  48 00 00 18 */	b func_802BB9D8
-
-/* 802BB9C4 000C .text      func_802BB9C4                  func_802BB9C4                  */
-.global func_802BB9C4
-func_802BB9C4:
+/* 802BB9C0 002B8900  48 00 00 18 */	b lbl_802BB9D8
+lbl_802BB9C4:
 /* 802BB9C4 002B8904  C0 02 C0 7C */	lfs f0, LIT_968-_SDA2_BASE_(r2)
 /* 802BB9C8 002B8908  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 802BB9CC 002B890C  48 00 00 0C */	b func_802BB9D8
-
-/* 802BB9D0 0008 .text      func_802BB9D0                  func_802BB9D0                  */
-.global func_802BB9D0
-func_802BB9D0:
+/* 802BB9CC 002B890C  48 00 00 0C */	b lbl_802BB9D8
+lbl_802BB9D0:
 /* 802BB9D0 002B8910  C0 02 C0 80 */	lfs f0, Z2SoundInfo__LIT_969-_SDA2_BASE_(r2)
 /* 802BB9D4 002B8914  D0 03 00 0C */	stfs f0, 0xc(r3)
-
-/* 802BB9D8 0010 .text      func_802BB9D8                  func_802BB9D8                  */
-.global func_802BB9D8
-func_802BB9D8:
+lbl_802BB9D8:
 /* 802BB9D8 002B8918  57 A0 04 3E */	clrlwi r0, r29, 0x10
 /* 802BB9DC 002B891C  7C 00 FE 30 */	sraw r0, r0, r31
 /* 802BB9E0 002B8920  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 802BB9E4 002B8924  3B 9C 00 01 */	addi r28, r28, 1
-
-/* 802BB9E8 0010 .text      func_802BB9E8                  func_802BB9E8                  */
-.global func_802BB9E8
-func_802BB9E8:
+lbl_802BB9E8:
 /* 802BB9E8 002B8928  7C 1C F0 00 */	cmpw r28, r30
-/* 802BB9EC 002B892C  40 80 00 0C */	bge func_802BB9F8
+/* 802BB9EC 002B892C  40 80 00 0C */	bge lbl_802BB9F8
 /* 802BB9F0 002B8930  57 A0 04 3F */	clrlwi. r0, r29, 0x10
-/* 802BB9F4 002B8934  40 82 FF 78 */	bne func_802BB96C
-
-/* 802BB9F8 0018 .text      func_802BB9F8                  func_802BB9F8                  */
-.global func_802BB9F8
-func_802BB9F8:
+/* 802BB9F4 002B8934  40 82 FF 78 */	bne lbl_802BB96C
+lbl_802BB9F8:
 /* 802BB9F8 002B8938  39 61 00 30 */	addi r11, r1, 0x30
 /* 802BB9FC 002B893C  48 0A 68 21 */	bl _restgpr_26
 /* 802BBA00 002B8940  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -917,8 +749,9 @@ func_802BB9F8:
 /* 802BBA08 002B8948  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BBA0C 002B894C  4E 80 00 20 */	blr 
 
-/* 802BBA10 0038 .text      getStreamFilePath__11Z2SoundInfoF10JAISoundID getStreamFilePath__11Z2SoundInfoF10JAISoundID */
+/* 802BBA10 0078 .text      getStreamFilePath__11Z2SoundInfoF10JAISoundID getStreamFilePath__11Z2SoundInfoF10JAISoundID */
 .global getStreamFilePath__11Z2SoundInfoF10JAISoundID
+getStreamFilePath__11Z2SoundInfoF10JAISoundID:
 getStreamFilePath__11Z2SoundInfoF10JAISoundID:
 /* 802BBA10 002B8950  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BBA14 002B8954  7C 08 02 A6 */	mflr r0
@@ -932,12 +765,9 @@ getStreamFilePath__11Z2SoundInfoF10JAISoundID:
 /* 802BBA34 002B8974  4B FE B7 2D */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BBA38 002B8978  54 60 06 36 */	rlwinm r0, r3, 0, 0x18, 0x1b
 /* 802BBA3C 002B897C  2C 00 00 70 */	cmpwi r0, 0x70
-/* 802BBA40 002B8980  41 82 00 08 */	beq func_802BBA48
-/* 802BBA44 002B8984  48 00 00 2C */	b func_802BBA70
-
-/* 802BBA48 0028 .text      func_802BBA48                  func_802BBA48                  */
-.global func_802BBA48
-func_802BBA48:
+/* 802BBA40 002B8980  41 82 00 08 */	beq lbl_802BBA48
+/* 802BBA44 002B8984  48 00 00 2C */	b lbl_802BBA70
+lbl_802BBA48:
 /* 802BBA48 002B8988  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BBA4C 002B898C  90 01 00 08 */	stw r0, 8(r1)
 /* 802BBA50 002B8990  80 6D 85 D8 */	lwz r3, sInstance__34JASGlobalInstance_SUB_013JAUSoundTable_SUB_1-_SDA_BASE_(r13)
@@ -947,24 +777,19 @@ func_802BBA48:
 /* 802BBA60 002B89A0  80 84 00 00 */	lwz r4, 0(r4)
 /* 802BBA64 002B89A4  80 03 00 04 */	lwz r0, 4(r3)
 /* 802BBA68 002B89A8  7C 64 02 14 */	add r3, r4, r0
-/* 802BBA6C 002B89AC  48 00 00 08 */	b func_802BBA74
-
-/* 802BBA70 0004 .text      func_802BBA70                  func_802BBA70                  */
-.global func_802BBA70
-func_802BBA70:
+/* 802BBA6C 002B89AC  48 00 00 08 */	b lbl_802BBA74
+lbl_802BBA70:
 /* 802BBA70 002B89B0  38 60 00 00 */	li r3, 0
-
-/* 802BBA74 0014 .text      func_802BBA74                  func_802BBA74                  */
-.global func_802BBA74
-func_802BBA74:
+lbl_802BBA74:
 /* 802BBA74 002B89B4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802BBA78 002B89B8  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802BBA7C 002B89BC  7C 08 03 A6 */	mtlr r0
 /* 802BBA80 002B89C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BBA84 002B89C4  4E 80 00 20 */	blr 
 
-/* 802BBA88 002C .text      getStreamFileEntry__11Z2SoundInfoF10JAISoundID getStreamFileEntry__11Z2SoundInfoF10JAISoundID */
+/* 802BBA88 0040 .text      getStreamFileEntry__11Z2SoundInfoF10JAISoundID getStreamFileEntry__11Z2SoundInfoF10JAISoundID */
 .global getStreamFileEntry__11Z2SoundInfoF10JAISoundID
+getStreamFileEntry__11Z2SoundInfoF10JAISoundID:
 getStreamFileEntry__11Z2SoundInfoF10JAISoundID:
 /* 802BBA88 002B89C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BBA8C 002B89CC  7C 08 02 A6 */	mflr r0
@@ -974,25 +799,20 @@ getStreamFileEntry__11Z2SoundInfoF10JAISoundID:
 /* 802BBA9C 002B89DC  38 81 00 08 */	addi r4, r1, 8
 /* 802BBAA0 002B89E0  4B FF FF 71 */	bl getStreamFilePath__11Z2SoundInfoF10JAISoundID
 /* 802BBAA4 002B89E4  28 03 00 00 */	cmplwi r3, 0
-/* 802BBAA8 002B89E8  40 82 00 0C */	bne func_802BBAB4
+/* 802BBAA8 002B89E8  40 82 00 0C */	bne lbl_802BBAB4
 /* 802BBAAC 002B89EC  38 60 FF FF */	li r3, -1
-/* 802BBAB0 002B89F0  48 00 00 08 */	b func_802BBAB8
-
-/* 802BBAB4 0004 .text      func_802BBAB4                  func_802BBAB4                  */
-.global func_802BBAB4
-func_802BBAB4:
+/* 802BBAB0 002B89F0  48 00 00 08 */	b lbl_802BBAB8
+lbl_802BBAB4:
 /* 802BBAB4 002B89F4  48 08 CA 75 */	bl DVDConvertPathToEntrynum
-
-/* 802BBAB8 0010 .text      func_802BBAB8                  func_802BBAB8                  */
-.global func_802BBAB8
-func_802BBAB8:
+lbl_802BBAB8:
 /* 802BBAB8 002B89F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802BBABC 002B89FC  7C 08 03 A6 */	mtlr r0
 /* 802BBAC0 002B8A00  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BBAC4 002B8A04  4E 80 00 20 */	blr 
 
-/* 802BBAC8 005C .text      getSwBit__11Z2SoundInfoCF10JAISoundID getSwBit__11Z2SoundInfoCF10JAISoundID */
+/* 802BBAC8 0080 .text      getSwBit__11Z2SoundInfoCF10JAISoundID getSwBit__11Z2SoundInfoCF10JAISoundID */
 .global getSwBit__11Z2SoundInfoCF10JAISoundID
+getSwBit__11Z2SoundInfoCF10JAISoundID:
 getSwBit__11Z2SoundInfoCF10JAISoundID:
 /* 802BBAC8 002B8A08  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BBACC 002B8A0C  7C 08 02 A6 */	mflr r0
@@ -1012,26 +832,17 @@ getSwBit__11Z2SoundInfoCF10JAISoundID:
 /* 802BBB04 002B8A44  38 81 00 08 */	addi r4, r1, 8
 /* 802BBB08 002B8A48  4B FE B6 59 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BBB0C 002B8A4C  28 1F 00 00 */	cmplwi r31, 0
-/* 802BBB10 002B8A50  41 82 00 1C */	beq func_802BBB2C
+/* 802BBB10 002B8A50  41 82 00 1C */	beq lbl_802BBB2C
 /* 802BBB14 002B8A54  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802BBB18 002B8A58  2C 00 00 51 */	cmpwi r0, 0x51
-/* 802BBB1C 002B8A5C  41 82 00 08 */	beq func_802BBB24
-/* 802BBB20 002B8A60  48 00 00 0C */	b func_802BBB2C
-
-/* 802BBB24 0008 .text      func_802BBB24                  func_802BBB24                  */
-.global func_802BBB24
-func_802BBB24:
+/* 802BBB1C 002B8A5C  41 82 00 08 */	beq lbl_802BBB24
+/* 802BBB20 002B8A60  48 00 00 0C */	b lbl_802BBB2C
+lbl_802BBB24:
 /* 802BBB24 002B8A64  80 7F 00 04 */	lwz r3, 4(r31)
-/* 802BBB28 002B8A68  48 00 00 08 */	b func_802BBB30
-
-/* 802BBB2C 0004 .text      func_802BBB2C                  func_802BBB2C                  */
-.global func_802BBB2C
-func_802BBB2C:
+/* 802BBB28 002B8A68  48 00 00 08 */	b lbl_802BBB30
+lbl_802BBB2C:
 /* 802BBB2C 002B8A6C  38 60 FF FF */	li r3, -1
-
-/* 802BBB30 0018 .text      func_802BBB30                  func_802BBB30                  */
-.global func_802BBB30
-func_802BBB30:
+lbl_802BBB30:
 /* 802BBB30 002B8A70  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802BBB34 002B8A74  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 802BBB38 002B8A78  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1039,8 +850,9 @@ func_802BBB30:
 /* 802BBB40 002B8A80  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BBB44 002B8A84  4E 80 00 20 */	blr 
 
-/* 802BBB48 0080 .text      getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound */
+/* 802BBB48 0098 .text      getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound */
 .global getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound
+getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound:
 getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound:
 /* 802BBB48 002B8A88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BBB4C 002B8A8C  7C 08 02 A6 */	mflr r0
@@ -1061,9 +873,9 @@ getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound:
 /* 802BBB88 002B8AC8  38 81 00 08 */	addi r4, r1, 8
 /* 802BBB8C 002B8ACC  4B FE B5 D5 */	bl getTypeID__13JAUSoundTableCF10JAISoundID
 /* 802BBB90 002B8AD0  28 1F 00 00 */	cmplwi r31, 0
-/* 802BBB94 002B8AD4  41 82 00 34 */	beq func_802BBBC8
+/* 802BBB94 002B8AD4  41 82 00 34 */	beq lbl_802BBBC8
 /* 802BBB98 002B8AD8  54 60 06 73 */	rlwinm. r0, r3, 0, 0x19, 0x19
-/* 802BBB9C 002B8ADC  41 82 00 2C */	beq func_802BBBC8
+/* 802BBB9C 002B8ADC  41 82 00 2C */	beq lbl_802BBBC8
 /* 802BBBA0 002B8AE0  C0 42 C0 98 */	lfs f2, Z2SoundInfo__LIT_1070-_SDA2_BASE_(r2)
 /* 802BBBA4 002B8AE4  88 1F 00 01 */	lbz r0, 1(r31)
 /* 802BBBA8 002B8AE8  C8 22 C0 88 */	lfd f1, Z2SoundInfo__LIT_973-_SDA2_BASE_(r2)
@@ -1074,10 +886,7 @@ getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound:
 /* 802BBBBC 002B8AFC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 802BBBC0 002B8B00  EC 02 00 32 */	fmuls f0, f2, f0
 /* 802BBBC4 002B8B04  D0 1E 00 3C */	stfs f0, 0x3c(r30)
-
-/* 802BBBC8 0018 .text      func_802BBBC8                  func_802BBBC8                  */
-.global func_802BBBC8
-func_802BBBC8:
+lbl_802BBBC8:
 /* 802BBBC8 002B8B08  39 61 00 30 */	addi r11, r1, 0x30
 /* 802BBBCC 002B8B0C  48 0A 66 5D */	bl _restgpr_29
 /* 802BBBD0 002B8B10  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -1085,8 +894,9 @@ func_802BBBC8:
 /* 802BBBD8 002B8B18  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BBBDC 002B8B1C  4E 80 00 20 */	blr 
 
-/* 802BBBE0 0050 .text      __dt__11Z2SoundInfoFv          __dt__11Z2SoundInfoFv          */
+/* 802BBBE0 00DC .text      __dt__11Z2SoundInfoFv          __dt__11Z2SoundInfoFv          */
 .global __dt__11Z2SoundInfoFv
+__dt__11Z2SoundInfoFv:
 __dt__11Z2SoundInfoFv:
 /* 802BBBE0 002B8B20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BBBE4 002B8B24  7C 08 02 A6 */	mflr r0
@@ -1095,7 +905,7 @@ __dt__11Z2SoundInfoFv:
 /* 802BBBF0 002B8B30  93 C1 00 08 */	stw r30, 8(r1)
 /* 802BBBF4 002B8B34  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802BBBF8 002B8B38  7C 9F 23 78 */	mr r31, r4
-/* 802BBBFC 002B8B3C  41 82 00 A4 */	beq func_802BBCA0
+/* 802BBBFC 002B8B3C  41 82 00 A4 */	beq lbl_802BBCA0
 /* 802BBC00 002B8B40  3C 60 80 3D */	lis r3, __vt__11Z2SoundInfo@ha
 /* 802BBC04 002B8B44  38 63 AC 48 */	addi r3, r3, __vt__11Z2SoundInfo@l
 /* 802BBC08 002B8B48  90 7E 00 00 */	stw r3, 0(r30)
@@ -1104,54 +914,42 @@ __dt__11Z2SoundInfoFv:
 /* 802BBC14 002B8B54  38 03 00 34 */	addi r0, r3, 0x34
 /* 802BBC18 002B8B58  90 1E 00 08 */	stw r0, 8(r30)
 /* 802BBC1C 002B8B5C  34 1E 00 0C */	addic. r0, r30, 0xc
-/* 802BBC20 002B8B60  41 82 00 24 */	beq func_802BBC44
+/* 802BBC20 002B8B60  41 82 00 24 */	beq lbl_802BBC44
 /* 802BBC24 002B8B64  34 7E 00 0C */	addic. r3, r30, 0xc
-/* 802BBC28 002B8B68  41 82 00 08 */	beq func_802BBC30
+/* 802BBC28 002B8B68  41 82 00 08 */	beq lbl_802BBC30
 /* 802BBC2C 002B8B6C  38 63 FF F4 */	addi r3, r3, -12
-
-/* 802BBC30 0014 .text      func_802BBC30                  func_802BBC30                  */
-.global func_802BBC30
-func_802BBC30:
+lbl_802BBC30:
 /* 802BBC30 002B8B70  80 0D 85 CC */	lwz r0, sInstance__32JASGlobalInstance_SUB_011Z2SoundInfo_SUB_1-_SDA_BASE_(r13)
 /* 802BBC34 002B8B74  7C 00 18 40 */	cmplw r0, r3
-/* 802BBC38 002B8B78  40 82 00 0C */	bne func_802BBC44
+/* 802BBC38 002B8B78  40 82 00 0C */	bne lbl_802BBC44
 /* 802BBC3C 002B8B7C  38 00 00 00 */	li r0, 0
 /* 802BBC40 002B8B80  90 0D 85 CC */	stw r0, sInstance__32JASGlobalInstance_SUB_011Z2SoundInfo_SUB_1-_SDA_BASE_(r13)
-
-/* 802BBC44 0040 .text      func_802BBC44                  func_802BBC44                  */
-.global func_802BBC44
-func_802BBC44:
+lbl_802BBC44:
 /* 802BBC44 002B8B84  38 7E 00 08 */	addi r3, r30, 8
 /* 802BBC48 002B8B88  38 80 00 00 */	li r4, 0
 /* 802BBC4C 002B8B8C  4B FE 7E 8D */	bl __dt__16JAIStreamDataMgrFv
 /* 802BBC50 002B8B90  34 1E 00 04 */	addic. r0, r30, 4
-/* 802BBC54 002B8B94  41 82 00 30 */	beq func_802BBC84
+/* 802BBC54 002B8B94  41 82 00 30 */	beq lbl_802BBC84
 /* 802BBC58 002B8B98  3C 60 80 3A */	lis r3, __vt__12JAUSoundInfo@ha
 /* 802BBC5C 002B8B9C  38 03 2F 4C */	addi r0, r3, __vt__12JAUSoundInfo@l
 /* 802BBC60 002B8BA0  90 1E 00 04 */	stw r0, 4(r30)
 /* 802BBC64 002B8BA4  34 1E 00 04 */	addic. r0, r30, 4
-/* 802BBC68 002B8BA8  41 82 00 1C */	beq func_802BBC84
+/* 802BBC68 002B8BA8  41 82 00 1C */	beq lbl_802BBC84
 /* 802BBC6C 002B8BAC  80 6D 85 D0 */	lwz r3, sInstance__33JASGlobalInstance_SUB_012JAUSoundInfo_SUB_1-_SDA_BASE_(r13)
 /* 802BBC70 002B8BB0  38 1E 00 04 */	addi r0, r30, 4
 /* 802BBC74 002B8BB4  7C 03 00 40 */	cmplw r3, r0
-/* 802BBC78 002B8BB8  40 82 00 0C */	bne func_802BBC84
+/* 802BBC78 002B8BB8  40 82 00 0C */	bne lbl_802BBC84
 /* 802BBC7C 002B8BBC  38 00 00 00 */	li r0, 0
 /* 802BBC80 002B8BC0  90 0D 85 D0 */	stw r0, sInstance__33JASGlobalInstance_SUB_012JAUSoundInfo_SUB_1-_SDA_BASE_(r13)
-
-/* 802BBC84 001C .text      func_802BBC84                  func_802BBC84                  */
-.global func_802BBC84
-func_802BBC84:
+lbl_802BBC84:
 /* 802BBC84 002B8BC4  7F C3 F3 78 */	mr r3, r30
 /* 802BBC88 002B8BC8  38 80 00 00 */	li r4, 0
 /* 802BBC8C 002B8BCC  4B FE 70 C5 */	bl __dt__12JAISoundInfoFv
 /* 802BBC90 002B8BD0  7F E0 07 35 */	extsh. r0, r31
-/* 802BBC94 002B8BD4  40 81 00 0C */	ble func_802BBCA0
+/* 802BBC94 002B8BD4  40 81 00 0C */	ble lbl_802BBCA0
 /* 802BBC98 002B8BD8  7F C3 F3 78 */	mr r3, r30
 /* 802BBC9C 002B8BDC  48 01 30 A1 */	bl __dl__FPv
-
-/* 802BBCA0 001C .text      func_802BBCA0                  func_802BBCA0                  */
-.global func_802BBCA0
-func_802BBCA0:
+lbl_802BBCA0:
 /* 802BBCA0 002B8BE0  7F C3 F3 78 */	mr r3, r30
 /* 802BBCA4 002B8BE4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802BBCA8 002B8BE8  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1160,26 +958,30 @@ func_802BBCA0:
 /* 802BBCB4 002B8BF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BBCB8 002B8BF8  4E 80 00 20 */	blr 
 
-/* 802BBCBC 0008 .text      func_802BBCBC                  @4@getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID */
+/* 802BBCBC 0008 .text      @4@getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID func_802BBCBC                  */
 .global func_802BBCBC
+func_802BBCBC:
 func_802BBCBC:
 /* 802BBCBC 002B8BFC  38 63 FF FC */	addi r3, r3, -4
 /* 802BBCC0 002B8C00  4B FF F3 4C */	b getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID
 
-/* 802BBCC4 0008 .text      func_802BBCC4                  @4@getAudibleSw__11Z2SoundInfoCF10JAISoundID */
+/* 802BBCC4 0008 .text      @4@getAudibleSw__11Z2SoundInfoCF10JAISoundID func_802BBCC4                  */
 .global func_802BBCC4
+func_802BBCC4:
 func_802BBCC4:
 /* 802BBCC4 002B8C04  38 63 FF FC */	addi r3, r3, -4
 /* 802BBCC8 002B8C08  4B FF F7 80 */	b getAudibleSw__11Z2SoundInfoCF10JAISoundID
 
-/* 802BBCCC 0008 .text      func_802BBCCC                  @8@__dt__11Z2SoundInfoFv       */
+/* 802BBCCC 0008 .text      @8@__dt__11Z2SoundInfoFv       func_802BBCCC                  */
 .global func_802BBCCC
+func_802BBCCC:
 func_802BBCCC:
 /* 802BBCCC 002B8C0C  38 63 FF F8 */	addi r3, r3, -8
 /* 802BBCD0 002B8C10  4B FF FF 10 */	b __dt__11Z2SoundInfoFv
 
-/* 802BBCD4 0008 .text      func_802BBCD4                  @8@getStreamFileEntry__11Z2SoundInfoF10JAISoundID */
+/* 802BBCD4 0008 .text      @8@getStreamFileEntry__11Z2SoundInfoF10JAISoundID func_802BBCD4                  */
 .global func_802BBCD4
+func_802BBCD4:
 func_802BBCD4:
 /* 802BBCD4 002B8C14  38 63 FF F8 */	addi r3, r3, -8
 /* 802BBCD8 002B8C18  4B FF FD B0 */	b getStreamFileEntry__11Z2SoundInfoF10JAISoundID
@@ -1192,54 +994,69 @@ func_802BBCD4:
 /* 803CAC48 0050 .data      __vt__11Z2SoundInfo            __vt__11Z2SoundInfo            */
 .global __vt__11Z2SoundInfo
 __vt__11Z2SoundInfo:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2b, 0xb0, 0x90, 0x80, 0x2b, 0xb0, 0xd8 /* baserom.dol+0x3c7c48 */
-.byte 0x80, 0x2b, 0xb0, 0xe0, 0x80, 0x2b, 0xb6, 0xdc, 0x80, 0x2b, 0xb8, 0xb4, 0x80, 0x2b, 0xb8, 0xe0 /* baserom.dol+0x3c7c58 */
-.byte 0x80, 0x2b, 0xbb, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2b, 0xbc, 0xc4 /* baserom.dol+0x3c7c68 */
-.byte 0x80, 0x2b, 0xbc, 0xbc, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2b, 0xbc, 0xd4 /* baserom.dol+0x3c7c78 */
-.byte 0x80, 0x2b, 0xbc, 0xcc, 0x80, 0x2b, 0xb4, 0x48, 0x80, 0x2b, 0xb0, 0x0c, 0x80, 0x2b, 0xba, 0x88 /* baserom.dol+0x3c7c88 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte getSoundType__11Z2SoundInfoCF10JAISoundID
+.4byte getCategory__11Z2SoundInfoCF10JAISoundID
+.4byte getPriority__11Z2SoundInfoCF10JAISoundID
+.4byte getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe
+.4byte getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq
+.4byte getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream
+.4byte __dt__11Z2SoundInfoFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_802BBCC4
+.4byte func_802BBCBC
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_802BBCD4
+.4byte func_802BBCCC
+.4byte getAudibleSw__11Z2SoundInfoCF10JAISoundID
+.4byte getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID
+.4byte getStreamFileEntry__11Z2SoundInfoF10JAISoundID
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455A68 0004 .sdata2    LIT_963                        @963                           */
+/* 80455A68 0004 .sdata2    @963                           LIT_963                        */
 .global LIT_963
 LIT_963:
 .byte 0x41, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48c8 */
 
-/* 80455A6C 0004 .sdata2    LIT_964                        @964                           */
+/* 80455A6C 0004 .sdata2    @964                           LIT_964                        */
 .global LIT_964
 LIT_964:
 .byte 0x41, 0x70, 0x00, 0x00 /* baserom.dol+0x3d48cc */
 
-/* 80455A70 0004 .sdata2    LIT_965                        @965                           */
+/* 80455A70 0004 .sdata2    @965                           LIT_965                        */
 .global LIT_965
 LIT_965:
 .byte 0x41, 0x80, 0x00, 0x00 /* baserom.dol+0x3d48d0 */
 
-/* 80455A74 0004 .sdata2    LIT_966                        @966                           */
+/* 80455A74 0004 .sdata2    @966                           LIT_966                        */
 .global LIT_966
 LIT_966:
 .byte 0x41, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d48d4 */
 
-/* 80455A78 0004 .sdata2    LIT_967                        @967                           */
+/* 80455A78 0004 .sdata2    @967                           LIT_967                        */
 .global LIT_967
 LIT_967:
 .byte 0x42, 0x40, 0x00, 0x00 /* baserom.dol+0x3d48d8 */
 
-/* 80455A7C 0004 .sdata2    LIT_968                        @968                           */
+/* 80455A7C 0004 .sdata2    @968                           LIT_968                        */
 .global LIT_968
 LIT_968:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48dc */
 
-/* 80455A80 0004 .sdata2    Z2SoundInfo__LIT_969           @969                           */
+/* 80455A80 0004 .sdata2    @969                           Z2SoundInfo__LIT_969           */
 .global Z2SoundInfo__LIT_969
 Z2SoundInfo__LIT_969:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d48e0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48e4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80455A88 0008 .sdata2    Z2SoundInfo__LIT_973           @973                           */
+/* 80455A88 0008 .sdata2    @973                           Z2SoundInfo__LIT_973           */
 .global Z2SoundInfo__LIT_973
 Z2SoundInfo__LIT_973:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48e8 */
@@ -1249,14 +1066,14 @@ Z2SoundInfo__LIT_973:
 STRM_CH_SHIFT__20JAUStdSoundTableType:
 .byte 0x00, 0x00, 0x00, 0x02 /* baserom.dol+0x3d48f0 */
 
-/* 80455A94 0004 .sdata2    LIT_1010                       @1010                          */
+/* 80455A94 0004 .sdata2    @1010                          LIT_1010                       */
 .global LIT_1010
 LIT_1010:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48f4 */
 
-/* 80455A98 0004 .sdata2    Z2SoundInfo__LIT_1070          @1070                          */
+/* 80455A98 0004 .sdata2    @1070                          Z2SoundInfo__LIT_1070          */
 .global Z2SoundInfo__LIT_1070
 Z2SoundInfo__LIT_1070:
 .byte 0x3c, 0x01, 0x02, 0x04 /* baserom.dol+0x3d48f8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d48fc */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

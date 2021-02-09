@@ -7,37 +7,34 @@
 /* 802E495C 0004 .text      create__12JUTAssertionFv       create__12JUTAssertionFv       */
 .global create__12JUTAssertionFv
 create__12JUTAssertionFv:
+create__12JUTAssertionFv:
 /* 802E495C 002E189C  4E 80 00 20 */	blr 
 
-/* 802E4960 0014 .text      flush_subroutine__12JUTAssertionFv flush_subroutine__12JUTAssertionFv */
+/* 802E4960 003C .text      flush_subroutine__12JUTAssertionFv flush_subroutine__12JUTAssertionFv */
 .global flush_subroutine__12JUTAssertionFv
 flush_subroutine__12JUTAssertionFv:
-/* 802E4960 002E18A0  80 6D 8F B0 */	lwz r3, sym_80451530-_SDA_BASE_(r13)
+flush_subroutine__12JUTAssertionFv:
+/* 802E4960 002E18A0  80 6D 8F B0 */	lwz r3, data_80451530-_SDA_BASE_(r13)
 /* 802E4964 002E18A4  28 03 00 00 */	cmplwi r3, 0
-/* 802E4968 002E18A8  40 82 00 0C */	bne func_802E4974
+/* 802E4968 002E18A8  40 82 00 0C */	bne lbl_802E4974
 /* 802E496C 002E18AC  38 60 00 00 */	li r3, 0
 /* 802E4970 002E18B0  4E 80 00 20 */	blr 
-
-/* 802E4974 0014 .text      func_802E4974                  func_802E4974                  */
-.global func_802E4974
-func_802E4974:
+lbl_802E4974:
 /* 802E4974 002E18B4  3C 03 00 01 */	addis r0, r3, 1
 /* 802E4978 002E18B8  28 00 FF FF */	cmplwi r0, 0xffff
-/* 802E497C 002E18BC  41 82 00 0C */	beq func_802E4988
+/* 802E497C 002E18BC  41 82 00 0C */	beq lbl_802E4988
 /* 802E4980 002E18C0  38 03 FF FF */	addi r0, r3, -1
-/* 802E4984 002E18C4  90 0D 8F B0 */	stw r0, sym_80451530-_SDA_BASE_(r13)
-
-/* 802E4988 0014 .text      func_802E4988                  func_802E4988                  */
-.global func_802E4988
-func_802E4988:
-/* 802E4988 002E18C8  80 6D 8F B0 */	lwz r3, sym_80451530-_SDA_BASE_(r13)
+/* 802E4984 002E18C4  90 0D 8F B0 */	stw r0, data_80451530-_SDA_BASE_(r13)
+lbl_802E4988:
+/* 802E4988 002E18C8  80 6D 8F B0 */	lwz r3, data_80451530-_SDA_BASE_(r13)
 /* 802E498C 002E18CC  28 03 00 05 */	cmplwi r3, 5
 /* 802E4990 002E18D0  4C 80 00 20 */	bgelr 
 /* 802E4994 002E18D4  38 60 00 00 */	li r3, 0
 /* 802E4998 002E18D8  4E 80 00 20 */	blr 
 
-/* 802E499C 00A4 .text      flushMessage__12JUTAssertionFv flushMessage__12JUTAssertionFv */
+/* 802E499C 00B8 .text      flushMessage__12JUTAssertionFv flushMessage__12JUTAssertionFv */
 .global flushMessage__12JUTAssertionFv
+flushMessage__12JUTAssertionFv:
 flushMessage__12JUTAssertionFv:
 /* 802E499C 002E18DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E49A0 002E18E0  7C 08 02 A6 */	mflr r0
@@ -45,10 +42,10 @@ flushMessage__12JUTAssertionFv:
 /* 802E49A8 002E18E8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802E49AC 002E18EC  4B FF FF B5 */	bl flush_subroutine__12JUTAssertionFv
 /* 802E49B0 002E18F0  28 03 00 00 */	cmplwi r3, 0
-/* 802E49B4 002E18F4  41 82 00 8C */	beq func_802E4A40
-/* 802E49B8 002E18F8  88 0D 83 78 */	lbz r0, sym_804508F8-_SDA_BASE_(r13)
+/* 802E49B4 002E18F4  41 82 00 8C */	beq lbl_802E4A40
+/* 802E49B8 002E18F8  88 0D 83 78 */	lbz r0, data_804508F8-_SDA_BASE_(r13)
 /* 802E49BC 002E18FC  28 00 00 01 */	cmplwi r0, 1
-/* 802E49C0 002E1900  40 82 00 80 */	bne func_802E4A40
+/* 802E49C0 002E1900  40 82 00 80 */	bne lbl_802E4A40
 /* 802E49C4 002E1904  83 ED 8F A8 */	lwz r31, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 /* 802E49C8 002E1908  80 1F 00 18 */	lwz r0, 0x18(r31)
 /* 802E49CC 002E190C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -66,32 +63,30 @@ flushMessage__12JUTAssertionFv:
 /* 802E49FC 002E193C  7F E3 FB 78 */	mr r3, r31
 /* 802E4A00 002E1940  38 80 00 10 */	li r4, 0x10
 /* 802E4A04 002E1944  38 A0 00 10 */	li r5, 0x10
-/* 802E4A08 002E1948  3C C0 80 43 */	lis r6, sym_80434870@ha
-/* 802E4A0C 002E194C  38 C6 48 70 */	addi r6, r6, sym_80434870@l
+/* 802E4A08 002E1948  3C C0 80 43 */	lis r6, data_80434870@ha
+/* 802E4A0C 002E194C  38 C6 48 70 */	addi r6, r6, data_80434870@l
 /* 802E4A10 002E1950  4B FF FC C9 */	bl drawString__14JUTDirectPrintFUsUsPc
 /* 802E4A14 002E1954  7F E3 FB 78 */	mr r3, r31
 /* 802E4A18 002E1958  38 80 00 10 */	li r4, 0x10
 /* 802E4A1C 002E195C  38 A0 00 18 */	li r5, 0x18
-/* 802E4A20 002E1960  3C C0 80 43 */	lis r6, sym_804348B0@ha
-/* 802E4A24 002E1964  38 C6 48 B0 */	addi r6, r6, sym_804348B0@l
+/* 802E4A20 002E1960  3C C0 80 43 */	lis r6, data_804348B0@ha
+/* 802E4A24 002E1964  38 C6 48 B0 */	addi r6, r6, data_804348B0@l
 /* 802E4A28 002E1968  4B FF FC B1 */	bl drawString__14JUTDirectPrintFUsUsPc
 /* 802E4A2C 002E196C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E4A30 002E1970  90 01 00 08 */	stw r0, 8(r1)
 /* 802E4A34 002E1974  7F E3 FB 78 */	mr r3, r31
 /* 802E4A38 002E1978  38 81 00 08 */	addi r4, r1, 8
 /* 802E4A3C 002E197C  4B FF FD 5D */	bl setCharColor__14JUTDirectPrintFQ28JUtility6TColor
-
-/* 802E4A40 0014 .text      func_802E4A40                  func_802E4A40                  */
-.global func_802E4A40
-func_802E4A40:
+lbl_802E4A40:
 /* 802E4A40 002E1980  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802E4A44 002E1984  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802E4A48 002E1988  7C 08 03 A6 */	mtlr r0
 /* 802E4A4C 002E198C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4A50 002E1990  4E 80 00 20 */	blr 
 
-/* 802E4A54 01C0 .text      flushMessage_dbPrint__12JUTAssertionFv flushMessage_dbPrint__12JUTAssertionFv */
+/* 802E4A54 01E0 .text      flushMessage_dbPrint__12JUTAssertionFv flushMessage_dbPrint__12JUTAssertionFv */
 .global flushMessage_dbPrint__12JUTAssertionFv
+flushMessage_dbPrint__12JUTAssertionFv:
 flushMessage_dbPrint__12JUTAssertionFv:
 /* 802E4A54 002E1994  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802E4A58 002E1998  7C 08 02 A6 */	mflr r0
@@ -102,16 +97,16 @@ flushMessage_dbPrint__12JUTAssertionFv:
 /* 802E4A6C 002E19AC  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 802E4A70 002E19B0  4B FF FE F1 */	bl flush_subroutine__12JUTAssertionFv
 /* 802E4A74 002E19B4  28 03 00 00 */	cmplwi r3, 0
-/* 802E4A78 002E19B8  41 82 01 9C */	beq func_802E4C14
-/* 802E4A7C 002E19BC  88 0D 83 78 */	lbz r0, sym_804508F8-_SDA_BASE_(r13)
+/* 802E4A78 002E19B8  41 82 01 9C */	beq lbl_802E4C14
+/* 802E4A7C 002E19BC  88 0D 83 78 */	lbz r0, data_804508F8-_SDA_BASE_(r13)
 /* 802E4A80 002E19C0  28 00 00 01 */	cmplwi r0, 1
-/* 802E4A84 002E19C4  40 82 01 90 */	bne func_802E4C14
+/* 802E4A84 002E19C4  40 82 01 90 */	bne lbl_802E4C14
 /* 802E4A88 002E19C8  80 6D 8F 48 */	lwz r3, sDebugPrint__10JUTDbPrint-_SDA_BASE_(r13)
 /* 802E4A8C 002E19CC  28 03 00 00 */	cmplwi r3, 0
-/* 802E4A90 002E19D0  41 82 01 84 */	beq func_802E4C14
+/* 802E4A90 002E19D0  41 82 01 84 */	beq lbl_802E4C14
 /* 802E4A94 002E19D4  83 E3 00 04 */	lwz r31, 4(r3)
 /* 802E4A98 002E19D8  28 1F 00 00 */	cmplwi r31, 0
-/* 802E4A9C 002E19DC  41 82 01 78 */	beq func_802E4C14
+/* 802E4A9C 002E19DC  41 82 01 78 */	beq lbl_802E4C14
 /* 802E4AA0 002E19E0  48 06 8E 1D */	bl VIGetRetraceCount
 /* 802E4AA4 002E19E4  54 60 16 36 */	rlwinm r0, r3, 2, 0x18, 0x1b
 /* 802E4AA8 002E19E8  60 00 00 0F */	ori r0, r0, 0xf
@@ -131,8 +126,8 @@ flushMessage_dbPrint__12JUTAssertionFv:
 /* 802E4AE0 002E1A20  7F E3 FB 78 */	mr r3, r31
 /* 802E4AE4 002E1A24  38 81 00 0C */	addi r4, r1, 0xc
 /* 802E4AE8 002E1A28  4B FF A2 89 */	bl setCharColor__7JUTFontFQ28JUtility6TColor
-/* 802E4AEC 002E1A2C  3C 60 80 43 */	lis r3, sym_80434870@ha
-/* 802E4AF0 002E1A30  38 63 48 70 */	addi r3, r3, sym_80434870@l
+/* 802E4AEC 002E1A2C  3C 60 80 43 */	lis r3, data_80434870@ha
+/* 802E4AF0 002E1A30  38 63 48 70 */	addi r3, r3, data_80434870@l
 /* 802E4AF4 002E1A34  48 08 40 F1 */	bl strlen
 /* 802E4AF8 002E1A38  7C 7E 1B 78 */	mr r30, r3
 /* 802E4AFC 002E1A3C  7F E3 FB 78 */	mr r3, r31
@@ -163,13 +158,13 @@ flushMessage_dbPrint__12JUTAssertionFv:
 /* 802E4B60 002E1AA0  C0 22 C6 B8 */	lfs f1, LIT_724-_SDA2_BASE_(r2)
 /* 802E4B64 002E1AA4  C0 42 C6 BC */	lfs f2, LIT_725-_SDA2_BASE_(r2)
 /* 802E4B68 002E1AA8  FC 80 F8 90 */	fmr f4, f31
-/* 802E4B6C 002E1AAC  3C 80 80 43 */	lis r4, sym_80434870@ha
-/* 802E4B70 002E1AB0  38 84 48 70 */	addi r4, r4, sym_80434870@l
+/* 802E4B6C 002E1AAC  3C 80 80 43 */	lis r4, data_80434870@ha
+/* 802E4B70 002E1AB0  38 84 48 70 */	addi r4, r4, data_80434870@l
 /* 802E4B74 002E1AB4  7F C5 F3 78 */	mr r5, r30
 /* 802E4B78 002E1AB8  38 C0 00 01 */	li r6, 1
 /* 802E4B7C 002E1ABC  4B FF A2 AD */	bl drawString_size_scale__7JUTFontFffffPCcUlb
-/* 802E4B80 002E1AC0  3C 60 80 43 */	lis r3, sym_804348B0@ha
-/* 802E4B84 002E1AC4  38 63 48 B0 */	addi r3, r3, sym_804348B0@l
+/* 802E4B80 002E1AC0  3C 60 80 43 */	lis r3, data_804348B0@ha
+/* 802E4B84 002E1AC4  38 63 48 B0 */	addi r3, r3, data_804348B0@l
 /* 802E4B88 002E1AC8  48 08 40 5D */	bl strlen
 /* 802E4B8C 002E1ACC  7C 7E 1B 78 */	mr r30, r3
 /* 802E4B90 002E1AD0  7F E3 FB 78 */	mr r3, r31
@@ -200,15 +195,12 @@ flushMessage_dbPrint__12JUTAssertionFv:
 /* 802E4BF4 002E1B34  C0 22 C6 B8 */	lfs f1, LIT_724-_SDA2_BASE_(r2)
 /* 802E4BF8 002E1B38  C0 42 C6 C0 */	lfs f2, LIT_726-_SDA2_BASE_(r2)
 /* 802E4BFC 002E1B3C  FC 80 F8 90 */	fmr f4, f31
-/* 802E4C00 002E1B40  3C 80 80 43 */	lis r4, sym_804348B0@ha
-/* 802E4C04 002E1B44  38 84 48 B0 */	addi r4, r4, sym_804348B0@l
+/* 802E4C00 002E1B40  3C 80 80 43 */	lis r4, data_804348B0@ha
+/* 802E4C04 002E1B44  38 84 48 B0 */	addi r4, r4, data_804348B0@l
 /* 802E4C08 002E1B48  7F C5 F3 78 */	mr r5, r30
 /* 802E4C0C 002E1B4C  38 C0 00 01 */	li r6, 1
 /* 802E4C10 002E1B50  4B FF A2 19 */	bl drawString_size_scale__7JUTFontFffffPCcUlb
-
-/* 802E4C14 0020 .text      func_802E4C14                  func_802E4C14                  */
-.global func_802E4C14
-func_802E4C14:
+lbl_802E4C14:
 /* 802E4C14 002E1B54  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
 /* 802E4C18 002E1B58  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 802E4C1C 002E1B5C  83 E1 00 3C */	lwz r31, 0x3c(r1)
@@ -221,17 +213,19 @@ func_802E4C14:
 /* 802E4C34 0008 .text      setVisible__12JUTAssertionFb   setVisible__12JUTAssertionFb   */
 .global setVisible__12JUTAssertionFb
 setVisible__12JUTAssertionFb:
-/* 802E4C34 002E1B74  98 6D 83 78 */	stb r3, sym_804508F8-_SDA_BASE_(r13)
+setVisible__12JUTAssertionFb:
+/* 802E4C34 002E1B74  98 6D 83 78 */	stb r3, data_804508F8-_SDA_BASE_(r13)
 /* 802E4C38 002E1B78  4E 80 00 20 */	blr 
 
 /* 802E4C3C 0018 .text      setMessageCount__12JUTAssertionFi setMessageCount__12JUTAssertionFi */
 .global setMessageCount__12JUTAssertionFi
 setMessageCount__12JUTAssertionFi:
+setMessageCount__12JUTAssertionFi:
 /* 802E4C3C 002E1B7C  7C 03 00 D0 */	neg r0, r3
 /* 802E4C40 002E1B80  7C 60 03 38 */	orc r0, r3, r0
 /* 802E4C44 002E1B84  7C 00 FE 70 */	srawi r0, r0, 0x1f
 /* 802E4C48 002E1B88  7C 60 00 78 */	andc r0, r3, r0
-/* 802E4C4C 002E1B8C  90 0D 8F B0 */	stw r0, sym_80451530-_SDA_BASE_(r13)
+/* 802E4C4C 002E1B8C  90 0D 8F B0 */	stw r0, data_80451530-_SDA_BASE_(r13)
 /* 802E4C50 002E1B90  4E 80 00 20 */	blr 
 
 
@@ -239,14 +233,14 @@ setMessageCount__12JUTAssertionFi:
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80434870 0040 .bss       sym_80434870                   sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ */
-.global sym_80434870
-sym_80434870:
+/* 80434870 0040 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_80434870                  */
+.global data_80434870
+data_80434870:
 .skip 0x40
 
-/* 804348B0 0100 .bss       sym_804348B0                   sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ */
-.global sym_804348B0
-sym_804348B0:
+/* 804348B0 0100 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_804348B0                  */
+.global data_804348B0
+data_804348B0:
 .skip 0x100
 
 
@@ -254,9 +248,9 @@ sym_804348B0:
 /*                                         .sbss                                          */
 /* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451530 0004 .sbss      sym_80451530                   sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ */
-.global sym_80451530
-sym_80451530:
+/* 80451530 0004 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_80451530                  */
+.global data_80451530
+data_80451530:
 .skip 0x4
 .skip 0x4 /* padding */
 
@@ -265,23 +259,23 @@ sym_80451530:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804560B8 0004 .sdata2    LIT_724                        @724                           */
+/* 804560B8 0004 .sdata2    @724                           LIT_724                        */
 .global LIT_724
 LIT_724:
 .byte 0x41, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d4f18 */
 
-/* 804560BC 0004 .sdata2    LIT_725                        @725                           */
+/* 804560BC 0004 .sdata2    @725                           LIT_725                        */
 .global LIT_725
 LIT_725:
 .byte 0x42, 0x10, 0x00, 0x00 /* baserom.dol+0x3d4f1c */
 
-/* 804560C0 0004 .sdata2    LIT_726                        @726                           */
+/* 804560C0 0004 .sdata2    @726                           LIT_726                        */
 .global LIT_726
 LIT_726:
 .byte 0x42, 0x58, 0x00, 0x00 /* baserom.dol+0x3d4f20 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4f24 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804560C8 0008 .sdata2    LIT_728                        @728                           */
+/* 804560C8 0008 .sdata2    @728                           LIT_728                        */
 .global LIT_728
 LIT_728:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4f28 */

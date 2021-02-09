@@ -7,6 +7,7 @@
 /* 8036C720 0020 .text      atan2                          atan2                          */
 .global atan2
 atan2:
+atan2:
 /* 8036C720 00369660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C724 00369664  7C 08 02 A6 */	mflr r0
 /* 8036C728 00369668  90 01 00 14 */	stw r0, 0x14(r1)

@@ -7,6 +7,7 @@
 /* 801AE938 003C .text      __ct__15dKantera_icon_cFv      __ct__15dKantera_icon_cFv      */
 .global __ct__15dKantera_icon_cFv
 __ct__15dKantera_icon_cFv:
+__ct__15dKantera_icon_cFv:
 /* 801AE938 001AB878  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AE93C 001AB87C  7C 08 02 A6 */	mflr r0
 /* 801AE940 001AB880  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,8 +24,9 @@ __ct__15dKantera_icon_cFv:
 /* 801AE96C 001AB8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AE970 001AB8B0  4E 80 00 20 */	blr 
 
-/* 801AE974 0050 .text      __dt__15dKantera_icon_cFv      __dt__15dKantera_icon_cFv      */
+/* 801AE974 00F4 .text      __dt__15dKantera_icon_cFv      __dt__15dKantera_icon_cFv      */
 .global __dt__15dKantera_icon_cFv
+__dt__15dKantera_icon_cFv:
 __dt__15dKantera_icon_cFv:
 /* 801AE974 001AB8B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AE978 001AB8B8  7C 08 02 A6 */	mflr r0
@@ -33,73 +35,58 @@ __dt__15dKantera_icon_cFv:
 /* 801AE984 001AB8C4  93 C1 00 08 */	stw r30, 8(r1)
 /* 801AE988 001AB8C8  7C 7E 1B 79 */	or. r30, r3, r3
 /* 801AE98C 001AB8CC  7C 9F 23 78 */	mr r31, r4
-/* 801AE990 001AB8D0  41 82 00 BC */	beq func_801AEA4C
+/* 801AE990 001AB8D0  41 82 00 BC */	beq lbl_801AEA4C
 /* 801AE994 001AB8D4  3C 60 80 3C */	lis r3, __vt__15dKantera_icon_c@ha
 /* 801AE998 001AB8D8  38 03 C2 28 */	addi r0, r3, __vt__15dKantera_icon_c@l
 /* 801AE99C 001AB8DC  90 1E 00 00 */	stw r0, 0(r30)
 /* 801AE9A0 001AB8E0  80 7E 00 04 */	lwz r3, 4(r30)
 /* 801AE9A4 001AB8E4  80 63 00 04 */	lwz r3, 4(r3)
 /* 801AE9A8 001AB8E8  28 03 00 00 */	cmplwi r3, 0
-/* 801AE9AC 001AB8EC  41 82 00 18 */	beq func_801AE9C4
+/* 801AE9AC 001AB8EC  41 82 00 18 */	beq lbl_801AE9C4
 /* 801AE9B0 001AB8F0  38 80 00 01 */	li r4, 1
 /* 801AE9B4 001AB8F4  81 83 00 00 */	lwz r12, 0(r3)
 /* 801AE9B8 001AB8F8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801AE9BC 001AB8FC  7D 89 03 A6 */	mtctr r12
 /* 801AE9C0 001AB900  4E 80 04 21 */	bctrl 
-
-/* 801AE9C4 0020 .text      func_801AE9C4                  func_801AE9C4                  */
-.global func_801AE9C4
-func_801AE9C4:
+lbl_801AE9C4:
 /* 801AE9C4 001AB904  80 7E 00 04 */	lwz r3, 4(r30)
 /* 801AE9C8 001AB908  28 03 00 00 */	cmplwi r3, 0
-/* 801AE9CC 001AB90C  41 82 00 18 */	beq func_801AE9E4
+/* 801AE9CC 001AB90C  41 82 00 18 */	beq lbl_801AE9E4
 /* 801AE9D0 001AB910  38 80 00 01 */	li r4, 1
 /* 801AE9D4 001AB914  81 83 00 00 */	lwz r12, 0(r3)
 /* 801AE9D8 001AB918  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 801AE9DC 001AB91C  7D 89 03 A6 */	mtctr r12
 /* 801AE9E0 001AB920  4E 80 04 21 */	bctrl 
-
-/* 801AE9E4 0028 .text      func_801AE9E4                  func_801AE9E4                  */
-.global func_801AE9E4
-func_801AE9E4:
+lbl_801AE9E4:
 /* 801AE9E4 001AB924  38 00 00 00 */	li r0, 0
 /* 801AE9E8 001AB928  90 1E 00 04 */	stw r0, 4(r30)
 /* 801AE9EC 001AB92C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 801AE9F0 001AB930  28 03 00 00 */	cmplwi r3, 0
-/* 801AE9F4 001AB934  41 82 00 18 */	beq func_801AEA0C
+/* 801AE9F4 001AB934  41 82 00 18 */	beq lbl_801AEA0C
 /* 801AE9F8 001AB938  38 80 00 01 */	li r4, 1
 /* 801AE9FC 001AB93C  81 83 00 00 */	lwz r12, 0(r3)
 /* 801AEA00 001AB940  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801AEA04 001AB944  7D 89 03 A6 */	mtctr r12
 /* 801AEA08 001AB948  4E 80 04 21 */	bctrl 
-
-/* 801AEA0C 0028 .text      func_801AEA0C                  func_801AEA0C                  */
-.global func_801AEA0C
-func_801AEA0C:
+lbl_801AEA0C:
 /* 801AEA0C 001AB94C  38 00 00 00 */	li r0, 0
 /* 801AEA10 001AB950  90 1E 00 08 */	stw r0, 8(r30)
 /* 801AEA14 001AB954  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 801AEA18 001AB958  28 03 00 00 */	cmplwi r3, 0
-/* 801AEA1C 001AB95C  41 82 00 18 */	beq func_801AEA34
+/* 801AEA1C 001AB95C  41 82 00 18 */	beq lbl_801AEA34
 /* 801AEA20 001AB960  38 80 00 01 */	li r4, 1
 /* 801AEA24 001AB964  81 83 00 00 */	lwz r12, 0(r3)
 /* 801AEA28 001AB968  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801AEA2C 001AB96C  7D 89 03 A6 */	mtctr r12
 /* 801AEA30 001AB970  4E 80 04 21 */	bctrl 
-
-/* 801AEA34 0018 .text      func_801AEA34                  func_801AEA34                  */
-.global func_801AEA34
-func_801AEA34:
+lbl_801AEA34:
 /* 801AEA34 001AB974  38 00 00 00 */	li r0, 0
 /* 801AEA38 001AB978  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 801AEA3C 001AB97C  7F E0 07 35 */	extsh. r0, r31
-/* 801AEA40 001AB980  40 81 00 0C */	ble func_801AEA4C
+/* 801AEA40 001AB980  40 81 00 0C */	ble lbl_801AEA4C
 /* 801AEA44 001AB984  7F C3 F3 78 */	mr r3, r30
 /* 801AEA48 001AB988  48 12 02 F5 */	bl __dl__FPv
-
-/* 801AEA4C 001C .text      func_801AEA4C                  func_801AEA4C                  */
-.global func_801AEA4C
-func_801AEA4C:
+lbl_801AEA4C:
 /* 801AEA4C 001AB98C  7F C3 F3 78 */	mr r3, r30
 /* 801AEA50 001AB990  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AEA54 001AB994  83 C1 00 08 */	lwz r30, 8(r1)
@@ -108,8 +95,9 @@ func_801AEA4C:
 /* 801AEA60 001AB9A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AEA64 001AB9A4  4E 80 00 20 */	blr 
 
-/* 801AEA68 0040 .text      initiate__15dKantera_icon_cFv  initiate__15dKantera_icon_cFv  */
+/* 801AEA68 0114 .text      initiate__15dKantera_icon_cFv  initiate__15dKantera_icon_cFv  */
 .global initiate__15dKantera_icon_cFv
+initiate__15dKantera_icon_cFv:
 initiate__15dKantera_icon_cFv:
 /* 801AEA68 001AB9A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AEA6C 001AB9AC  7C 08 02 A6 */	mflr r0
@@ -120,28 +108,22 @@ initiate__15dKantera_icon_cFv:
 /* 801AEA80 001AB9C0  38 60 00 08 */	li r3, 8
 /* 801AEA84 001AB9C4  48 12 01 C9 */	bl __nw__FUl
 /* 801AEA88 001AB9C8  28 03 00 00 */	cmplwi r3, 0
-/* 801AEA8C 001AB9CC  41 82 00 1C */	beq func_801AEAA8
+/* 801AEA8C 001AB9CC  41 82 00 1C */	beq lbl_801AEAA8
 /* 801AEA90 001AB9D0  3C 80 80 3A */	lis r4, __vt__12dDlst_base_c@ha
 /* 801AEA94 001AB9D4  38 04 6F 88 */	addi r0, r4, __vt__12dDlst_base_c@l
 /* 801AEA98 001AB9D8  90 03 00 00 */	stw r0, 0(r3)
 /* 801AEA9C 001AB9DC  3C 80 80 3C */	lis r4, __vt__19dDlst_KanteraIcon_c@ha
 /* 801AEAA0 001AB9E0  38 04 C2 18 */	addi r0, r4, __vt__19dDlst_KanteraIcon_c@l
 /* 801AEAA4 001AB9E4  90 03 00 00 */	stw r0, 0(r3)
-
-/* 801AEAA8 001C .text      func_801AEAA8                  func_801AEAA8                  */
-.global func_801AEAA8
-func_801AEAA8:
+lbl_801AEAA8:
 /* 801AEAA8 001AB9E8  90 7F 00 04 */	stw r3, 4(r31)
 /* 801AEAAC 001AB9EC  38 60 01 18 */	li r3, 0x118
 /* 801AEAB0 001AB9F0  48 12 01 9D */	bl __nw__FUl
 /* 801AEAB4 001AB9F4  7C 7E 1B 79 */	or. r30, r3, r3
-/* 801AEAB8 001AB9F8  41 82 00 0C */	beq func_801AEAC4
+/* 801AEAB8 001AB9F8  41 82 00 0C */	beq lbl_801AEAC4
 /* 801AEABC 001AB9FC  48 14 99 DD */	bl __ct__9J2DScreenFv
 /* 801AEAC0 001ABA00  7C 7E 1B 78 */	mr r30, r3
-
-/* 801AEAC4 0064 .text      func_801AEAC4                  func_801AEAC4                  */
-.global func_801AEAC4
-func_801AEAC4:
+lbl_801AEAC4:
 /* 801AEAC4 001ABA04  7F C3 F3 78 */	mr r3, r30
 /* 801AEAC8 001ABA08  3C 80 80 39 */	lis r4, d_d_kantera_icon_meter__stringBase0@ha
 /* 801AEACC 001ABA0C  38 84 4F 50 */	addi r4, r4, d_d_kantera_icon_meter__stringBase0@l
@@ -157,7 +139,7 @@ func_801AEAC4:
 /* 801AEAF4 001ABA34  38 60 00 6C */	li r3, 0x6c
 /* 801AEAF8 001ABA38  48 12 01 55 */	bl __nw__FUl
 /* 801AEAFC 001ABA3C  7C 60 1B 79 */	or. r0, r3, r3
-/* 801AEB00 001ABA40  41 82 00 28 */	beq func_801AEB28
+/* 801AEB00 001ABA40  41 82 00 28 */	beq lbl_801AEB28
 /* 801AEB04 001ABA44  7F C4 F3 78 */	mr r4, r30
 /* 801AEB08 001ABA48  3C A0 5F 6D */	lis r5, 0x5F6D5F6E@ha
 /* 801AEB0C 001ABA4C  38 C5 5F 6E */	addi r6, r5, 0x5F6D5F6E@l
@@ -167,15 +149,12 @@ func_801AEAC4:
 /* 801AEB1C 001ABA5C  39 00 00 00 */	li r8, 0
 /* 801AEB20 001ABA60  48 0A 4E 65 */	bl __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap
 /* 801AEB24 001ABA64  7C 60 1B 78 */	mr r0, r3
-
-/* 801AEB28 0038 .text      func_801AEB28                  func_801AEB28                  */
-.global func_801AEB28
-func_801AEB28:
+lbl_801AEB28:
 /* 801AEB28 001ABA68  90 1F 00 08 */	stw r0, 8(r31)
 /* 801AEB2C 001ABA6C  38 60 00 6C */	li r3, 0x6c
 /* 801AEB30 001ABA70  48 12 01 1D */	bl __nw__FUl
 /* 801AEB34 001ABA74  7C 60 1B 79 */	or. r0, r3, r3
-/* 801AEB38 001ABA78  41 82 00 28 */	beq func_801AEB60
+/* 801AEB38 001ABA78  41 82 00 28 */	beq lbl_801AEB60
 /* 801AEB3C 001ABA7C  7F C4 F3 78 */	mr r4, r30
 /* 801AEB40 001ABA80  3C A0 6F 77 */	lis r5, 0x6F775F6D@ha
 /* 801AEB44 001ABA84  38 C5 5F 6D */	addi r6, r5, 0x6F775F6D@l
@@ -185,10 +164,7 @@ func_801AEB28:
 /* 801AEB54 001ABA94  39 00 00 00 */	li r8, 0
 /* 801AEB58 001ABA98  48 0A 4E 2D */	bl __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap
 /* 801AEB5C 001ABA9C  7C 60 1B 78 */	mr r0, r3
-
-/* 801AEB60 001C .text      func_801AEB60                  func_801AEB60                  */
-.global func_801AEB60
-func_801AEB60:
+lbl_801AEB60:
 /* 801AEB60 001ABAA0  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 801AEB64 001ABAA4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AEB68 001ABAA8  83 C1 00 08 */	lwz r30, 8(r1)
@@ -199,6 +175,7 @@ func_801AEB60:
 
 /* 801AEB7C 0024 .text      setAlphaRate__15dKantera_icon_cFf setAlphaRate__15dKantera_icon_cFf */
 .global setAlphaRate__15dKantera_icon_cFf
+setAlphaRate__15dKantera_icon_cFf:
 setAlphaRate__15dKantera_icon_cFf:
 /* 801AEB7C 001ABABC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AEB80 001ABAC0  7C 08 02 A6 */	mflr r0
@@ -212,6 +189,7 @@ setAlphaRate__15dKantera_icon_cFf:
 
 /* 801AEBA0 0054 .text      setPos__15dKantera_icon_cFff   setPos__15dKantera_icon_cFff   */
 .global setPos__15dKantera_icon_cFff
+setPos__15dKantera_icon_cFff:
 setPos__15dKantera_icon_cFff:
 /* 801AEBA0 001ABAE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AEBA4 001ABAE4  7C 08 02 A6 */	mflr r0
@@ -238,6 +216,7 @@ setPos__15dKantera_icon_cFff:
 /* 801AEBF4 0050 .text      setScale__15dKantera_icon_cFff setScale__15dKantera_icon_cFff */
 .global setScale__15dKantera_icon_cFff
 setScale__15dKantera_icon_cFff:
+setScale__15dKantera_icon_cFff:
 /* 801AEBF4 001ABB34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AEBF8 001ABB38  7C 08 02 A6 */	mflr r0
 /* 801AEBFC 001ABB3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -261,6 +240,7 @@ setScale__15dKantera_icon_cFff:
 
 /* 801AEC44 0074 .text      setNowGauge__15dKantera_icon_cFUsUs setNowGauge__15dKantera_icon_cFUsUs */
 .global setNowGauge__15dKantera_icon_cFUsUs
+setNowGauge__15dKantera_icon_cFUsUs:
 setNowGauge__15dKantera_icon_cFUsUs:
 /* 801AEC44 001ABB84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AEC48 001ABB88  7C 08 02 A6 */	mflr r0
@@ -295,6 +275,7 @@ setNowGauge__15dKantera_icon_cFUsUs:
 /* 801AECB8 0064 .text      draw__19dDlst_KanteraIcon_cFv  draw__19dDlst_KanteraIcon_cFv  */
 .global draw__19dDlst_KanteraIcon_cFv
 draw__19dDlst_KanteraIcon_cFv:
+draw__19dDlst_KanteraIcon_cFv:
 /* 801AECB8 001ABBF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AECBC 001ABBFC  7C 08 02 A6 */	mflr r0
 /* 801AECC0 001ABC00  90 01 00 14 */	stw r0, 0x14(r1)
@@ -321,25 +302,23 @@ draw__19dDlst_KanteraIcon_cFv:
 /* 801AED14 001ABC54  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AED18 001ABC58  4E 80 00 20 */	blr 
 
-/* 801AED1C 0030 .text      __dt__19dDlst_KanteraIcon_cFv  __dt__19dDlst_KanteraIcon_cFv  */
+/* 801AED1C 0048 .text      __dt__19dDlst_KanteraIcon_cFv  __dt__19dDlst_KanteraIcon_cFv  */
 .global __dt__19dDlst_KanteraIcon_cFv
+__dt__19dDlst_KanteraIcon_cFv:
 __dt__19dDlst_KanteraIcon_cFv:
 /* 801AED1C 001ABC5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AED20 001ABC60  7C 08 02 A6 */	mflr r0
 /* 801AED24 001ABC64  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801AED28 001ABC68  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801AED2C 001ABC6C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 801AED30 001ABC70  41 82 00 1C */	beq func_801AED4C
+/* 801AED30 001ABC70  41 82 00 1C */	beq lbl_801AED4C
 /* 801AED34 001ABC74  3C A0 80 3C */	lis r5, __vt__19dDlst_KanteraIcon_c@ha
 /* 801AED38 001ABC78  38 05 C2 18 */	addi r0, r5, __vt__19dDlst_KanteraIcon_c@l
 /* 801AED3C 001ABC7C  90 1F 00 00 */	stw r0, 0(r31)
 /* 801AED40 001ABC80  7C 80 07 35 */	extsh. r0, r4
-/* 801AED44 001ABC84  40 81 00 08 */	ble func_801AED4C
+/* 801AED44 001ABC84  40 81 00 08 */	ble lbl_801AED4C
 /* 801AED48 001ABC88  48 11 FF F5 */	bl __dl__FPv
-
-/* 801AED4C 0018 .text      func_801AED4C                  func_801AED4C                  */
-.global func_801AED4C
-func_801AED4C:
+lbl_801AED4C:
 /* 801AED4C 001ABC8C  7F E3 FB 78 */	mr r3, r31
 /* 801AED50 001ABC90  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AED54 001ABC94  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -352,12 +331,12 @@ func_801AED4C:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394F50 001D .rodata    d_d_kantera_icon_meter__stringBase0 @stringBase0                   */
+/* 80394F50 001D .rodata    @stringBase0                   d_d_kantera_icon_meter__stringBase0 */
 .global d_d_kantera_icon_meter__stringBase0
 d_d_kantera_icon_meter__stringBase0:
 .byte 0x7a, 0x65, 0x6c, 0x64, 0x61, 0x5f, 0x6b, 0x61, 0x6e, 0x74, 0x65, 0x72, 0x61, 0x5f, 0x69, 0x63 /* baserom.dol+0x391f50 */
 .byte 0x6f, 0x6e, 0x5f, 0x6d, 0x61, 0x74, 0x65, 0x72, 0x2e, 0x62, 0x6c, 0x6f, 0x00 /* baserom.dol+0x391f60 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x391f6d */
+.byte 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -367,33 +346,38 @@ d_d_kantera_icon_meter__stringBase0:
 /* 803BC218 0010 .data      __vt__19dDlst_KanteraIcon_c    __vt__19dDlst_KanteraIcon_c    */
 .global __vt__19dDlst_KanteraIcon_c
 __vt__19dDlst_KanteraIcon_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x1a, 0xec, 0xb8, 0x80, 0x1a, 0xed, 0x1c /* baserom.dol+0x3b9218 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__19dDlst_KanteraIcon_cFv
+.4byte __dt__19dDlst_KanteraIcon_cFv
 
 /* 803BC228 000C .data      __vt__15dKantera_icon_c        __vt__15dKantera_icon_c        */
 .global __vt__15dKantera_icon_c
 __vt__15dKantera_icon_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x1a, 0xe9, 0x74 /* baserom.dol+0x3b9228 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b9234 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__15dKantera_icon_cFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453EF8 0004 .sdata2    d_d_kantera_icon_meter__LIT_3759 @3759                          */
+/* 80453EF8 0004 .sdata2    @3759                          d_d_kantera_icon_meter__LIT_3759 */
 .global d_d_kantera_icon_meter__LIT_3759
 d_d_kantera_icon_meter__LIT_3759:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2d58 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d5c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80453F00 0008 .sdata2    d_d_kantera_icon_meter__LIT_3761 @3761                          */
+/* 80453F00 0008 .sdata2    @3761                          d_d_kantera_icon_meter__LIT_3761 */
 .global d_d_kantera_icon_meter__LIT_3761
 d_d_kantera_icon_meter__LIT_3761:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d60 */
 
-/* 80453F08 0004 .sdata2    d_d_kantera_icon_meter__LIT_3776 @3776                          */
+/* 80453F08 0004 .sdata2    @3776                          d_d_kantera_icon_meter__LIT_3776 */
 .global d_d_kantera_icon_meter__LIT_3776
 d_d_kantera_icon_meter__LIT_3776:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d68 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d6c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

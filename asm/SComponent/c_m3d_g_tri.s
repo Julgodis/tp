@@ -7,6 +7,7 @@
 /* 8026F7B0 002C .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec cross__8cM3dGTriCFPC8cM3dGCylP3Vec */
 .global cross__8cM3dGTriCFPC8cM3dGCylP3Vec
 cross__8cM3dGTriCFPC8cM3dGCylP3Vec:
+cross__8cM3dGTriCFPC8cM3dGCylP3Vec:
 /* 8026F7B0 0026C6F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F7B4 0026C6F4  7C 08 02 A6 */	mflr r0
 /* 8026F7B8 0026C6F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,6 +22,7 @@ cross__8cM3dGTriCFPC8cM3dGCylP3Vec:
 
 /* 8026F7DC 0080 .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec setPos__8cM3dGTriFPC3VecPC3VecPC3Vec */
 .global setPos__8cM3dGTriFPC3VecPC3VecPC3Vec
+setPos__8cM3dGTriFPC3VecPC3VecPC3Vec:
 setPos__8cM3dGTriFPC3VecPC3VecPC3Vec:
 /* 8026F7DC 0026C71C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F7E0 0026C720  7C 08 02 A6 */	mflr r0
@@ -58,6 +60,7 @@ setPos__8cM3dGTriFPC3VecPC3VecPC3Vec:
 /* 8026F85C 006C .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla */
 .global setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla
 setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla:
+setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla:
 /* 8026F85C 0026C79C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F860 0026C7A0  7C 08 02 A6 */	mflr r0
 /* 8026F864 0026C7A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -88,6 +91,7 @@ setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla:
 
 /* 8026F8C8 0074 .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec */
 .global set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec
+set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec:
 set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec:
 /* 8026F8C8 0026C808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F8CC 0026C80C  7C 08 02 A6 */	mflr r0

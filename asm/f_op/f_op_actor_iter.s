@@ -7,6 +7,7 @@
 /* 800197BC 003C .text      fopAcIt_Executor__FPFPvPv_iPv  fopAcIt_Executor__FPFPvPv_iPv  */
 .global fopAcIt_Executor__FPFPvPv_iPv
 fopAcIt_Executor__FPFPvPv_iPv:
+fopAcIt_Executor__FPFPvPv_iPv:
 /* 800197BC 000166FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800197C0 00016700  7C 08 02 A6 */	mflr r0
 /* 800197C4 00016704  90 01 00 14 */	stw r0, 0x14(r1)
@@ -25,6 +26,7 @@ fopAcIt_Executor__FPFPvPv_iPv:
 
 /* 800197F8 003C .text      fopAcIt_Judge__FPFPvPv_PvPv    fopAcIt_Judge__FPFPvPv_PvPv    */
 .global fopAcIt_Judge__FPFPvPv_PvPv
+fopAcIt_Judge__FPFPvPv_PvPv:
 fopAcIt_Judge__FPFPvPv_PvPv:
 /* 800197F8 00016738  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800197FC 0001673C  7C 08 02 A6 */	mflr r0

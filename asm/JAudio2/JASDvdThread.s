@@ -7,11 +7,13 @@
 /* 8028FEFC 0008 .text      getThreadPointer__6JASDvdFv    getThreadPointer__6JASDvdFv    */
 .global getThreadPointer__6JASDvdFv
 getThreadPointer__6JASDvdFv:
+getThreadPointer__6JASDvdFv:
 /* 8028FEFC 0028CE3C  80 6D 8C 88 */	lwz r3, sThread__6JASDvd-_SDA_BASE_(r13)
 /* 8028FF00 0028CE40  4E 80 00 20 */	blr 
 
-/* 8028FF04 0034 .text      createThread__6JASDvdFliUl     createThread__6JASDvdFliUl     */
+/* 8028FF04 00A4 .text      createThread__6JASDvdFliUl     createThread__6JASDvdFliUl     */
 .global createThread__6JASDvdFliUl
+createThread__6JASDvdFliUl:
 createThread__6JASDvdFliUl:
 /* 8028FF04 0028CE44  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028FF08 0028CE48  7C 08 02 A6 */	mflr r0
@@ -23,51 +25,36 @@ createThread__6JASDvdFliUl:
 /* 8028FF20 0028CE60  7C BF 2B 78 */	mr r31, r5
 /* 8028FF24 0028CE64  80 0D 8C 88 */	lwz r0, sThread__6JASDvd-_SDA_BASE_(r13)
 /* 8028FF28 0028CE68  28 00 00 00 */	cmplwi r0, 0
-/* 8028FF2C 0028CE6C  41 82 00 0C */	beq func_8028FF38
+/* 8028FF2C 0028CE6C  41 82 00 0C */	beq lbl_8028FF38
 /* 8028FF30 0028CE70  38 60 00 00 */	li r3, 0
-/* 8028FF34 0028CE74  48 00 00 5C */	b func_8028FF90
-
-/* 8028FF38 002C .text      func_8028FF38                  func_8028FF38                  */
-.global func_8028FF38
-func_8028FF38:
+/* 8028FF34 0028CE74  48 00 00 5C */	b lbl_8028FF90
+lbl_8028FF38:
 /* 8028FF38 0028CE78  38 60 00 88 */	li r3, 0x88
 /* 8028FF3C 0028CE7C  80 8D 8C 90 */	lwz r4, JASDram-_SDA_BASE_(r13)
 /* 8028FF40 0028CE80  38 A0 00 00 */	li r5, 0
 /* 8028FF44 0028CE84  48 03 ED 55 */	bl __nw__FUlP7JKRHeapi
 /* 8028FF48 0028CE88  7C 64 1B 79 */	or. r4, r3, r3
-/* 8028FF4C 0028CE8C  41 82 00 18 */	beq func_8028FF64
+/* 8028FF4C 0028CE8C  41 82 00 18 */	beq lbl_8028FF64
 /* 8028FF50 0028CE90  7F A4 EB 78 */	mr r4, r29
 /* 8028FF54 0028CE94  7F C5 F3 78 */	mr r5, r30
 /* 8028FF58 0028CE98  7F E6 FB 78 */	mr r6, r31
 /* 8028FF5C 0028CE9C  4B FF F7 69 */	bl __ct__13JASTaskThreadFiiUl
 /* 8028FF60 0028CEA0  7C 64 1B 78 */	mr r4, r3
-
-/* 8028FF64 0014 .text      func_8028FF64                  func_8028FF64                  */
-.global func_8028FF64
-func_8028FF64:
+lbl_8028FF64:
 /* 8028FF64 0028CEA4  90 8D 8C 88 */	stw r4, sThread__6JASDvd-_SDA_BASE_(r13)
 /* 8028FF68 0028CEA8  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 8028FF6C 0028CEAC  28 00 00 00 */	cmplwi r0, 0
-/* 8028FF70 0028CEB0  41 82 00 08 */	beq func_8028FF78
-/* 8028FF74 0028CEB4  48 00 00 08 */	b func_8028FF7C
-
-/* 8028FF78 0004 .text      func_8028FF78                  func_8028FF78                  */
-.global func_8028FF78
-func_8028FF78:
+/* 8028FF70 0028CEB0  41 82 00 08 */	beq lbl_8028FF78
+/* 8028FF74 0028CEB4  48 00 00 08 */	b lbl_8028FF7C
+lbl_8028FF78:
 /* 8028FF78 0028CEB8  80 0D 8D F4 */	lwz r0, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-
-/* 8028FF7C 0014 .text      func_8028FF7C                  func_8028FF7C                  */
-.global func_8028FF7C
-func_8028FF7C:
+lbl_8028FF7C:
 /* 8028FF7C 0028CEBC  90 04 00 74 */	stw r0, 0x74(r4)
 /* 8028FF80 0028CEC0  80 6D 8C 88 */	lwz r3, sThread__6JASDvd-_SDA_BASE_(r13)
 /* 8028FF84 0028CEC4  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 8028FF88 0028CEC8  48 0B 18 2D */	bl OSResumeThread
 /* 8028FF8C 0028CECC  38 60 00 01 */	li r3, 1
-
-/* 8028FF90 0018 .text      func_8028FF90                  func_8028FF90                  */
-.global func_8028FF90
-func_8028FF90:
+lbl_8028FF90:
 /* 8028FF90 0028CED0  39 61 00 20 */	addi r11, r1, 0x20
 /* 8028FF94 0028CED4  48 0D 22 95 */	bl _restgpr_29
 /* 8028FF98 0028CED8  80 01 00 24 */	lwz r0, 0x24(r1)

@@ -7,6 +7,7 @@
 /* 80021B88 0038 .text      fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv */
 .global fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv
 fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv:
+fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv:
 /* 80021B88 0001EAC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021B8C 0001EACC  7C 08 02 A6 */	mflr r0
 /* 80021B90 0001EAD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -24,6 +25,7 @@ fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv:
 
 /* 80021BC0 0068 .text      fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv */
 .global fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv
+fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv:
 fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv:
 /* 80021BC0 0001EB00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80021BC4 0001EB04  7C 08 02 A6 */	mflr r0
@@ -55,6 +57,7 @@ fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv:
 /* 80021C28 0038 .text      fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv */
 .global fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv
 fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv:
+fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv:
 /* 80021C28 0001EB68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021C2C 0001EB6C  7C 08 02 A6 */	mflr r0
 /* 80021C30 0001EB70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -70,8 +73,9 @@ fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv:
 /* 80021C58 0001EB98  38 21 00 10 */	addi r1, r1, 0x10
 /* 80021C5C 0001EB9C  4E 80 00 20 */	blr 
 
-/* 80021C60 0030 .text      fpcLyIt_AllJudge__FPFPvPv_PvPv fpcLyIt_AllJudge__FPFPvPv_PvPv */
+/* 80021C60 0074 .text      fpcLyIt_AllJudge__FPFPvPv_PvPv fpcLyIt_AllJudge__FPFPvPv_PvPv */
 .global fpcLyIt_AllJudge__FPFPvPv_PvPv
+fpcLyIt_AllJudge__FPFPvPv_PvPv:
 fpcLyIt_AllJudge__FPFPvPv_PvPv:
 /* 80021C60 0001EBA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80021C64 0001EBA4  7C 08 02 A6 */	mflr r0
@@ -84,34 +88,22 @@ fpcLyIt_AllJudge__FPFPvPv_PvPv:
 /* 80021C80 0001EBC0  7C 7E 1B 78 */	mr r30, r3
 /* 80021C84 0001EBC4  3C 60 80 26 */	lis r3, cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter@ha
 /* 80021C88 0001EBC8  3B E3 6A B0 */	addi r31, r3, cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter@l
-/* 80021C8C 0001EBCC  48 00 00 24 */	b func_80021CB0
-
-/* 80021C90 001C .text      func_80021C90                  func_80021C90                  */
-.global func_80021C90
-func_80021C90:
+/* 80021C8C 0001EBCC  48 00 00 24 */	b lbl_80021CB0
+lbl_80021C90:
 /* 80021C90 0001EBD0  38 7E 00 10 */	addi r3, r30, 0x10
 /* 80021C94 0001EBD4  7F E4 FB 78 */	mr r4, r31
 /* 80021C98 0001EBD8  38 A1 00 08 */	addi r5, r1, 8
 /* 80021C9C 0001EBDC  48 24 49 19 */	bl cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv
 /* 80021CA0 0001EBE0  28 03 00 00 */	cmplwi r3, 0
-/* 80021CA4 0001EBE4  41 82 00 08 */	beq func_80021CAC
-/* 80021CA8 0001EBE8  48 00 00 14 */	b func_80021CBC
-
-/* 80021CAC 0004 .text      func_80021CAC                  func_80021CAC                  */
-.global func_80021CAC
-func_80021CAC:
+/* 80021CA4 0001EBE4  41 82 00 08 */	beq lbl_80021CAC
+/* 80021CA8 0001EBE8  48 00 00 14 */	b lbl_80021CBC
+lbl_80021CAC:
 /* 80021CAC 0001EBEC  83 DE 00 08 */	lwz r30, 8(r30)
-
-/* 80021CB0 000C .text      func_80021CB0                  func_80021CB0                  */
-.global func_80021CB0
-func_80021CB0:
+lbl_80021CB0:
 /* 80021CB0 0001EBF0  28 1E 00 00 */	cmplwi r30, 0
-/* 80021CB4 0001EBF4  40 82 FF DC */	bne func_80021C90
+/* 80021CB4 0001EBF4  40 82 FF DC */	bne lbl_80021C90
 /* 80021CB8 0001EBF8  38 60 00 00 */	li r3, 0
-
-/* 80021CBC 0018 .text      func_80021CBC                  func_80021CBC                  */
-.global func_80021CBC
-func_80021CBC:
+lbl_80021CBC:
 /* 80021CBC 0001EBFC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80021CC0 0001EC00  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80021CC4 0001EC04  80 01 00 24 */	lwz r0, 0x24(r1)

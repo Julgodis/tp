@@ -7,6 +7,7 @@
 /* 802CDDC8 008C .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode GFSetGenMode2__FUcUcUcUc11_GXCullMode */
 .global GFSetGenMode2__FUcUcUcUc11_GXCullMode
 GFSetGenMode2__FUcUcUcUc11_GXCullMode:
+GFSetGenMode2__FUcUcUcUc11_GXCullMode:
 /* 802CDDC8 002CAD08  39 40 00 61 */	li r10, 0x61
 /* 802CDDCC 002CAD0C  3D 20 CC 01 */	lis r9, 0xCC008000@ha
 /* 802CDDD0 002CAD10  99 49 80 00 */	stb r10, 0xCC008000@l(r9)
@@ -15,7 +16,7 @@ GFSetGenMode2__FUcUcUcUc11_GXCullMode:
 /* 802CDDDC 002CAD1C  90 09 80 00 */	stw r0, -0x8000(r9)
 /* 802CDDE0 002CAD20  99 49 80 00 */	stb r10, -0x8000(r9)
 /* 802CDDE4 002CAD24  54 C8 82 1E */	rlwinm r8, r6, 0x10, 8, 0xf
-/* 802CDDE8 002CAD28  38 CD 83 28 */	addi r6, r13, sym_804508A8-_SDA_BASE_
+/* 802CDDE8 002CAD28  38 CD 83 28 */	addi r6, r13, data_804508A8-_SDA_BASE_
 /* 802CDDEC 002CAD2C  7C 06 38 AE */	lbzx r0, r6, r7
 /* 802CDDF0 002CAD30  54 06 70 22 */	slwi r6, r0, 0xe
 /* 802CDDF4 002CAD34  54 A5 06 3E */	clrlwi r5, r5, 0x18
@@ -48,14 +49,14 @@ GFSetGenMode2__FUcUcUcUc11_GXCullMode:
 /*                                         .sdata                                         */
 /* ###################################################################################### */
 .section .sdata, "a"
-/* 804508A8 0004 .sdata     sym_804508A8                   cm2hw$539                      */
-.global sym_804508A8
-sym_804508A8:
+/* 804508A8 0004 .sdata     cm2hw$539                      data_804508A8                  */
+.global data_804508A8
+data_804508A8:
 .byte 0x00, 0x02, 0x01, 0x03 /* baserom.dol+0x3d0608 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d060c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804508B0 0008 .sdata     sym_804508B0                   sym_804508B0                   */
-.global sym_804508B0
-sym_804508B0:
+/* 804508B0 0008 .sdata     data_804508B0                  data_804508B0                  */
+.global data_804508B0
+data_804508B0:
 .byte 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0610 */
 

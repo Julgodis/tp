@@ -7,6 +7,7 @@
 /* 80023578 0018 .text      fpcSch_JudgeForPName__FPvPv    fpcSch_JudgeForPName__FPvPv    */
 .global fpcSch_JudgeForPName__FPvPv
 fpcSch_JudgeForPName__FPvPv:
+fpcSch_JudgeForPName__FPvPv:
 /* 80023578 000204B8  A8 A3 00 08 */	lha r5, 8(r3)
 /* 8002357C 000204BC  A8 04 00 00 */	lha r0, 0(r4)
 /* 80023580 000204C0  7C 05 00 00 */	cmpw r5, r0
@@ -16,6 +17,7 @@ fpcSch_JudgeForPName__FPvPv:
 
 /* 80023590 0018 .text      fpcSch_JudgeByID__FPvPv        fpcSch_JudgeByID__FPvPv        */
 .global fpcSch_JudgeByID__FPvPv
+fpcSch_JudgeByID__FPvPv:
 fpcSch_JudgeByID__FPvPv:
 /* 80023590 000204D0  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80023594 000204D4  80 04 00 00 */	lwz r0, 0(r4)

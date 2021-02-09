@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80280E90 0044 .text      __dt__Q26JStage7TSystemFv      __dt__Q26JStage7TSystemFv      */
+/* 80280E90 0060 .text      __dt__Q26JStage7TSystemFv      __dt__Q26JStage7TSystemFv      */
 .global __dt__Q26JStage7TSystemFv
+__dt__Q26JStage7TSystemFv:
 __dt__Q26JStage7TSystemFv:
 /* 80280E90 0027DDD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80280E94 0027DDD4  7C 08 02 A6 */	mflr r0
@@ -14,20 +15,17 @@ __dt__Q26JStage7TSystemFv:
 /* 80280EA0 0027DDE0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80280EA4 0027DDE4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80280EA8 0027DDE8  7C 9F 23 78 */	mr r31, r4
-/* 80280EAC 0027DDEC  41 82 00 28 */	beq func_80280ED4
+/* 80280EAC 0027DDEC  41 82 00 28 */	beq lbl_80280ED4
 /* 80280EB0 0027DDF0  3C 80 80 3C */	lis r4, __vt__Q26JStage7TSystem@ha
 /* 80280EB4 0027DDF4  38 04 48 28 */	addi r0, r4, __vt__Q26JStage7TSystem@l
 /* 80280EB8 0027DDF8  90 1E 00 00 */	stw r0, 0(r30)
 /* 80280EBC 0027DDFC  38 80 00 00 */	li r4, 0
 /* 80280EC0 0027DE00  4B FF FF 15 */	bl __dt__Q26JStage7TObjectFv
 /* 80280EC4 0027DE04  7F E0 07 35 */	extsh. r0, r31
-/* 80280EC8 0027DE08  40 81 00 0C */	ble func_80280ED4
+/* 80280EC8 0027DE08  40 81 00 0C */	ble lbl_80280ED4
 /* 80280ECC 0027DE0C  7F C3 F3 78 */	mr r3, r30
 /* 80280ED0 0027DE10  48 04 DE 6D */	bl __dl__FPv
-
-/* 80280ED4 001C .text      func_80280ED4                  func_80280ED4                  */
-.global func_80280ED4
-func_80280ED4:
+lbl_80280ED4:
 /* 80280ED4 0027DE14  7F C3 F3 78 */	mr r3, r30
 /* 80280ED8 0027DE18  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80280EDC 0027DE1C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -39,11 +37,13 @@ func_80280ED4:
 /* 80280EF0 0008 .text      JSGFGetType__Q26JStage7TSystemCFv JSGFGetType__Q26JStage7TSystemCFv */
 .global JSGFGetType__Q26JStage7TSystemCFv
 JSGFGetType__Q26JStage7TSystemCFv:
+JSGFGetType__Q26JStage7TSystemCFv:
 /* 80280EF0 0027DE30  38 60 00 01 */	li r3, 1
 /* 80280EF4 0027DE34  4E 80 00 20 */	blr 
 
 /* 80280EF8 0008 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
 .global JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject
+JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject:
 JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject:
 /* 80280EF8 0027DE38  38 60 00 01 */	li r3, 1
 /* 80280EFC 0027DE3C  4E 80 00 20 */	blr 
@@ -51,22 +51,26 @@ JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject:
 /* 80280F00 0008 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl */
 .global JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl
 JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl:
+JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl:
 /* 80280F00 0027DE40  38 60 00 00 */	li r3, 0
 /* 80280F04 0027DE44  4E 80 00 20 */	blr 
 
 /* 80280F08 0004 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject */
 .global JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject
 JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject:
+JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject:
 /* 80280F08 0027DE48  4E 80 00 20 */	blr 
 
 /* 80280F0C 0008 .text      JSGGetSystemData__Q26JStage7TSystemFUl JSGGetSystemData__Q26JStage7TSystemFUl */
 .global JSGGetSystemData__Q26JStage7TSystemFUl
+JSGGetSystemData__Q26JStage7TSystemFUl:
 JSGGetSystemData__Q26JStage7TSystemFUl:
 /* 80280F0C 0027DE4C  38 60 00 00 */	li r3, 0
 /* 80280F10 0027DE50  4E 80 00 20 */	blr 
 
 /* 80280F14 0004 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl JSGSetSystemData__Q26JStage7TSystemFUlUl */
 .global JSGSetSystemData__Q26JStage7TSystemFUlUl
+JSGSetSystemData__Q26JStage7TSystemFUlUl:
 JSGSetSystemData__Q26JStage7TSystemFUlUl:
 /* 80280F14 0027DE54  4E 80 00 20 */	blr 
 
@@ -78,9 +82,24 @@ JSGSetSystemData__Q26JStage7TSystemFUlUl:
 /* 803C4828 0050 .data      __vt__Q26JStage7TSystem        __vt__Q26JStage7TSystem        */
 .global __vt__Q26JStage7TSystem
 __vt__Q26JStage7TSystem:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0x0e, 0xf0 /* baserom.dol+0x3c1828 */
-.byte 0x80, 0x28, 0x0e, 0x1c, 0x80, 0x28, 0x0e, 0x24, 0x80, 0x28, 0x0e, 0x28, 0x80, 0x28, 0x0e, 0x30 /* baserom.dol+0x3c1838 */
-.byte 0x80, 0x28, 0x0e, 0x34, 0x80, 0x28, 0x0e, 0x3c, 0x80, 0x28, 0x0e, 0x40, 0x80, 0x28, 0x0e, 0x44 /* baserom.dol+0x3c1848 */
-.byte 0x80, 0x28, 0x0e, 0x48, 0x80, 0x28, 0x0e, 0x4c, 0x80, 0x28, 0x0e, 0x54, 0x80, 0x28, 0x0e, 0xf8 /* baserom.dol+0x3c1858 */
-.byte 0x80, 0x28, 0x0f, 0x00, 0x80, 0x28, 0x0f, 0x08, 0x80, 0x28, 0x0f, 0x0c, 0x80, 0x28, 0x0f, 0x14 /* baserom.dol+0x3c1868 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte JSGFGetType__Q26JStage7TSystemCFv
+.4byte JSGGetName__Q26JStage7TObjectCFv
+.4byte JSGUpdate__Q26JStage7TObjectFv
+.4byte JSGGetFlag__Q26JStage7TObjectCFv
+.4byte JSGSetFlag__Q26JStage7TObjectFUl
+.4byte JSGGetData__Q26JStage7TObjectCFUlPvUl
+.4byte JSGSetData__Q26JStage7TObjectFUlPCvUl
+.4byte JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl
+.4byte JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl
+.4byte JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl
+.4byte JSGFindNodeID__Q26JStage7TObjectCFPCc
+.4byte JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f
+.4byte JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject
+.4byte JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl
+.4byte JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject
+.4byte JSGGetSystemData__Q26JStage7TSystemFUl
+.4byte JSGSetSystemData__Q26JStage7TSystemFUlUl
 

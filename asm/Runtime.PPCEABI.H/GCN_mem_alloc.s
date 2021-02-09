@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80362914 0090 .text      __sys_free                     __sys_free                     */
+/* 80362914 00B8 .text      __sys_free                     __sys_free                     */
 .global __sys_free
+__sys_free:
 __sys_free:
 /* 80362914 0035F854  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80362918 0035F858  7C 08 02 A6 */	mflr r0
@@ -16,7 +17,7 @@ __sys_free:
 /* 8036292C 0035F86C  7C 7D 1B 78 */	mr r29, r3
 /* 80362930 0035F870  80 0D 84 10 */	lwz r0, __OSCurrHeap-_SDA_BASE_(r13)
 /* 80362934 0035F874  2C 00 FF FF */	cmpwi r0, -1
-/* 80362938 0035F878  40 82 00 6C */	bne func_803629A4
+/* 80362938 0035F878  40 82 00 6C */	bne lbl_803629A4
 /* 8036293C 0035F87C  3C 60 80 3A */	lis r3, LIT_55@ha
 /* 80362940 0035F880  38 63 21 A8 */	addi r3, r3, LIT_55@l
 /* 80362944 0035F884  4C C6 31 82 */	crclr 6
@@ -43,10 +44,7 @@ __sys_free:
 /* 80362998 0035F8D8  4B FD 88 09 */	bl OSSetCurrentHeap
 /* 8036299C 0035F8DC  7F C3 F3 78 */	mr r3, r30
 /* 803629A0 0035F8E0  4B FD 89 05 */	bl OSSetArenaLo
-
-/* 803629A4 0028 .text      func_803629A4                  func_803629A4                  */
-.global func_803629A4
-func_803629A4:
+lbl_803629A4:
 /* 803629A4 0035F8E4  80 6D 84 10 */	lwz r3, __OSCurrHeap-_SDA_BASE_(r13)
 /* 803629A8 0035F8E8  7F A4 EB 78 */	mr r4, r29
 /* 803629AC 0035F8EC  4B FD 87 79 */	bl OSFreeToHeap
@@ -63,21 +61,21 @@ func_803629A4:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 803A21A8 0036 .rodata    LIT_55                         @55                            */
+/* 803A21A8 0036 .rodata    @55                            LIT_55                         */
 .global LIT_55
 LIT_55:
 .byte 0x47, 0x43, 0x4e, 0x5f, 0x4d, 0x65, 0x6d, 0x5f, 0x41, 0x6c, 0x6c, 0x6f, 0x63, 0x2e, 0x63, 0x20 /* baserom.dol+0x39f1a8 */
 .byte 0x3a, 0x20, 0x49, 0x6e, 0x69, 0x74, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6c, 0x74, 0x48, 0x65, 0x61 /* baserom.dol+0x39f1b8 */
 .byte 0x70, 0x2e, 0x20, 0x4e, 0x6f, 0x20, 0x48, 0x65, 0x61, 0x70, 0x20, 0x41, 0x76, 0x61, 0x69, 0x6c /* baserom.dol+0x39f1c8 */
 .byte 0x61, 0x62, 0x6c, 0x65, 0x0a, 0x00 /* baserom.dol+0x39f1d8 */
-.byte 0x00, 0x00 /* baserom.dol+0x39f1de */
+.byte 0x00, 0x00 /* padding */
 
-/* 803A21E0 0039 .rodata    GCN_mem_alloc__LIT_56          @56                            */
+/* 803A21E0 0039 .rodata    @56                            GCN_mem_alloc__LIT_56          */
 .global GCN_mem_alloc__LIT_56
 GCN_mem_alloc__LIT_56:
 .byte 0x4d, 0x65, 0x74, 0x72, 0x6f, 0x77, 0x65, 0x72, 0x6b, 0x73, 0x20, 0x43, 0x57, 0x20, 0x72, 0x75 /* baserom.dol+0x39f1e0 */
 .byte 0x6e, 0x74, 0x69, 0x6d, 0x65, 0x20, 0x6c, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x20, 0x69, 0x6e /* baserom.dol+0x39f1f0 */
 .byte 0x69, 0x74, 0x69, 0x61, 0x6c, 0x69, 0x7a, 0x69, 0x6e, 0x67, 0x20, 0x64, 0x65, 0x66, 0x61, 0x75 /* baserom.dol+0x39f200 */
 .byte 0x6c, 0x74, 0x20, 0x68, 0x65, 0x61, 0x70, 0x0a, 0x00 /* baserom.dol+0x39f210 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39f219 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 

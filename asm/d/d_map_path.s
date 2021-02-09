@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8003C85C 0040 .text      create__Q28dMpath_n18dTexObjAggregate_cFv create__Q28dMpath_n18dTexObjAggregate_cFv */
+/* 8003C85C 0098 .text      create__Q28dMpath_n18dTexObjAggregate_cFv create__Q28dMpath_n18dTexObjAggregate_cFv */
 .global create__Q28dMpath_n18dTexObjAggregate_cFv
+create__Q28dMpath_n18dTexObjAggregate_cFv:
 create__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003C85C 0003979C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003C860 000397A0  7C 08 02 A6 */	mflr r0
@@ -20,13 +21,10 @@ create__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003C884 000397C4  3F 83 00 02 */	addis r28, r3, 2
 /* 8003C888 000397C8  3C 60 80 38 */	lis r3, d_d_map_path__stringBase0@ha
 /* 8003C88C 000397CC  3B A3 9C 4C */	addi r29, r3, d_d_map_path__stringBase0@l
-/* 8003C890 000397D0  3C 60 80 38 */	lis r3, sym_80379C30@ha
-/* 8003C894 000397D4  3B C3 9C 30 */	addi r30, r3, sym_80379C30@l
+/* 8003C890 000397D0  3C 60 80 38 */	lis r3, data_80379C30@ha
+/* 8003C894 000397D4  3B C3 9C 30 */	addi r30, r3, data_80379C30@l
 /* 8003C898 000397D8  3B 9C C2 F8 */	addi r28, r28, -15624
-
-/* 8003C89C 0058 .text      func_8003C89C                  func_8003C89C                  */
-.global func_8003C89C
-func_8003C89C:
+lbl_8003C89C:
 /* 8003C89C 000397DC  38 60 00 20 */	li r3, 0x20
 /* 8003C8A0 000397E0  48 29 23 AD */	bl __nw__FUl
 /* 8003C8A4 000397E4  7C 7A F9 2E */	stwx r3, r26, r31
@@ -42,7 +40,7 @@ func_8003C89C:
 /* 8003C8CC 0003980C  3B 7B 00 01 */	addi r27, r27, 1
 /* 8003C8D0 00039810  2C 1B 00 07 */	cmpwi r27, 7
 /* 8003C8D4 00039814  3B FF 00 04 */	addi r31, r31, 4
-/* 8003C8D8 00039818  41 80 FF C4 */	blt func_8003C89C
+/* 8003C8D8 00039818  41 80 FF C4 */	blt lbl_8003C89C
 /* 8003C8DC 0003981C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8003C8E0 00039820  48 32 59 3D */	bl _restgpr_26
 /* 8003C8E4 00039824  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -50,8 +48,9 @@ func_8003C89C:
 /* 8003C8EC 0003982C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003C8F0 00039830  4E 80 00 20 */	blr 
 
-/* 8003C8F4 0024 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv remove__Q28dMpath_n18dTexObjAggregate_cFv */
+/* 8003C8F4 0058 .text      remove__Q28dMpath_n18dTexObjAggregate_cFv remove__Q28dMpath_n18dTexObjAggregate_cFv */
 .global remove__Q28dMpath_n18dTexObjAggregate_cFv
+remove__Q28dMpath_n18dTexObjAggregate_cFv:
 remove__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003C8F4 00039834  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003C8F8 00039838  7C 08 02 A6 */	mflr r0
@@ -62,17 +61,14 @@ remove__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003C90C 0003984C  3B A0 00 00 */	li r29, 0
 /* 8003C910 00039850  3B E0 00 00 */	li r31, 0
 /* 8003C914 00039854  7F FE FB 78 */	mr r30, r31
-
-/* 8003C918 0034 .text      func_8003C918                  func_8003C918                  */
-.global func_8003C918
-func_8003C918:
+lbl_8003C918:
 /* 8003C918 00039858  7C 7C F8 2E */	lwzx r3, r28, r31
 /* 8003C91C 0003985C  48 29 24 21 */	bl __dl__FPv
 /* 8003C920 00039860  7F DC F9 2E */	stwx r30, r28, r31
 /* 8003C924 00039864  3B BD 00 01 */	addi r29, r29, 1
 /* 8003C928 00039868  2C 1D 00 07 */	cmpwi r29, 7
 /* 8003C92C 0003986C  3B FF 00 04 */	addi r31, r31, 4
-/* 8003C930 00039870  41 80 FF E8 */	blt func_8003C918
+/* 8003C930 00039870  41 80 FF E8 */	blt lbl_8003C918
 /* 8003C934 00039874  39 61 00 20 */	addi r11, r1, 0x20
 /* 8003C938 00039878  48 32 58 ED */	bl _restgpr_28
 /* 8003C93C 0003987C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -80,8 +76,9 @@ func_8003C918:
 /* 8003C944 00039884  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003C948 00039888  4E 80 00 20 */	blr 
 
-/* 8003C94C 00CC .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class */
+/* 8003C94C 00F4 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class */
 .global rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class
+rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class:
 rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class:
 /* 8003C94C 0003988C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003C950 00039890  7C 08 02 A6 */	mflr r0
@@ -96,7 +93,7 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class:
 /* 8003C974 000398B4  7D 89 03 A6 */	mtctr r12
 /* 8003C978 000398B8  4E 80 04 21 */	bctrl 
 /* 8003C97C 000398BC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8003C980 000398C0  41 82 00 A8 */	beq func_8003CA28
+/* 8003C980 000398C0  41 82 00 A8 */	beq lbl_8003CA28
 /* 8003C984 000398C4  7F C3 F3 78 */	mr r3, r30
 /* 8003C988 000398C8  88 9F 00 01 */	lbz r4, 1(r31)
 /* 8003C98C 000398CC  81 9E 00 00 */	lwz r12, 0(r30)
@@ -104,10 +101,10 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class:
 /* 8003C994 000398D4  7D 89 03 A6 */	mtctr r12
 /* 8003C998 000398D8  4E 80 04 21 */	bctrl 
 /* 8003C99C 000398DC  2C 03 00 00 */	cmpwi r3, 0
-/* 8003C9A0 000398E0  40 81 00 88 */	ble func_8003CA28
+/* 8003C9A0 000398E0  40 81 00 88 */	ble lbl_8003CA28
 /* 8003C9A4 000398E4  88 1F 00 02 */	lbz r0, 2(r31)
 /* 8003C9A8 000398E8  28 00 00 02 */	cmplwi r0, 2
-/* 8003C9AC 000398EC  41 80 00 7C */	blt func_8003CA28
+/* 8003C9AC 000398EC  41 80 00 7C */	blt lbl_8003CA28
 /* 8003C9B0 000398F0  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 8003C9B4 000398F4  38 80 00 00 */	li r4, 0
 /* 8003C9B8 000398F8  48 31 FF 05 */	bl GXSetLineWidth
@@ -133,19 +130,13 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class:
 /* 8003CA08 00039948  88 1F 00 02 */	lbz r0, 2(r31)
 /* 8003CA0C 0003994C  7C 09 03 A6 */	mtctr r0
 /* 8003CA10 00039950  2C 00 00 00 */	cmpwi r0, 0
-/* 8003CA14 00039954  40 81 00 14 */	ble func_8003CA28
-
-/* 8003CA18 0010 .text      func_8003CA18                  func_8003CA18                  */
-.global func_8003CA18
-func_8003CA18:
+/* 8003CA14 00039954  40 81 00 14 */	ble lbl_8003CA28
+lbl_8003CA18:
 /* 8003CA18 00039958  A0 04 00 00 */	lhz r0, 0(r4)
 /* 8003CA1C 0003995C  B0 03 80 00 */	sth r0, -0x8000(r3)
 /* 8003CA20 00039960  38 84 00 02 */	addi r4, r4, 2
-/* 8003CA24 00039964  42 00 FF F4 */	bdnz func_8003CA18
-
-/* 8003CA28 0018 .text      func_8003CA28                  func_8003CA28                  */
-.global func_8003CA28
-func_8003CA28:
+/* 8003CA24 00039964  42 00 FF F4 */	bdnz lbl_8003CA18
+lbl_8003CA28:
 /* 8003CA28 00039968  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8003CA2C 0003996C  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8003CA30 00039970  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -153,8 +144,9 @@ func_8003CA28:
 /* 8003CA38 00039978  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003CA3C 0003997C  4E 80 00 20 */	blr 
 
-/* 8003CA40 0098 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class */
+/* 8003CA40 00C0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class */
 .global rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class
+rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class:
 rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class:
 /* 8003CA40 00039980  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003CA44 00039984  7C 08 02 A6 */	mflr r0
@@ -169,7 +161,7 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class:
 /* 8003CA68 000399A8  7D 89 03 A6 */	mtctr r12
 /* 8003CA6C 000399AC  4E 80 04 21 */	bctrl 
 /* 8003CA70 000399B0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8003CA74 000399B4  41 82 00 74 */	beq func_8003CAE8
+/* 8003CA74 000399B4  41 82 00 74 */	beq lbl_8003CAE8
 /* 8003CA78 000399B8  7F C3 F3 78 */	mr r3, r30
 /* 8003CA7C 000399BC  88 1F 00 00 */	lbz r0, 0(r31)
 /* 8003CA80 000399C0  54 04 06 BE */	clrlwi r4, r0, 0x1a
@@ -184,7 +176,7 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class:
 /* 8003CAA4 000399E4  48 32 28 D9 */	bl GXSetTevColor
 /* 8003CAA8 000399E8  88 BF 00 01 */	lbz r5, 1(r31)
 /* 8003CAAC 000399EC  28 05 00 03 */	cmplwi r5, 3
-/* 8003CAB0 000399F0  41 80 00 38 */	blt func_8003CAE8
+/* 8003CAB0 000399F0  41 80 00 38 */	blt lbl_8003CAE8
 /* 8003CAB4 000399F4  38 60 00 98 */	li r3, 0x98
 /* 8003CAB8 000399F8  38 80 00 00 */	li r4, 0
 /* 8003CABC 000399FC  48 31 FC A9 */	bl GXBegin
@@ -193,19 +185,13 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class:
 /* 8003CAC8 00039A08  88 1F 00 01 */	lbz r0, 1(r31)
 /* 8003CACC 00039A0C  7C 09 03 A6 */	mtctr r0
 /* 8003CAD0 00039A10  2C 00 00 00 */	cmpwi r0, 0
-/* 8003CAD4 00039A14  40 81 00 14 */	ble func_8003CAE8
-
-/* 8003CAD8 0010 .text      func_8003CAD8                  func_8003CAD8                  */
-.global func_8003CAD8
-func_8003CAD8:
+/* 8003CAD4 00039A14  40 81 00 14 */	ble lbl_8003CAE8
+lbl_8003CAD8:
 /* 8003CAD8 00039A18  A0 04 00 00 */	lhz r0, 0(r4)
 /* 8003CADC 00039A1C  B0 03 80 00 */	sth r0, -0x8000(r3)
 /* 8003CAE0 00039A20  38 84 00 02 */	addi r4, r4, 2
-/* 8003CAE4 00039A24  42 00 FF F4 */	bdnz func_8003CAD8
-
-/* 8003CAE8 0018 .text      func_8003CAE8                  func_8003CAE8                  */
-.global func_8003CAE8
-func_8003CAE8:
+/* 8003CAE4 00039A24  42 00 FF F4 */	bdnz lbl_8003CAD8
+lbl_8003CAE8:
 /* 8003CAE8 00039A28  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8003CAEC 00039A2C  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8003CAF0 00039A30  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -213,8 +199,9 @@ func_8003CAE8:
 /* 8003CAF8 00039A38  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003CAFC 00039A3C  4E 80 00 20 */	blr 
 
-/* 8003CB00 0044 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class */
+/* 8003CB00 00BC .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class */
 .global rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class
+rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class:
 rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class:
 /* 8003CB00 00039A40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003CB04 00039A44  7C 08 02 A6 */	mflr r0
@@ -228,15 +215,12 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class:
 /* 8003CB24 00039A64  7D 89 03 A6 */	mtctr r12
 /* 8003CB28 00039A68  4E 80 04 21 */	bctrl 
 /* 8003CB2C 00039A6C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8003CB30 00039A70  41 82 00 74 */	beq func_8003CBA4
+/* 8003CB30 00039A70  41 82 00 74 */	beq lbl_8003CBA4
 /* 8003CB34 00039A74  83 DC 00 10 */	lwz r30, 0x10(r28)
 /* 8003CB38 00039A78  3B A0 00 00 */	li r29, 0
 /* 8003CB3C 00039A7C  8B FC 00 04 */	lbz r31, 4(r28)
-/* 8003CB40 00039A80  48 00 00 24 */	b func_8003CB64
-
-/* 8003CB44 0020 .text      func_8003CB44                  func_8003CB44                  */
-.global func_8003CB44
-func_8003CB44:
+/* 8003CB40 00039A80  48 00 00 24 */	b lbl_8003CB64
+lbl_8003CB44:
 /* 8003CB44 00039A84  7F 63 DB 78 */	mr r3, r27
 /* 8003CB48 00039A88  7F C4 F3 78 */	mr r4, r30
 /* 8003CB4C 00039A8C  81 9B 00 00 */	lwz r12, 0(r27)
@@ -245,20 +229,14 @@ func_8003CB44:
 /* 8003CB58 00039A98  4E 80 04 21 */	bctrl 
 /* 8003CB5C 00039A9C  3B DE 00 08 */	addi r30, r30, 8
 /* 8003CB60 00039AA0  3B BD 00 01 */	addi r29, r29, 1
-
-/* 8003CB64 0018 .text      func_8003CB64                  func_8003CB64                  */
-.global func_8003CB64
-func_8003CB64:
+lbl_8003CB64:
 /* 8003CB64 00039AA4  7C 1D F8 00 */	cmpw r29, r31
-/* 8003CB68 00039AA8  41 80 FF DC */	blt func_8003CB44
+/* 8003CB68 00039AA8  41 80 FF DC */	blt lbl_8003CB44
 /* 8003CB6C 00039AAC  83 BC 00 08 */	lwz r29, 8(r28)
 /* 8003CB70 00039AB0  3B C0 00 00 */	li r30, 0
 /* 8003CB74 00039AB4  8B FC 00 02 */	lbz r31, 2(r28)
-/* 8003CB78 00039AB8  48 00 00 24 */	b func_8003CB9C
-
-/* 8003CB7C 0020 .text      func_8003CB7C                  func_8003CB7C                  */
-.global func_8003CB7C
-func_8003CB7C:
+/* 8003CB78 00039AB8  48 00 00 24 */	b lbl_8003CB9C
+lbl_8003CB7C:
 /* 8003CB7C 00039ABC  7F 63 DB 78 */	mr r3, r27
 /* 8003CB80 00039AC0  7F A4 EB 78 */	mr r4, r29
 /* 8003CB84 00039AC4  81 9B 00 00 */	lwz r12, 0(r27)
@@ -267,16 +245,10 @@ func_8003CB7C:
 /* 8003CB90 00039AD0  4E 80 04 21 */	bctrl 
 /* 8003CB94 00039AD4  3B BD 00 08 */	addi r29, r29, 8
 /* 8003CB98 00039AD8  3B DE 00 01 */	addi r30, r30, 1
-
-/* 8003CB9C 0008 .text      func_8003CB9C                  func_8003CB9C                  */
-.global func_8003CB9C
-func_8003CB9C:
+lbl_8003CB9C:
 /* 8003CB9C 00039ADC  7C 1E F8 00 */	cmpw r30, r31
-/* 8003CBA0 00039AE0  41 80 FF DC */	blt func_8003CB7C
-
-/* 8003CBA4 0018 .text      func_8003CBA4                  func_8003CBA4                  */
-.global func_8003CBA4
-func_8003CBA4:
+/* 8003CBA0 00039AE0  41 80 FF DC */	blt lbl_8003CB7C
+lbl_8003CBA4:
 /* 8003CBA4 00039AE4  39 61 00 20 */	addi r11, r1, 0x20
 /* 8003CBA8 00039AE8  48 32 56 79 */	bl _restgpr_27
 /* 8003CBAC 00039AEC  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -284,8 +256,9 @@ func_8003CBA4:
 /* 8003CBB4 00039AF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003CBB8 00039AF8  4E 80 00 20 */	blr 
 
-/* 8003CBBC 0034 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class */
+/* 8003CBBC 0068 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class */
 .global rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class
+rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class:
 rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class:
 /* 8003CBBC 00039AFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003CBC0 00039B00  7C 08 02 A6 */	mflr r0
@@ -295,30 +268,21 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class:
 /* 8003CBD0 00039B10  7C 7C 1B 78 */	mr r28, r3
 /* 8003CBD4 00039B14  80 04 00 04 */	lwz r0, 4(r4)
 /* 8003CBD8 00039B18  28 00 00 00 */	cmplwi r0, 0
-/* 8003CBDC 00039B1C  41 82 00 30 */	beq func_8003CC0C
+/* 8003CBDC 00039B1C  41 82 00 30 */	beq lbl_8003CC0C
 /* 8003CBE0 00039B20  7C 1E 03 78 */	mr r30, r0
 /* 8003CBE4 00039B24  3B A0 00 00 */	li r29, 0
 /* 8003CBE8 00039B28  8B E4 00 01 */	lbz r31, 1(r4)
-/* 8003CBEC 00039B2C  48 00 00 18 */	b func_8003CC04
-
-/* 8003CBF0 0014 .text      func_8003CBF0                  func_8003CBF0                  */
-.global func_8003CBF0
-func_8003CBF0:
+/* 8003CBEC 00039B2C  48 00 00 18 */	b lbl_8003CC04
+lbl_8003CBF0:
 /* 8003CBF0 00039B30  7F 83 E3 78 */	mr r3, r28
 /* 8003CBF4 00039B34  7F C4 F3 78 */	mr r4, r30
 /* 8003CBF8 00039B38  4B FF FF 09 */	bl rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class
 /* 8003CBFC 00039B3C  3B DE 00 14 */	addi r30, r30, 0x14
 /* 8003CC00 00039B40  3B BD 00 01 */	addi r29, r29, 1
-
-/* 8003CC04 0008 .text      func_8003CC04                  func_8003CC04                  */
-.global func_8003CC04
-func_8003CC04:
+lbl_8003CC04:
 /* 8003CC04 00039B44  7C 1D F8 00 */	cmpw r29, r31
-/* 8003CC08 00039B48  41 80 FF E8 */	blt func_8003CBF0
-
-/* 8003CC0C 0018 .text      func_8003CC0C                  func_8003CC0C                  */
-.global func_8003CC0C
-func_8003CC0C:
+/* 8003CC08 00039B48  41 80 FF E8 */	blt lbl_8003CBF0
+lbl_8003CC0C:
 /* 8003CC0C 00039B4C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8003CC10 00039B50  48 32 56 15 */	bl _restgpr_28
 /* 8003CC14 00039B54  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -326,8 +290,9 @@ func_8003CC0C:
 /* 8003CC1C 00039B5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003CC20 00039B60  4E 80 00 20 */	blr 
 
-/* 8003CC24 0044 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class */
+/* 8003CC24 00A0 .text      rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class */
 .global rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class
+rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class:
 rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class:
 /* 8003CC24 00039B64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003CC28 00039B68  7C 08 02 A6 */	mflr r0
@@ -336,20 +301,17 @@ rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class:
 /* 8003CC34 00039B74  48 32 55 A5 */	bl _savegpr_28
 /* 8003CC38 00039B78  7C 7C 1B 78 */	mr r28, r3
 /* 8003CC3C 00039B7C  7C 9D 23 79 */	or. r29, r4, r4
-/* 8003CC40 00039B80  41 82 00 6C */	beq func_8003CCAC
+/* 8003CC40 00039B80  41 82 00 6C */	beq lbl_8003CCAC
 /* 8003CC44 00039B84  38 60 00 09 */	li r3, 9
 /* 8003CC48 00039B88  80 9D 00 08 */	lwz r4, 8(r29)
 /* 8003CC4C 00039B8C  38 A0 00 08 */	li r5, 8
 /* 8003CC50 00039B90  48 31 EE D9 */	bl GXSetArray
 /* 8003CC54 00039B94  83 FD 00 04 */	lwz r31, 4(r29)
 /* 8003CC58 00039B98  28 1F 00 00 */	cmplwi r31, 0
-/* 8003CC5C 00039B9C  41 82 00 50 */	beq func_8003CCAC
+/* 8003CC5C 00039B9C  41 82 00 50 */	beq lbl_8003CCAC
 /* 8003CC60 00039BA0  3B C0 00 00 */	li r30, 0
-/* 8003CC64 00039BA4  48 00 00 3C */	b func_8003CCA0
-
-/* 8003CC68 0030 .text      func_8003CC68                  func_8003CC68                  */
-.global func_8003CC68
-func_8003CC68:
+/* 8003CC64 00039BA4  48 00 00 3C */	b lbl_8003CCA0
+lbl_8003CC68:
 /* 8003CC68 00039BA8  7F 83 E3 78 */	mr r3, r28
 /* 8003CC6C 00039BAC  88 9F 00 00 */	lbz r4, 0(r31)
 /* 8003CC70 00039BB0  7C 84 07 74 */	extsb r4, r4
@@ -358,27 +320,18 @@ func_8003CC68:
 /* 8003CC7C 00039BBC  7D 89 03 A6 */	mtctr r12
 /* 8003CC80 00039BC0  4E 80 04 21 */	bctrl 
 /* 8003CC84 00039BC4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8003CC88 00039BC8  41 82 00 10 */	beq func_8003CC98
+/* 8003CC88 00039BC8  41 82 00 10 */	beq lbl_8003CC98
 /* 8003CC8C 00039BCC  7F 83 E3 78 */	mr r3, r28
 /* 8003CC90 00039BD0  7F E4 FB 78 */	mr r4, r31
 /* 8003CC94 00039BD4  4B FF FF 29 */	bl rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class
-
-/* 8003CC98 0008 .text      func_8003CC98                  func_8003CC98                  */
-.global func_8003CC98
-func_8003CC98:
+lbl_8003CC98:
 /* 8003CC98 00039BD8  3B FF 00 08 */	addi r31, r31, 8
 /* 8003CC9C 00039BDC  3B DE 00 01 */	addi r30, r30, 1
-
-/* 8003CCA0 000C .text      func_8003CCA0                  func_8003CCA0                  */
-.global func_8003CCA0
-func_8003CCA0:
+lbl_8003CCA0:
 /* 8003CCA0 00039BE0  88 1D 00 00 */	lbz r0, 0(r29)
 /* 8003CCA4 00039BE4  7C 1E 00 00 */	cmpw r30, r0
-/* 8003CCA8 00039BE8  41 80 FF C0 */	blt func_8003CC68
-
-/* 8003CCAC 0018 .text      func_8003CCAC                  func_8003CCAC                  */
-.global func_8003CCAC
-func_8003CCAC:
+/* 8003CCA8 00039BE8  41 80 FF C0 */	blt lbl_8003CC68
+lbl_8003CCAC:
 /* 8003CCAC 00039BEC  39 61 00 20 */	addi r11, r1, 0x20
 /* 8003CCB0 00039BF0  48 32 55 75 */	bl _restgpr_28
 /* 8003CCB4 00039BF4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -386,8 +339,9 @@ func_8003CCAC:
 /* 8003CCBC 00039BFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003CCC0 00039C00  4E 80 00 20 */	blr 
 
-/* 8003CCC4 002C .text      drawPath__11dDrawPath_cFv      drawPath__11dDrawPath_cFv      */
+/* 8003CCC4 0074 .text      drawPath__11dDrawPath_cFv      drawPath__11dDrawPath_cFv      */
 .global drawPath__11dDrawPath_cFv
+drawPath__11dDrawPath_cFv:
 drawPath__11dDrawPath_cFv:
 /* 8003CCC4 00039C04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003CCC8 00039C08  7C 08 02 A6 */	mflr r0
@@ -399,11 +353,8 @@ drawPath__11dDrawPath_cFv:
 /* 8003CCE0 00039C20  7D 89 03 A6 */	mtctr r12
 /* 8003CCE4 00039C24  4E 80 04 21 */	bctrl 
 /* 8003CCE8 00039C28  7C 64 1B 78 */	mr r4, r3
-/* 8003CCEC 00039C2C  48 00 00 30 */	b func_8003CD1C
-
-/* 8003CCF0 002C .text      func_8003CCF0                  func_8003CCF0                  */
-.global func_8003CCF0
-func_8003CCF0:
+/* 8003CCEC 00039C2C  48 00 00 30 */	b lbl_8003CD1C
+lbl_8003CCF0:
 /* 8003CCF0 00039C30  7F E3 FB 78 */	mr r3, r31
 /* 8003CCF4 00039C34  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8003CCF8 00039C38  81 8C 00 3C */	lwz r12, 0x3c(r12)
@@ -415,12 +366,9 @@ func_8003CCF0:
 /* 8003CD10 00039C50  7D 89 03 A6 */	mtctr r12
 /* 8003CD14 00039C54  4E 80 04 21 */	bctrl 
 /* 8003CD18 00039C58  7C 64 1B 78 */	mr r4, r3
-
-/* 8003CD1C 001C .text      func_8003CD1C                  func_8003CD1C                  */
-.global func_8003CD1C
-func_8003CD1C:
+lbl_8003CD1C:
 /* 8003CD1C 00039C5C  28 04 00 00 */	cmplwi r4, 0
-/* 8003CD20 00039C60  40 82 FF D0 */	bne func_8003CCF0
+/* 8003CD20 00039C60  40 82 FF D0 */	bne lbl_8003CCF0
 /* 8003CD24 00039C64  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8003CD28 00039C68  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8003CD2C 00039C6C  7C 08 03 A6 */	mtlr r0
@@ -429,6 +377,7 @@ func_8003CD1C:
 
 /* 8003CD38 0074 .text      makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs */
 .global makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs
+makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs:
 makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs:
 /* 8003CD38 00039C78  38 00 00 09 */	li r0, 9
 /* 8003CD3C 00039C7C  98 04 00 00 */	stb r0, 0(r4)
@@ -460,8 +409,9 @@ makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs:
 /* 8003CDA4 00039CE4  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 8003CDA8 00039CE8  4E 80 00 20 */	blr 
 
-/* 8003CDAC 00A4 .text      renderingMap__15dRenderingMap_cFv renderingMap__15dRenderingMap_cFv */
+/* 8003CDAC 00CC .text      renderingMap__15dRenderingMap_cFv renderingMap__15dRenderingMap_cFv */
 .global renderingMap__15dRenderingMap_cFv
+renderingMap__15dRenderingMap_cFv:
 renderingMap__15dRenderingMap_cFv:
 /* 8003CDAC 00039CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003CDB0 00039CF0  7C 08 02 A6 */	mflr r0
@@ -478,7 +428,7 @@ renderingMap__15dRenderingMap_cFv:
 /* 8003CDDC 00039D1C  7D 89 03 A6 */	mtctr r12
 /* 8003CDE0 00039D20  4E 80 04 21 */	bctrl 
 /* 8003CDE4 00039D24  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8003CDE8 00039D28  41 82 00 68 */	beq func_8003CE50
+/* 8003CDE8 00039D28  41 82 00 68 */	beq lbl_8003CE50
 /* 8003CDEC 00039D2C  7F E3 FB 78 */	mr r3, r31
 /* 8003CDF0 00039D30  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8003CDF4 00039D34  81 8C 00 48 */	lwz r12, 0x48(r12)
@@ -504,10 +454,7 @@ renderingMap__15dRenderingMap_cFv:
 /* 8003CE44 00039D84  81 8C 00 4C */	lwz r12, 0x4c(r12)
 /* 8003CE48 00039D88  7D 89 03 A6 */	mtctr r12
 /* 8003CE4C 00039D8C  4E 80 04 21 */	bctrl 
-
-/* 8003CE50 0028 .text      func_8003CE50                  func_8003CE50                  */
-.global func_8003CE50
-func_8003CE50:
+lbl_8003CE50:
 /* 8003CE50 00039D90  7F E3 FB 78 */	mr r3, r31
 /* 8003CE54 00039D94  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8003CE58 00039D98  81 8C 00 58 */	lwz r12, 0x58(r12)
@@ -521,6 +468,7 @@ func_8003CE50:
 
 /* 8003CE78 00C8 .text      setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv */
 .global setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv
+setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv:
 setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv:
 /* 8003CE78 00039DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003CE7C 00039DBC  7C 08 02 A6 */	mflr r0
@@ -575,6 +523,7 @@ setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv:
 
 /* 8003CF40 016C .text      setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv */
 .global setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv
+setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv:
 setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv:
 /* 8003CF40 00039E80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003CF44 00039E84  7C 08 02 A6 */	mflr r0
@@ -671,6 +620,7 @@ setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv:
 /* 8003D0AC 00DC .text      drawBack__18dRenderingFDAmap_cCFv drawBack__18dRenderingFDAmap_cCFv */
 .global drawBack__18dRenderingFDAmap_cCFv
 drawBack__18dRenderingFDAmap_cCFv:
+drawBack__18dRenderingFDAmap_cCFv:
 /* 8003D0AC 00039FEC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003D0B0 00039FF0  7C 08 02 A6 */	mflr r0
 /* 8003D0B4 00039FF4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -729,6 +679,7 @@ drawBack__18dRenderingFDAmap_cCFv:
 
 /* 8003D188 0198 .text      preRenderingMap__18dRenderingFDAmap_cFv preRenderingMap__18dRenderingFDAmap_cFv */
 .global preRenderingMap__18dRenderingFDAmap_cFv
+preRenderingMap__18dRenderingFDAmap_cFv:
 preRenderingMap__18dRenderingFDAmap_cFv:
 /* 8003D188 0003A0C8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8003D18C 0003A0CC  7C 08 02 A6 */	mflr r0
@@ -836,6 +787,7 @@ preRenderingMap__18dRenderingFDAmap_cFv:
 /* 8003D320 00A0 .text      postRenderingMap__18dRenderingFDAmap_cFv postRenderingMap__18dRenderingFDAmap_cFv */
 .global postRenderingMap__18dRenderingFDAmap_cFv
 postRenderingMap__18dRenderingFDAmap_cFv:
+postRenderingMap__18dRenderingFDAmap_cFv:
 /* 8003D320 0003A260  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003D324 0003A264  7C 08 02 A6 */	mflr r0
 /* 8003D328 0003A268  90 01 00 14 */	stw r0, 0x14(r1)
@@ -877,8 +829,9 @@ postRenderingMap__18dRenderingFDAmap_cFv:
 /* 8003D3B8 0003A2F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003D3BC 0003A2FC  4E 80 00 20 */	blr 
 
-/* 8003D3C0 0130 .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
+/* 8003D3C0 02CC .text      renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class */
 .global renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class
+renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class:
 renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class:
 /* 8003D3C0 0003A300  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8003D3C4 0003A304  7C 08 02 A6 */	mflr r0
@@ -893,7 +846,7 @@ renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class:
 /* 8003D3E8 0003A328  7D 89 03 A6 */	mtctr r12
 /* 8003D3EC 0003A32C  4E 80 04 21 */	bctrl 
 /* 8003D3F0 0003A330  7C 7D 1B 79 */	or. r29, r3, r3
-/* 8003D3F4 0003A334  40 81 02 80 */	ble func_8003D674
+/* 8003D3F4 0003A334  40 81 02 80 */	ble lbl_8003D674
 /* 8003D3F8 0003A338  7F E3 FB 78 */	mr r3, r31
 /* 8003D3FC 0003A33C  4B FF FB 45 */	bl setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv
 /* 8003D400 0003A340  48 31 E1 8D */	bl GXClearVtxDesc
@@ -955,13 +908,10 @@ renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class:
 /* 8003D4E0 0003A420  3B 40 00 00 */	li r26, 0
 /* 8003D4E4 0003A424  3B BB FF FF */	addi r29, r27, -1
 /* 8003D4E8 0003A428  3F C0 CC 01 */	lis r30, 0xcc01
-/* 8003D4EC 0003A42C  48 00 01 50 */	b func_8003D63C
-
-/* 8003D4F0 00B4 .text      func_8003D4F0                  func_8003D4F0                  */
-.global func_8003D4F0
-func_8003D4F0:
+/* 8003D4EC 0003A42C  48 00 01 50 */	b lbl_8003D63C
+lbl_8003D4F0:
 /* 8003D4F0 0003A430  7C 1A E8 00 */	cmpw r26, r29
-/* 8003D4F4 0003A434  40 80 00 B0 */	bge func_8003D5A4
+/* 8003D4F4 0003A434  40 80 00 B0 */	bge lbl_8003D5A4
 /* 8003D4F8 0003A438  38 60 00 00 */	li r3, 0
 /* 8003D4FC 0003A43C  38 80 00 0F */	li r4, 0xf
 /* 8003D500 0003A440  38 A0 00 0F */	li r5, 0xf
@@ -1005,10 +955,7 @@ func_8003D4F0:
 /* 8003D598 0003A4D8  D0 03 80 00 */	stfs f0, -0x8000(r3)
 /* 8003D59C 0003A4DC  C0 02 84 08 */	lfs f0, d_d_map_path__LIT_3836-_SDA2_BASE_(r2)
 /* 8003D5A0 0003A4E0  D0 03 80 00 */	stfs f0, -0x8000(r3)
-
-/* 8003D5A4 0098 .text      func_8003D5A4                  func_8003D5A4                  */
-.global func_8003D5A4
-func_8003D5A4:
+lbl_8003D5A4:
 /* 8003D5A4 0003A4E4  38 60 00 00 */	li r3, 0
 /* 8003D5A8 0003A4E8  38 80 00 0F */	li r4, 0xf
 /* 8003D5AC 0003A4EC  38 A0 00 0E */	li r5, 0xe
@@ -1047,12 +994,9 @@ func_8003D5A4:
 /* 8003D630 0003A570  D0 1E 80 00 */	stfs f0, -0x8000(r30)
 /* 8003D634 0003A574  3B 9C 00 02 */	addi r28, r28, 2
 /* 8003D638 0003A578  3B 5A 00 01 */	addi r26, r26, 1
-
-/* 8003D63C 0038 .text      func_8003D63C                  func_8003D63C                  */
-.global func_8003D63C
-func_8003D63C:
+lbl_8003D63C:
 /* 8003D63C 0003A57C  7C 1A D8 00 */	cmpw r26, r27
-/* 8003D640 0003A580  41 80 FE B0 */	blt func_8003D4F0
+/* 8003D640 0003A580  41 80 FE B0 */	blt lbl_8003D4F0
 /* 8003D644 0003A584  7F E3 FB 78 */	mr r3, r31
 /* 8003D648 0003A588  4B FF F8 31 */	bl setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv
 /* 8003D64C 0003A58C  48 31 DF 41 */	bl GXClearVtxDesc
@@ -1065,10 +1009,7 @@ func_8003D63C:
 /* 8003D668 0003A5A8  38 C0 00 04 */	li r6, 4
 /* 8003D66C 0003A5AC  38 E0 00 00 */	li r7, 0
 /* 8003D670 0003A5B0  48 31 DF 55 */	bl GXSetVtxAttrFmt
-
-/* 8003D674 0018 .text      func_8003D674                  func_8003D674                  */
-.global func_8003D674
-func_8003D674:
+lbl_8003D674:
 /* 8003D674 0003A5B4  39 61 00 30 */	addi r11, r1, 0x30
 /* 8003D678 0003A5B8  48 32 4B A5 */	bl _restgpr_26
 /* 8003D67C 0003A5BC  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -1078,6 +1019,7 @@ func_8003D674:
 
 /* 8003D68C 002C .text      getDecoLineColor__18dRenderingFDAmap_cFii getDecoLineColor__18dRenderingFDAmap_cFii */
 .global getDecoLineColor__18dRenderingFDAmap_cFii
+getDecoLineColor__18dRenderingFDAmap_cFii:
 getDecoLineColor__18dRenderingFDAmap_cFii:
 /* 8003D68C 0003A5CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003D690 0003A5D0  7C 08 02 A6 */	mflr r0
@@ -1094,6 +1036,7 @@ getDecoLineColor__18dRenderingFDAmap_cFii:
 /* 8003D6B8 002C .text      getDecorationLineWidth__18dRenderingFDAmap_cFi getDecorationLineWidth__18dRenderingFDAmap_cFi */
 .global getDecorationLineWidth__18dRenderingFDAmap_cFi
 getDecorationLineWidth__18dRenderingFDAmap_cFi:
+getDecorationLineWidth__18dRenderingFDAmap_cFi:
 /* 8003D6B8 0003A5F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003D6BC 0003A5FC  7C 08 02 A6 */	mflr r0
 /* 8003D6C0 0003A600  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1106,8 +1049,9 @@ getDecorationLineWidth__18dRenderingFDAmap_cFi:
 /* 8003D6DC 0003A61C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003D6E0 0003A620  4E 80 00 20 */	blr 
 
-/* 8003D6E4 0024 .text      __sinit_d_map_path_cpp         __sinit_d_map_path_cpp         */
+/* 8003D6E4 005C .text      __sinit_d_map_path_cpp         __sinit_d_map_path_cpp         */
 .global __sinit_d_map_path_cpp
+__sinit_d_map_path_cpp:
 __sinit_d_map_path_cpp:
 /* 8003D6E4 0003A624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003D6E8 0003A628  7C 08 02 A6 */	mflr r0
@@ -1118,13 +1062,10 @@ __sinit_d_map_path_cpp:
 /* 8003D6FC 0003A63C  38 84 46 84 */	addi r4, r4, m_texObjAgg__8dMpath_n@l
 /* 8003D700 0003A640  38 00 00 07 */	li r0, 7
 /* 8003D704 0003A644  7C 09 03 A6 */	mtctr r0
-
-/* 8003D708 0038 .text      func_8003D708                  func_8003D708                  */
-.global func_8003D708
-func_8003D708:
+lbl_8003D708:
 /* 8003D708 0003A648  7C A4 19 2E */	stwx r5, r4, r3
 /* 8003D70C 0003A64C  38 63 00 04 */	addi r3, r3, 4
-/* 8003D710 0003A650  42 00 FF F8 */	bdnz func_8003D708
+/* 8003D710 0003A650  42 00 FF F8 */	bdnz lbl_8003D708
 /* 8003D714 0003A654  3C 60 80 42 */	lis r3, m_texObjAgg__8dMpath_n@ha
 /* 8003D718 0003A658  38 63 46 84 */	addi r3, r3, m_texObjAgg__8dMpath_n@l
 /* 8003D71C 0003A65C  3C 80 80 04 */	lis r4, __dt__Q28dMpath_n18dTexObjAggregate_cFv@ha
@@ -1137,8 +1078,9 @@ func_8003D708:
 /* 8003D738 0003A678  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003D73C 0003A67C  4E 80 00 20 */	blr 
 
-/* 8003D740 0034 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv __dt__Q28dMpath_n18dTexObjAggregate_cFv */
+/* 8003D740 0050 .text      __dt__Q28dMpath_n18dTexObjAggregate_cFv __dt__Q28dMpath_n18dTexObjAggregate_cFv */
 .global __dt__Q28dMpath_n18dTexObjAggregate_cFv
+__dt__Q28dMpath_n18dTexObjAggregate_cFv:
 __dt__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003D740 0003A680  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003D744 0003A684  7C 08 02 A6 */	mflr r0
@@ -1147,16 +1089,13 @@ __dt__Q28dMpath_n18dTexObjAggregate_cFv:
 /* 8003D750 0003A690  93 C1 00 08 */	stw r30, 8(r1)
 /* 8003D754 0003A694  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8003D758 0003A698  7C 9F 23 78 */	mr r31, r4
-/* 8003D75C 0003A69C  41 82 00 18 */	beq func_8003D774
+/* 8003D75C 0003A69C  41 82 00 18 */	beq lbl_8003D774
 /* 8003D760 0003A6A0  4B FF F1 95 */	bl remove__Q28dMpath_n18dTexObjAggregate_cFv
 /* 8003D764 0003A6A4  7F E0 07 35 */	extsh. r0, r31
-/* 8003D768 0003A6A8  40 81 00 0C */	ble func_8003D774
+/* 8003D768 0003A6A8  40 81 00 0C */	ble lbl_8003D774
 /* 8003D76C 0003A6AC  7F C3 F3 78 */	mr r3, r30
 /* 8003D770 0003A6B0  48 29 15 CD */	bl __dl__FPv
-
-/* 8003D774 001C .text      func_8003D774                  func_8003D774                  */
-.global func_8003D774
-func_8003D774:
+lbl_8003D774:
 /* 8003D774 0003A6B4  7F C3 F3 78 */	mr r3, r30
 /* 8003D778 0003A6B8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8003D77C 0003A6BC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1170,17 +1109,17 @@ func_8003D774:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80379C30 001C .rodata    sym_80379C30                   data$3644                      */
-.global sym_80379C30
-sym_80379C30:
+/* 80379C30 001C .rodata    data$3644                      data_80379C30                  */
+.global data_80379C30
+data_80379C30:
 .byte 0x00, 0x00, 0x00, 0x4f, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x4d, 0x00, 0x00, 0x00, 0x4e /* baserom.dol+0x376c30 */
 .byte 0x00, 0x00, 0x00, 0x4c, 0x00, 0x00, 0x00, 0x51, 0x00, 0x00, 0x00, 0x52 /* baserom.dol+0x376c40 */
 
-/* 80379C4C 0007 .rodata    d_d_map_path__stringBase0      @stringBase0                   */
+/* 80379C4C 0007 .rodata    @stringBase0                   d_d_map_path__stringBase0      */
 .global d_d_map_path__stringBase0
 d_d_map_path__stringBase0:
 .byte 0x41, 0x6c, 0x77, 0x61, 0x79, 0x73, 0x00 /* baserom.dol+0x376c4c */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x376c53 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -1190,28 +1129,59 @@ d_d_map_path__stringBase0:
 /* 803A7C90 0068 .data      __vt__18dRenderingFDAmap_c     __vt__18dRenderingFDAmap_c     */
 .global __vt__18dRenderingFDAmap_c
 __vt__18dRenderingFDAmap_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0xab, 0xec, 0x80, 0x02, 0xab, 0xf8 /* baserom.dol+0x3a4c90 */
-.byte 0x80, 0x02, 0xab, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0xad, 0x84, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4ca0 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4cb0 */
-.byte 0x80, 0x03, 0xcc, 0xc4, 0x80, 0x03, 0xc9, 0x4c, 0x80, 0x03, 0xca, 0x40, 0x80, 0x03, 0xcc, 0x24 /* baserom.dol+0x3a4cc0 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4cd0 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x03, 0xd1, 0x88, 0x80, 0x03, 0xd3, 0x20, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4ce0 */
-.byte 0x80, 0x03, 0xd6, 0x8c, 0x80, 0x03, 0xd6, 0xb8 /* baserom.dol+0x3a4cf0 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__12dDlst_base_cFv
+.4byte __dt__18dRenderingFDAmap_cFv
+.4byte isDrawType__11dDrawPath_cFi
+.4byte 0x00000000
+.4byte getLineColor__11dDrawPath_cFii
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte drawPath__11dDrawPath_cFv
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte preRenderingMap__18dRenderingFDAmap_cFv
+.4byte postRenderingMap__18dRenderingFDAmap_cFv
+.4byte 0x00000000
+.4byte getDecoLineColor__18dRenderingFDAmap_cFii
+.4byte getDecorationLineWidth__18dRenderingFDAmap_cFi
 
 /* 803A7CF8 0040 .data      __vt__11dDrawPath_c            __vt__11dDrawPath_c            */
 .global __vt__11dDrawPath_c
 __vt__11dDrawPath_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0xab, 0xec, 0x80, 0x02, 0xad, 0x3c /* baserom.dol+0x3a4cf8 */
-.byte 0x80, 0x02, 0xab, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0xad, 0x84, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4d08 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a4d18 */
-.byte 0x80, 0x03, 0xcc, 0xc4, 0x80, 0x03, 0xc9, 0x4c, 0x80, 0x03, 0xca, 0x40, 0x80, 0x03, 0xcc, 0x24 /* baserom.dol+0x3a4d28 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__12dDlst_base_cFv
+.4byte __dt__11dDrawPath_cFv
+.4byte isDrawType__11dDrawPath_cFi
+.4byte 0x00000000
+.4byte getLineColor__11dDrawPath_cFii
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte drawPath__11dDrawPath_cFv
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class
+.4byte rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80424678 000C .bss       LIT_3639                       @3639                          */
+/* 80424678 000C .bss       @3639                          LIT_3639                       */
 .global LIT_3639
 LIT_3639:
 .skip 0xc
@@ -1226,27 +1196,27 @@ m_texObjAgg__8dMpath_n:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80451E08 0004 .sdata2    d_d_map_path__LIT_3836         @3836                          */
+/* 80451E08 0004 .sdata2    @3836                          d_d_map_path__LIT_3836         */
 .global d_d_map_path__LIT_3836
 d_d_map_path__LIT_3836:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0c68 */
 
-/* 80451E0C 0004 .sdata2    d_d_map_path__LIT_3846         @3846                          */
+/* 80451E0C 0004 .sdata2    @3846                          d_d_map_path__LIT_3846         */
 .global d_d_map_path__LIT_3846
 d_d_map_path__LIT_3846:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d0c6c */
 
-/* 80451E10 0004 .sdata2    d_d_map_path__LIT_3847         @3847                          */
+/* 80451E10 0004 .sdata2    @3847                          d_d_map_path__LIT_3847         */
 .global d_d_map_path__LIT_3847
 d_d_map_path__LIT_3847:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0c70 */
 
-/* 80451E14 0004 .sdata2    d_d_map_path__LIT_3848         @3848                          */
+/* 80451E14 0004 .sdata2    @3848                          d_d_map_path__LIT_3848         */
 .global d_d_map_path__LIT_3848
 d_d_map_path__LIT_3848:
 .byte 0x46, 0x1c, 0x40, 0x00 /* baserom.dol+0x3d0c74 */
 
-/* 80451E18 0008 .sdata2    d_d_map_path__LIT_3850         @3850                          */
+/* 80451E18 0008 .sdata2    @3850                          d_d_map_path__LIT_3850         */
 .global d_d_map_path__LIT_3850
 d_d_map_path__LIT_3850:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0c78 */

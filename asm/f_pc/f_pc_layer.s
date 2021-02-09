@@ -7,6 +7,7 @@
 /* 80021588 0020 .text      fpcLy_CancelQTo__FP24process_method_tag_class fpcLy_CancelQTo__FP24process_method_tag_class */
 .global fpcLy_CancelQTo__FP24process_method_tag_class
 fpcLy_CancelQTo__FP24process_method_tag_class:
+fpcLy_CancelQTo__FP24process_method_tag_class:
 /* 80021588 0001E4C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8002158C 0001E4CC  7C 08 02 A6 */	mflr r0
 /* 80021590 0001E4D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,6 +19,7 @@ fpcLy_CancelQTo__FP24process_method_tag_class:
 
 /* 800215A8 0024 .text      fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class */
 .global fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class
+fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class:
 fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class:
 /* 800215A8 0001E4E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800215AC 0001E4EC  7C 08 02 A6 */	mflr r0
@@ -31,6 +33,7 @@ fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class:
 
 /* 800215CC 002C .text      fpcLy_CancelMethod__FP24process_method_tag_class fpcLy_CancelMethod__FP24process_method_tag_class */
 .global fpcLy_CancelMethod__FP24process_method_tag_class
+fpcLy_CancelMethod__FP24process_method_tag_class:
 fpcLy_CancelMethod__FP24process_method_tag_class:
 /* 800215CC 0001E50C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800215D0 0001E510  7C 08 02 A6 */	mflr r0
@@ -47,6 +50,7 @@ fpcLy_CancelMethod__FP24process_method_tag_class:
 /* 800215F8 0024 .text      fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi */
 .global fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi
 fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi:
+fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi:
 /* 800215F8 0001E538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800215FC 0001E53C  7C 08 02 A6 */	mflr r0
 /* 80021600 0001E540  90 01 00 14 */	stw r0, 0x14(r1)
@@ -59,6 +63,7 @@ fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi:
 
 /* 8002161C 0024 .text      fpcLy_ToQueue__FP11layer_classiP16create_tag_class fpcLy_ToQueue__FP11layer_classiP16create_tag_class */
 .global fpcLy_ToQueue__FP11layer_classiP16create_tag_class
+fpcLy_ToQueue__FP11layer_classiP16create_tag_class:
 fpcLy_ToQueue__FP11layer_classiP16create_tag_class:
 /* 8002161C 0001E55C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021620 0001E560  7C 08 02 A6 */	mflr r0
@@ -73,6 +78,7 @@ fpcLy_ToQueue__FP11layer_classiP16create_tag_class:
 /* 80021640 0024 .text      fpcLy_QueueTo__FP11layer_classP16create_tag_class fpcLy_QueueTo__FP11layer_classP16create_tag_class */
 .global fpcLy_QueueTo__FP11layer_classP16create_tag_class
 fpcLy_QueueTo__FP11layer_classP16create_tag_class:
+fpcLy_QueueTo__FP11layer_classP16create_tag_class:
 /* 80021640 0001E580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021644 0001E584  7C 08 02 A6 */	mflr r0
 /* 80021648 0001E588  90 01 00 14 */	stw r0, 0x14(r1)
@@ -86,6 +92,7 @@ fpcLy_QueueTo__FP11layer_classP16create_tag_class:
 /* 80021664 0014 .text      fpcLy_IsDeletingMesg__FP11layer_class fpcLy_IsDeletingMesg__FP11layer_class */
 .global fpcLy_IsDeletingMesg__FP11layer_class
 fpcLy_IsDeletingMesg__FP11layer_class:
+fpcLy_IsDeletingMesg__FP11layer_class:
 /* 80021664 0001E5A4  A8 63 00 2A */	lha r3, 0x2a(r3)
 /* 80021668 0001E5A8  7C 03 00 D0 */	neg r0, r3
 /* 8002166C 0001E5AC  7C 00 18 78 */	andc r0, r0, r3
@@ -95,6 +102,7 @@ fpcLy_IsDeletingMesg__FP11layer_class:
 /* 80021678 0010 .text      fpcLy_DeletingMesg__FP11layer_class fpcLy_DeletingMesg__FP11layer_class */
 .global fpcLy_DeletingMesg__FP11layer_class
 fpcLy_DeletingMesg__FP11layer_class:
+fpcLy_DeletingMesg__FP11layer_class:
 /* 80021678 0001E5B8  A8 83 00 2A */	lha r4, 0x2a(r3)
 /* 8002167C 0001E5BC  38 04 00 01 */	addi r0, r4, 1
 /* 80021680 0001E5C0  B0 03 00 2A */	sth r0, 0x2a(r3)
@@ -102,6 +110,7 @@ fpcLy_DeletingMesg__FP11layer_class:
 
 /* 80021688 0018 .text      fpcLy_DeletedMesg__FP11layer_class fpcLy_DeletedMesg__FP11layer_class */
 .global fpcLy_DeletedMesg__FP11layer_class
+fpcLy_DeletedMesg__FP11layer_class:
 fpcLy_DeletedMesg__FP11layer_class:
 /* 80021688 0001E5C8  A8 83 00 2A */	lha r4, 0x2a(r3)
 /* 8002168C 0001E5CC  2C 04 00 00 */	cmpwi r4, 0
@@ -113,6 +122,7 @@ fpcLy_DeletedMesg__FP11layer_class:
 /* 800216A0 0014 .text      fpcLy_IsCreatingMesg__FP11layer_class fpcLy_IsCreatingMesg__FP11layer_class */
 .global fpcLy_IsCreatingMesg__FP11layer_class
 fpcLy_IsCreatingMesg__FP11layer_class:
+fpcLy_IsCreatingMesg__FP11layer_class:
 /* 800216A0 0001E5E0  A8 63 00 28 */	lha r3, 0x28(r3)
 /* 800216A4 0001E5E4  7C 03 00 D0 */	neg r0, r3
 /* 800216A8 0001E5E8  7C 00 18 78 */	andc r0, r0, r3
@@ -122,6 +132,7 @@ fpcLy_IsCreatingMesg__FP11layer_class:
 /* 800216B4 0010 .text      fpcLy_CreatingMesg__FP11layer_class fpcLy_CreatingMesg__FP11layer_class */
 .global fpcLy_CreatingMesg__FP11layer_class
 fpcLy_CreatingMesg__FP11layer_class:
+fpcLy_CreatingMesg__FP11layer_class:
 /* 800216B4 0001E5F4  A8 83 00 28 */	lha r4, 0x28(r3)
 /* 800216B8 0001E5F8  38 04 00 01 */	addi r0, r4, 1
 /* 800216BC 0001E5FC  B0 03 00 28 */	sth r0, 0x28(r3)
@@ -129,6 +140,7 @@ fpcLy_CreatingMesg__FP11layer_class:
 
 /* 800216C4 0018 .text      fpcLy_CreatedMesg__FP11layer_class fpcLy_CreatedMesg__FP11layer_class */
 .global fpcLy_CreatedMesg__FP11layer_class
+fpcLy_CreatedMesg__FP11layer_class:
 fpcLy_CreatedMesg__FP11layer_class:
 /* 800216C4 0001E604  A8 83 00 28 */	lha r4, 0x28(r3)
 /* 800216C8 0001E608  2C 04 00 00 */	cmpwi r4, 0
@@ -140,6 +152,7 @@ fpcLy_CreatedMesg__FP11layer_class:
 /* 800216DC 0010 .text      fpcLy_RootLayer__Fv            fpcLy_RootLayer__Fv            */
 .global fpcLy_RootLayer__Fv
 fpcLy_RootLayer__Fv:
+fpcLy_RootLayer__Fv:
 /* 800216DC 0001E61C  3C 60 80 3A */	lis r3, l_fpcLy_LayerList@ha
 /* 800216E0 0001E620  38 63 39 DC */	addi r3, r3, l_fpcLy_LayerList@l
 /* 800216E4 0001E624  80 63 00 00 */	lwz r3, 0(r3)
@@ -148,17 +161,20 @@ fpcLy_RootLayer__Fv:
 /* 800216EC 0008 .text      fpcLy_SetCurrentLayer__FP11layer_class fpcLy_SetCurrentLayer__FP11layer_class */
 .global fpcLy_SetCurrentLayer__FP11layer_class
 fpcLy_SetCurrentLayer__FP11layer_class:
+fpcLy_SetCurrentLayer__FP11layer_class:
 /* 800216EC 0001E62C  90 6D 87 98 */	stw r3, l_fpcLy_CurrLayer_p-_SDA_BASE_(r13)
 /* 800216F0 0001E630  4E 80 00 20 */	blr 
 
 /* 800216F4 0008 .text      fpcLy_CurrentLayer__Fv         fpcLy_CurrentLayer__Fv         */
 .global fpcLy_CurrentLayer__Fv
 fpcLy_CurrentLayer__Fv:
+fpcLy_CurrentLayer__Fv:
 /* 800216F4 0001E634  80 6D 87 98 */	lwz r3, l_fpcLy_CurrLayer_p-_SDA_BASE_(r13)
 /* 800216F8 0001E638  4E 80 00 20 */	blr 
 
-/* 800216FC 001C .text      fpcLy_Search__FUi              fpcLy_Search__FUi              */
+/* 800216FC 0050 .text      fpcLy_Search__FUi              fpcLy_Search__FUi              */
 .global fpcLy_Search__FUi
+fpcLy_Search__FUi:
 fpcLy_Search__FUi:
 /* 800216FC 0001E63C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021700 0001E640  7C 08 02 A6 */	mflr r0
@@ -166,83 +182,57 @@ fpcLy_Search__FUi:
 /* 80021708 0001E648  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8002170C 0001E64C  7C 7F 1B 78 */	mr r31, r3
 /* 80021710 0001E650  4B FF FF CD */	bl fpcLy_RootLayer__Fv
-/* 80021714 0001E654  48 00 00 18 */	b func_8002172C
-
-/* 80021718 0010 .text      func_80021718                  func_80021718                  */
-.global func_80021718
-func_80021718:
+/* 80021714 0001E654  48 00 00 18 */	b lbl_8002172C
+lbl_80021718:
 /* 80021718 0001E658  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8002171C 0001E65C  7C 00 F8 40 */	cmplw r0, r31
-/* 80021720 0001E660  40 82 00 08 */	bne func_80021728
-/* 80021724 0001E664  48 00 00 14 */	b func_80021738
-
-/* 80021728 0004 .text      func_80021728                  func_80021728                  */
-.global func_80021728
-func_80021728:
+/* 80021720 0001E660  40 82 00 08 */	bne lbl_80021728
+/* 80021724 0001E664  48 00 00 14 */	b lbl_80021738
+lbl_80021728:
 /* 80021728 0001E668  80 63 00 08 */	lwz r3, 8(r3)
-
-/* 8002172C 000C .text      func_8002172C                  func_8002172C                  */
-.global func_8002172C
-func_8002172C:
+lbl_8002172C:
 /* 8002172C 0001E66C  28 03 00 00 */	cmplwi r3, 0
-/* 80021730 0001E670  40 82 FF E8 */	bne func_80021718
+/* 80021730 0001E670  40 82 FF E8 */	bne lbl_80021718
 /* 80021734 0001E674  38 60 00 00 */	li r3, 0
-
-/* 80021738 0014 .text      func_80021738                  func_80021738                  */
-.global func_80021738
-func_80021738:
+lbl_80021738:
 /* 80021738 0001E678  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8002173C 0001E67C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80021740 0001E680  7C 08 03 A6 */	mtlr r0
 /* 80021744 0001E684  38 21 00 10 */	addi r1, r1, 0x10
 /* 80021748 0001E688  4E 80 00 20 */	blr 
 
-/* 8002174C 0028 .text      fpcLy_Layer__FUi               fpcLy_Layer__FUi               */
+/* 8002174C 0070 .text      fpcLy_Layer__FUi               fpcLy_Layer__FUi               */
 .global fpcLy_Layer__FUi
+fpcLy_Layer__FUi:
 fpcLy_Layer__FUi:
 /* 8002174C 0001E68C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021750 0001E690  7C 08 02 A6 */	mflr r0
 /* 80021754 0001E694  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80021758 0001E698  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8002175C 0001E69C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80021760 0001E6A0  41 82 00 14 */	beq func_80021774
+/* 80021760 0001E6A0  41 82 00 14 */	beq lbl_80021774
 /* 80021764 0001E6A4  4B FF FF 79 */	bl fpcLy_RootLayer__Fv
 /* 80021768 0001E6A8  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8002176C 0001E6AC  7C 1F 00 40 */	cmplw r31, r0
-/* 80021770 0001E6B0  40 82 00 0C */	bne func_8002177C
-
-/* 80021774 0008 .text      func_80021774                  func_80021774                  */
-.global func_80021774
-func_80021774:
+/* 80021770 0001E6B0  40 82 00 0C */	bne lbl_8002177C
+lbl_80021774:
 /* 80021774 0001E6B4  4B FF FF 69 */	bl fpcLy_RootLayer__Fv
-/* 80021778 0001E6B8  48 00 00 30 */	b func_800217A8
-
-/* 8002177C 001C .text      func_8002177C                  func_8002177C                  */
-.global func_8002177C
-func_8002177C:
+/* 80021778 0001E6B8  48 00 00 30 */	b lbl_800217A8
+lbl_8002177C:
 /* 8002177C 0001E6BC  3C 1F 00 01 */	addis r0, r31, 1
 /* 80021780 0001E6C0  28 00 FF FD */	cmplwi r0, 0xfffd
-/* 80021784 0001E6C4  41 82 00 14 */	beq func_80021798
+/* 80021784 0001E6C4  41 82 00 14 */	beq lbl_80021798
 /* 80021788 0001E6C8  4B FF FF 6D */	bl fpcLy_CurrentLayer__Fv
 /* 8002178C 0001E6CC  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80021790 0001E6D0  7C 1F 00 40 */	cmplw r31, r0
-/* 80021794 0001E6D4  40 82 00 0C */	bne func_800217A0
-
-/* 80021798 0008 .text      func_80021798                  func_80021798                  */
-.global func_80021798
-func_80021798:
+/* 80021794 0001E6D4  40 82 00 0C */	bne lbl_800217A0
+lbl_80021798:
 /* 80021798 0001E6D8  4B FF FF 5D */	bl fpcLy_CurrentLayer__Fv
-/* 8002179C 0001E6DC  48 00 00 0C */	b func_800217A8
-
-/* 800217A0 0008 .text      func_800217A0                  func_800217A0                  */
-.global func_800217A0
-func_800217A0:
+/* 8002179C 0001E6DC  48 00 00 0C */	b lbl_800217A8
+lbl_800217A0:
 /* 800217A0 0001E6E0  7F E3 FB 78 */	mr r3, r31
 /* 800217A4 0001E6E4  4B FF FF 59 */	bl fpcLy_Search__FUi
-
-/* 800217A8 0014 .text      func_800217A8                  func_800217A8                  */
-.global func_800217A8
-func_800217A8:
+lbl_800217A8:
 /* 800217A8 0001E6E8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800217AC 0001E6EC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800217B0 0001E6F0  7C 08 03 A6 */	mtlr r0
@@ -251,6 +241,7 @@ func_800217A8:
 
 /* 800217BC 002C .text      fpcLy_Regist__FP11layer_class  fpcLy_Regist__FP11layer_class  */
 .global fpcLy_Regist__FP11layer_class
+fpcLy_Regist__FP11layer_class:
 fpcLy_Regist__FP11layer_class:
 /* 800217BC 0001E6FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800217C0 0001E700  7C 08 02 A6 */	mflr r0
@@ -264,8 +255,9 @@ fpcLy_Regist__FP11layer_class:
 /* 800217E0 0001E720  38 21 00 10 */	addi r1, r1, 0x10
 /* 800217E4 0001E724  4E 80 00 20 */	blr 
 
-/* 800217E8 009C .text      fpcLy_Delete__FP11layer_class  fpcLy_Delete__FP11layer_class  */
+/* 800217E8 00B4 .text      fpcLy_Delete__FP11layer_class  fpcLy_Delete__FP11layer_class  */
 .global fpcLy_Delete__FP11layer_class
+fpcLy_Delete__FP11layer_class:
 fpcLy_Delete__FP11layer_class:
 /* 800217E8 0001E728  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800217EC 0001E72C  7C 08 02 A6 */	mflr r0
@@ -275,10 +267,10 @@ fpcLy_Delete__FP11layer_class:
 /* 800217FC 0001E73C  80 83 00 10 */	lwz r4, 0x10(r3)
 /* 80021800 0001E740  80 04 00 08 */	lwz r0, 8(r4)
 /* 80021804 0001E744  2C 00 00 00 */	cmpwi r0, 0
-/* 80021808 0001E748  40 82 00 7C */	bne func_80021884
+/* 80021808 0001E748  40 82 00 7C */	bne lbl_80021884
 /* 8002180C 0001E74C  80 1F 00 24 */	lwz r0, 0x24(r31)
 /* 80021810 0001E750  2C 00 00 00 */	cmpwi r0, 0
-/* 80021814 0001E754  40 82 00 70 */	bne func_80021884
+/* 80021814 0001E754  40 82 00 70 */	bne lbl_80021884
 /* 80021818 0001E758  48 24 46 61 */	bl cLs_SingleCut__FP10node_class
 /* 8002181C 0001E75C  3C 60 80 3A */	lis r3, l_fpcLy_Crear@ha
 /* 80021820 0001E760  38 83 39 B0 */	addi r4, r3, l_fpcLy_Crear@l
@@ -305,16 +297,10 @@ fpcLy_Delete__FP11layer_class:
 /* 80021874 0001E7B4  80 04 00 28 */	lwz r0, 0x28(r4)
 /* 80021878 0001E7B8  90 1F 00 28 */	stw r0, 0x28(r31)
 /* 8002187C 0001E7BC  38 60 00 01 */	li r3, 1
-/* 80021880 0001E7C0  48 00 00 08 */	b func_80021888
-
-/* 80021884 0004 .text      func_80021884                  func_80021884                  */
-.global func_80021884
-func_80021884:
+/* 80021880 0001E7C0  48 00 00 08 */	b lbl_80021888
+lbl_80021884:
 /* 80021884 0001E7C4  38 60 00 00 */	li r3, 0
-
-/* 80021888 0014 .text      func_80021888                  func_80021888                  */
-.global func_80021888
-func_80021888:
+lbl_80021888:
 /* 80021888 0001E7C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8002188C 0001E7CC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80021890 0001E7D0  7C 08 03 A6 */	mtlr r0
@@ -323,6 +309,7 @@ func_80021888:
 
 /* 8002189C 002C .text      fpcLy_Cancel__FP11layer_class  fpcLy_Cancel__FP11layer_class  */
 .global fpcLy_Cancel__FP11layer_class
+fpcLy_Cancel__FP11layer_class:
 fpcLy_Cancel__FP11layer_class:
 /* 8002189C 0001E7DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800218A0 0001E7E0  7C 08 02 A6 */	mflr r0
@@ -336,8 +323,9 @@ fpcLy_Cancel__FP11layer_class:
 /* 800218C0 0001E800  38 21 00 10 */	addi r1, r1, 0x10
 /* 800218C4 0001E804  4E 80 00 20 */	blr 
 
-/* 800218C8 003C .text      fpcLy_Create__FP11layer_classPvP15node_list_classi fpcLy_Create__FP11layer_classPvP15node_list_classi */
+/* 800218C8 0138 .text      fpcLy_Create__FP11layer_classPvP15node_list_classi fpcLy_Create__FP11layer_classPvP15node_list_classi */
 .global fpcLy_Create__FP11layer_classPvP15node_list_classi
+fpcLy_Create__FP11layer_classPvP15node_list_classi:
 fpcLy_Create__FP11layer_classPvP15node_list_classi:
 /* 800218C8 0001E808  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800218CC 0001E80C  7C 08 02 A6 */	mflr r0
@@ -348,27 +336,21 @@ fpcLy_Create__FP11layer_classPvP15node_list_classi:
 /* 800218E0 0001E820  7C 9D 23 78 */	mr r29, r4
 /* 800218E4 0001E824  7C BE 2B 78 */	mr r30, r5
 /* 800218E8 0001E828  7C DF 33 78 */	mr r31, r6
-/* 800218EC 0001E82C  88 0D 87 A0 */	lbz r0, sym_80450D20-_SDA_BASE_(r13)
+/* 800218EC 0001E82C  88 0D 87 A0 */	lbz r0, data_80450D20-_SDA_BASE_(r13)
 /* 800218F0 0001E830  7C 00 07 75 */	extsb. r0, r0
-/* 800218F4 0001E834  40 82 00 10 */	bne func_80021904
+/* 800218F4 0001E834  40 82 00 10 */	bne lbl_80021904
 /* 800218F8 0001E838  38 00 00 01 */	li r0, 1
-/* 800218FC 0001E83C  90 0D 87 9C */	stw r0, sym_80450D1C-_SDA_BASE_(r13)
-/* 80021900 0001E840  98 0D 87 A0 */	stb r0, sym_80450D20-_SDA_BASE_(r13)
-
-/* 80021904 001C .text      func_80021904                  func_80021904                  */
-.global func_80021904
-func_80021904:
-/* 80021904 0001E844  88 0D 87 A8 */	lbz r0, sym_80450D28-_SDA_BASE_(r13)
+/* 800218FC 0001E83C  90 0D 87 9C */	stw r0, data_80450D1C-_SDA_BASE_(r13)
+/* 80021900 0001E840  98 0D 87 A0 */	stb r0, data_80450D20-_SDA_BASE_(r13)
+lbl_80021904:
+/* 80021904 0001E844  88 0D 87 A8 */	lbz r0, data_80450D28-_SDA_BASE_(r13)
 /* 80021908 0001E848  7C 00 07 75 */	extsb. r0, r0
-/* 8002190C 0001E84C  40 82 00 14 */	bne func_80021920
+/* 8002190C 0001E84C  40 82 00 14 */	bne lbl_80021920
 /* 80021910 0001E850  38 00 00 00 */	li r0, 0
-/* 80021914 0001E854  90 0D 87 A4 */	stw r0, sym_80450D24-_SDA_BASE_(r13)
+/* 80021914 0001E854  90 0D 87 A4 */	stw r0, data_80450D24-_SDA_BASE_(r13)
 /* 80021918 0001E858  38 00 00 01 */	li r0, 1
-/* 8002191C 0001E85C  98 0D 87 A8 */	stb r0, sym_80450D28-_SDA_BASE_(r13)
-
-/* 80021920 00A8 .text      func_80021920                  func_80021920                  */
-.global func_80021920
-func_80021920:
+/* 8002191C 0001E85C  98 0D 87 A8 */	stb r0, data_80450D28-_SDA_BASE_(r13)
+lbl_80021920:
 /* 80021920 0001E860  3C 60 80 3A */	lis r3, l_fpcLy_Crear@ha
 /* 80021924 0001E864  38 83 39 B0 */	addi r4, r3, l_fpcLy_Crear@l
 /* 80021928 0001E868  80 64 00 00 */	lwz r3, 0(r4)
@@ -396,25 +378,22 @@ func_80021920:
 /* 80021980 0001E8C0  7F 83 E3 78 */	mr r3, r28
 /* 80021984 0001E8C4  38 80 00 00 */	li r4, 0
 /* 80021988 0001E8C8  48 24 49 89 */	bl cNd_Create__FP10node_classPv
-/* 8002198C 0001E8CC  80 6D 87 A4 */	lwz r3, sym_80450D24-_SDA_BASE_(r13)
+/* 8002198C 0001E8CC  80 6D 87 A4 */	lwz r3, data_80450D24-_SDA_BASE_(r13)
 /* 80021990 0001E8D0  38 03 00 01 */	addi r0, r3, 1
-/* 80021994 0001E8D4  90 0D 87 A4 */	stw r0, sym_80450D24-_SDA_BASE_(r13)
+/* 80021994 0001E8D4  90 0D 87 A4 */	stw r0, data_80450D24-_SDA_BASE_(r13)
 /* 80021998 0001E8D8  90 7C 00 0C */	stw r3, 0xc(r28)
 /* 8002199C 0001E8DC  93 BC 00 18 */	stw r29, 0x18(r28)
-/* 800219A0 0001E8E0  80 0D 87 9C */	lwz r0, sym_80450D1C-_SDA_BASE_(r13)
+/* 800219A0 0001E8E0  80 0D 87 9C */	lwz r0, data_80450D1C-_SDA_BASE_(r13)
 /* 800219A4 0001E8E4  2C 00 00 01 */	cmpwi r0, 1
-/* 800219A8 0001E8E8  40 82 00 20 */	bne func_800219C8
+/* 800219A8 0001E8E8  40 82 00 20 */	bne lbl_800219C8
 /* 800219AC 0001E8EC  38 00 00 00 */	li r0, 0
-/* 800219B0 0001E8F0  90 0D 87 9C */	stw r0, sym_80450D1C-_SDA_BASE_(r13)
+/* 800219B0 0001E8F0  90 0D 87 9C */	stw r0, data_80450D1C-_SDA_BASE_(r13)
 /* 800219B4 0001E8F4  3C 60 80 3A */	lis r3, l_fpcLy_LayerList@ha
 /* 800219B8 0001E8F8  38 63 39 DC */	addi r3, r3, l_fpcLy_LayerList@l
 /* 800219BC 0001E8FC  48 24 46 85 */	bl cLs_Create__FP15node_list_class
 /* 800219C0 0001E900  7F 83 E3 78 */	mr r3, r28
 /* 800219C4 0001E904  4B FF FD 29 */	bl fpcLy_SetCurrentLayer__FP11layer_class
-
-/* 800219C8 0038 .text      func_800219C8                  func_800219C8                  */
-.global func_800219C8
-func_800219C8:
+lbl_800219C8:
 /* 800219C8 0001E908  93 DC 00 10 */	stw r30, 0x10(r28)
 /* 800219CC 0001E90C  93 FC 00 14 */	stw r31, 0x14(r28)
 /* 800219D0 0001E910  38 7C 00 10 */	addi r3, r28, 0x10
@@ -457,23 +436,23 @@ l_fpcLy_LayerList:
 l_fpcLy_CurrLayer_p:
 .skip 0x4
 
-/* 80450D1C 0004 .sbss      sym_80450D1C                   IsInitOfLayerList$2308         */
-.global sym_80450D1C
-sym_80450D1C:
+/* 80450D1C 0004 .sbss      IsInitOfLayerList$2308         data_80450D1C                  */
+.global data_80450D1C
+data_80450D1C:
 .skip 0x4
 
-/* 80450D20 0004 .sbss      sym_80450D20                   sym_80450D20                   */
-.global sym_80450D20
-sym_80450D20:
+/* 80450D20 0004 .sbss      data_80450D20                  data_80450D20                  */
+.global data_80450D20
+data_80450D20:
 .skip 0x4
 
-/* 80450D24 0004 .sbss      sym_80450D24                   layer_id$2311                  */
-.global sym_80450D24
-sym_80450D24:
+/* 80450D24 0004 .sbss      layer_id$2311                  data_80450D24                  */
+.global data_80450D24
+data_80450D24:
 .skip 0x4
 
-/* 80450D28 0008 .sbss      sym_80450D28                   sym_80450D28                   */
-.global sym_80450D28
-sym_80450D28:
+/* 80450D28 0008 .sbss      data_80450D28                  data_80450D28                  */
+.global data_80450D28
+data_80450D28:
 .skip 0x8
 

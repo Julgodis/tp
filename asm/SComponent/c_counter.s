@@ -4,29 +4,24 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80265E1C 001C .text      cCt_Counter__Fi                cCt_Counter__Fi                */
+/* 80265E1C 0048 .text      cCt_Counter__Fi                cCt_Counter__Fi                */
 .global cCt_Counter__Fi
 cCt_Counter__Fi:
+cCt_Counter__Fi:
 /* 80265E1C 00262D5C  2C 03 00 01 */	cmpwi r3, 1
-/* 80265E20 00262D60  40 82 00 18 */	bne func_80265E38
+/* 80265E20 00262D60  40 82 00 18 */	bne lbl_80265E38
 /* 80265E24 00262D64  38 00 00 00 */	li r0, 0
 /* 80265E28 00262D68  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 80265E2C 00262D6C  38 63 0C D8 */	addi r3, r3, g_Counter@l
 /* 80265E30 00262D70  90 03 00 04 */	stw r0, 4(r3)
-/* 80265E34 00262D74  48 00 00 18 */	b func_80265E4C
-
-/* 80265E38 0014 .text      func_80265E38                  func_80265E38                  */
-.global func_80265E38
-func_80265E38:
+/* 80265E34 00262D74  48 00 00 18 */	b lbl_80265E4C
+lbl_80265E38:
 /* 80265E38 00262D78  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 80265E3C 00262D7C  38 83 0C D8 */	addi r4, r3, g_Counter@l
 /* 80265E40 00262D80  80 64 00 04 */	lwz r3, 4(r4)
 /* 80265E44 00262D84  38 03 00 01 */	addi r0, r3, 1
 /* 80265E48 00262D88  90 04 00 04 */	stw r0, 4(r4)
-
-/* 80265E4C 0018 .text      func_80265E4C                  func_80265E4C                  */
-.global func_80265E4C
-func_80265E4C:
+lbl_80265E4C:
 /* 80265E4C 00262D8C  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 80265E50 00262D90  38 83 0C D8 */	addi r4, r3, g_Counter@l
 /* 80265E54 00262D94  80 64 00 00 */	lwz r3, 0(r4)

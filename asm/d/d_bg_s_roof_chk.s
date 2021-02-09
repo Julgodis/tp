@@ -7,6 +7,7 @@
 /* 80078FF4 009C .text      __ct__12dBgS_RoofChkFv         __ct__12dBgS_RoofChkFv         */
 .global __ct__12dBgS_RoofChkFv
 __ct__12dBgS_RoofChkFv:
+__ct__12dBgS_RoofChkFv:
 /* 80078FF4 00075F34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078FF8 00075F38  7C 08 02 A6 */	mflr r0
 /* 80078FFC 00075F3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -47,8 +48,9 @@ __ct__12dBgS_RoofChkFv:
 /* 80079088 00075FC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8007908C 00075FCC  4E 80 00 20 */	blr 
 
-/* 80079090 0078 .text      __dt__12dBgS_RoofChkFv         __dt__12dBgS_RoofChkFv         */
+/* 80079090 0094 .text      __dt__12dBgS_RoofChkFv         __dt__12dBgS_RoofChkFv         */
 .global __dt__12dBgS_RoofChkFv
+__dt__12dBgS_RoofChkFv:
 __dt__12dBgS_RoofChkFv:
 /* 80079090 00075FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80079094 00075FD4  7C 08 02 A6 */	mflr r0
@@ -57,7 +59,7 @@ __dt__12dBgS_RoofChkFv:
 /* 800790A0 00075FE0  93 C1 00 08 */	stw r30, 8(r1)
 /* 800790A4 00075FE4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 800790A8 00075FE8  7C 9F 23 78 */	mr r31, r4
-/* 800790AC 00075FEC  41 82 00 5C */	beq func_80079108
+/* 800790AC 00075FEC  41 82 00 5C */	beq lbl_80079108
 /* 800790B0 00075FF0  3C 60 80 3B */	lis r3, __vt__12dBgS_RoofChk@ha
 /* 800790B4 00075FF4  38 63 BA 50 */	addi r3, r3, __vt__12dBgS_RoofChk@l
 /* 800790B8 00075FF8  90 7E 00 0C */	stw r3, 0xc(r30)
@@ -77,13 +79,10 @@ __dt__12dBgS_RoofChkFv:
 /* 800790F0 00076030  38 80 00 00 */	li r4, 0
 /* 800790F4 00076034  48 1E EF BD */	bl __dt__13cBgS_PolyInfoFv
 /* 800790F8 00076038  7F E0 07 35 */	extsh. r0, r31
-/* 800790FC 0007603C  40 81 00 0C */	ble func_80079108
+/* 800790FC 0007603C  40 81 00 0C */	ble lbl_80079108
 /* 80079100 00076040  7F C3 F3 78 */	mr r3, r30
 /* 80079104 00076044  48 25 5C 39 */	bl __dl__FPv
-
-/* 80079108 001C .text      func_80079108                  func_80079108                  */
-.global func_80079108
-func_80079108:
+lbl_80079108:
 /* 80079108 00076048  7F C3 F3 78 */	mr r3, r30
 /* 8007910C 0007604C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80079110 00076050  83 C1 00 08 */	lwz r30, 8(r1)
@@ -94,6 +93,7 @@ func_80079108:
 
 /* 80079124 0028 .text      Init__12dBgS_RoofChkFv         Init__12dBgS_RoofChkFv         */
 .global Init__12dBgS_RoofChkFv
+Init__12dBgS_RoofChkFv:
 Init__12dBgS_RoofChkFv:
 /* 80079124 00076064  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80079128 00076068  7C 08 02 A6 */	mflr r0
@@ -106,20 +106,23 @@ Init__12dBgS_RoofChkFv:
 /* 80079144 00076084  38 21 00 10 */	addi r1, r1, 0x10
 /* 80079148 00076088  4E 80 00 20 */	blr 
 
-/* 8007914C 0008 .text      func_8007914C                  @16@__dt__12dBgS_RoofChkFv     */
+/* 8007914C 0008 .text      @16@__dt__12dBgS_RoofChkFv     func_8007914C                  */
 .global func_8007914C
+func_8007914C:
 func_8007914C:
 /* 8007914C 0007608C  38 63 FF F0 */	addi r3, r3, -16
 /* 80079150 00076090  4B FF FF 40 */	b __dt__12dBgS_RoofChkFv
 
-/* 80079154 0008 .text      func_80079154                  @52@__dt__12dBgS_RoofChkFv     */
+/* 80079154 0008 .text      @52@__dt__12dBgS_RoofChkFv     func_80079154                  */
 .global func_80079154
+func_80079154:
 func_80079154:
 /* 80079154 00076094  38 63 FF CC */	addi r3, r3, -52
 /* 80079158 00076098  4B FF FF 38 */	b __dt__12dBgS_RoofChkFv
 
-/* 8007915C 0008 .text      func_8007915C                  @36@__dt__12dBgS_RoofChkFv     */
+/* 8007915C 0008 .text      @36@__dt__12dBgS_RoofChkFv     func_8007915C                  */
 .global func_8007915C
+func_8007915C:
 func_8007915C:
 /* 8007915C 0007609C  38 63 FF DC */	addi r3, r3, -36
 /* 80079160 000760A0  4B FF FF 30 */	b __dt__12dBgS_RoofChkFv
@@ -132,21 +135,30 @@ func_8007915C:
 /* 803ABA50 0030 .data      __vt__12dBgS_RoofChk           __vt__12dBgS_RoofChk           */
 .global __vt__12dBgS_RoofChk
 __vt__12dBgS_RoofChk:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x90, 0x90, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8a50 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x91, 0x4c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8a60 */
-.byte 0x80, 0x07, 0x91, 0x5c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x91, 0x54 /* baserom.dol+0x3a8a70 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12dBgS_RoofChkFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_8007914C
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_8007915C
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80079154
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804526F0 0004 .sdata2    LIT_316                        @316                           */
+/* 804526F0 0004 .sdata2    @316                           LIT_316                        */
 .global LIT_316
 LIT_316:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1550 */
 
-/* 804526F4 0004 .sdata2    d_d_bg_s_roof_chk__LIT_333     @333                           */
+/* 804526F4 0004 .sdata2    @333                           d_d_bg_s_roof_chk__LIT_333     */
 .global d_d_bg_s_roof_chk__LIT_333
 d_d_bg_s_roof_chk__LIT_333:
 .byte 0x4e, 0x6e, 0x6b, 0x28 /* baserom.dol+0x3d1554 */

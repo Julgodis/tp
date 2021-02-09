@@ -7,6 +7,7 @@
 /* 802E9670 0060 .text      __ct__13J2DOrthoGraphFv        __ct__13J2DOrthoGraphFv        */
 .global __ct__13J2DOrthoGraphFv
 __ct__13J2DOrthoGraphFv:
+__ct__13J2DOrthoGraphFv:
 /* 802E9670 002E65B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9674 002E65B4  7C 08 02 A6 */	mflr r0
 /* 802E9678 002E65B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -34,6 +35,7 @@ __ct__13J2DOrthoGraphFv:
 
 /* 802E96D0 00E4 .text      __ct__13J2DOrthoGraphFffffff   __ct__13J2DOrthoGraphFffffff   */
 .global __ct__13J2DOrthoGraphFffffff
+__ct__13J2DOrthoGraphFffffff:
 __ct__13J2DOrthoGraphFffffff:
 /* 802E96D0 002E6610  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802E96D4 002E6614  7C 08 02 A6 */	mflr r0
@@ -96,6 +98,7 @@ __ct__13J2DOrthoGraphFffffff:
 /* 802E97B4 0058 .text      setPort__13J2DOrthoGraphFv     setPort__13J2DOrthoGraphFv     */
 .global setPort__13J2DOrthoGraphFv
 setPort__13J2DOrthoGraphFv:
+setPort__13J2DOrthoGraphFv:
 /* 802E97B4 002E66F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E97B8 002E66F8  7C 08 02 A6 */	mflr r0
 /* 802E97BC 002E66FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -119,8 +122,11 @@ setPort__13J2DOrthoGraphFv:
 /* 802E9804 002E6744  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9808 002E6748  4E 80 00 20 */	blr 
 
-/* 802E980C 0034 .text      "setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff" setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff */
+/* 802E980C 0034 .text      setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff "setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff" */
+.global "setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff"
+"setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2<f>ff":
 .global setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2_SUB_0f_SUB_1ff
+setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2_SUB_0f_SUB_1ff:
 setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2_SUB_0f_SUB_1ff:
 /* 802E980C 002E674C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802E9810 002E6750  80 04 00 04 */	lwz r0, 4(r4)
@@ -139,6 +145,7 @@ setOrtho__13J2DOrthoGraphFRCQ29JGeometry8TBox2_SUB_0f_SUB_1ff:
 /* 802E9840 003C .text      setLookat__13J2DOrthoGraphFv   setLookat__13J2DOrthoGraphFv   */
 .global setLookat__13J2DOrthoGraphFv
 setLookat__13J2DOrthoGraphFv:
+setLookat__13J2DOrthoGraphFv:
 /* 802E9840 002E6780  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9844 002E6784  7C 08 02 A6 */	mflr r0
 /* 802E9848 002E6788  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,8 +162,11 @@ setLookat__13J2DOrthoGraphFv:
 /* 802E9874 002E67B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9878 002E67B8  4E 80 00 20 */	blr 
 
-/* 802E987C 004C .text      "scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f>" scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f> */
+/* 802E987C 011C .text      scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f> "scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f>" */
+.global "scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f>"
+"scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2<f>PCQ29JGeometry8TBox2<f>":
 .global scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2_SUB_0f_SUB_1PCQ29JGeometry8TBox2_SUB_0f_SUB_1
+scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2_SUB_0f_SUB_1PCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2_SUB_0f_SUB_1PCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E987C 002E67BC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 802E9880 002E67C0  C0 63 00 04 */	lfs f3, 4(r3)
@@ -175,31 +185,19 @@ scissorBounds__13J2DOrthoGraphFPQ29JGeometry8TBox2_SUB_0f_SUB_1PCQ29JGeometry8TB
 /* 802E98B4 002E67F4  C0 02 C7 60 */	lfs f0, J2DOrthoGraph__LIT_522-_SDA2_BASE_(r2)
 /* 802E98B8 002E67F8  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 802E98BC 002E67FC  4C 41 13 82 */	cror 2, 1, 2
-/* 802E98C0 002E6800  40 82 00 08 */	bne func_802E98C8
-/* 802E98C4 002E6804  48 00 00 08 */	b func_802E98CC
-
-/* 802E98C8 0004 .text      func_802E98C8                  func_802E98C8                  */
-.global func_802E98C8
-func_802E98C8:
+/* 802E98C0 002E6800  40 82 00 08 */	bne lbl_802E98C8
+/* 802E98C4 002E6804  48 00 00 08 */	b lbl_802E98CC
+lbl_802E98C8:
 /* 802E98C8 002E6808  FC 60 00 90 */	fmr f3, f0
-
-/* 802E98CC 0014 .text      func_802E98CC                  func_802E98CC                  */
-.global func_802E98CC
-func_802E98CC:
+lbl_802E98CC:
 /* 802E98CC 002E680C  C0 02 C7 60 */	lfs f0, J2DOrthoGraph__LIT_522-_SDA2_BASE_(r2)
 /* 802E98D0 002E6810  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 802E98D4 002E6814  4C 41 13 82 */	cror 2, 1, 2
-/* 802E98D8 002E6818  40 82 00 08 */	bne func_802E98E0
-/* 802E98DC 002E681C  48 00 00 08 */	b func_802E98E4
-
-/* 802E98E0 0004 .text      func_802E98E0                  func_802E98E0                  */
-.global func_802E98E0
-func_802E98E0:
+/* 802E98D8 002E6818  40 82 00 08 */	bne lbl_802E98E0
+/* 802E98DC 002E681C  48 00 00 08 */	b lbl_802E98E4
+lbl_802E98E0:
 /* 802E98E0 002E6820  FC 80 00 90 */	fmr f4, f0
-
-/* 802E98E4 0068 .text      func_802E98E4                  func_802E98E4                  */
-.global func_802E98E4
-func_802E98E4:
+lbl_802E98E4:
 /* 802E98E4 002E6824  C0 05 00 08 */	lfs f0, 8(r5)
 /* 802E98E8 002E6828  EC 00 28 28 */	fsubs f0, f0, f5
 /* 802E98EC 002E682C  EC 02 00 32 */	fmuls f0, f2, f0
@@ -224,32 +222,23 @@ func_802E98E4:
 /* 802E9938 002E6878  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 802E993C 002E687C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802E9940 002E6880  4C 40 13 82 */	cror 2, 0, 2
-/* 802E9944 002E6884  40 82 00 08 */	bne func_802E994C
+/* 802E9944 002E6884  40 82 00 08 */	bne lbl_802E994C
 /* 802E9948 002E6888  D0 24 00 00 */	stfs f1, 0(r4)
-
-/* 802E994C 0018 .text      func_802E994C                  func_802E994C                  */
-.global func_802E994C
-func_802E994C:
+lbl_802E994C:
 /* 802E994C 002E688C  C0 04 00 04 */	lfs f0, 4(r4)
 /* 802E9950 002E6890  C0 23 00 18 */	lfs f1, 0x18(r3)
 /* 802E9954 002E6894  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802E9958 002E6898  4C 40 13 82 */	cror 2, 0, 2
-/* 802E995C 002E689C  40 82 00 08 */	bne func_802E9964
+/* 802E995C 002E689C  40 82 00 08 */	bne lbl_802E9964
 /* 802E9960 002E68A0  D0 24 00 04 */	stfs f1, 4(r4)
-
-/* 802E9964 0018 .text      func_802E9964                  func_802E9964                  */
-.global func_802E9964
-func_802E9964:
+lbl_802E9964:
 /* 802E9964 002E68A4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 802E9968 002E68A8  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 802E996C 002E68AC  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 802E9970 002E68B0  4C 41 13 82 */	cror 2, 1, 2
-/* 802E9974 002E68B4  40 82 00 08 */	bne func_802E997C
+/* 802E9974 002E68B4  40 82 00 08 */	bne lbl_802E997C
 /* 802E9978 002E68B8  D0 24 00 08 */	stfs f1, 8(r4)
-
-/* 802E997C 001C .text      func_802E997C                  func_802E997C                  */
-.global func_802E997C
-func_802E997C:
+lbl_802E997C:
 /* 802E997C 002E68BC  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 802E9980 002E68C0  C0 23 00 20 */	lfs f1, 0x20(r3)
 /* 802E9984 002E68C4  FC 00 08 40 */	fcmpo cr0, f0, f1
@@ -260,6 +249,7 @@ func_802E997C:
 
 /* 802E9998 012C .text      J2DDrawLine__FffffQ28JUtility6TColori J2DDrawLine__FffffQ28JUtility6TColori */
 .global J2DDrawLine__FffffQ28JUtility6TColori
+J2DDrawLine__FffffQ28JUtility6TColori:
 J2DDrawLine__FffffQ28JUtility6TColori:
 /* 802E9998 002E68D8  94 21 FE A0 */	stwu r1, -0x160(r1)
 /* 802E999C 002E68DC  7C 08 02 A6 */	mflr r0
@@ -340,6 +330,7 @@ J2DDrawLine__FffffQ28JUtility6TColori:
 /* 802E9AC4 0048 .text      J2DFillBox__FffffQ28JUtility6TColor J2DFillBox__FffffQ28JUtility6TColor */
 .global J2DFillBox__FffffQ28JUtility6TColor
 J2DFillBox__FffffQ28JUtility6TColor:
+J2DFillBox__FffffQ28JUtility6TColor:
 /* 802E9AC4 002E6A04  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9AC8 002E6A08  7C 08 02 A6 */	mflr r0
 /* 802E9ACC 002E6A0C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -359,8 +350,11 @@ J2DFillBox__FffffQ28JUtility6TColor:
 /* 802E9B04 002E6A44  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9B08 002E6A48  4E 80 00 20 */	blr 
 
-/* 802E9B0C 0090 .text      "J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor" J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor */
+/* 802E9B0C 0090 .text      J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor "J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor" */
+.global "J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor"
+"J2DFillBox__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColor":
 .global J2DFillBox__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColor
+J2DFillBox__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColor:
 J2DFillBox__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColor:
 /* 802E9B0C 002E6A4C  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 802E9B10 002E6A50  7C 08 02 A6 */	mflr r0
@@ -402,6 +396,7 @@ J2DFillBox__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColor:
 /* 802E9B9C 004C .text      J2DDrawFrame__FffffQ28JUtility6TColorUc J2DDrawFrame__FffffQ28JUtility6TColorUc */
 .global J2DDrawFrame__FffffQ28JUtility6TColorUc
 J2DDrawFrame__FffffQ28JUtility6TColorUc:
+J2DDrawFrame__FffffQ28JUtility6TColorUc:
 /* 802E9B9C 002E6ADC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9BA0 002E6AE0  7C 08 02 A6 */	mflr r0
 /* 802E9BA4 002E6AE4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -422,8 +417,11 @@ J2DDrawFrame__FffffQ28JUtility6TColorUc:
 /* 802E9BE0 002E6B20  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9BE4 002E6B24  4E 80 00 20 */	blr 
 
-/* 802E9BE8 00A0 .text      "J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc" J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc */
+/* 802E9BE8 00A0 .text      J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc "J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc" */
+.global "J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc"
+"J2DDrawFrame__FRCQ29JGeometry8TBox2<f>Q28JUtility6TColorUc":
 .global J2DDrawFrame__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColorUc
+J2DDrawFrame__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColorUc:
 J2DDrawFrame__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColorUc:
 /* 802E9BE8 002E6B28  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 802E9BEC 002E6B2C  7C 08 02 A6 */	mflr r0
@@ -469,6 +467,7 @@ J2DDrawFrame__FRCQ29JGeometry8TBox2_SUB_0f_SUB_1Q28JUtility6TColorUc:
 /* 802E9C88 0008 .text      getGrafType__13J2DOrthoGraphCFv getGrafType__13J2DOrthoGraphCFv */
 .global getGrafType__13J2DOrthoGraphCFv
 getGrafType__13J2DOrthoGraphCFv:
+getGrafType__13J2DOrthoGraphCFv:
 /* 802E9C88 002E6BC8  38 60 00 01 */	li r3, 1
 /* 802E9C8C 002E6BCC  4E 80 00 20 */	blr 
 
@@ -480,18 +479,25 @@ getGrafType__13J2DOrthoGraphCFv:
 /* 803CC9E0 0028 .data      __vt__13J2DOrthoGraph          __vt__13J2DOrthoGraph          */
 .global __vt__13J2DOrthoGraph
 __vt__13J2DOrthoGraph:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0xb1, 0x18, 0x80, 0x2e, 0x90, 0xe4 /* baserom.dol+0x3c99e0 */
-.byte 0x80, 0x2e, 0x96, 0x1c, 0x80, 0x2e, 0x97, 0xb4, 0x80, 0x2e, 0x8c, 0x44, 0x80, 0x2e, 0x8e, 0x20 /* baserom.dol+0x3c99f0 */
-.byte 0x80, 0x2e, 0x9c, 0x88, 0x80, 0x2e, 0x98, 0x40 /* baserom.dol+0x3c9a00 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__13J2DOrthoGraphFv
+.4byte "place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+.4byte place__14J2DGrafContextFffff
+.4byte setPort__13J2DOrthoGraphFv
+.4byte setup2D__14J2DGrafContextFv
+.4byte setScissor__14J2DGrafContextFv
+.4byte getGrafType__13J2DOrthoGraphCFv
+.4byte setLookat__13J2DOrthoGraphFv
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456160 0004 .sdata2    J2DOrthoGraph__LIT_522         @522                           */
+/* 80456160 0004 .sdata2    @522                           J2DOrthoGraph__LIT_522         */
 .global J2DOrthoGraph__LIT_522
 J2DOrthoGraph__LIT_522:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fc0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fc4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

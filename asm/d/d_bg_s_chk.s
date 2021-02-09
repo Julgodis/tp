@@ -7,6 +7,7 @@
 /* 8007749C 004C .text      __ct__8dBgS_ChkFv              __ct__8dBgS_ChkFv              */
 .global __ct__8dBgS_ChkFv
 __ct__8dBgS_ChkFv:
+__ct__8dBgS_ChkFv:
 /* 8007749C 000743DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800774A0 000743E0  7C 08 02 A6 */	mflr r0
 /* 800774A4 000743E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -27,8 +28,9 @@ __ct__8dBgS_ChkFv:
 /* 800774E0 00074420  38 21 00 10 */	addi r1, r1, 0x10
 /* 800774E4 00074424  4E 80 00 20 */	blr 
 
-/* 800774E8 005C .text      __dt__8dBgS_ChkFv              __dt__8dBgS_ChkFv              */
+/* 800774E8 0078 .text      __dt__8dBgS_ChkFv              __dt__8dBgS_ChkFv              */
 .global __dt__8dBgS_ChkFv
+__dt__8dBgS_ChkFv:
 __dt__8dBgS_ChkFv:
 /* 800774E8 00074428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800774EC 0007442C  7C 08 02 A6 */	mflr r0
@@ -37,7 +39,7 @@ __dt__8dBgS_ChkFv:
 /* 800774F8 00074438  93 C1 00 08 */	stw r30, 8(r1)
 /* 800774FC 0007443C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80077500 00074440  7C 9F 23 78 */	mr r31, r4
-/* 80077504 00074444  41 82 00 40 */	beq func_80077544
+/* 80077504 00074444  41 82 00 40 */	beq lbl_80077544
 /* 80077508 00074448  3C 60 80 3B */	lis r3, __vt__8dBgS_Chk@ha
 /* 8007750C 0007444C  38 63 B6 70 */	addi r3, r3, __vt__8dBgS_Chk@l
 /* 80077510 00074450  90 7E 00 00 */	stw r3, 0(r30)
@@ -50,13 +52,10 @@ __dt__8dBgS_ChkFv:
 /* 8007752C 0007446C  38 80 00 00 */	li r4, 0
 /* 80077530 00074470  48 00 18 81 */	bl __dt__16dBgS_PolyPassChkFv
 /* 80077534 00074474  7F E0 07 35 */	extsh. r0, r31
-/* 80077538 00074478  40 81 00 0C */	ble func_80077544
+/* 80077538 00074478  40 81 00 0C */	ble lbl_80077544
 /* 8007753C 0007447C  7F C3 F3 78 */	mr r3, r30
 /* 80077540 00074480  48 25 77 FD */	bl __dl__FPv
-
-/* 80077544 001C .text      func_80077544                  func_80077544                  */
-.global func_80077544
-func_80077544:
+lbl_80077544:
 /* 80077544 00074484  7F C3 F3 78 */	mr r3, r30
 /* 80077548 00074488  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8007754C 0007448C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -68,18 +67,21 @@ func_80077544:
 /* 80077560 0004 .text      GetPolyPassChkInfo__8dBgS_ChkFv GetPolyPassChkInfo__8dBgS_ChkFv */
 .global GetPolyPassChkInfo__8dBgS_ChkFv
 GetPolyPassChkInfo__8dBgS_ChkFv:
+GetPolyPassChkInfo__8dBgS_ChkFv:
 /* 80077560 000744A0  4E 80 00 20 */	blr 
 
 /* 80077564 0010 .text      GetGrpPassChkInfo__8dBgS_ChkFv GetGrpPassChkInfo__8dBgS_ChkFv */
 .global GetGrpPassChkInfo__8dBgS_ChkFv
+GetGrpPassChkInfo__8dBgS_ChkFv:
 GetGrpPassChkInfo__8dBgS_ChkFv:
 /* 80077564 000744A4  28 03 00 00 */	cmplwi r3, 0
 /* 80077568 000744A8  4D 82 00 20 */	beqlr 
 /* 8007756C 000744AC  38 63 00 10 */	addi r3, r3, 0x10
 /* 80077570 000744B0  4E 80 00 20 */	blr 
 
-/* 80077574 0008 .text      func_80077574                  @16@__dt__8dBgS_ChkFv          */
+/* 80077574 0008 .text      @16@__dt__8dBgS_ChkFv          func_80077574                  */
 .global func_80077574
+func_80077574:
 func_80077574:
 /* 80077574 000744B4  38 63 FF F0 */	addi r3, r3, -16
 /* 80077578 000744B8  4B FF FF 70 */	b __dt__8dBgS_ChkFv
@@ -92,6 +94,10 @@ func_80077574:
 /* 803AB670 0018 .data      __vt__8dBgS_Chk                __vt__8dBgS_Chk                */
 .global __vt__8dBgS_Chk
 __vt__8dBgS_Chk:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x74, 0xe8, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8670 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x75, 0x74 /* baserom.dol+0x3a8680 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__8dBgS_ChkFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80077574
 

@@ -8,7 +8,7 @@
 .global j_o_id__8dPa_name
 j_o_id__8dPa_name:
 .byte 0x07, 0x0f, 0x07, 0x3d, 0x01, 0x00, 0x01, 0x01, 0x01, 0x03 /* baserom.dol+0x3a55d0 */
-.byte 0x00, 0x00 /* baserom.dol+0x3a55da */
+.byte 0x00, 0x00 /* padding */
 
 /* 803A85DC 001C .data      s_o_id__8dPa_name              s_o_id__8dPa_name              */
 .global s_o_id__8dPa_name

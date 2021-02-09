@@ -4,23 +4,23 @@
 /*                                      extabindex_                                       */
 /* ###################################################################################### */
 .section extabindex_, "aw"
-/* 80005660 000C .extabindex NMWException__LIT_206          @206                           */
-.global NMWException__LIT_206
-NMWException__LIT_206:
+/* 80005660 000C .extabindex @206                           odenotstub__LIT_206            */
+.global odenotstub__LIT_206
+odenotstub__LIT_206:
 .byte 0x80, 0x36, 0x1c, 0x6c, 0x00, 0x00, 0x00, 0x7c, 0x80, 0x00, 0x56, 0x00 /* baserom.dol+0x370760 */
-/* 8000566C 000C .extabindex NMWException__LIT_211          @211                           */
-.global NMWException__LIT_211
-NMWException__LIT_211:
+/* 8000566C 000C .extabindex @211                           odenotstub__LIT_211            */
+.global odenotstub__LIT_211
+odenotstub__LIT_211:
 .byte 0x80, 0x36, 0x1c, 0xe8, 0x00, 0x00, 0x00, 0x78, 0x80, 0x00, 0x56, 0x08 /* baserom.dol+0x37076c */
-/* 80005678 000C .extabindex LIT_232                        @232                           */
+/* 80005678 000C .extabindex @232                           LIT_232                        */
 .global LIT_232
 LIT_232:
 .byte 0x80, 0x36, 0x1d, 0x60, 0x00, 0x00, 0x00, 0xfc, 0x80, 0x00, 0x56, 0x10 /* baserom.dol+0x370778 */
-/* 80005684 000C .extabindex LIT_240                        @240                           */
+/* 80005684 000C .extabindex @240                           LIT_240                        */
 .global LIT_240
 LIT_240:
 .byte 0x80, 0x36, 0x1e, 0x5c, 0x00, 0x00, 0x00, 0xb8, 0x80, 0x00, 0x56, 0x28 /* baserom.dol+0x370784 */
-/* 80005690 000C .extabindex LIT_263                        @263                           */
+/* 80005690 000C .extabindex @263                           LIT_263                        */
 .global LIT_263
 LIT_263:
 .byte 0x80, 0x36, 0x1f, 0x14, 0x00, 0x00, 0x01, 0x04, 0x80, 0x00, 0x56, 0x30 /* baserom.dol+0x370790 */

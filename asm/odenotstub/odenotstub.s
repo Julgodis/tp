@@ -7,6 +7,7 @@
 /* 803737AC 0008 .text      Hu_IsStub                      Hu_IsStub                      */
 .global Hu_IsStub
 Hu_IsStub:
+Hu_IsStub:
 /* 803737AC 003706EC  38 60 00 00 */	li r3, 0
 /* 803737B0 003706F0  4E 80 00 20 */	blr 
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */

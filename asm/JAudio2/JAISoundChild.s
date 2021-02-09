@@ -7,6 +7,7 @@
 /* 802A2AB0 0078 .text      init__13JAISoundChildFv        init__13JAISoundChildFv        */
 .global init__13JAISoundChildFv
 init__13JAISoundChildFv:
+init__13JAISoundChildFv:
 /* 802A2AB0 0029F9F0  C0 42 BD D8 */	lfs f2, LIT_689-_SDA2_BASE_(r2)
 /* 802A2AB4 0029F9F4  D0 43 00 00 */	stfs f2, 0(r3)
 /* 802A2AB8 0029F9F8  D0 43 00 08 */	stfs f2, 8(r3)
@@ -41,6 +42,7 @@ init__13JAISoundChildFv:
 /* 802A2B28 0054 .text      mixOut__13JAISoundChildFP8JASTrack mixOut__13JAISoundChildFP8JASTrack */
 .global mixOut__13JAISoundChildFP8JASTrack
 mixOut__13JAISoundChildFP8JASTrack:
+mixOut__13JAISoundChildFP8JASTrack:
 /* 802A2B28 0029FA68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2B2C 0029FA6C  7C 08 02 A6 */	mflr r0
 /* 802A2B30 0029FA70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -63,118 +65,89 @@ mixOut__13JAISoundChildFP8JASTrack:
 /* 802A2B74 0029FAB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2B78 0029FAB8  4E 80 00 20 */	blr 
 
-/* 802A2B7C 0024 .text      calc__13JAISoundChildFv        calc__13JAISoundChildFv        */
+/* 802A2B7C 011C .text      calc__13JAISoundChildFv        calc__13JAISoundChildFv        */
 .global calc__13JAISoundChildFv
+calc__13JAISoundChildFv:
 calc__13JAISoundChildFv:
 /* 802A2B7C 0029FABC  C0 23 00 00 */	lfs f1, 0(r3)
 /* 802A2B80 0029FAC0  80 83 00 1C */	lwz r4, 0x1c(r3)
 /* 802A2B84 0029FAC4  28 04 00 01 */	cmplwi r4, 1
-/* 802A2B88 0029FAC8  40 81 00 18 */	ble func_802A2BA0
+/* 802A2B88 0029FAC8  40 81 00 18 */	ble lbl_802A2BA0
 /* 802A2B8C 0029FACC  38 04 FF FF */	addi r0, r4, -1
 /* 802A2B90 0029FAD0  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 802A2B94 0029FAD4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 802A2B98 0029FAD8  EC 21 00 2A */	fadds f1, f1, f0
-/* 802A2B9C 0029FADC  48 00 00 14 */	b func_802A2BB0
-
-/* 802A2BA0 0010 .text      func_802A2BA0                  func_802A2BA0                  */
-.global func_802A2BA0
-func_802A2BA0:
-/* 802A2BA0 0029FAE0  40 82 00 10 */	bne func_802A2BB0
+/* 802A2B9C 0029FADC  48 00 00 14 */	b lbl_802A2BB0
+lbl_802A2BA0:
+/* 802A2BA0 0029FAE0  40 82 00 10 */	bne lbl_802A2BB0
 /* 802A2BA4 0029FAE4  38 00 00 00 */	li r0, 0
 /* 802A2BA8 0029FAE8  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 802A2BAC 0029FAEC  C0 23 00 18 */	lfs f1, 0x18(r3)
-
-/* 802A2BB0 0028 .text      func_802A2BB0                  func_802A2BB0                  */
-.global func_802A2BB0
-func_802A2BB0:
+lbl_802A2BB0:
 /* 802A2BB0 0029FAF0  D0 23 00 00 */	stfs f1, 0(r3)
 /* 802A2BB4 0029FAF4  C0 23 00 08 */	lfs f1, 8(r3)
 /* 802A2BB8 0029FAF8  80 83 00 28 */	lwz r4, 0x28(r3)
 /* 802A2BBC 0029FAFC  28 04 00 01 */	cmplwi r4, 1
-/* 802A2BC0 0029FB00  40 81 00 18 */	ble func_802A2BD8
+/* 802A2BC0 0029FB00  40 81 00 18 */	ble lbl_802A2BD8
 /* 802A2BC4 0029FB04  38 04 FF FF */	addi r0, r4, -1
 /* 802A2BC8 0029FB08  90 03 00 28 */	stw r0, 0x28(r3)
 /* 802A2BCC 0029FB0C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 802A2BD0 0029FB10  EC 21 00 2A */	fadds f1, f1, f0
-/* 802A2BD4 0029FB14  48 00 00 14 */	b func_802A2BE8
-
-/* 802A2BD8 0010 .text      func_802A2BD8                  func_802A2BD8                  */
-.global func_802A2BD8
-func_802A2BD8:
-/* 802A2BD8 0029FB18  40 82 00 10 */	bne func_802A2BE8
+/* 802A2BD4 0029FB14  48 00 00 14 */	b lbl_802A2BE8
+lbl_802A2BD8:
+/* 802A2BD8 0029FB18  40 82 00 10 */	bne lbl_802A2BE8
 /* 802A2BDC 0029FB1C  38 00 00 00 */	li r0, 0
 /* 802A2BE0 0029FB20  90 03 00 28 */	stw r0, 0x28(r3)
 /* 802A2BE4 0029FB24  C0 23 00 24 */	lfs f1, 0x24(r3)
-
-/* 802A2BE8 0028 .text      func_802A2BE8                  func_802A2BE8                  */
-.global func_802A2BE8
-func_802A2BE8:
+lbl_802A2BE8:
 /* 802A2BE8 0029FB28  D0 23 00 08 */	stfs f1, 8(r3)
 /* 802A2BEC 0029FB2C  C0 23 00 04 */	lfs f1, 4(r3)
 /* 802A2BF0 0029FB30  80 83 00 34 */	lwz r4, 0x34(r3)
 /* 802A2BF4 0029FB34  28 04 00 01 */	cmplwi r4, 1
-/* 802A2BF8 0029FB38  40 81 00 18 */	ble func_802A2C10
+/* 802A2BF8 0029FB38  40 81 00 18 */	ble lbl_802A2C10
 /* 802A2BFC 0029FB3C  38 04 FF FF */	addi r0, r4, -1
 /* 802A2C00 0029FB40  90 03 00 34 */	stw r0, 0x34(r3)
 /* 802A2C04 0029FB44  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 802A2C08 0029FB48  EC 21 00 2A */	fadds f1, f1, f0
-/* 802A2C0C 0029FB4C  48 00 00 14 */	b func_802A2C20
-
-/* 802A2C10 0010 .text      func_802A2C10                  func_802A2C10                  */
-.global func_802A2C10
-func_802A2C10:
-/* 802A2C10 0029FB50  40 82 00 10 */	bne func_802A2C20
+/* 802A2C0C 0029FB4C  48 00 00 14 */	b lbl_802A2C20
+lbl_802A2C10:
+/* 802A2C10 0029FB50  40 82 00 10 */	bne lbl_802A2C20
 /* 802A2C14 0029FB54  38 00 00 00 */	li r0, 0
 /* 802A2C18 0029FB58  90 03 00 34 */	stw r0, 0x34(r3)
 /* 802A2C1C 0029FB5C  C0 23 00 30 */	lfs f1, 0x30(r3)
-
-/* 802A2C20 0028 .text      func_802A2C20                  func_802A2C20                  */
-.global func_802A2C20
-func_802A2C20:
+lbl_802A2C20:
 /* 802A2C20 0029FB60  D0 23 00 04 */	stfs f1, 4(r3)
 /* 802A2C24 0029FB64  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 802A2C28 0029FB68  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 802A2C2C 0029FB6C  28 04 00 01 */	cmplwi r4, 1
-/* 802A2C30 0029FB70  40 81 00 18 */	ble func_802A2C48
+/* 802A2C30 0029FB70  40 81 00 18 */	ble lbl_802A2C48
 /* 802A2C34 0029FB74  38 04 FF FF */	addi r0, r4, -1
 /* 802A2C38 0029FB78  90 03 00 4C */	stw r0, 0x4c(r3)
 /* 802A2C3C 0029FB7C  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 802A2C40 0029FB80  EC 21 00 2A */	fadds f1, f1, f0
-/* 802A2C44 0029FB84  48 00 00 14 */	b func_802A2C58
-
-/* 802A2C48 0010 .text      func_802A2C48                  func_802A2C48                  */
-.global func_802A2C48
-func_802A2C48:
-/* 802A2C48 0029FB88  40 82 00 10 */	bne func_802A2C58
+/* 802A2C44 0029FB84  48 00 00 14 */	b lbl_802A2C58
+lbl_802A2C48:
+/* 802A2C48 0029FB88  40 82 00 10 */	bne lbl_802A2C58
 /* 802A2C4C 0029FB8C  38 00 00 00 */	li r0, 0
 /* 802A2C50 0029FB90  90 03 00 4C */	stw r0, 0x4c(r3)
 /* 802A2C54 0029FB94  C0 23 00 48 */	lfs f1, 0x48(r3)
-
-/* 802A2C58 0028 .text      func_802A2C58                  func_802A2C58                  */
-.global func_802A2C58
-func_802A2C58:
+lbl_802A2C58:
 /* 802A2C58 0029FB98  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 802A2C5C 0029FB9C  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 802A2C60 0029FBA0  80 83 00 40 */	lwz r4, 0x40(r3)
 /* 802A2C64 0029FBA4  28 04 00 01 */	cmplwi r4, 1
-/* 802A2C68 0029FBA8  40 81 00 18 */	ble func_802A2C80
+/* 802A2C68 0029FBA8  40 81 00 18 */	ble lbl_802A2C80
 /* 802A2C6C 0029FBAC  38 04 FF FF */	addi r0, r4, -1
 /* 802A2C70 0029FBB0  90 03 00 40 */	stw r0, 0x40(r3)
 /* 802A2C74 0029FBB4  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 802A2C78 0029FBB8  EC 21 00 2A */	fadds f1, f1, f0
-/* 802A2C7C 0029FBBC  48 00 00 14 */	b func_802A2C90
-
-/* 802A2C80 0010 .text      func_802A2C80                  func_802A2C80                  */
-.global func_802A2C80
-func_802A2C80:
-/* 802A2C80 0029FBC0  40 82 00 10 */	bne func_802A2C90
+/* 802A2C7C 0029FBBC  48 00 00 14 */	b lbl_802A2C90
+lbl_802A2C80:
+/* 802A2C80 0029FBC0  40 82 00 10 */	bne lbl_802A2C90
 /* 802A2C84 0029FBC4  38 00 00 00 */	li r0, 0
 /* 802A2C88 0029FBC8  90 03 00 40 */	stw r0, 0x40(r3)
 /* 802A2C8C 0029FBCC  C0 23 00 3C */	lfs f1, 0x3c(r3)
-
-/* 802A2C90 0008 .text      func_802A2C90                  func_802A2C90                  */
-.global func_802A2C90
-func_802A2C90:
+lbl_802A2C90:
 /* 802A2C90 0029FBD0  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 802A2C94 0029FBD4  4E 80 00 20 */	blr 
 
@@ -183,19 +156,19 @@ func_802A2C90:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804557D8 0004 .sdata2    LIT_689                        @689                           */
+/* 804557D8 0004 .sdata2    @689                           LIT_689                        */
 .global LIT_689
 LIT_689:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4638 */
 
-/* 804557DC 0004 .sdata2    JAISoundChild__LIT_690         @690                           */
+/* 804557DC 0004 .sdata2    @690                           JAISoundChild__LIT_690         */
 .global JAISoundChild__LIT_690
 JAISoundChild__LIT_690:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d463c */
 
-/* 804557E0 0004 .sdata2    JAISoundChild__LIT_691         @691                           */
+/* 804557E0 0004 .sdata2    @691                           JAISoundChild__LIT_691         */
 .global JAISoundChild__LIT_691
 JAISoundChild__LIT_691:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4640 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4644 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

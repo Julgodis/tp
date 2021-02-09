@@ -7,6 +7,7 @@
 /* 8036C000 0028 .text      copysign                       copysign                       */
 .global copysign
 copysign:
+copysign:
 /* 8036C000 00368F40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036C004 00368F44  D8 21 00 08 */	stfd f1, 8(r1)
 /* 8036C008 00368F48  D8 41 00 10 */	stfd f2, 0x10(r1)

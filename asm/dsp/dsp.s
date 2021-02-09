@@ -7,6 +7,7 @@
 /* 80352430 0010 .text      DSPCheckMailToDSP              DSPCheckMailToDSP              */
 .global DSPCheckMailToDSP
 DSPCheckMailToDSP:
+DSPCheckMailToDSP:
 /* 80352430 0034F370  3C 60 CC 00 */	lis r3, 0xCC005000@ha
 /* 80352434 0034F374  A0 03 50 00 */	lhz r0, 0xCC005000@l(r3)
 /* 80352438 0034F378  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
@@ -15,6 +16,7 @@ DSPCheckMailToDSP:
 /* 80352440 0010 .text      DSPCheckMailFromDSP            DSPCheckMailFromDSP            */
 .global DSPCheckMailFromDSP
 DSPCheckMailFromDSP:
+DSPCheckMailFromDSP:
 /* 80352440 0034F380  3C 60 CC 00 */	lis r3, 0xCC005004@ha
 /* 80352444 0034F384  A0 03 50 04 */	lhz r0, 0xCC005004@l(r3)
 /* 80352448 0034F388  54 03 8F FE */	rlwinm r3, r0, 0x11, 0x1f, 0x1f
@@ -22,6 +24,7 @@ DSPCheckMailFromDSP:
 
 /* 80352450 0018 .text      DSPReadMailFromDSP             DSPReadMailFromDSP             */
 .global DSPReadMailFromDSP
+DSPReadMailFromDSP:
 DSPReadMailFromDSP:
 /* 80352450 0034F390  3C 60 CC 00 */	lis r3, 0xCC005000@ha
 /* 80352454 0034F394  38 63 50 00 */	addi r3, r3, 0xCC005000@l
@@ -33,6 +36,7 @@ DSPReadMailFromDSP:
 /* 80352468 0014 .text      DSPSendMailToDSP               DSPSendMailToDSP               */
 .global DSPSendMailToDSP
 DSPSendMailToDSP:
+DSPSendMailToDSP:
 /* 80352468 0034F3A8  3C 80 CC 00 */	lis r4, 0xCC005000@ha
 /* 8035246C 0034F3AC  54 60 84 3E */	srwi r0, r3, 0x10
 /* 80352470 0034F3B0  B0 04 50 00 */	sth r0, 0xCC005000@l(r4)
@@ -41,6 +45,7 @@ DSPSendMailToDSP:
 
 /* 8035247C 0040 .text      DSPAssertInt                   DSPAssertInt                   */
 .global DSPAssertInt
+DSPAssertInt:
 DSPAssertInt:
 /* 8035247C 0034F3BC  7C 08 02 A6 */	mflr r0
 /* 80352480 0034F3C0  90 01 00 04 */	stw r0, 4(r1)
@@ -59,8 +64,9 @@ DSPAssertInt:
 /* 803524B4 0034F3F4  7C 08 03 A6 */	mtlr r0
 /* 803524B8 0034F3F8  4E 80 00 20 */	blr 
 
-/* 803524BC 00B0 .text      DSPInit                        DSPInit                        */
+/* 803524BC 00C4 .text      DSPInit                        DSPInit                        */
 .global DSPInit
+DSPInit:
 DSPInit:
 /* 803524BC 0034F3FC  7C 08 02 A6 */	mflr r0
 /* 803524C0 0034F400  3C 60 80 3D */	lis r3, dsp__LIT_1@ha
@@ -75,7 +81,7 @@ DSPInit:
 /* 803524E4 0034F424  48 00 00 9D */	bl __DSP_debug_printf
 /* 803524E8 0034F428  80 0D 93 80 */	lwz r0, __DSP_init_flag-_SDA_BASE_(r13)
 /* 803524EC 0034F42C  2C 00 00 01 */	cmpwi r0, 1
-/* 803524F0 0034F430  41 82 00 7C */	beq func_8035256C
+/* 803524F0 0034F430  41 82 00 7C */	beq lbl_8035256C
 /* 803524F4 0034F434  80 6D 84 D8 */	lwz r3, __DSPVersion-_SDA_BASE_(r13)
 /* 803524F8 0034F438  4B FE 83 7D */	bl OSRegisterVersion
 /* 803524FC 0034F43C  4B FE B1 F9 */	bl OSDisableInterrupts
@@ -106,10 +112,7 @@ DSPInit:
 /* 80352560 0034F4A0  90 8D 93 90 */	stw r4, __DSP_first_task-_SDA_BASE_(r13)
 /* 80352564 0034F4A4  90 0D 93 80 */	stw r0, __DSP_init_flag-_SDA_BASE_(r13)
 /* 80352568 0034F4A8  4B FE B1 B5 */	bl OSRestoreInterrupts
-
-/* 8035256C 0014 .text      func_8035256C                  func_8035256C                  */
-.global func_8035256C
-func_8035256C:
+lbl_8035256C:
 /* 8035256C 0034F4AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80352570 0034F4B0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80352574 0034F4B4  38 21 00 10 */	addi r1, r1, 0x10
@@ -121,11 +124,11 @@ func_8035256C:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803D1C78 0000 .data      sym_803D1C78                   ...data.0                      */
-.global sym_803D1C78
-sym_803D1C78:
+/* 803D1C78 0000 .data      ...data.0                      data_803D1C78                  */
+.global data_803D1C78
+data_803D1C78:
 
-/* 803D1C78 0045 .data      dsp__LIT_1                     @1                             */
+/* 803D1C78 0045 .data      @1                             dsp__LIT_1                     */
 .global dsp__LIT_1
 dsp__LIT_1:
 .byte 0x3c, 0x3c, 0x20, 0x44, 0x6f, 0x6c, 0x70, 0x68, 0x69, 0x6e, 0x20, 0x53, 0x44, 0x4b, 0x20, 0x2d /* baserom.dol+0x3cec78 */
@@ -133,25 +136,25 @@ dsp__LIT_1:
 .byte 0x6c, 0x64, 0x3a, 0x20, 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x20 /* baserom.dol+0x3cec98 */
 .byte 0x30, 0x34, 0x3a, 0x31, 0x35, 0x3a, 0x33, 0x32, 0x20, 0x28, 0x30, 0x78, 0x32, 0x33, 0x30, 0x31 /* baserom.dol+0x3ceca8 */
 .byte 0x29, 0x20, 0x3e, 0x3e, 0x00 /* baserom.dol+0x3cecb8 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cecbd */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803D1CC0 001E .data      LIT_19                         @19                            */
+/* 803D1CC0 001E .data      @19                            LIT_19                         */
 .global LIT_19
 LIT_19:
 .byte 0x44, 0x53, 0x50, 0x49, 0x6e, 0x69, 0x74, 0x28, 0x29, 0x3a, 0x20, 0x42, 0x75, 0x69, 0x6c, 0x64 /* baserom.dol+0x3cecc0 */
 .byte 0x20, 0x44, 0x61, 0x74, 0x65, 0x3a, 0x20, 0x25, 0x73, 0x20, 0x25, 0x73, 0x0a, 0x00 /* baserom.dol+0x3cecd0 */
-.byte 0x00, 0x00 /* baserom.dol+0x3cecde */
+.byte 0x00, 0x00 /* padding */
 
-/* 803D1CE0 000C .data      LIT_20                         @20                            */
+/* 803D1CE0 000C .data      @20                            LIT_20                         */
 .global LIT_20
 LIT_20:
 .byte 0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00 /* baserom.dol+0x3cece0 */
 
-/* 803D1CEC 0009 .data      LIT_21                         @21                            */
+/* 803D1CEC 0009 .data      @21                            LIT_21                         */
 .global LIT_21
 LIT_21:
 .byte 0x30, 0x34, 0x3a, 0x31, 0x35, 0x3a, 0x33, 0x32, 0x00 /* baserom.dol+0x3cecec */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cecf5 */
+.byte 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -162,7 +165,7 @@ LIT_21:
 .global __DSPVersion
 __DSPVersion:
 .byte 0x80, 0x3d, 0x1c, 0x78 /* baserom.dol+0x3d07b8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d07bc */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */

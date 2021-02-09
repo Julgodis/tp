@@ -7,6 +7,7 @@
 /* 80266A7C 0034 .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter cTgIt_MethodCall__FP16create_tag_classP13method_filter */
 .global cTgIt_MethodCall__FP16create_tag_classP13method_filter
 cTgIt_MethodCall__FP16create_tag_classP13method_filter:
+cTgIt_MethodCall__FP16create_tag_classP13method_filter:
 /* 80266A7C 002639BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266A80 002639C0  7C 08 02 A6 */	mflr r0
 /* 80266A84 002639C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,6 +24,7 @@ cTgIt_MethodCall__FP16create_tag_classP13method_filter:
 
 /* 80266AB0 0034 .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
 .global cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter
+cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter:
 cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter:
 /* 80266AB0 002639F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266AB4 002639F4  7C 08 02 A6 */	mflr r0

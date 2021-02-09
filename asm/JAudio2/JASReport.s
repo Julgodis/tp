@@ -4,15 +4,16 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80290F64 0038 .text      JASReport__FPCce               JASReport__FPCce               */
+/* 80290F64 00FC .text      JASReport__FPCce               JASReport__FPCce               */
 .global JASReport__FPCce
+JASReport__FPCce:
 JASReport__FPCce:
 /* 80290F64 0028DEA4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80290F68 0028DEA8  7C 08 02 A6 */	mflr r0
 /* 80290F6C 0028DEAC  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80290F70 0028DEB0  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 80290F74 0028DEB4  7C 7F 1B 78 */	mr r31, r3
-/* 80290F78 0028DEB8  40 86 00 24 */	bne cr1, func_80290F9C
+/* 80290F78 0028DEB8  40 86 00 24 */	bne cr1, lbl_80290F9C
 /* 80290F7C 0028DEBC  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80290F80 0028DEC0  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80290F84 0028DEC4  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -21,10 +22,7 @@ JASReport__FPCce:
 /* 80290F90 0028DED0  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80290F94 0028DED4  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80290F98 0028DED8  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80290F9C 0094 .text      func_80290F9C                  func_80290F9C                  */
-.global func_80290F9C
-func_80290F9C:
+lbl_80290F9C:
 /* 80290F9C 0028DEDC  90 61 00 08 */	stw r3, 8(r1)
 /* 80290FA0 0028DEE0  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80290FA4 0028DEE4  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -35,7 +33,7 @@ func_80290F9C:
 /* 80290FB8 0028DEF8  91 41 00 24 */	stw r10, 0x24(r1)
 /* 80290FBC 0028DEFC  80 0D 8C A0 */	lwz r0, sBuffer-_SDA_BASE_(r13)
 /* 80290FC0 0028DF00  28 00 00 00 */	cmplwi r0, 0
-/* 80290FC4 0028DF04  41 82 00 88 */	beq func_8029104C
+/* 80290FC4 0028DF04  41 82 00 88 */	beq lbl_8029104C
 /* 80290FC8 0028DF08  3C 00 01 00 */	lis r0, 0x100
 /* 80290FCC 0028DF0C  90 01 00 6C */	stw r0, 0x6c(r1)
 /* 80290FD0 0028DF10  38 01 00 88 */	addi r0, r1, 0x88
@@ -59,28 +57,19 @@ func_80290F9C:
 /* 80291018 0028DF58  90 0D 8C AC */	stw r0, sTop-_SDA_BASE_(r13)
 /* 8029101C 0028DF5C  80 8D 8C A4 */	lwz r4, sLineMax-_SDA_BASE_(r13)
 /* 80291020 0028DF60  7C 00 20 00 */	cmpw r0, r4
-/* 80291024 0028DF64  41 80 00 0C */	blt func_80291030
+/* 80291024 0028DF64  41 80 00 0C */	blt lbl_80291030
 /* 80291028 0028DF68  38 00 00 00 */	li r0, 0
 /* 8029102C 0028DF6C  90 0D 8C AC */	stw r0, sTop-_SDA_BASE_(r13)
-
-/* 80291030 0014 .text      func_80291030                  func_80291030                  */
-.global func_80291030
-func_80291030:
+lbl_80291030:
 /* 80291030 0028DF70  80 6D 8C A8 */	lwz r3, sLineCount-_SDA_BASE_(r13)
 /* 80291034 0028DF74  7C 03 20 00 */	cmpw r3, r4
-/* 80291038 0028DF78  40 80 00 0C */	bge func_80291044
+/* 80291038 0028DF78  40 80 00 0C */	bge lbl_80291044
 /* 8029103C 0028DF7C  38 03 00 01 */	addi r0, r3, 1
 /* 80291040 0028DF80  90 0D 8C A8 */	stw r0, sLineCount-_SDA_BASE_(r13)
-
-/* 80291044 0008 .text      func_80291044                  func_80291044                  */
-.global func_80291044
-func_80291044:
+lbl_80291044:
 /* 80291044 0028DF84  80 61 00 68 */	lwz r3, 0x68(r1)
 /* 80291048 0028DF88  48 0A E0 D5 */	bl OSUnlockMutex
-
-/* 8029104C 0014 .text      func_8029104C                  func_8029104C                  */
-.global func_8029104C
-func_8029104C:
+lbl_8029104C:
 /* 8029104C 0028DF8C  83 E1 00 7C */	lwz r31, 0x7c(r1)
 /* 80291050 0028DF90  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80291054 0028DF94  7C 08 03 A6 */	mtlr r0
@@ -122,13 +111,13 @@ sLineCount:
 sTop:
 .skip 0x4
 
-/* 80451230 0001 .sbss      sym_80451230                   sym_80451230                   */
-.global sym_80451230
-sym_80451230:
+/* 80451230 0001 .sbss      data_80451230                  data_80451230                  */
+.global data_80451230
+data_80451230:
 .skip 0x1
 
-/* 80451231 0007 .sbss      sym_80451231                   sym_80451231                   */
-.global sym_80451231
-sym_80451231:
+/* 80451231 0007 .sbss      data_80451231                  data_80451231                  */
+.global data_80451231
+data_80451231:
 .skip 0x7
 

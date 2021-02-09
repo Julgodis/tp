@@ -4,11 +4,12 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80352580 0028 .text      __DSP_debug_printf             __DSP_debug_printf             */
+/* 80352580 0050 .text      __DSP_debug_printf             __DSP_debug_printf             */
 .global __DSP_debug_printf
 __DSP_debug_printf:
+__DSP_debug_printf:
 /* 80352580 0034F4C0  94 21 FF 90 */	stwu r1, -0x70(r1)
-/* 80352584 0034F4C4  40 86 00 24 */	bne cr1, func_803525A8
+/* 80352584 0034F4C4  40 86 00 24 */	bne cr1, lbl_803525A8
 /* 80352588 0034F4C8  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 8035258C 0034F4CC  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80352590 0034F4D0  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -17,10 +18,7 @@ __DSP_debug_printf:
 /* 8035259C 0034F4DC  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 803525A0 0034F4E0  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 803525A4 0034F4E4  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 803525A8 0028 .text      func_803525A8                  func_803525A8                  */
-.global func_803525A8
-func_803525A8:
+lbl_803525A8:
 /* 803525A8 0034F4E8  90 61 00 08 */	stw r3, 8(r1)
 /* 803525AC 0034F4EC  90 81 00 0C */	stw r4, 0xc(r1)
 /* 803525B0 0034F4F0  90 A1 00 10 */	stw r5, 0x10(r1)

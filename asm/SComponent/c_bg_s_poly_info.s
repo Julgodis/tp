@@ -7,6 +7,7 @@
 /* 80268074 003C .text      __ct__13cBgS_PolyInfoFv        __ct__13cBgS_PolyInfoFv        */
 .global __ct__13cBgS_PolyInfoFv
 __ct__13cBgS_PolyInfoFv:
+__ct__13cBgS_PolyInfoFv:
 /* 80268074 00264FB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80268078 00264FB8  7C 08 02 A6 */	mflr r0
 /* 8026807C 00264FBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,25 +24,23 @@ __ct__13cBgS_PolyInfoFv:
 /* 802680A8 00264FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802680AC 00264FEC  4E 80 00 20 */	blr 
 
-/* 802680B0 0030 .text      __dt__13cBgS_PolyInfoFv        __dt__13cBgS_PolyInfoFv        */
+/* 802680B0 0048 .text      __dt__13cBgS_PolyInfoFv        __dt__13cBgS_PolyInfoFv        */
 .global __dt__13cBgS_PolyInfoFv
+__dt__13cBgS_PolyInfoFv:
 __dt__13cBgS_PolyInfoFv:
 /* 802680B0 00264FF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802680B4 00264FF4  7C 08 02 A6 */	mflr r0
 /* 802680B8 00264FF8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802680BC 00264FFC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802680C0 00265000  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802680C4 00265004  41 82 00 1C */	beq func_802680E0
+/* 802680C4 00265004  41 82 00 1C */	beq lbl_802680E0
 /* 802680C8 00265008  3C A0 80 3C */	lis r5, __vt__13cBgS_PolyInfo@ha
 /* 802680CC 0026500C  38 05 3F D0 */	addi r0, r5, __vt__13cBgS_PolyInfo@l
 /* 802680D0 00265010  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 802680D4 00265014  7C 80 07 35 */	extsh. r0, r4
-/* 802680D8 00265018  40 81 00 08 */	ble func_802680E0
+/* 802680D8 00265018  40 81 00 08 */	ble lbl_802680E0
 /* 802680DC 0026501C  48 06 6C 61 */	bl __dl__FPv
-
-/* 802680E0 0018 .text      func_802680E0                  func_802680E0                  */
-.global func_802680E0
-func_802680E0:
+lbl_802680E0:
 /* 802680E0 00265020  7F E3 FB 78 */	mr r3, r31
 /* 802680E4 00265024  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802680E8 00265028  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -49,30 +48,26 @@ func_802680E0:
 /* 802680F0 00265030  38 21 00 10 */	addi r1, r1, 0x10
 /* 802680F4 00265034  4E 80 00 20 */	blr 
 
-/* 802680F8 0018 .text      ChkSetInfo__13cBgS_PolyInfoCFv ChkSetInfo__13cBgS_PolyInfoCFv */
+/* 802680F8 0028 .text      ChkSetInfo__13cBgS_PolyInfoCFv ChkSetInfo__13cBgS_PolyInfoCFv */
 .global ChkSetInfo__13cBgS_PolyInfoCFv
+ChkSetInfo__13cBgS_PolyInfoCFv:
 ChkSetInfo__13cBgS_PolyInfoCFv:
 /* 802680F8 00265038  A0 03 00 00 */	lhz r0, 0(r3)
 /* 802680FC 0026503C  28 00 FF FF */	cmplwi r0, 0xffff
-/* 80268100 00265040  41 82 00 10 */	beq func_80268110
+/* 80268100 00265040  41 82 00 10 */	beq lbl_80268110
 /* 80268104 00265044  A0 03 00 02 */	lhz r0, 2(r3)
 /* 80268108 00265048  28 00 01 00 */	cmplwi r0, 0x100
-/* 8026810C 0026504C  40 82 00 0C */	bne func_80268118
-
-/* 80268110 0008 .text      func_80268110                  func_80268110                  */
-.global func_80268110
-func_80268110:
+/* 8026810C 0026504C  40 82 00 0C */	bne lbl_80268118
+lbl_80268110:
 /* 80268110 00265050  38 60 00 00 */	li r3, 0
 /* 80268114 00265054  4E 80 00 20 */	blr 
-
-/* 80268118 0008 .text      func_80268118                  func_80268118                  */
-.global func_80268118
-func_80268118:
+lbl_80268118:
 /* 80268118 00265058  38 60 00 01 */	li r3, 1
 /* 8026811C 0026505C  4E 80 00 20 */	blr 
 
 /* 80268120 0028 .text      ClearPi__13cBgS_PolyInfoFv     ClearPi__13cBgS_PolyInfoFv     */
 .global ClearPi__13cBgS_PolyInfoFv
+ClearPi__13cBgS_PolyInfoFv:
 ClearPi__13cBgS_PolyInfoFv:
 /* 80268120 00265060  3C 80 00 01 */	lis r4, 0x0000FFFF@ha
 /* 80268124 00265064  38 04 FF FF */	addi r0, r4, 0x0000FFFF@l
@@ -88,6 +83,7 @@ ClearPi__13cBgS_PolyInfoFv:
 /* 80268148 0024 .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo */
 .global SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo
 SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo:
+SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo:
 /* 80268148 00265088  A0 04 00 00 */	lhz r0, 0(r4)
 /* 8026814C 0026508C  B0 03 00 00 */	sth r0, 0(r3)
 /* 80268150 00265090  A0 04 00 02 */	lhz r0, 2(r4)
@@ -101,37 +97,38 @@ SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo:
 /* 8026816C 0010 .text      SetActorInfo__13cBgS_PolyInfoFiPvUi SetActorInfo__13cBgS_PolyInfoFiPvUi */
 .global SetActorInfo__13cBgS_PolyInfoFiPvUi
 SetActorInfo__13cBgS_PolyInfoFiPvUi:
+SetActorInfo__13cBgS_PolyInfoFiPvUi:
 /* 8026816C 002650AC  B0 83 00 02 */	sth r4, 2(r3)
 /* 80268170 002650B0  90 A3 00 04 */	stw r5, 4(r3)
 /* 80268174 002650B4  90 C3 00 08 */	stw r6, 8(r3)
 /* 80268178 002650B8  4E 80 00 20 */	blr 
 
-/* 8026817C 0020 .text      ChkSafe__13cBgS_PolyInfoCFPCvUi ChkSafe__13cBgS_PolyInfoCFPCvUi */
+/* 8026817C 0028 .text      ChkSafe__13cBgS_PolyInfoCFPCvUi ChkSafe__13cBgS_PolyInfoCFPCvUi */
 .global ChkSafe__13cBgS_PolyInfoCFPCvUi
+ChkSafe__13cBgS_PolyInfoCFPCvUi:
 ChkSafe__13cBgS_PolyInfoCFPCvUi:
 /* 8026817C 002650BC  80 03 00 04 */	lwz r0, 4(r3)
 /* 80268180 002650C0  7C 00 20 40 */	cmplw r0, r4
-/* 80268184 002650C4  40 82 00 18 */	bne func_8026819C
+/* 80268184 002650C4  40 82 00 18 */	bne lbl_8026819C
 /* 80268188 002650C8  80 03 00 08 */	lwz r0, 8(r3)
 /* 8026818C 002650CC  7C 00 28 40 */	cmplw r0, r5
-/* 80268190 002650D0  40 82 00 0C */	bne func_8026819C
+/* 80268190 002650D0  40 82 00 0C */	bne lbl_8026819C
 /* 80268194 002650D4  38 60 00 01 */	li r3, 1
 /* 80268198 002650D8  4E 80 00 20 */	blr 
-
-/* 8026819C 0008 .text      func_8026819C                  func_8026819C                  */
-.global func_8026819C
-func_8026819C:
+lbl_8026819C:
 /* 8026819C 002650DC  38 60 00 00 */	li r3, 0
 /* 802681A0 002650E0  4E 80 00 20 */	blr 
 
 /* 802681A4 0008 .text      SetPolyIndex__13cBgS_PolyInfoFi SetPolyIndex__13cBgS_PolyInfoFi */
 .global SetPolyIndex__13cBgS_PolyInfoFi
 SetPolyIndex__13cBgS_PolyInfoFi:
+SetPolyIndex__13cBgS_PolyInfoFi:
 /* 802681A4 002650E4  B0 83 00 00 */	sth r4, 0(r3)
 /* 802681A8 002650E8  4E 80 00 20 */	blr 
 
 /* 802681AC 0014 .text      ChkBgIndex__13cBgS_PolyInfoCFv ChkBgIndex__13cBgS_PolyInfoCFv */
 .global ChkBgIndex__13cBgS_PolyInfoCFv
+ChkBgIndex__13cBgS_PolyInfoCFv:
 ChkBgIndex__13cBgS_PolyInfoCFv:
 /* 802681AC 002650EC  A0 03 00 02 */	lhz r0, 2(r3)
 /* 802681B0 002650F0  20 60 01 00 */	subfic r3, r0, 0x100
@@ -147,6 +144,8 @@ ChkBgIndex__13cBgS_PolyInfoCFv:
 /* 803C3FD0 000C .data      __vt__13cBgS_PolyInfo          __vt__13cBgS_PolyInfo          */
 .global __vt__13cBgS_PolyInfo
 __vt__13cBgS_PolyInfo:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x26, 0x80, 0xb0 /* baserom.dol+0x3c0fd0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c0fdc */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__13cBgS_PolyInfoFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

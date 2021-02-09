@@ -4,27 +4,26 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802667D4 0024 .text      cReq_Is_Done__FP18request_base_class cReq_Is_Done__FP18request_base_class */
+/* 802667D4 002C .text      cReq_Is_Done__FP18request_base_class cReq_Is_Done__FP18request_base_class */
 .global cReq_Is_Done__FP18request_base_class
+cReq_Is_Done__FP18request_base_class:
 cReq_Is_Done__FP18request_base_class:
 /* 802667D4 00263714  88 83 00 00 */	lbz r4, 0(r3)
 /* 802667D8 00263718  54 80 D7 FE */	rlwinm r0, r4, 0x1a, 0x1f, 0x1f
 /* 802667DC 0026371C  28 00 00 01 */	cmplwi r0, 1
-/* 802667E0 00263720  40 82 00 18 */	bne func_802667F8
+/* 802667E0 00263720  40 82 00 18 */	bne lbl_802667F8
 /* 802667E4 00263724  38 00 00 00 */	li r0, 0
 /* 802667E8 00263728  50 04 36 72 */	rlwimi r4, r0, 6, 0x19, 0x19
 /* 802667EC 0026372C  98 83 00 00 */	stb r4, 0(r3)
 /* 802667F0 00263730  38 60 00 01 */	li r3, 1
 /* 802667F4 00263734  4E 80 00 20 */	blr 
-
-/* 802667F8 0008 .text      func_802667F8                  func_802667F8                  */
-.global func_802667F8
-func_802667F8:
+lbl_802667F8:
 /* 802667F8 00263738  38 60 00 00 */	li r3, 0
 /* 802667FC 0026373C  4E 80 00 20 */	blr 
 
 /* 80266800 0030 .text      cReq_Done__FP18request_base_class cReq_Done__FP18request_base_class */
 .global cReq_Done__FP18request_base_class
+cReq_Done__FP18request_base_class:
 cReq_Done__FP18request_base_class:
 /* 80266800 00263740  38 A0 00 00 */	li r5, 0
 /* 80266804 00263744  88 03 00 00 */	lbz r0, 0(r3)
@@ -42,6 +41,7 @@ cReq_Done__FP18request_base_class:
 /* 80266830 0020 .text      cReq_Command__FP18request_base_classUc cReq_Command__FP18request_base_classUc */
 .global cReq_Command__FP18request_base_classUc
 cReq_Command__FP18request_base_classUc:
+cReq_Command__FP18request_base_classUc:
 /* 80266830 00263770  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266834 00263774  7C 08 02 A6 */	mflr r0
 /* 80266838 00263778  90 01 00 14 */	stw r0, 0x14(r1)
@@ -53,6 +53,7 @@ cReq_Command__FP18request_base_classUc:
 
 /* 80266850 0030 .text      cReq_Create__FP18request_base_classUc cReq_Create__FP18request_base_classUc */
 .global cReq_Create__FP18request_base_classUc
+cReq_Create__FP18request_base_classUc:
 cReq_Create__FP18request_base_classUc:
 /* 80266850 00263790  38 A0 00 01 */	li r5, 1
 /* 80266854 00263794  88 03 00 00 */	lbz r0, 0(r3)

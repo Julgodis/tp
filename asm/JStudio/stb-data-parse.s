@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802899BC 003C .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
+/* 802899BC 004C .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
 .global getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData
+getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData:
 getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData:
 /* 802899BC 002868FC  38 00 00 00 */	li r0, 0
 /* 802899C0 00286900  90 04 00 08 */	stw r0, 8(r4)
@@ -19,20 +20,18 @@ getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSe
 /* 802899E0 00286920  4D 82 00 20 */	beqlr 
 /* 802899E4 00286924  38 63 00 04 */	addi r3, r3, 4
 /* 802899E8 00286928  28 00 00 7F */	cmplwi r0, 0x7f
-/* 802899EC 0028692C  41 81 00 0C */	bgt func_802899F8
+/* 802899EC 0028692C  41 81 00 0C */	bgt lbl_802899F8
 /* 802899F0 00286930  90 64 00 0C */	stw r3, 0xc(r4)
 /* 802899F4 00286934  4E 80 00 20 */	blr 
-
-/* 802899F8 0010 .text      func_802899F8                  func_802899F8                  */
-.global func_802899F8
-func_802899F8:
+lbl_802899F8:
 /* 802899F8 00286938  90 64 00 08 */	stw r3, 8(r4)
 /* 802899FC 0028693C  7C 03 2A 14 */	add r0, r3, r5
 /* 80289A00 00286940  90 04 00 0C */	stw r0, 0xc(r4)
 /* 80289A04 00286944  4E 80 00 20 */	blr 
 
-/* 80289A08 004C .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
+/* 80289A08 0078 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
 .global getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData
+getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData:
 getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData:
 /* 80289A08 00286948  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80289A0C 0028694C  7C 08 02 A6 */	mflr r0
@@ -48,33 +47,28 @@ getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TP
 /* 80289A34 00286974  90 1F 00 04 */	stw r0, 4(r31)
 /* 80289A38 00286978  80 01 00 08 */	lwz r0, 8(r1)
 /* 80289A3C 0028697C  28 00 00 00 */	cmplwi r0, 0
-/* 80289A40 00286980  40 82 00 14 */	bne func_80289A54
+/* 80289A40 00286980  40 82 00 14 */	bne lbl_80289A54
 /* 80289A44 00286984  38 00 00 00 */	li r0, 0
 /* 80289A48 00286988  90 1F 00 08 */	stw r0, 8(r31)
 /* 80289A4C 0028698C  90 7F 00 0C */	stw r3, 0xc(r31)
-/* 80289A50 00286990  48 00 00 1C */	b func_80289A6C
-
-/* 80289A54 0018 .text      func_80289A54                  func_80289A54                  */
-.global func_80289A54
-func_80289A54:
+/* 80289A50 00286990  48 00 00 1C */	b lbl_80289A6C
+lbl_80289A54:
 /* 80289A54 00286994  90 7F 00 08 */	stw r3, 8(r31)
 /* 80289A58 00286998  80 81 00 08 */	lwz r4, 8(r1)
 /* 80289A5C 0028699C  38 04 00 03 */	addi r0, r4, 3
 /* 80289A60 002869A0  54 00 00 3A */	rlwinm r0, r0, 0, 0, 0x1d
 /* 80289A64 002869A4  7C 03 02 14 */	add r0, r3, r0
 /* 80289A68 002869A8  90 1F 00 0C */	stw r0, 0xc(r31)
-
-/* 80289A6C 0014 .text      func_80289A6C                  func_80289A6C                  */
-.global func_80289A6C
-func_80289A6C:
+lbl_80289A6C:
 /* 80289A6C 002869AC  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80289A70 002869B0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80289A74 002869B4  7C 08 03 A6 */	mtlr r0
 /* 80289A78 002869B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80289A7C 002869BC  4E 80 00 20 */	blr 
 
-/* 80289A80 004C .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+/* 80289A80 0080 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
 .global getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData
+getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData:
 getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData:
 /* 80289A80 002869C0  38 00 00 00 */	li r0, 0
 /* 80289A84 002869C4  90 04 00 04 */	stw r0, 4(r4)
@@ -92,13 +86,10 @@ getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TPar
 /* 80289AB4 002869F4  38 E0 00 01 */	li r7, 1
 /* 80289AB8 002869F8  54 C0 07 39 */	rlwinm. r0, r6, 0, 0x1c, 0x1c
 /* 80289ABC 002869FC  38 A3 00 01 */	addi r5, r3, 1
-/* 80289AC0 00286A00  41 82 00 0C */	beq func_80289ACC
+/* 80289AC0 00286A00  41 82 00 0C */	beq lbl_80289ACC
 /* 80289AC4 00286A04  88 E5 00 00 */	lbz r7, 0(r5)
 /* 80289AC8 00286A08  38 A5 00 01 */	addi r5, r5, 1
-
-/* 80289ACC 0034 .text      func_80289ACC                  func_80289ACC                  */
-.global func_80289ACC
-func_80289ACC:
+lbl_80289ACC:
 /* 80289ACC 00286A0C  90 E4 00 08 */	stw r7, 8(r4)
 /* 80289AD0 00286A10  90 A4 00 0C */	stw r5, 0xc(r4)
 /* 80289AD4 00286A14  54 C0 07 7F */	clrlwi. r0, r6, 0x1d

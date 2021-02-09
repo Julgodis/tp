@@ -820,7 +820,7 @@ def process_mips_reloc(row: str, prev: str) -> str:
 
 
 def process_ppc_reloc(row: str, prev: str) -> str:
-    assert any(r in row for r in ["R_PPC_REL24", "R_PPC_ADDR16", "R_PPC_EMB_SDA21"]), f"unknown relocation type '{row}' for line '{prev}'"
+    assert any(r in row for r in ["R_PPC_REL24", "R_PPC_ADDR16", "R_PPC_EMB_SDA21", "R_PPC_REL14"]), f"unknown relocation type '{row}' for line '{prev}'"
     before, imm, after = parse_relocated_line(prev)
     repl = row.split()[-1]
     if "R_PPC_REL24" in row:
@@ -845,6 +845,8 @@ def process_ppc_reloc(row: str, prev: str) -> str:
     elif "R_PPC_EMB_SDA21" in row:
         # small data area
         pass
+    elif "R_PPC_REL14" in row:
+        repl = f"[bad]{repl}"
     return before + repl + after
 
 

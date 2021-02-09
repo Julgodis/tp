@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8031204C 005C .text      loadGX__10J3DTextureCFUs11_GXTexMapID loadGX__10J3DTextureCFUs11_GXTexMapID */
+/* 8031204C 0158 .text      loadGX__10J3DTextureCFUs11_GXTexMapID loadGX__10J3DTextureCFUs11_GXTexMapID */
 .global loadGX__10J3DTextureCFUs11_GXTexMapID
+loadGX__10J3DTextureCFUs11_GXTexMapID:
 loadGX__10J3DTextureCFUs11_GXTexMapID:
 /* 8031204C 0030EF8C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80312050 0030EF90  7C 08 02 A6 */	mflr r0
@@ -18,7 +19,7 @@ loadGX__10J3DTextureCFUs11_GXTexMapID:
 /* 8031206C 0030EFAC  7F E3 02 14 */	add r31, r3, r0
 /* 80312070 0030EFB0  88 1F 00 08 */	lbz r0, 8(r31)
 /* 80312074 0030EFB4  28 00 00 00 */	cmplwi r0, 0
-/* 80312078 0030EFB8  40 82 00 30 */	bne func_803120A8
+/* 80312078 0030EFB8  40 82 00 30 */	bne lbl_803120A8
 /* 8031207C 0030EFBC  38 61 00 1C */	addi r3, r1, 0x1c
 /* 80312080 0030EFC0  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 80312084 0030EFC4  7C 9F 02 14 */	add r4, r31, r0
@@ -29,11 +30,8 @@ loadGX__10J3DTextureCFUs11_GXTexMapID:
 /* 80312098 0030EFD8  89 3F 00 07 */	lbz r9, 7(r31)
 /* 8031209C 0030EFDC  89 5F 00 10 */	lbz r10, 0x10(r31)
 /* 803120A0 0030EFE0  48 04 BD A1 */	bl GXInitTexObj
-/* 803120A4 0030EFE4  48 00 00 54 */	b func_803120F8
-
-/* 803120A8 0050 .text      func_803120A8                  func_803120A8                  */
-.global func_803120A8
-func_803120A8:
+/* 803120A4 0030EFE4  48 00 00 54 */	b lbl_803120F8
+lbl_803120A8:
 /* 803120A8 0030EFE8  93 C1 00 08 */	stw r30, 8(r1)
 /* 803120AC 0030EFEC  38 61 00 1C */	addi r3, r1, 0x1c
 /* 803120B0 0030EFF0  80 1F 00 1C */	lwz r0, 0x1c(r31)
@@ -54,10 +52,7 @@ func_803120A8:
 /* 803120EC 0030F02C  38 61 00 10 */	addi r3, r1, 0x10
 /* 803120F0 0030F030  7F C4 F3 78 */	mr r4, r30
 /* 803120F4 0030F034  48 04 C3 AD */	bl GXLoadTlut
-
-/* 803120F8 00AC .text      func_803120F8                  func_803120F8                  */
-.global func_803120F8
-func_803120F8:
+lbl_803120F8:
 /* 803120F8 0030F038  38 61 00 1C */	addi r3, r1, 0x1c
 /* 803120FC 0030F03C  88 9F 00 14 */	lbz r4, 0x14(r31)
 /* 80312100 0030F040  88 BF 00 15 */	lbz r5, 0x15(r31)
@@ -102,8 +97,9 @@ func_803120F8:
 /* 8031219C 0030F0DC  38 21 00 60 */	addi r1, r1, 0x60
 /* 803121A0 0030F0E0  4E 80 00 20 */	blr 
 
-/* 803121A4 0038 .text      entryNum__10J3DTextureFUs      entryNum__10J3DTextureFUs      */
+/* 803121A4 0078 .text      entryNum__10J3DTextureFUs      entryNum__10J3DTextureFUs      */
 .global entryNum__10J3DTextureFUs
+entryNum__10J3DTextureFUs:
 entryNum__10J3DTextureFUs:
 /* 803121A4 0030F0E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803121A8 0030F0E8  7C 08 02 A6 */	mflr r0
@@ -118,11 +114,8 @@ entryNum__10J3DTextureFUs:
 /* 803121CC 0030F10C  38 60 00 00 */	li r3, 0
 /* 803121D0 0030F110  7C 66 1B 78 */	mr r6, r3
 /* 803121D4 0030F114  7C 65 1B 78 */	mr r5, r3
-/* 803121D8 0030F118  48 00 00 24 */	b func_803121FC
-
-/* 803121DC 0020 .text      func_803121DC                  func_803121DC                  */
-.global func_803121DC
-func_803121DC:
+/* 803121D8 0030F118  48 00 00 24 */	b lbl_803121FC
+lbl_803121DC:
 /* 803121DC 0030F11C  80 9F 00 04 */	lwz r4, 4(r31)
 /* 803121E0 0030F120  38 03 00 0C */	addi r0, r3, 0xc
 /* 803121E4 0030F124  7C C4 01 2E */	stwx r6, r4, r0
@@ -131,21 +124,19 @@ func_803121DC:
 /* 803121F0 0030F130  7C A4 01 2E */	stwx r5, r4, r0
 /* 803121F4 0030F134  38 E7 00 01 */	addi r7, r7, 1
 /* 803121F8 0030F138  38 63 00 20 */	addi r3, r3, 0x20
-
-/* 803121FC 0020 .text      func_803121FC                  func_803121FC                  */
-.global func_803121FC
-func_803121FC:
+lbl_803121FC:
 /* 803121FC 0030F13C  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 80312200 0030F140  7C 07 00 00 */	cmpw r7, r0
-/* 80312204 0030F144  41 80 FF D8 */	blt func_803121DC
+/* 80312204 0030F144  41 80 FF D8 */	blt lbl_803121DC
 /* 80312208 0030F148  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8031220C 0030F14C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80312210 0030F150  7C 08 03 A6 */	mtlr r0
 /* 80312214 0030F154  38 21 00 10 */	addi r1, r1, 0x10
 /* 80312218 0030F158  4E 80 00 20 */	blr 
 
-/* 8031221C 0048 .text      addResTIMG__10J3DTextureFUsPC7ResTIMG addResTIMG__10J3DTextureFUsPC7ResTIMG */
+/* 8031221C 026C .text      addResTIMG__10J3DTextureFUsPC7ResTIMG addResTIMG__10J3DTextureFUsPC7ResTIMG */
 .global addResTIMG__10J3DTextureFUsPC7ResTIMG
+addResTIMG__10J3DTextureFUsPC7ResTIMG:
 addResTIMG__10J3DTextureFUsPC7ResTIMG:
 /* 8031221C 0030F15C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80312220 0030F160  7C 08 02 A6 */	mflr r0
@@ -155,7 +146,7 @@ addResTIMG__10J3DTextureFUsPC7ResTIMG:
 /* 80312230 0030F170  7C 7C 1B 78 */	mr r28, r3
 /* 80312234 0030F174  7C BD 2B 78 */	mr r29, r5
 /* 80312238 0030F178  54 80 04 3F */	clrlwi. r0, r4, 0x10
-/* 8031223C 0030F17C  41 82 02 34 */	beq func_80312470
+/* 8031223C 0030F17C  41 82 02 34 */	beq lbl_80312470
 /* 80312240 0030F180  A0 1C 00 00 */	lhz r0, 0(r28)
 /* 80312244 0030F184  7C 1F 03 78 */	mr r31, r0
 /* 80312248 0030F188  83 DC 00 04 */	lwz r30, 4(r28)
@@ -164,11 +155,8 @@ addResTIMG__10J3DTextureFUsPC7ResTIMG:
 /* 80312254 0030F194  4B FF FF 51 */	bl entryNum__10J3DTextureFUs
 /* 80312258 0030F198  38 A0 00 00 */	li r5, 0
 /* 8031225C 0030F19C  57 E6 04 3E */	clrlwi r6, r31, 0x10
-/* 80312260 0030F1A0  48 00 00 F8 */	b func_80312358
-
-/* 80312264 00F4 .text      func_80312264                  func_80312264                  */
-.global func_80312264
-func_80312264:
+/* 80312260 0030F1A0  48 00 00 F8 */	b lbl_80312358
+lbl_80312264:
 /* 80312264 0030F1A4  80 7C 00 04 */	lwz r3, 4(r28)
 /* 80312268 0030F1A8  54 A0 2A F4 */	rlwinm r0, r5, 5, 0xb, 0x1a
 /* 8031226C 0030F1AC  7C 63 02 14 */	add r3, r3, r0
@@ -230,19 +218,13 @@ func_80312264:
 /* 8031234C 0030F28C  7C 03 00 50 */	subf r0, r3, r0
 /* 80312350 0030F290  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80312354 0030F294  38 A5 00 01 */	addi r5, r5, 1
-
-/* 80312358 0014 .text      func_80312358                  func_80312358                  */
-.global func_80312358
-func_80312358:
+lbl_80312358:
 /* 80312358 0030F298  54 A0 04 3E */	clrlwi r0, r5, 0x10
 /* 8031235C 0030F29C  7C 00 30 40 */	cmplw r0, r6
-/* 80312360 0030F2A0  41 80 FF 04 */	blt func_80312264
+/* 80312360 0030F2A0  41 80 FF 04 */	blt lbl_80312264
 /* 80312364 0030F2A4  7F E4 FB 78 */	mr r4, r31
-/* 80312368 0030F2A8  48 00 00 F8 */	b func_80312460
-
-/* 8031236C 00F4 .text      func_8031236C                  func_8031236C                  */
-.global func_8031236C
-func_8031236C:
+/* 80312368 0030F2A8  48 00 00 F8 */	b lbl_80312460
+lbl_8031236C:
 /* 8031236C 0030F2AC  80 7C 00 04 */	lwz r3, 4(r28)
 /* 80312370 0030F2B0  54 80 2A F4 */	rlwinm r0, r4, 5, 0xb, 0x1a
 /* 80312374 0030F2B4  7C C3 02 14 */	add r6, r3, r0
@@ -304,18 +286,12 @@ func_8031236C:
 /* 80312454 0030F394  7C 05 00 50 */	subf r0, r5, r0
 /* 80312458 0030F398  90 05 00 0C */	stw r0, 0xc(r5)
 /* 8031245C 0030F39C  38 84 00 01 */	addi r4, r4, 1
-
-/* 80312460 0010 .text      func_80312460                  func_80312460                  */
-.global func_80312460
-func_80312460:
+lbl_80312460:
 /* 80312460 0030F3A0  54 83 04 3E */	clrlwi r3, r4, 0x10
 /* 80312464 0030F3A4  A0 1C 00 00 */	lhz r0, 0(r28)
 /* 80312468 0030F3A8  7C 03 00 40 */	cmplw r3, r0
-/* 8031246C 0030F3AC  41 80 FF 00 */	blt func_8031236C
-
-/* 80312470 0018 .text      func_80312470                  func_80312470                  */
-.global func_80312470
-func_80312470:
+/* 8031246C 0030F3AC  41 80 FF 00 */	blt lbl_8031236C
+lbl_80312470:
 /* 80312470 0030F3B0  39 61 00 20 */	addi r11, r1, 0x20
 /* 80312474 0030F3B4  48 04 FD B1 */	bl _restgpr_28
 /* 80312478 0030F3B8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -328,17 +304,17 @@ func_80312470:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456388 0004 .sdata2    LIT_284                        @284                           */
+/* 80456388 0004 .sdata2    @284                           LIT_284                        */
 .global LIT_284
 LIT_284:
 .byte 0x3e, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51e8 */
 
-/* 8045638C 0004 .sdata2    LIT_285                        @285                           */
+/* 8045638C 0004 .sdata2    @285                           LIT_285                        */
 .global LIT_285
 LIT_285:
 .byte 0x3c, 0x23, 0xd7, 0x0a /* baserom.dol+0x3d51ec */
 
-/* 80456390 0008 .sdata2    J3DTexture__LIT_288            @288                           */
+/* 80456390 0008 .sdata2    @288                           J3DTexture__LIT_288            */
 .global J3DTexture__LIT_288
 J3DTexture__LIT_288:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d51f0 */

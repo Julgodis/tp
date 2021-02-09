@@ -7,6 +7,7 @@
 /* 8036C760 0020 .text      fmod                           fmod                           */
 .global fmod
 fmod:
+fmod:
 /* 8036C760 003696A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C764 003696A4  7C 08 02 A6 */	mflr r0
 /* 8036C768 003696A8  90 01 00 14 */	stw r0, 0x14(r1)

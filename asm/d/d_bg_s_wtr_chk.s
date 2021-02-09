@@ -7,6 +7,7 @@
 /* 80079164 0060 .text      __ct__11dBgS_WtrChkFv          __ct__11dBgS_WtrChkFv          */
 .global __ct__11dBgS_WtrChkFv
 __ct__11dBgS_WtrChkFv:
+__ct__11dBgS_WtrChkFv:
 /* 80079164 000760A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80079168 000760A8  7C 08 02 A6 */	mflr r0
 /* 8007916C 000760AC  90 01 00 14 */	stw r0, 0x14(r1)

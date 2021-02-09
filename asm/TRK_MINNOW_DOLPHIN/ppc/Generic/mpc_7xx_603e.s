@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 803711F0 0150 .text      TRKSaveExtended1Block          TRKSaveExtended1Block          */
+/* 803711F0 01B8 .text      TRKSaveExtended1Block          TRKSaveExtended1Block          */
 .global TRKSaveExtended1Block
+TRKSaveExtended1Block:
 TRKSaveExtended1Block:
 /* 803711F0 0036E130  3C 40 80 44 */	lis r2, gTRKCPUState@h
 /* 803711F4 0036E134  60 42 F3 38 */	ori r2, r2, gTRKCPUState@l
@@ -73,7 +74,7 @@ TRKSaveExtended1Block:
 /* 803712EC 0036E22C  7F DA E2 A6 */	mfspr r30, 0x39a
 /* 803712F0 0036E230  7F FB E2 A6 */	mfspr r31, 0x39b
 /* 803712F4 0036E234  BE 82 02 FC */	stmw r20, 0x2fc(r2)
-/* 803712F8 0036E238  48 00 00 48 */	b func_80371340
+/* 803712F8 0036E238  48 00 00 48 */	b lbl_80371340
 /* 803712FC 0036E23C  7E 00 EA A6 */	mfspr r16, 0x3a0
 /* 80371300 0036E240  7E 27 EA A6 */	mfspr r17, 0x3a7
 /* 80371304 0036E244  7E 48 EA A6 */	mfspr r18, 0x3a8
@@ -91,10 +92,7 @@ TRKSaveExtended1Block:
 /* 80371334 0036E274  7F D7 FA A6 */	mfspr r30, 0x3f7
 /* 80371338 0036E278  7F FF FA A6 */	mfspr r31, 0x3ff
 /* 8037133C 0036E27C  BE 02 02 B8 */	stmw r16, 0x2b8(r2)
-
-/* 80371340 0068 .text      func_80371340                  func_80371340                  */
-.global func_80371340
-func_80371340:
+lbl_80371340:
 /* 80371340 0036E280  7E 75 FA A6 */	mfspr r19, 0x3f5
 /* 80371344 0036E284  7E 99 EA A6 */	mfspr r20, 0x3b9
 /* 80371348 0036E288  7E BA EA A6 */	mfspr r21, 0x3ba
@@ -122,8 +120,9 @@ func_80371340:
 /* 803713A0 0036E2E0  93 E2 02 78 */	stw r31, 0x278(r2)
 /* 803713A4 0036E2E4  4E 80 00 20 */	blr 
 
-/* 803713A8 003C .text      TRKRestoreExtended1Block       TRKRestoreExtended1Block       */
+/* 803713A8 01B8 .text      TRKRestoreExtended1Block       TRKRestoreExtended1Block       */
 .global TRKRestoreExtended1Block
+TRKRestoreExtended1Block:
 TRKRestoreExtended1Block:
 /* 803713A8 0036E2E8  3C 40 80 44 */	lis r2, gTRKCPUState@h
 /* 803713AC 0036E2EC  60 42 F3 38 */	ori r2, r2, gTRKCPUState@l
@@ -135,15 +134,12 @@ TRKRestoreExtended1Block:
 /* 803713C4 0036E304  98 05 00 00 */	stb r0, 0(r5)
 /* 803713C8 0036E308  98 05 00 01 */	stb r0, 1(r5)
 /* 803713CC 0036E30C  2C 03 00 00 */	cmpwi r3, 0
-/* 803713D0 0036E310  41 82 00 14 */	beq func_803713E4
+/* 803713D0 0036E310  41 82 00 14 */	beq lbl_803713E4
 /* 803713D4 0036E314  83 02 01 E8 */	lwz r24, 0x1e8(r2)
 /* 803713D8 0036E318  83 22 01 EC */	lwz r25, 0x1ec(r2)
 /* 803713DC 0036E31C  7F 1C 43 A6 */	mttbl r24
 /* 803713E0 0036E320  7F 3D 43 A6 */	mttbu r25
-
-/* 803713E4 004C .text      func_803713E4                  func_803713E4                  */
-.global func_803713E4
-func_803713E4:
+lbl_803713E4:
 /* 803713E4 0036E324  BA 82 02 FC */	lmw r20, 0x2fc(r2)
 /* 803713E8 0036E328  7E 90 E3 A6 */	mtspr 0x390, r20
 /* 803713EC 0036E32C  7E B1 E3 A6 */	mtspr 0x391, r21
@@ -156,17 +152,14 @@ func_803713E4:
 /* 80371408 0036E348  7F 98 E3 A6 */	mtspr 0x398, r28
 /* 8037140C 0036E34C  7F DA E3 A6 */	mtspr 0x39a, r30
 /* 80371410 0036E350  7F FB E3 A6 */	mtspr 0x39b, r31
-/* 80371414 0036E354  48 00 00 1C */	b func_80371430
+/* 80371414 0036E354  48 00 00 1C */	b lbl_80371430
 /* 80371418 0036E358  BB 42 02 E0 */	lmw r26, 0x2e0(r2)
 /* 8037141C 0036E35C  7F 50 EB A6 */	mtspr 0x3b0, r26
 /* 80371420 0036E360  7F 77 EB A6 */	mtspr 0x3b7, r27
 /* 80371424 0036E364  7F B6 FB A6 */	mtspr 0x3f6, r29
 /* 80371428 0036E368  7F D7 FB A6 */	mtspr 0x3f7, r30
 /* 8037142C 0036E36C  7F FF FB A6 */	mtspr 0x3ff, r31
-
-/* 80371430 004C .text      func_80371430                  func_80371430                  */
-.global func_80371430
-func_80371430:
+lbl_80371430:
 /* 80371430 0036E370  BA 62 02 84 */	lmw r19, 0x284(r2)
 /* 80371434 0036E374  7E 75 FB A6 */	mtspr 0x3f5, r19
 /* 80371438 0036E378  7E 99 EB A6 */	mtspr 0x3b9, r20
@@ -181,15 +174,12 @@ func_80371430:
 /* 8037145C 0036E39C  7F BE FB A6 */	mtspr 0x3fe, r29
 /* 80371460 0036E3A0  7F DB FB A6 */	mtictc r30
 /* 80371464 0036E3A4  7F F9 FB A6 */	mtspr 0x3f9, r31
-/* 80371468 0036E3A8  48 00 00 34 */	b func_8037149C
+/* 80371468 0036E3A8  48 00 00 34 */	b lbl_8037149C
 /* 8037146C 0036E3AC  2C 06 00 00 */	cmpwi r6, 0
-/* 80371470 0036E3B0  41 82 00 0C */	beq func_8037147C
+/* 80371470 0036E3B0  41 82 00 0C */	beq lbl_8037147C
 /* 80371474 0036E3B4  83 42 02 78 */	lwz r26, 0x278(r2)
 /* 80371478 0036E3B8  7F 56 03 A6 */	mtspr 0x16, r26
-
-/* 8037147C 0020 .text      func_8037147C                  func_8037147C                  */
-.global func_8037147C
-func_8037147C:
+lbl_8037147C:
 /* 8037147C 0036E3BC  BB 22 02 40 */	lmw r25, 0x240(r2)
 /* 80371480 0036E3C0  7F 30 F3 A6 */	mtspr 0x3d0, r25
 /* 80371484 0036E3C4  7F 51 F3 A6 */	mtspr 0x3d1, r26
@@ -198,10 +188,7 @@ func_8037147C:
 /* 80371490 0036E3D0  7F B4 F3 A6 */	mtspr 0x3D4, r29
 /* 80371494 0036E3D4  7F D5 F3 A6 */	mtspr 0x3D5, r30
 /* 80371498 0036E3D8  7F F6 F3 A6 */	mtspr 0x3d6, r31
-
-/* 8037149C 00C4 .text      func_8037149C                  func_8037149C                  */
-.global func_8037149C
-func_8037149C:
+lbl_8037149C:
 /* 8037149C 0036E3DC  BA 02 01 A8 */	lmw r16, 0x1a8(r2)
 /* 803714A0 0036E3E0  7E 00 01 A4 */	mtsr 0, r16
 /* 803714A4 0036E3E4  7E 21 01 A4 */	mtsr 1, r17

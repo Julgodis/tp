@@ -7,6 +7,7 @@
 /* 80347090 0024 .text      PSVECAdd                       PSVECAdd                       */
 .global PSVECAdd
 PSVECAdd:
+PSVECAdd:
 /* 80347090 00343FD0  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 80347094 00343FD4  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 80347098 00343FD8  10 C2 20 2A */	ps_add f6, f2, f4
@@ -19,6 +20,7 @@ PSVECAdd:
 
 /* 803470B4 0024 .text      PSVECSubtract                  PSVECSubtract                  */
 .global PSVECSubtract
+PSVECSubtract:
 PSVECSubtract:
 /* 803470B4 00343FF4  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 803470B8 00343FF8  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
@@ -33,6 +35,7 @@ PSVECSubtract:
 /* 803470D8 001C .text      PSVECScale                     PSVECScale                     */
 .global PSVECScale
 PSVECScale:
+PSVECScale:
 /* 803470D8 00344018  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 803470DC 0034401C  E0 43 80 08 */	psq_l f2, 8(r3), 1, qr0
 /* 803470E0 00344020  10 00 00 58 */	ps_muls0 f0, f0, f1
@@ -43,6 +46,7 @@ PSVECScale:
 
 /* 803470F4 0044 .text      PSVECNormalize                 PSVECNormalize                 */
 .global PSVECNormalize
+PSVECNormalize:
 PSVECNormalize:
 /* 803470F4 00344034  C0 02 CB 44 */	lfs f0, vec__LIT_118-_SDA2_BASE_(r2)
 /* 803470F8 00344038  C0 22 CB 48 */	lfs f1, vec__LIT_119-_SDA2_BASE_(r2)
@@ -65,6 +69,7 @@ PSVECNormalize:
 /* 80347138 0018 .text      PSVECSquareMag                 PSVECSquareMag                 */
 .global PSVECSquareMag
 PSVECSquareMag:
+PSVECSquareMag:
 /* 80347138 00344078  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034713C 0034407C  10 00 00 32 */	ps_mul f0, f0, f0
 /* 80347140 00344080  C0 23 00 08 */	lfs f1, 8(r3)
@@ -72,8 +77,9 @@ PSVECSquareMag:
 /* 80347148 00344088  10 21 00 14 */	ps_sum0 f1, f1, f0, f0
 /* 8034714C 0034408C  4E 80 00 20 */	blr 
 
-/* 80347150 0040 .text      PSVECMag                       PSVECMag                       */
+/* 80347150 0044 .text      PSVECMag                       PSVECMag                       */
 .global PSVECMag
+PSVECMag:
 PSVECMag:
 /* 80347150 00344090  C0 82 CB 44 */	lfs f4, vec__LIT_118-_SDA2_BASE_(r2)
 /* 80347154 00344094  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -83,7 +89,7 @@ PSVECMag:
 /* 80347164 003440A4  10 21 00 7A */	ps_madd f1, f1, f1, f0
 /* 80347168 003440A8  10 21 00 14 */	ps_sum0 f1, f1, f0, f0
 /* 8034716C 003440AC  FC 01 10 00 */	fcmpu cr0, f1, f2
-/* 80347170 003440B0  41 82 00 20 */	beq func_80347190
+/* 80347170 003440B0  41 82 00 20 */	beq lbl_80347190
 /* 80347174 003440B4  FC 00 08 34 */	frsqrte f0, f1
 /* 80347178 003440B8  C0 62 CB 48 */	lfs f3, vec__LIT_119-_SDA2_BASE_(r2)
 /* 8034717C 003440BC  EC 40 00 32 */	fmuls f2, f0, f0
@@ -91,14 +97,12 @@ PSVECMag:
 /* 80347184 003440C4  EC 42 18 7C */	fnmsubs f2, f2, f1, f3
 /* 80347188 003440C8  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8034718C 003440CC  EC 21 00 32 */	fmuls f1, f1, f0
-
-/* 80347190 0004 .text      func_80347190                  func_80347190                  */
-.global func_80347190
-func_80347190:
+lbl_80347190:
 /* 80347190 003440D0  4E 80 00 20 */	blr 
 
 /* 80347194 0020 .text      PSVECDotProduct                PSVECDotProduct                */
 .global PSVECDotProduct
+PSVECDotProduct:
 PSVECDotProduct:
 /* 80347194 003440D4  E0 43 00 04 */	psq_l f2, 4(r3), 0, qr0
 /* 80347198 003440D8  E0 64 00 04 */	psq_l f3, 4(r4), 0, qr0
@@ -111,6 +115,7 @@ PSVECDotProduct:
 
 /* 803471B4 003C .text      PSVECCrossProduct              PSVECCrossProduct              */
 .global PSVECCrossProduct
+PSVECCrossProduct:
 PSVECCrossProduct:
 /* 803471B4 003440F4  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 803471B8 003440F8  C0 43 00 08 */	lfs f2, 8(r3)
@@ -128,8 +133,9 @@ PSVECCrossProduct:
 /* 803471E8 00344128  F1 45 00 04 */	psq_st f10, 4(r5), 0, qr0
 /* 803471EC 0034412C  4E 80 00 20 */	blr 
 
-/* 803471F0 00AC .text      C_VECHalfAngle                 C_VECHalfAngle                 */
+/* 803471F0 00D8 .text      C_VECHalfAngle                 C_VECHalfAngle                 */
 .global C_VECHalfAngle
+C_VECHalfAngle:
 C_VECHalfAngle:
 /* 803471F0 00344130  7C 08 02 A6 */	mflr r0
 /* 803471F4 00344134  90 01 00 04 */	stw r0, 4(r1)
@@ -169,25 +175,19 @@ C_VECHalfAngle:
 /* 8034727C 003441BC  4B FF FF 19 */	bl PSVECDotProduct
 /* 80347280 003441C0  C0 02 CB 40 */	lfs f0, vec__LIT_113-_SDA2_BASE_(r2)
 /* 80347284 003441C4  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80347288 003441C8  40 81 00 14 */	ble func_8034729C
+/* 80347288 003441C8  40 81 00 14 */	ble lbl_8034729C
 /* 8034728C 003441CC  38 61 00 14 */	addi r3, r1, 0x14
 /* 80347290 003441D0  7F E4 FB 78 */	mr r4, r31
 /* 80347294 003441D4  4B FF FE 61 */	bl PSVECNormalize
-/* 80347298 003441D8  48 00 00 1C */	b func_803472B4
-
-/* 8034729C 0018 .text      func_8034729C                  func_8034729C                  */
-.global func_8034729C
-func_8034729C:
+/* 80347298 003441D8  48 00 00 1C */	b lbl_803472B4
+lbl_8034729C:
 /* 8034729C 003441DC  80 61 00 14 */	lwz r3, 0x14(r1)
 /* 803472A0 003441E0  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 803472A4 003441E4  90 7F 00 00 */	stw r3, 0(r31)
 /* 803472A8 003441E8  90 1F 00 04 */	stw r0, 4(r31)
 /* 803472AC 003441EC  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 803472B0 003441F0  90 1F 00 08 */	stw r0, 8(r31)
-
-/* 803472B4 0014 .text      func_803472B4                  func_803472B4                  */
-.global func_803472B4
-func_803472B4:
+lbl_803472B4:
 /* 803472B4 003441F4  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 803472B8 003441F8  83 E1 00 3C */	lwz r31, 0x3c(r1)
 /* 803472BC 003441FC  38 21 00 40 */	addi r1, r1, 0x40
@@ -196,6 +196,7 @@ func_803472B4:
 
 /* 803472C8 00D4 .text      C_VECReflect                   C_VECReflect                   */
 .global C_VECReflect
+C_VECReflect:
 C_VECReflect:
 /* 803472C8 00344208  7C 08 02 A6 */	mflr r0
 /* 803472CC 0034420C  90 01 00 04 */	stw r0, 4(r1)
@@ -254,6 +255,7 @@ C_VECReflect:
 /* 8034739C 0028 .text      PSVECSquareDistance            PSVECSquareDistance            */
 .global PSVECSquareDistance
 PSVECSquareDistance:
+PSVECSquareDistance:
 /* 8034739C 003442DC  E0 03 00 04 */	psq_l f0, 4(r3), 0, qr0
 /* 803473A0 003442E0  E0 24 00 04 */	psq_l f1, 4(r4), 0, qr0
 /* 803473A4 003442E4  10 40 08 28 */	ps_sub f2, f0, f1
@@ -265,8 +267,9 @@ PSVECSquareDistance:
 /* 803473BC 003442FC  10 21 10 94 */	ps_sum0 f1, f1, f2, f2
 /* 803473C0 00344300  4E 80 00 20 */	blr 
 
-/* 803473C4 0050 .text      PSVECDistance                  PSVECDistance                  */
+/* 803473C4 0054 .text      PSVECDistance                  PSVECDistance                  */
 .global PSVECDistance
+PSVECDistance:
 PSVECDistance:
 /* 803473C4 00344304  E0 03 00 04 */	psq_l f0, 4(r3), 0, qr0
 /* 803473C8 00344308  E0 24 00 04 */	psq_l f1, 4(r4), 0, qr0
@@ -280,7 +283,7 @@ PSVECDistance:
 /* 803473E8 00344328  EC 03 18 28 */	fsubs f0, f3, f3
 /* 803473EC 0034432C  10 21 10 94 */	ps_sum0 f1, f1, f2, f2
 /* 803473F0 00344330  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 803473F4 00344334  41 82 00 20 */	beq func_80347414
+/* 803473F4 00344334  41 82 00 20 */	beq lbl_80347414
 /* 803473F8 00344338  C0 82 CB 48 */	lfs f4, vec__LIT_119-_SDA2_BASE_(r2)
 /* 803473FC 0034433C  FC 00 08 34 */	frsqrte f0, f1
 /* 80347400 00344340  EC 40 00 32 */	fmuls f2, f0, f0
@@ -288,10 +291,7 @@ PSVECDistance:
 /* 80347408 00344348  EC 42 20 7C */	fnmsubs f2, f2, f1, f4
 /* 8034740C 0034434C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80347410 00344350  EC 21 00 32 */	fmuls f1, f1, f0
-
-/* 80347414 0004 .text      func_80347414                  func_80347414                  */
-.global func_80347414
-func_80347414:
+lbl_80347414:
 /* 80347414 00344354  4E 80 00 20 */	blr 
 
 
@@ -299,22 +299,22 @@ func_80347414:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456540 0004 .sdata2    vec__LIT_113                   @113                           */
+/* 80456540 0004 .sdata2    @113                           vec__LIT_113                   */
 .global vec__LIT_113
 vec__LIT_113:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53a0 */
 
-/* 80456544 0004 .sdata2    vec__LIT_118                   @118                           */
+/* 80456544 0004 .sdata2    @118                           vec__LIT_118                   */
 .global vec__LIT_118
 vec__LIT_118:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53a4 */
 
-/* 80456548 0004 .sdata2    vec__LIT_119                   @119                           */
+/* 80456548 0004 .sdata2    @119                           vec__LIT_119                   */
 .global vec__LIT_119
 vec__LIT_119:
 .byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d53a8 */
 
-/* 8045654C 0004 .sdata2    vec__LIT_161                   @161                           */
+/* 8045654C 0004 .sdata2    @161                           vec__LIT_161                   */
 .global vec__LIT_161
 vec__LIT_161:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d53ac */

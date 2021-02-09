@@ -7,6 +7,7 @@
 /* 80337178 0058 .text      __ct__15J3DJointFactoryFRC13J3DJointBlock __ct__15J3DJointFactoryFRC13J3DJointBlock */
 .global __ct__15J3DJointFactoryFRC13J3DJointBlock
 __ct__15J3DJointFactoryFRC13J3DJointBlock:
+__ct__15J3DJointFactoryFRC13J3DJointBlock:
 /* 80337178 003340B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033717C 003340BC  7C 08 02 A6 */	mflr r0
 /* 80337180 003340C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,8 +31,9 @@ __ct__15J3DJointFactoryFRC13J3DJointBlock:
 /* 803371C8 00334108  38 21 00 10 */	addi r1, r1, 0x10
 /* 803371CC 0033410C  4E 80 00 20 */	blr 
 
-/* 803371D0 0034 .text      create__15J3DJointFactoryFi    create__15J3DJointFactoryFi    */
+/* 803371D0 0168 .text      create__15J3DJointFactoryFi    create__15J3DJointFactoryFi    */
 .global create__15J3DJointFactoryFi
+create__15J3DJointFactoryFi:
 create__15J3DJointFactoryFi:
 /* 803371D0 00334110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803371D4 00334114  7C 08 02 A6 */	mflr r0
@@ -43,13 +45,10 @@ create__15J3DJointFactoryFi:
 /* 803371EC 0033412C  38 60 00 5C */	li r3, 0x5c
 /* 803371F0 00334130  4B F9 7A 5D */	bl __nw__FUl
 /* 803371F4 00334134  7C 64 1B 79 */	or. r4, r3, r3
-/* 803371F8 00334138  41 82 00 0C */	beq func_80337204
+/* 803371F8 00334138  41 82 00 0C */	beq lbl_80337204
 /* 803371FC 0033413C  4B FF 7F 75 */	bl __ct__8J3DJointFv
 /* 80337200 00334140  7C 64 1B 78 */	mr r4, r3
-
-/* 80337204 0118 .text      func_80337204                  func_80337204                  */
-.global func_80337204
-func_80337204:
+lbl_80337204:
 /* 80337204 00334144  B3 C4 00 14 */	sth r30, 0x14(r4)
 /* 80337208 00334148  80 BF 00 00 */	lwz r5, 0(r31)
 /* 8033720C 0033414C  80 7F 00 04 */	lwz r3, 4(r31)
@@ -118,12 +117,9 @@ func_80337204:
 /* 80337308 00334248  90 64 00 54 */	stw r3, 0x54(r4)
 /* 8033730C 0033424C  88 04 00 17 */	lbz r0, 0x17(r4)
 /* 80337310 00334250  28 00 00 FF */	cmplwi r0, 0xff
-/* 80337314 00334254  40 82 00 08 */	bne func_8033731C
+/* 80337314 00334254  40 82 00 08 */	bne lbl_8033731C
 /* 80337318 00334258  98 64 00 17 */	stb r3, 0x17(r4)
-
-/* 8033731C 001C .text      func_8033731C                  func_8033731C                  */
-.global func_8033731C
-func_8033731C:
+lbl_8033731C:
 /* 8033731C 0033425C  7C 83 23 78 */	mr r3, r4
 /* 80337320 00334260  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80337324 00334264  83 C1 00 08 */	lwz r30, 8(r1)
@@ -132,17 +128,17 @@ func_8033731C:
 /* 80337330 00334270  38 21 00 10 */	addi r1, r1, 0x10
 /* 80337334 00334274  4E 80 00 20 */	blr 
 
-/* 80337338 0010 .text      "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl" JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl */
+/* 80337338 0018 .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl"
+"JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_016J3DJointInitData_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_016J3DJointInitData_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_016J3DJointInitData_SUB_1__FPCvUl:
 /* 80337338 00334278  28 04 00 00 */	cmplwi r4, 0
-/* 8033733C 0033427C  40 82 00 0C */	bne func_80337348
+/* 8033733C 0033427C  40 82 00 0C */	bne lbl_80337348
 /* 80337340 00334280  38 60 00 00 */	li r3, 0
 /* 80337344 00334284  4E 80 00 20 */	blr 
-
-/* 80337348 0008 .text      func_80337348                  func_80337348                  */
-.global func_80337348
-func_80337348:
+lbl_80337348:
 /* 80337348 00334288  7C 63 22 14 */	add r3, r3, r4
 /* 8033734C 0033428C  4E 80 00 20 */	blr 
 

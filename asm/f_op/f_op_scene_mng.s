@@ -7,6 +7,7 @@
 /* 8001ECB0 0030 .text      fopScnM_SearchByID__FUi        fopScnM_SearchByID__FUi        */
 .global fopScnM_SearchByID__FUi
 fopScnM_SearchByID__FUi:
+fopScnM_SearchByID__FUi:
 /* 8001ECB0 0001BBF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001ECB4 0001BBF4  7C 08 02 A6 */	mflr r0
 /* 8001ECB8 0001BBF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,8 +21,9 @@ fopScnM_SearchByID__FUi:
 /* 8001ECD8 0001BC18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8001ECDC 0001BC1C  4E 80 00 20 */	blr 
 
-/* 8001ECE0 0044 .text      fopScnM_ChangeReq__FP11scene_classssUs fopScnM_ChangeReq__FP11scene_classssUs */
+/* 8001ECE0 005C .text      fopScnM_ChangeReq__FP11scene_classssUs fopScnM_ChangeReq__FP11scene_classssUs */
 .global fopScnM_ChangeReq__FP11scene_classssUs
+fopScnM_ChangeReq__FP11scene_classssUs:
 fopScnM_ChangeReq__FP11scene_classssUs:
 /* 8001ECE0 0001BC20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001ECE4 0001BC24  7C 08 02 A6 */	mflr r0
@@ -37,19 +39,13 @@ fopScnM_ChangeReq__FP11scene_classssUs:
 /* 8001ED0C 0001BC4C  48 00 03 29 */	bl fopScnRq_Request__FiP11scene_classsPvsUs
 /* 8001ED10 0001BC50  3C 03 00 01 */	addis r0, r3, 1
 /* 8001ED14 0001BC54  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8001ED18 0001BC58  40 82 00 0C */	bne func_8001ED24
+/* 8001ED18 0001BC58  40 82 00 0C */	bne lbl_8001ED24
 /* 8001ED1C 0001BC5C  38 60 00 00 */	li r3, 0
-/* 8001ED20 0001BC60  48 00 00 0C */	b func_8001ED2C
-
-/* 8001ED24 0008 .text      func_8001ED24                  func_8001ED24                  */
-.global func_8001ED24
-func_8001ED24:
+/* 8001ED20 0001BC60  48 00 00 0C */	b lbl_8001ED2C
+lbl_8001ED24:
 /* 8001ED24 0001BC64  90 6D 80 38 */	stw r3, l_scnRqID-_SDA_BASE_(r13)
 /* 8001ED28 0001BC68  38 60 00 01 */	li r3, 1
-
-/* 8001ED2C 0010 .text      func_8001ED2C                  func_8001ED2C                  */
-.global func_8001ED2C
-func_8001ED2C:
+lbl_8001ED2C:
 /* 8001ED2C 0001BC6C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8001ED30 0001BC70  7C 08 03 A6 */	mtlr r0
 /* 8001ED34 0001BC74  38 21 00 10 */	addi r1, r1, 0x10
@@ -57,6 +53,7 @@ func_8001ED2C:
 
 /* 8001ED3C 0048 .text      fopScnM_DeleteReq__FP11scene_class fopScnM_DeleteReq__FP11scene_class */
 .global fopScnM_DeleteReq__FP11scene_class
+fopScnM_DeleteReq__FP11scene_class:
 fopScnM_DeleteReq__FP11scene_class:
 /* 8001ED3C 0001BC7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001ED40 0001BC80  7C 08 02 A6 */	mflr r0
@@ -80,6 +77,7 @@ fopScnM_DeleteReq__FP11scene_class:
 /* 8001ED84 0048 .text      fopScnM_CreateReq__FssUsUl     fopScnM_CreateReq__FssUsUl     */
 .global fopScnM_CreateReq__FssUsUl
 fopScnM_CreateReq__FssUsUl:
+fopScnM_CreateReq__FssUsUl:
 /* 8001ED84 0001BCC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001ED88 0001BCC8  7C 08 02 A6 */	mflr r0
 /* 8001ED8C 0001BCCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -99,8 +97,9 @@ fopScnM_CreateReq__FssUsUl:
 /* 8001EDC4 0001BD04  38 21 00 10 */	addi r1, r1, 0x10
 /* 8001EDC8 0001BD08  4E 80 00 20 */	blr 
 
-/* 8001EDCC 002C .text      fopScnM_ReRequest__FsUl        fopScnM_ReRequest__FsUl        */
+/* 8001EDCC 0044 .text      fopScnM_ReRequest__FsUl        fopScnM_ReRequest__FsUl        */
 .global fopScnM_ReRequest__FsUl
+fopScnM_ReRequest__FsUl:
 fopScnM_ReRequest__FsUl:
 /* 8001EDCC 0001BD0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001EDD0 0001BD10  7C 08 02 A6 */	mflr r0
@@ -110,19 +109,13 @@ fopScnM_ReRequest__FsUl:
 /* 8001EDE0 0001BD20  80 6D 80 38 */	lwz r3, l_scnRqID-_SDA_BASE_(r13)
 /* 8001EDE4 0001BD24  3C 03 00 01 */	addis r0, r3, 1
 /* 8001EDE8 0001BD28  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8001EDEC 0001BD2C  40 82 00 0C */	bne func_8001EDF8
+/* 8001EDEC 0001BD2C  40 82 00 0C */	bne lbl_8001EDF8
 /* 8001EDF0 0001BD30  38 60 00 00 */	li r3, 0
-/* 8001EDF4 0001BD34  48 00 00 0C */	b func_8001EE00
-
-/* 8001EDF8 0008 .text      func_8001EDF8                  func_8001EDF8                  */
-.global func_8001EDF8
-func_8001EDF8:
+/* 8001EDF4 0001BD34  48 00 00 0C */	b lbl_8001EE00
+lbl_8001EDF8:
 /* 8001EDF8 0001BD38  7C C4 33 78 */	mr r4, r6
 /* 8001EDFC 0001BD3C  48 00 03 01 */	bl fopScnRq_ReRequest__FUisPv
-
-/* 8001EE00 0010 .text      func_8001EE00                  func_8001EE00                  */
-.global func_8001EE00
-func_8001EE00:
+lbl_8001EE00:
 /* 8001EE00 0001BD40  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8001EE04 0001BD44  7C 08 03 A6 */	mtlr r0
 /* 8001EE08 0001BD48  38 21 00 10 */	addi r1, r1, 0x10
@@ -130,6 +123,7 @@ func_8001EE00:
 
 /* 8001EE10 0020 .text      fopScnM_Management__Fv         fopScnM_Management__Fv         */
 .global fopScnM_Management__Fv
+fopScnM_Management__Fv:
 fopScnM_Management__Fv:
 /* 8001EE10 0001BD50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001EE14 0001BD54  7C 08 02 A6 */	mflr r0
@@ -143,6 +137,7 @@ fopScnM_Management__Fv:
 /* 8001EE30 0004 .text      fopScnM_Init__Fv               fopScnM_Init__Fv               */
 .global fopScnM_Init__Fv
 fopScnM_Init__Fv:
+fopScnM_Init__Fv:
 /* 8001EE30 0001BD70  4E 80 00 20 */	blr 
 
 
@@ -154,5 +149,5 @@ fopScnM_Init__Fv:
 .global l_scnRqID
 l_scnRqID:
 .byte 0xff, 0xff, 0xff, 0xff /* baserom.dol+0x3d0318 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d031c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

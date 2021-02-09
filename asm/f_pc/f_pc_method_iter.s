@@ -7,6 +7,7 @@
 /* 80023764 0024 .text      fpcMtdIt_Method__FP15node_list_classPFPv_i fpcMtdIt_Method__FP15node_list_classPFPv_i */
 .global fpcMtdIt_Method__FP15node_list_classPFPv_i
 fpcMtdIt_Method__FP15node_list_classPFPv_i:
+fpcMtdIt_Method__FP15node_list_classPFPv_i:
 /* 80023764 000206A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80023768 000206A8  7C 08 02 A6 */	mflr r0
 /* 8002376C 000206AC  90 01 00 14 */	stw r0, 0x14(r1)

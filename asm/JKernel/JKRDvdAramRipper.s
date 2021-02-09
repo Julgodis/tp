@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802DA874 005C .text      loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl */
+/* 802DA874 00A4 .text      loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl */
 .global loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl
+loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl:
 loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl:
 /* 802DA874 002D77B4  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802DA878 002D77B8  7C 08 02 A6 */	mflr r0
@@ -24,16 +25,13 @@ loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl:
 /* 802DA8AC 002D77EC  7F 44 D3 78 */	mr r4, r26
 /* 802DA8B0 002D77F0  4B FF F0 15 */	bl open__10JKRDvdFileFl
 /* 802DA8B4 002D77F4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802DA8B8 002D77F8  40 82 00 18 */	bne func_802DA8D0
+/* 802DA8B8 002D77F8  40 82 00 18 */	bne lbl_802DA8D0
 /* 802DA8BC 002D77FC  38 61 00 08 */	addi r3, r1, 8
 /* 802DA8C0 002D7800  38 80 FF FF */	li r4, -1
 /* 802DA8C4 002D7804  4B FF EE 85 */	bl __dt__10JKRDvdFileFv
 /* 802DA8C8 002D7808  38 60 00 00 */	li r3, 0
-/* 802DA8CC 002D780C  48 00 00 34 */	b func_802DA900
-
-/* 802DA8D0 0030 .text      func_802DA8D0                  func_802DA8D0                  */
-.global func_802DA8D0
-func_802DA8D0:
+/* 802DA8CC 002D780C  48 00 00 34 */	b lbl_802DA900
+lbl_802DA8D0:
 /* 802DA8D0 002D7810  38 61 00 08 */	addi r3, r1, 8
 /* 802DA8D4 002D7814  7F 64 DB 78 */	mr r4, r27
 /* 802DA8D8 002D7818  7F 85 E3 78 */	mr r5, r28
@@ -46,10 +44,7 @@ func_802DA8D0:
 /* 802DA8F4 002D7834  38 80 FF FF */	li r4, -1
 /* 802DA8F8 002D7838  4B FF EE 51 */	bl __dt__10JKRDvdFileFv
 /* 802DA8FC 002D783C  7F E3 FB 78 */	mr r3, r31
-
-/* 802DA900 0018 .text      func_802DA900                  func_802DA900                  */
-.global func_802DA900
-func_802DA900:
+lbl_802DA900:
 /* 802DA900 002D7840  39 61 01 20 */	addi r11, r1, 0x120
 /* 802DA904 002D7844  48 08 79 19 */	bl _restgpr_26
 /* 802DA908 002D7848  80 01 01 24 */	lwz r0, 0x124(r1)
@@ -57,8 +52,9 @@ func_802DA900:
 /* 802DA910 002D7850  38 21 01 20 */	addi r1, r1, 0x120
 /* 802DA914 002D7854  4E 80 00 20 */	blr 
 
-/* 802DA918 0060 .text      loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl */
+/* 802DA918 00A8 .text      loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl */
 .global loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl
+loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl:
 loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl:
 /* 802DA918 002D7858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DA91C 002D785C  7C 08 02 A6 */	mflr r0
@@ -78,36 +74,27 @@ loadToAram__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchUlUlPUl:
 /* 802DA954 002D7894  48 00 04 F5 */	bl syncAram__16JKRDvdAramRipperFP12JKRADCommandi
 /* 802DA958 002D7898  80 1F 00 48 */	lwz r0, 0x48(r31)
 /* 802DA95C 002D789C  2C 00 00 00 */	cmpwi r0, 0
-/* 802DA960 002D78A0  40 80 00 18 */	bge func_802DA978
+/* 802DA960 002D78A0  40 80 00 18 */	bge lbl_802DA978
 /* 802DA964 002D78A4  7F E3 FB 78 */	mr r3, r31
 /* 802DA968 002D78A8  38 80 00 01 */	li r4, 1
 /* 802DA96C 002D78AC  48 00 05 F1 */	bl __dt__12JKRADCommandFv
 /* 802DA970 002D78B0  38 60 00 00 */	li r3, 0
-/* 802DA974 002D78B4  48 00 00 34 */	b func_802DA9A8
-
-/* 802DA978 001C .text      func_802DA978                  func_802DA978                  */
-.global func_802DA978
-func_802DA978:
+/* 802DA974 002D78B4  48 00 00 34 */	b lbl_802DA9A8
+lbl_802DA978:
 /* 802DA978 002D78B8  28 1E 00 00 */	cmplwi r30, 0
-/* 802DA97C 002D78BC  41 82 00 18 */	beq func_802DA994
+/* 802DA97C 002D78BC  41 82 00 18 */	beq lbl_802DA994
 /* 802DA980 002D78C0  7F E3 FB 78 */	mr r3, r31
 /* 802DA984 002D78C4  38 80 00 01 */	li r4, 1
 /* 802DA988 002D78C8  48 00 05 D5 */	bl __dt__12JKRADCommandFv
 /* 802DA98C 002D78CC  38 60 FF FF */	li r3, -1
-/* 802DA990 002D78D0  48 00 00 18 */	b func_802DA9A8
-
-/* 802DA994 0014 .text      func_802DA994                  func_802DA994                  */
-.global func_802DA994
-func_802DA994:
+/* 802DA990 002D78D0  48 00 00 18 */	b lbl_802DA9A8
+lbl_802DA994:
 /* 802DA994 002D78D4  83 DF 00 30 */	lwz r30, 0x30(r31)
 /* 802DA998 002D78D8  7F E3 FB 78 */	mr r3, r31
 /* 802DA99C 002D78DC  38 80 00 01 */	li r4, 1
 /* 802DA9A0 002D78E0  48 00 05 BD */	bl __dt__12JKRADCommandFv
 /* 802DA9A4 002D78E4  7F C3 F3 78 */	mr r3, r30
-
-/* 802DA9A8 0018 .text      func_802DA9A8                  func_802DA9A8                  */
-.global func_802DA9A8
-func_802DA9A8:
+lbl_802DA9A8:
 /* 802DA9A8 002D78E8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DA9AC 002D78EC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802DA9B0 002D78F0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -115,8 +102,9 @@ func_802DA9A8:
 /* 802DA9B8 002D78F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DA9BC 002D78FC  4E 80 00 20 */	blr 
 
-/* 802DA9C0 0050 .text      loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl */
+/* 802DA9C0 00B4 .text      loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl */
 .global loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl
+loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl:
 loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlPUl:
 /* 802DA9C0 002D7900  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DA9C4 002D7904  7C 08 02 A6 */	mflr r0
@@ -135,13 +123,10 @@ loadToAram_Async__16JKRDvdAramRipperFP10JKRDvdFileUl15JKRExpandSwitchPFUl_vUlUlP
 /* 802DA9F8 002D7938  38 A0 FF FC */	li r5, -4
 /* 802DA9FC 002D793C  4B FF 42 9D */	bl __nw__FUlP7JKRHeapi
 /* 802DAA00 002D7940  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802DAA04 002D7944  41 82 00 0C */	beq func_802DAA10
+/* 802DAA04 002D7944  41 82 00 0C */	beq lbl_802DAA10
 /* 802DAA08 002D7948  48 00 05 15 */	bl __ct__12JKRADCommandFv
 /* 802DAA0C 002D794C  7C 7F 1B 78 */	mr r31, r3
-
-/* 802DAA10 0048 .text      func_802DAA10                  func_802DAA10                  */
-.global func_802DAA10
-func_802DAA10:
+lbl_802DAA10:
 /* 802DAA10 002D7950  93 1F 00 28 */	stw r24, 0x28(r31)
 /* 802DAA14 002D7954  93 3F 00 2C */	stw r25, 0x2c(r31)
 /* 802DAA18 002D7958  38 00 00 00 */	li r0, 0
@@ -154,21 +139,15 @@ func_802DAA10:
 /* 802DAA34 002D7974  7F E3 FB 78 */	mr r3, r31
 /* 802DAA38 002D7978  48 00 00 3D */	bl callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand
 /* 802DAA3C 002D797C  28 03 00 00 */	cmplwi r3, 0
-/* 802DAA40 002D7980  40 82 00 18 */	bne func_802DAA58
+/* 802DAA40 002D7980  40 82 00 18 */	bne lbl_802DAA58
 /* 802DAA44 002D7984  7F E3 FB 78 */	mr r3, r31
 /* 802DAA48 002D7988  38 80 00 01 */	li r4, 1
 /* 802DAA4C 002D798C  48 00 05 11 */	bl __dt__12JKRADCommandFv
 /* 802DAA50 002D7990  38 60 00 00 */	li r3, 0
-/* 802DAA54 002D7994  48 00 00 08 */	b func_802DAA5C
-
-/* 802DAA58 0004 .text      func_802DAA58                  func_802DAA58                  */
-.global func_802DAA58
-func_802DAA58:
+/* 802DAA54 002D7994  48 00 00 08 */	b lbl_802DAA5C
+lbl_802DAA58:
 /* 802DAA58 002D7998  7F E3 FB 78 */	mr r3, r31
-
-/* 802DAA5C 0018 .text      func_802DAA5C                  func_802DAA5C                  */
-.global func_802DAA5C
-func_802DAA5C:
+lbl_802DAA5C:
 /* 802DAA5C 002D799C  39 61 00 30 */	addi r11, r1, 0x30
 /* 802DAA60 002D79A0  48 08 77 B5 */	bl _restgpr_24
 /* 802DAA64 002D79A4  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -176,8 +155,9 @@ func_802DAA5C:
 /* 802DAA6C 002D79AC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DAA70 002D79B0  4E 80 00 20 */	blr 
 
-/* 802DAA74 0040 .text      callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand */
+/* 802DAA74 0364 .text      callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand */
 .global callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand
+callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand:
 callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand:
 /* 802DAA74 002D79B4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802DAA78 002D79B8  7C 08 02 A6 */	mflr r0
@@ -192,22 +172,16 @@ callCommand_Async__16JKRDvdAramRipperFP12JKRADCommand:
 /* 802DAA9C 002D79DC  48 06 45 A5 */	bl OSLockMutex
 /* 802DAAA0 002D79E0  80 7D 00 44 */	lwz r3, 0x44(r29)
 /* 802DAAA4 002D79E4  28 03 00 00 */	cmplwi r3, 0
-/* 802DAAA8 002D79E8  41 82 00 0C */	beq func_802DAAB4
+/* 802DAAA8 002D79E8  41 82 00 0C */	beq lbl_802DAAB4
 /* 802DAAAC 002D79EC  38 00 00 00 */	li r0, 0
 /* 802DAAB0 002D79F0  90 03 00 00 */	stw r0, 0(r3)
-
-/* 802DAAB4 0014 .text      func_802DAAB4                  func_802DAAB4                  */
-.global func_802DAAB4
-func_802DAAB4:
+lbl_802DAAB4:
 /* 802DAAB4 002D79F4  80 1E 00 50 */	lwz r0, 0x50(r30)
 /* 802DAAB8 002D79F8  28 00 00 00 */	cmplwi r0, 0
-/* 802DAABC 002D79FC  41 82 00 0C */	beq func_802DAAC8
+/* 802DAABC 002D79FC  41 82 00 0C */	beq lbl_802DAAC8
 /* 802DAAC0 002D7A00  3B E0 00 00 */	li r31, 0
-/* 802DAAC4 002D7A04  48 00 02 DC */	b func_802DADA0
-
-/* 802DAAC8 002C .text      func_802DAAC8                  func_802DAAC8                  */
-.global func_802DAAC8
-func_802DAAC8:
+/* 802DAAC4 002D7A04  48 00 02 DC */	b lbl_802DADA0
+lbl_802DAAC8:
 /* 802DAAC8 002D7A08  48 06 61 BD */	bl OSGetCurrentThread
 /* 802DAACC 002D7A0C  90 7E 00 50 */	stw r3, 0x50(r30)
 /* 802DAAD0 002D7A10  38 60 00 10 */	li r3, 0x10
@@ -215,14 +189,11 @@ func_802DAAC8:
 /* 802DAAD8 002D7A18  38 A0 FF FC */	li r5, -4
 /* 802DAADC 002D7A1C  4B FF 41 BD */	bl __nw__FUlP7JKRHeapi
 /* 802DAAE0 002D7A20  7C 7C 1B 79 */	or. r28, r3, r3
-/* 802DAAE4 002D7A24  41 82 00 10 */	beq func_802DAAF4
+/* 802DAAE4 002D7A24  41 82 00 10 */	beq lbl_802DAAF4
 /* 802DAAE8 002D7A28  7F C4 F3 78 */	mr r4, r30
 /* 802DAAEC 002D7A2C  48 00 1B 4D */	bl __ct__18JSUFileInputStreamFP7JKRFile
 /* 802DAAF0 002D7A30  7C 7C 1B 78 */	mr r28, r3
-
-/* 802DAAF4 0030 .text      func_802DAAF4                  func_802DAAF4                  */
-.global func_802DAAF4
-func_802DAAF4:
+lbl_802DAAF4:
 /* 802DAAF4 002D7A34  93 9E 00 54 */	stw r28, 0x54(r30)
 /* 802DAAF8 002D7A38  7F C3 F3 78 */	mr r3, r30
 /* 802DAAFC 002D7A3C  81 9E 00 00 */	lwz r12, 0(r30)
@@ -231,25 +202,19 @@ func_802DAAF4:
 /* 802DAB08 002D7A48  4E 80 04 21 */	bctrl 
 /* 802DAB0C 002D7A4C  80 1D 00 40 */	lwz r0, 0x40(r29)
 /* 802DAB10 002D7A50  28 00 00 00 */	cmplwi r0, 0
-/* 802DAB14 002D7A54  41 82 00 10 */	beq func_802DAB24
+/* 802DAB14 002D7A54  41 82 00 10 */	beq lbl_802DAB24
 /* 802DAB18 002D7A58  7C 03 00 40 */	cmplw r3, r0
-/* 802DAB1C 002D7A5C  40 81 00 08 */	ble func_802DAB24
+/* 802DAB1C 002D7A5C  40 81 00 08 */	ble lbl_802DAB24
 /* 802DAB20 002D7A60  7C 03 03 78 */	mr r3, r0
-
-/* 802DAB24 001C .text      func_802DAB24                  func_802DAB24                  */
-.global func_802DAB24
-func_802DAB24:
+lbl_802DAB24:
 /* 802DAB24 002D7A64  38 03 00 1F */	addi r0, r3, 0x1f
 /* 802DAB28 002D7A68  54 1B 00 34 */	rlwinm r27, r0, 0, 0, 0x1a
 /* 802DAB2C 002D7A6C  80 1D 00 34 */	lwz r0, 0x34(r29)
 /* 802DAB30 002D7A70  2C 00 00 01 */	cmpwi r0, 1
-/* 802DAB34 002D7A74  40 82 00 C8 */	bne func_802DABFC
+/* 802DAB34 002D7A74  40 82 00 C8 */	bne lbl_802DABFC
 /* 802DAB38 002D7A78  38 01 00 27 */	addi r0, r1, 0x27
 /* 802DAB3C 002D7A7C  54 19 00 34 */	rlwinm r25, r0, 0, 0, 0x1a
-
-/* 802DAB40 004C .text      func_802DAB40                  func_802DAB40                  */
-.global func_802DAB40
-func_802DAB40:
+lbl_802DAB40:
 /* 802DAB40 002D7A80  38 7E 00 5C */	addi r3, r30, 0x5c
 /* 802DAB44 002D7A84  7F 24 CB 78 */	mr r4, r25
 /* 802DAB48 002D7A88  38 A0 00 20 */	li r5, 0x20
@@ -257,46 +222,34 @@ func_802DAB40:
 /* 802DAB50 002D7A90  38 E0 00 02 */	li r7, 2
 /* 802DAB54 002D7A94  48 06 E2 F1 */	bl DVDReadPrio
 /* 802DAB58 002D7A98  2C 03 00 00 */	cmpwi r3, 0
-/* 802DAB5C 002D7A9C  40 80 00 40 */	bge func_802DAB9C
-/* 802DAB60 002D7AA0  88 0D 83 50 */	lbz r0, sym_804508D0-_SDA_BASE_(r13)
+/* 802DAB5C 002D7A9C  40 80 00 40 */	bge lbl_802DAB9C
+/* 802DAB60 002D7AA0  88 0D 83 50 */	lbz r0, data_804508D0-_SDA_BASE_(r13)
 /* 802DAB64 002D7AA4  28 00 00 00 */	cmplwi r0, 0
-/* 802DAB68 002D7AA8  40 82 00 2C */	bne func_802DAB94
+/* 802DAB68 002D7AA8  40 82 00 2C */	bne lbl_802DAB94
 /* 802DAB6C 002D7AAC  28 1C 00 00 */	cmplwi r28, 0
-/* 802DAB70 002D7AB0  41 82 00 1C */	beq func_802DAB8C
+/* 802DAB70 002D7AB0  41 82 00 1C */	beq lbl_802DAB8C
 /* 802DAB74 002D7AB4  7F 83 E3 78 */	mr r3, r28
 /* 802DAB78 002D7AB8  38 80 00 01 */	li r4, 1
 /* 802DAB7C 002D7ABC  81 9C 00 00 */	lwz r12, 0(r28)
 /* 802DAB80 002D7AC0  81 8C 00 08 */	lwz r12, 8(r12)
 /* 802DAB84 002D7AC4  7D 89 03 A6 */	mtctr r12
 /* 802DAB88 002D7AC8  4E 80 04 21 */	bctrl 
-
-/* 802DAB8C 0008 .text      func_802DAB8C                  func_802DAB8C                  */
-.global func_802DAB8C
-func_802DAB8C:
+lbl_802DAB8C:
 /* 802DAB8C 002D7ACC  38 60 00 00 */	li r3, 0
-/* 802DAB90 002D7AD0  48 00 02 30 */	b func_802DADC0
-
-/* 802DAB94 0008 .text      func_802DAB94                  func_802DAB94                  */
-.global func_802DAB94
-func_802DAB94:
+/* 802DAB90 002D7AD0  48 00 02 30 */	b lbl_802DADC0
+lbl_802DAB94:
 /* 802DAB94 002D7AD4  48 07 1E 31 */	bl VIWaitForRetrace
-/* 802DAB98 002D7AD8  4B FF FF A8 */	b func_802DAB40
-
-/* 802DAB9C 0020 .text      func_802DAB9C                  func_802DAB9C                  */
-.global func_802DAB9C
-func_802DAB9C:
+/* 802DAB98 002D7AD8  4B FF FF A8 */	b lbl_802DAB40
+lbl_802DAB9C:
 /* 802DAB9C 002D7ADC  7F 23 CB 78 */	mr r3, r25
 /* 802DABA0 002D7AE0  38 80 00 20 */	li r4, 0x20
 /* 802DABA4 002D7AE4  48 06 09 DD */	bl DCInvalidateRange
 /* 802DABA8 002D7AE8  7F 23 CB 78 */	mr r3, r25
 /* 802DABAC 002D7AEC  48 00 11 4D */	bl checkCompressed__9JKRDecompFPUc
 /* 802DABB0 002D7AF0  2C 03 00 03 */	cmpwi r3, 3
-/* 802DABB4 002D7AF4  40 82 00 08 */	bne func_802DABBC
+/* 802DABB4 002D7AF4  40 82 00 08 */	bne lbl_802DABBC
 /* 802DABB8 002D7AF8  38 60 00 00 */	li r3, 0
-
-/* 802DABBC 0040 .text      func_802DABBC                  func_802DABBC                  */
-.global func_802DABBC
-func_802DABBC:
+lbl_802DABBC:
 /* 802DABBC 002D7AFC  7C 7A 1B 78 */	mr r26, r3
 /* 802DABC0 002D7B00  88 B9 00 07 */	lbz r5, 7(r25)
 /* 802DABC4 002D7B04  88 99 00 06 */	lbz r4, 6(r25)
@@ -309,31 +262,25 @@ func_802DABBC:
 /* 802DABE0 002D7B20  7C 19 03 78 */	mr r25, r0
 /* 802DABE4 002D7B24  80 7D 00 40 */	lwz r3, 0x40(r29)
 /* 802DABE8 002D7B28  28 03 00 00 */	cmplwi r3, 0
-/* 802DABEC 002D7B2C  41 82 00 10 */	beq func_802DABFC
+/* 802DABEC 002D7B2C  41 82 00 10 */	beq lbl_802DABFC
 /* 802DABF0 002D7B30  7C 00 18 40 */	cmplw r0, r3
-/* 802DABF4 002D7B34  40 81 00 08 */	ble func_802DABFC
+/* 802DABF4 002D7B34  40 81 00 08 */	ble lbl_802DABFC
 /* 802DABF8 002D7B38  7C 79 1B 78 */	mr r25, r3
-
-/* 802DABFC 0010 .text      func_802DABFC                  func_802DABFC                  */
-.global func_802DABFC
-func_802DABFC:
+lbl_802DABFC:
 /* 802DABFC 002D7B3C  2C 1A 00 00 */	cmpwi r26, 0
-/* 802DAC00 002D7B40  40 82 00 0C */	bne func_802DAC0C
+/* 802DAC00 002D7B40  40 82 00 0C */	bne lbl_802DAC0C
 /* 802DAC04 002D7B44  38 00 00 00 */	li r0, 0
 /* 802DAC08 002D7B48  90 1D 00 34 */	stw r0, 0x34(r29)
-
-/* 802DAC0C 0050 .text      func_802DAC0C                  func_802DAC0C                  */
-.global func_802DAC0C
-func_802DAC0C:
+lbl_802DAC0C:
 /* 802DAC0C 002D7B4C  80 1D 00 34 */	lwz r0, 0x34(r29)
 /* 802DAC10 002D7B50  2C 00 00 01 */	cmpwi r0, 1
-/* 802DAC14 002D7B54  40 82 00 80 */	bne func_802DAC94
+/* 802DAC14 002D7B54  40 82 00 80 */	bne lbl_802DAC94
 /* 802DAC18 002D7B58  80 1D 00 2C */	lwz r0, 0x2c(r29)
 /* 802DAC1C 002D7B5C  28 00 00 00 */	cmplwi r0, 0
-/* 802DAC20 002D7B60  40 82 00 44 */	bne func_802DAC64
+/* 802DAC20 002D7B60  40 82 00 44 */	bne lbl_802DAC64
 /* 802DAC24 002D7B64  80 1D 00 30 */	lwz r0, 0x30(r29)
 /* 802DAC28 002D7B68  28 00 00 00 */	cmplwi r0, 0
-/* 802DAC2C 002D7B6C  40 82 00 38 */	bne func_802DAC64
+/* 802DAC2C 002D7B6C  40 82 00 38 */	bne lbl_802DAC64
 /* 802DAC30 002D7B70  80 6D 8E 48 */	lwz r3, sAramObject__7JKRAram-_SDA_BASE_(r13)
 /* 802DAC34 002D7B74  80 63 00 94 */	lwz r3, 0x94(r3)
 /* 802DAC38 002D7B78  7F 24 CB 78 */	mr r4, r25
@@ -342,77 +289,56 @@ func_802DAC0C:
 /* 802DAC44 002D7B84  90 7D 00 30 */	stw r3, 0x30(r29)
 /* 802DAC48 002D7B88  80 7D 00 30 */	lwz r3, 0x30(r29)
 /* 802DAC4C 002D7B8C  28 03 00 00 */	cmplwi r3, 0
-/* 802DAC50 002D7B90  41 82 00 0C */	beq func_802DAC5C
+/* 802DAC50 002D7B90  41 82 00 0C */	beq lbl_802DAC5C
 /* 802DAC54 002D7B94  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 802DAC58 002D7B98  90 1D 00 2C */	stw r0, 0x2c(r29)
-
-/* 802DAC5C 0008 .text      func_802DAC5C                  func_802DAC5C                  */
-.global func_802DAC5C
-func_802DAC5C:
+lbl_802DAC5C:
 /* 802DAC5C 002D7B9C  80 1D 00 30 */	lwz r0, 0x30(r29)
 /* 802DAC60 002D7BA0  90 1E 00 4C */	stw r0, 0x4c(r30)
-
-/* 802DAC64 0014 .text      func_802DAC64                  func_802DAC64                  */
-.global func_802DAC64
-func_802DAC64:
+lbl_802DAC64:
 /* 802DAC64 002D7BA4  80 7D 00 30 */	lwz r3, 0x30(r29)
 /* 802DAC68 002D7BA8  28 03 00 00 */	cmplwi r3, 0
-/* 802DAC6C 002D7BAC  41 82 00 0C */	beq func_802DAC78
+/* 802DAC6C 002D7BAC  41 82 00 0C */	beq lbl_802DAC78
 /* 802DAC70 002D7BB0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 802DAC74 002D7BB4  90 1D 00 2C */	stw r0, 0x2c(r29)
-
-/* 802DAC78 001C .text      func_802DAC78                  func_802DAC78                  */
-.global func_802DAC78
-func_802DAC78:
+lbl_802DAC78:
 /* 802DAC78 002D7BB8  80 1D 00 2C */	lwz r0, 0x2c(r29)
 /* 802DAC7C 002D7BBC  28 00 00 00 */	cmplwi r0, 0
-/* 802DAC80 002D7BC0  40 82 00 74 */	bne func_802DACF4
+/* 802DAC80 002D7BC0  40 82 00 74 */	bne lbl_802DACF4
 /* 802DAC84 002D7BC4  38 00 00 00 */	li r0, 0
 /* 802DAC88 002D7BC8  90 1E 00 50 */	stw r0, 0x50(r30)
 /* 802DAC8C 002D7BCC  38 60 00 00 */	li r3, 0
-/* 802DAC90 002D7BD0  48 00 01 30 */	b func_802DADC0
-
-/* 802DAC94 0030 .text      func_802DAC94                  func_802DAC94                  */
-.global func_802DAC94
-func_802DAC94:
+/* 802DAC90 002D7BD0  48 00 01 30 */	b lbl_802DADC0
+lbl_802DAC94:
 /* 802DAC94 002D7BD4  80 1D 00 2C */	lwz r0, 0x2c(r29)
 /* 802DAC98 002D7BD8  28 00 00 00 */	cmplwi r0, 0
-/* 802DAC9C 002D7BDC  40 82 00 28 */	bne func_802DACC4
+/* 802DAC9C 002D7BDC  40 82 00 28 */	bne lbl_802DACC4
 /* 802DACA0 002D7BE0  80 1D 00 30 */	lwz r0, 0x30(r29)
 /* 802DACA4 002D7BE4  28 00 00 00 */	cmplwi r0, 0
-/* 802DACA8 002D7BE8  40 82 00 1C */	bne func_802DACC4
+/* 802DACA8 002D7BE8  40 82 00 1C */	bne lbl_802DACC4
 /* 802DACAC 002D7BEC  80 6D 8E 48 */	lwz r3, sAramObject__7JKRAram-_SDA_BASE_(r13)
 /* 802DACB0 002D7BF0  80 63 00 94 */	lwz r3, 0x94(r3)
 /* 802DACB4 002D7BF4  7F 64 DB 78 */	mr r4, r27
 /* 802DACB8 002D7BF8  38 A0 00 00 */	li r5, 0
 /* 802DACBC 002D7BFC  4B FF 83 01 */	bl alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode
 /* 802DACC0 002D7C00  90 7D 00 30 */	stw r3, 0x30(r29)
-
-/* 802DACC4 0014 .text      func_802DACC4                  func_802DACC4                  */
-.global func_802DACC4
-func_802DACC4:
+lbl_802DACC4:
 /* 802DACC4 002D7C04  80 7D 00 30 */	lwz r3, 0x30(r29)
 /* 802DACC8 002D7C08  28 03 00 00 */	cmplwi r3, 0
-/* 802DACCC 002D7C0C  41 82 00 0C */	beq func_802DACD8
+/* 802DACCC 002D7C0C  41 82 00 0C */	beq lbl_802DACD8
 /* 802DACD0 002D7C10  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 802DACD4 002D7C14  90 1D 00 2C */	stw r0, 0x2c(r29)
-
-/* 802DACD8 001C .text      func_802DACD8                  func_802DACD8                  */
-.global func_802DACD8
-func_802DACD8:
+lbl_802DACD8:
 /* 802DACD8 002D7C18  80 1D 00 2C */	lwz r0, 0x2c(r29)
 /* 802DACDC 002D7C1C  28 00 00 00 */	cmplwi r0, 0
-/* 802DACE0 002D7C20  40 82 00 14 */	bne func_802DACF4
+/* 802DACE0 002D7C20  40 82 00 14 */	bne lbl_802DACF4
 /* 802DACE4 002D7C24  38 00 00 00 */	li r0, 0
 /* 802DACE8 002D7C28  90 1E 00 50 */	stw r0, 0x50(r30)
 /* 802DACEC 002D7C2C  38 60 00 00 */	li r3, 0
-/* 802DACF0 002D7C30  48 00 00 D0 */	b func_802DADC0
-
-/* 802DACF4 0028 .text      func_802DACF4                  func_802DACF4                  */
-.global func_802DACF4
-func_802DACF4:
+/* 802DACF0 002D7C30  48 00 00 D0 */	b lbl_802DADC0
+lbl_802DACF4:
 /* 802DACF4 002D7C34  2C 1A 00 00 */	cmpwi r26, 0
-/* 802DACF8 002D7C38  40 82 00 24 */	bne func_802DAD1C
+/* 802DACF8 002D7C38  40 82 00 24 */	bne lbl_802DAD1C
 /* 802DACFC 002D7C3C  80 9D 00 2C */	lwz r4, 0x2c(r29)
 /* 802DAD00 002D7C40  80 DD 00 3C */	lwz r6, 0x3c(r29)
 /* 802DAD04 002D7C44  7F 83 E3 78 */	mr r3, r28
@@ -420,13 +346,10 @@ func_802DACF4:
 /* 802DAD0C 002D7C4C  80 FD 00 44 */	lwz r7, 0x44(r29)
 /* 802DAD10 002D7C50  4B FF 91 C1 */	bl write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl
 /* 802DAD14 002D7C54  90 7D 00 50 */	stw r3, 0x50(r29)
-/* 802DAD18 002D7C58  48 00 00 5C */	b func_802DAD74
-
-/* 802DAD1C 0028 .text      func_802DAD1C                  func_802DAD1C                  */
-.global func_802DAD1C
-func_802DAD1C:
+/* 802DAD18 002D7C58  48 00 00 5C */	b lbl_802DAD74
+lbl_802DAD1C:
 /* 802DAD1C 002D7C5C  2C 1A 00 01 */	cmpwi r26, 1
-/* 802DAD20 002D7C60  40 82 00 24 */	bne func_802DAD44
+/* 802DAD20 002D7C60  40 82 00 24 */	bne lbl_802DAD44
 /* 802DAD24 002D7C64  80 9D 00 2C */	lwz r4, 0x2c(r29)
 /* 802DAD28 002D7C68  80 DD 00 3C */	lwz r6, 0x3c(r29)
 /* 802DAD2C 002D7C6C  7F 83 E3 78 */	mr r3, r28
@@ -434,13 +357,10 @@ func_802DAD1C:
 /* 802DAD34 002D7C74  80 FD 00 44 */	lwz r7, 0x44(r29)
 /* 802DAD38 002D7C78  4B FF 91 99 */	bl write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl
 /* 802DAD3C 002D7C7C  90 7D 00 50 */	stw r3, 0x50(r29)
-/* 802DAD40 002D7C80  48 00 00 34 */	b func_802DAD74
-
-/* 802DAD44 0030 .text      func_802DAD44                  func_802DAD44                  */
-.global func_802DAD44
-func_802DAD44:
+/* 802DAD40 002D7C80  48 00 00 34 */	b lbl_802DAD74
+lbl_802DAD44:
 /* 802DAD44 002D7C84  2C 1A 00 02 */	cmpwi r26, 2
-/* 802DAD48 002D7C88  40 82 00 2C */	bne func_802DAD74
+/* 802DAD48 002D7C88  40 82 00 2C */	bne lbl_802DAD74
 /* 802DAD4C 002D7C8C  38 00 00 00 */	li r0, 0
 /* 802DAD50 002D7C90  90 1D 00 50 */	stw r0, 0x50(r29)
 /* 802DAD54 002D7C94  80 7D 00 28 */	lwz r3, 0x28(r29)
@@ -451,45 +371,30 @@ func_802DAD44:
 /* 802DAD68 002D7CA8  39 00 00 00 */	li r8, 0
 /* 802DAD6C 002D7CAC  81 3D 00 44 */	lwz r9, 0x44(r29)
 /* 802DAD70 002D7CB0  48 00 02 79 */	bl JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl
-
-/* 802DAD74 0020 .text      func_802DAD74                  func_802DAD74                  */
-.global func_802DAD74
-func_802DAD74:
+lbl_802DAD74:
 /* 802DAD74 002D7CB4  81 9D 00 38 */	lwz r12, 0x38(r29)
 /* 802DAD78 002D7CB8  28 0C 00 00 */	cmplwi r12, 0
-/* 802DAD7C 002D7CBC  40 82 00 18 */	bne func_802DAD94
+/* 802DAD7C 002D7CBC  40 82 00 18 */	bne lbl_802DAD94
 /* 802DAD80 002D7CC0  3C 60 80 43 */	lis r3, sDvdAramAsyncList__16JKRDvdAramRipper@ha
 /* 802DAD84 002D7CC4  38 63 43 B4 */	addi r3, r3, sDvdAramAsyncList__16JKRDvdAramRipper@l
 /* 802DAD88 002D7CC8  7F A4 EB 78 */	mr r4, r29
 /* 802DAD8C 002D7CCC  48 00 11 C1 */	bl append__10JSUPtrListFP10JSUPtrLink
-/* 802DAD90 002D7CD0  48 00 00 10 */	b func_802DADA0
-
-/* 802DAD94 000C .text      func_802DAD94                  func_802DAD94                  */
-.global func_802DAD94
-func_802DAD94:
+/* 802DAD90 002D7CD0  48 00 00 10 */	b lbl_802DADA0
+lbl_802DAD94:
 /* 802DAD94 002D7CD4  7F A3 EB 78 */	mr r3, r29
 /* 802DAD98 002D7CD8  7D 89 03 A6 */	mtctr r12
 /* 802DAD9C 002D7CDC  4E 80 04 21 */	bctrl 
-
-/* 802DADA0 001C .text      func_802DADA0                  func_802DADA0                  */
-.global func_802DADA0
-func_802DADA0:
+lbl_802DADA0:
 /* 802DADA0 002D7CE0  38 7E 00 34 */	addi r3, r30, 0x34
 /* 802DADA4 002D7CE4  48 06 43 79 */	bl OSUnlockMutex
 /* 802DADA8 002D7CE8  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 802DADAC 002D7CEC  28 00 00 01 */	cmplwi r0, 1
-/* 802DADB0 002D7CF0  40 82 00 0C */	bne func_802DADBC
+/* 802DADB0 002D7CF0  40 82 00 0C */	bne lbl_802DADBC
 /* 802DADB4 002D7CF4  7F A3 EB 78 */	mr r3, r29
-/* 802DADB8 002D7CF8  48 00 00 08 */	b func_802DADC0
-
-/* 802DADBC 0004 .text      func_802DADBC                  func_802DADBC                  */
-.global func_802DADBC
-func_802DADBC:
+/* 802DADB8 002D7CF8  48 00 00 08 */	b lbl_802DADC0
+lbl_802DADBC:
 /* 802DADBC 002D7CFC  38 60 00 00 */	li r3, 0
-
-/* 802DADC0 0018 .text      func_802DADC0                  func_802DADC0                  */
-.global func_802DADC0
-func_802DADC0:
+lbl_802DADC0:
 /* 802DADC0 002D7D00  39 61 00 70 */	addi r11, r1, 0x70
 /* 802DADC4 002D7D04  48 08 74 55 */	bl _restgpr_25
 /* 802DADC8 002D7D08  80 01 00 74 */	lwz r0, 0x74(r1)
@@ -497,8 +402,9 @@ func_802DADC0:
 /* 802DADD0 002D7D10  38 21 00 70 */	addi r1, r1, 0x70
 /* 802DADD4 002D7D14  4E 80 00 20 */	blr 
 
-/* 802DADD8 0044 .text      __dt__18JSUFileInputStreamFv   __dt__18JSUFileInputStreamFv   */
+/* 802DADD8 0070 .text      __dt__18JSUFileInputStreamFv   __dt__18JSUFileInputStreamFv   */
 .global __dt__18JSUFileInputStreamFv
+__dt__18JSUFileInputStreamFv:
 __dt__18JSUFileInputStreamFv:
 /* 802DADD8 002D7D18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DADDC 002D7D1C  7C 08 02 A6 */	mflr r0
@@ -507,28 +413,22 @@ __dt__18JSUFileInputStreamFv:
 /* 802DADE8 002D7D28  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DADEC 002D7D2C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802DADF0 002D7D30  7C 9F 23 78 */	mr r31, r4
-/* 802DADF4 002D7D34  41 82 00 38 */	beq func_802DAE2C
+/* 802DADF4 002D7D34  41 82 00 38 */	beq lbl_802DAE2C
 /* 802DADF8 002D7D38  3C 80 80 3D */	lis r4, __vt__18JSUFileInputStream@ha
 /* 802DADFC 002D7D3C  38 04 C5 18 */	addi r0, r4, __vt__18JSUFileInputStream@l
 /* 802DAE00 002D7D40  90 1E 00 00 */	stw r0, 0(r30)
-/* 802DAE04 002D7D44  41 82 00 18 */	beq func_802DAE1C
+/* 802DAE04 002D7D44  41 82 00 18 */	beq lbl_802DAE1C
 /* 802DAE08 002D7D48  3C 80 80 3D */	lis r4, __vt__20JSURandomInputStream@ha
 /* 802DAE0C 002D7D4C  38 04 C4 B0 */	addi r0, r4, __vt__20JSURandomInputStream@l
 /* 802DAE10 002D7D50  90 1E 00 00 */	stw r0, 0(r30)
 /* 802DAE14 002D7D54  38 80 00 00 */	li r4, 0
 /* 802DAE18 002D7D58  48 00 14 25 */	bl __dt__14JSUInputStreamFv
-
-/* 802DAE1C 0010 .text      func_802DAE1C                  func_802DAE1C                  */
-.global func_802DAE1C
-func_802DAE1C:
+lbl_802DAE1C:
 /* 802DAE1C 002D7D5C  7F E0 07 35 */	extsh. r0, r31
-/* 802DAE20 002D7D60  40 81 00 0C */	ble func_802DAE2C
+/* 802DAE20 002D7D60  40 81 00 0C */	ble lbl_802DAE2C
 /* 802DAE24 002D7D64  7F C3 F3 78 */	mr r3, r30
 /* 802DAE28 002D7D68  4B FF 3F 15 */	bl __dl__FPv
-
-/* 802DAE2C 001C .text      func_802DAE2C                  func_802DAE2C                  */
-.global func_802DAE2C
-func_802DAE2C:
+lbl_802DAE2C:
 /* 802DAE2C 002D7D6C  7F C3 F3 78 */	mr r3, r30
 /* 802DAE30 002D7D70  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DAE34 002D7D74  83 C1 00 08 */	lwz r30, 8(r1)
@@ -537,8 +437,9 @@ func_802DAE2C:
 /* 802DAE40 002D7D80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DAE44 002D7D84  4E 80 00 20 */	blr 
 
-/* 802DAE48 0068 .text      syncAram__16JKRDvdAramRipperFP12JKRADCommandi syncAram__16JKRDvdAramRipperFP12JKRADCommandi */
+/* 802DAE48 00D4 .text      syncAram__16JKRDvdAramRipperFP12JKRADCommandi syncAram__16JKRDvdAramRipperFP12JKRADCommandi */
 .global syncAram__16JKRDvdAramRipperFP12JKRADCommandi
+syncAram__16JKRDvdAramRipperFP12JKRADCommandi:
 syncAram__16JKRDvdAramRipperFP12JKRADCommandi:
 /* 802DAE48 002D7D88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DAE4C 002D7D8C  7C 08 02 A6 */	mflr r0
@@ -552,57 +453,45 @@ syncAram__16JKRDvdAramRipperFP12JKRADCommandi:
 /* 802DAE6C 002D7DAC  48 06 41 D5 */	bl OSLockMutex
 /* 802DAE70 002D7DB0  80 7D 00 50 */	lwz r3, 0x50(r29)
 /* 802DAE74 002D7DB4  28 03 00 00 */	cmplwi r3, 0
-/* 802DAE78 002D7DB8  41 82 00 38 */	beq func_802DAEB0
+/* 802DAE78 002D7DB8  41 82 00 38 */	beq lbl_802DAEB0
 /* 802DAE7C 002D7DBC  7F C4 F3 78 */	mr r4, r30
 /* 802DAE80 002D7DC0  4B FF 91 21 */	bl sync__13JKRAramStreamFP20JKRAramStreamCommandi
 /* 802DAE84 002D7DC4  30 03 FF FF */	addic r0, r3, -1
 /* 802DAE88 002D7DC8  7C 00 01 10 */	subfe r0, r0, r0
 /* 802DAE8C 002D7DCC  90 1D 00 48 */	stw r0, 0x48(r29)
 /* 802DAE90 002D7DD0  2C 1E 00 00 */	cmpwi r30, 0
-/* 802DAE94 002D7DD4  41 82 00 1C */	beq func_802DAEB0
+/* 802DAE94 002D7DD4  41 82 00 1C */	beq lbl_802DAEB0
 /* 802DAE98 002D7DD8  28 03 00 00 */	cmplwi r3, 0
-/* 802DAE9C 002D7DDC  40 82 00 14 */	bne func_802DAEB0
+/* 802DAE9C 002D7DDC  40 82 00 14 */	bne lbl_802DAEB0
 /* 802DAEA0 002D7DE0  38 7F 00 34 */	addi r3, r31, 0x34
 /* 802DAEA4 002D7DE4  48 06 42 79 */	bl OSUnlockMutex
 /* 802DAEA8 002D7DE8  38 60 00 00 */	li r3, 0
-/* 802DAEAC 002D7DEC  48 00 00 58 */	b func_802DAF04
-
-/* 802DAEB0 0020 .text      func_802DAEB0                  func_802DAEB0                  */
-.global func_802DAEB0
-func_802DAEB0:
+/* 802DAEAC 002D7DEC  48 00 00 58 */	b lbl_802DAF04
+lbl_802DAEB0:
 /* 802DAEB0 002D7DF0  3C 60 80 43 */	lis r3, sDvdAramAsyncList__16JKRDvdAramRipper@ha
 /* 802DAEB4 002D7DF4  38 63 43 B4 */	addi r3, r3, sDvdAramAsyncList__16JKRDvdAramRipper@l
 /* 802DAEB8 002D7DF8  7F A4 EB 78 */	mr r4, r29
 /* 802DAEBC 002D7DFC  48 00 12 A1 */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 802DAEC0 002D7E00  80 7D 00 50 */	lwz r3, 0x50(r29)
 /* 802DAEC4 002D7E04  28 03 00 00 */	cmplwi r3, 0
-/* 802DAEC8 002D7E08  41 82 00 08 */	beq func_802DAED0
+/* 802DAEC8 002D7E08  41 82 00 08 */	beq lbl_802DAED0
 /* 802DAECC 002D7E0C  4B FF 3E 71 */	bl __dl__FPv
-
-/* 802DAED0 0020 .text      func_802DAED0                  func_802DAED0                  */
-.global func_802DAED0
-func_802DAED0:
+lbl_802DAED0:
 /* 802DAED0 002D7E10  80 7F 00 54 */	lwz r3, 0x54(r31)
 /* 802DAED4 002D7E14  28 03 00 00 */	cmplwi r3, 0
-/* 802DAED8 002D7E18  41 82 00 18 */	beq func_802DAEF0
+/* 802DAED8 002D7E18  41 82 00 18 */	beq lbl_802DAEF0
 /* 802DAEDC 002D7E1C  38 80 00 01 */	li r4, 1
 /* 802DAEE0 002D7E20  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DAEE4 002D7E24  81 8C 00 08 */	lwz r12, 8(r12)
 /* 802DAEE8 002D7E28  7D 89 03 A6 */	mtctr r12
 /* 802DAEEC 002D7E2C  4E 80 04 21 */	bctrl 
-
-/* 802DAEF0 0014 .text      func_802DAEF0                  func_802DAEF0                  */
-.global func_802DAEF0
-func_802DAEF0:
+lbl_802DAEF0:
 /* 802DAEF0 002D7E30  38 00 00 00 */	li r0, 0
 /* 802DAEF4 002D7E34  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 802DAEF8 002D7E38  38 7F 00 34 */	addi r3, r31, 0x34
 /* 802DAEFC 002D7E3C  48 06 42 21 */	bl OSUnlockMutex
 /* 802DAF00 002D7E40  38 60 00 01 */	li r3, 1
-
-/* 802DAF04 0018 .text      func_802DAF04                  func_802DAF04                  */
-.global func_802DAF04
-func_802DAF04:
+lbl_802DAF04:
 /* 802DAF04 002D7E44  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DAF08 002D7E48  48 08 73 21 */	bl _restgpr_29
 /* 802DAF0C 002D7E4C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -612,6 +501,7 @@ func_802DAF04:
 
 /* 802DAF1C 0040 .text      __ct__12JKRADCommandFv         __ct__12JKRADCommandFv         */
 .global __ct__12JKRADCommandFv
+__ct__12JKRADCommandFv:
 __ct__12JKRADCommandFv:
 /* 802DAF1C 002D7E5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DAF20 002D7E60  7C 08 02 A6 */	mflr r0
@@ -630,8 +520,9 @@ __ct__12JKRADCommandFv:
 /* 802DAF54 002D7E94  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DAF58 002D7E98  4E 80 00 20 */	blr 
 
-/* 802DAF5C 004C .text      __dt__12JKRADCommandFv         __dt__12JKRADCommandFv         */
+/* 802DAF5C 008C .text      __dt__12JKRADCommandFv         __dt__12JKRADCommandFv         */
 .global __dt__12JKRADCommandFv
+__dt__12JKRADCommandFv:
 __dt__12JKRADCommandFv:
 /* 802DAF5C 002D7E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DAF60 002D7EA0  7C 08 02 A6 */	mflr r0
@@ -640,39 +531,30 @@ __dt__12JKRADCommandFv:
 /* 802DAF6C 002D7EAC  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DAF70 002D7EB0  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802DAF74 002D7EB4  7C 9F 23 78 */	mr r31, r4
-/* 802DAF78 002D7EB8  41 82 00 54 */	beq func_802DAFCC
+/* 802DAF78 002D7EB8  41 82 00 54 */	beq lbl_802DAFCC
 /* 802DAF7C 002D7EBC  88 1E 00 4C */	lbz r0, 0x4c(r30)
 /* 802DAF80 002D7EC0  28 00 00 01 */	cmplwi r0, 1
-/* 802DAF84 002D7EC4  40 82 00 24 */	bne func_802DAFA8
+/* 802DAF84 002D7EC4  40 82 00 24 */	bne lbl_802DAFA8
 /* 802DAF88 002D7EC8  80 7E 00 28 */	lwz r3, 0x28(r30)
 /* 802DAF8C 002D7ECC  28 03 00 00 */	cmplwi r3, 0
-/* 802DAF90 002D7ED0  41 82 00 18 */	beq func_802DAFA8
+/* 802DAF90 002D7ED0  41 82 00 18 */	beq lbl_802DAFA8
 /* 802DAF94 002D7ED4  38 80 00 01 */	li r4, 1
 /* 802DAF98 002D7ED8  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DAF9C 002D7EDC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 802DAFA0 002D7EE0  7D 89 03 A6 */	mtctr r12
 /* 802DAFA4 002D7EE4  4E 80 04 21 */	bctrl 
-
-/* 802DAFA8 0014 .text      func_802DAFA8                  func_802DAFA8                  */
-.global func_802DAFA8
-func_802DAFA8:
+lbl_802DAFA8:
 /* 802DAFA8 002D7EE8  28 1E 00 00 */	cmplwi r30, 0
-/* 802DAFAC 002D7EEC  41 82 00 10 */	beq func_802DAFBC
+/* 802DAFAC 002D7EEC  41 82 00 10 */	beq lbl_802DAFBC
 /* 802DAFB0 002D7EF0  7F C3 F3 78 */	mr r3, r30
 /* 802DAFB4 002D7EF4  38 80 00 00 */	li r4, 0
 /* 802DAFB8 002D7EF8  48 00 0E 5D */	bl __dt__10JSUPtrLinkFv
-
-/* 802DAFBC 0010 .text      func_802DAFBC                  func_802DAFBC                  */
-.global func_802DAFBC
-func_802DAFBC:
+lbl_802DAFBC:
 /* 802DAFBC 002D7EFC  7F E0 07 35 */	extsh. r0, r31
-/* 802DAFC0 002D7F00  40 81 00 0C */	ble func_802DAFCC
+/* 802DAFC0 002D7F00  40 81 00 0C */	ble lbl_802DAFCC
 /* 802DAFC4 002D7F04  7F C3 F3 78 */	mr r3, r30
 /* 802DAFC8 002D7F08  4B FF 3D 75 */	bl __dl__FPv
-
-/* 802DAFCC 001C .text      func_802DAFCC                  func_802DAFCC                  */
-.global func_802DAFCC
-func_802DAFCC:
+lbl_802DAFCC:
 /* 802DAFCC 002D7F0C  7F C3 F3 78 */	mr r3, r30
 /* 802DAFD0 002D7F10  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DAFD4 002D7F14  83 C1 00 08 */	lwz r30, 8(r1)
@@ -681,8 +563,9 @@ func_802DAFCC:
 /* 802DAFE0 002D7F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DAFE4 002D7F24  4E 80 00 20 */	blr 
 
-/* 802DAFE8 0058 .text      JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl */
+/* 802DAFE8 0178 .text      JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl */
 .global JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl
+JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl:
 JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl:
 /* 802DAFE8 002D7F28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DAFEC 002D7F2C  7C 08 02 A6 */	mflr r0
@@ -698,18 +581,15 @@ JKRDecompressFromDVDToAram__FP10JKRDvdFileUlUlUlUlUlPUl:
 /* 802DB014 002D7F54  7D 3F 4B 78 */	mr r31, r9
 /* 802DB018 002D7F58  48 06 26 DD */	bl OSDisableInterrupts
 /* 802DB01C 002D7F5C  7C 78 1B 78 */	mr r24, r3
-/* 802DB020 002D7F60  88 0D 8F 24 */	lbz r0, sym_804514A4-_SDA_BASE_(r13)
+/* 802DB020 002D7F60  88 0D 8F 24 */	lbz r0, data_804514A4-_SDA_BASE_(r13)
 /* 802DB024 002D7F64  28 00 00 00 */	cmplwi r0, 0
-/* 802DB028 002D7F68  40 82 00 18 */	bne func_802DB040
+/* 802DB028 002D7F68  40 82 00 18 */	bne lbl_802DB040
 /* 802DB02C 002D7F6C  3C 60 80 43 */	lis r3, JKRDvdAramRipper__decompMutex@ha
 /* 802DB030 002D7F70  38 63 43 C0 */	addi r3, r3, JKRDvdAramRipper__decompMutex@l
 /* 802DB034 002D7F74  48 06 3F D5 */	bl OSInitMutex
 /* 802DB038 002D7F78  38 00 00 01 */	li r0, 1
-/* 802DB03C 002D7F7C  98 0D 8F 24 */	stb r0, sym_804514A4-_SDA_BASE_(r13)
-
-/* 802DB040 00A4 .text      func_802DB040                  func_802DB040                  */
-.global func_802DB040
-func_802DB040:
+/* 802DB03C 002D7F7C  98 0D 8F 24 */	stb r0, data_804514A4-_SDA_BASE_(r13)
+lbl_802DB040:
 /* 802DB040 002D7F80  7F 03 C3 78 */	mr r3, r24
 /* 802DB044 002D7F84  48 06 26 D9 */	bl OSRestoreInterrupts
 /* 802DB048 002D7F88  3C 60 80 43 */	lis r3, JKRDvdAramRipper__decompMutex@ha
@@ -748,37 +628,25 @@ func_802DB040:
 /* 802DB0CC 002D800C  90 0D 8F 1C */	stw r0, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB0D0 002D8010  93 8D 8F 20 */	stw r28, JKRDvdAramRipper__maxDest-_SDA_BASE_(r13)
 /* 802DB0D4 002D8014  28 1F 00 00 */	cmplwi r31, 0
-/* 802DB0D8 002D8018  41 82 00 0C */	beq func_802DB0E4
+/* 802DB0D8 002D8018  41 82 00 0C */	beq lbl_802DB0E4
 /* 802DB0DC 002D801C  7F E3 FB 78 */	mr r3, r31
-/* 802DB0E0 002D8020  48 00 00 08 */	b func_802DB0E8
-
-/* 802DB0E4 0004 .text      func_802DB0E4                  func_802DB0E4                  */
-.global func_802DB0E4
-func_802DB0E4:
+/* 802DB0E0 002D8020  48 00 00 08 */	b lbl_802DB0E8
+lbl_802DB0E4:
 /* 802DB0E4 002D8024  38 6D 8F 2C */	addi r3, r13, JKRDvdAramRipper__tsArea-_SDA_BASE_
-
-/* 802DB0E8 0028 .text      func_802DB0E8                  func_802DB0E8                  */
-.global func_802DB0E8
-func_802DB0E8:
+lbl_802DB0E8:
 /* 802DB0E8 002D8028  90 6D 8F 28 */	stw r3, JKRDvdAramRipper__tsPtr-_SDA_BASE_(r13)
 /* 802DB0EC 002D802C  38 00 00 00 */	li r0, 0
 /* 802DB0F0 002D8030  90 03 00 00 */	stw r0, 0(r3)
 /* 802DB0F4 002D8034  48 00 02 F5 */	bl JKRDvdAramRipper__firstSrcData__Fv
 /* 802DB0F8 002D8038  28 03 00 00 */	cmplwi r3, 0
-/* 802DB0FC 002D803C  41 82 00 14 */	beq func_802DB110
+/* 802DB0FC 002D803C  41 82 00 14 */	beq lbl_802DB110
 /* 802DB100 002D8040  7F 44 D3 78 */	mr r4, r26
 /* 802DB104 002D8044  48 00 00 5D */	bl decompSZS_subroutine__FPUcUl
 /* 802DB108 002D8048  7C 79 1B 78 */	mr r25, r3
-/* 802DB10C 002D804C  48 00 00 08 */	b func_802DB114
-
-/* 802DB110 0004 .text      func_802DB110                  func_802DB110                  */
-.global func_802DB110
-func_802DB110:
+/* 802DB10C 002D804C  48 00 00 08 */	b lbl_802DB114
+lbl_802DB110:
 /* 802DB110 002D8050  3B 20 FF FF */	li r25, -1
-
-/* 802DB114 004C .text      func_802DB114                  func_802DB114                  */
-.global func_802DB114
-func_802DB114:
+lbl_802DB114:
 /* 802DB114 002D8054  80 6D 8E E8 */	lwz r3, JKRDvdAramRipper__szpBuf-_SDA_BASE_(r13)
 /* 802DB118 002D8058  38 80 00 00 */	li r4, 0
 /* 802DB11C 002D805C  4B FF 33 E5 */	bl free__7JKRHeapFPvP7JKRHeap
@@ -799,8 +667,9 @@ func_802DB114:
 /* 802DB158 002D8098  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DB15C 002D809C  4E 80 00 20 */	blr 
 
-/* 802DB160 0058 .text      decompSZS_subroutine__FPUcUl   decompSZS_subroutine__FPUcUl   */
+/* 802DB160 0288 .text      decompSZS_subroutine__FPUcUl   decompSZS_subroutine__FPUcUl   */
 .global decompSZS_subroutine__FPUcUl
+decompSZS_subroutine__FPUcUl:
 decompSZS_subroutine__FPUcUl:
 /* 802DB160 002D80A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DB164 002D80A4  7C 08 02 A6 */	mflr r0
@@ -814,26 +683,20 @@ decompSZS_subroutine__FPUcUl:
 /* 802DB184 002D80C4  7F 19 C3 78 */	mr r25, r24
 /* 802DB188 002D80C8  88 03 00 00 */	lbz r0, 0(r3)
 /* 802DB18C 002D80CC  2C 00 00 59 */	cmpwi r0, 0x59
-/* 802DB190 002D80D0  40 82 00 28 */	bne func_802DB1B8
+/* 802DB190 002D80D0  40 82 00 28 */	bne lbl_802DB1B8
 /* 802DB194 002D80D4  88 03 00 01 */	lbz r0, 1(r3)
 /* 802DB198 002D80D8  2C 00 00 61 */	cmpwi r0, 0x61
-/* 802DB19C 002D80DC  40 82 00 1C */	bne func_802DB1B8
+/* 802DB19C 002D80DC  40 82 00 1C */	bne lbl_802DB1B8
 /* 802DB1A0 002D80E0  88 03 00 02 */	lbz r0, 2(r3)
 /* 802DB1A4 002D80E4  2C 00 00 7A */	cmpwi r0, 0x7a
-/* 802DB1A8 002D80E8  40 82 00 10 */	bne func_802DB1B8
+/* 802DB1A8 002D80E8  40 82 00 10 */	bne lbl_802DB1B8
 /* 802DB1AC 002D80EC  88 03 00 03 */	lbz r0, 3(r3)
 /* 802DB1B0 002D80F0  2C 00 00 30 */	cmpwi r0, 0x30
-/* 802DB1B4 002D80F4  41 82 00 0C */	beq func_802DB1C0
-
-/* 802DB1B8 0008 .text      func_802DB1B8                  func_802DB1B8                  */
-.global func_802DB1B8
-func_802DB1B8:
+/* 802DB1B4 002D80F4  41 82 00 0C */	beq lbl_802DB1C0
+lbl_802DB1B8:
 /* 802DB1B8 002D80F8  38 60 FF FF */	li r3, -1
-/* 802DB1BC 002D80FC  48 00 02 14 */	b func_802DB3D0
-
-/* 802DB1C0 0024 .text      func_802DB1C0                  func_802DB1C0                  */
-.global func_802DB1C0
-func_802DB1C0:
+/* 802DB1BC 002D80FC  48 00 02 14 */	b lbl_802DB3D0
+lbl_802DB1C0:
 /* 802DB1C0 002D8100  80 8D 8F 18 */	lwz r4, JKRDvdAramRipper__fileOffset-_SDA_BASE_(r13)
 /* 802DB1C4 002D8104  80 03 00 04 */	lwz r0, 4(r3)
 /* 802DB1C8 002D8108  7C 04 00 50 */	subf r0, r4, r0
@@ -841,45 +704,33 @@ func_802DB1C0:
 /* 802DB1D0 002D8110  80 0D 8F 20 */	lwz r0, JKRDvdAramRipper__maxDest-_SDA_BASE_(r13)
 /* 802DB1D4 002D8114  7C 18 02 14 */	add r0, r24, r0
 /* 802DB1D8 002D8118  7C 1F 00 40 */	cmplw r31, r0
-/* 802DB1DC 002D811C  40 81 00 08 */	ble func_802DB1E4
+/* 802DB1DC 002D811C  40 81 00 08 */	ble lbl_802DB1E4
 /* 802DB1E0 002D8120  7C 1F 03 78 */	mr r31, r0
-
-/* 802DB1E4 0004 .text      func_802DB1E4                  func_802DB1E4                  */
-.global func_802DB1E4
-func_802DB1E4:
+lbl_802DB1E4:
 /* 802DB1E4 002D8124  3A E3 00 10 */	addi r23, r3, 0x10
-
-/* 802DB1E8 002C .text      func_802DB1E8                  func_802DB1E8                  */
-.global func_802DB1E8
-func_802DB1E8:
+lbl_802DB1E8:
 /* 802DB1E8 002D8128  2C 1D 00 00 */	cmpwi r29, 0
-/* 802DB1EC 002D812C  40 82 00 34 */	bne func_802DB220
+/* 802DB1EC 002D812C  40 82 00 34 */	bne lbl_802DB220
 /* 802DB1F0 002D8130  80 0D 8F 10 */	lwz r0, JKRDvdAramRipper__srcLimit-_SDA_BASE_(r13)
 /* 802DB1F4 002D8134  7C 17 00 40 */	cmplw r23, r0
-/* 802DB1F8 002D8138  40 81 00 1C */	ble func_802DB214
+/* 802DB1F8 002D8138  40 81 00 1C */	ble lbl_802DB214
 /* 802DB1FC 002D813C  80 0D 8F 0C */	lwz r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
 /* 802DB200 002D8140  28 00 00 00 */	cmplwi r0, 0
-/* 802DB204 002D8144  41 82 00 10 */	beq func_802DB214
+/* 802DB204 002D8144  41 82 00 10 */	beq lbl_802DB214
 /* 802DB208 002D8148  7E E3 BB 78 */	mr r3, r23
 /* 802DB20C 002D814C  48 00 02 91 */	bl JKRDvdAramRipper__nextSrcData__FPUc
 /* 802DB210 002D8150  7C 77 1B 78 */	mr r23, r3
-
-/* 802DB214 000C .text      func_802DB214                  func_802DB214                  */
-.global func_802DB214
-func_802DB214:
+lbl_802DB214:
 /* 802DB214 002D8154  8B 97 00 00 */	lbz r28, 0(r23)
 /* 802DB218 002D8158  3B A0 00 08 */	li r29, 8
 /* 802DB21C 002D815C  3A F7 00 01 */	addi r23, r23, 1
-
-/* 802DB220 0050 .text      func_802DB220                  func_802DB220                  */
-.global func_802DB220
-func_802DB220:
+lbl_802DB220:
 /* 802DB220 002D8160  57 80 06 31 */	rlwinm. r0, r28, 0, 0x18, 0x18
-/* 802DB224 002D8164  41 82 00 94 */	beq func_802DB2B8
+/* 802DB224 002D8164  41 82 00 94 */	beq lbl_802DB2B8
 /* 802DB228 002D8168  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB22C 002D816C  80 0D 8F 18 */	lwz r0, JKRDvdAramRipper__fileOffset-_SDA_BASE_(r13)
 /* 802DB230 002D8170  7C 03 00 40 */	cmplw r3, r0
-/* 802DB234 002D8174  41 80 00 44 */	blt func_802DB278
+/* 802DB234 002D8174  41 80 00 44 */	blt lbl_802DB278
 /* 802DB238 002D8178  88 97 00 00 */	lbz r4, 0(r23)
 /* 802DB23C 002D817C  80 6D 8F 04 */	lwz r3, dmaCurrent-_SDA_BASE_(r13)
 /* 802DB240 002D8180  38 03 00 01 */	addi r0, r3, 1
@@ -890,20 +741,14 @@ func_802DB220:
 /* 802DB254 002D8194  7C 03 00 40 */	cmplw r3, r0
 /* 802DB258 002D8198  3B 18 00 01 */	addi r24, r24, 1
 /* 802DB25C 002D819C  3B 5A 00 01 */	addi r26, r26, 1
-/* 802DB260 002D81A0  40 82 00 10 */	bne func_802DB270
+/* 802DB260 002D81A0  40 82 00 10 */	bne lbl_802DB270
 /* 802DB264 002D81A4  7F 23 CB 78 */	mr r3, r25
 /* 802DB268 002D81A8  48 00 03 19 */	bl dmaBufferFlush__FUl
 /* 802DB26C 002D81AC  7F 39 1A 14 */	add r25, r25, r3
-
-/* 802DB270 0008 .text      func_802DB270                  func_802DB270                  */
-.global func_802DB270
-func_802DB270:
+lbl_802DB270:
 /* 802DB270 002D81B0  7C 18 F8 40 */	cmplw r24, r31
-/* 802DB274 002D81B4  41 82 01 48 */	beq func_802DB3BC
-
-/* 802DB278 002C .text      func_802DB278                  func_802DB278                  */
-.global func_802DB278
-func_802DB278:
+/* 802DB274 002D81B4  41 82 01 48 */	beq lbl_802DB3BC
+lbl_802DB278:
 /* 802DB278 002D81B8  88 97 00 00 */	lbz r4, 0(r23)
 /* 802DB27C 002D81BC  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
 /* 802DB280 002D81C0  38 03 00 01 */	addi r0, r3, 1
@@ -912,22 +757,16 @@ func_802DB278:
 /* 802DB28C 002D81CC  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
 /* 802DB290 002D81D0  80 0D 8E F4 */	lwz r0, JKRDvdAramRipper__refEnd-_SDA_BASE_(r13)
 /* 802DB294 002D81D4  7C 03 00 40 */	cmplw r3, r0
-/* 802DB298 002D81D8  40 82 00 0C */	bne func_802DB2A4
+/* 802DB298 002D81D8  40 82 00 0C */	bne lbl_802DB2A4
 /* 802DB29C 002D81DC  80 0D 8E F0 */	lwz r0, JKRDvdAramRipper__refBuf-_SDA_BASE_(r13)
 /* 802DB2A0 002D81E0  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
-
-/* 802DB2A4 0014 .text      func_802DB2A4                  func_802DB2A4                  */
-.global func_802DB2A4
-func_802DB2A4:
+lbl_802DB2A4:
 /* 802DB2A4 002D81E4  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB2A8 002D81E8  38 03 00 01 */	addi r0, r3, 1
 /* 802DB2AC 002D81EC  90 0D 8F 1C */	stw r0, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB2B0 002D81F0  3A F7 00 01 */	addi r23, r23, 1
-/* 802DB2B4 002D81F4  48 00 00 F8 */	b func_802DB3AC
-
-/* 802DB2B8 0038 .text      func_802DB2B8                  func_802DB2B8                  */
-.global func_802DB2B8
-func_802DB2B8:
+/* 802DB2B4 002D81F4  48 00 00 F8 */	b lbl_802DB3AC
+lbl_802DB2B8:
 /* 802DB2B8 002D81F8  88 77 00 00 */	lbz r3, 0(r23)
 /* 802DB2BC 002D81FC  88 97 00 01 */	lbz r4, 1(r23)
 /* 802DB2C0 002D8200  50 64 45 2E */	rlwimi r4, r3, 8, 0x14, 0x17
@@ -938,33 +777,24 @@ func_802DB2B8:
 /* 802DB2D4 002D8214  80 6D 8E F0 */	lwz r3, JKRDvdAramRipper__refBuf-_SDA_BASE_(r13)
 /* 802DB2D8 002D8218  7C 1E 18 40 */	cmplw r30, r3
 /* 802DB2DC 002D821C  3A F7 00 02 */	addi r23, r23, 2
-/* 802DB2E0 002D8220  40 80 00 10 */	bge func_802DB2F0
+/* 802DB2E0 002D8220  40 80 00 10 */	bge lbl_802DB2F0
 /* 802DB2E4 002D8224  80 0D 8E F4 */	lwz r0, JKRDvdAramRipper__refEnd-_SDA_BASE_(r13)
 /* 802DB2E8 002D8228  7C 03 00 50 */	subf r0, r3, r0
 /* 802DB2EC 002D822C  7F DE 02 14 */	add r30, r30, r0
-
-/* 802DB2F0 0018 .text      func_802DB2F0                  func_802DB2F0                  */
-.global func_802DB2F0
-func_802DB2F0:
+lbl_802DB2F0:
 /* 802DB2F0 002D8230  2C 1B 00 00 */	cmpwi r27, 0
-/* 802DB2F4 002D8234  40 82 00 14 */	bne func_802DB308
+/* 802DB2F4 002D8234  40 82 00 14 */	bne lbl_802DB308
 /* 802DB2F8 002D8238  88 77 00 00 */	lbz r3, 0(r23)
 /* 802DB2FC 002D823C  3B 63 00 12 */	addi r27, r3, 0x12
 /* 802DB300 002D8240  3A F7 00 01 */	addi r23, r23, 1
-/* 802DB304 002D8244  48 00 00 08 */	b func_802DB30C
-
-/* 802DB308 0004 .text      func_802DB308                  func_802DB308                  */
-.global func_802DB308
-func_802DB308:
+/* 802DB304 002D8244  48 00 00 08 */	b lbl_802DB30C
+lbl_802DB308:
 /* 802DB308 002D8248  3B 7B 00 02 */	addi r27, r27, 2
-
-/* 802DB30C 0048 .text      func_802DB30C                  func_802DB30C                  */
-.global func_802DB30C
-func_802DB30C:
+lbl_802DB30C:
 /* 802DB30C 002D824C  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB310 002D8250  80 0D 8F 18 */	lwz r0, JKRDvdAramRipper__fileOffset-_SDA_BASE_(r13)
 /* 802DB314 002D8254  7C 03 00 40 */	cmplw r3, r0
-/* 802DB318 002D8258  41 80 00 44 */	blt func_802DB35C
+/* 802DB318 002D8258  41 80 00 44 */	blt lbl_802DB35C
 /* 802DB31C 002D825C  88 9E 00 00 */	lbz r4, 0(r30)
 /* 802DB320 002D8260  80 6D 8F 04 */	lwz r3, dmaCurrent-_SDA_BASE_(r13)
 /* 802DB324 002D8264  38 03 00 01 */	addi r0, r3, 1
@@ -975,20 +805,14 @@ func_802DB30C:
 /* 802DB338 002D8278  7C 03 00 40 */	cmplw r3, r0
 /* 802DB33C 002D827C  3B 18 00 01 */	addi r24, r24, 1
 /* 802DB340 002D8280  3B 5A 00 01 */	addi r26, r26, 1
-/* 802DB344 002D8284  40 82 00 10 */	bne func_802DB354
+/* 802DB344 002D8284  40 82 00 10 */	bne lbl_802DB354
 /* 802DB348 002D8288  7F 23 CB 78 */	mr r3, r25
 /* 802DB34C 002D828C  48 00 02 35 */	bl dmaBufferFlush__FUl
 /* 802DB350 002D8290  7F 39 1A 14 */	add r25, r25, r3
-
-/* 802DB354 0008 .text      func_802DB354                  func_802DB354                  */
-.global func_802DB354
-func_802DB354:
+lbl_802DB354:
 /* 802DB354 002D8294  7C 18 F8 40 */	cmplw r24, r31
-/* 802DB358 002D8298  41 82 00 54 */	beq func_802DB3AC
-
-/* 802DB35C 002C .text      func_802DB35C                  func_802DB35C                  */
-.global func_802DB35C
-func_802DB35C:
+/* 802DB358 002D8298  41 82 00 54 */	beq lbl_802DB3AC
+lbl_802DB35C:
 /* 802DB35C 002D829C  88 9E 00 00 */	lbz r4, 0(r30)
 /* 802DB360 002D82A0  80 6D 8E F8 */	lwz r3, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
 /* 802DB364 002D82A4  38 03 00 01 */	addi r0, r3, 1
@@ -997,47 +821,32 @@ func_802DB35C:
 /* 802DB370 002D82B0  80 0D 8E F8 */	lwz r0, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
 /* 802DB374 002D82B4  80 6D 8E F4 */	lwz r3, JKRDvdAramRipper__refEnd-_SDA_BASE_(r13)
 /* 802DB378 002D82B8  7C 00 18 40 */	cmplw r0, r3
-/* 802DB37C 002D82BC  40 82 00 0C */	bne func_802DB388
+/* 802DB37C 002D82BC  40 82 00 0C */	bne lbl_802DB388
 /* 802DB380 002D82C0  80 0D 8E F0 */	lwz r0, JKRDvdAramRipper__refBuf-_SDA_BASE_(r13)
 /* 802DB384 002D82C4  90 0D 8E F8 */	stw r0, JKRDvdAramRipper__refCurrent-_SDA_BASE_(r13)
-
-/* 802DB388 0010 .text      func_802DB388                  func_802DB388                  */
-.global func_802DB388
-func_802DB388:
+lbl_802DB388:
 /* 802DB388 002D82C8  3B DE 00 01 */	addi r30, r30, 1
 /* 802DB38C 002D82CC  7C 1E 18 40 */	cmplw r30, r3
-/* 802DB390 002D82D0  40 82 00 08 */	bne func_802DB398
+/* 802DB390 002D82D0  40 82 00 08 */	bne lbl_802DB398
 /* 802DB394 002D82D4  83 CD 8E F0 */	lwz r30, JKRDvdAramRipper__refBuf-_SDA_BASE_(r13)
-
-/* 802DB398 0014 .text      func_802DB398                  func_802DB398                  */
-.global func_802DB398
-func_802DB398:
+lbl_802DB398:
 /* 802DB398 002D82D8  80 6D 8F 1C */	lwz r3, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB39C 002D82DC  38 03 00 01 */	addi r0, r3, 1
 /* 802DB3A0 002D82E0  90 0D 8F 1C */	stw r0, JKRDvdAramRipper__readCount-_SDA_BASE_(r13)
 /* 802DB3A4 002D82E4  37 7B FF FF */	addic. r27, r27, -1
-/* 802DB3A8 002D82E8  40 82 FF 64 */	bne func_802DB30C
-
-/* 802DB3AC 0010 .text      func_802DB3AC                  func_802DB3AC                  */
-.global func_802DB3AC
-func_802DB3AC:
+/* 802DB3A8 002D82E8  40 82 FF 64 */	bne lbl_802DB30C
+lbl_802DB3AC:
 /* 802DB3AC 002D82EC  57 9C 08 3C */	slwi r28, r28, 1
 /* 802DB3B0 002D82F0  7C 18 F8 40 */	cmplw r24, r31
 /* 802DB3B4 002D82F4  3B BD FF FF */	addi r29, r29, -1
-/* 802DB3B8 002D82F8  41 80 FE 30 */	blt func_802DB1E8
-
-/* 802DB3BC 0014 .text      func_802DB3BC                  func_802DB3BC                  */
-.global func_802DB3BC
-func_802DB3BC:
+/* 802DB3B8 002D82F8  41 80 FE 30 */	blt lbl_802DB1E8
+lbl_802DB3BC:
 /* 802DB3BC 002D82FC  7F 23 CB 78 */	mr r3, r25
 /* 802DB3C0 002D8300  48 00 01 C1 */	bl dmaBufferFlush__FUl
 /* 802DB3C4 002D8304  80 6D 8F 28 */	lwz r3, JKRDvdAramRipper__tsPtr-_SDA_BASE_(r13)
 /* 802DB3C8 002D8308  93 43 00 00 */	stw r26, 0(r3)
 /* 802DB3CC 002D830C  38 60 00 00 */	li r3, 0
-
-/* 802DB3D0 0018 .text      func_802DB3D0                  func_802DB3D0                  */
-.global func_802DB3D0
-func_802DB3D0:
+lbl_802DB3D0:
 /* 802DB3D0 002D8310  39 61 00 30 */	addi r11, r1, 0x30
 /* 802DB3D4 002D8314  48 08 6E 3D */	bl _restgpr_23
 /* 802DB3D8 002D8318  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -1045,8 +854,9 @@ func_802DB3D0:
 /* 802DB3E0 002D8320  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DB3E4 002D8324  4E 80 00 20 */	blr 
 
-/* 802DB3E8 0040 .text      JKRDvdAramRipper__firstSrcData__Fv firstSrcData__Fv               */
+/* 802DB3E8 00B4 .text      firstSrcData__Fv               JKRDvdAramRipper__firstSrcData__Fv */
 .global JKRDvdAramRipper__firstSrcData__Fv
+JKRDvdAramRipper__firstSrcData__Fv:
 JKRDvdAramRipper__firstSrcData__Fv:
 /* 802DB3E8 002D8328  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB3EC 002D832C  7C 08 02 A6 */	mflr r0
@@ -1062,12 +872,9 @@ JKRDvdAramRipper__firstSrcData__Fv:
 /* 802DB414 002D8354  80 0D 8F 0C */	lwz r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
 /* 802DB418 002D8358  7C 00 18 40 */	cmplw r0, r3
 /* 802DB41C 002D835C  7C 7F 1B 78 */	mr r31, r3
-/* 802DB420 002D8360  40 80 00 08 */	bge func_802DB428
+/* 802DB420 002D8360  40 80 00 08 */	bge lbl_802DB428
 /* 802DB424 002D8364  7C 1F 03 78 */	mr r31, r0
-
-/* 802DB428 0038 .text      func_802DB428                  func_802DB428                  */
-.global func_802DB428
-func_802DB428:
+lbl_802DB428:
 /* 802DB428 002D8368  80 6D 8F 14 */	lwz r3, JKRDvdAramRipper__srcFile-_SDA_BASE_(r13)
 /* 802DB42C 002D836C  38 63 00 5C */	addi r3, r3, 0x5c
 /* 802DB430 002D8370  7F C4 F3 78 */	mr r4, r30
@@ -1076,22 +883,16 @@ func_802DB428:
 /* 802DB43C 002D837C  38 E0 00 02 */	li r7, 2
 /* 802DB440 002D8380  48 06 DA 05 */	bl DVDReadPrio
 /* 802DB444 002D8384  2C 03 00 00 */	cmpwi r3, 0
-/* 802DB448 002D8388  40 80 00 20 */	bge func_802DB468
-/* 802DB44C 002D838C  88 0D 83 50 */	lbz r0, sym_804508D0-_SDA_BASE_(r13)
+/* 802DB448 002D8388  40 80 00 20 */	bge lbl_802DB468
+/* 802DB44C 002D838C  88 0D 83 50 */	lbz r0, data_804508D0-_SDA_BASE_(r13)
 /* 802DB450 002D8390  28 00 00 00 */	cmplwi r0, 0
-/* 802DB454 002D8394  40 82 00 0C */	bne func_802DB460
+/* 802DB454 002D8394  40 82 00 0C */	bne lbl_802DB460
 /* 802DB458 002D8398  38 60 00 00 */	li r3, 0
-/* 802DB45C 002D839C  48 00 00 28 */	b func_802DB484
-
-/* 802DB460 0008 .text      func_802DB460                  func_802DB460                  */
-.global func_802DB460
-func_802DB460:
+/* 802DB45C 002D839C  48 00 00 28 */	b lbl_802DB484
+lbl_802DB460:
 /* 802DB460 002D83A0  48 07 15 65 */	bl VIWaitForRetrace
-/* 802DB464 002D83A4  4B FF FF C4 */	b func_802DB428
-
-/* 802DB468 001C .text      func_802DB468                  func_802DB468                  */
-.global func_802DB468
-func_802DB468:
+/* 802DB464 002D83A4  4B FF FF C4 */	b lbl_802DB428
+lbl_802DB468:
 /* 802DB468 002D83A8  80 0D 8F 08 */	lwz r0, JKRDvdAramRipper__srcOffset-_SDA_BASE_(r13)
 /* 802DB46C 002D83AC  7C 00 FA 14 */	add r0, r0, r31
 /* 802DB470 002D83B0  90 0D 8F 08 */	stw r0, JKRDvdAramRipper__srcOffset-_SDA_BASE_(r13)
@@ -1099,10 +900,7 @@ func_802DB468:
 /* 802DB478 002D83B8  7C 1F 00 50 */	subf r0, r31, r0
 /* 802DB47C 002D83BC  90 0D 8F 0C */	stw r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
 /* 802DB480 002D83C0  7F C3 F3 78 */	mr r3, r30
-
-/* 802DB484 0018 .text      func_802DB484                  func_802DB484                  */
-.global func_802DB484
-func_802DB484:
+lbl_802DB484:
 /* 802DB484 002D83C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DB488 002D83C8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802DB48C 002D83CC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1110,8 +908,9 @@ func_802DB484:
 /* 802DB494 002D83D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB498 002D83D8  4E 80 00 20 */	blr 
 
-/* 802DB49C 0038 .text      JKRDvdAramRipper__nextSrcData__FPUc nextSrcData__FPUc              */
+/* 802DB49C 00E4 .text      nextSrcData__FPUc              JKRDvdAramRipper__nextSrcData__FPUc */
 .global JKRDvdAramRipper__nextSrcData__FPUc
+JKRDvdAramRipper__nextSrcData__FPUc:
 JKRDvdAramRipper__nextSrcData__FPUc:
 /* 802DB49C 002D83DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DB4A0 002D83E0  7C 08 02 A6 */	mflr r0
@@ -1122,20 +921,14 @@ JKRDvdAramRipper__nextSrcData__FPUc:
 /* 802DB4B4 002D83F4  80 0D 8E EC */	lwz r0, JKRDvdAramRipper__szpEnd-_SDA_BASE_(r13)
 /* 802DB4B8 002D83F8  7F C4 00 50 */	subf r30, r4, r0
 /* 802DB4BC 002D83FC  57 C5 06 FF */	clrlwi. r5, r30, 0x1b
-/* 802DB4C0 002D8400  41 82 00 14 */	beq func_802DB4D4
+/* 802DB4C0 002D8400  41 82 00 14 */	beq lbl_802DB4D4
 /* 802DB4C4 002D8404  80 6D 8E E8 */	lwz r3, JKRDvdAramRipper__szpBuf-_SDA_BASE_(r13)
 /* 802DB4C8 002D8408  38 03 00 20 */	addi r0, r3, 0x20
 /* 802DB4CC 002D840C  7F A5 00 50 */	subf r29, r5, r0
-/* 802DB4D0 002D8410  48 00 00 08 */	b func_802DB4D8
-
-/* 802DB4D4 0004 .text      func_802DB4D4                  func_802DB4D4                  */
-.global func_802DB4D4
-func_802DB4D4:
+/* 802DB4D0 002D8410  48 00 00 08 */	b lbl_802DB4D8
+lbl_802DB4D4:
 /* 802DB4D4 002D8414  83 AD 8E E8 */	lwz r29, JKRDvdAramRipper__szpBuf-_SDA_BASE_(r13)
-
-/* 802DB4D8 0028 .text      func_802DB4D8                  func_802DB4D8                  */
-.global func_802DB4D8
-func_802DB4D8:
+lbl_802DB4D8:
 /* 802DB4D8 002D8418  7F A3 EB 78 */	mr r3, r29
 /* 802DB4DC 002D841C  7F C5 F3 78 */	mr r5, r30
 /* 802DB4E0 002D8420  4B D2 80 61 */	bl memcpy
@@ -1144,12 +937,9 @@ func_802DB4D8:
 /* 802DB4EC 002D842C  7F FE 00 50 */	subf r31, r30, r0
 /* 802DB4F0 002D8430  80 0D 8F 0C */	lwz r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
 /* 802DB4F4 002D8434  7C 1F 00 40 */	cmplw r31, r0
-/* 802DB4F8 002D8438  40 81 00 08 */	ble func_802DB500
+/* 802DB4F8 002D8438  40 81 00 08 */	ble lbl_802DB500
 /* 802DB4FC 002D843C  7C 1F 03 78 */	mr r31, r0
-
-/* 802DB500 0038 .text      func_802DB500                  func_802DB500                  */
-.global func_802DB500
-func_802DB500:
+lbl_802DB500:
 /* 802DB500 002D8440  80 6D 8F 14 */	lwz r3, JKRDvdAramRipper__srcFile-_SDA_BASE_(r13)
 /* 802DB504 002D8444  38 63 00 5C */	addi r3, r3, 0x5c
 /* 802DB508 002D8448  7F C4 F3 78 */	mr r4, r30
@@ -1158,40 +948,28 @@ func_802DB500:
 /* 802DB514 002D8454  38 E0 00 02 */	li r7, 2
 /* 802DB518 002D8458  48 06 D9 2D */	bl DVDReadPrio
 /* 802DB51C 002D845C  2C 03 00 00 */	cmpwi r3, 0
-/* 802DB520 002D8460  40 80 00 20 */	bge func_802DB540
-/* 802DB524 002D8464  88 0D 83 50 */	lbz r0, sym_804508D0-_SDA_BASE_(r13)
+/* 802DB520 002D8460  40 80 00 20 */	bge lbl_802DB540
+/* 802DB524 002D8464  88 0D 83 50 */	lbz r0, data_804508D0-_SDA_BASE_(r13)
 /* 802DB528 002D8468  28 00 00 00 */	cmplwi r0, 0
-/* 802DB52C 002D846C  40 82 00 0C */	bne func_802DB538
+/* 802DB52C 002D846C  40 82 00 0C */	bne lbl_802DB538
 /* 802DB530 002D8470  38 60 00 00 */	li r3, 0
-/* 802DB534 002D8474  48 00 00 34 */	b func_802DB568
-
-/* 802DB538 0008 .text      func_802DB538                  func_802DB538                  */
-.global func_802DB538
-func_802DB538:
+/* 802DB534 002D8474  48 00 00 34 */	b lbl_802DB568
+lbl_802DB538:
 /* 802DB538 002D8478  48 07 14 8D */	bl VIWaitForRetrace
-/* 802DB53C 002D847C  4B FF FF C4 */	b func_802DB500
-
-/* 802DB540 0024 .text      func_802DB540                  func_802DB540                  */
-.global func_802DB540
-func_802DB540:
+/* 802DB53C 002D847C  4B FF FF C4 */	b lbl_802DB500
+lbl_802DB540:
 /* 802DB540 002D8480  80 0D 8F 08 */	lwz r0, JKRDvdAramRipper__srcOffset-_SDA_BASE_(r13)
 /* 802DB544 002D8484  7C 00 FA 14 */	add r0, r0, r31
 /* 802DB548 002D8488  90 0D 8F 08 */	stw r0, JKRDvdAramRipper__srcOffset-_SDA_BASE_(r13)
 /* 802DB54C 002D848C  80 0D 8F 0C */	lwz r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
 /* 802DB550 002D8490  7C 1F 00 51 */	subf. r0, r31, r0
 /* 802DB554 002D8494  90 0D 8F 0C */	stw r0, JKRDvdAramRipper__transLeft-_SDA_BASE_(r13)
-/* 802DB558 002D8498  40 82 00 0C */	bne func_802DB564
+/* 802DB558 002D8498  40 82 00 0C */	bne lbl_802DB564
 /* 802DB55C 002D849C  7C 1E FA 14 */	add r0, r30, r31
 /* 802DB560 002D84A0  90 0D 8F 10 */	stw r0, JKRDvdAramRipper__srcLimit-_SDA_BASE_(r13)
-
-/* 802DB564 0004 .text      func_802DB564                  func_802DB564                  */
-.global func_802DB564
-func_802DB564:
+lbl_802DB564:
 /* 802DB564 002D84A4  7F A3 EB 78 */	mr r3, r29
-
-/* 802DB568 0018 .text      func_802DB568                  func_802DB568                  */
-.global func_802DB568
-func_802DB568:
+lbl_802DB568:
 /* 802DB568 002D84A8  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DB56C 002D84AC  48 08 6C BD */	bl _restgpr_29
 /* 802DB570 002D84B0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1199,8 +977,9 @@ func_802DB568:
 /* 802DB578 002D84B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DB57C 002D84BC  4E 80 00 20 */	blr 
 
-/* 802DB580 002C .text      dmaBufferFlush__FUl            dmaBufferFlush__FUl            */
+/* 802DB580 0068 .text      dmaBufferFlush__FUl            dmaBufferFlush__FUl            */
 .global dmaBufferFlush__FUl
+dmaBufferFlush__FUl:
 dmaBufferFlush__FUl:
 /* 802DB580 002D84C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB584 002D84C4  7C 08 02 A6 */	mflr r0
@@ -1210,13 +989,10 @@ dmaBufferFlush__FUl:
 /* 802DB594 002D84D4  80 0D 8F 04 */	lwz r0, dmaCurrent-_SDA_BASE_(r13)
 /* 802DB598 002D84D8  80 8D 8E FC */	lwz r4, dmaBuf-_SDA_BASE_(r13)
 /* 802DB59C 002D84DC  7C 00 20 40 */	cmplw r0, r4
-/* 802DB5A0 002D84E0  40 82 00 0C */	bne func_802DB5AC
+/* 802DB5A0 002D84E0  40 82 00 0C */	bne lbl_802DB5AC
 /* 802DB5A4 002D84E4  38 60 00 00 */	li r3, 0
-/* 802DB5A8 002D84E8  48 00 00 2C */	b func_802DB5D4
-
-/* 802DB5AC 0028 .text      func_802DB5AC                  func_802DB5AC                  */
-.global func_802DB5AC
-func_802DB5AC:
+/* 802DB5A8 002D84E8  48 00 00 2C */	b lbl_802DB5D4
+lbl_802DB5AC:
 /* 802DB5AC 002D84EC  7C 64 00 50 */	subf r3, r4, r0
 /* 802DB5B0 002D84F0  38 03 00 1F */	addi r0, r3, 0x1f
 /* 802DB5B4 002D84F4  54 1F 00 34 */	rlwinm r31, r0, 0, 0, 0x1a
@@ -1227,10 +1003,7 @@ func_802DB5AC:
 /* 802DB5C8 002D8508  80 0D 8E FC */	lwz r0, dmaBuf-_SDA_BASE_(r13)
 /* 802DB5CC 002D850C  90 0D 8F 04 */	stw r0, dmaCurrent-_SDA_BASE_(r13)
 /* 802DB5D0 002D8510  7F E3 FB 78 */	mr r3, r31
-
-/* 802DB5D4 0014 .text      func_802DB5D4                  func_802DB5D4                  */
-.global func_802DB5D4
-func_802DB5D4:
+lbl_802DB5D4:
 /* 802DB5D4 002D8514  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DB5D8 002D8518  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DB5DC 002D851C  7C 08 03 A6 */	mtlr r0
@@ -1239,6 +1012,7 @@ func_802DB5D4:
 
 /* 802DB5E8 0044 .text      __sinit_JKRDvdAramRipper_cpp   __sinit_JKRDvdAramRipper_cpp   */
 .global __sinit_JKRDvdAramRipper_cpp
+__sinit_JKRDvdAramRipper_cpp:
 __sinit_JKRDvdAramRipper_cpp:
 /* 802DB5E8 002D8528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB5EC 002D852C  7C 08 02 A6 */	mflr r0
@@ -1258,8 +1032,11 @@ __sinit_JKRDvdAramRipper_cpp:
 /* 802DB624 002D8564  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB628 002D8568  4E 80 00 20 */	blr 
 
-/* 802DB62C 0038 .text      "__dt__23JSUList<12JKRADCommand>Fv" __dt__23JSUList<12JKRADCommand>Fv */
+/* 802DB62C 0054 .text      __dt__23JSUList<12JKRADCommand>Fv "__dt__23JSUList<12JKRADCommand>Fv" */
+.global "__dt__23JSUList<12JKRADCommand>Fv"
+"__dt__23JSUList<12JKRADCommand>Fv":
 .global __dt__23JSUList_SUB_012JKRADCommand_SUB_1Fv
+__dt__23JSUList_SUB_012JKRADCommand_SUB_1Fv:
 __dt__23JSUList_SUB_012JKRADCommand_SUB_1Fv:
 /* 802DB62C 002D856C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB630 002D8570  7C 08 02 A6 */	mflr r0
@@ -1268,17 +1045,14 @@ __dt__23JSUList_SUB_012JKRADCommand_SUB_1Fv:
 /* 802DB63C 002D857C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DB640 002D8580  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802DB644 002D8584  7C 9F 23 78 */	mr r31, r4
-/* 802DB648 002D8588  41 82 00 1C */	beq func_802DB664
+/* 802DB648 002D8588  41 82 00 1C */	beq lbl_802DB664
 /* 802DB64C 002D858C  38 80 00 00 */	li r4, 0
 /* 802DB650 002D8590  48 00 08 5D */	bl __dt__10JSUPtrListFv
 /* 802DB654 002D8594  7F E0 07 35 */	extsh. r0, r31
-/* 802DB658 002D8598  40 81 00 0C */	ble func_802DB664
+/* 802DB658 002D8598  40 81 00 0C */	ble lbl_802DB664
 /* 802DB65C 002D859C  7F C3 F3 78 */	mr r3, r30
 /* 802DB660 002D85A0  4B FF 36 DD */	bl __dl__FPv
-
-/* 802DB664 001C .text      func_802DB664                  func_802DB664                  */
-.global func_802DB664
-func_802DB664:
+lbl_802DB664:
 /* 802DB664 002D85A4  7F C3 F3 78 */	mr r3, r30
 /* 802DB668 002D85A8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DB66C 002D85AC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1292,7 +1066,7 @@ func_802DB664:
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 804343A8 000C .bss       JKRDvdAramRipper__LIT_301      @301                           */
+/* 804343A8 000C .bss       @301                           JKRDvdAramRipper__LIT_301      */
 .global JKRDvdAramRipper__LIT_301
 JKRDvdAramRipper__LIT_301:
 .skip 0xc
@@ -1302,7 +1076,7 @@ JKRDvdAramRipper__LIT_301:
 sDvdAramAsyncList__16JKRDvdAramRipper:
 .skip 0xc
 
-/* 804343C0 0018 .bss       JKRDvdAramRipper__decompMutex  decompMutex                    */
+/* 804343C0 0018 .bss       decompMutex                    JKRDvdAramRipper__decompMutex  */
 .global JKRDvdAramRipper__decompMutex
 JKRDvdAramRipper__decompMutex:
 .skip 0x18
@@ -1322,27 +1096,27 @@ sSZSBufferSize__16JKRDvdAramRipper:
 /*                                         .sbss                                          */
 /* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451468 0004 .sbss      JKRDvdAramRipper__szpBuf       szpBuf                         */
+/* 80451468 0004 .sbss      szpBuf                         JKRDvdAramRipper__szpBuf       */
 .global JKRDvdAramRipper__szpBuf
 JKRDvdAramRipper__szpBuf:
 .skip 0x4
 
-/* 8045146C 0004 .sbss      JKRDvdAramRipper__szpEnd       szpEnd                         */
+/* 8045146C 0004 .sbss      szpEnd                         JKRDvdAramRipper__szpEnd       */
 .global JKRDvdAramRipper__szpEnd
 JKRDvdAramRipper__szpEnd:
 .skip 0x4
 
-/* 80451470 0004 .sbss      JKRDvdAramRipper__refBuf       refBuf                         */
+/* 80451470 0004 .sbss      refBuf                         JKRDvdAramRipper__refBuf       */
 .global JKRDvdAramRipper__refBuf
 JKRDvdAramRipper__refBuf:
 .skip 0x4
 
-/* 80451474 0004 .sbss      JKRDvdAramRipper__refEnd       refEnd                         */
+/* 80451474 0004 .sbss      refEnd                         JKRDvdAramRipper__refEnd       */
 .global JKRDvdAramRipper__refEnd
 JKRDvdAramRipper__refEnd:
 .skip 0x4
 
-/* 80451478 0004 .sbss      JKRDvdAramRipper__refCurrent   refCurrent                     */
+/* 80451478 0004 .sbss      refCurrent                     JKRDvdAramRipper__refCurrent   */
 .global JKRDvdAramRipper__refCurrent
 JKRDvdAramRipper__refCurrent:
 .skip 0x4
@@ -1362,52 +1136,52 @@ dmaEnd:
 dmaCurrent:
 .skip 0x4
 
-/* 80451488 0004 .sbss      JKRDvdAramRipper__srcOffset    srcOffset                      */
+/* 80451488 0004 .sbss      srcOffset                      JKRDvdAramRipper__srcOffset    */
 .global JKRDvdAramRipper__srcOffset
 JKRDvdAramRipper__srcOffset:
 .skip 0x4
 
-/* 8045148C 0004 .sbss      JKRDvdAramRipper__transLeft    transLeft                      */
+/* 8045148C 0004 .sbss      transLeft                      JKRDvdAramRipper__transLeft    */
 .global JKRDvdAramRipper__transLeft
 JKRDvdAramRipper__transLeft:
 .skip 0x4
 
-/* 80451490 0004 .sbss      JKRDvdAramRipper__srcLimit     srcLimit                       */
+/* 80451490 0004 .sbss      srcLimit                       JKRDvdAramRipper__srcLimit     */
 .global JKRDvdAramRipper__srcLimit
 JKRDvdAramRipper__srcLimit:
 .skip 0x4
 
-/* 80451494 0004 .sbss      JKRDvdAramRipper__srcFile      srcFile                        */
+/* 80451494 0004 .sbss      srcFile                        JKRDvdAramRipper__srcFile      */
 .global JKRDvdAramRipper__srcFile
 JKRDvdAramRipper__srcFile:
 .skip 0x4
 
-/* 80451498 0004 .sbss      JKRDvdAramRipper__fileOffset   fileOffset                     */
+/* 80451498 0004 .sbss      fileOffset                     JKRDvdAramRipper__fileOffset   */
 .global JKRDvdAramRipper__fileOffset
 JKRDvdAramRipper__fileOffset:
 .skip 0x4
 
-/* 8045149C 0004 .sbss      JKRDvdAramRipper__readCount    readCount                      */
+/* 8045149C 0004 .sbss      readCount                      JKRDvdAramRipper__readCount    */
 .global JKRDvdAramRipper__readCount
 JKRDvdAramRipper__readCount:
 .skip 0x4
 
-/* 804514A0 0004 .sbss      JKRDvdAramRipper__maxDest      maxDest                        */
+/* 804514A0 0004 .sbss      maxDest                        JKRDvdAramRipper__maxDest      */
 .global JKRDvdAramRipper__maxDest
 JKRDvdAramRipper__maxDest:
 .skip 0x4
 
-/* 804514A4 0004 .sbss      sym_804514A4                   sym_804514A4                   */
-.global sym_804514A4
-sym_804514A4:
+/* 804514A4 0004 .sbss      data_804514A4                  data_804514A4                  */
+.global data_804514A4
+data_804514A4:
 .skip 0x4
 
-/* 804514A8 0004 .sbss      JKRDvdAramRipper__tsPtr        tsPtr                          */
+/* 804514A8 0004 .sbss      tsPtr                          JKRDvdAramRipper__tsPtr        */
 .global JKRDvdAramRipper__tsPtr
 JKRDvdAramRipper__tsPtr:
 .skip 0x4
 
-/* 804514AC 0004 .sbss      JKRDvdAramRipper__tsArea       tsArea                         */
+/* 804514AC 0004 .sbss      tsArea                         JKRDvdAramRipper__tsArea       */
 .global JKRDvdAramRipper__tsArea
 JKRDvdAramRipper__tsArea:
 .skip 0x4

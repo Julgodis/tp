@@ -7,6 +7,7 @@
 /* 80298FB0 0028 .text      getGroupCount__11JASWSParserFPCv getGroupCount__11JASWSParserFPCv */
 .global getGroupCount__11JASWSParserFPCv
 getGroupCount__11JASWSParserFPCv:
+getGroupCount__11JASWSParserFPCv:
 /* 80298FB0 00295EF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298FB4 00295EF4  7C 08 02 A6 */	mflr r0
 /* 80298FB8 00295EF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,8 +19,9 @@ getGroupCount__11JASWSParserFPCv:
 /* 80298FD0 00295F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80298FD4 00295F14  4E 80 00 20 */	blr 
 
-/* 80298FD8 0038 .text      createWaveBank__11JASWSParserFPCvP7JKRHeap createWaveBank__11JASWSParserFPCvP7JKRHeap */
+/* 80298FD8 005C .text      createWaveBank__11JASWSParserFPCvP7JKRHeap createWaveBank__11JASWSParserFPCvP7JKRHeap */
 .global createWaveBank__11JASWSParserFPCvP7JKRHeap
+createWaveBank__11JASWSParserFPCvP7JKRHeap:
 createWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80298FD8 00295F18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298FDC 00295F1C  7C 08 02 A6 */	mflr r0
@@ -30,22 +32,16 @@ createWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80298FF0 00295F30  7C 9F 23 78 */	mr r31, r4
 /* 80298FF4 00295F34  4B FF FF BD */	bl getGroupCount__11JASWSParserFPCv
 /* 80298FF8 00295F38  28 03 00 01 */	cmplwi r3, 1
-/* 80298FFC 00295F3C  40 82 00 14 */	bne func_80299010
+/* 80298FFC 00295F3C  40 82 00 14 */	bne lbl_80299010
 /* 80299000 00295F40  7F C3 F3 78 */	mr r3, r30
 /* 80299004 00295F44  7F E4 FB 78 */	mr r4, r31
 /* 80299008 00295F48  48 00 02 5D */	bl createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap
-/* 8029900C 00295F4C  48 00 00 10 */	b func_8029901C
-
-/* 80299010 000C .text      func_80299010                  func_80299010                  */
-.global func_80299010
-func_80299010:
+/* 8029900C 00295F4C  48 00 00 10 */	b lbl_8029901C
+lbl_80299010:
 /* 80299010 00295F50  7F C3 F3 78 */	mr r3, r30
 /* 80299014 00295F54  7F E4 FB 78 */	mr r4, r31
 /* 80299018 00295F58  48 00 00 1D */	bl createBasicWaveBank__11JASWSParserFPCvP7JKRHeap
-
-/* 8029901C 0018 .text      func_8029901C                  func_8029901C                  */
-.global func_8029901C
-func_8029901C:
+lbl_8029901C:
 /* 8029901C 00295F5C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80299020 00295F60  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80299024 00295F64  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -53,8 +49,9 @@ func_8029901C:
 /* 8029902C 00295F6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80299030 00295F70  4E 80 00 20 */	blr 
 
-/* 80299034 0024 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap createBasicWaveBank__11JASWSParserFPCvP7JKRHeap */
+/* 80299034 0230 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap createBasicWaveBank__11JASWSParserFPCvP7JKRHeap */
 .global createBasicWaveBank__11JASWSParserFPCvP7JKRHeap
+createBasicWaveBank__11JASWSParserFPCvP7JKRHeap:
 createBasicWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80299034 00295F74  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80299038 00295F78  7C 08 02 A6 */	mflr r0
@@ -63,12 +60,9 @@ createBasicWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80299044 00295F84  48 0C 91 75 */	bl _savegpr_20
 /* 80299048 00295F88  7C 74 1B 78 */	mr r20, r3
 /* 8029904C 00295F8C  7C 96 23 79 */	or. r22, r4, r4
-/* 80299050 00295F90  40 82 00 08 */	bne func_80299058
+/* 80299050 00295F90  40 82 00 08 */	bne lbl_80299058
 /* 80299054 00295F94  82 CD 8C 90 */	lwz r22, JASDram-_SDA_BASE_(r13)
-
-/* 80299058 0030 .text      func_80299058                  func_80299058                  */
-.global func_80299058
-func_80299058:
+lbl_80299058:
 /* 80299058 00295F98  7E C3 B3 78 */	mr r3, r22
 /* 8029905C 00295F9C  48 03 56 D1 */	bl getFreeSize__7JKRHeapFv
 /* 80299060 00295FA0  7C 7D 1B 78 */	mr r29, r3
@@ -78,21 +72,15 @@ func_80299058:
 /* 80299070 00295FB0  38 A0 00 00 */	li r5, 0
 /* 80299074 00295FB4  48 03 5C 25 */	bl __nw__FUlP7JKRHeapi
 /* 80299078 00295FB8  7C 7C 1B 79 */	or. r28, r3, r3
-/* 8029907C 00295FBC  41 82 00 0C */	beq func_80299088
+/* 8029907C 00295FBC  41 82 00 0C */	beq lbl_80299088
 /* 80299080 00295FC0  4B FF F4 79 */	bl __ct__16JASBasicWaveBankFv
 /* 80299084 00295FC4  7C 7C 1B 78 */	mr r28, r3
-
-/* 80299088 0010 .text      func_80299088                  func_80299088                  */
-.global func_80299088
-func_80299088:
+lbl_80299088:
 /* 80299088 00295FC8  28 1C 00 00 */	cmplwi r28, 0
-/* 8029908C 00295FCC  40 82 00 0C */	bne func_80299098
+/* 8029908C 00295FCC  40 82 00 0C */	bne lbl_80299098
 /* 80299090 00295FD0  38 60 00 00 */	li r3, 0
-/* 80299094 00295FD4  48 00 01 B8 */	b func_8029924C
-
-/* 80299098 003C .text      func_80299098                  func_80299098                  */
-.global func_80299098
-func_80299098:
+/* 80299094 00295FD4  48 00 01 B8 */	b lbl_8029924C
+lbl_80299098:
 /* 80299098 00295FD8  7F 43 D3 78 */	mr r3, r26
 /* 8029909C 00295FDC  80 9A 00 14 */	lwz r4, 0x14(r26)
 /* 802990A0 00295FE0  48 00 04 81 */	bl JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlGroup_SUB_1__FPCvUl
@@ -107,11 +95,8 @@ func_80299098:
 /* 802990C4 00296004  4B FF F6 4D */	bl setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap
 /* 802990C8 00296008  3B 20 00 00 */	li r25, 0
 /* 802990CC 0029600C  3A A0 00 00 */	li r21, 0
-/* 802990D0 00296010  48 00 01 54 */	b func_80299224
-
-/* 802990D4 0074 .text      func_802990D4                  func_802990D4                  */
-.global func_802990D4
-func_802990D4:
+/* 802990D0 00296010  48 00 01 54 */	b lbl_80299224
+lbl_802990D4:
 /* 802990D4 00296014  7F 43 D3 78 */	mr r3, r26
 /* 802990D8 00296018  38 15 00 0C */	addi r0, r21, 0xc
 /* 802990DC 0029601C  7C 9E 00 2E */	lwzx r4, r30, r0
@@ -140,11 +125,8 @@ func_802990D4:
 /* 80299138 00296078  4B FF F9 4D */	bl setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap
 /* 8029913C 0029607C  3A E0 00 00 */	li r23, 0
 /* 80299140 00296080  3A 80 00 00 */	li r20, 0
-/* 80299144 00296084  48 00 00 C0 */	b func_80299204
-
-/* 80299148 00BC .text      func_80299148                  func_80299148                  */
-.global func_80299148
-func_80299148:
+/* 80299144 00296084  48 00 00 C0 */	b lbl_80299204
+lbl_80299148:
 /* 80299148 00296088  7F 43 D3 78 */	mr r3, r26
 /* 8029914C 0029608C  38 14 00 74 */	addi r0, r20, 0x74
 /* 80299150 00296090  7C 9B 00 2E */	lwzx r4, r27, r0
@@ -192,25 +174,19 @@ func_80299148:
 /* 802991F8 00296138  4B FF F7 19 */	bl setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo
 /* 802991FC 0029613C  3A F7 00 01 */	addi r23, r23, 1
 /* 80299200 00296140  3A 94 00 04 */	addi r20, r20, 4
-
-/* 80299204 0020 .text      func_80299204                  func_80299204                  */
-.global func_80299204
-func_80299204:
+lbl_80299204:
 /* 80299204 00296144  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80299208 00296148  7C 17 00 40 */	cmplw r23, r0
-/* 8029920C 0029614C  41 80 FF 3C */	blt func_80299148
+/* 8029920C 0029614C  41 80 FF 3C */	blt lbl_80299148
 /* 80299210 00296150  7F 03 C3 78 */	mr r3, r24
 /* 80299214 00296154  7F 64 DB 78 */	mr r4, r27
 /* 80299218 00296158  48 00 14 F5 */	bl setFileName__10JASWaveArcFPCc
 /* 8029921C 0029615C  3B 39 00 01 */	addi r25, r25, 1
 /* 80299220 00296160  3A B5 00 04 */	addi r21, r21, 4
-
-/* 80299224 0028 .text      func_80299224                  func_80299224                  */
-.global func_80299224
-func_80299224:
+lbl_80299224:
 /* 80299224 00296164  80 1E 00 08 */	lwz r0, 8(r30)
 /* 80299228 00296168  7C 19 00 40 */	cmplw r25, r0
-/* 8029922C 0029616C  41 80 FE A8 */	blt func_802990D4
+/* 8029922C 0029616C  41 80 FE A8 */	blt lbl_802990D4
 /* 80299230 00296170  7E C3 B3 78 */	mr r3, r22
 /* 80299234 00296174  48 03 54 F9 */	bl getFreeSize__7JKRHeapFv
 /* 80299238 00296178  7C 63 E8 50 */	subf r3, r3, r29
@@ -218,10 +194,7 @@ func_80299224:
 /* 80299240 00296180  7C 00 1A 14 */	add r0, r0, r3
 /* 80299244 00296184  90 0D 8D 00 */	stw r0, sUsedHeapSize__11JASWSParser-_SDA_BASE_(r13)
 /* 80299248 00296188  7F 83 E3 78 */	mr r3, r28
-
-/* 8029924C 0018 .text      func_8029924C                  func_8029924C                  */
-.global func_8029924C
-func_8029924C:
+lbl_8029924C:
 /* 8029924C 0029618C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80299250 00296190  48 0C 8F B5 */	bl _restgpr_20
 /* 80299254 00296194  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -229,8 +202,9 @@ func_8029924C:
 /* 8029925C 0029619C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80299260 002961A0  4E 80 00 20 */	blr 
 
-/* 80299264 0024 .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap */
+/* 80299264 022C .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap */
 .global createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap
+createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap:
 createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80299264 002961A4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80299268 002961A8  7C 08 02 A6 */	mflr r0
@@ -239,12 +213,9 @@ createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap:
 /* 80299274 002961B4  48 0C 8F 51 */	bl _savegpr_23
 /* 80299278 002961B8  7C 77 1B 78 */	mr r23, r3
 /* 8029927C 002961BC  7C 99 23 79 */	or. r25, r4, r4
-/* 80299280 002961C0  40 82 00 08 */	bne func_80299288
+/* 80299280 002961C0  40 82 00 08 */	bne lbl_80299288
 /* 80299284 002961C4  83 2D 8C 90 */	lwz r25, JASDram-_SDA_BASE_(r13)
-
-/* 80299288 0034 .text      func_80299288                  func_80299288                  */
-.global func_80299288
-func_80299288:
+lbl_80299288:
 /* 80299288 002961C8  7F 23 CB 78 */	mr r3, r25
 /* 8029928C 002961CC  48 03 54 A1 */	bl getFreeSize__7JKRHeapFv
 /* 80299290 002961D0  7C 7E 1B 78 */	mr r30, r3
@@ -255,33 +226,24 @@ func_80299288:
 /* 802992A4 002961E4  7C 78 1B 78 */	mr r24, r3
 /* 802992A8 002961E8  80 03 00 08 */	lwz r0, 8(r3)
 /* 802992AC 002961EC  28 00 00 01 */	cmplwi r0, 1
-/* 802992B0 002961F0  41 82 00 0C */	beq func_802992BC
+/* 802992B0 002961F0  41 82 00 0C */	beq lbl_802992BC
 /* 802992B4 002961F4  38 60 00 00 */	li r3, 0
-/* 802992B8 002961F8  48 00 01 C0 */	b func_80299478
-
-/* 802992BC 0020 .text      func_802992BC                  func_802992BC                  */
-.global func_802992BC
-func_802992BC:
+/* 802992B8 002961F8  48 00 01 C0 */	b lbl_80299478
+lbl_802992BC:
 /* 802992BC 002961FC  38 60 00 80 */	li r3, 0x80
 /* 802992C0 00296200  7F 24 CB 78 */	mr r4, r25
 /* 802992C4 00296204  38 A0 00 00 */	li r5, 0
 /* 802992C8 00296208  48 03 59 D1 */	bl __nw__FUlP7JKRHeapi
 /* 802992CC 0029620C  7C 7D 1B 79 */	or. r29, r3, r3
-/* 802992D0 00296210  41 82 00 0C */	beq func_802992DC
+/* 802992D0 00296210  41 82 00 0C */	beq lbl_802992DC
 /* 802992D4 00296214  4B FF F9 C1 */	bl __ct__17JASSimpleWaveBankFv
 /* 802992D8 00296218  7C 7D 1B 78 */	mr r29, r3
-
-/* 802992DC 0010 .text      func_802992DC                  func_802992DC                  */
-.global func_802992DC
-func_802992DC:
+lbl_802992DC:
 /* 802992DC 0029621C  28 1D 00 00 */	cmplwi r29, 0
-/* 802992E0 00296220  40 82 00 0C */	bne func_802992EC
+/* 802992E0 00296220  40 82 00 0C */	bne lbl_802992EC
 /* 802992E4 00296224  38 60 00 00 */	li r3, 0
-/* 802992E8 00296228  48 00 01 90 */	b func_80299478
-
-/* 802992EC 0050 .text      func_802992EC                  func_802992EC                  */
-.global func_802992EC
-func_802992EC:
+/* 802992E8 00296228  48 00 01 90 */	b lbl_80299478
+lbl_802992EC:
 /* 802992EC 0029622C  3B 40 00 00 */	li r26, 0
 /* 802992F0 00296230  7F 63 DB 78 */	mr r3, r27
 /* 802992F4 00296234  80 98 00 0C */	lwz r4, 0xc(r24)
@@ -301,11 +263,8 @@ func_802992EC:
 /* 8029932C 0029626C  7C 7C 1B 78 */	mr r28, r3
 /* 80299330 00296270  3A E0 00 00 */	li r23, 0
 /* 80299334 00296274  3B 00 00 00 */	li r24, 0
-/* 80299338 00296278  48 00 00 30 */	b func_80299368
-
-/* 8029933C 0024 .text      func_8029933C                  func_8029933C                  */
-.global func_8029933C
-func_8029933C:
+/* 80299338 00296278  48 00 00 30 */	b lbl_80299368
+lbl_8029933C:
 /* 8029933C 0029627C  7F 63 DB 78 */	mr r3, r27
 /* 80299340 00296280  38 18 00 08 */	addi r0, r24, 8
 /* 80299344 00296284  7C 9F 00 2E */	lwzx r4, r31, r0
@@ -313,32 +272,23 @@ func_8029933C:
 /* 8029934C 0029628C  80 03 00 00 */	lwz r0, 0(r3)
 /* 80299350 00296290  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 80299354 00296294  7C 1A 00 40 */	cmplw r26, r0
-/* 80299358 00296298  40 80 00 08 */	bge func_80299360
+/* 80299358 00296298  40 80 00 08 */	bge lbl_80299360
 /* 8029935C 0029629C  7C 1A 03 78 */	mr r26, r0
-
-/* 80299360 0008 .text      func_80299360                  func_80299360                  */
-.global func_80299360
-func_80299360:
+lbl_80299360:
 /* 80299360 002962A0  3A F7 00 01 */	addi r23, r23, 1
 /* 80299364 002962A4  3B 18 00 04 */	addi r24, r24, 4
-
-/* 80299368 0028 .text      func_80299368                  func_80299368                  */
-.global func_80299368
-func_80299368:
+lbl_80299368:
 /* 80299368 002962A8  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8029936C 002962AC  7C 17 00 40 */	cmplw r23, r0
-/* 80299370 002962B0  41 80 FF CC */	blt func_8029933C
+/* 80299370 002962B0  41 80 FF CC */	blt lbl_8029933C
 /* 80299374 002962B4  7F A3 EB 78 */	mr r3, r29
 /* 80299378 002962B8  38 9A 00 01 */	addi r4, r26, 1
 /* 8029937C 002962BC  7F 25 CB 78 */	mr r5, r25
 /* 80299380 002962C0  4B FF FA 61 */	bl setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap
 /* 80299384 002962C4  3B 40 00 00 */	li r26, 0
 /* 80299388 002962C8  3B 00 00 00 */	li r24, 0
-/* 8029938C 002962CC  48 00 00 B8 */	b func_80299444
-
-/* 80299390 00B4 .text      func_80299390                  func_80299390                  */
-.global func_80299390
-func_80299390:
+/* 8029938C 002962CC  48 00 00 B8 */	b lbl_80299444
+lbl_80299390:
 /* 80299390 002962D0  7F 63 DB 78 */	mr r3, r27
 /* 80299394 002962D4  38 18 00 74 */	addi r0, r24, 0x74
 /* 80299398 002962D8  7C 9C 00 2E */	lwzx r4, r28, r0
@@ -384,13 +334,10 @@ func_80299390:
 /* 80299438 00296378  4B FF FA 4D */	bl setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo
 /* 8029943C 0029637C  3B 5A 00 01 */	addi r26, r26, 1
 /* 80299440 00296380  3B 18 00 04 */	addi r24, r24, 4
-
-/* 80299444 0034 .text      func_80299444                  func_80299444                  */
-.global func_80299444
-func_80299444:
+lbl_80299444:
 /* 80299444 00296384  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80299448 00296388  7C 1A 00 40 */	cmplw r26, r0
-/* 8029944C 0029638C  41 80 FF 44 */	blt func_80299390
+/* 8029944C 0029638C  41 80 FF 44 */	blt lbl_80299390
 /* 80299450 00296390  38 7D 00 04 */	addi r3, r29, 4
 /* 80299454 00296394  7F 84 E3 78 */	mr r4, r28
 /* 80299458 00296398  48 00 12 B5 */	bl setFileName__10JASWaveArcFPCc
@@ -401,10 +348,7 @@ func_80299444:
 /* 8029946C 002963AC  7C 00 1A 14 */	add r0, r0, r3
 /* 80299470 002963B0  90 0D 8D 00 */	stw r0, sUsedHeapSize__11JASWSParser-_SDA_BASE_(r13)
 /* 80299474 002963B4  7F A3 EB 78 */	mr r3, r29
-
-/* 80299478 0018 .text      func_80299478                  func_80299478                  */
-.global func_80299478
-func_80299478:
+lbl_80299478:
 /* 80299478 002963B8  39 61 00 60 */	addi r11, r1, 0x60
 /* 8029947C 002963BC  48 0C 8D 95 */	bl _restgpr_23
 /* 80299480 002963C0  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -412,101 +356,101 @@ func_80299478:
 /* 80299488 002963C8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8029948C 002963CC  4E 80 00 20 */	blr 
 
-/* 80299490 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl */
+/* 80299490 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser9TCtrlWave_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser9TCtrlWave_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser9TCtrlWave_SUB_1__FPCvUl:
 /* 80299490 002963D0  28 04 00 00 */	cmplwi r4, 0
-/* 80299494 002963D4  40 82 00 0C */	bne func_802994A0
+/* 80299494 002963D4  40 82 00 0C */	bne lbl_802994A0
 /* 80299498 002963D8  38 60 00 00 */	li r3, 0
 /* 8029949C 002963DC  4E 80 00 20 */	blr 
-
-/* 802994A0 0008 .text      func_802994A0                  func_802994A0                  */
-.global func_802994A0
-func_802994A0:
+lbl_802994A0:
 /* 802994A0 002963E0  7C 63 22 14 */	add r3, r3, r4
 /* 802994A4 002963E4  4E 80 00 20 */	blr 
 
-/* 802994A8 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl */
+/* 802994A8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TWave_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TWave_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TWave_SUB_1__FPCvUl:
 /* 802994A8 002963E8  28 04 00 00 */	cmplwi r4, 0
-/* 802994AC 002963EC  40 82 00 0C */	bne func_802994B8
+/* 802994AC 002963EC  40 82 00 0C */	bne lbl_802994B8
 /* 802994B0 002963F0  38 60 00 00 */	li r3, 0
 /* 802994B4 002963F4  4E 80 00 20 */	blr 
-
-/* 802994B8 0008 .text      func_802994B8                  func_802994B8                  */
-.global func_802994B8
-func_802994B8:
+lbl_802994B8:
 /* 802994B8 002963F8  7C 63 22 14 */	add r3, r3, r4
 /* 802994BC 002963FC  4E 80 00 20 */	blr 
 
-/* 802994C0 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl */
+/* 802994C0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser12TWaveArchive_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser12TWaveArchive_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser12TWaveArchive_SUB_1__FPCvUl:
 /* 802994C0 00296400  28 04 00 00 */	cmplwi r4, 0
-/* 802994C4 00296404  40 82 00 0C */	bne func_802994D0
+/* 802994C4 00296404  40 82 00 0C */	bne lbl_802994D0
 /* 802994C8 00296408  38 60 00 00 */	li r3, 0
 /* 802994CC 0029640C  4E 80 00 20 */	blr 
-
-/* 802994D0 0008 .text      func_802994D0                  func_802994D0                  */
-.global func_802994D0
-func_802994D0:
+lbl_802994D0:
 /* 802994D0 00296410  7C 63 22 14 */	add r3, r3, r4
 /* 802994D4 00296414  4E 80 00 20 */	blr 
 
-/* 802994D8 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl */
+/* 802994D8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser16TWaveArchiveBank_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser16TWaveArchiveBank_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser16TWaveArchiveBank_SUB_1__FPCvUl:
 /* 802994D8 00296418  28 04 00 00 */	cmplwi r4, 0
-/* 802994DC 0029641C  40 82 00 0C */	bne func_802994E8
+/* 802994DC 0029641C  40 82 00 0C */	bne lbl_802994E8
 /* 802994E0 00296420  38 60 00 00 */	li r3, 0
 /* 802994E4 00296424  4E 80 00 20 */	blr 
-
-/* 802994E8 0008 .text      func_802994E8                  func_802994E8                  */
-.global func_802994E8
-func_802994E8:
+lbl_802994E8:
 /* 802994E8 00296428  7C 63 22 14 */	add r3, r3, r4
 /* 802994EC 0029642C  4E 80 00 20 */	blr 
 
-/* 802994F0 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl */
+/* 802994F0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TCtrl_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TCtrl_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser5TCtrl_SUB_1__FPCvUl:
 /* 802994F0 00296430  28 04 00 00 */	cmplwi r4, 0
-/* 802994F4 00296434  40 82 00 0C */	bne func_80299500
+/* 802994F4 00296434  40 82 00 0C */	bne lbl_80299500
 /* 802994F8 00296438  38 60 00 00 */	li r3, 0
 /* 802994FC 0029643C  4E 80 00 20 */	blr 
-
-/* 80299500 0008 .text      func_80299500                  func_80299500                  */
-.global func_80299500
-func_80299500:
+lbl_80299500:
 /* 80299500 00296440  7C 63 22 14 */	add r3, r3, r4
 /* 80299504 00296444  4E 80 00 20 */	blr 
 
-/* 80299508 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl */
+/* 80299508 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlScene_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlScene_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlScene_SUB_1__FPCvUl:
 /* 80299508 00296448  28 04 00 00 */	cmplwi r4, 0
-/* 8029950C 0029644C  40 82 00 0C */	bne func_80299518
+/* 8029950C 0029644C  40 82 00 0C */	bne lbl_80299518
 /* 80299510 00296450  38 60 00 00 */	li r3, 0
 /* 80299514 00296454  4E 80 00 20 */	blr 
-
-/* 80299518 0008 .text      func_80299518                  func_80299518                  */
-.global func_80299518
-func_80299518:
+lbl_80299518:
 /* 80299518 00296458  7C 63 22 14 */	add r3, r3, r4
 /* 8029951C 0029645C  4E 80 00 20 */	blr 
 
-/* 80299520 0010 .text      "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl" JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl */
+/* 80299520 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl" */
+.global "JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl"
+"JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl":
 .global JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlGroup_SUB_1__FPCvUl
 JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlGroup_SUB_1__FPCvUl:
+JSUConvertOffsetToPtr_SUB_0Q211JASWSParser10TCtrlGroup_SUB_1__FPCvUl:
 /* 80299520 00296460  28 04 00 00 */	cmplwi r4, 0
-/* 80299524 00296464  40 82 00 0C */	bne func_80299530
+/* 80299524 00296464  40 82 00 0C */	bne lbl_80299530
 /* 80299528 00296468  38 60 00 00 */	li r3, 0
 /* 8029952C 0029646C  4E 80 00 20 */	blr 
-
-/* 80299530 0008 .text      func_80299530                  func_80299530                  */
-.global func_80299530
-func_80299530:
+lbl_80299530:
 /* 80299530 00296470  7C 63 22 14 */	add r3, r3, r4
 /* 80299534 00296474  4E 80 00 20 */	blr 
 

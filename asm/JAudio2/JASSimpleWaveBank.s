@@ -7,6 +7,7 @@
 /* 80298C94 0060 .text      __ct__17JASSimpleWaveBankFv    __ct__17JASSimpleWaveBankFv    */
 .global __ct__17JASSimpleWaveBankFv
 __ct__17JASSimpleWaveBankFv:
+__ct__17JASSimpleWaveBankFv:
 /* 80298C94 00295BD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298C98 00295BD8  7C 08 02 A6 */	mflr r0
 /* 80298C9C 00295BDC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -32,8 +33,9 @@ __ct__17JASSimpleWaveBankFv:
 /* 80298CEC 00295C2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80298CF0 00295C30  4E 80 00 20 */	blr 
 
-/* 80298CF4 0064 .text      __dt__17JASSimpleWaveBankFv    __dt__17JASSimpleWaveBankFv    */
+/* 80298CF4 0090 .text      __dt__17JASSimpleWaveBankFv    __dt__17JASSimpleWaveBankFv    */
 .global __dt__17JASSimpleWaveBankFv
+__dt__17JASSimpleWaveBankFv:
 __dt__17JASSimpleWaveBankFv:
 /* 80298CF4 00295C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298CF8 00295C38  7C 08 02 A6 */	mflr r0
@@ -42,7 +44,7 @@ __dt__17JASSimpleWaveBankFv:
 /* 80298D04 00295C44  93 C1 00 08 */	stw r30, 8(r1)
 /* 80298D08 00295C48  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80298D0C 00295C4C  7C 9F 23 78 */	mr r31, r4
-/* 80298D10 00295C50  41 82 00 58 */	beq func_80298D68
+/* 80298D10 00295C50  41 82 00 58 */	beq lbl_80298D68
 /* 80298D14 00295C54  3C 60 80 3C */	lis r3, __vt__17JASSimpleWaveBank@ha
 /* 80298D18 00295C58  38 63 77 AC */	addi r3, r3, __vt__17JASSimpleWaveBank@l
 /* 80298D1C 00295C5C  90 7E 00 00 */	stw r3, 0(r30)
@@ -56,22 +58,16 @@ __dt__17JASSimpleWaveBankFv:
 /* 80298D3C 00295C7C  38 80 00 00 */	li r4, 0
 /* 80298D40 00295C80  48 00 14 75 */	bl __dt__10JASWaveArcFv
 /* 80298D44 00295C84  28 1E 00 00 */	cmplwi r30, 0
-/* 80298D48 00295C88  41 82 00 10 */	beq func_80298D58
+/* 80298D48 00295C88  41 82 00 10 */	beq lbl_80298D58
 /* 80298D4C 00295C8C  3C 60 80 3C */	lis r3, __vt__11JASWaveBank@ha
 /* 80298D50 00295C90  38 03 77 80 */	addi r0, r3, __vt__11JASWaveBank@l
 /* 80298D54 00295C94  90 1E 00 00 */	stw r0, 0(r30)
-
-/* 80298D58 0010 .text      func_80298D58                  func_80298D58                  */
-.global func_80298D58
-func_80298D58:
+lbl_80298D58:
 /* 80298D58 00295C98  7F E0 07 35 */	extsh. r0, r31
-/* 80298D5C 00295C9C  40 81 00 0C */	ble func_80298D68
+/* 80298D5C 00295C9C  40 81 00 0C */	ble lbl_80298D68
 /* 80298D60 00295CA0  7F C3 F3 78 */	mr r3, r30
 /* 80298D64 00295CA4  48 03 5F D9 */	bl __dl__FPv
-
-/* 80298D68 001C .text      func_80298D68                  func_80298D68                  */
-.global func_80298D68
-func_80298D68:
+lbl_80298D68:
 /* 80298D68 00295CA8  7F C3 F3 78 */	mr r3, r30
 /* 80298D6C 00295CAC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80298D70 00295CB0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -80,34 +76,29 @@ func_80298D68:
 /* 80298D7C 00295CBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80298D80 00295CC0  4E 80 00 20 */	blr 
 
-/* 80298D84 0034 .text      __dt__Q217JASSimpleWaveBank11TWaveHandleFv __dt__Q217JASSimpleWaveBank11TWaveHandleFv */
+/* 80298D84 005C .text      __dt__Q217JASSimpleWaveBank11TWaveHandleFv __dt__Q217JASSimpleWaveBank11TWaveHandleFv */
 .global __dt__Q217JASSimpleWaveBank11TWaveHandleFv
+__dt__Q217JASSimpleWaveBank11TWaveHandleFv:
 __dt__Q217JASSimpleWaveBank11TWaveHandleFv:
 /* 80298D84 00295CC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80298D88 00295CC8  7C 08 02 A6 */	mflr r0
 /* 80298D8C 00295CCC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80298D90 00295CD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80298D94 00295CD4  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80298D98 00295CD8  41 82 00 30 */	beq func_80298DC8
+/* 80298D98 00295CD8  41 82 00 30 */	beq lbl_80298DC8
 /* 80298D9C 00295CDC  3C 60 80 3C */	lis r3, __vt__Q217JASSimpleWaveBank11TWaveHandle@ha
 /* 80298DA0 00295CE0  38 03 77 98 */	addi r0, r3, __vt__Q217JASSimpleWaveBank11TWaveHandle@l
 /* 80298DA4 00295CE4  90 1F 00 00 */	stw r0, 0(r31)
-/* 80298DA8 00295CE8  41 82 00 10 */	beq func_80298DB8
+/* 80298DA8 00295CE8  41 82 00 10 */	beq lbl_80298DB8
 /* 80298DAC 00295CEC  3C 60 80 3C */	lis r3, __vt__13JASWaveHandle@ha
 /* 80298DB0 00295CF0  38 03 77 54 */	addi r0, r3, __vt__13JASWaveHandle@l
 /* 80298DB4 00295CF4  90 1F 00 00 */	stw r0, 0(r31)
-
-/* 80298DB8 0010 .text      func_80298DB8                  func_80298DB8                  */
-.global func_80298DB8
-func_80298DB8:
+lbl_80298DB8:
 /* 80298DB8 00295CF8  7C 80 07 35 */	extsh. r0, r4
-/* 80298DBC 00295CFC  40 81 00 0C */	ble func_80298DC8
+/* 80298DBC 00295CFC  40 81 00 0C */	ble lbl_80298DC8
 /* 80298DC0 00295D00  7F E3 FB 78 */	mr r3, r31
 /* 80298DC4 00295D04  48 03 5F 79 */	bl __dl__FPv
-
-/* 80298DC8 0018 .text      func_80298DC8                  func_80298DC8                  */
-.global func_80298DC8
-func_80298DC8:
+lbl_80298DC8:
 /* 80298DC8 00295D08  7F E3 FB 78 */	mr r3, r31
 /* 80298DCC 00295D0C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80298DD0 00295D10  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -117,6 +108,7 @@ func_80298DC8:
 
 /* 80298DE0 0080 .text      setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap */
 .global setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap
+setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap:
 setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap:
 /* 80298DE0 00295D20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80298DE4 00295D24  7C 08 02 A6 */	mflr r0
@@ -151,18 +143,16 @@ setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap:
 /* 80298E58 00295D98  38 21 00 20 */	addi r1, r1, 0x20
 /* 80298E5C 00295D9C  4E 80 00 20 */	blr 
 
-/* 80298E60 0014 .text      getWaveHandle__17JASSimpleWaveBankCFUl getWaveHandle__17JASSimpleWaveBankCFUl */
+/* 80298E60 0024 .text      getWaveHandle__17JASSimpleWaveBankCFUl getWaveHandle__17JASSimpleWaveBankCFUl */
 .global getWaveHandle__17JASSimpleWaveBankCFUl
+getWaveHandle__17JASSimpleWaveBankCFUl:
 getWaveHandle__17JASSimpleWaveBankCFUl:
 /* 80298E60 00295DA0  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 80298E64 00295DA4  7C 04 00 40 */	cmplw r4, r0
-/* 80298E68 00295DA8  41 80 00 0C */	blt func_80298E74
+/* 80298E68 00295DA8  41 80 00 0C */	blt lbl_80298E74
 /* 80298E6C 00295DAC  38 60 00 00 */	li r3, 0
 /* 80298E70 00295DB0  4E 80 00 20 */	blr 
-
-/* 80298E74 0010 .text      func_80298E74                  func_80298E74                  */
-.global func_80298E74
-func_80298E74:
+lbl_80298E74:
 /* 80298E74 00295DB4  80 63 00 78 */	lwz r3, 0x78(r3)
 /* 80298E78 00295DB8  1C 04 00 2C */	mulli r0, r4, 0x2c
 /* 80298E7C 00295DBC  7C 63 02 14 */	add r3, r3, r0
@@ -170,6 +160,7 @@ func_80298E74:
 
 /* 80298E84 0094 .text      setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo */
 .global setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo
+setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo:
 setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo:
 /* 80298E84 00295DC4  80 03 00 78 */	lwz r0, 0x78(r3)
 /* 80298E88 00295DC8  1C C4 00 2C */	mulli r6, r4, 0x2c
@@ -209,41 +200,38 @@ setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo:
 /* 80298F10 00295E50  90 83 00 28 */	stw r4, 0x28(r3)
 /* 80298F14 00295E54  4E 80 00 20 */	blr 
 
-/* 80298F18 0010 .text      getWaveArc__17JASSimpleWaveBankFUl getWaveArc__17JASSimpleWaveBankFUl */
+/* 80298F18 0020 .text      getWaveArc__17JASSimpleWaveBankFUl getWaveArc__17JASSimpleWaveBankFUl */
 .global getWaveArc__17JASSimpleWaveBankFUl
 getWaveArc__17JASSimpleWaveBankFUl:
+getWaveArc__17JASSimpleWaveBankFUl:
 /* 80298F18 00295E58  28 04 00 00 */	cmplwi r4, 0
-/* 80298F1C 00295E5C  41 82 00 0C */	beq func_80298F28
+/* 80298F1C 00295E5C  41 82 00 0C */	beq lbl_80298F28
 /* 80298F20 00295E60  38 60 00 00 */	li r3, 0
 /* 80298F24 00295E64  4E 80 00 20 */	blr 
-
-/* 80298F28 0010 .text      func_80298F28                  func_80298F28                  */
-.global func_80298F28
-func_80298F28:
+lbl_80298F28:
 /* 80298F28 00295E68  28 03 00 00 */	cmplwi r3, 0
 /* 80298F2C 00295E6C  4D 82 00 20 */	beqlr 
 /* 80298F30 00295E70  38 63 00 04 */	addi r3, r3, 4
 /* 80298F34 00295E74  4E 80 00 20 */	blr 
 
-/* 80298F38 0018 .text      getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv */
+/* 80298F38 0024 .text      getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv */
 .global getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv
+getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv:
 getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv:
 /* 80298F38 00295E78  80 83 00 28 */	lwz r4, 0x28(r3)
 /* 80298F3C 00295E7C  80 84 00 38 */	lwz r4, 0x38(r4)
 /* 80298F40 00295E80  28 04 00 00 */	cmplwi r4, 0
-/* 80298F44 00295E84  40 82 00 0C */	bne func_80298F50
+/* 80298F44 00295E84  40 82 00 0C */	bne lbl_80298F50
 /* 80298F48 00295E88  38 60 00 00 */	li r3, 0
 /* 80298F4C 00295E8C  4E 80 00 20 */	blr 
-
-/* 80298F50 000C .text      func_80298F50                  func_80298F50                  */
-.global func_80298F50
-func_80298F50:
+lbl_80298F50:
 /* 80298F50 00295E90  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80298F54 00295E94  7C 64 02 14 */	add r3, r4, r0
 /* 80298F58 00295E98  4E 80 00 20 */	blr 
 
 /* 80298F5C 0034 .text      __ct__Q217JASSimpleWaveBank11TWaveHandleFv __ct__Q217JASSimpleWaveBank11TWaveHandleFv */
 .global __ct__Q217JASSimpleWaveBank11TWaveHandleFv
+__ct__Q217JASSimpleWaveBank11TWaveHandleFv:
 __ct__Q217JASSimpleWaveBank11TWaveHandleFv:
 /* 80298F5C 00295E9C  3C 80 80 3C */	lis r4, __vt__13JASWaveHandle@ha
 /* 80298F60 00295EA0  38 04 77 54 */	addi r0, r4, __vt__13JASWaveHandle@l
@@ -262,11 +250,13 @@ __ct__Q217JASSimpleWaveBank11TWaveHandleFv:
 /* 80298F90 0008 .text      getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv */
 .global getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv
 getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv:
+getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv:
 /* 80298F90 00295ED0  38 63 00 04 */	addi r3, r3, 4
 /* 80298F94 00295ED4  4E 80 00 20 */	blr 
 
 /* 80298F98 0008 .text      getArcCount__17JASSimpleWaveBankCFv getArcCount__17JASSimpleWaveBankCFv */
 .global getArcCount__17JASSimpleWaveBankCFv
+getArcCount__17JASSimpleWaveBankCFv:
 getArcCount__17JASSimpleWaveBankCFv:
 /* 80298F98 00295ED8  38 60 00 01 */	li r3, 1
 /* 80298F9C 00295EDC  4E 80 00 20 */	blr 
@@ -274,15 +264,18 @@ getArcCount__17JASSimpleWaveBankCFv:
 /* 80298FA0 0004 .text      onLoadDone__10JASWaveArcFv     onLoadDone__10JASWaveArcFv     */
 .global onLoadDone__10JASWaveArcFv
 onLoadDone__10JASWaveArcFv:
+onLoadDone__10JASWaveArcFv:
 /* 80298FA0 00295EE0  4E 80 00 20 */	blr 
 
 /* 80298FA4 0004 .text      onEraseDone__10JASWaveArcFv    onEraseDone__10JASWaveArcFv    */
 .global onEraseDone__10JASWaveArcFv
 onEraseDone__10JASWaveArcFv:
+onEraseDone__10JASWaveArcFv:
 /* 80298FA4 00295EE4  4E 80 00 20 */	blr 
 
-/* 80298FA8 0008 .text      func_80298FA8                  @4@__dt__17JASSimpleWaveBankFv */
+/* 80298FA8 0008 .text      @4@__dt__17JASSimpleWaveBankFv func_80298FA8                  */
 .global func_80298FA8
+func_80298FA8:
 func_80298FA8:
 /* 80298FA8 00295EE8  38 63 FF FC */	addi r3, r3, -4
 /* 80298FAC 00295EEC  4B FF FD 48 */	b __dt__17JASSimpleWaveBankFv
@@ -295,14 +288,26 @@ func_80298FA8:
 /* 803C7798 0014 .data      __vt__Q217JASSimpleWaveBank11TWaveHandle __vt__Q217JASSimpleWaveBank11TWaveHandle */
 .global __vt__Q217JASSimpleWaveBank11TWaveHandle
 __vt__Q217JASSimpleWaveBank11TWaveHandle:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x8d, 0x84, 0x80, 0x29, 0x8f, 0x90 /* baserom.dol+0x3c4798 */
-.byte 0x80, 0x29, 0x8f, 0x38 /* baserom.dol+0x3c47a8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__Q217JASSimpleWaveBank11TWaveHandleFv
+.4byte getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv
+.4byte getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv
 
 /* 803C77AC 0030 .data      __vt__17JASSimpleWaveBank      __vt__17JASSimpleWaveBank      */
 .global __vt__17JASSimpleWaveBank
 __vt__17JASSimpleWaveBank:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x8c, 0xf4, 0x80, 0x29, 0x8e, 0x60 /* baserom.dol+0x3c47ac */
-.byte 0x80, 0x29, 0x8f, 0x18, 0x80, 0x29, 0x8f, 0x98, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c47bc */
-.byte 0x80, 0x29, 0x8f, 0xa8, 0x80, 0x29, 0xa6, 0x64, 0x80, 0x29, 0x8f, 0xa0, 0x80, 0x29, 0x8f, 0xa4 /* baserom.dol+0x3c47cc */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c47dc */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__17JASSimpleWaveBankFv
+.4byte getWaveHandle__17JASSimpleWaveBankCFUl
+.4byte getWaveArc__17JASSimpleWaveBankFUl
+.4byte getArcCount__17JASSimpleWaveBankCFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80298FA8
+.4byte onDispose__10JASWaveArcFv
+.4byte onLoadDone__10JASWaveArcFv
+.4byte onEraseDone__10JASWaveArcFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -19,5 +19,5 @@ gauDataSize_TEParagraph_data__Q37JStudio3stb4data:
 .global ga4cSignature__Q37JStudio3stb4data
 ga4cSignature__Q37JStudio3stb4data:
 .byte 0x53, 0x54, 0x42, 0x00 /* baserom.dol+0x3d4338 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d433c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

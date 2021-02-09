@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802E4C54 003C .text      createManager__8JUTVideoFPC16_GXRenderModeObj createManager__8JUTVideoFPC16_GXRenderModeObj */
+/* 802E4C54 0058 .text      createManager__8JUTVideoFPC16_GXRenderModeObj createManager__8JUTVideoFPC16_GXRenderModeObj */
 .global createManager__8JUTVideoFPC16_GXRenderModeObj
+createManager__8JUTVideoFPC16_GXRenderModeObj:
 createManager__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4C54 002E1B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4C58 002E1B98  7C 08 02 A6 */	mflr r0
@@ -14,23 +15,17 @@ createManager__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4C64 002E1BA4  7C 7F 1B 78 */	mr r31, r3
 /* 802E4C68 002E1BA8  80 0D 8F B8 */	lwz r0, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4C6C 002E1BAC  28 00 00 00 */	cmplwi r0, 0
-/* 802E4C70 002E1BB0  40 82 00 24 */	bne func_802E4C94
+/* 802E4C70 002E1BB0  40 82 00 24 */	bne lbl_802E4C94
 /* 802E4C74 002E1BB4  38 60 00 58 */	li r3, 0x58
 /* 802E4C78 002E1BB8  4B FE 9F D5 */	bl __nw__FUl
 /* 802E4C7C 002E1BBC  7C 60 1B 79 */	or. r0, r3, r3
-/* 802E4C80 002E1BC0  41 82 00 10 */	beq func_802E4C90
+/* 802E4C80 002E1BC0  41 82 00 10 */	beq lbl_802E4C90
 /* 802E4C84 002E1BC4  7F E4 FB 78 */	mr r4, r31
 /* 802E4C88 002E1BC8  48 00 00 6D */	bl __ct__8JUTVideoFPC16_GXRenderModeObj
 /* 802E4C8C 002E1BCC  7C 60 1B 78 */	mr r0, r3
-
-/* 802E4C90 0004 .text      func_802E4C90                  func_802E4C90                  */
-.global func_802E4C90
-func_802E4C90:
+lbl_802E4C90:
 /* 802E4C90 002E1BD0  90 0D 8F B8 */	stw r0, sManager__8JUTVideo-_SDA_BASE_(r13)
-
-/* 802E4C94 0018 .text      func_802E4C94                  func_802E4C94                  */
-.global func_802E4C94
-func_802E4C94:
+lbl_802E4C94:
 /* 802E4C94 002E1BD4  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4C98 002E1BD8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E4C9C 002E1BDC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -38,31 +33,26 @@ func_802E4C94:
 /* 802E4CA4 002E1BE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4CA8 002E1BE8  4E 80 00 20 */	blr 
 
-/* 802E4CAC 0030 .text      destroyManager__8JUTVideoFv    destroyManager__8JUTVideoFv    */
+/* 802E4CAC 0048 .text      destroyManager__8JUTVideoFv    destroyManager__8JUTVideoFv    */
 .global destroyManager__8JUTVideoFv
+destroyManager__8JUTVideoFv:
 destroyManager__8JUTVideoFv:
 /* 802E4CAC 002E1BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4CB0 002E1BF0  7C 08 02 A6 */	mflr r0
 /* 802E4CB4 002E1BF4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E4CB8 002E1BF8  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4CBC 002E1BFC  28 03 00 00 */	cmplwi r3, 0
-/* 802E4CC0 002E1C00  41 82 00 24 */	beq func_802E4CE4
-/* 802E4CC4 002E1C04  41 82 00 18 */	beq func_802E4CDC
+/* 802E4CC0 002E1C00  41 82 00 24 */	beq lbl_802E4CE4
+/* 802E4CC4 002E1C04  41 82 00 18 */	beq lbl_802E4CDC
 /* 802E4CC8 002E1C08  38 80 00 01 */	li r4, 1
 /* 802E4CCC 002E1C0C  81 83 00 00 */	lwz r12, 0(r3)
 /* 802E4CD0 002E1C10  81 8C 00 08 */	lwz r12, 8(r12)
 /* 802E4CD4 002E1C14  7D 89 03 A6 */	mtctr r12
 /* 802E4CD8 002E1C18  4E 80 04 21 */	bctrl 
-
-/* 802E4CDC 0008 .text      func_802E4CDC                  func_802E4CDC                  */
-.global func_802E4CDC
-func_802E4CDC:
+lbl_802E4CDC:
 /* 802E4CDC 002E1C1C  38 00 00 00 */	li r0, 0
 /* 802E4CE0 002E1C20  90 0D 8F B8 */	stw r0, sManager__8JUTVideo-_SDA_BASE_(r13)
-
-/* 802E4CE4 0010 .text      func_802E4CE4                  func_802E4CE4                  */
-.global func_802E4CE4
-func_802E4CE4:
+lbl_802E4CE4:
 /* 802E4CE4 002E1C24  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E4CE8 002E1C28  7C 08 03 A6 */	mtlr r0
 /* 802E4CEC 002E1C2C  38 21 00 10 */	addi r1, r1, 0x10
@@ -70,6 +60,7 @@ func_802E4CE4:
 
 /* 802E4CF4 00F4 .text      __ct__8JUTVideoFPC16_GXRenderModeObj __ct__8JUTVideoFPC16_GXRenderModeObj */
 .global __ct__8JUTVideoFPC16_GXRenderModeObj
+__ct__8JUTVideoFPC16_GXRenderModeObj:
 __ct__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4CF4 002E1C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4CF8 002E1C38  7C 08 02 A6 */	mflr r0
@@ -133,8 +124,9 @@ __ct__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E4DE0 002E1D20  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4DE4 002E1D24  4E 80 00 20 */	blr 
 
-/* 802E4DE8 004C .text      __dt__8JUTVideoFv              __dt__8JUTVideoFv              */
+/* 802E4DE8 0068 .text      __dt__8JUTVideoFv              __dt__8JUTVideoFv              */
 .global __dt__8JUTVideoFv
+__dt__8JUTVideoFv:
 __dt__8JUTVideoFv:
 /* 802E4DE8 002E1D28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4DEC 002E1D2C  7C 08 02 A6 */	mflr r0
@@ -143,7 +135,7 @@ __dt__8JUTVideoFv:
 /* 802E4DF8 002E1D38  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E4DFC 002E1D3C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E4E00 002E1D40  7C 9F 23 78 */	mr r31, r4
-/* 802E4E04 002E1D44  41 82 00 30 */	beq func_802E4E34
+/* 802E4E04 002E1D44  41 82 00 30 */	beq lbl_802E4E34
 /* 802E4E08 002E1D48  3C 60 80 3D */	lis r3, __vt__8JUTVideo@ha
 /* 802E4E0C 002E1D4C  38 03 C9 80 */	addi r0, r3, __vt__8JUTVideo@l
 /* 802E4E10 002E1D50  90 1E 00 00 */	stw r0, 0(r30)
@@ -152,13 +144,10 @@ __dt__8JUTVideoFv:
 /* 802E4E1C 002E1D5C  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 802E4E20 002E1D60  48 06 74 05 */	bl VISetPostRetraceCallback
 /* 802E4E24 002E1D64  7F E0 07 35 */	extsh. r0, r31
-/* 802E4E28 002E1D68  40 81 00 0C */	ble func_802E4E34
+/* 802E4E28 002E1D68  40 81 00 0C */	ble lbl_802E4E34
 /* 802E4E2C 002E1D6C  7F C3 F3 78 */	mr r3, r30
 /* 802E4E30 002E1D70  4B FE 9F 0D */	bl __dl__FPv
-
-/* 802E4E34 001C .text      func_802E4E34                  func_802E4E34                  */
-.global func_802E4E34
-func_802E4E34:
+lbl_802E4E34:
 /* 802E4E34 002E1D74  7F C3 F3 78 */	mr r3, r30
 /* 802E4E38 002E1D78  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E4E3C 002E1D7C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -167,8 +156,9 @@ func_802E4E34:
 /* 802E4E48 002E1D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E4E4C 002E1D8C  4E 80 00 20 */	blr 
 
-/* 802E4E50 0030 .text      preRetraceProc__8JUTVideoFUl   preRetraceProc__8JUTVideoFUl   */
+/* 802E4E50 0238 .text      preRetraceProc__8JUTVideoFUl   preRetraceProc__8JUTVideoFUl   */
 .global preRetraceProc__8JUTVideoFUl
+preRetraceProc__8JUTVideoFUl:
 preRetraceProc__8JUTVideoFUl:
 /* 802E4E50 002E1D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4E54 002E1D94  7C 08 02 A6 */	mflr r0
@@ -176,16 +166,13 @@ preRetraceProc__8JUTVideoFUl:
 /* 802E4E5C 002E1D9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E4E60 002E1DA0  80 8D 8F B8 */	lwz r4, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4E64 002E1DA4  28 04 00 00 */	cmplwi r4, 0
-/* 802E4E68 002E1DA8  41 82 02 0C */	beq func_802E5074
+/* 802E4E68 002E1DA8  41 82 02 0C */	beq lbl_802E5074
 /* 802E4E6C 002E1DAC  81 84 00 24 */	lwz r12, 0x24(r4)
 /* 802E4E70 002E1DB0  28 0C 00 00 */	cmplwi r12, 0
-/* 802E4E74 002E1DB4  41 82 00 0C */	beq func_802E4E80
+/* 802E4E74 002E1DB4  41 82 00 0C */	beq lbl_802E4E80
 /* 802E4E78 002E1DB8  7D 89 03 A6 */	mtctr r12
 /* 802E4E7C 002E1DBC  4E 80 04 21 */	bctrl 
-
-/* 802E4E80 0030 .text      func_802E4E80                  func_802E4E80                  */
-.global func_802E4E80
-func_802E4E80:
+lbl_802E4E80:
 /* 802E4E80 002E1DC0  48 05 D8 95 */	bl OSGetTick
 /* 802E4E84 002E1DC4  80 0D 8F BC */	lwz r0, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4E88 002E1DC8  7C 00 18 50 */	subf r0, r0, r3
@@ -193,51 +180,39 @@ func_802E4E80:
 /* 802E4E90 002E1DD0  90 6D 8F BC */	stw r3, sVideoLastTick__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4E94 002E1DD4  83 ED 8F D0 */	lwz r31, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E4E98 002E1DD8  28 1F 00 00 */	cmplwi r31, 0
-/* 802E4E9C 002E1DDC  40 82 00 14 */	bne func_802E4EB0
+/* 802E4E9C 002E1DDC  40 82 00 14 */	bne lbl_802E4EB0
 /* 802E4EA0 002E1DE0  38 60 00 01 */	li r3, 1
 /* 802E4EA4 002E1DE4  48 06 89 9D */	bl VISetBlack
 /* 802E4EA8 002E1DE8  48 06 87 ED */	bl VIFlush
-/* 802E4EAC 002E1DEC  48 00 01 C8 */	b func_802E5074
-
-/* 802E4EB0 001C .text      func_802E4EB0                  func_802E4EB0                  */
-.global func_802E4EB0
-func_802E4EB0:
-/* 802E4EB0 002E1DF0  88 0D 8F CC */	lbz r0, sym_8045154C-_SDA_BASE_(r13)
+/* 802E4EAC 002E1DEC  48 00 01 C8 */	b lbl_802E5074
+lbl_802E4EB0:
+/* 802E4EB0 002E1DF0  88 0D 8F CC */	lbz r0, data_8045154C-_SDA_BASE_(r13)
 /* 802E4EB4 002E1DF4  7C 00 07 75 */	extsb. r0, r0
-/* 802E4EB8 002E1DF8  40 82 00 14 */	bne func_802E4ECC
+/* 802E4EB8 002E1DF8  40 82 00 14 */	bne lbl_802E4ECC
 /* 802E4EBC 002E1DFC  38 00 00 00 */	li r0, 0
-/* 802E4EC0 002E1E00  90 0D 8F C8 */	stw r0, sym_80451548-_SDA_BASE_(r13)
+/* 802E4EC0 002E1E00  90 0D 8F C8 */	stw r0, data_80451548-_SDA_BASE_(r13)
 /* 802E4EC4 002E1E04  38 00 00 01 */	li r0, 1
-/* 802E4EC8 002E1E08  98 0D 8F CC */	stb r0, sym_8045154C-_SDA_BASE_(r13)
-
-/* 802E4ECC 0024 .text      func_802E4ECC                  func_802E4ECC                  */
-.global func_802E4ECC
-func_802E4ECC:
-/* 802E4ECC 002E1E0C  80 8D 8F C8 */	lwz r4, sym_80451548-_SDA_BASE_(r13)
+/* 802E4EC8 002E1E08  98 0D 8F CC */	stb r0, data_8045154C-_SDA_BASE_(r13)
+lbl_802E4ECC:
+/* 802E4ECC 002E1E0C  80 8D 8F C8 */	lwz r4, data_80451548-_SDA_BASE_(r13)
 /* 802E4ED0 002E1E10  28 04 00 00 */	cmplwi r4, 0
-/* 802E4ED4 002E1E14  41 82 00 1C */	beq func_802E4EF0
+/* 802E4ED4 002E1E14  41 82 00 1C */	beq lbl_802E4EF0
 /* 802E4ED8 002E1E18  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4EDC 002E1E1C  80 C3 00 04 */	lwz r6, 4(r3)
 /* 802E4EE0 002E1E20  80 6D 8F A8 */	lwz r3, sDirectPrint__14JUTDirectPrint-_SDA_BASE_(r13)
 /* 802E4EE4 002E1E24  A0 A6 00 04 */	lhz r5, 4(r6)
 /* 802E4EE8 002E1E28  A0 C6 00 06 */	lhz r6, 6(r6)
 /* 802E4EEC 002E1E2C  4B FF F6 81 */	bl changeFrameBuffer__14JUTDirectPrintFPvUsUs
-
-/* 802E4EF0 0020 .text      func_802E4EF0                  func_802E4EF0                  */
-.global func_802E4EF0
-func_802E4EF0:
+lbl_802E4EF0:
 /* 802E4EF0 002E1E30  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E4EF4 002E1E34  88 03 00 2C */	lbz r0, 0x2c(r3)
 /* 802E4EF8 002E1E38  28 00 00 01 */	cmplwi r0, 1
-/* 802E4EFC 002E1E3C  40 82 00 38 */	bne func_802E4F34
+/* 802E4EFC 002E1E3C  40 82 00 38 */	bne lbl_802E4F34
 /* 802E4F00 002E1E40  80 83 00 30 */	lwz r4, 0x30(r3)
 /* 802E4F04 002E1E44  2C 04 00 00 */	cmpwi r4, 0
-/* 802E4F08 002E1E48  40 81 00 08 */	ble func_802E4F10
+/* 802E4F08 002E1E48  40 81 00 08 */	ble lbl_802E4F10
 /* 802E4F0C 002E1E4C  38 84 FF FF */	addi r4, r4, -1
-
-/* 802E4F10 0024 .text      func_802E4F10                  func_802E4F10                  */
-.global func_802E4F10
-func_802E4F10:
+lbl_802E4F10:
 /* 802E4F10 002E1E50  90 83 00 30 */	stw r4, 0x30(r3)
 /* 802E4F14 002E1E54  30 04 FF FF */	addic r0, r4, -1
 /* 802E4F18 002E1E58  7C 00 21 10 */	subfe r0, r0, r4
@@ -246,109 +221,76 @@ func_802E4F10:
 /* 802E4F24 002E1E64  38 60 00 01 */	li r3, 1
 /* 802E4F28 002E1E68  48 06 89 19 */	bl VISetBlack
 /* 802E4F2C 002E1E6C  48 06 87 69 */	bl VIFlush
-/* 802E4F30 002E1E70  48 00 01 44 */	b func_802E5074
-
-/* 802E4F34 0018 .text      func_802E4F34                  func_802E4F34                  */
-.global func_802E4F34
-func_802E4F34:
+/* 802E4F30 002E1E70  48 00 01 44 */	b lbl_802E5074
+lbl_802E4F34:
 /* 802E4F34 002E1E74  28 1F 00 00 */	cmplwi r31, 0
-/* 802E4F38 002E1E78  40 82 00 14 */	bne func_802E4F4C
+/* 802E4F38 002E1E78  40 82 00 14 */	bne lbl_802E4F4C
 /* 802E4F3C 002E1E7C  38 60 00 01 */	li r3, 1
 /* 802E4F40 002E1E80  48 06 89 01 */	bl VISetBlack
 /* 802E4F44 002E1E84  48 06 87 51 */	bl VIFlush
-/* 802E4F48 002E1E88  48 00 01 2C */	b func_802E5074
-
-/* 802E4F4C 0014 .text      func_802E4F4C                  func_802E4F4C                  */
-.global func_802E4F4C
-func_802E4F4C:
+/* 802E4F48 002E1E88  48 00 01 2C */	b lbl_802E5074
+lbl_802E4F4C:
 /* 802E4F4C 002E1E8C  80 1F 00 10 */	lwz r0, 0x10(r31)
 /* 802E4F50 002E1E90  2C 00 00 03 */	cmpwi r0, 3
-/* 802E4F54 002E1E94  41 82 00 0C */	beq func_802E4F60
+/* 802E4F54 002E1E94  41 82 00 0C */	beq lbl_802E4F60
 /* 802E4F58 002E1E98  2C 00 00 02 */	cmpwi r0, 2
-/* 802E4F5C 002E1E9C  40 82 00 80 */	bne func_802E4FDC
-
-/* 802E4F60 002C .text      func_802E4F60                  func_802E4F60                  */
-.global func_802E4F60
-func_802E4F60:
-/* 802E4F60 002E1EA0  88 0D 8F C4 */	lbz r0, sym_80451544-_SDA_BASE_(r13)
+/* 802E4F5C 002E1E9C  40 82 00 80 */	bne lbl_802E4FDC
+lbl_802E4F60:
+/* 802E4F60 002E1EA0  88 0D 8F C4 */	lbz r0, data_80451544-_SDA_BASE_(r13)
 /* 802E4F64 002E1EA4  28 00 00 00 */	cmplwi r0, 0
-/* 802E4F68 002E1EA8  40 82 01 0C */	bne func_802E5074
+/* 802E4F68 002E1EA8  40 82 01 0C */	bne lbl_802E5074
 /* 802E4F6C 002E1EAC  A8 1F 00 16 */	lha r0, 0x16(r31)
 /* 802E4F70 002E1EB0  7C 03 07 35 */	extsh. r3, r0
 /* 802E4F74 002E1EB4  B0 1F 00 18 */	sth r0, 0x18(r31)
-/* 802E4F78 002E1EB8  40 80 00 14 */	bge func_802E4F8C
+/* 802E4F78 002E1EB8  40 80 00 14 */	bge lbl_802E4F8C
 /* 802E4F7C 002E1EBC  38 60 00 01 */	li r3, 1
 /* 802E4F80 002E1EC0  48 06 88 C1 */	bl VISetBlack
 /* 802E4F84 002E1EC4  48 06 87 11 */	bl VIFlush
-/* 802E4F88 002E1EC8  48 00 00 EC */	b func_802E5074
-
-/* 802E4F8C 0018 .text      func_802E4F8C                  func_802E4F8C                  */
-.global func_802E4F8C
-func_802E4F8C:
+/* 802E4F88 002E1EC8  48 00 00 EC */	b lbl_802E5074
+lbl_802E4F8C:
 /* 802E4F8C 002E1ECC  A8 7F 00 18 */	lha r3, 0x18(r31)
 /* 802E4F90 002E1ED0  7C 60 07 35 */	extsh. r0, r3
-/* 802E4F94 002E1ED4  41 80 00 10 */	blt func_802E4FA4
+/* 802E4F94 002E1ED4  41 80 00 10 */	blt lbl_802E4FA4
 /* 802E4F98 002E1ED8  54 60 10 3A */	slwi r0, r3, 2
 /* 802E4F9C 002E1EDC  7C 7F 00 2E */	lwzx r3, r31, r0
-/* 802E4FA0 002E1EE0  48 00 00 08 */	b func_802E4FA8
-
-/* 802E4FA4 0004 .text      func_802E4FA4                  func_802E4FA4                  */
-.global func_802E4FA4
-func_802E4FA4:
+/* 802E4FA0 002E1EE0  48 00 00 08 */	b lbl_802E4FA8
+lbl_802E4FA4:
 /* 802E4FA4 002E1EE4  38 60 00 00 */	li r3, 0
-
-/* 802E4FA8 0028 .text      func_802E4FA8                  func_802E4FA8                  */
-.global func_802E4FA8
-func_802E4FA8:
+lbl_802E4FA8:
 /* 802E4FA8 002E1EE8  48 06 88 1D */	bl VISetNextFrameBuffer
 /* 802E4FAC 002E1EEC  48 06 86 E9 */	bl VIFlush
 /* 802E4FB0 002E1EF0  38 60 00 00 */	li r3, 0
 /* 802E4FB4 002E1EF4  48 06 88 8D */	bl VISetBlack
 /* 802E4FB8 002E1EF8  A8 7F 00 18 */	lha r3, 0x18(r31)
 /* 802E4FBC 002E1EFC  7C 60 07 35 */	extsh. r0, r3
-/* 802E4FC0 002E1F00  41 80 00 10 */	blt func_802E4FD0
+/* 802E4FC0 002E1F00  41 80 00 10 */	blt lbl_802E4FD0
 /* 802E4FC4 002E1F04  54 60 10 3A */	slwi r0, r3, 2
 /* 802E4FC8 002E1F08  7C 1F 00 2E */	lwzx r0, r31, r0
-/* 802E4FCC 002E1F0C  48 00 00 08 */	b func_802E4FD4
-
-/* 802E4FD0 0004 .text      func_802E4FD0                  func_802E4FD0                  */
-.global func_802E4FD0
-func_802E4FD0:
+/* 802E4FCC 002E1F0C  48 00 00 08 */	b lbl_802E4FD4
+lbl_802E4FD0:
 /* 802E4FD0 002E1F10  38 00 00 00 */	li r0, 0
-
-/* 802E4FD4 0008 .text      func_802E4FD4                  func_802E4FD4                  */
-.global func_802E4FD4
-func_802E4FD4:
-/* 802E4FD4 002E1F14  90 0D 8F C8 */	stw r0, sym_80451548-_SDA_BASE_(r13)
-/* 802E4FD8 002E1F18  48 00 00 9C */	b func_802E5074
-
-/* 802E4FDC 003C .text      func_802E4FDC                  func_802E4FDC                  */
-.global func_802E4FDC
-func_802E4FDC:
+lbl_802E4FD4:
+/* 802E4FD4 002E1F14  90 0D 8F C8 */	stw r0, data_80451548-_SDA_BASE_(r13)
+/* 802E4FD8 002E1F18  48 00 00 9C */	b lbl_802E5074
+lbl_802E4FDC:
 /* 802E4FDC 002E1F1C  2C 00 00 01 */	cmpwi r0, 1
-/* 802E4FE0 002E1F20  40 82 00 94 */	bne func_802E5074
+/* 802E4FE0 002E1F20  40 82 00 94 */	bne lbl_802E5074
 /* 802E4FE4 002E1F24  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 802E4FE8 002E1F28  2C 00 00 00 */	cmpwi r0, 0
-/* 802E4FEC 002E1F2C  40 82 00 84 */	bne func_802E5070
+/* 802E4FEC 002E1F2C  40 82 00 84 */	bne lbl_802E5070
 /* 802E4FF0 002E1F30  A8 1F 00 16 */	lha r0, 0x16(r31)
 /* 802E4FF4 002E1F34  7C 00 07 35 */	extsh. r0, r0
-/* 802E4FF8 002E1F38  41 80 00 70 */	blt func_802E5068
+/* 802E4FF8 002E1F38  41 80 00 70 */	blt lbl_802E5068
 /* 802E4FFC 002E1F3C  B0 1F 00 18 */	sth r0, 0x18(r31)
 /* 802E5000 002E1F40  A8 7F 00 18 */	lha r3, 0x18(r31)
 /* 802E5004 002E1F44  7C 60 07 35 */	extsh. r0, r3
-/* 802E5008 002E1F48  41 80 00 10 */	blt func_802E5018
+/* 802E5008 002E1F48  41 80 00 10 */	blt lbl_802E5018
 /* 802E500C 002E1F4C  54 60 10 3A */	slwi r0, r3, 2
 /* 802E5010 002E1F50  7C 7F 00 2E */	lwzx r3, r31, r0
-/* 802E5014 002E1F54  48 00 00 08 */	b func_802E501C
-
-/* 802E5018 0004 .text      func_802E5018                  func_802E5018                  */
-.global func_802E5018
-func_802E5018:
+/* 802E5014 002E1F54  48 00 00 08 */	b lbl_802E501C
+lbl_802E5018:
 /* 802E5018 002E1F58  38 60 00 00 */	li r3, 0
-
-/* 802E501C 002C .text      func_802E501C                  func_802E501C                  */
-.global func_802E501C
-func_802E501C:
+lbl_802E501C:
 /* 802E501C 002E1F5C  38 80 00 01 */	li r4, 1
 /* 802E5020 002E1F60  48 07 82 E5 */	bl GXCopyDisp
 /* 802E5024 002E1F64  48 07 6E A9 */	bl GXFlush
@@ -356,41 +298,26 @@ func_802E501C:
 /* 802E502C 002E1F6C  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 802E5030 002E1F70  A8 7F 00 18 */	lha r3, 0x18(r31)
 /* 802E5034 002E1F74  7C 60 07 35 */	extsh. r0, r3
-/* 802E5038 002E1F78  41 80 00 10 */	blt func_802E5048
+/* 802E5038 002E1F78  41 80 00 10 */	blt lbl_802E5048
 /* 802E503C 002E1F7C  54 60 10 3A */	slwi r0, r3, 2
 /* 802E5040 002E1F80  7C 1F 00 2E */	lwzx r0, r31, r0
-/* 802E5044 002E1F84  48 00 00 08 */	b func_802E504C
-
-/* 802E5048 0004 .text      func_802E5048                  func_802E5048                  */
-.global func_802E5048
-func_802E5048:
+/* 802E5044 002E1F84  48 00 00 08 */	b lbl_802E504C
+lbl_802E5048:
 /* 802E5048 002E1F88  38 00 00 00 */	li r0, 0
-
-/* 802E504C 001C .text      func_802E504C                  func_802E504C                  */
-.global func_802E504C
-func_802E504C:
-/* 802E504C 002E1F8C  90 0D 8F C8 */	stw r0, sym_80451548-_SDA_BASE_(r13)
+lbl_802E504C:
+/* 802E504C 002E1F8C  90 0D 8F C8 */	stw r0, data_80451548-_SDA_BASE_(r13)
 /* 802E5050 002E1F90  48 06 87 E1 */	bl VIGetNextFrameBuffer
 /* 802E5054 002E1F94  28 03 00 00 */	cmplwi r3, 0
-/* 802E5058 002E1F98  41 82 00 18 */	beq func_802E5070
+/* 802E5058 002E1F98  41 82 00 18 */	beq lbl_802E5070
 /* 802E505C 002E1F9C  38 60 00 00 */	li r3, 0
 /* 802E5060 002E1FA0  48 06 87 E1 */	bl VISetBlack
-/* 802E5064 002E1FA4  48 00 00 0C */	b func_802E5070
-
-/* 802E5068 0008 .text      func_802E5068                  func_802E5068                  */
-.global func_802E5068
-func_802E5068:
+/* 802E5064 002E1FA4  48 00 00 0C */	b lbl_802E5070
+lbl_802E5068:
 /* 802E5068 002E1FA8  38 60 00 01 */	li r3, 1
 /* 802E506C 002E1FAC  48 06 87 D5 */	bl VISetBlack
-
-/* 802E5070 0004 .text      func_802E5070                  func_802E5070                  */
-.global func_802E5070
-func_802E5070:
+lbl_802E5070:
 /* 802E5070 002E1FB0  48 06 86 25 */	bl VIFlush
-
-/* 802E5074 0014 .text      func_802E5074                  func_802E5074                  */
-.global func_802E5074
-func_802E5074:
+lbl_802E5074:
 /* 802E5074 002E1FB4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E5078 002E1FB8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E507C 002E1FBC  7C 08 03 A6 */	mtlr r0
@@ -400,11 +327,12 @@ func_802E5074:
 /* 802E5088 0028 .text      drawDoneStart__8JUTVideoFv     drawDoneStart__8JUTVideoFv     */
 .global drawDoneStart__8JUTVideoFv
 drawDoneStart__8JUTVideoFv:
+drawDoneStart__8JUTVideoFv:
 /* 802E5088 002E1FC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E508C 002E1FCC  7C 08 02 A6 */	mflr r0
 /* 802E5090 002E1FD0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E5094 002E1FD4  38 00 00 01 */	li r0, 1
-/* 802E5098 002E1FD8  98 0D 8F C4 */	stb r0, sym_80451544-_SDA_BASE_(r13)
+/* 802E5098 002E1FD8  98 0D 8F C4 */	stb r0, data_80451544-_SDA_BASE_(r13)
 /* 802E509C 002E1FDC  48 07 71 C1 */	bl GXSetDrawDone
 /* 802E50A0 002E1FE0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E50A4 002E1FE4  7C 08 03 A6 */	mtlr r0
@@ -414,99 +342,85 @@ drawDoneStart__8JUTVideoFv:
 /* 802E50B0 000C .text      dummyNoDrawWait__8JUTVideoFv   dummyNoDrawWait__8JUTVideoFv   */
 .global dummyNoDrawWait__8JUTVideoFv
 dummyNoDrawWait__8JUTVideoFv:
+dummyNoDrawWait__8JUTVideoFv:
 /* 802E50B0 002E1FF0  38 00 00 00 */	li r0, 0
-/* 802E50B4 002E1FF4  98 0D 8F C4 */	stb r0, sym_80451544-_SDA_BASE_(r13)
+/* 802E50B4 002E1FF4  98 0D 8F C4 */	stb r0, data_80451544-_SDA_BASE_(r13)
 /* 802E50B8 002E1FF8  4E 80 00 20 */	blr 
 
-/* 802E50BC 0050 .text      drawDoneCallback__8JUTVideoFv  drawDoneCallback__8JUTVideoFv  */
+/* 802E50BC 0088 .text      drawDoneCallback__8JUTVideoFv  drawDoneCallback__8JUTVideoFv  */
 .global drawDoneCallback__8JUTVideoFv
+drawDoneCallback__8JUTVideoFv:
 drawDoneCallback__8JUTVideoFv:
 /* 802E50BC 002E1FFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E50C0 002E2000  7C 08 02 A6 */	mflr r0
 /* 802E50C4 002E2004  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E50C8 002E2008  80 8D 8F D0 */	lwz r4, sManager__6JUTXfb-_SDA_BASE_(r13)
 /* 802E50CC 002E200C  28 04 00 00 */	cmplwi r4, 0
-/* 802E50D0 002E2010  41 82 00 64 */	beq func_802E5134
+/* 802E50D0 002E2010  41 82 00 64 */	beq lbl_802E5134
 /* 802E50D4 002E2014  38 60 00 00 */	li r3, 0
-/* 802E50D8 002E2018  98 6D 8F C4 */	stb r3, sym_80451544-_SDA_BASE_(r13)
+/* 802E50D8 002E2018  98 6D 8F C4 */	stb r3, data_80451544-_SDA_BASE_(r13)
 /* 802E50DC 002E201C  80 04 00 10 */	lwz r0, 0x10(r4)
 /* 802E50E0 002E2020  2C 00 00 01 */	cmpwi r0, 1
-/* 802E50E4 002E2024  40 82 00 50 */	bne func_802E5134
+/* 802E50E4 002E2024  40 82 00 50 */	bne lbl_802E5134
 /* 802E50E8 002E2028  80 04 00 1C */	lwz r0, 0x1c(r4)
 /* 802E50EC 002E202C  2C 00 00 01 */	cmpwi r0, 1
-/* 802E50F0 002E2030  40 82 00 44 */	bne func_802E5134
+/* 802E50F0 002E2030  40 82 00 44 */	bne lbl_802E5134
 /* 802E50F4 002E2034  90 64 00 1C */	stw r3, 0x1c(r4)
 /* 802E50F8 002E2038  A8 A4 00 16 */	lha r5, 0x16(r4)
 /* 802E50FC 002E203C  7C A0 07 35 */	extsh. r0, r5
-/* 802E5100 002E2040  41 80 00 0C */	blt func_802E510C
+/* 802E5100 002E2040  41 80 00 0C */	blt lbl_802E510C
 /* 802E5104 002E2044  54 A0 10 3A */	slwi r0, r5, 2
 /* 802E5108 002E2048  7C 64 00 2E */	lwzx r3, r4, r0
-
-/* 802E510C 001C .text      func_802E510C                  func_802E510C                  */
-.global func_802E510C
-func_802E510C:
+lbl_802E510C:
 /* 802E510C 002E204C  28 03 00 00 */	cmplwi r3, 0
-/* 802E5110 002E2050  41 82 00 24 */	beq func_802E5134
+/* 802E5110 002E2050  41 82 00 24 */	beq lbl_802E5134
 /* 802E5114 002E2054  7C A0 07 35 */	extsh. r0, r5
-/* 802E5118 002E2058  41 80 00 10 */	blt func_802E5128
+/* 802E5118 002E2058  41 80 00 10 */	blt lbl_802E5128
 /* 802E511C 002E205C  54 A0 10 3A */	slwi r0, r5, 2
 /* 802E5120 002E2060  7C 64 00 2E */	lwzx r3, r4, r0
-/* 802E5124 002E2064  48 00 00 08 */	b func_802E512C
-
-/* 802E5128 0004 .text      func_802E5128                  func_802E5128                  */
-.global func_802E5128
-func_802E5128:
+/* 802E5124 002E2064  48 00 00 08 */	b lbl_802E512C
+lbl_802E5128:
 /* 802E5128 002E2068  38 60 00 00 */	li r3, 0
-
-/* 802E512C 0008 .text      func_802E512C                  func_802E512C                  */
-.global func_802E512C
-func_802E512C:
+lbl_802E512C:
 /* 802E512C 002E206C  48 06 86 99 */	bl VISetNextFrameBuffer
 /* 802E5130 002E2070  48 06 85 65 */	bl VIFlush
-
-/* 802E5134 0010 .text      func_802E5134                  func_802E5134                  */
-.global func_802E5134
-func_802E5134:
+lbl_802E5134:
 /* 802E5134 002E2074  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E5138 002E2078  7C 08 03 A6 */	mtlr r0
 /* 802E513C 002E207C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5140 002E2080  4E 80 00 20 */	blr 
 
-/* 802E5144 002C .text      postRetraceProc__8JUTVideoFUl  postRetraceProc__8JUTVideoFUl  */
+/* 802E5144 0054 .text      postRetraceProc__8JUTVideoFUl  postRetraceProc__8JUTVideoFUl  */
 .global postRetraceProc__8JUTVideoFUl
+postRetraceProc__8JUTVideoFUl:
 postRetraceProc__8JUTVideoFUl:
 /* 802E5144 002E2084  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E5148 002E2088  7C 08 02 A6 */	mflr r0
 /* 802E514C 002E208C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E5150 002E2090  80 8D 8F B8 */	lwz r4, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E5154 002E2094  28 04 00 00 */	cmplwi r4, 0
-/* 802E5158 002E2098  41 82 00 30 */	beq func_802E5188
+/* 802E5158 002E2098  41 82 00 30 */	beq lbl_802E5188
 /* 802E515C 002E209C  81 84 00 28 */	lwz r12, 0x28(r4)
 /* 802E5160 002E20A0  28 0C 00 00 */	cmplwi r12, 0
-/* 802E5164 002E20A4  41 82 00 0C */	beq func_802E5170
+/* 802E5164 002E20A4  41 82 00 0C */	beq lbl_802E5170
 /* 802E5168 002E20A8  7D 89 03 A6 */	mtctr r12
 /* 802E516C 002E20AC  4E 80 04 21 */	bctrl 
-
-/* 802E5170 0018 .text      func_802E5170                  func_802E5170                  */
-.global func_802E5170
-func_802E5170:
+lbl_802E5170:
 /* 802E5170 002E20B0  48 06 87 4D */	bl VIGetRetraceCount
 /* 802E5174 002E20B4  7C 64 1B 78 */	mr r4, r3
 /* 802E5178 002E20B8  80 6D 8F B8 */	lwz r3, sManager__8JUTVideo-_SDA_BASE_(r13)
 /* 802E517C 002E20BC  38 63 00 38 */	addi r3, r3, 0x38
 /* 802E5180 002E20C0  38 A0 00 00 */	li r5, 0
 /* 802E5184 002E20C4  48 05 98 71 */	bl OSSendMessage
-
-/* 802E5188 0010 .text      func_802E5188                  func_802E5188                  */
-.global func_802E5188
-func_802E5188:
+lbl_802E5188:
 /* 802E5188 002E20C8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E518C 002E20CC  7C 08 03 A6 */	mtlr r0
 /* 802E5190 002E20D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E5194 002E20D4  4E 80 00 20 */	blr 
 
-/* 802E5198 0040 .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj setRenderMode__8JUTVideoFPC16_GXRenderModeObj */
+/* 802E5198 0078 .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj setRenderMode__8JUTVideoFPC16_GXRenderModeObj */
 .global setRenderMode__8JUTVideoFPC16_GXRenderModeObj
+setRenderMode__8JUTVideoFPC16_GXRenderModeObj:
 setRenderMode__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E5198 002E20D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E519C 002E20DC  7C 08 02 A6 */	mflr r0
@@ -515,32 +429,26 @@ setRenderMode__8JUTVideoFPC16_GXRenderModeObj:
 /* 802E51A8 002E20E8  7C 7F 1B 78 */	mr r31, r3
 /* 802E51AC 002E20EC  80 A3 00 04 */	lwz r5, 4(r3)
 /* 802E51B0 002E20F0  28 05 00 00 */	cmplwi r5, 0
-/* 802E51B4 002E20F4  41 82 00 24 */	beq func_802E51D8
+/* 802E51B4 002E20F4  41 82 00 24 */	beq lbl_802E51D8
 /* 802E51B8 002E20F8  80 64 00 00 */	lwz r3, 0(r4)
 /* 802E51BC 002E20FC  80 05 00 00 */	lwz r0, 0(r5)
 /* 802E51C0 002E2100  7C 03 00 00 */	cmpw r3, r0
-/* 802E51C4 002E2104  41 82 00 14 */	beq func_802E51D8
+/* 802E51C4 002E2104  41 82 00 14 */	beq lbl_802E51D8
 /* 802E51C8 002E2108  38 00 00 01 */	li r0, 1
 /* 802E51CC 002E210C  98 1F 00 2C */	stb r0, 0x2c(r31)
 /* 802E51D0 002E2110  38 00 00 04 */	li r0, 4
 /* 802E51D4 002E2114  90 1F 00 30 */	stw r0, 0x30(r31)
-
-/* 802E51D8 0024 .text      func_802E51D8                  func_802E51D8                  */
-.global func_802E51D8
-func_802E51D8:
+lbl_802E51D8:
 /* 802E51D8 002E2118  90 9F 00 04 */	stw r4, 4(r31)
 /* 802E51DC 002E211C  80 7F 00 04 */	lwz r3, 4(r31)
 /* 802E51E0 002E2120  48 06 7C AD */	bl VIConfigure
 /* 802E51E4 002E2124  48 06 84 B1 */	bl VIFlush
 /* 802E51E8 002E2128  88 1F 00 2C */	lbz r0, 0x2c(r31)
 /* 802E51EC 002E212C  28 00 00 00 */	cmplwi r0, 0
-/* 802E51F0 002E2130  41 82 00 0C */	beq func_802E51FC
+/* 802E51F0 002E2130  41 82 00 0C */	beq lbl_802E51FC
 /* 802E51F4 002E2134  48 06 77 D1 */	bl VIWaitForRetrace
 /* 802E51F8 002E2138  48 06 77 CD */	bl VIWaitForRetrace
-
-/* 802E51FC 0014 .text      func_802E51FC                  func_802E51FC                  */
-.global func_802E51FC
-func_802E51FC:
+lbl_802E51FC:
 /* 802E51FC 002E213C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E5200 002E2140  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E5204 002E2144  7C 08 03 A6 */	mtlr r0
@@ -549,6 +457,7 @@ func_802E51FC:
 
 /* 802E5210 0004 .text      waitRetraceIfNeed__8JUTVideoFv waitRetraceIfNeed__8JUTVideoFv */
 .global waitRetraceIfNeed__8JUTVideoFv
+waitRetraceIfNeed__8JUTVideoFv:
 waitRetraceIfNeed__8JUTVideoFv:
 /* 802E5210 002E2150  4E 80 00 20 */	blr 
 
@@ -560,8 +469,10 @@ waitRetraceIfNeed__8JUTVideoFv:
 /* 803CC980 000C .data      __vt__8JUTVideo                __vt__8JUTVideo                */
 .global __vt__8JUTVideo
 __vt__8JUTVideo:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x4d, 0xe8 /* baserom.dol+0x3c9980 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c998c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__8JUTVideoFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -583,18 +494,18 @@ sVideoLastTick__8JUTVideo:
 sVideoInterval__8JUTVideo:
 .skip 0x4
 
-/* 80451544 0004 .sbss      sym_80451544                   sym_80451544                   */
-.global sym_80451544
-sym_80451544:
+/* 80451544 0004 .sbss      data_80451544                  data_80451544                  */
+.global data_80451544
+data_80451544:
 .skip 0x4
 
-/* 80451548 0004 .sbss      sym_80451548                   frameBuffer$2222               */
-.global sym_80451548
-sym_80451548:
+/* 80451548 0004 .sbss      frameBuffer$2222               data_80451548                  */
+.global data_80451548
+data_80451548:
 .skip 0x4
 
-/* 8045154C 0004 .sbss      sym_8045154C                   sym_8045154C                   */
-.global sym_8045154C
-sym_8045154C:
+/* 8045154C 0004 .sbss      data_8045154C                  data_8045154C                  */
+.global data_8045154C
+data_8045154C:
 .skip 0x4
 

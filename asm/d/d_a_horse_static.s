@@ -7,6 +7,7 @@
 /* 80037C7C 0014 .text      checkWait__10e_wb_classFv      checkWait__10e_wb_classFv      */
 .global checkWait__10e_wb_classFv
 checkWait__10e_wb_classFv:
+checkWait__10e_wb_classFv:
 /* 80037C7C 00034BBC  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 80037C80 00034BC0  20 00 00 2A */	subfic r0, r0, 0x2a
 /* 80037C84 00034BC4  7C 00 00 34 */	cntlzw r0, r0
@@ -15,6 +16,7 @@ checkWait__10e_wb_classFv:
 
 /* 80037C90 0020 .text      setPlayerRideNow__10e_wb_classFv setPlayerRideNow__10e_wb_classFv */
 .global setPlayerRideNow__10e_wb_classFv
+setPlayerRideNow__10e_wb_classFv:
 setPlayerRideNow__10e_wb_classFv:
 /* 80037C90 00034BD0  38 00 00 67 */	li r0, 0x67
 /* 80037C94 00034BD4  B0 03 06 90 */	sth r0, 0x690(r3)
@@ -27,6 +29,7 @@ setPlayerRideNow__10e_wb_classFv:
 
 /* 80037CB0 0044 .text      setPlayerRide__10e_wb_classFv  setPlayerRide__10e_wb_classFv  */
 .global setPlayerRide__10e_wb_classFv
+setPlayerRide__10e_wb_classFv:
 setPlayerRide__10e_wb_classFv:
 /* 80037CB0 00034BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037CB4 00034BF4  7C 08 02 A6 */	mflr r0
@@ -46,8 +49,9 @@ setPlayerRide__10e_wb_classFv:
 /* 80037CEC 00034C2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80037CF0 00034C30  4E 80 00 20 */	blr 
 
-/* 80037CF4 002C .text      getOff__10e_wb_classFv         getOff__10e_wb_classFv         */
+/* 80037CF4 0074 .text      getOff__10e_wb_classFv         getOff__10e_wb_classFv         */
 .global getOff__10e_wb_classFv
+getOff__10e_wb_classFv:
 getOff__10e_wb_classFv:
 /* 80037CF4 00034C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037CF8 00034C38  7C 08 02 A6 */	mflr r0
@@ -56,27 +60,18 @@ getOff__10e_wb_classFv:
 /* 80037D04 00034C44  7C 7F 1B 78 */	mr r31, r3
 /* 80037D08 00034C48  48 00 00 61 */	bl checkDownDamage__10e_wb_classFv
 /* 80037D0C 00034C4C  2C 03 00 00 */	cmpwi r3, 0
-/* 80037D10 00034C50  41 82 00 10 */	beq func_80037D20
+/* 80037D10 00034C50  41 82 00 10 */	beq lbl_80037D20
 /* 80037D14 00034C54  A8 1F 06 90 */	lha r0, 0x690(r31)
 /* 80037D18 00034C58  2C 00 00 67 */	cmpwi r0, 0x67
-/* 80037D1C 00034C5C  40 82 00 10 */	bne func_80037D2C
-
-/* 80037D20 000C .text      func_80037D20                  func_80037D20                  */
-.global func_80037D20
-func_80037D20:
+/* 80037D1C 00034C5C  40 82 00 10 */	bne lbl_80037D2C
+lbl_80037D20:
 /* 80037D20 00034C60  38 00 00 00 */	li r0, 0
 /* 80037D24 00034C64  B0 1F 06 90 */	sth r0, 0x690(r31)
-/* 80037D28 00034C68  48 00 00 0C */	b func_80037D34
-
-/* 80037D2C 0008 .text      func_80037D2C                  func_80037D2C                  */
-.global func_80037D2C
-func_80037D2C:
+/* 80037D28 00034C68  48 00 00 0C */	b lbl_80037D34
+lbl_80037D2C:
 /* 80037D2C 00034C6C  38 00 00 00 */	li r0, 0
 /* 80037D30 00034C70  B0 1F 06 92 */	sth r0, 0x692(r31)
-
-/* 80037D34 0034 .text      func_80037D34                  func_80037D34                  */
-.global func_80037D34
-func_80037D34:
+lbl_80037D34:
 /* 80037D34 00034C74  38 00 00 00 */	li r0, 0
 /* 80037D38 00034C78  B0 1F 05 B4 */	sth r0, 0x5b4(r31)
 /* 80037D3C 00034C7C  A0 1F 06 BE */	lhz r0, 0x6be(r31)
@@ -91,49 +86,43 @@ func_80037D34:
 /* 80037D60 00034CA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80037D64 00034CA4  4E 80 00 20 */	blr 
 
-/* 80037D68 0024 .text      checkDownDamage__10e_wb_classFv checkDownDamage__10e_wb_classFv */
+/* 80037D68 002C .text      checkDownDamage__10e_wb_classFv checkDownDamage__10e_wb_classFv */
 .global checkDownDamage__10e_wb_classFv
+checkDownDamage__10e_wb_classFv:
 checkDownDamage__10e_wb_classFv:
 /* 80037D68 00034CA8  38 00 00 00 */	li r0, 0
 /* 80037D6C 00034CAC  A8 63 06 90 */	lha r3, 0x690(r3)
 /* 80037D70 00034CB0  2C 03 00 65 */	cmpwi r3, 0x65
-/* 80037D74 00034CB4  41 82 00 18 */	beq func_80037D8C
+/* 80037D74 00034CB4  41 82 00 18 */	beq lbl_80037D8C
 /* 80037D78 00034CB8  2C 03 00 66 */	cmpwi r3, 0x66
-/* 80037D7C 00034CBC  41 82 00 10 */	beq func_80037D8C
+/* 80037D7C 00034CBC  41 82 00 10 */	beq lbl_80037D8C
 /* 80037D80 00034CC0  2C 03 00 15 */	cmpwi r3, 0x15
-/* 80037D84 00034CC4  41 82 00 08 */	beq func_80037D8C
+/* 80037D84 00034CC4  41 82 00 08 */	beq lbl_80037D8C
 /* 80037D88 00034CC8  38 00 00 01 */	li r0, 1
-
-/* 80037D8C 0008 .text      func_80037D8C                  func_80037D8C                  */
-.global func_80037D8C
-func_80037D8C:
+lbl_80037D8C:
 /* 80037D8C 00034CCC  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 80037D90 00034CD0  4E 80 00 20 */	blr 
 
-/* 80037D94 001C .text      checkNormalRideMode__10e_wb_classCFv checkNormalRideMode__10e_wb_classCFv */
+/* 80037D94 0028 .text      checkNormalRideMode__10e_wb_classCFv checkNormalRideMode__10e_wb_classCFv */
 .global checkNormalRideMode__10e_wb_classCFv
+checkNormalRideMode__10e_wb_classCFv:
 checkNormalRideMode__10e_wb_classCFv:
 /* 80037D94 00034CD4  38 80 00 00 */	li r4, 0
 /* 80037D98 00034CD8  A8 03 06 90 */	lha r0, 0x690(r3)
 /* 80037D9C 00034CDC  2C 00 00 66 */	cmpwi r0, 0x66
-/* 80037DA0 00034CE0  40 82 00 10 */	bne func_80037DB0
+/* 80037DA0 00034CE0  40 82 00 10 */	bne lbl_80037DB0
 /* 80037DA4 00034CE4  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 80037DA8 00034CE8  2C 00 00 01 */	cmpwi r0, 1
-/* 80037DAC 00034CEC  40 80 00 08 */	bge func_80037DB4
-
-/* 80037DB0 0004 .text      func_80037DB0                  func_80037DB0                  */
-.global func_80037DB0
-func_80037DB0:
+/* 80037DAC 00034CEC  40 80 00 08 */	bge lbl_80037DB4
+lbl_80037DB0:
 /* 80037DB0 00034CF0  38 80 00 01 */	li r4, 1
-
-/* 80037DB4 0008 .text      func_80037DB4                  func_80037DB4                  */
-.global func_80037DB4
-func_80037DB4:
+lbl_80037DB4:
 /* 80037DB4 00034CF4  54 83 06 3E */	clrlwi r3, r4, 0x18
 /* 80037DB8 00034CF8  4E 80 00 20 */	blr 
 
 /* 80037DBC 0028 .text      setRunRideMode__10e_wb_classFv setRunRideMode__10e_wb_classFv */
 .global setRunRideMode__10e_wb_classFv
+setRunRideMode__10e_wb_classFv:
 setRunRideMode__10e_wb_classFv:
 /* 80037DBC 00034CFC  A8 03 06 90 */	lha r0, 0x690(r3)
 /* 80037DC0 00034D00  2C 00 00 65 */	cmpwi r0, 0x65

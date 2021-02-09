@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802D3574 004C .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v */
+/* 802D3574 0080 .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v */
 .global prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v
+prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 /* 802D3574 002D04B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3578 002D04B8  7C 08 02 A6 */	mflr r0
@@ -23,13 +24,10 @@ prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 /* 802D35A8 002D04E8  38 A0 FF FC */	li r5, -4
 /* 802D35AC 002D04EC  4B FF B6 ED */	bl __nw__FUlP7JKRHeapi
 /* 802D35B0 002D04F0  7C 64 1B 79 */	or. r4, r3, r3
-/* 802D35B4 002D04F4  41 82 00 0C */	beq func_802D35C0
+/* 802D35B4 002D04F4  41 82 00 0C */	beq lbl_802D35C0
 /* 802D35B8 002D04F8  48 00 04 35 */	bl __ct__12JKRAMCommandFv
 /* 802D35BC 002D04FC  7C 64 1B 78 */	mr r4, r3
-
-/* 802D35C0 0034 .text      func_802D35C0                  func_802D35C0                  */
-.global func_802D35C0
-func_802D35C0:
+lbl_802D35C0:
 /* 802D35C0 002D0500  93 44 00 40 */	stw r26, 0x40(r4)
 /* 802D35C4 002D0504  93 64 00 48 */	stw r27, 0x48(r4)
 /* 802D35C8 002D0508  93 84 00 4C */	stw r28, 0x4c(r4)
@@ -47,6 +45,7 @@ func_802D35C0:
 /* 802D35F4 0020 .text      sendCommand__12JKRAramPieceFP12JKRAMCommand sendCommand__12JKRAramPieceFP12JKRAMCommand */
 .global sendCommand__12JKRAramPieceFP12JKRAMCommand
 sendCommand__12JKRAramPieceFP12JKRAMCommand:
+sendCommand__12JKRAramPieceFP12JKRAMCommand:
 /* 802D35F4 002D0534  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D35F8 002D0538  7C 08 02 A6 */	mflr r0
 /* 802D35FC 002D053C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -56,8 +55,9 @@ sendCommand__12JKRAramPieceFP12JKRAMCommand:
 /* 802D360C 002D054C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3610 002D0550  4E 80 00 20 */	blr 
 
-/* 802D3614 0048 .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v */
+/* 802D3614 015C .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v */
 .global orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v
+orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 /* 802D3614 002D0554  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D3618 002D0558  7C 08 02 A6 */	mflr r0
@@ -74,13 +74,10 @@ orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v:
 /* 802D3644 002D0584  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D3648 002D0588  48 06 B9 F9 */	bl OSLockMutex
 /* 802D364C 002D058C  57 60 06 FF */	clrlwi. r0, r27, 0x1b
-/* 802D3650 002D0590  40 82 00 0C */	bne func_802D365C
+/* 802D3650 002D0590  40 82 00 0C */	bne lbl_802D365C
 /* 802D3654 002D0594  57 80 06 FF */	clrlwi. r0, r28, 0x1b
-/* 802D3658 002D0598  41 82 00 80 */	beq func_802D36D8
-
-/* 802D365C 007C .text      func_802D365C                  func_802D365C                  */
-.global func_802D365C
-func_802D365C:
+/* 802D3658 002D0598  41 82 00 80 */	beq lbl_802D36D8
+lbl_802D365C:
 /* 802D365C 002D059C  3C 60 80 3A */	lis r3, JKRAramPiece__stringBase0@ha
 /* 802D3660 002D05A0  38 63 D0 B8 */	addi r3, r3, JKRAramPiece__stringBase0@l
 /* 802D3664 002D05A4  7F 44 D3 78 */	mr r4, r26
@@ -112,10 +109,7 @@ func_802D365C:
 /* 802D36CC 002D060C  38 C6 00 50 */	addi r6, r6, 0x50
 /* 802D36D0 002D0610  4C C6 31 82 */	crclr 6
 /* 802D36D4 002D0614  48 00 EB 29 */	bl panic_f__12JUTExceptionFPCciPCce
-
-/* 802D36D8 0070 .text      func_802D36D8                  func_802D36D8                  */
-.global func_802D36D8
-func_802D36D8:
+lbl_802D36D8:
 /* 802D36D8 002D0618  38 60 00 08 */	li r3, 8
 /* 802D36DC 002D061C  80 8D 8D F0 */	lwz r4, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 802D36E0 002D0620  38 A0 FF FC */	li r5, -4
@@ -139,15 +133,12 @@ func_802D36D8:
 /* 802D3728 002D0668  48 06 B2 CD */	bl OSSendMessage
 /* 802D372C 002D066C  80 1A 00 58 */	lwz r0, 0x58(r26)
 /* 802D3730 002D0670  28 00 00 00 */	cmplwi r0, 0
-/* 802D3734 002D0674  41 82 00 14 */	beq func_802D3748
+/* 802D3734 002D0674  41 82 00 14 */	beq lbl_802D3748
 /* 802D3738 002D0678  3C 60 80 43 */	lis r3, sAramPieceCommandList__12JKRAramPiece@ha
 /* 802D373C 002D067C  38 63 43 24 */	addi r3, r3, sAramPieceCommandList__12JKRAramPiece@l
 /* 802D3740 002D0680  38 9A 00 20 */	addi r4, r26, 0x20
 /* 802D3744 002D0684  48 00 88 09 */	bl append__10JSUPtrListFP10JSUPtrLink
-
-/* 802D3748 0028 .text      func_802D3748                  func_802D3748                  */
-.global func_802D3748
-func_802D3748:
+lbl_802D3748:
 /* 802D3748 002D0688  3C 60 80 43 */	lis r3, mMutex__12JKRAramPiece@ha
 /* 802D374C 002D068C  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D3750 002D0690  48 06 B9 CD */	bl OSUnlockMutex
@@ -159,8 +150,9 @@ func_802D3748:
 /* 802D3768 002D06A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D376C 002D06AC  4E 80 00 20 */	blr 
 
-/* 802D3770 0064 .text      sync__12JKRAramPieceFP12JKRAMCommandi sync__12JKRAramPieceFP12JKRAMCommandi */
+/* 802D3770 00C8 .text      sync__12JKRAramPieceFP12JKRAMCommandi sync__12JKRAramPieceFP12JKRAMCommandi */
 .global sync__12JKRAramPieceFP12JKRAMCommandi
+sync__12JKRAramPieceFP12JKRAMCommandi:
 sync__12JKRAramPieceFP12JKRAMCommandi:
 /* 802D3770 002D06B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3774 002D06B4  7C 08 02 A6 */	mflr r0
@@ -173,7 +165,7 @@ sync__12JKRAramPieceFP12JKRAMCommandi:
 /* 802D3790 002D06D0  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D3794 002D06D4  48 06 B8 AD */	bl OSLockMutex
 /* 802D3798 002D06D8  2C 1F 00 00 */	cmpwi r31, 0
-/* 802D379C 002D06DC  40 82 00 38 */	bne func_802D37D4
+/* 802D379C 002D06DC  40 82 00 38 */	bne lbl_802D37D4
 /* 802D37A0 002D06E0  38 7E 00 68 */	addi r3, r30, 0x68
 /* 802D37A4 002D06E4  38 81 00 08 */	addi r4, r1, 8
 /* 802D37A8 002D06E8  38 A0 00 01 */	li r5, 1
@@ -186,26 +178,20 @@ sync__12JKRAramPieceFP12JKRAMCommandi:
 /* 802D37C4 002D0704  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D37C8 002D0708  48 06 B9 55 */	bl OSUnlockMutex
 /* 802D37CC 002D070C  38 60 00 01 */	li r3, 1
-/* 802D37D0 002D0710  48 00 00 50 */	b func_802D3820
-
-/* 802D37D4 002C .text      func_802D37D4                  func_802D37D4                  */
-.global func_802D37D4
-func_802D37D4:
+/* 802D37D0 002D0710  48 00 00 50 */	b lbl_802D3820
+lbl_802D37D4:
 /* 802D37D4 002D0714  38 7E 00 68 */	addi r3, r30, 0x68
 /* 802D37D8 002D0718  38 81 00 08 */	addi r4, r1, 8
 /* 802D37DC 002D071C  38 A0 00 00 */	li r5, 0
 /* 802D37E0 002D0720  48 06 B2 DD */	bl OSReceiveMessage
 /* 802D37E4 002D0724  2C 03 00 00 */	cmpwi r3, 0
-/* 802D37E8 002D0728  40 82 00 18 */	bne func_802D3800
+/* 802D37E8 002D0728  40 82 00 18 */	bne lbl_802D3800
 /* 802D37EC 002D072C  3C 60 80 43 */	lis r3, mMutex__12JKRAramPiece@ha
 /* 802D37F0 002D0730  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D37F4 002D0734  48 06 B9 29 */	bl OSUnlockMutex
 /* 802D37F8 002D0738  38 60 00 00 */	li r3, 0
-/* 802D37FC 002D073C  48 00 00 24 */	b func_802D3820
-
-/* 802D3800 0020 .text      func_802D3800                  func_802D3800                  */
-.global func_802D3800
-func_802D3800:
+/* 802D37FC 002D073C  48 00 00 24 */	b lbl_802D3820
+lbl_802D3800:
 /* 802D3800 002D0740  3C 60 80 43 */	lis r3, sAramPieceCommandList__12JKRAramPiece@ha
 /* 802D3804 002D0744  38 63 43 24 */	addi r3, r3, sAramPieceCommandList__12JKRAramPiece@l
 /* 802D3808 002D0748  38 9E 00 20 */	addi r4, r30, 0x20
@@ -214,10 +200,7 @@ func_802D3800:
 /* 802D3814 002D0754  38 63 43 30 */	addi r3, r3, mMutex__12JKRAramPiece@l
 /* 802D3818 002D0758  48 06 B9 05 */	bl OSUnlockMutex
 /* 802D381C 002D075C  38 60 00 01 */	li r3, 1
-
-/* 802D3820 0018 .text      func_802D3820                  func_802D3820                  */
-.global func_802D3820
-func_802D3820:
+lbl_802D3820:
 /* 802D3820 002D0760  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802D3824 002D0764  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 802D3828 002D0768  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -227,6 +210,7 @@ func_802D3820:
 
 /* 802D3838 0094 .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock */
 .global orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock
+orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock:
 orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock:
 /* 802D3838 002D0778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D383C 002D077C  7C 08 02 A6 */	mflr r0
@@ -266,8 +250,9 @@ orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock:
 /* 802D38C4 002D0804  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D38C8 002D0808  4E 80 00 20 */	blr 
 
-/* 802D38CC 0030 .text      startDMA__12JKRAramPieceFP12JKRAMCommand startDMA__12JKRAramPieceFP12JKRAMCommand */
+/* 802D38CC 0078 .text      startDMA__12JKRAramPieceFP12JKRAMCommand startDMA__12JKRAramPieceFP12JKRAMCommand */
 .global startDMA__12JKRAramPieceFP12JKRAMCommand
+startDMA__12JKRAramPieceFP12JKRAMCommand:
 startDMA__12JKRAramPieceFP12JKRAMCommand:
 /* 802D38CC 002D080C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D38D0 002D0810  7C 08 02 A6 */	mflr r0
@@ -276,22 +261,16 @@ startDMA__12JKRAramPieceFP12JKRAMCommand:
 /* 802D38DC 002D081C  7C 7F 1B 78 */	mr r31, r3
 /* 802D38E0 002D0820  80 03 00 40 */	lwz r0, 0x40(r3)
 /* 802D38E4 002D0824  2C 00 00 01 */	cmpwi r0, 1
-/* 802D38E8 002D0828  40 82 00 14 */	bne func_802D38FC
+/* 802D38E8 002D0828  40 82 00 14 */	bne lbl_802D38FC
 /* 802D38EC 002D082C  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 802D38F0 002D0830  80 9F 00 44 */	lwz r4, 0x44(r31)
 /* 802D38F4 002D0834  48 06 7C 8D */	bl DCInvalidateRange
-/* 802D38F8 002D0838  48 00 00 10 */	b func_802D3908
-
-/* 802D38FC 000C .text      func_802D38FC                  func_802D38FC                  */
-.global func_802D38FC
-func_802D38FC:
+/* 802D38F8 002D0838  48 00 00 10 */	b lbl_802D3908
+lbl_802D38FC:
 /* 802D38FC 002D083C  80 7F 00 48 */	lwz r3, 0x48(r31)
 /* 802D3900 002D0840  80 9F 00 44 */	lwz r4, 0x44(r31)
 /* 802D3904 002D0844  48 06 7C D9 */	bl DCStoreRange
-
-/* 802D3908 003C .text      func_802D3908                  func_802D3908                  */
-.global func_802D3908
-func_802D3908:
+lbl_802D3908:
 /* 802D3908 002D0848  7F E3 FB 78 */	mr r3, r31
 /* 802D390C 002D084C  38 80 00 00 */	li r4, 0
 /* 802D3910 002D0850  80 BF 00 40 */	lwz r5, 0x40(r31)
@@ -308,8 +287,9 @@ func_802D3908:
 /* 802D393C 002D087C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3940 002D0880  4E 80 00 20 */	blr 
 
-/* 802D3944 002C .text      doneDMA__12JKRAramPieceFUl     doneDMA__12JKRAramPieceFUl     */
+/* 802D3944 00A8 .text      doneDMA__12JKRAramPieceFUl     doneDMA__12JKRAramPieceFUl     */
 .global doneDMA__12JKRAramPieceFUl
+doneDMA__12JKRAramPieceFUl:
 doneDMA__12JKRAramPieceFUl:
 /* 802D3944 002D0884  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3948 002D0888  7C 08 02 A6 */	mflr r0
@@ -318,56 +298,41 @@ doneDMA__12JKRAramPieceFUl:
 /* 802D3954 002D0894  7C 7F 1B 78 */	mr r31, r3
 /* 802D3958 002D0898  80 03 00 40 */	lwz r0, 0x40(r3)
 /* 802D395C 002D089C  2C 00 00 01 */	cmpwi r0, 1
-/* 802D3960 002D08A0  40 82 00 10 */	bne func_802D3970
+/* 802D3960 002D08A0  40 82 00 10 */	bne lbl_802D3970
 /* 802D3964 002D08A4  80 7F 00 4C */	lwz r3, 0x4c(r31)
 /* 802D3968 002D08A8  80 9F 00 44 */	lwz r4, 0x44(r31)
 /* 802D396C 002D08AC  48 06 7C 15 */	bl DCInvalidateRange
-
-/* 802D3970 0020 .text      func_802D3970                  func_802D3970                  */
-.global func_802D3970
-func_802D3970:
+lbl_802D3970:
 /* 802D3970 002D08B0  80 1F 00 60 */	lwz r0, 0x60(r31)
 /* 802D3974 002D08B4  2C 00 00 00 */	cmpwi r0, 0
-/* 802D3978 002D08B8  41 82 00 18 */	beq func_802D3990
+/* 802D3978 002D08B8  41 82 00 18 */	beq lbl_802D3990
 /* 802D397C 002D08BC  2C 00 00 02 */	cmpwi r0, 2
-/* 802D3980 002D08C0  40 82 00 58 */	bne func_802D39D8
+/* 802D3980 002D08C0  40 82 00 58 */	bne lbl_802D39D8
 /* 802D3984 002D08C4  80 7F 00 64 */	lwz r3, 0x64(r31)
 /* 802D3988 002D08C8  48 00 7F 49 */	bl sendCommand__9JKRDecompFP16JKRDecompCommand
-/* 802D398C 002D08CC  48 00 00 4C */	b func_802D39D8
-
-/* 802D3990 001C .text      func_802D3990                  func_802D3990                  */
-.global func_802D3990
-func_802D3990:
+/* 802D398C 002D08CC  48 00 00 4C */	b lbl_802D39D8
+lbl_802D3990:
 /* 802D3990 002D08D0  81 9F 00 58 */	lwz r12, 0x58(r31)
 /* 802D3994 002D08D4  28 0C 00 00 */	cmplwi r12, 0
-/* 802D3998 002D08D8  41 82 00 14 */	beq func_802D39AC
+/* 802D3998 002D08D8  41 82 00 14 */	beq lbl_802D39AC
 /* 802D399C 002D08DC  7F E3 FB 78 */	mr r3, r31
 /* 802D39A0 002D08E0  7D 89 03 A6 */	mtctr r12
 /* 802D39A4 002D08E4  4E 80 04 21 */	bctrl 
-/* 802D39A8 002D08E8  48 00 00 30 */	b func_802D39D8
-
-/* 802D39AC 001C .text      func_802D39AC                  func_802D39AC                  */
-.global func_802D39AC
-func_802D39AC:
+/* 802D39A8 002D08E8  48 00 00 30 */	b lbl_802D39D8
+lbl_802D39AC:
 /* 802D39AC 002D08EC  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 802D39B0 002D08F0  28 03 00 00 */	cmplwi r3, 0
-/* 802D39B4 002D08F4  41 82 00 14 */	beq func_802D39C8
+/* 802D39B4 002D08F4  41 82 00 14 */	beq lbl_802D39C8
 /* 802D39B8 002D08F8  7F E4 FB 78 */	mr r4, r31
 /* 802D39BC 002D08FC  38 A0 00 00 */	li r5, 0
 /* 802D39C0 002D0900  48 06 B0 35 */	bl OSSendMessage
-/* 802D39C4 002D0904  48 00 00 14 */	b func_802D39D8
-
-/* 802D39C8 0010 .text      func_802D39C8                  func_802D39C8                  */
-.global func_802D39C8
-func_802D39C8:
+/* 802D39C4 002D0904  48 00 00 14 */	b lbl_802D39D8
+lbl_802D39C8:
 /* 802D39C8 002D0908  38 7F 00 68 */	addi r3, r31, 0x68
 /* 802D39CC 002D090C  7F E4 FB 78 */	mr r4, r31
 /* 802D39D0 002D0910  38 A0 00 00 */	li r5, 0
 /* 802D39D4 002D0914  48 06 B0 21 */	bl OSSendMessage
-
-/* 802D39D8 0014 .text      func_802D39D8                  func_802D39D8                  */
-.global func_802D39D8
-func_802D39D8:
+lbl_802D39D8:
 /* 802D39D8 002D0918  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D39DC 002D091C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D39E0 002D0920  7C 08 03 A6 */	mtlr r0
@@ -376,6 +341,7 @@ func_802D39D8:
 
 /* 802D39EC 0070 .text      __ct__12JKRAMCommandFv         __ct__12JKRAMCommandFv         */
 .global __ct__12JKRAMCommandFv
+__ct__12JKRAMCommandFv:
 __ct__12JKRAMCommandFv:
 /* 802D39EC 002D092C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D39F0 002D0930  7C 08 02 A6 */	mflr r0
@@ -406,8 +372,9 @@ __ct__12JKRAMCommandFv:
 /* 802D3A54 002D0994  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3A58 002D0998  4E 80 00 20 */	blr 
 
-/* 802D3A5C 0030 .text      __dt__12JKRAMCommandFv         __dt__12JKRAMCommandFv         */
+/* 802D3A5C 00A8 .text      __dt__12JKRAMCommandFv         __dt__12JKRAMCommandFv         */
 .global __dt__12JKRAMCommandFv
+__dt__12JKRAMCommandFv:
 __dt__12JKRAMCommandFv:
 /* 802D3A5C 002D099C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3A60 002D09A0  7C 08 02 A6 */	mflr r0
@@ -416,58 +383,40 @@ __dt__12JKRAMCommandFv:
 /* 802D3A6C 002D09AC  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D3A70 002D09B0  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D3A74 002D09B4  7C 9F 23 78 */	mr r31, r4
-/* 802D3A78 002D09B8  41 82 00 70 */	beq func_802D3AE8
+/* 802D3A78 002D09B8  41 82 00 70 */	beq lbl_802D3AE8
 /* 802D3A7C 002D09BC  80 7E 00 8C */	lwz r3, 0x8c(r30)
 /* 802D3A80 002D09C0  28 03 00 00 */	cmplwi r3, 0
-/* 802D3A84 002D09C4  41 82 00 08 */	beq func_802D3A8C
+/* 802D3A84 002D09C4  41 82 00 08 */	beq lbl_802D3A8C
 /* 802D3A88 002D09C8  4B FF B2 B5 */	bl __dl__FPv
-
-/* 802D3A8C 0010 .text      func_802D3A8C                  func_802D3A8C                  */
-.global func_802D3A8C
-func_802D3A8C:
+lbl_802D3A8C:
 /* 802D3A8C 002D09CC  80 7E 00 90 */	lwz r3, 0x90(r30)
 /* 802D3A90 002D09D0  28 03 00 00 */	cmplwi r3, 0
-/* 802D3A94 002D09D4  41 82 00 08 */	beq func_802D3A9C
+/* 802D3A94 002D09D4  41 82 00 08 */	beq lbl_802D3A9C
 /* 802D3A98 002D09D8  4B FF B2 A5 */	bl __dl__FPv
-
-/* 802D3A9C 0014 .text      func_802D3A9C                  func_802D3A9C                  */
-.global func_802D3A9C
-func_802D3A9C:
+lbl_802D3A9C:
 /* 802D3A9C 002D09DC  80 7E 00 94 */	lwz r3, 0x94(r30)
 /* 802D3AA0 002D09E0  28 03 00 00 */	cmplwi r3, 0
-/* 802D3AA4 002D09E4  41 82 00 0C */	beq func_802D3AB0
+/* 802D3AA4 002D09E4  41 82 00 0C */	beq lbl_802D3AB0
 /* 802D3AA8 002D09E8  38 80 00 00 */	li r4, 0
 /* 802D3AAC 002D09EC  4B FF AA 55 */	bl free__7JKRHeapFPvP7JKRHeap
-
-/* 802D3AB0 0014 .text      func_802D3AB0                  func_802D3AB0                  */
-.global func_802D3AB0
-func_802D3AB0:
+lbl_802D3AB0:
 /* 802D3AB0 002D09F0  34 1E 00 30 */	addic. r0, r30, 0x30
-/* 802D3AB4 002D09F4  41 82 00 10 */	beq func_802D3AC4
+/* 802D3AB4 002D09F4  41 82 00 10 */	beq lbl_802D3AC4
 /* 802D3AB8 002D09F8  38 7E 00 30 */	addi r3, r30, 0x30
 /* 802D3ABC 002D09FC  38 80 00 00 */	li r4, 0
 /* 802D3AC0 002D0A00  48 00 83 55 */	bl __dt__10JSUPtrLinkFv
-
-/* 802D3AC4 0014 .text      func_802D3AC4                  func_802D3AC4                  */
-.global func_802D3AC4
-func_802D3AC4:
+lbl_802D3AC4:
 /* 802D3AC4 002D0A04  34 1E 00 20 */	addic. r0, r30, 0x20
-/* 802D3AC8 002D0A08  41 82 00 10 */	beq func_802D3AD8
+/* 802D3AC8 002D0A08  41 82 00 10 */	beq lbl_802D3AD8
 /* 802D3ACC 002D0A0C  38 7E 00 20 */	addi r3, r30, 0x20
 /* 802D3AD0 002D0A10  38 80 00 00 */	li r4, 0
 /* 802D3AD4 002D0A14  48 00 83 41 */	bl __dt__10JSUPtrLinkFv
-
-/* 802D3AD8 0010 .text      func_802D3AD8                  func_802D3AD8                  */
-.global func_802D3AD8
-func_802D3AD8:
+lbl_802D3AD8:
 /* 802D3AD8 002D0A18  7F E0 07 35 */	extsh. r0, r31
-/* 802D3ADC 002D0A1C  40 81 00 0C */	ble func_802D3AE8
+/* 802D3ADC 002D0A1C  40 81 00 0C */	ble lbl_802D3AE8
 /* 802D3AE0 002D0A20  7F C3 F3 78 */	mr r3, r30
 /* 802D3AE4 002D0A24  4B FF B2 59 */	bl __dl__FPv
-
-/* 802D3AE8 001C .text      func_802D3AE8                  func_802D3AE8                  */
-.global func_802D3AE8
-func_802D3AE8:
+lbl_802D3AE8:
 /* 802D3AE8 002D0A28  7F C3 F3 78 */	mr r3, r30
 /* 802D3AEC 002D0A2C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D3AF0 002D0A30  83 C1 00 08 */	lwz r30, 8(r1)
@@ -478,6 +427,7 @@ func_802D3AE8:
 
 /* 802D3B04 0044 .text      __sinit_JKRAramPiece_cpp       __sinit_JKRAramPiece_cpp       */
 .global __sinit_JKRAramPiece_cpp
+__sinit_JKRAramPiece_cpp:
 __sinit_JKRAramPiece_cpp:
 /* 802D3B04 002D0A44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3B08 002D0A48  7C 08 02 A6 */	mflr r0
@@ -502,7 +452,7 @@ __sinit_JKRAramPiece_cpp:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8039D0B8 0068 .rodata    JKRAramPiece__stringBase0      @stringBase0                   */
+/* 8039D0B8 0068 .rodata    @stringBase0                   JKRAramPiece__stringBase0      */
 .global JKRAramPiece__stringBase0
 JKRAramPiece__stringBase0:
 .byte 0x64, 0x69, 0x72, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x3d, 0x20, 0x25, 0x78, 0x0a, 0x00 /* baserom.dol+0x39a0b8 */
@@ -518,7 +468,7 @@ JKRAramPiece__stringBase0:
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80434318 000C .bss       JKRAramPiece__LIT_492          @492                           */
+/* 80434318 000C .bss       @492                           JKRAramPiece__LIT_492          */
 .global JKRAramPiece__LIT_492
 JKRAramPiece__LIT_492:
 .skip 0xc

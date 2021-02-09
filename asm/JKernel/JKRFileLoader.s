@@ -7,6 +7,7 @@
 /* 802D40F0 0058 .text      __ct__13JKRFileLoaderFv        __ct__13JKRFileLoaderFv        */
 .global __ct__13JKRFileLoaderFv
 __ct__13JKRFileLoaderFv:
+__ct__13JKRFileLoaderFv:
 /* 802D40F0 002D1030  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D40F4 002D1034  7C 08 02 A6 */	mflr r0
 /* 802D40F8 002D1038  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,8 +31,9 @@ __ct__13JKRFileLoaderFv:
 /* 802D4140 002D1080  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4144 002D1084  4E 80 00 20 */	blr 
 
-/* 802D4148 0040 .text      __dt__13JKRFileLoaderFv        __dt__13JKRFileLoaderFv        */
+/* 802D4148 008C .text      __dt__13JKRFileLoaderFv        __dt__13JKRFileLoaderFv        */
 .global __dt__13JKRFileLoaderFv
+__dt__13JKRFileLoaderFv:
 __dt__13JKRFileLoaderFv:
 /* 802D4148 002D1088  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D414C 002D108C  7C 08 02 A6 */	mflr r0
@@ -40,39 +42,30 @@ __dt__13JKRFileLoaderFv:
 /* 802D4158 002D1098  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D415C 002D109C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D4160 002D10A0  7C 9F 23 78 */	mr r31, r4
-/* 802D4164 002D10A4  41 82 00 54 */	beq func_802D41B8
+/* 802D4164 002D10A4  41 82 00 54 */	beq lbl_802D41B8
 /* 802D4168 002D10A8  3C 60 80 3D */	lis r3, __vt__13JKRFileLoader@ha
 /* 802D416C 002D10AC  38 03 C1 C8 */	addi r0, r3, __vt__13JKRFileLoader@l
 /* 802D4170 002D10B0  90 1E 00 00 */	stw r0, 0(r30)
 /* 802D4174 002D10B4  80 0D 8E 98 */	lwz r0, sCurrentVolume__13JKRFileLoader-_SDA_BASE_(r13)
 /* 802D4178 002D10B8  7C 00 F0 40 */	cmplw r0, r30
-/* 802D417C 002D10BC  40 82 00 0C */	bne func_802D4188
+/* 802D417C 002D10BC  40 82 00 0C */	bne lbl_802D4188
 /* 802D4180 002D10C0  38 00 00 00 */	li r0, 0
 /* 802D4184 002D10C4  90 0D 8E 98 */	stw r0, sCurrentVolume__13JKRFileLoader-_SDA_BASE_(r13)
-
-/* 802D4188 0014 .text      func_802D4188                  func_802D4188                  */
-.global func_802D4188
-func_802D4188:
+lbl_802D4188:
 /* 802D4188 002D10C8  34 1E 00 18 */	addic. r0, r30, 0x18
-/* 802D418C 002D10CC  41 82 00 10 */	beq func_802D419C
+/* 802D418C 002D10CC  41 82 00 10 */	beq lbl_802D419C
 /* 802D4190 002D10D0  38 7E 00 18 */	addi r3, r30, 0x18
 /* 802D4194 002D10D4  38 80 00 00 */	li r4, 0
 /* 802D4198 002D10D8  48 00 7C 7D */	bl __dt__10JSUPtrLinkFv
-
-/* 802D419C 001C .text      func_802D419C                  func_802D419C                  */
-.global func_802D419C
-func_802D419C:
+lbl_802D419C:
 /* 802D419C 002D10DC  7F C3 F3 78 */	mr r3, r30
 /* 802D41A0 002D10E0  38 80 00 00 */	li r4, 0
 /* 802D41A4 002D10E4  4B FF D3 41 */	bl __dt__11JKRDisposerFv
 /* 802D41A8 002D10E8  7F E0 07 35 */	extsh. r0, r31
-/* 802D41AC 002D10EC  40 81 00 0C */	ble func_802D41B8
+/* 802D41AC 002D10EC  40 81 00 0C */	ble lbl_802D41B8
 /* 802D41B0 002D10F0  7F C3 F3 78 */	mr r3, r30
 /* 802D41B4 002D10F4  4B FF AB 89 */	bl __dl__FPv
-
-/* 802D41B8 001C .text      func_802D41B8                  func_802D41B8                  */
-.global func_802D41B8
-func_802D41B8:
+lbl_802D41B8:
 /* 802D41B8 002D10F8  7F C3 F3 78 */	mr r3, r30
 /* 802D41BC 002D10FC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D41C0 002D1100  83 C1 00 08 */	lwz r30, 8(r1)
@@ -81,36 +74,35 @@ func_802D41B8:
 /* 802D41CC 002D110C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D41D0 002D1110  4E 80 00 20 */	blr 
 
-/* 802D41D4 0040 .text      unmount__13JKRFileLoaderFv     unmount__13JKRFileLoaderFv     */
+/* 802D41D4 0050 .text      unmount__13JKRFileLoaderFv     unmount__13JKRFileLoaderFv     */
 .global unmount__13JKRFileLoaderFv
+unmount__13JKRFileLoaderFv:
 unmount__13JKRFileLoaderFv:
 /* 802D41D4 002D1114  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D41D8 002D1118  7C 08 02 A6 */	mflr r0
 /* 802D41DC 002D111C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802D41E0 002D1120  80 83 00 34 */	lwz r4, 0x34(r3)
 /* 802D41E4 002D1124  28 04 00 00 */	cmplwi r4, 0
-/* 802D41E8 002D1128  41 82 00 2C */	beq func_802D4214
+/* 802D41E8 002D1128  41 82 00 2C */	beq lbl_802D4214
 /* 802D41EC 002D112C  34 04 FF FF */	addic. r0, r4, -1
 /* 802D41F0 002D1130  90 03 00 34 */	stw r0, 0x34(r3)
-/* 802D41F4 002D1134  40 82 00 20 */	bne func_802D4214
+/* 802D41F4 002D1134  40 82 00 20 */	bne lbl_802D4214
 /* 802D41F8 002D1138  28 03 00 00 */	cmplwi r3, 0
-/* 802D41FC 002D113C  41 82 00 18 */	beq func_802D4214
+/* 802D41FC 002D113C  41 82 00 18 */	beq lbl_802D4214
 /* 802D4200 002D1140  38 80 00 01 */	li r4, 1
 /* 802D4204 002D1144  81 83 00 00 */	lwz r12, 0(r3)
 /* 802D4208 002D1148  81 8C 00 08 */	lwz r12, 8(r12)
 /* 802D420C 002D114C  7D 89 03 A6 */	mtctr r12
 /* 802D4210 002D1150  4E 80 04 21 */	bctrl 
-
-/* 802D4214 0010 .text      func_802D4214                  func_802D4214                  */
-.global func_802D4214
-func_802D4214:
+lbl_802D4214:
 /* 802D4214 002D1154  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D4218 002D1158  7C 08 03 A6 */	mtlr r0
 /* 802D421C 002D115C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4220 002D1160  4E 80 00 20 */	blr 
 
-/* 802D4224 0028 .text      getGlbResource__13JKRFileLoaderFPCc getGlbResource__13JKRFileLoaderFPCc */
+/* 802D4224 004C .text      getGlbResource__13JKRFileLoaderFPCc getGlbResource__13JKRFileLoaderFPCc */
 .global getGlbResource__13JKRFileLoaderFPCc
+getGlbResource__13JKRFileLoaderFPCc:
 getGlbResource__13JKRFileLoaderFPCc:
 /* 802D4224 002D1164  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4228 002D1168  7C 08 02 A6 */	mflr r0
@@ -119,29 +111,24 @@ getGlbResource__13JKRFileLoaderFPCc:
 /* 802D4234 002D1174  38 61 00 08 */	addi r3, r1, 8
 /* 802D4238 002D1178  48 00 02 01 */	bl findVolume__13JKRFileLoaderFPPCc
 /* 802D423C 002D117C  28 03 00 00 */	cmplwi r3, 0
-/* 802D4240 002D1180  40 82 00 0C */	bne func_802D424C
+/* 802D4240 002D1180  40 82 00 0C */	bne lbl_802D424C
 /* 802D4244 002D1184  38 60 00 00 */	li r3, 0
-/* 802D4248 002D1188  48 00 00 18 */	b func_802D4260
-
-/* 802D424C 0014 .text      func_802D424C                  func_802D424C                  */
-.global func_802D424C
-func_802D424C:
+/* 802D4248 002D1188  48 00 00 18 */	b lbl_802D4260
+lbl_802D424C:
 /* 802D424C 002D118C  80 81 00 08 */	lwz r4, 8(r1)
 /* 802D4250 002D1190  81 83 00 00 */	lwz r12, 0(r3)
 /* 802D4254 002D1194  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 802D4258 002D1198  7D 89 03 A6 */	mtctr r12
 /* 802D425C 002D119C  4E 80 04 21 */	bctrl 
-
-/* 802D4260 0010 .text      func_802D4260                  func_802D4260                  */
-.global func_802D4260
-func_802D4260:
+lbl_802D4260:
 /* 802D4260 002D11A0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D4264 002D11A4  7C 08 03 A6 */	mtlr r0
 /* 802D4268 002D11A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D426C 002D11AC  4E 80 00 20 */	blr 
 
-/* 802D4270 0044 .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader */
+/* 802D4270 0098 .text      getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader */
 .global getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader
+getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader:
 getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader:
 /* 802D4270 002D11B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4274 002D11B4  7C 08 02 A6 */	mflr r0
@@ -151,7 +138,7 @@ getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader:
 /* 802D4284 002D11C4  7C 7E 1B 78 */	mr r30, r3
 /* 802D4288 002D11C8  38 60 00 00 */	li r3, 0
 /* 802D428C 002D11CC  28 04 00 00 */	cmplwi r4, 0
-/* 802D4290 002D11D0  41 82 00 24 */	beq func_802D42B4
+/* 802D4290 002D11D0  41 82 00 24 */	beq lbl_802D42B4
 /* 802D4294 002D11D4  7C 83 23 78 */	mr r3, r4
 /* 802D4298 002D11D8  38 80 00 00 */	li r4, 0
 /* 802D429C 002D11DC  7F C5 F3 78 */	mr r5, r30
@@ -159,18 +146,12 @@ getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader:
 /* 802D42A4 002D11E4  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 802D42A8 002D11E8  7D 89 03 A6 */	mtctr r12
 /* 802D42AC 002D11EC  4E 80 04 21 */	bctrl 
-/* 802D42B0 002D11F0  48 00 00 40 */	b func_802D42F0
-
-/* 802D42B4 000C .text      func_802D42B4                  func_802D42B4                  */
-.global func_802D42B4
-func_802D42B4:
+/* 802D42B0 002D11F0  48 00 00 40 */	b lbl_802D42F0
+lbl_802D42B4:
 /* 802D42B4 002D11F4  3C 80 80 43 */	lis r4, sVolumeList__13JKRFileLoader@ha
 /* 802D42B8 002D11F8  83 E4 43 54 */	lwz r31, sVolumeList__13JKRFileLoader@l(r4)
-/* 802D42BC 002D11FC  48 00 00 2C */	b func_802D42E8
-
-/* 802D42C0 0028 .text      func_802D42C0                  func_802D42C0                  */
-.global func_802D42C0
-func_802D42C0:
+/* 802D42BC 002D11FC  48 00 00 2C */	b lbl_802D42E8
+lbl_802D42C0:
 /* 802D42C0 002D1200  80 7F 00 00 */	lwz r3, 0(r31)
 /* 802D42C4 002D1204  38 80 00 00 */	li r4, 0
 /* 802D42C8 002D1208  7F C5 F3 78 */	mr r5, r30
@@ -179,18 +160,12 @@ func_802D42C0:
 /* 802D42D4 002D1214  7D 89 03 A6 */	mtctr r12
 /* 802D42D8 002D1218  4E 80 04 21 */	bctrl 
 /* 802D42DC 002D121C  28 03 00 00 */	cmplwi r3, 0
-/* 802D42E0 002D1220  40 82 00 10 */	bne func_802D42F0
+/* 802D42E0 002D1220  40 82 00 10 */	bne lbl_802D42F0
 /* 802D42E4 002D1224  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 802D42E8 0008 .text      func_802D42E8                  func_802D42E8                  */
-.global func_802D42E8
-func_802D42E8:
+lbl_802D42E8:
 /* 802D42E8 002D1228  28 1F 00 00 */	cmplwi r31, 0
-/* 802D42EC 002D122C  40 82 FF D4 */	bne func_802D42C0
-
-/* 802D42F0 0018 .text      func_802D42F0                  func_802D42F0                  */
-.global func_802D42F0
-func_802D42F0:
+/* 802D42EC 002D122C  40 82 FF D4 */	bne lbl_802D42C0
+lbl_802D42F0:
 /* 802D42F0 002D1230  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D42F4 002D1234  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D42F8 002D1238  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -198,8 +173,9 @@ func_802D42F0:
 /* 802D4300 002D1240  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4304 002D1244  4E 80 00 20 */	blr 
 
-/* 802D4308 003C .text      removeResource__13JKRFileLoaderFPvP13JKRFileLoader removeResource__13JKRFileLoaderFPvP13JKRFileLoader */
+/* 802D4308 0098 .text      removeResource__13JKRFileLoaderFPvP13JKRFileLoader removeResource__13JKRFileLoaderFPvP13JKRFileLoader */
 .global removeResource__13JKRFileLoaderFPvP13JKRFileLoader
+removeResource__13JKRFileLoaderFPvP13JKRFileLoader:
 removeResource__13JKRFileLoaderFPvP13JKRFileLoader:
 /* 802D4308 002D1248  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D430C 002D124C  7C 08 02 A6 */	mflr r0
@@ -208,25 +184,19 @@ removeResource__13JKRFileLoaderFPvP13JKRFileLoader:
 /* 802D4318 002D1258  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D431C 002D125C  7C 7E 1B 78 */	mr r30, r3
 /* 802D4320 002D1260  28 04 00 00 */	cmplwi r4, 0
-/* 802D4324 002D1264  41 82 00 20 */	beq func_802D4344
+/* 802D4324 002D1264  41 82 00 20 */	beq lbl_802D4344
 /* 802D4328 002D1268  7C 83 23 78 */	mr r3, r4
 /* 802D432C 002D126C  7F C4 F3 78 */	mr r4, r30
 /* 802D4330 002D1270  81 83 00 00 */	lwz r12, 0(r3)
 /* 802D4334 002D1274  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 802D4338 002D1278  7D 89 03 A6 */	mtctr r12
 /* 802D433C 002D127C  4E 80 04 21 */	bctrl 
-/* 802D4340 002D1280  48 00 00 48 */	b func_802D4388
-
-/* 802D4344 000C .text      func_802D4344                  func_802D4344                  */
-.global func_802D4344
-func_802D4344:
+/* 802D4340 002D1280  48 00 00 48 */	b lbl_802D4388
+lbl_802D4344:
 /* 802D4344 002D1284  3C 60 80 43 */	lis r3, sVolumeList__13JKRFileLoader@ha
 /* 802D4348 002D1288  83 E3 43 54 */	lwz r31, sVolumeList__13JKRFileLoader@l(r3)
-/* 802D434C 002D128C  48 00 00 30 */	b func_802D437C
-
-/* 802D4350 0028 .text      func_802D4350                  func_802D4350                  */
-.global func_802D4350
-func_802D4350:
+/* 802D434C 002D128C  48 00 00 30 */	b lbl_802D437C
+lbl_802D4350:
 /* 802D4350 002D1290  80 7F 00 00 */	lwz r3, 0(r31)
 /* 802D4354 002D1294  7F C4 F3 78 */	mr r4, r30
 /* 802D4358 002D1298  81 83 00 00 */	lwz r12, 0(r3)
@@ -234,25 +204,16 @@ func_802D4350:
 /* 802D4360 002D12A0  7D 89 03 A6 */	mtctr r12
 /* 802D4364 002D12A4  4E 80 04 21 */	bctrl 
 /* 802D4368 002D12A8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802D436C 002D12AC  41 82 00 0C */	beq func_802D4378
+/* 802D436C 002D12AC  41 82 00 0C */	beq lbl_802D4378
 /* 802D4370 002D12B0  38 60 00 01 */	li r3, 1
-/* 802D4374 002D12B4  48 00 00 14 */	b func_802D4388
-
-/* 802D4378 0004 .text      func_802D4378                  func_802D4378                  */
-.global func_802D4378
-func_802D4378:
+/* 802D4374 002D12B4  48 00 00 14 */	b lbl_802D4388
+lbl_802D4378:
 /* 802D4378 002D12B8  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 802D437C 000C .text      func_802D437C                  func_802D437C                  */
-.global func_802D437C
-func_802D437C:
+lbl_802D437C:
 /* 802D437C 002D12BC  28 1F 00 00 */	cmplwi r31, 0
-/* 802D4380 002D12C0  40 82 FF D0 */	bne func_802D4350
+/* 802D4380 002D12C0  40 82 FF D0 */	bne lbl_802D4350
 /* 802D4384 002D12C4  38 60 00 00 */	li r3, 0
-
-/* 802D4388 0018 .text      func_802D4388                  func_802D4388                  */
-.global func_802D4388
-func_802D4388:
+lbl_802D4388:
 /* 802D4388 002D12C8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D438C 002D12CC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D4390 002D12D0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -260,8 +221,9 @@ func_802D4388:
 /* 802D4398 002D12D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D439C 002D12DC  4E 80 00 20 */	blr 
 
-/* 802D43A0 003C .text      detachResource__13JKRFileLoaderFPvP13JKRFileLoader detachResource__13JKRFileLoaderFPvP13JKRFileLoader */
+/* 802D43A0 0098 .text      detachResource__13JKRFileLoaderFPvP13JKRFileLoader detachResource__13JKRFileLoaderFPvP13JKRFileLoader */
 .global detachResource__13JKRFileLoaderFPvP13JKRFileLoader
+detachResource__13JKRFileLoaderFPvP13JKRFileLoader:
 detachResource__13JKRFileLoaderFPvP13JKRFileLoader:
 /* 802D43A0 002D12E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D43A4 002D12E4  7C 08 02 A6 */	mflr r0
@@ -270,25 +232,19 @@ detachResource__13JKRFileLoaderFPvP13JKRFileLoader:
 /* 802D43B0 002D12F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D43B4 002D12F4  7C 7E 1B 78 */	mr r30, r3
 /* 802D43B8 002D12F8  28 04 00 00 */	cmplwi r4, 0
-/* 802D43BC 002D12FC  41 82 00 20 */	beq func_802D43DC
+/* 802D43BC 002D12FC  41 82 00 20 */	beq lbl_802D43DC
 /* 802D43C0 002D1300  7C 83 23 78 */	mr r3, r4
 /* 802D43C4 002D1304  7F C4 F3 78 */	mr r4, r30
 /* 802D43C8 002D1308  81 83 00 00 */	lwz r12, 0(r3)
 /* 802D43CC 002D130C  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 802D43D0 002D1310  7D 89 03 A6 */	mtctr r12
 /* 802D43D4 002D1314  4E 80 04 21 */	bctrl 
-/* 802D43D8 002D1318  48 00 00 48 */	b func_802D4420
-
-/* 802D43DC 000C .text      func_802D43DC                  func_802D43DC                  */
-.global func_802D43DC
-func_802D43DC:
+/* 802D43D8 002D1318  48 00 00 48 */	b lbl_802D4420
+lbl_802D43DC:
 /* 802D43DC 002D131C  3C 60 80 43 */	lis r3, sVolumeList__13JKRFileLoader@ha
 /* 802D43E0 002D1320  83 E3 43 54 */	lwz r31, sVolumeList__13JKRFileLoader@l(r3)
-/* 802D43E4 002D1324  48 00 00 30 */	b func_802D4414
-
-/* 802D43E8 0028 .text      func_802D43E8                  func_802D43E8                  */
-.global func_802D43E8
-func_802D43E8:
+/* 802D43E4 002D1324  48 00 00 30 */	b lbl_802D4414
+lbl_802D43E8:
 /* 802D43E8 002D1328  80 7F 00 00 */	lwz r3, 0(r31)
 /* 802D43EC 002D132C  7F C4 F3 78 */	mr r4, r30
 /* 802D43F0 002D1330  81 83 00 00 */	lwz r12, 0(r3)
@@ -296,25 +252,16 @@ func_802D43E8:
 /* 802D43F8 002D1338  7D 89 03 A6 */	mtctr r12
 /* 802D43FC 002D133C  4E 80 04 21 */	bctrl 
 /* 802D4400 002D1340  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802D4404 002D1344  41 82 00 0C */	beq func_802D4410
+/* 802D4404 002D1344  41 82 00 0C */	beq lbl_802D4410
 /* 802D4408 002D1348  38 60 00 01 */	li r3, 1
-/* 802D440C 002D134C  48 00 00 14 */	b func_802D4420
-
-/* 802D4410 0004 .text      func_802D4410                  func_802D4410                  */
-.global func_802D4410
-func_802D4410:
+/* 802D440C 002D134C  48 00 00 14 */	b lbl_802D4420
+lbl_802D4410:
 /* 802D4410 002D1350  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 802D4414 000C .text      func_802D4414                  func_802D4414                  */
-.global func_802D4414
-func_802D4414:
+lbl_802D4414:
 /* 802D4414 002D1354  28 1F 00 00 */	cmplwi r31, 0
-/* 802D4418 002D1358  40 82 FF D0 */	bne func_802D43E8
+/* 802D4418 002D1358  40 82 FF D0 */	bne lbl_802D43E8
 /* 802D441C 002D135C  38 60 00 00 */	li r3, 0
-
-/* 802D4420 0018 .text      func_802D4420                  func_802D4420                  */
-.global func_802D4420
-func_802D4420:
+lbl_802D4420:
 /* 802D4420 002D1360  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D4424 002D1364  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D4428 002D1368  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -322,8 +269,9 @@ func_802D4420:
 /* 802D4430 002D1370  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4434 002D1374  4E 80 00 20 */	blr 
 
-/* 802D4438 002C .text      findVolume__13JKRFileLoaderFPPCc findVolume__13JKRFileLoaderFPPCc */
+/* 802D4438 008C .text      findVolume__13JKRFileLoaderFPPCc findVolume__13JKRFileLoaderFPPCc */
 .global findVolume__13JKRFileLoaderFPPCc
+findVolume__13JKRFileLoaderFPPCc:
 findVolume__13JKRFileLoaderFPPCc:
 /* 802D4438 002D1378  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802D443C 002D137C  7C 08 02 A6 */	mflr r0
@@ -333,56 +281,42 @@ findVolume__13JKRFileLoaderFPPCc:
 /* 802D444C 002D138C  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802D4450 002D1390  88 05 00 00 */	lbz r0, 0(r5)
 /* 802D4454 002D1394  2C 00 00 2F */	cmpwi r0, 0x2f
-/* 802D4458 002D1398  41 82 00 0C */	beq func_802D4464
+/* 802D4458 002D1398  41 82 00 0C */	beq lbl_802D4464
 /* 802D445C 002D139C  80 6D 8E 98 */	lwz r3, sCurrentVolume__13JKRFileLoader-_SDA_BASE_(r13)
-/* 802D4460 002D13A0  48 00 00 50 */	b func_802D44B0
-
-/* 802D4464 001C .text      func_802D4464                  func_802D4464                  */
-.global func_802D4464
-func_802D4464:
+/* 802D4460 002D13A0  48 00 00 50 */	b lbl_802D44B0
+lbl_802D4464:
 /* 802D4464 002D13A4  38 61 00 08 */	addi r3, r1, 8
 /* 802D4468 002D13A8  38 80 01 01 */	li r4, 0x101
 /* 802D446C 002D13AC  48 00 00 59 */	bl fetchVolumeName__13JKRFileLoaderFPclPCc
 /* 802D4470 002D13B0  90 7F 00 00 */	stw r3, 0(r31)
 /* 802D4474 002D13B4  3C 60 80 43 */	lis r3, sVolumeList__13JKRFileLoader@ha
 /* 802D4478 002D13B8  83 E3 43 54 */	lwz r31, sVolumeList__13JKRFileLoader@l(r3)
-/* 802D447C 002D13BC  48 00 00 28 */	b func_802D44A4
-
-/* 802D4480 0020 .text      func_802D4480                  func_802D4480                  */
-.global func_802D4480
-func_802D4480:
+/* 802D447C 002D13BC  48 00 00 28 */	b lbl_802D44A4
+lbl_802D4480:
 /* 802D4480 002D13C0  80 9F 00 00 */	lwz r4, 0(r31)
 /* 802D4484 002D13C4  38 61 00 08 */	addi r3, r1, 8
 /* 802D4488 002D13C8  80 84 00 28 */	lwz r4, 0x28(r4)
 /* 802D448C 002D13CC  48 09 45 09 */	bl strcmp
 /* 802D4490 002D13D0  2C 03 00 00 */	cmpwi r3, 0
-/* 802D4494 002D13D4  40 82 00 0C */	bne func_802D44A0
+/* 802D4494 002D13D4  40 82 00 0C */	bne lbl_802D44A0
 /* 802D4498 002D13D8  80 7F 00 00 */	lwz r3, 0(r31)
-/* 802D449C 002D13DC  48 00 00 14 */	b func_802D44B0
-
-/* 802D44A0 0004 .text      func_802D44A0                  func_802D44A0                  */
-.global func_802D44A0
-func_802D44A0:
+/* 802D449C 002D13DC  48 00 00 14 */	b lbl_802D44B0
+lbl_802D44A0:
 /* 802D44A0 002D13E0  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 802D44A4 000C .text      func_802D44A4                  func_802D44A4                  */
-.global func_802D44A4
-func_802D44A4:
+lbl_802D44A4:
 /* 802D44A4 002D13E4  28 1F 00 00 */	cmplwi r31, 0
-/* 802D44A8 002D13E8  40 82 FF D8 */	bne func_802D4480
+/* 802D44A8 002D13E8  40 82 FF D8 */	bne lbl_802D4480
 /* 802D44AC 002D13EC  38 60 00 00 */	li r3, 0
-
-/* 802D44B0 0014 .text      func_802D44B0                  func_802D44B0                  */
-.global func_802D44B0
-func_802D44B0:
+lbl_802D44B0:
 /* 802D44B0 002D13F0  83 E1 01 1C */	lwz r31, 0x11c(r1)
 /* 802D44B4 002D13F4  80 01 01 24 */	lwz r0, 0x124(r1)
 /* 802D44B8 002D13F8  7C 08 03 A6 */	mtlr r0
 /* 802D44BC 002D13FC  38 21 01 20 */	addi r1, r1, 0x120
 /* 802D44C0 002D1400  4E 80 00 20 */	blr 
 
-/* 802D44C4 004C .text      fetchVolumeName__13JKRFileLoaderFPclPCc fetchVolumeName__13JKRFileLoaderFPclPCc */
+/* 802D44C4 00DC .text      fetchVolumeName__13JKRFileLoaderFPclPCc fetchVolumeName__13JKRFileLoaderFPclPCc */
 .global fetchVolumeName__13JKRFileLoaderFPclPCc
+fetchVolumeName__13JKRFileLoaderFPclPCc:
 fetchVolumeName__13JKRFileLoaderFPclPCc:
 /* 802D44C4 002D1404  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D44C8 002D1408  7C 08 02 A6 */	mflr r0
@@ -397,78 +331,51 @@ fetchVolumeName__13JKRFileLoaderFPclPCc:
 /* 802D44EC 002D142C  38 84 D1 50 */	addi r4, r4, JKRFileLoader__stringBase0@l
 /* 802D44F0 002D1430  48 09 44 A5 */	bl strcmp
 /* 802D44F4 002D1434  2C 03 00 00 */	cmpwi r3, 0
-/* 802D44F8 002D1438  40 82 00 18 */	bne func_802D4510
+/* 802D44F8 002D1438  40 82 00 18 */	bne lbl_802D4510
 /* 802D44FC 002D143C  7F A3 EB 78 */	mr r3, r29
-/* 802D4500 002D1440  38 8D 83 40 */	addi r4, r13, sym_804508C0-_SDA_BASE_
+/* 802D4500 002D1440  38 8D 83 40 */	addi r4, r13, data_804508C0-_SDA_BASE_
 /* 802D4504 002D1444  48 09 46 29 */	bl strcpy
-/* 802D4508 002D1448  38 6D 83 40 */	addi r3, r13, sym_804508C0-_SDA_BASE_
-/* 802D450C 002D144C  48 00 00 7C */	b func_802D4588
-
-/* 802D4510 0010 .text      func_802D4510                  func_802D4510                  */
-.global func_802D4510
-func_802D4510:
+/* 802D4508 002D1448  38 6D 83 40 */	addi r3, r13, data_804508C0-_SDA_BASE_
+/* 802D450C 002D144C  48 00 00 7C */	b lbl_802D4588
+lbl_802D4510:
 /* 802D4510 002D1450  3C 60 80 3D */	lis r3, __lower_map@ha
 /* 802D4514 002D1454  38 63 2D 18 */	addi r3, r3, __lower_map@l
 /* 802D4518 002D1458  3B FF 00 01 */	addi r31, r31, 1
-/* 802D451C 002D145C  48 00 00 38 */	b func_802D4554
-
-/* 802D4520 001C .text      func_802D4520                  func_802D4520                  */
-.global func_802D4520
-func_802D4520:
+/* 802D451C 002D145C  48 00 00 38 */	b lbl_802D4554
+lbl_802D4520:
 /* 802D4520 002D1460  2C 1E 00 01 */	cmpwi r30, 1
-/* 802D4524 002D1464  40 81 00 2C */	ble func_802D4550
+/* 802D4524 002D1464  40 81 00 2C */	ble lbl_802D4550
 /* 802D4528 002D1468  7C 80 07 74 */	extsb r0, r4
 /* 802D452C 002D146C  2C 00 FF FF */	cmpwi r0, -1
-/* 802D4530 002D1470  40 82 00 0C */	bne func_802D453C
+/* 802D4530 002D1470  40 82 00 0C */	bne lbl_802D453C
 /* 802D4534 002D1474  38 00 FF FF */	li r0, -1
-/* 802D4538 002D1478  48 00 00 0C */	b func_802D4544
-
-/* 802D453C 0008 .text      func_802D453C                  func_802D453C                  */
-.global func_802D453C
-func_802D453C:
+/* 802D4538 002D1478  48 00 00 0C */	b lbl_802D4544
+lbl_802D453C:
 /* 802D453C 002D147C  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 802D4540 002D1480  7C 03 00 AE */	lbzx r0, r3, r0
-
-/* 802D4544 000C .text      func_802D4544                  func_802D4544                  */
-.global func_802D4544
-func_802D4544:
+lbl_802D4544:
 /* 802D4544 002D1484  98 1D 00 00 */	stb r0, 0(r29)
 /* 802D4548 002D1488  3B BD 00 01 */	addi r29, r29, 1
 /* 802D454C 002D148C  3B DE FF FF */	addi r30, r30, -1
-
-/* 802D4550 0004 .text      func_802D4550                  func_802D4550                  */
-.global func_802D4550
-func_802D4550:
+lbl_802D4550:
 /* 802D4550 002D1490  3B FF 00 01 */	addi r31, r31, 1
-
-/* 802D4554 0018 .text      func_802D4554                  func_802D4554                  */
-.global func_802D4554
-func_802D4554:
+lbl_802D4554:
 /* 802D4554 002D1494  88 9F 00 00 */	lbz r4, 0(r31)
 /* 802D4558 002D1498  7C 80 07 75 */	extsb. r0, r4
-/* 802D455C 002D149C  41 82 00 10 */	beq func_802D456C
+/* 802D455C 002D149C  41 82 00 10 */	beq lbl_802D456C
 /* 802D4560 002D14A0  7C 80 07 74 */	extsb r0, r4
 /* 802D4564 002D14A4  2C 00 00 2F */	cmpwi r0, 0x2f
-/* 802D4568 002D14A8  40 82 FF B8 */	bne func_802D4520
-
-/* 802D456C 0018 .text      func_802D456C                  func_802D456C                  */
-.global func_802D456C
-func_802D456C:
+/* 802D4568 002D14A8  40 82 FF B8 */	bne lbl_802D4520
+lbl_802D456C:
 /* 802D456C 002D14AC  38 00 00 00 */	li r0, 0
 /* 802D4570 002D14B0  98 1D 00 00 */	stb r0, 0(r29)
 /* 802D4574 002D14B4  88 1F 00 00 */	lbz r0, 0(r31)
 /* 802D4578 002D14B8  7C 00 07 75 */	extsb. r0, r0
-/* 802D457C 002D14BC  40 82 00 08 */	bne func_802D4584
-/* 802D4580 002D14C0  3B ED 83 40 */	addi r31, r13, sym_804508C0-_SDA_BASE_
-
-/* 802D4584 0004 .text      func_802D4584                  func_802D4584                  */
-.global func_802D4584
-func_802D4584:
+/* 802D457C 002D14BC  40 82 00 08 */	bne lbl_802D4584
+/* 802D4580 002D14C0  3B ED 83 40 */	addi r31, r13, data_804508C0-_SDA_BASE_
+lbl_802D4584:
 /* 802D4584 002D14C4  7F E3 FB 78 */	mr r3, r31
-
-/* 802D4588 0018 .text      func_802D4588                  func_802D4588                  */
-.global func_802D4588
-func_802D4588:
+lbl_802D4588:
 /* 802D4588 002D14C8  39 61 00 20 */	addi r11, r1, 0x20
 /* 802D458C 002D14CC  48 08 DC 9D */	bl _restgpr_29
 /* 802D4590 002D14D0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -478,6 +385,7 @@ func_802D4588:
 
 /* 802D45A0 0044 .text      __sinit_JKRFileLoader_cpp      __sinit_JKRFileLoader_cpp      */
 .global __sinit_JKRFileLoader_cpp
+__sinit_JKRFileLoader_cpp:
 __sinit_JKRFileLoader_cpp:
 /* 802D45A0 002D14E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D45A4 002D14E4  7C 08 02 A6 */	mflr r0
@@ -497,8 +405,11 @@ __sinit_JKRFileLoader_cpp:
 /* 802D45DC 002D151C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D45E0 002D1520  4E 80 00 20 */	blr 
 
-/* 802D45E4 0038 .text      "__dt__24JSUList<13JKRFileLoader>Fv" __dt__24JSUList<13JKRFileLoader>Fv */
+/* 802D45E4 0054 .text      __dt__24JSUList<13JKRFileLoader>Fv "__dt__24JSUList<13JKRFileLoader>Fv" */
+.global "__dt__24JSUList<13JKRFileLoader>Fv"
+"__dt__24JSUList<13JKRFileLoader>Fv":
 .global __dt__24JSUList_SUB_013JKRFileLoader_SUB_1Fv
+__dt__24JSUList_SUB_013JKRFileLoader_SUB_1Fv:
 __dt__24JSUList_SUB_013JKRFileLoader_SUB_1Fv:
 /* 802D45E4 002D1524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D45E8 002D1528  7C 08 02 A6 */	mflr r0
@@ -507,17 +418,14 @@ __dt__24JSUList_SUB_013JKRFileLoader_SUB_1Fv:
 /* 802D45F4 002D1534  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D45F8 002D1538  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D45FC 002D153C  7C 9F 23 78 */	mr r31, r4
-/* 802D4600 002D1540  41 82 00 1C */	beq func_802D461C
+/* 802D4600 002D1540  41 82 00 1C */	beq lbl_802D461C
 /* 802D4604 002D1544  38 80 00 00 */	li r4, 0
 /* 802D4608 002D1548  48 00 78 A5 */	bl __dt__10JSUPtrListFv
 /* 802D460C 002D154C  7F E0 07 35 */	extsh. r0, r31
-/* 802D4610 002D1550  40 81 00 0C */	ble func_802D461C
+/* 802D4610 002D1550  40 81 00 0C */	ble lbl_802D461C
 /* 802D4614 002D1554  7F C3 F3 78 */	mr r3, r30
 /* 802D4618 002D1558  4B FF A7 25 */	bl __dl__FPv
-
-/* 802D461C 001C .text      func_802D461C                  func_802D461C                  */
-.global func_802D461C
-func_802D461C:
+lbl_802D461C:
 /* 802D461C 002D155C  7F C3 F3 78 */	mr r3, r30
 /* 802D4620 002D1560  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D4624 002D1564  83 C1 00 08 */	lwz r30, 8(r1)
@@ -531,11 +439,11 @@ func_802D461C:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8039D150 0002 .rodata    JKRFileLoader__stringBase0     @stringBase0                   */
+/* 8039D150 0002 .rodata    @stringBase0                   JKRFileLoader__stringBase0     */
 .global JKRFileLoader__stringBase0
 JKRFileLoader__stringBase0:
 .byte 0x2f, 0x00 /* baserom.dol+0x39a150 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39a152 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -545,18 +453,29 @@ JKRFileLoader__stringBase0:
 /* 803CC1C8 003C .data      __vt__13JKRFileLoader          __vt__13JKRFileLoader          */
 .global __vt__13JKRFileLoader
 __vt__13JKRFileLoader:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x41, 0x48, 0x80, 0x2d, 0x41, 0xd4 /* baserom.dol+0x3c91c8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c91d8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c91e8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c91f8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9204 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__13JKRFileLoaderFv
+.4byte unmount__13JKRFileLoaderFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte 0x00000000
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80434348 000C .bss       JKRFileLoader__LIT_2182        @2182                          */
+/* 80434348 000C .bss       @2182                          JKRFileLoader__LIT_2182        */
 .global JKRFileLoader__LIT_2182
 JKRFileLoader__LIT_2182:
 .skip 0xc
@@ -571,15 +490,15 @@ sVolumeList__13JKRFileLoader:
 /*                                         .sdata                                         */
 /* ###################################################################################### */
 .section .sdata, "a"
-/* 804508C0 0002 .sdata     sym_804508C0                   rootPath$2498                  */
-.global sym_804508C0
-sym_804508C0:
+/* 804508C0 0002 .sdata     rootPath$2498                  data_804508C0                  */
+.global data_804508C0
+data_804508C0:
 .byte 0x2f, 0x00 /* baserom.dol+0x3d0620 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0622 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804508C8 0004 .sdata     sym_804508C8                   sym_804508C8                   */
-.global sym_804508C8
-sym_804508C8:
+/* 804508C8 0004 .sdata     data_804508C8                  data_804508C8                  */
+.global data_804508C8
+data_804508C8:
 .byte 0x01, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0628 */
 
 

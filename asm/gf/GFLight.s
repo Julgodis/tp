@@ -7,6 +7,7 @@
 /* 802CDE54 0048 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor GFSetChanAmbColor__F12_GXChannelID8_GXColor */
 .global GFSetChanAmbColor__F12_GXChannelID8_GXColor
 GFSetChanAmbColor__F12_GXChannelID8_GXColor:
+GFSetChanAmbColor__F12_GXChannelID8_GXColor:
 /* 802CDE54 002CAD94  88 E4 00 03 */	lbz r7, 3(r4)
 /* 802CDE58 002CAD98  88 C4 00 02 */	lbz r6, 2(r4)
 /* 802CDE5C 002CAD9C  88 A4 00 00 */	lbz r5, 0(r4)

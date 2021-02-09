@@ -7,6 +7,7 @@
 /* 8001F1A8 0028 .text      fopVw_Draw__FP10view_class     fopVw_Draw__FP10view_class     */
 .global fopVw_Draw__FP10view_class
 fopVw_Draw__FP10view_class:
+fopVw_Draw__FP10view_class:
 /* 8001F1A8 0001C0E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F1AC 0001C0EC  7C 08 02 A6 */	mflr r0
 /* 8001F1B0 0001C0F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,6 +21,7 @@ fopVw_Draw__FP10view_class:
 
 /* 8001F1D0 0028 .text      fopVw_Execute__FP10view_class  fopVw_Execute__FP10view_class  */
 .global fopVw_Execute__FP10view_class
+fopVw_Execute__FP10view_class:
 fopVw_Execute__FP10view_class:
 /* 8001F1D0 0001C110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F1D4 0001C114  7C 08 02 A6 */	mflr r0
@@ -35,6 +37,7 @@ fopVw_Execute__FP10view_class:
 /* 8001F1F8 0028 .text      fopVw_IsDelete__FPv            fopVw_IsDelete__FPv            */
 .global fopVw_IsDelete__FPv
 fopVw_IsDelete__FPv:
+fopVw_IsDelete__FPv:
 /* 8001F1F8 0001C138  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F1FC 0001C13C  7C 08 02 A6 */	mflr r0
 /* 8001F200 0001C140  90 01 00 14 */	stw r0, 0x14(r1)
@@ -49,6 +52,7 @@ fopVw_IsDelete__FPv:
 /* 8001F220 0028 .text      fopVw_Delete__FP10view_class   fopVw_Delete__FP10view_class   */
 .global fopVw_Delete__FP10view_class
 fopVw_Delete__FP10view_class:
+fopVw_Delete__FP10view_class:
 /* 8001F220 0001C160  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F224 0001C164  7C 08 02 A6 */	mflr r0
 /* 8001F228 0001C168  90 01 00 14 */	stw r0, 0x14(r1)
@@ -62,6 +66,7 @@ fopVw_Delete__FP10view_class:
 
 /* 8001F248 003C .text      fopVw_Create__FPv              fopVw_Create__FPv              */
 .global fopVw_Create__FPv
+fopVw_Create__FPv:
 fopVw_Create__FPv:
 /* 8001F248 0001C188  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F24C 0001C18C  7C 08 02 A6 */	mflr r0
@@ -89,5 +94,5 @@ fopVw_Create__FPv:
 g_fopVw_Method:
 .byte 0x80, 0x01, 0xf2, 0x48, 0x80, 0x01, 0xf2, 0x20, 0x80, 0x01, 0xf1, 0xd0, 0x80, 0x01, 0xf1, 0xf8 /* baserom.dol+0x3a0928 */
 .byte 0x80, 0x01, 0xf1, 0xa8 /* baserom.dol+0x3a0938 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a093c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 80362018 0030 .text      __ptmf_test                    __ptmf_test                    */
 .global __ptmf_test
 __ptmf_test:
+__ptmf_test:
 /* 80362018 0035EF58  80 A3 00 00 */	lwz r5, 0(r3)
 /* 8036201C 0035EF5C  80 C3 00 04 */	lwz r6, 4(r3)
 /* 80362020 0035EF60  80 E3 00 08 */	lwz r7, 8(r3)
@@ -22,6 +23,7 @@ __ptmf_test:
 
 /* 80362048 003C .text      __ptmf_cmpr                    __ptmf_cmpr                    */
 .global __ptmf_cmpr
+__ptmf_cmpr:
 __ptmf_cmpr:
 /* 80362048 0035EF88  80 A3 00 00 */	lwz r5, 0(r3)
 /* 8036204C 0035EF8C  80 C4 00 00 */	lwz r6, 0(r4)
@@ -39,21 +41,19 @@ __ptmf_cmpr:
 /* 8036207C 0035EFBC  38 60 00 00 */	li r3, 0
 /* 80362080 0035EFC0  4E 80 00 20 */	blr 
 
-/* 80362084 0020 .text      __ptmf_scall                   __ptmf_scall                   */
+/* 80362084 0028 .text      __ptmf_scall                   __ptmf_scall                   */
 .global __ptmf_scall
+__ptmf_scall:
 __ptmf_scall:
 /* 80362084 0035EFC4  80 0C 00 00 */	lwz r0, 0(r12)
 /* 80362088 0035EFC8  81 6C 00 04 */	lwz r11, 4(r12)
 /* 8036208C 0035EFCC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80362090 0035EFD0  7C 63 02 14 */	add r3, r3, r0
 /* 80362094 0035EFD4  2C 0B 00 00 */	cmpwi r11, 0
-/* 80362098 0035EFD8  41 80 00 0C */	blt func_803620A4
+/* 80362098 0035EFD8  41 80 00 0C */	blt lbl_803620A4
 /* 8036209C 0035EFDC  7D 83 60 2E */	lwzx r12, r3, r12
 /* 803620A0 0035EFE0  7D 8C 58 2E */	lwzx r12, r12, r11
-
-/* 803620A4 0008 .text      func_803620A4                  func_803620A4                  */
-.global func_803620A4
-func_803620A4:
+lbl_803620A4:
 /* 803620A4 0035EFE4  7D 89 03 A6 */	mtctr r12
 /* 803620A8 0035EFE8  4E 80 04 20 */	bctr 
 
@@ -66,5 +66,5 @@ func_803620A4:
 .global __ptmf_null
 __ptmf_null:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39f180 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39f18c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 8036CFD8 0044 .text      TRKMessageSend                 TRKMessageSend                 */
 .global TRKMessageSend
 TRKMessageSend:
+TRKMessageSend:
 /* 8036CFD8 00369F18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036CFDC 00369F1C  7C 08 02 A6 */	mflr r0
 /* 8036CFE0 00369F20  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,11 +31,11 @@ TRKMessageSend:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 803A26B8 0025 .rodata    MetroTRK_Portable_msg__LIT_98  @98                            */
+/* 803A26B8 0025 .rodata    @98                            MetroTRK_Portable_msg__LIT_98  */
 .global MetroTRK_Portable_msg__LIT_98
 MetroTRK_Portable_msg__LIT_98:
 .byte 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x53, 0x65, 0x6e, 0x64, 0x20, 0x3a, 0x20, 0x63, 0x63 /* baserom.dol+0x39f6b8 */
 .byte 0x5f, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x72, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x65, 0x64, 0x20 /* baserom.dol+0x39f6c8 */
 .byte 0x25, 0x6c, 0x64, 0x0a, 0x00 /* baserom.dol+0x39f6d8 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x39f6dd */
+.byte 0x00, 0x00, 0x00 /* padding */
 

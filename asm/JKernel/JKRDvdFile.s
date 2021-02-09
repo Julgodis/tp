@@ -7,6 +7,7 @@
 /* 802D9584 0074 .text      __ct__10JKRDvdFileFv           __ct__10JKRDvdFileFv           */
 .global __ct__10JKRDvdFileFv
 __ct__10JKRDvdFileFv:
+__ct__10JKRDvdFileFv:
 /* 802D9584 002D64C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D9588 002D64C8  7C 08 02 A6 */	mflr r0
 /* 802D958C 002D64CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -37,8 +38,9 @@ __ct__10JKRDvdFileFv:
 /* 802D95F0 002D6530  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D95F4 002D6534  4E 80 00 20 */	blr 
 
-/* 802D95F8 008C .text      __ct__10JKRDvdFileFPCc         __ct__10JKRDvdFileFPCc         */
+/* 802D95F8 00A8 .text      __ct__10JKRDvdFileFPCc         __ct__10JKRDvdFileFPCc         */
 .global __ct__10JKRDvdFileFPCc
+__ct__10JKRDvdFileFPCc:
 __ct__10JKRDvdFileFPCc:
 /* 802D95F8 002D6538  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D95FC 002D653C  7C 08 02 A6 */	mflr r0
@@ -72,18 +74,12 @@ __ct__10JKRDvdFileFPCc:
 /* 802D966C 002D65AC  98 7D 00 18 */	stb r3, 0x18(r29)
 /* 802D9670 002D65B0  88 1D 00 18 */	lbz r0, 0x18(r29)
 /* 802D9674 002D65B4  28 00 00 00 */	cmplwi r0, 0
-/* 802D9678 002D65B8  41 82 00 0C */	beq func_802D9684
+/* 802D9678 002D65B8  41 82 00 0C */	beq lbl_802D9684
 /* 802D967C 002D65BC  7F A3 EB 78 */	mr r3, r29
-/* 802D9680 002D65C0  48 00 00 08 */	b func_802D9688
-
-/* 802D9684 0004 .text      func_802D9684                  func_802D9684                  */
-.global func_802D9684
-func_802D9684:
+/* 802D9680 002D65C0  48 00 00 08 */	b lbl_802D9688
+lbl_802D9684:
 /* 802D9684 002D65C4  7F A3 EB 78 */	mr r3, r29
-
-/* 802D9688 0018 .text      func_802D9688                  func_802D9688                  */
-.global func_802D9688
-func_802D9688:
+lbl_802D9688:
 /* 802D9688 002D65C8  39 61 00 20 */	addi r11, r1, 0x20
 /* 802D968C 002D65CC  48 08 8B 9D */	bl _restgpr_29
 /* 802D9690 002D65D0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -91,8 +87,9 @@ func_802D9688:
 /* 802D9698 002D65D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D969C 002D65DC  4E 80 00 20 */	blr 
 
-/* 802D96A0 008C .text      __ct__10JKRDvdFileFl           __ct__10JKRDvdFileFl           */
+/* 802D96A0 00A8 .text      __ct__10JKRDvdFileFl           __ct__10JKRDvdFileFl           */
 .global __ct__10JKRDvdFileFl
+__ct__10JKRDvdFileFl:
 __ct__10JKRDvdFileFl:
 /* 802D96A0 002D65E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D96A4 002D65E4  7C 08 02 A6 */	mflr r0
@@ -126,18 +123,12 @@ __ct__10JKRDvdFileFl:
 /* 802D9714 002D6654  98 7D 00 18 */	stb r3, 0x18(r29)
 /* 802D9718 002D6658  88 1D 00 18 */	lbz r0, 0x18(r29)
 /* 802D971C 002D665C  28 00 00 00 */	cmplwi r0, 0
-/* 802D9720 002D6660  41 82 00 0C */	beq func_802D972C
+/* 802D9720 002D6660  41 82 00 0C */	beq lbl_802D972C
 /* 802D9724 002D6664  7F A3 EB 78 */	mr r3, r29
-/* 802D9728 002D6668  48 00 00 08 */	b func_802D9730
-
-/* 802D972C 0004 .text      func_802D972C                  func_802D972C                  */
-.global func_802D972C
-func_802D972C:
+/* 802D9728 002D6668  48 00 00 08 */	b lbl_802D9730
+lbl_802D972C:
 /* 802D972C 002D666C  7F A3 EB 78 */	mr r3, r29
-
-/* 802D9730 0018 .text      func_802D9730                  func_802D9730                  */
-.global func_802D9730
-func_802D9730:
+lbl_802D9730:
 /* 802D9730 002D6670  39 61 00 20 */	addi r11, r1, 0x20
 /* 802D9734 002D6674  48 08 8A F5 */	bl _restgpr_29
 /* 802D9738 002D6678  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -145,8 +136,9 @@ func_802D9730:
 /* 802D9740 002D6680  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D9744 002D6684  4E 80 00 20 */	blr 
 
-/* 802D9748 0050 .text      __dt__10JKRDvdFileFv           __dt__10JKRDvdFileFv           */
+/* 802D9748 009C .text      __dt__10JKRDvdFileFv           __dt__10JKRDvdFileFv           */
 .global __dt__10JKRDvdFileFv
+__dt__10JKRDvdFileFv:
 __dt__10JKRDvdFileFv:
 /* 802D9748 002D6688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D974C 002D668C  7C 08 02 A6 */	mflr r0
@@ -155,7 +147,7 @@ __dt__10JKRDvdFileFv:
 /* 802D9758 002D6698  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D975C 002D669C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D9760 002D66A0  7C 9F 23 78 */	mr r31, r4
-/* 802D9764 002D66A4  41 82 00 64 */	beq func_802D97C8
+/* 802D9764 002D66A4  41 82 00 64 */	beq lbl_802D97C8
 /* 802D9768 002D66A8  3C 80 80 3D */	lis r4, __vt__10JKRDvdFile@ha
 /* 802D976C 002D66AC  38 04 C4 38 */	addi r0, r4, __vt__10JKRDvdFile@l
 /* 802D9770 002D66B0  90 1E 00 00 */	stw r0, 0(r30)
@@ -164,34 +156,25 @@ __dt__10JKRDvdFileFv:
 /* 802D977C 002D66BC  7D 89 03 A6 */	mtctr r12
 /* 802D9780 002D66C0  4E 80 04 21 */	bctrl 
 /* 802D9784 002D66C4  34 1E 00 E4 */	addic. r0, r30, 0xe4
-/* 802D9788 002D66C8  41 82 00 10 */	beq func_802D9798
+/* 802D9788 002D66C8  41 82 00 10 */	beq lbl_802D9798
 /* 802D978C 002D66CC  38 7E 00 E4 */	addi r3, r30, 0xe4
 /* 802D9790 002D66D0  38 80 00 00 */	li r4, 0
 /* 802D9794 002D66D4  48 00 26 81 */	bl __dt__10JSUPtrLinkFv
-
-/* 802D9798 0020 .text      func_802D9798                  func_802D9798                  */
-.global func_802D9798
-func_802D9798:
+lbl_802D9798:
 /* 802D9798 002D66D8  28 1E 00 00 */	cmplwi r30, 0
-/* 802D979C 002D66DC  41 82 00 1C */	beq func_802D97B8
+/* 802D979C 002D66DC  41 82 00 1C */	beq lbl_802D97B8
 /* 802D97A0 002D66E0  3C 60 80 3D */	lis r3, __vt__7JKRFile@ha
 /* 802D97A4 002D66E4  38 03 C3 28 */	addi r0, r3, __vt__7JKRFile@l
 /* 802D97A8 002D66E8  90 1E 00 00 */	stw r0, 0(r30)
 /* 802D97AC 002D66EC  7F C3 F3 78 */	mr r3, r30
 /* 802D97B0 002D66F0  38 80 00 00 */	li r4, 0
 /* 802D97B4 002D66F4  4B FF 7D 31 */	bl __dt__11JKRDisposerFv
-
-/* 802D97B8 0010 .text      func_802D97B8                  func_802D97B8                  */
-.global func_802D97B8
-func_802D97B8:
+lbl_802D97B8:
 /* 802D97B8 002D66F8  7F E0 07 35 */	extsh. r0, r31
-/* 802D97BC 002D66FC  40 81 00 0C */	ble func_802D97C8
+/* 802D97BC 002D66FC  40 81 00 0C */	ble lbl_802D97C8
 /* 802D97C0 002D6700  7F C3 F3 78 */	mr r3, r30
 /* 802D97C4 002D6704  4B FF 55 79 */	bl __dl__FPv
-
-/* 802D97C8 001C .text      func_802D97C8                  func_802D97C8                  */
-.global func_802D97C8
-func_802D97C8:
+lbl_802D97C8:
 /* 802D97C8 002D6708  7F C3 F3 78 */	mr r3, r30
 /* 802D97CC 002D670C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D97D0 002D6710  83 C1 00 08 */	lwz r30, 8(r1)
@@ -202,6 +185,7 @@ func_802D97C8:
 
 /* 802D97E4 006C .text      initiate__10JKRDvdFileFv       initiate__10JKRDvdFileFv       */
 .global initiate__10JKRDvdFileFv
+initiate__10JKRDvdFileFv:
 initiate__10JKRDvdFileFv:
 /* 802D97E4 002D6724  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D97E8 002D6728  7C 08 02 A6 */	mflr r0
@@ -231,8 +215,9 @@ initiate__10JKRDvdFileFv:
 /* 802D9848 002D6788  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D984C 002D678C  4E 80 00 20 */	blr 
 
-/* 802D9850 005C .text      open__10JKRDvdFileFPCc         open__10JKRDvdFileFPCc         */
+/* 802D9850 0074 .text      open__10JKRDvdFileFPCc         open__10JKRDvdFileFPCc         */
 .global open__10JKRDvdFileFPCc
+open__10JKRDvdFileFPCc:
 open__10JKRDvdFileFPCc:
 /* 802D9850 002D6790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D9854 002D6794  7C 08 02 A6 */	mflr r0
@@ -241,7 +226,7 @@ open__10JKRDvdFileFPCc:
 /* 802D9860 002D67A0  7C 7F 1B 78 */	mr r31, r3
 /* 802D9864 002D67A4  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 802D9868 002D67A8  28 00 00 00 */	cmplwi r0, 0
-/* 802D986C 002D67AC  40 82 00 40 */	bne func_802D98AC
+/* 802D986C 002D67AC  40 82 00 40 */	bne lbl_802D98AC
 /* 802D9870 002D67B0  7C 83 23 78 */	mr r3, r4
 /* 802D9874 002D67B4  38 9F 00 5C */	addi r4, r31, 0x5c
 /* 802D9878 002D67B8  48 06 F0 19 */	bl DVDOpen
@@ -250,17 +235,14 @@ open__10JKRDvdFileFPCc:
 /* 802D9884 002D67C4  98 1F 00 18 */	stb r0, 0x18(r31)
 /* 802D9888 002D67C8  88 1F 00 18 */	lbz r0, 0x18(r31)
 /* 802D988C 002D67CC  28 00 00 00 */	cmplwi r0, 0
-/* 802D9890 002D67D0  41 82 00 1C */	beq func_802D98AC
+/* 802D9890 002D67D0  41 82 00 1C */	beq lbl_802D98AC
 /* 802D9894 002D67D4  3C 60 80 43 */	lis r3, sDvdList__10JKRDvdFile@ha
 /* 802D9898 002D67D8  38 63 43 6C */	addi r3, r3, sDvdList__10JKRDvdFile@l
 /* 802D989C 002D67DC  38 9F 00 E4 */	addi r4, r31, 0xe4
 /* 802D98A0 002D67E0  48 00 26 AD */	bl append__10JSUPtrListFP10JSUPtrLink
 /* 802D98A4 002D67E4  38 7F 00 5C */	addi r3, r31, 0x5c
 /* 802D98A8 002D67E8  48 07 18 D5 */	bl DVDGetCommandBlockStatus
-
-/* 802D98AC 0018 .text      func_802D98AC                  func_802D98AC                  */
-.global func_802D98AC
-func_802D98AC:
+lbl_802D98AC:
 /* 802D98AC 002D67EC  88 7F 00 18 */	lbz r3, 0x18(r31)
 /* 802D98B0 002D67F0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D98B4 002D67F4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -268,8 +250,9 @@ func_802D98AC:
 /* 802D98BC 002D67FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D98C0 002D6800  4E 80 00 20 */	blr 
 
-/* 802D98C4 005C .text      open__10JKRDvdFileFl           open__10JKRDvdFileFl           */
+/* 802D98C4 0074 .text      open__10JKRDvdFileFl           open__10JKRDvdFileFl           */
 .global open__10JKRDvdFileFl
+open__10JKRDvdFileFl:
 open__10JKRDvdFileFl:
 /* 802D98C4 002D6804  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D98C8 002D6808  7C 08 02 A6 */	mflr r0
@@ -278,7 +261,7 @@ open__10JKRDvdFileFl:
 /* 802D98D4 002D6814  7C 7F 1B 78 */	mr r31, r3
 /* 802D98D8 002D6818  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 802D98DC 002D681C  28 00 00 00 */	cmplwi r0, 0
-/* 802D98E0 002D6820  40 82 00 40 */	bne func_802D9920
+/* 802D98E0 002D6820  40 82 00 40 */	bne lbl_802D9920
 /* 802D98E4 002D6824  7C 83 23 78 */	mr r3, r4
 /* 802D98E8 002D6828  38 9F 00 5C */	addi r4, r31, 0x5c
 /* 802D98EC 002D682C  48 06 EF 31 */	bl DVDFastOpen
@@ -287,17 +270,14 @@ open__10JKRDvdFileFl:
 /* 802D98F8 002D6838  98 1F 00 18 */	stb r0, 0x18(r31)
 /* 802D98FC 002D683C  88 1F 00 18 */	lbz r0, 0x18(r31)
 /* 802D9900 002D6840  28 00 00 00 */	cmplwi r0, 0
-/* 802D9904 002D6844  41 82 00 1C */	beq func_802D9920
+/* 802D9904 002D6844  41 82 00 1C */	beq lbl_802D9920
 /* 802D9908 002D6848  3C 60 80 43 */	lis r3, sDvdList__10JKRDvdFile@ha
 /* 802D990C 002D684C  38 63 43 6C */	addi r3, r3, sDvdList__10JKRDvdFile@l
 /* 802D9910 002D6850  38 9F 00 E4 */	addi r4, r31, 0xe4
 /* 802D9914 002D6854  48 00 26 39 */	bl append__10JSUPtrListFP10JSUPtrLink
 /* 802D9918 002D6858  38 7F 00 5C */	addi r3, r31, 0x5c
 /* 802D991C 002D685C  48 07 18 61 */	bl DVDGetCommandBlockStatus
-
-/* 802D9920 0018 .text      func_802D9920                  func_802D9920                  */
-.global func_802D9920
-func_802D9920:
+lbl_802D9920:
 /* 802D9920 002D6860  88 7F 00 18 */	lbz r3, 0x18(r31)
 /* 802D9924 002D6864  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D9928 002D6868  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -305,8 +285,9 @@ func_802D9920:
 /* 802D9930 002D6870  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D9934 002D6874  4E 80 00 20 */	blr 
 
-/* 802D9938 004C .text      close__10JKRDvdFileFv          close__10JKRDvdFileFv          */
+/* 802D9938 007C .text      close__10JKRDvdFileFv          close__10JKRDvdFileFv          */
 .global close__10JKRDvdFileFv
+close__10JKRDvdFileFv:
 close__10JKRDvdFileFv:
 /* 802D9938 002D6878  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D993C 002D687C  7C 08 02 A6 */	mflr r0
@@ -315,22 +296,19 @@ close__10JKRDvdFileFv:
 /* 802D9948 002D6888  7C 7F 1B 78 */	mr r31, r3
 /* 802D994C 002D688C  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 802D9950 002D6890  28 00 00 00 */	cmplwi r0, 0
-/* 802D9954 002D6894  41 82 00 4C */	beq func_802D99A0
+/* 802D9954 002D6894  41 82 00 4C */	beq lbl_802D99A0
 /* 802D9958 002D6898  38 7F 00 5C */	addi r3, r31, 0x5c
 /* 802D995C 002D689C  48 06 EF FD */	bl DVDClose
 /* 802D9960 002D68A0  2C 03 00 00 */	cmpwi r3, 0
-/* 802D9964 002D68A4  41 82 00 20 */	beq func_802D9984
+/* 802D9964 002D68A4  41 82 00 20 */	beq lbl_802D9984
 /* 802D9968 002D68A8  38 00 00 00 */	li r0, 0
 /* 802D996C 002D68AC  98 1F 00 18 */	stb r0, 0x18(r31)
 /* 802D9970 002D68B0  3C 60 80 43 */	lis r3, sDvdList__10JKRDvdFile@ha
 /* 802D9974 002D68B4  38 63 43 6C */	addi r3, r3, sDvdList__10JKRDvdFile@l
 /* 802D9978 002D68B8  38 9F 00 E4 */	addi r4, r31, 0xe4
 /* 802D997C 002D68BC  48 00 27 E1 */	bl remove__10JSUPtrListFP10JSUPtrLink
-/* 802D9980 002D68C0  48 00 00 20 */	b func_802D99A0
-
-/* 802D9984 001C .text      func_802D9984                  func_802D9984                  */
-.global func_802D9984
-func_802D9984:
+/* 802D9980 002D68C0  48 00 00 20 */	b lbl_802D99A0
+lbl_802D9984:
 /* 802D9984 002D68C4  3C 60 80 3A */	lis r3, JKRDvdFile__stringBase0@ha
 /* 802D9988 002D68C8  38 63 D2 60 */	addi r3, r3, JKRDvdFile__stringBase0@l
 /* 802D998C 002D68CC  38 80 00 D5 */	li r4, 0xd5
@@ -338,18 +316,16 @@ func_802D9984:
 /* 802D9994 002D68D4  38 C3 00 12 */	addi r6, r3, 0x12
 /* 802D9998 002D68D8  4C C6 31 82 */	crclr 6
 /* 802D999C 002D68DC  48 00 88 61 */	bl panic_f__12JUTExceptionFPCciPCce
-
-/* 802D99A0 0014 .text      func_802D99A0                  func_802D99A0                  */
-.global func_802D99A0
-func_802D99A0:
+lbl_802D99A0:
 /* 802D99A0 002D68E0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D99A4 002D68E4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802D99A8 002D68E8  7C 08 03 A6 */	mtlr r0
 /* 802D99AC 002D68EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D99B0 002D68F0  4E 80 00 20 */	blr 
 
-/* 802D99B4 0048 .text      readData__10JKRDvdFileFPvll    readData__10JKRDvdFileFPvll    */
+/* 802D99B4 00B4 .text      readData__10JKRDvdFileFPvll    readData__10JKRDvdFileFPvll    */
 .global readData__10JKRDvdFileFPvll
+readData__10JKRDvdFileFPvll:
 readData__10JKRDvdFileFPvll:
 /* 802D99B4 002D68F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D99B8 002D68F8  7C 08 02 A6 */	mflr r0
@@ -364,15 +340,12 @@ readData__10JKRDvdFileFPvll:
 /* 802D99DC 002D691C  48 06 56 65 */	bl OSLockMutex
 /* 802D99E0 002D6920  80 1B 00 F4 */	lwz r0, 0xf4(r27)
 /* 802D99E4 002D6924  28 00 00 00 */	cmplwi r0, 0
-/* 802D99E8 002D6928  41 82 00 14 */	beq func_802D99FC
+/* 802D99E8 002D6928  41 82 00 14 */	beq lbl_802D99FC
 /* 802D99EC 002D692C  38 7B 00 1C */	addi r3, r27, 0x1c
 /* 802D99F0 002D6930  48 06 57 2D */	bl OSUnlockMutex
 /* 802D99F4 002D6934  38 60 FF FF */	li r3, -1
-/* 802D99F8 002D6938  48 00 00 58 */	b func_802D9A50
-
-/* 802D99FC 0040 .text      func_802D99FC                  func_802D99FC                  */
-.global func_802D99FC
-func_802D99FC:
+/* 802D99F8 002D6938  48 00 00 58 */	b lbl_802D9A50
+lbl_802D99FC:
 /* 802D99FC 002D693C  48 06 72 89 */	bl OSGetCurrentThread
 /* 802D9A00 002D6940  90 7B 00 F4 */	stw r3, 0xf4(r27)
 /* 802D9A04 002D6944  3B E0 FF FF */	li r31, -1
@@ -385,23 +358,17 @@ func_802D99FC:
 /* 802D9A20 002D6960  39 00 00 02 */	li r8, 2
 /* 802D9A24 002D6964  48 06 F3 31 */	bl DVDReadAsyncPrio
 /* 802D9A28 002D6968  2C 03 00 00 */	cmpwi r3, 0
-/* 802D9A2C 002D696C  41 82 00 10 */	beq func_802D9A3C
+/* 802D9A2C 002D696C  41 82 00 10 */	beq lbl_802D9A3C
 /* 802D9A30 002D6970  7F 63 DB 78 */	mr r3, r27
 /* 802D9A34 002D6974  48 00 00 3D */	bl sync__10JKRDvdFileFv
 /* 802D9A38 002D6978  7C 7F 1B 78 */	mr r31, r3
-
-/* 802D9A3C 0014 .text      func_802D9A3C                  func_802D9A3C                  */
-.global func_802D9A3C
-func_802D9A3C:
+lbl_802D9A3C:
 /* 802D9A3C 002D697C  38 00 00 00 */	li r0, 0
 /* 802D9A40 002D6980  90 1B 00 F4 */	stw r0, 0xf4(r27)
 /* 802D9A44 002D6984  38 7B 00 1C */	addi r3, r27, 0x1c
 /* 802D9A48 002D6988  48 06 56 D5 */	bl OSUnlockMutex
 /* 802D9A4C 002D698C  7F E3 FB 78 */	mr r3, r31
-
-/* 802D9A50 0018 .text      func_802D9A50                  func_802D9A50                  */
-.global func_802D9A50
-func_802D9A50:
+lbl_802D9A50:
 /* 802D9A50 002D6990  39 61 00 20 */	addi r11, r1, 0x20
 /* 802D9A54 002D6994  48 08 87 CD */	bl _restgpr_27
 /* 802D9A58 002D6998  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -412,11 +379,13 @@ func_802D9A50:
 /* 802D9A68 0008 .text      writeData__10JKRDvdFileFPCvll  writeData__10JKRDvdFileFPCvll  */
 .global writeData__10JKRDvdFileFPCvll
 writeData__10JKRDvdFileFPCvll:
+writeData__10JKRDvdFileFPCvll:
 /* 802D9A68 002D69A8  38 60 FF FF */	li r3, -1
 /* 802D9A6C 002D69AC  4E 80 00 20 */	blr 
 
 /* 802D9A70 0054 .text      sync__10JKRDvdFileFv           sync__10JKRDvdFileFv           */
 .global sync__10JKRDvdFileFv
+sync__10JKRDvdFileFv:
 sync__10JKRDvdFileFv:
 /* 802D9A70 002D69B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D9A74 002D69B4  7C 08 02 A6 */	mflr r0
@@ -443,6 +412,7 @@ sync__10JKRDvdFileFv:
 /* 802D9AC4 0034 .text      doneProcess__10JKRDvdFileFlP11DVDFileInfo doneProcess__10JKRDvdFileFlP11DVDFileInfo */
 .global doneProcess__10JKRDvdFileFlP11DVDFileInfo
 doneProcess__10JKRDvdFileFlP11DVDFileInfo:
+doneProcess__10JKRDvdFileFlP11DVDFileInfo:
 /* 802D9AC4 002D6A04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D9AC8 002D6A08  7C 08 02 A6 */	mflr r0
 /* 802D9ACC 002D6A0C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -460,11 +430,13 @@ doneProcess__10JKRDvdFileFlP11DVDFileInfo:
 /* 802D9AF8 0008 .text      getFileSize__10JKRDvdFileCFv   getFileSize__10JKRDvdFileCFv   */
 .global getFileSize__10JKRDvdFileCFv
 getFileSize__10JKRDvdFileCFv:
+getFileSize__10JKRDvdFileCFv:
 /* 802D9AF8 002D6A38  80 63 00 90 */	lwz r3, 0x90(r3)
 /* 802D9AFC 002D6A3C  4E 80 00 20 */	blr 
 
 /* 802D9B00 0044 .text      __sinit_JKRDvdFile_cpp         __sinit_JKRDvdFile_cpp         */
 .global __sinit_JKRDvdFile_cpp
+__sinit_JKRDvdFile_cpp:
 __sinit_JKRDvdFile_cpp:
 /* 802D9B00 002D6A40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D9B04 002D6A44  7C 08 02 A6 */	mflr r0
@@ -484,8 +456,11 @@ __sinit_JKRDvdFile_cpp:
 /* 802D9B3C 002D6A7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D9B40 002D6A80  4E 80 00 20 */	blr 
 
-/* 802D9B44 0038 .text      "__dt__21JSUList<10JKRDvdFile>Fv" __dt__21JSUList<10JKRDvdFile>Fv */
+/* 802D9B44 0054 .text      __dt__21JSUList<10JKRDvdFile>Fv "__dt__21JSUList<10JKRDvdFile>Fv" */
+.global "__dt__21JSUList<10JKRDvdFile>Fv"
+"__dt__21JSUList<10JKRDvdFile>Fv":
 .global __dt__21JSUList_SUB_010JKRDvdFile_SUB_1Fv
+__dt__21JSUList_SUB_010JKRDvdFile_SUB_1Fv:
 __dt__21JSUList_SUB_010JKRDvdFile_SUB_1Fv:
 /* 802D9B44 002D6A84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D9B48 002D6A88  7C 08 02 A6 */	mflr r0
@@ -494,17 +469,14 @@ __dt__21JSUList_SUB_010JKRDvdFile_SUB_1Fv:
 /* 802D9B54 002D6A94  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D9B58 002D6A98  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D9B5C 002D6A9C  7C 9F 23 78 */	mr r31, r4
-/* 802D9B60 002D6AA0  41 82 00 1C */	beq func_802D9B7C
+/* 802D9B60 002D6AA0  41 82 00 1C */	beq lbl_802D9B7C
 /* 802D9B64 002D6AA4  38 80 00 00 */	li r4, 0
 /* 802D9B68 002D6AA8  48 00 23 45 */	bl __dt__10JSUPtrListFv
 /* 802D9B6C 002D6AAC  7F E0 07 35 */	extsh. r0, r31
-/* 802D9B70 002D6AB0  40 81 00 0C */	ble func_802D9B7C
+/* 802D9B70 002D6AB0  40 81 00 0C */	ble lbl_802D9B7C
 /* 802D9B74 002D6AB4  7F C3 F3 78 */	mr r3, r30
 /* 802D9B78 002D6AB8  4B FF 51 C5 */	bl __dl__FPv
-
-/* 802D9B7C 001C .text      func_802D9B7C                  func_802D9B7C                  */
-.global func_802D9B7C
-func_802D9B7C:
+lbl_802D9B7C:
 /* 802D9B7C 002D6ABC  7F C3 F3 78 */	mr r3, r30
 /* 802D9B80 002D6AC0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D9B84 002D6AC4  83 C1 00 08 */	lwz r30, 8(r1)
@@ -518,13 +490,13 @@ func_802D9B7C:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8039D260 0029 .rodata    JKRDvdFile__stringBase0        @stringBase0                   */
+/* 8039D260 0029 .rodata    @stringBase0                   JKRDvdFile__stringBase0        */
 .global JKRDvdFile__stringBase0
 JKRDvdFile__stringBase0:
 .byte 0x4a, 0x4b, 0x52, 0x44, 0x76, 0x64, 0x46, 0x69, 0x6c, 0x65, 0x2e, 0x63, 0x70, 0x70, 0x00, 0x25 /* baserom.dol+0x39a260 */
 .byte 0x73, 0x00, 0x63, 0x61, 0x6e, 0x6e, 0x6f, 0x74, 0x20, 0x63, 0x6c, 0x6f, 0x73, 0x65, 0x20, 0x44 /* baserom.dol+0x39a270 */
 .byte 0x56, 0x44, 0x20, 0x66, 0x69, 0x6c, 0x65, 0x0a, 0x00 /* baserom.dol+0x39a280 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39a289 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -534,17 +506,23 @@ JKRDvdFile__stringBase0:
 /* 803CC438 0024 .data      __vt__10JKRDvdFile             __vt__10JKRDvdFile             */
 .global __vt__10JKRDvdFile
 __vt__10JKRDvdFile:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x97, 0x48, 0x80, 0x2d, 0x98, 0x50 /* baserom.dol+0x3c9438 */
-.byte 0x80, 0x2d, 0x99, 0x38, 0x80, 0x2d, 0x99, 0xb4, 0x80, 0x2d, 0x9a, 0x68, 0x80, 0x2d, 0x9a, 0xf8 /* baserom.dol+0x3c9448 */
-.byte 0x80, 0x2d, 0x98, 0xc4 /* baserom.dol+0x3c9458 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c945c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__10JKRDvdFileFv
+.4byte open__10JKRDvdFileFPCc
+.4byte close__10JKRDvdFileFv
+.4byte readData__10JKRDvdFileFPvll
+.4byte writeData__10JKRDvdFileFPCvll
+.4byte getFileSize__10JKRDvdFileCFv
+.4byte open__10JKRDvdFileFl
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80434360 000C .bss       LIT_657                        @657                           */
+/* 80434360 000C .bss       @657                           LIT_657                        */
 .global LIT_657
 LIT_657:
 .skip 0xc

@@ -24,8 +24,8 @@ __float_max:
 __float_epsilon:
 .byte 0x34, 0x00, 0x00, 0x00 /* baserom.dol+0x3d084c */
 
-/* 80450AF0 0010 .sdata     sym_80450AF0                   sym_80450AF0                   */
-.global sym_80450AF0
-sym_80450AF0:
+/* 80450AF0 0010 .sdata     data_80450AF0                  data_80450AF0                  */
+.global data_80450AF0
+data_80450AF0:
 .byte 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0850 */
 

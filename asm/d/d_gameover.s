@@ -7,6 +7,7 @@
 /* 8019ACF8 02E8 .text      draw__24dDlst_Gameover_CAPTURE_cFv draw__24dDlst_Gameover_CAPTURE_cFv */
 .global draw__24dDlst_Gameover_CAPTURE_cFv
 draw__24dDlst_Gameover_CAPTURE_cFv:
+draw__24dDlst_Gameover_CAPTURE_cFv:
 /* 8019ACF8 00197C38  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8019ACFC 00197C3C  7C 08 02 A6 */	mflr r0
 /* 8019AD00 00197C40  90 01 00 74 */	stw r0, 0x74(r1)
@@ -197,6 +198,7 @@ draw__24dDlst_Gameover_CAPTURE_cFv:
 /* 8019AFE0 0064 .text      __ct__10dGov_HIO_cFv           __ct__10dGov_HIO_cFv           */
 .global __ct__10dGov_HIO_cFv
 __ct__10dGov_HIO_cFv:
+__ct__10dGov_HIO_cFv:
 /* 8019AFE0 00197F20  3C 80 80 3B */	lis r4, __vt__14mDoHIO_entry_c@ha
 /* 8019AFE4 00197F24  38 04 61 B4 */	addi r0, r4, __vt__14mDoHIO_entry_c@l
 /* 8019AFE8 00197F28  90 03 00 00 */	stw r0, 0(r3)
@@ -223,8 +225,9 @@ __ct__10dGov_HIO_cFv:
 /* 8019B03C 00197F7C  98 83 00 1B */	stb r4, 0x1b(r3)
 /* 8019B040 00197F80  4E 80 00 20 */	blr 
 
-/* 8019B044 0050 .text      _create__11dGameover_cFv       _create__11dGameover_cFv       */
+/* 8019B044 02B0 .text      _create__11dGameover_cFv       _create__11dGameover_cFv       */
 .global _create__11dGameover_cFv
+_create__11dGameover_cFv:
 _create__11dGameover_cFv:
 /* 8019B044 00197F84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8019B048 00197F88  7C 08 02 A6 */	mflr r0
@@ -240,38 +243,29 @@ _create__11dGameover_cFv:
 /* 8019B070 00197FB0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8019B074 00197FB4  88 04 5E B5 */	lbz r0, 0x5eb5(r4)
 /* 8019B078 00197FB8  28 00 00 00 */	cmplwi r0, 0
-/* 8019B07C 00197FBC  40 82 00 2C */	bne func_8019B0A8
+/* 8019B07C 00197FBC  40 82 00 2C */	bne lbl_8019B0A8
 /* 8019B080 00197FC0  88 04 5E 8F */	lbz r0, 0x5e8f(r4)
 /* 8019B084 00197FC4  28 00 00 00 */	cmplwi r0, 0
-/* 8019B088 00197FC8  41 82 00 0C */	beq func_8019B094
+/* 8019B088 00197FC8  41 82 00 0C */	beq lbl_8019B094
 /* 8019B08C 00197FCC  28 00 00 06 */	cmplwi r0, 6
-/* 8019B090 00197FD0  40 82 00 18 */	bne func_8019B0A8
-
-/* 8019B094 0014 .text      func_8019B094                  func_8019B094                  */
-.global func_8019B094
-func_8019B094:
+/* 8019B090 00197FD0  40 82 00 18 */	bne lbl_8019B0A8
+lbl_8019B094:
 /* 8019B094 00197FD4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8019B098 00197FD8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8019B09C 00197FDC  88 04 5E 1A */	lbz r0, 0x5e1a(r4)
 /* 8019B0A0 00197FE0  28 00 00 00 */	cmplwi r0, 0
-/* 8019B0A4 00197FE4  41 82 00 0C */	beq func_8019B0B0
-
-/* 8019B0A8 0008 .text      func_8019B0A8                  func_8019B0A8                  */
-.global func_8019B0A8
-func_8019B0A8:
+/* 8019B0A4 00197FE4  41 82 00 0C */	beq lbl_8019B0B0
+lbl_8019B0A8:
 /* 8019B0A8 00197FE8  38 60 00 00 */	li r3, 0
-/* 8019B0AC 00197FEC  48 00 02 30 */	b func_8019B2DC
-
-/* 8019B0B0 0060 .text      func_8019B0B0                  func_8019B0B0                  */
-.global func_8019B0B0
-func_8019B0B0:
+/* 8019B0AC 00197FEC  48 00 02 30 */	b lbl_8019B2DC
+lbl_8019B0B0:
 /* 8019B0B0 00197FF0  2C 03 00 04 */	cmpwi r3, 4
-/* 8019B0B4 00197FF4  40 82 02 28 */	bne func_8019B2DC
+/* 8019B0B4 00197FF4  40 82 02 28 */	bne lbl_8019B2DC
 /* 8019B0B8 00197FF8  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8019B0BC 00197FFC  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8019B0C0 00198000  88 1F 00 C2 */	lbz r0, 0xc2(r31)
 /* 8019B0C4 00198004  28 00 00 00 */	cmplwi r0, 0
-/* 8019B0C8 00198008  40 82 00 48 */	bne func_8019B110
+/* 8019B0C8 00198008  40 82 00 48 */	bne lbl_8019B110
 /* 8019B0CC 0019800C  80 0D 80 84 */	lwz r0, g_blackColor-_SDA_BASE_(r13)
 /* 8019B0D0 00198010  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8019B0D4 00198014  90 01 00 08 */	stw r0, 8(r1)
@@ -286,13 +280,10 @@ func_8019B0B0:
 /* 8019B0F8 00198038  98 03 00 0F */	stb r0, 0xf(r3)
 /* 8019B0FC 0019803C  A0 64 01 B2 */	lhz r3, 0x1b2(r4)
 /* 8019B100 00198040  28 03 FF FF */	cmplwi r3, 0xffff
-/* 8019B104 00198044  40 80 00 0C */	bge func_8019B110
+/* 8019B104 00198044  40 80 00 0C */	bge lbl_8019B110
 /* 8019B108 00198048  38 03 00 01 */	addi r0, r3, 1
 /* 8019B10C 0019804C  B0 04 01 B2 */	sth r0, 0x1b2(r4)
-
-/* 8019B110 006C .text      func_8019B110                  func_8019B110                  */
-.global func_8019B110
-func_8019B110:
+lbl_8019B110:
 /* 8019B110 00198050  3C 60 80 39 */	lis r3, d_d_gameover__stringBase0@ha
 /* 8019B114 00198054  38 63 4C 28 */	addi r3, r3, d_d_gameover__stringBase0@l
 /* 8019B118 00198058  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
@@ -316,29 +307,23 @@ func_8019B110:
 /* 8019B160 001980A0  38 60 00 18 */	li r3, 0x18
 /* 8019B164 001980A4  48 13 3A E9 */	bl __nw__FUl
 /* 8019B168 001980A8  7C 60 1B 79 */	or. r0, r3, r3
-/* 8019B16C 001980AC  41 82 00 10 */	beq func_8019B17C
+/* 8019B16C 001980AC  41 82 00 10 */	beq lbl_8019B17C
 /* 8019B170 001980B0  80 9C 00 14 */	lwz r4, 0x14(r28)
 /* 8019B174 001980B4  48 00 07 CD */	bl __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive
 /* 8019B178 001980B8  7C 60 1B 78 */	mr r0, r3
-
-/* 8019B17C 001C .text      func_8019B17C                  func_8019B17C                  */
-.global func_8019B17C
-func_8019B17C:
+lbl_8019B17C:
 /* 8019B17C 001980BC  90 1D 01 00 */	stw r0, 0x100(r29)
 /* 8019B180 001980C0  38 60 21 A4 */	li r3, 0x21a4
 /* 8019B184 001980C4  48 13 3A C9 */	bl __nw__FUl
 /* 8019B188 001980C8  7C 60 1B 79 */	or. r0, r3, r3
-/* 8019B18C 001980CC  41 82 00 0C */	beq func_8019B198
+/* 8019B18C 001980CC  41 82 00 0C */	beq lbl_8019B198
 /* 8019B190 001980D0  48 05 45 11 */	bl __ct__12dMenu_save_cFv
 /* 8019B194 001980D4  7C 60 1B 78 */	mr r0, r3
-
-/* 8019B198 005C .text      func_8019B198                  func_8019B198                  */
-.global func_8019B198
-func_8019B198:
+lbl_8019B198:
 /* 8019B198 001980D8  90 1D 00 FC */	stw r0, 0xfc(r29)
 /* 8019B19C 001980DC  88 1F 00 C2 */	lbz r0, 0xc2(r31)
 /* 8019B1A0 001980E0  28 00 00 01 */	cmplwi r0, 1
-/* 8019B1A4 001980E4  40 82 00 60 */	bne func_8019B204
+/* 8019B1A4 001980E4  40 82 00 60 */	bne lbl_8019B204
 /* 8019B1A8 001980E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B1AC 001980EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B1B0 001980F0  38 63 5F 5C */	addi r3, r3, 0x5f5c
@@ -347,7 +332,7 @@ func_8019B198:
 /* 8019B1BC 001980FC  38 84 00 06 */	addi r4, r4, 6
 /* 8019B1C0 00198100  48 1C D7 D5 */	bl strcmp
 /* 8019B1C4 00198104  2C 03 00 00 */	cmpwi r3, 0
-/* 8019B1C8 00198108  40 82 00 2C */	bne func_8019B1F4
+/* 8019B1C8 00198108  40 82 00 2C */	bne lbl_8019B1F4
 /* 8019B1CC 0019810C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B1D0 00198110  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B1D4 00198114  38 63 00 9C */	addi r3, r3, 0x9c
@@ -358,72 +343,51 @@ func_8019B198:
 /* 8019B1E8 00198128  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B1EC 0019812C  38 00 FF FF */	li r0, -1
 /* 8019B1F0 00198130  98 03 00 98 */	stb r0, 0x98(r3)
-
-/* 8019B1F4 0010 .text      func_8019B1F4                  func_8019B1F4                  */
-.global func_8019B1F4
-func_8019B1F4:
+lbl_8019B1F4:
 /* 8019B1F4 00198134  38 00 00 03 */	li r0, 3
 /* 8019B1F8 00198138  80 7D 00 FC */	lwz r3, 0xfc(r29)
 /* 8019B1FC 0019813C  98 03 01 BC */	stb r0, 0x1bc(r3)
-/* 8019B200 00198140  48 00 00 28 */	b func_8019B228
-
-/* 8019B204 0018 .text      func_8019B204                  func_8019B204                  */
-.global func_8019B204
-func_8019B204:
+/* 8019B200 00198140  48 00 00 28 */	b lbl_8019B228
+lbl_8019B204:
 /* 8019B204 00198144  28 00 00 02 */	cmplwi r0, 2
-/* 8019B208 00198148  40 82 00 14 */	bne func_8019B21C
+/* 8019B208 00198148  40 82 00 14 */	bne lbl_8019B21C
 /* 8019B20C 0019814C  38 00 00 04 */	li r0, 4
 /* 8019B210 00198150  80 7D 00 FC */	lwz r3, 0xfc(r29)
 /* 8019B214 00198154  98 03 01 BC */	stb r0, 0x1bc(r3)
-/* 8019B218 00198158  48 00 00 10 */	b func_8019B228
-
-/* 8019B21C 000C .text      func_8019B21C                  func_8019B21C                  */
-.global func_8019B21C
-func_8019B21C:
+/* 8019B218 00198158  48 00 00 10 */	b lbl_8019B228
+lbl_8019B21C:
 /* 8019B21C 0019815C  38 00 00 02 */	li r0, 2
 /* 8019B220 00198160  80 7D 00 FC */	lwz r3, 0xfc(r29)
 /* 8019B224 00198164  98 03 01 BC */	stb r0, 0x1bc(r3)
-
-/* 8019B228 0030 .text      func_8019B228                  func_8019B228                  */
-.global func_8019B228
-func_8019B228:
+lbl_8019B228:
 /* 8019B228 00198168  80 7D 00 FC */	lwz r3, 0xfc(r29)
 /* 8019B22C 0019816C  48 05 45 81 */	bl _create__12dMenu_save_cFv
 /* 8019B230 00198170  38 60 00 04 */	li r3, 4
 /* 8019B234 00198174  48 13 3A 19 */	bl __nw__FUl
 /* 8019B238 00198178  28 03 00 00 */	cmplwi r3, 0
-/* 8019B23C 0019817C  41 82 00 1C */	beq func_8019B258
+/* 8019B23C 0019817C  41 82 00 1C */	beq lbl_8019B258
 /* 8019B240 00198180  3C 80 80 3A */	lis r4, __vt__12dDlst_base_c@ha
 /* 8019B244 00198184  38 04 6F 88 */	addi r0, r4, __vt__12dDlst_base_c@l
 /* 8019B248 00198188  90 03 00 00 */	stw r0, 0(r3)
 /* 8019B24C 0019818C  3C 80 80 3C */	lis r4, __vt__24dDlst_Gameover_CAPTURE_c@ha
 /* 8019B250 00198190  38 04 BD A8 */	addi r0, r4, __vt__24dDlst_Gameover_CAPTURE_c@l
 /* 8019B254 00198194  90 03 00 00 */	stw r0, 0(r3)
-
-/* 8019B258 0014 .text      func_8019B258                  func_8019B258                  */
-.global func_8019B258
-func_8019B258:
+lbl_8019B258:
 /* 8019B258 00198198  90 7D 01 04 */	stw r3, 0x104(r29)
 /* 8019B25C 0019819C  7F C3 F3 78 */	mr r3, r30
 /* 8019B260 001981A0  4B E7 3F 6D */	bl mDoExt_setCurrentHeap__FP7JKRHeap
-/* 8019B264 001981A4  48 00 00 08 */	b func_8019B26C
-/* 8019B268 001981A8  48 00 00 74 */	b func_8019B2DC
-
-/* 8019B26C 0020 .text      func_8019B26C                  func_8019B26C                  */
-.global func_8019B26C
-func_8019B26C:
+/* 8019B264 001981A4  48 00 00 08 */	b lbl_8019B26C
+/* 8019B268 001981A8  48 00 00 74 */	b lbl_8019B2DC
+lbl_8019B26C:
 /* 8019B26C 001981AC  38 6D 8B 30 */	addi r3, r13, g_menuHIO-_SDA_BASE_
 /* 8019B270 001981B0  A8 03 00 06 */	lha r0, 6(r3)
 /* 8019B274 001981B4  B0 1D 01 16 */	sth r0, 0x116(r29)
 /* 8019B278 001981B8  88 1F 00 C2 */	lbz r0, 0xc2(r31)
 /* 8019B27C 001981BC  28 00 00 01 */	cmplwi r0, 1
-/* 8019B280 001981C0  41 82 00 0C */	beq func_8019B28C
+/* 8019B280 001981C0  41 82 00 0C */	beq lbl_8019B28C
 /* 8019B284 001981C4  28 00 00 02 */	cmplwi r0, 2
-/* 8019B288 001981C8  40 82 00 24 */	bne func_8019B2AC
-
-/* 8019B28C 0020 .text      func_8019B28C                  func_8019B28C                  */
-.global func_8019B28C
-func_8019B28C:
+/* 8019B288 001981C8  40 82 00 24 */	bne lbl_8019B2AC
+lbl_8019B28C:
 /* 8019B28C 001981CC  38 00 00 01 */	li r0, 1
 /* 8019B290 001981D0  98 1D 01 19 */	stb r0, 0x119(r29)
 /* 8019B294 001981D4  38 00 00 03 */	li r0, 3
@@ -431,18 +395,12 @@ func_8019B28C:
 /* 8019B29C 001981DC  80 7D 01 00 */	lwz r3, 0x100(r29)
 /* 8019B2A0 001981E0  C0 22 A1 84 */	lfs f1, d_d_gameover__LIT_3869-_SDA2_BASE_(r2)
 /* 8019B2A4 001981E4  48 00 0A 0D */	bl setBackAlpha__24dDlst_GameOverScrnDraw_cFf
-/* 8019B2A8 001981E8  48 00 00 10 */	b func_8019B2B8
-
-/* 8019B2AC 000C .text      func_8019B2AC                  func_8019B2AC                  */
-.global func_8019B2AC
-func_8019B2AC:
+/* 8019B2A8 001981E8  48 00 00 10 */	b lbl_8019B2B8
+lbl_8019B2AC:
 /* 8019B2AC 001981EC  38 00 00 00 */	li r0, 0
 /* 8019B2B0 001981F0  98 1D 01 19 */	stb r0, 0x119(r29)
 /* 8019B2B4 001981F4  98 1D 01 18 */	stb r0, 0x118(r29)
-
-/* 8019B2B8 0024 .text      func_8019B2B8                  func_8019B2B8                  */
-.global func_8019B2B8
-func_8019B2B8:
+lbl_8019B2B8:
 /* 8019B2B8 001981F8  7F A3 EB 78 */	mr r3, r29
 /* 8019B2BC 001981FC  88 1D 01 18 */	lbz r0, 0x118(r29)
 /* 8019B2C0 00198200  1C A0 00 0C */	mulli r5, r0, 0xc
@@ -452,10 +410,7 @@ func_8019B2B8:
 /* 8019B2D0 00198210  48 1C 6D B5 */	bl __ptmf_scall
 /* 8019B2D4 00198214  60 00 00 00 */	nop 
 /* 8019B2D8 00198218  38 60 00 04 */	li r3, 4
-
-/* 8019B2DC 0018 .text      func_8019B2DC                  func_8019B2DC                  */
-.global func_8019B2DC
-func_8019B2DC:
+lbl_8019B2DC:
 /* 8019B2DC 0019821C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8019B2E0 00198220  48 1C 6F 45 */	bl _restgpr_28
 /* 8019B2E4 00198224  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -463,8 +418,9 @@ func_8019B2DC:
 /* 8019B2EC 0019822C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8019B2F0 00198230  4E 80 00 20 */	blr 
 
-/* 8019B2F4 006C .text      _execute__11dGameover_cFv      _execute__11dGameover_cFv      */
+/* 8019B2F4 0090 .text      _execute__11dGameover_cFv      _execute__11dGameover_cFv      */
 .global _execute__11dGameover_cFv
+_execute__11dGameover_cFv:
 _execute__11dGameover_cFv:
 /* 8019B2F4 00198234  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8019B2F8 00198238  7C 08 02 A6 */	mflr r0
@@ -485,7 +441,7 @@ _execute__11dGameover_cFv:
 /* 8019B334 00198274  60 00 00 00 */	nop 
 /* 8019B338 00198278  88 1D 01 18 */	lbz r0, 0x118(r29)
 /* 8019B33C 0019827C  7C 00 F8 40 */	cmplw r0, r31
-/* 8019B340 00198280  41 82 00 20 */	beq func_8019B360
+/* 8019B340 00198280  41 82 00 20 */	beq lbl_8019B360
 /* 8019B344 00198284  7F A3 EB 78 */	mr r3, r29
 /* 8019B348 00198288  1C A0 00 0C */	mulli r5, r0, 0xc
 /* 8019B34C 0019828C  3C 80 80 3C */	lis r4, d_d_gameover__init_process@ha
@@ -493,10 +449,7 @@ _execute__11dGameover_cFv:
 /* 8019B354 00198294  7D 80 2A 14 */	add r12, r0, r5
 /* 8019B358 00198298  48 1C 6D 2D */	bl __ptmf_scall
 /* 8019B35C 0019829C  60 00 00 00 */	nop 
-
-/* 8019B360 0024 .text      func_8019B360                  func_8019B360                  */
-.global func_8019B360
-func_8019B360:
+lbl_8019B360:
 /* 8019B360 001982A0  7F C3 F3 78 */	mr r3, r30
 /* 8019B364 001982A4  4B E7 3E 69 */	bl mDoExt_setCurrentHeap__FP7JKRHeap
 /* 8019B368 001982A8  38 60 00 01 */	li r3, 1
@@ -510,10 +463,12 @@ func_8019B360:
 /* 8019B384 0004 .text      playerAnmWait_init__11dGameover_cFv playerAnmWait_init__11dGameover_cFv */
 .global playerAnmWait_init__11dGameover_cFv
 playerAnmWait_init__11dGameover_cFv:
+playerAnmWait_init__11dGameover_cFv:
 /* 8019B384 001982C4  4E 80 00 20 */	blr 
 
 /* 8019B388 0018 .text      playerAnmWait_proc__11dGameover_cFv playerAnmWait_proc__11dGameover_cFv */
 .global playerAnmWait_proc__11dGameover_cFv
+playerAnmWait_proc__11dGameover_cFv:
 playerAnmWait_proc__11dGameover_cFv:
 /* 8019B388 001982C8  88 03 01 19 */	lbz r0, 0x119(r3)
 /* 8019B38C 001982CC  28 00 00 00 */	cmplwi r0, 0
@@ -522,8 +477,9 @@ playerAnmWait_proc__11dGameover_cFv:
 /* 8019B398 001982D8  98 03 01 18 */	stb r0, 0x118(r3)
 /* 8019B39C 001982DC  4E 80 00 20 */	blr 
 
-/* 8019B3A0 0038 .text      dispFadeOut_init__11dGameover_cFv dispFadeOut_init__11dGameover_cFv */
+/* 8019B3A0 0048 .text      dispFadeOut_init__11dGameover_cFv dispFadeOut_init__11dGameover_cFv */
 .global dispFadeOut_init__11dGameover_cFv
+dispFadeOut_init__11dGameover_cFv:
 dispFadeOut_init__11dGameover_cFv:
 /* 8019B3A0 001982E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B3A4 001982E4  7C 08 02 A6 */	mflr r0
@@ -533,40 +489,36 @@ dispFadeOut_init__11dGameover_cFv:
 /* 8019B3B4 001982F4  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay-_SDA_BASE_(r13)
 /* 8019B3B8 001982F8  80 63 00 04 */	lwz r3, 4(r3)
 /* 8019B3BC 001982FC  28 03 00 00 */	cmplwi r3, 0
-/* 8019B3C0 00198300  41 82 00 18 */	beq func_8019B3D8
+/* 8019B3C0 00198300  41 82 00 18 */	beq lbl_8019B3D8
 /* 8019B3C4 00198304  38 80 00 0F */	li r4, 0xf
 /* 8019B3C8 00198308  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019B3CC 0019830C  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 8019B3D0 00198310  7D 89 03 A6 */	mtctr r12
 /* 8019B3D4 00198314  4E 80 04 21 */	bctrl 
-
-/* 8019B3D8 0010 .text      func_8019B3D8                  func_8019B3D8                  */
-.global func_8019B3D8
-func_8019B3D8:
+lbl_8019B3D8:
 /* 8019B3D8 00198318  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019B3DC 0019831C  7C 08 03 A6 */	mtlr r0
 /* 8019B3E0 00198320  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019B3E4 00198324  4E 80 00 20 */	blr 
 
-/* 8019B3E8 0018 .text      dispFadeOut_proc__11dGameover_cFv dispFadeOut_proc__11dGameover_cFv */
+/* 8019B3E8 0024 .text      dispFadeOut_proc__11dGameover_cFv dispFadeOut_proc__11dGameover_cFv */
 .global dispFadeOut_proc__11dGameover_cFv
+dispFadeOut_proc__11dGameover_cFv:
 dispFadeOut_proc__11dGameover_cFv:
 /* 8019B3E8 00198328  A8 83 01 14 */	lha r4, 0x114(r3)
 /* 8019B3EC 0019832C  2C 04 00 00 */	cmpwi r4, 0
-/* 8019B3F0 00198330  41 82 00 10 */	beq func_8019B400
+/* 8019B3F0 00198330  41 82 00 10 */	beq lbl_8019B400
 /* 8019B3F4 00198334  38 04 FF FF */	addi r0, r4, -1
 /* 8019B3F8 00198338  B0 03 01 14 */	sth r0, 0x114(r3)
 /* 8019B3FC 0019833C  4E 80 00 20 */	blr 
-
-/* 8019B400 000C .text      func_8019B400                  func_8019B400                  */
-.global func_8019B400
-func_8019B400:
+lbl_8019B400:
 /* 8019B400 00198340  38 00 00 02 */	li r0, 2
 /* 8019B404 00198344  98 03 01 18 */	stb r0, 0x118(r3)
 /* 8019B408 00198348  4E 80 00 20 */	blr 
 
-/* 8019B40C 0038 .text      dispWait_init__11dGameover_cFv dispWait_init__11dGameover_cFv */
+/* 8019B40C 0048 .text      dispWait_init__11dGameover_cFv dispWait_init__11dGameover_cFv */
 .global dispWait_init__11dGameover_cFv
+dispWait_init__11dGameover_cFv:
 dispWait_init__11dGameover_cFv:
 /* 8019B40C 0019834C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B410 00198350  7C 08 02 A6 */	mflr r0
@@ -576,34 +528,29 @@ dispWait_init__11dGameover_cFv:
 /* 8019B420 00198360  80 6D 8C 40 */	lwz r3, sManager__10JFWDisplay-_SDA_BASE_(r13)
 /* 8019B424 00198364  80 63 00 04 */	lwz r3, 4(r3)
 /* 8019B428 00198368  28 03 00 00 */	cmplwi r3, 0
-/* 8019B42C 0019836C  41 82 00 18 */	beq func_8019B444
+/* 8019B42C 0019836C  41 82 00 18 */	beq lbl_8019B444
 /* 8019B430 00198370  38 80 00 1E */	li r4, 0x1e
 /* 8019B434 00198374  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019B438 00198378  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8019B43C 0019837C  7D 89 03 A6 */	mtctr r12
 /* 8019B440 00198380  4E 80 04 21 */	bctrl 
-
-/* 8019B444 0010 .text      func_8019B444                  func_8019B444                  */
-.global func_8019B444
-func_8019B444:
+lbl_8019B444:
 /* 8019B444 00198384  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019B448 00198388  7C 08 03 A6 */	mtlr r0
 /* 8019B44C 0019838C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019B450 00198390  4E 80 00 20 */	blr 
 
-/* 8019B454 0018 .text      dispWait_proc__11dGameover_cFv dispWait_proc__11dGameover_cFv */
+/* 8019B454 0024 .text      dispWait_proc__11dGameover_cFv dispWait_proc__11dGameover_cFv */
 .global dispWait_proc__11dGameover_cFv
+dispWait_proc__11dGameover_cFv:
 dispWait_proc__11dGameover_cFv:
 /* 8019B454 00198394  A8 83 01 14 */	lha r4, 0x114(r3)
 /* 8019B458 00198398  2C 04 00 00 */	cmpwi r4, 0
-/* 8019B45C 0019839C  41 82 00 10 */	beq func_8019B46C
+/* 8019B45C 0019839C  41 82 00 10 */	beq lbl_8019B46C
 /* 8019B460 001983A0  38 04 FF FF */	addi r0, r4, -1
 /* 8019B464 001983A4  B0 03 01 14 */	sth r0, 0x114(r3)
 /* 8019B468 001983A8  4E 80 00 20 */	blr 
-
-/* 8019B46C 000C .text      func_8019B46C                  func_8019B46C                  */
-.global func_8019B46C
-func_8019B46C:
+lbl_8019B46C:
 /* 8019B46C 001983AC  38 00 00 05 */	li r0, 5
 /* 8019B470 001983B0  98 03 01 18 */	stb r0, 0x118(r3)
 /* 8019B474 001983B4  4E 80 00 20 */	blr 
@@ -611,12 +558,14 @@ func_8019B46C:
 /* 8019B478 000C .text      demoFadeIn_init__11dGameover_cFv demoFadeIn_init__11dGameover_cFv */
 .global demoFadeIn_init__11dGameover_cFv
 demoFadeIn_init__11dGameover_cFv:
+demoFadeIn_init__11dGameover_cFv:
 /* 8019B478 001983B8  38 00 00 00 */	li r0, 0
 /* 8019B47C 001983BC  B0 03 01 14 */	sth r0, 0x114(r3)
 /* 8019B480 001983C0  4E 80 00 20 */	blr 
 
-/* 8019B484 0040 .text      demoFadeIn_proc__11dGameover_cFv demoFadeIn_proc__11dGameover_cFv */
+/* 8019B484 0054 .text      demoFadeIn_proc__11dGameover_cFv demoFadeIn_proc__11dGameover_cFv */
 .global demoFadeIn_proc__11dGameover_cFv
+demoFadeIn_proc__11dGameover_cFv:
 demoFadeIn_proc__11dGameover_cFv:
 /* 8019B484 001983C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B488 001983C8  7C 08 02 A6 */	mflr r0
@@ -631,13 +580,10 @@ demoFadeIn_proc__11dGameover_cFv:
 /* 8019B4AC 001983EC  48 00 08 05 */	bl setBackAlpha__24dDlst_GameOverScrnDraw_cFf
 /* 8019B4B0 001983F0  A8 1F 01 14 */	lha r0, 0x114(r31)
 /* 8019B4B4 001983F4  2C 00 00 1E */	cmpwi r0, 0x1e
-/* 8019B4B8 001983F8  41 80 00 0C */	blt func_8019B4C4
+/* 8019B4B8 001983F8  41 80 00 0C */	blt lbl_8019B4C4
 /* 8019B4BC 001983FC  38 00 00 05 */	li r0, 5
 /* 8019B4C0 00198400  98 1F 01 18 */	stb r0, 0x118(r31)
-
-/* 8019B4C4 0014 .text      func_8019B4C4                  func_8019B4C4                  */
-.global func_8019B4C4
-func_8019B4C4:
+lbl_8019B4C4:
 /* 8019B4C4 00198404  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019B4C8 00198408  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019B4CC 0019840C  7C 08 03 A6 */	mtlr r0
@@ -647,12 +593,14 @@ func_8019B4C4:
 /* 8019B4D8 000C .text      demoFadeOut_init__11dGameover_cFv demoFadeOut_init__11dGameover_cFv */
 .global demoFadeOut_init__11dGameover_cFv
 demoFadeOut_init__11dGameover_cFv:
+demoFadeOut_init__11dGameover_cFv:
 /* 8019B4D8 00198418  38 00 00 1E */	li r0, 0x1e
 /* 8019B4DC 0019841C  B0 03 01 14 */	sth r0, 0x114(r3)
 /* 8019B4E0 00198420  4E 80 00 20 */	blr 
 
-/* 8019B4E4 0068 .text      demoFadeOut_proc__11dGameover_cFv demoFadeOut_proc__11dGameover_cFv */
+/* 8019B4E4 007C .text      demoFadeOut_proc__11dGameover_cFv demoFadeOut_proc__11dGameover_cFv */
 .global demoFadeOut_proc__11dGameover_cFv
+demoFadeOut_proc__11dGameover_cFv:
 demoFadeOut_proc__11dGameover_cFv:
 /* 8019B4E4 00198424  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8019B4E8 00198428  7C 08 02 A6 */	mflr r0
@@ -677,13 +625,10 @@ demoFadeOut_proc__11dGameover_cFv:
 /* 8019B534 00198474  48 00 07 7D */	bl setBackAlpha__24dDlst_GameOverScrnDraw_cFf
 /* 8019B538 00198478  A8 1F 01 14 */	lha r0, 0x114(r31)
 /* 8019B53C 0019847C  2C 00 00 00 */	cmpwi r0, 0
-/* 8019B540 00198480  41 81 00 0C */	bgt func_8019B54C
+/* 8019B540 00198480  41 81 00 0C */	bgt lbl_8019B54C
 /* 8019B544 00198484  38 00 00 08 */	li r0, 8
 /* 8019B548 00198488  98 1F 01 18 */	stb r0, 0x118(r31)
-
-/* 8019B54C 0014 .text      func_8019B54C                  func_8019B54C                  */
-.global func_8019B54C
-func_8019B54C:
+lbl_8019B54C:
 /* 8019B54C 0019848C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8019B550 00198490  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8019B554 00198494  7C 08 03 A6 */	mtlr r0
@@ -693,10 +638,12 @@ func_8019B54C:
 /* 8019B560 0004 .text      saveOpen_init__11dGameover_cFv saveOpen_init__11dGameover_cFv */
 .global saveOpen_init__11dGameover_cFv
 saveOpen_init__11dGameover_cFv:
+saveOpen_init__11dGameover_cFv:
 /* 8019B560 001984A0  4E 80 00 20 */	blr 
 
-/* 8019B564 002C .text      saveOpen_proc__11dGameover_cFv saveOpen_proc__11dGameover_cFv */
+/* 8019B564 0040 .text      saveOpen_proc__11dGameover_cFv saveOpen_proc__11dGameover_cFv */
 .global saveOpen_proc__11dGameover_cFv
+saveOpen_proc__11dGameover_cFv:
 saveOpen_proc__11dGameover_cFv:
 /* 8019B564 001984A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B568 001984A8  7C 08 02 A6 */	mflr r0
@@ -706,13 +653,10 @@ saveOpen_proc__11dGameover_cFv:
 /* 8019B578 001984B8  80 63 00 FC */	lwz r3, 0xfc(r3)
 /* 8019B57C 001984BC  48 05 54 31 */	bl _open__12dMenu_save_cFv
 /* 8019B580 001984C0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8019B584 001984C4  41 82 00 0C */	beq func_8019B590
+/* 8019B584 001984C4  41 82 00 0C */	beq lbl_8019B590
 /* 8019B588 001984C8  38 00 00 06 */	li r0, 6
 /* 8019B58C 001984CC  98 1F 01 18 */	stb r0, 0x118(r31)
-
-/* 8019B590 0014 .text      func_8019B590                  func_8019B590                  */
-.global func_8019B590
-func_8019B590:
+lbl_8019B590:
 /* 8019B590 001984D0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019B594 001984D4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019B598 001984D8  7C 08 03 A6 */	mtlr r0
@@ -722,10 +666,12 @@ func_8019B590:
 /* 8019B5A4 0004 .text      saveMove_init__11dGameover_cFv saveMove_init__11dGameover_cFv */
 .global saveMove_init__11dGameover_cFv
 saveMove_init__11dGameover_cFv:
+saveMove_init__11dGameover_cFv:
 /* 8019B5A4 001984E4  4E 80 00 20 */	blr 
 
-/* 8019B5A8 0034 .text      saveMove_proc__11dGameover_cFv saveMove_proc__11dGameover_cFv */
+/* 8019B5A8 0048 .text      saveMove_proc__11dGameover_cFv saveMove_proc__11dGameover_cFv */
 .global saveMove_proc__11dGameover_cFv
+saveMove_proc__11dGameover_cFv:
 saveMove_proc__11dGameover_cFv:
 /* 8019B5A8 001984E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B5AC 001984EC  7C 08 02 A6 */	mflr r0
@@ -737,13 +683,10 @@ saveMove_proc__11dGameover_cFv:
 /* 8019B5C4 00198504  80 7F 00 FC */	lwz r3, 0xfc(r31)
 /* 8019B5C8 00198508  88 03 01 BA */	lbz r0, 0x1ba(r3)
 /* 8019B5CC 0019850C  28 00 00 03 */	cmplwi r0, 3
-/* 8019B5D0 00198510  40 82 00 0C */	bne func_8019B5DC
+/* 8019B5D0 00198510  40 82 00 0C */	bne lbl_8019B5DC
 /* 8019B5D4 00198514  38 00 00 07 */	li r0, 7
 /* 8019B5D8 00198518  98 1F 01 18 */	stb r0, 0x118(r31)
-
-/* 8019B5DC 0014 .text      func_8019B5DC                  func_8019B5DC                  */
-.global func_8019B5DC
-func_8019B5DC:
+lbl_8019B5DC:
 /* 8019B5DC 0019851C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019B5E0 00198520  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019B5E4 00198524  7C 08 03 A6 */	mtlr r0
@@ -753,10 +696,12 @@ func_8019B5DC:
 /* 8019B5F0 0004 .text      saveClose_init__11dGameover_cFv saveClose_init__11dGameover_cFv */
 .global saveClose_init__11dGameover_cFv
 saveClose_init__11dGameover_cFv:
+saveClose_init__11dGameover_cFv:
 /* 8019B5F0 00198530  4E 80 00 20 */	blr 
 
-/* 8019B5F4 0050 .text      saveClose_proc__11dGameover_cFv saveClose_proc__11dGameover_cFv */
+/* 8019B5F4 01C8 .text      saveClose_proc__11dGameover_cFv saveClose_proc__11dGameover_cFv */
 .global saveClose_proc__11dGameover_cFv
+saveClose_proc__11dGameover_cFv:
 saveClose_proc__11dGameover_cFv:
 /* 8019B5F4 00198534  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B5F8 00198538  7C 08 02 A6 */	mflr r0
@@ -767,7 +712,7 @@ saveClose_proc__11dGameover_cFv:
 /* 8019B60C 0019854C  80 63 00 FC */	lwz r3, 0xfc(r3)
 /* 8019B610 00198550  88 03 01 BB */	lbz r0, 0x1bb(r3)
 /* 8019B614 00198554  28 00 00 00 */	cmplwi r0, 0
-/* 8019B618 00198558  40 82 00 2C */	bne func_8019B644
+/* 8019B618 00198558  40 82 00 2C */	bne lbl_8019B644
 /* 8019B61C 0019855C  38 00 00 03 */	li r0, 3
 /* 8019B620 00198560  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B624 00198564  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -777,41 +722,29 @@ saveClose_proc__11dGameover_cFv:
 /* 8019B634 00198574  38 00 00 01 */	li r0, 1
 /* 8019B638 00198578  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst-_SDA_BASE_(r13)
 /* 8019B63C 0019857C  90 03 00 00 */	stw r0, 0(r3)
-/* 8019B640 00198580  48 00 01 20 */	b func_8019B760
-
-/* 8019B644 0024 .text      func_8019B644                  func_8019B644                  */
-.global func_8019B644
-func_8019B644:
+/* 8019B640 00198580  48 00 01 20 */	b lbl_8019B760
+lbl_8019B644:
 /* 8019B644 00198584  28 00 00 01 */	cmplwi r0, 1
-/* 8019B648 00198588  40 82 01 18 */	bne func_8019B760
+/* 8019B648 00198588  40 82 01 18 */	bne lbl_8019B760
 /* 8019B64C 0019858C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8019B650 00198590  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019B654 00198594  88 03 00 C2 */	lbz r0, 0xc2(r3)
 /* 8019B658 00198598  28 00 00 01 */	cmplwi r0, 1
-/* 8019B65C 0019859C  41 82 00 0C */	beq func_8019B668
+/* 8019B65C 0019859C  41 82 00 0C */	beq lbl_8019B668
 /* 8019B660 001985A0  28 00 00 02 */	cmplwi r0, 2
-/* 8019B664 001985A4  40 82 00 18 */	bne func_8019B67C
-
-/* 8019B668 0014 .text      func_8019B668                  func_8019B668                  */
-.global func_8019B668
-func_8019B668:
+/* 8019B664 001985A4  40 82 00 18 */	bne lbl_8019B67C
+lbl_8019B668:
 /* 8019B668 001985A8  38 00 00 01 */	li r0, 1
 /* 8019B66C 001985AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B670 001985B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B674 001985B4  98 03 5E 89 */	stb r0, 0x5e89(r3)
-/* 8019B678 001985B8  48 00 00 14 */	b func_8019B68C
-
-/* 8019B67C 0010 .text      func_8019B67C                  func_8019B67C                  */
-.global func_8019B67C
-func_8019B67C:
+/* 8019B678 001985B8  48 00 00 14 */	b lbl_8019B68C
+lbl_8019B67C:
 /* 8019B67C 001985BC  38 00 00 02 */	li r0, 2
 /* 8019B680 001985C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B684 001985C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B688 001985C8  98 03 5E 89 */	stb r0, 0x5e89(r3)
-
-/* 8019B68C 0058 .text      func_8019B68C                  func_8019B68C                  */
-.global func_8019B68C
-func_8019B68C:
+lbl_8019B68C:
 /* 8019B68C 001985CC  38 00 00 00 */	li r0, 0
 /* 8019B690 001985D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B694 001985D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -823,7 +756,7 @@ func_8019B68C:
 /* 8019B6AC 001985EC  A0 84 01 C4 */	lhz r4, 0x1c4(r4)
 /* 8019B6B0 001985F0  4B E9 93 0D */	bl isEventBit__11dSv_event_cCFUs
 /* 8019B6B4 001985F4  2C 03 00 00 */	cmpwi r3, 0
-/* 8019B6B8 001985F8  40 82 00 2C */	bne func_8019B6E4
+/* 8019B6B8 001985F8  40 82 00 2C */	bne lbl_8019B6E4
 /* 8019B6BC 001985FC  7F C3 F3 78 */	mr r3, r30
 /* 8019B6C0 00198600  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8019B6C4 00198604  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
@@ -834,17 +767,14 @@ func_8019B68C:
 /* 8019B6D8 00198618  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
 /* 8019B6DC 0019861C  A0 84 01 C2 */	lhz r4, 0x1c2(r4)
 /* 8019B6E0 00198620  4B E9 92 C5 */	bl offEventBit__11dSv_event_cFUs
-
-/* 8019B6E4 006C .text      func_8019B6E4                  func_8019B6E4                  */
-.global func_8019B6E4
-func_8019B6E4:
+lbl_8019B6E4:
 /* 8019B6E4 00198624  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B6E8 00198628  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B6EC 0019862C  38 63 00 CC */	addi r3, r3, 0xcc
 /* 8019B6F0 00198630  38 80 00 48 */	li r4, 0x48
 /* 8019B6F4 00198634  4B E9 87 D5 */	bl isFirstBit__21dSv_player_get_item_cCFUc
 /* 8019B6F8 00198638  2C 03 00 00 */	cmpwi r3, 0
-/* 8019B6FC 0019863C  41 82 00 54 */	beq func_8019B750
+/* 8019B6FC 0019863C  41 82 00 54 */	beq lbl_8019B750
 /* 8019B700 00198640  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B704 00198644  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B708 00198648  3B C3 00 9C */	addi r30, r3, 0x9c
@@ -854,7 +784,7 @@ func_8019B6E4:
 /* 8019B718 00198658  4B E9 79 19 */	bl getItem__17dSv_player_item_cCFib
 /* 8019B71C 0019865C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8019B720 00198660  28 00 00 FF */	cmplwi r0, 0xff
-/* 8019B724 00198664  40 82 00 2C */	bne func_8019B750
+/* 8019B724 00198664  40 82 00 2C */	bne lbl_8019B750
 /* 8019B728 00198668  7F C3 F3 78 */	mr r3, r30
 /* 8019B72C 0019866C  38 80 00 01 */	li r4, 1
 /* 8019B730 00198670  38 A0 00 48 */	li r5, 0x48
@@ -865,43 +795,31 @@ func_8019B6E4:
 /* 8019B744 00198684  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B748 00198688  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B74C 0019868C  B0 03 00 08 */	sth r0, 8(r3)
-
-/* 8019B750 0010 .text      func_8019B750                  func_8019B750                  */
-.global func_8019B750
-func_8019B750:
+lbl_8019B750:
 /* 8019B750 00198690  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8019B754 00198694  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019B758 00198698  38 80 00 00 */	li r4, 0
 /* 8019B75C 0019869C  48 08 29 69 */	bl resetMiniGameItem__13dMeter2Info_cFb
-
-/* 8019B760 003C .text      func_8019B760                  func_8019B760                  */
-.global func_8019B760
-func_8019B760:
+lbl_8019B760:
 /* 8019B760 001986A0  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8019B764 001986A4  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019B768 001986A8  88 03 00 C2 */	lbz r0, 0xc2(r3)
 /* 8019B76C 001986AC  28 00 00 01 */	cmplwi r0, 1
-/* 8019B770 001986B0  40 82 00 2C */	bne func_8019B79C
+/* 8019B770 001986B0  40 82 00 2C */	bne lbl_8019B79C
 /* 8019B774 001986B4  28 00 00 02 */	cmplwi r0, 2
-/* 8019B778 001986B8  40 82 00 24 */	bne func_8019B79C
+/* 8019B778 001986B8  40 82 00 24 */	bne lbl_8019B79C
 /* 8019B77C 001986BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B780 001986C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B784 001986C4  88 03 5E 89 */	lbz r0, 0x5e89(r3)
 /* 8019B788 001986C8  28 00 00 01 */	cmplwi r0, 1
-/* 8019B78C 001986CC  40 82 00 10 */	bne func_8019B79C
+/* 8019B78C 001986CC  40 82 00 10 */	bne lbl_8019B79C
 /* 8019B790 001986D0  38 00 00 04 */	li r0, 4
 /* 8019B794 001986D4  98 1F 01 18 */	stb r0, 0x118(r31)
-/* 8019B798 001986D8  48 00 00 0C */	b func_8019B7A4
-
-/* 8019B79C 0008 .text      func_8019B79C                  func_8019B79C                  */
-.global func_8019B79C
-func_8019B79C:
+/* 8019B798 001986D8  48 00 00 0C */	b lbl_8019B7A4
+lbl_8019B79C:
 /* 8019B79C 001986DC  38 00 00 08 */	li r0, 8
 /* 8019B7A0 001986E0  98 1F 01 18 */	stb r0, 0x118(r31)
-
-/* 8019B7A4 0018 .text      func_8019B7A4                  func_8019B7A4                  */
-.global func_8019B7A4
-func_8019B7A4:
+lbl_8019B7A4:
 /* 8019B7A4 001986E4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019B7A8 001986E8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8019B7AC 001986EC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -912,15 +830,18 @@ func_8019B7A4:
 /* 8019B7BC 0004 .text      deleteWait_init__11dGameover_cFv deleteWait_init__11dGameover_cFv */
 .global deleteWait_init__11dGameover_cFv
 deleteWait_init__11dGameover_cFv:
+deleteWait_init__11dGameover_cFv:
 /* 8019B7BC 001986FC  4E 80 00 20 */	blr 
 
 /* 8019B7C0 0004 .text      deleteWait_proc__11dGameover_cFv deleteWait_proc__11dGameover_cFv */
 .global deleteWait_proc__11dGameover_cFv
 deleteWait_proc__11dGameover_cFv:
+deleteWait_proc__11dGameover_cFv:
 /* 8019B7C0 00198700  4E 80 00 20 */	blr 
 
-/* 8019B7C4 0044 .text      _draw__11dGameover_cFv         _draw__11dGameover_cFv         */
+/* 8019B7C4 00A0 .text      _draw__11dGameover_cFv         _draw__11dGameover_cFv         */
 .global _draw__11dGameover_cFv
+_draw__11dGameover_cFv:
 _draw__11dGameover_cFv:
 /* 8019B7C4 00198704  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B7C8 00198708  7C 08 02 A6 */	mflr r0
@@ -929,45 +850,36 @@ _draw__11dGameover_cFv:
 /* 8019B7D4 00198714  7C 7F 1B 78 */	mr r31, r3
 /* 8019B7D8 00198718  80 C3 01 04 */	lwz r6, 0x104(r3)
 /* 8019B7DC 0019871C  28 06 00 00 */	cmplwi r6, 0
-/* 8019B7E0 00198720  41 82 00 28 */	beq func_8019B808
+/* 8019B7E0 00198720  41 82 00 28 */	beq lbl_8019B808
 /* 8019B7E4 00198724  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B7E8 00198728  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B7EC 0019872C  88 03 5E B5 */	lbz r0, 0x5eb5(r3)
 /* 8019B7F0 00198730  28 00 00 00 */	cmplwi r0, 0
-/* 8019B7F4 00198734  41 82 00 14 */	beq func_8019B808
+/* 8019B7F4 00198734  41 82 00 14 */	beq lbl_8019B808
 /* 8019B7F8 00198738  38 63 5F 64 */	addi r3, r3, 0x5f64
 /* 8019B7FC 0019873C  38 83 01 B4 */	addi r4, r3, 0x1b4
 /* 8019B800 00198740  38 A3 01 B8 */	addi r5, r3, 0x1b8
 /* 8019B804 00198744  4B EB AF 91 */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
-
-/* 8019B808 003C .text      func_8019B808                  func_8019B808                  */
-.global func_8019B808
-func_8019B808:
+lbl_8019B808:
 /* 8019B808 00198748  88 1F 01 19 */	lbz r0, 0x119(r31)
 /* 8019B80C 0019874C  28 00 00 00 */	cmplwi r0, 0
-/* 8019B810 00198750  41 82 00 3C */	beq func_8019B84C
+/* 8019B810 00198750  41 82 00 3C */	beq lbl_8019B84C
 /* 8019B814 00198754  88 1F 01 18 */	lbz r0, 0x118(r31)
 /* 8019B818 00198758  28 00 00 02 */	cmplwi r0, 2
-/* 8019B81C 0019875C  41 80 00 30 */	blt func_8019B84C
+/* 8019B81C 0019875C  41 80 00 30 */	blt lbl_8019B84C
 /* 8019B820 00198760  80 DF 01 00 */	lwz r6, 0x100(r31)
 /* 8019B824 00198764  28 06 00 00 */	cmplwi r6, 0
-/* 8019B828 00198768  41 82 00 1C */	beq func_8019B844
+/* 8019B828 00198768  41 82 00 1C */	beq lbl_8019B844
 /* 8019B82C 0019876C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019B830 00198770  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019B834 00198774  38 63 5F 64 */	addi r3, r3, 0x5f64
 /* 8019B838 00198778  38 83 01 B4 */	addi r4, r3, 0x1b4
 /* 8019B83C 0019877C  38 A3 01 B8 */	addi r5, r3, 0x1b8
 /* 8019B840 00198780  4B EB AF 55 */	bl set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c
-
-/* 8019B844 0008 .text      func_8019B844                  func_8019B844                  */
-.global func_8019B844
-func_8019B844:
+lbl_8019B844:
 /* 8019B844 00198784  80 7F 00 FC */	lwz r3, 0xfc(r31)
 /* 8019B848 00198788  48 05 B1 B5 */	bl _draw2__12dMenu_save_cFv
-
-/* 8019B84C 0018 .text      func_8019B84C                  func_8019B84C                  */
-.global func_8019B84C
-func_8019B84C:
+lbl_8019B84C:
 /* 8019B84C 0019878C  38 60 00 01 */	li r3, 1
 /* 8019B850 00198790  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019B854 00198794  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -975,8 +887,9 @@ func_8019B84C:
 /* 8019B85C 0019879C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019B860 001987A0  4E 80 00 20 */	blr 
 
-/* 8019B864 0048 .text      _delete__11dGameover_cFv       _delete__11dGameover_cFv       */
+/* 8019B864 00DC .text      _delete__11dGameover_cFv       _delete__11dGameover_cFv       */
 .global _delete__11dGameover_cFv
+_delete__11dGameover_cFv:
 _delete__11dGameover_cFv:
 /* 8019B864 001987A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019B868 001987A8  7C 08 02 A6 */	mflr r0
@@ -989,49 +902,37 @@ _delete__11dGameover_cFv:
 /* 8019B884 001987C4  7C 7F 1B 78 */	mr r31, r3
 /* 8019B888 001987C8  80 7E 01 00 */	lwz r3, 0x100(r30)
 /* 8019B88C 001987CC  28 03 00 00 */	cmplwi r3, 0
-/* 8019B890 001987D0  41 82 00 24 */	beq func_8019B8B4
-/* 8019B894 001987D4  41 82 00 18 */	beq func_8019B8AC
+/* 8019B890 001987D0  41 82 00 24 */	beq lbl_8019B8B4
+/* 8019B894 001987D4  41 82 00 18 */	beq lbl_8019B8AC
 /* 8019B898 001987D8  38 80 00 01 */	li r4, 1
 /* 8019B89C 001987DC  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019B8A0 001987E0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8019B8A4 001987E4  7D 89 03 A6 */	mtctr r12
 /* 8019B8A8 001987E8  4E 80 04 21 */	bctrl 
-
-/* 8019B8AC 0008 .text      func_8019B8AC                  func_8019B8AC                  */
-.global func_8019B8AC
-func_8019B8AC:
+lbl_8019B8AC:
 /* 8019B8AC 001987EC  38 00 00 00 */	li r0, 0
 /* 8019B8B0 001987F0  90 1E 01 00 */	stw r0, 0x100(r30)
-
-/* 8019B8B4 0028 .text      func_8019B8B4                  func_8019B8B4                  */
-.global func_8019B8B4
-func_8019B8B4:
+lbl_8019B8B4:
 /* 8019B8B4 001987F4  80 7E 00 FC */	lwz r3, 0xfc(r30)
 /* 8019B8B8 001987F8  48 05 52 71 */	bl _delete__12dMenu_save_cFv
 /* 8019B8BC 001987FC  80 7E 00 FC */	lwz r3, 0xfc(r30)
 /* 8019B8C0 00198800  28 03 00 00 */	cmplwi r3, 0
-/* 8019B8C4 00198804  41 82 00 18 */	beq func_8019B8DC
+/* 8019B8C4 00198804  41 82 00 18 */	beq lbl_8019B8DC
 /* 8019B8C8 00198808  38 80 00 01 */	li r4, 1
 /* 8019B8CC 0019880C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019B8D0 00198810  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8019B8D4 00198814  7D 89 03 A6 */	mtctr r12
 /* 8019B8D8 00198818  4E 80 04 21 */	bctrl 
-
-/* 8019B8DC 0020 .text      func_8019B8DC                  func_8019B8DC                  */
-.global func_8019B8DC
-func_8019B8DC:
+lbl_8019B8DC:
 /* 8019B8DC 0019881C  80 7E 01 04 */	lwz r3, 0x104(r30)
 /* 8019B8E0 00198820  28 03 00 00 */	cmplwi r3, 0
-/* 8019B8E4 00198824  41 82 00 18 */	beq func_8019B8FC
+/* 8019B8E4 00198824  41 82 00 18 */	beq lbl_8019B8FC
 /* 8019B8E8 00198828  38 80 00 01 */	li r4, 1
 /* 8019B8EC 0019882C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019B8F0 00198830  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8019B8F4 00198834  7D 89 03 A6 */	mtctr r12
 /* 8019B8F8 00198838  4E 80 04 21 */	bctrl 
-
-/* 8019B8FC 0044 .text      func_8019B8FC                  func_8019B8FC                  */
-.global func_8019B8FC
-func_8019B8FC:
+lbl_8019B8FC:
 /* 8019B8FC 0019883C  80 7E 01 10 */	lwz r3, 0x110(r30)
 /* 8019B900 00198840  48 13 2C CD */	bl freeAll__7JKRHeapFv
 /* 8019B904 00198844  38 60 00 00 */	li r3, 0
@@ -1050,8 +951,9 @@ func_8019B8FC:
 /* 8019B938 00198878  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019B93C 0019887C  4E 80 00 20 */	blr 
 
-/* 8019B940 0054 .text      __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive */
+/* 8019B940 02BC .text      __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive */
 .global __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive
+__ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive:
 __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive:
 /* 8019B940 00198880  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8019B944 00198884  7C 08 02 A6 */	mflr r0
@@ -1071,13 +973,10 @@ __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive:
 /* 8019B97C 001988BC  38 60 01 18 */	li r3, 0x118
 /* 8019B980 001988C0  48 13 32 CD */	bl __nw__FUl
 /* 8019B984 001988C4  7C 60 1B 79 */	or. r0, r3, r3
-/* 8019B988 001988C8  41 82 00 0C */	beq func_8019B994
+/* 8019B988 001988C8  41 82 00 0C */	beq lbl_8019B994
 /* 8019B98C 001988CC  48 15 CB 0D */	bl __ct__9J2DScreenFv
 /* 8019B990 001988D0  7C 60 1B 78 */	mr r0, r3
-
-/* 8019B994 00C0 .text      func_8019B994                  func_8019B994                  */
-.global func_8019B994
-func_8019B994:
+lbl_8019B994:
 /* 8019B994 001988D4  90 1F 00 04 */	stw r0, 4(r31)
 /* 8019B998 001988D8  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8019B99C 001988DC  3C 80 80 39 */	lis r4, d_d_gameover__stringBase0@ha
@@ -1097,7 +996,7 @@ func_8019B994:
 /* 8019B9D4 00198914  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019B9D8 00198918  88 03 00 C2 */	lbz r0, 0xc2(r3)
 /* 8019B9DC 0019891C  28 00 00 00 */	cmplwi r0, 0
-/* 8019B9E0 00198920  41 82 00 74 */	beq func_8019BA54
+/* 8019B9E0 00198920  41 82 00 74 */	beq lbl_8019BA54
 /* 8019B9E4 00198924  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8019B9E8 00198928  3C 80 62 61 */	lis r4, 0x62617365@ha
 /* 8019B9EC 0019892C  38 C4 73 65 */	addi r6, r4, 0x62617365@l
@@ -1111,7 +1010,7 @@ func_8019B994:
 /* 8019BA0C 0019894C  C0 22 A1 84 */	lfs f1, d_d_gameover__LIT_3869-_SDA2_BASE_(r2)
 /* 8019BA10 00198950  C0 0D 86 5C */	lfs f0, mFadeRate__13mDoGph_gInf_c-_SDA_BASE_(r13)
 /* 8019BA14 00198954  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 8019BA18 00198958  40 82 00 3C */	bne func_8019BA54
+/* 8019BA18 00198958  40 82 00 3C */	bne lbl_8019BA54
 /* 8019BA1C 0019895C  80 0D 80 14 */	lwz r0, mFadeColor__13mDoGph_gInf_c-_SDA_BASE_(r13)
 /* 8019BA20 00198960  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8019BA24 00198964  88 A1 00 0C */	lbz r5, 0xc(r1)
@@ -1126,10 +1025,7 @@ func_8019B994:
 /* 8019BA48 00198988  98 9F 00 15 */	stb r4, 0x15(r31)
 /* 8019BA4C 0019898C  98 7F 00 16 */	stb r3, 0x16(r31)
 /* 8019BA50 00198990  98 1F 00 17 */	stb r0, 0x17(r31)
-
-/* 8019BA54 00C4 .text      func_8019BA54                  func_8019BA54                  */
-.global func_8019BA54
-func_8019BA54:
+lbl_8019BA54:
 /* 8019BA54 00198994  80 7F 00 04 */	lwz r3, 4(r31)
 /* 8019BA58 00198998  3C 80 73 65 */	lis r4, 0x73655F62@ha
 /* 8019BA5C 0019899C  38 C4 5F 62 */	addi r6, r4, 0x73655F62@l
@@ -1163,7 +1059,7 @@ func_8019BA54:
 /* 8019BACC 00198A0C  38 60 01 50 */	li r3, 0x150
 /* 8019BAD0 00198A10  48 13 31 7D */	bl __nw__FUl
 /* 8019BAD4 00198A14  7C 60 1B 79 */	or. r0, r3, r3
-/* 8019BAD8 00198A18  41 82 00 40 */	beq func_8019BB18
+/* 8019BAD8 00198A18  41 82 00 40 */	beq lbl_8019BB18
 /* 8019BADC 00198A1C  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868-_SDA2_BASE_(r2)
 /* 8019BAE0 00198A20  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 8019BAE4 00198A24  C0 02 A1 A0 */	lfs f0, d_d_gameover__LIT_4290-_SDA2_BASE_(r2)
@@ -1179,10 +1075,7 @@ func_8019BA54:
 /* 8019BB0C 00198A4C  39 20 00 00 */	li r9, 0
 /* 8019BB10 00198A50  48 16 0C F1 */	bl __ct__10J2DPictureFUxRCQ29JGeometry8TBox2_SUB_0f_SUB_1PC7ResTIMGPC7ResTLUT
 /* 8019BB14 00198A54  7C 60 1B 78 */	mr r0, r3
-
-/* 8019BB18 00BC .text      func_8019BB18                  func_8019BB18                  */
-.global func_8019BB18
-func_8019BB18:
+lbl_8019BB18:
 /* 8019BB18 00198A58  90 1F 00 08 */	stw r0, 8(r31)
 /* 8019BB1C 00198A5C  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8019BB20 00198A60  90 01 00 10 */	stw r0, 0x10(r1)
@@ -1225,15 +1118,12 @@ func_8019BB18:
 /* 8019BBB4 00198AF4  38 60 00 24 */	li r3, 0x24
 /* 8019BBB8 00198AF8  48 13 30 95 */	bl __nw__FUl
 /* 8019BBBC 00198AFC  7C 60 1B 79 */	or. r0, r3, r3
-/* 8019BBC0 00198B00  41 82 00 14 */	beq func_8019BBD4
+/* 8019BBC0 00198B00  41 82 00 14 */	beq lbl_8019BBD4
 /* 8019BBC4 00198B04  38 80 00 06 */	li r4, 6
 /* 8019BBC8 00198B08  38 A0 00 FF */	li r5, 0xff
 /* 8019BBCC 00198B0C  48 0A 9D 69 */	bl __ct__15dMsgScrnLight_cFUcUc
 /* 8019BBD0 00198B10  7C 60 1B 78 */	mr r0, r3
-
-/* 8019BBD4 0028 .text      func_8019BBD4                  func_8019BBD4                  */
-.global func_8019BBD4
-func_8019BBD4:
+lbl_8019BBD4:
 /* 8019BBD4 00198B14  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8019BBD8 00198B18  C0 02 A1 80 */	lfs f0, d_d_gameover__LIT_3868-_SDA2_BASE_(r2)
 /* 8019BBDC 00198B1C  D0 1F 00 10 */	stfs f0, 0x10(r31)
@@ -1245,8 +1135,9 @@ func_8019BBD4:
 /* 8019BBF4 00198B34  38 21 00 80 */	addi r1, r1, 0x80
 /* 8019BBF8 00198B38  4E 80 00 20 */	blr 
 
-/* 8019BBFC 004C .text      __dt__24dDlst_GameOverScrnDraw_cFv __dt__24dDlst_GameOverScrnDraw_cFv */
+/* 8019BBFC 00B4 .text      __dt__24dDlst_GameOverScrnDraw_cFv __dt__24dDlst_GameOverScrnDraw_cFv */
 .global __dt__24dDlst_GameOverScrnDraw_cFv
+__dt__24dDlst_GameOverScrnDraw_cFv:
 __dt__24dDlst_GameOverScrnDraw_cFv:
 /* 8019BBFC 00198B3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BC00 00198B40  7C 08 02 A6 */	mflr r0
@@ -1255,34 +1146,28 @@ __dt__24dDlst_GameOverScrnDraw_cFv:
 /* 8019BC0C 00198B4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8019BC10 00198B50  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8019BC14 00198B54  7C 9F 23 78 */	mr r31, r4
-/* 8019BC18 00198B58  41 82 00 7C */	beq func_8019BC94
+/* 8019BC18 00198B58  41 82 00 7C */	beq lbl_8019BC94
 /* 8019BC1C 00198B5C  3C 60 80 3C */	lis r3, __vt__24dDlst_GameOverScrnDraw_c@ha
 /* 8019BC20 00198B60  38 03 BD 68 */	addi r0, r3, __vt__24dDlst_GameOverScrnDraw_c@l
 /* 8019BC24 00198B64  90 1E 00 00 */	stw r0, 0(r30)
 /* 8019BC28 00198B68  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8019BC2C 00198B6C  28 03 00 00 */	cmplwi r3, 0
-/* 8019BC30 00198B70  41 82 00 18 */	beq func_8019BC48
+/* 8019BC30 00198B70  41 82 00 18 */	beq lbl_8019BC48
 /* 8019BC34 00198B74  38 80 00 01 */	li r4, 1
 /* 8019BC38 00198B78  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019BC3C 00198B7C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8019BC40 00198B80  7D 89 03 A6 */	mtctr r12
 /* 8019BC44 00198B84  4E 80 04 21 */	bctrl 
-
-/* 8019BC48 0020 .text      func_8019BC48                  func_8019BC48                  */
-.global func_8019BC48
-func_8019BC48:
+lbl_8019BC48:
 /* 8019BC48 00198B88  80 7E 00 04 */	lwz r3, 4(r30)
 /* 8019BC4C 00198B8C  28 03 00 00 */	cmplwi r3, 0
-/* 8019BC50 00198B90  41 82 00 18 */	beq func_8019BC68
+/* 8019BC50 00198B90  41 82 00 18 */	beq lbl_8019BC68
 /* 8019BC54 00198B94  38 80 00 01 */	li r4, 1
 /* 8019BC58 00198B98  81 83 00 00 */	lwz r12, 0(r3)
 /* 8019BC5C 00198B9C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8019BC60 00198BA0  7D 89 03 A6 */	mtctr r12
 /* 8019BC64 00198BA4  4E 80 04 21 */	bctrl 
-
-/* 8019BC68 002C .text      func_8019BC68                  func_8019BC68                  */
-.global func_8019BC68
-func_8019BC68:
+lbl_8019BC68:
 /* 8019BC68 00198BA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8019BC6C 00198BAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8019BC70 00198BB0  80 63 5D 30 */	lwz r3, 0x5d30(r3)
@@ -1291,13 +1176,10 @@ func_8019BC68:
 /* 8019BC7C 00198BBC  7D 89 03 A6 */	mtctr r12
 /* 8019BC80 00198BC0  4E 80 04 21 */	bctrl 
 /* 8019BC84 00198BC4  7F E0 07 35 */	extsh. r0, r31
-/* 8019BC88 00198BC8  40 81 00 0C */	ble func_8019BC94
+/* 8019BC88 00198BC8  40 81 00 0C */	ble lbl_8019BC94
 /* 8019BC8C 00198BCC  7F C3 F3 78 */	mr r3, r30
 /* 8019BC90 00198BD0  48 13 30 AD */	bl __dl__FPv
-
-/* 8019BC94 001C .text      func_8019BC94                  func_8019BC94                  */
-.global func_8019BC94
-func_8019BC94:
+lbl_8019BC94:
 /* 8019BC94 00198BD4  7F C3 F3 78 */	mr r3, r30
 /* 8019BC98 00198BD8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019BC9C 00198BDC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1308,6 +1190,7 @@ func_8019BC94:
 
 /* 8019BCB0 0044 .text      setBackAlpha__24dDlst_GameOverScrnDraw_cFf setBackAlpha__24dDlst_GameOverScrnDraw_cFf */
 .global setBackAlpha__24dDlst_GameOverScrnDraw_cFf
+setBackAlpha__24dDlst_GameOverScrnDraw_cFf:
 setBackAlpha__24dDlst_GameOverScrnDraw_cFf:
 /* 8019BCB0 00198BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BCB4 00198BF4  7C 08 02 A6 */	mflr r0
@@ -1327,8 +1210,9 @@ setBackAlpha__24dDlst_GameOverScrnDraw_cFf:
 /* 8019BCEC 00198C2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019BCF0 00198C30  4E 80 00 20 */	blr 
 
-/* 8019BCF4 005C .text      draw__24dDlst_GameOverScrnDraw_cFv draw__24dDlst_GameOverScrnDraw_cFv */
+/* 8019BCF4 0248 .text      draw__24dDlst_GameOverScrnDraw_cFv draw__24dDlst_GameOverScrnDraw_cFv */
 .global draw__24dDlst_GameOverScrnDraw_cFv
+draw__24dDlst_GameOverScrnDraw_cFv:
 draw__24dDlst_GameOverScrnDraw_cFv:
 /* 8019BCF4 00198C34  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8019BCF8 00198C38  7C 08 02 A6 */	mflr r0
@@ -1350,17 +1234,14 @@ draw__24dDlst_GameOverScrnDraw_cFv:
 /* 8019BD38 00198C78  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019BD3C 00198C7C  88 03 00 C2 */	lbz r0, 0xc2(r3)
 /* 8019BD40 00198C80  28 00 00 01 */	cmplwi r0, 1
-/* 8019BD44 00198C84  41 82 00 0C */	beq func_8019BD50
+/* 8019BD44 00198C84  41 82 00 0C */	beq lbl_8019BD50
 /* 8019BD48 00198C88  28 00 00 02 */	cmplwi r0, 2
-/* 8019BD4C 00198C8C  40 82 00 CC */	bne func_8019BE18
-
-/* 8019BD50 0048 .text      func_8019BD50                  func_8019BD50                  */
-.global func_8019BD50
-func_8019BD50:
+/* 8019BD4C 00198C8C  40 82 00 CC */	bne lbl_8019BE18
+lbl_8019BD50:
 /* 8019BD50 00198C90  C0 22 A1 84 */	lfs f1, d_d_gameover__LIT_3869-_SDA2_BASE_(r2)
 /* 8019BD54 00198C94  C0 0D 86 5C */	lfs f0, mFadeRate__13mDoGph_gInf_c-_SDA_BASE_(r13)
 /* 8019BD58 00198C98  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 8019BD5C 00198C9C  40 82 00 3C */	bne func_8019BD98
+/* 8019BD5C 00198C9C  40 82 00 3C */	bne lbl_8019BD98
 /* 8019BD60 00198CA0  80 0D 80 14 */	lwz r0, mFadeColor__13mDoGph_gInf_c-_SDA_BASE_(r13)
 /* 8019BD64 00198CA4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8019BD68 00198CA8  88 A1 00 0C */	lbz r5, 0xc(r1)
@@ -1375,10 +1256,7 @@ func_8019BD50:
 /* 8019BD8C 00198CCC  98 9E 00 15 */	stb r4, 0x15(r30)
 /* 8019BD90 00198CD0  98 7E 00 16 */	stb r3, 0x16(r30)
 /* 8019BD94 00198CD4  98 1E 00 17 */	stb r0, 0x17(r30)
-
-/* 8019BD98 0080 .text      func_8019BD98                  func_8019BD98                  */
-.global func_8019BD98
-func_8019BD98:
+lbl_8019BD98:
 /* 8019BD98 00198CD8  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 8019BD9C 00198CDC  90 01 00 08 */	stw r0, 8(r1)
 /* 8019BDA0 00198CE0  90 01 00 30 */	stw r0, 0x30(r1)
@@ -1410,11 +1288,8 @@ func_8019BD98:
 /* 8019BE08 00198D48  81 8C 00 EC */	lwz r12, 0xec(r12)
 /* 8019BE0C 00198D4C  7D 89 03 A6 */	mtctr r12
 /* 8019BE10 00198D50  4E 80 04 21 */	bctrl 
-/* 8019BE14 00198D54  48 00 00 F4 */	b func_8019BF08
-
-/* 8019BE18 00A8 .text      func_8019BE18                  func_8019BE18                  */
-.global func_8019BE18
-func_8019BE18:
+/* 8019BE14 00198D54  48 00 00 F4 */	b lbl_8019BF08
+lbl_8019BE18:
 /* 8019BE18 00198D58  38 00 FF FF */	li r0, -1
 /* 8019BE1C 00198D5C  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8019BE20 00198D60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1455,12 +1330,9 @@ func_8019BE18:
 /* 8019BEAC 00198DEC  83 41 00 24 */	lwz r26, 0x24(r1)
 /* 8019BEB0 00198DF0  83 61 00 28 */	lwz r27, 0x28(r1)
 /* 8019BEB4 00198DF4  C3 E2 A1 B4 */	lfs f31, d_d_gameover__LIT_4376-_SDA2_BASE_(r2)
-/* 8019BEB8 00198DF8  3C 60 80 3C */	lis r3, sym_803BBD0C@ha
-/* 8019BEBC 00198DFC  3B 83 BD 0C */	addi r28, r3, sym_803BBD0C@l
-
-/* 8019BEC0 0048 .text      func_8019BEC0                  func_8019BEC0                  */
-.global func_8019BEC0
-func_8019BEC0:
+/* 8019BEB8 00198DF8  3C 60 80 3C */	lis r3, data_803BBD0C@ha
+/* 8019BEBC 00198DFC  3B 83 BD 0C */	addi r28, r3, data_803BBD0C@l
+lbl_8019BEC0:
 /* 8019BEC0 00198E00  93 41 00 10 */	stw r26, 0x10(r1)
 /* 8019BEC4 00198E04  93 61 00 14 */	stw r27, 0x14(r1)
 /* 8019BEC8 00198E08  C0 79 00 08 */	lfs f3, 8(r25)
@@ -1478,11 +1350,8 @@ func_8019BEC0:
 /* 8019BEF8 00198E38  3B 18 00 01 */	addi r24, r24, 1
 /* 8019BEFC 00198E3C  2C 18 00 08 */	cmpwi r24, 8
 /* 8019BF00 00198E40  3B BD 00 04 */	addi r29, r29, 4
-/* 8019BF04 00198E44  41 80 FF BC */	blt func_8019BEC0
-
-/* 8019BF08 0034 .text      func_8019BF08                  func_8019BF08                  */
-.global func_8019BF08
-func_8019BF08:
+/* 8019BF04 00198E44  41 80 FF BC */	blt lbl_8019BEC0
+lbl_8019BF08:
 /* 8019BF08 00198E48  80 7E 00 04 */	lwz r3, 4(r30)
 /* 8019BF0C 00198E4C  C0 22 A1 80 */	lfs f1, d_d_gameover__LIT_3868-_SDA2_BASE_(r2)
 /* 8019BF10 00198E50  FC 40 08 90 */	fmr f2, f1
@@ -1500,6 +1369,7 @@ func_8019BF08:
 /* 8019BF3C 0020 .text      dGameover_Draw__FP11dGameover_c dGameover_Draw__FP11dGameover_c */
 .global dGameover_Draw__FP11dGameover_c
 dGameover_Draw__FP11dGameover_c:
+dGameover_Draw__FP11dGameover_c:
 /* 8019BF3C 00198E7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BF40 00198E80  7C 08 02 A6 */	mflr r0
 /* 8019BF44 00198E84  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1511,6 +1381,7 @@ dGameover_Draw__FP11dGameover_c:
 
 /* 8019BF5C 0020 .text      dGameover_Execute__FP11dGameover_c dGameover_Execute__FP11dGameover_c */
 .global dGameover_Execute__FP11dGameover_c
+dGameover_Execute__FP11dGameover_c:
 dGameover_Execute__FP11dGameover_c:
 /* 8019BF5C 00198E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BF60 00198EA0  7C 08 02 A6 */	mflr r0
@@ -1524,11 +1395,13 @@ dGameover_Execute__FP11dGameover_c:
 /* 8019BF7C 0008 .text      dGameover_IsDelete__FP11dGameover_c dGameover_IsDelete__FP11dGameover_c */
 .global dGameover_IsDelete__FP11dGameover_c
 dGameover_IsDelete__FP11dGameover_c:
+dGameover_IsDelete__FP11dGameover_c:
 /* 8019BF7C 00198EBC  38 60 00 01 */	li r3, 1
 /* 8019BF80 00198EC0  4E 80 00 20 */	blr 
 
 /* 8019BF84 0020 .text      dGameover_Delete__FP11dGameover_c dGameover_Delete__FP11dGameover_c */
 .global dGameover_Delete__FP11dGameover_c
+dGameover_Delete__FP11dGameover_c:
 dGameover_Delete__FP11dGameover_c:
 /* 8019BF84 00198EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BF88 00198EC8  7C 08 02 A6 */	mflr r0
@@ -1542,6 +1415,7 @@ dGameover_Delete__FP11dGameover_c:
 /* 8019BFA4 0020 .text      dGameover_Create__FP9msg_class dGameover_Create__FP9msg_class */
 .global dGameover_Create__FP9msg_class
 dGameover_Create__FP9msg_class:
+dGameover_Create__FP9msg_class:
 /* 8019BFA4 00198EE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BFA8 00198EE8  7C 08 02 A6 */	mflr r0
 /* 8019BFAC 00198EEC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1553,6 +1427,7 @@ dGameover_Create__FP9msg_class:
 
 /* 8019BFC4 0044 .text      d_GameOver_Create__FUc         d_GameOver_Create__FUc         */
 .global d_GameOver_Create__FUc
+d_GameOver_Create__FUc:
 d_GameOver_Create__FUc:
 /* 8019BFC4 00198F04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019BFC8 00198F08  7C 08 02 A6 */	mflr r0
@@ -1572,8 +1447,9 @@ d_GameOver_Create__FUc:
 /* 8019C000 00198F40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019C004 00198F44  4E 80 00 20 */	blr 
 
-/* 8019C008 004C .text      d_GameOver_Delete__FRUi        d_GameOver_Delete__FRUi        */
+/* 8019C008 0064 .text      d_GameOver_Delete__FRUi        d_GameOver_Delete__FRUi        */
 .global d_GameOver_Delete__FRUi
+d_GameOver_Delete__FRUi:
 d_GameOver_Delete__FRUi:
 /* 8019C008 00198F48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019C00C 00198F4C  7C 08 02 A6 */	mflr r0
@@ -1583,7 +1459,7 @@ d_GameOver_Delete__FRUi:
 /* 8019C01C 00198F5C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8019C020 00198F60  3C 03 00 01 */	addis r0, r3, 1
 /* 8019C024 00198F64  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8019C028 00198F68  41 82 00 2C */	beq func_8019C054
+/* 8019C028 00198F68  41 82 00 2C */	beq lbl_8019C054
 /* 8019C02C 00198F6C  4B E8 39 F9 */	bl fopMsgM_SearchByID__FUi
 /* 8019C030 00198F70  4B E8 3A 1D */	bl fopMsgM_Delete__FPv
 /* 8019C034 00198F74  38 00 FF FF */	li r0, -1
@@ -1593,50 +1469,39 @@ d_GameOver_Delete__FRUi:
 /* 8019C044 00198F84  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8019C048 00198F88  98 03 00 C2 */	stb r0, 0xc2(r3)
 /* 8019C04C 00198F8C  38 60 00 01 */	li r3, 1
-/* 8019C050 00198F90  48 00 00 08 */	b func_8019C058
-
-/* 8019C054 0004 .text      func_8019C054                  func_8019C054                  */
-.global func_8019C054
-func_8019C054:
+/* 8019C050 00198F90  48 00 00 08 */	b lbl_8019C058
+lbl_8019C054:
 /* 8019C054 00198F94  38 60 00 00 */	li r3, 0
-
-/* 8019C058 0014 .text      func_8019C058                  func_8019C058                  */
-.global func_8019C058
-func_8019C058:
+lbl_8019C058:
 /* 8019C058 00198F98  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019C05C 00198F9C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8019C060 00198FA0  7C 08 03 A6 */	mtlr r0
 /* 8019C064 00198FA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019C068 00198FA8  4E 80 00 20 */	blr 
 
-/* 8019C06C 0034 .text      __dt__10dGov_HIO_cFv           __dt__10dGov_HIO_cFv           */
+/* 8019C06C 005C .text      __dt__10dGov_HIO_cFv           __dt__10dGov_HIO_cFv           */
 .global __dt__10dGov_HIO_cFv
+__dt__10dGov_HIO_cFv:
 __dt__10dGov_HIO_cFv:
 /* 8019C06C 00198FAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019C070 00198FB0  7C 08 02 A6 */	mflr r0
 /* 8019C074 00198FB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019C078 00198FB8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8019C07C 00198FBC  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8019C080 00198FC0  41 82 00 30 */	beq func_8019C0B0
+/* 8019C080 00198FC0  41 82 00 30 */	beq lbl_8019C0B0
 /* 8019C084 00198FC4  3C 60 80 3C */	lis r3, __vt__10dGov_HIO_c@ha
 /* 8019C088 00198FC8  38 03 BD 90 */	addi r0, r3, __vt__10dGov_HIO_c@l
 /* 8019C08C 00198FCC  90 1F 00 00 */	stw r0, 0(r31)
-/* 8019C090 00198FD0  41 82 00 10 */	beq func_8019C0A0
+/* 8019C090 00198FD0  41 82 00 10 */	beq lbl_8019C0A0
 /* 8019C094 00198FD4  3C 60 80 3B */	lis r3, __vt__14mDoHIO_entry_c@ha
 /* 8019C098 00198FD8  38 03 61 B4 */	addi r0, r3, __vt__14mDoHIO_entry_c@l
 /* 8019C09C 00198FDC  90 1F 00 00 */	stw r0, 0(r31)
-
-/* 8019C0A0 0010 .text      func_8019C0A0                  func_8019C0A0                  */
-.global func_8019C0A0
-func_8019C0A0:
+lbl_8019C0A0:
 /* 8019C0A0 00198FE0  7C 80 07 35 */	extsh. r0, r4
-/* 8019C0A4 00198FE4  40 81 00 0C */	ble func_8019C0B0
+/* 8019C0A4 00198FE4  40 81 00 0C */	ble lbl_8019C0B0
 /* 8019C0A8 00198FE8  7F E3 FB 78 */	mr r3, r31
 /* 8019C0AC 00198FEC  48 13 2C 91 */	bl __dl__FPv
-
-/* 8019C0B0 0018 .text      func_8019C0B0                  func_8019C0B0                  */
-.global func_8019C0B0
-func_8019C0B0:
+lbl_8019C0B0:
 /* 8019C0B0 00198FF0  7F E3 FB 78 */	mr r3, r31
 /* 8019C0B4 00198FF4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019C0B8 00198FF8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1646,6 +1511,7 @@ func_8019C0B0:
 
 /* 8019C0C8 0204 .text      __sinit_d_gameover_cpp         __sinit_d_gameover_cpp         */
 .global __sinit_d_gameover_cpp
+__sinit_d_gameover_cpp:
 __sinit_d_gameover_cpp:
 /* 8019C0C8 00199008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019C0CC 0019900C  7C 08 02 A6 */	mflr r0
@@ -1777,25 +1643,23 @@ __sinit_d_gameover_cpp:
 /* 8019C2C4 00199204  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019C2C8 00199208  4E 80 00 20 */	blr 
 
-/* 8019C2CC 0030 .text      __dt__24dDlst_Gameover_CAPTURE_cFv __dt__24dDlst_Gameover_CAPTURE_cFv */
+/* 8019C2CC 0048 .text      __dt__24dDlst_Gameover_CAPTURE_cFv __dt__24dDlst_Gameover_CAPTURE_cFv */
 .global __dt__24dDlst_Gameover_CAPTURE_cFv
+__dt__24dDlst_Gameover_CAPTURE_cFv:
 __dt__24dDlst_Gameover_CAPTURE_cFv:
 /* 8019C2CC 0019920C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019C2D0 00199210  7C 08 02 A6 */	mflr r0
 /* 8019C2D4 00199214  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019C2D8 00199218  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8019C2DC 0019921C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8019C2E0 00199220  41 82 00 1C */	beq func_8019C2FC
+/* 8019C2E0 00199220  41 82 00 1C */	beq lbl_8019C2FC
 /* 8019C2E4 00199224  3C A0 80 3C */	lis r5, __vt__24dDlst_Gameover_CAPTURE_c@ha
 /* 8019C2E8 00199228  38 05 BD A8 */	addi r0, r5, __vt__24dDlst_Gameover_CAPTURE_c@l
 /* 8019C2EC 0019922C  90 1F 00 00 */	stw r0, 0(r31)
 /* 8019C2F0 00199230  7C 80 07 35 */	extsh. r0, r4
-/* 8019C2F4 00199234  40 81 00 08 */	ble func_8019C2FC
+/* 8019C2F4 00199234  40 81 00 08 */	ble lbl_8019C2FC
 /* 8019C2F8 00199238  48 13 2A 45 */	bl __dl__FPv
-
-/* 8019C2FC 0018 .text      func_8019C2FC                  func_8019C2FC                  */
-.global func_8019C2FC
-func_8019C2FC:
+lbl_8019C2FC:
 /* 8019C2FC 0019923C  7F E3 FB 78 */	mr r3, r31
 /* 8019C300 00199240  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019C304 00199244  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1803,44 +1667,36 @@ func_8019C2FC:
 /* 8019C30C 0019924C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019C310 00199250  4E 80 00 20 */	blr 
 
-/* 8019C314 0038 .text      __dt__12dMenu_save_cFv         __dt__12dMenu_save_cFv         */
+/* 8019C314 0074 .text      __dt__12dMenu_save_cFv         __dt__12dMenu_save_cFv         */
 .global __dt__12dMenu_save_cFv
+__dt__12dMenu_save_cFv:
 __dt__12dMenu_save_cFv:
 /* 8019C314 00199254  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019C318 00199258  7C 08 02 A6 */	mflr r0
 /* 8019C31C 0019925C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019C320 00199260  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8019C324 00199264  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8019C328 00199268  41 82 00 48 */	beq func_8019C370
+/* 8019C328 00199268  41 82 00 48 */	beq lbl_8019C370
 /* 8019C32C 0019926C  3C 60 80 3C */	lis r3, __vt__12dMenu_save_c@ha
 /* 8019C330 00199270  38 03 BD 78 */	addi r0, r3, __vt__12dMenu_save_c@l
 /* 8019C334 00199274  90 1F 00 00 */	stw r0, 0(r31)
 /* 8019C338 00199278  34 1F 00 18 */	addic. r0, r31, 0x18
-/* 8019C33C 0019927C  41 82 00 10 */	beq func_8019C34C
+/* 8019C33C 0019927C  41 82 00 10 */	beq lbl_8019C34C
 /* 8019C340 00199280  3C 60 80 3C */	lis r3, __vt__16dDlst_MenuSave_c@ha
 /* 8019C344 00199284  38 03 E7 64 */	addi r0, r3, __vt__16dDlst_MenuSave_c@l
 /* 8019C348 00199288  90 1F 00 18 */	stw r0, 0x18(r31)
-
-/* 8019C34C 0014 .text      func_8019C34C                  func_8019C34C                  */
-.global func_8019C34C
-func_8019C34C:
+lbl_8019C34C:
 /* 8019C34C 0019928C  34 1F 00 10 */	addic. r0, r31, 0x10
-/* 8019C350 00199290  41 82 00 10 */	beq func_8019C360
+/* 8019C350 00199290  41 82 00 10 */	beq lbl_8019C360
 /* 8019C354 00199294  3C 60 80 3C */	lis r3, __vt__23dDlst_MenuSaveExplain_c@ha
 /* 8019C358 00199298  38 03 E7 74 */	addi r0, r3, __vt__23dDlst_MenuSaveExplain_c@l
 /* 8019C35C 0019929C  90 1F 00 10 */	stw r0, 0x10(r31)
-
-/* 8019C360 0010 .text      func_8019C360                  func_8019C360                  */
-.global func_8019C360
-func_8019C360:
+lbl_8019C360:
 /* 8019C360 001992A0  7C 80 07 35 */	extsh. r0, r4
-/* 8019C364 001992A4  40 81 00 0C */	ble func_8019C370
+/* 8019C364 001992A4  40 81 00 0C */	ble lbl_8019C370
 /* 8019C368 001992A8  7F E3 FB 78 */	mr r3, r31
 /* 8019C36C 001992AC  48 13 29 D1 */	bl __dl__FPv
-
-/* 8019C370 0018 .text      func_8019C370                  func_8019C370                  */
-.global func_8019C370
-func_8019C370:
+lbl_8019C370:
 /* 8019C370 001992B0  7F E3 FB 78 */	mr r3, r31
 /* 8019C374 001992B4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019C378 001992B8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1853,75 +1709,75 @@ func_8019C370:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394C28 0032 .rodata    d_d_gameover__stringBase0      @stringBase0                   */
+/* 80394C28 0032 .rodata    @stringBase0                   d_d_gameover__stringBase0      */
 .global d_d_gameover__stringBase0
 d_d_gameover__stringBase0:
 .byte 0x47, 0x6f, 0x76, 0x65, 0x72, 0x00, 0x44, 0x5f, 0x4d, 0x4e, 0x31, 0x30, 0x41, 0x00, 0x7a, 0x65 /* baserom.dol+0x391c28 */
 .byte 0x6c, 0x64, 0x61, 0x5f, 0x67, 0x61, 0x6d, 0x65, 0x5f, 0x6f, 0x76, 0x65, 0x72, 0x2e, 0x62, 0x6c /* baserom.dol+0x391c38 */
 .byte 0x6f, 0x00, 0x74, 0x74, 0x5f, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x38, 0x78, 0x38, 0x2e, 0x62, 0x74 /* baserom.dol+0x391c48 */
 .byte 0x69, 0x00 /* baserom.dol+0x391c58 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x391c5a */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803BBB50 0000 .data      sym_803BBB50                   ...data.0                      */
-.global sym_803BBB50
-sym_803BBB50:
+/* 803BBB50 0000 .data      ...data.0                      data_803BBB50                  */
+.global data_803BBB50
+data_803BBB50:
 
-/* 803BBB50 000C .data      d_d_gameover__cNullVec__6Z2Calc cNullVec__6Z2Calc              */
+/* 803BBB50 000C .data      cNullVec__6Z2Calc              d_d_gameover__cNullVec__6Z2Calc */
 .global d_d_gameover__cNullVec__6Z2Calc
 d_d_gameover__cNullVec__6Z2Calc:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8b50 */
 
-/* 803BBB5C 000C .data      d_d_gameover__LIT_3883         @3883                          */
+/* 803BBB5C 000C .data      @3883                          d_d_gameover__LIT_3883         */
 .global d_d_gameover__LIT_3883
 d_d_gameover__LIT_3883:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb3, 0x84 /* baserom.dol+0x3b8b5c */
 
-/* 803BBB68 000C .data      d_d_gameover__LIT_3884         @3884                          */
+/* 803BBB68 000C .data      @3884                          d_d_gameover__LIT_3884         */
 .global d_d_gameover__LIT_3884
 d_d_gameover__LIT_3884:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb3, 0xa0 /* baserom.dol+0x3b8b68 */
 
-/* 803BBB74 000C .data      d_d_gameover__LIT_3885         @3885                          */
+/* 803BBB74 000C .data      @3885                          d_d_gameover__LIT_3885         */
 .global d_d_gameover__LIT_3885
 d_d_gameover__LIT_3885:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0x0c /* baserom.dol+0x3b8b74 */
 
-/* 803BBB80 000C .data      d_d_gameover__LIT_3886         @3886                          */
+/* 803BBB80 000C .data      @3886                          d_d_gameover__LIT_3886         */
 .global d_d_gameover__LIT_3886
 d_d_gameover__LIT_3886:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0x78 /* baserom.dol+0x3b8b80 */
 
-/* 803BBB8C 000C .data      d_d_gameover__LIT_3887         @3887                          */
+/* 803BBB8C 000C .data      @3887                          d_d_gameover__LIT_3887         */
 .global d_d_gameover__LIT_3887
 d_d_gameover__LIT_3887:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0xd8 /* baserom.dol+0x3b8b8c */
 
-/* 803BBB98 000C .data      d_d_gameover__LIT_3888         @3888                          */
+/* 803BBB98 000C .data      @3888                          d_d_gameover__LIT_3888         */
 .global d_d_gameover__LIT_3888
 d_d_gameover__LIT_3888:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0x60 /* baserom.dol+0x3b8b98 */
 
-/* 803BBBA4 000C .data      LIT_3889                       @3889                          */
+/* 803BBBA4 000C .data      @3889                          LIT_3889                       */
 .global LIT_3889
 LIT_3889:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0xa4 /* baserom.dol+0x3b8ba4 */
 
-/* 803BBBB0 000C .data      d_d_gameover__LIT_3890         @3890                          */
+/* 803BBBB0 000C .data      @3890                          d_d_gameover__LIT_3890         */
 .global d_d_gameover__LIT_3890
 d_d_gameover__LIT_3890:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0xf0 /* baserom.dol+0x3b8bb0 */
 
-/* 803BBBBC 000C .data      d_d_gameover__LIT_3891         @3891                          */
+/* 803BBBBC 000C .data      @3891                          d_d_gameover__LIT_3891         */
 .global d_d_gameover__LIT_3891
 d_d_gameover__LIT_3891:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb7, 0xbc /* baserom.dol+0x3b8bbc */
 
-/* 803BBBC8 006C .data      d_d_gameover__init_process     init_process                   */
+/* 803BBBC8 006C .data      init_process                   d_d_gameover__init_process     */
 .global d_d_gameover__init_process
 d_d_gameover__init_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8bc8 */
@@ -1932,52 +1788,52 @@ d_d_gameover__init_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8c18 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8c28 */
 
-/* 803BBC34 000C .data      d_d_gameover__LIT_3892         @3892                          */
+/* 803BBC34 000C .data      @3892                          d_d_gameover__LIT_3892         */
 .global d_d_gameover__LIT_3892
 d_d_gameover__LIT_3892:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb3, 0x88 /* baserom.dol+0x3b8c34 */
 
-/* 803BBC40 000C .data      d_d_gameover__LIT_3893         @3893                          */
+/* 803BBC40 000C .data      @3893                          d_d_gameover__LIT_3893         */
 .global d_d_gameover__LIT_3893
 d_d_gameover__LIT_3893:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb3, 0xe8 /* baserom.dol+0x3b8c40 */
 
-/* 803BBC4C 000C .data      d_d_gameover__LIT_3894         @3894                          */
+/* 803BBC4C 000C .data      @3894                          d_d_gameover__LIT_3894         */
 .global d_d_gameover__LIT_3894
 d_d_gameover__LIT_3894:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0x54 /* baserom.dol+0x3b8c4c */
 
-/* 803BBC58 000C .data      d_d_gameover__LIT_3895         @3895                          */
+/* 803BBC58 000C .data      @3895                          d_d_gameover__LIT_3895         */
 .global d_d_gameover__LIT_3895
 d_d_gameover__LIT_3895:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0x84 /* baserom.dol+0x3b8c58 */
 
-/* 803BBC64 000C .data      d_d_gameover__LIT_3896         @3896                          */
+/* 803BBC64 000C .data      @3896                          d_d_gameover__LIT_3896         */
 .global d_d_gameover__LIT_3896
 d_d_gameover__LIT_3896:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb4, 0xe4 /* baserom.dol+0x3b8c64 */
 
-/* 803BBC70 000C .data      d_d_gameover__LIT_3897         @3897                          */
+/* 803BBC70 000C .data      @3897                          d_d_gameover__LIT_3897         */
 .global d_d_gameover__LIT_3897
 d_d_gameover__LIT_3897:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0x64 /* baserom.dol+0x3b8c70 */
 
-/* 803BBC7C 000C .data      d_d_gameover__LIT_3898         @3898                          */
+/* 803BBC7C 000C .data      @3898                          d_d_gameover__LIT_3898         */
 .global d_d_gameover__LIT_3898
 d_d_gameover__LIT_3898:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0xa8 /* baserom.dol+0x3b8c7c */
 
-/* 803BBC88 000C .data      d_d_gameover__LIT_3899         @3899                          */
+/* 803BBC88 000C .data      @3899                          d_d_gameover__LIT_3899         */
 .global d_d_gameover__LIT_3899
 d_d_gameover__LIT_3899:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb5, 0xf4 /* baserom.dol+0x3b8c88 */
 
-/* 803BBC94 000C .data      d_d_gameover__LIT_3900         @3900                          */
+/* 803BBC94 000C .data      @3900                          d_d_gameover__LIT_3900         */
 .global d_d_gameover__LIT_3900
 d_d_gameover__LIT_3900:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0xb7, 0xc0 /* baserom.dol+0x3b8c94 */
 
-/* 803BBCA0 006C .data      d_d_gameover__move_process     move_process                   */
+/* 803BBCA0 006C .data      move_process                   d_d_gameover__move_process     */
 .global d_d_gameover__move_process
 d_d_gameover__move_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8ca0 */
@@ -1988,9 +1844,9 @@ d_d_gameover__move_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8cf0 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8d00 */
 
-/* 803BBD0C 0020 .data      sym_803BBD0C                   offset$4331                    */
-.global sym_803BBD0C
-sym_803BBD0C:
+/* 803BBD0C 0020 .data      offset$4331                    data_803BBD0C                  */
+.global data_803BBD0C
+data_803BBD0C:
 .byte 0xc3, 0x0a, 0x00, 0x00, 0xc2, 0xc0, 0x00, 0x00, 0xc2, 0x60, 0x00, 0x00, 0xc1, 0x90, 0x00, 0x00 /* baserom.dol+0x3b8d0c */
 .byte 0x42, 0x28, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x42, 0xdc, 0x00, 0x00, 0x43, 0x0f, 0x00, 0x00 /* baserom.dol+0x3b8d1c */
 
@@ -2010,31 +1866,41 @@ g_profile_GAMEOVER:
 /* 803BBD68 0010 .data      __vt__24dDlst_GameOverScrnDraw_c __vt__24dDlst_GameOverScrnDraw_c */
 .global __vt__24dDlst_GameOverScrnDraw_c
 __vt__24dDlst_GameOverScrnDraw_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0xbc, 0xf4, 0x80, 0x19, 0xbb, 0xfc /* baserom.dol+0x3b8d68 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__24dDlst_GameOverScrnDraw_cFv
+.4byte __dt__24dDlst_GameOverScrnDraw_cFv
 
 /* 803BBD78 000C .data      __vt__12dMenu_save_c           __vt__12dMenu_save_c           */
 .global __vt__12dMenu_save_c
 __vt__12dMenu_save_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0xc3, 0x14 /* baserom.dol+0x3b8d78 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8d84 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12dMenu_save_cFv
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 /* 803BBD90 000C .data      __vt__10dGov_HIO_c             __vt__10dGov_HIO_c             */
 .global __vt__10dGov_HIO_c
 __vt__10dGov_HIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0xc0, 0x6c /* baserom.dol+0x3b8d90 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8d9c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__10dGov_HIO_cFv
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 /* 803BBDA8 0010 .data      __vt__24dDlst_Gameover_CAPTURE_c __vt__24dDlst_Gameover_CAPTURE_c */
 .global __vt__24dDlst_Gameover_CAPTURE_c
 __vt__24dDlst_Gameover_CAPTURE_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0xac, 0xf8, 0x80, 0x19, 0xc2, 0xcc /* baserom.dol+0x3b8da8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__24dDlst_Gameover_CAPTURE_cFv
+.4byte __dt__24dDlst_Gameover_CAPTURE_cFv
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 8042CA20 000C .bss       d_d_gameover__LIT_3882         @3882                          */
+/* 8042CA20 000C .bss       @3882                          d_d_gameover__LIT_3882         */
 .global d_d_gameover__LIT_3882
 d_d_gameover__LIT_3882:
 .skip 0xc
@@ -2049,74 +1915,74 @@ l_HIO:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453B80 0004 .sdata2    d_d_gameover__LIT_3868         @3868                          */
+/* 80453B80 0004 .sdata2    @3868                          d_d_gameover__LIT_3868         */
 .global d_d_gameover__LIT_3868
 d_d_gameover__LIT_3868:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d29e0 */
 
-/* 80453B84 0004 .sdata2    d_d_gameover__LIT_3869         @3869                          */
+/* 80453B84 0004 .sdata2    @3869                          d_d_gameover__LIT_3869         */
 .global d_d_gameover__LIT_3869
 d_d_gameover__LIT_3869:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d29e4 */
 
-/* 80453B88 0004 .sdata2    LIT_3870                       @3870                          */
+/* 80453B88 0004 .sdata2    @3870                          LIT_3870                       */
 .global LIT_3870
 LIT_3870:
 .byte 0x41, 0x20, 0x00, 0x00 /* baserom.dol+0x3d29e8 */
 
-/* 80453B8C 0004 .sdata2    d_d_gameover__LIT_3878         @3878                          */
+/* 80453B8C 0004 .sdata2    @3878                          d_d_gameover__LIT_3878         */
 .global d_d_gameover__LIT_3878
 d_d_gameover__LIT_3878:
 .byte 0x40, 0x2c, 0xcc, 0xcd /* baserom.dol+0x3d29ec */
 
-/* 80453B90 0004 .sdata2    d_d_gameover__LIT_3879         @3879                          */
+/* 80453B90 0004 .sdata2    @3879                          d_d_gameover__LIT_3879         */
 .global d_d_gameover__LIT_3879
 d_d_gameover__LIT_3879:
 .byte 0x3e, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d29f0 */
 
-/* 80453B94 0004 .sdata2    d_d_gameover__LIT_4069         @4069                          */
+/* 80453B94 0004 .sdata2    @4069                          d_d_gameover__LIT_4069         */
 .global d_d_gameover__LIT_4069
 d_d_gameover__LIT_4069:
 .byte 0x44, 0x61, 0x00, 0x00 /* baserom.dol+0x3d29f4 */
 
-/* 80453B98 0008 .sdata2    d_d_gameover__LIT_4071         @4071                          */
+/* 80453B98 0008 .sdata2    @4071                          d_d_gameover__LIT_4071         */
 .global d_d_gameover__LIT_4071
 d_d_gameover__LIT_4071:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d29f8 */
 
-/* 80453BA0 0004 .sdata2    d_d_gameover__LIT_4290         @4290                          */
+/* 80453BA0 0004 .sdata2    @4290                          d_d_gameover__LIT_4290         */
 .global d_d_gameover__LIT_4290
 d_d_gameover__LIT_4290:
 .byte 0x43, 0xf3, 0x00, 0x00 /* baserom.dol+0x3d2a00 */
 
-/* 80453BA4 0004 .sdata2    d_d_gameover__LIT_4291         @4291                          */
+/* 80453BA4 0004 .sdata2    @4291                          d_d_gameover__LIT_4291         */
 .global d_d_gameover__LIT_4291
 d_d_gameover__LIT_4291:
 .byte 0x44, 0x25, 0x00, 0x00 /* baserom.dol+0x3d2a04 */
 
-/* 80453BA8 0004 .sdata2    d_d_gameover__LIT_4316         @4316                          */
+/* 80453BA8 0004 .sdata2    @4316                          d_d_gameover__LIT_4316         */
 .global d_d_gameover__LIT_4316
 d_d_gameover__LIT_4316:
 .byte 0x43, 0x7f, 0x00, 0x00 /* baserom.dol+0x3d2a08 */
 
-/* 80453BAC 0004 .sdata2    d_d_gameover__LIT_4374         @4374                          */
+/* 80453BAC 0004 .sdata2    @4374                          d_d_gameover__LIT_4374         */
 .global d_d_gameover__LIT_4374
 d_d_gameover__LIT_4374:
 .byte 0x44, 0x18, 0x00, 0x00 /* baserom.dol+0x3d2a0c */
 
-/* 80453BB0 0004 .sdata2    d_d_gameover__LIT_4375         @4375                          */
+/* 80453BB0 0004 .sdata2    @4375                          d_d_gameover__LIT_4375         */
 .global d_d_gameover__LIT_4375
 d_d_gameover__LIT_4375:
 .byte 0x43, 0xe0, 0x00, 0x00 /* baserom.dol+0x3d2a10 */
 
-/* 80453BB4 0004 .sdata2    d_d_gameover__LIT_4376         @4376                          */
+/* 80453BB4 0004 .sdata2    @4376                          d_d_gameover__LIT_4376         */
 .global d_d_gameover__LIT_4376
 d_d_gameover__LIT_4376:
 .byte 0x43, 0x98, 0x00, 0x00 /* baserom.dol+0x3d2a14 */
 
-/* 80453BB8 0004 .sdata2    LIT_4377                       @4377                          */
+/* 80453BB8 0004 .sdata2    @4377                          LIT_4377                       */
 .global LIT_4377
 LIT_4377:
 .byte 0x43, 0x60, 0x00, 0x00 /* baserom.dol+0x3d2a18 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2a1c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

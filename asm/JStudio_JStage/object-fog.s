@@ -7,6 +7,7 @@
 /* 8028C574 009C .text      __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog */
 .global __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog
 __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog:
+__ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog:
 /* 8028C574 002894B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028C578 002894B8  7C 08 02 A6 */	mflr r0
 /* 8028C57C 002894BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -47,8 +48,9 @@ __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog:
 /* 8028C608 00289548  38 21 00 20 */	addi r1, r1, 0x20
 /* 8028C60C 0028954C  4E 80 00 20 */	blr 
 
-/* 8028C610 0058 .text      __dt__Q214JStudio_JStage12TAdaptor_fogFv __dt__Q214JStudio_JStage12TAdaptor_fogFv */
+/* 8028C610 0074 .text      __dt__Q214JStudio_JStage12TAdaptor_fogFv __dt__Q214JStudio_JStage12TAdaptor_fogFv */
 .global __dt__Q214JStudio_JStage12TAdaptor_fogFv
+__dt__Q214JStudio_JStage12TAdaptor_fogFv:
 __dt__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C610 00289550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028C614 00289554  7C 08 02 A6 */	mflr r0
@@ -57,7 +59,7 @@ __dt__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C620 00289560  93 C1 00 08 */	stw r30, 8(r1)
 /* 8028C624 00289564  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028C628 00289568  7C 9F 23 78 */	mr r31, r4
-/* 8028C62C 0028956C  41 82 00 3C */	beq func_8028C668
+/* 8028C62C 0028956C  41 82 00 3C */	beq lbl_8028C668
 /* 8028C630 00289570  3C 80 80 3C */	lis r4, __vt__Q214JStudio_JStage12TAdaptor_fog@ha
 /* 8028C634 00289574  38 04 59 D0 */	addi r0, r4, __vt__Q214JStudio_JStage12TAdaptor_fog@l
 /* 8028C638 00289578  90 1E 00 00 */	stw r0, 0(r30)
@@ -69,13 +71,10 @@ __dt__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C650 00289590  38 80 00 00 */	li r4, 0
 /* 8028C654 00289594  4B FF AB 29 */	bl __dt__Q27JStudio12TAdaptor_fogFv
 /* 8028C658 00289598  7F E0 07 35 */	extsh. r0, r31
-/* 8028C65C 0028959C  40 81 00 0C */	ble func_8028C668
+/* 8028C65C 0028959C  40 81 00 0C */	ble lbl_8028C668
 /* 8028C660 002895A0  7F C3 F3 78 */	mr r3, r30
 /* 8028C664 002895A4  48 04 26 D9 */	bl __dl__FPv
-
-/* 8028C668 001C .text      func_8028C668                  func_8028C668                  */
-.global func_8028C668
-func_8028C668:
+lbl_8028C668:
 /* 8028C668 002895A8  7F C3 F3 78 */	mr r3, r30
 /* 8028C66C 002895AC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8028C670 002895B0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -84,46 +83,36 @@ func_8028C668:
 /* 8028C67C 002895BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028C680 002895C0  4E 80 00 20 */	blr 
 
-/* 8028C684 0010 .text      adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv */
+/* 8028C684 0048 .text      adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv */
 .global adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv
+adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv:
 adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C684 002895C4  3C 80 80 43 */	lis r4, saoVVOutput___Q214JStudio_JStage12TAdaptor_fog@ha
 /* 8028C688 002895C8  38 04 13 9C */	addi r0, r4, saoVVOutput___Q214JStudio_JStage12TAdaptor_fog@l
 /* 8028C68C 002895CC  7C 05 03 78 */	mr r5, r0
-/* 8028C690 002895D0  48 00 00 2C */	b func_8028C6BC
-
-/* 8028C694 001C .text      func_8028C694                  func_8028C694                  */
-.global func_8028C694
-func_8028C694:
+/* 8028C690 002895D0  48 00 00 2C */	b lbl_8028C6BC
+lbl_8028C694:
 /* 8028C694 002895D4  80 83 00 08 */	lwz r4, 8(r3)
 /* 8028C698 002895D8  1C 00 00 14 */	mulli r0, r0, 0x14
 /* 8028C69C 002895DC  7C 84 02 14 */	add r4, r4, r0
 /* 8028C6A0 002895E0  28 05 00 00 */	cmplwi r5, 0
-/* 8028C6A4 002895E4  41 82 00 0C */	beq func_8028C6B0
+/* 8028C6A4 002895E4  41 82 00 0C */	beq lbl_8028C6B0
 /* 8028C6A8 002895E8  7C A0 2B 78 */	mr r0, r5
-/* 8028C6AC 002895EC  48 00 00 08 */	b func_8028C6B4
-
-/* 8028C6B0 0004 .text      func_8028C6B0                  func_8028C6B0                  */
-.global func_8028C6B0
-func_8028C6B0:
+/* 8028C6AC 002895EC  48 00 00 08 */	b lbl_8028C6B4
+lbl_8028C6B0:
 /* 8028C6B0 002895F0  38 0D 8C 70 */	addi r0, r13, soOutput_none___Q27JStudio14TVariableValue-_SDA_BASE_
-
-/* 8028C6B4 0008 .text      func_8028C6B4                  func_8028C6B4                  */
-.global func_8028C6B4
-func_8028C6B4:
+lbl_8028C6B4:
 /* 8028C6B4 002895F4  90 04 00 10 */	stw r0, 0x10(r4)
 /* 8028C6B8 002895F8  38 A5 00 20 */	addi r5, r5, 0x20
-
-/* 8028C6BC 0010 .text      func_8028C6BC                  func_8028C6BC                  */
-.global func_8028C6BC
-func_8028C6BC:
+lbl_8028C6BC:
 /* 8028C6BC 002895FC  80 05 00 04 */	lwz r0, 4(r5)
 /* 8028C6C0 00289600  2C 00 FF FF */	cmpwi r0, -1
-/* 8028C6C4 00289604  40 82 FF D0 */	bne func_8028C694
+/* 8028C6C4 00289604  40 82 FF D0 */	bne lbl_8028C694
 /* 8028C6C8 00289608  4E 80 00 20 */	blr 
 
-/* 8028C6CC 0094 .text      adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv */
+/* 8028C6CC 00E8 .text      adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv */
 .global adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv
+adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv:
 adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C6CC 0028960C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8028C6D0 00289610  7C 08 02 A6 */	mflr r0
@@ -161,11 +150,8 @@ adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C750 00289690  3C 60 80 28 */	lis r3, update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued@ha
 /* 8028C754 00289694  3B C3 5E B8 */	addi r30, r3, update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued@l
 /* 8028C758 00289698  3B E0 00 00 */	li r31, 0
-/* 8028C75C 0028969C  48 00 00 34 */	b func_8028C790
-
-/* 8028C760 0030 .text      func_8028C760                  func_8028C760                  */
-.global func_8028C760
-func_8028C760:
+/* 8028C75C 0028969C  48 00 00 34 */	b lbl_8028C790
+lbl_8028C760:
 /* 8028C760 002896A0  7F A3 EB 78 */	mr r3, r29
 /* 8028C764 002896A4  39 9C 00 14 */	addi r12, r28, 0x14
 /* 8028C768 002896A8  48 0D 59 1D */	bl __ptmf_scall
@@ -178,13 +164,10 @@ func_8028C760:
 /* 8028C784 002896C4  93 E3 00 04 */	stw r31, 4(r3)
 /* 8028C788 002896C8  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 8028C78C 002896CC  3B 9C 00 20 */	addi r28, r28, 0x20
-
-/* 8028C790 0024 .text      func_8028C790                  func_8028C790                  */
-.global func_8028C790
-func_8028C790:
+lbl_8028C790:
 /* 8028C790 002896D0  80 1C 00 04 */	lwz r0, 4(r28)
 /* 8028C794 002896D4  2C 00 FF FF */	cmpwi r0, -1
-/* 8028C798 002896D8  40 82 FF C8 */	bne func_8028C760
+/* 8028C798 002896D8  40 82 FF C8 */	bne lbl_8028C760
 /* 8028C79C 002896DC  39 61 00 30 */	addi r11, r1, 0x30
 /* 8028C7A0 002896E0  48 0D 5A 81 */	bl _restgpr_27
 /* 8028C7A4 002896E4  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -194,6 +177,7 @@ func_8028C790:
 
 /* 8028C7B4 0054 .text      adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv */
 .global adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv
+adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv:
 adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv:
 /* 8028C7B4 002896F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028C7B8 002896F8  7C 08 02 A6 */	mflr r0
@@ -219,6 +203,7 @@ adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv:
 
 /* 8028C808 0078 .text      adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl */
 .global adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl
+adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl:
 adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl:
 /* 8028C808 00289748  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8028C80C 0028974C  7C 08 02 A6 */	mflr r0
@@ -254,6 +239,7 @@ adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl:
 /* 8028C880 0024 .text      adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl */
 .global adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl
 adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl:
+adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl:
 /* 8028C880 002897C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028C884 002897C4  7C 08 02 A6 */	mflr r0
 /* 8028C888 002897C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -264,8 +250,9 @@ adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl:
 /* 8028C89C 002897DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028C8A0 002897E0  4E 80 00 20 */	blr 
 
-/* 8028C8A4 021C .text      func_8028C8A4                  __sinit_object-fog_cpp         */
+/* 8028C8A4 021C .text      __sinit_object-fog_cpp         func_8028C8A4                  */
 .global func_8028C8A4
+func_8028C8A4:
 func_8028C8A4:
 /* 8028C8A4 002897E4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8028C8A8 002897E8  7C 08 02 A6 */	mflr r0
@@ -365,9 +352,9 @@ func_8028C8A4:
 /* 8028CA20 00289960  90 E1 00 08 */	stw r7, 8(r1)
 /* 8028CA24 00289964  38 C0 FF FF */	li r6, -1
 /* 8028CA28 00289968  90 C1 00 0C */	stw r6, 0xc(r1)
-/* 8028CA2C 0028996C  3C 60 80 3A */	lis r3, sym_803A0004@ha
+/* 8028CA2C 0028996C  3C 60 80 3A */	lis r3, data_803A0004@ha
 /* 8028CA30 00289970  84 A3 21 80 */	lwzu r5, 0x2180(r3)
-/* 8028CA34 00289974  80 83 00 04 */	lwz r4, sym_803A0004@l(r3)
+/* 8028CA34 00289974  80 83 00 04 */	lwz r4, data_803A0004@l(r3)
 /* 8028CA38 00289978  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 8028CA3C 0028997C  90 81 00 14 */	stw r4, 0x14(r1)
 /* 8028CA40 00289980  80 03 00 08 */	lwz r0, 8(r3)
@@ -403,8 +390,11 @@ func_8028C8A4:
 /* 8028CAB8 002899F8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8028CABC 002899FC  4E 80 00 20 */	blr 
 
-/* 8028CAC0 0044 .text      "__dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv" __dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv */
+/* 8028CAC0 0060 .text      __dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv "__dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv" */
+.global "__dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv"
+"__dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv":
 .global __dt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1Fv
+__dt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1Fv:
 __dt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1Fv:
 /* 8028CAC0 00289A00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028CAC4 00289A04  7C 08 02 A6 */	mflr r0
@@ -413,20 +403,17 @@ __dt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12
 /* 8028CAD0 00289A10  93 C1 00 08 */	stw r30, 8(r1)
 /* 8028CAD4 00289A14  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8028CAD8 00289A18  7C 9F 23 78 */	mr r31, r4
-/* 8028CADC 00289A1C  41 82 00 28 */	beq func_8028CB04
+/* 8028CADC 00289A1C  41 82 00 28 */	beq lbl_8028CB04
 /* 8028CAE0 00289A20  3C 80 80 3C */	lis r4, __vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1@ha
 /* 8028CAE4 00289A24  38 04 5A 10 */	addi r0, r4, __vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1@l
 /* 8028CAE8 00289A28  90 1E 00 00 */	stw r0, 0(r30)
 /* 8028CAEC 00289A2C  38 80 00 00 */	li r4, 0
 /* 8028CAF0 00289A30  4B FF 93 1D */	bl __dt__Q37JStudio14TVariableValue7TOutputFv
 /* 8028CAF4 00289A34  7F E0 07 35 */	extsh. r0, r31
-/* 8028CAF8 00289A38  40 81 00 0C */	ble func_8028CB04
+/* 8028CAF8 00289A38  40 81 00 0C */	ble lbl_8028CB04
 /* 8028CAFC 00289A3C  7F C3 F3 78 */	mr r3, r30
 /* 8028CB00 00289A40  48 04 22 3D */	bl __dl__FPv
-
-/* 8028CB04 001C .text      func_8028CB04                  func_8028CB04                  */
-.global func_8028CB04
-func_8028CB04:
+lbl_8028CB04:
 /* 8028CB04 00289A44  7F C3 F3 78 */	mr r3, r30
 /* 8028CB08 00289A48  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8028CB0C 00289A4C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -435,8 +422,11 @@ func_8028CB04:
 /* 8028CB18 00289A58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028CB1C 00289A5C  4E 80 00 20 */	blr 
 
-/* 8028CB20 0030 .text      "__cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor" __cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor */
+/* 8028CB20 0030 .text      __cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor "__cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor" */
+.global "__cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor"
+"__cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor":
 .global __cl__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1CFfPQ27JStudio8TAdaptor
+__cl__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1CFfPQ27JStudio8TAdaptor:
 __cl__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1CFfPQ27JStudio8TAdaptor:
 /* 8028CB20 00289A60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028CB24 00289A64  7C 08 02 A6 */	mflr r0
@@ -456,26 +446,26 @@ __cl__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803C59A0 0000 .data      sym_803C59A0                   ...data.0                      */
-.global sym_803C59A0
-sym_803C59A0:
+/* 803C59A0 0000 .data      ...data.0                      data_803C59A0                  */
+.global data_803C59A0
+data_803C59A0:
 
-/* 803C59A0 000C .data      object_fog__LIT_844            @844                           */
+/* 803C59A0 000C .data      @844                           object_fog__LIT_844            */
 .global object_fog__LIT_844
 object_fog__LIT_844:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x48, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c29a0 */
 
-/* 803C59AC 000C .data      object_fog__LIT_845            @845                           */
+/* 803C59AC 000C .data      @845                           object_fog__LIT_845            */
 .global object_fog__LIT_845
 object_fog__LIT_845:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x44, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c29ac */
 
-/* 803C59B8 000C .data      object_fog__LIT_849            @849                           */
+/* 803C59B8 000C .data      @849                           object_fog__LIT_849            */
 .global object_fog__LIT_849
 object_fog__LIT_849:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c29b8 */
 
-/* 803C59C4 000C .data      object_fog__LIT_850            @850                           */
+/* 803C59C4 000C .data      @850                           object_fog__LIT_850            */
 .global object_fog__LIT_850
 object_fog__LIT_850:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x4c, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c29c4 */
@@ -483,39 +473,48 @@ object_fog__LIT_850:
 /* 803C59D0 0020 .data      __vt__Q214JStudio_JStage12TAdaptor_fog __vt__Q214JStudio_JStage12TAdaptor_fog */
 .global __vt__Q214JStudio_JStage12TAdaptor_fog
 __vt__Q214JStudio_JStage12TAdaptor_fog:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0xc6, 0x10, 0x80, 0x28, 0xc6, 0x84 /* baserom.dol+0x3c29d0 */
-.byte 0x80, 0x28, 0xc6, 0xcc, 0x80, 0x28, 0xc7, 0xb4, 0x80, 0x28, 0xc8, 0x08, 0x80, 0x28, 0xc8, 0x80 /* baserom.dol+0x3c29e0 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c29f0 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c2a00 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__Q214JStudio_JStage12TAdaptor_fogFv
+.4byte adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv
+.4byte adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv
+.4byte adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv
+.4byte adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl
+.4byte adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 803C5A10 0010 .data      "__vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>" __vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog> */
-.global __vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1
-__vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1:
+/* 803C5A10 0010 .data      __vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog> "__vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>" */
 .global "__vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>"
 "__vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>":
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x28, 0xcb, 0x20, 0x80, 0x28, 0xca, 0xc0 /* baserom.dol+0x3c2a10 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c2a20 */
+.global __vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1
+__vt__Q214JStudio_JStage77TVariableValueOutput_object__SUB_0Q214JStudio_JStage12TAdaptor_fog_SUB_4Q26JStage4TFog_SUB_1:
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte "__cl__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>CFfPQ27JStudio8TAdaptor"
+.4byte "__dt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog>Fv"
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80431378 0000 .bss       sym_80431378                   ...bss.0                       */
-.global sym_80431378
-sym_80431378:
+/* 80431378 0000 .bss       ...bss.0                       data_80431378                  */
+.global data_80431378
+data_80431378:
 
-/* 80431378 000C .bss       object_fog__LIT_848            @848                           */
+/* 80431378 000C .bss       @848                           object_fog__LIT_848            */
 .global object_fog__LIT_848
 object_fog__LIT_848:
 .skip 0xc
 
-/* 80431384 000C .bss       object_fog__LIT_853            @853                           */
+/* 80431384 000C .bss       @853                           object_fog__LIT_853            */
 .global object_fog__LIT_853
 object_fog__LIT_853:
 .skip 0xc
 
-/* 80431390 000C .bss       object_fog__LIT_854            @854                           */
+/* 80431390 000C .bss       @854                           object_fog__LIT_854            */
 .global object_fog__LIT_854
 object_fog__LIT_854:
 .skip 0xc

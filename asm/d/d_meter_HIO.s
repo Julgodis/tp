@@ -7,6 +7,7 @@
 /* 801FE330 0018 .text      __ct__16dMeter_menuHIO_cFv     __ct__16dMeter_menuHIO_cFv     */
 .global __ct__16dMeter_menuHIO_cFv
 __ct__16dMeter_menuHIO_cFv:
+__ct__16dMeter_menuHIO_cFv:
 /* 801FE330 001FB270  3C 80 80 3C */	lis r4, __vt__16dMeter_menuHIO_c@ha
 /* 801FE334 001FB274  38 04 F1 9C */	addi r0, r4, __vt__16dMeter_menuHIO_c@l
 /* 801FE338 001FB278  90 03 00 00 */	stw r0, 0(r3)
@@ -16,6 +17,7 @@ __ct__16dMeter_menuHIO_cFv:
 
 /* 801FE348 01A4 .text      __ct__23dMeter_drawCollectHIO_cFv __ct__23dMeter_drawCollectHIO_cFv */
 .global __ct__23dMeter_drawCollectHIO_cFv
+__ct__23dMeter_drawCollectHIO_cFv:
 __ct__23dMeter_drawCollectHIO_cFv:
 /* 801FE348 001FB288  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FE34C 001FB28C  7C 08 02 A6 */	mflr r0
@@ -123,8 +125,9 @@ __ct__23dMeter_drawCollectHIO_cFv:
 /* 801FE4E4 001FB424  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FE4E8 001FB428  4E 80 00 20 */	blr 
 
-/* 801FE4EC 0094 .text      __ct__22dMeter_drawOptionHIO_cFv __ct__22dMeter_drawOptionHIO_cFv */
+/* 801FE4EC 00E0 .text      __ct__22dMeter_drawOptionHIO_cFv __ct__22dMeter_drawOptionHIO_cFv */
 .global __ct__22dMeter_drawOptionHIO_cFv
+__ct__22dMeter_drawOptionHIO_cFv:
 __ct__22dMeter_drawOptionHIO_cFv:
 /* 801FE4EC 001FB42C  3C 80 80 3C */	lis r4, __vt__22dMeter_drawOptionHIO_c@ha
 /* 801FE4F0 001FB430  38 04 F1 84 */	addi r0, r4, __vt__22dMeter_drawOptionHIO_c@l
@@ -163,15 +166,12 @@ __ct__22dMeter_drawOptionHIO_cFv:
 /* 801FE574 001FB4B4  D0 03 00 20 */	stfs f0, 0x20(r3)
 /* 801FE578 001FB4B8  38 00 00 04 */	li r0, 4
 /* 801FE57C 001FB4BC  7C 09 03 A6 */	mtctr r0
-
-/* 801FE580 004C .text      func_801FE580                  func_801FE580                  */
-.global func_801FE580
-func_801FE580:
+lbl_801FE580:
 /* 801FE580 001FB4C0  7C A3 22 14 */	add r5, r3, r4
 /* 801FE584 001FB4C4  D0 25 00 24 */	stfs f1, 0x24(r5)
 /* 801FE588 001FB4C8  D0 25 00 3C */	stfs f1, 0x3c(r5)
 /* 801FE58C 001FB4CC  38 84 00 04 */	addi r4, r4, 4
-/* 801FE590 001FB4D0  42 00 FF F0 */	bdnz func_801FE580
+/* 801FE590 001FB4D0  42 00 FF F0 */	bdnz lbl_801FE580
 /* 801FE594 001FB4D4  38 00 00 0A */	li r0, 0xa
 /* 801FE598 001FB4D8  B0 03 00 68 */	sth r0, 0x68(r3)
 /* 801FE59C 001FB4DC  B0 03 00 6A */	sth r0, 0x6a(r3)
@@ -187,8 +187,9 @@ func_801FE580:
 /* 801FE5C4 001FB504  D0 03 00 64 */	stfs f0, 0x64(r3)
 /* 801FE5C8 001FB508  4E 80 00 20 */	blr 
 
-/* 801FE5CC 0040 .text      __ct__22dMeter_drawLetterHIO_cFv __ct__22dMeter_drawLetterHIO_cFv */
+/* 801FE5CC 0164 .text      __ct__22dMeter_drawLetterHIO_cFv __ct__22dMeter_drawLetterHIO_cFv */
 .global __ct__22dMeter_drawLetterHIO_cFv
+__ct__22dMeter_drawLetterHIO_cFv:
 __ct__22dMeter_drawLetterHIO_cFv:
 /* 801FE5CC 001FB50C  3C 80 80 3C */	lis r4, __vt__22dMeter_drawLetterHIO_c@ha
 /* 801FE5D0 001FB510  38 04 F1 78 */	addi r0, r4, __vt__22dMeter_drawLetterHIO_c@l
@@ -206,15 +207,12 @@ __ct__22dMeter_drawLetterHIO_cFv:
 /* 801FE600 001FB540  38 A0 00 0A */	li r5, 0xa
 /* 801FE604 001FB544  38 00 00 02 */	li r0, 2
 /* 801FE608 001FB548  7C 09 03 A6 */	mtctr r0
-
-/* 801FE60C 0124 .text      func_801FE60C                  func_801FE60C                  */
-.global func_801FE60C
-func_801FE60C:
+lbl_801FE60C:
 /* 801FE60C 001FB54C  7C C3 22 14 */	add r6, r3, r4
 /* 801FE610 001FB550  B0 A6 00 30 */	sth r5, 0x30(r6)
 /* 801FE614 001FB554  B0 A6 00 34 */	sth r5, 0x34(r6)
 /* 801FE618 001FB558  38 84 00 02 */	addi r4, r4, 2
-/* 801FE61C 001FB55C  42 00 FF F0 */	bdnz func_801FE60C
+/* 801FE61C 001FB55C  42 00 FF F0 */	bdnz lbl_801FE60C
 /* 801FE620 001FB560  38 E0 00 00 */	li r7, 0
 /* 801FE624 001FB564  B0 E3 00 38 */	sth r7, 0x38(r3)
 /* 801FE628 001FB568  98 E3 00 5F */	stb r7, 0x5f(r3)
@@ -284,16 +282,17 @@ func_801FE60C:
 /* 801FE728 001FB668  98 C3 00 5B */	stb r6, 0x5b(r3)
 /* 801FE72C 001FB66C  4E 80 00 20 */	blr 
 
-/* 801FE730 0098 .text      __ct__23dMeter_drawFishingHIO_cFv __ct__23dMeter_drawFishingHIO_cFv */
+/* 801FE730 01AC .text      __ct__23dMeter_drawFishingHIO_cFv __ct__23dMeter_drawFishingHIO_cFv */
 .global __ct__23dMeter_drawFishingHIO_cFv
+__ct__23dMeter_drawFishingHIO_cFv:
 __ct__23dMeter_drawFishingHIO_cFv:
 /* 801FE730 001FB670  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801FE734 001FB674  7C 08 02 A6 */	mflr r0
 /* 801FE738 001FB678  90 01 00 44 */	stw r0, 0x44(r1)
 /* 801FE73C 001FB67C  39 61 00 40 */	addi r11, r1, 0x40
 /* 801FE740 001FB680  48 16 3A 71 */	bl _savegpr_18
-/* 801FE744 001FB684  3C 80 80 39 */	lis r4, d_d_meter_HIO__sym_80397E50@ha
-/* 801FE748 001FB688  39 04 7E 50 */	addi r8, r4, d_d_meter_HIO__sym_80397E50@l
+/* 801FE744 001FB684  3C 80 80 39 */	lis r4, d_d_meter_HIO__data_80397E50@ha
+/* 801FE748 001FB688  39 04 7E 50 */	addi r8, r4, d_d_meter_HIO__data_80397E50@l
 /* 801FE74C 001FB68C  3C 80 80 3C */	lis r4, __vt__23dMeter_drawFishingHIO_c@ha
 /* 801FE750 001FB690  38 04 F1 6C */	addi r0, r4, __vt__23dMeter_drawFishingHIO_c@l
 /* 801FE754 001FB694  90 03 00 00 */	stw r0, 0(r3)
@@ -325,10 +324,7 @@ __ct__23dMeter_drawFishingHIO_cFv:
 /* 801FE7BC 001FB6FC  39 08 01 E0 */	addi r8, r8, 0x1e0
 /* 801FE7C0 001FB700  38 00 00 06 */	li r0, 6
 /* 801FE7C4 001FB704  7C 09 03 A6 */	mtctr r0
-
-/* 801FE7C8 0114 .text      func_801FE7C8                  func_801FE7C8                  */
-.global func_801FE7C8
-func_801FE7C8:
+lbl_801FE7C8:
 /* 801FE7C8 001FB708  3A 60 00 00 */	li r19, 0
 /* 801FE7CC 001FB70C  38 12 02 20 */	addi r0, r18, 0x220
 /* 801FE7D0 001FB710  7E 63 03 2E */	sthx r19, r3, r0
@@ -378,7 +374,7 @@ func_801FE7C8:
 /* 801FE880 001FB7C0  38 C6 00 01 */	addi r6, r6, 1
 /* 801FE884 001FB7C4  38 E7 00 04 */	addi r7, r7, 4
 /* 801FE888 001FB7C8  3A 52 00 02 */	addi r18, r18, 2
-/* 801FE88C 001FB7CC  42 00 FF 3C */	bdnz func_801FE7C8
+/* 801FE88C 001FB7CC  42 00 FF 3C */	bdnz lbl_801FE7C8
 /* 801FE890 001FB7D0  C0 22 AB 38 */	lfs f1, d_d_meter_HIO__LIT_3902-_SDA2_BASE_(r2)
 /* 801FE894 001FB7D4  D0 23 02 00 */	stfs f1, 0x200(r3)
 /* 801FE898 001FB7D8  C0 02 AB 3C */	lfs f0, d_d_meter_HIO__LIT_3903-_SDA2_BASE_(r2)
@@ -401,6 +397,7 @@ func_801FE7C8:
 
 /* 801FE8DC 0078 .text      __ct__22dMeter_drawInsectHIO_cFv __ct__22dMeter_drawInsectHIO_cFv */
 .global __ct__22dMeter_drawInsectHIO_cFv
+__ct__22dMeter_drawInsectHIO_cFv:
 __ct__22dMeter_drawInsectHIO_cFv:
 /* 801FE8DC 001FB81C  3C 80 80 3C */	lis r4, __vt__22dMeter_drawInsectHIO_c@ha
 /* 801FE8E0 001FB820  38 04 F1 60 */	addi r0, r4, __vt__22dMeter_drawInsectHIO_c@l
@@ -436,6 +433,7 @@ __ct__22dMeter_drawInsectHIO_cFv:
 /* 801FE954 003C .text      __ct__27dMeter_drawCalibrationHIO_cFv __ct__27dMeter_drawCalibrationHIO_cFv */
 .global __ct__27dMeter_drawCalibrationHIO_cFv
 __ct__27dMeter_drawCalibrationHIO_cFv:
+__ct__27dMeter_drawCalibrationHIO_cFv:
 /* 801FE954 001FB894  3C 80 80 3C */	lis r4, __vt__27dMeter_drawCalibrationHIO_c@ha
 /* 801FE958 001FB898  38 04 F1 54 */	addi r0, r4, __vt__27dMeter_drawCalibrationHIO_c@l
 /* 801FE95C 001FB89C  90 03 00 00 */	stw r0, 0(r3)
@@ -452,8 +450,9 @@ __ct__27dMeter_drawCalibrationHIO_cFv:
 /* 801FE988 001FB8C8  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 801FE98C 001FB8CC  4E 80 00 20 */	blr 
 
-/* 801FE990 0040 .text      __ct__21dMeter_drawSkillHIO_cFv __ct__21dMeter_drawSkillHIO_cFv */
+/* 801FE990 0160 .text      __ct__21dMeter_drawSkillHIO_cFv __ct__21dMeter_drawSkillHIO_cFv */
 .global __ct__21dMeter_drawSkillHIO_cFv
+__ct__21dMeter_drawSkillHIO_cFv:
 __ct__21dMeter_drawSkillHIO_cFv:
 /* 801FE990 001FB8D0  3C 80 80 3C */	lis r4, __vt__21dMeter_drawSkillHIO_c@ha
 /* 801FE994 001FB8D4  38 04 F1 48 */	addi r0, r4, __vt__21dMeter_drawSkillHIO_c@l
@@ -471,15 +470,12 @@ __ct__21dMeter_drawSkillHIO_cFv:
 /* 801FE9C4 001FB904  38 A0 00 0A */	li r5, 0xa
 /* 801FE9C8 001FB908  38 00 00 02 */	li r0, 2
 /* 801FE9CC 001FB90C  7C 09 03 A6 */	mtctr r0
-
-/* 801FE9D0 0120 .text      func_801FE9D0                  func_801FE9D0                  */
-.global func_801FE9D0
-func_801FE9D0:
+lbl_801FE9D0:
 /* 801FE9D0 001FB910  7C C3 22 14 */	add r6, r3, r4
 /* 801FE9D4 001FB914  B0 A6 00 30 */	sth r5, 0x30(r6)
 /* 801FE9D8 001FB918  B0 A6 00 34 */	sth r5, 0x34(r6)
 /* 801FE9DC 001FB91C  38 84 00 02 */	addi r4, r4, 2
-/* 801FE9E0 001FB920  42 00 FF F0 */	bdnz func_801FE9D0
+/* 801FE9E0 001FB920  42 00 FF F0 */	bdnz lbl_801FE9D0
 /* 801FE9E4 001FB924  38 E0 00 00 */	li r7, 0
 /* 801FE9E8 001FB928  98 E3 00 5B */	stb r7, 0x5b(r3)
 /* 801FE9EC 001FB92C  38 C0 00 FF */	li r6, 0xff
@@ -548,8 +544,9 @@ func_801FE9D0:
 /* 801FEAE8 001FBA28  D0 03 00 24 */	stfs f0, 0x24(r3)
 /* 801FEAEC 001FBA2C  4E 80 00 20 */	blr 
 
-/* 801FEAF0 0224 .text      __ct__25dMeter_drawEmpButtonHIO_cFv __ct__25dMeter_drawEmpButtonHIO_cFv */
+/* 801FEAF0 0500 .text      __ct__25dMeter_drawEmpButtonHIO_cFv __ct__25dMeter_drawEmpButtonHIO_cFv */
 .global __ct__25dMeter_drawEmpButtonHIO_cFv
+__ct__25dMeter_drawEmpButtonHIO_cFv:
 __ct__25dMeter_drawEmpButtonHIO_cFv:
 /* 801FEAF0 001FBA30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FEAF4 001FBA34  7C 08 02 A6 */	mflr r0
@@ -688,12 +685,9 @@ __ct__25dMeter_drawEmpButtonHIO_cFv:
 /* 801FED08 001FBC48  B0 1F 02 40 */	sth r0, 0x240(r31)
 /* 801FED0C 001FBC4C  38 00 00 11 */	li r0, 0x11
 /* 801FED10 001FBC50  7C 09 03 A6 */	mtctr r0
-
-/* 801FED14 01A0 .text      func_801FED14                  func_801FED14                  */
-.global func_801FED14
-func_801FED14:
+lbl_801FED14:
 /* 801FED14 001FBC54  98 DF 02 48 */	stb r6, 0x248(r31)
-/* 801FED18 001FBC58  42 00 FF FC */	bdnz func_801FED14
+/* 801FED18 001FBC58  42 00 FF FC */	bdnz lbl_801FED14
 /* 801FED1C 001FBC5C  C0 02 AB 84 */	lfs f0, d_d_meter_HIO__LIT_4033-_SDA2_BASE_(r2)
 /* 801FED20 001FBC60  D0 1F 02 44 */	stfs f0, 0x244(r31)
 /* 801FED24 001FBC64  C0 42 AA F8 */	lfs f2, d_d_meter_HIO__LIT_3793-_SDA2_BASE_(r2)
@@ -796,14 +790,11 @@ func_801FED14:
 /* 801FEEA8 001FBDE8  D0 5F 01 5C */	stfs f2, 0x15c(r31)
 /* 801FEEAC 001FBDEC  38 00 00 03 */	li r0, 3
 /* 801FEEB0 001FBDF0  7C 09 03 A6 */	mtctr r0
-
-/* 801FEEB4 005C .text      func_801FEEB4                  func_801FEEB4                  */
-.global func_801FEEB4
-func_801FEEB4:
+lbl_801FEEB4:
 /* 801FEEB4 001FBDF4  38 03 01 6C */	addi r0, r3, 0x16c
 /* 801FEEB8 001FBDF8  7C 5F 05 2E */	stfsx f2, r31, r0
 /* 801FEEBC 001FBDFC  38 63 00 04 */	addi r3, r3, 4
-/* 801FEEC0 001FBE00  42 00 FF F4 */	bdnz func_801FEEB4
+/* 801FEEC0 001FBE00  42 00 FF F4 */	bdnz lbl_801FEEB4
 /* 801FEEC4 001FBE04  C0 22 AA F8 */	lfs f1, d_d_meter_HIO__LIT_3793-_SDA2_BASE_(r2)
 /* 801FEEC8 001FBE08  D0 3F 01 60 */	stfs f1, 0x160(r31)
 /* 801FEECC 001FBE0C  C0 02 AB 9C */	lfs f0, d_d_meter_HIO__LIT_4039-_SDA2_BASE_(r2)
@@ -823,15 +814,12 @@ func_801FEEB4:
 /* 801FEF04 001FBE44  C0 02 AA E0 */	lfs f0, d_d_meter_HIO__LIT_3787-_SDA2_BASE_(r2)
 /* 801FEF08 001FBE48  38 00 00 03 */	li r0, 3
 /* 801FEF0C 001FBE4C  7C 09 03 A6 */	mtctr r0
-
-/* 801FEF10 00E0 .text      func_801FEF10                  func_801FEF10                  */
-.global func_801FEF10
-func_801FEF10:
+lbl_801FEF10:
 /* 801FEF10 001FBE50  7C 9F 1A 14 */	add r4, r31, r3
 /* 801FEF14 001FBE54  D0 24 01 88 */	stfs f1, 0x188(r4)
 /* 801FEF18 001FBE58  D0 04 01 AC */	stfs f0, 0x1ac(r4)
 /* 801FEF1C 001FBE5C  38 63 00 04 */	addi r3, r3, 4
-/* 801FEF20 001FBE60  42 00 FF F0 */	bdnz func_801FEF10
+/* 801FEF20 001FBE60  42 00 FF F0 */	bdnz lbl_801FEF10
 /* 801FEF24 001FBE64  C0 02 AB A4 */	lfs f0, d_d_meter_HIO__LIT_4041-_SDA2_BASE_(r2)
 /* 801FEF28 001FBE68  D0 1F 01 A0 */	stfs f0, 0x1a0(r31)
 /* 801FEF2C 001FBE6C  C0 42 AB A8 */	lfs f2, d_d_meter_HIO__LIT_4042-_SDA2_BASE_(r2)
@@ -886,6 +874,7 @@ func_801FEF10:
 
 /* 801FEFF0 032C .text      __ct__24dMeter_drawMiniGameHIO_cFv __ct__24dMeter_drawMiniGameHIO_cFv */
 .global __ct__24dMeter_drawMiniGameHIO_cFv
+__ct__24dMeter_drawMiniGameHIO_cFv:
 __ct__24dMeter_drawMiniGameHIO_cFv:
 /* 801FEFF0 001FBF30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FEFF4 001FBF34  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -1094,6 +1083,7 @@ __ct__24dMeter_drawMiniGameHIO_cFv:
 /* 801FF31C 029C .text      __ct__25dMeter_drawLightDropHIO_cFv __ct__25dMeter_drawLightDropHIO_cFv */
 .global __ct__25dMeter_drawLightDropHIO_cFv
 __ct__25dMeter_drawLightDropHIO_cFv:
+__ct__25dMeter_drawLightDropHIO_cFv:
 /* 801FF31C 001FC25C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF320 001FC260  7C 08 02 A6 */	mflr r0
 /* 801FF324 001FC264  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1262,8 +1252,9 @@ __ct__25dMeter_drawLightDropHIO_cFv:
 /* 801FF5B0 001FC4F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FF5B4 001FC4F4  4E 80 00 20 */	blr 
 
-/* 801FF5B8 0438 .text      __ct__16dMeter_drawHIO_cFv     __ct__16dMeter_drawHIO_cFv     */
+/* 801FF5B8 0BF4 .text      __ct__16dMeter_drawHIO_cFv     __ct__16dMeter_drawHIO_cFv     */
 .global __ct__16dMeter_drawHIO_cFv
+__ct__16dMeter_drawHIO_cFv:
 __ct__16dMeter_drawHIO_cFv:
 /* 801FF5B8 001FC4F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF5BC 001FC4FC  7C 08 02 A6 */	mflr r0
@@ -1535,14 +1526,11 @@ __ct__16dMeter_drawHIO_cFv:
 /* 801FF9E4 001FC924  38 60 00 00 */	li r3, 0
 /* 801FF9E8 001FC928  38 00 00 03 */	li r0, 3
 /* 801FF9EC 001FC92C  7C 09 03 A6 */	mtctr r0
-
-/* 801FF9F0 0030 .text      func_801FF9F0                  func_801FF9F0                  */
-.global func_801FF9F0
-func_801FF9F0:
+lbl_801FF9F0:
 /* 801FF9F0 001FC930  38 03 01 E4 */	addi r0, r3, 0x1e4
 /* 801FF9F4 001FC934  7C BF 05 2E */	stfsx f5, r31, r0
 /* 801FF9F8 001FC938  38 63 00 04 */	addi r3, r3, 4
-/* 801FF9FC 001FC93C  42 00 FF F4 */	bdnz func_801FF9F0
+/* 801FF9FC 001FC93C  42 00 FF F4 */	bdnz lbl_801FF9F0
 /* 801FFA00 001FC940  C0 22 AA F8 */	lfs f1, d_d_meter_HIO__LIT_3793-_SDA2_BASE_(r2)
 /* 801FFA04 001FC944  D0 3F 01 D8 */	stfs f1, 0x1d8(r31)
 /* 801FFA08 001FC948  D0 3F 01 DC */	stfs f1, 0x1dc(r31)
@@ -1551,10 +1539,7 @@ func_801FF9F0:
 /* 801FFA14 001FC954  38 60 00 00 */	li r3, 0
 /* 801FFA18 001FC958  38 00 00 02 */	li r0, 2
 /* 801FFA1C 001FC95C  7C 09 03 A6 */	mtctr r0
-
-/* 801FFA20 02C0 .text      func_801FFA20                  func_801FFA20                  */
-.global func_801FFA20
-func_801FFA20:
+lbl_801FFA20:
 /* 801FFA20 001FC960  38 03 02 20 */	addi r0, r3, 0x220
 /* 801FFA24 001FC964  7C 1F 05 2E */	stfsx f0, r31, r0
 /* 801FFA28 001FC968  38 03 02 28 */	addi r0, r3, 0x228
@@ -1562,7 +1547,7 @@ func_801FFA20:
 /* 801FFA30 001FC970  38 03 02 30 */	addi r0, r3, 0x230
 /* 801FFA34 001FC974  7C 3F 05 2E */	stfsx f1, r31, r0
 /* 801FFA38 001FC978  38 63 00 04 */	addi r3, r3, 4
-/* 801FFA3C 001FC97C  42 00 FF E4 */	bdnz func_801FFA20
+/* 801FFA3C 001FC97C  42 00 FF E4 */	bdnz lbl_801FFA20
 /* 801FFA40 001FC980  C0 42 AB B8 */	lfs f2, d_d_meter_HIO__LIT_4074-_SDA2_BASE_(r2)
 /* 801FFA44 001FC984  D0 5F 02 38 */	stfs f2, 0x238(r31)
 /* 801FFA48 001FC988  D0 5F 02 3C */	stfs f2, 0x23c(r31)
@@ -1731,14 +1716,11 @@ func_801FFA20:
 /* 801FFCD4 001FCC14  38 80 00 00 */	li r4, 0
 /* 801FFCD8 001FCC18  38 00 00 04 */	li r0, 4
 /* 801FFCDC 001FCC1C  7C 09 03 A6 */	mtctr r0
-
-/* 801FFCE0 0454 .text      func_801FFCE0                  func_801FFCE0                  */
-.global func_801FFCE0
-func_801FFCE0:
+lbl_801FFCE0:
 /* 801FFCE0 001FCC20  38 04 04 26 */	addi r0, r4, 0x426
 /* 801FFCE4 001FCC24  7C 7F 01 AE */	stbx r3, r31, r0
 /* 801FFCE8 001FCC28  38 84 00 01 */	addi r4, r4, 1
-/* 801FFCEC 001FCC2C  42 00 FF F4 */	bdnz func_801FFCE0
+/* 801FFCEC 001FCC2C  42 00 FF F4 */	bdnz lbl_801FFCE0
 /* 801FFCF0 001FCC30  38 00 00 06 */	li r0, 6
 /* 801FFCF4 001FCC34  98 1F 04 2D */	stb r0, 0x42d(r31)
 /* 801FFCF8 001FCC38  38 E0 00 FF */	li r7, 0xff
@@ -2012,10 +1994,7 @@ func_801FFCE0:
 /* 80200128 001FD068  38 60 00 00 */	li r3, 0
 /* 8020012C 001FD06C  38 00 00 05 */	li r0, 5
 /* 80200130 001FD070  7C 09 03 A6 */	mtctr r0
-
-/* 80200134 0078 .text      func_80200134                  func_80200134                  */
-.global func_80200134
-func_80200134:
+lbl_80200134:
 /* 80200134 001FD074  38 03 05 6C */	addi r0, r3, 0x56c
 /* 80200138 001FD078  7C 5F 05 2E */	stfsx f2, r31, r0
 /* 8020013C 001FD07C  38 03 05 80 */	addi r0, r3, 0x580
@@ -2029,7 +2008,7 @@ func_80200134:
 /* 8020015C 001FD09C  38 03 05 D0 */	addi r0, r3, 0x5d0
 /* 80200160 001FD0A0  7C 3F 05 2E */	stfsx f1, r31, r0
 /* 80200164 001FD0A4  38 63 00 04 */	addi r3, r3, 4
-/* 80200168 001FD0A8  42 00 FF CC */	bdnz func_80200134
+/* 80200168 001FD0A8  42 00 FF CC */	bdnz lbl_80200134
 /* 8020016C 001FD0AC  C0 22 AA E0 */	lfs f1, d_d_meter_HIO__LIT_3787-_SDA2_BASE_(r2)
 /* 80200170 001FD0B0  D0 3F 05 E4 */	stfs f1, 0x5e4(r31)
 /* 80200174 001FD0B4  C0 02 AA F8 */	lfs f0, d_d_meter_HIO__LIT_3793-_SDA2_BASE_(r2)
@@ -2047,8 +2026,9 @@ func_80200134:
 /* 802001A4 001FD0E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802001A8 001FD0E8  4E 80 00 20 */	blr 
 
-/* 802001AC 018C .text      __ct__16dMeter_ringHIO_cFv     __ct__16dMeter_ringHIO_cFv     */
+/* 802001AC 0308 .text      __ct__16dMeter_ringHIO_cFv     __ct__16dMeter_ringHIO_cFv     */
 .global __ct__16dMeter_ringHIO_cFv
+__ct__16dMeter_ringHIO_cFv:
 __ct__16dMeter_ringHIO_cFv:
 /* 802001AC 001FD0EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802001B0 001FD0F0  7C 08 02 A6 */	mflr r0
@@ -2149,16 +2129,13 @@ __ct__16dMeter_ringHIO_cFv:
 /* 8020032C 001FD26C  C0 02 AC 34 */	lfs f0, d_d_meter_HIO__LIT_4261-_SDA2_BASE_(r2)
 /* 80200330 001FD270  38 00 00 05 */	li r0, 5
 /* 80200334 001FD274  7C 09 03 A6 */	mtctr r0
-
-/* 80200338 017C .text      func_80200338                  func_80200338                  */
-.global func_80200338
-func_80200338:
+lbl_80200338:
 /* 80200338 001FD278  7C 9F 1A 14 */	add r4, r31, r3
 /* 8020033C 001FD27C  D0 44 00 54 */	stfs f2, 0x54(r4)
 /* 80200340 001FD280  D0 04 00 7C */	stfs f0, 0x7c(r4)
 /* 80200344 001FD284  D0 24 00 A4 */	stfs f1, 0xa4(r4)
 /* 80200348 001FD288  38 63 00 04 */	addi r3, r3, 4
-/* 8020034C 001FD28C  42 00 FF EC */	bdnz func_80200338
+/* 8020034C 001FD28C  42 00 FF EC */	bdnz lbl_80200338
 /* 80200350 001FD290  C0 02 AC 94 */	lfs f0, d_d_meter_HIO__LIT_4285-_SDA2_BASE_(r2)
 /* 80200354 001FD294  D0 1F 00 E4 */	stfs f0, 0xe4(r31)
 /* 80200358 001FD298  C0 02 AB 78 */	lfs f0, d_d_meter_HIO__LIT_4030-_SDA2_BASE_(r2)
@@ -2249,8 +2226,9 @@ func_80200338:
 /* 802004AC 001FD3EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802004B0 001FD3F0  4E 80 00 20 */	blr 
 
-/* 802004B4 01C4 .text      __ct__19dMeter_mapIconHIO_cFv  __ct__19dMeter_mapIconHIO_cFv  */
+/* 802004B4 0214 .text      __ct__19dMeter_mapIconHIO_cFv  __ct__19dMeter_mapIconHIO_cFv  */
 .global __ct__19dMeter_mapIconHIO_cFv
+__ct__19dMeter_mapIconHIO_cFv:
 __ct__19dMeter_mapIconHIO_cFv:
 /* 802004B4 001FD3F4  3C 80 80 3C */	lis r4, __vt__19dMeter_mapIconHIO_c@ha
 /* 802004B8 001FD3F8  38 04 F1 00 */	addi r0, r4, __vt__19dMeter_mapIconHIO_c@l
@@ -2365,14 +2343,11 @@ __ct__19dMeter_mapIconHIO_cFv:
 /* 8020066C 001FD5AC  38 80 00 01 */	li r4, 1
 /* 80200670 001FD5B0  38 00 00 16 */	li r0, 0x16
 /* 80200674 001FD5B4  7C 09 03 A6 */	mtctr r0
-
-/* 80200678 0050 .text      func_80200678                  func_80200678                  */
-.global func_80200678
-func_80200678:
+lbl_80200678:
 /* 80200678 001FD5B8  38 05 01 79 */	addi r0, r5, 0x179
 /* 8020067C 001FD5BC  7C 83 01 AE */	stbx r4, r3, r0
 /* 80200680 001FD5C0  38 A5 00 01 */	addi r5, r5, 1
-/* 80200684 001FD5C4  42 00 FF F4 */	bdnz func_80200678
+/* 80200684 001FD5C4  42 00 FF F4 */	bdnz lbl_80200678
 /* 80200688 001FD5C8  C0 02 AB AC */	lfs f0, d_d_meter_HIO__LIT_4071-_SDA2_BASE_(r2)
 /* 8020068C 001FD5CC  D0 03 01 60 */	stfs f0, 0x160(r3)
 /* 80200690 001FD5D0  C0 02 AA E4 */	lfs f0, d_d_meter_HIO__LIT_3788-_SDA2_BASE_(r2)
@@ -2390,8 +2365,9 @@ func_80200678:
 /* 802006C0 001FD600  B0 03 01 70 */	sth r0, 0x170(r3)
 /* 802006C4 001FD604  4E 80 00 20 */	blr 
 
-/* 802006C8 0120 .text      __ct__16dMeter_fmapHIO_cFv     __ct__16dMeter_fmapHIO_cFv     */
+/* 802006C8 0504 .text      __ct__16dMeter_fmapHIO_cFv     __ct__16dMeter_fmapHIO_cFv     */
 .global __ct__16dMeter_fmapHIO_cFv
+__ct__16dMeter_fmapHIO_cFv:
 __ct__16dMeter_fmapHIO_cFv:
 /* 802006C8 001FD608  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802006CC 001FD60C  7C 08 02 A6 */	mflr r0
@@ -2465,10 +2441,7 @@ __ct__16dMeter_fmapHIO_cFv:
 /* 802007DC 001FD71C  C0 02 AD 00 */	lfs f0, d_d_meter_HIO__LIT_4419-_SDA2_BASE_(r2)
 /* 802007E0 001FD720  38 00 00 08 */	li r0, 8
 /* 802007E4 001FD724  7C 09 03 A6 */	mtctr r0
-
-/* 802007E8 03BC .text      func_802007E8                  func_802007E8                  */
-.global func_802007E8
-func_802007E8:
+lbl_802007E8:
 /* 802007E8 001FD728  7C 9F 1A 14 */	add r4, r31, r3
 /* 802007EC 001FD72C  D0 44 01 6C */	stfs f2, 0x16c(r4)
 /* 802007F0 001FD730  D0 44 01 8C */	stfs f2, 0x18c(r4)
@@ -2478,7 +2451,7 @@ func_802007E8:
 /* 80200800 001FD740  D0 04 02 0C */	stfs f0, 0x20c(r4)
 /* 80200804 001FD744  D0 04 02 2C */	stfs f0, 0x22c(r4)
 /* 80200808 001FD748  38 63 00 04 */	addi r3, r3, 4
-/* 8020080C 001FD74C  42 00 FF DC */	bdnz func_802007E8
+/* 8020080C 001FD74C  42 00 FF DC */	bdnz lbl_802007E8
 /* 80200810 001FD750  39 40 00 00 */	li r10, 0
 /* 80200814 001FD754  99 5F 03 06 */	stb r10, 0x306(r31)
 /* 80200818 001FD758  99 5F 03 07 */	stb r10, 0x307(r31)
@@ -2708,14 +2681,11 @@ func_802007E8:
 /* 80200B98 001FDAD8  38 60 00 00 */	li r3, 0
 /* 80200B9C 001FDADC  38 00 00 08 */	li r0, 8
 /* 80200BA0 001FDAE0  7C 09 03 A6 */	mtctr r0
-
-/* 80200BA4 0028 .text      func_80200BA4                  func_80200BA4                  */
-.global func_80200BA4
-func_80200BA4:
+lbl_80200BA4:
 /* 80200BA4 001FDAE4  38 03 03 0B */	addi r0, r3, 0x30b
 /* 80200BA8 001FDAE8  7D 5F 01 AE */	stbx r10, r31, r0
 /* 80200BAC 001FDAEC  38 63 00 01 */	addi r3, r3, 1
-/* 80200BB0 001FDAF0  42 00 FF F4 */	bdnz func_80200BA4
+/* 80200BB0 001FDAF0  42 00 FF F4 */	bdnz lbl_80200BA4
 /* 80200BB4 001FDAF4  7F E3 FB 78 */	mr r3, r31
 /* 80200BB8 001FDAF8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200BBC 001FDAFC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2723,8 +2693,9 @@ func_80200BA4:
 /* 80200BC4 001FDB04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200BC8 001FDB08  4E 80 00 20 */	blr 
 
-/* 80200BCC 004C .text      __dt__16dMeter_fmapHIO_cFv     __dt__16dMeter_fmapHIO_cFv     */
+/* 80200BCC 0108 .text      __dt__16dMeter_fmapHIO_cFv     __dt__16dMeter_fmapHIO_cFv     */
 .global __dt__16dMeter_fmapHIO_cFv
+__dt__16dMeter_fmapHIO_cFv:
 __dt__16dMeter_fmapHIO_cFv:
 /* 80200BCC 001FDB0C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80200BD0 001FDB10  7C 08 02 A6 */	mflr r0
@@ -2733,68 +2704,53 @@ __dt__16dMeter_fmapHIO_cFv:
 /* 80200BDC 001FDB1C  48 16 16 01 */	bl _savegpr_29
 /* 80200BE0 001FDB20  7C 7D 1B 79 */	or. r29, r3, r3
 /* 80200BE4 001FDB24  7C 9E 23 78 */	mr r30, r4
-/* 80200BE8 001FDB28  41 82 00 D0 */	beq func_80200CB8
+/* 80200BE8 001FDB28  41 82 00 D0 */	beq lbl_80200CB8
 /* 80200BEC 001FDB2C  3C 60 80 3C */	lis r3, __vt__16dMeter_fmapHIO_c@ha
 /* 80200BF0 001FDB30  38 03 F0 F4 */	addi r0, r3, __vt__16dMeter_fmapHIO_c@l
 /* 80200BF4 001FDB34  90 1D 00 00 */	stw r0, 0(r29)
 /* 80200BF8 001FDB38  83 FD 00 0C */	lwz r31, 0xc(r29)
 /* 80200BFC 001FDB3C  28 1F 00 00 */	cmplwi r31, 0
-/* 80200C00 001FDB40  41 82 00 18 */	beq func_80200C18
+/* 80200C00 001FDB40  41 82 00 18 */	beq lbl_80200C18
 /* 80200C04 001FDB44  4B E0 E1 4D */	bl mDoExt_getGameHeap__Fv
 /* 80200C08 001FDB48  7F E4 FB 78 */	mr r4, r31
 /* 80200C0C 001FDB4C  48 0C D9 3D */	bl free__7JKRHeapFPv
 /* 80200C10 001FDB50  38 00 00 00 */	li r0, 0
 /* 80200C14 001FDB54  90 1D 00 0C */	stw r0, 0xc(r29)
-
-/* 80200C18 0020 .text      func_80200C18                  func_80200C18                  */
-.global func_80200C18
-func_80200C18:
+lbl_80200C18:
 /* 80200C18 001FDB58  83 FD 00 10 */	lwz r31, 0x10(r29)
 /* 80200C1C 001FDB5C  28 1F 00 00 */	cmplwi r31, 0
-/* 80200C20 001FDB60  41 82 00 18 */	beq func_80200C38
+/* 80200C20 001FDB60  41 82 00 18 */	beq lbl_80200C38
 /* 80200C24 001FDB64  4B E0 E1 2D */	bl mDoExt_getGameHeap__Fv
 /* 80200C28 001FDB68  7F E4 FB 78 */	mr r4, r31
 /* 80200C2C 001FDB6C  48 0C D9 1D */	bl free__7JKRHeapFPv
 /* 80200C30 001FDB70  38 00 00 00 */	li r0, 0
 /* 80200C34 001FDB74  90 1D 00 10 */	stw r0, 0x10(r29)
-
-/* 80200C38 003C .text      func_80200C38                  func_80200C38                  */
-.global func_80200C38
-func_80200C38:
+lbl_80200C38:
 /* 80200C38 001FDB78  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80200C3C 001FDB7C  28 03 00 00 */	cmplwi r3, 0
-/* 80200C40 001FDB80  41 82 00 3C */	beq func_80200C7C
+/* 80200C40 001FDB80  41 82 00 3C */	beq lbl_80200C7C
 /* 80200C44 001FDB84  81 83 00 00 */	lwz r12, 0(r3)
 /* 80200C48 001FDB88  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 80200C4C 001FDB8C  7D 89 03 A6 */	mtctr r12
 /* 80200C50 001FDB90  4E 80 04 21 */	bctrl 
 /* 80200C54 001FDB94  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80200C58 001FDB98  28 03 00 00 */	cmplwi r3, 0
-/* 80200C5C 001FDB9C  41 82 00 18 */	beq func_80200C74
+/* 80200C5C 001FDB9C  41 82 00 18 */	beq lbl_80200C74
 /* 80200C60 001FDBA0  38 80 00 01 */	li r4, 1
 /* 80200C64 001FDBA4  81 83 00 00 */	lwz r12, 0(r3)
 /* 80200C68 001FDBA8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80200C6C 001FDBAC  7D 89 03 A6 */	mtctr r12
 /* 80200C70 001FDBB0  4E 80 04 21 */	bctrl 
-
-/* 80200C74 0008 .text      func_80200C74                  func_80200C74                  */
-.global func_80200C74
-func_80200C74:
+lbl_80200C74:
 /* 80200C74 001FDBB4  38 00 00 00 */	li r0, 0
 /* 80200C78 001FDBB8  90 1D 00 08 */	stw r0, 8(r29)
-
-/* 80200C7C 0014 .text      func_80200C7C                  func_80200C7C                  */
-.global func_80200C7C
-func_80200C7C:
+lbl_80200C7C:
 /* 80200C7C 001FDBBC  34 1D 03 14 */	addic. r0, r29, 0x314
-/* 80200C80 001FDBC0  41 82 00 10 */	beq func_80200C90
+/* 80200C80 001FDBC0  41 82 00 10 */	beq lbl_80200C90
 /* 80200C84 001FDBC4  3C 60 80 3C */	lis r3, __vt__19dMeter_mapIconHIO_c@ha
 /* 80200C88 001FDBC8  38 03 F1 00 */	addi r0, r3, __vt__19dMeter_mapIconHIO_c@l
 /* 80200C8C 001FDBCC  90 1D 03 14 */	stw r0, 0x314(r29)
-
-/* 80200C90 0028 .text      func_80200C90                  func_80200C90                  */
-.global func_80200C90
-func_80200C90:
+lbl_80200C90:
 /* 80200C90 001FDBD0  38 7D 02 5C */	addi r3, r29, 0x25c
 /* 80200C94 001FDBD4  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
 /* 80200C98 001FDBD8  38 84 91 84 */	addi r4, r4, __dt__4cXyzFv@l
@@ -2802,13 +2758,10 @@ func_80200C90:
 /* 80200CA0 001FDBE0  38 C0 00 0C */	li r6, 0xc
 /* 80200CA4 001FDBE4  48 16 10 45 */	bl __destroy_arr
 /* 80200CA8 001FDBE8  7F C0 07 35 */	extsh. r0, r30
-/* 80200CAC 001FDBEC  40 81 00 0C */	ble func_80200CB8
+/* 80200CAC 001FDBEC  40 81 00 0C */	ble lbl_80200CB8
 /* 80200CB0 001FDBF0  7F A3 EB 78 */	mr r3, r29
 /* 80200CB4 001FDBF4  48 0C E0 89 */	bl __dl__FPv
-
-/* 80200CB8 001C .text      func_80200CB8                  func_80200CB8                  */
-.global func_80200CB8
-func_80200CB8:
+lbl_80200CB8:
 /* 80200CB8 001FDBF8  7F A3 EB 78 */	mr r3, r29
 /* 80200CBC 001FDBFC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80200CC0 001FDC00  48 16 15 69 */	bl _restgpr_29
@@ -2819,6 +2772,7 @@ func_80200CB8:
 
 /* 80200CD4 0084 .text      __ct__18dMeter_cursorHIO_cFv   __ct__18dMeter_cursorHIO_cFv   */
 .global __ct__18dMeter_cursorHIO_cFv
+__ct__18dMeter_cursorHIO_cFv:
 __ct__18dMeter_cursorHIO_cFv:
 /* 80200CD4 001FDC14  3C 80 80 3C */	lis r4, __vt__18dMeter_cursorHIO_c@ha
 /* 80200CD8 001FDC18  38 04 F0 E8 */	addi r0, r4, __vt__18dMeter_cursorHIO_c@l
@@ -2854,25 +2808,23 @@ __ct__18dMeter_cursorHIO_cFv:
 /* 80200D50 001FDC90  B0 03 00 40 */	sth r0, 0x40(r3)
 /* 80200D54 001FDC94  4E 80 00 20 */	blr 
 
-/* 80200D58 0030 .text      __dt__25dMeter_drawLightDropHIO_cFv __dt__25dMeter_drawLightDropHIO_cFv */
+/* 80200D58 0048 .text      __dt__25dMeter_drawLightDropHIO_cFv __dt__25dMeter_drawLightDropHIO_cFv */
 .global __dt__25dMeter_drawLightDropHIO_cFv
+__dt__25dMeter_drawLightDropHIO_cFv:
 __dt__25dMeter_drawLightDropHIO_cFv:
 /* 80200D58 001FDC98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200D5C 001FDC9C  7C 08 02 A6 */	mflr r0
 /* 80200D60 001FDCA0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200D64 001FDCA4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200D68 001FDCA8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200D6C 001FDCAC  41 82 00 1C */	beq func_80200D88
+/* 80200D6C 001FDCAC  41 82 00 1C */	beq lbl_80200D88
 /* 80200D70 001FDCB0  3C A0 80 3C */	lis r5, __vt__25dMeter_drawLightDropHIO_c@ha
 /* 80200D74 001FDCB4  38 05 F1 24 */	addi r0, r5, __vt__25dMeter_drawLightDropHIO_c@l
 /* 80200D78 001FDCB8  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200D7C 001FDCBC  7C 80 07 35 */	extsh. r0, r4
-/* 80200D80 001FDCC0  40 81 00 08 */	ble func_80200D88
+/* 80200D80 001FDCC0  40 81 00 08 */	ble lbl_80200D88
 /* 80200D84 001FDCC4  48 0C DF B9 */	bl __dl__FPv
-
-/* 80200D88 0018 .text      func_80200D88                  func_80200D88                  */
-.global func_80200D88
-func_80200D88:
+lbl_80200D88:
 /* 80200D88 001FDCC8  7F E3 FB 78 */	mr r3, r31
 /* 80200D8C 001FDCCC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200D90 001FDCD0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2880,25 +2832,23 @@ func_80200D88:
 /* 80200D98 001FDCD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200D9C 001FDCDC  4E 80 00 20 */	blr 
 
-/* 80200DA0 0030 .text      __dt__25dMeter_drawEmpButtonHIO_cFv __dt__25dMeter_drawEmpButtonHIO_cFv */
+/* 80200DA0 0048 .text      __dt__25dMeter_drawEmpButtonHIO_cFv __dt__25dMeter_drawEmpButtonHIO_cFv */
 .global __dt__25dMeter_drawEmpButtonHIO_cFv
+__dt__25dMeter_drawEmpButtonHIO_cFv:
 __dt__25dMeter_drawEmpButtonHIO_cFv:
 /* 80200DA0 001FDCE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200DA4 001FDCE4  7C 08 02 A6 */	mflr r0
 /* 80200DA8 001FDCE8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200DAC 001FDCEC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200DB0 001FDCF0  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200DB4 001FDCF4  41 82 00 1C */	beq func_80200DD0
+/* 80200DB4 001FDCF4  41 82 00 1C */	beq lbl_80200DD0
 /* 80200DB8 001FDCF8  3C A0 80 3C */	lis r5, __vt__25dMeter_drawEmpButtonHIO_c@ha
 /* 80200DBC 001FDCFC  38 05 F1 3C */	addi r0, r5, __vt__25dMeter_drawEmpButtonHIO_c@l
 /* 80200DC0 001FDD00  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200DC4 001FDD04  7C 80 07 35 */	extsh. r0, r4
-/* 80200DC8 001FDD08  40 81 00 08 */	ble func_80200DD0
+/* 80200DC8 001FDD08  40 81 00 08 */	ble lbl_80200DD0
 /* 80200DCC 001FDD0C  48 0C DF 71 */	bl __dl__FPv
-
-/* 80200DD0 0018 .text      func_80200DD0                  func_80200DD0                  */
-.global func_80200DD0
-func_80200DD0:
+lbl_80200DD0:
 /* 80200DD0 001FDD10  7F E3 FB 78 */	mr r3, r31
 /* 80200DD4 001FDD14  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200DD8 001FDD18  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2906,25 +2856,23 @@ func_80200DD0:
 /* 80200DE0 001FDD20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200DE4 001FDD24  4E 80 00 20 */	blr 
 
-/* 80200DE8 0030 .text      __dt__24dMeter_drawMiniGameHIO_cFv __dt__24dMeter_drawMiniGameHIO_cFv */
+/* 80200DE8 0048 .text      __dt__24dMeter_drawMiniGameHIO_cFv __dt__24dMeter_drawMiniGameHIO_cFv */
 .global __dt__24dMeter_drawMiniGameHIO_cFv
+__dt__24dMeter_drawMiniGameHIO_cFv:
 __dt__24dMeter_drawMiniGameHIO_cFv:
 /* 80200DE8 001FDD28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200DEC 001FDD2C  7C 08 02 A6 */	mflr r0
 /* 80200DF0 001FDD30  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200DF4 001FDD34  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200DF8 001FDD38  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200DFC 001FDD3C  41 82 00 1C */	beq func_80200E18
+/* 80200DFC 001FDD3C  41 82 00 1C */	beq lbl_80200E18
 /* 80200E00 001FDD40  3C A0 80 3C */	lis r5, __vt__24dMeter_drawMiniGameHIO_c@ha
 /* 80200E04 001FDD44  38 05 F1 30 */	addi r0, r5, __vt__24dMeter_drawMiniGameHIO_c@l
 /* 80200E08 001FDD48  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200E0C 001FDD4C  7C 80 07 35 */	extsh. r0, r4
-/* 80200E10 001FDD50  40 81 00 08 */	ble func_80200E18
+/* 80200E10 001FDD50  40 81 00 08 */	ble lbl_80200E18
 /* 80200E14 001FDD54  48 0C DF 29 */	bl __dl__FPv
-
-/* 80200E18 0018 .text      func_80200E18                  func_80200E18                  */
-.global func_80200E18
-func_80200E18:
+lbl_80200E18:
 /* 80200E18 001FDD58  7F E3 FB 78 */	mr r3, r31
 /* 80200E1C 001FDD5C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200E20 001FDD60  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2932,25 +2880,23 @@ func_80200E18:
 /* 80200E28 001FDD68  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200E2C 001FDD6C  4E 80 00 20 */	blr 
 
-/* 80200E30 0030 .text      __dt__21dMeter_drawSkillHIO_cFv __dt__21dMeter_drawSkillHIO_cFv */
+/* 80200E30 0048 .text      __dt__21dMeter_drawSkillHIO_cFv __dt__21dMeter_drawSkillHIO_cFv */
 .global __dt__21dMeter_drawSkillHIO_cFv
+__dt__21dMeter_drawSkillHIO_cFv:
 __dt__21dMeter_drawSkillHIO_cFv:
 /* 80200E30 001FDD70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200E34 001FDD74  7C 08 02 A6 */	mflr r0
 /* 80200E38 001FDD78  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200E3C 001FDD7C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200E40 001FDD80  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200E44 001FDD84  41 82 00 1C */	beq func_80200E60
+/* 80200E44 001FDD84  41 82 00 1C */	beq lbl_80200E60
 /* 80200E48 001FDD88  3C A0 80 3C */	lis r5, __vt__21dMeter_drawSkillHIO_c@ha
 /* 80200E4C 001FDD8C  38 05 F1 48 */	addi r0, r5, __vt__21dMeter_drawSkillHIO_c@l
 /* 80200E50 001FDD90  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200E54 001FDD94  7C 80 07 35 */	extsh. r0, r4
-/* 80200E58 001FDD98  40 81 00 08 */	ble func_80200E60
+/* 80200E58 001FDD98  40 81 00 08 */	ble lbl_80200E60
 /* 80200E5C 001FDD9C  48 0C DE E1 */	bl __dl__FPv
-
-/* 80200E60 0018 .text      func_80200E60                  func_80200E60                  */
-.global func_80200E60
-func_80200E60:
+lbl_80200E60:
 /* 80200E60 001FDDA0  7F E3 FB 78 */	mr r3, r31
 /* 80200E64 001FDDA4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200E68 001FDDA8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2958,25 +2904,23 @@ func_80200E60:
 /* 80200E70 001FDDB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200E74 001FDDB4  4E 80 00 20 */	blr 
 
-/* 80200E78 0030 .text      __dt__27dMeter_drawCalibrationHIO_cFv __dt__27dMeter_drawCalibrationHIO_cFv */
+/* 80200E78 0048 .text      __dt__27dMeter_drawCalibrationHIO_cFv __dt__27dMeter_drawCalibrationHIO_cFv */
 .global __dt__27dMeter_drawCalibrationHIO_cFv
+__dt__27dMeter_drawCalibrationHIO_cFv:
 __dt__27dMeter_drawCalibrationHIO_cFv:
 /* 80200E78 001FDDB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200E7C 001FDDBC  7C 08 02 A6 */	mflr r0
 /* 80200E80 001FDDC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200E84 001FDDC4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200E88 001FDDC8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200E8C 001FDDCC  41 82 00 1C */	beq func_80200EA8
+/* 80200E8C 001FDDCC  41 82 00 1C */	beq lbl_80200EA8
 /* 80200E90 001FDDD0  3C A0 80 3C */	lis r5, __vt__27dMeter_drawCalibrationHIO_c@ha
 /* 80200E94 001FDDD4  38 05 F1 54 */	addi r0, r5, __vt__27dMeter_drawCalibrationHIO_c@l
 /* 80200E98 001FDDD8  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200E9C 001FDDDC  7C 80 07 35 */	extsh. r0, r4
-/* 80200EA0 001FDDE0  40 81 00 08 */	ble func_80200EA8
+/* 80200EA0 001FDDE0  40 81 00 08 */	ble lbl_80200EA8
 /* 80200EA4 001FDDE4  48 0C DE 99 */	bl __dl__FPv
-
-/* 80200EA8 0018 .text      func_80200EA8                  func_80200EA8                  */
-.global func_80200EA8
-func_80200EA8:
+lbl_80200EA8:
 /* 80200EA8 001FDDE8  7F E3 FB 78 */	mr r3, r31
 /* 80200EAC 001FDDEC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200EB0 001FDDF0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2984,25 +2928,23 @@ func_80200EA8:
 /* 80200EB8 001FDDF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200EBC 001FDDFC  4E 80 00 20 */	blr 
 
-/* 80200EC0 0030 .text      __dt__22dMeter_drawInsectHIO_cFv __dt__22dMeter_drawInsectHIO_cFv */
+/* 80200EC0 0048 .text      __dt__22dMeter_drawInsectHIO_cFv __dt__22dMeter_drawInsectHIO_cFv */
 .global __dt__22dMeter_drawInsectHIO_cFv
+__dt__22dMeter_drawInsectHIO_cFv:
 __dt__22dMeter_drawInsectHIO_cFv:
 /* 80200EC0 001FDE00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200EC4 001FDE04  7C 08 02 A6 */	mflr r0
 /* 80200EC8 001FDE08  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200ECC 001FDE0C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200ED0 001FDE10  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200ED4 001FDE14  41 82 00 1C */	beq func_80200EF0
+/* 80200ED4 001FDE14  41 82 00 1C */	beq lbl_80200EF0
 /* 80200ED8 001FDE18  3C A0 80 3C */	lis r5, __vt__22dMeter_drawInsectHIO_c@ha
 /* 80200EDC 001FDE1C  38 05 F1 60 */	addi r0, r5, __vt__22dMeter_drawInsectHIO_c@l
 /* 80200EE0 001FDE20  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200EE4 001FDE24  7C 80 07 35 */	extsh. r0, r4
-/* 80200EE8 001FDE28  40 81 00 08 */	ble func_80200EF0
+/* 80200EE8 001FDE28  40 81 00 08 */	ble lbl_80200EF0
 /* 80200EEC 001FDE2C  48 0C DE 51 */	bl __dl__FPv
-
-/* 80200EF0 0018 .text      func_80200EF0                  func_80200EF0                  */
-.global func_80200EF0
-func_80200EF0:
+lbl_80200EF0:
 /* 80200EF0 001FDE30  7F E3 FB 78 */	mr r3, r31
 /* 80200EF4 001FDE34  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200EF8 001FDE38  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3010,25 +2952,23 @@ func_80200EF0:
 /* 80200F00 001FDE40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200F04 001FDE44  4E 80 00 20 */	blr 
 
-/* 80200F08 0030 .text      __dt__23dMeter_drawFishingHIO_cFv __dt__23dMeter_drawFishingHIO_cFv */
+/* 80200F08 0048 .text      __dt__23dMeter_drawFishingHIO_cFv __dt__23dMeter_drawFishingHIO_cFv */
 .global __dt__23dMeter_drawFishingHIO_cFv
+__dt__23dMeter_drawFishingHIO_cFv:
 __dt__23dMeter_drawFishingHIO_cFv:
 /* 80200F08 001FDE48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200F0C 001FDE4C  7C 08 02 A6 */	mflr r0
 /* 80200F10 001FDE50  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200F14 001FDE54  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200F18 001FDE58  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200F1C 001FDE5C  41 82 00 1C */	beq func_80200F38
+/* 80200F1C 001FDE5C  41 82 00 1C */	beq lbl_80200F38
 /* 80200F20 001FDE60  3C A0 80 3C */	lis r5, __vt__23dMeter_drawFishingHIO_c@ha
 /* 80200F24 001FDE64  38 05 F1 6C */	addi r0, r5, __vt__23dMeter_drawFishingHIO_c@l
 /* 80200F28 001FDE68  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200F2C 001FDE6C  7C 80 07 35 */	extsh. r0, r4
-/* 80200F30 001FDE70  40 81 00 08 */	ble func_80200F38
+/* 80200F30 001FDE70  40 81 00 08 */	ble lbl_80200F38
 /* 80200F34 001FDE74  48 0C DE 09 */	bl __dl__FPv
-
-/* 80200F38 0018 .text      func_80200F38                  func_80200F38                  */
-.global func_80200F38
-func_80200F38:
+lbl_80200F38:
 /* 80200F38 001FDE78  7F E3 FB 78 */	mr r3, r31
 /* 80200F3C 001FDE7C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200F40 001FDE80  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3036,25 +2976,23 @@ func_80200F38:
 /* 80200F48 001FDE88  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200F4C 001FDE8C  4E 80 00 20 */	blr 
 
-/* 80200F50 0030 .text      __dt__22dMeter_drawLetterHIO_cFv __dt__22dMeter_drawLetterHIO_cFv */
+/* 80200F50 0048 .text      __dt__22dMeter_drawLetterHIO_cFv __dt__22dMeter_drawLetterHIO_cFv */
 .global __dt__22dMeter_drawLetterHIO_cFv
+__dt__22dMeter_drawLetterHIO_cFv:
 __dt__22dMeter_drawLetterHIO_cFv:
 /* 80200F50 001FDE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200F54 001FDE94  7C 08 02 A6 */	mflr r0
 /* 80200F58 001FDE98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200F5C 001FDE9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200F60 001FDEA0  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200F64 001FDEA4  41 82 00 1C */	beq func_80200F80
+/* 80200F64 001FDEA4  41 82 00 1C */	beq lbl_80200F80
 /* 80200F68 001FDEA8  3C A0 80 3C */	lis r5, __vt__22dMeter_drawLetterHIO_c@ha
 /* 80200F6C 001FDEAC  38 05 F1 78 */	addi r0, r5, __vt__22dMeter_drawLetterHIO_c@l
 /* 80200F70 001FDEB0  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200F74 001FDEB4  7C 80 07 35 */	extsh. r0, r4
-/* 80200F78 001FDEB8  40 81 00 08 */	ble func_80200F80
+/* 80200F78 001FDEB8  40 81 00 08 */	ble lbl_80200F80
 /* 80200F7C 001FDEBC  48 0C DD C1 */	bl __dl__FPv
-
-/* 80200F80 0018 .text      func_80200F80                  func_80200F80                  */
-.global func_80200F80
-func_80200F80:
+lbl_80200F80:
 /* 80200F80 001FDEC0  7F E3 FB 78 */	mr r3, r31
 /* 80200F84 001FDEC4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200F88 001FDEC8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3062,25 +3000,23 @@ func_80200F80:
 /* 80200F90 001FDED0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200F94 001FDED4  4E 80 00 20 */	blr 
 
-/* 80200F98 0030 .text      __dt__22dMeter_drawOptionHIO_cFv __dt__22dMeter_drawOptionHIO_cFv */
+/* 80200F98 0048 .text      __dt__22dMeter_drawOptionHIO_cFv __dt__22dMeter_drawOptionHIO_cFv */
 .global __dt__22dMeter_drawOptionHIO_cFv
+__dt__22dMeter_drawOptionHIO_cFv:
 __dt__22dMeter_drawOptionHIO_cFv:
 /* 80200F98 001FDED8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200F9C 001FDEDC  7C 08 02 A6 */	mflr r0
 /* 80200FA0 001FDEE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200FA4 001FDEE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200FA8 001FDEE8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200FAC 001FDEEC  41 82 00 1C */	beq func_80200FC8
+/* 80200FAC 001FDEEC  41 82 00 1C */	beq lbl_80200FC8
 /* 80200FB0 001FDEF0  3C A0 80 3C */	lis r5, __vt__22dMeter_drawOptionHIO_c@ha
 /* 80200FB4 001FDEF4  38 05 F1 84 */	addi r0, r5, __vt__22dMeter_drawOptionHIO_c@l
 /* 80200FB8 001FDEF8  90 1F 00 00 */	stw r0, 0(r31)
 /* 80200FBC 001FDEFC  7C 80 07 35 */	extsh. r0, r4
-/* 80200FC0 001FDF00  40 81 00 08 */	ble func_80200FC8
+/* 80200FC0 001FDF00  40 81 00 08 */	ble lbl_80200FC8
 /* 80200FC4 001FDF04  48 0C DD 79 */	bl __dl__FPv
-
-/* 80200FC8 0018 .text      func_80200FC8                  func_80200FC8                  */
-.global func_80200FC8
-func_80200FC8:
+lbl_80200FC8:
 /* 80200FC8 001FDF08  7F E3 FB 78 */	mr r3, r31
 /* 80200FCC 001FDF0C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80200FD0 001FDF10  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3088,25 +3024,23 @@ func_80200FC8:
 /* 80200FD8 001FDF18  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200FDC 001FDF1C  4E 80 00 20 */	blr 
 
-/* 80200FE0 0030 .text      __dt__23dMeter_drawCollectHIO_cFv __dt__23dMeter_drawCollectHIO_cFv */
+/* 80200FE0 0048 .text      __dt__23dMeter_drawCollectHIO_cFv __dt__23dMeter_drawCollectHIO_cFv */
 .global __dt__23dMeter_drawCollectHIO_cFv
+__dt__23dMeter_drawCollectHIO_cFv:
 __dt__23dMeter_drawCollectHIO_cFv:
 /* 80200FE0 001FDF20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200FE4 001FDF24  7C 08 02 A6 */	mflr r0
 /* 80200FE8 001FDF28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80200FEC 001FDF2C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80200FF0 001FDF30  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80200FF4 001FDF34  41 82 00 1C */	beq func_80201010
+/* 80200FF4 001FDF34  41 82 00 1C */	beq lbl_80201010
 /* 80200FF8 001FDF38  3C A0 80 3C */	lis r5, __vt__23dMeter_drawCollectHIO_c@ha
 /* 80200FFC 001FDF3C  38 05 F1 90 */	addi r0, r5, __vt__23dMeter_drawCollectHIO_c@l
 /* 80201000 001FDF40  90 1F 00 00 */	stw r0, 0(r31)
 /* 80201004 001FDF44  7C 80 07 35 */	extsh. r0, r4
-/* 80201008 001FDF48  40 81 00 08 */	ble func_80201010
+/* 80201008 001FDF48  40 81 00 08 */	ble lbl_80201010
 /* 8020100C 001FDF4C  48 0C DD 31 */	bl __dl__FPv
-
-/* 80201010 0018 .text      func_80201010                  func_80201010                  */
-.global func_80201010
-func_80201010:
+lbl_80201010:
 /* 80201010 001FDF50  7F E3 FB 78 */	mr r3, r31
 /* 80201014 001FDF54  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80201018 001FDF58  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3114,25 +3048,23 @@ func_80201010:
 /* 80201020 001FDF60  38 21 00 10 */	addi r1, r1, 0x10
 /* 80201024 001FDF64  4E 80 00 20 */	blr 
 
-/* 80201028 0030 .text      __dt__19dMeter_mapIconHIO_cFv  __dt__19dMeter_mapIconHIO_cFv  */
+/* 80201028 0048 .text      __dt__19dMeter_mapIconHIO_cFv  __dt__19dMeter_mapIconHIO_cFv  */
 .global __dt__19dMeter_mapIconHIO_cFv
+__dt__19dMeter_mapIconHIO_cFv:
 __dt__19dMeter_mapIconHIO_cFv:
 /* 80201028 001FDF68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020102C 001FDF6C  7C 08 02 A6 */	mflr r0
 /* 80201030 001FDF70  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80201034 001FDF74  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80201038 001FDF78  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8020103C 001FDF7C  41 82 00 1C */	beq func_80201058
+/* 8020103C 001FDF7C  41 82 00 1C */	beq lbl_80201058
 /* 80201040 001FDF80  3C A0 80 3C */	lis r5, __vt__19dMeter_mapIconHIO_c@ha
 /* 80201044 001FDF84  38 05 F1 00 */	addi r0, r5, __vt__19dMeter_mapIconHIO_c@l
 /* 80201048 001FDF88  90 1F 00 00 */	stw r0, 0(r31)
 /* 8020104C 001FDF8C  7C 80 07 35 */	extsh. r0, r4
-/* 80201050 001FDF90  40 81 00 08 */	ble func_80201058
+/* 80201050 001FDF90  40 81 00 08 */	ble lbl_80201058
 /* 80201054 001FDF94  48 0C DC E9 */	bl __dl__FPv
-
-/* 80201058 0018 .text      func_80201058                  func_80201058                  */
-.global func_80201058
-func_80201058:
+lbl_80201058:
 /* 80201058 001FDF98  7F E3 FB 78 */	mr r3, r31
 /* 8020105C 001FDF9C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80201060 001FDFA0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3142,6 +3074,7 @@ func_80201058:
 
 /* 80201070 0028 .text      __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv */
 .global __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv
+__ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv:
 __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv:
 /* 80201070 001FDFB0  38 00 FF FF */	li r0, -1
 /* 80201074 001FDFB4  90 03 00 00 */	stw r0, 0(r3)
@@ -3154,25 +3087,23 @@ __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv:
 /* 80201090 001FDFD0  90 03 00 24 */	stw r0, 0x24(r3)
 /* 80201094 001FDFD4  4E 80 00 20 */	blr 
 
-/* 80201098 0030 .text      __dt__18dMeter_cursorHIO_cFv   __dt__18dMeter_cursorHIO_cFv   */
+/* 80201098 0048 .text      __dt__18dMeter_cursorHIO_cFv   __dt__18dMeter_cursorHIO_cFv   */
 .global __dt__18dMeter_cursorHIO_cFv
+__dt__18dMeter_cursorHIO_cFv:
 __dt__18dMeter_cursorHIO_cFv:
 /* 80201098 001FDFD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020109C 001FDFDC  7C 08 02 A6 */	mflr r0
 /* 802010A0 001FDFE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802010A4 001FDFE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802010A8 001FDFE8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802010AC 001FDFEC  41 82 00 1C */	beq func_802010C8
+/* 802010AC 001FDFEC  41 82 00 1C */	beq lbl_802010C8
 /* 802010B0 001FDFF0  3C A0 80 3C */	lis r5, __vt__18dMeter_cursorHIO_c@ha
 /* 802010B4 001FDFF4  38 05 F0 E8 */	addi r0, r5, __vt__18dMeter_cursorHIO_c@l
 /* 802010B8 001FDFF8  90 1F 00 00 */	stw r0, 0(r31)
 /* 802010BC 001FDFFC  7C 80 07 35 */	extsh. r0, r4
-/* 802010C0 001FE000  40 81 00 08 */	ble func_802010C8
+/* 802010C0 001FE000  40 81 00 08 */	ble lbl_802010C8
 /* 802010C4 001FE004  48 0C DC 79 */	bl __dl__FPv
-
-/* 802010C8 0018 .text      func_802010C8                  func_802010C8                  */
-.global func_802010C8
-func_802010C8:
+lbl_802010C8:
 /* 802010C8 001FE008  7F E3 FB 78 */	mr r3, r31
 /* 802010CC 001FE00C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802010D0 001FE010  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3180,25 +3111,23 @@ func_802010C8:
 /* 802010D8 001FE018  38 21 00 10 */	addi r1, r1, 0x10
 /* 802010DC 001FE01C  4E 80 00 20 */	blr 
 
-/* 802010E0 0030 .text      __dt__16dMeter_ringHIO_cFv     __dt__16dMeter_ringHIO_cFv     */
+/* 802010E0 0048 .text      __dt__16dMeter_ringHIO_cFv     __dt__16dMeter_ringHIO_cFv     */
 .global __dt__16dMeter_ringHIO_cFv
+__dt__16dMeter_ringHIO_cFv:
 __dt__16dMeter_ringHIO_cFv:
 /* 802010E0 001FE020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802010E4 001FE024  7C 08 02 A6 */	mflr r0
 /* 802010E8 001FE028  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802010EC 001FE02C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802010F0 001FE030  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802010F4 001FE034  41 82 00 1C */	beq func_80201110
+/* 802010F4 001FE034  41 82 00 1C */	beq lbl_80201110
 /* 802010F8 001FE038  3C A0 80 3C */	lis r5, __vt__16dMeter_ringHIO_c@ha
 /* 802010FC 001FE03C  38 05 F1 0C */	addi r0, r5, __vt__16dMeter_ringHIO_c@l
 /* 80201100 001FE040  90 1F 00 00 */	stw r0, 0(r31)
 /* 80201104 001FE044  7C 80 07 35 */	extsh. r0, r4
-/* 80201108 001FE048  40 81 00 08 */	ble func_80201110
+/* 80201108 001FE048  40 81 00 08 */	ble lbl_80201110
 /* 8020110C 001FE04C  48 0C DC 31 */	bl __dl__FPv
-
-/* 80201110 0018 .text      func_80201110                  func_80201110                  */
-.global func_80201110
-func_80201110:
+lbl_80201110:
 /* 80201110 001FE050  7F E3 FB 78 */	mr r3, r31
 /* 80201114 001FE054  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80201118 001FE058  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3206,116 +3135,84 @@ func_80201110:
 /* 80201120 001FE060  38 21 00 10 */	addi r1, r1, 0x10
 /* 80201124 001FE064  4E 80 00 20 */	blr 
 
-/* 80201128 0038 .text      __dt__16dMeter_drawHIO_cFv     __dt__16dMeter_drawHIO_cFv     */
+/* 80201128 0114 .text      __dt__16dMeter_drawHIO_cFv     __dt__16dMeter_drawHIO_cFv     */
 .global __dt__16dMeter_drawHIO_cFv
+__dt__16dMeter_drawHIO_cFv:
 __dt__16dMeter_drawHIO_cFv:
 /* 80201128 001FE068  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020112C 001FE06C  7C 08 02 A6 */	mflr r0
 /* 80201130 001FE070  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80201134 001FE074  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80201138 001FE078  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8020113C 001FE07C  41 82 00 E8 */	beq func_80201224
+/* 8020113C 001FE07C  41 82 00 E8 */	beq lbl_80201224
 /* 80201140 001FE080  3C 60 80 3C */	lis r3, __vt__16dMeter_drawHIO_c@ha
 /* 80201144 001FE084  38 03 F1 18 */	addi r0, r3, __vt__16dMeter_drawHIO_c@l
 /* 80201148 001FE088  90 1F 00 00 */	stw r0, 0(r31)
 /* 8020114C 001FE08C  34 1F 0E 7C */	addic. r0, r31, 0xe7c
-/* 80201150 001FE090  41 82 00 10 */	beq func_80201160
+/* 80201150 001FE090  41 82 00 10 */	beq lbl_80201160
 /* 80201154 001FE094  3C 60 80 3C */	lis r3, __vt__25dMeter_drawLightDropHIO_c@ha
 /* 80201158 001FE098  38 03 F1 24 */	addi r0, r3, __vt__25dMeter_drawLightDropHIO_c@l
 /* 8020115C 001FE09C  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-
-/* 80201160 0014 .text      func_80201160                  func_80201160                  */
-.global func_80201160
-func_80201160:
+lbl_80201160:
 /* 80201160 001FE0A0  34 1F 0C 20 */	addic. r0, r31, 0xc20
-/* 80201164 001FE0A4  41 82 00 10 */	beq func_80201174
+/* 80201164 001FE0A4  41 82 00 10 */	beq lbl_80201174
 /* 80201168 001FE0A8  3C 60 80 3C */	lis r3, __vt__25dMeter_drawEmpButtonHIO_c@ha
 /* 8020116C 001FE0AC  38 03 F1 3C */	addi r0, r3, __vt__25dMeter_drawEmpButtonHIO_c@l
 /* 80201170 001FE0B0  90 1F 0C 20 */	stw r0, 0xc20(r31)
-
-/* 80201174 0014 .text      func_80201174                  func_80201174                  */
-.global func_80201174
-func_80201174:
+lbl_80201174:
 /* 80201174 001FE0B4  34 1F 0A 90 */	addic. r0, r31, 0xa90
-/* 80201178 001FE0B8  41 82 00 10 */	beq func_80201188
+/* 80201178 001FE0B8  41 82 00 10 */	beq lbl_80201188
 /* 8020117C 001FE0BC  3C 60 80 3C */	lis r3, __vt__24dMeter_drawMiniGameHIO_c@ha
 /* 80201180 001FE0C0  38 03 F1 30 */	addi r0, r3, __vt__24dMeter_drawMiniGameHIO_c@l
 /* 80201184 001FE0C4  90 1F 0A 90 */	stw r0, 0xa90(r31)
-
-/* 80201188 0014 .text      func_80201188                  func_80201188                  */
-.global func_80201188
-func_80201188:
+lbl_80201188:
 /* 80201188 001FE0C8  34 1F 0A 34 */	addic. r0, r31, 0xa34
-/* 8020118C 001FE0CC  41 82 00 10 */	beq func_8020119C
+/* 8020118C 001FE0CC  41 82 00 10 */	beq lbl_8020119C
 /* 80201190 001FE0D0  3C 60 80 3C */	lis r3, __vt__21dMeter_drawSkillHIO_c@ha
 /* 80201194 001FE0D4  38 03 F1 48 */	addi r0, r3, __vt__21dMeter_drawSkillHIO_c@l
 /* 80201198 001FE0D8  90 1F 0A 34 */	stw r0, 0xa34(r31)
-
-/* 8020119C 0014 .text      func_8020119C                  func_8020119C                  */
-.global func_8020119C
-func_8020119C:
+lbl_8020119C:
 /* 8020119C 001FE0DC  34 1F 0A 1C */	addic. r0, r31, 0xa1c
-/* 802011A0 001FE0E0  41 82 00 10 */	beq func_802011B0
+/* 802011A0 001FE0E0  41 82 00 10 */	beq lbl_802011B0
 /* 802011A4 001FE0E4  3C 60 80 3C */	lis r3, __vt__27dMeter_drawCalibrationHIO_c@ha
 /* 802011A8 001FE0E8  38 03 F1 54 */	addi r0, r3, __vt__27dMeter_drawCalibrationHIO_c@l
 /* 802011AC 001FE0EC  90 1F 0A 1C */	stw r0, 0xa1c(r31)
-
-/* 802011B0 0014 .text      func_802011B0                  func_802011B0                  */
-.global func_802011B0
-func_802011B0:
+lbl_802011B0:
 /* 802011B0 001FE0F0  34 1F 09 DC */	addic. r0, r31, 0x9dc
-/* 802011B4 001FE0F4  41 82 00 10 */	beq func_802011C4
+/* 802011B4 001FE0F4  41 82 00 10 */	beq lbl_802011C4
 /* 802011B8 001FE0F8  3C 60 80 3C */	lis r3, __vt__22dMeter_drawInsectHIO_c@ha
 /* 802011BC 001FE0FC  38 03 F1 60 */	addi r0, r3, __vt__22dMeter_drawInsectHIO_c@l
 /* 802011C0 001FE100  90 1F 09 DC */	stw r0, 0x9dc(r31)
-
-/* 802011C4 0014 .text      func_802011C4                  func_802011C4                  */
-.global func_802011C4
-func_802011C4:
+lbl_802011C4:
 /* 802011C4 001FE104  34 1F 07 88 */	addic. r0, r31, 0x788
-/* 802011C8 001FE108  41 82 00 10 */	beq func_802011D8
+/* 802011C8 001FE108  41 82 00 10 */	beq lbl_802011D8
 /* 802011CC 001FE10C  3C 60 80 3C */	lis r3, __vt__23dMeter_drawFishingHIO_c@ha
 /* 802011D0 001FE110  38 03 F1 6C */	addi r0, r3, __vt__23dMeter_drawFishingHIO_c@l
 /* 802011D4 001FE114  90 1F 07 88 */	stw r0, 0x788(r31)
-
-/* 802011D8 0014 .text      func_802011D8                  func_802011D8                  */
-.global func_802011D8
-func_802011D8:
+lbl_802011D8:
 /* 802011D8 001FE118  34 1F 07 28 */	addic. r0, r31, 0x728
-/* 802011DC 001FE11C  41 82 00 10 */	beq func_802011EC
+/* 802011DC 001FE11C  41 82 00 10 */	beq lbl_802011EC
 /* 802011E0 001FE120  3C 60 80 3C */	lis r3, __vt__22dMeter_drawLetterHIO_c@ha
 /* 802011E4 001FE124  38 03 F1 78 */	addi r0, r3, __vt__22dMeter_drawLetterHIO_c@l
 /* 802011E8 001FE128  90 1F 07 28 */	stw r0, 0x728(r31)
-
-/* 802011EC 0014 .text      func_802011EC                  func_802011EC                  */
-.global func_802011EC
-func_802011EC:
+lbl_802011EC:
 /* 802011EC 001FE12C  34 1F 06 B8 */	addic. r0, r31, 0x6b8
-/* 802011F0 001FE130  41 82 00 10 */	beq func_80201200
+/* 802011F0 001FE130  41 82 00 10 */	beq lbl_80201200
 /* 802011F4 001FE134  3C 60 80 3C */	lis r3, __vt__22dMeter_drawOptionHIO_c@ha
 /* 802011F8 001FE138  38 03 F1 84 */	addi r0, r3, __vt__22dMeter_drawOptionHIO_c@l
 /* 802011FC 001FE13C  90 1F 06 B8 */	stw r0, 0x6b8(r31)
-
-/* 80201200 0014 .text      func_80201200                  func_80201200                  */
-.global func_80201200
-func_80201200:
+lbl_80201200:
 /* 80201200 001FE140  34 1F 06 18 */	addic. r0, r31, 0x618
-/* 80201204 001FE144  41 82 00 10 */	beq func_80201214
+/* 80201204 001FE144  41 82 00 10 */	beq lbl_80201214
 /* 80201208 001FE148  3C 60 80 3C */	lis r3, __vt__23dMeter_drawCollectHIO_c@ha
 /* 8020120C 001FE14C  38 03 F1 90 */	addi r0, r3, __vt__23dMeter_drawCollectHIO_c@l
 /* 80201210 001FE150  90 1F 06 18 */	stw r0, 0x618(r31)
-
-/* 80201214 0010 .text      func_80201214                  func_80201214                  */
-.global func_80201214
-func_80201214:
+lbl_80201214:
 /* 80201214 001FE154  7C 80 07 35 */	extsh. r0, r4
-/* 80201218 001FE158  40 81 00 0C */	ble func_80201224
+/* 80201218 001FE158  40 81 00 0C */	ble lbl_80201224
 /* 8020121C 001FE15C  7F E3 FB 78 */	mr r3, r31
 /* 80201220 001FE160  48 0C DB 1D */	bl __dl__FPv
-
-/* 80201224 0018 .text      func_80201224                  func_80201224                  */
-.global func_80201224
-func_80201224:
+lbl_80201224:
 /* 80201224 001FE164  7F E3 FB 78 */	mr r3, r31
 /* 80201228 001FE168  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020122C 001FE16C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3323,25 +3220,23 @@ func_80201224:
 /* 80201234 001FE174  38 21 00 10 */	addi r1, r1, 0x10
 /* 80201238 001FE178  4E 80 00 20 */	blr 
 
-/* 8020123C 0030 .text      __dt__16dMeter_menuHIO_cFv     __dt__16dMeter_menuHIO_cFv     */
+/* 8020123C 0048 .text      __dt__16dMeter_menuHIO_cFv     __dt__16dMeter_menuHIO_cFv     */
 .global __dt__16dMeter_menuHIO_cFv
+__dt__16dMeter_menuHIO_cFv:
 __dt__16dMeter_menuHIO_cFv:
 /* 8020123C 001FE17C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80201240 001FE180  7C 08 02 A6 */	mflr r0
 /* 80201244 001FE184  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80201248 001FE188  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8020124C 001FE18C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80201250 001FE190  41 82 00 1C */	beq func_8020126C
+/* 80201250 001FE190  41 82 00 1C */	beq lbl_8020126C
 /* 80201254 001FE194  3C A0 80 3C */	lis r5, __vt__16dMeter_menuHIO_c@ha
 /* 80201258 001FE198  38 05 F1 9C */	addi r0, r5, __vt__16dMeter_menuHIO_c@l
 /* 8020125C 001FE19C  90 1F 00 00 */	stw r0, 0(r31)
 /* 80201260 001FE1A0  7C 80 07 35 */	extsh. r0, r4
-/* 80201264 001FE1A4  40 81 00 08 */	ble func_8020126C
+/* 80201264 001FE1A4  40 81 00 08 */	ble lbl_8020126C
 /* 80201268 001FE1A8  48 0C DA D5 */	bl __dl__FPv
-
-/* 8020126C 0018 .text      func_8020126C                  func_8020126C                  */
-.global func_8020126C
-func_8020126C:
+lbl_8020126C:
 /* 8020126C 001FE1AC  7F E3 FB 78 */	mr r3, r31
 /* 80201270 001FE1B0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80201274 001FE1B4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3351,6 +3246,7 @@ func_8020126C:
 
 /* 80201284 00A4 .text      __sinit_d_meter_HIO_cpp        __sinit_d_meter_HIO_cpp        */
 .global __sinit_d_meter_HIO_cpp
+__sinit_d_meter_HIO_cpp:
 __sinit_d_meter_HIO_cpp:
 /* 80201284 001FE1C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80201288 001FE1C8  7C 08 02 A6 */	mflr r0
@@ -3399,133 +3295,133 @@ __sinit_d_meter_HIO_cpp:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80397E50 0000 .rodata    d_d_meter_HIO__sym_80397E50    ...rodata.0                    */
-.global d_d_meter_HIO__sym_80397E50
-d_d_meter_HIO__sym_80397E50:
+/* 80397E50 0000 .rodata    ...rodata.0                    d_d_meter_HIO__data_80397E50   */
+.global d_d_meter_HIO__data_80397E50
+d_d_meter_HIO__data_80397E50:
 
-/* 80397E50 0018 .rodata    d_d_meter_HIO__sym_80397E50    fipaScale$3871                 */
-.global d_d_meter_HIO__sym_80397E50
-d_d_meter_HIO__sym_80397E50:
+/* 80397E50 0018 .rodata    fipaScale$3871                 d_d_meter_HIO__data_80397E50   */
+.global d_d_meter_HIO__data_80397E50
+d_d_meter_HIO__data_80397E50:
 .byte 0x3f, 0x7a, 0xe1, 0x48, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x394e50 */
 .byte 0x3f, 0x73, 0x33, 0x33, 0x3f, 0x8c, 0xcc, 0xcd /* baserom.dol+0x394e60 */
 
-/* 80397E68 0018 .rodata    sym_80397E68                   fipaPosX$3872                  */
-.global sym_80397E68
-sym_80397E68:
+/* 80397E68 0018 .rodata    fipaPosX$3872                  data_80397E68                  */
+.global data_80397E68
+data_80397E68:
 .byte 0x3f, 0xa6, 0x66, 0x66, 0x40, 0xd3, 0x33, 0x33, 0x00, 0x00, 0x00, 0x00, 0x40, 0x7d, 0x70, 0xa4 /* baserom.dol+0x394e68 */
 .byte 0x40, 0x80, 0x00, 0x00, 0x41, 0xdc, 0x00, 0x00 /* baserom.dol+0x394e78 */
 
-/* 80397E80 0018 .rodata    sym_80397E80                   fipaPosY$3873                  */
-.global sym_80397E80
-sym_80397E80:
+/* 80397E80 0018 .rodata    fipaPosY$3873                  data_80397E80                  */
+.global data_80397E80
+data_80397E80:
 .byte 0xc1, 0x13, 0x33, 0x33, 0xc1, 0xdc, 0x00, 0x00, 0xc1, 0x3b, 0x33, 0x33, 0xc1, 0x13, 0x33, 0x33 /* baserom.dol+0x394e80 */
 .byte 0xc1, 0xf0, 0xcc, 0xcd, 0xc1, 0x8f, 0x33, 0x33 /* baserom.dol+0x394e90 */
 
-/* 80397E98 0018 .rodata    sym_80397E98                   finaScale$3874                 */
-.global sym_80397E98
-sym_80397E98:
+/* 80397E98 0018 .rodata    finaScale$3874                 data_80397E98                  */
+.global data_80397E98
+data_80397E98:
 .byte 0x3f, 0x66, 0x66, 0x66, 0x3f, 0x66, 0x66, 0x66, 0x3f, 0x66, 0x66, 0x66, 0x3f, 0x66, 0x66, 0x66 /* baserom.dol+0x394e98 */
 .byte 0x3f, 0x66, 0x66, 0x66, 0x3f, 0x66, 0x66, 0x66 /* baserom.dol+0x394ea8 */
 
-/* 80397EB0 0018 .rodata    sym_80397EB0                   finaPosX$3875                  */
-.global sym_80397EB0
-sym_80397EB0:
+/* 80397EB0 0018 .rodata    finaPosX$3875                  data_80397EB0                  */
+.global data_80397EB0
+data_80397EB0:
 .byte 0xc1, 0xc8, 0x00, 0x00, 0xc0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394eb0 */
 .byte 0x00, 0x00, 0x00, 0x00, 0xc0, 0x80, 0x00, 0x00 /* baserom.dol+0x394ec0 */
 
-/* 80397EC8 0018 .rodata    sym_80397EC8                   finaPosY$3876                  */
-.global sym_80397EC8
-sym_80397EC8:
+/* 80397EC8 0018 .rodata    finaPosY$3876                  data_80397EC8                  */
+.global data_80397EC8
+data_80397EC8:
 .byte 0xc1, 0x80, 0x00, 0x00, 0xc2, 0x22, 0x66, 0x66, 0xc1, 0xc0, 0x00, 0x00, 0xc1, 0x3b, 0x33, 0x33 /* baserom.dol+0x394ec8 */
 .byte 0xc2, 0x17, 0x99, 0x9a, 0xc1, 0x50, 0x00, 0x00 /* baserom.dol+0x394ed8 */
 
-/* 80397EE0 0018 .rodata    sym_80397EE0                   filiScale$3877                 */
-.global sym_80397EE0
-sym_80397EE0:
+/* 80397EE0 0018 .rodata    filiScale$3877                 data_80397EE0                  */
+.global data_80397EE0
+data_80397EE0:
 .byte 0x3f, 0x26, 0x66, 0x66, 0x3f, 0x26, 0x66, 0x66, 0x3f, 0x26, 0x66, 0x66, 0x3f, 0x26, 0x66, 0x66 /* baserom.dol+0x394ee0 */
 .byte 0x3f, 0x26, 0x66, 0x66, 0x3f, 0x26, 0x66, 0x66 /* baserom.dol+0x394ef0 */
 
-/* 80397EF8 0018 .rodata    sym_80397EF8                   filiPosX$3878                  */
-.global sym_80397EF8
-sym_80397EF8:
+/* 80397EF8 0018 .rodata    filiPosX$3878                  data_80397EF8                  */
+.global data_80397EF8
+data_80397EF8:
 .byte 0xc1, 0xe0, 0x00, 0x00, 0xc1, 0x00, 0x00, 0x00, 0x41, 0x13, 0x33, 0x33, 0x41, 0x13, 0x33, 0x33 /* baserom.dol+0x394ef8 */
 .byte 0x41, 0x13, 0x33, 0x33, 0xc1, 0x00, 0x00, 0x00 /* baserom.dol+0x394f08 */
 
-/* 80397F10 0018 .rodata    sym_80397F10                   filiPosY$3879                  */
-.global sym_80397F10
-sym_80397F10:
+/* 80397F10 0018 .rodata    filiPosY$3879                  data_80397F10                  */
+.global data_80397F10
+data_80397F10:
 .byte 0xc0, 0xd3, 0x33, 0x33, 0xc1, 0x60, 0x00, 0x00, 0xc1, 0x66, 0x66, 0x66, 0x41, 0xc7, 0x33, 0x33 /* baserom.dol+0x394f10 */
 .byte 0xc1, 0x3b, 0x33, 0x33, 0x41, 0xc7, 0x33, 0x33 /* baserom.dol+0x394f20 */
 
-/* 80397F28 0018 .rodata    sym_80397F28                   bboxScale$3880                 */
-.global sym_80397F28
-sym_80397F28:
+/* 80397F28 0018 .rodata    bboxScale$3880                 data_80397F28                  */
+.global data_80397F28
+data_80397F28:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x394f28 */
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x394f38 */
 
-/* 80397F40 0018 .rodata    sym_80397F40                   bboxPosX$3881                  */
-.global sym_80397F40
-sym_80397F40:
+/* 80397F40 0018 .rodata    bboxPosX$3881                  data_80397F40                  */
+.global data_80397F40
+data_80397F40:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f40 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f50 */
 
-/* 80397F58 0018 .rodata    sym_80397F58                   bboxPosY$3882                  */
-.global sym_80397F58
-sym_80397F58:
+/* 80397F58 0018 .rodata    bboxPosY$3882                  data_80397F58                  */
+.global data_80397F58
+data_80397F58:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f58 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f68 */
 
-/* 80397F70 0018 .rodata    sym_80397F70                   rboxScale$3883                 */
-.global sym_80397F70
-sym_80397F70:
+/* 80397F70 0018 .rodata    rboxScale$3883                 data_80397F70                  */
+.global data_80397F70
+data_80397F70:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x394f70 */
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x394f80 */
 
-/* 80397F88 0018 .rodata    sym_80397F88                   rboxPosX$3884                  */
-.global sym_80397F88
-sym_80397F88:
+/* 80397F88 0018 .rodata    rboxPosX$3884                  data_80397F88                  */
+.global data_80397F88
+data_80397F88:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f88 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394f98 */
 
-/* 80397FA0 0018 .rodata    sym_80397FA0                   rboxPosY$3885                  */
-.global sym_80397FA0
-sym_80397FA0:
+/* 80397FA0 0018 .rodata    rboxPosY$3885                  data_80397FA0                  */
+.global data_80397FA0
+data_80397FA0:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394fa0 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394fb0 */
 
-/* 80397FB8 0018 .rodata    sym_80397FB8                   finfoScale$3886                */
-.global sym_80397FB8
-sym_80397FB8:
+/* 80397FB8 0018 .rodata    finfoScale$3886                data_80397FB8                  */
+.global data_80397FB8
+data_80397FB8:
 .byte 0x3f, 0x5e, 0xb8, 0x52, 0x3f, 0x5e, 0xb8, 0x52, 0x3f, 0x61, 0x47, 0xae, 0x3f, 0x5e, 0xb8, 0x52 /* baserom.dol+0x394fb8 */
 .byte 0x3f, 0x5e, 0xb8, 0x52, 0x3f, 0x5e, 0xb8, 0x52 /* baserom.dol+0x394fc8 */
 
-/* 80397FD0 0018 .rodata    sym_80397FD0                   finfoPosX$3887                 */
-.global sym_80397FD0
-sym_80397FD0:
+/* 80397FD0 0018 .rodata    finfoPosX$3887                 data_80397FD0                  */
+.global data_80397FD0
+data_80397FD0:
 .byte 0xc1, 0x88, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xc1, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394fd0 */
 .byte 0xc1, 0x40, 0x00, 0x00, 0xc2, 0x03, 0x33, 0x33 /* baserom.dol+0x394fe0 */
 
-/* 80397FE8 0018 .rodata    sym_80397FE8                   finfoPosY$3888                 */
-.global sym_80397FE8
-sym_80397FE8:
+/* 80397FE8 0018 .rodata    finfoPosY$3888                 data_80397FE8                  */
+.global data_80397FE8
+data_80397FE8:
 .byte 0x40, 0xd3, 0x33, 0x33, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394fe8 */
 .byte 0x3f, 0xa6, 0x66, 0x66, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x394ff8 */
 
-/* 80398000 0018 .rodata    sym_80398000                   fishnScale$3889                */
-.global sym_80398000
-sym_80398000:
+/* 80398000 0018 .rodata    fishnScale$3889                data_80398000                  */
+.global data_80398000
+data_80398000:
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x395000 */
 .byte 0x3f, 0x80, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x395010 */
 
-/* 80398018 0018 .rodata    sym_80398018                   fishnPosX$3890                 */
-.global sym_80398018
-sym_80398018:
+/* 80398018 0018 .rodata    fishnPosX$3890                 data_80398018                  */
+.global data_80398018
+data_80398018:
 .byte 0x40, 0x80, 0x00, 0x00, 0xc1, 0xa0, 0x00, 0x00, 0x3f, 0xa6, 0x66, 0x66, 0x40, 0xd3, 0x33, 0x33 /* baserom.dol+0x395018 */
 .byte 0x3f, 0xa6, 0x66, 0x66, 0x41, 0x13, 0x33, 0x33 /* baserom.dol+0x395028 */
 
-/* 80398030 0018 .rodata    sym_80398030                   fishnPosY$3891                 */
-.global sym_80398030
-sym_80398030:
+/* 80398030 0018 .rodata    fishnPosY$3891                 data_80398030                  */
+.global data_80398030
+data_80398030:
 .byte 0xc2, 0x90, 0x33, 0x33, 0x43, 0x01, 0x99, 0x9a, 0x00, 0x00, 0x00, 0x00, 0x40, 0xd3, 0x33, 0x33 /* baserom.dol+0x395030 */
 .byte 0x42, 0x03, 0x33, 0x33, 0x41, 0x3b, 0x33, 0x33 /* baserom.dol+0x395040 */
 
@@ -3537,98 +3433,130 @@ sym_80398030:
 /* 803BF0E8 000C .data      __vt__18dMeter_cursorHIO_c     __vt__18dMeter_cursorHIO_c     */
 .global __vt__18dMeter_cursorHIO_c
 __vt__18dMeter_cursorHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x10, 0x98 /* baserom.dol+0x3bc0e8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__18dMeter_cursorHIO_cFv
 
 /* 803BF0F4 000C .data      __vt__16dMeter_fmapHIO_c       __vt__16dMeter_fmapHIO_c       */
 .global __vt__16dMeter_fmapHIO_c
 __vt__16dMeter_fmapHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0b, 0xcc /* baserom.dol+0x3bc0f4 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__16dMeter_fmapHIO_cFv
 
 /* 803BF100 000C .data      __vt__19dMeter_mapIconHIO_c    __vt__19dMeter_mapIconHIO_c    */
 .global __vt__19dMeter_mapIconHIO_c
 __vt__19dMeter_mapIconHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x10, 0x28 /* baserom.dol+0x3bc100 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__19dMeter_mapIconHIO_cFv
 
 /* 803BF10C 000C .data      __vt__16dMeter_ringHIO_c       __vt__16dMeter_ringHIO_c       */
 .global __vt__16dMeter_ringHIO_c
 __vt__16dMeter_ringHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x10, 0xe0 /* baserom.dol+0x3bc10c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__16dMeter_ringHIO_cFv
 
 /* 803BF118 000C .data      __vt__16dMeter_drawHIO_c       __vt__16dMeter_drawHIO_c       */
 .global __vt__16dMeter_drawHIO_c
 __vt__16dMeter_drawHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x11, 0x28 /* baserom.dol+0x3bc118 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__16dMeter_drawHIO_cFv
 
 /* 803BF124 000C .data      __vt__25dMeter_drawLightDropHIO_c __vt__25dMeter_drawLightDropHIO_c */
 .global __vt__25dMeter_drawLightDropHIO_c
 __vt__25dMeter_drawLightDropHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0d, 0x58 /* baserom.dol+0x3bc124 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__25dMeter_drawLightDropHIO_cFv
 
 /* 803BF130 000C .data      __vt__24dMeter_drawMiniGameHIO_c __vt__24dMeter_drawMiniGameHIO_c */
 .global __vt__24dMeter_drawMiniGameHIO_c
 __vt__24dMeter_drawMiniGameHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0d, 0xe8 /* baserom.dol+0x3bc130 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__24dMeter_drawMiniGameHIO_cFv
 
 /* 803BF13C 000C .data      __vt__25dMeter_drawEmpButtonHIO_c __vt__25dMeter_drawEmpButtonHIO_c */
 .global __vt__25dMeter_drawEmpButtonHIO_c
 __vt__25dMeter_drawEmpButtonHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0d, 0xa0 /* baserom.dol+0x3bc13c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__25dMeter_drawEmpButtonHIO_cFv
 
 /* 803BF148 000C .data      __vt__21dMeter_drawSkillHIO_c  __vt__21dMeter_drawSkillHIO_c  */
 .global __vt__21dMeter_drawSkillHIO_c
 __vt__21dMeter_drawSkillHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0e, 0x30 /* baserom.dol+0x3bc148 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__21dMeter_drawSkillHIO_cFv
 
 /* 803BF154 000C .data      __vt__27dMeter_drawCalibrationHIO_c __vt__27dMeter_drawCalibrationHIO_c */
 .global __vt__27dMeter_drawCalibrationHIO_c
 __vt__27dMeter_drawCalibrationHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0e, 0x78 /* baserom.dol+0x3bc154 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__27dMeter_drawCalibrationHIO_cFv
 
 /* 803BF160 000C .data      __vt__22dMeter_drawInsectHIO_c __vt__22dMeter_drawInsectHIO_c */
 .global __vt__22dMeter_drawInsectHIO_c
 __vt__22dMeter_drawInsectHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0e, 0xc0 /* baserom.dol+0x3bc160 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__22dMeter_drawInsectHIO_cFv
 
 /* 803BF16C 000C .data      __vt__23dMeter_drawFishingHIO_c __vt__23dMeter_drawFishingHIO_c */
 .global __vt__23dMeter_drawFishingHIO_c
 __vt__23dMeter_drawFishingHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0f, 0x08 /* baserom.dol+0x3bc16c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__23dMeter_drawFishingHIO_cFv
 
 /* 803BF178 000C .data      __vt__22dMeter_drawLetterHIO_c __vt__22dMeter_drawLetterHIO_c */
 .global __vt__22dMeter_drawLetterHIO_c
 __vt__22dMeter_drawLetterHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0f, 0x50 /* baserom.dol+0x3bc178 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__22dMeter_drawLetterHIO_cFv
 
 /* 803BF184 000C .data      __vt__22dMeter_drawOptionHIO_c __vt__22dMeter_drawOptionHIO_c */
 .global __vt__22dMeter_drawOptionHIO_c
 __vt__22dMeter_drawOptionHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0f, 0x98 /* baserom.dol+0x3bc184 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__22dMeter_drawOptionHIO_cFv
 
 /* 803BF190 000C .data      __vt__23dMeter_drawCollectHIO_c __vt__23dMeter_drawCollectHIO_c */
 .global __vt__23dMeter_drawCollectHIO_c
 __vt__23dMeter_drawCollectHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x0f, 0xe0 /* baserom.dol+0x3bc190 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__23dMeter_drawCollectHIO_cFv
 
 /* 803BF19C 000C .data      __vt__16dMeter_menuHIO_c       __vt__16dMeter_menuHIO_c       */
 .global __vt__16dMeter_menuHIO_c
 __vt__16dMeter_menuHIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0x12, 0x3c /* baserom.dol+0x3bc19c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__16dMeter_menuHIO_cFv
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 8042EBB0 0000 .bss       sym_8042EBB0                   ...bss.0                       */
-.global sym_8042EBB0
-sym_8042EBB0:
+/* 8042EBB0 0000 .bss       ...bss.0                       data_8042EBB0                  */
+.global data_8042EBB0
+data_8042EBB0:
 
-/* 8042EBB0 000C .bss       d_d_meter_HIO__LIT_3766        @3766                          */
+/* 8042EBB0 000C .bss       @3766                          d_d_meter_HIO__LIT_3766        */
 .global d_d_meter_HIO__LIT_3766
 d_d_meter_HIO__LIT_3766:
 .skip 0xc
 
-/* 8042EBBC 000C .bss       d_d_meter_HIO__LIT_3767        @3767                          */
+/* 8042EBBC 000C .bss       @3767                          d_d_meter_HIO__LIT_3767        */
 .global d_d_meter_HIO__LIT_3767
 d_d_meter_HIO__LIT_3767:
 .skip 0xc
@@ -3638,7 +3566,7 @@ d_d_meter_HIO__LIT_3767:
 g_drawHIO:
 .skip 0xf28
 
-/* 8042FAF0 000C .bss       d_d_meter_HIO__LIT_3768        @3768                          */
+/* 8042FAF0 000C .bss       @3768                          d_d_meter_HIO__LIT_3768        */
 .global d_d_meter_HIO__LIT_3768
 d_d_meter_HIO__LIT_3768:
 .skip 0xc
@@ -3648,7 +3576,7 @@ d_d_meter_HIO__LIT_3768:
 g_ringHIO:
 .skip 0x158
 
-/* 8042FC54 000C .bss       d_d_meter_HIO__LIT_3769        @3769                          */
+/* 8042FC54 000C .bss       @3769                          d_d_meter_HIO__LIT_3769        */
 .global d_d_meter_HIO__LIT_3769
 d_d_meter_HIO__LIT_3769:
 .skip 0xc
@@ -3658,7 +3586,7 @@ d_d_meter_HIO__LIT_3769:
 g_fmapHIO:
 .skip 0x4a4
 
-/* 80430104 000C .bss       d_d_meter_HIO__LIT_3770        @3770                          */
+/* 80430104 000C .bss       @3770                          d_d_meter_HIO__LIT_3770        */
 .global d_d_meter_HIO__LIT_3770
 d_d_meter_HIO__LIT_3770:
 .skip 0xc
@@ -3684,769 +3612,769 @@ g_menuHIO:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804544E0 0004 .sdata2    d_d_meter_HIO__LIT_3787        @3787                          */
+/* 804544E0 0004 .sdata2    @3787                          d_d_meter_HIO__LIT_3787        */
 .global d_d_meter_HIO__LIT_3787
 d_d_meter_HIO__LIT_3787:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3340 */
 
-/* 804544E4 0004 .sdata2    d_d_meter_HIO__LIT_3788        @3788                          */
+/* 804544E4 0004 .sdata2    @3788                          d_d_meter_HIO__LIT_3788        */
 .global d_d_meter_HIO__LIT_3788
 d_d_meter_HIO__LIT_3788:
 .byte 0x3f, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d3344 */
 
-/* 804544E8 0004 .sdata2    d_d_meter_HIO__LIT_3789        @3789                          */
+/* 804544E8 0004 .sdata2    @3789                          d_d_meter_HIO__LIT_3789        */
 .global d_d_meter_HIO__LIT_3789
 d_d_meter_HIO__LIT_3789:
 .byte 0x3f, 0x8c, 0xcc, 0xcd /* baserom.dol+0x3d3348 */
 
-/* 804544EC 0004 .sdata2    d_d_meter_HIO__LIT_3790        @3790                          */
+/* 804544EC 0004 .sdata2    @3790                          d_d_meter_HIO__LIT_3790        */
 .global d_d_meter_HIO__LIT_3790
 d_d_meter_HIO__LIT_3790:
 .byte 0xc1, 0x40, 0x00, 0x00 /* baserom.dol+0x3d334c */
 
-/* 804544F0 0004 .sdata2    d_d_meter_HIO__LIT_3791        @3791                          */
+/* 804544F0 0004 .sdata2    @3791                          d_d_meter_HIO__LIT_3791        */
 .global d_d_meter_HIO__LIT_3791
 d_d_meter_HIO__LIT_3791:
 .byte 0x3f, 0xa6, 0x66, 0x66 /* baserom.dol+0x3d3350 */
 
-/* 804544F4 0004 .sdata2    d_d_meter_HIO__LIT_3792        @3792                          */
+/* 804544F4 0004 .sdata2    @3792                          d_d_meter_HIO__LIT_3792        */
 .global d_d_meter_HIO__LIT_3792
 d_d_meter_HIO__LIT_3792:
 .byte 0x3f, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d3354 */
 
-/* 804544F8 0004 .sdata2    d_d_meter_HIO__LIT_3793        @3793                          */
+/* 804544F8 0004 .sdata2    @3793                          d_d_meter_HIO__LIT_3793        */
 .global d_d_meter_HIO__LIT_3793
 d_d_meter_HIO__LIT_3793:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3358 */
 
-/* 804544FC 0004 .sdata2    d_d_meter_HIO__LIT_3794        @3794                          */
+/* 804544FC 0004 .sdata2    @3794                          d_d_meter_HIO__LIT_3794        */
 .global d_d_meter_HIO__LIT_3794
 d_d_meter_HIO__LIT_3794:
 .byte 0xc0, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d335c */
 
-/* 80454500 0004 .sdata2    d_d_meter_HIO__LIT_3795        @3795                          */
+/* 80454500 0004 .sdata2    @3795                          d_d_meter_HIO__LIT_3795        */
 .global d_d_meter_HIO__LIT_3795
 d_d_meter_HIO__LIT_3795:
 .byte 0x40, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3360 */
 
-/* 80454504 0004 .sdata2    d_d_meter_HIO__LIT_3796        @3796                          */
+/* 80454504 0004 .sdata2    @3796                          d_d_meter_HIO__LIT_3796        */
 .global d_d_meter_HIO__LIT_3796
 d_d_meter_HIO__LIT_3796:
 .byte 0x3f, 0x66, 0x66, 0x66 /* baserom.dol+0x3d3364 */
 
-/* 80454508 0004 .sdata2    d_d_meter_HIO__LIT_3797        @3797                          */
+/* 80454508 0004 .sdata2    @3797                          d_d_meter_HIO__LIT_3797        */
 .global d_d_meter_HIO__LIT_3797
 d_d_meter_HIO__LIT_3797:
 .byte 0xc1, 0xb2, 0x66, 0x66 /* baserom.dol+0x3d3368 */
 
-/* 8045450C 0004 .sdata2    d_d_meter_HIO__LIT_3798        @3798                          */
+/* 8045450C 0004 .sdata2    @3798                          d_d_meter_HIO__LIT_3798        */
 .global d_d_meter_HIO__LIT_3798
 d_d_meter_HIO__LIT_3798:
 .byte 0x41, 0xc7, 0x33, 0x33 /* baserom.dol+0x3d336c */
 
-/* 80454510 0004 .sdata2    d_d_meter_HIO__LIT_3799        @3799                          */
+/* 80454510 0004 .sdata2    @3799                          d_d_meter_HIO__LIT_3799        */
 .global d_d_meter_HIO__LIT_3799
 d_d_meter_HIO__LIT_3799:
 .byte 0x41, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d3370 */
 
-/* 80454514 0004 .sdata2    d_d_meter_HIO__LIT_3800        @3800                          */
+/* 80454514 0004 .sdata2    @3800                          d_d_meter_HIO__LIT_3800        */
 .global d_d_meter_HIO__LIT_3800
 d_d_meter_HIO__LIT_3800:
 .byte 0xc1, 0xc7, 0x33, 0x33 /* baserom.dol+0x3d3374 */
 
-/* 80454518 0004 .sdata2    d_d_meter_HIO__LIT_3801        @3801                          */
+/* 80454518 0004 .sdata2    @3801                          d_d_meter_HIO__LIT_3801        */
 .global d_d_meter_HIO__LIT_3801
 d_d_meter_HIO__LIT_3801:
 .byte 0xc1, 0xdc, 0x00, 0x00 /* baserom.dol+0x3d3378 */
 
-/* 8045451C 0004 .sdata2    d_d_meter_HIO__LIT_3802        @3802                          */
+/* 8045451C 0004 .sdata2    @3802                          d_d_meter_HIO__LIT_3802        */
 .global d_d_meter_HIO__LIT_3802
 d_d_meter_HIO__LIT_3802:
 .byte 0x41, 0xd0, 0x00, 0x00 /* baserom.dol+0x3d337c */
 
-/* 80454520 0004 .sdata2    d_d_meter_HIO__LIT_3828        @3828                          */
+/* 80454520 0004 .sdata2    @3828                          d_d_meter_HIO__LIT_3828        */
 .global d_d_meter_HIO__LIT_3828
 d_d_meter_HIO__LIT_3828:
 .byte 0x3f, 0x82, 0x8f, 0x5c /* baserom.dol+0x3d3380 */
 
-/* 80454524 0004 .sdata2    d_d_meter_HIO__LIT_3829        @3829                          */
+/* 80454524 0004 .sdata2    @3829                          d_d_meter_HIO__LIT_3829        */
 .global d_d_meter_HIO__LIT_3829
 d_d_meter_HIO__LIT_3829:
 .byte 0x3f, 0x7a, 0xe1, 0x48 /* baserom.dol+0x3d3384 */
 
-/* 80454528 0004 .sdata2    d_d_meter_HIO__LIT_3830        @3830                          */
+/* 80454528 0004 .sdata2    @3830                          d_d_meter_HIO__LIT_3830        */
 .global d_d_meter_HIO__LIT_3830
 d_d_meter_HIO__LIT_3830:
 .byte 0x3e, 0x99, 0x99, 0x9a /* baserom.dol+0x3d3388 */
 
-/* 8045452C 0004 .sdata2    d_d_meter_HIO__LIT_3831        @3831                          */
+/* 8045452C 0004 .sdata2    @3831                          d_d_meter_HIO__LIT_3831        */
 .global d_d_meter_HIO__LIT_3831
 d_d_meter_HIO__LIT_3831:
 .byte 0x42, 0x34, 0x00, 0x00 /* baserom.dol+0x3d338c */
 
-/* 80454530 0004 .sdata2    d_d_meter_HIO__LIT_3832        @3832                          */
+/* 80454530 0004 .sdata2    @3832                          d_d_meter_HIO__LIT_3832        */
 .global d_d_meter_HIO__LIT_3832
 d_d_meter_HIO__LIT_3832:
 .byte 0x42, 0x18, 0x00, 0x00 /* baserom.dol+0x3d3390 */
 
-/* 80454534 0004 .sdata2    d_d_meter_HIO__LIT_3867        @3867                          */
+/* 80454534 0004 .sdata2    @3867                          d_d_meter_HIO__LIT_3867        */
 .global d_d_meter_HIO__LIT_3867
 d_d_meter_HIO__LIT_3867:
 .byte 0xc1, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d3394 */
 
-/* 80454538 0004 .sdata2    d_d_meter_HIO__LIT_3902        @3902                          */
+/* 80454538 0004 .sdata2    @3902                          d_d_meter_HIO__LIT_3902        */
 .global d_d_meter_HIO__LIT_3902
 d_d_meter_HIO__LIT_3902:
 .byte 0x3f, 0x54, 0x7a, 0xe1 /* baserom.dol+0x3d3398 */
 
-/* 8045453C 0004 .sdata2    d_d_meter_HIO__LIT_3903        @3903                          */
+/* 8045453C 0004 .sdata2    @3903                          d_d_meter_HIO__LIT_3903        */
 .global d_d_meter_HIO__LIT_3903
 d_d_meter_HIO__LIT_3903:
 .byte 0x40, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d339c */
 
-/* 80454540 0004 .sdata2    d_d_meter_HIO__LIT_3904        @3904                          */
+/* 80454540 0004 .sdata2    @3904                          d_d_meter_HIO__LIT_3904        */
 .global d_d_meter_HIO__LIT_3904
 d_d_meter_HIO__LIT_3904:
 .byte 0xc1, 0xb1, 0x99, 0x9a /* baserom.dol+0x3d33a0 */
 
-/* 80454544 0004 .sdata2    d_d_meter_HIO__LIT_3905        @3905                          */
+/* 80454544 0004 .sdata2    @3905                          d_d_meter_HIO__LIT_3905        */
 .global d_d_meter_HIO__LIT_3905
 d_d_meter_HIO__LIT_3905:
 .byte 0xc3, 0x3d, 0x80, 0x00 /* baserom.dol+0x3d33a4 */
 
-/* 80454548 0004 .sdata2    d_d_meter_HIO__LIT_3906        @3906                          */
+/* 80454548 0004 .sdata2    @3906                          d_d_meter_HIO__LIT_3906        */
 .global d_d_meter_HIO__LIT_3906
 d_d_meter_HIO__LIT_3906:
 .byte 0xc0, 0x7c, 0xcc, 0xcd /* baserom.dol+0x3d33a8 */
 
-/* 8045454C 0004 .sdata2    d_d_meter_HIO__LIT_3907        @3907                          */
+/* 8045454C 0004 .sdata2    @3907                          d_d_meter_HIO__LIT_3907        */
 .global d_d_meter_HIO__LIT_3907
 d_d_meter_HIO__LIT_3907:
 .byte 0xc3, 0x3c, 0x00, 0x00 /* baserom.dol+0x3d33ac */
 
-/* 80454550 0004 .sdata2    LIT_3912                       @3912                          */
+/* 80454550 0004 .sdata2    @3912                          LIT_3912                       */
 .global LIT_3912
 LIT_3912:
 .byte 0x42, 0x9a, 0x00, 0x00 /* baserom.dol+0x3d33b0 */
 
-/* 80454554 0004 .sdata2    LIT_3913                       @3913                          */
+/* 80454554 0004 .sdata2    @3913                          LIT_3913                       */
 .global LIT_3913
 LIT_3913:
 .byte 0x42, 0x2c, 0x00, 0x00 /* baserom.dol+0x3d33b4 */
 
-/* 80454558 0004 .sdata2    LIT_3914                       @3914                          */
+/* 80454558 0004 .sdata2    @3914                          LIT_3914                       */
 .global LIT_3914
 LIT_3914:
 .byte 0x42, 0xee, 0x00, 0x00 /* baserom.dol+0x3d33b8 */
 
-/* 8045455C 0004 .sdata2    LIT_3915                       @3915                          */
+/* 8045455C 0004 .sdata2    @3915                          LIT_3915                       */
 .global LIT_3915
 LIT_3915:
 .byte 0x41, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d33bc */
 
-/* 80454560 0004 .sdata2    d_d_meter_HIO__LIT_3916        @3916                          */
+/* 80454560 0004 .sdata2    @3916                          d_d_meter_HIO__LIT_3916        */
 .global d_d_meter_HIO__LIT_3916
 d_d_meter_HIO__LIT_3916:
 .byte 0xc2, 0x08, 0x00, 0x00 /* baserom.dol+0x3d33c0 */
 
-/* 80454564 0004 .sdata2    d_d_meter_HIO__LIT_3921        @3921                          */
+/* 80454564 0004 .sdata2    @3921                          d_d_meter_HIO__LIT_3921        */
 .global d_d_meter_HIO__LIT_3921
 d_d_meter_HIO__LIT_3921:
 .byte 0x3f, 0x40, 0x00, 0x00 /* baserom.dol+0x3d33c4 */
 
-/* 80454568 0004 .sdata2    d_d_meter_HIO__LIT_3956        @3956                          */
+/* 80454568 0004 .sdata2    @3956                          d_d_meter_HIO__LIT_3956        */
 .global d_d_meter_HIO__LIT_3956
 d_d_meter_HIO__LIT_3956:
 .byte 0x42, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d33c8 */
 
-/* 8045456C 0004 .sdata2    d_d_meter_HIO__LIT_3957        @3957                          */
+/* 8045456C 0004 .sdata2    @3957                          d_d_meter_HIO__LIT_3957        */
 .global d_d_meter_HIO__LIT_3957
 d_d_meter_HIO__LIT_3957:
 .byte 0x3f, 0x73, 0x33, 0x33 /* baserom.dol+0x3d33cc */
 
-/* 80454570 0004 .sdata2    d_d_meter_HIO__LIT_4028        @4028                          */
+/* 80454570 0004 .sdata2    @4028                          d_d_meter_HIO__LIT_4028        */
 .global d_d_meter_HIO__LIT_4028
 d_d_meter_HIO__LIT_4028:
 .byte 0x40, 0x20, 0x00, 0x00 /* baserom.dol+0x3d33d0 */
 
-/* 80454574 0004 .sdata2    d_d_meter_HIO__LIT_4029        @4029                          */
+/* 80454574 0004 .sdata2    @4029                          d_d_meter_HIO__LIT_4029        */
 .global d_d_meter_HIO__LIT_4029
 d_d_meter_HIO__LIT_4029:
 .byte 0x3f, 0x45, 0xcf, 0xff /* baserom.dol+0x3d33d4 */
 
-/* 80454578 0004 .sdata2    d_d_meter_HIO__LIT_4030        @4030                          */
+/* 80454578 0004 .sdata2    @4030                          d_d_meter_HIO__LIT_4030        */
 .global d_d_meter_HIO__LIT_4030
 d_d_meter_HIO__LIT_4030:
 .byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d33d8 */
 
-/* 8045457C 0004 .sdata2    d_d_meter_HIO__LIT_4031        @4031                          */
+/* 8045457C 0004 .sdata2    @4031                          d_d_meter_HIO__LIT_4031        */
 .global d_d_meter_HIO__LIT_4031
 d_d_meter_HIO__LIT_4031:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d33dc */
 
-/* 80454580 0004 .sdata2    d_d_meter_HIO__LIT_4032        @4032                          */
+/* 80454580 0004 .sdata2    @4032                          d_d_meter_HIO__LIT_4032        */
 .global d_d_meter_HIO__LIT_4032
 d_d_meter_HIO__LIT_4032:
 .byte 0x3f, 0x93, 0x33, 0x33 /* baserom.dol+0x3d33e0 */
 
-/* 80454584 0004 .sdata2    d_d_meter_HIO__LIT_4033        @4033                          */
+/* 80454584 0004 .sdata2    @4033                          d_d_meter_HIO__LIT_4033        */
 .global d_d_meter_HIO__LIT_4033
 d_d_meter_HIO__LIT_4033:
 .byte 0x42, 0x0c, 0x00, 0x00 /* baserom.dol+0x3d33e4 */
 
-/* 80454588 0004 .sdata2    d_d_meter_HIO__LIT_4034        @4034                          */
+/* 80454588 0004 .sdata2    @4034                          d_d_meter_HIO__LIT_4034        */
 .global d_d_meter_HIO__LIT_4034
 d_d_meter_HIO__LIT_4034:
 .byte 0x43, 0x2f, 0x00, 0x00 /* baserom.dol+0x3d33e8 */
 
-/* 8045458C 0004 .sdata2    d_d_meter_HIO__LIT_4035        @4035                          */
+/* 8045458C 0004 .sdata2    @4035                          d_d_meter_HIO__LIT_4035        */
 .global d_d_meter_HIO__LIT_4035
 d_d_meter_HIO__LIT_4035:
 .byte 0xc3, 0xc4, 0x00, 0x00 /* baserom.dol+0x3d33ec */
 
-/* 80454590 0004 .sdata2    d_d_meter_HIO__LIT_4036        @4036                          */
+/* 80454590 0004 .sdata2    @4036                          d_d_meter_HIO__LIT_4036        */
 .global d_d_meter_HIO__LIT_4036
 d_d_meter_HIO__LIT_4036:
 .byte 0xc1, 0xd0, 0x00, 0x00 /* baserom.dol+0x3d33f0 */
 
-/* 80454594 0004 .sdata2    d_d_meter_HIO__LIT_4037        @4037                          */
+/* 80454594 0004 .sdata2    @4037                          d_d_meter_HIO__LIT_4037        */
 .global d_d_meter_HIO__LIT_4037
 d_d_meter_HIO__LIT_4037:
 .byte 0x42, 0x86, 0x00, 0x00 /* baserom.dol+0x3d33f4 */
 
-/* 80454598 0004 .sdata2    d_d_meter_HIO__LIT_4038        @4038                          */
+/* 80454598 0004 .sdata2    @4038                          d_d_meter_HIO__LIT_4038        */
 .global d_d_meter_HIO__LIT_4038
 d_d_meter_HIO__LIT_4038:
 .byte 0x41, 0x40, 0x00, 0x00 /* baserom.dol+0x3d33f8 */
 
-/* 8045459C 0004 .sdata2    d_d_meter_HIO__LIT_4039        @4039                          */
+/* 8045459C 0004 .sdata2    @4039                          d_d_meter_HIO__LIT_4039        */
 .global d_d_meter_HIO__LIT_4039
 d_d_meter_HIO__LIT_4039:
 .byte 0x41, 0x88, 0x00, 0x00 /* baserom.dol+0x3d33fc */
 
-/* 804545A0 0004 .sdata2    d_d_meter_HIO__LIT_4040        @4040                          */
+/* 804545A0 0004 .sdata2    @4040                          d_d_meter_HIO__LIT_4040        */
 .global d_d_meter_HIO__LIT_4040
 d_d_meter_HIO__LIT_4040:
 .byte 0xc1, 0x88, 0x00, 0x00 /* baserom.dol+0x3d3400 */
 
-/* 804545A4 0004 .sdata2    d_d_meter_HIO__LIT_4041        @4041                          */
+/* 804545A4 0004 .sdata2    @4041                          d_d_meter_HIO__LIT_4041        */
 .global d_d_meter_HIO__LIT_4041
 d_d_meter_HIO__LIT_4041:
 .byte 0xc0, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d3404 */
 
-/* 804545A8 0004 .sdata2    d_d_meter_HIO__LIT_4042        @4042                          */
+/* 804545A8 0004 .sdata2    @4042                          d_d_meter_HIO__LIT_4042        */
 .global d_d_meter_HIO__LIT_4042
 d_d_meter_HIO__LIT_4042:
 .byte 0xc1, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3408 */
 
-/* 804545AC 0004 .sdata2    d_d_meter_HIO__LIT_4071        @4071                          */
+/* 804545AC 0004 .sdata2    @4071                          d_d_meter_HIO__LIT_4071        */
 .global d_d_meter_HIO__LIT_4071
 d_d_meter_HIO__LIT_4071:
 .byte 0x3f, 0x99, 0x99, 0x9a /* baserom.dol+0x3d340c */
 
-/* 804545B0 0004 .sdata2    d_d_meter_HIO__LIT_4072        @4072                          */
+/* 804545B0 0004 .sdata2    @4072                          d_d_meter_HIO__LIT_4072        */
 .global d_d_meter_HIO__LIT_4072
 d_d_meter_HIO__LIT_4072:
 .byte 0x43, 0x4f, 0x00, 0x00 /* baserom.dol+0x3d3410 */
 
-/* 804545B4 0004 .sdata2    d_d_meter_HIO__LIT_4073        @4073                          */
+/* 804545B4 0004 .sdata2    @4073                          d_d_meter_HIO__LIT_4073        */
 .global d_d_meter_HIO__LIT_4073
 d_d_meter_HIO__LIT_4073:
 .byte 0xc2, 0x2c, 0x00, 0x00 /* baserom.dol+0x3d3414 */
 
-/* 804545B8 0004 .sdata2    d_d_meter_HIO__LIT_4074        @4074                          */
+/* 804545B8 0004 .sdata2    @4074                          d_d_meter_HIO__LIT_4074        */
 .global d_d_meter_HIO__LIT_4074
 d_d_meter_HIO__LIT_4074:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3418 */
 
-/* 804545BC 0004 .sdata2    d_d_meter_HIO__LIT_4075        @4075                          */
+/* 804545BC 0004 .sdata2    @4075                          d_d_meter_HIO__LIT_4075        */
 .global d_d_meter_HIO__LIT_4075
 d_d_meter_HIO__LIT_4075:
 .byte 0x43, 0x9e, 0x80, 0x00 /* baserom.dol+0x3d341c */
 
-/* 804545C0 0004 .sdata2    d_d_meter_HIO__LIT_4076        @4076                          */
+/* 804545C0 0004 .sdata2    @4076                          d_d_meter_HIO__LIT_4076        */
 .global d_d_meter_HIO__LIT_4076
 d_d_meter_HIO__LIT_4076:
 .byte 0x3f, 0x33, 0x33, 0x33 /* baserom.dol+0x3d3420 */
 
-/* 804545C4 0004 .sdata2    d_d_meter_HIO__LIT_4077        @4077                          */
+/* 804545C4 0004 .sdata2    @4077                          d_d_meter_HIO__LIT_4077        */
 .global d_d_meter_HIO__LIT_4077
 d_d_meter_HIO__LIT_4077:
 .byte 0xc3, 0x89, 0x80, 0x00 /* baserom.dol+0x3d3424 */
 
-/* 804545C8 0004 .sdata2    d_d_meter_HIO__LIT_4078        @4078                          */
+/* 804545C8 0004 .sdata2    @4078                          d_d_meter_HIO__LIT_4078        */
 .global d_d_meter_HIO__LIT_4078
 d_d_meter_HIO__LIT_4078:
 .byte 0x42, 0x98, 0x00, 0x00 /* baserom.dol+0x3d3428 */
 
-/* 804545CC 0004 .sdata2    d_d_meter_HIO__LIT_4079        @4079                          */
+/* 804545CC 0004 .sdata2    @4079                          d_d_meter_HIO__LIT_4079        */
 .global d_d_meter_HIO__LIT_4079
 d_d_meter_HIO__LIT_4079:
 .byte 0xc1, 0xb0, 0x00, 0x00 /* baserom.dol+0x3d342c */
 
-/* 804545D0 0004 .sdata2    d_d_meter_HIO__LIT_4080        @4080                          */
+/* 804545D0 0004 .sdata2    @4080                          d_d_meter_HIO__LIT_4080        */
 .global d_d_meter_HIO__LIT_4080
 d_d_meter_HIO__LIT_4080:
 .byte 0xc1, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d3430 */
 
-/* 804545D4 0004 .sdata2    d_d_meter_HIO__LIT_4081        @4081                          */
+/* 804545D4 0004 .sdata2    @4081                          d_d_meter_HIO__LIT_4081        */
 .global d_d_meter_HIO__LIT_4081
 d_d_meter_HIO__LIT_4081:
 .byte 0x3f, 0xb3, 0x33, 0x33 /* baserom.dol+0x3d3434 */
 
-/* 804545D8 0004 .sdata2    d_d_meter_HIO__LIT_4082        @4082                          */
+/* 804545D8 0004 .sdata2    @4082                          d_d_meter_HIO__LIT_4082        */
 .global d_d_meter_HIO__LIT_4082
 d_d_meter_HIO__LIT_4082:
 .byte 0x43, 0x46, 0x00, 0x00 /* baserom.dol+0x3d3438 */
 
-/* 804545DC 0004 .sdata2    d_d_meter_HIO__LIT_4083        @4083                          */
+/* 804545DC 0004 .sdata2    @4083                          d_d_meter_HIO__LIT_4083        */
 .global d_d_meter_HIO__LIT_4083
 d_d_meter_HIO__LIT_4083:
 .byte 0x43, 0x20, 0x00, 0x00 /* baserom.dol+0x3d343c */
 
-/* 804545E0 0004 .sdata2    d_d_meter_HIO__LIT_4084        @4084                          */
+/* 804545E0 0004 .sdata2    @4084                          d_d_meter_HIO__LIT_4084        */
 .global d_d_meter_HIO__LIT_4084
 d_d_meter_HIO__LIT_4084:
 .byte 0x41, 0xe0, 0x00, 0x00 /* baserom.dol+0x3d3440 */
 
-/* 804545E4 0004 .sdata2    d_d_meter_HIO__LIT_4085        @4085                          */
+/* 804545E4 0004 .sdata2    @4085                          d_d_meter_HIO__LIT_4085        */
 .global d_d_meter_HIO__LIT_4085
 d_d_meter_HIO__LIT_4085:
 .byte 0xc1, 0x90, 0x00, 0x00 /* baserom.dol+0x3d3444 */
 
-/* 804545E8 0004 .sdata2    d_d_meter_HIO__LIT_4086        @4086                          */
+/* 804545E8 0004 .sdata2    @4086                          d_d_meter_HIO__LIT_4086        */
 .global d_d_meter_HIO__LIT_4086
 d_d_meter_HIO__LIT_4086:
 .byte 0x41, 0xb8, 0x00, 0x00 /* baserom.dol+0x3d3448 */
 
-/* 804545EC 0004 .sdata2    d_d_meter_HIO__LIT_4087        @4087                          */
+/* 804545EC 0004 .sdata2    @4087                          d_d_meter_HIO__LIT_4087        */
 .global d_d_meter_HIO__LIT_4087
 d_d_meter_HIO__LIT_4087:
 .byte 0xc1, 0x80, 0x00, 0x00 /* baserom.dol+0x3d344c */
 
-/* 804545F0 0004 .sdata2    d_d_meter_HIO__LIT_4088        @4088                          */
+/* 804545F0 0004 .sdata2    @4088                          d_d_meter_HIO__LIT_4088        */
 .global d_d_meter_HIO__LIT_4088
 d_d_meter_HIO__LIT_4088:
 .byte 0x43, 0x85, 0x80, 0x00 /* baserom.dol+0x3d3450 */
 
-/* 804545F4 0004 .sdata2    d_d_meter_HIO__LIT_4089        @4089                          */
+/* 804545F4 0004 .sdata2    @4089                          d_d_meter_HIO__LIT_4089        */
 .global d_d_meter_HIO__LIT_4089
 d_d_meter_HIO__LIT_4089:
 .byte 0x43, 0x90, 0x00, 0x00 /* baserom.dol+0x3d3454 */
 
-/* 804545F8 0004 .sdata2    d_d_meter_HIO__LIT_4090        @4090                          */
+/* 804545F8 0004 .sdata2    @4090                          d_d_meter_HIO__LIT_4090        */
 .global d_d_meter_HIO__LIT_4090
 d_d_meter_HIO__LIT_4090:
 .byte 0xc1, 0xe8, 0x00, 0x00 /* baserom.dol+0x3d3458 */
 
-/* 804545FC 0004 .sdata2    d_d_meter_HIO__LIT_4091        @4091                          */
+/* 804545FC 0004 .sdata2    @4091                          d_d_meter_HIO__LIT_4091        */
 .global d_d_meter_HIO__LIT_4091
 d_d_meter_HIO__LIT_4091:
 .byte 0x42, 0x48, 0x00, 0x00 /* baserom.dol+0x3d345c */
 
-/* 80454600 0004 .sdata2    d_d_meter_HIO__LIT_4092        @4092                          */
+/* 80454600 0004 .sdata2    @4092                          d_d_meter_HIO__LIT_4092        */
 .global d_d_meter_HIO__LIT_4092
 d_d_meter_HIO__LIT_4092:
 .byte 0x3f, 0xe6, 0x66, 0x66 /* baserom.dol+0x3d3460 */
 
-/* 80454604 0004 .sdata2    d_d_meter_HIO__LIT_4093        @4093                          */
+/* 80454604 0004 .sdata2    @4093                          d_d_meter_HIO__LIT_4093        */
 .global d_d_meter_HIO__LIT_4093
 d_d_meter_HIO__LIT_4093:
 .byte 0x3f, 0x19, 0x99, 0x9a /* baserom.dol+0x3d3464 */
 
-/* 80454608 0004 .sdata2    d_d_meter_HIO__LIT_4126        @4126                          */
+/* 80454608 0004 .sdata2    @4126                          d_d_meter_HIO__LIT_4126        */
 .global d_d_meter_HIO__LIT_4126
 d_d_meter_HIO__LIT_4126:
 .byte 0x3f, 0x42, 0x8f, 0x5c /* baserom.dol+0x3d3468 */
 
-/* 8045460C 0004 .sdata2    d_d_meter_HIO__LIT_4127        @4127                          */
+/* 8045460C 0004 .sdata2    @4127                          d_d_meter_HIO__LIT_4127        */
 .global d_d_meter_HIO__LIT_4127
 d_d_meter_HIO__LIT_4127:
 .byte 0x41, 0x30, 0x00, 0x00 /* baserom.dol+0x3d346c */
 
-/* 80454610 0004 .sdata2    d_d_meter_HIO__LIT_4128        @4128                          */
+/* 80454610 0004 .sdata2    @4128                          d_d_meter_HIO__LIT_4128        */
 .global d_d_meter_HIO__LIT_4128
 d_d_meter_HIO__LIT_4128:
 .byte 0x40, 0xd3, 0x33, 0x33 /* baserom.dol+0x3d3470 */
 
-/* 80454614 0004 .sdata2    d_d_meter_HIO__LIT_4129        @4129                          */
+/* 80454614 0004 .sdata2    @4129                          d_d_meter_HIO__LIT_4129        */
 .global d_d_meter_HIO__LIT_4129
 d_d_meter_HIO__LIT_4129:
 .byte 0xc2, 0x0c, 0x00, 0x00 /* baserom.dol+0x3d3474 */
 
-/* 80454618 0004 .sdata2    d_d_meter_HIO__LIT_4130        @4130                          */
+/* 80454618 0004 .sdata2    @4130                          d_d_meter_HIO__LIT_4130        */
 .global d_d_meter_HIO__LIT_4130
 d_d_meter_HIO__LIT_4130:
 .byte 0x3e, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d3478 */
 
-/* 8045461C 0004 .sdata2    d_d_meter_HIO__LIT_4131        @4131                          */
+/* 8045461C 0004 .sdata2    @4131                          d_d_meter_HIO__LIT_4131        */
 .global d_d_meter_HIO__LIT_4131
 d_d_meter_HIO__LIT_4131:
 .byte 0x41, 0x98, 0x00, 0x00 /* baserom.dol+0x3d347c */
 
-/* 80454620 0004 .sdata2    d_d_meter_HIO__LIT_4132        @4132                          */
+/* 80454620 0004 .sdata2    @4132                          d_d_meter_HIO__LIT_4132        */
 .global d_d_meter_HIO__LIT_4132
 d_d_meter_HIO__LIT_4132:
 .byte 0x3d, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d3480 */
 
-/* 80454624 0004 .sdata2    LIT_4257                       @4257                          */
+/* 80454624 0004 .sdata2    @4257                          LIT_4257                       */
 .global LIT_4257
 LIT_4257:
 .byte 0x42, 0x20, 0x00, 0x00 /* baserom.dol+0x3d3484 */
 
-/* 80454628 0004 .sdata2    LIT_4258                       @4258                          */
+/* 80454628 0004 .sdata2    @4258                          LIT_4258                       */
 .global LIT_4258
 LIT_4258:
 .byte 0xc0, 0xb3, 0x33, 0x33 /* baserom.dol+0x3d3488 */
 
-/* 8045462C 0004 .sdata2    d_d_meter_HIO__LIT_4259        @4259                          */
+/* 8045462C 0004 .sdata2    @4259                          d_d_meter_HIO__LIT_4259        */
 .global d_d_meter_HIO__LIT_4259
 d_d_meter_HIO__LIT_4259:
 .byte 0xc1, 0x70, 0x00, 0x00 /* baserom.dol+0x3d348c */
 
-/* 80454630 0004 .sdata2    d_d_meter_HIO__LIT_4260        @4260                          */
+/* 80454630 0004 .sdata2    @4260                          d_d_meter_HIO__LIT_4260        */
 .global d_d_meter_HIO__LIT_4260
 d_d_meter_HIO__LIT_4260:
 .byte 0x3e, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d3490 */
 
-/* 80454634 0004 .sdata2    d_d_meter_HIO__LIT_4261        @4261                          */
+/* 80454634 0004 .sdata2    @4261                          d_d_meter_HIO__LIT_4261        */
 .global d_d_meter_HIO__LIT_4261
 d_d_meter_HIO__LIT_4261:
 .byte 0x41, 0x90, 0x00, 0x00 /* baserom.dol+0x3d3494 */
 
-/* 80454638 0004 .sdata2    d_d_meter_HIO__LIT_4262        @4262                          */
+/* 80454638 0004 .sdata2    @4262                          d_d_meter_HIO__LIT_4262        */
 .global d_d_meter_HIO__LIT_4262
 d_d_meter_HIO__LIT_4262:
 .byte 0x3f, 0x0c, 0xcc, 0xcd /* baserom.dol+0x3d3498 */
 
-/* 8045463C 0004 .sdata2    d_d_meter_HIO__LIT_4263        @4263                          */
+/* 8045463C 0004 .sdata2    @4263                          d_d_meter_HIO__LIT_4263        */
 .global d_d_meter_HIO__LIT_4263
 d_d_meter_HIO__LIT_4263:
 .byte 0xc2, 0x28, 0x00, 0x00 /* baserom.dol+0x3d349c */
 
-/* 80454640 0004 .sdata2    d_d_meter_HIO__LIT_4264        @4264                          */
+/* 80454640 0004 .sdata2    @4264                          d_d_meter_HIO__LIT_4264        */
 .global d_d_meter_HIO__LIT_4264
 d_d_meter_HIO__LIT_4264:
 .byte 0x41, 0x00, 0x00, 0x00 /* baserom.dol+0x3d34a0 */
 
-/* 80454644 0004 .sdata2    d_d_meter_HIO__LIT_4265        @4265                          */
+/* 80454644 0004 .sdata2    @4265                          d_d_meter_HIO__LIT_4265        */
 .global d_d_meter_HIO__LIT_4265
 d_d_meter_HIO__LIT_4265:
 .byte 0x3f, 0x6b, 0x85, 0x1f /* baserom.dol+0x3d34a4 */
 
-/* 80454648 0004 .sdata2    d_d_meter_HIO__LIT_4266        @4266                          */
+/* 80454648 0004 .sdata2    @4266                          d_d_meter_HIO__LIT_4266        */
 .global d_d_meter_HIO__LIT_4266
 d_d_meter_HIO__LIT_4266:
 .byte 0xc2, 0x7c, 0x00, 0x00 /* baserom.dol+0x3d34a8 */
 
-/* 8045464C 0004 .sdata2    d_d_meter_HIO__LIT_4267        @4267                          */
+/* 8045464C 0004 .sdata2    @4267                          d_d_meter_HIO__LIT_4267        */
 .global d_d_meter_HIO__LIT_4267
 d_d_meter_HIO__LIT_4267:
 .byte 0xc2, 0x44, 0x00, 0x00 /* baserom.dol+0x3d34ac */
 
-/* 80454650 0004 .sdata2    d_d_meter_HIO__LIT_4268        @4268                          */
+/* 80454650 0004 .sdata2    @4268                          d_d_meter_HIO__LIT_4268        */
 .global d_d_meter_HIO__LIT_4268
 d_d_meter_HIO__LIT_4268:
 .byte 0xc2, 0x78, 0x00, 0x00 /* baserom.dol+0x3d34b0 */
 
-/* 80454654 0004 .sdata2    d_d_meter_HIO__LIT_4269        @4269                          */
+/* 80454654 0004 .sdata2    @4269                          d_d_meter_HIO__LIT_4269        */
 .global d_d_meter_HIO__LIT_4269
 d_d_meter_HIO__LIT_4269:
 .byte 0xc2, 0x40, 0x00, 0x00 /* baserom.dol+0x3d34b4 */
 
-/* 80454658 0004 .sdata2    d_d_meter_HIO__LIT_4270        @4270                          */
+/* 80454658 0004 .sdata2    @4270                          d_d_meter_HIO__LIT_4270        */
 .global d_d_meter_HIO__LIT_4270
 d_d_meter_HIO__LIT_4270:
 .byte 0xc0, 0x0c, 0xcc, 0xcd /* baserom.dol+0x3d34b8 */
 
-/* 8045465C 0004 .sdata2    d_d_meter_HIO__LIT_4271        @4271                          */
+/* 8045465C 0004 .sdata2    @4271                          d_d_meter_HIO__LIT_4271        */
 .global d_d_meter_HIO__LIT_4271
 d_d_meter_HIO__LIT_4271:
 .byte 0xbf, 0xa6, 0x66, 0x66 /* baserom.dol+0x3d34bc */
 
-/* 80454660 0004 .sdata2    d_d_meter_HIO__LIT_4272        @4272                          */
+/* 80454660 0004 .sdata2    @4272                          d_d_meter_HIO__LIT_4272        */
 .global d_d_meter_HIO__LIT_4272
 d_d_meter_HIO__LIT_4272:
 .byte 0xc1, 0x13, 0x33, 0x33 /* baserom.dol+0x3d34c0 */
 
-/* 80454664 0004 .sdata2    LIT_4273                       @4273                          */
+/* 80454664 0004 .sdata2    @4273                          LIT_4273                       */
 .global LIT_4273
 LIT_4273:
 .byte 0xc2, 0x82, 0x00, 0x00 /* baserom.dol+0x3d34c4 */
 
-/* 80454668 0004 .sdata2    LIT_4274                       @4274                          */
+/* 80454668 0004 .sdata2    @4274                          LIT_4274                       */
 .global LIT_4274
 LIT_4274:
 .byte 0x40, 0x13, 0x33, 0x33 /* baserom.dol+0x3d34c8 */
 
-/* 8045466C 0004 .sdata2    d_d_meter_HIO__LIT_4275        @4275                          */
+/* 8045466C 0004 .sdata2    @4275                          d_d_meter_HIO__LIT_4275        */
 .global d_d_meter_HIO__LIT_4275
 d_d_meter_HIO__LIT_4275:
 .byte 0x41, 0xb0, 0x00, 0x00 /* baserom.dol+0x3d34cc */
 
-/* 80454670 0004 .sdata2    d_d_meter_HIO__LIT_4276        @4276                          */
+/* 80454670 0004 .sdata2    @4276                          d_d_meter_HIO__LIT_4276        */
 .global d_d_meter_HIO__LIT_4276
 d_d_meter_HIO__LIT_4276:
 .byte 0x40, 0x06, 0x66, 0x66 /* baserom.dol+0x3d34d0 */
 
-/* 80454674 0004 .sdata2    d_d_meter_HIO__LIT_4277        @4277                          */
+/* 80454674 0004 .sdata2    @4277                          d_d_meter_HIO__LIT_4277        */
 .global d_d_meter_HIO__LIT_4277
 d_d_meter_HIO__LIT_4277:
 .byte 0xc1, 0x60, 0x00, 0x00 /* baserom.dol+0x3d34d4 */
 
-/* 80454678 0004 .sdata2    d_d_meter_HIO__LIT_4278        @4278                          */
+/* 80454678 0004 .sdata2    @4278                          d_d_meter_HIO__LIT_4278        */
 .global d_d_meter_HIO__LIT_4278
 d_d_meter_HIO__LIT_4278:
 .byte 0xc1, 0x50, 0x00, 0x00 /* baserom.dol+0x3d34d8 */
 
-/* 8045467C 0004 .sdata2    d_d_meter_HIO__LIT_4279        @4279                          */
+/* 8045467C 0004 .sdata2    @4279                          d_d_meter_HIO__LIT_4279        */
 .global d_d_meter_HIO__LIT_4279
 d_d_meter_HIO__LIT_4279:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d34dc */
 
-/* 80454680 0004 .sdata2    d_d_meter_HIO__LIT_4280        @4280                          */
+/* 80454680 0004 .sdata2    @4280                          d_d_meter_HIO__LIT_4280        */
 .global d_d_meter_HIO__LIT_4280
 d_d_meter_HIO__LIT_4280:
 .byte 0x41, 0x60, 0x00, 0x00 /* baserom.dol+0x3d34e0 */
 
-/* 80454684 0004 .sdata2    d_d_meter_HIO__LIT_4281        @4281                          */
+/* 80454684 0004 .sdata2    @4281                          d_d_meter_HIO__LIT_4281        */
 .global d_d_meter_HIO__LIT_4281
 d_d_meter_HIO__LIT_4281:
 .byte 0x40, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d34e4 */
 
-/* 80454688 0004 .sdata2    d_d_meter_HIO__LIT_4282        @4282                          */
+/* 80454688 0004 .sdata2    @4282                          d_d_meter_HIO__LIT_4282        */
 .global d_d_meter_HIO__LIT_4282
 d_d_meter_HIO__LIT_4282:
 .byte 0xc0, 0x96, 0x66, 0x66 /* baserom.dol+0x3d34e8 */
 
-/* 8045468C 0004 .sdata2    d_d_meter_HIO__LIT_4283        @4283                          */
+/* 8045468C 0004 .sdata2    @4283                          d_d_meter_HIO__LIT_4283        */
 .global d_d_meter_HIO__LIT_4283
 d_d_meter_HIO__LIT_4283:
 .byte 0x41, 0x13, 0x33, 0x33 /* baserom.dol+0x3d34ec */
 
-/* 80454690 0004 .sdata2    d_d_meter_HIO__LIT_4284        @4284                          */
+/* 80454690 0004 .sdata2    @4284                          d_d_meter_HIO__LIT_4284        */
 .global d_d_meter_HIO__LIT_4284
 d_d_meter_HIO__LIT_4284:
 .byte 0xc0, 0x80, 0x00, 0x00 /* baserom.dol+0x3d34f0 */
 
-/* 80454694 0004 .sdata2    d_d_meter_HIO__LIT_4285        @4285                          */
+/* 80454694 0004 .sdata2    @4285                          d_d_meter_HIO__LIT_4285        */
 .global d_d_meter_HIO__LIT_4285
 d_d_meter_HIO__LIT_4285:
 .byte 0x40, 0x0c, 0xcc, 0xcd /* baserom.dol+0x3d34f4 */
 
-/* 80454698 0004 .sdata2    d_d_meter_HIO__LIT_4286        @4286                          */
+/* 80454698 0004 .sdata2    @4286                          d_d_meter_HIO__LIT_4286        */
 .global d_d_meter_HIO__LIT_4286
 d_d_meter_HIO__LIT_4286:
 .byte 0x3f, 0x59, 0x99, 0x9a /* baserom.dol+0x3d34f8 */
 
-/* 8045469C 0004 .sdata2    d_d_meter_HIO__LIT_4287        @4287                          */
+/* 8045469C 0004 .sdata2    @4287                          d_d_meter_HIO__LIT_4287        */
 .global d_d_meter_HIO__LIT_4287
 d_d_meter_HIO__LIT_4287:
 .byte 0x43, 0x48, 0x00, 0x00 /* baserom.dol+0x3d34fc */
 
-/* 804546A0 0004 .sdata2    d_d_meter_HIO__LIT_4288        @4288                          */
+/* 804546A0 0004 .sdata2    @4288                          d_d_meter_HIO__LIT_4288        */
 .global d_d_meter_HIO__LIT_4288
 d_d_meter_HIO__LIT_4288:
 .byte 0x43, 0x16, 0x00, 0x00 /* baserom.dol+0x3d3500 */
 
-/* 804546A4 0004 .sdata2    d_d_meter_HIO__LIT_4289        @4289                          */
+/* 804546A4 0004 .sdata2    @4289                          d_d_meter_HIO__LIT_4289        */
 .global d_d_meter_HIO__LIT_4289
 d_d_meter_HIO__LIT_4289:
 .byte 0x43, 0x50, 0x00, 0x00 /* baserom.dol+0x3d3504 */
 
-/* 804546A8 0004 .sdata2    d_d_meter_HIO__LIT_4290        @4290                          */
+/* 804546A8 0004 .sdata2    @4290                          d_d_meter_HIO__LIT_4290        */
 .global d_d_meter_HIO__LIT_4290
 d_d_meter_HIO__LIT_4290:
 .byte 0xc2, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d3508 */
 
-/* 804546AC 0004 .sdata2    d_d_meter_HIO__LIT_4334        @4334                          */
+/* 804546AC 0004 .sdata2    @4334                          d_d_meter_HIO__LIT_4334        */
 .global d_d_meter_HIO__LIT_4334
 d_d_meter_HIO__LIT_4334:
 .byte 0x42, 0xfa, 0x00, 0x00 /* baserom.dol+0x3d350c */
 
-/* 804546B0 0004 .sdata2    d_d_meter_HIO__LIT_4335        @4335                          */
+/* 804546B0 0004 .sdata2    @4335                          d_d_meter_HIO__LIT_4335        */
 .global d_d_meter_HIO__LIT_4335
 d_d_meter_HIO__LIT_4335:
 .byte 0x43, 0x2d, 0x00, 0x00 /* baserom.dol+0x3d3510 */
 
-/* 804546B4 0004 .sdata2    d_d_meter_HIO__LIT_4336        @4336                          */
+/* 804546B4 0004 .sdata2    @4336                          d_d_meter_HIO__LIT_4336        */
 .global d_d_meter_HIO__LIT_4336
 d_d_meter_HIO__LIT_4336:
 .byte 0x3e, 0xb3, 0x33, 0x33 /* baserom.dol+0x3d3514 */
 
-/* 804546B8 0004 .sdata2    d_d_meter_HIO__LIT_4337        @4337                          */
+/* 804546B8 0004 .sdata2    @4337                          d_d_meter_HIO__LIT_4337        */
 .global d_d_meter_HIO__LIT_4337
 d_d_meter_HIO__LIT_4337:
 .byte 0xc2, 0x6c, 0x00, 0x00 /* baserom.dol+0x3d3518 */
 
-/* 804546BC 0004 .sdata2    d_d_meter_HIO__LIT_4338        @4338                          */
+/* 804546BC 0004 .sdata2    @4338                          d_d_meter_HIO__LIT_4338        */
 .global d_d_meter_HIO__LIT_4338
 d_d_meter_HIO__LIT_4338:
 .byte 0xc2, 0x80, 0x00, 0x00 /* baserom.dol+0x3d351c */
 
-/* 804546C0 0004 .sdata2    d_d_meter_HIO__LIT_4339        @4339                          */
+/* 804546C0 0004 .sdata2    @4339                          d_d_meter_HIO__LIT_4339        */
 .global d_d_meter_HIO__LIT_4339
 d_d_meter_HIO__LIT_4339:
 .byte 0x42, 0xb4, 0x00, 0x00 /* baserom.dol+0x3d3520 */
 
-/* 804546C4 0004 .sdata2    d_d_meter_HIO__LIT_4340        @4340                          */
+/* 804546C4 0004 .sdata2    @4340                          d_d_meter_HIO__LIT_4340        */
 .global d_d_meter_HIO__LIT_4340
 d_d_meter_HIO__LIT_4340:
 .byte 0xc2, 0xf8, 0x00, 0x00 /* baserom.dol+0x3d3524 */
 
-/* 804546C8 0004 .sdata2    d_d_meter_HIO__LIT_4341        @4341                          */
+/* 804546C8 0004 .sdata2    @4341                          d_d_meter_HIO__LIT_4341        */
 .global d_d_meter_HIO__LIT_4341
 d_d_meter_HIO__LIT_4341:
 .byte 0x42, 0xec, 0x00, 0x00 /* baserom.dol+0x3d3528 */
 
-/* 804546CC 0004 .sdata2    d_d_meter_HIO__LIT_4342        @4342                          */
+/* 804546CC 0004 .sdata2    @4342                          d_d_meter_HIO__LIT_4342        */
 .global d_d_meter_HIO__LIT_4342
 d_d_meter_HIO__LIT_4342:
 .byte 0xc2, 0xfe, 0x00, 0x00 /* baserom.dol+0x3d352c */
 
-/* 804546D0 0004 .sdata2    d_d_meter_HIO__LIT_4343        @4343                          */
+/* 804546D0 0004 .sdata2    @4343                          d_d_meter_HIO__LIT_4343        */
 .global d_d_meter_HIO__LIT_4343
 d_d_meter_HIO__LIT_4343:
 .byte 0x42, 0x38, 0x00, 0x00 /* baserom.dol+0x3d3530 */
 
-/* 804546D4 0004 .sdata2    d_d_meter_HIO__LIT_4344        @4344                          */
+/* 804546D4 0004 .sdata2    @4344                          d_d_meter_HIO__LIT_4344        */
 .global d_d_meter_HIO__LIT_4344
 d_d_meter_HIO__LIT_4344:
 .byte 0x41, 0x10, 0x00, 0x00 /* baserom.dol+0x3d3534 */
 
-/* 804546D8 0004 .sdata2    d_d_meter_HIO__LIT_4345        @4345                          */
+/* 804546D8 0004 .sdata2    @4345                          d_d_meter_HIO__LIT_4345        */
 .global d_d_meter_HIO__LIT_4345
 d_d_meter_HIO__LIT_4345:
 .byte 0xc2, 0x70, 0x00, 0x00 /* baserom.dol+0x3d3538 */
 
-/* 804546DC 0004 .sdata2    d_d_meter_HIO__LIT_4346        @4346                          */
+/* 804546DC 0004 .sdata2    @4346                          d_d_meter_HIO__LIT_4346        */
 .global d_d_meter_HIO__LIT_4346
 d_d_meter_HIO__LIT_4346:
 .byte 0xc2, 0x68, 0x00, 0x00 /* baserom.dol+0x3d353c */
 
-/* 804546E0 0004 .sdata2    d_d_meter_HIO__LIT_4347        @4347                          */
+/* 804546E0 0004 .sdata2    @4347                          d_d_meter_HIO__LIT_4347        */
 .global d_d_meter_HIO__LIT_4347
 d_d_meter_HIO__LIT_4347:
 .byte 0x42, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d3540 */
 
-/* 804546E4 0004 .sdata2    d_d_meter_HIO__LIT_4357        @4357                          */
+/* 804546E4 0004 .sdata2    @4357                          d_d_meter_HIO__LIT_4357        */
 .global d_d_meter_HIO__LIT_4357
 d_d_meter_HIO__LIT_4357:
 .byte 0x3f, 0x26, 0x66, 0x66 /* baserom.dol+0x3d3544 */
 
-/* 804546E8 0004 .sdata2    d_d_meter_HIO__LIT_4358        @4358                          */
+/* 804546E8 0004 .sdata2    @4358                          d_d_meter_HIO__LIT_4358        */
 .global d_d_meter_HIO__LIT_4358
 d_d_meter_HIO__LIT_4358:
 .byte 0x3f, 0xa3, 0xd7, 0x0a /* baserom.dol+0x3d3548 */
 
-/* 804546EC 0004 .sdata2    d_d_meter_HIO__LIT_4359        @4359                          */
+/* 804546EC 0004 .sdata2    @4359                          d_d_meter_HIO__LIT_4359        */
 .global d_d_meter_HIO__LIT_4359
 d_d_meter_HIO__LIT_4359:
 .byte 0x3f, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d354c */
 
-/* 804546F0 0004 .sdata2    d_d_meter_HIO__LIT_4360        @4360                          */
+/* 804546F0 0004 .sdata2    @4360                          d_d_meter_HIO__LIT_4360        */
 .global d_d_meter_HIO__LIT_4360
 d_d_meter_HIO__LIT_4360:
 .byte 0x3e, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3550 */
 
-/* 804546F4 0004 .sdata2    d_d_meter_HIO__LIT_4416        @4416                          */
+/* 804546F4 0004 .sdata2    @4416                          d_d_meter_HIO__LIT_4416        */
 .global d_d_meter_HIO__LIT_4416
 d_d_meter_HIO__LIT_4416:
 .byte 0x47, 0x43, 0x50, 0x00 /* baserom.dol+0x3d3554 */
 
-/* 804546F8 0004 .sdata2    d_d_meter_HIO__LIT_4417        @4417                          */
+/* 804546F8 0004 .sdata2    @4417                          d_d_meter_HIO__LIT_4417        */
 .global d_d_meter_HIO__LIT_4417
 d_d_meter_HIO__LIT_4417:
 .byte 0x46, 0x1c, 0x40, 0x00 /* baserom.dol+0x3d3558 */
 
-/* 804546FC 0004 .sdata2    d_d_meter_HIO__LIT_4418        @4418                          */
+/* 804546FC 0004 .sdata2    @4418                          d_d_meter_HIO__LIT_4418        */
 .global d_d_meter_HIO__LIT_4418
 d_d_meter_HIO__LIT_4418:
 .byte 0xc8, 0x92, 0x7c, 0x00 /* baserom.dol+0x3d355c */
 
-/* 80454700 0004 .sdata2    d_d_meter_HIO__LIT_4419        @4419                          */
+/* 80454700 0004 .sdata2    @4419                          d_d_meter_HIO__LIT_4419        */
 .global d_d_meter_HIO__LIT_4419
 d_d_meter_HIO__LIT_4419:
 .byte 0x48, 0x92, 0x7c, 0x00 /* baserom.dol+0x3d3560 */
 
-/* 80454704 0004 .sdata2    d_d_meter_HIO__LIT_4420        @4420                          */
+/* 80454704 0004 .sdata2    @4420                          d_d_meter_HIO__LIT_4420        */
 .global d_d_meter_HIO__LIT_4420
 d_d_meter_HIO__LIT_4420:
 .byte 0x43, 0x0e, 0x00, 0x00 /* baserom.dol+0x3d3564 */
 
-/* 80454708 0004 .sdata2    d_d_meter_HIO__LIT_4421        @4421                          */
+/* 80454708 0004 .sdata2    @4421                          d_d_meter_HIO__LIT_4421        */
 .global d_d_meter_HIO__LIT_4421
 d_d_meter_HIO__LIT_4421:
 .byte 0x42, 0x74, 0x00, 0x00 /* baserom.dol+0x3d3568 */
 
-/* 8045470C 0004 .sdata2    d_d_meter_HIO__LIT_4422        @4422                          */
+/* 8045470C 0004 .sdata2    @4422                          d_d_meter_HIO__LIT_4422        */
 .global d_d_meter_HIO__LIT_4422
 d_d_meter_HIO__LIT_4422:
 .byte 0x43, 0xa4, 0x80, 0x00 /* baserom.dol+0x3d356c */
 
-/* 80454710 0004 .sdata2    d_d_meter_HIO__LIT_4423        @4423                          */
+/* 80454710 0004 .sdata2    @4423                          d_d_meter_HIO__LIT_4423        */
 .global d_d_meter_HIO__LIT_4423
 d_d_meter_HIO__LIT_4423:
 .byte 0x41, 0x20, 0x00, 0x00 /* baserom.dol+0x3d3570 */
 
-/* 80454714 0004 .sdata2    d_d_meter_HIO__LIT_4424        @4424                          */
+/* 80454714 0004 .sdata2    @4424                          d_d_meter_HIO__LIT_4424        */
 .global d_d_meter_HIO__LIT_4424
 d_d_meter_HIO__LIT_4424:
 .byte 0x40, 0xe0, 0x00, 0x00 /* baserom.dol+0x3d3574 */
 
-/* 80454718 0004 .sdata2    d_d_meter_HIO__LIT_4425        @4425                          */
+/* 80454718 0004 .sdata2    @4425                          d_d_meter_HIO__LIT_4425        */
 .global d_d_meter_HIO__LIT_4425
 d_d_meter_HIO__LIT_4425:
 .byte 0x3f, 0x5d, 0x6f, 0xfc /* baserom.dol+0x3d3578 */
 
-/* 8045471C 0004 .sdata2    d_d_meter_HIO__LIT_4426        @4426                          */
+/* 8045471C 0004 .sdata2    @4426                          d_d_meter_HIO__LIT_4426        */
 .global d_d_meter_HIO__LIT_4426
 d_d_meter_HIO__LIT_4426:
 .byte 0x40, 0x90, 0x00, 0x00 /* baserom.dol+0x3d357c */
 
-/* 80454720 0004 .sdata2    d_d_meter_HIO__LIT_4427        @4427                          */
+/* 80454720 0004 .sdata2    @4427                          d_d_meter_HIO__LIT_4427        */
 .global d_d_meter_HIO__LIT_4427
 d_d_meter_HIO__LIT_4427:
 .byte 0xbf, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3580 */
 
-/* 80454724 0004 .sdata2    d_d_meter_HIO__LIT_4428        @4428                          */
+/* 80454724 0004 .sdata2    @4428                          d_d_meter_HIO__LIT_4428        */
 .global d_d_meter_HIO__LIT_4428
 d_d_meter_HIO__LIT_4428:
 .byte 0x3f, 0x86, 0x66, 0x66 /* baserom.dol+0x3d3584 */
 
-/* 80454728 0004 .sdata2    d_d_meter_HIO__LIT_4429        @4429                          */
+/* 80454728 0004 .sdata2    @4429                          d_d_meter_HIO__LIT_4429        */
 .global d_d_meter_HIO__LIT_4429
 d_d_meter_HIO__LIT_4429:
 .byte 0xc0, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d3588 */
 
-/* 8045472C 0004 .sdata2    d_d_meter_HIO__LIT_4430        @4430                          */
+/* 8045472C 0004 .sdata2    @4430                          d_d_meter_HIO__LIT_4430        */
 .global d_d_meter_HIO__LIT_4430
 d_d_meter_HIO__LIT_4430:
 .byte 0xc0, 0xe0, 0x00, 0x00 /* baserom.dol+0x3d358c */
 
-/* 80454730 0004 .sdata2    d_d_meter_HIO__LIT_4485        @4485                          */
+/* 80454730 0004 .sdata2    @4485                          d_d_meter_HIO__LIT_4485        */
 .global d_d_meter_HIO__LIT_4485
 d_d_meter_HIO__LIT_4485:
 .byte 0x41, 0x50, 0x00, 0x00 /* baserom.dol+0x3d3590 */
 
-/* 80454734 0004 .sdata2    d_d_meter_HIO__LIT_4486        @4486                          */
+/* 80454734 0004 .sdata2    @4486                          d_d_meter_HIO__LIT_4486        */
 .global d_d_meter_HIO__LIT_4486
 d_d_meter_HIO__LIT_4486:
 .byte 0xc2, 0xcc, 0x00, 0x00 /* baserom.dol+0x3d3594 */
 
-/* 80454738 0004 .sdata2    d_d_meter_HIO__LIT_4487        @4487                          */
+/* 80454738 0004 .sdata2    @4487                          d_d_meter_HIO__LIT_4487        */
 .global d_d_meter_HIO__LIT_4487
 d_d_meter_HIO__LIT_4487:
 .byte 0x42, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d3598 */
 
-/* 8045473C 0004 .sdata2    d_d_meter_HIO__LIT_4488        @4488                          */
+/* 8045473C 0004 .sdata2    @4488                          d_d_meter_HIO__LIT_4488        */
 .global d_d_meter_HIO__LIT_4488
 d_d_meter_HIO__LIT_4488:
 .byte 0x43, 0x11, 0x00, 0x00 /* baserom.dol+0x3d359c */
 
-/* 80454740 0004 .sdata2    d_d_meter_HIO__LIT_4489        @4489                          */
+/* 80454740 0004 .sdata2    @4489                          d_d_meter_HIO__LIT_4489        */
 .global d_d_meter_HIO__LIT_4489
 d_d_meter_HIO__LIT_4489:
 .byte 0xc3, 0x1b, 0x00, 0x00 /* baserom.dol+0x3d35a0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d35a4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

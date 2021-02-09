@@ -7,11 +7,13 @@
 /* 8001E308 0008 .text      fopCamM_GetParam__FP12camera_class fopCamM_GetParam__FP12camera_class */
 .global fopCamM_GetParam__FP12camera_class
 fopCamM_GetParam__FP12camera_class:
+fopCamM_GetParam__FP12camera_class:
 /* 8001E308 0001B248  80 63 00 B0 */	lwz r3, 0xb0(r3)
 /* 8001E30C 0001B24C  4E 80 00 20 */	blr 
 
 /* 8001E310 0064 .text      fopCamM_Create__FisPv          fopCamM_Create__FisPv          */
 .global fopCamM_Create__FisPv
+fopCamM_Create__FisPv:
 fopCamM_Create__FisPv:
 /* 8001E310 0001B250  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8001E314 0001B254  7C 08 02 A6 */	mflr r0
@@ -42,10 +44,12 @@ fopCamM_Create__FisPv:
 /* 8001E374 0004 .text      fopCamM_Management__Fv         fopCamM_Management__Fv         */
 .global fopCamM_Management__Fv
 fopCamM_Management__Fv:
+fopCamM_Management__Fv:
 /* 8001E374 0001B2B4  4E 80 00 20 */	blr 
 
 /* 8001E378 0004 .text      fopCamM_Init__Fv               fopCamM_Init__Fv               */
 .global fopCamM_Init__Fv
+fopCamM_Init__Fv:
 fopCamM_Init__Fv:
 /* 8001E378 0001B2B8  4E 80 00 20 */	blr 
 

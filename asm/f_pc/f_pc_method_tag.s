@@ -7,6 +7,7 @@
 /* 80023788 0030 .text      fpcMtdTg_Do__FP24process_method_tag_class fpcMtdTg_Do__FP24process_method_tag_class */
 .global fpcMtdTg_Do__FP24process_method_tag_class
 fpcMtdTg_Do__FP24process_method_tag_class:
+fpcMtdTg_Do__FP24process_method_tag_class:
 /* 80023788 000206C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8002378C 000206CC  7C 08 02 A6 */	mflr r0
 /* 80023790 000206D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,6 +24,7 @@ fpcMtdTg_Do__FP24process_method_tag_class:
 /* 800237B8 0020 .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
 .global fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class
 fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class:
+fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class:
 /* 800237B8 000206F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800237BC 000206FC  7C 08 02 A6 */	mflr r0
 /* 800237C0 00020700  90 01 00 14 */	stw r0, 0x14(r1)
@@ -35,6 +37,7 @@ fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class:
 /* 800237D8 0020 .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class fpcMtdTg_MethodQTo__FP24process_method_tag_class */
 .global fpcMtdTg_MethodQTo__FP24process_method_tag_class
 fpcMtdTg_MethodQTo__FP24process_method_tag_class:
+fpcMtdTg_MethodQTo__FP24process_method_tag_class:
 /* 800237D8 00020718  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800237DC 0002071C  7C 08 02 A6 */	mflr r0
 /* 800237E0 00020720  90 01 00 14 */	stw r0, 0x14(r1)
@@ -46,6 +49,7 @@ fpcMtdTg_MethodQTo__FP24process_method_tag_class:
 
 /* 800237F8 004C .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv */
 .global fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv
+fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv:
 fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv:
 /* 800237F8 00020738  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800237FC 0002073C  7C 08 02 A6 */	mflr r0

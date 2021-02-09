@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8020D49C 0054 .text      isEnableDispMap__11dMeterMap_cFv isEnableDispMap__11dMeterMap_cFv */
+/* 8020D49C 008C .text      isEnableDispMap__11dMeterMap_cFv isEnableDispMap__11dMeterMap_cFv */
 .global isEnableDispMap__11dMeterMap_cFv
+isEnableDispMap__11dMeterMap_cFv:
 isEnableDispMap__11dMeterMap_cFv:
 /* 8020D49C 0020A3DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D4A0 0020A3E0  7C 08 02 A6 */	mflr r0
@@ -20,29 +21,23 @@ isEnableDispMap__11dMeterMap_cFv:
 /* 8020D4C4 0020A404  7D 89 03 A6 */	mtctr r12
 /* 8020D4C8 0020A408  4E 80 04 21 */	bctrl 
 /* 8020D4CC 0020A40C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8020D4D0 0020A410  41 82 00 20 */	beq func_8020D4F0
+/* 8020D4D0 0020A410  41 82 00 20 */	beq lbl_8020D4F0
 /* 8020D4D4 0020A414  48 00 00 55 */	bl getMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020D4D8 0020A418  2C 03 00 00 */	cmpwi r3, 0
-/* 8020D4DC 0020A41C  41 82 00 14 */	beq func_8020D4F0
+/* 8020D4DC 0020A41C  41 82 00 14 */	beq lbl_8020D4F0
 /* 8020D4E0 0020A420  A0 1F 00 0A */	lhz r0, 0xa(r31)
 /* 8020D4E4 0020A424  54 03 9F 7E */	rlwinm r3, r0, 0x13, 0x1d, 0x1f
 /* 8020D4E8 0020A428  30 03 FF FF */	addic r0, r3, -1
 /* 8020D4EC 0020A42C  7F C0 19 10 */	subfe r30, r0, r3
-
-/* 8020D4F0 001C .text      func_8020D4F0                  func_8020D4F0                  */
-.global func_8020D4F0
-func_8020D4F0:
+lbl_8020D4F0:
 /* 8020D4F0 0020A430  3B E0 00 00 */	li r31, 0
 /* 8020D4F4 0020A434  57 C0 06 3F */	clrlwi. r0, r30, 0x18
-/* 8020D4F8 0020A438  41 82 00 14 */	beq func_8020D50C
+/* 8020D4F8 0020A438  41 82 00 14 */	beq lbl_8020D50C
 /* 8020D4FC 0020A43C  4B E3 22 5D */	bl isExistMapPathData__8dMpath_cFv
 /* 8020D500 0020A440  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020D504 0020A444  41 82 00 08 */	beq func_8020D50C
+/* 8020D504 0020A444  41 82 00 08 */	beq lbl_8020D50C
 /* 8020D508 0020A448  3B E0 00 01 */	li r31, 1
-
-/* 8020D50C 001C .text      func_8020D50C                  func_8020D50C                  */
-.global func_8020D50C
-func_8020D50C:
+lbl_8020D50C:
 /* 8020D50C 0020A44C  7F E3 FB 78 */	mr r3, r31
 /* 8020D510 0020A450  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020D514 0020A454  83 C1 00 08 */	lwz r30, 8(r1)
@@ -51,8 +46,9 @@ func_8020D50C:
 /* 8020D520 0020A460  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020D524 0020A464  4E 80 00 20 */	blr 
 
-/* 8020D528 0050 .text      getMapDispSizeTypeNo__11dMeterMap_cFv getMapDispSizeTypeNo__11dMeterMap_cFv */
+/* 8020D528 0128 .text      getMapDispSizeTypeNo__11dMeterMap_cFv getMapDispSizeTypeNo__11dMeterMap_cFv */
 .global getMapDispSizeTypeNo__11dMeterMap_cFv
+getMapDispSizeTypeNo__11dMeterMap_cFv:
 getMapDispSizeTypeNo__11dMeterMap_cFv:
 /* 8020D528 0020A468  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8020D52C 0020A46C  7C 08 02 A6 */	mflr r0
@@ -60,7 +56,7 @@ getMapDispSizeTypeNo__11dMeterMap_cFv:
 /* 8020D534 0020A474  39 61 00 20 */	addi r11, r1, 0x20
 /* 8020D538 0020A478  48 15 4C A5 */	bl _savegpr_29
 /* 8020D53C 0020A47C  3B A0 00 07 */	li r29, 7
-/* 8020D540 0020A480  88 8D 87 E4 */	lbz r4, sym_80450D64-_SDA_BASE_(r13)
+/* 8020D540 0020A480  88 8D 87 E4 */	lbz r4, data_80450D64-_SDA_BASE_(r13)
 /* 8020D544 0020A484  7C 84 07 74 */	extsb r4, r4
 /* 8020D548 0020A488  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020D54C 0020A48C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
@@ -71,13 +67,10 @@ getMapDispSizeTypeNo__11dMeterMap_cFv:
 /* 8020D560 0020A4A0  7D 89 03 A6 */	mtctr r12
 /* 8020D564 0020A4A4  4E 80 04 21 */	bctrl 
 /* 8020D568 0020A4A8  28 03 00 00 */	cmplwi r3, 0
-/* 8020D56C 0020A4AC  41 82 00 0C */	beq func_8020D578
+/* 8020D56C 0020A4AC  41 82 00 0C */	beq lbl_8020D578
 /* 8020D570 0020A4B0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8020D574 0020A4B4  54 1D EF 7E */	rlwinm r29, r0, 0x1d, 0x1d, 0x1f
-
-/* 8020D578 004C .text      func_8020D578                  func_8020D578                  */
-.global func_8020D578
-func_8020D578:
+lbl_8020D578:
 /* 8020D578 0020A4B8  3B DF 4E 20 */	addi r30, r31, 0x4e20
 /* 8020D57C 0020A4BC  7F C3 F3 78 */	mr r3, r30
 /* 8020D580 0020A4C0  81 9E 00 00 */	lwz r12, 0(r30)
@@ -94,74 +87,47 @@ func_8020D578:
 /* 8020D5AC 0020A4EC  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020D5B0 0020A4F0  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8020D5B4 0020A4F4  2C 00 00 01 */	cmpwi r0, 1
-/* 8020D5B8 0020A4F8  40 82 00 0C */	bne func_8020D5C4
+/* 8020D5B8 0020A4F8  40 82 00 0C */	bne lbl_8020D5C4
 /* 8020D5BC 0020A4FC  3B A0 00 01 */	li r29, 1
-/* 8020D5C0 0020A500  48 00 00 10 */	b func_8020D5D0
-
-/* 8020D5C4 000C .text      func_8020D5C4                  func_8020D5C4                  */
-.global func_8020D5C4
-func_8020D5C4:
+/* 8020D5C0 0020A500  48 00 00 10 */	b lbl_8020D5D0
+lbl_8020D5C4:
 /* 8020D5C4 0020A504  2C 1D 00 07 */	cmpwi r29, 7
-/* 8020D5C8 0020A508  40 82 00 08 */	bne func_8020D5D0
+/* 8020D5C8 0020A508  40 82 00 08 */	bne lbl_8020D5D0
 /* 8020D5CC 0020A50C  7F FD FB 78 */	mr r29, r31
-
-/* 8020D5D0 0020 .text      func_8020D5D0                  func_8020D5D0                  */
-.global func_8020D5D0
-func_8020D5D0:
+lbl_8020D5D0:
 /* 8020D5D0 0020A510  38 60 00 00 */	li r3, 0
 /* 8020D5D4 0020A514  2C 1D 00 02 */	cmpwi r29, 2
-/* 8020D5D8 0020A518  41 82 00 3C */	beq func_8020D614
-/* 8020D5DC 0020A51C  40 80 00 14 */	bge func_8020D5F0
+/* 8020D5D8 0020A518  41 82 00 3C */	beq lbl_8020D614
+/* 8020D5DC 0020A51C  40 80 00 14 */	bge lbl_8020D5F0
 /* 8020D5E0 0020A520  2C 1D 00 00 */	cmpwi r29, 0
-/* 8020D5E4 0020A524  41 82 00 54 */	beq func_8020D638
-/* 8020D5E8 0020A528  40 80 00 14 */	bge func_8020D5FC
-/* 8020D5EC 0020A52C  48 00 00 4C */	b func_8020D638
-
-/* 8020D5F0 000C .text      func_8020D5F0                  func_8020D5F0                  */
-.global func_8020D5F0
-func_8020D5F0:
+/* 8020D5E4 0020A524  41 82 00 54 */	beq lbl_8020D638
+/* 8020D5E8 0020A528  40 80 00 14 */	bge lbl_8020D5FC
+/* 8020D5EC 0020A52C  48 00 00 4C */	b lbl_8020D638
+lbl_8020D5F0:
 /* 8020D5F0 0020A530  2C 1D 00 04 */	cmpwi r29, 4
-/* 8020D5F4 0020A534  40 80 00 44 */	bge func_8020D638
-/* 8020D5F8 0020A538  48 00 00 2C */	b func_8020D624
-
-/* 8020D5FC 0010 .text      func_8020D5FC                  func_8020D5FC                  */
-.global func_8020D5FC
-func_8020D5FC:
+/* 8020D5F4 0020A534  40 80 00 44 */	bge lbl_8020D638
+/* 8020D5F8 0020A538  48 00 00 2C */	b lbl_8020D624
+lbl_8020D5FC:
 /* 8020D5FC 0020A53C  2C 00 00 01 */	cmpwi r0, 1
-/* 8020D600 0020A540  40 82 00 0C */	bne func_8020D60C
+/* 8020D600 0020A540  40 82 00 0C */	bne lbl_8020D60C
 /* 8020D604 0020A544  38 60 00 04 */	li r3, 4
-/* 8020D608 0020A548  48 00 00 30 */	b func_8020D638
-
-/* 8020D60C 0008 .text      func_8020D60C                  func_8020D60C                  */
-.global func_8020D60C
-func_8020D60C:
+/* 8020D608 0020A548  48 00 00 30 */	b lbl_8020D638
+lbl_8020D60C:
 /* 8020D60C 0020A54C  38 60 00 01 */	li r3, 1
-/* 8020D610 0020A550  48 00 00 28 */	b func_8020D638
-
-/* 8020D614 0010 .text      func_8020D614                  func_8020D614                  */
-.global func_8020D614
-func_8020D614:
+/* 8020D610 0020A550  48 00 00 28 */	b lbl_8020D638
+lbl_8020D614:
 /* 8020D614 0020A554  2C 00 00 01 */	cmpwi r0, 1
-/* 8020D618 0020A558  41 82 00 20 */	beq func_8020D638
+/* 8020D618 0020A558  41 82 00 20 */	beq lbl_8020D638
 /* 8020D61C 0020A55C  38 60 00 02 */	li r3, 2
-/* 8020D620 0020A560  48 00 00 18 */	b func_8020D638
-
-/* 8020D624 0010 .text      func_8020D624                  func_8020D624                  */
-.global func_8020D624
-func_8020D624:
+/* 8020D620 0020A560  48 00 00 18 */	b lbl_8020D638
+lbl_8020D624:
 /* 8020D624 0020A564  2C 00 00 01 */	cmpwi r0, 1
-/* 8020D628 0020A568  40 82 00 0C */	bne func_8020D634
+/* 8020D628 0020A568  40 82 00 0C */	bne lbl_8020D634
 /* 8020D62C 0020A56C  38 60 00 05 */	li r3, 5
-/* 8020D630 0020A570  48 00 00 08 */	b func_8020D638
-
-/* 8020D634 0004 .text      func_8020D634                  func_8020D634                  */
-.global func_8020D634
-func_8020D634:
+/* 8020D630 0020A570  48 00 00 08 */	b lbl_8020D638
+lbl_8020D634:
 /* 8020D634 0020A574  38 60 00 03 */	li r3, 3
-
-/* 8020D638 0018 .text      func_8020D638                  func_8020D638                  */
-.global func_8020D638
-func_8020D638:
+lbl_8020D638:
 /* 8020D638 0020A578  39 61 00 20 */	addi r11, r1, 0x20
 /* 8020D63C 0020A57C  48 15 4B ED */	bl _restgpr_29
 /* 8020D640 0020A580  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -169,29 +135,24 @@ func_8020D638:
 /* 8020D648 0020A588  38 21 00 20 */	addi r1, r1, 0x20
 /* 8020D64C 0020A58C  4E 80 00 20 */	blr 
 
-/* 8020D650 002C .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv */
+/* 8020D650 0040 .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv */
 .global isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
+isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv:
 isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv:
 /* 8020D650 0020A590  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D654 0020A594  7C 08 02 A6 */	mflr r0
 /* 8020D658 0020A598  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8020D65C 0020A59C  4B FF FE 41 */	bl isEnableDispMap__11dMeterMap_cFv
 /* 8020D660 0020A5A0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020D664 0020A5A4  41 82 00 18 */	beq func_8020D67C
+/* 8020D664 0020A5A4  41 82 00 18 */	beq lbl_8020D67C
 /* 8020D668 0020A5A8  4B FF FE C1 */	bl getMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020D66C 0020A5AC  2C 03 00 00 */	cmpwi r3, 0
-/* 8020D670 0020A5B0  41 82 00 0C */	beq func_8020D67C
+/* 8020D670 0020A5B0  41 82 00 0C */	beq lbl_8020D67C
 /* 8020D674 0020A5B4  38 60 00 01 */	li r3, 1
-/* 8020D678 0020A5B8  48 00 00 08 */	b func_8020D680
-
-/* 8020D67C 0004 .text      func_8020D67C                  func_8020D67C                  */
-.global func_8020D67C
-func_8020D67C:
+/* 8020D678 0020A5B8  48 00 00 08 */	b lbl_8020D680
+lbl_8020D67C:
 /* 8020D67C 0020A5BC  38 60 00 00 */	li r3, 0
-
-/* 8020D680 0010 .text      func_8020D680                  func_8020D680                  */
-.global func_8020D680
-func_8020D680:
+lbl_8020D680:
 /* 8020D680 0020A5C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020D684 0020A5C4  7C 08 03 A6 */	mtlr r0
 /* 8020D688 0020A5C8  38 21 00 10 */	addi r1, r1, 0x10
@@ -200,11 +161,13 @@ func_8020D680:
 /* 8020D690 0008 .text      getMapDispEdgeBottomY_Layout__11dMeterMap_cFv getMapDispEdgeBottomY_Layout__11dMeterMap_cFv */
 .global getMapDispEdgeBottomY_Layout__11dMeterMap_cFv
 getMapDispEdgeBottomY_Layout__11dMeterMap_cFv:
+getMapDispEdgeBottomY_Layout__11dMeterMap_cFv:
 /* 8020D690 0020A5D0  C0 22 AE 20 */	lfs f1, d_d_meter_map__LIT_4076-_SDA2_BASE_(r2)
 /* 8020D694 0020A5D4  4E 80 00 20 */	blr 
 
-/* 8020D698 0030 .text      isEventRunCheck__11dMeterMap_cFv isEventRunCheck__11dMeterMap_cFv */
+/* 8020D698 0094 .text      isEventRunCheck__11dMeterMap_cFv isEventRunCheck__11dMeterMap_cFv */
 .global isEventRunCheck__11dMeterMap_cFv
+isEventRunCheck__11dMeterMap_cFv:
 isEventRunCheck__11dMeterMap_cFv:
 /* 8020D698 0020A5D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D69C 0020A5DC  7C 08 02 A6 */	mflr r0
@@ -215,26 +178,20 @@ isEventRunCheck__11dMeterMap_cFv:
 /* 8020D6B0 0020A5F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020D6B4 0020A5F4  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8020D6B8 0020A5F8  28 00 00 00 */	cmplwi r0, 0
-/* 8020D6BC 0020A5FC  41 82 00 0C */	beq func_8020D6C8
+/* 8020D6BC 0020A5FC  41 82 00 0C */	beq lbl_8020D6C8
 /* 8020D6C0 0020A600  38 60 00 01 */	li r3, 1
-/* 8020D6C4 0020A604  48 00 00 54 */	b func_8020D718
-
-/* 8020D6C8 0024 .text      func_8020D6C8                  func_8020D6C8                  */
-.global func_8020D6C8
-func_8020D6C8:
+/* 8020D6C4 0020A604  48 00 00 54 */	b lbl_8020D718
+lbl_8020D6C8:
 /* 8020D6C8 0020A608  48 02 AB 65 */	bl getStatus__12dMsgObject_cFv
 /* 8020D6CC 0020A60C  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8020D6D0 0020A610  20 60 00 01 */	subfic r3, r0, 1
 /* 8020D6D4 0020A614  30 03 FF FF */	addic r0, r3, -1
 /* 8020D6D8 0020A618  7C 00 19 10 */	subfe r0, r0, r3
 /* 8020D6DC 0020A61C  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8020D6E0 0020A620  41 82 00 0C */	beq func_8020D6EC
+/* 8020D6E0 0020A620  41 82 00 0C */	beq lbl_8020D6EC
 /* 8020D6E4 0020A624  38 60 00 01 */	li r3, 1
-/* 8020D6E8 0020A628  48 00 00 30 */	b func_8020D718
-
-/* 8020D6EC 002C .text      func_8020D6EC                  func_8020D6EC                  */
-.global func_8020D6EC
-func_8020D6EC:
+/* 8020D6E8 0020A628  48 00 00 30 */	b lbl_8020D718
+lbl_8020D6EC:
 /* 8020D6EC 0020A62C  80 9F 00 30 */	lwz r4, 0x30(r31)
 /* 8020D6F0 0020A630  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020D6F4 0020A634  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -246,10 +203,7 @@ func_8020D6EC:
 /* 8020D70C 0020A64C  30 03 FF FF */	addic r0, r3, -1
 /* 8020D710 0020A650  7C 00 19 10 */	subfe r0, r0, r3
 /* 8020D714 0020A654  54 03 06 3E */	clrlwi r3, r0, 0x18
-
-/* 8020D718 0014 .text      func_8020D718                  func_8020D718                  */
-.global func_8020D718
-func_8020D718:
+lbl_8020D718:
 /* 8020D718 0020A658  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020D71C 0020A65C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020D720 0020A660  7C 08 03 A6 */	mtlr r0
@@ -258,6 +212,7 @@ func_8020D718:
 
 /* 8020D72C 0030 .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv getMapDispEdgeLeftX_Layout__11dMeterMap_cFv */
 .global getMapDispEdgeLeftX_Layout__11dMeterMap_cFv
+getMapDispEdgeLeftX_Layout__11dMeterMap_cFv:
 getMapDispEdgeLeftX_Layout__11dMeterMap_cFv:
 /* 8020D72C 0020A66C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D730 0020A670  A8 63 00 28 */	lha r3, 0x28(r3)
@@ -272,8 +227,9 @@ getMapDispEdgeLeftX_Layout__11dMeterMap_cFv:
 /* 8020D754 0020A694  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020D758 0020A698  4E 80 00 20 */	blr 
 
-/* 8020D75C 0068 .text      getMapDispEdgeTop__11dMeterMap_cFv getMapDispEdgeTop__11dMeterMap_cFv */
+/* 8020D75C 0088 .text      getMapDispEdgeTop__11dMeterMap_cFv getMapDispEdgeTop__11dMeterMap_cFv */
 .global getMapDispEdgeTop__11dMeterMap_cFv
+getMapDispEdgeTop__11dMeterMap_cFv:
 getMapDispEdgeTop__11dMeterMap_cFv:
 /* 8020D75C 0020A69C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8020D760 0020A6A0  7C 08 02 A6 */	mflr r0
@@ -283,7 +239,7 @@ getMapDispEdgeTop__11dMeterMap_cFv:
 /* 8020D770 0020A6B0  C3 E2 AE 30 */	lfs f31, d_d_meter_map__LIT_4128-_SDA2_BASE_(r2)
 /* 8020D774 0020A6B4  80 83 00 08 */	lwz r4, 8(r3)
 /* 8020D778 0020A6B8  28 04 00 00 */	cmplwi r4, 0
-/* 8020D77C 0020A6BC  41 82 00 48 */	beq func_8020D7C4
+/* 8020D77C 0020A6BC  41 82 00 48 */	beq lbl_8020D7C4
 /* 8020D780 0020A6C0  C0 44 00 68 */	lfs f2, 0x68(r4)
 /* 8020D784 0020A6C4  C0 64 00 60 */	lfs f3, 0x60(r4)
 /* 8020D788 0020A6C8  C0 22 AE 34 */	lfs f1, d_d_meter_map__LIT_4129-_SDA2_BASE_(r2)
@@ -301,10 +257,7 @@ getMapDispEdgeTop__11dMeterMap_cFv:
 /* 8020D7B8 0020A6F8  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8020D7BC 0020A6FC  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8020D7C0 0020A700  EF E0 28 28 */	fsubs f31, f0, f5
-
-/* 8020D7C4 0020 .text      func_8020D7C4                  func_8020D7C4                  */
-.global func_8020D7C4
-func_8020D7C4:
+lbl_8020D7C4:
 /* 8020D7C4 0020A704  4B FF FE CD */	bl getMapDispEdgeBottomY_Layout__11dMeterMap_cFv
 /* 8020D7C8 0020A708  EC 21 F8 28 */	fsubs f1, f1, f31
 /* 8020D7CC 0020A70C  E3 E1 00 18 */	psq_l f31, 24(r1), 0, qr0
@@ -317,11 +270,13 @@ func_8020D7C4:
 /* 8020D7E4 0008 .text      getDispPosInside_OffsetX__11dMeterMap_cFv getDispPosInside_OffsetX__11dMeterMap_cFv */
 .global getDispPosInside_OffsetX__11dMeterMap_cFv
 getDispPosInside_OffsetX__11dMeterMap_cFv:
+getDispPosInside_OffsetX__11dMeterMap_cFv:
 /* 8020D7E4 0020A724  38 60 00 00 */	li r3, 0
 /* 8020D7E8 0020A728  4E 80 00 20 */	blr 
 
-/* 8020D7EC 0058 .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv getDispPosOutSide_OffsetX__11dMeterMap_cFv */
+/* 8020D7EC 0088 .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv getDispPosOutSide_OffsetX__11dMeterMap_cFv */
 .global getDispPosOutSide_OffsetX__11dMeterMap_cFv
+getDispPosOutSide_OffsetX__11dMeterMap_cFv:
 getDispPosOutSide_OffsetX__11dMeterMap_cFv:
 /* 8020D7EC 0020A72C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8020D7F0 0020A730  7C 08 02 A6 */	mflr r0
@@ -334,7 +289,7 @@ getDispPosOutSide_OffsetX__11dMeterMap_cFv:
 /* 8020D80C 0020A74C  C0 42 AE 30 */	lfs f2, d_d_meter_map__LIT_4128-_SDA2_BASE_(r2)
 /* 8020D810 0020A750  80 83 00 08 */	lwz r4, 8(r3)
 /* 8020D814 0020A754  28 04 00 00 */	cmplwi r4, 0
-/* 8020D818 0020A758  41 82 00 2C */	beq func_8020D844
+/* 8020D818 0020A758  41 82 00 2C */	beq lbl_8020D844
 /* 8020D81C 0020A75C  C0 44 00 5C */	lfs f2, 0x5c(r4)
 /* 8020D820 0020A760  C0 22 AE 34 */	lfs f1, d_d_meter_map__LIT_4129-_SDA2_BASE_(r2)
 /* 8020D824 0020A764  C0 04 00 58 */	lfs f0, 0x58(r4)
@@ -345,10 +300,7 @@ getDispPosOutSide_OffsetX__11dMeterMap_cFv:
 /* 8020D838 0020A778  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8020D83C 0020A77C  EC 01 00 2A */	fadds f0, f1, f0
 /* 8020D840 0020A780  EC 42 00 2A */	fadds f2, f2, f0
-
-/* 8020D844 0030 .text      func_8020D844                  func_8020D844                  */
-.global func_8020D844
-func_8020D844:
+lbl_8020D844:
 /* 8020D844 0020A784  EF FF 10 2A */	fadds f31, f31, f2
 /* 8020D848 0020A788  4B FF FE E5 */	bl getMapDispEdgeLeftX_Layout__11dMeterMap_cFv
 /* 8020D84C 0020A78C  EC 1F 08 28 */	fsubs f0, f31, f1
@@ -362,8 +314,9 @@ func_8020D844:
 /* 8020D86C 0020A7AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8020D870 0020A7B0  4E 80 00 20 */	blr 
 
-/* 8020D874 0034 .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv setDispPosInsideFlg_SE_On__11dMeterMap_cFv */
+/* 8020D874 0048 .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv setDispPosInsideFlg_SE_On__11dMeterMap_cFv */
 .global setDispPosInsideFlg_SE_On__11dMeterMap_cFv
+setDispPosInsideFlg_SE_On__11dMeterMap_cFv:
 setDispPosInsideFlg_SE_On__11dMeterMap_cFv:
 /* 8020D874 0020A7B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D878 0020A7B8  7C 08 02 A6 */	mflr r0
@@ -372,16 +325,13 @@ setDispPosInsideFlg_SE_On__11dMeterMap_cFv:
 /* 8020D884 0020A7C4  7C 7F 1B 78 */	mr r31, r3
 /* 8020D888 0020A7C8  4B FF FD C9 */	bl isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020D88C 0020A7CC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020D890 0020A7D0  41 82 00 18 */	beq func_8020D8A8
+/* 8020D890 0020A7D0  41 82 00 18 */	beq lbl_8020D8A8
 /* 8020D894 0020A7D4  4B E2 07 B5 */	bl dComIfGp_mapShow__Fv
 /* 8020D898 0020A7D8  38 00 00 01 */	li r0, 1
 /* 8020D89C 0020A7DC  98 1F 00 2D */	stb r0, 0x2d(r31)
 /* 8020D8A0 0020A7E0  38 00 00 07 */	li r0, 7
 /* 8020D8A4 0020A7E4  98 1F 00 2E */	stb r0, 0x2e(r31)
-
-/* 8020D8A8 0014 .text      func_8020D8A8                  func_8020D8A8                  */
-.global func_8020D8A8
-func_8020D8A8:
+lbl_8020D8A8:
 /* 8020D8A8 0020A7E8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020D8AC 0020A7EC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020D8B0 0020A7F0  7C 08 03 A6 */	mtlr r0
@@ -390,6 +340,7 @@ func_8020D8A8:
 
 /* 8020D8BC 003C .text      setDispPosOutsideFlg_SE_On__11dMeterMap_cFv setDispPosOutsideFlg_SE_On__11dMeterMap_cFv */
 .global setDispPosOutsideFlg_SE_On__11dMeterMap_cFv
+setDispPosOutsideFlg_SE_On__11dMeterMap_cFv:
 setDispPosOutsideFlg_SE_On__11dMeterMap_cFv:
 /* 8020D8BC 0020A7FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D8C0 0020A800  7C 08 02 A6 */	mflr r0
@@ -410,11 +361,13 @@ setDispPosOutsideFlg_SE_On__11dMeterMap_cFv:
 /* 8020D8F8 0008 .text      setMapAlpha__11dMeterMap_cFUc  setMapAlpha__11dMeterMap_cFUc  */
 .global setMapAlpha__11dMeterMap_cFUc
 setMapAlpha__11dMeterMap_cFUc:
+setMapAlpha__11dMeterMap_cFUc:
 /* 8020D8F8 0020A838  98 83 00 2C */	stb r4, 0x2c(r3)
 /* 8020D8FC 0020A83C  4E 80 00 20 */	blr 
 
 /* 8020D900 0048 .text      isMapOpenCheck__11dMeterMap_cFv isMapOpenCheck__11dMeterMap_cFv */
 .global isMapOpenCheck__11dMeterMap_cFv
+isMapOpenCheck__11dMeterMap_cFv:
 isMapOpenCheck__11dMeterMap_cFv:
 /* 8020D900 0020A840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D904 0020A844  7C 08 02 A6 */	mflr r0
@@ -438,6 +391,7 @@ isMapOpenCheck__11dMeterMap_cFv:
 /* 8020D948 0048 .text      __ct__11dMeterMap_cFP9J2DScreen __ct__11dMeterMap_cFP9J2DScreen */
 .global __ct__11dMeterMap_cFP9J2DScreen
 __ct__11dMeterMap_cFP9J2DScreen:
+__ct__11dMeterMap_cFP9J2DScreen:
 /* 8020D948 0020A888  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D94C 0020A88C  7C 08 02 A6 */	mflr r0
 /* 8020D950 0020A890  90 01 00 14 */	stw r0, 0x14(r1)
@@ -457,8 +411,9 @@ __ct__11dMeterMap_cFP9J2DScreen:
 /* 8020D988 0020A8C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020D98C 0020A8CC  4E 80 00 20 */	blr 
 
-/* 8020D990 0040 .text      __dt__11dMeterMap_cFv          __dt__11dMeterMap_cFv          */
+/* 8020D990 005C .text      __dt__11dMeterMap_cFv          __dt__11dMeterMap_cFv          */
 .global __dt__11dMeterMap_cFv
+__dt__11dMeterMap_cFv:
 __dt__11dMeterMap_cFv:
 /* 8020D990 0020A8D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020D994 0020A8D4  7C 08 02 A6 */	mflr r0
@@ -467,19 +422,16 @@ __dt__11dMeterMap_cFv:
 /* 8020D9A0 0020A8E0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8020D9A4 0020A8E4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8020D9A8 0020A8E8  7C 9F 23 78 */	mr r31, r4
-/* 8020D9AC 0020A8EC  41 82 00 24 */	beq func_8020D9D0
+/* 8020D9AC 0020A8EC  41 82 00 24 */	beq lbl_8020D9D0
 /* 8020D9B0 0020A8F0  3C 80 80 3C */	lis r4, __vt__11dMeterMap_c@ha
 /* 8020D9B4 0020A8F4  38 04 F2 F8 */	addi r0, r4, __vt__11dMeterMap_c@l
 /* 8020D9B8 0020A8F8  90 1E 00 00 */	stw r0, 0(r30)
 /* 8020D9BC 0020A8FC  48 00 02 95 */	bl _delete__11dMeterMap_cFv
 /* 8020D9C0 0020A900  7F E0 07 35 */	extsh. r0, r31
-/* 8020D9C4 0020A904  40 81 00 0C */	ble func_8020D9D0
+/* 8020D9C4 0020A904  40 81 00 0C */	ble lbl_8020D9D0
 /* 8020D9C8 0020A908  7F C3 F3 78 */	mr r3, r30
 /* 8020D9CC 0020A90C  48 0C 13 71 */	bl __dl__FPv
-
-/* 8020D9D0 001C .text      func_8020D9D0                  func_8020D9D0                  */
-.global func_8020D9D0
-func_8020D9D0:
+lbl_8020D9D0:
 /* 8020D9D0 0020A910  7F C3 F3 78 */	mr r3, r30
 /* 8020D9D4 0020A914  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020D9D8 0020A918  83 C1 00 08 */	lwz r30, 8(r1)
@@ -488,8 +440,9 @@ func_8020D9D0:
 /* 8020D9E4 0020A924  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020D9E8 0020A928  4E 80 00 20 */	blr 
 
-/* 8020D9EC 0044 .text      _create__11dMeterMap_cFP9J2DScreen _create__11dMeterMap_cFP9J2DScreen */
+/* 8020D9EC 0264 .text      _create__11dMeterMap_cFP9J2DScreen _create__11dMeterMap_cFP9J2DScreen */
 .global _create__11dMeterMap_cFP9J2DScreen
+_create__11dMeterMap_cFP9J2DScreen:
 _create__11dMeterMap_cFP9J2DScreen:
 /* 8020D9EC 0020A92C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8020D9F0 0020A930  7C 08 02 A6 */	mflr r0
@@ -500,70 +453,49 @@ _create__11dMeterMap_cFP9J2DScreen:
 /* 8020DA04 0020A944  4B FF FB 25 */	bl getMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020DA08 0020A948  4B FF FB 21 */	bl getMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020DA0C 0020A94C  2C 03 00 03 */	cmpwi r3, 3
-/* 8020DA10 0020A950  41 82 00 58 */	beq func_8020DA68
-/* 8020DA14 0020A954  40 80 00 1C */	bge func_8020DA30
+/* 8020DA10 0020A950  41 82 00 58 */	beq lbl_8020DA68
+/* 8020DA14 0020A954  40 80 00 1C */	bge lbl_8020DA30
 /* 8020DA18 0020A958  2C 03 00 01 */	cmpwi r3, 1
-/* 8020DA1C 0020A95C  41 82 00 24 */	beq func_8020DA40
-/* 8020DA20 0020A960  40 80 00 34 */	bge func_8020DA54
+/* 8020DA1C 0020A95C  41 82 00 24 */	beq lbl_8020DA40
+/* 8020DA20 0020A960  40 80 00 34 */	bge lbl_8020DA54
 /* 8020DA24 0020A964  2C 03 00 00 */	cmpwi r3, 0
-/* 8020DA28 0020A968  40 80 00 54 */	bge func_8020DA7C
-/* 8020DA2C 0020A96C  48 00 00 74 */	b func_8020DAA0
-
-/* 8020DA30 0010 .text      func_8020DA30                  func_8020DA30                  */
-.global func_8020DA30
-func_8020DA30:
+/* 8020DA28 0020A968  40 80 00 54 */	bge lbl_8020DA7C
+/* 8020DA2C 0020A96C  48 00 00 74 */	b lbl_8020DAA0
+lbl_8020DA30:
 /* 8020DA30 0020A970  2C 03 00 05 */	cmpwi r3, 5
-/* 8020DA34 0020A974  41 82 00 5C */	beq func_8020DA90
-/* 8020DA38 0020A978  40 80 00 68 */	bge func_8020DAA0
-/* 8020DA3C 0020A97C  48 00 00 40 */	b func_8020DA7C
-
-/* 8020DA40 0014 .text      func_8020DA40                  func_8020DA40                  */
-.global func_8020DA40
-func_8020DA40:
+/* 8020DA34 0020A974  41 82 00 5C */	beq lbl_8020DA90
+/* 8020DA38 0020A978  40 80 00 68 */	bge lbl_8020DAA0
+/* 8020DA3C 0020A97C  48 00 00 40 */	b lbl_8020DA7C
+lbl_8020DA40:
 /* 8020DA40 0020A980  3B 80 00 D8 */	li r28, 0xd8
 /* 8020DA44 0020A984  3B 60 00 D8 */	li r27, 0xd8
 /* 8020DA48 0020A988  3B C0 00 90 */	li r30, 0x90
 /* 8020DA4C 0020A98C  3B A0 00 90 */	li r29, 0x90
-/* 8020DA50 0020A990  48 00 00 50 */	b func_8020DAA0
-
-/* 8020DA54 0014 .text      func_8020DA54                  func_8020DA54                  */
-.global func_8020DA54
-func_8020DA54:
+/* 8020DA50 0020A990  48 00 00 50 */	b lbl_8020DAA0
+lbl_8020DA54:
 /* 8020DA54 0020A994  3B 80 00 D8 */	li r28, 0xd8
 /* 8020DA58 0020A998  3B 60 00 D8 */	li r27, 0xd8
 /* 8020DA5C 0020A99C  3B C0 00 D8 */	li r30, 0xd8
 /* 8020DA60 0020A9A0  3B A0 00 D8 */	li r29, 0xd8
-/* 8020DA64 0020A9A4  48 00 00 3C */	b func_8020DAA0
-
-/* 8020DA68 0014 .text      func_8020DA68                  func_8020DA68                  */
-.global func_8020DA68
-func_8020DA68:
+/* 8020DA64 0020A9A4  48 00 00 3C */	b lbl_8020DAA0
+lbl_8020DA68:
 /* 8020DA68 0020A9A8  3B 80 00 D8 */	li r28, 0xd8
 /* 8020DA6C 0020A9AC  3B 60 00 D8 */	li r27, 0xd8
 /* 8020DA70 0020A9B0  3B C0 00 60 */	li r30, 0x60
 /* 8020DA74 0020A9B4  3B A0 00 60 */	li r29, 0x60
-/* 8020DA78 0020A9B8  48 00 00 28 */	b func_8020DAA0
-
-/* 8020DA7C 0014 .text      func_8020DA7C                  func_8020DA7C                  */
-.global func_8020DA7C
-func_8020DA7C:
+/* 8020DA78 0020A9B8  48 00 00 28 */	b lbl_8020DAA0
+lbl_8020DA7C:
 /* 8020DA7C 0020A9BC  3B 80 00 90 */	li r28, 0x90
 /* 8020DA80 0020A9C0  3B 60 00 90 */	li r27, 0x90
 /* 8020DA84 0020A9C4  3B C0 00 90 */	li r30, 0x90
 /* 8020DA88 0020A9C8  3B A0 00 90 */	li r29, 0x90
-/* 8020DA8C 0020A9CC  48 00 00 14 */	b func_8020DAA0
-
-/* 8020DA90 0010 .text      func_8020DA90                  func_8020DA90                  */
-.global func_8020DA90
-func_8020DA90:
+/* 8020DA8C 0020A9CC  48 00 00 14 */	b lbl_8020DAA0
+lbl_8020DA90:
 /* 8020DA90 0020A9D0  3B 80 00 90 */	li r28, 0x90
 /* 8020DA94 0020A9D4  3B 60 00 90 */	li r27, 0x90
 /* 8020DA98 0020A9D8  3B C0 00 60 */	li r30, 0x60
 /* 8020DA9C 0020A9DC  3B A0 00 60 */	li r29, 0x60
-
-/* 8020DAA0 0068 .text      func_8020DAA0                  func_8020DAA0                  */
-.global func_8020DAA0
-func_8020DAA0:
+lbl_8020DAA0:
 /* 8020DAA0 0020A9E0  7F C0 07 34 */	extsh r0, r30
 /* 8020DAA4 0020A9E4  C8 22 AE 28 */	lfd f1, d_d_meter_map__LIT_4100-_SDA2_BASE_(r2)
 /* 8020DAA8 0020A9E8  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -583,30 +515,24 @@ func_8020DAA0:
 /* 8020DAE0 0020AA20  38 60 00 94 */	li r3, 0x94
 /* 8020DAE4 0020AA24  48 0C 11 69 */	bl __nw__FUl
 /* 8020DAE8 0020AA28  7C 60 1B 79 */	or. r0, r3, r3
-/* 8020DAEC 0020AA2C  41 82 00 1C */	beq func_8020DB08
+/* 8020DAEC 0020AA2C  41 82 00 1C */	beq lbl_8020DB08
 /* 8020DAF0 0020AA30  7F C4 F3 78 */	mr r4, r30
 /* 8020DAF4 0020AA34  7F A5 EB 78 */	mr r5, r29
 /* 8020DAF8 0020AA38  7F 86 E3 78 */	mr r6, r28
 /* 8020DAFC 0020AA3C  7F 67 DB 78 */	mr r7, r27
 /* 8020DB00 0020AA40  4B E1 BD 75 */	bl __ct__6dMap_cFiiii
 /* 8020DB04 0020AA44  7C 60 1B 78 */	mr r0, r3
-
-/* 8020DB08 0024 .text      func_8020DB08                  func_8020DB08                  */
-.global func_8020DB08
-func_8020DB08:
+lbl_8020DB08:
 /* 8020DB08 0020AA48  90 1F 00 08 */	stw r0, 8(r31)
 /* 8020DB0C 0020AA4C  38 60 01 50 */	li r3, 0x150
 /* 8020DB10 0020AA50  48 0C 11 3D */	bl __nw__FUl
 /* 8020DB14 0020AA54  7C 60 1B 79 */	or. r0, r3, r3
-/* 8020DB18 0020AA58  41 82 00 14 */	beq func_8020DB2C
+/* 8020DB18 0020AA58  41 82 00 14 */	beq lbl_8020DB2C
 /* 8020DB1C 0020AA5C  80 9F 00 08 */	lwz r4, 8(r31)
 /* 8020DB20 0020AA60  80 84 00 48 */	lwz r4, 0x48(r4)
 /* 8020DB24 0020AA64  48 0E EB E5 */	bl __ct__10J2DPictureFPC7ResTIMG
 /* 8020DB28 0020AA68  7C 60 1B 78 */	mr r0, r3
-
-/* 8020DB2C 0064 .text      func_8020DB2C                  func_8020DB2C                  */
-.global func_8020DB2C
-func_8020DB2C:
+lbl_8020DB2C:
 /* 8020DB2C 0020AA6C  90 1F 00 04 */	stw r0, 4(r31)
 /* 8020DB30 0020AA70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DB34 0020AA74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -624,37 +550,28 @@ func_8020DB2C:
 /* 8020DB64 0020AAA4  98 1F 00 2A */	stb r0, 0x2a(r31)
 /* 8020DB68 0020AAA8  4B E2 05 41 */	bl dComIfGp_checkMapShow__Fv
 /* 8020DB6C 0020AAAC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020DB70 0020AAB0  41 82 00 38 */	beq func_8020DBA8
+/* 8020DB70 0020AAB0  41 82 00 38 */	beq lbl_8020DBA8
 /* 8020DB74 0020AAB4  38 00 00 01 */	li r0, 1
 /* 8020DB78 0020AAB8  98 1F 00 2D */	stb r0, 0x2d(r31)
 /* 8020DB7C 0020AABC  4B FF FA D5 */	bl isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020DB80 0020AAC0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020DB84 0020AAC4  40 82 00 0C */	bne func_8020DB90
+/* 8020DB84 0020AAC4  40 82 00 0C */	bne lbl_8020DB90
 /* 8020DB88 0020AAC8  38 00 00 00 */	li r0, 0
 /* 8020DB8C 0020AACC  98 1F 00 2D */	stb r0, 0x2d(r31)
-
-/* 8020DB90 0018 .text      func_8020DB90                  func_8020DB90                  */
-.global func_8020DB90
-func_8020DB90:
+lbl_8020DB90:
 /* 8020DB90 0020AAD0  4B FF FD 71 */	bl isMapOpenCheck__11dMeterMap_cFv
 /* 8020DB94 0020AAD4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020DB98 0020AAD8  40 82 00 18 */	bne func_8020DBB0
+/* 8020DB98 0020AAD8  40 82 00 18 */	bne lbl_8020DBB0
 /* 8020DB9C 0020AADC  38 00 00 00 */	li r0, 0
 /* 8020DBA0 0020AAE0  98 1F 00 2D */	stb r0, 0x2d(r31)
-/* 8020DBA4 0020AAE4  48 00 00 0C */	b func_8020DBB0
-
-/* 8020DBA8 0008 .text      func_8020DBA8                  func_8020DBA8                  */
-.global func_8020DBA8
-func_8020DBA8:
+/* 8020DBA4 0020AAE4  48 00 00 0C */	b lbl_8020DBB0
+lbl_8020DBA8:
 /* 8020DBA8 0020AAE8  38 00 00 00 */	li r0, 0
 /* 8020DBAC 0020AAEC  98 1F 00 2D */	stb r0, 0x2d(r31)
-
-/* 8020DBB0 0034 .text      func_8020DBB0                  func_8020DBB0                  */
-.global func_8020DBB0
-func_8020DBB0:
+lbl_8020DBB0:
 /* 8020DBB0 0020AAF0  88 1F 00 2D */	lbz r0, 0x2d(r31)
 /* 8020DBB4 0020AAF4  28 00 00 00 */	cmplwi r0, 0
-/* 8020DBB8 0020AAF8  41 82 00 2C */	beq func_8020DBE4
+/* 8020DBB8 0020AAF8  41 82 00 2C */	beq lbl_8020DBE4
 /* 8020DBBC 0020AAFC  38 00 00 01 */	li r0, 1
 /* 8020DBC0 0020AB00  98 1F 00 2D */	stb r0, 0x2d(r31)
 /* 8020DBC4 0020AB04  7F E3 FB 78 */	mr r3, r31
@@ -664,11 +581,8 @@ func_8020DBB0:
 /* 8020DBD4 0020AB14  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DBD8 0020AB18  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020DBDC 0020AB1C  98 03 00 BF */	stb r0, 0xbf(r3)
-/* 8020DBE0 0020AB20  48 00 00 28 */	b func_8020DC08
-
-/* 8020DBE4 0024 .text      func_8020DBE4                  func_8020DBE4                  */
-.global func_8020DBE4
-func_8020DBE4:
+/* 8020DBE0 0020AB20  48 00 00 28 */	b lbl_8020DC08
+lbl_8020DBE4:
 /* 8020DBE4 0020AB24  38 00 00 00 */	li r0, 0
 /* 8020DBE8 0020AB28  98 1F 00 2D */	stb r0, 0x2d(r31)
 /* 8020DBEC 0020AB2C  7F E3 FB 78 */	mr r3, r31
@@ -678,10 +592,7 @@ func_8020DBE4:
 /* 8020DBFC 0020AB3C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DC00 0020AB40  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020DC04 0020AB44  98 03 00 BF */	stb r0, 0xbf(r3)
-
-/* 8020DC08 0048 .text      func_8020DC08                  func_8020DC08                  */
-.global func_8020DC08
-func_8020DC08:
+lbl_8020DC08:
 /* 8020DC08 0020AB48  38 00 00 00 */	li r0, 0
 /* 8020DC0C 0020AB4C  98 1F 00 2E */	stb r0, 0x2e(r31)
 /* 8020DC10 0020AB50  B0 1F 00 28 */	sth r0, 0x28(r31)
@@ -701,8 +612,9 @@ func_8020DC08:
 /* 8020DC48 0020AB88  38 21 00 30 */	addi r1, r1, 0x30
 /* 8020DC4C 0020AB8C  4E 80 00 20 */	blr 
 
-/* 8020DC50 0038 .text      _delete__11dMeterMap_cFv       _delete__11dMeterMap_cFv       */
+/* 8020DC50 0094 .text      _delete__11dMeterMap_cFv       _delete__11dMeterMap_cFv       */
 .global _delete__11dMeterMap_cFv
+_delete__11dMeterMap_cFv:
 _delete__11dMeterMap_cFv:
 /* 8020DC50 0020AB90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020DC54 0020AB94  7C 08 02 A6 */	mflr r0
@@ -711,55 +623,44 @@ _delete__11dMeterMap_cFv:
 /* 8020DC60 0020ABA0  7C 7F 1B 78 */	mr r31, r3
 /* 8020DC64 0020ABA4  80 63 00 04 */	lwz r3, 4(r3)
 /* 8020DC68 0020ABA8  28 03 00 00 */	cmplwi r3, 0
-/* 8020DC6C 0020ABAC  41 82 00 1C */	beq func_8020DC88
-/* 8020DC70 0020ABB0  41 82 00 18 */	beq func_8020DC88
+/* 8020DC6C 0020ABAC  41 82 00 1C */	beq lbl_8020DC88
+/* 8020DC70 0020ABB0  41 82 00 18 */	beq lbl_8020DC88
 /* 8020DC74 0020ABB4  38 80 00 01 */	li r4, 1
 /* 8020DC78 0020ABB8  81 83 00 00 */	lwz r12, 0(r3)
 /* 8020DC7C 0020ABBC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8020DC80 0020ABC0  7D 89 03 A6 */	mtctr r12
 /* 8020DC84 0020ABC4  4E 80 04 21 */	bctrl 
-
-/* 8020DC88 0024 .text      func_8020DC88                  func_8020DC88                  */
-.global func_8020DC88
-func_8020DC88:
+lbl_8020DC88:
 /* 8020DC88 0020ABC8  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8020DC8C 0020ABCC  28 03 00 00 */	cmplwi r3, 0
-/* 8020DC90 0020ABD0  41 82 00 1C */	beq func_8020DCAC
-/* 8020DC94 0020ABD4  41 82 00 18 */	beq func_8020DCAC
+/* 8020DC90 0020ABD0  41 82 00 1C */	beq lbl_8020DCAC
+/* 8020DC94 0020ABD4  41 82 00 18 */	beq lbl_8020DCAC
 /* 8020DC98 0020ABD8  38 80 00 01 */	li r4, 1
 /* 8020DC9C 0020ABDC  81 83 00 00 */	lwz r12, 0(r3)
 /* 8020DCA0 0020ABE0  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8020DCA4 0020ABE4  7D 89 03 A6 */	mtctr r12
 /* 8020DCA8 0020ABE8  4E 80 04 21 */	bctrl 
-
-/* 8020DCAC 0020 .text      func_8020DCAC                  func_8020DCAC                  */
-.global func_8020DCAC
-func_8020DCAC:
+lbl_8020DCAC:
 /* 8020DCAC 0020ABEC  4B FF F9 A5 */	bl isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020DCB0 0020ABF0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020DCB4 0020ABF4  41 82 00 1C */	beq func_8020DCD0
+/* 8020DCB4 0020ABF4  41 82 00 1C */	beq lbl_8020DCD0
 /* 8020DCB8 0020ABF8  88 1F 00 2D */	lbz r0, 0x2d(r31)
 /* 8020DCBC 0020ABFC  28 00 00 00 */	cmplwi r0, 0
-/* 8020DCC0 0020AC00  41 82 00 0C */	beq func_8020DCCC
+/* 8020DCC0 0020AC00  41 82 00 0C */	beq lbl_8020DCCC
 /* 8020DCC4 0020AC04  4B E2 03 85 */	bl dComIfGp_mapShow__Fv
-/* 8020DCC8 0020AC08  48 00 00 08 */	b func_8020DCD0
-
-/* 8020DCCC 0004 .text      func_8020DCCC                  func_8020DCCC                  */
-.global func_8020DCCC
-func_8020DCCC:
+/* 8020DCC8 0020AC08  48 00 00 08 */	b lbl_8020DCD0
+lbl_8020DCCC:
 /* 8020DCCC 0020AC0C  4B E2 03 AD */	bl dComIfGp_mapHide__Fv
-
-/* 8020DCD0 0014 .text      func_8020DCD0                  func_8020DCD0                  */
-.global func_8020DCD0
-func_8020DCD0:
+lbl_8020DCD0:
 /* 8020DCD0 0020AC10  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020DCD4 0020AC14  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020DCD8 0020AC18  7C 08 03 A6 */	mtlr r0
 /* 8020DCDC 0020AC1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020DCE0 0020AC20  4E 80 00 20 */	blr 
 
-/* 8020DCE4 0088 .text      _move__11dMeterMap_cFUl        _move__11dMeterMap_cFUl        */
+/* 8020DCE4 0238 .text      _move__11dMeterMap_cFUl        _move__11dMeterMap_cFUl        */
 .global _move__11dMeterMap_cFUl
+_move__11dMeterMap_cFUl:
 _move__11dMeterMap_cFUl:
 /* 8020DCE4 0020AC24  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8020DCE8 0020AC28  7C 08 02 A6 */	mflr r0
@@ -770,7 +671,7 @@ _move__11dMeterMap_cFUl:
 /* 8020DCFC 0020AC3C  7C 9F 23 78 */	mr r31, r4
 /* 8020DD00 0020AC40  88 03 00 2B */	lbz r0, 0x2b(r3)
 /* 8020DD04 0020AC44  28 00 00 00 */	cmplwi r0, 0
-/* 8020DD08 0020AC48  40 82 00 84 */	bne func_8020DD8C
+/* 8020DD08 0020AC48  40 82 00 84 */	bne lbl_8020DD8C
 /* 8020DD0C 0020AC4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DD10 0020AC50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020DD14 0020AC54  3B 83 07 F0 */	addi r28, r3, 0x7f0
@@ -780,7 +681,7 @@ _move__11dMeterMap_cFUl:
 /* 8020DD24 0020AC64  A0 9D 00 EC */	lhz r4, 0xec(r29)
 /* 8020DD28 0020AC68  4B E2 6C 95 */	bl isEventBit__11dSv_event_cCFUs
 /* 8020DD2C 0020AC6C  2C 03 00 00 */	cmpwi r3, 0
-/* 8020DD30 0020AC70  41 82 00 5C */	beq func_8020DD8C
+/* 8020DD30 0020AC70  41 82 00 5C */	beq lbl_8020DD8C
 /* 8020DD34 0020AC74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DD38 0020AC78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020DD3C 0020AC7C  38 63 4E 00 */	addi r3, r3, 0x4e00
@@ -788,17 +689,14 @@ _move__11dMeterMap_cFUl:
 /* 8020DD44 0020AC84  38 84 82 08 */	addi r4, r4, d_d_meter_map__stringBase0@l
 /* 8020DD48 0020AC88  48 15 AC 4D */	bl strcmp
 /* 8020DD4C 0020AC8C  2C 03 00 00 */	cmpwi r3, 0
-/* 8020DD50 0020AC90  40 82 00 1C */	bne func_8020DD6C
+/* 8020DD50 0020AC90  40 82 00 1C */	bne lbl_8020DD6C
 /* 8020DD54 0020AC94  7F 83 E3 78 */	mr r3, r28
 /* 8020DD58 0020AC98  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8020DD5C 0020AC9C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
 /* 8020DD60 0020ACA0  A0 84 00 EE */	lhz r4, 0xee(r4)
 /* 8020DD64 0020ACA4  4B E2 6C 29 */	bl onEventBit__11dSv_event_cFUs
-/* 8020DD68 0020ACA8  48 00 00 24 */	b func_8020DD8C
-
-/* 8020DD6C 0020 .text      func_8020DD6C                  func_8020DD6C                  */
-.global func_8020DD6C
-func_8020DD6C:
+/* 8020DD68 0020ACA8  48 00 00 24 */	b lbl_8020DD8C
+lbl_8020DD6C:
 /* 8020DD6C 0020ACAC  7F 83 E3 78 */	mr r3, r28
 /* 8020DD70 0020ACB0  A0 9D 00 EC */	lhz r4, 0xec(r29)
 /* 8020DD74 0020ACB4  4B E2 6C 49 */	bl isEventBit__11dSv_event_cCFUs
@@ -807,11 +705,8 @@ func_8020DD6C:
 /* 8020DD80 0020ACC0  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DD84 0020ACC4  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020DD88 0020ACC8  98 03 00 C1 */	stb r0, 0xc1(r3)
-
-/* 8020DD8C 0070 .text      func_8020DD8C                  func_8020DD8C                  */
-.global func_8020DD8C
-func_8020DD8C:
-/* 8020DD8C 0020ACCC  8B AD 87 E4 */	lbz r29, sym_80450D64-_SDA_BASE_(r13)
+lbl_8020DD8C:
+/* 8020DD8C 0020ACCC  8B AD 87 E4 */	lbz r29, data_80450D64-_SDA_BASE_(r13)
 /* 8020DD90 0020ACD0  7F BD 07 74 */	extsb r29, r29
 /* 8020DD94 0020ACD4  93 FE 00 14 */	stw r31, 0x14(r30)
 /* 8020DD98 0020ACD8  7F C3 F3 78 */	mr r3, r30
@@ -819,45 +714,39 @@ func_8020DD8C:
 /* 8020DDA0 0020ACE0  98 7E 00 2A */	stb r3, 0x2a(r30)
 /* 8020DDA4 0020ACE4  88 1E 00 2A */	lbz r0, 0x2a(r30)
 /* 8020DDA8 0020ACE8  28 00 00 01 */	cmplwi r0, 1
-/* 8020DDAC 0020ACEC  41 82 00 50 */	beq func_8020DDFC
+/* 8020DDAC 0020ACEC  41 82 00 50 */	beq lbl_8020DDFC
 /* 8020DDB0 0020ACF0  28 00 00 02 */	cmplwi r0, 2
-/* 8020DDB4 0020ACF4  41 82 00 48 */	beq func_8020DDFC
+/* 8020DDB4 0020ACF4  41 82 00 48 */	beq lbl_8020DDFC
 /* 8020DDB8 0020ACF8  28 00 00 03 */	cmplwi r0, 3
-/* 8020DDBC 0020ACFC  41 82 00 40 */	beq func_8020DDFC
+/* 8020DDBC 0020ACFC  41 82 00 40 */	beq lbl_8020DDFC
 /* 8020DDC0 0020AD00  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020DDC4 0020AD04  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020DDC8 0020AD08  88 03 00 C1 */	lbz r0, 0xc1(r3)
 /* 8020DDCC 0020AD0C  28 00 00 07 */	cmplwi r0, 7
-/* 8020DDD0 0020AD10  41 82 00 2C */	beq func_8020DDFC
+/* 8020DDD0 0020AD10  41 82 00 2C */	beq lbl_8020DDFC
 /* 8020DDD4 0020AD14  28 00 00 02 */	cmplwi r0, 2
-/* 8020DDD8 0020AD18  41 82 00 24 */	beq func_8020DDFC
+/* 8020DDD8 0020AD18  41 82 00 24 */	beq lbl_8020DDFC
 /* 8020DDDC 0020AD1C  28 00 00 06 */	cmplwi r0, 6
-/* 8020DDE0 0020AD20  41 82 00 1C */	beq func_8020DDFC
+/* 8020DDE0 0020AD20  41 82 00 1C */	beq lbl_8020DDFC
 /* 8020DDE4 0020AD24  28 00 00 04 */	cmplwi r0, 4
-/* 8020DDE8 0020AD28  41 82 00 14 */	beq func_8020DDFC
+/* 8020DDE8 0020AD28  41 82 00 14 */	beq lbl_8020DDFC
 /* 8020DDEC 0020AD2C  28 00 00 03 */	cmplwi r0, 3
-/* 8020DDF0 0020AD30  41 82 00 0C */	beq func_8020DDFC
+/* 8020DDF0 0020AD30  41 82 00 0C */	beq lbl_8020DDFC
 /* 8020DDF4 0020AD34  28 00 00 05 */	cmplwi r0, 5
-/* 8020DDF8 0020AD38  40 82 00 0C */	bne func_8020DE04
-
-/* 8020DDFC 0008 .text      func_8020DDFC                  func_8020DDFC                  */
-.global func_8020DDFC
-func_8020DDFC:
+/* 8020DDF8 0020AD38  40 82 00 0C */	bne lbl_8020DE04
+lbl_8020DDFC:
 /* 8020DDFC 0020AD3C  7F C3 F3 78 */	mr r3, r30
 /* 8020DE00 0020AD40  48 00 02 71 */	bl ctrlShowMap__11dMeterMap_cFv
-
-/* 8020DE04 0048 .text      func_8020DE04                  func_8020DE04                  */
-.global func_8020DE04
-func_8020DE04:
+lbl_8020DE04:
 /* 8020DE04 0020AD44  88 1E 00 2D */	lbz r0, 0x2d(r30)
 /* 8020DE08 0020AD48  28 00 00 00 */	cmplwi r0, 0
-/* 8020DE0C 0020AD4C  41 82 00 40 */	beq func_8020DE4C
+/* 8020DE0C 0020AD4C  41 82 00 40 */	beq lbl_8020DE4C
 /* 8020DE10 0020AD50  7F C3 F3 78 */	mr r3, r30
 /* 8020DE14 0020AD54  4B FF F9 D1 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv
 /* 8020DE18 0020AD58  7C 63 07 34 */	extsh r3, r3
 /* 8020DE1C 0020AD5C  A8 1E 00 28 */	lha r0, 0x28(r30)
 /* 8020DE20 0020AD60  7C 00 18 00 */	cmpw r0, r3
-/* 8020DE24 0020AD64  41 82 00 48 */	beq func_8020DE6C
+/* 8020DE24 0020AD64  41 82 00 48 */	beq lbl_8020DE6C
 /* 8020DE28 0020AD68  7F C3 F3 78 */	mr r3, r30
 /* 8020DE2C 0020AD6C  4B FF F9 B9 */	bl getDispPosInside_OffsetX__11dMeterMap_cFv
 /* 8020DE30 0020AD70  7C 64 1B 78 */	mr r4, r3
@@ -866,11 +755,8 @@ func_8020DE04:
 /* 8020DE3C 0020AD7C  38 C0 00 3C */	li r6, 0x3c
 /* 8020DE40 0020AD80  38 E0 00 0A */	li r7, 0xa
 /* 8020DE44 0020AD84  48 06 26 FD */	bl cLib_addCalcAngleS__FPsssss
-/* 8020DE48 0020AD88  48 00 00 24 */	b func_8020DE6C
-
-/* 8020DE4C 0020 .text      func_8020DE4C                  func_8020DE4C                  */
-.global func_8020DE4C
-func_8020DE4C:
+/* 8020DE48 0020AD88  48 00 00 24 */	b lbl_8020DE6C
+lbl_8020DE4C:
 /* 8020DE4C 0020AD8C  7F C3 F3 78 */	mr r3, r30
 /* 8020DE50 0020AD90  4B FF F9 9D */	bl getDispPosOutSide_OffsetX__11dMeterMap_cFv
 /* 8020DE54 0020AD94  7C 64 1B 78 */	mr r4, r3
@@ -879,10 +765,7 @@ func_8020DE4C:
 /* 8020DE60 0020ADA0  38 C0 00 3C */	li r6, 0x3c
 /* 8020DE64 0020ADA4  38 E0 00 0A */	li r7, 0xa
 /* 8020DE68 0020ADA8  48 06 26 D9 */	bl cLib_addCalcAngleS__FPsssss
-
-/* 8020DE6C 00B0 .text      func_8020DE6C                  func_8020DE6C                  */
-.global func_8020DE6C
-func_8020DE6C:
+lbl_8020DE6C:
 /* 8020DE6C 0020ADAC  38 61 00 08 */	addi r3, r1, 8
 /* 8020DE70 0020ADB0  4B E3 0F ED */	bl getMapPlayerPos__10dMapInfo_nFv
 /* 8020DE74 0020ADB4  80 61 00 08 */	lwz r3, 8(r1)
@@ -931,6 +814,7 @@ func_8020DE6C:
 /* 8020DF1C 004C .text      _draw__11dMeterMap_cFv         _draw__11dMeterMap_cFv         */
 .global _draw__11dMeterMap_cFv
 _draw__11dMeterMap_cFv:
+_draw__11dMeterMap_cFv:
 /* 8020DF1C 0020AE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020DF20 0020AE60  7C 08 02 A6 */	mflr r0
 /* 8020DF24 0020AE64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -951,8 +835,9 @@ _draw__11dMeterMap_cFv:
 /* 8020DF60 0020AEA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020DF64 0020AEA4  4E 80 00 20 */	blr 
 
-/* 8020DF68 00D4 .text      draw__11dMeterMap_cFv          draw__11dMeterMap_cFv          */
+/* 8020DF68 0108 .text      draw__11dMeterMap_cFv          draw__11dMeterMap_cFv          */
 .global draw__11dMeterMap_cFv
+draw__11dMeterMap_cFv:
 draw__11dMeterMap_cFv:
 /* 8020DF68 0020AEA8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8020DF6C 0020AEAC  7C 08 02 A6 */	mflr r0
@@ -969,10 +854,10 @@ draw__11dMeterMap_cFv:
 /* 8020DF98 0020AED8  7C 7F 1B 78 */	mr r31, r3
 /* 8020DF9C 0020AEDC  80 63 00 08 */	lwz r3, 8(r3)
 /* 8020DFA0 0020AEE0  28 03 00 00 */	cmplwi r3, 0
-/* 8020DFA4 0020AEE4  41 82 00 98 */	beq func_8020E03C
+/* 8020DFA4 0020AEE4  41 82 00 98 */	beq lbl_8020E03C
 /* 8020DFA8 0020AEE8  88 03 00 31 */	lbz r0, 0x31(r3)
 /* 8020DFAC 0020AEEC  28 00 00 00 */	cmplwi r0, 0
-/* 8020DFB0 0020AEF0  41 82 00 8C */	beq func_8020E03C
+/* 8020DFB0 0020AEF0  41 82 00 8C */	beq lbl_8020E03C
 /* 8020DFB4 0020AEF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020DFB8 0020AEF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020DFBC 0020AEFC  80 63 5F 50 */	lwz r3, 0x5f50(r3)
@@ -1007,10 +892,7 @@ draw__11dMeterMap_cFv:
 /* 8020E030 0020AF70  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 8020E034 0020AF74  7D 89 03 A6 */	mtctr r12
 /* 8020E038 0020AF78  4E 80 04 21 */	bctrl 
-
-/* 8020E03C 0034 .text      func_8020E03C                  func_8020E03C                  */
-.global func_8020E03C
-func_8020E03C:
+lbl_8020E03C:
 /* 8020E03C 0020AF7C  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
 /* 8020E040 0020AF80  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 8020E044 0020AF84  E3 C1 00 38 */	psq_l f30, 56(r1), 0, qr0
@@ -1025,8 +907,9 @@ func_8020E03C:
 /* 8020E068 0020AFA8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8020E06C 0020AFAC  4E 80 00 20 */	blr 
 
-/* 8020E070 0060 .text      ctrlShowMap__11dMeterMap_cFv   ctrlShowMap__11dMeterMap_cFv   */
+/* 8020E070 03EC .text      ctrlShowMap__11dMeterMap_cFv   ctrlShowMap__11dMeterMap_cFv   */
 .global ctrlShowMap__11dMeterMap_cFv
+ctrlShowMap__11dMeterMap_cFv:
 ctrlShowMap__11dMeterMap_cFv:
 /* 8020E070 0020AFB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8020E074 0020AFB4  7C 08 02 A6 */	mflr r0
@@ -1038,24 +921,21 @@ ctrlShowMap__11dMeterMap_cFv:
 /* 8020E08C 0020AFCC  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E090 0020AFD0  A0 03 00 B0 */	lhz r0, 0xb0(r3)
 /* 8020E094 0020AFD4  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8020E098 0020AFD8  40 82 03 AC */	bne func_8020E444
+/* 8020E098 0020AFD8  40 82 03 AC */	bne lbl_8020E444
 /* 8020E09C 0020AFDC  4B FF F8 65 */	bl isMapOpenCheck__11dMeterMap_cFv
 /* 8020E0A0 0020AFE0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E0A4 0020AFE4  40 82 00 64 */	bne func_8020E108
+/* 8020E0A4 0020AFE4  40 82 00 64 */	bne lbl_8020E108
 /* 8020E0A8 0020AFE8  7F A3 EB 78 */	mr r3, r29
 /* 8020E0AC 0020AFEC  4B FF F5 ED */	bl isEventRunCheck__11dMeterMap_cFv
 /* 8020E0B0 0020AFF0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E0B4 0020AFF4  40 82 00 54 */	bne func_8020E108
+/* 8020E0B4 0020AFF4  40 82 00 54 */	bne lbl_8020E108
 /* 8020E0B8 0020AFF8  4B FE BE F5 */	bl dMw_LEFT_TRIGGER__Fv
 /* 8020E0BC 0020AFFC  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E0C0 0020B000  40 82 00 10 */	bne func_8020E0D0
+/* 8020E0C0 0020B000  40 82 00 10 */	bne lbl_8020E0D0
 /* 8020E0C4 0020B004  4B FE BF 31 */	bl dMw_RIGHT_TRIGGER__Fv
 /* 8020E0C8 0020B008  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E0CC 0020B00C  41 82 03 78 */	beq func_8020E444
-
-/* 8020E0D0 0038 .text      func_8020E0D0                  func_8020E0D0                  */
-.global func_8020E0D0
-func_8020E0D0:
+/* 8020E0CC 0020B00C  41 82 03 78 */	beq lbl_8020E444
+lbl_8020E0D0:
 /* 8020E0D0 0020B010  38 00 00 4A */	li r0, 0x4a
 /* 8020E0D4 0020B014  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8020E0D8 0020B018  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr-_SDA_BASE_(r13)
@@ -1069,38 +949,32 @@ func_8020E0D0:
 /* 8020E0F8 0020B038  FC 80 18 90 */	fmr f4, f3
 /* 8020E0FC 0020B03C  39 00 00 00 */	li r8, 0
 /* 8020E100 0020B040  48 09 D8 85 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 8020E104 0020B044  48 00 03 40 */	b func_8020E444
-
-/* 8020E108 003C .text      func_8020E108                  func_8020E108                  */
-.global func_8020E108
-func_8020E108:
+/* 8020E104 0020B044  48 00 03 40 */	b lbl_8020E444
+lbl_8020E108:
 /* 8020E108 0020B048  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E10C 0020B04C  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
 /* 8020E110 0020B050  88 1E 00 C1 */	lbz r0, 0xc1(r30)
 /* 8020E114 0020B054  28 00 00 01 */	cmplwi r0, 1
-/* 8020E118 0020B058  41 82 00 2C */	beq func_8020E144
+/* 8020E118 0020B058  41 82 00 2C */	beq lbl_8020E144
 /* 8020E11C 0020B05C  28 00 00 07 */	cmplwi r0, 7
-/* 8020E120 0020B060  41 82 00 24 */	beq func_8020E144
+/* 8020E120 0020B060  41 82 00 24 */	beq lbl_8020E144
 /* 8020E124 0020B064  28 00 00 03 */	cmplwi r0, 3
-/* 8020E128 0020B068  41 82 00 1C */	beq func_8020E144
+/* 8020E128 0020B068  41 82 00 1C */	beq lbl_8020E144
 /* 8020E12C 0020B06C  28 00 00 05 */	cmplwi r0, 5
-/* 8020E130 0020B070  41 82 00 14 */	beq func_8020E144
+/* 8020E130 0020B070  41 82 00 14 */	beq lbl_8020E144
 /* 8020E134 0020B074  28 00 00 02 */	cmplwi r0, 2
-/* 8020E138 0020B078  41 82 00 0C */	beq func_8020E144
+/* 8020E138 0020B078  41 82 00 0C */	beq lbl_8020E144
 /* 8020E13C 0020B07C  28 00 00 06 */	cmplwi r0, 6
-/* 8020E140 0020B080  40 82 01 4C */	bne func_8020E28C
-
-/* 8020E144 0068 .text      func_8020E144                  func_8020E144                  */
-.global func_8020E144
-func_8020E144:
+/* 8020E140 0020B080  40 82 01 4C */	bne lbl_8020E28C
+lbl_8020E144:
 /* 8020E144 0020B084  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E148 0020B088  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020E14C 0020B08C  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020E150 0020B090  28 00 00 00 */	cmplwi r0, 0
-/* 8020E154 0020B094  40 82 00 58 */	bne func_8020E1AC
+/* 8020E154 0020B094  40 82 00 58 */	bne lbl_8020E1AC
 /* 8020E158 0020B098  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E15C 0020B09C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E160 0020B0A0  40 82 00 4C */	bne func_8020E1AC
+/* 8020E160 0020B0A0  40 82 00 4C */	bne lbl_8020E1AC
 /* 8020E164 0020B0A4  7F A3 EB 78 */	mr r3, r29
 /* 8020E168 0020B0A8  4B FF F7 0D */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020E16C 0020B0AC  38 00 00 B8 */	li r0, 0xb8
@@ -1119,22 +993,19 @@ func_8020E144:
 /* 8020E1A0 0020B0E0  48 01 08 31 */	bl dMeter2Info_set2DVibration__Fv
 /* 8020E1A4 0020B0E4  38 00 00 01 */	li r0, 1
 /* 8020E1A8 0020B0E8  98 1F 00 BF */	stb r0, 0xbf(r31)
-
-/* 8020E1AC 008C .text      func_8020E1AC                  func_8020E1AC                  */
-.global func_8020E1AC
-func_8020E1AC:
+lbl_8020E1AC:
 /* 8020E1AC 0020B0EC  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020E1B0 0020B0F0  28 00 00 01 */	cmplwi r0, 1
-/* 8020E1B4 0020B0F4  40 82 00 CC */	bne func_8020E280
+/* 8020E1B4 0020B0F4  40 82 00 CC */	bne lbl_8020E280
 /* 8020E1B8 0020B0F8  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E1BC 0020B0FC  28 00 00 00 */	cmplwi r0, 0
-/* 8020E1C0 0020B100  41 82 00 C0 */	beq func_8020E280
+/* 8020E1C0 0020B100  41 82 00 C0 */	beq lbl_8020E280
 /* 8020E1C4 0020B104  48 00 04 5D */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020E1C8 0020B108  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E1CC 0020B10C  41 82 00 B4 */	beq func_8020E280
+/* 8020E1CC 0020B10C  41 82 00 B4 */	beq lbl_8020E280
 /* 8020E1D0 0020B110  88 1E 00 C1 */	lbz r0, 0xc1(r30)
 /* 8020E1D4 0020B114  28 00 00 07 */	cmplwi r0, 7
-/* 8020E1D8 0020B118  41 81 00 60 */	bgt func_8020E238
+/* 8020E1D8 0020B118  41 81 00 60 */	bgt lbl_8020E238
 /* 8020E1DC 0020B11C  3C 60 80 3C */	lis r3, d_d_meter_map__LIT_4516@ha
 /* 8020E1E0 0020B120  38 63 F2 D8 */	addi r3, r3, d_d_meter_map__LIT_4516@l
 /* 8020E1E4 0020B124  54 00 10 3A */	slwi r0, r0, 2
@@ -1143,25 +1014,22 @@ func_8020E1AC:
 /* 8020E1F0 0020B130  4E 80 04 20 */	bctr 
 /* 8020E1F4 0020B134  38 00 00 04 */	li r0, 4
 /* 8020E1F8 0020B138  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020E1FC 0020B13C  48 00 00 3C */	b func_8020E238
+/* 8020E1FC 0020B13C  48 00 00 3C */	b lbl_8020E238
 /* 8020E200 0020B140  38 00 00 07 */	li r0, 7
 /* 8020E204 0020B144  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020E208 0020B148  48 00 00 30 */	b func_8020E238
+/* 8020E208 0020B148  48 00 00 30 */	b lbl_8020E238
 /* 8020E20C 0020B14C  38 00 00 08 */	li r0, 8
 /* 8020E210 0020B150  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020E214 0020B154  48 00 00 24 */	b func_8020E238
+/* 8020E214 0020B154  48 00 00 24 */	b lbl_8020E238
 /* 8020E218 0020B158  38 00 00 09 */	li r0, 9
 /* 8020E21C 0020B15C  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020E220 0020B160  48 00 00 18 */	b func_8020E238
+/* 8020E220 0020B160  48 00 00 18 */	b lbl_8020E238
 /* 8020E224 0020B164  38 00 00 05 */	li r0, 5
 /* 8020E228 0020B168  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020E22C 0020B16C  48 00 00 0C */	b func_8020E238
+/* 8020E22C 0020B16C  48 00 00 0C */	b lbl_8020E238
 /* 8020E230 0020B170  38 00 00 03 */	li r0, 3
 /* 8020E234 0020B174  98 1F 00 BF */	stb r0, 0xbf(r31)
-
-/* 8020E238 0048 .text      func_8020E238                  func_8020E238                  */
-.global func_8020E238
-func_8020E238:
+lbl_8020E238:
 /* 8020E238 0020B178  38 00 04 00 */	li r0, 0x400
 /* 8020E23C 0020B17C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E240 0020B180  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -1180,32 +1048,26 @@ func_8020E238:
 /* 8020E274 0020B1B4  39 00 00 00 */	li r8, 0
 /* 8020E278 0020B1B8  48 09 D7 0D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020E27C 0020B1BC  48 01 07 55 */	bl dMeter2Info_set2DVibration__Fv
-
-/* 8020E280 000C .text      func_8020E280                  func_8020E280                  */
-.global func_8020E280
-func_8020E280:
+lbl_8020E280:
 /* 8020E280 0020B1C0  38 00 00 00 */	li r0, 0
 /* 8020E284 0020B1C4  98 1E 00 C1 */	stb r0, 0xc1(r30)
-/* 8020E288 0020B1C8  48 00 01 18 */	b func_8020E3A0
-
-/* 8020E28C 0084 .text      func_8020E28C                  func_8020E28C                  */
-.global func_8020E28C
-func_8020E28C:
+/* 8020E288 0020B1C8  48 00 01 18 */	b lbl_8020E3A0
+lbl_8020E28C:
 /* 8020E28C 0020B1CC  28 00 00 04 */	cmplwi r0, 4
-/* 8020E290 0020B1D0  40 82 00 EC */	bne func_8020E37C
+/* 8020E290 0020B1D0  40 82 00 EC */	bne lbl_8020E37C
 /* 8020E294 0020B1D4  38 00 00 00 */	li r0, 0
 /* 8020E298 0020B1D8  98 1E 00 C1 */	stb r0, 0xc1(r30)
 /* 8020E29C 0020B1DC  48 00 04 71 */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020E2A0 0020B1E0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E2A4 0020B1E4  41 82 00 FC */	beq func_8020E3A0
+/* 8020E2A4 0020B1E4  41 82 00 FC */	beq lbl_8020E3A0
 /* 8020E2A8 0020B1E8  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E2AC 0020B1EC  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
 /* 8020E2B0 0020B1F0  88 1E 00 BF */	lbz r0, 0xbf(r30)
 /* 8020E2B4 0020B1F4  28 00 00 00 */	cmplwi r0, 0
-/* 8020E2B8 0020B1F8  40 82 00 58 */	bne func_8020E310
+/* 8020E2B8 0020B1F8  40 82 00 58 */	bne lbl_8020E310
 /* 8020E2BC 0020B1FC  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E2C0 0020B200  28 00 00 00 */	cmplwi r0, 0
-/* 8020E2C4 0020B204  40 82 00 4C */	bne func_8020E310
+/* 8020E2C4 0020B204  40 82 00 4C */	bne lbl_8020E310
 /* 8020E2C8 0020B208  7F A3 EB 78 */	mr r3, r29
 /* 8020E2CC 0020B20C  4B FF F5 A9 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020E2D0 0020B210  38 00 00 B8 */	li r0, 0xb8
@@ -1224,16 +1086,13 @@ func_8020E28C:
 /* 8020E304 0020B244  48 01 06 CD */	bl dMeter2Info_set2DVibration__Fv
 /* 8020E308 0020B248  38 00 00 01 */	li r0, 1
 /* 8020E30C 0020B24C  98 1E 00 BF */	stb r0, 0xbf(r30)
-
-/* 8020E310 006C .text      func_8020E310                  func_8020E310                  */
-.global func_8020E310
-func_8020E310:
+lbl_8020E310:
 /* 8020E310 0020B250  88 1E 00 BF */	lbz r0, 0xbf(r30)
 /* 8020E314 0020B254  28 00 00 01 */	cmplwi r0, 1
-/* 8020E318 0020B258  40 82 00 88 */	bne func_8020E3A0
+/* 8020E318 0020B258  40 82 00 88 */	bne lbl_8020E3A0
 /* 8020E31C 0020B25C  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E320 0020B260  28 00 00 00 */	cmplwi r0, 0
-/* 8020E324 0020B264  41 82 00 7C */	beq func_8020E3A0
+/* 8020E324 0020B264  41 82 00 7C */	beq lbl_8020E3A0
 /* 8020E328 0020B268  38 00 00 06 */	li r0, 6
 /* 8020E32C 0020B26C  98 1E 00 BF */	stb r0, 0xbf(r30)
 /* 8020E330 0020B270  38 00 04 00 */	li r0, 0x400
@@ -1254,24 +1113,18 @@ func_8020E310:
 /* 8020E36C 0020B2AC  39 00 00 00 */	li r8, 0
 /* 8020E370 0020B2B0  48 09 D6 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020E374 0020B2B4  48 01 06 5D */	bl dMeter2Info_set2DVibration__Fv
-/* 8020E378 0020B2B8  48 00 00 28 */	b func_8020E3A0
-
-/* 8020E37C 0024 .text      func_8020E37C                  func_8020E37C                  */
-.global func_8020E37C
-func_8020E37C:
+/* 8020E378 0020B2B8  48 00 00 28 */	b lbl_8020E3A0
+lbl_8020E37C:
 /* 8020E37C 0020B2BC  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 8020E380 0020B2C0  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
 /* 8020E384 0020B2C4  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 8020E388 0020B2C8  54 60 07 39 */	rlwinm. r0, r3, 0, 0x1c, 0x1c
-/* 8020E38C 0020B2CC  40 82 00 14 */	bne func_8020E3A0
+/* 8020E38C 0020B2CC  40 82 00 14 */	bne lbl_8020E3A0
 /* 8020E390 0020B2D0  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
-/* 8020E394 0020B2D4  40 82 00 0C */	bne func_8020E3A0
+/* 8020E394 0020B2D4  40 82 00 0C */	bne lbl_8020E3A0
 /* 8020E398 0020B2D8  7F A3 EB 78 */	mr r3, r29
 /* 8020E39C 0020B2DC  48 00 06 31 */	bl keyCheck__11dMeterMap_cFv
-
-/* 8020E3A0 0048 .text      func_8020E3A0                  func_8020E3A0                  */
-.global func_8020E3A0
-func_8020E3A0:
+lbl_8020E3A0:
 /* 8020E3A0 0020B2E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E3A4 0020B2E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020E3A8 0020B2E8  3B C3 09 58 */	addi r30, r3, 0x958
@@ -1280,55 +1133,43 @@ func_8020E3A0:
 /* 8020E3B4 0020B2F4  4B E2 65 81 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8020E3B8 0020B2F8  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8020E3BC 0020B2FC  7C 00 18 00 */	cmpw r0, r3
-/* 8020E3C0 0020B300  41 82 00 38 */	beq func_8020E3F8
+/* 8020E3C0 0020B300  41 82 00 38 */	beq lbl_8020E3F8
 /* 8020E3C4 0020B304  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E3C8 0020B308  28 00 00 00 */	cmplwi r0, 0
-/* 8020E3CC 0020B30C  40 82 00 1C */	bne func_8020E3E8
+/* 8020E3CC 0020B30C  40 82 00 1C */	bne lbl_8020E3E8
 /* 8020E3D0 0020B310  7F A3 EB 78 */	mr r3, r29
 /* 8020E3D4 0020B314  4B FF F4 A1 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020E3D8 0020B318  38 00 00 01 */	li r0, 1
 /* 8020E3DC 0020B31C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E3E0 0020B320  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E3E4 0020B324  98 03 00 BF */	stb r0, 0xbf(r3)
-
-/* 8020E3E8 0010 .text      func_8020E3E8                  func_8020E3E8                  */
-.global func_8020E3E8
-func_8020E3E8:
+lbl_8020E3E8:
 /* 8020E3E8 0020B328  7F C3 F3 78 */	mr r3, r30
 /* 8020E3EC 0020B32C  38 80 00 01 */	li r4, 1
 /* 8020E3F0 0020B330  4B E2 65 45 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8020E3F4 0020B334  90 7D 00 0C */	stw r3, 0xc(r29)
-
-/* 8020E3F8 003C .text      func_8020E3F8                  func_8020E3F8                  */
-.global func_8020E3F8
-func_8020E3F8:
+lbl_8020E3F8:
 /* 8020E3F8 0020B338  7F C3 F3 78 */	mr r3, r30
 /* 8020E3FC 0020B33C  38 80 00 00 */	li r4, 0
 /* 8020E400 0020B340  4B E2 65 35 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8020E404 0020B344  80 1D 00 10 */	lwz r0, 0x10(r29)
 /* 8020E408 0020B348  7C 00 18 00 */	cmpw r0, r3
-/* 8020E40C 0020B34C  41 82 00 38 */	beq func_8020E444
+/* 8020E40C 0020B34C  41 82 00 38 */	beq lbl_8020E444
 /* 8020E410 0020B350  88 1D 00 2D */	lbz r0, 0x2d(r29)
 /* 8020E414 0020B354  28 00 00 00 */	cmplwi r0, 0
-/* 8020E418 0020B358  40 82 00 1C */	bne func_8020E434
+/* 8020E418 0020B358  40 82 00 1C */	bne lbl_8020E434
 /* 8020E41C 0020B35C  7F A3 EB 78 */	mr r3, r29
 /* 8020E420 0020B360  4B FF F4 55 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020E424 0020B364  38 00 00 01 */	li r0, 1
 /* 8020E428 0020B368  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E42C 0020B36C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E430 0020B370  98 03 00 BF */	stb r0, 0xbf(r3)
-
-/* 8020E434 0010 .text      func_8020E434                  func_8020E434                  */
-.global func_8020E434
-func_8020E434:
+lbl_8020E434:
 /* 8020E434 0020B374  7F C3 F3 78 */	mr r3, r30
 /* 8020E438 0020B378  38 80 00 00 */	li r4, 0
 /* 8020E43C 0020B37C  4B E2 64 F9 */	bl isDungeonItem__12dSv_memBit_cCFi
 /* 8020E440 0020B380  90 7D 00 10 */	stw r3, 0x10(r29)
-
-/* 8020E444 0018 .text      func_8020E444                  func_8020E444                  */
-.global func_8020E444
-func_8020E444:
+lbl_8020E444:
 /* 8020E444 0020B384  39 61 00 30 */	addi r11, r1, 0x30
 /* 8020E448 0020B388  48 15 3D E1 */	bl _restgpr_29
 /* 8020E44C 0020B38C  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -1336,8 +1177,9 @@ func_8020E444:
 /* 8020E454 0020B394  38 21 00 30 */	addi r1, r1, 0x30
 /* 8020E458 0020B398  4E 80 00 20 */	blr 
 
-/* 8020E45C 0044 .text      checkMoveStatus__11dMeterMap_cFv checkMoveStatus__11dMeterMap_cFv */
+/* 8020E45C 006C .text      checkMoveStatus__11dMeterMap_cFv checkMoveStatus__11dMeterMap_cFv */
 .global checkMoveStatus__11dMeterMap_cFv
+checkMoveStatus__11dMeterMap_cFv:
 checkMoveStatus__11dMeterMap_cFv:
 /* 8020E45C 0020B39C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020E460 0020B3A0  7C 08 02 A6 */	mflr r0
@@ -1347,44 +1189,33 @@ checkMoveStatus__11dMeterMap_cFv:
 /* 8020E470 0020B3B0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 8020E474 0020B3B4  48 00 00 55 */	bl isShow__11dMeterMap_cFUl
 /* 8020E478 0020B3B8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E47C 0020B3BC  41 82 00 34 */	beq func_8020E4B0
+/* 8020E47C 0020B3BC  41 82 00 34 */	beq lbl_8020E4B0
 /* 8020E480 0020B3C0  4B FF F1 D1 */	bl isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020E484 0020B3C4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E488 0020B3C8  41 82 00 20 */	beq func_8020E4A8
+/* 8020E488 0020B3C8  41 82 00 20 */	beq lbl_8020E4A8
 /* 8020E48C 0020B3CC  88 1F 00 2D */	lbz r0, 0x2d(r31)
 /* 8020E490 0020B3D0  28 00 00 00 */	cmplwi r0, 0
-/* 8020E494 0020B3D4  41 82 00 0C */	beq func_8020E4A0
+/* 8020E494 0020B3D4  41 82 00 0C */	beq lbl_8020E4A0
 /* 8020E498 0020B3D8  38 60 00 01 */	li r3, 1
-/* 8020E49C 0020B3DC  48 00 00 18 */	b func_8020E4B4
-
-/* 8020E4A0 0008 .text      func_8020E4A0                  func_8020E4A0                  */
-.global func_8020E4A0
-func_8020E4A0:
+/* 8020E49C 0020B3DC  48 00 00 18 */	b lbl_8020E4B4
+lbl_8020E4A0:
 /* 8020E4A0 0020B3E0  38 60 00 02 */	li r3, 2
-/* 8020E4A4 0020B3E4  48 00 00 10 */	b func_8020E4B4
-
-/* 8020E4A8 0008 .text      func_8020E4A8                  func_8020E4A8                  */
-.global func_8020E4A8
-func_8020E4A8:
+/* 8020E4A4 0020B3E4  48 00 00 10 */	b lbl_8020E4B4
+lbl_8020E4A8:
 /* 8020E4A8 0020B3E8  38 60 00 03 */	li r3, 3
-/* 8020E4AC 0020B3EC  48 00 00 08 */	b func_8020E4B4
-
-/* 8020E4B0 0004 .text      func_8020E4B0                  func_8020E4B0                  */
-.global func_8020E4B0
-func_8020E4B0:
+/* 8020E4AC 0020B3EC  48 00 00 08 */	b lbl_8020E4B4
+lbl_8020E4B0:
 /* 8020E4B0 0020B3F0  38 60 00 00 */	li r3, 0
-
-/* 8020E4B4 0014 .text      func_8020E4B4                  func_8020E4B4                  */
-.global func_8020E4B4
-func_8020E4B4:
+lbl_8020E4B4:
 /* 8020E4B4 0020B3F4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020E4B8 0020B3F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020E4BC 0020B3FC  7C 08 03 A6 */	mtlr r0
 /* 8020E4C0 0020B400  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020E4C4 0020B404  4E 80 00 20 */	blr 
 
-/* 8020E4C8 0050 .text      isShow__11dMeterMap_cFUl       isShow__11dMeterMap_cFUl       */
+/* 8020E4C8 0158 .text      isShow__11dMeterMap_cFUl       isShow__11dMeterMap_cFUl       */
 .global isShow__11dMeterMap_cFUl
+isShow__11dMeterMap_cFUl:
 isShow__11dMeterMap_cFUl:
 /* 8020E4C8 0020B408  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020E4CC 0020B40C  7C 08 02 A6 */	mflr r0
@@ -1392,117 +1223,97 @@ isShow__11dMeterMap_cFUl:
 /* 8020E4D4 0020B414  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8020E4D8 0020B418  7C 7F 1B 78 */	mr r31, r3
 /* 8020E4DC 0020B41C  54 60 04 63 */	rlwinm. r0, r3, 0, 0x11, 0x11
-/* 8020E4E0 0020B420  40 82 01 20 */	bne func_8020E600
+/* 8020E4E0 0020B420  40 82 01 20 */	bne lbl_8020E600
 /* 8020E4E4 0020B424  4B E1 00 C5 */	bl fopOvlpM_IsDoingReq__Fv
 /* 8020E4E8 0020B428  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E4EC 0020B42C  40 82 01 14 */	bne func_8020E600
+/* 8020E4EC 0020B42C  40 82 01 14 */	bne lbl_8020E600
 /* 8020E4F0 0020B430  57 E0 06 73 */	rlwinm. r0, r31, 0, 0x19, 0x19
-/* 8020E4F4 0020B434  41 82 00 3C */	beq func_8020E530
+/* 8020E4F4 0020B434  41 82 00 3C */	beq lbl_8020E530
 /* 8020E4F8 0020B438  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E4FC 0020B43C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020E500 0020B440  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8020E504 0020B444  28 00 00 00 */	cmplwi r0, 0
-/* 8020E508 0020B448  41 82 00 10 */	beq func_8020E518
+/* 8020E508 0020B448  41 82 00 10 */	beq lbl_8020E518
 /* 8020E50C 0020B44C  A0 03 4F A4 */	lhz r0, 0x4fa4(r3)
 /* 8020E510 0020B450  54 00 05 EE */	rlwinm r0, r0, 0, 0x17, 0x17
-/* 8020E514 0020B454  48 00 00 08 */	b func_8020E51C
-
-/* 8020E518 0004 .text      func_8020E518                  func_8020E518                  */
-.global func_8020E518
-func_8020E518:
+/* 8020E514 0020B454  48 00 00 08 */	b lbl_8020E51C
+lbl_8020E518:
 /* 8020E518 0020B458  38 00 00 00 */	li r0, 0
-
-/* 8020E51C 0014 .text      func_8020E51C                  func_8020E51C                  */
-.global func_8020E51C
-func_8020E51C:
+lbl_8020E51C:
 /* 8020E51C 0020B45C  54 00 04 3F */	clrlwi. r0, r0, 0x10
-/* 8020E520 0020B460  41 82 00 10 */	beq func_8020E530
+/* 8020E520 0020B460  41 82 00 10 */	beq lbl_8020E530
 /* 8020E524 0020B464  A0 03 4F A0 */	lhz r0, 0x4fa0(r3)
 /* 8020E528 0020B468  54 00 06 73 */	rlwinm. r0, r0, 0, 0x19, 0x19
-/* 8020E52C 0020B46C  41 82 00 D4 */	beq func_8020E600
-
-/* 8020E530 0028 .text      func_8020E530                  func_8020E530                  */
-.global func_8020E530
-func_8020E530:
+/* 8020E52C 0020B46C  41 82 00 D4 */	beq lbl_8020E600
+lbl_8020E530:
 /* 8020E530 0020B470  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E534 0020B474  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020E538 0020B478  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 8020E53C 0020B47C  38 00 00 00 */	li r0, 0
 /* 8020E540 0020B480  88 64 05 6A */	lbz r3, 0x56a(r4)
 /* 8020E544 0020B484  28 03 00 00 */	cmplwi r3, 0
-/* 8020E548 0020B488  41 82 00 10 */	beq func_8020E558
+/* 8020E548 0020B488  41 82 00 10 */	beq lbl_8020E558
 /* 8020E54C 0020B48C  28 03 00 26 */	cmplwi r3, 0x26
-/* 8020E550 0020B490  40 80 00 08 */	bge func_8020E558
+/* 8020E550 0020B490  40 80 00 08 */	bge lbl_8020E558
 /* 8020E554 0020B494  38 00 00 01 */	li r0, 1
-
-/* 8020E558 00A8 .text      func_8020E558                  func_8020E558                  */
-.global func_8020E558
-func_8020E558:
+lbl_8020E558:
 /* 8020E558 0020B498  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8020E55C 0020B49C  40 82 00 A4 */	bne func_8020E600
+/* 8020E55C 0020B49C  40 82 00 A4 */	bne lbl_8020E600
 /* 8020E560 0020B4A0  57 E0 02 95 */	rlwinm. r0, r31, 0, 0xa, 0xa
-/* 8020E564 0020B4A4  40 82 00 9C */	bne func_8020E600
+/* 8020E564 0020B4A4  40 82 00 9C */	bne lbl_8020E600
 /* 8020E568 0020B4A8  57 E0 05 EF */	rlwinm. r0, r31, 0, 0x17, 0x17
-/* 8020E56C 0020B4AC  40 82 00 94 */	bne func_8020E600
+/* 8020E56C 0020B4AC  40 82 00 94 */	bne lbl_8020E600
 /* 8020E570 0020B4B0  57 E0 06 31 */	rlwinm. r0, r31, 0, 0x18, 0x18
-/* 8020E574 0020B4B4  40 82 00 8C */	bne func_8020E600
+/* 8020E574 0020B4B4  40 82 00 8C */	bne lbl_8020E600
 /* 8020E578 0020B4B8  57 E0 00 43 */	rlwinm. r0, r31, 0, 1, 1
-/* 8020E57C 0020B4BC  40 82 00 84 */	bne func_8020E600
+/* 8020E57C 0020B4BC  40 82 00 84 */	bne lbl_8020E600
 /* 8020E580 0020B4C0  57 E0 04 E7 */	rlwinm. r0, r31, 0, 0x13, 0x13
-/* 8020E584 0020B4C4  40 82 00 7C */	bne func_8020E600
+/* 8020E584 0020B4C4  40 82 00 7C */	bne lbl_8020E600
 /* 8020E588 0020B4C8  57 E0 02 D7 */	rlwinm. r0, r31, 0, 0xb, 0xb
-/* 8020E58C 0020B4CC  40 82 00 74 */	bne func_8020E600
+/* 8020E58C 0020B4CC  40 82 00 74 */	bne lbl_8020E600
 /* 8020E590 0020B4D0  57 E0 03 9D */	rlwinm. r0, r31, 0, 0xe, 0xe
-/* 8020E594 0020B4D4  40 82 00 6C */	bne func_8020E600
+/* 8020E594 0020B4D4  40 82 00 6C */	bne lbl_8020E600
 /* 8020E598 0020B4D8  57 E0 07 39 */	rlwinm. r0, r31, 0, 0x1c, 0x1c
-/* 8020E59C 0020B4DC  40 82 00 64 */	bne func_8020E600
+/* 8020E59C 0020B4DC  40 82 00 64 */	bne lbl_8020E600
 /* 8020E5A0 0020B4E0  57 E0 06 F7 */	rlwinm. r0, r31, 0, 0x1b, 0x1b
-/* 8020E5A4 0020B4E4  40 82 00 5C */	bne func_8020E600
+/* 8020E5A4 0020B4E4  40 82 00 5C */	bne lbl_8020E600
 /* 8020E5A8 0020B4E8  57 E0 01 CF */	rlwinm. r0, r31, 0, 7, 7
-/* 8020E5AC 0020B4EC  40 82 00 54 */	bne func_8020E600
+/* 8020E5AC 0020B4EC  40 82 00 54 */	bne lbl_8020E600
 /* 8020E5B0 0020B4F0  57 E0 02 11 */	rlwinm. r0, r31, 0, 8, 8
-/* 8020E5B4 0020B4F4  40 82 00 4C */	bne func_8020E600
+/* 8020E5B4 0020B4F4  40 82 00 4C */	bne lbl_8020E600
 /* 8020E5B8 0020B4F8  57 E0 06 B5 */	rlwinm. r0, r31, 0, 0x1a, 0x1a
-/* 8020E5BC 0020B4FC  40 82 00 44 */	bne func_8020E600
+/* 8020E5BC 0020B4FC  40 82 00 44 */	bne lbl_8020E600
 /* 8020E5C0 0020B500  57 E0 01 4B */	rlwinm. r0, r31, 0, 5, 5
-/* 8020E5C4 0020B504  40 82 00 3C */	bne func_8020E600
+/* 8020E5C4 0020B504  40 82 00 3C */	bne lbl_8020E600
 /* 8020E5C8 0020B508  57 E0 00 C7 */	rlwinm. r0, r31, 0, 3, 3
-/* 8020E5CC 0020B50C  40 82 00 34 */	bne func_8020E600
+/* 8020E5CC 0020B50C  40 82 00 34 */	bne lbl_8020E600
 /* 8020E5D0 0020B510  57 E0 05 29 */	rlwinm. r0, r31, 0, 0x14, 0x14
-/* 8020E5D4 0020B514  40 82 00 2C */	bne func_8020E600
+/* 8020E5D4 0020B514  40 82 00 2C */	bne lbl_8020E600
 /* 8020E5D8 0020B518  57 E0 00 85 */	rlwinm. r0, r31, 0, 2, 2
-/* 8020E5DC 0020B51C  40 82 00 24 */	bne func_8020E600
+/* 8020E5DC 0020B51C  40 82 00 24 */	bne lbl_8020E600
 /* 8020E5E0 0020B520  80 04 05 80 */	lwz r0, 0x580(r4)
 /* 8020E5E4 0020B524  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
-/* 8020E5E8 0020B528  40 82 00 18 */	bne func_8020E600
+/* 8020E5E8 0020B528  40 82 00 18 */	bne lbl_8020E600
 /* 8020E5EC 0020B52C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E5F0 0020B530  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E5F4 0020B534  A0 03 00 B0 */	lhz r0, 0xb0(r3)
 /* 8020E5F8 0020B538  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020E5FC 0020B53C  41 82 00 0C */	beq func_8020E608
-
-/* 8020E600 0008 .text      func_8020E600                  func_8020E600                  */
-.global func_8020E600
-func_8020E600:
+/* 8020E5FC 0020B53C  41 82 00 0C */	beq lbl_8020E608
+lbl_8020E600:
 /* 8020E600 0020B540  38 60 00 00 */	li r3, 0
-/* 8020E604 0020B544  48 00 00 08 */	b func_8020E60C
-
-/* 8020E608 0004 .text      func_8020E608                  func_8020E608                  */
-.global func_8020E608
-func_8020E608:
+/* 8020E604 0020B544  48 00 00 08 */	b lbl_8020E60C
+lbl_8020E608:
 /* 8020E608 0020B548  38 60 00 01 */	li r3, 1
-
-/* 8020E60C 0014 .text      func_8020E60C                  func_8020E60C                  */
-.global func_8020E60C
-func_8020E60C:
+lbl_8020E60C:
 /* 8020E60C 0020B54C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020E610 0020B550  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020E614 0020B554  7C 08 03 A6 */	mtlr r0
 /* 8020E618 0020B558  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020E61C 0020B55C  4E 80 00 20 */	blr 
 
-/* 8020E620 00CC .text      isFmapScreen__11dMeterMap_cFv  isFmapScreen__11dMeterMap_cFv  */
+/* 8020E620 00EC .text      isFmapScreen__11dMeterMap_cFv  isFmapScreen__11dMeterMap_cFv  */
 .global isFmapScreen__11dMeterMap_cFv
+isFmapScreen__11dMeterMap_cFv:
 isFmapScreen__11dMeterMap_cFv:
 /* 8020E620 0020B560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020E624 0020B564  7C 08 02 A6 */	mflr r0
@@ -1518,7 +1329,7 @@ isFmapScreen__11dMeterMap_cFv:
 /* 8020E64C 0020B58C  4E 80 04 21 */	bctrl 
 /* 8020E650 0020B590  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020E654 0020B594  54 00 07 7F */	clrlwi. r0, r0, 0x1d
-/* 8020E658 0020B598  41 82 00 94 */	beq func_8020E6EC
+/* 8020E658 0020B598  41 82 00 94 */	beq lbl_8020E6EC
 /* 8020E65C 0020B59C  7F E3 FB 78 */	mr r3, r31
 /* 8020E660 0020B5A0  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8020E664 0020B5A4  81 8C 00 BC */	lwz r12, 0xbc(r12)
@@ -1527,7 +1338,7 @@ isFmapScreen__11dMeterMap_cFv:
 /* 8020E670 0020B5B0  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020E674 0020B5B4  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8020E678 0020B5B8  2C 00 00 05 */	cmpwi r0, 5
-/* 8020E67C 0020B5BC  41 82 00 70 */	beq func_8020E6EC
+/* 8020E67C 0020B5BC  41 82 00 70 */	beq lbl_8020E6EC
 /* 8020E680 0020B5C0  7F E3 FB 78 */	mr r3, r31
 /* 8020E684 0020B5C4  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8020E688 0020B5C8  81 8C 00 BC */	lwz r12, 0xbc(r12)
@@ -1536,7 +1347,7 @@ isFmapScreen__11dMeterMap_cFv:
 /* 8020E694 0020B5D4  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020E698 0020B5D8  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8020E69C 0020B5DC  2C 00 00 03 */	cmpwi r0, 3
-/* 8020E6A0 0020B5E0  41 82 00 4C */	beq func_8020E6EC
+/* 8020E6A0 0020B5E0  41 82 00 4C */	beq lbl_8020E6EC
 /* 8020E6A4 0020B5E4  7F E3 FB 78 */	mr r3, r31
 /* 8020E6A8 0020B5E8  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8020E6AC 0020B5EC  81 8C 00 BC */	lwz r12, 0xbc(r12)
@@ -1545,7 +1356,7 @@ isFmapScreen__11dMeterMap_cFv:
 /* 8020E6B8 0020B5F8  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020E6BC 0020B5FC  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8020E6C0 0020B600  2C 00 00 04 */	cmpwi r0, 4
-/* 8020E6C4 0020B604  41 82 00 28 */	beq func_8020E6EC
+/* 8020E6C4 0020B604  41 82 00 28 */	beq lbl_8020E6EC
 /* 8020E6C8 0020B608  7F E3 FB 78 */	mr r3, r31
 /* 8020E6CC 0020B60C  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8020E6D0 0020B610  81 8C 00 BC */	lwz r12, 0xbc(r12)
@@ -1554,22 +1365,13 @@ isFmapScreen__11dMeterMap_cFv:
 /* 8020E6DC 0020B61C  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8020E6E0 0020B620  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8020E6E4 0020B624  2C 00 00 06 */	cmpwi r0, 6
-/* 8020E6E8 0020B628  40 82 00 0C */	bne func_8020E6F4
-
-/* 8020E6EC 0008 .text      func_8020E6EC                  func_8020E6EC                  */
-.global func_8020E6EC
-func_8020E6EC:
+/* 8020E6E8 0020B628  40 82 00 0C */	bne lbl_8020E6F4
+lbl_8020E6EC:
 /* 8020E6EC 0020B62C  38 60 00 01 */	li r3, 1
-/* 8020E6F0 0020B630  48 00 00 08 */	b func_8020E6F8
-
-/* 8020E6F4 0004 .text      func_8020E6F4                  func_8020E6F4                  */
-.global func_8020E6F4
-func_8020E6F4:
+/* 8020E6F0 0020B630  48 00 00 08 */	b lbl_8020E6F8
+lbl_8020E6F4:
 /* 8020E6F4 0020B634  38 60 00 00 */	li r3, 0
-
-/* 8020E6F8 0014 .text      func_8020E6F8                  func_8020E6F8                  */
-.global func_8020E6F8
-func_8020E6F8:
+lbl_8020E6F8:
 /* 8020E6F8 0020B638  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8020E6FC 0020B63C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8020E700 0020B640  7C 08 03 A6 */	mtlr r0
@@ -1578,6 +1380,7 @@ func_8020E6F8:
 
 /* 8020E70C 0048 .text      isDmapScreen__11dMeterMap_cFv  isDmapScreen__11dMeterMap_cFv  */
 .global isDmapScreen__11dMeterMap_cFv
+isDmapScreen__11dMeterMap_cFv:
 isDmapScreen__11dMeterMap_cFv:
 /* 8020E70C 0020B64C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020E710 0020B650  7C 08 02 A6 */	mflr r0
@@ -1598,8 +1401,9 @@ isDmapScreen__11dMeterMap_cFv:
 /* 8020E74C 0020B68C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020E750 0020B690  4E 80 00 20 */	blr 
 
-/* 8020E754 00A4 .text      meter_map_move__11dMeterMap_cFUl meter_map_move__11dMeterMap_cFUl */
+/* 8020E754 0278 .text      meter_map_move__11dMeterMap_cFUl meter_map_move__11dMeterMap_cFUl */
 .global meter_map_move__11dMeterMap_cFUl
+meter_map_move__11dMeterMap_cFUl:
 meter_map_move__11dMeterMap_cFUl:
 /* 8020E754 0020B694  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8020E758 0020B698  7C 08 02 A6 */	mflr r0
@@ -1607,21 +1411,21 @@ meter_map_move__11dMeterMap_cFUl:
 /* 8020E760 0020B6A0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8020E764 0020B6A4  4B FF FD 65 */	bl isShow__11dMeterMap_cFUl
 /* 8020E768 0020B6A8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E76C 0020B6AC  41 82 02 4C */	beq func_8020E9B8
+/* 8020E76C 0020B6AC  41 82 02 4C */	beq lbl_8020E9B8
 /* 8020E770 0020B6B0  4B FF F1 91 */	bl isMapOpenCheck__11dMeterMap_cFv
 /* 8020E774 0020B6B4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E778 0020B6B8  41 82 02 40 */	beq func_8020E9B8
+/* 8020E778 0020B6B8  41 82 02 40 */	beq lbl_8020E9B8
 /* 8020E77C 0020B6BC  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E780 0020B6C0  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020E784 0020B6C4  88 1F 00 C1 */	lbz r0, 0xc1(r31)
 /* 8020E788 0020B6C8  28 00 00 06 */	cmplwi r0, 6
-/* 8020E78C 0020B6CC  40 82 00 78 */	bne func_8020E804
+/* 8020E78C 0020B6CC  40 82 00 78 */	bne lbl_8020E804
 /* 8020E790 0020B6D0  A0 1F 00 A2 */	lhz r0, 0xa2(r31)
 /* 8020E794 0020B6D4  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020E798 0020B6D8  40 82 00 60 */	bne func_8020E7F8
+/* 8020E798 0020B6D8  40 82 00 60 */	bne lbl_8020E7F8
 /* 8020E79C 0020B6DC  4B FF FE 85 */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020E7A0 0020B6E0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E7A4 0020B6E4  41 82 00 54 */	beq func_8020E7F8
+/* 8020E7A4 0020B6E4  41 82 00 54 */	beq lbl_8020E7F8
 /* 8020E7A8 0020B6E8  38 00 00 03 */	li r0, 3
 /* 8020E7AC 0020B6EC  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E7B0 0020B6F0  38 63 01 88 */	addi r3, r3, g_meter2_info@l
@@ -1642,60 +1446,48 @@ meter_map_move__11dMeterMap_cFUl:
 /* 8020E7EC 0020B72C  39 00 00 00 */	li r8, 0
 /* 8020E7F0 0020B730  48 09 D1 95 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020E7F4 0020B734  48 01 01 DD */	bl dMeter2Info_set2DVibration__Fv
-
-/* 8020E7F8 000C .text      func_8020E7F8                  func_8020E7F8                  */
-.global func_8020E7F8
-func_8020E7F8:
+lbl_8020E7F8:
 /* 8020E7F8 0020B738  38 00 00 00 */	li r0, 0
 /* 8020E7FC 0020B73C  98 1F 00 C1 */	stb r0, 0xc1(r31)
-/* 8020E800 0020B740  48 00 01 B8 */	b func_8020E9B8
-
-/* 8020E804 0058 .text      func_8020E804                  func_8020E804                  */
-.global func_8020E804
-func_8020E804:
+/* 8020E800 0020B740  48 00 01 B8 */	b lbl_8020E9B8
+lbl_8020E804:
 /* 8020E804 0020B744  4B FE B7 A9 */	bl dMw_LEFT_TRIGGER__Fv
 /* 8020E808 0020B748  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E80C 0020B74C  41 82 00 D8 */	beq func_8020E8E4
+/* 8020E80C 0020B74C  41 82 00 D8 */	beq lbl_8020E8E4
 /* 8020E810 0020B750  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E814 0020B754  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020E818 0020B758  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8020E81C 0020B75C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E820 0020B760  40 82 00 C4 */	bne func_8020E8E4
+/* 8020E820 0020B760  40 82 00 C4 */	bne lbl_8020E8E4
 /* 8020E824 0020B764  48 02 9A 09 */	bl getStatus__12dMsgObject_cFv
 /* 8020E828 0020B768  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8020E82C 0020B76C  20 60 00 01 */	subfic r3, r0, 1
 /* 8020E830 0020B770  30 03 FF FF */	addic r0, r3, -1
 /* 8020E834 0020B774  7C 00 19 10 */	subfe r0, r0, r3
 /* 8020E838 0020B778  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8020E83C 0020B77C  40 82 00 A8 */	bne func_8020E8E4
+/* 8020E83C 0020B77C  40 82 00 A8 */	bne lbl_8020E8E4
 /* 8020E840 0020B780  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E844 0020B784  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020E848 0020B788  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020E84C 0020B78C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E850 0020B790  41 82 00 0C */	beq func_8020E85C
+/* 8020E850 0020B790  41 82 00 0C */	beq lbl_8020E85C
 /* 8020E854 0020B794  28 00 00 01 */	cmplwi r0, 1
-/* 8020E858 0020B798  40 82 00 8C */	bne func_8020E8E4
-
-/* 8020E85C 0034 .text      func_8020E85C                  func_8020E85C                  */
-.global func_8020E85C
-func_8020E85C:
+/* 8020E858 0020B798  40 82 00 8C */	bne lbl_8020E8E4
+lbl_8020E85C:
 /* 8020E85C 0020B79C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E860 0020B7A0  40 82 01 58 */	bne func_8020E9B8
+/* 8020E860 0020B7A0  40 82 01 58 */	bne lbl_8020E9B8
 /* 8020E864 0020B7A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E868 0020B7A8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E86C 0020B7AC  A0 03 00 A2 */	lhz r0, 0xa2(r3)
 /* 8020E870 0020B7B0  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020E874 0020B7B4  40 82 01 44 */	bne func_8020E9B8
+/* 8020E874 0020B7B4  40 82 01 44 */	bne lbl_8020E9B8
 /* 8020E878 0020B7B8  4B FF FD A9 */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020E87C 0020B7BC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E880 0020B7C0  40 82 00 10 */	bne func_8020E890
+/* 8020E880 0020B7C0  40 82 00 10 */	bne lbl_8020E890
 /* 8020E884 0020B7C4  4B FF FE 89 */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020E888 0020B7C8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E88C 0020B7CC  41 82 01 2C */	beq func_8020E9B8
-
-/* 8020E890 0054 .text      func_8020E890                  func_8020E890                  */
-.global func_8020E890
-func_8020E890:
+/* 8020E88C 0020B7CC  41 82 01 2C */	beq lbl_8020E9B8
+lbl_8020E890:
 /* 8020E890 0020B7D0  38 00 00 02 */	li r0, 2
 /* 8020E894 0020B7D4  98 1F 00 BF */	stb r0, 0xbf(r31)
 /* 8020E898 0020B7D8  38 00 02 00 */	li r0, 0x200
@@ -1716,52 +1508,43 @@ func_8020E890:
 /* 8020E8D4 0020B814  39 00 00 00 */	li r8, 0
 /* 8020E8D8 0020B818  48 09 D0 AD */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020E8DC 0020B81C  48 01 00 F5 */	bl dMeter2Info_set2DVibration__Fv
-/* 8020E8E0 0020B820  48 00 00 D8 */	b func_8020E9B8
-
-/* 8020E8E4 0058 .text      func_8020E8E4                  func_8020E8E4                  */
-.global func_8020E8E4
-func_8020E8E4:
+/* 8020E8E0 0020B820  48 00 00 D8 */	b lbl_8020E9B8
+lbl_8020E8E4:
 /* 8020E8E4 0020B824  4B FE B7 11 */	bl dMw_RIGHT_TRIGGER__Fv
 /* 8020E8E8 0020B828  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E8EC 0020B82C  41 82 00 CC */	beq func_8020E9B8
+/* 8020E8EC 0020B82C  41 82 00 CC */	beq lbl_8020E9B8
 /* 8020E8F0 0020B830  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8020E8F4 0020B834  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8020E8F8 0020B838  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8020E8FC 0020B83C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E900 0020B840  40 82 00 B8 */	bne func_8020E9B8
+/* 8020E900 0020B840  40 82 00 B8 */	bne lbl_8020E9B8
 /* 8020E904 0020B844  48 02 99 29 */	bl getStatus__12dMsgObject_cFv
 /* 8020E908 0020B848  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8020E90C 0020B84C  20 60 00 01 */	subfic r3, r0, 1
 /* 8020E910 0020B850  30 03 FF FF */	addic r0, r3, -1
 /* 8020E914 0020B854  7C 00 19 10 */	subfe r0, r0, r3
 /* 8020E918 0020B858  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8020E91C 0020B85C  40 82 00 9C */	bne func_8020E9B8
+/* 8020E91C 0020B85C  40 82 00 9C */	bne lbl_8020E9B8
 /* 8020E920 0020B860  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E924 0020B864  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020E928 0020B868  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020E92C 0020B86C  28 00 00 00 */	cmplwi r0, 0
-/* 8020E930 0020B870  41 82 00 0C */	beq func_8020E93C
+/* 8020E930 0020B870  41 82 00 0C */	beq lbl_8020E93C
 /* 8020E934 0020B874  28 00 00 01 */	cmplwi r0, 1
-/* 8020E938 0020B878  40 82 00 80 */	bne func_8020E9B8
-
-/* 8020E93C 002C .text      func_8020E93C                  func_8020E93C                  */
-.global func_8020E93C
-func_8020E93C:
+/* 8020E938 0020B878  40 82 00 80 */	bne lbl_8020E9B8
+lbl_8020E93C:
 /* 8020E93C 0020B87C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020E940 0020B880  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020E944 0020B884  A0 03 00 A2 */	lhz r0, 0xa2(r3)
 /* 8020E948 0020B888  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020E94C 0020B88C  40 82 00 6C */	bne func_8020E9B8
+/* 8020E94C 0020B88C  40 82 00 6C */	bne lbl_8020E9B8
 /* 8020E950 0020B890  4B FF FC D1 */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020E954 0020B894  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E958 0020B898  40 82 00 10 */	bne func_8020E968
+/* 8020E958 0020B898  40 82 00 10 */	bne lbl_8020E968
 /* 8020E95C 0020B89C  4B FF FD B1 */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020E960 0020B8A0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E964 0020B8A4  41 82 00 54 */	beq func_8020E9B8
-
-/* 8020E968 0050 .text      func_8020E968                  func_8020E968                  */
-.global func_8020E968
-func_8020E968:
+/* 8020E964 0020B8A4  41 82 00 54 */	beq lbl_8020E9B8
+lbl_8020E968:
 /* 8020E968 0020B8A8  38 00 00 02 */	li r0, 2
 /* 8020E96C 0020B8AC  98 1F 00 BF */	stb r0, 0xbf(r31)
 /* 8020E970 0020B8B0  38 00 04 00 */	li r0, 0x400
@@ -1782,18 +1565,16 @@ func_8020E968:
 /* 8020E9AC 0020B8EC  39 00 00 00 */	li r8, 0
 /* 8020E9B0 0020B8F0  48 09 CF D5 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020E9B4 0020B8F4  48 01 00 1D */	bl dMeter2Info_set2DVibration__Fv
-
-/* 8020E9B8 0014 .text      func_8020E9B8                  func_8020E9B8                  */
-.global func_8020E9B8
-func_8020E9B8:
+lbl_8020E9B8:
 /* 8020E9B8 0020B8F8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8020E9BC 0020B8FC  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8020E9C0 0020B900  7C 08 03 A6 */	mtlr r0
 /* 8020E9C4 0020B904  38 21 00 20 */	addi r1, r1, 0x20
 /* 8020E9C8 0020B908  4E 80 00 20 */	blr 
 
-/* 8020E9CC 0050 .text      keyCheck__11dMeterMap_cFv      keyCheck__11dMeterMap_cFv      */
+/* 8020E9CC 0394 .text      keyCheck__11dMeterMap_cFv      keyCheck__11dMeterMap_cFv      */
 .global keyCheck__11dMeterMap_cFv
+keyCheck__11dMeterMap_cFv:
 keyCheck__11dMeterMap_cFv:
 /* 8020E9CC 0020B90C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8020E9D0 0020B910  7C 08 02 A6 */	mflr r0
@@ -1803,27 +1584,24 @@ keyCheck__11dMeterMap_cFv:
 /* 8020E9E0 0020B920  7C 7E 1B 78 */	mr r30, r3
 /* 8020E9E4 0020B924  4B FE B5 C9 */	bl dMw_LEFT_TRIGGER__Fv
 /* 8020E9E8 0020B928  2C 03 00 00 */	cmpwi r3, 0
-/* 8020E9EC 0020B92C  41 82 01 60 */	beq func_8020EB4C
+/* 8020E9EC 0020B92C  41 82 01 60 */	beq lbl_8020EB4C
 /* 8020E9F0 0020B930  7F C3 F3 78 */	mr r3, r30
 /* 8020E9F4 0020B934  4B FF EC A5 */	bl isEventRunCheck__11dMeterMap_cFv
 /* 8020E9F8 0020B938  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020E9FC 0020B93C  40 82 01 50 */	bne func_8020EB4C
+/* 8020E9FC 0020B93C  40 82 01 50 */	bne lbl_8020EB4C
 /* 8020EA00 0020B940  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EA04 0020B944  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020EA08 0020B948  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020EA0C 0020B94C  28 00 00 00 */	cmplwi r0, 0
-/* 8020EA10 0020B950  41 82 00 0C */	beq func_8020EA1C
+/* 8020EA10 0020B950  41 82 00 0C */	beq lbl_8020EA1C
 /* 8020EA14 0020B954  28 00 00 01 */	cmplwi r0, 1
-/* 8020EA18 0020B958  40 82 01 34 */	bne func_8020EB4C
-
-/* 8020EA1C 005C .text      func_8020EA1C                  func_8020EA1C                  */
-.global func_8020EA1C
-func_8020EA1C:
+/* 8020EA18 0020B958  40 82 01 34 */	bne lbl_8020EB4C
+lbl_8020EA1C:
 /* 8020EA1C 0020B95C  28 00 00 01 */	cmplwi r0, 1
-/* 8020EA20 0020B960  40 82 00 58 */	bne func_8020EA78
+/* 8020EA20 0020B960  40 82 00 58 */	bne lbl_8020EA78
 /* 8020EA24 0020B964  88 1E 00 2D */	lbz r0, 0x2d(r30)
 /* 8020EA28 0020B968  28 00 00 00 */	cmplwi r0, 0
-/* 8020EA2C 0020B96C  41 82 03 1C */	beq func_8020ED48
+/* 8020EA2C 0020B96C  41 82 03 1C */	beq lbl_8020ED48
 /* 8020EA30 0020B970  7F C3 F3 78 */	mr r3, r30
 /* 8020EA34 0020B974  4B FF EE 89 */	bl setDispPosOutsideFlg_SE_On__11dMeterMap_cFv
 /* 8020EA38 0020B978  38 00 00 B9 */	li r0, 0xb9
@@ -1841,28 +1619,22 @@ func_8020EA1C:
 /* 8020EA68 0020B9A8  48 09 CF 1D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EA6C 0020B9AC  38 00 00 00 */	li r0, 0
 /* 8020EA70 0020B9B0  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020EA74 0020B9B4  48 00 02 D4 */	b func_8020ED48
-
-/* 8020EA78 0034 .text      func_8020EA78                  func_8020EA78                  */
-.global func_8020EA78
-func_8020EA78:
+/* 8020EA74 0020B9B4  48 00 02 D4 */	b lbl_8020ED48
+lbl_8020EA78:
 /* 8020EA78 0020B9B8  28 00 00 00 */	cmplwi r0, 0
-/* 8020EA7C 0020B9BC  40 82 02 CC */	bne func_8020ED48
+/* 8020EA7C 0020B9BC  40 82 02 CC */	bne lbl_8020ED48
 /* 8020EA80 0020B9C0  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EA84 0020B9C4  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020EA88 0020B9C8  A0 03 00 A2 */	lhz r0, 0xa2(r3)
 /* 8020EA8C 0020B9CC  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020EA90 0020B9D0  40 82 00 70 */	bne func_8020EB00
+/* 8020EA90 0020B9D0  40 82 00 70 */	bne lbl_8020EB00
 /* 8020EA94 0020B9D4  4B FF FB 8D */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020EA98 0020B9D8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EA9C 0020B9DC  40 82 00 10 */	bne func_8020EAAC
+/* 8020EA9C 0020B9DC  40 82 00 10 */	bne lbl_8020EAAC
 /* 8020EAA0 0020B9E0  4B FF FC 6D */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020EAA4 0020B9E4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EAA8 0020B9E8  41 82 00 58 */	beq func_8020EB00
-
-/* 8020EAAC 0054 .text      func_8020EAAC                  func_8020EAAC                  */
-.global func_8020EAAC
-func_8020EAAC:
+/* 8020EAA8 0020B9E8  41 82 00 58 */	beq lbl_8020EB00
+lbl_8020EAAC:
 /* 8020EAAC 0020B9EC  38 00 00 02 */	li r0, 2
 /* 8020EAB0 0020B9F0  98 1F 00 BF */	stb r0, 0xbf(r31)
 /* 8020EAB4 0020B9F4  38 00 02 00 */	li r0, 0x200
@@ -1883,11 +1655,8 @@ func_8020EAAC:
 /* 8020EAF0 0020BA30  39 00 00 00 */	li r8, 0
 /* 8020EAF4 0020BA34  48 09 CE 91 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EAF8 0020BA38  48 00 FE D9 */	bl dMeter2Info_set2DVibration__Fv
-/* 8020EAFC 0020BA3C  48 00 02 4C */	b func_8020ED48
-
-/* 8020EB00 004C .text      func_8020EB00                  func_8020EB00                  */
-.global func_8020EB00
-func_8020EB00:
+/* 8020EAFC 0020BA3C  48 00 02 4C */	b lbl_8020ED48
+lbl_8020EB00:
 /* 8020EB00 0020BA40  7F C3 F3 78 */	mr r3, r30
 /* 8020EB04 0020BA44  4B FF ED 71 */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020EB08 0020BA48  38 00 00 B8 */	li r0, 0xb8
@@ -1906,37 +1675,31 @@ func_8020EB00:
 /* 8020EB3C 0020BA7C  48 00 FE 95 */	bl dMeter2Info_set2DVibration__Fv
 /* 8020EB40 0020BA80  38 00 00 01 */	li r0, 1
 /* 8020EB44 0020BA84  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020EB48 0020BA88  48 00 02 00 */	b func_8020ED48
-
-/* 8020EB4C 0038 .text      func_8020EB4C                  func_8020EB4C                  */
-.global func_8020EB4C
-func_8020EB4C:
+/* 8020EB48 0020BA88  48 00 02 00 */	b lbl_8020ED48
+lbl_8020EB4C:
 /* 8020EB4C 0020BA8C  4B FE B4 A9 */	bl dMw_RIGHT_TRIGGER__Fv
 /* 8020EB50 0020BA90  2C 03 00 00 */	cmpwi r3, 0
-/* 8020EB54 0020BA94  41 82 01 F4 */	beq func_8020ED48
+/* 8020EB54 0020BA94  41 82 01 F4 */	beq lbl_8020ED48
 /* 8020EB58 0020BA98  7F C3 F3 78 */	mr r3, r30
 /* 8020EB5C 0020BA9C  4B FF EB 3D */	bl isEventRunCheck__11dMeterMap_cFv
 /* 8020EB60 0020BAA0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EB64 0020BAA4  40 82 01 E4 */	bne func_8020ED48
+/* 8020EB64 0020BAA4  40 82 01 E4 */	bne lbl_8020ED48
 /* 8020EB68 0020BAA8  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EB6C 0020BAAC  3B E3 01 88 */	addi r31, r3, g_meter2_info@l
 /* 8020EB70 0020BAB0  88 1F 00 BF */	lbz r0, 0xbf(r31)
 /* 8020EB74 0020BAB4  28 00 00 00 */	cmplwi r0, 0
-/* 8020EB78 0020BAB8  41 82 00 0C */	beq func_8020EB84
+/* 8020EB78 0020BAB8  41 82 00 0C */	beq lbl_8020EB84
 /* 8020EB7C 0020BABC  28 00 00 01 */	cmplwi r0, 1
-/* 8020EB80 0020BAC0  40 82 01 C8 */	bne func_8020ED48
-
-/* 8020EB84 006C .text      func_8020EB84                  func_8020EB84                  */
-.global func_8020EB84
-func_8020EB84:
+/* 8020EB80 0020BAC0  40 82 01 C8 */	bne lbl_8020ED48
+lbl_8020EB84:
 /* 8020EB84 0020BAC4  28 00 00 00 */	cmplwi r0, 0
-/* 8020EB88 0020BAC8  40 82 00 E8 */	bne func_8020EC70
+/* 8020EB88 0020BAC8  40 82 00 E8 */	bne lbl_8020EC70
 /* 8020EB8C 0020BACC  4B FF EA C5 */	bl isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv
 /* 8020EB90 0020BAD0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EB94 0020BAD4  41 82 00 5C */	beq func_8020EBF0
+/* 8020EB94 0020BAD4  41 82 00 5C */	beq lbl_8020EBF0
 /* 8020EB98 0020BAD8  88 1E 00 2D */	lbz r0, 0x2d(r30)
 /* 8020EB9C 0020BADC  28 00 00 00 */	cmplwi r0, 0
-/* 8020EBA0 0020BAE0  40 82 01 A8 */	bne func_8020ED48
+/* 8020EBA0 0020BAE0  40 82 01 A8 */	bne lbl_8020ED48
 /* 8020EBA4 0020BAE4  7F C3 F3 78 */	mr r3, r30
 /* 8020EBA8 0020BAE8  4B FF EC CD */	bl setDispPosInsideFlg_SE_On__11dMeterMap_cFv
 /* 8020EBAC 0020BAEC  38 00 00 B8 */	li r0, 0xb8
@@ -1955,26 +1718,20 @@ func_8020EB84:
 /* 8020EBE0 0020BB20  48 00 FD F1 */	bl dMeter2Info_set2DVibration__Fv
 /* 8020EBE4 0020BB24  38 00 00 01 */	li r0, 1
 /* 8020EBE8 0020BB28  98 1F 00 BF */	stb r0, 0xbf(r31)
-/* 8020EBEC 0020BB2C  48 00 01 5C */	b func_8020ED48
-
-/* 8020EBF0 002C .text      func_8020EBF0                  func_8020EBF0                  */
-.global func_8020EBF0
-func_8020EBF0:
+/* 8020EBEC 0020BB2C  48 00 01 5C */	b lbl_8020ED48
+lbl_8020EBF0:
 /* 8020EBF0 0020BB30  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EBF4 0020BB34  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020EBF8 0020BB38  A0 03 00 A2 */	lhz r0, 0xa2(r3)
 /* 8020EBFC 0020BB3C  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020EC00 0020BB40  40 82 01 48 */	bne func_8020ED48
+/* 8020EC00 0020BB40  40 82 01 48 */	bne lbl_8020ED48
 /* 8020EC04 0020BB44  4B FF FA 1D */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020EC08 0020BB48  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EC0C 0020BB4C  40 82 00 10 */	bne func_8020EC1C
+/* 8020EC0C 0020BB4C  40 82 00 10 */	bne lbl_8020EC1C
 /* 8020EC10 0020BB50  4B FF FA FD */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020EC14 0020BB54  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020EC18 0020BB58  41 82 01 30 */	beq func_8020ED48
-
-/* 8020EC1C 0054 .text      func_8020EC1C                  func_8020EC1C                  */
-.global func_8020EC1C
-func_8020EC1C:
+/* 8020EC18 0020BB58  41 82 01 30 */	beq lbl_8020ED48
+lbl_8020EC1C:
 /* 8020EC1C 0020BB5C  38 00 00 02 */	li r0, 2
 /* 8020EC20 0020BB60  98 1F 00 BF */	stb r0, 0xbf(r31)
 /* 8020EC24 0020BB64  38 00 04 00 */	li r0, 0x400
@@ -1995,31 +1752,25 @@ func_8020EC1C:
 /* 8020EC60 0020BBA0  39 00 00 00 */	li r8, 0
 /* 8020EC64 0020BBA4  48 09 CD 21 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020EC68 0020BBA8  48 00 FD 69 */	bl dMeter2Info_set2DVibration__Fv
-/* 8020EC6C 0020BBAC  48 00 00 DC */	b func_8020ED48
-
-/* 8020EC70 0040 .text      func_8020EC70                  func_8020EC70                  */
-.global func_8020EC70
-func_8020EC70:
+/* 8020EC6C 0020BBAC  48 00 00 DC */	b lbl_8020ED48
+lbl_8020EC70:
 /* 8020EC70 0020BBB0  28 00 00 01 */	cmplwi r0, 1
-/* 8020EC74 0020BBB4  40 82 00 D4 */	bne func_8020ED48
+/* 8020EC74 0020BBB4  40 82 00 D4 */	bne lbl_8020ED48
 /* 8020EC78 0020BBB8  88 1E 00 2D */	lbz r0, 0x2d(r30)
 /* 8020EC7C 0020BBBC  28 00 00 00 */	cmplwi r0, 0
-/* 8020EC80 0020BBC0  41 82 00 C8 */	beq func_8020ED48
+/* 8020EC80 0020BBC0  41 82 00 C8 */	beq lbl_8020ED48
 /* 8020EC84 0020BBC4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8020EC88 0020BBC8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
 /* 8020EC8C 0020BBCC  A0 03 00 A2 */	lhz r0, 0xa2(r3)
 /* 8020EC90 0020BBD0  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
-/* 8020EC94 0020BBD4  40 82 00 70 */	bne func_8020ED04
+/* 8020EC94 0020BBD4  40 82 00 70 */	bne lbl_8020ED04
 /* 8020EC98 0020BBD8  4B FF F9 89 */	bl isFmapScreen__11dMeterMap_cFv
 /* 8020EC9C 0020BBDC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020ECA0 0020BBE0  40 82 00 10 */	bne func_8020ECB0
+/* 8020ECA0 0020BBE0  40 82 00 10 */	bne lbl_8020ECB0
 /* 8020ECA4 0020BBE4  4B FF FA 69 */	bl isDmapScreen__11dMeterMap_cFv
 /* 8020ECA8 0020BBE8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8020ECAC 0020BBEC  41 82 00 58 */	beq func_8020ED04
-
-/* 8020ECB0 0054 .text      func_8020ECB0                  func_8020ECB0                  */
-.global func_8020ECB0
-func_8020ECB0:
+/* 8020ECAC 0020BBEC  41 82 00 58 */	beq lbl_8020ED04
+lbl_8020ECB0:
 /* 8020ECB0 0020BBF0  38 00 00 02 */	li r0, 2
 /* 8020ECB4 0020BBF4  98 1F 00 BF */	stb r0, 0xbf(r31)
 /* 8020ECB8 0020BBF8  38 00 04 00 */	li r0, 0x400
@@ -2040,11 +1791,8 @@ func_8020ECB0:
 /* 8020ECF4 0020BC34  39 00 00 00 */	li r8, 0
 /* 8020ECF8 0020BC38  48 09 CC 8D */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020ECFC 0020BC3C  48 00 FC D5 */	bl dMeter2Info_set2DVibration__Fv
-/* 8020ED00 0020BC40  48 00 00 48 */	b func_8020ED48
-
-/* 8020ED04 0044 .text      func_8020ED04                  func_8020ED04                  */
-.global func_8020ED04
-func_8020ED04:
+/* 8020ED00 0020BC40  48 00 00 48 */	b lbl_8020ED48
+lbl_8020ED04:
 /* 8020ED04 0020BC44  7F C3 F3 78 */	mr r3, r30
 /* 8020ED08 0020BC48  4B FF EB B5 */	bl setDispPosOutsideFlg_SE_On__11dMeterMap_cFv
 /* 8020ED0C 0020BC4C  38 00 00 B9 */	li r0, 0xb9
@@ -2062,10 +1810,7 @@ func_8020ED04:
 /* 8020ED3C 0020BC7C  48 09 CC 49 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8020ED40 0020BC80  38 00 00 00 */	li r0, 0
 /* 8020ED44 0020BC84  98 1F 00 BF */	stb r0, 0xbf(r31)
-
-/* 8020ED48 0018 .text      func_8020ED48                  func_8020ED48                  */
-.global func_8020ED48
-func_8020ED48:
+lbl_8020ED48:
 /* 8020ED48 0020BC88  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 8020ED4C 0020BC8C  83 C1 00 28 */	lwz r30, 0x28(r1)
 /* 8020ED50 0020BC90  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -2078,7 +1823,7 @@ func_8020ED48:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80398208 0008 .rodata    d_d_meter_map__stringBase0     @stringBase0                   */
+/* 80398208 0008 .rodata    @stringBase0                   d_d_meter_map__stringBase0     */
 .global d_d_meter_map__stringBase0
 d_d_meter_map__stringBase0:
 .byte 0x46, 0x5f, 0x53, 0x50, 0x31, 0x31, 0x35, 0x00 /* baserom.dol+0x395208 */
@@ -2088,7 +1833,7 @@ d_d_meter_map__stringBase0:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803BF2D8 0020 .data      d_d_meter_map__LIT_4516        @4516                          */
+/* 803BF2D8 0020 .data      @4516                          d_d_meter_map__LIT_4516        */
 .global d_d_meter_map__LIT_4516
 d_d_meter_map__LIT_4516:
 .byte 0x80, 0x20, 0xe2, 0x38, 0x80, 0x20, 0xe1, 0xf4, 0x80, 0x20, 0xe2, 0x24, 0x80, 0x20, 0xe2, 0x0c /* baserom.dol+0x3bc2d8 */
@@ -2097,45 +1842,48 @@ d_d_meter_map__LIT_4516:
 /* 803BF2F8 0010 .data      __vt__11dMeterMap_c            __vt__11dMeterMap_c            */
 .global __vt__11dMeterMap_c
 __vt__11dMeterMap_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x20, 0xdf, 0x68, 0x80, 0x20, 0xd9, 0x90 /* baserom.dol+0x3bc2f8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__11dMeterMap_cFv
+.4byte __dt__11dMeterMap_cFv
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80454820 0004 .sdata2    d_d_meter_map__LIT_4076        @4076                          */
+/* 80454820 0004 .sdata2    @4076                          d_d_meter_map__LIT_4076        */
 .global d_d_meter_map__LIT_4076
 d_d_meter_map__LIT_4076:
 .byte 0x43, 0xd2, 0x80, 0x00 /* baserom.dol+0x3d3680 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3684 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80454828 0008 .sdata2    d_d_meter_map__LIT_4100        @4100                          */
+/* 80454828 0008 .sdata2    @4100                          d_d_meter_map__LIT_4100        */
 .global d_d_meter_map__LIT_4100
 d_d_meter_map__LIT_4100:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3688 */
 
-/* 80454830 0004 .sdata2    d_d_meter_map__LIT_4128        @4128                          */
+/* 80454830 0004 .sdata2    @4128                          d_d_meter_map__LIT_4128        */
 .global d_d_meter_map__LIT_4128
 d_d_meter_map__LIT_4128:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3690 */
 
-/* 80454834 0004 .sdata2    d_d_meter_map__LIT_4129        @4129                          */
+/* 80454834 0004 .sdata2    @4129                          d_d_meter_map__LIT_4129        */
 .global d_d_meter_map__LIT_4129
 d_d_meter_map__LIT_4129:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3694 */
 
-/* 80454838 0008 .sdata2    d_d_meter_map__LIT_4131        @4131                          */
+/* 80454838 0008 .sdata2    @4131                          d_d_meter_map__LIT_4131        */
 .global d_d_meter_map__LIT_4131
 d_d_meter_map__LIT_4131:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3698 */
 
-/* 80454840 0004 .sdata2    d_d_meter_map__LIT_4159        @4159                          */
+/* 80454840 0004 .sdata2    @4159                          d_d_meter_map__LIT_4159        */
 .global d_d_meter_map__LIT_4159
 d_d_meter_map__LIT_4159:
 .byte 0xc2, 0x10, 0x00, 0x00 /* baserom.dol+0x3d36a0 */
 
-/* 80454844 0004 .sdata2    d_d_meter_map__LIT_4515        @4515                          */
+/* 80454844 0004 .sdata2    @4515                          d_d_meter_map__LIT_4515        */
 .global d_d_meter_map__LIT_4515
 d_d_meter_map__LIT_4515:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d36a4 */

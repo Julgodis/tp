@@ -7,6 +7,7 @@
 /* 8036CA54 0020 .text      sqrt                           sqrt                           */
 .global sqrt
 sqrt:
+sqrt:
 /* 8036CA54 00369994  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036CA58 00369998  7C 08 02 A6 */	mflr r0
 /* 8036CA5C 0036999C  90 01 00 14 */	stw r0, 0x14(r1)

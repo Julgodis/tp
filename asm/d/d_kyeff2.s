@@ -7,6 +7,7 @@
 /* 801ADEA0 0024 .text      dKyeff2_Draw__FP9dKyeff2_c     dKyeff2_Draw__FP9dKyeff2_c     */
 .global dKyeff2_Draw__FP9dKyeff2_c
 dKyeff2_Draw__FP9dKyeff2_c:
+dKyeff2_Draw__FP9dKyeff2_c:
 /* 801ADEA0 001AADE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADEA4 001AADE4  7C 08 02 A6 */	mflr r0
 /* 801ADEA8 001AADE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,6 +20,7 @@ dKyeff2_Draw__FP9dKyeff2_c:
 
 /* 801ADEC4 0024 .text      execute__9dKyeff2_cFv          execute__9dKyeff2_cFv          */
 .global execute__9dKyeff2_cFv
+execute__9dKyeff2_cFv:
 execute__9dKyeff2_cFv:
 /* 801ADEC4 001AAE04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADEC8 001AAE08  7C 08 02 A6 */	mflr r0
@@ -33,6 +35,7 @@ execute__9dKyeff2_cFv:
 /* 801ADEE8 0020 .text      dKyeff2_Execute__FP9dKyeff2_c  dKyeff2_Execute__FP9dKyeff2_c  */
 .global dKyeff2_Execute__FP9dKyeff2_c
 dKyeff2_Execute__FP9dKyeff2_c:
+dKyeff2_Execute__FP9dKyeff2_c:
 /* 801ADEE8 001AAE28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADEEC 001AAE2C  7C 08 02 A6 */	mflr r0
 /* 801ADEF0 001AAE30  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,11 +48,13 @@ dKyeff2_Execute__FP9dKyeff2_c:
 /* 801ADF08 0008 .text      dKyeff2_IsDelete__FP9dKyeff2_c dKyeff2_IsDelete__FP9dKyeff2_c */
 .global dKyeff2_IsDelete__FP9dKyeff2_c
 dKyeff2_IsDelete__FP9dKyeff2_c:
+dKyeff2_IsDelete__FP9dKyeff2_c:
 /* 801ADF08 001AAE48  38 60 00 01 */	li r3, 1
 /* 801ADF0C 001AAE4C  4E 80 00 20 */	blr 
 
 /* 801ADF10 0024 .text      dKyeff2_Delete__FP9dKyeff2_c   dKyeff2_Delete__FP9dKyeff2_c   */
 .global dKyeff2_Delete__FP9dKyeff2_c
+dKyeff2_Delete__FP9dKyeff2_c:
 dKyeff2_Delete__FP9dKyeff2_c:
 /* 801ADF10 001AAE50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADF14 001AAE54  7C 08 02 A6 */	mflr r0
@@ -63,6 +68,7 @@ dKyeff2_Delete__FP9dKyeff2_c:
 
 /* 801ADF34 0024 .text      dKyeff2_Create__FP12kankyo_class dKyeff2_Create__FP12kankyo_class */
 .global dKyeff2_Create__FP12kankyo_class
+dKyeff2_Create__FP12kankyo_class:
 dKyeff2_Create__FP12kankyo_class:
 /* 801ADF34 001AAE74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADF38 001AAE78  7C 08 02 A6 */	mflr r0
@@ -91,5 +97,5 @@ g_profile_KYEFF2:
 .byte 0xff, 0xff, 0xff, 0xfd, 0x00, 0x0c, 0xff, 0xfd, 0x03, 0x12, 0x00, 0x00, 0x80, 0x3a, 0x39, 0xe8 /* baserom.dol+0x3b91ac */
 .byte 0x00, 0x00, 0x00, 0xf8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3a, 0x39, 0x40 /* baserom.dol+0x3b91bc */
 .byte 0x00, 0x03, 0x00, 0x00, 0x80, 0x3b, 0xc1, 0x98 /* baserom.dol+0x3b91cc */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b91d4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

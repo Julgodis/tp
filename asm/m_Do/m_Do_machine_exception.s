@@ -4,14 +4,15 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80017D7C 0034 .text      print_f__FPCce                 print_f__FPCce                 */
+/* 80017D7C 008C .text      print_f__FPCce                 print_f__FPCce                 */
 .global print_f__FPCce
+print_f__FPCce:
 print_f__FPCce:
 /* 80017D7C 00014CBC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80017D80 00014CC0  7C 08 02 A6 */	mflr r0
 /* 80017D84 00014CC4  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80017D88 00014CC8  7C 6B 1B 78 */	mr r11, r3
-/* 80017D8C 00014CCC  40 86 00 24 */	bne cr1, func_80017DB0
+/* 80017D8C 00014CCC  40 86 00 24 */	bne cr1, lbl_80017DB0
 /* 80017D90 00014CD0  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80017D94 00014CD4  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80017D98 00014CD8  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -20,10 +21,7 @@ print_f__FPCce:
 /* 80017DA4 00014CE4  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80017DA8 00014CE8  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80017DAC 00014CEC  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80017DB0 0058 .text      func_80017DB0                  func_80017DB0                  */
-.global func_80017DB0
-func_80017DB0:
+lbl_80017DB0:
 /* 80017DB0 00014CF0  90 61 00 08 */	stw r3, 8(r1)
 /* 80017DB4 00014CF4  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80017DB8 00014CF8  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -50,6 +48,7 @@ func_80017DB0:
 /* 80017E08 0028 .text      print__FPCc                    print__FPCc                    */
 .global print__FPCc
 print__FPCc:
+print__FPCc:
 /* 80017E08 00014D48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80017E0C 00014D4C  7C 08 02 A6 */	mflr r0
 /* 80017E10 00014D50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -61,8 +60,9 @@ print__FPCc:
 /* 80017E28 00014D68  38 21 00 10 */	addi r1, r1, 0x10
 /* 80017E2C 00014D6C  4E 80 00 20 */	blr 
 
-/* 80017E30 00F0 .text      dispHeapInfo__Fv               dispHeapInfo__Fv               */
+/* 80017E30 015C .text      dispHeapInfo__Fv               dispHeapInfo__Fv               */
 .global dispHeapInfo__Fv
+dispHeapInfo__Fv:
 dispHeapInfo__Fv:
 /* 80017E30 00014D70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80017E34 00014D74  7C 08 02 A6 */	mflr r0
@@ -122,12 +122,9 @@ dispHeapInfo__Fv:
 /* 80017F0C 00014E4C  80 6D 8E 48 */	lwz r3, sAramObject__7JKRAram-_SDA_BASE_(r13)
 /* 80017F10 00014E50  80 63 00 94 */	lwz r3, 0x94(r3)
 /* 80017F14 00014E54  28 03 00 00 */	cmplwi r3, 0
-/* 80017F18 00014E58  41 82 00 08 */	beq func_80017F20
+/* 80017F18 00014E58  41 82 00 08 */	beq lbl_80017F20
 /* 80017F1C 00014E5C  48 2B B2 FD */	bl dump__11JKRAramHeapFv
-
-/* 80017F20 006C .text      func_80017F20                  func_80017F20                  */
-.global func_80017F20
-func_80017F20:
+lbl_80017F20:
 /* 80017F20 00014E60  48 24 A5 51 */	bl dump__24DynamicModuleControlBaseFv
 /* 80017F24 00014E64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80017F28 00014E68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -159,6 +156,7 @@ func_80017F20:
 /* 80017F8C 0044 .text      dispGameInfo__Fv               dispGameInfo__Fv               */
 .global dispGameInfo__Fv
 dispGameInfo__Fv:
+dispGameInfo__Fv:
 /* 80017F8C 00014ECC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80017F90 00014ED0  7C 08 02 A6 */	mflr r0
 /* 80017F94 00014ED4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -179,6 +177,7 @@ dispGameInfo__Fv:
 
 /* 80017FD0 0154 .text      dispDateInfo__Fv               dispDateInfo__Fv               */
 .global dispDateInfo__Fv
+dispDateInfo__Fv:
 dispDateInfo__Fv:
 /* 80017FD0 00014F10  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80017FD4 00014F14  7C 08 02 A6 */	mflr r0
@@ -203,7 +202,7 @@ dispDateInfo__Fv:
 /* 80018020 00014F60  4C C6 31 82 */	crclr 6
 /* 80018024 00014F64  4B FF FD 59 */	bl print_f__FPCce
 /* 80018028 00014F68  80 6D 85 88 */	lwz r3, sPowerOnTime__7mDoMain-_SDA_BASE_(r13)
-/* 8001802C 00014F6C  80 8D 85 8C */	lwz r4, sym_80450B0C-_SDA_BASE_(r13)
+/* 8001802C 00014F6C  80 8D 85 8C */	lwz r4, data_80450B0C-_SDA_BASE_(r13)
 /* 80018030 00014F70  38 A1 00 10 */	addi r5, r1, 0x10
 /* 80018034 00014F74  48 32 A9 41 */	bl OSTicksToCalendarTime
 /* 80018038 00014F78  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -221,7 +220,7 @@ dispDateInfo__Fv:
 /* 80018068 00014FA8  4C C6 31 82 */	crclr 6
 /* 8001806C 00014FAC  4B FF FD 11 */	bl print_f__FPCce
 /* 80018070 00014FB0  80 6D 85 90 */	lwz r3, sHungUpTime__7mDoMain-_SDA_BASE_(r13)
-/* 80018074 00014FB4  80 8D 85 94 */	lwz r4, sym_80450B14-_SDA_BASE_(r13)
+/* 80018074 00014FB4  80 8D 85 94 */	lwz r4, data_80450B14-_SDA_BASE_(r13)
 /* 80018078 00014FB8  38 A1 00 10 */	addi r5, r1, 0x10
 /* 8001807C 00014FBC  48 32 A8 F9 */	bl OSTicksToCalendarTime
 /* 80018080 00014FC0  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -239,9 +238,9 @@ dispDateInfo__Fv:
 /* 800180B0 00014FF0  4C C6 31 82 */	crclr 6
 /* 800180B4 00014FF4  4B FF FC C9 */	bl print_f__FPCce
 /* 800180B8 00014FF8  80 AD 85 90 */	lwz r5, sHungUpTime__7mDoMain-_SDA_BASE_(r13)
-/* 800180BC 00014FFC  80 8D 85 94 */	lwz r4, sym_80450B14-_SDA_BASE_(r13)
+/* 800180BC 00014FFC  80 8D 85 94 */	lwz r4, data_80450B14-_SDA_BASE_(r13)
 /* 800180C0 00015000  80 0D 85 88 */	lwz r0, sPowerOnTime__7mDoMain-_SDA_BASE_(r13)
-/* 800180C4 00015004  80 6D 85 8C */	lwz r3, sym_80450B0C-_SDA_BASE_(r13)
+/* 800180C4 00015004  80 6D 85 8C */	lwz r3, data_80450B0C-_SDA_BASE_(r13)
 /* 800180C8 00015008  7C 83 20 10 */	subfc r4, r3, r4
 /* 800180CC 0001500C  7C 60 29 10 */	subfe r3, r0, r5
 /* 800180D0 00015010  38 A1 00 10 */	addi r5, r1, 0x10
@@ -269,6 +268,7 @@ dispDateInfo__Fv:
 /* 80018124 0028 .text      dispConsoleToTerminal__Fv      dispConsoleToTerminal__Fv      */
 .global dispConsoleToTerminal__Fv
 dispConsoleToTerminal__Fv:
+dispConsoleToTerminal__Fv:
 /* 80018124 00015064  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018128 00015068  7C 08 02 A6 */	mflr r0
 /* 8001812C 0001506C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -282,6 +282,7 @@ dispConsoleToTerminal__Fv:
 
 /* 8001814C 0030 .text      exception_addition__FP10JUTConsole exception_addition__FP10JUTConsole */
 .global exception_addition__FP10JUTConsole
+exception_addition__FP10JUTConsole:
 exception_addition__FP10JUTConsole:
 /* 8001814C 0001508C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80018150 00015090  7C 08 02 A6 */	mflr r0
@@ -301,7 +302,7 @@ exception_addition__FP10JUTConsole:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80374460 01DF .rodata    m_Do_m_Do_machine_exception__stringBase0 @stringBase0                   */
+/* 80374460 01DF .rodata    @stringBase0                   m_Do_m_Do_machine_exception__stringBase0 */
 .global m_Do_m_Do_machine_exception__stringBase0
 m_Do_m_Do_machine_exception__stringBase0:
 .byte 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d /* baserom.dol+0x371460 */
@@ -334,7 +335,7 @@ m_Do_m_Do_machine_exception__stringBase0:
 .byte 0x25, 0x30, 0x33, 0x64, 0x0a, 0x00, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d /* baserom.dol+0x371610 */
 .byte 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d /* baserom.dol+0x371620 */
 .byte 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x0a, 0x00 /* baserom.dol+0x371630 */
-.byte 0x00 /* baserom.dol+0x37163f */
+.byte 0x00 /* padding */
 
 
 /* ###################################################################################### */

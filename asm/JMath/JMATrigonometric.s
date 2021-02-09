@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80339AEC 0074 .text      __sinit_JMATrigonometric_cpp   __sinit_JMATrigonometric_cpp   */
+/* 80339AEC 01C4 .text      __sinit_JMATrigonometric_cpp   __sinit_JMATrigonometric_cpp   */
 .global __sinit_JMATrigonometric_cpp
+__sinit_JMATrigonometric_cpp:
 __sinit_JMATrigonometric_cpp:
 /* 80339AEC 00336A2C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80339AF0 00336A30  7C 08 02 A6 */	mflr r0
@@ -36,10 +37,7 @@ __sinit_JMATrigonometric_cpp:
 /* 80339B54 00336A94  CB C2 CA E8 */	lfd f30, JMATrigonometric__LIT_437-_SDA2_BASE_(r2)
 /* 80339B58 00336A98  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80339B5C 00336A9C  3B A3 9A 20 */	addi r29, r3, sincosTable___5JMath@l
-
-/* 80339B60 006C .text      func_80339B60                  func_80339B60                  */
-.global func_80339B60
-func_80339B60:
+lbl_80339B60:
 /* 80339B60 00336AA0  6F 80 80 00 */	xoris r0, r28, 0x8000
 /* 80339B64 00336AA4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80339B68 00336AA8  93 C1 00 08 */	stw r30, 8(r1)
@@ -59,7 +57,7 @@ func_80339B60:
 /* 80339BA0 00336AE0  3B 9C 00 01 */	addi r28, r28, 1
 /* 80339BA4 00336AE4  2C 1C 20 00 */	cmpwi r28, 0x2000
 /* 80339BA8 00336AE8  3B FF 00 08 */	addi r31, r31, 8
-/* 80339BAC 00336AEC  41 80 FF B4 */	blt func_80339B60
+/* 80339BAC 00336AEC  41 80 FF B4 */	blt lbl_80339B60
 /* 80339BB0 00336AF0  3B 80 00 00 */	li r28, 0
 /* 80339BB4 00336AF4  3B E0 00 00 */	li r31, 0
 /* 80339BB8 00336AF8  CB E2 CB 00 */	lfd f31, JMATrigonometric__LIT_441-_SDA2_BASE_(r2)
@@ -67,10 +65,7 @@ func_80339B60:
 /* 80339BC0 00336B00  CB C2 CA F0 */	lfd f30, JMATrigonometric__LIT_438-_SDA2_BASE_(r2)
 /* 80339BC4 00336B04  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
 /* 80339BC8 00336B08  3B A3 9A 20 */	addi r29, r3, atanTable___5JMath@l
-
-/* 80339BCC 0064 .text      func_80339BCC                  func_80339BCC                  */
-.global func_80339BCC
-func_80339BCC:
+lbl_80339BCC:
 /* 80339BCC 00336B0C  6F 80 80 00 */	xoris r0, r28, 0x8000
 /* 80339BD0 00336B10  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80339BD4 00336B14  93 C1 00 08 */	stw r30, 8(r1)
@@ -83,7 +78,7 @@ func_80339BCC:
 /* 80339BF0 00336B30  3B 9C 00 01 */	addi r28, r28, 1
 /* 80339BF4 00336B34  28 1C 04 00 */	cmplwi r28, 0x400
 /* 80339BF8 00336B38  3B FF 00 04 */	addi r31, r31, 4
-/* 80339BFC 00336B3C  41 80 FF D0 */	blt func_80339BCC
+/* 80339BFC 00336B3C  41 80 FF D0 */	blt lbl_80339BCC
 /* 80339C00 00336B40  C0 02 CA D8 */	lfs f0, LIT_326-_SDA2_BASE_(r2)
 /* 80339C04 00336B44  3C 60 80 45 */	lis r3, atanTable___5JMath@ha
 /* 80339C08 00336B48  D4 03 9A 20 */	stfsu f0, atanTable___5JMath@l(r3)
@@ -96,10 +91,7 @@ func_80339BCC:
 /* 80339C24 00336B64  CB E2 CA F0 */	lfd f31, JMATrigonometric__LIT_438-_SDA2_BASE_(r2)
 /* 80339C28 00336B68  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
 /* 80339C2C 00336B6C  3B C3 AA 40 */	addi r30, r3, asinAcosTable___5JMath@l
-
-/* 80339C30 0080 .text      func_80339C30                  func_80339C30                  */
-.global func_80339C30
-func_80339C30:
+lbl_80339C30:
 /* 80339C30 00336B70  6F 80 80 00 */	xoris r0, r28, 0x8000
 /* 80339C34 00336B74  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80339C38 00336B78  93 A1 00 08 */	stw r29, 8(r1)
@@ -112,7 +104,7 @@ func_80339C30:
 /* 80339C54 00336B94  3B 9C 00 01 */	addi r28, r28, 1
 /* 80339C58 00336B98  2C 1C 04 00 */	cmpwi r28, 0x400
 /* 80339C5C 00336B9C  3B FF 00 04 */	addi r31, r31, 4
-/* 80339C60 00336BA0  41 80 FF D0 */	blt func_80339C30
+/* 80339C60 00336BA0  41 80 FF D0 */	blt lbl_80339C30
 /* 80339C64 00336BA4  C0 02 CA D8 */	lfs f0, LIT_326-_SDA2_BASE_(r2)
 /* 80339C68 00336BA8  3C 60 80 45 */	lis r3, asinAcosTable___5JMath@ha
 /* 80339C6C 00336BAC  D4 03 AA 40 */	stfsu f0, asinAcosTable___5JMath@l(r3)
@@ -133,8 +125,11 @@ func_80339C30:
 /* 80339CA8 00336BE8  38 21 00 70 */	addi r1, r1, 0x70
 /* 80339CAC 00336BEC  4E 80 00 20 */	blr 
 
-/* 80339CB0 0010 .text      "__ct__Q23std9pair<f,f>Fv"     __ct__Q23std9pair<f,f>Fv       */
+/* 80339CB0 0010 .text      __ct__Q23std9pair<f,f>Fv       "__ct__Q23std9pair<f,f>Fv"     */
+.global "__ct__Q23std9pair<f,f>Fv"
+"__ct__Q23std9pair<f,f>Fv":
 .global __ct__Q23std9pair_SUB_0f_SUB_4f_SUB_1Fv
+__ct__Q23std9pair_SUB_0f_SUB_4f_SUB_1Fv:
 __ct__Q23std9pair_SUB_0f_SUB_4f_SUB_1Fv:
 /* 80339CB0 00336BF0  C0 02 CA D8 */	lfs f0, LIT_326-_SDA2_BASE_(r2)
 /* 80339CB4 00336BF4  D0 03 00 00 */	stfs f0, 0(r3)
@@ -166,34 +161,34 @@ asinAcosTable___5JMath:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804564D8 0004 .sdata2    LIT_326                        @326                           */
+/* 804564D8 0004 .sdata2    @326                           LIT_326                        */
 .global LIT_326
 LIT_326:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5338 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d533c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804564E0 0008 .sdata2    JMATrigonometric__LIT_436      @436                           */
+/* 804564E0 0008 .sdata2    @436                           JMATrigonometric__LIT_436      */
 .global JMATrigonometric__LIT_436
 JMATrigonometric__LIT_436:
 .byte 0x40, 0x19, 0x21, 0xfb, 0x60, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5340 */
 
-/* 804564E8 0008 .sdata2    JMATrigonometric__LIT_437      @437                           */
+/* 804564E8 0008 .sdata2    @437                           JMATrigonometric__LIT_437      */
 .global JMATrigonometric__LIT_437
 JMATrigonometric__LIT_437:
 .byte 0x40, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5348 */
 
-/* 804564F0 0008 .sdata2    JMATrigonometric__LIT_438      @438                           */
+/* 804564F0 0008 .sdata2    @438                           JMATrigonometric__LIT_438      */
 .global JMATrigonometric__LIT_438
 JMATrigonometric__LIT_438:
 .byte 0x3f, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5350 */
 
-/* 804564F8 0004 .sdata2    JMATrigonometric__LIT_439      @439                           */
+/* 804564F8 0004 .sdata2    @439                           JMATrigonometric__LIT_439      */
 .global JMATrigonometric__LIT_439
 JMATrigonometric__LIT_439:
 .byte 0x3f, 0x49, 0x0f, 0xdb /* baserom.dol+0x3d5358 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d535c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80456500 0008 .sdata2    JMATrigonometric__LIT_441      @441                           */
+/* 80456500 0008 .sdata2    @441                           JMATrigonometric__LIT_441      */
 .global JMATrigonometric__LIT_441
 JMATrigonometric__LIT_441:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5360 */

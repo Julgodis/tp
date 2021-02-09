@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8001659C 00A8 .text      mDoDvdErr_ThdInit__Fv          mDoDvdErr_ThdInit__Fv          */
+/* 8001659C 00C0 .text      mDoDvdErr_ThdInit__Fv          mDoDvdErr_ThdInit__Fv          */
 .global mDoDvdErr_ThdInit__Fv
+mDoDvdErr_ThdInit__Fv:
 mDoDvdErr_ThdInit__Fv:
 /* 8001659C 000134DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800165A0 000134E0  7C 08 02 A6 */	mflr r0
@@ -14,9 +15,9 @@ mDoDvdErr_ThdInit__Fv:
 /* 800165AC 000134EC  48 34 BC 31 */	bl _savegpr_29
 /* 800165B0 000134F0  3C 60 80 3E */	lis r3, DvdErr_thread@ha
 /* 800165B4 000134F4  3B E3 EC C0 */	addi r31, r3, DvdErr_thread@l
-/* 800165B8 000134F8  88 0D 87 08 */	lbz r0, sym_80450C88-_SDA_BASE_(r13)
+/* 800165B8 000134F8  88 0D 87 08 */	lbz r0, data_80450C88-_SDA_BASE_(r13)
 /* 800165BC 000134FC  28 00 00 00 */	cmplwi r0, 0
-/* 800165C0 00013500  40 82 00 84 */	bne func_80016644
+/* 800165C0 00013500  40 82 00 84 */	bne lbl_80016644
 /* 800165C4 00013504  48 32 C1 39 */	bl OSGetTime
 /* 800165C8 00013508  7C 9D 23 78 */	mr r29, r4
 /* 800165CC 0001350C  7C 7E 1B 78 */	mr r30, r3
@@ -48,11 +49,8 @@ mDoDvdErr_ThdInit__Fv:
 /* 80016634 00013574  39 24 67 04 */	addi r9, r4, AlarmHandler__FP7OSAlarmP9OSContext@l
 /* 80016638 00013578  48 32 45 89 */	bl OSSetPeriodicAlarm
 /* 8001663C 0001357C  38 00 00 01 */	li r0, 1
-/* 80016640 00013580  98 0D 87 08 */	stb r0, sym_80450C88-_SDA_BASE_(r13)
-
-/* 80016644 0018 .text      func_80016644                  func_80016644                  */
-.global func_80016644
-func_80016644:
+/* 80016640 00013580  98 0D 87 08 */	stb r0, data_80450C88-_SDA_BASE_(r13)
+lbl_80016644:
 /* 80016644 00013584  39 61 00 20 */	addi r11, r1, 0x20
 /* 80016648 00013588  48 34 BB E1 */	bl _restgpr_29
 /* 8001664C 0001358C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -60,15 +58,16 @@ func_80016644:
 /* 80016654 00013594  38 21 00 20 */	addi r1, r1, 0x20
 /* 80016658 00013598  4E 80 00 20 */	blr 
 
-/* 8001665C 0038 .text      mDoDvdErr_ThdCleanup__Fv       mDoDvdErr_ThdCleanup__Fv       */
+/* 8001665C 0048 .text      mDoDvdErr_ThdCleanup__Fv       mDoDvdErr_ThdCleanup__Fv       */
 .global mDoDvdErr_ThdCleanup__Fv
+mDoDvdErr_ThdCleanup__Fv:
 mDoDvdErr_ThdCleanup__Fv:
 /* 8001665C 0001359C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80016660 000135A0  7C 08 02 A6 */	mflr r0
 /* 80016664 000135A4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80016668 000135A8  88 0D 87 08 */	lbz r0, sym_80450C88-_SDA_BASE_(r13)
+/* 80016668 000135A8  88 0D 87 08 */	lbz r0, data_80450C88-_SDA_BASE_(r13)
 /* 8001666C 000135AC  28 00 00 00 */	cmplwi r0, 0
-/* 80016670 000135B0  41 82 00 24 */	beq func_80016694
+/* 80016670 000135B0  41 82 00 24 */	beq lbl_80016694
 /* 80016674 000135B4  3C 60 80 3E */	lis r3, DvdErr_thread@ha
 /* 80016678 000135B8  38 63 EC C0 */	addi r3, r3, DvdErr_thread@l
 /* 8001667C 000135BC  48 32 AE DD */	bl OSCancelThread
@@ -76,18 +75,16 @@ mDoDvdErr_ThdCleanup__Fv:
 /* 80016684 000135C4  38 63 FB E0 */	addi r3, r3, m_Do_m_Do_DVDError__Alarm@l
 /* 80016688 000135C8  48 32 45 B5 */	bl OSCancelAlarm
 /* 8001668C 000135CC  38 00 00 00 */	li r0, 0
-/* 80016690 000135D0  98 0D 87 08 */	stb r0, sym_80450C88-_SDA_BASE_(r13)
-
-/* 80016694 0010 .text      func_80016694                  func_80016694                  */
-.global func_80016694
-func_80016694:
+/* 80016690 000135D0  98 0D 87 08 */	stb r0, data_80450C88-_SDA_BASE_(r13)
+lbl_80016694:
 /* 80016694 000135D4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80016698 000135D8  7C 08 03 A6 */	mtlr r0
 /* 8001669C 000135DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800166A0 000135E0  4E 80 00 20 */	blr 
 
-/* 800166A4 0044 .text      mDoDvdErr_Watch__FPv           mDoDvdErr_Watch__FPv           */
+/* 800166A4 0060 .text      mDoDvdErr_Watch__FPv           mDoDvdErr_Watch__FPv           */
 .global mDoDvdErr_Watch__FPv
+mDoDvdErr_Watch__FPv:
 mDoDvdErr_Watch__FPv:
 /* 800166A4 000135E4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 800166A8 000135E8  7C 08 02 A6 */	mflr r0
@@ -106,24 +103,19 @@ mDoDvdErr_Watch__FPv:
 /* 800166DC 0001361C  48 2B 7D 5D */	bl becomeCurrentHeap__7JKRHeapFv
 /* 800166E0 00013620  3C 60 80 3E */	lis r3, DvdErr_thread@ha
 /* 800166E4 00013624  3B E3 EC C0 */	addi r31, r3, DvdErr_thread@l
-
-/* 800166E8 0010 .text      func_800166E8                  func_800166E8                  */
-.global func_800166E8
-func_800166E8:
+lbl_800166E8:
 /* 800166E8 00013628  48 33 4A E1 */	bl DVDGetDriveStatus
 /* 800166EC 0001362C  2C 03 FF FF */	cmpwi r3, -1
-/* 800166F0 00013630  40 82 00 08 */	bne func_800166F8
+/* 800166F0 00013630  40 82 00 08 */	bne lbl_800166F8
 /* 800166F4 00013634  4B FF F1 C1 */	bl suspend__9mDoDvdThdFv
-
-/* 800166F8 000C .text      func_800166F8                  func_800166F8                  */
-.global func_800166F8
-func_800166F8:
+lbl_800166F8:
 /* 800166F8 00013638  7F E3 FB 78 */	mr r3, r31
 /* 800166FC 0001363C  48 32 B3 41 */	bl OSSuspendThread
-/* 80016700 00013640  4B FF FF E8 */	b func_800166E8
+/* 80016700 00013640  4B FF FF E8 */	b lbl_800166E8
 
 /* 80016704 0028 .text      AlarmHandler__FP7OSAlarmP9OSContext AlarmHandler__FP7OSAlarmP9OSContext */
 .global AlarmHandler__FP7OSAlarmP9OSContext
+AlarmHandler__FP7OSAlarmP9OSContext:
 AlarmHandler__FP7OSAlarmP9OSContext:
 /* 80016704 00013644  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80016708 00013648  7C 08 02 A6 */	mflr r0
@@ -141,9 +133,9 @@ AlarmHandler__FP7OSAlarmP9OSContext:
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 803DECC0 0000 .bss       sym_803DECC0                   ...bss.0                       */
-.global sym_803DECC0
-sym_803DECC0:
+/* 803DECC0 0000 .bss       ...bss.0                       data_803DECC0                  */
+.global data_803DECC0
+data_803DECC0:
 
 /* 803DECC0 0318 .bss       DvdErr_thread                  DvdErr_thread                  */
 .global DvdErr_thread
@@ -156,7 +148,7 @@ DvdErr_thread:
 DvdErr_stack:
 .skip 0xc00
 
-/* 803DFBE0 0028 .bss       m_Do_m_Do_DVDError__Alarm      Alarm                          */
+/* 803DFBE0 0028 .bss       Alarm                          m_Do_m_Do_DVDError__Alarm      */
 .global m_Do_m_Do_DVDError__Alarm
 m_Do_m_Do_DVDError__Alarm:
 .skip 0x28

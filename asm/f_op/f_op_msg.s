@@ -7,6 +7,7 @@
 /* 8001F488 0028 .text      fopMsg_Draw__FPv               fopMsg_Draw__FPv               */
 .global fopMsg_Draw__FPv
 fopMsg_Draw__FPv:
+fopMsg_Draw__FPv:
 /* 8001F488 0001C3C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F48C 0001C3CC  7C 08 02 A6 */	mflr r0
 /* 8001F490 0001C3D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,30 +19,29 @@ fopMsg_Draw__FPv:
 /* 8001F4A8 0001C3E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8001F4AC 0001C3EC  4E 80 00 20 */	blr 
 
-/* 8001F4B0 0028 .text      fopMsg_Execute__FPv            fopMsg_Execute__FPv            */
+/* 8001F4B0 0038 .text      fopMsg_Execute__FPv            fopMsg_Execute__FPv            */
 .global fopMsg_Execute__FPv
+fopMsg_Execute__FPv:
 fopMsg_Execute__FPv:
 /* 8001F4B0 0001C3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F4B4 0001C3F4  7C 08 02 A6 */	mflr r0
 /* 8001F4B8 0001C3F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8001F4BC 0001C3FC  7C 64 1B 78 */	mr r4, r3
 /* 8001F4C0 0001C400  38 60 00 01 */	li r3, 1
-/* 8001F4C4 0001C404  88 0D 8B A4 */	lbz r0, sym_80451124-_SDA_BASE_(r13)
+/* 8001F4C4 0001C404  88 0D 8B A4 */	lbz r0, data_80451124-_SDA_BASE_(r13)
 /* 8001F4C8 0001C408  7C 00 07 75 */	extsb. r0, r0
-/* 8001F4CC 0001C40C  40 82 00 0C */	bne func_8001F4D8
+/* 8001F4CC 0001C40C  40 82 00 0C */	bne lbl_8001F4D8
 /* 8001F4D0 0001C410  80 64 00 D8 */	lwz r3, 0xd8(r4)
 /* 8001F4D4 0001C414  48 00 2F 8D */	bl fpcMtd_Execute__FP20process_method_classPv
-
-/* 8001F4D8 0010 .text      func_8001F4D8                  func_8001F4D8                  */
-.global func_8001F4D8
-func_8001F4D8:
+lbl_8001F4D8:
 /* 8001F4D8 0001C418  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8001F4DC 0001C41C  7C 08 03 A6 */	mtlr r0
 /* 8001F4E0 0001C420  38 21 00 10 */	addi r1, r1, 0x10
 /* 8001F4E4 0001C424  4E 80 00 20 */	blr 
 
-/* 8001F4E8 0038 .text      fopMsg_IsDelete__FPv           fopMsg_IsDelete__FPv           */
+/* 8001F4E8 0054 .text      fopMsg_IsDelete__FPv           fopMsg_IsDelete__FPv           */
 .global fopMsg_IsDelete__FPv
+fopMsg_IsDelete__FPv:
 fopMsg_IsDelete__FPv:
 /* 8001F4E8 0001C428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F4EC 0001C42C  7C 08 02 A6 */	mflr r0
@@ -54,13 +54,10 @@ fopMsg_IsDelete__FPv:
 /* 8001F508 0001C448  48 00 2F 7D */	bl fpcMtd_IsDelete__FP20process_method_classPv
 /* 8001F50C 0001C44C  7C 7F 1B 78 */	mr r31, r3
 /* 8001F510 0001C450  2C 1F 00 01 */	cmpwi r31, 1
-/* 8001F514 0001C454  40 82 00 0C */	bne func_8001F520
+/* 8001F514 0001C454  40 82 00 0C */	bne lbl_8001F520
 /* 8001F518 0001C458  38 7E 00 C4 */	addi r3, r30, 0xc4
 /* 8001F51C 0001C45C  48 00 0F B9 */	bl fopDwTg_DrawQTo__FP16create_tag_class
-
-/* 8001F520 001C .text      func_8001F520                  func_8001F520                  */
-.global func_8001F520
-func_8001F520:
+lbl_8001F520:
 /* 8001F520 0001C460  7F E3 FB 78 */	mr r3, r31
 /* 8001F524 0001C464  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8001F528 0001C468  83 C1 00 08 */	lwz r30, 8(r1)
@@ -71,6 +68,7 @@ func_8001F520:
 
 /* 8001F53C 004C .text      fopMsg_Delete__FPv             fopMsg_Delete__FPv             */
 .global fopMsg_Delete__FPv
+fopMsg_Delete__FPv:
 fopMsg_Delete__FPv:
 /* 8001F53C 0001C47C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F540 0001C480  7C 08 02 A6 */	mflr r0
@@ -92,8 +90,9 @@ fopMsg_Delete__FPv:
 /* 8001F580 0001C4C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8001F584 0001C4C4  4E 80 00 20 */	blr 
 
-/* 8001F588 0090 .text      fopMsg_Create__FPv             fopMsg_Create__FPv             */
+/* 8001F588 00D8 .text      fopMsg_Create__FPv             fopMsg_Create__FPv             */
 .global fopMsg_Create__FPv
+fopMsg_Create__FPv:
 fopMsg_Create__FPv:
 /* 8001F588 0001C4C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F58C 0001C4CC  7C 08 02 A6 */	mflr r0
@@ -103,7 +102,7 @@ fopMsg_Create__FPv:
 /* 8001F59C 0001C4DC  7C 7F 1B 78 */	mr r31, r3
 /* 8001F5A0 0001C4E0  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 8001F5A4 0001C4E4  7C 00 07 75 */	extsb. r0, r0
-/* 8001F5A8 0001C4E8  40 82 00 70 */	bne func_8001F618
+/* 8001F5A8 0001C4E8  40 82 00 70 */	bne lbl_8001F618
 /* 8001F5AC 0001C4EC  83 C3 00 10 */	lwz r30, 0x10(r3)
 /* 8001F5B0 0001C4F0  38 6D 87 70 */	addi r3, r13, fopMsg_MSG_TYPE-_SDA_BASE_
 /* 8001F5B4 0001C4F4  48 00 10 A9 */	bl fpcBs_MakeOfType__FPi
@@ -116,7 +115,7 @@ fopMsg_Create__FPv:
 /* 8001F5D0 0001C510  7F E3 FB 78 */	mr r3, r31
 /* 8001F5D4 0001C514  48 00 04 71 */	bl fopMsgM_GetAppend__FPv
 /* 8001F5D8 0001C518  28 03 00 00 */	cmplwi r3, 0
-/* 8001F5DC 0001C51C  41 82 00 3C */	beq func_8001F618
+/* 8001F5DC 0001C51C  41 82 00 3C */	beq lbl_8001F618
 /* 8001F5E0 0001C520  80 03 00 00 */	lwz r0, 0(r3)
 /* 8001F5E4 0001C524  90 1F 00 DC */	stw r0, 0xdc(r31)
 /* 8001F5E8 0001C528  C0 03 00 04 */	lfs f0, 4(r3)
@@ -131,25 +130,19 @@ fopMsg_Create__FPv:
 /* 8001F60C 0001C54C  90 1F 00 F0 */	stw r0, 0xf0(r31)
 /* 8001F610 0001C550  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8001F614 0001C554  90 1F 00 F4 */	stw r0, 0xf4(r31)
-
-/* 8001F618 002C .text      func_8001F618                  func_8001F618                  */
-.global func_8001F618
-func_8001F618:
+lbl_8001F618:
 /* 8001F618 0001C558  80 7F 00 D8 */	lwz r3, 0xd8(r31)
 /* 8001F61C 0001C55C  7F E4 FB 78 */	mr r4, r31
 /* 8001F620 0001C560  48 00 2E AD */	bl fpcMtd_Create__FP20process_method_classPv
 /* 8001F624 0001C564  7C 7E 1B 78 */	mr r30, r3
 /* 8001F628 0001C568  2C 1E 00 04 */	cmpwi r30, 4
-/* 8001F62C 0001C56C  40 82 00 18 */	bne func_8001F644
+/* 8001F62C 0001C56C  40 82 00 18 */	bne lbl_8001F644
 /* 8001F630 0001C570  7F E3 FB 78 */	mr r3, r31
 /* 8001F634 0001C574  48 00 23 CD */	bl fpcLf_GetPriority__FPC14leafdraw_class
 /* 8001F638 0001C578  7C 64 07 34 */	extsh r4, r3
 /* 8001F63C 0001C57C  38 7F 00 C4 */	addi r3, r31, 0xc4
 /* 8001F640 0001C580  48 00 0E 6D */	bl fopDwTg_ToDrawQ__FP16create_tag_classi
-
-/* 8001F644 001C .text      func_8001F644                  func_8001F644                  */
-.global func_8001F644
-func_8001F644:
+lbl_8001F644:
 /* 8001F644 0001C584  7F C3 F3 78 */	mr r3, r30
 /* 8001F648 0001C588  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8001F64C 0001C58C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -168,7 +161,7 @@ func_8001F644:
 g_fopMsg_Method:
 .byte 0x80, 0x01, 0xf5, 0x88, 0x80, 0x01, 0xf5, 0x3c, 0x80, 0x01, 0xf4, 0xb0, 0x80, 0x01, 0xf4, 0xe8 /* baserom.dol+0x3a0958 */
 .byte 0x80, 0x01, 0xf4, 0x88 /* baserom.dol+0x3a0968 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a096c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */

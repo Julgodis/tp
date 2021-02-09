@@ -7,13 +7,15 @@
 /* 80195A2C 0010 .text      __ct__9dSi_HIO_cFv             __ct__9dSi_HIO_cFv             */
 .global __ct__9dSi_HIO_cFv
 __ct__9dSi_HIO_cFv:
+__ct__9dSi_HIO_cFv:
 /* 80195A2C 0019296C  3C 80 80 3C */	lis r4, __vt__9dSi_HIO_c@ha
 /* 80195A30 00192970  38 04 B7 B8 */	addi r0, r4, __vt__9dSi_HIO_c@l
 /* 80195A34 00192974  90 03 00 00 */	stw r0, 0(r3)
 /* 80195A38 00192978  4E 80 00 20 */	blr 
 
-/* 80195A3C 0074 .text      animation__14dSelect_icon_cFv  animation__14dSelect_icon_cFv  */
+/* 80195A3C 0104 .text      animation__14dSelect_icon_cFv  animation__14dSelect_icon_cFv  */
 .global animation__14dSelect_icon_cFv
+animation__14dSelect_icon_cFv:
 animation__14dSelect_icon_cFv:
 /* 80195A3C 0019297C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80195A40 00192980  7C 08 02 A6 */	mflr r0
@@ -24,7 +26,7 @@ animation__14dSelect_icon_cFv:
 /* 80195A54 00192994  80 63 00 04 */	lwz r3, 4(r3)
 /* 80195A58 00192998  88 03 00 B2 */	lbz r0, 0xb2(r3)
 /* 80195A5C 0019299C  28 00 00 00 */	cmplwi r0, 0
-/* 80195A60 001929A0  41 82 00 CC */	beq func_80195B2C
+/* 80195A60 001929A0  41 82 00 CC */	beq lbl_80195B2C
 /* 80195A64 001929A4  C0 3F 00 20 */	lfs f1, 0x20(r31)
 /* 80195A68 001929A8  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80195A6C 001929AC  EC 01 00 2A */	fadds f0, f1, f0
@@ -41,13 +43,10 @@ animation__14dSelect_icon_cFv:
 /* 80195A98 001929D8  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80195A9C 001929DC  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80195AA0 001929E0  4C 41 13 82 */	cror 2, 1, 2
-/* 80195AA4 001929E4  40 82 00 0C */	bne func_80195AB0
+/* 80195AA4 001929E4  40 82 00 0C */	bne lbl_80195AB0
 /* 80195AA8 001929E8  C0 02 A0 70 */	lfs f0, d_d_select_icon__LIT_3740-_SDA2_BASE_(r2)
 /* 80195AAC 001929EC  D0 1F 00 20 */	stfs f0, 0x20(r31)
-
-/* 80195AB0 0058 .text      func_80195AB0                  func_80195AB0                  */
-.global func_80195AB0
-func_80195AB0:
+lbl_80195AB0:
 /* 80195AB0 001929F0  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80195AB4 001929F4  80 7F 00 1C */	lwz r3, 0x1c(r31)
 /* 80195AB8 001929F8  D0 03 00 08 */	stfs f0, 8(r3)
@@ -67,13 +66,10 @@ func_80195AB0:
 /* 80195AF0 00192A30  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80195AF4 00192A34  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80195AF8 00192A38  4C 41 13 82 */	cror 2, 1, 2
-/* 80195AFC 00192A3C  40 82 00 0C */	bne func_80195B08
+/* 80195AFC 00192A3C  40 82 00 0C */	bne lbl_80195B08
 /* 80195B00 00192A40  C0 02 A0 70 */	lfs f0, d_d_select_icon__LIT_3740-_SDA2_BASE_(r2)
 /* 80195B04 00192A44  D0 1F 00 28 */	stfs f0, 0x28(r31)
-
-/* 80195B08 0024 .text      func_80195B08                  func_80195B08                  */
-.global func_80195B08
-func_80195B08:
+lbl_80195B08:
 /* 80195B08 00192A48  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80195B0C 00192A4C  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80195B10 00192A50  D0 03 00 08 */	stfs f0, 8(r3)
@@ -83,10 +79,7 @@ func_80195B08:
 /* 80195B20 00192A60  80 7F 00 10 */	lwz r3, 0x10(r31)
 /* 80195B24 00192A64  FC 40 08 90 */	fmr f2, f1
 /* 80195B28 00192A68  48 0B EB 11 */	bl paneScale__8CPaneMgrFff
-
-/* 80195B2C 0014 .text      func_80195B2C                  func_80195B2C                  */
-.global func_80195B2C
-func_80195B2C:
+lbl_80195B2C:
 /* 80195B2C 00192A6C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80195B30 00192A70  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80195B34 00192A74  7C 08 03 A6 */	mtlr r0
@@ -95,6 +88,7 @@ func_80195B2C:
 
 /* 80195B40 0030 .text      setAlpha__14dSelect_icon_cFUc  setAlpha__14dSelect_icon_cFUc  */
 .global setAlpha__14dSelect_icon_cFUc
+setAlpha__14dSelect_icon_cFUc:
 setAlpha__14dSelect_icon_cFUc:
 /* 80195B40 00192A80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80195B44 00192A84  7C 08 02 A6 */	mflr r0
@@ -111,6 +105,7 @@ setAlpha__14dSelect_icon_cFUc:
 
 /* 80195B70 00AC .text      setPos__14dSelect_icon_cFP7J2DPaneff setPos__14dSelect_icon_cFP7J2DPaneff */
 .global setPos__14dSelect_icon_cFP7J2DPaneff
+setPos__14dSelect_icon_cFP7J2DPaneff:
 setPos__14dSelect_icon_cFP7J2DPaneff:
 /* 80195B70 00192AB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80195B74 00192AB4  7C 08 02 A6 */	mflr r0
@@ -156,25 +151,23 @@ setPos__14dSelect_icon_cFP7J2DPaneff:
 /* 80195C14 00192B54  38 21 00 30 */	addi r1, r1, 0x30
 /* 80195C18 00192B58  4E 80 00 20 */	blr 
 
-/* 80195C1C 0030 .text      __dt__9dSi_HIO_cFv             __dt__9dSi_HIO_cFv             */
+/* 80195C1C 0048 .text      __dt__9dSi_HIO_cFv             __dt__9dSi_HIO_cFv             */
 .global __dt__9dSi_HIO_cFv
+__dt__9dSi_HIO_cFv:
 __dt__9dSi_HIO_cFv:
 /* 80195C1C 00192B5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80195C20 00192B60  7C 08 02 A6 */	mflr r0
 /* 80195C24 00192B64  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80195C28 00192B68  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80195C2C 00192B6C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80195C30 00192B70  41 82 00 1C */	beq func_80195C4C
+/* 80195C30 00192B70  41 82 00 1C */	beq lbl_80195C4C
 /* 80195C34 00192B74  3C A0 80 3C */	lis r5, __vt__9dSi_HIO_c@ha
 /* 80195C38 00192B78  38 05 B7 B8 */	addi r0, r5, __vt__9dSi_HIO_c@l
 /* 80195C3C 00192B7C  90 1F 00 00 */	stw r0, 0(r31)
 /* 80195C40 00192B80  7C 80 07 35 */	extsh. r0, r4
-/* 80195C44 00192B84  40 81 00 08 */	ble func_80195C4C
+/* 80195C44 00192B84  40 81 00 08 */	ble lbl_80195C4C
 /* 80195C48 00192B88  48 13 90 F5 */	bl __dl__FPv
-
-/* 80195C4C 0018 .text      func_80195C4C                  func_80195C4C                  */
-.global func_80195C4C
-func_80195C4C:
+lbl_80195C4C:
 /* 80195C4C 00192B8C  7F E3 FB 78 */	mr r3, r31
 /* 80195C50 00192B90  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80195C54 00192B94  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -184,6 +177,7 @@ func_80195C4C:
 
 /* 80195C64 0038 .text      __sinit_d_select_icon_cpp      __sinit_d_select_icon_cpp      */
 .global __sinit_d_select_icon_cpp
+__sinit_d_select_icon_cpp:
 __sinit_d_select_icon_cpp:
 /* 80195C64 00192BA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80195C68 00192BA8  7C 08 02 A6 */	mflr r0
@@ -208,15 +202,17 @@ __sinit_d_select_icon_cpp:
 /* 803BB7B8 000C .data      __vt__9dSi_HIO_c               __vt__9dSi_HIO_c               */
 .global __vt__9dSi_HIO_c
 __vt__9dSi_HIO_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0x5c, 0x1c /* baserom.dol+0x3b87b8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b87c4 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__9dSi_HIO_cFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 8042CA10 000C .bss       LIT_3648                       @3648                          */
+/* 8042CA10 000C .bss       @3648                          LIT_3648                       */
 .global LIT_3648
 LIT_3648:
 .skip 0xc
@@ -232,9 +228,9 @@ LIT_3648:
 g_siHIO:
 .skip 0x8
 
-/* 80451058 0004 .sbss      sym_80451058                   sym_80451058                   */
-.global sym_80451058
-sym_80451058:
+/* 80451058 0004 .sbss      data_80451058                  data_80451058                  */
+.global data_80451058
+data_80451058:
 .skip 0x4
 
 
@@ -242,20 +238,20 @@ sym_80451058:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453A70 0004 .sdata2    d_d_select_icon__LIT_3740      @3740                          */
+/* 80453A70 0004 .sdata2    @3740                          d_d_select_icon__LIT_3740      */
 .global d_d_select_icon__LIT_3740
 d_d_select_icon__LIT_3740:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d28d0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d28d4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80453A78 0008 .sdata2    d_d_select_icon__LIT_3773      @3773                          */
+/* 80453A78 0008 .sdata2    @3773                          d_d_select_icon__LIT_3773      */
 .global d_d_select_icon__LIT_3773
 d_d_select_icon__LIT_3773:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d28d8 */
 
-/* 80453A80 0004 .sdata2    LIT_3814                       @3814                          */
+/* 80453A80 0004 .sdata2    @3814                          LIT_3814                       */
 .global LIT_3814
 LIT_3814:
 .byte 0x42, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d28e0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d28e4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80296108 0020 .text      init__12JASSeqReaderFv         init__12JASSeqReaderFv         */
+/* 80296108 0040 .text      init__12JASSeqReaderFv         init__12JASSeqReaderFv         */
 .global init__12JASSeqReaderFv
+init__12JASSeqReaderFv:
 init__12JASSeqReaderFv:
 /* 80296108 00293048  38 C0 00 00 */	li r6, 0
 /* 8029610C 0029304C  90 C3 00 00 */	stw r6, 0(r3)
@@ -15,21 +16,19 @@ init__12JASSeqReaderFv:
 /* 8029611C 0029305C  7C C5 33 78 */	mr r5, r6
 /* 80296120 00293060  38 00 00 08 */	li r0, 8
 /* 80296124 00293064  7C 09 03 A6 */	mtctr r0
-
-/* 80296128 0020 .text      func_80296128                  func_80296128                  */
-.global func_80296128
-func_80296128:
+lbl_80296128:
 /* 80296128 00293068  38 05 00 0C */	addi r0, r5, 0xc
 /* 8029612C 0029306C  7C C3 01 2E */	stwx r6, r3, r0
 /* 80296130 00293070  38 04 00 2C */	addi r0, r4, 0x2c
 /* 80296134 00293074  7C C3 03 2E */	sthx r6, r3, r0
 /* 80296138 00293078  38 84 00 02 */	addi r4, r4, 2
 /* 8029613C 0029307C  38 A5 00 04 */	addi r5, r5, 4
-/* 80296140 00293080  42 00 FF E8 */	bdnz func_80296128
+/* 80296140 00293080  42 00 FF E8 */	bdnz lbl_80296128
 /* 80296144 00293084  4E 80 00 20 */	blr 
 
-/* 80296148 0024 .text      init__12JASSeqReaderFPv        init__12JASSeqReaderFPv        */
+/* 80296148 0044 .text      init__12JASSeqReaderFPv        init__12JASSeqReaderFPv        */
 .global init__12JASSeqReaderFPv
+init__12JASSeqReaderFPv:
 init__12JASSeqReaderFPv:
 /* 80296148 00293088  90 83 00 00 */	stw r4, 0(r3)
 /* 8029614C 0029308C  80 03 00 00 */	lwz r0, 0(r3)
@@ -40,31 +39,26 @@ init__12JASSeqReaderFPv:
 /* 80296160 002930A0  7C C5 33 78 */	mr r5, r6
 /* 80296164 002930A4  38 00 00 08 */	li r0, 8
 /* 80296168 002930A8  7C 09 03 A6 */	mtctr r0
-
-/* 8029616C 0020 .text      func_8029616C                  func_8029616C                  */
-.global func_8029616C
-func_8029616C:
+lbl_8029616C:
 /* 8029616C 002930AC  38 05 00 0C */	addi r0, r5, 0xc
 /* 80296170 002930B0  7C C3 01 2E */	stwx r6, r3, r0
 /* 80296174 002930B4  38 04 00 2C */	addi r0, r4, 0x2c
 /* 80296178 002930B8  7C C3 03 2E */	sthx r6, r3, r0
 /* 8029617C 002930BC  38 84 00 02 */	addi r4, r4, 2
 /* 80296180 002930C0  38 A5 00 04 */	addi r5, r5, 4
-/* 80296184 002930C4  42 00 FF E8 */	bdnz func_8029616C
+/* 80296184 002930C4  42 00 FF E8 */	bdnz lbl_8029616C
 /* 80296188 002930C8  4E 80 00 20 */	blr 
 
-/* 8029618C 0014 .text      call__12JASSeqReaderFUl        call__12JASSeqReaderFUl        */
+/* 8029618C 0040 .text      call__12JASSeqReaderFUl        call__12JASSeqReaderFUl        */
 .global call__12JASSeqReaderFUl
+call__12JASSeqReaderFUl:
 call__12JASSeqReaderFUl:
 /* 8029618C 002930CC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 80296190 002930D0  28 05 00 08 */	cmplwi r5, 8
-/* 80296194 002930D4  41 80 00 0C */	blt func_802961A0
+/* 80296194 002930D4  41 80 00 0C */	blt lbl_802961A0
 /* 80296198 002930D8  38 60 00 00 */	li r3, 0
 /* 8029619C 002930DC  4E 80 00 20 */	blr 
-
-/* 802961A0 002C .text      func_802961A0                  func_802961A0                  */
-.global func_802961A0
-func_802961A0:
+lbl_802961A0:
 /* 802961A0 002930E0  80 C3 00 04 */	lwz r6, 4(r3)
 /* 802961A4 002930E4  38 05 00 01 */	addi r0, r5, 1
 /* 802961A8 002930E8  90 03 00 08 */	stw r0, 8(r3)
@@ -77,18 +71,16 @@ func_802961A0:
 /* 802961C4 00293104  38 60 00 01 */	li r3, 1
 /* 802961C8 00293108  4E 80 00 20 */	blr 
 
-/* 802961CC 0014 .text      loopStart__12JASSeqReaderFUl   loopStart__12JASSeqReaderFUl   */
+/* 802961CC 0044 .text      loopStart__12JASSeqReaderFUl   loopStart__12JASSeqReaderFUl   */
 .global loopStart__12JASSeqReaderFUl
+loopStart__12JASSeqReaderFUl:
 loopStart__12JASSeqReaderFUl:
 /* 802961CC 0029310C  80 03 00 08 */	lwz r0, 8(r3)
 /* 802961D0 00293110  28 00 00 08 */	cmplwi r0, 8
-/* 802961D4 00293114  41 80 00 0C */	blt func_802961E0
+/* 802961D4 00293114  41 80 00 0C */	blt lbl_802961E0
 /* 802961D8 00293118  38 60 00 00 */	li r3, 0
 /* 802961DC 0029311C  4E 80 00 20 */	blr 
-
-/* 802961E0 0030 .text      func_802961E0                  func_802961E0                  */
-.global func_802961E0
-func_802961E0:
+lbl_802961E0:
 /* 802961E0 00293120  80 C3 00 04 */	lwz r6, 4(r3)
 /* 802961E4 00293124  54 00 10 3A */	slwi r0, r0, 2
 /* 802961E8 00293128  7C A3 02 14 */	add r5, r3, r0
@@ -102,40 +94,32 @@ func_802961E0:
 /* 80296208 00293148  38 60 00 01 */	li r3, 1
 /* 8029620C 0029314C  4E 80 00 20 */	blr 
 
-/* 80296210 0014 .text      loopEnd__12JASSeqReaderFv      loopEnd__12JASSeqReaderFv      */
+/* 80296210 006C .text      loopEnd__12JASSeqReaderFv      loopEnd__12JASSeqReaderFv      */
 .global loopEnd__12JASSeqReaderFv
+loopEnd__12JASSeqReaderFv:
 loopEnd__12JASSeqReaderFv:
 /* 80296210 00293150  80 03 00 08 */	lwz r0, 8(r3)
 /* 80296214 00293154  28 00 00 00 */	cmplwi r0, 0
-/* 80296218 00293158  40 82 00 0C */	bne func_80296224
+/* 80296218 00293158  40 82 00 0C */	bne lbl_80296224
 /* 8029621C 0029315C  38 60 00 00 */	li r3, 0
 /* 80296220 00293160  4E 80 00 20 */	blr 
-
-/* 80296224 001C .text      func_80296224                  func_80296224                  */
-.global func_80296224
-func_80296224:
+lbl_80296224:
 /* 80296224 00293164  54 00 08 3C */	slwi r0, r0, 1
 /* 80296228 00293168  7C 83 02 14 */	add r4, r3, r0
 /* 8029622C 0029316C  A0 A4 00 2A */	lhz r5, 0x2a(r4)
 /* 80296230 00293170  28 05 00 00 */	cmplwi r5, 0
-/* 80296234 00293174  41 82 00 0C */	beq func_80296240
+/* 80296234 00293174  41 82 00 0C */	beq lbl_80296240
 /* 80296238 00293178  38 05 FF FF */	addi r0, r5, -1
 /* 8029623C 0029317C  54 05 04 3E */	clrlwi r5, r0, 0x10
-
-/* 80296240 001C .text      func_80296240                  func_80296240                  */
-.global func_80296240
-func_80296240:
+lbl_80296240:
 /* 80296240 00293180  54 A0 04 3F */	clrlwi. r0, r5, 0x10
-/* 80296244 00293184  40 82 00 18 */	bne func_8029625C
+/* 80296244 00293184  40 82 00 18 */	bne lbl_8029625C
 /* 80296248 00293188  80 83 00 08 */	lwz r4, 8(r3)
 /* 8029624C 0029318C  38 04 FF FF */	addi r0, r4, -1
 /* 80296250 00293190  90 03 00 08 */	stw r0, 8(r3)
 /* 80296254 00293194  38 60 00 01 */	li r3, 1
 /* 80296258 00293198  4E 80 00 20 */	blr 
-
-/* 8029625C 0020 .text      func_8029625C                  func_8029625C                  */
-.global func_8029625C
-func_8029625C:
+lbl_8029625C:
 /* 8029625C 0029319C  B0 A4 00 2A */	sth r5, 0x2a(r4)
 /* 80296260 002931A0  80 03 00 08 */	lwz r0, 8(r3)
 /* 80296264 002931A4  54 00 10 3A */	slwi r0, r0, 2
@@ -145,18 +129,16 @@ func_8029625C:
 /* 80296274 002931B4  38 60 00 01 */	li r3, 1
 /* 80296278 002931B8  4E 80 00 20 */	blr 
 
-/* 8029627C 0014 .text      ret__12JASSeqReaderFv          ret__12JASSeqReaderFv          */
+/* 8029627C 0034 .text      ret__12JASSeqReaderFv          ret__12JASSeqReaderFv          */
 .global ret__12JASSeqReaderFv
+ret__12JASSeqReaderFv:
 ret__12JASSeqReaderFv:
 /* 8029627C 002931BC  80 83 00 08 */	lwz r4, 8(r3)
 /* 80296280 002931C0  28 04 00 00 */	cmplwi r4, 0
-/* 80296284 002931C4  40 82 00 0C */	bne func_80296290
+/* 80296284 002931C4  40 82 00 0C */	bne lbl_80296290
 /* 80296288 002931C8  38 60 00 00 */	li r3, 0
 /* 8029628C 002931CC  4E 80 00 20 */	blr 
-
-/* 80296290 0020 .text      func_80296290                  func_80296290                  */
-.global func_80296290
-func_80296290:
+lbl_80296290:
 /* 80296290 002931D0  38 04 FF FF */	addi r0, r4, -1
 /* 80296294 002931D4  90 03 00 08 */	stw r0, 8(r3)
 /* 80296298 002931D8  54 00 10 3A */	slwi r0, r0, 2
@@ -166,35 +148,27 @@ func_80296290:
 /* 802962A8 002931E8  38 60 00 01 */	li r3, 1
 /* 802962AC 002931EC  4E 80 00 20 */	blr 
 
-/* 802962B0 0020 .text      readMidiValue__12JASSeqReaderFv readMidiValue__12JASSeqReaderFv */
+/* 802962B0 006C .text      readMidiValue__12JASSeqReaderFv readMidiValue__12JASSeqReaderFv */
 .global readMidiValue__12JASSeqReaderFv
+readMidiValue__12JASSeqReaderFv:
 readMidiValue__12JASSeqReaderFv:
 /* 802962B0 002931F0  80 83 00 04 */	lwz r4, 4(r3)
 /* 802962B4 002931F4  38 04 00 01 */	addi r0, r4, 1
 /* 802962B8 002931F8  90 03 00 04 */	stw r0, 4(r3)
 /* 802962BC 002931FC  88 84 00 00 */	lbz r4, 0(r4)
 /* 802962C0 00293200  54 80 06 31 */	rlwinm. r0, r4, 0, 0x18, 0x18
-/* 802962C4 00293204  40 82 00 0C */	bne func_802962D0
+/* 802962C4 00293204  40 82 00 0C */	bne lbl_802962D0
 /* 802962C8 00293208  7C 83 23 78 */	mr r3, r4
 /* 802962CC 0029320C  4E 80 00 20 */	blr 
-
-/* 802962D0 0008 .text      func_802962D0                  func_802962D0                  */
-.global func_802962D0
-func_802962D0:
+lbl_802962D0:
 /* 802962D0 00293210  54 85 06 7E */	clrlwi r5, r4, 0x19
 /* 802962D4 00293214  38 C0 00 00 */	li r6, 0
-
-/* 802962D8 0010 .text      func_802962D8                  func_802962D8                  */
-.global func_802962D8
-func_802962D8:
+lbl_802962D8:
 /* 802962D8 00293218  2C 06 00 02 */	cmpwi r6, 2
-/* 802962DC 0029321C  40 81 00 0C */	ble func_802962E8
+/* 802962DC 0029321C  40 81 00 0C */	ble lbl_802962E8
 /* 802962E0 00293220  38 60 00 00 */	li r3, 0
 /* 802962E4 00293224  4E 80 00 20 */	blr 
-
-/* 802962E8 002C .text      func_802962E8                  func_802962E8                  */
-.global func_802962E8
-func_802962E8:
+lbl_802962E8:
 /* 802962E8 00293228  80 83 00 04 */	lwz r4, 4(r3)
 /* 802962EC 0029322C  38 04 00 01 */	addi r0, r4, 1
 /* 802962F0 00293230  90 03 00 04 */	stw r0, 4(r3)
@@ -203,13 +177,10 @@ func_802962E8:
 /* 802962FC 0029323C  54 80 06 7E */	clrlwi r0, r4, 0x19
 /* 80296300 00293240  7C A5 03 78 */	or r5, r5, r0
 /* 80296304 00293244  54 80 06 31 */	rlwinm. r0, r4, 0, 0x18, 0x18
-/* 80296308 00293248  41 82 00 0C */	beq func_80296314
+/* 80296308 00293248  41 82 00 0C */	beq lbl_80296314
 /* 8029630C 0029324C  38 C6 00 01 */	addi r6, r6, 1
-/* 80296310 00293250  4B FF FF C8 */	b func_802962D8
-
-/* 80296314 0008 .text      func_80296314                  func_80296314                  */
-.global func_80296314
-func_80296314:
+/* 80296310 00293250  4B FF FF C8 */	b lbl_802962D8
+lbl_80296314:
 /* 80296314 00293254  7C A3 2B 78 */	mr r3, r5
 /* 80296318 00293258  4E 80 00 20 */	blr 
 

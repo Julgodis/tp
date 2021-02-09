@@ -4,17 +4,15 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80020400 0010 .text      fopDwIt_GetTag__Fv             fopDwIt_GetTag__Fv             */
+/* 80020400 0044 .text      fopDwIt_GetTag__Fv             fopDwIt_GetTag__Fv             */
 .global fopDwIt_GetTag__Fv
+fopDwIt_GetTag__Fv:
 fopDwIt_GetTag__Fv:
 /* 80020400 0001D340  80 8D 80 50 */	lwz r4, g_fopDwTg_Queue-_SDA_BASE_(r13)
 /* 80020404 0001D344  38 6D 80 50 */	addi r3, r13, g_fopDwTg_Queue-_SDA_BASE_
 /* 80020408 0001D348  80 A3 00 04 */	lwz r5, 4(r3)
-/* 8002040C 0001D34C  48 00 00 20 */	b func_8002042C
-
-/* 80020410 001C .text      func_80020410                  func_80020410                  */
-.global func_80020410
-func_80020410:
+/* 8002040C 0001D34C  48 00 00 20 */	b lbl_8002042C
+lbl_80020410:
 /* 80020410 0001D350  80 6D 87 78 */	lwz r3, l_fopDwTg_id-_SDA_BASE_(r13)
 /* 80020414 0001D354  38 03 00 01 */	addi r0, r3, 1
 /* 80020418 0001D358  90 0D 87 78 */	stw r0, l_fopDwTg_id-_SDA_BASE_(r13)
@@ -22,19 +20,17 @@ func_80020410:
 /* 80020420 0001D360  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80020424 0001D364  28 03 00 00 */	cmplwi r3, 0
 /* 80020428 0001D368  4C 82 00 20 */	bnelr 
-
-/* 8002042C 0018 .text      func_8002042C                  func_8002042C                  */
-.global func_8002042C
-func_8002042C:
+lbl_8002042C:
 /* 8002042C 0001D36C  80 6D 87 78 */	lwz r3, l_fopDwTg_id-_SDA_BASE_(r13)
 /* 80020430 0001D370  38 03 00 01 */	addi r0, r3, 1
 /* 80020434 0001D374  7C 00 28 00 */	cmpw r0, r5
-/* 80020438 0001D378  41 80 FF D8 */	blt func_80020410
+/* 80020438 0001D378  41 80 FF D8 */	blt lbl_80020410
 /* 8002043C 0001D37C  38 60 00 00 */	li r3, 0
 /* 80020440 0001D380  4E 80 00 20 */	blr 
 
-/* 80020444 0028 .text      fopDwIt_Begin__Fv              fopDwIt_Begin__Fv              */
+/* 80020444 003C .text      fopDwIt_Begin__Fv              fopDwIt_Begin__Fv              */
 .global fopDwIt_Begin__Fv
+fopDwIt_Begin__Fv:
 fopDwIt_Begin__Fv:
 /* 80020444 0001D384  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020448 0001D388  7C 08 02 A6 */	mflr r0
@@ -44,36 +40,28 @@ fopDwIt_Begin__Fv:
 /* 80020458 0001D398  38 00 00 00 */	li r0, 0
 /* 8002045C 0001D39C  90 0D 87 78 */	stw r0, l_fopDwTg_id-_SDA_BASE_(r13)
 /* 80020460 0001D3A0  28 03 00 00 */	cmplwi r3, 0
-/* 80020464 0001D3A4  41 82 00 08 */	beq func_8002046C
-/* 80020468 0001D3A8  48 00 00 08 */	b func_80020470
-
-/* 8002046C 0004 .text      func_8002046C                  func_8002046C                  */
-.global func_8002046C
-func_8002046C:
+/* 80020464 0001D3A4  41 82 00 08 */	beq lbl_8002046C
+/* 80020468 0001D3A8  48 00 00 08 */	b lbl_80020470
+lbl_8002046C:
 /* 8002046C 0001D3AC  4B FF FF 95 */	bl fopDwIt_GetTag__Fv
-
-/* 80020470 0010 .text      func_80020470                  func_80020470                  */
-.global func_80020470
-func_80020470:
+lbl_80020470:
 /* 80020470 0001D3B0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80020474 0001D3B4  7C 08 03 A6 */	mtlr r0
 /* 80020478 0001D3B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8002047C 0001D3BC  4E 80 00 20 */	blr 
 
-/* 80020480 001C .text      fopDwIt_Next__FP16create_tag_class fopDwIt_Next__FP16create_tag_class */
+/* 80020480 002C .text      fopDwIt_Next__FP16create_tag_class fopDwIt_Next__FP16create_tag_class */
 .global fopDwIt_Next__FP16create_tag_class
+fopDwIt_Next__FP16create_tag_class:
 fopDwIt_Next__FP16create_tag_class:
 /* 80020480 0001D3C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020484 0001D3C4  7C 08 02 A6 */	mflr r0
 /* 80020488 0001D3C8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8002048C 0001D3CC  80 63 00 08 */	lwz r3, 8(r3)
 /* 80020490 0001D3D0  28 03 00 00 */	cmplwi r3, 0
-/* 80020494 0001D3D4  40 82 00 08 */	bne func_8002049C
+/* 80020494 0001D3D4  40 82 00 08 */	bne lbl_8002049C
 /* 80020498 0001D3D8  4B FF FF 69 */	bl fopDwIt_GetTag__Fv
-
-/* 8002049C 0010 .text      func_8002049C                  func_8002049C                  */
-.global func_8002049C
-func_8002049C:
+lbl_8002049C:
 /* 8002049C 0001D3DC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800204A0 0001D3E0  7C 08 03 A6 */	mtlr r0
 /* 800204A4 0001D3E4  38 21 00 10 */	addi r1, r1, 0x10

@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80293CF4 0044 .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
+/* 80293CF4 00D0 .text      conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition */
 .global conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition
+conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition:
 conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition:
 /* 80293CF4 00290C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80293CF8 00290C38  7C 08 02 A6 */	mflr r0
@@ -16,88 +17,62 @@ conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition:
 /* 80293D0C 00290C4C  48 00 02 BD */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80293D10 00290C50  54 64 04 3E */	clrlwi r4, r3, 0x10
 /* 80293D14 00290C54  2C 1F 00 03 */	cmpwi r31, 3
-/* 80293D18 00290C58  41 82 00 50 */	beq func_80293D68
-/* 80293D1C 00290C5C  40 80 00 1C */	bge func_80293D38
+/* 80293D18 00290C58  41 82 00 50 */	beq lbl_80293D68
+/* 80293D1C 00290C5C  40 80 00 1C */	bge lbl_80293D38
 /* 80293D20 00290C60  2C 1F 00 01 */	cmpwi r31, 1
-/* 80293D24 00290C64  41 82 00 2C */	beq func_80293D50
-/* 80293D28 00290C68  40 80 00 34 */	bge func_80293D5C
+/* 80293D24 00290C64  41 82 00 2C */	beq lbl_80293D50
+/* 80293D28 00290C68  40 80 00 34 */	bge lbl_80293D5C
 /* 80293D2C 00290C6C  2C 1F 00 00 */	cmpwi r31, 0
-/* 80293D30 00290C70  40 80 00 18 */	bge func_80293D48
-/* 80293D34 00290C74  48 00 00 78 */	b func_80293DAC
-
-/* 80293D38 0010 .text      func_80293D38                  func_80293D38                  */
-.global func_80293D38
-func_80293D38:
+/* 80293D30 00290C70  40 80 00 18 */	bge lbl_80293D48
+/* 80293D34 00290C74  48 00 00 78 */	b lbl_80293DAC
+lbl_80293D38:
 /* 80293D38 00290C78  2C 1F 00 05 */	cmpwi r31, 5
-/* 80293D3C 00290C7C  41 82 00 58 */	beq func_80293D94
-/* 80293D40 00290C80  40 80 00 6C */	bge func_80293DAC
-/* 80293D44 00290C84  48 00 00 34 */	b func_80293D78
-
-/* 80293D48 0008 .text      func_80293D48                  func_80293D48                  */
-.global func_80293D48
-func_80293D48:
+/* 80293D3C 00290C7C  41 82 00 58 */	beq lbl_80293D94
+/* 80293D40 00290C80  40 80 00 6C */	bge lbl_80293DAC
+/* 80293D44 00290C84  48 00 00 34 */	b lbl_80293D78
+lbl_80293D48:
 /* 80293D48 00290C88  38 60 00 01 */	li r3, 1
-/* 80293D4C 00290C8C  48 00 00 64 */	b func_80293DB0
-
-/* 80293D50 000C .text      func_80293D50                  func_80293D50                  */
-.global func_80293D50
-func_80293D50:
+/* 80293D4C 00290C8C  48 00 00 64 */	b lbl_80293DB0
+lbl_80293D50:
 /* 80293D50 00290C90  7C 80 00 34 */	cntlzw r0, r4
 /* 80293D54 00290C94  54 03 D9 7E */	srwi r3, r0, 5
-/* 80293D58 00290C98  48 00 00 58 */	b func_80293DB0
-
-/* 80293D5C 000C .text      func_80293D5C                  func_80293D5C                  */
-.global func_80293D5C
-func_80293D5C:
+/* 80293D58 00290C98  48 00 00 58 */	b lbl_80293DB0
+lbl_80293D5C:
 /* 80293D5C 00290C9C  30 04 FF FF */	addic r0, r4, -1
 /* 80293D60 00290CA0  7C 60 21 10 */	subfe r3, r0, r4
-/* 80293D64 00290CA4  48 00 00 4C */	b func_80293DB0
-
-/* 80293D68 0010 .text      func_80293D68                  func_80293D68                  */
-.global func_80293D68
-func_80293D68:
+/* 80293D64 00290CA4  48 00 00 4C */	b lbl_80293DB0
+lbl_80293D68:
 /* 80293D68 00290CA8  20 04 00 01 */	subfic r0, r4, 1
 /* 80293D6C 00290CAC  7C 00 00 34 */	cntlzw r0, r0
 /* 80293D70 00290CB0  54 03 D9 7E */	srwi r3, r0, 5
-/* 80293D74 00290CB4  48 00 00 3C */	b func_80293DB0
-
-/* 80293D78 001C .text      func_80293D78                  func_80293D78                  */
-.global func_80293D78
-func_80293D78:
+/* 80293D74 00290CB4  48 00 00 3C */	b lbl_80293DB0
+lbl_80293D78:
 /* 80293D78 00290CB8  3C 60 00 01 */	lis r3, 0x00008000@ha
 /* 80293D7C 00290CBC  38 03 80 00 */	addi r0, r3, 0x00008000@l
 /* 80293D80 00290CC0  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 80293D84 00290CC4  38 60 FF FF */	li r3, -1
 /* 80293D88 00290CC8  7C 00 20 10 */	subfc r0, r0, r4
 /* 80293D8C 00290CCC  7C 63 01 90 */	subfze r3, r3
-/* 80293D90 00290CD0  48 00 00 20 */	b func_80293DB0
-
-/* 80293D94 0018 .text      func_80293D94                  func_80293D94                  */
-.global func_80293D94
-func_80293D94:
+/* 80293D90 00290CD0  48 00 00 20 */	b lbl_80293DB0
+lbl_80293D94:
 /* 80293D94 00290CD4  3C 60 00 01 */	lis r3, 0x00008000@ha
 /* 80293D98 00290CD8  38 03 80 00 */	addi r0, r3, 0x00008000@l
 /* 80293D9C 00290CDC  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 80293DA0 00290CE0  7C 00 20 50 */	subf r0, r0, r4
 /* 80293DA4 00290CE4  54 03 0F FE */	srwi r3, r0, 0x1f
-/* 80293DA8 00290CE8  48 00 00 08 */	b func_80293DB0
-
-/* 80293DAC 0004 .text      func_80293DAC                  func_80293DAC                  */
-.global func_80293DAC
-func_80293DAC:
+/* 80293DA8 00290CE8  48 00 00 08 */	b lbl_80293DB0
+lbl_80293DAC:
 /* 80293DAC 00290CEC  38 60 00 00 */	li r3, 0
-
-/* 80293DB0 0014 .text      func_80293DB0                  func_80293DB0                  */
-.global func_80293DB0
-func_80293DB0:
+lbl_80293DB0:
 /* 80293DB0 00290CF0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80293DB4 00290CF4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80293DB8 00290CF8  7C 08 03 A6 */	mtlr r0
 /* 80293DBC 00290CFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80293DC0 00290D00  4E 80 00 20 */	blr 
 
-/* 80293DC4 004C .text      writeReg__12JASSeqParserFP8JASTrackUlUl writeReg__12JASSeqParserFP8JASTrackUlUl */
+/* 80293DC4 0204 .text      writeReg__12JASSeqParserFP8JASTrackUlUl writeReg__12JASSeqParserFP8JASTrackUlUl */
 .global writeReg__12JASSeqParserFP8JASTrackUlUl
+writeReg__12JASSeqParserFP8JASTrackUlUl:
 writeReg__12JASSeqParserFP8JASTrackUlUl:
 /* 80293DC4 00290D04  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80293DC8 00290D08  7C 08 02 A6 */	mflr r0
@@ -112,19 +87,16 @@ writeReg__12JASSeqParserFP8JASTrackUlUl:
 /* 80293DEC 00290D2C  7F E5 FB 78 */	mr r5, r31
 /* 80293DF0 00290D30  4B FF F8 95 */	bl write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl
 /* 80293DF4 00290D34  28 1E 00 40 */	cmplwi r30, 0x40
-/* 80293DF8 00290D38  40 80 00 18 */	bge func_80293E10
+/* 80293DF8 00290D38  40 80 00 18 */	bge lbl_80293E10
 /* 80293DFC 00290D3C  38 7D 00 80 */	addi r3, r29, 0x80
 /* 80293E00 00290D40  7F C4 F3 78 */	mr r4, r30
 /* 80293E04 00290D44  7F E5 FB 78 */	mr r5, r31
 /* 80293E08 00290D48  4B FF F8 7D */	bl write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl
-/* 80293E0C 00290D4C  48 00 01 A4 */	b func_80293FB0
-
-/* 80293E10 01A0 .text      func_80293E10                  func_80293E10                  */
-.global func_80293E10
-func_80293E10:
+/* 80293E0C 00290D4C  48 00 01 A4 */	b lbl_80293FB0
+lbl_80293E10:
 /* 80293E10 00290D50  38 1E FF C0 */	addi r0, r30, -64
 /* 80293E14 00290D54  28 00 00 34 */	cmplwi r0, 0x34
-/* 80293E18 00290D58  41 81 01 98 */	bgt func_80293FB0
+/* 80293E18 00290D58  41 81 01 98 */	bgt lbl_80293FB0
 /* 80293E1C 00290D5C  3C 60 80 3C */	lis r3, JASSeqParser__LIT_632@ha
 /* 80293E20 00290D60  38 63 74 7C */	addi r3, r3, JASSeqParser__LIT_632@l
 /* 80293E24 00290D64  54 00 10 3A */	slwi r0, r0, 2
@@ -134,25 +106,25 @@ func_80293E10:
 /* 80293E34 00290D74  57 C0 08 3C */	slwi r0, r30, 1
 /* 80293E38 00290D78  7C 7D 02 14 */	add r3, r29, r0
 /* 80293E3C 00290D7C  B3 E3 FF E0 */	sth r31, -0x20(r3)
-/* 80293E40 00290D80  48 00 01 70 */	b func_80293FB0
+/* 80293E40 00290D80  48 00 01 70 */	b lbl_80293FB0
 /* 80293E44 00290D84  7F A3 EB 78 */	mr r3, r29
 /* 80293E48 00290D88  57 E4 04 3E */	clrlwi r4, r31, 0x10
 /* 80293E4C 00290D8C  4B FF ED 75 */	bl setTimebase__8JASTrackFUs
-/* 80293E50 00290D90  48 00 01 60 */	b func_80293FB0
+/* 80293E50 00290D90  48 00 01 60 */	b lbl_80293FB0
 /* 80293E54 00290D94  9B FD 02 2A */	stb r31, 0x22a(r29)
-/* 80293E58 00290D98  48 00 01 58 */	b func_80293FB0
+/* 80293E58 00290D98  48 00 01 58 */	b lbl_80293FB0
 /* 80293E5C 00290D9C  9B FD 02 30 */	stb r31, 0x230(r29)
-/* 80293E60 00290DA0  48 00 01 50 */	b func_80293FB0
+/* 80293E60 00290DA0  48 00 01 50 */	b lbl_80293FB0
 /* 80293E64 00290DA4  9B FD 02 33 */	stb r31, 0x233(r29)
-/* 80293E68 00290DA8  48 00 01 48 */	b func_80293FB0
+/* 80293E68 00290DA8  48 00 01 48 */	b lbl_80293FB0
 /* 80293E6C 00290DAC  93 FD 02 20 */	stw r31, 0x220(r29)
-/* 80293E70 00290DB0  48 00 01 40 */	b func_80293FB0
+/* 80293E70 00290DB0  48 00 01 40 */	b lbl_80293FB0
 /* 80293E74 00290DB4  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80293E78 00290DB8  B0 1D 02 2C */	sth r0, 0x22c(r29)
-/* 80293E7C 00290DBC  48 00 01 34 */	b func_80293FB0
+/* 80293E7C 00290DBC  48 00 01 34 */	b lbl_80293FB0
 /* 80293E80 00290DC0  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80293E84 00290DC4  B0 1D 02 2E */	sth r0, 0x22e(r29)
-/* 80293E88 00290DC8  48 00 01 28 */	b func_80293FB0
+/* 80293E88 00290DC8  48 00 01 28 */	b lbl_80293FB0
 /* 80293E8C 00290DCC  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293E90 00290DD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293E94 00290DD4  3C 00 43 30 */	lis r0, 0x4330
@@ -162,17 +134,17 @@ func_80293E10:
 /* 80293EA4 00290DE4  C0 02 BB D8 */	lfs f0, JASSeqParser__LIT_627-_SDA2_BASE_(r2)
 /* 80293EA8 00290DE8  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80293EAC 00290DEC  D0 1D 02 18 */	stfs f0, 0x218(r29)
-/* 80293EB0 00290DF0  48 00 01 00 */	b func_80293FB0
+/* 80293EB0 00290DF0  48 00 01 00 */	b lbl_80293FB0
 /* 80293EB4 00290DF4  57 E0 C6 3E */	rlwinm r0, r31, 0x18, 0x18, 0x1f
 /* 80293EB8 00290DF8  98 1D 02 32 */	stb r0, 0x232(r29)
 /* 80293EBC 00290DFC  9B FD 02 31 */	stb r31, 0x231(r29)
-/* 80293EC0 00290E00  48 00 00 F0 */	b func_80293FB0
+/* 80293EC0 00290E00  48 00 00 F0 */	b lbl_80293FB0
 /* 80293EC4 00290E04  9B FD 02 31 */	stb r31, 0x231(r29)
-/* 80293EC8 00290E08  48 00 00 E8 */	b func_80293FB0
+/* 80293EC8 00290E08  48 00 00 E8 */	b lbl_80293FB0
 /* 80293ECC 00290E0C  9B FD 02 32 */	stb r31, 0x232(r29)
-/* 80293ED0 00290E10  48 00 00 E0 */	b func_80293FB0
+/* 80293ED0 00290E10  48 00 00 E0 */	b lbl_80293FB0
 /* 80293ED4 00290E14  B3 FD 02 24 */	sth r31, 0x224(r29)
-/* 80293ED8 00290E18  48 00 00 D8 */	b func_80293FB0
+/* 80293ED8 00290E18  48 00 00 D8 */	b lbl_80293FB0
 /* 80293EDC 00290E1C  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293EE0 00290E20  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293EE4 00290E24  3C 00 43 30 */	lis r0, 0x4330
@@ -182,7 +154,7 @@ func_80293E10:
 /* 80293EF4 00290E34  C0 02 BB DC */	lfs f0, JASSeqParser__LIT_628-_SDA2_BASE_(r2)
 /* 80293EF8 00290E38  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80293EFC 00290E3C  D0 1D 01 E0 */	stfs f0, 0x1e0(r29)
-/* 80293F00 00290E40  48 00 00 B0 */	b func_80293FB0
+/* 80293F00 00290E40  48 00 00 B0 */	b lbl_80293FB0
 /* 80293F04 00290E44  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293F08 00290E48  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293F0C 00290E4C  3C 00 43 30 */	lis r0, 0x4330
@@ -192,7 +164,7 @@ func_80293E10:
 /* 80293F1C 00290E5C  C0 02 BB E0 */	lfs f0, LIT_629-_SDA2_BASE_(r2)
 /* 80293F20 00290E60  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80293F24 00290E64  D0 1D 01 E0 */	stfs f0, 0x1e0(r29)
-/* 80293F28 00290E68  48 00 00 88 */	b func_80293FB0
+/* 80293F28 00290E68  48 00 00 88 */	b lbl_80293FB0
 /* 80293F2C 00290E6C  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293F30 00290E70  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293F34 00290E74  3C 00 43 30 */	lis r0, 0x4330
@@ -202,7 +174,7 @@ func_80293E10:
 /* 80293F44 00290E84  C0 02 BB E4 */	lfs f0, LIT_630-_SDA2_BASE_(r2)
 /* 80293F48 00290E88  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80293F4C 00290E8C  D0 1D 01 E8 */	stfs f0, 0x1e8(r29)
-/* 80293F50 00290E90  48 00 00 60 */	b func_80293FB0
+/* 80293F50 00290E90  48 00 00 60 */	b lbl_80293FB0
 /* 80293F54 00290E94  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293F58 00290E98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293F5C 00290E9C  3C 00 43 30 */	lis r0, 0x4330
@@ -212,7 +184,7 @@ func_80293E10:
 /* 80293F6C 00290EAC  C0 02 BB E8 */	lfs f0, LIT_631-_SDA2_BASE_(r2)
 /* 80293F70 00290EB0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80293F74 00290EB4  D0 1D 01 E4 */	stfs f0, 0x1e4(r29)
-/* 80293F78 00290EB8  48 00 00 38 */	b func_80293FB0
+/* 80293F78 00290EB8  48 00 00 38 */	b lbl_80293FB0
 /* 80293F7C 00290EBC  C8 22 BB F0 */	lfd f1, LIT_634-_SDA2_BASE_(r2)
 /* 80293F80 00290EC0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293F84 00290EC4  3C 00 43 30 */	lis r0, 0x4330
@@ -222,14 +194,11 @@ func_80293E10:
 /* 80293F94 00290ED4  C0 02 BB E8 */	lfs f0, LIT_631-_SDA2_BASE_(r2)
 /* 80293F98 00290ED8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80293F9C 00290EDC  D0 1D 01 EC */	stfs f0, 0x1ec(r29)
-/* 80293FA0 00290EE0  48 00 00 10 */	b func_80293FB0
+/* 80293FA0 00290EE0  48 00 00 10 */	b lbl_80293FB0
 /* 80293FA4 00290EE4  B3 FD 01 F0 */	sth r31, 0x1f0(r29)
-/* 80293FA8 00290EE8  48 00 00 08 */	b func_80293FB0
+/* 80293FA8 00290EE8  48 00 00 08 */	b lbl_80293FB0
 /* 80293FAC 00290EEC  B3 FD 01 F2 */	sth r31, 0x1f2(r29)
-
-/* 80293FB0 0018 .text      func_80293FB0                  func_80293FB0                  */
-.global func_80293FB0
-func_80293FB0:
+lbl_80293FB0:
 /* 80293FB0 00290EF0  39 61 00 20 */	addi r11, r1, 0x20
 /* 80293FB4 00290EF4  48 0C E2 75 */	bl _restgpr_29
 /* 80293FB8 00290EF8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -237,26 +206,24 @@ func_80293FB0:
 /* 80293FC0 00290F00  38 21 00 20 */	addi r1, r1, 0x20
 /* 80293FC4 00290F04  4E 80 00 20 */	blr 
 
-/* 80293FC8 0024 .text      readReg__12JASSeqParserCFP8JASTrackUl readReg__12JASSeqParserCFP8JASTrackUl */
+/* 80293FC8 01C0 .text      readReg__12JASSeqParserCFP8JASTrackUl readReg__12JASSeqParserCFP8JASTrackUl */
 .global readReg__12JASSeqParserCFP8JASTrackUl
+readReg__12JASSeqParserCFP8JASTrackUl:
 readReg__12JASSeqParserCFP8JASTrackUl:
 /* 80293FC8 00290F08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80293FCC 00290F0C  7C 08 02 A6 */	mflr r0
 /* 80293FD0 00290F10  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80293FD4 00290F14  28 05 00 40 */	cmplwi r5, 0x40
-/* 80293FD8 00290F18  40 80 00 14 */	bge func_80293FEC
+/* 80293FD8 00290F18  40 80 00 14 */	bge lbl_80293FEC
 /* 80293FDC 00290F1C  38 64 00 80 */	addi r3, r4, 0x80
 /* 80293FE0 00290F20  7C A4 2B 78 */	mr r4, r5
 /* 80293FE4 00290F24  4B FF F7 D5 */	bl read__16JASRegisterParamFQ216JASRegisterParam5RegID
-/* 80293FE8 00290F28  48 00 01 90 */	b func_80294178
-
-/* 80293FEC 0048 .text      func_80293FEC                  func_80293FEC                  */
-.global func_80293FEC
-func_80293FEC:
+/* 80293FE8 00290F28  48 00 01 90 */	b lbl_80294178
+lbl_80293FEC:
 /* 80293FEC 00290F2C  38 60 00 00 */	li r3, 0
 /* 80293FF0 00290F30  38 05 FF C0 */	addi r0, r5, -64
 /* 80293FF4 00290F34  28 00 00 34 */	cmplwi r0, 0x34
-/* 80293FF8 00290F38  41 81 01 80 */	bgt func_80294178
+/* 80293FF8 00290F38  41 81 01 80 */	bgt lbl_80294178
 /* 80293FFC 00290F3C  3C C0 80 3C */	lis r6, LIT_720@ha
 /* 80294000 00290F40  38 C6 75 50 */	addi r6, r6, LIT_720@l
 /* 80294004 00290F44  54 00 10 3A */	slwi r0, r0, 2
@@ -266,119 +233,105 @@ func_80293FEC:
 /* 80294014 00290F54  54 A0 08 3C */	slwi r0, r5, 1
 /* 80294018 00290F58  7C 64 02 14 */	add r3, r4, r0
 /* 8029401C 00290F5C  A0 63 FF E0 */	lhz r3, -0x20(r3)
-/* 80294020 00290F60  48 00 01 58 */	b func_80294178
+/* 80294020 00290F60  48 00 01 58 */	b lbl_80294178
 /* 80294024 00290F64  38 E0 00 01 */	li r7, 1
 /* 80294028 00290F68  38 A0 00 00 */	li r5, 0
 /* 8029402C 00290F6C  38 00 00 10 */	li r0, 0x10
 /* 80294030 00290F70  7C 09 03 A6 */	mtctr r0
-
-/* 80294034 0024 .text      func_80294034                  func_80294034                  */
-.global func_80294034
-func_80294034:
+lbl_80294034:
 /* 80294034 00290F74  38 05 01 30 */	addi r0, r5, 0x130
 /* 80294038 00290F78  7C C4 00 2E */	lwzx r6, r4, r0
 /* 8029403C 00290F7C  28 06 00 00 */	cmplwi r6, 0
-/* 80294040 00290F80  41 82 00 18 */	beq func_80294058
+/* 80294040 00290F80  41 82 00 18 */	beq lbl_80294058
 /* 80294044 00290F84  88 06 02 15 */	lbz r0, 0x215(r6)
 /* 80294048 00290F88  28 00 00 01 */	cmplwi r0, 1
-/* 8029404C 00290F8C  40 82 00 0C */	bne func_80294058
+/* 8029404C 00290F8C  40 82 00 0C */	bne lbl_80294058
 /* 80294050 00290F90  54 E0 04 3E */	clrlwi r0, r7, 0x10
 /* 80294054 00290F94  7C 63 03 78 */	or r3, r3, r0
-
-/* 80294058 0024 .text      func_80294058                  func_80294058                  */
-.global func_80294058
-func_80294058:
+lbl_80294058:
 /* 80294058 00290F98  54 E7 0C 3C */	rlwinm r7, r7, 1, 0x10, 0x1e
 /* 8029405C 00290F9C  38 A5 00 04 */	addi r5, r5, 4
-/* 80294060 00290FA0  42 00 FF D4 */	bdnz func_80294034
-/* 80294064 00290FA4  48 00 01 14 */	b func_80294178
+/* 80294060 00290FA0  42 00 FF D4 */	bdnz lbl_80294034
+/* 80294064 00290FA4  48 00 01 14 */	b lbl_80294178
 /* 80294068 00290FA8  80 04 00 08 */	lwz r0, 8(r4)
 /* 8029406C 00290FAC  28 00 00 00 */	cmplwi r0, 0
-/* 80294070 00290FB0  40 82 00 0C */	bne func_8029407C
+/* 80294070 00290FB0  40 82 00 0C */	bne lbl_8029407C
 /* 80294074 00290FB4  38 00 00 00 */	li r0, 0
-/* 80294078 00290FB8  48 00 00 10 */	b func_80294088
-
-/* 8029407C 000C .text      func_8029407C                  func_8029407C                  */
-.global func_8029407C
-func_8029407C:
+/* 80294078 00290FB8  48 00 00 10 */	b lbl_80294088
+lbl_8029407C:
 /* 8029407C 00290FBC  54 00 08 3C */	slwi r0, r0, 1
 /* 80294080 00290FC0  7C 64 02 14 */	add r3, r4, r0
 /* 80294084 00290FC4  A0 03 00 2A */	lhz r0, 0x2a(r3)
-
-/* 80294088 00F0 .text      func_80294088                  func_80294088                  */
-.global func_80294088
-func_80294088:
+lbl_80294088:
 /* 80294088 00290FC8  54 03 04 3E */	clrlwi r3, r0, 0x10
-/* 8029408C 00290FCC  48 00 00 EC */	b func_80294178
+/* 8029408C 00290FCC  48 00 00 EC */	b lbl_80294178
 /* 80294090 00290FD0  A0 64 02 28 */	lhz r3, 0x228(r4)
-/* 80294094 00290FD4  48 00 00 E4 */	b func_80294178
+/* 80294094 00290FD4  48 00 00 E4 */	b lbl_80294178
 /* 80294098 00290FD8  88 64 02 2A */	lbz r3, 0x22a(r4)
 /* 8029409C 00290FDC  7C 63 07 74 */	extsb r3, r3
-/* 802940A0 00290FE0  48 00 00 D8 */	b func_80294178
+/* 802940A0 00290FE0  48 00 00 D8 */	b lbl_80294178
 /* 802940A4 00290FE4  88 64 02 30 */	lbz r3, 0x230(r4)
-/* 802940A8 00290FE8  48 00 00 D0 */	b func_80294178
+/* 802940A8 00290FE8  48 00 00 D0 */	b lbl_80294178
 /* 802940AC 00290FEC  88 64 02 33 */	lbz r3, 0x233(r4)
-/* 802940B0 00290FF0  48 00 00 C8 */	b func_80294178
+/* 802940B0 00290FF0  48 00 00 C8 */	b lbl_80294178
 /* 802940B4 00290FF4  80 64 02 20 */	lwz r3, 0x220(r4)
-/* 802940B8 00290FF8  48 00 00 C0 */	b func_80294178
+/* 802940B8 00290FF8  48 00 00 C0 */	b lbl_80294178
 /* 802940BC 00290FFC  A0 64 02 2C */	lhz r3, 0x22c(r4)
-/* 802940C0 00291000  48 00 00 B8 */	b func_80294178
+/* 802940C0 00291000  48 00 00 B8 */	b lbl_80294178
 /* 802940C4 00291004  A0 64 02 2E */	lhz r3, 0x22e(r4)
-/* 802940C8 00291008  48 00 00 B0 */	b func_80294178
+/* 802940C8 00291008  48 00 00 B0 */	b lbl_80294178
 /* 802940CC 0029100C  C0 22 BB D8 */	lfs f1, JASSeqParser__LIT_627-_SDA2_BASE_(r2)
 /* 802940D0 00291010  C0 04 02 18 */	lfs f0, 0x218(r4)
 /* 802940D4 00291014  EC 21 00 32 */	fmuls f1, f1, f0
 /* 802940D8 00291018  48 0C DF D5 */	bl __cvt_fp2unsigned
-/* 802940DC 0029101C  48 00 00 9C */	b func_80294178
+/* 802940DC 0029101C  48 00 00 9C */	b lbl_80294178
 /* 802940E0 00291020  88 64 02 32 */	lbz r3, 0x232(r4)
 /* 802940E4 00291024  88 04 02 31 */	lbz r0, 0x231(r4)
 /* 802940E8 00291028  7C 63 03 78 */	or r3, r3, r0
-/* 802940EC 0029102C  48 00 00 8C */	b func_80294178
+/* 802940EC 0029102C  48 00 00 8C */	b lbl_80294178
 /* 802940F0 00291030  88 64 02 31 */	lbz r3, 0x231(r4)
-/* 802940F4 00291034  48 00 00 84 */	b func_80294178
+/* 802940F4 00291034  48 00 00 84 */	b lbl_80294178
 /* 802940F8 00291038  88 64 02 32 */	lbz r3, 0x232(r4)
-/* 802940FC 0029103C  48 00 00 7C */	b func_80294178
+/* 802940FC 0029103C  48 00 00 7C */	b lbl_80294178
 /* 80294100 00291040  A0 64 02 24 */	lhz r3, 0x224(r4)
-/* 80294104 00291044  48 00 00 74 */	b func_80294178
+/* 80294104 00291044  48 00 00 74 */	b lbl_80294178
 /* 80294108 00291048  C0 22 BB DC */	lfs f1, JASSeqParser__LIT_628-_SDA2_BASE_(r2)
 /* 8029410C 0029104C  C0 04 01 E0 */	lfs f0, 0x1e0(r4)
 /* 80294110 00291050  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80294114 00291054  48 0C DF 99 */	bl __cvt_fp2unsigned
-/* 80294118 00291058  48 00 00 60 */	b func_80294178
+/* 80294118 00291058  48 00 00 60 */	b lbl_80294178
 /* 8029411C 0029105C  C0 22 BB E0 */	lfs f1, LIT_629-_SDA2_BASE_(r2)
 /* 80294120 00291060  C0 04 01 E0 */	lfs f0, 0x1e0(r4)
 /* 80294124 00291064  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80294128 00291068  48 0C DF 85 */	bl __cvt_fp2unsigned
-/* 8029412C 0029106C  48 00 00 4C */	b func_80294178
+/* 8029412C 0029106C  48 00 00 4C */	b lbl_80294178
 /* 80294130 00291070  C0 22 BB F8 */	lfs f1, LIT_718-_SDA2_BASE_(r2)
 /* 80294134 00291074  C0 04 01 E8 */	lfs f0, 0x1e8(r4)
 /* 80294138 00291078  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8029413C 0029107C  48 0C DF 71 */	bl __cvt_fp2unsigned
-/* 80294140 00291080  48 00 00 38 */	b func_80294178
+/* 80294140 00291080  48 00 00 38 */	b lbl_80294178
 /* 80294144 00291084  C0 22 BB FC */	lfs f1, LIT_719-_SDA2_BASE_(r2)
 /* 80294148 00291088  C0 04 01 E4 */	lfs f0, 0x1e4(r4)
 /* 8029414C 0029108C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80294150 00291090  48 0C DF 5D */	bl __cvt_fp2unsigned
-/* 80294154 00291094  48 00 00 24 */	b func_80294178
+/* 80294154 00291094  48 00 00 24 */	b lbl_80294178
 /* 80294158 00291098  C0 22 BB FC */	lfs f1, LIT_719-_SDA2_BASE_(r2)
 /* 8029415C 0029109C  C0 04 01 EC */	lfs f0, 0x1ec(r4)
 /* 80294160 002910A0  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80294164 002910A4  48 0C DF 49 */	bl __cvt_fp2unsigned
-/* 80294168 002910A8  48 00 00 10 */	b func_80294178
+/* 80294168 002910A8  48 00 00 10 */	b lbl_80294178
 /* 8029416C 002910AC  A0 64 01 F0 */	lhz r3, 0x1f0(r4)
-/* 80294170 002910B0  48 00 00 08 */	b func_80294178
+/* 80294170 002910B0  48 00 00 08 */	b lbl_80294178
 /* 80294174 002910B4  A0 64 01 F2 */	lhz r3, 0x1f2(r4)
-
-/* 80294178 0010 .text      func_80294178                  func_80294178                  */
-.global func_80294178
-func_80294178:
+lbl_80294178:
 /* 80294178 002910B8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029417C 002910BC  7C 08 03 A6 */	mtlr r0
 /* 80294180 002910C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294184 002910C4  4E 80 00 20 */	blr 
 
-/* 80294188 0038 .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl cmdOpenTrack__12JASSeqParserFP8JASTrackPUl */
+/* 80294188 0068 .text      cmdOpenTrack__12JASSeqParserFP8JASTrackPUl cmdOpenTrack__12JASSeqParserFP8JASTrackPUl */
 .global cmdOpenTrack__12JASSeqParserFP8JASTrackPUl
+cmdOpenTrack__12JASSeqParserFP8JASTrackPUl:
 cmdOpenTrack__12JASSeqParserFP8JASTrackPUl:
 /* 80294188 002910C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029418C 002910CC  7C 08 02 A6 */	mflr r0
@@ -391,23 +344,17 @@ cmdOpenTrack__12JASSeqParserFP8JASTrackPUl:
 /* 802941A8 002910E8  80 85 00 00 */	lwz r4, 0(r5)
 /* 802941AC 002910EC  4B FF DA 85 */	bl openChild__8JASTrackFUl
 /* 802941B0 002910F0  7C 7E 1B 79 */	or. r30, r3, r3
-/* 802941B4 002910F4  40 82 00 0C */	bne func_802941C0
+/* 802941B4 002910F4  40 82 00 0C */	bne lbl_802941C0
 /* 802941B8 002910F8  38 60 00 00 */	li r3, 0
-/* 802941BC 002910FC  48 00 00 1C */	b func_802941D8
-
-/* 802941C0 0018 .text      func_802941C0                  func_802941C0                  */
-.global func_802941C0
-func_802941C0:
+/* 802941BC 002910FC  48 00 00 1C */	b lbl_802941D8
+lbl_802941C0:
 /* 802941C0 00291100  80 9D 00 00 */	lwz r4, 0(r29)
 /* 802941C4 00291104  7F E5 FB 78 */	mr r5, r31
 /* 802941C8 00291108  4B FF D8 41 */	bl setSeqData__8JASTrackFPvUl
 /* 802941CC 0029110C  7F C3 F3 78 */	mr r3, r30
 /* 802941D0 00291110  4B FF D8 ED */	bl start__8JASTrackFv
 /* 802941D4 00291114  38 60 00 00 */	li r3, 0
-
-/* 802941D8 0018 .text      func_802941D8                  func_802941D8                  */
-.global func_802941D8
-func_802941D8:
+lbl_802941D8:
 /* 802941D8 00291118  39 61 00 20 */	addi r11, r1, 0x20
 /* 802941DC 0029111C  48 0C E0 4D */	bl _restgpr_29
 /* 802941E0 00291120  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -417,6 +364,7 @@ func_802941D8:
 
 /* 802941F0 002C .text      cmdCloseTrack__12JASSeqParserFP8JASTrackPUl cmdCloseTrack__12JASSeqParserFP8JASTrackPUl */
 .global cmdCloseTrack__12JASSeqParserFP8JASTrackPUl
+cmdCloseTrack__12JASSeqParserFP8JASTrackPUl:
 cmdCloseTrack__12JASSeqParserFP8JASTrackPUl:
 /* 802941F0 00291130  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802941F4 00291134  7C 08 02 A6 */	mflr r0
@@ -433,6 +381,7 @@ cmdCloseTrack__12JASSeqParserFP8JASTrackPUl:
 /* 8029421C 002C .text      cmdCall__12JASSeqParserFP8JASTrackPUl cmdCall__12JASSeqParserFP8JASTrackPUl */
 .global cmdCall__12JASSeqParserFP8JASTrackPUl
 cmdCall__12JASSeqParserFP8JASTrackPUl:
+cmdCall__12JASSeqParserFP8JASTrackPUl:
 /* 8029421C 0029115C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294220 00291160  7C 08 02 A6 */	mflr r0
 /* 80294224 00291164  90 01 00 14 */	stw r0, 0x14(r1)
@@ -445,8 +394,9 @@ cmdCall__12JASSeqParserFP8JASTrackPUl:
 /* 80294240 00291180  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294244 00291184  4E 80 00 20 */	blr 
 
-/* 80294248 0038 .text      cmdCallF__12JASSeqParserFP8JASTrackPUl cmdCallF__12JASSeqParserFP8JASTrackPUl */
+/* 80294248 0054 .text      cmdCallF__12JASSeqParserFP8JASTrackPUl cmdCallF__12JASSeqParserFP8JASTrackPUl */
 .global cmdCallF__12JASSeqParserFP8JASTrackPUl
+cmdCallF__12JASSeqParserFP8JASTrackPUl:
 cmdCallF__12JASSeqParserFP8JASTrackPUl:
 /* 80294248 00291188  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029424C 0029118C  7C 08 02 A6 */	mflr r0
@@ -458,14 +408,11 @@ cmdCallF__12JASSeqParserFP8JASTrackPUl:
 /* 80294264 002911A4  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80294268 002911A8  4B FF FA 8D */	bl conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition
 /* 8029426C 002911AC  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80294270 002911B0  41 82 00 10 */	beq func_80294280
+/* 80294270 002911B0  41 82 00 10 */	beq lbl_80294280
 /* 80294274 002911B4  7F C3 F3 78 */	mr r3, r30
 /* 80294278 002911B8  80 9F 00 04 */	lwz r4, 4(r31)
 /* 8029427C 002911BC  48 00 1F 11 */	bl call__12JASSeqReaderFUl
-
-/* 80294280 001C .text      func_80294280                  func_80294280                  */
-.global func_80294280
-func_80294280:
+lbl_80294280:
 /* 80294280 002911C0  38 60 00 00 */	li r3, 0
 /* 80294284 002911C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80294288 002911C8  83 C1 00 08 */	lwz r30, 8(r1)
@@ -476,6 +423,7 @@ func_80294280:
 
 /* 8029429C 0038 .text      cmdRet__12JASSeqParserFP8JASTrackPUl cmdRet__12JASSeqParserFP8JASTrackPUl */
 .global cmdRet__12JASSeqParserFP8JASTrackPUl
+cmdRet__12JASSeqParserFP8JASTrackPUl:
 cmdRet__12JASSeqParserFP8JASTrackPUl:
 /* 8029429C 002911DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802942A0 002911E0  7C 08 02 A6 */	mflr r0
@@ -492,8 +440,9 @@ cmdRet__12JASSeqParserFP8JASTrackPUl:
 /* 802942CC 0029120C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802942D0 00291210  4E 80 00 20 */	blr 
 
-/* 802942D4 003C .text      cmdRetF__12JASSeqParserFP8JASTrackPUl cmdRetF__12JASSeqParserFP8JASTrackPUl */
+/* 802942D4 0054 .text      cmdRetF__12JASSeqParserFP8JASTrackPUl cmdRetF__12JASSeqParserFP8JASTrackPUl */
 .global cmdRetF__12JASSeqParserFP8JASTrackPUl
+cmdRetF__12JASSeqParserFP8JASTrackPUl:
 cmdRetF__12JASSeqParserFP8JASTrackPUl:
 /* 802942D4 00291214  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802942D8 00291218  7C 08 02 A6 */	mflr r0
@@ -503,22 +452,16 @@ cmdRetF__12JASSeqParserFP8JASTrackPUl:
 /* 802942E8 00291228  80 A5 00 00 */	lwz r5, 0(r5)
 /* 802942EC 0029122C  4B FF FA 09 */	bl conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition
 /* 802942F0 00291230  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802942F4 00291234  41 82 00 1C */	beq func_80294310
+/* 802942F4 00291234  41 82 00 1C */	beq lbl_80294310
 /* 802942F8 00291238  7F E3 FB 78 */	mr r3, r31
 /* 802942FC 0029123C  48 00 1F 81 */	bl ret__12JASSeqReaderFv
 /* 80294300 00291240  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80294304 00291244  40 82 00 0C */	bne func_80294310
+/* 80294304 00291244  40 82 00 0C */	bne lbl_80294310
 /* 80294308 00291248  38 60 00 00 */	li r3, 0
-/* 8029430C 0029124C  48 00 00 08 */	b func_80294314
-
-/* 80294310 0004 .text      func_80294310                  func_80294310                  */
-.global func_80294310
-func_80294310:
+/* 8029430C 0029124C  48 00 00 08 */	b lbl_80294314
+lbl_80294310:
 /* 80294310 00291250  38 60 00 00 */	li r3, 0
-
-/* 80294314 0014 .text      func_80294314                  func_80294314                  */
-.global func_80294314
-func_80294314:
+lbl_80294314:
 /* 80294314 00291254  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80294318 00291258  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029431C 0029125C  7C 08 03 A6 */	mtlr r0
@@ -528,6 +471,7 @@ func_80294314:
 /* 80294328 0018 .text      cmdJmp__12JASSeqParserFP8JASTrackPUl cmdJmp__12JASSeqParserFP8JASTrackPUl */
 .global cmdJmp__12JASSeqParserFP8JASTrackPUl
 cmdJmp__12JASSeqParserFP8JASTrackPUl:
+cmdJmp__12JASSeqParserFP8JASTrackPUl:
 /* 80294328 00291268  80 64 00 00 */	lwz r3, 0(r4)
 /* 8029432C 0029126C  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294330 00291270  7C 03 02 14 */	add r0, r3, r0
@@ -535,8 +479,9 @@ cmdJmp__12JASSeqParserFP8JASTrackPUl:
 /* 80294338 00291278  38 60 00 00 */	li r3, 0
 /* 8029433C 0029127C  4E 80 00 20 */	blr 
 
-/* 80294340 003C .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl cmdJmpF__12JASSeqParserFP8JASTrackPUl */
+/* 80294340 0058 .text      cmdJmpF__12JASSeqParserFP8JASTrackPUl cmdJmpF__12JASSeqParserFP8JASTrackPUl */
 .global cmdJmpF__12JASSeqParserFP8JASTrackPUl
+cmdJmpF__12JASSeqParserFP8JASTrackPUl:
 cmdJmpF__12JASSeqParserFP8JASTrackPUl:
 /* 80294340 00291280  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294344 00291284  7C 08 02 A6 */	mflr r0
@@ -548,15 +493,12 @@ cmdJmpF__12JASSeqParserFP8JASTrackPUl:
 /* 8029435C 0029129C  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80294360 002912A0  4B FF F9 95 */	bl conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition
 /* 80294364 002912A4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80294368 002912A8  41 82 00 14 */	beq func_8029437C
+/* 80294368 002912A8  41 82 00 14 */	beq lbl_8029437C
 /* 8029436C 002912AC  80 7E 00 00 */	lwz r3, 0(r30)
 /* 80294370 002912B0  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80294374 002912B4  7C 03 02 14 */	add r0, r3, r0
 /* 80294378 002912B8  90 1E 00 04 */	stw r0, 4(r30)
-
-/* 8029437C 001C .text      func_8029437C                  func_8029437C                  */
-.global func_8029437C
-func_8029437C:
+lbl_8029437C:
 /* 8029437C 002912BC  38 60 00 00 */	li r3, 0
 /* 80294380 002912C0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80294384 002912C4  83 C1 00 08 */	lwz r30, 8(r1)
@@ -567,6 +509,7 @@ func_8029437C:
 
 /* 80294398 0034 .text      cmdJmpTable__12JASSeqParserFP8JASTrackPUl cmdJmpTable__12JASSeqParserFP8JASTrackPUl */
 .global cmdJmpTable__12JASSeqParserFP8JASTrackPUl
+cmdJmpTable__12JASSeqParserFP8JASTrackPUl:
 cmdJmpTable__12JASSeqParserFP8JASTrackPUl:
 /* 80294398 002912D8  80 65 00 00 */	lwz r3, 0(r5)
 /* 8029439C 002912DC  54 60 08 3C */	slwi r0, r3, 1
@@ -584,6 +527,7 @@ cmdJmpTable__12JASSeqParserFP8JASTrackPUl:
 
 /* 802943CC 0050 .text      cmdCallTable__12JASSeqParserFP8JASTrackPUl cmdCallTable__12JASSeqParserFP8JASTrackPUl */
 .global cmdCallTable__12JASSeqParserFP8JASTrackPUl
+cmdCallTable__12JASSeqParserFP8JASTrackPUl:
 cmdCallTable__12JASSeqParserFP8JASTrackPUl:
 /* 802943CC 0029130C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802943D0 00291310  7C 08 02 A6 */	mflr r0
@@ -609,6 +553,7 @@ cmdCallTable__12JASSeqParserFP8JASTrackPUl:
 /* 8029441C 002C .text      cmdLoopS__12JASSeqParserFP8JASTrackPUl cmdLoopS__12JASSeqParserFP8JASTrackPUl */
 .global cmdLoopS__12JASSeqParserFP8JASTrackPUl
 cmdLoopS__12JASSeqParserFP8JASTrackPUl:
+cmdLoopS__12JASSeqParserFP8JASTrackPUl:
 /* 8029441C 0029135C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294420 00291360  7C 08 02 A6 */	mflr r0
 /* 80294424 00291364  90 01 00 14 */	stw r0, 0x14(r1)
@@ -624,6 +569,7 @@ cmdLoopS__12JASSeqParserFP8JASTrackPUl:
 /* 80294448 0028 .text      cmdLoopE__12JASSeqParserFP8JASTrackPUl cmdLoopE__12JASSeqParserFP8JASTrackPUl */
 .global cmdLoopE__12JASSeqParserFP8JASTrackPUl
 cmdLoopE__12JASSeqParserFP8JASTrackPUl:
+cmdLoopE__12JASSeqParserFP8JASTrackPUl:
 /* 80294448 00291388  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029444C 0029138C  7C 08 02 A6 */	mflr r0
 /* 80294450 00291390  90 01 00 14 */	stw r0, 0x14(r1)
@@ -637,6 +583,7 @@ cmdLoopE__12JASSeqParserFP8JASTrackPUl:
 
 /* 80294470 0044 .text      cmdNote__12JASSeqParserFP8JASTrackPUl cmdNote__12JASSeqParserFP8JASTrackPUl */
 .global cmdNote__12JASSeqParserFP8JASTrackPUl
+cmdNote__12JASSeqParserFP8JASTrackPUl:
 cmdNote__12JASSeqParserFP8JASTrackPUl:
 /* 80294470 002913B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294474 002913B4  7C 08 02 A6 */	mflr r0
@@ -659,6 +606,7 @@ cmdNote__12JASSeqParserFP8JASTrackPUl:
 /* 802944B4 0040 .text      cmdNoteOn__12JASSeqParserFP8JASTrackPUl cmdNoteOn__12JASSeqParserFP8JASTrackPUl */
 .global cmdNoteOn__12JASSeqParserFP8JASTrackPUl
 cmdNoteOn__12JASSeqParserFP8JASTrackPUl:
+cmdNoteOn__12JASSeqParserFP8JASTrackPUl:
 /* 802944B4 002913F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802944B8 002913F8  7C 08 02 A6 */	mflr r0
 /* 802944BC 002913FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -679,6 +627,7 @@ cmdNoteOn__12JASSeqParserFP8JASTrackPUl:
 /* 802944F4 0034 .text      cmdNoteOff__12JASSeqParserFP8JASTrackPUl cmdNoteOff__12JASSeqParserFP8JASTrackPUl */
 .global cmdNoteOff__12JASSeqParserFP8JASTrackPUl
 cmdNoteOff__12JASSeqParserFP8JASTrackPUl:
+cmdNoteOff__12JASSeqParserFP8JASTrackPUl:
 /* 802944F4 00291434  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802944F8 00291438  7C 08 02 A6 */	mflr r0
 /* 802944FC 0029143C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -695,6 +644,7 @@ cmdNoteOff__12JASSeqParserFP8JASTrackPUl:
 
 /* 80294528 0060 .text      cmdReadPort__12JASSeqParserFP8JASTrackPUl cmdReadPort__12JASSeqParserFP8JASTrackPUl */
 .global cmdReadPort__12JASSeqParserFP8JASTrackPUl
+cmdReadPort__12JASSeqParserFP8JASTrackPUl:
 cmdReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 80294528 00291468  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029452C 0029146C  7C 08 02 A6 */	mflr r0
@@ -724,6 +674,7 @@ cmdReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 80294588 0034 .text      cmdWritePort__12JASSeqParserFP8JASTrackPUl cmdWritePort__12JASSeqParserFP8JASTrackPUl */
 .global cmdWritePort__12JASSeqParserFP8JASTrackPUl
 cmdWritePort__12JASSeqParserFP8JASTrackPUl:
+cmdWritePort__12JASSeqParserFP8JASTrackPUl:
 /* 80294588 002914C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029458C 002914CC  7C 08 02 A6 */	mflr r0
 /* 80294590 002914D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -738,31 +689,30 @@ cmdWritePort__12JASSeqParserFP8JASTrackPUl:
 /* 802945B4 002914F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802945B8 002914F8  4E 80 00 20 */	blr 
 
-/* 802945BC 0028 .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl cmdParentWritePort__12JASSeqParserFP8JASTrackPUl */
+/* 802945BC 003C .text      cmdParentWritePort__12JASSeqParserFP8JASTrackPUl cmdParentWritePort__12JASSeqParserFP8JASTrackPUl */
 .global cmdParentWritePort__12JASSeqParserFP8JASTrackPUl
+cmdParentWritePort__12JASSeqParserFP8JASTrackPUl:
 cmdParentWritePort__12JASSeqParserFP8JASTrackPUl:
 /* 802945BC 002914FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802945C0 00291500  7C 08 02 A6 */	mflr r0
 /* 802945C4 00291504  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802945C8 00291508  80 64 01 2C */	lwz r3, 0x12c(r4)
 /* 802945CC 0029150C  28 03 00 00 */	cmplwi r3, 0
-/* 802945D0 00291510  41 82 00 14 */	beq func_802945E4
+/* 802945D0 00291510  41 82 00 14 */	beq lbl_802945E4
 /* 802945D4 00291514  80 85 00 00 */	lwz r4, 0(r5)
 /* 802945D8 00291518  80 05 00 04 */	lwz r0, 4(r5)
 /* 802945DC 0029151C  54 05 04 3E */	clrlwi r5, r0, 0x10
 /* 802945E0 00291520  4B FF E3 39 */	bl writePort__8JASTrackFUlUs
-
-/* 802945E4 0014 .text      func_802945E4                  func_802945E4                  */
-.global func_802945E4
-func_802945E4:
+lbl_802945E4:
 /* 802945E4 00291524  38 60 00 00 */	li r3, 0
 /* 802945E8 00291528  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802945EC 0029152C  7C 08 03 A6 */	mtlr r0
 /* 802945F0 00291530  38 21 00 10 */	addi r1, r1, 0x10
 /* 802945F4 00291534  4E 80 00 20 */	blr 
 
-/* 802945F8 0038 .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl cmdChildWritePort__12JASSeqParserFP8JASTrackPUl */
+/* 802945F8 004C .text      cmdChildWritePort__12JASSeqParserFP8JASTrackPUl cmdChildWritePort__12JASSeqParserFP8JASTrackPUl */
 .global cmdChildWritePort__12JASSeqParserFP8JASTrackPUl
+cmdChildWritePort__12JASSeqParserFP8JASTrackPUl:
 cmdChildWritePort__12JASSeqParserFP8JASTrackPUl:
 /* 802945F8 00291538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802945FC 0029153C  7C 08 02 A6 */	mflr r0
@@ -773,23 +723,21 @@ cmdChildWritePort__12JASSeqParserFP8JASTrackPUl:
 /* 80294610 00291550  7C 64 02 14 */	add r3, r4, r0
 /* 80294614 00291554  80 63 01 30 */	lwz r3, 0x130(r3)
 /* 80294618 00291558  28 03 00 00 */	cmplwi r3, 0
-/* 8029461C 0029155C  41 82 00 14 */	beq func_80294630
+/* 8029461C 0029155C  41 82 00 14 */	beq lbl_80294630
 /* 80294620 00291560  54 C4 07 3E */	clrlwi r4, r6, 0x1c
 /* 80294624 00291564  80 05 00 04 */	lwz r0, 4(r5)
 /* 80294628 00291568  54 05 04 3E */	clrlwi r5, r0, 0x10
 /* 8029462C 0029156C  4B FF E2 ED */	bl writePort__8JASTrackFUlUs
-
-/* 80294630 0014 .text      func_80294630                  func_80294630                  */
-.global func_80294630
-func_80294630:
+lbl_80294630:
 /* 80294630 00291570  38 60 00 00 */	li r3, 0
 /* 80294634 00291574  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80294638 00291578  7C 08 03 A6 */	mtlr r0
 /* 8029463C 0029157C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294640 00291580  4E 80 00 20 */	blr 
 
-/* 80294644 004C .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl cmdParentReadPort__12JASSeqParserFP8JASTrackPUl */
+/* 80294644 0068 .text      cmdParentReadPort__12JASSeqParserFP8JASTrackPUl cmdParentReadPort__12JASSeqParserFP8JASTrackPUl */
 .global cmdParentReadPort__12JASSeqParserFP8JASTrackPUl
+cmdParentReadPort__12JASSeqParserFP8JASTrackPUl:
 cmdParentReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 80294644 00291584  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80294648 00291588  7C 08 02 A6 */	mflr r0
@@ -801,7 +749,7 @@ cmdParentReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 80294660 002915A0  7C BF 2B 78 */	mr r31, r5
 /* 80294664 002915A4  80 64 01 2C */	lwz r3, 0x12c(r4)
 /* 80294668 002915A8  28 03 00 00 */	cmplwi r3, 0
-/* 8029466C 002915AC  41 82 00 24 */	beq func_80294690
+/* 8029466C 002915AC  41 82 00 24 */	beq lbl_80294690
 /* 80294670 002915B0  80 9F 00 00 */	lwz r4, 0(r31)
 /* 80294674 002915B4  4B FF E3 09 */	bl readPort__8JASTrackFUl
 /* 80294678 002915B8  7C 60 1B 78 */	mr r0, r3
@@ -810,10 +758,7 @@ cmdParentReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 80294684 002915C4  80 BF 00 04 */	lwz r5, 4(r31)
 /* 80294688 002915C8  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 8029468C 002915CC  4B FF F7 39 */	bl writeReg__12JASSeqParserFP8JASTrackUlUl
-
-/* 80294690 001C .text      func_80294690                  func_80294690                  */
-.global func_80294690
-func_80294690:
+lbl_80294690:
 /* 80294690 002915D0  38 60 00 00 */	li r3, 0
 /* 80294694 002915D4  39 61 00 20 */	addi r11, r1, 0x20
 /* 80294698 002915D8  48 0C DB 91 */	bl _restgpr_29
@@ -822,8 +767,9 @@ func_80294690:
 /* 802946A4 002915E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802946A8 002915E8  4E 80 00 20 */	blr 
 
-/* 802946AC 005C .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl cmdChildReadPort__12JASSeqParserFP8JASTrackPUl */
+/* 802946AC 0078 .text      cmdChildReadPort__12JASSeqParserFP8JASTrackPUl cmdChildReadPort__12JASSeqParserFP8JASTrackPUl */
 .global cmdChildReadPort__12JASSeqParserFP8JASTrackPUl
+cmdChildReadPort__12JASSeqParserFP8JASTrackPUl:
 cmdChildReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 802946AC 002915EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802946B0 002915F0  7C 08 02 A6 */	mflr r0
@@ -839,7 +785,7 @@ cmdChildReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 802946D8 00291618  7C 7E 02 14 */	add r3, r30, r0
 /* 802946DC 0029161C  80 63 01 30 */	lwz r3, 0x130(r3)
 /* 802946E0 00291620  28 03 00 00 */	cmplwi r3, 0
-/* 802946E4 00291624  41 82 00 24 */	beq func_80294708
+/* 802946E4 00291624  41 82 00 24 */	beq lbl_80294708
 /* 802946E8 00291628  54 84 07 3E */	clrlwi r4, r4, 0x1c
 /* 802946EC 0029162C  4B FF E2 91 */	bl readPort__8JASTrackFUl
 /* 802946F0 00291630  7C 60 1B 78 */	mr r0, r3
@@ -848,10 +794,7 @@ cmdChildReadPort__12JASSeqParserFP8JASTrackPUl:
 /* 802946FC 0029163C  80 BF 00 04 */	lwz r5, 4(r31)
 /* 80294700 00291640  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 80294704 00291644  4B FF F6 C1 */	bl writeReg__12JASSeqParserFP8JASTrackUlUl
-
-/* 80294708 001C .text      func_80294708                  func_80294708                  */
-.global func_80294708
-func_80294708:
+lbl_80294708:
 /* 80294708 00291648  38 60 00 00 */	li r3, 0
 /* 8029470C 0029164C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80294710 00291650  48 0C DB 19 */	bl _restgpr_29
@@ -862,6 +805,7 @@ func_80294708:
 
 /* 80294724 004C .text      cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl */
 .global cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl
+cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl:
 cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl:
 /* 80294724 00291664  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294728 00291668  7C 08 02 A6 */	mflr r0
@@ -886,6 +830,7 @@ cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl:
 /* 80294770 004C .text      cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl */
 .global cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl
 cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl:
+cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl:
 /* 80294770 002916B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294774 002916B4  7C 08 02 A6 */	mflr r0
 /* 80294778 002916B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -909,6 +854,7 @@ cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl:
 /* 802947BC 0038 .text      cmdWait__12JASSeqParserFP8JASTrackPUl cmdWait__12JASSeqParserFP8JASTrackPUl */
 .global cmdWait__12JASSeqParserFP8JASTrackPUl
 cmdWait__12JASSeqParserFP8JASTrackPUl:
+cmdWait__12JASSeqParserFP8JASTrackPUl:
 /* 802947BC 002916FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802947C0 00291700  7C 08 02 A6 */	mflr r0
 /* 802947C4 00291704  90 01 00 14 */	stw r0, 0x14(r1)
@@ -927,27 +873,26 @@ cmdWait__12JASSeqParserFP8JASTrackPUl:
 /* 802947F4 0010 .text      cmdWaitByte__12JASSeqParserFP8JASTrackPUl cmdWaitByte__12JASSeqParserFP8JASTrackPUl */
 .global cmdWaitByte__12JASSeqParserFP8JASTrackPUl
 cmdWaitByte__12JASSeqParserFP8JASTrackPUl:
+cmdWaitByte__12JASSeqParserFP8JASTrackPUl:
 /* 802947F4 00291734  80 05 00 00 */	lwz r0, 0(r5)
 /* 802947F8 00291738  90 04 00 40 */	stw r0, 0x40(r4)
 /* 802947FC 0029173C  38 60 00 00 */	li r3, 0
 /* 80294800 00291740  4E 80 00 20 */	blr 
 
-/* 80294804 0024 .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl cmdSetLastNote__12JASSeqParserFP8JASTrackPUl */
+/* 80294804 0038 .text      cmdSetLastNote__12JASSeqParserFP8JASTrackPUl cmdSetLastNote__12JASSeqParserFP8JASTrackPUl */
 .global cmdSetLastNote__12JASSeqParserFP8JASTrackPUl
+cmdSetLastNote__12JASSeqParserFP8JASTrackPUl:
 cmdSetLastNote__12JASSeqParserFP8JASTrackPUl:
 /* 80294804 00291744  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294808 00291748  7C 08 02 A6 */	mflr r0
 /* 8029480C 0029174C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80294810 00291750  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294814 00291754  28 00 01 00 */	cmplwi r0, 0x100
-/* 80294818 00291758  40 80 00 10 */	bge func_80294828
+/* 80294818 00291758  40 80 00 10 */	bge lbl_80294828
 /* 8029481C 0029175C  7C 83 23 78 */	mr r3, r4
 /* 80294820 00291760  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80294824 00291764  4B FF D5 99 */	bl setLatestKey__8JASTrackFUc
-
-/* 80294828 0014 .text      func_80294828                  func_80294828                  */
-.global func_80294828
-func_80294828:
+lbl_80294828:
 /* 80294828 00291768  38 60 00 00 */	li r3, 0
 /* 8029482C 0029176C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80294830 00291770  7C 08 03 A6 */	mtlr r0
@@ -956,6 +901,7 @@ func_80294828:
 
 /* 8029483C 0050 .text      cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl */
 .global cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl
+cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl:
 cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl:
 /* 8029483C 0029177C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294840 00291780  7C 08 02 A6 */	mflr r0
@@ -981,6 +927,7 @@ cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl:
 /* 8029488C 003C .text      cmdEnvSet__12JASSeqParserFP8JASTrackPUl cmdEnvSet__12JASSeqParserFP8JASTrackPUl */
 .global cmdEnvSet__12JASSeqParserFP8JASTrackPUl
 cmdEnvSet__12JASSeqParserFP8JASTrackPUl:
+cmdEnvSet__12JASSeqParserFP8JASTrackPUl:
 /* 8029488C 002917CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294890 002917D0  7C 08 02 A6 */	mflr r0
 /* 80294894 002917D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -999,6 +946,7 @@ cmdEnvSet__12JASSeqParserFP8JASTrackPUl:
 
 /* 802948C8 0054 .text      cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl */
 .global cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl
+cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl:
 cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl:
 /* 802948C8 00291808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802948CC 0029180C  7C 08 02 A6 */	mflr r0
@@ -1025,6 +973,7 @@ cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl:
 /* 8029491C 0030 .text      cmdBusConnect__12JASSeqParserFP8JASTrackPUl cmdBusConnect__12JASSeqParserFP8JASTrackPUl */
 .global cmdBusConnect__12JASSeqParserFP8JASTrackPUl
 cmdBusConnect__12JASSeqParserFP8JASTrackPUl:
+cmdBusConnect__12JASSeqParserFP8JASTrackPUl:
 /* 8029491C 0029185C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294920 00291860  7C 08 02 A6 */	mflr r0
 /* 80294924 00291864  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1041,6 +990,7 @@ cmdBusConnect__12JASSeqParserFP8JASTrackPUl:
 /* 8029494C 0010 .text      cmdSetIntTable__12JASSeqParserFP8JASTrackPUl cmdSetIntTable__12JASSeqParserFP8JASTrackPUl */
 .global cmdSetIntTable__12JASSeqParserFP8JASTrackPUl
 cmdSetIntTable__12JASSeqParserFP8JASTrackPUl:
+cmdSetIntTable__12JASSeqParserFP8JASTrackPUl:
 /* 8029494C 0029188C  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294950 00291890  90 04 00 48 */	stw r0, 0x48(r4)
 /* 80294954 00291894  38 60 00 00 */	li r3, 0
@@ -1048,6 +998,7 @@ cmdSetIntTable__12JASSeqParserFP8JASTrackPUl:
 
 /* 8029495C 002C .text      cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl */
 .global cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl
+cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl:
 cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl:
 /* 8029495C 0029189C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294960 002918A0  7C 08 02 A6 */	mflr r0
@@ -1064,6 +1015,7 @@ cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl:
 /* 80294988 002C .text      cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl */
 .global cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl
 cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl:
+cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl:
 /* 80294988 002918C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029498C 002918CC  7C 08 02 A6 */	mflr r0
 /* 80294990 002918D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1078,6 +1030,7 @@ cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl:
 
 /* 802949B4 0030 .text      cmdClrI__12JASSeqParserFP8JASTrackPUl cmdClrI__12JASSeqParserFP8JASTrackPUl */
 .global cmdClrI__12JASSeqParserFP8JASTrackPUl
+cmdClrI__12JASSeqParserFP8JASTrackPUl:
 cmdClrI__12JASSeqParserFP8JASTrackPUl:
 /* 802949B4 002918F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802949B8 002918F8  7C 08 02 A6 */	mflr r0
@@ -1094,6 +1047,7 @@ cmdClrI__12JASSeqParserFP8JASTrackPUl:
 
 /* 802949E4 003C .text      cmdRetI__12JASSeqParserFP8JASTrackPUl cmdRetI__12JASSeqParserFP8JASTrackPUl */
 .global cmdRetI__12JASSeqParserFP8JASTrackPUl
+cmdRetI__12JASSeqParserFP8JASTrackPUl:
 cmdRetI__12JASSeqParserFP8JASTrackPUl:
 /* 802949E4 00291924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802949E8 00291928  7C 08 02 A6 */	mflr r0
@@ -1114,6 +1068,7 @@ cmdRetI__12JASSeqParserFP8JASTrackPUl:
 /* 80294A20 001C .text      cmdIntTimer__12JASSeqParserFP8JASTrackPUl cmdIntTimer__12JASSeqParserFP8JASTrackPUl */
 .global cmdIntTimer__12JASSeqParserFP8JASTrackPUl
 cmdIntTimer__12JASSeqParserFP8JASTrackPUl:
+cmdIntTimer__12JASSeqParserFP8JASTrackPUl:
 /* 80294A20 00291960  80 65 00 04 */	lwz r3, 4(r5)
 /* 80294A24 00291964  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294A28 00291968  98 04 00 50 */	stb r0, 0x50(r4)
@@ -1122,8 +1077,9 @@ cmdIntTimer__12JASSeqParserFP8JASTrackPUl:
 /* 80294A34 00291974  38 60 00 00 */	li r3, 0
 /* 80294A38 00291978  4E 80 00 20 */	blr 
 
-/* 80294A3C 0040 .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl cmdSyncCPU__12JASSeqParserFP8JASTrackPUl */
+/* 80294A3C 0068 .text      cmdSyncCPU__12JASSeqParserFP8JASTrackPUl cmdSyncCPU__12JASSeqParserFP8JASTrackPUl */
 .global cmdSyncCPU__12JASSeqParserFP8JASTrackPUl
+cmdSyncCPU__12JASSeqParserFP8JASTrackPUl:
 cmdSyncCPU__12JASSeqParserFP8JASTrackPUl:
 /* 80294A3C 0029197C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294A40 00291980  7C 08 02 A6 */	mflr r0
@@ -1134,17 +1090,14 @@ cmdSyncCPU__12JASSeqParserFP8JASTrackPUl:
 /* 80294A54 00291994  38 03 FF FF */	addi r0, r3, 0x0000FFFF@l
 /* 80294A58 00291998  81 8D 8C C0 */	lwz r12, sCallBackFunc__12JASSeqParser-_SDA_BASE_(r13)
 /* 80294A5C 0029199C  28 0C 00 00 */	cmplwi r12, 0
-/* 80294A60 002919A0  41 82 00 1C */	beq func_80294A7C
+/* 80294A60 002919A0  41 82 00 1C */	beq lbl_80294A7C
 /* 80294A64 002919A4  7F E3 FB 78 */	mr r3, r31
 /* 80294A68 002919A8  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294A6C 002919AC  54 04 04 3E */	clrlwi r4, r0, 0x10
 /* 80294A70 002919B0  7D 89 03 A6 */	mtctr r12
 /* 80294A74 002919B4  4E 80 04 21 */	bctrl 
 /* 80294A78 002919B8  7C 60 1B 78 */	mr r0, r3
-
-/* 80294A7C 0028 .text      func_80294A7C                  func_80294A7C                  */
-.global func_80294A7C
-func_80294A7C:
+lbl_80294A7C:
 /* 80294A7C 002919BC  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80294A80 002919C0  38 80 00 03 */	li r4, 3
 /* 80294A84 002919C4  54 05 04 3E */	clrlwi r5, r0, 0x10
@@ -1158,6 +1111,7 @@ func_80294A7C:
 
 /* 80294AA4 0030 .text      cmdTempo__12JASSeqParserFP8JASTrackPUl cmdTempo__12JASSeqParserFP8JASTrackPUl */
 .global cmdTempo__12JASSeqParserFP8JASTrackPUl
+cmdTempo__12JASSeqParserFP8JASTrackPUl:
 cmdTempo__12JASSeqParserFP8JASTrackPUl:
 /* 80294AA4 002919E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294AA8 002919E8  7C 08 02 A6 */	mflr r0
@@ -1175,17 +1129,20 @@ cmdTempo__12JASSeqParserFP8JASTrackPUl:
 /* 80294AD4 0008 .text      cmdFinish__12JASSeqParserFP8JASTrackPUl cmdFinish__12JASSeqParserFP8JASTrackPUl */
 .global cmdFinish__12JASSeqParserFP8JASTrackPUl
 cmdFinish__12JASSeqParserFP8JASTrackPUl:
+cmdFinish__12JASSeqParserFP8JASTrackPUl:
 /* 80294AD4 00291A14  38 60 FF FF */	li r3, -1
 /* 80294AD8 00291A18  4E 80 00 20 */	blr 
 
 /* 80294ADC 0008 .text      cmdNop__12JASSeqParserFP8JASTrackPUl cmdNop__12JASSeqParserFP8JASTrackPUl */
 .global cmdNop__12JASSeqParserFP8JASTrackPUl
 cmdNop__12JASSeqParserFP8JASTrackPUl:
+cmdNop__12JASSeqParserFP8JASTrackPUl:
 /* 80294ADC 00291A1C  38 60 00 00 */	li r3, 0
 /* 80294AE0 00291A20  4E 80 00 20 */	blr 
 
 /* 80294AE4 0038 .text      cmdFIRSet__12JASSeqParserFP8JASTrackPUl cmdFIRSet__12JASSeqParserFP8JASTrackPUl */
 .global cmdFIRSet__12JASSeqParserFP8JASTrackPUl
+cmdFIRSet__12JASSeqParserFP8JASTrackPUl:
 cmdFIRSet__12JASSeqParserFP8JASTrackPUl:
 /* 80294AE4 00291A24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294AE8 00291A28  7C 08 02 A6 */	mflr r0
@@ -1202,8 +1159,9 @@ cmdFIRSet__12JASSeqParserFP8JASTrackPUl:
 /* 80294B14 00291A54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294B18 00291A58  4E 80 00 20 */	blr 
 
-/* 80294B1C 0020 .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl cmdIIRSet__12JASSeqParserFP8JASTrackPUl */
+/* 80294B1C 0054 .text      cmdIIRSet__12JASSeqParserFP8JASTrackPUl cmdIIRSet__12JASSeqParserFP8JASTrackPUl */
 .global cmdIIRSet__12JASSeqParserFP8JASTrackPUl
+cmdIIRSet__12JASSeqParserFP8JASTrackPUl:
 cmdIIRSet__12JASSeqParserFP8JASTrackPUl:
 /* 80294B1C 00291A5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294B20 00291A60  7C 08 02 A6 */	mflr r0
@@ -1213,15 +1171,12 @@ cmdIIRSet__12JASSeqParserFP8JASTrackPUl:
 /* 80294B30 00291A70  38 E1 00 08 */	addi r7, r1, 8
 /* 80294B34 00291A74  38 00 00 04 */	li r0, 4
 /* 80294B38 00291A78  7C 09 03 A6 */	mtctr r0
-
-/* 80294B3C 0034 .text      func_80294B3C                  func_80294B3C                  */
-.global func_80294B3C
-func_80294B3C:
+lbl_80294B3C:
 /* 80294B3C 00291A7C  7C 05 30 2E */	lwzx r0, r5, r6
 /* 80294B40 00291A80  7C 07 1B 2E */	sthx r0, r7, r3
 /* 80294B44 00291A84  38 63 00 02 */	addi r3, r3, 2
 /* 80294B48 00291A88  38 C6 00 04 */	addi r6, r6, 4
-/* 80294B4C 00291A8C  42 00 FF F0 */	bdnz func_80294B3C
+/* 80294B4C 00291A8C  42 00 FF F0 */	bdnz lbl_80294B3C
 /* 80294B50 00291A90  7C 83 23 78 */	mr r3, r4
 /* 80294B54 00291A94  38 81 00 08 */	addi r4, r1, 8
 /* 80294B58 00291A98  4B FF DD 45 */	bl setIIR__8JASTrackFPCs
@@ -1231,25 +1186,23 @@ func_80294B3C:
 /* 80294B68 00291AA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294B6C 00291AAC  4E 80 00 20 */	blr 
 
-/* 80294B70 0030 .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl */
+/* 80294B70 0044 .text      cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl */
 .global cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl
+cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl:
 cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl:
 /* 80294B70 00291AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294B74 00291AB4  7C 08 02 A6 */	mflr r0
 /* 80294B78 00291AB8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80294B7C 00291ABC  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294B80 00291AC0  28 00 00 80 */	cmplwi r0, 0x80
-/* 80294B84 00291AC4  40 80 00 1C */	bge func_80294BA0
+/* 80294B84 00291AC4  40 80 00 1C */	bge lbl_80294BA0
 /* 80294B88 00291AC8  7C 83 23 78 */	mr r3, r4
 /* 80294B8C 00291ACC  54 05 18 38 */	slwi r5, r0, 3
 /* 80294B90 00291AD0  3C 80 80 3A */	lis r4, CUTOFF_TO_IIR_TABLE__7JASCalc@ha
 /* 80294B94 00291AD4  38 04 AB B8 */	addi r0, r4, CUTOFF_TO_IIR_TABLE__7JASCalc@l
 /* 80294B98 00291AD8  7C 80 2A 14 */	add r4, r0, r5
 /* 80294B9C 00291ADC  4B FF DD 01 */	bl setIIR__8JASTrackFPCs
-
-/* 80294BA0 0014 .text      func_80294BA0                  func_80294BA0                  */
-.global func_80294BA0
-func_80294BA0:
+lbl_80294BA0:
 /* 80294BA0 00291AE0  38 60 00 00 */	li r3, 0
 /* 80294BA4 00291AE4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80294BA8 00291AE8  7C 08 03 A6 */	mtlr r0
@@ -1258,6 +1211,7 @@ func_80294BA0:
 
 /* 80294BB4 001C .text      cmdBankPrg__12JASSeqParserFP8JASTrackPUl cmdBankPrg__12JASSeqParserFP8JASTrackPUl */
 .global cmdBankPrg__12JASSeqParserFP8JASTrackPUl
+cmdBankPrg__12JASSeqParserFP8JASTrackPUl:
 cmdBankPrg__12JASSeqParserFP8JASTrackPUl:
 /* 80294BB4 00291AF4  80 65 00 00 */	lwz r3, 0(r5)
 /* 80294BB8 00291AF8  54 60 C6 3E */	rlwinm r0, r3, 0x18, 0x18, 0x1f
@@ -1270,6 +1224,7 @@ cmdBankPrg__12JASSeqParserFP8JASTrackPUl:
 /* 80294BD0 0014 .text      cmdBank__12JASSeqParserFP8JASTrackPUl cmdBank__12JASSeqParserFP8JASTrackPUl */
 .global cmdBank__12JASSeqParserFP8JASTrackPUl
 cmdBank__12JASSeqParserFP8JASTrackPUl:
+cmdBank__12JASSeqParserFP8JASTrackPUl:
 /* 80294BD0 00291B10  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294BD4 00291B14  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80294BD8 00291B18  B0 04 02 2C */	sth r0, 0x22c(r4)
@@ -1279,6 +1234,7 @@ cmdBank__12JASSeqParserFP8JASTrackPUl:
 /* 80294BE4 0014 .text      cmdPrg__12JASSeqParserFP8JASTrackPUl cmdPrg__12JASSeqParserFP8JASTrackPUl */
 .global cmdPrg__12JASSeqParserFP8JASTrackPUl
 cmdPrg__12JASSeqParserFP8JASTrackPUl:
+cmdPrg__12JASSeqParserFP8JASTrackPUl:
 /* 80294BE4 00291B24  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294BE8 00291B28  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80294BEC 00291B2C  B0 04 02 2E */	sth r0, 0x22e(r4)
@@ -1287,6 +1243,7 @@ cmdPrg__12JASSeqParserFP8JASTrackPUl:
 
 /* 80294BF8 005C .text      cmdParamI__12JASSeqParserFP8JASTrackPUl cmdParamI__12JASSeqParserFP8JASTrackPUl */
 .global cmdParamI__12JASSeqParserFP8JASTrackPUl
+cmdParamI__12JASSeqParserFP8JASTrackPUl:
 cmdParamI__12JASSeqParserFP8JASTrackPUl:
 /* 80294BF8 00291B38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294BFC 00291B3C  7C 08 02 A6 */	mflr r0
@@ -1315,6 +1272,7 @@ cmdParamI__12JASSeqParserFP8JASTrackPUl:
 /* 80294C54 005C .text      cmdParamII__12JASSeqParserFP8JASTrackPUl cmdParamII__12JASSeqParserFP8JASTrackPUl */
 .global cmdParamII__12JASSeqParserFP8JASTrackPUl
 cmdParamII__12JASSeqParserFP8JASTrackPUl:
+cmdParamII__12JASSeqParserFP8JASTrackPUl:
 /* 80294C54 00291B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294C58 00291B98  7C 08 02 A6 */	mflr r0
 /* 80294C5C 00291B9C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1339,8 +1297,9 @@ cmdParamII__12JASSeqParserFP8JASTrackPUl:
 /* 80294CA8 00291BE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294CAC 00291BEC  4E 80 00 20 */	blr 
 
-/* 80294CB0 0030 .text      cmdParamE__12JASSeqParserFP8JASTrackPUl cmdParamE__12JASSeqParserFP8JASTrackPUl */
+/* 80294CB0 007C .text      cmdParamE__12JASSeqParserFP8JASTrackPUl cmdParamE__12JASSeqParserFP8JASTrackPUl */
 .global cmdParamE__12JASSeqParserFP8JASTrackPUl
+cmdParamE__12JASSeqParserFP8JASTrackPUl:
 cmdParamE__12JASSeqParserFP8JASTrackPUl:
 /* 80294CB0 00291BF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294CB4 00291BF4  7C 08 02 A6 */	mflr r0
@@ -1349,15 +1308,12 @@ cmdParamE__12JASSeqParserFP8JASTrackPUl:
 /* 80294CC0 00291C00  54 60 40 2E */	slwi r0, r3, 8
 /* 80294CC4 00291C04  7C 06 07 34 */	extsh r6, r0
 /* 80294CC8 00291C08  54 60 06 31 */	rlwinm. r0, r3, 0, 0x18, 0x18
-/* 80294CCC 00291C0C  40 82 00 14 */	bne func_80294CE0
+/* 80294CCC 00291C0C  40 82 00 14 */	bne lbl_80294CE0
 /* 80294CD0 00291C10  54 60 08 3C */	slwi r0, r3, 1
 /* 80294CD4 00291C14  7C 00 07 34 */	extsh r0, r0
 /* 80294CD8 00291C18  7C C0 03 78 */	or r0, r6, r0
 /* 80294CDC 00291C1C  7C 06 07 34 */	extsh r6, r0
-
-/* 80294CE0 004C .text      func_80294CE0                  func_80294CE0                  */
-.global func_80294CE0
-func_80294CE0:
+lbl_80294CE0:
 /* 80294CE0 00291C20  7C 83 23 78 */	mr r3, r4
 /* 80294CE4 00291C24  80 85 00 00 */	lwz r4, 0(r5)
 /* 80294CE8 00291C28  7C C0 07 34 */	extsh r0, r6
@@ -1378,8 +1334,9 @@ func_80294CE0:
 /* 80294D24 00291C64  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294D28 00291C68  4E 80 00 20 */	blr 
 
-/* 80294D2C 0030 .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl cmdParamEI__12JASSeqParserFP8JASTrackPUl */
+/* 80294D2C 007C .text      cmdParamEI__12JASSeqParserFP8JASTrackPUl cmdParamEI__12JASSeqParserFP8JASTrackPUl */
 .global cmdParamEI__12JASSeqParserFP8JASTrackPUl
+cmdParamEI__12JASSeqParserFP8JASTrackPUl:
 cmdParamEI__12JASSeqParserFP8JASTrackPUl:
 /* 80294D2C 00291C6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294D30 00291C70  7C 08 02 A6 */	mflr r0
@@ -1388,15 +1345,12 @@ cmdParamEI__12JASSeqParserFP8JASTrackPUl:
 /* 80294D3C 00291C7C  54 60 40 2E */	slwi r0, r3, 8
 /* 80294D40 00291C80  7C 06 07 34 */	extsh r6, r0
 /* 80294D44 00291C84  54 60 06 31 */	rlwinm. r0, r3, 0, 0x18, 0x18
-/* 80294D48 00291C88  40 82 00 14 */	bne func_80294D5C
+/* 80294D48 00291C88  40 82 00 14 */	bne lbl_80294D5C
 /* 80294D4C 00291C8C  54 60 08 3C */	slwi r0, r3, 1
 /* 80294D50 00291C90  7C 00 07 34 */	extsh r0, r0
 /* 80294D54 00291C94  7C C0 03 78 */	or r0, r6, r0
 /* 80294D58 00291C98  7C 06 07 34 */	extsh r6, r0
-
-/* 80294D5C 004C .text      func_80294D5C                  func_80294D5C                  */
-.global func_80294D5C
-func_80294D5C:
+lbl_80294D5C:
 /* 80294D5C 00291C9C  7C 83 23 78 */	mr r3, r4
 /* 80294D60 00291CA0  80 85 00 00 */	lwz r4, 0(r5)
 /* 80294D64 00291CA4  7C C0 07 34 */	extsh r0, r6
@@ -1417,8 +1371,9 @@ func_80294D5C:
 /* 80294DA0 00291CE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294DA4 00291CE4  4E 80 00 20 */	blr 
 
-/* 80294DA8 00E0 .text      cmdReg__12JASSeqParserFP8JASTrackPUl cmdReg__12JASSeqParserFP8JASTrackPUl */
+/* 80294DA8 0168 .text      cmdReg__12JASSeqParserFP8JASTrackPUl cmdReg__12JASSeqParserFP8JASTrackPUl */
 .global cmdReg__12JASSeqParserFP8JASTrackPUl
+cmdReg__12JASSeqParserFP8JASTrackPUl:
 cmdReg__12JASSeqParserFP8JASTrackPUl:
 /* 80294DA8 00291CE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80294DAC 00291CEC  7C 08 02 A6 */	mflr r0
@@ -1431,7 +1386,7 @@ cmdReg__12JASSeqParserFP8JASTrackPUl:
 /* 80294DC8 00291D08  83 C5 00 08 */	lwz r30, 8(r5)
 /* 80294DCC 00291D0C  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294DD0 00291D10  28 00 00 0A */	cmplwi r0, 0xa
-/* 80294DD4 00291D14  41 81 01 04 */	bgt func_80294ED8
+/* 80294DD4 00291D14  41 81 01 04 */	bgt lbl_80294ED8
 /* 80294DD8 00291D18  3C A0 80 3C */	lis r5, LIT_1124@ha
 /* 80294DDC 00291D1C  38 A5 76 24 */	addi r5, r5, LIT_1124@l
 /* 80294DE0 00291D20  54 00 10 3A */	slwi r0, r0, 2
@@ -1441,85 +1396,73 @@ cmdReg__12JASSeqParserFP8JASTrackPUl:
 /* 80294DF0 00291D30  7F E5 FB 78 */	mr r5, r31
 /* 80294DF4 00291D34  4B FF F1 D5 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294DF8 00291D38  7F DE 1A 14 */	add r30, r30, r3
-/* 80294DFC 00291D3C  48 00 00 E4 */	b func_80294EE0
+/* 80294DFC 00291D3C  48 00 00 E4 */	b lbl_80294EE0
 /* 80294E00 00291D40  7F E5 FB 78 */	mr r5, r31
 /* 80294E04 00291D44  4B FF F1 C5 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E08 00291D48  7F DE 18 50 */	subf r30, r30, r3
-/* 80294E0C 00291D4C  48 00 00 D4 */	b func_80294EE0
+/* 80294E0C 00291D4C  48 00 00 D4 */	b lbl_80294EE0
 /* 80294E10 00291D50  7F E5 FB 78 */	mr r5, r31
 /* 80294E14 00291D54  4B FF F1 B5 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E18 00291D58  7F DE 18 50 */	subf r30, r30, r3
 /* 80294E1C 00291D5C  3B E0 00 03 */	li r31, 3
-/* 80294E20 00291D60  48 00 00 C0 */	b func_80294EE0
+/* 80294E20 00291D60  48 00 00 C0 */	b lbl_80294EE0
 /* 80294E24 00291D64  7F E5 FB 78 */	mr r5, r31
 /* 80294E28 00291D68  4B FF F1 A1 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E2C 00291D6C  7F DE 19 D6 */	mullw r30, r30, r3
 /* 80294E30 00291D70  3B E0 00 21 */	li r31, 0x21
-/* 80294E34 00291D74  48 00 00 AC */	b func_80294EE0
+/* 80294E34 00291D74  48 00 00 AC */	b lbl_80294EE0
 /* 80294E38 00291D78  7F E5 FB 78 */	mr r5, r31
 /* 80294E3C 00291D7C  4B FF F1 8D */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E40 00291D80  7F DE 18 38 */	and r30, r30, r3
-/* 80294E44 00291D84  48 00 00 9C */	b func_80294EE0
+/* 80294E44 00291D84  48 00 00 9C */	b lbl_80294EE0
 /* 80294E48 00291D88  7F E5 FB 78 */	mr r5, r31
 /* 80294E4C 00291D8C  4B FF F1 7D */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E50 00291D90  7F DE 1B 78 */	or r30, r30, r3
-/* 80294E54 00291D94  48 00 00 8C */	b func_80294EE0
+/* 80294E54 00291D94  48 00 00 8C */	b lbl_80294EE0
 /* 80294E58 00291D98  7F E5 FB 78 */	mr r5, r31
 /* 80294E5C 00291D9C  4B FF F1 6D */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294E60 00291DA0  7F DE 1A 78 */	xor r30, r30, r3
-/* 80294E64 00291DA4  48 00 00 7C */	b func_80294EE0
-/* 80294E68 00291DA8  88 0D 8C C4 */	lbz r0, sym_80451244-_SDA_BASE_(r13)
+/* 80294E64 00291DA4  48 00 00 7C */	b lbl_80294EE0
+/* 80294E68 00291DA8  88 0D 8C C4 */	lbz r0, data_80451244-_SDA_BASE_(r13)
 /* 80294E6C 00291DAC  7C 00 07 75 */	extsb. r0, r0
-/* 80294E70 00291DB0  40 82 00 18 */	bne func_80294E88
-/* 80294E74 00291DB4  38 6D 8C C8 */	addi r3, r13, sym_80451248-_SDA_BASE_
+/* 80294E70 00291DB0  40 82 00 18 */	bne lbl_80294E88
+/* 80294E74 00291DB4  38 6D 8C C8 */	addi r3, r13, data_80451248-_SDA_BASE_
 /* 80294E78 00291DB8  38 80 00 00 */	li r4, 0
 /* 80294E7C 00291DBC  48 0A 4C 69 */	bl __ct__Q25JMath13TRandom_fast_FUl
 /* 80294E80 00291DC0  38 00 00 01 */	li r0, 1
-/* 80294E84 00291DC4  98 0D 8C C4 */	stb r0, sym_80451244-_SDA_BASE_(r13)
-
-/* 80294E88 0050 .text      func_80294E88                  func_80294E88                  */
-.global func_80294E88
-func_80294E88:
-/* 80294E88 00291DC8  80 8D 8C C8 */	lwz r4, sym_80451248-_SDA_BASE_(r13)
+/* 80294E84 00291DC4  98 0D 8C C4 */	stb r0, data_80451244-_SDA_BASE_(r13)
+lbl_80294E88:
+/* 80294E88 00291DC8  80 8D 8C C8 */	lwz r4, data_80451248-_SDA_BASE_(r13)
 /* 80294E8C 00291DCC  3C 60 00 19 */	lis r3, 0x0019660D@ha
 /* 80294E90 00291DD0  38 03 66 0D */	addi r0, r3, 0x0019660D@l
 /* 80294E94 00291DD4  7C 64 01 D6 */	mullw r3, r4, r0
 /* 80294E98 00291DD8  3C 63 3C 6F */	addis r3, r3, 0x3c6f
 /* 80294E9C 00291DDC  38 03 F3 5F */	addi r0, r3, -3233
-/* 80294EA0 00291DE0  90 0D 8C C8 */	stw r0, sym_80451248-_SDA_BASE_(r13)
+/* 80294EA0 00291DE0  90 0D 8C C8 */	stw r0, data_80451248-_SDA_BASE_(r13)
 /* 80294EA4 00291DE4  54 03 BA 7E */	srwi r3, r0, 9
 /* 80294EA8 00291DE8  7C 03 F3 96 */	divwu r0, r3, r30
 /* 80294EAC 00291DEC  7C 00 F1 D6 */	mullw r0, r0, r30
 /* 80294EB0 00291DF0  7F C0 18 50 */	subf r30, r0, r3
-/* 80294EB4 00291DF4  48 00 00 2C */	b func_80294EE0
+/* 80294EB4 00291DF4  48 00 00 2C */	b lbl_80294EE0
 /* 80294EB8 00291DF8  7F E5 FB 78 */	mr r5, r31
 /* 80294EBC 00291DFC  4B FF F1 0D */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294EC0 00291E00  7C 7E F0 30 */	slw r30, r3, r30
-/* 80294EC4 00291E04  48 00 00 1C */	b func_80294EE0
+/* 80294EC4 00291E04  48 00 00 1C */	b lbl_80294EE0
 /* 80294EC8 00291E08  7F E5 FB 78 */	mr r5, r31
 /* 80294ECC 00291E0C  4B FF F0 FD */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294ED0 00291E10  7C 7E F4 30 */	srw r30, r3, r30
-/* 80294ED4 00291E14  48 00 00 0C */	b func_80294EE0
-
-/* 80294ED8 0008 .text      func_80294ED8                  func_80294ED8                  */
-.global func_80294ED8
-func_80294ED8:
+/* 80294ED4 00291E14  48 00 00 0C */	b lbl_80294EE0
+lbl_80294ED8:
 /* 80294ED8 00291E18  38 60 00 00 */	li r3, 0
-/* 80294EDC 00291E1C  48 00 00 1C */	b func_80294EF8
-
-/* 80294EE0 0018 .text      func_80294EE0                  func_80294EE0                  */
-.global func_80294EE0
-func_80294EE0:
+/* 80294EDC 00291E1C  48 00 00 1C */	b lbl_80294EF8
+lbl_80294EE0:
 /* 80294EE0 00291E20  7F 83 E3 78 */	mr r3, r28
 /* 80294EE4 00291E24  7F A4 EB 78 */	mr r4, r29
 /* 80294EE8 00291E28  7F E5 FB 78 */	mr r5, r31
 /* 80294EEC 00291E2C  7F C6 F3 78 */	mr r6, r30
 /* 80294EF0 00291E30  4B FF EE D5 */	bl writeReg__12JASSeqParserFP8JASTrackUlUl
 /* 80294EF4 00291E34  38 60 00 00 */	li r3, 0
-
-/* 80294EF8 0018 .text      func_80294EF8                  func_80294EF8                  */
-.global func_80294EF8
-func_80294EF8:
+lbl_80294EF8:
 /* 80294EF8 00291E38  39 61 00 20 */	addi r11, r1, 0x20
 /* 80294EFC 00291E3C  48 0C D3 29 */	bl _restgpr_28
 /* 80294F00 00291E40  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1529,6 +1472,7 @@ func_80294EF8:
 
 /* 80294F10 0030 .text      cmdRegLoad__12JASSeqParserFP8JASTrackPUl cmdRegLoad__12JASSeqParserFP8JASTrackPUl */
 .global cmdRegLoad__12JASSeqParserFP8JASTrackPUl
+cmdRegLoad__12JASSeqParserFP8JASTrackPUl:
 cmdRegLoad__12JASSeqParserFP8JASTrackPUl:
 /* 80294F10 00291E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294F14 00291E54  7C 08 02 A6 */	mflr r0
@@ -1543,8 +1487,9 @@ cmdRegLoad__12JASSeqParserFP8JASTrackPUl:
 /* 80294F38 00291E78  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294F3C 00291E7C  4E 80 00 20 */	blr 
 
-/* 80294F40 0030 .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl cmdRegUni__12JASSeqParserFP8JASTrackPUl */
+/* 80294F40 0074 .text      cmdRegUni__12JASSeqParserFP8JASTrackPUl cmdRegUni__12JASSeqParserFP8JASTrackPUl */
 .global cmdRegUni__12JASSeqParserFP8JASTrackPUl
+cmdRegUni__12JASSeqParserFP8JASTrackPUl:
 cmdRegUni__12JASSeqParserFP8JASTrackPUl:
 /* 80294F40 00291E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80294F44 00291E84  7C 08 02 A6 */	mflr r0
@@ -1556,35 +1501,23 @@ cmdRegUni__12JASSeqParserFP8JASTrackPUl:
 /* 80294F5C 00291E9C  83 E5 00 04 */	lwz r31, 4(r5)
 /* 80294F60 00291EA0  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294F64 00291EA4  2C 00 00 0B */	cmpwi r0, 0xb
-/* 80294F68 00291EA8  41 82 00 08 */	beq func_80294F70
-/* 80294F6C 00291EAC  48 00 00 14 */	b func_80294F80
-
-/* 80294F70 0010 .text      func_80294F70                  func_80294F70                  */
-.global func_80294F70
-func_80294F70:
+/* 80294F68 00291EA8  41 82 00 08 */	beq lbl_80294F70
+/* 80294F6C 00291EAC  48 00 00 14 */	b lbl_80294F80
+lbl_80294F70:
 /* 80294F70 00291EB0  7F E5 FB 78 */	mr r5, r31
 /* 80294F74 00291EB4  4B FF F0 55 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80294F78 00291EB8  7C C3 00 D0 */	neg r6, r3
-/* 80294F7C 00291EBC  48 00 00 0C */	b func_80294F88
-
-/* 80294F80 0008 .text      func_80294F80                  func_80294F80                  */
-.global func_80294F80
-func_80294F80:
+/* 80294F7C 00291EBC  48 00 00 0C */	b lbl_80294F88
+lbl_80294F80:
 /* 80294F80 00291EC0  38 60 00 00 */	li r3, 0
-/* 80294F84 00291EC4  48 00 00 18 */	b func_80294F9C
-
-/* 80294F88 0014 .text      func_80294F88                  func_80294F88                  */
-.global func_80294F88
-func_80294F88:
+/* 80294F84 00291EC4  48 00 00 18 */	b lbl_80294F9C
+lbl_80294F88:
 /* 80294F88 00291EC8  7F A3 EB 78 */	mr r3, r29
 /* 80294F8C 00291ECC  7F C4 F3 78 */	mr r4, r30
 /* 80294F90 00291ED0  7F E5 FB 78 */	mr r5, r31
 /* 80294F94 00291ED4  4B FF EE 31 */	bl writeReg__12JASSeqParserFP8JASTrackUlUl
 /* 80294F98 00291ED8  38 60 00 00 */	li r3, 0
-
-/* 80294F9C 0018 .text      func_80294F9C                  func_80294F9C                  */
-.global func_80294F9C
-func_80294F9C:
+lbl_80294F9C:
 /* 80294F9C 00291EDC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80294FA0 00291EE0  48 0C D2 89 */	bl _restgpr_29
 /* 80294FA4 00291EE4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1592,8 +1525,9 @@ func_80294F9C:
 /* 80294FAC 00291EEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80294FB0 00291EF0  4E 80 00 20 */	blr 
 
-/* 80294FB4 0038 .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl */
+/* 80294FB4 00D4 .text      cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl */
 .global cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl
+cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl:
 cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl:
 /* 80294FB4 00291EF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294FB8 00291EF8  7C 08 02 A6 */	mflr r0
@@ -1603,41 +1537,29 @@ cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl:
 /* 80294FC8 00291F08  81 05 00 0C */	lwz r8, 0xc(r5)
 /* 80294FCC 00291F0C  80 05 00 00 */	lwz r0, 0(r5)
 /* 80294FD0 00291F10  2C 00 00 0E */	cmpwi r0, 0xe
-/* 80294FD4 00291F14  41 82 00 4C */	beq func_80295020
-/* 80294FD8 00291F18  40 80 00 14 */	bge func_80294FEC
+/* 80294FD4 00291F14  41 82 00 4C */	beq lbl_80295020
+/* 80294FD8 00291F18  40 80 00 14 */	bge lbl_80294FEC
 /* 80294FDC 00291F1C  2C 00 00 0C */	cmpwi r0, 0xc
-/* 80294FE0 00291F20  41 82 00 1C */	beq func_80294FFC
-/* 80294FE4 00291F24  40 80 00 28 */	bge func_8029500C
-/* 80294FE8 00291F28  48 00 00 7C */	b func_80295064
-
-/* 80294FEC 0010 .text      func_80294FEC                  func_80294FEC                  */
-.global func_80294FEC
-func_80294FEC:
+/* 80294FE0 00291F20  41 82 00 1C */	beq lbl_80294FFC
+/* 80294FE4 00291F24  40 80 00 28 */	bge lbl_8029500C
+/* 80294FE8 00291F28  48 00 00 7C */	b lbl_80295064
+lbl_80294FEC:
 /* 80294FEC 00291F2C  2C 00 00 10 */	cmpwi r0, 0x10
-/* 80294FF0 00291F30  41 82 00 64 */	beq func_80295054
-/* 80294FF4 00291F34  40 80 00 70 */	bge func_80295064
-/* 80294FF8 00291F38  48 00 00 48 */	b func_80295040
-
-/* 80294FFC 0010 .text      func_80294FFC                  func_80294FFC                  */
-.global func_80294FFC
-func_80294FFC:
+/* 80294FF0 00291F30  41 82 00 64 */	beq lbl_80295054
+/* 80294FF4 00291F34  40 80 00 70 */	bge lbl_80295064
+/* 80294FF8 00291F38  48 00 00 48 */	b lbl_80295040
+lbl_80294FFC:
 /* 80294FFC 00291F3C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80295000 00291F40  7C 06 42 14 */	add r0, r6, r8
 /* 80295004 00291F44  7C C5 00 AE */	lbzx r6, r5, r0
-/* 80295008 00291F48  48 00 00 64 */	b func_8029506C
-
-/* 8029500C 0014 .text      func_8029500C                  func_8029500C                  */
-.global func_8029500C
-func_8029500C:
+/* 80295008 00291F48  48 00 00 64 */	b lbl_8029506C
+lbl_8029500C:
 /* 8029500C 00291F4C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80295010 00291F50  55 00 08 3C */	slwi r0, r8, 1
 /* 80295014 00291F54  7C 00 2A 14 */	add r0, r0, r5
 /* 80295018 00291F58  7C C6 02 2E */	lhzx r6, r6, r0
-/* 8029501C 00291F5C  48 00 00 50 */	b func_8029506C
-
-/* 80295020 0020 .text      func_80295020                  func_80295020                  */
-.global func_80295020
-func_80295020:
+/* 8029501C 00291F5C  48 00 00 50 */	b lbl_8029506C
+lbl_80295020:
 /* 80295020 00291F60  55 00 08 3C */	slwi r0, r8, 1
 /* 80295024 00291F64  7D 08 02 14 */	add r8, r8, r0
 /* 80295028 00291F68  80 04 00 00 */	lwz r0, 0(r4)
@@ -1645,41 +1567,26 @@ func_80295020:
 /* 80295030 00291F70  38 05 FF FF */	addi r0, r5, -1
 /* 80295034 00291F74  7C 06 00 2E */	lwzx r0, r6, r0
 /* 80295038 00291F78  54 06 02 3E */	clrlwi r6, r0, 8
-/* 8029503C 00291F7C  48 00 00 30 */	b func_8029506C
-
-/* 80295040 0014 .text      func_80295040                  func_80295040                  */
-.global func_80295040
-func_80295040:
+/* 8029503C 00291F7C  48 00 00 30 */	b lbl_8029506C
+lbl_80295040:
 /* 80295040 00291F80  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80295044 00291F84  55 00 10 3A */	slwi r0, r8, 2
 /* 80295048 00291F88  7C 00 2A 14 */	add r0, r0, r5
 /* 8029504C 00291F8C  7C C6 00 2E */	lwzx r6, r6, r0
-/* 80295050 00291F90  48 00 00 1C */	b func_8029506C
-
-/* 80295054 0010 .text      func_80295054                  func_80295054                  */
-.global func_80295054
-func_80295054:
+/* 80295050 00291F90  48 00 00 1C */	b lbl_8029506C
+lbl_80295054:
 /* 80295054 00291F94  80 04 00 00 */	lwz r0, 0(r4)
 /* 80295058 00291F98  7C 08 02 14 */	add r0, r8, r0
 /* 8029505C 00291F9C  7C C6 00 2E */	lwzx r6, r6, r0
-/* 80295060 00291FA0  48 00 00 0C */	b func_8029506C
-
-/* 80295064 0008 .text      func_80295064                  func_80295064                  */
-.global func_80295064
-func_80295064:
+/* 80295060 00291FA0  48 00 00 0C */	b lbl_8029506C
+lbl_80295064:
 /* 80295064 00291FA4  38 60 00 00 */	li r3, 0
-/* 80295068 00291FA8  48 00 00 10 */	b func_80295078
-
-/* 8029506C 000C .text      func_8029506C                  func_8029506C                  */
-.global func_8029506C
-func_8029506C:
+/* 80295068 00291FA8  48 00 00 10 */	b lbl_80295078
+lbl_8029506C:
 /* 8029506C 00291FAC  7C E5 3B 78 */	mr r5, r7
 /* 80295070 00291FB0  4B FF ED 55 */	bl writeReg__12JASSeqParserFP8JASTrackUlUl
 /* 80295074 00291FB4  38 60 00 00 */	li r3, 0
-
-/* 80295078 0010 .text      func_80295078                  func_80295078                  */
-.global func_80295078
-func_80295078:
+lbl_80295078:
 /* 80295078 00291FB8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029507C 00291FBC  7C 08 03 A6 */	mtlr r0
 /* 80295080 00291FC0  38 21 00 10 */	addi r1, r1, 0x10
@@ -1687,6 +1594,7 @@ func_80295078:
 
 /* 80295088 01E4 .text      cmdDump__12JASSeqParserFP8JASTrackPUl cmdDump__12JASSeqParserFP8JASTrackPUl */
 .global cmdDump__12JASSeqParserFP8JASTrackPUl
+cmdDump__12JASSeqParserFP8JASTrackPUl:
 cmdDump__12JASSeqParserFP8JASTrackPUl:
 /* 80295088 00291FC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029508C 00291FCC  7C 08 02 A6 */	mflr r0
@@ -1810,8 +1718,9 @@ cmdDump__12JASSeqParserFP8JASTrackPUl:
 /* 80295264 002921A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80295268 002921A8  4E 80 00 20 */	blr 
 
-/* 8029526C 002C .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl cmdPrintf__12JASSeqParserFP8JASTrackPUl */
+/* 8029526C 022C .text      cmdPrintf__12JASSeqParserFP8JASTrackPUl cmdPrintf__12JASSeqParserFP8JASTrackPUl */
 .global cmdPrintf__12JASSeqParserFP8JASTrackPUl
+cmdPrintf__12JASSeqParserFP8JASTrackPUl:
 cmdPrintf__12JASSeqParserFP8JASTrackPUl:
 /* 8029526C 002921AC  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 80295270 002921B0  7C 08 02 A6 */	mflr r0
@@ -1823,11 +1732,8 @@ cmdPrintf__12JASSeqParserFP8JASTrackPUl:
 /* 80295288 002921C8  3B E0 00 00 */	li r31, 0
 /* 8029528C 002921CC  38 80 00 00 */	li r4, 0
 /* 80295290 002921D0  38 61 00 1C */	addi r3, r1, 0x1c
-/* 80295294 002921D4  48 00 01 40 */	b func_802953D4
-
-/* 80295298 005C .text      func_80295298                  func_80295298                  */
-.global func_80295298
-func_80295298:
+/* 80295294 002921D4  48 00 01 40 */	b lbl_802953D4
+lbl_80295298:
 /* 80295298 002921D8  80 BE 00 04 */	lwz r5, 4(r30)
 /* 8029529C 002921DC  38 05 00 01 */	addi r0, r5, 1
 /* 802952A0 002921E0  90 1E 00 04 */	stw r0, 4(r30)
@@ -1835,10 +1741,10 @@ func_80295298:
 /* 802952A8 002921E8  7C 03 21 AE */	stbx r0, r3, r4
 /* 802952AC 002921EC  7C A3 20 AE */	lbzx r5, r3, r4
 /* 802952B0 002921F0  7C A0 07 75 */	extsb. r0, r5
-/* 802952B4 002921F4  41 82 01 28 */	beq func_802953DC
+/* 802952B4 002921F4  41 82 01 28 */	beq lbl_802953DC
 /* 802952B8 002921F8  7C A0 07 74 */	extsb r0, r5
 /* 802952BC 002921FC  2C 00 00 5C */	cmpwi r0, 0x5c
-/* 802952C0 00292200  40 82 00 40 */	bne func_80295300
+/* 802952C0 00292200  40 82 00 40 */	bne lbl_80295300
 /* 802952C4 00292204  80 BE 00 04 */	lwz r5, 4(r30)
 /* 802952C8 00292208  38 05 00 01 */	addi r0, r5, 1
 /* 802952CC 0029220C  90 1E 00 04 */	stw r0, 4(r30)
@@ -1846,24 +1752,18 @@ func_80295298:
 /* 802952D4 00292214  7C 03 21 AE */	stbx r0, r3, r4
 /* 802952D8 00292218  7C A3 20 AE */	lbzx r5, r3, r4
 /* 802952DC 0029221C  7C A0 07 75 */	extsb. r0, r5
-/* 802952E0 00292220  41 82 00 FC */	beq func_802953DC
+/* 802952E0 00292220  41 82 00 FC */	beq lbl_802953DC
 /* 802952E4 00292224  7C A0 07 74 */	extsb r0, r5
 /* 802952E8 00292228  2C 00 00 6E */	cmpwi r0, 0x6e
-/* 802952EC 0029222C  41 82 00 08 */	beq func_802952F4
-/* 802952F0 00292230  48 00 00 E0 */	b func_802953D0
-
-/* 802952F4 000C .text      func_802952F4                  func_802952F4                  */
-.global func_802952F4
-func_802952F4:
+/* 802952EC 0029222C  41 82 00 08 */	beq lbl_802952F4
+/* 802952F0 00292230  48 00 00 E0 */	b lbl_802953D0
+lbl_802952F4:
 /* 802952F4 00292234  38 00 00 0D */	li r0, 0xd
 /* 802952F8 00292238  7C 03 21 AE */	stbx r0, r3, r4
-/* 802952FC 0029223C  48 00 00 D4 */	b func_802953D0
-
-/* 80295300 0058 .text      func_80295300                  func_80295300                  */
-.global func_80295300
-func_80295300:
+/* 802952FC 0029223C  48 00 00 D4 */	b lbl_802953D0
+lbl_80295300:
 /* 80295300 00292240  2C 00 00 25 */	cmpwi r0, 0x25
-/* 80295304 00292244  40 82 00 CC */	bne func_802953D0
+/* 80295304 00292244  40 82 00 CC */	bne lbl_802953D0
 /* 80295308 00292248  80 BE 00 04 */	lwz r5, 4(r30)
 /* 8029530C 0029224C  38 05 00 01 */	addi r0, r5, 1
 /* 80295310 00292250  90 1E 00 04 */	stw r0, 4(r30)
@@ -1873,99 +1773,66 @@ func_80295300:
 /* 80295320 00292260  7C 06 21 AE */	stbx r0, r6, r4
 /* 80295324 00292264  7C A6 20 AE */	lbzx r5, r6, r4
 /* 80295328 00292268  7C A0 07 75 */	extsb. r0, r5
-/* 8029532C 0029226C  41 82 00 B0 */	beq func_802953DC
+/* 8029532C 0029226C  41 82 00 B0 */	beq lbl_802953DC
 /* 80295330 00292270  7C A0 07 74 */	extsb r0, r5
 /* 80295334 00292274  2C 00 00 72 */	cmpwi r0, 0x72
-/* 80295338 00292278  41 82 00 68 */	beq func_802953A0
-/* 8029533C 0029227C  40 80 00 1C */	bge func_80295358
+/* 80295338 00292278  41 82 00 68 */	beq lbl_802953A0
+/* 8029533C 0029227C  40 80 00 1C */	bge lbl_80295358
 /* 80295340 00292280  2C 00 00 64 */	cmpwi r0, 0x64
-/* 80295344 00292284  41 82 00 2C */	beq func_80295370
-/* 80295348 00292288  40 80 00 84 */	bge func_802953CC
+/* 80295344 00292284  41 82 00 2C */	beq lbl_80295370
+/* 80295348 00292288  40 80 00 84 */	bge lbl_802953CC
 /* 8029534C 0029228C  2C 00 00 52 */	cmpwi r0, 0x52
-/* 80295350 00292290  41 82 00 68 */	beq func_802953B8
-/* 80295354 00292294  48 00 00 78 */	b func_802953CC
-
-/* 80295358 0018 .text      func_80295358                  func_80295358                  */
-.global func_80295358
-func_80295358:
+/* 80295350 00292290  41 82 00 68 */	beq lbl_802953B8
+/* 80295354 00292294  48 00 00 78 */	b lbl_802953CC
+lbl_80295358:
 /* 80295358 00292298  2C 00 00 78 */	cmpwi r0, 0x78
-/* 8029535C 0029229C  41 82 00 24 */	beq func_80295380
-/* 80295360 002922A0  40 80 00 6C */	bge func_802953CC
+/* 8029535C 0029229C  41 82 00 24 */	beq lbl_80295380
+/* 80295360 002922A0  40 80 00 6C */	bge lbl_802953CC
 /* 80295364 002922A4  2C 00 00 74 */	cmpwi r0, 0x74
-/* 80295368 002922A8  40 80 00 64 */	bge func_802953CC
-/* 8029536C 002922AC  48 00 00 24 */	b func_80295390
-
-/* 80295370 0010 .text      func_80295370                  func_80295370                  */
-.global func_80295370
-func_80295370:
+/* 80295368 002922A8  40 80 00 64 */	bge lbl_802953CC
+/* 8029536C 002922AC  48 00 00 24 */	b lbl_80295390
+lbl_80295370:
 /* 80295370 002922B0  38 00 00 00 */	li r0, 0
 /* 80295374 002922B4  38 A1 00 08 */	addi r5, r1, 8
 /* 80295378 002922B8  7C 05 F9 AE */	stbx r0, r5, r31
-/* 8029537C 002922BC  48 00 00 50 */	b func_802953CC
-
-/* 80295380 0010 .text      func_80295380                  func_80295380                  */
-.global func_80295380
-func_80295380:
+/* 8029537C 002922BC  48 00 00 50 */	b lbl_802953CC
+lbl_80295380:
 /* 80295380 002922C0  38 00 00 01 */	li r0, 1
 /* 80295384 002922C4  38 A1 00 08 */	addi r5, r1, 8
 /* 80295388 002922C8  7C 05 F9 AE */	stbx r0, r5, r31
-/* 8029538C 002922CC  48 00 00 40 */	b func_802953CC
-
-/* 80295390 0010 .text      func_80295390                  func_80295390                  */
-.global func_80295390
-func_80295390:
+/* 8029538C 002922CC  48 00 00 40 */	b lbl_802953CC
+lbl_80295390:
 /* 80295390 002922D0  38 00 00 02 */	li r0, 2
 /* 80295394 002922D4  38 A1 00 08 */	addi r5, r1, 8
 /* 80295398 002922D8  7C 05 F9 AE */	stbx r0, r5, r31
-/* 8029539C 002922DC  48 00 00 30 */	b func_802953CC
-
-/* 802953A0 0018 .text      func_802953A0                  func_802953A0                  */
-.global func_802953A0
-func_802953A0:
+/* 8029539C 002922DC  48 00 00 30 */	b lbl_802953CC
+lbl_802953A0:
 /* 802953A0 002922E0  38 00 00 03 */	li r0, 3
 /* 802953A4 002922E4  38 A1 00 08 */	addi r5, r1, 8
 /* 802953A8 002922E8  7C 05 F9 AE */	stbx r0, r5, r31
 /* 802953AC 002922EC  38 00 00 64 */	li r0, 0x64
 /* 802953B0 002922F0  7C 06 21 AE */	stbx r0, r6, r4
-/* 802953B4 002922F4  48 00 00 18 */	b func_802953CC
-
-/* 802953B8 0014 .text      func_802953B8                  func_802953B8                  */
-.global func_802953B8
-func_802953B8:
+/* 802953B4 002922F4  48 00 00 18 */	b lbl_802953CC
+lbl_802953B8:
 /* 802953B8 002922F8  38 00 00 04 */	li r0, 4
 /* 802953BC 002922FC  38 A1 00 08 */	addi r5, r1, 8
 /* 802953C0 00292300  7C 05 F9 AE */	stbx r0, r5, r31
 /* 802953C4 00292304  38 00 00 78 */	li r0, 0x78
 /* 802953C8 00292308  7C 06 21 AE */	stbx r0, r6, r4
-
-/* 802953CC 0004 .text      func_802953CC                  func_802953CC                  */
-.global func_802953CC
-func_802953CC:
+lbl_802953CC:
 /* 802953CC 0029230C  3B FF 00 01 */	addi r31, r31, 1
-
-/* 802953D0 0004 .text      func_802953D0                  func_802953D0                  */
-.global func_802953D0
-func_802953D0:
+lbl_802953D0:
 /* 802953D0 00292310  38 84 00 01 */	addi r4, r4, 1
-
-/* 802953D4 0008 .text      func_802953D4                  func_802953D4                  */
-.global func_802953D4
-func_802953D4:
+lbl_802953D4:
 /* 802953D4 00292314  28 04 00 80 */	cmplwi r4, 0x80
-/* 802953D8 00292318  41 80 FE C0 */	blt func_80295298
-
-/* 802953DC 0014 .text      func_802953DC                  func_802953DC                  */
-.global func_802953DC
-func_802953DC:
+/* 802953D8 00292318  41 80 FE C0 */	blt lbl_80295298
+lbl_802953DC:
 /* 802953DC 0029231C  3B 20 00 00 */	li r25, 0
 /* 802953E0 00292320  7F 3B CB 78 */	mr r27, r25
 /* 802953E4 00292324  3B 41 00 0C */	addi r26, r1, 0xc
 /* 802953E8 00292328  3B 81 00 08 */	addi r28, r1, 8
-/* 802953EC 0029232C  48 00 00 6C */	b func_80295458
-
-/* 802953F0 0030 .text      func_802953F0                  func_802953F0                  */
-.global func_802953F0
-func_802953F0:
+/* 802953EC 0029232C  48 00 00 6C */	b lbl_80295458
+lbl_802953F0:
 /* 802953F0 00292330  80 7E 00 04 */	lwz r3, 4(r30)
 /* 802953F4 00292334  38 03 00 01 */	addi r0, r3, 1
 /* 802953F8 00292338  90 1E 00 04 */	stw r0, 4(r30)
@@ -1973,43 +1840,31 @@ func_802953F0:
 /* 80295400 00292340  7C 1A D9 2E */	stwx r0, r26, r27
 /* 80295404 00292344  88 1C 00 00 */	lbz r0, 0(r28)
 /* 80295408 00292348  2C 00 00 02 */	cmpwi r0, 2
-/* 8029540C 0029234C  41 82 00 14 */	beq func_80295420
-/* 80295410 00292350  41 80 00 3C */	blt func_8029544C
+/* 8029540C 0029234C  41 82 00 14 */	beq lbl_80295420
+/* 80295410 00292350  41 80 00 3C */	blt lbl_8029544C
 /* 80295414 00292354  2C 00 00 05 */	cmpwi r0, 5
-/* 80295418 00292358  40 80 00 34 */	bge func_8029544C
-/* 8029541C 0029235C  48 00 00 18 */	b func_80295434
-
-/* 80295420 0014 .text      func_80295420                  func_80295420                  */
-.global func_80295420
-func_80295420:
+/* 80295418 00292358  40 80 00 34 */	bge lbl_8029544C
+/* 8029541C 0029235C  48 00 00 18 */	b lbl_80295434
+lbl_80295420:
 /* 80295420 00292360  80 7E 00 00 */	lwz r3, 0(r30)
 /* 80295424 00292364  7C 1A D8 2E */	lwzx r0, r26, r27
 /* 80295428 00292368  7C 03 02 14 */	add r0, r3, r0
 /* 8029542C 0029236C  7C 1A D9 2E */	stwx r0, r26, r27
-/* 80295430 00292370  48 00 00 1C */	b func_8029544C
-
-/* 80295434 0018 .text      func_80295434                  func_80295434                  */
-.global func_80295434
-func_80295434:
+/* 80295430 00292370  48 00 00 1C */	b lbl_8029544C
+lbl_80295434:
 /* 80295434 00292374  7F A3 EB 78 */	mr r3, r29
 /* 80295438 00292378  7F C4 F3 78 */	mr r4, r30
 /* 8029543C 0029237C  7C 1A D8 2E */	lwzx r0, r26, r27
 /* 80295440 00292380  54 05 06 3E */	clrlwi r5, r0, 0x18
 /* 80295444 00292384  4B FF EB 85 */	bl readReg__12JASSeqParserCFP8JASTrackUl
 /* 80295448 00292388  7C 7A D9 2E */	stwx r3, r26, r27
-
-/* 8029544C 000C .text      func_8029544C                  func_8029544C                  */
-.global func_8029544C
-func_8029544C:
+lbl_8029544C:
 /* 8029544C 0029238C  3B 39 00 01 */	addi r25, r25, 1
 /* 80295450 00292390  3B 9C 00 01 */	addi r28, r28, 1
 /* 80295454 00292394  3B 7B 00 04 */	addi r27, r27, 4
-
-/* 80295458 0040 .text      func_80295458                  func_80295458                  */
-.global func_80295458
-func_80295458:
+lbl_80295458:
 /* 80295458 00292398  7C 19 F8 40 */	cmplw r25, r31
-/* 8029545C 0029239C  41 80 FF 94 */	blt func_802953F0
+/* 8029545C 0029239C  41 80 FF 94 */	blt lbl_802953F0
 /* 80295460 002923A0  38 61 00 1C */	addi r3, r1, 0x1c
 /* 80295464 002923A4  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 80295468 002923A8  80 A1 00 10 */	lwz r5, 0x10(r1)
@@ -2025,8 +1880,9 @@ func_80295458:
 /* 80295490 002923D0  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 80295494 002923D4  4E 80 00 20 */	blr 
 
-/* 80295498 0030 .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl */
+/* 80295498 00A8 .text      execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl */
 .global execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl
+execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl:
 execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl:
 /* 80295498 002923D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029549C 002923DC  7C 08 02 A6 */	mflr r0
@@ -2038,27 +1894,18 @@ execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl:
 /* 802954B4 002923F4  99 01 00 08 */	stb r8, 8(r1)
 /* 802954B8 002923F8  38 E0 00 00 */	li r7, 0
 /* 802954BC 002923FC  55 00 D7 FF */	rlwinm. r0, r8, 0x1a, 0x1f, 0x1f
-/* 802954C0 00292400  41 82 00 08 */	beq func_802954C8
+/* 802954C0 00292400  41 82 00 08 */	beq lbl_802954C8
 /* 802954C4 00292404  60 E7 00 02 */	ori r7, r7, 2
-
-/* 802954C8 0010 .text      func_802954C8                  func_802954C8                  */
-.global func_802954C8
-func_802954C8:
+lbl_802954C8:
 /* 802954C8 00292408  88 01 00 08 */	lbz r0, 8(r1)
 /* 802954CC 0029240C  54 00 CF FF */	rlwinm. r0, r0, 0x19, 0x1f, 0x1f
-/* 802954D0 00292410  41 82 00 08 */	beq func_802954D8
+/* 802954D0 00292410  41 82 00 08 */	beq lbl_802954D8
 /* 802954D4 00292414  60 E7 00 01 */	ori r7, r7, 1
-
-/* 802954D8 000C .text      func_802954D8                  func_802954D8                  */
-.global func_802954D8
-func_802954D8:
+lbl_802954D8:
 /* 802954D8 00292418  28 1F 00 00 */	cmplwi r31, 0
-/* 802954DC 0029241C  40 82 00 08 */	bne func_802954E4
+/* 802954DC 0029241C  40 82 00 08 */	bne lbl_802954E4
 /* 802954E0 00292420  60 E7 00 04 */	ori r7, r7, 4
-
-/* 802954E4 003C .text      func_802954E4                  func_802954E4                  */
-.global func_802954E4
-func_802954E4:
+lbl_802954E4:
 /* 802954E4 00292424  7F C3 F3 78 */	mr r3, r30
 /* 802954E8 00292428  7C A4 2B 78 */	mr r4, r5
 /* 802954EC 0029242C  7C C5 33 78 */	mr r5, r6
@@ -2071,19 +1918,13 @@ func_802954E4:
 /* 80295508 00292448  7C E6 3B 78 */	mr r6, r7
 /* 8029550C 0029244C  4B FF CA FD */	bl gateOn__8JASTrackFUlUlfUl
 /* 80295510 00292450  28 1F 00 00 */	cmplwi r31, 0
-/* 80295514 00292454  41 82 00 0C */	beq func_80295520
+/* 80295514 00292454  41 82 00 0C */	beq lbl_80295520
 /* 80295518 00292458  93 FE 00 40 */	stw r31, 0x40(r30)
-/* 8029551C 0029245C  48 00 00 0C */	b func_80295528
-
-/* 80295520 0008 .text      func_80295520                  func_80295520                  */
-.global func_80295520
-func_80295520:
+/* 8029551C 0029245C  48 00 00 0C */	b lbl_80295528
+lbl_80295520:
 /* 80295520 00292460  38 00 00 01 */	li r0, 1
 /* 80295524 00292464  98 1E 00 51 */	stb r0, 0x51(r30)
-
-/* 80295528 0018 .text      func_80295528                  func_80295528                  */
-.global func_80295528
-func_80295528:
+lbl_80295528:
 /* 80295528 00292468  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029552C 0029246C  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 80295530 00292470  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -2093,6 +1934,7 @@ func_80295528:
 
 /* 80295540 0030 .text      execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl */
 .global execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl
+execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl:
 execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl:
 /* 80295540 00292480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295544 00292484  7C 08 02 A6 */	mflr r0
@@ -2110,6 +1952,7 @@ execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl:
 /* 80295570 002C .text      execNoteOff__12JASSeqParserFP8JASTrackUl execNoteOff__12JASSeqParserFP8JASTrackUl */
 .global execNoteOff__12JASSeqParserFP8JASTrackUl
 execNoteOff__12JASSeqParserFP8JASTrackUl:
+execNoteOff__12JASSeqParserFP8JASTrackUl:
 /* 80295570 002924B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295574 002924B4  7C 08 02 A6 */	mflr r0
 /* 80295578 002924B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2125,6 +1968,7 @@ execNoteOff__12JASSeqParserFP8JASTrackUl:
 /* 8029559C 002C .text      execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl */
 .global execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl
 execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl:
+execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl:
 /* 8029559C 002924DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802955A0 002924E0  7C 08 02 A6 */	mflr r0
 /* 802955A4 002924E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2137,30 +1981,29 @@ execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl:
 /* 802955C0 00292500  38 21 00 10 */	addi r1, r1, 0x10
 /* 802955C4 00292504  4E 80 00 20 */	blr 
 
-/* 802955C8 0024 .text      parseNoteOff__12JASSeqParserFP8JASTrackUc parseNoteOff__12JASSeqParserFP8JASTrackUc */
+/* 802955C8 0038 .text      parseNoteOff__12JASSeqParserFP8JASTrackUc parseNoteOff__12JASSeqParserFP8JASTrackUc */
 .global parseNoteOff__12JASSeqParserFP8JASTrackUc
+parseNoteOff__12JASSeqParserFP8JASTrackUc:
 parseNoteOff__12JASSeqParserFP8JASTrackUc:
 /* 802955C8 00292508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802955CC 0029250C  7C 08 02 A6 */	mflr r0
 /* 802955D0 00292510  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802955D4 00292514  54 A5 07 7F */	clrlwi. r5, r5, 0x1d
-/* 802955D8 00292518  41 82 00 14 */	beq func_802955EC
+/* 802955D8 00292518  41 82 00 14 */	beq lbl_802955EC
 /* 802955DC 0029251C  81 83 00 00 */	lwz r12, 0(r3)
 /* 802955E0 00292520  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 802955E4 00292524  7D 89 03 A6 */	mtctr r12
 /* 802955E8 00292528  4E 80 04 21 */	bctrl 
-
-/* 802955EC 0014 .text      func_802955EC                  func_802955EC                  */
-.global func_802955EC
-func_802955EC:
+lbl_802955EC:
 /* 802955EC 0029252C  38 60 00 00 */	li r3, 0
 /* 802955F0 00292530  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802955F4 00292534  7C 08 03 A6 */	mtlr r0
 /* 802955F8 00292538  38 21 00 10 */	addi r1, r1, 0x10
 /* 802955FC 0029253C  4E 80 00 20 */	blr 
 
-/* 80295600 007C .text      parseNoteOn__12JASSeqParserFP8JASTrackUc parseNoteOn__12JASSeqParserFP8JASTrackUc */
+/* 80295600 00B0 .text      parseNoteOn__12JASSeqParserFP8JASTrackUc parseNoteOn__12JASSeqParserFP8JASTrackUc */
 .global parseNoteOn__12JASSeqParserFP8JASTrackUc
+parseNoteOn__12JASSeqParserFP8JASTrackUc:
 parseNoteOn__12JASSeqParserFP8JASTrackUc:
 /* 80295600 00292540  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80295604 00292544  7C 08 02 A6 */	mflr r0
@@ -2179,7 +2022,7 @@ parseNoteOn__12JASSeqParserFP8JASTrackUc:
 /* 80295638 00292578  90 04 00 04 */	stw r0, 4(r4)
 /* 8029563C 0029257C  8B C5 00 00 */	lbz r30, 0(r5)
 /* 80295640 00292580  57 E5 07 7F */	clrlwi. r5, r31, 0x1d
-/* 80295644 00292584  40 82 00 38 */	bne func_8029567C
+/* 80295644 00292584  40 82 00 38 */	bne lbl_8029567C
 /* 80295648 00292588  7F 83 E3 78 */	mr r3, r28
 /* 8029564C 0029258C  48 00 0C 65 */	bl readMidiValue__12JASSeqReaderFv
 /* 80295650 00292590  7C 67 1B 78 */	mr r7, r3
@@ -2192,21 +2035,15 @@ parseNoteOn__12JASSeqParserFP8JASTrackUc:
 /* 8029566C 002925AC  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 80295670 002925B0  7D 89 03 A6 */	mtctr r12
 /* 80295674 002925B4  4E 80 04 21 */	bctrl 
-/* 80295678 002925B8  48 00 00 1C */	b func_80295694
-
-/* 8029567C 0018 .text      func_8029567C                  func_8029567C                  */
-.global func_8029567C
-func_8029567C:
+/* 80295678 002925B8  48 00 00 1C */	b lbl_80295694
+lbl_8029567C:
 /* 8029567C 002925BC  57 A6 06 3E */	clrlwi r6, r29, 0x18
 /* 80295680 002925C0  7F C7 F3 78 */	mr r7, r30
 /* 80295684 002925C4  81 83 00 00 */	lwz r12, 0(r3)
 /* 80295688 002925C8  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 8029568C 002925CC  7D 89 03 A6 */	mtctr r12
 /* 80295690 002925D0  4E 80 04 21 */	bctrl 
-
-/* 80295694 001C .text      func_80295694                  func_80295694                  */
-.global func_80295694
-func_80295694:
+lbl_80295694:
 /* 80295694 002925D4  38 60 00 00 */	li r3, 0
 /* 80295698 002925D8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029569C 002925DC  48 0C CB 85 */	bl _restgpr_27
@@ -2215,8 +2052,9 @@ func_80295694:
 /* 802956A8 002925E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802956AC 002925EC  4E 80 00 20 */	blr 
 
-/* 802956B0 0040 .text      parseCommand__12JASSeqParserFP8JASTrackUcUs parseCommand__12JASSeqParserFP8JASTrackUcUs */
+/* 802956B0 01B4 .text      parseCommand__12JASSeqParserFP8JASTrackUcUs parseCommand__12JASSeqParserFP8JASTrackUcUs */
 .global parseCommand__12JASSeqParserFP8JASTrackUcUs
+parseCommand__12JASSeqParserFP8JASTrackUcUs:
 parseCommand__12JASSeqParserFP8JASTrackUcUs:
 /* 802956B0 002925F0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802956B4 002925F4  7C 08 02 A6 */	mflr r0
@@ -2227,17 +2065,14 @@ parseCommand__12JASSeqParserFP8JASTrackUcUs:
 /* 802956C8 00292608  7C 9C 23 78 */	mr r28, r4
 /* 802956CC 0029260C  54 A3 06 3E */	clrlwi r3, r5, 0x18
 /* 802956D0 00292610  28 03 00 B0 */	cmplwi r3, 0xb0
-/* 802956D4 00292614  41 82 00 1C */	beq func_802956F0
+/* 802956D4 00292614  41 82 00 1C */	beq lbl_802956F0
 /* 802956D8 00292618  38 03 FF 60 */	addi r0, r3, -160
 /* 802956DC 0029261C  54 04 20 36 */	slwi r4, r0, 4
 /* 802956E0 00292620  3C 60 80 3C */	lis r3, sCmdInfo__12JASSeqParser@ha
 /* 802956E4 00292624  38 03 5E 80 */	addi r0, r3, sCmdInfo__12JASSeqParser@l
 /* 802956E8 00292628  7F E0 22 14 */	add r31, r0, r4
-/* 802956EC 0029262C  48 00 00 24 */	b func_80295710
-
-/* 802956F0 0020 .text      func_802956F0                  func_802956F0                  */
-.global func_802956F0
-func_802956F0:
+/* 802956EC 0029262C  48 00 00 24 */	b lbl_80295710
+lbl_802956F0:
 /* 802956F0 00292630  80 7C 00 04 */	lwz r3, 4(r28)
 /* 802956F4 00292634  38 03 00 01 */	addi r0, r3, 1
 /* 802956F8 00292638  90 1C 00 04 */	stw r0, 4(r28)
@@ -2246,58 +2081,40 @@ func_802956F0:
 /* 80295704 00292644  3C 60 80 3C */	lis r3, sExtCmdInfo__12JASSeqParser@ha
 /* 80295708 00292648  38 03 64 8C */	addi r0, r3, sExtCmdInfo__12JASSeqParser@l
 /* 8029570C 0029264C  7F E0 22 14 */	add r31, r0, r4
-
-/* 80295710 0018 .text      func_80295710                  func_80295710                  */
-.global func_80295710
-func_80295710:
+lbl_80295710:
 /* 80295710 00292650  A0 1F 00 0E */	lhz r0, 0xe(r31)
 /* 80295714 00292654  7C 1E 33 78 */	or r30, r0, r6
 /* 80295718 00292658  3B A0 00 00 */	li r29, 0
 /* 8029571C 0029265C  3B 40 00 00 */	li r26, 0
 /* 80295720 00292660  3B 21 00 20 */	addi r25, r1, 0x20
-/* 80295724 00292664  48 00 00 B0 */	b func_802957D4
-
-/* 80295728 0024 .text      func_80295728                  func_80295728                  */
-.global func_80295728
-func_80295728:
+/* 80295724 00292664  48 00 00 B0 */	b lbl_802957D4
+lbl_80295728:
 /* 80295728 00292668  38 60 00 00 */	li r3, 0
 /* 8029572C 0029266C  57 C0 07 BE */	clrlwi r0, r30, 0x1e
 /* 80295730 00292670  2C 00 00 02 */	cmpwi r0, 2
-/* 80295734 00292674  41 82 00 4C */	beq func_80295780
-/* 80295738 00292678  40 80 00 14 */	bge func_8029574C
+/* 80295734 00292674  41 82 00 4C */	beq lbl_80295780
+/* 80295738 00292678  40 80 00 14 */	bge lbl_8029574C
 /* 8029573C 0029267C  2C 00 00 00 */	cmpwi r0, 0
-/* 80295740 00292680  41 82 00 18 */	beq func_80295758
-/* 80295744 00292684  40 80 00 28 */	bge func_8029576C
-/* 80295748 00292688  48 00 00 7C */	b func_802957C4
-
-/* 8029574C 000C .text      func_8029574C                  func_8029574C                  */
-.global func_8029574C
-func_8029574C:
+/* 80295740 00292680  41 82 00 18 */	beq lbl_80295758
+/* 80295744 00292684  40 80 00 28 */	bge lbl_8029576C
+/* 80295748 00292688  48 00 00 7C */	b lbl_802957C4
+lbl_8029574C:
 /* 8029574C 0029268C  2C 00 00 04 */	cmpwi r0, 4
-/* 80295750 00292690  40 80 00 74 */	bge func_802957C4
-/* 80295754 00292694  48 00 00 54 */	b func_802957A8
-
-/* 80295758 0014 .text      func_80295758                  func_80295758                  */
-.global func_80295758
-func_80295758:
+/* 80295750 00292690  40 80 00 74 */	bge lbl_802957C4
+/* 80295754 00292694  48 00 00 54 */	b lbl_802957A8
+lbl_80295758:
 /* 80295758 00292698  80 7C 00 04 */	lwz r3, 4(r28)
 /* 8029575C 0029269C  38 03 00 01 */	addi r0, r3, 1
 /* 80295760 002926A0  90 1C 00 04 */	stw r0, 4(r28)
 /* 80295764 002926A4  88 63 00 00 */	lbz r3, 0(r3)
-/* 80295768 002926A8  48 00 00 5C */	b func_802957C4
-
-/* 8029576C 0014 .text      func_8029576C                  func_8029576C                  */
-.global func_8029576C
-func_8029576C:
+/* 80295768 002926A8  48 00 00 5C */	b lbl_802957C4
+lbl_8029576C:
 /* 8029576C 002926AC  80 7C 00 04 */	lwz r3, 4(r28)
 /* 80295770 002926B0  38 03 00 02 */	addi r0, r3, 2
 /* 80295774 002926B4  90 1C 00 04 */	stw r0, 4(r28)
 /* 80295778 002926B8  A0 63 00 00 */	lhz r3, 0(r3)
-/* 8029577C 002926BC  48 00 00 48 */	b func_802957C4
-
-/* 80295780 0028 .text      func_80295780                  func_80295780                  */
-.global func_80295780
-func_80295780:
+/* 8029577C 002926BC  48 00 00 48 */	b lbl_802957C4
+lbl_80295780:
 /* 80295780 002926C0  80 7C 00 04 */	lwz r3, 4(r28)
 /* 80295784 002926C4  38 03 FF FF */	addi r0, r3, -1
 /* 80295788 002926C8  90 1C 00 04 */	stw r0, 4(r28)
@@ -2307,11 +2124,8 @@ func_80295780:
 /* 80295798 002926D8  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029579C 002926DC  54 00 02 3E */	clrlwi r0, r0, 8
 /* 802957A0 002926E0  7C 03 03 78 */	mr r3, r0
-/* 802957A4 002926E4  48 00 00 20 */	b func_802957C4
-
-/* 802957A8 001C .text      func_802957A8                  func_802957A8                  */
-.global func_802957A8
-func_802957A8:
+/* 802957A4 002926E4  48 00 00 20 */	b lbl_802957C4
+lbl_802957A8:
 /* 802957A8 002926E8  80 7C 00 04 */	lwz r3, 4(r28)
 /* 802957AC 002926EC  38 03 00 01 */	addi r0, r3, 1
 /* 802957B0 002926F0  90 1C 00 04 */	stw r0, 4(r28)
@@ -2319,21 +2133,15 @@ func_802957A8:
 /* 802957B8 002926F8  7F 63 DB 78 */	mr r3, r27
 /* 802957BC 002926FC  7F 84 E3 78 */	mr r4, r28
 /* 802957C0 00292700  4B FF E8 09 */	bl readReg__12JASSeqParserCFP8JASTrackUl
-
-/* 802957C4 0010 .text      func_802957C4                  func_802957C4                  */
-.global func_802957C4
-func_802957C4:
+lbl_802957C4:
 /* 802957C4 00292704  7C 79 D1 2E */	stwx r3, r25, r26
 /* 802957C8 00292708  57 DE F4 BE */	rlwinm r30, r30, 0x1e, 0x12, 0x1f
 /* 802957CC 0029270C  3B BD 00 01 */	addi r29, r29, 1
 /* 802957D0 00292710  3B 5A 00 04 */	addi r26, r26, 4
-
-/* 802957D4 003C .text      func_802957D4                  func_802957D4                  */
-.global func_802957D4
-func_802957D4:
+lbl_802957D4:
 /* 802957D4 00292714  A0 1F 00 0C */	lhz r0, 0xc(r31)
 /* 802957D8 00292718  7C 1D 00 00 */	cmpw r29, r0
-/* 802957DC 0029271C  41 80 FF 4C */	blt func_80295728
+/* 802957DC 0029271C  41 80 FF 4C */	blt lbl_80295728
 /* 802957E0 00292720  80 7F 00 00 */	lwz r3, 0(r31)
 /* 802957E4 00292724  80 1F 00 04 */	lwz r0, 4(r31)
 /* 802957E8 00292728  90 61 00 14 */	stw r3, 0x14(r1)
@@ -2343,13 +2151,10 @@ func_802957D4:
 /* 802957F8 00292738  38 61 00 14 */	addi r3, r1, 0x14
 /* 802957FC 0029273C  48 0C C8 1D */	bl __ptmf_test
 /* 80295800 00292740  2C 03 00 00 */	cmpwi r3, 0
-/* 80295804 00292744  40 82 00 0C */	bne func_80295810
+/* 80295804 00292744  40 82 00 0C */	bne lbl_80295810
 /* 80295808 00292748  38 60 00 00 */	li r3, 0
-/* 8029580C 0029274C  48 00 00 40 */	b func_8029584C
-
-/* 80295810 003C .text      func_80295810                  func_80295810                  */
-.global func_80295810
-func_80295810:
+/* 8029580C 0029274C  48 00 00 40 */	b lbl_8029584C
+lbl_80295810:
 /* 80295810 00292750  80 61 00 14 */	lwz r3, 0x14(r1)
 /* 80295814 00292754  80 01 00 18 */	lwz r0, 0x18(r1)
 /* 80295818 00292758  90 61 00 08 */	stw r3, 8(r1)
@@ -2365,10 +2170,7 @@ func_80295810:
 /* 80295840 00292780  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 80295844 00292784  7D 89 03 A6 */	mtctr r12
 /* 80295848 00292788  4E 80 04 21 */	bctrl 
-
-/* 8029584C 0018 .text      func_8029584C                  func_8029584C                  */
-.global func_8029584C
-func_8029584C:
+lbl_8029584C:
 /* 8029584C 0029278C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80295850 00292790  48 0C C9 C9 */	bl _restgpr_25
 /* 80295854 00292794  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -2376,8 +2178,9 @@ func_8029584C:
 /* 8029585C 0029279C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80295860 002927A0  4E 80 00 20 */	blr 
 
-/* 80295864 0030 .text      parseRegCommand__12JASSeqParserFP8JASTracki parseRegCommand__12JASSeqParserFP8JASTracki */
+/* 80295864 0070 .text      parseRegCommand__12JASSeqParserFP8JASTracki parseRegCommand__12JASSeqParserFP8JASTracki */
 .global parseRegCommand__12JASSeqParserFP8JASTracki
+parseRegCommand__12JASSeqParserFP8JASTracki:
 parseRegCommand__12JASSeqParserFP8JASTracki:
 /* 80295864 002927A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295868 002927A8  7C 08 02 A6 */	mflr r0
@@ -2390,26 +2193,17 @@ parseRegCommand__12JASSeqParserFP8JASTracki:
 /* 80295884 002927C4  39 00 00 03 */	li r8, 3
 /* 80295888 002927C8  7C A9 03 A6 */	mtctr r5
 /* 8029588C 002927CC  2C 05 00 00 */	cmpwi r5, 0
-/* 80295890 002927D0  40 81 00 20 */	ble func_802958B0
-
-/* 80295894 0010 .text      func_80295894                  func_80295894                  */
-.global func_80295894
-func_80295894:
+/* 80295890 002927D0  40 81 00 20 */	ble lbl_802958B0
+lbl_80295894:
 /* 80295894 002927D4  54 E0 06 31 */	rlwinm. r0, r7, 0, 0x18, 0x18
-/* 80295898 002927D8  41 82 00 0C */	beq func_802958A4
+/* 80295898 002927D8  41 82 00 0C */	beq lbl_802958A4
 /* 8029589C 002927DC  7C C0 43 78 */	or r0, r6, r8
 /* 802958A0 002927E0  54 06 04 3E */	clrlwi r6, r0, 0x10
-
-/* 802958A4 000C .text      func_802958A4                  func_802958A4                  */
-.global func_802958A4
-func_802958A4:
+lbl_802958A4:
 /* 802958A4 002927E4  54 E7 0E 3C */	rlwinm r7, r7, 1, 0x18, 0x1e
 /* 802958A8 002927E8  55 08 14 3A */	rlwinm r8, r8, 2, 0x10, 0x1d
-/* 802958AC 002927EC  42 00 FF E8 */	bdnz func_80295894
-
-/* 802958B0 0024 .text      func_802958B0                  func_802958B0                  */
-.global func_802958B0
-func_802958B0:
+/* 802958AC 002927EC  42 00 FF E8 */	bdnz lbl_80295894
+lbl_802958B0:
 /* 802958B0 002927F0  80 A4 00 04 */	lwz r5, 4(r4)
 /* 802958B4 002927F4  38 05 00 01 */	addi r0, r5, 1
 /* 802958B8 002927F8  90 04 00 04 */	stw r0, 4(r4)
@@ -2420,8 +2214,9 @@ func_802958B0:
 /* 802958CC 0029280C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802958D0 00292810  4E 80 00 20 */	blr 
 
-/* 802958D4 002C .text      parse__12JASSeqParserFP8JASTrack parse__12JASSeqParserFP8JASTrack */
+/* 802958D4 007C .text      parse__12JASSeqParserFP8JASTrack parse__12JASSeqParserFP8JASTrack */
 .global parse__12JASSeqParserFP8JASTrack
+parse__12JASSeqParserFP8JASTrack:
 parse__12JASSeqParserFP8JASTrack:
 /* 802958D4 00292814  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802958D8 00292818  7C 08 02 A6 */	mflr r0
@@ -2431,45 +2226,30 @@ parse__12JASSeqParserFP8JASTrack:
 /* 802958E8 00292828  90 04 00 04 */	stw r0, 4(r4)
 /* 802958EC 0029282C  88 A5 00 00 */	lbz r5, 0(r5)
 /* 802958F0 00292830  54 A0 06 31 */	rlwinm. r0, r5, 0, 0x18, 0x18
-/* 802958F4 00292834  40 82 00 0C */	bne func_80295900
+/* 802958F4 00292834  40 82 00 0C */	bne lbl_80295900
 /* 802958F8 00292838  4B FF FD 09 */	bl parseNoteOn__12JASSeqParserFP8JASTrackUc
-/* 802958FC 0029283C  48 00 00 44 */	b func_80295940
-
-/* 80295900 001C .text      func_80295900                  func_80295900                  */
-.global func_80295900
-func_80295900:
+/* 802958FC 0029283C  48 00 00 44 */	b lbl_80295940
+lbl_80295900:
 /* 80295900 00292840  54 A0 06 36 */	rlwinm r0, r5, 0, 0x18, 0x1b
 /* 80295904 00292844  2C 00 00 90 */	cmpwi r0, 0x90
-/* 80295908 00292848  41 82 00 20 */	beq func_80295928
-/* 8029590C 0029284C  40 80 00 2C */	bge func_80295938
+/* 80295908 00292848  41 82 00 20 */	beq lbl_80295928
+/* 8029590C 0029284C  40 80 00 2C */	bge lbl_80295938
 /* 80295910 00292850  2C 00 00 80 */	cmpwi r0, 0x80
-/* 80295914 00292854  41 82 00 08 */	beq func_8029591C
-/* 80295918 00292858  48 00 00 20 */	b func_80295938
-
-/* 8029591C 000C .text      func_8029591C                  func_8029591C                  */
-.global func_8029591C
-func_8029591C:
+/* 80295914 00292854  41 82 00 08 */	beq lbl_8029591C
+/* 80295918 00292858  48 00 00 20 */	b lbl_80295938
+lbl_8029591C:
 /* 8029591C 0029285C  54 A5 07 3E */	clrlwi r5, r5, 0x1c
 /* 80295920 00292860  4B FF FC A9 */	bl parseNoteOff__12JASSeqParserFP8JASTrackUc
-/* 80295924 00292864  48 00 00 1C */	b func_80295940
-
-/* 80295928 0010 .text      func_80295928                  func_80295928                  */
-.global func_80295928
-func_80295928:
+/* 80295924 00292864  48 00 00 1C */	b lbl_80295940
+lbl_80295928:
 /* 80295928 00292868  54 A5 07 7E */	clrlwi r5, r5, 0x1d
 /* 8029592C 0029286C  38 A5 00 01 */	addi r5, r5, 1
 /* 80295930 00292870  4B FF FF 35 */	bl parseRegCommand__12JASSeqParserFP8JASTracki
-/* 80295934 00292874  48 00 00 0C */	b func_80295940
-
-/* 80295938 0008 .text      func_80295938                  func_80295938                  */
-.global func_80295938
-func_80295938:
+/* 80295934 00292874  48 00 00 0C */	b lbl_80295940
+lbl_80295938:
 /* 80295938 00292878  38 C0 00 00 */	li r6, 0
 /* 8029593C 0029287C  4B FF FD 75 */	bl parseCommand__12JASSeqParserFP8JASTrackUcUs
-
-/* 80295940 0010 .text      func_80295940                  func_80295940                  */
-.global func_80295940
-func_80295940:
+lbl_80295940:
 /* 80295940 00292880  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80295944 00292884  7C 08 03 A6 */	mtlr r0
 /* 80295948 00292888  38 21 00 10 */	addi r1, r1, 0x10
@@ -2478,12 +2258,13 @@ func_80295940:
 /* 80295950 07B8 .text      __sinit_JASSeqParser_cpp       __sinit_JASSeqParser_cpp       */
 .global __sinit_JASSeqParser_cpp
 __sinit_JASSeqParser_cpp:
+__sinit_JASSeqParser_cpp:
 /* 80295950 00292890  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80295954 00292894  3C 60 80 3C */	lis r3, JASSeqParser__LIT_486@ha
 /* 80295958 00292898  38 C3 5B E0 */	addi r6, r3, JASSeqParser__LIT_486@l
-/* 8029595C 0029289C  3C 60 80 3A */	lis r3, sym_803A0004@ha
+/* 8029595C 0029289C  3C 60 80 3A */	lis r3, data_803A0004@ha
 /* 80295960 002928A0  84 A3 21 80 */	lwzu r5, 0x2180(r3)
-/* 80295964 002928A4  80 83 00 04 */	lwz r4, sym_803A0004@l(r3)
+/* 80295964 002928A4  80 83 00 04 */	lwz r4, data_803A0004@l(r3)
 /* 80295968 002928A8  90 A1 00 08 */	stw r5, 8(r1)
 /* 8029596C 002928AC  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80295970 002928B0  80 03 00 08 */	lwz r0, 8(r3)
@@ -2978,7 +2759,7 @@ __sinit_JASSeqParser_cpp:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8039B018 014A .rodata    JASSeqParser__stringBase0      @stringBase0                   */
+/* 8039B018 014A .rodata    @stringBase0                   JASSeqParser__stringBase0      */
 .global JASSeqParser__stringBase0
 JASSeqParser__stringBase0:
 .byte 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x20 /* baserom.dol+0x398018 */
@@ -3002,293 +2783,293 @@ JASSeqParser__stringBase0:
 .byte 0x34, 0x78, 0x00, 0x20, 0x50, 0x4f, 0x52, 0x54, 0x20, 0x43, 0x2d, 0x46, 0x3a, 0x20, 0x30, 0x78 /* baserom.dol+0x398138 */
 .byte 0x25, 0x30, 0x34, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30 /* baserom.dol+0x398148 */
 .byte 0x34, 0x78, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x00 /* baserom.dol+0x398158 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x398162 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803C5BE0 0000 .data      sym_803C5BE0                   ...data.0                      */
-.global sym_803C5BE0
-sym_803C5BE0:
+/* 803C5BE0 0000 .data      ...data.0                      data_803C5BE0                  */
+.global data_803C5BE0
+data_803C5BE0:
 
-/* 803C5BE0 000C .data      JASSeqParser__LIT_486          @486                           */
+/* 803C5BE0 000C .data      @486                           JASSeqParser__LIT_486          */
 .global JASSeqParser__LIT_486
 JASSeqParser__LIT_486:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x44, 0xb4 /* baserom.dol+0x3c2be0 */
 
-/* 803C5BEC 000C .data      JASSeqParser__LIT_487          @487                           */
+/* 803C5BEC 000C .data      @487                           JASSeqParser__LIT_487          */
 .global JASSeqParser__LIT_487
 JASSeqParser__LIT_487:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x44, 0xf4 /* baserom.dol+0x3c2bec */
 
-/* 803C5BF8 000C .data      JASSeqParser__LIT_488          @488                           */
+/* 803C5BF8 000C .data      @488                           JASSeqParser__LIT_488          */
 .global JASSeqParser__LIT_488
 JASSeqParser__LIT_488:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x44, 0x70 /* baserom.dol+0x3c2bf8 */
 
-/* 803C5C04 000C .data      JASSeqParser__LIT_489          @489                           */
+/* 803C5C04 000C .data      @489                           JASSeqParser__LIT_489          */
 .global JASSeqParser__LIT_489
 JASSeqParser__LIT_489:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x48, 0x04 /* baserom.dol+0x3c2c04 */
 
-/* 803C5C10 000C .data      JASSeqParser__LIT_490          @490                           */
+/* 803C5C10 000C .data      @490                           JASSeqParser__LIT_490          */
 .global JASSeqParser__LIT_490
 JASSeqParser__LIT_490:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4c, 0xb0 /* baserom.dol+0x3c2c10 */
 
-/* 803C5C1C 000C .data      JASSeqParser__LIT_491          @491                           */
+/* 803C5C1C 000C .data      @491                           JASSeqParser__LIT_491          */
 .global JASSeqParser__LIT_491
 JASSeqParser__LIT_491:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0xf8 /* baserom.dol+0x3c2c1c */
 
-/* 803C5C28 000C .data      JASSeqParser__LIT_492          @492                           */
+/* 803C5C28 000C .data      @492                           JASSeqParser__LIT_492          */
 .global JASSeqParser__LIT_492
 JASSeqParser__LIT_492:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4d, 0x2c /* baserom.dol+0x3c2c28 */
 
-/* 803C5C34 000C .data      JASSeqParser__LIT_493          @493                           */
+/* 803C5C34 000C .data      @493                           JASSeqParser__LIT_493          */
 .global JASSeqParser__LIT_493
 JASSeqParser__LIT_493:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4c, 0x54 /* baserom.dol+0x3c2c34 */
 
-/* 803C5C40 000C .data      LIT_494                        @494                           */
+/* 803C5C40 000C .data      @494                           LIT_494                        */
 .global LIT_494
 LIT_494:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x41, 0x88 /* baserom.dol+0x3c2c40 */
 
-/* 803C5C4C 000C .data      LIT_495                        @495                           */
+/* 803C5C4C 000C .data      @495                           LIT_495                        */
 .global LIT_495
 LIT_495:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x41, 0xf0 /* baserom.dol+0x3c2c4c */
 
-/* 803C5C58 000C .data      LIT_496                        @496                           */
+/* 803C5C58 000C .data      @496                           LIT_496                        */
 .global LIT_496
 LIT_496:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x42, 0x1c /* baserom.dol+0x3c2c58 */
 
-/* 803C5C64 000C .data      LIT_497                        @497                           */
+/* 803C5C64 000C .data      @497                           LIT_497                        */
 .global LIT_497
 LIT_497:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x42, 0x48 /* baserom.dol+0x3c2c64 */
 
-/* 803C5C70 000C .data      JASSeqParser__LIT_498          @498                           */
+/* 803C5C70 000C .data      @498                           JASSeqParser__LIT_498          */
 .global JASSeqParser__LIT_498
 JASSeqParser__LIT_498:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x42, 0x9c /* baserom.dol+0x3c2c70 */
 
-/* 803C5C7C 000C .data      JASSeqParser__LIT_499          @499                           */
+/* 803C5C7C 000C .data      @499                           JASSeqParser__LIT_499          */
 .global JASSeqParser__LIT_499
 JASSeqParser__LIT_499:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x42, 0xd4 /* baserom.dol+0x3c2c7c */
 
-/* 803C5C88 000C .data      LIT_500                        @500                           */
+/* 803C5C88 000C .data      @500                           LIT_500                        */
 .global LIT_500
 LIT_500:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x43, 0x28 /* baserom.dol+0x3c2c88 */
 
-/* 803C5C94 000C .data      LIT_501                        @501                           */
+/* 803C5C94 000C .data      @501                           LIT_501                        */
 .global LIT_501
 LIT_501:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x43, 0x40 /* baserom.dol+0x3c2c94 */
 
-/* 803C5CA0 000C .data      LIT_502                        @502                           */
+/* 803C5CA0 000C .data      @502                           LIT_502                        */
 .global LIT_502
 LIT_502:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x43, 0x98 /* baserom.dol+0x3c2ca0 */
 
-/* 803C5CAC 000C .data      JASSeqParser__LIT_503          @503                           */
+/* 803C5CAC 000C .data      @503                           JASSeqParser__LIT_503          */
 .global JASSeqParser__LIT_503
 JASSeqParser__LIT_503:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x43, 0xcc /* baserom.dol+0x3c2cac */
 
-/* 803C5CB8 000C .data      JASSeqParser__LIT_504          @504                           */
+/* 803C5CB8 000C .data      @504                           JASSeqParser__LIT_504          */
 .global JASSeqParser__LIT_504
 JASSeqParser__LIT_504:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x44, 0x1c /* baserom.dol+0x3c2cb8 */
 
-/* 803C5CC4 000C .data      JASSeqParser__LIT_505          @505                           */
+/* 803C5CC4 000C .data      @505                           JASSeqParser__LIT_505          */
 .global JASSeqParser__LIT_505
 JASSeqParser__LIT_505:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x44, 0x48 /* baserom.dol+0x3c2cc4 */
 
-/* 803C5CD0 000C .data      JASSeqParser__LIT_506          @506                           */
+/* 803C5CD0 000C .data      @506                           JASSeqParser__LIT_506          */
 .global JASSeqParser__LIT_506
 JASSeqParser__LIT_506:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x45, 0x28 /* baserom.dol+0x3c2cd0 */
 
-/* 803C5CDC 000C .data      JASSeqParser__LIT_507          @507                           */
+/* 803C5CDC 000C .data      @507                           JASSeqParser__LIT_507          */
 .global JASSeqParser__LIT_507
 JASSeqParser__LIT_507:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x45, 0x88 /* baserom.dol+0x3c2cdc */
 
-/* 803C5CE8 000C .data      JASSeqParser__LIT_508          @508                           */
+/* 803C5CE8 000C .data      @508                           JASSeqParser__LIT_508          */
 .global JASSeqParser__LIT_508
 JASSeqParser__LIT_508:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x47, 0x24 /* baserom.dol+0x3c2ce8 */
 
-/* 803C5CF4 000C .data      JASSeqParser__LIT_509          @509                           */
+/* 803C5CF4 000C .data      @509                           JASSeqParser__LIT_509          */
 .global JASSeqParser__LIT_509
 JASSeqParser__LIT_509:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x47, 0x70 /* baserom.dol+0x3c2cf4 */
 
-/* 803C5D00 000C .data      JASSeqParser__LIT_510          @510                           */
+/* 803C5D00 000C .data      @510                           JASSeqParser__LIT_510          */
 .global JASSeqParser__LIT_510
 JASSeqParser__LIT_510:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x45, 0xbc /* baserom.dol+0x3c2d00 */
 
-/* 803C5D0C 000C .data      JASSeqParser__LIT_511          @511                           */
+/* 803C5D0C 000C .data      @511                           JASSeqParser__LIT_511          */
 .global JASSeqParser__LIT_511
 JASSeqParser__LIT_511:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x45, 0xf8 /* baserom.dol+0x3c2d0c */
 
-/* 803C5D18 000C .data      JASSeqParser__LIT_512          @512                           */
+/* 803C5D18 000C .data      @512                           JASSeqParser__LIT_512          */
 .global JASSeqParser__LIT_512
 JASSeqParser__LIT_512:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x46, 0x44 /* baserom.dol+0x3c2d18 */
 
-/* 803C5D24 000C .data      LIT_513                        @513                           */
+/* 803C5D24 000C .data      @513                           LIT_513                        */
 .global LIT_513
 LIT_513:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x46, 0xac /* baserom.dol+0x3c2d24 */
 
-/* 803C5D30 000C .data      JASSeqParser__LIT_514          @514                           */
+/* 803C5D30 000C .data      @514                           JASSeqParser__LIT_514          */
 .global JASSeqParser__LIT_514
 JASSeqParser__LIT_514:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4f, 0x10 /* baserom.dol+0x3c2d30 */
 
-/* 803C5D3C 000C .data      LIT_515                        @515                           */
+/* 803C5D3C 000C .data      @515                           LIT_515                        */
 .global LIT_515
 LIT_515:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4d, 0xa8 /* baserom.dol+0x3c2d3c */
 
-/* 803C5D48 000C .data      LIT_516                        @516                           */
+/* 803C5D48 000C .data      @516                           LIT_516                        */
 .global LIT_516
 LIT_516:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4d, 0xa8 /* baserom.dol+0x3c2d48 */
 
-/* 803C5D54 000C .data      LIT_517                        @517                           */
+/* 803C5D54 000C .data      @517                           LIT_517                        */
 .global LIT_517
 LIT_517:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4f, 0x40 /* baserom.dol+0x3c2d54 */
 
-/* 803C5D60 000C .data      LIT_518                        @518                           */
+/* 803C5D60 000C .data      @518                           LIT_518                        */
 .global LIT_518
 LIT_518:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4f, 0xb4 /* baserom.dol+0x3c2d60 */
 
-/* 803C5D6C 000C .data      LIT_519                        @519                           */
+/* 803C5D6C 000C .data      @519                           LIT_519                        */
 .global LIT_519
 LIT_519:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0xa4 /* baserom.dol+0x3c2d6c */
 
-/* 803C5D78 000C .data      LIT_520                        @520                           */
+/* 803C5D78 000C .data      @520                           LIT_520                        */
 .global LIT_520
 LIT_520:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0xb4 /* baserom.dol+0x3c2d78 */
 
-/* 803C5D84 000C .data      LIT_521                        @521                           */
+/* 803C5D84 000C .data      @521                           LIT_521                        */
 .global LIT_521
 LIT_521:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0xd0 /* baserom.dol+0x3c2d84 */
 
-/* 803C5D90 000C .data      JASSeqParser__LIT_522          @522                           */
+/* 803C5D90 000C .data      @522                           JASSeqParser__LIT_522          */
 .global JASSeqParser__LIT_522
 JASSeqParser__LIT_522:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0xe4 /* baserom.dol+0x3c2d90 */
 
-/* 803C5D9C 000C .data      LIT_523                        @523                           */
+/* 803C5D9C 000C .data      @523                           LIT_523                        */
 .global LIT_523
 LIT_523:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x48, 0x3c /* baserom.dol+0x3c2d9c */
 
-/* 803C5DA8 000C .data      LIT_524                        @524                           */
+/* 803C5DA8 000C .data      @524                           LIT_524                        */
 .global LIT_524
 LIT_524:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x48, 0x8c /* baserom.dol+0x3c2da8 */
 
-/* 803C5DB4 000C .data      JASSeqParser__LIT_525          @525                           */
+/* 803C5DB4 000C .data      @525                           JASSeqParser__LIT_525          */
 .global JASSeqParser__LIT_525
 JASSeqParser__LIT_525:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x48, 0xc8 /* baserom.dol+0x3c2db4 */
 
-/* 803C5DC0 000C .data      JASSeqParser__LIT_526          @526                           */
+/* 803C5DC0 000C .data      @526                           JASSeqParser__LIT_526          */
 .global JASSeqParser__LIT_526
 JASSeqParser__LIT_526:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0x1c /* baserom.dol+0x3c2dc0 */
 
-/* 803C5DCC 000C .data      LIT_527                        @527                           */
+/* 803C5DCC 000C .data      @527                           LIT_527                        */
 .global LIT_527
 LIT_527:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0x70 /* baserom.dol+0x3c2dcc */
 
-/* 803C5DD8 000C .data      LIT_528                        @528                           */
+/* 803C5DD8 000C .data      @528                           LIT_528                        */
 .global LIT_528
 LIT_528:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4b, 0x1c /* baserom.dol+0x3c2dd8 */
 
-/* 803C5DE4 000C .data      LIT_529                        @529                           */
+/* 803C5DE4 000C .data      @529                           LIT_529                        */
 .global LIT_529
 LIT_529:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0xe4 /* baserom.dol+0x3c2de4 */
 
-/* 803C5DF0 000C .data      LIT_530                        @530                           */
+/* 803C5DF0 000C .data      @530                           LIT_530                        */
 .global LIT_530
 LIT_530:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x47, 0xbc /* baserom.dol+0x3c2df0 */
 
-/* 803C5DFC 000C .data      JASSeqParser__LIT_531          @531                           */
+/* 803C5DFC 000C .data      @531                           JASSeqParser__LIT_531          */
 .global JASSeqParser__LIT_531
 JASSeqParser__LIT_531:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x47, 0xf4 /* baserom.dol+0x3c2dfc */
 
-/* 803C5E08 000C .data      LIT_532                        @532                           */
+/* 803C5E08 000C .data      @532                           LIT_532                        */
 .global LIT_532
 LIT_532:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0x4c /* baserom.dol+0x3c2e08 */
 
-/* 803C5E14 000C .data      JASSeqParser__LIT_533          @533                           */
+/* 803C5E14 000C .data      @533                           JASSeqParser__LIT_533          */
 .global JASSeqParser__LIT_533
 JASSeqParser__LIT_533:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0x5c /* baserom.dol+0x3c2e14 */
 
-/* 803C5E20 000C .data      LIT_534                        @534                           */
+/* 803C5E20 000C .data      @534                           LIT_534                        */
 .global LIT_534
 LIT_534:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0x88 /* baserom.dol+0x3c2e20 */
 
-/* 803C5E2C 000C .data      JASSeqParser__LIT_535          @535                           */
+/* 803C5E2C 000C .data      @535                           JASSeqParser__LIT_535          */
 .global JASSeqParser__LIT_535
 JASSeqParser__LIT_535:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0xe4 /* baserom.dol+0x3c2e2c */
 
-/* 803C5E38 000C .data      JASSeqParser__LIT_536          @536                           */
+/* 803C5E38 000C .data      @536                           JASSeqParser__LIT_536          */
 .global JASSeqParser__LIT_536
 JASSeqParser__LIT_536:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x49, 0xb4 /* baserom.dol+0x3c2e38 */
 
-/* 803C5E44 000C .data      JASSeqParser__LIT_537          @537                           */
+/* 803C5E44 000C .data      @537                           JASSeqParser__LIT_537          */
 .global JASSeqParser__LIT_537
 JASSeqParser__LIT_537:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0x20 /* baserom.dol+0x3c2e44 */
 
-/* 803C5E50 000C .data      JASSeqParser__LIT_538          @538                           */
+/* 803C5E50 000C .data      @538                           JASSeqParser__LIT_538          */
 .global JASSeqParser__LIT_538
 JASSeqParser__LIT_538:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0x3c /* baserom.dol+0x3c2e50 */
 
-/* 803C5E5C 000C .data      LIT_539                        @539                           */
+/* 803C5E5C 000C .data      @539                           LIT_539                        */
 .global LIT_539
 LIT_539:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x52, 0x6c /* baserom.dol+0x3c2e5c */
 
-/* 803C5E68 000C .data      LIT_540                        @540                           */
+/* 803C5E68 000C .data      @540                           LIT_540                        */
 .global LIT_540
 LIT_540:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0xdc /* baserom.dol+0x3c2e68 */
 
-/* 803C5E74 000C .data      LIT_541                        @541                           */
+/* 803C5E74 000C .data      @541                           LIT_541                        */
 .global LIT_541
 LIT_541:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x4a, 0xd4 /* baserom.dol+0x3c2e74 */
@@ -3393,7 +3174,7 @@ sCmdInfo__12JASSeqParser:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c3460 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c3470 */
 
-/* 803C6480 000C .data      LIT_542                        @542                           */
+/* 803C6480 000C .data      @542                           LIT_542                        */
 .global LIT_542
 LIT_542:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x29, 0x50, 0x88 /* baserom.dol+0x3c3480 */
@@ -3657,7 +3438,7 @@ sExtCmdInfo__12JASSeqParser:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c445c */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c446c */
 
-/* 803C747C 00D4 .data      JASSeqParser__LIT_632          @632                           */
+/* 803C747C 00D4 .data      @632                           JASSeqParser__LIT_632          */
 .global JASSeqParser__LIT_632
 JASSeqParser__LIT_632:
 .byte 0x80, 0x29, 0x3e, 0x34, 0x80, 0x29, 0x3e, 0x34, 0x80, 0x29, 0x3e, 0x34, 0x80, 0x29, 0x3e, 0x34 /* baserom.dol+0x3c447c */
@@ -3675,7 +3456,7 @@ JASSeqParser__LIT_632:
 .byte 0x80, 0x29, 0x3f, 0x2c, 0x80, 0x29, 0x3f, 0x54, 0x80, 0x29, 0x3f, 0x7c, 0x80, 0x29, 0x3f, 0xa4 /* baserom.dol+0x3c453c */
 .byte 0x80, 0x29, 0x3f, 0xac /* baserom.dol+0x3c454c */
 
-/* 803C7550 00D4 .data      LIT_720                        @720                           */
+/* 803C7550 00D4 .data      @720                           LIT_720                        */
 .global LIT_720
 LIT_720:
 .byte 0x80, 0x29, 0x40, 0x14, 0x80, 0x29, 0x40, 0x14, 0x80, 0x29, 0x40, 0x14, 0x80, 0x29, 0x40, 0x14 /* baserom.dol+0x3c4550 */
@@ -3693,7 +3474,7 @@ LIT_720:
 .byte 0x80, 0x29, 0x41, 0x30, 0x80, 0x29, 0x41, 0x44, 0x80, 0x29, 0x41, 0x58, 0x80, 0x29, 0x41, 0x6c /* baserom.dol+0x3c4610 */
 .byte 0x80, 0x29, 0x41, 0x74 /* baserom.dol+0x3c4620 */
 
-/* 803C7624 002C .data      LIT_1124                       @1124                          */
+/* 803C7624 002C .data      @1124                          LIT_1124                       */
 .global LIT_1124
 LIT_1124:
 .byte 0x80, 0x29, 0x4e, 0xe0, 0x80, 0x29, 0x4d, 0xf0, 0x80, 0x29, 0x4e, 0x00, 0x80, 0x29, 0x4e, 0x10 /* baserom.dol+0x3c4624 */
@@ -3703,8 +3484,14 @@ LIT_1124:
 /* 803C7650 0020 .data      __vt__12JASSeqParser           __vt__12JASSeqParser           */
 .global __vt__12JASSeqParser
 __vt__12JASSeqParser:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x29, 0x3c, 0xac, 0x80, 0x29, 0x58, 0xd4 /* baserom.dol+0x3c4650 */
-.byte 0x80, 0x29, 0x55, 0x40, 0x80, 0x29, 0x54, 0x98, 0x80, 0x29, 0x55, 0x70, 0x80, 0x29, 0x55, 0x9c /* baserom.dol+0x3c4660 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12JASSeqParserFv
+.4byte parse__12JASSeqParserFP8JASTrack
+.4byte execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl
+.4byte execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl
+.4byte execNoteOff__12JASSeqParserFP8JASTrackUl
+.4byte execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl
 
 
 /* ###################################################################################### */
@@ -3716,14 +3503,14 @@ __vt__12JASSeqParser:
 sCallBackFunc__12JASSeqParser:
 .skip 0x4
 
-/* 80451244 0004 .sbss      sym_80451244                   sym_80451244                   */
-.global sym_80451244
-sym_80451244:
+/* 80451244 0004 .sbss      data_80451244                  data_80451244                  */
+.global data_80451244
+data_80451244:
 .skip 0x4
 
-/* 80451248 0004 .sbss      sym_80451248                   oRandom$1099                   */
-.global sym_80451248
-sym_80451248:
+/* 80451248 0004 .sbss      oRandom$1099                   data_80451248                  */
+.global data_80451248
+data_80451248:
 .skip 0x4
 .skip 0x4 /* padding */
 
@@ -3732,54 +3519,54 @@ sym_80451248:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804555D8 0004 .sdata2    JASSeqParser__LIT_627          @627                           */
+/* 804555D8 0004 .sdata2    @627                           JASSeqParser__LIT_627          */
 .global JASSeqParser__LIT_627
 JASSeqParser__LIT_627:
 .byte 0x46, 0xff, 0xfe, 0x00 /* baserom.dol+0x3d4438 */
 
-/* 804555DC 0004 .sdata2    JASSeqParser__LIT_628          @628                           */
+/* 804555DC 0004 .sdata2    @628                           JASSeqParser__LIT_628          */
 .global JASSeqParser__LIT_628
 JASSeqParser__LIT_628:
 .byte 0x44, 0xbe, 0x80, 0x00 /* baserom.dol+0x3d443c */
 
-/* 804555E0 0004 .sdata2    LIT_629                        @629                           */
+/* 804555E0 0004 .sdata2    @629                           LIT_629                        */
 .global LIT_629
 LIT_629:
 .byte 0x46, 0x3e, 0x80, 0x00 /* baserom.dol+0x3d4440 */
 
-/* 804555E4 0004 .sdata2    LIT_630                        @630                           */
+/* 804555E4 0004 .sdata2    @630                           LIT_630                        */
 .global LIT_630
 LIT_630:
 .byte 0x3b, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4444 */
 
-/* 804555E8 0004 .sdata2    LIT_631                        @631                           */
+/* 804555E8 0004 .sdata2    @631                           LIT_631                        */
 .global LIT_631
 LIT_631:
 .byte 0x3c, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4448 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d444c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804555F0 0008 .sdata2    LIT_634                        @634                           */
+/* 804555F0 0008 .sdata2    @634                           LIT_634                        */
 .global LIT_634
 LIT_634:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4450 */
 
-/* 804555F8 0004 .sdata2    LIT_718                        @718                           */
+/* 804555F8 0004 .sdata2    @718                           LIT_718                        */
 .global LIT_718
 LIT_718:
 .byte 0x43, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4458 */
 
-/* 804555FC 0004 .sdata2    LIT_719                        @719                           */
+/* 804555FC 0004 .sdata2    @719                           LIT_719                        */
 .global LIT_719
 LIT_719:
 .byte 0x42, 0x80, 0x00, 0x00 /* baserom.dol+0x3d445c */
 
-/* 80455600 0004 .sdata2    JASSeqParser__LIT_931          @931                           */
+/* 80455600 0004 .sdata2    @931                           JASSeqParser__LIT_931          */
 .global JASSeqParser__LIT_931
 JASSeqParser__LIT_931:
 .byte 0x46, 0x7f, 0xfc, 0x00 /* baserom.dol+0x3d4460 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4464 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80455608 0008 .sdata2    JASSeqParser__LIT_1064         @1064                          */
+/* 80455608 0008 .sdata2    @1064                          JASSeqParser__LIT_1064         */
 .global JASSeqParser__LIT_1064
 JASSeqParser__LIT_1064:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4468 */

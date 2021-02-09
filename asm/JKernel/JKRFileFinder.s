@@ -7,6 +7,7 @@
 /* 802D4638 008C .text      __ct__12JKRArcFinderFP10JKRArchivell __ct__12JKRArcFinderFP10JKRArchivell */
 .global __ct__12JKRArcFinderFP10JKRArchivell
 __ct__12JKRArcFinderFP10JKRArchivell:
+__ct__12JKRArcFinderFP10JKRArchivell:
 /* 802D4638 002D1578  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D463C 002D157C  7C 08 02 A6 */	mflr r0
 /* 802D4640 002D1580  90 01 00 14 */	stw r0, 0x14(r1)
@@ -43,8 +44,9 @@ __ct__12JKRArcFinderFP10JKRArchivell:
 /* 802D46BC 002D15FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D46C0 002D1600  4E 80 00 20 */	blr 
 
-/* 802D46C4 0094 .text      findNextFile__12JKRArcFinderFv findNextFile__12JKRArcFinderFv */
+/* 802D46C4 00AC .text      findNextFile__12JKRArcFinderFv findNextFile__12JKRArcFinderFv */
 .global findNextFile__12JKRArcFinderFv
+findNextFile__12JKRArcFinderFv:
 findNextFile__12JKRArcFinderFv:
 /* 802D46C4 002D1604  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D46C8 002D1608  7C 08 02 A6 */	mflr r0
@@ -53,7 +55,7 @@ findNextFile__12JKRArcFinderFv:
 /* 802D46D4 002D1614  7C 7F 1B 78 */	mr r31, r3
 /* 802D46D8 002D1618  88 03 00 10 */	lbz r0, 0x10(r3)
 /* 802D46DC 002D161C  28 00 00 00 */	cmplwi r0, 0
-/* 802D46E0 002D1620  41 82 00 78 */	beq func_802D4758
+/* 802D46E0 002D1620  41 82 00 78 */	beq lbl_802D4758
 /* 802D46E4 002D1624  80 BF 00 20 */	lwz r5, 0x20(r31)
 /* 802D46E8 002D1628  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 802D46EC 002D162C  7C 04 FE 70 */	srawi r4, r0, 0x1f
@@ -63,7 +65,7 @@ findNextFile__12JKRArcFinderFv:
 /* 802D46FC 002D163C  98 1F 00 10 */	stb r0, 0x10(r31)
 /* 802D4700 002D1640  88 1F 00 10 */	lbz r0, 0x10(r31)
 /* 802D4704 002D1644  28 00 00 00 */	cmplwi r0, 0
-/* 802D4708 002D1648  41 82 00 50 */	beq func_802D4758
+/* 802D4708 002D1648  41 82 00 50 */	beq lbl_802D4758
 /* 802D470C 002D164C  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 802D4710 002D1650  38 81 00 08 */	addi r4, r1, 8
 /* 802D4714 002D1654  80 BF 00 20 */	lwz r5, 0x20(r31)
@@ -83,10 +85,7 @@ findNextFile__12JKRArcFinderFv:
 /* 802D474C 002D168C  80 7F 00 20 */	lwz r3, 0x20(r31)
 /* 802D4750 002D1690  38 03 00 01 */	addi r0, r3, 1
 /* 802D4754 002D1694  90 1F 00 20 */	stw r0, 0x20(r31)
-
-/* 802D4758 0018 .text      func_802D4758                  func_802D4758                  */
-.global func_802D4758
-func_802D4758:
+lbl_802D4758:
 /* 802D4758 002D1698  88 7F 00 10 */	lbz r3, 0x10(r31)
 /* 802D475C 002D169C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802D4760 002D16A0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -96,6 +95,7 @@ func_802D4758:
 
 /* 802D4770 0084 .text      __ct__12JKRDvdFinderFPCc       __ct__12JKRDvdFinderFPCc       */
 .global __ct__12JKRDvdFinderFPCc
+__ct__12JKRDvdFinderFPCc:
 __ct__12JKRDvdFinderFPCc:
 /* 802D4770 002D16B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4774 002D16B4  7C 08 02 A6 */	mflr r0
@@ -131,8 +131,9 @@ __ct__12JKRDvdFinderFPCc:
 /* 802D47EC 002D172C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D47F0 002D1730  4E 80 00 20 */	blr 
 
-/* 802D47F4 0040 .text      __dt__12JKRDvdFinderFv         __dt__12JKRDvdFinderFv         */
+/* 802D47F4 0080 .text      __dt__12JKRDvdFinderFv         __dt__12JKRDvdFinderFv         */
 .global __dt__12JKRDvdFinderFv
+__dt__12JKRDvdFinderFv:
 __dt__12JKRDvdFinderFv:
 /* 802D47F4 002D1734  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D47F8 002D1738  7C 08 02 A6 */	mflr r0
@@ -141,36 +142,27 @@ __dt__12JKRDvdFinderFv:
 /* 802D4804 002D1744  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D4808 002D1748  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D480C 002D174C  7C 9F 23 78 */	mr r31, r4
-/* 802D4810 002D1750  41 82 00 48 */	beq func_802D4858
+/* 802D4810 002D1750  41 82 00 48 */	beq lbl_802D4858
 /* 802D4814 002D1754  3C 60 80 3D */	lis r3, __vt__12JKRDvdFinder@ha
 /* 802D4818 002D1758  38 03 C2 08 */	addi r0, r3, __vt__12JKRDvdFinder@l
 /* 802D481C 002D175C  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 802D4820 002D1760  88 1E 00 20 */	lbz r0, 0x20(r30)
 /* 802D4824 002D1764  28 00 00 00 */	cmplwi r0, 0
-/* 802D4828 002D1768  41 82 00 0C */	beq func_802D4834
+/* 802D4828 002D1768  41 82 00 0C */	beq lbl_802D4834
 /* 802D482C 002D176C  38 7E 00 14 */	addi r3, r30, 0x14
 /* 802D4830 002D1770  48 07 48 B5 */	bl DVDCloseDir
-
-/* 802D4834 0014 .text      func_802D4834                  func_802D4834                  */
-.global func_802D4834
-func_802D4834:
+lbl_802D4834:
 /* 802D4834 002D1774  28 1E 00 00 */	cmplwi r30, 0
-/* 802D4838 002D1778  41 82 00 10 */	beq func_802D4848
+/* 802D4838 002D1778  41 82 00 10 */	beq lbl_802D4848
 /* 802D483C 002D177C  3C 60 80 3D */	lis r3, __vt__13JKRFileFinder@ha
 /* 802D4840 002D1780  38 03 C2 28 */	addi r0, r3, __vt__13JKRFileFinder@l
 /* 802D4844 002D1784  90 1E 00 0C */	stw r0, 0xc(r30)
-
-/* 802D4848 0010 .text      func_802D4848                  func_802D4848                  */
-.global func_802D4848
-func_802D4848:
+lbl_802D4848:
 /* 802D4848 002D1788  7F E0 07 35 */	extsh. r0, r31
-/* 802D484C 002D178C  40 81 00 0C */	ble func_802D4858
+/* 802D484C 002D178C  40 81 00 0C */	ble lbl_802D4858
 /* 802D4850 002D1790  7F C3 F3 78 */	mr r3, r30
 /* 802D4854 002D1794  4B FF A4 E9 */	bl __dl__FPv
-
-/* 802D4858 001C .text      func_802D4858                  func_802D4858                  */
-.global func_802D4858
-func_802D4858:
+lbl_802D4858:
 /* 802D4858 002D1798  7F C3 F3 78 */	mr r3, r30
 /* 802D485C 002D179C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D4860 002D17A0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -179,8 +171,9 @@ func_802D4858:
 /* 802D486C 002D17AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4870 002D17B0  4E 80 00 20 */	blr 
 
-/* 802D4874 0080 .text      findNextFile__12JKRDvdFinderFv findNextFile__12JKRDvdFinderFv */
+/* 802D4874 009C .text      findNextFile__12JKRDvdFinderFv findNextFile__12JKRDvdFinderFv */
 .global findNextFile__12JKRDvdFinderFv
+findNextFile__12JKRDvdFinderFv:
 findNextFile__12JKRDvdFinderFv:
 /* 802D4874 002D17B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D4878 002D17B8  7C 08 02 A6 */	mflr r0
@@ -189,7 +182,7 @@ findNextFile__12JKRDvdFinderFv:
 /* 802D4884 002D17C4  7C 7F 1B 78 */	mr r31, r3
 /* 802D4888 002D17C8  88 03 00 10 */	lbz r0, 0x10(r3)
 /* 802D488C 002D17CC  28 00 00 00 */	cmplwi r0, 0
-/* 802D4890 002D17D0  41 82 00 68 */	beq func_802D48F8
+/* 802D4890 002D17D0  41 82 00 68 */	beq lbl_802D48F8
 /* 802D4894 002D17D4  38 7F 00 14 */	addi r3, r31, 0x14
 /* 802D4898 002D17D8  38 81 00 08 */	addi r4, r1, 8
 /* 802D489C 002D17DC  48 07 47 A5 */	bl DVDReadDir
@@ -198,7 +191,7 @@ findNextFile__12JKRDvdFinderFv:
 /* 802D48A8 002D17E8  98 1F 00 10 */	stb r0, 0x10(r31)
 /* 802D48AC 002D17EC  88 1F 00 10 */	lbz r0, 0x10(r31)
 /* 802D48B0 002D17F0  28 00 00 00 */	cmplwi r0, 0
-/* 802D48B4 002D17F4  41 82 00 44 */	beq func_802D48F8
+/* 802D48B4 002D17F4  41 82 00 44 */	beq lbl_802D48F8
 /* 802D48B8 002D17F8  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 802D48BC 002D17FC  30 03 FF FF */	addic r0, r3, -1
 /* 802D48C0 002D1800  7C 00 19 10 */	subfe r0, r0, r3
@@ -212,17 +205,11 @@ findNextFile__12JKRDvdFinderFv:
 /* 802D48E0 002D1820  88 1F 00 11 */	lbz r0, 0x11(r31)
 /* 802D48E4 002D1824  28 00 00 00 */	cmplwi r0, 0
 /* 802D48E8 002D1828  38 00 00 01 */	li r0, 1
-/* 802D48EC 002D182C  41 82 00 08 */	beq func_802D48F4
+/* 802D48EC 002D182C  41 82 00 08 */	beq lbl_802D48F4
 /* 802D48F0 002D1830  38 00 00 02 */	li r0, 2
-
-/* 802D48F4 0004 .text      func_802D48F4                  func_802D48F4                  */
-.global func_802D48F4
-func_802D48F4:
+lbl_802D48F4:
 /* 802D48F4 002D1834  B0 1F 00 0A */	sth r0, 0xa(r31)
-
-/* 802D48F8 0018 .text      func_802D48F8                  func_802D48F8                  */
-.global func_802D48F8
-func_802D48F8:
+lbl_802D48F8:
 /* 802D48F8 002D1838  88 7F 00 10 */	lbz r3, 0x10(r31)
 /* 802D48FC 002D183C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 802D4900 002D1840  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -230,25 +217,23 @@ func_802D48F8:
 /* 802D4908 002D1848  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D490C 002D184C  4E 80 00 20 */	blr 
 
-/* 802D4910 0030 .text      __dt__13JKRFileFinderFv        __dt__13JKRFileFinderFv        */
+/* 802D4910 0048 .text      __dt__13JKRFileFinderFv        __dt__13JKRFileFinderFv        */
 .global __dt__13JKRFileFinderFv
+__dt__13JKRFileFinderFv:
 __dt__13JKRFileFinderFv:
 /* 802D4910 002D1850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4914 002D1854  7C 08 02 A6 */	mflr r0
 /* 802D4918 002D1858  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802D491C 002D185C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D4920 002D1860  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D4924 002D1864  41 82 00 1C */	beq func_802D4940
+/* 802D4924 002D1864  41 82 00 1C */	beq lbl_802D4940
 /* 802D4928 002D1868  3C A0 80 3D */	lis r5, __vt__13JKRFileFinder@ha
 /* 802D492C 002D186C  38 05 C2 28 */	addi r0, r5, __vt__13JKRFileFinder@l
 /* 802D4930 002D1870  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 802D4934 002D1874  7C 80 07 35 */	extsh. r0, r4
-/* 802D4938 002D1878  40 81 00 08 */	ble func_802D4940
+/* 802D4938 002D1878  40 81 00 08 */	ble lbl_802D4940
 /* 802D493C 002D187C  4B FF A4 01 */	bl __dl__FPv
-
-/* 802D4940 0018 .text      func_802D4940                  func_802D4940                  */
-.global func_802D4940
-func_802D4940:
+lbl_802D4940:
 /* 802D4940 002D1880  7F E3 FB 78 */	mr r3, r31
 /* 802D4944 002D1884  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D4948 002D1888  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -256,34 +241,29 @@ func_802D4940:
 /* 802D4950 002D1890  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4954 002D1894  4E 80 00 20 */	blr 
 
-/* 802D4958 0034 .text      __dt__12JKRArcFinderFv         __dt__12JKRArcFinderFv         */
+/* 802D4958 005C .text      __dt__12JKRArcFinderFv         __dt__12JKRArcFinderFv         */
 .global __dt__12JKRArcFinderFv
+__dt__12JKRArcFinderFv:
 __dt__12JKRArcFinderFv:
 /* 802D4958 002D1898  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D495C 002D189C  7C 08 02 A6 */	mflr r0
 /* 802D4960 002D18A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802D4964 002D18A4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D4968 002D18A8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D496C 002D18AC  41 82 00 30 */	beq func_802D499C
+/* 802D496C 002D18AC  41 82 00 30 */	beq lbl_802D499C
 /* 802D4970 002D18B0  3C 60 80 3D */	lis r3, __vt__12JKRArcFinder@ha
 /* 802D4974 002D18B4  38 03 C2 18 */	addi r0, r3, __vt__12JKRArcFinder@l
 /* 802D4978 002D18B8  90 1F 00 0C */	stw r0, 0xc(r31)
-/* 802D497C 002D18BC  41 82 00 10 */	beq func_802D498C
+/* 802D497C 002D18BC  41 82 00 10 */	beq lbl_802D498C
 /* 802D4980 002D18C0  3C 60 80 3D */	lis r3, __vt__13JKRFileFinder@ha
 /* 802D4984 002D18C4  38 03 C2 28 */	addi r0, r3, __vt__13JKRFileFinder@l
 /* 802D4988 002D18C8  90 1F 00 0C */	stw r0, 0xc(r31)
-
-/* 802D498C 0010 .text      func_802D498C                  func_802D498C                  */
-.global func_802D498C
-func_802D498C:
+lbl_802D498C:
 /* 802D498C 002D18CC  7C 80 07 35 */	extsh. r0, r4
-/* 802D4990 002D18D0  40 81 00 0C */	ble func_802D499C
+/* 802D4990 002D18D0  40 81 00 0C */	ble lbl_802D499C
 /* 802D4994 002D18D4  7F E3 FB 78 */	mr r3, r31
 /* 802D4998 002D18D8  4B FF A3 A5 */	bl __dl__FPv
-
-/* 802D499C 0018 .text      func_802D499C                  func_802D499C                  */
-.global func_802D499C
-func_802D499C:
+lbl_802D499C:
 /* 802D499C 002D18DC  7F E3 FB 78 */	mr r3, r31
 /* 802D49A0 002D18E0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D49A4 002D18E4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -299,15 +279,24 @@ func_802D499C:
 /* 803CC208 0010 .data      __vt__12JKRDvdFinder           __vt__12JKRDvdFinder           */
 .global __vt__12JKRDvdFinder
 __vt__12JKRDvdFinder:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x47, 0xf4, 0x80, 0x2d, 0x48, 0x74 /* baserom.dol+0x3c9208 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12JKRDvdFinderFv
+.4byte findNextFile__12JKRDvdFinderFv
 
 /* 803CC218 0010 .data      __vt__12JKRArcFinder           __vt__12JKRArcFinder           */
 .global __vt__12JKRArcFinder
 __vt__12JKRArcFinder:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x49, 0x58, 0x80, 0x2d, 0x46, 0xc4 /* baserom.dol+0x3c9218 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12JKRArcFinderFv
+.4byte findNextFile__12JKRArcFinderFv
 
 /* 803CC228 0010 .data      __vt__13JKRFileFinder          __vt__13JKRFileFinder          */
 .global __vt__13JKRFileFinder
 __vt__13JKRFileFinder:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x49, 0x10, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9228 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__13JKRFileFinderFv
+.4byte 0x00000000
 

@@ -7,6 +7,7 @@
 /* 8029A800 0118 .text      __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv */
 .global __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv
 __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv:
+__ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv:
 /* 8029A800 00297740  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A804 00297744  7C 08 02 A6 */	mflr r0
 /* 8029A808 00297748  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,8 +79,9 @@ __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv:
 /* 8029A910 00297850  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A914 00297854  4E 80 00 20 */	blr 
 
-/* 8029A918 0030 .text      __dt__10JASChannelFv           __dt__10JASChannelFv           */
+/* 8029A918 00D8 .text      __dt__10JASChannelFv           __dt__10JASChannelFv           */
 .global __dt__10JASChannelFv
+__dt__10JASChannelFv:
 __dt__10JASChannelFv:
 /* 8029A918 00297858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A91C 0029785C  7C 08 02 A6 */	mflr r0
@@ -88,62 +90,50 @@ __dt__10JASChannelFv:
 /* 8029A928 00297868  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8029A92C 0029786C  7C 7F 1B 79 */	or. r31, r3, r3
 /* 8029A930 00297870  7C 9E 23 78 */	mr r30, r4
-/* 8029A934 00297874  41 82 00 A0 */	beq func_8029A9D4
+/* 8029A934 00297874  41 82 00 A0 */	beq lbl_8029A9D4
 /* 8029A938 00297878  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8029A93C 0029787C  28 03 00 00 */	cmplwi r3, 0
-/* 8029A940 00297880  41 82 00 08 */	beq func_8029A948
+/* 8029A940 00297880  41 82 00 08 */	beq lbl_8029A948
 /* 8029A944 00297884  48 00 29 FD */	bl drop__13JASDSPChannelFv
-
-/* 8029A948 0024 .text      func_8029A948                  func_8029A948                  */
-.global func_8029A948
-func_8029A948:
+lbl_8029A948:
 /* 8029A948 00297888  81 9F 00 0C */	lwz r12, 0xc(r31)
 /* 8029A94C 0029788C  28 0C 00 00 */	cmplwi r12, 0
-/* 8029A950 00297890  41 82 00 1C */	beq func_8029A96C
+/* 8029A950 00297890  41 82 00 1C */	beq lbl_8029A96C
 /* 8029A954 00297894  38 60 00 02 */	li r3, 2
 /* 8029A958 00297898  7F E4 FB 78 */	mr r4, r31
 /* 8029A95C 0029789C  38 A0 00 00 */	li r5, 0
 /* 8029A960 002978A0  80 DF 00 10 */	lwz r6, 0x10(r31)
 /* 8029A964 002978A4  7D 89 03 A6 */	mtctr r12
 /* 8029A968 002978A8  4E 80 04 21 */	bctrl 
-
-/* 8029A96C 0044 .text      func_8029A96C                  func_8029A96C                  */
-.global func_8029A96C
-func_8029A96C:
+lbl_8029A96C:
 /* 8029A96C 002978AC  7F C0 07 35 */	extsh. r0, r30
-/* 8029A970 002978B0  40 81 00 64 */	ble func_8029A9D4
-/* 8029A974 002978B4  88 0D 8C E2 */	lbz r0, sym_80451262-_SDA_BASE_(r13)
+/* 8029A970 002978B0  40 81 00 64 */	ble lbl_8029A9D4
+/* 8029A974 002978B4  88 0D 8C E2 */	lbz r0, data_80451262-_SDA_BASE_(r13)
 /* 8029A978 002978B8  7C 00 07 75 */	extsb. r0, r0
-/* 8029A97C 002978BC  40 82 00 34 */	bne func_8029A9B0
-/* 8029A980 002978C0  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 8029A984 002978C4  38 63 1B 34 */	addi r3, r3, sym_80431B34@l
+/* 8029A97C 002978BC  40 82 00 34 */	bne lbl_8029A9B0
+/* 8029A980 002978C0  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 8029A984 002978C4  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 8029A988 002978C8  4B FF 5E C1 */	bl __ct__17JASGenericMemPoolFv
-/* 8029A98C 002978CC  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 8029A990 002978D0  38 63 1B 34 */	addi r3, r3, sym_80431B34@l
+/* 8029A98C 002978CC  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 8029A990 002978D0  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 8029A994 002978D4  3C 80 80 29 */	lis r4, __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv@ha
 /* 8029A998 002978D8  38 84 78 DC */	addi r4, r4, __dt__38JASMemPool_MultiThreaded_SUB_010JASChannel_SUB_1Fv@l
 /* 8029A99C 002978DC  3C A0 80 43 */	lis r5, LIT_556@ha
 /* 8029A9A0 002978E0  38 A5 1C 30 */	addi r5, r5, LIT_556@l
 /* 8029A9A4 002978E4  48 0C 72 81 */	bl __register_global_object
 /* 8029A9A8 002978E8  38 00 00 01 */	li r0, 1
-/* 8029A9AC 002978EC  98 0D 8C E2 */	stb r0, sym_80451262-_SDA_BASE_(r13)
-
-/* 8029A9B0 0024 .text      func_8029A9B0                  func_8029A9B0                  */
-.global func_8029A9B0
-func_8029A9B0:
+/* 8029A9AC 002978EC  98 0D 8C E2 */	stb r0, data_80451262-_SDA_BASE_(r13)
+lbl_8029A9B0:
 /* 8029A9B0 002978F0  48 0A 2D 45 */	bl OSDisableInterrupts
 /* 8029A9B4 002978F4  90 61 00 08 */	stw r3, 8(r1)
-/* 8029A9B8 002978F8  3C 60 80 43 */	lis r3, sym_80431B34@ha
-/* 8029A9BC 002978FC  38 63 1B 34 */	addi r3, r3, sym_80431B34@l
+/* 8029A9B8 002978F8  3C 60 80 43 */	lis r3, data_80431B34@ha
+/* 8029A9BC 002978FC  38 63 1B 34 */	addi r3, r3, data_80431B34@l
 /* 8029A9C0 00297900  7F E4 FB 78 */	mr r4, r31
 /* 8029A9C4 00297904  38 A0 01 08 */	li r5, 0x108
 /* 8029A9C8 00297908  4B FF 5F CD */	bl free__17JASGenericMemPoolFPvUl
 /* 8029A9CC 0029790C  80 61 00 08 */	lwz r3, 8(r1)
 /* 8029A9D0 00297910  48 0A 2D 4D */	bl OSRestoreInterrupts
-
-/* 8029A9D4 001C .text      func_8029A9D4                  func_8029A9D4                  */
-.global func_8029A9D4
-func_8029A9D4:
+lbl_8029A9D4:
 /* 8029A9D4 00297914  7F E3 FB 78 */	mr r3, r31
 /* 8029A9D8 00297918  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029A9DC 0029791C  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -152,8 +142,9 @@ func_8029A9D4:
 /* 8029A9E8 00297928  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A9EC 0029792C  4E 80 00 20 */	blr 
 
-/* 8029A9F0 0048 .text      play__10JASChannelFv           play__10JASChannelFv           */
+/* 8029A9F0 0070 .text      play__10JASChannelFv           play__10JASChannelFv           */
 .global play__10JASChannelFv
+play__10JASChannelFv:
 play__10JASChannelFv:
 /* 8029A9F0 00297930  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A9F4 00297934  7C 08 02 A6 */	mflr r0
@@ -167,33 +158,28 @@ play__10JASChannelFv:
 /* 8029AA14 00297954  7F E5 FB 78 */	mr r5, r31
 /* 8029AA18 00297958  48 00 2A 35 */	bl alloc__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv
 /* 8029AA1C 0029795C  28 03 00 00 */	cmplwi r3, 0
-/* 8029AA20 00297960  40 82 00 18 */	bne func_8029AA38
+/* 8029AA20 00297960  40 82 00 18 */	bne lbl_8029AA38
 /* 8029AA24 00297964  7F E3 FB 78 */	mr r3, r31
 /* 8029AA28 00297968  38 80 00 01 */	li r4, 1
 /* 8029AA2C 0029796C  4B FF FE ED */	bl __dt__10JASChannelFv
 /* 8029AA30 00297970  38 60 00 00 */	li r3, 0
-/* 8029AA34 00297974  48 00 00 18 */	b func_8029AA4C
-
-/* 8029AA38 0014 .text      func_8029AA38                  func_8029AA38                  */
-.global func_8029AA38
-func_8029AA38:
+/* 8029AA34 00297974  48 00 00 18 */	b lbl_8029AA4C
+lbl_8029AA38:
 /* 8029AA38 00297978  90 7F 00 08 */	stw r3, 8(r31)
 /* 8029AA3C 0029797C  48 00 28 F5 */	bl start__13JASDSPChannelFv
 /* 8029AA40 00297980  38 00 00 01 */	li r0, 1
 /* 8029AA44 00297984  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029AA48 00297988  38 60 00 01 */	li r3, 1
-
-/* 8029AA4C 0014 .text      func_8029AA4C                  func_8029AA4C                  */
-.global func_8029AA4C
-func_8029AA4C:
+lbl_8029AA4C:
 /* 8029AA4C 0029798C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029AA50 00297990  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029AA54 00297994  7C 08 03 A6 */	mtlr r0
 /* 8029AA58 00297998  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029AA5C 0029799C  4E 80 00 20 */	blr 
 
-/* 8029AA60 0048 .text      playForce__10JASChannelFv      playForce__10JASChannelFv      */
+/* 8029AA60 0070 .text      playForce__10JASChannelFv      playForce__10JASChannelFv      */
 .global playForce__10JASChannelFv
+playForce__10JASChannelFv:
 playForce__10JASChannelFv:
 /* 8029AA60 002979A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029AA64 002979A4  7C 08 02 A6 */	mflr r0
@@ -207,33 +193,28 @@ playForce__10JASChannelFv:
 /* 8029AA84 002979C4  7F E5 FB 78 */	mr r5, r31
 /* 8029AA88 002979C8  48 00 2A 35 */	bl allocForce__13JASDSPChannelFUcPFUlPQ26JASDsp8TChannelPv_lPv
 /* 8029AA8C 002979CC  28 03 00 00 */	cmplwi r3, 0
-/* 8029AA90 002979D0  40 82 00 18 */	bne func_8029AAA8
+/* 8029AA90 002979D0  40 82 00 18 */	bne lbl_8029AAA8
 /* 8029AA94 002979D4  7F E3 FB 78 */	mr r3, r31
 /* 8029AA98 002979D8  38 80 00 01 */	li r4, 1
 /* 8029AA9C 002979DC  4B FF FE 7D */	bl __dt__10JASChannelFv
 /* 8029AAA0 002979E0  38 60 00 00 */	li r3, 0
-/* 8029AAA4 002979E4  48 00 00 18 */	b func_8029AABC
-
-/* 8029AAA8 0014 .text      func_8029AAA8                  func_8029AAA8                  */
-.global func_8029AAA8
-func_8029AAA8:
+/* 8029AAA4 002979E4  48 00 00 18 */	b lbl_8029AABC
+lbl_8029AAA8:
 /* 8029AAA8 002979E8  90 7F 00 08 */	stw r3, 8(r31)
 /* 8029AAAC 002979EC  48 00 28 85 */	bl start__13JASDSPChannelFv
 /* 8029AAB0 002979F0  38 00 00 01 */	li r0, 1
 /* 8029AAB4 002979F4  90 1F 00 00 */	stw r0, 0(r31)
 /* 8029AAB8 002979F8  38 60 00 01 */	li r3, 1
-
-/* 8029AABC 0014 .text      func_8029AABC                  func_8029AABC                  */
-.global func_8029AABC
-func_8029AABC:
+lbl_8029AABC:
 /* 8029AABC 002979FC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029AAC0 00297A00  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029AAC4 00297A04  7C 08 03 A6 */	mtlr r0
 /* 8029AAC8 00297A08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029AACC 00297A0C  4E 80 00 20 */	blr 
 
-/* 8029AAD0 0030 .text      release__10JASChannelFUs       release__10JASChannelFUs       */
+/* 8029AAD0 0094 .text      release__10JASChannelFUs       release__10JASChannelFUs       */
 .global release__10JASChannelFUs
+release__10JASChannelFUs:
 release__10JASChannelFUs:
 /* 8029AAD0 00297A10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029AAD4 00297A14  7C 08 02 A6 */	mflr r0
@@ -243,34 +224,25 @@ release__10JASChannelFUs:
 /* 8029AAE4 00297A24  7C 7D 1B 78 */	mr r29, r3
 /* 8029AAE8 00297A28  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029AAEC 00297A2C  2C 00 00 01 */	cmpwi r0, 1
-/* 8029AAF0 00297A30  40 82 00 5C */	bne func_8029AB4C
+/* 8029AAF0 00297A30  40 82 00 5C */	bne lbl_8029AB4C
 /* 8029AAF4 00297A34  54 80 04 3F */	clrlwi. r0, r4, 0x10
-/* 8029AAF8 00297A38  41 82 00 08 */	beq func_8029AB00
+/* 8029AAF8 00297A38  41 82 00 08 */	beq lbl_8029AB00
 /* 8029AAFC 00297A3C  B0 9D 00 32 */	sth r4, 0x32(r29)
-
-/* 8029AB00 0008 .text      func_8029AB00                  func_8029AB00                  */
-.global func_8029AB00
-func_8029AB00:
+lbl_8029AB00:
 /* 8029AB00 00297A40  3B C0 00 00 */	li r30, 0
 /* 8029AB04 00297A44  3B E0 00 00 */	li r31, 0
-
-/* 8029AB08 0018 .text      func_8029AB08                  func_8029AB08                  */
-.global func_8029AB08
-func_8029AB08:
+lbl_8029AB08:
 /* 8029AB08 00297A48  38 7F 00 1C */	addi r3, r31, 0x1c
 /* 8029AB0C 00297A4C  7C 7D 1A 14 */	add r3, r29, r3
 /* 8029AB10 00297A50  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029AB14 00297A54  28 00 00 00 */	cmplwi r0, 0
-/* 8029AB18 00297A58  41 82 00 08 */	beq func_8029AB20
+/* 8029AB18 00297A58  41 82 00 08 */	beq lbl_8029AB20
 /* 8029AB1C 00297A5C  48 00 14 C9 */	bl release__13JASOscillatorFv
-
-/* 8029AB20 002C .text      func_8029AB20                  func_8029AB20                  */
-.global func_8029AB20
-func_8029AB20:
+lbl_8029AB20:
 /* 8029AB20 00297A60  3B DE 00 01 */	addi r30, r30, 1
 /* 8029AB24 00297A64  28 1E 00 02 */	cmplwi r30, 2
 /* 8029AB28 00297A68  3B FF 00 20 */	addi r31, r31, 0x20
-/* 8029AB2C 00297A6C  41 80 FF DC */	blt func_8029AB08
+/* 8029AB2C 00297A6C  41 80 FF DC */	blt lbl_8029AB08
 /* 8029AB30 00297A70  A0 1D 00 98 */	lhz r0, 0x98(r29)
 /* 8029AB34 00297A74  7C 00 46 70 */	srawi r0, r0, 8
 /* 8029AB38 00297A78  54 04 06 3E */	clrlwi r4, r0, 0x18
@@ -278,10 +250,7 @@ func_8029AB20:
 /* 8029AB40 00297A80  48 00 29 F5 */	bl setPriority__13JASDSPChannelFUc
 /* 8029AB44 00297A84  38 00 00 02 */	li r0, 2
 /* 8029AB48 00297A88  90 1D 00 00 */	stw r0, 0(r29)
-
-/* 8029AB4C 0018 .text      func_8029AB4C                  func_8029AB4C                  */
-.global func_8029AB4C
-func_8029AB4C:
+lbl_8029AB4C:
 /* 8029AB4C 00297A8C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029AB50 00297A90  48 0C 76 D9 */	bl _restgpr_29
 /* 8029AB54 00297A94  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -291,6 +260,7 @@ func_8029AB4C:
 
 /* 8029AB64 0034 .text      setOscInit__10JASChannelFUlPCQ213JASOscillator4Data setOscInit__10JASChannelFUlPCQ213JASOscillator4Data */
 .global setOscInit__10JASChannelFUlPCQ213JASOscillator4Data
+setOscInit__10JASChannelFUlPCQ213JASOscillator4Data:
 setOscInit__10JASChannelFUlPCQ213JASOscillator4Data:
 /* 8029AB64 00297AA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029AB68 00297AA8  7C 08 02 A6 */	mflr r0
@@ -309,6 +279,7 @@ setOscInit__10JASChannelFUlPCQ213JASOscillator4Data:
 /* 8029AB98 0010 .text      setMixConfig__10JASChannelFUlUs setMixConfig__10JASChannelFUlUs */
 .global setMixConfig__10JASChannelFUlUs
 setMixConfig__10JASChannelFUlUs:
+setMixConfig__10JASChannelFUlUs:
 /* 8029AB98 00297AD8  54 80 08 3C */	slwi r0, r4, 1
 /* 8029AB9C 00297ADC  7C 63 02 14 */	add r3, r3, r0
 /* 8029ABA0 00297AE0  B0 A3 00 8C */	sth r5, 0x8c(r3)
@@ -316,6 +287,7 @@ setMixConfig__10JASChannelFUlUs:
 
 /* 8029ABA8 0018 .text      calcEffect__10JASChannelFPCQ210JASChannel9PanVector calcEffect__10JASChannelFPCQ210JASChannel9PanVector */
 .global calcEffect__10JASChannelFPCQ210JASChannel9PanVector
+calcEffect__10JASChannelFPCQ210JASChannel9PanVector:
 calcEffect__10JASChannelFPCQ210JASChannel9PanVector:
 /* 8029ABA8 00297AE8  C0 43 00 08 */	lfs f2, 8(r3)
 /* 8029ABAC 00297AEC  C0 23 00 00 */	lfs f1, 0(r3)
@@ -326,6 +298,7 @@ calcEffect__10JASChannelFPCQ210JASChannel9PanVector:
 
 /* 8029ABC0 002C .text      calcPan__10JASChannelFPCQ210JASChannel9PanVector calcPan__10JASChannelFPCQ210JASChannel9PanVector */
 .global calcPan__10JASChannelFPCQ210JASChannel9PanVector
+calcPan__10JASChannelFPCQ210JASChannel9PanVector:
 calcPan__10JASChannelFPCQ210JASChannel9PanVector:
 /* 8029ABC0 00297B00  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8029ABC4 00297B04  C0 62 BC 88 */	lfs f3, LIT_546-_SDA2_BASE_(r2)
@@ -339,8 +312,9 @@ calcPan__10JASChannelFPCQ210JASChannel9PanVector:
 /* 8029ABE4 00297B24  EC 22 00 2A */	fadds f1, f2, f0
 /* 8029ABE8 00297B28  4E 80 00 20 */	blr 
 
-/* 8029ABEC 00D0 .text      effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams */
+/* 8029ABEC 00E8 .text      effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams */
 .global effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams
+effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams:
 effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams:
 /* 8029ABEC 00297B2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029ABF0 00297B30  7C 08 02 A6 */	mflr r0
@@ -357,7 +331,7 @@ effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams:
 /* 8029AC1C 00297B5C  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 8029AC20 00297B60  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029AC24 00297B64  28 00 00 06 */	cmplwi r0, 6
-/* 8029AC28 00297B68  41 81 00 94 */	bgt func_8029ACBC
+/* 8029AC28 00297B68  41 81 00 94 */	bgt lbl_8029ACBC
 /* 8029AC2C 00297B6C  3C 60 80 3C */	lis r3, LIT_662@ha
 /* 8029AC30 00297B70  38 63 78 48 */	addi r3, r3, LIT_662@l
 /* 8029AC34 00297B74  54 00 10 3A */	slwi r0, r0, 2
@@ -367,37 +341,34 @@ effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams:
 /* 8029AC44 00297B84  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8029AC48 00297B88  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029AC4C 00297B8C  D0 1E 00 04 */	stfs f0, 4(r30)
-/* 8029AC50 00297B90  48 00 00 6C */	b func_8029ACBC
+/* 8029AC50 00297B90  48 00 00 6C */	b lbl_8029ACBC
 /* 8029AC54 00297B94  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 8029AC58 00297B98  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029AC5C 00297B9C  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 8029AC60 00297BA0  48 00 00 5C */	b func_8029ACBC
+/* 8029AC60 00297BA0  48 00 00 5C */	b lbl_8029ACBC
 /* 8029AC64 00297BA4  C8 02 BC 90 */	lfd f0, LIT_661-_SDA2_BASE_(r2)
 /* 8029AC68 00297BA8  FC 21 00 28 */	fsub f1, f1, f0
 /* 8029AC6C 00297BAC  FC 20 08 18 */	frsp f1, f1
 /* 8029AC70 00297BB0  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 8029AC74 00297BB4  EC 00 08 2A */	fadds f0, f0, f1
 /* 8029AC78 00297BB8  D0 1E 00 08 */	stfs f0, 8(r30)
-/* 8029AC7C 00297BBC  48 00 00 40 */	b func_8029ACBC
+/* 8029AC7C 00297BBC  48 00 00 40 */	b lbl_8029ACBC
 /* 8029AC80 00297BC0  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 8029AC84 00297BC4  EC 00 08 2A */	fadds f0, f0, f1
 /* 8029AC88 00297BC8  D0 1E 00 0C */	stfs f0, 0xc(r30)
-/* 8029AC8C 00297BCC  48 00 00 30 */	b func_8029ACBC
+/* 8029AC8C 00297BCC  48 00 00 30 */	b lbl_8029ACBC
 /* 8029AC90 00297BD0  C0 1E 00 10 */	lfs f0, 0x10(r30)
 /* 8029AC94 00297BD4  EC 00 08 2A */	fadds f0, f0, f1
 /* 8029AC98 00297BD8  D0 1E 00 10 */	stfs f0, 0x10(r30)
-/* 8029AC9C 00297BDC  48 00 00 20 */	b func_8029ACBC
+/* 8029AC9C 00297BDC  48 00 00 20 */	b lbl_8029ACBC
 /* 8029ACA0 00297BE0  C0 1E 00 14 */	lfs f0, 0x14(r30)
 /* 8029ACA4 00297BE4  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029ACA8 00297BE8  D0 1E 00 14 */	stfs f0, 0x14(r30)
-/* 8029ACAC 00297BEC  48 00 00 10 */	b func_8029ACBC
+/* 8029ACAC 00297BEC  48 00 00 10 */	b lbl_8029ACBC
 /* 8029ACB0 00297BF0  C0 1E 00 18 */	lfs f0, 0x18(r30)
 /* 8029ACB4 00297BF4  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8029ACB8 00297BF8  D0 1E 00 18 */	stfs f0, 0x18(r30)
-
-/* 8029ACBC 0018 .text      func_8029ACBC                  func_8029ACBC                  */
-.global func_8029ACBC
-func_8029ACBC:
+lbl_8029ACBC:
 /* 8029ACBC 00297BFC  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029ACC0 00297C00  48 0C 75 69 */	bl _restgpr_29
 /* 8029ACC4 00297C04  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -405,12 +376,13 @@ func_8029ACBC:
 /* 8029ACCC 00297C0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029ACD0 00297C10  4E 80 00 20 */	blr 
 
-/* 8029ACD4 0030 .text      setKeySweepTarget__10JASChannelFlUl setKeySweepTarget__10JASChannelFlUl */
+/* 8029ACD4 0064 .text      setKeySweepTarget__10JASChannelFlUl setKeySweepTarget__10JASChannelFlUl */
 .global setKeySweepTarget__10JASChannelFlUl
+setKeySweepTarget__10JASChannelFlUl:
 setKeySweepTarget__10JASChannelFlUl:
 /* 8029ACD4 00297C14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029ACD8 00297C18  28 05 00 00 */	cmplwi r5, 0
-/* 8029ACDC 00297C1C  40 82 00 28 */	bne func_8029AD04
+/* 8029ACDC 00297C1C  40 82 00 28 */	bne lbl_8029AD04
 /* 8029ACE0 00297C20  C8 22 BC 98 */	lfd f1, LIT_685-_SDA2_BASE_(r2)
 /* 8029ACE4 00297C24  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 8029ACE8 00297C28  90 01 00 0C */	stw r0, 0xc(r1)
@@ -419,11 +391,8 @@ setKeySweepTarget__10JASChannelFlUl:
 /* 8029ACF4 00297C34  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029ACF8 00297C38  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8029ACFC 00297C3C  D0 03 00 CC */	stfs f0, 0xcc(r3)
-/* 8029AD00 00297C40  48 00 00 2C */	b func_8029AD2C
-
-/* 8029AD04 0028 .text      func_8029AD04                  func_8029AD04                  */
-.global func_8029AD04
-func_8029AD04:
+/* 8029AD00 00297C40  48 00 00 2C */	b lbl_8029AD2C
+lbl_8029AD04:
 /* 8029AD04 00297C44  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029AD08 00297C48  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 8029AD0C 00297C4C  C8 22 BC 98 */	lfd f1, LIT_685-_SDA2_BASE_(r2)
@@ -434,16 +403,14 @@ func_8029AD04:
 /* 8029AD20 00297C60  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8029AD24 00297C64  EC 00 08 28 */	fsubs f0, f0, f1
 /* 8029AD28 00297C68  D0 03 00 D0 */	stfs f0, 0xd0(r3)
-
-/* 8029AD2C 000C .text      func_8029AD2C                  func_8029AD2C                  */
-.global func_8029AD2C
-func_8029AD2C:
+lbl_8029AD2C:
 /* 8029AD2C 00297C6C  90 A3 00 D4 */	stw r5, 0xd4(r3)
 /* 8029AD30 00297C70  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029AD34 00297C74  4E 80 00 20 */	blr 
 
-/* 8029AD38 00A8 .text      updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams */
+/* 8029AD38 0240 .text      updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams */
 .global updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams
+updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams:
 updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams:
 /* 8029AD38 00297C78  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8029AD3C 00297C7C  7C 08 02 A6 */	mflr r0
@@ -484,38 +451,26 @@ updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12Eff
 /* 8029ADC8 00297D08  C3 C2 BC 84 */	lfs f30, LIT_545-_SDA2_BASE_(r2)
 /* 8029ADCC 00297D0C  48 00 33 B5 */	bl getOutputMode__9JASDriverFv
 /* 8029ADD0 00297D10  2C 03 00 01 */	cmpwi r3, 1
-/* 8029ADD4 00297D14  41 82 00 18 */	beq func_8029ADEC
-/* 8029ADD8 00297D18  40 80 00 08 */	bge func_8029ADE0
-/* 8029ADDC 00297D1C  48 00 00 38 */	b func_8029AE14
-
-/* 8029ADE0 000C .text      func_8029ADE0                  func_8029ADE0                  */
-.global func_8029ADE0
-func_8029ADE0:
+/* 8029ADD4 00297D14  41 82 00 18 */	beq lbl_8029ADEC
+/* 8029ADD8 00297D18  40 80 00 08 */	bge lbl_8029ADE0
+/* 8029ADDC 00297D1C  48 00 00 38 */	b lbl_8029AE14
+lbl_8029ADE0:
 /* 8029ADE0 00297D20  2C 03 00 03 */	cmpwi r3, 3
-/* 8029ADE4 00297D24  40 80 00 30 */	bge func_8029AE14
-/* 8029ADE8 00297D28  48 00 00 14 */	b func_8029ADFC
-
-/* 8029ADEC 0010 .text      func_8029ADEC                  func_8029ADEC                  */
-.global func_8029ADEC
-func_8029ADEC:
+/* 8029ADE4 00297D24  40 80 00 30 */	bge lbl_8029AE14
+/* 8029ADE8 00297D28  48 00 00 14 */	b lbl_8029ADFC
+lbl_8029ADEC:
 /* 8029ADEC 00297D2C  38 61 00 20 */	addi r3, r1, 0x20
 /* 8029ADF0 00297D30  4B FF FD D1 */	bl calcPan__10JASChannelFPCQ210JASChannel9PanVector
 /* 8029ADF4 00297D34  FF E0 08 90 */	fmr f31, f1
-/* 8029ADF8 00297D38  48 00 00 1C */	b func_8029AE14
-
-/* 8029ADFC 0018 .text      func_8029ADFC                  func_8029ADFC                  */
-.global func_8029ADFC
-func_8029ADFC:
+/* 8029ADF8 00297D38  48 00 00 1C */	b lbl_8029AE14
+lbl_8029ADFC:
 /* 8029ADFC 00297D3C  38 61 00 20 */	addi r3, r1, 0x20
 /* 8029AE00 00297D40  4B FF FD C1 */	bl calcPan__10JASChannelFPCQ210JASChannel9PanVector
 /* 8029AE04 00297D44  FF E0 08 90 */	fmr f31, f1
 /* 8029AE08 00297D48  38 61 00 08 */	addi r3, r1, 8
 /* 8029AE0C 00297D4C  4B FF FD 9D */	bl calcEffect__10JASChannelFPCQ210JASChannel9PanVector
 /* 8029AE10 00297D50  FF C0 08 90 */	fmr f30, f1
-
-/* 8029AE14 0078 .text      func_8029AE14                  func_8029AE14                  */
-.global func_8029AE14
-func_8029AE14:
+lbl_8029AE14:
 /* 8029AE14 00297D54  38 61 00 14 */	addi r3, r1, 0x14
 /* 8029AE18 00297D58  4B FF FD 91 */	bl calcEffect__10JASChannelFPCQ210JASChannel9PanVector
 /* 8029AE1C 00297D5C  FF A0 08 90 */	fmr f29, f1
@@ -544,101 +499,65 @@ func_8029AE14:
 /* 8029AE78 00297DB8  EF 9C 00 32 */	fmuls f28, f28, f0
 /* 8029AE7C 00297DBC  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029AE80 00297DC0  FC 1C 00 40 */	fcmpo cr0, f28, f0
-/* 8029AE84 00297DC4  40 80 00 08 */	bge func_8029AE8C
+/* 8029AE84 00297DC4  40 80 00 08 */	bge lbl_8029AE8C
 /* 8029AE88 00297DC8  FF 80 00 90 */	fmr f28, f0
-
-/* 8029AE8C 0014 .text      func_8029AE8C                  func_8029AE8C                  */
-.global func_8029AE8C
-func_8029AE8C:
+lbl_8029AE8C:
 /* 8029AE8C 00297DCC  C0 42 BC 84 */	lfs f2, LIT_545-_SDA2_BASE_(r2)
 /* 8029AE90 00297DD0  FC 1F 10 40 */	fcmpo cr0, f31, f2
 /* 8029AE94 00297DD4  4C 40 13 82 */	cror 2, 0, 2
-/* 8029AE98 00297DD8  40 82 00 08 */	bne func_8029AEA0
-/* 8029AE9C 00297DDC  48 00 00 1C */	b func_8029AEB8
-
-/* 8029AEA0 0014 .text      func_8029AEA0                  func_8029AEA0                  */
-.global func_8029AEA0
-func_8029AEA0:
+/* 8029AE98 00297DD8  40 82 00 08 */	bne lbl_8029AEA0
+/* 8029AE9C 00297DDC  48 00 00 1C */	b lbl_8029AEB8
+lbl_8029AEA0:
 /* 8029AEA0 00297DE0  C0 42 BC 80 */	lfs f2, LIT_544-_SDA2_BASE_(r2)
 /* 8029AEA4 00297DE4  FC 1F 10 40 */	fcmpo cr0, f31, f2
 /* 8029AEA8 00297DE8  4C 41 13 82 */	cror 2, 1, 2
-/* 8029AEAC 00297DEC  40 82 00 08 */	bne func_8029AEB4
-/* 8029AEB0 00297DF0  48 00 00 08 */	b func_8029AEB8
-
-/* 8029AEB4 0004 .text      func_8029AEB4                  func_8029AEB4                  */
-.global func_8029AEB4
-func_8029AEB4:
+/* 8029AEAC 00297DEC  40 82 00 08 */	bne lbl_8029AEB4
+/* 8029AEB0 00297DF0  48 00 00 08 */	b lbl_8029AEB8
+lbl_8029AEB4:
 /* 8029AEB4 00297DF4  FC 40 F8 90 */	fmr f2, f31
-
-/* 8029AEB8 0014 .text      func_8029AEB8                  func_8029AEB8                  */
-.global func_8029AEB8
-func_8029AEB8:
+lbl_8029AEB8:
 /* 8029AEB8 00297DF8  C0 62 BC 84 */	lfs f3, LIT_545-_SDA2_BASE_(r2)
 /* 8029AEBC 00297DFC  FC 1D 18 40 */	fcmpo cr0, f29, f3
 /* 8029AEC0 00297E00  4C 40 13 82 */	cror 2, 0, 2
-/* 8029AEC4 00297E04  40 82 00 08 */	bne func_8029AECC
-/* 8029AEC8 00297E08  48 00 00 1C */	b func_8029AEE4
-
-/* 8029AECC 0014 .text      func_8029AECC                  func_8029AECC                  */
-.global func_8029AECC
-func_8029AECC:
+/* 8029AEC4 00297E04  40 82 00 08 */	bne lbl_8029AECC
+/* 8029AEC8 00297E08  48 00 00 1C */	b lbl_8029AEE4
+lbl_8029AECC:
 /* 8029AECC 00297E0C  C0 62 BC 80 */	lfs f3, LIT_544-_SDA2_BASE_(r2)
 /* 8029AED0 00297E10  FC 1D 18 40 */	fcmpo cr0, f29, f3
 /* 8029AED4 00297E14  4C 41 13 82 */	cror 2, 1, 2
-/* 8029AED8 00297E18  40 82 00 08 */	bne func_8029AEE0
-/* 8029AEDC 00297E1C  48 00 00 08 */	b func_8029AEE4
-
-/* 8029AEE0 0004 .text      func_8029AEE0                  func_8029AEE0                  */
-.global func_8029AEE0
-func_8029AEE0:
+/* 8029AED8 00297E18  40 82 00 08 */	bne lbl_8029AEE0
+/* 8029AEDC 00297E1C  48 00 00 08 */	b lbl_8029AEE4
+lbl_8029AEE0:
 /* 8029AEE0 00297E20  FC 60 E8 90 */	fmr f3, f29
-
-/* 8029AEE4 0014 .text      func_8029AEE4                  func_8029AEE4                  */
-.global func_8029AEE4
-func_8029AEE4:
+lbl_8029AEE4:
 /* 8029AEE4 00297E24  C0 82 BC 84 */	lfs f4, LIT_545-_SDA2_BASE_(r2)
 /* 8029AEE8 00297E28  FC 1E 20 40 */	fcmpo cr0, f30, f4
 /* 8029AEEC 00297E2C  4C 40 13 82 */	cror 2, 0, 2
-/* 8029AEF0 00297E30  40 82 00 08 */	bne func_8029AEF8
-/* 8029AEF4 00297E34  48 00 00 1C */	b func_8029AF10
-
-/* 8029AEF8 0014 .text      func_8029AEF8                  func_8029AEF8                  */
-.global func_8029AEF8
-func_8029AEF8:
+/* 8029AEF0 00297E30  40 82 00 08 */	bne lbl_8029AEF8
+/* 8029AEF4 00297E34  48 00 00 1C */	b lbl_8029AF10
+lbl_8029AEF8:
 /* 8029AEF8 00297E38  C0 82 BC 80 */	lfs f4, LIT_544-_SDA2_BASE_(r2)
 /* 8029AEFC 00297E3C  FC 1E 20 40 */	fcmpo cr0, f30, f4
 /* 8029AF00 00297E40  4C 41 13 82 */	cror 2, 1, 2
-/* 8029AF04 00297E44  40 82 00 08 */	bne func_8029AF0C
-/* 8029AF08 00297E48  48 00 00 08 */	b func_8029AF10
-
-/* 8029AF0C 0004 .text      func_8029AF0C                  func_8029AF0C                  */
-.global func_8029AF0C
-func_8029AF0C:
+/* 8029AF04 00297E44  40 82 00 08 */	bne lbl_8029AF0C
+/* 8029AF08 00297E48  48 00 00 08 */	b lbl_8029AF10
+lbl_8029AF0C:
 /* 8029AF0C 00297E4C  FC 80 F0 90 */	fmr f4, f30
-
-/* 8029AF10 0020 .text      func_8029AF10                  func_8029AF10                  */
-.global func_8029AF10
-func_8029AF10:
+lbl_8029AF10:
 /* 8029AF10 00297E50  A0 1C 00 8C */	lhz r0, 0x8c(r28)
 /* 8029AF14 00297E54  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8029AF18 00297E58  40 82 00 18 */	bne func_8029AF30
+/* 8029AF18 00297E58  40 82 00 18 */	bne lbl_8029AF30
 /* 8029AF1C 00297E5C  7F 83 E3 78 */	mr r3, r28
 /* 8029AF20 00297E60  7F A4 EB 78 */	mr r4, r29
 /* 8029AF24 00297E64  FC 20 E0 90 */	fmr f1, f28
 /* 8029AF28 00297E68  48 00 07 79 */	bl updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff
-/* 8029AF2C 00297E6C  48 00 00 14 */	b func_8029AF40
-
-/* 8029AF30 0010 .text      func_8029AF30                  func_8029AF30                  */
-.global func_8029AF30
-func_8029AF30:
+/* 8029AF2C 00297E6C  48 00 00 14 */	b lbl_8029AF40
+lbl_8029AF30:
 /* 8029AF30 00297E70  7F 83 E3 78 */	mr r3, r28
 /* 8029AF34 00297E74  FC 20 E0 90 */	fmr f1, f28
 /* 8029AF38 00297E78  7F C4 F3 78 */	mr r4, r30
 /* 8029AF3C 00297E7C  48 00 08 9D */	bl updateMixer__10JASChannelFffffPUs
-
-/* 8029AF40 0038 .text      func_8029AF40                  func_8029AF40                  */
-.global func_8029AF40
-func_8029AF40:
+lbl_8029AF40:
 /* 8029AF40 00297E80  E3 E1 00 88 */	psq_l f31, 136(r1), 0, qr0
 /* 8029AF44 00297E84  CB E1 00 80 */	lfd f31, 0x80(r1)
 /* 8029AF48 00297E88  E3 C1 00 78 */	psq_l f30, 120(r1), 0, qr0
@@ -654,8 +573,9 @@ func_8029AF40:
 /* 8029AF70 00297EB0  38 21 00 90 */	addi r1, r1, 0x90
 /* 8029AF74 00297EB4  4E 80 00 20 */	blr 
 
-/* 8029AF78 002C .text      dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv */
+/* 8029AF78 008C .text      dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv */
 .global dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv
+dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv:
 dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv:
 /* 8029AF78 00297EB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029AF7C 00297EBC  7C 08 02 A6 */	mflr r0
@@ -663,36 +583,24 @@ dspUpdateCallback__10JASChannelFUlPQ26JASDsp8TChannelPv:
 /* 8029AF84 00297EC4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029AF88 00297EC8  7C BF 2B 78 */	mr r31, r5
 /* 8029AF8C 00297ECC  2C 03 00 01 */	cmpwi r3, 1
-/* 8029AF90 00297ED0  41 82 00 2C */	beq func_8029AFBC
-/* 8029AF94 00297ED4  40 80 00 10 */	bge func_8029AFA4
+/* 8029AF90 00297ED0  41 82 00 2C */	beq lbl_8029AFBC
+/* 8029AF94 00297ED4  40 80 00 10 */	bge lbl_8029AFA4
 /* 8029AF98 00297ED8  2C 03 00 00 */	cmpwi r3, 0
-/* 8029AF9C 00297EDC  40 80 00 14 */	bge func_8029AFB0
-/* 8029AFA0 00297EE0  48 00 00 4C */	b func_8029AFEC
-
-/* 8029AFA4 000C .text      func_8029AFA4                  func_8029AFA4                  */
-.global func_8029AFA4
-func_8029AFA4:
+/* 8029AF9C 00297EDC  40 80 00 14 */	bge lbl_8029AFB0
+/* 8029AFA0 00297EE0  48 00 00 4C */	b lbl_8029AFEC
+lbl_8029AFA4:
 /* 8029AFA4 00297EE4  2C 03 00 04 */	cmpwi r3, 4
-/* 8029AFA8 00297EE8  40 80 00 44 */	bge func_8029AFEC
-/* 8029AFAC 00297EEC  48 00 00 1C */	b func_8029AFC8
-
-/* 8029AFB0 000C .text      func_8029AFB0                  func_8029AFB0                  */
-.global func_8029AFB0
-func_8029AFB0:
+/* 8029AFA8 00297EE8  40 80 00 44 */	bge lbl_8029AFEC
+/* 8029AFAC 00297EEC  48 00 00 1C */	b lbl_8029AFC8
+lbl_8029AFB0:
 /* 8029AFB0 00297EF0  7F E3 FB 78 */	mr r3, r31
 /* 8029AFB4 00297EF4  48 00 03 71 */	bl updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel
-/* 8029AFB8 00297EF8  48 00 00 38 */	b func_8029AFF0
-
-/* 8029AFBC 000C .text      func_8029AFBC                  func_8029AFBC                  */
-.global func_8029AFBC
-func_8029AFBC:
+/* 8029AFB8 00297EF8  48 00 00 38 */	b lbl_8029AFF0
+lbl_8029AFBC:
 /* 8029AFBC 00297EFC  7F E3 FB 78 */	mr r3, r31
 /* 8029AFC0 00297F00  48 00 00 45 */	bl initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel
-/* 8029AFC4 00297F04  48 00 00 2C */	b func_8029AFF0
-
-/* 8029AFC8 0024 .text      func_8029AFC8                  func_8029AFC8                  */
-.global func_8029AFC8
-func_8029AFC8:
+/* 8029AFC4 00297F04  48 00 00 2C */	b lbl_8029AFF0
+lbl_8029AFC8:
 /* 8029AFC8 00297F08  80 7F 00 08 */	lwz r3, 8(r31)
 /* 8029AFCC 00297F0C  48 00 23 55 */	bl free__13JASDSPChannelFv
 /* 8029AFD0 00297F10  38 00 00 00 */	li r0, 0
@@ -701,24 +609,19 @@ func_8029AFC8:
 /* 8029AFDC 00297F1C  38 80 00 01 */	li r4, 1
 /* 8029AFE0 00297F20  4B FF F9 39 */	bl __dt__10JASChannelFv
 /* 8029AFE4 00297F24  38 60 FF FF */	li r3, -1
-/* 8029AFE8 00297F28  48 00 00 08 */	b func_8029AFF0
-
-/* 8029AFEC 0004 .text      func_8029AFEC                  func_8029AFEC                  */
-.global func_8029AFEC
-func_8029AFEC:
+/* 8029AFE8 00297F28  48 00 00 08 */	b lbl_8029AFF0
+lbl_8029AFEC:
 /* 8029AFEC 00297F2C  38 60 00 00 */	li r3, 0
-
-/* 8029AFF0 0014 .text      func_8029AFF0                  func_8029AFF0                  */
-.global func_8029AFF0
-func_8029AFF0:
+lbl_8029AFF0:
 /* 8029AFF0 00297F30  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029AFF4 00297F34  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029AFF8 00297F38  7C 08 03 A6 */	mtlr r0
 /* 8029AFFC 00297F3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029B000 00297F40  4E 80 00 20 */	blr 
 
-/* 8029B004 0030 .text      initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel */
+/* 8029B004 0320 .text      initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel */
 .global initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel
+initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 /* 8029B004 00297F44  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8029B008 00297F48  7C 08 02 A6 */	mflr r0
@@ -729,30 +632,24 @@ initialUpdateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 /* 8029B01C 00297F5C  7C 9F 23 78 */	mr r31, r4
 /* 8029B020 00297F60  A0 03 00 8C */	lhz r0, 0x8c(r3)
 /* 8029B024 00297F64  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8029B028 00297F68  40 82 00 0C */	bne func_8029B034
+/* 8029B028 00297F68  40 82 00 0C */	bne lbl_8029B034
 /* 8029B02C 00297F6C  7F E3 FB 78 */	mr r3, r31
 /* 8029B030 00297F70  48 00 2E 95 */	bl initAutoMixer__Q26JASDsp8TChannelFv
-
-/* 8029B034 0024 .text      func_8029B034                  func_8029B034                  */
-.global func_8029B034
-func_8029B034:
+lbl_8029B034:
 /* 8029B034 00297F74  81 9E 00 0C */	lwz r12, 0xc(r30)
 /* 8029B038 00297F78  28 0C 00 00 */	cmplwi r12, 0
-/* 8029B03C 00297F7C  41 82 00 1C */	beq func_8029B058
+/* 8029B03C 00297F7C  41 82 00 1C */	beq lbl_8029B058
 /* 8029B040 00297F80  38 60 00 01 */	li r3, 1
 /* 8029B044 00297F84  7F C4 F3 78 */	mr r4, r30
 /* 8029B048 00297F88  7F E5 FB 78 */	mr r5, r31
 /* 8029B04C 00297F8C  80 DE 00 10 */	lwz r6, 0x10(r30)
 /* 8029B050 00297F90  7D 89 03 A6 */	mtctr r12
 /* 8029B054 00297F94  4E 80 04 21 */	bctrl 
-
-/* 8029B058 0034 .text      func_8029B058                  func_8029B058                  */
-.global func_8029B058
-func_8029B058:
+lbl_8029B058:
 /* 8029B058 00297F98  80 7E 01 00 */	lwz r3, 0x100(r30)
 /* 8029B05C 00297F9C  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029B060 00297FA0  28 00 00 00 */	cmplwi r0, 0
-/* 8029B064 00297FA4  40 82 00 28 */	bne func_8029B08C
+/* 8029B064 00297FA4  40 82 00 28 */	bne lbl_8029B08C
 /* 8029B068 00297FA8  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B06C 00297FAC  48 00 22 B5 */	bl free__13JASDSPChannelFv
 /* 8029B070 00297FB0  38 00 00 00 */	li r0, 0
@@ -761,15 +658,12 @@ func_8029B058:
 /* 8029B07C 00297FBC  38 80 00 01 */	li r4, 1
 /* 8029B080 00297FC0  4B FF F8 99 */	bl __dt__10JASChannelFv
 /* 8029B084 00297FC4  38 60 FF FF */	li r3, -1
-/* 8029B088 00297FC8  48 00 02 84 */	b func_8029B30C
-
-/* 8029B08C 0034 .text      func_8029B08C                  func_8029B08C                  */
-.global func_8029B08C
-func_8029B08C:
+/* 8029B088 00297FC8  48 00 02 84 */	b lbl_8029B30C
+lbl_8029B08C:
 /* 8029B08C 00297FCC  7F C3 F3 78 */	mr r3, r30
 /* 8029B090 00297FD0  48 00 0C 31 */	bl checkBankDispose__10JASChannelCFv
 /* 8029B094 00297FD4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8029B098 00297FD8  41 82 00 28 */	beq func_8029B0C0
+/* 8029B098 00297FD8  41 82 00 28 */	beq lbl_8029B0C0
 /* 8029B09C 00297FDC  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B0A0 00297FE0  48 00 22 81 */	bl free__13JASDSPChannelFv
 /* 8029B0A4 00297FE4  38 00 00 00 */	li r0, 0
@@ -778,107 +672,74 @@ func_8029B08C:
 /* 8029B0B0 00297FF0  38 80 00 01 */	li r4, 1
 /* 8029B0B4 00297FF4  4B FF F8 65 */	bl __dt__10JASChannelFv
 /* 8029B0B8 00297FF8  38 60 FF FF */	li r3, -1
-/* 8029B0BC 00297FFC  48 00 02 50 */	b func_8029B30C
-
-/* 8029B0C0 001C .text      func_8029B0C0                  func_8029B0C0                  */
-.global func_8029B0C0
-func_8029B0C0:
+/* 8029B0BC 00297FFC  48 00 02 50 */	b lbl_8029B30C
+lbl_8029B0C0:
 /* 8029B0C0 00298000  80 1E 00 DC */	lwz r0, 0xdc(r30)
 /* 8029B0C4 00298004  2C 00 00 01 */	cmpwi r0, 1
-/* 8029B0C8 00298008  41 82 00 44 */	beq func_8029B10C
-/* 8029B0CC 0029800C  40 80 00 10 */	bge func_8029B0DC
+/* 8029B0C8 00298008  41 82 00 44 */	beq lbl_8029B10C
+/* 8029B0CC 0029800C  40 80 00 10 */	bge lbl_8029B0DC
 /* 8029B0D0 00298010  2C 00 00 00 */	cmpwi r0, 0
-/* 8029B0D4 00298014  40 80 00 14 */	bge func_8029B0E8
-/* 8029B0D8 00298018  48 00 00 34 */	b func_8029B10C
-
-/* 8029B0DC 000C .text      func_8029B0DC                  func_8029B0DC                  */
-.global func_8029B0DC
-func_8029B0DC:
+/* 8029B0D4 00298014  40 80 00 14 */	bge lbl_8029B0E8
+/* 8029B0D8 00298018  48 00 00 34 */	b lbl_8029B10C
+lbl_8029B0DC:
 /* 8029B0DC 0029801C  2C 00 00 03 */	cmpwi r0, 3
-/* 8029B0E0 00298020  40 80 00 2C */	bge func_8029B10C
-/* 8029B0E4 00298024  48 00 00 1C */	b func_8029B100
-
-/* 8029B0E8 0018 .text      func_8029B0E8                  func_8029B0E8                  */
-.global func_8029B0E8
-func_8029B0E8:
+/* 8029B0E0 00298020  40 80 00 2C */	bge lbl_8029B10C
+/* 8029B0E4 00298024  48 00 00 1C */	b lbl_8029B100
+lbl_8029B0E8:
 /* 8029B0E8 00298028  7F E3 FB 78 */	mr r3, r31
 /* 8029B0EC 0029802C  38 9E 00 E0 */	addi r4, r30, 0xe0
 /* 8029B0F0 00298030  80 BE 01 04 */	lwz r5, 0x104(r30)
 /* 8029B0F4 00298034  80 DE 00 D8 */	lwz r6, 0xd8(r30)
 /* 8029B0F8 00298038  48 00 2C 95 */	bl setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl
-/* 8029B0FC 0029803C  48 00 00 10 */	b func_8029B10C
-
-/* 8029B100 000C .text      func_8029B100                  func_8029B100                  */
-.global func_8029B100
-func_8029B100:
+/* 8029B0FC 0029803C  48 00 00 10 */	b lbl_8029B10C
+lbl_8029B100:
 /* 8029B100 00298040  7F E3 FB 78 */	mr r3, r31
 /* 8029B104 00298044  80 9E 01 04 */	lwz r4, 0x104(r30)
 /* 8029B108 00298048  48 00 2D A5 */	bl setOscInfo__Q26JASDsp8TChannelFUl
-
-/* 8029B10C 0008 .text      func_8029B10C                  func_8029B10C                  */
-.global func_8029B10C
-func_8029B10C:
+lbl_8029B10C:
 /* 8029B10C 0029804C  3B A0 00 00 */	li r29, 0
-/* 8029B110 00298050  48 00 00 84 */	b func_8029B194
-
-/* 8029B114 0038 .text      func_8029B114                  func_8029B114                  */
-.global func_8029B114
-func_8029B114:
+/* 8029B110 00298050  48 00 00 84 */	b lbl_8029B194
+lbl_8029B114:
 /* 8029B114 00298054  57 A3 0D FC */	rlwinm r3, r29, 1, 0x17, 0x1e
 /* 8029B118 00298058  38 03 00 8C */	addi r0, r3, 0x8c
 /* 8029B11C 0029805C  7C 1E 02 2E */	lhzx r0, r30, r0
 /* 8029B120 00298060  B0 01 00 08 */	sth r0, 8(r1)
 /* 8029B124 00298064  48 00 30 5D */	bl getOutputMode__9JASDriverFv
 /* 8029B128 00298068  28 03 00 00 */	cmplwi r3, 0
-/* 8029B12C 0029806C  40 82 00 38 */	bne func_8029B164
+/* 8029B12C 0029806C  40 82 00 38 */	bne lbl_8029B164
 /* 8029B130 00298070  88 01 00 08 */	lbz r0, 8(r1)
 /* 8029B134 00298074  2C 00 00 09 */	cmpwi r0, 9
-/* 8029B138 00298078  41 82 00 20 */	beq func_8029B158
-/* 8029B13C 0029807C  40 80 00 44 */	bge func_8029B180
+/* 8029B138 00298078  41 82 00 20 */	beq lbl_8029B158
+/* 8029B13C 0029807C  40 80 00 44 */	bge lbl_8029B180
 /* 8029B140 00298080  2C 00 00 08 */	cmpwi r0, 8
-/* 8029B144 00298084  40 80 00 08 */	bge func_8029B14C
-/* 8029B148 00298088  48 00 00 38 */	b func_8029B180
-
-/* 8029B14C 000C .text      func_8029B14C                  func_8029B14C                  */
-.global func_8029B14C
-func_8029B14C:
+/* 8029B144 00298084  40 80 00 08 */	bge lbl_8029B14C
+/* 8029B148 00298088  48 00 00 38 */	b lbl_8029B180
+lbl_8029B14C:
 /* 8029B14C 0029808C  38 00 00 0B */	li r0, 0xb
 /* 8029B150 00298090  98 01 00 08 */	stb r0, 8(r1)
-/* 8029B154 00298094  48 00 00 2C */	b func_8029B180
-
-/* 8029B158 000C .text      func_8029B158                  func_8029B158                  */
-.global func_8029B158
-func_8029B158:
+/* 8029B154 00298094  48 00 00 2C */	b lbl_8029B180
+lbl_8029B158:
 /* 8029B158 00298098  38 00 00 02 */	li r0, 2
 /* 8029B15C 0029809C  98 01 00 08 */	stb r0, 8(r1)
-/* 8029B160 002980A0  48 00 00 20 */	b func_8029B180
-
-/* 8029B164 001C .text      func_8029B164                  func_8029B164                  */
-.global func_8029B164
-func_8029B164:
+/* 8029B160 002980A0  48 00 00 20 */	b lbl_8029B180
+lbl_8029B164:
 /* 8029B164 002980A4  28 03 00 01 */	cmplwi r3, 1
-/* 8029B168 002980A8  40 82 00 18 */	bne func_8029B180
+/* 8029B168 002980A8  40 82 00 18 */	bne lbl_8029B180
 /* 8029B16C 002980AC  88 01 00 08 */	lbz r0, 8(r1)
 /* 8029B170 002980B0  28 00 00 08 */	cmplwi r0, 8
-/* 8029B174 002980B4  40 82 00 0C */	bne func_8029B180
+/* 8029B174 002980B4  40 82 00 0C */	bne lbl_8029B180
 /* 8029B178 002980B8  38 00 00 0B */	li r0, 0xb
 /* 8029B17C 002980BC  98 01 00 08 */	stb r0, 8(r1)
-
-/* 8029B180 0014 .text      func_8029B180                  func_8029B180                  */
-.global func_8029B180
-func_8029B180:
+lbl_8029B180:
 /* 8029B180 002980C0  7F E3 FB 78 */	mr r3, r31
 /* 8029B184 002980C4  7F A4 EB 78 */	mr r4, r29
 /* 8029B188 002980C8  88 A1 00 08 */	lbz r5, 8(r1)
 /* 8029B18C 002980CC  48 00 2F 11 */	bl setBusConnect__Q26JASDsp8TChannelFUcUc
 /* 8029B190 002980D0  3B BD 00 01 */	addi r29, r29, 1
-
-/* 8029B194 003C .text      func_8029B194                  func_8029B194                  */
-.global func_8029B194
-func_8029B194:
+lbl_8029B194:
 /* 8029B194 002980D4  57 A0 06 3E */	clrlwi r0, r29, 0x18
 /* 8029B198 002980D8  28 00 00 06 */	cmplwi r0, 6
-/* 8029B19C 002980DC  41 80 FF 78 */	blt func_8029B114
+/* 8029B19C 002980DC  41 80 FF 78 */	blt lbl_8029B114
 /* 8029B1A0 002980E0  C0 22 BC 80 */	lfs f1, LIT_544-_SDA2_BASE_(r2)
 /* 8029B1A4 002980E4  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 8029B1A8 002980E8  D0 21 00 1C */	stfs f1, 0x1c(r1)
@@ -891,28 +752,22 @@ func_8029B194:
 /* 8029B1C4 00298104  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 8029B1C8 00298108  3B 80 00 00 */	li r28, 0
 /* 8029B1CC 0029810C  3B A0 00 00 */	li r29, 0
-
-/* 8029B1D0 0028 .text      func_8029B1D0                  func_8029B1D0                  */
-.global func_8029B1D0
-func_8029B1D0:
+lbl_8029B1D0:
 /* 8029B1D0 00298110  38 7D 00 1C */	addi r3, r29, 0x1c
 /* 8029B1D4 00298114  7C 7E 1A 14 */	add r3, r30, r3
 /* 8029B1D8 00298118  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029B1DC 0029811C  28 00 00 00 */	cmplwi r0, 0
-/* 8029B1E0 00298120  41 82 00 18 */	beq func_8029B1F8
+/* 8029B1E0 00298120  41 82 00 18 */	beq lbl_8029B1F8
 /* 8029B1E4 00298124  48 00 0E FD */	bl update__13JASOscillatorFv
 /* 8029B1E8 00298128  7F C3 F3 78 */	mr r3, r30
 /* 8029B1EC 0029812C  7F 84 E3 78 */	mr r4, r28
 /* 8029B1F0 00298130  38 A1 00 18 */	addi r5, r1, 0x18
 /* 8029B1F4 00298134  4B FF F9 F9 */	bl effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams
-
-/* 8029B1F8 0040 .text      func_8029B1F8                  func_8029B1F8                  */
-.global func_8029B1F8
-func_8029B1F8:
+lbl_8029B1F8:
 /* 8029B1F8 00298138  3B 9C 00 01 */	addi r28, r28, 1
 /* 8029B1FC 0029813C  28 1C 00 02 */	cmplwi r28, 2
 /* 8029B200 00298140  3B BD 00 20 */	addi r29, r29, 0x20
-/* 8029B204 00298144  41 80 FF CC */	blt func_8029B1D0
+/* 8029B204 00298144  41 80 FF CC */	blt lbl_8029B1D0
 /* 8029B208 00298148  38 7E 00 5C */	addi r3, r30, 0x5c
 /* 8029B20C 0029814C  48 00 0C 21 */	bl resetCounter__6JASLfoFv
 /* 8029B210 00298150  38 7E 00 74 */	addi r3, r30, 0x74
@@ -924,11 +779,8 @@ func_8029B1F8:
 /* 8029B228 00298168  4B FF FB 11 */	bl updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams
 /* 8029B22C 0029816C  3B 80 00 00 */	li r28, 0
 /* 8029B230 00298170  3B A1 00 0C */	addi r29, r1, 0xc
-/* 8029B234 00298174  48 00 00 20 */	b func_8029B254
-
-/* 8029B238 001C .text      func_8029B238                  func_8029B238                  */
-.global func_8029B238
-func_8029B238:
+/* 8029B234 00298174  48 00 00 20 */	b lbl_8029B254
+lbl_8029B238:
 /* 8029B238 00298178  7F E3 FB 78 */	mr r3, r31
 /* 8029B23C 0029817C  7F 84 E3 78 */	mr r4, r28
 /* 8029B240 00298180  57 80 0D FC */	rlwinm r0, r28, 1, 0x17, 0x1e
@@ -936,13 +788,10 @@ func_8029B238:
 /* 8029B248 00298188  7C 05 07 34 */	extsh r5, r0
 /* 8029B24C 0029818C  48 00 2C E9 */	bl setMixerInitVolume__Q26JASDsp8TChannelFUcs
 /* 8029B250 00298190  3B 9C 00 01 */	addi r28, r28, 1
-
-/* 8029B254 008C .text      func_8029B254                  func_8029B254                  */
-.global func_8029B254
-func_8029B254:
+lbl_8029B254:
 /* 8029B254 00298194  57 80 06 3E */	clrlwi r0, r28, 0x18
 /* 8029B258 00298198  28 00 00 06 */	cmplwi r0, 6
-/* 8029B25C 0029819C  41 80 FF DC */	blt func_8029B238
+/* 8029B25C 0029819C  41 80 FF DC */	blt lbl_8029B238
 /* 8029B260 002981A0  38 7E 00 5C */	addi r3, r30, 0x5c
 /* 8029B264 002981A4  48 00 0A E1 */	bl getValue__6JASLfoCFv
 /* 8029B268 002981A8  C0 01 00 2C */	lfs f0, 0x2c(r1)
@@ -973,12 +822,9 @@ func_8029B254:
 /* 8029B2CC 0029820C  EC 24 00 32 */	fmuls f1, f4, f0
 /* 8029B2D0 00298210  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029B2D4 00298214  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029B2D8 00298218  40 80 00 08 */	bge func_8029B2E0
+/* 8029B2D8 00298218  40 80 00 08 */	bge lbl_8029B2E0
 /* 8029B2DC 0029821C  FC 20 00 90 */	fmr f1, f0
-
-/* 8029B2E0 002C .text      func_8029B2E0                  func_8029B2E0                  */
-.global func_8029B2E0
-func_8029B2E0:
+lbl_8029B2E0:
 /* 8029B2E0 00298220  7F E3 FB 78 */	mr r3, r31
 /* 8029B2E4 00298224  FC 00 08 1E */	fctiwz f0, f1
 /* 8029B2E8 00298228  D8 01 00 40 */	stfd f0, 0x40(r1)
@@ -990,10 +836,7 @@ func_8029B2E0:
 /* 8029B300 00298240  38 00 00 00 */	li r0, 0
 /* 8029B304 00298244  B0 1F 00 66 */	sth r0, 0x66(r31)
 /* 8029B308 00298248  38 60 00 00 */	li r3, 0
-
-/* 8029B30C 0018 .text      func_8029B30C                  func_8029B30C                  */
-.global func_8029B30C
-func_8029B30C:
+lbl_8029B30C:
 /* 8029B30C 0029824C  39 61 00 60 */	addi r11, r1, 0x60
 /* 8029B310 00298250  48 0C 6F 15 */	bl _restgpr_28
 /* 8029B314 00298254  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -1001,8 +844,9 @@ func_8029B30C:
 /* 8029B31C 0029825C  38 21 00 60 */	addi r1, r1, 0x60
 /* 8029B320 00298260  4E 80 00 20 */	blr 
 
-/* 8029B324 0048 .text      updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel */
+/* 8029B324 037C .text      updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel */
 .global updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel
+updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 /* 8029B324 00298264  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8029B328 00298268  7C 08 02 A6 */	mflr r0
@@ -1015,21 +859,18 @@ updateDSPChannel__10JASChannelFPQ26JASDsp8TChannel:
 /* 8029B344 00298284  7C 9F 23 78 */	mr r31, r4
 /* 8029B348 00298288  81 83 00 0C */	lwz r12, 0xc(r3)
 /* 8029B34C 0029828C  28 0C 00 00 */	cmplwi r12, 0
-/* 8029B350 00298290  41 82 00 1C */	beq func_8029B36C
+/* 8029B350 00298290  41 82 00 1C */	beq lbl_8029B36C
 /* 8029B354 00298294  38 60 00 00 */	li r3, 0
 /* 8029B358 00298298  7F C4 F3 78 */	mr r4, r30
 /* 8029B35C 0029829C  7F E5 FB 78 */	mr r5, r31
 /* 8029B360 002982A0  80 DE 00 10 */	lwz r6, 0x10(r30)
 /* 8029B364 002982A4  7D 89 03 A6 */	mtctr r12
 /* 8029B368 002982A8  4E 80 04 21 */	bctrl 
-
-/* 8029B36C 0034 .text      func_8029B36C                  func_8029B36C                  */
-.global func_8029B36C
-func_8029B36C:
+lbl_8029B36C:
 /* 8029B36C 002982AC  80 7E 01 00 */	lwz r3, 0x100(r30)
 /* 8029B370 002982B0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8029B374 002982B4  28 00 00 00 */	cmplwi r0, 0
-/* 8029B378 002982B8  40 82 00 28 */	bne func_8029B3A0
+/* 8029B378 002982B8  40 82 00 28 */	bne lbl_8029B3A0
 /* 8029B37C 002982BC  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B380 002982C0  48 00 1F A1 */	bl free__13JASDSPChannelFv
 /* 8029B384 002982C4  38 00 00 00 */	li r0, 0
@@ -1038,15 +879,12 @@ func_8029B36C:
 /* 8029B390 002982D0  38 80 00 01 */	li r4, 1
 /* 8029B394 002982D4  4B FF F5 85 */	bl __dt__10JASChannelFv
 /* 8029B398 002982D8  38 60 FF FF */	li r3, -1
-/* 8029B39C 002982DC  48 00 02 E4 */	b func_8029B680
-
-/* 8029B3A0 0034 .text      func_8029B3A0                  func_8029B3A0                  */
-.global func_8029B3A0
-func_8029B3A0:
+/* 8029B39C 002982DC  48 00 02 E4 */	b lbl_8029B680
+lbl_8029B3A0:
 /* 8029B3A0 002982E0  7F C3 F3 78 */	mr r3, r30
 /* 8029B3A4 002982E4  48 00 09 1D */	bl checkBankDispose__10JASChannelCFv
 /* 8029B3A8 002982E8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8029B3AC 002982EC  41 82 00 28 */	beq func_8029B3D4
+/* 8029B3AC 002982EC  41 82 00 28 */	beq lbl_8029B3D4
 /* 8029B3B0 002982F0  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B3B4 002982F4  48 00 1F 6D */	bl free__13JASDSPChannelFv
 /* 8029B3B8 002982F8  38 00 00 00 */	li r0, 0
@@ -1055,11 +893,8 @@ func_8029B3A0:
 /* 8029B3C4 00298304  38 80 00 01 */	li r4, 1
 /* 8029B3C8 00298308  4B FF F5 51 */	bl __dt__10JASChannelFv
 /* 8029B3CC 0029830C  38 60 FF FF */	li r3, -1
-/* 8029B3D0 00298310  48 00 02 B0 */	b func_8029B680
-
-/* 8029B3D4 0058 .text      func_8029B3D4                  func_8029B3D4                  */
-.global func_8029B3D4
-func_8029B3D4:
+/* 8029B3D0 00298310  48 00 02 B0 */	b lbl_8029B680
+lbl_8029B3D4:
 /* 8029B3D4 00298314  7F E3 FB 78 */	mr r3, r31
 /* 8029B3D8 00298318  88 9E 00 04 */	lbz r4, 4(r30)
 /* 8029B3DC 0029831C  48 00 2B A5 */	bl setPauseFlag__Q26JASDsp8TChannelFUc
@@ -1075,24 +910,18 @@ func_8029B3D4:
 /* 8029B404 00298344  D0 21 00 2C */	stfs f1, 0x2c(r1)
 /* 8029B408 00298348  88 1E 00 04 */	lbz r0, 4(r30)
 /* 8029B40C 0029834C  28 00 00 00 */	cmplwi r0, 0
-/* 8029B410 00298350  41 82 00 4C */	beq func_8029B45C
+/* 8029B410 00298350  41 82 00 4C */	beq lbl_8029B45C
 /* 8029B414 00298354  38 00 00 00 */	li r0, 0
 /* 8029B418 00298358  80 7E 00 38 */	lwz r3, 0x38(r30)
 /* 8029B41C 0029835C  2C 03 00 03 */	cmpwi r3, 3
-/* 8029B420 00298360  41 82 00 0C */	beq func_8029B42C
+/* 8029B420 00298360  41 82 00 0C */	beq lbl_8029B42C
 /* 8029B424 00298364  2C 03 00 04 */	cmpwi r3, 4
-/* 8029B428 00298368  40 82 00 08 */	bne func_8029B430
-
-/* 8029B42C 0004 .text      func_8029B42C                  func_8029B42C                  */
-.global func_8029B42C
-func_8029B42C:
+/* 8029B428 00298368  40 82 00 08 */	bne lbl_8029B430
+lbl_8029B42C:
 /* 8029B42C 0029836C  38 00 00 01 */	li r0, 1
-
-/* 8029B430 002C .text      func_8029B430                  func_8029B430                  */
-.global func_8029B430
-func_8029B430:
+lbl_8029B430:
 /* 8029B430 00298370  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 8029B434 00298374  41 82 01 18 */	beq func_8029B54C
+/* 8029B434 00298374  41 82 01 18 */	beq lbl_8029B54C
 /* 8029B438 00298378  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B43C 0029837C  48 00 1E E5 */	bl free__13JASDSPChannelFv
 /* 8029B440 00298380  38 00 00 00 */	li r0, 0
@@ -1101,11 +930,8 @@ func_8029B430:
 /* 8029B44C 0029838C  38 80 00 01 */	li r4, 1
 /* 8029B450 00298390  4B FF F4 C9 */	bl __dt__10JASChannelFv
 /* 8029B454 00298394  38 60 FF FF */	li r3, -1
-/* 8029B458 00298398  48 00 02 28 */	b func_8029B680
-
-/* 8029B45C 0068 .text      func_8029B45C                  func_8029B45C                  */
-.global func_8029B45C
-func_8029B45C:
+/* 8029B458 00298398  48 00 02 28 */	b lbl_8029B680
+lbl_8029B45C:
 /* 8029B45C 0029839C  48 00 15 8D */	bl getDacRate__9JASDriverFv
 /* 8029B460 002983A0  C0 02 BC B8 */	lfs f0, JASChannel__LIT_832-_SDA2_BASE_(r2)
 /* 8029B464 002983A4  EF E0 08 24 */	fdivs f31, f0, f1
@@ -1117,39 +943,33 @@ func_8029B45C:
 /* 8029B47C 002983BC  48 00 09 5D */	bl incCounter__6JASLfoFf
 /* 8029B480 002983C0  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 8029B484 002983C4  28 03 00 00 */	cmplwi r3, 0
-/* 8029B488 002983C8  41 82 00 3C */	beq func_8029B4C4
+/* 8029B488 002983C8  41 82 00 3C */	beq lbl_8029B4C4
 /* 8029B48C 002983CC  38 03 FF FF */	addi r0, r3, -1
 /* 8029B490 002983D0  90 1E 00 14 */	stw r0, 0x14(r30)
 /* 8029B494 002983D4  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 8029B498 002983D8  28 00 00 00 */	cmplwi r0, 0
-/* 8029B49C 002983DC  40 82 00 28 */	bne func_8029B4C4
+/* 8029B49C 002983DC  40 82 00 28 */	bne lbl_8029B4C4
 /* 8029B4A0 002983E0  81 9E 00 0C */	lwz r12, 0xc(r30)
 /* 8029B4A4 002983E4  28 0C 00 00 */	cmplwi r12, 0
-/* 8029B4A8 002983E8  41 82 00 1C */	beq func_8029B4C4
+/* 8029B4A8 002983E8  41 82 00 1C */	beq lbl_8029B4C4
 /* 8029B4AC 002983EC  38 60 00 03 */	li r3, 3
 /* 8029B4B0 002983F0  7F C4 F3 78 */	mr r4, r30
 /* 8029B4B4 002983F4  7F E5 FB 78 */	mr r5, r31
 /* 8029B4B8 002983F8  80 DE 00 10 */	lwz r6, 0x10(r30)
 /* 8029B4BC 002983FC  7D 89 03 A6 */	mtctr r12
 /* 8029B4C0 00298400  4E 80 04 21 */	bctrl 
-
-/* 8029B4C4 0014 .text      func_8029B4C4                  func_8029B4C4                  */
-.global func_8029B4C4
-func_8029B4C4:
+lbl_8029B4C4:
 /* 8029B4C4 00298404  48 00 15 25 */	bl getDacRate__9JASDriverFv
 /* 8029B4C8 00298408  C0 02 BC BC */	lfs f0, JASChannel__LIT_833-_SDA2_BASE_(r2)
 /* 8029B4CC 0029840C  EF E0 08 24 */	fdivs f31, f0, f1
 /* 8029B4D0 00298410  3B 60 00 00 */	li r27, 0
 /* 8029B4D4 00298414  3B A0 00 00 */	li r29, 0
-
-/* 8029B4D8 0064 .text      func_8029B4D8                  func_8029B4D8                  */
-.global func_8029B4D8
-func_8029B4D8:
+lbl_8029B4D8:
 /* 8029B4D8 00298418  7F 9E EA 14 */	add r28, r30, r29
 /* 8029B4DC 0029841C  38 7C 00 1C */	addi r3, r28, 0x1c
 /* 8029B4E0 00298420  80 1C 00 1C */	lwz r0, 0x1c(r28)
 /* 8029B4E4 00298424  28 00 00 00 */	cmplwi r0, 0
-/* 8029B4E8 00298428  41 82 00 54 */	beq func_8029B53C
+/* 8029B4E8 00298428  41 82 00 54 */	beq lbl_8029B53C
 /* 8029B4EC 0029842C  FC 20 F8 90 */	fmr f1, f31
 /* 8029B4F0 00298430  48 00 0A 79 */	bl incCounter__13JASOscillatorFf
 /* 8029B4F4 00298434  7F C3 F3 78 */	mr r3, r30
@@ -1157,10 +977,10 @@ func_8029B4D8:
 /* 8029B4FC 0029843C  38 A1 00 14 */	addi r5, r1, 0x14
 /* 8029B500 00298440  4B FF F6 ED */	bl effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams
 /* 8029B504 00298444  28 1B 00 00 */	cmplwi r27, 0
-/* 8029B508 00298448  40 82 00 34 */	bne func_8029B53C
+/* 8029B508 00298448  40 82 00 34 */	bne lbl_8029B53C
 /* 8029B50C 0029844C  80 1C 00 38 */	lwz r0, 0x38(r28)
 /* 8029B510 00298450  2C 00 00 00 */	cmpwi r0, 0
-/* 8029B514 00298454  40 82 00 28 */	bne func_8029B53C
+/* 8029B514 00298454  40 82 00 28 */	bne lbl_8029B53C
 /* 8029B518 00298458  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8029B51C 0029845C  48 00 1E 05 */	bl free__13JASDSPChannelFv
 /* 8029B520 00298460  38 00 00 00 */	li r0, 0
@@ -1169,19 +989,13 @@ func_8029B4D8:
 /* 8029B52C 0029846C  38 80 00 01 */	li r4, 1
 /* 8029B530 00298470  4B FF F3 E9 */	bl __dt__10JASChannelFv
 /* 8029B534 00298474  38 60 FF FF */	li r3, -1
-/* 8029B538 00298478  48 00 01 48 */	b func_8029B680
-
-/* 8029B53C 0010 .text      func_8029B53C                  func_8029B53C                  */
-.global func_8029B53C
-func_8029B53C:
+/* 8029B538 00298478  48 00 01 48 */	b lbl_8029B680
+lbl_8029B53C:
 /* 8029B53C 0029847C  3B 7B 00 01 */	addi r27, r27, 1
 /* 8029B540 00298480  28 1B 00 02 */	cmplwi r27, 2
 /* 8029B544 00298484  3B BD 00 20 */	addi r29, r29, 0x20
-/* 8029B548 00298488  41 80 FF 90 */	blt func_8029B4D8
-
-/* 8029B54C 0020 .text      func_8029B54C                  func_8029B54C                  */
-.global func_8029B54C
-func_8029B54C:
+/* 8029B548 00298488  41 80 FF 90 */	blt lbl_8029B4D8
+lbl_8029B54C:
 /* 8029B54C 0029848C  7F C3 F3 78 */	mr r3, r30
 /* 8029B550 00298490  7F E4 FB 78 */	mr r4, r31
 /* 8029B554 00298494  38 A1 00 08 */	addi r5, r1, 8
@@ -1189,11 +1003,8 @@ func_8029B54C:
 /* 8029B55C 0029849C  4B FF F7 DD */	bl updateEffectorParam__10JASChannelFPQ26JASDsp8TChannelPUsRCQ213JASOscillator12EffectParams
 /* 8029B560 002984A0  3B 60 00 00 */	li r27, 0
 /* 8029B564 002984A4  3B A1 00 08 */	addi r29, r1, 8
-/* 8029B568 002984A8  48 00 00 20 */	b func_8029B588
-
-/* 8029B56C 001C .text      func_8029B56C                  func_8029B56C                  */
-.global func_8029B56C
-func_8029B56C:
+/* 8029B568 002984A8  48 00 00 20 */	b lbl_8029B588
+lbl_8029B56C:
 /* 8029B56C 002984AC  7F E3 FB 78 */	mr r3, r31
 /* 8029B570 002984B0  7F 64 DB 78 */	mr r4, r27
 /* 8029B574 002984B4  57 60 0D FC */	rlwinm r0, r27, 1, 0x17, 0x1e
@@ -1201,13 +1012,10 @@ func_8029B56C:
 /* 8029B57C 002984BC  7C 05 07 34 */	extsh r5, r0
 /* 8029B580 002984C0  48 00 29 D5 */	bl setMixerVolume__Q26JASDsp8TChannelFUcs
 /* 8029B584 002984C4  3B 7B 00 01 */	addi r27, r27, 1
-
-/* 8029B588 008C .text      func_8029B588                  func_8029B588                  */
-.global func_8029B588
-func_8029B588:
+lbl_8029B588:
 /* 8029B588 002984C8  57 60 06 3E */	clrlwi r0, r27, 0x18
 /* 8029B58C 002984CC  28 00 00 06 */	cmplwi r0, 6
-/* 8029B590 002984D0  41 80 FF DC */	blt func_8029B56C
+/* 8029B590 002984D0  41 80 FF DC */	blt lbl_8029B56C
 /* 8029B594 002984D4  38 7E 00 5C */	addi r3, r30, 0x5c
 /* 8029B598 002984D8  48 00 07 AD */	bl getValue__6JASLfoCFv
 /* 8029B59C 002984DC  C0 01 00 28 */	lfs f0, 0x28(r1)
@@ -1238,12 +1046,9 @@ func_8029B588:
 /* 8029B600 00298540  EC 24 00 32 */	fmuls f1, f4, f0
 /* 8029B604 00298544  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029B608 00298548  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029B60C 0029854C  40 80 00 08 */	bge func_8029B614
+/* 8029B60C 0029854C  40 80 00 08 */	bge lbl_8029B614
 /* 8029B610 00298550  FC 20 00 90 */	fmr f1, f0
-
-/* 8029B614 0068 .text      func_8029B614                  func_8029B614                  */
-.global func_8029B614
-func_8029B614:
+lbl_8029B614:
 /* 8029B614 00298554  7F E3 FB 78 */	mr r3, r31
 /* 8029B618 00298558  FC 00 08 1E */	fctiwz f0, f1
 /* 8029B61C 0029855C  D8 01 00 38 */	stfd f0, 0x38(r1)
@@ -1251,10 +1056,10 @@ func_8029B614:
 /* 8029B624 00298564  48 00 28 F9 */	bl setPitch__Q26JASDsp8TChannelFUs
 /* 8029B628 00298568  88 1E 00 04 */	lbz r0, 4(r30)
 /* 8029B62C 0029856C  28 00 00 00 */	cmplwi r0, 0
-/* 8029B630 00298570  40 82 00 4C */	bne func_8029B67C
+/* 8029B630 00298570  40 82 00 4C */	bne lbl_8029B67C
 /* 8029B634 00298574  80 1E 00 D4 */	lwz r0, 0xd4(r30)
 /* 8029B638 00298578  28 00 00 00 */	cmplwi r0, 0
-/* 8029B63C 0029857C  41 82 00 40 */	beq func_8029B67C
+/* 8029B63C 0029857C  41 82 00 40 */	beq lbl_8029B67C
 /* 8029B640 00298580  C0 7E 00 CC */	lfs f3, 0xcc(r30)
 /* 8029B644 00298584  C0 1E 00 D0 */	lfs f0, 0xd0(r30)
 /* 8029B648 00298588  EC 40 18 28 */	fsubs f2, f0, f3
@@ -1270,15 +1075,9 @@ func_8029B614:
 /* 8029B670 002985B0  80 7E 00 D4 */	lwz r3, 0xd4(r30)
 /* 8029B674 002985B4  38 03 FF FF */	addi r0, r3, -1
 /* 8029B678 002985B8  90 1E 00 D4 */	stw r0, 0xd4(r30)
-
-/* 8029B67C 0004 .text      func_8029B67C                  func_8029B67C                  */
-.global func_8029B67C
-func_8029B67C:
+lbl_8029B67C:
 /* 8029B67C 002985BC  38 60 00 00 */	li r3, 0
-
-/* 8029B680 0020 .text      func_8029B680                  func_8029B680                  */
-.global func_8029B680
-func_8029B680:
+lbl_8029B680:
 /* 8029B680 002985C0  E3 E1 00 68 */	psq_l f31, 104(r1), 0, qr0
 /* 8029B684 002985C4  CB E1 00 60 */	lfd f31, 0x60(r1)
 /* 8029B688 002985C8  39 61 00 60 */	addi r11, r1, 0x60
@@ -1288,8 +1087,9 @@ func_8029B680:
 /* 8029B698 002985D8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8029B69C 002985DC  4E 80 00 20 */	blr 
 
-/* 8029B6A0 0060 .text      updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff */
+/* 8029B6A0 0138 .text      updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff */
 .global updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff
+updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff:
 updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff:
 /* 8029B6A0 002985E0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8029B6A4 002985E4  7C 08 02 A6 */	mflr r0
@@ -1312,36 +1112,24 @@ updateAutoMixer__10JASChannelFPQ26JASDsp8TChannelffff:
 /* 8029B6E8 00298628  FF C0 20 90 */	fmr f30, f4
 /* 8029B6EC 0029862C  48 00 2A 95 */	bl getOutputMode__9JASDriverFv
 /* 8029B6F0 00298630  28 03 00 00 */	cmplwi r3, 0
-/* 8029B6F4 00298634  40 82 00 0C */	bne func_8029B700
+/* 8029B6F4 00298634  40 82 00 0C */	bne lbl_8029B700
 /* 8029B6F8 00298638  C0 02 BC C0 */	lfs f0, JASChannel__LIT_846-_SDA2_BASE_(r2)
 /* 8029B6FC 0029863C  EF 7B 00 32 */	fmuls f27, f27, f0
-
-/* 8029B700 0014 .text      func_8029B700                  func_8029B700                  */
-.global func_8029B700
-func_8029B700:
+lbl_8029B700:
 /* 8029B700 00298640  C3 E2 BC 84 */	lfs f31, LIT_545-_SDA2_BASE_(r2)
 /* 8029B704 00298644  FC 1B F8 40 */	fcmpo cr0, f27, f31
 /* 8029B708 00298648  4C 40 13 82 */	cror 2, 0, 2
-/* 8029B70C 0029864C  40 82 00 08 */	bne func_8029B714
-/* 8029B710 00298650  48 00 00 1C */	b func_8029B72C
-
-/* 8029B714 0014 .text      func_8029B714                  func_8029B714                  */
-.global func_8029B714
-func_8029B714:
+/* 8029B70C 0029864C  40 82 00 08 */	bne lbl_8029B714
+/* 8029B710 00298650  48 00 00 1C */	b lbl_8029B72C
+lbl_8029B714:
 /* 8029B714 00298654  C3 E2 BC 80 */	lfs f31, LIT_544-_SDA2_BASE_(r2)
 /* 8029B718 00298658  FC 1B F8 40 */	fcmpo cr0, f27, f31
 /* 8029B71C 0029865C  4C 41 13 82 */	cror 2, 1, 2
-/* 8029B720 00298660  40 82 00 08 */	bne func_8029B728
-/* 8029B724 00298664  48 00 00 08 */	b func_8029B72C
-
-/* 8029B728 0004 .text      func_8029B728                  func_8029B728                  */
-.global func_8029B728
-func_8029B728:
+/* 8029B720 00298660  40 82 00 08 */	bne lbl_8029B728
+/* 8029B724 00298664  48 00 00 08 */	b lbl_8029B72C
+lbl_8029B728:
 /* 8029B728 00298668  FF E0 D8 90 */	fmr f31, f27
-
-/* 8029B72C 00AC .text      func_8029B72C                  func_8029B72C                  */
-.global func_8029B72C
-func_8029B72C:
+lbl_8029B72C:
 /* 8029B72C 0029866C  48 00 2A 25 */	bl getChannelLevel_dsp__9JASDriverFv
 /* 8029B730 00298670  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8029B734 00298674  C8 22 BC A8 */	lfd f1, LIT_714-_SDA2_BASE_(r2)
@@ -1386,8 +1174,9 @@ func_8029B72C:
 /* 8029B7D0 00298710  38 21 00 90 */	addi r1, r1, 0x90
 /* 8029B7D4 00298714  4E 80 00 20 */	blr 
 
-/* 8029B7D8 0094 .text      updateMixer__10JASChannelFffffPUs updateMixer__10JASChannelFffffPUs */
+/* 8029B7D8 0424 .text      updateMixer__10JASChannelFffffPUs updateMixer__10JASChannelFffffPUs */
 .global updateMixer__10JASChannelFffffPUs
+updateMixer__10JASChannelFffffPUs:
 updateMixer__10JASChannelFffffPUs:
 /* 8029B7D8 00298718  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8029B7DC 0029871C  7C 08 02 A6 */	mflr r0
@@ -1426,29 +1215,23 @@ updateMixer__10JASChannelFffffPUs:
 /* 8029B860 002987A0  EF E0 C0 28 */	fsubs f31, f0, f24
 /* 8029B864 002987A4  EF C0 C8 28 */	fsubs f30, f0, f25
 /* 8029B868 002987A8  EF A0 D0 28 */	fsubs f29, f0, f26
-
-/* 8029B86C 0028 .text      func_8029B86C                  func_8029B86C                  */
-.global func_8029B86C
-func_8029B86C:
+lbl_8029B86C:
 /* 8029B86C 002987AC  FF 80 B8 90 */	fmr f28, f23
 /* 8029B870 002987B0  38 1C 00 8C */	addi r0, r28, 0x8c
 /* 8029B874 002987B4  7C 1D 02 2E */	lhzx r0, r29, r0
 /* 8029B878 002987B8  B0 01 00 08 */	sth r0, 8(r1)
 /* 8029B87C 002987BC  88 01 00 08 */	lbz r0, 8(r1)
 /* 8029B880 002987C0  28 00 00 00 */	cmplwi r0, 0
-/* 8029B884 002987C4  40 82 00 10 */	bne func_8029B894
+/* 8029B884 002987C4  40 82 00 10 */	bne lbl_8029B894
 /* 8029B888 002987C8  38 00 00 00 */	li r0, 0
 /* 8029B88C 002987CC  7C 1E E3 2E */	sthx r0, r30, r28
-/* 8029B890 002987D0  48 00 02 F4 */	b func_8029BB84
-
-/* 8029B894 0058 .text      func_8029B894                  func_8029B894                  */
-.global func_8029B894
-func_8029B894:
+/* 8029B890 002987D0  48 00 02 F4 */	b lbl_8029BB84
+lbl_8029B894:
 /* 8029B894 002987D4  88 01 00 09 */	lbz r0, 9(r1)
 /* 8029B898 002987D8  54 04 E7 3F */	rlwinm. r4, r0, 0x1c, 0x1c, 0x1f
-/* 8029B89C 002987DC  41 82 00 F4 */	beq func_8029B990
+/* 8029B89C 002987DC  41 82 00 F4 */	beq lbl_8029B990
 /* 8029B8A0 002987E0  28 04 00 07 */	cmplwi r4, 7
-/* 8029B8A4 002987E4  41 81 00 48 */	bgt func_8029B8EC
+/* 8029B8A4 002987E4  41 81 00 48 */	bgt lbl_8029B8EC
 /* 8029B8A8 002987E8  3C 60 80 3C */	lis r3, LIT_974@ha
 /* 8029B8AC 002987EC  38 63 78 84 */	addi r3, r3, LIT_974@l
 /* 8029B8B0 002987F0  54 80 10 3A */	slwi r0, r4, 2
@@ -1456,52 +1239,40 @@ func_8029B894:
 /* 8029B8B8 002987F8  7C 09 03 A6 */	mtctr r0
 /* 8029B8BC 002987FC  4E 80 04 20 */	bctr 
 /* 8029B8C0 00298800  FF 60 C0 90 */	fmr f27, f24
-/* 8029B8C4 00298804  48 00 00 28 */	b func_8029B8EC
+/* 8029B8C4 00298804  48 00 00 28 */	b lbl_8029B8EC
 /* 8029B8C8 00298808  FF 60 C8 90 */	fmr f27, f25
-/* 8029B8CC 0029880C  48 00 00 20 */	b func_8029B8EC
+/* 8029B8CC 0029880C  48 00 00 20 */	b lbl_8029B8EC
 /* 8029B8D0 00298810  FF 60 D0 90 */	fmr f27, f26
-/* 8029B8D4 00298814  48 00 00 18 */	b func_8029B8EC
+/* 8029B8D4 00298814  48 00 00 18 */	b lbl_8029B8EC
 /* 8029B8D8 00298818  FF 60 F8 90 */	fmr f27, f31
-/* 8029B8DC 0029881C  48 00 00 10 */	b func_8029B8EC
+/* 8029B8DC 0029881C  48 00 00 10 */	b lbl_8029B8EC
 /* 8029B8E0 00298820  FF 60 F0 90 */	fmr f27, f30
-/* 8029B8E4 00298824  48 00 00 08 */	b func_8029B8EC
+/* 8029B8E4 00298824  48 00 00 08 */	b lbl_8029B8EC
 /* 8029B8E8 00298828  FF 60 E8 90 */	fmr f27, f29
-
-/* 8029B8EC 0018 .text      func_8029B8EC                  func_8029B8EC                  */
-.global func_8029B8EC
-func_8029B8EC:
+lbl_8029B8EC:
 /* 8029B8EC 0029882C  2C 04 00 06 */	cmpwi r4, 6
-/* 8029B8F0 00298830  41 82 00 14 */	beq func_8029B904
-/* 8029B8F4 00298834  40 80 00 18 */	bge func_8029B90C
+/* 8029B8F0 00298830  41 82 00 14 */	beq lbl_8029B904
+/* 8029B8F4 00298834  40 80 00 18 */	bge lbl_8029B90C
 /* 8029B8F8 00298838  2C 04 00 02 */	cmpwi r4, 2
-/* 8029B8FC 0029883C  41 82 00 08 */	beq func_8029B904
-/* 8029B900 00298840  48 00 00 0C */	b func_8029B90C
-
-/* 8029B904 0008 .text      func_8029B904                  func_8029B904                  */
-.global func_8029B904
-func_8029B904:
+/* 8029B8FC 0029883C  41 82 00 08 */	beq lbl_8029B904
+/* 8029B900 00298840  48 00 00 0C */	b lbl_8029B90C
+lbl_8029B904:
 /* 8029B904 00298844  EF 9C 06 F2 */	fmuls f28, f28, f27
-/* 8029B908 00298848  48 00 00 88 */	b func_8029B990
-
-/* 8029B90C 0014 .text      func_8029B90C                  func_8029B90C                  */
-.global func_8029B90C
-func_8029B90C:
+/* 8029B908 00298848  48 00 00 88 */	b lbl_8029B990
+lbl_8029B90C:
 /* 8029B90C 0029884C  48 00 28 75 */	bl getOutputMode__9JASDriverFv
 /* 8029B910 00298850  28 03 00 00 */	cmplwi r3, 0
-/* 8029B914 00298854  40 82 00 0C */	bne func_8029B920
+/* 8029B914 00298854  40 82 00 0C */	bne lbl_8029B920
 /* 8029B918 00298858  EF 9C 06 F2 */	fmuls f28, f28, f27
-/* 8029B91C 0029885C  48 00 00 74 */	b func_8029B990
-
-/* 8029B920 0048 .text      func_8029B920                  func_8029B920                  */
-.global func_8029B920
-func_8029B920:
+/* 8029B91C 0029885C  48 00 00 74 */	b lbl_8029B990
+lbl_8029B920:
 /* 8029B920 00298860  C0 22 BC 88 */	lfs f1, LIT_546-_SDA2_BASE_(r2)
 /* 8029B924 00298864  C0 02 BC D0 */	lfs f0, LIT_971-_SDA2_BASE_(r2)
 /* 8029B928 00298868  EC 1B 00 32 */	fmuls f0, f27, f0
 /* 8029B92C 0029886C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8029B930 00298870  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029B934 00298874  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029B938 00298878  40 80 00 30 */	bge func_8029B968
+/* 8029B938 00298878  40 80 00 30 */	bge lbl_8029B968
 /* 8029B93C 0029887C  C0 02 BC C8 */	lfs f0, JASChannel__LIT_969-_SDA2_BASE_(r2)
 /* 8029B940 00298880  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029B944 00298884  FC 00 00 1E */	fctiwz f0, f0
@@ -1512,11 +1283,8 @@ func_8029B920:
 /* 8029B958 00298898  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029B95C 0029889C  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8029B960 002988A0  FC 00 00 50 */	fneg f0, f0
-/* 8029B964 002988A4  48 00 00 28 */	b func_8029B98C
-
-/* 8029B968 0024 .text      func_8029B968                  func_8029B968                  */
-.global func_8029B968
-func_8029B968:
+/* 8029B964 002988A4  48 00 00 28 */	b lbl_8029B98C
+lbl_8029B968:
 /* 8029B968 002988A8  C0 02 BC CC */	lfs f0, LIT_970-_SDA2_BASE_(r2)
 /* 8029B96C 002988AC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029B970 002988B0  FC 00 00 1E */	fctiwz f0, f0
@@ -1526,20 +1294,14 @@ func_8029B968:
 /* 8029B980 002988C0  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 8029B984 002988C4  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029B988 002988C8  7C 03 04 2E */	lfsx f0, r3, r0
-
-/* 8029B98C 0004 .text      func_8029B98C                  func_8029B98C                  */
-.global func_8029B98C
-func_8029B98C:
+lbl_8029B98C:
 /* 8029B98C 002988CC  EF 9C 00 32 */	fmuls f28, f28, f0
-
-/* 8029B990 0058 .text      func_8029B990                  func_8029B990                  */
-.global func_8029B990
-func_8029B990:
+lbl_8029B990:
 /* 8029B990 002988D0  88 01 00 09 */	lbz r0, 9(r1)
 /* 8029B994 002988D4  54 04 07 3F */	clrlwi. r4, r0, 0x1c
-/* 8029B998 002988D8  41 82 01 8C */	beq func_8029BB24
+/* 8029B998 002988D8  41 82 01 8C */	beq lbl_8029BB24
 /* 8029B99C 002988DC  28 04 00 07 */	cmplwi r4, 7
-/* 8029B9A0 002988E0  41 81 00 48 */	bgt func_8029B9E8
+/* 8029B9A0 002988E0  41 81 00 48 */	bgt lbl_8029B9E8
 /* 8029B9A4 002988E4  3C 60 80 3C */	lis r3, LIT_977@ha
 /* 8029B9A8 002988E8  38 63 78 64 */	addi r3, r3, LIT_977@l
 /* 8029B9AC 002988EC  54 80 10 3A */	slwi r0, r4, 2
@@ -1547,39 +1309,30 @@ func_8029B990:
 /* 8029B9B4 002988F4  7C 09 03 A6 */	mtctr r0
 /* 8029B9B8 002988F8  4E 80 04 20 */	bctr 
 /* 8029B9BC 002988FC  FF 60 C0 90 */	fmr f27, f24
-/* 8029B9C0 00298900  48 00 00 28 */	b func_8029B9E8
+/* 8029B9C0 00298900  48 00 00 28 */	b lbl_8029B9E8
 /* 8029B9C4 00298904  FF 60 C8 90 */	fmr f27, f25
-/* 8029B9C8 00298908  48 00 00 20 */	b func_8029B9E8
+/* 8029B9C8 00298908  48 00 00 20 */	b lbl_8029B9E8
 /* 8029B9CC 0029890C  FF 60 D0 90 */	fmr f27, f26
-/* 8029B9D0 00298910  48 00 00 18 */	b func_8029B9E8
+/* 8029B9D0 00298910  48 00 00 18 */	b lbl_8029B9E8
 /* 8029B9D4 00298914  FF 60 F8 90 */	fmr f27, f31
-/* 8029B9D8 00298918  48 00 00 10 */	b func_8029B9E8
+/* 8029B9D8 00298918  48 00 00 10 */	b lbl_8029B9E8
 /* 8029B9DC 0029891C  FF 60 F0 90 */	fmr f27, f30
-/* 8029B9E0 00298920  48 00 00 08 */	b func_8029B9E8
+/* 8029B9E0 00298920  48 00 00 08 */	b lbl_8029B9E8
 /* 8029B9E4 00298924  FF 60 E8 90 */	fmr f27, f29
-
-/* 8029B9E8 0024 .text      func_8029B9E8                  func_8029B9E8                  */
-.global func_8029B9E8
-func_8029B9E8:
+lbl_8029B9E8:
 /* 8029B9E8 00298928  2C 04 00 06 */	cmpwi r4, 6
-/* 8029B9EC 0029892C  41 82 00 AC */	beq func_8029BA98
-/* 8029B9F0 00298930  40 80 00 1C */	bge func_8029BA0C
+/* 8029B9EC 0029892C  41 82 00 AC */	beq lbl_8029BA98
+/* 8029B9F0 00298930  40 80 00 1C */	bge lbl_8029BA0C
 /* 8029B9F4 00298934  2C 04 00 03 */	cmpwi r4, 3
-/* 8029B9F8 00298938  41 82 00 1C */	beq func_8029BA14
-/* 8029B9FC 0029893C  40 80 00 A4 */	bge func_8029BAA0
+/* 8029B9F8 00298938  41 82 00 1C */	beq lbl_8029BA14
+/* 8029B9FC 0029893C  40 80 00 A4 */	bge lbl_8029BAA0
 /* 8029BA00 00298940  2C 04 00 02 */	cmpwi r4, 2
-/* 8029BA04 00298944  40 80 00 94 */	bge func_8029BA98
-/* 8029BA08 00298948  48 00 00 98 */	b func_8029BAA0
-
-/* 8029BA0C 0008 .text      func_8029BA0C                  func_8029BA0C                  */
-.global func_8029BA0C
-func_8029BA0C:
+/* 8029BA04 00298944  40 80 00 94 */	bge lbl_8029BA98
+/* 8029BA08 00298948  48 00 00 98 */	b lbl_8029BAA0
+lbl_8029BA0C:
 /* 8029BA0C 0029894C  2C 04 00 08 */	cmpwi r4, 8
-/* 8029BA10 00298950  40 80 00 90 */	bge func_8029BAA0
-
-/* 8029BA14 0058 .text      func_8029BA14                  func_8029BA14                  */
-.global func_8029BA14
-func_8029BA14:
+/* 8029BA10 00298950  40 80 00 90 */	bge lbl_8029BAA0
+lbl_8029BA14:
 /* 8029BA14 00298954  C0 42 BC 88 */	lfs f2, LIT_546-_SDA2_BASE_(r2)
 /* 8029BA18 00298958  C0 22 BC D4 */	lfs f1, LIT_972-_SDA2_BASE_(r2)
 /* 8029BA1C 0029895C  C0 02 BC D8 */	lfs f0, JASChannel__LIT_973-_SDA2_BASE_(r2)
@@ -1590,7 +1343,7 @@ func_8029BA14:
 /* 8029BA30 00298970  EC 22 00 32 */	fmuls f1, f2, f0
 /* 8029BA34 00298974  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029BA38 00298978  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029BA3C 0029897C  40 80 00 30 */	bge func_8029BA6C
+/* 8029BA3C 0029897C  40 80 00 30 */	bge lbl_8029BA6C
 /* 8029BA40 00298980  C0 02 BC C8 */	lfs f0, JASChannel__LIT_969-_SDA2_BASE_(r2)
 /* 8029BA44 00298984  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BA48 00298988  FC 00 00 1E */	fctiwz f0, f0
@@ -1601,11 +1354,8 @@ func_8029BA14:
 /* 8029BA5C 0029899C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BA60 002989A0  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8029BA64 002989A4  FC 00 00 50 */	fneg f0, f0
-/* 8029BA68 002989A8  48 00 00 28 */	b func_8029BA90
-
-/* 8029BA6C 0024 .text      func_8029BA6C                  func_8029BA6C                  */
-.global func_8029BA6C
-func_8029BA6C:
+/* 8029BA68 002989A8  48 00 00 28 */	b lbl_8029BA90
+lbl_8029BA6C:
 /* 8029BA6C 002989AC  C0 02 BC CC */	lfs f0, LIT_970-_SDA2_BASE_(r2)
 /* 8029BA70 002989B0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BA74 002989B4  FC 00 00 1E */	fctiwz f0, f0
@@ -1615,38 +1365,26 @@ func_8029BA6C:
 /* 8029BA84 002989C4  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 8029BA88 002989C8  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BA8C 002989CC  7C 03 04 2E */	lfsx f0, r3, r0
-
-/* 8029BA90 0008 .text      func_8029BA90                  func_8029BA90                  */
-.global func_8029BA90
-func_8029BA90:
+lbl_8029BA90:
 /* 8029BA90 002989D0  EF 9C 00 32 */	fmuls f28, f28, f0
-/* 8029BA94 002989D4  48 00 00 90 */	b func_8029BB24
-
-/* 8029BA98 0008 .text      func_8029BA98                  func_8029BA98                  */
-.global func_8029BA98
-func_8029BA98:
+/* 8029BA94 002989D4  48 00 00 90 */	b lbl_8029BB24
+lbl_8029BA98:
 /* 8029BA98 002989D8  EF 9C 06 F2 */	fmuls f28, f28, f27
-/* 8029BA9C 002989DC  48 00 00 88 */	b func_8029BB24
-
-/* 8029BAA0 0014 .text      func_8029BAA0                  func_8029BAA0                  */
-.global func_8029BAA0
-func_8029BAA0:
+/* 8029BA9C 002989DC  48 00 00 88 */	b lbl_8029BB24
+lbl_8029BAA0:
 /* 8029BAA0 002989E0  48 00 26 E1 */	bl getOutputMode__9JASDriverFv
 /* 8029BAA4 002989E4  28 03 00 00 */	cmplwi r3, 0
-/* 8029BAA8 002989E8  40 82 00 0C */	bne func_8029BAB4
+/* 8029BAA8 002989E8  40 82 00 0C */	bne lbl_8029BAB4
 /* 8029BAAC 002989EC  EF 9C 06 F2 */	fmuls f28, f28, f27
-/* 8029BAB0 002989F0  48 00 00 74 */	b func_8029BB24
-
-/* 8029BAB4 0048 .text      func_8029BAB4                  func_8029BAB4                  */
-.global func_8029BAB4
-func_8029BAB4:
+/* 8029BAB0 002989F0  48 00 00 74 */	b lbl_8029BB24
+lbl_8029BAB4:
 /* 8029BAB4 002989F4  C0 22 BC 88 */	lfs f1, LIT_546-_SDA2_BASE_(r2)
 /* 8029BAB8 002989F8  C0 02 BC D0 */	lfs f0, LIT_971-_SDA2_BASE_(r2)
 /* 8029BABC 002989FC  EC 1B 00 32 */	fmuls f0, f27, f0
 /* 8029BAC0 00298A00  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8029BAC4 00298A04  C0 02 BC 84 */	lfs f0, LIT_545-_SDA2_BASE_(r2)
 /* 8029BAC8 00298A08  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 8029BACC 00298A0C  40 80 00 30 */	bge func_8029BAFC
+/* 8029BACC 00298A0C  40 80 00 30 */	bge lbl_8029BAFC
 /* 8029BAD0 00298A10  C0 02 BC C8 */	lfs f0, JASChannel__LIT_969-_SDA2_BASE_(r2)
 /* 8029BAD4 00298A14  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BAD8 00298A18  FC 00 00 1E */	fctiwz f0, f0
@@ -1657,11 +1395,8 @@ func_8029BAB4:
 /* 8029BAEC 00298A2C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BAF0 00298A30  7C 03 04 2E */	lfsx f0, r3, r0
 /* 8029BAF4 00298A34  FC 00 00 50 */	fneg f0, f0
-/* 8029BAF8 00298A38  48 00 00 28 */	b func_8029BB20
-
-/* 8029BAFC 0024 .text      func_8029BAFC                  func_8029BAFC                  */
-.global func_8029BAFC
-func_8029BAFC:
+/* 8029BAF8 00298A38  48 00 00 28 */	b lbl_8029BB20
+lbl_8029BAFC:
 /* 8029BAFC 00298A3C  C0 02 BC CC */	lfs f0, LIT_970-_SDA2_BASE_(r2)
 /* 8029BB00 00298A40  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8029BB04 00298A44  FC 00 00 1E */	fctiwz f0, f0
@@ -1671,38 +1406,23 @@ func_8029BAFC:
 /* 8029BB14 00298A54  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 8029BB18 00298A58  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 8029BB1C 00298A5C  7C 03 04 2E */	lfsx f0, r3, r0
-
-/* 8029BB20 0004 .text      func_8029BB20                  func_8029BB20                  */
-.global func_8029BB20
-func_8029BB20:
+lbl_8029BB20:
 /* 8029BB20 00298A60  EF 9C 00 32 */	fmuls f28, f28, f0
-
-/* 8029BB24 0014 .text      func_8029BB24                  func_8029BB24                  */
-.global func_8029BB24
-func_8029BB24:
+lbl_8029BB24:
 /* 8029BB24 00298A64  C2 C2 BC 84 */	lfs f22, LIT_545-_SDA2_BASE_(r2)
 /* 8029BB28 00298A68  FC 1C B0 40 */	fcmpo cr0, f28, f22
 /* 8029BB2C 00298A6C  4C 40 13 82 */	cror 2, 0, 2
-/* 8029BB30 00298A70  40 82 00 08 */	bne func_8029BB38
-/* 8029BB34 00298A74  48 00 00 1C */	b func_8029BB50
-
-/* 8029BB38 0014 .text      func_8029BB38                  func_8029BB38                  */
-.global func_8029BB38
-func_8029BB38:
+/* 8029BB30 00298A70  40 82 00 08 */	bne lbl_8029BB38
+/* 8029BB34 00298A74  48 00 00 1C */	b lbl_8029BB50
+lbl_8029BB38:
 /* 8029BB38 00298A78  C2 C2 BC 80 */	lfs f22, LIT_544-_SDA2_BASE_(r2)
 /* 8029BB3C 00298A7C  FC 1C B0 40 */	fcmpo cr0, f28, f22
 /* 8029BB40 00298A80  4C 41 13 82 */	cror 2, 1, 2
-/* 8029BB44 00298A84  40 82 00 08 */	bne func_8029BB4C
-/* 8029BB48 00298A88  48 00 00 08 */	b func_8029BB50
-
-/* 8029BB4C 0004 .text      func_8029BB4C                  func_8029BB4C                  */
-.global func_8029BB4C
-func_8029BB4C:
+/* 8029BB44 00298A84  40 82 00 08 */	bne lbl_8029BB4C
+/* 8029BB48 00298A88  48 00 00 08 */	b lbl_8029BB50
+lbl_8029BB4C:
 /* 8029BB4C 00298A8C  FE C0 E0 90 */	fmr f22, f28
-
-/* 8029BB50 0034 .text      func_8029BB50                  func_8029BB50                  */
-.global func_8029BB50
-func_8029BB50:
+lbl_8029BB50:
 /* 8029BB50 00298A90  48 00 26 01 */	bl getChannelLevel_dsp__9JASDriverFv
 /* 8029BB54 00298A94  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8029BB58 00298A98  C8 22 BC A8 */	lfd f1, LIT_714-_SDA2_BASE_(r2)
@@ -1716,14 +1436,11 @@ func_8029BB50:
 /* 8029BB78 00298AB8  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8029BB7C 00298ABC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029BB80 00298AC0  7C 1E E3 2E */	sthx r0, r30, r28
-
-/* 8029BB84 0078 .text      func_8029BB84                  func_8029BB84                  */
-.global func_8029BB84
-func_8029BB84:
+lbl_8029BB84:
 /* 8029BB84 00298AC4  3B FF 00 01 */	addi r31, r31, 1
 /* 8029BB88 00298AC8  28 1F 00 06 */	cmplwi r31, 6
 /* 8029BB8C 00298ACC  3B 9C 00 02 */	addi r28, r28, 2
-/* 8029BB90 00298AD0  41 80 FC DC */	blt func_8029B86C
+/* 8029BB90 00298AD0  41 80 FC DC */	blt lbl_8029B86C
 /* 8029BB94 00298AD4  E3 E1 00 C8 */	psq_l f31, 200(r1), 0, qr0
 /* 8029BB98 00298AD8  CB E1 00 C0 */	lfd f31, 0xc0(r1)
 /* 8029BB9C 00298ADC  E3 C1 00 B8 */	psq_l f30, 184(r1), 0, qr0
@@ -1754,6 +1471,7 @@ func_8029BB84:
 /* 8029BBFC 0010 .text      free__10JASChannelFv           free__10JASChannelFv           */
 .global free__10JASChannelFv
 free__10JASChannelFv:
+free__10JASChannelFv:
 /* 8029BBFC 00298B3C  38 00 00 00 */	li r0, 0
 /* 8029BC00 00298B40  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8029BC04 00298B44  90 03 00 10 */	stw r0, 0x10(r3)
@@ -1761,6 +1479,7 @@ free__10JASChannelFv:
 
 /* 8029BC0C 003C .text      initBankDisposeMsgQueue__10JASChannelFv initBankDisposeMsgQueue__10JASChannelFv */
 .global initBankDisposeMsgQueue__10JASChannelFv
+initBankDisposeMsgQueue__10JASChannelFv:
 initBankDisposeMsgQueue__10JASChannelFv:
 /* 8029BC0C 00298B4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029BC10 00298B50  7C 08 02 A6 */	mflr r0
@@ -1778,8 +1497,9 @@ initBankDisposeMsgQueue__10JASChannelFv:
 /* 8029BC40 00298B80  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029BC44 00298B84  4E 80 00 20 */	blr 
 
-/* 8029BC48 0030 .text      receiveBankDisposeMsg__10JASChannelFv receiveBankDisposeMsg__10JASChannelFv */
+/* 8029BC48 0078 .text      receiveBankDisposeMsg__10JASChannelFv receiveBankDisposeMsg__10JASChannelFv */
 .global receiveBankDisposeMsg__10JASChannelFv
+receiveBankDisposeMsg__10JASChannelFv:
 receiveBankDisposeMsg__10JASChannelFv:
 /* 8029BC48 00298B88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029BC4C 00298B8C  7C 08 02 A6 */	mflr r0
@@ -1792,27 +1512,21 @@ receiveBankDisposeMsg__10JASChannelFv:
 /* 8029BC68 00298BA8  3B C3 1B F0 */	addi r30, r3, sBankDisposeList__10JASChannel@l
 /* 8029BC6C 00298BAC  3C 60 80 43 */	lis r3, sBankDisposeMsgQ__10JASChannel@ha
 /* 8029BC70 00298BB0  3B E3 1B 90 */	addi r31, r3, sBankDisposeMsgQ__10JASChannel@l
-/* 8029BC74 00298BB4  48 00 00 1C */	b func_8029BC90
-
-/* 8029BC78 0018 .text      func_8029BC78                  func_8029BC78                  */
-.global func_8029BC78
-func_8029BC78:
+/* 8029BC74 00298BB4  48 00 00 1C */	b lbl_8029BC90
+lbl_8029BC78:
 /* 8029BC78 00298BB8  80 81 00 08 */	lwz r4, 8(r1)
 /* 8029BC7C 00298BBC  80 6D 8D 18 */	lwz r3, sBankDisposeListSize__10JASChannel-_SDA_BASE_(r13)
 /* 8029BC80 00298BC0  54 60 10 3A */	slwi r0, r3, 2
 /* 8029BC84 00298BC4  7C 9E 01 2E */	stwx r4, r30, r0
 /* 8029BC88 00298BC8  38 03 00 01 */	addi r0, r3, 1
 /* 8029BC8C 00298BCC  90 0D 8D 18 */	stw r0, sBankDisposeListSize__10JASChannel-_SDA_BASE_(r13)
-
-/* 8029BC90 0030 .text      func_8029BC90                  func_8029BC90                  */
-.global func_8029BC90
-func_8029BC90:
+lbl_8029BC90:
 /* 8029BC90 00298BD0  7F E3 FB 78 */	mr r3, r31
 /* 8029BC94 00298BD4  38 81 00 08 */	addi r4, r1, 8
 /* 8029BC98 00298BD8  38 A0 00 00 */	li r5, 0
 /* 8029BC9C 00298BDC  48 0A 2E 21 */	bl OSReceiveMessage
 /* 8029BCA0 00298BE0  2C 03 00 00 */	cmpwi r3, 0
-/* 8029BCA4 00298BE4  40 82 FF D4 */	bne func_8029BC78
+/* 8029BCA4 00298BE4  40 82 FF D4 */	bne lbl_8029BC78
 /* 8029BCA8 00298BE8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8029BCAC 00298BEC  83 C1 00 18 */	lwz r30, 0x18(r1)
 /* 8029BCB0 00298BF0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1820,44 +1534,33 @@ func_8029BC90:
 /* 8029BCB8 00298BF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029BCBC 00298BFC  4E 80 00 20 */	blr 
 
-/* 8029BCC0 0014 .text      checkBankDispose__10JASChannelCFv checkBankDispose__10JASChannelCFv */
+/* 8029BCC0 0054 .text      checkBankDispose__10JASChannelCFv checkBankDispose__10JASChannelCFv */
 .global checkBankDispose__10JASChannelCFv
+checkBankDispose__10JASChannelCFv:
 checkBankDispose__10JASChannelCFv:
 /* 8029BCC0 00298C00  80 A3 00 18 */	lwz r5, 0x18(r3)
 /* 8029BCC4 00298C04  28 05 00 00 */	cmplwi r5, 0
-/* 8029BCC8 00298C08  40 82 00 0C */	bne func_8029BCD4
+/* 8029BCC8 00298C08  40 82 00 0C */	bne lbl_8029BCD4
 /* 8029BCCC 00298C0C  38 60 00 00 */	li r3, 0
 /* 8029BCD0 00298C10  4E 80 00 20 */	blr 
-
-/* 8029BCD4 001C .text      func_8029BCD4                  func_8029BCD4                  */
-.global func_8029BCD4
-func_8029BCD4:
+lbl_8029BCD4:
 /* 8029BCD4 00298C14  38 60 00 00 */	li r3, 0
 /* 8029BCD8 00298C18  80 0D 8D 18 */	lwz r0, sBankDisposeListSize__10JASChannel-_SDA_BASE_(r13)
 /* 8029BCDC 00298C1C  3C 80 80 43 */	lis r4, sBankDisposeList__10JASChannel@ha
 /* 8029BCE0 00298C20  38 84 1B F0 */	addi r4, r4, sBankDisposeList__10JASChannel@l
 /* 8029BCE4 00298C24  7C 09 03 A6 */	mtctr r0
 /* 8029BCE8 00298C28  2C 00 00 00 */	cmpwi r0, 0
-/* 8029BCEC 00298C2C  40 81 00 20 */	ble func_8029BD0C
-
-/* 8029BCF0 0014 .text      func_8029BCF0                  func_8029BCF0                  */
-.global func_8029BCF0
-func_8029BCF0:
+/* 8029BCEC 00298C2C  40 81 00 20 */	ble lbl_8029BD0C
+lbl_8029BCF0:
 /* 8029BCF0 00298C30  7C 04 18 2E */	lwzx r0, r4, r3
 /* 8029BCF4 00298C34  7C 05 00 40 */	cmplw r5, r0
-/* 8029BCF8 00298C38  40 82 00 0C */	bne func_8029BD04
+/* 8029BCF8 00298C38  40 82 00 0C */	bne lbl_8029BD04
 /* 8029BCFC 00298C3C  38 60 00 01 */	li r3, 1
 /* 8029BD00 00298C40  4E 80 00 20 */	blr 
-
-/* 8029BD04 0008 .text      func_8029BD04                  func_8029BD04                  */
-.global func_8029BD04
-func_8029BD04:
+lbl_8029BD04:
 /* 8029BD04 00298C44  38 63 00 04 */	addi r3, r3, 4
-/* 8029BD08 00298C48  42 00 FF E8 */	bdnz func_8029BCF0
-
-/* 8029BD0C 0008 .text      func_8029BD0C                  func_8029BD0C                  */
-.global func_8029BD0C
-func_8029BD0C:
+/* 8029BD08 00298C48  42 00 FF E8 */	bdnz lbl_8029BCF0
+lbl_8029BD0C:
 /* 8029BD0C 00298C4C  38 60 00 00 */	li r3, 0
 /* 8029BD10 00298C50  4E 80 00 20 */	blr 
 
@@ -1866,24 +1569,24 @@ func_8029BD0C:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803C7848 001C .data      LIT_662                        @662                           */
+/* 803C7848 001C .data      @662                           LIT_662                        */
 .global LIT_662
 LIT_662:
 .byte 0x80, 0x29, 0xac, 0x54, 0x80, 0x29, 0xac, 0x44, 0x80, 0x29, 0xac, 0x64, 0x80, 0x29, 0xac, 0x80 /* baserom.dol+0x3c4848 */
 .byte 0x80, 0x29, 0xac, 0x90, 0x80, 0x29, 0xac, 0xa0, 0x80, 0x29, 0xac, 0xb0 /* baserom.dol+0x3c4858 */
 
-/* 803C7864 0020 .data      LIT_977                        @977                           */
+/* 803C7864 0020 .data      @977                           LIT_977                        */
 .global LIT_977
 LIT_977:
 .byte 0x80, 0x29, 0xb9, 0xe8, 0x80, 0x29, 0xb9, 0xbc, 0x80, 0x29, 0xb9, 0xc4, 0x80, 0x29, 0xb9, 0xcc /* baserom.dol+0x3c4864 */
 .byte 0x80, 0x29, 0xb9, 0xe8, 0x80, 0x29, 0xb9, 0xd4, 0x80, 0x29, 0xb9, 0xdc, 0x80, 0x29, 0xb9, 0xe4 /* baserom.dol+0x3c4874 */
 
-/* 803C7884 0020 .data      LIT_974                        @974                           */
+/* 803C7884 0020 .data      @974                           LIT_974                        */
 .global LIT_974
 LIT_974:
 .byte 0x80, 0x29, 0xb8, 0xec, 0x80, 0x29, 0xb8, 0xc0, 0x80, 0x29, 0xb8, 0xc8, 0x80, 0x29, 0xb8, 0xd0 /* baserom.dol+0x3c4884 */
 .byte 0x80, 0x29, 0xb8, 0xec, 0x80, 0x29, 0xb8, 0xd8, 0x80, 0x29, 0xb8, 0xe0, 0x80, 0x29, 0xb8, 0xe8 /* baserom.dol+0x3c4894 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c48a4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -1905,7 +1608,7 @@ sBankDisposeMsg__10JASChannel:
 sBankDisposeList__10JASChannel:
 .skip 0x40
 
-/* 80431C30 000C .bss       LIT_556                        @556                           */
+/* 80431C30 000C .bss       @556                           LIT_556                        */
 .global LIT_556
 LIT_556:
 .skip 0xc
@@ -1927,96 +1630,96 @@ sBankDisposeListSize__10JASChannel:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455680 0004 .sdata2    LIT_544                        @544                           */
+/* 80455680 0004 .sdata2    @544                           LIT_544                        */
 .global LIT_544
 LIT_544:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d44e0 */
 
-/* 80455684 0004 .sdata2    LIT_545                        @545                           */
+/* 80455684 0004 .sdata2    @545                           LIT_545                        */
 .global LIT_545
 LIT_545:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44e4 */
 
-/* 80455688 0004 .sdata2    LIT_546                        @546                           */
+/* 80455688 0004 .sdata2    @546                           LIT_546                        */
 .global LIT_546
 LIT_546:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44e8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44ec */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80455690 0008 .sdata2    LIT_661                        @661                           */
+/* 80455690 0008 .sdata2    @661                           LIT_661                        */
 .global LIT_661
 LIT_661:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44f0 */
 
-/* 80455698 0008 .sdata2    LIT_685                        @685                           */
+/* 80455698 0008 .sdata2    @685                           LIT_685                        */
 .global LIT_685
 LIT_685:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d44f8 */
 
-/* 804556A0 0004 .sdata2    LIT_711                        @711                           */
+/* 804556A0 0004 .sdata2    @711                           LIT_711                        */
 .global LIT_711
 LIT_711:
 .byte 0x42, 0xfe, 0x00, 0x00 /* baserom.dol+0x3d4500 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4504 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804556A8 0008 .sdata2    LIT_714                        @714                           */
+/* 804556A8 0008 .sdata2    @714                           LIT_714                        */
 .global LIT_714
 LIT_714:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4508 */
 
-/* 804556B0 0004 .sdata2    JASChannel__LIT_775            @775                           */
+/* 804556B0 0004 .sdata2    @775                           JASChannel__LIT_775            */
 .global JASChannel__LIT_775
 JASChannel__LIT_775:
 .byte 0x41, 0x40, 0x00, 0x00 /* baserom.dol+0x3d4510 */
 
-/* 804556B4 0004 .sdata2    LIT_776                        @776                           */
+/* 804556B4 0004 .sdata2    @776                           LIT_776                        */
 .global LIT_776
 LIT_776:
 .byte 0x45, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4514 */
 
-/* 804556B8 0004 .sdata2    JASChannel__LIT_832            @832                           */
+/* 804556B8 0004 .sdata2    @832                           JASChannel__LIT_832            */
 .global JASChannel__LIT_832
 JASChannel__LIT_832:
 .byte 0x46, 0xfa, 0x39, 0x00 /* baserom.dol+0x3d4518 */
 
-/* 804556BC 0004 .sdata2    JASChannel__LIT_833            @833                           */
+/* 804556BC 0004 .sdata2    @833                           JASChannel__LIT_833            */
 .global JASChannel__LIT_833
 JASChannel__LIT_833:
 .byte 0x47, 0x3b, 0x80, 0x00 /* baserom.dol+0x3d451c */
 
-/* 804556C0 0004 .sdata2    JASChannel__LIT_846            @846                           */
+/* 804556C0 0004 .sdata2    @846                           JASChannel__LIT_846            */
 .global JASChannel__LIT_846
 JASChannel__LIT_846:
 .byte 0x3f, 0x34, 0xfd, 0xf4 /* baserom.dol+0x3d4520 */
 
-/* 804556C4 0004 .sdata2    JASChannel__LIT_847            @847                           */
+/* 804556C4 0004 .sdata2    @847                           JASChannel__LIT_847            */
 .global JASChannel__LIT_847
 JASChannel__LIT_847:
 .byte 0x42, 0xff, 0x00, 0x00 /* baserom.dol+0x3d4524 */
 
-/* 804556C8 0004 .sdata2    JASChannel__LIT_969            @969                           */
+/* 804556C8 0004 .sdata2    @969                           JASChannel__LIT_969            */
 .global JASChannel__LIT_969
 JASChannel__LIT_969:
 .byte 0xc4, 0xa2, 0xf9, 0x83 /* baserom.dol+0x3d4528 */
 
-/* 804556CC 0004 .sdata2    LIT_970                        @970                           */
+/* 804556CC 0004 .sdata2    @970                           LIT_970                        */
 .global LIT_970
 LIT_970:
 .byte 0x44, 0xa2, 0xf9, 0x83 /* baserom.dol+0x3d452c */
 
-/* 804556D0 0004 .sdata2    LIT_971                        @971                           */
+/* 804556D0 0004 .sdata2    @971                           LIT_971                        */
 .global LIT_971
 LIT_971:
 .byte 0x40, 0x49, 0x0f, 0xdb /* baserom.dol+0x3d4530 */
 
-/* 804556D4 0004 .sdata2    LIT_972                        @972                           */
+/* 804556D4 0004 .sdata2    @972                           LIT_972                        */
 .global LIT_972
 LIT_972:
 .byte 0x3e, 0xa6, 0xf9, 0x33 /* baserom.dol+0x3d4534 */
 
-/* 804556D8 0004 .sdata2    JASChannel__LIT_973            @973                           */
+/* 804556D8 0004 .sdata2    @973                           JASChannel__LIT_973            */
 .global JASChannel__LIT_973
 JASChannel__LIT_973:
 .byte 0x3e, 0xb2, 0x0d, 0x99 /* baserom.dol+0x3d4538 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d453c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 80006798 0030 .text      OSSwitchFiberEx__FUlUlUlUlUlUl OSSwitchFiberEx__FUlUlUlUlUlUl */
 .global OSSwitchFiberEx__FUlUlUlUlUlUl
 OSSwitchFiberEx__FUlUlUlUlUlUl:
+OSSwitchFiberEx__FUlUlUlUlUlUl:
 /* 80006798 000036D8  7C 08 02 A6 */	mflr r0
 /* 8000679C 000036DC  7C 29 0B 78 */	mr r9, r1
 /* 800067A0 000036E0  95 28 FF F8 */	stwu r9, -8(r8)
@@ -23,6 +24,7 @@ OSSwitchFiberEx__FUlUlUlUlUlUl:
 /* 800067C8 002C .text      my_PutString__FPCc             my_PutString__FPCc             */
 .global my_PutString__FPCc
 my_PutString__FPCc:
+my_PutString__FPCc:
 /* 800067C8 00003708  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800067CC 0000370C  7C 08 02 A6 */	mflr r0
 /* 800067D0 00003710  90 01 00 14 */	stw r0, 0x14(r1)
@@ -38,6 +40,7 @@ my_PutString__FPCc:
 /* 800067F4 0020 .text      OSVAttention__FPCcP16__va_list_struct OSVAttention__FPCcP16__va_list_struct */
 .global OSVAttention__FPCcP16__va_list_struct
 OSVAttention__FPCcP16__va_list_struct:
+OSVAttention__FPCcP16__va_list_struct:
 /* 800067F4 00003734  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800067F8 00003738  7C 08 02 A6 */	mflr r0
 /* 800067FC 0000373C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -47,13 +50,14 @@ OSVAttention__FPCcP16__va_list_struct:
 /* 8000680C 0000374C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80006810 00003750  4E 80 00 20 */	blr 
 
-/* 80006814 0030 .text      OSAttention                    OSAttention                    */
+/* 80006814 0080 .text      OSAttention                    OSAttention                    */
 .global OSAttention
+OSAttention:
 OSAttention:
 /* 80006814 00003754  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006818 00003758  7C 08 02 A6 */	mflr r0
 /* 8000681C 0000375C  90 01 00 84 */	stw r0, 0x84(r1)
-/* 80006820 00003760  40 86 00 24 */	bne cr1, func_80006844
+/* 80006820 00003760  40 86 00 24 */	bne cr1, lbl_80006844
 /* 80006824 00003764  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006828 00003768  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 8000682C 0000376C  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -62,10 +66,7 @@ OSAttention:
 /* 80006838 00003778  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 8000683C 0000377C  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006840 00003780  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006844 0050 .text      func_80006844                  func_80006844                  */
-.global func_80006844
-func_80006844:
+lbl_80006844:
 /* 80006844 00003784  90 61 00 08 */	stw r3, 8(r1)
 /* 80006848 00003788  90 81 00 0C */	stw r4, 0xc(r1)
 /* 8000684C 0000378C  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -90,43 +91,49 @@ func_80006844:
 /* 80006894 000C .text      OSReportDisable                OSReportDisable                */
 .global OSReportDisable
 OSReportDisable:
+OSReportDisable:
 /* 80006894 000037D4  38 00 00 01 */	li r0, 1
-/* 80006898 000037D8  98 0D 86 18 */	stb r0, sym_80450B98-_SDA_BASE_(r13)
+/* 80006898 000037D8  98 0D 86 18 */	stb r0, data_80450B98-_SDA_BASE_(r13)
 /* 8000689C 000037DC  4E 80 00 20 */	blr 
 
 /* 800068A0 000C .text      OSReportEnable                 OSReportEnable                 */
 .global OSReportEnable
 OSReportEnable:
+OSReportEnable:
 /* 800068A0 000037E0  38 00 00 00 */	li r0, 0
-/* 800068A4 000037E4  98 0D 86 18 */	stb r0, sym_80450B98-_SDA_BASE_(r13)
+/* 800068A4 000037E4  98 0D 86 18 */	stb r0, data_80450B98-_SDA_BASE_(r13)
 /* 800068A8 000037E8  4E 80 00 20 */	blr 
 
 /* 800068AC 000C .text      OSReportForceEnableOn          OSReportForceEnableOn          */
 .global OSReportForceEnableOn
 OSReportForceEnableOn:
+OSReportForceEnableOn:
 /* 800068AC 000037EC  38 00 00 01 */	li r0, 1
-/* 800068B0 000037F0  98 0D 86 1C */	stb r0, sym_80450B9C-_SDA_BASE_(r13)
+/* 800068B0 000037F0  98 0D 86 1C */	stb r0, data_80450B9C-_SDA_BASE_(r13)
 /* 800068B4 000037F4  4E 80 00 20 */	blr 
 
 /* 800068B8 000C .text      OSReportForceEnableOff         OSReportForceEnableOff         */
 .global OSReportForceEnableOff
 OSReportForceEnableOff:
+OSReportForceEnableOff:
 /* 800068B8 000037F8  38 00 00 00 */	li r0, 0
-/* 800068BC 000037FC  98 0D 86 1C */	stb r0, sym_80450B9C-_SDA_BASE_(r13)
+/* 800068BC 000037FC  98 0D 86 1C */	stb r0, data_80450B9C-_SDA_BASE_(r13)
 /* 800068C0 00003800  4E 80 00 20 */	blr 
 
 /* 800068C4 0018 .text      OSReportInit__Fv               OSReportInit__Fv               */
 .global OSReportInit__Fv
 OSReportInit__Fv:
-/* 800068C4 00003804  88 0D 86 34 */	lbz r0, sym_80450BB4-_SDA_BASE_(r13)
+OSReportInit__Fv:
+/* 800068C4 00003804  88 0D 86 34 */	lbz r0, data_80450BB4-_SDA_BASE_(r13)
 /* 800068C8 00003808  28 00 00 00 */	cmplwi r0, 0
 /* 800068CC 0000380C  4C 82 00 20 */	bnelr 
 /* 800068D0 00003810  38 00 00 01 */	li r0, 1
-/* 800068D4 00003814  98 0D 86 34 */	stb r0, sym_80450BB4-_SDA_BASE_(r13)
+/* 800068D4 00003814  98 0D 86 34 */	stb r0, data_80450BB4-_SDA_BASE_(r13)
 /* 800068D8 00003818  4E 80 00 20 */	blr 
 
-/* 800068DC 0068 .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct */
+/* 800068DC 0088 .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct */
 .global mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct
+mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct:
 mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct:
 /* 800068DC 0000381C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800068E0 00003820  7C 08 02 A6 */	mflr r0
@@ -137,11 +144,11 @@ mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct:
 /* 800068F4 00003834  7C 9E 23 78 */	mr r30, r4
 /* 800068F8 00003838  48 33 6D FD */	bl OSDisableInterrupts
 /* 800068FC 0000383C  7C 7F 1B 78 */	mr r31, r3
-/* 80006900 00003840  88 0D 86 35 */	lbz r0, sym_80450BB5-_SDA_BASE_(r13)
+/* 80006900 00003840  88 0D 86 35 */	lbz r0, data_80450BB5-_SDA_BASE_(r13)
 /* 80006904 00003844  28 00 00 00 */	cmplwi r0, 0
-/* 80006908 00003848  40 82 00 3C */	bne func_80006944
+/* 80006908 00003848  40 82 00 3C */	bne lbl_80006944
 /* 8000690C 0000384C  38 00 00 01 */	li r0, 1
-/* 80006910 00003850  98 0D 86 35 */	stb r0, sym_80450BB5-_SDA_BASE_(r13)
+/* 80006910 00003850  98 0D 86 35 */	stb r0, data_80450BB5-_SDA_BASE_(r13)
 /* 80006914 00003854  7F A3 EB 78 */	mr r3, r29
 /* 80006918 00003858  7F C4 F3 78 */	mr r4, r30
 /* 8000691C 0000385C  38 A0 00 00 */	li r5, 0
@@ -153,11 +160,8 @@ mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct:
 /* 80006934 00003874  39 08 08 00 */	addi r8, r8, 0x800
 /* 80006938 00003878  4B FF FE 61 */	bl OSSwitchFiberEx__FUlUlUlUlUlUl
 /* 8000693C 0000387C  38 00 00 00 */	li r0, 0
-/* 80006940 00003880  98 0D 86 35 */	stb r0, sym_80450BB5-_SDA_BASE_(r13)
-
-/* 80006944 0020 .text      func_80006944                  func_80006944                  */
-.global func_80006944
-func_80006944:
+/* 80006940 00003880  98 0D 86 35 */	stb r0, data_80450BB5-_SDA_BASE_(r13)
+lbl_80006944:
 /* 80006944 00003884  7F E3 FB 78 */	mr r3, r31
 /* 80006948 00003888  48 33 6D D5 */	bl OSRestoreInterrupts
 /* 8000694C 0000388C  39 61 00 20 */	addi r11, r1, 0x20
@@ -170,6 +174,7 @@ func_80006944:
 /* 80006964 0020 .text      mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct */
 .global mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct
 mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct:
+mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct:
 /* 80006964 000038A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80006968 000038A8  7C 08 02 A6 */	mflr r0
 /* 8000696C 000038AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -179,8 +184,9 @@ mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct:
 /* 8000697C 000038BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80006980 000038C0  4E 80 00 20 */	blr 
 
-/* 80006984 0038 .text      mDoPrintf_vprintf__FPCcP16__va_list_struct mDoPrintf_vprintf__FPCcP16__va_list_struct */
+/* 80006984 008C .text      mDoPrintf_vprintf__FPCcP16__va_list_struct mDoPrintf_vprintf__FPCcP16__va_list_struct */
 .global mDoPrintf_vprintf__FPCcP16__va_list_struct
+mDoPrintf_vprintf__FPCcP16__va_list_struct:
 mDoPrintf_vprintf__FPCcP16__va_list_struct:
 /* 80006984 000038C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80006988 000038C8  7C 08 02 A6 */	mflr r0
@@ -191,42 +197,30 @@ mDoPrintf_vprintf__FPCcP16__va_list_struct:
 /* 8000699C 000038DC  7C 9E 23 78 */	mr r30, r4
 /* 800069A0 000038E0  48 00 E3 C5 */	bl mDoExt_GetCurrentRunningThread__Fv
 /* 800069A4 000038E4  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800069A8 000038E8  40 82 00 14 */	bne func_800069BC
+/* 800069A8 000038E8  40 82 00 14 */	bne lbl_800069BC
 /* 800069AC 000038EC  7F A3 EB 78 */	mr r3, r29
 /* 800069B0 000038F0  7F C4 F3 78 */	mr r4, r30
 /* 800069B4 000038F4  4B FF FF 29 */	bl mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct
-/* 800069B8 000038F8  48 00 00 40 */	b func_800069F8
-
-/* 800069BC 0020 .text      func_800069BC                  func_800069BC                  */
-.global func_800069BC
-func_800069BC:
+/* 800069B8 000038F8  48 00 00 40 */	b lbl_800069F8
+lbl_800069BC:
 /* 800069BC 000038FC  48 33 56 3D */	bl OSGetStackPointer
 /* 800069C0 00003900  80 9F 03 08 */	lwz r4, 0x308(r31)
 /* 800069C4 00003904  38 04 0A 00 */	addi r0, r4, 0xa00
 /* 800069C8 00003908  7C 03 00 40 */	cmplw r3, r0
-/* 800069CC 0000390C  41 80 00 10 */	blt func_800069DC
+/* 800069CC 0000390C  41 80 00 10 */	blt lbl_800069DC
 /* 800069D0 00003910  80 1F 03 04 */	lwz r0, 0x304(r31)
 /* 800069D4 00003914  7C 03 00 40 */	cmplw r3, r0
-/* 800069D8 00003918  40 81 00 14 */	ble func_800069EC
-
-/* 800069DC 0010 .text      func_800069DC                  func_800069DC                  */
-.global func_800069DC
-func_800069DC:
+/* 800069D8 00003918  40 81 00 14 */	ble lbl_800069EC
+lbl_800069DC:
 /* 800069DC 0000391C  7F A3 EB 78 */	mr r3, r29
 /* 800069E0 00003920  7F C4 F3 78 */	mr r4, r30
 /* 800069E4 00003924  4B FF FE F9 */	bl mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct
-/* 800069E8 00003928  48 00 00 10 */	b func_800069F8
-
-/* 800069EC 000C .text      func_800069EC                  func_800069EC                  */
-.global func_800069EC
-func_800069EC:
+/* 800069E8 00003928  48 00 00 10 */	b lbl_800069F8
+lbl_800069EC:
 /* 800069EC 0000392C  7F A3 EB 78 */	mr r3, r29
 /* 800069F0 00003930  7F C4 F3 78 */	mr r4, r30
 /* 800069F4 00003934  4B FF FF 71 */	bl mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct
-
-/* 800069F8 0018 .text      func_800069F8                  func_800069F8                  */
-.global func_800069F8
-func_800069F8:
+lbl_800069F8:
 /* 800069F8 00003938  39 61 00 20 */	addi r11, r1, 0x20
 /* 800069FC 0000393C  48 35 B8 2D */	bl _restgpr_29
 /* 80006A00 00003940  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -234,8 +228,9 @@ func_800069F8:
 /* 80006A08 00003948  38 21 00 20 */	addi r1, r1, 0x20
 /* 80006A0C 0000394C  4E 80 00 20 */	blr 
 
-/* 80006A10 002C .text      mDoPrintf_VReport              mDoPrintf_VReport              */
+/* 80006A10 008C .text      mDoPrintf_VReport              mDoPrintf_VReport              */
 .global mDoPrintf_VReport
+mDoPrintf_VReport:
 mDoPrintf_VReport:
 /* 80006A10 00003950  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80006A14 00003954  7C 08 02 A6 */	mflr r0
@@ -244,44 +239,32 @@ mDoPrintf_VReport:
 /* 80006A20 00003960  93 C1 00 08 */	stw r30, 8(r1)
 /* 80006A24 00003964  7C 7E 1B 78 */	mr r30, r3
 /* 80006A28 00003968  7C 9F 23 78 */	mr r31, r4
-/* 80006A2C 0000396C  88 0D 86 34 */	lbz r0, sym_80450BB4-_SDA_BASE_(r13)
+/* 80006A2C 0000396C  88 0D 86 34 */	lbz r0, data_80450BB4-_SDA_BASE_(r13)
 /* 80006A30 00003970  28 00 00 00 */	cmplwi r0, 0
-/* 80006A34 00003974  40 82 00 08 */	bne func_80006A3C
+/* 80006A34 00003974  40 82 00 08 */	bne lbl_80006A3C
 /* 80006A38 00003978  4B FF FE 8D */	bl OSReportInit__Fv
-
-/* 80006A3C 0018 .text      func_80006A3C                  func_80006A3C                  */
-.global func_80006A3C
-func_80006A3C:
-/* 80006A3C 0000397C  88 0D 86 1C */	lbz r0, sym_80450B9C-_SDA_BASE_(r13)
+lbl_80006A3C:
+/* 80006A3C 0000397C  88 0D 86 1C */	lbz r0, data_80450B9C-_SDA_BASE_(r13)
 /* 80006A40 00003980  28 00 00 00 */	cmplwi r0, 0
-/* 80006A44 00003984  40 82 00 10 */	bne func_80006A54
-/* 80006A48 00003988  88 0D 86 18 */	lbz r0, sym_80450B98-_SDA_BASE_(r13)
+/* 80006A44 00003984  40 82 00 10 */	bne lbl_80006A54
+/* 80006A48 00003988  88 0D 86 18 */	lbz r0, data_80450B98-_SDA_BASE_(r13)
 /* 80006A4C 0000398C  28 00 00 00 */	cmplwi r0, 0
-/* 80006A50 00003990  40 82 00 34 */	bne func_80006A84
-
-/* 80006A54 0018 .text      func_80006A54                  func_80006A54                  */
-.global func_80006A54
-func_80006A54:
+/* 80006A50 00003990  40 82 00 34 */	bne lbl_80006A84
+lbl_80006A54:
 /* 80006A54 00003994  48 00 E3 11 */	bl mDoExt_GetCurrentRunningThread__Fv
 /* 80006A58 00003998  80 0D 86 20 */	lwz r0, __OSReport_MonopolyThread-_SDA_BASE_(r13)
 /* 80006A5C 0000399C  28 00 00 00 */	cmplwi r0, 0
-/* 80006A60 000039A0  41 82 00 0C */	beq func_80006A6C
+/* 80006A60 000039A0  41 82 00 0C */	beq lbl_80006A6C
 /* 80006A64 000039A4  7C 00 18 40 */	cmplw r0, r3
-/* 80006A68 000039A8  40 82 00 1C */	bne func_80006A84
-
-/* 80006A6C 0018 .text      func_80006A6C                  func_80006A6C                  */
-.global func_80006A6C
-func_80006A6C:
+/* 80006A68 000039A8  40 82 00 1C */	bne lbl_80006A84
+lbl_80006A6C:
 /* 80006A6C 000039AC  7F C3 F3 78 */	mr r3, r30
 /* 80006A70 000039B0  7F E4 FB 78 */	mr r4, r31
 /* 80006A74 000039B4  4B FF FF 11 */	bl mDoPrintf_vprintf__FPCcP16__va_list_struct
 /* 80006A78 000039B8  80 6D 86 24 */	lwz r3, print_counts-_SDA_BASE_(r13)
 /* 80006A7C 000039BC  38 03 00 01 */	addi r0, r3, 1
 /* 80006A80 000039C0  90 0D 86 24 */	stw r0, print_counts-_SDA_BASE_(r13)
-
-/* 80006A84 0018 .text      func_80006A84                  func_80006A84                  */
-.global func_80006A84
-func_80006A84:
+lbl_80006A84:
 /* 80006A84 000039C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80006A88 000039C8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80006A8C 000039CC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -292,6 +275,7 @@ func_80006A84:
 /* 80006A9C 0020 .text      OSVReport                      OSVReport                      */
 .global OSVReport
 OSVReport:
+OSVReport:
 /* 80006A9C 000039DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80006AA0 000039E0  7C 08 02 A6 */	mflr r0
 /* 80006AA4 000039E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -301,13 +285,14 @@ OSVReport:
 /* 80006AB4 000039F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80006AB8 000039F8  4E 80 00 20 */	blr 
 
-/* 80006ABC 0030 .text      OSReport                       OSReport                       */
+/* 80006ABC 0080 .text      OSReport                       OSReport                       */
 .global OSReport
+OSReport:
 OSReport:
 /* 80006ABC 000039FC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006AC0 00003A00  7C 08 02 A6 */	mflr r0
 /* 80006AC4 00003A04  90 01 00 84 */	stw r0, 0x84(r1)
-/* 80006AC8 00003A08  40 86 00 24 */	bne cr1, func_80006AEC
+/* 80006AC8 00003A08  40 86 00 24 */	bne cr1, lbl_80006AEC
 /* 80006ACC 00003A0C  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006AD0 00003A10  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006AD4 00003A14  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -316,10 +301,7 @@ OSReport:
 /* 80006AE0 00003A20  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006AE4 00003A24  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006AE8 00003A28  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006AEC 0050 .text      func_80006AEC                  func_80006AEC                  */
-.global func_80006AEC
-func_80006AEC:
+lbl_80006AEC:
 /* 80006AEC 00003A2C  90 61 00 08 */	stw r3, 8(r1)
 /* 80006AF0 00003A30  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006AF4 00003A34  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -341,15 +323,16 @@ func_80006AEC:
 /* 80006B34 00003A74  38 21 00 80 */	addi r1, r1, 0x80
 /* 80006B38 00003A78  4E 80 00 20 */	blr 
 
-/* 80006B3C 0038 .text      OSReport_FatalError            OSReport_FatalError            */
+/* 80006B3C 00D0 .text      OSReport_FatalError            OSReport_FatalError            */
 .global OSReport_FatalError
+OSReport_FatalError:
 OSReport_FatalError:
 /* 80006B3C 00003A7C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006B40 00003A80  7C 08 02 A6 */	mflr r0
 /* 80006B44 00003A84  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80006B48 00003A88  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 80006B4C 00003A8C  7C 7F 1B 78 */	mr r31, r3
-/* 80006B50 00003A90  40 86 00 24 */	bne cr1, func_80006B74
+/* 80006B50 00003A90  40 86 00 24 */	bne cr1, lbl_80006B74
 /* 80006B54 00003A94  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006B58 00003A98  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006B5C 00003A9C  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -358,10 +341,7 @@ OSReport_FatalError:
 /* 80006B68 00003AA8  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006B6C 00003AAC  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006B70 00003AB0  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006B74 0098 .text      func_80006B74                  func_80006B74                  */
-.global func_80006B74
-func_80006B74:
+lbl_80006B74:
 /* 80006B74 00003AB4  90 61 00 08 */	stw r3, 8(r1)
 /* 80006B78 00003AB8  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006B7C 00003ABC  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -401,15 +381,16 @@ func_80006B74:
 /* 80006C04 00003B44  38 21 00 80 */	addi r1, r1, 0x80
 /* 80006C08 00003B48  4E 80 00 20 */	blr 
 
-/* 80006C0C 0038 .text      OSReport_Error                 OSReport_Error                 */
+/* 80006C0C 00E0 .text      OSReport_Error                 OSReport_Error                 */
 .global OSReport_Error
+OSReport_Error:
 OSReport_Error:
 /* 80006C0C 00003B4C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006C10 00003B50  7C 08 02 A6 */	mflr r0
 /* 80006C14 00003B54  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80006C18 00003B58  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 80006C1C 00003B5C  7C 7F 1B 78 */	mr r31, r3
-/* 80006C20 00003B60  40 86 00 24 */	bne cr1, func_80006C44
+/* 80006C20 00003B60  40 86 00 24 */	bne cr1, lbl_80006C44
 /* 80006C24 00003B64  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006C28 00003B68  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006C2C 00003B6C  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -418,10 +399,7 @@ OSReport_Error:
 /* 80006C38 00003B78  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006C3C 00003B7C  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006C40 00003B80  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006C44 0094 .text      func_80006C44                  func_80006C44                  */
-.global func_80006C44
-func_80006C44:
+lbl_80006C44:
 /* 80006C44 00003B84  90 61 00 08 */	stw r3, 8(r1)
 /* 80006C48 00003B88  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006C4C 00003B8C  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -433,9 +411,9 @@ func_80006C44:
 /* 80006C64 00003BA4  80 6D 86 28 */	lwz r3, print_errors-_SDA_BASE_(r13)
 /* 80006C68 00003BA8  38 03 00 01 */	addi r0, r3, 1
 /* 80006C6C 00003BAC  90 0D 86 28 */	stw r0, print_errors-_SDA_BASE_(r13)
-/* 80006C70 00003BB0  88 0D 86 19 */	lbz r0, sym_80450B99-_SDA_BASE_(r13)
+/* 80006C70 00003BB0  88 0D 86 19 */	lbz r0, data_80450B99-_SDA_BASE_(r13)
 /* 80006C74 00003BB4  28 00 00 00 */	cmplwi r0, 0
-/* 80006C78 00003BB8  40 82 00 60 */	bne func_80006CD8
+/* 80006C78 00003BB8  40 82 00 60 */	bne lbl_80006CD8
 /* 80006C7C 00003BBC  3C 00 01 00 */	lis r0, 0x100
 /* 80006C80 00003BC0  90 01 00 68 */	stw r0, 0x68(r1)
 /* 80006C84 00003BC4  38 01 00 88 */	addi r0, r1, 0x88
@@ -459,25 +437,23 @@ func_80006C44:
 /* 80006CCC 00003C0C  38 63 29 B0 */	addi r3, r3, __files@l
 /* 80006CD0 00003C10  38 63 00 50 */	addi r3, r3, 0x50
 /* 80006CD4 00003C14  48 35 EB ED */	bl fflush
-
-/* 80006CD8 0014 .text      func_80006CD8                  func_80006CD8                  */
-.global func_80006CD8
-func_80006CD8:
+lbl_80006CD8:
 /* 80006CD8 00003C18  83 E1 00 7C */	lwz r31, 0x7c(r1)
 /* 80006CDC 00003C1C  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80006CE0 00003C20  7C 08 03 A6 */	mtlr r0
 /* 80006CE4 00003C24  38 21 00 80 */	addi r1, r1, 0x80
 /* 80006CE8 00003C28  4E 80 00 20 */	blr 
 
-/* 80006CEC 0038 .text      OSReport_Warning               OSReport_Warning               */
+/* 80006CEC 00E0 .text      OSReport_Warning               OSReport_Warning               */
 .global OSReport_Warning
+OSReport_Warning:
 OSReport_Warning:
 /* 80006CEC 00003C2C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006CF0 00003C30  7C 08 02 A6 */	mflr r0
 /* 80006CF4 00003C34  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80006CF8 00003C38  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 80006CFC 00003C3C  7C 7F 1B 78 */	mr r31, r3
-/* 80006D00 00003C40  40 86 00 24 */	bne cr1, func_80006D24
+/* 80006D00 00003C40  40 86 00 24 */	bne cr1, lbl_80006D24
 /* 80006D04 00003C44  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006D08 00003C48  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006D0C 00003C4C  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -486,10 +462,7 @@ OSReport_Warning:
 /* 80006D18 00003C58  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006D1C 00003C5C  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006D20 00003C60  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006D24 0094 .text      func_80006D24                  func_80006D24                  */
-.global func_80006D24
-func_80006D24:
+lbl_80006D24:
 /* 80006D24 00003C64  90 61 00 08 */	stw r3, 8(r1)
 /* 80006D28 00003C68  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006D2C 00003C6C  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -501,9 +474,9 @@ func_80006D24:
 /* 80006D44 00003C84  80 6D 86 2C */	lwz r3, print_warings-_SDA_BASE_(r13)
 /* 80006D48 00003C88  38 03 00 01 */	addi r0, r3, 1
 /* 80006D4C 00003C8C  90 0D 86 2C */	stw r0, print_warings-_SDA_BASE_(r13)
-/* 80006D50 00003C90  88 0D 86 1A */	lbz r0, sym_80450B9A-_SDA_BASE_(r13)
+/* 80006D50 00003C90  88 0D 86 1A */	lbz r0, data_80450B9A-_SDA_BASE_(r13)
 /* 80006D54 00003C94  28 00 00 00 */	cmplwi r0, 0
-/* 80006D58 00003C98  40 82 00 60 */	bne func_80006DB8
+/* 80006D58 00003C98  40 82 00 60 */	bne lbl_80006DB8
 /* 80006D5C 00003C9C  3C 00 01 00 */	lis r0, 0x100
 /* 80006D60 00003CA0  90 01 00 68 */	stw r0, 0x68(r1)
 /* 80006D64 00003CA4  38 01 00 88 */	addi r0, r1, 0x88
@@ -527,25 +500,23 @@ func_80006D24:
 /* 80006DAC 00003CEC  38 63 29 B0 */	addi r3, r3, __files@l
 /* 80006DB0 00003CF0  38 63 00 50 */	addi r3, r3, 0x50
 /* 80006DB4 00003CF4  48 35 EB 0D */	bl fflush
-
-/* 80006DB8 0014 .text      func_80006DB8                  func_80006DB8                  */
-.global func_80006DB8
-func_80006DB8:
+lbl_80006DB8:
 /* 80006DB8 00003CF8  83 E1 00 7C */	lwz r31, 0x7c(r1)
 /* 80006DBC 00003CFC  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80006DC0 00003D00  7C 08 03 A6 */	mtlr r0
 /* 80006DC4 00003D04  38 21 00 80 */	addi r1, r1, 0x80
 /* 80006DC8 00003D08  4E 80 00 20 */	blr 
 
-/* 80006DCC 0038 .text      OSReport_System                OSReport_System                */
+/* 80006DCC 00B0 .text      OSReport_System                OSReport_System                */
 .global OSReport_System
+OSReport_System:
 OSReport_System:
 /* 80006DCC 00003D0C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80006DD0 00003D10  7C 08 02 A6 */	mflr r0
 /* 80006DD4 00003D14  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80006DD8 00003D18  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 80006DDC 00003D1C  7C 7F 1B 78 */	mr r31, r3
-/* 80006DE0 00003D20  40 86 00 24 */	bne cr1, func_80006E04
+/* 80006DE0 00003D20  40 86 00 24 */	bne cr1, lbl_80006E04
 /* 80006DE4 00003D24  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006DE8 00003D28  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006DEC 00003D2C  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -554,10 +525,7 @@ OSReport_System:
 /* 80006DF8 00003D38  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006DFC 00003D3C  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006E00 00003D40  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006E04 0064 .text      func_80006E04                  func_80006E04                  */
-.global func_80006E04
-func_80006E04:
+lbl_80006E04:
 /* 80006E04 00003D44  90 61 00 08 */	stw r3, 8(r1)
 /* 80006E08 00003D48  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006E0C 00003D4C  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -569,9 +537,9 @@ func_80006E04:
 /* 80006E24 00003D64  80 6D 86 30 */	lwz r3, print_systems-_SDA_BASE_(r13)
 /* 80006E28 00003D68  38 03 00 01 */	addi r0, r3, 1
 /* 80006E2C 00003D6C  90 0D 86 30 */	stw r0, print_systems-_SDA_BASE_(r13)
-/* 80006E30 00003D70  88 0D 86 1B */	lbz r0, sym_80450B9B-_SDA_BASE_(r13)
+/* 80006E30 00003D70  88 0D 86 1B */	lbz r0, data_80450B9B-_SDA_BASE_(r13)
 /* 80006E34 00003D74  28 00 00 00 */	cmplwi r0, 0
-/* 80006E38 00003D78  40 82 00 30 */	bne func_80006E68
+/* 80006E38 00003D78  40 82 00 30 */	bne lbl_80006E68
 /* 80006E3C 00003D7C  3C 00 01 00 */	lis r0, 0x100
 /* 80006E40 00003D80  90 01 00 68 */	stw r0, 0x68(r1)
 /* 80006E44 00003D84  38 01 00 88 */	addi r0, r1, 0x88
@@ -583,18 +551,16 @@ func_80006E04:
 /* 80006E5C 00003D9C  38 81 00 68 */	addi r4, r1, 0x68
 /* 80006E60 00003DA0  4B FF F9 95 */	bl OSVAttention__FPCcP16__va_list_struct
 /* 80006E64 00003DA4  4B FF FA 55 */	bl OSReportForceEnableOff
-
-/* 80006E68 0014 .text      func_80006E68                  func_80006E68                  */
-.global func_80006E68
-func_80006E68:
+lbl_80006E68:
 /* 80006E68 00003DA8  83 E1 00 7C */	lwz r31, 0x7c(r1)
 /* 80006E6C 00003DAC  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80006E70 00003DB0  7C 08 03 A6 */	mtlr r0
 /* 80006E74 00003DB4  38 21 00 80 */	addi r1, r1, 0x80
 /* 80006E78 00003DB8  4E 80 00 20 */	blr 
 
-/* 80006E7C 0044 .text      OSPanic                        OSPanic                        */
+/* 80006E7C 0138 .text      OSPanic                        OSPanic                        */
 .global OSPanic
+OSPanic:
 OSPanic:
 /* 80006E7C 00003DBC  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80006E80 00003DC0  7C 08 02 A6 */	mflr r0
@@ -604,7 +570,7 @@ OSPanic:
 /* 80006E90 00003DD0  7C 7F 1B 78 */	mr r31, r3
 /* 80006E94 00003DD4  7C 9E 23 78 */	mr r30, r4
 /* 80006E98 00003DD8  7C BD 2B 78 */	mr r29, r5
-/* 80006E9C 00003DDC  40 86 00 24 */	bne cr1, func_80006EC0
+/* 80006E9C 00003DDC  40 86 00 24 */	bne cr1, lbl_80006EC0
 /* 80006EA0 00003DE0  D8 21 00 28 */	stfd f1, 0x28(r1)
 /* 80006EA4 00003DE4  D8 41 00 30 */	stfd f2, 0x30(r1)
 /* 80006EA8 00003DE8  D8 61 00 38 */	stfd f3, 0x38(r1)
@@ -613,10 +579,7 @@ OSPanic:
 /* 80006EB4 00003DF4  D8 C1 00 50 */	stfd f6, 0x50(r1)
 /* 80006EB8 00003DF8  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 80006EBC 00003DFC  D9 01 00 60 */	stfd f8, 0x60(r1)
-
-/* 80006EC0 0090 .text      func_80006EC0                  func_80006EC0                  */
-.global func_80006EC0
-func_80006EC0:
+lbl_80006EC0:
 /* 80006EC0 00003E00  90 61 00 08 */	stw r3, 8(r1)
 /* 80006EC4 00003E04  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80006EC8 00003E08  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -652,11 +615,8 @@ func_80006EC0:
 /* 80006F40 00003E80  7C 7D 1B 78 */	mr r29, r3
 /* 80006F44 00003E84  3C 60 80 37 */	lis r3, m_Do_m_Do_printf__stringBase0@ha
 /* 80006F48 00003E88  3B E3 3C B0 */	addi r31, r3, m_Do_m_Do_printf__stringBase0@l
-/* 80006F4C 00003E8C  48 00 00 20 */	b func_80006F6C
-
-/* 80006F50 001C .text      func_80006F50                  func_80006F50                  */
-.global func_80006F50
-func_80006F50:
+/* 80006F4C 00003E8C  48 00 00 20 */	b lbl_80006F6C
+lbl_80006F50:
 /* 80006F50 00003E90  38 7F 00 9C */	addi r3, r31, 0x9c
 /* 80006F54 00003E94  7F A4 EB 78 */	mr r4, r29
 /* 80006F58 00003E98  80 BD 00 00 */	lwz r5, 0(r29)
@@ -664,22 +624,16 @@ func_80006F50:
 /* 80006F60 00003EA0  4C C6 31 82 */	crclr 6
 /* 80006F64 00003EA4  4B FF F8 B1 */	bl OSAttention
 /* 80006F68 00003EA8  83 BD 00 00 */	lwz r29, 0(r29)
-
-/* 80006F6C 0020 .text      func_80006F6C                  func_80006F6C                  */
-.global func_80006F6C
-func_80006F6C:
+lbl_80006F6C:
 /* 80006F6C 00003EAC  28 1D 00 00 */	cmplwi r29, 0
-/* 80006F70 00003EB0  41 82 00 1C */	beq func_80006F8C
+/* 80006F70 00003EB0  41 82 00 1C */	beq lbl_80006F8C
 /* 80006F74 00003EB4  3C 1D 00 01 */	addis r0, r29, 1
 /* 80006F78 00003EB8  28 00 FF FF */	cmplwi r0, 0xffff
-/* 80006F7C 00003EBC  41 82 00 10 */	beq func_80006F8C
+/* 80006F7C 00003EBC  41 82 00 10 */	beq lbl_80006F8C
 /* 80006F80 00003EC0  28 1E 00 10 */	cmplwi r30, 0x10
 /* 80006F84 00003EC4  3B DE 00 01 */	addi r30, r30, 1
-/* 80006F88 00003EC8  41 80 FF C8 */	blt func_80006F50
-
-/* 80006F8C 0028 .text      func_80006F8C                  func_80006F8C                  */
-.global func_80006F8C
-func_80006F8C:
+/* 80006F88 00003EC8  41 80 FF C8 */	blt lbl_80006F50
+lbl_80006F8C:
 /* 80006F8C 00003ECC  3C 60 01 23 */	lis r3, 0x01234567@ha
 /* 80006F90 00003ED0  38 03 45 67 */	addi r0, r3, 0x01234567@l
 /* 80006F94 00003ED4  90 03 45 67 */	stw r0, 0x4567(r3)
@@ -696,7 +650,7 @@ func_80006F8C:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80373CB0 00B8 .rodata    m_Do_m_Do_printf__stringBase0  @stringBase0                   */
+/* 80373CB0 00B8 .rodata    @stringBase0                   m_Do_m_Do_printf__stringBase0  */
 .global m_Do_m_Do_printf__stringBase0
 m_Do_m_Do_printf__stringBase0:
 .byte 0x1b, 0x5b, 0x34, 0x31, 0x3b, 0x33, 0x37, 0x6d, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x20, 0x46, 0x41 /* baserom.dol+0x370cb0 */
@@ -752,28 +706,28 @@ print_warings:
 print_systems:
 .skip 0x4
 
-/* 80450BB4 0001 .sbss      sym_80450BB4                   sym_80450BB4                   */
-.global sym_80450BB4
-sym_80450BB4:
+/* 80450BB4 0001 .sbss      data_80450BB4                  data_80450BB4                  */
+.global data_80450BB4
+data_80450BB4:
 .skip 0x1
 
-/* 80450BB5 0003 .sbss      sym_80450BB5                   sym_80450BB5                   */
-.global sym_80450BB5
-sym_80450BB5:
+/* 80450BB5 0003 .sbss      data_80450BB5                  data_80450BB5                  */
+.global data_80450BB5
+data_80450BB5:
 .skip 0x3
 
-/* 80450BB8 0001 .sbss      sym_80450BB8                   sym_80450BB8                   */
-.global sym_80450BB8
-sym_80450BB8:
+/* 80450BB8 0001 .sbss      data_80450BB8                  data_80450BB8                  */
+.global data_80450BB8
+data_80450BB8:
 .skip 0x1
 
-/* 80450BB9 0001 .sbss      sym_80450BB9                   sym_80450BB9                   */
-.global sym_80450BB9
-sym_80450BB9:
+/* 80450BB9 0001 .sbss      data_80450BB9                  data_80450BB9                  */
+.global data_80450BB9
+data_80450BB9:
 .skip 0x1
 
-/* 80450BBA 0002 .sbss      sym_80450BBA                   sym_80450BBA                   */
-.global sym_80450BBA
-sym_80450BBA:
+/* 80450BBA 0002 .sbss      data_80450BBA                  data_80450BBA                  */
+.global data_80450BBA
+data_80450BBA:
 .skip 0x2
 

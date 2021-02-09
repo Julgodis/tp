@@ -7,6 +7,7 @@
 /* 8027AEBC 0120 .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData JPARegistChildPrmEnv__FP18JPAEmitterWorkData */
 .global JPARegistChildPrmEnv__FP18JPAEmitterWorkData
 JPARegistChildPrmEnv__FP18JPAEmitterWorkData:
+JPARegistChildPrmEnv__FP18JPAEmitterWorkData:
 /* 8027AEBC 00277DFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027AEC0 00277E00  7C 08 02 A6 */	mflr r0
 /* 8027AEC4 00277E04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -83,6 +84,7 @@ JPARegistChildPrmEnv__FP18JPAEmitterWorkData:
 /* 8027AFDC 002C .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 .global JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle
 JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
+JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
 /* 8027AFDC 00277F1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AFE0 00277F20  C0 42 B9 08 */	lfs f2, LIT_2318-_SDA2_BASE_(r2)
 /* 8027AFE4 00277F24  C0 22 B9 0C */	lfs f1, LIT_2319-_SDA2_BASE_(r2)
@@ -97,6 +99,7 @@ JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
 
 /* 8027B008 0030 .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 .global JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle
+JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
 JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
 /* 8027B008 00277F48  C0 24 00 68 */	lfs f1, 0x68(r4)
 /* 8027B00C 00277F4C  C0 42 B9 0C */	lfs f2, LIT_2319-_SDA2_BASE_(r2)
@@ -114,6 +117,7 @@ JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle:
 /* 8027B038 0008 .text      __ct__13JPAChildShapeFPCUc     __ct__13JPAChildShapeFPCUc     */
 .global __ct__13JPAChildShapeFPCUc
 __ct__13JPAChildShapeFPCUc:
+__ct__13JPAChildShapeFPCUc:
 /* 8027B038 00277F78  90 83 00 00 */	stw r4, 0(r3)
 /* 8027B03C 00277F7C  4E 80 00 20 */	blr 
 
@@ -122,12 +126,12 @@ __ct__13JPAChildShapeFPCUc:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455308 0004 .sdata2    LIT_2318                       @2318                          */
+/* 80455308 0004 .sdata2    @2318                          LIT_2318                       */
 .global LIT_2318
 LIT_2318:
 .byte 0x43, 0x7f, 0x00, 0x00 /* baserom.dol+0x3d4168 */
 
-/* 8045530C 0004 .sdata2    LIT_2319                       @2319                          */
+/* 8045530C 0004 .sdata2    @2319                          LIT_2319                       */
 .global LIT_2319
 LIT_2319:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d416c */

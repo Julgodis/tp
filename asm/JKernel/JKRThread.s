@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802D1568 006C .text      __ct__9JKRThreadFUlii          __ct__9JKRThreadFUlii          */
+/* 802D1568 00A8 .text      __ct__9JKRThreadFUlii          __ct__9JKRThreadFUlii          */
 .global __ct__9JKRThreadFUlii
+__ct__9JKRThreadFUlii:
 __ct__9JKRThreadFUlii:
 /* 802D1568 002CE4A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D156C 002CE4AC  7C 08 02 A6 */	mflr r0
@@ -32,12 +33,9 @@ __ct__9JKRThreadFUlii:
 /* 802D15C0 002CE500  7F 83 E3 78 */	mr r3, r28
 /* 802D15C4 002CE504  4B FF D2 79 */	bl findFromRoot__7JKRHeapFPv
 /* 802D15C8 002CE508  7C 64 1B 79 */	or. r4, r3, r3
-/* 802D15CC 002CE50C  40 82 00 08 */	bne func_802D15D4
+/* 802D15CC 002CE50C  40 82 00 08 */	bne lbl_802D15D4
 /* 802D15D0 002CE510  80 8D 8D F0 */	lwz r4, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
-
-/* 802D15D4 003C .text      func_802D15D4                  func_802D15D4                  */
-.global func_802D15D4
-func_802D15D4:
+lbl_802D15D4:
 /* 802D15D4 002CE514  7F 83 E3 78 */	mr r3, r28
 /* 802D15D8 002CE518  7F A5 EB 78 */	mr r5, r29
 /* 802D15DC 002CE51C  7F E6 FB 78 */	mr r6, r31
@@ -54,8 +52,9 @@ func_802D15D4:
 /* 802D1608 002CE548  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D160C 002CE54C  4E 80 00 20 */	blr 
 
-/* 802D1610 0068 .text      __ct__9JKRThreadFP7JKRHeapUlii __ct__9JKRThreadFP7JKRHeapUlii */
+/* 802D1610 00A8 .text      __ct__9JKRThreadFP7JKRHeapUlii __ct__9JKRThreadFP7JKRHeapUlii */
 .global __ct__9JKRThreadFP7JKRHeapUlii
+__ct__9JKRThreadFP7JKRHeapUlii:
 __ct__9JKRThreadFP7JKRHeapUlii:
 /* 802D1610 002CE550  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D1614 002CE554  7C 08 02 A6 */	mflr r0
@@ -81,12 +80,9 @@ __ct__9JKRThreadFP7JKRHeapUlii:
 /* 802D1664 002CE5A4  98 1B 00 60 */	stb r0, 0x60(r27)
 /* 802D1668 002CE5A8  90 1B 00 70 */	stw r0, 0x70(r27)
 /* 802D166C 002CE5AC  28 1C 00 00 */	cmplwi r28, 0
-/* 802D1670 002CE5B0  40 82 00 08 */	bne func_802D1678
+/* 802D1670 002CE5B0  40 82 00 08 */	bne lbl_802D1678
 /* 802D1674 002CE5B4  83 8D 8D F4 */	lwz r28, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-
-/* 802D1678 0040 .text      func_802D1678                  func_802D1678                  */
-.global func_802D1678
-func_802D1678:
+lbl_802D1678:
 /* 802D1678 002CE5B8  7F 63 DB 78 */	mr r3, r27
 /* 802D167C 002CE5BC  7F 84 E3 78 */	mr r4, r28
 /* 802D1680 002CE5C0  7F A5 EB 78 */	mr r5, r29
@@ -106,6 +102,7 @@ func_802D1678:
 
 /* 802D16B8 00A0 .text      __ct__9JKRThreadFP8OSThreadi   __ct__9JKRThreadFP8OSThreadi   */
 .global __ct__9JKRThreadFP8OSThreadi
+__ct__9JKRThreadFP8OSThreadi:
 __ct__9JKRThreadFP8OSThreadi:
 /* 802D16B8 002CE5F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D16BC 002CE5FC  7C 08 02 A6 */	mflr r0
@@ -148,8 +145,9 @@ __ct__9JKRThreadFP8OSThreadi:
 /* 802D1750 002CE690  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1754 002CE694  4E 80 00 20 */	blr 
 
-/* 802D1758 0068 .text      __dt__9JKRThreadFv             __dt__9JKRThreadFv             */
+/* 802D1758 00D8 .text      __dt__9JKRThreadFv             __dt__9JKRThreadFv             */
 .global __dt__9JKRThreadFv
+__dt__9JKRThreadFv:
 __dt__9JKRThreadFv:
 /* 802D1758 002CE698  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D175C 002CE69C  7C 08 02 A6 */	mflr r0
@@ -158,7 +156,7 @@ __dt__9JKRThreadFv:
 /* 802D1768 002CE6A8  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D176C 002CE6AC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D1770 002CE6B0  7C 9F 23 78 */	mr r31, r4
-/* 802D1774 002CE6B4  41 82 00 A0 */	beq func_802D1814
+/* 802D1774 002CE6B4  41 82 00 A0 */	beq lbl_802D1814
 /* 802D1778 002CE6B8  3C 60 80 3D */	lis r3, __vt__9JKRThread@ha
 /* 802D177C 002CE6BC  38 03 C1 14 */	addi r0, r3, __vt__9JKRThread@l
 /* 802D1780 002CE6C0  90 1E 00 00 */	stw r0, 0(r30)
@@ -168,52 +166,40 @@ __dt__9JKRThreadFv:
 /* 802D1790 002CE6D0  48 00 A9 CD */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 802D1794 002CE6D4  80 1E 00 28 */	lwz r0, 0x28(r30)
 /* 802D1798 002CE6D8  28 00 00 00 */	cmplwi r0, 0
-/* 802D179C 002CE6DC  41 82 00 3C */	beq func_802D17D8
+/* 802D179C 002CE6DC  41 82 00 3C */	beq lbl_802D17D8
 /* 802D17A0 002CE6E0  80 7E 00 2C */	lwz r3, 0x2c(r30)
 /* 802D17A4 002CE6E4  48 06 F4 ED */	bl OSIsThreadTerminated
 /* 802D17A8 002CE6E8  2C 03 00 00 */	cmpwi r3, 0
-/* 802D17AC 002CE6EC  40 82 00 14 */	bne func_802D17C0
+/* 802D17AC 002CE6EC  40 82 00 14 */	bne lbl_802D17C0
 /* 802D17B0 002CE6F0  80 7E 00 2C */	lwz r3, 0x2c(r30)
 /* 802D17B4 002CE6F4  48 06 FF 61 */	bl OSDetachThread
 /* 802D17B8 002CE6F8  80 7E 00 2C */	lwz r3, 0x2c(r30)
 /* 802D17BC 002CE6FC  48 06 FD 9D */	bl OSCancelThread
-
-/* 802D17C0 0018 .text      func_802D17C0                  func_802D17C0                  */
-.global func_802D17C0
-func_802D17C0:
+lbl_802D17C0:
 /* 802D17C0 002CE700  80 7E 00 58 */	lwz r3, 0x58(r30)
 /* 802D17C4 002CE704  80 9E 00 28 */	lwz r4, 0x28(r30)
 /* 802D17C8 002CE708  4B FF CD 39 */	bl free__7JKRHeapFPvP7JKRHeap
 /* 802D17CC 002CE70C  80 7E 00 2C */	lwz r3, 0x2c(r30)
 /* 802D17D0 002CE710  80 9E 00 28 */	lwz r4, 0x28(r30)
 /* 802D17D4 002CE714  4B FF CD 2D */	bl free__7JKRHeapFPvP7JKRHeap
-
-/* 802D17D8 0020 .text      func_802D17D8                  func_802D17D8                  */
-.global func_802D17D8
-func_802D17D8:
+lbl_802D17D8:
 /* 802D17D8 002CE718  80 7E 00 50 */	lwz r3, 0x50(r30)
 /* 802D17DC 002CE71C  38 80 00 00 */	li r4, 0
 /* 802D17E0 002CE720  4B FF CD 21 */	bl free__7JKRHeapFPvP7JKRHeap
 /* 802D17E4 002CE724  34 1E 00 18 */	addic. r0, r30, 0x18
-/* 802D17E8 002CE728  41 82 00 10 */	beq func_802D17F8
+/* 802D17E8 002CE728  41 82 00 10 */	beq lbl_802D17F8
 /* 802D17EC 002CE72C  38 7E 00 18 */	addi r3, r30, 0x18
 /* 802D17F0 002CE730  38 80 00 00 */	li r4, 0
 /* 802D17F4 002CE734  48 00 A6 21 */	bl __dt__10JSUPtrLinkFv
-
-/* 802D17F8 001C .text      func_802D17F8                  func_802D17F8                  */
-.global func_802D17F8
-func_802D17F8:
+lbl_802D17F8:
 /* 802D17F8 002CE738  7F C3 F3 78 */	mr r3, r30
 /* 802D17FC 002CE73C  38 80 00 00 */	li r4, 0
 /* 802D1800 002CE740  4B FF FC E5 */	bl __dt__11JKRDisposerFv
 /* 802D1804 002CE744  7F E0 07 35 */	extsh. r0, r31
-/* 802D1808 002CE748  40 81 00 0C */	ble func_802D1814
+/* 802D1808 002CE748  40 81 00 0C */	ble lbl_802D1814
 /* 802D180C 002CE74C  7F C3 F3 78 */	mr r3, r30
 /* 802D1810 002CE750  4B FF D5 2D */	bl __dl__FPv
-
-/* 802D1814 001C .text      func_802D1814                  func_802D1814                  */
-.global func_802D1814
-func_802D1814:
+lbl_802D1814:
 /* 802D1814 002CE754  7F C3 F3 78 */	mr r3, r30
 /* 802D1818 002CE758  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D181C 002CE75C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -224,6 +210,7 @@ func_802D1814:
 
 /* 802D1830 0074 .text      setCommon_mesgQueue__9JKRThreadFP7JKRHeapi setCommon_mesgQueue__9JKRThreadFP7JKRHeapi */
 .global setCommon_mesgQueue__9JKRThreadFP7JKRHeapi
+setCommon_mesgQueue__9JKRThreadFP7JKRHeapi:
 setCommon_mesgQueue__9JKRThreadFP7JKRHeapi:
 /* 802D1830 002CE770  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1834 002CE774  7C 08 02 A6 */	mflr r0
@@ -257,6 +244,7 @@ setCommon_mesgQueue__9JKRThreadFP7JKRHeapi:
 
 /* 802D18A4 0090 .text      setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli */
 .global setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli
+setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli:
 setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli:
 /* 802D18A4 002CE7E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D18A8 002CE7E8  7C 08 02 A6 */	mflr r0
@@ -298,6 +286,7 @@ setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli:
 /* 802D1934 002C .text      start__9JKRThreadFPv           start__9JKRThreadFPv           */
 .global start__9JKRThreadFPv
 start__9JKRThreadFPv:
+start__9JKRThreadFPv:
 /* 802D1934 002CE874  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1938 002CE878  7C 08 02 A6 */	mflr r0
 /* 802D193C 002CE87C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -310,39 +299,32 @@ start__9JKRThreadFPv:
 /* 802D1958 002CE898  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D195C 002CE89C  4E 80 00 20 */	blr 
 
-/* 802D1960 0010 .text      searchThread__9JKRThreadFP8OSThread searchThread__9JKRThreadFP8OSThread */
+/* 802D1960 003C .text      searchThread__9JKRThreadFP8OSThread searchThread__9JKRThreadFP8OSThread */
 .global searchThread__9JKRThreadFP8OSThread
+searchThread__9JKRThreadFP8OSThread:
 searchThread__9JKRThreadFP8OSThread:
 /* 802D1960 002CE8A0  3C 80 80 43 */	lis r4, sThreadList__9JKRThread@ha
 /* 802D1964 002CE8A4  38 84 42 8C */	addi r4, r4, sThreadList__9JKRThread@l
 /* 802D1968 002CE8A8  80 84 00 00 */	lwz r4, 0(r4)
-/* 802D196C 002CE8AC  48 00 00 20 */	b func_802D198C
-
-/* 802D1970 0018 .text      func_802D1970                  func_802D1970                  */
-.global func_802D1970
-func_802D1970:
+/* 802D196C 002CE8AC  48 00 00 20 */	b lbl_802D198C
+lbl_802D1970:
 /* 802D1970 002CE8B0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802D1974 002CE8B4  80 05 00 2C */	lwz r0, 0x2c(r5)
 /* 802D1978 002CE8B8  7C 00 18 40 */	cmplw r0, r3
-/* 802D197C 002CE8BC  40 82 00 0C */	bne func_802D1988
+/* 802D197C 002CE8BC  40 82 00 0C */	bne lbl_802D1988
 /* 802D1980 002CE8C0  7C A3 2B 78 */	mr r3, r5
 /* 802D1984 002CE8C4  4E 80 00 20 */	blr 
-
-/* 802D1988 0004 .text      func_802D1988                  func_802D1988                  */
-.global func_802D1988
-func_802D1988:
+lbl_802D1988:
 /* 802D1988 002CE8C8  80 84 00 0C */	lwz r4, 0xc(r4)
-
-/* 802D198C 0010 .text      func_802D198C                  func_802D198C                  */
-.global func_802D198C
-func_802D198C:
+lbl_802D198C:
 /* 802D198C 002CE8CC  28 04 00 00 */	cmplwi r4, 0
-/* 802D1990 002CE8D0  40 82 FF E0 */	bne func_802D1970
+/* 802D1990 002CE8D0  40 82 FF E0 */	bne lbl_802D1970
 /* 802D1994 002CE8D4  38 60 00 00 */	li r3, 0
 /* 802D1998 002CE8D8  4E 80 00 20 */	blr 
 
 /* 802D199C 0078 .text      __ct__15JKRThreadSwitchFP7JKRHeap __ct__15JKRThreadSwitchFP7JKRHeap */
 .global __ct__15JKRThreadSwitchFP7JKRHeap
+__ct__15JKRThreadSwitchFP7JKRHeap:
 __ct__15JKRThreadSwitchFP7JKRHeap:
 /* 802D199C 002CE8DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D19A0 002CE8E0  7C 08 02 A6 */	mflr r0
@@ -363,7 +345,7 @@ __ct__15JKRThreadSwitchFP7JKRHeap:
 /* 802D19DC 002CE91C  90 7F 00 1C */	stw r3, 0x1c(r31)
 /* 802D19E0 002CE920  90 7F 00 18 */	stw r3, 0x18(r31)
 /* 802D19E4 002CE924  90 6D 8E 34 */	stw r3, sTotalCount__15JKRThreadSwitch-_SDA_BASE_(r13)
-/* 802D19E8 002CE928  90 6D 8E 3C */	stw r3, sym_804513BC-_SDA_BASE_(r13)
+/* 802D19E8 002CE928  90 6D 8E 3C */	stw r3, data_804513BC-_SDA_BASE_(r13)
 /* 802D19EC 002CE92C  90 6D 8E 38 */	stw r3, sTotalStart__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D19F0 002CE930  90 7F 00 20 */	stw r3, 0x20(r31)
 /* 802D19F4 002CE934  90 7F 00 24 */	stw r3, 0x24(r31)
@@ -375,33 +357,28 @@ __ct__15JKRThreadSwitchFP7JKRHeap:
 /* 802D1A0C 002CE94C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1A10 002CE950  4E 80 00 20 */	blr 
 
-/* 802D1A14 001C .text      createManager__15JKRThreadSwitchFP7JKRHeap createManager__15JKRThreadSwitchFP7JKRHeap */
+/* 802D1A14 005C .text      createManager__15JKRThreadSwitchFP7JKRHeap createManager__15JKRThreadSwitchFP7JKRHeap */
 .global createManager__15JKRThreadSwitchFP7JKRHeap
+createManager__15JKRThreadSwitchFP7JKRHeap:
 createManager__15JKRThreadSwitchFP7JKRHeap:
 /* 802D1A14 002CE954  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1A18 002CE958  7C 08 02 A6 */	mflr r0
 /* 802D1A1C 002CE95C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802D1A20 002CE960  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D1A24 002CE964  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D1A28 002CE968  40 82 00 08 */	bne func_802D1A30
+/* 802D1A28 002CE968  40 82 00 08 */	bne lbl_802D1A30
 /* 802D1A2C 002CE96C  83 ED 8D F4 */	lwz r31, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-
-/* 802D1A30 0024 .text      func_802D1A30                  func_802D1A30                  */
-.global func_802D1A30
-func_802D1A30:
+lbl_802D1A30:
 /* 802D1A30 002CE970  38 60 00 28 */	li r3, 0x28
 /* 802D1A34 002CE974  7F E4 FB 78 */	mr r4, r31
 /* 802D1A38 002CE978  38 A0 00 00 */	li r5, 0
 /* 802D1A3C 002CE97C  4B FF D2 5D */	bl __nw__FUlP7JKRHeapi
 /* 802D1A40 002CE980  7C 60 1B 79 */	or. r0, r3, r3
-/* 802D1A44 002CE984  41 82 00 10 */	beq func_802D1A54
+/* 802D1A44 002CE984  41 82 00 10 */	beq lbl_802D1A54
 /* 802D1A48 002CE988  7F E4 FB 78 */	mr r4, r31
 /* 802D1A4C 002CE98C  4B FF FF 51 */	bl __ct__15JKRThreadSwitchFP7JKRHeap
 /* 802D1A50 002CE990  7C 60 1B 78 */	mr r0, r3
-
-/* 802D1A54 001C .text      func_802D1A54                  func_802D1A54                  */
-.global func_802D1A54
-func_802D1A54:
+lbl_802D1A54:
 /* 802D1A54 002CE994  90 0D 8E 30 */	stw r0, sManager__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1A58 002CE998  7C 03 03 78 */	mr r3, r0
 /* 802D1A5C 002CE99C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -410,8 +387,9 @@ func_802D1A54:
 /* 802D1A68 002CE9A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1A6C 002CE9AC  4E 80 00 20 */	blr 
 
-/* 802D1A70 0028 .text      enter__15JKRThreadSwitchFP9JKRThreadi enter__15JKRThreadSwitchFP9JKRThreadi */
+/* 802D1A70 0074 .text      enter__15JKRThreadSwitchFP9JKRThreadi enter__15JKRThreadSwitchFP9JKRThreadi */
 .global enter__15JKRThreadSwitchFP9JKRThreadi
+enter__15JKRThreadSwitchFP9JKRThreadi:
 enter__15JKRThreadSwitchFP9JKRThreadi:
 /* 802D1A70 002CE9B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1A74 002CE9B4  7C 08 02 A6 */	mflr r0
@@ -420,22 +398,16 @@ enter__15JKRThreadSwitchFP9JKRThreadi:
 /* 802D1A80 002CE9C0  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D1A84 002CE9C4  7C 9E 23 79 */	or. r30, r4, r4
 /* 802D1A88 002CE9C8  7C BF 2B 78 */	mr r31, r5
-/* 802D1A8C 002CE9CC  40 82 00 0C */	bne func_802D1A98
+/* 802D1A8C 002CE9CC  40 82 00 0C */	bne lbl_802D1A98
 /* 802D1A90 002CE9D0  38 60 00 00 */	li r3, 0
-/* 802D1A94 002CE9D4  48 00 00 38 */	b func_802D1ACC
-
-/* 802D1A98 0014 .text      func_802D1A98                  func_802D1A98                  */
-.global func_802D1A98
-func_802D1A98:
+/* 802D1A94 002CE9D4  48 00 00 38 */	b lbl_802D1ACC
+lbl_802D1A98:
 /* 802D1A98 002CE9D8  80 7E 00 2C */	lwz r3, 0x2c(r30)
 /* 802D1A9C 002CE9DC  4B FF FE C5 */	bl searchThread__9JKRThreadFP8OSThread
 /* 802D1AA0 002CE9E0  28 03 00 00 */	cmplwi r3, 0
-/* 802D1AA4 002CE9E4  41 82 00 08 */	beq func_802D1AAC
+/* 802D1AA4 002CE9E4  41 82 00 08 */	beq lbl_802D1AAC
 /* 802D1AA8 002CE9E8  7C 7E 1B 78 */	mr r30, r3
-
-/* 802D1AAC 0020 .text      func_802D1AAC                  func_802D1AAC                  */
-.global func_802D1AAC
-func_802D1AAC:
+lbl_802D1AAC:
 /* 802D1AAC 002CE9EC  38 00 00 00 */	li r0, 0
 /* 802D1AB0 002CE9F0  90 1E 00 68 */	stw r0, 0x68(r30)
 /* 802D1AB4 002CE9F4  90 1E 00 64 */	stw r0, 0x64(r30)
@@ -444,10 +416,7 @@ func_802D1AAC:
 /* 802D1AC0 002CEA00  98 1E 00 60 */	stb r0, 0x60(r30)
 /* 802D1AC4 002CEA04  93 FE 00 70 */	stw r31, 0x70(r30)
 /* 802D1AC8 002CEA08  7F C3 F3 78 */	mr r3, r30
-
-/* 802D1ACC 0018 .text      func_802D1ACC                  func_802D1ACC                  */
-.global func_802D1ACC
-func_802D1ACC:
+lbl_802D1ACC:
 /* 802D1ACC 002CEA0C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D1AD0 002CEA10  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D1AD4 002CEA14  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -455,8 +424,9 @@ func_802D1ACC:
 /* 802D1ADC 002CEA1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1AE0 002CEA20  4E 80 00 20 */	blr 
 
-/* 802D1AE4 0030 .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread callback__15JKRThreadSwitchFP8OSThreadP8OSThread */
+/* 802D1AE4 0190 .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread callback__15JKRThreadSwitchFP8OSThreadP8OSThread */
 .global callback__15JKRThreadSwitchFP8OSThreadP8OSThread
+callback__15JKRThreadSwitchFP8OSThreadP8OSThread:
 callback__15JKRThreadSwitchFP8OSThreadP8OSThread:
 /* 802D1AE4 002CEA24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D1AE8 002CEA28  7C 08 02 A6 */	mflr r0
@@ -467,143 +437,104 @@ callback__15JKRThreadSwitchFP8OSThreadP8OSThread:
 /* 802D1AFC 002CEA3C  7C 9C 23 78 */	mr r28, r4
 /* 802D1B00 002CEA40  81 8D 8E 40 */	lwz r12, mUserPreCallback__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1B04 002CEA44  28 0C 00 00 */	cmplwi r12, 0
-/* 802D1B08 002CEA48  41 82 00 0C */	beq func_802D1B14
+/* 802D1B08 002CEA48  41 82 00 0C */	beq lbl_802D1B14
 /* 802D1B0C 002CEA4C  7D 89 03 A6 */	mtctr r12
 /* 802D1B10 002CEA50  4E 80 04 21 */	bctrl 
-
-/* 802D1B14 001C .text      func_802D1B14                  func_802D1B14                  */
-.global func_802D1B14
-func_802D1B14:
+lbl_802D1B14:
 /* 802D1B14 002CEA54  80 6D 8E 34 */	lwz r3, sTotalCount__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1B18 002CEA58  38 03 00 01 */	addi r0, r3, 1
 /* 802D1B1C 002CEA5C  90 0D 8E 34 */	stw r0, sTotalCount__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1B20 002CEA60  3B A0 00 00 */	li r29, 0
 /* 802D1B24 002CEA64  3C 60 80 43 */	lis r3, sThreadList__9JKRThread@ha
 /* 802D1B28 002CEA68  83 C3 42 8C */	lwz r30, sThreadList__9JKRThread@l(r3)
-/* 802D1B2C 002CEA6C  48 00 00 FC */	b func_802D1C28
-
-/* 802D1B30 0040 .text      func_802D1B30                  func_802D1B30                  */
-.global func_802D1B30
-func_802D1B30:
+/* 802D1B2C 002CEA6C  48 00 00 FC */	b lbl_802D1C28
+lbl_802D1B30:
 /* 802D1B30 002CEA70  83 FE 00 00 */	lwz r31, 0(r30)
 /* 802D1B34 002CEA74  80 1F 00 2C */	lwz r0, 0x2c(r31)
 /* 802D1B38 002CEA78  7C 00 D8 40 */	cmplw r0, r27
-/* 802D1B3C 002CEA7C  40 82 00 34 */	bne func_802D1B70
+/* 802D1B3C 002CEA7C  40 82 00 34 */	bne lbl_802D1B70
 /* 802D1B40 002CEA80  80 0D 8D F4 */	lwz r0, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 802D1B44 002CEA84  28 00 00 00 */	cmplwi r0, 0
 /* 802D1B48 002CEA88  90 1F 00 74 */	stw r0, 0x74(r31)
 /* 802D1B4C 002CEA8C  88 1F 00 60 */	lbz r0, 0x60(r31)
 /* 802D1B50 002CEA90  28 00 00 00 */	cmplwi r0, 0
-/* 802D1B54 002CEA94  41 82 00 1C */	beq func_802D1B70
+/* 802D1B54 002CEA94  41 82 00 1C */	beq lbl_802D1B70
 /* 802D1B58 002CEA98  48 07 0B BD */	bl OSGetTick
 /* 802D1B5C 002CEA9C  80 1F 00 6C */	lwz r0, 0x6c(r31)
 /* 802D1B60 002CEAA0  7C 60 18 50 */	subf r3, r0, r3
 /* 802D1B64 002CEAA4  80 1F 00 64 */	lwz r0, 0x64(r31)
 /* 802D1B68 002CEAA8  7C 00 1A 14 */	add r0, r0, r3
 /* 802D1B6C 002CEAAC  90 1F 00 64 */	stw r0, 0x64(r31)
-
-/* 802D1B70 002C .text      func_802D1B70                  func_802D1B70                  */
-.global func_802D1B70
-func_802D1B70:
+lbl_802D1B70:
 /* 802D1B70 002CEAB0  80 1F 00 2C */	lwz r0, 0x2c(r31)
 /* 802D1B74 002CEAB4  7C 00 E0 40 */	cmplw r0, r28
-/* 802D1B78 002CEAB8  40 82 00 AC */	bne func_802D1C24
+/* 802D1B78 002CEAB8  40 82 00 AC */	bne lbl_802D1C24
 /* 802D1B7C 002CEABC  88 1F 00 60 */	lbz r0, 0x60(r31)
 /* 802D1B80 002CEAC0  28 00 00 00 */	cmplwi r0, 0
-/* 802D1B84 002CEAC4  41 82 00 18 */	beq func_802D1B9C
+/* 802D1B84 002CEAC4  41 82 00 18 */	beq lbl_802D1B9C
 /* 802D1B88 002CEAC8  48 07 0B 8D */	bl OSGetTick
 /* 802D1B8C 002CEACC  90 7F 00 6C */	stw r3, 0x6c(r31)
 /* 802D1B90 002CEAD0  80 7F 00 68 */	lwz r3, 0x68(r31)
 /* 802D1B94 002CEAD4  38 03 00 01 */	addi r0, r3, 1
 /* 802D1B98 002CEAD8  90 1F 00 68 */	stw r0, 0x68(r31)
-
-/* 802D1B9C 0028 .text      func_802D1B9C                  func_802D1B9C                  */
-.global func_802D1B9C
-func_802D1B9C:
+lbl_802D1B9C:
 /* 802D1B9C 002CEADC  80 6D 8E 30 */	lwz r3, sManager__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1BA0 002CEAE0  88 03 00 08 */	lbz r0, 8(r3)
 /* 802D1BA4 002CEAE4  28 00 00 00 */	cmplwi r0, 0
-/* 802D1BA8 002CEAE8  41 82 00 7C */	beq func_802D1C24
+/* 802D1BA8 002CEAE8  41 82 00 7C */	beq lbl_802D1C24
 /* 802D1BAC 002CEAEC  80 9F 00 74 */	lwz r4, 0x74(r31)
 /* 802D1BB0 002CEAF0  7C 9D 23 78 */	mr r29, r4
 /* 802D1BB4 002CEAF4  28 04 00 00 */	cmplwi r4, 0
-/* 802D1BB8 002CEAF8  40 82 00 0C */	bne func_802D1BC4
+/* 802D1BB8 002CEAF8  40 82 00 0C */	bne lbl_802D1BC4
 /* 802D1BBC 002CEAFC  83 AD 8D F4 */	lwz r29, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-/* 802D1BC0 002CEB00  48 00 00 64 */	b func_802D1C24
-
-/* 802D1BC4 0030 .text      func_802D1BC4                  func_802D1BC4                  */
-.global func_802D1BC4
-func_802D1BC4:
+/* 802D1BC0 002CEB00  48 00 00 64 */	b lbl_802D1C24
+lbl_802D1BC4:
 /* 802D1BC4 002CEB04  80 6D 8D F8 */	lwz r3, sRootHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 802D1BC8 002CEB08  4B FF CF E1 */	bl isSubHeap__7JKRHeapCFP7JKRHeap
 /* 802D1BCC 002CEB0C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802D1BD0 002CEB10  40 82 00 54 */	bne func_802D1C24
+/* 802D1BD0 002CEB10  40 82 00 54 */	bne lbl_802D1C24
 /* 802D1BD4 002CEB14  80 1F 00 78 */	lwz r0, 0x78(r31)
 /* 802D1BD8 002CEB18  2C 00 00 02 */	cmpwi r0, 2
-/* 802D1BDC 002CEB1C  41 82 00 3C */	beq func_802D1C18
-/* 802D1BE0 002CEB20  40 80 00 14 */	bge func_802D1BF4
+/* 802D1BDC 002CEB1C  41 82 00 3C */	beq lbl_802D1C18
+/* 802D1BE0 002CEB20  40 80 00 14 */	bge lbl_802D1BF4
 /* 802D1BE4 002CEB24  2C 00 00 00 */	cmpwi r0, 0
-/* 802D1BE8 002CEB28  41 82 00 3C */	beq func_802D1C24
-/* 802D1BEC 002CEB2C  40 80 00 14 */	bge func_802D1C00
-/* 802D1BF0 002CEB30  48 00 00 34 */	b func_802D1C24
-
-/* 802D1BF4 000C .text      func_802D1BF4                  func_802D1BF4                  */
-.global func_802D1BF4
-func_802D1BF4:
+/* 802D1BE8 002CEB28  41 82 00 3C */	beq lbl_802D1C24
+/* 802D1BEC 002CEB2C  40 80 00 14 */	bge lbl_802D1C00
+/* 802D1BF0 002CEB30  48 00 00 34 */	b lbl_802D1C24
+lbl_802D1BF4:
 /* 802D1BF4 002CEB34  2C 00 00 04 */	cmpwi r0, 4
-/* 802D1BF8 002CEB38  40 80 00 2C */	bge func_802D1C24
-/* 802D1BFC 002CEB3C  48 00 00 24 */	b func_802D1C20
-
-/* 802D1C00 0018 .text      func_802D1C00                  func_802D1C00                  */
-.global func_802D1C00
-func_802D1C00:
+/* 802D1BF8 002CEB38  40 80 00 2C */	bge lbl_802D1C24
+/* 802D1BFC 002CEB3C  48 00 00 24 */	b lbl_802D1C20
+lbl_802D1C00:
 /* 802D1C00 002CEB40  3C 60 80 3A */	lis r3, JKRThread__stringBase0@ha
 /* 802D1C04 002CEB44  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
 /* 802D1C08 002CEB48  38 63 00 34 */	addi r3, r3, 0x34
 /* 802D1C0C 002CEB4C  48 01 6A F1 */	bl JUTWarningConsole
 /* 802D1C10 002CEB50  83 AD 8D F4 */	lwz r29, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-/* 802D1C14 002CEB54  48 00 00 10 */	b func_802D1C24
-
-/* 802D1C18 0008 .text      func_802D1C18                  func_802D1C18                  */
-.global func_802D1C18
-func_802D1C18:
+/* 802D1C14 002CEB54  48 00 00 10 */	b lbl_802D1C24
+lbl_802D1C18:
 /* 802D1C18 002CEB58  83 AD 8D F4 */	lwz r29, sCurrentHeap__7JKRHeap-_SDA_BASE_(r13)
-/* 802D1C1C 002CEB5C  48 00 00 08 */	b func_802D1C24
-
-/* 802D1C20 0004 .text      func_802D1C20                  func_802D1C20                  */
-.global func_802D1C20
-func_802D1C20:
+/* 802D1C1C 002CEB5C  48 00 00 08 */	b lbl_802D1C24
+lbl_802D1C20:
 /* 802D1C20 002CEB60  83 AD 8D F0 */	lwz r29, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
-
-/* 802D1C24 0004 .text      func_802D1C24                  func_802D1C24                  */
-.global func_802D1C24
-func_802D1C24:
+lbl_802D1C24:
 /* 802D1C24 002CEB64  83 DE 00 0C */	lwz r30, 0xc(r30)
-
-/* 802D1C28 0018 .text      func_802D1C28                  func_802D1C28                  */
-.global func_802D1C28
-func_802D1C28:
+lbl_802D1C28:
 /* 802D1C28 002CEB68  28 1E 00 00 */	cmplwi r30, 0
-/* 802D1C2C 002CEB6C  40 82 FF 04 */	bne func_802D1B30
+/* 802D1C2C 002CEB6C  40 82 FF 04 */	bne lbl_802D1B30
 /* 802D1C30 002CEB70  28 1D 00 00 */	cmplwi r29, 0
-/* 802D1C34 002CEB74  41 82 00 0C */	beq func_802D1C40
+/* 802D1C34 002CEB74  41 82 00 0C */	beq lbl_802D1C40
 /* 802D1C38 002CEB78  7F A3 EB 78 */	mr r3, r29
 /* 802D1C3C 002CEB7C  4B FF C7 FD */	bl becomeCurrentHeap__7JKRHeapFv
-
-/* 802D1C40 001C .text      func_802D1C40                  func_802D1C40                  */
-.global func_802D1C40
-func_802D1C40:
+lbl_802D1C40:
 /* 802D1C40 002CEB80  81 8D 8E 44 */	lwz r12, mUserPostCallback__15JKRThreadSwitch-_SDA_BASE_(r13)
 /* 802D1C44 002CEB84  28 0C 00 00 */	cmplwi r12, 0
-/* 802D1C48 002CEB88  41 82 00 14 */	beq func_802D1C5C
+/* 802D1C48 002CEB88  41 82 00 14 */	beq lbl_802D1C5C
 /* 802D1C4C 002CEB8C  7F 63 DB 78 */	mr r3, r27
 /* 802D1C50 002CEB90  7F 84 E3 78 */	mr r4, r28
 /* 802D1C54 002CEB94  7D 89 03 A6 */	mtctr r12
 /* 802D1C58 002CEB98  4E 80 04 21 */	bctrl 
-
-/* 802D1C5C 0018 .text      func_802D1C5C                  func_802D1C5C                  */
-.global func_802D1C5C
-func_802D1C5C:
+lbl_802D1C5C:
 /* 802D1C5C 002CEB9C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802D1C60 002CEBA0  48 09 05 C1 */	bl _restgpr_27
 /* 802D1C64 002CEBA4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -611,8 +542,9 @@ func_802D1C5C:
 /* 802D1C6C 002CEBAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1C70 002CEBB0  4E 80 00 20 */	blr 
 
-/* 802D1C74 006C .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole */
+/* 802D1C74 01A0 .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole */
 .global draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole
+draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole:
 draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole:
 /* 802D1C74 002CEBB4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802D1C78 002CEBB8  7C 08 02 A6 */	mflr r0
@@ -628,7 +560,7 @@ draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole:
 /* 802D1CA0 002CEBE0  38 63 CF A8 */	addi r3, r3, JKRThread__stringBase0@l
 /* 802D1CA4 002CEBE4  3B 23 00 5D */	addi r25, r3, 0x5d
 /* 802D1CA8 002CEBE8  3B A3 00 7F */	addi r29, r3, 0x7f
-/* 802D1CAC 002CEBEC  41 82 00 34 */	beq func_802D1CE0
+/* 802D1CAC 002CEBEC  41 82 00 34 */	beq lbl_802D1CE0
 /* 802D1CB0 002CEBF0  7F 83 E3 78 */	mr r3, r28
 /* 802D1CB4 002CEBF4  48 01 59 39 */	bl clear__10JUTConsoleFv
 /* 802D1CB8 002CEBF8  7F 83 E3 78 */	mr r3, r28
@@ -641,54 +573,36 @@ draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole:
 /* 802D1CD4 002CEC14  7F 83 E3 78 */	mr r3, r28
 /* 802D1CD8 002CEC18  7F A4 EB 78 */	mr r4, r29
 /* 802D1CDC 002CEC1C  48 01 5F 5D */	bl print__10JUTConsoleFPCc
-
-/* 802D1CE0 000C .text      func_802D1CE0                  func_802D1CE0                  */
-.global func_802D1CE0
-func_802D1CE0:
+lbl_802D1CE0:
 /* 802D1CE0 002CEC20  3C 60 80 43 */	lis r3, sThreadList__9JKRThread@ha
 /* 802D1CE4 002CEC24  83 C3 42 8C */	lwz r30, sThreadList__9JKRThread@l(r3)
-/* 802D1CE8 002CEC28  48 00 01 04 */	b func_802D1DEC
-
-/* 802D1CEC 0024 .text      func_802D1CEC                  func_802D1CEC                  */
-.global func_802D1CEC
-func_802D1CEC:
+/* 802D1CE8 002CEC28  48 00 01 04 */	b lbl_802D1DEC
+lbl_802D1CEC:
 /* 802D1CEC 002CEC2C  83 3E 00 00 */	lwz r25, 0(r30)
 /* 802D1CF0 002CEC30  88 19 00 60 */	lbz r0, 0x60(r25)
 /* 802D1CF4 002CEC34  28 00 00 00 */	cmplwi r0, 0
-/* 802D1CF8 002CEC38  41 82 00 F0 */	beq func_802D1DE8
+/* 802D1CF8 002CEC38  41 82 00 F0 */	beq lbl_802D1DE8
 /* 802D1CFC 002CEC3C  3B A0 00 00 */	li r29, 0
 /* 802D1D00 002CEC40  28 1B 00 00 */	cmplwi r27, 0
-/* 802D1D04 002CEC44  41 82 00 34 */	beq func_802D1D38
+/* 802D1D04 002CEC44  41 82 00 34 */	beq lbl_802D1D38
 /* 802D1D08 002CEC48  7F 65 DB 78 */	mr r5, r27
-/* 802D1D0C 002CEC4C  48 00 00 20 */	b func_802D1D2C
-
-/* 802D1D10 0018 .text      func_802D1D10                  func_802D1D10                  */
-.global func_802D1D10
-func_802D1D10:
+/* 802D1D0C 002CEC4C  48 00 00 20 */	b lbl_802D1D2C
+lbl_802D1D10:
 /* 802D1D10 002CEC50  80 65 00 00 */	lwz r3, 0(r5)
 /* 802D1D14 002CEC54  80 19 00 70 */	lwz r0, 0x70(r25)
 /* 802D1D18 002CEC58  7C 03 00 00 */	cmpw r3, r0
-/* 802D1D1C 002CEC5C  40 82 00 0C */	bne func_802D1D28
+/* 802D1D1C 002CEC5C  40 82 00 0C */	bne lbl_802D1D28
 /* 802D1D20 002CEC60  7C 9D 23 78 */	mr r29, r4
-/* 802D1D24 002CEC64  48 00 00 14 */	b func_802D1D38
-
-/* 802D1D28 0004 .text      func_802D1D28                  func_802D1D28                  */
-.global func_802D1D28
-func_802D1D28:
+/* 802D1D24 002CEC64  48 00 00 14 */	b lbl_802D1D38
+lbl_802D1D28:
 /* 802D1D28 002CEC68  38 A5 00 08 */	addi r5, r5, 8
-
-/* 802D1D2C 000C .text      func_802D1D2C                  func_802D1D2C                  */
-.global func_802D1D2C
-func_802D1D2C:
+lbl_802D1D2C:
 /* 802D1D2C 002CEC6C  80 85 00 04 */	lwz r4, 4(r5)
 /* 802D1D30 002CEC70  28 04 00 00 */	cmplwi r4, 0
-/* 802D1D34 002CEC74  40 82 FF DC */	bne func_802D1D10
-
-/* 802D1D38 0028 .text      func_802D1D38                  func_802D1D38                  */
-.global func_802D1D38
-func_802D1D38:
+/* 802D1D34 002CEC74  40 82 FF DC */	bne lbl_802D1D10
+lbl_802D1D38:
 /* 802D1D38 002CEC78  28 1D 00 00 */	cmplwi r29, 0
-/* 802D1D3C 002CEC7C  40 82 00 24 */	bne func_802D1D60
+/* 802D1D3C 002CEC7C  40 82 00 24 */	bne lbl_802D1D60
 /* 802D1D40 002CEC80  38 61 00 08 */	addi r3, r1, 8
 /* 802D1D44 002CEC84  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
 /* 802D1D48 002CEC88  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
@@ -697,10 +611,7 @@ func_802D1D38:
 /* 802D1D54 002CEC94  4C C6 31 82 */	crclr 6
 /* 802D1D58 002CEC98  48 09 47 85 */	bl sprintf
 /* 802D1D5C 002CEC9C  3B A1 00 08 */	addi r29, r1, 8
-
-/* 802D1D60 0088 .text      func_802D1D60                  func_802D1D60                  */
-.global func_802D1D60
-func_802D1D60:
+lbl_802D1D60:
 /* 802D1D60 002CECA0  83 F9 00 68 */	lwz r31, 0x68(r25)
 /* 802D1D64 002CECA4  80 7A 00 18 */	lwz r3, 0x18(r26)
 /* 802D1D68 002CECA8  80 9A 00 1C */	lwz r4, 0x1c(r26)
@@ -725,7 +636,7 @@ func_802D1D60:
 /* 802D1DB4 002CECF4  7C 00 21 D6 */	mullw r0, r0, r4
 /* 802D1DB8 002CECF8  7D 00 18 50 */	subf r8, r0, r3
 /* 802D1DBC 002CECFC  28 1C 00 00 */	cmplwi r28, 0
-/* 802D1DC0 002CED00  41 82 00 28 */	beq func_802D1DE8
+/* 802D1DC0 002CED00  41 82 00 28 */	beq lbl_802D1DE8
 /* 802D1DC4 002CED04  7F 83 E3 78 */	mr r3, r28
 /* 802D1DC8 002CED08  3C 80 80 3A */	lis r4, JKRThread__stringBase0@ha
 /* 802D1DCC 002CED0C  38 84 CF A8 */	addi r4, r4, JKRThread__stringBase0@l
@@ -735,17 +646,11 @@ func_802D1D60:
 /* 802D1DDC 002CED1C  7F 27 CB 78 */	mr r7, r25
 /* 802D1DE0 002CED20  4C C6 31 82 */	crclr 6
 /* 802D1DE4 002CED24  48 01 5D D5 */	bl print_f__10JUTConsoleFPCce
-
-/* 802D1DE8 0004 .text      func_802D1DE8                  func_802D1DE8                  */
-.global func_802D1DE8
-func_802D1DE8:
+lbl_802D1DE8:
 /* 802D1DE8 002CED28  83 DE 00 0C */	lwz r30, 0xc(r30)
-
-/* 802D1DEC 0028 .text      func_802D1DEC                  func_802D1DEC                  */
-.global func_802D1DEC
-func_802D1DEC:
+lbl_802D1DEC:
 /* 802D1DEC 002CED2C  28 1E 00 00 */	cmplwi r30, 0
-/* 802D1DF0 002CED30  40 82 FE FC */	bne func_802D1CEC
+/* 802D1DF0 002CED30  40 82 FE FC */	bne lbl_802D1CEC
 /* 802D1DF4 002CED34  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
 /* 802D1DF8 002CED38  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 802D1DFC 002CED3C  39 61 00 40 */	addi r11, r1, 0x40
@@ -758,11 +663,13 @@ func_802D1DEC:
 /* 802D1E14 0008 .text      run__9JKRThreadFv              run__9JKRThreadFv              */
 .global run__9JKRThreadFv
 run__9JKRThreadFv:
+run__9JKRThreadFv:
 /* 802D1E14 002CED54  38 60 00 00 */	li r3, 0
 /* 802D1E18 002CED58  4E 80 00 20 */	blr 
 
 /* 802D1E1C 0030 .text      draw__15JKRThreadSwitchFP14JKRThreadName_ draw__15JKRThreadSwitchFP14JKRThreadName_ */
 .global draw__15JKRThreadSwitchFP14JKRThreadName_
+draw__15JKRThreadSwitchFP14JKRThreadName_:
 draw__15JKRThreadSwitchFP14JKRThreadName_:
 /* 802D1E1C 002CED5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1E20 002CED60  7C 08 02 A6 */	mflr r0
@@ -777,25 +684,23 @@ draw__15JKRThreadSwitchFP14JKRThreadName_:
 /* 802D1E44 002CED84  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1E48 002CED88  4E 80 00 20 */	blr 
 
-/* 802D1E4C 0030 .text      __dt__15JKRThreadSwitchFv      __dt__15JKRThreadSwitchFv      */
+/* 802D1E4C 0048 .text      __dt__15JKRThreadSwitchFv      __dt__15JKRThreadSwitchFv      */
 .global __dt__15JKRThreadSwitchFv
+__dt__15JKRThreadSwitchFv:
 __dt__15JKRThreadSwitchFv:
 /* 802D1E4C 002CED8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1E50 002CED90  7C 08 02 A6 */	mflr r0
 /* 802D1E54 002CED94  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802D1E58 002CED98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D1E5C 002CED9C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D1E60 002CEDA0  41 82 00 1C */	beq func_802D1E7C
+/* 802D1E60 002CEDA0  41 82 00 1C */	beq lbl_802D1E7C
 /* 802D1E64 002CEDA4  3C A0 80 3D */	lis r5, __vt__15JKRThreadSwitch@ha
 /* 802D1E68 002CEDA8  38 05 C1 00 */	addi r0, r5, __vt__15JKRThreadSwitch@l
 /* 802D1E6C 002CEDAC  90 1F 00 00 */	stw r0, 0(r31)
 /* 802D1E70 002CEDB0  7C 80 07 35 */	extsh. r0, r4
-/* 802D1E74 002CEDB4  40 81 00 08 */	ble func_802D1E7C
+/* 802D1E74 002CEDB4  40 81 00 08 */	ble lbl_802D1E7C
 /* 802D1E78 002CEDB8  4B FF CE C5 */	bl __dl__FPv
-
-/* 802D1E7C 0018 .text      func_802D1E7C                  func_802D1E7C                  */
-.global func_802D1E7C
-func_802D1E7C:
+lbl_802D1E7C:
 /* 802D1E7C 002CEDBC  7F E3 FB 78 */	mr r3, r31
 /* 802D1E80 002CEDC0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D1E84 002CEDC4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -805,6 +710,7 @@ func_802D1E7C:
 
 /* 802D1E94 0068 .text      __sinit_JKRThread_cpp          __sinit_JKRThread_cpp          */
 .global __sinit_JKRThread_cpp
+__sinit_JKRThread_cpp:
 __sinit_JKRThread_cpp:
 /* 802D1E94 002CEDD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1E98 002CEDD8  7C 08 02 A6 */	mflr r0
@@ -833,8 +739,11 @@ __sinit_JKRThread_cpp:
 /* 802D1EF4 002CEE34  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1EF8 002CEE38  4E 80 00 20 */	blr 
 
-/* 802D1EFC 0038 .text      "__dt__17JSUList<7JKRTask>Fv"  __dt__17JSUList<7JKRTask>Fv    */
+/* 802D1EFC 0054 .text      __dt__17JSUList<7JKRTask>Fv    "__dt__17JSUList<7JKRTask>Fv"  */
+.global "__dt__17JSUList<7JKRTask>Fv"
+"__dt__17JSUList<7JKRTask>Fv":
 .global __dt__17JSUList_SUB_07JKRTask_SUB_1Fv
+__dt__17JSUList_SUB_07JKRTask_SUB_1Fv:
 __dt__17JSUList_SUB_07JKRTask_SUB_1Fv:
 /* 802D1EFC 002CEE3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1F00 002CEE40  7C 08 02 A6 */	mflr r0
@@ -843,17 +752,14 @@ __dt__17JSUList_SUB_07JKRTask_SUB_1Fv:
 /* 802D1F0C 002CEE4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D1F10 002CEE50  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D1F14 002CEE54  7C 9F 23 78 */	mr r31, r4
-/* 802D1F18 002CEE58  41 82 00 1C */	beq func_802D1F34
+/* 802D1F18 002CEE58  41 82 00 1C */	beq lbl_802D1F34
 /* 802D1F1C 002CEE5C  38 80 00 00 */	li r4, 0
 /* 802D1F20 002CEE60  48 00 9F 8D */	bl __dt__10JSUPtrListFv
 /* 802D1F24 002CEE64  7F E0 07 35 */	extsh. r0, r31
-/* 802D1F28 002CEE68  40 81 00 0C */	ble func_802D1F34
+/* 802D1F28 002CEE68  40 81 00 0C */	ble lbl_802D1F34
 /* 802D1F2C 002CEE6C  7F C3 F3 78 */	mr r3, r30
 /* 802D1F30 002CEE70  4B FF CE 0D */	bl __dl__FPv
-
-/* 802D1F34 001C .text      func_802D1F34                  func_802D1F34                  */
-.global func_802D1F34
-func_802D1F34:
+lbl_802D1F34:
 /* 802D1F34 002CEE74  7F C3 F3 78 */	mr r3, r30
 /* 802D1F38 002CEE78  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D1F3C 002CEE7C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -862,8 +768,11 @@ func_802D1F34:
 /* 802D1F48 002CEE88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1F4C 002CEE8C  4E 80 00 20 */	blr 
 
-/* 802D1F50 0038 .text      "__dt__19JSUList<9JKRThread>Fv" __dt__19JSUList<9JKRThread>Fv  */
+/* 802D1F50 0054 .text      __dt__19JSUList<9JKRThread>Fv  "__dt__19JSUList<9JKRThread>Fv" */
+.global "__dt__19JSUList<9JKRThread>Fv"
+"__dt__19JSUList<9JKRThread>Fv":
 .global __dt__19JSUList_SUB_09JKRThread_SUB_1Fv
+__dt__19JSUList_SUB_09JKRThread_SUB_1Fv:
 __dt__19JSUList_SUB_09JKRThread_SUB_1Fv:
 /* 802D1F50 002CEE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1F54 002CEE94  7C 08 02 A6 */	mflr r0
@@ -872,17 +781,14 @@ __dt__19JSUList_SUB_09JKRThread_SUB_1Fv:
 /* 802D1F60 002CEEA0  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D1F64 002CEEA4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D1F68 002CEEA8  7C 9F 23 78 */	mr r31, r4
-/* 802D1F6C 002CEEAC  41 82 00 1C */	beq func_802D1F88
+/* 802D1F6C 002CEEAC  41 82 00 1C */	beq lbl_802D1F88
 /* 802D1F70 002CEEB0  38 80 00 00 */	li r4, 0
 /* 802D1F74 002CEEB4  48 00 9F 39 */	bl __dt__10JSUPtrListFv
 /* 802D1F78 002CEEB8  7F E0 07 35 */	extsh. r0, r31
-/* 802D1F7C 002CEEBC  40 81 00 0C */	ble func_802D1F88
+/* 802D1F7C 002CEEBC  40 81 00 0C */	ble lbl_802D1F88
 /* 802D1F80 002CEEC0  7F C3 F3 78 */	mr r3, r30
 /* 802D1F84 002CEEC4  4B FF CD B9 */	bl __dl__FPv
-
-/* 802D1F88 001C .text      func_802D1F88                  func_802D1F88                  */
-.global func_802D1F88
-func_802D1F88:
+lbl_802D1F88:
 /* 802D1F88 002CEEC8  7F C3 F3 78 */	mr r3, r30
 /* 802D1F8C 002CEECC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D1F90 002CEED0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -896,7 +802,7 @@ func_802D1F88:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8039CFA8 00CD .rodata    JKRThread__stringBase0         @stringBase0                   */
+/* 8039CFA8 00CD .rodata    @stringBase0                   JKRThread__stringBase0         */
 .global JKRThread__stringBase0
 JKRThread__stringBase0:
 .byte 0x6f, 0x6e, 0x00, 0x6f, 0x66, 0x66, 0x00, 0x4a, 0x4b, 0x52, 0x54, 0x68, 0x72, 0x65, 0x61, 0x64 /* baserom.dol+0x399fa8 */
@@ -912,7 +818,7 @@ JKRThread__stringBase0:
 .byte 0x2d, 0x2d, 0x2d, 0x2d, 0x2d, 0x0a, 0x00, 0x25, 0x64, 0x00, 0x20, 0x5b, 0x25, 0x31, 0x30, 0x73 /* baserom.dol+0x39a048 */
 .byte 0x5d, 0x20, 0x73, 0x77, 0x69, 0x74, 0x63, 0x68, 0x3a, 0x25, 0x35, 0x64, 0x20, 0x20, 0x63, 0x6f /* baserom.dol+0x39a058 */
 .byte 0x73, 0x74, 0x3a, 0x25, 0x32, 0x64, 0x2e, 0x25, 0x64, 0x25, 0x25, 0x0a, 0x00 /* baserom.dol+0x39a068 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x39a075 */
+.byte 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -922,25 +828,31 @@ JKRThread__stringBase0:
 /* 803CC100 0014 .data      __vt__15JKRThreadSwitch        __vt__15JKRThreadSwitch        */
 .global __vt__15JKRThreadSwitch
 __vt__15JKRThreadSwitch:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x1c, 0x74, 0x80, 0x2d, 0x1e, 0x1c /* baserom.dol+0x3c9100 */
-.byte 0x80, 0x2d, 0x1e, 0x4c /* baserom.dol+0x3c9110 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole
+.4byte draw__15JKRThreadSwitchFP14JKRThreadName_
+.4byte __dt__15JKRThreadSwitchFv
 
 /* 803CC114 0010 .data      __vt__9JKRThread               __vt__9JKRThread               */
 .global __vt__9JKRThread
 __vt__9JKRThread:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x17, 0x58, 0x80, 0x2d, 0x1e, 0x14 /* baserom.dol+0x3c9114 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9124 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__9JKRThreadFv
+.4byte run__9JKRThreadFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80434280 0000 .bss       sym_80434280                   ...bss.0                       */
-.global sym_80434280
-sym_80434280:
+/* 80434280 0000 .bss       ...bss.0                       data_80434280                  */
+.global data_80434280
+data_80434280:
 
-/* 80434280 000C .bss       LIT_481                        @481                           */
+/* 80434280 000C .bss       @481                           LIT_481                        */
 .global LIT_481
 LIT_481:
 .skip 0xc
@@ -950,7 +862,7 @@ LIT_481:
 sThreadList__9JKRThread:
 .skip 0xc
 
-/* 80434298 000C .bss       LIT_989                        @989                           */
+/* 80434298 000C .bss       @989                           LIT_989                        */
 .global LIT_989
 LIT_989:
 .skip 0xc
@@ -985,9 +897,9 @@ sTotalCount__15JKRThreadSwitch:
 sTotalStart__15JKRThreadSwitch:
 .skip 0x4
 
-/* 804513BC 0004 .sbss      sym_804513BC                   sym_804513BC                   */
-.global sym_804513BC
-sym_804513BC:
+/* 804513BC 0004 .sbss      data_804513BC                  data_804513BC                  */
+.global data_804513BC
+data_804513BC:
 .skip 0x4
 
 /* 804513C0 0004 .sbss      mUserPreCallback__15JKRThreadSwitch mUserPreCallback__15JKRThreadSwitch */
@@ -1005,17 +917,17 @@ mUserPostCallback__15JKRThreadSwitch:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455FC0 0004 .sdata2    JKRThread__LIT_934             @934                           */
+/* 80455FC0 0004 .sdata2    @934                           JKRThread__LIT_934             */
 .global JKRThread__LIT_934
 JKRThread__LIT_934:
 .byte 0x42, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d4e20 */
 
-/* 80455FC4 0004 .sdata2    JKRThread__LIT_935             @935                           */
+/* 80455FC4 0004 .sdata2    @935                           JKRThread__LIT_935             */
 .global JKRThread__LIT_935
 JKRThread__LIT_935:
 .byte 0x44, 0x7a, 0x00, 0x00 /* baserom.dol+0x3d4e24 */
 
-/* 80455FC8 0008 .sdata2    JKRThread__LIT_937             @937                           */
+/* 80455FC8 0008 .sdata2    @937                           JKRThread__LIT_937             */
 .global JKRThread__LIT_937
 JKRThread__LIT_937:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e28 */

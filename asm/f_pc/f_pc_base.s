@@ -7,59 +7,54 @@
 /* 8002064C 0010 .text      fpcBs_Is_JustOfType__Fii       fpcBs_Is_JustOfType__Fii       */
 .global fpcBs_Is_JustOfType__Fii
 fpcBs_Is_JustOfType__Fii:
+fpcBs_Is_JustOfType__Fii:
 /* 8002064C 0001D58C  7C 04 18 50 */	subf r0, r4, r3
 /* 80020650 0001D590  7C 00 00 34 */	cntlzw r0, r0
 /* 80020654 0001D594  54 03 D9 7E */	srwi r3, r0, 5
 /* 80020658 0001D598  4E 80 00 20 */	blr 
 
-/* 8002065C 001C .text      fpcBs_MakeOfType__FPi          fpcBs_MakeOfType__FPi          */
+/* 8002065C 0040 .text      fpcBs_MakeOfType__FPi          fpcBs_MakeOfType__FPi          */
 .global fpcBs_MakeOfType__FPi
 fpcBs_MakeOfType__FPi:
-/* 8002065C 0001D59C  88 0D 87 88 */	lbz r0, sym_80450D08-_SDA_BASE_(r13)
+fpcBs_MakeOfType__FPi:
+/* 8002065C 0001D59C  88 0D 87 88 */	lbz r0, data_80450D08-_SDA_BASE_(r13)
 /* 80020660 0001D5A0  7C 00 07 75 */	extsb. r0, r0
-/* 80020664 0001D5A4  40 82 00 14 */	bne func_80020678
+/* 80020664 0001D5A4  40 82 00 14 */	bne lbl_80020678
 /* 80020668 0001D5A8  3C 00 09 13 */	lis r0, 0x913
-/* 8002066C 0001D5AC  90 0D 87 84 */	stw r0, sym_80450D04-_SDA_BASE_(r13)
+/* 8002066C 0001D5AC  90 0D 87 84 */	stw r0, data_80450D04-_SDA_BASE_(r13)
 /* 80020670 0001D5B0  38 00 00 01 */	li r0, 1
-/* 80020674 0001D5B4  98 0D 87 88 */	stb r0, sym_80450D08-_SDA_BASE_(r13)
-
-/* 80020678 001C .text      func_80020678                  func_80020678                  */
-.global func_80020678
-func_80020678:
+/* 80020674 0001D5B4  98 0D 87 88 */	stb r0, data_80450D08-_SDA_BASE_(r13)
+lbl_80020678:
 /* 80020678 0001D5B8  80 03 00 00 */	lwz r0, 0(r3)
 /* 8002067C 0001D5BC  2C 00 00 00 */	cmpwi r0, 0
-/* 80020680 0001D5C0  40 82 00 14 */	bne func_80020694
-/* 80020684 0001D5C4  80 8D 87 84 */	lwz r4, sym_80450D04-_SDA_BASE_(r13)
+/* 80020680 0001D5C0  40 82 00 14 */	bne lbl_80020694
+/* 80020684 0001D5C4  80 8D 87 84 */	lwz r4, data_80450D04-_SDA_BASE_(r13)
 /* 80020688 0001D5C8  38 04 00 01 */	addi r0, r4, 1
-/* 8002068C 0001D5CC  90 0D 87 84 */	stw r0, sym_80450D04-_SDA_BASE_(r13)
+/* 8002068C 0001D5CC  90 0D 87 84 */	stw r0, data_80450D04-_SDA_BASE_(r13)
 /* 80020690 0001D5D0  90 03 00 00 */	stw r0, 0(r3)
-
-/* 80020694 0008 .text      func_80020694                  func_80020694                  */
-.global func_80020694
-func_80020694:
+lbl_80020694:
 /* 80020694 0001D5D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80020698 0001D5D8  4E 80 00 20 */	blr 
 
-/* 8002069C 0018 .text      fpcBs_MakeOfId__Fv             fpcBs_MakeOfId__Fv             */
+/* 8002069C 0028 .text      fpcBs_MakeOfId__Fv             fpcBs_MakeOfId__Fv             */
 .global fpcBs_MakeOfId__Fv
 fpcBs_MakeOfId__Fv:
-/* 8002069C 0001D5DC  88 0D 87 90 */	lbz r0, sym_80450D10-_SDA_BASE_(r13)
+fpcBs_MakeOfId__Fv:
+/* 8002069C 0001D5DC  88 0D 87 90 */	lbz r0, data_80450D10-_SDA_BASE_(r13)
 /* 800206A0 0001D5E0  7C 00 07 75 */	extsb. r0, r0
-/* 800206A4 0001D5E4  40 82 00 10 */	bne func_800206B4
+/* 800206A4 0001D5E4  40 82 00 10 */	bne lbl_800206B4
 /* 800206A8 0001D5E8  38 00 00 01 */	li r0, 1
-/* 800206AC 0001D5EC  90 0D 87 8C */	stw r0, sym_80450D0C-_SDA_BASE_(r13)
-/* 800206B0 0001D5F0  98 0D 87 90 */	stb r0, sym_80450D10-_SDA_BASE_(r13)
-
-/* 800206B4 0010 .text      func_800206B4                  func_800206B4                  */
-.global func_800206B4
-func_800206B4:
-/* 800206B4 0001D5F4  80 6D 87 8C */	lwz r3, sym_80450D0C-_SDA_BASE_(r13)
+/* 800206AC 0001D5EC  90 0D 87 8C */	stw r0, data_80450D0C-_SDA_BASE_(r13)
+/* 800206B0 0001D5F0  98 0D 87 90 */	stb r0, data_80450D10-_SDA_BASE_(r13)
+lbl_800206B4:
+/* 800206B4 0001D5F4  80 6D 87 8C */	lwz r3, data_80450D0C-_SDA_BASE_(r13)
 /* 800206B8 0001D5F8  38 03 00 01 */	addi r0, r3, 1
-/* 800206BC 0001D5FC  90 0D 87 8C */	stw r0, sym_80450D0C-_SDA_BASE_(r13)
+/* 800206BC 0001D5FC  90 0D 87 8C */	stw r0, data_80450D0C-_SDA_BASE_(r13)
 /* 800206C0 0001D600  4E 80 00 20 */	blr 
 
 /* 800206C4 005C .text      fpcBs_Execute__FP18base_process_class fpcBs_Execute__FP18base_process_class */
 .global fpcBs_Execute__FP18base_process_class
+fpcBs_Execute__FP18base_process_class:
 fpcBs_Execute__FP18base_process_class:
 /* 800206C4 0001D604  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800206C8 0001D608  7C 08 02 A6 */	mflr r0
@@ -85,8 +80,9 @@ fpcBs_Execute__FP18base_process_class:
 /* 80020718 0001D658  38 21 00 10 */	addi r1, r1, 0x10
 /* 8002071C 0001D65C  4E 80 00 20 */	blr 
 
-/* 80020720 002C .text      fpcBs_DeleteAppend__FP18base_process_class fpcBs_DeleteAppend__FP18base_process_class */
+/* 80020720 0040 .text      fpcBs_DeleteAppend__FP18base_process_class fpcBs_DeleteAppend__FP18base_process_class */
 .global fpcBs_DeleteAppend__FP18base_process_class
+fpcBs_DeleteAppend__FP18base_process_class:
 fpcBs_DeleteAppend__FP18base_process_class:
 /* 80020720 0001D660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020724 0001D664  7C 08 02 A6 */	mflr r0
@@ -95,14 +91,11 @@ fpcBs_DeleteAppend__FP18base_process_class:
 /* 80020730 0001D670  7C 7F 1B 78 */	mr r31, r3
 /* 80020734 0001D674  80 63 00 AC */	lwz r3, 0xac(r3)
 /* 80020738 0001D678  28 03 00 00 */	cmplwi r3, 0
-/* 8002073C 0001D67C  41 82 00 10 */	beq func_8002074C
+/* 8002073C 0001D67C  41 82 00 10 */	beq lbl_8002074C
 /* 80020740 0001D680  48 24 2B 21 */	bl free__3cMlFPv
 /* 80020744 0001D684  38 00 00 00 */	li r0, 0
 /* 80020748 0001D688  90 1F 00 AC */	stw r0, 0xac(r31)
-
-/* 8002074C 0014 .text      func_8002074C                  func_8002074C                  */
-.global func_8002074C
-func_8002074C:
+lbl_8002074C:
 /* 8002074C 0001D68C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80020750 0001D690  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80020754 0001D694  7C 08 03 A6 */	mtlr r0
@@ -111,6 +104,7 @@ func_8002074C:
 
 /* 80020760 005C .text      fpcBs_IsDelete__FP18base_process_class fpcBs_IsDelete__FP18base_process_class */
 .global fpcBs_IsDelete__FP18base_process_class
+fpcBs_IsDelete__FP18base_process_class:
 fpcBs_IsDelete__FP18base_process_class:
 /* 80020760 0001D6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020764 0001D6A4  7C 08 02 A6 */	mflr r0
@@ -136,8 +130,9 @@ fpcBs_IsDelete__FP18base_process_class:
 /* 800207B4 0001D6F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800207B8 0001D6F8  4E 80 00 20 */	blr 
 
-/* 800207BC 0048 .text      fpcBs_Delete__FP18base_process_class fpcBs_Delete__FP18base_process_class */
+/* 800207BC 0064 .text      fpcBs_Delete__FP18base_process_class fpcBs_Delete__FP18base_process_class */
 .global fpcBs_Delete__FP18base_process_class
+fpcBs_Delete__FP18base_process_class:
 fpcBs_Delete__FP18base_process_class:
 /* 800207BC 0001D6FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800207C0 0001D700  7C 08 02 A6 */	mflr r0
@@ -150,17 +145,14 @@ fpcBs_Delete__FP18base_process_class:
 /* 800207DC 0001D71C  48 00 1C CD */	bl fpcMtd_Delete__FP20process_method_classPv
 /* 800207E0 0001D720  7C 7F 1B 78 */	mr r31, r3
 /* 800207E4 0001D724  2C 1F 00 01 */	cmpwi r31, 1
-/* 800207E8 0001D728  40 82 00 1C */	bne func_80020804
+/* 800207E8 0001D728  40 82 00 1C */	bne lbl_80020804
 /* 800207EC 0001D72C  7F C3 F3 78 */	mr r3, r30
 /* 800207F0 0001D730  4B FF FF 31 */	bl fpcBs_DeleteAppend__FP18base_process_class
 /* 800207F4 0001D734  38 00 00 00 */	li r0, 0
 /* 800207F8 0001D738  90 1E 00 00 */	stw r0, 0(r30)
 /* 800207FC 0001D73C  7F C3 F3 78 */	mr r3, r30
 /* 80020800 0001D740  48 24 2A 61 */	bl free__3cMlFPv
-
-/* 80020804 001C .text      func_80020804                  func_80020804                  */
-.global func_80020804
-func_80020804:
+lbl_80020804:
 /* 80020804 0001D744  7F E3 FB 78 */	mr r3, r31
 /* 80020808 0001D748  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8002080C 0001D74C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -169,8 +161,9 @@ func_80020804:
 /* 80020818 0001D758  38 21 00 10 */	addi r1, r1, 0x10
 /* 8002081C 0001D75C  4E 80 00 20 */	blr 
 
-/* 80020820 0050 .text      fpcBs_Create__FsUiPv           fpcBs_Create__FsUiPv           */
+/* 80020820 00FC .text      fpcBs_Create__FsUiPv           fpcBs_Create__FsUiPv           */
 .global fpcBs_Create__FsUiPv
+fpcBs_Create__FsUiPv:
 fpcBs_Create__FsUiPv:
 /* 80020820 0001D760  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80020824 0001D764  7C 08 02 A6 */	mflr r0
@@ -189,13 +182,10 @@ fpcBs_Create__FsUiPv:
 /* 80020858 0001D798  7F A4 EB 78 */	mr r4, r29
 /* 8002085C 0001D79C  48 24 29 CD */	bl memalignB__3cMlFiUl
 /* 80020860 0001D7A0  7C 7E 1B 79 */	or. r30, r3, r3
-/* 80020864 0001D7A4  40 82 00 0C */	bne func_80020870
+/* 80020864 0001D7A4  40 82 00 0C */	bne lbl_80020870
 /* 80020868 0001D7A8  38 60 00 00 */	li r3, 0
-/* 8002086C 0001D7AC  48 00 00 98 */	b func_80020904
-
-/* 80020870 0094 .text      func_80020870                  func_80020870                  */
-.global func_80020870
-func_80020870:
+/* 8002086C 0001D7AC  48 00 00 98 */	b lbl_80020904
+lbl_80020870:
 /* 80020870 0001D7B0  7F A4 EB 78 */	mr r4, r29
 /* 80020874 0001D7B4  48 25 14 39 */	bl sBs_ClearArea__FPvUl
 /* 80020878 0001D7B8  38 7E 00 18 */	addi r3, r30, 0x18
@@ -233,10 +223,7 @@ func_80020870:
 /* 800208F8 0001D838  80 1F 00 18 */	lwz r0, 0x18(r31)
 /* 800208FC 0001D83C  90 1E 00 B0 */	stw r0, 0xb0(r30)
 /* 80020900 0001D840  7F C3 F3 78 */	mr r3, r30
-
-/* 80020904 0018 .text      func_80020904                  func_80020904                  */
-.global func_80020904
-func_80020904:
+lbl_80020904:
 /* 80020904 0001D844  39 61 00 20 */	addi r11, r1, 0x20
 /* 80020908 0001D848  48 34 19 15 */	bl _restgpr_26
 /* 8002090C 0001D84C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -244,8 +231,9 @@ func_80020904:
 /* 80020914 0001D854  38 21 00 20 */	addi r1, r1, 0x20
 /* 80020918 0001D858  4E 80 00 20 */	blr 
 
-/* 8002091C 0040 .text      fpcBs_SubCreate__FP18base_process_class fpcBs_SubCreate__FP18base_process_class */
+/* 8002091C 00AC .text      fpcBs_SubCreate__FP18base_process_class fpcBs_SubCreate__FP18base_process_class */
 .global fpcBs_SubCreate__FP18base_process_class
+fpcBs_SubCreate__FP18base_process_class:
 fpcBs_SubCreate__FP18base_process_class:
 /* 8002091C 0001D85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020920 0001D860  7C 08 02 A6 */	mflr r0
@@ -256,59 +244,41 @@ fpcBs_SubCreate__FP18base_process_class:
 /* 80020934 0001D874  7F E4 FB 78 */	mr r4, r31
 /* 80020938 0001D878  48 00 1B 95 */	bl fpcMtd_Create__FP20process_method_classPv
 /* 8002093C 0001D87C  2C 03 00 03 */	cmpwi r3, 3
-/* 80020940 0001D880  41 82 00 58 */	beq func_80020998
-/* 80020944 0001D884  40 80 00 18 */	bge func_8002095C
+/* 80020940 0001D880  41 82 00 58 */	beq lbl_80020998
+/* 80020944 0001D884  40 80 00 18 */	bge lbl_8002095C
 /* 80020948 0001D888  2C 03 00 02 */	cmpwi r3, 2
-/* 8002094C 0001D88C  40 80 00 1C */	bge func_80020968
+/* 8002094C 0001D88C  40 80 00 1C */	bge lbl_80020968
 /* 80020950 0001D890  2C 03 00 00 */	cmpwi r3, 0
-/* 80020954 0001D894  40 80 00 2C */	bge func_80020980
-/* 80020958 0001D898  48 00 00 50 */	b func_800209A8
-
-/* 8002095C 000C .text      func_8002095C                  func_8002095C                  */
-.global func_8002095C
-func_8002095C:
+/* 80020954 0001D894  40 80 00 2C */	bge lbl_80020980
+/* 80020958 0001D898  48 00 00 50 */	b lbl_800209A8
+lbl_8002095C:
 /* 8002095C 0001D89C  2C 03 00 05 */	cmpwi r3, 5
-/* 80020960 0001D8A0  41 82 00 48 */	beq func_800209A8
-/* 80020964 0001D8A4  40 80 00 44 */	bge func_800209A8
-
-/* 80020968 0018 .text      func_80020968                  func_80020968                  */
-.global func_80020968
-func_80020968:
+/* 80020960 0001D8A0  41 82 00 48 */	beq lbl_800209A8
+/* 80020964 0001D8A4  40 80 00 44 */	bge lbl_800209A8
+lbl_80020968:
 /* 80020968 0001D8A8  7F E3 FB 78 */	mr r3, r31
 /* 8002096C 0001D8AC  4B FF FD B5 */	bl fpcBs_DeleteAppend__FP18base_process_class
 /* 80020970 0001D8B0  38 00 00 02 */	li r0, 2
 /* 80020974 0001D8B4  98 1F 00 0D */	stb r0, 0xd(r31)
 /* 80020978 0001D8B8  38 60 00 02 */	li r3, 2
-/* 8002097C 0001D8BC  48 00 00 38 */	b func_800209B4
-
-/* 80020980 0018 .text      func_80020980                  func_80020980                  */
-.global func_80020980
-func_80020980:
+/* 8002097C 0001D8BC  48 00 00 38 */	b lbl_800209B4
+lbl_80020980:
 /* 80020980 0001D8C0  38 00 00 01 */	li r0, 1
 /* 80020984 0001D8C4  98 1F 00 0C */	stb r0, 0xc(r31)
 /* 80020988 0001D8C8  38 00 00 00 */	li r0, 0
 /* 8002098C 0001D8CC  98 1F 00 0D */	stb r0, 0xd(r31)
 /* 80020990 0001D8D0  38 60 00 00 */	li r3, 0
-/* 80020994 0001D8D4  48 00 00 20 */	b func_800209B4
-
-/* 80020998 0010 .text      func_80020998                  func_80020998                  */
-.global func_80020998
-func_80020998:
+/* 80020994 0001D8D4  48 00 00 20 */	b lbl_800209B4
+lbl_80020998:
 /* 80020998 0001D8D8  38 00 00 03 */	li r0, 3
 /* 8002099C 0001D8DC  98 1F 00 0D */	stb r0, 0xd(r31)
 /* 800209A0 0001D8E0  38 60 00 03 */	li r3, 3
-/* 800209A4 0001D8E4  48 00 00 10 */	b func_800209B4
-
-/* 800209A8 000C .text      func_800209A8                  func_800209A8                  */
-.global func_800209A8
-func_800209A8:
+/* 800209A4 0001D8E4  48 00 00 10 */	b lbl_800209B4
+lbl_800209A8:
 /* 800209A8 0001D8E8  38 00 00 05 */	li r0, 5
 /* 800209AC 0001D8EC  98 1F 00 0D */	stb r0, 0xd(r31)
 /* 800209B0 0001D8F0  38 60 00 05 */	li r3, 5
-
-/* 800209B4 0014 .text      func_800209B4                  func_800209B4                  */
-.global func_800209B4
-func_800209B4:
+lbl_800209B4:
 /* 800209B4 0001D8F4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800209B8 0001D8F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800209BC 0001D8FC  7C 08 03 A6 */	mtlr r0
@@ -325,23 +295,23 @@ func_800209B4:
 g_fpcBs_type:
 .skip 0x4
 
-/* 80450D04 0004 .sbss      sym_80450D04                   t_type$2207                    */
-.global sym_80450D04
-sym_80450D04:
+/* 80450D04 0004 .sbss      t_type$2207                    data_80450D04                  */
+.global data_80450D04
+data_80450D04:
 .skip 0x4
 
-/* 80450D08 0004 .sbss      sym_80450D08                   sym_80450D08                   */
-.global sym_80450D08
-sym_80450D08:
+/* 80450D08 0004 .sbss      data_80450D08                  data_80450D08                  */
+.global data_80450D08
+data_80450D08:
 .skip 0x4
 
-/* 80450D0C 0004 .sbss      sym_80450D0C                   process_id$2216                */
-.global sym_80450D0C
-sym_80450D0C:
+/* 80450D0C 0004 .sbss      process_id$2216                data_80450D0C                  */
+.global data_80450D0C
+data_80450D0C:
 .skip 0x4
 
-/* 80450D10 0008 .sbss      sym_80450D10                   sym_80450D10                   */
-.global sym_80450D10
-sym_80450D10:
+/* 80450D10 0008 .sbss      data_80450D10                  data_80450D10                  */
+.global data_80450D10
+data_80450D10:
 .skip 0x8
 

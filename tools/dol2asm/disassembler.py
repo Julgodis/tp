@@ -181,10 +181,12 @@ def add_label(addr, name):
     if not addr in labels:
         labels.add(addr)
     if name != None and not name in registers and not addr in labelNames:
+        assert isinstance(name, str)
         labelNames[addr] = name
 
 def add_label_override(addr, name):
     assert name
+    assert isinstance(name, str)
     labels.add(addr)
     labelNames[addr] = name
 
@@ -266,29 +268,29 @@ blacklistedInsns = {
 # Calls callback for every instruction in the specified code section
 
 
-def disasm_iter(offset, address, size, callback, data=None):
+def disasm_iter(data, address, size, callback, userdata=None):
     if size == 0:
         return
     start = address
     end = address + size
     while address < end:
         current = address
-        code = filecontent[offset + (address-start): offset + size]
+        code = data[(address-start):size]
         for insn in cs.disasm(code, address):
             address = insn.address
             if insn.id in blacklistedInsns:
-                callback(address, offset + address - start, None, insn.bytes, data)
+                callback(address, address - start, None, insn.bytes, userdata)
             else:
-                callback(address, offset + address - start, insn, insn.bytes, data)
+                callback(address, address - start, insn, insn.bytes, userdata)
             address += 4
         if address < end:
-            o = offset + address - start
-            callback(address, offset + address - start, None, filecontent[o: o + 4], data)
+            o = address - start
+            callback(address, address - start, None, data[o: o + 4], userdata)
             address += 4
         yield current, start, end
 
-def disasm(offset, address, size, callback, data=None):
-    deque(disasm_iter(offset, address, size, callback, data), maxlen=0)
+def disasm(data, address, size, callback, userdata=None):
+    deque(disasm_iter(data, address, size, callback, userdata), maxlen=0)
 
 
 lisInsns = {}  # register : insn
@@ -340,8 +342,6 @@ def is_store_insn(insn):
     return insn.id in {PPC_INS_STW}
 
 # Get labels
-
-
 def get_label_callback(address, offset, insn, bytes, data=None):
     global r13_addr
     global r2_addr
@@ -420,6 +420,57 @@ def get_label_callback(address, offset, insn, bytes, data=None):
                 labels.add(value)
                 #labelNames[value] = 'r2_%08X' % value
 
+# Add labels into data
+def get_labels_set(address, offset, insn, bytes, data):
+    if insn == None:
+        return
+
+    if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
+        lisInsns.clear()
+        for op in insn.operands:
+            if op.type == PPC_OP_IMM:
+                if insn.id == PPC_INS_BL:
+                    data.add(op.imm)
+                else:
+                    data.add(op.imm)
+
+    if insn.id == PPC_INS_LIS:
+        lisInsns[insn.operands[0].reg] = insn
+    elif (insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in lisInsns) \
+            or (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in lisInsns):
+        hiLoadInsn = lisInsns[insn.operands[1].reg]
+
+        value = combine_split_load_value(hiLoadInsn, insn)
+        if is_label_candidate(value):
+            data.add(value)
+
+        linkedInsns[hiLoadInsn.address] = insn
+        splitDataLoads[hiLoadInsn.address] = value
+        splitDataLoads[insn.address] = value
+        lisInsns.pop(insn.operands[1].reg, None)
+    elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
+        lisInsns.pop(insn.operands[0].reg, None)
+
+    if r13_addr != None:
+        if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
+            value = r13_addr + sign_extend_16(insn.operands[2].imm)
+            if is_label_candidate(value):
+                data.add(value)
+        if is_load_store_reg_offset(insn, PPC_REG_R13):
+            value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
+            if is_label_candidate(value):
+                data.add(value)
+
+    if r2_addr != None:
+        if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
+            value = r2_addr + sign_extend_16(insn.operands[2].imm)
+            if is_label_candidate(value):
+                data.add(value)
+        if is_load_store_reg_offset(insn, PPC_REG_R2):
+            value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
+            if is_label_candidate(value):
+                data.add(value)
+
 
 """
 for i in range(0, 7):
@@ -447,7 +498,7 @@ print('')
 # Converts the instruction to a string, fixing various issues with Capstone
 
 
-def insn_to_text(address, insn, raw):
+def insn_to_text(address, insn, raw, SDA=True):
     # Probably data, not a real instruction
     if insn.id == PPC_INS_BDNZ and (insn.bytes[0] & 1):
         return None
@@ -479,24 +530,34 @@ def insn_to_text(address, insn, raw):
         if insn.id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R13:
             value = r13_addr + sign_extend_16(insn.operands[2].imm)
             if value in labels:
-                return "%s %s, %s, %s-_SDA_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
-                #return "%s %s, %s, %s(r13)" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                if SDA:
+                    return "%s %s, %s, %s-_SDA_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                else:
+                    return "%s %s, %s, %s" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
         if is_load_store_reg_offset(insn, PPC_REG_R13):
             value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
             if value in labels:
-                return "%s %s, %s-_SDA_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
-                #return "%s %s, %s(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                if SDA:
+                    return "%s %s, %s-_SDA_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                else:
+                    return "%s %s, %s(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
 
     # r2 offset loads
     if r2_addr != None:
         if insn.id == PPC_INS_ADDI and insn.operands[1].reg == PPC_REG_R2:
             value = r2_addr + sign_extend_16(insn.operands[2].imm)
             if value in labels:
-                return "%s %s, %s, %s-_SDA2_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                if SDA:
+                    return "%s %s, %s, %s-_SDA2_BASE_" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
+                else:
+                    return "%s %s, %s, %s" % (insn.mnemonic, insn.reg_name(insn.operands[0].reg), insn.reg_name(insn.operands[1].reg), addr_to_label(value))
         if is_load_store_reg_offset(insn, PPC_REG_R2):
             value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
             if value in labels:
-                return "%s %s, %s-_SDA2_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                if SDA:
+                    return "%s %s, %s-_SDA2_BASE_(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
+                else:
+                    return "%s %s, %s(%s)" % (insn.mnemonic, insn.reg_name(insn.operands[0].value.reg), addr_to_label(value), insn.reg_name(insn.operands[1].mem.base))
 
     # Sign-extend immediate values because Capstone is an idiot and doesn't do that automatically
     if insn.id in {PPC_INS_ADDI, PPC_INS_ADDIC, PPC_INS_SUBFIC, PPC_INS_MULLI} and (insn.operands[2].imm & 0x8000):
@@ -648,8 +709,6 @@ disasemble_output = None
 def disassemble_callback(address, offset, insn, bytes, builder):
     # Output label (if any)
     if address in labels:
-        if address in labelNames:
-            builder.write(".global %s" % addr_to_label(address))
         builder.write("%s:" % addr_to_label(address))
     prefixComment = '/* %08X %08X  %02X %02X %02X %02X */' % (
         address, offset, bytes[0], bytes[1], bytes[2], bytes[3])

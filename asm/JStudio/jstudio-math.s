@@ -7,6 +7,7 @@
 /* 802859DC 0168 .text      getRotation_xyz__Q27JStudio4mathFPA4_ffff getRotation_xyz__Q27JStudio4mathFPA4_ffff */
 .global getRotation_xyz__Q27JStudio4mathFPA4_ffff
 getRotation_xyz__Q27JStudio4mathFPA4_ffff:
+getRotation_xyz__Q27JStudio4mathFPA4_ffff:
 /* 802859DC 0028291C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802859E0 00282920  7C 08 02 A6 */	mflr r0
 /* 802859E4 00282924  90 01 00 74 */	stw r0, 0x74(r1)
@@ -101,6 +102,7 @@ getRotation_xyz__Q27JStudio4mathFPA4_ffff:
 /* 80285B44 0088 .text      getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec */
 .global getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec
 getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec:
+getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec:
 /* 80285B44 00282A84  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 80285B48 00282A88  7C 08 02 A6 */	mflr r0
 /* 80285B4C 00282A8C  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -136,8 +138,9 @@ getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec:
 /* 80285BC4 00282B04  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80285BC8 00282B08  4E 80 00 20 */	blr 
 
-/* 80285BCC 00EC .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
+/* 80285BCC 0240 .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
 .global getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf
+getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf:
 getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf:
 /* 80285BCC 00282B0C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80285BD0 00282B10  7C 08 02 A6 */	mflr r0
@@ -195,33 +198,24 @@ getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf:
 /* 80285CA0 00282BE0  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489-_SDA2_BASE_(r2)
 /* 80285CA4 00282BE4  C0 3C 00 00 */	lfs f1, 0(r28)
 /* 80285CA8 00282BE8  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 80285CAC 00282BEC  41 82 00 0C */	beq func_80285CB8
+/* 80285CAC 00282BEC  41 82 00 0C */	beq lbl_80285CB8
 /* 80285CB0 00282BF0  C8 02 BA 78 */	lfd f0, LIT_624-_SDA2_BASE_(r2)
 /* 80285CB4 00282BF4  FC 60 08 24 */	fdiv f3, f0, f1
-
-/* 80285CB8 0018 .text      func_80285CB8                  func_80285CB8                  */
-.global func_80285CB8
-func_80285CB8:
+lbl_80285CB8:
 /* 80285CB8 00282BF8  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489-_SDA2_BASE_(r2)
 /* 80285CBC 00282BFC  C0 3C 00 04 */	lfs f1, 4(r28)
 /* 80285CC0 00282C00  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 80285CC4 00282C04  41 82 00 0C */	beq func_80285CD0
+/* 80285CC4 00282C04  41 82 00 0C */	beq lbl_80285CD0
 /* 80285CC8 00282C08  C8 02 BA 78 */	lfd f0, LIT_624-_SDA2_BASE_(r2)
 /* 80285CCC 00282C0C  FC 80 08 24 */	fdiv f4, f0, f1
-
-/* 80285CD0 0018 .text      func_80285CD0                  func_80285CD0                  */
-.global func_80285CD0
-func_80285CD0:
+lbl_80285CD0:
 /* 80285CD0 00282C10  C0 02 BA 6C */	lfs f0, jstudio_math__LIT_489-_SDA2_BASE_(r2)
 /* 80285CD4 00282C14  C0 3C 00 08 */	lfs f1, 8(r28)
 /* 80285CD8 00282C18  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 80285CDC 00282C1C  41 82 00 0C */	beq func_80285CE8
+/* 80285CDC 00282C1C  41 82 00 0C */	beq lbl_80285CE8
 /* 80285CE0 00282C20  C8 02 BA 78 */	lfd f0, LIT_624-_SDA2_BASE_(r2)
 /* 80285CE4 00282C24  FC 40 08 24 */	fdiv f2, f0, f1
-
-/* 80285CE8 0078 .text      func_80285CE8                  func_80285CE8                  */
-.global func_80285CE8
-func_80285CE8:
+lbl_80285CE8:
 /* 80285CE8 00282C28  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80285CEC 00282C2C  FC E0 00 B2 */	fmul f7, f0, f2
 /* 80285CF0 00282C30  C0 1F 00 24 */	lfs f0, 0x24(r31)
@@ -245,30 +239,24 @@ func_80285CE8:
 /* 80285D38 00282C78  FC 00 18 50 */	fneg f0, f3
 /* 80285D3C 00282C7C  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 80285D40 00282C80  4C 41 13 82 */	cror 2, 1, 2
-/* 80285D44 00282C84  40 82 00 1C */	bne func_80285D60
+/* 80285D44 00282C84  40 82 00 1C */	bne lbl_80285D60
 /* 80285D48 00282C88  FC 20 08 50 */	fneg f1, f1
 /* 80285D4C 00282C8C  48 0E 69 D5 */	bl atan2
 /* 80285D50 00282C90  FF 80 08 90 */	fmr f28, f1
 /* 80285D54 00282C94  C8 22 BA 88 */	lfd f1, jstudio_math__LIT_626-_SDA2_BASE_(r2)
 /* 80285D58 00282C98  CB A2 BA 70 */	lfd f29, LIT_623-_SDA2_BASE_(r2)
-/* 80285D5C 00282C9C  48 00 00 50 */	b func_80285DAC
-
-/* 80285D60 0024 .text      func_80285D60                  func_80285D60                  */
-.global func_80285D60
-func_80285D60:
+/* 80285D5C 00282C9C  48 00 00 50 */	b lbl_80285DAC
+lbl_80285D60:
 /* 80285D60 00282CA0  FC 1F 28 2A */	fadd f0, f31, f5
 /* 80285D64 00282CA4  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 80285D68 00282CA8  4C 40 13 82 */	cror 2, 0, 2
-/* 80285D6C 00282CAC  40 82 00 18 */	bne func_80285D84
+/* 80285D6C 00282CAC  40 82 00 18 */	bne lbl_80285D84
 /* 80285D70 00282CB0  48 0E 69 B1 */	bl atan2
 /* 80285D74 00282CB4  FF 80 08 90 */	fmr f28, f1
 /* 80285D78 00282CB8  C8 22 BA 90 */	lfd f1, jstudio_math__LIT_627-_SDA2_BASE_(r2)
 /* 80285D7C 00282CBC  CB A2 BA 70 */	lfd f29, LIT_623-_SDA2_BASE_(r2)
-/* 80285D80 00282CC0  48 00 00 2C */	b func_80285DAC
-
-/* 80285D84 0028 .text      func_80285D84                  func_80285D84                  */
-.global func_80285D84
-func_80285D84:
+/* 80285D80 00282CC0  48 00 00 2C */	b lbl_80285DAC
+lbl_80285D84:
 /* 80285D84 00282CC4  FC 20 30 90 */	fmr f1, f6
 /* 80285D88 00282CC8  FC 40 38 90 */	fmr f2, f7
 /* 80285D8C 00282CCC  48 0E 69 95 */	bl atan2
@@ -279,10 +267,7 @@ func_80285D84:
 /* 80285DA0 00282CE0  FF A0 08 90 */	fmr f29, f1
 /* 80285DA4 00282CE4  FC 20 F8 50 */	fneg f1, f31
 /* 80285DA8 00282CE8  48 0E 69 59 */	bl asin
-
-/* 80285DAC 0060 .text      func_80285DAC                  func_80285DAC                  */
-.global func_80285DAC
-func_80285DAC:
+lbl_80285DAC:
 /* 80285DAC 00282CEC  C8 02 BA 98 */	lfd f0, jstudio_math__LIT_628-_SDA2_BASE_(r2)
 /* 80285DB0 00282CF0  FF 9C 00 32 */	fmul f28, f28, f0
 /* 80285DB4 00282CF4  FC 21 00 32 */	fmul f1, f1, f0
@@ -313,43 +298,43 @@ func_80285DAC:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455468 0004 .sdata2    jstudio_math__LIT_488          @488                           */
+/* 80455468 0004 .sdata2    @488                           jstudio_math__LIT_488          */
 .global jstudio_math__LIT_488
 jstudio_math__LIT_488:
 .byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d42c8 */
 
-/* 8045546C 0004 .sdata2    jstudio_math__LIT_489          @489                           */
+/* 8045546C 0004 .sdata2    @489                           jstudio_math__LIT_489          */
 .global jstudio_math__LIT_489
 jstudio_math__LIT_489:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42cc */
 
-/* 80455470 0008 .sdata2    LIT_623                        @623                           */
+/* 80455470 0008 .sdata2    @623                           LIT_623                        */
 .global LIT_623
 LIT_623:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42d0 */
 
-/* 80455478 0008 .sdata2    LIT_624                        @624                           */
+/* 80455478 0008 .sdata2    @624                           LIT_624                        */
 .global LIT_624
 LIT_624:
 .byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42d8 */
 
-/* 80455480 0004 .sdata2    LIT_625                        @625                           */
+/* 80455480 0004 .sdata2    @625                           LIT_625                        */
 .global LIT_625
 LIT_625:
 .byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42e0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d42e4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80455488 0008 .sdata2    jstudio_math__LIT_626          @626                           */
+/* 80455488 0008 .sdata2    @626                           jstudio_math__LIT_626          */
 .global jstudio_math__LIT_626
 jstudio_math__LIT_626:
 .byte 0xbf, 0xf9, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d42e8 */
 
-/* 80455490 0008 .sdata2    jstudio_math__LIT_627          @627                           */
+/* 80455490 0008 .sdata2    @627                           jstudio_math__LIT_627          */
 .global jstudio_math__LIT_627
 jstudio_math__LIT_627:
 .byte 0x3f, 0xf9, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d42f0 */
 
-/* 80455498 0008 .sdata2    jstudio_math__LIT_628          @628                           */
+/* 80455498 0008 .sdata2    @628                           jstudio_math__LIT_628          */
 .global jstudio_math__LIT_628
 jstudio_math__LIT_628:
 .byte 0x40, 0x4c, 0xa5, 0xdc, 0x1a, 0x63, 0xc1, 0xf8 /* baserom.dol+0x3d42f8 */

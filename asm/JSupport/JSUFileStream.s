@@ -7,6 +7,7 @@
 /* 802DC638 0044 .text      __ct__18JSUFileInputStreamFP7JKRFile __ct__18JSUFileInputStreamFP7JKRFile */
 .global __ct__18JSUFileInputStreamFP7JKRFile
 __ct__18JSUFileInputStreamFP7JKRFile:
+__ct__18JSUFileInputStreamFP7JKRFile:
 /* 802DC638 002D9578  3C A0 80 3C */	lis r5, __vt__10JSUIosBase@ha
 /* 802DC63C 002D957C  38 05 2D F8 */	addi r0, r5, __vt__10JSUIosBase@l
 /* 802DC640 002D9580  90 03 00 00 */	stw r0, 0(r3)
@@ -25,8 +26,9 @@ __ct__18JSUFileInputStreamFP7JKRFile:
 /* 802DC674 002D95B4  90 C3 00 0C */	stw r6, 0xc(r3)
 /* 802DC678 002D95B8  4E 80 00 20 */	blr 
 
-/* 802DC67C 0070 .text      readData__18JSUFileInputStreamFPvl readData__18JSUFileInputStreamFPvl */
+/* 802DC67C 00D0 .text      readData__18JSUFileInputStreamFPvl readData__18JSUFileInputStreamFPvl */
 .global readData__18JSUFileInputStreamFPvl
+readData__18JSUFileInputStreamFPvl:
 readData__18JSUFileInputStreamFPvl:
 /* 802DC67C 002D95BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC680 002D95C0  7C 08 02 A6 */	mflr r0
@@ -40,7 +42,7 @@ readData__18JSUFileInputStreamFPvl:
 /* 802DC6A0 002D95E0  80 63 00 08 */	lwz r3, 8(r3)
 /* 802DC6A4 002D95E4  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 802DC6A8 002D95E8  28 00 00 00 */	cmplwi r0, 0
-/* 802DC6AC 002D95EC  41 82 00 84 */	beq func_802DC730
+/* 802DC6AC 002D95EC  41 82 00 84 */	beq lbl_802DC730
 /* 802DC6B0 002D95F0  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DC6B4 002D95F4  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 802DC6B8 002D95F8  7D 89 03 A6 */	mtctr r12
@@ -48,7 +50,7 @@ readData__18JSUFileInputStreamFPvl:
 /* 802DC6C0 002D9600  80 1C 00 0C */	lwz r0, 0xc(r28)
 /* 802DC6C4 002D9604  7C 00 F2 14 */	add r0, r0, r30
 /* 802DC6C8 002D9608  7C 00 18 40 */	cmplw r0, r3
-/* 802DC6CC 002D960C  40 81 00 20 */	ble func_802DC6EC
+/* 802DC6CC 002D960C  40 81 00 20 */	ble lbl_802DC6EC
 /* 802DC6D0 002D9610  80 7C 00 08 */	lwz r3, 8(r28)
 /* 802DC6D4 002D9614  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DC6D8 002D9618  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -56,12 +58,9 @@ readData__18JSUFileInputStreamFPvl:
 /* 802DC6E0 002D9620  4E 80 04 21 */	bctrl 
 /* 802DC6E4 002D9624  80 1C 00 0C */	lwz r0, 0xc(r28)
 /* 802DC6E8 002D9628  7F C0 18 50 */	subf r30, r0, r3
-
-/* 802DC6EC 0038 .text      func_802DC6EC                  func_802DC6EC                  */
-.global func_802DC6EC
-func_802DC6EC:
+lbl_802DC6EC:
 /* 802DC6EC 002D962C  2C 1E 00 00 */	cmpwi r30, 0
-/* 802DC6F0 002D9630  40 81 00 40 */	ble func_802DC730
+/* 802DC6F0 002D9630  40 81 00 40 */	ble lbl_802DC730
 /* 802DC6F4 002D9634  80 7C 00 08 */	lwz r3, 8(r28)
 /* 802DC6F8 002D9638  7F A4 EB 78 */	mr r4, r29
 /* 802DC6FC 002D963C  7F C5 F3 78 */	mr r5, r30
@@ -71,25 +70,16 @@ func_802DC6EC:
 /* 802DC70C 002D964C  7D 89 03 A6 */	mtctr r12
 /* 802DC710 002D9650  4E 80 04 21 */	bctrl 
 /* 802DC714 002D9654  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802DC718 002D9658  40 80 00 0C */	bge func_802DC724
+/* 802DC718 002D9658  40 80 00 0C */	bge lbl_802DC724
 /* 802DC71C 002D965C  38 60 00 00 */	li r3, 0
-/* 802DC720 002D9660  48 00 00 14 */	b func_802DC734
-
-/* 802DC724 000C .text      func_802DC724                  func_802DC724                  */
-.global func_802DC724
-func_802DC724:
+/* 802DC720 002D9660  48 00 00 14 */	b lbl_802DC734
+lbl_802DC724:
 /* 802DC724 002D9664  80 1C 00 0C */	lwz r0, 0xc(r28)
 /* 802DC728 002D9668  7C 00 FA 14 */	add r0, r0, r31
 /* 802DC72C 002D966C  90 1C 00 0C */	stw r0, 0xc(r28)
-
-/* 802DC730 0004 .text      func_802DC730                  func_802DC730                  */
-.global func_802DC730
-func_802DC730:
+lbl_802DC730:
 /* 802DC730 002D9670  7F E3 FB 78 */	mr r3, r31
-
-/* 802DC734 0018 .text      func_802DC734                  func_802DC734                  */
-.global func_802DC734
-func_802DC734:
+lbl_802DC734:
 /* 802DC734 002D9674  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DC738 002D9678  48 08 5A ED */	bl _restgpr_28
 /* 802DC73C 002D967C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -97,8 +87,9 @@ func_802DC734:
 /* 802DC744 002D9684  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC748 002D9688  4E 80 00 20 */	blr 
 
-/* 802DC74C 0038 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom */
+/* 802DC74C 00E0 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom */
 .global seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom
+seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom:
 seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom:
 /* 802DC74C 002D968C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC750 002D9690  7C 08 02 A6 */	mflr r0
@@ -109,28 +100,19 @@ seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom:
 /* 802DC764 002D96A4  7C 9E 23 78 */	mr r30, r4
 /* 802DC768 002D96A8  83 E3 00 0C */	lwz r31, 0xc(r3)
 /* 802DC76C 002D96AC  2C 05 00 01 */	cmpwi r5, 1
-/* 802DC770 002D96B0  41 82 00 48 */	beq func_802DC7B8
-/* 802DC774 002D96B4  40 80 00 10 */	bge func_802DC784
+/* 802DC770 002D96B0  41 82 00 48 */	beq lbl_802DC7B8
+/* 802DC774 002D96B4  40 80 00 10 */	bge lbl_802DC784
 /* 802DC778 002D96B8  2C 05 00 00 */	cmpwi r5, 0
-/* 802DC77C 002D96BC  40 80 00 14 */	bge func_802DC790
-/* 802DC780 002D96C0  48 00 00 40 */	b func_802DC7C0
-
-/* 802DC784 000C .text      func_802DC784                  func_802DC784                  */
-.global func_802DC784
-func_802DC784:
+/* 802DC77C 002D96BC  40 80 00 14 */	bge lbl_802DC790
+/* 802DC780 002D96C0  48 00 00 40 */	b lbl_802DC7C0
+lbl_802DC784:
 /* 802DC784 002D96C4  2C 05 00 03 */	cmpwi r5, 3
-/* 802DC788 002D96C8  40 80 00 38 */	bge func_802DC7C0
-/* 802DC78C 002D96CC  48 00 00 0C */	b func_802DC798
-
-/* 802DC790 0008 .text      func_802DC790                  func_802DC790                  */
-.global func_802DC790
-func_802DC790:
+/* 802DC788 002D96C8  40 80 00 38 */	bge lbl_802DC7C0
+/* 802DC78C 002D96CC  48 00 00 0C */	b lbl_802DC798
+lbl_802DC790:
 /* 802DC790 002D96D0  93 DD 00 0C */	stw r30, 0xc(r29)
-/* 802DC794 002D96D4  48 00 00 2C */	b func_802DC7C0
-
-/* 802DC798 0020 .text      func_802DC798                  func_802DC798                  */
-.global func_802DC798
-func_802DC798:
+/* 802DC794 002D96D4  48 00 00 2C */	b lbl_802DC7C0
+lbl_802DC798:
 /* 802DC798 002D96D8  80 7D 00 08 */	lwz r3, 8(r29)
 /* 802DC79C 002D96DC  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DC7A0 002D96E0  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -138,26 +120,17 @@ func_802DC798:
 /* 802DC7A8 002D96E8  4E 80 04 21 */	bctrl 
 /* 802DC7AC 002D96EC  7C 1E 18 50 */	subf r0, r30, r3
 /* 802DC7B0 002D96F0  90 1D 00 0C */	stw r0, 0xc(r29)
-/* 802DC7B4 002D96F4  48 00 00 0C */	b func_802DC7C0
-
-/* 802DC7B8 0008 .text      func_802DC7B8                  func_802DC7B8                  */
-.global func_802DC7B8
-func_802DC7B8:
+/* 802DC7B4 002D96F4  48 00 00 0C */	b lbl_802DC7C0
+lbl_802DC7B8:
 /* 802DC7B8 002D96F8  7C 1F F2 14 */	add r0, r31, r30
 /* 802DC7BC 002D96FC  90 1D 00 0C */	stw r0, 0xc(r29)
-
-/* 802DC7C0 0014 .text      func_802DC7C0                  func_802DC7C0                  */
-.global func_802DC7C0
-func_802DC7C0:
+lbl_802DC7C0:
 /* 802DC7C0 002D9700  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 802DC7C4 002D9704  2C 00 00 00 */	cmpwi r0, 0
-/* 802DC7C8 002D9708  40 80 00 0C */	bge func_802DC7D4
+/* 802DC7C8 002D9708  40 80 00 0C */	bge lbl_802DC7D4
 /* 802DC7CC 002D970C  38 00 00 00 */	li r0, 0
 /* 802DC7D0 002D9710  90 1D 00 0C */	stw r0, 0xc(r29)
-
-/* 802DC7D4 0038 .text      func_802DC7D4                  func_802DC7D4                  */
-.global func_802DC7D4
-func_802DC7D4:
+lbl_802DC7D4:
 /* 802DC7D4 002D9714  80 7D 00 08 */	lwz r3, 8(r29)
 /* 802DC7D8 002D9718  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DC7DC 002D971C  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -165,17 +138,14 @@ func_802DC7D4:
 /* 802DC7E4 002D9724  4E 80 04 21 */	bctrl 
 /* 802DC7E8 002D9728  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 802DC7EC 002D972C  7C 00 18 00 */	cmpw r0, r3
-/* 802DC7F0 002D9730  40 81 00 1C */	ble func_802DC80C
+/* 802DC7F0 002D9730  40 81 00 1C */	ble lbl_802DC80C
 /* 802DC7F4 002D9734  80 7D 00 08 */	lwz r3, 8(r29)
 /* 802DC7F8 002D9738  81 83 00 00 */	lwz r12, 0(r3)
 /* 802DC7FC 002D973C  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 802DC800 002D9740  7D 89 03 A6 */	mtctr r12
 /* 802DC804 002D9744  4E 80 04 21 */	bctrl 
 /* 802DC808 002D9748  90 7D 00 0C */	stw r3, 0xc(r29)
-
-/* 802DC80C 0020 .text      func_802DC80C                  func_802DC80C                  */
-.global func_802DC80C
-func_802DC80C:
+lbl_802DC80C:
 /* 802DC80C 002D974C  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 802DC810 002D9750  7C 7F 00 50 */	subf r3, r31, r0
 /* 802DC814 002D9754  39 61 00 20 */	addi r11, r1, 0x20
@@ -187,6 +157,7 @@ func_802DC80C:
 
 /* 802DC82C 0030 .text      getLength__18JSUFileInputStreamCFv getLength__18JSUFileInputStreamCFv */
 .global getLength__18JSUFileInputStreamCFv
+getLength__18JSUFileInputStreamCFv:
 getLength__18JSUFileInputStreamCFv:
 /* 802DC82C 002D976C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC830 002D9770  7C 08 02 A6 */	mflr r0
@@ -204,6 +175,7 @@ getLength__18JSUFileInputStreamCFv:
 /* 802DC85C 0008 .text      getPosition__18JSUFileInputStreamCFv getPosition__18JSUFileInputStreamCFv */
 .global getPosition__18JSUFileInputStreamCFv
 getPosition__18JSUFileInputStreamCFv:
+getPosition__18JSUFileInputStreamCFv:
 /* 802DC85C 002D979C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 802DC860 002D97A0  4E 80 00 20 */	blr 
 
@@ -215,8 +187,14 @@ getPosition__18JSUFileInputStreamCFv:
 /* 803CC518 0024 .data      __vt__18JSUFileInputStream     __vt__18JSUFileInputStream     */
 .global __vt__18JSUFileInputStream
 __vt__18JSUFileInputStream:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0xad, 0xd8, 0x80, 0x2d, 0x40, 0x94 /* baserom.dol+0x3c9518 */
-.byte 0x80, 0x2d, 0xc3, 0xfc, 0x80, 0x2d, 0xc6, 0x7c, 0x80, 0x2d, 0xc8, 0x2c, 0x80, 0x2d, 0xc8, 0x5c /* baserom.dol+0x3c9528 */
-.byte 0x80, 0x2d, 0xc7, 0x4c /* baserom.dol+0x3c9538 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c953c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__18JSUFileInputStreamFv
+.4byte getAvailable__20JSURandomInputStreamCFv
+.4byte skip__20JSURandomInputStreamFl
+.4byte readData__18JSUFileInputStreamFPvl
+.4byte getLength__18JSUFileInputStreamCFv
+.4byte getPosition__18JSUFileInputStreamCFv
+.4byte seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

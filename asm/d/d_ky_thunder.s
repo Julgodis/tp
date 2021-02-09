@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 801ADF58 0044 .text      createHeap__10dThunder_cFv     createHeap__10dThunder_cFv     */
+/* 801ADF58 005C .text      createHeap__10dThunder_cFv     createHeap__10dThunder_cFv     */
 .global createHeap__10dThunder_cFv
+createHeap__10dThunder_cFv:
 createHeap__10dThunder_cFv:
 /* 801ADF58 001AAE98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADF5C 001AAE9C  7C 08 02 A6 */	mflr r0
@@ -14,33 +15,28 @@ createHeap__10dThunder_cFv:
 /* 801ADF68 001AAEA8  7C 7F 1B 78 */	mr r31, r3
 /* 801ADF6C 001AAEAC  80 03 00 F8 */	lwz r0, 0xf8(r3)
 /* 801ADF70 001AAEB0  28 00 00 00 */	cmplwi r0, 0
-/* 801ADF74 001AAEB4  40 82 00 28 */	bne func_801ADF9C
+/* 801ADF74 001AAEB4  40 82 00 28 */	bne lbl_801ADF9C
 /* 801ADF78 001AAEB8  38 60 00 00 */	li r3, 0
 /* 801ADF7C 001AAEBC  38 80 00 20 */	li r4, 0x20
 /* 801ADF80 001AAEC0  4B E6 10 C5 */	bl mDoExt_createSolidHeapFromGameToCurrent__FUlUl
 /* 801ADF84 001AAEC4  90 7F 00 F8 */	stw r3, 0xf8(r31)
 /* 801ADF88 001AAEC8  80 1F 00 F8 */	lwz r0, 0xf8(r31)
 /* 801ADF8C 001AAECC  28 00 00 00 */	cmplwi r0, 0
-/* 801ADF90 001AAED0  40 82 00 0C */	bne func_801ADF9C
+/* 801ADF90 001AAED0  40 82 00 0C */	bne lbl_801ADF9C
 /* 801ADF94 001AAED4  38 60 00 00 */	li r3, 0
-/* 801ADF98 001AAED8  48 00 00 08 */	b func_801ADFA0
-
-/* 801ADF9C 0004 .text      func_801ADF9C                  func_801ADF9C                  */
-.global func_801ADF9C
-func_801ADF9C:
+/* 801ADF98 001AAED8  48 00 00 08 */	b lbl_801ADFA0
+lbl_801ADF9C:
 /* 801ADF9C 001AAEDC  38 60 00 01 */	li r3, 1
-
-/* 801ADFA0 0014 .text      func_801ADFA0                  func_801ADFA0                  */
-.global func_801ADFA0
-func_801ADFA0:
+lbl_801ADFA0:
 /* 801ADFA0 001AAEE0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801ADFA4 001AAEE4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801ADFA8 001AAEE8  7C 08 03 A6 */	mtlr r0
 /* 801ADFAC 001AAEEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ADFB0 001AAEF0  4E 80 00 20 */	blr 
 
-/* 801ADFB4 0038 .text      adjustHeap__10dThunder_cFv     adjustHeap__10dThunder_cFv     */
+/* 801ADFB4 004C .text      adjustHeap__10dThunder_cFv     adjustHeap__10dThunder_cFv     */
 .global adjustHeap__10dThunder_cFv
+adjustHeap__10dThunder_cFv:
 adjustHeap__10dThunder_cFv:
 /* 801ADFB4 001AAEF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADFB8 001AAEF8  7C 08 02 A6 */	mflr r0
@@ -51,35 +47,33 @@ adjustHeap__10dThunder_cFv:
 /* 801ADFCC 001AAF0C  80 7F 00 F8 */	lwz r3, 0xf8(r31)
 /* 801ADFD0 001AAF10  4B E6 10 BD */	bl mDoExt_adjustSolidHeap__FP12JKRSolidHeap
 /* 801ADFD4 001AAF14  2C 03 00 00 */	cmpwi r3, 0
-/* 801ADFD8 001AAF18  41 80 00 14 */	blt func_801ADFEC
+/* 801ADFD8 001AAF18  41 80 00 14 */	blt lbl_801ADFEC
 /* 801ADFDC 001AAF1C  80 7F 00 F8 */	lwz r3, 0xf8(r31)
 /* 801ADFE0 001AAF20  80 83 00 38 */	lwz r4, 0x38(r3)
 /* 801ADFE4 001AAF24  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 801ADFE8 001AAF28  48 18 D6 51 */	bl DCStoreRangeNoSync
-
-/* 801ADFEC 0014 .text      func_801ADFEC                  func_801ADFEC                  */
-.global func_801ADFEC
-func_801ADFEC:
+lbl_801ADFEC:
 /* 801ADFEC 001AAF2C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801ADFF0 001AAF30  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801ADFF4 001AAF34  7C 08 03 A6 */	mtlr r0
 /* 801ADFF8 001AAF38  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ADFFC 001AAF3C  4E 80 00 20 */	blr 
 
-/* 801AE000 0058 .text      dThunder_Draw__FP10dThunder_c  dThunder_Draw__FP10dThunder_c  */
+/* 801AE000 019C .text      dThunder_Draw__FP10dThunder_c  dThunder_Draw__FP10dThunder_c  */
 .global dThunder_Draw__FP10dThunder_c
+dThunder_Draw__FP10dThunder_c:
 dThunder_Draw__FP10dThunder_c:
 /* 801AE000 001AAF40  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801AE004 001AAF44  7C 08 02 A6 */	mflr r0
 /* 801AE008 001AAF48  90 01 00 54 */	stw r0, 0x54(r1)
 /* 801AE00C 001AAF4C  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 801AE010 001AAF50  7C 7F 1B 78 */	mr r31, r3
-/* 801AE014 001AAF54  88 0D 8A F0 */	lbz r0, sym_80451070-_SDA_BASE_(r13)
+/* 801AE014 001AAF54  88 0D 8A F0 */	lbz r0, data_80451070-_SDA_BASE_(r13)
 /* 801AE018 001AAF58  7C 00 07 75 */	extsb. r0, r0
-/* 801AE01C 001AAF5C  40 82 00 3C */	bne func_801AE058
+/* 801AE01C 001AAF5C  40 82 00 3C */	bne lbl_801AE058
 /* 801AE020 001AAF60  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882-_SDA2_BASE_(r2)
-/* 801AE024 001AAF64  3C 60 80 43 */	lis r3, sym_8042E808@ha
-/* 801AE028 001AAF68  D4 03 E8 08 */	stfsu f0, sym_8042E808@l(r3)
+/* 801AE024 001AAF64  3C 60 80 43 */	lis r3, data_8042E808@ha
+/* 801AE028 001AAF68  D4 03 E8 08 */	stfsu f0, data_8042E808@l(r3)
 /* 801AE02C 001AAF6C  C0 02 A4 74 */	lfs f0, d_d_ky_thunder__LIT_3883-_SDA2_BASE_(r2)
 /* 801AE030 001AAF70  D0 03 00 04 */	stfs f0, 4(r3)
 /* 801AE034 001AAF74  C0 02 A4 78 */	lfs f0, d_d_ky_thunder__LIT_3884-_SDA2_BASE_(r2)
@@ -90,17 +84,14 @@ dThunder_Draw__FP10dThunder_c:
 /* 801AE048 001AAF88  38 A5 E7 F0 */	addi r5, r5, d_d_ky_thunder__LIT_3816@l
 /* 801AE04C 001AAF8C  48 1B 3B D9 */	bl __register_global_object
 /* 801AE050 001AAF90  38 00 00 01 */	li r0, 1
-/* 801AE054 001AAF94  98 0D 8A F0 */	stb r0, sym_80451070-_SDA_BASE_(r13)
-
-/* 801AE058 003C .text      func_801AE058                  func_801AE058                  */
-.global func_801AE058
-func_801AE058:
-/* 801AE058 001AAF98  88 0D 8A F1 */	lbz r0, sym_80451071-_SDA_BASE_(r13)
+/* 801AE054 001AAF94  98 0D 8A F0 */	stb r0, data_80451070-_SDA_BASE_(r13)
+lbl_801AE058:
+/* 801AE058 001AAF98  88 0D 8A F1 */	lbz r0, data_80451071-_SDA_BASE_(r13)
 /* 801AE05C 001AAF9C  7C 00 07 75 */	extsb. r0, r0
-/* 801AE060 001AAFA0  40 82 00 34 */	bne func_801AE094
+/* 801AE060 001AAFA0  40 82 00 34 */	bne lbl_801AE094
 /* 801AE064 001AAFA4  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
-/* 801AE068 001AAFA8  3C 60 80 43 */	lis r3, sym_8042E814@ha
-/* 801AE06C 001AAFAC  D4 03 E8 14 */	stfsu f0, sym_8042E814@l(r3)
+/* 801AE068 001AAFA8  3C 60 80 43 */	lis r3, data_8042E814@ha
+/* 801AE06C 001AAFAC  D4 03 E8 14 */	stfsu f0, data_8042E814@l(r3)
 /* 801AE070 001AAFB0  D0 03 00 04 */	stfs f0, 4(r3)
 /* 801AE074 001AAFB4  D0 03 00 08 */	stfs f0, 8(r3)
 /* 801AE078 001AAFB8  3C 80 80 01 */	lis r4, __dt__4cXyzFv@ha
@@ -109,11 +100,8 @@ func_801AE058:
 /* 801AE084 001AAFC4  38 A5 E7 FC */	addi r5, r5, d_d_ky_thunder__LIT_3818@l
 /* 801AE088 001AAFC8  48 1B 3B 9D */	bl __register_global_object
 /* 801AE08C 001AAFCC  38 00 00 01 */	li r0, 1
-/* 801AE090 001AAFD0  98 0D 8A F1 */	stb r0, sym_80451071-_SDA_BASE_(r13)
-
-/* 801AE094 0108 .text      func_801AE094                  func_801AE094                  */
-.global func_801AE094
-func_801AE094:
+/* 801AE090 001AAFD0  98 0D 8A F1 */	stb r0, data_80451071-_SDA_BASE_(r13)
+lbl_801AE094:
 /* 801AE094 001AAFD4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 801AE098 001AAFD8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 801AE09C 001AAFDC  C0 3F 01 44 */	lfs f1, 0x144(r31)
@@ -181,8 +169,9 @@ func_801AE094:
 /* 801AE194 001AB0D4  38 21 00 50 */	addi r1, r1, 0x50
 /* 801AE198 001AB0D8  4E 80 00 20 */	blr 
 
-/* 801AE19C 0044 .text      dThunder_Execute__FP10dThunder_c dThunder_Execute__FP10dThunder_c */
+/* 801AE19C 01D8 .text      dThunder_Execute__FP10dThunder_c dThunder_Execute__FP10dThunder_c */
 .global dThunder_Execute__FP10dThunder_c
+dThunder_Execute__FP10dThunder_c:
 dThunder_Execute__FP10dThunder_c:
 /* 801AE19C 001AB0DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AE1A0 001AB0E0  7C 08 02 A6 */	mflr r0
@@ -194,23 +183,20 @@ dThunder_Execute__FP10dThunder_c:
 /* 801AE1B8 001AB0F8  3B C3 CA 54 */	addi r30, r3, g_env_light@l
 /* 801AE1BC 001AB0FC  88 1E 0E D5 */	lbz r0, 0xed5(r30)
 /* 801AE1C0 001AB100  28 00 00 0A */	cmplwi r0, 0xa
-/* 801AE1C4 001AB104  40 80 00 1C */	bge func_801AE1E0
+/* 801AE1C4 001AB104  40 80 00 1C */	bge lbl_801AE1E0
 /* 801AE1C8 001AB108  38 7F 01 64 */	addi r3, r31, 0x164
 /* 801AE1CC 001AB10C  C0 22 A4 80 */	lfs f1, d_d_ky_thunder__LIT_3923-_SDA2_BASE_(r2)
 /* 801AE1D0 001AB110  C0 42 A4 84 */	lfs f2, d_d_ky_thunder__LIT_3924-_SDA2_BASE_(r2)
 /* 801AE1D4 001AB114  C0 62 A4 88 */	lfs f3, d_d_ky_thunder__LIT_3925-_SDA2_BASE_(r2)
 /* 801AE1D8 001AB118  C0 82 A4 8C */	lfs f4, d_d_ky_thunder__LIT_3926-_SDA2_BASE_(r2)
 /* 801AE1DC 001AB11C  48 0C 17 A1 */	bl cLib_addCalc__FPfffff
-
-/* 801AE1E0 0034 .text      func_801AE1E0                  func_801AE1E0                  */
-.global func_801AE1E0
-func_801AE1E0:
+lbl_801AE1E0:
 /* 801AE1E0 001AB120  C0 1F 01 64 */	lfs f0, 0x164(r31)
 /* 801AE1E4 001AB124  D0 1F 01 14 */	stfs f0, 0x114(r31)
 /* 801AE1E8 001AB128  38 7F 01 08 */	addi r3, r31, 0x108
 /* 801AE1EC 001AB12C  4B E5 F2 3D */	bl play__14mDoExt_baseAnmFv
 /* 801AE1F0 001AB130  2C 03 00 00 */	cmpwi r3, 0
-/* 801AE1F4 001AB134  41 82 00 20 */	beq func_801AE214
+/* 801AE1F4 001AB134  41 82 00 20 */	beq lbl_801AE214
 /* 801AE1F8 001AB138  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
 /* 801AE1FC 001AB13C  38 63 DD 70 */	addi r3, r3, g_mEnvSeMgr@l
 /* 801AE200 001AB140  38 9F 01 44 */	addi r4, r31, 0x144
@@ -218,44 +204,32 @@ func_801AE1E0:
 /* 801AE208 001AB148  48 11 9C 61 */	bl startFarThunderSe__10Z2EnvSeMgrFP3VecSc
 /* 801AE20C 001AB14C  7F E3 FB 78 */	mr r3, r31
 /* 801AE210 001AB150  4B E7 15 39 */	bl fopKyM_Delete__FPv
-
-/* 801AE214 0034 .text      func_801AE214                  func_801AE214                  */
-.global func_801AE214
-func_801AE214:
+lbl_801AE214:
 /* 801AE214 001AB154  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801AE218 001AB158  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801AE21C 001AB15C  80 63 61 B0 */	lwz r3, 0x61b0(r3)
 /* 801AE220 001AB160  28 03 00 00 */	cmplwi r3, 0
-/* 801AE224 001AB164  41 82 00 30 */	beq func_801AE254
+/* 801AE224 001AB164  41 82 00 30 */	beq lbl_801AE254
 /* 801AE228 001AB168  C0 23 00 D0 */	lfs f1, 0xd0(r3)
 /* 801AE22C 001AB16C  C0 02 A4 90 */	lfs f0, d_d_ky_thunder__LIT_3927-_SDA2_BASE_(r2)
 /* 801AE230 001AB170  EC 61 00 24 */	fdivs f3, f1, f0
 /* 801AE234 001AB174  C0 02 A4 7C */	lfs f0, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
 /* 801AE238 001AB178  FC 03 00 40 */	fcmpo cr0, f3, f0
 /* 801AE23C 001AB17C  4C 41 13 82 */	cror 2, 1, 2
-/* 801AE240 001AB180  40 82 00 08 */	bne func_801AE248
+/* 801AE240 001AB180  40 82 00 08 */	bne lbl_801AE248
 /* 801AE244 001AB184  FC 60 00 90 */	fmr f3, f0
-
-/* 801AE248 000C .text      func_801AE248                  func_801AE248                  */
-.global func_801AE248
-func_801AE248:
+lbl_801AE248:
 /* 801AE248 001AB188  EC 03 00 F2 */	fmuls f0, f3, f3
 /* 801AE24C 001AB18C  EC 63 00 32 */	fmuls f3, f3, f0
-/* 801AE250 001AB190  48 00 00 08 */	b func_801AE258
-
-/* 801AE254 0004 .text      func_801AE254                  func_801AE254                  */
-.global func_801AE254
-func_801AE254:
+/* 801AE250 001AB190  48 00 00 08 */	b lbl_801AE258
+lbl_801AE254:
 /* 801AE254 001AB194  C0 62 A4 7C */	lfs f3, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
-
-/* 801AE258 0088 .text      func_801AE258                  func_801AE258                  */
-.global func_801AE258
-func_801AE258:
+lbl_801AE258:
 /* 801AE258 001AB198  C0 1F 01 64 */	lfs f0, 0x164(r31)
 /* 801AE25C 001AB19C  EC 63 00 32 */	fmuls f3, f3, f0
 /* 801AE260 001AB1A0  88 1E 0E D5 */	lbz r0, 0xed5(r30)
 /* 801AE264 001AB1A4  28 00 00 0A */	cmplwi r0, 0xa
-/* 801AE268 001AB1A8  40 80 00 78 */	bge func_801AE2E0
+/* 801AE268 001AB1A8  40 80 00 78 */	bge lbl_801AE2E0
 /* 801AE26C 001AB1AC  A8 1F 01 6A */	lha r0, 0x16a(r31)
 /* 801AE270 001AB1B0  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 801AE274 001AB1B4  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -284,11 +258,8 @@ func_801AE258:
 /* 801AE2D0 001AB210  A8 7F 01 6C */	lha r3, 0x16c(r31)
 /* 801AE2D4 001AB214  38 03 70 E4 */	addi r0, r3, 0x70e4
 /* 801AE2D8 001AB218  B0 1F 01 6C */	sth r0, 0x16c(r31)
-/* 801AE2DC 001AB21C  48 00 00 7C */	b func_801AE358
-
-/* 801AE2E0 0078 .text      func_801AE2E0                  func_801AE2E0                  */
-.global func_801AE2E0
-func_801AE2E0:
+/* 801AE2DC 001AB21C  48 00 00 7C */	b lbl_801AE358
+lbl_801AE2E0:
 /* 801AE2E0 001AB220  A8 1F 01 6A */	lha r0, 0x16a(r31)
 /* 801AE2E4 001AB224  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 801AE2E8 001AB228  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -319,10 +290,7 @@ func_801AE2E0:
 /* 801AE34C 001AB28C  3C 63 00 01 */	addis r3, r3, 1
 /* 801AE350 001AB290  38 03 97 F4 */	addi r0, r3, -26636
 /* 801AE354 001AB294  B0 1F 01 6C */	sth r0, 0x16c(r31)
-
-/* 801AE358 001C .text      func_801AE358                  func_801AE358                  */
-.global func_801AE358
-func_801AE358:
+lbl_801AE358:
 /* 801AE358 001AB298  38 60 00 01 */	li r3, 1
 /* 801AE35C 001AB29C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AE360 001AB2A0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -334,46 +302,42 @@ func_801AE358:
 /* 801AE374 0008 .text      dThunder_IsDelete__FP10dThunder_c dThunder_IsDelete__FP10dThunder_c */
 .global dThunder_IsDelete__FP10dThunder_c
 dThunder_IsDelete__FP10dThunder_c:
+dThunder_IsDelete__FP10dThunder_c:
 /* 801AE374 001AB2B4  38 60 00 01 */	li r3, 1
 /* 801AE378 001AB2B8  4E 80 00 20 */	blr 
 
-/* 801AE37C 0048 .text      dThunder_Delete__FP10dThunder_c dThunder_Delete__FP10dThunder_c */
+/* 801AE37C 0080 .text      dThunder_Delete__FP10dThunder_c dThunder_Delete__FP10dThunder_c */
 .global dThunder_Delete__FP10dThunder_c
+dThunder_Delete__FP10dThunder_c:
 dThunder_Delete__FP10dThunder_c:
 /* 801AE37C 001AB2BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AE380 001AB2C0  7C 08 02 A6 */	mflr r0
 /* 801AE384 001AB2C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801AE388 001AB2C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801AE38C 001AB2CC  7C 7F 1B 79 */	or. r31, r3, r3
-/* 801AE390 001AB2D0  41 82 00 54 */	beq func_801AE3E4
+/* 801AE390 001AB2D0  41 82 00 54 */	beq lbl_801AE3E4
 /* 801AE394 001AB2D4  80 7F 00 F8 */	lwz r3, 0xf8(r31)
 /* 801AE398 001AB2D8  4B E6 0D F5 */	bl mDoExt_destroySolidHeap__FP12JKRSolidHeap
 /* 801AE39C 001AB2DC  34 1F 00 FC */	addic. r0, r31, 0xfc
-/* 801AE3A0 001AB2E0  41 82 00 44 */	beq func_801AE3E4
+/* 801AE3A0 001AB2E0  41 82 00 44 */	beq lbl_801AE3E4
 /* 801AE3A4 001AB2E4  34 1F 01 20 */	addic. r0, r31, 0x120
-/* 801AE3A8 001AB2E8  41 82 00 1C */	beq func_801AE3C4
+/* 801AE3A8 001AB2E8  41 82 00 1C */	beq lbl_801AE3C4
 /* 801AE3AC 001AB2EC  28 00 00 00 */	cmplwi r0, 0
-/* 801AE3B0 001AB2F0  41 82 00 14 */	beq func_801AE3C4
-/* 801AE3B4 001AB2F4  41 82 00 10 */	beq func_801AE3C4
+/* 801AE3B0 001AB2F0  41 82 00 14 */	beq lbl_801AE3C4
+/* 801AE3B4 001AB2F4  41 82 00 10 */	beq lbl_801AE3C4
 /* 801AE3B8 001AB2F8  3C 60 80 3A */	lis r3, __vt__12J3DFrameCtrl@ha
 /* 801AE3BC 001AB2FC  38 03 33 54 */	addi r0, r3, __vt__12J3DFrameCtrl@l
 /* 801AE3C0 001AB300  90 1F 01 20 */	stw r0, 0x120(r31)
-
-/* 801AE3C4 0020 .text      func_801AE3C4                  func_801AE3C4                  */
-.global func_801AE3C4
-func_801AE3C4:
+lbl_801AE3C4:
 /* 801AE3C4 001AB304  34 1F 01 08 */	addic. r0, r31, 0x108
-/* 801AE3C8 001AB308  41 82 00 1C */	beq func_801AE3E4
+/* 801AE3C8 001AB308  41 82 00 1C */	beq lbl_801AE3E4
 /* 801AE3CC 001AB30C  28 00 00 00 */	cmplwi r0, 0
-/* 801AE3D0 001AB310  41 82 00 14 */	beq func_801AE3E4
-/* 801AE3D4 001AB314  41 82 00 10 */	beq func_801AE3E4
+/* 801AE3D0 001AB310  41 82 00 14 */	beq lbl_801AE3E4
+/* 801AE3D4 001AB314  41 82 00 10 */	beq lbl_801AE3E4
 /* 801AE3D8 001AB318  3C 60 80 3A */	lis r3, __vt__12J3DFrameCtrl@ha
 /* 801AE3DC 001AB31C  38 03 33 54 */	addi r0, r3, __vt__12J3DFrameCtrl@l
 /* 801AE3E0 001AB320  90 1F 01 08 */	stw r0, 0x108(r31)
-
-/* 801AE3E4 0018 .text      func_801AE3E4                  func_801AE3E4                  */
-.global func_801AE3E4
-func_801AE3E4:
+lbl_801AE3E4:
 /* 801AE3E4 001AB324  38 60 00 01 */	li r3, 1
 /* 801AE3E8 001AB328  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AE3EC 001AB32C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -381,8 +345,9 @@ func_801AE3E4:
 /* 801AE3F4 001AB334  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AE3F8 001AB338  4E 80 00 20 */	blr 
 
-/* 801AE3FC 002C .text      dThunder_Create__FP12kankyo_class dThunder_Create__FP12kankyo_class */
+/* 801AE3FC 005C .text      dThunder_Create__FP12kankyo_class dThunder_Create__FP12kankyo_class */
 .global dThunder_Create__FP12kankyo_class
+dThunder_Create__FP12kankyo_class:
 dThunder_Create__FP12kankyo_class:
 /* 801AE3FC 001AB33C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AE400 001AB340  7C 08 02 A6 */	mflr r0
@@ -392,23 +357,17 @@ dThunder_Create__FP12kankyo_class:
 /* 801AE410 001AB350  7C 7F 1B 78 */	mr r31, r3
 /* 801AE414 001AB354  4B FF FB 45 */	bl createHeap__10dThunder_cFv
 /* 801AE418 001AB358  2C 03 00 00 */	cmpwi r3, 0
-/* 801AE41C 001AB35C  40 82 00 0C */	bne func_801AE428
+/* 801AE41C 001AB35C  40 82 00 0C */	bne lbl_801AE428
 /* 801AE420 001AB360  38 60 00 05 */	li r3, 5
-/* 801AE424 001AB364  48 00 00 1C */	b func_801AE440
-
-/* 801AE428 0018 .text      func_801AE428                  func_801AE428                  */
-.global func_801AE428
-func_801AE428:
+/* 801AE424 001AB364  48 00 00 1C */	b lbl_801AE440
+lbl_801AE428:
 /* 801AE428 001AB368  7F E3 FB 78 */	mr r3, r31
 /* 801AE42C 001AB36C  48 00 00 2D */	bl create__10dThunder_cFv
 /* 801AE430 001AB370  7C 7E 1B 78 */	mr r30, r3
 /* 801AE434 001AB374  7F E3 FB 78 */	mr r3, r31
 /* 801AE438 001AB378  4B FF FB 7D */	bl adjustHeap__10dThunder_cFv
 /* 801AE43C 001AB37C  7F C3 F3 78 */	mr r3, r30
-
-/* 801AE440 0018 .text      func_801AE440                  func_801AE440                  */
-.global func_801AE440
-func_801AE440:
+lbl_801AE440:
 /* 801AE440 001AB380  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AE444 001AB384  83 C1 00 08 */	lwz r30, 8(r1)
 /* 801AE448 001AB388  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -416,8 +375,9 @@ func_801AE440:
 /* 801AE450 001AB390  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AE454 001AB394  4E 80 00 20 */	blr 
 
-/* 801AE458 00A4 .text      create__10dThunder_cFv         create__10dThunder_cFv         */
+/* 801AE458 04E0 .text      create__10dThunder_cFv         create__10dThunder_cFv         */
 .global create__10dThunder_cFv
+create__10dThunder_cFv:
 create__10dThunder_cFv:
 /* 801AE458 001AB398  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 801AE45C 001AB39C  7C 08 02 A6 */	mflr r0
@@ -441,7 +401,7 @@ create__10dThunder_cFv:
 /* 801AE4A4 001AB3E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801AE4A8 001AB3E8  83 C3 5D 74 */	lwz r30, 0x5d74(r3)
 /* 801AE4AC 001AB3EC  7F BC EB 79 */	or. r28, r29, r29
-/* 801AE4B0 001AB3F0  41 82 00 4C */	beq func_801AE4FC
+/* 801AE4B0 001AB3F0  41 82 00 4C */	beq lbl_801AE4FC
 /* 801AE4B4 001AB3F4  3B 7C 01 08 */	addi r27, r28, 0x108
 /* 801AE4B8 001AB3F8  3C 60 80 3A */	lis r3, __vt__12J3DFrameCtrl@ha
 /* 801AE4BC 001AB3FC  38 03 33 54 */	addi r0, r3, __vt__12J3DFrameCtrl@l
@@ -460,15 +420,12 @@ create__10dThunder_cFv:
 /* 801AE4F0 001AB430  48 17 9F 0D */	bl init__12J3DFrameCtrlFs
 /* 801AE4F4 001AB434  38 00 00 00 */	li r0, 0
 /* 801AE4F8 001AB438  90 1B 00 14 */	stw r0, 0x14(r27)
-
-/* 801AE4FC 0040 .text      func_801AE4FC                  func_801AE4FC                  */
-.global func_801AE4FC
-func_801AE4FC:
+lbl_801AE4FC:
 /* 801AE4FC 001AB43C  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
 /* 801AE500 001AB440  48 0B 94 55 */	bl cM_rndF__Ff
 /* 801AE504 001AB444  C0 02 A4 9C */	lfs f0, d_d_ky_thunder__LIT_4079-_SDA2_BASE_(r2)
 /* 801AE508 001AB448  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 801AE50C 001AB44C  40 80 00 30 */	bge func_801AE53C
+/* 801AE50C 001AB44C  40 80 00 30 */	bge lbl_801AE53C
 /* 801AE510 001AB450  3C 60 80 39 */	lis r3, d_d_ky_thunder__stringBase0@ha
 /* 801AE514 001AB454  38 63 4F 40 */	addi r3, r3, d_d_ky_thunder__stringBase0@l
 /* 801AE518 001AB458  38 80 00 1E */	li r4, 0x1e
@@ -479,11 +436,8 @@ func_801AE4FC:
 /* 801AE52C 001AB46C  38 A5 C2 F8 */	addi r5, r5, -15624
 /* 801AE530 001AB470  4B E8 DD BD */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 801AE534 001AB474  7C 7B 1B 78 */	mr r27, r3
-/* 801AE538 001AB478  48 00 00 2C */	b func_801AE564
-
-/* 801AE53C 0028 .text      func_801AE53C                  func_801AE53C                  */
-.global func_801AE53C
-func_801AE53C:
+/* 801AE538 001AB478  48 00 00 2C */	b lbl_801AE564
+lbl_801AE53C:
 /* 801AE53C 001AB47C  3C 60 80 39 */	lis r3, d_d_ky_thunder__stringBase0@ha
 /* 801AE540 001AB480  38 63 4F 40 */	addi r3, r3, d_d_ky_thunder__stringBase0@l
 /* 801AE544 001AB484  38 80 00 1F */	li r4, 0x1f
@@ -494,10 +448,7 @@ func_801AE53C:
 /* 801AE558 001AB498  38 A5 C2 F8 */	addi r5, r5, -15624
 /* 801AE55C 001AB49C  4B E8 DD 91 */	bl getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 801AE560 001AB4A0  7C 7B 1B 78 */	mr r27, r3
-
-/* 801AE564 0028 .text      func_801AE564                  func_801AE564                  */
-.global func_801AE564
-func_801AE564:
+lbl_801AE564:
 /* 801AE564 001AB4A4  7F 63 DB 78 */	mr r3, r27
 /* 801AE568 001AB4A8  3C 80 00 08 */	lis r4, 8
 /* 801AE56C 001AB4AC  3C A0 01 00 */	lis r5, 0x100
@@ -505,13 +456,10 @@ func_801AE564:
 /* 801AE574 001AB4B4  90 7D 00 FC */	stw r3, 0xfc(r29)
 /* 801AE578 001AB4B8  80 1D 00 FC */	lwz r0, 0xfc(r29)
 /* 801AE57C 001AB4BC  28 00 00 00 */	cmplwi r0, 0
-/* 801AE580 001AB4C0  40 82 00 0C */	bne func_801AE58C
+/* 801AE580 001AB4C0  40 82 00 0C */	bne lbl_801AE58C
 /* 801AE584 001AB4C4  38 60 00 05 */	li r3, 5
-/* 801AE588 001AB4C8  48 00 03 70 */	b func_801AE8F8
-
-/* 801AE58C 0058 .text      func_801AE58C                  func_801AE58C                  */
-.global func_801AE58C
-func_801AE58C:
+/* 801AE588 001AB4C8  48 00 03 70 */	b lbl_801AE8F8
+lbl_801AE58C:
 /* 801AE58C 001AB4CC  3C 60 80 39 */	lis r3, d_d_ky_thunder__stringBase0@ha
 /* 801AE590 001AB4D0  38 63 4F 40 */	addi r3, r3, d_d_ky_thunder__stringBase0@l
 /* 801AE594 001AB4D4  38 80 00 2F */	li r4, 0x2f
@@ -531,31 +479,22 @@ func_801AE58C:
 /* 801AE5CC 001AB50C  39 20 FF FF */	li r9, -1
 /* 801AE5D0 001AB510  4B E5 F1 3D */	bl init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss
 /* 801AE5D4 001AB514  2C 03 00 00 */	cmpwi r3, 0
-/* 801AE5D8 001AB518  40 82 00 0C */	bne func_801AE5E4
+/* 801AE5D8 001AB518  40 82 00 0C */	bne lbl_801AE5E4
 /* 801AE5DC 001AB51C  38 60 00 05 */	li r3, 5
-/* 801AE5E0 001AB520  48 00 03 18 */	b func_801AE8F8
-
-/* 801AE5E4 0024 .text      func_801AE5E4                  func_801AE5E4                  */
-.global func_801AE5E4
-func_801AE5E4:
+/* 801AE5E0 001AB520  48 00 03 18 */	b lbl_801AE8F8
+lbl_801AE5E4:
 /* 801AE5E4 001AB524  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
 /* 801AE5E8 001AB528  D0 3D 01 64 */	stfs f1, 0x164(r29)
 /* 801AE5EC 001AB52C  C0 1D 01 64 */	lfs f0, 0x164(r29)
 /* 801AE5F0 001AB530  D0 1D 01 14 */	stfs f0, 0x114(r29)
 /* 801AE5F4 001AB534  88 1F 0E D5 */	lbz r0, 0xed5(r31)
 /* 801AE5F8 001AB538  28 00 00 0A */	cmplwi r0, 0xa
-/* 801AE5FC 001AB53C  40 80 00 0C */	bge func_801AE608
+/* 801AE5FC 001AB53C  40 80 00 0C */	bge lbl_801AE608
 /* 801AE600 001AB540  FF A0 08 90 */	fmr f29, f1
-/* 801AE604 001AB544  48 00 00 08 */	b func_801AE60C
-
-/* 801AE608 0004 .text      func_801AE608                  func_801AE608                  */
-.global func_801AE608
-func_801AE608:
+/* 801AE604 001AB544  48 00 00 08 */	b lbl_801AE60C
+lbl_801AE608:
 /* 801AE608 001AB548  C3 A2 A4 A0 */	lfs f29, d_d_ky_thunder__LIT_4080-_SDA2_BASE_(r2)
-
-/* 801AE60C 002C .text      func_801AE60C                  func_801AE60C                  */
-.global func_801AE60C
-func_801AE60C:
+lbl_801AE60C:
 /* 801AE60C 001AB54C  38 7E 00 D8 */	addi r3, r30, 0xd8
 /* 801AE610 001AB550  38 9E 00 E4 */	addi r4, r30, 0xe4
 /* 801AE614 001AB554  48 0C 25 F1 */	bl cLib_targetAngleY__FPC3VecPC3Vec
@@ -563,14 +502,11 @@ func_801AE60C:
 /* 801AE61C 001AB55C  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 801AE620 001AB560  80 03 0C D8 */	lwz r0, g_Counter@l(r3)
 /* 801AE624 001AB564  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 801AE628 001AB568  40 82 00 10 */	bne func_801AE638
+/* 801AE628 001AB568  40 82 00 10 */	bne lbl_801AE638
 /* 801AE62C 001AB56C  A8 7D 01 68 */	lha r3, 0x168(r29)
 /* 801AE630 001AB570  38 03 7F FF */	addi r0, r3, 0x7fff
 /* 801AE634 001AB574  B0 1D 01 68 */	sth r0, 0x168(r29)
-
-/* 801AE638 0054 .text      func_801AE638                  func_801AE638                  */
-.global func_801AE638
-func_801AE638:
+lbl_801AE638:
 /* 801AE638 001AB578  C3 82 A4 A4 */	lfs f28, d_d_ky_thunder__LIT_4081-_SDA2_BASE_(r2)
 /* 801AE63C 001AB57C  C3 62 A4 A8 */	lfs f27, d_d_ky_thunder__LIT_4082-_SDA2_BASE_(r2)
 /* 801AE640 001AB580  FF E0 E0 90 */	fmr f31, f28
@@ -585,17 +521,14 @@ func_801AE638:
 /* 801AE664 001AB5A4  D0 1D 01 5C */	stfs f0, 0x15c(r29)
 /* 801AE668 001AB5A8  88 1F 0E D5 */	lbz r0, 0xed5(r31)
 /* 801AE66C 001AB5AC  28 00 00 0A */	cmplwi r0, 0xa
-/* 801AE670 001AB5B0  41 80 00 1C */	blt func_801AE68C
+/* 801AE670 001AB5B0  41 80 00 1C */	blt lbl_801AE68C
 /* 801AE674 001AB5B4  FF E0 D8 90 */	fmr f31, f27
 /* 801AE678 001AB5B8  C3 C2 A4 B8 */	lfs f30, d_d_ky_thunder__LIT_4086-_SDA2_BASE_(r2)
 /* 801AE67C 001AB5BC  C0 02 A4 BC */	lfs f0, d_d_ky_thunder__LIT_4087-_SDA2_BASE_(r2)
 /* 801AE680 001AB5C0  D0 1D 01 5C */	stfs f0, 0x15c(r29)
 /* 801AE684 001AB5C4  C0 02 A4 C0 */	lfs f0, d_d_ky_thunder__LIT_4088-_SDA2_BASE_(r2)
 /* 801AE688 001AB5C8  D0 01 00 18 */	stfs f0, 0x18(r1)
-
-/* 801AE68C 0044 .text      func_801AE68C                  func_801AE68C                  */
-.global func_801AE68C
-func_801AE68C:
+lbl_801AE68C:
 /* 801AE68C 001AB5CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 801AE690 001AB5D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 801AE694 001AB5D4  3B 63 4E 00 */	addi r27, r3, 0x4e00
@@ -605,18 +538,15 @@ func_801AE68C:
 /* 801AE6A4 001AB5E4  38 84 00 07 */	addi r4, r4, 7
 /* 801AE6A8 001AB5E8  48 1B A2 ED */	bl strcmp
 /* 801AE6AC 001AB5EC  2C 03 00 00 */	cmpwi r3, 0
-/* 801AE6B0 001AB5F0  40 82 00 20 */	bne func_801AE6D0
-/* 801AE6B4 001AB5F4  88 0D 87 E4 */	lbz r0, sym_80450D64-_SDA_BASE_(r13)
+/* 801AE6B0 001AB5F0  40 82 00 20 */	bne lbl_801AE6D0
+/* 801AE6B4 001AB5F4  88 0D 87 E4 */	lbz r0, data_80450D64-_SDA_BASE_(r13)
 /* 801AE6B8 001AB5F8  2C 00 00 04 */	cmpwi r0, 4
-/* 801AE6BC 001AB5FC  40 82 00 14 */	bne func_801AE6D0
+/* 801AE6BC 001AB5FC  40 82 00 14 */	bne lbl_801AE6D0
 /* 801AE6C0 001AB600  C3 82 A4 80 */	lfs f28, d_d_ky_thunder__LIT_3923-_SDA2_BASE_(r2)
 /* 801AE6C4 001AB604  C3 62 A4 A0 */	lfs f27, d_d_ky_thunder__LIT_4080-_SDA2_BASE_(r2)
 /* 801AE6C8 001AB608  C3 E2 A4 C4 */	lfs f31, d_d_ky_thunder__LIT_4089-_SDA2_BASE_(r2)
 /* 801AE6CC 001AB60C  C3 C2 A4 C8 */	lfs f30, d_d_ky_thunder__LIT_4090-_SDA2_BASE_(r2)
-
-/* 801AE6D0 004C .text      func_801AE6D0                  func_801AE6D0                  */
-.global func_801AE6D0
-func_801AE6D0:
+lbl_801AE6D0:
 /* 801AE6D0 001AB610  C0 3D 01 5C */	lfs f1, 0x15c(r29)
 /* 801AE6D4 001AB614  48 0B 92 B9 */	bl cM_rndFX__Ff
 /* 801AE6D8 001AB618  EC 1D 00 72 */	fmuls f0, f29, f1
@@ -631,15 +561,12 @@ func_801AE6D0:
 /* 801AE6FC 001AB63C  C8 02 A4 D0 */	lfd f0, d_d_ky_thunder__LIT_4091-_SDA2_BASE_(r2)
 /* 801AE700 001AB640  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE704 001AB644  4C 41 13 82 */	cror 2, 1, 2
-/* 801AE708 001AB648  40 82 00 14 */	bne func_801AE71C
+/* 801AE708 001AB648  40 82 00 14 */	bne lbl_801AE71C
 /* 801AE70C 001AB64C  C0 3D 01 38 */	lfs f1, 0x138(r29)
 /* 801AE710 001AB650  C0 02 A4 D8 */	lfs f0, d_d_ky_thunder__LIT_4092-_SDA2_BASE_(r2)
 /* 801AE714 001AB654  EC 01 00 32 */	fmuls f0, f1, f0
 /* 801AE718 001AB658  D0 1D 01 38 */	stfs f0, 0x138(r29)
-
-/* 801AE71C 0054 .text      func_801AE71C                  func_801AE71C                  */
-.global func_801AE71C
-func_801AE71C:
+lbl_801AE71C:
 /* 801AE71C 001AB65C  EC 3E F8 28 */	fsubs f1, f30, f31
 /* 801AE720 001AB660  48 0B 92 35 */	bl cM_rndF__Ff
 /* 801AE724 001AB664  EC 1F 08 2A */	fadds f0, f31, f1
@@ -658,13 +585,10 @@ func_801AE71C:
 /* 801AE758 001AB698  EF A3 00 2A */	fadds f29, f3, f0
 /* 801AE75C 001AB69C  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882-_SDA2_BASE_(r2)
 /* 801AE760 001AB6A0  FC 1D 00 40 */	fcmpo cr0, f29, f0
-/* 801AE764 001AB6A4  40 81 00 0C */	ble func_801AE770
+/* 801AE764 001AB6A4  40 81 00 0C */	ble lbl_801AE770
 /* 801AE768 001AB6A8  FC 00 E8 34 */	frsqrte f0, f29
 /* 801AE76C 001AB6AC  EF A0 07 72 */	fmuls f29, f0, f29
-
-/* 801AE770 003C .text      func_801AE770                  func_801AE770                  */
-.global func_801AE770
-func_801AE770:
+lbl_801AE770:
 /* 801AE770 001AB6B0  48 0B 8F 05 */	bl cM_atan2s__Fff
 /* 801AE774 001AB6B4  7C 7C 1B 78 */	mr r28, r3
 /* 801AE778 001AB6B8  C0 21 00 24 */	lfs f1, 0x24(r1)
@@ -676,19 +600,13 @@ func_801AE770:
 /* 801AE790 001AB6D0  C0 02 A4 70 */	lfs f0, d_d_ky_thunder__LIT_3882-_SDA2_BASE_(r2)
 /* 801AE794 001AB6D4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 801AE798 001AB6D8  4C 41 13 82 */	cror 2, 1, 2
-/* 801AE79C 001AB6DC  40 82 00 10 */	bne func_801AE7AC
+/* 801AE79C 001AB6DC  40 82 00 10 */	bne lbl_801AE7AC
 /* 801AE7A0 001AB6E0  38 1C 40 00 */	addi r0, r28, 0x4000
 /* 801AE7A4 001AB6E4  7C 05 07 34 */	extsh r5, r0
-/* 801AE7A8 001AB6E8  48 00 00 08 */	b func_801AE7B0
-
-/* 801AE7AC 0004 .text      func_801AE7AC                  func_801AE7AC                  */
-.global func_801AE7AC
-func_801AE7AC:
+/* 801AE7A8 001AB6E8  48 00 00 08 */	b lbl_801AE7B0
+lbl_801AE7AC:
 /* 801AE7AC 001AB6EC  38 BC C0 00 */	addi r5, r28, -16384
-
-/* 801AE7B0 00F8 .text      func_801AE7B0                  func_801AE7B0                  */
-.global func_801AE7B0
-func_801AE7B0:
+lbl_801AE7B0:
 /* 801AE7B0 001AB6F0  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 801AE7B4 001AB6F4  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 801AE7B8 001AB6F8  38 83 00 04 */	addi r4, r3, 4
@@ -735,10 +653,10 @@ func_801AE7B0:
 /* 801AE85C 001AB79C  38 84 00 07 */	addi r4, r4, 7
 /* 801AE860 001AB7A0  48 1B A1 35 */	bl strcmp
 /* 801AE864 001AB7A4  2C 03 00 00 */	cmpwi r3, 0
-/* 801AE868 001AB7A8  40 82 00 40 */	bne func_801AE8A8
-/* 801AE86C 001AB7AC  88 0D 87 E4 */	lbz r0, sym_80450D64-_SDA_BASE_(r13)
+/* 801AE868 001AB7A8  40 82 00 40 */	bne lbl_801AE8A8
+/* 801AE86C 001AB7AC  88 0D 87 E4 */	lbz r0, data_80450D64-_SDA_BASE_(r13)
 /* 801AE870 001AB7B0  2C 00 00 04 */	cmpwi r0, 4
-/* 801AE874 001AB7B4  40 82 00 34 */	bne func_801AE8A8
+/* 801AE874 001AB7B4  40 82 00 34 */	bne lbl_801AE8A8
 /* 801AE878 001AB7B8  C0 22 A4 E4 */	lfs f1, d_d_ky_thunder__LIT_4095-_SDA2_BASE_(r2)
 /* 801AE87C 001AB7BC  48 0B 91 11 */	bl cM_rndFX__Ff
 /* 801AE880 001AB7C0  C0 02 A4 E0 */	lfs f0, d_d_ky_thunder__LIT_4094-_SDA2_BASE_(r2)
@@ -751,15 +669,12 @@ func_801AE7B0:
 /* 801AE89C 001AB7DC  C0 02 A4 EC */	lfs f0, d_d_ky_thunder__LIT_4097-_SDA2_BASE_(r2)
 /* 801AE8A0 001AB7E0  EC 00 08 2A */	fadds f0, f0, f1
 /* 801AE8A4 001AB7E4  D0 1D 01 4C */	stfs f0, 0x14c(r29)
-
-/* 801AE8A8 004C .text      func_801AE8A8                  func_801AE8A8                  */
-.global func_801AE8A8
-func_801AE8A8:
+lbl_801AE8A8:
 /* 801AE8A8 001AB7E8  C0 22 A4 7C */	lfs f1, d_d_ky_thunder__LIT_3885-_SDA2_BASE_(r2)
 /* 801AE8AC 001AB7EC  48 0B 90 A9 */	bl cM_rndF__Ff
 /* 801AE8B0 001AB7F0  C0 02 A4 F4 */	lfs f0, d_d_ky_thunder__LIT_4099-_SDA2_BASE_(r2)
 /* 801AE8B4 001AB7F4  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 801AE8B8 001AB7F8  40 80 00 3C */	bge func_801AE8F4
+/* 801AE8B8 001AB7F8  40 80 00 3C */	bge lbl_801AE8F4
 /* 801AE8BC 001AB7FC  C0 1D 01 44 */	lfs f0, 0x144(r29)
 /* 801AE8C0 001AB800  FC 00 00 50 */	fneg f0, f0
 /* 801AE8C4 001AB804  D0 1D 01 50 */	stfs f0, 0x150(r29)
@@ -774,15 +689,9 @@ func_801AE8A8:
 /* 801AE8E8 001AB828  38 9D 01 50 */	addi r4, r29, 0x150
 /* 801AE8EC 001AB82C  38 A0 00 00 */	li r5, 0
 /* 801AE8F0 001AB830  48 11 95 79 */	bl startFarThunderSe__10Z2EnvSeMgrFP3VecSc
-
-/* 801AE8F4 0004 .text      func_801AE8F4                  func_801AE8F4                  */
-.global func_801AE8F4
-func_801AE8F4:
+lbl_801AE8F4:
 /* 801AE8F4 001AB834  38 60 00 04 */	li r3, 4
-
-/* 801AE8F8 0040 .text      func_801AE8F8                  func_801AE8F8                  */
-.global func_801AE8F8
-func_801AE8F8:
+lbl_801AE8F8:
 /* 801AE8F8 001AB838  E3 E1 00 98 */	psq_l f31, 152(r1), 0, qr0
 /* 801AE8FC 001AB83C  CB E1 00 90 */	lfd f31, 0x90(r1)
 /* 801AE900 001AB840  E3 C1 00 88 */	psq_l f30, 136(r1), 0, qr0
@@ -805,11 +714,11 @@ func_801AE8F8:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394F40 000E .rodata    d_d_ky_thunder__stringBase0    @stringBase0                   */
+/* 80394F40 000E .rodata    @stringBase0                   d_d_ky_thunder__stringBase0    */
 .global d_d_ky_thunder__stringBase0
 d_d_ky_thunder__stringBase0:
 .byte 0x41, 0x6c, 0x77, 0x61, 0x79, 0x73, 0x00, 0x52, 0x5f, 0x53, 0x50, 0x33, 0x30, 0x00 /* baserom.dol+0x391f40 */
-.byte 0x00, 0x00 /* baserom.dol+0x391f4e */
+.byte 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -828,31 +737,31 @@ g_profile_KY_THUNDER:
 .byte 0xff, 0xff, 0xff, 0xfd, 0x00, 0x07, 0xff, 0xfd, 0x02, 0xd9, 0x00, 0x00, 0x80, 0x3a, 0x39, 0xe8 /* baserom.dol+0x3b91ec */
 .byte 0x00, 0x00, 0x01, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3a, 0x39, 0x40 /* baserom.dol+0x3b91fc */
 .byte 0x00, 0x06, 0x00, 0x00, 0x80, 0x3b, 0xc1, 0xd8 /* baserom.dol+0x3b920c */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b9214 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 8042E7F0 000C .bss       d_d_ky_thunder__LIT_3816       @3816                          */
+/* 8042E7F0 000C .bss       @3816                          d_d_ky_thunder__LIT_3816       */
 .global d_d_ky_thunder__LIT_3816
 d_d_ky_thunder__LIT_3816:
 .skip 0xc
 
-/* 8042E7FC 000C .bss       d_d_ky_thunder__LIT_3818       @3818                          */
+/* 8042E7FC 000C .bss       @3818                          d_d_ky_thunder__LIT_3818       */
 .global d_d_ky_thunder__LIT_3818
 d_d_ky_thunder__LIT_3818:
 .skip 0xc
 
-/* 8042E808 000C .bss       sym_8042E808                   l_offsetPos$localstatic3$draw__10dThunder_cFv */
-.global sym_8042E808
-sym_8042E808:
+/* 8042E808 000C .bss       l_offsetPos$localstatic3$draw__10dThunder_cFv data_8042E808                  */
+.global data_8042E808
+data_8042E808:
 .skip 0xc
 
-/* 8042E814 000C .bss       sym_8042E814                   l_scale$localstatic5$draw__10dThunder_cFv */
-.global sym_8042E814
-sym_8042E814:
+/* 8042E814 000C .bss       l_scale$localstatic5$draw__10dThunder_cFv data_8042E814                  */
+.global data_8042E814
+data_8042E814:
 .skip 0xc
 
 
@@ -860,163 +769,163 @@ sym_8042E814:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453E70 0004 .sdata2    d_d_ky_thunder__LIT_3882       @3882                          */
+/* 80453E70 0004 .sdata2    @3882                          d_d_ky_thunder__LIT_3882       */
 .global d_d_ky_thunder__LIT_3882
 d_d_ky_thunder__LIT_3882:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2cd0 */
 
-/* 80453E74 0004 .sdata2    d_d_ky_thunder__LIT_3883       @3883                          */
+/* 80453E74 0004 .sdata2    @3883                          d_d_ky_thunder__LIT_3883       */
 .global d_d_ky_thunder__LIT_3883
 d_d_ky_thunder__LIT_3883:
 .byte 0x42, 0x20, 0x00, 0x00 /* baserom.dol+0x3d2cd4 */
 
-/* 80453E78 0004 .sdata2    d_d_ky_thunder__LIT_3884       @3884                          */
+/* 80453E78 0004 .sdata2    @3884                          d_d_ky_thunder__LIT_3884       */
 .global d_d_ky_thunder__LIT_3884
 d_d_ky_thunder__LIT_3884:
 .byte 0xc3, 0x7a, 0x00, 0x00 /* baserom.dol+0x3d2cd8 */
 
-/* 80453E7C 0004 .sdata2    d_d_ky_thunder__LIT_3885       @3885                          */
+/* 80453E7C 0004 .sdata2    @3885                          d_d_ky_thunder__LIT_3885       */
 .global d_d_ky_thunder__LIT_3885
 d_d_ky_thunder__LIT_3885:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2cdc */
 
-/* 80453E80 0004 .sdata2    d_d_ky_thunder__LIT_3923       @3923                          */
+/* 80453E80 0004 .sdata2    @3923                          d_d_ky_thunder__LIT_3923       */
 .global d_d_ky_thunder__LIT_3923
 d_d_ky_thunder__LIT_3923:
 .byte 0x3d, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d2ce0 */
 
-/* 80453E84 0004 .sdata2    d_d_ky_thunder__LIT_3924       @3924                          */
+/* 80453E84 0004 .sdata2    @3924                          d_d_ky_thunder__LIT_3924       */
 .global d_d_ky_thunder__LIT_3924
 d_d_ky_thunder__LIT_3924:
 .byte 0x3d, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d2ce4 */
 
-/* 80453E88 0004 .sdata2    d_d_ky_thunder__LIT_3925       @3925                          */
+/* 80453E88 0004 .sdata2    @3925                          d_d_ky_thunder__LIT_3925       */
 .global d_d_ky_thunder__LIT_3925
 d_d_ky_thunder__LIT_3925:
 .byte 0x3c, 0x8b, 0x43, 0x96 /* baserom.dol+0x3d2ce8 */
 
-/* 80453E8C 0004 .sdata2    d_d_ky_thunder__LIT_3926       @3926                          */
+/* 80453E8C 0004 .sdata2    @3926                          d_d_ky_thunder__LIT_3926       */
 .global d_d_ky_thunder__LIT_3926
 d_d_ky_thunder__LIT_3926:
 .byte 0x37, 0x27, 0xc5, 0xac /* baserom.dol+0x3d2cec */
 
-/* 80453E90 0004 .sdata2    d_d_ky_thunder__LIT_3927       @3927                          */
+/* 80453E90 0004 .sdata2    @3927                          d_d_ky_thunder__LIT_3927       */
 .global d_d_ky_thunder__LIT_3927
 d_d_ky_thunder__LIT_3927:
 .byte 0x42, 0x70, 0x00, 0x00 /* baserom.dol+0x3d2cf0 */
 
-/* 80453E94 0004 .sdata2    d_d_ky_thunder__LIT_3928       @3928                          */
+/* 80453E94 0004 .sdata2    @3928                          d_d_ky_thunder__LIT_3928       */
 .global d_d_ky_thunder__LIT_3928
 d_d_ky_thunder__LIT_3928:
 .byte 0x3c, 0x23, 0xd7, 0x0a /* baserom.dol+0x3d2cf4 */
 
-/* 80453E98 0004 .sdata2    d_d_ky_thunder__LIT_3929       @3929                          */
+/* 80453E98 0004 .sdata2    @3929                          d_d_ky_thunder__LIT_3929       */
 .global d_d_ky_thunder__LIT_3929
 d_d_ky_thunder__LIT_3929:
 .byte 0x3c, 0xa3, 0xd7, 0x0a /* baserom.dol+0x3d2cf8 */
 
-/* 80453E9C 0004 .sdata2    d_d_ky_thunder__LIT_4079       @4079                          */
+/* 80453E9C 0004 .sdata2    @4079                          d_d_ky_thunder__LIT_4079       */
 .global d_d_ky_thunder__LIT_4079
 d_d_ky_thunder__LIT_4079:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2cfc */
 
-/* 80453EA0 0004 .sdata2    d_d_ky_thunder__LIT_4080       @4080                          */
+/* 80453EA0 0004 .sdata2    @4080                          d_d_ky_thunder__LIT_4080       */
 .global d_d_ky_thunder__LIT_4080
 d_d_ky_thunder__LIT_4080:
 .byte 0x3e, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2d00 */
 
-/* 80453EA4 0004 .sdata2    d_d_ky_thunder__LIT_4081       @4081                          */
+/* 80453EA4 0004 .sdata2    @4081                          d_d_ky_thunder__LIT_4081       */
 .global d_d_ky_thunder__LIT_4081
 d_d_ky_thunder__LIT_4081:
 .byte 0x41, 0x60, 0x00, 0x00 /* baserom.dol+0x3d2d04 */
 
-/* 80453EA8 0004 .sdata2    d_d_ky_thunder__LIT_4082       @4082                          */
+/* 80453EA8 0004 .sdata2    @4082                          d_d_ky_thunder__LIT_4082       */
 .global d_d_ky_thunder__LIT_4082
 d_d_ky_thunder__LIT_4082:
 .byte 0x41, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d2d08 */
 
-/* 80453EAC 0004 .sdata2    d_d_ky_thunder__LIT_4083       @4083                          */
+/* 80453EAC 0004 .sdata2    @4083                          d_d_ky_thunder__LIT_4083       */
 .global d_d_ky_thunder__LIT_4083
 d_d_ky_thunder__LIT_4083:
 .byte 0x47, 0x6a, 0x60, 0x00 /* baserom.dol+0x3d2d0c */
 
-/* 80453EB0 0004 .sdata2    d_d_ky_thunder__LIT_4084       @4084                          */
+/* 80453EB0 0004 .sdata2    @4084                          d_d_ky_thunder__LIT_4084       */
 .global d_d_ky_thunder__LIT_4084
 d_d_ky_thunder__LIT_4084:
 .byte 0xc5, 0x9c, 0x40, 0x00 /* baserom.dol+0x3d2d10 */
 
-/* 80453EB4 0004 .sdata2    d_d_ky_thunder__LIT_4085       @4085                          */
+/* 80453EB4 0004 .sdata2    @4085                          d_d_ky_thunder__LIT_4085       */
 .global d_d_ky_thunder__LIT_4085
 d_d_ky_thunder__LIT_4085:
 .byte 0x44, 0xfa, 0x00, 0x00 /* baserom.dol+0x3d2d14 */
 
-/* 80453EB8 0004 .sdata2    d_d_ky_thunder__LIT_4086       @4086                          */
+/* 80453EB8 0004 .sdata2    @4086                          d_d_ky_thunder__LIT_4086       */
 .global d_d_ky_thunder__LIT_4086
 d_d_ky_thunder__LIT_4086:
 .byte 0x41, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d2d18 */
 
-/* 80453EBC 0004 .sdata2    d_d_ky_thunder__LIT_4087       @4087                          */
+/* 80453EBC 0004 .sdata2    @4087                          d_d_ky_thunder__LIT_4087       */
 .global d_d_ky_thunder__LIT_4087
 d_d_ky_thunder__LIT_4087:
 .byte 0x45, 0x1c, 0x40, 0x00 /* baserom.dol+0x3d2d1c */
 
-/* 80453EC0 0004 .sdata2    d_d_ky_thunder__LIT_4088       @4088                          */
+/* 80453EC0 0004 .sdata2    @4088                          d_d_ky_thunder__LIT_4088       */
 .global d_d_ky_thunder__LIT_4088
 d_d_ky_thunder__LIT_4088:
 .byte 0x45, 0xbb, 0x80, 0x00 /* baserom.dol+0x3d2d20 */
 
-/* 80453EC4 0004 .sdata2    d_d_ky_thunder__LIT_4089       @4089                          */
+/* 80453EC4 0004 .sdata2    @4089                          d_d_ky_thunder__LIT_4089       */
 .global d_d_ky_thunder__LIT_4089
 d_d_ky_thunder__LIT_4089:
 .byte 0x3e, 0x19, 0x99, 0x9a /* baserom.dol+0x3d2d24 */
 
-/* 80453EC8 0004 .sdata2    d_d_ky_thunder__LIT_4090       @4090                          */
+/* 80453EC8 0004 .sdata2    @4090                          d_d_ky_thunder__LIT_4090       */
 .global d_d_ky_thunder__LIT_4090
 d_d_ky_thunder__LIT_4090:
 .byte 0x3e, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d2d28 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d2c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80453ED0 0008 .sdata2    d_d_ky_thunder__LIT_4091       @4091                          */
+/* 80453ED0 0008 .sdata2    @4091                          d_d_ky_thunder__LIT_4091       */
 .global d_d_ky_thunder__LIT_4091
 d_d_ky_thunder__LIT_4091:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d30 */
 
-/* 80453ED8 0004 .sdata2    d_d_ky_thunder__LIT_4092       @4092                          */
+/* 80453ED8 0004 .sdata2    @4092                          d_d_ky_thunder__LIT_4092       */
 .global d_d_ky_thunder__LIT_4092
 d_d_ky_thunder__LIT_4092:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2d38 */
 
-/* 80453EDC 0004 .sdata2    d_d_ky_thunder__LIT_4093       @4093                          */
+/* 80453EDC 0004 .sdata2    @4093                          d_d_ky_thunder__LIT_4093       */
 .global d_d_ky_thunder__LIT_4093
 d_d_ky_thunder__LIT_4093:
 .byte 0x47, 0xc3, 0x50, 0x00 /* baserom.dol+0x3d2d3c */
 
-/* 80453EE0 0004 .sdata2    d_d_ky_thunder__LIT_4094       @4094                          */
+/* 80453EE0 0004 .sdata2    @4094                          d_d_ky_thunder__LIT_4094       */
 .global d_d_ky_thunder__LIT_4094
 d_d_ky_thunder__LIT_4094:
 .byte 0x46, 0x99, 0x66, 0x00 /* baserom.dol+0x3d2d40 */
 
-/* 80453EE4 0004 .sdata2    d_d_ky_thunder__LIT_4095       @4095                          */
+/* 80453EE4 0004 .sdata2    @4095                          d_d_ky_thunder__LIT_4095       */
 .global d_d_ky_thunder__LIT_4095
 d_d_ky_thunder__LIT_4095:
 .byte 0x43, 0x82, 0x00, 0x00 /* baserom.dol+0x3d2d44 */
 
-/* 80453EE8 0004 .sdata2    d_d_ky_thunder__LIT_4096       @4096                          */
+/* 80453EE8 0004 .sdata2    @4096                          d_d_ky_thunder__LIT_4096       */
 .global d_d_ky_thunder__LIT_4096
 d_d_ky_thunder__LIT_4096:
 .byte 0x45, 0x8f, 0x80, 0x00 /* baserom.dol+0x3d2d48 */
 
-/* 80453EEC 0004 .sdata2    d_d_ky_thunder__LIT_4097       @4097                          */
+/* 80453EEC 0004 .sdata2    @4097                          d_d_ky_thunder__LIT_4097       */
 .global d_d_ky_thunder__LIT_4097
 d_d_ky_thunder__LIT_4097:
 .byte 0x44, 0xbc, 0x60, 0x00 /* baserom.dol+0x3d2d4c */
 
-/* 80453EF0 0004 .sdata2    d_d_ky_thunder__LIT_4098       @4098                          */
+/* 80453EF0 0004 .sdata2    @4098                          d_d_ky_thunder__LIT_4098       */
 .global d_d_ky_thunder__LIT_4098
 d_d_ky_thunder__LIT_4098:
 .byte 0x42, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d2d50 */
 
-/* 80453EF4 0004 .sdata2    d_d_ky_thunder__LIT_4099       @4099                          */
+/* 80453EF4 0004 .sdata2    @4099                          d_d_ky_thunder__LIT_4099       */
 .global d_d_ky_thunder__LIT_4099
 d_d_ky_thunder__LIT_4099:
 .byte 0x3e, 0x99, 0x99, 0x9a /* baserom.dol+0x3d2d54 */

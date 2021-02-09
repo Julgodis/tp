@@ -7,6 +7,7 @@
 /* 80020E38 002C .text      fpcCtTg_ToCreateQ__FP10create_tag fpcCtTg_ToCreateQ__FP10create_tag */
 .global fpcCtTg_ToCreateQ__FP10create_tag
 fpcCtTg_ToCreateQ__FP10create_tag:
+fpcCtTg_ToCreateQ__FP10create_tag:
 /* 80020E38 0001DD78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020E3C 0001DD7C  7C 08 02 A6 */	mflr r0
 /* 80020E40 0001DD80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -22,6 +23,7 @@ fpcCtTg_ToCreateQ__FP10create_tag:
 /* 80020E64 0020 .text      fpcCtTg_CreateQTo__FP10create_tag fpcCtTg_CreateQTo__FP10create_tag */
 .global fpcCtTg_CreateQTo__FP10create_tag
 fpcCtTg_CreateQTo__FP10create_tag:
+fpcCtTg_CreateQTo__FP10create_tag:
 /* 80020E64 0001DDA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020E68 0001DDA8  7C 08 02 A6 */	mflr r0
 /* 80020E6C 0001DDAC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -33,6 +35,7 @@ fpcCtTg_CreateQTo__FP10create_tag:
 
 /* 80020E84 0024 .text      fpcCtTg_Init__FP10create_tagPv fpcCtTg_Init__FP10create_tagPv */
 .global fpcCtTg_Init__FP10create_tagPv
+fpcCtTg_Init__FP10create_tagPv:
 fpcCtTg_Init__FP10create_tagPv:
 /* 80020E84 0001DDC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020E88 0001DDC8  7C 08 02 A6 */	mflr r0
@@ -53,5 +56,5 @@ fpcCtTg_Init__FP10create_tagPv:
 .global g_fpcCtTg_Queue
 g_fpcCtTg_Queue:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a0990 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a099c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 80021A00 0024 .text      fpcLf_GetPriority__FPC14leafdraw_class fpcLf_GetPriority__FPC14leafdraw_class */
 .global fpcLf_GetPriority__FPC14leafdraw_class
 fpcLf_GetPriority__FPC14leafdraw_class:
+fpcLf_GetPriority__FPC14leafdraw_class:
 /* 80021A00 0001E940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021A04 0001E944  7C 08 02 A6 */	mflr r0
 /* 80021A08 0001E948  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,6 +21,7 @@ fpcLf_GetPriority__FPC14leafdraw_class:
 /* 80021A24 0024 .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv fpcLf_DrawMethod__FP21leafdraw_method_classPv */
 .global fpcLf_DrawMethod__FP21leafdraw_method_classPv
 fpcLf_DrawMethod__FP21leafdraw_method_classPv:
+fpcLf_DrawMethod__FP21leafdraw_method_classPv:
 /* 80021A24 0001E964  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021A28 0001E968  7C 08 02 A6 */	mflr r0
 /* 80021A2C 0001E96C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,8 +32,9 @@ fpcLf_DrawMethod__FP21leafdraw_method_classPv:
 /* 80021A40 0001E980  38 21 00 10 */	addi r1, r1, 0x10
 /* 80021A44 0001E984  4E 80 00 20 */	blr 
 
-/* 80021A48 0028 .text      fpcLf_Draw__FP14leafdraw_class fpcLf_Draw__FP14leafdraw_class */
+/* 80021A48 0038 .text      fpcLf_Draw__FP14leafdraw_class fpcLf_Draw__FP14leafdraw_class */
 .global fpcLf_Draw__FP14leafdraw_class
+fpcLf_Draw__FP14leafdraw_class:
 fpcLf_Draw__FP14leafdraw_class:
 /* 80021A48 0001E988  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021A4C 0001E98C  7C 08 02 A6 */	mflr r0
@@ -40,13 +43,10 @@ fpcLf_Draw__FP14leafdraw_class:
 /* 80021A58 0001E998  38 60 00 00 */	li r3, 0
 /* 80021A5C 0001E99C  88 04 00 BC */	lbz r0, 0xbc(r4)
 /* 80021A60 0001E9A0  7C 00 07 75 */	extsb. r0, r0
-/* 80021A64 0001E9A4  40 82 00 0C */	bne func_80021A70
+/* 80021A64 0001E9A4  40 82 00 0C */	bne lbl_80021A70
 /* 80021A68 0001E9A8  80 64 00 B8 */	lwz r3, 0xb8(r4)
 /* 80021A6C 0001E9AC  4B FF FF B9 */	bl fpcLf_DrawMethod__FP21leafdraw_method_classPv
-
-/* 80021A70 0010 .text      func_80021A70                  func_80021A70                  */
-.global func_80021A70
-func_80021A70:
+lbl_80021A70:
 /* 80021A70 0001E9B0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80021A74 0001E9B4  7C 08 03 A6 */	mtlr r0
 /* 80021A78 0001E9B8  38 21 00 10 */	addi r1, r1, 0x10
@@ -54,6 +54,7 @@ func_80021A70:
 
 /* 80021A80 0028 .text      fpcLf_Execute__FP14leafdraw_class fpcLf_Execute__FP14leafdraw_class */
 .global fpcLf_Execute__FP14leafdraw_class
+fpcLf_Execute__FP14leafdraw_class:
 fpcLf_Execute__FP14leafdraw_class:
 /* 80021A80 0001E9C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021A84 0001E9C4  7C 08 02 A6 */	mflr r0
@@ -69,6 +70,7 @@ fpcLf_Execute__FP14leafdraw_class:
 /* 80021AA8 0028 .text      fpcLf_IsDelete__FP14leafdraw_class fpcLf_IsDelete__FP14leafdraw_class */
 .global fpcLf_IsDelete__FP14leafdraw_class
 fpcLf_IsDelete__FP14leafdraw_class:
+fpcLf_IsDelete__FP14leafdraw_class:
 /* 80021AA8 0001E9E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021AAC 0001E9EC  7C 08 02 A6 */	mflr r0
 /* 80021AB0 0001E9F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -80,8 +82,9 @@ fpcLf_IsDelete__FP14leafdraw_class:
 /* 80021AC8 0001EA08  38 21 00 10 */	addi r1, r1, 0x10
 /* 80021ACC 0001EA0C  4E 80 00 20 */	blr 
 
-/* 80021AD0 0030 .text      fpcLf_Delete__FP14leafdraw_class fpcLf_Delete__FP14leafdraw_class */
+/* 80021AD0 0044 .text      fpcLf_Delete__FP14leafdraw_class fpcLf_Delete__FP14leafdraw_class */
 .global fpcLf_Delete__FP14leafdraw_class
+fpcLf_Delete__FP14leafdraw_class:
 fpcLf_Delete__FP14leafdraw_class:
 /* 80021AD0 0001EA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021AD4 0001EA14  7C 08 02 A6 */	mflr r0
@@ -92,21 +95,19 @@ fpcLf_Delete__FP14leafdraw_class:
 /* 80021AE8 0001EA28  7F E4 FB 78 */	mr r4, r31
 /* 80021AEC 0001EA2C  48 00 09 BD */	bl fpcMtd_Delete__FP20process_method_classPv
 /* 80021AF0 0001EA30  2C 03 00 01 */	cmpwi r3, 1
-/* 80021AF4 0001EA34  40 82 00 0C */	bne func_80021B00
+/* 80021AF4 0001EA34  40 82 00 0C */	bne lbl_80021B00
 /* 80021AF8 0001EA38  38 00 00 00 */	li r0, 0
 /* 80021AFC 0001EA3C  90 1F 00 B4 */	stw r0, 0xb4(r31)
-
-/* 80021B00 0014 .text      func_80021B00                  func_80021B00                  */
-.global func_80021B00
-func_80021B00:
+lbl_80021B00:
 /* 80021B00 0001EA40  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80021B04 0001EA44  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80021B08 0001EA48  7C 08 03 A6 */	mtlr r0
 /* 80021B0C 0001EA4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80021B10 0001EA50  4E 80 00 20 */	blr 
 
-/* 80021B14 0050 .text      fpcLf_Create__FP14leafdraw_class fpcLf_Create__FP14leafdraw_class */
+/* 80021B14 0074 .text      fpcLf_Create__FP14leafdraw_class fpcLf_Create__FP14leafdraw_class */
 .global fpcLf_Create__FP14leafdraw_class
+fpcLf_Create__FP14leafdraw_class:
 fpcLf_Create__FP14leafdraw_class:
 /* 80021B14 0001EA54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021B18 0001EA58  7C 08 02 A6 */	mflr r0
@@ -116,7 +117,7 @@ fpcLf_Create__FP14leafdraw_class:
 /* 80021B28 0001EA68  7C 7E 1B 78 */	mr r30, r3
 /* 80021B2C 0001EA6C  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80021B30 0001EA70  7C 00 07 75 */	extsb. r0, r0
-/* 80021B34 0001EA74  40 82 00 30 */	bne func_80021B64
+/* 80021B34 0001EA74  40 82 00 30 */	bne lbl_80021B64
 /* 80021B38 0001EA78  83 FE 00 10 */	lwz r31, 0x10(r30)
 /* 80021B3C 0001EA7C  80 1F 00 1C */	lwz r0, 0x1c(r31)
 /* 80021B40 0001EA80  90 1E 00 B8 */	stw r0, 0xb8(r30)
@@ -128,10 +129,7 @@ fpcLf_Create__FP14leafdraw_class:
 /* 80021B58 0001EA98  4B FF F7 C1 */	bl fpcDwPi_Init__FP19draw_priority_classs
 /* 80021B5C 0001EA9C  38 00 00 00 */	li r0, 0
 /* 80021B60 0001EAA0  98 1E 00 BC */	stb r0, 0xbc(r30)
-
-/* 80021B64 0024 .text      func_80021B64                  func_80021B64                  */
-.global func_80021B64
-func_80021B64:
+lbl_80021B64:
 /* 80021B64 0001EAA4  80 7E 00 B8 */	lwz r3, 0xb8(r30)
 /* 80021B68 0001EAA8  7F C4 F3 78 */	mr r4, r30
 /* 80021B6C 0001EAAC  48 00 09 61 */	bl fpcMtd_Create__FP20process_method_classPv
@@ -152,7 +150,7 @@ func_80021B64:
 g_fpcLf_Method:
 .byte 0x80, 0x02, 0x1b, 0x14, 0x80, 0x02, 0x1a, 0xd0, 0x80, 0x02, 0x1a, 0x80, 0x80, 0x02, 0x1a, 0xa8 /* baserom.dol+0x3a09e8 */
 .byte 0x80, 0x02, 0x1a, 0x48 /* baserom.dol+0x3a09f8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a09fc */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -165,13 +163,13 @@ g_fpcLf_type:
 .skip 0x4
 .skip 0x4 /* padding */
 
-/* 80450D38 0001 .sbss      sym_80450D38                   sym_80450D38                   */
-.global sym_80450D38
-sym_80450D38:
+/* 80450D38 0001 .sbss      data_80450D38                  data_80450D38                  */
+.global data_80450D38
+data_80450D38:
 .skip 0x1
 
-/* 80450D39 0007 .sbss      sym_80450D39                   sym_80450D39                   */
-.global sym_80450D39
-sym_80450D39:
+/* 80450D39 0007 .sbss      data_80450D39                  data_80450D39                  */
+.global data_80450D39
+data_80450D39:
 .skip 0x7
 

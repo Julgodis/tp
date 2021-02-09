@@ -7,6 +7,7 @@
 /* 8001F13C 0020 .text      fopScnTg_QueueTo__FP15scene_tag_class fopScnTg_QueueTo__FP15scene_tag_class */
 .global fopScnTg_QueueTo__FP15scene_tag_class
 fopScnTg_QueueTo__FP15scene_tag_class:
+fopScnTg_QueueTo__FP15scene_tag_class:
 /* 8001F13C 0001C07C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F140 0001C080  7C 08 02 A6 */	mflr r0
 /* 8001F144 0001C084  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,6 +19,7 @@ fopScnTg_QueueTo__FP15scene_tag_class:
 
 /* 8001F15C 002C .text      fopScnTg_ToQueue__FP15scene_tag_class fopScnTg_ToQueue__FP15scene_tag_class */
 .global fopScnTg_ToQueue__FP15scene_tag_class
+fopScnTg_ToQueue__FP15scene_tag_class:
 fopScnTg_ToQueue__FP15scene_tag_class:
 /* 8001F15C 0001C09C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F160 0001C0A0  7C 08 02 A6 */	mflr r0
@@ -33,6 +35,7 @@ fopScnTg_ToQueue__FP15scene_tag_class:
 
 /* 8001F188 0020 .text      fopScnTg_Init__FP15scene_tag_classPv fopScnTg_Init__FP15scene_tag_classPv */
 .global fopScnTg_Init__FP15scene_tag_classPv
+fopScnTg_Init__FP15scene_tag_classPv:
 fopScnTg_Init__FP15scene_tag_classPv:
 /* 8001F188 0001C0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001F18C 0001C0CC  7C 08 02 A6 */	mflr r0
@@ -52,5 +55,5 @@ fopScnTg_Init__FP15scene_tag_classPv:
 .global g_fopScnTg_SceneList
 g_fopScnTg_SceneList:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a0918 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a0924 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

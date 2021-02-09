@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8033C580 0080 .text      OSSetErrorHandler              OSSetErrorHandler              */
+/* 8033C580 0218 .text      OSSetErrorHandler              OSSetErrorHandler              */
 .global OSSetErrorHandler
+OSSetErrorHandler:
 OSSetErrorHandler:
 /* 8033C580 003394C0  7C 08 02 A6 */	mflr r0
 /* 8033C584 003394C4  90 01 00 04 */	stw r0, 4(r1)
@@ -26,38 +27,32 @@ OSSetErrorHandler:
 /* 8033C5C0 00339500  28 06 00 10 */	cmplwi r6, 0x10
 /* 8033C5C4 00339504  7C 7D 1B 78 */	mr r29, r3
 /* 8033C5C8 00339508  93 84 00 00 */	stw r28, 0(r4)
-/* 8033C5CC 0033950C  40 82 01 A0 */	bne func_8033C76C
+/* 8033C5CC 0033950C  40 82 01 A0 */	bne lbl_8033C76C
 /* 8033C5D0 00339510  4B FF D6 F1 */	bl PPCMfmsr
 /* 8033C5D4 00339514  3B E3 00 00 */	addi r31, r3, 0
 /* 8033C5D8 00339518  63 E3 20 00 */	ori r3, r31, 0x2000
 /* 8033C5DC 0033951C  4B FF D6 ED */	bl PPCMtmsr
 /* 8033C5E0 00339520  4B FF D7 65 */	bl PPCMffpscr
 /* 8033C5E4 00339524  28 1C 00 00 */	cmplwi r28, 0
-/* 8033C5E8 00339528  41 82 01 18 */	beq func_8033C700
+/* 8033C5E8 00339528  41 82 01 18 */	beq lbl_8033C700
 /* 8033C5EC 0033952C  3C A0 80 00 */	lis r5, 0x800000DC@ha
 /* 8033C5F0 00339530  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
 /* 8033C5F4 00339534  80 C5 00 DC */	lwz r6, 0x800000DC@l(r5)
 /* 8033C5F8 00339538  38 84 F8 FF */	addi r4, r4, 0x6005F8FF@l
-/* 8033C5FC 0033953C  48 00 00 E8 */	b func_8033C6E4
-
-/* 8033C600 002C .text      func_8033C600                  func_8033C600                  */
-.global func_8033C600
-func_8033C600:
+/* 8033C5FC 0033953C  48 00 00 E8 */	b lbl_8033C6E4
+lbl_8033C600:
 /* 8033C600 00339540  80 06 01 9C */	lwz r0, 0x19c(r6)
 /* 8033C604 00339544  60 00 09 00 */	ori r0, r0, 0x900
 /* 8033C608 00339548  90 06 01 9C */	stw r0, 0x19c(r6)
 /* 8033C60C 0033954C  A0 A6 01 A2 */	lhz r5, 0x1a2(r6)
 /* 8033C610 00339550  54 A0 07 FF */	clrlwi. r0, r5, 0x1f
-/* 8033C614 00339554  40 82 00 AC */	bne func_8033C6C0
+/* 8033C614 00339554  40 82 00 AC */	bne lbl_8033C6C0
 /* 8033C618 00339558  60 A5 00 01 */	ori r5, r5, 1
 /* 8033C61C 0033955C  38 00 00 04 */	li r0, 4
 /* 8033C620 00339560  B0 A6 01 A2 */	sth r5, 0x1a2(r6)
 /* 8033C624 00339564  7C 09 03 A6 */	mtctr r0
 /* 8033C628 00339568  38 A6 00 00 */	addi r5, r6, 0
-
-/* 8033C62C 0094 .text      func_8033C62C                  func_8033C62C                  */
-.global func_8033C62C
-func_8033C62C:
+lbl_8033C62C:
 /* 8033C62C 0033956C  38 00 FF FF */	li r0, -1
 /* 8033C630 00339570  90 05 00 94 */	stw r0, 0x94(r5)
 /* 8033C634 00339574  90 05 00 90 */	stw r0, 0x90(r5)
@@ -92,13 +87,10 @@ func_8033C62C:
 /* 8033C6A8 003395E8  90 05 02 04 */	stw r0, 0x204(r5)
 /* 8033C6AC 003395EC  90 05 02 00 */	stw r0, 0x200(r5)
 /* 8033C6B0 003395F0  38 A5 00 40 */	addi r5, r5, 0x40
-/* 8033C6B4 003395F4  42 00 FF 78 */	bdnz func_8033C62C
+/* 8033C6B4 003395F4  42 00 FF 78 */	bdnz lbl_8033C62C
 /* 8033C6B8 003395F8  38 00 00 04 */	li r0, 4
 /* 8033C6BC 003395FC  90 06 01 94 */	stw r0, 0x194(r6)
-
-/* 8033C6C0 0024 .text      func_8033C6C0                  func_8033C6C0                  */
-.global func_8033C6C0
-func_8033C6C0:
+lbl_8033C6C0:
 /* 8033C6C0 00339600  80 0D 84 20 */	lwz r0, __OSFpscrEnableBits-_SDA_BASE_(r13)
 /* 8033C6C4 00339604  80 A6 01 94 */	lwz r5, 0x194(r6)
 /* 8033C6C8 00339608  54 00 06 38 */	rlwinm r0, r0, 0, 0x18, 0x1c
@@ -108,31 +100,22 @@ func_8033C6C0:
 /* 8033C6D8 00339618  7C 00 20 38 */	and r0, r0, r4
 /* 8033C6DC 0033961C  90 06 01 94 */	stw r0, 0x194(r6)
 /* 8033C6E0 00339620  80 C6 02 FC */	lwz r6, 0x2fc(r6)
-
-/* 8033C6E4 001C .text      func_8033C6E4                  func_8033C6E4                  */
-.global func_8033C6E4
-func_8033C6E4:
+lbl_8033C6E4:
 /* 8033C6E4 00339624  28 06 00 00 */	cmplwi r6, 0
-/* 8033C6E8 00339628  40 82 FF 18 */	bne func_8033C600
+/* 8033C6E8 00339628  40 82 FF 18 */	bne lbl_8033C600
 /* 8033C6EC 0033962C  80 0D 84 20 */	lwz r0, __OSFpscrEnableBits-_SDA_BASE_(r13)
 /* 8033C6F0 00339630  63 FF 09 00 */	ori r31, r31, 0x900
 /* 8033C6F4 00339634  54 00 06 38 */	rlwinm r0, r0, 0, 0x18, 0x1c
 /* 8033C6F8 00339638  7C 63 03 78 */	or r3, r3, r0
-/* 8033C6FC 0033963C  48 00 00 58 */	b func_8033C754
-
-/* 8033C700 0018 .text      func_8033C700                  func_8033C700                  */
-.global func_8033C700
-func_8033C700:
+/* 8033C6FC 0033963C  48 00 00 58 */	b lbl_8033C754
+lbl_8033C700:
 /* 8033C700 00339640  3C A0 80 00 */	lis r5, 0x800000DC@ha
 /* 8033C704 00339644  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
 /* 8033C708 00339648  80 C5 00 DC */	lwz r6, 0x800000DC@l(r5)
 /* 8033C70C 0033964C  38 84 F8 FF */	addi r4, r4, 0x6005F8FF@l
 /* 8033C710 00339650  38 A0 F6 FF */	li r5, -2305
-/* 8033C714 00339654  48 00 00 2C */	b func_8033C740
-
-/* 8033C718 0028 .text      func_8033C718                  func_8033C718                  */
-.global func_8033C718
-func_8033C718:
+/* 8033C714 00339654  48 00 00 2C */	b lbl_8033C740
+lbl_8033C718:
 /* 8033C718 00339658  80 06 01 9C */	lwz r0, 0x19c(r6)
 /* 8033C71C 0033965C  7C 00 28 38 */	and r0, r0, r5
 /* 8033C720 00339660  90 06 01 9C */	stw r0, 0x19c(r6)
@@ -143,29 +126,20 @@ func_8033C718:
 /* 8033C734 00339674  7C 00 20 38 */	and r0, r0, r4
 /* 8033C738 00339678  90 06 01 94 */	stw r0, 0x194(r6)
 /* 8033C73C 0033967C  80 C6 02 FC */	lwz r6, 0x2fc(r6)
-
-/* 8033C740 0014 .text      func_8033C740                  func_8033C740                  */
-.global func_8033C740
-func_8033C740:
+lbl_8033C740:
 /* 8033C740 00339680  28 06 00 00 */	cmplwi r6, 0
-/* 8033C744 00339684  40 82 FF D4 */	bne func_8033C718
+/* 8033C744 00339684  40 82 FF D4 */	bne lbl_8033C718
 /* 8033C748 00339688  38 00 F6 FF */	li r0, -2305
 /* 8033C74C 0033968C  54 63 07 6E */	rlwinm r3, r3, 0, 0x1d, 0x17
 /* 8033C750 00339690  7F FF 00 38 */	and r31, r31, r0
-
-/* 8033C754 0018 .text      func_8033C754                  func_8033C754                  */
-.global func_8033C754
-func_8033C754:
+lbl_8033C754:
 /* 8033C754 00339694  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
 /* 8033C758 00339698  38 04 F8 FF */	addi r0, r4, 0x6005F8FF@l
 /* 8033C75C 0033969C  7C 63 00 38 */	and r3, r3, r0
 /* 8033C760 003396A0  4B FF D6 05 */	bl PPCMtfpscr
 /* 8033C764 003396A4  7F E3 FB 78 */	mr r3, r31
 /* 8033C768 003396A8  4B FF D5 61 */	bl PPCMtmsr
-
-/* 8033C76C 002C .text      func_8033C76C                  func_8033C76C                  */
-.global func_8033C76C
-func_8033C76C:
+lbl_8033C76C:
 /* 8033C76C 003396AC  7F A3 EB 78 */	mr r3, r29
 /* 8033C770 003396B0  48 00 0F AD */	bl OSRestoreInterrupts
 /* 8033C774 003396B4  7F C3 F3 78 */	mr r3, r30
@@ -178,8 +152,9 @@ func_8033C76C:
 /* 8033C790 003396D0  7C 08 03 A6 */	mtlr r0
 /* 8033C794 003396D4  4E 80 00 20 */	blr 
 
-/* 8033C798 005C .text      __OSUnhandledException         __OSUnhandledException         */
+/* 8033C798 02E8 .text      __OSUnhandledException         __OSUnhandledException         */
 .global __OSUnhandledException
+__OSUnhandledException:
 __OSUnhandledException:
 /* 8033C798 003396D8  7C 08 02 A6 */	mflr r0
 /* 8033C79C 003396DC  3D 00 80 45 */	lis r8, __OSErrorTable@ha
@@ -198,24 +173,21 @@ __OSUnhandledException:
 /* 8033C7D0 00339710  3B 84 00 00 */	addi r28, r4, 0
 /* 8033C7D4 00339714  3B A3 00 00 */	addi r29, r3, 0
 /* 8033C7D8 00339718  54 A0 07 BD */	rlwinm. r0, r5, 0, 0x1e, 0x1e
-/* 8033C7DC 0033971C  40 82 00 18 */	bne func_8033C7F4
+/* 8033C7DC 0033971C  40 82 00 18 */	bne lbl_8033C7F4
 /* 8033C7E0 00339720  38 7F 00 5C */	addi r3, r31, 0x5c
 /* 8033C7E4 00339724  4C C6 31 82 */	crclr 6
 /* 8033C7E8 00339728  57 04 06 3E */	clrlwi r4, r24, 0x18
 /* 8033C7EC 0033972C  4B CC A2 D1 */	bl OSReport
-/* 8033C7F0 00339730  48 00 01 54 */	b func_8033C944
-
-/* 8033C7F4 0048 .text      func_8033C7F4                  func_8033C7F4                  */
-.global func_8033C7F4
-func_8033C7F4:
+/* 8033C7F0 00339730  48 00 01 54 */	b lbl_8033C944
+lbl_8033C7F4:
 /* 8033C7F4 00339734  57 00 06 3E */	clrlwi r0, r24, 0x18
 /* 8033C7F8 00339738  28 00 00 06 */	cmplwi r0, 6
-/* 8033C7FC 0033973C  40 82 00 D8 */	bne func_8033C8D4
+/* 8033C7FC 0033973C  40 82 00 D8 */	bne lbl_8033C8D4
 /* 8033C800 00339740  54 A0 02 D7 */	rlwinm. r0, r5, 0, 0xb, 0xb
-/* 8033C804 00339744  41 82 00 D0 */	beq func_8033C8D4
+/* 8033C804 00339744  41 82 00 D0 */	beq lbl_8033C8D4
 /* 8033C808 00339748  80 1E 00 40 */	lwz r0, 0x40(r30)
 /* 8033C80C 0033974C  28 00 00 00 */	cmplwi r0, 0
-/* 8033C810 00339750  41 82 00 C4 */	beq func_8033C8D4
+/* 8033C810 00339750  41 82 00 C4 */	beq lbl_8033C8D4
 /* 8033C814 00339754  3B 00 00 10 */	li r24, 0x10
 /* 8033C818 00339758  4B FF D4 A9 */	bl PPCMfmsr
 /* 8033C81C 0033975C  3A E3 00 00 */	addi r23, r3, 0
@@ -224,12 +196,9 @@ func_8033C7F4:
 /* 8033C828 00339768  3C 60 80 00 */	lis r3, 0x800000D8@ha
 /* 8033C82C 0033976C  80 63 00 D8 */	lwz r3, 0x800000D8@l(r3)
 /* 8033C830 00339770  28 03 00 00 */	cmplwi r3, 0
-/* 8033C834 00339774  41 82 00 08 */	beq func_8033C83C
+/* 8033C834 00339774  41 82 00 08 */	beq lbl_8033C83C
 /* 8033C838 00339778  4B FF F5 F9 */	bl OSSaveFPUContext
-
-/* 8033C83C 007C .text      func_8033C83C                  func_8033C83C                  */
-.global func_8033C83C
-func_8033C83C:
+lbl_8033C83C:
 /* 8033C83C 0033977C  4B FF D5 09 */	bl PPCMffpscr
 /* 8033C840 00339780  3C 80 60 06 */	lis r4, 0x6005F8FF@ha
 /* 8033C844 00339784  3A C4 F8 FF */	addi r22, r4, 0x6005F8FF@l
@@ -240,7 +209,7 @@ func_8033C83C:
 /* 8033C858 00339798  3E E0 80 00 */	lis r23, 0x800000D8@ha
 /* 8033C85C 0033979C  80 17 00 D8 */	lwz r0, 0x800000D8@l(r23)
 /* 8033C860 003397A0  7C 00 C8 40 */	cmplw r0, r25
-/* 8033C864 003397A4  40 82 00 54 */	bne func_8033C8B8
+/* 8033C864 003397A4  40 82 00 54 */	bne lbl_8033C8B8
 /* 8033C868 003397A8  48 00 44 5D */	bl OSDisableScheduler
 /* 8033C86C 003397AC  81 9E 00 40 */	lwz r12, 0x40(r30)
 /* 8033C870 003397B0  38 99 00 00 */	addi r4, r25, 0
@@ -260,32 +229,23 @@ func_8033C83C:
 /* 8033C8A8 003397E8  90 19 01 94 */	stw r0, 0x194(r25)
 /* 8033C8AC 003397EC  48 00 44 59 */	bl OSEnableScheduler
 /* 8033C8B0 003397F0  48 00 49 71 */	bl __OSReschedule
-/* 8033C8B4 003397F4  48 00 00 18 */	b func_8033C8CC
-
-/* 8033C8B8 0014 .text      func_8033C8B8                  func_8033C8B8                  */
-.global func_8033C8B8
-func_8033C8B8:
+/* 8033C8B4 003397F4  48 00 00 18 */	b lbl_8033C8CC
+lbl_8033C8B8:
 /* 8033C8B8 003397F8  80 79 01 9C */	lwz r3, 0x19c(r25)
 /* 8033C8BC 003397FC  38 00 00 00 */	li r0, 0
 /* 8033C8C0 00339800  54 63 04 E2 */	rlwinm r3, r3, 0, 0x13, 0x11
 /* 8033C8C4 00339804  90 79 01 9C */	stw r3, 0x19c(r25)
 /* 8033C8C8 00339808  90 17 00 D8 */	stw r0, 0xd8(r23)
-
-/* 8033C8CC 0008 .text      func_8033C8CC                  func_8033C8CC                  */
-.global func_8033C8CC
-func_8033C8CC:
+lbl_8033C8CC:
 /* 8033C8CC 0033980C  7F 23 CB 78 */	mr r3, r25
 /* 8033C8D0 00339810  4B FF F6 51 */	bl OSLoadContext
-
-/* 8033C8D4 004C .text      func_8033C8D4                  func_8033C8D4                  */
-.global func_8033C8D4
-func_8033C8D4:
+lbl_8033C8D4:
 /* 8033C8D4 00339814  57 17 06 3E */	clrlwi r23, r24, 0x18
 /* 8033C8D8 00339818  57 00 15 BA */	rlwinm r0, r24, 2, 0x16, 0x1d
 /* 8033C8DC 0033981C  7E DE 02 14 */	add r22, r30, r0
 /* 8033C8E0 00339820  80 16 00 00 */	lwz r0, 0(r22)
 /* 8033C8E4 00339824  28 00 00 00 */	cmplwi r0, 0
-/* 8033C8E8 00339828  41 82 00 38 */	beq func_8033C920
+/* 8033C8E8 00339828  41 82 00 38 */	beq lbl_8033C920
 /* 8033C8EC 0033982C  48 00 43 D9 */	bl OSDisableScheduler
 /* 8033C8F0 00339830  81 96 00 00 */	lwz r12, 0(r22)
 /* 8033C8F4 00339834  38 77 00 00 */	addi r3, r23, 0
@@ -299,27 +259,18 @@ func_8033C8D4:
 /* 8033C914 00339854  48 00 49 0D */	bl __OSReschedule
 /* 8033C918 00339858  7F 23 CB 78 */	mr r3, r25
 /* 8033C91C 0033985C  4B FF F6 05 */	bl OSLoadContext
-
-/* 8033C920 0014 .text      func_8033C920                  func_8033C920                  */
-.global func_8033C920
-func_8033C920:
+lbl_8033C920:
 /* 8033C920 00339860  57 00 06 3E */	clrlwi r0, r24, 0x18
 /* 8033C924 00339864  28 00 00 08 */	cmplwi r0, 8
-/* 8033C928 00339868  40 82 00 0C */	bne func_8033C934
+/* 8033C928 00339868  40 82 00 0C */	bne lbl_8033C934
 /* 8033C92C 0033986C  7F 23 CB 78 */	mr r3, r25
 /* 8033C930 00339870  4B FF F5 F1 */	bl OSLoadContext
-
-/* 8033C934 0010 .text      func_8033C934                  func_8033C934                  */
-.global func_8033C934
-func_8033C934:
+lbl_8033C934:
 /* 8033C934 00339874  38 7F 00 7C */	addi r3, r31, 0x7c
 /* 8033C938 00339878  4C C6 31 82 */	crclr 6
 /* 8033C93C 0033987C  57 04 06 3E */	clrlwi r4, r24, 0x18
 /* 8033C940 00339880  4B CC A1 7D */	bl OSReport
-
-/* 8033C944 0108 .text      func_8033C944                  func_8033C944                  */
-.global func_8033C944
-func_8033C944:
+lbl_8033C944:
 /* 8033C944 00339884  38 6D 84 24 */	addi r3, r13, OSError__LIT_76-_SDA_BASE_
 /* 8033C948 00339888  4C C6 31 82 */	crclr 6
 /* 8033C94C 0033988C  4B CC A1 71 */	bl OSReport
@@ -337,7 +288,7 @@ func_8033C944:
 /* 8033C97C 003398BC  4B CC A1 41 */	bl OSReport
 /* 8033C980 003398C0  57 00 06 3E */	clrlwi r0, r24, 0x18
 /* 8033C984 003398C4  28 00 00 0F */	cmplwi r0, 0xf
-/* 8033C988 003398C8  41 81 00 C4 */	bgt func_8033CA4C
+/* 8033C988 003398C8  41 81 00 C4 */	bgt lbl_8033CA4C
 /* 8033C98C 003398CC  3C 60 80 3D */	lis r3, OSError__LIT_87@ha
 /* 8033C990 003398D0  38 63 FB F4 */	addi r3, r3, OSError__LIT_87@l
 /* 8033C994 003398D4  54 00 10 3A */	slwi r0, r0, 2
@@ -349,24 +300,24 @@ func_8033C944:
 /* 8033C9AC 003398EC  38 7F 00 D8 */	addi r3, r31, 0xd8
 /* 8033C9B0 003398F0  4C C6 31 82 */	crclr 6
 /* 8033C9B4 003398F4  4B CC A1 09 */	bl OSReport
-/* 8033C9B8 003398F8  48 00 00 94 */	b func_8033CA4C
+/* 8033C9B8 003398F8  48 00 00 94 */	b lbl_8033CA4C
 /* 8033C9BC 003398FC  80 99 01 98 */	lwz r4, 0x198(r25)
 /* 8033C9C0 00339900  38 7F 01 38 */	addi r3, r31, 0x138
 /* 8033C9C4 00339904  4C C6 31 82 */	crclr 6
 /* 8033C9C8 00339908  4B CC A0 F5 */	bl OSReport
-/* 8033C9CC 0033990C  48 00 00 80 */	b func_8033CA4C
+/* 8033C9CC 0033990C  48 00 00 80 */	b lbl_8033CA4C
 /* 8033C9D0 00339910  80 99 01 98 */	lwz r4, 0x198(r25)
 /* 8033C9D4 00339914  38 BB 00 00 */	addi r5, r27, 0
 /* 8033C9D8 00339918  38 7F 01 84 */	addi r3, r31, 0x184
 /* 8033C9DC 0033991C  4C C6 31 82 */	crclr 6
 /* 8033C9E0 00339920  4B CC A0 DD */	bl OSReport
-/* 8033C9E4 00339924  48 00 00 68 */	b func_8033CA4C
+/* 8033C9E4 00339924  48 00 00 68 */	b lbl_8033CA4C
 /* 8033C9E8 00339928  80 99 01 98 */	lwz r4, 0x198(r25)
 /* 8033C9EC 0033992C  38 BB 00 00 */	addi r5, r27, 0
 /* 8033C9F0 00339930  38 7F 01 E8 */	addi r3, r31, 0x1e8
 /* 8033C9F4 00339934  4C C6 31 82 */	crclr 6
 /* 8033C9F8 00339938  4B CC A0 C5 */	bl OSReport
-/* 8033C9FC 0033993C  48 00 00 50 */	b func_8033CA4C
+/* 8033C9FC 0033993C  48 00 00 50 */	b lbl_8033CA4C
 /* 8033CA00 00339940  38 6D 84 24 */	addi r3, r13, OSError__LIT_76-_SDA_BASE_
 /* 8033CA04 00339944  4C C6 31 82 */	crclr 6
 /* 8033CA08 00339948  4B CC A0 B5 */	bl OSReport
@@ -386,16 +337,13 @@ func_8033C944:
 /* 8033CA40 00339980  4C C6 31 82 */	crclr 6
 /* 8033CA44 00339984  38 7F 02 88 */	addi r3, r31, 0x288
 /* 8033CA48 00339988  4B CC A0 75 */	bl OSReport
-
-/* 8033CA4C 0034 .text      func_8033CA4C                  func_8033CA4C                  */
-.global func_8033CA4C
-func_8033CA4C:
+lbl_8033CA4C:
 /* 8033CA4C 0033998C  A8 8D 90 F8 */	lha r4, __OSLastInterrupt-_SDA_BASE_(r13)
 /* 8033CA50 00339990  38 7F 02 A4 */	addi r3, r31, 0x2a4
 /* 8033CA54 00339994  4C C6 31 82 */	crclr 6
 /* 8033CA58 00339998  80 AD 90 F4 */	lwz r5, __OSLastInterruptSrr0-_SDA_BASE_(r13)
 /* 8033CA5C 0033999C  80 ED 91 00 */	lwz r7, __OSLastInterruptTime-_SDA_BASE_(r13)
-/* 8033CA60 003399A0  81 0D 91 04 */	lwz r8, sym_80451684-_SDA_BASE_(r13)
+/* 8033CA60 003399A0  81 0D 91 04 */	lwz r8, data_80451684-_SDA_BASE_(r13)
 /* 8033CA64 003399A4  4B CC A0 59 */	bl OSReport
 /* 8033CA68 003399A8  4B FF D2 99 */	bl PPCHalt
 /* 8033CA6C 003399AC  BA C1 00 18 */	lmw r22, 0x18(r1)
@@ -409,60 +357,60 @@ func_8033CA4C:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803CF918 0000 .data      sym_803CF918                   ...data.0                      */
-.global sym_803CF918
-sym_803CF918:
+/* 803CF918 0000 .data      ...data.0                      data_803CF918                  */
+.global data_803CF918
+data_803CF918:
 
-/* 803CF918 0016 .data      LIT_13                         @13                            */
+/* 803CF918 0016 .data      @13                            LIT_13                         */
 .global LIT_13
 LIT_13:
 .byte 0x20, 0x69, 0x6e, 0x20, 0x22, 0x25, 0x73, 0x22, 0x20, 0x6f, 0x6e, 0x20, 0x6c, 0x69, 0x6e, 0x65 /* baserom.dol+0x3cc918 */
 .byte 0x20, 0x25, 0x64, 0x2e, 0x0a, 0x00 /* baserom.dol+0x3cc928 */
-.byte 0x00, 0x00 /* baserom.dol+0x3cc92e */
+.byte 0x00, 0x00 /* padding */
 
-/* 803CF930 0026 .data      LIT_14                         @14                            */
+/* 803CF930 0026 .data      @14                            LIT_14                         */
 .global LIT_14
 LIT_14:
 .byte 0x0a, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3a, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x42 /* baserom.dol+0x3cc930 */
 .byte 0x61, 0x63, 0x6b, 0x20, 0x43, 0x68, 0x61, 0x69, 0x6e, 0x20, 0x20, 0x20, 0x20, 0x4c, 0x52, 0x20 /* baserom.dol+0x3cc940 */
 .byte 0x53, 0x61, 0x76, 0x65, 0x0a, 0x00 /* baserom.dol+0x3cc950 */
-.byte 0x00, 0x00 /* baserom.dol+0x3cc956 */
+.byte 0x00, 0x00 /* padding */
 
-/* 803CF958 001C .data      LIT_15                         @15                            */
+/* 803CF958 001C .data      @15                            LIT_15                         */
 .global LIT_15
 LIT_15:
 .byte 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3a, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78 /* baserom.dol+0x3cc958 */
 .byte 0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0a, 0x00 /* baserom.dol+0x3cc968 */
 
-/* 803CF974 001D .data      OSError__LIT_74                @74                            */
+/* 803CF974 001D .data      @74                            OSError__LIT_74                */
 .global OSError__LIT_74
 OSError__LIT_74:
 .byte 0x4e, 0x6f, 0x6e, 0x2d, 0x72, 0x65, 0x63, 0x6f, 0x76, 0x65, 0x72, 0x61, 0x62, 0x6c, 0x65, 0x20 /* baserom.dol+0x3cc974 */
 .byte 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x25, 0x64, 0x00 /* baserom.dol+0x3cc984 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc991 */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803CF994 0017 .data      LIT_75                         @75                            */
+/* 803CF994 0017 .data      @75                            LIT_75                         */
 .global LIT_75
 LIT_75:
 .byte 0x55, 0x6e, 0x68, 0x61, 0x6e, 0x64, 0x6c, 0x65, 0x64, 0x20, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74 /* baserom.dol+0x3cc994 */
 .byte 0x69, 0x6f, 0x6e, 0x20, 0x25, 0x64, 0x00 /* baserom.dol+0x3cc9a4 */
-.byte 0x00 /* baserom.dol+0x3cc9ab */
+.byte 0x00 /* padding */
 
-/* 803CF9AC 0031 .data      OSError__LIT_77                @77                            */
+/* 803CF9AC 0031 .data      @77                            OSError__LIT_77                */
 .global OSError__LIT_77
 OSError__LIT_77:
 .byte 0x0a, 0x44, 0x53, 0x49, 0x53, 0x52, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20 /* baserom.dol+0x3cc9ac */
 .byte 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20 /* baserom.dol+0x3cc9bc */
 .byte 0x20, 0x20, 0x44, 0x41, 0x52, 0x20, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0a /* baserom.dol+0x3cc9cc */
 .byte 0x00 /* baserom.dol+0x3cc9dc */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3cc9dd */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803CF9E0 0010 .data      LIT_78                         @78                            */
+/* 803CF9E0 0010 .data      @78                            LIT_78                         */
 .global LIT_78
 LIT_78:
 .byte 0x54, 0x42, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x30, 0x31, 0x36, 0x6c, 0x6c, 0x78, 0x0a, 0x00 /* baserom.dol+0x3cc9e0 */
 
-/* 803CF9F0 0060 .data      LIT_79                         @79                            */
+/* 803CF9F0 0060 .data      @79                            LIT_79                         */
 .global LIT_79
 LIT_79:
 .byte 0x0a, 0x49, 0x6e, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x61, 0x74, 0x20 /* baserom.dol+0x3cc9f0 */
@@ -472,7 +420,7 @@ LIT_79:
 .byte 0x64, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x28 /* baserom.dol+0x3cca30 */
 .byte 0x72, 0x65, 0x61, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x44, 0x41, 0x52, 0x29, 0x0a, 0x00 /* baserom.dol+0x3cca40 */
 
-/* 803CFA50 004C .data      OSError__LIT_80                @80                            */
+/* 803CFA50 004C .data      @80                            OSError__LIT_80                */
 .global OSError__LIT_80
 OSError__LIT_80:
 .byte 0x0a, 0x41, 0x74, 0x74, 0x65, 0x6d, 0x70, 0x74, 0x65, 0x64, 0x20, 0x74, 0x6f, 0x20, 0x66, 0x65 /* baserom.dol+0x3cca50 */
@@ -481,7 +429,7 @@ OSError__LIT_80:
 .byte 0x72, 0x65, 0x73, 0x73, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x28, 0x72, 0x65, 0x61, 0x64, 0x20 /* baserom.dol+0x3cca80 */
 .byte 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x53, 0x52, 0x52, 0x30, 0x29, 0x0a, 0x00 /* baserom.dol+0x3cca90 */
 
-/* 803CFA9C 0062 .data      OSError__LIT_81                @81                            */
+/* 803CFA9C 0062 .data      @81                            OSError__LIT_81                */
 .global OSError__LIT_81
 OSError__LIT_81:
 .byte 0x0a, 0x49, 0x6e, 0x73, 0x74, 0x72, 0x75, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x61, 0x74, 0x20 /* baserom.dol+0x3cca9c */
@@ -491,9 +439,9 @@ OSError__LIT_81:
 .byte 0x6e, 0x65, 0x64, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x30, 0x78, 0x25, 0x78 /* baserom.dol+0x3ccadc */
 .byte 0x20, 0x28, 0x72, 0x65, 0x61, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x44, 0x41, 0x52, 0x29 /* baserom.dol+0x3ccaec */
 .byte 0x0a, 0x00 /* baserom.dol+0x3ccafc */
-.byte 0x00, 0x00 /* baserom.dol+0x3ccafe */
+.byte 0x00, 0x00 /* padding */
 
-/* 803CFB00 0060 .data      OSError__LIT_82                @82                            */
+/* 803CFB00 0060 .data      @82                            OSError__LIT_82                */
 .global OSError__LIT_82
 OSError__LIT_82:
 .byte 0x0a, 0x50, 0x72, 0x6f, 0x67, 0x72, 0x61, 0x6d, 0x20, 0x65, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69 /* baserom.dol+0x3ccb00 */
@@ -503,53 +451,53 @@ OSError__LIT_82:
 .byte 0x72, 0x20, 0x61, 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x28, 0x72 /* baserom.dol+0x3ccb40 */
 .byte 0x65, 0x61, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x53, 0x52, 0x52, 0x30, 0x29, 0x0a, 0x00 /* baserom.dol+0x3ccb50 */
 
-/* 803CFB60 001F .data      OSError__LIT_83                @83                            */
+/* 803CFB60 001F .data      @83                            OSError__LIT_83                */
 .global OSError__LIT_83
 OSError__LIT_83:
 .byte 0x41, 0x49, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x3d /* baserom.dol+0x3ccb60 */
 .byte 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x25, 0x30, 0x34, 0x78, 0x0a, 0x00 /* baserom.dol+0x3ccb70 */
-.byte 0x00 /* baserom.dol+0x3ccb7f */
+.byte 0x00 /* padding */
 
-/* 803CFB80 001F .data      OSError__LIT_84                @84                            */
+/* 803CFB80 001F .data      @84                            OSError__LIT_84                */
 .global OSError__LIT_84
 OSError__LIT_84:
 .byte 0x41, 0x52, 0x41, 0x4d, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73 /* baserom.dol+0x3ccb80 */
 .byte 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x30, 0x34, 0x78, 0x25, 0x30, 0x34, 0x78, 0x0a, 0x00 /* baserom.dol+0x3ccb90 */
-.byte 0x00 /* baserom.dol+0x3ccb9f */
+.byte 0x00 /* padding */
 
-/* 803CFBA0 001B .data      OSError__LIT_85                @85                            */
+/* 803CFBA0 001B .data      @85                            OSError__LIT_85                */
 .global OSError__LIT_85
 OSError__LIT_85:
 .byte 0x44, 0x49, 0x20, 0x44, 0x4d, 0x41, 0x20, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x20, 0x3d /* baserom.dol+0x3ccba0 */
 .byte 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0a, 0x00 /* baserom.dol+0x3ccbb0 */
-.byte 0x00 /* baserom.dol+0x3ccbbb */
+.byte 0x00 /* padding */
 
-/* 803CFBBC 0035 .data      OSError__LIT_86                @86                            */
+/* 803CFBBC 0035 .data      @86                            OSError__LIT_86                */
 .global OSError__LIT_86
 OSError__LIT_86:
 .byte 0x0a, 0x4c, 0x61, 0x73, 0x74, 0x20, 0x69, 0x6e, 0x74, 0x65, 0x72, 0x72, 0x75, 0x70, 0x74, 0x20 /* baserom.dol+0x3ccbbc */
 .byte 0x28, 0x25, 0x64, 0x29, 0x3a, 0x20, 0x53, 0x52, 0x52, 0x30, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25 /* baserom.dol+0x3ccbcc */
 .byte 0x30, 0x38, 0x78, 0x20, 0x20, 0x54, 0x42, 0x20, 0x3d, 0x20, 0x30, 0x78, 0x25, 0x30, 0x31, 0x36 /* baserom.dol+0x3ccbdc */
 .byte 0x6c, 0x6c, 0x78, 0x0a, 0x00 /* baserom.dol+0x3ccbec */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3ccbf1 */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803CFBF4 0040 .data      OSError__LIT_87                @87                            */
+/* 803CFBF4 0040 .data      @87                            OSError__LIT_87                */
 .global OSError__LIT_87
 OSError__LIT_87:
 .byte 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xc9, 0xa4, 0x80, 0x33, 0xc9, 0xbc /* baserom.dol+0x3ccbf4 */
 .byte 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xc9, 0xd0, 0x80, 0x33, 0xc9, 0xe8, 0x80, 0x33, 0xca, 0x4c /* baserom.dol+0x3ccc04 */
 .byte 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c /* baserom.dol+0x3ccc14 */
 .byte 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x4c, 0x80, 0x33, 0xca, 0x00 /* baserom.dol+0x3ccc24 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3ccc34 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 8044BAD0 0000 .bss       sym_8044BAD0                   ...bss.0                       */
-.global sym_8044BAD0
-sym_8044BAD0:
+/* 8044BAD0 0000 .bss       ...bss.0                       data_8044BAD0                  */
+.global data_8044BAD0
+data_8044BAD0:
 
 /* 8044BAD0 0044 .bss       __OSErrorTable                 __OSErrorTable                 */
 .global __OSErrorTable
@@ -567,9 +515,9 @@ __OSErrorTable:
 __OSFpscrEnableBits:
 .byte 0x00, 0x00, 0x00, 0xf8 /* baserom.dol+0x3d0700 */
 
-/* 804509A4 0002 .sdata     OSError__LIT_76                @76                            */
+/* 804509A4 0002 .sdata     @76                            OSError__LIT_76                */
 .global OSError__LIT_76
 OSError__LIT_76:
 .byte 0x0a, 0x00 /* baserom.dol+0x3d0704 */
-.byte 0x00, 0x00 /* baserom.dol+0x3d0706 */
+.byte 0x00, 0x00 /* padding */
 

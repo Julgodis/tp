@@ -7,6 +7,7 @@
 /* 80372CA4 0024 .text      MWExitCriticalSection          MWExitCriticalSection          */
 .global MWExitCriticalSection
 MWExitCriticalSection:
+MWExitCriticalSection:
 /* 80372CA4 0036FBE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80372CA8 0036FBE8  7C 08 02 A6 */	mflr r0
 /* 80372CAC 0036FBEC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,6 +20,7 @@ MWExitCriticalSection:
 
 /* 80372CC8 0030 .text      MWEnterCriticalSection         MWEnterCriticalSection         */
 .global MWEnterCriticalSection
+MWEnterCriticalSection:
 MWEnterCriticalSection:
 /* 80372CC8 0036FC08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80372CCC 0036FC0C  7C 08 02 A6 */	mflr r0
@@ -35,6 +37,7 @@ MWEnterCriticalSection:
 
 /* 80372CF8 0004 .text      MWInitializeCriticalSection    MWInitializeCriticalSection    */
 .global MWInitializeCriticalSection
+MWInitializeCriticalSection:
 MWInitializeCriticalSection:
 /* 80372CF8 0036FC38  4E 80 00 20 */	blr 
 

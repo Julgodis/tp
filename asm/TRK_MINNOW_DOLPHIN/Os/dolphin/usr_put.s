@@ -7,10 +7,12 @@
 /* 8036DB10 0004 .text      usr_put_initialize             usr_put_initialize             */
 .global usr_put_initialize
 usr_put_initialize:
+usr_put_initialize:
 /* 8036DB10 0036AA50  4E 80 00 20 */	blr 
 
-/* 8036DB14 0028 .text      usr_puts_serial                usr_puts_serial                */
+/* 8036DB14 0088 .text      usr_puts_serial                usr_puts_serial                */
 .global usr_puts_serial
+usr_puts_serial:
 usr_puts_serial:
 /* 8036DB14 0036AA54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036DB18 0036AA58  7C 08 02 A6 */	mflr r0
@@ -21,11 +23,8 @@ usr_puts_serial:
 /* 8036DB2C 0036AA6C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8036DB30 0036AA70  7C 7D 1B 78 */	mr r29, r3
 /* 8036DB34 0036AA74  38 60 00 00 */	li r3, 0
-/* 8036DB38 0036AA78  48 00 00 30 */	b func_8036DB68
-
-/* 8036DB3C 002C .text      func_8036DB3C                  func_8036DB3C                  */
-.global func_8036DB3C
-func_8036DB3C:
+/* 8036DB38 0036AA78  48 00 00 30 */	b lbl_8036DB68
+lbl_8036DB3C:
 /* 8036DB3C 0036AA7C  48 00 11 91 */	bl GetTRKConnected
 /* 8036DB40 0036AA80  9B C1 00 08 */	stb r30, 8(r1)
 /* 8036DB44 0036AA84  7C 7E 1B 78 */	mr r30, r3
@@ -37,20 +36,14 @@ func_8036DB3C:
 /* 8036DB5C 0036AA9C  7F C3 F3 78 */	mr r3, r30
 /* 8036DB60 0036AAA0  48 00 11 61 */	bl SetTRKConnected
 /* 8036DB64 0036AAA4  38 60 00 00 */	li r3, 0
-
-/* 8036DB68 0018 .text      func_8036DB68                  func_8036DB68                  */
-.global func_8036DB68
-func_8036DB68:
+lbl_8036DB68:
 /* 8036DB68 0036AAA8  2C 03 00 00 */	cmpwi r3, 0
-/* 8036DB6C 0036AAAC  40 82 00 14 */	bne func_8036DB80
+/* 8036DB6C 0036AAAC  40 82 00 14 */	bne lbl_8036DB80
 /* 8036DB70 0036AAB0  88 1D 00 00 */	lbz r0, 0(r29)
 /* 8036DB74 0036AAB4  3B BD 00 01 */	addi r29, r29, 1
 /* 8036DB78 0036AAB8  7C 1E 07 75 */	extsb. r30, r0
-/* 8036DB7C 0036AABC  40 82 FF C0 */	bne func_8036DB3C
-
-/* 8036DB80 001C .text      func_8036DB80                  func_8036DB80                  */
-.global func_8036DB80
-func_8036DB80:
+/* 8036DB7C 0036AABC  40 82 FF C0 */	bne lbl_8036DB3C
+lbl_8036DB80:
 /* 8036DB80 0036AAC0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8036DB84 0036AAC4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8036DB88 0036AAC8  83 C1 00 18 */	lwz r30, 0x18(r1)

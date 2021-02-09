@@ -7,6 +7,7 @@
 /* 802E8B08 00AC .text      __ct__14J2DGrafContextFffff    __ct__14J2DGrafContextFffff    */
 .global __ct__14J2DGrafContextFffff
 __ct__14J2DGrafContextFffff:
+__ct__14J2DGrafContextFffff:
 /* 802E8B08 002E5A48  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E8B0C 002E5A4C  7C 08 02 A6 */	mflr r0
 /* 802E8B10 002E5A50  90 01 00 34 */	stw r0, 0x34(r1)
@@ -51,8 +52,9 @@ __ct__14J2DGrafContextFffff:
 /* 802E8BAC 002E5AEC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E8BB0 002E5AF0  4E 80 00 20 */	blr 
 
-/* 802E8BB4 0058 .text      setPort__14J2DGrafContextFv    setPort__14J2DGrafContextFv    */
+/* 802E8BB4 0090 .text      setPort__14J2DGrafContextFv    setPort__14J2DGrafContextFv    */
 .global setPort__14J2DGrafContextFv
+setPort__14J2DGrafContextFv:
 setPort__14J2DGrafContextFv:
 /* 802E8BB4 002E5AF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8BB8 002E5AF8  7C 08 02 A6 */	mflr r0
@@ -74,20 +76,14 @@ setPort__14J2DGrafContextFv:
 /* 802E8BF8 002E5B38  C0 9F 00 10 */	lfs f4, 0x10(r31)
 /* 802E8BFC 002E5B3C  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8C00 002E5B40  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 802E8C04 002E5B44  40 80 00 08 */	bge func_802E8C0C
+/* 802E8C04 002E5B44  40 80 00 08 */	bge lbl_802E8C0C
 /* 802E8C08 002E5B48  FC 20 00 90 */	fmr f1, f0
-
-/* 802E8C0C 0010 .text      func_802E8C0C                  func_802E8C0C                  */
-.global func_802E8C0C
-func_802E8C0C:
+lbl_802E8C0C:
 /* 802E8C0C 002E5B4C  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8C10 002E5B50  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 802E8C14 002E5B54  40 80 00 08 */	bge func_802E8C1C
+/* 802E8C14 002E5B54  40 80 00 08 */	bge lbl_802E8C1C
 /* 802E8C18 002E5B58  FC 40 00 90 */	fmr f2, f0
-
-/* 802E8C1C 0028 .text      func_802E8C1C                  func_802E8C1C                  */
-.global func_802E8C1C
-func_802E8C1C:
+lbl_802E8C1C:
 /* 802E8C1C 002E5B5C  EC 63 08 28 */	fsubs f3, f3, f1
 /* 802E8C20 002E5B60  EC 84 10 28 */	fsubs f4, f4, f2
 /* 802E8C24 002E5B64  C0 A2 C7 48 */	lfs f5, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
@@ -99,8 +95,9 @@ func_802E8C1C:
 /* 802E8C3C 002E5B7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8C40 002E5B80  4E 80 00 20 */	blr 
 
-/* 802E8C44 0024 .text      setup2D__14J2DGrafContextFv    setup2D__14J2DGrafContextFv    */
+/* 802E8C44 01DC .text      setup2D__14J2DGrafContextFv    setup2D__14J2DGrafContextFv    */
 .global setup2D__14J2DGrafContextFv
+setup2D__14J2DGrafContextFv:
 setup2D__14J2DGrafContextFv:
 /* 802E8C44 002E5B84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E8C48 002E5B88  7C 08 02 A6 */	mflr r0
@@ -111,15 +108,12 @@ setup2D__14J2DGrafContextFv:
 /* 802E8C5C 002E5B9C  38 60 00 00 */	li r3, 0
 /* 802E8C60 002E5BA0  48 07 64 75 */	bl GXSetNumIndStages
 /* 802E8C64 002E5BA4  3B E0 00 00 */	li r31, 0
-
-/* 802E8C68 01B8 .text      func_802E8C68                  func_802E8C68                  */
-.global func_802E8C68
-func_802E8C68:
+lbl_802E8C68:
 /* 802E8C68 002E5BA8  7F E3 FB 78 */	mr r3, r31
 /* 802E8C6C 002E5BAC  48 07 64 8D */	bl GXSetTevDirect
 /* 802E8C70 002E5BB0  3B FF 00 01 */	addi r31, r31, 1
 /* 802E8C74 002E5BB4  2C 1F 00 10 */	cmpwi r31, 0x10
-/* 802E8C78 002E5BB8  41 80 FF F0 */	blt func_802E8C68
+/* 802E8C78 002E5BB8  41 80 FF F0 */	blt lbl_802E8C68
 /* 802E8C7C 002E5BBC  38 60 00 00 */	li r3, 0
 /* 802E8C80 002E5BC0  48 07 70 51 */	bl GXSetZCompLoc
 /* 802E8C84 002E5BC4  38 60 00 04 */	li r3, 4
@@ -226,8 +220,9 @@ func_802E8C68:
 /* 802E8E18 002E5D58  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E8E1C 002E5D5C  4E 80 00 20 */	blr 
 
-/* 802E8E20 0058 .text      setScissor__14J2DGrafContextFv setScissor__14J2DGrafContextFv */
+/* 802E8E20 02A0 .text      setScissor__14J2DGrafContextFv setScissor__14J2DGrafContextFv */
 .global setScissor__14J2DGrafContextFv
+setScissor__14J2DGrafContextFv:
 setScissor__14J2DGrafContextFv:
 /* 802E8E20 002E5D60  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802E8E24 002E5D64  7C 08 02 A6 */	mflr r0
@@ -249,56 +244,41 @@ setScissor__14J2DGrafContextFv:
 /* 802E8E64 002E5DA4  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8E68 002E5DA8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802E8E6C 002E5DAC  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8E70 002E5DB0  40 82 00 08 */	bne func_802E8E78
+/* 802E8E70 002E5DB0  40 82 00 08 */	bne lbl_802E8E78
 /* 802E8E74 002E5DB4  D0 03 00 14 */	stfs f0, 0x14(r3)
-
-/* 802E8E78 0018 .text      func_802E8E78                  func_802E8E78                  */
-.global func_802E8E78
-func_802E8E78:
+lbl_802E8E78:
 /* 802E8E78 002E5DB8  C0 43 00 18 */	lfs f2, 0x18(r3)
 /* 802E8E7C 002E5DBC  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8E80 002E5DC0  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802E8E84 002E5DC4  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8E88 002E5DC8  40 82 00 08 */	bne func_802E8E90
+/* 802E8E88 002E5DC8  40 82 00 08 */	bne lbl_802E8E90
 /* 802E8E8C 002E5DCC  D0 03 00 18 */	stfs f0, 0x18(r3)
-
-/* 802E8E90 0018 .text      func_802E8E90                  func_802E8E90                  */
-.global func_802E8E90
-func_802E8E90:
+lbl_802E8E90:
 /* 802E8E90 002E5DD0  C0 43 00 1C */	lfs f2, 0x1c(r3)
 /* 802E8E94 002E5DD4  C0 02 C7 50 */	lfs f0, J2DGrafContext__LIT_730-_SDA2_BASE_(r2)
 /* 802E8E98 002E5DD8  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802E8E9C 002E5DDC  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8EA0 002E5DE0  40 82 00 08 */	bne func_802E8EA8
+/* 802E8EA0 002E5DE0  40 82 00 08 */	bne lbl_802E8EA8
 /* 802E8EA4 002E5DE4  D0 03 00 1C */	stfs f0, 0x1c(r3)
-
-/* 802E8EA8 0018 .text      func_802E8EA8                  func_802E8EA8                  */
-.global func_802E8EA8
-func_802E8EA8:
+lbl_802E8EA8:
 /* 802E8EA8 002E5DE8  C0 43 00 20 */	lfs f2, 0x20(r3)
 /* 802E8EAC 002E5DEC  C0 02 C7 50 */	lfs f0, J2DGrafContext__LIT_730-_SDA2_BASE_(r2)
 /* 802E8EB0 002E5DF0  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802E8EB4 002E5DF4  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8EB8 002E5DF8  40 82 00 08 */	bne func_802E8EC0
+/* 802E8EB8 002E5DF8  40 82 00 08 */	bne lbl_802E8EC0
 /* 802E8EBC 002E5DFC  D0 03 00 20 */	stfs f0, 0x20(r3)
-
-/* 802E8EC0 0020 .text      func_802E8EC0                  func_802E8EC0                  */
-.global func_802E8EC0
-func_802E8EC0:
+lbl_802E8EC0:
 /* 802E8EC0 002E5E00  38 00 00 00 */	li r0, 0
 /* 802E8EC4 002E5E04  FC 1F 08 40 */	fcmpo cr0, f31, f1
 /* 802E8EC8 002E5E08  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8ECC 002E5E0C  40 82 00 14 */	bne func_802E8EE0
+/* 802E8ECC 002E5E0C  40 82 00 14 */	bne lbl_802E8EE0
 /* 802E8ED0 002E5E10  FC 1E E8 40 */	fcmpo cr0, f30, f29
 /* 802E8ED4 002E5E14  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8ED8 002E5E18  40 82 00 08 */	bne func_802E8EE0
+/* 802E8ED8 002E5E18  40 82 00 08 */	bne lbl_802E8EE0
 /* 802E8EDC 002E5E1C  38 00 00 01 */	li r0, 1
-
-/* 802E8EE0 0038 .text      func_802E8EE0                  func_802E8EE0                  */
-.global func_802E8EE0
-func_802E8EE0:
+lbl_802E8EE0:
 /* 802E8EE0 002E5E20  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 802E8EE4 002E5E24  40 82 00 84 */	bne func_802E8F68
+/* 802E8EE4 002E5E24  40 82 00 84 */	bne lbl_802E8F68
 /* 802E8EE8 002E5E28  FC 00 08 90 */	fmr f0, f1
 /* 802E8EEC 002E5E2C  FC 40 E8 90 */	fmr f2, f29
 /* 802E8EF0 002E5E30  FC 60 F8 90 */	fmr f3, f31
@@ -309,102 +289,69 @@ func_802E8EE0:
 /* 802E8F04 002E5E44  4C 41 13 82 */	cror 2, 1, 2
 /* 802E8F08 002E5E48  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 802E8F0C 002E5E4C  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8F10 002E5E50  40 82 00 08 */	bne func_802E8F18
+/* 802E8F10 002E5E50  40 82 00 08 */	bne lbl_802E8F18
 /* 802E8F14 002E5E54  FC 20 F8 90 */	fmr f1, f31
-
-/* 802E8F18 0010 .text      func_802E8F18                  func_802E8F18                  */
-.global func_802E8F18
-func_802E8F18:
+lbl_802E8F18:
 /* 802E8F18 002E5E58  FC 1D F0 40 */	fcmpo cr0, f29, f30
 /* 802E8F1C 002E5E5C  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8F20 002E5E60  40 82 00 08 */	bne func_802E8F28
+/* 802E8F20 002E5E60  40 82 00 08 */	bne lbl_802E8F28
 /* 802E8F24 002E5E64  FF A0 F0 90 */	fmr f29, f30
-
-/* 802E8F28 0010 .text      func_802E8F28                  func_802E8F28                  */
-.global func_802E8F28
-func_802E8F28:
+lbl_802E8F28:
 /* 802E8F28 002E5E68  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 802E8F2C 002E5E6C  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F30 002E5E70  40 82 00 08 */	bne func_802E8F38
+/* 802E8F30 002E5E70  40 82 00 08 */	bne lbl_802E8F38
 /* 802E8F34 002E5E74  FF E0 00 90 */	fmr f31, f0
-
-/* 802E8F38 0010 .text      func_802E8F38                  func_802E8F38                  */
-.global func_802E8F38
-func_802E8F38:
+lbl_802E8F38:
 /* 802E8F38 002E5E78  FC 1E 10 40 */	fcmpo cr0, f30, f2
 /* 802E8F3C 002E5E7C  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F40 002E5E80  40 82 00 08 */	bne func_802E8F48
+/* 802E8F40 002E5E80  40 82 00 08 */	bne lbl_802E8F48
 /* 802E8F44 002E5E84  FF C0 10 90 */	fmr f30, f2
-
-/* 802E8F48 0010 .text      func_802E8F48                  func_802E8F48                  */
-.global func_802E8F48
-func_802E8F48:
+lbl_802E8F48:
 /* 802E8F48 002E5E88  FC 1F 18 40 */	fcmpo cr0, f31, f3
 /* 802E8F4C 002E5E8C  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F50 002E5E90  40 82 00 08 */	bne func_802E8F58
+/* 802E8F50 002E5E90  40 82 00 08 */	bne lbl_802E8F58
 /* 802E8F54 002E5E94  FF E0 18 90 */	fmr f31, f3
-
-/* 802E8F58 0010 .text      func_802E8F58                  func_802E8F58                  */
-.global func_802E8F58
-func_802E8F58:
+lbl_802E8F58:
 /* 802E8F58 002E5E98  FC 1E 20 40 */	fcmpo cr0, f30, f4
 /* 802E8F5C 002E5E9C  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F60 002E5EA0  40 82 00 08 */	bne func_802E8F68
+/* 802E8F60 002E5EA0  40 82 00 08 */	bne lbl_802E8F68
 /* 802E8F64 002E5EA4  FF C0 20 90 */	fmr f30, f4
-
-/* 802E8F68 0014 .text      func_802E8F68                  func_802E8F68                  */
-.global func_802E8F68
-func_802E8F68:
+lbl_802E8F68:
 /* 802E8F68 002E5EA8  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8F6C 002E5EAC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 802E8F70 002E5EB0  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F74 002E5EB4  40 82 00 08 */	bne func_802E8F7C
+/* 802E8F74 002E5EB4  40 82 00 08 */	bne lbl_802E8F7C
 /* 802E8F78 002E5EB8  FC 20 00 90 */	fmr f1, f0
-
-/* 802E8F7C 0014 .text      func_802E8F7C                  func_802E8F7C                  */
-.global func_802E8F7C
-func_802E8F7C:
+lbl_802E8F7C:
 /* 802E8F7C 002E5EBC  C0 02 C7 48 */	lfs f0, J2DGrafContext__LIT_627-_SDA2_BASE_(r2)
 /* 802E8F80 002E5EC0  FC 1D 00 40 */	fcmpo cr0, f29, f0
 /* 802E8F84 002E5EC4  4C 40 13 82 */	cror 2, 0, 2
-/* 802E8F88 002E5EC8  40 82 00 08 */	bne func_802E8F90
+/* 802E8F88 002E5EC8  40 82 00 08 */	bne lbl_802E8F90
 /* 802E8F8C 002E5ECC  FF A0 00 90 */	fmr f29, f0
-
-/* 802E8F90 0014 .text      func_802E8F90                  func_802E8F90                  */
-.global func_802E8F90
-func_802E8F90:
+lbl_802E8F90:
 /* 802E8F90 002E5ED0  C0 02 C7 50 */	lfs f0, J2DGrafContext__LIT_730-_SDA2_BASE_(r2)
 /* 802E8F94 002E5ED4  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 802E8F98 002E5ED8  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8F9C 002E5EDC  40 82 00 08 */	bne func_802E8FA4
+/* 802E8F9C 002E5EDC  40 82 00 08 */	bne lbl_802E8FA4
 /* 802E8FA0 002E5EE0  FF E0 00 90 */	fmr f31, f0
-
-/* 802E8FA4 0014 .text      func_802E8FA4                  func_802E8FA4                  */
-.global func_802E8FA4
-func_802E8FA4:
+lbl_802E8FA4:
 /* 802E8FA4 002E5EE4  C0 02 C7 50 */	lfs f0, J2DGrafContext__LIT_730-_SDA2_BASE_(r2)
 /* 802E8FA8 002E5EE8  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 802E8FAC 002E5EEC  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8FB0 002E5EF0  40 82 00 08 */	bne func_802E8FB8
+/* 802E8FB0 002E5EF0  40 82 00 08 */	bne lbl_802E8FB8
 /* 802E8FB4 002E5EF4  FF C0 00 90 */	fmr f30, f0
-
-/* 802E8FB8 0020 .text      func_802E8FB8                  func_802E8FB8                  */
-.global func_802E8FB8
-func_802E8FB8:
+lbl_802E8FB8:
 /* 802E8FB8 002E5EF8  38 00 00 00 */	li r0, 0
 /* 802E8FBC 002E5EFC  FC 1F 08 40 */	fcmpo cr0, f31, f1
 /* 802E8FC0 002E5F00  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8FC4 002E5F04  40 82 00 14 */	bne func_802E8FD8
+/* 802E8FC4 002E5F04  40 82 00 14 */	bne lbl_802E8FD8
 /* 802E8FC8 002E5F08  FC 1E E8 40 */	fcmpo cr0, f30, f29
 /* 802E8FCC 002E5F0C  4C 41 13 82 */	cror 2, 1, 2
-/* 802E8FD0 002E5F10  40 82 00 08 */	bne func_802E8FD8
+/* 802E8FD0 002E5F10  40 82 00 08 */	bne lbl_802E8FD8
 /* 802E8FD4 002E5F14  38 00 00 01 */	li r0, 1
-
-/* 802E8FD8 009C .text      func_802E8FD8                  func_802E8FD8                  */
-.global func_802E8FD8
-func_802E8FD8:
+lbl_802E8FD8:
 /* 802E8FD8 002E5F18  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 802E8FDC 002E5F1C  41 82 00 98 */	beq func_802E9074
+/* 802E8FDC 002E5F1C  41 82 00 98 */	beq lbl_802E9074
 /* 802E8FE0 002E5F20  48 07 90 CD */	bl __cvt_fp2unsigned
 /* 802E8FE4 002E5F24  C8 22 C7 58 */	lfd f1, LIT_732-_SDA2_BASE_(r2)
 /* 802E8FE8 002E5F28  90 61 00 0C */	stw r3, 0xc(r1)
@@ -441,20 +388,14 @@ func_802E8FD8:
 /* 802E9064 002E5FA4  7F C5 F3 78 */	mr r5, r30
 /* 802E9068 002E5FA8  7F A6 EB 78 */	mr r6, r29
 /* 802E906C 002E5FAC  48 07 74 65 */	bl GXSetScissor
-/* 802E9070 002E5FB0  48 00 00 18 */	b func_802E9088
-
-/* 802E9074 0014 .text      func_802E9074                  func_802E9074                  */
-.global func_802E9074
-func_802E9074:
+/* 802E9070 002E5FB0  48 00 00 18 */	b lbl_802E9088
+lbl_802E9074:
 /* 802E9074 002E5FB4  38 60 00 00 */	li r3, 0
 /* 802E9078 002E5FB8  38 80 00 00 */	li r4, 0
 /* 802E907C 002E5FBC  38 A0 00 00 */	li r5, 0
 /* 802E9080 002E5FC0  38 C0 00 00 */	li r6, 0
 /* 802E9084 002E5FC4  48 07 74 4D */	bl GXSetScissor
-
-/* 802E9088 0038 .text      func_802E9088                  func_802E9088                  */
-.global func_802E9088
-func_802E9088:
+lbl_802E9088:
 /* 802E9088 002E5FC8  E3 E1 00 68 */	psq_l f31, 104(r1), 0, qr0
 /* 802E908C 002E5FCC  CB E1 00 60 */	lfd f31, 0x60(r1)
 /* 802E9090 002E5FD0  E3 C1 00 58 */	psq_l f30, 88(r1), 0, qr0
@@ -470,8 +411,11 @@ func_802E9088:
 /* 802E90B8 002E5FF8  38 21 00 70 */	addi r1, r1, 0x70
 /* 802E90BC 002E5FFC  4E 80 00 20 */	blr 
 
-/* 802E90C0 0024 .text      "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+/* 802E90C0 0024 .text      scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f> "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" */
+.global "scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+"scissor__14J2DGrafContextFRCQ29JGeometry8TBox2<f>":
 .global scissor__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1
+scissor__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 scissor__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E90C0 002E6000  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802E90C4 002E6004  80 04 00 04 */	lwz r0, 4(r4)
@@ -483,8 +427,11 @@ scissor__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E90DC 002E601C  90 03 00 20 */	stw r0, 0x20(r3)
 /* 802E90E0 002E6020  4E 80 00 20 */	blr 
 
-/* 802E90E4 0034 .text      "place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" place__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+/* 802E90E4 0034 .text      place__14J2DGrafContextFRCQ29JGeometry8TBox2<f> "place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" */
+.global "place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+"place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>":
 .global place__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1
+place__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 place__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E90E4 002E6024  80 E4 00 00 */	lwz r7, 0(r4)
 /* 802E90E8 002E6028  80 C4 00 04 */	lwz r6, 4(r4)
@@ -502,6 +449,7 @@ place__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 
 /* 802E9118 011C .text      setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor */
 .global setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor
+setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor:
 setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor:
 /* 802E9118 002E6058  88 04 00 00 */	lbz r0, 0(r4)
 /* 802E911C 002E605C  98 03 00 24 */	stb r0, 0x24(r3)
@@ -578,6 +526,7 @@ setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColo
 /* 802E9234 002C .text      setLineWidth__14J2DGrafContextFUc setLineWidth__14J2DGrafContextFUc */
 .global setLineWidth__14J2DGrafContextFUc
 setLineWidth__14J2DGrafContextFUc:
+setLineWidth__14J2DGrafContextFUc:
 /* 802E9234 002E6174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9238 002E6178  7C 08 02 A6 */	mflr r0
 /* 802E923C 002E617C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -590,8 +539,11 @@ setLineWidth__14J2DGrafContextFUc:
 /* 802E9258 002E6198  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E925C 002E619C  4E 80 00 20 */	blr 
 
-/* 802E9260 0108 .text      "fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+/* 802E9260 0108 .text      fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f> "fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" */
+.global "fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+"fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2<f>":
 .global fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1
+fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E9260 002E61A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9264 002E61A4  7C 08 02 A6 */	mflr r0
@@ -660,8 +612,11 @@ fillBox__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E9360 002E62A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9364 002E62A4  4E 80 00 20 */	blr 
 
-/* 802E9368 0120 .text      "drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f> */
+/* 802E9368 0120 .text      drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f> "drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>" */
+.global "drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+"drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2<f>":
 .global drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1
+drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E9368 002E62A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E936C 002E62AC  7C 08 02 A6 */	mflr r0
@@ -736,8 +691,11 @@ drawFrame__14J2DGrafContextFRCQ29JGeometry8TBox2_SUB_0f_SUB_1:
 /* 802E9480 002E63C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9484 002E63C4  4E 80 00 20 */	blr 
 
-/* 802E9488 00DC .text      "line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f>" line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> */
+/* 802E9488 00DC .text      line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f> "line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f>" */
+.global "line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f>"
+"line__14J2DGrafContextFQ29JGeometry8TVec2<f>Q29JGeometry8TVec2<f>":
 .global line__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1Q29JGeometry8TVec2_SUB_0f_SUB_1
+line__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1Q29JGeometry8TVec2_SUB_0f_SUB_1:
 line__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1Q29JGeometry8TVec2_SUB_0f_SUB_1:
 /* 802E9488 002E63C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E948C 002E63CC  7C 08 02 A6 */	mflr r0
@@ -795,8 +753,11 @@ line__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1Q29JGeometry8TVec2_SUB_0f_
 /* 802E955C 002E649C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9560 002E64A0  4E 80 00 20 */	blr 
 
-/* 802E9564 0070 .text      "lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>" lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f> */
+/* 802E9564 0070 .text      lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f> "lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>" */
+.global "lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>"
+"lineTo__14J2DGrafContextFQ29JGeometry8TVec2<f>":
 .global lineTo__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1
+lineTo__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1:
 lineTo__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1:
 /* 802E9564 002E64A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9568 002E64A8  7C 08 02 A6 */	mflr r0
@@ -827,25 +788,23 @@ lineTo__14J2DGrafContextFQ29JGeometry8TVec2_SUB_0f_SUB_1:
 /* 802E95CC 002E650C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E95D0 002E6510  4E 80 00 20 */	blr 
 
-/* 802E95D4 0030 .text      __dt__14J2DGrafContextFv       __dt__14J2DGrafContextFv       */
+/* 802E95D4 0048 .text      __dt__14J2DGrafContextFv       __dt__14J2DGrafContextFv       */
 .global __dt__14J2DGrafContextFv
+__dt__14J2DGrafContextFv:
 __dt__14J2DGrafContextFv:
 /* 802E95D4 002E6514  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E95D8 002E6518  7C 08 02 A6 */	mflr r0
 /* 802E95DC 002E651C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E95E0 002E6520  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E95E4 002E6524  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802E95E8 002E6528  41 82 00 1C */	beq func_802E9604
+/* 802E95E8 002E6528  41 82 00 1C */	beq lbl_802E9604
 /* 802E95EC 002E652C  3C A0 80 3D */	lis r5, __vt__14J2DGrafContext@ha
 /* 802E95F0 002E6530  38 05 C9 B8 */	addi r0, r5, __vt__14J2DGrafContext@l
 /* 802E95F4 002E6534  90 1F 00 00 */	stw r0, 0(r31)
 /* 802E95F8 002E6538  7C 80 07 35 */	extsh. r0, r4
-/* 802E95FC 002E653C  40 81 00 08 */	ble func_802E9604
+/* 802E95FC 002E653C  40 81 00 08 */	ble lbl_802E9604
 /* 802E9600 002E6540  4B FE 57 3D */	bl __dl__FPv
-
-/* 802E9604 0018 .text      func_802E9604                  func_802E9604                  */
-.global func_802E9604
-func_802E9604:
+lbl_802E9604:
 /* 802E9604 002E6544  7F E3 FB 78 */	mr r3, r31
 /* 802E9608 002E6548  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E960C 002E654C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -855,6 +814,7 @@ func_802E9604:
 
 /* 802E961C 0048 .text      place__14J2DGrafContextFffff   place__14J2DGrafContextFffff   */
 .global place__14J2DGrafContextFffff
+place__14J2DGrafContextFffff:
 place__14J2DGrafContextFffff:
 /* 802E961C 002E655C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9620 002E6560  7C 08 02 A6 */	mflr r0
@@ -878,11 +838,13 @@ place__14J2DGrafContextFffff:
 /* 802E9664 0008 .text      getGrafType__14J2DGrafContextCFv getGrafType__14J2DGrafContextCFv */
 .global getGrafType__14J2DGrafContextCFv
 getGrafType__14J2DGrafContextCFv:
+getGrafType__14J2DGrafContextCFv:
 /* 802E9664 002E65A4  38 60 00 00 */	li r3, 0
 /* 802E9668 002E65A8  4E 80 00 20 */	blr 
 
 /* 802E966C 0004 .text      setLookat__14J2DGrafContextFv  setLookat__14J2DGrafContextFv  */
 .global setLookat__14J2DGrafContextFv
+setLookat__14J2DGrafContextFv:
 setLookat__14J2DGrafContextFv:
 /* 802E966C 002E65AC  4E 80 00 20 */	blr 
 
@@ -894,32 +856,39 @@ setLookat__14J2DGrafContextFv:
 /* 803CC9B8 0028 .data      __vt__14J2DGrafContext         __vt__14J2DGrafContext         */
 .global __vt__14J2DGrafContext
 __vt__14J2DGrafContext:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x95, 0xd4, 0x80, 0x2e, 0x90, 0xe4 /* baserom.dol+0x3c99b8 */
-.byte 0x80, 0x2e, 0x96, 0x1c, 0x80, 0x2e, 0x8b, 0xb4, 0x80, 0x2e, 0x8c, 0x44, 0x80, 0x2e, 0x8e, 0x20 /* baserom.dol+0x3c99c8 */
-.byte 0x80, 0x2e, 0x96, 0x64, 0x80, 0x2e, 0x96, 0x6c /* baserom.dol+0x3c99d8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__14J2DGrafContextFv
+.4byte "place__14J2DGrafContextFRCQ29JGeometry8TBox2<f>"
+.4byte place__14J2DGrafContextFffff
+.4byte setPort__14J2DGrafContextFv
+.4byte setup2D__14J2DGrafContextFv
+.4byte setScissor__14J2DGrafContextFv
+.4byte getGrafType__14J2DGrafContextCFv
+.4byte setLookat__14J2DGrafContextFv
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456148 0004 .sdata2    J2DGrafContext__LIT_627        @627                           */
+/* 80456148 0004 .sdata2    @627                           J2DGrafContext__LIT_627        */
 .global J2DGrafContext__LIT_627
 J2DGrafContext__LIT_627:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fa8 */
 
-/* 8045614C 0004 .sdata2    J2DGrafContext__LIT_628        @628                           */
+/* 8045614C 0004 .sdata2    @628                           J2DGrafContext__LIT_628        */
 .global J2DGrafContext__LIT_628
 J2DGrafContext__LIT_628:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4fac */
 
-/* 80456150 0004 .sdata2    J2DGrafContext__LIT_730        @730                           */
+/* 80456150 0004 .sdata2    @730                           J2DGrafContext__LIT_730        */
 .global J2DGrafContext__LIT_730
 J2DGrafContext__LIT_730:
 .byte 0x44, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4fb0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fb4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80456158 0008 .sdata2    LIT_732                        @732                           */
+/* 80456158 0008 .sdata2    @732                           LIT_732                        */
 .global LIT_732
 LIT_732:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4fb8 */

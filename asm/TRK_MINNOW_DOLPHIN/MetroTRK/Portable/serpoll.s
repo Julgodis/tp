@@ -7,11 +7,13 @@
 /* 8036D858 0008 .text      TRKTerminateSerialHandler      TRKTerminateSerialHandler      */
 .global TRKTerminateSerialHandler
 TRKTerminateSerialHandler:
+TRKTerminateSerialHandler:
 /* 8036D858 0036A798  38 60 00 00 */	li r3, 0
 /* 8036D85C 0036A79C  4E 80 00 20 */	blr 
 
 /* 8036D860 00C4 .text      TRKInitializeSerialHandler     TRKInitializeSerialHandler     */
 .global TRKInitializeSerialHandler
+TRKInitializeSerialHandler:
 TRKInitializeSerialHandler:
 /* 8036D860 0036A7A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036D864 0036A7A4  7C 08 02 A6 */	mflr r0
@@ -66,6 +68,7 @@ TRKInitializeSerialHandler:
 /* 8036D924 0050 .text      TRKProcessInput                TRKProcessInput                */
 .global TRKProcessInput
 TRKProcessInput:
+TRKProcessInput:
 /* 8036D924 0036A864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036D928 0036A868  7C 08 02 A6 */	mflr r0
 /* 8036D92C 0036A86C  38 80 00 02 */	li r4, 2
@@ -87,8 +90,9 @@ TRKProcessInput:
 /* 8036D96C 0036A8AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036D970 0036A8B0  4E 80 00 20 */	blr 
 
-/* 8036D974 004C .text      TRKGetInput                    TRKGetInput                    */
+/* 8036D974 0060 .text      TRKGetInput                    TRKGetInput                    */
 .global TRKGetInput
+TRKGetInput:
 TRKGetInput:
 /* 8036D974 0036A8B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036D978 0036A8B8  7C 08 02 A6 */	mflr r0
@@ -97,7 +101,7 @@ TRKGetInput:
 /* 8036D984 0036A8C4  48 00 00 51 */	bl TRKTestForPacket
 /* 8036D988 0036A8C8  7C 7F 1B 78 */	mr r31, r3
 /* 8036D98C 0036A8CC  2C 1F FF FF */	cmpwi r31, -1
-/* 8036D990 0036A8D0  41 82 00 30 */	beq func_8036D9C0
+/* 8036D990 0036A8D0  41 82 00 30 */	beq lbl_8036D9C0
 /* 8036D994 0036A8D4  4B FF FD 5D */	bl TRKGetBuffer
 /* 8036D998 0036A8D8  38 61 00 08 */	addi r3, r1, 8
 /* 8036D99C 0036A8DC  38 80 00 02 */	li r4, 2
@@ -109,18 +113,16 @@ TRKGetInput:
 /* 8036D9B4 0036A8F4  38 61 00 08 */	addi r3, r1, 8
 /* 8036D9B8 0036A8F8  90 04 00 00 */	stw r0, 0(r4)
 /* 8036D9BC 0036A8FC  4B FF F2 99 */	bl TRKPostEvent
-
-/* 8036D9C0 0014 .text      func_8036D9C0                  func_8036D9C0                  */
-.global func_8036D9C0
-func_8036D9C0:
+lbl_8036D9C0:
 /* 8036D9C0 0036A900  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8036D9C4 0036A904  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8036D9C8 0036A908  7C 08 03 A6 */	mtlr r0
 /* 8036D9CC 0036A90C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036D9D0 0036A910  4E 80 00 20 */	blr 
 
-/* 8036D9D4 0030 .text      TRKTestForPacket               TRKTestForPacket               */
+/* 8036D9D4 013C .text      TRKTestForPacket               TRKTestForPacket               */
 .global TRKTestForPacket
+TRKTestForPacket:
 TRKTestForPacket:
 /* 8036D9D4 0036A914  94 21 F7 20 */	stwu r1, -0x8e0(r1)
 /* 8036D9D8 0036A918  7C 08 02 A6 */	mflr r0
@@ -131,13 +133,10 @@ TRKTestForPacket:
 /* 8036D9EC 0036A92C  93 C1 08 D8 */	stw r30, 0x8d8(r1)
 /* 8036D9F0 0036A930  48 00 43 F1 */	bl TRKPollUART
 /* 8036D9F4 0036A934  2C 03 00 00 */	cmpwi r3, 0
-/* 8036D9F8 0036A938  41 81 00 0C */	bgt func_8036DA04
+/* 8036D9F8 0036A938  41 81 00 0C */	bgt lbl_8036DA04
 /* 8036D9FC 0036A93C  38 60 FF FF */	li r3, -1
-/* 8036DA00 0036A940  48 00 00 F8 */	b func_8036DAF8
-
-/* 8036DA04 00A0 .text      func_8036DA04                  func_8036DA04                  */
-.global func_8036DA04
-func_8036DA04:
+/* 8036DA00 0036A940  48 00 00 F8 */	b lbl_8036DAF8
+lbl_8036DA04:
 /* 8036DA04 0036A944  38 61 00 0C */	addi r3, r1, 0xc
 /* 8036DA08 0036A948  38 81 00 08 */	addi r4, r1, 8
 /* 8036DA0C 0036A94C  4B FF FD 11 */	bl TRKGetFreeBuffer
@@ -154,7 +153,7 @@ func_8036DA04:
 /* 8036DA38 0036A978  38 80 00 40 */	li r4, 0x40
 /* 8036DA3C 0036A97C  48 00 43 69 */	bl TRKReadUARTN
 /* 8036DA40 0036A980  2C 03 00 00 */	cmpwi r3, 0
-/* 8036DA44 0036A984  40 82 00 80 */	bne func_8036DAC4
+/* 8036DA44 0036A984  40 82 00 80 */	bne lbl_8036DAC4
 /* 8036DA48 0036A988  80 61 00 08 */	lwz r3, 8(r1)
 /* 8036DA4C 0036A98C  38 81 00 10 */	addi r4, r1, 0x10
 /* 8036DA50 0036A990  38 A0 00 40 */	li r5, 0x40
@@ -162,7 +161,7 @@ func_8036DA04:
 /* 8036DA58 0036A998  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 8036DA5C 0036A99C  83 C1 00 0C */	lwz r30, 0xc(r1)
 /* 8036DA60 0036A9A0  34 A3 FF C0 */	addic. r5, r3, -64
-/* 8036DA64 0036A9A4  40 81 00 7C */	ble func_8036DAE0
+/* 8036DA64 0036A9A4  40 81 00 7C */	ble lbl_8036DAE0
 /* 8036DA68 0036A9A8  38 9F 00 F4 */	addi r4, r31, 0xf4
 /* 8036DA6C 0036A9AC  38 60 00 01 */	li r3, 1
 /* 8036DA70 0036A9B0  4C C6 31 82 */	crclr 6
@@ -172,16 +171,13 @@ func_8036DA04:
 /* 8036DA80 0036A9C0  38 84 FF C0 */	addi r4, r4, -64
 /* 8036DA84 0036A9C4  48 00 43 21 */	bl TRKReadUARTN
 /* 8036DA88 0036A9C8  2C 03 00 00 */	cmpwi r3, 0
-/* 8036DA8C 0036A9CC  40 82 00 18 */	bne func_8036DAA4
+/* 8036DA8C 0036A9CC  40 82 00 18 */	bne lbl_8036DAA4
 /* 8036DA90 0036A9D0  80 61 00 08 */	lwz r3, 8(r1)
 /* 8036DA94 0036A9D4  38 81 00 50 */	addi r4, r1, 0x50
 /* 8036DA98 0036A9D8  80 A1 00 10 */	lwz r5, 0x10(r1)
 /* 8036DA9C 0036A9DC  4B FF F8 ED */	bl TRKAppendBuffer_ui8
-/* 8036DAA0 0036A9E0  48 00 00 40 */	b func_8036DAE0
-
-/* 8036DAA4 0020 .text      func_8036DAA4                  func_8036DAA4                  */
-.global func_8036DAA4
-func_8036DAA4:
+/* 8036DAA0 0036A9E0  48 00 00 40 */	b lbl_8036DAE0
+lbl_8036DAA4:
 /* 8036DAA4 0036A9E4  38 9F 01 10 */	addi r4, r31, 0x110
 /* 8036DAA8 0036A9E8  38 60 00 08 */	li r3, 8
 /* 8036DAAC 0036A9EC  4C C6 31 82 */	crclr 6
@@ -189,11 +185,8 @@ func_8036DAA4:
 /* 8036DAB4 0036A9F4  7F C3 F3 78 */	mr r3, r30
 /* 8036DAB8 0036A9F8  4B FF FB D5 */	bl TRKReleaseBuffer
 /* 8036DABC 0036A9FC  3B C0 FF FF */	li r30, -1
-/* 8036DAC0 0036AA00  48 00 00 20 */	b func_8036DAE0
-
-/* 8036DAC4 001C .text      func_8036DAC4                  func_8036DAC4                  */
-.global func_8036DAC4
-func_8036DAC4:
+/* 8036DAC0 0036AA00  48 00 00 20 */	b lbl_8036DAE0
+lbl_8036DAC4:
 /* 8036DAC4 0036AA04  38 9F 01 44 */	addi r4, r31, 0x144
 /* 8036DAC8 0036AA08  38 60 00 08 */	li r3, 8
 /* 8036DACC 0036AA0C  4C C6 31 82 */	crclr 6
@@ -201,20 +194,14 @@ func_8036DAC4:
 /* 8036DAD4 0036AA14  7F C3 F3 78 */	mr r3, r30
 /* 8036DAD8 0036AA18  4B FF FB B5 */	bl TRKReleaseBuffer
 /* 8036DADC 0036AA1C  3B C0 FF FF */	li r30, -1
-
-/* 8036DAE0 0018 .text      func_8036DAE0                  func_8036DAE0                  */
-.global func_8036DAE0
-func_8036DAE0:
+lbl_8036DAE0:
 /* 8036DAE0 0036AA20  7F C5 F3 78 */	mr r5, r30
 /* 8036DAE4 0036AA24  38 9F 01 6C */	addi r4, r31, 0x16c
 /* 8036DAE8 0036AA28  38 60 00 01 */	li r3, 1
 /* 8036DAEC 0036AA2C  4C C6 31 82 */	crclr 6
 /* 8036DAF0 0036AA30  48 00 51 65 */	bl MWTRACE
 /* 8036DAF4 0036AA34  7F C3 F3 78 */	mr r3, r30
-
-/* 8036DAF8 0018 .text      func_8036DAF8                  func_8036DAF8                  */
-.global func_8036DAF8
-func_8036DAF8:
+lbl_8036DAF8:
 /* 8036DAF8 0036AA38  80 01 08 E4 */	lwz r0, 0x8e4(r1)
 /* 8036DAFC 0036AA3C  83 E1 08 DC */	lwz r31, 0x8dc(r1)
 /* 8036DB00 0036AA40  83 C1 08 D8 */	lwz r30, 0x8d8(r1)
@@ -227,90 +214,90 @@ func_8036DAF8:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 803A2700 0000 .rodata    sym_803A2700                   ...rodata.0                    */
-.global sym_803A2700
-sym_803A2700:
+/* 803A2700 0000 .rodata    ...rodata.0                    data_803A2700                  */
+.global data_803A2700
+data_803A2700:
 
-/* 803A2700 0022 .rodata    MetroTRK_Portable_serpoll__LIT_121 @121                           */
+/* 803A2700 0022 .rodata    @121                           MetroTRK_Portable_serpoll__LIT_121 */
 .global MetroTRK_Portable_serpoll__LIT_121
 MetroTRK_Portable_serpoll__LIT_121:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x50, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x5f, 0x48, 0x65, 0x61, 0x64, 0x65 /* baserom.dol+0x39f700 */
 .byte 0x72, 0x20, 0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73 /* baserom.dol+0x39f710 */
 .byte 0x0a, 0x00 /* baserom.dol+0x39f720 */
-.byte 0x00, 0x00 /* baserom.dol+0x39f722 */
+.byte 0x00, 0x00 /* padding */
 
-/* 803A2724 0022 .rodata    MetroTRK_Portable_serpoll__LIT_122 @122                           */
+/* 803A2724 0022 .rodata    @122                           MetroTRK_Portable_serpoll__LIT_122 */
 .global MetroTRK_Portable_serpoll__LIT_122
 MetroTRK_Portable_serpoll__LIT_122:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x43, 0x4d, 0x44, 0x5f, 0x52, 0x65, 0x61, 0x64, 0x4d, 0x65, 0x6d, 0x6f /* baserom.dol+0x39f724 */
 .byte 0x72, 0x79, 0x20, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73 /* baserom.dol+0x39f734 */
 .byte 0x0a, 0x00 /* baserom.dol+0x39f744 */
-.byte 0x00, 0x00 /* baserom.dol+0x39f746 */
+.byte 0x00, 0x00 /* padding */
 
-/* 803A2748 0022 .rodata    MetroTRK_Portable_serpoll__LIT_123 @123                           */
+/* 803A2748 0022 .rodata    @123                           MetroTRK_Portable_serpoll__LIT_123 */
 .global MetroTRK_Portable_serpoll__LIT_123
 MetroTRK_Portable_serpoll__LIT_123:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x43, 0x4d, 0x44, 0x5f, 0x57, 0x72, 0x69, 0x74, 0x65, 0x4d, 0x65, 0x6d /* baserom.dol+0x39f748 */
 .byte 0x6f, 0x72, 0x79, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73 /* baserom.dol+0x39f758 */
 .byte 0x0a, 0x00 /* baserom.dol+0x39f768 */
-.byte 0x00, 0x00 /* baserom.dol+0x39f76a */
+.byte 0x00, 0x00 /* padding */
 
-/* 803A276C 0020 .rodata    MetroTRK_Portable_serpoll__LIT_124 @124                           */
+/* 803A276C 0020 .rodata    @124                           MetroTRK_Portable_serpoll__LIT_124 */
 .global MetroTRK_Portable_serpoll__LIT_124
 MetroTRK_Portable_serpoll__LIT_124:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x43, 0x4d, 0x44, 0x5f, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x20 /* baserom.dol+0x39f76c */
 .byte 0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0a, 0x00 /* baserom.dol+0x39f77c */
 
-/* 803A278C 0020 .rodata    MetroTRK_Portable_serpoll__LIT_125 @125                           */
+/* 803A278C 0020 .rodata    @125                           MetroTRK_Portable_serpoll__LIT_125 */
 .global MetroTRK_Portable_serpoll__LIT_125
 MetroTRK_Portable_serpoll__LIT_125:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x43, 0x4d, 0x44, 0x5f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x41, 0x63, 0x6b /* baserom.dol+0x39f78c */
 .byte 0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0a, 0x00 /* baserom.dol+0x39f79c */
 
-/* 803A27AC 0021 .rodata    MetroTRK_Portable_serpoll__LIT_126 @126                           */
+/* 803A27AC 0021 .rodata    @126                           MetroTRK_Portable_serpoll__LIT_126 */
 .global MetroTRK_Portable_serpoll__LIT_126
 MetroTRK_Portable_serpoll__LIT_126:
 .byte 0x54, 0x52, 0x4b, 0x5f, 0x43, 0x4d, 0x44, 0x5f, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69 /* baserom.dol+0x39f7ac */
 .byte 0x73, 0x74, 0x65, 0x72, 0x73, 0x09, 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0a /* baserom.dol+0x39f7bc */
 .byte 0x00 /* baserom.dol+0x39f7cc */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x39f7cd */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803A27D0 0024 .rodata    MetroTRK_Portable_serpoll__LIT_146 @146                           */
+/* 803A27D0 0024 .rodata    @146                           MetroTRK_Portable_serpoll__LIT_146 */
 .global MetroTRK_Portable_serpoll__LIT_146
 MetroTRK_Portable_serpoll__LIT_146:
 .byte 0x54, 0x65, 0x73, 0x74, 0x46, 0x6f, 0x72, 0x50, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x3a, 0x20 /* baserom.dol+0x39f7d0 */
 .byte 0x46, 0x72, 0x65, 0x65, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x69, 0x73, 0x20, 0x20, 0x25 /* baserom.dol+0x39f7e0 */
 .byte 0x6c, 0x64, 0x0a, 0x00 /* baserom.dol+0x39f7f0 */
 
-/* 803A27F4 001B .rodata    MetroTRK_Portable_serpoll__LIT_147 @147                           */
+/* 803A27F4 001B .rodata    @147                           MetroTRK_Portable_serpoll__LIT_147 */
 .global MetroTRK_Portable_serpoll__LIT_147
 MetroTRK_Portable_serpoll__LIT_147:
 .byte 0x52, 0x65, 0x61, 0x64, 0x69, 0x6e, 0x67, 0x20, 0x70, 0x61, 0x79, 0x6c, 0x6f, 0x61, 0x64, 0x20 /* baserom.dol+0x39f7f4 */
 .byte 0x25, 0x6c, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0a, 0x00 /* baserom.dol+0x39f804 */
-.byte 0x00 /* baserom.dol+0x39f80f */
+.byte 0x00 /* padding */
 
-/* 803A2810 0031 .rodata    MetroTRK_Portable_serpoll__LIT_148 @148                           */
+/* 803A2810 0031 .rodata    @148                           MetroTRK_Portable_serpoll__LIT_148 */
 .global MetroTRK_Portable_serpoll__LIT_148
 MetroTRK_Portable_serpoll__LIT_148:
 .byte 0x54, 0x65, 0x73, 0x74, 0x46, 0x6f, 0x72, 0x50, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x3a, 0x20 /* baserom.dol+0x39f810 */
 .byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x73, 0x69, 0x7a, 0x65, 0x20, 0x6f, 0x66, 0x20 /* baserom.dol+0x39f820 */
 .byte 0x70, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x68, 0x64, 0x72, 0x2e, 0x73, 0x69, 0x7a, 0x65, 0x0a /* baserom.dol+0x39f830 */
 .byte 0x00 /* baserom.dol+0x39f840 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x39f841 */
+.byte 0x00, 0x00, 0x00 /* padding */
 
-/* 803A2844 0028 .rodata    MetroTRK_Portable_serpoll__LIT_149 @149                           */
+/* 803A2844 0028 .rodata    @149                           MetroTRK_Portable_serpoll__LIT_149 */
 .global MetroTRK_Portable_serpoll__LIT_149
 MetroTRK_Portable_serpoll__LIT_149:
 .byte 0x54, 0x65, 0x73, 0x74, 0x46, 0x6f, 0x72, 0x50, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x3a, 0x20 /* baserom.dol+0x39f844 */
 .byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x73, 0x69, 0x7a, 0x65, 0x20, 0x6f, 0x66, 0x20 /* baserom.dol+0x39f854 */
 .byte 0x70, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x0a, 0x00 /* baserom.dol+0x39f864 */
 
-/* 803A286C 001D .rodata    MetroTRK_Portable_serpoll__LIT_150 @150                           */
+/* 803A286C 001D .rodata    @150                           MetroTRK_Portable_serpoll__LIT_150 */
 .global MetroTRK_Portable_serpoll__LIT_150
 MetroTRK_Portable_serpoll__LIT_150:
 .byte 0x54, 0x65, 0x73, 0x74, 0x46, 0x6f, 0x72, 0x50, 0x61, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x72, 0x65 /* baserom.dol+0x39f86c */
 .byte 0x74, 0x75, 0x72, 0x6e, 0x69, 0x6e, 0x67, 0x20, 0x25, 0x6c, 0x64, 0x0a, 0x00 /* baserom.dol+0x39f87c */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x39f889 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */

@@ -7,6 +7,7 @@
 /* 80003100 0040 .init      __check_pad3                   __check_pad3                   */
 .global __check_pad3
 __check_pad3:
+__check_pad3:
 /* 80003100 00000100  7C 08 02 A6 */	mflr r0
 /* 80003104 00000104  3C 60 80 00 */	lis r3, 0x800030E4@ha
 /* 80003108 00000108  90 01 00 04 */	stw r0, 4(r1)
@@ -28,18 +29,21 @@ lbl_80003130:
 /* 80003140 000C .init      __set_debug_bba                __set_debug_bba                */
 .global __set_debug_bba
 __set_debug_bba:
+__set_debug_bba:
 /* 80003140 00000140  38 00 00 01 */	li r0, 1
-/* 80003144 00000144  98 0D 91 50 */	stb r0, sym_804516D0-_SDA_BASE_(r13)
+/* 80003144 00000144  98 0D 91 50 */	stb r0, data_804516D0-_SDA_BASE_(r13)
 /* 80003148 00000148  4E 80 00 20 */	blr 
 
 /* 8000314C 0008 .init      __get_debug_bba                __get_debug_bba                */
 .global __get_debug_bba
 __get_debug_bba:
-/* 8000314C 0000014C  88 6D 91 50 */	lbz r3, sym_804516D0-_SDA_BASE_(r13)
+__get_debug_bba:
+/* 8000314C 0000014C  88 6D 91 50 */	lbz r3, data_804516D0-_SDA_BASE_(r13)
 /* 80003150 00000150  4E 80 00 20 */	blr 
 
 /* 80003154 015C .init      __start                        __start                        */
 .global __start
+__start:
 __start:
 /* 80003154 00000154  48 00 01 5D */	bl __init_registers
 /* 80003158 00000158  48 00 02 A9 */	bl __init_hardware
@@ -142,6 +146,7 @@ lbl_8000329C:
 /* 800032B0 0090 .init      __init_registers               __init_registers               */
 .global __init_registers
 __init_registers:
+__init_registers:
 /* 800032B0 000002B0  38 00 00 00 */	li r0, 0
 /* 800032B4 000002B4  38 60 00 00 */	li r3, 0
 /* 800032B8 000002B8  38 80 00 00 */	li r4, 0
@@ -181,6 +186,7 @@ __init_registers:
 
 /* 80003340 00C0 .init      __init_data                    __init_data                    */
 .global __init_data
+__init_data:
 __init_data:
 /* 80003340 00000340  7C 08 02 A6 */	mflr r0
 /* 80003344 00000344  90 01 00 04 */	stw r0, 4(r1)
@@ -242,6 +248,7 @@ lbl_800033E4:
 /* 80003400 0024 .init      __init_hardware                __init_hardware                */
 .global __init_hardware
 __init_hardware:
+__init_hardware:
 /* 80003400 00000400  7C 00 00 A6 */	mfmsr r0
 /* 80003404 00000404  60 00 20 00 */	ori r0, r0, 0x2000
 /* 80003408 00000408  7C 00 01 24 */	mtmsr r0
@@ -254,6 +261,7 @@ __init_hardware:
 
 /* 80003424 0034 .init      __flush_cache                  __flush_cache                  */
 .global __flush_cache
+__flush_cache:
 __flush_cache:
 /* 80003424 00000424  3C A0 FF FF */	lis r5, 0xFFFFFFF1@h
 /* 80003428 00000428  60 A5 FF F1 */	ori r5, r5, 0xFFFFFFF1@l
@@ -273,6 +281,7 @@ lbl_80003438:
 /* 80003458 0030 .init      memset                         memset                         */
 .global memset
 memset:
+memset:
 /* 80003458 00000458  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000345C 0000045C  7C 08 02 A6 */	mflr r0
 /* 80003460 00000460  90 01 00 14 */	stw r0, 0x14(r1)
@@ -288,6 +297,7 @@ memset:
 
 /* 80003488 00B8 .init      __fill_mem                     __fill_mem                     */
 .global __fill_mem
+__fill_mem:
 __fill_mem:
 /* 80003488 00000488  28 05 00 20 */	cmplwi r5, 0x20
 /* 8000348C 0000048C  54 84 06 3E */	clrlwi r4, r4, 0x18
@@ -348,6 +358,7 @@ lbl_80003530:
 /* 80003540 0050 .init      memcpy                         memcpy                         */
 .global memcpy
 memcpy:
+memcpy:
 /* 80003540 00000540  7C 04 18 40 */	cmplw r4, r3
 /* 80003544 00000544  41 80 00 28 */	blt lbl_8000356C
 /* 80003548 00000548  38 84 FF FF */	addi r4, r4, -1
@@ -377,6 +388,7 @@ lbl_80003584:
 /* 80003590 0030 .init      TRK_memset                     TRK_memset                     */
 .global TRK_memset
 TRK_memset:
+TRK_memset:
 /* 80003590 00000590  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80003594 00000594  7C 08 02 A6 */	mflr r0
 /* 80003598 00000598  90 01 00 14 */	stw r0, 0x14(r1)
@@ -393,6 +405,7 @@ TRK_memset:
 /* 800035C0 0024 .init      TRK_memcpy                     TRK_memcpy                     */
 .global TRK_memcpy
 TRK_memcpy:
+TRK_memcpy:
 /* 800035C0 000005C0  38 84 FF FF */	addi r4, r4, -1
 /* 800035C4 000005C4  38 C3 FF FF */	addi r6, r3, -1
 /* 800035C8 000005C8  38 A5 00 01 */	addi r5, r5, 1
@@ -407,6 +420,7 @@ lbl_800035D8:
 
 /* 800035E4 1F34 .init      lbl_800035E4                   lbl_800035E4                   */
 .global lbl_800035E4
+lbl_800035E4:
 lbl_800035E4:
 /* 800035E4 000005E4  4D 65 74 72 */	.4byte 0x4D657472  /* unknown instruction */
 /* 800035E8 000005E8  6F 77 65 72 */	xoris r23, r27, 0x6572
@@ -2413,6 +2427,7 @@ lbl_80004814:
 
 /* 80005518 00E8 .init      __TRK_reset                    __TRK_reset                    */
 .global __TRK_reset
+__TRK_reset:
 __TRK_reset:
 /* 80005518 00002518  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000551C 0000251C  7C 08 02 A6 */	mflr r0

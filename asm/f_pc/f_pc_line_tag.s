@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 800235A8 003C .text      fpcLnTg_Move__FP8line_tagi     fpcLnTg_Move__FP8line_tagi     */
+/* 800235A8 0058 .text      fpcLnTg_Move__FP8line_tagi     fpcLnTg_Move__FP8line_tagi     */
 .global fpcLnTg_Move__FP8line_tagi
+fpcLnTg_Move__FP8line_tagi:
 fpcLnTg_Move__FP8line_tagi:
 /* 800235A8 000204E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800235AC 000204EC  7C 08 02 A6 */	mflr r0
@@ -16,21 +17,15 @@ fpcLnTg_Move__FP8line_tagi:
 /* 800235C0 00020500  7C 9F 23 78 */	mr r31, r4
 /* 800235C4 00020504  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 800235C8 00020508  7C 00 F8 00 */	cmpw r0, r31
-/* 800235CC 0002050C  41 82 00 18 */	beq func_800235E4
+/* 800235CC 0002050C  41 82 00 18 */	beq lbl_800235E4
 /* 800235D0 00020510  48 00 00 31 */	bl fpcLnTg_QueueTo__FP8line_tag
 /* 800235D4 00020514  7F C3 F3 78 */	mr r3, r30
 /* 800235D8 00020518  7F E4 FB 78 */	mr r4, r31
 /* 800235DC 0002051C  48 00 00 59 */	bl fpcLnTg_ToQueue__FP8line_tagi
-/* 800235E0 00020520  48 00 00 08 */	b func_800235E8
-
-/* 800235E4 0004 .text      func_800235E4                  func_800235E4                  */
-.global func_800235E4
-func_800235E4:
+/* 800235E0 00020520  48 00 00 08 */	b lbl_800235E8
+lbl_800235E4:
 /* 800235E4 00020524  38 60 00 01 */	li r3, 1
-
-/* 800235E8 0018 .text      func_800235E8                  func_800235E8                  */
-.global func_800235E8
-func_800235E8:
+lbl_800235E8:
 /* 800235E8 00020528  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800235EC 0002052C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 800235F0 00020530  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -40,6 +35,7 @@ func_800235E8:
 
 /* 80023600 0034 .text      fpcLnTg_QueueTo__FP8line_tag   fpcLnTg_QueueTo__FP8line_tag   */
 .global fpcLnTg_QueueTo__FP8line_tag
+fpcLnTg_QueueTo__FP8line_tag:
 fpcLnTg_QueueTo__FP8line_tag:
 /* 80023600 00020540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80023604 00020544  7C 08 02 A6 */	mflr r0
@@ -55,8 +51,9 @@ fpcLnTg_QueueTo__FP8line_tag:
 /* 8002362C 0002056C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80023630 00020570  4E 80 00 20 */	blr 
 
-/* 80023634 003C .text      fpcLnTg_ToQueue__FP8line_tagi  fpcLnTg_ToQueue__FP8line_tagi  */
+/* 80023634 0058 .text      fpcLnTg_ToQueue__FP8line_tagi  fpcLnTg_ToQueue__FP8line_tagi  */
 .global fpcLnTg_ToQueue__FP8line_tagi
+fpcLnTg_ToQueue__FP8line_tagi:
 fpcLnTg_ToQueue__FP8line_tagi:
 /* 80023634 00020574  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80023638 00020578  7C 08 02 A6 */	mflr r0
@@ -69,19 +66,13 @@ fpcLnTg_ToQueue__FP8line_tagi:
 /* 80023654 00020594  7F C5 F3 78 */	mr r5, r30
 /* 80023658 00020598  48 24 32 75 */	bl cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class
 /* 8002365C 0002059C  2C 03 00 00 */	cmpwi r3, 0
-/* 80023660 000205A0  41 82 00 10 */	beq func_80023670
+/* 80023660 000205A0  41 82 00 10 */	beq lbl_80023670
 /* 80023664 000205A4  93 FE 00 14 */	stw r31, 0x14(r30)
 /* 80023668 000205A8  38 60 00 01 */	li r3, 1
-/* 8002366C 000205AC  48 00 00 08 */	b func_80023674
-
-/* 80023670 0004 .text      func_80023670                  func_80023670                  */
-.global func_80023670
-func_80023670:
+/* 8002366C 000205AC  48 00 00 08 */	b lbl_80023674
+lbl_80023670:
 /* 80023670 000205B0  38 60 00 00 */	li r3, 0
-
-/* 80023674 0018 .text      func_80023674                  func_80023674                  */
-.global func_80023674
-func_80023674:
+lbl_80023674:
 /* 80023674 000205B4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80023678 000205B8  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8002367C 000205BC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -91,6 +82,7 @@ func_80023674:
 
 /* 8002368C 0034 .text      fpcLnTg_Init__FP8line_tagPv    fpcLnTg_Init__FP8line_tagPv    */
 .global fpcLnTg_Init__FP8line_tagPv
+fpcLnTg_Init__FP8line_tagPv:
 fpcLnTg_Init__FP8line_tagPv:
 /* 8002368C 000205CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80023690 000205D0  7C 08 02 A6 */	mflr r0

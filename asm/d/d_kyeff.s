@@ -7,6 +7,7 @@
 /* 801ADD38 0024 .text      dKyeff_Draw__FP8dKyeff_c       dKyeff_Draw__FP8dKyeff_c       */
 .global dKyeff_Draw__FP8dKyeff_c
 dKyeff_Draw__FP8dKyeff_c:
+dKyeff_Draw__FP8dKyeff_c:
 /* 801ADD38 001AAC78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADD3C 001AAC7C  7C 08 02 A6 */	mflr r0
 /* 801ADD40 001AAC80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -17,8 +18,9 @@ dKyeff_Draw__FP8dKyeff_c:
 /* 801ADD54 001AAC94  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ADD58 001AAC98  4E 80 00 20 */	blr 
 
-/* 801ADD5C 0030 .text      execute__8dKyeff_cFv           execute__8dKyeff_cFv           */
+/* 801ADD5C 0058 .text      execute__8dKyeff_cFv           execute__8dKyeff_cFv           */
 .global execute__8dKyeff_cFv
+execute__8dKyeff_cFv:
 execute__8dKyeff_cFv:
 /* 801ADD5C 001AAC9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADD60 001AACA0  7C 08 02 A6 */	mflr r0
@@ -30,12 +32,9 @@ execute__8dKyeff_cFv:
 /* 801ADD78 001AACB8  38 84 4F 38 */	addi r4, r4, d_d_kyeff__stringBase0@l
 /* 801ADD7C 001AACBC  48 1B AC 19 */	bl strcmp
 /* 801ADD80 001AACC0  2C 03 00 00 */	cmpwi r3, 0
-/* 801ADD84 001AACC4  41 82 00 08 */	beq func_801ADD8C
+/* 801ADD84 001AACC4  41 82 00 08 */	beq lbl_801ADD8C
 /* 801ADD88 001AACC8  4B EA A5 71 */	bl dKyw_wether_move__Fv
-
-/* 801ADD8C 0028 .text      func_801ADD8C                  func_801ADD8C                  */
-.global func_801ADD8C
-func_801ADD8C:
+lbl_801ADD8C:
 /* 801ADD8C 001AACCC  4B EA C3 2D */	bl dKyw_wether_move_draw__Fv
 /* 801ADD90 001AACD0  4B FE FF BD */	bl dKy_FiveSenses_fullthrottle_dark__Fv
 /* 801ADD94 001AACD4  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
@@ -50,6 +49,7 @@ func_801ADD8C:
 /* 801ADDB4 0020 .text      dKyeff_Execute__FP8dKyeff_c    dKyeff_Execute__FP8dKyeff_c    */
 .global dKyeff_Execute__FP8dKyeff_c
 dKyeff_Execute__FP8dKyeff_c:
+dKyeff_Execute__FP8dKyeff_c:
 /* 801ADDB4 001AACF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADDB8 001AACF8  7C 08 02 A6 */	mflr r0
 /* 801ADDBC 001AACFC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -62,11 +62,13 @@ dKyeff_Execute__FP8dKyeff_c:
 /* 801ADDD4 0008 .text      dKyeff_IsDelete__FP8dKyeff_c   dKyeff_IsDelete__FP8dKyeff_c   */
 .global dKyeff_IsDelete__FP8dKyeff_c
 dKyeff_IsDelete__FP8dKyeff_c:
+dKyeff_IsDelete__FP8dKyeff_c:
 /* 801ADDD4 001AAD14  38 60 00 01 */	li r3, 1
 /* 801ADDD8 001AAD18  4E 80 00 20 */	blr 
 
 /* 801ADDDC 0024 .text      dKyeff_Delete__FP8dKyeff_c     dKyeff_Delete__FP8dKyeff_c     */
 .global dKyeff_Delete__FP8dKyeff_c
+dKyeff_Delete__FP8dKyeff_c:
 dKyeff_Delete__FP8dKyeff_c:
 /* 801ADDDC 001AAD1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ADDE0 001AAD20  7C 08 02 A6 */	mflr r0
@@ -78,8 +80,9 @@ dKyeff_Delete__FP8dKyeff_c:
 /* 801ADDF8 001AAD38  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ADDFC 001AAD3C  4E 80 00 20 */	blr 
 
-/* 801ADE00 008C .text      dKyeff_Create__FP12kankyo_class dKyeff_Create__FP12kankyo_class */
+/* 801ADE00 00A0 .text      dKyeff_Create__FP12kankyo_class dKyeff_Create__FP12kankyo_class */
 .global dKyeff_Create__FP12kankyo_class
+dKyeff_Create__FP12kankyo_class:
 dKyeff_Create__FP12kankyo_class:
 /* 801ADE00 001AAD40  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801ADE04 001AAD44  7C 08 02 A6 */	mflr r0
@@ -92,7 +95,7 @@ dKyeff_Create__FP12kankyo_class:
 /* 801ADE20 001AAD60  38 84 4F 38 */	addi r4, r4, d_d_kyeff__stringBase0@l
 /* 801ADE24 001AAD64  48 1B AB 71 */	bl strcmp
 /* 801ADE28 001AAD68  2C 03 00 00 */	cmpwi r3, 0
-/* 801ADE2C 001AAD6C  40 82 00 60 */	bne func_801ADE8C
+/* 801ADE2C 001AAD6C  40 82 00 60 */	bne lbl_801ADE8C
 /* 801ADE30 001AAD70  48 19 48 CD */	bl OSGetTime
 /* 801ADE34 001AAD74  38 A1 00 08 */	addi r5, r1, 8
 /* 801ADE38 001AAD78  48 19 4B 3D */	bl OSTicksToCalendarTime
@@ -116,10 +119,7 @@ dKyeff_Create__FP12kankyo_class:
 /* 801ADE80 001AADC0  EC 00 08 28 */	fsubs f0, f0, f1
 /* 801ADE84 001AADC4  EC 02 00 32 */	fmuls f0, f2, f0
 /* 801ADE88 001AADC8  D0 03 12 44 */	stfs f0, 0x1244(r3)
-
-/* 801ADE8C 0014 .text      func_801ADE8C                  func_801ADE8C                  */
-.global func_801ADE8C
-func_801ADE8C:
+lbl_801ADE8C:
 /* 801ADE8C 001AADCC  38 60 00 04 */	li r3, 4
 /* 801ADE90 001AADD0  80 01 00 44 */	lwz r0, 0x44(r1)
 /* 801ADE94 001AADD4  7C 08 03 A6 */	mtlr r0
@@ -131,11 +131,11 @@ func_801ADE8C:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394F38 0005 .rodata    d_d_kyeff__stringBase0         @stringBase0                   */
+/* 80394F38 0005 .rodata    @stringBase0                   d_d_kyeff__stringBase0         */
 .global d_d_kyeff__stringBase0
 d_d_kyeff__stringBase0:
 .byte 0x4e, 0x61, 0x6d, 0x65, 0x00 /* baserom.dol+0x391f38 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x391f3d */
+.byte 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -154,34 +154,34 @@ g_profile_KYEFF:
 .byte 0xff, 0xff, 0xff, 0xfd, 0x00, 0x0c, 0xff, 0xfd, 0x03, 0x11, 0x00, 0x00, 0x80, 0x3a, 0x39, 0xe8 /* baserom.dol+0x3b916c */
 .byte 0x00, 0x00, 0x00, 0xf8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3a, 0x39, 0x40 /* baserom.dol+0x3b917c */
 .byte 0x00, 0x05, 0x00, 0x00, 0x80, 0x3b, 0xc1, 0x58 /* baserom.dol+0x3b918c */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b9194 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453E58 0004 .sdata2    d_d_kyeff__LIT_3804            @3804                          */
+/* 80453E58 0004 .sdata2    @3804                          d_d_kyeff__LIT_3804            */
 .global d_d_kyeff__LIT_3804
 d_d_kyeff__LIT_3804:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2cb8 */
 
-/* 80453E5C 0004 .sdata2    d_d_kyeff__LIT_3805            @3805                          */
+/* 80453E5C 0004 .sdata2    @3805                          d_d_kyeff__LIT_3805            */
 .global d_d_kyeff__LIT_3805
 d_d_kyeff__LIT_3805:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2cbc */
 
-/* 80453E60 0008 .sdata2    d_d_kyeff__LIT_3812            @3812                          */
+/* 80453E60 0008 .sdata2    @3812                          d_d_kyeff__LIT_3812            */
 .global d_d_kyeff__LIT_3812
 d_d_kyeff__LIT_3812:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2cc0 */
 
-/* 80453E68 0004 .sdata2    d_d_kyeff__LIT_3843            @3843                          */
+/* 80453E68 0004 .sdata2    @3843                          d_d_kyeff__LIT_3843            */
 .global d_d_kyeff__LIT_3843
 d_d_kyeff__LIT_3843:
 .byte 0x3f, 0x33, 0x33, 0x33 /* baserom.dol+0x3d2cc8 */
 
-/* 80453E6C 0004 .sdata2    d_d_kyeff__LIT_3844            @3844                          */
+/* 80453E6C 0004 .sdata2    @3844                          d_d_kyeff__LIT_3844            */
 .global d_d_kyeff__LIT_3844
 d_d_kyeff__LIT_3844:
 .byte 0x41, 0x70, 0x00, 0x00 /* baserom.dol+0x3d2ccc */

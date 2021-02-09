@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8033B2D8 006C .text      __OSInitAudioSystem            __OSInitAudioSystem            */
+/* 8033B2D8 01BC .text      __OSInitAudioSystem            __OSInitAudioSystem            */
 .global __OSInitAudioSystem
+__OSInitAudioSystem:
 __OSInitAudioSystem:
 /* 8033B2D8 00338218  7C 08 02 A6 */	mflr r0
 /* 8033B2DC 0033821C  90 01 00 04 */	stw r0, 4(r1)
@@ -34,27 +35,21 @@ __OSInitAudioSystem:
 /* 8033B338 00338278  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8033B33C 0033827C  60 00 00 01 */	ori r0, r0, 1
 /* 8033B340 00338280  B0 03 00 0A */	sth r0, 0xa(r3)
-
-/* 8033B344 0018 .text      func_8033B344                  func_8033B344                  */
-.global func_8033B344
-func_8033B344:
+lbl_8033B344:
 /* 8033B344 00338284  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B348 00338288  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8033B34C 0033828C  40 82 FF F8 */	bne func_8033B344
+/* 8033B34C 0033828C  40 82 FF F8 */	bne lbl_8033B344
 /* 8033B350 00338290  38 00 00 00 */	li r0, 0
 /* 8033B354 00338294  3C 80 CC 00 */	lis r4, 0xCC005000@ha
 /* 8033B358 00338298  B0 04 50 00 */	sth r0, 0xCC005000@l(r4)
-
-/* 8033B35C 004C .text      func_8033B35C                  func_8033B35C                  */
-.global func_8033B35C
-func_8033B35C:
+lbl_8033B35C:
 /* 8033B35C 0033829C  3B C4 50 00 */	addi r30, r4, 0x5000
 /* 8033B360 003382A0  A4 7E 00 04 */	lhzu r3, 4(r30)
 /* 8033B364 003382A4  3B A4 50 00 */	addi r29, r4, 0x5000
 /* 8033B368 003382A8  A4 1D 00 06 */	lhzu r0, 6(r29)
 /* 8033B36C 003382AC  50 60 80 1E */	rlwimi r0, r3, 0x10, 0, 0xf
 /* 8033B370 003382B0  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
-/* 8033B374 003382B4  40 82 FF E8 */	bne func_8033B35C
+/* 8033B374 003382B4  40 82 FF E8 */	bne lbl_8033B35C
 /* 8033B378 003382B8  3C 60 CC 00 */	lis r3, 0xCC005000@ha
 /* 8033B37C 003382BC  3C 00 01 00 */	lis r0, 0x100
 /* 8033B380 003382C0  3B 63 50 00 */	addi r27, r3, 0xCC005000@l
@@ -66,29 +61,20 @@ func_8033B35C:
 /* 8033B398 003382D8  3B 23 50 00 */	addi r25, r3, 0x5000
 /* 8033B39C 003382DC  94 19 00 28 */	stwu r0, 0x28(r25)
 /* 8033B3A0 003382E0  A0 7F 00 00 */	lhz r3, 0(r31)
-/* 8033B3A4 003382E4  48 00 00 08 */	b func_8033B3AC
-
-/* 8033B3A8 0004 .text      func_8033B3A8                  func_8033B3A8                  */
-.global func_8033B3A8
-func_8033B3A8:
+/* 8033B3A4 003382E4  48 00 00 08 */	b lbl_8033B3AC
+lbl_8033B3A8:
 /* 8033B3A8 003382E8  A0 7F 00 00 */	lhz r3, 0(r31)
-
-/* 8033B3AC 0014 .text      func_8033B3AC                  func_8033B3AC                  */
-.global func_8033B3AC
-func_8033B3AC:
+lbl_8033B3AC:
 /* 8033B3AC 003382EC  54 60 06 B5 */	rlwinm. r0, r3, 0, 0x1a, 0x1a
-/* 8033B3B0 003382F0  41 82 FF F8 */	beq func_8033B3A8
+/* 8033B3B0 003382F0  41 82 FF F8 */	beq lbl_8033B3A8
 /* 8033B3B4 003382F4  B0 7F 00 00 */	sth r3, 0(r31)
 /* 8033B3B8 003382F8  48 00 73 5D */	bl OSGetTick
 /* 8033B3BC 003382FC  7C 7C 1B 78 */	mr r28, r3
-
-/* 8033B3C0 0030 .text      func_8033B3C0                  func_8033B3C0                  */
-.global func_8033B3C0
-func_8033B3C0:
+lbl_8033B3C0:
 /* 8033B3C0 00338300  48 00 73 55 */	bl OSGetTick
 /* 8033B3C4 00338304  7C 1C 18 50 */	subf r0, r28, r3
 /* 8033B3C8 00338308  2C 00 08 92 */	cmpwi r0, 0x892
-/* 8033B3CC 0033830C  41 80 FF F4 */	blt func_8033B3C0
+/* 8033B3CC 0033830C  41 80 FF F4 */	blt lbl_8033B3C0
 /* 8033B3D0 00338310  3C 00 01 00 */	lis r0, 0x100
 /* 8033B3D4 00338314  90 1B 00 00 */	stw r0, 0(r27)
 /* 8033B3D8 00338318  38 60 00 00 */	li r3, 0
@@ -96,46 +82,31 @@ func_8033B3C0:
 /* 8033B3E0 00338320  90 7A 00 00 */	stw r3, 0(r26)
 /* 8033B3E4 00338324  90 19 00 00 */	stw r0, 0(r25)
 /* 8033B3E8 00338328  A0 7F 00 00 */	lhz r3, 0(r31)
-/* 8033B3EC 0033832C  48 00 00 08 */	b func_8033B3F4
-
-/* 8033B3F0 0004 .text      func_8033B3F0                  func_8033B3F0                  */
-.global func_8033B3F0
-func_8033B3F0:
+/* 8033B3EC 0033832C  48 00 00 08 */	b lbl_8033B3F4
+lbl_8033B3F0:
 /* 8033B3F0 00338330  A0 7F 00 00 */	lhz r3, 0(r31)
-
-/* 8033B3F4 0018 .text      func_8033B3F4                  func_8033B3F4                  */
-.global func_8033B3F4
-func_8033B3F4:
+lbl_8033B3F4:
 /* 8033B3F4 00338334  54 60 06 B5 */	rlwinm. r0, r3, 0, 0x1a, 0x1a
-/* 8033B3F8 00338338  41 82 FF F8 */	beq func_8033B3F0
+/* 8033B3F8 00338338  41 82 FF F8 */	beq lbl_8033B3F0
 /* 8033B3FC 0033833C  B0 7F 00 00 */	sth r3, 0(r31)
 /* 8033B400 00338340  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B404 00338344  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13
 /* 8033B408 00338348  B0 1F 00 00 */	sth r0, 0(r31)
-
-/* 8033B40C 0020 .text      func_8033B40C                  func_8033B40C                  */
-.global func_8033B40C
-func_8033B40C:
+lbl_8033B40C:
 /* 8033B40C 0033834C  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B410 00338350  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
-/* 8033B414 00338354  40 82 FF F8 */	bne func_8033B40C
+/* 8033B414 00338354  40 82 FF F8 */	bne lbl_8033B40C
 /* 8033B418 00338358  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B41C 0033835C  54 00 07 B8 */	rlwinm r0, r0, 0, 0x1e, 0x1c
 /* 8033B420 00338360  B0 1F 00 00 */	sth r0, 0(r31)
 /* 8033B424 00338364  A0 1E 00 00 */	lhz r0, 0(r30)
-/* 8033B428 00338368  48 00 00 08 */	b func_8033B430
-
-/* 8033B42C 0004 .text      func_8033B42C                  func_8033B42C                  */
-.global func_8033B42C
-func_8033B42C:
+/* 8033B428 00338368  48 00 00 08 */	b lbl_8033B430
+lbl_8033B42C:
 /* 8033B42C 0033836C  A0 1E 00 00 */	lhz r0, 0(r30)
-
-/* 8033B430 0030 .text      func_8033B430                  func_8033B430                  */
-.global func_8033B430
-func_8033B430:
+lbl_8033B430:
 /* 8033B430 00338370  54 05 04 3E */	clrlwi r5, r0, 0x10
 /* 8033B434 00338374  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
-/* 8033B438 00338378  41 82 FF F4 */	beq func_8033B42C
+/* 8033B438 00338378  41 82 FF F4 */	beq lbl_8033B42C
 /* 8033B43C 0033837C  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B440 00338380  A0 9D 00 00 */	lhz r4, 0(r29)
 /* 8033B444 00338384  60 00 00 04 */	ori r0, r0, 4
@@ -145,13 +116,10 @@ func_8033B430:
 /* 8033B454 00338394  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B458 00338398  60 00 00 01 */	ori r0, r0, 1
 /* 8033B45C 0033839C  B0 1F 00 00 */	sth r0, 0(r31)
-
-/* 8033B460 0034 .text      func_8033B460                  func_8033B460                  */
-.global func_8033B460
-func_8033B460:
+lbl_8033B460:
 /* 8033B460 003383A0  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B464 003383A4  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8033B468 003383A8  40 82 FF F8 */	bne func_8033B460
+/* 8033B468 003383A8  40 82 FF F8 */	bne lbl_8033B460
 /* 8033B46C 003383AC  4B FF FE 21 */	bl OSGetArenaHi
 /* 8033B470 003383B0  38 83 FF 80 */	addi r4, r3, -128
 /* 8033B474 003383B4  3C 60 81 00 */	lis r3, 0x8100
@@ -163,8 +131,9 @@ func_8033B460:
 /* 8033B48C 003383CC  7C 08 03 A6 */	mtlr r0
 /* 8033B490 003383D0  4E 80 00 20 */	blr 
 
-/* 8033B494 003C .text      __OSStopAudioSystem            __OSStopAudioSystem            */
+/* 8033B494 00D8 .text      __OSStopAudioSystem            __OSStopAudioSystem            */
 .global __OSStopAudioSystem
+__OSStopAudioSystem:
 __OSStopAudioSystem:
 /* 8033B494 003383D4  7C 08 02 A6 */	mflr r0
 /* 8033B498 003383D8  3C 60 CC 00 */	lis r3, 0xCC005000@ha
@@ -180,72 +149,48 @@ __OSStopAudioSystem:
 /* 8033B4C0 00338400  54 00 04 5E */	rlwinm r0, r0, 0, 0x11, 0xf
 /* 8033B4C4 00338404  B0 03 00 36 */	sth r0, 0x36(r3)
 /* 8033B4C8 00338408  A4 1F 00 0A */	lhzu r0, 0xa(r31)
-/* 8033B4CC 0033840C  48 00 00 08 */	b func_8033B4D4
-
-/* 8033B4D0 0004 .text      func_8033B4D0                  func_8033B4D0                  */
-.global func_8033B4D0
-func_8033B4D0:
+/* 8033B4CC 0033840C  48 00 00 08 */	b lbl_8033B4D4
+lbl_8033B4D0:
 /* 8033B4D0 00338410  A0 1F 00 00 */	lhz r0, 0(r31)
-
-/* 8033B4D4 0010 .text      func_8033B4D4                  func_8033B4D4                  */
-.global func_8033B4D4
-func_8033B4D4:
+lbl_8033B4D4:
 /* 8033B4D4 00338414  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
-/* 8033B4D8 00338418  40 82 FF F8 */	bne func_8033B4D0
+/* 8033B4D8 00338418  40 82 FF F8 */	bne lbl_8033B4D0
 /* 8033B4DC 0033841C  A0 1F 00 00 */	lhz r0, 0(r31)
-/* 8033B4E0 00338420  48 00 00 08 */	b func_8033B4E8
-
-/* 8033B4E4 0004 .text      func_8033B4E4                  func_8033B4E4                  */
-.global func_8033B4E4
-func_8033B4E4:
+/* 8033B4E0 00338420  48 00 00 08 */	b lbl_8033B4E8
+lbl_8033B4E4:
 /* 8033B4E4 00338424  A0 1F 00 00 */	lhz r0, 0(r31)
-
-/* 8033B4E8 0020 .text      func_8033B4E8                  func_8033B4E8                  */
-.global func_8033B4E8
-func_8033B4E8:
+lbl_8033B4E8:
 /* 8033B4E8 00338428  54 00 05 AD */	rlwinm. r0, r0, 0, 0x16, 0x16
-/* 8033B4EC 0033842C  40 82 FF F8 */	bne func_8033B4E4
+/* 8033B4EC 0033842C  40 82 FF F8 */	bne lbl_8033B4E4
 /* 8033B4F0 00338430  38 00 08 AC */	li r0, 0x8ac
 /* 8033B4F4 00338434  3C 60 CC 00 */	lis r3, 0xCC005000@ha
 /* 8033B4F8 00338438  B0 1F 00 00 */	sth r0, 0(r31)
 /* 8033B4FC 0033843C  38 00 00 00 */	li r0, 0
 /* 8033B500 00338440  B0 03 50 00 */	sth r0, 0xCC005000@l(r3)
 /* 8033B504 00338444  38 83 50 00 */	addi r4, r3, 0x5000
-
-/* 8033B508 001C .text      func_8033B508                  func_8033B508                  */
-.global func_8033B508
-func_8033B508:
+lbl_8033B508:
 /* 8033B508 00338448  A0 64 00 04 */	lhz r3, 4(r4)
 /* 8033B50C 0033844C  A0 04 00 06 */	lhz r0, 6(r4)
 /* 8033B510 00338450  50 60 80 1E */	rlwimi r0, r3, 0x10, 0, 0xf
 /* 8033B514 00338454  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
-/* 8033B518 00338458  40 82 FF F0 */	bne func_8033B508
+/* 8033B518 00338458  40 82 FF F0 */	bne lbl_8033B508
 /* 8033B51C 0033845C  48 00 71 F9 */	bl OSGetTick
 /* 8033B520 00338460  7C 7E 1B 78 */	mr r30, r3
-
-/* 8033B524 0024 .text      func_8033B524                  func_8033B524                  */
-.global func_8033B524
-func_8033B524:
+lbl_8033B524:
 /* 8033B524 00338464  48 00 71 F1 */	bl OSGetTick
 /* 8033B528 00338468  7C 1E 18 50 */	subf r0, r30, r3
 /* 8033B52C 0033846C  2C 00 00 2C */	cmpwi r0, 0x2c
-/* 8033B530 00338470  41 80 FF F4 */	blt func_8033B524
+/* 8033B530 00338470  41 80 FF F4 */	blt lbl_8033B524
 /* 8033B534 00338474  A0 1F 00 00 */	lhz r0, 0(r31)
 /* 8033B538 00338478  60 00 00 01 */	ori r0, r0, 1
 /* 8033B53C 0033847C  B0 1F 00 00 */	sth r0, 0(r31)
 /* 8033B540 00338480  A0 1F 00 00 */	lhz r0, 0(r31)
-/* 8033B544 00338484  48 00 00 08 */	b func_8033B54C
-
-/* 8033B548 0004 .text      func_8033B548                  func_8033B548                  */
-.global func_8033B548
-func_8033B548:
+/* 8033B544 00338484  48 00 00 08 */	b lbl_8033B54C
+lbl_8033B548:
 /* 8033B548 00338488  A0 1F 00 00 */	lhz r0, 0(r31)
-
-/* 8033B54C 0020 .text      func_8033B54C                  func_8033B54C                  */
-.global func_8033B54C
-func_8033B54C:
+lbl_8033B54C:
 /* 8033B54C 0033848C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
-/* 8033B550 00338490  40 82 FF F8 */	bne func_8033B548
+/* 8033B550 00338490  40 82 FF F8 */	bne lbl_8033B548
 /* 8033B554 00338494  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8033B558 00338498  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8033B55C 0033849C  83 C1 00 08 */	lwz r30, 8(r1)

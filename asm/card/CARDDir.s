@@ -7,11 +7,13 @@
 /* 8035577C 0008 .text      __CARDGetDirBlock              __CARDGetDirBlock              */
 .global __CARDGetDirBlock
 __CARDGetDirBlock:
+__CARDGetDirBlock:
 /* 8035577C 003526BC  80 63 00 84 */	lwz r3, 0x84(r3)
 /* 80355780 003526C0  4E 80 00 20 */	blr 
 
-/* 80355784 0060 .text      CARDDir__WriteCallback         WriteCallback                  */
+/* 80355784 00D0 .text      WriteCallback                  CARDDir__WriteCallback         */
 .global CARDDir__WriteCallback
+CARDDir__WriteCallback:
 CARDDir__WriteCallback:
 /* 80355784 003526C4  7C 08 02 A6 */	mflr r0
 /* 80355788 003526C8  90 01 00 04 */	stw r0, 4(r1)
@@ -25,55 +27,43 @@ CARDDir__WriteCallback:
 /* 803557A8 003526E8  3C 60 80 45 */	lis r3, __CARDBlock@ha
 /* 803557AC 003526EC  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 803557B0 003526F0  7F E0 2A 14 */	add r31, r0, r5
-/* 803557B4 003526F4  41 80 00 44 */	blt func_803557F8
+/* 803557B4 003526F4  41 80 00 44 */	blt lbl_803557F8
 /* 803557B8 003526F8  80 7F 00 80 */	lwz r3, 0x80(r31)
 /* 803557BC 003526FC  80 1F 00 84 */	lwz r0, 0x84(r31)
 /* 803557C0 00352700  38 83 20 00 */	addi r4, r3, 0x2000
 /* 803557C4 00352704  7C 00 20 40 */	cmplw r0, r4
 /* 803557C8 00352708  38 03 40 00 */	addi r0, r3, 0x4000
-/* 803557CC 0035270C  40 82 00 18 */	bne func_803557E4
+/* 803557CC 0035270C  40 82 00 18 */	bne lbl_803557E4
 /* 803557D0 00352710  90 1F 00 84 */	stw r0, 0x84(r31)
 /* 803557D4 00352714  7C 03 03 78 */	mr r3, r0
 /* 803557D8 00352718  38 A0 20 00 */	li r5, 0x2000
 /* 803557DC 0035271C  4B CA DD 65 */	bl memcpy
-/* 803557E0 00352720  48 00 00 18 */	b func_803557F8
-
-/* 803557E4 0014 .text      func_803557E4                  func_803557E4                  */
-.global func_803557E4
-func_803557E4:
+/* 803557E0 00352720  48 00 00 18 */	b lbl_803557F8
+lbl_803557E4:
 /* 803557E4 00352724  90 9F 00 84 */	stw r4, 0x84(r31)
 /* 803557E8 00352728  38 64 00 00 */	addi r3, r4, 0
 /* 803557EC 0035272C  7C 04 03 78 */	mr r4, r0
 /* 803557F0 00352730  38 A0 20 00 */	li r5, 0x2000
 /* 803557F4 00352734  4B CA DD 4D */	bl memcpy
-
-/* 803557F8 0018 .text      func_803557F8                  func_803557F8                  */
-.global func_803557F8
-func_803557F8:
+lbl_803557F8:
 /* 803557F8 00352738  80 1F 00 D0 */	lwz r0, 0xd0(r31)
 /* 803557FC 0035273C  28 00 00 00 */	cmplwi r0, 0
-/* 80355800 00352740  40 82 00 10 */	bne func_80355810
+/* 80355800 00352740  40 82 00 10 */	bne lbl_80355810
 /* 80355804 00352744  38 7F 00 00 */	addi r3, r31, 0
 /* 80355808 00352748  38 9E 00 00 */	addi r4, r30, 0
 /* 8035580C 0035274C  4B FF E4 61 */	bl __CARDPutControlBlock
-
-/* 80355810 0028 .text      func_80355810                  func_80355810                  */
-.global func_80355810
-func_80355810:
+lbl_80355810:
 /* 80355810 00352750  80 1F 00 D8 */	lwz r0, 0xd8(r31)
 /* 80355814 00352754  28 00 00 00 */	cmplwi r0, 0
 /* 80355818 00352758  7C 0C 03 78 */	mr r12, r0
-/* 8035581C 0035275C  41 82 00 1C */	beq func_80355838
+/* 8035581C 0035275C  41 82 00 1C */	beq lbl_80355838
 /* 80355820 00352760  38 00 00 00 */	li r0, 0
 /* 80355824 00352764  7D 88 03 A6 */	mtlr r12
 /* 80355828 00352768  90 1F 00 D8 */	stw r0, 0xd8(r31)
 /* 8035582C 0035276C  38 7D 00 00 */	addi r3, r29, 0
 /* 80355830 00352770  38 9E 00 00 */	addi r4, r30, 0
 /* 80355834 00352774  4E 80 00 21 */	blrl 
-
-/* 80355838 001C .text      func_80355838                  func_80355838                  */
-.global func_80355838
-func_80355838:
+lbl_80355838:
 /* 80355838 00352778  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8035583C 0035277C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80355840 00352780  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -82,8 +72,9 @@ func_80355838:
 /* 8035584C 0035278C  7C 08 03 A6 */	mtlr r0
 /* 80355850 00352790  4E 80 00 20 */	blr 
 
-/* 80355854 006C .text      CARDDir__EraseCallback         EraseCallback                  */
+/* 80355854 00C8 .text      EraseCallback                  CARDDir__EraseCallback         */
 .global CARDDir__EraseCallback
+CARDDir__EraseCallback:
 CARDDir__EraseCallback:
 /* 80355854 00352794  7C 08 02 A6 */	mflr r0
 /* 80355858 00352798  90 01 00 04 */	stw r0, 4(r1)
@@ -97,7 +88,7 @@ CARDDir__EraseCallback:
 /* 80355878 003527B8  38 03 CB C0 */	addi r0, r3, __CARDBlock@l
 /* 8035587C 003527BC  7C 9D 23 79 */	or. r29, r4, r4
 /* 80355880 003527C0  7F C0 2A 14 */	add r30, r0, r5
-/* 80355884 003527C4  41 80 00 3C */	blt func_803558C0
+/* 80355884 003527C4  41 80 00 3C */	blt lbl_803558C0
 /* 80355888 003527C8  80 BE 00 84 */	lwz r5, 0x84(r30)
 /* 8035588C 003527CC  3C 60 80 35 */	lis r3, CARDDir__WriteCallback@ha
 /* 80355890 003527D0  80 1E 00 80 */	lwz r0, 0x80(r30)
@@ -111,35 +102,26 @@ CARDDir__EraseCallback:
 /* 803558B0 003527F0  38 A0 20 00 */	li r5, 0x2000
 /* 803558B4 003527F4  4B FF FA F9 */	bl __CARDWrite
 /* 803558B8 003527F8  7C 7D 1B 79 */	or. r29, r3, r3
-/* 803558BC 003527FC  40 80 00 44 */	bge func_80355900
-
-/* 803558C0 0018 .text      func_803558C0                  func_803558C0                  */
-.global func_803558C0
-func_803558C0:
+/* 803558BC 003527FC  40 80 00 44 */	bge lbl_80355900
+lbl_803558C0:
 /* 803558C0 00352800  80 1E 00 D0 */	lwz r0, 0xd0(r30)
 /* 803558C4 00352804  28 00 00 00 */	cmplwi r0, 0
-/* 803558C8 00352808  40 82 00 10 */	bne func_803558D8
+/* 803558C8 00352808  40 82 00 10 */	bne lbl_803558D8
 /* 803558CC 0035280C  38 7E 00 00 */	addi r3, r30, 0
 /* 803558D0 00352810  38 9D 00 00 */	addi r4, r29, 0
 /* 803558D4 00352814  4B FF E3 99 */	bl __CARDPutControlBlock
-
-/* 803558D8 0028 .text      func_803558D8                  func_803558D8                  */
-.global func_803558D8
-func_803558D8:
+lbl_803558D8:
 /* 803558D8 00352818  80 1E 00 D8 */	lwz r0, 0xd8(r30)
 /* 803558DC 0035281C  28 00 00 00 */	cmplwi r0, 0
 /* 803558E0 00352820  7C 0C 03 78 */	mr r12, r0
-/* 803558E4 00352824  41 82 00 1C */	beq func_80355900
+/* 803558E4 00352824  41 82 00 1C */	beq lbl_80355900
 /* 803558E8 00352828  38 00 00 00 */	li r0, 0
 /* 803558EC 0035282C  7D 88 03 A6 */	mtlr r12
 /* 803558F0 00352830  90 1E 00 D8 */	stw r0, 0xd8(r30)
 /* 803558F4 00352834  38 7F 00 00 */	addi r3, r31, 0
 /* 803558F8 00352838  38 9D 00 00 */	addi r4, r29, 0
 /* 803558FC 0035283C  4E 80 00 21 */	blrl 
-
-/* 80355900 001C .text      func_80355900                  func_80355900                  */
-.global func_80355900
-func_80355900:
+lbl_80355900:
 /* 80355900 00352840  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 80355904 00352844  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 80355908 00352848  83 C1 00 20 */	lwz r30, 0x20(r1)
@@ -148,8 +130,9 @@ func_80355900:
 /* 80355914 00352854  7C 08 03 A6 */	mtlr r0
 /* 80355918 00352858  4E 80 00 20 */	blr 
 
-/* 8035591C 0048 .text      __CARDUpdateDir                __CARDUpdateDir                */
+/* 8035591C 00C4 .text      __CARDUpdateDir                __CARDUpdateDir                */
 .global __CARDUpdateDir
+__CARDUpdateDir:
 __CARDUpdateDir:
 /* 8035591C 0035285C  7C 08 02 A6 */	mflr r0
 /* 80355920 00352860  90 01 00 04 */	stw r0, 4(r1)
@@ -166,13 +149,10 @@ __CARDUpdateDir:
 /* 8035594C 0035288C  7F C0 2A 14 */	add r30, r0, r5
 /* 80355950 00352890  80 1E 00 00 */	lwz r0, 0(r30)
 /* 80355954 00352894  2C 00 00 00 */	cmpwi r0, 0
-/* 80355958 00352898  40 82 00 0C */	bne func_80355964
+/* 80355958 00352898  40 82 00 0C */	bne lbl_80355964
 /* 8035595C 0035289C  38 60 FF FD */	li r3, -3
-/* 80355960 003528A0  48 00 00 60 */	b func_803559C0
-
-/* 80355964 005C .text      func_80355964                  func_80355964                  */
-.global func_80355964
-func_80355964:
+/* 80355960 003528A0  48 00 00 60 */	b lbl_803559C0
+lbl_80355964:
 /* 80355964 003528A4  83 FE 00 84 */	lwz r31, 0x84(r30)
 /* 80355968 003528A8  38 80 1F FC */	li r4, 0x1ffc
 /* 8035596C 003528AC  A8 BF 1F FA */	lha r5, 0x1ffa(r31)
@@ -196,10 +176,7 @@ func_80355964:
 /* 803559B4 003528F4  54 00 9B 7E */	srwi r0, r0, 0xd
 /* 803559B8 003528F8  7C 84 01 D6 */	mullw r4, r4, r0
 /* 803559BC 003528FC  4B FF DF FD */	bl __CARDEraseSector
-
-/* 803559C0 0020 .text      func_803559C0                  func_803559C0                  */
-.global func_803559C0
-func_803559C0:
+lbl_803559C0:
 /* 803559C0 00352900  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 803559C4 00352904  83 E1 00 24 */	lwz r31, 0x24(r1)
 /* 803559C8 00352908  83 C1 00 20 */	lwz r30, 0x20(r1)

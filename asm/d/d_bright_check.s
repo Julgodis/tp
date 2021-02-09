@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80192F10 0054 .text      __ct__14dBrightCheck_cFP10JKRArchive __ct__14dBrightCheck_cFP10JKRArchive */
+/* 80192F10 0088 .text      __ct__14dBrightCheck_cFP10JKRArchive __ct__14dBrightCheck_cFP10JKRArchive */
 .global __ct__14dBrightCheck_cFP10JKRArchive
+__ct__14dBrightCheck_cFP10JKRArchive:
 __ct__14dBrightCheck_cFP10JKRArchive:
 /* 80192F10 0018FE50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192F14 0018FE54  7C 08 02 A6 */	mflr r0
@@ -25,13 +26,10 @@ __ct__14dBrightCheck_cFP10JKRArchive:
 /* 80192F4C 0018FE8C  38 60 00 2C */	li r3, 0x2c
 /* 80192F50 0018FE90  48 13 BC FD */	bl __nw__FUl
 /* 80192F54 0018FE94  7C 60 1B 79 */	or. r0, r3, r3
-/* 80192F58 0018FE98  41 82 00 0C */	beq func_80192F64
+/* 80192F58 0018FE98  41 82 00 0C */	beq lbl_80192F64
 /* 80192F5C 0018FE9C  48 0B 6C C5 */	bl __ct__12dMsgString_cFv
 /* 80192F60 0018FEA0  7C 60 1B 78 */	mr r0, r3
-
-/* 80192F64 0034 .text      func_80192F64                  func_80192F64                  */
-.global func_80192F64
-func_80192F64:
+lbl_80192F64:
 /* 80192F64 0018FEA4  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 80192F68 0018FEA8  7F E3 FB 78 */	mr r3, r31
 /* 80192F6C 0018FEAC  48 00 00 C5 */	bl screenSet__14dBrightCheck_cFv
@@ -46,8 +44,9 @@ func_80192F64:
 /* 80192F90 0018FED0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80192F94 0018FED4  4E 80 00 20 */	blr 
 
-/* 80192F98 004C .text      __dt__14dBrightCheck_cFv       __dt__14dBrightCheck_cFv       */
+/* 80192F98 0098 .text      __dt__14dBrightCheck_cFv       __dt__14dBrightCheck_cFv       */
 .global __dt__14dBrightCheck_cFv
+__dt__14dBrightCheck_cFv:
 __dt__14dBrightCheck_cFv:
 /* 80192F98 0018FED8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192F9C 0018FEDC  7C 08 02 A6 */	mflr r0
@@ -56,42 +55,33 @@ __dt__14dBrightCheck_cFv:
 /* 80192FA8 0018FEE8  93 C1 00 08 */	stw r30, 8(r1)
 /* 80192FAC 0018FEEC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80192FB0 0018FEF0  7C 9F 23 78 */	mr r31, r4
-/* 80192FB4 0018FEF4  41 82 00 60 */	beq func_80193014
+/* 80192FB4 0018FEF4  41 82 00 60 */	beq lbl_80193014
 /* 80192FB8 0018FEF8  3C 60 80 3C */	lis r3, __vt__14dBrightCheck_c@ha
 /* 80192FBC 0018FEFC  38 03 B5 FC */	addi r0, r3, __vt__14dBrightCheck_c@l
 /* 80192FC0 0018FF00  90 1E 00 00 */	stw r0, 0(r30)
 /* 80192FC4 0018FF04  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80192FC8 0018FF08  28 03 00 00 */	cmplwi r3, 0
-/* 80192FCC 0018FF0C  41 82 00 18 */	beq func_80192FE4
+/* 80192FCC 0018FF0C  41 82 00 18 */	beq lbl_80192FE4
 /* 80192FD0 0018FF10  38 80 00 01 */	li r4, 1
 /* 80192FD4 0018FF14  81 83 00 00 */	lwz r12, 0(r3)
 /* 80192FD8 0018FF18  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80192FDC 0018FF1C  7D 89 03 A6 */	mtctr r12
 /* 80192FE0 0018FF20  4E 80 04 21 */	bctrl 
-
-/* 80192FE4 0020 .text      func_80192FE4                  func_80192FE4                  */
-.global func_80192FE4
-func_80192FE4:
+lbl_80192FE4:
 /* 80192FE4 0018FF24  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 80192FE8 0018FF28  38 80 00 01 */	li r4, 1
 /* 80192FEC 0018FF2C  48 0B 6D 3D */	bl __dt__12dMsgString_cFv
 /* 80192FF0 0018FF30  34 1E 00 08 */	addic. r0, r30, 8
-/* 80192FF4 0018FF34  41 82 00 10 */	beq func_80193004
+/* 80192FF4 0018FF34  41 82 00 10 */	beq lbl_80193004
 /* 80192FF8 0018FF38  3C 60 80 3C */	lis r3, __vt__19dDlst_BrightCheck_c@ha
 /* 80192FFC 0018FF3C  38 03 B5 EC */	addi r0, r3, __vt__19dDlst_BrightCheck_c@l
 /* 80193000 0018FF40  90 1E 00 08 */	stw r0, 8(r30)
-
-/* 80193004 0010 .text      func_80193004                  func_80193004                  */
-.global func_80193004
-func_80193004:
+lbl_80193004:
 /* 80193004 0018FF44  7F E0 07 35 */	extsh. r0, r31
-/* 80193008 0018FF48  40 81 00 0C */	ble func_80193014
+/* 80193008 0018FF48  40 81 00 0C */	ble lbl_80193014
 /* 8019300C 0018FF4C  7F C3 F3 78 */	mr r3, r30
 /* 80193010 0018FF50  48 13 BD 2D */	bl __dl__FPv
-
-/* 80193014 001C .text      func_80193014                  func_80193014                  */
-.global func_80193014
-func_80193014:
+lbl_80193014:
 /* 80193014 0018FF54  7F C3 F3 78 */	mr r3, r30
 /* 80193018 0018FF58  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8019301C 0018FF5C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -100,8 +90,9 @@ func_80193014:
 /* 80193028 0018FF68  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019302C 0018FF6C  4E 80 00 20 */	blr 
 
-/* 80193030 0040 .text      screenSet__14dBrightCheck_cFv  screenSet__14dBrightCheck_cFv  */
+/* 80193030 04A0 .text      screenSet__14dBrightCheck_cFv  screenSet__14dBrightCheck_cFv  */
 .global screenSet__14dBrightCheck_cFv
+screenSet__14dBrightCheck_cFv:
 screenSet__14dBrightCheck_cFv:
 /* 80193030 0018FF70  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80193034 0018FF74  7C 08 02 A6 */	mflr r0
@@ -111,18 +102,15 @@ screenSet__14dBrightCheck_cFv:
 /* 80193044 0018FF84  39 61 00 50 */	addi r11, r1, 0x50
 /* 80193048 0018FF88  48 1C F1 79 */	bl _savegpr_22
 /* 8019304C 0018FF8C  7C 7E 1B 78 */	mr r30, r3
-/* 80193050 0018FF90  3C 60 80 39 */	lis r3, d_d_bright_check__sym_80394910@ha
-/* 80193054 0018FF94  3B E3 49 10 */	addi r31, r3, d_d_bright_check__sym_80394910@l
+/* 80193050 0018FF90  3C 60 80 39 */	lis r3, d_d_bright_check__data_80394910@ha
+/* 80193054 0018FF94  3B E3 49 10 */	addi r31, r3, d_d_bright_check__data_80394910@l
 /* 80193058 0018FF98  38 60 01 18 */	li r3, 0x118
 /* 8019305C 0018FF9C  48 13 BB F1 */	bl __nw__FUl
 /* 80193060 0018FFA0  7C 60 1B 79 */	or. r0, r3, r3
-/* 80193064 0018FFA4  41 82 00 0C */	beq func_80193070
+/* 80193064 0018FFA4  41 82 00 0C */	beq lbl_80193070
 /* 80193068 0018FFA8  48 16 54 31 */	bl __ct__9J2DScreenFv
 /* 8019306C 0018FFAC  7C 60 1B 78 */	mr r0, r3
-
-/* 80193070 0140 .text      func_80193070                  func_80193070                  */
-.global func_80193070
-func_80193070:
+lbl_80193070:
 /* 80193070 0018FFB0  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 80193074 0018FFB4  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80193078 0018FFB8  3C 80 80 39 */	lis r4, d_d_bright_check__stringBase0@ha
@@ -203,10 +191,7 @@ func_80193070:
 /* 801931A4 001900E4  3B 5F 00 00 */	addi r26, r31, 0
 /* 801931A8 001900E8  3C 60 80 39 */	lis r3, d_d_bright_check__stringBase0@ha
 /* 801931AC 001900EC  3B 63 49 D8 */	addi r27, r3, d_d_bright_check__stringBase0@l
-
-/* 801931B0 00D0 .text      func_801931B0                  func_801931B0                  */
-.global func_801931B0
-func_801931B0:
+lbl_801931B0:
 /* 801931B0 001900F0  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 801931B4 001900F4  7C D9 E2 14 */	add r6, r25, r28
 /* 801931B8 001900F8  80 A6 00 00 */	lwz r5, 0(r6)
@@ -254,15 +239,12 @@ func_801931B0:
 /* 80193260 001901A0  2C 16 00 05 */	cmpwi r22, 5
 /* 80193264 001901A4  3B BD 00 04 */	addi r29, r29, 4
 /* 80193268 001901A8  3B 9C 00 08 */	addi r28, r28, 8
-/* 8019326C 001901AC  41 80 FF 44 */	blt func_801931B0
+/* 8019326C 001901AC  41 80 FF 44 */	blt lbl_801931B0
 /* 80193270 001901B0  3A C0 00 00 */	li r22, 0
 /* 80193274 001901B4  3B A0 00 00 */	li r29, 0
 /* 80193278 001901B8  3B 7F 00 A0 */	addi r27, r31, 0xa0
 /* 8019327C 001901BC  3B 80 00 00 */	li r28, 0
-
-/* 80193280 0044 .text      func_80193280                  func_80193280                  */
-.global func_80193280
-func_80193280:
+lbl_80193280:
 /* 80193280 001901C0  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80193284 001901C4  7C DB EA 14 */	add r6, r27, r29
 /* 80193288 001901C8  80 A6 00 00 */	lwz r5, 0(r6)
@@ -275,15 +257,12 @@ func_80193280:
 /* 801932A4 001901E4  3A D6 00 01 */	addi r22, r22, 1
 /* 801932A8 001901E8  2C 16 00 05 */	cmpwi r22, 5
 /* 801932AC 001901EC  3B BD 00 08 */	addi r29, r29, 8
-/* 801932B0 001901F0  41 80 FF D0 */	blt func_80193280
+/* 801932B0 001901F0  41 80 FF D0 */	blt lbl_80193280
 /* 801932B4 001901F4  3A C0 00 00 */	li r22, 0
 /* 801932B8 001901F8  3B A0 00 00 */	li r29, 0
 /* 801932BC 001901FC  3B 9F 00 50 */	addi r28, r31, 0x50
 /* 801932C0 00190200  C3 E2 A0 00 */	lfs f31, d_d_bright_check__LIT_3792-_SDA2_BASE_(r2)
-
-/* 801932C4 0098 .text      func_801932C4                  func_801932C4                  */
-.global func_801932C4
-func_801932C4:
+lbl_801932C4:
 /* 801932C4 00190204  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 801932C8 00190208  7C DC EA 14 */	add r6, r28, r29
 /* 801932CC 0019020C  80 A6 00 00 */	lwz r5, 0(r6)
@@ -302,7 +281,7 @@ func_801932C4:
 /* 80193300 00190240  4E 80 04 21 */	bctrl 
 /* 80193304 00190244  D3 F7 01 14 */	stfs f31, 0x114(r23)
 /* 80193308 00190248  2C 16 00 02 */	cmpwi r22, 2
-/* 8019330C 0019024C  40 80 00 50 */	bge func_8019335C
+/* 8019330C 0019024C  40 80 00 50 */	bge lbl_8019335C
 /* 80193310 00190250  7E E3 BB 78 */	mr r3, r23
 /* 80193314 00190254  38 80 01 00 */	li r4, 0x100
 /* 80193318 00190258  3C A0 80 39 */	lis r5, d_d_bright_check__stringBase0@ha
@@ -321,13 +300,10 @@ func_801932C4:
 /* 8019334C 0019028C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80193350 00190290  7D 89 03 A6 */	mtctr r12
 /* 80193354 00190294  4E 80 04 21 */	bctrl 
-/* 80193358 00190298  48 00 01 48 */	b func_801934A0
-
-/* 8019335C 0054 .text      func_8019335C                  func_8019335C                  */
-.global func_8019335C
-func_8019335C:
+/* 80193358 00190298  48 00 01 48 */	b lbl_801934A0
+lbl_8019335C:
 /* 8019335C 0019029C  2C 16 00 04 */	cmpwi r22, 4
-/* 80193360 001902A0  40 80 00 50 */	bge func_801933B0
+/* 80193360 001902A0  40 80 00 50 */	bge lbl_801933B0
 /* 80193364 001902A4  7E E3 BB 78 */	mr r3, r23
 /* 80193368 001902A8  38 80 01 00 */	li r4, 0x100
 /* 8019336C 001902AC  3C A0 80 39 */	lis r5, d_d_bright_check__stringBase0@ha
@@ -346,13 +322,10 @@ func_8019335C:
 /* 801933A0 001902E0  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801933A4 001902E4  7D 89 03 A6 */	mtctr r12
 /* 801933A8 001902E8  4E 80 04 21 */	bctrl 
-/* 801933AC 001902EC  48 00 00 F4 */	b func_801934A0
-
-/* 801933B0 0054 .text      func_801933B0                  func_801933B0                  */
-.global func_801933B0
-func_801933B0:
+/* 801933AC 001902EC  48 00 00 F4 */	b lbl_801934A0
+lbl_801933B0:
 /* 801933B0 001902F0  2C 16 00 06 */	cmpwi r22, 6
-/* 801933B4 001902F4  40 80 00 50 */	bge func_80193404
+/* 801933B4 001902F4  40 80 00 50 */	bge lbl_80193404
 /* 801933B8 001902F8  7E E3 BB 78 */	mr r3, r23
 /* 801933BC 001902FC  38 80 01 00 */	li r4, 0x100
 /* 801933C0 00190300  3C A0 80 39 */	lis r5, d_d_bright_check__stringBase0@ha
@@ -371,13 +344,10 @@ func_801933B0:
 /* 801933F4 00190334  81 8C 00 08 */	lwz r12, 8(r12)
 /* 801933F8 00190338  7D 89 03 A6 */	mtctr r12
 /* 801933FC 0019033C  4E 80 04 21 */	bctrl 
-/* 80193400 00190340  48 00 00 A0 */	b func_801934A0
-
-/* 80193404 0054 .text      func_80193404                  func_80193404                  */
-.global func_80193404
-func_80193404:
+/* 80193400 00190340  48 00 00 A0 */	b lbl_801934A0
+lbl_80193404:
 /* 80193404 00190344  2C 16 00 08 */	cmpwi r22, 8
-/* 80193408 00190348  40 80 00 50 */	bge func_80193458
+/* 80193408 00190348  40 80 00 50 */	bge lbl_80193458
 /* 8019340C 0019034C  7E E3 BB 78 */	mr r3, r23
 /* 80193410 00190350  38 80 01 00 */	li r4, 0x100
 /* 80193414 00190354  3C A0 80 39 */	lis r5, d_d_bright_check__stringBase0@ha
@@ -396,11 +366,8 @@ func_80193404:
 /* 80193448 00190388  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8019344C 0019038C  7D 89 03 A6 */	mtctr r12
 /* 80193450 00190390  4E 80 04 21 */	bctrl 
-/* 80193454 00190394  48 00 00 4C */	b func_801934A0
-
-/* 80193458 0048 .text      func_80193458                  func_80193458                  */
-.global func_80193458
-func_80193458:
+/* 80193454 00190394  48 00 00 4C */	b lbl_801934A0
+lbl_80193458:
 /* 80193458 00190398  7E E3 BB 78 */	mr r3, r23
 /* 8019345C 0019039C  38 80 01 00 */	li r4, 0x100
 /* 80193460 001903A0  3C A0 80 39 */	lis r5, d_d_bright_check__stringBase0@ha
@@ -419,14 +386,11 @@ func_80193458:
 /* 80193494 001903D4  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80193498 001903D8  7D 89 03 A6 */	mtctr r12
 /* 8019349C 001903DC  4E 80 04 21 */	bctrl 
-
-/* 801934A0 0030 .text      func_801934A0                  func_801934A0                  */
-.global func_801934A0
-func_801934A0:
+lbl_801934A0:
 /* 801934A0 001903E0  3A D6 00 01 */	addi r22, r22, 1
 /* 801934A4 001903E4  2C 16 00 0A */	cmpwi r22, 0xa
 /* 801934A8 001903E8  3B BD 00 08 */	addi r29, r29, 8
-/* 801934AC 001903EC  41 80 FE 18 */	blt func_801932C4
+/* 801934AC 001903EC  41 80 FE 18 */	blt lbl_801932C4
 /* 801934B0 001903F0  E3 E1 00 58 */	psq_l f31, 88(r1), 0, qr0
 /* 801934B4 001903F4  CB E1 00 50 */	lfd f31, 0x50(r1)
 /* 801934B8 001903F8  39 61 00 50 */	addi r11, r1, 0x50
@@ -438,6 +402,7 @@ func_801934A0:
 
 /* 801934D0 0038 .text      _move__14dBrightCheck_cFv      _move__14dBrightCheck_cFv      */
 .global _move__14dBrightCheck_cFv
+_move__14dBrightCheck_cFv:
 _move__14dBrightCheck_cFv:
 /* 801934D0 00190410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801934D4 00190414  7C 08 02 A6 */	mflr r0
@@ -457,10 +422,12 @@ _move__14dBrightCheck_cFv:
 /* 80193508 0004 .text      modeWait__14dBrightCheck_cFv   modeWait__14dBrightCheck_cFv   */
 .global modeWait__14dBrightCheck_cFv
 modeWait__14dBrightCheck_cFv:
+modeWait__14dBrightCheck_cFv:
 /* 80193508 00190448  4E 80 00 20 */	blr 
 
-/* 8019350C 0030 .text      modeMove__14dBrightCheck_cFv   modeMove__14dBrightCheck_cFv   */
+/* 8019350C 0088 .text      modeMove__14dBrightCheck_cFv   modeMove__14dBrightCheck_cFv   */
 .global modeMove__14dBrightCheck_cFv
+modeMove__14dBrightCheck_cFv:
 modeMove__14dBrightCheck_cFv:
 /* 8019350C 0019044C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80193510 00190450  7C 08 02 A6 */	mflr r0
@@ -471,13 +438,10 @@ modeMove__14dBrightCheck_cFv:
 /* 80193524 00190464  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
 /* 80193528 00190468  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 8019352C 0019046C  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
-/* 80193530 00190470  40 82 00 0C */	bne func_8019353C
+/* 80193530 00190470  40 82 00 0C */	bne lbl_8019353C
 /* 80193534 00190474  54 60 04 E7 */	rlwinm. r0, r3, 0, 0x13, 0x13
-/* 80193538 00190478  41 82 00 48 */	beq func_80193580
-
-/* 8019353C 0044 .text      func_8019353C                  func_8019353C                  */
-.global func_8019353C
-func_8019353C:
+/* 80193538 00190478  41 82 00 48 */	beq lbl_80193580
+lbl_8019353C:
 /* 8019353C 0019047C  38 00 00 01 */	li r0, 1
 /* 80193540 00190480  90 01 00 08 */	stw r0, 8(r1)
 /* 80193544 00190484  80 6D 8D E8 */	lwz r3, mAudioMgrPtr__10Z2AudioMgr-_SDA_BASE_(r13)
@@ -495,10 +459,7 @@ func_8019353C:
 /* 80193574 001904B4  98 1F 00 19 */	stb r0, 0x19(r31)
 /* 80193578 001904B8  38 00 00 00 */	li r0, 0
 /* 8019357C 001904BC  98 1F 00 18 */	stb r0, 0x18(r31)
-
-/* 80193580 0014 .text      func_80193580                  func_80193580                  */
-.global func_80193580
-func_80193580:
+lbl_80193580:
 /* 80193580 001904C0  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80193584 001904C4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80193588 001904C8  7C 08 03 A6 */	mtlr r0
@@ -507,6 +468,7 @@ func_80193580:
 
 /* 80193594 003C .text      _draw__14dBrightCheck_cFv      _draw__14dBrightCheck_cFv      */
 .global _draw__14dBrightCheck_cFv
+_draw__14dBrightCheck_cFv:
 _draw__14dBrightCheck_cFv:
 /* 80193594 001904D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80193598 001904D8  7C 08 02 A6 */	mflr r0
@@ -527,6 +489,7 @@ _draw__14dBrightCheck_cFv:
 /* 801935D0 0038 .text      draw__19dDlst_BrightCheck_cFv  draw__19dDlst_BrightCheck_cFv  */
 .global draw__19dDlst_BrightCheck_cFv
 draw__19dDlst_BrightCheck_cFv:
+draw__19dDlst_BrightCheck_cFv:
 /* 801935D0 00190510  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801935D4 00190514  7C 08 02 A6 */	mflr r0
 /* 801935D8 00190518  90 01 00 14 */	stw r0, 0x14(r1)
@@ -545,6 +508,7 @@ draw__19dDlst_BrightCheck_cFv:
 /* 80193608 0040 .text      __sinit_d_bright_check_cpp     __sinit_d_bright_check_cpp     */
 .global __sinit_d_bright_check_cpp
 __sinit_d_bright_check_cpp:
+__sinit_d_bright_check_cpp:
 /* 80193608 00190548  3C 60 80 3C */	lis r3, d_d_bright_check__cNullVec__6Z2Calc@ha
 /* 8019360C 0019054C  38 A3 B5 B0 */	addi r5, r3, d_d_bright_check__cNullVec__6Z2Calc@l
 /* 80193610 00190550  80 65 00 0C */	lwz r3, 0xc(r5)
@@ -562,25 +526,23 @@ __sinit_d_bright_check_cpp:
 /* 80193640 00190580  90 04 00 14 */	stw r0, 0x14(r4)
 /* 80193644 00190584  4E 80 00 20 */	blr 
 
-/* 80193648 0030 .text      __dt__19dDlst_BrightCheck_cFv  __dt__19dDlst_BrightCheck_cFv  */
+/* 80193648 0048 .text      __dt__19dDlst_BrightCheck_cFv  __dt__19dDlst_BrightCheck_cFv  */
 .global __dt__19dDlst_BrightCheck_cFv
+__dt__19dDlst_BrightCheck_cFv:
 __dt__19dDlst_BrightCheck_cFv:
 /* 80193648 00190588  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019364C 0019058C  7C 08 02 A6 */	mflr r0
 /* 80193650 00190590  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80193654 00190594  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80193658 00190598  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8019365C 0019059C  41 82 00 1C */	beq func_80193678
+/* 8019365C 0019059C  41 82 00 1C */	beq lbl_80193678
 /* 80193660 001905A0  3C A0 80 3C */	lis r5, __vt__19dDlst_BrightCheck_c@ha
 /* 80193664 001905A4  38 05 B5 EC */	addi r0, r5, __vt__19dDlst_BrightCheck_c@l
 /* 80193668 001905A8  90 1F 00 00 */	stw r0, 0(r31)
 /* 8019366C 001905AC  7C 80 07 35 */	extsh. r0, r4
-/* 80193670 001905B0  40 81 00 08 */	ble func_80193678
+/* 80193670 001905B0  40 81 00 08 */	ble lbl_80193678
 /* 80193674 001905B4  48 13 B6 C9 */	bl __dl__FPv
-
-/* 80193678 0018 .text      func_80193678                  func_80193678                  */
-.global func_80193678
-func_80193678:
+lbl_80193678:
 /* 80193678 001905B8  7F E3 FB 78 */	mr r3, r31
 /* 8019367C 001905BC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80193680 001905C0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -593,41 +555,41 @@ func_80193678:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394910 0000 .rodata    d_d_bright_check__sym_80394910 ...rodata.0                    */
-.global d_d_bright_check__sym_80394910
-d_d_bright_check__sym_80394910:
+/* 80394910 0000 .rodata    ...rodata.0                    d_d_bright_check__data_80394910 */
+.global d_d_bright_check__data_80394910
+d_d_bright_check__data_80394910:
 
-/* 80394910 0028 .rodata    d_d_bright_check__sym_80394910 tv_btnA$3744                   */
-.global d_d_bright_check__sym_80394910
-d_d_bright_check__sym_80394910:
+/* 80394910 0028 .rodata    tv_btnA$3744                   d_d_bright_check__data_80394910 */
+.global d_d_bright_check__data_80394910
+d_d_bright_check__data_80394910:
 .byte 0x63, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x31, 0x63, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x32 /* baserom.dol+0x391910 */
 .byte 0x63, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x33, 0x63, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x34 /* baserom.dol+0x391920 */
 .byte 0x00, 0x63, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74 /* baserom.dol+0x391930 */
 
-/* 80394938 0028 .rodata    sym_80394938                   ftv_btnA$3745                  */
-.global sym_80394938
-sym_80394938:
+/* 80394938 0028 .rodata    ftv_btnA$3745                  data_80394938                  */
+.global data_80394938
+data_80394938:
 .byte 0x00, 0x66, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x31, 0x66, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x32 /* baserom.dol+0x391938 */
 .byte 0x66, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x33, 0x66, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74, 0x34 /* baserom.dol+0x391948 */
 .byte 0x00, 0x66, 0x6f, 0x6e, 0x74, 0x5f, 0x61, 0x74 /* baserom.dol+0x391958 */
 
-/* 80394960 0050 .rodata    sym_80394960                   txTV$3751                      */
-.global sym_80394960
-sym_80394960:
+/* 80394960 0050 .rodata    txTV$3751                      data_80394960                  */
+.global data_80394960
+data_80394960:
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x36, 0x31, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x32 /* baserom.dol+0x391960 */
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x39, 0x31, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x31 /* baserom.dol+0x391970 */
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x74, 0x31, 0x30, 0x31, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x30, 0x31 /* baserom.dol+0x391980 */
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x37, 0x31, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x33 /* baserom.dol+0x391990 */
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x38, 0x31, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x74, 0x34 /* baserom.dol+0x3919a0 */
 
-/* 803949B0 0028 .rodata    sym_803949B0                   txTVhide$3752                  */
-.global sym_803949B0
-sym_803949B0:
+/* 803949B0 0028 .rodata    txTVhide$3752                  data_803949B0                  */
+.global data_803949B0
+data_803949B0:
 .byte 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x36, 0x6e, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x39, 0x6e /* baserom.dol+0x3919b0 */
 .byte 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x31, 0x30, 0x6e, 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x37, 0x6e /* baserom.dol+0x3919c0 */
 .byte 0x00, 0x6d, 0x65, 0x6e, 0x75, 0x5f, 0x38, 0x6e /* baserom.dol+0x3919d0 */
 
-/* 803949D8 0018 .rodata    d_d_bright_check__stringBase0  @stringBase0                   */
+/* 803949D8 0018 .rodata    @stringBase0                   d_d_bright_check__stringBase0  */
 .global d_d_bright_check__stringBase0
 d_d_bright_check__stringBase0:
 .byte 0x7a, 0x65, 0x6c, 0x64, 0x61, 0x5f, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x5f, 0x63, 0x68, 0x65 /* baserom.dol+0x3919d8 */
@@ -638,21 +600,21 @@ d_d_bright_check__stringBase0:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803BB5B0 0000 .data      sym_803BB5B0                   ...data.0                      */
-.global sym_803BB5B0
-sym_803BB5B0:
+/* 803BB5B0 0000 .data      ...data.0                      data_803BB5B0                  */
+.global data_803BB5B0
+data_803BB5B0:
 
-/* 803BB5B0 000C .data      d_d_bright_check__cNullVec__6Z2Calc cNullVec__6Z2Calc              */
+/* 803BB5B0 000C .data      cNullVec__6Z2Calc              d_d_bright_check__cNullVec__6Z2Calc */
 .global d_d_bright_check__cNullVec__6Z2Calc
 d_d_bright_check__cNullVec__6Z2Calc:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b85b0 */
 
-/* 803BB5BC 000C .data      d_d_bright_check__LIT_3797     @3797                          */
+/* 803BB5BC 000C .data      @3797                          d_d_bright_check__LIT_3797     */
 .global d_d_bright_check__LIT_3797
 d_d_bright_check__LIT_3797:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0x35, 0x08 /* baserom.dol+0x3b85bc */
 
-/* 803BB5C8 000C .data      d_d_bright_check__LIT_3798     @3798                          */
+/* 803BB5C8 000C .data      @3798                          d_d_bright_check__LIT_3798     */
 .global d_d_bright_check__LIT_3798
 d_d_bright_check__LIT_3798:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x19, 0x35, 0x0c /* baserom.dol+0x3b85c8 */
@@ -666,32 +628,37 @@ brightChackProc:
 /* 803BB5EC 0010 .data      __vt__19dDlst_BrightCheck_c    __vt__19dDlst_BrightCheck_c    */
 .global __vt__19dDlst_BrightCheck_c
 __vt__19dDlst_BrightCheck_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0x35, 0xd0, 0x80, 0x19, 0x36, 0x48 /* baserom.dol+0x3b85ec */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__19dDlst_BrightCheck_cFv
+.4byte __dt__19dDlst_BrightCheck_cFv
 
 /* 803BB5FC 000C .data      __vt__14dBrightCheck_c         __vt__14dBrightCheck_c         */
 .global __vt__14dBrightCheck_c
 __vt__14dBrightCheck_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0x2f, 0x98 /* baserom.dol+0x3b85fc */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b8608 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__14dBrightCheck_cFv
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453A00 0004 .sdata2    d_d_bright_check__LIT_3792     @3792                          */
+/* 80453A00 0004 .sdata2    @3792                          d_d_bright_check__LIT_3792     */
 .global d_d_bright_check__LIT_3792
 d_d_bright_check__LIT_3792:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2860 */
 
-/* 80453A04 0004 .sdata2    d_d_bright_check__LIT_3821     @3821                          */
+/* 80453A04 0004 .sdata2    @3821                          d_d_bright_check__LIT_3821     */
 .global d_d_bright_check__LIT_3821
 d_d_bright_check__LIT_3821:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2864 */
 
-/* 80453A08 0004 .sdata2    d_d_bright_check__LIT_3822     @3822                          */
+/* 80453A08 0004 .sdata2    @3822                          d_d_bright_check__LIT_3822     */
 .global d_d_bright_check__LIT_3822
 d_d_bright_check__LIT_3822:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2868 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d286c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

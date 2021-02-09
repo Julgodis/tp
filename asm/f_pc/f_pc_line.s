@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80021F64 0024 .text      fpcLn_Create__Fv               fpcLn_Create__Fv               */
+/* 80021F64 0054 .text      fpcLn_Create__Fv               fpcLn_Create__Fv               */
 .global fpcLn_Create__Fv
+fpcLn_Create__Fv:
 fpcLn_Create__Fv:
 /* 80021F64 0001EEA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021F68 0001EEA8  7C 08 02 A6 */	mflr r0
@@ -16,16 +17,13 @@ fpcLn_Create__Fv:
 /* 80021F7C 0001EEBC  38 03 4C F0 */	addi r0, r3, l_fpcLn_Line@l
 /* 80021F80 0001EEC0  7C 1E 03 78 */	mr r30, r0
 /* 80021F84 0001EEC4  3B E0 00 0F */	li r31, 0xf
-
-/* 80021F88 0030 .text      func_80021F88                  func_80021F88                  */
-.global func_80021F88
-func_80021F88:
+lbl_80021F88:
 /* 80021F88 0001EEC8  7F C3 F3 78 */	mr r3, r30
 /* 80021F8C 0001EECC  3B DE 00 0C */	addi r30, r30, 0xc
 /* 80021F90 0001EED0  48 24 40 B1 */	bl cLs_Create__FP15node_list_class
 /* 80021F94 0001EED4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80021F98 0001EED8  3B FF FF FF */	addi r31, r31, -1
-/* 80021F9C 0001EEDC  41 81 FF EC */	bgt func_80021F88
+/* 80021F9C 0001EEDC  41 81 FF EC */	bgt lbl_80021F88
 /* 80021FA0 0001EEE0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80021FA4 0001EEE4  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80021FA8 0001EEE8  80 01 00 14 */	lwz r0, 0x14(r1)

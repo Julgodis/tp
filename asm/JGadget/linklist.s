@@ -4,22 +4,20 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802DCA1C 0024 .text      __dt__Q27JGadget13TNodeLinkListFv __dt__Q27JGadget13TNodeLinkListFv */
+/* 802DCA1C 003C .text      __dt__Q27JGadget13TNodeLinkListFv __dt__Q27JGadget13TNodeLinkListFv */
 .global __dt__Q27JGadget13TNodeLinkListFv
+__dt__Q27JGadget13TNodeLinkListFv:
 __dt__Q27JGadget13TNodeLinkListFv:
 /* 802DCA1C 002D995C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCA20 002D9960  7C 08 02 A6 */	mflr r0
 /* 802DCA24 002D9964  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DCA28 002D9968  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DCA2C 002D996C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802DCA30 002D9970  41 82 00 10 */	beq func_802DCA40
+/* 802DCA30 002D9970  41 82 00 10 */	beq lbl_802DCA40
 /* 802DCA34 002D9974  7C 80 07 35 */	extsh. r0, r4
-/* 802DCA38 002D9978  40 81 00 08 */	ble func_802DCA40
+/* 802DCA38 002D9978  40 81 00 08 */	ble lbl_802DCA40
 /* 802DCA3C 002D997C  4B FF 23 01 */	bl __dl__FPv
-
-/* 802DCA40 0018 .text      func_802DCA40                  func_802DCA40                  */
-.global func_802DCA40
-func_802DCA40:
+lbl_802DCA40:
 /* 802DCA40 002D9980  7F E3 FB 78 */	mr r3, r31
 /* 802DCA44 002D9984  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DCA48 002D9988  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -29,6 +27,7 @@ func_802DCA40:
 
 /* 802DCA58 0048 .text      erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator */
 .global erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator
+erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator:
 erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator:
 /* 802DCA58 002D9998  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DCA5C 002D999C  7C 08 02 A6 */	mflr r0
@@ -49,8 +48,9 @@ erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator:
 /* 802DCA98 002D99D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DCA9C 002D99DC  4E 80 00 20 */	blr 
 
-/* 802DCAA0 002C .text      erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator */
+/* 802DCAA0 0068 .text      erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator */
 .global erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator
+erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator:
 erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13TNodeLinkList8iterator:
 /* 802DCAA0 002D99E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DCAA4 002D99E4  7C 08 02 A6 */	mflr r0
@@ -62,22 +62,16 @@ erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorQ37JGadget13T
 /* 802DCABC 002D99FC  7C DD 33 78 */	mr r29, r6
 /* 802DCAC0 002D9A00  80 A5 00 00 */	lwz r5, 0(r5)
 /* 802DCAC4 002D9A04  83 E6 00 00 */	lwz r31, 0(r6)
-/* 802DCAC8 002D9A08  48 00 00 18 */	b func_802DCAE0
-
-/* 802DCACC 0014 .text      func_802DCACC                  func_802DCACC                  */
-.global func_802DCACC
-func_802DCACC:
+/* 802DCAC8 002D9A08  48 00 00 18 */	b lbl_802DCAE0
+lbl_802DCACC:
 /* 802DCACC 002D9A0C  83 C5 00 00 */	lwz r30, 0(r5)
 /* 802DCAD0 002D9A10  38 61 00 08 */	addi r3, r1, 8
 /* 802DCAD4 002D9A14  7F 84 E3 78 */	mr r4, r28
 /* 802DCAD8 002D9A18  48 00 00 FD */	bl Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode
 /* 802DCADC 002D9A1C  7F C5 F3 78 */	mr r5, r30
-
-/* 802DCAE0 0028 .text      func_802DCAE0                  func_802DCAE0                  */
-.global func_802DCAE0
-func_802DCAE0:
+lbl_802DCAE0:
 /* 802DCAE0 002D9A20  7C 05 F8 40 */	cmplw r5, r31
-/* 802DCAE4 002D9A24  40 82 FF E8 */	bne func_802DCACC
+/* 802DCAE4 002D9A24  40 82 FF E8 */	bne lbl_802DCACC
 /* 802DCAE8 002D9A28  80 1D 00 00 */	lwz r0, 0(r29)
 /* 802DCAEC 002D9A2C  90 1B 00 00 */	stw r0, 0(r27)
 /* 802DCAF0 002D9A30  39 61 00 30 */	addi r11, r1, 0x30
@@ -87,8 +81,9 @@ func_802DCAE0:
 /* 802DCB00 002D9A40  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DCB04 002D9A44  4E 80 00 20 */	blr 
 
-/* 802DCB08 0058 .text      splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator */
+/* 802DCB08 00A0 .text      splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator */
 .global splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator
+splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator:
 splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator:
 /* 802DCB08 002D9A48  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802DCB0C 002D9A4C  7C 08 02 A6 */	mflr r0
@@ -106,16 +101,13 @@ splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget1
 /* 802DCB3C 002D9A7C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 802DCB40 002D9A80  90 01 00 28 */	stw r0, 0x28(r1)
 /* 802DCB44 002D9A84  7C 00 30 40 */	cmplw r0, r6
-/* 802DCB48 002D9A88  41 82 00 48 */	beq func_802DCB90
+/* 802DCB48 002D9A88  41 82 00 48 */	beq lbl_802DCB90
 /* 802DCB4C 002D9A8C  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 802DCB50 002D9A90  90 01 00 20 */	stw r0, 0x20(r1)
 /* 802DCB54 002D9A94  7C 00 18 40 */	cmplw r0, r3
-/* 802DCB58 002D9A98  40 82 00 08 */	bne func_802DCB60
-/* 802DCB5C 002D9A9C  48 00 00 34 */	b func_802DCB90
-
-/* 802DCB60 0030 .text      func_802DCB60                  func_802DCB60                  */
-.global func_802DCB60
-func_802DCB60:
+/* 802DCB58 002D9A98  40 82 00 08 */	bne lbl_802DCB60
+/* 802DCB5C 002D9A9C  48 00 00 34 */	b lbl_802DCB90
+lbl_802DCB60:
 /* 802DCB60 002D9AA0  7C DF 33 78 */	mr r31, r6
 /* 802DCB64 002D9AA4  38 61 00 18 */	addi r3, r1, 0x18
 /* 802DCB68 002D9AA8  7C A4 2B 78 */	mr r4, r5
@@ -128,10 +120,7 @@ func_802DCB60:
 /* 802DCB84 002D9AC4  38 A1 00 10 */	addi r5, r1, 0x10
 /* 802DCB88 002D9AC8  7F E6 FB 78 */	mr r6, r31
 /* 802DCB8C 002D9ACC  48 00 00 1D */	bl Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode
-
-/* 802DCB90 0018 .text      func_802DCB90                  func_802DCB90                  */
-.global func_802DCB90
-func_802DCB90:
+lbl_802DCB90:
 /* 802DCB90 002D9AD0  39 61 00 40 */	addi r11, r1, 0x40
 /* 802DCB94 002D9AD4  48 08 56 95 */	bl _restgpr_29
 /* 802DCB98 002D9AD8  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -141,6 +130,7 @@ func_802DCB90:
 
 /* 802DCBA8 002C .text      Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode */
 .global Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode
+Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode:
 Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode:
 /* 802DCBA8 002D9AE8  80 A5 00 00 */	lwz r5, 0(r5)
 /* 802DCBAC 002D9AEC  80 E5 00 04 */	lwz r7, 4(r5)
@@ -157,6 +147,7 @@ Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget1
 /* 802DCBD4 0024 .text      Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode */
 .global Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode
 Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
+Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
 /* 802DCBD4 002D9B14  80 C5 00 00 */	lwz r6, 0(r5)
 /* 802DCBD8 002D9B18  80 A5 00 04 */	lwz r5, 4(r5)
 /* 802DCBDC 002D9B1C  90 A6 00 04 */	stw r5, 4(r6)
@@ -167,8 +158,9 @@ Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
 /* 802DCBF0 002D9B30  90 C3 00 00 */	stw r6, 0(r3)
 /* 802DCBF4 002D9B34  4E 80 00 20 */	blr 
 
-/* 802DCBF8 0050 .text      Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode */
+/* 802DCBF8 00D0 .text      Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode */
 .global Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode
+Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
 Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
 /* 802DCBF8 002D9B38  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802DCBFC 002D9B3C  7C 08 02 A6 */	mflr r0
@@ -189,14 +181,11 @@ Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode:
 /* 802DCC38 002D9B78  90 01 00 08 */	stw r0, 8(r1)
 /* 802DCC3C 002D9B7C  7C 9E 23 78 */	mr r30, r4
 /* 802DCC40 002D9B80  3B FC 00 04 */	addi r31, r28, 4
-/* 802DCC44 002D9B84  48 00 00 48 */	b func_802DCC8C
-
-/* 802DCC48 003C .text      func_802DCC48                  func_802DCC48                  */
-.global func_802DCC48
-func_802DCC48:
+/* 802DCC44 002D9B84  48 00 00 48 */	b lbl_802DCC8C
+lbl_802DCC48:
 /* 802DCC48 002D9B88  80 61 00 08 */	lwz r3, 8(r1)
 /* 802DCC4C 002D9B8C  7C 03 F0 40 */	cmplw r3, r30
-/* 802DCC50 002D9B90  40 82 00 34 */	bne func_802DCC84
+/* 802DCC50 002D9B90  40 82 00 34 */	bne lbl_802DCC84
 /* 802DCC54 002D9B94  90 61 00 0C */	stw r3, 0xc(r1)
 /* 802DCC58 002D9B98  80 03 00 00 */	lwz r0, 0(r3)
 /* 802DCC5C 002D9B9C  90 01 00 08 */	stw r0, 8(r1)
@@ -208,23 +197,17 @@ func_802DCC48:
 /* 802DCC74 002D9BB4  7F 85 E3 78 */	mr r5, r28
 /* 802DCC78 002D9BB8  38 C1 00 18 */	addi r6, r1, 0x18
 /* 802DCC7C 002D9BBC  4B FF FE 8D */	bl splice__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorRQ27JGadget13TNodeLinkListQ37JGadget13TNodeLinkList8iterator
-/* 802DCC80 002D9BC0  48 00 00 0C */	b func_802DCC8C
-
-/* 802DCC84 0008 .text      func_802DCC84                  func_802DCC84                  */
-.global func_802DCC84
-func_802DCC84:
+/* 802DCC80 002D9BC0  48 00 00 0C */	b lbl_802DCC8C
+lbl_802DCC84:
 /* 802DCC84 002D9BC4  80 03 00 00 */	lwz r0, 0(r3)
 /* 802DCC88 002D9BC8  90 01 00 08 */	stw r0, 8(r1)
-
-/* 802DCC8C 003C .text      func_802DCC8C                  func_802DCC8C                  */
-.global func_802DCC8C
-func_802DCC8C:
+lbl_802DCC8C:
 /* 802DCC8C 002D9BCC  80 01 00 08 */	lwz r0, 8(r1)
 /* 802DCC90 002D9BD0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DCC94 002D9BD4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 802DCC98 002D9BD8  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 802DCC9C 002D9BDC  7C 00 F8 40 */	cmplw r0, r31
-/* 802DCCA0 002D9BE0  40 82 FF A8 */	bne func_802DCC48
+/* 802DCCA0 002D9BE0  40 82 FF A8 */	bne lbl_802DCC48
 /* 802DCCA4 002D9BE4  38 61 00 30 */	addi r3, r1, 0x30
 /* 802DCCA8 002D9BE8  38 80 FF FF */	li r4, -1
 /* 802DCCAC 002D9BEC  4B FF FD 71 */	bl __dt__Q27JGadget13TNodeLinkListFv

@@ -7,26 +7,25 @@
 /* 80074074 000C .text      __ct__6dBgPlcFv                __ct__6dBgPlcFv                */
 .global __ct__6dBgPlcFv
 __ct__6dBgPlcFv:
+__ct__6dBgPlcFv:
 /* 80074074 00070FB4  38 00 00 00 */	li r0, 0
 /* 80074078 00070FB8  90 03 00 00 */	stw r0, 0(r3)
 /* 8007407C 00070FBC  4E 80 00 20 */	blr 
 
-/* 80074080 0024 .text      __dt__6dBgPlcFv                __dt__6dBgPlcFv                */
+/* 80074080 003C .text      __dt__6dBgPlcFv                __dt__6dBgPlcFv                */
 .global __dt__6dBgPlcFv
+__dt__6dBgPlcFv:
 __dt__6dBgPlcFv:
 /* 80074080 00070FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80074084 00070FC4  7C 08 02 A6 */	mflr r0
 /* 80074088 00070FC8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8007408C 00070FCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80074090 00070FD0  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80074094 00070FD4  41 82 00 10 */	beq func_800740A4
+/* 80074094 00070FD4  41 82 00 10 */	beq lbl_800740A4
 /* 80074098 00070FD8  7C 80 07 35 */	extsh. r0, r4
-/* 8007409C 00070FDC  40 81 00 08 */	ble func_800740A4
+/* 8007409C 00070FDC  40 81 00 08 */	ble lbl_800740A4
 /* 800740A0 00070FE0  48 25 AC 9D */	bl __dl__FPv
-
-/* 800740A4 0018 .text      func_800740A4                  func_800740A4                  */
-.global func_800740A4
-func_800740A4:
+lbl_800740A4:
 /* 800740A4 00070FE4  7F E3 FB 78 */	mr r3, r31
 /* 800740A8 00070FE8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800740AC 00070FEC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -37,11 +36,13 @@ func_800740A4:
 /* 800740BC 0008 .text      setBase__6dBgPlcFPv            setBase__6dBgPlcFPv            */
 .global setBase__6dBgPlcFPv
 setBase__6dBgPlcFPv:
+setBase__6dBgPlcFPv:
 /* 800740BC 00070FFC  90 83 00 00 */	stw r4, 0(r3)
 /* 800740C0 00071000  4E 80 00 20 */	blr 
 
 /* 800740C4 0018 .text      getCode__6dBgPlcCFiPP5sBgPc    getCode__6dBgPlcCFiPP5sBgPc    */
 .global getCode__6dBgPlcCFiPP5sBgPc
+getCode__6dBgPlcCFiPP5sBgPc:
 getCode__6dBgPlcCFiPP5sBgPc:
 /* 800740C4 00071004  80 63 00 00 */	lwz r3, 0(r3)
 /* 800740C8 00071008  38 63 00 08 */	addi r3, r3, 8
@@ -52,6 +53,7 @@ getCode__6dBgPlcCFiPP5sBgPc:
 
 /* 800740DC 0018 .text      getGrpCode__6dBgPlcCFi         getGrpCode__6dBgPlcCFi         */
 .global getGrpCode__6dBgPlcCFi
+getGrpCode__6dBgPlcCFi:
 getGrpCode__6dBgPlcCFi:
 /* 800740DC 0007101C  80 63 00 00 */	lwz r3, 0(r3)
 /* 800740E0 00071020  38 63 00 08 */	addi r3, r3, 8

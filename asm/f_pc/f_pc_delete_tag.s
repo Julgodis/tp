@@ -7,6 +7,7 @@
 /* 80020F30 0018 .text      fpcDtTg_IsEmpty__Fv            fpcDtTg_IsEmpty__Fv            */
 .global fpcDtTg_IsEmpty__Fv
 fpcDtTg_IsEmpty__Fv:
+fpcDtTg_IsEmpty__Fv:
 /* 80020F30 0001DE70  3C 60 80 3A */	lis r3, g_fpcDtTg_Queue@ha
 /* 80020F34 0001DE74  38 63 39 A0 */	addi r3, r3, g_fpcDtTg_Queue@l
 /* 80020F38 0001DE78  80 03 00 08 */	lwz r0, 8(r3)
@@ -16,6 +17,7 @@ fpcDtTg_IsEmpty__Fv:
 
 /* 80020F48 0034 .text      fpcDtTg_ToDeleteQ__FP16delete_tag_class fpcDtTg_ToDeleteQ__FP16delete_tag_class */
 .global fpcDtTg_ToDeleteQ__FP16delete_tag_class
+fpcDtTg_ToDeleteQ__FP16delete_tag_class:
 fpcDtTg_ToDeleteQ__FP16delete_tag_class:
 /* 80020F48 0001DE88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020F4C 0001DE8C  7C 08 02 A6 */	mflr r0
@@ -34,6 +36,7 @@ fpcDtTg_ToDeleteQ__FP16delete_tag_class:
 /* 80020F7C 0020 .text      fpcDtTg_DeleteQTo__FP16delete_tag_class fpcDtTg_DeleteQTo__FP16delete_tag_class */
 .global fpcDtTg_DeleteQTo__FP16delete_tag_class
 fpcDtTg_DeleteQTo__FP16delete_tag_class:
+fpcDtTg_DeleteQTo__FP16delete_tag_class:
 /* 80020F7C 0001DEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020F80 0001DEC0  7C 08 02 A6 */	mflr r0
 /* 80020F84 0001DEC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -43,8 +46,9 @@ fpcDtTg_DeleteQTo__FP16delete_tag_class:
 /* 80020F94 0001DED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80020F98 0001DED8  4E 80 00 20 */	blr 
 
-/* 80020F9C 0054 .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i fpcDtTg_Do__FP16delete_tag_classPFPv_i */
+/* 80020F9C 0080 .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i fpcDtTg_Do__FP16delete_tag_classPFPv_i */
 .global fpcDtTg_Do__FP16delete_tag_classPFPv_i
+fpcDtTg_Do__FP16delete_tag_classPFPv_i:
 fpcDtTg_Do__FP16delete_tag_classPFPv_i:
 /* 80020F9C 0001DEDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020FA0 0001DEE0  7C 08 02 A6 */	mflr r0
@@ -55,35 +59,26 @@ fpcDtTg_Do__FP16delete_tag_classPFPv_i:
 /* 80020FB4 0001DEF4  7C 9F 23 78 */	mr r31, r4
 /* 80020FB8 0001DEF8  A8 83 00 18 */	lha r4, 0x18(r3)
 /* 80020FBC 0001DEFC  2C 04 00 00 */	cmpwi r4, 0
-/* 80020FC0 0001DF00  41 81 00 38 */	bgt func_80020FF8
+/* 80020FC0 0001DF00  41 81 00 38 */	bgt lbl_80020FF8
 /* 80020FC4 0001DF04  4B FF FF B9 */	bl fpcDtTg_DeleteQTo__FP16delete_tag_class
 /* 80020FC8 0001DF08  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80020FCC 0001DF0C  7F EC FB 78 */	mr r12, r31
 /* 80020FD0 0001DF10  7D 89 03 A6 */	mtctr r12
 /* 80020FD4 0001DF14  4E 80 04 21 */	bctrl 
 /* 80020FD8 0001DF18  2C 03 00 00 */	cmpwi r3, 0
-/* 80020FDC 0001DF1C  40 82 00 14 */	bne func_80020FF0
+/* 80020FDC 0001DF1C  40 82 00 14 */	bne lbl_80020FF0
 /* 80020FE0 0001DF20  7F C3 F3 78 */	mr r3, r30
 /* 80020FE4 0001DF24  4B FF FF 65 */	bl fpcDtTg_ToDeleteQ__FP16delete_tag_class
 /* 80020FE8 0001DF28  38 60 00 00 */	li r3, 0
-/* 80020FEC 0001DF2C  48 00 00 18 */	b func_80021004
-
-/* 80020FF0 0008 .text      func_80020FF0                  func_80020FF0                  */
-.global func_80020FF0
-func_80020FF0:
+/* 80020FEC 0001DF2C  48 00 00 18 */	b lbl_80021004
+lbl_80020FF0:
 /* 80020FF0 0001DF30  38 60 00 01 */	li r3, 1
-/* 80020FF4 0001DF34  48 00 00 10 */	b func_80021004
-
-/* 80020FF8 000C .text      func_80020FF8                  func_80020FF8                  */
-.global func_80020FF8
-func_80020FF8:
+/* 80020FF4 0001DF34  48 00 00 10 */	b lbl_80021004
+lbl_80020FF8:
 /* 80020FF8 0001DF38  38 04 FF FF */	addi r0, r4, -1
 /* 80020FFC 0001DF3C  B0 1E 00 18 */	sth r0, 0x18(r30)
 /* 80021000 0001DF40  38 60 00 00 */	li r3, 0
-
-/* 80021004 0018 .text      func_80021004                  func_80021004                  */
-.global func_80021004
-func_80021004:
+lbl_80021004:
 /* 80021004 0001DF44  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80021008 0001DF48  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8002100C 0001DF4C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -93,6 +88,7 @@ func_80021004:
 
 /* 8002101C 0024 .text      fpcDtTg_Init__FP16delete_tag_classPv fpcDtTg_Init__FP16delete_tag_classPv */
 .global fpcDtTg_Init__FP16delete_tag_classPv
+fpcDtTg_Init__FP16delete_tag_classPv:
 fpcDtTg_Init__FP16delete_tag_classPv:
 /* 8002101C 0001DF5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80021020 0001DF60  7C 08 02 A6 */	mflr r0
@@ -113,5 +109,5 @@ fpcDtTg_Init__FP16delete_tag_classPv:
 .global g_fpcDtTg_Queue
 g_fpcDtTg_Queue:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a09a0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a09ac */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

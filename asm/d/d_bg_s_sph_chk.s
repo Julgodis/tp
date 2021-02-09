@@ -7,6 +7,7 @@
 /* 80078A14 00AC .text      __ct__11dBgS_SphChkFv          __ct__11dBgS_SphChkFv          */
 .global __ct__11dBgS_SphChkFv
 __ct__11dBgS_SphChkFv:
+__ct__11dBgS_SphChkFv:
 /* 80078A14 00075954  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078A18 00075958  7C 08 02 A6 */	mflr r0
 /* 80078A1C 0007595C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -51,8 +52,9 @@ __ct__11dBgS_SphChkFv:
 /* 80078AB8 000759F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078ABC 000759FC  4E 80 00 20 */	blr 
 
-/* 80078AC0 0084 .text      __dt__11dBgS_SphChkFv          __dt__11dBgS_SphChkFv          */
+/* 80078AC0 00B0 .text      __dt__11dBgS_SphChkFv          __dt__11dBgS_SphChkFv          */
 .global __dt__11dBgS_SphChkFv
+__dt__11dBgS_SphChkFv:
 __dt__11dBgS_SphChkFv:
 /* 80078AC0 00075A00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078AC4 00075A04  7C 08 02 A6 */	mflr r0
@@ -61,7 +63,7 @@ __dt__11dBgS_SphChkFv:
 /* 80078AD0 00075A10  93 C1 00 08 */	stw r30, 8(r1)
 /* 80078AD4 00075A14  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80078AD8 00075A18  7C 9F 23 78 */	mr r31, r4
-/* 80078ADC 00075A1C  41 82 00 78 */	beq func_80078B54
+/* 80078ADC 00075A1C  41 82 00 78 */	beq lbl_80078B54
 /* 80078AE0 00075A20  3C 60 80 3B */	lis r3, __vt__11dBgS_SphChk@ha
 /* 80078AE4 00075A24  38 63 B9 C8 */	addi r3, r3, __vt__11dBgS_SphChk@l
 /* 80078AE8 00075A28  90 7E 00 10 */	stw r3, 0x10(r30)
@@ -83,22 +85,16 @@ __dt__11dBgS_SphChkFv:
 /* 80078B28 00075A68  38 80 00 00 */	li r4, 0
 /* 80078B2C 00075A6C  48 1E F5 85 */	bl __dt__13cBgS_PolyInfoFv
 /* 80078B30 00075A70  28 1E 00 00 */	cmplwi r30, 0
-/* 80078B34 00075A74  41 82 00 10 */	beq func_80078B44
+/* 80078B34 00075A74  41 82 00 10 */	beq lbl_80078B44
 /* 80078B38 00075A78  3C 60 80 3A */	lis r3, __vt__8cM3dGSph@ha
 /* 80078B3C 00075A7C  38 03 79 04 */	addi r0, r3, __vt__8cM3dGSph@l
 /* 80078B40 00075A80  90 1E 00 10 */	stw r0, 0x10(r30)
-
-/* 80078B44 0010 .text      func_80078B44                  func_80078B44                  */
-.global func_80078B44
-func_80078B44:
+lbl_80078B44:
 /* 80078B44 00075A84  7F E0 07 35 */	extsh. r0, r31
-/* 80078B48 00075A88  40 81 00 0C */	ble func_80078B54
+/* 80078B48 00075A88  40 81 00 0C */	ble lbl_80078B54
 /* 80078B4C 00075A8C  7F C3 F3 78 */	mr r3, r30
 /* 80078B50 00075A90  48 25 61 ED */	bl __dl__FPv
-
-/* 80078B54 001C .text      func_80078B54                  func_80078B54                  */
-.global func_80078B54
-func_80078B54:
+lbl_80078B54:
 /* 80078B54 00075A94  7F C3 F3 78 */	mr r3, r30
 /* 80078B58 00075A98  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80078B5C 00075A9C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -107,26 +103,30 @@ func_80078B54:
 /* 80078B68 00075AA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078B6C 00075AAC  4E 80 00 20 */	blr 
 
-/* 80078B70 0008 .text      func_80078B70                  @20@__dt__11dBgS_SphChkFv      */
+/* 80078B70 0008 .text      @20@__dt__11dBgS_SphChkFv      func_80078B70                  */
 .global func_80078B70
+func_80078B70:
 func_80078B70:
 /* 80078B70 00075AB0  38 63 FF EC */	addi r3, r3, -20
 /* 80078B74 00075AB4  4B FF FF 4C */	b __dt__11dBgS_SphChkFv
 
-/* 80078B78 0008 .text      func_80078B78                  @36@__dt__11dBgS_SphChkFv      */
+/* 80078B78 0008 .text      @36@__dt__11dBgS_SphChkFv      func_80078B78                  */
 .global func_80078B78
+func_80078B78:
 func_80078B78:
 /* 80078B78 00075AB8  38 63 FF DC */	addi r3, r3, -36
 /* 80078B7C 00075ABC  4B FF FF 44 */	b __dt__11dBgS_SphChkFv
 
-/* 80078B80 0008 .text      func_80078B80                  @72@__dt__11dBgS_SphChkFv      */
+/* 80078B80 0008 .text      @72@__dt__11dBgS_SphChkFv      func_80078B80                  */
 .global func_80078B80
+func_80078B80:
 func_80078B80:
 /* 80078B80 00075AC0  38 63 FF B8 */	addi r3, r3, -72
 /* 80078B84 00075AC4  4B FF FF 3C */	b __dt__11dBgS_SphChkFv
 
-/* 80078B88 0008 .text      func_80078B88                  @56@__dt__11dBgS_SphChkFv      */
+/* 80078B88 0008 .text      @56@__dt__11dBgS_SphChkFv      func_80078B88                  */
 .global func_80078B88
+func_80078B88:
 func_80078B88:
 /* 80078B88 00075AC8  38 63 FF C8 */	addi r3, r3, -56
 /* 80078B8C 00075ACC  4B FF FF 34 */	b __dt__11dBgS_SphChkFv
@@ -139,9 +139,20 @@ func_80078B88:
 /* 803AB9C8 003C .data      __vt__11dBgS_SphChk            __vt__11dBgS_SphChk            */
 .global __vt__11dBgS_SphChk
 __vt__11dBgS_SphChk:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8a, 0xc0, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a89c8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8b, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a89d8 */
-.byte 0x80, 0x07, 0x8b, 0x78, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8b, 0x88 /* baserom.dol+0x3a89e8 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8b, 0x80 /* baserom.dol+0x3a89f8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8a04 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__11dBgS_SphChkFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078B70
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078B78
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078B88
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078B80
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

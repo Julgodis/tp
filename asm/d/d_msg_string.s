@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80249C20 0048 .text      __ct__12dMsgString_cFv         __ct__12dMsgString_cFv         */
+/* 80249C20 0080 .text      __ct__12dMsgString_cFv         __ct__12dMsgString_cFv         */
 .global __ct__12dMsgString_cFv
+__ct__12dMsgString_cFv:
 __ct__12dMsgString_cFv:
 /* 80249C20 00246B60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80249C24 00246B64  7C 08 02 A6 */	mflr r0
@@ -21,14 +22,11 @@ __ct__12dMsgString_cFv:
 /* 80249C4C 00246B8C  38 60 02 44 */	li r3, 0x244
 /* 80249C50 00246B90  48 08 4F FD */	bl __nw__FUl
 /* 80249C54 00246B94  7C 60 1B 79 */	or. r0, r3, r3
-/* 80249C58 00246B98  41 82 00 10 */	beq func_80249C68
+/* 80249C58 00246B98  41 82 00 10 */	beq lbl_80249C68
 /* 80249C5C 00246B9C  88 9F 00 28 */	lbz r4, 0x28(r31)
 /* 80249C60 00246BA0  4B FD C0 35 */	bl __ct__10COutFont_cFUc
 /* 80249C64 00246BA4  7C 60 1B 78 */	mr r0, r3
-
-/* 80249C68 0038 .text      func_80249C68                  func_80249C68                  */
-.global func_80249C68
-func_80249C68:
+lbl_80249C68:
 /* 80249C68 00246BA8  90 1F 00 24 */	stw r0, 0x24(r31)
 /* 80249C6C 00246BAC  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80249C70 00246BB0  81 83 00 00 */	lwz r12, 0(r3)
@@ -44,8 +42,9 @@ func_80249C68:
 /* 80249C98 00246BD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80249C9C 00246BDC  4E 80 00 20 */	blr 
 
-/* 80249CA0 004C .text      __ct__12dMsgString_cFUc        __ct__12dMsgString_cFUc        */
+/* 80249CA0 0088 .text      __ct__12dMsgString_cFUc        __ct__12dMsgString_cFUc        */
 .global __ct__12dMsgString_cFUc
+__ct__12dMsgString_cFUc:
 __ct__12dMsgString_cFUc:
 /* 80249CA0 00246BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80249CA4 00246BE4  7C 08 02 A6 */	mflr r0
@@ -62,14 +61,11 @@ __ct__12dMsgString_cFUc:
 /* 80249CD0 00246C10  38 60 02 44 */	li r3, 0x244
 /* 80249CD4 00246C14  48 08 4F 79 */	bl __nw__FUl
 /* 80249CD8 00246C18  7C 60 1B 79 */	or. r0, r3, r3
-/* 80249CDC 00246C1C  41 82 00 10 */	beq func_80249CEC
+/* 80249CDC 00246C1C  41 82 00 10 */	beq lbl_80249CEC
 /* 80249CE0 00246C20  88 9E 00 28 */	lbz r4, 0x28(r30)
 /* 80249CE4 00246C24  4B FD BF B1 */	bl __ct__10COutFont_cFUc
 /* 80249CE8 00246C28  7C 60 1B 78 */	mr r0, r3
-
-/* 80249CEC 003C .text      func_80249CEC                  func_80249CEC                  */
-.global func_80249CEC
-func_80249CEC:
+lbl_80249CEC:
 /* 80249CEC 00246C2C  90 1E 00 24 */	stw r0, 0x24(r30)
 /* 80249CF0 00246C30  80 7E 00 24 */	lwz r3, 0x24(r30)
 /* 80249CF4 00246C34  81 83 00 00 */	lwz r12, 0(r3)
@@ -86,8 +82,9 @@ func_80249CEC:
 /* 80249D20 00246C60  38 21 00 10 */	addi r1, r1, 0x10
 /* 80249D24 00246C64  4E 80 00 20 */	blr 
 
-/* 80249D28 004C .text      __dt__12dMsgString_cFv         __dt__12dMsgString_cFv         */
+/* 80249D28 008C .text      __dt__12dMsgString_cFv         __dt__12dMsgString_cFv         */
 .global __dt__12dMsgString_cFv
+__dt__12dMsgString_cFv:
 __dt__12dMsgString_cFv:
 /* 80249D28 00246C68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80249D2C 00246C6C  7C 08 02 A6 */	mflr r0
@@ -96,35 +93,29 @@ __dt__12dMsgString_cFv:
 /* 80249D38 00246C78  93 C1 00 08 */	stw r30, 8(r1)
 /* 80249D3C 00246C7C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80249D40 00246C80  7C 9F 23 78 */	mr r31, r4
-/* 80249D44 00246C84  41 82 00 54 */	beq func_80249D98
+/* 80249D44 00246C84  41 82 00 54 */	beq lbl_80249D98
 /* 80249D48 00246C88  3C 60 80 3C */	lis r3, __vt__12dMsgString_c@ha
 /* 80249D4C 00246C8C  38 03 14 98 */	addi r0, r3, __vt__12dMsgString_c@l
 /* 80249D50 00246C90  90 1E 00 00 */	stw r0, 0(r30)
 /* 80249D54 00246C94  80 7E 00 24 */	lwz r3, 0x24(r30)
 /* 80249D58 00246C98  28 03 00 00 */	cmplwi r3, 0
-/* 80249D5C 00246C9C  41 82 00 18 */	beq func_80249D74
+/* 80249D5C 00246C9C  41 82 00 18 */	beq lbl_80249D74
 /* 80249D60 00246CA0  38 80 00 01 */	li r4, 1
 /* 80249D64 00246CA4  81 83 00 00 */	lwz r12, 0(r3)
 /* 80249D68 00246CA8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80249D6C 00246CAC  7D 89 03 A6 */	mtctr r12
 /* 80249D70 00246CB0  4E 80 04 21 */	bctrl 
-
-/* 80249D74 0024 .text      func_80249D74                  func_80249D74                  */
-.global func_80249D74
-func_80249D74:
+lbl_80249D74:
 /* 80249D74 00246CB4  38 00 00 00 */	li r0, 0
 /* 80249D78 00246CB8  90 1E 00 24 */	stw r0, 0x24(r30)
 /* 80249D7C 00246CBC  7F C3 F3 78 */	mr r3, r30
 /* 80249D80 00246CC0  38 80 00 00 */	li r4, 0
 /* 80249D84 00246CC4  4B FF F7 A5 */	bl __dt__16dMsgStringBase_cFv
 /* 80249D88 00246CC8  7F E0 07 35 */	extsh. r0, r31
-/* 80249D8C 00246CCC  40 81 00 0C */	ble func_80249D98
+/* 80249D8C 00246CCC  40 81 00 0C */	ble lbl_80249D98
 /* 80249D90 00246CD0  7F C3 F3 78 */	mr r3, r30
 /* 80249D94 00246CD4  48 08 4F A9 */	bl __dl__FPv
-
-/* 80249D98 001C .text      func_80249D98                  func_80249D98                  */
-.global func_80249D98
-func_80249D98:
+lbl_80249D98:
 /* 80249D98 00246CD8  7F C3 F3 78 */	mr r3, r30
 /* 80249D9C 00246CDC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80249DA0 00246CE0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -135,6 +126,7 @@ func_80249D98:
 
 /* 80249DB4 0030 .text      resetStringLocal__12dMsgString_cFP10J2DTextBox resetStringLocal__12dMsgString_cFP10J2DTextBox */
 .global resetStringLocal__12dMsgString_cFP10J2DTextBox
+resetStringLocal__12dMsgString_cFP10J2DTextBox:
 resetStringLocal__12dMsgString_cFP10J2DTextBox:
 /* 80249DB4 00246CF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80249DB8 00246CF8  7C 08 02 A6 */	mflr r0
@@ -149,8 +141,9 @@ resetStringLocal__12dMsgString_cFP10J2DTextBox:
 /* 80249DDC 00246D1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80249DE0 00246D20  4E 80 00 20 */	blr 
 
-/* 80249DE4 0088 .text      drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf */
+/* 80249DE4 00EC .text      drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf */
 .global drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf
+drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf:
 drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf:
 /* 80249DE4 00246D24  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80249DE8 00246D28  7C 08 02 A6 */	mflr r0
@@ -176,7 +169,7 @@ drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf:
 /* 80249E38 00246D78  C3 E1 00 18 */	lfs f31, 0x18(r1)
 /* 80249E3C 00246D7C  C0 02 B3 7C */	lfs f0, d_d_msg_string__LIT_3778-_SDA2_BASE_(r2)
 /* 80249E40 00246D80  FC 00 F0 00 */	fcmpu cr0, f0, f30
-/* 80249E44 00246D84  40 82 00 28 */	bne func_80249E6C
+/* 80249E44 00246D84  40 82 00 28 */	bne lbl_80249E6C
 /* 80249E48 00246D88  88 1F 00 B2 */	lbz r0, 0xb2(r31)
 /* 80249E4C 00246D8C  C8 22 B3 88 */	lfd f1, LIT_3781-_SDA2_BASE_(r2)
 /* 80249E50 00246D90  90 01 00 24 */	stw r0, 0x24(r1)
@@ -186,10 +179,7 @@ drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf:
 /* 80249E60 00246DA0  EC 20 08 28 */	fsubs f1, f0, f1
 /* 80249E64 00246DA4  C0 02 B3 78 */	lfs f0, d_d_msg_string__LIT_3777-_SDA2_BASE_(r2)
 /* 80249E68 00246DA8  EF C1 00 24 */	fdivs f30, f1, f0
-
-/* 80249E6C 0064 .text      func_80249E6C                  func_80249E6C                  */
-.global func_80249E6C
-func_80249E6C:
+lbl_80249E6C:
 /* 80249E6C 00246DAC  80 7E 00 24 */	lwz r3, 0x24(r30)
 /* 80249E70 00246DB0  FC 20 F0 90 */	fmr f1, f30
 /* 80249E74 00246DB4  81 83 00 00 */	lwz r12, 0(r3)
@@ -219,6 +209,7 @@ func_80249E6C:
 /* 80249ED0 0030 .text      drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc */
 .global drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc
 drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc:
+drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc:
 /* 80249ED0 00246E10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80249ED4 00246E14  7C 08 02 A6 */	mflr r0
 /* 80249ED8 00246E18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -240,31 +231,37 @@ drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc:
 /* 803C1498 0020 .data      __vt__12dMsgString_c           __vt__12dMsgString_c           */
 .global __vt__12dMsgString_c
 __vt__12dMsgString_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x19, 0x1b, 0x6c, 0x80, 0x1e, 0x1d, 0x10 /* baserom.dol+0x3be498 */
-.byte 0x80, 0x24, 0x9b, 0xf8, 0x80, 0x24, 0x9d, 0xb4, 0x80, 0x24, 0x9d, 0xe4, 0x80, 0x24, 0x9e, 0xd0 /* baserom.dol+0x3be4a8 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc
+.4byte getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc
+.4byte getMessage__16dMsgStringBase_cFUlPc
+.4byte resetStringLocal__12dMsgString_cFP10J2DTextBox
+.4byte drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf
+.4byte drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80454D78 0004 .sdata2    d_d_msg_string__LIT_3777       @3777                          */
+/* 80454D78 0004 .sdata2    @3777                          d_d_msg_string__LIT_3777       */
 .global d_d_msg_string__LIT_3777
 d_d_msg_string__LIT_3777:
 .byte 0x43, 0x7f, 0x00, 0x00 /* baserom.dol+0x3d3bd8 */
 
-/* 80454D7C 0004 .sdata2    d_d_msg_string__LIT_3778       @3778                          */
+/* 80454D7C 0004 .sdata2    @3778                          d_d_msg_string__LIT_3778       */
 .global d_d_msg_string__LIT_3778
 d_d_msg_string__LIT_3778:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3bdc */
 
-/* 80454D80 0004 .sdata2    d_d_msg_string__LIT_3779       @3779                          */
+/* 80454D80 0004 .sdata2    @3779                          d_d_msg_string__LIT_3779       */
 .global d_d_msg_string__LIT_3779
 d_d_msg_string__LIT_3779:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d3be0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3be4 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80454D88 0008 .sdata2    LIT_3781                       @3781                          */
+/* 80454D88 0008 .sdata2    @3781                          LIT_3781                       */
 .global LIT_3781
 LIT_3781:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d3be8 */

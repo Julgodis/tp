@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80017498 0050 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl mDoMemCdRWm_Store__FP12CARDFileInfoPvUl */
+/* 80017498 0204 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl mDoMemCdRWm_Store__FP12CARDFileInfoPvUl */
 .global mDoMemCdRWm_Store__FP12CARDFileInfoPvUl
+mDoMemCdRWm_Store__FP12CARDFileInfoPvUl:
 mDoMemCdRWm_Store__FP12CARDFileInfoPvUl:
 /* 80017498 000143D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8001749C 000143DC  7C 08 02 A6 */	mflr r0
@@ -25,16 +26,13 @@ mDoMemCdRWm_Store__FP12CARDFileInfoPvUl:
 /* 800174D4 00014414  38 C0 00 00 */	li r6, 0
 /* 800174D8 00014418  48 34 17 71 */	bl CARDWrite
 /* 800174DC 0001441C  2C 03 00 00 */	cmpwi r3, 0
-/* 800174E0 00014420  41 82 00 08 */	beq func_800174E8
-/* 800174E4 00014424  48 00 01 A0 */	b func_80017684
-
-/* 800174E8 0048 .text      func_800174E8                  func_800174E8                  */
-.global func_800174E8
-func_800174E8:
+/* 800174E0 00014420  41 82 00 08 */	beq lbl_800174E8
+/* 800174E4 00014424  48 00 01 A0 */	b lbl_80017684
+lbl_800174E8:
 /* 800174E8 00014428  7F A3 EB 78 */	mr r3, r29
 /* 800174EC 0001442C  48 00 06 61 */	bl mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo
 /* 800174F0 00014430  2C 03 00 00 */	cmpwi r3, 0
-/* 800174F4 00014434  40 82 00 60 */	bne func_80017554
+/* 800174F4 00014434  40 82 00 60 */	bne lbl_80017554
 /* 800174F8 00014438  3C 60 80 3F */	lis r3, sTmpBuf@ha
 /* 800174FC 0001443C  38 63 CF 40 */	addi r3, r3, sTmpBuf@l
 /* 80017500 00014440  38 80 00 00 */	li r4, 0
@@ -47,12 +45,9 @@ func_800174E8:
 /* 8001751C 0001445C  38 C0 40 00 */	li r6, 0x4000
 /* 80017520 00014460  48 34 17 29 */	bl CARDWrite
 /* 80017524 00014464  2C 03 00 00 */	cmpwi r3, 0
-/* 80017528 00014468  41 82 00 08 */	beq func_80017530
-/* 8001752C 0001446C  48 00 01 58 */	b func_80017684
-
-/* 80017530 0024 .text      func_80017530                  func_80017530                  */
-.global func_80017530
-func_80017530:
+/* 80017528 00014468  41 82 00 08 */	beq lbl_80017530
+/* 8001752C 0001446C  48 00 01 58 */	b lbl_80017684
+lbl_80017530:
 /* 80017530 00014470  7F A3 EB 78 */	mr r3, r29
 /* 80017534 00014474  3C 80 80 3F */	lis r4, sTmpBuf@ha
 /* 80017538 00014478  38 84 CF 40 */	addi r4, r4, sTmpBuf@l
@@ -60,12 +55,9 @@ func_80017530:
 /* 80017540 00014480  38 C0 60 00 */	li r6, 0x6000
 /* 80017544 00014484  48 34 17 05 */	bl CARDWrite
 /* 80017548 00014488  2C 03 00 00 */	cmpwi r3, 0
-/* 8001754C 0001448C  41 82 00 08 */	beq func_80017554
-/* 80017550 00014490  48 00 01 34 */	b func_80017684
-
-/* 80017554 0078 .text      func_80017554                  func_80017554                  */
-.global func_80017554
-func_80017554:
+/* 8001754C 0001448C  41 82 00 08 */	beq lbl_80017554
+/* 80017550 00014490  48 00 01 34 */	b lbl_80017684
+lbl_80017554:
 /* 80017554 00014494  3C 60 80 3F */	lis r3, sTmpBuf@ha
 /* 80017558 00014498  38 63 CF 40 */	addi r3, r3, sTmpBuf@l
 /* 8001755C 0001449C  38 80 00 00 */	li r4, 0
@@ -94,12 +86,9 @@ func_80017554:
 /* 800175B8 000144F8  38 C0 40 00 */	li r6, 0x4000
 /* 800175BC 000144FC  48 34 16 8D */	bl CARDWrite
 /* 800175C0 00014500  2C 03 00 00 */	cmpwi r3, 0
-/* 800175C4 00014504  41 82 00 08 */	beq func_800175CC
-/* 800175C8 00014508  48 00 00 BC */	b func_80017684
-
-/* 800175CC 0024 .text      func_800175CC                  func_800175CC                  */
-.global func_800175CC
-func_800175CC:
+/* 800175C4 00014504  41 82 00 08 */	beq lbl_800175CC
+/* 800175C8 00014508  48 00 00 BC */	b lbl_80017684
+lbl_800175CC:
 /* 800175CC 0001450C  7F A3 EB 78 */	mr r3, r29
 /* 800175D0 00014510  3C 80 80 3F */	lis r4, sTmpBuf@ha
 /* 800175D4 00014514  38 84 CF 40 */	addi r4, r4, sTmpBuf@l
@@ -107,24 +96,18 @@ func_800175CC:
 /* 800175DC 0001451C  38 C0 40 00 */	li r6, 0x4000
 /* 800175E0 00014520  48 34 12 ED */	bl CARDRead
 /* 800175E4 00014524  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800175E8 00014528  41 82 00 08 */	beq func_800175F0
-/* 800175EC 0001452C  48 00 00 98 */	b func_80017684
-
-/* 800175F0 0020 .text      func_800175F0                  func_800175F0                  */
-.global func_800175F0
-func_800175F0:
+/* 800175E8 00014528  41 82 00 08 */	beq lbl_800175F0
+/* 800175EC 0001452C  48 00 00 98 */	b lbl_80017684
+lbl_800175F0:
 /* 800175F0 00014530  3C 60 80 3F */	lis r3, sTmpBuf@ha
 /* 800175F4 00014534  38 63 CF 40 */	addi r3, r3, sTmpBuf@l
 /* 800175F8 00014538  38 80 1F FC */	li r4, 0x1ffc
 /* 800175FC 0001453C  48 00 06 79 */	bl mDoMemCdRWm_CalcCheckSum__FPvUl
 /* 80017600 00014540  7C 1E 18 40 */	cmplw r30, r3
-/* 80017604 00014544  41 82 00 0C */	beq func_80017610
+/* 80017604 00014544  41 82 00 0C */	beq lbl_80017610
 /* 80017608 00014548  7F E3 FB 78 */	mr r3, r31
-/* 8001760C 0001454C  48 00 00 78 */	b func_80017684
-
-/* 80017610 0024 .text      func_80017610                  func_80017610                  */
-.global func_80017610
-func_80017610:
+/* 8001760C 0001454C  48 00 00 78 */	b lbl_80017684
+lbl_80017610:
 /* 80017610 00014550  7F A3 EB 78 */	mr r3, r29
 /* 80017614 00014554  3C 80 80 3F */	lis r4, sTmpBuf@ha
 /* 80017618 00014558  38 84 CF 40 */	addi r4, r4, sTmpBuf@l
@@ -132,12 +115,9 @@ func_80017610:
 /* 80017620 00014560  38 C0 60 00 */	li r6, 0x6000
 /* 80017624 00014564  48 34 16 25 */	bl CARDWrite
 /* 80017628 00014568  2C 03 00 00 */	cmpwi r3, 0
-/* 8001762C 0001456C  41 82 00 08 */	beq func_80017634
-/* 80017630 00014570  48 00 00 54 */	b func_80017684
-
-/* 80017634 0024 .text      func_80017634                  func_80017634                  */
-.global func_80017634
-func_80017634:
+/* 8001762C 0001456C  41 82 00 08 */	beq lbl_80017634
+/* 80017630 00014570  48 00 00 54 */	b lbl_80017684
+lbl_80017634:
 /* 80017634 00014574  7F A3 EB 78 */	mr r3, r29
 /* 80017638 00014578  3C 80 80 3F */	lis r4, sTmpBuf@ha
 /* 8001763C 0001457C  38 84 CF 40 */	addi r4, r4, sTmpBuf@l
@@ -145,31 +125,22 @@ func_80017634:
 /* 80017644 00014584  38 C0 60 00 */	li r6, 0x6000
 /* 80017648 00014588  48 34 12 85 */	bl CARDRead
 /* 8001764C 0001458C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 80017650 00014590  41 82 00 08 */	beq func_80017658
-/* 80017654 00014594  48 00 00 30 */	b func_80017684
-
-/* 80017658 0020 .text      func_80017658                  func_80017658                  */
-.global func_80017658
-func_80017658:
+/* 80017650 00014590  41 82 00 08 */	beq lbl_80017658
+/* 80017654 00014594  48 00 00 30 */	b lbl_80017684
+lbl_80017658:
 /* 80017658 00014598  3C 60 80 3F */	lis r3, sTmpBuf@ha
 /* 8001765C 0001459C  38 63 CF 40 */	addi r3, r3, sTmpBuf@l
 /* 80017660 000145A0  38 80 1F FC */	li r4, 0x1ffc
 /* 80017664 000145A4  48 00 06 11 */	bl mDoMemCdRWm_CalcCheckSum__FPvUl
 /* 80017668 000145A8  7C 1E 18 40 */	cmplw r30, r3
-/* 8001766C 000145AC  41 82 00 0C */	beq func_80017678
+/* 8001766C 000145AC  41 82 00 0C */	beq lbl_80017678
 /* 80017670 000145B0  7F E3 FB 78 */	mr r3, r31
-/* 80017674 000145B4  48 00 00 10 */	b func_80017684
-
-/* 80017678 000C .text      func_80017678                  func_80017678                  */
-.global func_80017678
-func_80017678:
+/* 80017674 000145B4  48 00 00 10 */	b lbl_80017684
+lbl_80017678:
 /* 80017678 000145B8  7F A3 EB 78 */	mr r3, r29
 /* 8001767C 000145BC  48 00 03 69 */	bl mDoMemCdRWm_SetCardStat__FP12CARDFileInfo
 /* 80017680 000145C0  7F E3 FB 78 */	mr r3, r31
-
-/* 80017684 0018 .text      func_80017684                  func_80017684                  */
-.global func_80017684
-func_80017684:
+lbl_80017684:
 /* 80017684 000145C4  39 61 00 20 */	addi r11, r1, 0x20
 /* 80017688 000145C8  48 34 AB 9D */	bl _restgpr_28
 /* 8001768C 000145CC  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -177,8 +148,9 @@ func_80017684:
 /* 80017694 000145D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80017698 000145D8  4E 80 00 20 */	blr 
 
-/* 8001769C 004C .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl */
+/* 8001769C 01E0 .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl */
 .global mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl
+mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl:
 mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl:
 /* 8001769C 000145DC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800176A0 000145E0  7C 08 02 A6 */	mflr r0
@@ -197,12 +169,9 @@ mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl:
 /* 800176D4 00014614  38 C0 40 00 */	li r6, 0x4000
 /* 800176D8 00014618  48 34 11 F5 */	bl CARDRead
 /* 800176DC 0001461C  2C 03 00 00 */	cmpwi r3, 0
-/* 800176E0 00014620  41 82 00 08 */	beq func_800176E8
-/* 800176E4 00014624  48 00 01 80 */	b func_80017864
-
-/* 800176E8 0044 .text      func_800176E8                  func_800176E8                  */
-.global func_800176E8
-func_800176E8:
+/* 800176E0 00014620  41 82 00 08 */	beq lbl_800176E8
+/* 800176E4 00014624  48 00 01 80 */	b lbl_80017864
+lbl_800176E8:
 /* 800176E8 00014628  38 78 00 08 */	addi r3, r24, 8
 /* 800176EC 0001462C  48 00 06 01 */	bl mDoMemCdRWm_TestCheckSumGameData__FPv
 /* 800176F0 00014630  7C 7A 1B 78 */	mr r26, r3
@@ -218,12 +187,9 @@ func_800176E8:
 /* 80017718 00014658  38 C0 60 00 */	li r6, 0x6000
 /* 8001771C 0001465C  48 34 11 B1 */	bl CARDRead
 /* 80017720 00014660  2C 03 00 00 */	cmpwi r3, 0
-/* 80017724 00014664  41 82 00 08 */	beq func_8001772C
-/* 80017728 00014668  48 00 01 3C */	b func_80017864
-
-/* 8001772C 0048 .text      func_8001772C                  func_8001772C                  */
-.global func_8001772C
-func_8001772C:
+/* 80017724 00014664  41 82 00 08 */	beq lbl_8001772C
+/* 80017728 00014668  48 00 01 3C */	b lbl_80017864
+lbl_8001772C:
 /* 8001772C 0001466C  38 77 00 08 */	addi r3, r23, 8
 /* 80017730 00014670  48 00 05 BD */	bl mDoMemCdRWm_TestCheckSumGameData__FPv
 /* 80017734 00014674  7C 7D 1B 78 */	mr r29, r3
@@ -234,80 +200,62 @@ func_8001772C:
 /* 80017748 00014688  48 00 05 A5 */	bl mDoMemCdRWm_TestCheckSumGameData__FPv
 /* 8001774C 0001468C  7C 7F 1B 78 */	mr r31, r3
 /* 80017750 00014690  2C 1A 00 00 */	cmpwi r26, 0
-/* 80017754 00014694  40 82 00 20 */	bne func_80017774
+/* 80017754 00014694  40 82 00 20 */	bne lbl_80017774
 /* 80017758 00014698  2C 1D 00 00 */	cmpwi r29, 0
-/* 8001775C 0001469C  41 82 00 18 */	beq func_80017774
+/* 8001775C 0001469C  41 82 00 18 */	beq lbl_80017774
 /* 80017760 000146A0  38 78 00 08 */	addi r3, r24, 8
 /* 80017764 000146A4  38 97 00 08 */	addi r4, r23, 8
 /* 80017768 000146A8  38 A0 0A 94 */	li r5, 0xa94
 /* 8001776C 000146AC  4B FE BD D5 */	bl memcpy
 /* 80017770 000146B0  3B 20 00 01 */	li r25, 1
-
-/* 80017774 0024 .text      func_80017774                  func_80017774                  */
-.global func_80017774
-func_80017774:
+lbl_80017774:
 /* 80017774 000146B4  2C 1B 00 00 */	cmpwi r27, 0
-/* 80017778 000146B8  40 82 00 20 */	bne func_80017798
+/* 80017778 000146B8  40 82 00 20 */	bne lbl_80017798
 /* 8001777C 000146BC  2C 1E 00 00 */	cmpwi r30, 0
-/* 80017780 000146C0  41 82 00 18 */	beq func_80017798
+/* 80017780 000146C0  41 82 00 18 */	beq lbl_80017798
 /* 80017784 000146C4  38 78 0A 9C */	addi r3, r24, 0xa9c
 /* 80017788 000146C8  38 97 0A 9C */	addi r4, r23, 0xa9c
 /* 8001778C 000146CC  38 A0 0A 94 */	li r5, 0xa94
 /* 80017790 000146D0  4B FE BD B1 */	bl memcpy
 /* 80017794 000146D4  3B 20 00 01 */	li r25, 1
-
-/* 80017798 0024 .text      func_80017798                  func_80017798                  */
-.global func_80017798
-func_80017798:
+lbl_80017798:
 /* 80017798 000146D8  2C 1C 00 00 */	cmpwi r28, 0
-/* 8001779C 000146DC  40 82 00 20 */	bne func_800177BC
+/* 8001779C 000146DC  40 82 00 20 */	bne lbl_800177BC
 /* 800177A0 000146E0  2C 1F 00 00 */	cmpwi r31, 0
-/* 800177A4 000146E4  41 82 00 18 */	beq func_800177BC
+/* 800177A4 000146E4  41 82 00 18 */	beq lbl_800177BC
 /* 800177A8 000146E8  38 78 15 30 */	addi r3, r24, 0x1530
 /* 800177AC 000146EC  38 97 15 30 */	addi r4, r23, 0x1530
 /* 800177B0 000146F0  38 A0 0A 94 */	li r5, 0xa94
 /* 800177B4 000146F4  4B FE BD 8D */	bl memcpy
 /* 800177B8 000146F8  3B 20 00 01 */	li r25, 1
-
-/* 800177BC 0018 .text      func_800177BC                  func_800177BC                  */
-.global func_800177BC
-func_800177BC:
+lbl_800177BC:
 /* 800177BC 000146FC  7E 83 A3 78 */	mr r3, r20
 /* 800177C0 00014700  48 00 03 8D */	bl mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo
 /* 800177C4 00014704  2C 03 00 00 */	cmpwi r3, 0
-/* 800177C8 00014708  40 82 00 0C */	bne func_800177D4
+/* 800177C8 00014708  40 82 00 0C */	bne lbl_800177D4
 /* 800177CC 0001470C  38 60 FF 80 */	li r3, -128
-/* 800177D0 00014710  48 00 00 94 */	b func_80017864
-
-/* 800177D4 0028 .text      func_800177D4                  func_800177D4                  */
-.global func_800177D4
-func_800177D4:
+/* 800177D0 00014710  48 00 00 94 */	b lbl_80017864
+lbl_800177D4:
 /* 800177D4 00014714  2C 19 00 00 */	cmpwi r25, 0
-/* 800177D8 00014718  41 82 00 44 */	beq func_8001781C
+/* 800177D8 00014718  41 82 00 44 */	beq lbl_8001781C
 /* 800177DC 0001471C  7E 83 A3 78 */	mr r3, r20
 /* 800177E0 00014720  7F 04 C3 78 */	mr r4, r24
 /* 800177E4 00014724  38 A0 20 00 */	li r5, 0x2000
 /* 800177E8 00014728  38 C0 40 00 */	li r6, 0x4000
 /* 800177EC 0001472C  48 34 14 5D */	bl CARDWrite
 /* 800177F0 00014730  2C 03 00 00 */	cmpwi r3, 0
-/* 800177F4 00014734  41 82 00 08 */	beq func_800177FC
-/* 800177F8 00014738  48 00 00 6C */	b func_80017864
-
-/* 800177FC 0020 .text      func_800177FC                  func_800177FC                  */
-.global func_800177FC
-func_800177FC:
+/* 800177F4 00014734  41 82 00 08 */	beq lbl_800177FC
+/* 800177F8 00014738  48 00 00 6C */	b lbl_80017864
+lbl_800177FC:
 /* 800177FC 0001473C  7E 83 A3 78 */	mr r3, r20
 /* 80017800 00014740  7F 04 C3 78 */	mr r4, r24
 /* 80017804 00014744  38 A0 20 00 */	li r5, 0x2000
 /* 80017808 00014748  38 C0 60 00 */	li r6, 0x6000
 /* 8001780C 0001474C  48 34 14 3D */	bl CARDWrite
 /* 80017810 00014750  2C 03 00 00 */	cmpwi r3, 0
-/* 80017814 00014754  41 82 00 08 */	beq func_8001781C
-/* 80017818 00014758  48 00 00 4C */	b func_80017864
-
-/* 8001781C 0048 .text      func_8001781C                  func_8001781C                  */
-.global func_8001781C
-func_8001781C:
+/* 80017814 00014754  41 82 00 08 */	beq lbl_8001781C
+/* 80017818 00014758  48 00 00 4C */	b lbl_80017864
+lbl_8001781C:
 /* 8001781C 0001475C  7E A3 AB 78 */	mr r3, r21
 /* 80017820 00014760  38 98 00 08 */	addi r4, r24, 8
 /* 80017824 00014764  7E C5 B3 78 */	mr r5, r22
@@ -326,10 +274,7 @@ func_8001781C:
 /* 80017858 00014798  90 83 1F F4 */	stw r4, 0x1ff4(r3)
 /* 8001785C 0001479C  90 03 1F F0 */	stw r0, 0x1ff0(r3)
 /* 80017860 000147A0  38 60 00 00 */	li r3, 0
-
-/* 80017864 0018 .text      func_80017864                  func_80017864                  */
-.global func_80017864
-func_80017864:
+lbl_80017864:
 /* 80017864 000147A4  39 61 00 40 */	addi r11, r1, 0x40
 /* 80017868 000147A8  48 34 A9 9D */	bl _restgpr_20
 /* 8001786C 000147AC  80 01 00 44 */	lwz r0, 0x44(r1)
@@ -339,6 +284,7 @@ func_80017864:
 
 /* 8001787C 0168 .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData */
 .global mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData
+mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData:
 mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData:
 /* 8001787C 000147BC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80017880 000147C0  7C 08 02 A6 */	mflr r0
@@ -434,6 +380,7 @@ mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData:
 /* 800179E4 0168 .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo mDoMemCdRWm_SetCardStat__FP12CARDFileInfo */
 .global mDoMemCdRWm_SetCardStat__FP12CARDFileInfo
 mDoMemCdRWm_SetCardStat__FP12CARDFileInfo:
+mDoMemCdRWm_SetCardStat__FP12CARDFileInfo:
 /* 800179E4 00014924  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 800179E8 00014928  7C 08 02 A6 */	mflr r0
 /* 800179EC 0001492C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -525,8 +472,9 @@ mDoMemCdRWm_SetCardStat__FP12CARDFileInfo:
 /* 80017B44 00014A84  38 21 00 80 */	addi r1, r1, 0x80
 /* 80017B48 00014A88  4E 80 00 20 */	blr 
 
-/* 80017B4C 010C .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo */
+/* 80017B4C 0128 .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo */
 .global mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo
+mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo:
 mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo:
 /* 80017B4C 00014A8C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80017B50 00014A90  7C 08 02 A6 */	mflr r0
@@ -540,137 +488,119 @@ mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo:
 /* 80017B70 00014AB0  48 34 13 19 */	bl CARDGetStatus
 /* 80017B74 00014AB4  80 01 00 38 */	lwz r0, 0x38(r1)
 /* 80017B78 00014AB8  28 00 00 00 */	cmplwi r0, 0
-/* 80017B7C 00014ABC  40 82 00 DC */	bne func_80017C58
+/* 80017B7C 00014ABC  40 82 00 DC */	bne lbl_80017C58
 /* 80017B80 00014AC0  80 01 00 40 */	lwz r0, 0x40(r1)
 /* 80017B84 00014AC4  28 00 24 00 */	cmplwi r0, 0x2400
-/* 80017B88 00014AC8  40 82 00 D0 */	bne func_80017C58
+/* 80017B88 00014AC8  40 82 00 D0 */	bne lbl_80017C58
 /* 80017B8C 00014ACC  88 61 00 36 */	lbz r3, 0x36(r1)
 /* 80017B90 00014AD0  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 80017B94 00014AD4  2C 00 00 01 */	cmpwi r0, 1
-/* 80017B98 00014AD8  40 82 00 C0 */	bne func_80017C58
+/* 80017B98 00014AD8  40 82 00 C0 */	bne lbl_80017C58
 /* 80017B9C 00014ADC  54 60 07 7A */	rlwinm r0, r3, 0, 0x1d, 0x1d
 /* 80017BA0 00014AE0  2C 00 00 04 */	cmpwi r0, 4
-/* 80017BA4 00014AE4  40 82 00 B4 */	bne func_80017C58
+/* 80017BA4 00014AE4  40 82 00 B4 */	bne lbl_80017C58
 /* 80017BA8 00014AE8  A0 61 00 3C */	lhz r3, 0x3c(r1)
 /* 80017BAC 00014AEC  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 80017BB0 00014AF0  2C 00 00 01 */	cmpwi r0, 1
-/* 80017BB4 00014AF4  40 82 00 A4 */	bne func_80017C58
+/* 80017BB4 00014AF4  40 82 00 A4 */	bne lbl_80017C58
 /* 80017BB8 00014AF8  54 60 F7 BE */	rlwinm r0, r3, 0x1e, 0x1e, 0x1f
 /* 80017BBC 00014AFC  2C 00 00 01 */	cmpwi r0, 1
-/* 80017BC0 00014B00  40 82 00 98 */	bne func_80017C58
+/* 80017BC0 00014B00  40 82 00 98 */	bne lbl_80017C58
 /* 80017BC4 00014B04  54 60 E7 BE */	rlwinm r0, r3, 0x1c, 0x1e, 0x1f
 /* 80017BC8 00014B08  2C 00 00 01 */	cmpwi r0, 1
-/* 80017BCC 00014B0C  40 82 00 8C */	bne func_80017C58
+/* 80017BCC 00014B0C  40 82 00 8C */	bne lbl_80017C58
 /* 80017BD0 00014B10  54 60 D7 BE */	rlwinm r0, r3, 0x1a, 0x1e, 0x1f
 /* 80017BD4 00014B14  2C 00 00 01 */	cmpwi r0, 1
-/* 80017BD8 00014B18  40 82 00 80 */	bne func_80017C58
+/* 80017BD8 00014B18  40 82 00 80 */	bne lbl_80017C58
 /* 80017BDC 00014B1C  54 60 C7 BE */	rlwinm r0, r3, 0x18, 0x1e, 0x1f
 /* 80017BE0 00014B20  2C 00 00 01 */	cmpwi r0, 1
-/* 80017BE4 00014B24  40 82 00 74 */	bne func_80017C58
+/* 80017BE4 00014B24  40 82 00 74 */	bne lbl_80017C58
 /* 80017BE8 00014B28  54 60 B7 BF */	rlwinm. r0, r3, 0x16, 0x1e, 0x1f
-/* 80017BEC 00014B2C  40 82 00 6C */	bne func_80017C58
+/* 80017BEC 00014B2C  40 82 00 6C */	bne lbl_80017C58
 /* 80017BF0 00014B30  54 60 A7 BF */	rlwinm. r0, r3, 0x14, 0x1e, 0x1f
-/* 80017BF4 00014B34  40 82 00 64 */	bne func_80017C58
+/* 80017BF4 00014B34  40 82 00 64 */	bne lbl_80017C58
 /* 80017BF8 00014B38  54 60 97 BF */	rlwinm. r0, r3, 0x12, 0x1e, 0x1f
-/* 80017BFC 00014B3C  40 82 00 5C */	bne func_80017C58
+/* 80017BFC 00014B3C  40 82 00 5C */	bne lbl_80017C58
 /* 80017C00 00014B40  A0 61 00 3E */	lhz r3, 0x3e(r1)
 /* 80017C04 00014B44  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 80017C08 00014B48  2C 00 00 01 */	cmpwi r0, 1
-/* 80017C0C 00014B4C  40 82 00 4C */	bne func_80017C58
+/* 80017C0C 00014B4C  40 82 00 4C */	bne lbl_80017C58
 /* 80017C10 00014B50  54 60 F7 BE */	rlwinm r0, r3, 0x1e, 0x1e, 0x1f
 /* 80017C14 00014B54  2C 00 00 01 */	cmpwi r0, 1
-/* 80017C18 00014B58  40 82 00 40 */	bne func_80017C58
+/* 80017C18 00014B58  40 82 00 40 */	bne lbl_80017C58
 /* 80017C1C 00014B5C  54 60 E7 BE */	rlwinm r0, r3, 0x1c, 0x1e, 0x1f
 /* 80017C20 00014B60  2C 00 00 01 */	cmpwi r0, 1
-/* 80017C24 00014B64  40 82 00 34 */	bne func_80017C58
+/* 80017C24 00014B64  40 82 00 34 */	bne lbl_80017C58
 /* 80017C28 00014B68  54 60 D7 BE */	rlwinm r0, r3, 0x1a, 0x1e, 0x1f
 /* 80017C2C 00014B6C  2C 00 00 01 */	cmpwi r0, 1
-/* 80017C30 00014B70  40 82 00 28 */	bne func_80017C58
+/* 80017C30 00014B70  40 82 00 28 */	bne lbl_80017C58
 /* 80017C34 00014B74  54 60 C7 BE */	rlwinm r0, r3, 0x18, 0x1e, 0x1f
 /* 80017C38 00014B78  2C 00 00 01 */	cmpwi r0, 1
-/* 80017C3C 00014B7C  40 82 00 1C */	bne func_80017C58
+/* 80017C3C 00014B7C  40 82 00 1C */	bne lbl_80017C58
 /* 80017C40 00014B80  54 60 B7 BF */	rlwinm. r0, r3, 0x16, 0x1e, 0x1f
-/* 80017C44 00014B84  40 82 00 14 */	bne func_80017C58
+/* 80017C44 00014B84  40 82 00 14 */	bne lbl_80017C58
 /* 80017C48 00014B88  54 60 A7 BF */	rlwinm. r0, r3, 0x14, 0x1e, 0x1f
-/* 80017C4C 00014B8C  40 82 00 0C */	bne func_80017C58
+/* 80017C4C 00014B8C  40 82 00 0C */	bne lbl_80017C58
 /* 80017C50 00014B90  54 60 97 BF */	rlwinm. r0, r3, 0x12, 0x1e, 0x1f
-/* 80017C54 00014B94  41 82 00 0C */	beq func_80017C60
-
-/* 80017C58 0008 .text      func_80017C58                  func_80017C58                  */
-.global func_80017C58
-func_80017C58:
+/* 80017C54 00014B94  41 82 00 0C */	beq lbl_80017C60
+lbl_80017C58:
 /* 80017C58 00014B98  38 60 00 00 */	li r3, 0
-/* 80017C5C 00014B9C  48 00 00 08 */	b func_80017C64
-
-/* 80017C60 0004 .text      func_80017C60                  func_80017C60                  */
-.global func_80017C60
-func_80017C60:
+/* 80017C5C 00014B9C  48 00 00 08 */	b lbl_80017C64
+lbl_80017C60:
 /* 80017C60 00014BA0  38 60 00 01 */	li r3, 1
-
-/* 80017C64 0010 .text      func_80017C64                  func_80017C64                  */
-.global func_80017C64
-func_80017C64:
+lbl_80017C64:
 /* 80017C64 00014BA4  80 01 00 84 */	lwz r0, 0x84(r1)
 /* 80017C68 00014BA8  7C 08 03 A6 */	mtlr r0
 /* 80017C6C 00014BAC  38 21 00 80 */	addi r1, r1, 0x80
 /* 80017C70 00014BB0  4E 80 00 20 */	blr 
 
-/* 80017C74 0018 .text      mDoMemCdRWm_CalcCheckSum__FPvUl mDoMemCdRWm_CalcCheckSum__FPvUl */
+/* 80017C74 0040 .text      mDoMemCdRWm_CalcCheckSum__FPvUl mDoMemCdRWm_CalcCheckSum__FPvUl */
 .global mDoMemCdRWm_CalcCheckSum__FPvUl
+mDoMemCdRWm_CalcCheckSum__FPvUl:
 mDoMemCdRWm_CalcCheckSum__FPvUl:
 /* 80017C74 00014BB4  38 C0 00 00 */	li r6, 0
 /* 80017C78 00014BB8  38 A0 00 00 */	li r5, 0
 /* 80017C7C 00014BBC  54 80 F8 7E */	srwi r0, r4, 1
 /* 80017C80 00014BC0  7C 09 03 A6 */	mtctr r0
 /* 80017C84 00014BC4  28 00 00 00 */	cmplwi r0, 0
-/* 80017C88 00014BC8  40 81 00 20 */	ble func_80017CA8
-
-/* 80017C8C 001C .text      func_80017C8C                  func_80017C8C                  */
-.global func_80017C8C
-func_80017C8C:
+/* 80017C88 00014BC8  40 81 00 20 */	ble lbl_80017CA8
+lbl_80017C8C:
 /* 80017C8C 00014BCC  A0 03 00 00 */	lhz r0, 0(r3)
 /* 80017C90 00014BD0  7C A5 02 14 */	add r5, r5, r0
 /* 80017C94 00014BD4  7C 00 00 F8 */	nor r0, r0, r0
 /* 80017C98 00014BD8  7C 06 02 14 */	add r0, r6, r0
 /* 80017C9C 00014BDC  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 80017CA0 00014BE0  38 63 00 02 */	addi r3, r3, 2
-/* 80017CA4 00014BE4  42 00 FF E8 */	bdnz func_80017C8C
-
-/* 80017CA8 000C .text      func_80017CA8                  func_80017CA8                  */
-.global func_80017CA8
-func_80017CA8:
+/* 80017CA4 00014BE4  42 00 FF E8 */	bdnz lbl_80017C8C
+lbl_80017CA8:
 /* 80017CA8 00014BE8  7C C3 33 78 */	mr r3, r6
 /* 80017CAC 00014BEC  50 A3 80 1E */	rlwimi r3, r5, 0x10, 0, 0xf
 /* 80017CB0 00014BF0  4E 80 00 20 */	blr 
 
-/* 80017CB4 0014 .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl mDoMemCdRWm_CalcCheckSumGameData__FPvUl */
+/* 80017CB4 0038 .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl mDoMemCdRWm_CalcCheckSumGameData__FPvUl */
 .global mDoMemCdRWm_CalcCheckSumGameData__FPvUl
+mDoMemCdRWm_CalcCheckSumGameData__FPvUl:
 mDoMemCdRWm_CalcCheckSumGameData__FPvUl:
 /* 80017CB4 00014BF4  38 C0 00 00 */	li r6, 0
 /* 80017CB8 00014BF8  38 A0 00 00 */	li r5, 0
 /* 80017CBC 00014BFC  7C 89 03 A6 */	mtctr r4
 /* 80017CC0 00014C00  28 04 00 00 */	cmplwi r4, 0
-/* 80017CC4 00014C04  40 81 00 1C */	ble func_80017CE0
-
-/* 80017CC8 0018 .text      func_80017CC8                  func_80017CC8                  */
-.global func_80017CC8
-func_80017CC8:
+/* 80017CC4 00014C04  40 81 00 1C */	ble lbl_80017CE0
+lbl_80017CC8:
 /* 80017CC8 00014C08  88 03 00 00 */	lbz r0, 0(r3)
 /* 80017CCC 00014C0C  7C A5 02 14 */	add r5, r5, r0
 /* 80017CD0 00014C10  7C 00 00 F8 */	nor r0, r0, r0
 /* 80017CD4 00014C14  7C C6 02 14 */	add r6, r6, r0
 /* 80017CD8 00014C18  38 63 00 01 */	addi r3, r3, 1
-/* 80017CDC 00014C1C  42 00 FF EC */	bdnz func_80017CC8
-
-/* 80017CE0 000C .text      func_80017CE0                  func_80017CE0                  */
-.global func_80017CE0
-func_80017CE0:
+/* 80017CDC 00014C1C  42 00 FF EC */	bdnz lbl_80017CC8
+lbl_80017CE0:
 /* 80017CE0 00014C20  7C C4 33 78 */	mr r4, r6
 /* 80017CE4 00014C24  7C A3 2B 78 */	mr r3, r5
 /* 80017CE8 00014C28  4E 80 00 20 */	blr 
 
 /* 80017CEC 004C .text      mDoMemCdRWm_TestCheckSumGameData__FPv mDoMemCdRWm_TestCheckSumGameData__FPv */
 .global mDoMemCdRWm_TestCheckSumGameData__FPv
+mDoMemCdRWm_TestCheckSumGameData__FPv:
 mDoMemCdRWm_TestCheckSumGameData__FPv:
 /* 80017CEC 00014C2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80017CF0 00014C30  7C 08 02 A6 */	mflr r0
@@ -695,6 +625,7 @@ mDoMemCdRWm_TestCheckSumGameData__FPv:
 /* 80017D38 0044 .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc mDoMemCdRWm_SetCheckSumGameData__FPUcUc */
 .global mDoMemCdRWm_SetCheckSumGameData__FPUcUc
 mDoMemCdRWm_SetCheckSumGameData__FPUcUc:
+mDoMemCdRWm_SetCheckSumGameData__FPUcUc:
 /* 80017D38 00014C78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80017D3C 00014C7C  7C 08 02 A6 */	mflr r0
 /* 80017D40 00014C80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -718,7 +649,7 @@ mDoMemCdRWm_SetCheckSumGameData__FPUcUc:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80374408 0051 .rodata    m_Do_m_Do_MemCardRWmng__stringBase0 @stringBase0                   */
+/* 80374408 0051 .rodata    @stringBase0                   m_Do_m_Do_MemCardRWmng__stringBase0 */
 .global m_Do_m_Do_MemCardRWmng__stringBase0
 m_Do_m_Do_MemCardRWmng__stringBase0:
 .byte 0x5a, 0x65, 0x6c, 0x64, 0x61, 0x3a, 0x20, 0x54, 0x77, 0x69, 0x6c, 0x69, 0x67, 0x68, 0x74, 0x20 /* baserom.dol+0x371408 */
@@ -727,7 +658,7 @@ m_Do_m_Do_MemCardRWmng__stringBase0:
 .byte 0x67, 0x63, 0x5f, 0x62, 0x61, 0x6e, 0x6e, 0x65, 0x72, 0x2e, 0x62, 0x74, 0x69, 0x00, 0x7a, 0x65 /* baserom.dol+0x371438 */
 .byte 0x6c, 0x64, 0x61, 0x32, 0x5f, 0x67, 0x63, 0x5f, 0x69, 0x63, 0x6f, 0x6e, 0x2e, 0x62, 0x74, 0x69 /* baserom.dol+0x371448 */
 .byte 0x00 /* baserom.dol+0x371458 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x371459 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -739,8 +670,8 @@ m_Do_m_Do_MemCardRWmng__stringBase0:
 sTmpBuf:
 .skip 0x30c0
 
-/* 803F0000 0F40 .bss       sym_803F0000                   sym_803F0000                   */
-.global sym_803F0000
-sym_803F0000:
+/* 803F0000 0F40 .bss       data_803F0000                  data_803F0000                  */
+.global data_803F0000
+data_803F0000:
 .skip 0xf40
 

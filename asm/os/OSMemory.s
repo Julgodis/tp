@@ -4,31 +4,30 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8033EC6C 0028 .text      OSMemory__OnReset              OnReset                        */
+/* 8033EC6C 003C .text      OnReset                        OSMemory__OnReset              */
 .global OSMemory__OnReset
+OSMemory__OnReset:
 OSMemory__OnReset:
 /* 8033EC6C 0033BBAC  7C 08 02 A6 */	mflr r0
 /* 8033EC70 0033BBB0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033EC74 0033BBB4  90 01 00 04 */	stw r0, 4(r1)
 /* 8033EC78 0033BBB8  94 21 FF F8 */	stwu r1, -8(r1)
-/* 8033EC7C 0033BBBC  41 82 00 18 */	beq func_8033EC94
+/* 8033EC7C 0033BBBC  41 82 00 18 */	beq lbl_8033EC94
 /* 8033EC80 0033BBC0  3C 60 CC 00 */	lis r3, 0xCC004010@ha
 /* 8033EC84 0033BBC4  38 00 00 FF */	li r0, 0xff
 /* 8033EC88 0033BBC8  B0 03 40 10 */	sth r0, 0xCC004010@l(r3)
 /* 8033EC8C 0033BBCC  3C 60 F0 00 */	lis r3, 0xf000
 /* 8033EC90 0033BBD0  4B FF EE 2D */	bl __OSMaskInterrupts
-
-/* 8033EC94 0014 .text      func_8033EC94                  func_8033EC94                  */
-.global func_8033EC94
-func_8033EC94:
+lbl_8033EC94:
 /* 8033EC94 0033BBD4  38 60 00 01 */	li r3, 1
 /* 8033EC98 0033BBD8  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8033EC9C 0033BBDC  38 21 00 08 */	addi r1, r1, 8
 /* 8033ECA0 0033BBE0  7C 08 03 A6 */	mtlr r0
 /* 8033ECA4 0033BBE4  4E 80 00 20 */	blr 
 
-/* 8033ECA8 0054 .text      MEMIntrruptHandler             MEMIntrruptHandler             */
+/* 8033ECA8 006C .text      MEMIntrruptHandler             MEMIntrruptHandler             */
 .global MEMIntrruptHandler
+MEMIntrruptHandler:
 MEMIntrruptHandler:
 /* 8033ECA8 0033BBE8  7C 08 02 A6 */	mflr r0
 /* 8033ECAC 0033BBEC  3C 60 CC 00 */	lis r3, 0xCC004000@ha
@@ -45,29 +44,24 @@ MEMIntrruptHandler:
 /* 8033ECD8 0033BC18  B0 08 00 20 */	sth r0, 0x20(r8)
 /* 8033ECDC 0033BC1C  81 83 00 3C */	lwz r12, 0x3c(r3)
 /* 8033ECE0 0033BC20  28 0C 00 00 */	cmplwi r12, 0
-/* 8033ECE4 0033BC24  41 82 00 18 */	beq func_8033ECFC
+/* 8033ECE4 0033BC24  41 82 00 18 */	beq lbl_8033ECFC
 /* 8033ECE8 0033BC28  7D 88 03 A6 */	mtlr r12
 /* 8033ECEC 0033BC2C  38 60 00 0F */	li r3, 0xf
 /* 8033ECF0 0033BC30  4C C6 31 82 */	crclr 6
 /* 8033ECF4 0033BC34  4E 80 00 21 */	blrl 
-/* 8033ECF8 0033BC38  48 00 00 0C */	b func_8033ED04
-
-/* 8033ECFC 0008 .text      func_8033ECFC                  func_8033ECFC                  */
-.global func_8033ECFC
-func_8033ECFC:
+/* 8033ECF8 0033BC38  48 00 00 0C */	b lbl_8033ED04
+lbl_8033ECFC:
 /* 8033ECFC 0033BC3C  38 60 00 0F */	li r3, 0xf
 /* 8033ED00 0033BC40  4B FF DA 99 */	bl __OSUnhandledException
-
-/* 8033ED04 0010 .text      func_8033ED04                  func_8033ED04                  */
-.global func_8033ED04
-func_8033ED04:
+lbl_8033ED04:
 /* 8033ED04 0033BC44  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8033ED08 0033BC48  38 21 00 08 */	addi r1, r1, 8
 /* 8033ED0C 0033BC4C  7C 08 03 A6 */	mtlr r0
 /* 8033ED10 0033BC50  4E 80 00 20 */	blr 
 
-/* 8033ED14 00A8 .text      OSProtectRange                 OSProtectRange                 */
+/* 8033ED14 00C4 .text      OSProtectRange                 OSProtectRange                 */
 .global OSProtectRange
+OSProtectRange:
 OSProtectRange:
 /* 8033ED14 0033BC54  7C 08 02 A6 */	mflr r0
 /* 8033ED18 0033BC58  90 01 00 04 */	stw r0, 4(r1)
@@ -75,7 +69,7 @@ OSProtectRange:
 /* 8033ED20 0033BC60  BF 41 00 18 */	stmw r26, 0x18(r1)
 /* 8033ED24 0033BC64  3B 43 00 00 */	addi r26, r3, 0
 /* 8033ED28 0033BC68  28 1A 00 04 */	cmplwi r26, 4
-/* 8033ED2C 0033BC6C  40 80 00 98 */	bge func_8033EDC4
+/* 8033ED2C 0033BC6C  40 80 00 98 */	bge lbl_8033EDC4
 /* 8033ED30 0033BC70  7C 64 2A 14 */	add r3, r4, r5
 /* 8033ED34 0033BC74  38 03 03 FF */	addi r0, r3, 0x3ff
 /* 8033ED38 0033BC78  54 9B 00 2A */	rlwinm r27, r4, 0, 0, 0x15
@@ -108,19 +102,13 @@ OSProtectRange:
 /* 8033EDA4 0033BCE4  7C A5 03 78 */	or r5, r5, r0
 /* 8033EDA8 0033BCE8  28 1F 00 03 */	cmplwi r31, 3
 /* 8033EDAC 0033BCEC  B0 A4 00 00 */	sth r5, 0(r4)
-/* 8033EDB0 0033BCF0  41 82 00 0C */	beq func_8033EDBC
+/* 8033EDB0 0033BCF0  41 82 00 0C */	beq lbl_8033EDBC
 /* 8033EDB4 0033BCF4  7F C3 F3 78 */	mr r3, r30
 /* 8033EDB8 0033BCF8  4B FF ED 8D */	bl __OSUnmaskInterrupts
-
-/* 8033EDBC 0008 .text      func_8033EDBC                  func_8033EDBC                  */
-.global func_8033EDBC
-func_8033EDBC:
+lbl_8033EDBC:
 /* 8033EDBC 0033BCFC  7F 83 E3 78 */	mr r3, r28
 /* 8033EDC0 0033BD00  4B FF E9 5D */	bl OSRestoreInterrupts
-
-/* 8033EDC4 0014 .text      func_8033EDC4                  func_8033EDC4                  */
-.global func_8033EDC4
-func_8033EDC4:
+lbl_8033EDC4:
 /* 8033EDC4 0033BD04  BB 41 00 18 */	lmw r26, 0x18(r1)
 /* 8033EDC8 0033BD08  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8033EDCC 0033BD0C  38 21 00 30 */	addi r1, r1, 0x30
@@ -129,6 +117,7 @@ func_8033EDC4:
 
 /* 8033EDD8 0080 .text      Config24MB                     Config24MB                     */
 .global Config24MB
+Config24MB:
 Config24MB:
 /* 8033EDD8 0033BD18  38 E0 00 00 */	li r7, 0
 /* 8033EDDC 0033BD1C  3C 80 00 00 */	lis r4, 0x00000002@ha
@@ -166,6 +155,7 @@ Config24MB:
 /* 8033EE58 0080 .text      Config48MB                     Config48MB                     */
 .global Config48MB
 Config48MB:
+Config48MB:
 /* 8033EE58 0033BD98  38 E0 00 00 */	li r7, 0
 /* 8033EE5C 0033BD9C  3C 80 00 00 */	lis r4, 0x00000002@ha
 /* 8033EE60 0033BDA0  38 84 00 02 */	addi r4, r4, 0x00000002@l
@@ -202,6 +192,7 @@ Config48MB:
 /* 8033EED8 0018 .text      RealMode                       RealMode                       */
 .global RealMode
 RealMode:
+RealMode:
 /* 8033EED8 0033BE18  54 63 00 BE */	clrlwi r3, r3, 2
 /* 8033EEDC 0033BE1C  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 8033EEE0 0033BE20  7C 60 00 A6 */	mfmsr r3
@@ -209,8 +200,9 @@ RealMode:
 /* 8033EEE8 0033BE28  7C 7B 03 A6 */	mtspr 0x1b, r3
 /* 8033EEEC 0033BE2C  4C 00 00 64 */	rfi 
 
-/* 8033EEF0 00C0 .text      __OSInitMemoryProtection       __OSInitMemoryProtection       */
+/* 8033EEF0 0118 .text      __OSInitMemoryProtection       __OSInitMemoryProtection       */
 .global __OSInitMemoryProtection
+__OSInitMemoryProtection:
 __OSInitMemoryProtection:
 /* 8033EEF0 0033BE30  7C 08 02 A6 */	mflr r0
 /* 8033EEF4 0033BE34  90 01 00 04 */	stw r0, 4(r1)
@@ -251,40 +243,31 @@ __OSInitMemoryProtection:
 /* 8033EF80 0033BEC0  80 7B 00 F0 */	lwz r3, 0xf0(r27)
 /* 8033EF84 0033BEC4  80 1B 00 28 */	lwz r0, 0x28(r27)
 /* 8033EF88 0033BEC8  7C 03 00 40 */	cmplw r3, r0
-/* 8033EF8C 0033BECC  40 80 00 24 */	bge func_8033EFB0
+/* 8033EF8C 0033BECC  40 80 00 24 */	bge lbl_8033EFB0
 /* 8033EF90 0033BED0  3C 03 FE 80 */	addis r0, r3, 0xfe80
 /* 8033EF94 0033BED4  28 00 00 00 */	cmplwi r0, 0
-/* 8033EF98 0033BED8  40 82 00 18 */	bne func_8033EFB0
+/* 8033EF98 0033BED8  40 82 00 18 */	bne lbl_8033EFB0
 /* 8033EF9C 0033BEDC  3C 60 81 80 */	lis r3, 0x8180
 /* 8033EFA0 0033BEE0  3C 80 01 80 */	lis r4, 0x180
 /* 8033EFA4 0033BEE4  4B FF C5 DD */	bl DCInvalidateRange
 /* 8033EFA8 0033BEE8  38 00 00 02 */	li r0, 2
 /* 8033EFAC 0033BEEC  B0 1C 00 28 */	sth r0, 0x28(r28)
-
-/* 8033EFB0 001C .text      func_8033EFB0                  func_8033EFB0                  */
-.global func_8033EFB0
-func_8033EFB0:
+lbl_8033EFB0:
 /* 8033EFB0 0033BEF0  3C 00 01 80 */	lis r0, 0x180
 /* 8033EFB4 0033BEF4  7C 1F 00 40 */	cmplw r31, r0
-/* 8033EFB8 0033BEF8  41 81 00 14 */	bgt func_8033EFCC
+/* 8033EFB8 0033BEF8  41 81 00 14 */	bgt lbl_8033EFCC
 /* 8033EFBC 0033BEFC  3C 60 80 34 */	lis r3, Config24MB@ha
 /* 8033EFC0 0033BF00  38 63 ED D8 */	addi r3, r3, Config24MB@l
 /* 8033EFC4 0033BF04  4B FF FF 15 */	bl RealMode
-/* 8033EFC8 0033BF08  48 00 00 1C */	b func_8033EFE4
-
-/* 8033EFCC 0018 .text      func_8033EFCC                  func_8033EFCC                  */
-.global func_8033EFCC
-func_8033EFCC:
+/* 8033EFC8 0033BF08  48 00 00 1C */	b lbl_8033EFE4
+lbl_8033EFCC:
 /* 8033EFCC 0033BF0C  3C 00 03 00 */	lis r0, 0x300
 /* 8033EFD0 0033BF10  7C 1F 00 40 */	cmplw r31, r0
-/* 8033EFD4 0033BF14  41 81 00 10 */	bgt func_8033EFE4
+/* 8033EFD4 0033BF14  41 81 00 10 */	bgt lbl_8033EFE4
 /* 8033EFD8 0033BF18  3C 60 80 34 */	lis r3, Config48MB@ha
 /* 8033EFDC 0033BF1C  38 63 EE 58 */	addi r3, r3, Config48MB@l
 /* 8033EFE0 0033BF20  4B FF FE F9 */	bl RealMode
-
-/* 8033EFE4 0024 .text      func_8033EFE4                  func_8033EFE4                  */
-.global func_8033EFE4
-func_8033EFE4:
+lbl_8033EFE4:
 /* 8033EFE4 0033BF24  3C 60 08 00 */	lis r3, 0x800
 /* 8033EFE8 0033BF28  4B FF EB 5D */	bl __OSUnmaskInterrupts
 /* 8033EFEC 0033BF2C  7F C3 F3 78 */	mr r3, r30
@@ -300,7 +283,7 @@ func_8033EFE4:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803D07D8 0010 .data      OSMemory__ResetFunctionInfo    ResetFunctionInfo              */
+/* 803D07D8 0010 .data      ResetFunctionInfo              OSMemory__ResetFunctionInfo    */
 .global OSMemory__ResetFunctionInfo
 OSMemory__ResetFunctionInfo:
 .byte 0x80, 0x33, 0xec, 0x6c, 0x00, 0x00, 0x00, 0x7f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3cd7d8 */

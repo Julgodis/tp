@@ -7,6 +7,7 @@
 /* 8029E130 0020 .text      setDSPLevel__9JASDriverFf      setDSPLevel__9JASDriverFf      */
 .global setDSPLevel__9JASDriverFf
 setDSPLevel__9JASDriverFf:
+setDSPLevel__9JASDriverFf:
 /* 8029E130 0029B070  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E134 0029B074  7C 08 02 A6 */	mflr r0
 /* 8029E138 0029B078  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,11 +20,13 @@ setDSPLevel__9JASDriverFf:
 /* 8029E150 0008 .text      getChannelLevel_dsp__9JASDriverFv getChannelLevel_dsp__9JASDriverFv */
 .global getChannelLevel_dsp__9JASDriverFv
 getChannelLevel_dsp__9JASDriverFv:
+getChannelLevel_dsp__9JASDriverFv:
 /* 8029E150 0029B090  A0 6D 82 40 */	lhz r3, MAX_MIXERLEVEL__9JASDriver-_SDA_BASE_(r13)
 /* 8029E154 0029B094  4E 80 00 20 */	blr 
 
 /* 8029E158 0020 .text      getDSPLevel__9JASDriverFv      getDSPLevel__9JASDriverFv      */
 .global getDSPLevel__9JASDriverFv
+getDSPLevel__9JASDriverFv:
 getDSPLevel__9JASDriverFv:
 /* 8029E158 0029B098  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E15C 0029B09C  7C 08 02 A6 */	mflr r0
@@ -37,17 +40,20 @@ getDSPLevel__9JASDriverFv:
 /* 8029E178 0008 .text      setOutputMode__9JASDriverFUl   setOutputMode__9JASDriverFUl   */
 .global setOutputMode__9JASDriverFUl
 setOutputMode__9JASDriverFUl:
+setOutputMode__9JASDriverFUl:
 /* 8029E178 0029B0B8  90 6D 82 44 */	stw r3, JAS_SYSTEM_OUTPUT_MODE__9JASDriver-_SDA_BASE_(r13)
 /* 8029E17C 0029B0BC  4E 80 00 20 */	blr 
 
 /* 8029E180 0008 .text      getOutputMode__9JASDriverFv    getOutputMode__9JASDriverFv    */
 .global getOutputMode__9JASDriverFv
 getOutputMode__9JASDriverFv:
+getOutputMode__9JASDriverFv:
 /* 8029E180 0029B0C0  80 6D 82 44 */	lwz r3, JAS_SYSTEM_OUTPUT_MODE__9JASDriver-_SDA_BASE_(r13)
 /* 8029E184 0029B0C4  4E 80 00 20 */	blr 
 
-/* 8029E188 0018 .text      waitSubFrame__9JASDriverFv     waitSubFrame__9JASDriverFv     */
+/* 8029E188 003C .text      waitSubFrame__9JASDriverFv     waitSubFrame__9JASDriverFv     */
 .global waitSubFrame__9JASDriverFv
+waitSubFrame__9JASDriverFv:
 waitSubFrame__9JASDriverFv:
 /* 8029E188 0029B0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E18C 0029B0CC  7C 08 02 A6 */	mflr r0
@@ -55,14 +61,11 @@ waitSubFrame__9JASDriverFv:
 /* 8029E194 0029B0D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029E198 0029B0D8  4B FF EB 3D */	bl getSubFrameCounter__9JASDriverFv
 /* 8029E19C 0029B0DC  7C 7F 1B 78 */	mr r31, r3
-
-/* 8029E1A0 0024 .text      func_8029E1A0                  func_8029E1A0                  */
-.global func_8029E1A0
-func_8029E1A0:
+lbl_8029E1A0:
 /* 8029E1A0 0029B0E0  48 0A 30 B1 */	bl OSYieldThread
 /* 8029E1A4 0029B0E4  4B FF EB 31 */	bl getSubFrameCounter__9JASDriverFv
 /* 8029E1A8 0029B0E8  7C 1F 18 40 */	cmplw r31, r3
-/* 8029E1AC 0029B0EC  41 82 FF F4 */	beq func_8029E1A0
+/* 8029E1AC 0029B0EC  41 82 FF F4 */	beq lbl_8029E1A0
 /* 8029E1B0 0029B0F0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029E1B4 0029B0F4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029E1B8 0029B0F8  7C 08 03 A6 */	mtlr r0
@@ -71,6 +74,7 @@ func_8029E1A0:
 
 /* 8029E1C4 007C .text      rejectCallback__9JASDriverFPFPv_lPv rejectCallback__9JASDriverFPFPv_lPv */
 .global rejectCallback__9JASDriverFPFPv_lPv
+rejectCallback__9JASDriverFPFPv_lPv:
 rejectCallback__9JASDriverFPFPv_lPv:
 /* 8029E1C4 0029B104  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029E1C8 0029B108  7C 08 02 A6 */	mflr r0
@@ -107,6 +111,7 @@ rejectCallback__9JASDriverFPFPv_lPv:
 /* 8029E240 0034 .text      registerDspSyncCallback__9JASDriverFPFPv_lPv registerDspSyncCallback__9JASDriverFPFPv_lPv */
 .global registerDspSyncCallback__9JASDriverFPFPv_lPv
 registerDspSyncCallback__9JASDriverFPFPv_lPv:
+registerDspSyncCallback__9JASDriverFPFPv_lPv:
 /* 8029E240 0029B180  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E244 0029B184  7C 08 02 A6 */	mflr r0
 /* 8029E248 0029B188  90 01 00 14 */	stw r0, 0x14(r1)
@@ -123,6 +128,7 @@ registerDspSyncCallback__9JASDriverFPFPv_lPv:
 
 /* 8029E274 0034 .text      registerSubFrameCallback__9JASDriverFPFPv_lPv registerSubFrameCallback__9JASDriverFPFPv_lPv */
 .global registerSubFrameCallback__9JASDriverFPFPv_lPv
+registerSubFrameCallback__9JASDriverFPFPv_lPv:
 registerSubFrameCallback__9JASDriverFPFPv_lPv:
 /* 8029E274 0029B1B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E278 0029B1B8  7C 08 02 A6 */	mflr r0
@@ -141,6 +147,7 @@ registerSubFrameCallback__9JASDriverFPFPv_lPv:
 /* 8029E2A8 0028 .text      subframeCallback__9JASDriverFv subframeCallback__9JASDriverFv */
 .global subframeCallback__9JASDriverFv
 subframeCallback__9JASDriverFv:
+subframeCallback__9JASDriverFv:
 /* 8029E2A8 0029B1E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E2AC 0029B1EC  7C 08 02 A6 */	mflr r0
 /* 8029E2B0 0029B1F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -154,6 +161,7 @@ subframeCallback__9JASDriverFv:
 
 /* 8029E2D0 0028 .text      DSPSyncCallback__9JASDriverFv  DSPSyncCallback__9JASDriverFv  */
 .global DSPSyncCallback__9JASDriverFv
+DSPSyncCallback__9JASDriverFv:
 DSPSyncCallback__9JASDriverFv:
 /* 8029E2D0 0029B210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E2D4 0029B214  7C 08 02 A6 */	mflr r0
@@ -169,6 +177,7 @@ DSPSyncCallback__9JASDriverFv:
 /* 8029E2F8 0028 .text      updateDacCallback__9JASDriverFv updateDacCallback__9JASDriverFv */
 .global updateDacCallback__9JASDriverFv
 updateDacCallback__9JASDriverFv:
+updateDacCallback__9JASDriverFv:
 /* 8029E2F8 0029B238  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E2FC 0029B23C  7C 08 02 A6 */	mflr r0
 /* 8029E300 0029B240  90 01 00 14 */	stw r0, 0x14(r1)
@@ -182,6 +191,7 @@ updateDacCallback__9JASDriverFv:
 
 /* 8029E320 0080 .text      __sinit_JASDriverIF_cpp        __sinit_JASDriverIF_cpp        */
 .global __sinit_JASDriverIF_cpp
+__sinit_JASDriverIF_cpp:
 __sinit_JASDriverIF_cpp:
 /* 8029E320 0029B260  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E324 0029B264  7C 08 02 A6 */	mflr r0
@@ -219,6 +229,7 @@ __sinit_JASDriverIF_cpp:
 /* 8029E3A0 0010 .text      __ct__Q214JASCallbackMgr9TCallbackFv __ct__Q214JASCallbackMgr9TCallbackFv */
 .global __ct__Q214JASCallbackMgr9TCallbackFv
 __ct__Q214JASCallbackMgr9TCallbackFv:
+__ct__Q214JASCallbackMgr9TCallbackFv:
 /* 8029E3A0 0029B2E0  38 00 00 00 */	li r0, 0
 /* 8029E3A4 0029B2E4  90 03 00 00 */	stw r0, 0(r3)
 /* 8029E3A8 0029B2E8  90 03 00 04 */	stw r0, 4(r3)
@@ -229,9 +240,9 @@ __ct__Q214JASCallbackMgr9TCallbackFv:
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 80431C78 0000 .bss       sym_80431C78                   ...bss.0                       */
-.global sym_80431C78
-sym_80431C78:
+/* 80431C78 0000 .bss       ...bss.0                       data_80431C78                  */
+.global data_80431C78
+data_80431C78:
 
 /* 80431C78 0100 .bss       sDspSyncCallback__9JASDriver   sDspSyncCallback__9JASDriver   */
 .global sDspSyncCallback__9JASDriver
@@ -258,7 +269,7 @@ sUpdateDacCallback__9JASDriver:
 .global MAX_MIXERLEVEL__9JASDriver
 MAX_MIXERLEVEL__9JASDriver:
 .byte 0x2e, 0xe0 /* baserom.dol+0x3d0520 */
-.byte 0x00, 0x00 /* baserom.dol+0x3d0522 */
+.byte 0x00, 0x00 /* padding */
 
 /* 804507C4 0004 .sdata     JAS_SYSTEM_OUTPUT_MODE__9JASDriver JAS_SYSTEM_OUTPUT_MODE__9JASDriver */
 .global JAS_SYSTEM_OUTPUT_MODE__9JASDriver

@@ -7,6 +7,7 @@
 /* 802DECF8 002C .text      __ct__7JUTFontFv               __ct__7JUTFontFv               */
 .global __ct__7JUTFontFv
 __ct__7JUTFontFv:
+__ct__7JUTFontFv:
 /* 802DECF8 002DBC38  3C 80 80 3A */	lis r4, __vt__7JUTFont@ha
 /* 802DECFC 002DBC3C  38 04 31 F0 */	addi r0, r4, __vt__7JUTFont@l
 /* 802DED00 002DBC40  90 03 00 00 */	stw r0, 0(r3)
@@ -21,6 +22,7 @@ __ct__7JUTFontFv:
 
 /* 802DED24 004C .text      initialize_state__7JUTFontFv   initialize_state__7JUTFontFv   */
 .global initialize_state__7JUTFontFv
+initialize_state__7JUTFontFv:
 initialize_state__7JUTFontFv:
 /* 802DED24 002DBC64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DED28 002DBC68  7C 08 02 A6 */	mflr r0
@@ -44,6 +46,7 @@ initialize_state__7JUTFontFv:
 
 /* 802DED70 0054 .text      setCharColor__7JUTFontFQ28JUtility6TColor setCharColor__7JUTFontFQ28JUtility6TColor */
 .global setCharColor__7JUTFontFQ28JUtility6TColor
+setCharColor__7JUTFontFQ28JUtility6TColor:
 setCharColor__7JUTFontFQ28JUtility6TColor:
 /* 802DED70 002DBCB0  88 E4 00 00 */	lbz r7, 0(r4)
 /* 802DED74 002DBCB4  98 E3 00 0C */	stb r7, 0xc(r3)
@@ -69,6 +72,7 @@ setCharColor__7JUTFontFQ28JUtility6TColor:
 
 /* 802DEDC4 0064 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor */
 .global setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor
+setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor:
 setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor:
 /* 802DEDC4 002DBD04  89 04 00 00 */	lbz r8, 0(r4)
 /* 802DEDC8 002DBD08  99 03 00 0C */	stb r8, 0xc(r3)
@@ -96,8 +100,9 @@ setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor:
 /* 802DEE20 002DBD60  98 03 00 1B */	stb r0, 0x1b(r3)
 /* 802DEE24 002DBD64  4E 80 00 20 */	blr 
 
-/* 802DEE28 0064 .text      drawString_size_scale__7JUTFontFffffPCcUlb drawString_size_scale__7JUTFontFffffPCcUlb */
+/* 802DEE28 0120 .text      drawString_size_scale__7JUTFontFffffPCcUlb drawString_size_scale__7JUTFontFffffPCcUlb */
 .global drawString_size_scale__7JUTFontFffffPCcUlb
+drawString_size_scale__7JUTFontFffffPCcUlb:
 drawString_size_scale__7JUTFontFffffPCcUlb:
 /* 802DEE28 002DBD68  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802DEE2C 002DBD6C  7C 08 02 A6 */	mflr r0
@@ -123,11 +128,8 @@ drawString_size_scale__7JUTFontFffffPCcUlb:
 /* 802DEE7C 002DBDBC  7C BD 2B 78 */	mr r29, r5
 /* 802DEE80 002DBDC0  7C DE 33 78 */	mr r30, r6
 /* 802DEE84 002DBDC4  FF E0 D8 90 */	fmr f31, f27
-/* 802DEE88 002DBDC8  48 00 00 74 */	b func_802DEEFC
-
-/* 802DEE8C 0034 .text      func_802DEE8C                  func_802DEE8C                  */
-.global func_802DEE8C
-func_802DEE8C:
+/* 802DEE88 002DBDC8  48 00 00 74 */	b lbl_802DEEFC
+lbl_802DEE8C:
 /* 802DEE8C 002DBDCC  88 9C 00 00 */	lbz r4, 0(r28)
 /* 802DEE90 002DBDD0  7C 9F 23 78 */	mr r31, r4
 /* 802DEE94 002DBDD4  7F 63 DB 78 */	mr r3, r27
@@ -136,15 +138,12 @@ func_802DEE8C:
 /* 802DEEA0 002DBDE0  7D 89 03 A6 */	mtctr r12
 /* 802DEEA4 002DBDE4  4E 80 04 21 */	bctrl 
 /* 802DEEA8 002DBDE8  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802DEEAC 002DBDEC  41 82 00 14 */	beq func_802DEEC0
+/* 802DEEAC 002DBDEC  41 82 00 14 */	beq lbl_802DEEC0
 /* 802DEEB0 002DBDF0  57 FF 40 2E */	slwi r31, r31, 8
 /* 802DEEB4 002DBDF4  8C 1C 00 01 */	lbzu r0, 1(r28)
 /* 802DEEB8 002DBDF8  7F FF 03 78 */	or r31, r31, r0
 /* 802DEEBC 002DBDFC  3B BD FF FF */	addi r29, r29, -1
-
-/* 802DEEC0 003C .text      func_802DEEC0                  func_802DEEC0                  */
-.global func_802DEEC0
-func_802DEEC0:
+lbl_802DEEC0:
 /* 802DEEC0 002DBE00  7F 63 DB 78 */	mr r3, r27
 /* 802DEEC4 002DBE04  FC 20 D8 90 */	fmr f1, f27
 /* 802DEEC8 002DBE08  FC 40 E0 90 */	fmr f2, f28
@@ -160,12 +159,9 @@ func_802DEEC0:
 /* 802DEEF0 002DBE30  3B C0 00 01 */	li r30, 1
 /* 802DEEF4 002DBE34  3B BD FF FF */	addi r29, r29, -1
 /* 802DEEF8 002DBE38  3B 9C 00 01 */	addi r28, r28, 1
-
-/* 802DEEFC 004C .text      func_802DEEFC                  func_802DEEFC                  */
-.global func_802DEEFC
-func_802DEEFC:
+lbl_802DEEFC:
 /* 802DEEFC 002DBE3C  28 1D 00 00 */	cmplwi r29, 0
-/* 802DEF00 002DBE40  40 82 FF 8C */	bne func_802DEE8C
+/* 802DEF00 002DBE40  40 82 FF 8C */	bne lbl_802DEE8C
 /* 802DEF04 002DBE44  EC 3B F8 28 */	fsubs f1, f27, f31
 /* 802DEF08 002DBE48  E3 E1 00 68 */	psq_l f31, 104(r1), 0, qr0
 /* 802DEF0C 002DBE4C  CB E1 00 60 */	lfd f31, 0x60(r1)

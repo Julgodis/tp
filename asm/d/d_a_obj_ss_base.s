@@ -7,6 +7,7 @@
 /* 8015E3F8 0058 .text      __ct__14daObj_SSBase_cFv       __ct__14daObj_SSBase_cFv       */
 .global __ct__14daObj_SSBase_cFv
 __ct__14daObj_SSBase_cFv:
+__ct__14daObj_SSBase_cFv:
 /* 8015E3F8 0015B338  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015E3FC 0015B33C  7C 08 02 A6 */	mflr r0
 /* 8015E400 0015B340  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,8 +31,9 @@ __ct__14daObj_SSBase_cFv:
 /* 8015E448 0015B388  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015E44C 0015B38C  4E 80 00 20 */	blr 
 
-/* 8015E450 0044 .text      __dt__14daObj_SSBase_cFv       __dt__14daObj_SSBase_cFv       */
+/* 8015E450 0060 .text      __dt__14daObj_SSBase_cFv       __dt__14daObj_SSBase_cFv       */
 .global __dt__14daObj_SSBase_cFv
+__dt__14daObj_SSBase_cFv:
 __dt__14daObj_SSBase_cFv:
 /* 8015E450 0015B390  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015E454 0015B394  7C 08 02 A6 */	mflr r0
@@ -40,20 +42,17 @@ __dt__14daObj_SSBase_cFv:
 /* 8015E460 0015B3A0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8015E464 0015B3A4  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8015E468 0015B3A8  7C 9F 23 78 */	mr r31, r4
-/* 8015E46C 0015B3AC  41 82 00 28 */	beq func_8015E494
+/* 8015E46C 0015B3AC  41 82 00 28 */	beq lbl_8015E494
 /* 8015E470 0015B3B0  3C 80 80 3C */	lis r4, __vt__14daObj_SSBase_c@ha
 /* 8015E474 0015B3B4  38 04 A0 88 */	addi r0, r4, __vt__14daObj_SSBase_c@l
 /* 8015E478 0015B3B8  90 1E 05 68 */	stw r0, 0x568(r30)
 /* 8015E47C 0015B3BC  38 80 00 00 */	li r4, 0
 /* 8015E480 0015B3C0  4B EB A8 0D */	bl __dt__10fopAc_ac_cFv
 /* 8015E484 0015B3C4  7F E0 07 35 */	extsh. r0, r31
-/* 8015E488 0015B3C8  40 81 00 0C */	ble func_8015E494
+/* 8015E488 0015B3C8  40 81 00 0C */	ble lbl_8015E494
 /* 8015E48C 0015B3CC  7F C3 F3 78 */	mr r3, r30
 /* 8015E490 0015B3D0  48 17 08 AD */	bl __dl__FPv
-
-/* 8015E494 001C .text      func_8015E494                  func_8015E494                  */
-.global func_8015E494
-func_8015E494:
+lbl_8015E494:
 /* 8015E494 0015B3D4  7F C3 F3 78 */	mr r3, r30
 /* 8015E498 0015B3D8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8015E49C 0015B3DC  83 C1 00 08 */	lwz r30, 8(r1)
@@ -62,22 +61,21 @@ func_8015E494:
 /* 8015E4A8 0015B3E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015E4AC 0015B3EC  4E 80 00 20 */	blr 
 
-/* 8015E4B0 0010 .text      getProcessID__14daObj_SSBase_cFv getProcessID__14daObj_SSBase_cFv */
+/* 8015E4B0 0018 .text      getProcessID__14daObj_SSBase_cFv getProcessID__14daObj_SSBase_cFv */
 .global getProcessID__14daObj_SSBase_cFv
 getProcessID__14daObj_SSBase_cFv:
+getProcessID__14daObj_SSBase_cFv:
 /* 8015E4B0 0015B3F0  28 03 00 00 */	cmplwi r3, 0
-/* 8015E4B4 0015B3F4  41 82 00 0C */	beq func_8015E4C0
+/* 8015E4B4 0015B3F4  41 82 00 0C */	beq lbl_8015E4C0
 /* 8015E4B8 0015B3F8  80 63 00 04 */	lwz r3, 4(r3)
 /* 8015E4BC 0015B3FC  4E 80 00 20 */	blr 
-
-/* 8015E4C0 0008 .text      func_8015E4C0                  func_8015E4C0                  */
-.global func_8015E4C0
-func_8015E4C0:
+lbl_8015E4C0:
 /* 8015E4C0 0015B400  38 60 FF FF */	li r3, -1
 /* 8015E4C4 0015B404  4E 80 00 20 */	blr 
 
 /* 8015E4C8 0004 .text      setSoldOut__14daObj_SSBase_cFv setSoldOut__14daObj_SSBase_cFv */
 .global setSoldOut__14daObj_SSBase_cFv
+setSoldOut__14daObj_SSBase_cFv:
 setSoldOut__14daObj_SSBase_cFv:
 /* 8015E4C8 0015B408  4E 80 00 20 */	blr 
 
@@ -89,7 +87,10 @@ setSoldOut__14daObj_SSBase_cFv:
 /* 803BA088 0014 .data      __vt__14daObj_SSBase_c         __vt__14daObj_SSBase_c         */
 .global __vt__14daObj_SSBase_c
 __vt__14daObj_SSBase_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x15, 0xe4, 0x50, 0x80, 0x15, 0xe4, 0xc8 /* baserom.dol+0x3b7088 */
-.byte 0x80, 0x15, 0xe4, 0xb0 /* baserom.dol+0x3b7098 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b709c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__14daObj_SSBase_cFv
+.4byte setSoldOut__14daObj_SSBase_cFv
+.4byte getProcessID__14daObj_SSBase_cFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

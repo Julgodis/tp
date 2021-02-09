@@ -7,6 +7,7 @@
 /* 80078B90 0020 .text      Set__14dBgS_SplGrpChkFR4cXyzf  Set__14dBgS_SplGrpChkFR4cXyzf  */
 .global Set__14dBgS_SplGrpChkFR4cXyzf
 Set__14dBgS_SplGrpChkFR4cXyzf:
+Set__14dBgS_SplGrpChkFR4cXyzf:
 /* 80078B90 00075AD0  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80078B94 00075AD4  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 80078B98 00075AD8  C0 04 00 04 */	lfs f0, 4(r4)
@@ -18,6 +19,7 @@ Set__14dBgS_SplGrpChkFR4cXyzf:
 
 /* 80078BB0 00C8 .text      __ct__14dBgS_SplGrpChkFv       __ct__14dBgS_SplGrpChkFv       */
 .global __ct__14dBgS_SplGrpChkFv
+__ct__14dBgS_SplGrpChkFv:
 __ct__14dBgS_SplGrpChkFv:
 /* 80078BB0 00075AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078BB4 00075AF4  7C 08 02 A6 */	mflr r0
@@ -70,8 +72,9 @@ __ct__14dBgS_SplGrpChkFv:
 /* 80078C70 00075BB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078C74 00075BB4  4E 80 00 20 */	blr 
 
-/* 80078C78 0078 .text      __dt__14dBgS_SplGrpChkFv       __dt__14dBgS_SplGrpChkFv       */
+/* 80078C78 0094 .text      __dt__14dBgS_SplGrpChkFv       __dt__14dBgS_SplGrpChkFv       */
 .global __dt__14dBgS_SplGrpChkFv
+__dt__14dBgS_SplGrpChkFv:
 __dt__14dBgS_SplGrpChkFv:
 /* 80078C78 00075BB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078C7C 00075BBC  7C 08 02 A6 */	mflr r0
@@ -80,7 +83,7 @@ __dt__14dBgS_SplGrpChkFv:
 /* 80078C88 00075BC8  93 C1 00 08 */	stw r30, 8(r1)
 /* 80078C8C 00075BCC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 80078C90 00075BD0  7C 9F 23 78 */	mr r31, r4
-/* 80078C94 00075BD4  41 82 00 5C */	beq func_80078CF0
+/* 80078C94 00075BD4  41 82 00 5C */	beq lbl_80078CF0
 /* 80078C98 00075BD8  3C 60 80 3B */	lis r3, __vt__14dBgS_SplGrpChk@ha
 /* 80078C9C 00075BDC  38 63 BA 08 */	addi r3, r3, __vt__14dBgS_SplGrpChk@l
 /* 80078CA0 00075BE0  90 7E 00 0C */	stw r3, 0xc(r30)
@@ -100,13 +103,10 @@ __dt__14dBgS_SplGrpChkFv:
 /* 80078CD8 00075C18  38 80 00 00 */	li r4, 0
 /* 80078CDC 00075C1C  48 1E F3 D5 */	bl __dt__13cBgS_PolyInfoFv
 /* 80078CE0 00075C20  7F E0 07 35 */	extsh. r0, r31
-/* 80078CE4 00075C24  40 81 00 0C */	ble func_80078CF0
+/* 80078CE4 00075C24  40 81 00 0C */	ble lbl_80078CF0
 /* 80078CE8 00075C28  7F C3 F3 78 */	mr r3, r30
 /* 80078CEC 00075C2C  48 25 60 51 */	bl __dl__FPv
-
-/* 80078CF0 001C .text      func_80078CF0                  func_80078CF0                  */
-.global func_80078CF0
-func_80078CF0:
+lbl_80078CF0:
 /* 80078CF0 00075C30  7F C3 F3 78 */	mr r3, r30
 /* 80078CF4 00075C34  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80078CF8 00075C38  83 C1 00 08 */	lwz r30, 8(r1)
@@ -117,6 +117,7 @@ func_80078CF0:
 
 /* 80078D0C 0040 .text      Init__14dBgS_SplGrpChkFv       Init__14dBgS_SplGrpChkFv       */
 .global Init__14dBgS_SplGrpChkFv
+Init__14dBgS_SplGrpChkFv:
 Init__14dBgS_SplGrpChkFv:
 /* 80078D0C 00075C4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078D10 00075C50  7C 08 02 A6 */	mflr r0
@@ -135,20 +136,23 @@ Init__14dBgS_SplGrpChkFv:
 /* 80078D44 00075C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078D48 00075C88  4E 80 00 20 */	blr 
 
-/* 80078D4C 0008 .text      func_80078D4C                  @16@__dt__14dBgS_SplGrpChkFv   */
+/* 80078D4C 0008 .text      @16@__dt__14dBgS_SplGrpChkFv   func_80078D4C                  */
 .global func_80078D4C
+func_80078D4C:
 func_80078D4C:
 /* 80078D4C 00075C8C  38 63 FF F0 */	addi r3, r3, -16
 /* 80078D50 00075C90  4B FF FF 28 */	b __dt__14dBgS_SplGrpChkFv
 
-/* 80078D54 0008 .text      func_80078D54                  @52@__dt__14dBgS_SplGrpChkFv   */
+/* 80078D54 0008 .text      @52@__dt__14dBgS_SplGrpChkFv   func_80078D54                  */
 .global func_80078D54
+func_80078D54:
 func_80078D54:
 /* 80078D54 00075C94  38 63 FF CC */	addi r3, r3, -52
 /* 80078D58 00075C98  4B FF FF 20 */	b __dt__14dBgS_SplGrpChkFv
 
-/* 80078D5C 0008 .text      func_80078D5C                  @36@__dt__14dBgS_SplGrpChkFv   */
+/* 80078D5C 0008 .text      @36@__dt__14dBgS_SplGrpChkFv   func_80078D5C                  */
 .global func_80078D5C
+func_80078D5C:
 func_80078D5C:
 /* 80078D5C 00075C9C  38 63 FF DC */	addi r3, r3, -36
 /* 80078D60 00075CA0  4B FF FF 18 */	b __dt__14dBgS_SplGrpChkFv
@@ -161,21 +165,30 @@ func_80078D5C:
 /* 803ABA08 0030 .data      __vt__14dBgS_SplGrpChk         __vt__14dBgS_SplGrpChk         */
 .global __vt__14dBgS_SplGrpChk
 __vt__14dBgS_SplGrpChk:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8c, 0x78, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8a08 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8d, 0x4c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a8a18 */
-.byte 0x80, 0x07, 0x8d, 0x5c, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x8d, 0x54 /* baserom.dol+0x3a8a28 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__14dBgS_SplGrpChkFv
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078D4C
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078D5C
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte func_80078D54
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804526E8 0004 .sdata2    d_d_bg_s_spl_grp_chk__LIT_319  @319                           */
+/* 804526E8 0004 .sdata2    @319                           d_d_bg_s_spl_grp_chk__LIT_319  */
 .global d_d_bg_s_spl_grp_chk__LIT_319
 d_d_bg_s_spl_grp_chk__LIT_319:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1548 */
 
-/* 804526EC 0004 .sdata2    d_d_bg_s_spl_grp_chk__LIT_320  @320                           */
+/* 804526EC 0004 .sdata2    @320                           d_d_bg_s_spl_grp_chk__LIT_320  */
 .global d_d_bg_s_spl_grp_chk__LIT_320
 d_d_bg_s_spl_grp_chk__LIT_320:
 .byte 0x4e, 0x6e, 0x6b, 0x28 /* baserom.dol+0x3d154c */

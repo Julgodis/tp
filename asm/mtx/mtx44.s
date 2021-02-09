@@ -7,6 +7,7 @@
 /* 80346F28 00D0 .text      C_MTXPerspective               C_MTXPerspective               */
 .global C_MTXPerspective
 C_MTXPerspective:
+C_MTXPerspective:
 /* 80346F28 00343E68  7C 08 02 A6 */	mflr r0
 /* 80346F2C 00343E6C  90 01 00 04 */	stw r0, 4(r1)
 /* 80346F30 00343E70  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -63,6 +64,7 @@ C_MTXPerspective:
 /* 80346FF8 0098 .text      C_MTXOrtho                     C_MTXOrtho                     */
 .global C_MTXOrtho
 C_MTXOrtho:
+C_MTXOrtho:
 /* 80346FF8 00343F38  ED 04 18 28 */	fsubs f8, f4, f3
 /* 80346FFC 00343F3C  C1 22 CB 28 */	lfs f9, mtx44__LIT_99-_SDA2_BASE_(r2)
 /* 80347000 00343F40  EC 01 10 28 */	fsubs f0, f1, f2
@@ -107,32 +109,32 @@ C_MTXOrtho:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456528 0004 .sdata2    mtx44__LIT_99                  @99                            */
+/* 80456528 0004 .sdata2    @99                            mtx44__LIT_99                  */
 .global mtx44__LIT_99
 mtx44__LIT_99:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5388 */
 
-/* 8045652C 0004 .sdata2    mtx44__LIT_100                 @100                           */
+/* 8045652C 0004 .sdata2    @100                           mtx44__LIT_100                 */
 .global mtx44__LIT_100
 mtx44__LIT_100:
 .byte 0x40, 0x00, 0x00, 0x00 /* baserom.dol+0x3d538c */
 
-/* 80456530 0004 .sdata2    mtx44__LIT_101                 @101                           */
+/* 80456530 0004 .sdata2    @101                           mtx44__LIT_101                 */
 .global mtx44__LIT_101
 mtx44__LIT_101:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5390 */
 
-/* 80456534 0004 .sdata2    mtx44__LIT_102                 @102                           */
+/* 80456534 0004 .sdata2    @102                           mtx44__LIT_102                 */
 .global mtx44__LIT_102
 mtx44__LIT_102:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d5394 */
 
-/* 80456538 0004 .sdata2    mtx44__LIT_105                 @105                           */
+/* 80456538 0004 .sdata2    @105                           mtx44__LIT_105                 */
 .global mtx44__LIT_105
 mtx44__LIT_105:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5398 */
 
-/* 8045653C 0004 .sdata2    mtx44__LIT_106                 @106                           */
+/* 8045653C 0004 .sdata2    @106                           mtx44__LIT_106                 */
 .global mtx44__LIT_106
 mtx44__LIT_106:
 .byte 0x3c, 0x8e, 0xfa, 0x35 /* baserom.dol+0x3d539c */

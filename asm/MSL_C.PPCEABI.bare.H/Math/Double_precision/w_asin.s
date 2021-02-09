@@ -7,6 +7,7 @@
 /* 8036C700 0020 .text      asin                           asin                           */
 .global asin
 asin:
+asin:
 /* 8036C700 00369640  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C704 00369644  7C 08 02 A6 */	mflr r0
 /* 8036C708 00369648  90 01 00 14 */	stw r0, 0x14(r1)

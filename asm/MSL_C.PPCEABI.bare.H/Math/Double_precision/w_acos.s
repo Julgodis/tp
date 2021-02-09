@@ -7,6 +7,7 @@
 /* 8036C6E0 0020 .text      acos                           acos                           */
 .global acos
 acos:
+acos:
 /* 8036C6E0 00369620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C6E4 00369624  7C 08 02 A6 */	mflr r0
 /* 8036C6E8 00369628  90 01 00 14 */	stw r0, 0x14(r1)

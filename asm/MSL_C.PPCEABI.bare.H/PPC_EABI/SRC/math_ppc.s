@@ -7,6 +7,7 @@
 /* 8036C9C4 0024 .text      tanf                           tanf                           */
 .global tanf
 tanf:
+tanf:
 /* 8036C9C4 00369904  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C9C8 00369908  7C 08 02 A6 */	mflr r0
 /* 8036C9CC 0036990C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,6 +20,7 @@ tanf:
 
 /* 8036C9E8 0024 .text      sinf                           sinf                           */
 .global sinf
+sinf:
 sinf:
 /* 8036C9E8 00369928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C9EC 0036992C  7C 08 02 A6 */	mflr r0
@@ -33,6 +35,7 @@ sinf:
 /* 8036CA0C 0024 .text      cosf                           cosf                           */
 .global cosf
 cosf:
+cosf:
 /* 8036CA0C 0036994C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036CA10 00369950  7C 08 02 A6 */	mflr r0
 /* 8036CA14 00369954  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,6 +48,7 @@ cosf:
 
 /* 8036CA30 0024 .text      acosf                          acosf                          */
 .global acosf
+acosf:
 acosf:
 /* 8036CA30 00369970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036CA34 00369974  7C 08 02 A6 */	mflr r0

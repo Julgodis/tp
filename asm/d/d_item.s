@@ -7,6 +7,7 @@
 /* 80097E8C 0054 .text      execItemGet__FUc               execItemGet__FUc               */
 .global execItemGet__FUc
 execItemGet__FUc:
+execItemGet__FUc:
 /* 80097E8C 00094DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80097E90 00094DD0  7C 08 02 A6 */	mflr r0
 /* 80097E94 00094DD4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -29,8 +30,9 @@ execItemGet__FUc:
 /* 80097ED8 00094E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097EDC 00094E1C  4E 80 00 20 */	blr 
 
-/* 80097EE0 0038 .text      checkItemGet__FUci             checkItemGet__FUci             */
+/* 80097EE0 004C .text      checkItemGet__FUci             checkItemGet__FUci             */
 .global checkItemGet__FUci
+checkItemGet__FUci:
 checkItemGet__FUci:
 /* 80097EE0 00094E20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80097EE4 00094E24  7C 08 02 A6 */	mflr r0
@@ -44,12 +46,9 @@ checkItemGet__FUci:
 /* 80097F04 00094E44  7D 89 03 A6 */	mtctr r12
 /* 80097F08 00094E48  4E 80 04 21 */	bctrl 
 /* 80097F0C 00094E4C  2C 03 FF FF */	cmpwi r3, -1
-/* 80097F10 00094E50  40 82 00 08 */	bne func_80097F18
+/* 80097F10 00094E50  40 82 00 08 */	bne lbl_80097F18
 /* 80097F14 00094E54  7F E3 FB 78 */	mr r3, r31
-
-/* 80097F18 0014 .text      func_80097F18                  func_80097F18                  */
-.global func_80097F18
-func_80097F18:
+lbl_80097F18:
 /* 80097F18 00094E58  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80097F1C 00094E5C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80097F20 00094E60  7C 08 03 A6 */	mtlr r0
@@ -58,6 +57,7 @@ func_80097F18:
 
 /* 80097F2C 0024 .text      item_func_HEART__Fv            item_func_HEART__Fv            */
 .global item_func_HEART__Fv
+item_func_HEART__Fv:
 item_func_HEART__Fv:
 /* 80097F2C 00094E6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097F30 00094E70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -72,6 +72,7 @@ item_func_HEART__Fv:
 /* 80097F50 0018 .text      item_func_GREEN_RUPEE__Fv      item_func_GREEN_RUPEE__Fv      */
 .global item_func_GREEN_RUPEE__Fv
 item_func_GREEN_RUPEE__Fv:
+item_func_GREEN_RUPEE__Fv:
 /* 80097F50 00094E90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097F54 00094E94  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80097F58 00094E98  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
@@ -81,6 +82,7 @@ item_func_GREEN_RUPEE__Fv:
 
 /* 80097F68 0018 .text      item_func_BLUE_RUPEE__Fv       item_func_BLUE_RUPEE__Fv       */
 .global item_func_BLUE_RUPEE__Fv
+item_func_BLUE_RUPEE__Fv:
 item_func_BLUE_RUPEE__Fv:
 /* 80097F68 00094EA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097F6C 00094EAC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -92,6 +94,7 @@ item_func_BLUE_RUPEE__Fv:
 /* 80097F80 0018 .text      item_func_YELLOW_RUPEE__Fv     item_func_YELLOW_RUPEE__Fv     */
 .global item_func_YELLOW_RUPEE__Fv
 item_func_YELLOW_RUPEE__Fv:
+item_func_YELLOW_RUPEE__Fv:
 /* 80097F80 00094EC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097F84 00094EC4  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80097F88 00094EC8  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
@@ -101,6 +104,7 @@ item_func_YELLOW_RUPEE__Fv:
 
 /* 80097F98 0018 .text      item_func_RED_RUPEE__Fv        item_func_RED_RUPEE__Fv        */
 .global item_func_RED_RUPEE__Fv
+item_func_RED_RUPEE__Fv:
 item_func_RED_RUPEE__Fv:
 /* 80097F98 00094ED8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097F9C 00094EDC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -112,6 +116,7 @@ item_func_RED_RUPEE__Fv:
 /* 80097FB0 0018 .text      item_func_PURPLE_RUPEE__Fv     item_func_PURPLE_RUPEE__Fv     */
 .global item_func_PURPLE_RUPEE__Fv
 item_func_PURPLE_RUPEE__Fv:
+item_func_PURPLE_RUPEE__Fv:
 /* 80097FB0 00094EF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097FB4 00094EF4  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80097FB8 00094EF8  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
@@ -121,6 +126,7 @@ item_func_PURPLE_RUPEE__Fv:
 
 /* 80097FC8 0018 .text      item_func_ORANGE_RUPEE__Fv     item_func_ORANGE_RUPEE__Fv     */
 .global item_func_ORANGE_RUPEE__Fv
+item_func_ORANGE_RUPEE__Fv:
 item_func_ORANGE_RUPEE__Fv:
 /* 80097FC8 00094F08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097FCC 00094F0C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -132,6 +138,7 @@ item_func_ORANGE_RUPEE__Fv:
 /* 80097FE0 0018 .text      item_func_SILVER_RUPEE__Fv     item_func_SILVER_RUPEE__Fv     */
 .global item_func_SILVER_RUPEE__Fv
 item_func_SILVER_RUPEE__Fv:
+item_func_SILVER_RUPEE__Fv:
 /* 80097FE0 00094F20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097FE4 00094F24  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80097FE8 00094F28  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
@@ -141,6 +148,7 @@ item_func_SILVER_RUPEE__Fv:
 
 /* 80097FF8 0018 .text      item_func_S_MAGIC__Fv          item_func_S_MAGIC__Fv          */
 .global item_func_S_MAGIC__Fv
+item_func_S_MAGIC__Fv:
 item_func_S_MAGIC__Fv:
 /* 80097FF8 00094F38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80097FFC 00094F3C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -152,6 +160,7 @@ item_func_S_MAGIC__Fv:
 /* 80098010 0018 .text      item_func_L_MAGIC__Fv          item_func_L_MAGIC__Fv          */
 .global item_func_L_MAGIC__Fv
 item_func_L_MAGIC__Fv:
+item_func_L_MAGIC__Fv:
 /* 80098010 00094F50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098014 00094F54  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80098018 00094F58  A8 64 5D CC */	lha r3, 0x5dcc(r4)
@@ -161,6 +170,7 @@ item_func_L_MAGIC__Fv:
 
 /* 80098028 0028 .text      item_func_BOMB_5__Fv           item_func_BOMB_5__Fv           */
 .global item_func_BOMB_5__Fv
+item_func_BOMB_5__Fv:
 item_func_BOMB_5__Fv:
 /* 80098028 00094F68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009802C 00094F6C  7C 08 02 A6 */	mflr r0
@@ -176,6 +186,7 @@ item_func_BOMB_5__Fv:
 /* 80098050 0028 .text      item_func_BOMB_10__Fv          item_func_BOMB_10__Fv          */
 .global item_func_BOMB_10__Fv
 item_func_BOMB_10__Fv:
+item_func_BOMB_10__Fv:
 /* 80098050 00094F90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098054 00094F94  7C 08 02 A6 */	mflr r0
 /* 80098058 00094F98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -189,6 +200,7 @@ item_func_BOMB_10__Fv:
 
 /* 80098078 0028 .text      item_func_BOMB_20__Fv          item_func_BOMB_20__Fv          */
 .global item_func_BOMB_20__Fv
+item_func_BOMB_20__Fv:
 item_func_BOMB_20__Fv:
 /* 80098078 00094FB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009807C 00094FBC  7C 08 02 A6 */	mflr r0
@@ -204,6 +216,7 @@ item_func_BOMB_20__Fv:
 /* 800980A0 0028 .text      item_func_BOMB_30__Fv          item_func_BOMB_30__Fv          */
 .global item_func_BOMB_30__Fv
 item_func_BOMB_30__Fv:
+item_func_BOMB_30__Fv:
 /* 800980A0 00094FE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800980A4 00094FE4  7C 08 02 A6 */	mflr r0
 /* 800980A8 00094FE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -218,6 +231,7 @@ item_func_BOMB_30__Fv:
 /* 800980C8 0018 .text      item_func_ARROW_10__Fv         item_func_ARROW_10__Fv         */
 .global item_func_ARROW_10__Fv
 item_func_ARROW_10__Fv:
+item_func_ARROW_10__Fv:
 /* 800980C8 00095008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800980CC 0009500C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 800980D0 00095010  A8 64 5D F4 */	lha r3, 0x5df4(r4)
@@ -227,6 +241,7 @@ item_func_ARROW_10__Fv:
 
 /* 800980E0 0018 .text      item_func_ARROW_20__Fv         item_func_ARROW_20__Fv         */
 .global item_func_ARROW_20__Fv
+item_func_ARROW_20__Fv:
 item_func_ARROW_20__Fv:
 /* 800980E0 00095020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800980E4 00095024  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -238,6 +253,7 @@ item_func_ARROW_20__Fv:
 /* 800980F8 0018 .text      item_func_ARROW_30__Fv         item_func_ARROW_30__Fv         */
 .global item_func_ARROW_30__Fv
 item_func_ARROW_30__Fv:
+item_func_ARROW_30__Fv:
 /* 800980F8 00095038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800980FC 0009503C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80098100 00095040  A8 64 5D F4 */	lha r3, 0x5df4(r4)
@@ -247,6 +263,7 @@ item_func_ARROW_30__Fv:
 
 /* 80098110 0018 .text      item_func_ARROW_1__Fv          item_func_ARROW_1__Fv          */
 .global item_func_ARROW_1__Fv
+item_func_ARROW_1__Fv:
 item_func_ARROW_1__Fv:
 /* 80098110 00095050  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098114 00095054  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -258,6 +275,7 @@ item_func_ARROW_1__Fv:
 /* 80098128 0018 .text      item_func_PACHINKO_SHOT__Fv    item_func_PACHINKO_SHOT__Fv    */
 .global item_func_PACHINKO_SHOT__Fv
 item_func_PACHINKO_SHOT__Fv:
+item_func_PACHINKO_SHOT__Fv:
 /* 80098128 00095068  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009812C 0009506C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80098130 00095070  A8 64 5D F6 */	lha r3, 0x5df6(r4)
@@ -267,6 +285,7 @@ item_func_PACHINKO_SHOT__Fv:
 
 /* 80098140 0028 .text      item_func_WATER_BOMB_5__Fv     item_func_WATER_BOMB_5__Fv     */
 .global item_func_WATER_BOMB_5__Fv
+item_func_WATER_BOMB_5__Fv:
 item_func_WATER_BOMB_5__Fv:
 /* 80098140 00095080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098144 00095084  7C 08 02 A6 */	mflr r0
@@ -282,6 +301,7 @@ item_func_WATER_BOMB_5__Fv:
 /* 80098168 0028 .text      item_func_WATER_BOMB_10__Fv    item_func_WATER_BOMB_10__Fv    */
 .global item_func_WATER_BOMB_10__Fv
 item_func_WATER_BOMB_10__Fv:
+item_func_WATER_BOMB_10__Fv:
 /* 80098168 000950A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009816C 000950AC  7C 08 02 A6 */	mflr r0
 /* 80098170 000950B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -295,6 +315,7 @@ item_func_WATER_BOMB_10__Fv:
 
 /* 80098190 0028 .text      item_func_WATER_BOMB_20__Fv    item_func_WATER_BOMB_20__Fv    */
 .global item_func_WATER_BOMB_20__Fv
+item_func_WATER_BOMB_20__Fv:
 item_func_WATER_BOMB_20__Fv:
 /* 80098190 000950D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098194 000950D4  7C 08 02 A6 */	mflr r0
@@ -310,6 +331,7 @@ item_func_WATER_BOMB_20__Fv:
 /* 800981B8 0028 .text      item_func_WATER_BOMB_30__Fv    item_func_WATER_BOMB_30__Fv    */
 .global item_func_WATER_BOMB_30__Fv
 item_func_WATER_BOMB_30__Fv:
+item_func_WATER_BOMB_30__Fv:
 /* 800981B8 000950F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800981BC 000950FC  7C 08 02 A6 */	mflr r0
 /* 800981C0 00095100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -323,6 +345,7 @@ item_func_WATER_BOMB_30__Fv:
 
 /* 800981E0 0028 .text      item_func_BOMB_INSECT_5__Fv    item_func_BOMB_INSECT_5__Fv    */
 .global item_func_BOMB_INSECT_5__Fv
+item_func_BOMB_INSECT_5__Fv:
 item_func_BOMB_INSECT_5__Fv:
 /* 800981E0 00095120  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800981E4 00095124  7C 08 02 A6 */	mflr r0
@@ -338,6 +361,7 @@ item_func_BOMB_INSECT_5__Fv:
 /* 80098208 0028 .text      item_func_BOMB_INSECT_10__Fv   item_func_BOMB_INSECT_10__Fv   */
 .global item_func_BOMB_INSECT_10__Fv
 item_func_BOMB_INSECT_10__Fv:
+item_func_BOMB_INSECT_10__Fv:
 /* 80098208 00095148  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009820C 0009514C  7C 08 02 A6 */	mflr r0
 /* 80098210 00095150  90 01 00 14 */	stw r0, 0x14(r1)
@@ -351,6 +375,7 @@ item_func_BOMB_INSECT_10__Fv:
 
 /* 80098230 0028 .text      item_func_BOMB_INSECT_20__Fv   item_func_BOMB_INSECT_20__Fv   */
 .global item_func_BOMB_INSECT_20__Fv
+item_func_BOMB_INSECT_20__Fv:
 item_func_BOMB_INSECT_20__Fv:
 /* 80098230 00095170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098234 00095174  7C 08 02 A6 */	mflr r0
@@ -366,10 +391,12 @@ item_func_BOMB_INSECT_20__Fv:
 /* 80098258 0004 .text      item_func_BOMB_INSECT_30__Fv   item_func_BOMB_INSECT_30__Fv   */
 .global item_func_BOMB_INSECT_30__Fv
 item_func_BOMB_INSECT_30__Fv:
+item_func_BOMB_INSECT_30__Fv:
 /* 80098258 00095198  4E 80 00 20 */	blr 
 
 /* 8009825C 0024 .text      item_func_RECOVER_FAILY__Fv    item_func_RECOVER_FAILY__Fv    */
 .global item_func_RECOVER_FAILY__Fv
+item_func_RECOVER_FAILY__Fv:
 item_func_RECOVER_FAILY__Fv:
 /* 8009825C 0009519C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098260 000951A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -384,10 +411,12 @@ item_func_RECOVER_FAILY__Fv:
 /* 80098280 0004 .text      item_func_TRIPLE_HEART__Fv     item_func_TRIPLE_HEART__Fv     */
 .global item_func_TRIPLE_HEART__Fv
 item_func_TRIPLE_HEART__Fv:
+item_func_TRIPLE_HEART__Fv:
 /* 80098280 000951C0  4E 80 00 20 */	blr 
 
 /* 80098284 0018 .text      item_func_SMALL_KEY__Fv        item_func_SMALL_KEY__Fv        */
 .global item_func_SMALL_KEY__Fv
+item_func_SMALL_KEY__Fv:
 item_func_SMALL_KEY__Fv:
 /* 80098284 000951C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098288 000951C8  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -399,6 +428,7 @@ item_func_SMALL_KEY__Fv:
 /* 8009829C 0018 .text      item_func_KAKERA_HEART__Fv     item_func_KAKERA_HEART__Fv     */
 .global item_func_KAKERA_HEART__Fv
 item_func_KAKERA_HEART__Fv:
+item_func_KAKERA_HEART__Fv:
 /* 8009829C 000951DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800982A0 000951E0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 800982A4 000951E4  A8 64 5D CA */	lha r3, 0x5dca(r4)
@@ -408,6 +438,7 @@ item_func_KAKERA_HEART__Fv:
 
 /* 800982B4 0090 .text      item_func_UTUWA_HEART__Fv      item_func_UTUWA_HEART__Fv      */
 .global item_func_UTUWA_HEART__Fv
+item_func_UTUWA_HEART__Fv:
 item_func_UTUWA_HEART__Fv:
 /* 800982B4 000951F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800982B8 000951F8  7C 08 02 A6 */	mflr r0
@@ -449,6 +480,7 @@ item_func_UTUWA_HEART__Fv:
 /* 80098344 0030 .text      item_func_MAP__Fv              item_func_MAP__Fv              */
 .global item_func_MAP__Fv
 item_func_MAP__Fv:
+item_func_MAP__Fv:
 /* 80098344 00095284  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098348 00095288  7C 08 02 A6 */	mflr r0
 /* 8009834C 0009528C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -465,6 +497,7 @@ item_func_MAP__Fv:
 /* 80098374 0030 .text      item_func_COMPUS__Fv           item_func_COMPUS__Fv           */
 .global item_func_COMPUS__Fv
 item_func_COMPUS__Fv:
+item_func_COMPUS__Fv:
 /* 80098374 000952B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098378 000952B8  7C 08 02 A6 */	mflr r0
 /* 8009837C 000952BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -480,6 +513,7 @@ item_func_COMPUS__Fv:
 
 /* 800983A4 0048 .text      item_func_DUNGEON_EXIT__Fv     item_func_DUNGEON_EXIT__Fv     */
 .global item_func_DUNGEON_EXIT__Fv
+item_func_DUNGEON_EXIT__Fv:
 item_func_DUNGEON_EXIT__Fv:
 /* 800983A4 000952E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800983A8 000952E8  7C 08 02 A6 */	mflr r0
@@ -503,6 +537,7 @@ item_func_DUNGEON_EXIT__Fv:
 /* 800983EC 0030 .text      item_func_BOSS_KEY__Fv         item_func_BOSS_KEY__Fv         */
 .global item_func_BOSS_KEY__Fv
 item_func_BOSS_KEY__Fv:
+item_func_BOSS_KEY__Fv:
 /* 800983EC 0009532C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800983F0 00095330  7C 08 02 A6 */	mflr r0
 /* 800983F4 00095334  90 01 00 14 */	stw r0, 0x14(r1)
@@ -518,6 +553,7 @@ item_func_BOSS_KEY__Fv:
 
 /* 8009841C 0034 .text      item_func_DUNGEON_BACK__Fv     item_func_DUNGEON_BACK__Fv     */
 .global item_func_DUNGEON_BACK__Fv
+item_func_DUNGEON_BACK__Fv:
 item_func_DUNGEON_BACK__Fv:
 /* 8009841C 0009535C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098420 00095360  7C 08 02 A6 */	mflr r0
@@ -535,6 +571,7 @@ item_func_DUNGEON_BACK__Fv:
 
 /* 80098450 003C .text      item_func_SWORD__Fv            item_func_SWORD__Fv            */
 .global item_func_SWORD__Fv
+item_func_SWORD__Fv:
 item_func_SWORD__Fv:
 /* 80098450 00095390  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098454 00095394  7C 08 02 A6 */	mflr r0
@@ -555,6 +592,7 @@ item_func_SWORD__Fv:
 /* 8009848C 003C .text      item_func_MASTER_SWORD__Fv     item_func_MASTER_SWORD__Fv     */
 .global item_func_MASTER_SWORD__Fv
 item_func_MASTER_SWORD__Fv:
+item_func_MASTER_SWORD__Fv:
 /* 8009848C 000953CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098490 000953D0  7C 08 02 A6 */	mflr r0
 /* 80098494 000953D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -573,6 +611,7 @@ item_func_MASTER_SWORD__Fv:
 
 /* 800984C8 003C .text      item_func_WOOD_SHIELD__Fv      item_func_WOOD_SHIELD__Fv      */
 .global item_func_WOOD_SHIELD__Fv
+item_func_WOOD_SHIELD__Fv:
 item_func_WOOD_SHIELD__Fv:
 /* 800984C8 00095408  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800984CC 0009540C  7C 08 02 A6 */	mflr r0
@@ -593,15 +632,18 @@ item_func_WOOD_SHIELD__Fv:
 /* 80098504 0004 .text      item_func_SHIELD__Fv           item_func_SHIELD__Fv           */
 .global item_func_SHIELD__Fv
 item_func_SHIELD__Fv:
+item_func_SHIELD__Fv:
 /* 80098504 00095444  4E 80 00 20 */	blr 
 
 /* 80098508 0004 .text      item_func_HYLIA_SHIELD__Fv     item_func_HYLIA_SHIELD__Fv     */
 .global item_func_HYLIA_SHIELD__Fv
 item_func_HYLIA_SHIELD__Fv:
+item_func_HYLIA_SHIELD__Fv:
 /* 80098508 00095448  4E 80 00 20 */	blr 
 
 /* 8009850C 0034 .text      item_func_TKS_LETTER__Fv       item_func_TKS_LETTER__Fv       */
 .global item_func_TKS_LETTER__Fv
+item_func_TKS_LETTER__Fv:
 item_func_TKS_LETTER__Fv:
 /* 8009850C 0009544C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098510 00095450  7C 08 02 A6 */	mflr r0
@@ -620,6 +662,7 @@ item_func_TKS_LETTER__Fv:
 /* 80098540 0024 .text      item_func_WEAR_CASUAL__Fv      item_func_WEAR_CASUAL__Fv      */
 .global item_func_WEAR_CASUAL__Fv
 item_func_WEAR_CASUAL__Fv:
+item_func_WEAR_CASUAL__Fv:
 /* 80098540 00095480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098544 00095484  7C 08 02 A6 */	mflr r0
 /* 80098548 00095488  90 01 00 14 */	stw r0, 0x14(r1)
@@ -632,6 +675,7 @@ item_func_WEAR_CASUAL__Fv:
 
 /* 80098564 003C .text      item_func_WEAR_KOKIRI__Fv      item_func_WEAR_KOKIRI__Fv      */
 .global item_func_WEAR_KOKIRI__Fv
+item_func_WEAR_KOKIRI__Fv:
 item_func_WEAR_KOKIRI__Fv:
 /* 80098564 000954A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098568 000954A8  7C 08 02 A6 */	mflr r0
@@ -652,15 +696,18 @@ item_func_WEAR_KOKIRI__Fv:
 /* 800985A0 0004 .text      item_func_ARMOR__Fv            item_func_ARMOR__Fv            */
 .global item_func_ARMOR__Fv
 item_func_ARMOR__Fv:
+item_func_ARMOR__Fv:
 /* 800985A0 000954E0  4E 80 00 20 */	blr 
 
 /* 800985A4 0004 .text      item_func_WEAR_ZORA__Fv        item_func_WEAR_ZORA__Fv        */
 .global item_func_WEAR_ZORA__Fv
 item_func_WEAR_ZORA__Fv:
+item_func_WEAR_ZORA__Fv:
 /* 800985A4 000954E4  4E 80 00 20 */	blr 
 
 /* 800985A8 0024 .text      item_func_MAGIC_LV1__Fv        item_func_MAGIC_LV1__Fv        */
 .global item_func_MAGIC_LV1__Fv
+item_func_MAGIC_LV1__Fv:
 item_func_MAGIC_LV1__Fv:
 /* 800985A8 000954E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800985AC 000954EC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -674,6 +721,7 @@ item_func_MAGIC_LV1__Fv:
 
 /* 800985CC 0034 .text      item_func_DUNGEON_EXIT_2__Fv   item_func_DUNGEON_EXIT_2__Fv   */
 .global item_func_DUNGEON_EXIT_2__Fv
+item_func_DUNGEON_EXIT_2__Fv:
 item_func_DUNGEON_EXIT_2__Fv:
 /* 800985CC 0009550C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800985D0 00095510  7C 08 02 A6 */	mflr r0
@@ -692,6 +740,7 @@ item_func_DUNGEON_EXIT_2__Fv:
 /* 80098600 0014 .text      item_func_WALLET_LV1__Fv       item_func_WALLET_LV1__Fv       */
 .global item_func_WALLET_LV1__Fv
 item_func_WALLET_LV1__Fv:
+item_func_WALLET_LV1__Fv:
 /* 80098600 00095540  38 00 00 00 */	li r0, 0
 /* 80098604 00095544  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098608 00095548  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -700,6 +749,7 @@ item_func_WALLET_LV1__Fv:
 
 /* 80098614 0014 .text      item_func_WALLET_LV2__Fv       item_func_WALLET_LV2__Fv       */
 .global item_func_WALLET_LV2__Fv
+item_func_WALLET_LV2__Fv:
 item_func_WALLET_LV2__Fv:
 /* 80098614 00095554  38 00 00 01 */	li r0, 1
 /* 80098618 00095558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
@@ -710,40 +760,36 @@ item_func_WALLET_LV2__Fv:
 /* 80098628 0014 .text      item_func_WALLET_LV3__Fv       item_func_WALLET_LV3__Fv       */
 .global item_func_WALLET_LV3__Fv
 item_func_WALLET_LV3__Fv:
+item_func_WALLET_LV3__Fv:
 /* 80098628 00095568  38 00 00 02 */	li r0, 2
 /* 8009862C 0009556C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098630 00095570  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098634 00095574  98 03 00 19 */	stb r0, 0x19(r3)
 /* 80098638 00095578  4E 80 00 20 */	blr 
 
-/* 8009863C 002C .text      item_func_ZORAS_JEWEL__Fv      item_func_ZORAS_JEWEL__Fv      */
+/* 8009863C 0054 .text      item_func_ZORAS_JEWEL__Fv      item_func_ZORAS_JEWEL__Fv      */
 .global item_func_ZORAS_JEWEL__Fv
+item_func_ZORAS_JEWEL__Fv:
 item_func_ZORAS_JEWEL__Fv:
 /* 8009863C 0009557C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098640 00095580  7C 08 02 A6 */	mflr r0
 /* 80098644 00095584  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80098648 00095588  48 00 1A 81 */	bl item_getcheck_func_FISHING_ROD_1__Fv
 /* 8009864C 0009558C  2C 03 00 00 */	cmpwi r3, 0
-/* 80098650 00095590  41 82 00 18 */	beq func_80098668
+/* 80098650 00095590  41 82 00 18 */	beq lbl_80098668
 /* 80098654 00095594  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098658 00095598  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009865C 0009559C  38 63 00 9C */	addi r3, r3, 0x9c
 /* 80098660 000955A0  4B F9 B6 5D */	bl setRodTypeLevelUp__17dSv_player_item_cFv
-/* 80098664 000955A4  48 00 00 1C */	b func_80098680
-
-/* 80098668 0018 .text      func_80098668                  func_80098668                  */
-.global func_80098668
-func_80098668:
+/* 80098664 000955A4  48 00 00 1C */	b lbl_80098680
+lbl_80098668:
 /* 80098668 000955A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009866C 000955AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098670 000955B0  38 63 00 9C */	addi r3, r3, 0x9c
 /* 80098674 000955B4  38 80 00 14 */	li r4, 0x14
 /* 80098678 000955B8  38 A0 00 3D */	li r5, 0x3d
 /* 8009867C 000955BC  4B F9 A9 3D */	bl setItem__17dSv_player_item_cFiUc
-
-/* 80098680 0010 .text      func_80098680                  func_80098680                  */
-.global func_80098680
-func_80098680:
+lbl_80098680:
 /* 80098680 000955C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80098684 000955C4  7C 08 03 A6 */	mtlr r0
 /* 80098688 000955C8  38 21 00 10 */	addi r1, r1, 0x10
@@ -751,6 +797,7 @@ func_80098680:
 
 /* 80098690 0034 .text      item_func_HAWK_EYE__Fv         item_func_HAWK_EYE__Fv         */
 .global item_func_HAWK_EYE__Fv
+item_func_HAWK_EYE__Fv:
 item_func_HAWK_EYE__Fv:
 /* 80098690 000955D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098694 000955D4  7C 08 02 A6 */	mflr r0
@@ -769,6 +816,7 @@ item_func_HAWK_EYE__Fv:
 /* 800986C4 0054 .text      item_func_WOOD_STICK__Fv       item_func_WOOD_STICK__Fv       */
 .global item_func_WOOD_STICK__Fv
 item_func_WOOD_STICK__Fv:
+item_func_WOOD_STICK__Fv:
 /* 800986C4 00095604  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800986C8 00095608  7C 08 02 A6 */	mflr r0
 /* 800986CC 0009560C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -780,7 +828,7 @@ item_func_WOOD_STICK__Fv:
 /* 800986E4 00095624  4B F9 BB 05 */	bl setCollect__20dSv_player_collect_cFiUc
 /* 800986E8 00095628  38 60 00 3F */	li r3, 0x3f
 /* 800986EC 0009562C  4B F9 67 D5 */	bl dComIfGs_setSelectEquipSword__FUc
-/* 800986F0 00095630  88 AD 87 E4 */	lbz r5, sym_80450D64-_SDA_BASE_(r13)
+/* 800986F0 00095630  88 AD 87 E4 */	lbz r5, data_80450D64-_SDA_BASE_(r13)
 /* 800986F4 00095634  7C A5 07 74 */	extsb r5, r5
 /* 800986F8 00095638  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 800986FC 0009563C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -793,6 +841,7 @@ item_func_WOOD_STICK__Fv:
 
 /* 80098718 0034 .text      item_func_BOOMERANG__Fv        item_func_BOOMERANG__Fv        */
 .global item_func_BOOMERANG__Fv
+item_func_BOOMERANG__Fv:
 item_func_BOOMERANG__Fv:
 /* 80098718 00095658  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009871C 0009565C  7C 08 02 A6 */	mflr r0
@@ -811,6 +860,7 @@ item_func_BOOMERANG__Fv:
 /* 8009874C 0034 .text      item_func_SPINNER__Fv          item_func_SPINNER__Fv          */
 .global item_func_SPINNER__Fv
 item_func_SPINNER__Fv:
+item_func_SPINNER__Fv:
 /* 8009874C 0009568C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098750 00095690  7C 08 02 A6 */	mflr r0
 /* 80098754 00095694  90 01 00 14 */	stw r0, 0x14(r1)
@@ -828,6 +878,7 @@ item_func_SPINNER__Fv:
 /* 80098780 0034 .text      item_func_IRONBALL__Fv         item_func_IRONBALL__Fv         */
 .global item_func_IRONBALL__Fv
 item_func_IRONBALL__Fv:
+item_func_IRONBALL__Fv:
 /* 80098780 000956C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098784 000956C4  7C 08 02 A6 */	mflr r0
 /* 80098788 000956C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -844,6 +895,7 @@ item_func_IRONBALL__Fv:
 
 /* 800987B4 0048 .text      item_func_BOW__Fv              item_func_BOW__Fv              */
 .global item_func_BOW__Fv
+item_func_BOW__Fv:
 item_func_BOW__Fv:
 /* 800987B4 000956F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800987B8 000956F8  7C 08 02 A6 */	mflr r0
@@ -867,6 +919,7 @@ item_func_BOW__Fv:
 /* 800987FC 0034 .text      item_func_HOOKSHOT__Fv         item_func_HOOKSHOT__Fv         */
 .global item_func_HOOKSHOT__Fv
 item_func_HOOKSHOT__Fv:
+item_func_HOOKSHOT__Fv:
 /* 800987FC 0009573C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098800 00095740  7C 08 02 A6 */	mflr r0
 /* 80098804 00095744  90 01 00 14 */	stw r0, 0x14(r1)
@@ -883,6 +936,7 @@ item_func_HOOKSHOT__Fv:
 
 /* 80098830 0034 .text      item_func_HVY_BOOTS__Fv        item_func_HVY_BOOTS__Fv        */
 .global item_func_HVY_BOOTS__Fv
+item_func_HVY_BOOTS__Fv:
 item_func_HVY_BOOTS__Fv:
 /* 80098830 00095770  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098834 00095774  7C 08 02 A6 */	mflr r0
@@ -901,6 +955,7 @@ item_func_HVY_BOOTS__Fv:
 /* 80098864 0034 .text      item_func_COPY_ROD__Fv         item_func_COPY_ROD__Fv         */
 .global item_func_COPY_ROD__Fv
 item_func_COPY_ROD__Fv:
+item_func_COPY_ROD__Fv:
 /* 80098864 000957A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098868 000957A8  7C 08 02 A6 */	mflr r0
 /* 8009886C 000957AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -917,6 +972,7 @@ item_func_COPY_ROD__Fv:
 
 /* 80098898 0050 .text      item_func_W_HOOKSHOT__Fv       item_func_W_HOOKSHOT__Fv       */
 .global item_func_W_HOOKSHOT__Fv
+item_func_W_HOOKSHOT__Fv:
 item_func_W_HOOKSHOT__Fv:
 /* 80098898 000957D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009889C 000957DC  7C 08 02 A6 */	mflr r0
@@ -942,6 +998,7 @@ item_func_W_HOOKSHOT__Fv:
 /* 800988E8 0040 .text      item_func_KANTERA__Fv          item_func_KANTERA__Fv          */
 .global item_func_KANTERA__Fv
 item_func_KANTERA__Fv:
+item_func_KANTERA__Fv:
 /* 800988E8 00095828  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800988EC 0009582C  7C 08 02 A6 */	mflr r0
 /* 800988F0 00095830  90 01 00 14 */	stw r0, 0x14(r1)
@@ -961,6 +1018,7 @@ item_func_KANTERA__Fv:
 
 /* 80098928 0040 .text      item_func_LIGHT_SWORD__Fv      item_func_LIGHT_SWORD__Fv      */
 .global item_func_LIGHT_SWORD__Fv
+item_func_LIGHT_SWORD__Fv:
 item_func_LIGHT_SWORD__Fv:
 /* 80098928 00095868  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009892C 0009586C  7C 08 02 A6 */	mflr r0
@@ -982,6 +1040,7 @@ item_func_LIGHT_SWORD__Fv:
 /* 80098968 0034 .text      item_func_FISHING_ROD_1__Fv    item_func_FISHING_ROD_1__Fv    */
 .global item_func_FISHING_ROD_1__Fv
 item_func_FISHING_ROD_1__Fv:
+item_func_FISHING_ROD_1__Fv:
 /* 80098968 000958A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009896C 000958AC  7C 08 02 A6 */	mflr r0
 /* 80098970 000958B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -998,6 +1057,7 @@ item_func_FISHING_ROD_1__Fv:
 
 /* 8009899C 0040 .text      item_func_PACHINKO__Fv         item_func_PACHINKO__Fv         */
 .global item_func_PACHINKO__Fv
+item_func_PACHINKO__Fv:
 item_func_PACHINKO__Fv:
 /* 8009899C 000958DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800989A0 000958E0  7C 08 02 A6 */	mflr r0
@@ -1019,6 +1079,7 @@ item_func_PACHINKO__Fv:
 /* 800989DC 0034 .text      item_func_COPY_ROD_2__Fv       item_func_COPY_ROD_2__Fv       */
 .global item_func_COPY_ROD_2__Fv
 item_func_COPY_ROD_2__Fv:
+item_func_COPY_ROD_2__Fv:
 /* 800989DC 0009591C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800989E0 00095920  7C 08 02 A6 */	mflr r0
 /* 800989E4 00095924  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1036,10 +1097,12 @@ item_func_COPY_ROD_2__Fv:
 /* 80098A10 0004 .text      item_func_BOMB_BAG_LV2__Fv     item_func_BOMB_BAG_LV2__Fv     */
 .global item_func_BOMB_BAG_LV2__Fv
 item_func_BOMB_BAG_LV2__Fv:
+item_func_BOMB_BAG_LV2__Fv:
 /* 80098A10 00095950  4E 80 00 20 */	blr 
 
 /* 80098A14 0034 .text      item_func_BOMB_BAG_LV1__Fv     item_func_BOMB_BAG_LV1__Fv     */
 .global item_func_BOMB_BAG_LV1__Fv
+item_func_BOMB_BAG_LV1__Fv:
 item_func_BOMB_BAG_LV1__Fv:
 /* 80098A14 00095954  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098A18 00095958  7C 08 02 A6 */	mflr r0
@@ -1058,6 +1121,7 @@ item_func_BOMB_BAG_LV1__Fv:
 /* 80098A48 0034 .text      item_func_BOMB_IN_BAG__Fv      item_func_BOMB_IN_BAG__Fv      */
 .global item_func_BOMB_IN_BAG__Fv
 item_func_BOMB_IN_BAG__Fv:
+item_func_BOMB_IN_BAG__Fv:
 /* 80098A48 00095988  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098A4C 0009598C  7C 08 02 A6 */	mflr r0
 /* 80098A50 00095990  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1074,6 +1138,7 @@ item_func_BOMB_IN_BAG__Fv:
 
 /* 80098A7C 0034 .text      item_func_LIGHT_ARROW__Fv      item_func_LIGHT_ARROW__Fv      */
 .global item_func_LIGHT_ARROW__Fv
+item_func_LIGHT_ARROW__Fv:
 item_func_LIGHT_ARROW__Fv:
 /* 80098A7C 000959BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098A80 000959C0  7C 08 02 A6 */	mflr r0
@@ -1092,6 +1157,7 @@ item_func_LIGHT_ARROW__Fv:
 /* 80098AB0 0018 .text      item_func_ARROW_LV1__Fv        item_func_ARROW_LV1__Fv        */
 .global item_func_ARROW_LV1__Fv
 item_func_ARROW_LV1__Fv:
+item_func_ARROW_LV1__Fv:
 /* 80098AB0 000959F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098AB4 000959F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098AB8 000959F8  38 00 00 3C */	li r0, 0x3c
@@ -1101,6 +1167,7 @@ item_func_ARROW_LV1__Fv:
 
 /* 80098AC8 0018 .text      item_func_ARROW_LV2__Fv        item_func_ARROW_LV2__Fv        */
 .global item_func_ARROW_LV2__Fv
+item_func_ARROW_LV2__Fv:
 item_func_ARROW_LV2__Fv:
 /* 80098AC8 00095A08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098ACC 00095A0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -1112,6 +1179,7 @@ item_func_ARROW_LV2__Fv:
 /* 80098AE0 0018 .text      item_func_ARROW_LV3__Fv        item_func_ARROW_LV3__Fv        */
 .global item_func_ARROW_LV3__Fv
 item_func_ARROW_LV3__Fv:
+item_func_ARROW_LV3__Fv:
 /* 80098AE0 00095A20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098AE4 00095A24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098AE8 00095A28  38 00 00 64 */	li r0, 0x64
@@ -1122,45 +1190,54 @@ item_func_ARROW_LV3__Fv:
 /* 80098AF8 0004 .text      item_func_LURE_ROD__Fv         item_func_LURE_ROD__Fv         */
 .global item_func_LURE_ROD__Fv
 item_func_LURE_ROD__Fv:
+item_func_LURE_ROD__Fv:
 /* 80098AF8 00095A38  4E 80 00 20 */	blr 
 
 /* 80098AFC 0004 .text      item_func_BOMB_ARROW__Fv       item_func_BOMB_ARROW__Fv       */
 .global item_func_BOMB_ARROW__Fv
+item_func_BOMB_ARROW__Fv:
 item_func_BOMB_ARROW__Fv:
 /* 80098AFC 00095A3C  4E 80 00 20 */	blr 
 
 /* 80098B00 0004 .text      item_func_HAWK_ARROW__Fv       item_func_HAWK_ARROW__Fv       */
 .global item_func_HAWK_ARROW__Fv
 item_func_HAWK_ARROW__Fv:
+item_func_HAWK_ARROW__Fv:
 /* 80098B00 00095A40  4E 80 00 20 */	blr 
 
 /* 80098B04 0004 .text      item_func_BEE_ROD__Fv          item_func_BEE_ROD__Fv          */
 .global item_func_BEE_ROD__Fv
+item_func_BEE_ROD__Fv:
 item_func_BEE_ROD__Fv:
 /* 80098B04 00095A44  4E 80 00 20 */	blr 
 
 /* 80098B08 0004 .text      item_func_JEWEL_ROD__Fv        item_func_JEWEL_ROD__Fv        */
 .global item_func_JEWEL_ROD__Fv
 item_func_JEWEL_ROD__Fv:
+item_func_JEWEL_ROD__Fv:
 /* 80098B08 00095A48  4E 80 00 20 */	blr 
 
 /* 80098B0C 0004 .text      item_func_WORM_ROD__Fv         item_func_WORM_ROD__Fv         */
 .global item_func_WORM_ROD__Fv
+item_func_WORM_ROD__Fv:
 item_func_WORM_ROD__Fv:
 /* 80098B0C 00095A4C  4E 80 00 20 */	blr 
 
 /* 80098B10 0004 .text      item_func_JEWEL_BEE_ROD__Fv    item_func_JEWEL_BEE_ROD__Fv    */
 .global item_func_JEWEL_BEE_ROD__Fv
 item_func_JEWEL_BEE_ROD__Fv:
+item_func_JEWEL_BEE_ROD__Fv:
 /* 80098B10 00095A50  4E 80 00 20 */	blr 
 
 /* 80098B14 0004 .text      item_func_JEWEL_WORM_ROD__Fv   item_func_JEWEL_WORM_ROD__Fv   */
 .global item_func_JEWEL_WORM_ROD__Fv
 item_func_JEWEL_WORM_ROD__Fv:
+item_func_JEWEL_WORM_ROD__Fv:
 /* 80098B14 00095A54  4E 80 00 20 */	blr 
 
 /* 80098B18 002C .text      item_func_EMPTY_BOTTLE__Fv     item_func_EMPTY_BOTTLE__Fv     */
 .global item_func_EMPTY_BOTTLE__Fv
+item_func_EMPTY_BOTTLE__Fv:
 item_func_EMPTY_BOTTLE__Fv:
 /* 80098B18 00095A58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098B1C 00095A5C  7C 08 02 A6 */	mflr r0
@@ -1176,6 +1253,7 @@ item_func_EMPTY_BOTTLE__Fv:
 
 /* 80098B44 0030 .text      item_func_RED_BOTTLE__Fv       item_func_RED_BOTTLE__Fv       */
 .global item_func_RED_BOTTLE__Fv
+item_func_RED_BOTTLE__Fv:
 item_func_RED_BOTTLE__Fv:
 /* 80098B44 00095A84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098B48 00095A88  7C 08 02 A6 */	mflr r0
@@ -1193,6 +1271,7 @@ item_func_RED_BOTTLE__Fv:
 /* 80098B74 0030 .text      item_func_GREEN_BOTTLE__Fv     item_func_GREEN_BOTTLE__Fv     */
 .global item_func_GREEN_BOTTLE__Fv
 item_func_GREEN_BOTTLE__Fv:
+item_func_GREEN_BOTTLE__Fv:
 /* 80098B74 00095AB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098B78 00095AB8  7C 08 02 A6 */	mflr r0
 /* 80098B7C 00095ABC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1208,6 +1287,7 @@ item_func_GREEN_BOTTLE__Fv:
 
 /* 80098BA4 0030 .text      item_func_BLUE_BOTTLE__Fv      item_func_BLUE_BOTTLE__Fv      */
 .global item_func_BLUE_BOTTLE__Fv
+item_func_BLUE_BOTTLE__Fv:
 item_func_BLUE_BOTTLE__Fv:
 /* 80098BA4 00095AE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098BA8 00095AE8  7C 08 02 A6 */	mflr r0
@@ -1225,6 +1305,7 @@ item_func_BLUE_BOTTLE__Fv:
 /* 80098BD4 0030 .text      item_func_MILK_BOTTLE__Fv      item_func_MILK_BOTTLE__Fv      */
 .global item_func_MILK_BOTTLE__Fv
 item_func_MILK_BOTTLE__Fv:
+item_func_MILK_BOTTLE__Fv:
 /* 80098BD4 00095B14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098BD8 00095B18  7C 08 02 A6 */	mflr r0
 /* 80098BDC 00095B1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1240,6 +1321,7 @@ item_func_MILK_BOTTLE__Fv:
 
 /* 80098C04 0030 .text      item_func_HALF_MILK_BOTTLE__Fv item_func_HALF_MILK_BOTTLE__Fv */
 .global item_func_HALF_MILK_BOTTLE__Fv
+item_func_HALF_MILK_BOTTLE__Fv:
 item_func_HALF_MILK_BOTTLE__Fv:
 /* 80098C04 00095B44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098C08 00095B48  7C 08 02 A6 */	mflr r0
@@ -1257,6 +1339,7 @@ item_func_HALF_MILK_BOTTLE__Fv:
 /* 80098C34 0030 .text      item_func_OIL_BOTTLE__Fv       item_func_OIL_BOTTLE__Fv       */
 .global item_func_OIL_BOTTLE__Fv
 item_func_OIL_BOTTLE__Fv:
+item_func_OIL_BOTTLE__Fv:
 /* 80098C34 00095B74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098C38 00095B78  7C 08 02 A6 */	mflr r0
 /* 80098C3C 00095B7C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1272,6 +1355,7 @@ item_func_OIL_BOTTLE__Fv:
 
 /* 80098C64 0030 .text      item_func_WATER_BOTTLE__Fv     item_func_WATER_BOTTLE__Fv     */
 .global item_func_WATER_BOTTLE__Fv
+item_func_WATER_BOTTLE__Fv:
 item_func_WATER_BOTTLE__Fv:
 /* 80098C64 00095BA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098C68 00095BA8  7C 08 02 A6 */	mflr r0
@@ -1289,6 +1373,7 @@ item_func_WATER_BOTTLE__Fv:
 /* 80098C94 0030 .text      item_func_OIL_BOTTLE2__Fv      item_func_OIL_BOTTLE2__Fv      */
 .global item_func_OIL_BOTTLE2__Fv
 item_func_OIL_BOTTLE2__Fv:
+item_func_OIL_BOTTLE2__Fv:
 /* 80098C94 00095BD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098C98 00095BD8  7C 08 02 A6 */	mflr r0
 /* 80098C9C 00095BDC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1304,6 +1389,7 @@ item_func_OIL_BOTTLE2__Fv:
 
 /* 80098CC4 0030 .text      item_func_RED_BOTTLE2__Fv      item_func_RED_BOTTLE2__Fv      */
 .global item_func_RED_BOTTLE2__Fv
+item_func_RED_BOTTLE2__Fv:
 item_func_RED_BOTTLE2__Fv:
 /* 80098CC4 00095C04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098CC8 00095C08  7C 08 02 A6 */	mflr r0
@@ -1321,6 +1407,7 @@ item_func_RED_BOTTLE2__Fv:
 /* 80098CF4 0030 .text      item_func_UGLY_SOUP__Fv        item_func_UGLY_SOUP__Fv        */
 .global item_func_UGLY_SOUP__Fv
 item_func_UGLY_SOUP__Fv:
+item_func_UGLY_SOUP__Fv:
 /* 80098CF4 00095C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098CF8 00095C38  7C 08 02 A6 */	mflr r0
 /* 80098CFC 00095C3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1336,6 +1423,7 @@ item_func_UGLY_SOUP__Fv:
 
 /* 80098D24 0030 .text      item_func_HOT_SPRING__Fv       item_func_HOT_SPRING__Fv       */
 .global item_func_HOT_SPRING__Fv
+item_func_HOT_SPRING__Fv:
 item_func_HOT_SPRING__Fv:
 /* 80098D24 00095C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098D28 00095C68  7C 08 02 A6 */	mflr r0
@@ -1353,6 +1441,7 @@ item_func_HOT_SPRING__Fv:
 /* 80098D54 0030 .text      item_func_FAIRY_BOTTLE__Fv     item_func_FAIRY_BOTTLE__Fv     */
 .global item_func_FAIRY_BOTTLE__Fv
 item_func_FAIRY_BOTTLE__Fv:
+item_func_FAIRY_BOTTLE__Fv:
 /* 80098D54 00095C94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098D58 00095C98  7C 08 02 A6 */	mflr r0
 /* 80098D5C 00095C9C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1368,6 +1457,7 @@ item_func_FAIRY_BOTTLE__Fv:
 
 /* 80098D84 0030 .text      item_func_HOT_SPRING2__Fv      item_func_HOT_SPRING2__Fv      */
 .global item_func_HOT_SPRING2__Fv
+item_func_HOT_SPRING2__Fv:
 item_func_HOT_SPRING2__Fv:
 /* 80098D84 00095CC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098D88 00095CC8  7C 08 02 A6 */	mflr r0
@@ -1385,15 +1475,18 @@ item_func_HOT_SPRING2__Fv:
 /* 80098DB4 0004 .text      item_func_OIL2__Fv             item_func_OIL2__Fv             */
 .global item_func_OIL2__Fv
 item_func_OIL2__Fv:
+item_func_OIL2__Fv:
 /* 80098DB4 00095CF4  4E 80 00 20 */	blr 
 
 /* 80098DB8 0004 .text      item_func_OIL__Fv              item_func_OIL__Fv              */
 .global item_func_OIL__Fv
 item_func_OIL__Fv:
+item_func_OIL__Fv:
 /* 80098DB8 00095CF8  4E 80 00 20 */	blr 
 
 /* 80098DBC 0034 .text      item_func_NORMAL_BOMB__Fv      item_func_NORMAL_BOMB__Fv      */
 .global item_func_NORMAL_BOMB__Fv
+item_func_NORMAL_BOMB__Fv:
 item_func_NORMAL_BOMB__Fv:
 /* 80098DBC 00095CFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098DC0 00095D00  7C 08 02 A6 */	mflr r0
@@ -1411,6 +1504,7 @@ item_func_NORMAL_BOMB__Fv:
 
 /* 80098DF0 0048 .text      item_func_WATER_BOMB__Fv       item_func_WATER_BOMB__Fv       */
 .global item_func_WATER_BOMB__Fv
+item_func_WATER_BOMB__Fv:
 item_func_WATER_BOMB__Fv:
 /* 80098DF0 00095D30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098DF4 00095D34  7C 08 02 A6 */	mflr r0
@@ -1434,6 +1528,7 @@ item_func_WATER_BOMB__Fv:
 /* 80098E38 0048 .text      item_func_POKE_BOMB__Fv        item_func_POKE_BOMB__Fv        */
 .global item_func_POKE_BOMB__Fv
 item_func_POKE_BOMB__Fv:
+item_func_POKE_BOMB__Fv:
 /* 80098E38 00095D78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098E3C 00095D7C  7C 08 02 A6 */	mflr r0
 /* 80098E40 00095D80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1456,6 +1551,7 @@ item_func_POKE_BOMB__Fv:
 /* 80098E80 0030 .text      item_func_FAIRY_DROP__Fv       item_func_FAIRY_DROP__Fv       */
 .global item_func_FAIRY_DROP__Fv
 item_func_FAIRY_DROP__Fv:
+item_func_FAIRY_DROP__Fv:
 /* 80098E80 00095DC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098E84 00095DC4  7C 08 02 A6 */	mflr r0
 /* 80098E88 00095DC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1472,10 +1568,12 @@ item_func_FAIRY_DROP__Fv:
 /* 80098EB0 0004 .text      item_func_WORM__Fv             item_func_WORM__Fv             */
 .global item_func_WORM__Fv
 item_func_WORM__Fv:
+item_func_WORM__Fv:
 /* 80098EB0 00095DF0  4E 80 00 20 */	blr 
 
 /* 80098EB4 0030 .text      item_func_DROP_BOTTLE__Fv      item_func_DROP_BOTTLE__Fv      */
 .global item_func_DROP_BOTTLE__Fv
+item_func_DROP_BOTTLE__Fv:
 item_func_DROP_BOTTLE__Fv:
 /* 80098EB4 00095DF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098EB8 00095DF8  7C 08 02 A6 */	mflr r0
@@ -1490,8 +1588,9 @@ item_func_DROP_BOTTLE__Fv:
 /* 80098EDC 00095E1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80098EE0 00095E20  4E 80 00 20 */	blr 
 
-/* 80098EE4 0028 .text      item_func_BEE_CHILD__Fv        item_func_BEE_CHILD__Fv        */
+/* 80098EE4 009C .text      item_func_BEE_CHILD__Fv        item_func_BEE_CHILD__Fv        */
 .global item_func_BEE_CHILD__Fv
+item_func_BEE_CHILD__Fv:
 item_func_BEE_CHILD__Fv:
 /* 80098EE4 00095E24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80098EE8 00095E28  7C 08 02 A6 */	mflr r0
@@ -1503,32 +1602,23 @@ item_func_BEE_CHILD__Fv:
 /* 80098F00 00095E40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098F04 00095E44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098F08 00095E48  3B E3 00 9C */	addi r31, r3, 0x9c
-
-/* 80098F0C 0024 .text      func_80098F0C                  func_80098F0C                  */
-.global func_80098F0C
-func_80098F0C:
+lbl_80098F0C:
 /* 80098F0C 00095E4C  7F E3 FB 78 */	mr r3, r31
 /* 80098F10 00095E50  38 9D 00 0B */	addi r4, r29, 0xb
 /* 80098F14 00095E54  38 A0 00 01 */	li r5, 1
 /* 80098F18 00095E58  4B F9 A1 19 */	bl getItem__17dSv_player_item_cCFib
 /* 80098F1C 00095E5C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80098F20 00095E60  28 00 00 60 */	cmplwi r0, 0x60
-/* 80098F24 00095E64  40 82 00 0C */	bne func_80098F30
+/* 80098F24 00095E64  40 82 00 0C */	bne lbl_80098F30
 /* 80098F28 00095E68  7F BE EB 78 */	mr r30, r29
-/* 80098F2C 00095E6C  48 00 00 10 */	b func_80098F3C
-
-/* 80098F30 000C .text      func_80098F30                  func_80098F30                  */
-.global func_80098F30
-func_80098F30:
+/* 80098F2C 00095E6C  48 00 00 10 */	b lbl_80098F3C
+lbl_80098F30:
 /* 80098F30 00095E70  3B BD 00 01 */	addi r29, r29, 1
 /* 80098F34 00095E74  2C 1D 00 04 */	cmpwi r29, 4
-/* 80098F38 00095E78  41 80 FF D4 */	blt func_80098F0C
-
-/* 80098F3C 002C .text      func_80098F3C                  func_80098F3C                  */
-.global func_80098F3C
-func_80098F3C:
+/* 80098F38 00095E78  41 80 FF D4 */	blt lbl_80098F0C
+lbl_80098F3C:
 /* 80098F3C 00095E7C  2C 1E 00 FF */	cmpwi r30, 0xff
-/* 80098F40 00095E80  41 82 00 28 */	beq func_80098F68
+/* 80098F40 00095E80  41 82 00 28 */	beq lbl_80098F68
 /* 80098F44 00095E84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80098F48 00095E88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80098F4C 00095E8C  38 63 00 EC */	addi r3, r3, 0xec
@@ -1538,10 +1628,7 @@ func_80098F3C:
 /* 80098F5C 00095E9C  7F E3 FB 78 */	mr r3, r31
 /* 80098F60 00095EA0  38 80 00 76 */	li r4, 0x76
 /* 80098F64 00095EA4  4B F9 A4 ED */	bl setEmptyBottleItemIn__17dSv_player_item_cFUc
-
-/* 80098F68 0018 .text      func_80098F68                  func_80098F68                  */
-.global func_80098F68
-func_80098F68:
+lbl_80098F68:
 /* 80098F68 00095EA8  39 61 00 20 */	addi r11, r1, 0x20
 /* 80098F6C 00095EAC  48 2C 92 BD */	bl _restgpr_29
 /* 80098F70 00095EB0  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1551,6 +1638,7 @@ func_80098F68:
 
 /* 80098F80 0030 .text      item_func_CHUCHU_RARE__Fv      item_func_CHUCHU_RARE__Fv      */
 .global item_func_CHUCHU_RARE__Fv
+item_func_CHUCHU_RARE__Fv:
 item_func_CHUCHU_RARE__Fv:
 /* 80098F80 00095EC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098F84 00095EC4  7C 08 02 A6 */	mflr r0
@@ -1568,6 +1656,7 @@ item_func_CHUCHU_RARE__Fv:
 /* 80098FB0 0030 .text      item_func_CHUCHU_RED__Fv       item_func_CHUCHU_RED__Fv       */
 .global item_func_CHUCHU_RED__Fv
 item_func_CHUCHU_RED__Fv:
+item_func_CHUCHU_RED__Fv:
 /* 80098FB0 00095EF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098FB4 00095EF4  7C 08 02 A6 */	mflr r0
 /* 80098FB8 00095EF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1583,6 +1672,7 @@ item_func_CHUCHU_RED__Fv:
 
 /* 80098FE0 0030 .text      item_func_CHUCHU_BLUE__Fv      item_func_CHUCHU_BLUE__Fv      */
 .global item_func_CHUCHU_BLUE__Fv
+item_func_CHUCHU_BLUE__Fv:
 item_func_CHUCHU_BLUE__Fv:
 /* 80098FE0 00095F20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098FE4 00095F24  7C 08 02 A6 */	mflr r0
@@ -1600,6 +1690,7 @@ item_func_CHUCHU_BLUE__Fv:
 /* 80099010 0030 .text      item_func_CHUCHU_GREEN__Fv     item_func_CHUCHU_GREEN__Fv     */
 .global item_func_CHUCHU_GREEN__Fv
 item_func_CHUCHU_GREEN__Fv:
+item_func_CHUCHU_GREEN__Fv:
 /* 80099010 00095F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099014 00095F54  7C 08 02 A6 */	mflr r0
 /* 80099018 00095F58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1615,6 +1706,7 @@ item_func_CHUCHU_GREEN__Fv:
 
 /* 80099040 0030 .text      item_func_CHUCHU_YELLOW__Fv    item_func_CHUCHU_YELLOW__Fv    */
 .global item_func_CHUCHU_YELLOW__Fv
+item_func_CHUCHU_YELLOW__Fv:
 item_func_CHUCHU_YELLOW__Fv:
 /* 80099040 00095F80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099044 00095F84  7C 08 02 A6 */	mflr r0
@@ -1632,6 +1724,7 @@ item_func_CHUCHU_YELLOW__Fv:
 /* 80099070 0030 .text      item_func_CHUCHU_PURPLE__Fv    item_func_CHUCHU_PURPLE__Fv    */
 .global item_func_CHUCHU_PURPLE__Fv
 item_func_CHUCHU_PURPLE__Fv:
+item_func_CHUCHU_PURPLE__Fv:
 /* 80099070 00095FB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099074 00095FB4  7C 08 02 A6 */	mflr r0
 /* 80099078 00095FB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1647,6 +1740,7 @@ item_func_CHUCHU_PURPLE__Fv:
 
 /* 800990A0 0030 .text      item_func_LV1_SOUP__Fv         item_func_LV1_SOUP__Fv         */
 .global item_func_LV1_SOUP__Fv
+item_func_LV1_SOUP__Fv:
 item_func_LV1_SOUP__Fv:
 /* 800990A0 00095FE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800990A4 00095FE4  7C 08 02 A6 */	mflr r0
@@ -1664,6 +1758,7 @@ item_func_LV1_SOUP__Fv:
 /* 800990D0 0030 .text      item_func_LV2_SOUP__Fv         item_func_LV2_SOUP__Fv         */
 .global item_func_LV2_SOUP__Fv
 item_func_LV2_SOUP__Fv:
+item_func_LV2_SOUP__Fv:
 /* 800990D0 00096010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800990D4 00096014  7C 08 02 A6 */	mflr r0
 /* 800990D8 00096018  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1680,6 +1775,7 @@ item_func_LV2_SOUP__Fv:
 /* 80099100 0030 .text      item_func_LV3_SOUP__Fv         item_func_LV3_SOUP__Fv         */
 .global item_func_LV3_SOUP__Fv
 item_func_LV3_SOUP__Fv:
+item_func_LV3_SOUP__Fv:
 /* 80099100 00096040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099104 00096044  7C 08 02 A6 */	mflr r0
 /* 80099108 00096048  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1695,6 +1791,7 @@ item_func_LV3_SOUP__Fv:
 
 /* 80099130 0034 .text      item_func_LETTER__Fv           item_func_LETTER__Fv           */
 .global item_func_LETTER__Fv
+item_func_LETTER__Fv:
 item_func_LETTER__Fv:
 /* 80099130 00096070  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099134 00096074  7C 08 02 A6 */	mflr r0
@@ -1713,6 +1810,7 @@ item_func_LETTER__Fv:
 /* 80099164 0034 .text      item_func_BILL__Fv             item_func_BILL__Fv             */
 .global item_func_BILL__Fv
 item_func_BILL__Fv:
+item_func_BILL__Fv:
 /* 80099164 000960A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099168 000960A8  7C 08 02 A6 */	mflr r0
 /* 8009916C 000960AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1729,6 +1827,7 @@ item_func_BILL__Fv:
 
 /* 80099198 0050 .text      item_func_WOOD_STATUE__Fv      item_func_WOOD_STATUE__Fv      */
 .global item_func_WOOD_STATUE__Fv
+item_func_WOOD_STATUE__Fv:
 item_func_WOOD_STATUE__Fv:
 /* 80099198 000960D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009919C 000960DC  7C 08 02 A6 */	mflr r0
@@ -1754,6 +1853,7 @@ item_func_WOOD_STATUE__Fv:
 /* 800991E8 0034 .text      item_func_IRIAS_PENDANT__Fv    item_func_IRIAS_PENDANT__Fv    */
 .global item_func_IRIAS_PENDANT__Fv
 item_func_IRIAS_PENDANT__Fv:
+item_func_IRIAS_PENDANT__Fv:
 /* 800991E8 00096128  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800991EC 0009612C  7C 08 02 A6 */	mflr r0
 /* 800991F0 00096130  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1770,6 +1870,7 @@ item_func_IRIAS_PENDANT__Fv:
 
 /* 8009921C 0034 .text      item_func_HORSE_FLUTE__Fv      item_func_HORSE_FLUTE__Fv      */
 .global item_func_HORSE_FLUTE__Fv
+item_func_HORSE_FLUTE__Fv:
 item_func_HORSE_FLUTE__Fv:
 /* 8009921C 0009615C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099220 00096160  7C 08 02 A6 */	mflr r0
@@ -1788,6 +1889,7 @@ item_func_HORSE_FLUTE__Fv:
 /* 80099250 0034 .text      item_func_RAFRELS_MEMO__Fv     item_func_RAFRELS_MEMO__Fv     */
 .global item_func_RAFRELS_MEMO__Fv
 item_func_RAFRELS_MEMO__Fv:
+item_func_RAFRELS_MEMO__Fv:
 /* 80099250 00096190  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099254 00096194  7C 08 02 A6 */	mflr r0
 /* 80099258 00096198  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1804,6 +1906,7 @@ item_func_RAFRELS_MEMO__Fv:
 
 /* 80099284 0034 .text      item_func_ASHS_SCRIBBLING__Fv  item_func_ASHS_SCRIBBLING__Fv  */
 .global item_func_ASHS_SCRIBBLING__Fv
+item_func_ASHS_SCRIBBLING__Fv:
 item_func_ASHS_SCRIBBLING__Fv:
 /* 80099284 000961C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099288 000961C8  7C 08 02 A6 */	mflr r0
@@ -1822,6 +1925,7 @@ item_func_ASHS_SCRIBBLING__Fv:
 /* 800992B8 0030 .text      item_func_CHUCHU_YELLOW2__Fv   item_func_CHUCHU_YELLOW2__Fv   */
 .global item_func_CHUCHU_YELLOW2__Fv
 item_func_CHUCHU_YELLOW2__Fv:
+item_func_CHUCHU_YELLOW2__Fv:
 /* 800992B8 000961F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800992BC 000961FC  7C 08 02 A6 */	mflr r0
 /* 800992C0 00096200  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1837,6 +1941,7 @@ item_func_CHUCHU_YELLOW2__Fv:
 
 /* 800992E8 0030 .text      item_func_OIL_BOTTLE3__Fv      item_func_OIL_BOTTLE3__Fv      */
 .global item_func_OIL_BOTTLE3__Fv
+item_func_OIL_BOTTLE3__Fv:
 item_func_OIL_BOTTLE3__Fv:
 /* 800992E8 00096228  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800992EC 0009622C  7C 08 02 A6 */	mflr r0
@@ -1854,6 +1959,7 @@ item_func_OIL_BOTTLE3__Fv:
 /* 80099318 0020 .text      item_func_SHOP_BEE_CHILD__Fv   item_func_SHOP_BEE_CHILD__Fv   */
 .global item_func_SHOP_BEE_CHILD__Fv
 item_func_SHOP_BEE_CHILD__Fv:
+item_func_SHOP_BEE_CHILD__Fv:
 /* 80099318 00096258  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009931C 0009625C  7C 08 02 A6 */	mflr r0
 /* 80099320 00096260  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1865,6 +1971,7 @@ item_func_SHOP_BEE_CHILD__Fv:
 
 /* 80099338 0030 .text      item_func_CHUCHU_BLACK__Fv     item_func_CHUCHU_BLACK__Fv     */
 .global item_func_CHUCHU_BLACK__Fv
+item_func_CHUCHU_BLACK__Fv:
 item_func_CHUCHU_BLACK__Fv:
 /* 80099338 00096278  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009933C 0009627C  7C 08 02 A6 */	mflr r0
@@ -1882,10 +1989,12 @@ item_func_CHUCHU_BLACK__Fv:
 /* 80099368 0004 .text      item_func_LIGHT_DROP__Fv       item_func_LIGHT_DROP__Fv       */
 .global item_func_LIGHT_DROP__Fv
 item_func_LIGHT_DROP__Fv:
+item_func_LIGHT_DROP__Fv:
 /* 80099368 000962A8  4E 80 00 20 */	blr 
 
 /* 8009936C 0030 .text      item_func_DROP_CONTAINER__Fv   item_func_DROP_CONTAINER__Fv   */
 .global item_func_DROP_CONTAINER__Fv
+item_func_DROP_CONTAINER__Fv:
 item_func_DROP_CONTAINER__Fv:
 /* 8009936C 000962AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099370 000962B0  7C 08 02 A6 */	mflr r0
@@ -1903,6 +2012,7 @@ item_func_DROP_CONTAINER__Fv:
 /* 8009939C 0030 .text      item_func_DROP_CONTAINER02__Fv item_func_DROP_CONTAINER02__Fv */
 .global item_func_DROP_CONTAINER02__Fv
 item_func_DROP_CONTAINER02__Fv:
+item_func_DROP_CONTAINER02__Fv:
 /* 8009939C 000962DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800993A0 000962E0  7C 08 02 A6 */	mflr r0
 /* 800993A4 000962E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1918,6 +2028,7 @@ item_func_DROP_CONTAINER02__Fv:
 
 /* 800993CC 0030 .text      item_func_DROP_CONTAINER03__Fv item_func_DROP_CONTAINER03__Fv */
 .global item_func_DROP_CONTAINER03__Fv
+item_func_DROP_CONTAINER03__Fv:
 item_func_DROP_CONTAINER03__Fv:
 /* 800993CC 0009630C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800993D0 00096310  7C 08 02 A6 */	mflr r0
@@ -1935,180 +2046,216 @@ item_func_DROP_CONTAINER03__Fv:
 /* 800993FC 0004 .text      item_func_FILLED_CONTAINER__Fv item_func_FILLED_CONTAINER__Fv */
 .global item_func_FILLED_CONTAINER__Fv
 item_func_FILLED_CONTAINER__Fv:
+item_func_FILLED_CONTAINER__Fv:
 /* 800993FC 0009633C  4E 80 00 20 */	blr 
 
 /* 80099400 0004 .text      item_func_MIRROR_PIECE_2__Fv   item_func_MIRROR_PIECE_2__Fv   */
 .global item_func_MIRROR_PIECE_2__Fv
+item_func_MIRROR_PIECE_2__Fv:
 item_func_MIRROR_PIECE_2__Fv:
 /* 80099400 00096340  4E 80 00 20 */	blr 
 
 /* 80099404 0004 .text      item_func_MIRROR_PIECE_3__Fv   item_func_MIRROR_PIECE_3__Fv   */
 .global item_func_MIRROR_PIECE_3__Fv
 item_func_MIRROR_PIECE_3__Fv:
+item_func_MIRROR_PIECE_3__Fv:
 /* 80099404 00096344  4E 80 00 20 */	blr 
 
 /* 80099408 0004 .text      item_func_MIRROR_PIECE_4__Fv   item_func_MIRROR_PIECE_4__Fv   */
 .global item_func_MIRROR_PIECE_4__Fv
+item_func_MIRROR_PIECE_4__Fv:
 item_func_MIRROR_PIECE_4__Fv:
 /* 80099408 00096348  4E 80 00 20 */	blr 
 
 /* 8009940C 0004 .text      item_func_SMELL_YELIA_POUCH__Fv item_func_SMELL_YELIA_POUCH__Fv */
 .global item_func_SMELL_YELIA_POUCH__Fv
 item_func_SMELL_YELIA_POUCH__Fv:
+item_func_SMELL_YELIA_POUCH__Fv:
 /* 8009940C 0009634C  4E 80 00 20 */	blr 
 
 /* 80099410 0004 .text      item_func_SMELL_PUMPKIN__Fv    item_func_SMELL_PUMPKIN__Fv    */
 .global item_func_SMELL_PUMPKIN__Fv
+item_func_SMELL_PUMPKIN__Fv:
 item_func_SMELL_PUMPKIN__Fv:
 /* 80099410 00096350  4E 80 00 20 */	blr 
 
 /* 80099414 0004 .text      item_func_SMELL_POH__Fv        item_func_SMELL_POH__Fv        */
 .global item_func_SMELL_POH__Fv
 item_func_SMELL_POH__Fv:
+item_func_SMELL_POH__Fv:
 /* 80099414 00096354  4E 80 00 20 */	blr 
 
 /* 80099418 0004 .text      item_func_SMELL_FISH__Fv       item_func_SMELL_FISH__Fv       */
 .global item_func_SMELL_FISH__Fv
+item_func_SMELL_FISH__Fv:
 item_func_SMELL_FISH__Fv:
 /* 80099418 00096358  4E 80 00 20 */	blr 
 
 /* 8009941C 0004 .text      item_func_SMELL_CHILDREN__Fv   item_func_SMELL_CHILDREN__Fv   */
 .global item_func_SMELL_CHILDREN__Fv
 item_func_SMELL_CHILDREN__Fv:
+item_func_SMELL_CHILDREN__Fv:
 /* 8009941C 0009635C  4E 80 00 20 */	blr 
 
 /* 80099420 0004 .text      item_func_SMELL_MEDICINE__Fv   item_func_SMELL_MEDICINE__Fv   */
 .global item_func_SMELL_MEDICINE__Fv
+item_func_SMELL_MEDICINE__Fv:
 item_func_SMELL_MEDICINE__Fv:
 /* 80099420 00096360  4E 80 00 20 */	blr 
 
 /* 80099424 0004 .text      item_func_M_BEETLE__Fv         item_func_M_BEETLE__Fv         */
 .global item_func_M_BEETLE__Fv
 item_func_M_BEETLE__Fv:
+item_func_M_BEETLE__Fv:
 /* 80099424 00096364  4E 80 00 20 */	blr 
 
 /* 80099428 0004 .text      item_func_F_BEETLE__Fv         item_func_F_BEETLE__Fv         */
 .global item_func_F_BEETLE__Fv
+item_func_F_BEETLE__Fv:
 item_func_F_BEETLE__Fv:
 /* 80099428 00096368  4E 80 00 20 */	blr 
 
 /* 8009942C 0004 .text      item_func_M_BUTTERFLY__Fv      item_func_M_BUTTERFLY__Fv      */
 .global item_func_M_BUTTERFLY__Fv
 item_func_M_BUTTERFLY__Fv:
+item_func_M_BUTTERFLY__Fv:
 /* 8009942C 0009636C  4E 80 00 20 */	blr 
 
 /* 80099430 0004 .text      item_func_F_BUTTERFLY__Fv      item_func_F_BUTTERFLY__Fv      */
 .global item_func_F_BUTTERFLY__Fv
+item_func_F_BUTTERFLY__Fv:
 item_func_F_BUTTERFLY__Fv:
 /* 80099430 00096370  4E 80 00 20 */	blr 
 
 /* 80099434 0004 .text      item_func_M_STAG_BEETLE__Fv    item_func_M_STAG_BEETLE__Fv    */
 .global item_func_M_STAG_BEETLE__Fv
 item_func_M_STAG_BEETLE__Fv:
+item_func_M_STAG_BEETLE__Fv:
 /* 80099434 00096374  4E 80 00 20 */	blr 
 
 /* 80099438 0004 .text      item_func_F_STAG_BEETLE__Fv    item_func_F_STAG_BEETLE__Fv    */
 .global item_func_F_STAG_BEETLE__Fv
+item_func_F_STAG_BEETLE__Fv:
 item_func_F_STAG_BEETLE__Fv:
 /* 80099438 00096378  4E 80 00 20 */	blr 
 
 /* 8009943C 0004 .text      item_func_M_GRASSHOPPER__Fv    item_func_M_GRASSHOPPER__Fv    */
 .global item_func_M_GRASSHOPPER__Fv
 item_func_M_GRASSHOPPER__Fv:
+item_func_M_GRASSHOPPER__Fv:
 /* 8009943C 0009637C  4E 80 00 20 */	blr 
 
 /* 80099440 0004 .text      item_func_F_GRASSHOPPER__Fv    item_func_F_GRASSHOPPER__Fv    */
 .global item_func_F_GRASSHOPPER__Fv
+item_func_F_GRASSHOPPER__Fv:
 item_func_F_GRASSHOPPER__Fv:
 /* 80099440 00096380  4E 80 00 20 */	blr 
 
 /* 80099444 0004 .text      item_func_M_NANAFUSHI__Fv      item_func_M_NANAFUSHI__Fv      */
 .global item_func_M_NANAFUSHI__Fv
 item_func_M_NANAFUSHI__Fv:
+item_func_M_NANAFUSHI__Fv:
 /* 80099444 00096384  4E 80 00 20 */	blr 
 
 /* 80099448 0004 .text      item_func_F_NANAFUSHI__Fv      item_func_F_NANAFUSHI__Fv      */
 .global item_func_F_NANAFUSHI__Fv
+item_func_F_NANAFUSHI__Fv:
 item_func_F_NANAFUSHI__Fv:
 /* 80099448 00096388  4E 80 00 20 */	blr 
 
 /* 8009944C 0004 .text      item_func_M_DANGOMUSHI__Fv     item_func_M_DANGOMUSHI__Fv     */
 .global item_func_M_DANGOMUSHI__Fv
 item_func_M_DANGOMUSHI__Fv:
+item_func_M_DANGOMUSHI__Fv:
 /* 8009944C 0009638C  4E 80 00 20 */	blr 
 
 /* 80099450 0004 .text      item_func_F_DANGOMUSHI__Fv     item_func_F_DANGOMUSHI__Fv     */
 .global item_func_F_DANGOMUSHI__Fv
+item_func_F_DANGOMUSHI__Fv:
 item_func_F_DANGOMUSHI__Fv:
 /* 80099450 00096390  4E 80 00 20 */	blr 
 
 /* 80099454 0004 .text      item_func_M_MANTIS__Fv         item_func_M_MANTIS__Fv         */
 .global item_func_M_MANTIS__Fv
 item_func_M_MANTIS__Fv:
+item_func_M_MANTIS__Fv:
 /* 80099454 00096394  4E 80 00 20 */	blr 
 
 /* 80099458 0004 .text      item_func_F_MANTIS__Fv         item_func_F_MANTIS__Fv         */
 .global item_func_F_MANTIS__Fv
+item_func_F_MANTIS__Fv:
 item_func_F_MANTIS__Fv:
 /* 80099458 00096398  4E 80 00 20 */	blr 
 
 /* 8009945C 0004 .text      item_func_M_LADYBUG__Fv        item_func_M_LADYBUG__Fv        */
 .global item_func_M_LADYBUG__Fv
 item_func_M_LADYBUG__Fv:
+item_func_M_LADYBUG__Fv:
 /* 8009945C 0009639C  4E 80 00 20 */	blr 
 
 /* 80099460 0004 .text      item_func_F_LADYBUG__Fv        item_func_F_LADYBUG__Fv        */
 .global item_func_F_LADYBUG__Fv
+item_func_F_LADYBUG__Fv:
 item_func_F_LADYBUG__Fv:
 /* 80099460 000963A0  4E 80 00 20 */	blr 
 
 /* 80099464 0004 .text      item_func_M_SNAIL__Fv          item_func_M_SNAIL__Fv          */
 .global item_func_M_SNAIL__Fv
 item_func_M_SNAIL__Fv:
+item_func_M_SNAIL__Fv:
 /* 80099464 000963A4  4E 80 00 20 */	blr 
 
 /* 80099468 0004 .text      item_func_F_SNAIL__Fv          item_func_F_SNAIL__Fv          */
 .global item_func_F_SNAIL__Fv
+item_func_F_SNAIL__Fv:
 item_func_F_SNAIL__Fv:
 /* 80099468 000963A8  4E 80 00 20 */	blr 
 
 /* 8009946C 0004 .text      item_func_M_DRAGONFLY__Fv      item_func_M_DRAGONFLY__Fv      */
 .global item_func_M_DRAGONFLY__Fv
 item_func_M_DRAGONFLY__Fv:
+item_func_M_DRAGONFLY__Fv:
 /* 8009946C 000963AC  4E 80 00 20 */	blr 
 
 /* 80099470 0004 .text      item_func_F_DRAGONFLY__Fv      item_func_F_DRAGONFLY__Fv      */
 .global item_func_F_DRAGONFLY__Fv
+item_func_F_DRAGONFLY__Fv:
 item_func_F_DRAGONFLY__Fv:
 /* 80099470 000963B0  4E 80 00 20 */	blr 
 
 /* 80099474 0004 .text      item_func_M_ANT__Fv            item_func_M_ANT__Fv            */
 .global item_func_M_ANT__Fv
 item_func_M_ANT__Fv:
+item_func_M_ANT__Fv:
 /* 80099474 000963B4  4E 80 00 20 */	blr 
 
 /* 80099478 0004 .text      item_func_F_ANT__Fv            item_func_F_ANT__Fv            */
 .global item_func_F_ANT__Fv
+item_func_F_ANT__Fv:
 item_func_F_ANT__Fv:
 /* 80099478 000963B8  4E 80 00 20 */	blr 
 
 /* 8009947C 0004 .text      item_func_M_MAYFLY__Fv         item_func_M_MAYFLY__Fv         */
 .global item_func_M_MAYFLY__Fv
 item_func_M_MAYFLY__Fv:
+item_func_M_MAYFLY__Fv:
 /* 8009947C 000963BC  4E 80 00 20 */	blr 
 
 /* 80099480 0004 .text      item_func_F_MAYFLY__Fv         item_func_F_MAYFLY__Fv         */
 .global item_func_F_MAYFLY__Fv
+item_func_F_MAYFLY__Fv:
 item_func_F_MAYFLY__Fv:
 /* 80099480 000963C0  4E 80 00 20 */	blr 
 
 /* 80099484 0004 .text      item_func_POU_SPIRIT__Fv       item_func_POU_SPIRIT__Fv       */
 .global item_func_POU_SPIRIT__Fv
 item_func_POU_SPIRIT__Fv:
+item_func_POU_SPIRIT__Fv:
 /* 80099484 000963C4  4E 80 00 20 */	blr 
 
 /* 80099488 0034 .text      item_func_ANCIENT_DOCUMENT__Fv item_func_ANCIENT_DOCUMENT__Fv */
 .global item_func_ANCIENT_DOCUMENT__Fv
+item_func_ANCIENT_DOCUMENT__Fv:
 item_func_ANCIENT_DOCUMENT__Fv:
 /* 80099488 000963C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009948C 000963CC  7C 08 02 A6 */	mflr r0
@@ -2127,6 +2274,7 @@ item_func_ANCIENT_DOCUMENT__Fv:
 /* 800994BC 0034 .text      item_func_AIR_LETTER__Fv       item_func_AIR_LETTER__Fv       */
 .global item_func_AIR_LETTER__Fv
 item_func_AIR_LETTER__Fv:
+item_func_AIR_LETTER__Fv:
 /* 800994BC 000963FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800994C0 00096400  7C 08 02 A6 */	mflr r0
 /* 800994C4 00096404  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2143,6 +2291,7 @@ item_func_AIR_LETTER__Fv:
 
 /* 800994F0 0034 .text      item_func_ANCIENT_DOCUMENT2__Fv item_func_ANCIENT_DOCUMENT2__Fv */
 .global item_func_ANCIENT_DOCUMENT2__Fv
+item_func_ANCIENT_DOCUMENT2__Fv:
 item_func_ANCIENT_DOCUMENT2__Fv:
 /* 800994F0 00096430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800994F4 00096434  7C 08 02 A6 */	mflr r0
@@ -2161,6 +2310,7 @@ item_func_ANCIENT_DOCUMENT2__Fv:
 /* 80099524 0034 .text      item_func_LV7_DUNGEON_EXIT__Fv item_func_LV7_DUNGEON_EXIT__Fv */
 .global item_func_LV7_DUNGEON_EXIT__Fv
 item_func_LV7_DUNGEON_EXIT__Fv:
+item_func_LV7_DUNGEON_EXIT__Fv:
 /* 80099524 00096464  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099528 00096468  7C 08 02 A6 */	mflr r0
 /* 8009952C 0009646C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2178,6 +2328,7 @@ item_func_LV7_DUNGEON_EXIT__Fv:
 /* 80099558 0018 .text      item_func_LINKS_SAVINGS__Fv    item_func_LINKS_SAVINGS__Fv    */
 .global item_func_LINKS_SAVINGS__Fv
 item_func_LINKS_SAVINGS__Fv:
+item_func_LINKS_SAVINGS__Fv:
 /* 80099558 00096498  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009955C 0009649C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80099560 000964A0  80 64 5D C4 */	lwz r3, 0x5dc4(r4)
@@ -2187,6 +2338,7 @@ item_func_LINKS_SAVINGS__Fv:
 
 /* 80099570 0018 .text      item_func_SMALL_KEY2__Fv       item_func_SMALL_KEY2__Fv       */
 .global item_func_SMALL_KEY2__Fv
+item_func_SMALL_KEY2__Fv:
 item_func_SMALL_KEY2__Fv:
 /* 80099570 000964B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80099574 000964B4  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
@@ -2198,40 +2350,48 @@ item_func_SMALL_KEY2__Fv:
 /* 80099588 0004 .text      item_func_POU_FIRE1__Fv        item_func_POU_FIRE1__Fv        */
 .global item_func_POU_FIRE1__Fv
 item_func_POU_FIRE1__Fv:
+item_func_POU_FIRE1__Fv:
 /* 80099588 000964C8  4E 80 00 20 */	blr 
 
 /* 8009958C 0004 .text      item_func_POU_FIRE2__Fv        item_func_POU_FIRE2__Fv        */
 .global item_func_POU_FIRE2__Fv
+item_func_POU_FIRE2__Fv:
 item_func_POU_FIRE2__Fv:
 /* 8009958C 000964CC  4E 80 00 20 */	blr 
 
 /* 80099590 0004 .text      item_func_POU_FIRE3__Fv        item_func_POU_FIRE3__Fv        */
 .global item_func_POU_FIRE3__Fv
 item_func_POU_FIRE3__Fv:
+item_func_POU_FIRE3__Fv:
 /* 80099590 000964D0  4E 80 00 20 */	blr 
 
 /* 80099594 0004 .text      item_func_POU_FIRE4__Fv        item_func_POU_FIRE4__Fv        */
 .global item_func_POU_FIRE4__Fv
+item_func_POU_FIRE4__Fv:
 item_func_POU_FIRE4__Fv:
 /* 80099594 000964D4  4E 80 00 20 */	blr 
 
 /* 80099598 0004 .text      item_func_BOSSRIDER_KEY__Fv    item_func_BOSSRIDER_KEY__Fv    */
 .global item_func_BOSSRIDER_KEY__Fv
 item_func_BOSSRIDER_KEY__Fv:
+item_func_BOSSRIDER_KEY__Fv:
 /* 80099598 000964D8  4E 80 00 20 */	blr 
 
 /* 8009959C 0004 .text      item_func_TOMATO_PUREE__Fv     item_func_TOMATO_PUREE__Fv     */
 .global item_func_TOMATO_PUREE__Fv
+item_func_TOMATO_PUREE__Fv:
 item_func_TOMATO_PUREE__Fv:
 /* 8009959C 000964DC  4E 80 00 20 */	blr 
 
 /* 800995A0 0004 .text      item_func_TASTE__Fv            item_func_TASTE__Fv            */
 .global item_func_TASTE__Fv
 item_func_TASTE__Fv:
+item_func_TASTE__Fv:
 /* 800995A0 000964E0  4E 80 00 20 */	blr 
 
 /* 800995A4 0030 .text      item_func_LV5_BOSS_KEY__Fv     item_func_LV5_BOSS_KEY__Fv     */
 .global item_func_LV5_BOSS_KEY__Fv
+item_func_LV5_BOSS_KEY__Fv:
 item_func_LV5_BOSS_KEY__Fv:
 /* 800995A4 000964E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800995A8 000964E8  7C 08 02 A6 */	mflr r0
@@ -2249,35 +2409,42 @@ item_func_LV5_BOSS_KEY__Fv:
 /* 800995D4 0004 .text      item_func_SURFBOARD__Fv        item_func_SURFBOARD__Fv        */
 .global item_func_SURFBOARD__Fv
 item_func_SURFBOARD__Fv:
+item_func_SURFBOARD__Fv:
 /* 800995D4 00096514  4E 80 00 20 */	blr 
 
 /* 800995D8 0004 .text      item_func_KANTERA2__Fv         item_func_KANTERA2__Fv         */
 .global item_func_KANTERA2__Fv
+item_func_KANTERA2__Fv:
 item_func_KANTERA2__Fv:
 /* 800995D8 00096518  4E 80 00 20 */	blr 
 
 /* 800995DC 0004 .text      item_func_L2_KEY_PIECES1__Fv   item_func_L2_KEY_PIECES1__Fv   */
 .global item_func_L2_KEY_PIECES1__Fv
 item_func_L2_KEY_PIECES1__Fv:
+item_func_L2_KEY_PIECES1__Fv:
 /* 800995DC 0009651C  4E 80 00 20 */	blr 
 
 /* 800995E0 0004 .text      item_func_L2_KEY_PIECES2__Fv   item_func_L2_KEY_PIECES2__Fv   */
 .global item_func_L2_KEY_PIECES2__Fv
+item_func_L2_KEY_PIECES2__Fv:
 item_func_L2_KEY_PIECES2__Fv:
 /* 800995E0 00096520  4E 80 00 20 */	blr 
 
 /* 800995E4 0004 .text      item_func_L2_KEY_PIECES3__Fv   item_func_L2_KEY_PIECES3__Fv   */
 .global item_func_L2_KEY_PIECES3__Fv
 item_func_L2_KEY_PIECES3__Fv:
+item_func_L2_KEY_PIECES3__Fv:
 /* 800995E4 00096524  4E 80 00 20 */	blr 
 
 /* 800995E8 0004 .text      item_func_KEY_OF_CARAVAN__Fv   item_func_KEY_OF_CARAVAN__Fv   */
 .global item_func_KEY_OF_CARAVAN__Fv
 item_func_KEY_OF_CARAVAN__Fv:
+item_func_KEY_OF_CARAVAN__Fv:
 /* 800995E8 00096528  4E 80 00 20 */	blr 
 
 /* 800995EC 0030 .text      item_func_LV2_BOSS_KEY__Fv     item_func_LV2_BOSS_KEY__Fv     */
 .global item_func_LV2_BOSS_KEY__Fv
+item_func_LV2_BOSS_KEY__Fv:
 item_func_LV2_BOSS_KEY__Fv:
 /* 800995EC 0009652C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800995F0 00096530  7C 08 02 A6 */	mflr r0
@@ -2295,6 +2462,7 @@ item_func_LV2_BOSS_KEY__Fv:
 /* 8009961C 0018 .text      item_func_KEY_OF_FILONE__Fv    item_func_KEY_OF_FILONE__Fv    */
 .global item_func_KEY_OF_FILONE__Fv
 item_func_KEY_OF_FILONE__Fv:
+item_func_KEY_OF_FILONE__Fv:
 /* 8009961C 0009655C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80099620 00096560  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80099624 00096564  A8 64 5D C8 */	lha r3, 0x5dc8(r4)
@@ -2305,10 +2473,12 @@ item_func_KEY_OF_FILONE__Fv:
 /* 80099634 0004 .text      item_func_noentry__Fv          item_func_noentry__Fv          */
 .global item_func_noentry__Fv
 item_func_noentry__Fv:
+item_func_noentry__Fv:
 /* 80099634 00096574  4E 80 00 20 */	blr 
 
 /* 80099638 0008 .text      item_getcheck_func_noentry__Fv item_getcheck_func_noentry__Fv */
 .global item_getcheck_func_noentry__Fv
+item_getcheck_func_noentry__Fv:
 item_getcheck_func_noentry__Fv:
 /* 80099638 00096578  38 60 FF FF */	li r3, -1
 /* 8009963C 0009657C  4E 80 00 20 */	blr 
@@ -2316,11 +2486,13 @@ item_getcheck_func_noentry__Fv:
 /* 80099640 0008 .text      item_getcheck_func_HEART__Fv   item_getcheck_func_HEART__Fv   */
 .global item_getcheck_func_HEART__Fv
 item_getcheck_func_HEART__Fv:
+item_getcheck_func_HEART__Fv:
 /* 80099640 00096580  38 60 FF FF */	li r3, -1
 /* 80099644 00096584  4E 80 00 20 */	blr 
 
 /* 80099648 0030 .text      item_getcheck_func_GREEN_RUPEE__Fv item_getcheck_func_GREEN_RUPEE__Fv */
 .global item_getcheck_func_GREEN_RUPEE__Fv
+item_getcheck_func_GREEN_RUPEE__Fv:
 item_getcheck_func_GREEN_RUPEE__Fv:
 /* 80099648 00096588  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009964C 0009658C  7C 08 02 A6 */	mflr r0
@@ -2338,6 +2510,7 @@ item_getcheck_func_GREEN_RUPEE__Fv:
 /* 80099678 0030 .text      item_getcheck_func_BLUE_RUPEE__Fv item_getcheck_func_BLUE_RUPEE__Fv */
 .global item_getcheck_func_BLUE_RUPEE__Fv
 item_getcheck_func_BLUE_RUPEE__Fv:
+item_getcheck_func_BLUE_RUPEE__Fv:
 /* 80099678 000965B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009967C 000965BC  7C 08 02 A6 */	mflr r0
 /* 80099680 000965C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2353,6 +2526,7 @@ item_getcheck_func_BLUE_RUPEE__Fv:
 
 /* 800996A8 0030 .text      item_getcheck_func_YELLOW_RUPEE__Fv item_getcheck_func_YELLOW_RUPEE__Fv */
 .global item_getcheck_func_YELLOW_RUPEE__Fv
+item_getcheck_func_YELLOW_RUPEE__Fv:
 item_getcheck_func_YELLOW_RUPEE__Fv:
 /* 800996A8 000965E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800996AC 000965EC  7C 08 02 A6 */	mflr r0
@@ -2370,6 +2544,7 @@ item_getcheck_func_YELLOW_RUPEE__Fv:
 /* 800996D8 0030 .text      item_getcheck_func_RED_RUPEE__Fv item_getcheck_func_RED_RUPEE__Fv */
 .global item_getcheck_func_RED_RUPEE__Fv
 item_getcheck_func_RED_RUPEE__Fv:
+item_getcheck_func_RED_RUPEE__Fv:
 /* 800996D8 00096618  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800996DC 0009661C  7C 08 02 A6 */	mflr r0
 /* 800996E0 00096620  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2385,6 +2560,7 @@ item_getcheck_func_RED_RUPEE__Fv:
 
 /* 80099708 0030 .text      item_getcheck_func_PURPLE_RUPEE__Fv item_getcheck_func_PURPLE_RUPEE__Fv */
 .global item_getcheck_func_PURPLE_RUPEE__Fv
+item_getcheck_func_PURPLE_RUPEE__Fv:
 item_getcheck_func_PURPLE_RUPEE__Fv:
 /* 80099708 00096648  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009970C 0009664C  7C 08 02 A6 */	mflr r0
@@ -2402,6 +2578,7 @@ item_getcheck_func_PURPLE_RUPEE__Fv:
 /* 80099738 0030 .text      item_getcheck_func_ORANGE_RUPEE__Fv item_getcheck_func_ORANGE_RUPEE__Fv */
 .global item_getcheck_func_ORANGE_RUPEE__Fv
 item_getcheck_func_ORANGE_RUPEE__Fv:
+item_getcheck_func_ORANGE_RUPEE__Fv:
 /* 80099738 00096678  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009973C 0009667C  7C 08 02 A6 */	mflr r0
 /* 80099740 00096680  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2417,6 +2594,7 @@ item_getcheck_func_ORANGE_RUPEE__Fv:
 
 /* 80099768 0030 .text      item_getcheck_func_SILVER_RUPEE__Fv item_getcheck_func_SILVER_RUPEE__Fv */
 .global item_getcheck_func_SILVER_RUPEE__Fv
+item_getcheck_func_SILVER_RUPEE__Fv:
 item_getcheck_func_SILVER_RUPEE__Fv:
 /* 80099768 000966A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009976C 000966AC  7C 08 02 A6 */	mflr r0
@@ -2434,17 +2612,20 @@ item_getcheck_func_SILVER_RUPEE__Fv:
 /* 80099798 0008 .text      item_getcheck_func_S_MAGIC__Fv item_getcheck_func_S_MAGIC__Fv */
 .global item_getcheck_func_S_MAGIC__Fv
 item_getcheck_func_S_MAGIC__Fv:
+item_getcheck_func_S_MAGIC__Fv:
 /* 80099798 000966D8  38 60 FF FF */	li r3, -1
 /* 8009979C 000966DC  4E 80 00 20 */	blr 
 
 /* 800997A0 0008 .text      item_getcheck_func_L_MAGIC__Fv item_getcheck_func_L_MAGIC__Fv */
 .global item_getcheck_func_L_MAGIC__Fv
 item_getcheck_func_L_MAGIC__Fv:
+item_getcheck_func_L_MAGIC__Fv:
 /* 800997A0 000966E0  38 60 FF FF */	li r3, -1
 /* 800997A4 000966E4  4E 80 00 20 */	blr 
 
 /* 800997A8 0030 .text      item_getcheck_func_BOMB_5__Fv  item_getcheck_func_BOMB_5__Fv  */
 .global item_getcheck_func_BOMB_5__Fv
+item_getcheck_func_BOMB_5__Fv:
 item_getcheck_func_BOMB_5__Fv:
 /* 800997A8 000966E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800997AC 000966EC  7C 08 02 A6 */	mflr r0
@@ -2462,6 +2643,7 @@ item_getcheck_func_BOMB_5__Fv:
 /* 800997D8 0030 .text      item_getcheck_func_BOMB_10__Fv item_getcheck_func_BOMB_10__Fv */
 .global item_getcheck_func_BOMB_10__Fv
 item_getcheck_func_BOMB_10__Fv:
+item_getcheck_func_BOMB_10__Fv:
 /* 800997D8 00096718  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800997DC 0009671C  7C 08 02 A6 */	mflr r0
 /* 800997E0 00096720  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2477,6 +2659,7 @@ item_getcheck_func_BOMB_10__Fv:
 
 /* 80099808 0030 .text      item_getcheck_func_BOMB_20__Fv item_getcheck_func_BOMB_20__Fv */
 .global item_getcheck_func_BOMB_20__Fv
+item_getcheck_func_BOMB_20__Fv:
 item_getcheck_func_BOMB_20__Fv:
 /* 80099808 00096748  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009980C 0009674C  7C 08 02 A6 */	mflr r0
@@ -2494,6 +2677,7 @@ item_getcheck_func_BOMB_20__Fv:
 /* 80099838 0030 .text      item_getcheck_func_BOMB_30__Fv item_getcheck_func_BOMB_30__Fv */
 .global item_getcheck_func_BOMB_30__Fv
 item_getcheck_func_BOMB_30__Fv:
+item_getcheck_func_BOMB_30__Fv:
 /* 80099838 00096778  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009983C 0009677C  7C 08 02 A6 */	mflr r0
 /* 80099840 00096780  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2509,6 +2693,7 @@ item_getcheck_func_BOMB_30__Fv:
 
 /* 80099868 0030 .text      item_getcheck_func_ARROW_10__Fv item_getcheck_func_ARROW_10__Fv */
 .global item_getcheck_func_ARROW_10__Fv
+item_getcheck_func_ARROW_10__Fv:
 item_getcheck_func_ARROW_10__Fv:
 /* 80099868 000967A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009986C 000967AC  7C 08 02 A6 */	mflr r0
@@ -2526,6 +2711,7 @@ item_getcheck_func_ARROW_10__Fv:
 /* 80099898 0030 .text      item_getcheck_func_ARROW_20__Fv item_getcheck_func_ARROW_20__Fv */
 .global item_getcheck_func_ARROW_20__Fv
 item_getcheck_func_ARROW_20__Fv:
+item_getcheck_func_ARROW_20__Fv:
 /* 80099898 000967D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009989C 000967DC  7C 08 02 A6 */	mflr r0
 /* 800998A0 000967E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2541,6 +2727,7 @@ item_getcheck_func_ARROW_20__Fv:
 
 /* 800998C8 0030 .text      item_getcheck_func_ARROW_30__Fv item_getcheck_func_ARROW_30__Fv */
 .global item_getcheck_func_ARROW_30__Fv
+item_getcheck_func_ARROW_30__Fv:
 item_getcheck_func_ARROW_30__Fv:
 /* 800998C8 00096808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800998CC 0009680C  7C 08 02 A6 */	mflr r0
@@ -2558,6 +2745,7 @@ item_getcheck_func_ARROW_30__Fv:
 /* 800998F8 0030 .text      item_getcheck_func_ARROW_1__Fv item_getcheck_func_ARROW_1__Fv */
 .global item_getcheck_func_ARROW_1__Fv
 item_getcheck_func_ARROW_1__Fv:
+item_getcheck_func_ARROW_1__Fv:
 /* 800998F8 00096838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800998FC 0009683C  7C 08 02 A6 */	mflr r0
 /* 80099900 00096840  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2573,6 +2761,7 @@ item_getcheck_func_ARROW_1__Fv:
 
 /* 80099928 0030 .text      item_getcheck_func_PACHINKO_SHOT__Fv item_getcheck_func_PACHINKO_SHOT__Fv */
 .global item_getcheck_func_PACHINKO_SHOT__Fv
+item_getcheck_func_PACHINKO_SHOT__Fv:
 item_getcheck_func_PACHINKO_SHOT__Fv:
 /* 80099928 00096868  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009992C 0009686C  7C 08 02 A6 */	mflr r0
@@ -2590,11 +2779,13 @@ item_getcheck_func_PACHINKO_SHOT__Fv:
 /* 80099958 0008 .text      item_getcheck_func_WATER_BOMB_5__Fv item_getcheck_func_WATER_BOMB_5__Fv */
 .global item_getcheck_func_WATER_BOMB_5__Fv
 item_getcheck_func_WATER_BOMB_5__Fv:
+item_getcheck_func_WATER_BOMB_5__Fv:
 /* 80099958 00096898  38 60 FF FF */	li r3, -1
 /* 8009995C 0009689C  4E 80 00 20 */	blr 
 
 /* 80099960 0008 .text      item_getcheck_func_WATER_BOMB_10__Fv item_getcheck_func_WATER_BOMB_10__Fv */
 .global item_getcheck_func_WATER_BOMB_10__Fv
+item_getcheck_func_WATER_BOMB_10__Fv:
 item_getcheck_func_WATER_BOMB_10__Fv:
 /* 80099960 000968A0  38 60 FF FF */	li r3, -1
 /* 80099964 000968A4  4E 80 00 20 */	blr 
@@ -2602,11 +2793,13 @@ item_getcheck_func_WATER_BOMB_10__Fv:
 /* 80099968 0008 .text      item_getcheck_func_WATER_BOMB_20__Fv item_getcheck_func_WATER_BOMB_20__Fv */
 .global item_getcheck_func_WATER_BOMB_20__Fv
 item_getcheck_func_WATER_BOMB_20__Fv:
+item_getcheck_func_WATER_BOMB_20__Fv:
 /* 80099968 000968A8  38 60 FF FF */	li r3, -1
 /* 8009996C 000968AC  4E 80 00 20 */	blr 
 
 /* 80099970 0008 .text      item_getcheck_func_WATER_BOMB_30__Fv item_getcheck_func_WATER_BOMB_30__Fv */
 .global item_getcheck_func_WATER_BOMB_30__Fv
+item_getcheck_func_WATER_BOMB_30__Fv:
 item_getcheck_func_WATER_BOMB_30__Fv:
 /* 80099970 000968B0  38 60 FF FF */	li r3, -1
 /* 80099974 000968B4  4E 80 00 20 */	blr 
@@ -2614,11 +2807,13 @@ item_getcheck_func_WATER_BOMB_30__Fv:
 /* 80099978 0008 .text      item_getcheck_func_BOMB_INSECT_5__Fv item_getcheck_func_BOMB_INSECT_5__Fv */
 .global item_getcheck_func_BOMB_INSECT_5__Fv
 item_getcheck_func_BOMB_INSECT_5__Fv:
+item_getcheck_func_BOMB_INSECT_5__Fv:
 /* 80099978 000968B8  38 60 FF FF */	li r3, -1
 /* 8009997C 000968BC  4E 80 00 20 */	blr 
 
 /* 80099980 0030 .text      item_getcheck_func_BOMB_INSECT_10__Fv item_getcheck_func_BOMB_INSECT_10__Fv */
 .global item_getcheck_func_BOMB_INSECT_10__Fv
+item_getcheck_func_BOMB_INSECT_10__Fv:
 item_getcheck_func_BOMB_INSECT_10__Fv:
 /* 80099980 000968C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099984 000968C4  7C 08 02 A6 */	mflr r0
@@ -2636,6 +2831,7 @@ item_getcheck_func_BOMB_INSECT_10__Fv:
 /* 800999B0 0030 .text      item_getcheck_func_BOMB_INSECT_20__Fv item_getcheck_func_BOMB_INSECT_20__Fv */
 .global item_getcheck_func_BOMB_INSECT_20__Fv
 item_getcheck_func_BOMB_INSECT_20__Fv:
+item_getcheck_func_BOMB_INSECT_20__Fv:
 /* 800999B0 000968F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800999B4 000968F4  7C 08 02 A6 */	mflr r0
 /* 800999B8 000968F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2651,6 +2847,7 @@ item_getcheck_func_BOMB_INSECT_20__Fv:
 
 /* 800999E0 0030 .text      item_getcheck_func_BOMB_INSECT_30__Fv item_getcheck_func_BOMB_INSECT_30__Fv */
 .global item_getcheck_func_BOMB_INSECT_30__Fv
+item_getcheck_func_BOMB_INSECT_30__Fv:
 item_getcheck_func_BOMB_INSECT_30__Fv:
 /* 800999E0 00096920  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800999E4 00096924  7C 08 02 A6 */	mflr r0
@@ -2668,11 +2865,13 @@ item_getcheck_func_BOMB_INSECT_30__Fv:
 /* 80099A10 0008 .text      item_getcheck_func_RECOVER_FAILY__Fv item_getcheck_func_RECOVER_FAILY__Fv */
 .global item_getcheck_func_RECOVER_FAILY__Fv
 item_getcheck_func_RECOVER_FAILY__Fv:
+item_getcheck_func_RECOVER_FAILY__Fv:
 /* 80099A10 00096950  38 60 FF FF */	li r3, -1
 /* 80099A14 00096954  4E 80 00 20 */	blr 
 
 /* 80099A18 0008 .text      item_getcheck_func_TRIPLE_HEART__Fv item_getcheck_func_TRIPLE_HEART__Fv */
 .global item_getcheck_func_TRIPLE_HEART__Fv
+item_getcheck_func_TRIPLE_HEART__Fv:
 item_getcheck_func_TRIPLE_HEART__Fv:
 /* 80099A18 00096958  38 60 FF FF */	li r3, -1
 /* 80099A1C 0009695C  4E 80 00 20 */	blr 
@@ -2680,11 +2879,13 @@ item_getcheck_func_TRIPLE_HEART__Fv:
 /* 80099A20 0008 .text      item_getcheck_func_SMALL_KEY__Fv item_getcheck_func_SMALL_KEY__Fv */
 .global item_getcheck_func_SMALL_KEY__Fv
 item_getcheck_func_SMALL_KEY__Fv:
+item_getcheck_func_SMALL_KEY__Fv:
 /* 80099A20 00096960  38 60 FF FF */	li r3, -1
 /* 80099A24 00096964  4E 80 00 20 */	blr 
 
 /* 80099A28 0008 .text      item_getcheck_func_KAKERA_HEART__Fv item_getcheck_func_KAKERA_HEART__Fv */
 .global item_getcheck_func_KAKERA_HEART__Fv
+item_getcheck_func_KAKERA_HEART__Fv:
 item_getcheck_func_KAKERA_HEART__Fv:
 /* 80099A28 00096968  38 60 FF FF */	li r3, -1
 /* 80099A2C 0009696C  4E 80 00 20 */	blr 
@@ -2692,11 +2893,13 @@ item_getcheck_func_KAKERA_HEART__Fv:
 /* 80099A30 0008 .text      item_getcheck_func_UTUWA_HEART__Fv item_getcheck_func_UTUWA_HEART__Fv */
 .global item_getcheck_func_UTUWA_HEART__Fv
 item_getcheck_func_UTUWA_HEART__Fv:
+item_getcheck_func_UTUWA_HEART__Fv:
 /* 80099A30 00096970  38 60 FF FF */	li r3, -1
 /* 80099A34 00096974  4E 80 00 20 */	blr 
 
 /* 80099A38 0030 .text      item_getcheck_func_MAP__Fv     item_getcheck_func_MAP__Fv     */
 .global item_getcheck_func_MAP__Fv
+item_getcheck_func_MAP__Fv:
 item_getcheck_func_MAP__Fv:
 /* 80099A38 00096978  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099A3C 0009697C  7C 08 02 A6 */	mflr r0
@@ -2714,11 +2917,13 @@ item_getcheck_func_MAP__Fv:
 /* 80099A68 0008 .text      item_getcheck_func_COMPUS__Fv  item_getcheck_func_COMPUS__Fv  */
 .global item_getcheck_func_COMPUS__Fv
 item_getcheck_func_COMPUS__Fv:
+item_getcheck_func_COMPUS__Fv:
 /* 80099A68 000969A8  38 60 FF FF */	li r3, -1
 /* 80099A6C 000969AC  4E 80 00 20 */	blr 
 
 /* 80099A70 0044 .text      item_getcheck_func_DUNGEON_EXIT__Fv item_getcheck_func_DUNGEON_EXIT__Fv */
 .global item_getcheck_func_DUNGEON_EXIT__Fv
+item_getcheck_func_DUNGEON_EXIT__Fv:
 item_getcheck_func_DUNGEON_EXIT__Fv:
 /* 80099A70 000969B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099A74 000969B4  7C 08 02 A6 */	mflr r0
@@ -2741,6 +2946,7 @@ item_getcheck_func_DUNGEON_EXIT__Fv:
 /* 80099AB4 0030 .text      item_getcheck_func_BOSS_KEY__Fv item_getcheck_func_BOSS_KEY__Fv */
 .global item_getcheck_func_BOSS_KEY__Fv
 item_getcheck_func_BOSS_KEY__Fv:
+item_getcheck_func_BOSS_KEY__Fv:
 /* 80099AB4 000969F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099AB8 000969F8  7C 08 02 A6 */	mflr r0
 /* 80099ABC 000969FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2756,6 +2962,7 @@ item_getcheck_func_BOSS_KEY__Fv:
 
 /* 80099AE4 0044 .text      item_getcheck_func_DUNGEON_BACK__Fv item_getcheck_func_DUNGEON_BACK__Fv */
 .global item_getcheck_func_DUNGEON_BACK__Fv
+item_getcheck_func_DUNGEON_BACK__Fv:
 item_getcheck_func_DUNGEON_BACK__Fv:
 /* 80099AE4 00096A24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099AE8 00096A28  7C 08 02 A6 */	mflr r0
@@ -2778,6 +2985,7 @@ item_getcheck_func_DUNGEON_BACK__Fv:
 /* 80099B28 0034 .text      item_getcheck_func_SWORD__Fv   item_getcheck_func_SWORD__Fv   */
 .global item_getcheck_func_SWORD__Fv
 item_getcheck_func_SWORD__Fv:
+item_getcheck_func_SWORD__Fv:
 /* 80099B28 00096A68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099B2C 00096A6C  7C 08 02 A6 */	mflr r0
 /* 80099B30 00096A70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2794,6 +3002,7 @@ item_getcheck_func_SWORD__Fv:
 
 /* 80099B5C 0034 .text      item_getcheck_func_MASTER_SWORD__Fv item_getcheck_func_MASTER_SWORD__Fv */
 .global item_getcheck_func_MASTER_SWORD__Fv
+item_getcheck_func_MASTER_SWORD__Fv:
 item_getcheck_func_MASTER_SWORD__Fv:
 /* 80099B5C 00096A9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099B60 00096AA0  7C 08 02 A6 */	mflr r0
@@ -2812,6 +3021,7 @@ item_getcheck_func_MASTER_SWORD__Fv:
 /* 80099B90 0030 .text      item_getcheck_func_WOOD_SHIELD__Fv item_getcheck_func_WOOD_SHIELD__Fv */
 .global item_getcheck_func_WOOD_SHIELD__Fv
 item_getcheck_func_WOOD_SHIELD__Fv:
+item_getcheck_func_WOOD_SHIELD__Fv:
 /* 80099B90 00096AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099B94 00096AD4  7C 08 02 A6 */	mflr r0
 /* 80099B98 00096AD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2827,6 +3037,7 @@ item_getcheck_func_WOOD_SHIELD__Fv:
 
 /* 80099BC0 0030 .text      item_getcheck_func_SHIELD__Fv  item_getcheck_func_SHIELD__Fv  */
 .global item_getcheck_func_SHIELD__Fv
+item_getcheck_func_SHIELD__Fv:
 item_getcheck_func_SHIELD__Fv:
 /* 80099BC0 00096B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099BC4 00096B04  7C 08 02 A6 */	mflr r0
@@ -2844,6 +3055,7 @@ item_getcheck_func_SHIELD__Fv:
 /* 80099BF0 0030 .text      item_getcheck_func_HYLIA_SHIELD__Fv item_getcheck_func_HYLIA_SHIELD__Fv */
 .global item_getcheck_func_HYLIA_SHIELD__Fv
 item_getcheck_func_HYLIA_SHIELD__Fv:
+item_getcheck_func_HYLIA_SHIELD__Fv:
 /* 80099BF0 00096B30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099BF4 00096B34  7C 08 02 A6 */	mflr r0
 /* 80099BF8 00096B38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2859,6 +3071,7 @@ item_getcheck_func_HYLIA_SHIELD__Fv:
 
 /* 80099C20 0044 .text      item_getcheck_func_TKS_LETTER__Fv item_getcheck_func_TKS_LETTER__Fv */
 .global item_getcheck_func_TKS_LETTER__Fv
+item_getcheck_func_TKS_LETTER__Fv:
 item_getcheck_func_TKS_LETTER__Fv:
 /* 80099C20 00096B60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099C24 00096B64  7C 08 02 A6 */	mflr r0
@@ -2881,6 +3094,7 @@ item_getcheck_func_TKS_LETTER__Fv:
 /* 80099C64 0030 .text      item_getcheck_func_WEAR_CASUAL__Fv item_getcheck_func_WEAR_CASUAL__Fv */
 .global item_getcheck_func_WEAR_CASUAL__Fv
 item_getcheck_func_WEAR_CASUAL__Fv:
+item_getcheck_func_WEAR_CASUAL__Fv:
 /* 80099C64 00096BA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099C68 00096BA8  7C 08 02 A6 */	mflr r0
 /* 80099C6C 00096BAC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2896,6 +3110,7 @@ item_getcheck_func_WEAR_CASUAL__Fv:
 
 /* 80099C94 0034 .text      item_getcheck_func_WEAR_KOKIRI__Fv item_getcheck_func_WEAR_KOKIRI__Fv */
 .global item_getcheck_func_WEAR_KOKIRI__Fv
+item_getcheck_func_WEAR_KOKIRI__Fv:
 item_getcheck_func_WEAR_KOKIRI__Fv:
 /* 80099C94 00096BD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099C98 00096BD8  7C 08 02 A6 */	mflr r0
@@ -2914,6 +3129,7 @@ item_getcheck_func_WEAR_KOKIRI__Fv:
 /* 80099CC8 0030 .text      item_getcheck_func_ARMOR__Fv   item_getcheck_func_ARMOR__Fv   */
 .global item_getcheck_func_ARMOR__Fv
 item_getcheck_func_ARMOR__Fv:
+item_getcheck_func_ARMOR__Fv:
 /* 80099CC8 00096C08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099CCC 00096C0C  7C 08 02 A6 */	mflr r0
 /* 80099CD0 00096C10  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2929,6 +3145,7 @@ item_getcheck_func_ARMOR__Fv:
 
 /* 80099CF8 0030 .text      item_getcheck_func_WEAR_ZORA__Fv item_getcheck_func_WEAR_ZORA__Fv */
 .global item_getcheck_func_WEAR_ZORA__Fv
+item_getcheck_func_WEAR_ZORA__Fv:
 item_getcheck_func_WEAR_ZORA__Fv:
 /* 80099CF8 00096C38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099CFC 00096C3C  7C 08 02 A6 */	mflr r0
@@ -2946,11 +3163,13 @@ item_getcheck_func_WEAR_ZORA__Fv:
 /* 80099D28 0008 .text      item_getcheck_func_MAGIC_LV1__Fv item_getcheck_func_MAGIC_LV1__Fv */
 .global item_getcheck_func_MAGIC_LV1__Fv
 item_getcheck_func_MAGIC_LV1__Fv:
+item_getcheck_func_MAGIC_LV1__Fv:
 /* 80099D28 00096C68  38 60 FF FF */	li r3, -1
 /* 80099D2C 00096C6C  4E 80 00 20 */	blr 
 
 /* 80099D30 0044 .text      item_getcheck_func_DUNGEON_EXIT_2__Fv item_getcheck_func_DUNGEON_EXIT_2__Fv */
 .global item_getcheck_func_DUNGEON_EXIT_2__Fv
+item_getcheck_func_DUNGEON_EXIT_2__Fv:
 item_getcheck_func_DUNGEON_EXIT_2__Fv:
 /* 80099D30 00096C70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099D34 00096C74  7C 08 02 A6 */	mflr r0
@@ -2973,11 +3192,13 @@ item_getcheck_func_DUNGEON_EXIT_2__Fv:
 /* 80099D74 0008 .text      item_getcheck_func_WALLET_LV1__Fv item_getcheck_func_WALLET_LV1__Fv */
 .global item_getcheck_func_WALLET_LV1__Fv
 item_getcheck_func_WALLET_LV1__Fv:
+item_getcheck_func_WALLET_LV1__Fv:
 /* 80099D74 00096CB4  38 60 FF FF */	li r3, -1
 /* 80099D78 00096CB8  4E 80 00 20 */	blr 
 
 /* 80099D7C 0008 .text      item_getcheck_func_WALLET_LV2__Fv item_getcheck_func_WALLET_LV2__Fv */
 .global item_getcheck_func_WALLET_LV2__Fv
+item_getcheck_func_WALLET_LV2__Fv:
 item_getcheck_func_WALLET_LV2__Fv:
 /* 80099D7C 00096CBC  38 60 FF FF */	li r3, -1
 /* 80099D80 00096CC0  4E 80 00 20 */	blr 
@@ -2985,11 +3206,13 @@ item_getcheck_func_WALLET_LV2__Fv:
 /* 80099D84 0008 .text      item_getcheck_func_WALLET_LV3__Fv item_getcheck_func_WALLET_LV3__Fv */
 .global item_getcheck_func_WALLET_LV3__Fv
 item_getcheck_func_WALLET_LV3__Fv:
+item_getcheck_func_WALLET_LV3__Fv:
 /* 80099D84 00096CC4  38 60 FF FF */	li r3, -1
 /* 80099D88 00096CC8  4E 80 00 20 */	blr 
 
 /* 80099D8C 0044 .text      item_getcheck_func_ZORAS_JEWEL__Fv item_getcheck_func_ZORAS_JEWEL__Fv */
 .global item_getcheck_func_ZORAS_JEWEL__Fv
+item_getcheck_func_ZORAS_JEWEL__Fv:
 item_getcheck_func_ZORAS_JEWEL__Fv:
 /* 80099D8C 00096CCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099D90 00096CD0  7C 08 02 A6 */	mflr r0
@@ -3012,6 +3235,7 @@ item_getcheck_func_ZORAS_JEWEL__Fv:
 /* 80099DD0 0030 .text      item_getcheck_func_HAWK_EYE__Fv item_getcheck_func_HAWK_EYE__Fv */
 .global item_getcheck_func_HAWK_EYE__Fv
 item_getcheck_func_HAWK_EYE__Fv:
+item_getcheck_func_HAWK_EYE__Fv:
 /* 80099DD0 00096D10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099DD4 00096D14  7C 08 02 A6 */	mflr r0
 /* 80099DD8 00096D18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3028,6 +3252,7 @@ item_getcheck_func_HAWK_EYE__Fv:
 /* 80099E00 0030 .text      item_getcheck_func_WOOD_STICK__Fv item_getcheck_func_WOOD_STICK__Fv */
 .global item_getcheck_func_WOOD_STICK__Fv
 item_getcheck_func_WOOD_STICK__Fv:
+item_getcheck_func_WOOD_STICK__Fv:
 /* 80099E00 00096D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099E04 00096D44  7C 08 02 A6 */	mflr r0
 /* 80099E08 00096D48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3043,6 +3268,7 @@ item_getcheck_func_WOOD_STICK__Fv:
 
 /* 80099E30 0044 .text      item_getcheck_func_BOOMERANG__Fv item_getcheck_func_BOOMERANG__Fv */
 .global item_getcheck_func_BOOMERANG__Fv
+item_getcheck_func_BOOMERANG__Fv:
 item_getcheck_func_BOOMERANG__Fv:
 /* 80099E30 00096D70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099E34 00096D74  7C 08 02 A6 */	mflr r0
@@ -3065,6 +3291,7 @@ item_getcheck_func_BOOMERANG__Fv:
 /* 80099E74 0044 .text      item_getcheck_func_SPINNER__Fv item_getcheck_func_SPINNER__Fv */
 .global item_getcheck_func_SPINNER__Fv
 item_getcheck_func_SPINNER__Fv:
+item_getcheck_func_SPINNER__Fv:
 /* 80099E74 00096DB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099E78 00096DB8  7C 08 02 A6 */	mflr r0
 /* 80099E7C 00096DBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3085,6 +3312,7 @@ item_getcheck_func_SPINNER__Fv:
 
 /* 80099EB8 0044 .text      item_getcheck_func_IRONBALL__Fv item_getcheck_func_IRONBALL__Fv */
 .global item_getcheck_func_IRONBALL__Fv
+item_getcheck_func_IRONBALL__Fv:
 item_getcheck_func_IRONBALL__Fv:
 /* 80099EB8 00096DF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099EBC 00096DFC  7C 08 02 A6 */	mflr r0
@@ -3107,6 +3335,7 @@ item_getcheck_func_IRONBALL__Fv:
 /* 80099EFC 0044 .text      item_getcheck_func_BOW__Fv     item_getcheck_func_BOW__Fv     */
 .global item_getcheck_func_BOW__Fv
 item_getcheck_func_BOW__Fv:
+item_getcheck_func_BOW__Fv:
 /* 80099EFC 00096E3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099F00 00096E40  7C 08 02 A6 */	mflr r0
 /* 80099F04 00096E44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3127,6 +3356,7 @@ item_getcheck_func_BOW__Fv:
 
 /* 80099F40 0044 .text      item_getcheck_func_HOOKSHOT__Fv item_getcheck_func_HOOKSHOT__Fv */
 .global item_getcheck_func_HOOKSHOT__Fv
+item_getcheck_func_HOOKSHOT__Fv:
 item_getcheck_func_HOOKSHOT__Fv:
 /* 80099F40 00096E80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099F44 00096E84  7C 08 02 A6 */	mflr r0
@@ -3149,6 +3379,7 @@ item_getcheck_func_HOOKSHOT__Fv:
 /* 80099F84 0044 .text      item_getcheck_func_HVY_BOOTS__Fv item_getcheck_func_HVY_BOOTS__Fv */
 .global item_getcheck_func_HVY_BOOTS__Fv
 item_getcheck_func_HVY_BOOTS__Fv:
+item_getcheck_func_HVY_BOOTS__Fv:
 /* 80099F84 00096EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099F88 00096EC8  7C 08 02 A6 */	mflr r0
 /* 80099F8C 00096ECC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3169,6 +3400,7 @@ item_getcheck_func_HVY_BOOTS__Fv:
 
 /* 80099FC8 0044 .text      item_getcheck_func_COPY_ROD__Fv item_getcheck_func_COPY_ROD__Fv */
 .global item_getcheck_func_COPY_ROD__Fv
+item_getcheck_func_COPY_ROD__Fv:
 item_getcheck_func_COPY_ROD__Fv:
 /* 80099FC8 00096F08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80099FCC 00096F0C  7C 08 02 A6 */	mflr r0
@@ -3191,6 +3423,7 @@ item_getcheck_func_COPY_ROD__Fv:
 /* 8009A00C 0044 .text      item_getcheck_func_W_HOOKSHOT__Fv item_getcheck_func_W_HOOKSHOT__Fv */
 .global item_getcheck_func_W_HOOKSHOT__Fv
 item_getcheck_func_W_HOOKSHOT__Fv:
+item_getcheck_func_W_HOOKSHOT__Fv:
 /* 8009A00C 00096F4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A010 00096F50  7C 08 02 A6 */	mflr r0
 /* 8009A014 00096F54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3211,6 +3444,7 @@ item_getcheck_func_W_HOOKSHOT__Fv:
 
 /* 8009A050 0044 .text      item_getcheck_func_KANTERA__Fv item_getcheck_func_KANTERA__Fv */
 .global item_getcheck_func_KANTERA__Fv
+item_getcheck_func_KANTERA__Fv:
 item_getcheck_func_KANTERA__Fv:
 /* 8009A050 00096F90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A054 00096F94  7C 08 02 A6 */	mflr r0
@@ -3233,6 +3467,7 @@ item_getcheck_func_KANTERA__Fv:
 /* 8009A094 0034 .text      item_getcheck_func_LIGHT_SWORD__Fv item_getcheck_func_LIGHT_SWORD__Fv */
 .global item_getcheck_func_LIGHT_SWORD__Fv
 item_getcheck_func_LIGHT_SWORD__Fv:
+item_getcheck_func_LIGHT_SWORD__Fv:
 /* 8009A094 00096FD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A098 00096FD8  7C 08 02 A6 */	mflr r0
 /* 8009A09C 00096FDC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3247,8 +3482,9 @@ item_getcheck_func_LIGHT_SWORD__Fv:
 /* 8009A0C0 00097000  38 21 00 10 */	addi r1, r1, 0x10
 /* 8009A0C4 00097004  4E 80 00 20 */	blr 
 
-/* 8009A0C8 0070 .text      item_getcheck_func_FISHING_ROD_1__Fv item_getcheck_func_FISHING_ROD_1__Fv */
+/* 8009A0C8 0134 .text      item_getcheck_func_FISHING_ROD_1__Fv item_getcheck_func_FISHING_ROD_1__Fv */
 .global item_getcheck_func_FISHING_ROD_1__Fv
+item_getcheck_func_FISHING_ROD_1__Fv:
 item_getcheck_func_FISHING_ROD_1__Fv:
 /* 8009A0C8 00097008  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8009A0CC 0009700C  7C 08 02 A6 */	mflr r0
@@ -3269,75 +3505,60 @@ item_getcheck_func_FISHING_ROD_1__Fv:
 /* 8009A108 00097048  4B F9 8F 29 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A10C 0009704C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A110 00097050  28 00 00 4A */	cmplwi r0, 0x4a
-/* 8009A114 00097054  41 82 00 24 */	beq func_8009A138
+/* 8009A114 00097054  41 82 00 24 */	beq lbl_8009A138
 /* 8009A118 00097058  7F 43 D3 78 */	mr r3, r26
 /* 8009A11C 0009705C  38 80 00 14 */	li r4, 0x14
 /* 8009A120 00097060  38 A0 00 01 */	li r5, 1
 /* 8009A124 00097064  4B F9 8F 0D */	bl getItem__17dSv_player_item_cCFib
 /* 8009A128 00097068  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A12C 0009706C  28 00 00 5B */	cmplwi r0, 0x5b
-/* 8009A130 00097070  41 82 00 08 */	beq func_8009A138
+/* 8009A130 00097070  41 82 00 08 */	beq lbl_8009A138
 /* 8009A134 00097074  3B 60 00 00 */	li r27, 0
-
-/* 8009A138 0028 .text      func_8009A138                  func_8009A138                  */
-.global func_8009A138
-func_8009A138:
+lbl_8009A138:
 /* 8009A138 00097078  57 60 06 3F */	clrlwi. r0, r27, 0x18
-/* 8009A13C 0009707C  40 82 00 24 */	bne func_8009A160
+/* 8009A13C 0009707C  40 82 00 24 */	bne lbl_8009A160
 /* 8009A140 00097080  7F 43 D3 78 */	mr r3, r26
 /* 8009A144 00097084  38 80 00 14 */	li r4, 0x14
 /* 8009A148 00097088  38 A0 00 01 */	li r5, 1
 /* 8009A14C 0009708C  4B F9 8E E5 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A150 00097090  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A154 00097094  28 00 00 5D */	cmplwi r0, 0x5d
-/* 8009A158 00097098  41 82 00 08 */	beq func_8009A160
+/* 8009A158 00097098  41 82 00 08 */	beq lbl_8009A160
 /* 8009A15C 0009709C  3B 80 00 00 */	li r28, 0
-
-/* 8009A160 0028 .text      func_8009A160                  func_8009A160                  */
-.global func_8009A160
-func_8009A160:
+lbl_8009A160:
 /* 8009A160 000970A0  57 80 06 3F */	clrlwi. r0, r28, 0x18
-/* 8009A164 000970A4  40 82 00 24 */	bne func_8009A188
+/* 8009A164 000970A4  40 82 00 24 */	bne lbl_8009A188
 /* 8009A168 000970A8  7F 43 D3 78 */	mr r3, r26
 /* 8009A16C 000970AC  38 80 00 14 */	li r4, 0x14
 /* 8009A170 000970B0  38 A0 00 01 */	li r5, 1
 /* 8009A174 000970B4  4B F9 8E BD */	bl getItem__17dSv_player_item_cCFib
 /* 8009A178 000970B8  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A17C 000970BC  28 00 00 5C */	cmplwi r0, 0x5c
-/* 8009A180 000970C0  41 82 00 08 */	beq func_8009A188
+/* 8009A180 000970C0  41 82 00 08 */	beq lbl_8009A188
 /* 8009A184 000970C4  3B A0 00 00 */	li r29, 0
-
-/* 8009A188 0028 .text      func_8009A188                  func_8009A188                  */
-.global func_8009A188
-func_8009A188:
+lbl_8009A188:
 /* 8009A188 000970C8  57 A0 06 3F */	clrlwi. r0, r29, 0x18
-/* 8009A18C 000970CC  40 82 00 24 */	bne func_8009A1B0
+/* 8009A18C 000970CC  40 82 00 24 */	bne lbl_8009A1B0
 /* 8009A190 000970D0  7F 43 D3 78 */	mr r3, r26
 /* 8009A194 000970D4  38 80 00 14 */	li r4, 0x14
 /* 8009A198 000970D8  38 A0 00 01 */	li r5, 1
 /* 8009A19C 000970DC  4B F9 8E 95 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A1A0 000970E0  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A1A4 000970E4  28 00 00 5E */	cmplwi r0, 0x5e
-/* 8009A1A8 000970E8  41 82 00 08 */	beq func_8009A1B0
+/* 8009A1A8 000970E8  41 82 00 08 */	beq lbl_8009A1B0
 /* 8009A1AC 000970EC  3B C0 00 00 */	li r30, 0
-
-/* 8009A1B0 0028 .text      func_8009A1B0                  func_8009A1B0                  */
-.global func_8009A1B0
-func_8009A1B0:
+lbl_8009A1B0:
 /* 8009A1B0 000970F0  57 C0 06 3F */	clrlwi. r0, r30, 0x18
-/* 8009A1B4 000970F4  40 82 00 24 */	bne func_8009A1D8
+/* 8009A1B4 000970F4  40 82 00 24 */	bne lbl_8009A1D8
 /* 8009A1B8 000970F8  7F 43 D3 78 */	mr r3, r26
 /* 8009A1BC 000970FC  38 80 00 14 */	li r4, 0x14
 /* 8009A1C0 00097100  38 A0 00 01 */	li r5, 1
 /* 8009A1C4 00097104  4B F9 8E 6D */	bl getItem__17dSv_player_item_cCFib
 /* 8009A1C8 00097108  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A1CC 0009710C  28 00 00 5F */	cmplwi r0, 0x5f
-/* 8009A1D0 00097110  41 82 00 08 */	beq func_8009A1D8
+/* 8009A1D0 00097110  41 82 00 08 */	beq lbl_8009A1D8
 /* 8009A1D4 00097114  3B E0 00 00 */	li r31, 0
-
-/* 8009A1D8 0024 .text      func_8009A1D8                  func_8009A1D8                  */
-.global func_8009A1D8
-func_8009A1D8:
+lbl_8009A1D8:
 /* 8009A1D8 00097118  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009A1DC 0009711C  30 03 FF FF */	addic r0, r3, -1
 /* 8009A1E0 00097120  7C 60 19 10 */	subfe r3, r0, r3
@@ -3350,6 +3571,7 @@ func_8009A1D8:
 
 /* 8009A1FC 0044 .text      item_getcheck_func_PACHINKO__Fv item_getcheck_func_PACHINKO__Fv */
 .global item_getcheck_func_PACHINKO__Fv
+item_getcheck_func_PACHINKO__Fv:
 item_getcheck_func_PACHINKO__Fv:
 /* 8009A1FC 0009713C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A200 00097140  7C 08 02 A6 */	mflr r0
@@ -3372,11 +3594,13 @@ item_getcheck_func_PACHINKO__Fv:
 /* 8009A240 0008 .text      item_getcheck_func_COPY_ROD_2__Fv item_getcheck_func_COPY_ROD_2__Fv */
 .global item_getcheck_func_COPY_ROD_2__Fv
 item_getcheck_func_COPY_ROD_2__Fv:
+item_getcheck_func_COPY_ROD_2__Fv:
 /* 8009A240 00097180  38 60 FF FF */	li r3, -1
 /* 8009A244 00097184  4E 80 00 20 */	blr 
 
 /* 8009A248 0030 .text      item_getcheck_func_BOMB_BAG_LV2__Fv item_getcheck_func_BOMB_BAG_LV2__Fv */
 .global item_getcheck_func_BOMB_BAG_LV2__Fv
+item_getcheck_func_BOMB_BAG_LV2__Fv:
 item_getcheck_func_BOMB_BAG_LV2__Fv:
 /* 8009A248 00097188  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A24C 0009718C  7C 08 02 A6 */	mflr r0
@@ -3394,6 +3618,7 @@ item_getcheck_func_BOMB_BAG_LV2__Fv:
 /* 8009A278 0030 .text      item_getcheck_func_BOMB_BAG_LV1__Fv item_getcheck_func_BOMB_BAG_LV1__Fv */
 .global item_getcheck_func_BOMB_BAG_LV1__Fv
 item_getcheck_func_BOMB_BAG_LV1__Fv:
+item_getcheck_func_BOMB_BAG_LV1__Fv:
 /* 8009A278 000971B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A27C 000971BC  7C 08 02 A6 */	mflr r0
 /* 8009A280 000971C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3409,6 +3634,7 @@ item_getcheck_func_BOMB_BAG_LV1__Fv:
 
 /* 8009A2A8 0030 .text      item_getcheck_func_BOMB_IN_BAG__Fv item_getcheck_func_BOMB_IN_BAG__Fv */
 .global item_getcheck_func_BOMB_IN_BAG__Fv
+item_getcheck_func_BOMB_IN_BAG__Fv:
 item_getcheck_func_BOMB_IN_BAG__Fv:
 /* 8009A2A8 000971E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A2AC 000971EC  7C 08 02 A6 */	mflr r0
@@ -3426,6 +3652,7 @@ item_getcheck_func_BOMB_IN_BAG__Fv:
 /* 8009A2D8 0030 .text      item_getcheck_func_LIGHT_ARROW__Fv item_getcheck_func_LIGHT_ARROW__Fv */
 .global item_getcheck_func_LIGHT_ARROW__Fv
 item_getcheck_func_LIGHT_ARROW__Fv:
+item_getcheck_func_LIGHT_ARROW__Fv:
 /* 8009A2D8 00097218  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A2DC 0009721C  7C 08 02 A6 */	mflr r0
 /* 8009A2E0 00097220  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3439,8 +3666,9 @@ item_getcheck_func_LIGHT_ARROW__Fv:
 /* 8009A300 00097240  38 21 00 10 */	addi r1, r1, 0x10
 /* 8009A304 00097244  4E 80 00 20 */	blr 
 
-/* 8009A308 0050 .text      item_getcheck_func_ARROW_LV1__Fv item_getcheck_func_ARROW_LV1__Fv */
+/* 8009A308 0070 .text      item_getcheck_func_ARROW_LV1__Fv item_getcheck_func_ARROW_LV1__Fv */
 .global item_getcheck_func_ARROW_LV1__Fv
+item_getcheck_func_ARROW_LV1__Fv:
 item_getcheck_func_ARROW_LV1__Fv:
 /* 8009A308 00097248  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A30C 0009724C  7C 08 02 A6 */	mflr r0
@@ -3455,17 +3683,14 @@ item_getcheck_func_ARROW_LV1__Fv:
 /* 8009A330 00097270  4B F9 8D 01 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A334 00097274  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A338 00097278  28 00 00 43 */	cmplwi r0, 0x43
-/* 8009A33C 0009727C  40 82 00 1C */	bne func_8009A358
+/* 8009A33C 0009727C  40 82 00 1C */	bne lbl_8009A358
 /* 8009A340 00097280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009A344 00097284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009A348 00097288  88 03 00 F8 */	lbz r0, 0xf8(r3)
 /* 8009A34C 0009728C  28 00 00 1E */	cmplwi r0, 0x1e
-/* 8009A350 00097290  41 80 00 08 */	blt func_8009A358
+/* 8009A350 00097290  41 80 00 08 */	blt lbl_8009A358
 /* 8009A354 00097294  3B E0 00 01 */	li r31, 1
-
-/* 8009A358 0020 .text      func_8009A358                  func_8009A358                  */
-.global func_8009A358
-func_8009A358:
+lbl_8009A358:
 /* 8009A358 00097298  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009A35C 0009729C  30 03 FF FF */	addic r0, r3, -1
 /* 8009A360 000972A0  7C 60 19 10 */	subfe r3, r0, r3
@@ -3475,8 +3700,9 @@ func_8009A358:
 /* 8009A370 000972B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8009A374 000972B4  4E 80 00 20 */	blr 
 
-/* 8009A378 0050 .text      item_getcheck_func_ARROW_LV2__Fv item_getcheck_func_ARROW_LV2__Fv */
+/* 8009A378 0070 .text      item_getcheck_func_ARROW_LV2__Fv item_getcheck_func_ARROW_LV2__Fv */
 .global item_getcheck_func_ARROW_LV2__Fv
+item_getcheck_func_ARROW_LV2__Fv:
 item_getcheck_func_ARROW_LV2__Fv:
 /* 8009A378 000972B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A37C 000972BC  7C 08 02 A6 */	mflr r0
@@ -3491,17 +3717,14 @@ item_getcheck_func_ARROW_LV2__Fv:
 /* 8009A3A0 000972E0  4B F9 8C 91 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A3A4 000972E4  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A3A8 000972E8  28 00 00 43 */	cmplwi r0, 0x43
-/* 8009A3AC 000972EC  40 82 00 1C */	bne func_8009A3C8
+/* 8009A3AC 000972EC  40 82 00 1C */	bne lbl_8009A3C8
 /* 8009A3B0 000972F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009A3B4 000972F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009A3B8 000972F8  88 03 00 F8 */	lbz r0, 0xf8(r3)
 /* 8009A3BC 000972FC  28 00 00 3C */	cmplwi r0, 0x3c
-/* 8009A3C0 00097300  41 80 00 08 */	blt func_8009A3C8
+/* 8009A3C0 00097300  41 80 00 08 */	blt lbl_8009A3C8
 /* 8009A3C4 00097304  3B E0 00 01 */	li r31, 1
-
-/* 8009A3C8 0020 .text      func_8009A3C8                  func_8009A3C8                  */
-.global func_8009A3C8
-func_8009A3C8:
+lbl_8009A3C8:
 /* 8009A3C8 00097308  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009A3CC 0009730C  30 03 FF FF */	addic r0, r3, -1
 /* 8009A3D0 00097310  7C 60 19 10 */	subfe r3, r0, r3
@@ -3511,8 +3734,9 @@ func_8009A3C8:
 /* 8009A3E0 00097320  38 21 00 10 */	addi r1, r1, 0x10
 /* 8009A3E4 00097324  4E 80 00 20 */	blr 
 
-/* 8009A3E8 0050 .text      item_getcheck_func_ARROW_LV3__Fv item_getcheck_func_ARROW_LV3__Fv */
+/* 8009A3E8 0070 .text      item_getcheck_func_ARROW_LV3__Fv item_getcheck_func_ARROW_LV3__Fv */
 .global item_getcheck_func_ARROW_LV3__Fv
+item_getcheck_func_ARROW_LV3__Fv:
 item_getcheck_func_ARROW_LV3__Fv:
 /* 8009A3E8 00097328  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A3EC 0009732C  7C 08 02 A6 */	mflr r0
@@ -3527,17 +3751,14 @@ item_getcheck_func_ARROW_LV3__Fv:
 /* 8009A410 00097350  4B F9 8C 21 */	bl getItem__17dSv_player_item_cCFib
 /* 8009A414 00097354  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009A418 00097358  28 00 00 43 */	cmplwi r0, 0x43
-/* 8009A41C 0009735C  40 82 00 1C */	bne func_8009A438
+/* 8009A41C 0009735C  40 82 00 1C */	bne lbl_8009A438
 /* 8009A420 00097360  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009A424 00097364  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009A428 00097368  88 03 00 F8 */	lbz r0, 0xf8(r3)
 /* 8009A42C 0009736C  28 00 00 64 */	cmplwi r0, 0x64
-/* 8009A430 00097370  41 80 00 08 */	blt func_8009A438
+/* 8009A430 00097370  41 80 00 08 */	blt lbl_8009A438
 /* 8009A434 00097374  3B E0 00 01 */	li r31, 1
-
-/* 8009A438 0020 .text      func_8009A438                  func_8009A438                  */
-.global func_8009A438
-func_8009A438:
+lbl_8009A438:
 /* 8009A438 00097378  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009A43C 0009737C  30 03 FF FF */	addic r0, r3, -1
 /* 8009A440 00097380  7C 60 19 10 */	subfe r3, r0, r3
@@ -3550,11 +3771,13 @@ func_8009A438:
 /* 8009A458 0008 .text      item_getcheck_func_LURE_ROD__Fv item_getcheck_func_LURE_ROD__Fv */
 .global item_getcheck_func_LURE_ROD__Fv
 item_getcheck_func_LURE_ROD__Fv:
+item_getcheck_func_LURE_ROD__Fv:
 /* 8009A458 00097398  38 60 FF FF */	li r3, -1
 /* 8009A45C 0009739C  4E 80 00 20 */	blr 
 
 /* 8009A460 0008 .text      item_getcheck_func_BOMB_ARROW__Fv item_getcheck_func_BOMB_ARROW__Fv */
 .global item_getcheck_func_BOMB_ARROW__Fv
+item_getcheck_func_BOMB_ARROW__Fv:
 item_getcheck_func_BOMB_ARROW__Fv:
 /* 8009A460 000973A0  38 60 FF FF */	li r3, -1
 /* 8009A464 000973A4  4E 80 00 20 */	blr 
@@ -3562,11 +3785,13 @@ item_getcheck_func_BOMB_ARROW__Fv:
 /* 8009A468 0008 .text      item_getcheck_func_HAWK_ARROW__Fv item_getcheck_func_HAWK_ARROW__Fv */
 .global item_getcheck_func_HAWK_ARROW__Fv
 item_getcheck_func_HAWK_ARROW__Fv:
+item_getcheck_func_HAWK_ARROW__Fv:
 /* 8009A468 000973A8  38 60 FF FF */	li r3, -1
 /* 8009A46C 000973AC  4E 80 00 20 */	blr 
 
 /* 8009A470 0020 .text      item_getcheck_func_BEE_ROD__Fv item_getcheck_func_BEE_ROD__Fv */
 .global item_getcheck_func_BEE_ROD__Fv
+item_getcheck_func_BEE_ROD__Fv:
 item_getcheck_func_BEE_ROD__Fv:
 /* 8009A470 000973B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A474 000973B4  7C 08 02 A6 */	mflr r0
@@ -3580,6 +3805,7 @@ item_getcheck_func_BEE_ROD__Fv:
 /* 8009A490 0020 .text      item_getcheck_func_JEWEL_ROD__Fv item_getcheck_func_JEWEL_ROD__Fv */
 .global item_getcheck_func_JEWEL_ROD__Fv
 item_getcheck_func_JEWEL_ROD__Fv:
+item_getcheck_func_JEWEL_ROD__Fv:
 /* 8009A490 000973D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A494 000973D4  7C 08 02 A6 */	mflr r0
 /* 8009A498 000973D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3591,6 +3817,7 @@ item_getcheck_func_JEWEL_ROD__Fv:
 
 /* 8009A4B0 0020 .text      item_getcheck_func_WORM_ROD__Fv item_getcheck_func_WORM_ROD__Fv */
 .global item_getcheck_func_WORM_ROD__Fv
+item_getcheck_func_WORM_ROD__Fv:
 item_getcheck_func_WORM_ROD__Fv:
 /* 8009A4B0 000973F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A4B4 000973F4  7C 08 02 A6 */	mflr r0
@@ -3604,6 +3831,7 @@ item_getcheck_func_WORM_ROD__Fv:
 /* 8009A4D0 0020 .text      item_getcheck_func_JEWEL_BEE_ROD__Fv item_getcheck_func_JEWEL_BEE_ROD__Fv */
 .global item_getcheck_func_JEWEL_BEE_ROD__Fv
 item_getcheck_func_JEWEL_BEE_ROD__Fv:
+item_getcheck_func_JEWEL_BEE_ROD__Fv:
 /* 8009A4D0 00097410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A4D4 00097414  7C 08 02 A6 */	mflr r0
 /* 8009A4D8 00097418  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3616,6 +3844,7 @@ item_getcheck_func_JEWEL_BEE_ROD__Fv:
 /* 8009A4F0 0020 .text      item_getcheck_func_JEWEL_WORM_ROD__Fv item_getcheck_func_JEWEL_WORM_ROD__Fv */
 .global item_getcheck_func_JEWEL_WORM_ROD__Fv
 item_getcheck_func_JEWEL_WORM_ROD__Fv:
+item_getcheck_func_JEWEL_WORM_ROD__Fv:
 /* 8009A4F0 00097430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A4F4 00097434  7C 08 02 A6 */	mflr r0
 /* 8009A4F8 00097438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3627,6 +3856,7 @@ item_getcheck_func_JEWEL_WORM_ROD__Fv:
 
 /* 8009A510 0034 .text      item_getcheck_func_EMPTY_BOTTLE__Fv item_getcheck_func_EMPTY_BOTTLE__Fv */
 .global item_getcheck_func_EMPTY_BOTTLE__Fv
+item_getcheck_func_EMPTY_BOTTLE__Fv:
 item_getcheck_func_EMPTY_BOTTLE__Fv:
 /* 8009A510 00097450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A514 00097454  7C 08 02 A6 */	mflr r0
@@ -3645,6 +3875,7 @@ item_getcheck_func_EMPTY_BOTTLE__Fv:
 /* 8009A544 0034 .text      item_getcheck_func_RED_BOTTLE__Fv item_getcheck_func_RED_BOTTLE__Fv */
 .global item_getcheck_func_RED_BOTTLE__Fv
 item_getcheck_func_RED_BOTTLE__Fv:
+item_getcheck_func_RED_BOTTLE__Fv:
 /* 8009A544 00097484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A548 00097488  7C 08 02 A6 */	mflr r0
 /* 8009A54C 0009748C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3661,6 +3892,7 @@ item_getcheck_func_RED_BOTTLE__Fv:
 
 /* 8009A578 0034 .text      item_getcheck_func_GREEN_BOTTLE__Fv item_getcheck_func_GREEN_BOTTLE__Fv */
 .global item_getcheck_func_GREEN_BOTTLE__Fv
+item_getcheck_func_GREEN_BOTTLE__Fv:
 item_getcheck_func_GREEN_BOTTLE__Fv:
 /* 8009A578 000974B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A57C 000974BC  7C 08 02 A6 */	mflr r0
@@ -3679,6 +3911,7 @@ item_getcheck_func_GREEN_BOTTLE__Fv:
 /* 8009A5AC 0034 .text      item_getcheck_func_BLUE_BOTTLE__Fv item_getcheck_func_BLUE_BOTTLE__Fv */
 .global item_getcheck_func_BLUE_BOTTLE__Fv
 item_getcheck_func_BLUE_BOTTLE__Fv:
+item_getcheck_func_BLUE_BOTTLE__Fv:
 /* 8009A5AC 000974EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A5B0 000974F0  7C 08 02 A6 */	mflr r0
 /* 8009A5B4 000974F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3695,6 +3928,7 @@ item_getcheck_func_BLUE_BOTTLE__Fv:
 
 /* 8009A5E0 0034 .text      item_getcheck_func_MILK_BOTTLE__Fv item_getcheck_func_MILK_BOTTLE__Fv */
 .global item_getcheck_func_MILK_BOTTLE__Fv
+item_getcheck_func_MILK_BOTTLE__Fv:
 item_getcheck_func_MILK_BOTTLE__Fv:
 /* 8009A5E0 00097520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A5E4 00097524  7C 08 02 A6 */	mflr r0
@@ -3713,6 +3947,7 @@ item_getcheck_func_MILK_BOTTLE__Fv:
 /* 8009A614 0034 .text      item_getcheck_func_HALF_MILK_BOTTLE__Fv item_getcheck_func_HALF_MILK_BOTTLE__Fv */
 .global item_getcheck_func_HALF_MILK_BOTTLE__Fv
 item_getcheck_func_HALF_MILK_BOTTLE__Fv:
+item_getcheck_func_HALF_MILK_BOTTLE__Fv:
 /* 8009A614 00097554  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A618 00097558  7C 08 02 A6 */	mflr r0
 /* 8009A61C 0009755C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3729,6 +3964,7 @@ item_getcheck_func_HALF_MILK_BOTTLE__Fv:
 
 /* 8009A648 0034 .text      item_getcheck_func_OIL_BOTTLE__Fv item_getcheck_func_OIL_BOTTLE__Fv */
 .global item_getcheck_func_OIL_BOTTLE__Fv
+item_getcheck_func_OIL_BOTTLE__Fv:
 item_getcheck_func_OIL_BOTTLE__Fv:
 /* 8009A648 00097588  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A64C 0009758C  7C 08 02 A6 */	mflr r0
@@ -3747,6 +3983,7 @@ item_getcheck_func_OIL_BOTTLE__Fv:
 /* 8009A67C 0034 .text      item_getcheck_func_WATER_BOTTLE__Fv item_getcheck_func_WATER_BOTTLE__Fv */
 .global item_getcheck_func_WATER_BOTTLE__Fv
 item_getcheck_func_WATER_BOTTLE__Fv:
+item_getcheck_func_WATER_BOTTLE__Fv:
 /* 8009A67C 000975BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A680 000975C0  7C 08 02 A6 */	mflr r0
 /* 8009A684 000975C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3763,6 +4000,7 @@ item_getcheck_func_WATER_BOTTLE__Fv:
 
 /* 8009A6B0 0034 .text      item_getcheck_func_OIL_BOTTLE2__Fv item_getcheck_func_OIL_BOTTLE2__Fv */
 .global item_getcheck_func_OIL_BOTTLE2__Fv
+item_getcheck_func_OIL_BOTTLE2__Fv:
 item_getcheck_func_OIL_BOTTLE2__Fv:
 /* 8009A6B0 000975F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A6B4 000975F4  7C 08 02 A6 */	mflr r0
@@ -3781,6 +4019,7 @@ item_getcheck_func_OIL_BOTTLE2__Fv:
 /* 8009A6E4 0034 .text      item_getcheck_func_RED_BOTTLE2__Fv item_getcheck_func_RED_BOTTLE2__Fv */
 .global item_getcheck_func_RED_BOTTLE2__Fv
 item_getcheck_func_RED_BOTTLE2__Fv:
+item_getcheck_func_RED_BOTTLE2__Fv:
 /* 8009A6E4 00097624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A6E8 00097628  7C 08 02 A6 */	mflr r0
 /* 8009A6EC 0009762C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3797,6 +4036,7 @@ item_getcheck_func_RED_BOTTLE2__Fv:
 
 /* 8009A718 0034 .text      item_getcheck_func_UGLY_SOUP__Fv item_getcheck_func_UGLY_SOUP__Fv */
 .global item_getcheck_func_UGLY_SOUP__Fv
+item_getcheck_func_UGLY_SOUP__Fv:
 item_getcheck_func_UGLY_SOUP__Fv:
 /* 8009A718 00097658  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A71C 0009765C  7C 08 02 A6 */	mflr r0
@@ -3815,6 +4055,7 @@ item_getcheck_func_UGLY_SOUP__Fv:
 /* 8009A74C 0034 .text      item_getcheck_func_HOT_SPRING__Fv item_getcheck_func_HOT_SPRING__Fv */
 .global item_getcheck_func_HOT_SPRING__Fv
 item_getcheck_func_HOT_SPRING__Fv:
+item_getcheck_func_HOT_SPRING__Fv:
 /* 8009A74C 0009768C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A750 00097690  7C 08 02 A6 */	mflr r0
 /* 8009A754 00097694  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3831,6 +4072,7 @@ item_getcheck_func_HOT_SPRING__Fv:
 
 /* 8009A780 0034 .text      item_getcheck_func_FAIRY_BOTTLE__Fv item_getcheck_func_FAIRY_BOTTLE__Fv */
 .global item_getcheck_func_FAIRY_BOTTLE__Fv
+item_getcheck_func_FAIRY_BOTTLE__Fv:
 item_getcheck_func_FAIRY_BOTTLE__Fv:
 /* 8009A780 000976C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A784 000976C4  7C 08 02 A6 */	mflr r0
@@ -3849,6 +4091,7 @@ item_getcheck_func_FAIRY_BOTTLE__Fv:
 /* 8009A7B4 0034 .text      item_getcheck_func_HOT_SPRING2__Fv item_getcheck_func_HOT_SPRING2__Fv */
 .global item_getcheck_func_HOT_SPRING2__Fv
 item_getcheck_func_HOT_SPRING2__Fv:
+item_getcheck_func_HOT_SPRING2__Fv:
 /* 8009A7B4 000976F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A7B8 000976F8  7C 08 02 A6 */	mflr r0
 /* 8009A7BC 000976FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3865,6 +4108,7 @@ item_getcheck_func_HOT_SPRING2__Fv:
 
 /* 8009A7E8 0034 .text      item_getcheck_func_OIL2__Fv    item_getcheck_func_OIL2__Fv    */
 .global item_getcheck_func_OIL2__Fv
+item_getcheck_func_OIL2__Fv:
 item_getcheck_func_OIL2__Fv:
 /* 8009A7E8 00097728  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A7EC 0009772C  7C 08 02 A6 */	mflr r0
@@ -3883,6 +4127,7 @@ item_getcheck_func_OIL2__Fv:
 /* 8009A81C 0034 .text      item_getcheck_func_OIL__Fv     item_getcheck_func_OIL__Fv     */
 .global item_getcheck_func_OIL__Fv
 item_getcheck_func_OIL__Fv:
+item_getcheck_func_OIL__Fv:
 /* 8009A81C 0009775C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A820 00097760  7C 08 02 A6 */	mflr r0
 /* 8009A824 00097764  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3900,6 +4145,7 @@ item_getcheck_func_OIL__Fv:
 /* 8009A850 0030 .text      item_getcheck_func_NORMAL_BOMB__Fv item_getcheck_func_NORMAL_BOMB__Fv */
 .global item_getcheck_func_NORMAL_BOMB__Fv
 item_getcheck_func_NORMAL_BOMB__Fv:
+item_getcheck_func_NORMAL_BOMB__Fv:
 /* 8009A850 00097790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A854 00097794  7C 08 02 A6 */	mflr r0
 /* 8009A858 00097798  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3915,6 +4161,7 @@ item_getcheck_func_NORMAL_BOMB__Fv:
 
 /* 8009A880 0030 .text      item_getcheck_func_WATER_BOMB__Fv item_getcheck_func_WATER_BOMB__Fv */
 .global item_getcheck_func_WATER_BOMB__Fv
+item_getcheck_func_WATER_BOMB__Fv:
 item_getcheck_func_WATER_BOMB__Fv:
 /* 8009A880 000977C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A884 000977C4  7C 08 02 A6 */	mflr r0
@@ -3932,6 +4179,7 @@ item_getcheck_func_WATER_BOMB__Fv:
 /* 8009A8B0 0030 .text      item_getcheck_func_POKE_BOMB__Fv item_getcheck_func_POKE_BOMB__Fv */
 .global item_getcheck_func_POKE_BOMB__Fv
 item_getcheck_func_POKE_BOMB__Fv:
+item_getcheck_func_POKE_BOMB__Fv:
 /* 8009A8B0 000977F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A8B4 000977F4  7C 08 02 A6 */	mflr r0
 /* 8009A8B8 000977F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3947,6 +4195,7 @@ item_getcheck_func_POKE_BOMB__Fv:
 
 /* 8009A8E0 0034 .text      item_getcheck_func_FAIRY_DROP__Fv item_getcheck_func_FAIRY_DROP__Fv */
 .global item_getcheck_func_FAIRY_DROP__Fv
+item_getcheck_func_FAIRY_DROP__Fv:
 item_getcheck_func_FAIRY_DROP__Fv:
 /* 8009A8E0 00097820  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A8E4 00097824  7C 08 02 A6 */	mflr r0
@@ -3965,6 +4214,7 @@ item_getcheck_func_FAIRY_DROP__Fv:
 /* 8009A914 0034 .text      item_getcheck_func_WORM__Fv    item_getcheck_func_WORM__Fv    */
 .global item_getcheck_func_WORM__Fv
 item_getcheck_func_WORM__Fv:
+item_getcheck_func_WORM__Fv:
 /* 8009A914 00097854  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A918 00097858  7C 08 02 A6 */	mflr r0
 /* 8009A91C 0009785C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3982,6 +4232,7 @@ item_getcheck_func_WORM__Fv:
 /* 8009A948 0030 .text      item_getcheck_func_DROP_BOTTLE__Fv item_getcheck_func_DROP_BOTTLE__Fv */
 .global item_getcheck_func_DROP_BOTTLE__Fv
 item_getcheck_func_DROP_BOTTLE__Fv:
+item_getcheck_func_DROP_BOTTLE__Fv:
 /* 8009A948 00097888  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A94C 0009788C  7C 08 02 A6 */	mflr r0
 /* 8009A950 00097890  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3998,11 +4249,13 @@ item_getcheck_func_DROP_BOTTLE__Fv:
 /* 8009A978 0008 .text      item_getcheck_func_BEE_CHILD__Fv item_getcheck_func_BEE_CHILD__Fv */
 .global item_getcheck_func_BEE_CHILD__Fv
 item_getcheck_func_BEE_CHILD__Fv:
+item_getcheck_func_BEE_CHILD__Fv:
 /* 8009A978 000978B8  38 60 FF FF */	li r3, -1
 /* 8009A97C 000978BC  4E 80 00 20 */	blr 
 
 /* 8009A980 0034 .text      item_getcheck_func_CHUCHU_RARE__Fv item_getcheck_func_CHUCHU_RARE__Fv */
 .global item_getcheck_func_CHUCHU_RARE__Fv
+item_getcheck_func_CHUCHU_RARE__Fv:
 item_getcheck_func_CHUCHU_RARE__Fv:
 /* 8009A980 000978C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A984 000978C4  7C 08 02 A6 */	mflr r0
@@ -4021,6 +4274,7 @@ item_getcheck_func_CHUCHU_RARE__Fv:
 /* 8009A9B4 0034 .text      item_getcheck_func_CHUCHU_RED__Fv item_getcheck_func_CHUCHU_RED__Fv */
 .global item_getcheck_func_CHUCHU_RED__Fv
 item_getcheck_func_CHUCHU_RED__Fv:
+item_getcheck_func_CHUCHU_RED__Fv:
 /* 8009A9B4 000978F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A9B8 000978F8  7C 08 02 A6 */	mflr r0
 /* 8009A9BC 000978FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4037,6 +4291,7 @@ item_getcheck_func_CHUCHU_RED__Fv:
 
 /* 8009A9E8 0034 .text      item_getcheck_func_CHUCHU_BLUE__Fv item_getcheck_func_CHUCHU_BLUE__Fv */
 .global item_getcheck_func_CHUCHU_BLUE__Fv
+item_getcheck_func_CHUCHU_BLUE__Fv:
 item_getcheck_func_CHUCHU_BLUE__Fv:
 /* 8009A9E8 00097928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009A9EC 0009792C  7C 08 02 A6 */	mflr r0
@@ -4055,6 +4310,7 @@ item_getcheck_func_CHUCHU_BLUE__Fv:
 /* 8009AA1C 0034 .text      item_getcheck_func_CHUCHU_GREEN__Fv item_getcheck_func_CHUCHU_GREEN__Fv */
 .global item_getcheck_func_CHUCHU_GREEN__Fv
 item_getcheck_func_CHUCHU_GREEN__Fv:
+item_getcheck_func_CHUCHU_GREEN__Fv:
 /* 8009AA1C 0009795C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AA20 00097960  7C 08 02 A6 */	mflr r0
 /* 8009AA24 00097964  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4071,6 +4327,7 @@ item_getcheck_func_CHUCHU_GREEN__Fv:
 
 /* 8009AA50 0034 .text      item_getcheck_func_CHUCHU_YELLOW__Fv item_getcheck_func_CHUCHU_YELLOW__Fv */
 .global item_getcheck_func_CHUCHU_YELLOW__Fv
+item_getcheck_func_CHUCHU_YELLOW__Fv:
 item_getcheck_func_CHUCHU_YELLOW__Fv:
 /* 8009AA50 00097990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AA54 00097994  7C 08 02 A6 */	mflr r0
@@ -4089,6 +4346,7 @@ item_getcheck_func_CHUCHU_YELLOW__Fv:
 /* 8009AA84 0034 .text      item_getcheck_func_CHUCHU_PURPLE__Fv item_getcheck_func_CHUCHU_PURPLE__Fv */
 .global item_getcheck_func_CHUCHU_PURPLE__Fv
 item_getcheck_func_CHUCHU_PURPLE__Fv:
+item_getcheck_func_CHUCHU_PURPLE__Fv:
 /* 8009AA84 000979C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AA88 000979C8  7C 08 02 A6 */	mflr r0
 /* 8009AA8C 000979CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4106,6 +4364,7 @@ item_getcheck_func_CHUCHU_PURPLE__Fv:
 /* 8009AAB8 0030 .text      item_getcheck_func_LV1_SOUP__Fv item_getcheck_func_LV1_SOUP__Fv */
 .global item_getcheck_func_LV1_SOUP__Fv
 item_getcheck_func_LV1_SOUP__Fv:
+item_getcheck_func_LV1_SOUP__Fv:
 /* 8009AAB8 000979F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AABC 000979FC  7C 08 02 A6 */	mflr r0
 /* 8009AAC0 00097A00  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4121,6 +4380,7 @@ item_getcheck_func_LV1_SOUP__Fv:
 
 /* 8009AAE8 0030 .text      item_getcheck_func_LV2_SOUP__Fv item_getcheck_func_LV2_SOUP__Fv */
 .global item_getcheck_func_LV2_SOUP__Fv
+item_getcheck_func_LV2_SOUP__Fv:
 item_getcheck_func_LV2_SOUP__Fv:
 /* 8009AAE8 00097A28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AAEC 00097A2C  7C 08 02 A6 */	mflr r0
@@ -4138,6 +4398,7 @@ item_getcheck_func_LV2_SOUP__Fv:
 /* 8009AB18 0030 .text      item_getcheck_func_LV3_SOUP__Fv item_getcheck_func_LV3_SOUP__Fv */
 .global item_getcheck_func_LV3_SOUP__Fv
 item_getcheck_func_LV3_SOUP__Fv:
+item_getcheck_func_LV3_SOUP__Fv:
 /* 8009AB18 00097A58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AB1C 00097A5C  7C 08 02 A6 */	mflr r0
 /* 8009AB20 00097A60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4153,6 +4414,7 @@ item_getcheck_func_LV3_SOUP__Fv:
 
 /* 8009AB48 0044 .text      item_getcheck_func_LETTER__Fv  item_getcheck_func_LETTER__Fv  */
 .global item_getcheck_func_LETTER__Fv
+item_getcheck_func_LETTER__Fv:
 item_getcheck_func_LETTER__Fv:
 /* 8009AB48 00097A88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AB4C 00097A8C  7C 08 02 A6 */	mflr r0
@@ -4175,6 +4437,7 @@ item_getcheck_func_LETTER__Fv:
 /* 8009AB8C 0044 .text      item_getcheck_func_BILL__Fv    item_getcheck_func_BILL__Fv    */
 .global item_getcheck_func_BILL__Fv
 item_getcheck_func_BILL__Fv:
+item_getcheck_func_BILL__Fv:
 /* 8009AB8C 00097ACC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AB90 00097AD0  7C 08 02 A6 */	mflr r0
 /* 8009AB94 00097AD4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4195,6 +4458,7 @@ item_getcheck_func_BILL__Fv:
 
 /* 8009ABD0 0044 .text      item_getcheck_func_WOOD_STATUE__Fv item_getcheck_func_WOOD_STATUE__Fv */
 .global item_getcheck_func_WOOD_STATUE__Fv
+item_getcheck_func_WOOD_STATUE__Fv:
 item_getcheck_func_WOOD_STATUE__Fv:
 /* 8009ABD0 00097B10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009ABD4 00097B14  7C 08 02 A6 */	mflr r0
@@ -4217,6 +4481,7 @@ item_getcheck_func_WOOD_STATUE__Fv:
 /* 8009AC14 0044 .text      item_getcheck_func_IRIAS_PENDANT__Fv item_getcheck_func_IRIAS_PENDANT__Fv */
 .global item_getcheck_func_IRIAS_PENDANT__Fv
 item_getcheck_func_IRIAS_PENDANT__Fv:
+item_getcheck_func_IRIAS_PENDANT__Fv:
 /* 8009AC14 00097B54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AC18 00097B58  7C 08 02 A6 */	mflr r0
 /* 8009AC1C 00097B5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4237,6 +4502,7 @@ item_getcheck_func_IRIAS_PENDANT__Fv:
 
 /* 8009AC58 0044 .text      item_getcheck_func_HORSE_FLUTE__Fv item_getcheck_func_HORSE_FLUTE__Fv */
 .global item_getcheck_func_HORSE_FLUTE__Fv
+item_getcheck_func_HORSE_FLUTE__Fv:
 item_getcheck_func_HORSE_FLUTE__Fv:
 /* 8009AC58 00097B98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AC5C 00097B9C  7C 08 02 A6 */	mflr r0
@@ -4259,6 +4525,7 @@ item_getcheck_func_HORSE_FLUTE__Fv:
 /* 8009AC9C 0044 .text      item_getcheck_func_RAFRELS_MEMO__Fv item_getcheck_func_RAFRELS_MEMO__Fv */
 .global item_getcheck_func_RAFRELS_MEMO__Fv
 item_getcheck_func_RAFRELS_MEMO__Fv:
+item_getcheck_func_RAFRELS_MEMO__Fv:
 /* 8009AC9C 00097BDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009ACA0 00097BE0  7C 08 02 A6 */	mflr r0
 /* 8009ACA4 00097BE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4279,6 +4546,7 @@ item_getcheck_func_RAFRELS_MEMO__Fv:
 
 /* 8009ACE0 0044 .text      item_getcheck_func_ASHS_SCRIBBLING__Fv item_getcheck_func_ASHS_SCRIBBLING__Fv */
 .global item_getcheck_func_ASHS_SCRIBBLING__Fv
+item_getcheck_func_ASHS_SCRIBBLING__Fv:
 item_getcheck_func_ASHS_SCRIBBLING__Fv:
 /* 8009ACE0 00097C20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009ACE4 00097C24  7C 08 02 A6 */	mflr r0
@@ -4301,6 +4569,7 @@ item_getcheck_func_ASHS_SCRIBBLING__Fv:
 /* 8009AD24 0034 .text      item_getcheck_func_CHUCHU_YELLOW2__Fv item_getcheck_func_CHUCHU_YELLOW2__Fv */
 .global item_getcheck_func_CHUCHU_YELLOW2__Fv
 item_getcheck_func_CHUCHU_YELLOW2__Fv:
+item_getcheck_func_CHUCHU_YELLOW2__Fv:
 /* 8009AD24 00097C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AD28 00097C68  7C 08 02 A6 */	mflr r0
 /* 8009AD2C 00097C6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4318,17 +4587,20 @@ item_getcheck_func_CHUCHU_YELLOW2__Fv:
 /* 8009AD58 0008 .text      item_getcheck_func_OIL_BOTTLE3__Fv item_getcheck_func_OIL_BOTTLE3__Fv */
 .global item_getcheck_func_OIL_BOTTLE3__Fv
 item_getcheck_func_OIL_BOTTLE3__Fv:
+item_getcheck_func_OIL_BOTTLE3__Fv:
 /* 8009AD58 00097C98  38 60 FF FF */	li r3, -1
 /* 8009AD5C 00097C9C  4E 80 00 20 */	blr 
 
 /* 8009AD60 0008 .text      item_getcheck_func_SHOP_BEE_CHILD__Fv item_getcheck_func_SHOP_BEE_CHILD__Fv */
 .global item_getcheck_func_SHOP_BEE_CHILD__Fv
 item_getcheck_func_SHOP_BEE_CHILD__Fv:
+item_getcheck_func_SHOP_BEE_CHILD__Fv:
 /* 8009AD60 00097CA0  38 60 FF FF */	li r3, -1
 /* 8009AD64 00097CA4  4E 80 00 20 */	blr 
 
 /* 8009AD68 0034 .text      item_getcheck_func_CHUCHU_BLACK__Fv item_getcheck_func_CHUCHU_BLACK__Fv */
 .global item_getcheck_func_CHUCHU_BLACK__Fv
+item_getcheck_func_CHUCHU_BLACK__Fv:
 item_getcheck_func_CHUCHU_BLACK__Fv:
 /* 8009AD68 00097CA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AD6C 00097CAC  7C 08 02 A6 */	mflr r0
@@ -4347,6 +4619,7 @@ item_getcheck_func_CHUCHU_BLACK__Fv:
 /* 8009AD9C 0030 .text      item_getcheck_func_LIGHT_DROP__Fv item_getcheck_func_LIGHT_DROP__Fv */
 .global item_getcheck_func_LIGHT_DROP__Fv
 item_getcheck_func_LIGHT_DROP__Fv:
+item_getcheck_func_LIGHT_DROP__Fv:
 /* 8009AD9C 00097CDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009ADA0 00097CE0  7C 08 02 A6 */	mflr r0
 /* 8009ADA4 00097CE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4362,6 +4635,7 @@ item_getcheck_func_LIGHT_DROP__Fv:
 
 /* 8009ADCC 0030 .text      item_getcheck_func_DROP_CONTAINER__Fv item_getcheck_func_DROP_CONTAINER__Fv */
 .global item_getcheck_func_DROP_CONTAINER__Fv
+item_getcheck_func_DROP_CONTAINER__Fv:
 item_getcheck_func_DROP_CONTAINER__Fv:
 /* 8009ADCC 00097D0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009ADD0 00097D10  7C 08 02 A6 */	mflr r0
@@ -4379,6 +4653,7 @@ item_getcheck_func_DROP_CONTAINER__Fv:
 /* 8009ADFC 0030 .text      item_getcheck_func_DROP_CONTAINER02__Fv item_getcheck_func_DROP_CONTAINER02__Fv */
 .global item_getcheck_func_DROP_CONTAINER02__Fv
 item_getcheck_func_DROP_CONTAINER02__Fv:
+item_getcheck_func_DROP_CONTAINER02__Fv:
 /* 8009ADFC 00097D3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AE00 00097D40  7C 08 02 A6 */	mflr r0
 /* 8009AE04 00097D44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4394,6 +4669,7 @@ item_getcheck_func_DROP_CONTAINER02__Fv:
 
 /* 8009AE2C 0030 .text      item_getcheck_func_DROP_CONTAINER03__Fv item_getcheck_func_DROP_CONTAINER03__Fv */
 .global item_getcheck_func_DROP_CONTAINER03__Fv
+item_getcheck_func_DROP_CONTAINER03__Fv:
 item_getcheck_func_DROP_CONTAINER03__Fv:
 /* 8009AE2C 00097D6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AE30 00097D70  7C 08 02 A6 */	mflr r0
@@ -4411,11 +4687,13 @@ item_getcheck_func_DROP_CONTAINER03__Fv:
 /* 8009AE5C 0008 .text      item_getcheck_func_FILLED_CONTAINER__Fv item_getcheck_func_FILLED_CONTAINER__Fv */
 .global item_getcheck_func_FILLED_CONTAINER__Fv
 item_getcheck_func_FILLED_CONTAINER__Fv:
+item_getcheck_func_FILLED_CONTAINER__Fv:
 /* 8009AE5C 00097D9C  38 60 FF FF */	li r3, -1
 /* 8009AE60 00097DA0  4E 80 00 20 */	blr 
 
 /* 8009AE64 0008 .text      item_getcheck_func_MIRROR_PIECE_2__Fv item_getcheck_func_MIRROR_PIECE_2__Fv */
 .global item_getcheck_func_MIRROR_PIECE_2__Fv
+item_getcheck_func_MIRROR_PIECE_2__Fv:
 item_getcheck_func_MIRROR_PIECE_2__Fv:
 /* 8009AE64 00097DA4  38 60 FF FF */	li r3, -1
 /* 8009AE68 00097DA8  4E 80 00 20 */	blr 
@@ -4423,17 +4701,20 @@ item_getcheck_func_MIRROR_PIECE_2__Fv:
 /* 8009AE6C 0008 .text      item_getcheck_func_MIRROR_PIECE_3__Fv item_getcheck_func_MIRROR_PIECE_3__Fv */
 .global item_getcheck_func_MIRROR_PIECE_3__Fv
 item_getcheck_func_MIRROR_PIECE_3__Fv:
+item_getcheck_func_MIRROR_PIECE_3__Fv:
 /* 8009AE6C 00097DAC  38 60 FF FF */	li r3, -1
 /* 8009AE70 00097DB0  4E 80 00 20 */	blr 
 
 /* 8009AE74 0008 .text      item_getcheck_func_MIRROR_PIECE_4__Fv item_getcheck_func_MIRROR_PIECE_4__Fv */
 .global item_getcheck_func_MIRROR_PIECE_4__Fv
 item_getcheck_func_MIRROR_PIECE_4__Fv:
+item_getcheck_func_MIRROR_PIECE_4__Fv:
 /* 8009AE74 00097DB4  38 60 FF FF */	li r3, -1
 /* 8009AE78 00097DB8  4E 80 00 20 */	blr 
 
 /* 8009AE7C 001C .text      item_getcheck_func_SMELL_YELIA_POUCH__Fv item_getcheck_func_SMELL_YELIA_POUCH__Fv */
 .global item_getcheck_func_SMELL_YELIA_POUCH__Fv
+item_getcheck_func_SMELL_YELIA_POUCH__Fv:
 item_getcheck_func_SMELL_YELIA_POUCH__Fv:
 /* 8009AE7C 00097DBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009AE80 00097DC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -4446,11 +4727,13 @@ item_getcheck_func_SMELL_YELIA_POUCH__Fv:
 /* 8009AE98 0008 .text      item_getcheck_func_SMELL_PUMPKIN__Fv item_getcheck_func_SMELL_PUMPKIN__Fv */
 .global item_getcheck_func_SMELL_PUMPKIN__Fv
 item_getcheck_func_SMELL_PUMPKIN__Fv:
+item_getcheck_func_SMELL_PUMPKIN__Fv:
 /* 8009AE98 00097DD8  38 60 FF FF */	li r3, -1
 /* 8009AE9C 00097DDC  4E 80 00 20 */	blr 
 
 /* 8009AEA0 001C .text      item_getcheck_func_SMELL_POH__Fv item_getcheck_func_SMELL_POH__Fv */
 .global item_getcheck_func_SMELL_POH__Fv
+item_getcheck_func_SMELL_POH__Fv:
 item_getcheck_func_SMELL_POH__Fv:
 /* 8009AEA0 00097DE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009AEA4 00097DE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -4463,6 +4746,7 @@ item_getcheck_func_SMELL_POH__Fv:
 /* 8009AEBC 001C .text      item_getcheck_func_SMELL_FISH__Fv item_getcheck_func_SMELL_FISH__Fv */
 .global item_getcheck_func_SMELL_FISH__Fv
 item_getcheck_func_SMELL_FISH__Fv:
+item_getcheck_func_SMELL_FISH__Fv:
 /* 8009AEBC 00097DFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009AEC0 00097E00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009AEC4 00097E04  88 03 00 16 */	lbz r0, 0x16(r3)
@@ -4473,6 +4757,7 @@ item_getcheck_func_SMELL_FISH__Fv:
 
 /* 8009AED8 001C .text      item_getcheck_func_SMELL_CHILDREN__Fv item_getcheck_func_SMELL_CHILDREN__Fv */
 .global item_getcheck_func_SMELL_CHILDREN__Fv
+item_getcheck_func_SMELL_CHILDREN__Fv:
 item_getcheck_func_SMELL_CHILDREN__Fv:
 /* 8009AED8 00097E18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009AEDC 00097E1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -4485,6 +4770,7 @@ item_getcheck_func_SMELL_CHILDREN__Fv:
 /* 8009AEF4 001C .text      item_getcheck_func_SMELL_MEDICINE__Fv item_getcheck_func_SMELL_MEDICINE__Fv */
 .global item_getcheck_func_SMELL_MEDICINE__Fv
 item_getcheck_func_SMELL_MEDICINE__Fv:
+item_getcheck_func_SMELL_MEDICINE__Fv:
 /* 8009AEF4 00097E34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009AEF8 00097E38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009AEFC 00097E3C  88 03 00 16 */	lbz r0, 0x16(r3)
@@ -4495,6 +4781,7 @@ item_getcheck_func_SMELL_MEDICINE__Fv:
 
 /* 8009AF10 0030 .text      item_getcheck_func_M_BEETLE__Fv item_getcheck_func_M_BEETLE__Fv */
 .global item_getcheck_func_M_BEETLE__Fv
+item_getcheck_func_M_BEETLE__Fv:
 item_getcheck_func_M_BEETLE__Fv:
 /* 8009AF10 00097E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AF14 00097E54  7C 08 02 A6 */	mflr r0
@@ -4512,6 +4799,7 @@ item_getcheck_func_M_BEETLE__Fv:
 /* 8009AF40 0030 .text      item_getcheck_func_F_BEETLE__Fv item_getcheck_func_F_BEETLE__Fv */
 .global item_getcheck_func_F_BEETLE__Fv
 item_getcheck_func_F_BEETLE__Fv:
+item_getcheck_func_F_BEETLE__Fv:
 /* 8009AF40 00097E80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AF44 00097E84  7C 08 02 A6 */	mflr r0
 /* 8009AF48 00097E88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4527,6 +4815,7 @@ item_getcheck_func_F_BEETLE__Fv:
 
 /* 8009AF70 0030 .text      item_getcheck_func_M_BUTTERFLY__Fv item_getcheck_func_M_BUTTERFLY__Fv */
 .global item_getcheck_func_M_BUTTERFLY__Fv
+item_getcheck_func_M_BUTTERFLY__Fv:
 item_getcheck_func_M_BUTTERFLY__Fv:
 /* 8009AF70 00097EB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AF74 00097EB4  7C 08 02 A6 */	mflr r0
@@ -4544,6 +4833,7 @@ item_getcheck_func_M_BUTTERFLY__Fv:
 /* 8009AFA0 0030 .text      item_getcheck_func_F_BUTTERFLY__Fv item_getcheck_func_F_BUTTERFLY__Fv */
 .global item_getcheck_func_F_BUTTERFLY__Fv
 item_getcheck_func_F_BUTTERFLY__Fv:
+item_getcheck_func_F_BUTTERFLY__Fv:
 /* 8009AFA0 00097EE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AFA4 00097EE4  7C 08 02 A6 */	mflr r0
 /* 8009AFA8 00097EE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4559,6 +4849,7 @@ item_getcheck_func_F_BUTTERFLY__Fv:
 
 /* 8009AFD0 0030 .text      item_getcheck_func_M_STAG_BEETLE__Fv item_getcheck_func_M_STAG_BEETLE__Fv */
 .global item_getcheck_func_M_STAG_BEETLE__Fv
+item_getcheck_func_M_STAG_BEETLE__Fv:
 item_getcheck_func_M_STAG_BEETLE__Fv:
 /* 8009AFD0 00097F10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009AFD4 00097F14  7C 08 02 A6 */	mflr r0
@@ -4576,6 +4867,7 @@ item_getcheck_func_M_STAG_BEETLE__Fv:
 /* 8009B000 0030 .text      item_getcheck_func_F_STAG_BEETLE__Fv item_getcheck_func_F_STAG_BEETLE__Fv */
 .global item_getcheck_func_F_STAG_BEETLE__Fv
 item_getcheck_func_F_STAG_BEETLE__Fv:
+item_getcheck_func_F_STAG_BEETLE__Fv:
 /* 8009B000 00097F40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B004 00097F44  7C 08 02 A6 */	mflr r0
 /* 8009B008 00097F48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4591,6 +4883,7 @@ item_getcheck_func_F_STAG_BEETLE__Fv:
 
 /* 8009B030 0030 .text      item_getcheck_func_M_GRASSHOPPER__Fv item_getcheck_func_M_GRASSHOPPER__Fv */
 .global item_getcheck_func_M_GRASSHOPPER__Fv
+item_getcheck_func_M_GRASSHOPPER__Fv:
 item_getcheck_func_M_GRASSHOPPER__Fv:
 /* 8009B030 00097F70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B034 00097F74  7C 08 02 A6 */	mflr r0
@@ -4608,6 +4901,7 @@ item_getcheck_func_M_GRASSHOPPER__Fv:
 /* 8009B060 0030 .text      item_getcheck_func_F_GRASSHOPPER__Fv item_getcheck_func_F_GRASSHOPPER__Fv */
 .global item_getcheck_func_F_GRASSHOPPER__Fv
 item_getcheck_func_F_GRASSHOPPER__Fv:
+item_getcheck_func_F_GRASSHOPPER__Fv:
 /* 8009B060 00097FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B064 00097FA4  7C 08 02 A6 */	mflr r0
 /* 8009B068 00097FA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4623,6 +4917,7 @@ item_getcheck_func_F_GRASSHOPPER__Fv:
 
 /* 8009B090 0030 .text      item_getcheck_func_M_NANAFUSHI__Fv item_getcheck_func_M_NANAFUSHI__Fv */
 .global item_getcheck_func_M_NANAFUSHI__Fv
+item_getcheck_func_M_NANAFUSHI__Fv:
 item_getcheck_func_M_NANAFUSHI__Fv:
 /* 8009B090 00097FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B094 00097FD4  7C 08 02 A6 */	mflr r0
@@ -4640,6 +4935,7 @@ item_getcheck_func_M_NANAFUSHI__Fv:
 /* 8009B0C0 0030 .text      item_getcheck_func_F_NANAFUSHI__Fv item_getcheck_func_F_NANAFUSHI__Fv */
 .global item_getcheck_func_F_NANAFUSHI__Fv
 item_getcheck_func_F_NANAFUSHI__Fv:
+item_getcheck_func_F_NANAFUSHI__Fv:
 /* 8009B0C0 00098000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B0C4 00098004  7C 08 02 A6 */	mflr r0
 /* 8009B0C8 00098008  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4655,6 +4951,7 @@ item_getcheck_func_F_NANAFUSHI__Fv:
 
 /* 8009B0F0 0030 .text      item_getcheck_func_M_DANGOMUSHI__Fv item_getcheck_func_M_DANGOMUSHI__Fv */
 .global item_getcheck_func_M_DANGOMUSHI__Fv
+item_getcheck_func_M_DANGOMUSHI__Fv:
 item_getcheck_func_M_DANGOMUSHI__Fv:
 /* 8009B0F0 00098030  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B0F4 00098034  7C 08 02 A6 */	mflr r0
@@ -4672,6 +4969,7 @@ item_getcheck_func_M_DANGOMUSHI__Fv:
 /* 8009B120 0030 .text      item_getcheck_func_F_DANGOMUSHI__Fv item_getcheck_func_F_DANGOMUSHI__Fv */
 .global item_getcheck_func_F_DANGOMUSHI__Fv
 item_getcheck_func_F_DANGOMUSHI__Fv:
+item_getcheck_func_F_DANGOMUSHI__Fv:
 /* 8009B120 00098060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B124 00098064  7C 08 02 A6 */	mflr r0
 /* 8009B128 00098068  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4687,6 +4985,7 @@ item_getcheck_func_F_DANGOMUSHI__Fv:
 
 /* 8009B150 0030 .text      item_getcheck_func_M_MANTIS__Fv item_getcheck_func_M_MANTIS__Fv */
 .global item_getcheck_func_M_MANTIS__Fv
+item_getcheck_func_M_MANTIS__Fv:
 item_getcheck_func_M_MANTIS__Fv:
 /* 8009B150 00098090  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B154 00098094  7C 08 02 A6 */	mflr r0
@@ -4704,6 +5003,7 @@ item_getcheck_func_M_MANTIS__Fv:
 /* 8009B180 0030 .text      item_getcheck_func_F_MANTIS__Fv item_getcheck_func_F_MANTIS__Fv */
 .global item_getcheck_func_F_MANTIS__Fv
 item_getcheck_func_F_MANTIS__Fv:
+item_getcheck_func_F_MANTIS__Fv:
 /* 8009B180 000980C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B184 000980C4  7C 08 02 A6 */	mflr r0
 /* 8009B188 000980C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4719,6 +5019,7 @@ item_getcheck_func_F_MANTIS__Fv:
 
 /* 8009B1B0 0030 .text      item_getcheck_func_M_LADYBUG__Fv item_getcheck_func_M_LADYBUG__Fv */
 .global item_getcheck_func_M_LADYBUG__Fv
+item_getcheck_func_M_LADYBUG__Fv:
 item_getcheck_func_M_LADYBUG__Fv:
 /* 8009B1B0 000980F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B1B4 000980F4  7C 08 02 A6 */	mflr r0
@@ -4736,6 +5037,7 @@ item_getcheck_func_M_LADYBUG__Fv:
 /* 8009B1E0 0030 .text      item_getcheck_func_F_LADYBUG__Fv item_getcheck_func_F_LADYBUG__Fv */
 .global item_getcheck_func_F_LADYBUG__Fv
 item_getcheck_func_F_LADYBUG__Fv:
+item_getcheck_func_F_LADYBUG__Fv:
 /* 8009B1E0 00098120  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B1E4 00098124  7C 08 02 A6 */	mflr r0
 /* 8009B1E8 00098128  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4751,6 +5053,7 @@ item_getcheck_func_F_LADYBUG__Fv:
 
 /* 8009B210 0030 .text      item_getcheck_func_M_SNAIL__Fv item_getcheck_func_M_SNAIL__Fv */
 .global item_getcheck_func_M_SNAIL__Fv
+item_getcheck_func_M_SNAIL__Fv:
 item_getcheck_func_M_SNAIL__Fv:
 /* 8009B210 00098150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B214 00098154  7C 08 02 A6 */	mflr r0
@@ -4768,6 +5071,7 @@ item_getcheck_func_M_SNAIL__Fv:
 /* 8009B240 0030 .text      item_getcheck_func_F_SNAIL__Fv item_getcheck_func_F_SNAIL__Fv */
 .global item_getcheck_func_F_SNAIL__Fv
 item_getcheck_func_F_SNAIL__Fv:
+item_getcheck_func_F_SNAIL__Fv:
 /* 8009B240 00098180  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B244 00098184  7C 08 02 A6 */	mflr r0
 /* 8009B248 00098188  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4783,6 +5087,7 @@ item_getcheck_func_F_SNAIL__Fv:
 
 /* 8009B270 0030 .text      item_getcheck_func_M_DRAGONFLY__Fv item_getcheck_func_M_DRAGONFLY__Fv */
 .global item_getcheck_func_M_DRAGONFLY__Fv
+item_getcheck_func_M_DRAGONFLY__Fv:
 item_getcheck_func_M_DRAGONFLY__Fv:
 /* 8009B270 000981B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B274 000981B4  7C 08 02 A6 */	mflr r0
@@ -4800,6 +5105,7 @@ item_getcheck_func_M_DRAGONFLY__Fv:
 /* 8009B2A0 0030 .text      item_getcheck_func_F_DRAGONFLY__Fv item_getcheck_func_F_DRAGONFLY__Fv */
 .global item_getcheck_func_F_DRAGONFLY__Fv
 item_getcheck_func_F_DRAGONFLY__Fv:
+item_getcheck_func_F_DRAGONFLY__Fv:
 /* 8009B2A0 000981E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B2A4 000981E4  7C 08 02 A6 */	mflr r0
 /* 8009B2A8 000981E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4815,6 +5121,7 @@ item_getcheck_func_F_DRAGONFLY__Fv:
 
 /* 8009B2D0 0030 .text      item_getcheck_func_M_ANT__Fv   item_getcheck_func_M_ANT__Fv   */
 .global item_getcheck_func_M_ANT__Fv
+item_getcheck_func_M_ANT__Fv:
 item_getcheck_func_M_ANT__Fv:
 /* 8009B2D0 00098210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B2D4 00098214  7C 08 02 A6 */	mflr r0
@@ -4832,6 +5139,7 @@ item_getcheck_func_M_ANT__Fv:
 /* 8009B300 0030 .text      item_getcheck_func_F_ANT__Fv   item_getcheck_func_F_ANT__Fv   */
 .global item_getcheck_func_F_ANT__Fv
 item_getcheck_func_F_ANT__Fv:
+item_getcheck_func_F_ANT__Fv:
 /* 8009B300 00098240  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B304 00098244  7C 08 02 A6 */	mflr r0
 /* 8009B308 00098248  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4847,6 +5155,7 @@ item_getcheck_func_F_ANT__Fv:
 
 /* 8009B330 0030 .text      item_getcheck_func_M_MAYFLY__Fv item_getcheck_func_M_MAYFLY__Fv */
 .global item_getcheck_func_M_MAYFLY__Fv
+item_getcheck_func_M_MAYFLY__Fv:
 item_getcheck_func_M_MAYFLY__Fv:
 /* 8009B330 00098270  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B334 00098274  7C 08 02 A6 */	mflr r0
@@ -4864,6 +5173,7 @@ item_getcheck_func_M_MAYFLY__Fv:
 /* 8009B360 0030 .text      item_getcheck_func_F_MAYFLY__Fv item_getcheck_func_F_MAYFLY__Fv */
 .global item_getcheck_func_F_MAYFLY__Fv
 item_getcheck_func_F_MAYFLY__Fv:
+item_getcheck_func_F_MAYFLY__Fv:
 /* 8009B360 000982A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B364 000982A4  7C 08 02 A6 */	mflr r0
 /* 8009B368 000982A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4880,6 +5190,7 @@ item_getcheck_func_F_MAYFLY__Fv:
 /* 8009B390 0010 .text      item_getcheck_func_POU_SPIRIT__Fv item_getcheck_func_POU_SPIRIT__Fv */
 .global item_getcheck_func_POU_SPIRIT__Fv
 item_getcheck_func_POU_SPIRIT__Fv:
+item_getcheck_func_POU_SPIRIT__Fv:
 /* 8009B390 000982D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B394 000982D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B398 000982D8  88 63 01 0C */	lbz r3, 0x10c(r3)
@@ -4887,6 +5198,7 @@ item_getcheck_func_POU_SPIRIT__Fv:
 
 /* 8009B3A0 0044 .text      item_getcheck_func_ANCIENT_DOCUMENT__Fv item_getcheck_func_ANCIENT_DOCUMENT__Fv */
 .global item_getcheck_func_ANCIENT_DOCUMENT__Fv
+item_getcheck_func_ANCIENT_DOCUMENT__Fv:
 item_getcheck_func_ANCIENT_DOCUMENT__Fv:
 /* 8009B3A0 000982E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B3A4 000982E4  7C 08 02 A6 */	mflr r0
@@ -4909,6 +5221,7 @@ item_getcheck_func_ANCIENT_DOCUMENT__Fv:
 /* 8009B3E4 0044 .text      item_getcheck_func_AIR_LETTER__Fv item_getcheck_func_AIR_LETTER__Fv */
 .global item_getcheck_func_AIR_LETTER__Fv
 item_getcheck_func_AIR_LETTER__Fv:
+item_getcheck_func_AIR_LETTER__Fv:
 /* 8009B3E4 00098324  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B3E8 00098328  7C 08 02 A6 */	mflr r0
 /* 8009B3EC 0009832C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4929,6 +5242,7 @@ item_getcheck_func_AIR_LETTER__Fv:
 
 /* 8009B428 0044 .text      item_getcheck_func_ANCIENT_DOCUMENT2__Fv item_getcheck_func_ANCIENT_DOCUMENT2__Fv */
 .global item_getcheck_func_ANCIENT_DOCUMENT2__Fv
+item_getcheck_func_ANCIENT_DOCUMENT2__Fv:
 item_getcheck_func_ANCIENT_DOCUMENT2__Fv:
 /* 8009B428 00098368  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B42C 0009836C  7C 08 02 A6 */	mflr r0
@@ -4951,6 +5265,7 @@ item_getcheck_func_ANCIENT_DOCUMENT2__Fv:
 /* 8009B46C 0044 .text      item_getcheck_func_LV7_DUNGEON_EXIT__Fv item_getcheck_func_LV7_DUNGEON_EXIT__Fv */
 .global item_getcheck_func_LV7_DUNGEON_EXIT__Fv
 item_getcheck_func_LV7_DUNGEON_EXIT__Fv:
+item_getcheck_func_LV7_DUNGEON_EXIT__Fv:
 /* 8009B46C 000983AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B470 000983B0  7C 08 02 A6 */	mflr r0
 /* 8009B474 000983B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4972,11 +5287,13 @@ item_getcheck_func_LV7_DUNGEON_EXIT__Fv:
 /* 8009B4B0 0008 .text      item_getcheck_func_LINKS_SAVINGS__Fv item_getcheck_func_LINKS_SAVINGS__Fv */
 .global item_getcheck_func_LINKS_SAVINGS__Fv
 item_getcheck_func_LINKS_SAVINGS__Fv:
+item_getcheck_func_LINKS_SAVINGS__Fv:
 /* 8009B4B0 000983F0  38 60 FF FF */	li r3, -1
 /* 8009B4B4 000983F4  4E 80 00 20 */	blr 
 
 /* 8009B4B8 0008 .text      item_getcheck_func_SMALL_KEY2__Fv item_getcheck_func_SMALL_KEY2__Fv */
 .global item_getcheck_func_SMALL_KEY2__Fv
+item_getcheck_func_SMALL_KEY2__Fv:
 item_getcheck_func_SMALL_KEY2__Fv:
 /* 8009B4B8 000983F8  38 60 FF FF */	li r3, -1
 /* 8009B4BC 000983FC  4E 80 00 20 */	blr 
@@ -4984,11 +5301,13 @@ item_getcheck_func_SMALL_KEY2__Fv:
 /* 8009B4C0 0008 .text      item_getcheck_func_POU_FIRE1__Fv item_getcheck_func_POU_FIRE1__Fv */
 .global item_getcheck_func_POU_FIRE1__Fv
 item_getcheck_func_POU_FIRE1__Fv:
+item_getcheck_func_POU_FIRE1__Fv:
 /* 8009B4C0 00098400  38 60 FF FF */	li r3, -1
 /* 8009B4C4 00098404  4E 80 00 20 */	blr 
 
 /* 8009B4C8 0008 .text      item_getcheck_func_POU_FIRE2__Fv item_getcheck_func_POU_FIRE2__Fv */
 .global item_getcheck_func_POU_FIRE2__Fv
+item_getcheck_func_POU_FIRE2__Fv:
 item_getcheck_func_POU_FIRE2__Fv:
 /* 8009B4C8 00098408  38 60 FF FF */	li r3, -1
 /* 8009B4CC 0009840C  4E 80 00 20 */	blr 
@@ -4996,11 +5315,13 @@ item_getcheck_func_POU_FIRE2__Fv:
 /* 8009B4D0 0008 .text      item_getcheck_func_POU_FIRE3__Fv item_getcheck_func_POU_FIRE3__Fv */
 .global item_getcheck_func_POU_FIRE3__Fv
 item_getcheck_func_POU_FIRE3__Fv:
+item_getcheck_func_POU_FIRE3__Fv:
 /* 8009B4D0 00098410  38 60 FF FF */	li r3, -1
 /* 8009B4D4 00098414  4E 80 00 20 */	blr 
 
 /* 8009B4D8 0008 .text      item_getcheck_func_POU_FIRE4__Fv item_getcheck_func_POU_FIRE4__Fv */
 .global item_getcheck_func_POU_FIRE4__Fv
+item_getcheck_func_POU_FIRE4__Fv:
 item_getcheck_func_POU_FIRE4__Fv:
 /* 8009B4D8 00098418  38 60 FF FF */	li r3, -1
 /* 8009B4DC 0009841C  4E 80 00 20 */	blr 
@@ -5008,11 +5329,13 @@ item_getcheck_func_POU_FIRE4__Fv:
 /* 8009B4E0 0008 .text      item_getcheck_func_BOSSRIDER_KEY__Fv item_getcheck_func_BOSSRIDER_KEY__Fv */
 .global item_getcheck_func_BOSSRIDER_KEY__Fv
 item_getcheck_func_BOSSRIDER_KEY__Fv:
+item_getcheck_func_BOSSRIDER_KEY__Fv:
 /* 8009B4E0 00098420  38 60 FF FF */	li r3, -1
 /* 8009B4E4 00098424  4E 80 00 20 */	blr 
 
 /* 8009B4E8 0030 .text      item_getcheck_func_TOMATO_PUREE__Fv item_getcheck_func_TOMATO_PUREE__Fv */
 .global item_getcheck_func_TOMATO_PUREE__Fv
+item_getcheck_func_TOMATO_PUREE__Fv:
 item_getcheck_func_TOMATO_PUREE__Fv:
 /* 8009B4E8 00098428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B4EC 0009842C  7C 08 02 A6 */	mflr r0
@@ -5030,6 +5353,7 @@ item_getcheck_func_TOMATO_PUREE__Fv:
 /* 8009B518 0030 .text      item_getcheck_func_TASTE__Fv   item_getcheck_func_TASTE__Fv   */
 .global item_getcheck_func_TASTE__Fv
 item_getcheck_func_TASTE__Fv:
+item_getcheck_func_TASTE__Fv:
 /* 8009B518 00098458  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B51C 0009845C  7C 08 02 A6 */	mflr r0
 /* 8009B520 00098460  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5045,6 +5369,7 @@ item_getcheck_func_TASTE__Fv:
 
 /* 8009B548 0030 .text      item_getcheck_func_LV5_BOSS_KEY__Fv item_getcheck_func_LV5_BOSS_KEY__Fv */
 .global item_getcheck_func_LV5_BOSS_KEY__Fv
+item_getcheck_func_LV5_BOSS_KEY__Fv:
 item_getcheck_func_LV5_BOSS_KEY__Fv:
 /* 8009B548 00098488  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B54C 0009848C  7C 08 02 A6 */	mflr r0
@@ -5062,17 +5387,20 @@ item_getcheck_func_LV5_BOSS_KEY__Fv:
 /* 8009B578 0008 .text      item_getcheck_func_SURFBOARD__Fv item_getcheck_func_SURFBOARD__Fv */
 .global item_getcheck_func_SURFBOARD__Fv
 item_getcheck_func_SURFBOARD__Fv:
+item_getcheck_func_SURFBOARD__Fv:
 /* 8009B578 000984B8  38 60 FF FF */	li r3, -1
 /* 8009B57C 000984BC  4E 80 00 20 */	blr 
 
 /* 8009B580 0008 .text      item_getcheck_func_KANTERA2__Fv item_getcheck_func_KANTERA2__Fv */
 .global item_getcheck_func_KANTERA2__Fv
 item_getcheck_func_KANTERA2__Fv:
+item_getcheck_func_KANTERA2__Fv:
 /* 8009B580 000984C0  38 60 FF FF */	li r3, -1
 /* 8009B584 000984C4  4E 80 00 20 */	blr 
 
 /* 8009B588 0030 .text      item_getcheck_func_L2_KEY_PIECES1__Fv item_getcheck_func_L2_KEY_PIECES1__Fv */
 .global item_getcheck_func_L2_KEY_PIECES1__Fv
+item_getcheck_func_L2_KEY_PIECES1__Fv:
 item_getcheck_func_L2_KEY_PIECES1__Fv:
 /* 8009B588 000984C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B58C 000984CC  7C 08 02 A6 */	mflr r0
@@ -5090,6 +5418,7 @@ item_getcheck_func_L2_KEY_PIECES1__Fv:
 /* 8009B5B8 0030 .text      item_getcheck_func_L2_KEY_PIECES2__Fv item_getcheck_func_L2_KEY_PIECES2__Fv */
 .global item_getcheck_func_L2_KEY_PIECES2__Fv
 item_getcheck_func_L2_KEY_PIECES2__Fv:
+item_getcheck_func_L2_KEY_PIECES2__Fv:
 /* 8009B5B8 000984F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B5BC 000984FC  7C 08 02 A6 */	mflr r0
 /* 8009B5C0 00098500  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5105,6 +5434,7 @@ item_getcheck_func_L2_KEY_PIECES2__Fv:
 
 /* 8009B5E8 0030 .text      item_getcheck_func_L2_KEY_PIECES3__Fv item_getcheck_func_L2_KEY_PIECES3__Fv */
 .global item_getcheck_func_L2_KEY_PIECES3__Fv
+item_getcheck_func_L2_KEY_PIECES3__Fv:
 item_getcheck_func_L2_KEY_PIECES3__Fv:
 /* 8009B5E8 00098528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B5EC 0009852C  7C 08 02 A6 */	mflr r0
@@ -5122,6 +5452,7 @@ item_getcheck_func_L2_KEY_PIECES3__Fv:
 /* 8009B618 0030 .text      item_getcheck_func_KEY_OF_CARAVAN__Fv item_getcheck_func_KEY_OF_CARAVAN__Fv */
 .global item_getcheck_func_KEY_OF_CARAVAN__Fv
 item_getcheck_func_KEY_OF_CARAVAN__Fv:
+item_getcheck_func_KEY_OF_CARAVAN__Fv:
 /* 8009B618 00098558  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B61C 0009855C  7C 08 02 A6 */	mflr r0
 /* 8009B620 00098560  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5137,6 +5468,7 @@ item_getcheck_func_KEY_OF_CARAVAN__Fv:
 
 /* 8009B648 0030 .text      item_getcheck_func_LV2_BOSS_KEY__Fv item_getcheck_func_LV2_BOSS_KEY__Fv */
 .global item_getcheck_func_LV2_BOSS_KEY__Fv
+item_getcheck_func_LV2_BOSS_KEY__Fv:
 item_getcheck_func_LV2_BOSS_KEY__Fv:
 /* 8009B648 00098588  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B64C 0009858C  7C 08 02 A6 */	mflr r0
@@ -5154,19 +5486,21 @@ item_getcheck_func_LV2_BOSS_KEY__Fv:
 /* 8009B678 0010 .text      item_getcheck_func_KEY_OF_FILONE__Fv item_getcheck_func_KEY_OF_FILONE__Fv */
 .global item_getcheck_func_KEY_OF_FILONE__Fv
 item_getcheck_func_KEY_OF_FILONE__Fv:
+item_getcheck_func_KEY_OF_FILONE__Fv:
 /* 8009B678 000985B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B67C 000985BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B680 000985C0  88 63 09 74 */	lbz r3, 0x974(r3)
 /* 8009B684 000985C4  4E 80 00 20 */	blr 
 
-/* 8009B688 0040 .text      isBomb__FUc                    isBomb__FUc                    */
+/* 8009B688 004C .text      isBomb__FUc                    isBomb__FUc                    */
 .global isBomb__FUc
+isBomb__FUc:
 isBomb__FUc:
 /* 8009B688 000985C8  38 A0 00 00 */	li r5, 0
 /* 8009B68C 000985CC  38 03 FF F6 */	addi r0, r3, -10
 /* 8009B690 000985D0  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8009B694 000985D4  28 00 00 03 */	cmplwi r0, 3
-/* 8009B698 000985D8  40 81 00 30 */	ble func_8009B6C8
+/* 8009B698 000985D8  40 81 00 30 */	ble lbl_8009B6C8
 /* 8009B69C 000985DC  54 64 06 3E */	clrlwi r4, r3, 0x18
 /* 8009B6A0 000985E0  20 04 00 70 */	subfic r0, r4, 0x70
 /* 8009B6A4 000985E4  7C 00 00 34 */	cntlzw r0, r0
@@ -5175,147 +5509,110 @@ isBomb__FUc:
 /* 8009B6B0 000985F0  7C 00 00 34 */	cntlzw r0, r0
 /* 8009B6B4 000985F4  54 00 DE 3E */	rlwinm r0, r0, 0x1b, 0x18, 0x1f
 /* 8009B6B8 000985F8  7C 60 03 79 */	or. r0, r3, r0
-/* 8009B6BC 000985FC  40 82 00 0C */	bne func_8009B6C8
+/* 8009B6BC 000985FC  40 82 00 0C */	bne lbl_8009B6C8
 /* 8009B6C0 00098600  28 04 00 72 */	cmplwi r4, 0x72
-/* 8009B6C4 00098604  40 82 00 08 */	bne func_8009B6CC
-
-/* 8009B6C8 0004 .text      func_8009B6C8                  func_8009B6C8                  */
-.global func_8009B6C8
-func_8009B6C8:
+/* 8009B6C4 00098604  40 82 00 08 */	bne lbl_8009B6CC
+lbl_8009B6C8:
 /* 8009B6C8 00098608  38 A0 00 01 */	li r5, 1
-
-/* 8009B6CC 0008 .text      func_8009B6CC                  func_8009B6CC                  */
-.global func_8009B6CC
-func_8009B6CC:
+lbl_8009B6CC:
 /* 8009B6CC 0009860C  7C A3 2B 78 */	mr r3, r5
 /* 8009B6D0 00098610  4E 80 00 20 */	blr 
 
-/* 8009B6D4 0028 .text      isArrow__FUc                   isArrow__FUc                   */
+/* 8009B6D4 0034 .text      isArrow__FUc                   isArrow__FUc                   */
 .global isArrow__FUc
+isArrow__FUc:
 isArrow__FUc:
 /* 8009B6D4 00098614  38 A0 00 00 */	li r5, 0
 /* 8009B6D8 00098618  54 64 06 3E */	clrlwi r4, r3, 0x18
 /* 8009B6DC 0009861C  28 04 00 11 */	cmplwi r4, 0x11
-/* 8009B6E0 00098620  41 82 00 1C */	beq func_8009B6FC
+/* 8009B6E0 00098620  41 82 00 1C */	beq lbl_8009B6FC
 /* 8009B6E4 00098624  38 03 FF F2 */	addi r0, r3, -14
 /* 8009B6E8 00098628  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8009B6EC 0009862C  28 00 00 01 */	cmplwi r0, 1
-/* 8009B6F0 00098630  40 81 00 0C */	ble func_8009B6FC
+/* 8009B6F0 00098630  40 81 00 0C */	ble lbl_8009B6FC
 /* 8009B6F4 00098634  28 04 00 10 */	cmplwi r4, 0x10
-/* 8009B6F8 00098638  40 82 00 08 */	bne func_8009B700
-
-/* 8009B6FC 0004 .text      func_8009B6FC                  func_8009B6FC                  */
-.global func_8009B6FC
-func_8009B6FC:
+/* 8009B6F8 00098638  40 82 00 08 */	bne lbl_8009B700
+lbl_8009B6FC:
 /* 8009B6FC 0009863C  38 A0 00 01 */	li r5, 1
-
-/* 8009B700 0008 .text      func_8009B700                  func_8009B700                  */
-.global func_8009B700
-func_8009B700:
+lbl_8009B700:
 /* 8009B700 00098640  7C A3 2B 78 */	mr r3, r5
 /* 8009B704 00098644  4E 80 00 20 */	blr 
 
-/* 8009B708 0030 .text      isBottleItem__FUc              isBottleItem__FUc              */
+/* 8009B708 0074 .text      isBottleItem__FUc              isBottleItem__FUc              */
 .global isBottleItem__FUc
+isBottleItem__FUc:
 isBottleItem__FUc:
 /* 8009B708 00098648  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009B70C 0009864C  2C 00 00 9D */	cmpwi r0, 0x9d
-/* 8009B710 00098650  41 82 00 5C */	beq func_8009B76C
-/* 8009B714 00098654  40 80 00 3C */	bge func_8009B750
+/* 8009B710 00098650  41 82 00 5C */	beq lbl_8009B76C
+/* 8009B714 00098654  40 80 00 3C */	bge lbl_8009B750
 /* 8009B718 00098658  2C 00 00 75 */	cmpwi r0, 0x75
-/* 8009B71C 0009865C  41 82 00 58 */	beq func_8009B774
-/* 8009B720 00098660  40 80 00 24 */	bge func_8009B744
+/* 8009B71C 0009865C  41 82 00 58 */	beq lbl_8009B774
+/* 8009B720 00098660  40 80 00 24 */	bge lbl_8009B744
 /* 8009B724 00098664  2C 00 00 6D */	cmpwi r0, 0x6d
-/* 8009B728 00098668  40 80 00 10 */	bge func_8009B738
+/* 8009B728 00098668  40 80 00 10 */	bge lbl_8009B738
 /* 8009B72C 0009866C  2C 00 00 60 */	cmpwi r0, 0x60
-/* 8009B730 00098670  40 80 00 3C */	bge func_8009B76C
-/* 8009B734 00098674  48 00 00 40 */	b func_8009B774
-
-/* 8009B738 000C .text      func_8009B738                  func_8009B738                  */
-.global func_8009B738
-func_8009B738:
+/* 8009B730 00098670  40 80 00 3C */	bge lbl_8009B76C
+/* 8009B734 00098674  48 00 00 40 */	b lbl_8009B774
+lbl_8009B738:
 /* 8009B738 00098678  2C 00 00 73 */	cmpwi r0, 0x73
-/* 8009B73C 0009867C  40 80 00 30 */	bge func_8009B76C
-/* 8009B740 00098680  48 00 00 34 */	b func_8009B774
-
-/* 8009B744 000C .text      func_8009B744                  func_8009B744                  */
-.global func_8009B744
-func_8009B744:
+/* 8009B73C 0009867C  40 80 00 30 */	bge lbl_8009B76C
+/* 8009B740 00098680  48 00 00 34 */	b lbl_8009B774
+lbl_8009B744:
 /* 8009B744 00098684  2C 00 00 80 */	cmpwi r0, 0x80
-/* 8009B748 00098688  40 80 00 2C */	bge func_8009B774
-/* 8009B74C 0009868C  48 00 00 20 */	b func_8009B76C
-
-/* 8009B750 0014 .text      func_8009B750                  func_8009B750                  */
-.global func_8009B750
-func_8009B750:
+/* 8009B748 00098688  40 80 00 2C */	bge lbl_8009B774
+/* 8009B74C 0009868C  48 00 00 20 */	b lbl_8009B76C
+lbl_8009B750:
 /* 8009B750 00098690  2C 00 00 EF */	cmpwi r0, 0xef
-/* 8009B754 00098694  40 80 00 10 */	bge func_8009B764
+/* 8009B754 00098694  40 80 00 10 */	bge lbl_8009B764
 /* 8009B758 00098698  2C 00 00 9F */	cmpwi r0, 0x9f
-/* 8009B75C 0009869C  41 82 00 10 */	beq func_8009B76C
-/* 8009B760 000986A0  48 00 00 14 */	b func_8009B774
-
-/* 8009B764 0008 .text      func_8009B764                  func_8009B764                  */
-.global func_8009B764
-func_8009B764:
+/* 8009B75C 0009869C  41 82 00 10 */	beq lbl_8009B76C
+/* 8009B760 000986A0  48 00 00 14 */	b lbl_8009B774
+lbl_8009B764:
 /* 8009B764 000986A4  2C 00 00 F3 */	cmpwi r0, 0xf3
-/* 8009B768 000986A8  40 80 00 0C */	bge func_8009B774
-
-/* 8009B76C 0008 .text      func_8009B76C                  func_8009B76C                  */
-.global func_8009B76C
-func_8009B76C:
+/* 8009B768 000986A8  40 80 00 0C */	bge lbl_8009B774
+lbl_8009B76C:
 /* 8009B76C 000986AC  38 60 00 01 */	li r3, 1
 /* 8009B770 000986B0  4E 80 00 20 */	blr 
-
-/* 8009B774 0008 .text      func_8009B774                  func_8009B774                  */
-.global func_8009B774
-func_8009B774:
+lbl_8009B774:
 /* 8009B774 000986B4  38 60 00 00 */	li r3, 0
 /* 8009B778 000986B8  4E 80 00 20 */	blr 
 
-/* 8009B77C 0014 .text      isHeart__FUc                   isHeart__FUc                   */
+/* 8009B77C 0020 .text      isHeart__FUc                   isHeart__FUc                   */
 .global isHeart__FUc
+isHeart__FUc:
 isHeart__FUc:
 /* 8009B77C 000986BC  38 80 00 00 */	li r4, 0
 /* 8009B780 000986C0  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8009B784 000986C4  41 82 00 0C */	beq func_8009B790
+/* 8009B784 000986C4  41 82 00 0C */	beq lbl_8009B790
 /* 8009B788 000986C8  28 00 00 1F */	cmplwi r0, 0x1f
-/* 8009B78C 000986CC  40 82 00 08 */	bne func_8009B794
-
-/* 8009B790 0004 .text      func_8009B790                  func_8009B790                  */
-.global func_8009B790
-func_8009B790:
+/* 8009B78C 000986CC  40 82 00 08 */	bne lbl_8009B794
+lbl_8009B790:
 /* 8009B790 000986D0  38 80 00 01 */	li r4, 1
-
-/* 8009B794 0008 .text      func_8009B794                  func_8009B794                  */
-.global func_8009B794
-func_8009B794:
+lbl_8009B794:
 /* 8009B794 000986D4  7C 83 23 78 */	mr r3, r4
 /* 8009B798 000986D8  4E 80 00 20 */	blr 
 
-/* 8009B79C 001C .text      isInsect__FUc                  isInsect__FUc                  */
+/* 8009B79C 0028 .text      isInsect__FUc                  isInsect__FUc                  */
 .global isInsect__FUc
+isInsect__FUc:
 isInsect__FUc:
 /* 8009B79C 000986DC  38 80 00 00 */	li r4, 0
 /* 8009B7A0 000986E0  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009B7A4 000986E4  2C 00 00 D8 */	cmpwi r0, 0xd8
-/* 8009B7A8 000986E8  40 80 00 14 */	bge func_8009B7BC
+/* 8009B7A8 000986E8  40 80 00 14 */	bge lbl_8009B7BC
 /* 8009B7AC 000986EC  2C 00 00 C0 */	cmpwi r0, 0xc0
-/* 8009B7B0 000986F0  40 80 00 08 */	bge func_8009B7B8
-/* 8009B7B4 000986F4  48 00 00 08 */	b func_8009B7BC
-
-/* 8009B7B8 0004 .text      func_8009B7B8                  func_8009B7B8                  */
-.global func_8009B7B8
-func_8009B7B8:
+/* 8009B7B0 000986F0  40 80 00 08 */	bge lbl_8009B7B8
+/* 8009B7B4 000986F4  48 00 00 08 */	b lbl_8009B7BC
+lbl_8009B7B8:
 /* 8009B7B8 000986F8  38 80 00 01 */	li r4, 1
-
-/* 8009B7BC 0008 .text      func_8009B7BC                  func_8009B7BC                  */
-.global func_8009B7BC
-func_8009B7BC:
+lbl_8009B7BC:
 /* 8009B7BC 000986FC  7C 83 23 78 */	mr r3, r4
 /* 8009B7C0 00098700  4E 80 00 20 */	blr 
 
-/* 8009B7C4 003C .text      check_itemno__Fi               check_itemno__Fi               */
+/* 8009B7C4 017C .text      check_itemno__Fi               check_itemno__Fi               */
 .global check_itemno__Fi
+check_itemno__Fi:
 check_itemno__Fi:
 /* 8009B7C4 00098704  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009B7C8 00098708  7C 08 02 A6 */	mflr r0
@@ -5327,65 +5624,50 @@ check_itemno__Fi:
 /* 8009B7E0 00098720  38 80 00 00 */	li r4, 0
 /* 8009B7E4 00098724  4B F9 73 15 */	bl isMagicFlag__21dSv_player_status_a_cCFUc
 /* 8009B7E8 00098728  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B7EC 0009872C  40 82 00 1C */	bne func_8009B808
+/* 8009B7EC 0009872C  40 82 00 1C */	bne lbl_8009B808
 /* 8009B7F0 00098730  2C 1F 00 08 */	cmpwi r31, 8
-/* 8009B7F4 00098734  41 82 00 0C */	beq func_8009B800
+/* 8009B7F4 00098734  41 82 00 0C */	beq lbl_8009B800
 /* 8009B7F8 00098738  2C 1F 00 09 */	cmpwi r31, 9
-/* 8009B7FC 0009873C  40 82 00 0C */	bne func_8009B808
-
-/* 8009B800 0008 .text      func_8009B800                  func_8009B800                  */
-.global func_8009B800
-func_8009B800:
+/* 8009B7FC 0009873C  40 82 00 0C */	bne lbl_8009B808
+lbl_8009B800:
 /* 8009B800 00098740  38 60 00 01 */	li r3, 1
-/* 8009B804 00098744  48 00 01 28 */	b func_8009B92C
-
-/* 8009B808 002C .text      func_8009B808                  func_8009B808                  */
-.global func_8009B808
-func_8009B808:
+/* 8009B804 00098744  48 00 01 28 */	b lbl_8009B92C
+lbl_8009B808:
 /* 8009B808 00098748  2C 1F 00 11 */	cmpwi r31, 0x11
-/* 8009B80C 0009874C  40 82 00 28 */	bne func_8009B834
+/* 8009B80C 0009874C  40 82 00 28 */	bne lbl_8009B834
 /* 8009B810 00098750  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B814 00098754  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B818 00098758  38 63 00 CC */	addi r3, r3, 0xcc
 /* 8009B81C 0009875C  38 80 00 43 */	li r4, 0x43
 /* 8009B820 00098760  4B F9 86 A9 */	bl isFirstBit__21dSv_player_get_item_cCFUc
 /* 8009B824 00098764  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B828 00098768  40 82 00 8C */	bne func_8009B8B4
+/* 8009B828 00098768  40 82 00 8C */	bne lbl_8009B8B4
 /* 8009B82C 0009876C  38 60 00 01 */	li r3, 1
-/* 8009B830 00098770  48 00 00 FC */	b func_8009B92C
-
-/* 8009B834 0034 .text      func_8009B834                  func_8009B834                  */
-.global func_8009B834
-func_8009B834:
+/* 8009B830 00098770  48 00 00 FC */	b lbl_8009B92C
+lbl_8009B834:
 /* 8009B834 00098774  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009B838 00098778  4B FF FE 9D */	bl isArrow__FUc
 /* 8009B83C 0009877C  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B840 00098780  41 82 00 74 */	beq func_8009B8B4
+/* 8009B840 00098780  41 82 00 74 */	beq lbl_8009B8B4
 /* 8009B844 00098784  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B848 00098788  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B84C 0009878C  38 63 00 CC */	addi r3, r3, 0xcc
 /* 8009B850 00098790  38 80 00 43 */	li r4, 0x43
 /* 8009B854 00098794  4B F9 86 75 */	bl isFirstBit__21dSv_player_get_item_cCFUc
 /* 8009B858 00098798  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B85C 0009879C  40 82 00 0C */	bne func_8009B868
+/* 8009B85C 0009879C  40 82 00 0C */	bne lbl_8009B868
 /* 8009B860 000987A0  38 60 00 01 */	li r3, 1
-/* 8009B864 000987A4  48 00 00 C8 */	b func_8009B92C
-
-/* 8009B868 0020 .text      func_8009B868                  func_8009B868                  */
-.global func_8009B868
-func_8009B868:
+/* 8009B864 000987A4  48 00 00 C8 */	b lbl_8009B92C
+lbl_8009B868:
 /* 8009B868 000987A8  38 60 00 00 */	li r3, 0
 /* 8009B86C 000987AC  4B F9 11 11 */	bl getLayerNo__14dComIfG_play_cFi
 /* 8009B870 000987B0  2C 03 00 0D */	cmpwi r3, 0xd
-/* 8009B874 000987B4  41 82 00 14 */	beq func_8009B888
+/* 8009B874 000987B4  41 82 00 14 */	beq lbl_8009B888
 /* 8009B878 000987B8  38 60 00 00 */	li r3, 0
 /* 8009B87C 000987BC  4B F9 11 01 */	bl getLayerNo__14dComIfG_play_cFi
 /* 8009B880 000987C0  2C 03 00 0E */	cmpwi r3, 0xe
-/* 8009B884 000987C4  40 82 00 30 */	bne func_8009B8B4
-
-/* 8009B888 002C .text      func_8009B888                  func_8009B888                  */
-.global func_8009B888
-func_8009B888:
+/* 8009B884 000987C4  40 82 00 30 */	bne lbl_8009B8B4
+lbl_8009B888:
 /* 8009B888 000987C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B88C 000987CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B890 000987D0  38 63 4E 00 */	addi r3, r3, 0x4e00
@@ -5394,75 +5676,55 @@ func_8009B888:
 /* 8009B89C 000987DC  38 A0 00 06 */	li r5, 6
 /* 8009B8A0 000987E0  48 2C D0 B5 */	bl strncmp
 /* 8009B8A4 000987E4  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B8A8 000987E8  41 82 00 0C */	beq func_8009B8B4
+/* 8009B8A8 000987E8  41 82 00 0C */	beq lbl_8009B8B4
 /* 8009B8AC 000987EC  38 60 00 01 */	li r3, 1
-/* 8009B8B0 000987F0  48 00 00 7C */	b func_8009B92C
-
-/* 8009B8B4 0034 .text      func_8009B8B4                  func_8009B8B4                  */
-.global func_8009B8B4
-func_8009B8B4:
+/* 8009B8B0 000987F0  48 00 00 7C */	b lbl_8009B92C
+lbl_8009B8B4:
 /* 8009B8B4 000987F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009B8B8 000987F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8009B8BC 000987FC  38 63 00 CC */	addi r3, r3, 0xcc
 /* 8009B8C0 00098800  38 80 00 50 */	li r4, 0x50
 /* 8009B8C4 00098804  4B F9 86 05 */	bl isFirstBit__21dSv_player_get_item_cCFUc
 /* 8009B8C8 00098808  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B8CC 0009880C  40 82 00 1C */	bne func_8009B8E8
+/* 8009B8CC 0009880C  40 82 00 1C */	bne lbl_8009B8E8
 /* 8009B8D0 00098810  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8009B8D4 00098814  4B FF FD B5 */	bl isBomb__FUc
 /* 8009B8D8 00098818  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B8DC 0009881C  41 82 00 0C */	beq func_8009B8E8
+/* 8009B8DC 0009881C  41 82 00 0C */	beq lbl_8009B8E8
 /* 8009B8E0 00098820  38 60 00 01 */	li r3, 1
-/* 8009B8E4 00098824  48 00 00 48 */	b func_8009B92C
-
-/* 8009B8E8 000C .text      func_8009B8E8                  func_8009B8E8                  */
-.global func_8009B8E8
-func_8009B8E8:
+/* 8009B8E4 00098824  48 00 00 48 */	b lbl_8009B92C
+lbl_8009B8E8:
 /* 8009B8E8 00098828  2C 1F 00 1F */	cmpwi r31, 0x1f
-/* 8009B8EC 0009882C  40 82 00 08 */	bne func_8009B8F4
+/* 8009B8EC 0009882C  40 82 00 08 */	bne lbl_8009B8F4
 /* 8009B8F0 00098830  3B E0 00 00 */	li r31, 0
-
-/* 8009B8F4 0020 .text      func_8009B8F4                  func_8009B8F4                  */
-.global func_8009B8F4
-func_8009B8F4:
+lbl_8009B8F4:
 /* 8009B8F4 00098834  38 60 00 4B */	li r3, 0x4b
 /* 8009B8F8 00098838  38 80 00 01 */	li r4, 1
 /* 8009B8FC 0009883C  4B FF C5 E5 */	bl checkItemGet__FUci
 /* 8009B900 00098840  2C 03 00 00 */	cmpwi r3, 0
-/* 8009B904 00098844  40 82 00 10 */	bne func_8009B914
+/* 8009B904 00098844  40 82 00 10 */	bne lbl_8009B914
 /* 8009B908 00098848  2C 1F 00 12 */	cmpwi r31, 0x12
-/* 8009B90C 0009884C  40 82 00 08 */	bne func_8009B914
+/* 8009B90C 0009884C  40 82 00 08 */	bne lbl_8009B914
 /* 8009B910 00098850  3B E0 00 01 */	li r31, 1
-
-/* 8009B914 0010 .text      func_8009B914                  func_8009B914                  */
-.global func_8009B914
-func_8009B914:
+lbl_8009B914:
 /* 8009B914 00098854  2C 1F 00 08 */	cmpwi r31, 8
-/* 8009B918 00098858  41 82 00 0C */	beq func_8009B924
+/* 8009B918 00098858  41 82 00 0C */	beq lbl_8009B924
 /* 8009B91C 0009885C  2C 1F 00 09 */	cmpwi r31, 9
-/* 8009B920 00098860  40 82 00 08 */	bne func_8009B928
-
-/* 8009B924 0004 .text      func_8009B924                  func_8009B924                  */
-.global func_8009B924
-func_8009B924:
+/* 8009B920 00098860  40 82 00 08 */	bne lbl_8009B928
+lbl_8009B924:
 /* 8009B924 00098864  3B E0 00 01 */	li r31, 1
-
-/* 8009B928 0004 .text      func_8009B928                  func_8009B928                  */
-.global func_8009B928
-func_8009B928:
+lbl_8009B928:
 /* 8009B928 00098868  57 E3 06 3E */	clrlwi r3, r31, 0x18
-
-/* 8009B92C 0014 .text      func_8009B92C                  func_8009B92C                  */
-.global func_8009B92C
-func_8009B92C:
+lbl_8009B92C:
 /* 8009B92C 0009886C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8009B930 00098870  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8009B934 00098874  7C 08 03 A6 */	mtlr r0
 /* 8009B938 00098878  38 21 00 10 */	addi r1, r1, 0x10
 /* 8009B93C 0009887C  4E 80 00 20 */	blr 
 
-/* 8009B940 0038 .text      addBombCount__FUcUc            addBombCount__FUcUc            */
+/* 8009B940 0298 .text      addBombCount__FUcUc            addBombCount__FUcUc            */
 .global addBombCount__FUcUc
+addBombCount__FUcUc:
 addBombCount__FUcUc:
 /* 8009B940 00098880  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8009B944 00098884  7C 08 02 A6 */	mflr r0
@@ -5477,11 +5739,8 @@ addBombCount__FUcUc:
 /* 8009B968 000988A8  3B 43 00 9C */	addi r26, r3, 0x9c
 /* 8009B96C 000988AC  3B 83 00 EC */	addi r28, r3, 0xec
 /* 8009B970 000988B0  3B 61 00 08 */	addi r27, r1, 8
-/* 8009B974 000988B4  48 00 00 80 */	b func_8009B9F4
-
-/* 8009B978 003C .text      func_8009B978                  func_8009B978                  */
-.global func_8009B978
-func_8009B978:
+/* 8009B974 000988B4  48 00 00 80 */	b lbl_8009B9F4
+lbl_8009B978:
 /* 8009B978 000988B8  7F 43 D3 78 */	mr r3, r26
 /* 8009B97C 000988BC  57 24 06 3E */	clrlwi r4, r25, 0x18
 /* 8009B980 000988C0  38 84 00 0F */	addi r4, r4, 0xf
@@ -5491,19 +5750,16 @@ func_8009B978:
 /* 8009B990 000988D0  7C 7B A9 AE */	stbx r3, r27, r21
 /* 8009B994 000988D4  7C 7B A8 AE */	lbzx r3, r27, r21
 /* 8009B998 000988D8  28 03 00 50 */	cmplwi r3, 0x50
-/* 8009B99C 000988DC  40 82 00 18 */	bne func_8009B9B4
+/* 8009B99C 000988DC  40 82 00 18 */	bne lbl_8009B9B4
 /* 8009B9A0 000988E0  38 80 00 00 */	li r4, 0
 /* 8009B9A4 000988E4  56 A0 10 3A */	slwi r0, r21, 2
 /* 8009B9A8 000988E8  38 61 00 0C */	addi r3, r1, 0xc
 /* 8009B9AC 000988EC  7C 83 01 2E */	stwx r4, r3, r0
-/* 8009B9B0 000988F0  48 00 00 40 */	b func_8009B9F0
-
-/* 8009B9B4 002C .text      func_8009B9B4                  func_8009B9B4                  */
-.global func_8009B9B4
-func_8009B9B4:
+/* 8009B9B0 000988F0  48 00 00 40 */	b lbl_8009B9F0
+lbl_8009B9B4:
 /* 8009B9B4 000988F4  57 C0 06 3E */	clrlwi r0, r30, 0x18
 /* 8009B9B8 000988F8  7C 03 00 40 */	cmplw r3, r0
-/* 8009B9BC 000988FC  40 82 00 24 */	bne func_8009B9E0
+/* 8009B9BC 000988FC  40 82 00 24 */	bne lbl_8009B9E0
 /* 8009B9C0 00098900  7F 83 E3 78 */	mr r3, r28
 /* 8009B9C4 00098904  7F 24 CB 78 */	mr r4, r25
 /* 8009B9C8 00098908  4B F9 85 B5 */	bl getBombNum__24dSv_player_item_record_cCFUc
@@ -5511,27 +5767,18 @@ func_8009B9B4:
 /* 8009B9D0 00098910  56 A0 10 3A */	slwi r0, r21, 2
 /* 8009B9D4 00098914  38 61 00 0C */	addi r3, r1, 0xc
 /* 8009B9D8 00098918  7C 83 01 2E */	stwx r4, r3, r0
-/* 8009B9DC 0009891C  48 00 00 14 */	b func_8009B9F0
-
-/* 8009B9E0 0010 .text      func_8009B9E0                  func_8009B9E0                  */
-.global func_8009B9E0
-func_8009B9E0:
+/* 8009B9DC 0009891C  48 00 00 14 */	b lbl_8009B9F0
+lbl_8009B9E0:
 /* 8009B9E0 00098920  38 80 FF FF */	li r4, -1
 /* 8009B9E4 00098924  56 A0 10 3A */	slwi r0, r21, 2
 /* 8009B9E8 00098928  38 61 00 0C */	addi r3, r1, 0xc
 /* 8009B9EC 0009892C  7C 83 01 2E */	stwx r4, r3, r0
-
-/* 8009B9F0 0004 .text      func_8009B9F0                  func_8009B9F0                  */
-.global func_8009B9F0
-func_8009B9F0:
+lbl_8009B9F0:
 /* 8009B9F0 00098930  3B 39 00 01 */	addi r25, r25, 1
-
-/* 8009B9F4 002C .text      func_8009B9F4                  func_8009B9F4                  */
-.global func_8009B9F4
-func_8009B9F4:
+lbl_8009B9F4:
 /* 8009B9F4 00098934  57 20 06 3E */	clrlwi r0, r25, 0x18
 /* 8009B9F8 00098938  28 00 00 03 */	cmplwi r0, 3
-/* 8009B9FC 0009893C  41 80 FF 7C */	blt func_8009B978
+/* 8009B9FC 0009893C  41 80 FF 7C */	blt lbl_8009B978
 /* 8009BA00 00098940  3B 00 00 00 */	li r24, 0
 /* 8009BA04 00098944  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 8009BA08 00098948  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
@@ -5539,99 +5786,72 @@ func_8009B9F4:
 /* 8009BA10 00098950  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 8009BA14 00098954  3B A1 00 08 */	addi r29, r1, 8
 /* 8009BA18 00098958  3B 81 00 0C */	addi r28, r1, 0xc
-/* 8009BA1C 0009895C  48 00 01 94 */	b func_8009BBB0
-
-/* 8009BA20 0010 .text      func_8009BA20                  func_8009BA20                  */
-.global func_8009BA20
-func_8009BA20:
+/* 8009BA1C 0009895C  48 00 01 94 */	b lbl_8009BBB0
+lbl_8009BA20:
 /* 8009BA20 00098960  3A E0 FF FF */	li r23, -1
 /* 8009BA24 00098964  3A C0 FF FF */	li r22, -1
 /* 8009BA28 00098968  38 80 00 00 */	li r4, 0
-/* 8009BA2C 0009896C  48 00 00 24 */	b func_8009BA50
-
-/* 8009BA30 001C .text      func_8009BA30                  func_8009BA30                  */
-.global func_8009BA30
-func_8009BA30:
+/* 8009BA2C 0009896C  48 00 00 24 */	b lbl_8009BA50
+lbl_8009BA30:
 /* 8009BA30 00098970  54 83 06 3E */	clrlwi r3, r4, 0x18
 /* 8009BA34 00098974  54 80 15 BA */	rlwinm r0, r4, 2, 0x16, 0x1d
 /* 8009BA38 00098978  7C 1C 00 2E */	lwzx r0, r28, r0
 /* 8009BA3C 0009897C  2C 00 00 00 */	cmpwi r0, 0
-/* 8009BA40 00098980  40 82 00 0C */	bne func_8009BA4C
+/* 8009BA40 00098980  40 82 00 0C */	bne lbl_8009BA4C
 /* 8009BA44 00098984  7C 77 1B 78 */	mr r23, r3
 /* 8009BA48 00098988  3A C0 00 00 */	li r22, 0
-
-/* 8009BA4C 0004 .text      func_8009BA4C                  func_8009BA4C                  */
-.global func_8009BA4C
-func_8009BA4C:
+lbl_8009BA4C:
 /* 8009BA4C 0009898C  38 84 00 01 */	addi r4, r4, 1
-
-/* 8009BA50 0014 .text      func_8009BA50                  func_8009BA50                  */
-.global func_8009BA50
-func_8009BA50:
+lbl_8009BA50:
 /* 8009BA50 00098990  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8009BA54 00098994  28 00 00 03 */	cmplwi r0, 3
-/* 8009BA58 00098998  41 80 FF D8 */	blt func_8009BA30
+/* 8009BA58 00098998  41 80 FF D8 */	blt lbl_8009BA30
 /* 8009BA5C 0009899C  3A A0 00 00 */	li r21, 0
-/* 8009BA60 000989A0  48 00 00 44 */	b func_8009BAA4
-
-/* 8009BA64 003C .text      func_8009BA64                  func_8009BA64                  */
-.global func_8009BA64
-func_8009BA64:
+/* 8009BA60 000989A0  48 00 00 44 */	b lbl_8009BAA4
+lbl_8009BA64:
 /* 8009BA64 000989A4  56 A4 06 3E */	clrlwi r4, r21, 0x18
 /* 8009BA68 000989A8  56 A0 15 BA */	rlwinm r0, r21, 2, 0x16, 0x1d
 /* 8009BA6C 000989AC  7E 9C 00 2E */	lwzx r20, r28, r0
 /* 8009BA70 000989B0  2C 14 00 00 */	cmpwi r20, 0
-/* 8009BA74 000989B4  40 81 00 2C */	ble func_8009BAA0
+/* 8009BA74 000989B4  40 81 00 2C */	ble lbl_8009BAA0
 /* 8009BA78 000989B8  7C 14 B0 00 */	cmpw r20, r22
-/* 8009BA7C 000989BC  40 81 00 24 */	ble func_8009BAA0
+/* 8009BA7C 000989BC  40 81 00 24 */	ble lbl_8009BAA0
 /* 8009BA80 000989C0  7F 63 DB 78 */	mr r3, r27
 /* 8009BA84 000989C4  7C 9D 20 AE */	lbzx r4, r29, r4
 /* 8009BA88 000989C8  4B F9 86 71 */	bl getBombNum__21dSv_player_item_max_cCFUc
 /* 8009BA8C 000989CC  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8009BA90 000989D0  7C 14 00 00 */	cmpw r20, r0
-/* 8009BA94 000989D4  41 82 00 0C */	beq func_8009BAA0
+/* 8009BA94 000989D4  41 82 00 0C */	beq lbl_8009BAA0
 /* 8009BA98 000989D8  56 B7 06 3E */	clrlwi r23, r21, 0x18
 /* 8009BA9C 000989DC  7E 96 A3 78 */	mr r22, r20
-
-/* 8009BAA0 0004 .text      func_8009BAA0                  func_8009BAA0                  */
-.global func_8009BAA0
-func_8009BAA0:
+lbl_8009BAA0:
 /* 8009BAA0 000989E0  3A B5 00 01 */	addi r21, r21, 1
-
-/* 8009BAA4 001C .text      func_8009BAA4                  func_8009BAA4                  */
-.global func_8009BAA4
-func_8009BAA4:
+lbl_8009BAA4:
 /* 8009BAA4 000989E4  56 A0 06 3E */	clrlwi r0, r21, 0x18
 /* 8009BAA8 000989E8  28 00 00 03 */	cmplwi r0, 3
-/* 8009BAAC 000989EC  41 80 FF B8 */	blt func_8009BA64
+/* 8009BAAC 000989EC  41 80 FF B8 */	blt lbl_8009BA64
 /* 8009BAB0 000989F0  2C 17 FF FF */	cmpwi r23, -1
-/* 8009BAB4 000989F4  40 82 00 0C */	bne func_8009BAC0
+/* 8009BAB4 000989F4  40 82 00 0C */	bne lbl_8009BAC0
 /* 8009BAB8 000989F8  57 E3 06 3E */	clrlwi r3, r31, 0x18
-/* 8009BABC 000989FC  48 00 01 04 */	b func_8009BBC0
-
-/* 8009BAC0 0040 .text      func_8009BAC0                  func_8009BAC0                  */
-.global func_8009BAC0
-func_8009BAC0:
+/* 8009BABC 000989FC  48 00 01 04 */	b lbl_8009BBC0
+lbl_8009BAC0:
 /* 8009BAC0 00098A00  2C 16 00 00 */	cmpwi r22, 0
-/* 8009BAC4 00098A04  40 82 00 68 */	bne func_8009BB2C
+/* 8009BAC4 00098A04  40 82 00 68 */	bne lbl_8009BB2C
 /* 8009BAC8 00098A08  7F 63 DB 78 */	mr r3, r27
 /* 8009BACC 00098A0C  7F C4 F3 78 */	mr r4, r30
 /* 8009BAD0 00098A10  4B F9 86 29 */	bl getBombNum__21dSv_player_item_max_cCFUc
 /* 8009BAD4 00098A14  54 63 06 3E */	clrlwi r3, r3, 0x18
 /* 8009BAD8 00098A18  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 8009BADC 00098A1C  7C 03 00 40 */	cmplw r3, r0
-/* 8009BAE0 00098A20  41 80 00 20 */	blt func_8009BB00
+/* 8009BAE0 00098A20  41 80 00 20 */	blt lbl_8009BB00
 /* 8009BAE4 00098A24  7F 43 D3 78 */	mr r3, r26
 /* 8009BAE8 00098A28  7F C4 F3 78 */	mr r4, r30
 /* 8009BAEC 00098A2C  7F E5 FB 78 */	mr r5, r31
 /* 8009BAF0 00098A30  38 C0 00 01 */	li r6, 1
 /* 8009BAF4 00098A34  4B F9 7F 5D */	bl setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb
 /* 8009BAF8 00098A38  38 60 00 00 */	li r3, 0
-/* 8009BAFC 00098A3C  48 00 00 C4 */	b func_8009BBC0
-
-/* 8009BB00 002C .text      func_8009BB00                  func_8009BB00                  */
-.global func_8009BB00
-func_8009BB00:
+/* 8009BAFC 00098A3C  48 00 00 C4 */	b lbl_8009BBC0
+lbl_8009BB00:
 /* 8009BB00 00098A40  7F 43 D3 78 */	mr r3, r26
 /* 8009BB04 00098A44  7F C4 F3 78 */	mr r4, r30
 /* 8009BB08 00098A48  7F E5 FB 78 */	mr r5, r31
@@ -5642,11 +5862,8 @@ func_8009BB00:
 /* 8009BB1C 00098A5C  4B F9 85 DD */	bl getBombNum__21dSv_player_item_max_cCFUc
 /* 8009BB20 00098A60  7C 03 F8 50 */	subf r0, r3, r31
 /* 8009BB24 00098A64  54 1F 06 3E */	clrlwi r31, r0, 0x18
-/* 8009BB28 00098A68  48 00 00 6C */	b func_8009BB94
-
-/* 8009BB2C 0040 .text      func_8009BB2C                  func_8009BB2C                  */
-.global func_8009BB2C
-func_8009BB2C:
+/* 8009BB28 00098A68  48 00 00 6C */	b lbl_8009BB94
+lbl_8009BB2C:
 /* 8009BB2C 00098A6C  7F 63 DB 78 */	mr r3, r27
 /* 8009BB30 00098A70  38 81 00 08 */	addi r4, r1, 8
 /* 8009BB34 00098A74  7E 84 B8 AE */	lbzx r20, r4, r23
@@ -5656,17 +5873,14 @@ func_8009BB2C:
 /* 8009BB44 00098A84  57 F5 06 3E */	clrlwi r21, r31, 0x18
 /* 8009BB48 00098A88  7C 16 AA 14 */	add r0, r22, r21
 /* 8009BB4C 00098A8C  7C 03 00 00 */	cmpw r3, r0
-/* 8009BB50 00098A90  41 80 00 1C */	blt func_8009BB6C
+/* 8009BB50 00098A90  41 80 00 1C */	blt lbl_8009BB6C
 /* 8009BB54 00098A94  7F 23 CB 78 */	mr r3, r25
 /* 8009BB58 00098A98  56 E4 06 3E */	clrlwi r4, r23, 0x18
 /* 8009BB5C 00098A9C  7E A5 AB 78 */	mr r5, r21
 /* 8009BB60 00098AA0  4B F8 F8 0D */	bl setItemBombNumCount__14dComIfG_play_cFUcs
 /* 8009BB64 00098AA4  38 60 00 00 */	li r3, 0
-/* 8009BB68 00098AA8  48 00 00 58 */	b func_8009BBC0
-
-/* 8009BB6C 0028 .text      func_8009BB6C                  func_8009BB6C                  */
-.global func_8009BB6C
-func_8009BB6C:
+/* 8009BB68 00098AA8  48 00 00 58 */	b lbl_8009BBC0
+lbl_8009BB6C:
 /* 8009BB6C 00098AAC  7F 23 CB 78 */	mr r3, r25
 /* 8009BB70 00098AB0  56 E4 06 3E */	clrlwi r4, r23, 0x18
 /* 8009BB74 00098AB4  7E A5 AB 78 */	mr r5, r21
@@ -5677,10 +5891,7 @@ func_8009BB6C:
 /* 8009BB88 00098AC8  7C 16 18 50 */	subf r0, r22, r3
 /* 8009BB8C 00098ACC  7C 00 A8 50 */	subf r0, r0, r21
 /* 8009BB90 00098AD0  54 1F 06 3E */	clrlwi r31, r0, 0x18
-
-/* 8009BB94 001C .text      func_8009BB94                  func_8009BB94                  */
-.global func_8009BB94
-func_8009BB94:
+lbl_8009BB94:
 /* 8009BB94 00098AD4  7F 63 DB 78 */	mr r3, r27
 /* 8009BB98 00098AD8  7C 9D B8 AE */	lbzx r4, r29, r23
 /* 8009BB9C 00098ADC  4B F9 85 5D */	bl getBombNum__21dSv_player_item_max_cCFUc
@@ -5688,18 +5899,12 @@ func_8009BB94:
 /* 8009BBA4 00098AE4  56 E0 10 3A */	slwi r0, r23, 2
 /* 8009BBA8 00098AE8  7C 7C 01 2E */	stwx r3, r28, r0
 /* 8009BBAC 00098AEC  3B 18 00 01 */	addi r24, r24, 1
-
-/* 8009BBB0 0010 .text      func_8009BBB0                  func_8009BBB0                  */
-.global func_8009BBB0
-func_8009BBB0:
+lbl_8009BBB0:
 /* 8009BBB0 00098AF0  57 00 06 3E */	clrlwi r0, r24, 0x18
 /* 8009BBB4 00098AF4  28 00 00 03 */	cmplwi r0, 3
-/* 8009BBB8 00098AF8  41 80 FE 68 */	blt func_8009BA20
+/* 8009BBB8 00098AF8  41 80 FE 68 */	blt lbl_8009BA20
 /* 8009BBBC 00098AFC  57 E3 06 3E */	clrlwi r3, r31, 0x18
-
-/* 8009BBC0 0018 .text      func_8009BBC0                  func_8009BBC0                  */
-.global func_8009BBC0
-func_8009BBC0:
+lbl_8009BBC0:
 /* 8009BBC0 00098B00  39 61 00 50 */	addi r11, r1, 0x50
 /* 8009BBC4 00098B04  48 2C 66 41 */	bl _restgpr_20
 /* 8009BBC8 00098B08  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -5712,11 +5917,11 @@ func_8009BBC0:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8037B0D0 0007 .rodata    d_d_item__stringBase0          @stringBase0                   */
+/* 8037B0D0 0007 .rodata    @stringBase0                   d_d_item__stringBase0          */
 .global d_d_item__stringBase0
 d_d_item__stringBase0:
 .byte 0x44, 0x5f, 0x4d, 0x4e, 0x30, 0x38, 0x00 /* baserom.dol+0x3780d0 */
-.byte 0x00 /* baserom.dol+0x3780d7 */
+.byte 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -5875,17 +6080,17 @@ mData__12dEnemyItem_c:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80452BD8 0004 .sdata2    d_d_item__LIT_3655             @3655                          */
+/* 80452BD8 0004 .sdata2    @3655                          d_d_item__LIT_3655             */
 .global d_d_item__LIT_3655
 d_d_item__LIT_3655:
 .byte 0x40, 0x80, 0x00, 0x00 /* baserom.dol+0x3d1a38 */
 
-/* 80452BDC 0004 .sdata2    d_d_item__LIT_3794             @3794                          */
+/* 80452BDC 0004 .sdata2    @3794                          d_d_item__LIT_3794             */
 .global d_d_item__LIT_3794
 d_d_item__LIT_3794:
 .byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1a3c */
 
-/* 80452BE0 0008 .sdata2    d_d_item__LIT_3828             @3828                          */
+/* 80452BE0 0008 .sdata2    @3828                          d_d_item__LIT_3828             */
 .global d_d_item__LIT_3828
 d_d_item__LIT_3828:
 .byte 0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1a40 */

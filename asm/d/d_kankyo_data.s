@@ -7,12 +7,14 @@
 /* 800569DC 000C .text      dKyd_dmpalet_getp__Fv          dKyd_dmpalet_getp__Fv          */
 .global dKyd_dmpalet_getp__Fv
 dKyd_dmpalet_getp__Fv:
+dKyd_dmpalet_getp__Fv:
 /* 800569DC 0005391C  3C 60 80 3B */	lis r3, l_field_data@ha
 /* 800569E0 00053920  38 63 95 3C */	addi r3, r3, l_field_data@l
 /* 800569E4 00053924  4E 80 00 20 */	blr 
 
 /* 800569E8 000C .text      dKyd_dmpselect_getp__Fv        dKyd_dmpselect_getp__Fv        */
 .global dKyd_dmpselect_getp__Fv
+dKyd_dmpselect_getp__Fv:
 dKyd_dmpselect_getp__Fv:
 /* 800569E8 00053928  3C 60 80 3B */	lis r3, l_pselect_default@ha
 /* 800569EC 0005392C  38 63 98 7C */	addi r3, r3, l_pselect_default@l
@@ -21,12 +23,14 @@ dKyd_dmpselect_getp__Fv:
 /* 800569F4 000C .text      dKyd_dmenvr_getp__Fv           dKyd_dmenvr_getp__Fv           */
 .global dKyd_dmenvr_getp__Fv
 dKyd_dmenvr_getp__Fv:
+dKyd_dmenvr_getp__Fv:
 /* 800569F4 00053934  3C 60 80 3B */	lis r3, l_envr_default@ha
 /* 800569F8 00053938  38 63 98 94 */	addi r3, r3, l_envr_default@l
 /* 800569FC 0005393C  4E 80 00 20 */	blr 
 
 /* 80056A00 000C .text      dKyd_dmvrbox_getp__Fv          dKyd_dmvrbox_getp__Fv          */
 .global dKyd_dmvrbox_getp__Fv
+dKyd_dmvrbox_getp__Fv:
 dKyd_dmvrbox_getp__Fv:
 /* 80056A00 00053940  3C 60 80 3B */	lis r3, l_vr_box_data@ha
 /* 80056A04 00053944  38 63 99 18 */	addi r3, r3, l_vr_box_data@l
@@ -35,6 +39,7 @@ dKyd_dmvrbox_getp__Fv:
 /* 80056A0C 000C .text      dKyd_schejule_getp__Fv         dKyd_schejule_getp__Fv         */
 .global dKyd_schejule_getp__Fv
 dKyd_schejule_getp__Fv:
+dKyd_schejule_getp__Fv:
 /* 80056A0C 0005394C  3C 60 80 3B */	lis r3, l_time_attribute@ha
 /* 80056A10 00053950  38 63 94 34 */	addi r3, r3, l_time_attribute@l
 /* 80056A14 00053954  4E 80 00 20 */	blr 
@@ -42,12 +47,14 @@ dKyd_schejule_getp__Fv:
 /* 80056A18 000C .text      dKyd_schejule_boss_getp__Fv    dKyd_schejule_boss_getp__Fv    */
 .global dKyd_schejule_boss_getp__Fv
 dKyd_schejule_boss_getp__Fv:
+dKyd_schejule_boss_getp__Fv:
 /* 80056A18 00053958  3C 60 80 3B */	lis r3, l_time_attribute_boss@ha
 /* 80056A1C 0005395C  38 63 94 B8 */	addi r3, r3, l_time_attribute_boss@l
 /* 80056A20 00053960  4E 80 00 20 */	blr 
 
-/* 80056A24 0028 .text      dKyd_xfog_table_set__FUc       dKyd_xfog_table_set__FUc       */
+/* 80056A24 0040 .text      dKyd_xfog_table_set__FUc       dKyd_xfog_table_set__FUc       */
 .global dKyd_xfog_table_set__FUc
+dKyd_xfog_table_set__FUc:
 dKyd_xfog_table_set__FUc:
 /* 80056A24 00053964  38 80 00 00 */	li r4, 0
 /* 80056A28 00053968  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -59,19 +66,17 @@ dKyd_xfog_table_set__FUc:
 /* 80056A40 00053980  38 A3 CA 54 */	addi r5, r3, g_env_light@l
 /* 80056A44 00053984  38 00 00 0A */	li r0, 0xa
 /* 80056A48 00053988  7C 09 03 A6 */	mtctr r0
-
-/* 80056A4C 0018 .text      func_80056A4C                  func_80056A4C                  */
-.global func_80056A4C
-func_80056A4C:
+lbl_80056A4C:
 /* 80056A4C 0005398C  7C 06 22 2E */	lhzx r0, r6, r4
 /* 80056A50 00053990  7C 65 22 14 */	add r3, r5, r4
 /* 80056A54 00053994  B0 03 10 AC */	sth r0, 0x10ac(r3)
 /* 80056A58 00053998  38 84 00 02 */	addi r4, r4, 2
-/* 80056A5C 0005399C  42 00 FF F0 */	bdnz func_80056A4C
+/* 80056A5C 0005399C  42 00 FF F0 */	bdnz lbl_80056A4C
 /* 80056A60 000539A0  4E 80 00 20 */	blr 
 
 /* 80056A64 000C .text      dKyd_maple_col_getp__Fv        dKyd_maple_col_getp__Fv        */
 .global dKyd_maple_col_getp__Fv
+dKyd_maple_col_getp__Fv:
 dKyd_maple_col_getp__Fv:
 /* 80056A64 000539A4  3C 60 80 3B */	lis r3, l_maple_col@ha
 /* 80056A68 000539A8  38 63 94 10 */	addi r3, r3, l_maple_col@l
@@ -80,12 +85,14 @@ dKyd_maple_col_getp__Fv:
 /* 80056A70 000C .text      dKyd_darkworld_tbl_getp__Fv    dKyd_darkworld_tbl_getp__Fv    */
 .global dKyd_darkworld_tbl_getp__Fv
 dKyd_darkworld_tbl_getp__Fv:
+dKyd_darkworld_tbl_getp__Fv:
 /* 80056A70 000539B0  3C 60 80 3B */	lis r3, l_darkworld_tbl@ha
 /* 80056A74 000539B4  38 63 91 98 */	addi r3, r3, l_darkworld_tbl@l
 /* 80056A78 000539B8  4E 80 00 20 */	blr 
 
 /* 80056A7C 000C .text      dKyd_light_size_tbl_getp__Fv   dKyd_light_size_tbl_getp__Fv   */
 .global dKyd_light_size_tbl_getp__Fv
+dKyd_light_size_tbl_getp__Fv:
 dKyd_light_size_tbl_getp__Fv:
 /* 80056A7C 000539BC  3C 60 80 3B */	lis r3, l_light_size_tbl@ha
 /* 80056A80 000539C0  38 63 92 A8 */	addi r3, r3, l_light_size_tbl@l
@@ -94,12 +101,14 @@ dKyd_light_size_tbl_getp__Fv:
 /* 80056A88 000C .text      dKyd_light_tw_size_tbl_getp__Fv dKyd_light_tw_size_tbl_getp__Fv */
 .global dKyd_light_tw_size_tbl_getp__Fv
 dKyd_light_tw_size_tbl_getp__Fv:
+dKyd_light_tw_size_tbl_getp__Fv:
 /* 80056A88 000539C8  3C 60 80 3B */	lis r3, l_light_size_tbl_tw@ha
 /* 80056A8C 000539CC  38 63 93 C8 */	addi r3, r3, l_light_size_tbl_tw@l
 /* 80056A90 000539D0  4E 80 00 20 */	blr 
 
 /* 80056A94 0014 .text      dKyd_BloomInf_tbl_getp__Fi     dKyd_BloomInf_tbl_getp__Fi     */
 .global dKyd_BloomInf_tbl_getp__Fi
+dKyd_BloomInf_tbl_getp__Fi:
 dKyd_BloomInf_tbl_getp__Fi:
 /* 80056A94 000539D4  1C 83 00 0C */	mulli r4, r3, 0xc
 /* 80056A98 000539D8  3C 60 80 3B */	lis r3, l_kydata_BloomInf_tbl@ha
@@ -112,7 +121,7 @@ dKyd_BloomInf_tbl_getp__Fi:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8037A1C0 01A4 .rodata    d_d_kankyo_data__stringBase0   @stringBase0                   */
+/* 8037A1C0 01A4 .rodata    @stringBase0                   d_d_kankyo_data__stringBase0   */
 .global d_d_kankyo_data__stringBase0
 d_d_kankyo_data__stringBase0:
 .byte 0x52, 0x5f, 0x53, 0x50, 0x33, 0x30, 0x00, 0x54, 0x5f, 0x53, 0x50, 0x30, 0x35, 0x00, 0x54, 0x5f /* baserom.dol+0x3771c0 */
@@ -142,7 +151,7 @@ d_d_kankyo_data__stringBase0:
 .byte 0x4d, 0x4e, 0x30, 0x39, 0x42, 0x00, 0x44, 0x5f, 0x4d, 0x4e, 0x30, 0x39, 0x43, 0x00, 0x52, 0x5f /* baserom.dol+0x377340 */
 .byte 0x53, 0x50, 0x33, 0x30, 0x30, 0x00, 0x44, 0x5f, 0x53, 0x42, 0x30, 0x32, 0x00, 0x44, 0x5f, 0x53 /* baserom.dol+0x377350 */
 .byte 0x42, 0x30, 0x33, 0x00 /* baserom.dol+0x377360 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x377364 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -360,7 +369,7 @@ l_envr_default:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a68f4 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a6904 */
 .byte 0x00, 0x00 /* baserom.dol+0x3a6914 */
-.byte 0x00, 0x00 /* baserom.dol+0x3a6916 */
+.byte 0x00, 0x00 /* padding */
 
 /* 803A9918 017A .data      l_vr_box_data                  l_vr_box_data                  */
 .global l_vr_box_data
@@ -389,7 +398,7 @@ l_vr_box_data:
 .byte 0x18, 0x1a, 0x1b, 0x3c, 0x30, 0x28, 0x4b, 0x3c, 0x2a, 0x8a, 0x5e, 0x43, 0xff, 0x35, 0x1a, 0x10 /* baserom.dol+0x3a6a68 */
 .byte 0x00, 0xb2, 0x6f, 0x63, 0x2b, 0x00, 0x00, 0x18, 0x31, 0x18, 0x2f, 0x00, 0x0a, 0x88, 0x50, 0x50 /* baserom.dol+0x3a6a78 */
 .byte 0x50, 0x1e, 0x00, 0x00, 0x00, 0x00, 0x61, 0x72, 0x9d, 0x78 /* baserom.dol+0x3a6a88 */
-.byte 0x00, 0x00 /* baserom.dol+0x3a6a92 */
+.byte 0x00, 0x00 /* padding */
 
 /* 803A9A94 0028 .data      S_xfog_table_data              S_xfog_table_data              */
 .global S_xfog_table_data
@@ -397,5 +406,5 @@ S_xfog_table_data:
 .byte 0x01, 0x04, 0x01, 0x04, 0x01, 0x0e, 0x01, 0x18, 0x01, 0x22, 0x01, 0x2c, 0x01, 0x36, 0x01, 0x40 /* baserom.dol+0x3a6a94 */
 .byte 0x01, 0x4a, 0x01, 0x54, 0x00, 0xfa, 0x01, 0x04, 0x01, 0x18, 0x01, 0x40, 0x01, 0x5e, 0x01, 0x90 /* baserom.dol+0x3a6aa4 */
 .byte 0x01, 0xe0, 0x02, 0x26, 0x02, 0x58, 0x03, 0x20 /* baserom.dol+0x3a6ab4 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a6abc */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

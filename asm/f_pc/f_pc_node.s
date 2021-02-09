@@ -7,6 +7,7 @@
 /* 800224F0 0024 .text      fpcNd_DrawMethod__FP21nodedraw_method_classPv fpcNd_DrawMethod__FP21nodedraw_method_classPv */
 .global fpcNd_DrawMethod__FP21nodedraw_method_classPv
 fpcNd_DrawMethod__FP21nodedraw_method_classPv:
+fpcNd_DrawMethod__FP21nodedraw_method_classPv:
 /* 800224F0 0001F430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800224F4 0001F434  7C 08 02 A6 */	mflr r0
 /* 800224F8 0001F438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -17,8 +18,9 @@ fpcNd_DrawMethod__FP21nodedraw_method_classPv:
 /* 8002250C 0001F44C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80022510 0001F450  4E 80 00 20 */	blr 
 
-/* 80022514 0050 .text      fpcNd_Draw__FP18process_node_class fpcNd_Draw__FP18process_node_class */
+/* 80022514 006C .text      fpcNd_Draw__FP18process_node_class fpcNd_Draw__FP18process_node_class */
 .global fpcNd_Draw__FP18process_node_class
+fpcNd_Draw__FP18process_node_class:
 fpcNd_Draw__FP18process_node_class:
 /* 80022514 0001F454  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80022518 0001F458  7C 08 02 A6 */	mflr r0
@@ -29,7 +31,7 @@ fpcNd_Draw__FP18process_node_class:
 /* 8002252C 0001F46C  3B E0 00 00 */	li r31, 0
 /* 80022530 0001F470  88 03 01 A8 */	lbz r0, 0x1a8(r3)
 /* 80022534 0001F474  7C 00 07 75 */	extsb. r0, r0
-/* 80022538 0001F478  40 82 00 2C */	bne func_80022564
+/* 80022538 0001F478  40 82 00 2C */	bne lbl_80022564
 /* 8002253C 0001F47C  4B FF F1 B9 */	bl fpcLy_CurrentLayer__Fv
 /* 80022540 0001F480  7C 7E 1B 78 */	mr r30, r3
 /* 80022544 0001F484  38 7D 00 BC */	addi r3, r29, 0xbc
@@ -40,10 +42,7 @@ fpcNd_Draw__FP18process_node_class:
 /* 80022558 0001F498  7C 7F 1B 78 */	mr r31, r3
 /* 8002255C 0001F49C  7F C3 F3 78 */	mr r3, r30
 /* 80022560 0001F4A0  4B FF F1 8D */	bl fpcLy_SetCurrentLayer__FP11layer_class
-
-/* 80022564 001C .text      func_80022564                  func_80022564                  */
-.global func_80022564
-func_80022564:
+lbl_80022564:
 /* 80022564 0001F4A4  7F E3 FB 78 */	mr r3, r31
 /* 80022568 0001F4A8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8002256C 0001F4AC  48 33 FC BD */	bl _restgpr_29
@@ -54,6 +53,7 @@ func_80022564:
 
 /* 80022580 005C .text      fpcNd_Execute__FP18process_node_class fpcNd_Execute__FP18process_node_class */
 .global fpcNd_Execute__FP18process_node_class
+fpcNd_Execute__FP18process_node_class:
 fpcNd_Execute__FP18process_node_class:
 /* 80022580 0001F4C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80022584 0001F4C4  7C 08 02 A6 */	mflr r0
@@ -79,8 +79,9 @@ fpcNd_Execute__FP18process_node_class:
 /* 800225D4 0001F514  38 21 00 10 */	addi r1, r1, 0x10
 /* 800225D8 0001F518  4E 80 00 20 */	blr 
 
-/* 800225DC 005C .text      fpcNd_IsCreatingFromUnder__FPv fpcNd_IsCreatingFromUnder__FPv */
+/* 800225DC 0080 .text      fpcNd_IsCreatingFromUnder__FPv fpcNd_IsCreatingFromUnder__FPv */
 .global fpcNd_IsCreatingFromUnder__FPv
+fpcNd_IsCreatingFromUnder__FPv:
 fpcNd_IsCreatingFromUnder__FPv:
 /* 800225DC 0001F51C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800225E0 0001F520  7C 08 02 A6 */	mflr r0
@@ -88,38 +89,29 @@ fpcNd_IsCreatingFromUnder__FPv:
 /* 800225E8 0001F528  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800225EC 0001F52C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800225F0 0001F530  7C 7E 1B 79 */	or. r30, r3, r3
-/* 800225F4 0001F534  41 82 00 4C */	beq func_80022640
+/* 800225F4 0001F534  41 82 00 4C */	beq lbl_80022640
 /* 800225F8 0001F538  80 6D 87 C0 */	lwz r3, g_fpcNd_type-_SDA_BASE_(r13)
 /* 800225FC 0001F53C  80 9E 00 B4 */	lwz r4, 0xb4(r30)
 /* 80022600 0001F540  4B FF E0 4D */	bl fpcBs_Is_JustOfType__Fii
 /* 80022604 0001F544  2C 03 00 00 */	cmpwi r3, 0
-/* 80022608 0001F548  41 82 00 38 */	beq func_80022640
+/* 80022608 0001F548  41 82 00 38 */	beq lbl_80022640
 /* 8002260C 0001F54C  3B FE 00 BC */	addi r31, r30, 0xbc
 /* 80022610 0001F550  7F E3 FB 78 */	mr r3, r31
 /* 80022614 0001F554  4B FF F0 8D */	bl fpcLy_IsCreatingMesg__FP11layer_class
 /* 80022618 0001F558  2C 03 00 00 */	cmpwi r3, 0
-/* 8002261C 0001F55C  40 82 00 1C */	bne func_80022638
+/* 8002261C 0001F55C  40 82 00 1C */	bne lbl_80022638
 /* 80022620 0001F560  7F E3 FB 78 */	mr r3, r31
 /* 80022624 0001F564  3C 80 80 02 */	lis r4, fpcNd_IsCreatingFromUnder__FPv@ha
 /* 80022628 0001F568  38 84 25 DC */	addi r4, r4, fpcNd_IsCreatingFromUnder__FPv@l
 /* 8002262C 0001F56C  38 A0 00 00 */	li r5, 0
 /* 80022630 0001F570  4B FF F5 F9 */	bl fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv
-/* 80022634 0001F574  48 00 00 10 */	b func_80022644
-
-/* 80022638 0008 .text      func_80022638                  func_80022638                  */
-.global func_80022638
-func_80022638:
+/* 80022634 0001F574  48 00 00 10 */	b lbl_80022644
+lbl_80022638:
 /* 80022638 0001F578  7F C3 F3 78 */	mr r3, r30
-/* 8002263C 0001F57C  48 00 00 08 */	b func_80022644
-
-/* 80022640 0004 .text      func_80022640                  func_80022640                  */
-.global func_80022640
-func_80022640:
+/* 8002263C 0001F57C  48 00 00 08 */	b lbl_80022644
+lbl_80022640:
 /* 80022640 0001F580  38 60 00 00 */	li r3, 0
-
-/* 80022644 0018 .text      func_80022644                  func_80022644                  */
-.global func_80022644
-func_80022644:
+lbl_80022644:
 /* 80022644 0001F584  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80022648 0001F588  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8002264C 0001F58C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -127,29 +119,24 @@ func_80022644:
 /* 80022654 0001F594  38 21 00 10 */	addi r1, r1, 0x10
 /* 80022658 0001F598  4E 80 00 20 */	blr 
 
-/* 8002265C 002C .text      fpcNd_IsDeleteTiming__FP18process_node_class fpcNd_IsDeleteTiming__FP18process_node_class */
+/* 8002265C 0040 .text      fpcNd_IsDeleteTiming__FP18process_node_class fpcNd_IsDeleteTiming__FP18process_node_class */
 .global fpcNd_IsDeleteTiming__FP18process_node_class
+fpcNd_IsDeleteTiming__FP18process_node_class:
 fpcNd_IsDeleteTiming__FP18process_node_class:
 /* 8002265C 0001F59C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80022660 0001F5A0  7C 08 02 A6 */	mflr r0
 /* 80022664 0001F5A4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80022668 0001F5A8  80 0D 80 60 */	lwz r0, g_fpcNd_IsCheckOfDeleteTiming-_SDA_BASE_(r13)
 /* 8002266C 0001F5AC  2C 00 00 01 */	cmpwi r0, 1
-/* 80022670 0001F5B0  40 82 00 18 */	bne func_80022688
+/* 80022670 0001F5B0  40 82 00 18 */	bne lbl_80022688
 /* 80022674 0001F5B4  4B FF FF 69 */	bl fpcNd_IsCreatingFromUnder__FPv
 /* 80022678 0001F5B8  28 03 00 00 */	cmplwi r3, 0
-/* 8002267C 0001F5BC  41 82 00 0C */	beq func_80022688
+/* 8002267C 0001F5BC  41 82 00 0C */	beq lbl_80022688
 /* 80022680 0001F5C0  38 60 00 00 */	li r3, 0
-/* 80022684 0001F5C4  48 00 00 08 */	b func_8002268C
-
-/* 80022688 0004 .text      func_80022688                  func_80022688                  */
-.global func_80022688
-func_80022688:
+/* 80022684 0001F5C4  48 00 00 08 */	b lbl_8002268C
+lbl_80022688:
 /* 80022688 0001F5C8  38 60 00 01 */	li r3, 1
-
-/* 8002268C 0010 .text      func_8002268C                  func_8002268C                  */
-.global func_8002268C
-func_8002268C:
+lbl_8002268C:
 /* 8002268C 0001F5CC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80022690 0001F5D0  7C 08 03 A6 */	mtlr r0
 /* 80022694 0001F5D4  38 21 00 10 */	addi r1, r1, 0x10
@@ -157,6 +144,7 @@ func_8002268C:
 
 /* 8002269C 0028 .text      fpcNd_IsDelete__FP18process_node_class fpcNd_IsDelete__FP18process_node_class */
 .global fpcNd_IsDelete__FP18process_node_class
+fpcNd_IsDelete__FP18process_node_class:
 fpcNd_IsDelete__FP18process_node_class:
 /* 8002269C 0001F5DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800226A0 0001F5E0  7C 08 02 A6 */	mflr r0
@@ -169,8 +157,9 @@ fpcNd_IsDelete__FP18process_node_class:
 /* 800226BC 0001F5FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800226C0 0001F600  4E 80 00 20 */	blr 
 
-/* 800226C4 004C .text      fpcNd_Delete__FP18process_node_class fpcNd_Delete__FP18process_node_class */
+/* 800226C4 0064 .text      fpcNd_Delete__FP18process_node_class fpcNd_Delete__FP18process_node_class */
 .global fpcNd_Delete__FP18process_node_class
+fpcNd_Delete__FP18process_node_class:
 fpcNd_Delete__FP18process_node_class:
 /* 800226C4 0001F604  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800226C8 0001F608  7C 08 02 A6 */	mflr r0
@@ -180,34 +169,29 @@ fpcNd_Delete__FP18process_node_class:
 /* 800226D8 0001F618  38 7F 00 BC */	addi r3, r31, 0xbc
 /* 800226DC 0001F61C  4B FF EF 89 */	bl fpcLy_IsDeletingMesg__FP11layer_class
 /* 800226E0 0001F620  2C 03 00 00 */	cmpwi r3, 0
-/* 800226E4 0001F624  40 82 00 2C */	bne func_80022710
+/* 800226E4 0001F624  40 82 00 2C */	bne lbl_80022710
 /* 800226E8 0001F628  80 7F 00 B8 */	lwz r3, 0xb8(r31)
 /* 800226EC 0001F62C  7F E4 FB 78 */	mr r4, r31
 /* 800226F0 0001F630  4B FF FD B9 */	bl fpcMtd_Delete__FP20process_method_classPv
 /* 800226F4 0001F634  2C 03 00 01 */	cmpwi r3, 1
-/* 800226F8 0001F638  40 82 00 18 */	bne func_80022710
+/* 800226F8 0001F638  40 82 00 18 */	bne lbl_80022710
 /* 800226FC 0001F63C  38 00 00 00 */	li r0, 0
 /* 80022700 0001F640  90 1F 00 B4 */	stw r0, 0xb4(r31)
 /* 80022704 0001F644  38 7F 00 BC */	addi r3, r31, 0xbc
 /* 80022708 0001F648  4B FF F0 E1 */	bl fpcLy_Delete__FP11layer_class
-/* 8002270C 0001F64C  48 00 00 08 */	b func_80022714
-
-/* 80022710 0004 .text      func_80022710                  func_80022710                  */
-.global func_80022710
-func_80022710:
+/* 8002270C 0001F64C  48 00 00 08 */	b lbl_80022714
+lbl_80022710:
 /* 80022710 0001F650  38 60 00 00 */	li r3, 0
-
-/* 80022714 0014 .text      func_80022714                  func_80022714                  */
-.global func_80022714
-func_80022714:
+lbl_80022714:
 /* 80022714 0001F654  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80022718 0001F658  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8002271C 0001F65C  7C 08 03 A6 */	mtlr r0
 /* 80022720 0001F660  38 21 00 10 */	addi r1, r1, 0x10
 /* 80022724 0001F664  4E 80 00 20 */	blr 
 
-/* 80022728 0058 .text      fpcNd_Create__FP18process_node_class fpcNd_Create__FP18process_node_class */
+/* 80022728 009C .text      fpcNd_Create__FP18process_node_class fpcNd_Create__FP18process_node_class */
 .global fpcNd_Create__FP18process_node_class
+fpcNd_Create__FP18process_node_class:
 fpcNd_Create__FP18process_node_class:
 /* 80022728 0001F668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8002272C 0001F66C  7C 08 02 A6 */	mflr r0
@@ -217,7 +201,7 @@ fpcNd_Create__FP18process_node_class:
 /* 8002273C 0001F67C  7C 7F 1B 78 */	mr r31, r3
 /* 80022740 0001F680  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80022744 0001F684  7C 00 07 75 */	extsb. r0, r0
-/* 80022748 0001F688  40 82 00 38 */	bne func_80022780
+/* 80022748 0001F688  40 82 00 38 */	bne lbl_80022780
 /* 8002274C 0001F68C  83 DF 00 10 */	lwz r30, 0x10(r31)
 /* 80022750 0001F690  38 6D 87 C0 */	addi r3, r13, g_fpcNd_type-_SDA_BASE_
 /* 80022754 0001F694  4B FF DF 09 */	bl fpcBs_MakeOfType__FPi
@@ -231,10 +215,7 @@ fpcNd_Create__FP18process_node_class:
 /* 80022774 0001F6B4  4B FF F1 55 */	bl fpcLy_Create__FP11layer_classPvP15node_list_classi
 /* 80022778 0001F6B8  38 00 00 00 */	li r0, 0
 /* 8002277C 0001F6BC  98 1F 01 A8 */	stb r0, 0x1a8(r31)
-
-/* 80022780 0044 .text      func_80022780                  func_80022780                  */
-.global func_80022780
-func_80022780:
+lbl_80022780:
 /* 80022780 0001F6C0  4B FF EF 75 */	bl fpcLy_CurrentLayer__Fv
 /* 80022784 0001F6C4  7C 7E 1B 78 */	mr r30, r3
 /* 80022788 0001F6C8  38 7F 00 BC */	addi r3, r31, 0xbc
@@ -263,7 +244,7 @@ func_80022780:
 g_fpcNd_Method:
 .byte 0x80, 0x02, 0x27, 0x28, 0x80, 0x02, 0x26, 0xc4, 0x80, 0x02, 0x25, 0x80, 0x80, 0x02, 0x26, 0x9c /* baserom.dol+0x3a0a20 */
 .byte 0x80, 0x02, 0x25, 0x14 /* baserom.dol+0x3a0a30 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a0a34 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -274,7 +255,7 @@ g_fpcNd_Method:
 .global g_fpcNd_IsCheckOfDeleteTiming
 g_fpcNd_IsCheckOfDeleteTiming:
 .byte 0x00, 0x00, 0x00, 0x01 /* baserom.dol+0x3d0340 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0344 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */

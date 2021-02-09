@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80023954 0050 .text      fpcDw_Execute__FP18base_process_class fpcDw_Execute__FP18base_process_class */
+/* 80023954 00A0 .text      fpcDw_Execute__FP18base_process_class fpcDw_Execute__FP18base_process_class */
 .global fpcDw_Execute__FP18base_process_class
+fpcDw_Execute__FP18base_process_class:
 fpcDw_Execute__FP18base_process_class:
 /* 80023954 00020894  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80023958 00020898  7C 08 02 A6 */	mflr r0
@@ -16,27 +17,21 @@ fpcDw_Execute__FP18base_process_class:
 /* 8002396C 000208AC  38 80 00 02 */	li r4, 2
 /* 80023970 000208B0  4B FF FE D5 */	bl fpcPause_IsEnable__FPvUc
 /* 80023974 000208B4  2C 03 00 00 */	cmpwi r3, 0
-/* 80023978 000208B8  40 82 00 60 */	bne func_800239D8
+/* 80023978 000208B8  40 82 00 60 */	bne lbl_800239D8
 /* 8002397C 000208BC  4B FF DD 79 */	bl fpcLy_CurrentLayer__Fv
 /* 80023980 000208C0  7C 7F 1B 78 */	mr r31, r3
 /* 80023984 000208C4  80 6D 87 B0 */	lwz r3, g_fpcLf_type-_SDA_BASE_(r13)
 /* 80023988 000208C8  80 9D 00 B4 */	lwz r4, 0xb4(r29)
 /* 8002398C 000208CC  4B FF CC C1 */	bl fpcBs_Is_JustOfType__Fii
 /* 80023990 000208D0  2C 03 00 00 */	cmpwi r3, 0
-/* 80023994 000208D4  41 82 00 10 */	beq func_800239A4
+/* 80023994 000208D4  41 82 00 10 */	beq lbl_800239A4
 /* 80023998 000208D8  80 7D 00 A8 */	lwz r3, 0xa8(r29)
 /* 8002399C 000208DC  83 C3 00 10 */	lwz r30, 0x10(r3)
-/* 800239A0 000208E0  48 00 00 0C */	b func_800239AC
-
-/* 800239A4 0008 .text      func_800239A4                  func_800239A4                  */
-.global func_800239A4
-func_800239A4:
+/* 800239A0 000208E0  48 00 00 0C */	b lbl_800239AC
+lbl_800239A4:
 /* 800239A4 000208E4  80 7D 00 A8 */	lwz r3, 0xa8(r29)
 /* 800239A8 000208E8  83 C3 00 10 */	lwz r30, 0x10(r3)
-
-/* 800239AC 002C .text      func_800239AC                  func_800239AC                  */
-.global func_800239AC
-func_800239AC:
+lbl_800239AC:
 /* 800239AC 000208EC  80 7D 00 2C */	lwz r3, 0x2c(r29)
 /* 800239B0 000208F0  4B FF DD 3D */	bl fpcLy_SetCurrentLayer__FP11layer_class
 /* 800239B4 000208F4  7F A3 EB 78 */	mr r3, r29
@@ -47,16 +42,10 @@ func_800239AC:
 /* 800239C8 00020908  7F E3 FB 78 */	mr r3, r31
 /* 800239CC 0002090C  4B FF DD 21 */	bl fpcLy_SetCurrentLayer__FP11layer_class
 /* 800239D0 00020910  7F C3 F3 78 */	mr r3, r30
-/* 800239D4 00020914  48 00 00 08 */	b func_800239DC
-
-/* 800239D8 0004 .text      func_800239D8                  func_800239D8                  */
-.global func_800239D8
-func_800239D8:
+/* 800239D4 00020914  48 00 00 08 */	b lbl_800239DC
+lbl_800239D8:
 /* 800239D8 00020918  38 60 00 00 */	li r3, 0
-
-/* 800239DC 0018 .text      func_800239DC                  func_800239DC                  */
-.global func_800239DC
-func_800239DC:
+lbl_800239DC:
 /* 800239DC 0002091C  39 61 00 20 */	addi r11, r1, 0x20
 /* 800239E0 00020920  48 33 E8 49 */	bl _restgpr_29
 /* 800239E4 00020924  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -66,6 +55,7 @@ func_800239DC:
 
 /* 800239F4 0054 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i */
 .global fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i
+fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i:
 fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i:
 /* 800239F4 00020934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800239F8 00020938  7C 08 02 A6 */	mflr r0

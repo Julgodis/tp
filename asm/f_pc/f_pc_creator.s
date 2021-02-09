@@ -7,6 +7,7 @@
 /* 80020EA8 0020 .text      fpcCt_IsCreatingByID__FUi      fpcCt_IsCreatingByID__FUi      */
 .global fpcCt_IsCreatingByID__FUi
 fpcCt_IsCreatingByID__FUi:
+fpcCt_IsCreatingByID__FUi:
 /* 80020EA8 0001DDE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020EAC 0001DDEC  7C 08 02 A6 */	mflr r0
 /* 80020EB0 0001DDF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,6 +19,7 @@ fpcCt_IsCreatingByID__FUi:
 
 /* 80020EC8 0024 .text      fpcCt_IsDoing__FP18base_process_class fpcCt_IsDoing__FP18base_process_class */
 .global fpcCt_IsDoing__FP18base_process_class
+fpcCt_IsDoing__FP18base_process_class:
 fpcCt_IsDoing__FP18base_process_class:
 /* 80020EC8 0001DE08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020ECC 0001DE0C  7C 08 02 A6 */	mflr r0
@@ -32,6 +34,7 @@ fpcCt_IsDoing__FP18base_process_class:
 /* 80020EEC 0024 .text      fpcCt_Abort__FP18base_process_class fpcCt_Abort__FP18base_process_class */
 .global fpcCt_Abort__FP18base_process_class
 fpcCt_Abort__FP18base_process_class:
+fpcCt_Abort__FP18base_process_class:
 /* 80020EEC 0001DE2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020EF0 0001DE30  7C 08 02 A6 */	mflr r0
 /* 80020EF4 0001DE34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -44,6 +47,7 @@ fpcCt_Abort__FP18base_process_class:
 
 /* 80020F10 0020 .text      fpcCt_Handler__Fv              fpcCt_Handler__Fv              */
 .global fpcCt_Handler__Fv
+fpcCt_Handler__Fv:
 fpcCt_Handler__Fv:
 /* 80020F10 0001DE50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80020F14 0001DE54  7C 08 02 A6 */	mflr r0

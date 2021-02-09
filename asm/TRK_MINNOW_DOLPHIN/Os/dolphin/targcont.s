@@ -7,6 +7,7 @@
 /* 8037214C 0034 .text      TRKTargetContinue              TRKTargetContinue              */
 .global TRKTargetContinue
 TRKTargetContinue:
+TRKTargetContinue:
 /* 8037214C 0036F08C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80372150 0036F090  7C 08 02 A6 */	mflr r0
 /* 80372154 0036F094  38 60 00 00 */	li r3, 0

@@ -7,6 +7,7 @@
 /* 80346D6C 0054 .text      PSMTXMultVec                   PSMTXMultVec                   */
 .global PSMTXMultVec
 PSMTXMultVec:
+PSMTXMultVec:
 /* 80346D6C 00343CAC  E0 04 00 00 */	psq_l f0, 0(r4), 0, qr0
 /* 80346D70 00343CB0  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 80346D74 00343CB4  E0 24 80 08 */	psq_l f1, 8(r4), 1, qr0
@@ -29,8 +30,9 @@ PSMTXMultVec:
 /* 80346DB8 00343CF8  F0 C5 80 08 */	psq_st f6, 8(r5), 1, qr0
 /* 80346DBC 00343CFC  4E 80 00 20 */	blr 
 
-/* 80346DC0 004C .text      PSMTXMultVecArray              PSMTXMultVecArray              */
+/* 80346DC0 008C .text      PSMTXMultVecArray              PSMTXMultVecArray              */
 .global PSMTXMultVecArray
+PSMTXMultVecArray:
 PSMTXMultVecArray:
 /* 80346DC0 00343D00  E1 A3 00 00 */	psq_l f13, 0(r3), 0, qr0
 /* 80346DC4 00343D04  E1 83 00 10 */	psq_l f12, 16(r3), 0, qr0
@@ -51,10 +53,7 @@ PSMTXMultVecArray:
 /* 80346E00 00343D40  11 24 01 B2 */	ps_mul f9, f4, f6
 /* 80346E04 00343D44  11 01 41 9E */	ps_madds1 f8, f1, f6, f8
 /* 80346E08 00343D48  11 45 49 FA */	ps_madd f10, f5, f7, f9
-
-/* 80346E0C 0040 .text      func_80346E0C                  func_80346E0C                  */
-.global func_80346E0C
-func_80346E0C:
+lbl_80346E0C:
 /* 80346E0C 00343D4C  E4 C4 00 04 */	psq_lu f6, 4(r4), 0, qr0
 /* 80346E10 00343D50  11 82 41 DC */	ps_madds0 f12, f2, f7, f8
 /* 80346E14 00343D54  E4 E4 80 08 */	psq_lu f7, 8(r4), 1, qr0
@@ -65,7 +64,7 @@ func_80346E0C:
 /* 80346E28 00343D68  11 01 41 9E */	ps_madds1 f8, f1, f6, f8
 /* 80346E2C 00343D6C  F5 A5 80 08 */	psq_stu f13, 8(r5), 1, qr0
 /* 80346E30 00343D70  11 45 49 FA */	ps_madd f10, f5, f7, f9
-/* 80346E34 00343D74  42 00 FF D8 */	bdnz func_80346E0C
+/* 80346E34 00343D74  42 00 FF D8 */	bdnz lbl_80346E0C
 /* 80346E38 00343D78  11 82 41 DC */	ps_madds0 f12, f2, f7, f8
 /* 80346E3C 00343D7C  11 AA 52 54 */	ps_sum0 f13, f10, f9, f10
 /* 80346E40 00343D80  F5 85 00 04 */	psq_stu f12, 4(r5), 0, qr0
@@ -74,6 +73,7 @@ func_80346E0C:
 
 /* 80346E4C 0054 .text      PSMTXMultVecSR                 PSMTXMultVecSR                 */
 .global PSMTXMultVecSR
+PSMTXMultVecSR:
 PSMTXMultVecSR:
 /* 80346E4C 00343D8C  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 80346E50 00343D90  E0 C4 00 00 */	psq_l f6, 0(r4), 0, qr0
@@ -97,8 +97,9 @@ PSMTXMultVecSR:
 /* 80346E98 00343DD8  F1 A5 80 08 */	psq_st f13, 8(r5), 1, qr0
 /* 80346E9C 00343DDC  4E 80 00 20 */	blr 
 
-/* 80346EA0 0048 .text      PSMTXMultVecArraySR            PSMTXMultVecArraySR            */
+/* 80346EA0 0088 .text      PSMTXMultVecArraySR            PSMTXMultVecArraySR            */
 .global PSMTXMultVecArraySR
+PSMTXMultVecArraySR:
 PSMTXMultVecArraySR:
 /* 80346EA0 00343DE0  E1 A3 00 00 */	psq_l f13, 0(r3), 0, qr0
 /* 80346EA4 00343DE4  E1 83 00 10 */	psq_l f12, 16(r3), 0, qr0
@@ -118,10 +119,7 @@ PSMTXMultVecArraySR:
 /* 80346EDC 00343E1C  11 23 01 B2 */	ps_mul f9, f3, f6
 /* 80346EE0 00343E20  11 01 41 9E */	ps_madds1 f8, f1, f6, f8
 /* 80346EE4 00343E24  11 44 49 FA */	ps_madd f10, f4, f7, f9
-
-/* 80346EE8 0040 .text      func_80346EE8                  func_80346EE8                  */
-.global func_80346EE8
-func_80346EE8:
+lbl_80346EE8:
 /* 80346EE8 00343E28  E4 C4 00 04 */	psq_lu f6, 4(r4), 0, qr0
 /* 80346EEC 00343E2C  11 82 41 DC */	ps_madds0 f12, f2, f7, f8
 /* 80346EF0 00343E30  E4 E4 80 08 */	psq_lu f7, 8(r4), 1, qr0
@@ -132,7 +130,7 @@ func_80346EE8:
 /* 80346F04 00343E44  11 01 41 9E */	ps_madds1 f8, f1, f6, f8
 /* 80346F08 00343E48  F5 A5 80 08 */	psq_stu f13, 8(r5), 1, qr0
 /* 80346F0C 00343E4C  11 44 49 FA */	ps_madd f10, f4, f7, f9
-/* 80346F10 00343E50  42 00 FF D8 */	bdnz func_80346EE8
+/* 80346F10 00343E50  42 00 FF D8 */	bdnz lbl_80346EE8
 /* 80346F14 00343E54  11 82 41 DC */	ps_madds0 f12, f2, f7, f8
 /* 80346F18 00343E58  11 AA 4A 54 */	ps_sum0 f13, f10, f9, f9
 /* 80346F1C 00343E5C  F5 85 00 04 */	psq_stu f12, 4(r5), 0, qr0

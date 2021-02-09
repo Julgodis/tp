@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80369274 004C .text      __ieee754_acos                 __ieee754_acos                 */
+/* 80369274 023C .text      __ieee754_acos                 __ieee754_acos                 */
 .global __ieee754_acos
+__ieee754_acos:
 __ieee754_acos:
 /* 80369274 003661B4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80369278 003661B8  7C 08 02 A6 */	mflr r0
@@ -17,44 +18,32 @@ __ieee754_acos:
 /* 80369290 003661D0  80 81 00 08 */	lwz r4, 8(r1)
 /* 80369294 003661D4  54 83 00 7E */	clrlwi r3, r4, 1
 /* 80369298 003661D8  7C 03 00 00 */	cmpw r3, r0
-/* 8036929C 003661DC  41 80 00 38 */	blt func_803692D4
+/* 8036929C 003661DC  41 80 00 38 */	blt lbl_803692D4
 /* 803692A0 003661E0  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 803692A4 003661E4  3C 63 C0 10 */	addis r3, r3, 0xc010
 /* 803692A8 003661E8  7C 60 03 79 */	or. r0, r3, r0
-/* 803692AC 003661EC  40 82 00 1C */	bne func_803692C8
+/* 803692AC 003661EC  40 82 00 1C */	bne lbl_803692C8
 /* 803692B0 003661F0  2C 04 00 00 */	cmpwi r4, 0
-/* 803692B4 003661F4  40 81 00 0C */	ble func_803692C0
+/* 803692B4 003661F4  40 81 00 0C */	ble lbl_803692C0
 /* 803692B8 003661F8  C8 22 CC 78 */	lfd f1, Math_Double_precision_e_acos__LIT_83-_SDA2_BASE_(r2)
-/* 803692BC 003661FC  48 00 01 DC */	b func_80369498
-
-/* 803692C0 0008 .text      func_803692C0                  func_803692C0                  */
-.global func_803692C0
-func_803692C0:
+/* 803692BC 003661FC  48 00 01 DC */	b lbl_80369498
+lbl_803692C0:
 /* 803692C0 00366200  C8 22 CC 80 */	lfd f1, Math_Double_precision_e_acos__LIT_84-_SDA2_BASE_(r2)
-/* 803692C4 00366204  48 00 01 D4 */	b func_80369498
-
-/* 803692C8 000C .text      func_803692C8                  func_803692C8                  */
-.global func_803692C8
-func_803692C8:
+/* 803692C4 00366204  48 00 01 D4 */	b lbl_80369498
+lbl_803692C8:
 /* 803692C8 00366208  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 803692CC 0036620C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
-/* 803692D0 00366210  48 00 01 C8 */	b func_80369498
-
-/* 803692D4 0020 .text      func_803692D4                  func_803692D4                  */
-.global func_803692D4
-func_803692D4:
+/* 803692D0 00366210  48 00 01 C8 */	b lbl_80369498
+lbl_803692D4:
 /* 803692D4 00366214  3C 00 3F E0 */	lis r0, 0x3fe0
 /* 803692D8 00366218  7C 03 00 00 */	cmpw r3, r0
-/* 803692DC 0036621C  40 80 00 8C */	bge func_80369368
+/* 803692DC 0036621C  40 80 00 8C */	bge lbl_80369368
 /* 803692E0 00366220  3C 00 3C 60 */	lis r0, 0x3c60
 /* 803692E4 00366224  7C 03 00 00 */	cmpw r3, r0
-/* 803692E8 00366228  41 81 00 0C */	bgt func_803692F4
+/* 803692E8 00366228  41 81 00 0C */	bgt lbl_803692F4
 /* 803692EC 0036622C  C8 22 CC 88 */	lfd f1, Math_Double_precision_e_acos__LIT_85-_SDA2_BASE_(r2)
-/* 803692F0 00366230  48 00 01 A8 */	b func_80369498
-
-/* 803692F4 0074 .text      func_803692F4                  func_803692F4                  */
-.global func_803692F4
-func_803692F4:
+/* 803692F0 00366230  48 00 01 A8 */	b lbl_80369498
+lbl_803692F4:
 /* 803692F4 00366234  FD 41 00 72 */	fmul f10, f1, f1
 /* 803692F8 00366238  C8 42 CC C0 */	lfd f2, Math_Double_precision_e_acos__LIT_92-_SDA2_BASE_(r2)
 /* 803692FC 0036623C  C8 02 CC B8 */	lfd f0, Math_Double_precision_e_acos__LIT_91-_SDA2_BASE_(r2)
@@ -83,13 +72,10 @@ func_803692F4:
 /* 80369358 00366298  FC 01 00 BC */	fnmsub f0, f1, f2, f0
 /* 8036935C 0036629C  FC 01 00 28 */	fsub f0, f1, f0
 /* 80369360 003662A0  FC 29 00 28 */	fsub f1, f9, f0
-/* 80369364 003662A4  48 00 01 34 */	b func_80369498
-
-/* 80369368 0094 .text      func_80369368                  func_80369368                  */
-.global func_80369368
-func_80369368:
+/* 80369364 003662A4  48 00 01 34 */	b lbl_80369498
+lbl_80369368:
 /* 80369368 003662A8  2C 04 00 00 */	cmpwi r4, 0
-/* 8036936C 003662AC  40 80 00 90 */	bge func_803693FC
+/* 8036936C 003662AC  40 80 00 90 */	bge lbl_803693FC
 /* 80369370 003662B0  C8 02 CC C8 */	lfd f0, Math_Double_precision_e_acos__LIT_93-_SDA2_BASE_(r2)
 /* 80369374 003662B4  C8 42 CC F0 */	lfd f2, Math_Double_precision_e_acos__LIT_98-_SDA2_BASE_(r2)
 /* 80369378 003662B8  FC 00 08 2A */	fadd f0, f0, f1
@@ -124,11 +110,8 @@ func_80369368:
 /* 803693EC 0036632C  FC 43 10 78 */	fmsub f2, f3, f1, f2
 /* 803693F0 00366330  FC 21 10 2A */	fadd f1, f1, f2
 /* 803693F4 00366334  FC 28 00 7C */	fnmsub f1, f8, f1, f0
-/* 803693F8 00366338  48 00 00 A0 */	b func_80369498
-
-/* 803693FC 009C .text      func_803693FC                  func_803693FC                  */
-.global func_803693FC
-func_803693FC:
+/* 803693F8 00366338  48 00 00 A0 */	b lbl_80369498
+lbl_803693FC:
 /* 803693FC 0036633C  C8 02 CC C8 */	lfd f0, Math_Double_precision_e_acos__LIT_93-_SDA2_BASE_(r2)
 /* 80369400 00366340  C8 42 CC F0 */	lfd f2, Math_Double_precision_e_acos__LIT_98-_SDA2_BASE_(r2)
 /* 80369404 00366344  FC 00 08 28 */	fsub f0, f0, f1
@@ -168,10 +151,7 @@ func_803693FC:
 /* 8036948C 003663CC  FC 03 00 7A */	fmadd f0, f3, f1, f0
 /* 80369490 003663D0  FC 09 00 2A */	fadd f0, f9, f0
 /* 80369494 003663D4  FC 22 00 32 */	fmul f1, f2, f0
-
-/* 80369498 0018 .text      func_80369498                  func_80369498                  */
-.global func_80369498
-func_80369498:
+lbl_80369498:
 /* 80369498 003663D8  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 8036949C 003663DC  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 803694A0 003663E0  CB E1 00 20 */	lfd f31, 0x20(r1)
@@ -184,87 +164,87 @@ func_80369498:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456678 0008 .sdata2    Math_Double_precision_e_acos__LIT_83 @83                            */
+/* 80456678 0008 .sdata2    @83                            Math_Double_precision_e_acos__LIT_83 */
 .global Math_Double_precision_e_acos__LIT_83
 Math_Double_precision_e_acos__LIT_83:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d54d8 */
 
-/* 80456680 0008 .sdata2    Math_Double_precision_e_acos__LIT_84 @84                            */
+/* 80456680 0008 .sdata2    @84                            Math_Double_precision_e_acos__LIT_84 */
 .global Math_Double_precision_e_acos__LIT_84
 Math_Double_precision_e_acos__LIT_84:
 .byte 0x40, 0x09, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d54e0 */
 
-/* 80456688 0008 .sdata2    Math_Double_precision_e_acos__LIT_85 @85                            */
+/* 80456688 0008 .sdata2    @85                            Math_Double_precision_e_acos__LIT_85 */
 .global Math_Double_precision_e_acos__LIT_85
 Math_Double_precision_e_acos__LIT_85:
 .byte 0x3f, 0xf9, 0x21, 0xfb, 0x54, 0x44, 0x2d, 0x18 /* baserom.dol+0x3d54e8 */
 
-/* 80456690 0008 .sdata2    Math_Double_precision_e_acos__LIT_86 @86                            */
+/* 80456690 0008 .sdata2    @86                            Math_Double_precision_e_acos__LIT_86 */
 .global Math_Double_precision_e_acos__LIT_86
 Math_Double_precision_e_acos__LIT_86:
 .byte 0x3c, 0x91, 0xa6, 0x26, 0x33, 0x14, 0x5c, 0x07 /* baserom.dol+0x3d54f0 */
 
-/* 80456698 0008 .sdata2    Math_Double_precision_e_acos__LIT_87 @87                            */
+/* 80456698 0008 .sdata2    @87                            Math_Double_precision_e_acos__LIT_87 */
 .global Math_Double_precision_e_acos__LIT_87
 Math_Double_precision_e_acos__LIT_87:
 .byte 0x3f, 0xc5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x55 /* baserom.dol+0x3d54f8 */
 
-/* 804566A0 0008 .sdata2    Math_Double_precision_e_acos__LIT_88 @88                            */
+/* 804566A0 0008 .sdata2    @88                            Math_Double_precision_e_acos__LIT_88 */
 .global Math_Double_precision_e_acos__LIT_88
 Math_Double_precision_e_acos__LIT_88:
 .byte 0xbf, 0xd4, 0xd6, 0x12, 0x03, 0xeb, 0x6f, 0x7d /* baserom.dol+0x3d5500 */
 
-/* 804566A8 0008 .sdata2    Math_Double_precision_e_acos__LIT_89 @89                            */
+/* 804566A8 0008 .sdata2    @89                            Math_Double_precision_e_acos__LIT_89 */
 .global Math_Double_precision_e_acos__LIT_89
 Math_Double_precision_e_acos__LIT_89:
 .byte 0x3f, 0xc9, 0xc1, 0x55, 0x0e, 0x88, 0x44, 0x55 /* baserom.dol+0x3d5508 */
 
-/* 804566B0 0008 .sdata2    Math_Double_precision_e_acos__LIT_90 @90                            */
+/* 804566B0 0008 .sdata2    @90                            Math_Double_precision_e_acos__LIT_90 */
 .global Math_Double_precision_e_acos__LIT_90
 Math_Double_precision_e_acos__LIT_90:
 .byte 0xbf, 0xa4, 0x82, 0x28, 0xb5, 0x68, 0x8f, 0x3b /* baserom.dol+0x3d5510 */
 
-/* 804566B8 0008 .sdata2    Math_Double_precision_e_acos__LIT_91 @91                            */
+/* 804566B8 0008 .sdata2    @91                            Math_Double_precision_e_acos__LIT_91 */
 .global Math_Double_precision_e_acos__LIT_91
 Math_Double_precision_e_acos__LIT_91:
 .byte 0x3f, 0x49, 0xef, 0xe0, 0x75, 0x01, 0xb2, 0x88 /* baserom.dol+0x3d5518 */
 
-/* 804566C0 0008 .sdata2    Math_Double_precision_e_acos__LIT_92 @92                            */
+/* 804566C0 0008 .sdata2    @92                            Math_Double_precision_e_acos__LIT_92 */
 .global Math_Double_precision_e_acos__LIT_92
 Math_Double_precision_e_acos__LIT_92:
 .byte 0x3f, 0x02, 0x3d, 0xe1, 0x0d, 0xfd, 0xf7, 0x09 /* baserom.dol+0x3d5520 */
 
-/* 804566C8 0008 .sdata2    Math_Double_precision_e_acos__LIT_93 @93                            */
+/* 804566C8 0008 .sdata2    @93                            Math_Double_precision_e_acos__LIT_93 */
 .global Math_Double_precision_e_acos__LIT_93
 Math_Double_precision_e_acos__LIT_93:
 .byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5528 */
 
-/* 804566D0 0008 .sdata2    Math_Double_precision_e_acos__LIT_94 @94                            */
+/* 804566D0 0008 .sdata2    @94                            Math_Double_precision_e_acos__LIT_94 */
 .global Math_Double_precision_e_acos__LIT_94
 Math_Double_precision_e_acos__LIT_94:
 .byte 0xc0, 0x03, 0x3a, 0x27, 0x1c, 0x8a, 0x2d, 0x4b /* baserom.dol+0x3d5530 */
 
-/* 804566D8 0008 .sdata2    Math_Double_precision_e_acos__LIT_95 @95                            */
+/* 804566D8 0008 .sdata2    @95                            Math_Double_precision_e_acos__LIT_95 */
 .global Math_Double_precision_e_acos__LIT_95
 Math_Double_precision_e_acos__LIT_95:
 .byte 0x40, 0x00, 0x2a, 0xe5, 0x9c, 0x59, 0x8a, 0xc8 /* baserom.dol+0x3d5538 */
 
-/* 804566E0 0008 .sdata2    Math_Double_precision_e_acos__LIT_96 @96                            */
+/* 804566E0 0008 .sdata2    @96                            Math_Double_precision_e_acos__LIT_96 */
 .global Math_Double_precision_e_acos__LIT_96
 Math_Double_precision_e_acos__LIT_96:
 .byte 0xbf, 0xe6, 0x06, 0x6c, 0x1b, 0x8d, 0x01, 0x59 /* baserom.dol+0x3d5540 */
 
-/* 804566E8 0008 .sdata2    Math_Double_precision_e_acos__LIT_97 @97                            */
+/* 804566E8 0008 .sdata2    @97                            Math_Double_precision_e_acos__LIT_97 */
 .global Math_Double_precision_e_acos__LIT_97
 Math_Double_precision_e_acos__LIT_97:
 .byte 0x3f, 0xb3, 0xb8, 0xc5, 0xb1, 0x2e, 0x92, 0x82 /* baserom.dol+0x3d5548 */
 
-/* 804566F0 0008 .sdata2    Math_Double_precision_e_acos__LIT_98 @98                            */
+/* 804566F0 0008 .sdata2    @98                            Math_Double_precision_e_acos__LIT_98 */
 .global Math_Double_precision_e_acos__LIT_98
 Math_Double_precision_e_acos__LIT_98:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5550 */
 
-/* 804566F8 0008 .sdata2    Math_Double_precision_e_acos__LIT_99 @99                            */
+/* 804566F8 0008 .sdata2    @99                            Math_Double_precision_e_acos__LIT_99 */
 .global Math_Double_precision_e_acos__LIT_99
 Math_Double_precision_e_acos__LIT_99:
 .byte 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d5558 */

@@ -7,6 +7,7 @@
 /* 80078624 0044 .text      __ct__16dBgS_MoveBgActorFv     __ct__16dBgS_MoveBgActorFv     */
 .global __ct__16dBgS_MoveBgActorFv
 __ct__16dBgS_MoveBgActorFv:
+__ct__16dBgS_MoveBgActorFv:
 /* 80078624 00075564  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80078628 00075568  7C 08 02 A6 */	mflr r0
 /* 8007862C 0007556C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -25,8 +26,9 @@ __ct__16dBgS_MoveBgActorFv:
 /* 80078660 000755A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80078664 000755A4  4E 80 00 20 */	blr 
 
-/* 80078668 0020 .text      d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c CheckCreateHeap__FP10fopAc_ac_c */
+/* 80078668 0020 .text      CheckCreateHeap__FP10fopAc_ac_c d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c */
 .global d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c
+d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c:
 d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c:
 /* 80078668 000755A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8007866C 000755AC  7C 08 02 A6 */	mflr r0
@@ -40,11 +42,13 @@ d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c:
 /* 80078688 0008 .text      CreateHeap__16dBgS_MoveBgActorFv CreateHeap__16dBgS_MoveBgActorFv */
 .global CreateHeap__16dBgS_MoveBgActorFv
 CreateHeap__16dBgS_MoveBgActorFv:
+CreateHeap__16dBgS_MoveBgActorFv:
 /* 80078688 000755C8  38 60 00 01 */	li r3, 1
 /* 8007868C 000755CC  4E 80 00 20 */	blr 
 
 /* 80078690 0008 .text      Create__16dBgS_MoveBgActorFv   Create__16dBgS_MoveBgActorFv   */
 .global Create__16dBgS_MoveBgActorFv
+Create__16dBgS_MoveBgActorFv:
 Create__16dBgS_MoveBgActorFv:
 /* 80078690 000755D0  38 60 00 01 */	li r3, 1
 /* 80078694 000755D4  4E 80 00 20 */	blr 
@@ -52,11 +56,13 @@ Create__16dBgS_MoveBgActorFv:
 /* 80078698 0008 .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f Execute__16dBgS_MoveBgActorFPPA3_A4_f */
 .global Execute__16dBgS_MoveBgActorFPPA3_A4_f
 Execute__16dBgS_MoveBgActorFPPA3_A4_f:
+Execute__16dBgS_MoveBgActorFPPA3_A4_f:
 /* 80078698 000755D8  38 60 00 01 */	li r3, 1
 /* 8007869C 000755DC  4E 80 00 20 */	blr 
 
 /* 800786A0 0008 .text      Draw__16dBgS_MoveBgActorFv     Draw__16dBgS_MoveBgActorFv     */
 .global Draw__16dBgS_MoveBgActorFv
+Draw__16dBgS_MoveBgActorFv:
 Draw__16dBgS_MoveBgActorFv:
 /* 800786A0 000755E0  38 60 00 01 */	li r3, 1
 /* 800786A4 000755E4  4E 80 00 20 */	blr 
@@ -64,11 +70,13 @@ Draw__16dBgS_MoveBgActorFv:
 /* 800786A8 0008 .text      Delete__16dBgS_MoveBgActorFv   Delete__16dBgS_MoveBgActorFv   */
 .global Delete__16dBgS_MoveBgActorFv
 Delete__16dBgS_MoveBgActorFv:
+Delete__16dBgS_MoveBgActorFv:
 /* 800786A8 000755E8  38 60 00 01 */	li r3, 1
 /* 800786AC 000755EC  4E 80 00 20 */	blr 
 
 /* 800786B0 0008 .text      IsDelete__16dBgS_MoveBgActorFv IsDelete__16dBgS_MoveBgActorFv */
 .global IsDelete__16dBgS_MoveBgActorFv
+IsDelete__16dBgS_MoveBgActorFv:
 IsDelete__16dBgS_MoveBgActorFv:
 /* 800786B0 000755F0  38 60 00 01 */	li r3, 1
 /* 800786B4 000755F4  4E 80 00 20 */	blr 
@@ -76,17 +84,20 @@ IsDelete__16dBgS_MoveBgActorFv:
 /* 800786B8 0008 .text      ToFore__16dBgS_MoveBgActorFv   ToFore__16dBgS_MoveBgActorFv   */
 .global ToFore__16dBgS_MoveBgActorFv
 ToFore__16dBgS_MoveBgActorFv:
+ToFore__16dBgS_MoveBgActorFv:
 /* 800786B8 000755F8  38 60 00 01 */	li r3, 1
 /* 800786BC 000755FC  4E 80 00 20 */	blr 
 
 /* 800786C0 0008 .text      ToBack__16dBgS_MoveBgActorFv   ToBack__16dBgS_MoveBgActorFv   */
 .global ToBack__16dBgS_MoveBgActorFv
 ToBack__16dBgS_MoveBgActorFv:
+ToBack__16dBgS_MoveBgActorFv:
 /* 800786C0 00075600  38 60 00 01 */	li r3, 1
 /* 800786C4 00075604  4E 80 00 20 */	blr 
 
-/* 800786C8 0034 .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv MoveBGCreateHeap__16dBgS_MoveBgActorFv */
+/* 800786C8 00F4 .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv MoveBGCreateHeap__16dBgS_MoveBgActorFv */
 .global MoveBGCreateHeap__16dBgS_MoveBgActorFv
+MoveBGCreateHeap__16dBgS_MoveBgActorFv:
 MoveBGCreateHeap__16dBgS_MoveBgActorFv:
 /* 800786C8 00075608  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800786CC 0007560C  7C 08 02 A6 */	mflr r0
@@ -98,38 +109,29 @@ MoveBGCreateHeap__16dBgS_MoveBgActorFv:
 /* 800786E4 00075624  7D 89 03 A6 */	mtctr r12
 /* 800786E8 00075628  4E 80 04 21 */	bctrl 
 /* 800786EC 0007562C  2C 03 00 00 */	cmpwi r3, 0
-/* 800786F0 00075630  40 82 00 0C */	bne func_800786FC
+/* 800786F0 00075630  40 82 00 0C */	bne lbl_800786FC
 /* 800786F4 00075634  38 60 00 00 */	li r3, 0
-/* 800786F8 00075638  48 00 00 B0 */	b func_800787A8
-
-/* 800786FC 001C .text      func_800786FC                  func_800786FC                  */
-.global func_800786FC
-func_800786FC:
+/* 800786F8 00075638  48 00 00 B0 */	b lbl_800787A8
+lbl_800786FC:
 /* 800786FC 0007563C  80 0D 89 F4 */	lwz r0, m_dzb_id__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 80078700 00075640  2C 00 FF FF */	cmpwi r0, -1
-/* 80078704 00075644  40 82 00 14 */	bne func_80078718
+/* 80078704 00075644  40 82 00 14 */	bne lbl_80078718
 /* 80078708 00075648  38 00 00 00 */	li r0, 0
 /* 8007870C 0007564C  90 1F 05 68 */	stw r0, 0x568(r31)
 /* 80078710 00075650  38 60 00 01 */	li r3, 1
-/* 80078714 00075654  48 00 00 94 */	b func_800787A8
-
-/* 80078718 0018 .text      func_80078718                  func_80078718                  */
-.global func_80078718
-func_80078718:
+/* 80078714 00075654  48 00 00 94 */	b lbl_800787A8
+lbl_80078718:
 /* 80078718 00075658  38 60 00 C0 */	li r3, 0xc0
 /* 8007871C 0007565C  48 25 65 31 */	bl __nw__FUl
 /* 80078720 00075660  7C 60 1B 79 */	or. r0, r3, r3
-/* 80078724 00075664  41 82 00 0C */	beq func_80078730
+/* 80078724 00075664  41 82 00 0C */	beq lbl_80078730
 /* 80078728 00075668  48 00 32 49 */	bl __ct__4dBgWFv
 /* 8007872C 0007566C  7C 60 1B 78 */	mr r0, r3
-
-/* 80078730 0064 .text      func_80078730                  func_80078730                  */
-.global func_80078730
-func_80078730:
+lbl_80078730:
 /* 80078730 00075670  90 1F 05 68 */	stw r0, 0x568(r31)
 /* 80078734 00075674  80 1F 05 68 */	lwz r0, 0x568(r31)
 /* 80078738 00075678  28 00 00 00 */	cmplwi r0, 0
-/* 8007873C 0007567C  41 82 00 58 */	beq func_80078794
+/* 8007873C 0007567C  41 82 00 58 */	beq lbl_80078794
 /* 80078740 00075680  80 6D 89 F0 */	lwz r3, m_name__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 80078744 00075684  80 8D 89 F4 */	lwz r4, m_dzb_id__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 80078748 00075688  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
@@ -144,38 +146,30 @@ func_80078730:
 /* 8007876C 000756AC  38 DF 05 6C */	addi r6, r31, 0x56c
 /* 80078770 000756B0  48 00 17 C9 */	bl Set__4cBgWFP6cBgD_tUlPA3_A4_f
 /* 80078774 000756B4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80078778 000756B8  40 82 00 1C */	bne func_80078794
+/* 80078778 000756B8  40 82 00 1C */	bne lbl_80078794
 /* 8007877C 000756BC  80 0D 89 F8 */	lwz r0, m_set_func__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 80078780 000756C0  28 00 00 00 */	cmplwi r0, 0
-/* 80078784 000756C4  41 82 00 20 */	beq func_800787A4
+/* 80078784 000756C4  41 82 00 20 */	beq lbl_800787A4
 /* 80078788 000756C8  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 8007878C 000756CC  90 03 00 B0 */	stw r0, 0xb0(r3)
-/* 80078790 000756D0  48 00 00 14 */	b func_800787A4
-
-/* 80078794 0010 .text      func_80078794                  func_80078794                  */
-.global func_80078794
-func_80078794:
+/* 80078790 000756D0  48 00 00 14 */	b lbl_800787A4
+lbl_80078794:
 /* 80078794 000756D4  38 00 00 00 */	li r0, 0
 /* 80078798 000756D8  90 1F 05 68 */	stw r0, 0x568(r31)
 /* 8007879C 000756DC  38 60 00 00 */	li r3, 0
-/* 800787A0 000756E0  48 00 00 08 */	b func_800787A8
-
-/* 800787A4 0004 .text      func_800787A4                  func_800787A4                  */
-.global func_800787A4
-func_800787A4:
+/* 800787A0 000756E0  48 00 00 08 */	b lbl_800787A8
+lbl_800787A4:
 /* 800787A4 000756E4  38 60 00 01 */	li r3, 1
-
-/* 800787A8 0014 .text      func_800787A8                  func_800787A8                  */
-.global func_800787A8
-func_800787A8:
+lbl_800787A8:
 /* 800787A8 000756E8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800787AC 000756EC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800787B0 000756F0  7C 08 03 A6 */	mtlr r0
 /* 800787B4 000756F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800787B8 000756F8  4E 80 00 20 */	blr 
 
-/* 800787BC 007C .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
+/* 800787BC 0120 .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
 .global MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f
+MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f:
 MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f:
 /* 800787BC 000756FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800787C0 00075700  7C 08 02 A6 */	mflr r0
@@ -188,7 +182,7 @@ MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5
 /* 800787DC 0007571C  7C DD 33 78 */	mr r29, r6
 /* 800787E0 00075720  7C FE 3B 78 */	mr r30, r7
 /* 800787E4 00075724  28 08 00 00 */	cmplwi r8, 0
-/* 800787E8 00075728  40 82 00 50 */	bne func_80078838
+/* 800787E8 00075728  40 82 00 50 */	bne lbl_80078838
 /* 800787EC 0007572C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 800787F0 00075730  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 800787F4 00075734  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
@@ -207,18 +201,12 @@ MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5
 /* 80078828 00075768  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8007882C 0007576C  38 9F 05 6C */	addi r4, r31, 0x56c
 /* 80078830 00075770  48 2C DC 81 */	bl PSMTXCopy
-/* 80078834 00075774  48 00 00 10 */	b func_80078844
-
-/* 80078838 000C .text      func_80078838                  func_80078838                  */
-.global func_80078838
-func_80078838:
+/* 80078834 00075774  48 00 00 10 */	b lbl_80078844
+lbl_80078838:
 /* 80078838 00075778  7D 03 43 78 */	mr r3, r8
 /* 8007883C 0007577C  38 9F 05 6C */	addi r4, r31, 0x56c
 /* 80078840 00075780  48 2C DC 71 */	bl PSMTXCopy
-
-/* 80078844 0030 .text      func_80078844                  func_80078844                  */
-.global func_80078844
-func_80078844:
+lbl_80078844:
 /* 80078844 00075784  93 6D 89 F0 */	stw r27, m_name__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 80078848 00075788  93 8D 89 F4 */	stw r28, m_dzb_id__16dBgS_MoveBgActor-_SDA_BASE_(r13)
 /* 8007884C 0007578C  93 AD 89 F8 */	stw r29, m_set_func__16dBgS_MoveBgActor-_SDA_BASE_(r13)
@@ -228,29 +216,23 @@ func_80078844:
 /* 8007885C 0007579C  7F C5 F3 78 */	mr r5, r30
 /* 80078860 000757A0  4B FA 1C 51 */	bl fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80078864 000757A4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80078868 000757A8  40 82 00 0C */	bne func_80078874
+/* 80078868 000757A8  40 82 00 0C */	bne lbl_80078874
 /* 8007886C 000757AC  38 60 00 05 */	li r3, 5
-/* 80078870 000757B0  48 00 00 54 */	b func_800788C4
-
-/* 80078874 0030 .text      func_80078874                  func_80078874                  */
-.global func_80078874
-func_80078874:
+/* 80078870 000757B0  48 00 00 54 */	b lbl_800788C4
+lbl_80078874:
 /* 80078874 000757B4  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80078878 000757B8  28 04 00 00 */	cmplwi r4, 0
-/* 8007887C 000757BC  41 82 00 28 */	beq func_800788A4
+/* 8007887C 000757BC  41 82 00 28 */	beq lbl_800788A4
 /* 80078880 000757C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80078884 000757C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80078888 000757C8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8007888C 000757CC  7F E5 FB 78 */	mr r5, r31
 /* 80078890 000757D0  4B FF C1 79 */	bl Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
 /* 80078894 000757D4  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 80078898 000757D8  41 82 00 0C */	beq func_800788A4
+/* 80078898 000757D8  41 82 00 0C */	beq lbl_800788A4
 /* 8007889C 000757DC  38 60 00 05 */	li r3, 5
-/* 800788A0 000757E0  48 00 00 24 */	b func_800788C4
-
-/* 800788A4 0020 .text      func_800788A4                  func_800788A4                  */
-.global func_800788A4
-func_800788A4:
+/* 800788A0 000757E0  48 00 00 24 */	b lbl_800788C4
+lbl_800788A4:
 /* 800788A4 000757E4  7F E3 FB 78 */	mr r3, r31
 /* 800788A8 000757E8  81 9F 05 9C */	lwz r12, 0x59c(r31)
 /* 800788AC 000757EC  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -259,10 +241,7 @@ func_800788A4:
 /* 800788B8 000757F8  20 03 00 00 */	subfic r0, r3, 0
 /* 800788BC 000757FC  7C 60 01 10 */	subfe r3, r0, r0
 /* 800788C0 00075800  38 63 00 05 */	addi r3, r3, 5
-
-/* 800788C4 0018 .text      func_800788C4                  func_800788C4                  */
-.global func_800788C4
-func_800788C4:
+lbl_800788C4:
 /* 800788C4 00075804  39 61 00 20 */	addi r11, r1, 0x20
 /* 800788C8 00075808  48 2E 99 59 */	bl _restgpr_27
 /* 800788CC 0007580C  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -270,8 +249,9 @@ func_800788C4:
 /* 800788D4 00075814  38 21 00 20 */	addi r1, r1, 0x20
 /* 800788D8 00075818  4E 80 00 20 */	blr 
 
-/* 800788DC 0058 .text      MoveBGDelete__16dBgS_MoveBgActorFv MoveBGDelete__16dBgS_MoveBgActorFv */
+/* 800788DC 0074 .text      MoveBGDelete__16dBgS_MoveBgActorFv MoveBGDelete__16dBgS_MoveBgActorFv */
 .global MoveBGDelete__16dBgS_MoveBgActorFv
+MoveBGDelete__16dBgS_MoveBgActorFv:
 MoveBGDelete__16dBgS_MoveBgActorFv:
 /* 800788DC 0007581C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800788E0 00075820  7C 08 02 A6 */	mflr r0
@@ -286,19 +266,16 @@ MoveBGDelete__16dBgS_MoveBgActorFv:
 /* 80078904 00075844  7C 7F 1B 78 */	mr r31, r3
 /* 80078908 00075848  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 8007890C 0007584C  28 03 00 00 */	cmplwi r3, 0
-/* 80078910 00075850  41 82 00 24 */	beq func_80078934
+/* 80078910 00075850  41 82 00 24 */	beq lbl_80078934
 /* 80078914 00075854  48 1E F8 C1 */	bl ChkUsed__9cBgW_BgIdCFv
 /* 80078918 00075858  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8007891C 0007585C  41 82 00 18 */	beq func_80078934
+/* 8007891C 0007585C  41 82 00 18 */	beq lbl_80078934
 /* 80078920 00075860  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
 /* 80078924 00075864  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80078928 00075868  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8007892C 0007586C  80 9E 05 68 */	lwz r4, 0x568(r30)
 /* 80078930 00075870  4B FF B9 21 */	bl Release__4cBgSFP9dBgW_Base
-
-/* 80078934 001C .text      func_80078934                  func_80078934                  */
-.global func_80078934
-func_80078934:
+lbl_80078934:
 /* 80078934 00075874  7F E3 FB 78 */	mr r3, r31
 /* 80078938 00075878  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8007893C 0007587C  83 C1 00 08 */	lwz r30, 8(r1)
@@ -307,8 +284,9 @@ func_80078934:
 /* 80078948 00075888  38 21 00 10 */	addi r1, r1, 0x10
 /* 8007894C 0007588C  4E 80 00 20 */	blr 
 
-/* 80078950 0090 .text      MoveBGExecute__16dBgS_MoveBgActorFv MoveBGExecute__16dBgS_MoveBgActorFv */
+/* 80078950 00C4 .text      MoveBGExecute__16dBgS_MoveBgActorFv MoveBGExecute__16dBgS_MoveBgActorFv */
 .global MoveBGExecute__16dBgS_MoveBgActorFv
+MoveBGExecute__16dBgS_MoveBgActorFv:
 MoveBGExecute__16dBgS_MoveBgActorFv:
 /* 80078950 00075890  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80078954 00075894  7C 08 02 A6 */	mflr r0
@@ -326,7 +304,7 @@ MoveBGExecute__16dBgS_MoveBgActorFv:
 /* 80078984 000758C4  7C 7F 1B 78 */	mr r31, r3
 /* 80078988 000758C8  80 61 00 08 */	lwz r3, 8(r1)
 /* 8007898C 000758CC  28 03 00 00 */	cmplwi r3, 0
-/* 80078990 000758D0  40 82 00 50 */	bne func_800789E0
+/* 80078990 000758D0  40 82 00 50 */	bne lbl_800789E0
 /* 80078994 000758D4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80078998 000758D8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8007899C 000758DC  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
@@ -345,25 +323,16 @@ MoveBGExecute__16dBgS_MoveBgActorFv:
 /* 800789D0 00075910  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 800789D4 00075914  38 9E 05 6C */	addi r4, r30, 0x56c
 /* 800789D8 00075918  48 2C DA D9 */	bl PSMTXCopy
-/* 800789DC 0007591C  48 00 00 0C */	b func_800789E8
-
-/* 800789E0 0008 .text      func_800789E0                  func_800789E0                  */
-.global func_800789E0
-func_800789E0:
+/* 800789DC 0007591C  48 00 00 0C */	b lbl_800789E8
+lbl_800789E0:
 /* 800789E0 00075920  38 9E 05 6C */	addi r4, r30, 0x56c
 /* 800789E4 00075924  48 2C DA CD */	bl PSMTXCopy
-
-/* 800789E8 0010 .text      func_800789E8                  func_800789E8                  */
-.global func_800789E8
-func_800789E8:
+lbl_800789E8:
 /* 800789E8 00075928  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 800789EC 0007592C  28 03 00 00 */	cmplwi r3, 0
-/* 800789F0 00075930  41 82 00 08 */	beq func_800789F8
+/* 800789F0 00075930  41 82 00 08 */	beq lbl_800789F8
 /* 800789F4 00075934  48 00 2F CD */	bl Move__4dBgWFv
-
-/* 800789F8 001C .text      func_800789F8                  func_800789F8                  */
-.global func_800789F8
-func_800789F8:
+lbl_800789F8:
 /* 800789F8 00075938  7F E3 FB 78 */	mr r3, r31
 /* 800789FC 0007593C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80078A00 00075940  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -380,9 +349,16 @@ func_800789F8:
 /* 803AB9A0 0028 .data      __vt__16dBgS_MoveBgActor       __vt__16dBgS_MoveBgActor       */
 .global __vt__16dBgS_MoveBgActor
 __vt__16dBgS_MoveBgActor:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x07, 0x86, 0x88, 0x80, 0x07, 0x86, 0x90 /* baserom.dol+0x3a89a0 */
-.byte 0x80, 0x07, 0x86, 0x98, 0x80, 0x07, 0x86, 0xa0, 0x80, 0x07, 0x86, 0xa8, 0x80, 0x07, 0x86, 0xb0 /* baserom.dol+0x3a89b0 */
-.byte 0x80, 0x07, 0x86, 0xb8, 0x80, 0x07, 0x86, 0xc0 /* baserom.dol+0x3a89c0 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte CreateHeap__16dBgS_MoveBgActorFv
+.4byte Create__16dBgS_MoveBgActorFv
+.4byte Execute__16dBgS_MoveBgActorFPPA3_A4_f
+.4byte Draw__16dBgS_MoveBgActorFv
+.4byte Delete__16dBgS_MoveBgActorFv
+.4byte IsDelete__16dBgS_MoveBgActorFv
+.4byte ToFore__16dBgS_MoveBgActorFv
+.4byte ToBack__16dBgS_MoveBgActorFv
 
 
 /* ###################################################################################### */

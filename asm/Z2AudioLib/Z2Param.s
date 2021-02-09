@@ -174,69 +174,69 @@ VOL_SE_OBJECT_PAUSING__7Z2Param:
 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param:
 .byte 0x3f, 0x11, 0x22, 0x45 /* baserom.dol+0x3d05bc */
 
-/* 80450860 0001 .sdata     sym_80450860                   sym_80450860                   */
-.global sym_80450860
-sym_80450860:
+/* 80450860 0001 .sdata     data_80450860                  data_80450860                  */
+.global data_80450860
+data_80450860:
 .byte 0x21 /* baserom.dol+0x3d05c0 */
 
-/* 80450861 0001 .sdata     sym_80450861                   sym_80450861                   */
-.global sym_80450861
-sym_80450861:
+/* 80450861 0001 .sdata     data_80450861                  data_80450861                  */
+.global data_80450861
+data_80450861:
 .byte 0x3c /* baserom.dol+0x3d05c1 */
 
-/* 80450862 0001 .sdata     sym_80450862                   sym_80450862                   */
-.global sym_80450862
-sym_80450862:
+/* 80450862 0001 .sdata     data_80450862                  data_80450862                  */
+.global data_80450862
+data_80450862:
 .byte 0x3c /* baserom.dol+0x3d05c2 */
 
-/* 80450863 0001 .sdata     sym_80450863                   sym_80450863                   */
-.global sym_80450863
-sym_80450863:
+/* 80450863 0001 .sdata     data_80450863                  data_80450863                  */
+.global data_80450863
+data_80450863:
 .byte 0x1e /* baserom.dol+0x3d05c3 */
 
-/* 80450864 0001 .sdata     sym_80450864                   sym_80450864                   */
-.global sym_80450864
-sym_80450864:
+/* 80450864 0001 .sdata     data_80450864                  data_80450864                  */
+.global data_80450864
+data_80450864:
 .byte 0x14 /* baserom.dol+0x3d05c4 */
 
-/* 80450865 0001 .sdata     sym_80450865                   sym_80450865                   */
-.global sym_80450865
-sym_80450865:
+/* 80450865 0001 .sdata     data_80450865                  data_80450865                  */
+.global data_80450865
+data_80450865:
 .byte 0x1e /* baserom.dol+0x3d05c5 */
 
-/* 80450866 0001 .sdata     sym_80450866                   sym_80450866                   */
-.global sym_80450866
-sym_80450866:
+/* 80450866 0001 .sdata     data_80450866                  data_80450866                  */
+.global data_80450866
+data_80450866:
 .byte 0x0a /* baserom.dol+0x3d05c6 */
 
-/* 80450867 0001 .sdata     sym_80450867                   sym_80450867                   */
-.global sym_80450867
-sym_80450867:
+/* 80450867 0001 .sdata     data_80450867                  data_80450867                  */
+.global data_80450867
+data_80450867:
 .byte 0x1e /* baserom.dol+0x3d05c7 */
 
-/* 80450868 0001 .sdata     sym_80450868                   sym_80450868                   */
-.global sym_80450868
-sym_80450868:
+/* 80450868 0001 .sdata     data_80450868                  data_80450868                  */
+.global data_80450868
+data_80450868:
 .byte 0x01 /* baserom.dol+0x3d05c8 */
 
-/* 80450869 0001 .sdata     sym_80450869                   sym_80450869                   */
-.global sym_80450869
-sym_80450869:
+/* 80450869 0001 .sdata     data_80450869                  data_80450869                  */
+.global data_80450869
+data_80450869:
 .byte 0x0a /* baserom.dol+0x3d05c9 */
 
-/* 8045086A 0001 .sdata     sym_8045086A                   sym_8045086A                   */
-.global sym_8045086A
-sym_8045086A:
+/* 8045086A 0001 .sdata     data_8045086A                  data_8045086A                  */
+.global data_8045086A
+data_8045086A:
 .byte 0x1e /* baserom.dol+0x3d05ca */
 
-/* 8045086B 0001 .sdata     sym_8045086B                   sym_8045086B                   */
-.global sym_8045086B
-sym_8045086B:
+/* 8045086B 0001 .sdata     data_8045086B                  data_8045086B                  */
+.global data_8045086B
+data_8045086B:
 .byte 0x14 /* baserom.dol+0x3d05cb */
 
-/* 8045086C 0004 .sdata     sym_8045086C                   sym_8045086C                   */
-.global sym_8045086C
-sym_8045086C:
+/* 8045086C 0004 .sdata     data_8045086C                  data_8045086C                  */
+.global data_8045086C
+data_8045086C:
 .byte 0x01, 0x00, 0x00, 0x00 /* baserom.dol+0x3d05cc */
 
 
@@ -254,23 +254,23 @@ MIN_DISTANCE_VOLUME__7Z2Param:
 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param:
 .skip 0x4
 
-/* 80451340 0001 .sbss      sym_80451340                   sym_80451340                   */
-.global sym_80451340
-sym_80451340:
+/* 80451340 0001 .sbss      data_80451340                  data_80451340                  */
+.global data_80451340
+data_80451340:
 .skip 0x1
 
-/* 80451341 0001 .sbss      sym_80451341                   sym_80451341                   */
-.global sym_80451341
-sym_80451341:
+/* 80451341 0001 .sbss      data_80451341                  data_80451341                  */
+.global data_80451341
+data_80451341:
 .skip 0x1
 
-/* 80451342 0006 .sbss      sym_80451342                   sym_80451342                   */
-.global sym_80451342
-sym_80451342:
+/* 80451342 0006 .sbss      data_80451342                  data_80451342                  */
+.global data_80451342
+data_80451342:
 .skip 0x6
 
-/* 80451348 0008 .sbss      sym_80451348                   sym_80451348                   */
-.global sym_80451348
-sym_80451348:
+/* 80451348 0008 .sbss      data_80451348                  data_80451348                  */
+.global data_80451348
+data_80451348:
 .skip 0x8
 

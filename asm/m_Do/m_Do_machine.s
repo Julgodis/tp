@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8000B1EC 002C .text      myGetHeapTypeByString__FP7JKRHeap myGetHeapTypeByString__FP7JKRHeap */
+/* 8000B1EC 0200 .text      myGetHeapTypeByString__FP7JKRHeap myGetHeapTypeByString__FP7JKRHeap */
 .global myGetHeapTypeByString__FP7JKRHeap
+myGetHeapTypeByString__FP7JKRHeap:
 myGetHeapTypeByString__FP7JKRHeap:
 /* 8000B1EC 0000812C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8000B1F0 00008130  7C 08 02 A6 */	mflr r0
@@ -14,80 +15,59 @@ myGetHeapTypeByString__FP7JKRHeap:
 /* 8000B1FC 0000813C  7C 7F 1B 78 */	mr r31, r3
 /* 8000B200 00008140  80 0D 8D F0 */	lwz r0, sSystemHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 8000B204 00008144  7C 1F 00 40 */	cmplw r31, r0
-/* 8000B208 00008148  40 82 00 10 */	bne func_8000B218
+/* 8000B208 00008148  40 82 00 10 */	bne lbl_8000B218
 /* 8000B20C 0000814C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B210 00008150  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
-/* 8000B214 00008154  48 00 01 C4 */	b func_8000B3D8
-
-/* 8000B218 001C .text      func_8000B218                  func_8000B218                  */
-.global func_8000B218
-func_8000B218:
+/* 8000B214 00008154  48 00 01 C4 */	b lbl_8000B3D8
+lbl_8000B218:
 /* 8000B218 00008158  48 00 3B 69 */	bl mDoExt_getZeldaHeap__Fv
 /* 8000B21C 0000815C  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B220 00008160  40 82 00 14 */	bne func_8000B234
+/* 8000B220 00008160  40 82 00 14 */	bne lbl_8000B234
 /* 8000B224 00008164  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B228 00008168  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B22C 0000816C  38 63 00 0B */	addi r3, r3, 0xb
-/* 8000B230 00008170  48 00 01 A8 */	b func_8000B3D8
-
-/* 8000B234 001C .text      func_8000B234                  func_8000B234                  */
-.global func_8000B234
-func_8000B234:
+/* 8000B230 00008170  48 00 01 A8 */	b lbl_8000B3D8
+lbl_8000B234:
 /* 8000B234 00008174  48 00 3B 1D */	bl mDoExt_getGameHeap__Fv
 /* 8000B238 00008178  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B23C 0000817C  40 82 00 14 */	bne func_8000B250
+/* 8000B23C 0000817C  40 82 00 14 */	bne lbl_8000B250
 /* 8000B240 00008180  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B244 00008184  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B248 00008188  38 63 00 15 */	addi r3, r3, 0x15
-/* 8000B24C 0000818C  48 00 01 8C */	b func_8000B3D8
-
-/* 8000B250 001C .text      func_8000B250                  func_8000B250                  */
-.global func_8000B250
-func_8000B250:
+/* 8000B24C 0000818C  48 00 01 8C */	b lbl_8000B3D8
+lbl_8000B250:
 /* 8000B250 00008190  48 00 3B 9D */	bl mDoExt_getArchiveHeap__Fv
 /* 8000B254 00008194  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B258 00008198  40 82 00 14 */	bne func_8000B26C
+/* 8000B258 00008198  40 82 00 14 */	bne lbl_8000B26C
 /* 8000B25C 0000819C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B260 000081A0  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B264 000081A4  38 63 00 1E */	addi r3, r3, 0x1e
-/* 8000B268 000081A8  48 00 01 70 */	b func_8000B3D8
-
-/* 8000B26C 001C .text      func_8000B26C                  func_8000B26C                  */
-.global func_8000B26C
-func_8000B26C:
+/* 8000B268 000081A8  48 00 01 70 */	b lbl_8000B3D8
+lbl_8000B26C:
 /* 8000B26C 000081AC  48 00 3B 45 */	bl mDoExt_getCommandHeap__Fv
 /* 8000B270 000081B0  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B274 000081B4  40 82 00 14 */	bne func_8000B288
+/* 8000B274 000081B4  40 82 00 14 */	bne lbl_8000B288
 /* 8000B278 000081B8  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B27C 000081BC  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B280 000081C0  38 63 00 2A */	addi r3, r3, 0x2a
-/* 8000B284 000081C4  48 00 01 54 */	b func_8000B3D8
-
-/* 8000B288 001C .text      func_8000B288                  func_8000B288                  */
-.global func_8000B288
-func_8000B288:
+/* 8000B284 000081C4  48 00 01 54 */	b lbl_8000B3D8
+lbl_8000B288:
 /* 8000B288 000081C8  48 00 3A 8D */	bl mDoExt_getDbPrintHeap__Fv
 /* 8000B28C 000081CC  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B290 000081D0  40 82 00 14 */	bne func_8000B2A4
+/* 8000B290 000081D0  40 82 00 14 */	bne lbl_8000B2A4
 /* 8000B294 000081D4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B298 000081D8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B29C 000081DC  38 63 00 36 */	addi r3, r3, 0x36
-/* 8000B2A0 000081E0  48 00 01 38 */	b func_8000B3D8
-
-/* 8000B2A4 001C .text      func_8000B2A4                  func_8000B2A4                  */
-.global func_8000B2A4
-func_8000B2A4:
+/* 8000B2A0 000081E0  48 00 01 38 */	b lbl_8000B3D8
+lbl_8000B2A4:
 /* 8000B2A4 000081E4  48 00 3B 8D */	bl mDoExt_getJ2dHeap__Fv
 /* 8000B2A8 000081E8  7C 1F 18 40 */	cmplw r31, r3
-/* 8000B2AC 000081EC  40 82 00 14 */	bne func_8000B2C0
+/* 8000B2AC 000081EC  40 82 00 14 */	bne lbl_8000B2C0
 /* 8000B2B0 000081F0  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B2B4 000081F4  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B2B8 000081F8  38 63 00 42 */	addi r3, r3, 0x42
-/* 8000B2BC 000081FC  48 00 01 1C */	b func_8000B3D8
-
-/* 8000B2C0 0048 .text      func_8000B2C0                  func_8000B2C0                  */
-.global func_8000B2C0
-func_8000B2C0:
+/* 8000B2BC 000081FC  48 00 01 1C */	b lbl_8000B3D8
+lbl_8000B2C0:
 /* 8000B2C0 00008200  7F E3 FB 78 */	mr r3, r31
 /* 8000B2C4 00008204  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8000B2C8 00008208  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -96,96 +76,69 @@ func_8000B2C0:
 /* 8000B2D4 00008214  3C 80 53 4C */	lis r4, 0x534C4944@ha
 /* 8000B2D8 00008218  38 04 49 44 */	addi r0, r4, 0x534C4944@l
 /* 8000B2DC 0000821C  7C 03 00 00 */	cmpw r3, r0
-/* 8000B2E0 00008220  41 82 00 84 */	beq func_8000B364
-/* 8000B2E4 00008224  40 80 00 38 */	bge func_8000B31C
+/* 8000B2E0 00008220  41 82 00 84 */	beq lbl_8000B364
+/* 8000B2E4 00008224  40 80 00 38 */	bge lbl_8000B31C
 /* 8000B2E8 00008228  3C 80 41 53 */	lis r4, 0x41535448@ha
 /* 8000B2EC 0000822C  38 04 54 48 */	addi r0, r4, 0x41535448@l
 /* 8000B2F0 00008230  7C 03 00 00 */	cmpw r3, r0
-/* 8000B2F4 00008234  41 82 00 50 */	beq func_8000B344
-/* 8000B2F8 00008238  40 80 00 10 */	bge func_8000B308
+/* 8000B2F4 00008234  41 82 00 50 */	beq lbl_8000B344
+/* 8000B2F8 00008238  40 80 00 10 */	bge lbl_8000B308
 /* 8000B2FC 0000823C  2C 03 00 00 */	cmpwi r3, 0
-/* 8000B300 00008240  41 82 00 94 */	beq func_8000B394
-/* 8000B304 00008244  48 00 00 A0 */	b func_8000B3A4
-
-/* 8000B308 0014 .text      func_8000B308                  func_8000B308                  */
-.global func_8000B308
-func_8000B308:
+/* 8000B300 00008240  41 82 00 94 */	beq lbl_8000B394
+/* 8000B304 00008244  48 00 00 A0 */	b lbl_8000B3A4
+lbl_8000B308:
 /* 8000B308 00008248  3C 80 45 58 */	lis r4, 0x45585048@ha
 /* 8000B30C 0000824C  38 04 50 48 */	addi r0, r4, 0x45585048@l
 /* 8000B310 00008250  7C 03 00 00 */	cmpw r3, r0
-/* 8000B314 00008254  41 82 00 40 */	beq func_8000B354
-/* 8000B318 00008258  48 00 00 8C */	b func_8000B3A4
-
-/* 8000B31C 0028 .text      func_8000B31C                  func_8000B31C                  */
-.global func_8000B31C
-func_8000B31C:
+/* 8000B314 00008254  41 82 00 40 */	beq lbl_8000B354
+/* 8000B318 00008258  48 00 00 8C */	b lbl_8000B3A4
+lbl_8000B31C:
 /* 8000B31C 0000825C  3C 80 55 4E */	lis r4, 0x554E4954@ha
 /* 8000B320 00008260  38 04 49 54 */	addi r0, r4, 0x554E4954@l
 /* 8000B324 00008264  7C 03 00 00 */	cmpw r3, r0
-/* 8000B328 00008268  41 82 00 5C */	beq func_8000B384
-/* 8000B32C 0000826C  40 80 00 78 */	bge func_8000B3A4
+/* 8000B328 00008268  41 82 00 5C */	beq lbl_8000B384
+/* 8000B32C 0000826C  40 80 00 78 */	bge lbl_8000B3A4
 /* 8000B330 00008270  3C 80 53 54 */	lis r4, 0x53544448@ha
 /* 8000B334 00008274  38 04 44 48 */	addi r0, r4, 0x53544448@l
 /* 8000B338 00008278  7C 03 00 00 */	cmpw r3, r0
-/* 8000B33C 0000827C  41 82 00 38 */	beq func_8000B374
-/* 8000B340 00008280  48 00 00 64 */	b func_8000B3A4
-
-/* 8000B344 0010 .text      func_8000B344                  func_8000B344                  */
-.global func_8000B344
-func_8000B344:
+/* 8000B33C 0000827C  41 82 00 38 */	beq lbl_8000B374
+/* 8000B340 00008280  48 00 00 64 */	b lbl_8000B3A4
+lbl_8000B344:
 /* 8000B344 00008284  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B348 00008288  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B34C 0000828C  38 63 00 4A */	addi r3, r3, 0x4a
-/* 8000B350 00008290  48 00 00 88 */	b func_8000B3D8
-
-/* 8000B354 0010 .text      func_8000B354                  func_8000B354                  */
-.global func_8000B354
-func_8000B354:
+/* 8000B350 00008290  48 00 00 88 */	b lbl_8000B3D8
+lbl_8000B354:
 /* 8000B354 00008294  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B358 00008298  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B35C 0000829C  38 63 00 4F */	addi r3, r3, 0x4f
-/* 8000B360 000082A0  48 00 00 78 */	b func_8000B3D8
-
-/* 8000B364 0010 .text      func_8000B364                  func_8000B364                  */
-.global func_8000B364
-func_8000B364:
+/* 8000B360 000082A0  48 00 00 78 */	b lbl_8000B3D8
+lbl_8000B364:
 /* 8000B364 000082A4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B368 000082A8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B36C 000082AC  38 63 00 54 */	addi r3, r3, 0x54
-/* 8000B370 000082B0  48 00 00 68 */	b func_8000B3D8
-
-/* 8000B374 0010 .text      func_8000B374                  func_8000B374                  */
-.global func_8000B374
-func_8000B374:
+/* 8000B370 000082B0  48 00 00 68 */	b lbl_8000B3D8
+lbl_8000B374:
 /* 8000B374 000082B4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B378 000082B8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B37C 000082BC  38 63 00 59 */	addi r3, r3, 0x59
-/* 8000B380 000082C0  48 00 00 58 */	b func_8000B3D8
-
-/* 8000B384 0010 .text      func_8000B384                  func_8000B384                  */
-.global func_8000B384
-func_8000B384:
+/* 8000B380 000082C0  48 00 00 58 */	b lbl_8000B3D8
+lbl_8000B384:
 /* 8000B384 000082C4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B388 000082C8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B38C 000082CC  38 63 00 5E */	addi r3, r3, 0x5e
-/* 8000B390 000082D0  48 00 00 48 */	b func_8000B3D8
-
-/* 8000B394 0010 .text      func_8000B394                  func_8000B394                  */
-.global func_8000B394
-func_8000B394:
+/* 8000B390 000082D0  48 00 00 48 */	b lbl_8000B3D8
+lbl_8000B394:
 /* 8000B394 000082D4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B398 000082D8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B39C 000082DC  38 63 00 63 */	addi r3, r3, 0x63
-/* 8000B3A0 000082E0  48 00 00 38 */	b func_8000B3D8
-
-/* 8000B3A4 0034 .text      func_8000B3A4                  func_8000B3A4                  */
-.global func_8000B3A4
-func_8000B3A4:
+/* 8000B3A0 000082E0  48 00 00 38 */	b lbl_8000B3D8
+lbl_8000B3A4:
 /* 8000B3A4 000082E4  90 61 00 08 */	stw r3, 8(r1)
 /* 8000B3A8 000082E8  88 01 00 08 */	lbz r0, 8(r1)
-/* 8000B3AC 000082EC  98 0D 86 90 */	stb r0, sym_80450C10-_SDA_BASE_(r13)
+/* 8000B3AC 000082EC  98 0D 86 90 */	stb r0, data_80450C10-_SDA_BASE_(r13)
 /* 8000B3B0 000082F0  88 01 00 09 */	lbz r0, 9(r1)
-/* 8000B3B4 000082F4  38 6D 86 90 */	addi r3, r13, sym_80450C10-_SDA_BASE_
+/* 8000B3B4 000082F4  38 6D 86 90 */	addi r3, r13, data_80450C10-_SDA_BASE_
 /* 8000B3B8 000082F8  98 03 00 01 */	stb r0, 1(r3)
 /* 8000B3BC 000082FC  88 01 00 0A */	lbz r0, 0xa(r1)
 /* 8000B3C0 00008300  98 03 00 02 */	stb r0, 2(r3)
@@ -193,19 +146,17 @@ func_8000B3A4:
 /* 8000B3C8 00008308  98 03 00 03 */	stb r0, 3(r3)
 /* 8000B3CC 0000830C  38 00 00 00 */	li r0, 0
 /* 8000B3D0 00008310  98 03 00 04 */	stb r0, 4(r3)
-/* 8000B3D4 00008314  38 6D 86 90 */	addi r3, r13, sym_80450C10-_SDA_BASE_
-
-/* 8000B3D8 0014 .text      func_8000B3D8                  func_8000B3D8                  */
-.global func_8000B3D8
-func_8000B3D8:
+/* 8000B3D4 00008314  38 6D 86 90 */	addi r3, r13, data_80450C10-_SDA_BASE_
+lbl_8000B3D8:
 /* 8000B3D8 00008318  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8000B3DC 0000831C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8000B3E0 00008320  7C 08 03 A6 */	mtlr r0
 /* 8000B3E4 00008324  38 21 00 20 */	addi r1, r1, 0x20
 /* 8000B3E8 00008328  4E 80 00 20 */	blr 
 
-/* 8000B3EC 0044 .text      myMemoryErrorRoutine__FPvUli   myMemoryErrorRoutine__FPvUli   */
+/* 8000B3EC 01DC .text      myMemoryErrorRoutine__FPvUli   myMemoryErrorRoutine__FPvUli   */
 .global myMemoryErrorRoutine__FPvUli
+myMemoryErrorRoutine__FPvUli:
 myMemoryErrorRoutine__FPvUli:
 /* 8000B3EC 0000832C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8000B3F0 00008330  7C 08 02 A6 */	mflr r0
@@ -222,14 +173,11 @@ myMemoryErrorRoutine__FPvUli:
 /* 8000B41C 0000835C  4E 80 04 21 */	bctrl 
 /* 8000B420 00008360  3C 03 AC B4 */	addis r0, r3, 0xacb4
 /* 8000B424 00008364  28 00 49 44 */	cmplwi r0, 0x4944
-/* 8000B428 00008368  40 82 00 08 */	bne func_8000B430
+/* 8000B428 00008368  40 82 00 08 */	bne lbl_8000B430
 /* 8000B42C 0000836C  3B 80 00 00 */	li r28, 0
-
-/* 8000B430 002C .text      func_8000B430                  func_8000B430                  */
-.global func_8000B430
-func_8000B430:
+lbl_8000B430:
 /* 8000B430 00008370  2C 1C 00 00 */	cmpwi r28, 0
-/* 8000B434 00008374  41 82 00 28 */	beq func_8000B45C
+/* 8000B434 00008374  41 82 00 28 */	beq lbl_8000B45C
 /* 8000B438 00008378  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B43C 0000837C  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B440 00008380  38 63 00 6A */	addi r3, r3, 0x6a
@@ -239,10 +187,7 @@ func_8000B430:
 /* 8000B450 00008390  7F E7 FB 78 */	mr r7, r31
 /* 8000B454 00008394  4C C6 31 82 */	crclr 6
 /* 8000B458 00008398  4B FF B7 B5 */	bl OSReport_Error
-
-/* 8000B45C 007C .text      func_8000B45C                  func_8000B45C                  */
-.global func_8000B45C
-func_8000B45C:
+lbl_8000B45C:
 /* 8000B45C 0000839C  7F E3 FB 78 */	mr r3, r31
 /* 8000B460 000083A0  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8000B464 000083A4  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -250,7 +195,7 @@ func_8000B45C:
 /* 8000B46C 000083AC  4E 80 04 21 */	bctrl 
 /* 8000B470 000083B0  90 61 00 10 */	stw r3, 0x10(r1)
 /* 8000B474 000083B4  2C 1C 00 00 */	cmpwi r28, 0
-/* 8000B478 000083B8  41 82 00 60 */	beq func_8000B4D8
+/* 8000B478 000083B8  41 82 00 60 */	beq lbl_8000B4D8
 /* 8000B47C 000083BC  83 9F 00 38 */	lwz r28, 0x38(r31)
 /* 8000B480 000083C0  7F E3 FB 78 */	mr r3, r31
 /* 8000B484 000083C4  4B FF FD 69 */	bl myGetHeapTypeByString__FP7JKRHeap
@@ -274,69 +219,51 @@ func_8000B45C:
 /* 8000B4CC 0000840C  89 41 00 13 */	lbz r10, 0x13(r1)
 /* 8000B4D0 00008410  4C C6 31 82 */	crclr 6
 /* 8000B4D4 00008414  4B FF B7 39 */	bl OSReport_Error
-
-/* 8000B4D8 0020 .text      func_8000B4D8                  func_8000B4D8                  */
-.global func_8000B4D8
-func_8000B4D8:
+lbl_8000B4D8:
 /* 8000B4D8 00008418  80 0D 86 8C */	lwz r0, heapErrors-_SDA_BASE_(r13)
 /* 8000B4DC 0000841C  28 00 00 00 */	cmplwi r0, 0
-/* 8000B4E0 00008420  40 82 00 18 */	bne func_8000B4F8
+/* 8000B4E0 00008420  40 82 00 18 */	bne lbl_8000B4F8
 /* 8000B4E4 00008424  7F E3 FB 78 */	mr r3, r31
 /* 8000B4E8 00008428  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8000B4EC 0000842C  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 8000B4F0 00008430  7D 89 03 A6 */	mtctr r12
 /* 8000B4F4 00008434  4E 80 04 21 */	bctrl 
-
-/* 8000B4F8 0028 .text      func_8000B4F8                  func_8000B4F8                  */
-.global func_8000B4F8
-func_8000B4F8:
+lbl_8000B4F8:
 /* 8000B4F8 00008438  80 6D 86 8C */	lwz r3, heapErrors-_SDA_BASE_(r13)
 /* 8000B4FC 0000843C  38 03 00 01 */	addi r0, r3, 1
 /* 8000B500 00008440  90 0D 86 8C */	stw r0, heapErrors-_SDA_BASE_(r13)
 /* 8000B504 00008444  80 0D 86 AC */	lwz r0, zeldaHeap-_SDA_BASE_(r13)
 /* 8000B508 00008448  7C 1F 00 40 */	cmplw r31, r0
-/* 8000B50C 0000844C  40 82 00 14 */	bne func_8000B520
+/* 8000B50C 0000844C  40 82 00 14 */	bne lbl_8000B520
 /* 8000B510 00008450  80 6D 86 7C */	lwz r3, zeldaHeapErrors-_SDA_BASE_(r13)
 /* 8000B514 00008454  38 03 00 01 */	addi r0, r3, 1
 /* 8000B518 00008458  90 0D 86 7C */	stw r0, zeldaHeapErrors-_SDA_BASE_(r13)
-/* 8000B51C 0000845C  48 00 00 94 */	b func_8000B5B0
-
-/* 8000B520 001C .text      func_8000B520                  func_8000B520                  */
-.global func_8000B520
-func_8000B520:
+/* 8000B51C 0000845C  48 00 00 94 */	b lbl_8000B5B0
+lbl_8000B520:
 /* 8000B520 00008460  80 0D 86 A8 */	lwz r0, gameHeap-_SDA_BASE_(r13)
 /* 8000B524 00008464  7C 1F 00 40 */	cmplw r31, r0
-/* 8000B528 00008468  40 82 00 14 */	bne func_8000B53C
+/* 8000B528 00008468  40 82 00 14 */	bne lbl_8000B53C
 /* 8000B52C 0000846C  80 6D 86 78 */	lwz r3, gameHeapErrors-_SDA_BASE_(r13)
 /* 8000B530 00008470  38 03 00 01 */	addi r0, r3, 1
 /* 8000B534 00008474  90 0D 86 78 */	stw r0, gameHeapErrors-_SDA_BASE_(r13)
-/* 8000B538 00008478  48 00 00 78 */	b func_8000B5B0
-
-/* 8000B53C 001C .text      func_8000B53C                  func_8000B53C                  */
-.global func_8000B53C
-func_8000B53C:
+/* 8000B538 00008478  48 00 00 78 */	b lbl_8000B5B0
+lbl_8000B53C:
 /* 8000B53C 0000847C  80 0D 86 B0 */	lwz r0, commandHeap-_SDA_BASE_(r13)
 /* 8000B540 00008480  7C 1F 00 40 */	cmplw r31, r0
-/* 8000B544 00008484  40 82 00 14 */	bne func_8000B558
+/* 8000B544 00008484  40 82 00 14 */	bne lbl_8000B558
 /* 8000B548 00008488  80 6D 86 80 */	lwz r3, commandHeapErrors-_SDA_BASE_(r13)
 /* 8000B54C 0000848C  38 03 00 01 */	addi r0, r3, 1
 /* 8000B550 00008490  90 0D 86 80 */	stw r0, commandHeapErrors-_SDA_BASE_(r13)
-/* 8000B554 00008494  48 00 00 5C */	b func_8000B5B0
-
-/* 8000B558 001C .text      func_8000B558                  func_8000B558                  */
-.global func_8000B558
-func_8000B558:
+/* 8000B554 00008494  48 00 00 5C */	b lbl_8000B5B0
+lbl_8000B558:
 /* 8000B558 00008498  80 0D 86 B4 */	lwz r0, archiveHeap-_SDA_BASE_(r13)
 /* 8000B55C 0000849C  7C 1F 00 40 */	cmplw r31, r0
-/* 8000B560 000084A0  40 82 00 14 */	bne func_8000B574
+/* 8000B560 000084A0  40 82 00 14 */	bne lbl_8000B574
 /* 8000B564 000084A4  80 6D 86 84 */	lwz r3, archiveHeapErrors-_SDA_BASE_(r13)
 /* 8000B568 000084A8  38 03 00 01 */	addi r0, r3, 1
 /* 8000B56C 000084AC  90 0D 86 84 */	stw r0, archiveHeapErrors-_SDA_BASE_(r13)
-/* 8000B570 000084B0  48 00 00 40 */	b func_8000B5B0
-
-/* 8000B574 0030 .text      func_8000B574                  func_8000B574                  */
-.global func_8000B574
-func_8000B574:
+/* 8000B570 000084B0  48 00 00 40 */	b lbl_8000B5B0
+lbl_8000B574:
 /* 8000B574 000084B4  7F E3 FB 78 */	mr r3, r31
 /* 8000B578 000084B8  81 9F 00 00 */	lwz r12, 0(r31)
 /* 8000B57C 000084BC  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -344,22 +271,16 @@ func_8000B574:
 /* 8000B584 000084C4  4E 80 04 21 */	bctrl 
 /* 8000B588 000084C8  3C 03 AC B4 */	addis r0, r3, 0xacb4
 /* 8000B58C 000084CC  28 00 49 44 */	cmplwi r0, 0x4944
-/* 8000B590 000084D0  40 82 00 14 */	bne func_8000B5A4
+/* 8000B590 000084D0  40 82 00 14 */	bne lbl_8000B5A4
 /* 8000B594 000084D4  80 6D 86 74 */	lwz r3, solidHeapErrors-_SDA_BASE_(r13)
 /* 8000B598 000084D8  38 03 00 01 */	addi r0, r3, 1
 /* 8000B59C 000084DC  90 0D 86 74 */	stw r0, solidHeapErrors-_SDA_BASE_(r13)
-/* 8000B5A0 000084E0  48 00 00 10 */	b func_8000B5B0
-
-/* 8000B5A4 000C .text      func_8000B5A4                  func_8000B5A4                  */
-.global func_8000B5A4
-func_8000B5A4:
+/* 8000B5A0 000084E0  48 00 00 10 */	b lbl_8000B5B0
+lbl_8000B5A4:
 /* 8000B5A4 000084E4  80 6D 86 88 */	lwz r3, unknownHeapErrors-_SDA_BASE_(r13)
 /* 8000B5A8 000084E8  38 03 00 01 */	addi r0, r3, 1
 /* 8000B5AC 000084EC  90 0D 86 88 */	stw r0, unknownHeapErrors-_SDA_BASE_(r13)
-
-/* 8000B5B0 0018 .text      func_8000B5B0                  func_8000B5B0                  */
-.global func_8000B5B0
-func_8000B5B0:
+lbl_8000B5B0:
 /* 8000B5B0 000084F0  39 61 00 30 */	addi r11, r1, 0x30
 /* 8000B5B4 000084F4  48 35 6C 71 */	bl _restgpr_28
 /* 8000B5B8 000084F8  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -367,8 +288,9 @@ func_8000B5B0:
 /* 8000B5C0 00008500  38 21 00 30 */	addi r1, r1, 0x30
 /* 8000B5C4 00008504  4E 80 00 20 */	blr 
 
-/* 8000B5C8 0050 .text      myHeapCheckRecursive__FP7JKRHeap myHeapCheckRecursive__FP7JKRHeap */
+/* 8000B5C8 00A0 .text      myHeapCheckRecursive__FP7JKRHeap myHeapCheckRecursive__FP7JKRHeap */
 .global myHeapCheckRecursive__FP7JKRHeap
+myHeapCheckRecursive__FP7JKRHeap:
 myHeapCheckRecursive__FP7JKRHeap:
 /* 8000B5C8 00008508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000B5CC 0000850C  7C 08 02 A6 */	mflr r0
@@ -380,7 +302,7 @@ myHeapCheckRecursive__FP7JKRHeap:
 /* 8000B5E4 00008524  7D 89 03 A6 */	mtctr r12
 /* 8000B5E8 00008528  4E 80 04 21 */	bctrl 
 /* 8000B5EC 0000852C  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8000B5F0 00008530  40 82 00 28 */	bne func_8000B618
+/* 8000B5F0 00008530  40 82 00 28 */	bne lbl_8000B618
 /* 8000B5F4 00008534  7F E3 FB 78 */	mr r3, r31
 /* 8000B5F8 00008538  4B FF FB F5 */	bl myGetHeapTypeByString__FP7JKRHeap
 /* 8000B5FC 0000853C  7C 65 1B 78 */	mr r5, r3
@@ -390,41 +312,26 @@ myHeapCheckRecursive__FP7JKRHeap:
 /* 8000B60C 0000854C  7F E4 FB 78 */	mr r4, r31
 /* 8000B610 00008550  4C C6 31 82 */	crclr 6
 /* 8000B614 00008554  4B FF B5 F9 */	bl OSReport_Error
-
-/* 8000B618 0010 .text      func_8000B618                  func_8000B618                  */
-.global func_8000B618
-func_8000B618:
+lbl_8000B618:
 /* 8000B618 00008558  80 7F 00 40 */	lwz r3, 0x40(r31)
 /* 8000B61C 0000855C  28 03 00 00 */	cmplwi r3, 0
-/* 8000B620 00008560  41 82 00 08 */	beq func_8000B628
+/* 8000B620 00008560  41 82 00 08 */	beq lbl_8000B628
 /* 8000B624 00008564  38 63 FF F4 */	addi r3, r3, -12
-
-/* 8000B628 0008 .text      func_8000B628                  func_8000B628                  */
-.global func_8000B628
-func_8000B628:
+lbl_8000B628:
 /* 8000B628 00008568  7C 7F 1B 78 */	mr r31, r3
-/* 8000B62C 0000856C  48 00 00 20 */	b func_8000B64C
-
-/* 8000B630 0018 .text      func_8000B630                  func_8000B630                  */
-.global func_8000B630
-func_8000B630:
+/* 8000B62C 0000856C  48 00 00 20 */	b lbl_8000B64C
+lbl_8000B630:
 /* 8000B630 00008570  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 8000B634 00008574  4B FF FF 95 */	bl myHeapCheckRecursive__FP7JKRHeap
 /* 8000B638 00008578  80 7F 00 18 */	lwz r3, 0x18(r31)
 /* 8000B63C 0000857C  28 03 00 00 */	cmplwi r3, 0
-/* 8000B640 00008580  41 82 00 08 */	beq func_8000B648
+/* 8000B640 00008580  41 82 00 08 */	beq lbl_8000B648
 /* 8000B644 00008584  38 63 FF F4 */	addi r3, r3, -12
-
-/* 8000B648 0004 .text      func_8000B648                  func_8000B648                  */
-.global func_8000B648
-func_8000B648:
+lbl_8000B648:
 /* 8000B648 00008588  7C 7F 1B 78 */	mr r31, r3
-
-/* 8000B64C 001C .text      func_8000B64C                  func_8000B64C                  */
-.global func_8000B64C
-func_8000B64C:
+lbl_8000B64C:
 /* 8000B64C 0000858C  28 1F 00 00 */	cmplwi r31, 0
-/* 8000B650 00008590  40 82 FF E0 */	bne func_8000B630
+/* 8000B650 00008590  40 82 FF E0 */	bne lbl_8000B630
 /* 8000B654 00008594  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8000B658 00008598  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8000B65C 0000859C  7C 08 03 A6 */	mtlr r0
@@ -433,6 +340,7 @@ func_8000B64C:
 
 /* 8000B668 0024 .text      mDoMch_HeapCheckAll__Fv        mDoMch_HeapCheckAll__Fv        */
 .global mDoMch_HeapCheckAll__Fv
+mDoMch_HeapCheckAll__Fv:
 mDoMch_HeapCheckAll__Fv:
 /* 8000B668 000085A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000B66C 000085AC  7C 08 02 A6 */	mflr r0
@@ -444,76 +352,63 @@ mDoMch_HeapCheckAll__Fv:
 /* 8000B684 000085C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8000B688 000085C8  4E 80 00 20 */	blr 
 
-/* 8000B68C 0040 .text      developKeyCheck__FUlUl         developKeyCheck__FUlUl         */
+/* 8000B68C 00B0 .text      developKeyCheck__FUlUl         developKeyCheck__FUlUl         */
 .global developKeyCheck__FUlUl
 developKeyCheck__FUlUl:
+developKeyCheck__FUlUl:
 /* 8000B68C 000085CC  28 04 00 74 */	cmplwi r4, 0x74
-/* 8000B690 000085D0  40 82 00 4C */	bne func_8000B6DC
+/* 8000B690 000085D0  40 82 00 4C */	bne lbl_8000B6DC
 /* 8000B694 000085D4  28 03 00 04 */	cmplwi r3, 4
-/* 8000B698 000085D8  40 82 00 44 */	bne func_8000B6DC
-/* 8000B69C 000085DC  88 0D 86 95 */	lbz r0, sym_80450C15-_SDA_BASE_(r13)
+/* 8000B698 000085D8  40 82 00 44 */	bne lbl_8000B6DC
+/* 8000B69C 000085DC  88 0D 86 95 */	lbz r0, data_80450C15-_SDA_BASE_(r13)
 /* 8000B6A0 000085E0  28 00 00 03 */	cmplwi r0, 3
-/* 8000B6A4 000085E4  40 82 00 28 */	bne func_8000B6CC
-/* 8000B6A8 000085E8  88 0D 86 96 */	lbz r0, sym_80450C16-_SDA_BASE_(r13)
+/* 8000B6A4 000085E4  40 82 00 28 */	bne lbl_8000B6CC
+/* 8000B6A8 000085E8  88 0D 86 96 */	lbz r0, data_80450C16-_SDA_BASE_(r13)
 /* 8000B6AC 000085EC  28 00 00 06 */	cmplwi r0, 6
-/* 8000B6B0 000085F0  40 82 00 1C */	bne func_8000B6CC
-/* 8000B6B4 000085F4  88 0D 86 97 */	lbz r0, sym_80450C17-_SDA_BASE_(r13)
+/* 8000B6B0 000085F0  40 82 00 1C */	bne lbl_8000B6CC
+/* 8000B6B4 000085F4  88 0D 86 97 */	lbz r0, data_80450C17-_SDA_BASE_(r13)
 /* 8000B6B8 000085F8  28 00 00 05 */	cmplwi r0, 5
-/* 8000B6BC 000085FC  40 82 00 10 */	bne func_8000B6CC
+/* 8000B6BC 000085FC  40 82 00 10 */	bne lbl_8000B6CC
 /* 8000B6C0 00008600  38 00 00 01 */	li r0, 1
-/* 8000B6C4 00008604  98 0D 80 00 */	stb r0, sym_80450580-_SDA_BASE_(r13)
-/* 8000B6C8 00008608  48 00 00 14 */	b func_8000B6DC
-
-/* 8000B6CC 0010 .text      func_8000B6CC                  func_8000B6CC                  */
-.global func_8000B6CC
-func_8000B6CC:
+/* 8000B6C4 00008604  98 0D 80 00 */	stb r0, data_80450580-_SDA_BASE_(r13)
+/* 8000B6C8 00008608  48 00 00 14 */	b lbl_8000B6DC
+lbl_8000B6CC:
 /* 8000B6CC 0000860C  38 00 00 00 */	li r0, 0
-/* 8000B6D0 00008610  98 0D 86 95 */	stb r0, sym_80450C15-_SDA_BASE_(r13)
-/* 8000B6D4 00008614  98 0D 86 96 */	stb r0, sym_80450C16-_SDA_BASE_(r13)
-/* 8000B6D8 00008618  98 0D 86 97 */	stb r0, sym_80450C17-_SDA_BASE_(r13)
-
-/* 8000B6DC 001C .text      func_8000B6DC                  func_8000B6DC                  */
-.global func_8000B6DC
-func_8000B6DC:
+/* 8000B6D0 00008610  98 0D 86 95 */	stb r0, data_80450C15-_SDA_BASE_(r13)
+/* 8000B6D4 00008614  98 0D 86 96 */	stb r0, data_80450C16-_SDA_BASE_(r13)
+/* 8000B6D8 00008618  98 0D 86 97 */	stb r0, data_80450C17-_SDA_BASE_(r13)
+lbl_8000B6DC:
 /* 8000B6DC 0000861C  28 04 00 42 */	cmplwi r4, 0x42
-/* 8000B6E0 00008620  40 82 00 18 */	bne func_8000B6F8
+/* 8000B6E0 00008620  40 82 00 18 */	bne lbl_8000B6F8
 /* 8000B6E4 00008624  28 03 00 40 */	cmplwi r3, 0x40
-/* 8000B6E8 00008628  40 82 00 10 */	bne func_8000B6F8
-/* 8000B6EC 0000862C  88 AD 86 95 */	lbz r5, sym_80450C15-_SDA_BASE_(r13)
+/* 8000B6E8 00008628  40 82 00 10 */	bne lbl_8000B6F8
+/* 8000B6EC 0000862C  88 AD 86 95 */	lbz r5, data_80450C15-_SDA_BASE_(r13)
 /* 8000B6F0 00008630  38 05 00 01 */	addi r0, r5, 1
-/* 8000B6F4 00008634  98 0D 86 95 */	stb r0, sym_80450C15-_SDA_BASE_(r13)
-
-/* 8000B6F8 001C .text      func_8000B6F8                  func_8000B6F8                  */
-.global func_8000B6F8
-func_8000B6F8:
+/* 8000B6F4 00008634  98 0D 86 95 */	stb r0, data_80450C15-_SDA_BASE_(r13)
+lbl_8000B6F8:
 /* 8000B6F8 00008638  28 04 00 28 */	cmplwi r4, 0x28
-/* 8000B6FC 0000863C  40 82 00 18 */	bne func_8000B714
+/* 8000B6FC 0000863C  40 82 00 18 */	bne lbl_8000B714
 /* 8000B700 00008640  28 03 00 20 */	cmplwi r3, 0x20
-/* 8000B704 00008644  40 82 00 10 */	bne func_8000B714
-/* 8000B708 00008648  88 AD 86 96 */	lbz r5, sym_80450C16-_SDA_BASE_(r13)
+/* 8000B704 00008644  40 82 00 10 */	bne lbl_8000B714
+/* 8000B708 00008648  88 AD 86 96 */	lbz r5, data_80450C16-_SDA_BASE_(r13)
 /* 8000B70C 0000864C  38 05 00 01 */	addi r0, r5, 1
-/* 8000B710 00008650  98 0D 86 96 */	stb r0, sym_80450C16-_SDA_BASE_(r13)
-
-/* 8000B714 001C .text      func_8000B714                  func_8000B714                  */
-.global func_8000B714
-func_8000B714:
+/* 8000B710 00008650  98 0D 86 96 */	stb r0, data_80450C16-_SDA_BASE_(r13)
+lbl_8000B714:
 /* 8000B714 00008654  28 04 00 11 */	cmplwi r4, 0x11
-/* 8000B718 00008658  40 82 00 18 */	bne func_8000B730
+/* 8000B718 00008658  40 82 00 18 */	bne lbl_8000B730
 /* 8000B71C 0000865C  28 03 00 10 */	cmplwi r3, 0x10
-/* 8000B720 00008660  40 82 00 10 */	bne func_8000B730
-/* 8000B724 00008664  88 6D 86 97 */	lbz r3, sym_80450C17-_SDA_BASE_(r13)
+/* 8000B720 00008660  40 82 00 10 */	bne lbl_8000B730
+/* 8000B724 00008664  88 6D 86 97 */	lbz r3, data_80450C17-_SDA_BASE_(r13)
 /* 8000B728 00008668  38 03 00 01 */	addi r0, r3, 1
-/* 8000B72C 0000866C  98 0D 86 97 */	stb r0, sym_80450C17-_SDA_BASE_(r13)
-
-/* 8000B730 000C .text      func_8000B730                  func_8000B730                  */
-.global func_8000B730
-func_8000B730:
-/* 8000B730 00008670  88 6D 80 00 */	lbz r3, sym_80450580-_SDA_BASE_(r13)
+/* 8000B72C 0000866C  98 0D 86 97 */	stb r0, data_80450C17-_SDA_BASE_(r13)
+lbl_8000B730:
+/* 8000B730 00008670  88 6D 80 00 */	lbz r3, data_80450580-_SDA_BASE_(r13)
 /* 8000B734 00008674  7C 63 07 74 */	extsb r3, r3
 /* 8000B738 00008678  4E 80 00 20 */	blr 
 
 /* 8000B73C 002C .text      mDoMch_IsProgressiveMode__Fv   mDoMch_IsProgressiveMode__Fv   */
 .global mDoMch_IsProgressiveMode__Fv
+mDoMch_IsProgressiveMode__Fv:
 mDoMch_IsProgressiveMode__Fv:
 /* 8000B73C 0000867C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000B740 00008680  7C 08 02 A6 */	mflr r0
@@ -530,6 +425,7 @@ mDoMch_IsProgressiveMode__Fv:
 /* 8000B768 0030 .text      exceptionReadPad__FPUlPUl      exceptionReadPad__FPUlPUl      */
 .global exceptionReadPad__FPUlPUl
 exceptionReadPad__FPUlPUl:
+exceptionReadPad__FPUlPUl:
 /* 8000B768 000086A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000B76C 000086AC  7C 08 02 A6 */	mflr r0
 /* 8000B770 000086B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -543,8 +439,9 @@ exceptionReadPad__FPUlPUl:
 /* 8000B790 000086D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8000B794 000086D4  4E 80 00 20 */	blr 
 
-/* 8000B798 002C .text      exceptionRestart__Fv           exceptionRestart__Fv           */
+/* 8000B798 0030 .text      exceptionRestart__Fv           exceptionRestart__Fv           */
 .global exceptionRestart__Fv
+exceptionRestart__Fv:
 exceptionRestart__Fv:
 /* 8000B798 000086D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000B79C 000086DC  7C 08 02 A6 */	mflr r0
@@ -557,21 +454,19 @@ exceptionRestart__Fv:
 /* 8000B7B8 000086F8  38 80 00 00 */	li r4, 0
 /* 8000B7BC 000086FC  38 A0 00 00 */	li r5, 0
 /* 8000B7C0 00008700  48 33 40 ED */	bl OSResetSystem
+lbl_8000B7C4:
+/* 8000B7C4 00008704  48 00 00 00 */	b lbl_8000B7C4
 
-/* 8000B7C4 0004 .text      func_8000B7C4                  func_8000B7C4                  */
-.global func_8000B7C4
-func_8000B7C4:
-/* 8000B7C4 00008704  48 00 00 00 */	b func_8000B7C4
-
-/* 8000B7C8 0060 .text      myExceptionCallback__FUsP9OSContextUlUl myExceptionCallback__FUsP9OSContextUlUl */
+/* 8000B7C8 0194 .text      myExceptionCallback__FUsP9OSContextUlUl myExceptionCallback__FUsP9OSContextUlUl */
 .global myExceptionCallback__FUsP9OSContextUlUl
+myExceptionCallback__FUsP9OSContextUlUl:
 myExceptionCallback__FUsP9OSContextUlUl:
 /* 8000B7C8 00008708  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8000B7CC 0000870C  7C 08 02 A6 */	mflr r0
 /* 8000B7D0 00008710  90 01 00 D4 */	stw r0, 0xd4(r1)
 /* 8000B7D4 00008714  93 E1 00 CC */	stw r31, 0xcc(r1)
 /* 8000B7D8 00008718  48 33 6F 25 */	bl OSGetTime
-/* 8000B7DC 0000871C  90 8D 85 94 */	stw r4, sym_80450B14-_SDA_BASE_(r13)
+/* 8000B7DC 0000871C  90 8D 85 94 */	stw r4, data_80450B14-_SDA_BASE_(r13)
 /* 8000B7E0 00008720  90 6D 85 90 */	stw r3, sHungUpTime__7mDoMain-_SDA_BASE_(r13)
 /* 8000B7E4 00008724  4B FF B0 BD */	bl OSReportEnable
 /* 8000B7E8 00008728  48 25 7A A5 */	bl cAPICPad_recalibrate__Fv
@@ -582,23 +477,20 @@ myExceptionCallback__FUsP9OSContextUlUl:
 /* 8000B7FC 0000873C  4B FF B2 C1 */	bl OSReport
 /* 8000B800 00008740  83 ED 8F 88 */	lwz r31, sErrorManager__12JUTException-_SDA_BASE_(r13)
 /* 8000B804 00008744  28 1F 00 00 */	cmplwi r31, 0
-/* 8000B808 00008748  40 82 00 20 */	bne func_8000B828
+/* 8000B808 00008748  40 82 00 20 */	bne lbl_8000B828
 /* 8000B80C 0000874C  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B810 00008750  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B814 00008754  38 63 01 2D */	addi r3, r3, 0x12d
 /* 8000B818 00008758  4C C6 31 82 */	crclr 6
 /* 8000B81C 0000875C  4B FF B2 A1 */	bl OSReport
 /* 8000B820 00008760  48 32 E4 E1 */	bl PPCHalt
-/* 8000B824 00008764  48 00 00 FC */	b func_8000B920
-
-/* 8000B828 0054 .text      func_8000B828                  func_8000B828                  */
-.global func_8000B828
-func_8000B828:
+/* 8000B824 00008764  48 00 00 FC */	b lbl_8000B920
+lbl_8000B828:
 /* 8000B828 00008768  38 00 00 80 */	li r0, 0x80
 /* 8000B82C 0000876C  90 1F 00 94 */	stw r0, 0x94(r31)
-/* 8000B830 00008770  88 0D 80 00 */	lbz r0, sym_80450580-_SDA_BASE_(r13)
+/* 8000B830 00008770  88 0D 80 00 */	lbz r0, data_80450580-_SDA_BASE_(r13)
 /* 8000B834 00008774  7C 00 07 75 */	extsb. r0, r0
-/* 8000B838 00008778  40 82 00 CC */	bne func_8000B904
+/* 8000B838 00008778  40 82 00 CC */	bne lbl_8000B904
 /* 8000B83C 0000877C  38 61 00 10 */	addi r3, r1, 0x10
 /* 8000B840 00008780  38 80 00 00 */	li r4, 0
 /* 8000B844 00008784  48 2D 4E 99 */	bl __ct__10JUTGamePadFQ210JUTGamePad8EPadPort
@@ -607,18 +499,15 @@ func_8000B828:
 /* 8000B850 00008790  38 00 FF FF */	li r0, -1
 /* 8000B854 00008794  90 1F 00 88 */	stw r0, 0x88(r31)
 /* 8000B858 00008798  28 1F 00 00 */	cmplwi r31, 0
-/* 8000B85C 0000879C  41 82 00 94 */	beq func_8000B8F0
+/* 8000B85C 0000879C  41 82 00 94 */	beq lbl_8000B8F0
 /* 8000B860 000087A0  48 33 1E A9 */	bl OSEnableInterrupts
 /* 8000B864 000087A4  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B868 000087A8  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B86C 000087AC  38 63 01 49 */	addi r3, r3, 0x149
 /* 8000B870 000087B0  4C C6 31 82 */	crclr 6
 /* 8000B874 000087B4  4B FF B2 49 */	bl OSReport
-/* 8000B878 000087B8  48 00 00 34 */	b func_8000B8AC
-
-/* 8000B87C 0030 .text      func_8000B87C                  func_8000B87C                  */
-.global func_8000B87C
-func_8000B87C:
+/* 8000B878 000087B8  48 00 00 34 */	b lbl_8000B8AC
+lbl_8000B87C:
 /* 8000B87C 000087BC  38 61 00 08 */	addi r3, r1, 8
 /* 8000B880 000087C0  38 81 00 0C */	addi r4, r1, 0xc
 /* 8000B884 000087C4  4B FF FE E5 */	bl exceptionReadPad__FPUlPUl
@@ -627,17 +516,14 @@ func_8000B87C:
 /* 8000B890 000087D0  4B FF FD FD */	bl developKeyCheck__FUlUl
 /* 8000B894 000087D4  38 60 00 1E */	li r3, 0x1e
 /* 8000B898 000087D8  48 2D 80 E9 */	bl waitTime__12JUTExceptionFl
-/* 8000B89C 000087DC  88 0D 8F 81 */	lbz r0, sym_80451501-_SDA_BASE_(r13)
+/* 8000B89C 000087DC  88 0D 8F 81 */	lbz r0, data_80451501-_SDA_BASE_(r13)
 /* 8000B8A0 000087E0  28 00 00 00 */	cmplwi r0, 0
-/* 8000B8A4 000087E4  41 82 00 08 */	beq func_8000B8AC
+/* 8000B8A4 000087E4  41 82 00 08 */	beq lbl_8000B8AC
 /* 8000B8A8 000087E8  4B FF FE F1 */	bl exceptionRestart__Fv
-
-/* 8000B8AC 0044 .text      func_8000B8AC                  func_8000B8AC                  */
-.global func_8000B8AC
-func_8000B8AC:
-/* 8000B8AC 000087EC  88 0D 80 00 */	lbz r0, sym_80450580-_SDA_BASE_(r13)
+lbl_8000B8AC:
+/* 8000B8AC 000087EC  88 0D 80 00 */	lbz r0, data_80450580-_SDA_BASE_(r13)
 /* 8000B8B0 000087F0  7C 00 07 75 */	extsb. r0, r0
-/* 8000B8B4 000087F4  41 82 FF C8 */	beq func_8000B87C
+/* 8000B8B4 000087F4  41 82 FF C8 */	beq lbl_8000B87C
 /* 8000B8B8 000087F8  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B8BC 000087FC  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B8C0 00008800  38 63 01 65 */	addi r3, r3, 0x165
@@ -651,24 +537,15 @@ func_8000B8AC:
 /* 8000B8E0 00008820  38 00 00 03 */	li r0, 3
 /* 8000B8E4 00008824  80 6D 8C 38 */	lwz r3, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 8000B8E8 00008828  90 03 00 58 */	stw r0, 0x58(r3)
-/* 8000B8EC 0000882C  48 00 00 08 */	b func_8000B8F4
-
-/* 8000B8F0 0004 .text      func_8000B8F0                  func_8000B8F0                  */
-.global func_8000B8F0
-func_8000B8F0:
+/* 8000B8EC 0000882C  48 00 00 08 */	b lbl_8000B8F4
+lbl_8000B8F0:
 /* 8000B8F0 00008830  48 32 E4 11 */	bl PPCHalt
-
-/* 8000B8F4 0010 .text      func_8000B8F4                  func_8000B8F4                  */
-.global func_8000B8F4
-func_8000B8F4:
+lbl_8000B8F4:
 /* 8000B8F4 00008834  38 61 00 10 */	addi r3, r1, 0x10
 /* 8000B8F8 00008838  38 80 FF FF */	li r4, -1
 /* 8000B8FC 0000883C  48 2D 4E B5 */	bl __dt__10JUTGamePadFv
-/* 8000B900 00008840  48 00 00 20 */	b func_8000B920
-
-/* 8000B904 001C .text      func_8000B904                  func_8000B904                  */
-.global func_8000B904
-func_8000B904:
+/* 8000B900 00008840  48 00 00 20 */	b lbl_8000B920
+lbl_8000B904:
 /* 8000B904 00008844  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B908 00008848  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B90C 0000884C  38 63 01 83 */	addi r3, r3, 0x183
@@ -676,10 +553,7 @@ func_8000B904:
 /* 8000B914 00008854  4B FF B1 A9 */	bl OSReport
 /* 8000B918 00008858  38 60 0B B8 */	li r3, 0xbb8
 /* 8000B91C 0000885C  48 2D 80 65 */	bl waitTime__12JUTExceptionFl
-
-/* 8000B920 003C .text      func_8000B920                  func_8000B920                  */
-.global func_8000B920
-func_8000B920:
+lbl_8000B920:
 /* 8000B920 00008860  3C 60 80 37 */	lis r3, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B924 00008864  38 63 3D E8 */	addi r3, r3, m_Do_m_Do_machine__stringBase0@l
 /* 8000B928 00008868  38 63 01 8E */	addi r3, r3, 0x18e
@@ -696,8 +570,9 @@ func_8000B920:
 /* 8000B954 00008894  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8000B958 00008898  4E 80 00 20 */	blr 
 
-/* 8000B95C 0070 .text      fault_callback_scroll__FUsP9OSContextUlUl fault_callback_scroll__FUsP9OSContextUlUl */
+/* 8000B95C 0398 .text      fault_callback_scroll__FUsP9OSContextUlUl fault_callback_scroll__FUsP9OSContextUlUl */
 .global fault_callback_scroll__FUsP9OSContextUlUl
+fault_callback_scroll__FUsP9OSContextUlUl:
 fault_callback_scroll__FUsP9OSContextUlUl:
 /* 8000B95C 0000889C  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8000B960 000088A0  7C 08 02 A6 */	mflr r0
@@ -712,11 +587,11 @@ fault_callback_scroll__FUsP9OSContextUlUl:
 /* 8000B984 000088C4  3C 60 80 00 */	lis r3, 0x8000000C@ha
 /* 8000B988 000088C8  38 03 00 0C */	addi r0, r3, 0x8000000C@l
 /* 8000B98C 000088CC  7C 08 00 40 */	cmplw r8, r0
-/* 8000B990 000088D0  41 80 00 3C */	blt func_8000B9CC
+/* 8000B990 000088D0  41 80 00 3C */	blt lbl_8000B9CC
 /* 8000B994 000088D4  3C 60 83 00 */	lis r3, 0x82FFFFFF@ha
 /* 8000B998 000088D8  38 03 FF FF */	addi r0, r3, 0x82FFFFFF@l
 /* 8000B99C 000088DC  7C 08 00 40 */	cmplw r8, r0
-/* 8000B9A0 000088E0  40 80 00 2C */	bge func_8000B9CC
+/* 8000B9A0 000088E0  40 80 00 2C */	bge lbl_8000B9CC
 /* 8000B9A4 000088E4  7F E3 FB 78 */	mr r3, r31
 /* 8000B9A8 000088E8  3C 80 80 37 */	lis r4, m_Do_m_Do_machine__stringBase0@ha
 /* 8000B9AC 000088EC  38 84 3D E8 */	addi r4, r4, m_Do_m_Do_machine__stringBase0@l
@@ -727,10 +602,7 @@ fault_callback_scroll__FUsP9OSContextUlUl:
 /* 8000B9C0 00008900  81 08 00 00 */	lwz r8, 0(r8)
 /* 8000B9C4 00008904  4C C6 31 82 */	crclr 6
 /* 8000B9C8 00008908  48 2D C1 F1 */	bl print_f__10JUTConsoleFPCce
-
-/* 8000B9CC 0074 .text      func_8000B9CC                  func_8000B9CC                  */
-.global func_8000B9CC
-func_8000B9CC:
+lbl_8000B9CC:
 /* 8000B9CC 0000890C  38 61 00 10 */	addi r3, r1, 0x10
 /* 8000B9D0 00008910  38 80 00 00 */	li r4, 0
 /* 8000B9D4 00008914  48 2D 4D 09 */	bl __ct__10JUTGamePadFQ210JUTGamePad8EPadPort
@@ -743,7 +615,7 @@ func_8000B9CC:
 /* 8000B9F0 00008930  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8000B9F4 00008934  7C 00 00 34 */	cntlzw r0, r0
 /* 8000B9F8 00008938  54 00 DE 3F */	rlwinm. r0, r0, 0x1b, 0x18, 0x1f
-/* 8000B9FC 0000893C  40 82 02 30 */	bne func_8000BC2C
+/* 8000B9FC 0000893C  40 82 02 30 */	bne lbl_8000BC2C
 /* 8000BA00 00008940  7F E3 FB 78 */	mr r3, r31
 /* 8000BA04 00008944  3C 80 80 37 */	lis r4, m_Do_m_Do_machine__stringBase0@ha
 /* 8000BA08 00008948  38 84 3D E8 */	addi r4, r4, m_Do_m_Do_machine__stringBase0@l
@@ -760,43 +632,34 @@ func_8000B9CC:
 /* 8000BA34 00008974  48 33 1C D5 */	bl OSEnableInterrupts
 /* 8000BA38 00008978  3B E0 00 00 */	li r31, 0
 /* 8000BA3C 0000897C  3B A0 00 00 */	li r29, 0
-
-/* 8000BA40 0028 .text      func_8000BA40                  func_8000BA40                  */
-.global func_8000BA40
-func_8000BA40:
+lbl_8000BA40:
 /* 8000BA40 00008980  38 61 00 08 */	addi r3, r1, 8
 /* 8000BA44 00008984  38 81 00 0C */	addi r4, r1, 0xc
 /* 8000BA48 00008988  4B FF FD 21 */	bl exceptionReadPad__FPUlPUl
-/* 8000BA4C 0000898C  88 0D 8F 81 */	lbz r0, sym_80451501-_SDA_BASE_(r13)
+/* 8000BA4C 0000898C  88 0D 8F 81 */	lbz r0, data_80451501-_SDA_BASE_(r13)
 /* 8000BA50 00008990  28 00 00 00 */	cmplwi r0, 0
-/* 8000BA54 00008994  41 82 00 14 */	beq func_8000BA68
+/* 8000BA54 00008994  41 82 00 14 */	beq lbl_8000BA68
 /* 8000BA58 00008998  38 60 00 01 */	li r3, 1
 /* 8000BA5C 0000899C  38 80 00 00 */	li r4, 0
 /* 8000BA60 000089A0  38 A0 00 00 */	li r5, 0
 /* 8000BA64 000089A4  48 33 3E 49 */	bl OSResetSystem
-
-/* 8000BA68 001C .text      func_8000BA68                  func_8000BA68                  */
-.global func_8000BA68
-func_8000BA68:
+lbl_8000BA68:
 /* 8000BA68 000089A8  38 60 00 00 */	li r3, 0
 /* 8000BA6C 000089AC  80 01 00 08 */	lwz r0, 8(r1)
 /* 8000BA70 000089B0  28 00 10 00 */	cmplwi r0, 0x1000
-/* 8000BA74 000089B4  40 82 00 10 */	bne func_8000BA84
+/* 8000BA74 000089B4  40 82 00 10 */	bne lbl_8000BA84
 /* 8000BA78 000089B8  7F C3 F3 78 */	mr r3, r30
 /* 8000BA7C 000089BC  48 00 C6 D1 */	bl exception_addition__FP10JUTConsole
 /* 8000BA80 000089C0  38 60 00 01 */	li r3, 1
-
-/* 8000BA84 0060 .text      func_8000BA84                  func_8000BA84                  */
-.global func_8000BA84
-func_8000BA84:
+lbl_8000BA84:
 /* 8000BA84 000089C4  80 01 00 08 */	lwz r0, 8(r1)
 /* 8000BA88 000089C8  28 00 00 10 */	cmplwi r0, 0x10
-/* 8000BA8C 000089CC  40 82 00 80 */	bne func_8000BB0C
+/* 8000BA8C 000089CC  40 82 00 80 */	bne lbl_8000BB0C
 /* 8000BA90 000089D0  80 8D 8C 38 */	lwz r4, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 8000BA94 000089D4  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
 /* 8000BA98 000089D8  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 8000BA9C 000089DC  7C 00 20 40 */	cmplw r0, r4
-/* 8000BAA0 000089E0  41 82 00 58 */	beq func_8000BAF8
+/* 8000BAA0 000089E0  41 82 00 58 */	beq lbl_8000BAF8
 /* 8000BAA4 000089E4  7C 9E 23 78 */	mr r30, r4
 /* 8000BAA8 000089E8  C0 02 81 00 */	lfs f0, m_Do_m_Do_machine__LIT_3940-_SDA2_BASE_(r2)
 /* 8000BAAC 000089EC  D0 04 00 50 */	stfs f0, 0x50(r4)
@@ -811,171 +674,114 @@ func_8000BA84:
 /* 8000BAD0 00008A10  80 04 00 48 */	lwz r0, 0x48(r4)
 /* 8000BAD4 00008A14  80 64 00 24 */	lwz r3, 0x24(r4)
 /* 8000BAD8 00008A18  7C 00 18 40 */	cmplw r0, r3
-/* 8000BADC 00008A1C  40 81 00 08 */	ble func_8000BAE4
+/* 8000BADC 00008A1C  40 81 00 08 */	ble lbl_8000BAE4
 /* 8000BAE0 00008A20  90 64 00 48 */	stw r3, 0x48(r4)
-
-/* 8000BAE4 0014 .text      func_8000BAE4                  func_8000BAE4                  */
-.global func_8000BAE4
-func_8000BAE4:
+lbl_8000BAE4:
 /* 8000BAE4 00008A24  38 00 00 01 */	li r0, 1
 /* 8000BAE8 00008A28  98 04 00 68 */	stb r0, 0x68(r4)
 /* 8000BAEC 00008A2C  38 00 00 03 */	li r0, 3
 /* 8000BAF0 00008A30  90 04 00 58 */	stw r0, 0x58(r4)
-/* 8000BAF4 00008A34  48 00 00 08 */	b func_8000BAFC
-
-/* 8000BAF8 0004 .text      func_8000BAF8                  func_8000BAF8                  */
-.global func_8000BAF8
-func_8000BAF8:
+/* 8000BAF4 00008A34  48 00 00 08 */	b lbl_8000BAFC
+lbl_8000BAF8:
 /* 8000BAF8 00008A38  83 CD 8F 9C */	lwz r30, sConsole__12JUTException-_SDA_BASE_(r13)
-
-/* 8000BAFC 0010 .text      func_8000BAFC                  func_8000BAFC                  */
-.global func_8000BAFC
-func_8000BAFC:
+lbl_8000BAFC:
 /* 8000BAFC 00008A3C  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
 /* 8000BB00 00008A40  7F C4 F3 78 */	mr r4, r30
 /* 8000BB04 00008A44  48 2D C9 C1 */	bl setDirectConsole__17JUTConsoleManagerFP10JUTConsole
 /* 8000BB08 00008A48  38 60 00 01 */	li r3, 1
-
-/* 8000BB0C 001C .text      func_8000BB0C                  func_8000BB0C                  */
-.global func_8000BB0C
-func_8000BB0C:
+lbl_8000BB0C:
 /* 8000BB0C 00008A4C  80 01 00 08 */	lwz r0, 8(r1)
 /* 8000BB10 00008A50  28 00 01 00 */	cmplwi r0, 0x100
-/* 8000BB14 00008A54  40 82 00 14 */	bne func_8000BB28
+/* 8000BB14 00008A54  40 82 00 14 */	bne lbl_8000BB28
 /* 8000BB18 00008A58  7F C3 F3 78 */	mr r3, r30
 /* 8000BB1C 00008A5C  80 9E 00 24 */	lwz r4, 0x24(r30)
 /* 8000BB20 00008A60  48 2D C5 89 */	bl scroll__10JUTConsoleFi
 /* 8000BB24 00008A64  38 60 00 01 */	li r3, 1
-
-/* 8000BB28 0020 .text      func_8000BB28                  func_8000BB28                  */
-.global func_8000BB28
-func_8000BB28:
+lbl_8000BB28:
 /* 8000BB28 00008A68  80 01 00 08 */	lwz r0, 8(r1)
 /* 8000BB2C 00008A6C  28 00 02 00 */	cmplwi r0, 0x200
-/* 8000BB30 00008A70  40 82 00 18 */	bne func_8000BB48
+/* 8000BB30 00008A70  40 82 00 18 */	bne lbl_8000BB48
 /* 8000BB34 00008A74  7F C3 F3 78 */	mr r3, r30
 /* 8000BB38 00008A78  80 1E 00 24 */	lwz r0, 0x24(r30)
 /* 8000BB3C 00008A7C  7C 80 00 D0 */	neg r4, r0
 /* 8000BB40 00008A80  48 2D C5 69 */	bl scroll__10JUTConsoleFi
 /* 8000BB44 00008A84  38 60 00 01 */	li r3, 1
-
-/* 8000BB48 0020 .text      func_8000BB48                  func_8000BB48                  */
-.global func_8000BB48
-func_8000BB48:
+lbl_8000BB48:
 /* 8000BB48 00008A88  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8000BB4C 00008A8C  28 00 00 08 */	cmplwi r0, 8
-/* 8000BB50 00008A90  40 82 00 4C */	bne func_8000BB9C
+/* 8000BB50 00008A90  40 82 00 4C */	bne lbl_8000BB9C
 /* 8000BB54 00008A94  7F C3 F3 78 */	mr r3, r30
 /* 8000BB58 00008A98  2C 1F 00 03 */	cmpwi r31, 3
-/* 8000BB5C 00008A9C  40 80 00 0C */	bge func_8000BB68
+/* 8000BB5C 00008A9C  40 80 00 0C */	bge lbl_8000BB68
 /* 8000BB60 00008AA0  38 80 FF FF */	li r4, -1
-/* 8000BB64 00008AA4  48 00 00 24 */	b func_8000BB88
-
-/* 8000BB68 0010 .text      func_8000BB68                  func_8000BB68                  */
-.global func_8000BB68
-func_8000BB68:
+/* 8000BB64 00008AA4  48 00 00 24 */	b lbl_8000BB88
+lbl_8000BB68:
 /* 8000BB68 00008AA8  2C 1F 00 05 */	cmpwi r31, 5
-/* 8000BB6C 00008AAC  40 80 00 0C */	bge func_8000BB78
+/* 8000BB6C 00008AAC  40 80 00 0C */	bge lbl_8000BB78
 /* 8000BB70 00008AB0  38 80 FF FE */	li r4, -2
-/* 8000BB74 00008AB4  48 00 00 14 */	b func_8000BB88
-
-/* 8000BB78 0010 .text      func_8000BB78                  func_8000BB78                  */
-.global func_8000BB78
-func_8000BB78:
+/* 8000BB74 00008AB4  48 00 00 14 */	b lbl_8000BB88
+lbl_8000BB78:
 /* 8000BB78 00008AB8  2C 1F 00 07 */	cmpwi r31, 7
 /* 8000BB7C 00008ABC  38 80 FF F8 */	li r4, -8
-/* 8000BB80 00008AC0  40 80 00 08 */	bge func_8000BB88
+/* 8000BB80 00008AC0  40 80 00 08 */	bge lbl_8000BB88
 /* 8000BB84 00008AC4  38 80 FF FC */	li r4, -4
-
-/* 8000BB88 0014 .text      func_8000BB88                  func_8000BB88                  */
-.global func_8000BB88
-func_8000BB88:
+lbl_8000BB88:
 /* 8000BB88 00008AC8  48 2D C5 21 */	bl scroll__10JUTConsoleFi
 /* 8000BB8C 00008ACC  38 60 00 01 */	li r3, 1
 /* 8000BB90 00008AD0  3B A0 00 00 */	li r29, 0
 /* 8000BB94 00008AD4  3B FF 00 01 */	addi r31, r31, 1
-/* 8000BB98 00008AD8  48 00 00 5C */	b func_8000BBF4
-
-/* 8000BB9C 001C .text      func_8000BB9C                  func_8000BB9C                  */
-.global func_8000BB9C
-func_8000BB9C:
+/* 8000BB98 00008AD8  48 00 00 5C */	b lbl_8000BBF4
+lbl_8000BB9C:
 /* 8000BB9C 00008ADC  28 00 00 04 */	cmplwi r0, 4
-/* 8000BBA0 00008AE0  40 82 00 4C */	bne func_8000BBEC
+/* 8000BBA0 00008AE0  40 82 00 4C */	bne lbl_8000BBEC
 /* 8000BBA4 00008AE4  7F C3 F3 78 */	mr r3, r30
 /* 8000BBA8 00008AE8  2C 1D 00 03 */	cmpwi r29, 3
-/* 8000BBAC 00008AEC  40 80 00 0C */	bge func_8000BBB8
+/* 8000BBAC 00008AEC  40 80 00 0C */	bge lbl_8000BBB8
 /* 8000BBB0 00008AF0  38 80 00 01 */	li r4, 1
-/* 8000BBB4 00008AF4  48 00 00 24 */	b func_8000BBD8
-
-/* 8000BBB8 0010 .text      func_8000BBB8                  func_8000BBB8                  */
-.global func_8000BBB8
-func_8000BBB8:
+/* 8000BBB4 00008AF4  48 00 00 24 */	b lbl_8000BBD8
+lbl_8000BBB8:
 /* 8000BBB8 00008AF8  2C 1D 00 05 */	cmpwi r29, 5
-/* 8000BBBC 00008AFC  40 80 00 0C */	bge func_8000BBC8
+/* 8000BBBC 00008AFC  40 80 00 0C */	bge lbl_8000BBC8
 /* 8000BBC0 00008B00  38 80 00 02 */	li r4, 2
-/* 8000BBC4 00008B04  48 00 00 14 */	b func_8000BBD8
-
-/* 8000BBC8 0010 .text      func_8000BBC8                  func_8000BBC8                  */
-.global func_8000BBC8
-func_8000BBC8:
+/* 8000BBC4 00008B04  48 00 00 14 */	b lbl_8000BBD8
+lbl_8000BBC8:
 /* 8000BBC8 00008B08  2C 1D 00 07 */	cmpwi r29, 7
 /* 8000BBCC 00008B0C  38 80 00 08 */	li r4, 8
-/* 8000BBD0 00008B10  40 80 00 08 */	bge func_8000BBD8
+/* 8000BBD0 00008B10  40 80 00 08 */	bge lbl_8000BBD8
 /* 8000BBD4 00008B14  38 80 00 04 */	li r4, 4
-
-/* 8000BBD8 0014 .text      func_8000BBD8                  func_8000BBD8                  */
-.global func_8000BBD8
-func_8000BBD8:
+lbl_8000BBD8:
 /* 8000BBD8 00008B18  48 2D C4 D1 */	bl scroll__10JUTConsoleFi
 /* 8000BBDC 00008B1C  38 60 00 01 */	li r3, 1
 /* 8000BBE0 00008B20  3B E0 00 00 */	li r31, 0
 /* 8000BBE4 00008B24  3B BD 00 01 */	addi r29, r29, 1
-/* 8000BBE8 00008B28  48 00 00 0C */	b func_8000BBF4
-
-/* 8000BBEC 0008 .text      func_8000BBEC                  func_8000BBEC                  */
-.global func_8000BBEC
-func_8000BBEC:
+/* 8000BBE8 00008B28  48 00 00 0C */	b lbl_8000BBF4
+lbl_8000BBEC:
 /* 8000BBEC 00008B2C  3B E0 00 00 */	li r31, 0
 /* 8000BBF0 00008B30  3B A0 00 00 */	li r29, 0
-
-/* 8000BBF4 0014 .text      func_8000BBF4                  func_8000BBF4                  */
-.global func_8000BBF4
-func_8000BBF4:
+lbl_8000BBF4:
 /* 8000BBF4 00008B34  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8000BBF8 00008B38  28 00 00 01 */	cmplwi r0, 1
-/* 8000BBFC 00008B3C  40 82 00 24 */	bne func_8000BC20
+/* 8000BBFC 00008B3C  40 82 00 24 */	bne lbl_8000BC20
 /* 8000BC00 00008B40  48 34 1C BD */	bl VIGetRetraceCount
 /* 8000BC04 00008B44  7C 7C 1B 78 */	mr r28, r3
-
-/* 8000BC08 0018 .text      func_8000BC08                  func_8000BC08                  */
-.global func_8000BC08
-func_8000BC08:
+lbl_8000BC08:
 /* 8000BC08 00008B48  48 34 1C B5 */	bl VIGetRetraceCount
 /* 8000BC0C 00008B4C  7C 1C 18 40 */	cmplw r28, r3
-/* 8000BC10 00008B50  41 82 FF F8 */	beq func_8000BC08
+/* 8000BC10 00008B50  41 82 FF F8 */	beq lbl_8000BC08
 /* 8000BC14 00008B54  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
 /* 8000BC18 00008B58  38 80 00 01 */	li r4, 1
 /* 8000BC1C 00008B5C  48 2D C8 35 */	bl drawDirect__17JUTConsoleManagerCFb
-
-/* 8000BC20 000C .text      func_8000BC20                  func_8000BC20                  */
-.global func_8000BC20
-func_8000BC20:
+lbl_8000BC20:
 /* 8000BC20 00008B60  38 60 00 1E */	li r3, 0x1e
 /* 8000BC24 00008B64  48 2D 7D 5D */	bl waitTime__12JUTExceptionFl
-/* 8000BC28 00008B68  4B FF FE 18 */	b func_8000BA40
-
-/* 8000BC2C 0014 .text      func_8000BC2C                  func_8000BC2C                  */
-.global func_8000BC2C
-func_8000BC2C:
+/* 8000BC28 00008B68  4B FF FE 18 */	b lbl_8000BA40
+lbl_8000BC2C:
 /* 8000BC2C 00008B6C  7F E3 FB 78 */	mr r3, r31
 /* 8000BC30 00008B70  48 00 C5 1D */	bl exception_addition__FP10JUTConsole
 /* 8000BC34 00008B74  80 6D 8F F0 */	lwz r3, sManager__17JUTConsoleManager-_SDA_BASE_(r13)
 /* 8000BC38 00008B78  38 80 00 01 */	li r4, 1
 /* 8000BC3C 00008B7C  48 2D C8 15 */	bl drawDirect__17JUTConsoleManagerCFb
-
-/* 8000BC40 0024 .text      func_8000BC40                  func_8000BC40                  */
-.global func_8000BC40
-func_8000BC40:
+lbl_8000BC40:
 /* 8000BC40 00008B80  7F E3 FB 78 */	mr r3, r31
 /* 8000BC44 00008B84  80 1F 00 24 */	lwz r0, 0x24(r31)
 /* 8000BC48 00008B88  7C 80 00 D0 */	neg r4, r0
@@ -985,16 +791,10 @@ func_8000BC40:
 /* 8000BC58 00008B98  48 2D C7 F9 */	bl drawDirect__17JUTConsoleManagerCFb
 /* 8000BC5C 00008B9C  38 60 07 D0 */	li r3, 0x7d0
 /* 8000BC60 00008BA0  48 2D 7D 21 */	bl waitTime__12JUTExceptionFl
-
-/* 8000BC64 0008 .text      func_8000BC64                  func_8000BC64                  */
-.global func_8000BC64
-func_8000BC64:
+lbl_8000BC64:
 /* 8000BC64 00008BA4  83 DF 00 48 */	lwz r30, 0x48(r31)
-/* 8000BC68 00008BA8  48 00 00 50 */	b func_8000BCB8
-
-/* 8000BC6C 004C .text      func_8000BC6C                  func_8000BC6C                  */
-.global func_8000BC6C
-func_8000BC6C:
+/* 8000BC68 00008BA8  48 00 00 50 */	b lbl_8000BCB8
+lbl_8000BC6C:
 /* 8000BC6C 00008BAC  7F E3 FB 78 */	mr r3, r31
 /* 8000BC70 00008BB0  38 80 00 01 */	li r4, 1
 /* 8000BC74 00008BB4  48 2D C4 35 */	bl scroll__10JUTConsoleFi
@@ -1010,20 +810,14 @@ func_8000BC6C:
 /* 8000BC9C 00008BDC  7C 7C 18 50 */	subf r3, r28, r3
 /* 8000BCA0 00008BE0  38 03 00 01 */	addi r0, r3, 1
 /* 8000BCA4 00008BE4  7C 00 E8 40 */	cmplw r0, r29
-/* 8000BCA8 00008BE8  40 81 00 18 */	ble func_8000BCC0
+/* 8000BCA8 00008BE8  40 81 00 18 */	ble lbl_8000BCC0
 /* 8000BCAC 00008BEC  38 60 00 14 */	li r3, 0x14
 /* 8000BCB0 00008BF0  48 2D 7C D1 */	bl waitTime__12JUTExceptionFl
 /* 8000BCB4 00008BF4  3B DE FF FF */	addi r30, r30, -1
-
-/* 8000BCB8 0008 .text      func_8000BCB8                  func_8000BCB8                  */
-.global func_8000BCB8
-func_8000BCB8:
+lbl_8000BCB8:
 /* 8000BCB8 00008BF8  28 1E 00 00 */	cmplwi r30, 0
-/* 8000BCBC 00008BFC  40 82 FF B0 */	bne func_8000BC6C
-
-/* 8000BCC0 0034 .text      func_8000BCC0                  func_8000BCC0                  */
-.global func_8000BCC0
-func_8000BCC0:
+/* 8000BCBC 00008BFC  40 82 FF B0 */	bne lbl_8000BC6C
+lbl_8000BCC0:
 /* 8000BCC0 00008C00  38 60 0B B8 */	li r3, 0xbb8
 /* 8000BCC4 00008C04  48 2D 7C BD */	bl waitTime__12JUTExceptionFl
 /* 8000BCC8 00008C08  83 9F 00 48 */	lwz r28, 0x48(r31)
@@ -1035,16 +829,18 @@ func_8000BCC0:
 /* 8000BCE0 00008C20  7C 7C 18 50 */	subf r3, r28, r3
 /* 8000BCE4 00008C24  38 03 00 01 */	addi r0, r3, 1
 /* 8000BCE8 00008C28  7C 00 E8 40 */	cmplw r0, r29
-/* 8000BCEC 00008C2C  40 81 FF 54 */	ble func_8000BC40
-/* 8000BCF0 00008C30  4B FF FF 74 */	b func_8000BC64
+/* 8000BCEC 00008C2C  40 81 FF 54 */	ble lbl_8000BC40
+/* 8000BCF0 00008C30  4B FF FF 74 */	b lbl_8000BC64
 
 /* 8000BCF4 0004 .text      my_PrintHeap__FPCcUl           my_PrintHeap__FPCcUl           */
 .global my_PrintHeap__FPCcUl
+my_PrintHeap__FPCcUl:
 my_PrintHeap__FPCcUl:
 /* 8000BCF4 00008C34  4E 80 00 20 */	blr 
 
 /* 8000BCF8 004C .text      my_SysPrintHeap__FPCcPvUl      my_SysPrintHeap__FPCcPvUl      */
 .global my_SysPrintHeap__FPCcPvUl
+my_SysPrintHeap__FPCcPvUl:
 my_SysPrintHeap__FPCcPvUl:
 /* 8000BCF8 00008C38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000BCFC 00008C3C  7C 08 02 A6 */	mflr r0
@@ -1066,33 +862,28 @@ my_SysPrintHeap__FPCcPvUl:
 /* 8000BD3C 00008C7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8000BD40 00008C80  4E 80 00 20 */	blr 
 
-/* 8000BD44 002C .text      mDoMch_Create__Fv              mDoMch_Create__Fv              */
+/* 8000BD44 0388 .text      mDoMch_Create__Fv              mDoMch_Create__Fv              */
 .global mDoMch_Create__Fv
+mDoMch_Create__Fv:
 mDoMch_Create__Fv:
 /* 8000BD44 00008C84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8000BD48 00008C88  7C 08 02 A6 */	mflr r0
 /* 8000BD4C 00008C8C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8000BD50 00008C90  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8000BD54 00008C94  93 C1 00 08 */	stw r30, 8(r1)
-/* 8000BD58 00008C98  88 0D 80 00 */	lbz r0, sym_80450580-_SDA_BASE_(r13)
+/* 8000BD58 00008C98  88 0D 80 00 */	lbz r0, data_80450580-_SDA_BASE_(r13)
 /* 8000BD5C 00008C9C  7C 00 07 75 */	extsb. r0, r0
-/* 8000BD60 00008CA0  41 82 00 10 */	beq func_8000BD70
+/* 8000BD60 00008CA0  41 82 00 10 */	beq lbl_8000BD70
 /* 8000BD64 00008CA4  48 32 E1 99 */	bl OSGetConsoleType
 /* 8000BD68 00008CA8  54 60 00 C7 */	rlwinm. r0, r3, 0, 3, 3
-/* 8000BD6C 00008CAC  40 82 00 08 */	bne func_8000BD74
-
-/* 8000BD70 0004 .text      func_8000BD70                  func_8000BD70                  */
-.global func_8000BD70
-func_8000BD70:
+/* 8000BD6C 00008CAC  40 82 00 08 */	bne lbl_8000BD74
+lbl_8000BD70:
 /* 8000BD70 00008CB0  4B FF AB 25 */	bl OSReportDisable
-
-/* 8000BD74 0044 .text      func_8000BD74                  func_8000BD74                  */
-.global func_8000BD74
-func_8000BD74:
-/* 8000BD74 00008CB4  88 6D 86 70 */	lbz r3, sym_80450BF0-_SDA_BASE_(r13)
+lbl_8000BD74:
+/* 8000BD74 00008CB4  88 6D 86 70 */	lbz r3, data_80450BF0-_SDA_BASE_(r13)
 /* 8000BD78 00008CB8  30 03 FF FF */	addic r0, r3, -1
 /* 8000BD7C 00008CBC  7C 00 19 10 */	subfe r0, r0, r3
-/* 8000BD80 00008CC0  98 0D 83 30 */	stb r0, sym_804508B0-_SDA_BASE_(r13)
+/* 8000BD80 00008CC0  98 0D 83 30 */	stb r0, data_804508B0-_SDA_BASE_(r13)
 /* 8000BD84 00008CC4  38 00 00 01 */	li r0, 1
 /* 8000BD88 00008CC8  90 0D 81 F0 */	stw r0, maxStdHeaps__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 8000BD8C 00008CCC  48 32 F5 01 */	bl OSGetArenaHi
@@ -1100,16 +891,13 @@ func_8000BD74:
 /* 8000BD94 00008CD4  48 32 F5 01 */	bl OSGetArenaLo
 /* 8000BD98 00008CD8  3C 00 81 80 */	lis r0, 0x8180
 /* 8000BD9C 00008CDC  7C 1F 00 40 */	cmplw r31, r0
-/* 8000BDA0 00008CE0  40 81 00 18 */	ble func_8000BDB8
+/* 8000BDA0 00008CE0  40 81 00 18 */	ble lbl_8000BDB8
 /* 8000BDA4 00008CE4  3C 1F FE 80 */	addis r0, r31, 0xfe80
 /* 8000BDA8 00008CE8  7C 00 18 40 */	cmplw r0, r3
-/* 8000BDAC 00008CEC  40 81 00 0C */	ble func_8000BDB8
+/* 8000BDAC 00008CEC  40 81 00 0C */	ble lbl_8000BDB8
 /* 8000BDB0 00008CF0  7C 03 03 78 */	mr r3, r0
 /* 8000BDB4 00008CF4  48 32 F4 E9 */	bl OSSetArenaHi
-
-/* 8000BDB8 003C .text      func_8000BDB8                  func_8000BDB8                  */
-.global func_8000BDB8
-func_8000BDB8:
+lbl_8000BDB8:
 /* 8000BDB8 00008CF8  48 32 F4 D5 */	bl OSGetArenaHi
 /* 8000BDBC 00008CFC  7C 7F 1B 78 */	mr r31, r3
 /* 8000BDC0 00008D00  48 32 F4 D5 */	bl OSGetArenaLo
@@ -1123,12 +911,9 @@ func_8000BDB8:
 /* 8000BDE0 00008D20  80 6D 80 04 */	lwz r3, memMargin__7mDoMain-_SDA_BASE_(r13)
 /* 8000BDE4 00008D24  3C 03 00 01 */	addis r0, r3, 1
 /* 8000BDE8 00008D28  28 00 FF FF */	cmplwi r0, 0xffff
-/* 8000BDEC 00008D2C  41 82 00 08 */	beq func_8000BDF4
+/* 8000BDEC 00008D2C  41 82 00 08 */	beq lbl_8000BDF4
 /* 8000BDF0 00008D30  7F DE 1A 14 */	add r30, r30, r3
-
-/* 8000BDF4 005C .text      func_8000BDF4                  func_8000BDF4                  */
-.global func_8000BDF4
-func_8000BDF4:
+lbl_8000BDF4:
 /* 8000BDF4 00008D34  3C 9E FF 25 */	addis r4, r30, 0xff25
 /* 8000BDF8 00008D38  38 04 32 D0 */	addi r0, r4, 0x32d0
 /* 8000BDFC 00008D3C  90 0D 81 F4 */	stw r0, sysHeapSize__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
@@ -1145,34 +930,28 @@ func_8000BDF4:
 /* 8000BE28 00008D68  90 0D 82 00 */	stw r0, aramGraphBufSize__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 8000BE2C 00008D6C  48 33 3C 81 */	bl OSGetResetCode
 /* 8000BE30 00008D70  54 60 0F FF */	rlwinm. r0, r3, 1, 0x1f, 0x1f
-/* 8000BE34 00008D74  40 82 00 1C */	bne func_8000BE50
+/* 8000BE34 00008D74  40 82 00 1C */	bne lbl_8000BE50
 /* 8000BE38 00008D78  48 34 1C CD */	bl VIGetDTVStatus
 /* 8000BE3C 00008D7C  28 03 00 00 */	cmplwi r3, 0
-/* 8000BE40 00008D80  40 82 00 44 */	bne func_8000BE84
+/* 8000BE40 00008D80  40 82 00 44 */	bne lbl_8000BE84
 /* 8000BE44 00008D84  38 60 00 00 */	li r3, 0
 /* 8000BE48 00008D88  48 33 48 DD */	bl OSSetProgressiveMode
-/* 8000BE4C 00008D8C  48 00 00 38 */	b func_8000BE84
-
-/* 8000BE50 0034 .text      func_8000BE50                  func_8000BE50                  */
-.global func_8000BE50
-func_8000BE50:
+/* 8000BE4C 00008D8C  48 00 00 38 */	b lbl_8000BE84
+lbl_8000BE50:
 /* 8000BE50 00008D90  80 6D 86 F8 */	lwz r3, mResetData__6mDoRst-_SDA_BASE_(r13)
 /* 8000BE54 00008D94  88 03 00 13 */	lbz r0, 0x13(r3)
 /* 8000BE58 00008D98  28 00 00 00 */	cmplwi r0, 0
-/* 8000BE5C 00008D9C  41 82 00 28 */	beq func_8000BE84
+/* 8000BE5C 00008D9C  41 82 00 28 */	beq lbl_8000BE84
 /* 8000BE60 00008DA0  48 34 1C A5 */	bl VIGetDTVStatus
 /* 8000BE64 00008DA4  28 03 00 00 */	cmplwi r3, 0
-/* 8000BE68 00008DA8  41 82 00 1C */	beq func_8000BE84
+/* 8000BE68 00008DA8  41 82 00 1C */	beq lbl_8000BE84
 /* 8000BE6C 00008DAC  4B FF F8 D1 */	bl mDoMch_IsProgressiveMode__Fv
 /* 8000BE70 00008DB0  2C 03 00 00 */	cmpwi r3, 0
-/* 8000BE74 00008DB4  41 82 00 10 */	beq func_8000BE84
+/* 8000BE74 00008DB4  41 82 00 10 */	beq lbl_8000BE84
 /* 8000BE78 00008DB8  3C 60 80 3A */	lis r3, g_ntscZeldaProg@ha
 /* 8000BE7C 00008DBC  38 03 2F 9C */	addi r0, r3, g_ntscZeldaProg@l
 /* 8000BE80 00008DC0  90 0D 80 20 */	stw r0, mRenderModeObj__15mDoMch_render_c-_SDA_BASE_(r13)
-
-/* 8000BE84 0050 .text      func_8000BE84                  func_8000BE84                  */
-.global func_8000BE84
-func_8000BE84:
+lbl_8000BE84:
 /* 8000BE84 00008DC4  80 0D 80 20 */	lwz r0, mRenderModeObj__15mDoMch_render_c-_SDA_BASE_(r13)
 /* 8000BE88 00008DC8  90 0D 82 14 */	stw r0, renderMode__Q29JFWSystem11CSetUpParam-_SDA_BASE_(r13)
 /* 8000BE8C 00008DCC  48 26 5E 45 */	bl firstInit__9JFWSystemFv
@@ -1185,18 +964,15 @@ func_8000BE84:
 /* 8000BEA8 00008DE8  80 6D 8D F8 */	lwz r3, sRootHeap__7JKRHeap-_SDA_BASE_(r13)
 /* 8000BEAC 00008DEC  48 00 2E 15 */	bl mDoExt_createAssertHeap__FP7JKRHeap
 /* 8000BEB0 00008DF0  48 26 5E 69 */	bl init__9JFWSystemFv
-/* 8000BEB4 00008DF4  88 0D 80 00 */	lbz r0, sym_80450580-_SDA_BASE_(r13)
+/* 8000BEB4 00008DF4  88 0D 80 00 */	lbz r0, data_80450580-_SDA_BASE_(r13)
 /* 8000BEB8 00008DF8  7C 00 07 75 */	extsb. r0, r0
-/* 8000BEBC 00008DFC  40 82 00 18 */	bne func_8000BED4
+/* 8000BEBC 00008DFC  40 82 00 18 */	bne lbl_8000BED4
 /* 8000BEC0 00008E00  38 60 00 00 */	li r3, 0
 /* 8000BEC4 00008E04  48 2D 8D 71 */	bl setVisible__12JUTAssertionFb
 /* 8000BEC8 00008E08  38 00 00 00 */	li r0, 0
 /* 8000BECC 00008E0C  80 6D 8F 48 */	lwz r3, sDebugPrint__10JUTDbPrint-_SDA_BASE_(r13)
 /* 8000BED0 00008E10  98 03 00 0C */	stb r0, 0xc(r3)
-
-/* 8000BED4 014C .text      func_8000BED4                  func_8000BED4                  */
-.global func_8000BED4
-func_8000BED4:
+lbl_8000BED4:
 /* 8000BED4 00008E14  3C 60 80 01 */	lis r3, myMemoryErrorRoutine__FPvUli@ha
 /* 8000BED8 00008E18  38 63 B3 EC */	addi r3, r3, myMemoryErrorRoutine__FPvUli@l
 /* 8000BEDC 00008E1C  48 2C 2C AD */	bl setErrorHandler__7JKRHeapFPFPvUli_v
@@ -1274,16 +1050,13 @@ func_8000BED4:
 /* 8000BFFC 00008F3C  38 60 00 7C */	li r3, 0x7c
 /* 8000C000 00008F40  48 2C 2C 4D */	bl __nw__FUl
 /* 8000C004 00008F44  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8000C008 00008F48  41 82 00 18 */	beq func_8000C020
+/* 8000C008 00008F48  41 82 00 18 */	beq lbl_8000C020
 /* 8000C00C 00008F4C  48 33 4C 79 */	bl OSGetCurrentThread
 /* 8000C010 00008F50  7C 64 1B 78 */	mr r4, r3
 /* 8000C014 00008F54  7F E3 FB 78 */	mr r3, r31
 /* 8000C018 00008F58  38 A0 00 00 */	li r5, 0
 /* 8000C01C 00008F5C  48 2C 56 9D */	bl __ct__9JKRThreadFP8OSThreadi
-
-/* 8000C020 00AC .text      func_8000C020                  func_8000C020                  */
-.global func_8000C020
-func_8000C020:
+lbl_8000C020:
 /* 8000C020 00008F60  80 6D 8C 38 */	lwz r3, systemConsole__9JFWSystem-_SDA_BASE_(r13)
 /* 8000C024 00008F64  38 00 00 03 */	li r0, 3
 /* 8000C028 00008F68  90 03 00 58 */	stw r0, 0x58(r3)
@@ -1333,7 +1106,7 @@ func_8000C020:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80373DE8 02D8 .rodata    m_Do_m_Do_machine__stringBase0 @stringBase0                   */
+/* 80373DE8 02D8 .rodata    @stringBase0                   m_Do_m_Do_machine__stringBase0 */
 .global m_Do_m_Do_machine__stringBase0
 m_Do_m_Do_machine__stringBase0:
 .byte 0x53, 0x79, 0x73, 0x74, 0x65, 0x6d, 0x48, 0x65, 0x61, 0x70, 0x00, 0x5a, 0x65, 0x6c, 0x64, 0x61 /* baserom.dol+0x370de8 */
@@ -1413,7 +1186,7 @@ g_ntscZeldaProg:
 .global mRenderModeObj__15mDoMch_render_c
 mRenderModeObj__15mDoMch_render_c:
 .byte 0x80, 0x3a, 0x2f, 0x60 /* baserom.dol+0x3d0300 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0304 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -1455,24 +1228,24 @@ unknownHeapErrors:
 heapErrors:
 .skip 0x4
 
-/* 80450C10 0005 .sbss      sym_80450C10                   tmpString$3651                 */
-.global sym_80450C10
-sym_80450C10:
+/* 80450C10 0005 .sbss      tmpString$3651                 data_80450C10                  */
+.global data_80450C10
+data_80450C10:
 .skip 0x5
 
-/* 80450C15 0001 .sbss      sym_80450C15                   sym_80450C15                   */
-.global sym_80450C15
-sym_80450C15:
+/* 80450C15 0001 .sbss      data_80450C15                  data_80450C15                  */
+.global data_80450C15
+data_80450C15:
 .skip 0x1
 
-/* 80450C16 0001 .sbss      sym_80450C16                   sym_80450C16                   */
-.global sym_80450C16
-sym_80450C16:
+/* 80450C16 0001 .sbss      data_80450C16                  data_80450C16                  */
+.global data_80450C16
+data_80450C16:
 .skip 0x1
 
-/* 80450C17 0001 .sbss      sym_80450C17                   sym_80450C17                   */
-.global sym_80450C17
-sym_80450C17:
+/* 80450C17 0001 .sbss      data_80450C17                  data_80450C17                  */
+.global data_80450C17
+data_80450C17:
 .skip 0x1
 
 
@@ -1480,12 +1253,12 @@ sym_80450C17:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80451B00 0004 .sdata2    m_Do_m_Do_machine__LIT_3940    @3940                          */
+/* 80451B00 0004 .sdata2    @3940                          m_Do_m_Do_machine__LIT_3940    */
 .global m_Do_m_Do_machine__LIT_3940
 m_Do_m_Do_machine__LIT_3940:
 .byte 0x41, 0x00, 0x00, 0x00 /* baserom.dol+0x3d0960 */
 
-/* 80451B04 0004 .sdata2    m_Do_m_Do_machine__LIT_3941    @3941                          */
+/* 80451B04 0004 .sdata2    @3941                          m_Do_m_Do_machine__LIT_3941    */
 .global m_Do_m_Do_machine__LIT_3941
 m_Do_m_Do_machine__LIT_3941:
 .byte 0x40, 0xc0, 0x00, 0x00 /* baserom.dol+0x3d0964 */

@@ -7,6 +7,7 @@
 /* 80074048 002C .text      setCode__5dBgPcFR5sBgPc        setCode__5dBgPcFR5sBgPc        */
 .global setCode__5dBgPcFR5sBgPc
 setCode__5dBgPcFR5sBgPc:
+setCode__5dBgPcFR5sBgPc:
 /* 80074048 00070F88  80 04 00 00 */	lwz r0, 0(r4)
 /* 8007404C 00070F8C  90 03 00 00 */	stw r0, 0(r3)
 /* 80074050 00070F90  80 04 00 04 */	lwz r0, 4(r4)

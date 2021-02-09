@@ -7,9 +7,12 @@
 /* 80340A20 0000 .text      __OSSystemCallVectorStart      __OSSystemCallVectorStart      */
 .global __OSSystemCallVectorStart
 __OSSystemCallVectorStart:
+lbl_80340A20:
+/* 0 bytes of code */
 
 /* 80340A20 001C .text      SystemCallVector               SystemCallVector               */
 .global SystemCallVector
+SystemCallVector:
 SystemCallVector:
 /* 80340A20 0033D960  7D 30 FA A6 */	mfspr r9, 0x3f0
 /* 80340A24 0033D964  61 2A 00 08 */	ori r10, r9, 8
@@ -22,10 +25,12 @@ SystemCallVector:
 /* 80340A3C 0004 .text      __OSSystemCallVectorEnd        __OSSystemCallVectorEnd        */
 .global __OSSystemCallVectorEnd
 __OSSystemCallVectorEnd:
+__OSSystemCallVectorEnd:
 /* 80340A3C 0033D97C  60 00 00 00 */	nop 
 
 /* 80340A40 0064 .text      __OSInitSystemCall             __OSInitSystemCall             */
 .global __OSInitSystemCall
+__OSInitSystemCall:
 __OSInitSystemCall:
 /* 80340A40 0033D980  7C 08 02 A6 */	mflr r0
 /* 80340A44 0033D984  90 01 00 04 */	stw r0, 4(r1)

@@ -7,17 +7,20 @@
 /* 80037C14 0008 .text      getRotateP__12daShopItem_cFv   getRotateP__12daShopItem_cFv   */
 .global getRotateP__12daShopItem_cFv
 getRotateP__12daShopItem_cFv:
+getRotateP__12daShopItem_cFv:
 /* 80037C14 00034B54  38 63 04 DC */	addi r3, r3, 0x4dc
 /* 80037C18 00034B58  4E 80 00 20 */	blr 
 
 /* 80037C1C 0008 .text      getPosP__12daShopItem_cFv      getPosP__12daShopItem_cFv      */
 .global getPosP__12daShopItem_cFv
 getPosP__12daShopItem_cFv:
+getPosP__12daShopItem_cFv:
 /* 80037C1C 00034B5C  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 80037C20 00034B60  4E 80 00 20 */	blr 
 
 /* 80037C24 0058 .text      CheckShopItemCreateHeap__FP10fopAc_ac_c CheckShopItemCreateHeap__FP10fopAc_ac_c */
 .global CheckShopItemCreateHeap__FP10fopAc_ac_c
+CheckShopItemCreateHeap__FP10fopAc_ac_c:
 CheckShopItemCreateHeap__FP10fopAc_ac_c:
 /* 80037C24 00034B64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80037C28 00034B68  7C 08 02 A6 */	mflr r0
@@ -120,7 +123,7 @@ mData__12daShopItem_c:
 .byte 0x00, 0x0f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3f, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x376718 */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x0c, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x376728 */
 
-/* 80379738 00BF .rodata    d_d_a_shop_item_static__stringBase0 @stringBase0                   */
+/* 80379738 00BF .rodata    @stringBase0                   d_d_a_shop_item_static__stringBase0 */
 .global d_d_a_shop_item_static__stringBase0
 d_d_a_shop_item_static__stringBase0:
 .byte 0x42, 0x5f, 0x6d, 0x44, 0x5f, 0x73, 0x6f, 0x6c, 0x64, 0x00, 0x42, 0x5f, 0x6d, 0x44, 0x5f, 0x6f /* baserom.dol+0x376738 */
@@ -135,5 +138,5 @@ d_d_a_shop_item_static__stringBase0:
 .byte 0x44, 0x5f, 0x70, 0x61, 0x63, 0x68, 0x00, 0x4f, 0x5f, 0x6d, 0x44, 0x5f, 0x62, 0x6c, 0x75, 0x65 /* baserom.dol+0x3767c8 */
 .byte 0x00, 0x4f, 0x5f, 0x6d, 0x44, 0x5f, 0x68, 0x61, 0x77, 0x6b, 0x00, 0x4f, 0x5f, 0x6d, 0x44, 0x5f /* baserom.dol+0x3767d8 */
 .byte 0x6d, 0x61, 0x72, 0x6d, 0x00, 0x4f, 0x5f, 0x6d, 0x44, 0x5f, 0x67, 0x72, 0x65, 0x6e, 0x00 /* baserom.dol+0x3767e8 */
-.byte 0x00 /* baserom.dol+0x3767f7 */
+.byte 0x00 /* padding */
 

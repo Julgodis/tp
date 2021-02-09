@@ -7,6 +7,7 @@
 /* 802632C8 0030 .text      cAPIGph_Painter__Fv            cAPIGph_Painter__Fv            */
 .global cAPIGph_Painter__Fv
 cAPIGph_Painter__Fv:
+cAPIGph_Painter__Fv:
 /* 802632C8 00260208  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802632CC 0026020C  7C 08 02 A6 */	mflr r0
 /* 802632D0 00260210  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,6 +24,7 @@ cAPIGph_Painter__Fv:
 /* 802632F8 0030 .text      cAPIGph_BeforeOfDraw__Fv       cAPIGph_BeforeOfDraw__Fv       */
 .global cAPIGph_BeforeOfDraw__Fv
 cAPIGph_BeforeOfDraw__Fv:
+cAPIGph_BeforeOfDraw__Fv:
 /* 802632F8 00260238  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802632FC 0026023C  7C 08 02 A6 */	mflr r0
 /* 80263300 00260240  90 01 00 14 */	stw r0, 0x14(r1)
@@ -38,6 +40,7 @@ cAPIGph_BeforeOfDraw__Fv:
 
 /* 80263328 0030 .text      cAPIGph_AfterOfDraw__Fv        cAPIGph_AfterOfDraw__Fv        */
 .global cAPIGph_AfterOfDraw__Fv
+cAPIGph_AfterOfDraw__Fv:
 cAPIGph_AfterOfDraw__Fv:
 /* 80263328 00260268  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026332C 0026026C  7C 08 02 A6 */	mflr r0

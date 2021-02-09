@@ -7,17 +7,20 @@
 /* 80021308 0008 .text      fpcDwPi_Get__FPC19draw_priority_class fpcDwPi_Get__FPC19draw_priority_class */
 .global fpcDwPi_Get__FPC19draw_priority_class
 fpcDwPi_Get__FPC19draw_priority_class:
+fpcDwPi_Get__FPC19draw_priority_class:
 /* 80021308 0001E248  A8 63 00 00 */	lha r3, 0(r3)
 /* 8002130C 0001E24C  4E 80 00 20 */	blr 
 
 /* 80021310 0008 .text      fpcDwPi_Set__FP19draw_priority_classs fpcDwPi_Set__FP19draw_priority_classs */
 .global fpcDwPi_Set__FP19draw_priority_classs
 fpcDwPi_Set__FP19draw_priority_classs:
+fpcDwPi_Set__FP19draw_priority_classs:
 /* 80021310 0001E250  B0 83 00 00 */	sth r4, 0(r3)
 /* 80021314 0001E254  4E 80 00 20 */	blr 
 
 /* 80021318 0020 .text      fpcDwPi_Init__FP19draw_priority_classs fpcDwPi_Init__FP19draw_priority_classs */
 .global fpcDwPi_Init__FP19draw_priority_classs
+fpcDwPi_Init__FP19draw_priority_classs:
 fpcDwPi_Init__FP19draw_priority_classs:
 /* 80021318 0001E258  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8002131C 0001E25C  7C 08 02 A6 */	mflr r0

@@ -7,6 +7,7 @@
 /* 8026328C 0020 .text      cAPICPad_recalibrate__Fv       cAPICPad_recalibrate__Fv       */
 .global cAPICPad_recalibrate__Fv
 cAPICPad_recalibrate__Fv:
+cAPICPad_recalibrate__Fv:
 /* 8026328C 002601CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263290 002601D0  7C 08 02 A6 */	mflr r0
 /* 80263294 002601D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,6 +19,7 @@ cAPICPad_recalibrate__Fv:
 
 /* 802632AC 001C .text      cAPICPad_ANY_BUTTON__FUl       cAPICPad_ANY_BUTTON__FUl       */
 .global cAPICPad_ANY_BUTTON__FUl
+cAPICPad_ANY_BUTTON__FUl:
 cAPICPad_ANY_BUTTON__FUl:
 /* 802632AC 002601EC  54 64 30 32 */	slwi r4, r3, 6
 /* 802632B0 002601F0  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha

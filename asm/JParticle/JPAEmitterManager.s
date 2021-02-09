@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8027DCA0 0098 .text      __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc */
+/* 8027DCA0 021C .text      __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc */
 .global __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc
+__ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc:
 __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc:
 /* 8027DCA0 0027ABE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027DCA4 0027ABE4  7C 08 02 A6 */	mflr r0
@@ -44,24 +45,18 @@ __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc:
 /* 8027DD28 0027AC68  7C 7C 1B 78 */	mr r28, r3
 /* 8027DD2C 0027AC6C  3B 60 00 00 */	li r27, 0
 /* 8027DD30 0027AC70  3B A0 00 00 */	li r29, 0
-/* 8027DD34 0027AC74  48 00 00 1C */	b func_8027DD50
-
-/* 8027DD38 0018 .text      func_8027DD38                  func_8027DD38                  */
-.global func_8027DD38
-func_8027DD38:
+/* 8027DD34 0027AC74  48 00 00 1C */	b lbl_8027DD50
+lbl_8027DD38:
 /* 8027DD38 0027AC78  38 7E 00 04 */	addi r3, r30, 4
 /* 8027DD3C 0027AC7C  38 9D 00 58 */	addi r4, r29, 0x58
 /* 8027DD40 0027AC80  7C 9C 22 14 */	add r4, r28, r4
 /* 8027DD44 0027AC84  48 05 E2 AD */	bl prepend__10JSUPtrListFP10JSUPtrLink
 /* 8027DD48 0027AC88  3B 7B 00 01 */	addi r27, r27, 1
 /* 8027DD4C 0027AC8C  3B BD 01 14 */	addi r29, r29, 0x114
-
-/* 8027DD50 004C .text      func_8027DD50                  func_8027DD50                  */
-.global func_8027DD50
-func_8027DD50:
+lbl_8027DD50:
 /* 8027DD50 0027AC90  80 1E 00 24 */	lwz r0, 0x24(r30)
 /* 8027DD54 0027AC94  7C 1B 00 40 */	cmplw r27, r0
-/* 8027DD58 0027AC98  41 80 FF E0 */	blt func_8027DD38
+/* 8027DD58 0027AC98  41 80 FF E0 */	blt lbl_8027DD38
 /* 8027DD5C 0027AC9C  83 9E 00 28 */	lwz r28, 0x28(r30)
 /* 8027DD60 0027ACA0  1C 7C 00 A0 */	mulli r3, r28, 0xa0
 /* 8027DD64 0027ACA4  38 63 00 10 */	addi r3, r3, 0x10
@@ -77,14 +72,11 @@ func_8027DD50:
 /* 8027DD8C 0027ACCC  48 0E 41 89 */	bl __construct_new_array
 /* 8027DD90 0027ACD0  38 E0 00 00 */	li r7, 0
 /* 8027DD94 0027ACD4  38 80 00 00 */	li r4, 0
-/* 8027DD98 0027ACD8  48 00 00 5C */	b func_8027DDF4
-
-/* 8027DD9C 002C .text      func_8027DD9C                  func_8027DD9C                  */
-.global func_8027DD9C
-func_8027DD9C:
+/* 8027DD98 0027ACD8  48 00 00 5C */	b lbl_8027DDF4
+lbl_8027DD9C:
 /* 8027DD9C 0027ACDC  80 1E 00 14 */	lwz r0, 0x14(r30)
 /* 8027DDA0 0027ACE0  28 00 00 00 */	cmplwi r0, 0
-/* 8027DDA4 0027ACE4  41 82 00 24 */	beq func_8027DDC8
+/* 8027DDA4 0027ACE4  41 82 00 24 */	beq lbl_8027DDC8
 /* 8027DDA8 0027ACE8  7C C3 22 14 */	add r6, r3, r4
 /* 8027DDAC 0027ACEC  90 06 00 00 */	stw r0, 0(r6)
 /* 8027DDB0 0027ACF0  38 00 00 00 */	li r0, 0
@@ -92,33 +84,24 @@ func_8027DD9C:
 /* 8027DDB8 0027ACF8  80 BE 00 14 */	lwz r5, 0x14(r30)
 /* 8027DDBC 0027ACFC  90 C5 00 04 */	stw r6, 4(r5)
 /* 8027DDC0 0027AD00  90 DE 00 14 */	stw r6, 0x14(r30)
-/* 8027DDC4 0027AD04  48 00 00 1C */	b func_8027DDE0
-
-/* 8027DDC8 0018 .text      func_8027DDC8                  func_8027DDC8                  */
-.global func_8027DDC8
-func_8027DDC8:
+/* 8027DDC4 0027AD04  48 00 00 1C */	b lbl_8027DDE0
+lbl_8027DDC8:
 /* 8027DDC8 0027AD08  7C A3 22 14 */	add r5, r3, r4
 /* 8027DDCC 0027AD0C  90 BE 00 10 */	stw r5, 0x10(r30)
 /* 8027DDD0 0027AD10  90 BE 00 14 */	stw r5, 0x14(r30)
 /* 8027DDD4 0027AD14  38 00 00 00 */	li r0, 0
 /* 8027DDD8 0027AD18  90 05 00 00 */	stw r0, 0(r5)
 /* 8027DDDC 0027AD1C  90 05 00 04 */	stw r0, 4(r5)
-
-/* 8027DDE0 0014 .text      func_8027DDE0                  func_8027DDE0                  */
-.global func_8027DDE0
-func_8027DDE0:
+lbl_8027DDE0:
 /* 8027DDE0 0027AD20  80 BE 00 18 */	lwz r5, 0x18(r30)
 /* 8027DDE4 0027AD24  38 05 00 01 */	addi r0, r5, 1
 /* 8027DDE8 0027AD28  90 1E 00 18 */	stw r0, 0x18(r30)
 /* 8027DDEC 0027AD2C  38 E7 00 01 */	addi r7, r7, 1
 /* 8027DDF0 0027AD30  38 84 00 A0 */	addi r4, r4, 0xa0
-
-/* 8027DDF4 006C .text      func_8027DDF4                  func_8027DDF4                  */
-.global func_8027DDF4
-func_8027DDF4:
+lbl_8027DDF4:
 /* 8027DDF4 0027AD34  80 1E 00 28 */	lwz r0, 0x28(r30)
 /* 8027DDF8 0027AD38  7C 07 00 40 */	cmplw r7, r0
-/* 8027DDFC 0027AD3C  41 80 FF A0 */	blt func_8027DD9C
+/* 8027DDFC 0027AD3C  41 80 FF A0 */	blt lbl_8027DD9C
 /* 8027DE00 0027AD40  8B 9E 00 2C */	lbz r28, 0x2c(r30)
 /* 8027DE04 0027AD44  1C 7C 00 0C */	mulli r3, r28, 0xc
 /* 8027DE08 0027AD48  38 63 00 10 */	addi r3, r3, 0x10
@@ -142,34 +125,25 @@ func_8027DDF4:
 /* 8027DE50 0027AD90  38 C0 00 00 */	li r6, 0
 /* 8027DE54 0027AD94  38 60 00 00 */	li r3, 0
 /* 8027DE58 0027AD98  38 A0 00 00 */	li r5, 0
-/* 8027DE5C 0027AD9C  48 00 00 14 */	b func_8027DE70
-
-/* 8027DE60 0010 .text      func_8027DE60                  func_8027DE60                  */
-.global func_8027DE60
-func_8027DE60:
+/* 8027DE5C 0027AD9C  48 00 00 14 */	b lbl_8027DE70
+lbl_8027DE60:
 /* 8027DE60 0027ADA0  80 9E 00 1C */	lwz r4, 0x1c(r30)
 /* 8027DE64 0027ADA4  7C A4 19 2E */	stwx r5, r4, r3
 /* 8027DE68 0027ADA8  38 C6 00 01 */	addi r6, r6, 1
 /* 8027DE6C 0027ADAC  38 63 00 04 */	addi r3, r3, 4
-
-/* 8027DE70 002C .text      func_8027DE70                  func_8027DE70                  */
-.global func_8027DE70
-func_8027DE70:
+lbl_8027DE70:
 /* 8027DE70 0027ADB0  88 1E 00 2D */	lbz r0, 0x2d(r30)
 /* 8027DE74 0027ADB4  7C 06 00 00 */	cmpw r6, r0
-/* 8027DE78 0027ADB8  41 80 FF E8 */	blt func_8027DE60
+/* 8027DE78 0027ADB8  41 80 FF E8 */	blt lbl_8027DE60
 /* 8027DE7C 0027ADBC  38 60 02 18 */	li r3, 0x218
 /* 8027DE80 0027ADC0  7F E4 FB 78 */	mr r4, r31
 /* 8027DE84 0027ADC4  38 A0 00 00 */	li r5, 0
 /* 8027DE88 0027ADC8  48 05 0E 11 */	bl __nw__FUlP7JKRHeapi
 /* 8027DE8C 0027ADCC  28 03 00 00 */	cmplwi r3, 0
-/* 8027DE90 0027ADD0  41 82 00 0C */	beq func_8027DE9C
+/* 8027DE90 0027ADD0  41 82 00 0C */	beq lbl_8027DE9C
 /* 8027DE94 0027ADD4  38 00 00 00 */	li r0, 0
 /* 8027DE98 0027ADD8  90 03 00 0C */	stw r0, 0xc(r3)
-
-/* 8027DE9C 0020 .text      func_8027DE9C                  func_8027DE9C                  */
-.global func_8027DE9C
-func_8027DE9C:
+lbl_8027DE9C:
 /* 8027DE9C 0027ADDC  90 7E 00 20 */	stw r3, 0x20(r30)
 /* 8027DEA0 0027ADE0  7F C3 F3 78 */	mr r3, r30
 /* 8027DEA4 0027ADE4  39 61 00 20 */	addi r11, r1, 0x20
@@ -179,8 +153,11 @@ func_8027DE9C:
 /* 8027DEB4 0027ADF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027DEB8 0027ADF8  4E 80 00 20 */	blr 
 
-/* 8027DEBC 00C8 .text      "createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack" createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack */
+/* 8027DEBC 00E4 .text      createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack "createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack" */
+.global "createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack"
+"createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3<f>UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack":
 .global createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3_SUB_0f_SUB_1UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack
+createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3_SUB_0f_SUB_1UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack:
 createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3_SUB_0f_SUB_1UsUcUcP18JPAEmitterCallBackP19JPAParticleCallBack:
 /* 8027DEBC 0027ADFC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8027DEC0 0027AE00  7C 08 02 A6 */	mflr r0
@@ -199,10 +176,10 @@ createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3_SUB_0f_SUB_1UsUc
 /* 8027DEF4 0027AE34  7C A4 2B 78 */	mr r4, r5
 /* 8027DEF8 0027AE38  4B FF 5F 71 */	bl getResource__18JPAResourceManagerCFUs
 /* 8027DEFC 0027AE3C  7C 7E 1B 79 */	or. r30, r3, r3
-/* 8027DF00 0027AE40  41 82 00 84 */	beq func_8027DF84
+/* 8027DF00 0027AE40  41 82 00 84 */	beq lbl_8027DF84
 /* 8027DF04 0027AE44  80 18 00 0C */	lwz r0, 0xc(r24)
 /* 8027DF08 0027AE48  28 00 00 00 */	cmplwi r0, 0
-/* 8027DF0C 0027AE4C  41 82 00 78 */	beq func_8027DF84
+/* 8027DF0C 0027AE4C  41 82 00 78 */	beq lbl_8027DF84
 /* 8027DF10 0027AE50  83 F8 00 04 */	lwz r31, 4(r24)
 /* 8027DF14 0027AE54  38 78 00 04 */	addi r3, r24, 4
 /* 8027DF18 0027AE58  7F E4 FB 78 */	mr r4, r31
@@ -231,16 +208,10 @@ createSimpleEmitterID__17JPAEmitterManagerFRCQ29JGeometry8TVec3_SUB_0f_SUB_1UsUc
 /* 8027DF74 0027AEB4  C0 19 00 08 */	lfs f0, 8(r25)
 /* 8027DF78 0027AEB8  D0 1F 00 AC */	stfs f0, 0xac(r31)
 /* 8027DF7C 0027AEBC  7F E3 FB 78 */	mr r3, r31
-/* 8027DF80 0027AEC0  48 00 00 08 */	b func_8027DF88
-
-/* 8027DF84 0004 .text      func_8027DF84                  func_8027DF84                  */
-.global func_8027DF84
-func_8027DF84:
+/* 8027DF80 0027AEC0  48 00 00 08 */	b lbl_8027DF88
+lbl_8027DF84:
 /* 8027DF84 0027AEC4  38 60 00 00 */	li r3, 0
-
-/* 8027DF88 0018 .text      func_8027DF88                  func_8027DF88                  */
-.global func_8027DF88
-func_8027DF88:
+lbl_8027DF88:
 /* 8027DF88 0027AEC8  39 61 00 30 */	addi r11, r1, 0x30
 /* 8027DF8C 0027AECC  48 0E 42 89 */	bl _restgpr_24
 /* 8027DF90 0027AED0  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -248,8 +219,9 @@ func_8027DF88:
 /* 8027DF98 0027AED8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8027DF9C 0027AEDC  4E 80 00 20 */	blr 
 
-/* 8027DFA0 002C .text      calc__17JPAEmitterManagerFUc   calc__17JPAEmitterManagerFUc   */
+/* 8027DFA0 0088 .text      calc__17JPAEmitterManagerFUc   calc__17JPAEmitterManagerFUc   */
 .global calc__17JPAEmitterManagerFUc
+calc__17JPAEmitterManagerFUc:
 calc__17JPAEmitterManagerFUc:
 /* 8027DFA0 0027AEE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027DFA4 0027AEE4  7C 08 02 A6 */	mflr r0
@@ -261,11 +233,8 @@ calc__17JPAEmitterManagerFUc:
 /* 8027DFBC 0027AEFC  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8027DFC0 0027AF00  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 8027DFC4 0027AF04  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8027DFC8 0027AF08  48 00 00 40 */	b func_8027E008
-
-/* 8027DFCC 0038 .text      func_8027DFCC                  func_8027DFCC                  */
-.global func_8027DFCC
-func_8027DFCC:
+/* 8027DFC8 0027AF08  48 00 00 40 */	b lbl_8027E008
+lbl_8027DFCC:
 /* 8027DFCC 0027AF0C  83 E3 00 0C */	lwz r31, 0xc(r3)
 /* 8027DFD0 0027AF10  83 C3 00 00 */	lwz r30, 0(r3)
 /* 8027DFD4 0027AF14  80 7E 00 E8 */	lwz r3, 0xe8(r30)
@@ -273,24 +242,18 @@ func_8027DFCC:
 /* 8027DFDC 0027AF1C  7F C5 F3 78 */	mr r5, r30
 /* 8027DFE0 0027AF20  4B FF 76 09 */	bl calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter
 /* 8027DFE4 0027AF24  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 8027DFE8 0027AF28  41 82 00 1C */	beq func_8027E004
+/* 8027DFE8 0027AF28  41 82 00 1C */	beq lbl_8027E004
 /* 8027DFEC 0027AF2C  80 1E 00 F4 */	lwz r0, 0xf4(r30)
 /* 8027DFF0 0027AF30  54 00 05 AD */	rlwinm. r0, r0, 0, 0x16, 0x16
-/* 8027DFF4 0027AF34  40 82 00 10 */	bne func_8027E004
+/* 8027DFF4 0027AF34  40 82 00 10 */	bne lbl_8027E004
 /* 8027DFF8 0027AF38  7F A3 EB 78 */	mr r3, r29
 /* 8027DFFC 0027AF3C  7F C4 F3 78 */	mr r4, r30
 /* 8027E000 0027AF40  48 00 02 D9 */	bl forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter
-
-/* 8027E004 0004 .text      func_8027E004                  func_8027E004                  */
-.global func_8027E004
-func_8027E004:
+lbl_8027E004:
 /* 8027E004 0027AF44  7F E3 FB 78 */	mr r3, r31
-
-/* 8027E008 0020 .text      func_8027E008                  func_8027E008                  */
-.global func_8027E008
-func_8027E008:
+lbl_8027E008:
 /* 8027E008 0027AF48  28 03 00 00 */	cmplwi r3, 0
-/* 8027E00C 0027AF4C  40 82 FF C0 */	bne func_8027DFCC
+/* 8027E00C 0027AF4C  40 82 FF C0 */	bne lbl_8027DFCC
 /* 8027E010 0027AF50  39 61 00 20 */	addi r11, r1, 0x20
 /* 8027E014 0027AF54  48 0E 42 15 */	bl _restgpr_29
 /* 8027E018 0027AF58  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -298,8 +261,9 @@ func_8027E008:
 /* 8027E020 0027AF60  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E024 0027AF64  4E 80 00 20 */	blr 
 
-/* 8027E028 01A0 .text      draw__17JPAEmitterManagerFPC11JPADrawInfoUc draw__17JPAEmitterManagerFPC11JPADrawInfoUc */
+/* 8027E028 01F8 .text      draw__17JPAEmitterManagerFPC11JPADrawInfoUc draw__17JPAEmitterManagerFPC11JPADrawInfoUc */
 .global draw__17JPAEmitterManagerFPC11JPADrawInfoUc
+draw__17JPAEmitterManagerFPC11JPADrawInfoUc:
 draw__17JPAEmitterManagerFPC11JPADrawInfoUc:
 /* 8027E028 0027AF68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027E02C 0027AF6C  7C 08 02 A6 */	mflr r0
@@ -404,15 +368,12 @@ draw__17JPAEmitterManagerFPC11JPADrawInfoUc:
 /* 8027E1B8 0027B0F8  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 8027E1BC 0027B0FC  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 8027E1C0 0027B100  7F E3 00 2E */	lwzx r31, r3, r0
-/* 8027E1C4 0027B104  48 00 00 3C */	b func_8027E200
-
-/* 8027E1C8 0034 .text      func_8027E1C8                  func_8027E1C8                  */
-.global func_8027E1C8
-func_8027E1C8:
+/* 8027E1C4 0027B104  48 00 00 3C */	b lbl_8027E200
+lbl_8027E1C8:
 /* 8027E1C8 0027B108  80 BF 00 00 */	lwz r5, 0(r31)
 /* 8027E1CC 0027B10C  80 05 00 F4 */	lwz r0, 0xf4(r5)
 /* 8027E1D0 0027B110  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
-/* 8027E1D4 0027B114  40 82 00 28 */	bne func_8027E1FC
+/* 8027E1D4 0027B114  40 82 00 28 */	bne lbl_8027E1FC
 /* 8027E1D8 0027B118  80 7D 00 1C */	lwz r3, 0x1c(r29)
 /* 8027E1DC 0027B11C  88 05 01 13 */	lbz r0, 0x113(r5)
 /* 8027E1E0 0027B120  54 00 10 3A */	slwi r0, r0, 2
@@ -422,17 +383,11 @@ func_8027E1C8:
 /* 8027E1F0 0027B130  80 65 00 E8 */	lwz r3, 0xe8(r5)
 /* 8027E1F4 0027B134  80 9D 00 20 */	lwz r4, 0x20(r29)
 /* 8027E1F8 0027B138  4B FF 78 9D */	bl draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter
-
-/* 8027E1FC 0004 .text      func_8027E1FC                  func_8027E1FC                  */
-.global func_8027E1FC
-func_8027E1FC:
+lbl_8027E1FC:
 /* 8027E1FC 0027B13C  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 8027E200 0020 .text      func_8027E200                  func_8027E200                  */
-.global func_8027E200
-func_8027E200:
+lbl_8027E200:
 /* 8027E200 0027B140  28 1F 00 00 */	cmplwi r31, 0
-/* 8027E204 0027B144  40 82 FF C4 */	bne func_8027E1C8
+/* 8027E204 0027B144  40 82 FF C4 */	bne lbl_8027E1C8
 /* 8027E208 0027B148  39 61 00 20 */	addi r11, r1, 0x20
 /* 8027E20C 0027B14C  48 0E 40 1D */	bl _restgpr_29
 /* 8027E210 0027B150  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -440,8 +395,9 @@ func_8027E200:
 /* 8027E218 0027B158  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E21C 0027B15C  4E 80 00 20 */	blr 
 
-/* 8027E220 0020 .text      forceDeleteAllEmitter__17JPAEmitterManagerFv forceDeleteAllEmitter__17JPAEmitterManagerFv */
+/* 8027E220 0058 .text      forceDeleteAllEmitter__17JPAEmitterManagerFv forceDeleteAllEmitter__17JPAEmitterManagerFv */
 .global forceDeleteAllEmitter__17JPAEmitterManagerFv
+forceDeleteAllEmitter__17JPAEmitterManagerFv:
 forceDeleteAllEmitter__17JPAEmitterManagerFv:
 /* 8027E220 0027B160  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E224 0027B164  7C 08 02 A6 */	mflr r0
@@ -450,23 +406,17 @@ forceDeleteAllEmitter__17JPAEmitterManagerFv:
 /* 8027E230 0027B170  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027E234 0027B174  7C 7E 1B 78 */	mr r30, r3
 /* 8027E238 0027B178  3B E0 00 00 */	li r31, 0
-/* 8027E23C 0027B17C  48 00 00 14 */	b func_8027E250
-
-/* 8027E240 0010 .text      func_8027E240                  func_8027E240                  */
-.global func_8027E240
-func_8027E240:
+/* 8027E23C 0027B17C  48 00 00 14 */	b lbl_8027E250
+lbl_8027E240:
 /* 8027E240 0027B180  7F C3 F3 78 */	mr r3, r30
 /* 8027E244 0027B184  7F E4 FB 78 */	mr r4, r31
 /* 8027E248 0027B188  48 00 00 31 */	bl forceDeleteGroupEmitter__17JPAEmitterManagerFUc
 /* 8027E24C 0027B18C  3B FF 00 01 */	addi r31, r31, 1
-
-/* 8027E250 0028 .text      func_8027E250                  func_8027E250                  */
-.global func_8027E250
-func_8027E250:
+lbl_8027E250:
 /* 8027E250 0027B190  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 8027E254 0027B194  88 1E 00 2C */	lbz r0, 0x2c(r30)
 /* 8027E258 0027B198  7C 03 00 40 */	cmplw r3, r0
-/* 8027E25C 0027B19C  41 80 FF E4 */	blt func_8027E240
+/* 8027E25C 0027B19C  41 80 FF E4 */	blt lbl_8027E240
 /* 8027E260 0027B1A0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027E264 0027B1A4  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8027E268 0027B1A8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -474,8 +424,9 @@ func_8027E250:
 /* 8027E270 0027B1B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E274 0027B1B4  4E 80 00 20 */	blr 
 
-/* 8027E278 0024 .text      forceDeleteGroupEmitter__17JPAEmitterManagerFUc forceDeleteGroupEmitter__17JPAEmitterManagerFUc */
+/* 8027E278 0060 .text      forceDeleteGroupEmitter__17JPAEmitterManagerFUc forceDeleteGroupEmitter__17JPAEmitterManagerFUc */
 .global forceDeleteGroupEmitter__17JPAEmitterManagerFUc
+forceDeleteGroupEmitter__17JPAEmitterManagerFUc:
 forceDeleteGroupEmitter__17JPAEmitterManagerFUc:
 /* 8027E278 0027B1B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E27C 0027B1BC  7C 08 02 A6 */	mflr r0
@@ -485,24 +436,18 @@ forceDeleteGroupEmitter__17JPAEmitterManagerFUc:
 /* 8027E28C 0027B1CC  7C 7E 1B 78 */	mr r30, r3
 /* 8027E290 0027B1D0  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 8027E294 0027B1D4  1F E0 00 0C */	mulli r31, r0, 0xc
-/* 8027E298 0027B1D8  48 00 00 14 */	b func_8027E2AC
-
-/* 8027E29C 0010 .text      func_8027E29C                  func_8027E29C                  */
-.global func_8027E29C
-func_8027E29C:
+/* 8027E298 0027B1D8  48 00 00 14 */	b lbl_8027E2AC
+lbl_8027E29C:
 /* 8027E29C 0027B1DC  80 63 00 04 */	lwz r3, 4(r3)
 /* 8027E2A0 0027B1E0  80 83 00 00 */	lwz r4, 0(r3)
 /* 8027E2A4 0027B1E4  7F C3 F3 78 */	mr r3, r30
 /* 8027E2A8 0027B1E8  48 00 00 31 */	bl forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter
-
-/* 8027E2AC 002C .text      func_8027E2AC                  func_8027E2AC                  */
-.global func_8027E2AC
-func_8027E2AC:
+lbl_8027E2AC:
 /* 8027E2AC 0027B1EC  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8027E2B0 0027B1F0  7C 7F 02 14 */	add r3, r31, r0
 /* 8027E2B4 0027B1F4  80 03 00 08 */	lwz r0, 8(r3)
 /* 8027E2B8 0027B1F8  28 00 00 00 */	cmplwi r0, 0
-/* 8027E2BC 0027B1FC  40 82 FF E0 */	bne func_8027E29C
+/* 8027E2BC 0027B1FC  40 82 FF E0 */	bne lbl_8027E29C
 /* 8027E2C0 0027B200  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027E2C4 0027B204  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8027E2C8 0027B208  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -512,6 +457,7 @@ func_8027E2AC:
 
 /* 8027E2D8 006C .text      forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter */
 .global forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter
+forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter:
 forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter:
 /* 8027E2D8 0027B218  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E2DC 0027B21C  7C 08 02 A6 */	mflr r0
@@ -544,13 +490,15 @@ forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter:
 /* 8027E344 0010 .text      entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc */
 .global entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc
 entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc:
+entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc:
 /* 8027E344 0027B284  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 8027E348 0027B288  54 A0 15 BA */	rlwinm r0, r5, 2, 0x16, 0x1d
 /* 8027E34C 0027B28C  7C 83 01 2E */	stwx r4, r3, r0
 /* 8027E350 0027B290  4E 80 00 20 */	blr 
 
-/* 8027E354 0028 .text      clearResourceManager__17JPAEmitterManagerFUc clearResourceManager__17JPAEmitterManagerFUc */
+/* 8027E354 00A0 .text      clearResourceManager__17JPAEmitterManagerFUc clearResourceManager__17JPAEmitterManagerFUc */
 .global clearResourceManager__17JPAEmitterManagerFUc
+clearResourceManager__17JPAEmitterManagerFUc:
 clearResourceManager__17JPAEmitterManagerFUc:
 /* 8027E354 0027B294  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027E358 0027B298  7C 08 02 A6 */	mflr r0
@@ -561,47 +509,32 @@ clearResourceManager__17JPAEmitterManagerFUc:
 /* 8027E36C 0027B2AC  7C 9C 23 78 */	mr r28, r4
 /* 8027E370 0027B2B0  3B A0 00 00 */	li r29, 0
 /* 8027E374 0027B2B4  54 9F 06 3E */	clrlwi r31, r4, 0x18
-/* 8027E378 0027B2B8  48 00 00 44 */	b func_8027E3BC
-
-/* 8027E37C 0014 .text      func_8027E37C                  func_8027E37C                  */
-.global func_8027E37C
-func_8027E37C:
+/* 8027E378 0027B2B8  48 00 00 44 */	b lbl_8027E3BC
+lbl_8027E37C:
 /* 8027E37C 0027B2BC  80 7B 00 00 */	lwz r3, 0(r27)
 /* 8027E380 0027B2C0  57 A0 06 3E */	clrlwi r0, r29, 0x18
 /* 8027E384 0027B2C4  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 8027E388 0027B2C8  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8027E38C 0027B2CC  48 00 00 24 */	b func_8027E3B0
-
-/* 8027E390 001C .text      func_8027E390                  func_8027E390                  */
-.global func_8027E390
-func_8027E390:
+/* 8027E38C 0027B2CC  48 00 00 24 */	b lbl_8027E3B0
+lbl_8027E390:
 /* 8027E390 0027B2D0  83 C3 00 0C */	lwz r30, 0xc(r3)
 /* 8027E394 0027B2D4  80 83 00 00 */	lwz r4, 0(r3)
 /* 8027E398 0027B2D8  88 04 01 13 */	lbz r0, 0x113(r4)
 /* 8027E39C 0027B2DC  7C 1F 00 40 */	cmplw r31, r0
-/* 8027E3A0 0027B2E0  40 82 00 0C */	bne func_8027E3AC
+/* 8027E3A0 0027B2E0  40 82 00 0C */	bne lbl_8027E3AC
 /* 8027E3A4 0027B2E4  7F 63 DB 78 */	mr r3, r27
 /* 8027E3A8 0027B2E8  4B FF FF 31 */	bl forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter
-
-/* 8027E3AC 0004 .text      func_8027E3AC                  func_8027E3AC                  */
-.global func_8027E3AC
-func_8027E3AC:
+lbl_8027E3AC:
 /* 8027E3AC 0027B2EC  7F C3 F3 78 */	mr r3, r30
-
-/* 8027E3B0 000C .text      func_8027E3B0                  func_8027E3B0                  */
-.global func_8027E3B0
-func_8027E3B0:
+lbl_8027E3B0:
 /* 8027E3B0 0027B2F0  28 03 00 00 */	cmplwi r3, 0
-/* 8027E3B4 0027B2F4  40 82 FF DC */	bne func_8027E390
+/* 8027E3B4 0027B2F4  40 82 FF DC */	bne lbl_8027E390
 /* 8027E3B8 0027B2F8  3B BD 00 01 */	addi r29, r29, 1
-
-/* 8027E3BC 0038 .text      func_8027E3BC                  func_8027E3BC                  */
-.global func_8027E3BC
-func_8027E3BC:
+lbl_8027E3BC:
 /* 8027E3BC 0027B2FC  57 A3 06 3E */	clrlwi r3, r29, 0x18
 /* 8027E3C0 0027B300  88 1B 00 2C */	lbz r0, 0x2c(r27)
 /* 8027E3C4 0027B304  7C 03 00 40 */	cmplw r3, r0
-/* 8027E3C8 0027B308  41 80 FF B4 */	blt func_8027E37C
+/* 8027E3C8 0027B308  41 80 FF B4 */	blt lbl_8027E37C
 /* 8027E3CC 0027B30C  38 80 00 00 */	li r4, 0
 /* 8027E3D0 0027B310  80 7B 00 1C */	lwz r3, 0x1c(r27)
 /* 8027E3D4 0027B314  57 80 15 BA */	rlwinm r0, r28, 2, 0x16, 0x1d
@@ -613,8 +546,9 @@ func_8027E3BC:
 /* 8027E3EC 0027B32C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E3F0 0027B330  4E 80 00 20 */	blr 
 
-/* 8027E3F4 0060 .text      calcYBBCam__17JPAEmitterManagerFv calcYBBCam__17JPAEmitterManagerFv */
+/* 8027E3F4 0128 .text      calcYBBCam__17JPAEmitterManagerFv calcYBBCam__17JPAEmitterManagerFv */
 .global calcYBBCam__17JPAEmitterManagerFv
+calcYBBCam__17JPAEmitterManagerFv:
 calcYBBCam__17JPAEmitterManagerFv:
 /* 8027E3F4 0027B334  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027E3F8 0027B338  80 83 00 20 */	lwz r4, 0x20(r3)
@@ -634,16 +568,13 @@ calcYBBCam__17JPAEmitterManagerFv:
 /* 8027E430 0027B370  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8027E434 0027B374  FC 05 00 40 */	fcmpo cr0, f5, f0
 /* 8027E438 0027B378  4C 40 13 82 */	cror 2, 0, 2
-/* 8027E43C 0027B37C  41 82 00 58 */	beq func_8027E494
+/* 8027E43C 0027B37C  41 82 00 58 */	beq lbl_8027E494
 /* 8027E440 0027B380  FC 05 10 40 */	fcmpo cr0, f5, f2
 /* 8027E444 0027B384  4C 40 13 82 */	cror 2, 0, 2
-/* 8027E448 0027B388  40 82 00 0C */	bne func_8027E454
+/* 8027E448 0027B388  40 82 00 0C */	bne lbl_8027E454
 /* 8027E44C 0027B38C  FC 60 28 90 */	fmr f3, f5
-/* 8027E450 0027B390  48 00 00 2C */	b func_8027E47C
-
-/* 8027E454 0028 .text      func_8027E454                  func_8027E454                  */
-.global func_8027E454
-func_8027E454:
+/* 8027E450 0027B390  48 00 00 2C */	b lbl_8027E47C
+lbl_8027E454:
 /* 8027E454 0027B394  FC 80 28 34 */	frsqrte f4, f5
 /* 8027E458 0027B398  FC 80 20 18 */	frsp f4, f4
 /* 8027E45C 0027B39C  C0 02 B9 60 */	lfs f0, LIT_2634-_SDA2_BASE_(r2)
@@ -654,20 +585,14 @@ func_8027E454:
 /* 8027E470 0027B3B0  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8027E474 0027B3B4  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8027E478 0027B3B8  FC 60 00 90 */	fmr f3, f0
-
-/* 8027E47C 0018 .text      func_8027E47C                  func_8027E47C                  */
-.global func_8027E47C
-func_8027E47C:
+lbl_8027E47C:
 /* 8027E47C 0027B3BC  E0 01 00 08 */	psq_l f0, 8(r1), 0, qr0
 /* 8027E480 0027B3C0  E0 21 80 10 */	psq_l f1, 16(r1), 1, qr0
 /* 8027E484 0027B3C4  10 00 00 D8 */	ps_muls0 f0, f0, f3
 /* 8027E488 0027B3C8  F0 01 00 08 */	psq_st f0, 8(r1), 0, qr0
 /* 8027E48C 0027B3CC  10 01 00 D8 */	ps_muls0 f0, f1, f3
 /* 8027E490 0027B3D0  F0 01 80 10 */	psq_st f0, 16(r1), 1, qr0
-
-/* 8027E494 0088 .text      func_8027E494                  func_8027E494                  */
-.global func_8027E494
-func_8027E494:
+lbl_8027E494:
 /* 8027E494 0027B3D4  C0 02 B9 68 */	lfs f0, LIT_2636-_SDA2_BASE_(r2)
 /* 8027E498 0027B3D8  80 83 00 20 */	lwz r4, 0x20(r3)
 /* 8027E49C 0027B3DC  D0 04 01 54 */	stfs f0, 0x154(r4)
@@ -703,8 +628,11 @@ func_8027E494:
 /* 8027E514 0027B454  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E518 0027B458  4E 80 00 20 */	blr 
 
-/* 8027E51C 0030 .text      "__ct__25JSUList<14JPABaseEmitter>Fv" __ct__25JSUList<14JPABaseEmitter>Fv */
+/* 8027E51C 0030 .text      __ct__25JSUList<14JPABaseEmitter>Fv "__ct__25JSUList<14JPABaseEmitter>Fv" */
+.global "__ct__25JSUList<14JPABaseEmitter>Fv"
+"__ct__25JSUList<14JPABaseEmitter>Fv":
 .global __ct__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv
+__ct__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 __ct__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 /* 8027E51C 0027B45C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E520 0027B460  7C 08 02 A6 */	mflr r0
@@ -719,22 +647,22 @@ __ct__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 /* 8027E544 0027B484  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E548 0027B488  4E 80 00 20 */	blr 
 
-/* 8027E54C 0024 .text      "__dt__26JPANode<15JPABaseParticle>Fv" __dt__26JPANode<15JPABaseParticle>Fv */
+/* 8027E54C 003C .text      __dt__26JPANode<15JPABaseParticle>Fv "__dt__26JPANode<15JPABaseParticle>Fv" */
+.global "__dt__26JPANode<15JPABaseParticle>Fv"
+"__dt__26JPANode<15JPABaseParticle>Fv":
 .global __dt__26JPANode_SUB_015JPABaseParticle_SUB_1Fv
+__dt__26JPANode_SUB_015JPABaseParticle_SUB_1Fv:
 __dt__26JPANode_SUB_015JPABaseParticle_SUB_1Fv:
 /* 8027E54C 0027B48C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E550 0027B490  7C 08 02 A6 */	mflr r0
 /* 8027E554 0027B494  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8027E558 0027B498  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027E55C 0027B49C  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8027E560 0027B4A0  41 82 00 10 */	beq func_8027E570
+/* 8027E560 0027B4A0  41 82 00 10 */	beq lbl_8027E570
 /* 8027E564 0027B4A4  7C 80 07 35 */	extsh. r0, r4
-/* 8027E568 0027B4A8  40 81 00 08 */	ble func_8027E570
+/* 8027E568 0027B4A8  40 81 00 08 */	ble lbl_8027E570
 /* 8027E56C 0027B4AC  48 05 07 D1 */	bl __dl__FPv
-
-/* 8027E570 0018 .text      func_8027E570                  func_8027E570                  */
-.global func_8027E570
-func_8027E570:
+lbl_8027E570:
 /* 8027E570 0027B4B0  7F E3 FB 78 */	mr r3, r31
 /* 8027E574 0027B4B4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027E578 0027B4B8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -742,16 +670,22 @@ func_8027E570:
 /* 8027E580 0027B4C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E584 0027B4C4  4E 80 00 20 */	blr 
 
-/* 8027E588 0010 .text      "__ct__26JPANode<15JPABaseParticle>Fv" __ct__26JPANode<15JPABaseParticle>Fv */
+/* 8027E588 0010 .text      __ct__26JPANode<15JPABaseParticle>Fv "__ct__26JPANode<15JPABaseParticle>Fv" */
+.global "__ct__26JPANode<15JPABaseParticle>Fv"
+"__ct__26JPANode<15JPABaseParticle>Fv":
 .global __ct__26JPANode_SUB_015JPABaseParticle_SUB_1Fv
+__ct__26JPANode_SUB_015JPABaseParticle_SUB_1Fv:
 __ct__26JPANode_SUB_015JPABaseParticle_SUB_1Fv:
 /* 8027E588 0027B4C8  38 00 00 00 */	li r0, 0
 /* 8027E58C 0027B4CC  90 03 00 00 */	stw r0, 0(r3)
 /* 8027E590 0027B4D0  90 03 00 04 */	stw r0, 4(r3)
 /* 8027E594 0027B4D4  4E 80 00 20 */	blr 
 
-/* 8027E598 0038 .text      "__dt__25JSUList<14JPABaseEmitter>Fv" __dt__25JSUList<14JPABaseEmitter>Fv */
+/* 8027E598 0054 .text      __dt__25JSUList<14JPABaseEmitter>Fv "__dt__25JSUList<14JPABaseEmitter>Fv" */
+.global "__dt__25JSUList<14JPABaseEmitter>Fv"
+"__dt__25JSUList<14JPABaseEmitter>Fv":
 .global __dt__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv
+__dt__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 __dt__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 /* 8027E598 0027B4D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E59C 0027B4DC  7C 08 02 A6 */	mflr r0
@@ -760,17 +694,14 @@ __dt__25JSUList_SUB_014JPABaseEmitter_SUB_1Fv:
 /* 8027E5A8 0027B4E8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027E5AC 0027B4EC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8027E5B0 0027B4F0  7C 9F 23 78 */	mr r31, r4
-/* 8027E5B4 0027B4F4  41 82 00 1C */	beq func_8027E5D0
+/* 8027E5B4 0027B4F4  41 82 00 1C */	beq lbl_8027E5D0
 /* 8027E5B8 0027B4F8  38 80 00 00 */	li r4, 0
 /* 8027E5BC 0027B4FC  48 05 D8 F1 */	bl __dt__10JSUPtrListFv
 /* 8027E5C0 0027B500  7F E0 07 35 */	extsh. r0, r31
-/* 8027E5C4 0027B504  40 81 00 0C */	ble func_8027E5D0
+/* 8027E5C4 0027B504  40 81 00 0C */	ble lbl_8027E5D0
 /* 8027E5C8 0027B508  7F C3 F3 78 */	mr r3, r30
 /* 8027E5CC 0027B50C  48 05 07 71 */	bl __dl__FPv
-
-/* 8027E5D0 001C .text      func_8027E5D0                  func_8027E5D0                  */
-.global func_8027E5D0
-func_8027E5D0:
+lbl_8027E5D0:
 /* 8027E5D0 0027B510  7F C3 F3 78 */	mr r3, r30
 /* 8027E5D4 0027B514  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027E5D8 0027B518  83 C1 00 08 */	lwz r30, 8(r1)
@@ -779,8 +710,9 @@ func_8027E5D0:
 /* 8027E5E4 0027B524  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E5E8 0027B528  4E 80 00 20 */	blr 
 
-/* 8027E5EC 0034 .text      __dt__14JPABaseEmitterFv       __dt__14JPABaseEmitterFv       */
+/* 8027E5EC 0060 .text      __dt__14JPABaseEmitterFv       __dt__14JPABaseEmitterFv       */
 .global __dt__14JPABaseEmitterFv
+__dt__14JPABaseEmitterFv:
 __dt__14JPABaseEmitterFv:
 /* 8027E5EC 0027B52C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E5F0 0027B530  7C 08 02 A6 */	mflr r0
@@ -789,24 +721,18 @@ __dt__14JPABaseEmitterFv:
 /* 8027E5FC 0027B53C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027E600 0027B540  7C 7E 1B 79 */	or. r30, r3, r3
 /* 8027E604 0027B544  7C 9F 23 78 */	mr r31, r4
-/* 8027E608 0027B548  41 82 00 28 */	beq func_8027E630
+/* 8027E608 0027B548  41 82 00 28 */	beq lbl_8027E630
 /* 8027E60C 0027B54C  34 1E 00 58 */	addic. r0, r30, 0x58
-/* 8027E610 0027B550  41 82 00 10 */	beq func_8027E620
+/* 8027E610 0027B550  41 82 00 10 */	beq lbl_8027E620
 /* 8027E614 0027B554  38 7E 00 58 */	addi r3, r30, 0x58
 /* 8027E618 0027B558  38 80 00 00 */	li r4, 0
 /* 8027E61C 0027B55C  48 05 D7 F9 */	bl __dt__10JSUPtrLinkFv
-
-/* 8027E620 0010 .text      func_8027E620                  func_8027E620                  */
-.global func_8027E620
-func_8027E620:
+lbl_8027E620:
 /* 8027E620 0027B560  7F E0 07 35 */	extsh. r0, r31
-/* 8027E624 0027B564  40 81 00 0C */	ble func_8027E630
+/* 8027E624 0027B564  40 81 00 0C */	ble lbl_8027E630
 /* 8027E628 0027B568  7F C3 F3 78 */	mr r3, r30
 /* 8027E62C 0027B56C  48 05 07 11 */	bl __dl__FPv
-
-/* 8027E630 001C .text      func_8027E630                  func_8027E630                  */
-.global func_8027E630
-func_8027E630:
+lbl_8027E630:
 /* 8027E630 0027B570  7F C3 F3 78 */	mr r3, r30
 /* 8027E634 0027B574  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027E638 0027B578  83 C1 00 08 */	lwz r30, 8(r1)
@@ -817,6 +743,7 @@ func_8027E630:
 
 /* 8027E64C 0058 .text      __ct__14JPABaseEmitterFv       __ct__14JPABaseEmitterFv       */
 .global __ct__14JPABaseEmitterFv
+__ct__14JPABaseEmitterFv:
 __ct__14JPABaseEmitterFv:
 /* 8027E64C 0027B58C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E650 0027B590  7C 08 02 A6 */	mflr r0
@@ -846,29 +773,29 @@ __ct__14JPABaseEmitterFv:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80455358 0004 .sdata2    JPAEmitterManager__LIT_2632    @2632                          */
+/* 80455358 0004 .sdata2    @2632                          JPAEmitterManager__LIT_2632    */
 .global JPAEmitterManager__LIT_2632
 JPAEmitterManager__LIT_2632:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d41b8 */
 
-/* 8045535C 0004 .sdata2    LIT_2633                       @2633                          */
+/* 8045535C 0004 .sdata2    @2633                          LIT_2633                       */
 .global LIT_2633
 LIT_2633:
 .byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d41bc */
 
-/* 80455360 0004 .sdata2    LIT_2634                       @2634                          */
+/* 80455360 0004 .sdata2    @2634                          LIT_2634                       */
 .global LIT_2634
 LIT_2634:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d41c0 */
 
-/* 80455364 0004 .sdata2    LIT_2635                       @2635                          */
+/* 80455364 0004 .sdata2    @2635                          LIT_2635                       */
 .global LIT_2635
 LIT_2635:
 .byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d41c4 */
 
-/* 80455368 0004 .sdata2    LIT_2636                       @2636                          */
+/* 80455368 0004 .sdata2    @2636                          LIT_2636                       */
 .global LIT_2636
 LIT_2636:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d41c8 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d41cc */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 8026F2A8 0040 .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz __ct__8cM3dGLinFRC4cXyzRC4cXyz */
 .global __ct__8cM3dGLinFRC4cXyzRC4cXyz
 __ct__8cM3dGLinFRC4cXyzRC4cXyz:
+__ct__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2A8 0026C1E8  3C C0 80 3A */	lis r6, __vt__8cM3dGLin@ha
 /* 8026F2AC 0026C1EC  38 06 78 F8 */	addi r0, r6, __vt__8cM3dGLin@l
 /* 8026F2B0 0026C1F0  90 03 00 18 */	stw r0, 0x18(r3)
@@ -27,6 +28,7 @@ __ct__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2E8 0034 .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz */
 .global SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz
 SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz:
+SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F2E8 0026C228  C0 04 00 00 */	lfs f0, 0(r4)
 /* 8026F2EC 0026C22C  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8026F2F0 0026C230  C0 04 00 04 */	lfs f0, 4(r4)
@@ -44,6 +46,7 @@ SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz:
 /* 8026F31C 0034 .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec SetStartEnd__8cM3dGLinFRC3VecRC3Vec */
 .global SetStartEnd__8cM3dGLinFRC3VecRC3Vec
 SetStartEnd__8cM3dGLinFRC3VecRC3Vec:
+SetStartEnd__8cM3dGLinFRC3VecRC3Vec:
 /* 8026F31C 0026C25C  C0 04 00 00 */	lfs f0, 0(r4)
 /* 8026F320 0026C260  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8026F324 0026C264  C0 04 00 04 */	lfs f0, 4(r4)
@@ -60,6 +63,7 @@ SetStartEnd__8cM3dGLinFRC3VecRC3Vec:
 
 /* 8026F350 0070 .text      CalcPos__8cM3dGLinCFP3Vecf     CalcPos__8cM3dGLinCFP3Vecf     */
 .global CalcPos__8cM3dGLinCFP3Vecf
+CalcPos__8cM3dGLinCFP3Vecf:
 CalcPos__8cM3dGLinCFP3Vecf:
 /* 8026F350 0026C290  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8026F354 0026C294  7C 08 02 A6 */	mflr r0
@@ -92,6 +96,7 @@ CalcPos__8cM3dGLinCFP3Vecf:
 
 /* 8026F3C0 001C .text      SetEnd__8cM3dGLinFRC4cXyz      SetEnd__8cM3dGLinFRC4cXyz      */
 .global SetEnd__8cM3dGLinFRC4cXyz
+SetEnd__8cM3dGLinFRC4cXyz:
 SetEnd__8cM3dGLinFRC4cXyz:
 /* 8026F3C0 0026C300  C0 04 00 00 */	lfs f0, 0(r4)
 /* 8026F3C4 0026C304  D0 03 00 0C */	stfs f0, 0xc(r3)

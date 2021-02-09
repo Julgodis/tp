@@ -4,20 +4,18 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8029E6E0 0010 .text      DspHandShake__FPv              DspHandShake__FPv              */
+/* 8029E6E0 0040 .text      DspHandShake__FPv              DspHandShake__FPv              */
 .global DspHandShake__FPv
+DspHandShake__FPv:
 DspHandShake__FPv:
 /* 8029E6E0 0029B620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E6E4 0029B624  7C 08 02 A6 */	mflr r0
 /* 8029E6E8 0029B628  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8029E6EC 0029B62C  60 00 00 00 */	nop 
-
-/* 8029E6F0 0030 .text      func_8029E6F0                  func_8029E6F0                  */
-.global func_8029E6F0
-func_8029E6F0:
+lbl_8029E6F0:
 /* 8029E6F0 0029B630  48 0B 3D 51 */	bl DSPCheckMailFromDSP
 /* 8029E6F4 0029B634  28 03 00 00 */	cmplwi r3, 0
-/* 8029E6F8 0029B638  41 82 FF F8 */	beq func_8029E6F0
+/* 8029E6F8 0029B638  41 82 FF F8 */	beq lbl_8029E6F0
 /* 8029E6FC 0029B63C  48 0B 3D 55 */	bl DSPReadMailFromDSP
 /* 8029E700 0029B640  48 0B 3D 41 */	bl DSPCheckMailFromDSP
 /* 8029E704 0029B644  48 00 08 9D */	bl Dsp_Running_Start__Fv
@@ -30,6 +28,7 @@ func_8029E6F0:
 
 /* 8029E720 00AC .text      DspBoot__FPFPv_v               DspBoot__FPFPv_v               */
 .global DspBoot__FPFPv_v
+DspBoot__FPFPv_v:
 DspBoot__FPFPv_v:
 /* 8029E720 0029B660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E724 0029B664  7C 08 02 A6 */	mflr r0
@@ -77,8 +76,9 @@ DspBoot__FPFPv_v:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 .byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 8029E7E0 0020 .text      DSPSendCommands2__FPUlUlPFUs_v DSPSendCommands2__FPUlUlPFUs_v */
+/* 8029E7E0 0100 .text      DSPSendCommands2__FPUlUlPFUs_v DSPSendCommands2__FPUlUlPFUs_v */
 .global DSPSendCommands2__FPUlUlPFUs_v
+DSPSendCommands2__FPUlUlPFUs_v:
 DSPSendCommands2__FPUlUlPFUs_v:
 /* 8029E7E0 0029B720  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029E7E4 0029B724  7C 08 02 A6 */	mflr r0
@@ -88,86 +88,59 @@ DSPSendCommands2__FPUlUlPFUs_v:
 /* 8029E7F4 0029B734  7C 7A 1B 78 */	mr r26, r3
 /* 8029E7F8 0029B738  7C 9B 23 78 */	mr r27, r4
 /* 8029E7FC 0029B73C  7C BE 2B 78 */	mr r30, r5
-
-/* 8029E800 0030 .text      func_8029E800                  func_8029E800                  */
-.global func_8029E800
-func_8029E800:
+lbl_8029E800:
 /* 8029E800 0029B740  48 00 07 81 */	bl Dsp_Running_Check__Fv
 /* 8029E804 0029B744  2C 03 00 00 */	cmpwi r3, 0
-/* 8029E808 0029B748  41 82 FF F8 */	beq func_8029E800
+/* 8029E808 0029B748  41 82 FF F8 */	beq lbl_8029E800
 /* 8029E80C 0029B74C  48 09 EE E9 */	bl OSDisableInterrupts
 /* 8029E810 0029B750  7C 7D 1B 78 */	mr r29, r3
 /* 8029E814 0029B754  48 0B 3C 1D */	bl DSPCheckMailToDSP
 /* 8029E818 0029B758  28 03 00 00 */	cmplwi r3, 0
-/* 8029E81C 0029B75C  41 82 00 14 */	beq func_8029E830
+/* 8029E81C 0029B75C  41 82 00 14 */	beq lbl_8029E830
 /* 8029E820 0029B760  7F A3 EB 78 */	mr r3, r29
 /* 8029E824 0029B764  48 09 EE F9 */	bl OSRestoreInterrupts
 /* 8029E828 0029B768  38 60 FF FF */	li r3, -1
-/* 8029E82C 0029B76C  48 00 00 84 */	b func_8029E8B0
-
-/* 8029E830 0010 .text      func_8029E830                  func_8029E830                  */
-.global func_8029E830
-func_8029E830:
+/* 8029E82C 0029B76C  48 00 00 84 */	b lbl_8029E8B0
+lbl_8029E830:
 /* 8029E830 0029B770  7F 63 DB 78 */	mr r3, r27
 /* 8029E834 0029B774  48 0B 3C 35 */	bl DSPSendMailToDSP
 /* 8029E838 0029B778  48 0B 3C 45 */	bl DSPAssertInt
 /* 8029E83C 0029B77C  60 00 00 00 */	nop 
-
-/* 8029E840 0018 .text      func_8029E840                  func_8029E840                  */
-.global func_8029E840
-func_8029E840:
+lbl_8029E840:
 /* 8029E840 0029B780  48 0B 3B F1 */	bl DSPCheckMailToDSP
 /* 8029E844 0029B784  28 03 00 00 */	cmplwi r3, 0
-/* 8029E848 0029B788  40 82 FF F8 */	bne func_8029E840
+/* 8029E848 0029B788  40 82 FF F8 */	bne lbl_8029E840
 /* 8029E84C 0029B78C  28 1B 00 00 */	cmplwi r27, 0
-/* 8029E850 0029B790  40 82 00 08 */	bne func_8029E858
+/* 8029E850 0029B790  40 82 00 08 */	bne lbl_8029E858
 /* 8029E854 0029B794  3B 60 00 01 */	li r27, 1
-
-/* 8029E858 0018 .text      func_8029E858                  func_8029E858                  */
-.global func_8029E858
-func_8029E858:
+lbl_8029E858:
 /* 8029E858 0029B798  28 1E 00 00 */	cmplwi r30, 0
-/* 8029E85C 0029B79C  41 82 00 14 */	beq func_8029E870
+/* 8029E85C 0029B79C  41 82 00 14 */	beq lbl_8029E870
 /* 8029E860 0029B7A0  80 7A 00 00 */	lwz r3, 0(r26)
 /* 8029E864 0029B7A4  7F C4 F3 78 */	mr r4, r30
 /* 8029E868 0029B7A8  48 00 00 B9 */	bl DspStartWork__FUlPFUs_v
 /* 8029E86C 0029B7AC  7C 7C 1B 78 */	mr r28, r3
-
-/* 8029E870 000C .text      func_8029E870                  func_8029E870                  */
-.global func_8029E870
-func_8029E870:
+lbl_8029E870:
 /* 8029E870 0029B7B0  3B C0 00 00 */	li r30, 0
 /* 8029E874 0029B7B4  3B E0 00 00 */	li r31, 0
-/* 8029E878 0029B7B8  48 00 00 24 */	b func_8029E89C
-
-/* 8029E87C 000C .text      func_8029E87C                  func_8029E87C                  */
-.global func_8029E87C
-func_8029E87C:
+/* 8029E878 0029B7B8  48 00 00 24 */	b lbl_8029E89C
+lbl_8029E87C:
 /* 8029E87C 0029B7BC  7C 7A F8 2E */	lwzx r3, r26, r31
 /* 8029E880 0029B7C0  48 0B 3B E9 */	bl DSPSendMailToDSP
 /* 8029E884 0029B7C4  60 00 00 00 */	nop 
-
-/* 8029E888 0014 .text      func_8029E888                  func_8029E888                  */
-.global func_8029E888
-func_8029E888:
+lbl_8029E888:
 /* 8029E888 0029B7C8  48 0B 3B A9 */	bl DSPCheckMailToDSP
 /* 8029E88C 0029B7CC  28 03 00 00 */	cmplwi r3, 0
-/* 8029E890 0029B7D0  40 82 FF F8 */	bne func_8029E888
+/* 8029E890 0029B7D0  40 82 FF F8 */	bne lbl_8029E888
 /* 8029E894 0029B7D4  3B DE 00 01 */	addi r30, r30, 1
 /* 8029E898 0029B7D8  3B FF 00 04 */	addi r31, r31, 4
-
-/* 8029E89C 0014 .text      func_8029E89C                  func_8029E89C                  */
-.global func_8029E89C
-func_8029E89C:
+lbl_8029E89C:
 /* 8029E89C 0029B7DC  7C 1E D8 40 */	cmplw r30, r27
-/* 8029E8A0 0029B7E0  41 80 FF DC */	blt func_8029E87C
+/* 8029E8A0 0029B7E0  41 80 FF DC */	blt lbl_8029E87C
 /* 8029E8A4 0029B7E4  7F A3 EB 78 */	mr r3, r29
 /* 8029E8A8 0029B7E8  48 09 EE 75 */	bl OSRestoreInterrupts
 /* 8029E8AC 0029B7EC  7F 83 E3 78 */	mr r3, r28
-
-/* 8029E8B0 0030 .text      func_8029E8B0                  func_8029E8B0                  */
-.global func_8029E8B0
-func_8029E8B0:
+lbl_8029E8B0:
 /* 8029E8B0 0029B7F0  39 61 00 20 */	addi r11, r1, 0x20
 /* 8029E8B4 0029B7F4  48 0C 39 69 */	bl _restgpr_26
 /* 8029E8B8 0029B7F8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -181,8 +154,9 @@ func_8029E8B0:
 /* 8029E8D8 0029B818  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8029E8DC 0029B81C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-/* 8029E8E0 0018 .text      DspInitWork__Fv                DspInitWork__Fv                */
+/* 8029E8E0 0040 .text      DspInitWork__Fv                DspInitWork__Fv                */
 .global DspInitWork__Fv
+DspInitWork__Fv:
 DspInitWork__Fv:
 /* 8029E8E0 0029B820  38 60 00 00 */	li r3, 0
 /* 8029E8E4 0029B824  3C 80 80 43 */	lis r4, taskwork@ha
@@ -190,14 +164,11 @@ DspInitWork__Fv:
 /* 8029E8EC 0029B82C  7C 66 1B 78 */	mr r6, r3
 /* 8029E8F0 0029B830  38 A4 3F E0 */	addi r5, r4, taskwork@l
 /* 8029E8F4 0029B834  7C 09 03 A6 */	mtctr r0
-
-/* 8029E8F8 0028 .text      func_8029E8F8                  func_8029E8F8                  */
-.global func_8029E8F8
-func_8029E8F8:
+lbl_8029E8F8:
 /* 8029E8F8 0029B838  7C 85 1A 14 */	add r4, r5, r3
 /* 8029E8FC 0029B83C  38 63 00 08 */	addi r3, r3, 8
 /* 8029E900 0029B840  90 C4 00 04 */	stw r6, 4(r4)
-/* 8029E904 0029B844  42 00 FF F4 */	bdnz func_8029E8F8
+/* 8029E904 0029B844  42 00 FF F4 */	bdnz lbl_8029E8F8
 /* 8029E908 0029B848  4E 80 00 20 */	blr 
 /* 8029E90C 0029B84C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8029E910 0029B850  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
@@ -205,21 +176,19 @@ func_8029E8F8:
 /* 8029E918 0029B858  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8029E91C 0029B85C  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-/* 8029E920 0020 .text      DspStartWork__FUlPFUs_v        DspStartWork__FUlPFUs_v        */
+/* 8029E920 0060 .text      DspStartWork__FUlPFUs_v        DspStartWork__FUlPFUs_v        */
 .global DspStartWork__FUlPFUs_v
+DspStartWork__FUlPFUs_v:
 DspStartWork__FUlPFUs_v:
 /* 8029E920 0029B860  80 ED 8D 84 */	lwz r7, taskwritep-_SDA_BASE_(r13)
 /* 8029E924 0029B864  80 0D 8D 80 */	lwz r0, taskreadp-_SDA_BASE_(r13)
 /* 8029E928 0029B868  38 C7 00 01 */	addi r6, r7, 1
 /* 8029E92C 0029B86C  54 C8 07 3E */	clrlwi r8, r6, 0x1c
 /* 8029E930 0029B870  7C 08 00 40 */	cmplw r8, r0
-/* 8029E934 0029B874  40 82 00 0C */	bne func_8029E940
+/* 8029E934 0029B874  40 82 00 0C */	bne lbl_8029E940
 /* 8029E938 0029B878  38 60 00 00 */	li r3, 0
 /* 8029E93C 0029B87C  4E 80 00 20 */	blr 
-
-/* 8029E940 0040 .text      func_8029E940                  func_8029E940                  */
-.global func_8029E940
-func_8029E940:
+lbl_8029E940:
 /* 8029E940 0029B880  3C A0 80 43 */	lis r5, taskwork@ha
 /* 8029E944 0029B884  54 60 84 3E */	srwi r0, r3, 0x10
 /* 8029E948 0029B888  54 E7 18 38 */	slwi r7, r7, 3
@@ -237,8 +206,9 @@ func_8029E940:
 /* 8029E978 0029B8B8  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 /* 8029E97C 0029B8BC  00 00 00 00 */	.4byte 0x00000000  /* unknown instruction */
 
-/* 8029E980 0048 .text      DspFinishWork__FUs             DspFinishWork__FUs             */
+/* 8029E980 0080 .text      DspFinishWork__FUs             DspFinishWork__FUs             */
 .global DspFinishWork__FUs
+DspFinishWork__FUs:
 DspFinishWork__FUs:
 /* 8029E980 0029B8C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029E984 0029B8C4  7C 08 02 A6 */	mflr r0
@@ -250,26 +220,20 @@ DspFinishWork__FUs:
 /* 8029E99C 0029B8DC  54 C5 18 38 */	slwi r5, r6, 3
 /* 8029E9A0 0029B8E0  7C 04 2A 2E */	lhzx r0, r4, r5
 /* 8029E9A4 0029B8E4  7C 03 00 40 */	cmplw r3, r0
-/* 8029E9A8 0029B8E8  40 82 00 30 */	bne func_8029E9D8
+/* 8029E9A8 0029B8E8  40 82 00 30 */	bne lbl_8029E9D8
 /* 8029E9AC 0029B8EC  7C 64 2A 14 */	add r3, r4, r5
 /* 8029E9B0 0029B8F0  81 83 00 04 */	lwz r12, 4(r3)
 /* 8029E9B4 0029B8F4  28 0C 00 00 */	cmplwi r12, 0
-/* 8029E9B8 0029B8F8  41 82 00 10 */	beq func_8029E9C8
+/* 8029E9B8 0029B8F8  41 82 00 10 */	beq lbl_8029E9C8
 /* 8029E9BC 0029B8FC  54 C3 04 3E */	clrlwi r3, r6, 0x10
 /* 8029E9C0 0029B900  7D 89 03 A6 */	mtctr r12
 /* 8029E9C4 0029B904  4E 80 04 21 */	bctrl 
-
-/* 8029E9C8 0010 .text      func_8029E9C8                  func_8029E9C8                  */
-.global func_8029E9C8
-func_8029E9C8:
+lbl_8029E9C8:
 /* 8029E9C8 0029B908  80 6D 8D 80 */	lwz r3, taskreadp-_SDA_BASE_(r13)
 /* 8029E9CC 0029B90C  38 03 00 01 */	addi r0, r3, 1
 /* 8029E9D0 0029B910  54 00 07 3E */	clrlwi r0, r0, 0x1c
 /* 8029E9D4 0029B914  90 0D 8D 80 */	stw r0, taskreadp-_SDA_BASE_(r13)
-
-/* 8029E9D8 0028 .text      func_8029E9D8                  func_8029E9D8                  */
-.global func_8029E9D8
-func_8029E9D8:
+lbl_8029E9D8:
 /* 8029E9D8 0029B918  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8029E9DC 0029B91C  7C 08 03 A6 */	mtlr r0
 /* 8029E9E0 0029B920  38 21 00 10 */	addi r1, r1, 0x10
@@ -822,13 +786,13 @@ taskreadp:
 taskwritep:
 .skip 0x4
 
-/* 80451308 0001 .sbss      sym_80451308                   sym_80451308                   */
-.global sym_80451308
-sym_80451308:
+/* 80451308 0001 .sbss      data_80451308                  data_80451308                  */
+.global data_80451308
+data_80451308:
 .skip 0x1
 
-/* 80451309 0003 .sbss      sym_80451309                   sym_80451309                   */
-.global sym_80451309
-sym_80451309:
+/* 80451309 0003 .sbss      data_80451309                  data_80451309                  */
+.global data_80451309
+data_80451309:
 .skip 0x3
 

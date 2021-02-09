@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802E06DC 0088 .text      __ct__10JUTGamePadFQ210JUTGamePad8EPadPort __ct__10JUTGamePadFQ210JUTGamePad8EPadPort */
+/* 802E06DC 00D4 .text      __ct__10JUTGamePadFQ210JUTGamePad8EPadPort __ct__10JUTGamePadFQ210JUTGamePad8EPadPort */
 .global __ct__10JUTGamePadFQ210JUTGamePad8EPadPort
+__ct__10JUTGamePadFQ210JUTGamePad8EPadPort:
 __ct__10JUTGamePadFQ210JUTGamePad8EPadPort:
 /* 802E06DC 002DD61C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E06E0 002DD620  7C 08 02 A6 */	mflr r0
@@ -36,15 +37,12 @@ __ct__10JUTGamePadFQ210JUTGamePad8EPadPort:
 /* 802E0744 002DD684  7F C3 F3 78 */	mr r3, r30
 /* 802E0748 002DD688  A8 1E 00 7C */	lha r0, 0x7c(r30)
 /* 802E074C 002DD68C  2C 00 00 00 */	cmpwi r0, 0
-/* 802E0750 002DD690  41 80 00 14 */	blt func_802E0764
+/* 802E0750 002DD690  41 80 00 14 */	blt lbl_802E0764
 /* 802E0754 002DD694  38 AD 8F 54 */	addi r5, r13, mPadAssign__10JUTGamePad-_SDA_BASE_
 /* 802E0758 002DD698  7C 85 F8 AE */	lbzx r4, r5, r31
 /* 802E075C 002DD69C  38 04 00 01 */	addi r0, r4, 1
 /* 802E0760 002DD6A0  7C 05 F9 AE */	stbx r0, r5, r31
-
-/* 802E0764 004C .text      func_802E0764                  func_802E0764                  */
-.global func_802E0764
-func_802E0764:
+lbl_802E0764:
 /* 802E0764 002DD6A4  48 00 00 F9 */	bl initList__10JUTGamePadFv
 /* 802E0768 002DD6A8  3C 60 80 43 */	lis r3, mPadList__10JUTGamePad@ha
 /* 802E076C 002DD6AC  38 63 43 E4 */	addi r3, r3, mPadList__10JUTGamePad@l
@@ -65,8 +63,9 @@ func_802E0764:
 /* 802E07A8 002DD6E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E07AC 002DD6EC  4E 80 00 20 */	blr 
 
-/* 802E07B0 0050 .text      __dt__10JUTGamePadFv           __dt__10JUTGamePadFv           */
+/* 802E07B0 00AC .text      __dt__10JUTGamePadFv           __dt__10JUTGamePadFv           */
 .global __dt__10JUTGamePadFv
+__dt__10JUTGamePadFv:
 __dt__10JUTGamePadFv:
 /* 802E07B0 002DD6F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E07B4 002DD6F4  7C 08 02 A6 */	mflr r0
@@ -75,47 +74,38 @@ __dt__10JUTGamePadFv:
 /* 802E07C0 002DD700  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E07C4 002DD704  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E07C8 002DD708  7C 9F 23 78 */	mr r31, r4
-/* 802E07CC 002DD70C  41 82 00 74 */	beq func_802E0840
+/* 802E07CC 002DD70C  41 82 00 74 */	beq lbl_802E0840
 /* 802E07D0 002DD710  3C 60 80 3D */	lis r3, __vt__10JUTGamePad@ha
 /* 802E07D4 002DD714  38 03 C6 10 */	addi r0, r3, __vt__10JUTGamePad@l
 /* 802E07D8 002DD718  90 1E 00 00 */	stw r0, 0(r30)
 /* 802E07DC 002DD71C  A8 BE 00 7C */	lha r5, 0x7c(r30)
 /* 802E07E0 002DD720  7C A0 07 35 */	extsh. r0, r5
-/* 802E07E4 002DD724  41 80 00 1C */	blt func_802E0800
+/* 802E07E4 002DD724  41 80 00 1C */	blt lbl_802E0800
 /* 802E07E8 002DD728  38 8D 8F 54 */	addi r4, r13, mPadAssign__10JUTGamePad-_SDA_BASE_
 /* 802E07EC 002DD72C  7C 64 28 AE */	lbzx r3, r4, r5
 /* 802E07F0 002DD730  38 03 FF FF */	addi r0, r3, -1
 /* 802E07F4 002DD734  7C 04 29 AE */	stbx r0, r4, r5
 /* 802E07F8 002DD738  38 00 FF FF */	li r0, -1
 /* 802E07FC 002DD73C  B0 1E 00 7C */	sth r0, 0x7c(r30)
-
-/* 802E0800 0024 .text      func_802E0800                  func_802E0800                  */
-.global func_802E0800
-func_802E0800:
+lbl_802E0800:
 /* 802E0800 002DD740  3C 60 80 43 */	lis r3, mPadList__10JUTGamePad@ha
 /* 802E0804 002DD744  38 63 43 E4 */	addi r3, r3, mPadList__10JUTGamePad@l
 /* 802E0808 002DD748  38 9E 00 80 */	addi r4, r30, 0x80
 /* 802E080C 002DD74C  4B FF B9 51 */	bl remove__10JSUPtrListFP10JSUPtrLink
 /* 802E0810 002DD750  34 1E 00 80 */	addic. r0, r30, 0x80
-/* 802E0814 002DD754  41 82 00 10 */	beq func_802E0824
+/* 802E0814 002DD754  41 82 00 10 */	beq lbl_802E0824
 /* 802E0818 002DD758  38 7E 00 80 */	addi r3, r30, 0x80
 /* 802E081C 002DD75C  38 80 00 00 */	li r4, 0
 /* 802E0820 002DD760  4B FF B5 F5 */	bl __dt__10JSUPtrLinkFv
-
-/* 802E0824 001C .text      func_802E0824                  func_802E0824                  */
-.global func_802E0824
-func_802E0824:
+lbl_802E0824:
 /* 802E0824 002DD764  7F C3 F3 78 */	mr r3, r30
 /* 802E0828 002DD768  38 80 00 00 */	li r4, 0
 /* 802E082C 002DD76C  4B FF 0C B9 */	bl __dt__11JKRDisposerFv
 /* 802E0830 002DD770  7F E0 07 35 */	extsh. r0, r31
-/* 802E0834 002DD774  40 81 00 0C */	ble func_802E0840
+/* 802E0834 002DD774  40 81 00 0C */	ble lbl_802E0840
 /* 802E0838 002DD778  7F C3 F3 78 */	mr r3, r30
 /* 802E083C 002DD77C  4B FE E5 01 */	bl __dl__FPv
-
-/* 802E0840 001C .text      func_802E0840                  func_802E0840                  */
-.global func_802E0840
-func_802E0840:
+lbl_802E0840:
 /* 802E0840 002DD780  7F C3 F3 78 */	mr r3, r30
 /* 802E0844 002DD784  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E0848 002DD788  83 C1 00 08 */	lwz r30, 8(r1)
@@ -124,24 +114,22 @@ func_802E0840:
 /* 802E0854 002DD794  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E0858 002DD798  4E 80 00 20 */	blr 
 
-/* 802E085C 002C .text      initList__10JUTGamePadFv       initList__10JUTGamePadFv       */
+/* 802E085C 003C .text      initList__10JUTGamePadFv       initList__10JUTGamePadFv       */
 .global initList__10JUTGamePadFv
+initList__10JUTGamePadFv:
 initList__10JUTGamePadFv:
 /* 802E085C 002DD79C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E0860 002DD7A0  7C 08 02 A6 */	mflr r0
 /* 802E0864 002DD7A4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E0868 002DD7A8  88 0D 8F 50 */	lbz r0, sym_804514D0-_SDA_BASE_(r13)
+/* 802E0868 002DD7A8  88 0D 8F 50 */	lbz r0, data_804514D0-_SDA_BASE_(r13)
 /* 802E086C 002DD7AC  28 00 00 00 */	cmplwi r0, 0
-/* 802E0870 002DD7B0  40 82 00 18 */	bne func_802E0888
+/* 802E0870 002DD7B0  40 82 00 18 */	bne lbl_802E0888
 /* 802E0874 002DD7B4  3C 60 80 43 */	lis r3, mPadList__10JUTGamePad@ha
 /* 802E0878 002DD7B8  38 63 43 E4 */	addi r3, r3, mPadList__10JUTGamePad@l
 /* 802E087C 002DD7BC  4B FF B6 99 */	bl initiate__10JSUPtrListFv
 /* 802E0880 002DD7C0  38 00 00 01 */	li r0, 1
-/* 802E0884 002DD7C4  98 0D 8F 50 */	stb r0, sym_804514D0-_SDA_BASE_(r13)
-
-/* 802E0888 0010 .text      func_802E0888                  func_802E0888                  */
-.global func_802E0888
-func_802E0888:
+/* 802E0884 002DD7C4  98 0D 8F 50 */	stb r0, data_804514D0-_SDA_BASE_(r13)
+lbl_802E0888:
 /* 802E0888 002DD7C8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E088C 002DD7CC  7C 08 03 A6 */	mtlr r0
 /* 802E0890 002DD7D0  38 21 00 10 */	addi r1, r1, 0x10
@@ -149,6 +137,7 @@ func_802E0888:
 
 /* 802E0898 0038 .text      init__10JUTGamePadFv           init__10JUTGamePadFv           */
 .global init__10JUTGamePadFv
+init__10JUTGamePadFv:
 init__10JUTGamePadFv:
 /* 802E0898 002DD7D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E089C 002DD7DC  7C 08 02 A6 */	mflr r0
@@ -168,14 +157,16 @@ init__10JUTGamePadFv:
 /* 802E08D0 0014 .text      clear__10JUTGamePadFv          clear__10JUTGamePadFv          */
 .global clear__10JUTGamePadFv
 clear__10JUTGamePadFv:
+clear__10JUTGamePadFv:
 /* 802E08D0 002DD810  38 00 00 00 */	li r0, 0
 /* 802E08D4 002DD814  98 03 00 98 */	stb r0, 0x98(r3)
 /* 802E08D8 002DD818  38 00 00 01 */	li r0, 1
 /* 802E08DC 002DD81C  98 03 00 A8 */	stb r0, 0xa8(r3)
 /* 802E08E0 002DD820  4E 80 00 20 */	blr 
 
-/* 802E08E4 0044 .text      read__10JUTGamePadFv           read__10JUTGamePadFv           */
+/* 802E08E4 02D8 .text      read__10JUTGamePadFv           read__10JUTGamePadFv           */
 .global read__10JUTGamePadFv
+read__10JUTGamePadFv:
 read__10JUTGamePadFv:
 /* 802E08E4 002DD824  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E08E8 002DD828  7C 08 02 A6 */	mflr r0
@@ -189,44 +180,32 @@ read__10JUTGamePadFv:
 /* 802E0908 002DD848  90 6D 8F 60 */	stw r3, sRumbleSupported__10JUTGamePad-_SDA_BASE_(r13)
 /* 802E090C 002DD84C  80 0D 83 5C */	lwz r0, sClampMode__10JUTGamePad-_SDA_BASE_(r13)
 /* 802E0910 002DD850  2C 00 00 02 */	cmpwi r0, 2
-/* 802E0914 002DD854  41 82 00 20 */	beq func_802E0934
-/* 802E0918 002DD858  40 80 00 24 */	bge func_802E093C
+/* 802E0914 002DD854  41 82 00 20 */	beq lbl_802E0934
+/* 802E0918 002DD858  40 80 00 24 */	bge lbl_802E093C
 /* 802E091C 002DD85C  2C 00 00 01 */	cmpwi r0, 1
-/* 802E0920 002DD860  40 80 00 08 */	bge func_802E0928
-/* 802E0924 002DD864  48 00 00 18 */	b func_802E093C
-
-/* 802E0928 000C .text      func_802E0928                  func_802E0928                  */
-.global func_802E0928
-func_802E0928:
+/* 802E0920 002DD860  40 80 00 08 */	bge lbl_802E0928
+/* 802E0924 002DD864  48 00 00 18 */	b lbl_802E093C
+lbl_802E0928:
 /* 802E0928 002DD868  38 7F 00 18 */	addi r3, r31, 0x18
 /* 802E092C 002DD86C  48 06 D7 69 */	bl PADClamp
-/* 802E0930 002DD870  48 00 00 0C */	b func_802E093C
-
-/* 802E0934 0008 .text      func_802E0934                  func_802E0934                  */
-.global func_802E0934
-func_802E0934:
+/* 802E0930 002DD870  48 00 00 0C */	b lbl_802E093C
+lbl_802E0934:
 /* 802E0934 002DD874  38 7F 00 18 */	addi r3, r31, 0x18
 /* 802E0938 002DD878  48 06 D8 71 */	bl PADClampCircle
-
-/* 802E093C 0018 .text      func_802E093C                  func_802E093C                  */
-.global func_802E093C
-func_802E093C:
+lbl_802E093C:
 /* 802E093C 002DD87C  3B C0 00 00 */	li r30, 0
 /* 802E0940 002DD880  3B A0 00 00 */	li r29, 0
 /* 802E0944 002DD884  3B 80 00 00 */	li r28, 0
 /* 802E0948 002DD888  3B 60 00 00 */	li r27, 0
 /* 802E094C 002DD88C  3B 40 00 00 */	li r26, 0
 /* 802E0950 002DD890  3F 20 80 00 */	lis r25, 0x8000
-
-/* 802E0954 0080 .text      func_802E0954                  func_802E0954                  */
-.global func_802E0954
-func_802E0954:
+lbl_802E0954:
 /* 802E0954 002DD894  7F 37 EC 30 */	srw r23, r25, r29
 /* 802E0958 002DD898  3B 1F 00 18 */	addi r24, r31, 0x18
 /* 802E095C 002DD89C  7F 18 D2 14 */	add r24, r24, r26
 /* 802E0960 002DD8A0  88 78 00 0A */	lbz r3, 0xa(r24)
 /* 802E0964 002DD8A4  7C 60 07 75 */	extsb. r0, r3
-/* 802E0968 002DD8A8  40 82 00 6C */	bne func_802E09D4
+/* 802E0968 002DD8A8  40 82 00 6C */	bne lbl_802E09D4
 /* 802E096C 002DD8AC  38 7F 01 08 */	addi r3, r31, 0x108
 /* 802E0970 002DD8B0  7C 63 DA 14 */	add r3, r3, r27
 /* 802E0974 002DD8B4  88 98 00 02 */	lbz r4, 2(r24)
@@ -252,14 +231,11 @@ func_802E0954:
 /* 802E09C4 002DD904  7F 04 C3 78 */	mr r4, r24
 /* 802E09C8 002DD908  7E C5 B3 78 */	mr r5, r22
 /* 802E09CC 002DD90C  48 00 06 C1 */	bl update__Q210JUTGamePad7CButtonFPC9PADStatusUl
-/* 802E09D0 002DD910  48 00 00 90 */	b func_802E0A60
-
-/* 802E09D4 0074 .text      func_802E09D4                  func_802E09D4                  */
-.global func_802E09D4
-func_802E09D4:
+/* 802E09D0 002DD910  48 00 00 90 */	b lbl_802E0A60
+lbl_802E09D4:
 /* 802E09D4 002DD914  7C 60 07 74 */	extsb r0, r3
 /* 802E09D8 002DD918  2C 00 FF FF */	cmpwi r0, -1
-/* 802E09DC 002DD91C  40 82 00 6C */	bne func_802E0A48
+/* 802E09DC 002DD91C  40 82 00 6C */	bne lbl_802E0A48
 /* 802E09E0 002DD920  38 7F 01 08 */	addi r3, r31, 0x108
 /* 802E09E4 002DD924  7C 63 DA 14 */	add r3, r3, r27
 /* 802E09E8 002DD928  38 80 00 00 */	li r4, 0
@@ -283,42 +259,33 @@ func_802E09D4:
 /* 802E0A30 002DD970  48 00 06 5D */	bl update__Q210JUTGamePad7CButtonFPC9PADStatusUl
 /* 802E0A34 002DD974  80 0D 8F 58 */	lwz r0, sSuppressPadReset__10JUTGamePad-_SDA_BASE_(r13)
 /* 802E0A38 002DD978  7C 00 B8 39 */	and. r0, r0, r23
-/* 802E0A3C 002DD97C  40 82 00 24 */	bne func_802E0A60
+/* 802E0A3C 002DD97C  40 82 00 24 */	bne lbl_802E0A60
 /* 802E0A40 002DD980  7F DE BB 78 */	or r30, r30, r23
-/* 802E0A44 002DD984  48 00 00 1C */	b func_802E0A60
-
-/* 802E0A48 0018 .text      func_802E0A48                  func_802E0A48                  */
-.global func_802E0A48
-func_802E0A48:
+/* 802E0A44 002DD984  48 00 00 1C */	b lbl_802E0A60
+lbl_802E0A48:
 /* 802E0A48 002DD988  38 00 00 00 */	li r0, 0
 /* 802E0A4C 002DD98C  38 7F 00 48 */	addi r3, r31, 0x48
 /* 802E0A50 002DD990  7C 63 E2 14 */	add r3, r3, r28
 /* 802E0A54 002DD994  90 03 00 04 */	stw r0, 4(r3)
 /* 802E0A58 002DD998  90 03 00 08 */	stw r0, 8(r3)
 /* 802E0A5C 002DD99C  90 03 00 18 */	stw r0, 0x18(r3)
-
-/* 802E0A60 0020 .text      func_802E0A60                  func_802E0A60                  */
-.global func_802E0A60
-func_802E0A60:
+lbl_802E0A60:
 /* 802E0A60 002DD9A0  3B BD 00 01 */	addi r29, r29, 1
 /* 802E0A64 002DD9A4  2C 1D 00 04 */	cmpwi r29, 4
 /* 802E0A68 002DD9A8  3B 9C 00 30 */	addi r28, r28, 0x30
 /* 802E0A6C 002DD9AC  3B 7B 00 10 */	addi r27, r27, 0x10
 /* 802E0A70 002DD9B0  3B 5A 00 0C */	addi r26, r26, 0xc
-/* 802E0A74 002DD9B4  41 80 FE E0 */	blt func_802E0954
+/* 802E0A74 002DD9B4  41 80 FE E0 */	blt lbl_802E0954
 /* 802E0A78 002DD9B8  83 3F 00 0C */	lwz r25, 0xc(r31)
-/* 802E0A7C 002DD9BC  48 00 01 08 */	b func_802E0B84
-
-/* 802E0A80 0094 .text      func_802E0A80                  func_802E0A80                  */
-.global func_802E0A80
-func_802E0A80:
+/* 802E0A7C 002DD9BC  48 00 01 08 */	b lbl_802E0B84
+lbl_802E0A80:
 /* 802E0A80 002DD9C0  80 99 00 00 */	lwz r4, 0(r25)
 /* 802E0A84 002DD9C4  80 64 00 94 */	lwz r3, 0x94(r4)
 /* 802E0A88 002DD9C8  28 03 00 00 */	cmplwi r3, 0
-/* 802E0A8C 002DD9CC  41 82 00 88 */	beq func_802E0B14
+/* 802E0A8C 002DD9CC  41 82 00 88 */	beq lbl_802E0B14
 /* 802E0A90 002DD9D0  88 03 00 04 */	lbz r0, 4(r3)
 /* 802E0A94 002DD9D4  28 00 00 00 */	cmplwi r0, 0
-/* 802E0A98 002DD9D8  41 82 00 7C */	beq func_802E0B14
+/* 802E0A98 002DD9D8  41 82 00 7C */	beq lbl_802E0B14
 /* 802E0A9C 002DD9DC  38 81 00 08 */	addi r4, r1, 8
 /* 802E0AA0 002DD9E0  81 83 00 00 */	lwz r12, 0(r3)
 /* 802E0AA4 002DD9E4  81 8C 00 0C */	lwz r12, 0xc(r12)
@@ -348,65 +315,47 @@ func_802E0A80:
 /* 802E0B04 002DDA44  38 81 00 08 */	addi r4, r1, 8
 /* 802E0B08 002DDA48  7E C5 B3 78 */	mr r5, r22
 /* 802E0B0C 002DDA4C  48 00 05 81 */	bl update__Q210JUTGamePad7CButtonFPC9PADStatusUl
-/* 802E0B10 002DDA50  48 00 00 20 */	b func_802E0B30
-
-/* 802E0B14 0014 .text      func_802E0B14                  func_802E0B14                  */
-.global func_802E0B14
-func_802E0B14:
+/* 802E0B10 002DDA50  48 00 00 20 */	b lbl_802E0B30
+lbl_802E0B14:
 /* 802E0B14 002DDA54  A8 04 00 7C */	lha r0, 0x7c(r4)
 /* 802E0B18 002DDA58  2C 00 FF FF */	cmpwi r0, -1
-/* 802E0B1C 002DDA5C  40 82 00 0C */	bne func_802E0B28
+/* 802E0B1C 002DDA5C  40 82 00 0C */	bne lbl_802E0B28
 /* 802E0B20 002DDA60  7C 83 23 78 */	mr r3, r4
 /* 802E0B24 002DDA64  48 00 00 99 */	bl assign__10JUTGamePadFv
-
-/* 802E0B28 0008 .text      func_802E0B28                  func_802E0B28                  */
-.global func_802E0B28
-func_802E0B28:
+lbl_802E0B28:
 /* 802E0B28 002DDA68  80 79 00 00 */	lwz r3, 0(r25)
 /* 802E0B2C 002DDA6C  48 00 01 AD */	bl update__10JUTGamePadFv
-
-/* 802E0B30 0050 .text      func_802E0B30                  func_802E0B30                  */
-.global func_802E0B30
-func_802E0B30:
+lbl_802E0B30:
 /* 802E0B30 002DDA70  80 99 00 00 */	lwz r4, 0(r25)
 /* 802E0B34 002DDA74  80 64 00 90 */	lwz r3, 0x90(r4)
 /* 802E0B38 002DDA78  28 03 00 00 */	cmplwi r3, 0
-/* 802E0B3C 002DDA7C  41 82 00 44 */	beq func_802E0B80
+/* 802E0B3C 002DDA7C  41 82 00 44 */	beq lbl_802E0B80
 /* 802E0B40 002DDA80  88 03 00 04 */	lbz r0, 4(r3)
 /* 802E0B44 002DDA84  28 00 00 00 */	cmplwi r0, 0
-/* 802E0B48 002DDA88  41 82 00 38 */	beq func_802E0B80
+/* 802E0B48 002DDA88  41 82 00 38 */	beq lbl_802E0B80
 /* 802E0B4C 002DDA8C  A8 04 00 7C */	lha r0, 0x7c(r4)
 /* 802E0B50 002DDA90  2C 00 00 00 */	cmpwi r0, 0
-/* 802E0B54 002DDA94  41 80 00 2C */	blt func_802E0B80
+/* 802E0B54 002DDA94  41 80 00 2C */	blt lbl_802E0B80
 /* 802E0B58 002DDA98  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 802E0B5C 002DDA9C  38 9F 00 18 */	addi r4, r31, 0x18
 /* 802E0B60 002DDAA0  7C 84 02 14 */	add r4, r4, r0
 /* 802E0B64 002DDAA4  88 04 00 0A */	lbz r0, 0xa(r4)
 /* 802E0B68 002DDAA8  7C 00 07 75 */	extsb. r0, r0
-/* 802E0B6C 002DDAAC  40 82 00 14 */	bne func_802E0B80
+/* 802E0B6C 002DDAAC  40 82 00 14 */	bne lbl_802E0B80
 /* 802E0B70 002DDAB0  81 83 00 00 */	lwz r12, 0(r3)
 /* 802E0B74 002DDAB4  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 802E0B78 002DDAB8  7D 89 03 A6 */	mtctr r12
 /* 802E0B7C 002DDABC  4E 80 04 21 */	bctrl 
-
-/* 802E0B80 0004 .text      func_802E0B80                  func_802E0B80                  */
-.global func_802E0B80
-func_802E0B80:
+lbl_802E0B80:
 /* 802E0B80 002DDAC0  83 39 00 0C */	lwz r25, 0xc(r25)
-
-/* 802E0B84 0018 .text      func_802E0B84                  func_802E0B84                  */
-.global func_802E0B84
-func_802E0B84:
+lbl_802E0B84:
 /* 802E0B84 002DDAC4  28 19 00 00 */	cmplwi r25, 0
-/* 802E0B88 002DDAC8  40 82 FE F8 */	bne func_802E0A80
+/* 802E0B88 002DDAC8  40 82 FE F8 */	bne lbl_802E0A80
 /* 802E0B8C 002DDACC  28 1E 00 00 */	cmplwi r30, 0
-/* 802E0B90 002DDAD0  41 82 00 0C */	beq func_802E0B9C
+/* 802E0B90 002DDAD0  41 82 00 0C */	beq lbl_802E0B9C
 /* 802E0B94 002DDAD4  7F C3 F3 78 */	mr r3, r30
 /* 802E0B98 002DDAD8  48 06 DF 95 */	bl PADReset
-
-/* 802E0B9C 0020 .text      func_802E0B9C                  func_802E0B9C                  */
-.global func_802E0B9C
-func_802E0B9C:
+lbl_802E0B9C:
 /* 802E0B9C 002DDADC  48 00 04 09 */	bl checkResetSwitch__10JUTGamePadFv
 /* 802E0BA0 002DDAE0  80 6D 8F 60 */	lwz r3, sRumbleSupported__10JUTGamePad-_SDA_BASE_(r13)
 /* 802E0BA4 002DDAE4  39 61 00 40 */	addi r11, r1, 0x40
@@ -416,8 +365,9 @@ func_802E0B9C:
 /* 802E0BB4 002DDAF4  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E0BB8 002DDAF8  4E 80 00 20 */	blr 
 
-/* 802E0BBC 0034 .text      assign__10JUTGamePadFv         assign__10JUTGamePadFv         */
+/* 802E0BBC 00B0 .text      assign__10JUTGamePadFv         assign__10JUTGamePadFv         */
 .global assign__10JUTGamePadFv
+assign__10JUTGamePadFv:
 assign__10JUTGamePadFv:
 /* 802E0BBC 002DDAFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E0BC0 002DDB00  7C 08 02 A6 */	mflr r0
@@ -432,17 +382,14 @@ assign__10JUTGamePadFv:
 /* 802E0BE4 002DDB24  7C E3 3B 78 */	mr r3, r7
 /* 802E0BE8 002DDB28  38 00 00 04 */	li r0, 4
 /* 802E0BEC 002DDB2C  7C 09 03 A6 */	mtctr r0
-
-/* 802E0BF0 0058 .text      func_802E0BF0                  func_802E0BF0                  */
-.global func_802E0BF0
-func_802E0BF0:
+lbl_802E0BF0:
 /* 802E0BF0 002DDB30  7C A6 22 14 */	add r5, r6, r4
 /* 802E0BF4 002DDB34  88 05 00 0A */	lbz r0, 0xa(r5)
 /* 802E0BF8 002DDB38  7C 00 07 75 */	extsb. r0, r0
-/* 802E0BFC 002DDB3C  40 82 00 4C */	bne func_802E0C48
+/* 802E0BFC 002DDB3C  40 82 00 4C */	bne lbl_802E0C48
 /* 802E0C00 002DDB40  88 03 00 00 */	lbz r0, 0(r3)
 /* 802E0C04 002DDB44  28 00 00 00 */	cmplwi r0, 0
-/* 802E0C08 002DDB48  40 82 00 40 */	bne func_802E0C48
+/* 802E0C08 002DDB48  40 82 00 40 */	bne lbl_802E0C48
 /* 802E0C0C 002DDB4C  B1 1F 00 7C */	sth r8, 0x7c(r31)
 /* 802E0C10 002DDB50  38 00 00 01 */	li r0, 1
 /* 802E0C14 002DDB54  7C 07 41 AE */	stbx r0, r7, r8
@@ -457,62 +404,55 @@ func_802E0BF0:
 /* 802E0C38 002DDB78  38 7F 00 68 */	addi r3, r31, 0x68
 /* 802E0C3C 002DDB7C  7F E4 FB 78 */	mr r4, r31
 /* 802E0C40 002DDB80  48 00 09 99 */	bl clear__Q210JUTGamePad7CRumbleFP10JUTGamePad
-/* 802E0C44 002DDB84  48 00 00 14 */	b func_802E0C58
-
-/* 802E0C48 0010 .text      func_802E0C48                  func_802E0C48                  */
-.global func_802E0C48
-func_802E0C48:
+/* 802E0C44 002DDB84  48 00 00 14 */	b lbl_802E0C58
+lbl_802E0C48:
 /* 802E0C48 002DDB88  39 08 00 01 */	addi r8, r8, 1
 /* 802E0C4C 002DDB8C  38 63 00 01 */	addi r3, r3, 1
 /* 802E0C50 002DDB90  38 84 00 0C */	addi r4, r4, 0xc
-/* 802E0C54 002DDB94  42 00 FF 9C */	bdnz func_802E0BF0
-
-/* 802E0C58 0014 .text      func_802E0C58                  func_802E0C58                  */
-.global func_802E0C58
-func_802E0C58:
+/* 802E0C54 002DDB94  42 00 FF 9C */	bdnz lbl_802E0BF0
+lbl_802E0C58:
 /* 802E0C58 002DDB98  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E0C5C 002DDB9C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E0C60 002DDBA0  7C 08 03 A6 */	mtlr r0
 /* 802E0C64 002DDBA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E0C68 002DDBA8  4E 80 00 20 */	blr 
 
-/* 802E0C6C 005C .text      checkResetCallback__10JUTGamePadFx checkResetCallback__10JUTGamePadFx */
+/* 802E0C6C 006C .text      checkResetCallback__10JUTGamePadFx checkResetCallback__10JUTGamePadFx */
 .global checkResetCallback__10JUTGamePadFx
+checkResetCallback__10JUTGamePadFx:
 checkResetCallback__10JUTGamePadFx:
 /* 802E0C6C 002DDBAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E0C70 002DDBB0  7C 08 02 A6 */	mflr r0
 /* 802E0C74 002DDBB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E0C78 002DDBB8  80 0D 8F 78 */	lwz r0, sThreshold__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
-/* 802E0C7C 002DDBBC  80 ED 8F 7C */	lwz r7, sym_804514FC-_SDA_BASE_(r13)
+/* 802E0C7C 002DDBBC  80 ED 8F 7C */	lwz r7, data_804514FC-_SDA_BASE_(r13)
 /* 802E0C80 002DDBC0  6C A5 80 00 */	xoris r5, r5, 0x8000
 /* 802E0C84 002DDBC4  6C 04 80 00 */	xoris r4, r0, 0x8000
 /* 802E0C88 002DDBC8  7C 07 30 10 */	subfc r0, r7, r6
 /* 802E0C8C 002DDBCC  7C 84 29 10 */	subfe r4, r4, r5
 /* 802E0C90 002DDBD0  7C 85 29 10 */	subfe r4, r5, r5
 /* 802E0C94 002DDBD4  7C 84 00 D1 */	neg. r4, r4
-/* 802E0C98 002DDBD8  40 82 00 30 */	bne func_802E0CC8
+/* 802E0C98 002DDBD8  40 82 00 30 */	bne lbl_802E0CC8
 /* 802E0C9C 002DDBDC  38 00 00 01 */	li r0, 1
-/* 802E0CA0 002DDBE0  98 0D 8F 81 */	stb r0, sym_80451501-_SDA_BASE_(r13)
+/* 802E0CA0 002DDBE0  98 0D 8F 81 */	stb r0, data_80451501-_SDA_BASE_(r13)
 /* 802E0CA4 002DDBE4  A8 03 00 7C */	lha r0, 0x7c(r3)
 /* 802E0CA8 002DDBE8  90 0D 8F 84 */	stw r0, sResetOccurredPort__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0CAC 002DDBEC  81 8D 8F 6C */	lwz r12, sCallback__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0CB0 002DDBF0  28 0C 00 00 */	cmplwi r12, 0
-/* 802E0CB4 002DDBF4  41 82 00 14 */	beq func_802E0CC8
+/* 802E0CB4 002DDBF4  41 82 00 14 */	beq lbl_802E0CC8
 /* 802E0CB8 002DDBF8  A8 63 00 7C */	lha r3, 0x7c(r3)
 /* 802E0CBC 002DDBFC  80 8D 8F 70 */	lwz r4, sCallbackArg__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0CC0 002DDC00  7D 89 03 A6 */	mtctr r12
 /* 802E0CC4 002DDC04  4E 80 04 21 */	bctrl 
-
-/* 802E0CC8 0010 .text      func_802E0CC8                  func_802E0CC8                  */
-.global func_802E0CC8
-func_802E0CC8:
+lbl_802E0CC8:
 /* 802E0CC8 002DDC08  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E0CCC 002DDC0C  7C 08 03 A6 */	mtlr r0
 /* 802E0CD0 002DDC10  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E0CD4 002DDC14  4E 80 00 20 */	blr 
 
-/* 802E0CD8 0158 .text      update__10JUTGamePadFv         update__10JUTGamePadFv         */
+/* 802E0CD8 02CC .text      update__10JUTGamePadFv         update__10JUTGamePadFv         */
 .global update__10JUTGamePadFv
+update__10JUTGamePadFv:
 update__10JUTGamePadFv:
 /* 802E0CD8 002DDC18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E0CDC 002DDC1C  7C 08 02 A6 */	mflr r0
@@ -524,11 +464,11 @@ update__10JUTGamePadFv:
 /* 802E0CF4 002DDC34  38 63 43 D8 */	addi r3, r3, JUTGamePad__LIT_525@l
 /* 802E0CF8 002DDC38  A8 9E 00 7C */	lha r4, 0x7c(r30)
 /* 802E0CFC 002DDC3C  2C 04 FF FF */	cmpwi r4, -1
-/* 802E0D00 002DDC40  41 82 02 8C */	beq func_802E0F8C
+/* 802E0D00 002DDC40  41 82 02 8C */	beq lbl_802E0F8C
 /* 802E0D04 002DDC44  7C 80 07 35 */	extsh. r0, r4
-/* 802E0D08 002DDC48  41 80 01 28 */	blt func_802E0E30
+/* 802E0D08 002DDC48  41 80 01 28 */	blt lbl_802E0E30
 /* 802E0D0C 002DDC4C  2C 04 00 04 */	cmpwi r4, 4
-/* 802E0D10 002DDC50  40 80 01 20 */	bge func_802E0E30
+/* 802E0D10 002DDC50  40 80 01 20 */	bge lbl_802E0E30
 /* 802E0D14 002DDC54  1C 04 00 30 */	mulli r0, r4, 0x30
 /* 802E0D18 002DDC58  38 83 00 48 */	addi r4, r3, 0x48
 /* 802E0D1C 002DDC5C  7C 84 02 14 */	add r4, r4, r0
@@ -600,36 +540,27 @@ update__10JUTGamePadFv:
 /* 802E0E24 002DDD64  7C 63 02 14 */	add r3, r3, r0
 /* 802E0E28 002DDD68  88 03 00 0A */	lbz r0, 0xa(r3)
 /* 802E0E2C 002DDD6C  98 1E 00 7E */	stb r0, 0x7e(r30)
-
-/* 802E0E30 0024 .text      func_802E0E30                  func_802E0E30                  */
-.global func_802E0E30
-func_802E0E30:
+lbl_802E0E30:
 /* 802E0E30 002DDD70  88 1E 00 A8 */	lbz r0, 0xa8(r30)
 /* 802E0E34 002DDD74  28 00 00 00 */	cmplwi r0, 0
-/* 802E0E38 002DDD78  41 82 00 1C */	beq func_802E0E54
+/* 802E0E38 002DDD78  41 82 00 1C */	beq lbl_802E0E54
 /* 802E0E3C 002DDD7C  80 8D 83 68 */	lwz r4, sResetPattern__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0E40 002DDD80  80 7E 00 18 */	lwz r3, 0x18(r30)
 /* 802E0E44 002DDD84  80 0D 83 6C */	lwz r0, sResetMaskPattern__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0E48 002DDD88  7C 60 00 38 */	and r0, r3, r0
 /* 802E0E4C 002DDD8C  7C 04 00 40 */	cmplw r4, r0
-/* 802E0E50 002DDD90  41 82 00 10 */	beq func_802E0E60
-
-/* 802E0E54 000C .text      func_802E0E54                  func_802E0E54                  */
-.global func_802E0E54
-func_802E0E54:
+/* 802E0E50 002DDD90  41 82 00 10 */	beq lbl_802E0E60
+lbl_802E0E54:
 /* 802E0E54 002DDD94  38 00 00 00 */	li r0, 0
 /* 802E0E58 002DDD98  98 1E 00 98 */	stb r0, 0x98(r30)
-/* 802E0E5C 002DDD9C  48 00 00 50 */	b func_802E0EAC
-
-/* 802E0E60 0038 .text      func_802E0E60                  func_802E0E60                  */
-.global func_802E0E60
-func_802E0E60:
-/* 802E0E60 002DDDA0  88 0D 8F 81 */	lbz r0, sym_80451501-_SDA_BASE_(r13)
+/* 802E0E5C 002DDD9C  48 00 00 50 */	b lbl_802E0EAC
+lbl_802E0E60:
+/* 802E0E60 002DDDA0  88 0D 8F 81 */	lbz r0, data_80451501-_SDA_BASE_(r13)
 /* 802E0E64 002DDDA4  28 00 00 00 */	cmplwi r0, 0
-/* 802E0E68 002DDDA8  40 82 00 44 */	bne func_802E0EAC
+/* 802E0E68 002DDDA8  40 82 00 44 */	bne lbl_802E0EAC
 /* 802E0E6C 002DDDAC  88 1E 00 98 */	lbz r0, 0x98(r30)
 /* 802E0E70 002DDDB0  28 00 00 01 */	cmplwi r0, 1
-/* 802E0E74 002DDDB4  40 82 00 24 */	bne func_802E0E98
+/* 802E0E74 002DDDB4  40 82 00 24 */	bne lbl_802E0E98
 /* 802E0E78 002DDDB8  48 06 18 85 */	bl OSGetTime
 /* 802E0E7C 002DDDBC  80 1E 00 A0 */	lwz r0, 0xa0(r30)
 /* 802E0E80 002DDDC0  80 BE 00 A4 */	lwz r5, 0xa4(r30)
@@ -637,46 +568,37 @@ func_802E0E60:
 /* 802E0E88 002DDDC8  7C A0 19 10 */	subfe r5, r0, r3
 /* 802E0E8C 002DDDCC  7F C3 F3 78 */	mr r3, r30
 /* 802E0E90 002DDDD0  4B FF FD DD */	bl checkResetCallback__10JUTGamePadFx
-/* 802E0E94 002DDDD4  48 00 00 18 */	b func_802E0EAC
-
-/* 802E0E98 0014 .text      func_802E0E98                  func_802E0E98                  */
-.global func_802E0E98
-func_802E0E98:
+/* 802E0E94 002DDDD4  48 00 00 18 */	b lbl_802E0EAC
+lbl_802E0E98:
 /* 802E0E98 002DDDD8  38 00 00 01 */	li r0, 1
 /* 802E0E9C 002DDDDC  98 1E 00 98 */	stb r0, 0x98(r30)
 /* 802E0EA0 002DDDE0  48 06 18 5D */	bl OSGetTime
 /* 802E0EA4 002DDDE4  90 9E 00 A4 */	stw r4, 0xa4(r30)
 /* 802E0EA8 002DDDE8  90 7E 00 A0 */	stw r3, 0xa0(r30)
-
-/* 802E0EAC 000C .text      func_802E0EAC                  func_802E0EAC                  */
-.global func_802E0EAC
-func_802E0EAC:
+lbl_802E0EAC:
 /* 802E0EAC 002DDDEC  3C 60 80 43 */	lis r3, sPatternList__19JUTGamePadLongPress@ha
 /* 802E0EB0 002DDDF0  83 E3 45 6C */	lwz r31, sPatternList__19JUTGamePadLongPress@l(r3)
-/* 802E0EB4 002DDDF4  48 00 00 B4 */	b func_802E0F68
-
-/* 802E0EB8 0074 .text      func_802E0EB8                  func_802E0EB8                  */
-.global func_802E0EB8
-func_802E0EB8:
+/* 802E0EB4 002DDDF4  48 00 00 B4 */	b lbl_802E0F68
+lbl_802E0EB8:
 /* 802E0EB8 002DDDF8  83 9F 00 00 */	lwz r28, 0(r31)
 /* 802E0EBC 002DDDFC  88 1C 00 10 */	lbz r0, 0x10(r28)
 /* 802E0EC0 002DDE00  28 00 00 00 */	cmplwi r0, 0
-/* 802E0EC4 002DDE04  41 82 00 A0 */	beq func_802E0F64
+/* 802E0EC4 002DDE04  41 82 00 A0 */	beq lbl_802E0F64
 /* 802E0EC8 002DDE08  AB BE 00 7C */	lha r29, 0x7c(r30)
 /* 802E0ECC 002DDE0C  7F A0 07 35 */	extsh. r0, r29
-/* 802E0ED0 002DDE10  41 80 00 94 */	blt func_802E0F64
+/* 802E0ED0 002DDE10  41 80 00 94 */	blt lbl_802E0F64
 /* 802E0ED4 002DDE14  2C 1D 00 04 */	cmpwi r29, 4
-/* 802E0ED8 002DDE18  40 80 00 8C */	bge func_802E0F64
+/* 802E0ED8 002DDE18  40 80 00 8C */	bge lbl_802E0F64
 /* 802E0EDC 002DDE1C  80 7C 00 14 */	lwz r3, 0x14(r28)
 /* 802E0EE0 002DDE20  80 9C 00 18 */	lwz r4, 0x18(r28)
 /* 802E0EE4 002DDE24  80 1E 00 18 */	lwz r0, 0x18(r30)
 /* 802E0EE8 002DDE28  7C 00 20 38 */	and r0, r0, r4
 /* 802E0EEC 002DDE2C  7C 00 18 40 */	cmplw r0, r3
-/* 802E0EF0 002DDE30  40 82 00 68 */	bne func_802E0F58
+/* 802E0EF0 002DDE30  40 82 00 68 */	bne lbl_802E0F58
 /* 802E0EF4 002DDE34  38 7D 00 20 */	addi r3, r29, 0x20
 /* 802E0EF8 002DDE38  7C 1C 18 AE */	lbzx r0, r28, r3
 /* 802E0EFC 002DDE3C  28 00 00 01 */	cmplwi r0, 1
-/* 802E0F00 002DDE40  40 82 00 2C */	bne func_802E0F2C
+/* 802E0F00 002DDE40  40 82 00 2C */	bne lbl_802E0F2C
 /* 802E0F04 002DDE44  48 06 17 F9 */	bl OSGetTime
 /* 802E0F08 002DDE48  57 A5 18 38 */	slwi r5, r29, 3
 /* 802E0F0C 002DDE4C  38 05 00 28 */	addi r0, r5, 0x28
@@ -686,11 +608,8 @@ func_802E0EB8:
 /* 802E0F1C 002DDE5C  80 7F 00 00 */	lwz r3, 0(r31)
 /* 802E0F20 002DDE60  A8 9E 00 7C */	lha r4, 0x7c(r30)
 /* 802E0F24 002DDE64  48 00 0B D9 */	bl checkCallback__19JUTGamePadLongPressFiUl
-/* 802E0F28 002DDE68  48 00 00 3C */	b func_802E0F64
-
-/* 802E0F2C 002C .text      func_802E0F2C                  func_802E0F2C                  */
-.global func_802E0F2C
-func_802E0F2C:
+/* 802E0F28 002DDE68  48 00 00 3C */	b lbl_802E0F64
+lbl_802E0F2C:
 /* 802E0F2C 002DDE6C  38 00 00 01 */	li r0, 1
 /* 802E0F30 002DDE70  7C 1C 19 AE */	stbx r0, r28, r3
 /* 802E0F34 002DDE74  83 BF 00 00 */	lwz r29, 0(r31)
@@ -701,36 +620,24 @@ func_802E0F2C:
 /* 802E0F48 002DDE88  7C BD 02 14 */	add r5, r29, r0
 /* 802E0F4C 002DDE8C  90 85 00 04 */	stw r4, 4(r5)
 /* 802E0F50 002DDE90  90 65 00 00 */	stw r3, 0(r5)
-/* 802E0F54 002DDE94  48 00 00 10 */	b func_802E0F64
-
-/* 802E0F58 000C .text      func_802E0F58                  func_802E0F58                  */
-.global func_802E0F58
-func_802E0F58:
+/* 802E0F54 002DDE94  48 00 00 10 */	b lbl_802E0F64
+lbl_802E0F58:
 /* 802E0F58 002DDE98  38 60 00 00 */	li r3, 0
 /* 802E0F5C 002DDE9C  38 1D 00 20 */	addi r0, r29, 0x20
 /* 802E0F60 002DDEA0  7C 7C 01 AE */	stbx r3, r28, r0
-
-/* 802E0F64 0004 .text      func_802E0F64                  func_802E0F64                  */
-.global func_802E0F64
-func_802E0F64:
+lbl_802E0F64:
 /* 802E0F64 002DDEA4  83 FF 00 0C */	lwz r31, 0xc(r31)
-
-/* 802E0F68 0024 .text      func_802E0F68                  func_802E0F68                  */
-.global func_802E0F68
-func_802E0F68:
+lbl_802E0F68:
 /* 802E0F68 002DDEA8  28 1F 00 00 */	cmplwi r31, 0
-/* 802E0F6C 002DDEAC  40 82 FF 4C */	bne func_802E0EB8
+/* 802E0F6C 002DDEAC  40 82 FF 4C */	bne lbl_802E0EB8
 /* 802E0F70 002DDEB0  A8 9E 00 7C */	lha r4, 0x7c(r30)
 /* 802E0F74 002DDEB4  7C 80 07 35 */	extsh. r0, r4
-/* 802E0F78 002DDEB8  41 80 00 14 */	blt func_802E0F8C
+/* 802E0F78 002DDEB8  41 80 00 14 */	blt lbl_802E0F8C
 /* 802E0F7C 002DDEBC  2C 04 00 04 */	cmpwi r4, 4
-/* 802E0F80 002DDEC0  40 80 00 0C */	bge func_802E0F8C
+/* 802E0F80 002DDEC0  40 80 00 0C */	bge lbl_802E0F8C
 /* 802E0F84 002DDEC4  38 7E 00 68 */	addi r3, r30, 0x68
 /* 802E0F88 002DDEC8  48 00 07 99 */	bl update__Q210JUTGamePad7CRumbleFs
-
-/* 802E0F8C 0018 .text      func_802E0F8C                  func_802E0F8C                  */
-.global func_802E0F8C
-func_802E0F8C:
+lbl_802E0F8C:
 /* 802E0F8C 002DDECC  39 61 00 20 */	addi r11, r1, 0x20
 /* 802E0F90 002DDED0  48 08 12 95 */	bl _restgpr_28
 /* 802E0F94 002DDED4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -738,49 +645,41 @@ func_802E0F8C:
 /* 802E0F9C 002DDEDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E0FA0 002DDEE0  4E 80 00 20 */	blr 
 
-/* 802E0FA4 0030 .text      checkResetSwitch__10JUTGamePadFv checkResetSwitch__10JUTGamePadFv */
+/* 802E0FA4 0080 .text      checkResetSwitch__10JUTGamePadFv checkResetSwitch__10JUTGamePadFv */
 .global checkResetSwitch__10JUTGamePadFv
+checkResetSwitch__10JUTGamePadFv:
 checkResetSwitch__10JUTGamePadFv:
 /* 802E0FA4 002DDEE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E0FA8 002DDEE8  7C 08 02 A6 */	mflr r0
 /* 802E0FAC 002DDEEC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802E0FB0 002DDEF0  88 0D 8F 81 */	lbz r0, sym_80451501-_SDA_BASE_(r13)
+/* 802E0FB0 002DDEF0  88 0D 8F 81 */	lbz r0, data_80451501-_SDA_BASE_(r13)
 /* 802E0FB4 002DDEF4  28 00 00 00 */	cmplwi r0, 0
-/* 802E0FB8 002DDEF8  40 82 00 5C */	bne func_802E1014
+/* 802E0FB8 002DDEF8  40 82 00 5C */	bne lbl_802E1014
 /* 802E0FBC 002DDEFC  48 05 EE B5 */	bl OSGetResetSwitchState
 /* 802E0FC0 002DDF00  2C 03 00 00 */	cmpwi r3, 0
-/* 802E0FC4 002DDF04  41 82 00 10 */	beq func_802E0FD4
+/* 802E0FC4 002DDF04  41 82 00 10 */	beq lbl_802E0FD4
 /* 802E0FC8 002DDF08  38 00 00 01 */	li r0, 1
-/* 802E0FCC 002DDF0C  98 0D 8F 80 */	stb r0, sym_80451500-_SDA_BASE_(r13)
-/* 802E0FD0 002DDF10  48 00 00 44 */	b func_802E1014
-
-/* 802E0FD4 0038 .text      func_802E0FD4                  func_802E0FD4                  */
-.global func_802E0FD4
-func_802E0FD4:
-/* 802E0FD4 002DDF14  88 0D 8F 80 */	lbz r0, sym_80451500-_SDA_BASE_(r13)
+/* 802E0FCC 002DDF0C  98 0D 8F 80 */	stb r0, data_80451500-_SDA_BASE_(r13)
+/* 802E0FD0 002DDF10  48 00 00 44 */	b lbl_802E1014
+lbl_802E0FD4:
+/* 802E0FD4 002DDF14  88 0D 8F 80 */	lbz r0, data_80451500-_SDA_BASE_(r13)
 /* 802E0FD8 002DDF18  28 00 00 01 */	cmplwi r0, 1
-/* 802E0FDC 002DDF1C  40 82 00 30 */	bne func_802E100C
+/* 802E0FDC 002DDF1C  40 82 00 30 */	bne lbl_802E100C
 /* 802E0FE0 002DDF20  38 00 00 01 */	li r0, 1
-/* 802E0FE4 002DDF24  98 0D 8F 81 */	stb r0, sym_80451501-_SDA_BASE_(r13)
+/* 802E0FE4 002DDF24  98 0D 8F 81 */	stb r0, data_80451501-_SDA_BASE_(r13)
 /* 802E0FE8 002DDF28  38 00 FF FF */	li r0, -1
 /* 802E0FEC 002DDF2C  90 0D 8F 84 */	stw r0, sResetOccurredPort__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0FF0 002DDF30  81 8D 8F 6C */	lwz r12, sCallback__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E0FF4 002DDF34  28 0C 00 00 */	cmplwi r12, 0
-/* 802E0FF8 002DDF38  41 82 00 14 */	beq func_802E100C
+/* 802E0FF8 002DDF38  41 82 00 14 */	beq lbl_802E100C
 /* 802E0FFC 002DDF3C  38 60 FF FF */	li r3, -1
 /* 802E1000 002DDF40  80 8D 8F 70 */	lwz r4, sCallbackArg__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E1004 002DDF44  7D 89 03 A6 */	mtctr r12
 /* 802E1008 002DDF48  4E 80 04 21 */	bctrl 
-
-/* 802E100C 0008 .text      func_802E100C                  func_802E100C                  */
-.global func_802E100C
-func_802E100C:
+lbl_802E100C:
 /* 802E100C 002DDF4C  38 00 00 00 */	li r0, 0
-/* 802E1010 002DDF50  98 0D 8F 80 */	stb r0, sym_80451500-_SDA_BASE_(r13)
-
-/* 802E1014 0010 .text      func_802E1014                  func_802E1014                  */
-.global func_802E1014
-func_802E1014:
+/* 802E1010 002DDF50  98 0D 8F 80 */	stb r0, data_80451500-_SDA_BASE_(r13)
+lbl_802E1014:
 /* 802E1014 002DDF54  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E1018 002DDF58  7C 08 03 A6 */	mtlr r0
 /* 802E101C 002DDF5C  38 21 00 10 */	addi r1, r1, 0x10
@@ -788,6 +687,7 @@ func_802E1014:
 
 /* 802E1024 002C .text      clearForReset__10JUTGamePadFv  clearForReset__10JUTGamePadFv  */
 .global clearForReset__10JUTGamePadFv
+clearForReset__10JUTGamePadFv:
 clearForReset__10JUTGamePadFv:
 /* 802E1024 002DDF64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1028 002DDF68  7C 08 02 A6 */	mflr r0
@@ -803,6 +703,7 @@ clearForReset__10JUTGamePadFv:
 
 /* 802E1050 003C .text      clear__Q210JUTGamePad7CButtonFv clear__Q210JUTGamePad7CButtonFv */
 .global clear__Q210JUTGamePad7CButtonFv
+clear__Q210JUTGamePad7CButtonFv:
 clear__Q210JUTGamePad7CButtonFv:
 /* 802E1050 002DDF90  38 00 00 00 */	li r0, 0
 /* 802E1054 002DDF94  90 03 00 00 */	stw r0, 0(r3)
@@ -820,79 +721,62 @@ clear__Q210JUTGamePad7CButtonFv:
 /* 802E1084 002DDFC4  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 802E1088 002DDFC8  4E 80 00 20 */	blr 
 
-/* 802E108C 0014 .text      update__Q210JUTGamePad7CButtonFPC9PADStatusUl update__Q210JUTGamePad7CButtonFPC9PADStatusUl */
+/* 802E108C 0190 .text      update__Q210JUTGamePad7CButtonFPC9PADStatusUl update__Q210JUTGamePad7CButtonFPC9PADStatusUl */
 .global update__Q210JUTGamePad7CButtonFPC9PADStatusUl
+update__Q210JUTGamePad7CButtonFPC9PADStatusUl:
 update__Q210JUTGamePad7CButtonFPC9PADStatusUl:
 /* 802E108C 002DDFCC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1090 002DDFD0  28 04 00 00 */	cmplwi r4, 0
-/* 802E1094 002DDFD4  41 82 00 0C */	beq func_802E10A0
+/* 802E1094 002DDFD4  41 82 00 0C */	beq lbl_802E10A0
 /* 802E1098 002DDFD8  A0 04 00 00 */	lhz r0, 0(r4)
-/* 802E109C 002DDFDC  48 00 00 08 */	b func_802E10A4
-
-/* 802E10A0 0004 .text      func_802E10A0                  func_802E10A0                  */
-.global func_802E10A0
-func_802E10A0:
+/* 802E109C 002DDFDC  48 00 00 08 */	b lbl_802E10A4
+lbl_802E10A0:
 /* 802E10A0 002DDFE0  38 00 00 00 */	li r0, 0
-
-/* 802E10A4 003C .text      func_802E10A4                  func_802E10A4                  */
-.global func_802E10A4
-func_802E10A4:
+lbl_802E10A4:
 /* 802E10A4 002DDFE4  7C A7 03 78 */	or r7, r5, r0
 /* 802E10A8 002DDFE8  38 A0 00 00 */	li r5, 0
 /* 802E10AC 002DDFEC  90 A3 00 18 */	stw r5, 0x18(r3)
 /* 802E10B0 002DDFF0  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 802E10B4 002DDFF4  28 00 00 00 */	cmplwi r0, 0
-/* 802E10B8 002DDFF8  41 82 00 8C */	beq func_802E1144
+/* 802E10B8 002DDFF8  41 82 00 8C */	beq lbl_802E1144
 /* 802E10BC 002DDFFC  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 802E10C0 002DE000  28 00 00 00 */	cmplwi r0, 0
-/* 802E10C4 002DE004  41 82 00 80 */	beq func_802E1144
+/* 802E10C4 002DE004  41 82 00 80 */	beq lbl_802E1144
 /* 802E10C8 002DE008  7C E8 00 39 */	and. r8, r7, r0
 /* 802E10CC 002DE00C  90 A3 00 18 */	stw r5, 0x18(r3)
-/* 802E10D0 002DE010  40 82 00 10 */	bne func_802E10E0
+/* 802E10D0 002DE010  40 82 00 10 */	bne lbl_802E10E0
 /* 802E10D4 002DE014  90 A3 00 20 */	stw r5, 0x20(r3)
 /* 802E10D8 002DE018  90 A3 00 1C */	stw r5, 0x1c(r3)
-/* 802E10DC 002DE01C  48 00 00 68 */	b func_802E1144
-
-/* 802E10E0 0044 .text      func_802E10E0                  func_802E10E0                  */
-.global func_802E10E0
-func_802E10E0:
+/* 802E10DC 002DE01C  48 00 00 68 */	b lbl_802E1144
+lbl_802E10E0:
 /* 802E10E0 002DE020  80 C3 00 20 */	lwz r6, 0x20(r3)
 /* 802E10E4 002DE024  7C 06 40 40 */	cmplw r6, r8
-/* 802E10E8 002DE028  40 82 00 44 */	bne func_802E112C
+/* 802E10E8 002DE028  40 82 00 44 */	bne lbl_802E112C
 /* 802E10EC 002DE02C  80 A3 00 1C */	lwz r5, 0x1c(r3)
 /* 802E10F0 002DE030  38 05 00 01 */	addi r0, r5, 1
 /* 802E10F4 002DE034  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 802E10F8 002DE038  80 A3 00 1C */	lwz r5, 0x1c(r3)
 /* 802E10FC 002DE03C  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 802E1100 002DE040  7C 05 00 40 */	cmplw r5, r0
-/* 802E1104 002DE044  41 82 00 20 */	beq func_802E1124
-/* 802E1108 002DE048  40 81 00 3C */	ble func_802E1144
+/* 802E1104 002DE044  41 82 00 20 */	beq lbl_802E1124
+/* 802E1108 002DE048  40 81 00 3C */	ble lbl_802E1144
 /* 802E110C 002DE04C  7C C0 28 50 */	subf r6, r0, r5
 /* 802E1110 002DE050  80 A3 00 2C */	lwz r5, 0x2c(r3)
 /* 802E1114 002DE054  7C 06 2B 96 */	divwu r0, r6, r5
 /* 802E1118 002DE058  7C 00 29 D6 */	mullw r0, r0, r5
 /* 802E111C 002DE05C  7C 00 30 51 */	subf. r0, r0, r6
-/* 802E1120 002DE060  40 82 00 24 */	bne func_802E1144
-
-/* 802E1124 0008 .text      func_802E1124                  func_802E1124                  */
-.global func_802E1124
-func_802E1124:
+/* 802E1120 002DE060  40 82 00 24 */	bne lbl_802E1144
+lbl_802E1124:
 /* 802E1124 002DE064  91 03 00 18 */	stw r8, 0x18(r3)
-/* 802E1128 002DE068  48 00 00 1C */	b func_802E1144
-
-/* 802E112C 0018 .text      func_802E112C                  func_802E112C                  */
-.global func_802E112C
-func_802E112C:
+/* 802E1128 002DE068  48 00 00 1C */	b lbl_802E1144
+lbl_802E112C:
 /* 802E112C 002DE06C  38 00 FF FF */	li r0, -1
 /* 802E1130 002DE070  7C C0 02 78 */	xor r0, r6, r0
 /* 802E1134 002DE074  7D 00 00 38 */	and r0, r8, r0
 /* 802E1138 002DE078  90 03 00 18 */	stw r0, 0x18(r3)
 /* 802E113C 002DE07C  91 03 00 20 */	stw r8, 0x20(r3)
 /* 802E1140 002DE080  90 A3 00 1C */	stw r5, 0x1c(r3)
-
-/* 802E1144 0070 .text      func_802E1144                  func_802E1144                  */
-.global func_802E1144
-func_802E1144:
+lbl_802E1144:
 /* 802E1144 002DE084  80 03 00 00 */	lwz r0, 0(r3)
 /* 802E1148 002DE088  7C E0 02 78 */	xor r0, r7, r0
 /* 802E114C 002DE08C  7C E0 00 38 */	and r0, r7, r0
@@ -911,7 +795,7 @@ func_802E1144:
 /* 802E1180 002DE0C0  7C C0 03 78 */	or r0, r6, r0
 /* 802E1184 002DE0C4  90 03 00 18 */	stw r0, 0x18(r3)
 /* 802E1188 002DE0C8  28 04 00 00 */	cmplwi r4, 0
-/* 802E118C 002DE0CC  41 82 00 28 */	beq func_802E11B4
+/* 802E118C 002DE0CC  41 82 00 28 */	beq lbl_802E11B4
 /* 802E1190 002DE0D0  88 04 00 08 */	lbz r0, 8(r4)
 /* 802E1194 002DE0D4  98 03 00 0C */	stb r0, 0xc(r3)
 /* 802E1198 002DE0D8  88 04 00 09 */	lbz r0, 9(r4)
@@ -920,20 +804,14 @@ func_802E1144:
 /* 802E11A4 002DE0E4  98 03 00 0E */	stb r0, 0xe(r3)
 /* 802E11A8 002DE0E8  88 04 00 07 */	lbz r0, 7(r4)
 /* 802E11AC 002DE0EC  98 03 00 0F */	stb r0, 0xf(r3)
-/* 802E11B0 002DE0F0  48 00 00 18 */	b func_802E11C8
-
-/* 802E11B4 0014 .text      func_802E11B4                  func_802E11B4                  */
-.global func_802E11B4
-func_802E11B4:
+/* 802E11B0 002DE0F0  48 00 00 18 */	b lbl_802E11C8
+lbl_802E11B4:
 /* 802E11B4 002DE0F4  38 00 00 00 */	li r0, 0
 /* 802E11B8 002DE0F8  98 03 00 0C */	stb r0, 0xc(r3)
 /* 802E11BC 002DE0FC  98 03 00 0D */	stb r0, 0xd(r3)
 /* 802E11C0 002DE100  98 03 00 0E */	stb r0, 0xe(r3)
 /* 802E11C4 002DE104  98 03 00 0F */	stb r0, 0xf(r3)
-
-/* 802E11C8 0054 .text      func_802E11C8                  func_802E11C8                  */
-.global func_802E11C8
-func_802E11C8:
+lbl_802E11C8:
 /* 802E11C8 002DE108  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 802E11CC 002DE10C  C8 42 C6 20 */	lfd f2, JUTGamePad__LIT_1050-_SDA2_BASE_(r2)
 /* 802E11D0 002DE110  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -959,6 +837,7 @@ func_802E11C8:
 /* 802E121C 001C .text      clear__Q210JUTGamePad6CStickFv clear__Q210JUTGamePad6CStickFv */
 .global clear__Q210JUTGamePad6CStickFv
 clear__Q210JUTGamePad6CStickFv:
+clear__Q210JUTGamePad6CStickFv:
 /* 802E121C 002DE15C  C0 02 C6 28 */	lfs f0, LIT_1056-_SDA2_BASE_(r2)
 /* 802E1220 002DE160  D0 03 00 00 */	stfs f0, 0(r3)
 /* 802E1224 002DE164  D0 03 00 04 */	stfs f0, 4(r3)
@@ -967,8 +846,9 @@ clear__Q210JUTGamePad6CStickFv:
 /* 802E1230 002DE170  B0 03 00 0C */	sth r0, 0xc(r3)
 /* 802E1234 002DE174  4E 80 00 20 */	blr 
 
-/* 802E1238 003C .text      update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl */
+/* 802E1238 02C8 .text      update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl */
 .global update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl
+update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl:
 update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl:
 /* 802E1238 002DE178  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E123C 002DE17C  7C 08 02 A6 */	mflr r0
@@ -980,56 +860,35 @@ update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhi
 /* 802E1254 002DE194  7D 1F 43 78 */	mr r31, r8
 /* 802E1258 002DE198  80 0D 83 5C */	lwz r0, sClampMode__10JUTGamePad-_SDA_BASE_(r13)
 /* 802E125C 002DE19C  2C 00 00 02 */	cmpwi r0, 2
-/* 802E1260 002DE1A0  41 82 00 2C */	beq func_802E128C
-/* 802E1264 002DE1A4  40 80 00 40 */	bge func_802E12A4
+/* 802E1260 002DE1A0  41 82 00 2C */	beq lbl_802E128C
+/* 802E1264 002DE1A4  40 80 00 40 */	bge lbl_802E12A4
 /* 802E1268 002DE1A8  2C 00 00 01 */	cmpwi r0, 1
-/* 802E126C 002DE1AC  40 80 00 08 */	bge func_802E1274
-/* 802E1270 002DE1B0  48 00 00 34 */	b func_802E12A4
-
-/* 802E1274 0010 .text      func_802E1274                  func_802E1274                  */
-.global func_802E1274
-func_802E1274:
+/* 802E126C 002DE1AC  40 80 00 08 */	bge lbl_802E1274
+/* 802E1270 002DE1B0  48 00 00 34 */	b lbl_802E12A4
+lbl_802E1274:
 /* 802E1274 002DE1B4  2C 1E 00 00 */	cmpwi r30, 0
 /* 802E1278 002DE1B8  38 00 00 2A */	li r0, 0x2a
-/* 802E127C 002DE1BC  40 82 00 08 */	bne func_802E1284
+/* 802E127C 002DE1BC  40 82 00 08 */	bne lbl_802E1284
 /* 802E1280 002DE1C0  38 00 00 36 */	li r0, 0x36
-
-/* 802E1284 0008 .text      func_802E1284                  func_802E1284                  */
-.global func_802E1284
-func_802E1284:
+lbl_802E1284:
 /* 802E1284 002DE1C4  7C 03 03 78 */	mr r3, r0
-/* 802E1288 002DE1C8  48 00 00 30 */	b func_802E12B8
-
-/* 802E128C 0010 .text      func_802E128C                  func_802E128C                  */
-.global func_802E128C
-func_802E128C:
+/* 802E1288 002DE1C8  48 00 00 30 */	b lbl_802E12B8
+lbl_802E128C:
 /* 802E128C 002DE1CC  2C 1E 00 00 */	cmpwi r30, 0
 /* 802E1290 002DE1D0  38 00 00 1D */	li r0, 0x1d
-/* 802E1294 002DE1D4  40 82 00 08 */	bne func_802E129C
+/* 802E1294 002DE1D4  40 82 00 08 */	bne lbl_802E129C
 /* 802E1298 002DE1D8  38 00 00 26 */	li r0, 0x26
-
-/* 802E129C 0008 .text      func_802E129C                  func_802E129C                  */
-.global func_802E129C
-func_802E129C:
+lbl_802E129C:
 /* 802E129C 002DE1DC  7C 03 03 78 */	mr r3, r0
-/* 802E12A0 002DE1E0  48 00 00 18 */	b func_802E12B8
-
-/* 802E12A4 0010 .text      func_802E12A4                  func_802E12A4                  */
-.global func_802E12A4
-func_802E12A4:
+/* 802E12A0 002DE1E0  48 00 00 18 */	b lbl_802E12B8
+lbl_802E12A4:
 /* 802E12A4 002DE1E4  2C 1E 00 00 */	cmpwi r30, 0
 /* 802E12A8 002DE1E8  38 00 00 39 */	li r0, 0x39
-/* 802E12AC 002DE1EC  40 82 00 08 */	bne func_802E12B4
+/* 802E12AC 002DE1EC  40 82 00 08 */	bne lbl_802E12B4
 /* 802E12B0 002DE1F0  38 00 00 45 */	li r0, 0x45
-
-/* 802E12B4 0004 .text      func_802E12B4                  func_802E12B4                  */
-.global func_802E12B4
-func_802E12B4:
+lbl_802E12B4:
 /* 802E12B4 002DE1F4  7C 03 03 78 */	mr r3, r0
-
-/* 802E12B8 00E8 .text      func_802E12B8                  func_802E12B8                  */
-.global func_802E12B8
-func_802E12B8:
+lbl_802E12B8:
 /* 802E12B8 002DE1F8  98 9D 00 0E */	stb r4, 0xe(r29)
 /* 802E12BC 002DE1FC  98 BD 00 0F */	stb r5, 0xf(r29)
 /* 802E12C0 002DE200  7C 80 07 74 */	extsb r0, r4
@@ -1066,7 +925,7 @@ func_802E12B8:
 /* 802E133C 002DE27C  EC 81 00 2A */	fadds f4, f1, f0
 /* 802E1340 002DE280  C0 02 C6 28 */	lfs f0, LIT_1056-_SDA2_BASE_(r2)
 /* 802E1344 002DE284  FC 04 00 40 */	fcmpo cr0, f4, f0
-/* 802E1348 002DE288  40 81 00 58 */	ble func_802E13A0
+/* 802E1348 002DE288  40 81 00 58 */	ble lbl_802E13A0
 /* 802E134C 002DE28C  FC 00 20 34 */	frsqrte f0, f4
 /* 802E1350 002DE290  C8 62 C6 30 */	lfd f3, LIT_1117-_SDA2_BASE_(r2)
 /* 802E1354 002DE294  FC 23 00 32 */	fmul f1, f3, f0
@@ -1087,83 +946,56 @@ func_802E12B8:
 /* 802E1390 002DE2D0  FC 01 00 32 */	fmul f0, f1, f0
 /* 802E1394 002DE2D4  FC 84 00 32 */	fmul f4, f4, f0
 /* 802E1398 002DE2D8  FC 80 20 18 */	frsp f4, f4
-/* 802E139C 002DE2DC  48 00 00 88 */	b func_802E1424
-
-/* 802E13A0 0018 .text      func_802E13A0                  func_802E13A0                  */
-.global func_802E13A0
-func_802E13A0:
+/* 802E139C 002DE2DC  48 00 00 88 */	b lbl_802E1424
+lbl_802E13A0:
 /* 802E13A0 002DE2E0  C8 02 C6 40 */	lfd f0, LIT_1119-_SDA2_BASE_(r2)
 /* 802E13A4 002DE2E4  FC 04 00 40 */	fcmpo cr0, f4, f0
-/* 802E13A8 002DE2E8  40 80 00 10 */	bge func_802E13B8
+/* 802E13A8 002DE2E8  40 80 00 10 */	bge lbl_802E13B8
 /* 802E13AC 002DE2EC  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 802E13B0 002DE2F0  C0 83 0A E0 */	lfs f4, __float_nan@l(r3)
-/* 802E13B4 002DE2F4  48 00 00 70 */	b func_802E1424
-
-/* 802E13B8 0028 .text      func_802E13B8                  func_802E13B8                  */
-.global func_802E13B8
-func_802E13B8:
+/* 802E13B4 002DE2F4  48 00 00 70 */	b lbl_802E1424
+lbl_802E13B8:
 /* 802E13B8 002DE2F8  D0 81 00 08 */	stfs f4, 8(r1)
 /* 802E13BC 002DE2FC  80 81 00 08 */	lwz r4, 8(r1)
 /* 802E13C0 002DE300  54 83 00 50 */	rlwinm r3, r4, 0, 1, 8
 /* 802E13C4 002DE304  3C 00 7F 80 */	lis r0, 0x7f80
 /* 802E13C8 002DE308  7C 03 00 00 */	cmpw r3, r0
-/* 802E13CC 002DE30C  41 82 00 14 */	beq func_802E13E0
-/* 802E13D0 002DE310  40 80 00 40 */	bge func_802E1410
+/* 802E13CC 002DE30C  41 82 00 14 */	beq lbl_802E13E0
+/* 802E13D0 002DE310  40 80 00 40 */	bge lbl_802E1410
 /* 802E13D4 002DE314  2C 03 00 00 */	cmpwi r3, 0
-/* 802E13D8 002DE318  41 82 00 20 */	beq func_802E13F8
-/* 802E13DC 002DE31C  48 00 00 34 */	b func_802E1410
-
-/* 802E13E0 0010 .text      func_802E13E0                  func_802E13E0                  */
-.global func_802E13E0
-func_802E13E0:
+/* 802E13D8 002DE318  41 82 00 20 */	beq lbl_802E13F8
+/* 802E13DC 002DE31C  48 00 00 34 */	b lbl_802E1410
+lbl_802E13E0:
 /* 802E13E0 002DE320  54 80 02 7F */	clrlwi. r0, r4, 9
-/* 802E13E4 002DE324  41 82 00 0C */	beq func_802E13F0
+/* 802E13E4 002DE324  41 82 00 0C */	beq lbl_802E13F0
 /* 802E13E8 002DE328  38 00 00 01 */	li r0, 1
-/* 802E13EC 002DE32C  48 00 00 28 */	b func_802E1414
-
-/* 802E13F0 0008 .text      func_802E13F0                  func_802E13F0                  */
-.global func_802E13F0
-func_802E13F0:
+/* 802E13EC 002DE32C  48 00 00 28 */	b lbl_802E1414
+lbl_802E13F0:
 /* 802E13F0 002DE330  38 00 00 02 */	li r0, 2
-/* 802E13F4 002DE334  48 00 00 20 */	b func_802E1414
-
-/* 802E13F8 0010 .text      func_802E13F8                  func_802E13F8                  */
-.global func_802E13F8
-func_802E13F8:
+/* 802E13F4 002DE334  48 00 00 20 */	b lbl_802E1414
+lbl_802E13F8:
 /* 802E13F8 002DE338  54 80 02 7F */	clrlwi. r0, r4, 9
-/* 802E13FC 002DE33C  41 82 00 0C */	beq func_802E1408
+/* 802E13FC 002DE33C  41 82 00 0C */	beq lbl_802E1408
 /* 802E1400 002DE340  38 00 00 05 */	li r0, 5
-/* 802E1404 002DE344  48 00 00 10 */	b func_802E1414
-
-/* 802E1408 0008 .text      func_802E1408                  func_802E1408                  */
-.global func_802E1408
-func_802E1408:
+/* 802E1404 002DE344  48 00 00 10 */	b lbl_802E1414
+lbl_802E1408:
 /* 802E1408 002DE348  38 00 00 03 */	li r0, 3
-/* 802E140C 002DE34C  48 00 00 08 */	b func_802E1414
-
-/* 802E1410 0004 .text      func_802E1410                  func_802E1410                  */
-.global func_802E1410
-func_802E1410:
+/* 802E140C 002DE34C  48 00 00 08 */	b lbl_802E1414
+lbl_802E1410:
 /* 802E1410 002DE350  38 00 00 04 */	li r0, 4
-
-/* 802E1414 0010 .text      func_802E1414                  func_802E1414                  */
-.global func_802E1414
-func_802E1414:
+lbl_802E1414:
 /* 802E1414 002DE354  2C 00 00 01 */	cmpwi r0, 1
-/* 802E1418 002DE358  40 82 00 0C */	bne func_802E1424
+/* 802E1418 002DE358  40 82 00 0C */	bne lbl_802E1424
 /* 802E141C 002DE35C  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 802E1420 002DE360  C0 83 0A E0 */	lfs f4, __float_nan@l(r3)
-
-/* 802E1424 0038 .text      func_802E1424                  func_802E1424                  */
-.global func_802E1424
-func_802E1424:
+lbl_802E1424:
 /* 802E1424 002DE364  D0 9D 00 08 */	stfs f4, 8(r29)
 /* 802E1428 002DE368  C0 3D 00 08 */	lfs f1, 8(r29)
 /* 802E142C 002DE36C  C0 02 C6 48 */	lfs f0, LIT_1120-_SDA2_BASE_(r2)
 /* 802E1430 002DE370  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 802E1434 002DE374  40 81 00 30 */	ble func_802E1464
+/* 802E1434 002DE374  40 81 00 30 */	ble lbl_802E1464
 /* 802E1438 002DE378  2C 06 00 01 */	cmpwi r6, 1
-/* 802E143C 002DE37C  40 82 00 20 */	bne func_802E145C
+/* 802E143C 002DE37C  40 82 00 20 */	bne lbl_802E145C
 /* 802E1440 002DE380  C0 1D 00 00 */	lfs f0, 0(r29)
 /* 802E1444 002DE384  EC 00 08 24 */	fdivs f0, f0, f1
 /* 802E1448 002DE388  D0 1D 00 00 */	stfs f0, 0(r29)
@@ -1171,40 +1003,28 @@ func_802E1424:
 /* 802E1450 002DE390  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 802E1454 002DE394  EC 01 00 24 */	fdivs f0, f1, f0
 /* 802E1458 002DE398  D0 1D 00 04 */	stfs f0, 4(r29)
-
-/* 802E145C 0008 .text      func_802E145C                  func_802E145C                  */
-.global func_802E145C
-func_802E145C:
+lbl_802E145C:
 /* 802E145C 002DE39C  C0 02 C6 48 */	lfs f0, LIT_1120-_SDA2_BASE_(r2)
 /* 802E1460 002DE3A0  D0 1D 00 08 */	stfs f0, 8(r29)
-
-/* 802E1464 0034 .text      func_802E1464                  func_802E1464                  */
-.global func_802E1464
-func_802E1464:
+lbl_802E1464:
 /* 802E1464 002DE3A4  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 802E1468 002DE3A8  C0 22 C6 28 */	lfs f1, LIT_1056-_SDA2_BASE_(r2)
 /* 802E146C 002DE3AC  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 802E1470 002DE3B0  40 81 00 5C */	ble func_802E14CC
+/* 802E1470 002DE3B0  40 81 00 5C */	ble lbl_802E14CC
 /* 802E1474 002DE3B4  C0 1D 00 04 */	lfs f0, 4(r29)
 /* 802E1478 002DE3B8  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 802E147C 002DE3BC  40 82 00 28 */	bne func_802E14A4
+/* 802E147C 002DE3BC  40 82 00 28 */	bne lbl_802E14A4
 /* 802E1480 002DE3C0  C0 1D 00 00 */	lfs f0, 0(r29)
 /* 802E1484 002DE3C4  FC 00 08 40 */	fcmpo cr0, f0, f1
-/* 802E1488 002DE3C8  40 81 00 10 */	ble func_802E1498
+/* 802E1488 002DE3C8  40 81 00 10 */	ble lbl_802E1498
 /* 802E148C 002DE3CC  38 00 40 00 */	li r0, 0x4000
 /* 802E1490 002DE3D0  B0 1D 00 0C */	sth r0, 0xc(r29)
-/* 802E1494 002DE3D4  48 00 00 38 */	b func_802E14CC
-
-/* 802E1498 000C .text      func_802E1498                  func_802E1498                  */
-.global func_802E1498
-func_802E1498:
+/* 802E1494 002DE3D4  48 00 00 38 */	b lbl_802E14CC
+lbl_802E1498:
 /* 802E1498 002DE3D8  38 00 C0 00 */	li r0, -16384
 /* 802E149C 002DE3DC  B0 1D 00 0C */	sth r0, 0xc(r29)
-/* 802E14A0 002DE3E0  48 00 00 2C */	b func_802E14CC
-
-/* 802E14A4 0028 .text      func_802E14A4                  func_802E14A4                  */
-.global func_802E14A4
-func_802E14A4:
+/* 802E14A0 002DE3E0  48 00 00 2C */	b lbl_802E14CC
+lbl_802E14A4:
 /* 802E14A4 002DE3E4  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 802E14A8 002DE3E8  FC 40 00 50 */	fneg f2, f0
 /* 802E14AC 002DE3EC  48 08 B2 75 */	bl atan2
@@ -1215,19 +1035,13 @@ func_802E14A4:
 /* 802E14C0 002DE400  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 802E14C4 002DE404  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 802E14C8 002DE408  B0 1D 00 0C */	sth r0, 0xc(r29)
-
-/* 802E14CC 0014 .text      func_802E14CC                  func_802E14CC                  */
-.global func_802E14CC
-func_802E14CC:
+lbl_802E14CC:
 /* 802E14CC 002DE40C  7F A3 EB 78 */	mr r3, r29
 /* 802E14D0 002DE410  2C 1E 00 00 */	cmpwi r30, 0
 /* 802E14D4 002DE414  38 00 00 10 */	li r0, 0x10
-/* 802E14D8 002DE418  40 82 00 08 */	bne func_802E14E0
+/* 802E14D8 002DE418  40 82 00 08 */	bne lbl_802E14E0
 /* 802E14DC 002DE41C  38 00 00 18 */	li r0, 0x18
-
-/* 802E14E0 0020 .text      func_802E14E0                  func_802E14E0                  */
-.global func_802E14E0
-func_802E14E0:
+lbl_802E14E0:
 /* 802E14E0 002DE420  7F E4 04 30 */	srw r4, r31, r0
 /* 802E14E4 002DE424  48 00 00 1D */	bl getButton__Q210JUTGamePad6CStickFUl
 /* 802E14E8 002DE428  39 61 00 40 */	addi r11, r1, 0x40
@@ -1237,81 +1051,65 @@ func_802E14E0:
 /* 802E14F8 002DE438  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E14FC 002DE43C  4E 80 00 20 */	blr 
 
-/* 802E1500 0028 .text      getButton__Q210JUTGamePad6CStickFUl getButton__Q210JUTGamePad6CStickFUl */
+/* 802E1500 00B4 .text      getButton__Q210JUTGamePad6CStickFUl getButton__Q210JUTGamePad6CStickFUl */
 .global getButton__Q210JUTGamePad6CStickFUl
+getButton__Q210JUTGamePad6CStickFUl:
 getButton__Q210JUTGamePad6CStickFUl:
 /* 802E1500 002DE440  54 80 07 3E */	clrlwi r0, r4, 0x1c
 /* 802E1504 002DE444  C0 2D 83 64 */	lfs f1, sReleasePoint__Q210JUTGamePad6CStick-_SDA_BASE_(r13)
 /* 802E1508 002DE448  FC 80 08 50 */	fneg f4, f1
 /* 802E150C 002DE44C  C0 43 00 00 */	lfs f2, 0(r3)
 /* 802E1510 002DE450  FC 04 10 40 */	fcmpo cr0, f4, f2
-/* 802E1514 002DE454  40 80 00 14 */	bge func_802E1528
+/* 802E1514 002DE454  40 80 00 14 */	bge lbl_802E1528
 /* 802E1518 002DE458  FC 02 08 40 */	fcmpo cr0, f2, f1
-/* 802E151C 002DE45C  40 80 00 0C */	bge func_802E1528
+/* 802E151C 002DE45C  40 80 00 0C */	bge lbl_802E1528
 /* 802E1520 002DE460  54 00 00 3A */	rlwinm r0, r0, 0, 0, 0x1d
-/* 802E1524 002DE464  48 00 00 38 */	b func_802E155C
-
-/* 802E1528 0020 .text      func_802E1528                  func_802E1528                  */
-.global func_802E1528
-func_802E1528:
+/* 802E1524 002DE464  48 00 00 38 */	b lbl_802E155C
+lbl_802E1528:
 /* 802E1528 002DE468  C0 6D 83 60 */	lfs f3, sPressPoint__Q210JUTGamePad6CStick-_SDA_BASE_(r13)
 /* 802E152C 002DE46C  FC 00 18 50 */	fneg f0, f3
 /* 802E1530 002DE470  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802E1534 002DE474  4C 40 13 82 */	cror 2, 0, 2
-/* 802E1538 002DE478  40 82 00 10 */	bne func_802E1548
+/* 802E1538 002DE478  40 82 00 10 */	bne lbl_802E1548
 /* 802E153C 002DE47C  54 00 07 FA */	rlwinm r0, r0, 0, 0x1f, 0x1d
 /* 802E1540 002DE480  60 00 00 01 */	ori r0, r0, 1
-/* 802E1544 002DE484  48 00 00 18 */	b func_802E155C
-
-/* 802E1548 0014 .text      func_802E1548                  func_802E1548                  */
-.global func_802E1548
-func_802E1548:
+/* 802E1544 002DE484  48 00 00 18 */	b lbl_802E155C
+lbl_802E1548:
 /* 802E1548 002DE488  FC 02 18 40 */	fcmpo cr0, f2, f3
 /* 802E154C 002DE48C  4C 41 13 82 */	cror 2, 1, 2
-/* 802E1550 002DE490  40 82 00 0C */	bne func_802E155C
+/* 802E1550 002DE490  40 82 00 0C */	bne lbl_802E155C
 /* 802E1554 002DE494  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 802E1558 002DE498  60 00 00 02 */	ori r0, r0, 2
-
-/* 802E155C 001C .text      func_802E155C                  func_802E155C                  */
-.global func_802E155C
-func_802E155C:
+lbl_802E155C:
 /* 802E155C 002DE49C  C0 43 00 04 */	lfs f2, 4(r3)
 /* 802E1560 002DE4A0  FC 04 10 40 */	fcmpo cr0, f4, f2
-/* 802E1564 002DE4A4  40 80 00 14 */	bge func_802E1578
+/* 802E1564 002DE4A4  40 80 00 14 */	bge lbl_802E1578
 /* 802E1568 002DE4A8  FC 02 08 40 */	fcmpo cr0, f2, f1
-/* 802E156C 002DE4AC  40 80 00 0C */	bge func_802E1578
+/* 802E156C 002DE4AC  40 80 00 0C */	bge lbl_802E1578
 /* 802E1570 002DE4B0  54 00 07 B6 */	rlwinm r0, r0, 0, 0x1e, 0x1b
-/* 802E1574 002DE4B4  48 00 00 38 */	b func_802E15AC
-
-/* 802E1578 0020 .text      func_802E1578                  func_802E1578                  */
-.global func_802E1578
-func_802E1578:
+/* 802E1574 002DE4B4  48 00 00 38 */	b lbl_802E15AC
+lbl_802E1578:
 /* 802E1578 002DE4B8  C0 2D 83 60 */	lfs f1, sPressPoint__Q210JUTGamePad6CStick-_SDA_BASE_(r13)
 /* 802E157C 002DE4BC  FC 00 08 50 */	fneg f0, f1
 /* 802E1580 002DE4C0  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 802E1584 002DE4C4  4C 40 13 82 */	cror 2, 0, 2
-/* 802E1588 002DE4C8  40 82 00 10 */	bne func_802E1598
+/* 802E1588 002DE4C8  40 82 00 10 */	bne lbl_802E1598
 /* 802E158C 002DE4CC  54 00 07 76 */	rlwinm r0, r0, 0, 0x1d, 0x1b
 /* 802E1590 002DE4D0  60 00 00 04 */	ori r0, r0, 4
-/* 802E1594 002DE4D4  48 00 00 18 */	b func_802E15AC
-
-/* 802E1598 0014 .text      func_802E1598                  func_802E1598                  */
-.global func_802E1598
-func_802E1598:
+/* 802E1594 002DE4D4  48 00 00 18 */	b lbl_802E15AC
+lbl_802E1598:
 /* 802E1598 002DE4D8  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 802E159C 002DE4DC  4C 41 13 82 */	cror 2, 1, 2
-/* 802E15A0 002DE4E0  40 82 00 0C */	bne func_802E15AC
+/* 802E15A0 002DE4E0  40 82 00 0C */	bne lbl_802E15AC
 /* 802E15A4 002DE4E4  54 00 07 B8 */	rlwinm r0, r0, 0, 0x1e, 0x1c
 /* 802E15A8 002DE4E8  60 00 00 08 */	ori r0, r0, 8
-
-/* 802E15AC 0008 .text      func_802E15AC                  func_802E15AC                  */
-.global func_802E15AC
-func_802E15AC:
+lbl_802E15AC:
 /* 802E15AC 002DE4EC  7C 03 03 78 */	mr r3, r0
 /* 802E15B0 002DE4F0  4E 80 00 20 */	blr 
 
 /* 802E15B4 0024 .text      clear__Q210JUTGamePad7CRumbleFv clear__Q210JUTGamePad7CRumbleFv */
 .global clear__Q210JUTGamePad7CRumbleFv
+clear__Q210JUTGamePad7CRumbleFv:
 clear__Q210JUTGamePad7CRumbleFv:
 /* 802E15B4 002DE4F4  38 00 00 00 */	li r0, 0
 /* 802E15B8 002DE4F8  90 03 00 00 */	stw r0, 0(r3)
@@ -1323,8 +1121,9 @@ clear__Q210JUTGamePad7CRumbleFv:
 /* 802E15D0 002DE510  90 0D 8F 68 */	stw r0, mEnabled__Q210JUTGamePad7CRumble-_SDA_BASE_(r13)
 /* 802E15D4 002DE514  4E 80 00 20 */	blr 
 
-/* 802E15D8 0040 .text      clear__Q210JUTGamePad7CRumbleFP10JUTGamePad clear__Q210JUTGamePad7CRumbleFP10JUTGamePad */
+/* 802E15D8 005C .text      clear__Q210JUTGamePad7CRumbleFP10JUTGamePad clear__Q210JUTGamePad7CRumbleFP10JUTGamePad */
 .global clear__Q210JUTGamePad7CRumbleFP10JUTGamePad
+clear__Q210JUTGamePad7CRumbleFP10JUTGamePad:
 clear__Q210JUTGamePad7CRumbleFP10JUTGamePad:
 /* 802E15D8 002DE518  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E15DC 002DE51C  7C 08 02 A6 */	mflr r0
@@ -1333,19 +1132,16 @@ clear__Q210JUTGamePad7CRumbleFP10JUTGamePad:
 /* 802E15E8 002DE528  7C 7F 1B 78 */	mr r31, r3
 /* 802E15EC 002DE52C  A8 04 00 7C */	lha r0, 0x7c(r4)
 /* 802E15F0 002DE530  7C 05 07 35 */	extsh. r5, r0
-/* 802E15F4 002DE534  41 80 00 24 */	blt func_802E1618
+/* 802E15F4 002DE534  41 80 00 24 */	blt lbl_802E1618
 /* 802E15F8 002DE538  2C 05 00 04 */	cmpwi r5, 4
-/* 802E15FC 002DE53C  40 80 00 1C */	bge func_802E1618
+/* 802E15FC 002DE53C  40 80 00 1C */	bge lbl_802E1618
 /* 802E1600 002DE540  38 00 00 00 */	li r0, 0
 /* 802E1604 002DE544  38 6D 8F 64 */	addi r3, r13, mStatus__Q210JUTGamePad7CRumble-_SDA_BASE_
 /* 802E1608 002DE548  7C 03 29 AE */	stbx r0, r3, r5
 /* 802E160C 002DE54C  A8 64 00 7C */	lha r3, 0x7c(r4)
 /* 802E1610 002DE550  38 80 00 01 */	li r4, 1
 /* 802E1614 002DE554  48 00 00 79 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
-
-/* 802E1618 001C .text      func_802E1618                  func_802E1618                  */
-.global func_802E1618
-func_802E1618:
+lbl_802E1618:
 /* 802E1618 002DE558  7F E3 FB 78 */	mr r3, r31
 /* 802E161C 002DE55C  4B FF FF 99 */	bl clear__Q210JUTGamePad7CRumbleFv
 /* 802E1620 002DE560  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1354,8 +1150,9 @@ func_802E1618:
 /* 802E162C 002DE56C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1630 002DE570  4E 80 00 20 */	blr 
 
-/* 802E1634 0044 .text      startMotor__Q210JUTGamePad7CRumbleFi startMotor__Q210JUTGamePad7CRumbleFi */
+/* 802E1634 0058 .text      startMotor__Q210JUTGamePad7CRumbleFi startMotor__Q210JUTGamePad7CRumbleFi */
 .global startMotor__Q210JUTGamePad7CRumbleFi
+startMotor__Q210JUTGamePad7CRumbleFi:
 startMotor__Q210JUTGamePad7CRumbleFi:
 /* 802E1634 002DE574  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1638 002DE578  7C 08 02 A6 */	mflr r0
@@ -1368,24 +1165,22 @@ startMotor__Q210JUTGamePad7CRumbleFi:
 /* 802E1654 002DE594  38 84 C5 F0 */	addi r4, r4, sChannelMask__Q210JUTGamePad7CRumble@l
 /* 802E1658 002DE598  7C 04 00 2E */	lwzx r0, r4, r0
 /* 802E165C 002DE59C  7C A0 00 39 */	and. r0, r5, r0
-/* 802E1660 002DE5A0  41 82 00 18 */	beq func_802E1678
+/* 802E1660 002DE5A0  41 82 00 18 */	beq lbl_802E1678
 /* 802E1664 002DE5A4  38 80 00 01 */	li r4, 1
 /* 802E1668 002DE5A8  48 06 DB 39 */	bl PADControlMotor
 /* 802E166C 002DE5AC  38 00 00 01 */	li r0, 1
 /* 802E1670 002DE5B0  38 6D 8F 64 */	addi r3, r13, mStatus__Q210JUTGamePad7CRumble-_SDA_BASE_
 /* 802E1674 002DE5B4  7C 03 F9 AE */	stbx r0, r3, r31
-
-/* 802E1678 0014 .text      func_802E1678                  func_802E1678                  */
-.global func_802E1678
-func_802E1678:
+lbl_802E1678:
 /* 802E1678 002DE5B8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E167C 002DE5BC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E1680 002DE5C0  7C 08 03 A6 */	mtlr r0
 /* 802E1684 002DE5C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1688 002DE5C8  4E 80 00 20 */	blr 
 
-/* 802E168C 0058 .text      stopMotor__Q210JUTGamePad7CRumbleFib stopMotor__Q210JUTGamePad7CRumbleFib */
+/* 802E168C 006C .text      stopMotor__Q210JUTGamePad7CRumbleFib stopMotor__Q210JUTGamePad7CRumbleFib */
 .global stopMotor__Q210JUTGamePad7CRumbleFib
+stopMotor__Q210JUTGamePad7CRumbleFib:
 stopMotor__Q210JUTGamePad7CRumbleFib:
 /* 802E168C 002DE5CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1690 002DE5D0  7C 08 02 A6 */	mflr r0
@@ -1398,7 +1193,7 @@ stopMotor__Q210JUTGamePad7CRumbleFib:
 /* 802E16AC 002DE5EC  38 A5 C5 F0 */	addi r5, r5, sChannelMask__Q210JUTGamePad7CRumble@l
 /* 802E16B0 002DE5F0  7C 05 00 2E */	lwzx r0, r5, r0
 /* 802E16B4 002DE5F4  7C C0 00 39 */	and. r0, r6, r0
-/* 802E16B8 002DE5F8  41 82 00 2C */	beq func_802E16E4
+/* 802E16B8 002DE5F8  41 82 00 2C */	beq lbl_802E16E4
 /* 802E16BC 002DE5FC  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 802E16C0 002DE600  20 00 00 00 */	subfic r0, r0, 0
 /* 802E16C4 002DE604  7C 80 01 10 */	subfe r4, r0, r0
@@ -1409,10 +1204,7 @@ stopMotor__Q210JUTGamePad7CRumbleFib:
 /* 802E16D8 002DE618  38 00 00 00 */	li r0, 0
 /* 802E16DC 002DE61C  38 6D 8F 64 */	addi r3, r13, mStatus__Q210JUTGamePad7CRumble-_SDA_BASE_
 /* 802E16E0 002DE620  7C 03 F9 AE */	stbx r0, r3, r31
-
-/* 802E16E4 0014 .text      func_802E16E4                  func_802E16E4                  */
-.global func_802E16E4
-func_802E16E4:
+lbl_802E16E4:
 /* 802E16E4 002DE624  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E16E8 002DE628  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E16EC 002DE62C  7C 08 03 A6 */	mtlr r0
@@ -1421,6 +1213,7 @@ func_802E16E4:
 
 /* 802E16F8 0028 .text      getNumBit__FPUci               getNumBit__FPUci               */
 .global getNumBit__FPUci
+getNumBit__FPUci:
 getNumBit__FPUci:
 /* 802E16F8 002DE638  38 A0 00 80 */	li r5, 0x80
 /* 802E16FC 002DE63C  54 80 07 7E */	clrlwi r0, r4, 0x1d
@@ -1433,8 +1226,9 @@ getNumBit__FPUci:
 /* 802E1718 002DE658  7C 60 19 10 */	subfe r3, r0, r3
 /* 802E171C 002DE65C  4E 80 00 20 */	blr 
 
-/* 802E1720 0060 .text      update__Q210JUTGamePad7CRumbleFs update__Q210JUTGamePad7CRumbleFs */
+/* 802E1720 0184 .text      update__Q210JUTGamePad7CRumbleFs update__Q210JUTGamePad7CRumbleFs */
 .global update__Q210JUTGamePad7CRumbleFs
+update__Q210JUTGamePad7CRumbleFs:
 update__Q210JUTGamePad7CRumbleFs:
 /* 802E1720 002DE660  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1724 002DE664  7C 08 02 A6 */	mflr r0
@@ -1453,48 +1247,39 @@ update__Q210JUTGamePad7CRumbleFs:
 /* 802E1758 002DE698  30 03 FF FF */	addic r0, r3, -1
 /* 802E175C 002DE69C  7C 00 19 10 */	subfe r0, r0, r3
 /* 802E1760 002DE6A0  54 00 06 3F */	clrlwi. r0, r0, 0x18
-/* 802E1764 002DE6A4  40 82 00 1C */	bne func_802E1780
+/* 802E1764 002DE6A4  40 82 00 1C */	bne lbl_802E1780
 /* 802E1768 002DE6A8  38 00 00 00 */	li r0, 0
 /* 802E176C 002DE6AC  90 1E 00 00 */	stw r0, 0(r30)
 /* 802E1770 002DE6B0  90 1E 00 04 */	stw r0, 4(r30)
 /* 802E1774 002DE6B4  90 1E 00 08 */	stw r0, 8(r30)
 /* 802E1778 002DE6B8  90 1E 00 0C */	stw r0, 0xc(r30)
 /* 802E177C 002DE6BC  90 1E 00 10 */	stw r0, 0x10(r30)
-
-/* 802E1780 0030 .text      func_802E1780                  func_802E1780                  */
-.global func_802E1780
-func_802E1780:
+lbl_802E1780:
 /* 802E1780 002DE6C0  80 1E 00 04 */	lwz r0, 4(r30)
 /* 802E1784 002DE6C4  28 00 00 00 */	cmplwi r0, 0
-/* 802E1788 002DE6C8  41 82 01 04 */	beq func_802E188C
+/* 802E1788 002DE6C8  41 82 01 04 */	beq lbl_802E188C
 /* 802E178C 002DE6CC  80 BE 00 00 */	lwz r5, 0(r30)
 /* 802E1790 002DE6D0  7C 05 00 40 */	cmplw r5, r0
-/* 802E1794 002DE6D4  41 80 00 1C */	blt func_802E17B0
+/* 802E1794 002DE6D4  41 80 00 1C */	blt lbl_802E17B0
 /* 802E1798 002DE6D8  7F E3 FB 78 */	mr r3, r31
 /* 802E179C 002DE6DC  38 80 00 01 */	li r4, 1
 /* 802E17A0 002DE6E0  4B FF FE ED */	bl stopMotor__Q210JUTGamePad7CRumbleFib
 /* 802E17A4 002DE6E4  38 00 00 00 */	li r0, 0
 /* 802E17A8 002DE6E8  90 1E 00 04 */	stw r0, 4(r30)
-/* 802E17AC 002DE6EC  48 00 00 D4 */	b func_802E1880
-
-/* 802E17B0 002C .text      func_802E17B0                  func_802E17B0                  */
-.global func_802E17B0
-func_802E17B0:
+/* 802E17AC 002DE6EC  48 00 00 D4 */	b lbl_802E1880
+lbl_802E17B0:
 /* 802E17B0 002DE6F0  80 9E 00 0C */	lwz r4, 0xc(r30)
 /* 802E17B4 002DE6F4  28 04 00 00 */	cmplwi r4, 0
-/* 802E17B8 002DE6F8  40 82 00 24 */	bne func_802E17DC
+/* 802E17B8 002DE6F8  40 82 00 24 */	bne lbl_802E17DC
 /* 802E17BC 002DE6FC  7F A0 07 34 */	extsh r0, r29
 /* 802E17C0 002DE700  38 6D 8F 64 */	addi r3, r13, mStatus__Q210JUTGamePad7CRumble-_SDA_BASE_
 /* 802E17C4 002DE704  7C 03 00 AE */	lbzx r0, r3, r0
 /* 802E17C8 002DE708  28 00 00 00 */	cmplwi r0, 0
-/* 802E17CC 002DE70C  40 82 00 C0 */	bne func_802E188C
+/* 802E17CC 002DE70C  40 82 00 C0 */	bne lbl_802E188C
 /* 802E17D0 002DE710  7F E3 FB 78 */	mr r3, r31
 /* 802E17D4 002DE714  4B FF FE 61 */	bl startMotor__Q210JUTGamePad7CRumbleFi
-/* 802E17D8 002DE718  48 00 00 B4 */	b func_802E188C
-
-/* 802E17DC 0048 .text      func_802E17DC                  func_802E17DC                  */
-.global func_802E17DC
-func_802E17DC:
+/* 802E17D8 002DE718  48 00 00 B4 */	b lbl_802E188C
+lbl_802E17DC:
 /* 802E17DC 002DE71C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 802E17E0 002DE720  7C 05 23 96 */	divwu r0, r5, r4
 /* 802E17E4 002DE724  7C 00 21 D6 */	mullw r0, r0, r4
@@ -1507,22 +1292,19 @@ func_802E17DC:
 /* 802E1800 002DE740  7C 00 21 10 */	subfe r0, r0, r4
 /* 802E1804 002DE744  54 1D 06 3E */	clrlwi r29, r0, 0x18
 /* 802E1808 002DE748  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802E180C 002DE74C  41 82 00 18 */	beq func_802E1824
+/* 802E180C 002DE74C  41 82 00 18 */	beq lbl_802E1824
 /* 802E1810 002DE750  28 1D 00 00 */	cmplwi r29, 0
-/* 802E1814 002DE754  40 82 00 10 */	bne func_802E1824
+/* 802E1814 002DE754  40 82 00 10 */	bne lbl_802E1824
 /* 802E1818 002DE758  7F E3 FB 78 */	mr r3, r31
 /* 802E181C 002DE75C  4B FF FE 19 */	bl startMotor__Q210JUTGamePad7CRumbleFi
-/* 802E1820 002DE760  48 00 00 60 */	b func_802E1880
-
-/* 802E1824 0034 .text      func_802E1824                  func_802E1824                  */
-.global func_802E1824
-func_802E1824:
+/* 802E1820 002DE760  48 00 00 60 */	b lbl_802E1880
+lbl_802E1824:
 /* 802E1824 002DE764  54 60 06 3F */	clrlwi. r0, r3, 0x18
-/* 802E1828 002DE768  40 82 00 58 */	bne func_802E1880
+/* 802E1828 002DE768  40 82 00 58 */	bne lbl_802E1880
 /* 802E182C 002DE76C  38 80 00 00 */	li r4, 0
 /* 802E1830 002DE770  80 7E 00 10 */	lwz r3, 0x10(r30)
 /* 802E1834 002DE774  28 03 00 00 */	cmplwi r3, 0
-/* 802E1838 002DE778  41 82 00 20 */	beq func_802E1858
+/* 802E1838 002DE778  41 82 00 20 */	beq lbl_802E1858
 /* 802E183C 002DE77C  80 BE 00 00 */	lwz r5, 0(r30)
 /* 802E1840 002DE780  80 9E 00 0C */	lwz r4, 0xc(r30)
 /* 802E1844 002DE784  7C 05 23 96 */	divwu r0, r5, r4
@@ -1530,35 +1312,23 @@ func_802E1824:
 /* 802E184C 002DE78C  7C 80 28 50 */	subf r4, r0, r5
 /* 802E1850 002DE790  4B FF FE A9 */	bl getNumBit__FPUci
 /* 802E1854 002DE794  7C 64 1B 78 */	mr r4, r3
-
-/* 802E1858 0014 .text      func_802E1858                  func_802E1858                  */
-.global func_802E1858
-func_802E1858:
+lbl_802E1858:
 /* 802E1858 002DE798  28 1D 00 00 */	cmplwi r29, 0
-/* 802E185C 002DE79C  41 82 00 10 */	beq func_802E186C
+/* 802E185C 002DE79C  41 82 00 10 */	beq lbl_802E186C
 /* 802E1860 002DE7A0  7F E3 FB 78 */	mr r3, r31
 /* 802E1864 002DE7A4  4B FF FE 29 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
-/* 802E1868 002DE7A8  48 00 00 18 */	b func_802E1880
-
-/* 802E186C 0014 .text      func_802E186C                  func_802E186C                  */
-.global func_802E186C
-func_802E186C:
+/* 802E1868 002DE7A8  48 00 00 18 */	b lbl_802E1880
+lbl_802E186C:
 /* 802E186C 002DE7AC  54 80 06 3F */	clrlwi. r0, r4, 0x18
-/* 802E1870 002DE7B0  41 82 00 10 */	beq func_802E1880
+/* 802E1870 002DE7B0  41 82 00 10 */	beq lbl_802E1880
 /* 802E1874 002DE7B4  7F E3 FB 78 */	mr r3, r31
 /* 802E1878 002DE7B8  38 80 00 01 */	li r4, 1
 /* 802E187C 002DE7BC  4B FF FE 11 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
-
-/* 802E1880 000C .text      func_802E1880                  func_802E1880                  */
-.global func_802E1880
-func_802E1880:
+lbl_802E1880:
 /* 802E1880 002DE7C0  80 7E 00 00 */	lwz r3, 0(r30)
 /* 802E1884 002DE7C4  38 03 00 01 */	addi r0, r3, 1
 /* 802E1888 002DE7C8  90 1E 00 00 */	stw r0, 0(r30)
-
-/* 802E188C 0018 .text      func_802E188C                  func_802E188C                  */
-.global func_802E188C
-func_802E188C:
+lbl_802E188C:
 /* 802E188C 002DE7CC  39 61 00 20 */	addi r11, r1, 0x20
 /* 802E1890 002DE7D0  48 08 09 99 */	bl _restgpr_29
 /* 802E1894 002DE7D4  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1568,6 +1338,7 @@ func_802E188C:
 
 /* 802E18A4 0028 .text      triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl */
 .global triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl
+triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl:
 triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl:
 /* 802E18A4 002DE7E4  80 03 00 08 */	lwz r0, 8(r3)
 /* 802E18A8 002DE7E8  28 00 00 00 */	cmplwi r0, 0
@@ -1580,8 +1351,9 @@ triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl:
 /* 802E18C4 002DE804  90 03 00 00 */	stw r0, 0(r3)
 /* 802E18C8 002DE808  4E 80 00 20 */	blr 
 
-/* 802E18CC 0040 .text      startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl */
+/* 802E18CC 007C .text      startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl */
 .global startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl
+startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl:
 startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl:
 /* 802E18CC 002DE80C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E18D0 002DE810  7C 08 02 A6 */	mflr r0
@@ -1594,42 +1366,27 @@ startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl:
 /* 802E18EC 002DE82C  38 04 00 02 */	addi r0, r4, 2
 /* 802E18F0 002DE830  90 03 00 08 */	stw r0, 8(r3)
 /* 802E18F4 002DE834  2C 05 00 01 */	cmpwi r5, 1
-/* 802E18F8 002DE838  41 82 00 2C */	beq func_802E1924
-/* 802E18FC 002DE83C  40 80 00 10 */	bge func_802E190C
+/* 802E18F8 002DE838  41 82 00 2C */	beq lbl_802E1924
+/* 802E18FC 002DE83C  40 80 00 10 */	bge lbl_802E190C
 /* 802E1900 002DE840  2C 05 00 00 */	cmpwi r5, 0
-/* 802E1904 002DE844  40 80 00 14 */	bge func_802E1918
-/* 802E1908 002DE848  48 00 00 30 */	b func_802E1938
-
-/* 802E190C 000C .text      func_802E190C                  func_802E190C                  */
-.global func_802E190C
-func_802E190C:
+/* 802E1904 002DE844  40 80 00 14 */	bge lbl_802E1918
+/* 802E1908 002DE848  48 00 00 30 */	b lbl_802E1938
+lbl_802E190C:
 /* 802E190C 002DE84C  2C 05 00 03 */	cmpwi r5, 3
-/* 802E1910 002DE850  40 80 00 28 */	bge func_802E1938
-/* 802E1914 002DE854  48 00 00 1C */	b func_802E1930
-
-/* 802E1918 000C .text      func_802E1918                  func_802E1918                  */
-.global func_802E1918
-func_802E1918:
+/* 802E1910 002DE850  40 80 00 28 */	bge lbl_802E1938
+/* 802E1914 002DE854  48 00 00 1C */	b lbl_802E1930
+lbl_802E1918:
 /* 802E1918 002DE858  80 83 00 0C */	lwz r4, 0xc(r3)
 /* 802E191C 002DE85C  4B FF FF 89 */	bl triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl
-/* 802E1920 002DE860  48 00 00 18 */	b func_802E1938
-
-/* 802E1924 000C .text      func_802E1924                  func_802E1924                  */
-.global func_802E1924
-func_802E1924:
+/* 802E1920 002DE860  48 00 00 18 */	b lbl_802E1938
+lbl_802E1924:
 /* 802E1924 002DE864  38 80 FF FF */	li r4, -1
 /* 802E1928 002DE868  4B FF FF 7D */	bl triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl
-/* 802E192C 002DE86C  48 00 00 0C */	b func_802E1938
-
-/* 802E1930 0008 .text      func_802E1930                  func_802E1930                  */
-.global func_802E1930
-func_802E1930:
+/* 802E192C 002DE86C  48 00 00 0C */	b lbl_802E1938
+lbl_802E1930:
 /* 802E1930 002DE870  7C C4 33 78 */	mr r4, r6
 /* 802E1934 002DE874  4B FF FF 71 */	bl triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl
-
-/* 802E1938 0010 .text      func_802E1938                  func_802E1938                  */
-.global func_802E1938
-func_802E1938:
+lbl_802E1938:
 /* 802E1938 002DE878  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E193C 002DE87C  7C 08 03 A6 */	mtlr r0
 /* 802E1940 002DE880  38 21 00 10 */	addi r1, r1, 0x10
@@ -1637,6 +1394,7 @@ func_802E1938:
 
 /* 802E1948 0030 .text      stopPatternedRumble__Q210JUTGamePad7CRumbleFs stopPatternedRumble__Q210JUTGamePad7CRumbleFs */
 .global stopPatternedRumble__Q210JUTGamePad7CRumbleFs
+stopPatternedRumble__Q210JUTGamePad7CRumbleFs:
 stopPatternedRumble__Q210JUTGamePad7CRumbleFs:
 /* 802E1948 002DE888  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E194C 002DE88C  7C 08 02 A6 */	mflr r0
@@ -1654,6 +1412,7 @@ stopPatternedRumble__Q210JUTGamePad7CRumbleFs:
 /* 802E1978 0024 .text      stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv */
 .global stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv
 stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv:
+stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv:
 /* 802E1978 002DE8B8  80 A3 00 0C */	lwz r5, 0xc(r3)
 /* 802E197C 002DE8BC  80 83 00 00 */	lwz r4, 0(r3)
 /* 802E1980 002DE8C0  38 05 FF FF */	addi r0, r5, -1
@@ -1664,39 +1423,32 @@ stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv:
 /* 802E1994 002DE8D4  90 03 00 04 */	stw r0, 4(r3)
 /* 802E1998 002DE8D8  4E 80 00 20 */	blr 
 
-/* 802E199C 0010 .text      getGamePad__10JUTGamePadFi     getGamePad__10JUTGamePadFi     */
+/* 802E199C 003C .text      getGamePad__10JUTGamePadFi     getGamePad__10JUTGamePadFi     */
 .global getGamePad__10JUTGamePadFi
+getGamePad__10JUTGamePadFi:
 getGamePad__10JUTGamePadFi:
 /* 802E199C 002DE8DC  3C 80 80 43 */	lis r4, mPadList__10JUTGamePad@ha
 /* 802E19A0 002DE8E0  38 84 43 E4 */	addi r4, r4, mPadList__10JUTGamePad@l
 /* 802E19A4 002DE8E4  80 84 00 00 */	lwz r4, 0(r4)
-/* 802E19A8 002DE8E8  48 00 00 20 */	b func_802E19C8
-
-/* 802E19AC 0018 .text      func_802E19AC                  func_802E19AC                  */
-.global func_802E19AC
-func_802E19AC:
+/* 802E19A8 002DE8E8  48 00 00 20 */	b lbl_802E19C8
+lbl_802E19AC:
 /* 802E19AC 002DE8EC  80 A4 00 00 */	lwz r5, 0(r4)
 /* 802E19B0 002DE8F0  A8 05 00 7C */	lha r0, 0x7c(r5)
 /* 802E19B4 002DE8F4  7C 03 00 00 */	cmpw r3, r0
-/* 802E19B8 002DE8F8  40 82 00 0C */	bne func_802E19C4
+/* 802E19B8 002DE8F8  40 82 00 0C */	bne lbl_802E19C4
 /* 802E19BC 002DE8FC  7C A3 2B 78 */	mr r3, r5
 /* 802E19C0 002DE900  4E 80 00 20 */	blr 
-
-/* 802E19C4 0004 .text      func_802E19C4                  func_802E19C4                  */
-.global func_802E19C4
-func_802E19C4:
+lbl_802E19C4:
 /* 802E19C4 002DE904  80 84 00 0C */	lwz r4, 0xc(r4)
-
-/* 802E19C8 0010 .text      func_802E19C8                  func_802E19C8                  */
-.global func_802E19C8
-func_802E19C8:
+lbl_802E19C8:
 /* 802E19C8 002DE908  28 04 00 00 */	cmplwi r4, 0
-/* 802E19CC 002DE90C  40 82 FF E0 */	bne func_802E19AC
+/* 802E19CC 002DE90C  40 82 FF E0 */	bne lbl_802E19AC
 /* 802E19D0 002DE910  38 60 00 00 */	li r3, 0
 /* 802E19D4 002DE914  4E 80 00 20 */	blr 
 
-/* 802E19D8 002C .text      setEnabled__Q210JUTGamePad7CRumbleFUl setEnabled__Q210JUTGamePad7CRumbleFUl */
+/* 802E19D8 00A4 .text      setEnabled__Q210JUTGamePad7CRumbleFUl setEnabled__Q210JUTGamePad7CRumbleFUl */
 .global setEnabled__Q210JUTGamePad7CRumbleFUl
+setEnabled__Q210JUTGamePad7CRumbleFUl:
 setEnabled__Q210JUTGamePad7CRumbleFUl:
 /* 802E19D8 002DE918  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E19DC 002DE91C  7C 08 02 A6 */	mflr r0
@@ -1709,40 +1461,31 @@ setEnabled__Q210JUTGamePad7CRumbleFUl:
 /* 802E19F8 002DE938  3C 60 80 3D */	lis r3, channel_mask@ha
 /* 802E19FC 002DE93C  3B A3 C6 00 */	addi r29, r3, channel_mask@l
 /* 802E1A00 002DE940  3B ED 8F 64 */	addi r31, r13, mStatus__Q210JUTGamePad7CRumble-_SDA_BASE_
-
-/* 802E1A04 0028 .text      func_802E1A04                  func_802E1A04                  */
-.global func_802E1A04
-func_802E1A04:
+lbl_802E1A04:
 /* 802E1A04 002DE944  80 6D 8F 68 */	lwz r3, mEnabled__Q210JUTGamePad7CRumble-_SDA_BASE_(r13)
 /* 802E1A08 002DE948  7C 1D F0 2E */	lwzx r0, r29, r30
 /* 802E1A0C 002DE94C  7C 60 00 39 */	and. r0, r3, r0
-/* 802E1A10 002DE950  40 82 00 38 */	bne func_802E1A48
+/* 802E1A10 002DE950  40 82 00 38 */	bne lbl_802E1A48
 /* 802E1A14 002DE954  88 1F 00 00 */	lbz r0, 0(r31)
 /* 802E1A18 002DE958  28 00 00 00 */	cmplwi r0, 0
-/* 802E1A1C 002DE95C  41 82 00 10 */	beq func_802E1A2C
+/* 802E1A1C 002DE95C  41 82 00 10 */	beq lbl_802E1A2C
 /* 802E1A20 002DE960  7F 83 E3 78 */	mr r3, r28
 /* 802E1A24 002DE964  38 80 00 00 */	li r4, 0
 /* 802E1A28 002DE968  4B FF FC 65 */	bl stopMotor__Q210JUTGamePad7CRumbleFib
-
-/* 802E1A2C 001C .text      func_802E1A2C                  func_802E1A2C                  */
-.global func_802E1A2C
-func_802E1A2C:
+lbl_802E1A2C:
 /* 802E1A2C 002DE96C  7F 83 E3 78 */	mr r3, r28
 /* 802E1A30 002DE970  4B FF FF 6D */	bl getGamePad__10JUTGamePadFi
 /* 802E1A34 002DE974  7C 64 1B 79 */	or. r4, r3, r3
-/* 802E1A38 002DE978  41 82 00 10 */	beq func_802E1A48
+/* 802E1A38 002DE978  41 82 00 10 */	beq lbl_802E1A48
 /* 802E1A3C 002DE97C  38 64 00 68 */	addi r3, r4, 0x68
 /* 802E1A40 002DE980  A8 84 00 7C */	lha r4, 0x7c(r4)
 /* 802E1A44 002DE984  4B FF FF 05 */	bl stopPatternedRumble__Q210JUTGamePad7CRumbleFs
-
-/* 802E1A48 0034 .text      func_802E1A48                  func_802E1A48                  */
-.global func_802E1A48
-func_802E1A48:
+lbl_802E1A48:
 /* 802E1A48 002DE988  3B 9C 00 01 */	addi r28, r28, 1
 /* 802E1A4C 002DE98C  2C 1C 00 04 */	cmpwi r28, 4
 /* 802E1A50 002DE990  3B FF 00 01 */	addi r31, r31, 1
 /* 802E1A54 002DE994  3B DE 00 04 */	addi r30, r30, 4
-/* 802E1A58 002DE998  41 80 FF AC */	blt func_802E1A04
+/* 802E1A58 002DE998  41 80 FF AC */	blt lbl_802E1A04
 /* 802E1A5C 002DE99C  57 60 00 06 */	rlwinm r0, r27, 0, 0, 3
 /* 802E1A60 002DE9A0  90 0D 8F 68 */	stw r0, mEnabled__Q210JUTGamePad7CRumble-_SDA_BASE_(r13)
 /* 802E1A64 002DE9A4  39 61 00 20 */	addi r11, r1, 0x20
@@ -1755,6 +1498,7 @@ func_802E1A48:
 /* 802E1A7C 001C .text      setRepeat__Q210JUTGamePad7CButtonFUlUlUl setRepeat__Q210JUTGamePad7CButtonFUlUlUl */
 .global setRepeat__Q210JUTGamePad7CButtonFUlUlUl
 setRepeat__Q210JUTGamePad7CButtonFUlUlUl:
+setRepeat__Q210JUTGamePad7CButtonFUlUlUl:
 /* 802E1A7C 002DE9BC  38 00 00 00 */	li r0, 0
 /* 802E1A80 002DE9C0  90 03 00 20 */	stw r0, 0x20(r3)
 /* 802E1A84 002DE9C4  90 03 00 1C */	stw r0, 0x1c(r3)
@@ -1763,8 +1507,9 @@ setRepeat__Q210JUTGamePad7CButtonFUlUlUl:
 /* 802E1A90 002DE9D0  90 C3 00 2C */	stw r6, 0x2c(r3)
 /* 802E1A94 002DE9D4  4E 80 00 20 */	blr 
 
-/* 802E1A98 0028 .text      recalibrate__10JUTGamePadFUl   recalibrate__10JUTGamePadFUl   */
+/* 802E1A98 0064 .text      recalibrate__10JUTGamePadFUl   recalibrate__10JUTGamePadFUl   */
 .global recalibrate__10JUTGamePadFUl
+recalibrate__10JUTGamePadFUl:
 recalibrate__10JUTGamePadFUl:
 /* 802E1A98 002DE9D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1A9C 002DE9DC  7C 08 02 A6 */	mflr r0
@@ -1776,21 +1521,15 @@ recalibrate__10JUTGamePadFUl:
 /* 802E1AB4 002DE9F4  38 A0 FF FF */	li r5, -1
 /* 802E1AB8 002DE9F8  38 00 00 04 */	li r0, 4
 /* 802E1ABC 002DE9FC  7C 09 03 A6 */	mtctr r0
-
-/* 802E1AC0 0014 .text      func_802E1AC0                  func_802E1AC0                  */
-.global func_802E1AC0
-func_802E1AC0:
+lbl_802E1AC0:
 /* 802E1AC0 002DEA00  7D 06 20 2E */	lwzx r8, r6, r4
 /* 802E1AC4 002DEA04  7C E0 40 39 */	and. r0, r7, r8
-/* 802E1AC8 002DEA08  41 82 00 0C */	beq func_802E1AD4
+/* 802E1AC8 002DEA08  41 82 00 0C */	beq lbl_802E1AD4
 /* 802E1ACC 002DEA0C  7D 00 2A 78 */	xor r0, r8, r5
 /* 802E1AD0 002DEA10  7C 63 00 38 */	and r3, r3, r0
-
-/* 802E1AD4 0028 .text      func_802E1AD4                  func_802E1AD4                  */
-.global func_802E1AD4
-func_802E1AD4:
+lbl_802E1AD4:
 /* 802E1AD4 002DEA14  38 84 00 04 */	addi r4, r4, 4
-/* 802E1AD8 002DEA18  42 00 FF E8 */	bdnz func_802E1AC0
+/* 802E1AD8 002DEA18  42 00 FF E8 */	bdnz lbl_802E1AC0
 /* 802E1ADC 002DEA1C  48 06 D1 61 */	bl PADRecalibrate
 /* 802E1AE0 002DEA20  30 03 FF FF */	addic r0, r3, -1
 /* 802E1AE4 002DEA24  7C 00 19 10 */	subfe r0, r0, r3
@@ -1800,34 +1539,32 @@ func_802E1AD4:
 /* 802E1AF4 002DEA34  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1AF8 002DEA38  4E 80 00 20 */	blr 
 
-/* 802E1AFC 0054 .text      checkCallback__19JUTGamePadLongPressFiUl checkCallback__19JUTGamePadLongPressFiUl */
+/* 802E1AFC 0064 .text      checkCallback__19JUTGamePadLongPressFiUl checkCallback__19JUTGamePadLongPressFiUl */
 .global checkCallback__19JUTGamePadLongPressFiUl
+checkCallback__19JUTGamePadLongPressFiUl:
 checkCallback__19JUTGamePadLongPressFiUl:
 /* 802E1AFC 002DEA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1B00 002DEA40  7C 08 02 A6 */	mflr r0
 /* 802E1B04 002DEA44  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E1B08 002DEA48  7C 66 1B 78 */	mr r6, r3
 /* 802E1B0C 002DEA4C  2C 04 00 00 */	cmpwi r4, 0
-/* 802E1B10 002DEA50  41 80 00 40 */	blt func_802E1B50
+/* 802E1B10 002DEA50  41 80 00 40 */	blt lbl_802E1B50
 /* 802E1B14 002DEA54  80 06 00 1C */	lwz r0, 0x1c(r6)
 /* 802E1B18 002DEA58  7C 05 00 40 */	cmplw r5, r0
-/* 802E1B1C 002DEA5C  41 80 00 34 */	blt func_802E1B50
+/* 802E1B1C 002DEA5C  41 80 00 34 */	blt lbl_802E1B50
 /* 802E1B20 002DEA60  38 00 00 01 */	li r0, 1
 /* 802E1B24 002DEA64  98 06 00 11 */	stb r0, 0x11(r6)
 /* 802E1B28 002DEA68  7C 66 22 14 */	add r3, r6, r4
 /* 802E1B2C 002DEA6C  98 03 00 48 */	stb r0, 0x48(r3)
 /* 802E1B30 002DEA70  81 86 00 4C */	lwz r12, 0x4c(r6)
 /* 802E1B34 002DEA74  28 0C 00 00 */	cmplwi r12, 0
-/* 802E1B38 002DEA78  41 82 00 18 */	beq func_802E1B50
+/* 802E1B38 002DEA78  41 82 00 18 */	beq lbl_802E1B50
 /* 802E1B3C 002DEA7C  7C 83 23 78 */	mr r3, r4
 /* 802E1B40 002DEA80  7C C4 33 78 */	mr r4, r6
 /* 802E1B44 002DEA84  80 A6 00 50 */	lwz r5, 0x50(r6)
 /* 802E1B48 002DEA88  7D 89 03 A6 */	mtctr r12
 /* 802E1B4C 002DEA8C  4E 80 04 21 */	bctrl 
-
-/* 802E1B50 0010 .text      func_802E1B50                  func_802E1B50                  */
-.global func_802E1B50
-func_802E1B50:
+lbl_802E1B50:
 /* 802E1B50 002DEA90  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802E1B54 002DEA94  7C 08 03 A6 */	mtlr r0
 /* 802E1B58 002DEA98  38 21 00 10 */	addi r1, r1, 0x10
@@ -1835,6 +1572,7 @@ func_802E1B50:
 
 /* 802E1B60 00F4 .text      __sinit_JUTGamePad_cpp         __sinit_JUTGamePad_cpp         */
 .global __sinit_JUTGamePad_cpp
+__sinit_JUTGamePad_cpp:
 __sinit_JUTGamePad_cpp:
 /* 802E1B60 002DEAA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1B64 002DEAA4  7C 08 02 A6 */	mflr r0
@@ -1882,7 +1620,7 @@ __sinit_JUTGamePad_cpp:
 /* 802E1C0C 002DEB4C  7C 64 19 D6 */	mullw r3, r4, r3
 /* 802E1C10 002DEB50  1C 85 00 1E */	mulli r4, r5, 0x1e
 /* 802E1C14 002DEB54  7C 00 1A 14 */	add r0, r0, r3
-/* 802E1C18 002DEB58  90 8D 8F 7C */	stw r4, sym_804514FC-_SDA_BASE_(r13)
+/* 802E1C18 002DEB58  90 8D 8F 7C */	stw r4, data_804514FC-_SDA_BASE_(r13)
 /* 802E1C1C 002DEB5C  90 0D 8F 78 */	stw r0, sThreshold__Q210JUTGamePad13C3ButtonReset-_SDA_BASE_(r13)
 /* 802E1C20 002DEB60  38 7F 01 94 */	addi r3, r31, 0x194
 /* 802E1C24 002DEB64  38 80 00 00 */	li r4, 0
@@ -1898,8 +1636,11 @@ __sinit_JUTGamePad_cpp:
 /* 802E1C4C 002DEB8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1C50 002DEB90  4E 80 00 20 */	blr 
 
-/* 802E1C54 0038 .text      "__dt__30JSUList<19JUTGamePadLongPress>Fv" __dt__30JSUList<19JUTGamePadLongPress>Fv */
+/* 802E1C54 0054 .text      __dt__30JSUList<19JUTGamePadLongPress>Fv "__dt__30JSUList<19JUTGamePadLongPress>Fv" */
+.global "__dt__30JSUList<19JUTGamePadLongPress>Fv"
+"__dt__30JSUList<19JUTGamePadLongPress>Fv":
 .global __dt__30JSUList_SUB_019JUTGamePadLongPress_SUB_1Fv
+__dt__30JSUList_SUB_019JUTGamePadLongPress_SUB_1Fv:
 __dt__30JSUList_SUB_019JUTGamePadLongPress_SUB_1Fv:
 /* 802E1C54 002DEB94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1C58 002DEB98  7C 08 02 A6 */	mflr r0
@@ -1908,17 +1649,14 @@ __dt__30JSUList_SUB_019JUTGamePadLongPress_SUB_1Fv:
 /* 802E1C64 002DEBA4  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E1C68 002DEBA8  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E1C6C 002DEBAC  7C 9F 23 78 */	mr r31, r4
-/* 802E1C70 002DEBB0  41 82 00 1C */	beq func_802E1C8C
+/* 802E1C70 002DEBB0  41 82 00 1C */	beq lbl_802E1C8C
 /* 802E1C74 002DEBB4  38 80 00 00 */	li r4, 0
 /* 802E1C78 002DEBB8  4B FF A2 35 */	bl __dt__10JSUPtrListFv
 /* 802E1C7C 002DEBBC  7F E0 07 35 */	extsh. r0, r31
-/* 802E1C80 002DEBC0  40 81 00 0C */	ble func_802E1C8C
+/* 802E1C80 002DEBC0  40 81 00 0C */	ble lbl_802E1C8C
 /* 802E1C84 002DEBC4  7F C3 F3 78 */	mr r3, r30
 /* 802E1C88 002DEBC8  4B FE D0 B5 */	bl __dl__FPv
-
-/* 802E1C8C 001C .text      func_802E1C8C                  func_802E1C8C                  */
-.global func_802E1C8C
-func_802E1C8C:
+lbl_802E1C8C:
 /* 802E1C8C 002DEBCC  7F C3 F3 78 */	mr r3, r30
 /* 802E1C90 002DEBD0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E1C94 002DEBD4  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1929,6 +1667,7 @@ func_802E1C8C:
 
 /* 802E1CA8 0030 .text      __ct__Q210JUTGamePad6CStickFv  __ct__Q210JUTGamePad6CStickFv  */
 .global __ct__Q210JUTGamePad6CStickFv
+__ct__Q210JUTGamePad6CStickFv:
 __ct__Q210JUTGamePad6CStickFv:
 /* 802E1CA8 002DEBE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1CAC 002DEBEC  7C 08 02 A6 */	mflr r0
@@ -1946,6 +1685,7 @@ __ct__Q210JUTGamePad6CStickFv:
 /* 802E1CD8 0030 .text      __ct__Q210JUTGamePad7CButtonFv __ct__Q210JUTGamePad7CButtonFv */
 .global __ct__Q210JUTGamePad7CButtonFv
 __ct__Q210JUTGamePad7CButtonFv:
+__ct__Q210JUTGamePad7CButtonFv:
 /* 802E1CD8 002DEC18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1CDC 002DEC1C  7C 08 02 A6 */	mflr r0
 /* 802E1CE0 002DEC20  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1959,8 +1699,11 @@ __ct__Q210JUTGamePad7CButtonFv:
 /* 802E1D00 002DEC40  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1D04 002DEC44  4E 80 00 20 */	blr 
 
-/* 802E1D08 0038 .text      "__dt__21JSUList<10JUTGamePad>Fv" __dt__21JSUList<10JUTGamePad>Fv */
+/* 802E1D08 0054 .text      __dt__21JSUList<10JUTGamePad>Fv "__dt__21JSUList<10JUTGamePad>Fv" */
+.global "__dt__21JSUList<10JUTGamePad>Fv"
+"__dt__21JSUList<10JUTGamePad>Fv":
 .global __dt__21JSUList_SUB_010JUTGamePad_SUB_1Fv
+__dt__21JSUList_SUB_010JUTGamePad_SUB_1Fv:
 __dt__21JSUList_SUB_010JUTGamePad_SUB_1Fv:
 /* 802E1D08 002DEC48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1D0C 002DEC4C  7C 08 02 A6 */	mflr r0
@@ -1969,17 +1712,14 @@ __dt__21JSUList_SUB_010JUTGamePad_SUB_1Fv:
 /* 802E1D18 002DEC58  93 C1 00 08 */	stw r30, 8(r1)
 /* 802E1D1C 002DEC5C  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802E1D20 002DEC60  7C 9F 23 78 */	mr r31, r4
-/* 802E1D24 002DEC64  41 82 00 1C */	beq func_802E1D40
+/* 802E1D24 002DEC64  41 82 00 1C */	beq lbl_802E1D40
 /* 802E1D28 002DEC68  38 80 00 00 */	li r4, 0
 /* 802E1D2C 002DEC6C  4B FF A1 81 */	bl __dt__10JSUPtrListFv
 /* 802E1D30 002DEC70  7F E0 07 35 */	extsh. r0, r31
-/* 802E1D34 002DEC74  40 81 00 0C */	ble func_802E1D40
+/* 802E1D34 002DEC74  40 81 00 0C */	ble lbl_802E1D40
 /* 802E1D38 002DEC78  7F C3 F3 78 */	mr r3, r30
 /* 802E1D3C 002DEC7C  4B FE D0 01 */	bl __dl__FPv
-
-/* 802E1D40 001C .text      func_802E1D40                  func_802E1D40                  */
-.global func_802E1D40
-func_802E1D40:
+lbl_802E1D40:
 /* 802E1D40 002DEC80  7F C3 F3 78 */	mr r3, r30
 /* 802E1D44 002DEC84  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802E1D48 002DEC88  83 C1 00 08 */	lwz r30, 8(r1)
@@ -2006,19 +1746,21 @@ channel_mask:
 /* 803CC610 000C .data      __vt__10JUTGamePad             __vt__10JUTGamePad             */
 .global __vt__10JUTGamePad
 __vt__10JUTGamePad:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2e, 0x07, 0xb0 /* baserom.dol+0x3c9610 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c961c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__10JUTGamePadFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                          .bss                                          */
 /* ###################################################################################### */
 .section .bss, "aw"
-/* 804343D8 0000 .bss       sym_804343D8                   ...bss.0                       */
-.global sym_804343D8
-sym_804343D8:
+/* 804343D8 0000 .bss       ...bss.0                       data_804343D8                  */
+.global data_804343D8
+data_804343D8:
 
-/* 804343D8 000C .bss       JUTGamePad__LIT_525            @525                           */
+/* 804343D8 000C .bss       @525                           JUTGamePad__LIT_525            */
 .global JUTGamePad__LIT_525
 JUTGamePad__LIT_525:
 .skip 0xc
@@ -2048,7 +1790,7 @@ mPadMStick__10JUTGamePad:
 mPadSStick__10JUTGamePad:
 .skip 0x40
 
-/* 80434560 000C .bss       LIT_1373                       @1373                          */
+/* 80434560 000C .bss       @1373                          LIT_1373                       */
 .global LIT_1373
 LIT_1373:
 .skip 0xc
@@ -2144,19 +1886,19 @@ sCallbackArg__Q210JUTGamePad13C3ButtonReset:
 sThreshold__Q210JUTGamePad13C3ButtonReset:
 .skip 0x4
 
-/* 804514FC 0004 .sbss      sym_804514FC                   sym_804514FC                   */
-.global sym_804514FC
-sym_804514FC:
+/* 804514FC 0004 .sbss      data_804514FC                  data_804514FC                  */
+.global data_804514FC
+data_804514FC:
 .skip 0x4
 
-/* 80451500 0001 .sbss      sym_80451500                   sym_80451500                   */
-.global sym_80451500
-sym_80451500:
+/* 80451500 0001 .sbss      data_80451500                  data_80451500                  */
+.global data_80451500
+data_80451500:
 .skip 0x1
 
-/* 80451501 0003 .sbss      sym_80451501                   sym_80451501                   */
-.global sym_80451501
-sym_80451501:
+/* 80451501 0003 .sbss      data_80451501                  data_80451501                  */
+.global data_80451501
+data_80451501:
 .skip 0x3
 
 /* 80451504 0004 .sbss      sResetOccurredPort__Q210JUTGamePad13C3ButtonReset sResetOccurredPort__Q210JUTGamePad13C3ButtonReset */
@@ -2169,44 +1911,44 @@ sResetOccurredPort__Q210JUTGamePad13C3ButtonReset:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456018 0004 .sdata2    JUTGamePad__LIT_1047           @1047                          */
+/* 80456018 0004 .sdata2    @1047                          JUTGamePad__LIT_1047           */
 .global JUTGamePad__LIT_1047
 JUTGamePad__LIT_1047:
 .byte 0x43, 0x16, 0x00, 0x00 /* baserom.dol+0x3d4e78 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e7c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80456020 0008 .sdata2    JUTGamePad__LIT_1050           @1050                          */
+/* 80456020 0008 .sdata2    @1050                          JUTGamePad__LIT_1050           */
 .global JUTGamePad__LIT_1050
 JUTGamePad__LIT_1050:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e80 */
 
-/* 80456028 0004 .sdata2    LIT_1056                       @1056                          */
+/* 80456028 0004 .sdata2    @1056                          LIT_1056                       */
 .global LIT_1056
 LIT_1056:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e88 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e8c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 80456030 0008 .sdata2    LIT_1117                       @1117                          */
+/* 80456030 0008 .sdata2    @1117                          LIT_1117                       */
 .global LIT_1117
 LIT_1117:
 .byte 0x3f, 0xe0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e90 */
 
-/* 80456038 0008 .sdata2    LIT_1118                       @1118                          */
+/* 80456038 0008 .sdata2    @1118                          LIT_1118                       */
 .global LIT_1118
 LIT_1118:
 .byte 0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4e98 */
 
-/* 80456040 0008 .sdata2    LIT_1119                       @1119                          */
+/* 80456040 0008 .sdata2    @1119                          LIT_1119                       */
 .global LIT_1119
 LIT_1119:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d4ea0 */
 
-/* 80456048 0004 .sdata2    LIT_1120                       @1120                          */
+/* 80456048 0004 .sdata2    @1120                          LIT_1120                       */
 .global LIT_1120
 LIT_1120:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d4ea8 */
 
-/* 8045604C 0004 .sdata2    JUTGamePad__LIT_1121           @1121                          */
+/* 8045604C 0004 .sdata2    @1121                          JUTGamePad__LIT_1121           */
 .global JUTGamePad__LIT_1121
 JUTGamePad__LIT_1121:
 .byte 0x46, 0x22, 0xf9, 0x84 /* baserom.dol+0x3d4eac */

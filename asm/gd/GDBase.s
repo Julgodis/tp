@@ -7,6 +7,7 @@
 /* 80360F98 0018 .text      GDInitGDLObj                   GDInitGDLObj                   */
 .global GDInitGDLObj
 GDInitGDLObj:
+GDInitGDLObj:
 /* 80360F98 0035DED8  90 83 00 00 */	stw r4, 0(r3)
 /* 80360F9C 0035DEDC  7C 04 2A 14 */	add r0, r4, r5
 /* 80360FA0 0035DEE0  90 83 00 08 */	stw r4, 8(r3)
@@ -16,6 +17,7 @@ GDInitGDLObj:
 
 /* 80360FB0 002C .text      GDFlushCurrToMem               GDFlushCurrToMem               */
 .global GDFlushCurrToMem
+GDFlushCurrToMem:
 GDFlushCurrToMem:
 /* 80360FB0 0035DEF0  7C 08 02 A6 */	mflr r0
 /* 80360FB4 0035DEF4  90 01 00 04 */	stw r0, 4(r1)
@@ -29,8 +31,9 @@ GDFlushCurrToMem:
 /* 80360FD4 0035DF14  7C 08 03 A6 */	mtlr r0
 /* 80360FD8 0035DF18  4E 80 00 20 */	blr 
 
-/* 80360FDC 002C .text      GDPadCurr32                    GDPadCurr32                    */
+/* 80360FDC 00F8 .text      GDPadCurr32                    GDPadCurr32                    */
 .global GDPadCurr32
+GDPadCurr32:
 GDPadCurr32:
 /* 80360FDC 0035DF1C  80 6D 94 00 */	lwz r3, __GDCurrentDL-_SDA_BASE_(r13)
 /* 80360FE0 0035DF20  80 03 00 08 */	lwz r0, 8(r3)
@@ -42,11 +45,8 @@ GDPadCurr32:
 /* 80360FF8 0035DF38  4C 80 00 20 */	bgelr 
 /* 80360FFC 0035DF3C  54 60 E8 FF */	rlwinm. r0, r3, 0x1d, 3, 0x1f
 /* 80361000 0035DF40  7C 09 03 A6 */	mtctr r0
-/* 80361004 0035DF44  41 82 00 B0 */	beq func_803610B4
-
-/* 80361008 00AC .text      func_80361008                  func_80361008                  */
-.global func_80361008
-func_80361008:
+/* 80361004 0035DF44  41 82 00 B0 */	beq lbl_803610B4
+lbl_80361008:
 /* 80361008 0035DF48  80 AD 94 00 */	lwz r5, __GDCurrentDL-_SDA_BASE_(r13)
 /* 8036100C 0035DF4C  80 85 00 08 */	lwz r4, 8(r5)
 /* 80361010 0035DF50  38 04 00 01 */	addi r0, r4, 1
@@ -87,41 +87,33 @@ func_80361008:
 /* 8036109C 0035DFDC  38 04 00 01 */	addi r0, r4, 1
 /* 803610A0 0035DFE0  90 05 00 08 */	stw r0, 8(r5)
 /* 803610A4 0035DFE4  98 C4 00 00 */	stb r6, 0(r4)
-/* 803610A8 0035DFE8  42 00 FF 60 */	bdnz func_80361008
+/* 803610A8 0035DFE8  42 00 FF 60 */	bdnz lbl_80361008
 /* 803610AC 0035DFEC  70 63 00 07 */	andi. r3, r3, 7
 /* 803610B0 0035DFF0  4D 82 00 20 */	beqlr 
-
-/* 803610B4 0004 .text      func_803610B4                  func_803610B4                  */
-.global func_803610B4
-func_803610B4:
+lbl_803610B4:
 /* 803610B4 0035DFF4  7C 69 03 A6 */	mtctr r3
-
-/* 803610B8 001C .text      func_803610B8                  func_803610B8                  */
-.global func_803610B8
-func_803610B8:
+lbl_803610B8:
 /* 803610B8 0035DFF8  80 AD 94 00 */	lwz r5, __GDCurrentDL-_SDA_BASE_(r13)
 /* 803610BC 0035DFFC  80 85 00 08 */	lwz r4, 8(r5)
 /* 803610C0 0035E000  38 04 00 01 */	addi r0, r4, 1
 /* 803610C4 0035E004  90 05 00 08 */	stw r0, 8(r5)
 /* 803610C8 0035E008  98 C4 00 00 */	stb r6, 0(r4)
-/* 803610CC 0035E00C  42 00 FF EC */	bdnz func_803610B8
+/* 803610CC 0035E00C  42 00 FF EC */	bdnz lbl_803610B8
 /* 803610D0 0035E010  4E 80 00 20 */	blr 
 
-/* 803610D4 0020 .text      GDOverflowed                   GDOverflowed                   */
+/* 803610D4 0030 .text      GDOverflowed                   GDOverflowed                   */
 .global GDOverflowed
+GDOverflowed:
 GDOverflowed:
 /* 803610D4 0035E014  7C 08 02 A6 */	mflr r0
 /* 803610D8 0035E018  90 01 00 04 */	stw r0, 4(r1)
 /* 803610DC 0035E01C  94 21 FF F8 */	stwu r1, -8(r1)
 /* 803610E0 0035E020  81 8D 94 04 */	lwz r12, overflowcb-_SDA_BASE_(r13)
 /* 803610E4 0035E024  28 0C 00 00 */	cmplwi r12, 0
-/* 803610E8 0035E028  41 82 00 0C */	beq func_803610F4
+/* 803610E8 0035E028  41 82 00 0C */	beq lbl_803610F4
 /* 803610EC 0035E02C  7D 88 03 A6 */	mtlr r12
 /* 803610F0 0035E030  4E 80 00 21 */	blrl 
-
-/* 803610F4 0010 .text      func_803610F4                  func_803610F4                  */
-.global func_803610F4
-func_803610F4:
+lbl_803610F4:
 /* 803610F4 0035E034  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 803610F8 0035E038  38 21 00 08 */	addi r1, r1, 8
 /* 803610FC 0035E03C  7C 08 03 A6 */	mtlr r0

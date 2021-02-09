@@ -7,6 +7,7 @@
 /* 800236C0 0068 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter fpcLnIt_MethodCall__FP16create_tag_classP13method_filter */
 .global fpcLnIt_MethodCall__FP16create_tag_classP13method_filter
 fpcLnIt_MethodCall__FP16create_tag_classP13method_filter:
+fpcLnIt_MethodCall__FP16create_tag_classP13method_filter:
 /* 800236C0 00020600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800236C4 00020604  7C 08 02 A6 */	mflr r0
 /* 800236C8 00020608  90 01 00 24 */	stw r0, 0x24(r1)
@@ -36,6 +37,7 @@ fpcLnIt_MethodCall__FP16create_tag_classP13method_filter:
 
 /* 80023728 003C .text      fpcLnIt_Queue__FPFPvPv_i       fpcLnIt_Queue__FPFPvPv_i       */
 .global fpcLnIt_Queue__FPFPvPv_i
+fpcLnIt_Queue__FPFPvPv_i:
 fpcLnIt_Queue__FPFPvPv_i:
 /* 80023728 00020668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8002372C 0002066C  7C 08 02 A6 */	mflr r0

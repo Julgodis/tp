@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 802A2C98 001C .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID getHandleSoundID__15JAISoundHandlesF10JAISoundID */
+/* 802A2C98 005C .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID getHandleSoundID__15JAISoundHandlesF10JAISoundID */
 .global getHandleSoundID__15JAISoundHandlesF10JAISoundID
+getHandleSoundID__15JAISoundHandlesF10JAISoundID:
 getHandleSoundID__15JAISoundHandlesF10JAISoundID:
 /* 802A2C98 0029FBD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A2C9C 0029FBDC  38 A0 00 00 */	li r5, 0
@@ -13,69 +14,49 @@ getHandleSoundID__15JAISoundHandlesF10JAISoundID:
 /* 802A2CA4 0029FBE4  80 04 00 00 */	lwz r0, 0(r4)
 /* 802A2CA8 0029FBE8  7C C9 03 A6 */	mtctr r6
 /* 802A2CAC 0029FBEC  2C 06 00 00 */	cmpwi r6, 0
-/* 802A2CB0 0029FBF0  40 81 00 38 */	ble func_802A2CE8
-
-/* 802A2CB4 002C .text      func_802A2CB4                  func_802A2CB4                  */
-.global func_802A2CB4
-func_802A2CB4:
+/* 802A2CB0 0029FBF0  40 81 00 38 */	ble lbl_802A2CE8
+lbl_802A2CB4:
 /* 802A2CB4 0029FBF4  80 83 00 00 */	lwz r4, 0(r3)
 /* 802A2CB8 0029FBF8  7C C4 2A 14 */	add r6, r4, r5
 /* 802A2CBC 0029FBFC  80 86 00 00 */	lwz r4, 0(r6)
 /* 802A2CC0 0029FC00  28 04 00 00 */	cmplwi r4, 0
-/* 802A2CC4 0029FC04  41 82 00 1C */	beq func_802A2CE0
+/* 802A2CC4 0029FC04  41 82 00 1C */	beq lbl_802A2CE0
 /* 802A2CC8 0029FC08  80 84 00 18 */	lwz r4, 0x18(r4)
 /* 802A2CCC 0029FC0C  90 81 00 08 */	stw r4, 8(r1)
 /* 802A2CD0 0029FC10  7C 04 00 40 */	cmplw r4, r0
-/* 802A2CD4 0029FC14  40 82 00 0C */	bne func_802A2CE0
+/* 802A2CD4 0029FC14  40 82 00 0C */	bne lbl_802A2CE0
 /* 802A2CD8 0029FC18  7C C3 33 78 */	mr r3, r6
-/* 802A2CDC 0029FC1C  48 00 00 10 */	b func_802A2CEC
-
-/* 802A2CE0 0008 .text      func_802A2CE0                  func_802A2CE0                  */
-.global func_802A2CE0
-func_802A2CE0:
+/* 802A2CDC 0029FC1C  48 00 00 10 */	b lbl_802A2CEC
+lbl_802A2CE0:
 /* 802A2CE0 0029FC20  38 A5 00 04 */	addi r5, r5, 4
-/* 802A2CE4 0029FC24  42 00 FF D0 */	bdnz func_802A2CB4
-
-/* 802A2CE8 0004 .text      func_802A2CE8                  func_802A2CE8                  */
-.global func_802A2CE8
-func_802A2CE8:
+/* 802A2CE4 0029FC24  42 00 FF D0 */	bdnz lbl_802A2CB4
+lbl_802A2CE8:
 /* 802A2CE8 0029FC28  38 60 00 00 */	li r3, 0
-
-/* 802A2CEC 0008 .text      func_802A2CEC                  func_802A2CEC                  */
-.global func_802A2CEC
-func_802A2CEC:
+lbl_802A2CEC:
 /* 802A2CEC 0029FC2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A2CF0 0029FC30  4E 80 00 20 */	blr 
 
-/* 802A2CF4 0014 .text      getFreeHandle__15JAISoundHandlesFv getFreeHandle__15JAISoundHandlesFv */
+/* 802A2CF4 0040 .text      getFreeHandle__15JAISoundHandlesFv getFreeHandle__15JAISoundHandlesFv */
 .global getFreeHandle__15JAISoundHandlesFv
+getFreeHandle__15JAISoundHandlesFv:
 getFreeHandle__15JAISoundHandlesFv:
 /* 802A2CF4 0029FC34  38 80 00 00 */	li r4, 0
 /* 802A2CF8 0029FC38  80 03 00 04 */	lwz r0, 4(r3)
 /* 802A2CFC 0029FC3C  7C 09 03 A6 */	mtctr r0
 /* 802A2D00 0029FC40  2C 00 00 00 */	cmpwi r0, 0
-/* 802A2D04 0029FC44  40 81 00 28 */	ble func_802A2D2C
-
-/* 802A2D08 001C .text      func_802A2D08                  func_802A2D08                  */
-.global func_802A2D08
-func_802A2D08:
+/* 802A2D04 0029FC44  40 81 00 28 */	ble lbl_802A2D2C
+lbl_802A2D08:
 /* 802A2D08 0029FC48  80 03 00 00 */	lwz r0, 0(r3)
 /* 802A2D0C 0029FC4C  7C A0 22 14 */	add r5, r0, r4
 /* 802A2D10 0029FC50  80 05 00 00 */	lwz r0, 0(r5)
 /* 802A2D14 0029FC54  28 00 00 00 */	cmplwi r0, 0
-/* 802A2D18 0029FC58  40 82 00 0C */	bne func_802A2D24
+/* 802A2D18 0029FC58  40 82 00 0C */	bne lbl_802A2D24
 /* 802A2D1C 0029FC5C  7C A3 2B 78 */	mr r3, r5
 /* 802A2D20 0029FC60  4E 80 00 20 */	blr 
-
-/* 802A2D24 0008 .text      func_802A2D24                  func_802A2D24                  */
-.global func_802A2D24
-func_802A2D24:
+lbl_802A2D24:
 /* 802A2D24 0029FC64  38 84 00 04 */	addi r4, r4, 4
-/* 802A2D28 0029FC68  42 00 FF E0 */	bdnz func_802A2D08
-
-/* 802A2D2C 0008 .text      func_802A2D2C                  func_802A2D2C                  */
-.global func_802A2D2C
-func_802A2D2C:
+/* 802A2D28 0029FC68  42 00 FF E0 */	bdnz lbl_802A2D08
+lbl_802A2D2C:
 /* 802A2D2C 0029FC6C  38 60 00 00 */	li r3, 0
 /* 802A2D30 0029FC70  4E 80 00 20 */	blr 
 

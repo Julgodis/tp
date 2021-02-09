@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8008813C 0048 .text      rationalBezierRatio__8dCamMathFff rationalBezierRatio__8dCamMathFff */
+/* 8008813C 0148 .text      rationalBezierRatio__8dCamMathFff rationalBezierRatio__8dCamMathFff */
 .global rationalBezierRatio__8dCamMathFff
+rationalBezierRatio__8dCamMathFff:
 rationalBezierRatio__8dCamMathFff:
 /* 8008813C 0008507C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80088140 00085080  7C 08 02 A6 */	mflr r0
@@ -22,19 +23,13 @@ rationalBezierRatio__8dCamMathFff:
 /* 8008816C 000850AC  C0 02 8D C8 */	lfs f0, d_d_cam_param__LIT_3769-_SDA2_BASE_(r2)
 /* 80088170 000850B0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80088174 000850B4  4C 41 13 82 */	cror 2, 1, 2
-/* 80088178 000850B8  40 82 00 0C */	bne func_80088184
+/* 80088178 000850B8  40 82 00 0C */	bne lbl_80088184
 /* 8008817C 000850BC  CB E2 8D D0 */	lfd f31, d_d_cam_param__LIT_3770-_SDA2_BASE_(r2)
-/* 80088180 000850C0  48 00 00 0C */	b func_8008818C
-
-/* 80088184 0008 .text      func_80088184                  func_80088184                  */
-.global func_80088184
-func_80088184:
+/* 80088180 000850C0  48 00 00 0C */	b lbl_8008818C
+lbl_80088184:
 /* 80088184 000850C4  CB E2 8D D8 */	lfd f31, d_d_cam_param__LIT_3771-_SDA2_BASE_(r2)
 /* 80088188 000850C8  FC 20 08 50 */	fneg f1, f1
-
-/* 8008818C 004C .text      func_8008818C                  func_8008818C                  */
-.global func_8008818C
-func_8008818C:
+lbl_8008818C:
 /* 8008818C 000850CC  C8 62 8D E0 */	lfd f3, d_d_cam_param__LIT_3772-_SDA2_BASE_(r2)
 /* 80088190 000850D0  FC 43 00 72 */	fmul f2, f3, f1
 /* 80088194 000850D4  FC 02 07 B2 */	fmul f0, f2, f30
@@ -51,31 +46,22 @@ func_8008818C:
 /* 800881C0 00085100  FC 22 00 28 */	fsub f1, f2, f0
 /* 800881C4 00085104  C8 02 8D F0 */	lfd f0, d_d_cam_param__LIT_3774-_SDA2_BASE_(r2)
 /* 800881C8 00085108  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 800881CC 0008510C  40 81 00 0C */	ble func_800881D8
+/* 800881CC 0008510C  40 81 00 0C */	ble lbl_800881D8
 /* 800881D0 00085110  48 2E 48 85 */	bl sqrt
-/* 800881D4 00085114  48 00 00 08 */	b func_800881DC
-
-/* 800881D8 0004 .text      func_800881D8                  func_800881D8                  */
-.global func_800881D8
-func_800881D8:
+/* 800881D4 00085114  48 00 00 08 */	b lbl_800881DC
+lbl_800881D8:
 /* 800881D8 00085118  FC 20 00 90 */	fmr f1, f0
-
-/* 800881DC 0024 .text      func_800881DC                  func_800881DC                  */
-.global func_800881DC
-func_800881DC:
+lbl_800881DC:
 /* 800881DC 0008511C  FC 3D 08 28 */	fsub f1, f29, f1
 /* 800881E0 00085120  C8 02 8D E0 */	lfd f0, d_d_cam_param__LIT_3772-_SDA2_BASE_(r2)
 /* 800881E4 00085124  FC 40 07 32 */	fmul f2, f0, f28
 /* 800881E8 00085128  C8 02 8D F8 */	lfd f0, d_d_cam_param__LIT_3775-_SDA2_BASE_(r2)
 /* 800881EC 0008512C  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 800881F0 00085130  41 81 00 10 */	bgt func_80088200
+/* 800881F0 00085130  41 81 00 10 */	bgt lbl_80088200
 /* 800881F4 00085134  C8 02 8E 00 */	lfd f0, d_d_cam_param__LIT_3776-_SDA2_BASE_(r2)
 /* 800881F8 00085138  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 800881FC 0008513C  40 80 00 54 */	bge func_80088250
-
-/* 80088200 0048 .text      func_80088200                  func_80088200                  */
-.global func_80088200
-func_80088200:
+/* 800881FC 0008513C  40 80 00 54 */	bge lbl_80088250
+lbl_80088200:
 /* 80088200 00085140  FC 41 10 24 */	fdiv f2, f1, f2
 /* 80088204 00085144  FC 62 00 B2 */	fmul f3, f2, f2
 /* 80088208 00085148  C8 02 8D D0 */	lfd f0, d_d_cam_param__LIT_3770-_SDA2_BASE_(r2)
@@ -89,26 +75,17 @@ func_80088200:
 /* 80088228 00085168  FC 23 00 2A */	fadd f1, f3, f0
 /* 8008822C 0008516C  C8 02 8E 08 */	lfd f0, d_d_cam_param__LIT_3777-_SDA2_BASE_(r2)
 /* 80088230 00085170  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 80088234 00085174  40 81 00 14 */	ble func_80088248
+/* 80088234 00085174  40 81 00 14 */	ble lbl_80088248
 /* 80088238 00085178  FC 03 08 24 */	fdiv f0, f3, f1
 /* 8008823C 0008517C  FC 3F 00 32 */	fmul f1, f31, f0
 /* 80088240 00085180  FC 20 08 18 */	frsp f1, f1
-/* 80088244 00085184  48 00 00 10 */	b func_80088254
-
-/* 80088248 0008 .text      func_80088248                  func_80088248                  */
-.global func_80088248
-func_80088248:
+/* 80088244 00085184  48 00 00 10 */	b lbl_80088254
+lbl_80088248:
 /* 80088248 00085188  C0 22 8D C8 */	lfs f1, d_d_cam_param__LIT_3769-_SDA2_BASE_(r2)
-/* 8008824C 0008518C  48 00 00 08 */	b func_80088254
-
-/* 80088250 0004 .text      func_80088250                  func_80088250                  */
-.global func_80088250
-func_80088250:
+/* 8008824C 0008518C  48 00 00 08 */	b lbl_80088254
+lbl_80088250:
 /* 80088250 00085190  C0 22 8D C8 */	lfs f1, d_d_cam_param__LIT_3769-_SDA2_BASE_(r2)
-
-/* 80088254 0030 .text      func_80088254                  func_80088254                  */
-.global func_80088254
-func_80088254:
+lbl_80088254:
 /* 80088254 00085194  E3 E1 00 48 */	psq_l f31, 72(r1), 0, qr0
 /* 80088258 00085198  CB E1 00 40 */	lfd f31, 0x40(r1)
 /* 8008825C 0008519C  E3 C1 00 38 */	psq_l f30, 56(r1), 0, qr0
@@ -124,6 +101,7 @@ func_80088254:
 
 /* 80088284 005C .text      zoomFovy__8dCamMathFff         zoomFovy__8dCamMathFff         */
 .global zoomFovy__8dCamMathFff
+zoomFovy__8dCamMathFff:
 zoomFovy__8dCamMathFff:
 /* 80088284 000851C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80088288 000851C8  7C 08 02 A6 */	mflr r0
@@ -149,22 +127,20 @@ zoomFovy__8dCamMathFff:
 /* 800882D8 00085218  38 21 00 20 */	addi r1, r1, 0x20
 /* 800882DC 0008521C  4E 80 00 20 */	blr 
 
-/* 800882E0 0024 .text      __dt__7cDegreeFv               __dt__7cDegreeFv               */
+/* 800882E0 003C .text      __dt__7cDegreeFv               __dt__7cDegreeFv               */
 .global __dt__7cDegreeFv
+__dt__7cDegreeFv:
 __dt__7cDegreeFv:
 /* 800882E0 00085220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800882E4 00085224  7C 08 02 A6 */	mflr r0
 /* 800882E8 00085228  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800882EC 0008522C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800882F0 00085230  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800882F4 00085234  41 82 00 10 */	beq func_80088304
+/* 800882F4 00085234  41 82 00 10 */	beq lbl_80088304
 /* 800882F8 00085238  7C 80 07 35 */	extsh. r0, r4
-/* 800882FC 0008523C  40 81 00 08 */	ble func_80088304
+/* 800882FC 0008523C  40 81 00 08 */	ble lbl_80088304
 /* 80088300 00085240  48 24 6A 3D */	bl __dl__FPv
-
-/* 80088304 0018 .text      func_80088304                  func_80088304                  */
-.global func_80088304
-func_80088304:
+lbl_80088304:
 /* 80088304 00085244  7F E3 FB 78 */	mr r3, r31
 /* 80088308 00085248  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8008830C 0008524C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -174,6 +150,7 @@ func_80088304:
 
 /* 8008831C 0068 .text      xyzRotateX__8dCamMathFR4cXyz7cSAngle xyzRotateX__8dCamMathFR4cXyz7cSAngle */
 .global xyzRotateX__8dCamMathFR4cXyz7cSAngle
+xyzRotateX__8dCamMathFR4cXyz7cSAngle:
 xyzRotateX__8dCamMathFR4cXyz7cSAngle:
 /* 8008831C 0008525C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80088320 00085260  7C 08 02 A6 */	mflr r0
@@ -205,6 +182,7 @@ xyzRotateX__8dCamMathFR4cXyz7cSAngle:
 /* 80088384 0068 .text      xyzRotateY__8dCamMathFR4cXyz7cSAngle xyzRotateY__8dCamMathFR4cXyz7cSAngle */
 .global xyzRotateY__8dCamMathFR4cXyz7cSAngle
 xyzRotateY__8dCamMathFR4cXyz7cSAngle:
+xyzRotateY__8dCamMathFR4cXyz7cSAngle:
 /* 80088384 000852C4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80088388 000852C8  7C 08 02 A6 */	mflr r0
 /* 8008838C 000852CC  90 01 00 54 */	stw r0, 0x54(r1)
@@ -235,6 +213,7 @@ xyzRotateY__8dCamMathFR4cXyz7cSAngle:
 /* 800883EC 0048 .text      xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz */
 .global xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz
 xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz:
+xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz:
 /* 800883EC 0008532C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800883F0 00085330  7C 08 02 A6 */	mflr r0
 /* 800883F4 00085334  90 01 00 14 */	stw r0, 0x14(r1)
@@ -257,6 +236,7 @@ xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz:
 /* 80088434 0028 .text      __ct__9dCstick_cFv             __ct__9dCstick_cFv             */
 .global __ct__9dCstick_cFv
 __ct__9dCstick_cFv:
+__ct__9dCstick_cFv:
 /* 80088434 00085374  3C 80 80 3B */	lis r4, __vt__9dCstick_c@ha
 /* 80088438 00085378  38 04 C5 18 */	addi r0, r4, __vt__9dCstick_c@l
 /* 8008843C 0008537C  90 03 00 10 */	stw r0, 0x10(r3)
@@ -271,11 +251,13 @@ __ct__9dCstick_cFv:
 /* 8008845C 0008 .text      Shift__9dCstick_cFUl           Shift__9dCstick_cFUl           */
 .global Shift__9dCstick_cFUl
 Shift__9dCstick_cFUl:
+Shift__9dCstick_cFUl:
 /* 8008845C 0008539C  38 60 00 00 */	li r3, 0
 /* 80088460 000853A0  4E 80 00 20 */	blr 
 
 /* 80088464 008C .text      __ct__11dCamBGChk_cFv          __ct__11dCamBGChk_cFv          */
 .global __ct__11dCamBGChk_cFv
+__ct__11dCamBGChk_cFv:
 __ct__11dCamBGChk_cFv:
 /* 80088464 000853A4  C0 02 8E 20 */	lfs f0, d_d_cam_param__LIT_4001-_SDA2_BASE_(r2)
 /* 80088468 000853A8  D0 03 00 00 */	stfs f0, 0(r3)
@@ -315,6 +297,7 @@ __ct__11dCamBGChk_cFv:
 
 /* 800884F0 009C .text      __ct__11dCamParam_cFl          __ct__11dCamParam_cFl          */
 .global __ct__11dCamParam_cFl
+__ct__11dCamParam_cFl:
 __ct__11dCamParam_cFl:
 /* 800884F0 00085430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800884F4 00085434  7C 08 02 A6 */	mflr r0
@@ -356,25 +339,23 @@ __ct__11dCamParam_cFl:
 /* 80088584 000854C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80088588 000854C8  4E 80 00 20 */	blr 
 
-/* 8008858C 0030 .text      __dt__11dCamParam_cFv          __dt__11dCamParam_cFv          */
+/* 8008858C 0048 .text      __dt__11dCamParam_cFv          __dt__11dCamParam_cFv          */
 .global __dt__11dCamParam_cFv
+__dt__11dCamParam_cFv:
 __dt__11dCamParam_cFv:
 /* 8008858C 000854CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80088590 000854D0  7C 08 02 A6 */	mflr r0
 /* 80088594 000854D4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80088598 000854D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8008859C 000854DC  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800885A0 000854E0  41 82 00 1C */	beq func_800885BC
+/* 800885A0 000854E0  41 82 00 1C */	beq lbl_800885BC
 /* 800885A4 000854E4  3C A0 80 3B */	lis r5, __vt__11dCamParam_c@ha
 /* 800885A8 000854E8  38 05 C5 0C */	addi r0, r5, __vt__11dCamParam_c@l
 /* 800885AC 000854EC  90 1F 00 1C */	stw r0, 0x1c(r31)
 /* 800885B0 000854F0  7C 80 07 35 */	extsh. r0, r4
-/* 800885B4 000854F4  40 81 00 08 */	ble func_800885BC
+/* 800885B4 000854F4  40 81 00 08 */	ble lbl_800885BC
 /* 800885B8 000854F8  48 24 67 85 */	bl __dl__FPv
-
-/* 800885BC 0018 .text      func_800885BC                  func_800885BC                  */
-.global func_800885BC
-func_800885BC:
+lbl_800885BC:
 /* 800885BC 000854FC  7F E3 FB 78 */	mr r3, r31
 /* 800885C0 00085500  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800885C4 00085504  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -382,14 +363,15 @@ func_800885BC:
 /* 800885CC 0008550C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800885D0 00085510  4E 80 00 20 */	blr 
 
-/* 800885D4 0034 .text      Change__11dCamParam_cFl        Change__11dCamParam_cFl        */
+/* 800885D4 004C .text      Change__11dCamParam_cFl        Change__11dCamParam_cFl        */
 .global Change__11dCamParam_cFl
 Change__11dCamParam_cFl:
+Change__11dCamParam_cFl:
 /* 800885D4 00085514  2C 04 00 00 */	cmpwi r4, 0
-/* 800885D8 00085518  41 80 00 30 */	blt func_80088608
+/* 800885D8 00085518  41 80 00 30 */	blt lbl_80088608
 /* 800885DC 0008551C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 800885E0 00085520  7C 04 00 00 */	cmpw r4, r0
-/* 800885E4 00085524  40 80 00 24 */	bge func_80088608
+/* 800885E4 00085524  40 80 00 24 */	bge lbl_80088608
 /* 800885E8 00085528  90 83 00 14 */	stw r4, 0x14(r3)
 /* 800885EC 0008552C  80 83 00 08 */	lwz r4, 8(r3)
 /* 800885F0 00085530  80 03 00 14 */	lwz r0, 0x14(r3)
@@ -398,10 +380,7 @@ Change__11dCamParam_cFl:
 /* 800885FC 0008553C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80088600 00085540  38 60 00 01 */	li r3, 1
 /* 80088604 00085544  4E 80 00 20 */	blr 
-
-/* 80088608 0018 .text      func_80088608                  func_80088608                  */
-.global func_80088608
-func_80088608:
+lbl_80088608:
 /* 80088608 00085548  38 00 00 00 */	li r0, 0
 /* 8008860C 0008554C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80088610 00085550  80 03 00 08 */	lwz r0, 8(r3)
@@ -409,8 +388,9 @@ func_80088608:
 /* 80088618 00085558  38 60 00 00 */	li r3, 0
 /* 8008861C 0008555C  4E 80 00 20 */	blr 
 
-/* 80088620 001C .text      SearchStyle__11dCamParam_cFUl  SearchStyle__11dCamParam_cFUl  */
+/* 80088620 0048 .text      SearchStyle__11dCamParam_cFUl  SearchStyle__11dCamParam_cFUl  */
 .global SearchStyle__11dCamParam_cFUl
+SearchStyle__11dCamParam_cFUl:
 SearchStyle__11dCamParam_cFUl:
 /* 80088620 00085560  38 E0 FF FF */	li r7, -1
 /* 80088624 00085564  39 00 00 00 */	li r8, 0
@@ -418,33 +398,25 @@ SearchStyle__11dCamParam_cFUl:
 /* 8008862C 0008556C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80088630 00085570  7C 09 03 A6 */	mtctr r0
 /* 80088634 00085574  2C 00 00 00 */	cmpwi r0, 0
-/* 80088638 00085578  40 81 00 28 */	ble func_80088660
-
-/* 8008863C 0018 .text      func_8008863C                  func_8008863C                  */
-.global func_8008863C
-func_8008863C:
+/* 80088638 00085578  40 81 00 28 */	ble lbl_80088660
+lbl_8008863C:
 /* 8008863C 0008557C  80 C3 00 08 */	lwz r6, 8(r3)
 /* 80088640 00085580  7C 06 28 2E */	lwzx r0, r6, r5
 /* 80088644 00085584  7C 04 00 40 */	cmplw r4, r0
-/* 80088648 00085588  40 82 00 0C */	bne func_80088654
+/* 80088648 00085588  40 82 00 0C */	bne lbl_80088654
 /* 8008864C 0008558C  7D 07 43 78 */	mr r7, r8
-/* 80088650 00085590  48 00 00 10 */	b func_80088660
-
-/* 80088654 000C .text      func_80088654                  func_80088654                  */
-.global func_80088654
-func_80088654:
+/* 80088650 00085590  48 00 00 10 */	b lbl_80088660
+lbl_80088654:
 /* 80088654 00085594  39 08 00 01 */	addi r8, r8, 1
 /* 80088658 00085598  38 A5 00 78 */	addi r5, r5, 0x78
-/* 8008865C 0008559C  42 00 FF E0 */	bdnz func_8008863C
-
-/* 80088660 0008 .text      func_80088660                  func_80088660                  */
-.global func_80088660
-func_80088660:
+/* 8008865C 0008559C  42 00 FF E0 */	bdnz lbl_8008863C
+lbl_80088660:
 /* 80088660 000855A0  7C E3 3B 78 */	mr r3, r7
 /* 80088664 000855A4  4E 80 00 20 */	blr 
 
 /* 80088668 0250 .text      __ct__11dCamSetup_cFv          __ct__11dCamSetup_cFv          */
 .global __ct__11dCamSetup_cFv
+__ct__11dCamSetup_cFv:
 __ct__11dCamSetup_cFv:
 /* 80088668 000855A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008866C 000855AC  7C 08 02 A6 */	mflr r0
@@ -595,35 +567,30 @@ __ct__11dCamSetup_cFv:
 /* 800888B0 000857F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800888B4 000857F4  4E 80 00 20 */	blr 
 
-/* 800888B8 0038 .text      __dt__11dCamSetup_cFv          __dt__11dCamSetup_cFv          */
+/* 800888B8 0060 .text      __dt__11dCamSetup_cFv          __dt__11dCamSetup_cFv          */
 .global __dt__11dCamSetup_cFv
+__dt__11dCamSetup_cFv:
 __dt__11dCamSetup_cFv:
 /* 800888B8 000857F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800888BC 000857FC  7C 08 02 A6 */	mflr r0
 /* 800888C0 00085800  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800888C4 00085804  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800888C8 00085808  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800888CC 0008580C  41 82 00 34 */	beq func_80088900
+/* 800888CC 0008580C  41 82 00 34 */	beq lbl_80088900
 /* 800888D0 00085810  3C 60 80 3B */	lis r3, __vt__11dCamSetup_c@ha
 /* 800888D4 00085814  38 03 C5 00 */	addi r0, r3, __vt__11dCamSetup_c@l
 /* 800888D8 00085818  90 1F 00 FC */	stw r0, 0xfc(r31)
 /* 800888DC 0008581C  34 1F 01 00 */	addic. r0, r31, 0x100
-/* 800888E0 00085820  41 82 00 10 */	beq func_800888F0
+/* 800888E0 00085820  41 82 00 10 */	beq lbl_800888F0
 /* 800888E4 00085824  3C 60 80 3B */	lis r3, __vt__9dCstick_c@ha
 /* 800888E8 00085828  38 03 C5 18 */	addi r0, r3, __vt__9dCstick_c@l
 /* 800888EC 0008582C  90 1F 01 10 */	stw r0, 0x110(r31)
-
-/* 800888F0 0010 .text      func_800888F0                  func_800888F0                  */
-.global func_800888F0
-func_800888F0:
+lbl_800888F0:
 /* 800888F0 00085830  7C 80 07 35 */	extsh. r0, r4
-/* 800888F4 00085834  40 81 00 0C */	ble func_80088900
+/* 800888F4 00085834  40 81 00 0C */	ble lbl_80088900
 /* 800888F8 00085838  7F E3 FB 78 */	mr r3, r31
 /* 800888FC 0008583C  48 24 64 41 */	bl __dl__FPv
-
-/* 80088900 0018 .text      func_80088900                  func_80088900                  */
-.global func_80088900
-func_80088900:
+lbl_80088900:
 /* 80088900 00085840  7F E3 FB 78 */	mr r3, r31
 /* 80088904 00085844  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80088908 00085848  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -631,8 +598,9 @@ func_80088900:
 /* 80088910 00085850  38 21 00 10 */	addi r1, r1, 0x10
 /* 80088914 00085854  4E 80 00 20 */	blr 
 
-/* 80088918 004C .text      CheckLatitudeRange__11dCamSetup_cFPs CheckLatitudeRange__11dCamSetup_cFPs */
+/* 80088918 0070 .text      CheckLatitudeRange__11dCamSetup_cFPs CheckLatitudeRange__11dCamSetup_cFPs */
 .global CheckLatitudeRange__11dCamSetup_cFPs
+CheckLatitudeRange__11dCamSetup_cFPs:
 CheckLatitudeRange__11dCamSetup_cFPs:
 /* 80088918 00085858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8008891C 0008585C  C0 22 8E B4 */	lfs f1, d_d_cam_param__LIT_4173-_SDA2_BASE_(r2)
@@ -649,69 +617,56 @@ CheckLatitudeRange__11dCamSetup_cFPs:
 /* 80088948 00085888  A8 C4 00 00 */	lha r6, 0(r4)
 /* 8008894C 0008588C  7C A0 07 34 */	extsh r0, r5
 /* 80088950 00085890  7C 06 00 00 */	cmpw r6, r0
-/* 80088954 00085894  40 81 00 10 */	ble func_80088964
+/* 80088954 00085894  40 81 00 10 */	ble lbl_80088964
 /* 80088958 00085898  B0 A4 00 00 */	sth r5, 0(r4)
 /* 8008895C 0008589C  38 60 00 00 */	li r3, 0
-/* 80088960 000858A0  48 00 00 20 */	b func_80088980
-
-/* 80088964 0018 .text      func_80088964                  func_80088964                  */
-.global func_80088964
-func_80088964:
+/* 80088960 000858A0  48 00 00 20 */	b lbl_80088980
+lbl_80088964:
 /* 80088964 000858A4  7C 60 07 34 */	extsh r0, r3
 /* 80088968 000858A8  7C 06 00 00 */	cmpw r6, r0
-/* 8008896C 000858AC  40 80 00 10 */	bge func_8008897C
+/* 8008896C 000858AC  40 80 00 10 */	bge lbl_8008897C
 /* 80088970 000858B0  B0 64 00 00 */	sth r3, 0(r4)
 /* 80088974 000858B4  38 60 00 00 */	li r3, 0
-/* 80088978 000858B8  48 00 00 08 */	b func_80088980
-
-/* 8008897C 0004 .text      func_8008897C                  func_8008897C                  */
-.global func_8008897C
-func_8008897C:
+/* 80088978 000858B8  48 00 00 08 */	b lbl_80088980
+lbl_8008897C:
 /* 8008897C 000858BC  38 60 00 01 */	li r3, 1
-
-/* 80088980 0008 .text      func_80088980                  func_80088980                  */
-.global func_80088980
-func_80088980:
+lbl_80088980:
 /* 80088980 000858C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80088984 000858C4  4E 80 00 20 */	blr 
 
-/* 80088988 0020 .text      PlayerHideDist__11dCamSetup_cFv PlayerHideDist__11dCamSetup_cFv */
+/* 80088988 0028 .text      PlayerHideDist__11dCamSetup_cFv PlayerHideDist__11dCamSetup_cFv */
 .global PlayerHideDist__11dCamSetup_cFv
+PlayerHideDist__11dCamSetup_cFv:
 PlayerHideDist__11dCamSetup_cFv:
 /* 80088988 000858C8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 8008898C 000858CC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80088990 000858D0  80 84 5D B4 */	lwz r4, 0x5db4(r4)
 /* 80088994 000858D4  80 04 05 74 */	lwz r0, 0x574(r4)
 /* 80088998 000858D8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
-/* 8008899C 000858DC  41 82 00 0C */	beq func_800889A8
+/* 8008899C 000858DC  41 82 00 0C */	beq lbl_800889A8
 /* 800889A0 000858E0  C0 22 8E 54 */	lfs f1, LIT_4014-_SDA2_BASE_(r2)
 /* 800889A4 000858E4  4E 80 00 20 */	blr 
-
-/* 800889A8 0008 .text      func_800889A8                  func_800889A8                  */
-.global func_800889A8
-func_800889A8:
+lbl_800889A8:
 /* 800889A8 000858E8  C0 23 00 48 */	lfs f1, 0x48(r3)
 /* 800889AC 000858EC  4E 80 00 20 */	blr 
 
-/* 800889B0 0030 .text      __dt__9dCstick_cFv             __dt__9dCstick_cFv             */
+/* 800889B0 0048 .text      __dt__9dCstick_cFv             __dt__9dCstick_cFv             */
 .global __dt__9dCstick_cFv
+__dt__9dCstick_cFv:
 __dt__9dCstick_cFv:
 /* 800889B0 000858F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800889B4 000858F4  7C 08 02 A6 */	mflr r0
 /* 800889B8 000858F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800889BC 000858FC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800889C0 00085900  7C 7F 1B 79 */	or. r31, r3, r3
-/* 800889C4 00085904  41 82 00 1C */	beq func_800889E0
+/* 800889C4 00085904  41 82 00 1C */	beq lbl_800889E0
 /* 800889C8 00085908  3C A0 80 3B */	lis r5, __vt__9dCstick_c@ha
 /* 800889CC 0008590C  38 05 C5 18 */	addi r0, r5, __vt__9dCstick_c@l
 /* 800889D0 00085910  90 1F 00 10 */	stw r0, 0x10(r31)
 /* 800889D4 00085914  7C 80 07 35 */	extsh. r0, r4
-/* 800889D8 00085918  40 81 00 08 */	ble func_800889E0
+/* 800889D8 00085918  40 81 00 08 */	ble lbl_800889E0
 /* 800889DC 0008591C  48 24 63 61 */	bl __dl__FPv
-
-/* 800889E0 0018 .text      func_800889E0                  func_800889E0                  */
-.global func_800889E0
-func_800889E0:
+lbl_800889E0:
 /* 800889E0 00085920  7F E3 FB 78 */	mr r3, r31
 /* 800889E4 00085924  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800889E8 00085928  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -724,11 +679,11 @@ func_800889E0:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 8037A7E0 000D .rodata    d_d_cam_param__stringBase0     @stringBase0                   */
+/* 8037A7E0 000D .rodata    @stringBase0                   d_d_cam_param__stringBase0     */
 .global d_d_cam_param__stringBase0
 d_d_cam_param__stringBase0:
 .byte 0x63, 0x61, 0x6d, 0x73, 0x74, 0x79, 0x6c, 0x65, 0x2e, 0x64, 0x61, 0x74, 0x00 /* baserom.dol+0x3777e0 */
-.byte 0x00, 0x00, 0x00 /* baserom.dol+0x3777ed */
+.byte 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
@@ -738,276 +693,282 @@ d_d_cam_param__stringBase0:
 /* 803AC500 000C .data      __vt__11dCamSetup_c            __vt__11dCamSetup_c            */
 .global __vt__11dCamSetup_c
 __vt__11dCamSetup_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x08, 0x88, 0xb8 /* baserom.dol+0x3a9500 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__11dCamSetup_cFv
 
 /* 803AC50C 000C .data      __vt__11dCamParam_c            __vt__11dCamParam_c            */
 .global __vt__11dCamParam_c
 __vt__11dCamParam_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x08, 0x85, 0x8c /* baserom.dol+0x3a950c */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__11dCamParam_cFv
 
 /* 803AC518 000C .data      __vt__9dCstick_c               __vt__9dCstick_c               */
 .global __vt__9dCstick_c
 __vt__9dCstick_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x08, 0x89, 0xb0 /* baserom.dol+0x3a9518 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a9524 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__9dCstick_cFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 804527C8 0004 .sdata2    d_d_cam_param__LIT_3769        @3769                          */
+/* 804527C8 0004 .sdata2    @3769                          d_d_cam_param__LIT_3769        */
 .global d_d_cam_param__LIT_3769
 d_d_cam_param__LIT_3769:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1628 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d162c */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 
-/* 804527D0 0008 .sdata2    d_d_cam_param__LIT_3770        @3770                          */
+/* 804527D0 0008 .sdata2    @3770                          d_d_cam_param__LIT_3770        */
 .global d_d_cam_param__LIT_3770
 d_d_cam_param__LIT_3770:
 .byte 0x3f, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1630 */
 
-/* 804527D8 0008 .sdata2    d_d_cam_param__LIT_3771        @3771                          */
+/* 804527D8 0008 .sdata2    @3771                          d_d_cam_param__LIT_3771        */
 .global d_d_cam_param__LIT_3771
 d_d_cam_param__LIT_3771:
 .byte 0xbf, 0xf0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1638 */
 
-/* 804527E0 0008 .sdata2    d_d_cam_param__LIT_3772        @3772                          */
+/* 804527E0 0008 .sdata2    @3772                          d_d_cam_param__LIT_3772        */
 .global d_d_cam_param__LIT_3772
 d_d_cam_param__LIT_3772:
 .byte 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1640 */
 
-/* 804527E8 0008 .sdata2    d_d_cam_param__LIT_3773        @3773                          */
+/* 804527E8 0008 .sdata2    @3773                          d_d_cam_param__LIT_3773        */
 .global d_d_cam_param__LIT_3773
 d_d_cam_param__LIT_3773:
 .byte 0x40, 0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1648 */
 
-/* 804527F0 0008 .sdata2    d_d_cam_param__LIT_3774        @3774                          */
+/* 804527F0 0008 .sdata2    @3774                          d_d_cam_param__LIT_3774        */
 .global d_d_cam_param__LIT_3774
 d_d_cam_param__LIT_3774:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1650 */
 
-/* 804527F8 0008 .sdata2    d_d_cam_param__LIT_3775        @3775                          */
+/* 804527F8 0008 .sdata2    @3775                          d_d_cam_param__LIT_3775        */
 .global d_d_cam_param__LIT_3775
 d_d_cam_param__LIT_3775:
 .byte 0x3e, 0x7a, 0xd7, 0xf2, 0x9a, 0xbc, 0xaf, 0x48 /* baserom.dol+0x3d1658 */
 
-/* 80452800 0008 .sdata2    d_d_cam_param__LIT_3776        @3776                          */
+/* 80452800 0008 .sdata2    @3776                          d_d_cam_param__LIT_3776        */
 .global d_d_cam_param__LIT_3776
 d_d_cam_param__LIT_3776:
 .byte 0xbe, 0x7a, 0xd7, 0xf2, 0x9a, 0xbc, 0xaf, 0x48 /* baserom.dol+0x3d1660 */
 
-/* 80452808 0008 .sdata2    d_d_cam_param__LIT_3777        @3777                          */
+/* 80452808 0008 .sdata2    @3777                          d_d_cam_param__LIT_3777        */
 .global d_d_cam_param__LIT_3777
 d_d_cam_param__LIT_3777:
 .byte 0x3e, 0x7a, 0xd7, 0xf2, 0xa0, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1668 */
 
-/* 80452810 0004 .sdata2    d_d_cam_param__LIT_3791        @3791                          */
+/* 80452810 0004 .sdata2    @3791                          d_d_cam_param__LIT_3791        */
 .global d_d_cam_param__LIT_3791
 d_d_cam_param__LIT_3791:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d1670 */
 
-/* 80452814 0004 .sdata2    d_d_cam_param__LIT_3807        @3807                          */
+/* 80452814 0004 .sdata2    @3807                          d_d_cam_param__LIT_3807        */
 .global d_d_cam_param__LIT_3807
 d_d_cam_param__LIT_3807:
 .byte 0x42, 0x65, 0x2e, 0xe0 /* baserom.dol+0x3d1674 */
 
-/* 80452818 0004 .sdata2    LIT_3991                       @3991                          */
+/* 80452818 0004 .sdata2    @3991                          LIT_3991                       */
 .global LIT_3991
 LIT_3991:
 .byte 0x3e, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d1678 */
 
-/* 8045281C 0004 .sdata2    d_d_cam_param__LIT_3992        @3992                          */
+/* 8045281C 0004 .sdata2    @3992                          d_d_cam_param__LIT_3992        */
 .global d_d_cam_param__LIT_3992
 d_d_cam_param__LIT_3992:
 .byte 0x3f, 0x73, 0x33, 0x33 /* baserom.dol+0x3d167c */
 
-/* 80452820 0004 .sdata2    d_d_cam_param__LIT_4001        @4001                          */
+/* 80452820 0004 .sdata2    @4001                          d_d_cam_param__LIT_4001        */
 .global d_d_cam_param__LIT_4001
 d_d_cam_param__LIT_4001:
 .byte 0x42, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1680 */
 
-/* 80452824 0004 .sdata2    LIT_4002                       @4002                          */
+/* 80452824 0004 .sdata2    @4002                          LIT_4002                       */
 .global LIT_4002
 LIT_4002:
 .byte 0x41, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d1684 */
 
-/* 80452828 0004 .sdata2    d_d_cam_param__LIT_4003        @4003                          */
+/* 80452828 0004 .sdata2    @4003                          d_d_cam_param__LIT_4003        */
 .global d_d_cam_param__LIT_4003
 d_d_cam_param__LIT_4003:
 .byte 0x3e, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d1688 */
 
-/* 8045282C 0004 .sdata2    LIT_4004                       @4004                          */
+/* 8045282C 0004 .sdata2    @4004                          LIT_4004                       */
 .global LIT_4004
 LIT_4004:
 .byte 0x3f, 0x19, 0x99, 0x9a /* baserom.dol+0x3d168c */
 
-/* 80452830 0004 .sdata2    LIT_4005                       @4005                          */
+/* 80452830 0004 .sdata2    @4005                          LIT_4005                       */
 .global LIT_4005
 LIT_4005:
 .byte 0x40, 0x40, 0x00, 0x00 /* baserom.dol+0x3d1690 */
 
-/* 80452834 0004 .sdata2    LIT_4006                       @4006                          */
+/* 80452834 0004 .sdata2    @4006                          LIT_4006                       */
 .global LIT_4006
 LIT_4006:
 .byte 0x41, 0x70, 0x00, 0x00 /* baserom.dol+0x3d1694 */
 
-/* 80452838 0004 .sdata2    LIT_4007                       @4007                          */
+/* 80452838 0004 .sdata2    @4007                          LIT_4007                       */
 .global LIT_4007
 LIT_4007:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d1698 */
 
-/* 8045283C 0004 .sdata2    LIT_4008                       @4008                          */
+/* 8045283C 0004 .sdata2    @4008                          LIT_4008                       */
 .global LIT_4008
 LIT_4008:
 .byte 0x3e, 0x99, 0x99, 0x9a /* baserom.dol+0x3d169c */
 
-/* 80452840 0004 .sdata2    d_d_cam_param__LIT_4009        @4009                          */
+/* 80452840 0004 .sdata2    @4009                          d_d_cam_param__LIT_4009        */
 .global d_d_cam_param__LIT_4009
 d_d_cam_param__LIT_4009:
 .byte 0x41, 0x20, 0x00, 0x00 /* baserom.dol+0x3d16a0 */
 
-/* 80452844 0004 .sdata2    d_d_cam_param__LIT_4010        @4010                          */
+/* 80452844 0004 .sdata2    @4010                          d_d_cam_param__LIT_4010        */
 .global d_d_cam_param__LIT_4010
 d_d_cam_param__LIT_4010:
 .byte 0x3d, 0xcc, 0xcc, 0xcd /* baserom.dol+0x3d16a4 */
 
-/* 80452848 0004 .sdata2    d_d_cam_param__LIT_4011        @4011                          */
+/* 80452848 0004 .sdata2    @4011                          d_d_cam_param__LIT_4011        */
 .global d_d_cam_param__LIT_4011
 d_d_cam_param__LIT_4011:
 .byte 0x3f, 0x40, 0x00, 0x00 /* baserom.dol+0x3d16a8 */
 
-/* 8045284C 0004 .sdata2    d_d_cam_param__LIT_4012        @4012                          */
+/* 8045284C 0004 .sdata2    @4012                          d_d_cam_param__LIT_4012        */
 .global d_d_cam_param__LIT_4012
 d_d_cam_param__LIT_4012:
 .byte 0x42, 0xa0, 0x00, 0x00 /* baserom.dol+0x3d16ac */
 
-/* 80452850 0004 .sdata2    d_d_cam_param__LIT_4013        @4013                          */
+/* 80452850 0004 .sdata2    @4013                          d_d_cam_param__LIT_4013        */
 .global d_d_cam_param__LIT_4013
 d_d_cam_param__LIT_4013:
 .byte 0x3d, 0xa3, 0xd7, 0x0a /* baserom.dol+0x3d16b0 */
 
-/* 80452854 0004 .sdata2    LIT_4014                       @4014                          */
+/* 80452854 0004 .sdata2    @4014                          LIT_4014                       */
 .global LIT_4014
 LIT_4014:
 .byte 0x42, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d16b4 */
 
-/* 80452858 0004 .sdata2    d_d_cam_param__LIT_4058        @4058                          */
+/* 80452858 0004 .sdata2    @4058                          d_d_cam_param__LIT_4058        */
 .global d_d_cam_param__LIT_4058
 d_d_cam_param__LIT_4058:
 .byte 0x3e, 0x80, 0x00, 0x00 /* baserom.dol+0x3d16b8 */
 
-/* 8045285C 0004 .sdata2    d_d_cam_param__LIT_4119        @4119                          */
+/* 8045285C 0004 .sdata2    @4119                          d_d_cam_param__LIT_4119        */
 .global d_d_cam_param__LIT_4119
 d_d_cam_param__LIT_4119:
 .byte 0x47, 0xc3, 0x50, 0x00 /* baserom.dol+0x3d16bc */
 
-/* 80452860 0004 .sdata2    d_d_cam_param__LIT_4120        @4120                          */
+/* 80452860 0004 .sdata2    @4120                          d_d_cam_param__LIT_4120        */
 .global d_d_cam_param__LIT_4120
 d_d_cam_param__LIT_4120:
 .byte 0x3d, 0x4c, 0xcc, 0xcd /* baserom.dol+0x3d16c0 */
 
-/* 80452864 0004 .sdata2    d_d_cam_param__LIT_4121        @4121                          */
+/* 80452864 0004 .sdata2    @4121                          d_d_cam_param__LIT_4121        */
 .global d_d_cam_param__LIT_4121
 d_d_cam_param__LIT_4121:
 .byte 0xc2, 0x70, 0x00, 0x00 /* baserom.dol+0x3d16c4 */
 
-/* 80452868 0004 .sdata2    d_d_cam_param__LIT_4122        @4122                          */
+/* 80452868 0004 .sdata2    @4122                          d_d_cam_param__LIT_4122        */
 .global d_d_cam_param__LIT_4122
 d_d_cam_param__LIT_4122:
 .byte 0x3e, 0xa8, 0xf5, 0xc3 /* baserom.dol+0x3d16c8 */
 
-/* 8045286C 0004 .sdata2    d_d_cam_param__LIT_4123        @4123                          */
+/* 8045286C 0004 .sdata2    @4123                          d_d_cam_param__LIT_4123        */
 .global d_d_cam_param__LIT_4123
 d_d_cam_param__LIT_4123:
 .byte 0x3c, 0xa3, 0xd7, 0x0a /* baserom.dol+0x3d16cc */
 
-/* 80452870 0004 .sdata2    d_d_cam_param__LIT_4124        @4124                          */
+/* 80452870 0004 .sdata2    @4124                          d_d_cam_param__LIT_4124        */
 .global d_d_cam_param__LIT_4124
 d_d_cam_param__LIT_4124:
 .byte 0x42, 0xc8, 0x00, 0x00 /* baserom.dol+0x3d16d0 */
 
-/* 80452874 0004 .sdata2    d_d_cam_param__LIT_4125        @4125                          */
+/* 80452874 0004 .sdata2    @4125                          d_d_cam_param__LIT_4125        */
 .global d_d_cam_param__LIT_4125
 d_d_cam_param__LIT_4125:
 .byte 0x3e, 0x8f, 0x5c, 0x29 /* baserom.dol+0x3d16d4 */
 
-/* 80452878 0004 .sdata2    d_d_cam_param__LIT_4126        @4126                          */
+/* 80452878 0004 .sdata2    @4126                          d_d_cam_param__LIT_4126        */
 .global d_d_cam_param__LIT_4126
 d_d_cam_param__LIT_4126:
 .byte 0x3e, 0x19, 0x99, 0x9a /* baserom.dol+0x3d16d8 */
 
-/* 8045287C 0004 .sdata2    d_d_cam_param__LIT_4127        @4127                          */
+/* 8045287C 0004 .sdata2    @4127                          d_d_cam_param__LIT_4127        */
 .global d_d_cam_param__LIT_4127
 d_d_cam_param__LIT_4127:
 .byte 0x3b, 0xa3, 0xd7, 0x0a /* baserom.dol+0x3d16dc */
 
-/* 80452880 0004 .sdata2    d_d_cam_param__LIT_4128        @4128                          */
+/* 80452880 0004 .sdata2    @4128                          d_d_cam_param__LIT_4128        */
 .global d_d_cam_param__LIT_4128
 d_d_cam_param__LIT_4128:
 .byte 0x3d, 0x75, 0xc2, 0x8f /* baserom.dol+0x3d16e0 */
 
-/* 80452884 0004 .sdata2    d_d_cam_param__LIT_4129        @4129                          */
+/* 80452884 0004 .sdata2    @4129                          d_d_cam_param__LIT_4129        */
 .global d_d_cam_param__LIT_4129
 d_d_cam_param__LIT_4129:
 .byte 0x42, 0x8c, 0x00, 0x00 /* baserom.dol+0x3d16e4 */
 
-/* 80452888 0004 .sdata2    d_d_cam_param__LIT_4130        @4130                          */
+/* 80452888 0004 .sdata2    @4130                          d_d_cam_param__LIT_4130        */
 .global d_d_cam_param__LIT_4130
 d_d_cam_param__LIT_4130:
 .byte 0x42, 0x70, 0x00, 0x00 /* baserom.dol+0x3d16e8 */
 
-/* 8045288C 0004 .sdata2    d_d_cam_param__LIT_4131        @4131                          */
+/* 8045288C 0004 .sdata2    @4131                          d_d_cam_param__LIT_4131        */
 .global d_d_cam_param__LIT_4131
 d_d_cam_param__LIT_4131:
 .byte 0x42, 0x0c, 0x00, 0x00 /* baserom.dol+0x3d16ec */
 
-/* 80452890 0004 .sdata2    d_d_cam_param__LIT_4132        @4132                          */
+/* 80452890 0004 .sdata2    @4132                          d_d_cam_param__LIT_4132        */
 .global d_d_cam_param__LIT_4132
 d_d_cam_param__LIT_4132:
 .byte 0x42, 0x82, 0x00, 0x00 /* baserom.dol+0x3d16f0 */
 
-/* 80452894 0004 .sdata2    d_d_cam_param__LIT_4133        @4133                          */
+/* 80452894 0004 .sdata2    @4133                          d_d_cam_param__LIT_4133        */
 .global d_d_cam_param__LIT_4133
 d_d_cam_param__LIT_4133:
 .byte 0x41, 0xf0, 0x00, 0x00 /* baserom.dol+0x3d16f4 */
 
-/* 80452898 0004 .sdata2    d_d_cam_param__LIT_4134        @4134                          */
+/* 80452898 0004 .sdata2    @4134                          d_d_cam_param__LIT_4134        */
 .global d_d_cam_param__LIT_4134
 d_d_cam_param__LIT_4134:
 .byte 0x41, 0xd8, 0x00, 0x00 /* baserom.dol+0x3d16f8 */
 
-/* 8045289C 0004 .sdata2    d_d_cam_param__LIT_4135        @4135                          */
+/* 8045289C 0004 .sdata2    @4135                          d_d_cam_param__LIT_4135        */
 .global d_d_cam_param__LIT_4135
 d_d_cam_param__LIT_4135:
 .byte 0x42, 0x34, 0x00, 0x00 /* baserom.dol+0x3d16fc */
 
-/* 804528A0 0004 .sdata2    d_d_cam_param__LIT_4136        @4136                          */
+/* 804528A0 0004 .sdata2    @4136                          d_d_cam_param__LIT_4136        */
 .global d_d_cam_param__LIT_4136
 d_d_cam_param__LIT_4136:
 .byte 0x45, 0x5a, 0xc0, 0x00 /* baserom.dol+0x3d1700 */
 
-/* 804528A4 0004 .sdata2    d_d_cam_param__LIT_4137        @4137                          */
+/* 804528A4 0004 .sdata2    @4137                          d_d_cam_param__LIT_4137        */
 .global d_d_cam_param__LIT_4137
 d_d_cam_param__LIT_4137:
 .byte 0x40, 0x80, 0x00, 0x00 /* baserom.dol+0x3d1704 */
 
-/* 804528A8 0004 .sdata2    d_d_cam_param__LIT_4138        @4138                          */
+/* 804528A8 0004 .sdata2    @4138                          d_d_cam_param__LIT_4138        */
 .global d_d_cam_param__LIT_4138
 d_d_cam_param__LIT_4138:
 .byte 0x44, 0x96, 0x00, 0x00 /* baserom.dol+0x3d1708 */
 
-/* 804528AC 0004 .sdata2    d_d_cam_param__LIT_4139        @4139                          */
+/* 804528AC 0004 .sdata2    @4139                          d_d_cam_param__LIT_4139        */
 .global d_d_cam_param__LIT_4139
 d_d_cam_param__LIT_4139:
 .byte 0x3f, 0x59, 0x99, 0x9a /* baserom.dol+0x3d170c */
 
-/* 804528B0 0004 .sdata2    d_d_cam_param__LIT_4140        @4140                          */
+/* 804528B0 0004 .sdata2    @4140                          d_d_cam_param__LIT_4140        */
 .global d_d_cam_param__LIT_4140
 d_d_cam_param__LIT_4140:
 .byte 0x42, 0x48, 0x00, 0x00 /* baserom.dol+0x3d1710 */
 
-/* 804528B4 0004 .sdata2    d_d_cam_param__LIT_4173        @4173                          */
+/* 804528B4 0004 .sdata2    @4173                          d_d_cam_param__LIT_4173        */
 .global d_d_cam_param__LIT_4173
 d_d_cam_param__LIT_4173:
 .byte 0x43, 0x36, 0x0b, 0x61 /* baserom.dol+0x3d1714 */

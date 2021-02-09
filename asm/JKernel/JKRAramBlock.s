@@ -7,6 +7,7 @@
 /* 802D3304 0074 .text      __ct__12JKRAramBlockFUlUlUlUcb __ct__12JKRAramBlockFUlUlUlUcb */
 .global __ct__12JKRAramBlockFUlUlUlUcb
 __ct__12JKRAramBlockFUlUlUlUcb:
+__ct__12JKRAramBlockFUlUlUlUcb:
 /* 802D3304 002D0244  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3308 002D0248  7C 08 02 A6 */	mflr r0
 /* 802D330C 002D024C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -37,8 +38,9 @@ __ct__12JKRAramBlockFUlUlUlUcb:
 /* 802D3370 002D02B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D3374 002D02B4  4E 80 00 20 */	blr 
 
-/* 802D3378 0064 .text      __dt__12JKRAramBlockFv         __dt__12JKRAramBlockFv         */
+/* 802D3378 00BC .text      __dt__12JKRAramBlockFv         __dt__12JKRAramBlockFv         */
 .global __dt__12JKRAramBlockFv
+__dt__12JKRAramBlockFv:
 __dt__12JKRAramBlockFv:
 /* 802D3378 002D02B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D337C 002D02BC  7C 08 02 A6 */	mflr r0
@@ -47,14 +49,14 @@ __dt__12JKRAramBlockFv:
 /* 802D3388 002D02C8  93 C1 00 08 */	stw r30, 8(r1)
 /* 802D338C 002D02CC  7C 7E 1B 79 */	or. r30, r3, r3
 /* 802D3390 002D02D0  7C 9F 23 78 */	mr r31, r4
-/* 802D3394 002D02D4  41 82 00 84 */	beq func_802D3418
+/* 802D3394 002D02D4  41 82 00 84 */	beq lbl_802D3418
 /* 802D3398 002D02D8  3C 60 80 3D */	lis r3, __vt__12JKRAramBlock@ha
 /* 802D339C 002D02DC  38 03 C1 78 */	addi r0, r3, __vt__12JKRAramBlock@l
 /* 802D33A0 002D02E0  90 1E 00 00 */	stw r0, 0(r30)
 /* 802D33A4 002D02E4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 802D33A8 002D02E8  80 9E 00 0C */	lwz r4, 0xc(r30)
 /* 802D33AC 002D02EC  28 04 00 00 */	cmplwi r4, 0
-/* 802D33B0 002D02F0  41 82 00 2C */	beq func_802D33DC
+/* 802D33B0 002D02F0  41 82 00 2C */	beq lbl_802D33DC
 /* 802D33B4 002D02F4  80 C4 00 00 */	lwz r6, 0(r4)
 /* 802D33B8 002D02F8  80 A6 00 1C */	lwz r5, 0x1c(r6)
 /* 802D33BC 002D02FC  80 9E 00 18 */	lwz r4, 0x18(r30)
@@ -64,38 +66,26 @@ __dt__12JKRAramBlockFv:
 /* 802D33CC 002D030C  90 06 00 1C */	stw r0, 0x1c(r6)
 /* 802D33D0 002D0310  38 9E 00 04 */	addi r4, r30, 4
 /* 802D33D4 002D0314  48 00 8D 89 */	bl remove__10JSUPtrListFP10JSUPtrLink
-/* 802D33D8 002D0318  48 00 00 1C */	b func_802D33F4
-
-/* 802D33DC 0018 .text      func_802D33DC                  func_802D33DC                  */
-.global func_802D33DC
-func_802D33DC:
+/* 802D33D8 002D0318  48 00 00 1C */	b lbl_802D33F4
+lbl_802D33DC:
 /* 802D33DC 002D031C  80 7E 00 1C */	lwz r3, 0x1c(r30)
 /* 802D33E0 002D0320  80 1E 00 18 */	lwz r0, 0x18(r30)
 /* 802D33E4 002D0324  7C 03 02 14 */	add r0, r3, r0
 /* 802D33E8 002D0328  90 1E 00 1C */	stw r0, 0x1c(r30)
 /* 802D33EC 002D032C  38 00 00 00 */	li r0, 0
 /* 802D33F0 002D0330  90 1E 00 18 */	stw r0, 0x18(r30)
-
-/* 802D33F4 0014 .text      func_802D33F4                  func_802D33F4                  */
-.global func_802D33F4
-func_802D33F4:
+lbl_802D33F4:
 /* 802D33F4 002D0334  34 1E 00 04 */	addic. r0, r30, 4
-/* 802D33F8 002D0338  41 82 00 10 */	beq func_802D3408
+/* 802D33F8 002D0338  41 82 00 10 */	beq lbl_802D3408
 /* 802D33FC 002D033C  38 7E 00 04 */	addi r3, r30, 4
 /* 802D3400 002D0340  38 80 00 00 */	li r4, 0
 /* 802D3404 002D0344  48 00 8A 11 */	bl __dt__10JSUPtrLinkFv
-
-/* 802D3408 0010 .text      func_802D3408                  func_802D3408                  */
-.global func_802D3408
-func_802D3408:
+lbl_802D3408:
 /* 802D3408 002D0348  7F E0 07 35 */	extsh. r0, r31
-/* 802D340C 002D034C  40 81 00 0C */	ble func_802D3418
+/* 802D340C 002D034C  40 81 00 0C */	ble lbl_802D3418
 /* 802D3410 002D0350  7F C3 F3 78 */	mr r3, r30
 /* 802D3414 002D0354  4B FF B9 29 */	bl __dl__FPv
-
-/* 802D3418 001C .text      func_802D3418                  func_802D3418                  */
-.global func_802D3418
-func_802D3418:
+lbl_802D3418:
 /* 802D3418 002D0358  7F C3 F3 78 */	mr r3, r30
 /* 802D341C 002D035C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802D3420 002D0360  83 C1 00 08 */	lwz r30, 8(r1)
@@ -104,8 +94,9 @@ func_802D3418:
 /* 802D342C 002D036C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3430 002D0370  4E 80 00 20 */	blr 
 
-/* 802D3434 0068 .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap allocHead__12JKRAramBlockFUlUcP11JKRAramHeap */
+/* 802D3434 009C .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap allocHead__12JKRAramBlockFUlUcP11JKRAramHeap */
 .global allocHead__12JKRAramBlockFUlUcP11JKRAramHeap
+allocHead__12JKRAramBlockFUlUcP11JKRAramHeap:
 allocHead__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D3434 002D0374  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3438 002D0378  7C 08 02 A6 */	mflr r0
@@ -125,7 +116,7 @@ allocHead__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D3470 002D03B0  38 A0 00 00 */	li r5, 0
 /* 802D3474 002D03B4  4B FF B8 25 */	bl __nw__FUlP7JKRHeapi
 /* 802D3478 002D03B8  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D347C 002D03BC  41 82 00 20 */	beq func_802D349C
+/* 802D347C 002D03BC  41 82 00 20 */	beq lbl_802D349C
 /* 802D3480 002D03C0  7F C4 F3 78 */	mr r4, r30
 /* 802D3484 002D03C4  7F 65 DB 78 */	mr r5, r27
 /* 802D3488 002D03C8  7F A6 EB 78 */	mr r6, r29
@@ -133,10 +124,7 @@ allocHead__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D3490 002D03D0  39 00 00 00 */	li r8, 0
 /* 802D3494 002D03D4  4B FF FE 71 */	bl __ct__12JKRAramBlockFUlUlUlUcb
 /* 802D3498 002D03D8  7C 7F 1B 78 */	mr r31, r3
-
-/* 802D349C 0034 .text      func_802D349C                  func_802D349C                  */
-.global func_802D349C
-func_802D349C:
+lbl_802D349C:
 /* 802D349C 002D03DC  38 00 00 00 */	li r0, 0
 /* 802D34A0 002D03E0  90 1A 00 1C */	stw r0, 0x1c(r26)
 /* 802D34A4 002D03E4  80 9A 00 10 */	lwz r4, 0x10(r26)
@@ -151,8 +139,9 @@ func_802D349C:
 /* 802D34C8 002D0408  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D34CC 002D040C  4E 80 00 20 */	blr 
 
-/* 802D34D0 006C .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap allocTail__12JKRAramBlockFUlUcP11JKRAramHeap */
+/* 802D34D0 00A4 .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap allocTail__12JKRAramBlockFUlUcP11JKRAramHeap */
 .global allocTail__12JKRAramBlockFUlUcP11JKRAramHeap
+allocTail__12JKRAramBlockFUlUcP11JKRAramHeap:
 allocTail__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D34D0 002D0410  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D34D4 002D0414  7C 08 02 A6 */	mflr r0
@@ -173,7 +162,7 @@ allocTail__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D3510 002D0450  38 A0 00 00 */	li r5, 0
 /* 802D3514 002D0454  4B FF B7 85 */	bl __nw__FUlP7JKRHeapi
 /* 802D3518 002D0458  7C 7F 1B 79 */	or. r31, r3, r3
-/* 802D351C 002D045C  41 82 00 20 */	beq func_802D353C
+/* 802D351C 002D045C  41 82 00 20 */	beq lbl_802D353C
 /* 802D3520 002D0460  7F C4 F3 78 */	mr r4, r30
 /* 802D3524 002D0464  7F 85 E3 78 */	mr r5, r28
 /* 802D3528 002D0468  38 C0 00 00 */	li r6, 0
@@ -181,10 +170,7 @@ allocTail__12JKRAramBlockFUlUcP11JKRAramHeap:
 /* 802D3530 002D0470  39 00 00 01 */	li r8, 1
 /* 802D3534 002D0474  4B FF FD D1 */	bl __ct__12JKRAramBlockFUlUlUlUcb
 /* 802D3538 002D0478  7C 7F 1B 78 */	mr r31, r3
-
-/* 802D353C 0038 .text      func_802D353C                  func_802D353C                  */
-.global func_802D353C
-func_802D353C:
+lbl_802D353C:
 /* 802D353C 002D047C  80 1B 00 1C */	lwz r0, 0x1c(r27)
 /* 802D3540 002D0480  7C 1C 00 50 */	subf r0, r28, r0
 /* 802D3544 002D0484  90 1B 00 1C */	stw r0, 0x1c(r27)
@@ -208,6 +194,8 @@ func_802D353C:
 /* 803CC178 000C .data      __vt__12JKRAramBlock           __vt__12JKRAramBlock           */
 .global __vt__12JKRAramBlock
 __vt__12JKRAramBlock:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x2d, 0x33, 0x78 /* baserom.dol+0x3c9178 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3c9184 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte __dt__12JKRAramBlockFv
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

@@ -7,6 +7,7 @@
 /* 80019834 002C .text      fopAcTg_ToActorQ__FP16create_tag_class fopAcTg_ToActorQ__FP16create_tag_class */
 .global fopAcTg_ToActorQ__FP16create_tag_class
 fopAcTg_ToActorQ__FP16create_tag_class:
+fopAcTg_ToActorQ__FP16create_tag_class:
 /* 80019834 00016774  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80019838 00016778  7C 08 02 A6 */	mflr r0
 /* 8001983C 0001677C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -22,6 +23,7 @@ fopAcTg_ToActorQ__FP16create_tag_class:
 /* 80019860 0020 .text      fopAcTg_ActorQTo__FP16create_tag_class fopAcTg_ActorQTo__FP16create_tag_class */
 .global fopAcTg_ActorQTo__FP16create_tag_class
 fopAcTg_ActorQTo__FP16create_tag_class:
+fopAcTg_ActorQTo__FP16create_tag_class:
 /* 80019860 000167A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80019864 000167A4  7C 08 02 A6 */	mflr r0
 /* 80019868 000167A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -33,6 +35,7 @@ fopAcTg_ActorQTo__FP16create_tag_class:
 
 /* 80019880 0024 .text      fopAcTg_Init__FP16create_tag_classPv fopAcTg_Init__FP16create_tag_classPv */
 .global fopAcTg_Init__FP16create_tag_classPv
+fopAcTg_Init__FP16create_tag_classPv:
 fopAcTg_Init__FP16create_tag_classPv:
 /* 80019880 000167C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80019884 000167C4  7C 08 02 A6 */	mflr r0
@@ -53,5 +56,5 @@ fopAcTg_Init__FP16create_tag_classPv:
 .global g_fopAcTg_Queue
 g_fopAcTg_Queue:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a05e0 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3a05ec */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

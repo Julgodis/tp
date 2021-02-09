@@ -4,25 +4,23 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 801AED64 0030 .text      __dt__19dMenu_Calibration_cFv  __dt__19dMenu_Calibration_cFv  */
+/* 801AED64 0048 .text      __dt__19dMenu_Calibration_cFv  __dt__19dMenu_Calibration_cFv  */
 .global __dt__19dMenu_Calibration_cFv
+__dt__19dMenu_Calibration_cFv:
 __dt__19dMenu_Calibration_cFv:
 /* 801AED64 001ABCA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AED68 001ABCA8  7C 08 02 A6 */	mflr r0
 /* 801AED6C 001ABCAC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801AED70 001ABCB0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801AED74 001ABCB4  7C 7F 1B 79 */	or. r31, r3, r3
-/* 801AED78 001ABCB8  41 82 00 1C */	beq func_801AED94
+/* 801AED78 001ABCB8  41 82 00 1C */	beq lbl_801AED94
 /* 801AED7C 001ABCBC  3C A0 80 3C */	lis r5, __vt__19dMenu_Calibration_c@ha
 /* 801AED80 001ABCC0  38 05 C3 64 */	addi r0, r5, __vt__19dMenu_Calibration_c@l
 /* 801AED84 001ABCC4  90 1F 00 00 */	stw r0, 0(r31)
 /* 801AED88 001ABCC8  7C 80 07 35 */	extsh. r0, r4
-/* 801AED8C 001ABCCC  40 81 00 08 */	ble func_801AED94
+/* 801AED8C 001ABCCC  40 81 00 08 */	ble lbl_801AED94
 /* 801AED90 001ABCD0  48 11 FF AD */	bl __dl__FPv
-
-/* 801AED94 0018 .text      func_801AED94                  func_801AED94                  */
-.global func_801AED94
-func_801AED94:
+lbl_801AED94:
 /* 801AED94 001ABCD4  7F E3 FB 78 */	mr r3, r31
 /* 801AED98 001ABCD8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AED9C 001ABCDC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -30,8 +28,9 @@ func_801AED94:
 /* 801AEDA4 001ABCE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AEDA8 001ABCE8  4E 80 00 20 */	blr 
 
-/* 801AEDAC 005C .text      _move__19dMenu_Calibration_cFv _move__19dMenu_Calibration_cFv */
+/* 801AEDAC 0080 .text      _move__19dMenu_Calibration_cFv _move__19dMenu_Calibration_cFv */
 .global _move__19dMenu_Calibration_cFv
+_move__19dMenu_Calibration_cFv:
 _move__19dMenu_Calibration_cFv:
 /* 801AEDAC 001ABCEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AEDB0 001ABCF0  7C 08 02 A6 */	mflr r0
@@ -48,7 +47,7 @@ _move__19dMenu_Calibration_cFv:
 /* 801AEDDC 001ABD1C  60 00 00 00 */	nop 
 /* 801AEDE0 001ABD20  88 1E 01 00 */	lbz r0, 0x100(r30)
 /* 801AEDE4 001ABD24  7C 1F 00 40 */	cmplw r31, r0
-/* 801AEDE8 001ABD28  41 82 00 20 */	beq func_801AEE08
+/* 801AEDE8 001ABD28  41 82 00 20 */	beq lbl_801AEE08
 /* 801AEDEC 001ABD2C  7F C3 F3 78 */	mr r3, r30
 /* 801AEDF0 001ABD30  1C A0 00 0C */	mulli r5, r0, 0xc
 /* 801AEDF4 001ABD34  3C 80 80 3C */	lis r4, d_d_menu_calibration__map_init_process@ha
@@ -56,10 +55,7 @@ _move__19dMenu_Calibration_cFv:
 /* 801AEDFC 001ABD3C  7D 80 2A 14 */	add r12, r0, r5
 /* 801AEE00 001ABD40  48 1B 32 85 */	bl __ptmf_scall
 /* 801AEE04 001ABD44  60 00 00 00 */	nop 
-
-/* 801AEE08 0024 .text      func_801AEE08                  func_801AEE08                  */
-.global func_801AEE08
-func_801AEE08:
+lbl_801AEE08:
 /* 801AEE08 001ABD48  7F C3 F3 78 */	mr r3, r30
 /* 801AEE0C 001ABD4C  38 80 00 00 */	li r4, 0
 /* 801AEE10 001ABD50  48 00 0B F1 */	bl setHIO__19dMenu_Calibration_cFb
@@ -73,10 +69,12 @@ func_801AEE08:
 /* 801AEE2C 0004 .text      _draw__19dMenu_Calibration_cFv _draw__19dMenu_Calibration_cFv */
 .global _draw__19dMenu_Calibration_cFv
 _draw__19dMenu_Calibration_cFv:
+_draw__19dMenu_Calibration_cFv:
 /* 801AEE2C 001ABD6C  4E 80 00 20 */	blr 
 
-/* 801AEE30 0084 .text      step1_wait_init__19dMenu_Calibration_cFv step1_wait_init__19dMenu_Calibration_cFv */
+/* 801AEE30 0130 .text      step1_wait_init__19dMenu_Calibration_cFv step1_wait_init__19dMenu_Calibration_cFv */
 .global step1_wait_init__19dMenu_Calibration_cFv
+step1_wait_init__19dMenu_Calibration_cFv:
 step1_wait_init__19dMenu_Calibration_cFv:
 /* 801AEE30 001ABD70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AEE34 001ABD74  7C 08 02 A6 */	mflr r0
@@ -109,31 +107,19 @@ step1_wait_init__19dMenu_Calibration_cFv:
 /* 801AEEA0 001ABDE0  C0 21 00 08 */	lfs f1, 8(r1)
 /* 801AEEA4 001ABDE4  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AEEA8 001ABDE8  FC 01 00 40 */	fcmpo cr0, f1, f0
-/* 801AEEAC 001ABDEC  40 81 00 08 */	ble func_801AEEB4
-/* 801AEEB0 001ABDF0  48 00 00 08 */	b func_801AEEB8
-
-/* 801AEEB4 0004 .text      func_801AEEB4                  func_801AEEB4                  */
-.global func_801AEEB4
-func_801AEEB4:
+/* 801AEEAC 001ABDEC  40 81 00 08 */	ble lbl_801AEEB4
+/* 801AEEB0 001ABDF0  48 00 00 08 */	b lbl_801AEEB8
+lbl_801AEEB4:
 /* 801AEEB4 001ABDF4  FC 20 00 90 */	fmr f1, f0
-
-/* 801AEEB8 0014 .text      func_801AEEB8                  func_801AEEB8                  */
-.global func_801AEEB8
-func_801AEEB8:
+lbl_801AEEB8:
 /* 801AEEB8 001ABDF8  D0 23 01 1C */	stfs f1, 0x11c(r3)
 /* 801AEEBC 001ABDFC  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AEEC0 001ABE00  FC 02 00 40 */	fcmpo cr0, f2, f0
-/* 801AEEC4 001ABE04  40 81 00 08 */	ble func_801AEECC
-/* 801AEEC8 001ABE08  48 00 00 08 */	b func_801AEED0
-
-/* 801AEECC 0004 .text      func_801AEECC                  func_801AEECC                  */
-.global func_801AEECC
-func_801AEECC:
+/* 801AEEC4 001ABE04  40 81 00 08 */	ble lbl_801AEECC
+/* 801AEEC8 001ABE08  48 00 00 08 */	b lbl_801AEED0
+lbl_801AEECC:
 /* 801AEECC 001ABE0C  FC 40 00 90 */	fmr f2, f0
-
-/* 801AEED0 0090 .text      func_801AEED0                  func_801AEED0                  */
-.global func_801AEED0
-func_801AEED0:
+lbl_801AEED0:
 /* 801AEED0 001ABE10  D0 43 01 20 */	stfs f2, 0x120(r3)
 /* 801AEED4 001ABE14  80 1F 00 E8 */	lwz r0, 0xe8(r31)
 /* 801AEED8 001ABE18  54 00 10 3A */	slwi r0, r0, 2
@@ -171,8 +157,9 @@ func_801AEED0:
 /* 801AEF58 001ABE98  38 21 00 30 */	addi r1, r1, 0x30
 /* 801AEF5C 001ABE9C  4E 80 00 20 */	blr 
 
-/* 801AEF60 008C .text      step1_wait_move__19dMenu_Calibration_cFv step1_wait_move__19dMenu_Calibration_cFv */
+/* 801AEF60 0124 .text      step1_wait_move__19dMenu_Calibration_cFv step1_wait_move__19dMenu_Calibration_cFv */
 .global step1_wait_move__19dMenu_Calibration_cFv
+step1_wait_move__19dMenu_Calibration_cFv:
 step1_wait_move__19dMenu_Calibration_cFv:
 /* 801AEF60 001ABEA0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AEF64 001ABEA4  7C 08 02 A6 */	mflr r0
@@ -189,7 +176,7 @@ step1_wait_move__19dMenu_Calibration_cFv:
 /* 801AEF90 001ABED0  B0 1F 00 FA */	sth r0, 0xfa(r31)
 /* 801AEF94 001ABED4  A8 1F 00 FA */	lha r0, 0xfa(r31)
 /* 801AEF98 001ABED8  7C 00 20 00 */	cmpw r0, r4
-/* 801AEF9C 001ABEDC  41 80 00 50 */	blt func_801AEFEC
+/* 801AEF9C 001ABEDC  41 80 00 50 */	blt lbl_801AEFEC
 /* 801AEFA0 001ABEE0  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801AEFA4 001ABEE4  C0 22 A5 14 */	lfs f1, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AEFA8 001ABEE8  48 0A 68 29 */	bl setAlphaRate__13CPaneMgrAlphaFf
@@ -208,11 +195,8 @@ step1_wait_move__19dMenu_Calibration_cFv:
 /* 801AEFDC 001ABF1C  98 03 00 B4 */	stb r0, 0xb4(r3)
 /* 801AEFE0 001ABF20  38 00 00 01 */	li r0, 1
 /* 801AEFE4 001ABF24  98 1F 01 00 */	stb r0, 0x100(r31)
-/* 801AEFE8 001ABF28  48 00 00 80 */	b func_801AF068
-
-/* 801AEFEC 007C .text      func_801AEFEC                  func_801AEFEC                  */
-.global func_801AEFEC
-func_801AEFEC:
+/* 801AEFE8 001ABF28  48 00 00 80 */	b lbl_801AF068
+lbl_801AEFEC:
 /* 801AEFEC 001ABF2C  C8 42 A5 18 */	lfd f2, d_d_menu_calibration__LIT_3887-_SDA2_BASE_(r2)
 /* 801AEFF0 001ABF30  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801AEFF4 001ABF34  90 01 00 0C */	stw r0, 0xc(r1)
@@ -239,15 +223,12 @@ func_801AEFEC:
 /* 801AF048 001ABF88  48 0A 67 E1 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 801AF04C 001ABF8C  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AF050 001ABF90  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 801AF054 001ABF94  41 82 00 14 */	beq func_801AF068
+/* 801AF054 001ABF94  41 82 00 14 */	beq lbl_801AF068
 /* 801AF058 001ABF98  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 801AF05C 001ABF9C  C0 02 A5 14 */	lfs f0, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF060 001ABFA0  EC 20 F8 28 */	fsubs f1, f0, f31
 /* 801AF064 001ABFA4  48 0A 67 6D */	bl setAlphaRate__13CPaneMgrAlphaFf
-
-/* 801AF068 001C .text      func_801AF068                  func_801AF068                  */
-.global func_801AF068
-func_801AF068:
+lbl_801AF068:
 /* 801AF068 001ABFA8  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 801AF06C 001ABFAC  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 801AF070 001ABFB0  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -258,6 +239,7 @@ func_801AF068:
 
 /* 801AF084 003C .text      step1_move_init__19dMenu_Calibration_cFv step1_move_init__19dMenu_Calibration_cFv */
 .global step1_move_init__19dMenu_Calibration_cFv
+step1_move_init__19dMenu_Calibration_cFv:
 step1_move_init__19dMenu_Calibration_cFv:
 /* 801AF084 001ABFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF088 001ABFC8  7C 08 02 A6 */	mflr r0
@@ -275,8 +257,9 @@ step1_move_init__19dMenu_Calibration_cFv:
 /* 801AF0B8 001ABFF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AF0BC 001ABFFC  4E 80 00 20 */	blr 
 
-/* 801AF0C0 006C .text      step1_move_move__19dMenu_Calibration_cFv step1_move_move__19dMenu_Calibration_cFv */
+/* 801AF0C0 00C8 .text      step1_move_move__19dMenu_Calibration_cFv step1_move_move__19dMenu_Calibration_cFv */
 .global step1_move_move__19dMenu_Calibration_cFv
+step1_move_move__19dMenu_Calibration_cFv:
 step1_move_move__19dMenu_Calibration_cFv:
 /* 801AF0C0 001AC000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF0C4 001AC004  7C 08 02 A6 */	mflr r0
@@ -285,7 +268,7 @@ step1_move_move__19dMenu_Calibration_cFv:
 /* 801AF0D0 001AC010  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
 /* 801AF0D4 001AC014  80 84 00 34 */	lwz r4, 0x34(r4)
 /* 801AF0D8 001AC018  54 80 05 EF */	rlwinm. r0, r4, 0, 0x17, 0x17
-/* 801AF0DC 001AC01C  41 82 00 50 */	beq func_801AF12C
+/* 801AF0DC 001AC01C  41 82 00 50 */	beq lbl_801AF12C
 /* 801AF0E0 001AC020  38 00 00 02 */	li r0, 2
 /* 801AF0E4 001AC024  98 03 01 00 */	stb r0, 0x100(r3)
 /* 801AF0E8 001AC028  38 00 00 00 */	li r0, 0
@@ -304,13 +287,10 @@ step1_move_move__19dMenu_Calibration_cFv:
 /* 801AF11C 001AC05C  39 00 00 00 */	li r8, 0
 /* 801AF120 001AC060  48 0F C8 65 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801AF124 001AC064  48 06 F8 AD */	bl dMeter2Info_set2DVibration__Fv
-/* 801AF128 001AC068  48 00 00 50 */	b func_801AF178
-
-/* 801AF12C 004C .text      func_801AF12C                  func_801AF12C                  */
-.global func_801AF12C
-func_801AF12C:
+/* 801AF128 001AC068  48 00 00 50 */	b lbl_801AF178
+lbl_801AF12C:
 /* 801AF12C 001AC06C  54 80 05 AD */	rlwinm. r0, r4, 0, 0x16, 0x16
-/* 801AF130 001AC070  41 82 00 48 */	beq func_801AF178
+/* 801AF130 001AC070  41 82 00 48 */	beq lbl_801AF178
 /* 801AF134 001AC074  38 00 00 00 */	li r0, 0
 /* 801AF138 001AC078  98 03 01 01 */	stb r0, 0x101(r3)
 /* 801AF13C 001AC07C  98 03 00 FE */	stb r0, 0xfe(r3)
@@ -328,10 +308,7 @@ func_801AF12C:
 /* 801AF16C 001AC0AC  39 00 00 00 */	li r8, 0
 /* 801AF170 001AC0B0  48 0F C8 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801AF174 001AC0B4  48 06 F8 5D */	bl dMeter2Info_set2DVibration__Fv
-
-/* 801AF178 0010 .text      func_801AF178                  func_801AF178                  */
-.global func_801AF178
-func_801AF178:
+lbl_801AF178:
 /* 801AF178 001AC0B8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801AF17C 001AC0BC  7C 08 03 A6 */	mtlr r0
 /* 801AF180 001AC0C0  38 21 00 10 */	addi r1, r1, 0x10
@@ -339,6 +316,7 @@ func_801AF178:
 
 /* 801AF188 006C .text      step2_wait_init__19dMenu_Calibration_cFv step2_wait_init__19dMenu_Calibration_cFv */
 .global step2_wait_init__19dMenu_Calibration_cFv
+step2_wait_init__19dMenu_Calibration_cFv:
 step2_wait_init__19dMenu_Calibration_cFv:
 /* 801AF188 001AC0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF18C 001AC0CC  7C 08 02 A6 */	mflr r0
@@ -368,8 +346,9 @@ step2_wait_init__19dMenu_Calibration_cFv:
 /* 801AF1EC 001AC12C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AF1F0 001AC130  4E 80 00 20 */	blr 
 
-/* 801AF1F4 009C .text      step2_wait_move__19dMenu_Calibration_cFv step2_wait_move__19dMenu_Calibration_cFv */
+/* 801AF1F4 018C .text      step2_wait_move__19dMenu_Calibration_cFv step2_wait_move__19dMenu_Calibration_cFv */
 .global step2_wait_move__19dMenu_Calibration_cFv
+step2_wait_move__19dMenu_Calibration_cFv:
 step2_wait_move__19dMenu_Calibration_cFv:
 /* 801AF1F4 001AC134  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801AF1F8 001AC138  7C 08 02 A6 */	mflr r0
@@ -388,7 +367,7 @@ step2_wait_move__19dMenu_Calibration_cFv:
 /* 801AF22C 001AC16C  B0 1F 00 FA */	sth r0, 0xfa(r31)
 /* 801AF230 001AC170  A8 1F 00 FA */	lha r0, 0xfa(r31)
 /* 801AF234 001AC174  7C 00 20 00 */	cmpw r0, r4
-/* 801AF238 001AC178  41 80 00 64 */	blt func_801AF29C
+/* 801AF238 001AC178  41 80 00 64 */	blt lbl_801AF29C
 /* 801AF23C 001AC17C  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 801AF240 001AC180  C0 22 A5 14 */	lfs f1, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF244 001AC184  48 0A 65 8D */	bl setAlphaRate__13CPaneMgrAlphaFf
@@ -406,21 +385,15 @@ step2_wait_move__19dMenu_Calibration_cFv:
 /* 801AF274 001AC1B4  48 0A 65 5D */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF278 001AC1B8  88 1F 00 FF */	lbz r0, 0xff(r31)
 /* 801AF27C 001AC1BC  28 00 00 00 */	cmplwi r0, 0
-/* 801AF280 001AC1C0  40 82 00 10 */	bne func_801AF290
+/* 801AF280 001AC1C0  40 82 00 10 */	bne lbl_801AF290
 /* 801AF284 001AC1C4  80 7F 00 A8 */	lwz r3, 0xa8(r31)
 /* 801AF288 001AC1C8  C0 22 A5 10 */	lfs f1, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AF28C 001AC1CC  4B FE 60 15 */	bl setAlphaRate__16dSelect_cursor_cFf
-
-/* 801AF290 000C .text      func_801AF290                  func_801AF290                  */
-.global func_801AF290
-func_801AF290:
+lbl_801AF290:
 /* 801AF290 001AC1D0  38 00 00 03 */	li r0, 3
 /* 801AF294 001AC1D4  98 1F 01 00 */	stb r0, 0x100(r31)
-/* 801AF298 001AC1D8  48 00 00 C4 */	b func_801AF35C
-
-/* 801AF29C 0074 .text      func_801AF29C                  func_801AF29C                  */
-.global func_801AF29C
-func_801AF29C:
+/* 801AF298 001AC1D8  48 00 00 C4 */	b lbl_801AF35C
+lbl_801AF29C:
 /* 801AF29C 001AC1DC  C8 42 A5 18 */	lfd f2, d_d_menu_calibration__LIT_3887-_SDA2_BASE_(r2)
 /* 801AF2A0 001AC1E0  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801AF2A4 001AC1E4  90 01 00 0C */	stw r0, 0xc(r1)
@@ -441,7 +414,7 @@ func_801AF29C:
 /* 801AF2E0 001AC220  48 0A 65 49 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 801AF2E4 001AC224  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AF2E8 001AC228  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 801AF2EC 001AC22C  41 82 00 24 */	beq func_801AF310
+/* 801AF2EC 001AC22C  41 82 00 24 */	beq lbl_801AF310
 /* 801AF2F0 001AC230  80 7F 00 58 */	lwz r3, 0x58(r31)
 /* 801AF2F4 001AC234  C0 02 A5 14 */	lfs f0, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF2F8 001AC238  EF E0 F0 28 */	fsubs f31, f0, f30
@@ -450,15 +423,12 @@ func_801AF29C:
 /* 801AF304 001AC244  80 7F 00 7C */	lwz r3, 0x7c(r31)
 /* 801AF308 001AC248  FC 20 F8 90 */	fmr f1, f31
 /* 801AF30C 001AC24C  48 0A 64 C5 */	bl setAlphaRate__13CPaneMgrAlphaFf
-
-/* 801AF310 0034 .text      func_801AF310                  func_801AF310                  */
-.global func_801AF310
-func_801AF310:
+lbl_801AF310:
 /* 801AF310 001AC250  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 801AF314 001AC254  48 0A 65 15 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 801AF318 001AC258  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AF31C 001AC25C  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 801AF320 001AC260  41 82 00 24 */	beq func_801AF344
+/* 801AF320 001AC260  41 82 00 24 */	beq lbl_801AF344
 /* 801AF324 001AC264  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 801AF328 001AC268  C0 02 A5 14 */	lfs f0, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF32C 001AC26C  EF E0 F0 28 */	fsubs f31, f0, f30
@@ -467,20 +437,14 @@ func_801AF310:
 /* 801AF338 001AC278  80 7F 00 90 */	lwz r3, 0x90(r31)
 /* 801AF33C 001AC27C  FC 20 F8 90 */	fmr f1, f31
 /* 801AF340 001AC280  48 0A 64 91 */	bl setAlphaRate__13CPaneMgrAlphaFf
-
-/* 801AF344 0018 .text      func_801AF344                  func_801AF344                  */
-.global func_801AF344
-func_801AF344:
+lbl_801AF344:
 /* 801AF344 001AC284  88 1F 00 FF */	lbz r0, 0xff(r31)
 /* 801AF348 001AC288  28 00 00 00 */	cmplwi r0, 0
-/* 801AF34C 001AC28C  40 82 00 10 */	bne func_801AF35C
+/* 801AF34C 001AC28C  40 82 00 10 */	bne lbl_801AF35C
 /* 801AF350 001AC290  80 7F 00 A8 */	lwz r3, 0xa8(r31)
 /* 801AF354 001AC294  FC 20 F0 90 */	fmr f1, f30
 /* 801AF358 001AC298  4B FE 5F 49 */	bl setAlphaRate__16dSelect_cursor_cFf
-
-/* 801AF35C 0024 .text      func_801AF35C                  func_801AF35C                  */
-.global func_801AF35C
-func_801AF35C:
+lbl_801AF35C:
 /* 801AF35C 001AC29C  E3 E1 00 38 */	psq_l f31, 56(r1), 0, qr0
 /* 801AF360 001AC2A0  CB E1 00 30 */	lfd f31, 0x30(r1)
 /* 801AF364 001AC2A4  E3 C1 00 28 */	psq_l f30, 40(r1), 0, qr0
@@ -493,6 +457,7 @@ func_801AF35C:
 
 /* 801AF380 003C .text      step2_move_init__19dMenu_Calibration_cFv step2_move_init__19dMenu_Calibration_cFv */
 .global step2_move_init__19dMenu_Calibration_cFv
+step2_move_init__19dMenu_Calibration_cFv:
 step2_move_init__19dMenu_Calibration_cFv:
 /* 801AF380 001AC2C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF384 001AC2C4  7C 08 02 A6 */	mflr r0
@@ -510,8 +475,9 @@ step2_move_init__19dMenu_Calibration_cFv:
 /* 801AF3B4 001AC2F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AF3B8 001AC2F8  4E 80 00 20 */	blr 
 
-/* 801AF3BC 006C .text      step2_move_move__19dMenu_Calibration_cFv step2_move_move__19dMenu_Calibration_cFv */
+/* 801AF3BC 00CC .text      step2_move_move__19dMenu_Calibration_cFv step2_move_move__19dMenu_Calibration_cFv */
 .global step2_move_move__19dMenu_Calibration_cFv
+step2_move_move__19dMenu_Calibration_cFv:
 step2_move_move__19dMenu_Calibration_cFv:
 /* 801AF3BC 001AC2FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF3C0 001AC300  7C 08 02 A6 */	mflr r0
@@ -520,7 +486,7 @@ step2_move_move__19dMenu_Calibration_cFv:
 /* 801AF3CC 001AC30C  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
 /* 801AF3D0 001AC310  80 84 00 34 */	lwz r4, 0x34(r4)
 /* 801AF3D4 001AC314  54 80 05 EF */	rlwinm. r0, r4, 0, 0x17, 0x17
-/* 801AF3D8 001AC318  41 82 00 50 */	beq func_801AF428
+/* 801AF3D8 001AC318  41 82 00 50 */	beq lbl_801AF428
 /* 801AF3DC 001AC31C  38 00 00 04 */	li r0, 4
 /* 801AF3E0 001AC320  98 03 01 00 */	stb r0, 0x100(r3)
 /* 801AF3E4 001AC324  38 00 00 00 */	li r0, 0
@@ -539,13 +505,10 @@ step2_move_move__19dMenu_Calibration_cFv:
 /* 801AF418 001AC358  39 00 00 00 */	li r8, 0
 /* 801AF41C 001AC35C  48 0F C5 69 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801AF420 001AC360  48 06 F5 B1 */	bl dMeter2Info_set2DVibration__Fv
-/* 801AF424 001AC364  48 00 00 54 */	b func_801AF478
-
-/* 801AF428 0050 .text      func_801AF428                  func_801AF428                  */
-.global func_801AF428
-func_801AF428:
+/* 801AF424 001AC364  48 00 00 54 */	b lbl_801AF478
+lbl_801AF428:
 /* 801AF428 001AC368  54 80 05 AD */	rlwinm. r0, r4, 0, 0x16, 0x16
-/* 801AF42C 001AC36C  41 82 00 4C */	beq func_801AF478
+/* 801AF42C 001AC36C  41 82 00 4C */	beq lbl_801AF478
 /* 801AF430 001AC370  38 00 00 00 */	li r0, 0
 /* 801AF434 001AC374  98 03 01 00 */	stb r0, 0x100(r3)
 /* 801AF438 001AC378  38 00 00 01 */	li r0, 1
@@ -564,10 +527,7 @@ func_801AF428:
 /* 801AF46C 001AC3AC  39 00 00 00 */	li r8, 0
 /* 801AF470 001AC3B0  48 0F C5 15 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801AF474 001AC3B4  48 06 F5 5D */	bl dMeter2Info_set2DVibration__Fv
-
-/* 801AF478 0010 .text      func_801AF478                  func_801AF478                  */
-.global func_801AF478
-func_801AF478:
+lbl_801AF478:
 /* 801AF478 001AC3B8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 801AF47C 001AC3BC  7C 08 03 A6 */	mtlr r0
 /* 801AF480 001AC3C0  38 21 00 10 */	addi r1, r1, 0x10
@@ -575,6 +535,7 @@ func_801AF478:
 
 /* 801AF488 0070 .text      step3_wait_init__19dMenu_Calibration_cFv step3_wait_init__19dMenu_Calibration_cFv */
 .global step3_wait_init__19dMenu_Calibration_cFv
+step3_wait_init__19dMenu_Calibration_cFv:
 step3_wait_init__19dMenu_Calibration_cFv:
 /* 801AF488 001AC3C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF48C 001AC3CC  7C 08 02 A6 */	mflr r0
@@ -605,8 +566,9 @@ step3_wait_init__19dMenu_Calibration_cFv:
 /* 801AF4F0 001AC430  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AF4F4 001AC434  4E 80 00 20 */	blr 
 
-/* 801AF4F8 0070 .text      step3_wait_move__19dMenu_Calibration_cFv step3_wait_move__19dMenu_Calibration_cFv */
+/* 801AF4F8 00FC .text      step3_wait_move__19dMenu_Calibration_cFv step3_wait_move__19dMenu_Calibration_cFv */
 .global step3_wait_move__19dMenu_Calibration_cFv
+step3_wait_move__19dMenu_Calibration_cFv:
 step3_wait_move__19dMenu_Calibration_cFv:
 /* 801AF4F8 001AC438  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AF4FC 001AC43C  7C 08 02 A6 */	mflr r0
@@ -623,7 +585,7 @@ step3_wait_move__19dMenu_Calibration_cFv:
 /* 801AF528 001AC468  B0 1F 00 FA */	sth r0, 0xfa(r31)
 /* 801AF52C 001AC46C  A8 1F 00 FA */	lha r0, 0xfa(r31)
 /* 801AF530 001AC470  7C 00 20 00 */	cmpw r0, r4
-/* 801AF534 001AC474  41 80 00 34 */	blt func_801AF568
+/* 801AF534 001AC474  41 80 00 34 */	blt lbl_801AF568
 /* 801AF538 001AC478  80 7F 00 60 */	lwz r3, 0x60(r31)
 /* 801AF53C 001AC47C  C0 22 A5 14 */	lfs f1, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF540 001AC480  48 0A 62 91 */	bl setAlphaRate__13CPaneMgrAlphaFf
@@ -635,11 +597,8 @@ step3_wait_move__19dMenu_Calibration_cFv:
 /* 801AF558 001AC498  48 0A 62 79 */	bl setAlphaRate__13CPaneMgrAlphaFf
 /* 801AF55C 001AC49C  38 00 00 05 */	li r0, 5
 /* 801AF560 001AC4A0  98 1F 01 00 */	stb r0, 0x100(r31)
-/* 801AF564 001AC4A4  48 00 00 74 */	b func_801AF5D8
-
-/* 801AF568 0070 .text      func_801AF568                  func_801AF568                  */
-.global func_801AF568
-func_801AF568:
+/* 801AF564 001AC4A4  48 00 00 74 */	b lbl_801AF5D8
+lbl_801AF568:
 /* 801AF568 001AC4A8  C8 42 A5 18 */	lfd f2, d_d_menu_calibration__LIT_3887-_SDA2_BASE_(r2)
 /* 801AF56C 001AC4AC  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 801AF570 001AC4B0  90 01 00 0C */	stw r0, 0xc(r1)
@@ -663,15 +622,12 @@ func_801AF568:
 /* 801AF5B8 001AC4F8  48 0A 62 71 */	bl getAlphaRate__13CPaneMgrAlphaFv
 /* 801AF5BC 001AC4FC  C0 02 A5 10 */	lfs f0, d_d_menu_calibration__LIT_3847-_SDA2_BASE_(r2)
 /* 801AF5C0 001AC500  FC 00 08 00 */	fcmpu cr0, f0, f1
-/* 801AF5C4 001AC504  41 82 00 14 */	beq func_801AF5D8
+/* 801AF5C4 001AC504  41 82 00 14 */	beq lbl_801AF5D8
 /* 801AF5C8 001AC508  80 7F 00 5C */	lwz r3, 0x5c(r31)
 /* 801AF5CC 001AC50C  C0 02 A5 14 */	lfs f0, d_d_menu_calibration__LIT_3885-_SDA2_BASE_(r2)
 /* 801AF5D0 001AC510  EC 20 F8 28 */	fsubs f1, f0, f31
 /* 801AF5D4 001AC514  48 0A 61 FD */	bl setAlphaRate__13CPaneMgrAlphaFf
-
-/* 801AF5D8 001C .text      func_801AF5D8                  func_801AF5D8                  */
-.global func_801AF5D8
-func_801AF5D8:
+lbl_801AF5D8:
 /* 801AF5D8 001AC518  E3 E1 00 28 */	psq_l f31, 40(r1), 0, qr0
 /* 801AF5DC 001AC51C  CB E1 00 20 */	lfd f31, 0x20(r1)
 /* 801AF5E0 001AC520  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -682,6 +638,7 @@ func_801AF5D8:
 
 /* 801AF5F4 003C .text      step3_move_init__19dMenu_Calibration_cFv step3_move_init__19dMenu_Calibration_cFv */
 .global step3_move_init__19dMenu_Calibration_cFv
+step3_move_init__19dMenu_Calibration_cFv:
 step3_move_init__19dMenu_Calibration_cFv:
 /* 801AF5F4 001AC534  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AF5F8 001AC538  7C 08 02 A6 */	mflr r0
@@ -699,8 +656,9 @@ step3_move_init__19dMenu_Calibration_cFv:
 /* 801AF628 001AC568  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AF62C 001AC56C  4E 80 00 20 */	blr 
 
-/* 801AF630 007C .text      step3_move_move__19dMenu_Calibration_cFv step3_move_move__19dMenu_Calibration_cFv */
+/* 801AF630 00E0 .text      step3_move_move__19dMenu_Calibration_cFv step3_move_move__19dMenu_Calibration_cFv */
 .global step3_move_move__19dMenu_Calibration_cFv
+step3_move_move__19dMenu_Calibration_cFv:
 step3_move_move__19dMenu_Calibration_cFv:
 /* 801AF630 001AC570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AF634 001AC574  7C 08 02 A6 */	mflr r0
@@ -711,7 +669,7 @@ step3_move_move__19dMenu_Calibration_cFv:
 /* 801AF648 001AC588  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
 /* 801AF64C 001AC58C  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 801AF650 001AC590  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
-/* 801AF654 001AC594  41 82 00 58 */	beq func_801AF6AC
+/* 801AF654 001AC594  41 82 00 58 */	beq lbl_801AF6AC
 /* 801AF658 001AC598  38 00 00 00 */	li r0, 0
 /* 801AF65C 001AC59C  98 1F 00 FE */	stb r0, 0xfe(r31)
 /* 801AF660 001AC5A0  38 00 00 01 */	li r0, 1
@@ -732,13 +690,10 @@ step3_move_move__19dMenu_Calibration_cFv:
 /* 801AF69C 001AC5DC  48 06 F3 35 */	bl dMeter2Info_set2DVibration__Fv
 /* 801AF6A0 001AC5E0  7F E3 FB 78 */	mr r3, r31
 /* 801AF6A4 001AC5E4  48 00 00 6D */	bl setCalibrationValue__19dMenu_Calibration_cFv
-/* 801AF6A8 001AC5E8  48 00 00 54 */	b func_801AF6FC
-
-/* 801AF6AC 0050 .text      func_801AF6AC                  func_801AF6AC                  */
-.global func_801AF6AC
-func_801AF6AC:
+/* 801AF6A8 001AC5E8  48 00 00 54 */	b lbl_801AF6FC
+lbl_801AF6AC:
 /* 801AF6AC 001AC5EC  54 60 05 AD */	rlwinm. r0, r3, 0, 0x16, 0x16
-/* 801AF6B0 001AC5F0  41 82 00 4C */	beq func_801AF6FC
+/* 801AF6B0 001AC5F0  41 82 00 4C */	beq lbl_801AF6FC
 /* 801AF6B4 001AC5F4  38 00 00 02 */	li r0, 2
 /* 801AF6B8 001AC5F8  98 1F 01 00 */	stb r0, 0x100(r31)
 /* 801AF6BC 001AC5FC  38 00 00 01 */	li r0, 1
@@ -757,10 +712,7 @@ func_801AF6AC:
 /* 801AF6F0 001AC630  39 00 00 00 */	li r8, 0
 /* 801AF6F4 001AC634  48 0F C2 91 */	bl seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 801AF6F8 001AC638  48 06 F2 D9 */	bl dMeter2Info_set2DVibration__Fv
-
-/* 801AF6FC 0014 .text      func_801AF6FC                  func_801AF6FC                  */
-.global func_801AF6FC
-func_801AF6FC:
+lbl_801AF6FC:
 /* 801AF6FC 001AC63C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 801AF700 001AC640  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 801AF704 001AC644  7C 08 03 A6 */	mtlr r0
@@ -769,6 +721,7 @@ func_801AF6FC:
 
 /* 801AF710 0028 .text      setCalibrationValue__19dMenu_Calibration_cFv setCalibrationValue__19dMenu_Calibration_cFv */
 .global setCalibrationValue__19dMenu_Calibration_cFv
+setCalibrationValue__19dMenu_Calibration_cFv:
 setCalibrationValue__19dMenu_Calibration_cFv:
 /* 801AF710 001AC650  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
 /* 801AF714 001AC654  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
@@ -781,8 +734,9 @@ setCalibrationValue__19dMenu_Calibration_cFv:
 /* 801AF730 001AC670  B0 03 00 F6 */	sth r0, 0xf6(r3)
 /* 801AF734 001AC674  4E 80 00 20 */	blr 
 
-/* 801AF738 0030 .text      setAButtonString__19dMenu_Calibration_cFUs setAButtonString__19dMenu_Calibration_cFUs */
+/* 801AF738 00B0 .text      setAButtonString__19dMenu_Calibration_cFUs setAButtonString__19dMenu_Calibration_cFUs */
 .global setAButtonString__19dMenu_Calibration_cFUs
+setAButtonString__19dMenu_Calibration_cFUs:
 setAButtonString__19dMenu_Calibration_cFUs:
 /* 801AF738 001AC678  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AF73C 001AC67C  7C 08 02 A6 */	mflr r0
@@ -791,15 +745,12 @@ setAButtonString__19dMenu_Calibration_cFUs:
 /* 801AF748 001AC688  48 1B 2A 8D */	bl _savegpr_27
 /* 801AF74C 001AC68C  7C 7B 1B 78 */	mr r27, r3
 /* 801AF750 001AC690  54 9D 04 3F */	clrlwi. r29, r4, 0x10
-/* 801AF754 001AC694  40 82 00 3C */	bne func_801AF790
+/* 801AF754 001AC694  40 82 00 3C */	bne lbl_801AF790
 /* 801AF758 001AC698  3B A0 00 00 */	li r29, 0
 /* 801AF75C 001AC69C  3B E0 00 00 */	li r31, 0
 /* 801AF760 001AC6A0  3C 60 80 39 */	lis r3, d_d_menu_calibration__stringBase0@ha
 /* 801AF764 001AC6A4  3B C3 4F 70 */	addi r30, r3, d_d_menu_calibration__stringBase0@l
-
-/* 801AF768 0028 .text      func_801AF768                  func_801AF768                  */
-.global func_801AF768
-func_801AF768:
+lbl_801AF768:
 /* 801AF768 001AC6A8  38 1F 00 14 */	addi r0, r31, 0x14
 /* 801AF76C 001AC6AC  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF770 001AC6B0  48 15 0E E9 */	bl getStringPtr__10J2DTextBoxCFv
@@ -808,20 +759,14 @@ func_801AF768:
 /* 801AF77C 001AC6BC  3B BD 00 01 */	addi r29, r29, 1
 /* 801AF780 001AC6C0  2C 1D 00 05 */	cmpwi r29, 5
 /* 801AF784 001AC6C4  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF788 001AC6C8  41 80 FF E0 */	blt func_801AF768
-/* 801AF78C 001AC6CC  48 00 00 44 */	b func_801AF7D0
-
-/* 801AF790 0010 .text      func_801AF790                  func_801AF790                  */
-.global func_801AF790
-func_801AF790:
+/* 801AF788 001AC6C8  41 80 FF E0 */	blt lbl_801AF768
+/* 801AF78C 001AC6CC  48 00 00 44 */	b lbl_801AF7D0
+lbl_801AF790:
 /* 801AF790 001AC6D0  3B 80 00 00 */	li r28, 0
 /* 801AF794 001AC6D4  3B E0 00 00 */	li r31, 0
 /* 801AF798 001AC6D8  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801AF79C 001AC6DC  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-
-/* 801AF7A0 0030 .text      func_801AF7A0                  func_801AF7A0                  */
-.global func_801AF7A0
-func_801AF7A0:
+lbl_801AF7A0:
 /* 801AF7A0 001AC6E0  38 1F 00 14 */	addi r0, r31, 0x14
 /* 801AF7A4 001AC6E4  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF7A8 001AC6E8  48 15 0E B1 */	bl getStringPtr__10J2DTextBoxCFv
@@ -833,11 +778,8 @@ func_801AF7A0:
 /* 801AF7C0 001AC700  3B 9C 00 01 */	addi r28, r28, 1
 /* 801AF7C4 001AC704  2C 1C 00 05 */	cmpwi r28, 5
 /* 801AF7C8 001AC708  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF7CC 001AC70C  41 80 FF D4 */	blt func_801AF7A0
-
-/* 801AF7D0 0018 .text      func_801AF7D0                  func_801AF7D0                  */
-.global func_801AF7D0
-func_801AF7D0:
+/* 801AF7CC 001AC70C  41 80 FF D4 */	blt lbl_801AF7A0
+lbl_801AF7D0:
 /* 801AF7D0 001AC710  39 61 00 20 */	addi r11, r1, 0x20
 /* 801AF7D4 001AC714  48 1B 2A 4D */	bl _restgpr_27
 /* 801AF7D8 001AC718  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -845,8 +787,9 @@ func_801AF7D0:
 /* 801AF7E0 001AC720  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AF7E4 001AC724  4E 80 00 20 */	blr 
 
-/* 801AF7E8 0030 .text      setBButtonString__19dMenu_Calibration_cFUs setBButtonString__19dMenu_Calibration_cFUs */
+/* 801AF7E8 00B0 .text      setBButtonString__19dMenu_Calibration_cFUs setBButtonString__19dMenu_Calibration_cFUs */
 .global setBButtonString__19dMenu_Calibration_cFUs
+setBButtonString__19dMenu_Calibration_cFUs:
 setBButtonString__19dMenu_Calibration_cFUs:
 /* 801AF7E8 001AC728  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AF7EC 001AC72C  7C 08 02 A6 */	mflr r0
@@ -855,15 +798,12 @@ setBButtonString__19dMenu_Calibration_cFUs:
 /* 801AF7F8 001AC738  48 1B 29 DD */	bl _savegpr_27
 /* 801AF7FC 001AC73C  7C 7B 1B 78 */	mr r27, r3
 /* 801AF800 001AC740  54 9D 04 3F */	clrlwi. r29, r4, 0x10
-/* 801AF804 001AC744  40 82 00 3C */	bne func_801AF840
+/* 801AF804 001AC744  40 82 00 3C */	bne lbl_801AF840
 /* 801AF808 001AC748  3B A0 00 00 */	li r29, 0
 /* 801AF80C 001AC74C  3B E0 00 00 */	li r31, 0
 /* 801AF810 001AC750  3C 60 80 39 */	lis r3, d_d_menu_calibration__stringBase0@ha
 /* 801AF814 001AC754  3B C3 4F 70 */	addi r30, r3, d_d_menu_calibration__stringBase0@l
-
-/* 801AF818 0028 .text      func_801AF818                  func_801AF818                  */
-.global func_801AF818
-func_801AF818:
+lbl_801AF818:
 /* 801AF818 001AC758  38 1F 00 28 */	addi r0, r31, 0x28
 /* 801AF81C 001AC75C  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF820 001AC760  48 15 0E 39 */	bl getStringPtr__10J2DTextBoxCFv
@@ -872,20 +812,14 @@ func_801AF818:
 /* 801AF82C 001AC76C  3B BD 00 01 */	addi r29, r29, 1
 /* 801AF830 001AC770  2C 1D 00 05 */	cmpwi r29, 5
 /* 801AF834 001AC774  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF838 001AC778  41 80 FF E0 */	blt func_801AF818
-/* 801AF83C 001AC77C  48 00 00 44 */	b func_801AF880
-
-/* 801AF840 0010 .text      func_801AF840                  func_801AF840                  */
-.global func_801AF840
-func_801AF840:
+/* 801AF838 001AC778  41 80 FF E0 */	blt lbl_801AF818
+/* 801AF83C 001AC77C  48 00 00 44 */	b lbl_801AF880
+lbl_801AF840:
 /* 801AF840 001AC780  3B 80 00 00 */	li r28, 0
 /* 801AF844 001AC784  3B E0 00 00 */	li r31, 0
 /* 801AF848 001AC788  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801AF84C 001AC78C  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-
-/* 801AF850 0030 .text      func_801AF850                  func_801AF850                  */
-.global func_801AF850
-func_801AF850:
+lbl_801AF850:
 /* 801AF850 001AC790  38 1F 00 28 */	addi r0, r31, 0x28
 /* 801AF854 001AC794  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF858 001AC798  48 15 0E 01 */	bl getStringPtr__10J2DTextBoxCFv
@@ -897,11 +831,8 @@ func_801AF850:
 /* 801AF870 001AC7B0  3B 9C 00 01 */	addi r28, r28, 1
 /* 801AF874 001AC7B4  2C 1C 00 05 */	cmpwi r28, 5
 /* 801AF878 001AC7B8  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF87C 001AC7BC  41 80 FF D4 */	blt func_801AF850
-
-/* 801AF880 0018 .text      func_801AF880                  func_801AF880                  */
-.global func_801AF880
-func_801AF880:
+/* 801AF87C 001AC7BC  41 80 FF D4 */	blt lbl_801AF850
+lbl_801AF880:
 /* 801AF880 001AC7C0  39 61 00 20 */	addi r11, r1, 0x20
 /* 801AF884 001AC7C4  48 1B 29 9D */	bl _restgpr_27
 /* 801AF888 001AC7C8  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -909,8 +840,9 @@ func_801AF880:
 /* 801AF890 001AC7D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AF894 001AC7D4  4E 80 00 20 */	blr 
 
-/* 801AF898 0030 .text      setStepString__19dMenu_Calibration_cFUs setStepString__19dMenu_Calibration_cFUs */
+/* 801AF898 00B0 .text      setStepString__19dMenu_Calibration_cFUs setStepString__19dMenu_Calibration_cFUs */
 .global setStepString__19dMenu_Calibration_cFUs
+setStepString__19dMenu_Calibration_cFUs:
 setStepString__19dMenu_Calibration_cFUs:
 /* 801AF898 001AC7D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AF89C 001AC7DC  7C 08 02 A6 */	mflr r0
@@ -919,15 +851,12 @@ setStepString__19dMenu_Calibration_cFUs:
 /* 801AF8A8 001AC7E8  48 1B 29 2D */	bl _savegpr_27
 /* 801AF8AC 001AC7EC  7C 7B 1B 78 */	mr r27, r3
 /* 801AF8B0 001AC7F0  54 9D 04 3F */	clrlwi. r29, r4, 0x10
-/* 801AF8B4 001AC7F4  40 82 00 3C */	bne func_801AF8F0
+/* 801AF8B4 001AC7F4  40 82 00 3C */	bne lbl_801AF8F0
 /* 801AF8B8 001AC7F8  3B A0 00 00 */	li r29, 0
 /* 801AF8BC 001AC7FC  3B E0 00 00 */	li r31, 0
 /* 801AF8C0 001AC800  3C 60 80 39 */	lis r3, d_d_menu_calibration__stringBase0@ha
 /* 801AF8C4 001AC804  3B C3 4F 70 */	addi r30, r3, d_d_menu_calibration__stringBase0@l
-
-/* 801AF8C8 0028 .text      func_801AF8C8                  func_801AF8C8                  */
-.global func_801AF8C8
-func_801AF8C8:
+lbl_801AF8C8:
 /* 801AF8C8 001AC808  38 1F 00 48 */	addi r0, r31, 0x48
 /* 801AF8CC 001AC80C  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF8D0 001AC810  48 15 0D 89 */	bl getStringPtr__10J2DTextBoxCFv
@@ -936,20 +865,14 @@ func_801AF8C8:
 /* 801AF8DC 001AC81C  3B BD 00 01 */	addi r29, r29, 1
 /* 801AF8E0 001AC820  2C 1D 00 03 */	cmpwi r29, 3
 /* 801AF8E4 001AC824  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF8E8 001AC828  41 80 FF E0 */	blt func_801AF8C8
-/* 801AF8EC 001AC82C  48 00 00 44 */	b func_801AF930
-
-/* 801AF8F0 0010 .text      func_801AF8F0                  func_801AF8F0                  */
-.global func_801AF8F0
-func_801AF8F0:
+/* 801AF8E8 001AC828  41 80 FF E0 */	blt lbl_801AF8C8
+/* 801AF8EC 001AC82C  48 00 00 44 */	b lbl_801AF930
+lbl_801AF8F0:
 /* 801AF8F0 001AC830  3B 80 00 00 */	li r28, 0
 /* 801AF8F4 001AC834  3B E0 00 00 */	li r31, 0
 /* 801AF8F8 001AC838  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 801AF8FC 001AC83C  3B C3 01 88 */	addi r30, r3, g_meter2_info@l
-
-/* 801AF900 0030 .text      func_801AF900                  func_801AF900                  */
-.global func_801AF900
-func_801AF900:
+lbl_801AF900:
 /* 801AF900 001AC840  38 1F 00 48 */	addi r0, r31, 0x48
 /* 801AF904 001AC844  7C 7B 00 2E */	lwzx r3, r27, r0
 /* 801AF908 001AC848  48 15 0D 51 */	bl getStringPtr__10J2DTextBoxCFv
@@ -961,11 +884,8 @@ func_801AF900:
 /* 801AF920 001AC860  3B 9C 00 01 */	addi r28, r28, 1
 /* 801AF924 001AC864  2C 1C 00 03 */	cmpwi r28, 3
 /* 801AF928 001AC868  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF92C 001AC86C  41 80 FF D4 */	blt func_801AF900
-
-/* 801AF930 0018 .text      func_801AF930                  func_801AF930                  */
-.global func_801AF930
-func_801AF930:
+/* 801AF92C 001AC86C  41 80 FF D4 */	blt lbl_801AF900
+lbl_801AF930:
 /* 801AF930 001AC870  39 61 00 20 */	addi r11, r1, 0x20
 /* 801AF934 001AC874  48 1B 28 ED */	bl _restgpr_27
 /* 801AF938 001AC878  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -973,8 +893,9 @@ func_801AF930:
 /* 801AF940 001AC880  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AF944 001AC884  4E 80 00 20 */	blr 
 
-/* 801AF948 0030 .text      setExplainString__19dMenu_Calibration_cFUs setExplainString__19dMenu_Calibration_cFUs */
+/* 801AF948 00B8 .text      setExplainString__19dMenu_Calibration_cFUs setExplainString__19dMenu_Calibration_cFUs */
 .global setExplainString__19dMenu_Calibration_cFUs
+setExplainString__19dMenu_Calibration_cFUs:
 setExplainString__19dMenu_Calibration_cFUs:
 /* 801AF948 001AC888  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AF94C 001AC88C  7C 08 02 A6 */	mflr r0
@@ -983,15 +904,12 @@ setExplainString__19dMenu_Calibration_cFUs:
 /* 801AF958 001AC898  48 1B 28 81 */	bl _savegpr_28
 /* 801AF95C 001AC89C  7C 7C 1B 78 */	mr r28, r3
 /* 801AF960 001AC8A0  54 9E 04 3F */	clrlwi. r30, r4, 0x10
-/* 801AF964 001AC8A4  40 82 00 3C */	bne func_801AF9A0
+/* 801AF964 001AC8A4  40 82 00 3C */	bne lbl_801AF9A0
 /* 801AF968 001AC8A8  3B A0 00 00 */	li r29, 0
 /* 801AF96C 001AC8AC  3B E0 00 00 */	li r31, 0
 /* 801AF970 001AC8B0  3C 60 80 39 */	lis r3, d_d_menu_calibration__stringBase0@ha
 /* 801AF974 001AC8B4  3B C3 4F 70 */	addi r30, r3, d_d_menu_calibration__stringBase0@l
-
-/* 801AF978 0028 .text      func_801AF978                  func_801AF978                  */
-.global func_801AF978
-func_801AF978:
+lbl_801AF978:
 /* 801AF978 001AC8B8  38 1F 00 3C */	addi r0, r31, 0x3c
 /* 801AF97C 001AC8BC  7C 7C 00 2E */	lwzx r3, r28, r0
 /* 801AF980 001AC8C0  48 15 0C D9 */	bl getStringPtr__10J2DTextBoxCFv
@@ -1000,18 +918,12 @@ func_801AF978:
 /* 801AF98C 001AC8CC  3B BD 00 01 */	addi r29, r29, 1
 /* 801AF990 001AC8D0  2C 1D 00 03 */	cmpwi r29, 3
 /* 801AF994 001AC8D4  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF998 001AC8D8  41 80 FF E0 */	blt func_801AF978
-/* 801AF99C 001AC8DC  48 00 00 4C */	b func_801AF9E8
-
-/* 801AF9A0 0008 .text      func_801AF9A0                  func_801AF9A0                  */
-.global func_801AF9A0
-func_801AF9A0:
+/* 801AF998 001AC8D8  41 80 FF E0 */	blt lbl_801AF978
+/* 801AF99C 001AC8DC  48 00 00 4C */	b lbl_801AF9E8
+lbl_801AF9A0:
 /* 801AF9A0 001AC8E0  3B A0 00 00 */	li r29, 0
 /* 801AF9A4 001AC8E4  3B E0 00 00 */	li r31, 0
-
-/* 801AF9A8 0040 .text      func_801AF9A8                  func_801AF9A8                  */
-.global func_801AF9A8
-func_801AF9A8:
+lbl_801AF9A8:
 /* 801AF9A8 001AC8E8  80 7C 00 A4 */	lwz r3, 0xa4(r28)
 /* 801AF9AC 001AC8EC  7F C4 F3 78 */	mr r4, r30
 /* 801AF9B0 001AC8F0  38 1F 00 3C */	addi r0, r31, 0x3c
@@ -1027,11 +939,8 @@ func_801AF9A8:
 /* 801AF9D8 001AC918  3B BD 00 01 */	addi r29, r29, 1
 /* 801AF9DC 001AC91C  2C 1D 00 03 */	cmpwi r29, 3
 /* 801AF9E0 001AC920  3B FF 00 04 */	addi r31, r31, 4
-/* 801AF9E4 001AC924  41 80 FF C4 */	blt func_801AF9A8
-
-/* 801AF9E8 0018 .text      func_801AF9E8                  func_801AF9E8                  */
-.global func_801AF9E8
-func_801AF9E8:
+/* 801AF9E4 001AC924  41 80 FF C4 */	blt lbl_801AF9A8
+lbl_801AF9E8:
 /* 801AF9E8 001AC928  39 61 00 20 */	addi r11, r1, 0x20
 /* 801AF9EC 001AC92C  48 1B 28 39 */	bl _restgpr_28
 /* 801AF9F0 001AC930  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -1039,8 +948,9 @@ func_801AF9E8:
 /* 801AF9F8 001AC938  38 21 00 20 */	addi r1, r1, 0x20
 /* 801AF9FC 001AC93C  4E 80 00 20 */	blr 
 
-/* 801AFA00 0038 .text      setHIO__19dMenu_Calibration_cFb setHIO__19dMenu_Calibration_cFb */
+/* 801AFA00 01F4 .text      setHIO__19dMenu_Calibration_cFb setHIO__19dMenu_Calibration_cFb */
 .global setHIO__19dMenu_Calibration_cFb
+setHIO__19dMenu_Calibration_cFb:
 setHIO__19dMenu_Calibration_cFb:
 /* 801AFA00 001AC940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AFA04 001AC944  7C 08 02 A6 */	mflr r0
@@ -1050,16 +960,13 @@ setHIO__19dMenu_Calibration_cFb:
 /* 801AFA14 001AC954  7C 7F 1B 78 */	mr r31, r3
 /* 801AFA18 001AC958  7C 9E 23 78 */	mr r30, r4
 /* 801AFA1C 001AC95C  54 80 06 3F */	clrlwi. r0, r4, 0x18
-/* 801AFA20 001AC960  40 82 00 18 */	bne func_801AFA38
+/* 801AFA20 001AC960  40 82 00 18 */	bne lbl_801AFA38
 /* 801AFA24 001AC964  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801AFA28 001AC968  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 801AFA2C 001AC96C  88 03 0A 32 */	lbz r0, 0xa32(r3)
 /* 801AFA30 001AC970  28 00 00 00 */	cmplwi r0, 0
-/* 801AFA34 001AC974  41 82 00 5C */	beq func_801AFA90
-
-/* 801AFA38 0058 .text      func_801AFA38                  func_801AFA38                  */
-.global func_801AFA38
-func_801AFA38:
+/* 801AFA34 001AC974  41 82 00 5C */	beq lbl_801AFA90
+lbl_801AFA38:
 /* 801AFA38 001AC978  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801AFA3C 001AC97C  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 801AFA40 001AC980  C0 03 0A 24 */	lfs f0, 0xa24(r3)
@@ -1082,24 +989,18 @@ func_801AFA38:
 /* 801AFA84 001AC9C4  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 801AFA88 001AC9C8  7D 89 03 A6 */	mtctr r12
 /* 801AFA8C 001AC9CC  4E 80 04 21 */	bctrl 
-
-/* 801AFA90 001C .text      func_801AFA90                  func_801AFA90                  */
-.global func_801AFA90
-func_801AFA90:
+lbl_801AFA90:
 /* 801AFA90 001AC9D0  3C 60 80 43 */	lis r3, g_drawHIO@ha
 /* 801AFA94 001AC9D4  38 63 EB C8 */	addi r3, r3, g_drawHIO@l
 /* 801AFA98 001AC9D8  88 03 06 B4 */	lbz r0, 0x6b4(r3)
 /* 801AFA9C 001AC9DC  28 00 00 00 */	cmplwi r0, 0
-/* 801AFAA0 001AC9E0  40 82 00 0C */	bne func_801AFAAC
+/* 801AFAA0 001AC9E0  40 82 00 0C */	bne lbl_801AFAAC
 /* 801AFAA4 001AC9E4  57 C0 06 3F */	clrlwi. r0, r30, 0x18
-/* 801AFAA8 001AC9E8  41 82 01 34 */	beq func_801AFBDC
-
-/* 801AFAAC 004C .text      func_801AFAAC                  func_801AFAAC                  */
-.global func_801AFAAC
-func_801AFAAC:
+/* 801AFAA8 001AC9E8  41 82 01 34 */	beq lbl_801AFBDC
+lbl_801AFAAC:
 /* 801AFAAC 001AC9EC  80 7F 00 94 */	lwz r3, 0x94(r31)
 /* 801AFAB0 001AC9F0  28 03 00 00 */	cmplwi r3, 0
-/* 801AFAB4 001AC9F4  41 82 00 44 */	beq func_801AFAF8
+/* 801AFAB4 001AC9F4  41 82 00 44 */	beq lbl_801AFAF8
 /* 801AFAB8 001AC9F8  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801AFABC 001AC9FC  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801AFAC0 001ACA00  C0 24 06 60 */	lfs f1, 0x660(r4)
@@ -1116,13 +1017,10 @@ func_801AFAAC:
 /* 801AFAEC 001ACA2C  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 801AFAF0 001ACA30  7D 89 03 A6 */	mtctr r12
 /* 801AFAF4 001ACA34  4E 80 04 21 */	bctrl 
-
-/* 801AFAF8 004C .text      func_801AFAF8                  func_801AFAF8                  */
-.global func_801AFAF8
-func_801AFAF8:
+lbl_801AFAF8:
 /* 801AFAF8 001ACA38  80 7F 00 98 */	lwz r3, 0x98(r31)
 /* 801AFAFC 001ACA3C  28 03 00 00 */	cmplwi r3, 0
-/* 801AFB00 001ACA40  41 82 00 44 */	beq func_801AFB44
+/* 801AFB00 001ACA40  41 82 00 44 */	beq lbl_801AFB44
 /* 801AFB04 001ACA44  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801AFB08 001ACA48  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801AFB0C 001ACA4C  C0 24 06 6C */	lfs f1, 0x66c(r4)
@@ -1139,13 +1037,10 @@ func_801AFAF8:
 /* 801AFB38 001ACA78  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 801AFB3C 001ACA7C  7D 89 03 A6 */	mtctr r12
 /* 801AFB40 001ACA80  4E 80 04 21 */	bctrl 
-
-/* 801AFB44 004C .text      func_801AFB44                  func_801AFB44                  */
-.global func_801AFB44
-func_801AFB44:
+lbl_801AFB44:
 /* 801AFB44 001ACA84  80 7F 00 9C */	lwz r3, 0x9c(r31)
 /* 801AFB48 001ACA88  28 03 00 00 */	cmplwi r3, 0
-/* 801AFB4C 001ACA8C  41 82 00 44 */	beq func_801AFB90
+/* 801AFB4C 001ACA8C  41 82 00 44 */	beq lbl_801AFB90
 /* 801AFB50 001ACA90  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801AFB54 001ACA94  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801AFB58 001ACA98  C0 24 06 78 */	lfs f1, 0x678(r4)
@@ -1162,13 +1057,10 @@ func_801AFB44:
 /* 801AFB84 001ACAC4  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 801AFB88 001ACAC8  7D 89 03 A6 */	mtctr r12
 /* 801AFB8C 001ACACC  4E 80 04 21 */	bctrl 
-
-/* 801AFB90 004C .text      func_801AFB90                  func_801AFB90                  */
-.global func_801AFB90
-func_801AFB90:
+lbl_801AFB90:
 /* 801AFB90 001ACAD0  80 7F 00 A0 */	lwz r3, 0xa0(r31)
 /* 801AFB94 001ACAD4  28 03 00 00 */	cmplwi r3, 0
-/* 801AFB98 001ACAD8  41 82 00 44 */	beq func_801AFBDC
+/* 801AFB98 001ACAD8  41 82 00 44 */	beq lbl_801AFBDC
 /* 801AFB9C 001ACADC  3C 80 80 43 */	lis r4, g_drawHIO@ha
 /* 801AFBA0 001ACAE0  38 84 EB C8 */	addi r4, r4, g_drawHIO@l
 /* 801AFBA4 001ACAE4  C0 24 06 84 */	lfs f1, 0x684(r4)
@@ -1185,10 +1077,7 @@ func_801AFB90:
 /* 801AFBD0 001ACB10  81 8C 00 2C */	lwz r12, 0x2c(r12)
 /* 801AFBD4 001ACB14  7D 89 03 A6 */	mtctr r12
 /* 801AFBD8 001ACB18  4E 80 04 21 */	bctrl 
-
-/* 801AFBDC 0018 .text      func_801AFBDC                  func_801AFBDC                  */
-.global func_801AFBDC
-func_801AFBDC:
+lbl_801AFBDC:
 /* 801AFBDC 001ACB1C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801AFBE0 001ACB20  83 C1 00 08 */	lwz r30, 8(r1)
 /* 801AFBE4 001ACB24  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1198,6 +1087,7 @@ func_801AFBDC:
 
 /* 801AFBF4 0020 .text      draw__19dMenu_Calibration_cFv  draw__19dMenu_Calibration_cFv  */
 .global draw__19dMenu_Calibration_cFv
+draw__19dMenu_Calibration_cFv:
 draw__19dMenu_Calibration_cFv:
 /* 801AFBF4 001ACB34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AFBF8 001ACB38  7C 08 02 A6 */	mflr r0
@@ -1210,6 +1100,7 @@ draw__19dMenu_Calibration_cFv:
 
 /* 801AFC14 0134 .text      __sinit_d_menu_calibration_cpp __sinit_d_menu_calibration_cpp */
 .global __sinit_d_menu_calibration_cpp
+__sinit_d_menu_calibration_cpp:
 __sinit_d_menu_calibration_cpp:
 /* 801AFC14 001ACB54  3C 60 80 3C */	lis r3, d_d_menu_calibration__cNullVec__6Z2Calc@ha
 /* 801AFC18 001ACB58  38 63 C2 38 */	addi r3, r3, d_d_menu_calibration__cNullVec__6Z2Calc@l
@@ -1294,57 +1185,57 @@ __sinit_d_menu_calibration_cpp:
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 .section .rodata, "a"
-/* 80394F70 0001 .rodata    d_d_menu_calibration__stringBase0 @stringBase0                   */
+/* 80394F70 0001 .rodata    @stringBase0                   d_d_menu_calibration__stringBase0 */
 .global d_d_menu_calibration__stringBase0
 d_d_menu_calibration__stringBase0:
 .byte 0x00 /* baserom.dol+0x391f70 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x391f71 */
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803BC238 0000 .data      sym_803BC238                   ...data.0                      */
-.global sym_803BC238
-sym_803BC238:
+/* 803BC238 0000 .data      ...data.0                      data_803BC238                  */
+.global data_803BC238
+data_803BC238:
 
-/* 803BC238 000C .data      d_d_menu_calibration__cNullVec__6Z2Calc cNullVec__6Z2Calc              */
+/* 803BC238 000C .data      cNullVec__6Z2Calc              d_d_menu_calibration__cNullVec__6Z2Calc */
 .global d_d_menu_calibration__cNullVec__6Z2Calc
 d_d_menu_calibration__cNullVec__6Z2Calc:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b9238 */
 
-/* 803BC244 000C .data      d_d_menu_calibration__LIT_3799 @3799                          */
+/* 803BC244 000C .data      @3799                          d_d_menu_calibration__LIT_3799 */
 .global d_d_menu_calibration__LIT_3799
 d_d_menu_calibration__LIT_3799:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xee, 0x30 /* baserom.dol+0x3b9244 */
 
-/* 803BC250 000C .data      d_d_menu_calibration__LIT_3800 @3800                          */
+/* 803BC250 000C .data      @3800                          d_d_menu_calibration__LIT_3800 */
 .global d_d_menu_calibration__LIT_3800
 d_d_menu_calibration__LIT_3800:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf0, 0x84 /* baserom.dol+0x3b9250 */
 
-/* 803BC25C 000C .data      d_d_menu_calibration__LIT_3801 @3801                          */
+/* 803BC25C 000C .data      @3801                          d_d_menu_calibration__LIT_3801 */
 .global d_d_menu_calibration__LIT_3801
 d_d_menu_calibration__LIT_3801:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf1, 0x88 /* baserom.dol+0x3b925c */
 
-/* 803BC268 000C .data      d_d_menu_calibration__LIT_3802 @3802                          */
+/* 803BC268 000C .data      @3802                          d_d_menu_calibration__LIT_3802 */
 .global d_d_menu_calibration__LIT_3802
 d_d_menu_calibration__LIT_3802:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf3, 0x80 /* baserom.dol+0x3b9268 */
 
-/* 803BC274 000C .data      d_d_menu_calibration__LIT_3803 @3803                          */
+/* 803BC274 000C .data      @3803                          d_d_menu_calibration__LIT_3803 */
 .global d_d_menu_calibration__LIT_3803
 d_d_menu_calibration__LIT_3803:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf4, 0x88 /* baserom.dol+0x3b9274 */
 
-/* 803BC280 000C .data      d_d_menu_calibration__LIT_3804 @3804                          */
+/* 803BC280 000C .data      @3804                          d_d_menu_calibration__LIT_3804 */
 .global d_d_menu_calibration__LIT_3804
 d_d_menu_calibration__LIT_3804:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf5, 0xf4 /* baserom.dol+0x3b9280 */
 
-/* 803BC28C 0048 .data      d_d_menu_calibration__map_init_process map_init_process               */
+/* 803BC28C 0048 .data      map_init_process               d_d_menu_calibration__map_init_process */
 .global d_d_menu_calibration__map_init_process
 d_d_menu_calibration__map_init_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b928c */
@@ -1353,37 +1244,37 @@ d_d_menu_calibration__map_init_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b92bc */
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b92cc */
 
-/* 803BC2D4 000C .data      d_d_menu_calibration__LIT_3805 @3805                          */
+/* 803BC2D4 000C .data      @3805                          d_d_menu_calibration__LIT_3805 */
 .global d_d_menu_calibration__LIT_3805
 d_d_menu_calibration__LIT_3805:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xef, 0x60 /* baserom.dol+0x3b92d4 */
 
-/* 803BC2E0 000C .data      d_d_menu_calibration__LIT_3806 @3806                          */
+/* 803BC2E0 000C .data      @3806                          d_d_menu_calibration__LIT_3806 */
 .global d_d_menu_calibration__LIT_3806
 d_d_menu_calibration__LIT_3806:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf0, 0xc0 /* baserom.dol+0x3b92e0 */
 
-/* 803BC2EC 000C .data      d_d_menu_calibration__LIT_3807 @3807                          */
+/* 803BC2EC 000C .data      @3807                          d_d_menu_calibration__LIT_3807 */
 .global d_d_menu_calibration__LIT_3807
 d_d_menu_calibration__LIT_3807:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf1, 0xf4 /* baserom.dol+0x3b92ec */
 
-/* 803BC2F8 000C .data      d_d_menu_calibration__LIT_3808 @3808                          */
+/* 803BC2F8 000C .data      @3808                          d_d_menu_calibration__LIT_3808 */
 .global d_d_menu_calibration__LIT_3808
 d_d_menu_calibration__LIT_3808:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf3, 0xbc /* baserom.dol+0x3b92f8 */
 
-/* 803BC304 000C .data      d_d_menu_calibration__LIT_3809 @3809                          */
+/* 803BC304 000C .data      @3809                          d_d_menu_calibration__LIT_3809 */
 .global d_d_menu_calibration__LIT_3809
 d_d_menu_calibration__LIT_3809:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf4, 0xf8 /* baserom.dol+0x3b9304 */
 
-/* 803BC310 000C .data      d_d_menu_calibration__LIT_3810 @3810                          */
+/* 803BC310 000C .data      @3810                          d_d_menu_calibration__LIT_3810 */
 .global d_d_menu_calibration__LIT_3810
 d_d_menu_calibration__LIT_3810:
 .byte 0x00, 0x00, 0x00, 0x00, 0xff, 0xff, 0xff, 0xff, 0x80, 0x1a, 0xf6, 0x30 /* baserom.dol+0x3b9310 */
 
-/* 803BC31C 0048 .data      d_d_menu_calibration__map_move_process map_move_process               */
+/* 803BC31C 0048 .data      map_move_process               d_d_menu_calibration__map_move_process */
 .global d_d_menu_calibration__map_move_process
 d_d_menu_calibration__map_move_process:
 .byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b931c */
@@ -1395,32 +1286,35 @@ d_d_menu_calibration__map_move_process:
 /* 803BC364 0010 .data      __vt__19dMenu_Calibration_c    __vt__19dMenu_Calibration_c    */
 .global __vt__19dMenu_Calibration_c
 __vt__19dMenu_Calibration_c:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x1a, 0xfb, 0xf4, 0x80, 0x1a, 0xed, 0x64 /* baserom.dol+0x3b9364 */
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3b9374 */
+.4byte 0x00000000
+.4byte 0x00000000
+.4byte draw__19dMenu_Calibration_cFv
+.4byte __dt__19dMenu_Calibration_cFv
+.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 /* padding */
 
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80453F10 0004 .sdata2    d_d_menu_calibration__LIT_3847 @3847                          */
+/* 80453F10 0004 .sdata2    @3847                          d_d_menu_calibration__LIT_3847 */
 .global d_d_menu_calibration__LIT_3847
 d_d_menu_calibration__LIT_3847:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d70 */
 
-/* 80453F14 0004 .sdata2    d_d_menu_calibration__LIT_3885 @3885                          */
+/* 80453F14 0004 .sdata2    @3885                          d_d_menu_calibration__LIT_3885 */
 .global d_d_menu_calibration__LIT_3885
 d_d_menu_calibration__LIT_3885:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2d74 */
 
-/* 80453F18 0008 .sdata2    d_d_menu_calibration__LIT_3887 @3887                          */
+/* 80453F18 0008 .sdata2    @3887                          d_d_menu_calibration__LIT_3887 */
 .global d_d_menu_calibration__LIT_3887
 d_d_menu_calibration__LIT_3887:
 .byte 0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d78 */
 
-/* 80453F20 0004 .sdata2    d_d_menu_calibration__LIT_3911 @3911                          */
+/* 80453F20 0004 .sdata2    @3911                          d_d_menu_calibration__LIT_3911 */
 .global d_d_menu_calibration__LIT_3911
 d_d_menu_calibration__LIT_3911:
 .byte 0xbf, 0x80, 0x00, 0x00 /* baserom.dol+0x3d2d80 */
-.byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d2d84 */
+.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

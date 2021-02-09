@@ -7,6 +7,7 @@
 /* 8001EC74 003C .text      fopScnIt_Judge__FPFPvPv_PvPv   fopScnIt_Judge__FPFPvPv_PvPv   */
 .global fopScnIt_Judge__FPFPvPv_PvPv
 fopScnIt_Judge__FPFPvPv_PvPv:
+fopScnIt_Judge__FPFPvPv_PvPv:
 /* 8001EC74 0001BBB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8001EC78 0001BBB8  7C 08 02 A6 */	mflr r0
 /* 8001EC7C 0001BBBC  90 01 00 14 */	stw r0, 0x14(r1)

@@ -4,8 +4,9 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 8035FF60 00D0 .text      GXProject                      GXProject                      */
+/* 8035FF60 0174 .text      GXProject                      GXProject                      */
 .global GXProject
+GXProject:
 GXProject:
 /* 8035FF60 0035CEA0  C0 83 00 00 */	lfs f4, 0(r3)
 /* 8035FF64 0035CEA4  C0 03 00 04 */	lfs f0, 4(r3)
@@ -40,7 +41,7 @@ GXProject:
 /* 8035FFD8 0035CF18  EC 03 10 2A */	fadds f0, f3, f2
 /* 8035FFDC 0035CF1C  EC E7 30 2A */	fadds f7, f7, f6
 /* 8035FFE0 0035CF20  ED 25 00 2A */	fadds f9, f5, f0
-/* 8035FFE4 0035CF24  40 82 00 4C */	bne func_80360030
+/* 8035FFE4 0035CF24  40 82 00 4C */	bne lbl_80360030
 /* 8035FFE8 0035CF28  FC 00 48 50 */	fneg f0, f9
 /* 8035FFEC 0035CF2C  C0 22 CC 54 */	lfs f1, LIT_27-_SDA2_BASE_(r2)
 /* 8035FFF0 0035CF30  C0 C4 00 04 */	lfs f6, 4(r4)
@@ -58,11 +59,8 @@ GXProject:
 /* 80360020 0035CF60  EC C6 28 2A */	fadds f6, f6, f5
 /* 80360024 0035CF64  EC E2 08 2A */	fadds f7, f2, f1
 /* 80360028 0035CF68  EC 64 18 2A */	fadds f3, f4, f3
-/* 8036002C 0035CF6C  48 00 00 38 */	b func_80360064
-
-/* 80360030 0034 .text      func_80360030                  func_80360030                  */
-.global func_80360030
-func_80360030:
+/* 8036002C 0035CF6C  48 00 00 38 */	b lbl_80360064
+lbl_80360030:
 /* 80360030 0035CF70  C0 44 00 04 */	lfs f2, 4(r4)
 /* 80360034 0035CF74  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 80360038 0035CF78  C0 04 00 14 */	lfs f0, 0x14(r4)
@@ -76,10 +74,7 @@ func_80360030:
 /* 80360058 0035CF98  EC 64 18 2A */	fadds f3, f4, f3
 /* 8036005C 0035CF9C  C0 02 CC 54 */	lfs f0, LIT_27-_SDA2_BASE_(r2)
 /* 80360060 0035CFA0  EC E2 08 2A */	fadds f7, f2, f1
-
-/* 80360064 0070 .text      func_80360064                  func_80360064                  */
-.global func_80360064
-func_80360064:
+lbl_80360064:
 /* 80360064 0035CFA4  C0 85 00 08 */	lfs f4, 8(r5)
 /* 80360068 0035CFA8  FC 20 18 50 */	fneg f1, f3
 /* 8036006C 0035CFAC  C0 A2 CC 58 */	lfs f5, LIT_28-_SDA2_BASE_(r2)
@@ -109,8 +104,9 @@ func_80360064:
 /* 803600CC 0035D00C  D0 08 00 00 */	stfs f0, 0(r8)
 /* 803600D0 0035D010  4E 80 00 20 */	blr 
 
-/* 803600D4 0044 .text      GXSetProjection                GXSetProjection                */
+/* 803600D4 00A4 .text      GXSetProjection                GXSetProjection                */
 .global GXSetProjection
+GXSetProjection:
 GXSetProjection:
 /* 803600D4 0035D014  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 803600D8 0035D018  2C 04 00 01 */	cmpwi r4, 1
@@ -123,24 +119,18 @@ GXSetProjection:
 /* 803600F4 0035D034  D0 05 04 EC */	stfs f0, 0x4ec(r5)
 /* 803600F8 0035D038  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 803600FC 0035D03C  D0 05 04 F0 */	stfs f0, 0x4f0(r5)
-/* 80360100 0035D040  40 82 00 18 */	bne func_80360118
+/* 80360100 0035D040  40 82 00 18 */	bne lbl_80360118
 /* 80360104 0035D044  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80360108 0035D048  D0 05 04 E0 */	stfs f0, 0x4e0(r5)
 /* 8036010C 0035D04C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80360110 0035D050  D0 05 04 E8 */	stfs f0, 0x4e8(r5)
-/* 80360114 0035D054  48 00 00 14 */	b func_80360128
-
-/* 80360118 0010 .text      func_80360118                  func_80360118                  */
-.global func_80360118
-func_80360118:
+/* 80360114 0035D054  48 00 00 14 */	b lbl_80360128
+lbl_80360118:
 /* 80360118 0035D058  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8036011C 0035D05C  D0 05 04 E0 */	stfs f0, 0x4e0(r5)
 /* 80360120 0035D060  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80360124 0035D064  D0 05 04 E8 */	stfs f0, 0x4e8(r5)
-
-/* 80360128 0050 .text      func_80360128                  func_80360128                  */
-.global func_80360128
-func_80360128:
+lbl_80360128:
 /* 80360128 0035D068  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8036012C 0035D06C  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 80360130 0035D070  38 00 00 10 */	li r0, 0x10
@@ -162,24 +152,19 @@ func_80360128:
 /* 80360170 0035D0B0  B0 04 00 02 */	sth r0, 2(r4)
 /* 80360174 0035D0B4  4E 80 00 20 */	blr 
 
-/* 80360178 0018 .text      GXSetProjectionv               GXSetProjectionv               */
+/* 80360178 008C .text      GXSetProjectionv               GXSetProjectionv               */
 .global GXSetProjectionv
+GXSetProjectionv:
 GXSetProjectionv:
 /* 80360178 0035D0B8  C0 22 CC 50 */	lfs f1, LIT_26-_SDA2_BASE_(r2)
 /* 8036017C 0035D0BC  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80360180 0035D0C0  FC 01 00 00 */	fcmpu cr0, f1, f0
-/* 80360184 0035D0C4  40 82 00 0C */	bne func_80360190
+/* 80360184 0035D0C4  40 82 00 0C */	bne lbl_80360190
 /* 80360188 0035D0C8  38 00 00 00 */	li r0, 0
-/* 8036018C 0035D0CC  48 00 00 08 */	b func_80360194
-
-/* 80360190 0004 .text      func_80360190                  func_80360190                  */
-.global func_80360190
-func_80360190:
+/* 8036018C 0035D0CC  48 00 00 08 */	b lbl_80360194
+lbl_80360190:
 /* 80360190 0035D0D0  38 00 00 01 */	li r0, 1
-
-/* 80360194 0070 .text      func_80360194                  func_80360194                  */
-.global func_80360194
-func_80360194:
+lbl_80360194:
 /* 80360194 0035D0D4  80 A2 CB 80 */	lwz r5, __GXData-_SDA2_BASE_(r2)
 /* 80360198 0035D0D8  38 63 00 04 */	addi r3, r3, 4
 /* 8036019C 0035D0DC  90 05 04 D8 */	stw r0, 0x4d8(r5)
@@ -209,24 +194,19 @@ func_80360194:
 /* 803601FC 0035D13C  B0 05 00 02 */	sth r0, 2(r5)
 /* 80360200 0035D140  4E 80 00 20 */	blr 
 
-/* 80360204 0018 .text      GXGetProjectionv               GXGetProjectionv               */
+/* 80360204 0048 .text      GXGetProjectionv               GXGetProjectionv               */
 .global GXGetProjectionv
+GXGetProjectionv:
 GXGetProjectionv:
 /* 80360204 0035D144  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 80360208 0035D148  80 04 04 D8 */	lwz r0, 0x4d8(r4)
 /* 8036020C 0035D14C  28 00 00 00 */	cmplwi r0, 0
-/* 80360210 0035D150  41 82 00 0C */	beq func_8036021C
+/* 80360210 0035D150  41 82 00 0C */	beq lbl_8036021C
 /* 80360214 0035D154  C0 02 CC 54 */	lfs f0, LIT_27-_SDA2_BASE_(r2)
-/* 80360218 0035D158  48 00 00 08 */	b func_80360220
-
-/* 8036021C 0004 .text      func_8036021C                  func_8036021C                  */
-.global func_8036021C
-func_8036021C:
+/* 80360218 0035D158  48 00 00 08 */	b lbl_80360220
+lbl_8036021C:
 /* 8036021C 0035D15C  C0 02 CC 50 */	lfs f0, LIT_26-_SDA2_BASE_(r2)
-
-/* 80360220 002C .text      func_80360220                  func_80360220                  */
-.global func_80360220
-func_80360220:
+lbl_80360220:
 /* 80360220 0035D160  D0 03 00 00 */	stfs f0, 0(r3)
 /* 80360224 0035D164  38 83 00 04 */	addi r4, r3, 4
 /* 80360228 0035D168  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
@@ -241,6 +221,7 @@ func_80360220:
 
 /* 8036024C 0050 .text      GXLoadPosMtxImm                GXLoadPosMtxImm                */
 .global GXLoadPosMtxImm
+GXLoadPosMtxImm:
 GXLoadPosMtxImm:
 /* 8036024C 0035D18C  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 80360250 0035D190  38 00 00 10 */	li r0, 0x10
@@ -266,6 +247,7 @@ GXLoadPosMtxImm:
 /* 8036029C 0050 .text      GXLoadNrmMtxImm                GXLoadNrmMtxImm                */
 .global GXLoadNrmMtxImm
 GXLoadNrmMtxImm:
+GXLoadNrmMtxImm:
 /* 8036029C 0035D1DC  1C A4 00 03 */	mulli r5, r4, 3
 /* 803602A0 0035D1E0  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 803602A4 0035D1E4  38 00 00 10 */	li r0, 0x10
@@ -290,6 +272,7 @@ GXLoadNrmMtxImm:
 /* 803602EC 0034 .text      GXSetCurrentMtx                GXSetCurrentMtx                */
 .global GXSetCurrentMtx
 GXSetCurrentMtx:
+GXSetCurrentMtx:
 /* 803602EC 0035D22C  7C 08 02 A6 */	mflr r0
 /* 803602F0 0035D230  90 01 00 04 */	stw r0, 4(r1)
 /* 803602F4 0035D234  94 21 FF F8 */	stwu r1, -8(r1)
@@ -304,37 +287,26 @@ GXSetCurrentMtx:
 /* 80360318 0035D258  7C 08 03 A6 */	mtlr r0
 /* 8036031C 0035D25C  4E 80 00 20 */	blr 
 
-/* 80360320 0018 .text      GXLoadTexMtxImm                GXLoadTexMtxImm                */
+/* 80360320 00B4 .text      GXLoadTexMtxImm                GXLoadTexMtxImm                */
 .global GXLoadTexMtxImm
 GXLoadTexMtxImm:
+GXLoadTexMtxImm:
 /* 80360320 0035D260  28 04 00 40 */	cmplwi r4, 0x40
-/* 80360324 0035D264  41 80 00 14 */	blt func_80360338
+/* 80360324 0035D264  41 80 00 14 */	blt lbl_80360338
 /* 80360328 0035D268  38 04 FF C0 */	addi r0, r4, -64
 /* 8036032C 0035D26C  54 04 10 3A */	slwi r4, r0, 2
 /* 80360330 0035D270  38 E4 05 00 */	addi r7, r4, 0x500
-/* 80360334 0035D274  48 00 00 08 */	b func_8036033C
-
-/* 80360338 0004 .text      func_80360338                  func_80360338                  */
-.global func_80360338
-func_80360338:
+/* 80360334 0035D274  48 00 00 08 */	b lbl_8036033C
+lbl_80360338:
 /* 80360338 0035D278  54 87 10 3A */	slwi r7, r4, 2
-
-/* 8036033C 0010 .text      func_8036033C                  func_8036033C                  */
-.global func_8036033C
-func_8036033C:
+lbl_8036033C:
 /* 8036033C 0035D27C  2C 05 00 01 */	cmpwi r5, 1
-/* 80360340 0035D280  40 82 00 0C */	bne func_8036034C
+/* 80360340 0035D280  40 82 00 0C */	bne lbl_8036034C
 /* 80360344 0035D284  38 80 00 08 */	li r4, 8
-/* 80360348 0035D288  48 00 00 08 */	b func_80360350
-
-/* 8036034C 0004 .text      func_8036034C                  func_8036034C                  */
-.global func_8036034C
-func_8036034C:
+/* 80360348 0035D288  48 00 00 08 */	b lbl_80360350
+lbl_8036034C:
 /* 8036034C 0035D28C  38 80 00 0C */	li r4, 0xc
-
-/* 80360350 005C .text      func_80360350                  func_80360350                  */
-.global func_80360350
-func_80360350:
+lbl_80360350:
 /* 80360350 0035D290  38 04 FF FF */	addi r0, r4, -1
 /* 80360354 0035D294  54 06 80 1E */	slwi r6, r0, 0x10
 /* 80360358 0035D298  38 00 00 10 */	li r0, 0x10
@@ -343,7 +315,7 @@ func_80360350:
 /* 80360364 0035D2A4  7C E0 33 78 */	or r0, r7, r6
 /* 80360368 0035D2A8  2C 05 00 00 */	cmpwi r5, 0
 /* 8036036C 0035D2AC  90 04 80 00 */	stw r0, -0x8000(r4)
-/* 80360370 0035D2B0  40 82 00 3C */	bne func_803603AC
+/* 80360370 0035D2B0  40 82 00 3C */	bne lbl_803603AC
 /* 80360374 0035D2B4  38 84 80 00 */	addi r4, r4, -32768
 /* 80360378 0035D2B8  E0 A3 00 00 */	psq_l f5, 0(r3), 0, qr0
 /* 8036037C 0035D2BC  E0 83 00 08 */	psq_l f4, 8(r3), 0, qr0
@@ -358,10 +330,7 @@ func_80360350:
 /* 803603A0 0035D2E0  F0 24 00 00 */	psq_st f1, 0(r4), 0, qr0
 /* 803603A4 0035D2E4  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 803603A8 0035D2E8  4E 80 00 20 */	blr 
-
-/* 803603AC 0028 .text      func_803603AC                  func_803603AC                  */
-.global func_803603AC
-func_803603AC:
+lbl_803603AC:
 /* 803603AC 0035D2EC  38 84 80 00 */	addi r4, r4, -32768
 /* 803603B0 0035D2F0  E0 63 00 00 */	psq_l f3, 0(r3), 0, qr0
 /* 803603B4 0035D2F4  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
@@ -375,6 +344,7 @@ func_803603AC:
 
 /* 803603D4 0090 .text      __GXSetViewport                __GXSetViewport                */
 .global __GXSetViewport
+__GXSetViewport:
 __GXSetViewport:
 /* 803603D4 0035D314  80 C2 CB 80 */	lwz r6, __GXData-_SDA2_BASE_(r2)
 /* 803603D8 0035D318  3C 60 00 05 */	lis r3, 0x0005101A@ha
@@ -416,6 +386,7 @@ __GXSetViewport:
 /* 80360464 0048 .text      GXSetViewport                  GXSetViewport                  */
 .global GXSetViewport
 GXSetViewport:
+GXSetViewport:
 /* 80360464 0035D3A4  7C 08 02 A6 */	mflr r0
 /* 80360468 0035D3A8  90 01 00 04 */	stw r0, 4(r1)
 /* 8036046C 0035D3AC  94 21 FF F8 */	stwu r1, -8(r1)
@@ -438,6 +409,7 @@ GXSetViewport:
 /* 803604AC 0024 .text      GXGetViewportv                 GXGetViewportv                 */
 .global GXGetViewportv
 GXGetViewportv:
+GXGetViewportv:
 /* 803604AC 0035D3EC  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 803604B0 0035D3F0  38 84 04 F4 */	addi r4, r4, 0x4f4
 /* 803604B4 0035D3F4  E0 44 00 00 */	psq_l f2, 0(r4), 0, qr0
@@ -450,6 +422,7 @@ GXGetViewportv:
 
 /* 803604D0 0078 .text      GXSetScissor                   GXSetScissor                   */
 .global GXSetScissor
+GXSetScissor:
 GXSetScissor:
 /* 803604D0 0035D410  80 E2 CB 80 */	lwz r7, __GXData-_SDA2_BASE_(r2)
 /* 803604D4 0035D414  38 84 01 56 */	addi r4, r4, 0x156
@@ -485,6 +458,7 @@ GXSetScissor:
 /* 80360548 0048 .text      GXGetScissor                   GXGetScissor                   */
 .global GXGetScissor
 GXGetScissor:
+GXGetScissor:
 /* 80360548 0035D488  81 02 CB 80 */	lwz r8, __GXData-_SDA2_BASE_(r2)
 /* 8036054C 0035D48C  80 E8 00 F8 */	lwz r7, 0xf8(r8)
 /* 80360550 0035D490  81 08 00 FC */	lwz r8, 0xfc(r8)
@@ -507,6 +481,7 @@ GXGetScissor:
 /* 80360590 0040 .text      GXSetScissorBoxOffset          GXSetScissorBoxOffset          */
 .global GXSetScissorBoxOffset
 GXSetScissorBoxOffset:
+GXSetScissorBoxOffset:
 /* 80360590 0035D4D0  38 A3 01 56 */	addi r5, r3, 0x156
 /* 80360594 0035D4D4  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 80360598 0035D4D8  38 04 01 56 */	addi r0, r4, 0x156
@@ -527,6 +502,7 @@ GXSetScissorBoxOffset:
 /* 803605D0 0028 .text      GXSetClipMode                  GXSetClipMode                  */
 .global GXSetClipMode
 GXSetClipMode:
+GXSetClipMode:
 /* 803605D0 0035D510  38 00 00 10 */	li r0, 0x10
 /* 803605D4 0035D514  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 803605D8 0035D518  3C C0 CC 01 */	lis r6, 0xCC008000@ha
@@ -538,11 +514,12 @@ GXSetClipMode:
 /* 803605F0 0035D530  B0 04 00 02 */	sth r0, 2(r4)
 /* 803605F4 0035D534  4E 80 00 20 */	blr 
 
-/* 803605F8 0040 .text      __GXSetMatrixIndex             __GXSetMatrixIndex             */
+/* 803605F8 0084 .text      __GXSetMatrixIndex             __GXSetMatrixIndex             */
 .global __GXSetMatrixIndex
 __GXSetMatrixIndex:
+__GXSetMatrixIndex:
 /* 803605F8 0035D538  2C 03 00 05 */	cmpwi r3, 5
-/* 803605FC 0035D53C  40 80 00 3C */	bge func_80360638
+/* 803605FC 0035D53C  40 80 00 3C */	bge lbl_80360638
 /* 80360600 0035D540  38 00 00 08 */	li r0, 8
 /* 80360604 0035D544  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 80360608 0035D548  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -556,11 +533,8 @@ __GXSetMatrixIndex:
 /* 80360628 0035D568  98 65 80 00 */	stb r3, -0x8000(r5)
 /* 8036062C 0035D56C  90 05 80 00 */	stw r0, -0x8000(r5)
 /* 80360630 0035D570  90 85 80 00 */	stw r4, -0x8000(r5)
-/* 80360634 0035D574  48 00 00 38 */	b func_8036066C
-
-/* 80360638 0034 .text      func_80360638                  func_80360638                  */
-.global func_80360638
-func_80360638:
+/* 80360634 0035D574  48 00 00 38 */	b lbl_8036066C
+lbl_80360638:
 /* 80360638 0035D578  38 00 00 08 */	li r0, 8
 /* 8036063C 0035D57C  80 82 CB 80 */	lwz r4, __GXData-_SDA2_BASE_(r2)
 /* 80360640 0035D580  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -574,10 +548,7 @@ func_80360638:
 /* 80360660 0035D5A0  98 65 80 00 */	stb r3, -0x8000(r5)
 /* 80360664 0035D5A4  90 05 80 00 */	stw r0, -0x8000(r5)
 /* 80360668 0035D5A8  90 85 80 00 */	stw r4, -0x8000(r5)
-
-/* 8036066C 0010 .text      func_8036066C                  func_8036066C                  */
-.global func_8036066C
-func_8036066C:
+lbl_8036066C:
 /* 8036066C 0035D5AC  80 62 CB 80 */	lwz r3, __GXData-_SDA2_BASE_(r2)
 /* 80360670 0035D5B0  38 00 00 01 */	li r0, 1
 /* 80360674 0035D5B4  B0 03 00 02 */	sth r0, 2(r3)
@@ -588,22 +559,22 @@ func_8036066C:
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 .section .sdata2, "a"
-/* 80456650 0004 .sdata2    LIT_26                         @26                            */
+/* 80456650 0004 .sdata2    @26                            LIT_26                         */
 .global LIT_26
 LIT_26:
 .byte 0x00, 0x00, 0x00, 0x00 /* baserom.dol+0x3d54b0 */
 
-/* 80456654 0004 .sdata2    LIT_27                         @27                            */
+/* 80456654 0004 .sdata2    @27                            LIT_27                         */
 .global LIT_27
 LIT_27:
 .byte 0x3f, 0x80, 0x00, 0x00 /* baserom.dol+0x3d54b4 */
 
-/* 80456658 0004 .sdata2    LIT_28                         @28                            */
+/* 80456658 0004 .sdata2    @28                            LIT_28                         */
 .global LIT_28
 LIT_28:
 .byte 0x3f, 0x00, 0x00, 0x00 /* baserom.dol+0x3d54b8 */
 
-/* 8045665C 0004 .sdata2    LIT_201                        @201                           */
+/* 8045665C 0004 .sdata2    @201                           LIT_201                        */
 .global LIT_201
 LIT_201:
 .byte 0x43, 0xab, 0x00, 0x00 /* baserom.dol+0x3d54bc */

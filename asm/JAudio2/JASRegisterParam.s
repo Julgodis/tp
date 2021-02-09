@@ -4,60 +4,51 @@
 /*                                         .text                                          */
 /* ###################################################################################### */
 .section .text, "ax"
-/* 80293644 0010 .text      __ct__16JASRegisterParamFv     __ct__16JASRegisterParamFv     */
+/* 80293644 0020 .text      __ct__16JASRegisterParamFv     __ct__16JASRegisterParamFv     */
 .global __ct__16JASRegisterParamFv
+__ct__16JASRegisterParamFv:
 __ct__16JASRegisterParamFv:
 /* 80293644 00290584  38 80 00 00 */	li r4, 0
 /* 80293648 00290588  7C 85 23 78 */	mr r5, r4
 /* 8029364C 0029058C  38 00 00 0E */	li r0, 0xe
 /* 80293650 00290590  7C 09 03 A6 */	mtctr r0
-
-/* 80293654 0010 .text      func_80293654                  func_80293654                  */
-.global func_80293654
-func_80293654:
+lbl_80293654:
 /* 80293654 00290594  7C A3 23 2E */	sthx r5, r3, r4
 /* 80293658 00290598  38 84 00 02 */	addi r4, r4, 2
-/* 8029365C 0029059C  42 00 FF F8 */	bdnz func_80293654
+/* 8029365C 0029059C  42 00 FF F8 */	bdnz lbl_80293654
 /* 80293660 002905A0  4E 80 00 20 */	blr 
 
-/* 80293664 0010 .text      init__16JASRegisterParamFv     init__16JASRegisterParamFv     */
+/* 80293664 0020 .text      init__16JASRegisterParamFv     init__16JASRegisterParamFv     */
 .global init__16JASRegisterParamFv
+init__16JASRegisterParamFv:
 init__16JASRegisterParamFv:
 /* 80293664 002905A4  38 80 00 00 */	li r4, 0
 /* 80293668 002905A8  7C 85 23 78 */	mr r5, r4
 /* 8029366C 002905AC  38 00 00 0E */	li r0, 0xe
 /* 80293670 002905B0  7C 09 03 A6 */	mtctr r0
-
-/* 80293674 0010 .text      func_80293674                  func_80293674                  */
-.global func_80293674
-func_80293674:
+lbl_80293674:
 /* 80293674 002905B4  7C A3 23 2E */	sthx r5, r3, r4
 /* 80293678 002905B8  38 84 00 02 */	addi r4, r4, 2
-/* 8029367C 002905BC  42 00 FF F8 */	bdnz func_80293674
+/* 8029367C 002905BC  42 00 FF F8 */	bdnz lbl_80293674
 /* 80293680 002905C0  4E 80 00 20 */	blr 
 
-/* 80293684 0020 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl */
+/* 80293684 0134 .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl */
 .global write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl
 write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl:
+write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl:
 /* 80293684 002905C4  2C 04 00 0E */	cmpwi r4, 0xe
-/* 80293688 002905C8  40 80 00 28 */	bge func_802936B0
+/* 80293688 002905C8  40 80 00 28 */	bge lbl_802936B0
 /* 8029368C 002905CC  2C 04 00 02 */	cmpwi r4, 2
-/* 80293690 002905D0  41 81 00 14 */	bgt func_802936A4
+/* 80293690 002905D0  41 81 00 14 */	bgt lbl_802936A4
 /* 80293694 002905D4  54 A5 06 3E */	clrlwi r5, r5, 0x18
 /* 80293698 002905D8  54 80 08 3C */	slwi r0, r4, 1
 /* 8029369C 002905DC  7C A3 03 2E */	sthx r5, r3, r0
 /* 802936A0 002905E0  4E 80 00 20 */	blr 
-
-/* 802936A4 000C .text      func_802936A4                  func_802936A4                  */
-.global func_802936A4
-func_802936A4:
+lbl_802936A4:
 /* 802936A4 002905E4  54 80 08 3C */	slwi r0, r4, 1
 /* 802936A8 002905E8  7C A3 03 2E */	sthx r5, r3, r0
 /* 802936AC 002905EC  4E 80 00 20 */	blr 
-
-/* 802936B0 0108 .text      func_802936B0                  func_802936B0                  */
-.global func_802936B0
-func_802936B0:
+lbl_802936B0:
 /* 802936B0 002905F0  38 04 FF E0 */	addi r0, r4, -32
 /* 802936B4 002905F4  28 00 00 09 */	cmplwi r0, 9
 /* 802936B8 002905F8  4D 81 00 20 */	bgtlr 
@@ -125,22 +116,20 @@ func_802936B0:
 /* 802937B0 002906F0  B0 A3 00 1A */	sth r5, 0x1a(r3)
 /* 802937B4 002906F4  4E 80 00 20 */	blr 
 
-/* 802937B8 0014 .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID read__16JASRegisterParamFQ216JASRegisterParam5RegID */
+/* 802937B8 0104 .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID read__16JASRegisterParamFQ216JASRegisterParam5RegID */
 .global read__16JASRegisterParamFQ216JASRegisterParam5RegID
 read__16JASRegisterParamFQ216JASRegisterParam5RegID:
+read__16JASRegisterParamFQ216JASRegisterParam5RegID:
 /* 802937B8 002906F8  2C 04 00 0E */	cmpwi r4, 0xe
-/* 802937BC 002906FC  40 80 00 10 */	bge func_802937CC
+/* 802937BC 002906FC  40 80 00 10 */	bge lbl_802937CC
 /* 802937C0 00290700  54 80 08 3C */	slwi r0, r4, 1
 /* 802937C4 00290704  7C 63 02 2E */	lhzx r3, r3, r0
 /* 802937C8 00290708  4E 80 00 20 */	blr 
-
-/* 802937CC 00E8 .text      func_802937CC                  func_802937CC                  */
-.global func_802937CC
-func_802937CC:
+lbl_802937CC:
 /* 802937CC 0029070C  38 A0 00 00 */	li r5, 0
 /* 802937D0 00290710  38 04 FF E0 */	addi r0, r4, -32
 /* 802937D4 00290714  28 00 00 09 */	cmplwi r0, 9
-/* 802937D8 00290718  41 81 00 DC */	bgt func_802938B4
+/* 802937D8 00290718  41 81 00 DC */	bgt lbl_802938B4
 /* 802937DC 0029071C  3C 80 80 3C */	lis r4, JASRegisterParam__LIT_87@ha
 /* 802937E0 00290720  38 84 5B B8 */	addi r4, r4, JASRegisterParam__LIT_87@l
 /* 802937E4 00290724  54 00 10 3A */	slwi r0, r0, 2
@@ -152,53 +141,50 @@ func_802937CC:
 /* 802937FC 0029073C  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80293800 00290740  7C 05 03 78 */	mr r5, r0
 /* 80293804 00290744  50 85 44 2E */	rlwimi r5, r4, 8, 0x10, 0x17
-/* 80293808 00290748  48 00 00 AC */	b func_802938B4
+/* 80293808 00290748  48 00 00 AC */	b lbl_802938B4
 /* 8029380C 0029074C  A0 A3 00 08 */	lhz r5, 8(r3)
 /* 80293810 00290750  54 A5 80 1E */	slwi r5, r5, 0x10
 /* 80293814 00290754  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 80293818 00290758  7C A5 03 78 */	or r5, r5, r0
-/* 8029381C 0029075C  48 00 00 98 */	b func_802938B4
+/* 8029381C 0029075C  48 00 00 98 */	b lbl_802938B4
 /* 80293820 00290760  A0 03 00 08 */	lhz r0, 8(r3)
 /* 80293824 00290764  7C 00 46 70 */	srawi r0, r0, 8
 /* 80293828 00290768  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8029382C 0029076C  7C 05 03 78 */	mr r5, r0
-/* 80293830 00290770  48 00 00 84 */	b func_802938B4
+/* 80293830 00290770  48 00 00 84 */	b lbl_802938B4
 /* 80293834 00290774  A0 03 00 08 */	lhz r0, 8(r3)
 /* 80293838 00290778  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8029383C 0029077C  7C 05 03 78 */	mr r5, r0
-/* 80293840 00290780  48 00 00 74 */	b func_802938B4
+/* 80293840 00290780  48 00 00 74 */	b lbl_802938B4
 /* 80293844 00290784  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 80293848 00290788  7C 00 46 70 */	srawi r0, r0, 8
 /* 8029384C 0029078C  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80293850 00290790  7C 05 03 78 */	mr r5, r0
-/* 80293854 00290794  48 00 00 60 */	b func_802938B4
+/* 80293854 00290794  48 00 00 60 */	b lbl_802938B4
 /* 80293858 00290798  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 8029385C 0029079C  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80293860 002907A0  7C 05 03 78 */	mr r5, r0
-/* 80293864 002907A4  48 00 00 50 */	b func_802938B4
+/* 80293864 002907A4  48 00 00 50 */	b lbl_802938B4
 /* 80293868 002907A8  A0 A3 00 0C */	lhz r5, 0xc(r3)
 /* 8029386C 002907AC  54 A5 80 1E */	slwi r5, r5, 0x10
 /* 80293870 002907B0  A0 03 00 0E */	lhz r0, 0xe(r3)
 /* 80293874 002907B4  7C A5 03 78 */	or r5, r5, r0
-/* 80293878 002907B8  48 00 00 3C */	b func_802938B4
+/* 80293878 002907B8  48 00 00 3C */	b lbl_802938B4
 /* 8029387C 002907BC  A0 A3 00 10 */	lhz r5, 0x10(r3)
 /* 80293880 002907C0  54 A5 80 1E */	slwi r5, r5, 0x10
 /* 80293884 002907C4  A0 03 00 12 */	lhz r0, 0x12(r3)
 /* 80293888 002907C8  7C A5 03 78 */	or r5, r5, r0
-/* 8029388C 002907CC  48 00 00 28 */	b func_802938B4
+/* 8029388C 002907CC  48 00 00 28 */	b lbl_802938B4
 /* 80293890 002907D0  A0 A3 00 14 */	lhz r5, 0x14(r3)
 /* 80293894 002907D4  54 A5 80 1E */	slwi r5, r5, 0x10
 /* 80293898 002907D8  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 8029389C 002907DC  7C A5 03 78 */	or r5, r5, r0
-/* 802938A0 002907E0  48 00 00 14 */	b func_802938B4
+/* 802938A0 002907E0  48 00 00 14 */	b lbl_802938B4
 /* 802938A4 002907E4  A0 A3 00 14 */	lhz r5, 0x14(r3)
 /* 802938A8 002907E8  54 A5 80 1E */	slwi r5, r5, 0x10
 /* 802938AC 002907EC  A0 03 00 16 */	lhz r0, 0x16(r3)
 /* 802938B0 002907F0  7C A5 03 78 */	or r5, r5, r0
-
-/* 802938B4 0008 .text      func_802938B4                  func_802938B4                  */
-.global func_802938B4
-func_802938B4:
+lbl_802938B4:
 /* 802938B4 002907F4  7C A3 2B 78 */	mr r3, r5
 /* 802938B8 002907F8  4E 80 00 20 */	blr 
 
@@ -207,14 +193,14 @@ func_802938B4:
 /*                                         .data                                          */
 /* ###################################################################################### */
 .section .data, "aw"
-/* 803C5B90 0028 .data      JASRegisterParam__LIT_56       @56                            */
+/* 803C5B90 0028 .data      @56                            JASRegisterParam__LIT_56       */
 .global JASRegisterParam__LIT_56
 JASRegisterParam__LIT_56:
 .byte 0x80, 0x29, 0x36, 0xd4, 0x80, 0x29, 0x36, 0xe8, 0x80, 0x29, 0x36, 0xf8, 0x80, 0x29, 0x37, 0x18 /* baserom.dol+0x3c2b90 */
 .byte 0x80, 0x29, 0x37, 0x38, 0x80, 0x29, 0x37, 0x58, 0x80, 0x29, 0x37, 0x78, 0x80, 0x29, 0x37, 0x88 /* baserom.dol+0x3c2ba0 */
 .byte 0x80, 0x29, 0x37, 0x98, 0x80, 0x29, 0x37, 0xa8 /* baserom.dol+0x3c2bb0 */
 
-/* 803C5BB8 0028 .data      JASRegisterParam__LIT_87       @87                            */
+/* 803C5BB8 0028 .data      @87                            JASRegisterParam__LIT_87       */
 .global JASRegisterParam__LIT_87
 JASRegisterParam__LIT_87:
 .byte 0x80, 0x29, 0x37, 0xf4, 0x80, 0x29, 0x38, 0x0c, 0x80, 0x29, 0x38, 0x20, 0x80, 0x29, 0x38, 0x34 /* baserom.dol+0x3c2bb8 */
