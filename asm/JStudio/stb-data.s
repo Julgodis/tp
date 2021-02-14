@@ -5,10 +5,6 @@
 /* ###################################################################################### */
 .section .rodata, "a"
 /* 8039AB88 0020 .rodata    gauDataSize_TEParagraph_data__Q37JStudio3stb4data gauDataSize_TEParagraph_data__Q37JStudio3stb4data */
-.global gauDataSize_TEParagraph_data__Q37JStudio3stb4data
-gauDataSize_TEParagraph_data__Q37JStudio3stb4data:
-.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x04 /* baserom.dol+0x397b88 */
-.byte 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40 /* baserom.dol+0x397b98 */
 
 
 /* ###################################################################################### */
@@ -16,8 +12,4 @@ gauDataSize_TEParagraph_data__Q37JStudio3stb4data:
 /* ###################################################################################### */
 .section .sdata2, "a"
 /* 804554D8 0004 .sdata2    ga4cSignature__Q37JStudio3stb4data ga4cSignature__Q37JStudio3stb4data */
-.global ga4cSignature__Q37JStudio3stb4data
-ga4cSignature__Q37JStudio3stb4data:
-.byte 0x53, 0x54, 0x42, 0x00 /* baserom.dol+0x3d4338 */
-.byte 0x00, 0x00, 0x00, 0x00 /* padding */
 

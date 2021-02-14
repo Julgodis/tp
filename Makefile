@@ -61,6 +61,7 @@ OBJCOPY := $(DEVKITPPC)/bin/powerpc-eabi-objcopy
 STRIP   := $(DEVKITPPC)/bin/powerpc-eabi-strip
 CC      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwcceppc.exe
 LD      := $(WINE) tools/mwcc_compiler/$(MWCC_VERSION)/mwldeppc.exe
+LD2     := tools/linker/linker.py
 ELF2DOL := tools/elf2dol
 PYTHON  := python3
 DOXYGEN := doxygen
@@ -78,7 +79,7 @@ LDFLAGS     := -map $(MAP) -fp hard -nodefaults -linkmode moreram
 LIB_LDFLAGS := -library -fp hard -nodefaults -proc gekko
 
 # Compiler flags
-CFLAGS  += -Cpp_exceptions off -proc gekko -fp hard -O3 -nodefaults -msgstyle gcc -str pool,readonly,reuse -RTTI off -maxerrors 5 -enum int  $(INCLUDES)
+CFLAGS  += -Cpp_exceptions off -proc gekko -fp hard -O3 -nodefaults -str pool,readonly,reuse -RTTI off -maxerrors 5 -enum int  $(INCLUDES)
 
 # elf2dol needs to know these in order to calculate sbss correctly.
 SDATA_PDHR := 9
@@ -126,8 +127,10 @@ docs:
 
 # elf
 $(ELF): $(O_FILES) $(LDSCRIPT)
-	@echo $(O_FILES) > build/o_files
-#$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+	@$(LD2) --map $(MAP) -o $@  $(O_FILES)
+# Metrowerks linker:
+#@echo $(O_FILES) > build/o_files
+# $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 # The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
 #	$(OBJCOPY) $@ $@
 

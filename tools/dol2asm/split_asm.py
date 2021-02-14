@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.9
 
 import os
 import sys
@@ -15,6 +15,7 @@ import asm_exporter as asm
 import cpp_exporter as cpp
 import traceback
 import pickle
+from globals import *
 
 #
 #
@@ -23,55 +24,11 @@ import pickle
 FAST_RUN = False
 DRY_RUN = False
 GENERATE_MAKEFILES = False
-EXPORT_ASM = False
+EXPORT_ASM = True
 EXPORT_CPP = True
 UPDATE = False
 PRINT_FORCEACTIVE = False
 BASE_PATH = ""
-
-SECTIONS = {
-    ".init":        Section(".init",        0x80003100, 0x00002500, 0x00000100, 32),
-    ".extab":       Section(".extab",       0x80005600, 0x00000060, 0x00370700, 32),
-    ".extabindex":  Section(".extabindex",  0x80005660, 0x00000060, 0x00370760, 32),
-    ".text":        Section(".text",        0x800056c0, 0x0036e100, 0x00002600, 32),
-    ".ctors":       Section(".ctors",       0x803737C0, 0x000001c0, 0x003707C0, 32),
-    ".dtors":       Section(".dtors",       0x80373980, 0x00000020, 0x00370980, 32),
-    ".rodata":      Section(".rodata",      0x803739A0, 0x0002f540, 0x003709A0, 32),
-    ".data":        Section(".data",        0x803A2EE0, 0x00030400, 0x0039FEE0, 32),
-    ".bss":         Section(".bss",         0x803D32E0, 0x0007d2a0, 0x00000000, 32),
-    ".sdata":       Section(".sdata",       0x80450580, 0x00000580, 0x003D02E0, 32),
-    ".sbss":        Section(".sbss",        0x80450b00, 0x00000f00, 0x00000000, 32),
-    ".sdata2":      Section(".sdata2",      0x80451A00, 0x00005160, 0x003D0860, 32),
-    ".sbss2":       Section(".sbss2",       0x80456B60, 0x00000068, 0x00000000, 8),
-}
-
-PREDEFINED_SYMBOLS = {
-    0x80003100: "__check_pad3",
-    0x80003140: "__set_debug_bba",
-    0x8000314c: "__get_debug_bba",
-    0x80003154: "__start",
-    0x800032b0: "__init_registers",
-    0x80003340: "__init_data",
-    0x80003400: "__init_hardware",
-    0x80003424: "__flush_cache",
-    0x80003458: "memset",
-    0x80003488: "__fill_mem",
-    0x80003540: "memcpy",
-    0x80003590: "TRK_memset",
-    0x800035c0: "TRK_memcpy",
-    0x80005518: "__TRK_reset",
-    0x8000569C: "lbl_8000569C",
-    0x800035E4: "lbl_800035E4",
-}
-
-FOLDERS = [
-    ("d_", "d/"),
-    ("c_", "c/"),
-    ("f_ap_", "f_ap/"),
-    ("f_op_", "f_op/"),
-    ("f_pc_", "f_pc/"),
-    ("m_Do_", "m_Do/"),
-]
 
 with open("baserom.dol", 'rb') as dolfile:
     BASEROM = bytearray(dolfile.read())
@@ -93,11 +50,15 @@ for k, v in map_sections.items():
 
 # Search for labels used in assembly
 if UPDATE or not Path("dol2asm_results.dump").exists():
+    collected_labels = set()
+    collected_functions = set()
+    collected_functions.add(ENTRY_POINT)
     print("searching for labels and functions:")
     for section in SECTIONS.values():
         if section.isCode:
+            lcd = dasm.LCDisassembler()
             last_p = 0
-            for c, s, e in dasm.disasm_iter(section.data, section.addr, section.size, dasm.get_label_callback):
+            for c, s, e in lcd.iter(section.addr, section.data, section.size):
                 p = (c - s) / (e - s)
                 if FAST_RUN and p > 0.05:
                     break
@@ -110,17 +71,21 @@ if UPDATE or not Path("dol2asm_results.dump").exists():
                             (section.name.ljust(20, ' '), 100.0))
             sys.stdout.flush()
             print()
+
+            collected_labels.update(lcd.labels)
+            collected_functions.update(lcd.functions)
+
     # Print
     print("stats:")
-    set_functions = dasm.function_get_all()
-    set_labels = dasm.label_get_all() - set_functions
+    set_functions = collected_functions
+    set_labels = collected_labels - set_functions
     print("    % 8i labels" % len(set_labels - set_mapped))
     print("    % 8i functions" % len(set_functions - set_mapped))
     print("    % 8i from frameworkF.map" % len(set_mapped))
 
     with open('dol2asm_results.dump', 'wb') as output:
-        pickle.dump(dasm.function_get_all(), output, pickle.HIGHEST_PROTOCOL)
-        pickle.dump(dasm.label_get_all(), output, pickle.HIGHEST_PROTOCOL)
+        pickle.dump(collected_functions, output, pickle.HIGHEST_PROTOCOL)
+        pickle.dump(collected_labels, output, pickle.HIGHEST_PROTOCOL)
 else:
     print("reading dol2asm_results.dump:")
     with open('dol2asm_results.dump', 'rb') as input:
@@ -136,8 +101,6 @@ else:
 set_labels_and_functions = list(set_labels.union(set_functions) - set_mapped)
 set_labels_and_functions.sort()
 for addr in set_labels_and_functions:
-    name = dasm.addr_to_label(addr)
-
     in_sections = [x for x in SECTIONS.values() if x.hasAddr(addr)]
     if len(in_sections) > 1:
         print("warning: multiple section for symbol 0x%08X (%s)" % (addr, name))
@@ -158,8 +121,6 @@ for addr in set_labels_and_functions:
         map_sections[section.name].symbols.append(symbol)
 
 # Build list of symbols for the section.
-
-
 def build_section_symbols(section, map_symbols):
     map_symbols.sort(key=lambda x: (x.addr, x.size))
 
@@ -168,17 +129,12 @@ def build_section_symbols(section, map_symbols):
     symbols_with_obj = []
     final_symbols = []
     for symbol in map_symbols:
-        if section.name == ".init":
-            # because .init doesn't have symbol information any symbol without a name
-            # is in fact a label in assembly code. Exporting it as a symbol will
-            # generate the wrong code.
-            # TODO: New symbols system will fix this!
-            if not symbol.name:
-                continue
-
         is_function = False
         if section.isCode and symbol.name:
             is_function = True
+
+        if is_function and symbol.addr in FAKE_FUNCTIONS:
+            is_function = False
 
         sym = SectionSymbol(symbol.addr, symbol.size,
                             symbol.name, symbol.lib, symbol.obj)
@@ -241,9 +197,39 @@ def build_section_symbols(section, map_symbols):
                 curr_addr = curr.addr + curr.size
                 curr.padding = section.end - curr_addr
                 assert curr.padding >= 0
+    """
+    for curr, next in util.mapOverlap(final_symbols, 2):
+        if not curr or not next:
+            continue
+
+        if next.name == "DsetMixerLevel__Ff":
+            print("%08X %08X %i %08X" % (curr.addr, curr.addr + curr.size, curr.padding, next.addr))
+
+        if not (curr.isFunction and next.isFunction):
+            continue
+
+        curr_end = curr.addr + curr.size
+        next_start = next.addr
+        if curr_end == next_start:
+            continue
+
+        print("%08X %08X" % (curr_end, next_start))
+        for x in [32,16,8]:
+            if (curr_end + x - 1) & ~(x - 1) == next_start:
+                curr.padding = 0
+                next.alignment = x
+                print("align function: %08X %-30s %i" % (next.addr, next.name, next.alignment))
+                break
+    """
+    if len(final_symbols) > 1:
+        last_symbol  = final_symbols[-1]
+        end = last_symbol.addr + last_symbol.size
+        endp = end + last_symbol.padding
+        assert (end + section.alignment - 1) & ~(section.alignment - 1) == endp
+        assert endp == section.end
+        last_symbol.padding = 0
 
     return final_symbols
-
 
 # Build symbols for each sections
 for k, section in SECTIONS.items():
@@ -259,29 +245,32 @@ for section in SECTIONS.values():
     for symbol in section.symbols:
         tree[symbol.lib][symbol.obj][section].append(symbol)
 
-def symbol_from_data(section, name, offset, data, symbol):
+def symbol_from_data(section, name, offset, data, padding_data, symbol):
     if name.name.startswith("__vt"):
-        return VTableData(name, symbol.addr, offset, data, padding=symbol.padding)
+        return VTableData(name, symbol.addr, offset, data, padding_data=padding_data)
 
-    return InitializedData(name, symbol.addr, offset, data, padding=symbol.padding)
+    return InitializedData(name, symbol.addr, offset, data, padding_data=padding_data)
 
 def symbol_from_group(section, group):
     assert len(group) == 1
-    name = create_name_full(
-        "data", first.addr, first.name, first.label, first.mwcc_label)
+    first = group[0]
+    name = Name("data", first.addr, first.name)
     if section.isBSS:
-        return ReadOnlyData(name, first.addr, first.size, padding=first.padding)
+        return ZeroInitializedData(name, first.addr, first.size, padding=first.padding)
     else:
         offset = section.offset + first.addr - section.addr
         try:
             data = bytes()
+            padding_data = bytes()
             if first.size:
                 data = BASEROM[offset:offset+first.size]
+                if first.padding:
+                    padding_data = BASEROM[offset+first.size:offset+first.size+first.padding]
                 assert len(data) == first.size
-            return symbol_from_data(section, name, offset, data, first)
+            return symbol_from_data(section, name, offset, data, padding_data, first)
         except:
-            print("error: %08X (%08X-%08X) is outside of the baserom.dol" %
-                    (first.addr, offset, offset + first.size))
+            print("error: %08X %04X (%08X-%08X, %08X-%08X) is outside of the baserom.dol" %
+                    (first.addr, first.size, offset, offset + first.size, 0, len(BASEROM)))
             traceback.print_exc()
             sys.exit(1)
             return None
@@ -307,14 +296,17 @@ for k, v in tree.items():
                     group = [symbol]
                     continue
 
-                if group:
+                if group and symbol.name == None:
                     group.append(symbol)
                 else:
                     if group:
                         groups.append(group)
+                        group = []
                     groups.append([symbol])
+
             if group:
                 groups.append(group)
+                group = []
 
             # convert groups to function
             for group in groups:
@@ -322,74 +314,123 @@ for k, v in tree.items():
                 first = group[0]
                 if first.isFunction:
                     function = Function(group, section)
+                    function.section = section
                     section.addSymbol(function)
                     function_map[function.addr] = function
                 else:
                     symbol_data = symbol_from_group(section, group)
+                    symbol_data.section = section
                     section.addSymbol(symbol_data)
                     data_map[symbol_data.addr] = symbol_data
+
             translation_unit.addSectionPart(section)
         library.addTranslationUnit(translation_unit)
-
     libraries.append(library)
+
+for section in SECTIONS.values():
+    if section.binaryExport:
+        for symbol in section.symbols:
+            group = [ symbol ]
+            symbol_data = symbol_from_group(section, group)
+            symbol_data.section = section
+            symbol.symbol_data = symbol_data
+            data_map[symbol_data.addr] = symbol_data
 
 for symbol_data in data_map.values():
     if isinstance(symbol_data, VTableData):
         symbol_data.resolve(function_map)
 
+# alignment
+function_list = list(function_map.values())
+function_list.sort(key=lambda x: x.addr)
+for curr, next in util.mapOverlap(function_list, 2):
+    if not curr or not next:
+        continue
+
+    assert isinstance(curr, Function)
+    assert isinstance(next, Function)
+
+    curr_end = curr.addr + curr.size
+    next_start = next.addr
+    if curr_end == next_start:
+        continue
+
+    for x in [32,16,8]:
+        if (curr_end + x - 1) & ~(x - 1) == next_start:
+            next.alignment = x
+            curr.padding = 0
+            print("align function: %08X %-30s %i" % (next.addr, next.name, next.alignment))
+            break
+
+def merge_symbol_from_group(group):
+    global data_map
+    if len(group) == 1:
+        return group[0]
+
+    merge = MergedData(group)
+    merge.section = merge.internal_data[0].section
+    return merge
+
+for lib in libraries:
+    for tu in lib.translation_units:
+        for sec in tu.section_parts:
+            group = []
+            symbols = []
+            for sym in sec.symbols:
+                if isinstance(sym, InitializedData) and sym.addr % 4 != 0 and group:
+                    assert group[-1].padding == 0
+                    group.append(sym)
+                else:
+                    if group:
+                        symbols.append(merge_symbol_from_group(group))
+                    group = [sym]
+            if group:
+                symbols.append(merge_symbol_from_group(group))
+
+            sec.symbols = symbols
+                
+
 # naming
 label_collisions = defaultdict(int)
-mwcc_label_collisions = defaultdict(int)
+reference_collisions = defaultdict(int)
 for lib in libraries:
     for tu in lib.translation_units:
         for sec in tu.section_parts:
             for symbol in sec.symbols:
-                if symbol.name.label or symbol.name.mwcc_label:
-                    assert symbol.name.label
-                    assert symbol.name.mwcc_label
-                    continue
-
-                prefix = "data"
-                if isinstance(symbol, Function):
-                    prefix = "func"
-
-                label, mwcc = util.escape_name(prefix, symbol.name.name, symbol.addr)
-                symbol.name.label = label
-                symbol.name.mwcc_label = mwcc
+                util.escape_name(symbol.name)
                 label_collisions[symbol.name.label] += 1
-                mwcc_label_collisions[symbol.name.mwcc_label] += 1
+                reference_collisions[symbol.name.reference] += 1
 
 for section in SECTIONS.values():
     if section.binaryExport:
         for symbol in section.symbols:
-            label, mwcc = util.escape_name("data", symbol.name, symbol.addr)
-            symbol.label = label
-            symbol.mwcc_label = mwcc
-            label_collisions[symbol.label] += 1
-            mwcc_label_collisions[symbol.mwcc_label] += 1
+            symbol.name = Name("data", symbol.addr, symbol.name)
+            symbol.symbol_data.name = symbol.name
+            util.escape_name(symbol.name)
+
+            label_collisions[symbol.name.label] += 1
+            reference_collisions[symbol.name.reference] += 1
 
 for lib in libraries:
     for tu in lib.translation_units:
         for sec in tu.section_parts:
             for symbol in sec.symbols:
-                if label_collisions[symbol.name.label] > 1 or mwcc_label_collisions[symbol.name.mwcc_label] > 1:
+                if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
                     obj_prefix = tu.name[:-2].replace(
                         "/", "_").replace(".", "_").replace("-", "_")
                     symbol.name.label = obj_prefix + "__" + symbol.name.label
-                    symbol.name.mwcc_label = obj_prefix + "__" + symbol.name.mwcc_label
+                    symbol.name.reference = obj_prefix + "__" + symbol.name.reference
+                symbol.updateName()
 
-                dasm.add_label_override(symbol.addr, symbol.name.mwcc_label)
 
 for section in SECTIONS.values():
     if section.binaryExport:
         for symbol in section.symbols:
-            if label_collisions[symbol.label] > 1 or mwcc_label_collisions[symbol.mwcc_label] > 1:
+            if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
                 obj_prefix = tu.name[:-2].replace("/",
                                                   "_").replace(".", "_").replace("-", "_")
-                symbol.label = obj_prefix + "__" + symbol.label
-                symbol.mwcc_label = obj_prefix + "__" + symbol.mwcc_label
-
-            dasm.add_label_override(symbol.addr, symbol.mwcc_label)
+                symbol.name.label = obj_prefix + "__" + symbol.name.label
+                symbol.name.reference = obj_prefix + "__" + symbol.name.reference
 
 # Print everything
 if False:
@@ -401,7 +442,7 @@ if False:
                 print("\t\t" + sec.name)
                 for sym in sec.symbols:
                     print("\t\t\t%08X %04X %s %s %s" % (
-                        sym.addr, sym.size, sym.name, sym.label, sym.mwcc_label))
+                        sym.addr, sym.size, sym.name, sym.label, sym.reference))
                     if isinstance(sym, Function):
                         if len(sym.blocks) > 1:
                             for block in sym.blocks:
@@ -426,8 +467,8 @@ if PRINT_FORCEACTIVE:
     force_active.sort(key=lambda x:x.addr)
     for fa in force_active:
         print("%s" % fa.name.label)
-        if fa.name.label != fa.name.mwcc_label:
-            print("%s" % fa.name.mwcc_label)
+        if fa.name.label != fa.name.reference:
+            print("%s" % fa.name.reference)
 
 # Export as assembly
 if EXPORT_ASM:
@@ -435,7 +476,7 @@ if EXPORT_ASM:
         if section.binaryExport:
             asm.export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section)
 
-    asm.export_all(BASEROM, DRY_RUN, libraries)
+    asm.export_all(BASEROM, DRY_RUN, EXPORT_CPP, libraries)
 
 # Export as c++
 if EXPORT_CPP:
@@ -591,6 +632,8 @@ if GENERATE_MAKEFILES:
                     path = node.lib[:-2] + "/" + node.name
                 else:
                     path = node.name
+                if True:
+                    builder.write("\t$(BUILD_DIR)/cpp/%s%s \\" % (BASE_PATH, path))
                 builder.write("\t$(BUILD_DIR)/asm/%s%s \\" % (BASE_PATH, path))
             builder.write("\\")
         builder.write("")
@@ -637,9 +680,9 @@ if False:
     for section in SECTIONS.values():
         for symbol in section.symbols:
             builder.write("%s = 0x%08X;" % (symbol.label, symbol.addr))
-            if symbol.mwcc_label:
+            if symbol.reference:
                 builder.write("%s = 0x%08X;" %
-                              (symbol.mwcc_label, symbol.addr))
+                              (symbol.reference, symbol.addr))
     builder.close()
 
 # export lcf forceactive symbols
@@ -648,36 +691,8 @@ if False:
     for section in SECTIONS.values():
         for symbol in section.symbols:
             builder.write(symbol.label)
-            if symbol.mwcc_label:
-                builder.write(symbol.mwcc_label)
+            if symbol.reference:
+                builder.write(symbol.reference)
     builder.close()
-
-
-"""
-asm_export_library()
-
-
-#for k, section in SECTIONS.items():
-#    print(section.name)
-#    print(section.symbols)
-
-def export_code(section, symbol):
-    print(section, symbol)
-    label = symbol.mwcc_label if symbol.mwcc_label else symbol.label
-
-    output = ""
-    output += "asm void %s() {\n" % label
-    output += "    nofralloc\n"
-    output += "}\n"
-
-    print(output)
-
-
-TEXT = SECTIONS[".text"]
-export_code(TEXT, TEXT.symbols[0])
-
-
-print(tree)
-"""
 
 sys.exit(0)

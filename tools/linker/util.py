@@ -2,6 +2,8 @@ import struct
 import os
 import io
 import sys
+import click
+from pathlib import Path
 from typing import Optional, IO, List
 
 def read_u8(f: IO) -> int:
@@ -65,3 +67,9 @@ def parse_null_string(data: bytes) -> Optional[str]:
 def fail(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
     sys.exit(1)
+
+class PathPath(click.Path):
+    """A Click path argument that returns a pathlib Path, not a string"""
+
+    def convert(self, value, param, ctx):
+        return Path(super().convert(value, param, ctx))

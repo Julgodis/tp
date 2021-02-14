@@ -24,6 +24,8 @@ class Section:
         self.section = None
         self.addr = None
         self.file_addr = None
+        self.alignment = header.sh_addralign
+        
 
     def getVirtualAddr(self, offset=0):
         return self.addr + offset
@@ -76,7 +78,8 @@ RELOCATION_NAMES = {
     0x5: "R_PPC_ADDR16_HI",
     0x6: "R_PPC_ADDR16_HA",
     0xA: "R_PPC_REL24",
-    0xB: "R_PPC_REL14"
+    0xB: "R_PPC_REL14",
+    0x6D: "R_PPC_EMB_SDA21",
 }
 
 class RelocationASection(Section):
@@ -131,6 +134,10 @@ class Symbol:
 
     def isBindGlobal(self):
         return self.bind == elf.STB_GLOBAL
+
+    def getSection(self):
+        fail("Symbol is not associated to any section")
+
         
 class NullSymbol(Symbol):
     def __init__(self, header: elf.Symbol):
@@ -146,6 +153,10 @@ class UndefSymbol(Symbol):
         assert self.reference
         self.reference.resolveAddress()
         self.addr = self.reference.addr
+
+    def getSection(self):
+        assert self.reference
+        return self.reference.getSection()
 
 class AbsoluteSymbol(Symbol):
     address: int
@@ -167,7 +178,14 @@ class OffsetSymbol(Symbol):
     def resolveAddress(self):
         self.addr = self.section.addr + self.offset
 
+    def getSection(self):
+        return  self.section
+
 #
+
+class RelocationException(Exception):
+    def __init__(self, message):
+        super().__init__(message)
 
 class Relocation:
     def __init__(self, symbol, section, offset, addend):
@@ -216,7 +234,7 @@ class R_PPC_ADDR32(Relocation):
         try:
             return struct.pack(">I", value32)
         except:
-            fail("R_PPC_ADDR32: 0x%08X does not fit in relocation at 0x%08X" % (value, P))
+            raise ExcepRelocationExceptiontion("R_PPC_ADDR32: 0x%08X does not fit in relocation at 0x%08X" % (value, P))
 
 class R_PPC_ADDR16(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -229,10 +247,15 @@ class R_PPC_ADDR16(Relocation):
         P = self.section.getVirtualAddr(self.offset)
         value = self.symbol.addr + self.addend
         value16 = value & 0xFFFF
+
+        if self.symbol.name == "data_80450AF0":
+            print("%04X" % value)
+            print("%04X" % value16)
+
         try:
             return struct.pack(">H", value16)
         except:
-            fail("R_PPC_ADDR16: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
+            raise RelocationException("R_PPC_ADDR16: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
 
 class R_PPC_ADDR16_LO(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -248,7 +271,7 @@ class R_PPC_ADDR16_LO(Relocation):
         try:
             return struct.pack(">H", value16)
         except:
-            fail("R_PPC_ADDR16_LO: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
+            raise RelocationException("R_PPC_ADDR16_LO: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
 
 class R_PPC_ADDR16_HI(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -264,7 +287,7 @@ class R_PPC_ADDR16_HI(Relocation):
         try:
             return struct.pack(">H", value16)
         except:
-            fail("R_PPC_ADDR16_HI: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
+            raise RelocationException("R_PPC_ADDR16_HI: 0x%04X (%i) does not fit in relocation at 0x%08X" % (value16, value16, P))
 
 class R_PPC_ADDR16_HA(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -282,7 +305,7 @@ class R_PPC_ADDR16_HA(Relocation):
         try:
             return struct.pack(">H", ha16)
         except:
-            fail("R_PPC_ADDR16_HA: 0x%04X (%i) does not fit in relocation at 0x%08X" % (ha16, ha16, P))
+            raise RelocationException("R_PPC_ADDR16_HA: 0x%04X (%i) does not fit in relocation at 0x%08X" % (ha16, ha16, P))
 
 class R_PPC_REL24(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -309,7 +332,7 @@ class R_PPC_REL24(Relocation):
             r24 = struct.pack(">I", p32 | (R & ~TM))
             return bytes(r24)
         except:
-            fail("R_PPC_REL24: 0x%08X does not fit in relocation at 0x%08X" % (R, P))
+            raise RelocationException("R_PPC_REL24: 0x%08X does not fit in relocation at 0x%08X" % (R, P))
 
 class R_PPC_REL14(Relocation):
     def __init__(self, symbol, section, offset, addend):
@@ -325,7 +348,6 @@ class R_PPC_REL14(Relocation):
         R = (S + A - P) & 0xFFFFFFFF
 
         TM = 0b1111111111111111 << 16
-        print(format(TM, "032b"))
         BM = 0b11
         try:
             if (R & BM) != 0:
@@ -337,8 +359,46 @@ class R_PPC_REL14(Relocation):
             r14 = struct.pack(">I", p32 | (R & ~TM))
             return bytes(r14)
         except:
-            fail("R_PPC_REL24: 0x%08X does not fit in relocation at 0x%08X" % (R, P))
+            raise RelocationException("R_PPC_REL24: 0x%08X does not fit in relocation at 0x%08X" % (R, P))
 
+class R_PPC_EMB_SDA21(Relocation):
+    def __init__(self, symbol, section, offset, addend):
+        super().__init__(symbol, section, offset, addend)
+
+        self.sections = {
+            ".sdata": (13, 0x80458580),
+            ".sbss": (13, 0x80458580),
+            ".sdata2": (2, 0x80459A00),
+            ".sbss2": (2, 0x80459A00),
+            ".PPC.EMB.sdata0": (0, 0x00000000),
+            ".PPC.EMB.sbss0": (0, 0x00000000),
+        }
+
+    def size(self) -> bytes:
+        return 4
+
+    def calculate(self, prev) -> bytes:
+        symbol_section = self.symbol.getSection()
+        if not symbol_section.name in self.sections:
+            fail("R_PPC_EMB_SDA21: symbol in section '%s' cannot be relocated" % self.section.name)
+        P = self.section.getVirtualAddr(self.offset)
+        B, X = self.sections[symbol_section.name]
+        A = self.addend
+        S = self.symbol.addr
+        R = (S + A - X)
+
+        if R >= -32768 and R < 32768:
+            value = R & 0xFFFF
+        else:
+            raise RelocationException("R_PPC_EMB_SDA21: relocation value too big! %08X" % R)
+
+        return bytes([
+            prev[0],
+            (prev[1] & ~0x1F) | (B & 0x1F),
+            (value >> 8),
+            (value & 0Xff)
+        ])
+        
 #
 
 class Object:
@@ -507,7 +567,7 @@ def load(path) -> Object:
                 type  = elf.R_TYPE(rela.r_info)
                 sym_id = elf.R_SYM(rela.r_info)
                 if not type in RELOCATION_NAMES:
-                    fail("unsupported relocation type: 0x%02X" % type)
+                    fail("unsupported relocation type: 0x%02X (in '%s')" % (type, path))
                 
                 if sym_id < 0 or sym_id >= len(symtab.symbols):
                     fail("invalid symbol index: %i (%i symbols)" % (sym_id, len(symtab.symbols)))
@@ -528,6 +588,8 @@ def load(path) -> Object:
                     relocation = R_PPC_REL24(symbol, modify, rela.r_offset, rela.r_addend)
                 elif type == 11:
                     relocation = R_PPC_REL14(symbol, modify, rela.r_offset, rela.r_addend)
+                elif type == 109:
+                    relocation = R_PPC_EMB_SDA21(symbol, modify, rela.r_offset, rela.r_addend)
 
                 assert relocation
                 obj.relocations.append(relocation)

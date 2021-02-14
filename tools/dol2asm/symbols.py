@@ -4,34 +4,23 @@ import disassembler as dasm
 
 #
 class Name:
-    def __init__(self, name):
-        self.name = name
-        self.label = None
-        self.mwcc_label = None
+    def __init__(self, prefix, addr, name):
+        self.addr = addr
+        self.prefix = prefix
+        self.label = f'{prefix}_%08X' % addr
+        self.reference = self.label
+        if name:
+            self.name = name
+        else:
+            self.name = self.label
 
     def __repr__(self):
         return self.__str__()
 
     def __str__(self):
-        return "Name(%s)" % (self.name)
-
-
-def create_name(prefix, addr, name):
-    if not name:
-        assert prefix
-        name = "%s_%08X" % (prefix, addr)
-    return Name(name)
-
-
-def create_name_full(prefix, addr, name, label, mwcc_label):
-    full_name = create_name(prefix, addr, name)
-    full_name.label = label
-    full_name.mwcc_label = mwcc_label
-    return full_name
+        return "Name(%s_%08X, %s)" % (self.prefix, self.addr, self.name)
 
 #
-
-
 class Library:
     def __init__(self, name, path, reference_set):
         self.name = name
@@ -59,8 +48,6 @@ class Library:
         return "Library(%s)" % (self.name)
 
 #
-
-
 class TranslationUnit:
     library: Library
 
@@ -122,7 +109,6 @@ class SectionPart:
 
 class Symbol:
     def __init__(self, name, addr, size, padding):
-        assert name.name
         self.name = name
         self.addr = addr
         self.size = size
@@ -131,6 +117,9 @@ class Symbol:
 
     def getInternalReferences(self):
         raise Exception("NOT IMPLEMENTED")
+
+    def updateName(self):
+        pass
 
     def __repr__(self):
         return self.__str__()
@@ -142,18 +131,33 @@ class Symbol:
 class Code(Symbol):
     def __init__(self, name, addr, size, offset, data):
         super().__init__(name, addr, size, 0)
-        self.label = name
-        self.mwcc_label = name
         self.data = data
         self.offset = offset
         self.internal_references = None
 
     def getInternalReferences(self):
         if not self.internal_references:
-            self.internal_references = set()
-            dasm.disasm(self.data, self.addr, self.size, dasm.get_labels_set, self.internal_references)
+            lcd = dasm.LCDisassembler()
+            lcd.execute(self.addr, self.data, self.size)
+            self.internal_references = lcd.labels | lcd.functions
 
         return self.internal_references
+
+def block_calculcate_padding(block):
+    assert len(block.data) % 4 == 0
+
+    count = 0
+    for x in reversed(list(util.chunks(block.data, 4))):
+        if x[0] == 0 and x[1] == 0 and x[2] == 0 and x[3] == 0:
+            count += 1
+        else:
+            break
+
+    if count > 0:
+        block.data = block.data[0:-count * 4]
+        block.size -= count * 4
+        block.padding += count * 4
+        assert len(block.data) >= block.size
 
 class Function(Symbol):
     def __init__(self, group, section):
@@ -162,22 +166,25 @@ class Function(Symbol):
         start = first.addr
         end = last.addr + last.size
         padding = last.padding
+        last.padding = 0
 
-        name = create_name_full(
-            "func", first.addr, first.name, first.label, first.mwcc_label)
-        super().__init__(name, start, end - start, padding)
+        super().__init__(Name("func", first.addr, first.name), start, end - start, padding)
 
+        self.alignment = first.alignment
         self.data = section.getData(start, end)
         self.blocks = []
         for symbol in group:
-            block_name = create_name("lbl", symbol.addr, None)
-            block_name.label = block_name.name
-            block_name.mwcc_label = block_name.name
-
             block_offset = symbol.addr - start
             block_data = self.data[block_offset:block_offset+symbol.size]
-            block = Code(block_name, symbol.addr, symbol.size, block_offset, block_data)
+            block = Code(Name("lbl", symbol.addr, None), symbol.addr, symbol.size, block_offset, block_data)
             self.blocks.append(block)
+
+        last_block = self.blocks[-1]
+        if last_block.size > 0:
+            block_calculcate_padding(last_block)
+            self.padding += last_block.padding
+            self.size -= last_block.padding
+            last_block.padding = 0
 
     def getInternalReferences(self):
         references = set()
@@ -196,17 +203,18 @@ class Data(Symbol):
         return set()
 
 class InitializedData(Data):
-    def __init__(self, name, addr, offset, data, padding=0):
-        super().__init__(name, addr, len(data), data=data, offset=offset, padding=padding)
+    def __init__(self, name, addr, offset, data, padding_data=[]):
+        super().__init__(name, addr, len(data), data=data, offset=offset, padding=len(padding_data))
+        self.padding_data = padding_data
 
-class ReadOnlyData(Data):
+class ZeroInitializedData(Data):
     def __init__(self, name, addr, size, padding=0):
         super().__init__(name, addr, size, padding=padding)
 
 class VTableData(InitializedData):
-    def __init__(self, name, addr, offset, data, padding=0):
+    def __init__(self, name, addr, offset, data, padding_data=[]):
         assert len(data) % 4 == 0
-        super().__init__(name, addr, offset, data, padding=padding)
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.table = []
 
     def resolve(self, function_map):
@@ -225,6 +233,31 @@ class VTableData(InitializedData):
 
     def getInternalReferences(self):
         return set([ x.addr for x in self.table if x != None ])
+
+class MergedData(Data):
+    def __init__(self, group):
+        first = group[0]
+        last = group[-1]
+        start = first.addr
+        end = last.addr + last.size
+        padding = last.padding
+        last.padding = 0
+
+        for part in group:
+            part.merged_parent = self
+
+        super().__init__(Name("merged", start, None), start, end - start, offset=first.offset, padding=padding)
+        self.internal_data = group
+        self.padding_data = last.padding_data
+        last.padding_data = []
+
+    def updateName(self):
+        for part in self.internal_data:
+            # the label for a internal data element will never 
+            # be used outside of comments, because of this, 
+            # we don't need to do anything special for escaping it.
+            part.name.label = part.name.name
+            part.name.reference = "%s+%i" % (self.name.label, part.addr - self.addr)
 
 #
 class Section:
@@ -294,6 +327,7 @@ class SectionSymbol:
         self.obj = obj
         self.padding = 0
         self.isFunction = False
+        self.alignment = 0
 
     def __repr__(self):
         return self.__str__()

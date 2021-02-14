@@ -76,28 +76,28 @@ def mwcc_decode_name(symbol):
 #
 # Generate two labels for a name. One label can be used 
 #
-def escape_name(prefix, name, addr):
-    if not name:
-        prefix_name = "%s_%08X" % (prefix, addr)
-        return prefix_name, prefix_name
+def escape_name(n):
+    if "@" in n.name:
+        if n.name.endswith("@stringBase0"):
+            rname = n.name.replace("@stringBase0", "stringBase0")
+            n.label = rname
+            n.reference = rname
+            return
 
-    if "@" in name:
-        if name.endswith("@stringBase0"):
-            new_name = name.replace("@stringBase0", "stringBase0")
-            return new_name, new_name
-
-        lname = literal_name(name)
+        lname = literal_name(n.name)
         if lname:
-            return lname, lname
+            n.label = lname
+            n.reference = lname
+            return
         
-    if is_weird(name):
-        prefix_name = "%s_%08X" % (prefix, addr)
-        return prefix_name, prefix_name
+    if is_weird(n.name):
+        return
 
-    if "<" in name or ">" in name or "," in name:
-        return "\"%s\"" % name, mwcc_encode_name(name)
+    if "<" in n.name or ">" in n.name or "," in n.name:
+        return # return "\"%s\"" % name, mwcc_encode_name(name)
 
-    return name, name
+    n.label = n.name
+    n.reference = n.name
 
 #
 #
