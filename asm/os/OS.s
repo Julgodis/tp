@@ -99,24 +99,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044BA60 0000 .bss       ...bss.0                       data_8044BA60                  */
-.global data_8044BA60
-data_8044BA60:
 
 /* 8044BA60 0020 .bss       DriveInfo                      DriveInfo                      */
-.global DriveInfo
-DriveInfo:
-.skip 0x20
 
 /* 8044BA80 0030 .bss       DriveBlock                     DriveBlock                     */
-.global DriveBlock
-DriveBlock:
-.skip 0x30
 
 /* 8044BAB0 001C .bss       __OSRebootParams               __OSRebootParams               */
-.global __OSRebootParams
-__OSRebootParams:
-.skip 0x1c
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -135,58 +123,24 @@ __OSRebootParams:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451600 0004 .sbss      BootInfo                       OS__BootInfo                   */
-.global OS__BootInfo
-OS__BootInfo:
-.skip 0x4
 
 /* 80451604 0004 .sbss      BI2DebugFlag                   BI2DebugFlag                   */
-.global BI2DebugFlag
-BI2DebugFlag:
-.skip 0x4
 
 /* 80451608 0004 .sbss      BI2DebugFlagHolder             BI2DebugFlagHolder             */
-.global BI2DebugFlagHolder
-BI2DebugFlagHolder:
-.skip 0x4
 
 /* 8045160C 0004 .sbss      __OSIsGcam                     __OSIsGcam                     */
-.global __OSIsGcam
-__OSIsGcam:
-.skip 0x4
 
 /* 80451610 0008 .sbss      ZeroF                          ZeroF                          */
-.global ZeroF
-ZeroF:
-.skip 0x8
 
 /* 80451618 0008 .sbss      ZeroPS                         ZeroPS                         */
-.global ZeroPS
-ZeroPS:
-.skip 0x8
 
 /* 80451620 0004 .sbss      AreWeInitialized               AreWeInitialized               */
-.global AreWeInitialized
-AreWeInitialized:
-.skip 0x4
 
 /* 80451624 0004 .sbss      OSExceptionTable               OSExceptionTable               */
-.global OSExceptionTable
-OSExceptionTable:
-.skip 0x4
 
 /* 80451628 0004 .sbss      __OSInIPL                      __OSInIPL                      */
-.global __OSInIPL
-__OSInIPL:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80451630 0004 .sbss      __OSStartTime                  __OSStartTime                  */
-.global __OSStartTime
-__OSStartTime:
-.skip 0x4
 
 /* 80451634 0004 .sbss      data_80451634                  data_80451634                  */
-.global data_80451634
-data_80451634:
-.skip 0x4
 

@@ -37,19 +37,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434378 000C .bss       @491                           JKRDvdRipper__LIT_491          */
-.global JKRDvdRipper__LIT_491
-JKRDvdRipper__LIT_491:
-.skip 0xc
 
 /* 80434384 000C .bss       sDvdAsyncList__12JKRDvdRipper  sDvdAsyncList__12JKRDvdRipper  */
-.global sDvdAsyncList__12JKRDvdRipper
-sDvdAsyncList__12JKRDvdRipper:
-.skip 0xc
 
 /* 80434390 0018 .bss       decompMutex                    JKRDvdRipper__decompMutex      */
-.global JKRDvdRipper__decompMutex
-JKRDvdRipper__decompMutex:
-.skip 0x18
 
 
 /* ###################################################################################### */
@@ -66,78 +57,32 @@ JKRDvdRipper__decompMutex:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451428 0004 .sbss      szpBuf                         JKRDvdRipper__szpBuf           */
-.global JKRDvdRipper__szpBuf
-JKRDvdRipper__szpBuf:
-.skip 0x4
 
 /* 8045142C 0004 .sbss      szpEnd                         JKRDvdRipper__szpEnd           */
-.global JKRDvdRipper__szpEnd
-JKRDvdRipper__szpEnd:
-.skip 0x4
 
 /* 80451430 0004 .sbss      refBuf                         JKRDvdRipper__refBuf           */
-.global JKRDvdRipper__refBuf
-JKRDvdRipper__refBuf:
-.skip 0x4
 
 /* 80451434 0004 .sbss      refEnd                         JKRDvdRipper__refEnd           */
-.global JKRDvdRipper__refEnd
-JKRDvdRipper__refEnd:
-.skip 0x4
 
 /* 80451438 0004 .sbss      refCurrent                     JKRDvdRipper__refCurrent       */
-.global JKRDvdRipper__refCurrent
-JKRDvdRipper__refCurrent:
-.skip 0x4
 
 /* 8045143C 0004 .sbss      srcOffset                      JKRDvdRipper__srcOffset        */
-.global JKRDvdRipper__srcOffset
-JKRDvdRipper__srcOffset:
-.skip 0x4
 
 /* 80451440 0004 .sbss      transLeft                      JKRDvdRipper__transLeft        */
-.global JKRDvdRipper__transLeft
-JKRDvdRipper__transLeft:
-.skip 0x4
 
 /* 80451444 0004 .sbss      srcLimit                       JKRDvdRipper__srcLimit         */
-.global JKRDvdRipper__srcLimit
-JKRDvdRipper__srcLimit:
-.skip 0x4
 
 /* 80451448 0004 .sbss      srcFile                        JKRDvdRipper__srcFile          */
-.global JKRDvdRipper__srcFile
-JKRDvdRipper__srcFile:
-.skip 0x4
 
 /* 8045144C 0004 .sbss      fileOffset                     JKRDvdRipper__fileOffset       */
-.global JKRDvdRipper__fileOffset
-JKRDvdRipper__fileOffset:
-.skip 0x4
 
 /* 80451450 0004 .sbss      readCount                      JKRDvdRipper__readCount        */
-.global JKRDvdRipper__readCount
-JKRDvdRipper__readCount:
-.skip 0x4
 
 /* 80451454 0004 .sbss      maxDest                        JKRDvdRipper__maxDest          */
-.global JKRDvdRipper__maxDest
-JKRDvdRipper__maxDest:
-.skip 0x4
 
 /* 80451458 0004 .sbss      data_80451458                  data_80451458                  */
-.global data_80451458
-data_80451458:
-.skip 0x4
 
 /* 8045145C 0004 .sbss      tsPtr                          JKRDvdRipper__tsPtr            */
-.global JKRDvdRipper__tsPtr
-JKRDvdRipper__tsPtr:
-.skip 0x4
 
 /* 80451460 0004 .sbss      tsArea                         JKRDvdRipper__tsArea           */
-.global JKRDvdRipper__tsArea
-JKRDvdRipper__tsArea:
-.skip 0x4
-.skip 0x4 /* padding */
 

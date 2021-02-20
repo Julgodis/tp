@@ -291,9 +291,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80424B80 03F0 .bss       l_wcsbuf                       d_d_bg_w__l_wcsbuf             */
-.global d_d_bg_w__l_wcsbuf
-d_d_bg_w__l_wcsbuf:
-.skip 0x3f0
 
 
 /* ###################################################################################### */
@@ -301,34 +298,10 @@ d_d_bg_w__l_wcsbuf:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450F80 0004 .sbss      l_start                        l_start                        */
-.global l_start
-l_start:
-.skip 0x4
 
 /* 80450F84 0004 .sbss      l_wcsbuf_num                   l_wcsbuf_num                   */
-.global l_wcsbuf_num
-l_wcsbuf_num:
-.skip 0x4
 
-/* 80450F88 0001 .sbss      data_80450F88                  data_80450F88                  */
-.global data_80450F88
-data_80450F88:
-.skip 0x1
-
-/* 80450F89 0001 .sbss      data_80450F89                  data_80450F89                  */
-.global data_80450F89
-data_80450F89:
-.skip 0x1
-
-/* 80450F8A 0001 .sbss      data_80450F8A                  data_80450F8A                  */
-.global data_80450F8A
-data_80450F8A:
-.skip 0x1
-
-/* 80450F8B 0005 .sbss      data_80450F8B                  data_80450F8B                  */
-.global data_80450F8B
-data_80450F8B:
-.skip 0x5
+/* 80450F88 0008 .sbss      merged_80450F88                merged_80450F88                */
 
 
 /* ###################################################################################### */

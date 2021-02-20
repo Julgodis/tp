@@ -18,23 +18,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DECC0 0000 .bss       ...bss.0                       data_803DECC0                  */
-.global data_803DECC0
-data_803DECC0:
 
 /* 803DECC0 0318 .bss       DvdErr_thread                  DvdErr_thread                  */
-.global DvdErr_thread
-DvdErr_thread:
-.skip 0x318
-.skip 0x8 /* padding */
 
 /* 803DEFE0 0C00 .bss       DvdErr_stack                   DvdErr_stack                   */
-.global DvdErr_stack
-DvdErr_stack:
-.skip 0xc00
 
 /* 803DFBE0 0028 .bss       Alarm                          m_Do_m_Do_DVDError__Alarm      */
-.global m_Do_m_Do_DVDError__Alarm
-m_Do_m_Do_DVDError__Alarm:
-.skip 0x28
-.skip 0x18 /* padding */
 

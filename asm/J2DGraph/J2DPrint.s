@@ -49,24 +49,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451580 0004 .sbss      mStrBuff__8J2DPrint            mStrBuff__8J2DPrint            */
-.global mStrBuff__8J2DPrint
-mStrBuff__8J2DPrint:
-.skip 0x4
 
 /* 80451584 0004 .sbss      data_80451584                  data_80451584                  */
-.global data_80451584
-data_80451584:
-.skip 0x4
 
 /* 80451588 0004 .sbss      mStrBuffSize__8J2DPrint        mStrBuffSize__8J2DPrint        */
-.global mStrBuffSize__8J2DPrint
-mStrBuffSize__8J2DPrint:
-.skip 0x4
 
 /* 8045158C 0004 .sbss      data_8045158C                  data_8045158C                  */
-.global data_8045158C
-data_8045158C:
-.skip 0x4
 
 
 /* ###################################################################################### */

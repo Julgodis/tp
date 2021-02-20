@@ -171,19 +171,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 8045105C 0004 .sbss      dShopSystem_item_count         dShopSystem_item_count         */
-.global dShopSystem_item_count
-dShopSystem_item_count:
-.skip 0x4
 
 /* 80451060 0004 .sbss      data_80451060                  data_80451060                  */
-.global data_80451060
-data_80451060:
-.skip 0x4
 
 /* 80451064 0004 .sbss      dShopSystem_camera_count       dShopSystem_camera_count       */
-.global dShopSystem_camera_count
-dShopSystem_camera_count:
-.skip 0x4
 
 
 /* ###################################################################################### */

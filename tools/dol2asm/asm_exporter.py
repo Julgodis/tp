@@ -182,6 +182,9 @@ def export_symbol_init_data(builder: Builder, section: SectionPart, symbol: Init
     export_padding(builder, symbol.padding)
 
 def export_symbol_zero_data(builder: Builder, section: SectionPart, symbol: ZeroInitializedData):
+    if _EXPORT_CPP:
+        return
+
     export_symbol_label(builder, symbol)
 
     if symbol.size:

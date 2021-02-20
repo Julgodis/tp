@@ -46,14 +46,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434348 000C .bss       @2182                          JKRFileLoader__LIT_2182        */
-.global JKRFileLoader__LIT_2182
-JKRFileLoader__LIT_2182:
-.skip 0xc
 
 /* 80434354 000C .bss       sVolumeList__13JKRFileLoader   sVolumeList__13JKRFileLoader   */
-.global sVolumeList__13JKRFileLoader
-sVolumeList__13JKRFileLoader:
-.skip 0xc
 
 
 /* ###################################################################################### */
@@ -70,8 +64,4 @@ sVolumeList__13JKRFileLoader:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451418 0004 .sbss      sCurrentVolume__13JKRFileLoader sCurrentVolume__13JKRFileLoader */
-.global sCurrentVolume__13JKRFileLoader
-sCurrentVolume__13JKRFileLoader:
-.skip 0x4
-.skip 0x4 /* padding */
 

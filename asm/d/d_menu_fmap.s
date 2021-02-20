@@ -410,14 +410,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042E820 000C .bss       @3989                          LIT_3989                       */
-.global LIT_3989
-LIT_3989:
-.skip 0xc
 
 /* 8042E82C 0014 .bss       g_fmHIO                        g_fmHIO                        */
-.global g_fmHIO
-g_fmHIO:
-.skip 0x14
 
 
 /* ###################################################################################### */
@@ -425,19 +419,10 @@ g_fmHIO:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804510A0 0004 .sbss      mMySelfPointer__9dMf_HIO_c     mMySelfPointer__9dMf_HIO_c     */
-.global mMySelfPointer__9dMf_HIO_c
-mMySelfPointer__9dMf_HIO_c:
-.skip 0x4
 
 /* 804510A4 0008 .sbss      virtual_stage$3999             data_804510A4                  */
-.global data_804510A4
-data_804510A4:
-.skip 0x8
 
 /* 804510AC 0004 .sbss      MyClass__12dMenu_Fmap_c        MyClass__12dMenu_Fmap_c        */
-.global MyClass__12dMenu_Fmap_c
-MyClass__12dMenu_Fmap_c:
-.skip 0x4
 
 
 /* ###################################################################################### */

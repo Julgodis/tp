@@ -81,34 +81,16 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DD470 0000 .bss       ...bss.0                       data_803DD470                  */
-.global data_803DD470
-data_803DD470:
 
 /* 803DD470 0030 .bss       now__14mDoMtx_stack_c          now__14mDoMtx_stack_c          */
-.global now__14mDoMtx_stack_c
-now__14mDoMtx_stack_c:
-.skip 0x30
 
 /* 803DD4A0 0300 .bss       buffer__14mDoMtx_stack_c       buffer__14mDoMtx_stack_c       */
-.global buffer__14mDoMtx_stack_c
-buffer__14mDoMtx_stack_c:
-.skip 0x300
 
 /* 803DD7A0 000C .bss       @4048                          m_Do_m_Do_mtx__LIT_4048        */
-.global m_Do_m_Do_mtx__LIT_4048
-m_Do_m_Do_mtx__LIT_4048:
-.skip 0xc
 
 /* 803DD7AC 000C .bss       @4078                          m_Do_m_Do_mtx__LIT_4078        */
-.global m_Do_m_Do_mtx__LIT_4078
-m_Do_m_Do_mtx__LIT_4078:
-.skip 0xc
 
 /* 803DD7B8 011C .bss       mDoMtx_quatStack               mDoMtx_quatStack               */
-.global mDoMtx_quatStack
-mDoMtx_quatStack:
-.skip 0x11c
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -125,10 +107,6 @@ mDoMtx_quatStack:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450C18 0001 .sbss      mDoMtx_stack                   mDoMtx_stack                   */
-.global mDoMtx_stack
-mDoMtx_stack:
-.skip 0x1
-.skip 0x7 /* padding */
 
 
 /* ###################################################################################### */

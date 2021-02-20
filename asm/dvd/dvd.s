@@ -127,28 +127,14 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044C900 0000 .bss       ...bss.0                       data_8044C900                  */
-.global data_8044C900
-data_8044C900:
 
 /* 8044C900 0020 .bss       BB2                            BB2                            */
-.global BB2
-BB2:
-.skip 0x20
 
 /* 8044C920 0020 .bss       CurrDiskID                     CurrDiskID                     */
-.global CurrDiskID
-CurrDiskID:
-.skip 0x20
 
 /* 8044C940 0030 .bss       DummyCommandBlock              DummyCommandBlock              */
-.global DummyCommandBlock
-DummyCommandBlock:
-.skip 0x30
 
 /* 8044C970 0028 .bss       ResetAlarm                     ResetAlarm                     */
-.global ResetAlarm
-ResetAlarm:
-.skip 0x28
 
 
 /* ###################################################################################### */
@@ -171,98 +157,40 @@ ResetAlarm:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451778 0004 .sbss      executing                      executing                      */
-.global executing
-executing:
-.skip 0x4
 
 /* 8045177C 0004 .sbss      IDShouldBe                     IDShouldBe                     */
-.global IDShouldBe
-IDShouldBe:
-.skip 0x4
 
 /* 80451780 0004 .sbss      bootInfo                       bootInfo                       */
-.global bootInfo
-bootInfo:
-.skip 0x4
 
 /* 80451784 0004 .sbss      PauseFlag                      PauseFlag                      */
-.global PauseFlag
-PauseFlag:
-.skip 0x4
 
 /* 80451788 0004 .sbss      PausingFlag                    PausingFlag                    */
-.global PausingFlag
-PausingFlag:
-.skip 0x4
 
 /* 8045178C 0004 .sbss      AutoFinishing                  AutoFinishing                  */
-.global AutoFinishing
-AutoFinishing:
-.skip 0x4
 
 /* 80451790 0004 .sbss      FatalErrorFlag                 FatalErrorFlag                 */
-.global FatalErrorFlag
-FatalErrorFlag:
-.skip 0x4
 
 /* 80451794 0004 .sbss      CurrCommand                    CurrCommand                    */
-.global CurrCommand
-CurrCommand:
-.skip 0x4
 
 /* 80451798 0004 .sbss      Canceling                      Canceling                      */
-.global Canceling
-Canceling:
-.skip 0x4
 
 /* 8045179C 0004 .sbss      CancelCallback                 CancelCallback                 */
-.global CancelCallback
-CancelCallback:
-.skip 0x4
 
 /* 804517A0 0004 .sbss      ResumeFromHere                 ResumeFromHere                 */
-.global ResumeFromHere
-ResumeFromHere:
-.skip 0x4
 
 /* 804517A4 0004 .sbss      CancelLastError                CancelLastError                */
-.global CancelLastError
-CancelLastError:
-.skip 0x4
 
 /* 804517A8 0004 .sbss      LastError                      LastError                      */
-.global LastError
-LastError:
-.skip 0x4
 
 /* 804517AC 0004 .sbss      NumInternalRetry               NumInternalRetry               */
-.global NumInternalRetry
-NumInternalRetry:
-.skip 0x4
 
 /* 804517B0 0004 .sbss      ResetRequired                  ResetRequired                  */
-.global ResetRequired
-ResetRequired:
-.skip 0x4
 
 /* 804517B4 0004 .sbss      FirstTimeInBootrom             FirstTimeInBootrom             */
-.global FirstTimeInBootrom
-FirstTimeInBootrom:
-.skip 0x4
 
 /* 804517B8 0004 .sbss      MotorState                     MotorState                     */
-.global MotorState
-MotorState:
-.skip 0x4
 
 /* 804517BC 0004 .sbss      DVDInitialized                 DVDInitialized                 */
-.global DVDInitialized
-DVDInitialized:
-.skip 0x4
 
 /* 804517C0 0004 .sbss      LastState                      dvd__LastState                 */
-.global dvd__LastState
-dvd__LastState:
-.skip 0x4
-.skip 0x4 /* padding */
 

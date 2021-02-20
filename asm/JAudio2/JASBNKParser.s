@@ -40,15 +40,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431B70 000C .bss       @1065                          JASBNKParser__LIT_1065         */
-.global JASBNKParser__LIT_1065
-JASBNKParser__LIT_1065:
-.skip 0xc
 
 /* 80431B7C 0010 .bss       memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel> data_80431B7C                  */
-.global data_80431B7C
-data_80431B7C:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -56,14 +49,8 @@ data_80431B7C:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451288 0004 .sbss      sUsedHeapSize__12JASBNKParser  sUsedHeapSize__12JASBNKParser  */
-.global sUsedHeapSize__12JASBNKParser
-sUsedHeapSize__12JASBNKParser:
-.skip 0x4
 
 /* 8045128C 0004 .sbss      data_8045128C                  data_8045128C                  */
-.global data_8045128C
-data_8045128C:
-.skip 0x4
 
 
 /* ###################################################################################### */

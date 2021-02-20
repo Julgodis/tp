@@ -28,15 +28,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804514C8 0004 .sbss      sDebugPrint__10JUTDbPrint      sDebugPrint__10JUTDbPrint      */
-.global sDebugPrint__10JUTDbPrint
-sDebugPrint__10JUTDbPrint:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804514D0 0004 .sbss      data_804514D0                  data_804514D0                  */
-.global data_804514D0
-data_804514D0:
-.skip 0x4
 
 
 /* ###################################################################################### */

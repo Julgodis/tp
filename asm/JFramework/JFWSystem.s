@@ -41,44 +41,20 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804511A0 0004 .sbss      rootHeap__9JFWSystem           rootHeap__9JFWSystem           */
-.global rootHeap__9JFWSystem
-rootHeap__9JFWSystem:
-.skip 0x4
 
 /* 804511A4 0004 .sbss      systemHeap__9JFWSystem         systemHeap__9JFWSystem         */
-.global systemHeap__9JFWSystem
-systemHeap__9JFWSystem:
-.skip 0x4
 
 /* 804511A8 0004 .sbss      mainThread__9JFWSystem         mainThread__9JFWSystem         */
-.global mainThread__9JFWSystem
-mainThread__9JFWSystem:
-.skip 0x4
 
 /* 804511AC 0004 .sbss      debugPrint__9JFWSystem         debugPrint__9JFWSystem         */
-.global debugPrint__9JFWSystem
-debugPrint__9JFWSystem:
-.skip 0x4
 
 /* 804511B0 0004 .sbss      systemFont__9JFWSystem         systemFont__9JFWSystem         */
-.global systemFont__9JFWSystem
-systemFont__9JFWSystem:
-.skip 0x4
 
 /* 804511B4 0004 .sbss      systemConsoleManager__9JFWSystem systemConsoleManager__9JFWSystem */
-.global systemConsoleManager__9JFWSystem
-systemConsoleManager__9JFWSystem:
-.skip 0x4
 
 /* 804511B8 0004 .sbss      systemConsole__9JFWSystem      systemConsole__9JFWSystem      */
-.global systemConsole__9JFWSystem
-systemConsole__9JFWSystem:
-.skip 0x4
 
 /* 804511BC 0004 .sbss      data_804511BC                  data_804511BC                  */
-.global data_804511BC
-data_804511BC:
-.skip 0x4
 
 
 /* ###################################################################################### */

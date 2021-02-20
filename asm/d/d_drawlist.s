@@ -254,14 +254,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804248D0 0020 .bss       mSimpleTexObj__21dDlst_shadowControl_c mSimpleTexObj__21dDlst_shadowControl_c */
-.global mSimpleTexObj__21dDlst_shadowControl_c
-mSimpleTexObj__21dDlst_shadowControl_c:
-.skip 0x20
 
 /* 804248F0 0048 .bss       mWipeDlst__12dDlst_list_c      mWipeDlst__12dDlst_list_c      */
-.global mWipeDlst__12dDlst_list_c
-mWipeDlst__12dDlst_list_c:
-.skip 0x48
 
 
 /* ###################################################################################### */
@@ -286,20 +280,10 @@ mWipeDlst__12dDlst_list_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450ED4 0004 .sbss      mWipeRate__12dDlst_list_c      mWipeRate__12dDlst_list_c      */
-.global mWipeRate__12dDlst_list_c
-mWipeRate__12dDlst_list_c:
-.skip 0x4
 
 /* 80450ED8 0004 .sbss      mWipeSpeed__12dDlst_list_c     mWipeSpeed__12dDlst_list_c     */
-.global mWipeSpeed__12dDlst_list_c
-mWipeSpeed__12dDlst_list_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80450EE0 0008 .sbss      data_80450EE0                  data_80450EE0                  */
-.global data_80450EE0
-data_80450EE0:
-.skip 0x8
 
 
 /* ###################################################################################### */
@@ -402,8 +386,4 @@ data_80450EE0:
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456B68 0004 .sbss2     @4275                          d_d_drawlist__LIT_4275         */
-.global d_d_drawlist__LIT_4275
-d_d_drawlist__LIT_4275:
-.skip 0x4
-.skip 0x4 /* padding */
 

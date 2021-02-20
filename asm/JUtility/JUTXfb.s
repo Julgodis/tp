@@ -26,8 +26,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451550 0004 .sbss      sManager__6JUTXfb              sManager__6JUTXfb              */
-.global sManager__6JUTXfb
-sManager__6JUTXfb:
-.skip 0x4
-.skip 0x4 /* padding */
 

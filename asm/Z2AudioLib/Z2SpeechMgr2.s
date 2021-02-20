@@ -143,14 +143,6 @@
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456BA8 0002 .sbss2     @4003                          Z2SpeechMgr2__LIT_4003         */
-.global Z2SpeechMgr2__LIT_4003
-Z2SpeechMgr2__LIT_4003:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80456BAC 0002 .sbss2     @4104                          Z2SpeechMgr2__LIT_4104         */
-.global Z2SpeechMgr2__LIT_4104
-Z2SpeechMgr2__LIT_4104:
-.skip 0x2
-.skip 0x2 /* padding */
 

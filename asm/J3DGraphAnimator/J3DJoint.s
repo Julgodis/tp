@@ -41,20 +41,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515F0 0004 .sbss      mMtxBuffer__10J3DMtxCalc       mMtxBuffer__10J3DMtxCalc       */
-.global mMtxBuffer__10J3DMtxCalc
-mMtxBuffer__10J3DMtxCalc:
-.skip 0x4
 
 /* 804515F4 0004 .sbss      mJoint__10J3DMtxCalc           mJoint__10J3DMtxCalc           */
-.global mJoint__10J3DMtxCalc
-mJoint__10J3DMtxCalc:
-.skip 0x4
 
 /* 804515F8 0004 .sbss      mCurrentMtxCalc__8J3DJoint     mCurrentMtxCalc__8J3DJoint     */
-.global mCurrentMtxCalc__8J3DJoint
-mCurrentMtxCalc__8J3DJoint:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

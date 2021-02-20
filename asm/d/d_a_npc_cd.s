@@ -180,173 +180,72 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80425978 0000 .bss       ...bss.0                       data_80425978                  */
-.global data_80425978
-data_80425978:
 
 /* 80425978 000C .bss       @3974                          LIT_3974                       */
-.global LIT_3974
-LIT_3974:
-.skip 0xc
 
 /* 80425984 29BC .bss       l_Cd_HIO                       l_Cd_HIO                       */
-.global l_Cd_HIO
-l_Cd_HIO:
-.skip 0x29bc
 
 /* 80428340 000C .bss       @4080                          d_d_a_npc_cd__LIT_4080         */
-.global d_d_a_npc_cd__LIT_4080
-d_d_a_npc_cd__LIT_4080:
-.skip 0xc
 
 /* 8042834C 000C .bss       @4083                          d_d_a_npc_cd__LIT_4083         */
-.global d_d_a_npc_cd__LIT_4083
-d_d_a_npc_cd__LIT_4083:
-.skip 0xc
 
 /* 80428358 000C .bss       @4084                          d_d_a_npc_cd__LIT_4084         */
-.global d_d_a_npc_cd__LIT_4084
-d_d_a_npc_cd__LIT_4084:
-.skip 0xc
 
 /* 80428364 000C .bss       @4085                          d_d_a_npc_cd__LIT_4085         */
-.global d_d_a_npc_cd__LIT_4085
-d_d_a_npc_cd__LIT_4085:
-.skip 0xc
 
 /* 80428370 000C .bss       @4086                          d_d_a_npc_cd__LIT_4086         */
-.global d_d_a_npc_cd__LIT_4086
-d_d_a_npc_cd__LIT_4086:
-.skip 0xc
 
 /* 8042837C 000C .bss       @4087                          d_d_a_npc_cd__LIT_4087         */
-.global d_d_a_npc_cd__LIT_4087
-d_d_a_npc_cd__LIT_4087:
-.skip 0xc
 
 /* 80428388 000C .bss       @4088                          d_d_a_npc_cd__LIT_4088         */
-.global d_d_a_npc_cd__LIT_4088
-d_d_a_npc_cd__LIT_4088:
-.skip 0xc
 
 /* 80428394 000C .bss       @4089                          d_d_a_npc_cd__LIT_4089         */
-.global d_d_a_npc_cd__LIT_4089
-d_d_a_npc_cd__LIT_4089:
-.skip 0xc
 
 /* 804283A0 000C .bss       @4090                          d_d_a_npc_cd__LIT_4090         */
-.global d_d_a_npc_cd__LIT_4090
-d_d_a_npc_cd__LIT_4090:
-.skip 0xc
 
 /* 804283AC 000C .bss       @4091                          d_d_a_npc_cd__LIT_4091         */
-.global d_d_a_npc_cd__LIT_4091
-d_d_a_npc_cd__LIT_4091:
-.skip 0xc
 
 /* 804283B8 000C .bss       @4092                          d_d_a_npc_cd__LIT_4092         */
-.global d_d_a_npc_cd__LIT_4092
-d_d_a_npc_cd__LIT_4092:
-.skip 0xc
 
 /* 804283C4 000C .bss       @4093                          d_d_a_npc_cd__LIT_4093         */
-.global d_d_a_npc_cd__LIT_4093
-d_d_a_npc_cd__LIT_4093:
-.skip 0xc
 
 /* 804283D0 000C .bss       @4094                          d_d_a_npc_cd__LIT_4094         */
-.global d_d_a_npc_cd__LIT_4094
-d_d_a_npc_cd__LIT_4094:
-.skip 0xc
 
 /* 804283DC 000C .bss       @4095                          d_d_a_npc_cd__LIT_4095         */
-.global d_d_a_npc_cd__LIT_4095
-d_d_a_npc_cd__LIT_4095:
-.skip 0xc
 
 /* 804283E8 000C .bss       @4096                          d_d_a_npc_cd__LIT_4096         */
-.global d_d_a_npc_cd__LIT_4096
-d_d_a_npc_cd__LIT_4096:
-.skip 0xc
 
 /* 804283F4 000C .bss       @4097                          d_d_a_npc_cd__LIT_4097         */
-.global d_d_a_npc_cd__LIT_4097
-d_d_a_npc_cd__LIT_4097:
-.skip 0xc
 
 /* 80428400 000C .bss       @4098                          d_d_a_npc_cd__LIT_4098         */
-.global d_d_a_npc_cd__LIT_4098
-d_d_a_npc_cd__LIT_4098:
-.skip 0xc
 
 /* 8042840C 000C .bss       @4099                          d_d_a_npc_cd__LIT_4099         */
-.global d_d_a_npc_cd__LIT_4099
-d_d_a_npc_cd__LIT_4099:
-.skip 0xc
 
 /* 80428418 000C .bss       @4100                          d_d_a_npc_cd__LIT_4100         */
-.global d_d_a_npc_cd__LIT_4100
-d_d_a_npc_cd__LIT_4100:
-.skip 0xc
 
 /* 80428424 000C .bss       @4101                          d_d_a_npc_cd__LIT_4101         */
-.global d_d_a_npc_cd__LIT_4101
-d_d_a_npc_cd__LIT_4101:
-.skip 0xc
 
 /* 80428430 000C .bss       @4102                          LIT_4102                       */
-.global LIT_4102
-LIT_4102:
-.skip 0xc
 
 /* 8042843C 000C .bss       @4103                          d_d_a_npc_cd__LIT_4103         */
-.global d_d_a_npc_cd__LIT_4103
-d_d_a_npc_cd__LIT_4103:
-.skip 0xc
 
 /* 80428448 000C .bss       @4104                          d_d_a_npc_cd__LIT_4104         */
-.global d_d_a_npc_cd__LIT_4104
-d_d_a_npc_cd__LIT_4104:
-.skip 0xc
 
 /* 80428454 000C .bss       @4105                          d_d_a_npc_cd__LIT_4105         */
-.global d_d_a_npc_cd__LIT_4105
-d_d_a_npc_cd__LIT_4105:
-.skip 0xc
 
 /* 80428460 000C .bss       @4106                          d_d_a_npc_cd__LIT_4106         */
-.global d_d_a_npc_cd__LIT_4106
-d_d_a_npc_cd__LIT_4106:
-.skip 0xc
 
 /* 8042846C 000C .bss       @4107                          d_d_a_npc_cd__LIT_4107         */
-.global d_d_a_npc_cd__LIT_4107
-d_d_a_npc_cd__LIT_4107:
-.skip 0xc
 
 /* 80428478 000C .bss       @4108                          d_d_a_npc_cd__LIT_4108         */
-.global d_d_a_npc_cd__LIT_4108
-d_d_a_npc_cd__LIT_4108:
-.skip 0xc
 
 /* 80428484 000C .bss       @4109                          d_d_a_npc_cd__LIT_4109         */
-.global d_d_a_npc_cd__LIT_4109
-d_d_a_npc_cd__LIT_4109:
-.skip 0xc
 
 /* 80428490 000C .bss       @4110                          d_d_a_npc_cd__LIT_4110         */
-.global d_d_a_npc_cd__LIT_4110
-d_d_a_npc_cd__LIT_4110:
-.skip 0xc
 
 /* 8042849C 000C .bss       @4111                          d_d_a_npc_cd__LIT_4111         */
-.global d_d_a_npc_cd__LIT_4111
-d_d_a_npc_cd__LIT_4111:
-.skip 0xc
 
 /* 804284A8 0168 .bss       a_eyeOfsTbl$4079               data_804284A8                  */
-.global data_804284A8
-data_804284A8:
-.skip 0x168
 
 
 /* ###################################################################################### */

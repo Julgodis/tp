@@ -47,29 +47,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451558 0004 .sbss      sManager__10JUTProcBar         sManager__10JUTProcBar         */
-.global sManager__10JUTProcBar
-sManager__10JUTProcBar:
-.skip 0x4
 
 /* 8045155C 0004 .sbss      cnt$2330                       data_8045155C                  */
-.global data_8045155C
-data_8045155C:
-.skip 0x4
 
 /* 80451560 0004 .sbss      data_80451560                  data_80451560                  */
-.global data_80451560
-data_80451560:
-.skip 0x4
 
 /* 80451564 0004 .sbss      cntUser$2379                   data_80451564                  */
-.global data_80451564
-data_80451564:
-.skip 0x4
 
 /* 80451568 0008 .sbss      data_80451568                  data_80451568                  */
-.global data_80451568
-data_80451568:
-.skip 0x8
 
 
 /* ###################################################################################### */

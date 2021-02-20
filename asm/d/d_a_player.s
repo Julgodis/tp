@@ -144,19 +144,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451018 0004 .sbss      m_midnaActor__9daPy_py_c       m_midnaActor__9daPy_py_c       */
-.global m_midnaActor__9daPy_py_c
-m_midnaActor__9daPy_py_c:
-.skip 0x4
 
-/* 8045101C 0002 .sbss      m_dropAngleY__20daPy_boomerangMove_c m_dropAngleY__20daPy_boomerangMove_c */
-.global m_dropAngleY__20daPy_boomerangMove_c
-m_dropAngleY__20daPy_boomerangMove_c:
-.skip 0x2
-
-/* 8045101E 0002 .sbss      m_eventKeepFlg__20daPy_boomerangMove_c m_eventKeepFlg__20daPy_boomerangMove_c */
-.global m_eventKeepFlg__20daPy_boomerangMove_c
-m_eventKeepFlg__20daPy_boomerangMove_c:
-.skip 0x2
+/* 8045101C 0004 .sbss      merged_8045101C                merged_8045101C                */
 
 
 /* ###################################################################################### */

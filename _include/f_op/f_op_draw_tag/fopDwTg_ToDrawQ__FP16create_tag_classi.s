@@ -1,0 +1,11 @@
+lbl_800204AC:
+/* 800204AC 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 800204B0 00000004  7C 08 02 A6 */	mflr r0
+/* 800204B4 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 800204B8 0000000C  7C 65 1B 78 */	mr r5, r3
+/* 800204BC 00000010  38 6D 80 50 */	addi r3, r13, 0x804505D0-0x80458580 /* g_fopDwTg_Queue-_SDA_BASE_ */
+/* 800204C0 00000014  48 24 64 0D */	bl cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class
+/* 800204C4 00000018  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 800204C8 0000001C  7C 08 03 A6 */	mtlr r0
+/* 800204CC 00000020  38 21 00 10 */	addi r1, r1, 0x10
+/* 800204D0 00000024  4E 80 00 20 */	blr 

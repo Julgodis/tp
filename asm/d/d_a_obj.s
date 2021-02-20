@@ -45,44 +45,20 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804245E8 000C .bss       @3677                          d_d_a_obj__LIT_3677            */
-.global d_d_a_obj__LIT_3677
-d_d_a_obj__LIT_3677:
-.skip 0xc
 
 /* 804245F4 000C .bss       scale$3676                     data_804245F4                  */
-.global data_804245F4
-data_804245F4:
-.skip 0xc
 
 /* 80424600 000C .bss       @3692                          d_d_a_obj__LIT_3692            */
-.global d_d_a_obj__LIT_3692
-d_d_a_obj__LIT_3692:
-.skip 0xc
 
 /* 8042460C 000C .bss       scale$3691                     data_8042460C                  */
-.global data_8042460C
-data_8042460C:
-.skip 0xc
 
 /* 80424618 000C .bss       @3719                          d_d_a_obj__LIT_3719            */
-.global d_d_a_obj__LIT_3719
-d_d_a_obj__LIT_3719:
-.skip 0xc
 
 /* 80424624 000C .bss       scale$3718                     data_80424624                  */
-.global data_80424624
-data_80424624:
-.skip 0xc
 
 /* 80424630 000C .bss       @3732                          d_d_a_obj__LIT_3732            */
-.global d_d_a_obj__LIT_3732
-d_d_a_obj__LIT_3732:
-.skip 0xc
 
 /* 8042463C 000C .bss       scale$3731                     data_8042463C                  */
-.global data_8042463C
-data_8042463C:
-.skip 0xc
 
 
 /* ###################################################################################### */

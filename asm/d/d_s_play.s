@@ -100,28 +100,14 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430778 0000 .bss       ...bss.0                       data_80430778                  */
-.global data_80430778
-data_80430778:
 
 /* 80430778 000C .bss       @4041                          d_d_s_play__LIT_4041           */
-.global d_d_s_play__LIT_4041
-d_d_s_play__LIT_4041:
-.skip 0xc
 
 /* 80430784 000C .bss       @4049                          d_d_s_play__LIT_4049           */
-.global d_d_s_play__LIT_4049
-d_d_s_play__LIT_4049:
-.skip 0xc
 
 /* 80430790 000C .bss       @4050                          d_d_s_play__LIT_4050           */
-.global d_d_s_play__LIT_4050
-d_d_s_play__LIT_4050:
-.skip 0xc
 
 /* 8043079C 0044 .bss       g_envHIO                       g_envHIO                       */
-.global g_envHIO
-g_envHIO:
-.skip 0x44
 
 
 /* ###################################################################################### */
@@ -138,65 +124,26 @@ g_envHIO:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804510F8 0008 .sbss      resPhase                       resPhase                       */
-.global resPhase
-resPhase:
-.skip 0x8
 
 /* 80451100 0008 .sbss      dylPhase                       dylPhase                       */
-.global dylPhase
-dylPhase:
-.skip 0x8
 
 /* 80451108 0004 .sbss      dylPreLoadTime1                dylPreLoadTime1                */
-.global dylPreLoadTime1
-dylPreLoadTime1:
-.skip 0x4
 
 /* 8045110C 0004 .sbss      data_8045110C                  data_8045110C                  */
-.global data_8045110C
-data_8045110C:
-.skip 0x4
 
 /* 80451110 0004 .sbss      resPreLoadTime0                resPreLoadTime0                */
-.global resPreLoadTime0
-resPreLoadTime0:
-.skip 0x4
 
 /* 80451114 0004 .sbss      data_80451114                  data_80451114                  */
-.global data_80451114
-data_80451114:
-.skip 0x4
 
 /* 80451118 0004 .sbss      resPreLoadTime1                resPreLoadTime1                */
-.global resPreLoadTime1
-resPreLoadTime1:
-.skip 0x4
 
 /* 8045111C 0004 .sbss      data_8045111C                  data_8045111C                  */
-.global data_8045111C
-data_8045111C:
-.skip 0x4
 
 /* 80451120 0004 .sbss      g_preLoadHIO                   g_preLoadHIO                   */
-.global g_preLoadHIO
-g_preLoadHIO:
-.skip 0x4
 
-/* 80451124 0001 .sbss      data_80451124                  data_80451124                  */
-.global data_80451124
-data_80451124:
-.skip 0x1
-
-/* 80451125 0003 .sbss      data_80451125                  data_80451125                  */
-.global data_80451125
-data_80451125:
-.skip 0x3
+/* 80451124 0004 .sbss      merged_80451124                merged_80451124                */
 
 /* 80451128 0004 .sbss      g_regHIO                       g_regHIO                       */
-.global g_regHIO
-g_regHIO:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

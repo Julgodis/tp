@@ -84,15 +84,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434078 000C .bss       @744                           JAISeMgr__LIT_744              */
-.global JAISeMgr__LIT_744
-JAISeMgr__LIT_744:
-.skip 0xc
 
 /* 80434084 0010 .bss       memPool_$localstatic3$getMemPool___26JASPoolAllocObject<5JAISe>Fv data_80434084                  */
-.global data_80434084
-data_80434084:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

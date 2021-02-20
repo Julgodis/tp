@@ -75,48 +75,22 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431490 0000 .bss       ...bss.0                       object_sound__data_80431490    */
-.global object_sound__data_80431490
-object_sound__data_80431490:
 
 /* 80431490 0020 .bss       aoData$1517                    object_sound__data_80431490    */
-.global object_sound__data_80431490
-object_sound__data_80431490:
-.skip 0x20
 
 /* 804314B0 000C .bss       @1817                          object_sound__LIT_1817         */
-.global object_sound__LIT_1817
-object_sound__LIT_1817:
-.skip 0xc
 
 /* 804314BC 000C .bss       @1818                          object_sound__LIT_1818         */
-.global object_sound__LIT_1818
-object_sound__LIT_1818:
-.skip 0xc
 
 /* 804314C8 000C .bss       @1819                          LIT_1819                       */
-.global LIT_1819
-LIT_1819:
-.skip 0xc
 
 /* 804314D4 000C .bss       @1820                          LIT_1820                       */
-.global LIT_1820
-LIT_1820:
-.skip 0xc
 
 /* 804314E0 000C .bss       @1821                          LIT_1821                       */
-.global LIT_1821
-LIT_1821:
-.skip 0xc
 
 /* 804314EC 000C .bss       @1822                          LIT_1822                       */
-.global LIT_1822
-LIT_1822:
-.skip 0xc
 
 /* 804314F8 0048 .bss       saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound */
-.global saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound
-saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound:
-.skip 0x48
 
 
 /* ###################################################################################### */

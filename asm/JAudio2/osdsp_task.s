@@ -22,10 +22,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434060 0014 .bss       sync_stack                     sync_stack                     */
-.global sync_stack
-sync_stack:
-.skip 0x14
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -33,32 +29,14 @@ sync_stack:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 8045130C 0004 .sbss      DSP_prior_task                 DSP_prior_task                 */
-.global DSP_prior_task
-DSP_prior_task:
-.skip 0x4
 
 /* 80451310 0008 .sbss      data_80451310                  data_80451310                  */
-.global data_80451310
-data_80451310:
-.skip 0x8
 
 /* 80451318 0008 .sbss      data_80451318                  data_80451318                  */
-.global data_80451318
-data_80451318:
-.skip 0x8
 
 /* 80451320 0008 .sbss      data_80451320                  data_80451320                  */
-.global data_80451320
-data_80451320:
-.skip 0x8
 
 /* 80451328 0008 .sbss      data_80451328                  data_80451328                  */
-.global data_80451328
-data_80451328:
-.skip 0x8
 
 /* 80451330 0004 .sbss      data_80451330                  data_80451330                  */
-.global data_80451330
-data_80451330:
-.skip 0x4
 

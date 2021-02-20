@@ -56,38 +56,16 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451948 0004 .sbss      CPUFifo                        CPUFifo                        */
-.global CPUFifo
-CPUFifo:
-.skip 0x4
 
 /* 8045194C 0004 .sbss      GPFifo                         GPFifo                         */
-.global GPFifo
-GPFifo:
-.skip 0x4
 
 /* 80451950 0004 .sbss      __GXCurrentThread              __GXCurrentThread              */
-.global __GXCurrentThread
-__GXCurrentThread:
-.skip 0x4
 
 /* 80451954 0004 .sbss      data_80451954                  data_80451954                  */
-.global data_80451954
-data_80451954:
-.skip 0x4
 
 /* 80451958 0004 .sbss      GXOverflowSuspendInProgress    GXOverflowSuspendInProgress    */
-.global GXOverflowSuspendInProgress
-GXOverflowSuspendInProgress:
-.skip 0x4
 
 /* 8045195C 0004 .sbss      BreakPointCB                   BreakPointCB                   */
-.global BreakPointCB
-BreakPointCB:
-.skip 0x4
 
 /* 80451960 0004 .sbss      __GXOverflowCount              __GXOverflowCount              */
-.global __GXOverflowCount
-__GXOverflowCount:
-.skip 0x4
-.skip 0x4 /* padding */
 

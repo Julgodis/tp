@@ -86,32 +86,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451338 0004 .sbss      MIN_DISTANCE_VOLUME__7Z2Param  MIN_DISTANCE_VOLUME__7Z2Param  */
-.global MIN_DISTANCE_VOLUME__7Z2Param
-MIN_DISTANCE_VOLUME__7Z2Param:
-.skip 0x4
 
 /* 8045133C 0004 .sbss      ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param */
-.global ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param
-ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param:
-.skip 0x4
 
-/* 80451340 0001 .sbss      data_80451340                  data_80451340                  */
-.global data_80451340
-data_80451340:
-.skip 0x1
-
-/* 80451341 0001 .sbss      data_80451341                  data_80451341                  */
-.global data_80451341
-data_80451341:
-.skip 0x1
-
-/* 80451342 0006 .sbss      data_80451342                  data_80451342                  */
-.global data_80451342
-data_80451342:
-.skip 0x6
+/* 80451340 0008 .sbss      merged_80451340                merged_80451340                */
 
 /* 80451348 0008 .sbss      data_80451348                  data_80451348                  */
-.global data_80451348
-data_80451348:
-.skip 0x8
 

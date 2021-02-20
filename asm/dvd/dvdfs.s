@@ -64,37 +64,16 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451758 0004 .sbss      BootInfo                       dvdfs__BootInfo                */
-.global dvdfs__BootInfo
-dvdfs__BootInfo:
-.skip 0x4
 
 /* 8045175C 0004 .sbss      FstStart                       FstStart                       */
-.global FstStart
-FstStart:
-.skip 0x4
 
 /* 80451760 0004 .sbss      FstStringStart                 FstStringStart                 */
-.global FstStringStart
-FstStringStart:
-.skip 0x4
 
 /* 80451764 0004 .sbss      MaxEntryNum                    MaxEntryNum                    */
-.global MaxEntryNum
-MaxEntryNum:
-.skip 0x4
 
 /* 80451768 0004 .sbss      currentDirectory               currentDirectory               */
-.global currentDirectory
-currentDirectory:
-.skip 0x4
 
 /* 8045176C 0004 .sbss      __DVDLongFileNameFlag          __DVDLongFileNameFlag          */
-.global __DVDLongFileNameFlag
-__DVDLongFileNameFlag:
-.skip 0x4
 
 /* 80451770 0008 .sbss      __DVDThreadQueue               __DVDThreadQueue               */
-.global __DVDThreadQueue
-__DVDThreadQueue:
-.skip 0x8
 

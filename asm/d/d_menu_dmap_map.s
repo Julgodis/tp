@@ -188,30 +188,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451088 0004 .sbss      m_res__22dMdm_HIO_prm_res_dst_s m_res__22dMdm_HIO_prm_res_dst_s */
-.global m_res__22dMdm_HIO_prm_res_dst_s
-m_res__22dMdm_HIO_prm_res_dst_s:
-.skip 0x4
 
 /* 8045108C 0004 .sbss      m_zoomCenterMinX__20dMenu_StageMapCtrl_c m_zoomCenterMinX__20dMenu_StageMapCtrl_c */
-.global m_zoomCenterMinX__20dMenu_StageMapCtrl_c
-m_zoomCenterMinX__20dMenu_StageMapCtrl_c:
-.skip 0x4
 
 /* 80451090 0004 .sbss      m_zoomCenterMaxX__20dMenu_StageMapCtrl_c m_zoomCenterMaxX__20dMenu_StageMapCtrl_c */
-.global m_zoomCenterMaxX__20dMenu_StageMapCtrl_c
-m_zoomCenterMaxX__20dMenu_StageMapCtrl_c:
-.skip 0x4
 
 /* 80451094 0004 .sbss      m_zoomCenterMinZ__20dMenu_StageMapCtrl_c m_zoomCenterMinZ__20dMenu_StageMapCtrl_c */
-.global m_zoomCenterMinZ__20dMenu_StageMapCtrl_c
-m_zoomCenterMinZ__20dMenu_StageMapCtrl_c:
-.skip 0x4
 
 /* 80451098 0004 .sbss      m_zoomCenterMaxZ__20dMenu_StageMapCtrl_c m_zoomCenterMaxZ__20dMenu_StageMapCtrl_c */
-.global m_zoomCenterMaxZ__20dMenu_StageMapCtrl_c
-m_zoomCenterMaxZ__20dMenu_StageMapCtrl_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

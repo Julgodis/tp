@@ -49,12 +49,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804246E0 0018 .bss       l_startAction                  l_startAction                  */
-.global l_startAction
-l_startAction:
-.skip 0x18
 
 /* 804246F8 0018 .bss       l_runAction                    l_runAction                    */
-.global l_runAction
-l_runAction:
-.skip 0x18
 

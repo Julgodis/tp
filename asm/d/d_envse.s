@@ -42,12 +42,6 @@
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456B80 0004 .sbss2     @3752                          d_d_envse__LIT_3752            */
-.global d_d_envse__LIT_3752
-d_d_envse__LIT_3752:
-.skip 0x4
 
 /* 80456B84 0004 .sbss2     data_80456B84                  data_80456B84                  */
-.global data_80456B84
-data_80456B84:
-.skip 0x4
 

@@ -638,39 +638,18 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042C8F8 0000 .bss       ...bss.0                       d_d_camera__data_8042C8F8      */
-.global d_d_camera__data_8042C8F8
-d_d_camera__data_8042C8F8:
 
 /* 8042C8F8 00A8 .bss       specialType__22@unnamed@d_camera_cpp@ d_d_camera__data_8042C8F8      */
-.global d_d_camera__data_8042C8F8
-d_d_camera__data_8042C8F8:
-.skip 0xa8
 
 /* 8042C9A0 000C .bss       @9808                          LIT_9808                       */
-.global LIT_9808
-LIT_9808:
-.skip 0xc
 
 /* 8042C9AC 000C .bss       @14159                         LIT_14159                      */
-.global LIT_14159
-LIT_14159:
-.skip 0xc
 
 /* 8042C9B8 000C .bss       @14615                         d_d_camera__LIT_14615          */
-.global d_d_camera__LIT_14615
-d_d_camera__LIT_14615:
-.skip 0xc
 
 /* 8042C9C4 000C .bss       @14964                         LIT_14964                      */
-.global LIT_14964
-LIT_14964:
-.skip 0xc
 
 /* 8042C9D0 000C .bss       @14968                         LIT_14968                      */
-.global LIT_14968
-LIT_14968:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -678,90 +657,28 @@ LIT_14968:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451020 0004 .sbss      Stage__22@unnamed@d_camera_cpp@ data_80451020                  */
-.global data_80451020
-data_80451020:
-.skip 0x4
 
 /* 80451024 0004 .sbss      prev_plat1$8536                data_80451024                  */
-.global data_80451024
-data_80451024:
-.skip 0x4
 
 /* 80451028 0004 .sbss      data_80451028                  data_80451028                  */
-.global data_80451028
-data_80451028:
-.skip 0x4
 
 /* 8045102C 0004 .sbss      prev_plat2$8539                data_8045102C                  */
-.global data_8045102C
-data_8045102C:
-.skip 0x4
 
 /* 80451030 0004 .sbss      data_80451030                  data_80451030                  */
-.global data_80451030
-data_80451030:
-.skip 0x4
 
 /* 80451034 0004 .sbss      JumpCushion$9801               data_80451034                  */
-.global data_80451034
-data_80451034:
-.skip 0x4
 
-/* 80451038 0001 .sbss      data_80451038                  data_80451038                  */
-.global data_80451038
-data_80451038:
-.skip 0x1
+/* 80451038 0004 .sbss      merged_80451038                merged_80451038                */
 
-/* 80451039 0003 .sbss      data_80451039                  data_80451039                  */
-.global data_80451039
-data_80451039:
-.skip 0x3
+/* 8045103C 0004 .sbss      merged_8045103C                merged_8045103C                */
 
-/* 8045103C 0002 .sbss      LatitudeLimitMax$9807          data_8045103C                  */
-.global data_8045103C
-data_8045103C:
-.skip 0x2
+/* 80451040 0004 .sbss      merged_80451040                merged_80451040                */
 
-/* 8045103E 0002 .sbss      data_8045103E                  data_8045103E                  */
-.global data_8045103E
-data_8045103E:
-.skip 0x2
+/* 80451044 0004 .sbss      merged_80451044                merged_80451044                */
 
-/* 80451040 0002 .sbss      _120$14158                     data_80451040                  */
-.global data_80451040
-data_80451040:
-.skip 0x2
-
-/* 80451042 0002 .sbss      data_80451042                  data_80451042                  */
-.global data_80451042
-data_80451042:
-.skip 0x2
-
-/* 80451044 0002 .sbss      _120$14614                     data_80451044                  */
-.global data_80451044
-data_80451044:
-.skip 0x2
-
-/* 80451046 0002 .sbss      data_80451046                  data_80451046                  */
-.global data_80451046
-data_80451046:
-.skip 0x2
-
-/* 80451048 0002 .sbss      LatMin$14963                   data_80451048                  */
-.global data_80451048
-data_80451048:
-.skip 0x2
-
-/* 8045104A 0002 .sbss      data_8045104A                  data_8045104A                  */
-.global data_8045104A
-data_8045104A:
-.skip 0x2
+/* 80451048 0004 .sbss      merged_80451048                merged_80451048                */
 
 /* 8045104C 0002 .sbss      LatMax$14967                   data_8045104C                  */
-.global data_8045104C
-data_8045104C:
-.skip 0x2
-.skip 0x2 /* padding */
 
 
 /* ###################################################################################### */

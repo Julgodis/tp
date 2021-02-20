@@ -45,18 +45,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450F70 0004 .sbss      m_name__16dBgS_MoveBgActor     m_name__16dBgS_MoveBgActor     */
-.global m_name__16dBgS_MoveBgActor
-m_name__16dBgS_MoveBgActor:
-.skip 0x4
 
 /* 80450F74 0004 .sbss      m_dzb_id__16dBgS_MoveBgActor   m_dzb_id__16dBgS_MoveBgActor   */
-.global m_dzb_id__16dBgS_MoveBgActor
-m_dzb_id__16dBgS_MoveBgActor:
-.skip 0x4
 
 /* 80450F78 0004 .sbss      m_set_func__16dBgS_MoveBgActor m_set_func__16dBgS_MoveBgActor */
-.global m_set_func__16dBgS_MoveBgActor
-m_set_func__16dBgS_MoveBgActor:
-.skip 0x4
-.skip 0x4 /* padding */
 

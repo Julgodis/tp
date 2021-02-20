@@ -57,9 +57,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DB740 0800 .bss       mDoPrintf_FiberStack           mDoPrintf_FiberStack           */
-.global mDoPrintf_FiberStack
-mDoPrintf_FiberStack:
-.skip 0x800
 
 
 /* ###################################################################################### */
@@ -67,52 +64,16 @@ mDoPrintf_FiberStack:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450BA0 0004 .sbss      __OSReport_MonopolyThread      __OSReport_MonopolyThread      */
-.global __OSReport_MonopolyThread
-__OSReport_MonopolyThread:
-.skip 0x4
 
 /* 80450BA4 0004 .sbss      print_counts                   print_counts                   */
-.global print_counts
-print_counts:
-.skip 0x4
 
 /* 80450BA8 0004 .sbss      print_errors                   print_errors                   */
-.global print_errors
-print_errors:
-.skip 0x4
 
 /* 80450BAC 0004 .sbss      print_warings                  print_warings                  */
-.global print_warings
-print_warings:
-.skip 0x4
 
 /* 80450BB0 0004 .sbss      print_systems                  print_systems                  */
-.global print_systems
-print_systems:
-.skip 0x4
 
-/* 80450BB4 0001 .sbss      data_80450BB4                  data_80450BB4                  */
-.global data_80450BB4
-data_80450BB4:
-.skip 0x1
+/* 80450BB4 0004 .sbss      merged_80450BB4                merged_80450BB4                */
 
-/* 80450BB5 0003 .sbss      data_80450BB5                  data_80450BB5                  */
-.global data_80450BB5
-data_80450BB5:
-.skip 0x3
-
-/* 80450BB8 0001 .sbss      data_80450BB8                  data_80450BB8                  */
-.global data_80450BB8
-data_80450BB8:
-.skip 0x1
-
-/* 80450BB9 0001 .sbss      data_80450BB9                  data_80450BB9                  */
-.global data_80450BB9
-data_80450BB9:
-.skip 0x1
-
-/* 80450BBA 0002 .sbss      data_80450BBA                  data_80450BBA                  */
-.global data_80450BBA
-data_80450BBA:
-.skip 0x2
+/* 80450BB8 0004 .sbss      merged_80450BB8                merged_80450BB8                */
 

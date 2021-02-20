@@ -45,15 +45,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804340C0 000C .bss       @715                           LIT_715                        */
-.global LIT_715
-LIT_715:
-.skip 0xc
 
 /* 804340CC 0010 .bss       memPool_$localstatic3$getMemPool___27JASPoolAllocObject<6JAISeq>Fv data_804340CC                  */
-.global data_804340CC
-data_804340CC:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

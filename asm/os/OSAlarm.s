@@ -35,7 +35,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451638 0008 .sbss      AlarmQueue                     AlarmQueue                     */
-.global AlarmQueue
-AlarmQueue:
-.skip 0x8
 

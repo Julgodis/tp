@@ -35,12 +35,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803ECF40 30C0 .bss       sTmpBuf                        sTmpBuf                        */
-.global sTmpBuf
-sTmpBuf:
-.skip 0x30c0
 
 /* 803F0000 0F40 .bss       data_803F0000                  data_803F0000                  */
-.global data_803F0000
-data_803F0000:
-.skip 0xf40
 

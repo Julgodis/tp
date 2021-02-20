@@ -29,14 +29,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DD8D8 000C .bss       @3727                          LIT_3727                       */
-.global LIT_3727
-LIT_3727:
-.skip 0xc
 
 /* 803DD8E4 005C .bss       mClipper__14mDoLib_clipper     mClipper__14mDoLib_clipper     */
-.global mClipper__14mDoLib_clipper
-mClipper__14mDoLib_clipper:
-.skip 0x5c
 
 
 /* ###################################################################################### */
@@ -44,14 +38,8 @@ mClipper__14mDoLib_clipper:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450C70 0004 .sbss      mSystemFar__14mDoLib_clipper   mSystemFar__14mDoLib_clipper   */
-.global mSystemFar__14mDoLib_clipper
-mSystemFar__14mDoLib_clipper:
-.skip 0x4
 
 /* 80450C74 0004 .sbss      mFovyRate__14mDoLib_clipper    mFovyRate__14mDoLib_clipper    */
-.global mFovyRate__14mDoLib_clipper
-mFovyRate__14mDoLib_clipper:
-.skip 0x4
 
 
 /* ###################################################################################### */

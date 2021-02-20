@@ -16,13 +16,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451150 0004 .sbss      Heap__3cMl                     Heap__3cMl                     */
-.global Heap__3cMl
-Heap__3cMl:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80451158 0008 .sbss      data_80451158                  data_80451158                  */
-.global data_80451158
-data_80451158:
-.skip 0x8
 

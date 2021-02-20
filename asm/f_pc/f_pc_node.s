@@ -40,8 +40,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D40 0004 .sbss      g_fpcNd_type                   g_fpcNd_type                   */
-.global g_fpcNd_type
-g_fpcNd_type:
-.skip 0x4
-.skip 0x4 /* padding */
 

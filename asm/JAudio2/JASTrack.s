@@ -168,49 +168,22 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804316A8 0000 .bss       ...bss.0                       data_804316A8                  */
-.global data_804316A8
-data_804316A8:
 
 /* 804316A8 000C .bss       @431                           JASTrack__LIT_431              */
-.global JASTrack__LIT_431
-JASTrack__LIT_431:
-.skip 0xc
 
 /* 804316B4 040C .bss       sDefaultBankTable__8JASTrack   sDefaultBankTable__8JASTrack   */
-.global sDefaultBankTable__8JASTrack
-sDefaultBankTable__8JASTrack:
-.skip 0x40c
 
 /* 80431AC0 000C .bss       @433                           JASTrack__LIT_433              */
-.global JASTrack__LIT_433
-JASTrack__LIT_433:
-.skip 0xc
 
 /* 80431ACC 0010 .bss       sTrackList__8JASTrack          sTrackList__8JASTrack          */
-.global sTrackList__8JASTrack
-sTrackList__8JASTrack:
-.skip 0x10
 
 /* 80431ADC 000C .bss       @470                           LIT_470                        */
-.global LIT_470
-LIT_470:
-.skip 0xc
 
 /* 80431AE8 000C .bss       @476                           JASTrack__LIT_476              */
-.global JASTrack__LIT_476
-JASTrack__LIT_476:
-.skip 0xc
 
 /* 80431AF4 0010 .bss       memPool_$localstatic3$getMemPool___58JASPoolAllocObject_MultiThreaded<Q28JASTrack11TChannelMgr>Fv data_80431AF4                  */
-.global data_80431AF4
-data_80431AF4:
-.skip 0x10
 
 /* 80431B04 0010 .bss       memPool_$localstatic3$getMemPool___43JASPoolAllocObject_MultiThreaded<8JASTrack>Fv data_80431B04                  */
-.global data_80431B04
-data_80431B04:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

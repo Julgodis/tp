@@ -54,9 +54,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803F0F50 0C60 .bss       DMC                            DMC                            */
-.global DMC
-DMC:
-.skip 0xc60
 
 
 /* ###################################################################################### */
@@ -64,13 +61,6 @@ DMC:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CAC 0004 .sbss      cDyl_Initialized               cDyl_Initialized               */
-.global cDyl_Initialized
-cDyl_Initialized:
-.skip 0x4
 
 /* 80450CB0 0004 .sbss      cDyl_DVD                       cDyl_DVD                       */
-.global cDyl_DVD
-cDyl_DVD:
-.skip 0x4
-.skip 0x4 /* padding */
 

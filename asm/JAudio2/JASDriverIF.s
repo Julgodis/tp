@@ -38,24 +38,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431C78 0000 .bss       ...bss.0                       data_80431C78                  */
-.global data_80431C78
-data_80431C78:
 
 /* 80431C78 0100 .bss       sDspSyncCallback__9JASDriver   sDspSyncCallback__9JASDriver   */
-.global sDspSyncCallback__9JASDriver
-sDspSyncCallback__9JASDriver:
-.skip 0x100
 
 /* 80431D78 0100 .bss       sSubFrameCallback__9JASDriver  sSubFrameCallback__9JASDriver  */
-.global sSubFrameCallback__9JASDriver
-sSubFrameCallback__9JASDriver:
-.skip 0x100
 
 /* 80431E78 0100 .bss       sUpdateDacCallback__9JASDriver sUpdateDacCallback__9JASDriver */
-.global sUpdateDacCallback__9JASDriver
-sUpdateDacCallback__9JASDriver:
-.skip 0x100
-.skip 0x8 /* padding */
 
 
 /* ###################################################################################### */

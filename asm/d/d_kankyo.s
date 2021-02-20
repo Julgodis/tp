@@ -442,54 +442,24 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042CA48 0000 .bss       ...bss.0                       data_8042CA48                  */
-.global data_8042CA48
-data_8042CA48:
 
 /* 8042CA48 000C .bss       @4112                          d_d_kankyo__LIT_4112           */
-.global d_d_kankyo__LIT_4112
-d_d_kankyo__LIT_4112:
-.skip 0xc
 
 /* 8042CA54 1310 .bss       g_env_light                    g_env_light                    */
-.global g_env_light
-g_env_light:
-.skip 0x1310
 
 /* 8042DD64 000C .bss       @4113                          d_d_kankyo__LIT_4113           */
-.global d_d_kankyo__LIT_4113
-d_d_kankyo__LIT_4113:
-.skip 0xc
 
 /* 8042DD70 030C .bss       g_mEnvSeMgr                    g_mEnvSeMgr                    */
-.global g_mEnvSeMgr
-g_mEnvSeMgr:
-.skip 0x30c
 
 /* 8042E07C 0740 .bss       lightStatusData                lightStatusData                */
-.global lightStatusData
-lightStatusData:
-.skip 0x740
 
 /* 8042E7BC 000C .bss       @7485                          d_d_kankyo__LIT_7485           */
-.global d_d_kankyo__LIT_7485
-d_d_kankyo__LIT_7485:
-.skip 0xc
 
 /* 8042E7C8 000C .bss       S_old_cameye$7484              data_8042E7C8                  */
-.global data_8042E7C8
-data_8042E7C8:
-.skip 0xc
 
 /* 8042E7D4 000C .bss       @7489                          LIT_7489                       */
-.global LIT_7489
-LIT_7489:
-.skip 0xc
 
 /* 8042E7E0 000C .bss       S_old_camctr$7488              data_8042E7E0                  */
-.global data_8042E7E0
-data_8042E7E0:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -513,30 +483,9 @@ data_8042E7E0:
 /*                                         .sbss                                          */
 /* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451068 0002 .sbss      S_fuwan_sin$5904               data_80451068                  */
-.global data_80451068
-data_80451068:
-.skip 0x2
+/* 80451068 0008 .sbss      merged_80451068                merged_80451068                */
 
-/* 8045106A 0001 .sbss      data_8045106A                  data_8045106A                  */
-.global data_8045106A
-data_8045106A:
-.skip 0x1
-
-/* 8045106B 0005 .sbss      data_8045106B                  data_8045106B                  */
-.global data_8045106B
-data_8045106B:
-.skip 0x5
-
-/* 80451070 0001 .sbss      data_80451070                  data_80451070                  */
-.global data_80451070
-data_80451070:
-.skip 0x1
-
-/* 80451071 0007 .sbss      data_80451071                  data_80451071                  */
-.global data_80451071
-data_80451071:
-.skip 0x7
+/* 80451070 0008 .sbss      merged_80451070                merged_80451070                */
 
 
 /* ###################################################################################### */

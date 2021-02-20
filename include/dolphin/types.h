@@ -34,4 +34,15 @@ typedef int BOOL;
 #define INT32_MAX (0x7fffffff)
 #define UINT32_MAX (0xffffffff)
 
+#define SECTION_INIT __declspec(section ".init")
+#define SECTION_RODATA __declspec(section ".rodata")
+#define SECTION_DATA __declspec(section ".data")
+#define SECTION_SDATA __declspec(section ".sdata")
+#define SECTION_SDATA2 __declspec(section ".sdata2")
+#define SECTION_BSS __declspec(section ".data")
+#define SECTION_SBSS __declspec(section ".sdata")
+#define SECTION_SBSS2 __declspec(section ".sdata2")
+#define SECTION_CTORS __declspec(section ".ctors")
+#define SECTION_DTORS __declspec(section ".dtors")
+
 #endif

@@ -47,8 +47,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CE0 0004 .sbss      l_fopScnRq_IsUsingOfOverlap    l_fopScnRq_IsUsingOfOverlap    */
-.global l_fopScnRq_IsUsingOfOverlap
-l_fopScnRq_IsUsingOfOverlap:
-.skip 0x4
-.skip 0x4 /* padding */
 

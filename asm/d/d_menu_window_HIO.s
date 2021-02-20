@@ -37,28 +37,14 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042E860 0000 .bss       ...bss.0                       data_8042E860                  */
-.global data_8042E860
-data_8042E860:
 
 /* 8042E860 000C .bss       @3773                          d_d_menu_window_HIO__LIT_3773  */
-.global d_d_menu_window_HIO__LIT_3773
-d_d_menu_window_HIO__LIT_3773:
-.skip 0xc
 
 /* 8042E86C 0130 .bss       g_mwHIO                        g_mwHIO                        */
-.global g_mwHIO
-g_mwHIO:
-.skip 0x130
 
 /* 8042E99C 000C .bss       @3774                          d_d_menu_window_HIO__LIT_3774  */
-.global d_d_menu_window_HIO__LIT_3774
-d_d_menu_window_HIO__LIT_3774:
-.skip 0xc
 
 /* 8042E9A8 0208 .bss       g_mwDHIO                       g_mwDHIO                       */
-.global g_mwDHIO
-g_mwDHIO:
-.skip 0x208
 
 
 /* ###################################################################################### */

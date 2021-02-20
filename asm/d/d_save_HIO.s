@@ -131,13 +131,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804307E0 000C .bss       @3659                          d_d_save_HIO__LIT_3659         */
-.global d_d_save_HIO__LIT_3659
-d_d_save_HIO__LIT_3659:
-.skip 0xc
 
 /* 804307EC 04A0 .bss       g_save_bit_HIO                 g_save_bit_HIO                 */
-.global g_save_bit_HIO
-g_save_bit_HIO:
-.skip 0x4a0
-.skip 0x4 /* padding */
 

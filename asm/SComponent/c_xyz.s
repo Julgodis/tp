@@ -55,88 +55,38 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430CE8 0000 .bss       ...bss.0                       data_80430CE8                  */
-.global data_80430CE8
-data_80430CE8:
 
 /* 80430CE8 000C .bss       @2450                          LIT_2450                       */
-.global LIT_2450
-LIT_2450:
-.skip 0xc
 
 /* 80430CF4 000C .bss       Zero__4cXyz                    Zero__4cXyz                    */
-.global Zero__4cXyz
-Zero__4cXyz:
-.skip 0xc
 
 /* 80430D00 000C .bss       @2451                          LIT_2451                       */
-.global LIT_2451
-LIT_2451:
-.skip 0xc
 
 /* 80430D0C 000C .bss       BaseX__4cXyz                   BaseX__4cXyz                   */
-.global BaseX__4cXyz
-BaseX__4cXyz:
-.skip 0xc
 
 /* 80430D18 000C .bss       @2452                          LIT_2452                       */
-.global LIT_2452
-LIT_2452:
-.skip 0xc
 
 /* 80430D24 000C .bss       BaseY__4cXyz                   BaseY__4cXyz                   */
-.global BaseY__4cXyz
-BaseY__4cXyz:
-.skip 0xc
 
 /* 80430D30 000C .bss       @2453                          LIT_2453                       */
-.global LIT_2453
-LIT_2453:
-.skip 0xc
 
 /* 80430D3C 000C .bss       BaseZ__4cXyz                   BaseZ__4cXyz                   */
-.global BaseZ__4cXyz
-BaseZ__4cXyz:
-.skip 0xc
 
 /* 80430D48 000C .bss       @2454                          LIT_2454                       */
-.global LIT_2454
-LIT_2454:
-.skip 0xc
 
 /* 80430D54 000C .bss       BaseXY__4cXyz                  BaseXY__4cXyz                  */
-.global BaseXY__4cXyz
-BaseXY__4cXyz:
-.skip 0xc
 
 /* 80430D60 000C .bss       @2455                          LIT_2455                       */
-.global LIT_2455
-LIT_2455:
-.skip 0xc
 
 /* 80430D6C 000C .bss       BaseXZ__4cXyz                  BaseXZ__4cXyz                  */
-.global BaseXZ__4cXyz
-BaseXZ__4cXyz:
-.skip 0xc
 
 /* 80430D78 000C .bss       @2456                          LIT_2456                       */
-.global LIT_2456
-LIT_2456:
-.skip 0xc
 
 /* 80430D84 000C .bss       BaseYZ__4cXyz                  BaseYZ__4cXyz                  */
-.global BaseYZ__4cXyz
-BaseYZ__4cXyz:
-.skip 0xc
 
 /* 80430D90 000C .bss       @2457                          LIT_2457                       */
-.global LIT_2457
-LIT_2457:
-.skip 0xc
 
 /* 80430D9C 000C .bss       BaseXYZ__4cXyz                 BaseXYZ__4cXyz                 */
-.global BaseXYZ__4cXyz
-BaseXYZ__4cXyz:
-.skip 0xc
 
 
 /* ###################################################################################### */

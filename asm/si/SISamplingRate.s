@@ -27,8 +27,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451700 0004 .sbss      SamplingRate                   SamplingRate                   */
-.global SamplingRate
-SamplingRate:
-.skip 0x4
-.skip 0x4 /* padding */
 

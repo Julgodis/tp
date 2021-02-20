@@ -12,7 +12,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D878 0018 .bss       signal_funcs                   signal_funcs                   */
-.global signal_funcs
-signal_funcs:
-.skip 0x18
 

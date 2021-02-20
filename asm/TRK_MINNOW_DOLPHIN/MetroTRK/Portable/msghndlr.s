@@ -92,8 +92,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F288 0004 .bss       IsTRKConnected                 IsTRKConnected                 */
-.global IsTRKConnected
-IsTRKConnected:
-.skip 0x4
-.skip 0x4 /* padding */
 

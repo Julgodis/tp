@@ -497,12 +497,6 @@
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456BA0 0004 .sbss2     @4765                          d_d_msg_flow__LIT_4765         */
-.global d_d_msg_flow__LIT_4765
-d_d_msg_flow__LIT_4765:
-.skip 0x4
 
 /* 80456BA4 0004 .sbss2     data_80456BA4                  data_80456BA4                  */
-.global data_80456BA4
-data_80456BA4:
-.skip 0x4
 

@@ -72,23 +72,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DFC20 1000 .bss       MemCardStack                   MemCardStack                   */
-.global MemCardStack
-MemCardStack:
-.skip 0x1000
 
 /* 803E0C20 0318 .bss       MemCardThread                  MemCardThread                  */
-.global MemCardThread
-MemCardThread:
-.skip 0x318
-.skip 0x8 /* padding */
 
 /* 803E0F40 A000 .bss       MemCardWorkArea0               MemCardWorkArea0               */
-.global MemCardWorkArea0
-MemCardWorkArea0:
-.skip 0xa000
 
 /* 803EAF40 2000 .bss       g_mDoMemCd_control             g_mDoMemCd_control             */
-.global g_mDoMemCd_control
-g_mDoMemCd_control:
-.skip 0x2000
 

@@ -61,23 +61,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044CB70 0000 .bss       ...bss.0                       data_8044CB70                  */
-.global data_8044CB70
-data_8044CB70:
 
 /* 8044CB70 0010 .bss       Type                           Pad__Type                      */
-.global Pad__Type
-Pad__Type:
-.skip 0x10
 
 /* 8044CB80 0030 .bss       Origin                         Origin                         */
-.global Origin
-Origin:
-.skip 0x30
 
 /* 8044CBB0 0010 .bss       CmdProbeDevice                 CmdProbeDevice                 */
-.global CmdProbeDevice
-CmdProbeDevice:
-.skip 0x10
 
 
 /* ###################################################################################### */
@@ -106,58 +95,24 @@ CmdProbeDevice:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451848 0004 .sbss      Initialized                    Initialized                    */
-.global Initialized
-Initialized:
-.skip 0x4
 
 /* 8045184C 0004 .sbss      EnabledBits                    EnabledBits                    */
-.global EnabledBits
-EnabledBits:
-.skip 0x4
 
 /* 80451850 0004 .sbss      ResettingBits                  ResettingBits                  */
-.global ResettingBits
-ResettingBits:
-.skip 0x4
 
 /* 80451854 0004 .sbss      RecalibrateBits                RecalibrateBits                */
-.global RecalibrateBits
-RecalibrateBits:
-.skip 0x4
 
 /* 80451858 0004 .sbss      WaitingBits                    WaitingBits                    */
-.global WaitingBits
-WaitingBits:
-.skip 0x4
 
 /* 8045185C 0004 .sbss      CheckingBits                   CheckingBits                   */
-.global CheckingBits
-CheckingBits:
-.skip 0x4
 
 /* 80451860 0004 .sbss      PendingBits                    PendingBits                    */
-.global PendingBits
-PendingBits:
-.skip 0x4
 
 /* 80451864 0004 .sbss      BarrelBits                     BarrelBits                     */
-.global BarrelBits
-BarrelBits:
-.skip 0x4
 
 /* 80451868 0004 .sbss      SamplingCallback               SamplingCallback               */
-.global SamplingCallback
-SamplingCallback:
-.skip 0x4
 
 /* 8045186C 0004 .sbss      recalibrated$388               data_8045186C                  */
-.global data_8045186C
-data_8045186C:
-.skip 0x4
 
 /* 80451870 0004 .sbss      __PADSpec                      __PADSpec                      */
-.global __PADSpec
-__PADSpec:
-.skip 0x4
-.skip 0x4 /* padding */
 

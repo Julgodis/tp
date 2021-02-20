@@ -61,47 +61,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450DD8 0004 .sbss      m_diffTime__11dLib_time_c      m_diffTime__11dLib_time_c      */
-.global m_diffTime__11dLib_time_c
-m_diffTime__11dLib_time_c:
-.skip 0x4
 
 /* 80450DDC 0004 .sbss      data_80450DDC                  data_80450DDC                  */
-.global data_80450DDC
-data_80450DDC:
-.skip 0x4
 
 /* 80450DE0 0004 .sbss      m_stopTime__11dLib_time_c      m_stopTime__11dLib_time_c      */
-.global m_stopTime__11dLib_time_c
-m_stopTime__11dLib_time_c:
-.skip 0x4
 
 /* 80450DE4 0004 .sbss      data_80450DE4                  data_80450DE4                  */
-.global data_80450DE4
-data_80450DE4:
-.skip 0x4
 
 /* 80450DE8 0008 .sbss      data_80450DE8                  data_80450DE8                  */
-.global data_80450DE8
-data_80450DE8:
-.skip 0x8
 
-/* 80450DF0 0001 .sbss      data_80450DF0                  data_80450DF0                  */
-.global data_80450DF0
-data_80450DF0:
-.skip 0x1
-
-/* 80450DF1 0001 .sbss      data_80450DF1                  data_80450DF1                  */
-.global data_80450DF1
-data_80450DF1:
-.skip 0x1
-
-/* 80450DF2 0001 .sbss      data_80450DF2                  data_80450DF2                  */
-.global data_80450DF2
-data_80450DF2:
-.skip 0x1
-
-/* 80450DF3 0005 .sbss      data_80450DF3                  data_80450DF3                  */
-.global data_80450DF3
-data_80450DF3:
-.skip 0x5
+/* 80450DF0 0008 .sbss      merged_80450DF0                merged_80450DF0                */
 

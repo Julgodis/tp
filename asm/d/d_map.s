@@ -193,10 +193,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D80 0004 .sbss      m_res__22dMap_HIO_prm_res_dst_s m_res__22dMap_HIO_prm_res_dst_s */
-.global m_res__22dMap_HIO_prm_res_dst_s
-m_res__22dMap_HIO_prm_res_dst_s:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

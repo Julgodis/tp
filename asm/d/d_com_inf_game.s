@@ -412,24 +412,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804061A0 0014 .bss       dComIfG_mTimerInfo             dComIfG_mTimerInfo             */
-.global dComIfG_mTimerInfo
-dComIfG_mTimerInfo:
-.skip 0x14
 
 /* 804061B4 000C .bss       @5065                          d_d_com_inf_game__LIT_5065     */
-.global d_d_com_inf_game__LIT_5065
-d_d_com_inf_game__LIT_5065:
-.skip 0xc
 
 /* 804061C0 1DE10 .bss       g_dComIfG_gameInfo             g_dComIfG_gameInfo             */
-.global g_dComIfG_gameInfo
-g_dComIfG_gameInfo:
-.skip 0x1de10
 
 /* 80423FD0 0020 .bss       buf$7371                       data_80423FD0                  */
-.global data_80423FD0
-data_80423FD0:
-.skip 0x20
 
 
 /* ###################################################################################### */

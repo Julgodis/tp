@@ -79,37 +79,16 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431298 0000 .bss       ...bss.0                       data_80431298                  */
-.global data_80431298
-data_80431298:
 
 /* 80431298 000C .bss       @1018                          LIT_1018                       */
-.global LIT_1018
-LIT_1018:
-.skip 0xc
 
 /* 804312A4 000C .bss       @1023                          object_camera__LIT_1023        */
-.global object_camera__LIT_1023
-object_camera__LIT_1023:
-.skip 0xc
 
 /* 804312B0 000C .bss       @1028                          LIT_1028                       */
-.global LIT_1028
-LIT_1028:
-.skip 0xc
 
 /* 804312BC 000C .bss       @1033                          LIT_1033                       */
-.global LIT_1033
-LIT_1033:
-.skip 0xc
 
 /* 804312C8 000C .bss       @1034                          object_camera__LIT_1034        */
-.global object_camera__LIT_1034
-object_camera__LIT_1034:
-.skip 0xc
 
 /* 804312D4 00A0 .bss       saoVVOutput___Q214JStudio_JStage15TAdaptor_camera saoVVOutput___Q214JStudio_JStage15TAdaptor_camera */
-.global saoVVOutput___Q214JStudio_JStage15TAdaptor_camera
-saoVVOutput___Q214JStudio_JStage15TAdaptor_camera:
-.skip 0xa0
-.skip 0x4 /* padding */
 

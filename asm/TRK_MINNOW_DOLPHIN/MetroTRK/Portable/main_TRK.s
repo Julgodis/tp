@@ -19,13 +19,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F818 0004 .bss       TRK_mainError                  TRK_mainError                  */
-.global TRK_mainError
-TRK_mainError:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 8044F820 0004 .bss       data_8044F820                  data_8044F820                  */
-.global data_8044F820
-data_8044F820:
-.skip 0x4
 

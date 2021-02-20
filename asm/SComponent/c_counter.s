@@ -12,8 +12,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430CD8 000C .bss       g_Counter                      g_Counter                      */
-.global g_Counter
-g_Counter:
-.skip 0xc
-.skip 0x4 /* padding */
 

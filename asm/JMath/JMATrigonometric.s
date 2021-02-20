@@ -14,19 +14,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80439A20 10000 .bss       sincosTable___5JMath           sincosTable___5JMath           */
-.global sincosTable___5JMath
-sincosTable___5JMath:
-.skip 0x10000
 
 /* 80449A20 1020 .bss       atanTable___5JMath             atanTable___5JMath             */
-.global atanTable___5JMath
-atanTable___5JMath:
-.skip 0x1020
 
 /* 8044AA40 1020 .bss       asinAcosTable___5JMath         asinAcosTable___5JMath         */
-.global asinAcosTable___5JMath
-asinAcosTable___5JMath:
-.skip 0x1020
 
 
 /* ###################################################################################### */

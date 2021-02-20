@@ -42,24 +42,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042E7F0 000C .bss       @3816                          d_d_ky_thunder__LIT_3816       */
-.global d_d_ky_thunder__LIT_3816
-d_d_ky_thunder__LIT_3816:
-.skip 0xc
 
 /* 8042E7FC 000C .bss       @3818                          d_d_ky_thunder__LIT_3818       */
-.global d_d_ky_thunder__LIT_3818
-d_d_ky_thunder__LIT_3818:
-.skip 0xc
 
 /* 8042E808 000C .bss       l_offsetPos$localstatic3$draw__10dThunder_cFv data_8042E808                  */
-.global data_8042E808
-data_8042E808:
-.skip 0xc
 
 /* 8042E814 000C .bss       l_scale$localstatic5$draw__10dThunder_cFv data_8042E814                  */
-.global data_8042E814
-data_8042E814:
-.skip 0xc
 
 
 /* ###################################################################################### */

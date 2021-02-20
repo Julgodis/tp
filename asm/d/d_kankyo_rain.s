@@ -142,129 +142,54 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80424950 0000 .bss       ...bss.0                       data_80424950                  */
-.global data_80424950
-data_80424950:
 
 /* 80424950 000C .bss       @7952                          LIT_7952                       */
-.global LIT_7952
-LIT_7952:
-.skip 0xc
 
 /* 8042495C 000C .bss       @7955                          LIT_7955                       */
-.global LIT_7955
-LIT_7955:
-.skip 0xc
 
 /* 80424968 000C .bss       @7956                          LIT_7956                       */
-.global LIT_7956
-LIT_7956:
-.skip 0xc
 
 /* 80424974 000C .bss       @7957                          LIT_7957                       */
-.global LIT_7957
-LIT_7957:
-.skip 0xc
 
 /* 80424980 0030 .bss       add_table$7951                 data_80424980                  */
-.global data_80424980
-data_80424980:
-.skip 0x30
 
 /* 804249B0 000C .bss       @8942                          LIT_8942                       */
-.global LIT_8942
-LIT_8942:
-.skip 0xc
 
 /* 804249BC 000C .bss       @8945                          LIT_8945                       */
-.global LIT_8945
-LIT_8945:
-.skip 0xc
 
 /* 804249C8 000C .bss       @8946                          LIT_8946                       */
-.global LIT_8946
-LIT_8946:
-.skip 0xc
 
 /* 804249D4 000C .bss       @8947                          LIT_8947                       */
-.global LIT_8947
-LIT_8947:
-.skip 0xc
 
 /* 804249E0 0030 .bss       add_table$8941                 data_804249E0                  */
-.global data_804249E0
-data_804249E0:
-.skip 0x30
 
 /* 80424A10 000C .bss       @9425                          d_d_kankyo_rain__LIT_9425      */
-.global d_d_kankyo_rain__LIT_9425
-d_d_kankyo_rain__LIT_9425:
-.skip 0xc
 
 /* 80424A1C 000C .bss       @9428                          d_d_kankyo_rain__LIT_9428      */
-.global d_d_kankyo_rain__LIT_9428
-d_d_kankyo_rain__LIT_9428:
-.skip 0xc
 
 /* 80424A28 000C .bss       @9429                          d_d_kankyo_rain__LIT_9429      */
-.global d_d_kankyo_rain__LIT_9429
-d_d_kankyo_rain__LIT_9429:
-.skip 0xc
 
 /* 80424A34 000C .bss       @9430                          d_d_kankyo_rain__LIT_9430      */
-.global d_d_kankyo_rain__LIT_9430
-d_d_kankyo_rain__LIT_9430:
-.skip 0xc
 
 /* 80424A40 000C .bss       @9431                          d_d_kankyo_rain__LIT_9431      */
-.global d_d_kankyo_rain__LIT_9431
-d_d_kankyo_rain__LIT_9431:
-.skip 0xc
 
 /* 80424A4C 000C .bss       @9432                          d_d_kankyo_rain__LIT_9432      */
-.global d_d_kankyo_rain__LIT_9432
-d_d_kankyo_rain__LIT_9432:
-.skip 0xc
 
 /* 80424A58 000C .bss       @9433                          d_d_kankyo_rain__LIT_9433      */
-.global d_d_kankyo_rain__LIT_9433
-d_d_kankyo_rain__LIT_9433:
-.skip 0xc
 
 /* 80424A64 000C .bss       @9434                          d_d_kankyo_rain__LIT_9434      */
-.global d_d_kankyo_rain__LIT_9434
-d_d_kankyo_rain__LIT_9434:
-.skip 0xc
 
 /* 80424A70 000C .bss       @9435                          d_d_kankyo_rain__LIT_9435      */
-.global d_d_kankyo_rain__LIT_9435
-d_d_kankyo_rain__LIT_9435:
-.skip 0xc
 
 /* 80424A7C 000C .bss       @9436                          d_d_kankyo_rain__LIT_9436      */
-.global d_d_kankyo_rain__LIT_9436
-d_d_kankyo_rain__LIT_9436:
-.skip 0xc
 
 /* 80424A88 000C .bss       @9437                          d_d_kankyo_rain__LIT_9437      */
-.global d_d_kankyo_rain__LIT_9437
-d_d_kankyo_rain__LIT_9437:
-.skip 0xc
 
 /* 80424A94 000C .bss       @9438                          d_d_kankyo_rain__LIT_9438      */
-.global d_d_kankyo_rain__LIT_9438
-d_d_kankyo_rain__LIT_9438:
-.skip 0xc
 
 /* 80424AA0 000C .bss       @9439                          d_d_kankyo_rain__LIT_9439      */
-.global d_d_kankyo_rain__LIT_9439
-d_d_kankyo_rain__LIT_9439:
-.skip 0xc
 
 /* 80424AAC 004E .bss       hokuto_position$9424           data_80424AAC                  */
-.global data_80424AAC
-data_80424AAC:
-.skip 0x4e
-.skip 0x6 /* padding */
 
 
 /* ###################################################################################### */
@@ -272,159 +197,56 @@ data_80424AAC:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450EE8 0004 .sbss      S_parcent_bak$4131             data_80450EE8                  */
-.global data_80450EE8
-data_80450EE8:
-.skip 0x4
 
-/* 80450EEC 0002 .sbss      data_80450EEC                  data_80450EEC                  */
-.global data_80450EEC
-data_80450EEC:
-.skip 0x2
+/* 80450EEC 0004 .sbss      merged_80450EEC                merged_80450EEC                */
 
-/* 80450EEE 0002 .sbss      S_rot_work1$7554               data_80450EEE                  */
-.global data_80450EEE
-data_80450EEE:
-.skip 0x2
-
-/* 80450EF0 0002 .sbss      data_80450EF0                  data_80450EF0                  */
-.global data_80450EF0
-data_80450EF0:
-.skip 0x2
-
-/* 80450EF2 0002 .sbss      S_rot_work2$7557               data_80450EF2                  */
-.global data_80450EF2
-data_80450EF2:
-.skip 0x2
+/* 80450EF0 0004 .sbss      merged_80450EF0                merged_80450EF0                */
 
 /* 80450EF4 0004 .sbss      data_80450EF4                  data_80450EF4                  */
-.global data_80450EF4
-data_80450EF4:
-.skip 0x4
 
 /* 80450EF8 0004 .sbss      rot$7919                       data_80450EF8                  */
-.global data_80450EF8
-data_80450EF8:
-.skip 0x4
 
-/* 80450EFC 0001 .sbss      data_80450EFC                  data_80450EFC                  */
-.global data_80450EFC
-data_80450EFC:
-.skip 0x1
-
-/* 80450EFD 0003 .sbss      data_80450EFD                  data_80450EFD                  */
-.global data_80450EFD
-data_80450EFD:
-.skip 0x3
+/* 80450EFC 0004 .sbss      merged_80450EFC                merged_80450EFC                */
 
 /* 80450F00 0004 .sbss      rot$8366                       data_80450F00                  */
-.global data_80450F00
-data_80450F00:
-.skip 0x4
 
 /* 80450F04 0004 .sbss      data_80450F04                  data_80450F04                  */
-.global data_80450F04
-data_80450F04:
-.skip 0x4
 
 /* 80450F08 0004 .sbss      rot$8936                       data_80450F08                  */
-.global data_80450F08
-data_80450F08:
-.skip 0x4
 
-/* 80450F0C 0001 .sbss      data_80450F0C                  data_80450F0C                  */
-.global data_80450F0C
-data_80450F0C:
-.skip 0x1
-
-/* 80450F0D 0003 .sbss      data_80450F0D                  data_80450F0D                  */
-.global data_80450F0D
-data_80450F0D:
-.skip 0x3
+/* 80450F0C 0004 .sbss      merged_80450F0C                merged_80450F0C                */
 
 /* 80450F10 0004 .sbss      S_fubuki_ratio$8948            data_80450F10                  */
-.global data_80450F10
-data_80450F10:
-.skip 0x4
 
 /* 80450F14 0004 .sbss      data_80450F14                  data_80450F14                  */
-.global data_80450F14
-data_80450F14:
-.skip 0x4
 
 /* 80450F18 0004 .sbss      rot$9421                       data_80450F18                  */
-.global data_80450F18
-data_80450F18:
-.skip 0x4
 
-/* 80450F1C 0001 .sbss      data_80450F1C                  data_80450F1C                  */
-.global data_80450F1C
-data_80450F1C:
-.skip 0x1
-
-/* 80450F1D 0003 .sbss      data_80450F1D                  data_80450F1D                  */
-.global data_80450F1D
-data_80450F1D:
-.skip 0x3
+/* 80450F1C 0004 .sbss      merged_80450F1C                merged_80450F1C                */
 
 /* 80450F20 0004 .sbss      rot$9847                       data_80450F20                  */
-.global data_80450F20
-data_80450F20:
-.skip 0x4
 
 /* 80450F24 0004 .sbss      data_80450F24                  data_80450F24                  */
-.global data_80450F24
-data_80450F24:
-.skip 0x4
 
 /* 80450F28 0004 .sbss      howa_loop_cnt$10108            data_80450F28                  */
-.global data_80450F28
-data_80450F28:
-.skip 0x4
 
 /* 80450F2C 0004 .sbss      data_80450F2C                  data_80450F2C                  */
-.global data_80450F2C
-data_80450F2C:
-.skip 0x4
 
 /* 80450F30 0004 .sbss      rot$10882                      data_80450F30                  */
-.global data_80450F30
-data_80450F30:
-.skip 0x4
 
 /* 80450F34 0004 .sbss      data_80450F34                  data_80450F34                  */
-.global data_80450F34
-data_80450F34:
-.skip 0x4
 
 /* 80450F38 0004 .sbss      rot$11307                      data_80450F38                  */
-.global data_80450F38
-data_80450F38:
-.skip 0x4
 
 /* 80450F3C 0004 .sbss      data_80450F3C                  data_80450F3C                  */
-.global data_80450F3C
-data_80450F3C:
-.skip 0x4
 
 /* 80450F40 0004 .sbss      rot$11586                      data_80450F40                  */
-.global data_80450F40
-data_80450F40:
-.skip 0x4
 
 /* 80450F44 0004 .sbss      data_80450F44                  data_80450F44                  */
-.global data_80450F44
-data_80450F44:
-.skip 0x4
 
 /* 80450F48 0004 .sbss      rot$11958                      data_80450F48                  */
-.global data_80450F48
-data_80450F48:
-.skip 0x4
 
 /* 80450F4C 0004 .sbss      data_80450F4C                  data_80450F4C                  */
-.global data_80450F4C
-data_80450F4C:
-.skip 0x4
 
 
 /* ###################################################################################### */

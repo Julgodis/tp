@@ -18,7 +18,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803F1DD8 0010 .bss       l_fopCamM_id                   l_fopCamM_id                   */
-.global l_fopCamM_id
-l_fopCamM_id:
-.skip 0x10
 

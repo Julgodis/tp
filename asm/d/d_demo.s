@@ -218,20 +218,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80424648 0014 .bss       dummy$4203                     data_80424648                  */
-.global data_80424648
-data_80424648:
-.skip 0x14
 
 /* 8042465C 000C .bss       @5233                          d_d_demo__LIT_5233             */
-.global d_d_demo__LIT_5233
-d_d_demo__LIT_5233:
-.skip 0xc
 
 /* 80424668 000C .bss       l_translation$5232             data_80424668                  */
-.global data_80424668
-data_80424668:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -246,120 +236,48 @@ data_80424668:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450E00 0004 .sbss      m_system__7dDemo_c             m_system__7dDemo_c             */
-.global m_system__7dDemo_c
-m_system__7dDemo_c:
-.skip 0x4
 
 /* 80450E04 0004 .sbss      m_control__7dDemo_c            m_control__7dDemo_c            */
-.global m_control__7dDemo_c
-m_control__7dDemo_c:
-.skip 0x4
 
 /* 80450E08 0004 .sbss      m_stage__7dDemo_c              m_stage__7dDemo_c              */
-.global m_stage__7dDemo_c
-m_stage__7dDemo_c:
-.skip 0x4
 
 /* 80450E0C 0004 .sbss      m_audio__7dDemo_c              m_audio__7dDemo_c              */
-.global m_audio__7dDemo_c
-m_audio__7dDemo_c:
-.skip 0x4
 
 /* 80450E10 0004 .sbss      m_particle__7dDemo_c           m_particle__7dDemo_c           */
-.global m_particle__7dDemo_c
-m_particle__7dDemo_c:
-.skip 0x4
 
 /* 80450E14 0004 .sbss      m_message__7dDemo_c            m_message__7dDemo_c            */
-.global m_message__7dDemo_c
-m_message__7dDemo_c:
-.skip 0x4
 
 /* 80450E18 0004 .sbss      m_factory__7dDemo_c            m_factory__7dDemo_c            */
-.global m_factory__7dDemo_c
-m_factory__7dDemo_c:
-.skip 0x4
 
 /* 80450E1C 0004 .sbss      m_mesgControl__7dDemo_c        m_mesgControl__7dDemo_c        */
-.global m_mesgControl__7dDemo_c
-m_mesgControl__7dDemo_c:
-.skip 0x4
 
 /* 80450E20 0004 .sbss      m_object__7dDemo_c             m_object__7dDemo_c             */
-.global m_object__7dDemo_c
-m_object__7dDemo_c:
-.skip 0x4
 
 /* 80450E24 0004 .sbss      m_data__7dDemo_c               m_data__7dDemo_c               */
-.global m_data__7dDemo_c
-m_data__7dDemo_c:
-.skip 0x4
 
 /* 80450E28 0004 .sbss      m_frame__7dDemo_c              m_frame__7dDemo_c              */
-.global m_frame__7dDemo_c
-m_frame__7dDemo_c:
-.skip 0x4
 
 /* 80450E2C 0004 .sbss      m_translation__7dDemo_c        m_translation__7dDemo_c        */
-.global m_translation__7dDemo_c
-m_translation__7dDemo_c:
-.skip 0x4
 
 /* 80450E30 0004 .sbss      m_rotationY__7dDemo_c          m_rotationY__7dDemo_c          */
-.global m_rotationY__7dDemo_c
-m_rotationY__7dDemo_c:
-.skip 0x4
 
 /* 80450E34 0004 .sbss      m_frameNoMsg__7dDemo_c         m_frameNoMsg__7dDemo_c         */
-.global m_frameNoMsg__7dDemo_c
-m_frameNoMsg__7dDemo_c:
-.skip 0x4
 
 /* 80450E38 0004 .sbss      m_mode__7dDemo_c               m_mode__7dDemo_c               */
-.global m_mode__7dDemo_c
-m_mode__7dDemo_c:
-.skip 0x4
 
 /* 80450E3C 0004 .sbss      m_status__7dDemo_c             m_status__7dDemo_c             */
-.global m_status__7dDemo_c
-m_status__7dDemo_c:
-.skip 0x4
 
 /* 80450E40 0002 .sbss      m_branchType__7dDemo_c         m_branchType__7dDemo_c         */
-.global m_branchType__7dDemo_c
-m_branchType__7dDemo_c:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80450E44 0004 .sbss      m_branchData__7dDemo_c         m_branchData__7dDemo_c         */
-.global m_branchData__7dDemo_c
-m_branchData__7dDemo_c:
-.skip 0x4
 
-/* 80450E48 0001 .sbss      data_80450E48                  data_80450E48                  */
-.global data_80450E48
-data_80450E48:
-.skip 0x1
-
-/* 80450E49 0003 .sbss      data_80450E49                  data_80450E49                  */
-.global data_80450E49
-data_80450E49:
-.skip 0x3
+/* 80450E48 0004 .sbss      merged_80450E48                merged_80450E48                */
 
 /* 80450E4C 0004 .sbss      it$4206                        data_80450E4C                  */
-.global data_80450E4C
-data_80450E4C:
-.skip 0x4
 
 /* 80450E50 0008 .sbss      data_80450E50                  data_80450E50                  */
-.global data_80450E50
-data_80450E50:
-.skip 0x8
 
 /* 80450E58 0004 .sbss      data_80450E58                  data_80450E58                  */
-.global data_80450E58
-data_80450E58:
-.skip 0x4
 
 
 /* ###################################################################################### */

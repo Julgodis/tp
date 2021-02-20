@@ -20,11 +20,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044C998 0000 .bss       ...bss.0                       data_8044C998                  */
-.global data_8044C998
-data_8044C998:
 
 /* 8044C998 0020 .bss       WaitingQueue                   WaitingQueue                   */
-.global WaitingQueue
-WaitingQueue:
-.skip 0x20
 

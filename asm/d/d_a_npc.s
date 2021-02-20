@@ -768,24 +768,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80425708 00C8 .bss       mFindActorPtrs__8daNpcT_c      mFindActorPtrs__8daNpcT_c      */
-.global mFindActorPtrs__8daNpcT_c
-mFindActorPtrs__8daNpcT_c:
-.skip 0xc8
 
 /* 804257D0 000C .bss       @9946                          LIT_9946                       */
-.global LIT_9946
-LIT_9946:
-.skip 0xc
 
 /* 804257DC 000C .bss       vec$9945                       data_804257DC                  */
-.global data_804257DC
-data_804257DC:
-.skip 0xc
 
 /* 804257E8 0190 .bss       mFindActorPList__8daNpcF_c     mFindActorPList__8daNpcF_c     */
-.global mFindActorPList__8daNpcF_c
-mFindActorPList__8daNpcF_c:
-.skip 0x190
 
 
 /* ###################################################################################### */
@@ -793,56 +781,24 @@ mFindActorPList__8daNpcF_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450FD8 0002 .sbss      mSrchName__8daNpcT_c           mSrchName__8daNpcT_c           */
-.global mSrchName__8daNpcT_c
-mSrchName__8daNpcT_c:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80450FDC 0004 .sbss      mFindCount__8daNpcT_c          mFindCount__8daNpcT_c          */
-.global mFindCount__8daNpcT_c
-mFindCount__8daNpcT_c:
-.skip 0x4
 
 /* 80450FE0 0004 .sbss      m_name__23daBaseNpc_moveBgActor_c m_name__23daBaseNpc_moveBgActor_c */
-.global m_name__23daBaseNpc_moveBgActor_c
-m_name__23daBaseNpc_moveBgActor_c:
-.skip 0x4
 
 /* 80450FE4 0004 .sbss      m_dzb_id__23daBaseNpc_moveBgActor_c m_dzb_id__23daBaseNpc_moveBgActor_c */
-.global m_dzb_id__23daBaseNpc_moveBgActor_c
-m_dzb_id__23daBaseNpc_moveBgActor_c:
-.skip 0x4
 
 /* 80450FE8 0004 .sbss      m_set_func__23daBaseNpc_moveBgActor_c m_set_func__23daBaseNpc_moveBgActor_c */
-.global m_set_func__23daBaseNpc_moveBgActor_c
-m_set_func__23daBaseNpc_moveBgActor_c:
-.skip 0x4
 
 /* 80450FEC 0004 .sbss      data_80450FEC                  data_80450FEC                  */
-.global data_80450FEC
-data_80450FEC:
-.skip 0x4
 
 /* 80450FF0 0004 .sbss      mFindCount__8daNpcF_c          mFindCount__8daNpcF_c          */
-.global mFindCount__8daNpcF_c
-mFindCount__8daNpcF_c:
-.skip 0x4
 
 /* 80450FF4 0002 .sbss      mSrchActorName__8daNpcF_c      mSrchActorName__8daNpcF_c      */
-.global mSrchActorName__8daNpcF_c
-mSrchActorName__8daNpcF_c:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80450FF8 0008 .sbss      data_80450FF8                  data_80450FF8                  */
-.global data_80450FF8
-data_80450FF8:
-.skip 0x8
 
 /* 80451000 0004 .sbss      data_80451000                  data_80451000                  */
-.global data_80451000
-data_80451000:
-.skip 0x4
 
 
 /* ###################################################################################### */

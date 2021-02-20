@@ -111,10 +111,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451360 0004 .sbss      mLinkPtr__14Z2CreatureLink     mLinkPtr__14Z2CreatureLink     */
-.global mLinkPtr__14Z2CreatureLink
-mLinkPtr__14Z2CreatureLink:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

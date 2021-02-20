@@ -86,20 +86,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451570 0004 .sbss      sManager__17JUTConsoleManager  sManager__17JUTConsoleManager  */
-.global sManager__17JUTConsoleManager
-sManager__17JUTConsoleManager:
-.skip 0x4
 
 /* 80451574 0004 .sbss      sReportConsole                 sReportConsole                 */
-.global sReportConsole
-sReportConsole:
-.skip 0x4
 
 /* 80451578 0004 .sbss      sWarningConsole                sWarningConsole                */
-.global sWarningConsole
-sWarningConsole:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

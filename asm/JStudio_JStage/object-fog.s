@@ -49,27 +49,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431378 0000 .bss       ...bss.0                       data_80431378                  */
-.global data_80431378
-data_80431378:
 
 /* 80431378 000C .bss       @848                           object_fog__LIT_848            */
-.global object_fog__LIT_848
-object_fog__LIT_848:
-.skip 0xc
 
 /* 80431384 000C .bss       @853                           object_fog__LIT_853            */
-.global object_fog__LIT_853
-object_fog__LIT_853:
-.skip 0xc
 
 /* 80431390 000C .bss       @854                           object_fog__LIT_854            */
-.global object_fog__LIT_854
-object_fog__LIT_854:
-.skip 0xc
 
 /* 8043139C 0060 .bss       saoVVOutput___Q214JStudio_JStage12TAdaptor_fog saoVVOutput___Q214JStudio_JStage12TAdaptor_fog */
-.global saoVVOutput___Q214JStudio_JStage12TAdaptor_fog
-saoVVOutput___Q214JStudio_JStage12TAdaptor_fog:
-.skip 0x60
-.skip 0x4 /* padding */
 

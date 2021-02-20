@@ -39,12 +39,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515E8 0004 .sbss      sInterruptFlag$965             data_804515E8                  */
-.global data_804515E8
-data_804515E8:
-.skip 0x4
 
 /* 804515EC 0004 .sbss      data_804515EC                  data_804515EC                  */
-.global data_804515EC
-data_804515EC:
-.skip 0x4
 

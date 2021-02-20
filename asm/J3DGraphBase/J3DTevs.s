@@ -88,25 +88,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434C98 1DC7 .bss       j3dTexCoordTable               j3dTexCoordTable               */
-.global j3dTexCoordTable
-j3dTexCoordTable:
-.skip 0x1dc7
-.skip 0x1 /* padding */
 
 /* 80436A60 0400 .bss       j3dTevSwapTableTable           j3dTevSwapTableTable           */
-.global j3dTevSwapTableTable
-j3dTevSwapTableTable:
-.skip 0x400
 
 /* 80436E60 0300 .bss       j3dAlphaCmpTable               j3dAlphaCmpTable               */
-.global j3dAlphaCmpTable
-j3dAlphaCmpTable:
-.skip 0x300
 
 /* 80437160 0060 .bss       j3dZModeTable                  j3dZModeTable                  */
-.global j3dZModeTable
-j3dZModeTable:
-.skip 0x60
 
 
 /* ###################################################################################### */

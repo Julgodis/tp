@@ -61,19 +61,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434098 000C .bss       @716                           LIT_716                        */
-.global LIT_716
-LIT_716:
-.skip 0xc
 
 /* 804340A4 000C .bss       @896                           JAISeq__LIT_896                */
-.global JAISeq__LIT_896
-JAISeq__LIT_896:
-.skip 0xc
 
 /* 804340B0 0010 .bss       memPool_$localstatic3$getMemPool___35JASPoolAllocObject<13JAISoundChild>Fv data_804340B0                  */
-.global data_804340B0
-data_804340B0:
-.skip 0x10
 
 
 /* ###################################################################################### */

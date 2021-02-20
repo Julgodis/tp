@@ -44,8 +44,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451900 0004 .sbss      __DSP_init_flag                __DSP_init_flag                */
-.global __DSP_init_flag
-__DSP_init_flag:
-.skip 0x4
-.skip 0x4 /* padding */
 

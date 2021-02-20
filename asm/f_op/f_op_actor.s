@@ -58,30 +58,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CB8 0004 .sbss      g_fopAc_type                   g_fopAc_type                   */
-.global g_fopAc_type
-g_fopAc_type:
-.skip 0x4
 
 /* 80450CBC 0004 .sbss      stopStatus__10fopAc_ac_c       stopStatus__10fopAc_ac_c       */
-.global stopStatus__10fopAc_ac_c
-stopStatus__10fopAc_ac_c:
-.skip 0x4
 
 /* 80450CC0 0004 .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap> data_80450CC0                  */
-.global data_80450CC0
-data_80450CC0:
-.skip 0x4
-.skip 0x4 /* padding */
 
-/* 80450CC8 0001 .sbss      data_80450CC8                  data_80450CC8                  */
-.global data_80450CC8
-data_80450CC8:
-.skip 0x1
-
-/* 80450CC9 0003 .sbss      data_80450CC9                  data_80450CC9                  */
-.global data_80450CC9
-data_80450CC9:
-.skip 0x3
+/* 80450CC8 0004 .sbss      merged_80450CC8                merged_80450CC8                */
 
 
 /* ###################################################################################### */

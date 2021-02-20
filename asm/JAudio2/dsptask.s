@@ -29,20 +29,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431F80 0050 .bss       audio_task                     audio_task                     */
-.global audio_task
-audio_task:
-.skip 0x50
-.skip 0x10 /* padding */
 
 /* 80431FE0 2000 .bss       AUDIO_YIELD_BUFFER             AUDIO_YIELD_BUFFER             */
-.global AUDIO_YIELD_BUFFER
-AUDIO_YIELD_BUFFER:
-.skip 0x2000
 
 /* 80433FE0 0080 .bss       taskwork                       taskwork                       */
-.global taskwork
-taskwork:
-.skip 0x80
 
 
 /* ###################################################################################### */
@@ -50,22 +40,8 @@ taskwork:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451300 0004 .sbss      taskreadp                      taskreadp                      */
-.global taskreadp
-taskreadp:
-.skip 0x4
 
 /* 80451304 0004 .sbss      taskwritep                     taskwritep                     */
-.global taskwritep
-taskwritep:
-.skip 0x4
 
-/* 80451308 0001 .sbss      data_80451308                  data_80451308                  */
-.global data_80451308
-data_80451308:
-.skip 0x1
-
-/* 80451309 0003 .sbss      data_80451309                  data_80451309                  */
-.global data_80451309
-data_80451309:
-.skip 0x3
+/* 80451308 0004 .sbss      merged_80451308                merged_80451308                */
 

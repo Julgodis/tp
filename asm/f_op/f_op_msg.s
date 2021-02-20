@@ -27,8 +27,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CF0 0004 .sbss      fopMsg_MSG_TYPE                fopMsg_MSG_TYPE                */
-.global fopMsg_MSG_TYPE
-fopMsg_MSG_TYPE:
-.skip 0x4
-.skip 0x4 /* padding */
 

@@ -14,8 +14,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451988 0004 .sbss      __global_destructor_chain      __global_destructor_chain      */
-.global __global_destructor_chain
-__global_destructor_chain:
-.skip 0x4
-.skip 0x4 /* padding */
 

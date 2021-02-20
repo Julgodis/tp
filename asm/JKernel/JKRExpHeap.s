@@ -106,30 +106,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451398 0004 .sbss      DBfoundSize                    DBfoundSize                    */
-.global DBfoundSize
-DBfoundSize:
-.skip 0x4
 
 /* 8045139C 0004 .sbss      DBfoundOffset                  DBfoundOffset                  */
-.global DBfoundOffset
-DBfoundOffset:
-.skip 0x4
 
 /* 804513A0 0004 .sbss      DBfoundBlock                   DBfoundBlock                   */
-.global DBfoundBlock
-DBfoundBlock:
-.skip 0x4
 
 /* 804513A4 0004 .sbss      DBnewFreeBlock                 DBnewFreeBlock                 */
-.global DBnewFreeBlock
-DBnewFreeBlock:
-.skip 0x4
 
 /* 804513A8 0004 .sbss      DBnewUsedBlock                 DBnewUsedBlock                 */
-.global DBnewUsedBlock
-DBnewUsedBlock:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

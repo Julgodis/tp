@@ -30,8 +30,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451268 0004 .sbss      sOscTable__12JASVoiceBank      sOscTable__12JASVoiceBank      */
-.global sOscTable__12JASVoiceBank
-sOscTable__12JASVoiceBank:
-.skip 0x4
-.skip 0x4 /* padding */
 

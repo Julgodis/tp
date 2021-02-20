@@ -89,58 +89,26 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044C630 0000 .bss       ...bss.0                       data_8044C630                  */
-.global data_8044C630
-data_8044C630:
 
 /* 8044C630 0080 .bss       Packet                         Packet                         */
-.global Packet
-Packet:
-.skip 0x80
 
 /* 8044C6B0 00A0 .bss       Alarm                          SIBios__Alarm                  */
-.global SIBios__Alarm
-SIBios__Alarm:
-.skip 0xa0
 
 /* 8044C750 0020 .bss       TypeTime                       TypeTime                       */
-.global TypeTime
-TypeTime:
-.skip 0x20
 
 /* 8044C770 0020 .bss       XferTime                       XferTime                       */
-.global XferTime
-XferTime:
-.skip 0x20
 
 /* 8044C790 0040 .bss       TypeCallback                   TypeCallback                   */
-.global TypeCallback
-TypeCallback:
-.skip 0x40
 
 /* 8044C7D0 0010 .bss       RDSTHandler                    RDSTHandler                    */
-.global RDSTHandler
-RDSTHandler:
-.skip 0x10
 
 /* 8044C7E0 0010 .bss       InputBufferValid               InputBufferValid               */
-.global InputBufferValid
-InputBufferValid:
-.skip 0x10
 
 /* 8044C7F0 0020 .bss       InputBuffer                    InputBuffer                    */
-.global InputBuffer
-InputBuffer:
-.skip 0x20
 
 /* 8044C810 0010 .bss       InputBufferVcount              InputBufferVcount              */
-.global InputBufferVcount
-InputBufferVcount:
-.skip 0x10
 
 /* 8044C820 0010 .bss       cmdFixDevice$327               data_8044C820                  */
-.global data_8044C820
-data_8044C820:
-.skip 0x10
 
 
 /* ###################################################################################### */
@@ -155,18 +123,8 @@ data_8044C820:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804516F0 0004 .sbss      cmdTypeAndStatus$78            data_804516F0                  */
-.global data_804516F0
-data_804516F0:
-.skip 0x4
 
 /* 804516F4 0004 .sbss      cmdTypeAndStatus$372           data_804516F4                  */
-.global data_804516F4
-data_804516F4:
-.skip 0x4
 
 /* 804516F8 0004 .sbss      __PADFixBits                   __PADFixBits                   */
-.global __PADFixBits
-__PADFixBits:
-.skip 0x4
-.skip 0x4 /* padding */
 

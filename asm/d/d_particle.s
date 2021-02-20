@@ -352,144 +352,60 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80424710 0000 .bss       ...bss.0                       data_80424710                  */
-.global data_80424710
-data_80424710:
 
 /* 80424710 000C .bss       @4053                          d_d_particle__LIT_4053         */
-.global d_d_particle__LIT_4053
-d_d_particle__LIT_4053:
-.skip 0xc
 
 /* 8042471C 000C .bss       @4054                          d_d_particle__LIT_4054         */
-.global d_d_particle__LIT_4054
-d_d_particle__LIT_4054:
-.skip 0xc
 
 /* 80424728 000C .bss       pos$4424                       data_80424728                  */
-.global data_80424728
-data_80424728:
-.skip 0xc
 
 /* 80424734 000C .bss       @4723                          d_d_particle__LIT_4723         */
-.global d_d_particle__LIT_4723
-d_d_particle__LIT_4723:
-.skip 0xc
 
 /* 80424740 000C .bss       @4724                          d_d_particle__LIT_4724         */
-.global d_d_particle__LIT_4724
-d_d_particle__LIT_4724:
-.skip 0xc
 
 /* 8042474C 000C .bss       @4725                          d_d_particle__LIT_4725         */
-.global d_d_particle__LIT_4725
-d_d_particle__LIT_4725:
-.skip 0xc
 
 /* 80424758 000C .bss       @4726                          d_d_particle__LIT_4726         */
-.global d_d_particle__LIT_4726
-d_d_particle__LIT_4726:
-.skip 0xc
 
 /* 80424764 000C .bss       @4727                          d_d_particle__LIT_4727         */
-.global d_d_particle__LIT_4727
-d_d_particle__LIT_4727:
-.skip 0xc
 
 /* 80424770 000C .bss       @4728                          d_d_particle__LIT_4728         */
-.global d_d_particle__LIT_4728
-d_d_particle__LIT_4728:
-.skip 0xc
 
 /* 8042477C 000C .bss       @4729                          d_d_particle__LIT_4729         */
-.global d_d_particle__LIT_4729
-d_d_particle__LIT_4729:
-.skip 0xc
 
 /* 80424788 000C .bss       @4730                          d_d_particle__LIT_4730         */
-.global d_d_particle__LIT_4730
-d_d_particle__LIT_4730:
-.skip 0xc
 
 /* 80424794 0040 .bss       mTsubo__13dPa_control_c        mTsubo__13dPa_control_c        */
-.global mTsubo__13dPa_control_c
-mTsubo__13dPa_control_c:
-.skip 0x40
 
 /* 804247D4 000C .bss       @4731                          d_d_particle__LIT_4731         */
-.global d_d_particle__LIT_4731
-d_d_particle__LIT_4731:
-.skip 0xc
 
 /* 804247E0 000C .bss       @4732                          d_d_particle__LIT_4732         */
-.global d_d_particle__LIT_4732
-d_d_particle__LIT_4732:
-.skip 0xc
 
 /* 804247EC 000C .bss       @4733                          d_d_particle__LIT_4733         */
-.global d_d_particle__LIT_4733
-d_d_particle__LIT_4733:
-.skip 0xc
 
 /* 804247F8 0018 .bss       mLifeBall__13dPa_control_c     mLifeBall__13dPa_control_c     */
-.global mLifeBall__13dPa_control_c
-mLifeBall__13dPa_control_c:
-.skip 0x18
 
 /* 80424810 000C .bss       @4734                          d_d_particle__LIT_4734         */
-.global d_d_particle__LIT_4734
-d_d_particle__LIT_4734:
-.skip 0xc
 
 /* 8042481C 000C .bss       @4735                          d_d_particle__LIT_4735         */
-.global d_d_particle__LIT_4735
-d_d_particle__LIT_4735:
-.skip 0xc
 
 /* 80424828 000C .bss       @4736                          d_d_particle__LIT_4736         */
-.global d_d_particle__LIT_4736
-d_d_particle__LIT_4736:
-.skip 0xc
 
 /* 80424834 000C .bss       @4737                          d_d_particle__LIT_4737         */
-.global d_d_particle__LIT_4737
-d_d_particle__LIT_4737:
-.skip 0xc
 
 /* 80424840 000C .bss       @4738                          d_d_particle__LIT_4738         */
-.global d_d_particle__LIT_4738
-d_d_particle__LIT_4738:
-.skip 0xc
 
 /* 8042484C 000C .bss       @4739                          d_d_particle__LIT_4739         */
-.global d_d_particle__LIT_4739
-d_d_particle__LIT_4739:
-.skip 0xc
 
 /* 80424858 000C .bss       @4740                          d_d_particle__LIT_4740         */
-.global d_d_particle__LIT_4740
-d_d_particle__LIT_4740:
-.skip 0xc
 
 /* 80424864 000C .bss       @4741                          d_d_particle__LIT_4741         */
-.global d_d_particle__LIT_4741
-d_d_particle__LIT_4741:
-.skip 0xc
 
 /* 80424870 0030 .bss       mWindViewMatrix__13dPa_control_c mWindViewMatrix__13dPa_control_c */
-.global mWindViewMatrix__13dPa_control_c
-mWindViewMatrix__13dPa_control_c:
-.skip 0x30
 
 /* 804248A0 000C .bss       @4742                          d_d_particle__LIT_4742         */
-.global d_d_particle__LIT_4742
-d_d_particle__LIT_4742:
-.skip 0xc
 
 /* 804248AC 0020 .bss       jpcName$4821                   data_804248AC                  */
-.global data_804248AC
-data_804248AC:
-.skip 0x20
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -497,95 +413,36 @@ data_804248AC:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450E90 0004 .sbss      mEcallback__18dPa_modelEcallBack mEcallback__18dPa_modelEcallBack */
-.global mEcallback__18dPa_modelEcallBack
-mEcallback__18dPa_modelEcallBack:
-.skip 0x4
 
 /* 80450E94 0004 .sbss      mPcallback__18dPa_modelEcallBack mPcallback__18dPa_modelEcallBack */
-.global mPcallback__18dPa_modelEcallBack
-mPcallback__18dPa_modelEcallBack:
-.skip 0x4
 
 /* 80450E98 0004 .sbss      mModel__18dPa_modelEcallBack   mModel__18dPa_modelEcallBack   */
-.global mModel__18dPa_modelEcallBack
-mModel__18dPa_modelEcallBack:
-.skip 0x4
 
-/* 80450E9C 0001 .sbss      data_80450E9C                  data_80450E9C                  */
-.global data_80450E9C
-data_80450E9C:
-.skip 0x1
-
-/* 80450E9D 0001 .sbss      data_80450E9D                  data_80450E9D                  */
-.global data_80450E9D
-data_80450E9D:
-.skip 0x1
-
-/* 80450E9E 0002 .sbss      data_80450E9E                  data_80450E9E                  */
-.global data_80450E9E
-data_80450E9E:
-.skip 0x2
+/* 80450E9C 0004 .sbss      merged_80450E9C                merged_80450E9C                */
 
 /* 80450EA0 0004 .sbss      mEmitterMng__13dPa_control_c   mEmitterMng__13dPa_control_c   */
-.global mEmitterMng__13dPa_control_c
-mEmitterMng__13dPa_control_c:
-.skip 0x4
 
 /* 80450EA4 0004 .sbss      mWaterBubblePcallBack__13dPa_control_c mWaterBubblePcallBack__13dPa_control_c */
-.global mWaterBubblePcallBack__13dPa_control_c
-mWaterBubblePcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EA8 0004 .sbss      mFsenthPcallBack__13dPa_control_c mFsenthPcallBack__13dPa_control_c */
-.global mFsenthPcallBack__13dPa_control_c
-mFsenthPcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EAC 0004 .sbss      mLight8EcallBack__13dPa_control_c mLight8EcallBack__13dPa_control_c */
-.global mLight8EcallBack__13dPa_control_c
-mLight8EcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EB0 0004 .sbss      mLight8PcallBack__13dPa_control_c mLight8PcallBack__13dPa_control_c */
-.global mLight8PcallBack__13dPa_control_c
-mLight8PcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EB4 0004 .sbss      m_b_Light8EcallBack__13dPa_control_c m_b_Light8EcallBack__13dPa_control_c */
-.global m_b_Light8EcallBack__13dPa_control_c
-m_b_Light8EcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EB8 0004 .sbss      m_b_Light8PcallBack__13dPa_control_c m_b_Light8PcallBack__13dPa_control_c */
-.global m_b_Light8PcallBack__13dPa_control_c
-m_b_Light8PcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EBC 0004 .sbss      m_d_Light8EcallBack__13dPa_control_c m_d_Light8EcallBack__13dPa_control_c */
-.global m_d_Light8EcallBack__13dPa_control_c
-m_d_Light8EcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EC0 0004 .sbss      m_d_Light8PcallBack__13dPa_control_c m_d_Light8PcallBack__13dPa_control_c */
-.global m_d_Light8PcallBack__13dPa_control_c
-m_d_Light8PcallBack__13dPa_control_c:
-.skip 0x4
 
 /* 80450EC4 0004 .sbss      data_80450EC4                  data_80450EC4                  */
-.global data_80450EC4
-data_80450EC4:
-.skip 0x4
 
 /* 80450EC8 0004 .sbss      mParticleTracePCB__13dPa_control_c mParticleTracePCB__13dPa_control_c */
-.global mParticleTracePCB__13dPa_control_c
-mParticleTracePCB__13dPa_control_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80450ED0 0004 .sbss      data_80450ED0                  data_80450ED0                  */
-.global data_80450ED0
-data_80450ED0:
-.skip 0x4
 
 
 /* ###################################################################################### */

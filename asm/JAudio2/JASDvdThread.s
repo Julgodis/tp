@@ -14,8 +14,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451208 0004 .sbss      sThread__6JASDvd               sThread__6JASDvd               */
-.global sThread__6JASDvd
-sThread__6JASDvd:
-.skip 0x4
-.skip 0x4 /* padding */
 

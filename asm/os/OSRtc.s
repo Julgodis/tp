@@ -44,12 +44,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044BB20 0000 .bss       ...bss.0                       data_8044BB20                  */
-.global data_8044BB20
-data_8044BB20:
 
 /* 8044BB20 0054 .bss       Scb                            Scb                            */
-.global Scb
-Scb:
-.skip 0x54
-.skip 0x4 /* padding */
 

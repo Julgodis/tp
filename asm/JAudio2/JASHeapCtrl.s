@@ -54,14 +54,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804315D0 000C .bss       @313                           LIT_313                        */
-.global LIT_313
-LIT_313:
-.skip 0xc
 
 /* 804315DC 0044 .bss       audioAramHeap__9JASKernel      audioAramHeap__9JASKernel      */
-.global audioAramHeap__9JASKernel
-audioAramHeap__9JASKernel:
-.skip 0x44
 
 
 /* ###################################################################################### */
@@ -69,22 +63,10 @@ audioAramHeap__9JASKernel:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451210 0004 .sbss      JASDram                        JASDram                        */
-.global JASDram
-JASDram:
-.skip 0x4
 
 /* 80451214 0004 .sbss      sAramBase__9JASKernel          sAramBase__9JASKernel          */
-.global sAramBase__9JASKernel
-sAramBase__9JASKernel:
-.skip 0x4
 
 /* 80451218 0004 .sbss      sSystemHeap__9JASKernel        sSystemHeap__9JASKernel        */
-.global sSystemHeap__9JASKernel
-sSystemHeap__9JASKernel:
-.skip 0x4
 
 /* 8045121C 0004 .sbss      sCommandHeap__9JASKernel       sCommandHeap__9JASKernel       */
-.global sCommandHeap__9JASKernel
-sCommandHeap__9JASKernel:
-.skip 0x4
 

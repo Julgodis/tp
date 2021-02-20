@@ -49,10 +49,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F270 0014 .bss       gTRKFramingState               gTRKFramingState               */
-.global gTRKFramingState
-gTRKFramingState:
-.skip 0x14
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -60,8 +56,4 @@ gTRKFramingState:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804519B8 0004 .sbss      gTRKInputPendingPtr            gTRKInputPendingPtr            */
-.global gTRKInputPendingPtr
-gTRKInputPendingPtr:
-.skip 0x4
-.skip 0x4 /* padding */
 

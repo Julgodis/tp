@@ -47,10 +47,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80425438 00CC .bss       mTypeGroupListAll__7dTres_c    mTypeGroupListAll__7dTres_c    */
-.global mTypeGroupListAll__7dTres_c
-mTypeGroupListAll__7dTres_c:
-.skip 0xcc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -58,15 +54,8 @@ mTypeGroupListAll__7dTres_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450F98 0004 .sbss      mTypeGroupData__7dTres_c       mTypeGroupData__7dTres_c       */
-.global mTypeGroupData__7dTres_c
-mTypeGroupData__7dTres_c:
-.skip 0x4
 
 /* 80450F9C 0002 .sbss      mNum__7dTres_c                 mNum__7dTres_c                 */
-.global mNum__7dTres_c
-mNum__7dTres_c:
-.skip 0x2
-.skip 0x2 /* padding */
 
 
 /* ###################################################################################### */

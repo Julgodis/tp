@@ -36,10 +36,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431B18 000C .bss       @433                           JASSeqCtrl__LIT_433            */
-.global JASSeqCtrl__LIT_433
-JASSeqCtrl__LIT_433:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -47,8 +43,4 @@ JASSeqCtrl__LIT_433:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451238 0004 .sbss      sDefaultParser__10JASSeqCtrl   sDefaultParser__10JASSeqCtrl   */
-.global sDefaultParser__10JASSeqCtrl
-sDefaultParser__10JASSeqCtrl:
-.skip 0x4
-.skip 0x4 /* padding */
 

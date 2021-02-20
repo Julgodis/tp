@@ -304,20 +304,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451078 0004 .sbss      player_px                      player_px                      */
-.global player_px
-player_px:
-.skip 0x4
 
 /* 8045107C 0004 .sbss      player_py                      player_py                      */
-.global player_py
-player_py:
-.skip 0x4
 
 /* 80451080 0004 .sbss      myclass__12dMenu_Dmap_c        myclass__12dMenu_Dmap_c        */
-.global myclass__12dMenu_Dmap_c
-myclass__12dMenu_Dmap_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

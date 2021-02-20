@@ -14,8 +14,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D430 000C .bss       fragmentinfo                   fragmentinfo                   */
-.global fragmentinfo
-fragmentinfo:
-.skip 0xc
-.skip 0x4 /* padding */
 

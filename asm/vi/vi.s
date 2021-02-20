@@ -89,25 +89,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044CA28 0000 .bss       ...bss.0                       data_8044CA28                  */
-.global data_8044CA28
-data_8044CA28:
 
 /* 8044CA28 0076 .bss       regs                           regs                           */
-.global regs
-regs:
-.skip 0x76
-.skip 0x2 /* padding */
 
 /* 8044CAA0 0076 .bss       shdwRegs                       shdwRegs                       */
-.global shdwRegs
-shdwRegs:
-.skip 0x76
-.skip 0x2 /* padding */
 
 /* 8044CB18 0058 .bss       HorVer                         HorVer                         */
-.global HorVer
-HorVer:
-.skip 0x58
 
 
 /* ###################################################################################### */
@@ -124,120 +111,46 @@ HorVer:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804517E0 0004 .sbss      IsInitialized                  IsInitialized                  */
-.global IsInitialized
-IsInitialized:
-.skip 0x4
 
 /* 804517E4 0004 .sbss      retraceCount                   retraceCount                   */
-.global retraceCount
-retraceCount:
-.skip 0x4
 
 /* 804517E8 0004 .sbss      flushFlag                      flushFlag                      */
-.global flushFlag
-flushFlag:
-.skip 0x4
 
 /* 804517EC 0008 .sbss      retraceQueue                   retraceQueue                   */
-.global retraceQueue
-retraceQueue:
-.skip 0x8
 
 /* 804517F4 0004 .sbss      PreCB                          PreCB                          */
-.global PreCB
-PreCB:
-.skip 0x4
 
 /* 804517F8 0004 .sbss      PostCB                         PostCB                         */
-.global PostCB
-PostCB:
-.skip 0x4
 
 /* 804517FC 0004 .sbss      PositionCallback               PositionCallback               */
-.global PositionCallback
-PositionCallback:
-.skip 0x4
 
 /* 80451800 0004 .sbss      encoderType                    encoderType                    */
-.global encoderType
-encoderType:
-.skip 0x4
 
-/* 80451804 0002 .sbss      displayOffsetH                 displayOffsetH                 */
-.global displayOffsetH
-displayOffsetH:
-.skip 0x2
-
-/* 80451806 0002 .sbss      displayOffsetV                 displayOffsetV                 */
-.global displayOffsetV
-displayOffsetV:
-.skip 0x2
+/* 80451804 0004 .sbss      merged_80451804                merged_80451804                */
 
 /* 80451808 0004 .sbss      changeMode                     changeMode                     */
-.global changeMode
-changeMode:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80451810 0004 .sbss      changed                        changed                        */
-.global changed
-changed:
-.skip 0x4
 
 /* 80451814 0004 .sbss      data_80451814                  data_80451814                  */
-.global data_80451814
-data_80451814:
-.skip 0x4
 
 /* 80451818 0004 .sbss      shdwChangeMode                 shdwChangeMode                 */
-.global shdwChangeMode
-shdwChangeMode:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80451820 0004 .sbss      shdwChanged                    shdwChanged                    */
-.global shdwChanged
-shdwChanged:
-.skip 0x4
 
 /* 80451824 0004 .sbss      data_80451824                  data_80451824                  */
-.global data_80451824
-data_80451824:
-.skip 0x4
 
 /* 80451828 0004 .sbss      CurrTiming                     CurrTiming                     */
-.global CurrTiming
-CurrTiming:
-.skip 0x4
 
 /* 8045182C 0004 .sbss      CurrTvMode                     CurrTvMode                     */
-.global CurrTvMode
-CurrTvMode:
-.skip 0x4
 
 /* 80451830 0004 .sbss      NextBufAddr                    NextBufAddr                    */
-.global NextBufAddr
-NextBufAddr:
-.skip 0x4
 
 /* 80451834 0004 .sbss      CurrBufAddr                    CurrBufAddr                    */
-.global CurrBufAddr
-CurrBufAddr:
-.skip 0x4
 
 /* 80451838 0004 .sbss      FBSet                          FBSet                          */
-.global FBSet
-FBSet:
-.skip 0x4
 
 /* 8045183C 0004 .sbss      timingExtra                    timingExtra                    */
-.global timingExtra
-timingExtra:
-.skip 0x4
 
 /* 80451840 0004 .sbss      message$351                    data_80451840                  */
-.global data_80451840
-data_80451840:
-.skip 0x4
-.skip 0x4 /* padding */
 

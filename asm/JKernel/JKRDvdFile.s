@@ -54,12 +54,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434360 000C .bss       @657                           LIT_657                        */
-.global LIT_657
-LIT_657:
-.skip 0xc
 
 /* 8043436C 000C .bss       sDvdList__10JKRDvdFile         sDvdList__10JKRDvdFile         */
-.global sDvdList__10JKRDvdFile
-sDvdList__10JKRDvdFile:
-.skip 0xc
 

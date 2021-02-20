@@ -51,13 +51,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804514B0 0004 .sbss      sDecompObject__9JKRDecomp      sDecompObject__9JKRDecomp      */
-.global sDecompObject__9JKRDecomp
-sDecompObject__9JKRDecomp:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804514B8 0004 .sbss      data_804514B8                  data_804514B8                  */
-.global data_804514B8
-data_804514B8:
-.skip 0x4
 

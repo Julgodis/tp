@@ -21,17 +21,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D578 0100 .bss       stderr_buff                    stderr_buff                    */
-.global stderr_buff
-stderr_buff:
-.skip 0x100
 
 /* 8044D678 0100 .bss       stdout_buff                    stdout_buff                    */
-.global stdout_buff
-stdout_buff:
-.skip 0x100
 
 /* 8044D778 0100 .bss       stdin_buff                     stdin_buff                     */
-.global stdin_buff
-stdin_buff:
-.skip 0x100
 

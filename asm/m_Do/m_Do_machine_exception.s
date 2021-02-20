@@ -31,8 +31,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450C90 0004 .sbss      sConsole                       sConsole                       */
-.global sConsole
-sConsole:
-.skip 0x4
-.skip 0x10 /* padding */
 

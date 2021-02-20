@@ -39,22 +39,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451908 0004 .sbss      __DSP_tmp_task                 __DSP_tmp_task                 */
-.global __DSP_tmp_task
-__DSP_tmp_task:
-.skip 0x4
 
 /* 8045190C 0004 .sbss      __DSP_last_task                __DSP_last_task                */
-.global __DSP_last_task
-__DSP_last_task:
-.skip 0x4
 
 /* 80451910 0004 .sbss      __DSP_first_task               __DSP_first_task               */
-.global __DSP_first_task
-__DSP_first_task:
-.skip 0x4
 
 /* 80451914 0004 .sbss      __DSP_curr_task                __DSP_curr_task                */
-.global __DSP_curr_task
-__DSP_curr_task:
-.skip 0x4
 

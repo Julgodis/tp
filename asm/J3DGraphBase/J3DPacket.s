@@ -93,9 +93,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434C70 0010 .bss       sGDLObj__17J3DDisplayListObj   sGDLObj__17J3DDisplayListObj   */
-.global sGDLObj__17J3DDisplayListObj
-sGDLObj__17J3DDisplayListObj:
-.skip 0x10
 
 
 /* ###################################################################################### */
@@ -103,8 +100,4 @@ sGDLObj__17J3DDisplayListObj:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515A0 0004 .sbss      sInterruptFlag__17J3DDisplayListObj sInterruptFlag__17J3DDisplayListObj */
-.global sInterruptFlag__17J3DDisplayListObj
-sInterruptFlag__17J3DDisplayListObj:
-.skip 0x4
-.skip 0x4 /* padding */
 

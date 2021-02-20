@@ -1,0 +1,15 @@
+lbl_802A8EC0:
+/* 802A8EC0 00000000  38 00 00 00 */	li r0, 0
+/* 802A8EC4 00000004  90 03 00 04 */	stw r0, 4(r3)
+/* 802A8EC8 00000008  90 03 00 08 */	stw r0, 8(r3)
+/* 802A8ECC 0000000C  90 03 00 00 */	stw r0, 0(r3)
+/* 802A8ED0 00000010  38 03 00 04 */	addi r0, r3, 4
+/* 802A8ED4 00000014  90 03 00 04 */	stw r0, 4(r3)
+/* 802A8ED8 00000018  90 03 00 08 */	stw r0, 8(r3)
+/* 802A8EDC 0000001C  3C 80 80 3D */	lis r4, data_803C9CBC@ha
+/* 802A8EE0 00000020  38 04 9C BC */	addi r0, r4, data_803C9CBC@l
+/* 802A8EE4 00000024  90 03 00 0C */	stw r0, 0xc(r3)
+/* 802A8EE8 00000028  3C 80 80 3D */	lis r4, __vt__Q38JMessage18TResourceContainer10TCResource@ha
+/* 802A8EEC 0000002C  38 04 9C A8 */	addi r0, r4, __vt__Q38JMessage18TResourceContainer10TCResource@l
+/* 802A8EF0 00000030  90 03 00 0C */	stw r0, 0xc(r3)
+/* 802A8EF4 00000034  4E 80 00 20 */	blr 

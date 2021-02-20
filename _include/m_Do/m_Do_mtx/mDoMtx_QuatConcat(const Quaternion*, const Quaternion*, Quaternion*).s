@@ -1,0 +1,42 @@
+lbl_8000CB5C:
+/* 8000CB5C 00000000  C1 43 00 0C */	lfs f10, 0xc(r3)
+/* 8000CB60 00000004  C1 24 00 0C */	lfs f9, 0xc(r4)
+/* 8000CB64 00000008  EC 2A 02 72 */	fmuls f1, f10, f9
+/* 8000CB68 0000000C  C1 03 00 00 */	lfs f8, 0(r3)
+/* 8000CB6C 00000010  C0 E4 00 00 */	lfs f7, 0(r4)
+/* 8000CB70 00000014  EC 08 01 F2 */	fmuls f0, f8, f7
+/* 8000CB74 00000018  EC 21 00 28 */	fsubs f1, f1, f0
+/* 8000CB78 0000001C  C0 C3 00 04 */	lfs f6, 4(r3)
+/* 8000CB7C 00000020  C0 A4 00 04 */	lfs f5, 4(r4)
+/* 8000CB80 00000024  EC 06 01 72 */	fmuls f0, f6, f5
+/* 8000CB84 00000028  EC 21 00 28 */	fsubs f1, f1, f0
+/* 8000CB88 0000002C  C0 83 00 08 */	lfs f4, 8(r3)
+/* 8000CB8C 00000030  C0 64 00 08 */	lfs f3, 8(r4)
+/* 8000CB90 00000034  EC 04 00 F2 */	fmuls f0, f4, f3
+/* 8000CB94 00000038  EC 01 00 28 */	fsubs f0, f1, f0
+/* 8000CB98 0000003C  D0 05 00 0C */	stfs f0, 0xc(r5)
+/* 8000CB9C 00000040  EC 46 00 F2 */	fmuls f2, f6, f3
+/* 8000CBA0 00000044  EC 2A 01 F2 */	fmuls f1, f10, f7
+/* 8000CBA4 00000048  EC 08 02 72 */	fmuls f0, f8, f9
+/* 8000CBA8 0000004C  EC 01 00 2A */	fadds f0, f1, f0
+/* 8000CBAC 00000050  EC 22 00 2A */	fadds f1, f2, f0
+/* 8000CBB0 00000054  EC 04 01 72 */	fmuls f0, f4, f5
+/* 8000CBB4 00000058  EC 01 00 28 */	fsubs f0, f1, f0
+/* 8000CBB8 0000005C  D0 05 00 00 */	stfs f0, 0(r5)
+/* 8000CBBC 00000060  EC 44 01 F2 */	fmuls f2, f4, f7
+/* 8000CBC0 00000064  EC 2A 01 72 */	fmuls f1, f10, f5
+/* 8000CBC4 00000068  EC 06 02 72 */	fmuls f0, f6, f9
+/* 8000CBC8 0000006C  EC 01 00 2A */	fadds f0, f1, f0
+/* 8000CBCC 00000070  EC 22 00 2A */	fadds f1, f2, f0
+/* 8000CBD0 00000074  EC 08 00 F2 */	fmuls f0, f8, f3
+/* 8000CBD4 00000078  EC 01 00 28 */	fsubs f0, f1, f0
+/* 8000CBD8 0000007C  D0 05 00 04 */	stfs f0, 4(r5)
+/* 8000CBDC 00000080  EC 48 01 72 */	fmuls f2, f8, f5
+/* 8000CBE0 00000084  EC 2A 00 F2 */	fmuls f1, f10, f3
+/* 8000CBE4 00000088  EC 04 02 72 */	fmuls f0, f4, f9
+/* 8000CBE8 0000008C  EC 01 00 2A */	fadds f0, f1, f0
+/* 8000CBEC 00000090  EC 22 00 2A */	fadds f1, f2, f0
+/* 8000CBF0 00000094  EC 06 01 F2 */	fmuls f0, f6, f7
+/* 8000CBF4 00000098  EC 01 00 28 */	fsubs f0, f1, f0
+/* 8000CBF8 0000009C  D0 05 00 08 */	stfs f0, 8(r5)
+/* 8000CBFC 000000A0  4E 80 00 20 */	blr 

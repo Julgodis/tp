@@ -288,20 +288,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451240 0004 .sbss      sCallBackFunc__12JASSeqParser  sCallBackFunc__12JASSeqParser  */
-.global sCallBackFunc__12JASSeqParser
-sCallBackFunc__12JASSeqParser:
-.skip 0x4
 
 /* 80451244 0004 .sbss      data_80451244                  data_80451244                  */
-.global data_80451244
-data_80451244:
-.skip 0x4
 
 /* 80451248 0004 .sbss      oRandom$1099                   data_80451248                  */
-.global data_80451248
-data_80451248:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

@@ -96,30 +96,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451138 0004 .sbss      mFirst__24DynamicModuleControlBase mFirst__24DynamicModuleControlBase */
-.global mFirst__24DynamicModuleControlBase
-mFirst__24DynamicModuleControlBase:
-.skip 0x4
 
 /* 8045113C 0004 .sbss      mLast__24DynamicModuleControlBase mLast__24DynamicModuleControlBase */
-.global mLast__24DynamicModuleControlBase
-mLast__24DynamicModuleControlBase:
-.skip 0x4
 
 /* 80451140 0004 .sbss      sAllocBytes__20DynamicModuleControl sAllocBytes__20DynamicModuleControl */
-.global sAllocBytes__20DynamicModuleControl
-sAllocBytes__20DynamicModuleControl:
-.skip 0x4
 
 /* 80451144 0004 .sbss      sArchive__20DynamicModuleControl sArchive__20DynamicModuleControl */
-.global sArchive__20DynamicModuleControl
-sArchive__20DynamicModuleControl:
-.skip 0x4
 
 /* 80451148 0004 .sbss      sFileCache__20DynamicModuleControl sFileCache__20DynamicModuleControl */
-.global sFileCache__20DynamicModuleControl
-sFileCache__20DynamicModuleControl:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

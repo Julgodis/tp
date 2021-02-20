@@ -58,24 +58,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515C8 0004 .sbss      sInterruptFlag$903             data_804515C8                  */
-.global data_804515C8
-data_804515C8:
-.skip 0x4
 
 /* 804515CC 0004 .sbss      data_804515CC                  data_804515CC                  */
-.global data_804515CC
-data_804515CC:
-.skip 0x4
 
 /* 804515D0 0004 .sbss      sOldVcdVatCmd__8J3DShape       sOldVcdVatCmd__8J3DShape       */
-.global sOldVcdVatCmd__8J3DShape
-sOldVcdVatCmd__8J3DShape:
-.skip 0x4
 
 /* 804515D4 0004 .sbss      data_804515D4                  data_804515D4                  */
-.global data_804515D4
-data_804515D4:
-.skip 0x4
 
 
 /* ###################################################################################### */

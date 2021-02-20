@@ -51,14 +51,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80450050 0500 .bss       gRecvBuf                       GCN_EXI2_GDEV_GCN_main__gRecvBuf */
-.global GCN_EXI2_GDEV_GCN_main__gRecvBuf
-GCN_EXI2_GDEV_GCN_main__gRecvBuf:
-.skip 0x500
 
 /* 80450550 001C .bss       gRecvCB                        GCN_EXI2_GDEV_GCN_main__gRecvCB */
-.global GCN_EXI2_GDEV_GCN_main__gRecvCB
-GCN_EXI2_GDEV_GCN_main__gRecvCB:
-.skip 0x1c
 
 
 /* ###################################################################################### */
@@ -66,8 +60,4 @@ GCN_EXI2_GDEV_GCN_main__gRecvCB:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804519C8 0004 .sbss      gIsInitialized                 GCN_EXI2_GDEV_GCN_main__gIsInitialized */
-.global GCN_EXI2_GDEV_GCN_main__gIsInitialized
-GCN_EXI2_GDEV_GCN_main__gIsInitialized:
-.skip 0x4
-.skip 0x4 /* padding */
 

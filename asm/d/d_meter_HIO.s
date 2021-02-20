@@ -164,54 +164,24 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8042EBB0 0000 .bss       ...bss.0                       data_8042EBB0                  */
-.global data_8042EBB0
-data_8042EBB0:
 
 /* 8042EBB0 000C .bss       @3766                          d_d_meter_HIO__LIT_3766        */
-.global d_d_meter_HIO__LIT_3766
-d_d_meter_HIO__LIT_3766:
-.skip 0xc
 
 /* 8042EBBC 000C .bss       @3767                          d_d_meter_HIO__LIT_3767        */
-.global d_d_meter_HIO__LIT_3767
-d_d_meter_HIO__LIT_3767:
-.skip 0xc
 
 /* 8042EBC8 0F28 .bss       g_drawHIO                      g_drawHIO                      */
-.global g_drawHIO
-g_drawHIO:
-.skip 0xf28
 
 /* 8042FAF0 000C .bss       @3768                          d_d_meter_HIO__LIT_3768        */
-.global d_d_meter_HIO__LIT_3768
-d_d_meter_HIO__LIT_3768:
-.skip 0xc
 
 /* 8042FAFC 0158 .bss       g_ringHIO                      g_ringHIO                      */
-.global g_ringHIO
-g_ringHIO:
-.skip 0x158
 
 /* 8042FC54 000C .bss       @3769                          d_d_meter_HIO__LIT_3769        */
-.global d_d_meter_HIO__LIT_3769
-d_d_meter_HIO__LIT_3769:
-.skip 0xc
 
 /* 8042FC60 04A4 .bss       g_fmapHIO                      g_fmapHIO                      */
-.global g_fmapHIO
-g_fmapHIO:
-.skip 0x4a4
 
 /* 80430104 000C .bss       @3770                          d_d_meter_HIO__LIT_3770        */
-.global d_d_meter_HIO__LIT_3770
-d_d_meter_HIO__LIT_3770:
-.skip 0xc
 
 /* 80430110 0044 .bss       g_cursorHIO                    g_cursorHIO                    */
-.global g_cursorHIO
-g_cursorHIO:
-.skip 0x44
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -219,9 +189,6 @@ g_cursorHIO:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804510B0 0008 .sbss      g_menuHIO                      g_menuHIO                      */
-.global g_menuHIO
-g_menuHIO:
-.skip 0x8
 
 
 /* ###################################################################################### */

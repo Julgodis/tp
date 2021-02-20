@@ -134,22 +134,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804246A0 0011 .bss       map_tool_name$4449             data_804246A0                  */
-.global data_804246A0
-data_804246A0:
-.skip 0x11
-.skip 0x3 /* padding */
 
 /* 804246B4 0011 .bss       map_tool_name$4498             data_804246B4                  */
-.global data_804246B4
-data_804246B4:
-.skip 0x11
-.skip 0x3 /* padding */
 
 /* 804246C8 0011 .bss       map_tool_name$4511             data_804246C8                  */
-.global data_804246C8
-data_804246C8:
-.skip 0x11
-.skip 0x7 /* padding */
 
 
 /* ###################################################################################### */

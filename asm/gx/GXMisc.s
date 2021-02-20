@@ -52,23 +52,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451968 0004 .sbss      TokenCB                        TokenCB                        */
-.global TokenCB
-TokenCB:
-.skip 0x4
 
 /* 8045196C 0004 .sbss      DrawDoneCB                     DrawDoneCB                     */
-.global DrawDoneCB
-DrawDoneCB:
-.skip 0x4
 
 /* 80451970 0004 .sbss      data_80451970                  data_80451970                  */
-.global data_80451970
-data_80451970:
-.skip 0x4
 
 /* 80451974 0008 .sbss      FinishQueue                    FinishQueue                    */
-.global FinishQueue
-FinishQueue:
-.skip 0x8
-.skip 0x4 /* padding */
 

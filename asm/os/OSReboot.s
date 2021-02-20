@@ -16,12 +16,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451688 0004 .sbss      SaveStart                      SaveStart                      */
-.global SaveStart
-SaveStart:
-.skip 0x4
 
 /* 8045168C 0004 .sbss      SaveEnd                        SaveEnd                        */
-.global SaveEnd
-SaveEnd:
-.skip 0x4
 

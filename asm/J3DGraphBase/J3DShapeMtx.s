@@ -151,10 +151,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434C80 0014 .bss       sMtxLoadCache__11J3DShapeMtx   sMtxLoadCache__11J3DShapeMtx   */
-.global sMtxLoadCache__11J3DShapeMtx
-sMtxLoadCache__11J3DShapeMtx:
-.skip 0x14
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -162,44 +158,18 @@ sMtxLoadCache__11J3DShapeMtx:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515A8 0004 .sbss      sCurrentPipeline__11J3DShapeMtx sCurrentPipeline__11J3DShapeMtx */
-.global sCurrentPipeline__11J3DShapeMtx
-sCurrentPipeline__11J3DShapeMtx:
-.skip 0x4
 
 /* 804515AC 0004 .sbss      sCurrentScaleFlag__11J3DShapeMtx sCurrentScaleFlag__11J3DShapeMtx */
-.global sCurrentScaleFlag__11J3DShapeMtx
-sCurrentScaleFlag__11J3DShapeMtx:
-.skip 0x4
 
-/* 804515B0 0001 .sbss      data_804515B0                  data_804515B0                  */
-.global data_804515B0
-data_804515B0:
-.skip 0x1
-
-/* 804515B1 0003 .sbss      data_804515B1                  data_804515B1                  */
-.global data_804515B1
-data_804515B1:
-.skip 0x3
+/* 804515B0 0004 .sbss      merged_804515B0                merged_804515B0                */
 
 /* 804515B4 0004 .sbss      sTexMtxLoadType__11J3DShapeMtx sTexMtxLoadType__11J3DShapeMtx */
-.global sTexMtxLoadType__11J3DShapeMtx
-sTexMtxLoadType__11J3DShapeMtx:
-.skip 0x4
 
 /* 804515B8 0008 .sbss      sMtxPtrTbl__21J3DShapeMtxConcatView sMtxPtrTbl__21J3DShapeMtxConcatView */
-.global sMtxPtrTbl__21J3DShapeMtxConcatView
-sMtxPtrTbl__21J3DShapeMtxConcatView:
-.skip 0x8
 
 /* 804515C0 0004 .sbss      sTexGenBlock__17J3DDifferedTexMtx sTexGenBlock__17J3DDifferedTexMtx */
-.global sTexGenBlock__17J3DDifferedTexMtx
-sTexGenBlock__17J3DDifferedTexMtx:
-.skip 0x4
 
 /* 804515C4 0004 .sbss      sTexMtxObj__17J3DDifferedTexMtx sTexMtxObj__17J3DDifferedTexMtx */
-.global sTexMtxObj__17J3DDifferedTexMtx
-sTexMtxObj__17J3DDifferedTexMtx:
-.skip 0x4
 
 
 /* ###################################################################################### */

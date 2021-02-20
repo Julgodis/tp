@@ -20,7 +20,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D890 0028 .bss       gTRKEventQueue                 gTRKEventQueue                 */
-.global gTRKEventQueue
-gTRKEventQueue:
-.skip 0x28
 

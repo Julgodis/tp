@@ -56,19 +56,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804342D0 000C .bss       @492                           JKRAram__LIT_492               */
-.global JKRAram__LIT_492
-JKRAram__LIT_492:
-.skip 0xc
 
 /* 804342DC 000C .bss       sAramCommandList__7JKRAram     sAramCommandList__7JKRAram     */
-.global sAramCommandList__7JKRAram
-sAramCommandList__7JKRAram:
-.skip 0xc
 
 /* 804342E8 0018 .bss       decompMutex                    JKRAram__decompMutex           */
-.global JKRAram__decompMutex
-JKRAram__decompMutex:
-.skip 0x18
 
 
 /* ###################################################################################### */
@@ -83,82 +74,34 @@ JKRAram__decompMutex:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804513C8 0004 .sbss      sAramObject__7JKRAram          sAramObject__7JKRAram          */
-.global sAramObject__7JKRAram
-sAramObject__7JKRAram:
-.skip 0x4
 
 /* 804513CC 0004 .sbss      szpBuf                         JKRAram__szpBuf                */
-.global JKRAram__szpBuf
-JKRAram__szpBuf:
-.skip 0x4
 
 /* 804513D0 0004 .sbss      szpEnd                         JKRAram__szpEnd                */
-.global JKRAram__szpEnd
-JKRAram__szpEnd:
-.skip 0x4
 
 /* 804513D4 0004 .sbss      refBuf                         JKRAram__refBuf                */
-.global JKRAram__refBuf
-JKRAram__refBuf:
-.skip 0x4
 
 /* 804513D8 0004 .sbss      refEnd                         JKRAram__refEnd                */
-.global JKRAram__refEnd
-JKRAram__refEnd:
-.skip 0x4
 
 /* 804513DC 0004 .sbss      refCurrent                     JKRAram__refCurrent            */
-.global JKRAram__refCurrent
-JKRAram__refCurrent:
-.skip 0x4
 
 /* 804513E0 0004 .sbss      srcOffset                      JKRAram__srcOffset             */
-.global JKRAram__srcOffset
-JKRAram__srcOffset:
-.skip 0x4
 
 /* 804513E4 0004 .sbss      transLeft                      JKRAram__transLeft             */
-.global JKRAram__transLeft
-JKRAram__transLeft:
-.skip 0x4
 
 /* 804513E8 0004 .sbss      srcLimit                       JKRAram__srcLimit              */
-.global JKRAram__srcLimit
-JKRAram__srcLimit:
-.skip 0x4
 
 /* 804513EC 0004 .sbss      srcAddress                     srcAddress                     */
-.global srcAddress
-srcAddress:
-.skip 0x4
 
 /* 804513F0 0004 .sbss      fileOffset                     JKRAram__fileOffset            */
-.global JKRAram__fileOffset
-JKRAram__fileOffset:
-.skip 0x4
 
 /* 804513F4 0004 .sbss      readCount                      JKRAram__readCount             */
-.global JKRAram__readCount
-JKRAram__readCount:
-.skip 0x4
 
 /* 804513F8 0004 .sbss      maxDest                        JKRAram__maxDest               */
-.global JKRAram__maxDest
-JKRAram__maxDest:
-.skip 0x4
 
 /* 804513FC 0004 .sbss      data_804513FC                  data_804513FC                  */
-.global data_804513FC
-data_804513FC:
-.skip 0x4
 
 /* 80451400 0004 .sbss      tsPtr                          JKRAram__tsPtr                 */
-.global JKRAram__tsPtr
-JKRAram__tsPtr:
-.skip 0x4
 
 /* 80451404 0004 .sbss      tsArea                         JKRAram__tsArea                */
-.global JKRAram__tsArea
-JKRAram__tsArea:
-.skip 0x4
 

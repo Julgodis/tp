@@ -68,12 +68,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F824 0004 .bss       _MetroTRK_Has_Framing          _MetroTRK_Has_Framing          */
-.global _MetroTRK_Has_Framing
-_MetroTRK_Has_Framing:
-.skip 0x4
 
 /* 8044F828 0008 .bss       data_8044F828                  data_8044F828                  */
-.global data_8044F828
-data_8044F828:
-.skip 0x8
 

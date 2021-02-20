@@ -56,14 +56,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DBF40 000C .bss       @3620                          LIT_3620                       */
-.global LIT_3620
-LIT_3620:
-.skip 0xc
 
 /* 803DBF4C 138C .bss       g_mDoAud_zelAudio              g_mDoAud_zelAudio              */
-.global g_mDoAud_zelAudio
-g_mDoAud_zelAudio:
-.skip 0x138c
 
 
 /* ###################################################################################### */
@@ -71,17 +65,8 @@ g_mDoAud_zelAudio:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450BBC 0004 .sbss      g_mDoAud_audioHeap             g_mDoAud_audioHeap             */
-.global g_mDoAud_audioHeap
-g_mDoAud_audioHeap:
-.skip 0x4
 
 /* 80450BC0 0004 .sbss      l_affCommand                   l_affCommand                   */
-.global l_affCommand
-l_affCommand:
-.skip 0x4
 
 /* 80450BC4 0004 .sbss      l_arcCommand                   l_arcCommand                   */
-.global l_arcCommand
-l_arcCommand:
-.skip 0x4
 

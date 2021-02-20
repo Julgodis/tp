@@ -25,8 +25,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D8B8 0004 .bss       gTRKBigEndian                  gTRKBigEndian                  */
-.global gTRKBigEndian
-gTRKBigEndian:
-.skip 0x4
-.skip 0x4 /* padding */
 

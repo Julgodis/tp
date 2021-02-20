@@ -21,13 +21,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804514BC 0004 .sbss      sCurrentFifo__12JUTGraphFifo   sCurrentFifo__12JUTGraphFifo   */
-.global sCurrentFifo__12JUTGraphFifo
-sCurrentFifo__12JUTGraphFifo:
-.skip 0x4
 
 /* 804514C0 0005 .sbss      mGpStatus__12JUTGraphFifo      mGpStatus__12JUTGraphFifo      */
-.global mGpStatus__12JUTGraphFifo
-mGpStatus__12JUTGraphFifo:
-.skip 0x5
-.skip 0x3 /* padding */
 

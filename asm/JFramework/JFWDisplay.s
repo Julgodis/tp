@@ -86,19 +86,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430FD8 000C .bss       @2184                          LIT_2184                       */
-.global LIT_2184
-LIT_2184:
-.skip 0xc
 
 /* 80430FE4 000C .bss       sList__8JFWAlarm               sList__8JFWAlarm               */
-.global sList__8JFWAlarm
-sList__8JFWAlarm:
-.skip 0xc
 
 /* 80430FF0 0020 .bss       clear_z_tobj                   clear_z_tobj                   */
-.global clear_z_tobj
-clear_z_tobj:
-.skip 0x20
 
 
 /* ###################################################################################### */
@@ -106,44 +97,20 @@ clear_z_tobj:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804511C0 0004 .sbss      sManager__10JFWDisplay         sManager__10JFWDisplay         */
-.global sManager__10JFWDisplay
-sManager__10JFWDisplay:
-.skip 0x4
 
 /* 804511C4 0004 .sbss      prevFrame$2597                 data_804511C4                  */
-.global data_804511C4
-data_804511C4:
-.skip 0x4
 
 /* 804511C8 0008 .sbss      data_804511C8                  data_804511C8                  */
-.global data_804511C8
-data_804511C8:
-.skip 0x8
 
 /* 804511D0 0004 .sbss      nextTick$2642                  data_804511D0                  */
-.global data_804511D0
-data_804511D0:
-.skip 0x4
 
 /* 804511D4 0004 .sbss      data_804511D4                  data_804511D4                  */
-.global data_804511D4
-data_804511D4:
-.skip 0x4
 
 /* 804511D8 0004 .sbss      data_804511D8                  data_804511D8                  */
-.global data_804511D8
-data_804511D8:
-.skip 0x4
 
 /* 804511DC 0004 .sbss      nextCount$2650                 data_804511DC                  */
-.global data_804511DC
-data_804511DC:
-.skip 0x4
 
 /* 804511E0 0008 .sbss      data_804511E0                  data_804511E0                  */
-.global data_804511E0
-data_804511E0:
-.skip 0x8
 
 
 /* ###################################################################################### */

@@ -27,22 +27,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451640 0004 .sbss      HeapArray                      HeapArray                      */
-.global HeapArray
-HeapArray:
-.skip 0x4
 
 /* 80451644 0004 .sbss      NumHeaps                       NumHeaps                       */
-.global NumHeaps
-NumHeaps:
-.skip 0x4
 
 /* 80451648 0004 .sbss      ArenaStart                     ArenaStart                     */
-.global ArenaStart
-ArenaStart:
-.skip 0x4
 
 /* 8045164C 0004 .sbss      ArenaEnd                       ArenaEnd                       */
-.global ArenaEnd
-ArenaEnd:
-.skip 0x4
 

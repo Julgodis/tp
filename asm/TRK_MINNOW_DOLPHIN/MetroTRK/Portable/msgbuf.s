@@ -45,7 +45,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044D8C0 19B0 .bss       gTRKMsgBufs                    gTRKMsgBufs                    */
-.global gTRKMsgBufs
-gTRKMsgBufs:
-.skip 0x19b0
 

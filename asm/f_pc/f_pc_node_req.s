@@ -67,12 +67,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D48 0004 .sbss      request_id$2360                data_80450D48                  */
-.global data_80450D48
-data_80450D48:
-.skip 0x4
 
 /* 80450D4C 0004 .sbss      data_80450D4C                  data_80450D4C                  */
-.global data_80450D4C
-data_80450D4C:
-.skip 0x4
 

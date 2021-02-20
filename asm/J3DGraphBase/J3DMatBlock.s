@@ -985,14 +985,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515D8 0004 .sbss      SizeOfJ3DColorBlockLightOffLoad SizeOfJ3DColorBlockLightOffLoad */
-.global SizeOfJ3DColorBlockLightOffLoad
-SizeOfJ3DColorBlockLightOffLoad:
-.skip 0x4
 
 /* 804515DC 0004 .sbss      SizeOfJ3DColorBlockAmbientOnLoad SizeOfJ3DColorBlockAmbientOnLoad */
-.global SizeOfJ3DColorBlockAmbientOnLoad
-SizeOfJ3DColorBlockAmbientOnLoad:
-.skip 0x4
 
 
 /* ###################################################################################### */

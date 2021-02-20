@@ -50,22 +50,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451408 0004 .sbss      sAramStreamObject__13JKRAramStream sAramStreamObject__13JKRAramStream */
-.global sAramStreamObject__13JKRAramStream
-sAramStreamObject__13JKRAramStream:
-.skip 0x4
 
 /* 8045140C 0004 .sbss      transBuffer__13JKRAramStream   transBuffer__13JKRAramStream   */
-.global transBuffer__13JKRAramStream
-transBuffer__13JKRAramStream:
-.skip 0x4
 
 /* 80451410 0004 .sbss      transSize__13JKRAramStream     transSize__13JKRAramStream     */
-.global transSize__13JKRAramStream
-transSize__13JKRAramStream:
-.skip 0x4
 
 /* 80451414 0004 .sbss      transHeap__13JKRAramStream     transHeap__13JKRAramStream     */
-.global transHeap__13JKRAramStream
-transHeap__13JKRAramStream:
-.skip 0x4
 

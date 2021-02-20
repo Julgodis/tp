@@ -18,12 +18,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451980 0004 .sbss      __GDCurrentDL                  __GDCurrentDL                  */
-.global __GDCurrentDL
-__GDCurrentDL:
-.skip 0x4
 
 /* 80451984 0004 .sbss      overflowcb                     overflowcb                     */
-.global overflowcb
-overflowcb:
-.skip 0x4
 

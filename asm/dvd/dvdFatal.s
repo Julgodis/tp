@@ -12,8 +12,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804517C8 0004 .sbss      FatalFunc                      FatalFunc                      */
-.global FatalFunc
-FatalFunc:
-.skip 0x4
-.skip 0x4 /* padding */
 

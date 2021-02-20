@@ -81,10 +81,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451590 0004 .sbss      mDataManage__9J2DScreen        mDataManage__9J2DScreen        */
-.global mDataManage__9J2DScreen
-mDataManage__9J2DScreen:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

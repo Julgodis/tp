@@ -27,55 +27,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450FA8 0004 .sbss      m_obj__12dEyeHL_mng_c          m_obj__12dEyeHL_mng_c          */
-.global m_obj__12dEyeHL_mng_c
-m_obj__12dEyeHL_mng_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
-/* 80450FB0 0001 .sbss      data_80450FB0                  data_80450FB0                  */
-.global data_80450FB0
-data_80450FB0:
-.skip 0x1
+/* 80450FB0 0008 .sbss      merged_80450FB0                merged_80450FB0                */
 
-/* 80450FB1 0001 .sbss      data_80450FB1                  data_80450FB1                  */
-.global data_80450FB1
-data_80450FB1:
-.skip 0x1
+/* 80450FB8 0004 .sbss      merged_80450FB8                merged_80450FB8                */
 
-/* 80450FB2 0006 .sbss      data_80450FB2                  data_80450FB2                  */
-.global data_80450FB2
-data_80450FB2:
-.skip 0x6
-
-/* 80450FB8 0001 .sbss      data_80450FB8                  data_80450FB8                  */
-.global data_80450FB8
-data_80450FB8:
-.skip 0x1
-
-/* 80450FB9 0001 .sbss      data_80450FB9                  data_80450FB9                  */
-.global data_80450FB9
-data_80450FB9:
-.skip 0x1
-
-/* 80450FBA 0001 .sbss      data_80450FBA                  data_80450FBA                  */
-.global data_80450FBA
-data_80450FBA:
-.skip 0x1
-
-/* 80450FBB 0001 .sbss      data_80450FBB                  data_80450FBB                  */
-.global data_80450FBB
-data_80450FBB:
-.skip 0x1
-
-/* 80450FBC 0001 .sbss      data_80450FBC                  data_80450FBC                  */
-.global data_80450FBC
-data_80450FBC:
-.skip 0x1
-
-/* 80450FBD 0003 .sbss      data_80450FBD                  data_80450FBD                  */
-.global data_80450FBD
-data_80450FBD:
-.skip 0x3
+/* 80450FBC 0004 .sbss      merged_80450FBC                merged_80450FBC                */
 
 
 /* ###################################################################################### */

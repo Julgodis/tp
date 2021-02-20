@@ -178,15 +178,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80424B00 000C .bss       @4093                          d_d_attention__LIT_4093        */
-.global d_d_attention__LIT_4093
-d_d_attention__LIT_4093:
-.skip 0xc
 
 /* 80424B0C 0010 .bss       g_AttDwHIO                     g_AttDwHIO                     */
-.global g_AttDwHIO
-g_AttDwHIO:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

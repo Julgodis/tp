@@ -105,29 +105,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804512E8 0004 .sbss      CH_BUF__6JASDsp                CH_BUF__6JASDsp                */
-.global CH_BUF__6JASDsp
-CH_BUF__6JASDsp:
-.skip 0x4
 
 /* 804512EC 0004 .sbss      FX_BUF__6JASDsp                FX_BUF__6JASDsp                */
-.global FX_BUF__6JASDsp
-FX_BUF__6JASDsp:
-.skip 0x4
 
 /* 804512F0 0004 .sbss      sDSPVolume__6JASDsp            sDSPVolume__6JASDsp            */
-.global sDSPVolume__6JASDsp
-sDSPVolume__6JASDsp:
-.skip 0x4
 
-/* 804512F4 0001 .sbss      data_804512F4                  data_804512F4                  */
-.global data_804512F4
-data_804512F4:
-.skip 0x1
-
-/* 804512F5 0003 .sbss      data_804512F5                  data_804512F5                  */
-.global data_804512F5
-data_804512F5:
-.skip 0x3
+/* 804512F4 0004 .sbss      merged_804512F4                merged_804512F4                */
 
 
 /* ###################################################################################### */

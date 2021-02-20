@@ -16,38 +16,16 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804516A0 0004 .sbss      ResetCallback                  ResetCallback                  */
-.global ResetCallback
-ResetCallback:
-.skip 0x4
 
 /* 804516A4 0004 .sbss      Down                           Down                           */
-.global Down
-Down:
-.skip 0x4
 
 /* 804516A8 0004 .sbss      LastState                      OSResetSW__LastState           */
-.global OSResetSW__LastState
-OSResetSW__LastState:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804516B0 0004 .sbss      HoldUp                         HoldUp                         */
-.global HoldUp
-HoldUp:
-.skip 0x4
 
 /* 804516B4 0004 .sbss      data_804516B4                  data_804516B4                  */
-.global data_804516B4
-data_804516B4:
-.skip 0x4
 
 /* 804516B8 0004 .sbss      HoldDown                       HoldDown                       */
-.global HoldDown
-HoldDown:
-.skip 0x4
 
 /* 804516BC 0004 .sbss      data_804516BC                  data_804516BC                  */
-.global data_804516BC
-data_804516BC:
-.skip 0x4
 

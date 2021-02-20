@@ -31,13 +31,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451690 0008 .sbss      ResetFunctionQueue             ResetFunctionQueue             */
-.global ResetFunctionQueue
-ResetFunctionQueue:
-.skip 0x8
 
 /* 80451698 0004 .sbss      bootThisDol                    bootThisDol                    */
-.global bootThisDol
-bootThisDol:
-.skip 0x4
-.skip 0x4 /* padding */
 

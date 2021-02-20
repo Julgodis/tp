@@ -650,44 +650,20 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803F4E68 0000 .bss       ...bss.0                       data_803F4E68                  */
-.global data_803F4E68
-data_803F4E68:
 
 /* 803F4E68 000C .bss       @3926                          d_d_stage__LIT_3926            */
-.global d_d_stage__LIT_3926
-d_d_stage__LIT_3926:
-.skip 0xc
 
 /* 803F4E74 0904 .bss       DoorInfo                       DoorInfo                       */
-.global DoorInfo
-DoorInfo:
-.skip 0x904
 
 /* 803F5778 000C .bss       @3981                          d_d_stage__LIT_3981            */
-.global d_d_stage__LIT_3981
-d_d_stage__LIT_3981:
-.skip 0xc
 
 /* 803F5784 0904 .bss       l_RoomKeepDoorInfo             l_RoomKeepDoorInfo             */
-.global l_RoomKeepDoorInfo
-l_RoomKeepDoorInfo:
-.skip 0x904
 
 /* 803F6088 000C .bss       @5376                          d_d_stage__LIT_5376            */
-.global d_d_stage__LIT_5376
-d_d_stage__LIT_5376:
-.skip 0xc
 
 /* 803F6094 10100 .bss       mStatus__20dStage_roomControl_c mStatus__20dStage_roomControl_c */
-.global mStatus__20dStage_roomControl_c
-mStatus__20dStage_roomControl_c:
-.skip 0x10100
 
 /* 80406194 000A .bss       mDemoArcName__20dStage_roomControl_c mDemoArcName__20dStage_roomControl_c */
-.global mDemoArcName__20dStage_roomControl_c
-mDemoArcName__20dStage_roomControl_c:
-.skip 0xa
-.skip 0x2 /* padding */
 
 
 /* ###################################################################################### */
@@ -695,55 +671,18 @@ mDemoArcName__20dStage_roomControl_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D58 0008 .sbss      tmp_name$4456                  data_80450D58                  */
-.global data_80450D58
-data_80450D58:
-.skip 0x8
 
 /* 80450D60 0004 .sbss      mProcID__20dStage_roomControl_c mProcID__20dStage_roomControl_c */
-.global mProcID__20dStage_roomControl_c
-mProcID__20dStage_roomControl_c:
-.skip 0x4
 
-/* 80450D64 0001 .sbss      data_80450D64                  data_80450D64                  */
-.global data_80450D64
-data_80450D64:
-.skip 0x1
-
-/* 80450D65 0001 .sbss      data_80450D65                  data_80450D65                  */
-.global data_80450D65
-data_80450D65:
-.skip 0x1
-
-/* 80450D66 0001 .sbss      data_80450D66                  data_80450D66                  */
-.global data_80450D66
-data_80450D66:
-.skip 0x1
-
-/* 80450D67 0001 .sbss      data_80450D67                  data_80450D67                  */
-.global data_80450D67
-data_80450D67:
-.skip 0x1
+/* 80450D64 0004 .sbss      merged_80450D64                merged_80450D64                */
 
 /* 80450D68 0004 .sbss      data_80450D68                  data_80450D68                  */
-.global data_80450D68
-data_80450D68:
-.skip 0x4
 
 /* 80450D6C 0004 .sbss      mArcBankName__20dStage_roomControl_c mArcBankName__20dStage_roomControl_c */
-.global mArcBankName__20dStage_roomControl_c
-mArcBankName__20dStage_roomControl_c:
-.skip 0x4
 
 /* 80450D70 0004 .sbss      mArcBankData__20dStage_roomControl_c mArcBankData__20dStage_roomControl_c */
-.global mArcBankData__20dStage_roomControl_c
-mArcBankData__20dStage_roomControl_c:
-.skip 0x4
 
 /* 80450D74 0008 .sbss      m_roomDzs__20dStage_roomControl_c m_roomDzs__20dStage_roomControl_c */
-.global m_roomDzs__20dStage_roomControl_c
-m_roomDzs__20dStage_roomControl_c:
-.skip 0x8
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

@@ -1,0 +1,12 @@
+lbl_80257AB4:
+/* 80257AB4 00000000  94 21 FF F0 */	stwu r1, -0x10(r1)
+/* 80257AB8 00000004  7C 08 02 A6 */	mflr r0
+/* 80257ABC 00000008  90 01 00 14 */	stw r0, 0x14(r1)
+/* 80257AC0 0000000C  7C 85 23 78 */	mr r5, r4
+/* 80257AC4 00000010  3C 80 80 3C */	lis r4, data_803C2FC4@ha
+/* 80257AC8 00000014  38 84 2F C4 */	addi r4, r4, data_803C2FC4@l
+/* 80257ACC 00000018  4B DD 80 55 */	bl dComLbG_PhaseHandler(request_of_phase_process_class*, int (*)(void*), void*)
+/* 80257AD0 0000001C  80 01 00 14 */	lwz r0, 0x14(r1)
+/* 80257AD4 00000020  7C 08 03 A6 */	mtlr r0
+/* 80257AD8 00000024  38 21 00 10 */	addi r1, r1, 0x10
+/* 80257ADC 00000028  4E 80 00 20 */	blr 

@@ -61,27 +61,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D18 0004 .sbss      l_fpcLy_CurrLayer_p            l_fpcLy_CurrLayer_p            */
-.global l_fpcLy_CurrLayer_p
-l_fpcLy_CurrLayer_p:
-.skip 0x4
 
 /* 80450D1C 0004 .sbss      IsInitOfLayerList$2308         data_80450D1C                  */
-.global data_80450D1C
-data_80450D1C:
-.skip 0x4
 
 /* 80450D20 0004 .sbss      data_80450D20                  data_80450D20                  */
-.global data_80450D20
-data_80450D20:
-.skip 0x4
 
 /* 80450D24 0004 .sbss      layer_id$2311                  data_80450D24                  */
-.global data_80450D24
-data_80450D24:
-.skip 0x4
 
 /* 80450D28 0008 .sbss      data_80450D28                  data_80450D28                  */
-.global data_80450D28
-data_80450D28:
-.skip 0x8
 

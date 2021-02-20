@@ -51,8 +51,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804510E0 0004 .sbss      dOvlpFd_execute_f              dOvlpFd_execute_f              */
-.global dOvlpFd_execute_f
-dOvlpFd_execute_f:
-.skip 0x4
-.skip 0x4 /* padding */
 

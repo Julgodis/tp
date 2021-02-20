@@ -53,14 +53,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044BAD0 0000 .bss       ...bss.0                       data_8044BAD0                  */
-.global data_8044BAD0
-data_8044BAD0:
 
 /* 8044BAD0 0044 .bss       __OSErrorTable                 __OSErrorTable                 */
-.global __OSErrorTable
-__OSErrorTable:
-.skip 0x44
-.skip 0xc /* padding */
 
 
 /* ###################################################################################### */

@@ -27,12 +27,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451708 0004 .sbss      __DBInterface                  __DBInterface                  */
-.global __DBInterface
-__DBInterface:
-.skip 0x4
 
 /* 8045170C 0004 .sbss      DBVerbose                      DBVerbose                      */
-.global DBVerbose
-DBVerbose:
-.skip 0x4
 

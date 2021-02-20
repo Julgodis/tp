@@ -64,82 +64,34 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451878 0004 .sbss      __AIS_Callback                 __AIS_Callback                 */
-.global __AIS_Callback
-__AIS_Callback:
-.skip 0x4
 
 /* 8045187C 0004 .sbss      __AID_Callback                 __AID_Callback                 */
-.global __AID_Callback
-__AID_Callback:
-.skip 0x4
 
 /* 80451880 0004 .sbss      __CallbackStack                __CallbackStack                */
-.global __CallbackStack
-__CallbackStack:
-.skip 0x4
 
 /* 80451884 0004 .sbss      __OldStack                     __OldStack                     */
-.global __OldStack
-__OldStack:
-.skip 0x4
 
 /* 80451888 0004 .sbss      __AI_init_flag                 __AI_init_flag                 */
-.global __AI_init_flag
-__AI_init_flag:
-.skip 0x4
 
 /* 8045188C 0004 .sbss      __AID_Active                   __AID_Active                   */
-.global __AID_Active
-__AID_Active:
-.skip 0x4
 
 /* 80451890 0004 .sbss      bound_32KHz                    bound_32KHz                    */
-.global bound_32KHz
-bound_32KHz:
-.skip 0x4
 
 /* 80451894 0004 .sbss      data_80451894                  data_80451894                  */
-.global data_80451894
-data_80451894:
-.skip 0x4
 
 /* 80451898 0004 .sbss      bound_48KHz                    bound_48KHz                    */
-.global bound_48KHz
-bound_48KHz:
-.skip 0x4
 
 /* 8045189C 0004 .sbss      data_8045189C                  data_8045189C                  */
-.global data_8045189C
-data_8045189C:
-.skip 0x4
 
 /* 804518A0 0004 .sbss      min_wait                       min_wait                       */
-.global min_wait
-min_wait:
-.skip 0x4
 
 /* 804518A4 0004 .sbss      data_804518A4                  data_804518A4                  */
-.global data_804518A4
-data_804518A4:
-.skip 0x4
 
 /* 804518A8 0004 .sbss      max_wait                       max_wait                       */
-.global max_wait
-max_wait:
-.skip 0x4
 
 /* 804518AC 0004 .sbss      data_804518AC                  data_804518AC                  */
-.global data_804518AC
-data_804518AC:
-.skip 0x4
 
 /* 804518B0 0004 .sbss      buffer                         buffer                         */
-.global buffer
-buffer:
-.skip 0x4
 
 /* 804518B4 0004 .sbss      data_804518B4                  data_804518B4                  */
-.global data_804518B4
-data_804518B4:
-.skip 0x4
 

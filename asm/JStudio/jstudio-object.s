@@ -398,143 +398,60 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431010 0000 .bss       ...bss.0                       data_80431010                  */
-.global data_80431010
-data_80431010:
 
 /* 80431010 000C .bss       @744                           jstudio_object__LIT_744        */
-.global jstudio_object__LIT_744
-jstudio_object__LIT_744:
-.skip 0xc
 
 /* 8043101C 0010 .bss       soovv_actor_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_8043101C                  */
-.global data_8043101C
-data_8043101C:
-.skip 0x10
 
 /* 8043102C 000C .bss       @747                           LIT_747                        */
-.global LIT_747
-LIT_747:
-.skip 0xc
 
 /* 80431038 0010 .bss       soovv_actor_RELATION_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431038                  */
-.global data_80431038
-data_80431038:
-.skip 0x10
 
 /* 80431048 000C .bss       @750                           LIT_750                        */
-.global LIT_750
-LIT_750:
-.skip 0xc
 
 /* 80431054 0010 .bss       soovv_camera_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431054                  */
-.global data_80431054
-data_80431054:
-.skip 0x10
 
 /* 80431064 000C .bss       @753                           LIT_753                        */
-.global LIT_753
-LIT_753:
-.skip 0xc
 
 /* 80431070 0010 .bss       soovv_camera_TARGET_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431070                  */
-.global data_80431070
-data_80431070:
-.skip 0x10
 
 /* 80431080 000C .bss       @756                           LIT_756                        */
-.global LIT_756
-LIT_756:
-.skip 0xc
 
 /* 8043108C 0010 .bss       soovv_light_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_8043108C                  */
-.global data_8043108C
-data_8043108C:
-.skip 0x10
 
 /* 8043109C 000C .bss       @759                           LIT_759                        */
-.global LIT_759
-LIT_759:
-.skip 0xc
 
 /* 804310A8 0010 .bss       soovv_particle_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_804310A8                  */
-.global data_804310A8
-data_804310A8:
-.skip 0x10
 
 /* 804310B8 000C .bss       @762                           LIT_762                        */
-.global LIT_762
-LIT_762:
-.skip 0xc
 
 /* 804310C4 0010 .bss       soovv_particle_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ data_804310C4                  */
-.global data_804310C4
-data_804310C4:
-.skip 0x10
 
 /* 804310D4 000C .bss       @765                           LIT_765                        */
-.global LIT_765
-LIT_765:
-.skip 0xc
 
 /* 804310E0 0010 .bss       soovv_particle_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ data_804310E0                  */
-.global data_804310E0
-data_804310E0:
-.skip 0x10
 
 /* 804310F0 000C .bss       @768                           LIT_768                        */
-.global LIT_768
-LIT_768:
-.skip 0xc
 
 /* 804310FC 0010 .bss       soovv_sound_PARENT_ENABLE___Q27JStudio28@unnamed@jstudio_object_cpp@ data_804310FC                  */
-.global data_804310FC
-data_804310FC:
-.skip 0x10
 
 /* 8043110C 000C .bss       @771                           LIT_771                        */
-.global LIT_771
-LIT_771:
-.skip 0xc
 
 /* 80431118 0010 .bss       soovv_sound_REPEAT___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431118                  */
-.global data_80431118
-data_80431118:
-.skip 0x10
 
 /* 80431128 000C .bss       @774                           LIT_774                        */
-.global LIT_774
-LIT_774:
-.skip 0xc
 
 /* 80431134 0010 .bss       soovv_sound_CONTINUOUS___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431134                  */
-.global data_80431134
-data_80431134:
-.skip 0x10
 
 /* 80431144 000C .bss       @777                           LIT_777                        */
-.global LIT_777
-LIT_777:
-.skip 0xc
 
 /* 80431150 0010 .bss       soovv_sound_LOCATED___Q27JStudio28@unnamed@jstudio_object_cpp@ data_80431150                  */
-.global data_80431150
-data_80431150:
-.skip 0x10
 
 /* 80431160 000C .bss       @780                           LIT_780                        */
-.global LIT_780
-LIT_780:
-.skip 0xc
 
 /* 8043116C 0010 .bss       soovv_sound_ON_EXIT_NOT_END___Q27JStudio28@unnamed@jstudio_object_cpp@ data_8043116C                  */
-.global data_8043116C
-data_8043116C:
-.skip 0x10
 
 /* 8043117C 000C .bss       @819                           LIT_819                        */
-.global LIT_819
-LIT_819:
-.skip 0xc
 
 
 /* ###################################################################################### */
@@ -542,20 +459,10 @@ LIT_819:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804511F0 0004 .sbss      soOutput_none___Q27JStudio14TVariableValue soOutput_none___Q27JStudio14TVariableValue */
-.global soOutput_none___Q27JStudio14TVariableValue
-soOutput_none___Q27JStudio14TVariableValue:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804511F8 0008 .sbss      data_804511F8                  data_804511F8                  */
-.global data_804511F8
-data_804511F8:
-.skip 0x8
 
 /* 80451200 0008 .sbss      data_80451200                  data_80451200                  */
-.global data_80451200
-data_80451200:
-.skip 0x8
 
 
 /* ###################################################################################### */

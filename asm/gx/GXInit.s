@@ -41,18 +41,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044CE00 0000 .bss       ...bss.0                       data_8044CE00                  */
-.global data_8044CE00
-data_8044CE00:
 
 /* 8044CE00 0080 .bss       FifoObj                        FifoObj                        */
-.global FifoObj
-FifoObj:
-.skip 0x80
 
 /* 8044CE80 05B0 .bss       gxData                         gxData                         */
-.global gxData
-gxData:
-.skip 0x5b0
 
 
 /* ###################################################################################### */
@@ -67,50 +59,22 @@ gxData:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451920 0004 .sbss      __piReg                        __piReg                        */
-.global __piReg
-__piReg:
-.skip 0x4
 
 /* 80451924 0004 .sbss      __cpReg                        __cpReg                        */
-.global __cpReg
-__cpReg:
-.skip 0x4
 
 /* 80451928 0004 .sbss      __peReg                        __peReg                        */
-.global __peReg
-__peReg:
-.skip 0x4
 
 /* 8045192C 0004 .sbss      __memReg                       __memReg                       */
-.global __memReg
-__memReg:
-.skip 0x4
 
 /* 80451930 0004 .sbss      peCount$35                     data_80451930                  */
-.global data_80451930
-data_80451930:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 80451938 0004 .sbss      time$36                        data_80451938                  */
-.global data_80451938
-data_80451938:
-.skip 0x4
 
 /* 8045193C 0004 .sbss      data_8045193C                  data_8045193C                  */
-.global data_8045193C
-data_8045193C:
-.skip 0x4
 
 /* 80451940 0004 .sbss      calledOnce$37                  data_80451940                  */
-.global data_80451940
-data_80451940:
-.skip 0x4
 
 /* 80451944 0004 .sbss      resetFuncRegistered$145        data_80451944                  */
-.global data_80451944
-data_80451944:
-.skip 0x4
 
 
 /* ###################################################################################### */

@@ -1,0 +1,110 @@
+lbl_8005CDD0:
+/* 8005CDD0 00000000  94 21 FF 30 */	stwu r1, -0xd0(r1)
+/* 8005CDD4 00000004  7C 08 02 A6 */	mflr r0
+/* 8005CDD8 00000008  90 01 00 D4 */	stw r0, 0xd4(r1)
+/* 8005CDDC 0000000C  39 61 00 D0 */	addi r11, r1, 0xd0
+/* 8005CDE0 00000010  48 30 53 FD */	bl _savegpr_29
+/* 8005CDE4 00000014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8005CDE8 00000018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8005CDEC 0000001C  83 E3 5D 74 */	lwz r31, 0x5d74(r3)
+/* 8005CDF0 00000020  3B C0 00 00 */	li r30, 0
+/* 8005CDF4 00000024  3B A1 00 64 */	addi r29, r1, 0x64
+/* 8005CDF8 00000028  7F A3 EB 78 */	mr r3, r29
+/* 8005CDFC 0000002C  48 01 A7 81 */	bl __ct__11dBgS_GndChkFv
+/* 8005CE00 00000030  3C 60 80 3A */	lis r3, __vt__14dBgS_ObjGndChk@ha
+/* 8005CE04 00000034  38 63 38 2C */	addi r3, r3, __vt__14dBgS_ObjGndChk@l
+/* 8005CE08 00000038  90 61 00 74 */	stw r3, 0x74(r1)
+/* 8005CE0C 0000003C  38 03 00 0C */	addi r0, r3, 0xc
+/* 8005CE10 00000040  90 01 00 84 */	stw r0, 0x84(r1)
+/* 8005CE14 00000044  38 03 00 18 */	addi r0, r3, 0x18
+/* 8005CE18 00000048  90 01 00 A0 */	stw r0, 0xa0(r1)
+/* 8005CE1C 0000004C  38 03 00 24 */	addi r0, r3, 0x24
+/* 8005CE20 00000050  90 01 00 B0 */	stw r0, 0xb0(r1)
+/* 8005CE24 00000054  38 7D 00 3C */	addi r3, r29, 0x3c
+/* 8005CE28 00000058  48 01 C0 41 */	bl SetObj__16dBgS_PolyPassChkFv
+/* 8005CE2C 0000005C  3C 60 80 3B */	lis r3, __vt__18dBgS_ObjGndChk_All@ha
+/* 8005CE30 00000060  38 63 B6 E8 */	addi r3, r3, __vt__18dBgS_ObjGndChk_All@l
+/* 8005CE34 00000064  90 61 00 74 */	stw r3, 0x74(r1)
+/* 8005CE38 00000068  38 03 00 0C */	addi r0, r3, 0xc
+/* 8005CE3C 0000006C  90 01 00 84 */	stw r0, 0x84(r1)
+/* 8005CE40 00000070  38 03 00 18 */	addi r0, r3, 0x18
+/* 8005CE44 00000074  90 01 00 A0 */	stw r0, 0xa0(r1)
+/* 8005CE48 00000078  38 03 00 24 */	addi r0, r3, 0x24
+/* 8005CE4C 0000007C  90 01 00 B0 */	stw r0, 0xb0(r1)
+/* 8005CE50 00000080  80 01 00 B4 */	lwz r0, 0xb4(r1)
+/* 8005CE54 00000084  60 00 00 03 */	ori r0, r0, 3
+/* 8005CE58 00000088  90 01 00 B4 */	stw r0, 0xb4(r1)
+/* 8005CE5C 0000008C  38 61 00 14 */	addi r3, r1, 0x14
+/* 8005CE60 00000090  48 01 C1 95 */	bl __ct__12dBgS_RoofChkFv
+/* 8005CE64 00000094  C0 7F 00 D8 */	lfs f3, 0xd8(r31)
+/* 8005CE68 00000098  D0 61 00 08 */	stfs f3, 8(r1)
+/* 8005CE6C 0000009C  C0 5F 00 DC */	lfs f2, 0xdc(r31)
+/* 8005CE70 000000A0  D0 41 00 0C */	stfs f2, 0xc(r1)
+/* 8005CE74 000000A4  C0 3F 00 E0 */	lfs f1, 0xe0(r31)
+/* 8005CE78 000000A8  D0 21 00 10 */	stfs f1, 0x10(r1)
+/* 8005CE7C 000000AC  C0 02 88 7C */	lfs f0, d_d_kankyo_rain__LIT_4467(r2)
+/* 8005CE80 000000B0  EC 02 00 2A */	fadds f0, f2, f0
+/* 8005CE84 000000B4  D0 01 00 0C */	stfs f0, 0xc(r1)
+/* 8005CE88 000000B8  D0 61 00 50 */	stfs f3, 0x50(r1)
+/* 8005CE8C 000000BC  D0 01 00 54 */	stfs f0, 0x54(r1)
+/* 8005CE90 000000C0  D0 21 00 58 */	stfs f1, 0x58(r1)
+/* 8005CE94 000000C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8005CE98 000000C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8005CE9C 000000CC  3B A3 0F 38 */	addi r29, r3, 0xf38
+/* 8005CEA0 000000D0  7F A3 EB 78 */	mr r3, r29
+/* 8005CEA4 000000D4  38 81 00 14 */	addi r4, r1, 0x14
+/* 8005CEA8 000000D8  48 01 85 F5 */	bl RoofChk__4dBgSFP12dBgS_RoofChk
+/* 8005CEAC 000000DC  C0 02 88 30 */	lfs f0, d_d_kankyo_rain__LIT_4361(r2)
+/* 8005CEB0 000000E0  FC 00 08 00 */	fcmpu cr0, f0, f1
+/* 8005CEB4 000000E4  41 82 00 50 */	beq lbl_8005CF04
+/* 8005CEB8 000000E8  3B C0 00 01 */	li r30, 1
+/* 8005CEBC 000000EC  38 7D 3E C8 */	addi r3, r29, 0x3ec8
+/* 8005CEC0 000000F0  3C 80 80 38 */	lis r4, d_d_kankyo_rain__stringBase0@ha
+/* 8005CEC4 000000F4  38 84 A5 78 */	addi r4, r4, d_d_kankyo_rain__stringBase0@l
+/* 8005CEC8 000000F8  38 84 00 17 */	addi r4, r4, 0x17
+/* 8005CECC 000000FC  48 30 BA C9 */	bl strcmp
+/* 8005CED0 00000100  2C 03 00 00 */	cmpwi r3, 0
+/* 8005CED4 00000104  40 82 00 30 */	bne lbl_8005CF04
+/* 8005CED8 00000108  88 0D 87 E4 */	lbz r0, merged_80450D64+0(r13)
+/* 8005CEDC 0000010C  2C 00 00 11 */	cmpwi r0, 0x11
+/* 8005CEE0 00000110  40 82 00 24 */	bne lbl_8005CF04
+/* 8005CEE4 00000114  38 61 00 14 */	addi r3, r1, 0x14
+/* 8005CEE8 00000118  38 80 FF FF */	li r4, -1
+/* 8005CEEC 0000011C  48 01 C1 A5 */	bl __dt__12dBgS_RoofChkFv
+/* 8005CEF0 00000120  38 61 00 64 */	addi r3, r1, 0x64
+/* 8005CEF4 00000124  38 80 FF FF */	li r4, -1
+/* 8005CEF8 00000128  48 01 A9 F1 */	bl __dt__18dBgS_ObjGndChk_AllFv
+/* 8005CEFC 0000012C  38 60 00 00 */	li r3, 0
+/* 8005CF00 00000130  48 00 00 60 */	b lbl_8005CF60
+lbl_8005CF04:
+/* 8005CF04 00000000  C0 21 00 0C */	lfs f1, 0xc(r1)
+/* 8005CF08 00000004  C0 02 88 80 */	lfs f0, d_d_kankyo_rain__LIT_4468(r2)
+/* 8005CF0C 00000008  EC 01 00 2A */	fadds f0, f1, f0
+/* 8005CF10 0000000C  D0 01 00 0C */	stfs f0, 0xc(r1)
+/* 8005CF14 00000010  38 61 00 64 */	addi r3, r1, 0x64
+/* 8005CF18 00000014  38 81 00 08 */	addi r4, r1, 8
+/* 8005CF1C 00000018  48 20 AE 0D */	bl SetPos__11cBgS_GndChkFPC4cXyz
+/* 8005CF20 0000001C  7F A3 EB 78 */	mr r3, r29
+/* 8005CF24 00000020  38 81 00 64 */	addi r4, r1, 0x64
+/* 8005CF28 00000024  48 01 75 79 */	bl GroundCross__4cBgSFP11cBgS_GndChk
+/* 8005CF2C 00000028  C0 42 88 7C */	lfs f2, d_d_kankyo_rain__LIT_4467(r2)
+/* 8005CF30 0000002C  C0 1F 00 DC */	lfs f0, 0xdc(r31)
+/* 8005CF34 00000030  EC 02 00 2A */	fadds f0, f2, f0
+/* 8005CF38 00000034  FC 01 00 40 */	fcmpo cr0, f1, f0
+/* 8005CF3C 00000038  40 81 00 08 */	ble lbl_8005CF44
+/* 8005CF40 0000003C  3B C0 00 01 */	li r30, 1
+lbl_8005CF44:
+/* 8005CF44 00000000  38 61 00 14 */	addi r3, r1, 0x14
+/* 8005CF48 00000004  38 80 FF FF */	li r4, -1
+/* 8005CF4C 00000008  48 01 C1 45 */	bl __dt__12dBgS_RoofChkFv
+/* 8005CF50 0000000C  38 61 00 64 */	addi r3, r1, 0x64
+/* 8005CF54 00000010  38 80 FF FF */	li r4, -1
+/* 8005CF58 00000014  48 01 A9 91 */	bl __dt__18dBgS_ObjGndChk_AllFv
+/* 8005CF5C 00000018  7F C3 F3 78 */	mr r3, r30
+lbl_8005CF60:
+/* 8005CF60 00000000  39 61 00 D0 */	addi r11, r1, 0xd0
+/* 8005CF64 00000004  48 30 52 C5 */	bl _restgpr_29
+/* 8005CF68 00000008  80 01 00 D4 */	lwz r0, 0xd4(r1)
+/* 8005CF6C 0000000C  7C 08 03 A6 */	mtlr r0
+/* 8005CF70 00000010  38 21 00 D0 */	addi r1, r1, 0xd0
+/* 8005CF74 00000014  4E 80 00 20 */	blr 

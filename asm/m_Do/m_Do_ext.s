@@ -520,100 +520,42 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450C20 0004 .sbss      AssertHeap                     AssertHeap                     */
-.global AssertHeap
-AssertHeap:
-.skip 0x4
 
 /* 80450C24 0004 .sbss      DbPrintHeap                    DbPrintHeap                    */
-.global DbPrintHeap
-DbPrintHeap:
-.skip 0x4
 
 /* 80450C28 0004 .sbss      gameHeap                       gameHeap                       */
-.global gameHeap
-gameHeap:
-.skip 0x4
 
 /* 80450C2C 0004 .sbss      zeldaHeap                      zeldaHeap                      */
-.global zeldaHeap
-zeldaHeap:
-.skip 0x4
 
 /* 80450C30 0004 .sbss      commandHeap                    commandHeap                    */
-.global commandHeap
-commandHeap:
-.skip 0x4
 
 /* 80450C34 0004 .sbss      archiveHeap                    archiveHeap                    */
-.global archiveHeap
-archiveHeap:
-.skip 0x4
 
 /* 80450C38 0004 .sbss      j2dHeap                        j2dHeap                        */
-.global j2dHeap
-j2dHeap:
-.skip 0x4
 
 /* 80450C3C 0004 .sbss      HostIOHeap                     HostIOHeap                     */
-.global HostIOHeap
-HostIOHeap:
-.skip 0x4
 
 /* 80450C40 0004 .sbss      mDoExt_SaveCurrentHeap         mDoExt_SaveCurrentHeap         */
-.global mDoExt_SaveCurrentHeap
-mDoExt_SaveCurrentHeap:
-.skip 0x4
 
 /* 80450C44 0004 .sbss      mDoExt_font0                   mDoExt_font0                   */
-.global mDoExt_font0
-mDoExt_font0:
-.skip 0x4
 
 /* 80450C48 0004 .sbss      mDoExt_font0_getCount          mDoExt_font0_getCount          */
-.global mDoExt_font0_getCount
-mDoExt_font0_getCount:
-.skip 0x4
 
 /* 80450C4C 0004 .sbss      mDoExt_resfont0                mDoExt_resfont0                */
-.global mDoExt_resfont0
-mDoExt_resfont0:
-.skip 0x4
 
 /* 80450C50 0004 .sbss      mDoExt_font1                   mDoExt_font1                   */
-.global mDoExt_font1
-mDoExt_font1:
-.skip 0x4
 
 /* 80450C54 0004 .sbss      mDoExt_font1_getCount          mDoExt_font1_getCount          */
-.global mDoExt_font1_getCount
-mDoExt_font1_getCount:
-.skip 0x4
 
 /* 80450C58 0004 .sbss      mDoExt_resfont1                mDoExt_resfont1                */
-.global mDoExt_resfont1
-mDoExt_resfont1:
-.skip 0x4
 
 /* 80450C5C 0004 .sbss      mDoExt_font2                   mDoExt_font2                   */
-.global mDoExt_font2
-mDoExt_font2:
-.skip 0x4
 
 /* 80450C60 0004 .sbss      mDoExt_font2_getCount          mDoExt_font2_getCount          */
-.global mDoExt_font2_getCount
-mDoExt_font2_getCount:
-.skip 0x4
 
 /* 80450C64 0004 .sbss      mDoExt_resfont2                mDoExt_resfont2                */
-.global mDoExt_resfont2
-mDoExt_resfont2:
-.skip 0x4
 
 /* 80450C68 0004 .sbss      aram_cache_size                aram_cache_size                */
-.global aram_cache_size
-aram_cache_size:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

@@ -93,48 +93,22 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804343D8 0000 .bss       ...bss.0                       data_804343D8                  */
-.global data_804343D8
-data_804343D8:
 
 /* 804343D8 000C .bss       @525                           JUTGamePad__LIT_525            */
-.global JUTGamePad__LIT_525
-JUTGamePad__LIT_525:
-.skip 0xc
 
 /* 804343E4 000C .bss       mPadList__10JUTGamePad         mPadList__10JUTGamePad         */
-.global mPadList__10JUTGamePad
-mPadList__10JUTGamePad:
-.skip 0xc
 
 /* 804343F0 0030 .bss       mPadStatus__10JUTGamePad       mPadStatus__10JUTGamePad       */
-.global mPadStatus__10JUTGamePad
-mPadStatus__10JUTGamePad:
-.skip 0x30
 
 /* 80434420 00C0 .bss       mPadButton__10JUTGamePad       mPadButton__10JUTGamePad       */
-.global mPadButton__10JUTGamePad
-mPadButton__10JUTGamePad:
-.skip 0xc0
 
 /* 804344E0 0040 .bss       mPadMStick__10JUTGamePad       mPadMStick__10JUTGamePad       */
-.global mPadMStick__10JUTGamePad
-mPadMStick__10JUTGamePad:
-.skip 0x40
 
 /* 80434520 0040 .bss       mPadSStick__10JUTGamePad       mPadSStick__10JUTGamePad       */
-.global mPadSStick__10JUTGamePad
-mPadSStick__10JUTGamePad:
-.skip 0x40
 
 /* 80434560 000C .bss       @1373                          LIT_1373                       */
-.global LIT_1373
-LIT_1373:
-.skip 0xc
 
 /* 8043456C 000C .bss       sPatternList__19JUTGamePadLongPress sPatternList__19JUTGamePadLongPress */
-.global sPatternList__19JUTGamePadLongPress
-sPatternList__19JUTGamePadLongPress:
-.skip 0xc
 
 
 /* ###################################################################################### */
@@ -159,70 +133,28 @@ sPatternList__19JUTGamePadLongPress:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804514D4 0004 .sbss      mPadAssign__10JUTGamePad       mPadAssign__10JUTGamePad       */
-.global mPadAssign__10JUTGamePad
-mPadAssign__10JUTGamePad:
-.skip 0x4
 
 /* 804514D8 0004 .sbss      sSuppressPadReset__10JUTGamePad sSuppressPadReset__10JUTGamePad */
-.global sSuppressPadReset__10JUTGamePad
-sSuppressPadReset__10JUTGamePad:
-.skip 0x4
 
 /* 804514DC 0004 .sbss      sAnalogMode__10JUTGamePad      sAnalogMode__10JUTGamePad      */
-.global sAnalogMode__10JUTGamePad
-sAnalogMode__10JUTGamePad:
-.skip 0x4
 
 /* 804514E0 0004 .sbss      sRumbleSupported__10JUTGamePad sRumbleSupported__10JUTGamePad */
-.global sRumbleSupported__10JUTGamePad
-sRumbleSupported__10JUTGamePad:
-.skip 0x4
 
 /* 804514E4 0004 .sbss      mStatus__Q210JUTGamePad7CRumble mStatus__Q210JUTGamePad7CRumble */
-.global mStatus__Q210JUTGamePad7CRumble
-mStatus__Q210JUTGamePad7CRumble:
-.skip 0x4
 
 /* 804514E8 0004 .sbss      mEnabled__Q210JUTGamePad7CRumble mEnabled__Q210JUTGamePad7CRumble */
-.global mEnabled__Q210JUTGamePad7CRumble
-mEnabled__Q210JUTGamePad7CRumble:
-.skip 0x4
 
 /* 804514EC 0004 .sbss      sCallback__Q210JUTGamePad13C3ButtonReset sCallback__Q210JUTGamePad13C3ButtonReset */
-.global sCallback__Q210JUTGamePad13C3ButtonReset
-sCallback__Q210JUTGamePad13C3ButtonReset:
-.skip 0x4
 
 /* 804514F0 0004 .sbss      sCallbackArg__Q210JUTGamePad13C3ButtonReset sCallbackArg__Q210JUTGamePad13C3ButtonReset */
-.global sCallbackArg__Q210JUTGamePad13C3ButtonReset
-sCallbackArg__Q210JUTGamePad13C3ButtonReset:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804514F8 0004 .sbss      sThreshold__Q210JUTGamePad13C3ButtonReset sThreshold__Q210JUTGamePad13C3ButtonReset */
-.global sThreshold__Q210JUTGamePad13C3ButtonReset
-sThreshold__Q210JUTGamePad13C3ButtonReset:
-.skip 0x4
 
 /* 804514FC 0004 .sbss      data_804514FC                  data_804514FC                  */
-.global data_804514FC
-data_804514FC:
-.skip 0x4
 
-/* 80451500 0001 .sbss      data_80451500                  data_80451500                  */
-.global data_80451500
-data_80451500:
-.skip 0x1
-
-/* 80451501 0003 .sbss      data_80451501                  data_80451501                  */
-.global data_80451501
-data_80451501:
-.skip 0x3
+/* 80451500 0004 .sbss      merged_80451500                merged_80451500                */
 
 /* 80451504 0004 .sbss      sResetOccurredPort__Q210JUTGamePad13C3ButtonReset sResetOccurredPort__Q210JUTGamePad13C3ButtonReset */
-.global sResetOccurredPort__Q210JUTGamePad13C3ButtonReset
-sResetOccurredPort__Q210JUTGamePad13C3ButtonReset:
-.skip 0x4
 
 
 /* ###################################################################################### */

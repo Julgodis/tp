@@ -198,12 +198,6 @@
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456BB8 0004 .sbss2     @1897                          LIT_1897                       */
-.global LIT_1897
-LIT_1897:
-.skip 0x4
 
 /* 80456BBC 0004 .sbss2     data_80456BBC                  data_80456BBC                  */
-.global data_80456BBC
-data_80456BBC:
-.skip 0x4
 

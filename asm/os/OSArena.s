@@ -27,8 +27,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451650 0004 .sbss      __OSArenaHi                    __OSArenaHi                    */
-.global __OSArenaHi
-__OSArenaHi:
-.skip 0x4
-.skip 0x4 /* padding */
 

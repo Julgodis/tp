@@ -38,8 +38,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804512E0 0004 .sbss      sDspChannels__13JASDSPChannel  sDspChannels__13JASDSPChannel  */
-.global sDspChannels__13JASDSPChannel
-sDspChannels__13JASDSPChannel:
-.skip 0x4
-.skip 0x4 /* padding */
 

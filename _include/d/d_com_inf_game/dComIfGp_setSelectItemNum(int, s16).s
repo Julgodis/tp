@@ -1,0 +1,81 @@
+lbl_8002E714:
+/* 8002E714 00000000  94 21 FF E0 */	stwu r1, -0x20(r1)
+/* 8002E718 00000004  7C 08 02 A6 */	mflr r0
+/* 8002E71C 00000008  90 01 00 24 */	stw r0, 0x24(r1)
+/* 8002E720 0000000C  39 61 00 20 */	addi r11, r1, 0x20
+/* 8002E724 00000010  48 33 3A B5 */	bl _savegpr_28
+/* 8002E728 00000014  7C 7C 1B 78 */	mr r28, r3
+/* 8002E72C 00000018  7C 9F 23 78 */	mr r31, r4
+/* 8002E730 0000001C  4B FF F7 ED */	bl dComIfGp_getSelectItem(int)
+/* 8002E734 00000020  7C 7D 1B 78 */	mr r29, r3
+/* 8002E738 00000024  38 1D FF 90 */	addi r0, r29, -112
+/* 8002E73C 00000028  54 00 06 3E */	clrlwi r0, r0, 0x18
+/* 8002E740 0000002C  28 00 00 02 */	cmplwi r0, 2
+/* 8002E744 00000030  40 81 00 10 */	ble lbl_8002E754
+/* 8002E748 00000034  57 A0 06 3E */	clrlwi r0, r29, 0x18
+/* 8002E74C 00000038  28 00 00 59 */	cmplwi r0, 0x59
+/* 8002E750 0000003C  40 82 00 68 */	bne lbl_8002E7B8
+lbl_8002E754:
+/* 8002E754 00000000  7F 83 E3 78 */	mr r3, r28
+/* 8002E758 00000004  4B FF F5 E5 */	bl dComIfGs_getSelectMixItemNoArrowIndex(int)
+/* 8002E75C 00000008  38 03 FF F1 */	addi r0, r3, -15
+/* 8002E760 0000000C  54 1C 06 3E */	clrlwi r28, r0, 0x18
+/* 8002E764 00000010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8002E768 00000014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8002E76C 00000018  3B C3 00 F8 */	addi r30, r3, 0xf8
+/* 8002E770 0000001C  7F C3 F3 78 */	mr r3, r30
+/* 8002E774 00000020  7F A4 EB 78 */	mr r4, r29
+/* 8002E778 00000024  48 00 59 81 */	bl getBombNum__21dSv_player_item_max_cCFUc
+/* 8002E77C 00000028  7F E4 07 34 */	extsh r4, r31
+/* 8002E780 0000002C  54 60 06 3E */	clrlwi r0, r3, 0x18
+/* 8002E784 00000030  7C 04 00 00 */	cmpw r4, r0
+/* 8002E788 00000034  40 81 00 14 */	ble lbl_8002E79C
+/* 8002E78C 00000038  7F C3 F3 78 */	mr r3, r30
+/* 8002E790 0000003C  7F A4 EB 78 */	mr r4, r29
+/* 8002E794 00000040  48 00 59 65 */	bl getBombNum__21dSv_player_item_max_cCFUc
+/* 8002E798 00000044  54 7F 06 3E */	clrlwi r31, r3, 0x18
+lbl_8002E79C:
+/* 8002E79C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8002E7A0 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8002E7A4 00000008  38 63 00 EC */	addi r3, r3, 0xec
+/* 8002E7A8 0000000C  7F 84 E3 78 */	mr r4, r28
+/* 8002E7AC 00000010  57 E5 06 3E */	clrlwi r5, r31, 0x18
+/* 8002E7B0 00000014  48 00 57 BD */	bl setBombNum__24dSv_player_item_record_cFUcUc
+/* 8002E7B4 00000018  48 00 00 70 */	b lbl_8002E824
+lbl_8002E7B8:
+/* 8002E7B8 00000000  28 00 00 4B */	cmplwi r0, 0x4b
+/* 8002E7BC 00000004  40 82 00 14 */	bne lbl_8002E7D0
+/* 8002E7C0 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8002E7C4 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8002E7C8 00000010  9B E3 00 F4 */	stb r31, 0xf4(r3)
+/* 8002E7CC 00000014  48 00 00 58 */	b lbl_8002E824
+lbl_8002E7D0:
+/* 8002E7D0 00000000  28 00 00 76 */	cmplwi r0, 0x76
+/* 8002E7D4 00000004  40 82 00 50 */	bne lbl_8002E824
+/* 8002E7D8 00000008  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8002E7DC 0000000C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8002E7E0 00000010  7F 84 E3 78 */	mr r4, r28
+/* 8002E7E4 00000014  48 00 42 79 */	bl getSelectItemIndex__21dSv_player_status_a_cCFi
+/* 8002E7E8 00000018  38 03 FF F5 */	addi r0, r3, -11
+/* 8002E7EC 0000001C  54 1C 06 3E */	clrlwi r28, r0, 0x18
+/* 8002E7F0 00000020  4B FF FD C9 */	bl dComIfGs_getBottleMax__Fv
+/* 8002E7F4 00000024  54 63 06 3E */	clrlwi r3, r3, 0x18
+/* 8002E7F8 00000028  7F E0 07 34 */	extsh r0, r31
+/* 8002E7FC 0000002C  7C 00 18 00 */	cmpw r0, r3
+/* 8002E800 00000030  40 81 00 0C */	ble lbl_8002E80C
+/* 8002E804 00000034  4B FF FD B5 */	bl dComIfGs_getBottleMax__Fv
+/* 8002E808 00000038  54 7F 06 3E */	clrlwi r31, r3, 0x18
+lbl_8002E80C:
+/* 8002E80C 00000000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8002E810 00000004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8002E814 00000008  38 63 00 EC */	addi r3, r3, 0xec
+/* 8002E818 0000000C  7F 84 E3 78 */	mr r4, r28
+/* 8002E81C 00000010  57 E5 06 3E */	clrlwi r5, r31, 0x18
+/* 8002E820 00000014  48 00 57 6D */	bl setBottleNum__24dSv_player_item_record_cFUcUc
+lbl_8002E824:
+/* 8002E824 00000000  39 61 00 20 */	addi r11, r1, 0x20
+/* 8002E828 00000004  48 33 39 FD */	bl _restgpr_28
+/* 8002E82C 00000008  80 01 00 24 */	lwz r0, 0x24(r1)
+/* 8002E830 0000000C  7C 08 03 A6 */	mtlr r0
+/* 8002E834 00000010  38 21 00 20 */	addi r1, r1, 0x20
+/* 8002E838 00000014  4E 80 00 20 */	blr 

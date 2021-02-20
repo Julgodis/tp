@@ -1,0 +1,44 @@
+lbl_801D0C6C:
+/* 801D0C6C 00000000  94 21 FF C0 */	stwu r1, -0x40(r1)
+/* 801D0C70 00000004  7C 08 02 A6 */	mflr r0
+/* 801D0C74 00000008  90 01 00 44 */	stw r0, 0x44(r1)
+/* 801D0C78 0000000C  DB E1 00 30 */	stfd f31, 0x30(r1)
+/* 801D0C7C 00000010  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
+/* 801D0C80 00000014  DB C1 00 20 */	stfd f30, 0x20(r1)
+/* 801D0C84 00000018  F3 C1 00 28 */	psq_st f30, 40(r1), 0, 0 /* qr0 */
+/* 801D0C88 0000001C  39 61 00 20 */	addi r11, r1, 0x20
+/* 801D0C8C 00000020  48 19 15 51 */	bl _savegpr_29
+/* 801D0C90 00000024  7C 7D 1B 78 */	mr r29, r3
+/* 801D0C94 00000028  7C 9E 23 78 */	mr r30, r4
+/* 801D0C98 0000002C  7C BF 2B 78 */	mr r31, r5
+/* 801D0C9C 00000030  C0 A3 0F F0 */	lfs f5, 0xff0(r3)
+/* 801D0CA0 00000034  C0 82 A7 E8 */	lfs f4, d_d_menu_fmap2D__LIT_4202(r2)
+/* 801D0CA4 00000038  C0 63 0F E8 */	lfs f3, 0xfe8(r3)
+/* 801D0CA8 0000003C  C0 03 0F E0 */	lfs f0, 0xfe0(r3)
+/* 801D0CAC 00000040  EC 03 00 2A */	fadds f0, f3, f0
+/* 801D0CB0 00000044  EC 04 00 32 */	fmuls f0, f4, f0
+/* 801D0CB4 00000048  EC 01 00 28 */	fsubs f0, f1, f0
+/* 801D0CB8 0000004C  EF E5 00 32 */	fmuls f31, f5, f0
+/* 801D0CBC 00000050  C0 23 0F EC */	lfs f1, 0xfec(r3)
+/* 801D0CC0 00000054  C0 03 0F E4 */	lfs f0, 0xfe4(r3)
+/* 801D0CC4 00000058  EC 01 00 2A */	fadds f0, f1, f0
+/* 801D0CC8 0000005C  EC 04 00 32 */	fmuls f0, f4, f0
+/* 801D0CCC 00000060  EC 02 00 28 */	fsubs f0, f2, f0
+/* 801D0CD0 00000064  EF C5 00 32 */	fmuls f30, f5, f0
+/* 801D0CD4 00000068  48 00 19 A5 */	bl getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv
+/* 801D0CD8 0000006C  EC 1F 08 2A */	fadds f0, f31, f1
+/* 801D0CDC 00000070  D0 1E 00 00 */	stfs f0, 0(r30)
+/* 801D0CE0 00000074  7F A3 EB 78 */	mr r3, r29
+/* 801D0CE4 00000078  48 00 19 E5 */	bl getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv
+/* 801D0CE8 0000007C  EC 1E 08 2A */	fadds f0, f30, f1
+/* 801D0CEC 00000080  D0 1F 00 00 */	stfs f0, 0(r31)
+/* 801D0CF0 00000084  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */
+/* 801D0CF4 00000088  CB E1 00 30 */	lfd f31, 0x30(r1)
+/* 801D0CF8 0000008C  E3 C1 00 28 */	psq_l f30, 40(r1), 0, 0 /* qr0 */
+/* 801D0CFC 00000090  CB C1 00 20 */	lfd f30, 0x20(r1)
+/* 801D0D00 00000094  39 61 00 20 */	addi r11, r1, 0x20
+/* 801D0D04 00000098  48 19 15 25 */	bl _restgpr_29
+/* 801D0D08 0000009C  80 01 00 44 */	lwz r0, 0x44(r1)
+/* 801D0D0C 000000A0  7C 08 03 A6 */	mtlr r0
+/* 801D0D10 000000A4  38 21 00 40 */	addi r1, r1, 0x40
+/* 801D0D14 000000A8  4E 80 00 20 */	blr 

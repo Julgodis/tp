@@ -9,6 +9,10 @@ class Name:
         self.prefix = prefix
         self.label = f'{prefix}_%08X' % addr
         self.reference = self.label
+        self.demangled = None
+        self.is_function = False
+        self.is_static = False
+        self.pointer_types = []
         if name:
             self.name = name
         else:
@@ -41,6 +45,9 @@ class Library:
             path += "%s/" % self.name[:-2]
         return path
 
+    def fileName(self):
+        return "lib" + self.name
+
     def __repr__(self):
         return self.__str__()
 
@@ -55,6 +62,7 @@ class TranslationUnit:
         self.name = name
         self.section_parts = []
         self.library = None
+        self.using_string_base = False
 
     def addSectionPart(self, part):
         part.tu = self
@@ -170,6 +178,7 @@ class Function(Symbol):
 
         super().__init__(Name("func", first.addr, first.name), start, end - start, padding)
 
+        self.return_type = None
         self.alignment = first.alignment
         self.data = section.getData(start, end)
         self.blocks = []
@@ -193,6 +202,40 @@ class Function(Symbol):
         references.discard(set([ x.addr for x in self.blocks ]))
         return references
 
+class ReturnFunction(Function):
+    def __init__(self, group, section):
+        assert len(group) == 1
+        assert group[0].size == 4
+        super().__init__(group, section)
+
+class ReturnIntegerFunction(Function):
+    def __init__(self, value, group, section):
+        assert len(group) == 1
+        assert group[0].size == 8
+        super().__init__(group, section)
+        self.integer = value
+
+class FirstParamFunction(Function):
+    def __init__(self, kind, load_offset, load_type, group, section):
+        assert len(group) == 1
+        assert group[0].size == 8
+        super().__init__(group, section)
+        self.load_offset = load_offset
+        self.load_type = load_type
+        self.kind = kind
+        assert kind == "load" or kind == "reference"
+
+class GlobalFunction(Function):
+    def __init__(self, kind, load_offset, load_type, load_reg, group, section):
+        assert len(group) == 1
+        assert group[0].size == 8
+        super().__init__(group, section)
+        self.load_offset = load_offset
+        self.load_type = load_type
+        self.load_reg = load_reg
+        self.kind = kind
+        assert kind == "load" or kind == "reference"
+
 class Data(Symbol):
     def __init__(self, name, addr, size, data=None, offset=0, padding=0):
         super().__init__(name, addr, size, padding)
@@ -210,6 +253,30 @@ class InitializedData(Data):
 class ZeroInitializedData(Data):
     def __init__(self, name, addr, size, padding=0):
         super().__init__(name, addr, size, padding=padding)
+
+class MergedZeroInitializedData(Data):
+    def __init__(self, group):
+        first = group[0]
+        last = group[-1]
+        start = first.addr
+        end = last.addr + last.size
+        padding = last.padding
+        last.padding = 0
+
+        for part in group:
+            part.merged_parent = self
+
+        super().__init__(Name("merged", start, None), start, end - start, offset=first.offset, padding=padding)
+        self.internal_data = group
+
+    def updateName(self):
+        for part in self.internal_data:
+            # the label for a internal data element will never 
+            # be used outside of comments, because of this, 
+            # we don't need to do anything special for escaping it.
+            part.name.label = part.name.name
+            part.name.reference = "%s+%i" % (self.name.label, part.addr - self.addr)
+
 
 class VTableData(InitializedData):
     def __init__(self, name, addr, offset, data, padding_data=[]):
@@ -234,7 +301,73 @@ class VTableData(InitializedData):
     def getInternalReferences(self):
         return set([ x.addr for x in self.table if x != None ])
 
-class MergedData(Data):
+class Float32Data(InitializedData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) == 4
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.comment = comment
+        self.value = value
+
+class Fraction32Data(InitializedData):
+    def __init__(self, name, numerator, denominator, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) == 4
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.comment = comment
+        self.numerator = numerator
+        self.denominator = denominator
+
+class Float64Data(InitializedData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) == 8
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.comment = comment
+        self.value = value
+
+class Fraction64Data(InitializedData):
+    def __init__(self, name, numerator, denominator, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) == 8
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.comment = comment
+        self.numerator = numerator
+        self.denominator = denominator
+
+class IntegerData(InitializedData):
+    def __init__(self, name, value, type, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.comment = comment
+        self.integer_value = value
+        self.integer_type = type
+
+class S32Data(IntegerData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, value, "s32", addr, offset, data, padding_data=padding_data, comment=comment)
+
+class U32Data(IntegerData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, value, "u32", addr, offset, data, padding_data=padding_data, comment=comment)
+
+class S64Data(IntegerData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, value, "s64", addr, offset, data, padding_data=padding_data, comment=comment)
+
+class U64Data(IntegerData):
+    def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, value, "u64", addr, offset, data, padding_data=padding_data, comment=comment)
+
+class StringData(InitializedData):
+    def __init__(self, name, decoded_string, encoding_type, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) > 0 and data[-1] == 0
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.encoding_type = encoding_type
+        self.decoded_string = decoded_string
+
+class StringBaseData(InitializedData):
+    def __init__(self, name, strings, addr, offset, data, padding_data=[], comment=None):
+        assert len(data) > 0
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.strings = strings
+
+class MergedInitializedData(Data):
     def __init__(self, group):
         first = group[0]
         last = group[-1]

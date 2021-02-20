@@ -204,68 +204,30 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804253A8 0000 .bss       ...bss.0                       data_804253A8                  */
-.global data_804253A8
-data_804253A8:
 
 /* 804253A8 000C .bss       @4202                          d_d_ev_camera__LIT_4202        */
-.global d_d_ev_camera__LIT_4202
-d_d_ev_camera__LIT_4202:
-.skip 0xc
 
 /* 804253B4 000C .bss       WolfAdditionVec__25@unnamed@d_ev_camera_cpp@ data_804253B4                  */
-.global data_804253B4
-data_804253B4:
-.skip 0xc
 
 /* 804253C0 000C .bss       @4203                          d_d_ev_camera__LIT_4203        */
-.global d_d_ev_camera__LIT_4203
-d_d_ev_camera__LIT_4203:
-.skip 0xc
 
 /* 804253CC 000C .bss       MidnaAdditionVec__25@unnamed@d_ev_camera_cpp@ data_804253CC                  */
-.global data_804253CC
-data_804253CC:
-.skip 0xc
 
 /* 804253D8 000C .bss       @5852                          d_d_ev_camera__LIT_5852        */
-.global d_d_ev_camera__LIT_5852
-d_d_ev_camera__LIT_5852:
-.skip 0xc
 
 /* 804253E4 000C .bss       DefaultGap$5851                data_804253E4                  */
-.global data_804253E4
-data_804253E4:
-.skip 0xc
 
 /* 804253F0 000C .bss       @6756                          LIT_6756                       */
-.global LIT_6756
-LIT_6756:
-.skip 0xc
 
 /* 804253FC 000C .bss       DefaultGap$6755                data_804253FC                  */
-.global data_804253FC
-data_804253FC:
-.skip 0xc
 
 /* 80425408 000C .bss       @7364                          LIT_7364                       */
-.global LIT_7364
-LIT_7364:
-.skip 0xc
 
 /* 80425414 000C .bss       DefaultGap$7363                data_80425414                  */
-.global data_80425414
-data_80425414:
-.skip 0xc
 
 /* 80425420 000C .bss       @10516                         LIT_10516                      */
-.global LIT_10516
-LIT_10516:
-.skip 0xc
 
 /* 8042542C 000C .bss       DefaultGap$10515               data_8042542C                  */
-.global data_8042542C
-data_8042542C:
-.skip 0xc
 
 
 /* ###################################################################################### */

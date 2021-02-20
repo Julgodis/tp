@@ -22,14 +22,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434870 0040 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_80434870                  */
-.global data_80434870
-data_80434870:
-.skip 0x40
 
 /* 804348B0 0100 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_804348B0                  */
-.global data_804348B0
-data_804348B0:
-.skip 0x100
 
 
 /* ###################################################################################### */
@@ -37,10 +31,6 @@ data_804348B0:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451530 0004 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@ data_80451530                  */
-.global data_80451530
-data_80451530:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

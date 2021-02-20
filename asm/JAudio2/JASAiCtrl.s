@@ -62,10 +62,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431C58 000C .bss       sDmaDacBuffer__9JASDriver      sDmaDacBuffer__9JASDriver      */
-.global sDmaDacBuffer__9JASDriver
-sDmaDacBuffer__9JASDriver:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -84,74 +80,32 @@ sDmaDacBuffer__9JASDriver:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804512A0 0004 .sbss      sDspDacBuffer__9JASDriver      sDspDacBuffer__9JASDriver      */
-.global sDspDacBuffer__9JASDriver
-sDspDacBuffer__9JASDriver:
-.skip 0x4
 
 /* 804512A4 0004 .sbss      sDspDacWriteBuffer__9JASDriver sDspDacWriteBuffer__9JASDriver */
-.global sDspDacWriteBuffer__9JASDriver
-sDspDacWriteBuffer__9JASDriver:
-.skip 0x4
 
 /* 804512A8 0004 .sbss      sDspDacReadBuffer__9JASDriver  sDspDacReadBuffer__9JASDriver  */
-.global sDspDacReadBuffer__9JASDriver
-sDspDacReadBuffer__9JASDriver:
-.skip 0x4
 
 /* 804512AC 0004 .sbss      sDspStatus__9JASDriver         sDspStatus__9JASDriver         */
-.global sDspStatus__9JASDriver
-sDspStatus__9JASDriver:
-.skip 0x4
 
 /* 804512B0 0004 .sbss      sDspDacCallback__9JASDriver    sDspDacCallback__9JASDriver    */
-.global sDspDacCallback__9JASDriver
-sDspDacCallback__9JASDriver:
-.skip 0x4
 
 /* 804512B4 0004 .sbss      lastRspMadep__9JASDriver       lastRspMadep__9JASDriver       */
-.global lastRspMadep__9JASDriver
-lastRspMadep__9JASDriver:
-.skip 0x4
 
 /* 804512B8 0004 .sbss      dacCallbackFunc__9JASDriver    dacCallbackFunc__9JASDriver    */
-.global dacCallbackFunc__9JASDriver
-dacCallbackFunc__9JASDriver:
-.skip 0x4
 
 /* 804512BC 0004 .sbss      extMixCallback__9JASDriver     extMixCallback__9JASDriver     */
-.global extMixCallback__9JASDriver
-extMixCallback__9JASDriver:
-.skip 0x4
 
 /* 804512C0 0004 .sbss      sOutputRate__9JASDriver        sOutputRate__9JASDriver        */
-.global sOutputRate__9JASDriver
-sOutputRate__9JASDriver:
-.skip 0x4
 
 /* 804512C4 0004 .sbss      sSubFrameCounter__9JASDriver   sSubFrameCounter__9JASDriver   */
-.global sSubFrameCounter__9JASDriver
-sSubFrameCounter__9JASDriver:
-.skip 0x4
 
 /* 804512C8 0004 .sbss      dacp$239                       data_804512C8                  */
-.global data_804512C8
-data_804512C8:
-.skip 0x4
 
 /* 804512CC 0004 .sbss      data_804512CC                  data_804512CC                  */
-.global data_804512CC
-data_804512CC:
-.skip 0x4
 
 /* 804512D0 0004 .sbss      old_time$264                   data_804512D0                  */
-.global data_804512D0
-data_804512D0:
-.skip 0x4
 
 /* 804512D4 0004 .sbss      data_804512D4                  data_804512D4                  */
-.global data_804512D4
-data_804512D4:
-.skip 0x4
 
 
 /* ###################################################################################### */

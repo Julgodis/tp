@@ -1,0 +1,257 @@
+MEMORY {
+	text: origin = 0x80003100
+}
+
+SECTIONS {
+	GROUPS:{
+		.init ALIGN(0x20):{}
+		extab_ ALIGN(0x20):{}
+		extabindex_ ALIGN(0x20):{}
+		.text ALIGN(0x20):{}
+		.ctors ALIGN(0x20):{}
+		.dtors ALIGN(0x20):{}
+		.rodata ALIGN(0x20):{}
+		.data ALIGN(0x20):{}
+		.bss ALIGN(0x20):{}
+		.sdata ALIGN(0x20):{}
+		.sbss ALIGN(0x20):{}
+		.sdata2 ALIGN(0x20):{}
+		.sbss2 ALIGN(0x20):{}
+		.stack ALIGN(0x100):{}
+	} > text
+	_stack_addr = (_f_sbss2 + SIZEOF(.sbss2) + 65536 + 0x7) & ~0x7;
+	_stack_end = _f_sbss2 + SIZEOF(.sbss2);
+	_db_stack_addr = (_stack_addr + 0x2000);
+	_db_stack_end = _stack_addr;
+	__ArenaLo = (_db_stack_addr + 0x1f) & ~0x1f;
+	__ArenaHi = 0x81700000;
+
+	/* Below are function that are not matching the original mangled name */
+	"d_d_com_inf_game__phase_1__FPc" = 0x8002CDB8;
+	"dComIfG_resLoad__FP30request_of_phase_process_classPCc" = 0x8002CEBC;
+	"d_d_com_inf_game__phase_2__FPc" = 0x8002CE38;
+	"_savegpr_14" = 0x803621A0;
+	"dKy_setLight_nowroom__Fc" = 0x801A6C20;
+	"dKy_setLight_nowroom_common__Fcf" = 0x801A6278;
+	"__OSSystemCallVectorStart" = 0x80340A20;
+	"fopAcM_searchFromName__FPCcUlUl" = 0x8001D698;
+	"dComIfG_resDelete__FP30request_of_phase_process_classPCc" = 0x8002D008;
+	"fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs" = 0x8001B3CC;
+	"__OSEVStart" = 0x8033A718;
+	"dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive" = 0x80255184;
+	"JKRDvdAramRipper__nextSrcData__FPUc" = 0x802DB49C;
+	"dDemo_getJaiPointer__FPCcUliPUs" = 0x80038490;
+	"__OSDBJUMPEND" = 0x8033A6E8;
+	"dComIfGp_setNextStage__FPCcsScSc" = 0x8002D554;
+	"dKy_darkworld_Area_set__FPCci" = 0x801AC870;
+	"dEvmng_strcmp__FPCcPc" = 0x80047DAC;
+	"getTelopNo__FPCc" = 0x8004372C;
+	"d_d_s_name__phase_1__FPc" = 0x802587A4;
+	"d_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi" = 0x80156010;
+	"fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv" = 0x80019E6C;
+	"dStage_searchName__FPCc" = 0x80024DC0;
+	"d_d_a_npc__CheckCreateHeap__FP10fopAc_ac_c" = 0x8014F4F8;
+	"my_DVDConvertPathToEntrynum__FPCc" = 0x800158DC;
+	"__OSDBINTSTART" = 0x8033A6C0;
+	"branchFile__FPCc" = 0x800387A8;
+	"fopAcM_searchFromName4Event__FPCcs" = 0x8001D7A0;
+	"d_d_s_name__phase_2__FPc" = 0x80258820;
+	"my_SysPrintHeap__FPCcPvUl" = 0x8000BCF8;
+	"dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv" = 0x8002FB20;
+	"resLoad__FP30request_of_phase_process_classPc" = 0x80258878;
+	"dComIfG_getOldStageRes__FPCc" = 0x8002F478;
+	"dKy_darkworld_spot_check__FPCci" = 0x801AC7E0;
+	"__OSDBJUMPSTART" = 0x8033A6E4;
+	"__RAS_OSDisableInterrupts_begin" = 0x8033D6F4;
+	"fopAcM_orderOtherEvent__FP10fopAc_ac_cP10fopAc_ac_cPCcUsUsUs" = 0x8001B4E0;
+	"dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap" = 0x8002CFC0;
+	"d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c" = 0x80078668;
+	"my_PutString__FPCc" = 0x800067C8;
+	"JKRDvdAramRipper__firstSrcData__Fv" = 0x802DB3E8;
+	"dKy_F_SP121Check__FPCciPUci" = 0x801AC5BC;
+	"fopMsgM_messageGet__FPcUl" = 0x800200C0;
+	"dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc" = 0x80038518;
+	"mDoExt_initFontCommon__FPP7JUTFontPP7ResFONTP7JKRHeapPCcP10JKRArchiveUcUlUl" = 0x80014804;
+	"dKy_setLight_nowroom_grass__Fcf" = 0x801A6C58;
+	"mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct" = 0x80006964;
+	"d_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi" = 0x80157CB4;
+	"mDoPrintf_vprintf__FPCcP16__va_list_struct" = 0x80006984;
+	"mDoAud_setSceneName__FPCcll" = 0x800071BC;
+	"dComIfGp_evmng_startCheck__FPCc" = 0x800D005C;
+	"dKy_light_size_get__FPCc" = 0x8019EBD0;
+	"dKy_darkworld_stage_check__FPCci" = 0x801AC70C;
+	"print__FPCc" = 0x80017E08;
+	"print_f__FPCce" = 0x80017D7C;
+	"mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct" = 0x800068DC;
+	"dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc" = 0x80032738;
+	"dComIfGp_evmng_getMyStaffId__FPCcP10fopAc_ac_ci" = 0x80141464;
+	"dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc" = 0x801A61F4;
+	"_restgpr_14" = 0x803621EC;
+	"__OSDBINTEND" = 0x8033A6E4;
+	"dComIfGp_setNextStage__FPCcsScScfUliScsii" = 0x8002D2FC;
+	"dComIfG_getStageRes__FPCc" = 0x8002F434;
+	"OSVAttention__FPCcP16__va_list_struct" = 0x800067F4;
+	/* @stringBase0 for all translation units using string pooling */
+	"m_Do_m_Do_main__stringBase0" = 0x803739A0;
+	"m_Do_m_Do_printf__stringBase0" = 0x80373CB0;
+	"m_Do_m_Do_audio__stringBase0" = 0x80373D68;
+	"m_Do_m_Do_graphic__stringBase0" = 0x80373DD0;
+	"m_Do_m_Do_machine__stringBase0" = 0x80373DE8;
+	"m_Do_m_Do_ext__stringBase0" = 0x803740FC;
+	"m_Do_m_Do_Reset__stringBase0" = 0x80374198;
+	"m_Do_m_Do_dvd_thread__stringBase0" = 0x803741A8;
+	"m_Do_m_Do_MemCard__stringBase0" = 0x803743F8;
+	"m_Do_m_Do_MemCardRWmng__stringBase0" = 0x80374408;
+	"m_Do_m_Do_machine_exception__stringBase0" = 0x80374460;
+	"c_c_dylink__stringBase0" = 0x80375DE8;
+	"f_op_f_op_actor__stringBase0" = 0x80378878;
+	"f_op_f_op_actor_mng__stringBase0" = 0x803788C8;
+	"d_d_stage__stringBase0" = 0x80378A50;
+	"d_d_map__stringBase0" = 0x80378F24;
+	"d_d_com_inf_game__stringBase0" = 0x80378F38;
+	"d_d_com_static__stringBase0" = 0x803790B0;
+	"d_d_save__stringBase0" = 0x80379234;
+	"d_d_a_obj__stringBase0" = 0x803792A8;
+	"d_d_a_shop_item_static__stringBase0" = 0x80379738;
+	"d_d_demo__stringBase0" = 0x803797F8;
+	"d_d_resorce__stringBase0" = 0x803798B8;
+	"d_d_map_path__stringBase0" = 0x80379C4C;
+	"d_d_event__stringBase0" = 0x80379D80;
+	"d_d_event_data__stringBase0" = 0x80379DD0;
+	"d_d_event_manager__stringBase0" = 0x80379F60;
+	"d_d_particle__stringBase0" = 0x8037A12C;
+	"d_d_drawlist__stringBase0" = 0x8037A1B0;
+	"d_d_kankyo_data__stringBase0" = 0x8037A1C0;
+	"d_d_kankyo_wether__stringBase0" = 0x8037A368;
+	"d_d_kankyo_rain__stringBase0" = 0x8037A578;
+	"d_d_attention__stringBase0" = 0x8037A770;
+	"d_d_cam_param__stringBase0" = 0x8037A7E0;
+	"d_d_ev_camera__stringBase0" = 0x8037AAF4;
+	"d_d_item__stringBase0" = 0x8037B0D0;
+	"d_d_eye_hl__stringBase0" = 0x8037B100;
+	"d_d_error_msg__stringBase0" = 0x8038D640;
+	"d_d_a_alink__stringBase0" = 0x80392094;
+	"d_d_a_no_chg_room__stringBase0" = 0x80392640;
+	"d_d_a_npc__stringBase0" = 0x80392710;
+	"d_d_a_npc_cd__stringBase0" = 0x80392FE8;
+	"d_d_a_npc_cd2__stringBase0" = 0x80393B70;
+	"d_d_a_obj_item__stringBase0" = 0x80393D88;
+	"d_d_insect__stringBase0" = 0x80393D98;
+	"d_d_camera__stringBase0" = 0x80393F68;
+	"d_d_envse__stringBase0" = 0x80394308;
+	"d_d_file_select__stringBase0" = 0x80394388;
+	"d_d_file_sel_warning__stringBase0" = 0x80394828;
+	"d_d_file_sel_info__stringBase0" = 0x803948B8;
+	"d_d_bright_check__stringBase0" = 0x803949D8;
+	"d_d_scope__stringBase0" = 0x803949F0;
+	"d_d_select_cursor__stringBase0" = 0x80394AA0;
+	"d_d_shop_system__stringBase0" = 0x80394C10;
+	"d_d_gameover__stringBase0" = 0x80394C28;
+	"d_d_kankyo__stringBase0" = 0x80394C6C;
+	"d_d_kyeff__stringBase0" = 0x80394F38;
+	"d_d_ky_thunder__stringBase0" = 0x80394F40;
+	"d_d_kantera_icon_meter__stringBase0" = 0x80394F50;
+	"d_d_menu_calibration__stringBase0" = 0x80394F70;
+	"d_d_menu_collect__stringBase0" = 0x80395330;
+	"d_d_menu_dmap__stringBase0" = 0x80395760;
+	"d_d_menu_map_common__stringBase0" = 0x803959C0;
+	"d_d_menu_fishing__stringBase0" = 0x80396068;
+	"d_d_menu_fmap__stringBase0" = 0x803960E8;
+	"d_d_menu_fmap_map__stringBase0" = 0x8039623C;
+	"d_d_menu_fmap2D__stringBase0" = 0x803965D0;
+	"d_d_menu_insect__stringBase0" = 0x803968C0;
+	"d_d_menu_item_explain__stringBase0" = 0x80396990;
+	"d_d_menu_letter__stringBase0" = 0x80396DC0;
+	"d_d_menu_option__stringBase0" = 0x803975D8;
+	"d_d_menu_ring__stringBase0" = 0x803978C8;
+	"d_d_menu_save__stringBase0" = 0x80397960;
+	"d_d_menu_skill__stringBase0" = 0x80397DB8;
+	"d_d_menu_window__stringBase0" = 0x80397E38;
+	"d_d_meter_button__stringBase0" = 0x803980E8;
+	"d_d_meter_haihai__stringBase0" = 0x80398158;
+	"d_d_meter_hakusha__stringBase0" = 0x803981B0;
+	"d_d_meter_map__stringBase0" = 0x80398208;
+	"d_d_meter_string__stringBase0" = 0x80398210;
+	"d_d_meter2_draw__stringBase0" = 0x803988D0;
+	"d_d_meter2_info__stringBase0" = 0x80399168;
+	"d_d_meter2__stringBase0" = 0x80399338;
+	"d_d_msg_out_font__stringBase0" = 0x80399350;
+	"d_d_msg_class__stringBase0" = 0x80399610;
+	"d_d_msg_object__stringBase0" = 0x80399660;
+	"d_d_msg_unit__stringBase0" = 0x803996E8;
+	"d_d_msg_scrn_3select__stringBase0" = 0x80399840;
+	"d_d_msg_scrn_arrow__stringBase0" = 0x803998A0;
+	"d_d_msg_scrn_boss__stringBase0" = 0x803998F8;
+	"d_d_msg_scrn_explain__stringBase0" = 0x80399910;
+	"d_d_msg_scrn_item__stringBase0" = 0x80399990;
+	"d_d_msg_scrn_howl__stringBase0" = 0x80399A20;
+	"d_d_msg_scrn_jimaku__stringBase0" = 0x80399A80;
+	"d_d_msg_scrn_kanban__stringBase0" = 0x80399AB8;
+	"d_d_msg_scrn_light__stringBase0" = 0x80399B08;
+	"d_d_msg_scrn_place__stringBase0" = 0x80399B78;
+	"d_d_msg_scrn_staff__stringBase0" = 0x80399B98;
+	"d_d_msg_scrn_talk__stringBase0" = 0x80399BB0;
+	"d_d_msg_scrn_tree__stringBase0" = 0x80399C30;
+	"d_d_msg_string_base__stringBase0" = 0x80399C98;
+	"d_d_msg_flow__stringBase0" = 0x80399CB0;
+	"d_d_name__stringBase0" = 0x80399CC8;
+	"d_d_s_logo__stringBase0" = 0x80399FFC;
+	"d_d_s_name__stringBase0" = 0x8039A2A8;
+	"d_d_s_play__stringBase0" = 0x8039A2D8;
+	"d_d_s_room__stringBase0" = 0x8039A388;
+	"d_d_timer__stringBase0" = 0x8039A3D8;
+	"d_d_k_wmark__stringBase0" = 0x8039A494;
+	"DynamicLink__stringBase0" = 0x8039A4A0;
+	"d_d_item_data__stringBase0" = 0x8037AD68;
+	"JFWDisplay__stringBase0" = 0x8039A878;
+	"J3DUClipper__stringBase0" = 0x8039A984;
+	"jstudio_object__stringBase0" = 0x8039AB78;
+	"JASSeqParser__stringBase0" = 0x8039B018;
+	"JASAiCtrl__stringBase0" = 0x8039B2F0;
+	"JASAudioThread__stringBase0" = 0x8039B338;
+	"JAISeMgr__stringBase0" = 0x8039B8F8;
+	"JAISound__stringBase0" = 0x8039B910;
+	"JAUSectionHeap__stringBase0" = 0x8039B950;
+	"Z2SoundMgr__stringBase0" = 0x8039B9D0;
+	"Z2SeqMgr__stringBase0" = 0x8039BA08;
+	"Z2StatusMgr__stringBase0" = 0x8039BC88;
+	"Z2SceneMgr__stringBase0" = 0x8039BFA8;
+	"Z2AudioMgr__stringBase0" = 0x8039CA58;
+	"JKRHeap__stringBase0" = 0x8039CAD8;
+	"JKRExpHeap__stringBase0" = 0x8039CAF0;
+	"JKRSolidHeap__stringBase0" = 0x8039CE50;
+	"JKRThread__stringBase0" = 0x8039CFA8;
+	"JKRAram__stringBase0" = 0x8039D078;
+	"JKRAramPiece__stringBase0" = 0x8039D0B8;
+	"JKRAramStream__stringBase0" = 0x8039D120;
+	"JKRFileLoader__stringBase0" = 0x8039D150;
+	"JKRFileCache__stringBase0" = 0x8039D158;
+	"JKRMemArchive__stringBase0" = 0x8039D160;
+	"JKRAramArchive__stringBase0" = 0x8039D188;
+	"JKRDvdArchive__stringBase0" = 0x8039D1B0;
+	"JKRCompArchive__stringBase0" = 0x8039D220;
+	"JKRDvdFile__stringBase0" = 0x8039D260;
+	"JKRDvdRipper__stringBase0" = 0x8039D290;
+	"JUTCacheFont__stringBase0" = 0x8039D2F0;
+	"JUTPalette__stringBase0" = 0x8039D360;
+	"JUTResFont__stringBase0" = 0x8039D45C;
+	"JUTException__stringBase0" = 0x8039D490;
+	"JUTDirectPrint__stringBase0" = 0x8039D9A0;
+	"JUTConsole__stringBase0" = 0x8039D9A8;
+	"J2DTextBox__stringBase0" = 0x803A1C58;
+	"J2DTextBoxEx__stringBase0" = 0x803A1DF0;
+	"J3DMatBlock__stringBase0" = 0x803A1EA8;
+	"J3DSkinDeform__stringBase0" = 0x803A2028;
+	"J3DClusterLoader__stringBase0" = 0x803A2098;
+	"J3DModelLoader__stringBase0" = 0x803A20B0;
+	"J3DModelLoaderCalcSize__stringBase0" = 0x803A20E8;
+	"J3DShapeFactory__stringBase0" = 0x803A2100;
+	"J3DAnmLoader__stringBase0" = 0x803A2130;
+	"MSL_Common_Embedded_Src_ansi_fp__stringBase0" = 0x803A2238;
+	"MSL_Common_Src_printf__stringBase0" = 0x803A2318;
+}
+
+FORCEACTIVE {
+
+}
+

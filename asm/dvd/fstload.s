@@ -31,15 +31,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044C9B8 003F .bss       bb2Buf                         bb2Buf                         */
-.global bb2Buf
-bb2Buf:
-.skip 0x3f
-.skip 0x1 /* padding */
 
 /* 8044C9F8 0030 .bss       block$18                       data_8044C9F8                  */
-.global data_8044C9F8
-data_8044C9F8:
-.skip 0x30
 
 
 /* ###################################################################################### */
@@ -58,18 +51,8 @@ data_8044C9F8:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804517D0 0004 .sbss      status                         status                         */
-.global status
-status:
-.skip 0x4
 
 /* 804517D4 0004 .sbss      bb2                            bb2                            */
-.global bb2
-bb2:
-.skip 0x4
 
 /* 804517D8 0004 .sbss      idTmp                          idTmp                          */
-.global idTmp
-idTmp:
-.skip 0x4
-.skip 0x4 /* padding */
 

@@ -44,15 +44,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804306C8 000C .bss       @3735                          LIT_3735                       */
-.global LIT_3735
-LIT_3735:
-.skip 0xc
 
 /* 804306D4 0050 .bss       g_MsgScrnLight_HIO_c           g_MsgScrnLight_HIO_c           */
-.global g_MsgScrnLight_HIO_c
-g_MsgScrnLight_HIO_c:
-.skip 0x50
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

@@ -33,8 +33,4 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F810 0004 .bss       lc_base                        lc_base                        */
-.global lc_base
-lc_base:
-.skip 0x4
-.skip 0x4 /* padding */
 

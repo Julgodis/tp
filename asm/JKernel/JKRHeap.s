@@ -118,52 +118,22 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451370 0004 .sbss      sSystemHeap__7JKRHeap          sSystemHeap__7JKRHeap          */
-.global sSystemHeap__7JKRHeap
-sSystemHeap__7JKRHeap:
-.skip 0x4
 
 /* 80451374 0004 .sbss      sCurrentHeap__7JKRHeap         sCurrentHeap__7JKRHeap         */
-.global sCurrentHeap__7JKRHeap
-sCurrentHeap__7JKRHeap:
-.skip 0x4
 
 /* 80451378 0004 .sbss      sRootHeap__7JKRHeap            sRootHeap__7JKRHeap            */
-.global sRootHeap__7JKRHeap
-sRootHeap__7JKRHeap:
-.skip 0x4
 
 /* 8045137C 0004 .sbss      mErrorHandler__7JKRHeap        mErrorHandler__7JKRHeap        */
-.global mErrorHandler__7JKRHeap
-mErrorHandler__7JKRHeap:
-.skip 0x4
 
 /* 80451380 0004 .sbss      data_80451380                  data_80451380                  */
-.global data_80451380
-data_80451380:
-.skip 0x4
 
 /* 80451384 0004 .sbss      mCodeStart__7JKRHeap           mCodeStart__7JKRHeap           */
-.global mCodeStart__7JKRHeap
-mCodeStart__7JKRHeap:
-.skip 0x4
 
 /* 80451388 0004 .sbss      mCodeEnd__7JKRHeap             mCodeEnd__7JKRHeap             */
-.global mCodeEnd__7JKRHeap
-mCodeEnd__7JKRHeap:
-.skip 0x4
 
 /* 8045138C 0004 .sbss      mUserRamStart__7JKRHeap        mUserRamStart__7JKRHeap        */
-.global mUserRamStart__7JKRHeap
-mUserRamStart__7JKRHeap:
-.skip 0x4
 
 /* 80451390 0004 .sbss      mUserRamEnd__7JKRHeap          mUserRamEnd__7JKRHeap          */
-.global mUserRamEnd__7JKRHeap
-mUserRamEnd__7JKRHeap:
-.skip 0x4
 
 /* 80451394 0004 .sbss      mMemorySize__7JKRHeap          mMemorySize__7JKRHeap          */
-.global mMemorySize__7JKRHeap
-mMemorySize__7JKRHeap:
-.skip 0x4
 

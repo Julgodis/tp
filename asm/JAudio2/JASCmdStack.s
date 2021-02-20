@@ -20,26 +20,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431678 0000 .bss       ...bss.0                       data_80431678                  */
-.global data_80431678
-data_80431678:
 
 /* 80431678 000C .bss       @80                            JASCmdStack__LIT_80            */
-.global JASCmdStack__LIT_80
-JASCmdStack__LIT_80:
-.skip 0xc
 
 /* 80431684 000C .bss       sCommandListOnce__10JASPortCmd sCommandListOnce__10JASPortCmd */
-.global sCommandListOnce__10JASPortCmd
-sCommandListOnce__10JASPortCmd:
-.skip 0xc
 
 /* 80431690 000C .bss       @82                            JASCmdStack__LIT_82            */
-.global JASCmdStack__LIT_82
-JASCmdStack__LIT_82:
-.skip 0xc
 
 /* 8043169C 000C .bss       sCommandListStay__10JASPortCmd sCommandListStay__10JASPortCmd */
-.global sCommandListStay__10JASPortCmd
-sCommandListStay__10JASPortCmd:
-.skip 0xc
 

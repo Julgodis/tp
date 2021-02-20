@@ -28,27 +28,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D00 0004 .sbss      g_fpcBs_type                   g_fpcBs_type                   */
-.global g_fpcBs_type
-g_fpcBs_type:
-.skip 0x4
 
 /* 80450D04 0004 .sbss      t_type$2207                    data_80450D04                  */
-.global data_80450D04
-data_80450D04:
-.skip 0x4
 
 /* 80450D08 0004 .sbss      data_80450D08                  data_80450D08                  */
-.global data_80450D08
-data_80450D08:
-.skip 0x4
 
 /* 80450D0C 0004 .sbss      process_id$2216                data_80450D0C                  */
-.global data_80450D0C
-data_80450D0C:
-.skip 0x4
 
 /* 80450D10 0008 .sbss      data_80450D10                  data_80450D10                  */
-.global data_80450D10
-data_80450D10:
-.skip 0x8
 

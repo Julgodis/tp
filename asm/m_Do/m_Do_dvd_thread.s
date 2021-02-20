@@ -94,23 +94,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DD940 0000 .bss       ...bss.0                       data_803DD940                  */
-.global data_803DD940
-data_803DD940:
 
 /* 803DD940 0318 .bss       l_thread__9mDoDvdThd           l_thread__9mDoDvdThd           */
-.global l_thread__9mDoDvdThd
-l_thread__9mDoDvdThd:
-.skip 0x318
-.skip 0x8 /* padding */
 
 /* 803DDC60 1000 .bss       l_threadStack__9mDoDvdThd      l_threadStack__9mDoDvdThd      */
-.global l_threadStack__9mDoDvdThd
-l_threadStack__9mDoDvdThd:
-.skip 0x1000
 
 /* 803DEC60 0048 .bss       l_param__9mDoDvdThd            l_param__9mDoDvdThd            */
-.global l_param__9mDoDvdThd
-l_param__9mDoDvdThd:
-.skip 0x48
-.skip 0x18 /* padding */
 

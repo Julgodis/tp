@@ -63,25 +63,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431B90 0020 .bss       sBankDisposeMsgQ__10JASChannel sBankDisposeMsgQ__10JASChannel */
-.global sBankDisposeMsgQ__10JASChannel
-sBankDisposeMsgQ__10JASChannel:
-.skip 0x20
 
 /* 80431BB0 0040 .bss       sBankDisposeMsg__10JASChannel  sBankDisposeMsg__10JASChannel  */
-.global sBankDisposeMsg__10JASChannel
-sBankDisposeMsg__10JASChannel:
-.skip 0x40
 
 /* 80431BF0 0040 .bss       sBankDisposeList__10JASChannel sBankDisposeList__10JASChannel */
-.global sBankDisposeList__10JASChannel
-sBankDisposeList__10JASChannel:
-.skip 0x40
 
 /* 80431C30 000C .bss       @556                           LIT_556                        */
-.global LIT_556
-LIT_556:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -89,10 +76,6 @@ LIT_556:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451298 0004 .sbss      sBankDisposeListSize__10JASChannel sBankDisposeListSize__10JASChannel */
-.global sBankDisposeListSize__10JASChannel
-sBankDisposeListSize__10JASChannel:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

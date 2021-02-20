@@ -34,13 +34,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804341B8 000C .bss       @632                           Z2SoundHandles__LIT_632        */
-.global Z2SoundHandles__LIT_632
-Z2SoundHandles__LIT_632:
-.skip 0xc
 
 /* 804341C4 0010 .bss       memPool_$localstatic3$getMemPool___39JASPoolAllocObject<17Z2SoundHandlePool>Fv data_804341C4                  */
-.global data_804341C4
-data_804341C4:
-.skip 0x10
-.skip 0x4 /* padding */
 

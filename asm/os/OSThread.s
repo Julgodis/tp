@@ -123,28 +123,14 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044BB78 0000 .bss       ...bss.0                       data_8044BB78                  */
-.global data_8044BB78
-data_8044BB78:
 
 /* 8044BB78 0100 .bss       RunQueue                       RunQueue                       */
-.global RunQueue
-RunQueue:
-.skip 0x100
 
 /* 8044BC78 0318 .bss       IdleThread                     IdleThread                     */
-.global IdleThread
-IdleThread:
-.skip 0x318
 
 /* 8044BF90 0318 .bss       DefaultThread                  DefaultThread                  */
-.global DefaultThread
-DefaultThread:
-.skip 0x318
 
 /* 8044C2A8 02C8 .bss       IdleContext                    IdleContext                    */
-.global IdleContext
-IdleContext:
-.skip 0x2c8
 
 
 /* ###################################################################################### */
@@ -161,23 +147,10 @@ IdleContext:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804516C0 0004 .sbss      RunQueueBits                   RunQueueBits                   */
-.global RunQueueBits
-RunQueueBits:
-.skip 0x4
 
 /* 804516C4 0004 .sbss      RunQueueHint                   RunQueueHint                   */
-.global RunQueueHint
-RunQueueHint:
-.skip 0x4
 
 /* 804516C8 0004 .sbss      Reschedule                     Reschedule                     */
-.global Reschedule
-Reschedule:
-.skip 0x4
-.skip 0x4 /* padding */
 
 /* 804516D0 0008 .sbss      data_804516D0                  data_804516D0                  */
-.global data_804516D0
-data_804516D0:
-.skip 0x8
 

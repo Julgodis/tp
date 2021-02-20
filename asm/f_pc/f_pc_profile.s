@@ -12,8 +12,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D50 0004 .sbss      g_fpcPf_ProfileList_p          g_fpcPf_ProfileList_p          */
-.global g_fpcPf_ProfileList_p
-g_fpcPf_ProfileList_p:
-.skip 0x4
-.skip 0x4 /* padding */
 

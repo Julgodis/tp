@@ -34,13 +34,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803F4DB0 002C .bss       rootlayer$3716                 data_803F4DB0                  */
-.global data_803F4DB0
-data_803F4DB0:
-.skip 0x2c
 
 /* 803F4DDC 0078 .bss       queue$3717                     data_803F4DDC                  */
-.global data_803F4DDC
-data_803F4DDC:
-.skip 0x78
-.skip 0x4 /* padding */
 

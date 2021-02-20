@@ -67,10 +67,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804515E0 0004 .sbss      entryNum__13J3DDrawBuffer      entryNum__13J3DDrawBuffer      */
-.global entryNum__13J3DDrawBuffer
-entryNum__13J3DDrawBuffer:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

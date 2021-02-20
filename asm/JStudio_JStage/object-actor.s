@@ -101,44 +101,20 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431188 0000 .bss       ...bss.0                       data_80431188                  */
-.global data_80431188
-data_80431188:
 
 /* 80431188 000C .bss       @1087                          LIT_1087                       */
-.global LIT_1087
-LIT_1087:
-.skip 0xc
 
 /* 80431194 000C .bss       @1088                          LIT_1088                       */
-.global LIT_1088
-LIT_1088:
-.skip 0xc
 
 /* 804311A0 0040 .bss       saoVVOutput___Q214JStudio_JStage14TAdaptor_actor saoVVOutput___Q214JStudio_JStage14TAdaptor_actor */
-.global saoVVOutput___Q214JStudio_JStage14TAdaptor_actor
-saoVVOutput___Q214JStudio_JStage14TAdaptor_actor:
-.skip 0x40
 
 /* 804311E0 000C .bss       @1095                          object_actor__LIT_1095         */
-.global object_actor__LIT_1095
-object_actor__LIT_1095:
-.skip 0xc
 
 /* 804311EC 000C .bss       @1102                          LIT_1102                       */
-.global LIT_1102
-LIT_1102:
-.skip 0xc
 
 /* 804311F8 000C .bss       @1103                          LIT_1103                       */
-.global LIT_1103
-LIT_1103:
-.skip 0xc
 
 /* 80431204 0090 .bss       saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor */
-.global saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor
-saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor:
-.skip 0x90
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

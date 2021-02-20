@@ -73,18 +73,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044CBC0 0000 .bss       ...bss.0                       data_8044CBC0                  */
-.global data_8044CBC0
-data_8044CBC0:
 
 /* 8044CBC0 0220 .bss       __CARDBlock                    __CARDBlock                    */
-.global __CARDBlock
-__CARDBlock:
-.skip 0x220
 
 /* 8044CDE0 0020 .bss       __CARDDiskNone                 __CARDDiskNone                 */
-.global __CARDDiskNone
-__CARDDiskNone:
-.skip 0x20
 
 
 /* ###################################################################################### */
@@ -98,14 +90,5 @@ __CARDDiskNone:
 /*                                         .sbss                                          */
 /* ###################################################################################### */
 .section .sbss, "aw"
-/* 80451918 0002 .sbss      __CARDEncode                   __CARDEncode                   */
-.global __CARDEncode
-__CARDEncode:
-.skip 0x2
-
-/* 8045191A 0002 .sbss      __CARDFastMode                 __CARDFastMode                 */
-.global __CARDFastMode
-__CARDFastMode:
-.skip 0x2
-.skip 0x4 /* padding */
+/* 80451918 0004 .sbss      merged_80451918                merged_80451918                */
 

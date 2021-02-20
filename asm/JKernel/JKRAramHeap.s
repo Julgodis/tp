@@ -37,12 +37,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434300 000C .bss       @297                           JKRAramHeap__LIT_297           */
-.global JKRAramHeap__LIT_297
-JKRAramHeap__LIT_297:
-.skip 0xc
 
 /* 8043430C 000C .bss       sAramList__11JKRAramHeap       sAramList__11JKRAramHeap       */
-.global sAramList__11JKRAramHeap
-sAramList__11JKRAramHeap:
-.skip 0xc
 

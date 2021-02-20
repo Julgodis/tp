@@ -43,28 +43,12 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451670 0004 .sbss      InterruptHandlerTable          InterruptHandlerTable          */
-.global InterruptHandlerTable
-InterruptHandlerTable:
-.skip 0x4
 
 /* 80451674 0004 .sbss      __OSLastInterruptSrr0          __OSLastInterruptSrr0          */
-.global __OSLastInterruptSrr0
-__OSLastInterruptSrr0:
-.skip 0x4
 
 /* 80451678 0002 .sbss      __OSLastInterrupt              __OSLastInterrupt              */
-.global __OSLastInterrupt
-__OSLastInterrupt:
-.skip 0x2
-.skip 0x6 /* padding */
 
 /* 80451680 0004 .sbss      __OSLastInterruptTime          __OSLastInterruptTime          */
-.global __OSLastInterruptTime
-__OSLastInterruptTime:
-.skip 0x4
 
 /* 80451684 0004 .sbss      data_80451684                  data_80451684                  */
-.global data_80451684
-data_80451684:
-.skip 0x4
 

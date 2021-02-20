@@ -79,25 +79,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DD3E8 0020 .bss       mFrameBufferTexObj__13mDoGph_gInf_c mFrameBufferTexObj__13mDoGph_gInf_c */
-.global mFrameBufferTexObj__13mDoGph_gInf_c
-mFrameBufferTexObj__13mDoGph_gInf_c:
-.skip 0x20
 
 /* 803DD408 0020 .bss       mZbufferTexObj__13mDoGph_gInf_c mZbufferTexObj__13mDoGph_gInf_c */
-.global mZbufferTexObj__13mDoGph_gInf_c
-mZbufferTexObj__13mDoGph_gInf_c:
-.skip 0x20
 
 /* 803DD428 0014 .bss       m_bloom__13mDoGph_gInf_c       m_bloom__13mDoGph_gInf_c       */
-.global m_bloom__13mDoGph_gInf_c
-m_bloom__13mDoGph_gInf_c:
-.skip 0x14
 
 /* 803DD43C 0030 .bss       mBlureMtx__13mDoGph_gInf_c     mBlureMtx__13mDoGph_gInf_c     */
-.global mBlureMtx__13mDoGph_gInf_c
-mBlureMtx__13mDoGph_gInf_c:
-.skip 0x30
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -118,69 +105,24 @@ mBlureMtx__13mDoGph_gInf_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450BC8 0004 .sbss      mFader__13mDoGph_gInf_c        mFader__13mDoGph_gInf_c        */
-.global mFader__13mDoGph_gInf_c
-mFader__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BCC 0004 .sbss      mFrameBufferTimg__13mDoGph_gInf_c mFrameBufferTimg__13mDoGph_gInf_c */
-.global mFrameBufferTimg__13mDoGph_gInf_c
-mFrameBufferTimg__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BD0 0004 .sbss      mFrameBufferTex__13mDoGph_gInf_c mFrameBufferTex__13mDoGph_gInf_c */
-.global mFrameBufferTex__13mDoGph_gInf_c
-mFrameBufferTex__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BD4 0004 .sbss      mZbufferTimg__13mDoGph_gInf_c  mZbufferTimg__13mDoGph_gInf_c  */
-.global mZbufferTimg__13mDoGph_gInf_c
-mZbufferTimg__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BD8 0004 .sbss      mZbufferTex__13mDoGph_gInf_c   mZbufferTex__13mDoGph_gInf_c   */
-.global mZbufferTex__13mDoGph_gInf_c
-mZbufferTex__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BDC 0004 .sbss      mFadeRate__13mDoGph_gInf_c     mFadeRate__13mDoGph_gInf_c     */
-.global mFadeRate__13mDoGph_gInf_c
-mFadeRate__13mDoGph_gInf_c:
-.skip 0x4
 
 /* 80450BE0 0004 .sbss      mFadeSpeed__13mDoGph_gInf_c    mFadeSpeed__13mDoGph_gInf_c    */
-.global mFadeSpeed__13mDoGph_gInf_c
-mFadeSpeed__13mDoGph_gInf_c:
-.skip 0x4
 
-/* 80450BE4 0001 .sbss      data_80450BE4                  data_80450BE4                  */
-.global data_80450BE4
-data_80450BE4:
-.skip 0x1
-
-/* 80450BE5 0001 .sbss      data_80450BE5                  data_80450BE5                  */
-.global data_80450BE5
-data_80450BE5:
-.skip 0x1
-
-/* 80450BE6 0001 .sbss      data_80450BE6                  data_80450BE6                  */
-.global data_80450BE6
-data_80450BE6:
-.skip 0x1
-
-/* 80450BE7 0001 .sbss      data_80450BE7                  data_80450BE7                  */
-.global data_80450BE7
-data_80450BE7:
-.skip 0x1
+/* 80450BE4 0004 .sbss      merged_80450BE4                merged_80450BE4                */
 
 /* 80450BE8 0008 .sbss      data_80450BE8                  data_80450BE8                  */
-.global data_80450BE8
-data_80450BE8:
-.skip 0x8
 
 /* 80450BF0 0004 .sbss      data_80450BF0                  data_80450BF0                  */
-.global data_80450BF0
-data_80450BF0:
-.skip 0x4
 
 
 /* ###################################################################################### */
@@ -281,8 +223,4 @@ data_80450BF0:
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456B60 0004 .sbss2     @4530                          m_Do_m_Do_graphic__LIT_4530    */
-.global m_Do_m_Do_graphic__LIT_4530
-m_Do_m_Do_graphic__LIT_4530:
-.skip 0x4
-.skip 0x4 /* padding */
 

@@ -74,15 +74,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431B28 000C .bss       @792                           JASAramStream__LIT_792         */
-.global JASAramStream__LIT_792
-JASAramStream__LIT_792:
-.skip 0xc
 
 /* 80431B34 0010 .bss       memPool_$localstatic3$getMemPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>Fv data_80431B34                  */
-.global data_80431B34
-data_80431B34:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -90,39 +83,14 @@ data_80431B34:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451250 0004 .sbss      sLoadThread__13JASAramStream   sLoadThread__13JASAramStream   */
-.global sLoadThread__13JASAramStream
-sLoadThread__13JASAramStream:
-.skip 0x4
 
 /* 80451254 0004 .sbss      sReadBuffer__13JASAramStream   sReadBuffer__13JASAramStream   */
-.global sReadBuffer__13JASAramStream
-sReadBuffer__13JASAramStream:
-.skip 0x4
 
 /* 80451258 0004 .sbss      sBlockSize__13JASAramStream    sBlockSize__13JASAramStream    */
-.global sBlockSize__13JASAramStream
-sBlockSize__13JASAramStream:
-.skip 0x4
 
 /* 8045125C 0004 .sbss      sChannelMax__13JASAramStream   sChannelMax__13JASAramStream   */
-.global sChannelMax__13JASAramStream
-sChannelMax__13JASAramStream:
-.skip 0x4
 
-/* 80451260 0001 .sbss      data_80451260                  data_80451260                  */
-.global data_80451260
-data_80451260:
-.skip 0x1
-
-/* 80451261 0001 .sbss      data_80451261                  data_80451261                  */
-.global data_80451261
-data_80451261:
-.skip 0x1
-
-/* 80451262 0006 .sbss      data_80451262                  data_80451262                  */
-.global data_80451262
-data_80451262:
-.skip 0x6
+/* 80451260 0008 .sbss      merged_80451260                merged_80451260                */
 
 
 /* ###################################################################################### */

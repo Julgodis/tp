@@ -65,24 +65,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804341F8 0000 .bss       ...bss.0                       data_804341F8                  */
-.global data_804341F8
-data_804341F8:
 
 /* 804341F8 0024 .bss       sCorrectPhrase                 sCorrectPhrase                 */
-.global sCorrectPhrase
-sCorrectPhrase:
-.skip 0x24
 
 /* 8043421C 0024 .bss       sWindStoneSound                sWindStoneSound                */
-.global sWindStoneSound
-sWindStoneSound:
-.skip 0x24
 
 /* 80434240 0024 .bss       sCorrectDuo                    sCorrectDuo                    */
-.global sCorrectDuo
-sCorrectDuo:
-.skip 0x24
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

@@ -181,64 +181,28 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450E5C 0004 .sbss      mNowStayRoomNo__10dMapInfo_c   mNowStayRoomNo__10dMapInfo_c   */
-.global mNowStayRoomNo__10dMapInfo_c
-mNowStayRoomNo__10dMapInfo_c:
-.skip 0x4
 
 /* 80450E60 0004 .sbss      data_80450E60                  data_80450E60                  */
-.global data_80450E60
-data_80450E60:
-.skip 0x4
 
 /* 80450E64 0004 .sbss      mLayerList__8dMpath_c          mLayerList__8dMpath_c          */
-.global mLayerList__8dMpath_c
-mLayerList__8dMpath_c:
-.skip 0x4
 
 /* 80450E68 0004 .sbss      mMinX__8dMpath_c               mMinX__8dMpath_c               */
-.global mMinX__8dMpath_c
-mMinX__8dMpath_c:
-.skip 0x4
 
 /* 80450E6C 0004 .sbss      mMaxX__8dMpath_c               mMaxX__8dMpath_c               */
-.global mMaxX__8dMpath_c
-mMaxX__8dMpath_c:
-.skip 0x4
 
 /* 80450E70 0004 .sbss      mMinZ__8dMpath_c               mMinZ__8dMpath_c               */
-.global mMinZ__8dMpath_c
-mMinZ__8dMpath_c:
-.skip 0x4
 
 /* 80450E74 0004 .sbss      mMaxZ__8dMpath_c               mMaxZ__8dMpath_c               */
-.global mMaxZ__8dMpath_c
-mMaxZ__8dMpath_c:
-.skip 0x4
 
 /* 80450E78 0004 .sbss      mAllCenterX__8dMpath_c         mAllCenterX__8dMpath_c         */
-.global mAllCenterX__8dMpath_c
-mAllCenterX__8dMpath_c:
-.skip 0x4
 
 /* 80450E7C 0004 .sbss      mAllCenterZ__8dMpath_c         mAllCenterZ__8dMpath_c         */
-.global mAllCenterZ__8dMpath_c
-mAllCenterZ__8dMpath_c:
-.skip 0x4
 
 /* 80450E80 0004 .sbss      mAllSizeX__8dMpath_c           mAllSizeX__8dMpath_c           */
-.global mAllSizeX__8dMpath_c
-mAllSizeX__8dMpath_c:
-.skip 0x4
 
 /* 80450E84 0004 .sbss      mAllSizeZ__8dMpath_c           mAllSizeZ__8dMpath_c           */
-.global mAllSizeZ__8dMpath_c
-mAllSizeZ__8dMpath_c:
-.skip 0x4
 
 /* 80450E88 0008 .sbss      data_80450E88                  data_80450E88                  */
-.global data_80450E88
-data_80450E88:
-.skip 0x8
 
 
 /* ###################################################################################### */

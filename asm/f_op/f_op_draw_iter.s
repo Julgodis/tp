@@ -16,8 +16,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CF8 0004 .sbss      l_fopDwTg_id                   l_fopDwTg_id                   */
-.global l_fopDwTg_id
-l_fopDwTg_id:
-.skip 0x4
-.skip 0x4 /* padding */
 

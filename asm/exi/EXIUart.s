@@ -18,22 +18,10 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804516E0 0004 .sbss      Chan                           Chan                           */
-.global Chan
-Chan:
-.skip 0x4
 
 /* 804516E4 0004 .sbss      Dev                            Dev                            */
-.global Dev
-Dev:
-.skip 0x4
 
 /* 804516E8 0004 .sbss      Enabled                        Enabled                        */
-.global Enabled
-Enabled:
-.skip 0x4
 
 /* 804516EC 0004 .sbss      BarnacleEnabled                BarnacleEnabled                */
-.global BarnacleEnabled
-BarnacleEnabled:
-.skip 0x4
 

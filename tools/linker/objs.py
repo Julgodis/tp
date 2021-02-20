@@ -25,6 +25,7 @@ class Section:
         self.addr = None
         self.file_addr = None
         self.alignment = header.sh_addralign
+        self.object = None
         
 
     def getVirtualAddr(self, offset=0):
@@ -109,6 +110,7 @@ class Symbol:
     visibility: int
     addr: Optional[int]
     used: int
+    section: Optional[Section]
 
     def __init__(self, header: elf.Symbol, name: Optional[str]):
         self.header = header
@@ -116,9 +118,12 @@ class Symbol:
         self.bind = elf.ST_BIND(header.st_info)
         self.type = elf.ST_TYPE(header.st_info)
         self.visibility = elf.ST_VISIBILITY(header.st_other)
+        self.size = header.st_size
         self.object = None
         self.addr = None
         self.used = 0
+        self.section = None
+        self.object = None
 
     def isSection(self):
         return self.type == elf.STT_SECTION
@@ -202,7 +207,8 @@ class Relocation:
         fail("cannot calculate relocation")
 
     def replace(self):
-        assert self.section.data
+        if not self.section.data:
+            return
 
         size = self.size()
         if size <= 0:
@@ -410,6 +416,8 @@ class Object:
     symbols: List[Symbol]
     symbol_map: Dict[str, Symbol]
     relocations: List[Relocation]
+    name: str
+    path: Path
 
     def __init__(self):
         self.sections = dict()
@@ -420,178 +428,193 @@ class Object:
         self.str_sections = dict()
         self.rel_sections = dict()
         self.rela_sections = dict()
+        self.name = None
+        self.path = None
 
 
-def load(path) -> Object:
+def load_f(path, name, file) -> Object:
     obj = Object()
+    obj.path = path
+    obj.name = name
 
-    with open(path, 'rb') as file:
-        header = elf.Header()
-        header.read(file)
-        # print(vars(header))
 
-        if header.e_ident[elf.EI_MAG] != 2135247942:
-            fail("invalid elf file")
-        if header.e_ident[elf.EI_CLASS] != 1:
-            fail("only support elf 32-bit")
-        if header.e_ident[elf.EI_DATA] != 2:
-            fail("only support big-endianess")
-        if header.e_ident[elf.EI_VERSION] != 1:
-            fail("invalid elf version")
-        if header.e_type != 1:
-            fail("invalid object file type")
-        if header.e_machine != 20:
-            fail("invalid target")
-        if header.e_version != 1:
-            fail("invalid elf version")
+    header = elf.Header()
+    header.read(file)
+    # print(vars(header))
 
-        if header.e_phnum > 0 and header.e_phentsize != 0x20:
-            fail("invalid program header size")
-        if header.e_shnum > 0 and header.e_shentsize != 0x28:
-            fail("invalid section header size")
+    if header.e_ident[elf.EI_MAG] != 2135247942:
+        fail("invalid elf file: 0x%08X == 0x7F454C46 '%s'" % (header.e_ident[elf.EI_MAG], name))
+    if header.e_ident[elf.EI_CLASS] != 1:
+        fail("only support elf 32-bit")
+    if header.e_ident[elf.EI_DATA] != 2:
+        fail("only support big-endianess")
+    if header.e_ident[elf.EI_VERSION] != 1:
+        fail("invalid elf version")
+    if header.e_type != 1:
+        fail("invalid object file type")
+    if header.e_machine != 20:
+        fail("invalid target")
+    if header.e_version != 1:
+        fail("invalid elf version")
 
-        program_headers = []
-        section_headers = []
+    if header.e_phnum > 0 and header.e_phentsize != 0x20:
+        fail("invalid program header size")
+    if header.e_shnum > 0 and header.e_shentsize != 0x28:
+        fail("invalid section header size")
 
-        # Read program headers
-        file.seek(header.e_phoff, os.SEEK_SET)
-        for _ in range(header.e_phnum):
-            program_header = elf.ProgramHeader()
-            program_header.read(file)
+    program_headers = []
+    section_headers = []
 
-        # Read sections headers
-        file.seek(header.e_shoff, os.SEEK_SET)
-        for i in range(header.e_shnum):
-            section_header = elf.SectionHeader()
-            section_header.read(file)
+    # Read program headers
+    file.seek(header.e_phoff, os.SEEK_SET)
+    for _ in range(header.e_phnum):
+        program_header = elf.ProgramHeader()
+        program_header.read(file)
 
-            if not (section_header.sh_type == elf.SHT_NULL
-                    or section_header.sh_type == elf.SHT_PROGBITS
-                    or section_header.sh_type == elf.SHT_SYMTAB
-                    or section_header.sh_type == elf.SHT_STRTAB
-                    or section_header.sh_type == elf.SHT_RELA
-                    or section_header.sh_type == elf.SHT_NOBITS):
-                fail("unsupport section type: 0x%02X = %s" % (
-                    section_header.sh_type, elf.SH_TYPES[section_header.sh_type]))
+    # Read sections headers
+    file.seek(header.e_shoff, os.SEEK_SET)
+    for i in range(header.e_shnum):
+        section_header = elf.SectionHeader()
+        section_header.read(file)
 
-            section_headers.append(section_header)
+        if not (section_header.sh_type == elf.SHT_NULL
+                or section_header.sh_type == elf.SHT_PROGBITS
+                or section_header.sh_type == elf.SHT_SYMTAB
+                or section_header.sh_type == elf.SHT_STRTAB
+                or section_header.sh_type == elf.SHT_RELA
+                or section_header.sh_type == elf.SHT_NOBITS
+                or section_header.sh_type == elf.SHT_MW_CATS):
+            fail("unsupport section type: 0x%08X = %s (%s)" % (
+                section_header.sh_type, 
+                elf.SH_TYPES[section_header.sh_type] if section_header.sh_type in elf.SH_TYPES else "????",
+                path))
 
-        # Create sections
-        list_of_sections = []
-        for i, sheader in enumerate(section_headers):
-            section = None
-            if sheader.sh_type == elf.SHT_PROGBITS:
-                section = ProgBitsSection(sheader, file)
-            elif sheader.sh_type == elf.SHT_NOBITS:
-                section = NoBitsSection(sheader)
-            elif sheader.sh_type == elf.SHT_STRTAB:
-                section = StringTableSection(sheader, file)
-                obj.str_sections[i] = section
-            elif sheader.sh_type == elf.SHT_SYMTAB:
-                section = SymbolTableSection(sheader, file)
-                obj.sym_sections[i] = section
-            elif sheader.sh_type == elf.SHT_RELA:
-                section = RelocationASection(sheader, file)
-                obj.rela_sections[i] = section
-            elif sheader.sh_type == elf.SHT_NULL:
-                section = Section(sheader)
+        section_headers.append(section_header)
 
-            assert section
-            list_of_sections.append(section)
+    # Create sections
+    idx_sections = dict()
+    for i, sheader in enumerate(section_headers):
+        section = None
+        if sheader.sh_type == elf.SHT_PROGBITS:
+            section = ProgBitsSection(sheader, file)
+        elif sheader.sh_type == elf.SHT_NOBITS:
+            section = NoBitsSection(sheader)
+        elif sheader.sh_type == elf.SHT_STRTAB:
+            section = StringTableSection(sheader, file)
+            obj.str_sections[i] = section
+        elif sheader.sh_type == elf.SHT_SYMTAB:
+            section = SymbolTableSection(sheader, file)
+            obj.sym_sections[i] = section
+        elif sheader.sh_type == elf.SHT_RELA:
+            section = RelocationASection(sheader, file)
+            obj.rela_sections[i] = section
+        elif sheader.sh_type == elf.SHT_NULL:
+            section = Section(sheader)
+        elif sheader.sh_type == elf.SHT_MW_CATS:
+            section = Section(sheader)
 
-        # Find .shstrtab containing section names
-        if header.e_shstrndx < 0 or header.e_shstrndx >= len(list_of_sections):
-            fail("header.e_shstrndx out-of-bounds")
-        shstrtab_section = list_of_sections[header.e_shstrndx]
-        if not isinstance(shstrtab_section, StringTableSection):
-            fail("header.e_shstrndx is not a string table")
+        assert section
+        idx_sections[i] = section
 
-        # Get section names
-        for i, section in enumerate(list_of_sections):
-            if section.header.sh_type == elf.SHT_NULL:
+    # Find .shstrtab containing section names
+    if not header.e_shstrndx in idx_sections:
+        fail("header.e_shstrndx out-of-bounds")
+    shstrtab_section = idx_sections[header.e_shstrndx]
+    if not isinstance(shstrtab_section, StringTableSection):
+        fail("header.e_shstrndx is not a string table")
+
+    # Get section names
+    for i, section in idx_sections.items():
+        if section.header.sh_type == elf.SHT_NULL:
+            continue
+
+        section.name = shstrtab_section.readString(section.header.sh_name)
+        if section.name:
+            obj.sections[section.name] = section
+
+    # Find all symbols
+    for symtab in obj.sym_sections.values():
+        if not symtab.header.sh_link in obj.str_sections:
+            fail("symbol table '%s' is not referenceing a valid string table section (sh_link: %i)" % (
+                symtab.name, symtab.header.sh_link))
+
+        symtab.object_offset = len(obj.symbols)
+        strtab = obj.str_sections[symtab.header.sh_link]
+        for i,sym in enumerate(symtab.symbols):
+            if i == 0:
+                symbol = NullSymbol(sym)
+                symbol.object = obj
+                obj.symbols.append(symbol)
                 continue
 
-            section.name = shstrtab_section.readString(section.header.sh_name)
-            if section.name:
-                obj.sections[section.name] = section
+            name = None
+            if sym.st_name:
+                name = strtab.readString(sym.st_name)
+            symbol = None
+            if sym.st_shndx == elf.SHN_UNDEF:
+                symbol = UndefSymbol(sym, name)
+            elif sym.st_shndx == elf.SHN_ABS:
+                symbol = AbsoluteSymbol(sym, name, sym.st_value)
+            else:
+                if not sym.st_shndx in idx_sections:
+                    fail("symbol '%s' has invalid section-id (st_shndx: %i)" % (name, sym.st_shndx))
+                symbol = OffsetSymbol(sym, name, idx_sections[sym.st_shndx], sym.st_value)
 
-        # Find all symbols
-        for symtab in obj.sym_sections.values():
-            if not symtab.header.sh_link in obj.str_sections:
-                fail("symbol table '%s' is not referenceing a valid string table section (sh_link: %i)" % (
-                    symtab.name, symtab.header.sh_link))
+            assert symbol
+            symbol.object = obj
 
-            symtab.object_offset = len(obj.symbols)
-            strtab = obj.str_sections[symtab.header.sh_link]
-            for i,sym in enumerate(symtab.symbols):
-                if i == 0:
-                    symbol = NullSymbol(sym)
-                    symbol.object = obj
-                    obj.symbols.append(symbol)
-                    continue
+            if symbol.name:
+                if symbol.name in obj.symbol_map:
+                    fail("multiple definition of '%s'" % symbol.name)
+                obj.symbol_map[symbol] = symbol
 
-                name = None
-                if sym.st_name:
-                    name = strtab.readString(sym.st_name)
-                symbol = None
-                if sym.st_shndx == elf.SHN_UNDEF:
-                    symbol = UndefSymbol(sym, name)
-                elif sym.st_shndx == elf.SHN_ABS:
-                    symbol = AbsoluteSymbol(sym, name, sym.st_value)
-                else:
-                    symbol = OffsetSymbol(sym, name, list_of_sections[sym.st_shndx], sym.st_value)
+            obj.symbols.append(symbol)
 
-                assert symbol
-                symbol.object = obj
+    # Find all relocations
+    for rela_section in obj.rela_sections.values():
+        if not rela_section.header.sh_link in obj.sym_sections:
+            fail("relocation section '%s' is not referenceing a valid symbol table section (sh_link: %i)" % (
+                symtab.name, rela_section.header.sh_link))
+        if not rela_section.header.sh_info in idx_sections:
+            fail("relocation section '%s' is not referenceing a valid section (sh_info: %i)" % (
+                symtab.name, rela_section.header.sh_info))
 
-                if symbol.name:
-                    if symbol.name in obj.symbol_map:
-                        fail("multiple definition of '%s'" % symbol.name)
-                    obj.symbol_map[symbol] = symbol
+        symtab = obj.sym_sections[rela_section.header.sh_link]
+        modify = idx_sections[rela_section.header.sh_info]
 
-                obj.symbols.append(symbol)
+        for rela in rela_section.relocations:
+            type  = elf.R_TYPE(rela.r_info)
+            sym_id = elf.R_SYM(rela.r_info)
+            if not type in RELOCATION_NAMES:
+                fail("unsupported relocation type: 0x%02X (in '%s')" % (type, path))
+            
+            if sym_id < 0 or sym_id >= len(symtab.symbols):
+                fail("invalid symbol index: %i (%i symbols)" % (sym_id, len(symtab.symbols)))
+            symbol = obj.symbols[symtab.object_offset + sym_id]
 
-        # Find all relocations
-        for rela_section in obj.rela_sections.values():
-            if not rela_section.header.sh_link in obj.sym_sections:
-                fail("relocation section '%s' is not referenceing a valid symbol table section (sh_link: %i)" % (
-                    symtab.name, rela_section.header.sh_link))
-            if rela_section.header.sh_info <= 0 or rela_section.header.sh_info > len(list_of_sections):
-                fail("relocation section '%s' is not referenceing a valid section (sh_info: %i)" % (
-                    symtab.name, rela_section.header.sh_info))
+            relocation = None
+            if type == 1:
+                relocation = R_PPC_ADDR32(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 3:
+                relocation = R_PPC_ADDR16(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 4:
+                relocation = R_PPC_ADDR16_LO(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 5:
+                relocation = R_PPC_ADDR16_HI(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 6:
+                relocation = R_PPC_ADDR16_HA(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 10:
+                relocation = R_PPC_REL24(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 11:
+                relocation = R_PPC_REL14(symbol, modify, rela.r_offset, rela.r_addend)
+            elif type == 109:
+                relocation = R_PPC_EMB_SDA21(symbol, modify, rela.r_offset, rela.r_addend)
 
-            symtab = obj.sym_sections[rela_section.header.sh_link]
-            modify = list_of_sections[rela_section.header.sh_info]
-
-            for rela in rela_section.relocations:
-                type  = elf.R_TYPE(rela.r_info)
-                sym_id = elf.R_SYM(rela.r_info)
-                if not type in RELOCATION_NAMES:
-                    fail("unsupported relocation type: 0x%02X (in '%s')" % (type, path))
-                
-                if sym_id < 0 or sym_id >= len(symtab.symbols):
-                    fail("invalid symbol index: %i (%i symbols)" % (sym_id, len(symtab.symbols)))
-                symbol = obj.symbols[symtab.object_offset + sym_id]
-
-                relocation = None
-                if type == 1:
-                    relocation = R_PPC_ADDR32(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 3:
-                    relocation = R_PPC_ADDR16(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 4:
-                    relocation = R_PPC_ADDR16_LO(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 5:
-                    relocation = R_PPC_ADDR16_HI(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 6:
-                    relocation = R_PPC_ADDR16_HA(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 10:
-                    relocation = R_PPC_REL24(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 11:
-                    relocation = R_PPC_REL14(symbol, modify, rela.r_offset, rela.r_addend)
-                elif type == 109:
-                    relocation = R_PPC_EMB_SDA21(symbol, modify, rela.r_offset, rela.r_addend)
-
-                assert relocation
-                obj.relocations.append(relocation)
+            assert relocation
+            obj.relocations.append(relocation)
 
     return obj
+
+def load(path):
+    with open(path, 'rb') as file:
+        return load_f(path, path.parts[-1], file)

@@ -128,15 +128,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804341D8 000C .bss       @1539                          Z2Audience__LIT_1539           */
-.global Z2Audience__LIT_1539
-Z2Audience__LIT_1539:
-.skip 0xc
 
 /* 804341E4 0010 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9Z2Audible>Fv data_804341E4                  */
-.global data_804341E4
-data_804341E4:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -144,24 +137,10 @@ data_804341E4:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451350 0004 .sbss      cNearFarRatio                  cNearFarRatio                  */
-.global cNearFarRatio
-cNearFarRatio:
-.skip 0x4
 
 /* 80451354 0004 .sbss      data_80451354                  data_80451354                  */
-.global data_80451354
-data_80451354:
-.skip 0x4
 
-/* 80451358 0001 .sbss      data_80451358                  data_80451358                  */
-.global data_80451358
-data_80451358:
-.skip 0x1
-
-/* 80451359 0007 .sbss      data_80451359                  data_80451359                  */
-.global data_80451359
-data_80451359:
-.skip 0x7
+/* 80451358 0008 .sbss      merged_80451358                merged_80451358                */
 
 
 /* ###################################################################################### */

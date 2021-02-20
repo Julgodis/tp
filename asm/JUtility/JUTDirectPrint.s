@@ -52,10 +52,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451528 0004 .sbss      sDirectPrint__14JUTDirectPrint sDirectPrint__14JUTDirectPrint */
-.global sDirectPrint__14JUTDirectPrint
-sDirectPrint__14JUTDirectPrint:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

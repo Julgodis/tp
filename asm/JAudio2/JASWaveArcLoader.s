@@ -53,8 +53,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451290 0004 .sbss      sAramHeap__16JASWaveArcLoader  sAramHeap__16JASWaveArcLoader  */
-.global sAramHeap__16JASWaveArcLoader
-sAramHeap__16JASWaveArcLoader:
-.skip 0x4
-.skip 0x4 /* padding */
 

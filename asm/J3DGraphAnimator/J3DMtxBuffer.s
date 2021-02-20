@@ -34,15 +34,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804371C0 0030 .bss       sNoUseDrawMtx__12J3DMtxBuffer  sNoUseDrawMtx__12J3DMtxBuffer  */
-.global sNoUseDrawMtx__12J3DMtxBuffer
-sNoUseDrawMtx__12J3DMtxBuffer:
-.skip 0x30
 
 /* 804371F0 0024 .bss       sNoUseNrmMtx__12J3DMtxBuffer   sNoUseNrmMtx__12J3DMtxBuffer   */
-.global sNoUseNrmMtx__12J3DMtxBuffer
-sNoUseNrmMtx__12J3DMtxBuffer:
-.skip 0x24
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

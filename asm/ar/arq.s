@@ -36,52 +36,22 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804518D8 0004 .sbss      __ARQRequestQueueHi            __ARQRequestQueueHi            */
-.global __ARQRequestQueueHi
-__ARQRequestQueueHi:
-.skip 0x4
 
 /* 804518DC 0004 .sbss      __ARQRequestTailHi             __ARQRequestTailHi             */
-.global __ARQRequestTailHi
-__ARQRequestTailHi:
-.skip 0x4
 
 /* 804518E0 0004 .sbss      __ARQRequestQueueLo            __ARQRequestQueueLo            */
-.global __ARQRequestQueueLo
-__ARQRequestQueueLo:
-.skip 0x4
 
 /* 804518E4 0004 .sbss      __ARQRequestTailLo             __ARQRequestTailLo             */
-.global __ARQRequestTailLo
-__ARQRequestTailLo:
-.skip 0x4
 
 /* 804518E8 0004 .sbss      __ARQRequestPendingHi          __ARQRequestPendingHi          */
-.global __ARQRequestPendingHi
-__ARQRequestPendingHi:
-.skip 0x4
 
 /* 804518EC 0004 .sbss      __ARQRequestPendingLo          __ARQRequestPendingLo          */
-.global __ARQRequestPendingLo
-__ARQRequestPendingLo:
-.skip 0x4
 
 /* 804518F0 0004 .sbss      __ARQCallbackHi                __ARQCallbackHi                */
-.global __ARQCallbackHi
-__ARQCallbackHi:
-.skip 0x4
 
 /* 804518F4 0004 .sbss      __ARQCallbackLo                __ARQCallbackLo                */
-.global __ARQCallbackLo
-__ARQCallbackLo:
-.skip 0x4
 
 /* 804518F8 0004 .sbss      __ARQChunkSize                 __ARQChunkSize                 */
-.global __ARQChunkSize
-__ARQChunkSize:
-.skip 0x4
 
 /* 804518FC 0004 .sbss      __ARQ_init_flag                __ARQ_init_flag                */
-.global __ARQ_init_flag
-__ARQ_init_flag:
-.skip 0x4
 

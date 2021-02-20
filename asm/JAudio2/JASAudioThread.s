@@ -38,10 +38,6 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431C68 000C .bss       @205                           LIT_205                        */
-.global LIT_205
-LIT_205:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -49,8 +45,4 @@ LIT_205:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804512D8 0004 .sbss      snIntCount__14JASAudioThread   snIntCount__14JASAudioThread   */
-.global snIntCount__14JASAudioThread
-snIntCount__14JASAudioThread:
-.skip 0x4
-.skip 0x4 /* padding */
 

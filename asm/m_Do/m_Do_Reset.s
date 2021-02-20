@@ -27,23 +27,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450C78 0004 .sbss      mResetData__6mDoRst            mResetData__6mDoRst            */
-.global mResetData__6mDoRst
-mResetData__6mDoRst:
-.skip 0x4
-.skip 0x4 /* padding */
 
-/* 80450C80 0001 .sbss      data_80450C80                  data_80450C80                  */
-.global data_80450C80
-data_80450C80:
-.skip 0x1
-
-/* 80450C81 0007 .sbss      data_80450C81                  data_80450C81                  */
-.global data_80450C81
-data_80450C81:
-.skip 0x7
+/* 80450C80 0008 .sbss      merged_80450C80                merged_80450C80                */
 
 /* 80450C88 0008 .sbss      data_80450C88                  data_80450C88                  */
-.global data_80450C88
-data_80450C88:
-.skip 0x8
 

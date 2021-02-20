@@ -32,8 +32,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451280 0004 .sbss      sUsedHeapSize__11JASWSParser   sUsedHeapSize__11JASWSParser   */
-.global sUsedHeapSize__11JASWSParser
-sUsedHeapSize__11JASWSParser:
-.skip 0x4
-.skip 0x4 /* padding */
 

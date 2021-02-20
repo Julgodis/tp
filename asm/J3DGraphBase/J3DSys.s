@@ -60,30 +60,14 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434AC8 011C .bss       j3dSys                         j3dSys                         */
-.global j3dSys
-j3dSys:
-.skip 0x11c
 
 /* 80434BE4 0030 .bss       mCurrentMtx__6J3DSys           mCurrentMtx__6J3DSys           */
-.global mCurrentMtx__6J3DSys
-mCurrentMtx__6J3DSys:
-.skip 0x30
 
 /* 80434C14 000C .bss       mCurrentS__6J3DSys             mCurrentS__6J3DSys             */
-.global mCurrentS__6J3DSys
-mCurrentS__6J3DSys:
-.skip 0xc
 
 /* 80434C20 000C .bss       mParentS__6J3DSys              mParentS__6J3DSys              */
-.global mParentS__6J3DSys
-mParentS__6J3DSys:
-.skip 0xc
 
 /* 80434C2C 0040 .bss       sTexCoordScaleTable__6J3DSys   sTexCoordScaleTable__6J3DSys   */
-.global sTexCoordScaleTable__6J3DSys
-sTexCoordScaleTable__6J3DSys:
-.skip 0x40
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -100,10 +84,6 @@ sTexCoordScaleTable__6J3DSys:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451598 0004 .sbss      j3dDefaultViewNo               j3dDefaultViewNo               */
-.global j3dDefaultViewNo
-j3dDefaultViewNo:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

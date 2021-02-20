@@ -46,42 +46,18 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804518B8 0004 .sbss      __AR_Callback                  __AR_Callback                  */
-.global __AR_Callback
-__AR_Callback:
-.skip 0x4
 
 /* 804518BC 0004 .sbss      __AR_Size                      __AR_Size                      */
-.global __AR_Size
-__AR_Size:
-.skip 0x4
 
 /* 804518C0 0004 .sbss      __AR_InternalSize              __AR_InternalSize              */
-.global __AR_InternalSize
-__AR_InternalSize:
-.skip 0x4
 
 /* 804518C4 0004 .sbss      __AR_ExpansionSize             __AR_ExpansionSize             */
-.global __AR_ExpansionSize
-__AR_ExpansionSize:
-.skip 0x4
 
 /* 804518C8 0004 .sbss      __AR_StackPointer              __AR_StackPointer              */
-.global __AR_StackPointer
-__AR_StackPointer:
-.skip 0x4
 
 /* 804518CC 0004 .sbss      __AR_FreeBlocks                __AR_FreeBlocks                */
-.global __AR_FreeBlocks
-__AR_FreeBlocks:
-.skip 0x4
 
 /* 804518D0 0004 .sbss      __AR_BlockLength               __AR_BlockLength               */
-.global __AR_BlockLength
-__AR_BlockLength:
-.skip 0x4
 
 /* 804518D4 0004 .sbss      __AR_init_flag                 __AR_init_flag                 */
-.global __AR_init_flag
-__AR_init_flag:
-.skip 0x4
 

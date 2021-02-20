@@ -224,173 +224,72 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80428610 0000 .bss       ...bss.0                       data_80428610                  */
-.global data_80428610
-data_80428610:
 
 /* 80428610 000C .bss       @3982                          LIT_3982                       */
-.global LIT_3982
-LIT_3982:
-.skip 0xc
 
 /* 8042861C 400C .bss       l_Cd2_HIO                      l_Cd2_HIO                      */
-.global l_Cd2_HIO
-l_Cd2_HIO:
-.skip 0x400c
 
 /* 8042C628 000C .bss       @4290                          d_d_a_npc_cd2__LIT_4290        */
-.global d_d_a_npc_cd2__LIT_4290
-d_d_a_npc_cd2__LIT_4290:
-.skip 0xc
 
 /* 8042C634 000C .bss       @4293                          d_d_a_npc_cd2__LIT_4293        */
-.global d_d_a_npc_cd2__LIT_4293
-d_d_a_npc_cd2__LIT_4293:
-.skip 0xc
 
 /* 8042C640 000C .bss       @4294                          d_d_a_npc_cd2__LIT_4294        */
-.global d_d_a_npc_cd2__LIT_4294
-d_d_a_npc_cd2__LIT_4294:
-.skip 0xc
 
 /* 8042C64C 000C .bss       @4295                          d_d_a_npc_cd2__LIT_4295        */
-.global d_d_a_npc_cd2__LIT_4295
-d_d_a_npc_cd2__LIT_4295:
-.skip 0xc
 
 /* 8042C658 000C .bss       @4296                          d_d_a_npc_cd2__LIT_4296        */
-.global d_d_a_npc_cd2__LIT_4296
-d_d_a_npc_cd2__LIT_4296:
-.skip 0xc
 
 /* 8042C664 000C .bss       @4297                          d_d_a_npc_cd2__LIT_4297        */
-.global d_d_a_npc_cd2__LIT_4297
-d_d_a_npc_cd2__LIT_4297:
-.skip 0xc
 
 /* 8042C670 000C .bss       @4298                          d_d_a_npc_cd2__LIT_4298        */
-.global d_d_a_npc_cd2__LIT_4298
-d_d_a_npc_cd2__LIT_4298:
-.skip 0xc
 
 /* 8042C67C 000C .bss       @4299                          d_d_a_npc_cd2__LIT_4299        */
-.global d_d_a_npc_cd2__LIT_4299
-d_d_a_npc_cd2__LIT_4299:
-.skip 0xc
 
 /* 8042C688 000C .bss       @4300                          d_d_a_npc_cd2__LIT_4300        */
-.global d_d_a_npc_cd2__LIT_4300
-d_d_a_npc_cd2__LIT_4300:
-.skip 0xc
 
 /* 8042C694 000C .bss       @4301                          d_d_a_npc_cd2__LIT_4301        */
-.global d_d_a_npc_cd2__LIT_4301
-d_d_a_npc_cd2__LIT_4301:
-.skip 0xc
 
 /* 8042C6A0 000C .bss       @4302                          d_d_a_npc_cd2__LIT_4302        */
-.global d_d_a_npc_cd2__LIT_4302
-d_d_a_npc_cd2__LIT_4302:
-.skip 0xc
 
 /* 8042C6AC 000C .bss       @4303                          d_d_a_npc_cd2__LIT_4303        */
-.global d_d_a_npc_cd2__LIT_4303
-d_d_a_npc_cd2__LIT_4303:
-.skip 0xc
 
 /* 8042C6B8 000C .bss       @4304                          d_d_a_npc_cd2__LIT_4304        */
-.global d_d_a_npc_cd2__LIT_4304
-d_d_a_npc_cd2__LIT_4304:
-.skip 0xc
 
 /* 8042C6C4 000C .bss       @4305                          d_d_a_npc_cd2__LIT_4305        */
-.global d_d_a_npc_cd2__LIT_4305
-d_d_a_npc_cd2__LIT_4305:
-.skip 0xc
 
 /* 8042C6D0 000C .bss       @4306                          d_d_a_npc_cd2__LIT_4306        */
-.global d_d_a_npc_cd2__LIT_4306
-d_d_a_npc_cd2__LIT_4306:
-.skip 0xc
 
 /* 8042C6DC 000C .bss       @4307                          d_d_a_npc_cd2__LIT_4307        */
-.global d_d_a_npc_cd2__LIT_4307
-d_d_a_npc_cd2__LIT_4307:
-.skip 0xc
 
 /* 8042C6E8 000C .bss       @4308                          d_d_a_npc_cd2__LIT_4308        */
-.global d_d_a_npc_cd2__LIT_4308
-d_d_a_npc_cd2__LIT_4308:
-.skip 0xc
 
 /* 8042C6F4 000C .bss       @4309                          d_d_a_npc_cd2__LIT_4309        */
-.global d_d_a_npc_cd2__LIT_4309
-d_d_a_npc_cd2__LIT_4309:
-.skip 0xc
 
 /* 8042C700 000C .bss       @4310                          d_d_a_npc_cd2__LIT_4310        */
-.global d_d_a_npc_cd2__LIT_4310
-d_d_a_npc_cd2__LIT_4310:
-.skip 0xc
 
 /* 8042C70C 000C .bss       @4311                          d_d_a_npc_cd2__LIT_4311        */
-.global d_d_a_npc_cd2__LIT_4311
-d_d_a_npc_cd2__LIT_4311:
-.skip 0xc
 
 /* 8042C718 000C .bss       @4312                          d_d_a_npc_cd2__LIT_4312        */
-.global d_d_a_npc_cd2__LIT_4312
-d_d_a_npc_cd2__LIT_4312:
-.skip 0xc
 
 /* 8042C724 000C .bss       @4313                          d_d_a_npc_cd2__LIT_4313        */
-.global d_d_a_npc_cd2__LIT_4313
-d_d_a_npc_cd2__LIT_4313:
-.skip 0xc
 
 /* 8042C730 000C .bss       @4314                          d_d_a_npc_cd2__LIT_4314        */
-.global d_d_a_npc_cd2__LIT_4314
-d_d_a_npc_cd2__LIT_4314:
-.skip 0xc
 
 /* 8042C73C 000C .bss       @4315                          d_d_a_npc_cd2__LIT_4315        */
-.global d_d_a_npc_cd2__LIT_4315
-d_d_a_npc_cd2__LIT_4315:
-.skip 0xc
 
 /* 8042C748 000C .bss       @4316                          d_d_a_npc_cd2__LIT_4316        */
-.global d_d_a_npc_cd2__LIT_4316
-d_d_a_npc_cd2__LIT_4316:
-.skip 0xc
 
 /* 8042C754 000C .bss       @4317                          d_d_a_npc_cd2__LIT_4317        */
-.global d_d_a_npc_cd2__LIT_4317
-d_d_a_npc_cd2__LIT_4317:
-.skip 0xc
 
 /* 8042C760 000C .bss       @4318                          d_d_a_npc_cd2__LIT_4318        */
-.global d_d_a_npc_cd2__LIT_4318
-d_d_a_npc_cd2__LIT_4318:
-.skip 0xc
 
 /* 8042C76C 000C .bss       @4319                          d_d_a_npc_cd2__LIT_4319        */
-.global d_d_a_npc_cd2__LIT_4319
-d_d_a_npc_cd2__LIT_4319:
-.skip 0xc
 
 /* 8042C778 000C .bss       @4320                          d_d_a_npc_cd2__LIT_4320        */
-.global d_d_a_npc_cd2__LIT_4320
-d_d_a_npc_cd2__LIT_4320:
-.skip 0xc
 
 /* 8042C784 000C .bss       @4321                          d_d_a_npc_cd2__LIT_4321        */
-.global d_d_a_npc_cd2__LIT_4321
-d_d_a_npc_cd2__LIT_4321:
-.skip 0xc
 
 /* 8042C790 0168 .bss       a_eyeOfsTbl$4289               data_8042C790                  */
-.global data_8042C790
-data_8042C790:
-.skip 0x168
 
 
 /* ###################################################################################### */
@@ -398,25 +297,12 @@ data_8042C790:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451004 0004 .sbss      target                         target                         */
-.global target
-target:
-.skip 0x4
 
 /* 80451008 0004 .sbss      targetWay                      targetWay                      */
-.global targetWay
-targetWay:
-.skip 0x4
 
 /* 8045100C 0002 .sbss      wolfAngle                      wolfAngle                      */
-.global wolfAngle
-wolfAngle:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80451010 0008 .sbss      data_80451010                  data_80451010                  */
-.global data_80451010
-data_80451010:
-.skip 0x8
 
 
 /* ###################################################################################### */

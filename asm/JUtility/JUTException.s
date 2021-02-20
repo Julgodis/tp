@@ -96,25 +96,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434578 0014 .bss       exCallbackObject               exCallbackObject               */
-.global exCallbackObject
-exCallbackObject:
-.skip 0x14
 
 /* 8043458C 000C .bss       @2182                          JUTException__LIT_2182         */
-.global JUTException__LIT_2182
-JUTException__LIT_2182:
-.skip 0xc
 
 /* 80434598 000C .bss       sMapFileList__12JUTException   sMapFileList__12JUTException   */
-.global sMapFileList__12JUTException
-sMapFileList__12JUTException:
-.skip 0xc
-.skip 0x4 /* padding */
 
 /* 804345A8 02C8 .bss       context$2230                   data_804345A8                  */
-.global data_804345A8
-data_804345A8:
-.skip 0x2c8
 
 
 /* ###################################################################################### */
@@ -131,44 +118,20 @@ data_804345A8:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451508 0004 .sbss      sErrorManager__12JUTException  sErrorManager__12JUTException  */
-.global sErrorManager__12JUTException
-sErrorManager__12JUTException:
-.skip 0x4
 
 /* 8045150C 0004 .sbss      sPreUserCallback__12JUTException sPreUserCallback__12JUTException */
-.global sPreUserCallback__12JUTException
-sPreUserCallback__12JUTException:
-.skip 0x4
 
 /* 80451510 0004 .sbss      sPostUserCallback__12JUTException sPostUserCallback__12JUTException */
-.global sPostUserCallback__12JUTException
-sPostUserCallback__12JUTException:
-.skip 0x4
 
 /* 80451514 0004 .sbss      sConsoleBuffer__12JUTException sConsoleBuffer__12JUTException */
-.global sConsoleBuffer__12JUTException
-sConsoleBuffer__12JUTException:
-.skip 0x4
 
 /* 80451518 0004 .sbss      sConsoleBufferSize__12JUTException sConsoleBufferSize__12JUTException */
-.global sConsoleBufferSize__12JUTException
-sConsoleBufferSize__12JUTException:
-.skip 0x4
 
 /* 8045151C 0004 .sbss      sConsole__12JUTException       sConsole__12JUTException       */
-.global sConsole__12JUTException
-sConsole__12JUTException:
-.skip 0x4
 
 /* 80451520 0004 .sbss      msr__12JUTException            msr__12JUTException            */
-.global msr__12JUTException
-msr__12JUTException:
-.skip 0x4
 
 /* 80451524 0004 .sbss      fpscr__12JUTException          fpscr__12JUTException          */
-.global fpscr__12JUTException
-fpscr__12JUTException:
-.skip 0x4
 
 
 /* ###################################################################################### */

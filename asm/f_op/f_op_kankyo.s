@@ -27,8 +27,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CE8 0004 .sbss      fopKy_KANKYO_TYPE              fopKy_KANKYO_TYPE              */
-.global fopKy_KANKYO_TYPE
-fopKy_KANKYO_TYPE:
-.skip 0x4
-.skip 0x4 /* padding */
 

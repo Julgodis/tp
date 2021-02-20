@@ -34,18 +34,8 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451660 0004 .sbss      FontDataAnsi                   FontDataAnsi                   */
-.global FontDataAnsi
-FontDataAnsi:
-.skip 0x4
 
 /* 80451664 0004 .sbss      FontDataSjis                   FontDataSjis                   */
-.global FontDataSjis
-FontDataSjis:
-.skip 0x4
 
 /* 80451668 0004 .sbss      ParseString                    ParseString                    */
-.global ParseString
-ParseString:
-.skip 0x4
-.skip 0x4 /* padding */
 

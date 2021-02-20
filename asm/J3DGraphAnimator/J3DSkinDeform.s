@@ -72,20 +72,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80437218 1000 .bss       sWorkArea_WEvlpMixMtx__13J3DSkinDeform sWorkArea_WEvlpMixMtx__13J3DSkinDeform */
-.global sWorkArea_WEvlpMixMtx__13J3DSkinDeform
-sWorkArea_WEvlpMixMtx__13J3DSkinDeform:
-.skip 0x1000
 
 /* 80438218 1000 .bss       sWorkArea_WEvlpMixWeight__13J3DSkinDeform sWorkArea_WEvlpMixWeight__13J3DSkinDeform */
-.global sWorkArea_WEvlpMixWeight__13J3DSkinDeform
-sWorkArea_WEvlpMixWeight__13J3DSkinDeform:
-.skip 0x1000
 
 /* 80439218 0800 .bss       sWorkArea_MtxReg__13J3DSkinDeform sWorkArea_MtxReg__13J3DSkinDeform */
-.global sWorkArea_MtxReg__13J3DSkinDeform
-sWorkArea_MtxReg__13J3DSkinDeform:
-.skip 0x800
-.skip 0x8 /* padding */
 
 
 /* ###################################################################################### */

@@ -59,59 +59,20 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450BF4 0004 .sbss      solidHeapErrors                solidHeapErrors                */
-.global solidHeapErrors
-solidHeapErrors:
-.skip 0x4
 
 /* 80450BF8 0004 .sbss      gameHeapErrors                 gameHeapErrors                 */
-.global gameHeapErrors
-gameHeapErrors:
-.skip 0x4
 
 /* 80450BFC 0004 .sbss      zeldaHeapErrors                zeldaHeapErrors                */
-.global zeldaHeapErrors
-zeldaHeapErrors:
-.skip 0x4
 
 /* 80450C00 0004 .sbss      commandHeapErrors              commandHeapErrors              */
-.global commandHeapErrors
-commandHeapErrors:
-.skip 0x4
 
 /* 80450C04 0004 .sbss      archiveHeapErrors              archiveHeapErrors              */
-.global archiveHeapErrors
-archiveHeapErrors:
-.skip 0x4
 
 /* 80450C08 0004 .sbss      unknownHeapErrors              unknownHeapErrors              */
-.global unknownHeapErrors
-unknownHeapErrors:
-.skip 0x4
 
 /* 80450C0C 0004 .sbss      heapErrors                     heapErrors                     */
-.global heapErrors
-heapErrors:
-.skip 0x4
 
-/* 80450C10 0005 .sbss      tmpString$3651                 data_80450C10                  */
-.global data_80450C10
-data_80450C10:
-.skip 0x5
-
-/* 80450C15 0001 .sbss      data_80450C15                  data_80450C15                  */
-.global data_80450C15
-data_80450C15:
-.skip 0x1
-
-/* 80450C16 0001 .sbss      data_80450C16                  data_80450C16                  */
-.global data_80450C16
-data_80450C16:
-.skip 0x1
-
-/* 80450C17 0001 .sbss      data_80450C17                  data_80450C17                  */
-.global data_80450C17
-data_80450C17:
-.skip 0x1
+/* 80450C10 0008 .sbss      merged_80450C10                merged_80450C10                */
 
 
 /* ###################################################################################### */

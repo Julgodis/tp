@@ -24,8 +24,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450DF8 0004 .sbss      m_top__12daTagHstop_c          m_top__12daTagHstop_c          */
-.global m_top__12daTagHstop_c
-m_top__12daTagHstop_c:
-.skip 0x4
-.skip 0x4 /* padding */
 

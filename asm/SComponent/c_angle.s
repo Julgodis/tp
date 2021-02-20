@@ -116,34 +116,16 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430F98 0000 .bss       ...bss.0                       data_80430F98                  */
-.global data_80430F98
-data_80430F98:
 
 /* 80430F98 000C .bss       @2401                          LIT_2401                       */
-.global LIT_2401
-LIT_2401:
-.skip 0xc
 
 /* 80430FA4 000C .bss       @2402                          LIT_2402                       */
-.global LIT_2402
-LIT_2402:
-.skip 0xc
 
 /* 80430FB0 000C .bss       @2403                          LIT_2403                       */
-.global LIT_2403
-LIT_2403:
-.skip 0xc
 
 /* 80430FBC 000C .bss       @2404                          LIT_2404                       */
-.global LIT_2404
-LIT_2404:
-.skip 0xc
 
 /* 80430FC8 000C .bss       @2405                          c_angle__LIT_2405              */
-.global c_angle__LIT_2405
-c_angle__LIT_2405:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -151,34 +133,14 @@ c_angle__LIT_2405:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451188 0002 .sbss      _0__7cSAngle                   _0__7cSAngle                   */
-.global _0__7cSAngle
-_0__7cSAngle:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 8045118C 0002 .sbss      _1__7cSAngle                   _1__7cSAngle                   */
-.global _1__7cSAngle
-_1__7cSAngle:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80451190 0002 .sbss      _90__7cSAngle                  _90__7cSAngle                  */
-.global _90__7cSAngle
-_90__7cSAngle:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80451194 0002 .sbss      _180__7cSAngle                 _180__7cSAngle                 */
-.global _180__7cSAngle
-_180__7cSAngle:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 80451198 0002 .sbss      _270__7cSAngle                 _270__7cSAngle                 */
-.global _270__7cSAngle
-_270__7cSAngle:
-.skip 0x2
-.skip 0x6 /* padding */
 
 
 /* ###################################################################################### */

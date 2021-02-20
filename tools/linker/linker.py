@@ -51,7 +51,11 @@ LAYOUT = [
     Layout(".sbss2", 0x08, 0x00, elf.SHT_NOBITS, [
            elf.SHF_ALLOC, elf.SHF_WRITE], [elf.PF_R, elf.PF_W])
 ]
+
 SECTIONS = [x.name for x in LAYOUT]
+
+import undefined_active
+UNDEFINED_ACTIVE = undefined_active.SYMBOLS
 
 #
 #
@@ -114,11 +118,16 @@ def link(src, output, map):
 
     for obj in objects:
         for obj_section in obj.sections.values():
+            obj_section.object = obj
             if obj_section.name in sections:
                 section = sections[obj_section.name]
 
                 if obj_section.name == ".sdata":
-                    obj_section.alignment = 0
+                    obj_section.alignment = 4
+                if obj_section.name == ".sbss":
+                    obj_section.alignment = 4
+                if obj_section.name == ".bss":
+                    obj_section.alignment = 4
 
                 if section.section_type != obj_section.header.sh_type:
                     fail("section incorrect sh_type")
@@ -137,6 +146,7 @@ def link(src, output, map):
     # 2. Resolve Symbols
     symbols: Dict[str, objs.Symbol] = dict()
     symbol_list: [objs.Symbol] = list()
+    undefined_symbol_list: [objs.Symbol] = list()
     undef_symbols: List[objs.UndefSymbol] = list()
 
     for obj in objects:
@@ -170,7 +180,26 @@ def link(src, output, map):
             continue
 
         if not symbol.name in symbols:
-            fail("undefined reference: '%s'" % symbol.name)
+            if symbol.name in UNDEFINED_ACTIVE:
+                undefined_addr, undefined_section, undefined_type = UNDEFINED_ACTIVE[symbol.name]
+                undefined_sym = objs.AbsoluteSymbol(elf.Symbol(), symbol.name, undefined_addr)
+                undefined_sym.bind = elf.STB_GLOBAL
+                undefined_sym.type = undefined_type
+                undefined_sym.visibility = elf.STV_DEFAULT
+                undefined_sym.size = symbol.size
+                undefined_sym.used += 1
+                undefined_sym.section = objs.Section(elf.SectionHeader())
+                undefined_sym.section.name = undefined_section
+
+                undefined_sym.object = symbol.object
+                undefined_symbol_list.append(undefined_sym)
+                symbol_list.append(undefined_sym)
+                symbols[symbol.name] = undefined_sym
+
+                symbol.reference = undefined_sym
+                symbol.reference.used += symbol.used
+            else:
+                fail("undefined reference: '%s'" % symbol.name)
 
         symbol.reference = symbols[symbol.name]
         symbol.reference.used += symbol.used
@@ -198,6 +227,7 @@ def link(src, output, map):
             file_addr = align(file_addr, obj_section.alignment)
             obj_section.file_addr = file_addr
             obj_section.addr = base
+            print("%08X %s" % (obj_section.addr, obj_section.object.name))
             base += obj_section.size
             if obj_section.data != None:
                 assert len(obj_section.data) == obj_section.size
@@ -223,7 +253,7 @@ def link(src, output, map):
             assert symbol.addr != None
             try:
                 relocation.replace()
-            except RelocationException:
+            except objs.RelocationException:
                 relocation_failed_count += 1
 
     if relocation_failed_count > 0:
@@ -247,7 +277,7 @@ def link(src, output, map):
     elf_symbols = []
 
     null_section = elf.SectionHeader()
-    elf_sect_ph.append((null_section, None))
+    elf_sect_ph.append((null_section, None, None))
     elf_symbols.append(elf.Symbol())
 
     for i, section in enumerate(sections.values()):
@@ -260,17 +290,25 @@ def link(src, output, map):
             obj_section.index = i + 1
         elf_symbols.append(st)
 
+    #symbol_addr_dict = defaultdict(list)
     for symbol in symbol_list:
         if isinstance(symbol, objs.NullSymbol):
             continue
 
         if symbol.addr == None:
             symbol.resolveAddress()
+            #symbol_addr_dict[symbol.addr].append(symbol)
+
+    #for undef_symbol in undefined_symbol_list:
+    #    syms = [x for x in symbol_addr_dict[undef_symbol.addr] if x != undef_symbol]
+    #    if len(syms) > 0:
+            
+
 
     def symbol_sort(x):
         if not x.addr:
-            return (0, 0)
-        return (x.bind, x.addr)
+            return (0, 0, 0)
+        return (x.bind, x.addr, x.size)
 
     symbol_list.sort(key=symbol_sort)
     first_global = None
@@ -283,8 +321,8 @@ def link(src, output, map):
                 first_global = len(elf_symbols)
 
         #
-        if isinstance(symbol, objs.AbsoluteSymbol):
-            continue
+        #if isinstance(symbol, objs.AbsoluteSymbol):
+        #    continue
 
         st = elf.Symbol()
         st.st_info = elf.ST_INFO(symbol.bind, symbol.type)
@@ -320,7 +358,7 @@ def link(src, output, map):
         ph.p_memsz = section.size
         ph.p_align = 32
         ph.p_flags = section.program_flags
-        elf_sect_ph.append((sect, ph))
+        elf_sect_ph.append((sect, ph, section))
 
     symtab_data = io.BytesIO()
     for symbol in elf_symbols:
@@ -360,11 +398,11 @@ def link(src, output, map):
     elf_shstrtab.data = bytes(section_str)
     elf_shstrtab.sh_size = len(elf_shstrtab.data)
 
-    elf_sect_ph.append((elf_symtab, None))
+    elf_sect_ph.append((elf_symtab, None, None))
     shstrtab_index = len(elf_sect_ph)
-    elf_sect_ph.append((elf_shstrtab, None))
+    elf_sect_ph.append((elf_shstrtab, None, None))
     elf_symtab.sh_link = len(elf_sect_ph)
-    elf_sect_ph.append((elf_strtab, None))
+    elf_sect_ph.append((elf_strtab, None, None))
 
     with output.open("wb") as file:
         header_offset = file.tell()
@@ -379,17 +417,18 @@ def link(src, output, map):
 
         ph_count = 0
         ph_offset = file.tell()
-        for sect, ph in elf_sect_ph:
+        for sect, ph, x in elf_sect_ph:
             if ph:
                 ph.write(file)
                 ph_count += 1
 
-        for sect, ph in elf_sect_ph:
+        for sect, ph, x in elf_sect_ph:
             if sect:
                 if not sect.sh_type == elf.SHT_NULL:
                     file_align(file, 0x10)
                     sect.sh_offset = file.tell()
-                    print(sect.sh_size)
+                    if x:
+                        x.file_offset = sect.sh_offset
                     file.write(sect.data)
 
                 if ph:
@@ -398,19 +437,19 @@ def link(src, output, map):
 
         sh_count = 0
         sh_offset = file.tell()
-        for sect, ph in elf_sect_ph:
+        for sect, ph, x in elf_sect_ph:
             if sect:
                 sect.write(file)
                 sh_count += 1
 
         # rewrite
         file.seek(ph_offset, os.SEEK_SET)
-        for sect, ph in elf_sect_ph:
+        for sect, ph, x in elf_sect_ph:
             if ph:
                 ph.write(file)
 
         file.seek(sh_offset, os.SEEK_SET)
-        for sect, ph in elf_sect_ph:
+        for sect, ph, x in elf_sect_ph:
             if sect:
                 sect.write(file)
 
@@ -424,6 +463,27 @@ def link(src, output, map):
             header.e_shentsize = 0x28
         file.seek(header_offset, os.SEEK_SET)
         header.write(file)
+
+    # write map file
+    if map:
+        with map.open("w") as file:
+            for section in sections.values():
+                file.write("%s section layout\n" % section.name)
+                file.write("  Starting        Virtual  File\n")
+                file.write("  address  Size   address  offset\n")
+                file.write("  ---------------------------------\n")
+
+                section_symbols = [x for x in symbol_list if x.section and x.section.name == section.name]
+                for ss in section_symbols:
+                    object_file = ""
+                    type_id = "  "
+                    if ss.object:
+                        object_file = ss.object.name
+                    file.write("  %08X %06X %08X %08X %s %s \t%s\n" % (ss.addr - section.addr, ss.size, ss.addr, section.file_offset + (ss.addr - section.addr), type_id, ss.name, object_file))
+
+
+                file.write("\n")
+                file.write("\n")
 
 
 if __name__ == '__main__':

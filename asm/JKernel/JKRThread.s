@@ -64,33 +64,16 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434280 0000 .bss       ...bss.0                       data_80434280                  */
-.global data_80434280
-data_80434280:
 
 /* 80434280 000C .bss       @481                           LIT_481                        */
-.global LIT_481
-LIT_481:
-.skip 0xc
 
 /* 8043428C 000C .bss       sThreadList__9JKRThread        sThreadList__9JKRThread        */
-.global sThreadList__9JKRThread
-sThreadList__9JKRThread:
-.skip 0xc
 
 /* 80434298 000C .bss       @989                           LIT_989                        */
-.global LIT_989
-LIT_989:
-.skip 0xc
 
 /* 804342A4 000C .bss       sTaskList__7JKRTask            sTaskList__7JKRTask            */
-.global sTaskList__7JKRTask
-sTaskList__7JKRTask:
-.skip 0xc
 
 /* 804342B0 0020 .bss       sEndMesgQueue__7JKRTask        sEndMesgQueue__7JKRTask        */
-.global sEndMesgQueue__7JKRTask
-sEndMesgQueue__7JKRTask:
-.skip 0x20
 
 
 /* ###################################################################################### */
@@ -98,34 +81,16 @@ sEndMesgQueue__7JKRTask:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804513B0 0004 .sbss      sManager__15JKRThreadSwitch    sManager__15JKRThreadSwitch    */
-.global sManager__15JKRThreadSwitch
-sManager__15JKRThreadSwitch:
-.skip 0x4
 
 /* 804513B4 0004 .sbss      sTotalCount__15JKRThreadSwitch sTotalCount__15JKRThreadSwitch */
-.global sTotalCount__15JKRThreadSwitch
-sTotalCount__15JKRThreadSwitch:
-.skip 0x4
 
 /* 804513B8 0004 .sbss      sTotalStart__15JKRThreadSwitch sTotalStart__15JKRThreadSwitch */
-.global sTotalStart__15JKRThreadSwitch
-sTotalStart__15JKRThreadSwitch:
-.skip 0x4
 
 /* 804513BC 0004 .sbss      data_804513BC                  data_804513BC                  */
-.global data_804513BC
-data_804513BC:
-.skip 0x4
 
 /* 804513C0 0004 .sbss      mUserPreCallback__15JKRThreadSwitch mUserPreCallback__15JKRThreadSwitch */
-.global mUserPreCallback__15JKRThreadSwitch
-mUserPreCallback__15JKRThreadSwitch:
-.skip 0x4
 
 /* 804513C4 0004 .sbss      mUserPostCallback__15JKRThreadSwitch mUserPostCallback__15JKRThreadSwitch */
-.global mUserPostCallback__15JKRThreadSwitch
-mUserPostCallback__15JKRThreadSwitch:
-.skip 0x4
 
 
 /* ###################################################################################### */

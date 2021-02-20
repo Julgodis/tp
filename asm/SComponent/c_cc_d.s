@@ -184,14 +184,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430CA8 000C .bss       @2414                          LIT_2414                       */
-.global LIT_2414
-LIT_2414:
-.skip 0xc
 
 /* 80430CB4 000C .bss       m_virtual_center__14cCcD_ShapeAttr m_virtual_center__14cCcD_ShapeAttr */
-.global m_virtual_center__14cCcD_ShapeAttr
-m_virtual_center__14cCcD_ShapeAttr:
-.skip 0xc
 
 
 /* ###################################################################################### */

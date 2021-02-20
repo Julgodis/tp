@@ -5,9 +5,7 @@ from capstone.ppc import *
 import sys
 from collections import defaultdict
 from collections import deque
-
-r13_addr = 0x80458580
-r2_addr = 0x80459A00
+from itertools import chain
 
 SDA_BASE = 0x80458580
 SDA2_BASE = 0x80459A00
@@ -72,6 +70,15 @@ blacklistedInsns = {
     PPC_INS_XVNMADDADP, PPC_INS_XVNMSUBMSP, PPC_INS_XVNMSUBASP, PPC_INS_XSNMADDADP,
     PPC_INS_VPKUHUM, PPC_INS_VMRGHB, PPC_INS_XVTDIVDP, PPC_INS_XSNMSUBADP,
     PPC_INS_XVCMPGTDP, PPC_INS_XVMADDMDP, PPC_INS_XSNMSUBMDP, PPC_INS_XXSPLTW,
+}
+
+branchInsns = {
+    PPC_INS_B, PPC_INS_BA, PPC_INS_BC, PPC_INS_BCCTR, PPC_INS_BCCTRL, 
+    PPC_INS_BCL, PPC_INS_BCLR, PPC_INS_BCLRL, PPC_INS_BCTR, PPC_INS_BCTRL, 
+    PPC_INS_BCT, PPC_INS_BDNZ, PPC_INS_BDNZA, PPC_INS_BDNZL, PPC_INS_BDNZLA, 
+    PPC_INS_BDNZLR, PPC_INS_BDNZLRL, PPC_INS_BDZ, PPC_INS_BDZA, PPC_INS_BDZL, 
+    PPC_INS_BDZLA, PPC_INS_BDZLR, PPC_INS_BDZLRL, PPC_INS_BL, PPC_INS_BLA, 
+    PPC_INS_BLR, PPC_INS_BLRL, PPC_INS_BRINC, 
 }
 
 # Returns true if the instruction writes to the specified register
@@ -251,16 +258,40 @@ def disasm_ld(inst):
 
 class Disassembler:
     def __init__(self):
-        self.lisInsns = {}  # register : insn
-        self.splitDataLoads = {}  # address of load insn (both high and low) : data
-        self.linkedInsns = {}  # addr of lis insn : ori/addi insn
-
         self.cs = Cs(CS_ARCH_PPC, CS_MODE_32 | CS_MODE_BIG_ENDIAN)
         self.cs.detail = True
         self.cs.imm_unsigned = False
 
-    # Calls callback for every instruction in the specified code section
+        self.lisInsns = {}  
+        self.splitDataLoads = {}  
+        self.linkedInsns = {} 
+        self.r13AddrInsns = {}
+        self.r2AddrInsns = {}
+
+        self.r13_addr = 0x80458580
+        self.r2_addr = 0x80459A00
+
+    def fix_wrong_addresses(self, insn, value):
+        if insn.address == 0x80197108:
+            assert value == 0x803C0004
+            return 0x803bb8a8
+
+        return value
+
     def iter(self, address, data, size):
+        self.lisInsns = {}  
+        self.splitDataLoads = {}  
+        self.linkedInsns = {} 
+        self.r13AddrInsns = {}
+        self.r2AddrInsns = {}
+
+        self.r13_addr = 0x80458580
+        self.r2_addr = 0x80459A00
+
+        yield from self._iter(address, data, size, 0, self.pre_callback)
+        yield from self._iter(address, data, size, size // 4, self.callback)
+
+    def _iter(self, address, data, size, offset, callback):
         if size <= 0:
             return
 
@@ -277,13 +308,13 @@ class Disassembler:
                 bytes = insn.bytes
                 if insn.id in blacklistedInsns:
                     insn = None
-                self.callback(address, address - start, insn, bytes)
+                callback(address, address - start, insn, bytes)
                 address += 4
             if address < end:
                 o = address - start
-                self.callback(address, address - start, None, data[o: o + 4])
+                callback(address, address - start, None, data[o: o + 4])
                 address += 4
-            yield current, start, end
+            yield offset + (current - start) // 4
 
     def execute(self, addr, data, size):
         if size <= 0:
@@ -293,6 +324,39 @@ class Disassembler:
 
     def callback(self, data, address, size, callback):
         pass
+
+    def pre_callback(self, address, offset, insn, bytes):
+        if insn == None:
+            return
+
+        self.r2AddrInsns[insn.address] = self.r2_addr
+        self.r13AddrInsns[insn.address] = self.r13_addr
+
+        if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
+            self.lisInsns.clear()
+
+        if insn.id == PPC_INS_LIS:
+            self.lisInsns[insn.operands[0].reg] = insn
+        elif (insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.lisInsns) \
+                or (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.lisInsns):
+            hiLoadInsn = self.lisInsns[insn.operands[1].reg]
+
+            value = combine_split_load_value(hiLoadInsn, insn)
+            value = self.fix_wrong_addresses(insn, value)
+            self.linkedInsns[hiLoadInsn.address] = insn
+            self.splitDataLoads[hiLoadInsn.address] = value
+            self.splitDataLoads[insn.address] = value
+            self.lisInsns.pop(insn.operands[1].reg, None)
+
+            # detect r2/r13 initialization
+            if insn.id == PPC_INS_ORI and insn.operands[0].reg == insn.operands[1].reg:
+                if self.r2_addr == None and insn.operands[0].reg == PPC_REG_R2:
+                    self.r2_addr = value
+                elif self.r13_addr == None and insn.operands[0].reg == PPC_REG_R13:
+                    self.r13_addr = value
+        elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
+            self.lisInsns.pop(insn.operands[0].reg, None)
+
 
 # Disassembler which will collect labels used
 class LCDisassembler(Disassembler):
@@ -305,28 +369,13 @@ class LCDisassembler(Disassembler):
         if insn == None:
             return
 
+        r2_addr = self.r2AddrInsns[insn.address]
+        r13_addr = self.r13AddrInsns[insn.address]
+
         if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
-            self.lisInsns.clear()
             for op in insn.operands:
                 if op.type == PPC_OP_IMM:
                     self.functions.add(op.imm)
-
-        if insn.id == PPC_INS_LIS:
-            self.lisInsns[insn.operands[0].reg] = insn
-        elif (insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.lisInsns) \
-                or (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.lisInsns):
-            hiLoadInsn = self.lisInsns[insn.operands[1].reg]
-
-            value = combine_split_load_value(hiLoadInsn, insn)
-            if is_label_candidate(value):
-                self.labels.add(value)
-
-            self.linkedInsns[hiLoadInsn.address] = insn
-            self.splitDataLoads[hiLoadInsn.address] = value
-            self.splitDataLoads[insn.address] = value
-            self.lisInsns.pop(insn.operands[1].reg, None)
-        elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
-            self.lisInsns.pop(insn.operands[0].reg, None)
 
         if r13_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
@@ -347,3 +396,17 @@ class LCDisassembler(Disassembler):
                 value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
                 if is_label_candidate(value):
                     self.labels.add(value)
+
+        #
+        if insn.address in self.splitDataLoads and insn.id == PPC_INS_LIS:
+            value = self.splitDataLoads[insn.address]
+            if is_label_candidate(value):
+                self.labels.add(value)
+        elif insn.address in self.splitDataLoads and insn.id in {PPC_INS_ADDI, PPC_INS_ORI}:
+            value = self.splitDataLoads[insn.address]
+            if is_label_candidate(value):
+                self.labels.add(value)
+        elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
+            value = self.splitDataLoads[insn.address]
+            if is_label_candidate(value):
+                self.labels.add(value)

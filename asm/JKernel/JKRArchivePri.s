@@ -40,8 +40,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451420 0004 .sbss      sCurrentDirID__10JKRArchive    sCurrentDirID__10JKRArchive    */
-.global sCurrentDirID__10JKRArchive
-sCurrentDirID__10JKRArchive:
-.skip 0x4
-.skip 0x4 /* padding */
 

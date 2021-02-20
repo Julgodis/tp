@@ -5914,209 +5914,86 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80425508 0000 .bss       ...bss.0                       data_80425508                  */
-.global data_80425508
-data_80425508:
 
 /* 80425508 000C .bss       @4409                          d_d_a_alink__LIT_4409          */
-.global d_d_a_alink__LIT_4409
-d_d_a_alink__LIT_4409:
-.skip 0xc
 
 /* 80425514 000C .bss       l_waitBaseAnime                l_waitBaseAnime                */
-.global l_waitBaseAnime
-l_waitBaseAnime:
-.skip 0xc
 
 /* 80425520 000C .bss       @4410                          d_d_a_alink__LIT_4410          */
-.global d_d_a_alink__LIT_4410
-d_d_a_alink__LIT_4410:
-.skip 0xc
 
 /* 8042552C 000C .bss       l_ironBallBaseAnime            l_ironBallBaseAnime            */
-.global l_ironBallBaseAnime
-l_ironBallBaseAnime:
-.skip 0xc
 
 /* 80425538 000C .bss       @4411                          d_d_a_alink__LIT_4411          */
-.global d_d_a_alink__LIT_4411
-d_d_a_alink__LIT_4411:
-.skip 0xc
 
 /* 80425544 000C .bss       l_halfAtnWaitBaseAnime         l_halfAtnWaitBaseAnime         */
-.global l_halfAtnWaitBaseAnime
-l_halfAtnWaitBaseAnime:
-.skip 0xc
 
 /* 80425550 000C .bss       @4412                          d_d_a_alink__LIT_4412          */
-.global d_d_a_alink__LIT_4412
-d_d_a_alink__LIT_4412:
-.skip 0xc
 
 /* 8042555C 000C .bss       l_rWaitBaseAnime               l_rWaitBaseAnime               */
-.global l_rWaitBaseAnime
-l_rWaitBaseAnime:
-.skip 0xc
 
 /* 80425568 000C .bss       @4413                          LIT_4413                       */
-.global LIT_4413
-LIT_4413:
-.skip 0xc
 
 /* 80425574 000C .bss       l_lWaitBaseAnime               l_lWaitBaseAnime               */
-.global l_lWaitBaseAnime
-l_lWaitBaseAnime:
-.skip 0xc
 
 /* 80425580 000C .bss       @4414                          d_d_a_alink__LIT_4414          */
-.global d_d_a_alink__LIT_4414
-d_d_a_alink__LIT_4414:
-.skip 0xc
 
 /* 8042558C 000C .bss       l_horseBaseAnime               l_horseBaseAnime               */
-.global l_horseBaseAnime
-l_horseBaseAnime:
-.skip 0xc
 
 /* 80425598 000C .bss       @4415                          LIT_4415                       */
-.global LIT_4415
-LIT_4415:
-.skip 0xc
 
 /* 804255A4 000C .bss       l_boarBaseAnime                l_boarBaseAnime                */
-.global l_boarBaseAnime
-l_boarBaseAnime:
-.skip 0xc
 
 /* 804255B0 000C .bss       @4416                          d_d_a_alink__LIT_4416          */
-.global d_d_a_alink__LIT_4416
-d_d_a_alink__LIT_4416:
-.skip 0xc
 
 /* 804255BC 000C .bss       l_localHorseRidePos            l_localHorseRidePos            */
-.global l_localHorseRidePos
-l_localHorseRidePos:
-.skip 0xc
 
 /* 804255C8 000C .bss       @4417                          d_d_a_alink__LIT_4417          */
-.global d_d_a_alink__LIT_4417
-d_d_a_alink__LIT_4417:
-.skip 0xc
 
 /* 804255D4 000C .bss       l_localBoarRidePos             l_localBoarRidePos             */
-.global l_localBoarRidePos
-l_localBoarRidePos:
-.skip 0xc
 
 /* 804255E0 000C .bss       @4418                          d_d_a_alink__LIT_4418          */
-.global d_d_a_alink__LIT_4418
-d_d_a_alink__LIT_4418:
-.skip 0xc
 
 /* 804255EC 000C .bss       l_canoeBaseAnime               l_canoeBaseAnime               */
-.global l_canoeBaseAnime
-l_canoeBaseAnime:
-.skip 0xc
 
 /* 804255F8 000C .bss       @4419                          d_d_a_alink__LIT_4419          */
-.global d_d_a_alink__LIT_4419
-d_d_a_alink__LIT_4419:
-.skip 0xc
 
 /* 80425604 000C .bss       l_sumouBaseAnimeSp             l_sumouBaseAnimeSp             */
-.global l_sumouBaseAnimeSp
-l_sumouBaseAnimeSp:
-.skip 0xc
 
 /* 80425610 000C .bss       @4420                          d_d_a_alink__LIT_4420          */
-.global d_d_a_alink__LIT_4420
-d_d_a_alink__LIT_4420:
-.skip 0xc
 
 /* 8042561C 000C .bss       l_wolfBaseAnime                l_wolfBaseAnime                */
-.global l_wolfBaseAnime
-l_wolfBaseAnime:
-.skip 0xc
 
 /* 80425628 000C .bss       @4421                          d_d_a_alink__LIT_4421          */
-.global d_d_a_alink__LIT_4421
-d_d_a_alink__LIT_4421:
-.skip 0xc
 
 /* 80425634 000C .bss       l_wolfRopeBaseAnime            l_wolfRopeBaseAnime            */
-.global l_wolfRopeBaseAnime
-l_wolfRopeBaseAnime:
-.skip 0xc
 
 /* 80425640 000C .bss       @14255                         LIT_14255                      */
-.global LIT_14255
-LIT_14255:
-.skip 0xc
 
 /* 8042564C 000C .bss       grabCarryOffset0$14254         data_8042564C                  */
-.global data_8042564C
-data_8042564C:
-.skip 0xc
 
 /* 80425658 000C .bss       @14259                         LIT_14259                      */
-.global LIT_14259
-LIT_14259:
-.skip 0xc
 
 /* 80425664 000C .bss       grabCarryOffset1$14258         data_80425664                  */
-.global data_80425664
-data_80425664:
-.skip 0xc
 
 /* 80425670 000C .bss       @14263                         LIT_14263                      */
-.global LIT_14263
-LIT_14263:
-.skip 0xc
 
 /* 8042567C 000C .bss       grabCarryOffset2$14262         data_8042567C                  */
-.global data_8042567C
-data_8042567C:
-.skip 0xc
 
 /* 80425688 000C .bss       @14267                         LIT_14267                      */
-.global LIT_14267
-LIT_14267:
-.skip 0xc
 
 /* 80425694 000C .bss       grabCarryOffset3$14266         data_80425694                  */
-.global data_80425694
-data_80425694:
-.skip 0xc
 
 /* 804256A0 000C .bss       @29722                         LIT_29722                      */
-.global LIT_29722
-LIT_29722:
-.skip 0xc
 
 /* 804256AC 000C .bss       l_hookSnowSandHitScale         l_hookSnowSandHitScale         */
-.global l_hookSnowSandHitScale
-l_hookSnowSandHitScale:
-.skip 0xc
 
 /* 804256B8 0014 .bss       dummy$36763                    data_804256B8                  */
-.global data_804256B8
-data_804256B8:
-.skip 0x14
 
 /* 804256CC 0020 .bss       texObj$42524                   data_804256CC                  */
-.global data_804256CC
-data_804256CC:
-.skip 0x20
 
 /* 804256EC 000C .bss       @50952                         LIT_50952                      */
-.global LIT_50952
-LIT_50952:
-.skip 0xc
 
 /* 804256F8 000C .bss       l_wolfBiteHitMarkScale         l_wolfBiteHitMarkScale         */
-.global l_wolfBiteHitMarkScale
-l_wolfBiteHitMarkScale:
-.skip 0xc
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -6139,54 +6016,14 @@ l_wolfBiteHitMarkScale:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450FC0 0004 .sbss      it$36766                       data_80450FC0                  */
-.global data_80450FC0
-data_80450FC0:
-.skip 0x4
 
-/* 80450FC4 0001 .sbss      data_80450FC4                  data_80450FC4                  */
-.global data_80450FC4
-data_80450FC4:
-.skip 0x1
+/* 80450FC4 0004 .sbss      merged_80450FC4                merged_80450FC4                */
 
-/* 80450FC5 0001 .sbss      data_80450FC5                  data_80450FC5                  */
-.global data_80450FC5
-data_80450FC5:
-.skip 0x1
-
-/* 80450FC6 0001 .sbss      data_80450FC6                  data_80450FC6                  */
-.global data_80450FC6
-data_80450FC6:
-.skip 0x1
-
-/* 80450FC7 0001 .sbss      data_80450FC7                  data_80450FC7                  */
-.global data_80450FC7
-data_80450FC7:
-.skip 0x1
-
-/* 80450FC8 0001 .sbss      data_80450FC8                  data_80450FC8                  */
-.global data_80450FC8
-data_80450FC8:
-.skip 0x1
-
-/* 80450FC9 0003 .sbss      data_80450FC9                  data_80450FC9                  */
-.global data_80450FC9
-data_80450FC9:
-.skip 0x3
+/* 80450FC8 0004 .sbss      merged_80450FC8                merged_80450FC8                */
 
 /* 80450FCC 0004 .sbss      bgWaitFlg$58404                data_80450FCC                  */
-.global data_80450FCC
-data_80450FCC:
-.skip 0x4
 
-/* 80450FD0 0001 .sbss      data_80450FD0                  data_80450FD0                  */
-.global data_80450FD0
-data_80450FD0:
-.skip 0x1
-
-/* 80450FD1 0007 .sbss      data_80450FD1                  data_80450FD1                  */
-.global data_80450FD1
-data_80450FD1:
-.skip 0x7
+/* 80450FD0 0008 .sbss      merged_80450FD0                merged_80450FD0                */
 
 
 /* ###################################################################################### */

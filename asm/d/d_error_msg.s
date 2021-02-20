@@ -62,8 +62,4 @@
 /* ###################################################################################### */
 .section .sbss2, "a", @nobits
 /* 80456B78 0004 .sbss2     @3873                          d_d_error_msg__LIT_3873        */
-.global d_d_error_msg__LIT_3873
-d_d_error_msg__LIT_3873:
-.skip 0x4
-.skip 0x4 /* padding */
 

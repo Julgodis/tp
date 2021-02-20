@@ -37,17 +37,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80434318 000C .bss       @492                           JKRAramPiece__LIT_492          */
-.global JKRAramPiece__LIT_492
-JKRAramPiece__LIT_492:
-.skip 0xc
 
 /* 80434324 000C .bss       sAramPieceCommandList__12JKRAramPiece sAramPieceCommandList__12JKRAramPiece */
-.global sAramPieceCommandList__12JKRAramPiece
-sAramPieceCommandList__12JKRAramPiece:
-.skip 0xc
 
 /* 80434330 0018 .bss       mMutex__12JKRAramPiece         mMutex__12JKRAramPiece         */
-.global mMutex__12JKRAramPiece
-mMutex__12JKRAramPiece:
-.skip 0x18
 

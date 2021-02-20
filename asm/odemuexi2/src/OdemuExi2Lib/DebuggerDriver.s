@@ -38,32 +38,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804519D0 0004 .sbss      MTRCallback                    MTRCallback                    */
-.global MTRCallback
-MTRCallback:
-.skip 0x4
 
 /* 804519D4 0004 .sbss      DBGCallback                    DBGCallback                    */
-.global DBGCallback
-DBGCallback:
-.skip 0x4
 
 /* 804519D8 0004 .sbss      SendMailData                   SendMailData                   */
-.global SendMailData
-SendMailData:
-.skip 0x4
 
 /* 804519DC 0004 .sbss      RecvDataLeng                   RecvDataLeng                   */
-.global RecvDataLeng
-RecvDataLeng:
-.skip 0x4
 
 /* 804519E0 0004 .sbss      pEXIInputFlag                  pEXIInputFlag                  */
-.global pEXIInputFlag
-pEXIInputFlag:
-.skip 0x4
 
 /* 804519E4 001C .sbss      data_804519E4                  data_804519E4                  */
-.global data_804519E4
-data_804519E4:
-.skip 0x1c
 

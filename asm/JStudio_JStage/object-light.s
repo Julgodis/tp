@@ -43,43 +43,20 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80431400 0000 .bss       ...bss.0                       data_80431400                  */
-.global data_80431400
-data_80431400:
 
 /* 80431400 000C .bss       @930                           LIT_930                        */
-.global LIT_930
-LIT_930:
-.skip 0xc
 
 /* 8043140C 000C .bss       @931                           object_light__LIT_931          */
-.global object_light__LIT_931
-object_light__LIT_931:
-.skip 0xc
 
 /* 80431418 000C .bss       @932                           LIT_932                        */
-.global LIT_932
-LIT_932:
-.skip 0xc
 
 /* 80431424 000C .bss       @933                           LIT_933                        */
-.global LIT_933
-LIT_933:
-.skip 0xc
 
 /* 80431430 000C .bss       @934                           object_light__LIT_934          */
-.global object_light__LIT_934
-object_light__LIT_934:
-.skip 0xc
 
 /* 8043143C 000C .bss       @935                           object_light__LIT_935          */
-.global object_light__LIT_935
-object_light__LIT_935:
-.skip 0xc
 
 /* 80431448 0048 .bss       saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light */
-.global saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light
-saoVVOutput_direction___Q214JStudio_JStage14TAdaptor_light:
-.skip 0x48
 
 
 /* ###################################################################################### */

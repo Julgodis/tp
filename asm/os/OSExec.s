@@ -40,12 +40,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451658 0004 .sbss      Prepared                       Prepared                       */
-.global Prepared
-Prepared:
-.skip 0x4
 
 /* 8045165C 0004 .sbss      apploaderPosition$69           data_8045165C                  */
-.global data_8045165C
-data_8045165C:
-.skip 0x4
 

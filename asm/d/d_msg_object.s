@@ -380,20 +380,10 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 80430280 000C .bss       @4011                          d_d_msg_object__LIT_4011       */
-.global d_d_msg_object__LIT_4011
-d_d_msg_object__LIT_4011:
-.skip 0xc
 
 /* 8043028C 0410 .bss       g_MsgObject_HIO_c              g_MsgObject_HIO_c              */
-.global g_MsgObject_HIO_c
-g_MsgObject_HIO_c:
-.skip 0x410
 
 /* 8043069C 0016 .bss       arcName$6106                   data_8043069C                  */
-.global data_8043069C
-data_8043069C:
-.skip 0x16
-.skip 0x6 /* padding */
 
 
 /* ###################################################################################### */
@@ -401,10 +391,6 @@ data_8043069C:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 804510C8 0002 .sbss      s_groupID                      s_groupID                      */
-.global s_groupID
-s_groupID:
-.skip 0x2
-.skip 0x6 /* padding */
 
 
 /* ###################################################################################### */

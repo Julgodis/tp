@@ -94,29 +94,12 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 8044F290 0002 .bss       TRK_saved_exceptionID          TRK_saved_exceptionID          */
-.global TRK_saved_exceptionID
-TRK_saved_exceptionID:
-.skip 0x2
-.skip 0x2 /* padding */
 
 /* 8044F294 00A4 .bss       gTRKState                      gTRKState                      */
-.global gTRKState
-gTRKState:
-.skip 0xa4
 
 /* 8044F338 0430 .bss       gTRKCPUState                   gTRKCPUState                   */
-.global gTRKCPUState
-gTRKCPUState:
-.skip 0x430
 
 /* 8044F768 0094 .bss       gTRKSaveState                  gTRKSaveState                  */
-.global gTRKSaveState
-gTRKSaveState:
-.skip 0x94
 
 /* 8044F7FC 0010 .bss       TRKvalue128_temp               TRKvalue128_temp               */
-.global TRKvalue128_temp
-TRKvalue128_temp:
-.skip 0x10
-.skip 0x4 /* padding */
 

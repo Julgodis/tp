@@ -73,8 +73,4 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451278 0004 .sbss      mNoLoad__16JASBasicWaveBank    mNoLoad__16JASBasicWaveBank    */
-.global mNoLoad__16JASBasicWaveBank
-mNoLoad__16JASBasicWaveBank:
-.skip 0x4
-.skip 0x4 /* padding */
 

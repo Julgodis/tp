@@ -39,32 +39,14 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80451538 0004 .sbss      sManager__8JUTVideo            sManager__8JUTVideo            */
-.global sManager__8JUTVideo
-sManager__8JUTVideo:
-.skip 0x4
 
 /* 8045153C 0004 .sbss      sVideoLastTick__8JUTVideo      sVideoLastTick__8JUTVideo      */
-.global sVideoLastTick__8JUTVideo
-sVideoLastTick__8JUTVideo:
-.skip 0x4
 
 /* 80451540 0004 .sbss      sVideoInterval__8JUTVideo      sVideoInterval__8JUTVideo      */
-.global sVideoInterval__8JUTVideo
-sVideoInterval__8JUTVideo:
-.skip 0x4
 
 /* 80451544 0004 .sbss      data_80451544                  data_80451544                  */
-.global data_80451544
-data_80451544:
-.skip 0x4
 
 /* 80451548 0004 .sbss      frameBuffer$2222               data_80451548                  */
-.global data_80451548
-data_80451548:
-.skip 0x4
 
 /* 8045154C 0004 .sbss      data_8045154C                  data_8045154C                  */
-.global data_8045154C
-data_8045154C:
-.skip 0x4
 

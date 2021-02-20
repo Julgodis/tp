@@ -30,15 +30,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 804340F0 000C .bss       @745                           JAIStreamMgr__LIT_745          */
-.global JAIStreamMgr__LIT_745
-JAIStreamMgr__LIT_745:
-.skip 0xc
 
 /* 804340FC 0010 .bss       memPool_$localstatic3$getMemPool___30JASPoolAllocObject<9JAIStream>Fv data_804340FC                  */
-.global data_804340FC
-data_804340FC:
-.skip 0x10
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

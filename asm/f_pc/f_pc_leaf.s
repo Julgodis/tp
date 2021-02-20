@@ -31,18 +31,6 @@
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450D30 0004 .sbss      g_fpcLf_type                   g_fpcLf_type                   */
-.global g_fpcLf_type
-g_fpcLf_type:
-.skip 0x4
-.skip 0x4 /* padding */
 
-/* 80450D38 0001 .sbss      data_80450D38                  data_80450D38                  */
-.global data_80450D38
-data_80450D38:
-.skip 0x1
-
-/* 80450D39 0007 .sbss      data_80450D39                  data_80450D39                  */
-.global data_80450D39
-data_80450D39:
-.skip 0x7
+/* 80450D38 0008 .sbss      merged_80450D38                merged_80450D38                */
 

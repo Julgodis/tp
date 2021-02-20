@@ -286,74 +286,32 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803F1C00 0000 .bss       ...bss.0                       data_803F1C00                  */
-.global data_803F1C00
-data_803F1C00:
 
 /* 803F1C00 000C .bss       @4176                          f_op_f_op_actor_mng__LIT_4176  */
-.global f_op_f_op_actor_mng__LIT_4176
-f_op_f_op_actor_mng__LIT_4176:
-.skip 0xc
 
 /* 803F1C0C 000C .bss       @5078                          LIT_5078                       */
-.global LIT_5078
-LIT_5078:
-.skip 0xc
 
 /* 803F1C18 000C .bss       min$5077                       data_803F1C18                  */
-.global data_803F1C18
-data_803F1C18:
-.skip 0xc
 
 /* 803F1C24 000C .bss       @5115                          f_op_f_op_actor_mng__LIT_5115  */
-.global f_op_f_op_actor_mng__LIT_5115
-f_op_f_op_actor_mng__LIT_5115:
-.skip 0xc
 
 /* 803F1C30 000C .bss       max$5114                       data_803F1C30                  */
-.global data_803F1C30
-data_803F1C30:
-.skip 0xc
 
 /* 803F1C3C 000C .bss       @6481                          LIT_6481                       */
-.global LIT_6481
-LIT_6481:
-.skip 0xc
 
 /* 803F1C48 0070 .bss       mLineCheck__11fopAcM_lc_c      mLineCheck__11fopAcM_lc_c      */
-.global mLineCheck__11fopAcM_lc_c
-mLineCheck__11fopAcM_lc_c:
-.skip 0x70
 
 /* 803F1CB8 000C .bss       @6503                          f_op_f_op_actor_mng__LIT_6503  */
-.global f_op_f_op_actor_mng__LIT_6503
-f_op_f_op_actor_mng__LIT_6503:
-.skip 0xc
 
 /* 803F1CC4 0054 .bss       mGndCheck__11fopAcM_gc_c       mGndCheck__11fopAcM_gc_c       */
-.global mGndCheck__11fopAcM_gc_c
-mGndCheck__11fopAcM_gc_c:
-.skip 0x54
 
 /* 803F1D18 000C .bss       @6509                          f_op_f_op_actor_mng__LIT_6509  */
-.global f_op_f_op_actor_mng__LIT_6509
-f_op_f_op_actor_mng__LIT_6509:
-.skip 0xc
 
 /* 803F1D24 0050 .bss       mRoofCheck__11fopAcM_rc_c      mRoofCheck__11fopAcM_rc_c      */
-.global mRoofCheck__11fopAcM_rc_c
-mRoofCheck__11fopAcM_rc_c:
-.skip 0x50
 
 /* 803F1D74 000C .bss       @6519                          LIT_6519                       */
-.global LIT_6519
-LIT_6519:
-.skip 0xc
 
 /* 803F1D80 0054 .bss       mWaterCheck__11fopAcM_wt_c     mWaterCheck__11fopAcM_wt_c     */
-.global mWaterCheck__11fopAcM_wt_c
-mWaterCheck__11fopAcM_wt_c:
-.skip 0x54
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */
@@ -361,26 +319,12 @@ mWaterCheck__11fopAcM_wt_c:
 /* ###################################################################################### */
 .section .sbss, "aw"
 /* 80450CCC 0001 .sbss      l_hio                          l_hio                          */
-.global l_hio
-l_hio:
-.skip 0x1
-.skip 0x3 /* padding */
 
 /* 80450CD0 0004 .sbss      mGroundY__11fopAcM_gc_c        mGroundY__11fopAcM_gc_c        */
-.global mGroundY__11fopAcM_gc_c
-mGroundY__11fopAcM_gc_c:
-.skip 0x4
 
 /* 80450CD4 0004 .sbss      mRoofY__11fopAcM_rc_c          mRoofY__11fopAcM_rc_c          */
-.global mRoofY__11fopAcM_rc_c
-mRoofY__11fopAcM_rc_c:
-.skip 0x4
 
 /* 80450CD8 0004 .sbss      mWaterY__11fopAcM_wt_c         mWaterY__11fopAcM_wt_c         */
-.global mWaterY__11fopAcM_wt_c
-mWaterY__11fopAcM_wt_c:
-.skip 0x4
-.skip 0x4 /* padding */
 
 
 /* ###################################################################################### */

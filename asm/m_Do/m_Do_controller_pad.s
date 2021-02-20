@@ -20,14 +20,8 @@
 /* ###################################################################################### */
 .section .bss, "aw"
 /* 803DD2D8 0010 .bss       m_gamePad__8mDoCPd_c           m_gamePad__8mDoCPd_c           */
-.global m_gamePad__8mDoCPd_c
-m_gamePad__8mDoCPd_c:
-.skip 0x10
 
 /* 803DD2E8 0100 .bss       m_cpadInfo__8mDoCPd_c          m_cpadInfo__8mDoCPd_c          */
-.global m_cpadInfo__8mDoCPd_c
-m_cpadInfo__8mDoCPd_c:
-.skip 0x100
 
 
 /* ###################################################################################### */
