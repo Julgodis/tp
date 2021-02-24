@@ -12,14 +12,14 @@
 // Additional Symbols:
 // 
 
-struct JKRSolidHeap;
-struct J3DModelData;
-struct J3DModel;
-struct dkWmark_c;
-struct dKy_tevstr_c;
 struct kankyo_class;
+struct dkWmark_c;
+struct J3DModel;
+struct J3DModelData;
+struct dKy_tevstr_c;
+struct JKRSolidHeap;
 
-extern void mDoMtx_ZXYrotM(f32 (*)[4], s16, s16, s16); /* mDoMtx_ZXYrotM__FPA4_fsss */
+extern void mDoMtx_ZXYrotM(f32 (*)[4], short, short, short); /* mDoMtx_ZXYrotM__FPA4_fsss */
 extern void mDoExt_modelUpdateDL(J3DModel*); /* mDoExt_modelUpdateDL__FP8J3DModel */
 extern void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); /* mDoExt_createSolidHeapFromGameToCurrent__FUlUl */
 extern void mDoExt_adjustSolidHeap(JKRSolidHeap*); /* mDoExt_adjustSolidHeap__FP12JKRSolidHeap */
@@ -28,70 +28,151 @@ extern void mDoExt_restoreCurrentHeap(void); /* mDoExt_restoreCurrentHeap__Fv */
 extern void mDoExt_J3DModel__create(J3DModelData*, u32, u32); /* mDoExt_J3DModel__create__FP12J3DModelDataUlUl */
 extern void fopKyM_Delete(void*); /* fopKyM_Delete__FPv */
 extern void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); /* dKy_tevstr_init__FP12dKy_tevstr_cScUc */
+extern void dkWmark_Create(kankyo_class*); /* dkWmark_Create__FP12kankyo_class */
+extern void dkWmark_Delete(dkWmark_c*); /* dkWmark_Delete__FP9dkWmark_c */
+extern void dkWmark_Execute(dkWmark_c*); /* dkWmark_Execute__FP9dkWmark_c */
+extern void dkWmark_Draw(dkWmark_c*); /* dkWmark_Draw__FP9dkWmark_c */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__4cXyzFv();
+/* Function             */
 extern void mDoMtx_ZXYrotM__FPA4_fsss();
+/* Function             */
 extern void mDoExt_modelUpdateDL__FP8J3DModel();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_restoreCurrentHeap__Fv();
+/* Function             */
 extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+/* Function             */
 extern void __ct__11J3DLightObjFv();
+/* Function             */
 extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
+/* Function             */
 extern void fopKyM_Delete__FPv();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+/* Function             */
 extern void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+/* Function             */
 extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+/* Function             */
+extern void dkWmark_Create__FP12kankyo_class();
+/* Function             */
 extern void __dt__9dkWmark_cFv();
+/* Function             */
+extern void dkWmark_Delete__FP9dkWmark_c();
+/* Function             */
 extern void setMatrix__9dkWmark_cFv();
+/* Function             */
+extern void dkWmark_Execute__FP9dkWmark_c();
+/* Function             */
+extern void dkWmark_Draw__FP9dkWmark_c();
+/* Function             */
 extern void atan2sX_Z__4cXyzCFv();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void abs();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_8039A488[12];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_k_wmark__stringBase0[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern const void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGPla[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dkWmark_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_WMARK[11];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_3644[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80430C9C[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mGroundY__11fopAcM_gc_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_nowID__9dkWmark_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451134[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3718[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_k_wmark__LIT_3719;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3720[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_k_wmark__LIT_3844;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3845[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_k_wmark__LIT_3846;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_k_wmark__LIT_3847;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3848[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_k_wmark__LIT_3873[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_k_wmark__LIT_3906;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3908;
 }
 
@@ -101,12 +182,18 @@ SECTION_SDATA2 extern f64 LIT_3908;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A488 000C .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       */
+/* 8039A494-8039A4A0 0006 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039A494 = "Alink";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A49A = "\0\0\0\0\0";
+#pragma pop
+/* 8039A488-8039A494 000C .rodata    kColor$localstatic3$draw__9dkWmark_cFv                       InitializedData */
 SECTION_RODATA const u8 data_8039A488[12] = {
 	0x00, 0x00, 0x00, 0x82, 0x5F, 0x4B, 0x32, 0x3C, 0x64, 0x6E, 0x78, 0x28,
 };
-/* 8039A494 0006 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039A494 = "Alink";
 }
 
 
@@ -115,18 +202,28 @@ const char* const stringBase_8039A494 = "Alink";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3430 0014 .data      l_dkWmark_Method                                             */
-SECTION_DATA u8 l_dkWmark_Method[20] = {
-	0x80, 0x26, 0x14, 0x1C, 0x80, 0x26, 0x16, 0x9C, 0x80, 0x26, 0x19, 0x64, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x26, 0x1A, 0x18,
+/* 803C3430-803C3444 0014 .data      l_dkWmark_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* l_dkWmark_Method[5] = {
+	(void*)dkWmark_Create,
+	(void*)dkWmark_Delete,
+	(void*)dkWmark_Execute,
+	NULL,
+	(void*)dkWmark_Draw,
 };
-/* 803C3444 0028 .data      g_profile_WMARK                                              */
-SECTION_DATA u8 g_profile_WMARK[44] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x09, 0xFF, 0xFD, 0x03, 0x03, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x04, 0x98, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x40,
-	0x02, 0xF8, 0x00, 0x00, 0x80, 0x3C, 0x34, 0x30,
+/* 803C3444-803C3470 0028 .data      g_profile_WMARK                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_WMARK[11] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0009FFFD,
+	(void*)0x03030000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000498,
+	NULL,
+	NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x02F80000,
+	(void*)&l_dkWmark_Method,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -136,44 +233,44 @@ SECTION_DATA u8 g_profile_WMARK[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454FB0 0004 .sdata2    @3718                                                        */
+/* 80454FB0-80454FB4 0004 .sdata2    @3718                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_k_wmark__LIT_3718[4] = {
 	0x3F, 0x8C, 0xCC, 0xCD,
 };
-/* 80454FB4 0004 .sdata2    @3719                                                        */
+/* 80454FB4-80454FB8 0004 .sdata2    @3719                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_k_wmark__LIT_3719 = 1.000000f;
-/* 80454FB8 0004 .sdata2    @3720                                                        */
+/* 80454FB8-80454FBC 0004 .sdata2    @3720                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_k_wmark__LIT_3720[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80454FBC 0004 .sdata2    @3844                                                        */
+/* 80454FBC-80454FC0 0004 .sdata2    @3844                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_k_wmark__LIT_3844 = 100.000000f;
-/* 80454FC0 0004 .sdata2    @3845                                                        */
+/* 80454FC0-80454FC8 0004 .sdata2    @3845                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_k_wmark__LIT_3845[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454FC8 0008 .sdata2    @3846                                                        */
+/* 80454FC8-80454FD0 0008 .sdata2    @3846                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_k_wmark__LIT_3846 = 0.500000;
-/* 80454FD0 0008 .sdata2    @3847                                                        */
+/* 80454FD0-80454FD8 0008 .sdata2    @3847                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_k_wmark__LIT_3847 = 3.000000;
-/* 80454FD8 0008 .sdata2    @3848                                                        */
+/* 80454FD8-80454FE0 0008 .sdata2    @3848                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_k_wmark__LIT_3848[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80454FE0 0004 .sdata2    @3873                                                        */
+/* 80454FE0-80454FE4 0004 .sdata2    @3873                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_k_wmark__LIT_3873[4] = {
 	0x3C, 0xA3, 0xD7, 0x0A,
 };
-/* 80454FE4 0004 .sdata2    @3906                                                        */
+/* 80454FE4-80454FE8 0004 .sdata2    @3906                                                        Float32Data */
 // 0x42480000
 SECTION_SDATA2 f32 d_d_k_wmark__LIT_3906 = 50.000000f;
-/* 80454FE8 0008 .sdata2    @3908                                                        */
+/* 80454FE8-80454FF0 0008 .sdata2    @3908                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3908 = 4503599627370496.000000;
 }
@@ -184,9 +281,9 @@ SECTION_SDATA2 f64 LIT_3908 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430C90 000C .bss       @3644                                                        */
+/* 80430C90-80430C9C 000C .bss       @3644                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_3644[12];
-/* 80430C9C 000C .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              */
+/* 80430C9C-80430CA8 000C .bss       wolfFootScale$localstatic3$create__9dkWmark_cFv              ZeroInitializedData */
 SECTION_BSS u8 data_80430C9C[12];
 }
 
@@ -196,9 +293,9 @@ SECTION_BSS u8 data_80430C9C[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451130 0004 .sbss      m_nowID__9dkWmark_c                                          */
+/* 80451130-80451134 0004 .sbss      m_nowID__9dkWmark_c                                          ZeroInitializedData */
 SECTION_SBSS u8 m_nowID__9dkWmark_c[4];
-/* 80451134 0004 .sbss      data_80451134                                                */
+/* 80451134-80451138 0004 .sbss      data_80451134                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451134[4];
 }
 
@@ -208,7 +305,7 @@ SECTION_SBSS u8 data_80451134[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026141C 0224 .text      dkWmark_Create__FP12kankyo_class                             */
+/* 8026141C-80261640 0224 .text      dkWmark_Create__FP12kankyo_class                             Function */
 }
 
 #pragma push
@@ -221,7 +318,7 @@ asm void dkWmark_Create(kankyo_class*) {
 #pragma pop
 
 extern "C" {
-/* 80261640 005C .text      __dt__9dkWmark_cFv                                           */
+/* 80261640-8026169C 005C .text      __dt__9dkWmark_cFv                                           Function */
 // dkWmark_c::~dkWmark_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -232,7 +329,7 @@ asm void __dt__9dkWmark_cFv() {
 }
 #pragma pop
 
-/* 8026169C 0028 .text      dkWmark_Delete__FP9dkWmark_c                                 */
+/* 8026169C-802616C4 0028 .text      dkWmark_Delete__FP9dkWmark_c                                 Function */
 }
 
 #pragma push
@@ -245,7 +342,7 @@ asm void dkWmark_Delete(dkWmark_c*) {
 #pragma pop
 
 extern "C" {
-/* 802616C4 02A0 .text      setMatrix__9dkWmark_cFv                                      */
+/* 802616C4-80261964 02A0 .text      setMatrix__9dkWmark_cFv                                      Function */
 // dkWmark_c::setMatrix(void)
 #pragma push
 #pragma optimization_level 0
@@ -256,7 +353,7 @@ asm void setMatrix__9dkWmark_cFv() {
 }
 #pragma pop
 
-/* 80261964 00B4 .text      dkWmark_Execute__FP9dkWmark_c                                */
+/* 80261964-80261A18 00B4 .text      dkWmark_Execute__FP9dkWmark_c                                Function */
 }
 
 #pragma push
@@ -269,7 +366,7 @@ asm void dkWmark_Execute(dkWmark_c*) {
 #pragma pop
 
 extern "C" {
-/* 80261A18 013C .text      dkWmark_Draw__FP9dkWmark_c                                   */
+/* 80261A18-80261B54 013C .text      dkWmark_Draw__FP9dkWmark_c                                   Function */
 }
 
 #pragma push

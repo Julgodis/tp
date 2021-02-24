@@ -11,11 +11,18 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__10JPATextureFPCUc();
+/* Function             */
 extern void __dt__10JPATextureFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dt__10JUTTextureFv();
+/* Function             */
 extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
-SECTION_DATA extern const void* __vt__10JPATexture[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JPATexture[4];
 }
 
 
@@ -24,8 +31,8 @@ SECTION_DATA extern const void* __vt__10JPATexture[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4598 000C .data      __vt__10JPATexture                                           */
-SECTION_DATA const  void* __vt__10JPATexture[4] = {
+/* 803C4598-803C45A8 000C .data      __vt__10JPATexture                                           VTableData */
+SECTION_DATA void* __vt__10JPATexture[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JPATextureFv,
@@ -40,7 +47,7 @@ SECTION_DATA const  void* __vt__10JPATexture[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027D7D4 0068 .text      __ct__10JPATextureFPCUc                                      */
+/* 8027D7D4-8027D83C 0068 .text      __ct__10JPATextureFPCUc                                      Function */
 // JPATexture::JPATexture(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -51,7 +58,7 @@ asm void __ct__10JPATextureFPCUc() {
 }
 #pragma pop
 
-/* 8027D83C 0064 .text      __dt__10JPATextureFv                                         */
+/* 8027D83C-8027D8A0 0064 .text      __dt__10JPATextureFv                                         Function */
 // JPATexture::~JPATexture(void)
 #pragma push
 #pragma optimization_level 0

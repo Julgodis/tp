@@ -11,9 +11,22 @@
 struct process_method_class;
 
 extern void fpcMtd_Method(int (*)(void*), void*); /* fpcMtd_Method__FPFPv_iPv */
+extern void fpcMtd_Execute(process_method_class*, void*); /* fpcMtd_Execute__FP20process_method_classPv */
+extern void fpcMtd_IsDelete(process_method_class*, void*); /* fpcMtd_IsDelete__FP20process_method_classPv */
+extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20process_method_classPv */
+extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 
 extern "C" {
+/* Function             */
 extern void fpcMtd_Method__FPFPv_iPv();
+/* Function             */
+extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
+extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
+extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
+extern void fpcMtd_Create__FP20process_method_classPv();
 }
 
 
@@ -22,7 +35,7 @@ extern void fpcMtd_Method__FPFPv_iPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80022428 0038 .text      fpcMtd_Method__FPFPv_iPv                                     */
+/* 80022428-80022460 0038 .text      fpcMtd_Method__FPFPv_iPv                                     Function */
 }
 
 #pragma push
@@ -35,7 +48,7 @@ asm void fpcMtd_Method(int (*)(void*), void*) {
 #pragma pop
 
 extern "C" {
-/* 80022460 0024 .text      fpcMtd_Execute__FP20process_method_classPv                   */
+/* 80022460-80022484 0024 .text      fpcMtd_Execute__FP20process_method_classPv                   Function */
 }
 
 #pragma push
@@ -48,7 +61,7 @@ asm void fpcMtd_Execute(process_method_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80022484 0024 .text      fpcMtd_IsDelete__FP20process_method_classPv                  */
+/* 80022484-800224A8 0024 .text      fpcMtd_IsDelete__FP20process_method_classPv                  Function */
 }
 
 #pragma push
@@ -61,7 +74,7 @@ asm void fpcMtd_IsDelete(process_method_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 800224A8 0024 .text      fpcMtd_Delete__FP20process_method_classPv                    */
+/* 800224A8-800224CC 0024 .text      fpcMtd_Delete__FP20process_method_classPv                    Function */
 }
 
 #pragma push
@@ -74,7 +87,7 @@ asm void fpcMtd_Delete(process_method_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 800224CC 0024 .text      fpcMtd_Create__FP20process_method_classPv                    */
+/* 800224CC-800224F0 0024 .text      fpcMtd_Create__FP20process_method_classPv                    Function */
 }
 
 #pragma push

@@ -60,8 +60,9 @@ OS_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libos.a: dirs $(OS_A_O_FILES)
+$(BUILD_DIR)/libos.a: $(OS_A_O_FILES)
 	$(LD) -xm l $(OS_A_LDFLAGS) -o $(BUILD_DIR)/libos.a $(OS_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libos.a
 
 $(BUILD_DIR)/libs/os/%.o: cpp/os/%.cpp
 	mkdir -p $(@D)

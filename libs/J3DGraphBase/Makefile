@@ -42,8 +42,9 @@ J3DGRAPHBASE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJ3DGraphBase.a: dirs $(J3DGRAPHBASE_A_O_FILES)
+$(BUILD_DIR)/libJ3DGraphBase.a: $(J3DGRAPHBASE_A_O_FILES)
 	$(LD) -xm l $(J3DGRAPHBASE_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphBase.a $(J3DGRAPHBASE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphBase.a
 
 $(BUILD_DIR)/libs/J3DGraphBase/%.o: cpp/J3DGraphBase/%.cpp
 	mkdir -p $(@D)

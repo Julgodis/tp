@@ -11,18 +11,41 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void stop__14JASAudioThreadFv();
+/* Function             */
+extern void __ct__15JASAudioReseterFv();
+/* Function             */
+extern void __dt__15JASAudioReseterFv();
+/* Function             */
+extern void start__15JASAudioReseterFUlb();
+/* Function             */
+extern void resume__15JASAudioReseterFv();
+/* FirstParamFunction   */
+extern u32 checkDone__15JASAudioReseterCFv(u8*);
+/* Function             */
 extern void calc__15JASAudioReseterFv();
+/* Function             */
 extern void callback__15JASAudioReseterFPv();
+/* Function             */
 extern void drop__13JASDSPChannelFv();
+/* Function             */
 extern void getHandle__13JASDSPChannelFUl();
+/* Function             */
 extern void setDSPLevel__9JASDriverFf();
+/* Function             */
 extern void getDSPLevel__9JASDriverFv();
+/* Function             */
 extern void registerDspSyncCallback__9JASDriverFPFPv_lPv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B8C[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JASAudioReseter__LIT_156;
 }
 
@@ -32,7 +55,7 @@ SECTION_SDATA2 extern f64 JASAudioReseter__LIT_156;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455740 0008 .sdata2    @156                                                         */
+/* 80455740-80455748 0008 .sdata2    @156                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JASAudioReseter__LIT_156 = 4503599627370496.000000;
 }
@@ -43,7 +66,7 @@ SECTION_SDATA2 f64 JASAudioReseter__LIT_156 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029D0B4 0048 .text      __ct__15JASAudioReseterFv                                    */
+/* 8029D0B4-8029D0FC 0048 .text      __ct__15JASAudioReseterFv                                    Function */
 // JASAudioReseter::JASAudioReseter(void)
 #pragma push
 #pragma optimization_level 0
@@ -54,7 +77,7 @@ asm void __ct__15JASAudioReseterFv() {
 }
 #pragma pop
 
-/* 8029D0FC 003C .text      __dt__15JASAudioReseterFv                                    */
+/* 8029D0FC-8029D138 003C .text      __dt__15JASAudioReseterFv                                    Function */
 // JASAudioReseter::~JASAudioReseter(void)
 #pragma push
 #pragma optimization_level 0
@@ -65,7 +88,7 @@ asm void __dt__15JASAudioReseterFv() {
 }
 #pragma pop
 
-/* 8029D138 009C .text      start__15JASAudioReseterFUlb                                 */
+/* 8029D138-8029D1D4 009C .text      start__15JASAudioReseterFUlb                                 Function */
 // JASAudioReseter::start(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -76,7 +99,7 @@ asm void start__15JASAudioReseterFUlb() {
 }
 #pragma pop
 
-/* 8029D1D4 0024 .text      resume__15JASAudioReseterFv                                  */
+/* 8029D1D4-8029D1F8 0024 .text      resume__15JASAudioReseterFv                                  Function */
 // JASAudioReseter::resume(void)
 #pragma push
 #pragma optimization_level 0
@@ -87,13 +110,13 @@ asm void resume__15JASAudioReseterFv() {
 }
 #pragma pop
 
-/* 8029D1F8 0008 .text      checkDone__15JASAudioReseterCFv                              */
+/* 8029D1F8-8029D200 0008 .text      checkDone__15JASAudioReseterCFv                              FirstParamFunction */
 // JASAudioReseter::checkDone(void) const
 u32 checkDone__15JASAudioReseterCFv(u8* param0) {
 	return *(u32*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 8029D200 00D4 .text      calc__15JASAudioReseterFv                                    */
+/* 8029D200-8029D2D4 00D4 .text      calc__15JASAudioReseterFv                                    Function */
 // JASAudioReseter::calc(void)
 #pragma push
 #pragma optimization_level 0
@@ -104,7 +127,7 @@ asm void calc__15JASAudioReseterFv() {
 }
 #pragma pop
 
-/* 8029D2D4 0020 .text      callback__15JASAudioReseterFPv                               */
+/* 8029D2D4-8029D2F4 0020 .text      callback__15JASAudioReseterFPv                               Function */
 // JASAudioReseter::callback(void*)
 #pragma push
 #pragma optimization_level 0

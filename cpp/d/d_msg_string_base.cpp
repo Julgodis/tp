@@ -16,47 +16,95 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__26jmessage_string_tReferenceFv();
+/* Function             */
 extern void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void getLineLength__26jmessage_string_tReferenceFi();
+/* Function             */
 extern void __ct__24jmessage_string_tControlFv();
+/* Function             */
 extern void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
+/* Function             */
 extern void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
+/* Function             */
+extern void __ct__16dMsgStringBase_cFv();
+/* Function             */
+extern void __dt__16dMsgStringBase_cFv();
+/* Function             */
 extern void getResource__16dMsgStringBase_cFv();
+/* Function             */
 extern void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
+extern void getPageMax__16dMsgStringBase_cFi();
+/* Function             */
 extern void getMessageLocal__16dMsgStringBase_cFUlPc();
+/* ReturnFunction       */
 extern void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc();
+/* Function             */
 extern void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void getMessage__16dMsgStringBase_cFUlPc();
+/* ReturnFunction       */
 extern void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox();
+/* ReturnFunction       */
 extern void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf();
+/* Function             */
 extern void reset__Q28JMessage8TControlFv();
+/* Function             */
 extern void update__Q28JMessage8TControlFv();
+/* Function             */
 extern void render__Q28JMessage8TControlFv();
+/* Function             */
 extern void setMessageID__Q28JMessage8TControlFUlUlPb();
+/* Function             */
 extern void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+/* Function             */
 extern void __ct__Q28JMessage18TResourceContainerFv();
+/* Function             */
 extern void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+/* Function             */
 extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+/* Function             */
 extern void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcpy();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_string_base__stringBase0[24];
-SECTION_DATA extern const void* __vt__16dMsgStringBase_c[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16dMsgStringBase_c[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_string_base__LIT_4046[8];
 }
 
@@ -66,9 +114,15 @@ SECTION_SDATA2 extern u8 d_d_msg_string_base__LIT_4046[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399C98 0013 .rodata    @stringBase0                                                 */
-const char* const stringBase_80399C98 = "zel_00.bmg";
-const char* const stringBase_80399CA3 = """\x1B""CR[%d]";
+/* 80399C98-80399CB0 0013 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399C98 = "zel_00.bmg";
+SECTION_DEAD const char* const stringBase_80399CA3 = """\x1B""CR[%d]";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399CAB = "\0\0\0\0";
+#pragma pop
 }
 
 
@@ -77,8 +131,8 @@ const char* const stringBase_80399CA3 = """\x1B""CR[%d]";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C1478 0020 .data      __vt__16dMsgStringBase_c                                     */
-SECTION_DATA const  void* __vt__16dMsgStringBase_c[8] = {
+/* 803C1478-803C1498 0020 .data      __vt__16dMsgStringBase_c                                     VTableData */
+SECTION_DATA void* __vt__16dMsgStringBase_c[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
@@ -96,7 +150,7 @@ SECTION_DATA const  void* __vt__16dMsgStringBase_c[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454D70 0004 .sdata2    @4046                                                        */
+/* 80454D70-80454D78 0004 .sdata2    @4046                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_string_base__LIT_4046[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -110,7 +164,7 @@ SECTION_SDATA2 u8 d_d_msg_string_base__LIT_4046[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802493B4 0174 .text      __ct__16dMsgStringBase_cFv                                   */
+/* 802493B4-80249528 0174 .text      __ct__16dMsgStringBase_cFv                                   Function */
 // dMsgStringBase_c::dMsgStringBase_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -121,7 +175,7 @@ asm void __ct__16dMsgStringBase_cFv() {
 }
 #pragma pop
 
-/* 80249528 01D8 .text      __dt__16dMsgStringBase_cFv                                   */
+/* 80249528-80249700 01D8 .text      __dt__16dMsgStringBase_cFv                                   Function */
 // dMsgStringBase_c::~dMsgStringBase_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -132,7 +186,7 @@ asm void __dt__16dMsgStringBase_cFv() {
 }
 #pragma pop
 
-/* 80249700 0068 .text      getResource__16dMsgStringBase_cFv                            */
+/* 80249700-80249768 0068 .text      getResource__16dMsgStringBase_cFv                            Function */
 // dMsgStringBase_c::getResource(void)
 #pragma push
 #pragma optimization_level 0
@@ -143,7 +197,7 @@ asm void getResource__16dMsgStringBase_cFv() {
 }
 #pragma pop
 
-/* 80249768 0170 .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249768-802498D8 0170 .text      getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc Function */
 // dMsgStringBase_c::getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -154,7 +208,7 @@ asm void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFon
 }
 #pragma pop
 
-/* 802498D8 0170 .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 802498D8-80249A48 0170 .text      getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc Function */
 // dMsgStringBase_c::getStringPageLocal(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -165,7 +219,7 @@ asm void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBox
 }
 #pragma pop
 
-/* 80249A48 0028 .text      getPageMax__16dMsgStringBase_cFi                             */
+/* 80249A48-80249A70 0028 .text      getPageMax__16dMsgStringBase_cFi                             Function */
 // dMsgStringBase_c::getPageMax(int)
 #pragma push
 #pragma optimization_level 0
@@ -176,8 +230,8 @@ asm void getPageMax__16dMsgStringBase_cFi() {
 }
 #pragma pop
 
-/* 80249A70 013C .text      getMessageLocal__16dMsgStringBase_cFUlPc                     */
-// dMsgStringBase_c::getMessageLocal(u32, s8*)
+/* 80249A70-80249BAC 013C .text      getMessageLocal__16dMsgStringBase_cFUlPc                     Function */
+// dMsgStringBase_c::getMessageLocal(u32, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,13 +241,13 @@ asm void getMessageLocal__16dMsgStringBase_cFUlPc() {
 }
 #pragma pop
 
-/* 80249BAC 0004 .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    */
+/* 80249BAC-80249BB0 0004 .text      drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc    ReturnFunction */
 // dMsgStringBase_c::drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8)
 void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc() {
 	return;
 }
 
-/* 80249BB0 0020 .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BB0-80249BD0 0020 .text      getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc Function */
 // dMsgStringBase_c::getString(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -204,7 +258,7 @@ asm void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10C
 }
 #pragma pop
 
-/* 80249BD0 0028 .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 80249BD0-80249BF8 0028 .text      getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc Function */
 // dMsgStringBase_c::getStringPage(u32, u8, u8, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -215,8 +269,8 @@ asm void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUT
 }
 #pragma pop
 
-/* 80249BF8 0020 .text      getMessage__16dMsgStringBase_cFUlPc                          */
-// dMsgStringBase_c::getMessage(u32, s8*)
+/* 80249BF8-80249C18 0020 .text      getMessage__16dMsgStringBase_cFUlPc                          Function */
+// dMsgStringBase_c::getMessage(u32, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -226,13 +280,13 @@ asm void getMessage__16dMsgStringBase_cFUlPc() {
 }
 #pragma pop
 
-/* 80249C18 0004 .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           */
+/* 80249C18-80249C1C 0004 .text      resetStringLocal__16dMsgStringBase_cFP10J2DTextBox           ReturnFunction */
 // dMsgStringBase_c::resetStringLocal(J2DTextBox*)
 void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox() {
 	return;
 }
 
-/* 80249C1C 0004 .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          */
+/* 80249C1C-80249C20 0004 .text      drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf          ReturnFunction */
 // dMsgStringBase_c::drawOutFontLocal(J2DTextBox*, f32)
 void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf() {
 	return;

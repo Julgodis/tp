@@ -16,88 +16,175 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void setResource__10JUTNameTabFPC7ResNTAB();
+/* Function             */
 extern void func_802F4260();
+/* Function             */
 extern void func_802F42C0();
+/* Function             */
 extern void func_8030A458();
+/* Function             */
 extern void func_8030A470();
+/* Function             */
 extern void func_8030A488();
+/* Function             */
 extern void func_8030A4A0();
+/* Function             */
 extern void func_8030A4B8();
+/* Function             */
 extern void func_8030A4D0();
+/* Function             */
 extern void func_8030A4E8();
+/* Function             */
 extern void func_8030A500();
+/* Function             */
 extern void func_8030A518();
+/* Function             */
 extern void func_8030A530();
+/* Function             */
 extern void func_8030A548();
+/* Function             */
 extern void func_8030A560();
+/* Function             */
 extern void func_8030A578();
+/* Function             */
 extern void __ct__15J3DAnmTransformFsPfPsPf();
+/* Function             */
 extern void __ct__19J3DAnmTextureSRTKeyFv();
+/* Function             */
 extern void __ct__18J3DAnmVtxColorFullFv();
+/* Function             */
 extern void __ct__17J3DAnmVtxColorKeyFv();
+/* Function             */
 extern void __ct__15J3DAnmColorFullFv();
+/* Function             */
 extern void __ct__14J3DAnmColorKeyFv();
+/* Function             */
 extern void __ct__15J3DAnmTevRegKeyFv();
+/* Function             */
 extern void __ct__16J3DAnmTexPatternFv();
+/* Function             */
+extern void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+/* Function             */
+extern void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
+/* Function             */
 extern void __ct__20J3DAnmFullLoader_v15Fv();
+/* Function             */
 extern void __dt__20J3DAnmFullLoader_v15Fv();
+/* Function             */
 extern void __ct__19J3DAnmKeyLoader_v15Fv();
+/* Function             */
 extern void __dt__19J3DAnmKeyLoader_v15Fv();
+/* Function             */
 extern void load__20J3DAnmFullLoader_v15FPCv();
+/* Function             */
 extern void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv();
+/* Function             */
 extern void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData();
+/* Function             */
 extern void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData();
+/* Function             */
 extern void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData();
+/* Function             */
 extern void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData();
+/* Function             */
 extern void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData();
+/* Function             */
 extern void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData();
+/* Function             */
 extern void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData();
+/* Function             */
 extern void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData();
+/* Function             */
 extern void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData();
+/* Function             */
 extern void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData();
+/* Function             */
 extern void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData();
+/* Function             */
 extern void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData();
+/* Function             */
 extern void load__19J3DAnmKeyLoader_v15FPCv();
+/* Function             */
 extern void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv();
+/* Function             */
 extern void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData();
+/* Function             */
 extern void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData();
+/* Function             */
 extern void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData();
+/* Function             */
 extern void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData();
+/* Function             */
 extern void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData();
+/* Function             */
 extern void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData();
+/* Function             */
 extern void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData();
+/* Function             */
 extern void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData();
+/* Function             */
 extern void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData();
+/* Function             */
 extern void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData();
+/* Function             */
 extern void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData();
+/* Function             */
 extern void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData();
+/* Function             */
 extern void __dt__20J3DAnmVisibilityFullFv();
-extern int getKind__20J3DAnmVisibilityFullCFv();
+/* ReturnIntegerFunction */
+extern  int getKind__20J3DAnmVisibilityFullCFv();
+/* Function             */
 extern void __dt__12J3DAnmLoaderFv();
+/* Function             */
 extern void func_80339848();
+/* Function             */
 extern void func_80339860();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DAnmLoader__stringBase0[64];
-SECTION_DATA extern const void* __vt__10J3DAnmBase[4];
-SECTION_DATA extern const void* __vt__18J3DAnmTransformKey[5];
-SECTION_DATA extern const void* __vt__16J3DAnmClusterKey[5];
-SECTION_DATA extern const void* __vt__13J3DAnmCluster[5];
-SECTION_DATA extern const void* __vt__17J3DAnmClusterFull[5];
-SECTION_DATA extern const void* __vt__27J3DAnmTransformFullWithLerp[5];
-SECTION_DATA extern const void* __vt__19J3DAnmTransformFull[6];
-SECTION_DATA extern const void* __vt__19J3DAnmKeyLoader_v15[5];
-SECTION_DATA extern const void* __vt__20J3DAnmFullLoader_v15[5];
-SECTION_DATA extern const void* __vt__12J3DAnmLoader[5];
-SECTION_DATA extern const void* __vt__20J3DAnmVisibilityFull[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10J3DAnmBase[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18J3DAnmTransformKey[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DAnmClusterKey[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DAnmCluster[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17J3DAnmClusterFull[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__27J3DAnmTransformFullWithLerp[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19J3DAnmTransformFull[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19J3DAnmKeyLoader_v15[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20J3DAnmFullLoader_v15[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DAnmLoader[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20J3DAnmVisibilityFull[5];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_889[8];
 }
 
@@ -107,11 +194,18 @@ SECTION_SDATA2 extern u8 LIT_889[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2130 003D .rodata    @stringBase0                                                 */
-const char* const stringBase_803A2130 = 
-    "J3DAnmLoader: this is not a J3D "
+/* 803A2130-803A2170 003D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A2130 = 
+    "J3DAnmLoader: th"
+    "is is not a J3D "
     "Binary.\n";
-const char* const stringBase_803A2159 = "Unknown data block\n";
+SECTION_DEAD const char* const stringBase_803A2159 = "Unknown data block\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A216D = "\0\0";
+#pragma pop
 }
 
 
@@ -120,32 +214,32 @@ const char* const stringBase_803A2159 = "Unknown data block\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF238 0014 .data      __vt__19J3DAnmKeyLoader_v15                                  */
-SECTION_DATA const  void* __vt__19J3DAnmKeyLoader_v15[5] = {
+/* 803CF238-803CF24C 0014 .data      __vt__19J3DAnmKeyLoader_v15                                  VTableData */
+SECTION_DATA void* __vt__19J3DAnmKeyLoader_v15[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__19J3DAnmKeyLoader_v15FPCv,
 	(void*)setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv,
 	(void*)__dt__19J3DAnmKeyLoader_v15Fv,
 };
-/* 803CF24C 0014 .data      __vt__20J3DAnmFullLoader_v15                                 */
-SECTION_DATA const  void* __vt__20J3DAnmFullLoader_v15[5] = {
+/* 803CF24C-803CF260 0014 .data      __vt__20J3DAnmFullLoader_v15                                 VTableData */
+SECTION_DATA void* __vt__20J3DAnmFullLoader_v15[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__20J3DAnmFullLoader_v15FPCv,
 	(void*)setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv,
 	(void*)__dt__20J3DAnmFullLoader_v15Fv,
 };
-/* 803CF260 0014 .data      __vt__12J3DAnmLoader                                         */
-SECTION_DATA const  void* __vt__12J3DAnmLoader[5] = {
+/* 803CF260-803CF274 0014 .data      __vt__12J3DAnmLoader                                         VTableData */
+SECTION_DATA void* __vt__12J3DAnmLoader[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 	(void*)__dt__12J3DAnmLoaderFv,
 };
-/* 803CF274 0010 .data      __vt__20J3DAnmVisibilityFull                                 */
-SECTION_DATA const  void* __vt__20J3DAnmVisibilityFull[5] = {
+/* 803CF274-803CF288 0010 .data      __vt__20J3DAnmVisibilityFull                                 VTableData */
+SECTION_DATA void* __vt__20J3DAnmVisibilityFull[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20J3DAnmVisibilityFullFv,
@@ -161,7 +255,7 @@ SECTION_DATA const  void* __vt__20J3DAnmVisibilityFull[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804564C0 0004 .sdata2    @889                                                         */
+/* 804564C0-804564C8 0004 .sdata2    @889                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_889[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -175,7 +269,7 @@ SECTION_SDATA2 u8 LIT_889[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80337B40 05F4 .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   */
+/* 80337B40-80338134 05F4 .text      load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag   Function */
 // J3DAnmLoaderDataBase::load(const void*, J3DAnmLoaderDataBaseFlag)
 #pragma push
 #pragma optimization_level 0
@@ -186,7 +280,7 @@ asm void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag() {
 }
 #pragma pop
 
-/* 80338134 0334 .text      setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv         */
+/* 80338134-80338468 0334 .text      setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv         Function */
 // J3DAnmLoaderDataBase::setResource(J3DAnmBase*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -197,7 +291,7 @@ asm void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv() {
 }
 #pragma pop
 
-/* 80338468 001C .text      __ct__20J3DAnmFullLoader_v15Fv                               */
+/* 80338468-80338484 001C .text      __ct__20J3DAnmFullLoader_v15Fv                               Function */
 // J3DAnmFullLoader_v15::J3DAnmFullLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -208,7 +302,7 @@ asm void __ct__20J3DAnmFullLoader_v15Fv() {
 }
 #pragma pop
 
-/* 80338484 005C .text      __dt__20J3DAnmFullLoader_v15Fv                               */
+/* 80338484-803384E0 005C .text      __dt__20J3DAnmFullLoader_v15Fv                               Function */
 // J3DAnmFullLoader_v15::~J3DAnmFullLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -219,7 +313,7 @@ asm void __dt__20J3DAnmFullLoader_v15Fv() {
 }
 #pragma pop
 
-/* 803384E0 001C .text      __ct__19J3DAnmKeyLoader_v15Fv                                */
+/* 803384E0-803384FC 001C .text      __ct__19J3DAnmKeyLoader_v15Fv                                Function */
 // J3DAnmKeyLoader_v15::J3DAnmKeyLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -230,7 +324,7 @@ asm void __ct__19J3DAnmKeyLoader_v15Fv() {
 }
 #pragma pop
 
-/* 803384FC 005C .text      __dt__19J3DAnmKeyLoader_v15Fv                                */
+/* 803384FC-80338558 005C .text      __dt__19J3DAnmKeyLoader_v15Fv                                Function */
 // J3DAnmKeyLoader_v15::~J3DAnmKeyLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -241,7 +335,7 @@ asm void __dt__19J3DAnmKeyLoader_v15Fv() {
 }
 #pragma pop
 
-/* 80338558 0148 .text      load__20J3DAnmFullLoader_v15FPCv                             */
+/* 80338558-803386A0 0148 .text      load__20J3DAnmFullLoader_v15FPCv                             Function */
 // J3DAnmFullLoader_v15::load(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -252,7 +346,7 @@ asm void load__20J3DAnmFullLoader_v15FPCv() {
 }
 #pragma pop
 
-/* 803386A0 0160 .text      setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv         */
+/* 803386A0-80338800 0160 .text      setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv         Function */
 // J3DAnmFullLoader_v15::setResource(J3DAnmBase*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -263,7 +357,7 @@ asm void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv() {
 }
 #pragma pop
 
-/* 80338800 0028 .text      readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData */
+/* 80338800-80338828 0028 .text      readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData Function */
 // J3DAnmFullLoader_v15::readAnmTransform(const J3DAnmTransformFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -274,7 +368,7 @@ asm void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData() 
 }
 #pragma pop
 
-/* 80338828 0094 .text      setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData */
+/* 80338828-803388BC 0094 .text      setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData Function */
 // J3DAnmFullLoader_v15::setAnmTransform(J3DAnmTransformFull*, const J3DAnmTransformFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -285,7 +379,7 @@ asm void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAn
 }
 #pragma pop
 
-/* 803388BC 0028 .text      readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData */
+/* 803388BC-803388E4 0028 .text      readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData Function */
 // J3DAnmFullLoader_v15::readAnmColor(const J3DAnmColorFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -296,7 +390,7 @@ asm void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData() {
 }
 #pragma pop
 
-/* 803388E4 00CC .text      setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData */
+/* 803388E4-803389B0 00CC .text      setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData Function */
 // J3DAnmFullLoader_v15::setAnmColor(J3DAnmColorFull*, const J3DAnmColorFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -307,7 +401,7 @@ asm void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFu
 }
 #pragma pop
 
-/* 803389B0 0028 .text      readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData */
+/* 803389B0-803389D8 0028 .text      readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData Function */
 // J3DAnmFullLoader_v15::readAnmTexPattern(const J3DAnmTexPatternFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -318,7 +412,7 @@ asm void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData(
 }
 #pragma pop
 
-/* 803389D8 00A4 .text      setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData */
+/* 803389D8-80338A7C 00A4 .text      setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData Function */
 // J3DAnmFullLoader_v15::setAnmTexPattern(J3DAnmTexPattern*, const J3DAnmTexPatternFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -329,7 +423,7 @@ asm void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmT
 }
 #pragma pop
 
-/* 80338A7C 0028 .text      readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData */
+/* 80338A7C-80338AA4 0028 .text      readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData Function */
 // J3DAnmFullLoader_v15::readAnmVisibility(const J3DAnmVisibilityFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -340,7 +434,7 @@ asm void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData(
 }
 #pragma pop
 
-/* 80338AA4 007C .text      setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData */
+/* 80338AA4-80338B20 007C .text      setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData Function */
 // J3DAnmFullLoader_v15::setAnmVisibility(J3DAnmVisibilityFull*, const J3DAnmVisibilityFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -351,7 +445,7 @@ asm void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3D
 }
 #pragma pop
 
-/* 80338B20 0028 .text      readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData */
+/* 80338B20-80338B48 0028 .text      readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData Function */
 // J3DAnmFullLoader_v15::readAnmCluster(const J3DAnmClusterFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -362,7 +456,7 @@ asm void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData() {
 }
 #pragma pop
 
-/* 80338B48 006C .text      setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData */
+/* 80338B48-80338BB4 006C .text      setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData Function */
 // J3DAnmFullLoader_v15::setAnmCluster(J3DAnmClusterFull*, const J3DAnmClusterFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -373,7 +467,7 @@ asm void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClu
 }
 #pragma pop
 
-/* 80338BB4 0028 .text      readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData */
+/* 80338BB4-80338BDC 0028 .text      readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData Function */
 // J3DAnmFullLoader_v15::readAnmVtxColor(const J3DAnmVtxColorFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -384,7 +478,7 @@ asm void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData() {
 }
 #pragma pop
 
-/* 80338BDC 0168 .text      setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData */
+/* 80338BDC-80338D44 0168 .text      setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData Function */
 // J3DAnmFullLoader_v15::setAnmVtxColor(J3DAnmVtxColorFull*, const J3DAnmVtxColorFullData*)
 #pragma push
 #pragma optimization_level 0
@@ -395,7 +489,7 @@ asm void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmV
 }
 #pragma pop
 
-/* 80338D44 0148 .text      load__19J3DAnmKeyLoader_v15FPCv                              */
+/* 80338D44-80338E8C 0148 .text      load__19J3DAnmKeyLoader_v15FPCv                              Function */
 // J3DAnmKeyLoader_v15::load(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -406,7 +500,7 @@ asm void load__19J3DAnmKeyLoader_v15FPCv() {
 }
 #pragma pop
 
-/* 80338E8C 0160 .text      setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv          */
+/* 80338E8C-80338FEC 0160 .text      setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv          Function */
 // J3DAnmKeyLoader_v15::setResource(J3DAnmBase*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -417,7 +511,7 @@ asm void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv() {
 }
 #pragma pop
 
-/* 80338FEC 0028 .text      readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData */
+/* 80338FEC-80339014 0028 .text      readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData Function */
 // J3DAnmKeyLoader_v15::readAnmTransform(const J3DAnmTransformKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -428,7 +522,7 @@ asm void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData() {
 }
 #pragma pop
 
-/* 80339014 009C .text      setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData */
+/* 80339014-803390B0 009C .text      setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmTransform(J3DAnmTransformKey*, const J3DAnmTransformKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -439,7 +533,7 @@ asm void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmT
 }
 #pragma pop
 
-/* 803390B0 0028 .text      readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData */
+/* 803390B0-803390D8 0028 .text      readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData Function */
 // J3DAnmKeyLoader_v15::readAnmTextureSRT(const J3DAnmTextureSRTKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -450,7 +544,7 @@ asm void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData() 
 }
 #pragma pop
 
-/* 803390D8 01D8 .text      setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData */
+/* 803390D8-803392B0 01D8 .text      setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmTextureSRT(J3DAnmTextureSRTKey*, const J3DAnmTextureSRTKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -461,7 +555,7 @@ asm void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAn
 }
 #pragma pop
 
-/* 803392B0 0028 .text      readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData   */
+/* 803392B0-803392D8 0028 .text      readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData   Function */
 // J3DAnmKeyLoader_v15::readAnmColor(const J3DAnmColorKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -472,7 +566,7 @@ asm void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData() {
 }
 #pragma pop
 
-/* 803392D8 00EC .text      setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData */
+/* 803392D8-803393C4 00EC .text      setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmColor(J3DAnmColorKey*, const J3DAnmColorKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -483,7 +577,7 @@ asm void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyD
 }
 #pragma pop
 
-/* 803393C4 0028 .text      readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData */
+/* 803393C4-803393EC 0028 .text      readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData Function */
 // J3DAnmKeyLoader_v15::readAnmCluster(const J3DAnmClusterKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -494,7 +588,7 @@ asm void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData() {
 }
 #pragma pop
 
-/* 803393EC 006C .text      setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData */
+/* 803393EC-80339458 006C .text      setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmCluster(J3DAnmClusterKey*, const J3DAnmClusterKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -505,7 +599,7 @@ asm void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClust
 }
 #pragma pop
 
-/* 80339458 0028 .text      readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData */
+/* 80339458-80339480 0028 .text      readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData Function */
 // J3DAnmKeyLoader_v15::readAnmTevReg(const J3DAnmTevRegKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -516,7 +610,7 @@ asm void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData() {
 }
 #pragma pop
 
-/* 80339480 018C .text      setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData */
+/* 80339480-8033960C 018C .text      setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmTevReg(J3DAnmTevRegKey*, const J3DAnmTevRegKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +621,7 @@ asm void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegK
 }
 #pragma pop
 
-/* 8033960C 0028 .text      readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData */
+/* 8033960C-80339634 0028 .text      readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData Function */
 // J3DAnmKeyLoader_v15::readAnmVtxColor(const J3DAnmVtxColorKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -538,7 +632,7 @@ asm void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData() {
 }
 #pragma pop
 
-/* 80339634 0168 .text      setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData */
+/* 80339634-8033979C 0168 .text      setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData Function */
 // J3DAnmKeyLoader_v15::setAnmVtxColor(J3DAnmVtxColorKey*, const J3DAnmVtxColorKeyData*)
 #pragma push
 #pragma optimization_level 0
@@ -549,7 +643,7 @@ asm void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtx
 }
 #pragma pop
 
-/* 8033979C 005C .text      __dt__20J3DAnmVisibilityFullFv                               */
+/* 8033979C-803397F8 005C .text      __dt__20J3DAnmVisibilityFullFv                               Function */
 // J3DAnmVisibilityFull::~J3DAnmVisibilityFull(void)
 #pragma push
 #pragma optimization_level 0
@@ -560,13 +654,13 @@ asm void __dt__20J3DAnmVisibilityFullFv() {
 }
 #pragma pop
 
-/* 803397F8 0008 .text      getKind__20J3DAnmVisibilityFullCFv                           */
+/* 803397F8-80339800 0008 .text      getKind__20J3DAnmVisibilityFullCFv                           ReturnIntegerFunction */
 // J3DAnmVisibilityFull::getKind(void) const
 int getKind__20J3DAnmVisibilityFullCFv() {
 	return 6;
 }
 
-/* 80339800 0048 .text      __dt__12J3DAnmLoaderFv                                       */
+/* 80339800-80339848 0048 .text      __dt__12J3DAnmLoaderFv                                       Function */
 // J3DAnmLoader::~J3DAnmLoader(void)
 #pragma push
 #pragma optimization_level 0
@@ -577,7 +671,7 @@ asm void __dt__12J3DAnmLoaderFv() {
 }
 #pragma pop
 
-/* 80339848 0018 .text      JSUConvertOffsetToPtr<21J3DAnmClusterKeyTable>__FPCvPCv      */
+/* 80339848-80339860 0018 .text      JSUConvertOffsetToPtr<21J3DAnmClusterKeyTable>__FPCvPCv      Function */
 // JSUConvertOffsetToPtr<21J3DAnmClusterKeyTable>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -588,7 +682,7 @@ asm void func_80339848() {
 }
 #pragma pop
 
-/* 80339860 0018 .text      JSUConvertOffsetToPtr<22J3DAnmClusterFullTable>__FPCvPCv     */
+/* 80339860-80339878 0018 .text      JSUConvertOffsetToPtr<22J3DAnmClusterFullTable>__FPCvPCv     Function */
 // JSUConvertOffsetToPtr<22J3DAnmClusterFullTable>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0

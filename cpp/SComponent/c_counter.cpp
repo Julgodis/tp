@@ -8,8 +8,13 @@
 // Additional Symbols:
 // 
 
+extern void cCt_Counter(int); /* cCt_Counter__Fi */
+
 extern "C" {
-SECTION_BSS extern u8 g_Counter[16];
+/* Function             */
+extern void cCt_Counter__Fi();
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
 }
 
 
@@ -18,8 +23,8 @@ SECTION_BSS extern u8 g_Counter[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430CD8 000C .bss       g_Counter                                                    */
-SECTION_BSS u8 g_Counter[16];
+/* 80430CD8-80430CE8 000C .bss       g_Counter                                                    ZeroInitializedData */
+SECTION_BSS u8 g_Counter[12 + 4 /* padding */];
 }
 
 
@@ -28,7 +33,7 @@ SECTION_BSS u8 g_Counter[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80265E1C 0048 .text      cCt_Counter__Fi                                              */
+/* 80265E1C-80265E64 0048 .text      cCt_Counter__Fi                                              Function */
 }
 
 #pragma push

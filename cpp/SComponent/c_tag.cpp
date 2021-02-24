@@ -8,10 +8,10 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct node_list_class;
-struct node_lists_tree_class;
 struct node_class;
+struct create_tag_class;
+struct node_lists_tree_class;
+struct node_list_class;
 
 extern void cLs_SingleCut(node_class*); /* cLs_SingleCut__FP10node_class */
 extern void cLs_Addition(node_list_class*, node_class*); /* cLs_Addition__FP15node_list_classP10node_class */
@@ -20,15 +20,46 @@ extern void cNd_Create(node_class*, void*); /* cNd_Create__FP10node_classPv */
 extern void cTr_SingleCut(node_class*); /* cTr_SingleCut__FP10node_class */
 extern void cTr_Addition(node_lists_tree_class*, int, node_class*); /* cTr_Addition__FP21node_lists_tree_classiP10node_class */
 extern void cTr_Insert(node_lists_tree_class*, int, node_class*, int); /* cTr_Insert__FP21node_lists_tree_classiP10node_classi */
+extern void cTg_IsUse(create_tag_class*); /* cTg_IsUse__FP16create_tag_class */
+extern void cTg_SingleCutFromTree(create_tag_class*); /* cTg_SingleCutFromTree__FP16create_tag_class */
+extern void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); /* cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
+extern void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int); /* cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
+extern void cTg_GetFirst(node_list_class*); /* cTg_GetFirst__FP15node_list_class */
+extern void cTg_SingleCut(create_tag_class*); /* cTg_SingleCut__FP16create_tag_class */
+extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
+extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
 extern void cLs_SingleCut__FP10node_class();
+/* Function             */
 extern void cLs_Addition__FP15node_list_classP10node_class();
+/* Function             */
 extern void cLs_GetFirst__FP15node_list_class();
+/* Function             */
 extern void cNd_Create__FP10node_classPv();
+/* Function             */
 extern void cTr_SingleCut__FP10node_class();
+/* Function             */
 extern void cTr_Addition__FP21node_lists_tree_classiP10node_class();
+/* Function             */
 extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
+/* Function             */
+extern void cTg_IsUse__FP16create_tag_class();
+/* Function             */
+extern void cTg_SingleCutFromTree__FP16create_tag_class();
+/* Function             */
+extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+/* Function             */
+extern void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
+/* Function             */
+extern void cTg_GetFirst__FP15node_list_class();
+/* Function             */
+extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
+extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
+extern void cTg_Create__FP16create_tag_classPv();
 }
 
 
@@ -37,7 +68,7 @@ extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266880 000C .text      cTg_IsUse__FP16create_tag_class                              */
+/* 80266880-8026688C 000C .text      cTg_IsUse__FP16create_tag_class                              Function */
 }
 
 #pragma push
@@ -50,7 +81,7 @@ asm void cTg_IsUse(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 8026688C 0040 .text      cTg_SingleCutFromTree__FP16create_tag_class                  */
+/* 8026688C-802668CC 0040 .text      cTg_SingleCutFromTree__FP16create_tag_class                  Function */
 }
 
 #pragma push
@@ -63,7 +94,7 @@ asm void cTg_SingleCutFromTree(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 802668CC 0050 .text      cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
+/* 802668CC-8026691C 0050 .text      cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class Function */
 }
 
 #pragma push
@@ -76,7 +107,7 @@ asm void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 8026691C 0050 .text      cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
+/* 8026691C-8026696C 0050 .text      cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi Function */
 }
 
 #pragma push
@@ -89,7 +120,7 @@ asm void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 8026696C 0038 .text      cTg_GetFirst__FP15node_list_class                            */
+/* 8026696C-802669A4 0038 .text      cTg_GetFirst__FP15node_list_class                            Function */
 }
 
 #pragma push
@@ -102,7 +133,7 @@ asm void cTg_GetFirst(node_list_class*) {
 #pragma pop
 
 extern "C" {
-/* 802669A4 0040 .text      cTg_SingleCut__FP16create_tag_class                          */
+/* 802669A4-802669E4 0040 .text      cTg_SingleCut__FP16create_tag_class                          Function */
 }
 
 #pragma push
@@ -115,7 +146,7 @@ asm void cTg_SingleCut(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 802669E4 0050 .text      cTg_Addition__FP15node_list_classP16create_tag_class         */
+/* 802669E4-80266A34 0050 .text      cTg_Addition__FP15node_list_classP16create_tag_class         Function */
 }
 
 #pragma push
@@ -128,7 +159,7 @@ asm void cTg_Addition(node_list_class*, create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266A34 0048 .text      cTg_Create__FP16create_tag_classPv                           */
+/* 80266A34-80266A7C 0048 .text      cTg_Create__FP16create_tag_classPv                           Function */
 }
 
 #pragma push

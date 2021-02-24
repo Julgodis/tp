@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_fmod();
+/* Function             */
+extern void fmod();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_fmod();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C760 0020 .text      fmod                                                         */
+/* 8036C760-8036C780 0020 .text      fmod                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

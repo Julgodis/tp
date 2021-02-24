@@ -12,23 +12,23 @@
 // Additional Symbols:
 // 
 
+struct JKRExpHeap;
 struct JKRHeap;
-struct create_tag_class;
+struct request_of_phase_process_class;
 struct scene_class;
 struct cXyz;
-struct stage_stag_info_class;
-struct JKRExpHeap;
-struct csXyz;
 struct dScnPly_c;
-struct request_of_phase_process_class;
+struct csXyz;
+struct create_tag_class;
+struct stage_stag_info_class;
 
-extern void mDoAud_setSceneName(const s8*, s32, s32); /* mDoAud_setSceneName__FPCcll */
+extern void mDoAud_setSceneName(const char*, long, long); /* mDoAud_setSceneName__FPCcll */
 extern void mDoAud_load1stDynamicWave(void); /* mDoAud_load1stDynamicWave__Fv */
 extern void mDoAud_resetRecover(void); /* mDoAud_resetRecover__Fv */
 extern void mDoRst_resetCallBack(int, void*); /* mDoRst_resetCallBack__FiPv */
-extern void fopAcM_create(s16, u32, const cXyz*, int, const csXyz*, const cXyz*, s8); /* fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc */
+extern void fopAcM_create(short, u32, const cXyz*, int, const csXyz*, const cXyz*, s8); /* fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc */
 extern void fopOvlpM_IsPeek(void); /* fopOvlpM_IsPeek__Fv */
-extern void fopScnM_ChangeReq(scene_class*, s16, s16, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
+extern void fopScnM_ChangeReq(scene_class*, short, short, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
 extern void fopMsgM_createExpHeap(u32, JKRHeap*); /* fopMsgM_createExpHeap__FUlP7JKRHeap */
 extern void fopMsgM_destroyExpHeap(JKRExpHeap*); /* fopMsgM_destroyExpHeap__FP10JKRExpHeap */
 extern void fopDwIt_Begin(void); /* fopDwIt_Begin__Fv */
@@ -39,210 +39,459 @@ extern void dStage_infoCreate(void); /* dStage_infoCreate__Fv */
 extern void dStage_Create(void); /* dStage_Create__Fv */
 extern void dStage_Delete(void); /* dStage_Delete__Fv */
 extern void dComIfG_resetToOpening(scene_class*); /* dComIfG_resetToOpening__FP11scene_class */
-extern void dComIfG_resLoad(request_of_phase_process_class*, const s8*); /* dComIfG_resLoad__FP30request_of_phase_process_classPCc */
-extern void dComIfG_resDelete(request_of_phase_process_class*, const s8*); /* dComIfG_resDelete__FP30request_of_phase_process_classPCc */
+extern void dComIfG_resLoad(request_of_phase_process_class*, const char*); /* dComIfG_resLoad__FP30request_of_phase_process_classPCc */
+extern void dComIfG_resDelete(request_of_phase_process_class*, const char*); /* dComIfG_resDelete__FP30request_of_phase_process_classPCc */
 extern void dComIfGs_BossLife_public_Set(s8); /* dComIfGs_BossLife_public_Set__FSc */
 extern void dComIfGp_calcNowRegion(void); /* dComIfGp_calcNowRegion__Fv */
 extern void dComIfGp_world_dark_set(u8); /* dComIfGp_world_dark_set__FUc */
-extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (*)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
+extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
 extern void execItemGet(u8); /* execItemGet__FUc */
 extern void dKy_getdaytime_hour(void); /* dKy_getdaytime_hour__Fv */
 extern void dKy_getdaytime_minute(void); /* dKy_getdaytime_minute__Fv */
 extern void dKy_itudemo_se(void); /* dKy_itudemo_se__Fv */
 extern void dKy_get_dayofweek(void); /* dKy_get_dayofweek__Fv */
 extern void dKy_darkworld_check(void); /* dKy_darkworld_check__Fv */
-extern void dKy_darkworld_stage_check(const s8*, int); /* dKy_darkworld_stage_check__FPCci */
-extern void dKy_darkworld_spot_check(const s8*, int); /* dKy_darkworld_spot_check__FPCci */
-extern void dKy_darkworld_Area_set(const s8*, int); /* dKy_darkworld_Area_set__FPCci */
+extern void dKy_darkworld_stage_check(const char*, int); /* dKy_darkworld_stage_check__FPCci */
+extern void dKy_darkworld_spot_check(const char*, int); /* dKy_darkworld_spot_check__FPCci */
+extern void dKy_darkworld_Area_set(const char*, int); /* dKy_darkworld_Area_set__FPCci */
 extern void dMeter2Info_setCloth(u8, bool); /* dMeter2Info_setCloth__FUcb */
 extern void dMeter2Info_setSword(u8, bool); /* dMeter2Info_setSword__FUcb */
 extern void dMeter2Info_setShield(u8, bool); /* dMeter2Info_setShield__FUcb */
+extern void dScnPly_Draw(dScnPly_c*); /* dScnPly_Draw__FP9dScnPly_c */
+extern void dScnPly_Execute(dScnPly_c*); /* dScnPly_Execute__FP9dScnPly_c */
+extern void dScnPly_Delete(dScnPly_c*); /* dScnPly_Delete__FP9dScnPly_c */
+extern void phase_00(dScnPly_c*); /* phase_00__FP9dScnPly_c */
+extern void phase_01(dScnPly_c*); /* phase_01__FP9dScnPly_c */
+extern void phase_1(dScnPly_c*); /* phase_1__FP9dScnPly_c */
+extern void phase_1_0(dScnPly_c*); /* phase_1_0__FP9dScnPly_c */
+extern void phase_2(dScnPly_c*); /* phase_2__FP9dScnPly_c */
+extern void phase_3(dScnPly_c*); /* phase_3__FP9dScnPly_c */
+extern void phase_4(dScnPly_c*); /* phase_4__FP9dScnPly_c */
+extern void phase_5(dScnPly_c*); /* phase_5__FP9dScnPly_c */
+extern void phase_6(dScnPly_c*); /* phase_6__FP9dScnPly_c */
+extern void dScnPly_Create(scene_class*); /* dScnPly_Create__FP11scene_class */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoAud_setSceneName__FPCcll();
+/* Function             */
 extern void mDoAud_load1stDynamicWave__Fv();
+/* Function             */
 extern void mDoAud_resetRecover__Fv();
+/* Function             */
 extern void remove__Q213mDoGph_gInf_c7bloom_cFv();
+/* Function             */
 extern void mDoRst_resetCallBack__FiPv();
+/* Function             */
 extern void Link__7cDylPhsFP30request_of_phase_process_classs();
+/* Function             */
 extern void Unlink__7cDylPhsFP30request_of_phase_process_classs();
+/* Function             */
 extern void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+/* Function             */
 extern void fopOvlpM_IsPeek__Fv();
+/* Function             */
 extern void fopScnM_ChangeReq__FP11scene_classssUs();
+/* Function             */
 extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
+/* Function             */
 extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+/* Function             */
 extern void fopDwIt_Begin__Fv();
+/* Function             */
 extern void fopDwIt_Next__FP16create_tag_class();
+/* Function             */
 extern void fpcM_Draw__FPv();
+/* Function             */
 extern void resetArchiveBank__20dStage_roomControl_cFi();
+/* Function             */
 extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+/* Function             */
 extern void dStage_infoCreate__Fv();
+/* Function             */
 extern void dStage_Create__Fv();
+/* Function             */
 extern void dStage_Delete__Fv();
+/* Function             */
 extern void init__14dComIfG_play_cFv();
+/* Function             */
 extern void setStartStage__14dComIfG_play_cFP19dStage_startStage_c();
+/* Function             */
 extern void getLayerNo_common_common__14dComIfG_play_cFPCcii();
+/* Function             */
 extern void getLayerNo_common__14dComIfG_play_cFPCcii();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* Function             */
 extern void createSimpleModel__14dComIfG_play_cFv();
+/* Function             */
 extern void deleteSimpleModel__14dComIfG_play_cFv();
+/* Function             */
 extern void dComIfG_resetToOpening__FP11scene_class();
+/* Function             */
 extern void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+/* Function             */
 extern void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+/* Function             */
 extern void dComIfGs_BossLife_public_Set__FSc();
+/* Function             */
 extern void dComIfGp_calcNowRegion__Fv();
+/* Function             */
 extern void dComIfGp_world_dark_set__FUc();
+/* Function             */
 extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+/* Function             */
 extern void reset__7daSus_cFv();
+/* Function             */
 extern void execute__7daSus_cFv();
+/* Function             */
 extern void onDarkClearLV__21dSv_player_status_b_cFi();
+/* Function             */
 extern void onTransformLV__21dSv_player_status_b_cFi();
+/* Function             */
 extern void setItem__17dSv_player_item_cFiUc();
+/* Function             */
 extern void onFirstBit__21dSv_player_get_item_cFUc();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void onSwitch__12dSv_danBit_cFi();
+/* Function             */
 extern void init__10dSv_info_cFv();
+/* Function             */
 extern void create__7dDemo_cFv();
+/* Function             */
 extern void remove__7dDemo_cFv();
+/* Function             */
 extern void update__7dDemo_cFv();
+/* Function             */
 extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+/* Function             */
 extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+/* Function             */
 extern void setStageRes__14dRes_control_cFPCcP7JKRHeap();
+/* Function             */
 extern void create__8dMpath_cFv();
+/* Function             */
 extern void remove__8dMpath_cFv();
+/* Function             */
 extern void Step__14dEvt_control_cFv();
+/* Function             */
 extern void remove__14dEvt_control_cFv();
+/* Function             */
 extern void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
+/* Function             */
 extern void createScene__13dPa_control_cFPCv();
+/* Function             */
 extern void removeScene__13dPa_control_cFb();
+/* Function             */
 extern void cleanup__13dPa_control_cFv();
+/* Function             */
 extern void calc3D__13dPa_control_cFv();
+/* Function             */
 extern void calc2D__13dPa_control_cFv();
+/* Function             */
 extern void setViewPort__14dDlst_window_cFffffff();
+/* Function             */
 extern void setScissor__14dDlst_window_cFffff();
+/* Function             */
 extern void Run__12dVibration_cFv();
+/* Function             */
 extern void Init__12dVibration_cFv();
+/* Function             */
 extern void Pause__12dVibration_cFv();
+/* Function             */
 extern void Remove__12dVibration_cFv();
+/* Function             */
 extern void __ct__12dAttention_cFP10fopAc_ac_cUl();
+/* Function             */
 extern void __dt__12dAttention_cFv();
+/* Function             */
 extern void Run__12dAttention_cFv();
+/* Function             */
 extern void Draw__12dAttention_cFv();
+/* Function             */
 extern void ClrMoveFlag__4dBgSFv();
+/* Function             */
 extern void Move__4dBgSFv();
+/* Function             */
 extern void Ct__4dCcSFv();
+/* Function             */
 extern void Dt__4dCcSFv();
+/* Function             */
 extern void Move__4dCcSFv();
+/* Function             */
 extern void Draw__4dCcSFv();
+/* Function             */
 extern void execItemGet__FUc();
+/* Function             */
 extern void create__7dTres_cFv();
+/* Function             */
 extern void remove__7dTres_cFv();
+/* Function             */
 extern void create__10dMdl_mng_cFv();
+/* Function             */
 extern void remove__10dMdl_mng_cFv();
+/* Function             */
 extern void reset__10dMdl_mng_cFv();
+/* Function             */
 extern void update__12dEyeHL_mng_cFv();
+/* Function             */
 extern void checkRoomRestartStart__9daPy_py_cFv();
+/* Function             */
 extern void dKy_getdaytime_hour__Fv();
+/* Function             */
 extern void dKy_getdaytime_minute__Fv();
+/* Function             */
 extern void dKy_itudemo_se__Fv();
+/* Function             */
 extern void dKy_get_dayofweek__Fv();
+/* Function             */
 extern void dKy_darkworld_check__Fv();
+/* Function             */
 extern void dKy_darkworld_stage_check__FPCci();
+/* Function             */
 extern void dKy_darkworld_spot_check__FPCci();
+/* Function             */
 extern void dKy_darkworld_Area_set__FPCci();
+/* Function             */
 extern void dMeter2Info_setCloth__FUcb();
+/* Function             */
 extern void dMeter2Info_setSword__FUcb();
+/* Function             */
 extern void dMeter2Info_setShield__FUcb();
+/* Function             */
 extern void readMessageGroup__12dMsgObject_cFPP25mDoDvdThd_mountXArchive_c();
+/* Function             */
 extern void func_80252E70();
+/* Function             */
 extern void calcPauseTimer__9dScnPly_cFv();
+/* Function             */
 extern void __ct__22dScnPly_env_otherHIO_cFv();
+/* Function             */
 extern void __ct__22dScnPly_env_debugHIO_cFv();
+/* Function             */
+extern void dScnPly_Draw__FP9dScnPly_c();
+/* Function             */
+extern void dScnPly_Execute__FP9dScnPly_c();
+/* Function             */
+extern void dScnPly_IsDelete__F9dScnPly_c();
+/* Function             */
+extern void dScnPly_Delete__FP9dScnPly_c();
+/* Function             */
 extern void resetGame__9dScnPly_cFv();
+/* Function             */
 extern void offReset__9dScnPly_cFv();
+/* Function             */
+extern void phase_00__FP9dScnPly_c();
+/* Function             */
+extern void phase_01__FP9dScnPly_c();
+/* ReturnIntegerFunction */
+extern  int phase_0__FP9dScnPly_c();
+/* Function             */
+extern void phase_1__FP9dScnPly_c();
+/* Function             */
+extern void phase_1_0__FP9dScnPly_c();
+/* Function             */
+extern void phase_2__FP9dScnPly_c();
+/* Function             */
+extern void phase_3__FP9dScnPly_c();
+/* Function             */
+extern void phase_4__FP9dScnPly_c();
+/* Function             */
+extern void phase_5__FP9dScnPly_c();
+/* Function             */
+extern void phase_6__FP9dScnPly_c();
+/* ReturnIntegerFunction */
+extern  int phase_compleate__FPv();
+/* Function             */
+extern void dScnPly_Create__FP11scene_class();
+/* Function             */
 extern void __dt__22dScnPly_env_debugHIO_cFv();
+/* Function             */
 extern void __dt__22dScnPly_env_otherHIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_s_play_cpp();
+/* Function             */
 extern void __dt__17dScnPly_env_HIO_cFv();
+/* Function             */
 extern void __dt__17dScnPly_reg_HIO_cFv();
+/* Function             */
 extern void __dt__21dScnPly_preLoad_HIO_cFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
 extern void setInDarkness__10Z2SceneMgrFb();
+/* Function             */
 extern void check1stDynamicWave__10Z2SceneMgrFv();
+/* Function             */
 extern void load2ndDynamicWave__10Z2SceneMgrFv();
+/* Function             */
 extern void sceneBgmStart__10Z2SceneMgrFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void setMessageCount__12JUTAssertionFi();
+/* Function             */
 extern void JUTReportConsole_f();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
-SECTION_RODATA extern const u8 PreLoadInfoT[16];
+/* SymbolReferenceArrayData */
+SECTION_RODATA extern const void* const PreLoadInfoT[4];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_s_play__stringBase0[176];
-SECTION_DATA extern const void* __vt__14mDoHIO_entry_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopScn_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcNd_Method[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14mDoHIO_entry_c[3];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803C3158[48];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803C3188[12];
-SECTION_DATA extern u8 data_803C3194[44];
-SECTION_DATA extern const void* __vt__22dScnPly_env_debugHIO_c[3];
-SECTION_DATA extern const void* __vt__22dScnPly_env_otherHIO_c[3];
-SECTION_DATA extern const void* __vt__17dScnPly_env_HIO_c[3];
-SECTION_DATA extern const void* __vt__17dScnPly_reg_HIO_c[3];
-SECTION_DATA extern const void* __vt__21dScnPly_preLoad_HIO_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803C3194[11];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dScnPly_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_PLAY_SCENE[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OPENING_SCENE[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dScnPly_env_debugHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dScnPly_env_otherHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dScnPly_env_HIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dScnPly_reg_HIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21dScnPly_preLoad_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_bloom__13mDoGph_gInf_c[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mLineCheck__11fopAcM_lc_c[112];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mRoofCheck__11fopAcM_rc_c[80];
-SECTION_BSS extern u8 mWaterCheck__11fopAcM_wt_c[88];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_s_play__LIT_4041[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_s_play__LIT_4049[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_s_play__LIT_4050[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_envHIO[68];
-SECTION_BSS extern u8 g_save_bit_HIO[1188];
-SECTION_BSS extern u8 g_Counter[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505F0[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_blackColor[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_saftyWhiteColor[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* T_JOINT_resName;
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450764[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BB8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFader__13mDoGph_gInf_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BE4[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mProcID__20dStage_roomControl_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D68[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D8C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_emitter__8daYkgr_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450EC4[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450ED0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 resPhase[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 dylPhase[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 dylPreLoadTime1[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045110C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 resPreLoadTime0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451114[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 resPreLoadTime1[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045111C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_preLoadHIO[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
-SECTION_SBSS extern u8 g_regHIO[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_regHIO[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451500[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 T_JOINT_dylKeyTbl[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_play__LIT_4055;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_play__LIT_4066;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_play__LIT_4067;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_s_play__LIT_4068[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_s_play__LIT_4100[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_play__LIT_4804;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_play__LIT_4805;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_s_play__LIT_4806[8];
 }
 
@@ -252,29 +501,38 @@ SECTION_SDATA2 extern u8 d_d_s_play__LIT_4806[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A2C8 0010 .rodata    PreLoadInfoT                                                 */
-SECTION_RODATA const u8 PreLoadInfoT[16] = {
-	0x80, 0x39, 0xA2, 0xDF, 0x80, 0x45, 0x4F, 0x18, 0x80, 0x45, 0x07, 0x60, 0x01, 0x01, 0x00, 0x00,
+/* 8039A2D8-8039A388 00A9 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039A2D8 = "Always";
+SECTION_DEAD const char* const stringBase_8039A2DF = "T_JOINT";
+SECTION_DEAD const char* const stringBase_8039A2E7 = "F_SP109";
+SECTION_DEAD const char* const stringBase_8039A2EF = "F_SP116";
+SECTION_DEAD const char* const stringBase_8039A2F7 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8039A2FF = "F_SP115";
+SECTION_DEAD const char* const stringBase_8039A307 = "F_SP117";
+SECTION_DEAD const char* const stringBase_8039A30F = "F_SP104";
+SECTION_DEAD const char* const stringBase_8039A317 = "D_SB10";
+SECTION_DEAD const char* const stringBase_8039A31E = "D_MN08D";
+SECTION_DEAD const char* const stringBase_8039A326 = "R_SP107";
+SECTION_DEAD const char* const stringBase_8039A32E = "F_SP121";
+SECTION_DEAD const char* const stringBase_8039A336 = "F_SP127";
+SECTION_DEAD const char* const stringBase_8039A33E = "Start StageName:RoomNo [%s:%d]\n";
+SECTION_DEAD const char* const stringBase_8039A35E = "Stg_00";
+SECTION_DEAD const char* const stringBase_8039A365 = "Event";
+SECTION_DEAD const char* const stringBase_8039A36B = "/res/Object/";
+SECTION_DEAD const char* const stringBase_8039A378 = "CamParam";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A381 = "\0\0\0\0\0\0";
+#pragma pop
+/* 8039A2C8-8039A2D8 0010 .rodata    PreLoadInfoT                                                 SymbolReferenceArrayData */
+SECTION_RODATA const void* const PreLoadInfoT[4] = {
+	(void*)((char*)d_d_s_play__stringBase0+7) /* stringBase_8039A2DF */,
+	(void*)&T_JOINT_dylKeyTbl,
+	(void*)&T_JOINT_resName,
+	(void*)0x01010000,
 };
-/* 8039A2D8 00A9 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039A2D8 = "Always";
-const char* const stringBase_8039A2DF = "T_JOINT";
-const char* const stringBase_8039A2E7 = "F_SP109";
-const char* const stringBase_8039A2EF = "F_SP116";
-const char* const stringBase_8039A2F7 = "F_SP108";
-const char* const stringBase_8039A2FF = "F_SP115";
-const char* const stringBase_8039A307 = "F_SP117";
-const char* const stringBase_8039A30F = "F_SP104";
-const char* const stringBase_8039A317 = "D_SB10";
-const char* const stringBase_8039A31E = "D_MN08D";
-const char* const stringBase_8039A326 = "R_SP107";
-const char* const stringBase_8039A32E = "F_SP121";
-const char* const stringBase_8039A336 = "F_SP127";
-const char* const stringBase_8039A33E = "Start StageName:RoomNo [%s:%d]\n";
-const char* const stringBase_8039A35E = "Stg_00";
-const char* const stringBase_8039A365 = "Event";
-const char* const stringBase_8039A36B = "/res/Object/";
-const char* const stringBase_8039A378 = "CamParam";
 }
 
 
@@ -283,7 +541,7 @@ const char* const stringBase_8039A378 = "CamParam";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3158 002E .data      l_wipeType$4081                                              */
+/* 803C3158-803C3188 002E .data      l_wipeType$4081                                              InitializedData */
 SECTION_DATA u8 data_803C3158[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x11, 0x00, 0x02, 0x00, 0x02, 0x00, 0x01, 0x00, 0x03, 0x00, 0x01,
 	0x00, 0x04, 0x00, 0x04, 0x00, 0x05, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00, 0x00, 0x00, 0x00,
@@ -291,61 +549,86 @@ SECTION_DATA u8 data_803C3158[48] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803C3188 000A .data      camparamarc$4608                                             */
+/* 803C3188-803C3194 000A .data      camparamarc$4608                                             InitializedData */
 SECTION_DATA u8 data_803C3188[12] = {
 	0x43, 0x61, 0x6D, 0x50, 0x61, 0x72, 0x61, 0x6D, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803C3194 002C .data      l_method$4860                                                */
-SECTION_DATA u8 data_803C3194[44] = {
-	0x80, 0x25, 0x9C, 0x70, 0x80, 0x25, 0x9D, 0x84, 0x80, 0x25, 0xA4, 0x38, 0x80, 0x25, 0x9C, 0xAC,
-	0x80, 0x25, 0x9D, 0x7C, 0x80, 0x25, 0xA4, 0xF8, 0x80, 0x25, 0xA5, 0xD4, 0x80, 0x25, 0xA6, 0x54,
-	0x80, 0x25, 0xA9, 0xF4, 0x80, 0x25, 0xAA, 0xC0, 0x80, 0x25, 0xAB, 0x8C,
+/* 803C3194-803C31C0 002C .data      l_method$4860                                                SymbolReferenceArrayData */
+SECTION_DATA void* data_803C3194[11] = {
+	(void*)phase_00,
+	(void*)phase_1,
+	(void*)phase_1_0,
+	(void*)phase_01,
+	(void*)phase_0__FP9dScnPly_c,
+	(void*)phase_2,
+	(void*)phase_3,
+	(void*)phase_4,
+	(void*)phase_5,
+	(void*)phase_6,
+	(void*)phase_compleate__FPv,
 };
-/* 803C31C0 0014 .data      l_dScnPly_Method                                             */
-SECTION_DATA u8 l_dScnPly_Method[20] = {
-	0x80, 0x25, 0xAB, 0x94, 0x80, 0x25, 0x98, 0xAC, 0x80, 0x25, 0x97, 0xB8, 0x80, 0x25, 0x98, 0x7C,
-	0x80, 0x25, 0x94, 0xAC,
+/* 803C31C0-803C31D4 0014 .data      l_dScnPly_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* l_dScnPly_Method[5] = {
+	(void*)dScnPly_Create,
+	(void*)dScnPly_Delete,
+	(void*)dScnPly_Execute,
+	(void*)dScnPly_IsDelete__F9dScnPly_c,
+	(void*)dScnPly_Draw,
 };
-/* 803C31D4 0028 .data      g_profile_PLAY_SCENE                                         */
-SECTION_DATA u8 g_profile_PLAY_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x0B, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x01, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x80, 0x3C, 0x31, 0xC0, 0x00, 0x00, 0x00, 0x00,
+/* 803C31D4-803C31FC 0028 .data      g_profile_PLAY_SCENE                                         SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000B0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000001D8,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnPly_Method,
+	NULL,
 };
-/* 803C31FC 0028 .data      g_profile_OPENING_SCENE                                      */
-SECTION_DATA u8 g_profile_OPENING_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x0C, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x01, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x80, 0x3C, 0x31, 0xC0, 0x00, 0x00, 0x00, 0x00,
+/* 803C31FC-803C3224 0028 .data      g_profile_OPENING_SCENE                                      SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000C0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000001D8,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnPly_Method,
+	NULL,
 };
-/* 803C3224 000C .data      __vt__22dScnPly_env_debugHIO_c                               */
-SECTION_DATA const  void* __vt__22dScnPly_env_debugHIO_c[3] = {
+/* 803C3224-803C3230 000C .data      __vt__22dScnPly_env_debugHIO_c                               VTableData */
+SECTION_DATA void* __vt__22dScnPly_env_debugHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dScnPly_env_debugHIO_cFv,
 };
-/* 803C3230 000C .data      __vt__22dScnPly_env_otherHIO_c                               */
-SECTION_DATA const  void* __vt__22dScnPly_env_otherHIO_c[3] = {
+/* 803C3230-803C323C 000C .data      __vt__22dScnPly_env_otherHIO_c                               VTableData */
+SECTION_DATA void* __vt__22dScnPly_env_otherHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dScnPly_env_otherHIO_cFv,
 };
-/* 803C323C 000C .data      __vt__17dScnPly_env_HIO_c                                    */
-SECTION_DATA const  void* __vt__17dScnPly_env_HIO_c[3] = {
+/* 803C323C-803C3248 000C .data      __vt__17dScnPly_env_HIO_c                                    VTableData */
+SECTION_DATA void* __vt__17dScnPly_env_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dScnPly_env_HIO_cFv,
 };
-/* 803C3248 000C .data      __vt__17dScnPly_reg_HIO_c                                    */
-SECTION_DATA const  void* __vt__17dScnPly_reg_HIO_c[3] = {
+/* 803C3248-803C3254 000C .data      __vt__17dScnPly_reg_HIO_c                                    VTableData */
+SECTION_DATA void* __vt__17dScnPly_reg_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dScnPly_reg_HIO_cFv,
 };
-/* 803C3254 000C .data      __vt__21dScnPly_preLoad_HIO_c                                */
-SECTION_DATA const  void* __vt__21dScnPly_preLoad_HIO_c[3] = {
+/* 803C3254-803C3260 000C .data      __vt__21dScnPly_preLoad_HIO_c                                VTableData */
+SECTION_DATA void* __vt__21dScnPly_preLoad_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21dScnPly_preLoad_HIO_cFv,
@@ -358,11 +641,9 @@ SECTION_DATA const  void* __vt__21dScnPly_preLoad_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450760 0004 .sdata     T_JOINT_resName                                              */
-SECTION_SDATA u8 T_JOINT_resName[4] = {
-	0x80, 0x39, 0xA2, 0xD8,
-};
-/* 80450764 0004 .sdata     merged_80450764                                              */
+/* 80450760-80450764 0004 .sdata     T_JOINT_resName                                              SymbolReferenceArrayData */
+SECTION_SDATA void* T_JOINT_resName = (void*)d_d_s_play__stringBase0;
+/* 80450764-80450768 0004 .sdata     merged_80450764                                              MergedInitializedData */
 SECTION_SDATA u8 merged_80450764[4] = {
 	/* data_80450764 */
 	0xFF,
@@ -377,36 +658,36 @@ SECTION_SDATA u8 merged_80450764[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454F18 0002 .sdata2    T_JOINT_dylKeyTbl                                            */
+/* 80454F18-80454F1C 0002 .sdata2    T_JOINT_dylKeyTbl                                            InitializedData */
 SECTION_SDATA2 u8 T_JOINT_dylKeyTbl[4] = {
 	0x01, 0x06,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80454F1C 0004 .sdata2    @4055                                                        */
+/* 80454F1C-80454F20 0004 .sdata2    @4055                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_s_play__LIT_4055 = 255.000000f;
-/* 80454F20 0004 .sdata2    @4066                                                        */
+/* 80454F20-80454F24 0004 .sdata2    @4066                                                        Float32Data */
 // 0xc2c80000
 SECTION_SDATA2 f32 d_d_s_play__LIT_4066 = -100.000000f;
-/* 80454F24 0004 .sdata2    @4067                                                        */
+/* 80454F24-80454F28 0004 .sdata2    @4067                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_s_play__LIT_4067 = 100.000000f;
-/* 80454F28 0004 .sdata2    @4068                                                        */
+/* 80454F28-80454F2C 0004 .sdata2    @4068                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_s_play__LIT_4068[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454F2C 0004 .sdata2    @4100                                                        */
+/* 80454F2C-80454F30 0004 .sdata2    @4100                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_s_play__LIT_4100[4] = {
 	0x2A, 0x1E, 0x46, 0xFF,
 };
-/* 80454F30 0004 .sdata2    @4804                                                        */
+/* 80454F30-80454F34 0004 .sdata2    @4804                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_s_play__LIT_4804 = 608.000000f;
-/* 80454F34 0004 .sdata2    @4805                                                        */
+/* 80454F34-80454F38 0004 .sdata2    @4805                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 d_d_s_play__LIT_4805 = 448.000000f;
-/* 80454F38 0004 .sdata2    @4806                                                        */
+/* 80454F38-80454F40 0004 .sdata2    @4806                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_s_play__LIT_4806[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -420,14 +701,14 @@ SECTION_SDATA2 u8 d_d_s_play__LIT_4806[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430778 0000 .bss       ...bss.0                                                     */
-/* 80430778 000C .bss       @4041                                                        */
+/* 80430778-80430778 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80430778-80430784 000C .bss       @4041                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_s_play__LIT_4041[12];
-/* 80430784 000C .bss       @4049                                                        */
+/* 80430784-80430790 000C .bss       @4049                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_s_play__LIT_4049[12];
-/* 80430790 000C .bss       @4050                                                        */
+/* 80430790-8043079C 000C .bss       @4050                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_s_play__LIT_4050[12];
-/* 8043079C 0044 .bss       g_envHIO                                                     */
+/* 8043079C-804307E0 0044 .bss       g_envHIO                                                     ZeroInitializedData */
 SECTION_BSS u8 g_envHIO[68];
 }
 
@@ -437,31 +718,30 @@ SECTION_BSS u8 g_envHIO[68];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510F8 0008 .sbss      resPhase                                                     */
+/* 804510F8-80451100 0008 .sbss      resPhase                                                     ZeroInitializedData */
 SECTION_SBSS u8 resPhase[8];
-/* 80451100 0008 .sbss      dylPhase                                                     */
+/* 80451100-80451108 0008 .sbss      dylPhase                                                     ZeroInitializedData */
 SECTION_SBSS u8 dylPhase[8];
-/* 80451108 0004 .sbss      dylPreLoadTime1                                              */
+/* 80451108-8045110C 0004 .sbss      dylPreLoadTime1                                              ZeroInitializedData */
 SECTION_SBSS u8 dylPreLoadTime1[4];
-/* 8045110C 0004 .sbss      data_8045110C                                                */
+/* 8045110C-80451110 0004 .sbss      data_8045110C                                                ZeroInitializedData */
 SECTION_SBSS u8 data_8045110C[4];
-/* 80451110 0004 .sbss      resPreLoadTime0                                              */
+/* 80451110-80451114 0004 .sbss      resPreLoadTime0                                              ZeroInitializedData */
 SECTION_SBSS u8 resPreLoadTime0[4];
-/* 80451114 0004 .sbss      data_80451114                                                */
+/* 80451114-80451118 0004 .sbss      data_80451114                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451114[4];
-/* 80451118 0004 .sbss      resPreLoadTime1                                              */
+/* 80451118-8045111C 0004 .sbss      resPreLoadTime1                                              ZeroInitializedData */
 SECTION_SBSS u8 resPreLoadTime1[4];
-/* 8045111C 0004 .sbss      data_8045111C                                                */
+/* 8045111C-80451120 0004 .sbss      data_8045111C                                                ZeroInitializedData */
 SECTION_SBSS u8 data_8045111C[4];
-/* 80451120 0004 .sbss      g_preLoadHIO                                                 */
+/* 80451120-80451124 0004 .sbss      g_preLoadHIO                                                 ZeroInitializedData */
 SECTION_SBSS u8 g_preLoadHIO[4];
-/* 80451124 0004 .sbss      merged_80451124                                              */
+/* 80451124-80451128 0004 .sbss      merged_80451124                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80451124[4];
 /* 80451124 0001 data_80451124 */
 /* 80451125 0003 data_80451125 */
-/* 80451128 0004 .sbss      g_regHIO                                                     */
-SECTION_SBSS u8 g_regHIO[4];
-SECTION_SBSS u8 pad_8045112C[4];
+/* 80451128-80451130 0004 .sbss      g_regHIO                                                     ZeroInitializedData */
+SECTION_SBSS u8 g_regHIO[4 + 4 /* padding */];
 }
 
 
@@ -470,7 +750,7 @@ SECTION_SBSS u8 pad_8045112C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80259400 0040 .text      calcPauseTimer__9dScnPly_cFv                                 */
+/* 80259400-80259440 0040 .text      calcPauseTimer__9dScnPly_cFv                                 Function */
 // dScnPly_c::calcPauseTimer(void)
 #pragma push
 #pragma optimization_level 0
@@ -481,7 +761,7 @@ asm void calcPauseTimer__9dScnPly_cFv() {
 }
 #pragma pop
 
-/* 80259440 0028 .text      __ct__22dScnPly_env_otherHIO_cFv                             */
+/* 80259440-80259468 0028 .text      __ct__22dScnPly_env_otherHIO_cFv                             Function */
 // dScnPly_env_otherHIO_c::dScnPly_env_otherHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -492,7 +772,7 @@ asm void __ct__22dScnPly_env_otherHIO_cFv() {
 }
 #pragma pop
 
-/* 80259468 0044 .text      __ct__22dScnPly_env_debugHIO_cFv                             */
+/* 80259468-802594AC 0044 .text      __ct__22dScnPly_env_debugHIO_cFv                             Function */
 // dScnPly_env_debugHIO_c::dScnPly_env_debugHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -503,7 +783,7 @@ asm void __ct__22dScnPly_env_debugHIO_cFv() {
 }
 #pragma pop
 
-/* 802594AC 030C .text      dScnPly_Draw__FP9dScnPly_c                                   */
+/* 802594AC-802597B8 030C .text      dScnPly_Draw__FP9dScnPly_c                                   Function */
 }
 
 #pragma push
@@ -516,7 +796,7 @@ asm void dScnPly_Draw(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 802597B8 00C4 .text      dScnPly_Execute__FP9dScnPly_c                                */
+/* 802597B8-8025987C 00C4 .text      dScnPly_Execute__FP9dScnPly_c                                Function */
 }
 
 #pragma push
@@ -529,7 +809,7 @@ asm void dScnPly_Execute(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025987C 0030 .text      dScnPly_IsDelete__F9dScnPly_c                                */
+/* 8025987C-802598AC 0030 .text      dScnPly_IsDelete__F9dScnPly_c                                Function */
 // dScnPly_IsDelete(dScnPly_c)
 #pragma push
 #pragma optimization_level 0
@@ -540,7 +820,7 @@ asm void dScnPly_IsDelete__F9dScnPly_c() {
 }
 #pragma pop
 
-/* 802598AC 0218 .text      dScnPly_Delete__FP9dScnPly_c                                 */
+/* 802598AC-80259AC4 0218 .text      dScnPly_Delete__FP9dScnPly_c                                 Function */
 }
 
 #pragma push
@@ -553,7 +833,7 @@ asm void dScnPly_Delete(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259AC4 0138 .text      resetGame__9dScnPly_cFv                                      */
+/* 80259AC4-80259BFC 0138 .text      resetGame__9dScnPly_cFv                                      Function */
 // dScnPly_c::resetGame(void)
 #pragma push
 #pragma optimization_level 0
@@ -564,7 +844,7 @@ asm void resetGame__9dScnPly_cFv() {
 }
 #pragma pop
 
-/* 80259BFC 0074 .text      offReset__9dScnPly_cFv                                       */
+/* 80259BFC-80259C70 0074 .text      offReset__9dScnPly_cFv                                       Function */
 // dScnPly_c::offReset(void)
 #pragma push
 #pragma optimization_level 0
@@ -575,7 +855,7 @@ asm void offReset__9dScnPly_cFv() {
 }
 #pragma pop
 
-/* 80259C70 003C .text      phase_00__FP9dScnPly_c                                       */
+/* 80259C70-80259CAC 003C .text      phase_00__FP9dScnPly_c                                       Function */
 }
 
 #pragma push
@@ -588,7 +868,7 @@ asm void phase_00(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259CAC 00D0 .text      phase_01__FP9dScnPly_c                                       */
+/* 80259CAC-80259D7C 00D0 .text      phase_01__FP9dScnPly_c                                       Function */
 }
 
 #pragma push
@@ -601,13 +881,13 @@ asm void phase_01(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259D7C 0008 .text      phase_0__FP9dScnPly_c                                        */
+/* 80259D7C-80259D84 0008 .text      phase_0__FP9dScnPly_c                                        ReturnIntegerFunction */
 // phase_0(dScnPly_c*)
 int phase_0__FP9dScnPly_c() {
 	return 2;
 }
 
-/* 80259D84 06B4 .text      phase_1__FP9dScnPly_c                                        */
+/* 80259D84-8025A438 06B4 .text      phase_1__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -620,7 +900,7 @@ asm void phase_1(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025A438 00C0 .text      phase_1_0__FP9dScnPly_c                                      */
+/* 8025A438-8025A4F8 00C0 .text      phase_1_0__FP9dScnPly_c                                      Function */
 }
 
 #pragma push
@@ -633,7 +913,7 @@ asm void phase_1_0(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025A4F8 00DC .text      phase_2__FP9dScnPly_c                                        */
+/* 8025A4F8-8025A5D4 00DC .text      phase_2__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -646,7 +926,7 @@ asm void phase_2(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025A5D4 0080 .text      phase_3__FP9dScnPly_c                                        */
+/* 8025A5D4-8025A654 0080 .text      phase_3__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -659,7 +939,7 @@ asm void phase_3(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025A654 03A0 .text      phase_4__FP9dScnPly_c                                        */
+/* 8025A654-8025A9F4 03A0 .text      phase_4__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -672,7 +952,7 @@ asm void phase_4(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025A9F4 00CC .text      phase_5__FP9dScnPly_c                                        */
+/* 8025A9F4-8025AAC0 00CC .text      phase_5__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -685,7 +965,7 @@ asm void phase_5(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025AAC0 00CC .text      phase_6__FP9dScnPly_c                                        */
+/* 8025AAC0-8025AB8C 00CC .text      phase_6__FP9dScnPly_c                                        Function */
 }
 
 #pragma push
@@ -698,13 +978,13 @@ asm void phase_6(dScnPly_c*) {
 #pragma pop
 
 extern "C" {
-/* 8025AB8C 0008 .text      phase_compleate__FPv                                         */
+/* 8025AB8C-8025AB94 0008 .text      phase_compleate__FPv                                         ReturnIntegerFunction */
 // phase_compleate(void*)
 int phase_compleate__FPv() {
 	return 4;
 }
 
-/* 8025AB94 0030 .text      dScnPly_Create__FP11scene_class                              */
+/* 8025AB94-8025ABC4 0030 .text      dScnPly_Create__FP11scene_class                              Function */
 }
 
 #pragma push
@@ -717,7 +997,7 @@ asm void dScnPly_Create(scene_class*) {
 #pragma pop
 
 extern "C" {
-/* 8025ABC4 0048 .text      __dt__22dScnPly_env_debugHIO_cFv                             */
+/* 8025ABC4-8025AC0C 0048 .text      __dt__22dScnPly_env_debugHIO_cFv                             Function */
 // dScnPly_env_debugHIO_c::~dScnPly_env_debugHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -728,7 +1008,7 @@ asm void __dt__22dScnPly_env_debugHIO_cFv() {
 }
 #pragma pop
 
-/* 8025AC0C 0048 .text      __dt__22dScnPly_env_otherHIO_cFv                             */
+/* 8025AC0C-8025AC54 0048 .text      __dt__22dScnPly_env_otherHIO_cFv                             Function */
 // dScnPly_env_otherHIO_c::~dScnPly_env_otherHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -739,7 +1019,7 @@ asm void __dt__22dScnPly_env_otherHIO_cFv() {
 }
 #pragma pop
 
-/* 8025AC54 00B0 .text      __sinit_d_s_play_cpp                                         */
+/* 8025AC54-8025AD04 00B0 .text      __sinit_d_s_play_cpp                                         SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -749,7 +1029,7 @@ asm void __sinit_d_s_play_cpp() {
 }
 #pragma pop
 
-/* 8025AD04 0074 .text      __dt__17dScnPly_env_HIO_cFv                                  */
+/* 8025AD04-8025AD78 0074 .text      __dt__17dScnPly_env_HIO_cFv                                  Function */
 // dScnPly_env_HIO_c::~dScnPly_env_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -760,7 +1040,7 @@ asm void __dt__17dScnPly_env_HIO_cFv() {
 }
 #pragma pop
 
-/* 8025AD78 0048 .text      __dt__17dScnPly_reg_HIO_cFv                                  */
+/* 8025AD78-8025ADC0 0048 .text      __dt__17dScnPly_reg_HIO_cFv                                  Function */
 // dScnPly_reg_HIO_c::~dScnPly_reg_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -771,7 +1051,7 @@ asm void __dt__17dScnPly_reg_HIO_cFv() {
 }
 #pragma pop
 
-/* 8025ADC0 005C .text      __dt__21dScnPly_preLoad_HIO_cFv                              */
+/* 8025ADC0-8025AE1C 005C .text      __dt__21dScnPly_preLoad_HIO_cFv                              Function */
 // dScnPly_preLoad_HIO_c::~dScnPly_preLoad_HIO_c(void)
 #pragma push
 #pragma optimization_level 0

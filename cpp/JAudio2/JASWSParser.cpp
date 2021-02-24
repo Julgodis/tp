@@ -13,35 +13,64 @@ struct JKRHeap;
 extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void __ct__16JASBasicWaveBankFv();
+/* Function             */
 extern void getWaveGroup__16JASBasicWaveBankFUl();
+/* Function             */
 extern void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap();
+/* Function             */
 extern void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap();
+/* Function             */
 extern void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo();
+/* Function             */
 extern void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap();
+/* Function             */
 extern void __ct__17JASSimpleWaveBankFv();
+/* Function             */
 extern void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
+/* Function             */
 extern void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
+/* Function             */
 extern void getGroupCount__11JASWSParserFPCv();
+/* Function             */
+extern void createWaveBank__11JASWSParserFPCvP7JKRHeap();
+/* Function             */
 extern void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap();
+/* Function             */
 extern void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap();
+/* Function             */
 extern void func_80299490();
+/* Function             */
 extern void func_802994A8();
+/* Function             */
 extern void func_802994C0();
+/* Function             */
 extern void func_802994D8();
+/* Function             */
 extern void func_802994F0();
+/* Function             */
 extern void func_80299508();
+/* Function             */
 extern void func_80299520();
+/* Function             */
 extern void setFileName__10JASWaveArcFPCc();
+/* Function             */
 extern void getFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_23();
-SECTION_SDATA extern u8 one__11JASWaveInfo[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JASDram[4];
-SECTION_SBSS extern u8 sUsedHeapSize__11JASWSParser[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sUsedHeapSize__11JASWSParser[4 + 4 /* padding */];
 }
 
 
@@ -50,9 +79,8 @@ SECTION_SBSS extern u8 sUsedHeapSize__11JASWSParser[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451280 0004 .sbss      sUsedHeapSize__11JASWSParser                                 */
-SECTION_SBSS u8 sUsedHeapSize__11JASWSParser[4];
-SECTION_SBSS u8 pad_80451284[4];
+/* 80451280-80451288 0004 .sbss      sUsedHeapSize__11JASWSParser                                 ZeroInitializedData */
+SECTION_SBSS u8 sUsedHeapSize__11JASWSParser[4 + 4 /* padding */];
 }
 
 
@@ -61,7 +89,7 @@ SECTION_SBSS u8 pad_80451284[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80298FB0 0028 .text      getGroupCount__11JASWSParserFPCv                             */
+/* 80298FB0-80298FD8 0028 .text      getGroupCount__11JASWSParserFPCv                             Function */
 // JASWSParser::getGroupCount(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +100,7 @@ asm void getGroupCount__11JASWSParserFPCv() {
 }
 #pragma pop
 
-/* 80298FD8 005C .text      createWaveBank__11JASWSParserFPCvP7JKRHeap                   */
+/* 80298FD8-80299034 005C .text      createWaveBank__11JASWSParserFPCvP7JKRHeap                   Function */
 // JASWSParser::createWaveBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +111,7 @@ asm void createWaveBank__11JASWSParserFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299034 0230 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap              */
+/* 80299034-80299264 0230 .text      createBasicWaveBank__11JASWSParserFPCvP7JKRHeap              Function */
 // JASWSParser::createBasicWaveBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +122,7 @@ asm void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299264 022C .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap             */
+/* 80299264-80299490 022C .text      createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap             Function */
 // JASWSParser::createSimpleWaveBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +133,7 @@ asm void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299490 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl     */
+/* 80299490-802994A8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>__FPCvUl     Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser9TCtrlWave>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -116,7 +144,7 @@ asm void func_80299490() {
 }
 #pragma pop
 
-/* 802994A8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl         */
+/* 802994A8-802994C0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TWave>__FPCvUl         Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser5TWave>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -127,7 +155,7 @@ asm void func_802994A8() {
 }
 #pragma pop
 
-/* 802994C0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl */
+/* 802994C0-802994D8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>__FPCvUl Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser12TWaveArchive>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -138,7 +166,7 @@ asm void func_802994C0() {
 }
 #pragma pop
 
-/* 802994D8 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl */
+/* 802994D8-802994F0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>__FPCvUl Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser16TWaveArchiveBank>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -149,7 +177,7 @@ asm void func_802994D8() {
 }
 #pragma pop
 
-/* 802994F0 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl         */
+/* 802994F0-80299508 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>__FPCvUl         Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser5TCtrl>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -160,7 +188,7 @@ asm void func_802994F0() {
 }
 #pragma pop
 
-/* 80299508 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl   */
+/* 80299508-80299520 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlScene>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -171,7 +199,7 @@ asm void func_80299508() {
 }
 #pragma pop
 
-/* 80299520 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl   */
+/* 80299520-80299538 0018 .text      JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q211JASWSParser10TCtrlGroup>(const void*, u32)
 #pragma push
 #pragma optimization_level 0

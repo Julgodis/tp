@@ -9,13 +9,23 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __kernel_tan();
+/* InitializedData      */
 SECTION_RODATA extern const u8 T[104];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__LIT_94;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__LIT_95;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_96[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_97[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_tan__LIT_98[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__LIT_99;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__LIT_101;
 }
 
@@ -25,7 +35,7 @@ SECTION_SDATA2 extern f64 Math_Double_precision_k_tan__LIT_101;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2588 0068 .rodata    T                                                            */
+/* 803A2588-803A25F0 0068 .rodata    T                                                            InitializedData */
 SECTION_RODATA const u8 T[104] = {
 	0x3F, 0xD5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x63, 0x3F, 0xC1, 0x11, 0x11, 0x11, 0x10, 0xFE, 0x7A,
 	0x3F, 0xAB, 0xA1, 0xBA, 0x1B, 0xB3, 0x41, 0xFE, 0x3F, 0x96, 0x64, 0xF4, 0x84, 0x06, 0xD6, 0x37,
@@ -43,28 +53,28 @@ SECTION_RODATA const u8 T[104] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456A80 0008 .sdata2    @94                                                          */
+/* 80456A80-80456A88 0008 .sdata2    @94                                                          Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_k_tan__LIT_94 = 1.000000;
-/* 80456A88 0008 .sdata2    @95                                                          */
+/* 80456A88-80456A90 0008 .sdata2    @95                                                          Float64Data */
 // 0xbff0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_k_tan__LIT_95 = -1.000000;
-/* 80456A90 0008 .sdata2    @96                                                          */
+/* 80456A90-80456A98 0008 .sdata2    @96                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_96[8] = {
 	0x3F, 0xE9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
 };
-/* 80456A98 0008 .sdata2    @97                                                          */
+/* 80456A98-80456AA0 0008 .sdata2    @97                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_97[8] = {
 	0x3C, 0x81, 0xA6, 0x26, 0x33, 0x14, 0x5C, 0x07,
 };
-/* 80456AA0 0008 .sdata2    @98                                                          */
+/* 80456AA0-80456AA8 0008 .sdata2    @98                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_tan__LIT_98[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80456AA8 0008 .sdata2    @99                                                          */
+/* 80456AA8-80456AB0 0008 .sdata2    @99                                                          Float64Data */
 // 0x4000000000000000
 SECTION_SDATA2 f64 Math_Double_precision_k_tan__LIT_99 = 2.000000;
-/* 80456AB0 0008 .sdata2    @101                                                         */
+/* 80456AB0-80456AB8 0008 .sdata2    @101                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 Math_Double_precision_k_tan__LIT_101 = 4503601774854144.000000;
 }
@@ -75,7 +85,7 @@ SECTION_SDATA2 f64 Math_Double_precision_k_tan__LIT_101 = 4503601774854144.00000
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036BA90 0214 .text      __kernel_tan                                                 */
+/* 8036BA90-8036BCA4 0214 .text      __kernel_tan                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

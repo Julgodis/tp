@@ -22,194 +22,393 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* GlobalFunction       */
 extern u32 mDoExt_getCurrentHeap__Fv();
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* Function             */
 extern void dComIfGs_isOneZoneSwitch__Fii();
+/* Function             */
 extern void getItem__17dSv_player_item_cCFib();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
+extern void __ct__14dMeterButton_cFv();
+/* Function             */
 extern void __dt__14dMeterButton_cFv();
+/* Function             */
 extern void _create__14dMeterButton_cFv();
+/* Function             */
+extern void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
+/* Function             */
 extern void draw__14dMeterButton_cFv();
+/* Function             */
 extern void _delete__14dMeterButton_cFv();
+/* Function             */
 extern void alphaAnimeButtonA__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonB__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonR__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonZ__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButton3D__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonC__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonS__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonX__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonY__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonNun__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonRemo__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonRemo2__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonAR__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButton3DB__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonNURE__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonReel__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonReel2__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonAB__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonTate__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonNunZ__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonNunC__14dMeterButton_cFUlb();
+/* Function             */
 extern void alphaAnimeButtonBin__14dMeterButton_cFUlb();
+/* Function             */
 extern void screenInitButton__14dMeterButton_cFv();
+/* Function             */
 extern void screenInitText__14dMeterButton_cFv();
+/* Function             */
 extern void updateButton__14dMeterButton_cFv();
+/* Function             */
 extern void updateText__14dMeterButton_cFUl();
+/* Function             */
 extern void setAlphaButtonAAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void isFastSet__14dMeterButton_cFi();
+/* Function             */
 extern void setAlphaButtonAAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonBAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonBAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonZAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonZAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButton3DAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButton3DAnimeMax__14dMeterButton_cFv();
+/* ReturnFunction       */
 extern void setAlphaButton3DVAnimeMin__14dMeterButton_cFv();
+/* ReturnFunction       */
 extern void setAlphaButton3DVAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonCAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonCAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonSAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonSAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonXAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonXAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonYAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonYAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonARAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonARAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButton3DBAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButton3DBAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonReelAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonReelAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonABAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonABAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonTateAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonTateAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonBinAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonBinAnimeMax__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaButtonOAnimeMin__14dMeterButton_cFi();
+/* Function             */
 extern void setAlphaButtonOAnimeMax__14dMeterButton_cFi();
+/* Function             */
 extern void setAlphaIconAnimeMin__14dMeterButton_cFv();
+/* Function             */
 extern void setAlphaIconAnimeMax__14dMeterButton_cFv();
+/* Function             */
+extern void isClose__14dMeterButton_cFv();
+/* Function             */
+extern void setString__14dMeterButton_cFPcUcUcUc();
+/* Function             */
+extern void hideAll__14dMeterButton_cFv();
+/* Function             */
 extern void getCenterPosCalc__14dMeterButton_cFUcPci();
+/* Function             */
 extern void trans_button__14dMeterButton_cFif();
+/* Function             */
 extern void hide_button__14dMeterButton_cFUc();
+/* Function             */
 extern void pikariCheck__14dMeterButton_cFv();
+/* Function             */
 extern void paneTrans__14dMeterButton_cFP8CPaneMgrffUc();
+/* Function             */
 extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+/* Function             */
 extern void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
+/* Function             */
 extern void getCanoeFishing__13dMeter2Draw_cFv();
+/* Function             */
 extern void decFloatingMessageTimer__13dMeter2Info_cFv();
+/* Function             */
 extern void resetFloatingMessage__13dMeter2Info_cFv();
+/* Function             */
 extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
+/* Function             */
 extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+/* Function             */
 extern void __ct__10COutFont_cFUc();
+/* Function             */
 extern void isGetItemMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isKanbanMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isHowlMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isMidonaTalkWait__12dMsgObject_cFv();
+/* Function             */
 extern void isPlaceMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isBossMessage__12dMsgObject_cFv();
-extern int isBookMessage__12dMsgObject_cFv();
+/* ReturnIntegerFunction */
+extern  int isBookMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isStaffMessage__12dMsgObject_cFv();
+/* Function             */
 extern void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
+/* Function             */
 extern void getStatus__12dMsgObject_cFv();
+/* Function             */
 extern void getScrnDrawPtr__12dMsgObject_cFv();
+/* Function             */
 extern void __ct__12dMsgString_cFv();
+/* Function             */
 extern void __dt__12dMsgString_cFv();
+/* Function             */
 extern void __ct__8CPaneMgrFv();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void __dt__8CPaneMgrFv();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void show__13CPaneMgrAlphaFv();
+/* Function             */
 extern void hide__13CPaneMgrAlphaFv();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getAlphaRate__13CPaneMgrAlphaFv();
+/* Function             */
 extern void cLib_addCalc2__FPffff();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getBounds__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* FirstParamFunction   */
 extern u32 getStringPtr__10J2DTextBoxCFv(u8*);
+/* Function             */
 extern void setString__10J2DTextBoxFsPCce();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80398048[80];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80398098[80];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter_button__stringBase0[112];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern u8 d_d_meter_button__LIT_7807[88];
-SECTION_DATA extern u8 LIT_7858[88];
-SECTION_DATA extern const void* __vt__14dMeterButton_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_meter_button__LIT_7807[22];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7858[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dMeterButton_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_button__LIT_4146[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_4147;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_4148;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_button__LIT_4149[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_4513;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_4514;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_button__LIT_4515[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter_button__LIT_4517;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5628;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5629;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_5630;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5631;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_5632;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_5633;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5634;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5635;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5636;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6012;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6013[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6014;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6015;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6016[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_button__LIT_6017;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7857;
 }
 
@@ -219,7 +418,22 @@ SECTION_SDATA2 extern f32 LIT_7857;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80398048 0050 .rodata    text_tag$5461                                                */
+/* 803980E8-80398158 006C .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803980E8 = 
+    "zelda_game_image"
+    "_button_info.blo";
+SECTION_DEAD const char* const stringBase_80398109 = "";
+SECTION_DEAD const char* const stringBase_8039810A = "zelda_message_window_new.blo";
+SECTION_DEAD const char* const stringBase_80398127 = "zelda_message_window_text.blo";
+SECTION_DEAD const char* const stringBase_80398145 = "F_SP00";
+SECTION_DEAD const char* const stringBase_8039814C = "R_SP161";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80398154 = "\0\0\0";
+#pragma pop
+/* 80398048-80398098 0050 .rodata    text_tag$5461                                                InitializedData */
 SECTION_RODATA const u8 data_80398048[80] = {
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
@@ -227,7 +441,7 @@ SECTION_RODATA const u8 data_80398048[80] = {
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
 	0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x69, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
 };
-/* 80398098 0050 .rodata    ftext_tag$5462                                               */
+/* 80398098-803980E8 0050 .rodata    ftext_tag$5462                                               InitializedData */
 SECTION_RODATA const u8 data_80398098[80] = {
 	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x30, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x31,
 	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x32, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x33,
@@ -235,14 +449,6 @@ SECTION_RODATA const u8 data_80398098[80] = {
 	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x36, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x37,
 	0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x38, 0x66, 0x6E, 0x66, 0x6F, 0x5F, 0x61, 0x72, 0x39,
 };
-/* 803980E8 006C .rodata    @stringBase0                                                 */
-const char* const stringBase_803980E8 = 
-    "zelda_game_image_button_info.blo";
-const char* const stringBase_80398109 = "";
-const char* const stringBase_8039810A = "zelda_message_window_new.blo";
-const char* const stringBase_80398127 = "zelda_message_window_text.blo";
-const char* const stringBase_80398145 = "F_SP00";
-const char* const stringBase_8039814C = "R_SP161";
 }
 
 
@@ -251,26 +457,58 @@ const char* const stringBase_8039814C = "R_SP161";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BF1A8 0058 .data      @7807                                                        */
-SECTION_DATA u8 d_d_meter_button__LIT_7807[88] = {
-	0x80, 0x20, 0x9E, 0xA8, 0x80, 0x20, 0x9E, 0xF4, 0x80, 0x20, 0x9F, 0x40, 0x80, 0x20, 0x9F, 0x90,
-	0x80, 0x20, 0xA1, 0x58, 0x80, 0x20, 0xA2, 0x44, 0x80, 0x20, 0xA3, 0x1C, 0x80, 0x20, 0xA3, 0x68,
-	0x80, 0x20, 0xA3, 0xB4, 0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90,
-	0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x00, 0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90,
-	0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x90,
-	0x80, 0x20, 0xA4, 0x90, 0x80, 0x20, 0xA4, 0x4C,
+/* 803BF1A8-803BF200 0058 .data      @7807                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_meter_button__LIT_7807[22] = {
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+75),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+94),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+113),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+133),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+247),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+306),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+360),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+379),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+398),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+417),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+453),
+	(void*)(((u32*)getCenterPosCalc__14dMeterButton_cFUcPci)+436),
 };
-/* 803BF200 0058 .data      @7858                                                        */
-SECTION_DATA u8 LIT_7858[88] = {
-	0x80, 0x20, 0xA5, 0xFC, 0x80, 0x20, 0xA6, 0x24, 0x80, 0x20, 0xA6, 0x4C, 0x80, 0x20, 0xA6, 0x74,
-	0x80, 0x20, 0xA6, 0x9C, 0x80, 0x20, 0xA6, 0xD4, 0x80, 0x20, 0xA6, 0xFC, 0x80, 0x20, 0xA7, 0x28,
-	0x80, 0x20, 0xA7, 0x50, 0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4,
-	0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0x78, 0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4,
-	0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xD4,
-	0x80, 0x20, 0xA7, 0xD4, 0x80, 0x20, 0xA7, 0xA8,
+/* 803BF200-803BF258 0058 .data      @7858                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7858[22] = {
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+47),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+57),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+67),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+77),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+87),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+101),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+111),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+122),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+132),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+142),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+165),
+	(void*)(((u32*)trans_button__14dMeterButton_cFif)+154),
 };
-/* 803BF258 0010 .data      __vt__14dMeterButton_c                                       */
-SECTION_DATA const  void* __vt__14dMeterButton_c[4] = {
+/* 803BF258-803BF268 0010 .data      __vt__14dMeterButton_c                                       VTableData */
+SECTION_DATA void* __vt__14dMeterButton_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMeterButton_cFv,
@@ -284,83 +522,83 @@ SECTION_DATA const  void* __vt__14dMeterButton_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454748 0004 .sdata2    @4146                                                        */
+/* 80454748-8045474C 0004 .sdata2    @4146                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_button__LIT_4146[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045474C 0004 .sdata2    @4147                                                        */
+/* 8045474C-80454750 0004 .sdata2    @4147                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_4147 = 1.000000f;
-/* 80454750 0004 .sdata2    @4148                                                        */
+/* 80454750-80454754 0004 .sdata2    @4148                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_4148 = 10.000000f;
-/* 80454754 0004 .sdata2    @4149                                                        */
+/* 80454754-80454758 0004 .sdata2    @4149                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_button__LIT_4149[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80454758 0004 .sdata2    @4513                                                        */
+/* 80454758-8045475C 0004 .sdata2    @4513                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_4513 = -1.000000f;
-/* 8045475C 0004 .sdata2    @4514                                                        */
+/* 8045475C-80454760 0004 .sdata2    @4514                                                        Float32Data */
 // 0x41900000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_4514 = 18.000000f;
-/* 80454760 0004 .sdata2    @4515                                                        */
+/* 80454760-80454768 0004 .sdata2    @4515                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_button__LIT_4515[8] = {
 	0x3F, 0xE6, 0x66, 0x66,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454768 0008 .sdata2    @4517                                                        */
+/* 80454768-80454770 0008 .sdata2    @4517                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter_button__LIT_4517 = 4503601774854144.000000;
-/* 80454770 0004 .sdata2    @5628                                                        */
+/* 80454770-80454774 0004 .sdata2    @5628                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_5628 = 0.500000f;
-/* 80454774 0004 .sdata2    @5629                                                        */
+/* 80454774-80454778 0004 .sdata2    @5629                                                        Float32Data */
 // 0x43980000
 SECTION_SDATA2 f32 LIT_5629 = 304.000000f;
-/* 80454778 0004 .sdata2    @5630                                                        */
+/* 80454778-8045477C 0004 .sdata2    @5630                                                        Float32Data */
 // 0x41000000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_5630 = 8.000000f;
-/* 8045477C 0004 .sdata2    @5631                                                        */
+/* 8045477C-80454780 0004 .sdata2    @5631                                                        Float32Data */
 // 0x4399a000
 SECTION_SDATA2 f32 LIT_5631 = 307.250000f;
-/* 80454780 0004 .sdata2    @5632                                                        */
+/* 80454780-80454784 0004 .sdata2    @5632                                                        Float32Data */
 // 0x4399e000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_5632 = 307.750000f;
-/* 80454784 0004 .sdata2    @5633                                                        */
+/* 80454784-80454788 0004 .sdata2    @5633                                                        Float32Data */
 // 0x43960000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_5633 = 300.000000f;
-/* 80454788 0004 .sdata2    @5634                                                        */
+/* 80454788-8045478C 0004 .sdata2    @5634                                                        Float32Data */
 // 0x43984000
 SECTION_SDATA2 f32 LIT_5634 = 304.500000f;
-/* 8045478C 0004 .sdata2    @5635                                                        */
+/* 8045478C-80454790 0004 .sdata2    @5635                                                        Float32Data */
 // 0x43adc000
 SECTION_SDATA2 f32 LIT_5635 = 347.500000f;
-/* 80454790 0004 .sdata2    @5636                                                        */
+/* 80454790-80454794 0004 .sdata2    @5636                                                        Float32Data */
 // 0x43b7a000
 SECTION_SDATA2 f32 LIT_5636 = 367.250000f;
-/* 80454794 0004 .sdata2    @6012                                                        */
+/* 80454794-80454798 0004 .sdata2    @6012                                                        Float32Data */
 // 0xc1c80000
 SECTION_SDATA2 f32 LIT_6012 = -25.000000f;
-/* 80454798 0004 .sdata2    @6013                                                        */
+/* 80454798-8045479C 0004 .sdata2    @6013                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6013[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
-/* 8045479C 0004 .sdata2    @6014                                                        */
+/* 8045479C-804547A0 0004 .sdata2    @6014                                                        Float32Data */
 // 0xc1200000
 SECTION_SDATA2 f32 LIT_6014 = -10.000000f;
-/* 804547A0 0004 .sdata2    @6015                                                        */
+/* 804547A0-804547A4 0004 .sdata2    @6015                                                        Float32Data */
 // 0x41c80000
 SECTION_SDATA2 f32 LIT_6015 = 25.000000f;
-/* 804547A4 0004 .sdata2    @6016                                                        */
+/* 804547A4-804547A8 0004 .sdata2    @6016                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6016[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 804547A8 0004 .sdata2    @6017                                                        */
+/* 804547A8-804547AC 0004 .sdata2    @6017                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_meter_button__LIT_6017 = 2.000000f;
-/* 804547AC 0004 .sdata2    @7857                                                        */
+/* 804547AC-804547B0 0004 .sdata2    @7857                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 LIT_7857 = 20.000000f;
 }
@@ -371,7 +609,7 @@ SECTION_SDATA2 f32 LIT_7857 = 20.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80201328 0048 .text      __ct__14dMeterButton_cFv                                     */
+/* 80201328-80201370 0048 .text      __ct__14dMeterButton_cFv                                     Function */
 // dMeterButton_c::dMeterButton_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -382,7 +620,7 @@ asm void __ct__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80201370 005C .text      __dt__14dMeterButton_cFv                                     */
+/* 80201370-802013CC 005C .text      __dt__14dMeterButton_cFv                                     Function */
 // dMeterButton_c::~dMeterButton_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -393,7 +631,7 @@ asm void __dt__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802013CC 0038 .text      _create__14dMeterButton_cFv                                  */
+/* 802013CC-80201404 0038 .text      _create__14dMeterButton_cFv                                  Function */
 // dMeterButton_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -404,7 +642,7 @@ asm void _create__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80201404 0E3C .text      _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb          */
+/* 80201404-80202240 0E3C .text      _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb          Function */
 // dMeterButton_c::_execute(u32, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -415,7 +653,7 @@ asm void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb() {
 }
 #pragma pop
 
-/* 80202240 085C .text      draw__14dMeterButton_cFv                                     */
+/* 80202240-80202A9C 085C .text      draw__14dMeterButton_cFv                                     Function */
 // dMeterButton_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -426,7 +664,7 @@ asm void draw__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80202A9C 0828 .text      _delete__14dMeterButton_cFv                                  */
+/* 80202A9C-802032C4 0828 .text      _delete__14dMeterButton_cFv                                  Function */
 // dMeterButton_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -437,7 +675,7 @@ asm void _delete__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802032C4 00D8 .text      alphaAnimeButtonA__14dMeterButton_cFUlb                      */
+/* 802032C4-8020339C 00D8 .text      alphaAnimeButtonA__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonA(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -448,7 +686,7 @@ asm void alphaAnimeButtonA__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 8020339C 010C .text      alphaAnimeButtonB__14dMeterButton_cFUlb                      */
+/* 8020339C-802034A8 010C .text      alphaAnimeButtonB__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonB(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -459,7 +697,7 @@ asm void alphaAnimeButtonB__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802034A8 0104 .text      alphaAnimeButtonR__14dMeterButton_cFUlb                      */
+/* 802034A8-802035AC 0104 .text      alphaAnimeButtonR__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonR(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -470,7 +708,7 @@ asm void alphaAnimeButtonR__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802035AC 0114 .text      alphaAnimeButtonZ__14dMeterButton_cFUlb                      */
+/* 802035AC-802036C0 0114 .text      alphaAnimeButtonZ__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonZ(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -481,7 +719,7 @@ asm void alphaAnimeButtonZ__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802036C0 00F8 .text      alphaAnimeButton3D__14dMeterButton_cFUlb                     */
+/* 802036C0-802037B8 00F8 .text      alphaAnimeButton3D__14dMeterButton_cFUlb                     Function */
 // dMeterButton_c::alphaAnimeButton3D(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -492,7 +730,7 @@ asm void alphaAnimeButton3D__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802037B8 00C0 .text      alphaAnimeButtonC__14dMeterButton_cFUlb                      */
+/* 802037B8-80203878 00C0 .text      alphaAnimeButtonC__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonC(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -503,7 +741,7 @@ asm void alphaAnimeButtonC__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203878 007C .text      alphaAnimeButtonS__14dMeterButton_cFUlb                      */
+/* 80203878-802038F4 007C .text      alphaAnimeButtonS__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonS(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -514,7 +752,7 @@ asm void alphaAnimeButtonS__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802038F4 0114 .text      alphaAnimeButtonX__14dMeterButton_cFUlb                      */
+/* 802038F4-80203A08 0114 .text      alphaAnimeButtonX__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonX(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -525,7 +763,7 @@ asm void alphaAnimeButtonX__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203A08 0114 .text      alphaAnimeButtonY__14dMeterButton_cFUlb                      */
+/* 80203A08-80203B1C 0114 .text      alphaAnimeButtonY__14dMeterButton_cFUlb                      Function */
 // dMeterButton_c::alphaAnimeButtonY(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -536,7 +774,7 @@ asm void alphaAnimeButtonY__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203B1C 0114 .text      alphaAnimeButtonNun__14dMeterButton_cFUlb                    */
+/* 80203B1C-80203C30 0114 .text      alphaAnimeButtonNun__14dMeterButton_cFUlb                    Function */
 // dMeterButton_c::alphaAnimeButtonNun(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -547,7 +785,7 @@ asm void alphaAnimeButtonNun__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203C30 0114 .text      alphaAnimeButtonRemo__14dMeterButton_cFUlb                   */
+/* 80203C30-80203D44 0114 .text      alphaAnimeButtonRemo__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonRemo(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -558,7 +796,7 @@ asm void alphaAnimeButtonRemo__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203D44 0114 .text      alphaAnimeButtonRemo2__14dMeterButton_cFUlb                  */
+/* 80203D44-80203E58 0114 .text      alphaAnimeButtonRemo2__14dMeterButton_cFUlb                  Function */
 // dMeterButton_c::alphaAnimeButtonRemo2(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -569,7 +807,7 @@ asm void alphaAnimeButtonRemo2__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203E58 0108 .text      alphaAnimeButtonAR__14dMeterButton_cFUlb                     */
+/* 80203E58-80203F60 0108 .text      alphaAnimeButtonAR__14dMeterButton_cFUlb                     Function */
 // dMeterButton_c::alphaAnimeButtonAR(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -580,7 +818,7 @@ asm void alphaAnimeButtonAR__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80203F60 0108 .text      alphaAnimeButton3DB__14dMeterButton_cFUlb                    */
+/* 80203F60-80204068 0108 .text      alphaAnimeButton3DB__14dMeterButton_cFUlb                    Function */
 // dMeterButton_c::alphaAnimeButton3DB(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -591,7 +829,7 @@ asm void alphaAnimeButton3DB__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204068 0108 .text      alphaAnimeButtonNURE__14dMeterButton_cFUlb                   */
+/* 80204068-80204170 0108 .text      alphaAnimeButtonNURE__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonNURE(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -602,7 +840,7 @@ asm void alphaAnimeButtonNURE__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204170 0108 .text      alphaAnimeButtonReel__14dMeterButton_cFUlb                   */
+/* 80204170-80204278 0108 .text      alphaAnimeButtonReel__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonReel(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -613,7 +851,7 @@ asm void alphaAnimeButtonReel__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204278 00F0 .text      alphaAnimeButtonReel2__14dMeterButton_cFUlb                  */
+/* 80204278-80204368 00F0 .text      alphaAnimeButtonReel2__14dMeterButton_cFUlb                  Function */
 // dMeterButton_c::alphaAnimeButtonReel2(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +862,7 @@ asm void alphaAnimeButtonReel2__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204368 00F0 .text      alphaAnimeButtonAB__14dMeterButton_cFUlb                     */
+/* 80204368-80204458 00F0 .text      alphaAnimeButtonAB__14dMeterButton_cFUlb                     Function */
 // dMeterButton_c::alphaAnimeButtonAB(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +873,7 @@ asm void alphaAnimeButtonAB__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204458 00F0 .text      alphaAnimeButtonTate__14dMeterButton_cFUlb                   */
+/* 80204458-80204548 00F0 .text      alphaAnimeButtonTate__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonTate(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +884,7 @@ asm void alphaAnimeButtonTate__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204548 00D8 .text      alphaAnimeButtonNunZ__14dMeterButton_cFUlb                   */
+/* 80204548-80204620 00D8 .text      alphaAnimeButtonNunZ__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonNunZ(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +895,7 @@ asm void alphaAnimeButtonNunZ__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 80204620 00D8 .text      alphaAnimeButtonNunC__14dMeterButton_cFUlb                   */
+/* 80204620-802046F8 00D8 .text      alphaAnimeButtonNunC__14dMeterButton_cFUlb                   Function */
 // dMeterButton_c::alphaAnimeButtonNunC(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +906,7 @@ asm void alphaAnimeButtonNunC__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802046F8 00F0 .text      alphaAnimeButtonBin__14dMeterButton_cFUlb                    */
+/* 802046F8-802047E8 00F0 .text      alphaAnimeButtonBin__14dMeterButton_cFUlb                    Function */
 // dMeterButton_c::alphaAnimeButtonBin(u32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +917,7 @@ asm void alphaAnimeButtonBin__14dMeterButton_cFUlb() {
 }
 #pragma pop
 
-/* 802047E8 104C .text      screenInitButton__14dMeterButton_cFv                         */
+/* 802047E8-80205834 104C .text      screenInitButton__14dMeterButton_cFv                         Function */
 // dMeterButton_c::screenInitButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +928,7 @@ asm void screenInitButton__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80205834 046C .text      screenInitText__14dMeterButton_cFv                           */
+/* 80205834-80205CA0 046C .text      screenInitText__14dMeterButton_cFv                           Function */
 // dMeterButton_c::screenInitText(void)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +939,7 @@ asm void screenInitText__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80205CA0 0CD8 .text      updateButton__14dMeterButton_cFv                             */
+/* 80205CA0-80206978 0CD8 .text      updateButton__14dMeterButton_cFv                             Function */
 // dMeterButton_c::updateButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +950,7 @@ asm void updateButton__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80206978 0368 .text      updateText__14dMeterButton_cFUl                              */
+/* 80206978-80206CE0 0368 .text      updateText__14dMeterButton_cFUl                              Function */
 // dMeterButton_c::updateText(u32)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +961,7 @@ asm void updateText__14dMeterButton_cFUl() {
 }
 #pragma pop
 
-/* 80206CE0 0090 .text      setAlphaButtonAAnimeMin__14dMeterButton_cFv                  */
+/* 80206CE0-80206D70 0090 .text      setAlphaButtonAAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonAAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +972,7 @@ asm void setAlphaButtonAAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80206D70 02F0 .text      isFastSet__14dMeterButton_cFi                                */
+/* 80206D70-80207060 02F0 .text      isFastSet__14dMeterButton_cFi                                Function */
 // dMeterButton_c::isFastSet(int)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +983,7 @@ asm void isFastSet__14dMeterButton_cFi() {
 }
 #pragma pop
 
-/* 80207060 00EC .text      setAlphaButtonAAnimeMax__14dMeterButton_cFv                  */
+/* 80207060-8020714C 00EC .text      setAlphaButtonAAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonAAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +994,7 @@ asm void setAlphaButtonAAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 8020714C 0090 .text      setAlphaButtonBAnimeMin__14dMeterButton_cFv                  */
+/* 8020714C-802071DC 0090 .text      setAlphaButtonBAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonBAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +1005,7 @@ asm void setAlphaButtonBAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802071DC 00EC .text      setAlphaButtonBAnimeMax__14dMeterButton_cFv                  */
+/* 802071DC-802072C8 00EC .text      setAlphaButtonBAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonBAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +1016,7 @@ asm void setAlphaButtonBAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802072C8 0090 .text      setAlphaButtonRAnimeMin__14dMeterButton_cFv                  */
+/* 802072C8-80207358 0090 .text      setAlphaButtonRAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonRAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -789,7 +1027,7 @@ asm void setAlphaButtonRAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207358 00EC .text      setAlphaButtonRAnimeMax__14dMeterButton_cFv                  */
+/* 80207358-80207444 00EC .text      setAlphaButtonRAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonRAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -800,7 +1038,7 @@ asm void setAlphaButtonRAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207444 0090 .text      setAlphaButtonZAnimeMin__14dMeterButton_cFv                  */
+/* 80207444-802074D4 0090 .text      setAlphaButtonZAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonZAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -811,7 +1049,7 @@ asm void setAlphaButtonZAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802074D4 00EC .text      setAlphaButtonZAnimeMax__14dMeterButton_cFv                  */
+/* 802074D4-802075C0 00EC .text      setAlphaButtonZAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonZAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -822,7 +1060,7 @@ asm void setAlphaButtonZAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802075C0 0094 .text      setAlphaButton3DAnimeMin__14dMeterButton_cFv                 */
+/* 802075C0-80207654 0094 .text      setAlphaButton3DAnimeMin__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButton3DAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -833,7 +1071,7 @@ asm void setAlphaButton3DAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207654 00EC .text      setAlphaButton3DAnimeMax__14dMeterButton_cFv                 */
+/* 80207654-80207740 00EC .text      setAlphaButton3DAnimeMax__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButton3DAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -844,19 +1082,19 @@ asm void setAlphaButton3DAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207740 0004 .text      setAlphaButton3DVAnimeMin__14dMeterButton_cFv                */
+/* 80207740-80207744 0004 .text      setAlphaButton3DVAnimeMin__14dMeterButton_cFv                ReturnFunction */
 // dMeterButton_c::setAlphaButton3DVAnimeMin(void)
 void setAlphaButton3DVAnimeMin__14dMeterButton_cFv() {
 	return;
 }
 
-/* 80207744 0004 .text      setAlphaButton3DVAnimeMax__14dMeterButton_cFv                */
+/* 80207744-80207748 0004 .text      setAlphaButton3DVAnimeMax__14dMeterButton_cFv                ReturnFunction */
 // dMeterButton_c::setAlphaButton3DVAnimeMax(void)
 void setAlphaButton3DVAnimeMax__14dMeterButton_cFv() {
 	return;
 }
 
-/* 80207748 00A4 .text      setAlphaButtonCAnimeMin__14dMeterButton_cFv                  */
+/* 80207748-802077EC 00A4 .text      setAlphaButtonCAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonCAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -867,7 +1105,7 @@ asm void setAlphaButtonCAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802077EC 023C .text      setAlphaButtonCAnimeMax__14dMeterButton_cFv                  */
+/* 802077EC-80207A28 023C .text      setAlphaButtonCAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonCAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -878,7 +1116,7 @@ asm void setAlphaButtonCAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207A28 0090 .text      setAlphaButtonSAnimeMin__14dMeterButton_cFv                  */
+/* 80207A28-80207AB8 0090 .text      setAlphaButtonSAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonSAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -889,7 +1127,7 @@ asm void setAlphaButtonSAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207AB8 00EC .text      setAlphaButtonSAnimeMax__14dMeterButton_cFv                  */
+/* 80207AB8-80207BA4 00EC .text      setAlphaButtonSAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonSAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -900,7 +1138,7 @@ asm void setAlphaButtonSAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207BA4 0090 .text      setAlphaButtonXAnimeMin__14dMeterButton_cFv                  */
+/* 80207BA4-80207C34 0090 .text      setAlphaButtonXAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonXAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -911,7 +1149,7 @@ asm void setAlphaButtonXAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207C34 00EC .text      setAlphaButtonXAnimeMax__14dMeterButton_cFv                  */
+/* 80207C34-80207D20 00EC .text      setAlphaButtonXAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonXAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -922,7 +1160,7 @@ asm void setAlphaButtonXAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207D20 0090 .text      setAlphaButtonYAnimeMin__14dMeterButton_cFv                  */
+/* 80207D20-80207DB0 0090 .text      setAlphaButtonYAnimeMin__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonYAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -933,7 +1171,7 @@ asm void setAlphaButtonYAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207DB0 00EC .text      setAlphaButtonYAnimeMax__14dMeterButton_cFv                  */
+/* 80207DB0-80207E9C 00EC .text      setAlphaButtonYAnimeMax__14dMeterButton_cFv                  Function */
 // dMeterButton_c::setAlphaButtonYAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -944,7 +1182,7 @@ asm void setAlphaButtonYAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207E9C 0098 .text      setAlphaButtonNunAnimeMin__14dMeterButton_cFv                */
+/* 80207E9C-80207F34 0098 .text      setAlphaButtonNunAnimeMin__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButtonNunAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -955,7 +1193,7 @@ asm void setAlphaButtonNunAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80207F34 00F4 .text      setAlphaButtonNunAnimeMax__14dMeterButton_cFv                */
+/* 80207F34-80208028 00F4 .text      setAlphaButtonNunAnimeMax__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButtonNunAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -966,7 +1204,7 @@ asm void setAlphaButtonNunAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208028 0098 .text      setAlphaButtonRemoAnimeMin__14dMeterButton_cFv               */
+/* 80208028-802080C0 0098 .text      setAlphaButtonRemoAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonRemoAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -977,7 +1215,7 @@ asm void setAlphaButtonRemoAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802080C0 00F4 .text      setAlphaButtonRemoAnimeMax__14dMeterButton_cFv               */
+/* 802080C0-802081B4 00F4 .text      setAlphaButtonRemoAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonRemoAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -988,7 +1226,7 @@ asm void setAlphaButtonRemoAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802081B4 0098 .text      setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv              */
+/* 802081B4-8020824C 0098 .text      setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv              Function */
 // dMeterButton_c::setAlphaButtonRemo2AnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -999,7 +1237,7 @@ asm void setAlphaButtonRemo2AnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 8020824C 00F4 .text      setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv              */
+/* 8020824C-80208340 00F4 .text      setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv              Function */
 // dMeterButton_c::setAlphaButtonRemo2AnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1010,7 +1248,7 @@ asm void setAlphaButtonRemo2AnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208340 0098 .text      setAlphaButtonARAnimeMin__14dMeterButton_cFv                 */
+/* 80208340-802083D8 0098 .text      setAlphaButtonARAnimeMin__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButtonARAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1021,7 +1259,7 @@ asm void setAlphaButtonARAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802083D8 0100 .text      setAlphaButtonARAnimeMax__14dMeterButton_cFv                 */
+/* 802083D8-802084D8 0100 .text      setAlphaButtonARAnimeMax__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButtonARAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1032,7 +1270,7 @@ asm void setAlphaButtonARAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802084D8 0098 .text      setAlphaButton3DBAnimeMin__14dMeterButton_cFv                */
+/* 802084D8-80208570 0098 .text      setAlphaButton3DBAnimeMin__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButton3DBAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1043,7 +1281,7 @@ asm void setAlphaButton3DBAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208570 0100 .text      setAlphaButton3DBAnimeMax__14dMeterButton_cFv                */
+/* 80208570-80208670 0100 .text      setAlphaButton3DBAnimeMax__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButton3DBAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1054,7 +1292,7 @@ asm void setAlphaButton3DBAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208670 0098 .text      setAlphaButtonNUREAnimeMin__14dMeterButton_cFv               */
+/* 80208670-80208708 0098 .text      setAlphaButtonNUREAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNUREAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1065,7 +1303,7 @@ asm void setAlphaButtonNUREAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208708 0100 .text      setAlphaButtonNUREAnimeMax__14dMeterButton_cFv               */
+/* 80208708-80208808 0100 .text      setAlphaButtonNUREAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNUREAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1076,7 +1314,7 @@ asm void setAlphaButtonNUREAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208808 0098 .text      setAlphaButtonReelAnimeMin__14dMeterButton_cFv               */
+/* 80208808-802088A0 0098 .text      setAlphaButtonReelAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonReelAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1087,7 +1325,7 @@ asm void setAlphaButtonReelAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802088A0 0100 .text      setAlphaButtonReelAnimeMax__14dMeterButton_cFv               */
+/* 802088A0-802089A0 0100 .text      setAlphaButtonReelAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonReelAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1098,7 +1336,7 @@ asm void setAlphaButtonReelAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802089A0 0098 .text      setAlphaButtonReel2AnimeMin__14dMeterButton_cFv              */
+/* 802089A0-80208A38 0098 .text      setAlphaButtonReel2AnimeMin__14dMeterButton_cFv              Function */
 // dMeterButton_c::setAlphaButtonReel2AnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1109,7 +1347,7 @@ asm void setAlphaButtonReel2AnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208A38 00B4 .text      setAlphaButtonReel2AnimeMax__14dMeterButton_cFv              */
+/* 80208A38-80208AEC 00B4 .text      setAlphaButtonReel2AnimeMax__14dMeterButton_cFv              Function */
 // dMeterButton_c::setAlphaButtonReel2AnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1120,7 +1358,7 @@ asm void setAlphaButtonReel2AnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208AEC 0098 .text      setAlphaButtonABAnimeMin__14dMeterButton_cFv                 */
+/* 80208AEC-80208B84 0098 .text      setAlphaButtonABAnimeMin__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButtonABAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1131,7 +1369,7 @@ asm void setAlphaButtonABAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208B84 00B4 .text      setAlphaButtonABAnimeMax__14dMeterButton_cFv                 */
+/* 80208B84-80208C38 00B4 .text      setAlphaButtonABAnimeMax__14dMeterButton_cFv                 Function */
 // dMeterButton_c::setAlphaButtonABAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1142,7 +1380,7 @@ asm void setAlphaButtonABAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208C38 0098 .text      setAlphaButtonTateAnimeMin__14dMeterButton_cFv               */
+/* 80208C38-80208CD0 0098 .text      setAlphaButtonTateAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonTateAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1153,7 +1391,7 @@ asm void setAlphaButtonTateAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208CD0 00B4 .text      setAlphaButtonTateAnimeMax__14dMeterButton_cFv               */
+/* 80208CD0-80208D84 00B4 .text      setAlphaButtonTateAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonTateAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1164,7 +1402,7 @@ asm void setAlphaButtonTateAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208D84 0098 .text      setAlphaButtonNunZAnimeMin__14dMeterButton_cFv               */
+/* 80208D84-80208E1C 0098 .text      setAlphaButtonNunZAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNunZAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1175,7 +1413,7 @@ asm void setAlphaButtonNunZAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208E1C 0100 .text      setAlphaButtonNunZAnimeMax__14dMeterButton_cFv               */
+/* 80208E1C-80208F1C 0100 .text      setAlphaButtonNunZAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNunZAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1186,7 +1424,7 @@ asm void setAlphaButtonNunZAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208F1C 0098 .text      setAlphaButtonNunCAnimeMin__14dMeterButton_cFv               */
+/* 80208F1C-80208FB4 0098 .text      setAlphaButtonNunCAnimeMin__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNunCAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1197,7 +1435,7 @@ asm void setAlphaButtonNunCAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80208FB4 0100 .text      setAlphaButtonNunCAnimeMax__14dMeterButton_cFv               */
+/* 80208FB4-802090B4 0100 .text      setAlphaButtonNunCAnimeMax__14dMeterButton_cFv               Function */
 // dMeterButton_c::setAlphaButtonNunCAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1208,7 +1446,7 @@ asm void setAlphaButtonNunCAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802090B4 0098 .text      setAlphaButtonBinAnimeMin__14dMeterButton_cFv                */
+/* 802090B4-8020914C 0098 .text      setAlphaButtonBinAnimeMin__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButtonBinAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1219,7 +1457,7 @@ asm void setAlphaButtonBinAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 8020914C 0100 .text      setAlphaButtonBinAnimeMax__14dMeterButton_cFv                */
+/* 8020914C-8020924C 0100 .text      setAlphaButtonBinAnimeMax__14dMeterButton_cFv                Function */
 // dMeterButton_c::setAlphaButtonBinAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1230,7 +1468,7 @@ asm void setAlphaButtonBinAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 8020924C 0074 .text      setAlphaButtonOAnimeMin__14dMeterButton_cFi                  */
+/* 8020924C-802092C0 0074 .text      setAlphaButtonOAnimeMin__14dMeterButton_cFi                  Function */
 // dMeterButton_c::setAlphaButtonOAnimeMin(int)
 #pragma push
 #pragma optimization_level 0
@@ -1241,7 +1479,7 @@ asm void setAlphaButtonOAnimeMin__14dMeterButton_cFi() {
 }
 #pragma pop
 
-/* 802092C0 00A8 .text      setAlphaButtonOAnimeMax__14dMeterButton_cFi                  */
+/* 802092C0-80209368 00A8 .text      setAlphaButtonOAnimeMax__14dMeterButton_cFi                  Function */
 // dMeterButton_c::setAlphaButtonOAnimeMax(int)
 #pragma push
 #pragma optimization_level 0
@@ -1252,7 +1490,7 @@ asm void setAlphaButtonOAnimeMax__14dMeterButton_cFi() {
 }
 #pragma pop
 
-/* 80209368 0070 .text      setAlphaIconAnimeMin__14dMeterButton_cFv                     */
+/* 80209368-802093D8 0070 .text      setAlphaIconAnimeMin__14dMeterButton_cFv                     Function */
 // dMeterButton_c::setAlphaIconAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -1263,7 +1501,7 @@ asm void setAlphaIconAnimeMin__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802093D8 009C .text      setAlphaIconAnimeMax__14dMeterButton_cFv                     */
+/* 802093D8-80209474 009C .text      setAlphaIconAnimeMax__14dMeterButton_cFv                     Function */
 // dMeterButton_c::setAlphaIconAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -1274,7 +1512,7 @@ asm void setAlphaIconAnimeMax__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80209474 014C .text      isClose__14dMeterButton_cFv                                  */
+/* 80209474-802095C0 014C .text      isClose__14dMeterButton_cFv                                  Function */
 // dMeterButton_c::isClose(void)
 #pragma push
 #pragma optimization_level 0
@@ -1285,8 +1523,8 @@ asm void isClose__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 802095C0 072C .text      setString__14dMeterButton_cFPcUcUcUc                         */
-// dMeterButton_c::setString(s8*, u8, u8, u8)
+/* 802095C0-80209CEC 072C .text      setString__14dMeterButton_cFPcUcUcUc                         Function */
+// dMeterButton_c::setString(char*, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1296,7 +1534,7 @@ asm void setString__14dMeterButton_cFPcUcUcUc() {
 }
 #pragma pop
 
-/* 80209CEC 0090 .text      hideAll__14dMeterButton_cFv                                  */
+/* 80209CEC-80209D7C 0090 .text      hideAll__14dMeterButton_cFv                                  Function */
 // dMeterButton_c::hideAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -1307,8 +1545,8 @@ asm void hideAll__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 80209D7C 07C4 .text      getCenterPosCalc__14dMeterButton_cFUcPci                     */
-// dMeterButton_c::getCenterPosCalc(u8, s8*, int)
+/* 80209D7C-8020A540 07C4 .text      getCenterPosCalc__14dMeterButton_cFUcPci                     Function */
+// dMeterButton_c::getCenterPosCalc(u8, char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1318,7 +1556,7 @@ asm void getCenterPosCalc__14dMeterButton_cFUcPci() {
 }
 #pragma pop
 
-/* 8020A540 040C .text      trans_button__14dMeterButton_cFif                            */
+/* 8020A540-8020A94C 040C .text      trans_button__14dMeterButton_cFif                            Function */
 // dMeterButton_c::trans_button(int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1329,7 +1567,7 @@ asm void trans_button__14dMeterButton_cFif() {
 }
 #pragma pop
 
-/* 8020A94C 0138 .text      hide_button__14dMeterButton_cFUc                             */
+/* 8020A94C-8020AA84 0138 .text      hide_button__14dMeterButton_cFUc                             Function */
 // dMeterButton_c::hide_button(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1340,7 +1578,7 @@ asm void hide_button__14dMeterButton_cFUc() {
 }
 #pragma pop
 
-/* 8020AA84 03E4 .text      pikariCheck__14dMeterButton_cFv                              */
+/* 8020AA84-8020AE68 03E4 .text      pikariCheck__14dMeterButton_cFv                              Function */
 // dMeterButton_c::pikariCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -1351,7 +1589,7 @@ asm void pikariCheck__14dMeterButton_cFv() {
 }
 #pragma pop
 
-/* 8020AE68 0024 .text      paneTrans__14dMeterButton_cFP8CPaneMgrffUc                   */
+/* 8020AE68-8020AE8C 0024 .text      paneTrans__14dMeterButton_cFP8CPaneMgrffUc                   Function */
 // dMeterButton_c::paneTrans(CPaneMgr*, f32, f32, u8)
 #pragma push
 #pragma optimization_level 0

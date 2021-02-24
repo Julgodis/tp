@@ -11,13 +11,26 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__8cM3dGCpsFv();
+/* Function             */
 extern void __dt__8cM3dGCpsFv();
+/* Function             */
 extern void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
+/* Function             */
+extern void Set__8cM3dGCpsFRC9cM3dGCpsS();
+/* Function             */
+extern void SetCps__8cM3dGCpsFRC8cM3dGCps();
+/* Function             */
 extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+/* Function             */
 extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__8cM3dGLin[3];
-SECTION_DATA extern const void* __vt__8cM3dGCps[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGLin[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGCps[10];
 }
 
 
@@ -26,8 +39,8 @@ SECTION_DATA extern const void* __vt__8cM3dGCps[10];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3FF8 000C .data      __vt__8cM3dGCps                                              */
-SECTION_DATA const  void* __vt__8cM3dGCps[10] = {
+/* 803C3FF8-803C4020 000C .data      __vt__8cM3dGCps                                              VTableData */
+SECTION_DATA void* __vt__8cM3dGCps[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cM3dGCpsFv,
@@ -48,7 +61,7 @@ SECTION_DATA const  void* __vt__8cM3dGCps[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026EF88 001C .text      __ct__8cM3dGCpsFv                                            */
+/* 8026EF88-8026EFA4 001C .text      __ct__8cM3dGCpsFv                                            Function */
 // cM3dGCps::cM3dGCps(void)
 #pragma push
 #pragma optimization_level 0
@@ -59,7 +72,7 @@ asm void __ct__8cM3dGCpsFv() {
 }
 #pragma pop
 
-/* 8026EFA4 005C .text      __dt__8cM3dGCpsFv                                            */
+/* 8026EFA4-8026F000 005C .text      __dt__8cM3dGCpsFv                                            Function */
 // cM3dGCps::~cM3dGCps(void)
 #pragma push
 #pragma optimization_level 0
@@ -70,7 +83,7 @@ asm void __dt__8cM3dGCpsFv() {
 }
 #pragma pop
 
-/* 8026F000 003C .text      Set__8cM3dGCpsFRC4cXyzRC4cXyzf                               */
+/* 8026F000-8026F03C 003C .text      Set__8cM3dGCpsFRC4cXyzRC4cXyzf                               Function */
 // cM3dGCps::Set(const cXyz&, const cXyz&, f32)
 #pragma push
 #pragma optimization_level 0
@@ -81,7 +94,7 @@ asm void Set__8cM3dGCpsFRC4cXyzRC4cXyzf() {
 }
 #pragma pop
 
-/* 8026F03C 0044 .text      Set__8cM3dGCpsFRC9cM3dGCpsS                                  */
+/* 8026F03C-8026F080 0044 .text      Set__8cM3dGCpsFRC9cM3dGCpsS                                  Function */
 // cM3dGCps::Set(const cM3dGCpsS&)
 #pragma push
 #pragma optimization_level 0
@@ -92,7 +105,7 @@ asm void Set__8cM3dGCpsFRC9cM3dGCpsS() {
 }
 #pragma pop
 
-/* 8026F080 0028 .text      SetCps__8cM3dGCpsFRC8cM3dGCps                                */
+/* 8026F080-8026F0A8 0028 .text      SetCps__8cM3dGCpsFRC8cM3dGCps                                Function */
 // cM3dGCps::SetCps(const cM3dGCps&)
 #pragma push
 #pragma optimization_level 0

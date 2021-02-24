@@ -12,102 +12,219 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void getNumBit(u8*, int); /* getNumBit__FPUci */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__11JKRDisposerFv();
+/* Function             */
 extern void __dt__11JKRDisposerFv();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void __ct__10JSUPtrListFb();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
+extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+/* Function             */
 extern void __dt__10JUTGamePadFv();
+/* Function             */
 extern void initList__10JUTGamePadFv();
+/* Function             */
+extern void init__10JUTGamePadFv();
+/* Function             */
 extern void clear__10JUTGamePadFv();
+/* Function             */
+extern void read__10JUTGamePadFv();
+/* Function             */
 extern void assign__10JUTGamePadFv();
+/* Function             */
 extern void checkResetCallback__10JUTGamePadFx();
+/* Function             */
 extern void update__10JUTGamePadFv();
+/* Function             */
 extern void checkResetSwitch__10JUTGamePadFv();
+/* Function             */
+extern void clearForReset__10JUTGamePadFv();
+/* Function             */
 extern void clear__Q210JUTGamePad7CButtonFv();
+/* Function             */
 extern void update__Q210JUTGamePad7CButtonFPC9PADStatusUl();
+/* Function             */
 extern void clear__Q210JUTGamePad6CStickFv();
+/* Function             */
 extern void update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl();
+/* Function             */
 extern void getButton__Q210JUTGamePad6CStickFUl();
+/* Function             */
 extern void clear__Q210JUTGamePad7CRumbleFv();
+/* Function             */
 extern void clear__Q210JUTGamePad7CRumbleFP10JUTGamePad();
+/* Function             */
 extern void startMotor__Q210JUTGamePad7CRumbleFi();
+/* Function             */
 extern void stopMotor__Q210JUTGamePad7CRumbleFib();
+/* Function             */
 extern void getNumBit__FPUci();
+/* Function             */
 extern void update__Q210JUTGamePad7CRumbleFs();
+/* Function             */
 extern void triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl();
+/* Function             */
+extern void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+/* Function             */
 extern void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+/* Function             */
+extern void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
+/* Function             */
 extern void getGamePad__10JUTGamePadFi();
+/* Function             */
 extern void setEnabled__Q210JUTGamePad7CRumbleFUl();
+/* Function             */
 extern void setRepeat__Q210JUTGamePad7CButtonFUlUlUl();
+/* Function             */
 extern void recalibrate__10JUTGamePadFUl();
+/* Function             */
 extern void checkCallback__19JUTGamePadLongPressFiUl();
+/* SInitFunction        */
+extern void __sinit_JUTGamePad_cpp();
+/* Function             */
 extern void func_802E1C54();
+/* Function             */
 extern void __ct__Q210JUTGamePad6CStickFv();
+/* Function             */
 extern void __ct__Q210JUTGamePad7CButtonFv();
+/* Function             */
 extern void func_802E1D08();
+/* Function             */
 extern void OSGetResetSwitchState();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void PADClamp();
+/* Function             */
 extern void PADClampCircle();
+/* Function             */
 extern void PADReset();
+/* Function             */
 extern void PADRecalibrate();
+/* Function             */
 extern void PADInit();
+/* Function             */
 extern void PADRead();
+/* Function             */
 extern void PADControlMotor();
+/* Function             */
 extern void PADSetSpec();
+/* Function             */
 extern void PADSetAnalogMode();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void atan2();
+/* InitializedData      */
 SECTION_DATA extern u8 sChannelMask__Q210JUTGamePad7CRumble[16];
+/* InitializedData      */
 SECTION_DATA extern u8 channel_mask[16];
-SECTION_DATA extern const void* __vt__10JUTGamePad[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JUTGamePad[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JUTGamePad__LIT_525[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mPadList__10JUTGamePad[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mPadStatus__10JUTGamePad[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mPadButton__10JUTGamePad[192];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mPadMStick__10JUTGamePad[64];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mPadSStick__10JUTGamePad[64];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1373[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sPatternList__19JUTGamePadLongPress[12];
+/* InitializedData      */
 SECTION_SDATA extern u8 sStickMode__10JUTGamePad[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 sClampMode__10JUTGamePad[4];
+/* Float32Data          */
 SECTION_SDATA extern f32 sPressPoint__Q210JUTGamePad6CStick;
+/* Float32Data          */
 SECTION_SDATA extern f32 sReleasePoint__Q210JUTGamePad6CStick;
+/* InitializedData      */
 SECTION_SDATA extern u8 sResetPattern__Q210JUTGamePad13C3ButtonReset[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 sResetMaskPattern__Q210JUTGamePad13C3ButtonReset[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804514D0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mPadAssign__10JUTGamePad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSuppressPadReset__10JUTGamePad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sAnalogMode__10JUTGamePad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRumbleSupported__10JUTGamePad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mStatus__Q210JUTGamePad7CRumble[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mEnabled__Q210JUTGamePad7CRumble[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sThreshold__Q210JUTGamePad13C3ButtonReset[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804514FC[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451500[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sResetOccurredPort__Q210JUTGamePad13C3ButtonReset[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JUTGamePad__LIT_1047[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JUTGamePad__LIT_1050;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1056[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1117;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1118;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1119[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1120;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JUTGamePad__LIT_1121[4];
 }
 
@@ -117,16 +234,16 @@ SECTION_SDATA2 extern u8 JUTGamePad__LIT_1121[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC5F0 0010 .data      sChannelMask__Q210JUTGamePad7CRumble                         */
+/* 803CC5F0-803CC600 0010 .data      sChannelMask__Q210JUTGamePad7CRumble                         InitializedData */
 SECTION_DATA u8 sChannelMask__Q210JUTGamePad7CRumble[16] = {
 	0x80, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00,
 };
-/* 803CC600 0010 .data      channel_mask                                                 */
+/* 803CC600-803CC610 0010 .data      channel_mask                                                 InitializedData */
 SECTION_DATA u8 channel_mask[16] = {
 	0x80, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00,
 };
-/* 803CC610 000C .data      __vt__10JUTGamePad                                           */
-SECTION_DATA const  void* __vt__10JUTGamePad[4] = {
+/* 803CC610-803CC620 000C .data      __vt__10JUTGamePad                                           VTableData */
+SECTION_DATA void* __vt__10JUTGamePad[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JUTGamePadFv,
@@ -141,25 +258,25 @@ SECTION_DATA const  void* __vt__10JUTGamePad[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804508D8 0004 .sdata     sStickMode__10JUTGamePad                                     */
+/* 804508D8-804508DC 0004 .sdata     sStickMode__10JUTGamePad                                     InitializedData */
 SECTION_SDATA u8 sStickMode__10JUTGamePad[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
-/* 804508DC 0004 .sdata     sClampMode__10JUTGamePad                                     */
+/* 804508DC-804508E0 0004 .sdata     sClampMode__10JUTGamePad                                     InitializedData */
 SECTION_SDATA u8 sClampMode__10JUTGamePad[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
-/* 804508E0 0004 .sdata     sPressPoint__Q210JUTGamePad6CStick                           */
+/* 804508E0-804508E4 0004 .sdata     sPressPoint__Q210JUTGamePad6CStick                           Float32Data */
 // 0x3f000000
 SECTION_SDATA f32 sPressPoint__Q210JUTGamePad6CStick = 0.500000f;
-/* 804508E4 0004 .sdata     sReleasePoint__Q210JUTGamePad6CStick                         */
+/* 804508E4-804508E8 0004 .sdata     sReleasePoint__Q210JUTGamePad6CStick                         Float32Data */
 // 0x3e800000
 SECTION_SDATA f32 sReleasePoint__Q210JUTGamePad6CStick = 0.250000f;
-/* 804508E8 0004 .sdata     sResetPattern__Q210JUTGamePad13C3ButtonReset                 */
+/* 804508E8-804508EC 0004 .sdata     sResetPattern__Q210JUTGamePad13C3ButtonReset                 InitializedData */
 SECTION_SDATA u8 sResetPattern__Q210JUTGamePad13C3ButtonReset[4] = {
 	0x00, 0x00, 0x16, 0x00,
 };
-/* 804508EC 0004 .sdata     sResetMaskPattern__Q210JUTGamePad13C3ButtonReset             */
+/* 804508EC-804508F0 0004 .sdata     sResetMaskPattern__Q210JUTGamePad13C3ButtonReset             InitializedData */
 SECTION_SDATA u8 sResetMaskPattern__Q210JUTGamePad13C3ButtonReset[4] = {
 	0x00, 0x00, 0xFF, 0xFF,
 };
@@ -171,35 +288,35 @@ SECTION_SDATA u8 sResetMaskPattern__Q210JUTGamePad13C3ButtonReset[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456018 0004 .sdata2    @1047                                                        */
+/* 80456018-80456020 0004 .sdata2    @1047                                                        InitializedData */
 SECTION_SDATA2 u8 JUTGamePad__LIT_1047[8] = {
 	0x43, 0x16, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456020 0008 .sdata2    @1050                                                        */
+/* 80456020-80456028 0008 .sdata2    @1050                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JUTGamePad__LIT_1050 = 4503601774854144.000000;
-/* 80456028 0004 .sdata2    @1056                                                        */
+/* 80456028-80456030 0004 .sdata2    @1056                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1056[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456030 0008 .sdata2    @1117                                                        */
+/* 80456030-80456038 0008 .sdata2    @1117                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 LIT_1117 = 0.500000;
-/* 80456038 0008 .sdata2    @1118                                                        */
+/* 80456038-80456040 0008 .sdata2    @1118                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_1118 = 3.000000;
-/* 80456040 0008 .sdata2    @1119                                                        */
+/* 80456040-80456048 0008 .sdata2    @1119                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1119[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80456048 0004 .sdata2    @1120                                                        */
+/* 80456048-8045604C 0004 .sdata2    @1120                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_1120 = 1.000000f;
-/* 8045604C 0004 .sdata2    @1121                                                        */
+/* 8045604C-80456050 0004 .sdata2    @1121                                                        InitializedData */
 SECTION_SDATA2 u8 JUTGamePad__LIT_1121[4] = {
 	0x46, 0x22, 0xF9, 0x84,
 };
@@ -211,22 +328,22 @@ SECTION_SDATA2 u8 JUTGamePad__LIT_1121[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804343D8 0000 .bss       ...bss.0                                                     */
-/* 804343D8 000C .bss       @525                                                         */
+/* 804343D8-804343D8 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 804343D8-804343E4 000C .bss       @525                                                         ZeroInitializedData */
 SECTION_BSS u8 JUTGamePad__LIT_525[12];
-/* 804343E4 000C .bss       mPadList__10JUTGamePad                                       */
+/* 804343E4-804343F0 000C .bss       mPadList__10JUTGamePad                                       ZeroInitializedData */
 SECTION_BSS u8 mPadList__10JUTGamePad[12];
-/* 804343F0 0030 .bss       mPadStatus__10JUTGamePad                                     */
+/* 804343F0-80434420 0030 .bss       mPadStatus__10JUTGamePad                                     ZeroInitializedData */
 SECTION_BSS u8 mPadStatus__10JUTGamePad[48];
-/* 80434420 00C0 .bss       mPadButton__10JUTGamePad                                     */
+/* 80434420-804344E0 00C0 .bss       mPadButton__10JUTGamePad                                     ZeroInitializedData */
 SECTION_BSS u8 mPadButton__10JUTGamePad[192];
-/* 804344E0 0040 .bss       mPadMStick__10JUTGamePad                                     */
+/* 804344E0-80434520 0040 .bss       mPadMStick__10JUTGamePad                                     ZeroInitializedData */
 SECTION_BSS u8 mPadMStick__10JUTGamePad[64];
-/* 80434520 0040 .bss       mPadSStick__10JUTGamePad                                     */
+/* 80434520-80434560 0040 .bss       mPadSStick__10JUTGamePad                                     ZeroInitializedData */
 SECTION_BSS u8 mPadSStick__10JUTGamePad[64];
-/* 80434560 000C .bss       @1373                                                        */
+/* 80434560-8043456C 000C .bss       @1373                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1373[12];
-/* 8043456C 000C .bss       sPatternList__19JUTGamePadLongPress                          */
+/* 8043456C-80434578 000C .bss       sPatternList__19JUTGamePadLongPress                          ZeroInitializedData */
 SECTION_BSS u8 sPatternList__19JUTGamePadLongPress[12];
 }
 
@@ -236,32 +353,33 @@ SECTION_BSS u8 sPatternList__19JUTGamePadLongPress[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804514D4 0004 .sbss      mPadAssign__10JUTGamePad                                     */
+/* 804514D0-804514D4 0004 .sbss      data_804514D0                                                ZeroInitializedData */
+SECTION_SBSS u8 data_804514D0[4];
+/* 804514D4-804514D8 0004 .sbss      mPadAssign__10JUTGamePad                                     ZeroInitializedData */
 SECTION_SBSS u8 mPadAssign__10JUTGamePad[4];
-/* 804514D8 0004 .sbss      sSuppressPadReset__10JUTGamePad                              */
+/* 804514D8-804514DC 0004 .sbss      sSuppressPadReset__10JUTGamePad                              ZeroInitializedData */
 SECTION_SBSS u8 sSuppressPadReset__10JUTGamePad[4];
-/* 804514DC 0004 .sbss      sAnalogMode__10JUTGamePad                                    */
+/* 804514DC-804514E0 0004 .sbss      sAnalogMode__10JUTGamePad                                    ZeroInitializedData */
 SECTION_SBSS u8 sAnalogMode__10JUTGamePad[4];
-/* 804514E0 0004 .sbss      sRumbleSupported__10JUTGamePad                               */
+/* 804514E0-804514E4 0004 .sbss      sRumbleSupported__10JUTGamePad                               ZeroInitializedData */
 SECTION_SBSS u8 sRumbleSupported__10JUTGamePad[4];
-/* 804514E4 0004 .sbss      mStatus__Q210JUTGamePad7CRumble                              */
+/* 804514E4-804514E8 0004 .sbss      mStatus__Q210JUTGamePad7CRumble                              ZeroInitializedData */
 SECTION_SBSS u8 mStatus__Q210JUTGamePad7CRumble[4];
-/* 804514E8 0004 .sbss      mEnabled__Q210JUTGamePad7CRumble                             */
+/* 804514E8-804514EC 0004 .sbss      mEnabled__Q210JUTGamePad7CRumble                             ZeroInitializedData */
 SECTION_SBSS u8 mEnabled__Q210JUTGamePad7CRumble[4];
-/* 804514EC 0004 .sbss      sCallback__Q210JUTGamePad13C3ButtonReset                     */
+/* 804514EC-804514F0 0004 .sbss      sCallback__Q210JUTGamePad13C3ButtonReset                     ZeroInitializedData */
 SECTION_SBSS u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-/* 804514F0 0004 .sbss      sCallbackArg__Q210JUTGamePad13C3ButtonReset                  */
-SECTION_SBSS u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS u8 pad_804514F4[4];
-/* 804514F8 0004 .sbss      sThreshold__Q210JUTGamePad13C3ButtonReset                    */
+/* 804514F0-804514F8 0004 .sbss      sCallbackArg__Q210JUTGamePad13C3ButtonReset                  ZeroInitializedData */
+SECTION_SBSS u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+/* 804514F8-804514FC 0004 .sbss      sThreshold__Q210JUTGamePad13C3ButtonReset                    ZeroInitializedData */
 SECTION_SBSS u8 sThreshold__Q210JUTGamePad13C3ButtonReset[4];
-/* 804514FC 0004 .sbss      data_804514FC                                                */
+/* 804514FC-80451500 0004 .sbss      data_804514FC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804514FC[4];
-/* 80451500 0004 .sbss      merged_80451500                                              */
+/* 80451500-80451504 0004 .sbss      merged_80451500                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80451500[4];
 /* 80451500 0001 data_80451500 */
 /* 80451501 0003 data_80451501 */
-/* 80451504 0004 .sbss      sResetOccurredPort__Q210JUTGamePad13C3ButtonReset            */
+/* 80451504-80451508 0004 .sbss      sResetOccurredPort__Q210JUTGamePad13C3ButtonReset            ZeroInitializedData */
 SECTION_SBSS u8 sResetOccurredPort__Q210JUTGamePad13C3ButtonReset[4];
 }
 
@@ -271,7 +389,7 @@ SECTION_SBSS u8 sResetOccurredPort__Q210JUTGamePad13C3ButtonReset[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E06DC 00D4 .text      __ct__10JUTGamePadFQ210JUTGamePad8EPadPort                   */
+/* 802E06DC-802E07B0 00D4 .text      __ct__10JUTGamePadFQ210JUTGamePad8EPadPort                   Function */
 // JUTGamePad::JUTGamePad(JUTGamePad::EPadPort)
 #pragma push
 #pragma optimization_level 0
@@ -282,7 +400,7 @@ asm void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort() {
 }
 #pragma pop
 
-/* 802E07B0 00AC .text      __dt__10JUTGamePadFv                                         */
+/* 802E07B0-802E085C 00AC .text      __dt__10JUTGamePadFv                                         Function */
 // JUTGamePad::~JUTGamePad(void)
 #pragma push
 #pragma optimization_level 0
@@ -293,7 +411,7 @@ asm void __dt__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E085C 003C .text      initList__10JUTGamePadFv                                     */
+/* 802E085C-802E0898 003C .text      initList__10JUTGamePadFv                                     Function */
 // JUTGamePad::initList(void)
 #pragma push
 #pragma optimization_level 0
@@ -304,7 +422,7 @@ asm void initList__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E0898 0038 .text      init__10JUTGamePadFv                                         */
+/* 802E0898-802E08D0 0038 .text      init__10JUTGamePadFv                                         Function */
 // JUTGamePad::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -315,7 +433,7 @@ asm void init__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E08D0 0014 .text      clear__10JUTGamePadFv                                        */
+/* 802E08D0-802E08E4 0014 .text      clear__10JUTGamePadFv                                        Function */
 // JUTGamePad::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -326,7 +444,7 @@ asm void clear__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E08E4 02D8 .text      read__10JUTGamePadFv                                         */
+/* 802E08E4-802E0BBC 02D8 .text      read__10JUTGamePadFv                                         Function */
 // JUTGamePad::read(void)
 #pragma push
 #pragma optimization_level 0
@@ -337,7 +455,7 @@ asm void read__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E0BBC 00B0 .text      assign__10JUTGamePadFv                                       */
+/* 802E0BBC-802E0C6C 00B0 .text      assign__10JUTGamePadFv                                       Function */
 // JUTGamePad::assign(void)
 #pragma push
 #pragma optimization_level 0
@@ -348,8 +466,8 @@ asm void assign__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E0C6C 006C .text      checkResetCallback__10JUTGamePadFx                           */
-// JUTGamePad::checkResetCallback(s64)
+/* 802E0C6C-802E0CD8 006C .text      checkResetCallback__10JUTGamePadFx                           Function */
+// JUTGamePad::checkResetCallback(long long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -359,7 +477,7 @@ asm void checkResetCallback__10JUTGamePadFx() {
 }
 #pragma pop
 
-/* 802E0CD8 02CC .text      update__10JUTGamePadFv                                       */
+/* 802E0CD8-802E0FA4 02CC .text      update__10JUTGamePadFv                                       Function */
 // JUTGamePad::update(void)
 #pragma push
 #pragma optimization_level 0
@@ -370,7 +488,7 @@ asm void update__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E0FA4 0080 .text      checkResetSwitch__10JUTGamePadFv                             */
+/* 802E0FA4-802E1024 0080 .text      checkResetSwitch__10JUTGamePadFv                             Function */
 // JUTGamePad::checkResetSwitch(void)
 #pragma push
 #pragma optimization_level 0
@@ -381,7 +499,7 @@ asm void checkResetSwitch__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E1024 002C .text      clearForReset__10JUTGamePadFv                                */
+/* 802E1024-802E1050 002C .text      clearForReset__10JUTGamePadFv                                Function */
 // JUTGamePad::clearForReset(void)
 #pragma push
 #pragma optimization_level 0
@@ -392,7 +510,7 @@ asm void clearForReset__10JUTGamePadFv() {
 }
 #pragma pop
 
-/* 802E1050 003C .text      clear__Q210JUTGamePad7CButtonFv                              */
+/* 802E1050-802E108C 003C .text      clear__Q210JUTGamePad7CButtonFv                              Function */
 // JUTGamePad::CButton::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -403,7 +521,7 @@ asm void clear__Q210JUTGamePad7CButtonFv() {
 }
 #pragma pop
 
-/* 802E108C 0190 .text      update__Q210JUTGamePad7CButtonFPC9PADStatusUl                */
+/* 802E108C-802E121C 0190 .text      update__Q210JUTGamePad7CButtonFPC9PADStatusUl                Function */
 // JUTGamePad::CButton::update(const PADStatus*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -414,7 +532,7 @@ asm void update__Q210JUTGamePad7CButtonFPC9PADStatusUl() {
 }
 #pragma pop
 
-/* 802E121C 001C .text      clear__Q210JUTGamePad6CStickFv                               */
+/* 802E121C-802E1238 001C .text      clear__Q210JUTGamePad6CStickFv                               Function */
 // JUTGamePad::CStick::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -425,7 +543,7 @@ asm void clear__Q210JUTGamePad6CStickFv() {
 }
 #pragma pop
 
-/* 802E1238 02C8 .text      update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl */
+/* 802E1238-802E1500 02C8 .text      update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl Function */
 // JUTGamePad::CStick::update(s8, s8, JUTGamePad::EStickMode, JUTGamePad::EWhichStick, u32)
 #pragma push
 #pragma optimization_level 0
@@ -436,7 +554,7 @@ asm void update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGame
 }
 #pragma pop
 
-/* 802E1500 00B4 .text      getButton__Q210JUTGamePad6CStickFUl                          */
+/* 802E1500-802E15B4 00B4 .text      getButton__Q210JUTGamePad6CStickFUl                          Function */
 // JUTGamePad::CStick::getButton(u32)
 #pragma push
 #pragma optimization_level 0
@@ -447,7 +565,7 @@ asm void getButton__Q210JUTGamePad6CStickFUl() {
 }
 #pragma pop
 
-/* 802E15B4 0024 .text      clear__Q210JUTGamePad7CRumbleFv                              */
+/* 802E15B4-802E15D8 0024 .text      clear__Q210JUTGamePad7CRumbleFv                              Function */
 // JUTGamePad::CRumble::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -458,7 +576,7 @@ asm void clear__Q210JUTGamePad7CRumbleFv() {
 }
 #pragma pop
 
-/* 802E15D8 005C .text      clear__Q210JUTGamePad7CRumbleFP10JUTGamePad                  */
+/* 802E15D8-802E1634 005C .text      clear__Q210JUTGamePad7CRumbleFP10JUTGamePad                  Function */
 // JUTGamePad::CRumble::clear(JUTGamePad*)
 #pragma push
 #pragma optimization_level 0
@@ -469,7 +587,7 @@ asm void clear__Q210JUTGamePad7CRumbleFP10JUTGamePad() {
 }
 #pragma pop
 
-/* 802E1634 0058 .text      startMotor__Q210JUTGamePad7CRumbleFi                         */
+/* 802E1634-802E168C 0058 .text      startMotor__Q210JUTGamePad7CRumbleFi                         Function */
 // JUTGamePad::CRumble::startMotor(int)
 #pragma push
 #pragma optimization_level 0
@@ -480,7 +598,7 @@ asm void startMotor__Q210JUTGamePad7CRumbleFi() {
 }
 #pragma pop
 
-/* 802E168C 006C .text      stopMotor__Q210JUTGamePad7CRumbleFib                         */
+/* 802E168C-802E16F8 006C .text      stopMotor__Q210JUTGamePad7CRumbleFib                         Function */
 // JUTGamePad::CRumble::stopMotor(int, bool)
 #pragma push
 #pragma optimization_level 0
@@ -491,7 +609,7 @@ asm void stopMotor__Q210JUTGamePad7CRumbleFib() {
 }
 #pragma pop
 
-/* 802E16F8 0028 .text      getNumBit__FPUci                                             */
+/* 802E16F8-802E1720 0028 .text      getNumBit__FPUci                                             Function */
 }
 
 #pragma push
@@ -504,8 +622,8 @@ asm void getNumBit(u8*, int) {
 #pragma pop
 
 extern "C" {
-/* 802E1720 0184 .text      update__Q210JUTGamePad7CRumbleFs                             */
-// JUTGamePad::CRumble::update(s16)
+/* 802E1720-802E18A4 0184 .text      update__Q210JUTGamePad7CRumbleFs                             Function */
+// JUTGamePad::CRumble::update(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -515,7 +633,7 @@ asm void update__Q210JUTGamePad7CRumbleFs() {
 }
 #pragma pop
 
-/* 802E18A4 0028 .text      triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl            */
+/* 802E18A4-802E18CC 0028 .text      triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl            Function */
 // JUTGamePad::CRumble::triggerPatternedRumble(u32)
 #pragma push
 #pragma optimization_level 0
@@ -526,7 +644,7 @@ asm void triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl() {
 }
 #pragma pop
 
-/* 802E18CC 007C .text      startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl */
+/* 802E18CC-802E1948 007C .text      startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl Function */
 // JUTGamePad::CRumble::startPatternedRumble(void*, JUTGamePad::CRumble::ERumble, u32)
 #pragma push
 #pragma optimization_level 0
@@ -537,8 +655,8 @@ asm void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7E
 }
 #pragma pop
 
-/* 802E1948 0030 .text      stopPatternedRumble__Q210JUTGamePad7CRumbleFs                */
-// JUTGamePad::CRumble::stopPatternedRumble(s16)
+/* 802E1948-802E1978 0030 .text      stopPatternedRumble__Q210JUTGamePad7CRumbleFs                Function */
+// JUTGamePad::CRumble::stopPatternedRumble(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,7 +666,7 @@ asm void stopPatternedRumble__Q210JUTGamePad7CRumbleFs() {
 }
 #pragma pop
 
-/* 802E1978 0024 .text      stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv     */
+/* 802E1978-802E199C 0024 .text      stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv     Function */
 // JUTGamePad::CRumble::stopPatternedRumbleAtThePeriod(void)
 #pragma push
 #pragma optimization_level 0
@@ -559,7 +677,7 @@ asm void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv() {
 }
 #pragma pop
 
-/* 802E199C 003C .text      getGamePad__10JUTGamePadFi                                   */
+/* 802E199C-802E19D8 003C .text      getGamePad__10JUTGamePadFi                                   Function */
 // JUTGamePad::getGamePad(int)
 #pragma push
 #pragma optimization_level 0
@@ -570,7 +688,7 @@ asm void getGamePad__10JUTGamePadFi() {
 }
 #pragma pop
 
-/* 802E19D8 00A4 .text      setEnabled__Q210JUTGamePad7CRumbleFUl                        */
+/* 802E19D8-802E1A7C 00A4 .text      setEnabled__Q210JUTGamePad7CRumbleFUl                        Function */
 // JUTGamePad::CRumble::setEnabled(u32)
 #pragma push
 #pragma optimization_level 0
@@ -581,7 +699,7 @@ asm void setEnabled__Q210JUTGamePad7CRumbleFUl() {
 }
 #pragma pop
 
-/* 802E1A7C 001C .text      setRepeat__Q210JUTGamePad7CButtonFUlUlUl                     */
+/* 802E1A7C-802E1A98 001C .text      setRepeat__Q210JUTGamePad7CButtonFUlUlUl                     Function */
 // JUTGamePad::CButton::setRepeat(u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -592,7 +710,7 @@ asm void setRepeat__Q210JUTGamePad7CButtonFUlUlUl() {
 }
 #pragma pop
 
-/* 802E1A98 0064 .text      recalibrate__10JUTGamePadFUl                                 */
+/* 802E1A98-802E1AFC 0064 .text      recalibrate__10JUTGamePadFUl                                 Function */
 // JUTGamePad::recalibrate(u32)
 #pragma push
 #pragma optimization_level 0
@@ -603,7 +721,7 @@ asm void recalibrate__10JUTGamePadFUl() {
 }
 #pragma pop
 
-/* 802E1AFC 0064 .text      checkCallback__19JUTGamePadLongPressFiUl                     */
+/* 802E1AFC-802E1B60 0064 .text      checkCallback__19JUTGamePadLongPressFiUl                     Function */
 // JUTGamePadLongPress::checkCallback(int, u32)
 #pragma push
 #pragma optimization_level 0
@@ -614,7 +732,7 @@ asm void checkCallback__19JUTGamePadLongPressFiUl() {
 }
 #pragma pop
 
-/* 802E1B60 00F4 .text      __sinit_JUTGamePad_cpp                                       */
+/* 802E1B60-802E1C54 00F4 .text      __sinit_JUTGamePad_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -624,7 +742,7 @@ asm void __sinit_JUTGamePad_cpp() {
 }
 #pragma pop
 
-/* 802E1C54 0054 .text      __dt__30JSUList<19JUTGamePadLongPress>Fv                     */
+/* 802E1C54-802E1CA8 0054 .text      __dt__30JSUList<19JUTGamePadLongPress>Fv                     Function */
 // JSUList<19JUTGamePadLongPress>::~JSUList<19JUTGamePadLongPress>(void)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +753,7 @@ asm void func_802E1C54() {
 }
 #pragma pop
 
-/* 802E1CA8 0030 .text      __ct__Q210JUTGamePad6CStickFv                                */
+/* 802E1CA8-802E1CD8 0030 .text      __ct__Q210JUTGamePad6CStickFv                                Function */
 // JUTGamePad::CStick::JUTGamePad::CStick(void)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +764,7 @@ asm void __ct__Q210JUTGamePad6CStickFv() {
 }
 #pragma pop
 
-/* 802E1CD8 0030 .text      __ct__Q210JUTGamePad7CButtonFv                               */
+/* 802E1CD8-802E1D08 0030 .text      __ct__Q210JUTGamePad7CButtonFv                               Function */
 // JUTGamePad::CButton::JUTGamePad::CButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +775,7 @@ asm void __ct__Q210JUTGamePad7CButtonFv() {
 }
 #pragma pop
 
-/* 802E1D08 0054 .text      __dt__21JSUList<10JUTGamePad>Fv                              */
+/* 802E1D08-802E1D5C 0054 .text      __dt__21JSUList<10JUTGamePad>Fv                              Function */
 // JSUList<10JUTGamePad>::~JSUList<10JUTGamePad>(void)
 #pragma push
 #pragma optimization_level 0

@@ -18,52 +18,103 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__17JASGenericMemPoolFv();
+/* Function             */
 extern void newMemPool__17JASGenericMemPoolFUli();
+/* Function             */
 extern void start__8JASProbeFlPCc();
+/* Function             */
 extern void stop__8JASProbeFl();
+/* Function             */
 extern void func_802978DC();
+/* Function             */
 extern void initAI__9JASDriverFPFv_v();
+/* Function             */
 extern void startDMA__9JASDriverFv();
+/* Function             */
 extern void stopDMA__9JASDriverFv();
+/* Function             */
 extern void updateDac__9JASDriverFv();
+/* Function             */
 extern void updateDSP__9JASDriverFv();
+/* Function             */
 extern void finishDSPFrame__9JASDriverFv();
+/* Function             */
 extern void __ct__14JASAudioThreadFiiUl();
+/* Function             */
+extern void create__14JASAudioThreadFl();
+/* Function             */
+extern void stop__14JASAudioThreadFv();
+/* Function             */
 extern void run__14JASAudioThreadFv();
+/* Function             */
 extern void DMACallback__14JASAudioThreadFv();
+/* Function             */
 extern void DSPCallback__14JASAudioThreadFPv();
+/* Function             */
 extern void __dt__14JASAudioThreadFv();
+/* Function             */
 extern void initAll__13JASDSPChannelFv();
+/* Function             */
 extern void boot__6JASDspFPFPv_v();
+/* Function             */
 extern void finishWork__6JASDspFUs();
+/* Function             */
 extern void initBuffer__6JASDspFv();
+/* Function             */
 extern void updateDacCallback__9JASDriverFv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__9JKRThreadFP7JKRHeapUlii();
+/* Function             */
 extern void __dt__9JKRThreadFv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void OSReceiveMessage();
+/* Function             */
 extern void OSJamMessage();
+/* Function             */
 extern void OSInitThreadQueue();
+/* Function             */
 extern void OSExitThread();
+/* Function             */
 extern void OSResumeThread();
+/* Function             */
 extern void OSSleepThread();
+/* Function             */
 extern void DSPCheckMailFromDSP();
+/* Function             */
 extern void DSPReadMailFromDSP();
+/* Function             */
 extern void __register_global_object();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JASAudioThread__stringBase0[40];
-SECTION_DATA extern const void* __vt__14JASAudioThread[4];
-SECTION_BSS extern u8 data_80431B34[20];
-SECTION_BSS extern u8 LIT_205[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JASAudioThread[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_80431B34[16 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_205[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B8C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JASDram[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451260[8];
-SECTION_SBSS extern u8 snIntCount__14JASAudioThread[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 }
 
@@ -73,9 +124,15 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039B338 0013 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039B338 = "SFR_DSP";
-const char* const stringBase_8039B340 = "UPDATE-DAC";
+/* 8039B338-8039B360 0013 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039B338 = "SFR_DSP";
+SECTION_DEAD const char* const stringBase_8039B340 = "UPDATE-DAC";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039B34B = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -84,8 +141,8 @@ const char* const stringBase_8039B340 = "UPDATE-DAC";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C78E0 0010 .data      __vt__14JASAudioThread                                       */
-SECTION_DATA const  void* __vt__14JASAudioThread[4] = {
+/* 803C78E0-803C78F0 0010 .data      __vt__14JASAudioThread                                       VTableData */
+SECTION_DATA void* __vt__14JASAudioThread[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JASAudioThreadFv,
@@ -99,8 +156,8 @@ SECTION_DATA const  void* __vt__14JASAudioThread[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431C68 000C .bss       @205                                                         */
-SECTION_BSS u8 LIT_205[16];
+/* 80431C68-80431C78 000C .bss       @205                                                         ZeroInitializedData */
+SECTION_BSS u8 LIT_205[12 + 4 /* padding */];
 }
 
 
@@ -109,9 +166,8 @@ SECTION_BSS u8 LIT_205[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804512D8 0004 .sbss      snIntCount__14JASAudioThread                                 */
-SECTION_SBSS u8 snIntCount__14JASAudioThread[4];
-SECTION_SBSS u8 pad_804512DC[4];
+/* 804512D8-804512E0 0004 .sbss      snIntCount__14JASAudioThread                                 ZeroInitializedData */
+SECTION_SBSS u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 }
 
 
@@ -120,7 +176,7 @@ SECTION_SBSS u8 pad_804512DC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029CCDC 0070 .text      __ct__14JASAudioThreadFiiUl                                  */
+/* 8029CCDC-8029CD4C 0070 .text      __ct__14JASAudioThreadFiiUl                                  Function */
 // JASAudioThread::JASAudioThread(int, int, u32)
 #pragma push
 #pragma optimization_level 0
@@ -131,8 +187,8 @@ asm void __ct__14JASAudioThreadFiiUl() {
 }
 #pragma pop
 
-/* 8029CD4C 0074 .text      create__14JASAudioThreadFl                                   */
-// JASAudioThread::create(s32)
+/* 8029CD4C-8029CDC0 0074 .text      create__14JASAudioThreadFl                                   Function */
+// JASAudioThread::create(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +198,7 @@ asm void create__14JASAudioThreadFl() {
 }
 #pragma pop
 
-/* 8029CDC0 002C .text      stop__14JASAudioThreadFv                                     */
+/* 8029CDC0-8029CDEC 002C .text      stop__14JASAudioThreadFv                                     Function */
 // JASAudioThread::stop(void)
 #pragma push
 #pragma optimization_level 0
@@ -153,7 +209,7 @@ asm void stop__14JASAudioThreadFv() {
 }
 #pragma pop
 
-/* 8029CDEC 017C .text      run__14JASAudioThreadFv                                      */
+/* 8029CDEC-8029CF68 017C .text      run__14JASAudioThreadFv                                      Function */
 // JASAudioThread::run(void)
 #pragma push
 #pragma optimization_level 0
@@ -164,7 +220,7 @@ asm void run__14JASAudioThreadFv() {
 }
 #pragma pop
 
-/* 8029CF68 0054 .text      DMACallback__14JASAudioThreadFv                              */
+/* 8029CF68-8029CFBC 0054 .text      DMACallback__14JASAudioThreadFv                              Function */
 // JASAudioThread::DMACallback(void)
 #pragma push
 #pragma optimization_level 0
@@ -175,7 +231,7 @@ asm void DMACallback__14JASAudioThreadFv() {
 }
 #pragma pop
 
-/* 8029CFBC 006C .text      DSPCallback__14JASAudioThreadFPv                             */
+/* 8029CFBC-8029D028 006C .text      DSPCallback__14JASAudioThreadFPv                             Function */
 // JASAudioThread::DSPCallback(void*)
 #pragma push
 #pragma optimization_level 0
@@ -186,7 +242,7 @@ asm void DSPCallback__14JASAudioThreadFPv() {
 }
 #pragma pop
 
-/* 8029D028 008C .text      __dt__14JASAudioThreadFv                                     */
+/* 8029D028-8029D0B4 008C .text      __dt__14JASAudioThreadFv                                     Function */
 // JASAudioThread::~JASAudioThread(void)
 #pragma push
 #pragma optimization_level 0

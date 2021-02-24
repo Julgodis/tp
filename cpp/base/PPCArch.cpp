@@ -9,8 +9,50 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void PPCMfmsr();
+/* Function             */
+extern void PPCMtmsr();
+/* Function             */
 extern void PPCMfhid0();
+/* Function             */
 extern void PPCMthid0();
+/* Function             */
+extern void PPCMfl2cr();
+/* Function             */
+extern void PPCMtl2cr();
+/* Function             */
+extern void PPCMtdec();
+/* Function             */
+extern void PPCSync();
+/* Function             */
+extern void PPCHalt();
+/* Function             */
+extern void PPCMtmmcr0();
+/* Function             */
+extern void PPCMtmmcr1();
+/* Function             */
+extern void PPCMtpmc1();
+/* Function             */
+extern void PPCMtpmc2();
+/* Function             */
+extern void PPCMtpmc3();
+/* Function             */
+extern void PPCMtpmc4();
+/* Function             */
+extern void PPCMffpscr();
+/* Function             */
+extern void PPCMtfpscr();
+/* Function             */
+extern void PPCMfhid2();
+/* Function             */
+extern void PPCMthid2();
+/* Function             */
+extern void PPCMtwpar();
+/* Function             */
+extern void PPCDisableSpeculation();
+/* Function             */
+extern void PPCSetFpNonIEEEMode();
 }
 
 
@@ -19,7 +61,7 @@ extern void PPCMthid0();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80339CC0 0008 .text      PPCMfmsr                                                     */
+/* 80339CC0-80339CC8 0008 .text      PPCMfmsr                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29,7 +71,7 @@ asm void PPCMfmsr() {
 }
 #pragma pop
 
-/* 80339CC8 0008 .text      PPCMtmsr                                                     */
+/* 80339CC8-80339CD0 0008 .text      PPCMtmsr                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +81,7 @@ asm void PPCMtmsr() {
 }
 #pragma pop
 
-/* 80339CD0 0008 .text      PPCMfhid0                                                    */
+/* 80339CD0-80339CD8 0008 .text      PPCMfhid0                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +91,7 @@ asm void PPCMfhid0() {
 }
 #pragma pop
 
-/* 80339CD8 0008 .text      PPCMthid0                                                    */
+/* 80339CD8-80339CE0 0008 .text      PPCMthid0                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -59,7 +101,7 @@ asm void PPCMthid0() {
 }
 #pragma pop
 
-/* 80339CE0 0008 .text      PPCMfl2cr                                                    */
+/* 80339CE0-80339CE8 0008 .text      PPCMfl2cr                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +111,7 @@ asm void PPCMfl2cr() {
 }
 #pragma pop
 
-/* 80339CE8 0008 .text      PPCMtl2cr                                                    */
+/* 80339CE8-80339CF0 0008 .text      PPCMtl2cr                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +121,7 @@ asm void PPCMtl2cr() {
 }
 #pragma pop
 
-/* 80339CF0 0008 .text      PPCMtdec                                                     */
+/* 80339CF0-80339CF8 0008 .text      PPCMtdec                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +131,7 @@ asm void PPCMtdec() {
 }
 #pragma pop
 
-/* 80339CF8 0008 .text      PPCSync                                                      */
+/* 80339CF8-80339D00 0008 .text      PPCSync                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +141,7 @@ asm void PPCSync() {
 }
 #pragma pop
 
-/* 80339D00 0014 .text      PPCHalt                                                      */
+/* 80339D00-80339D14 0014 .text      PPCHalt                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +151,7 @@ asm void PPCHalt() {
 }
 #pragma pop
 
-/* 80339D14 0008 .text      PPCMtmmcr0                                                   */
+/* 80339D14-80339D1C 0008 .text      PPCMtmmcr0                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +161,7 @@ asm void PPCMtmmcr0() {
 }
 #pragma pop
 
-/* 80339D1C 0008 .text      PPCMtmmcr1                                                   */
+/* 80339D1C-80339D24 0008 .text      PPCMtmmcr1                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +171,7 @@ asm void PPCMtmmcr1() {
 }
 #pragma pop
 
-/* 80339D24 0008 .text      PPCMtpmc1                                                    */
+/* 80339D24-80339D2C 0008 .text      PPCMtpmc1                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +181,7 @@ asm void PPCMtpmc1() {
 }
 #pragma pop
 
-/* 80339D2C 0008 .text      PPCMtpmc2                                                    */
+/* 80339D2C-80339D34 0008 .text      PPCMtpmc2                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +191,7 @@ asm void PPCMtpmc2() {
 }
 #pragma pop
 
-/* 80339D34 0008 .text      PPCMtpmc3                                                    */
+/* 80339D34-80339D3C 0008 .text      PPCMtpmc3                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +201,7 @@ asm void PPCMtpmc3() {
 }
 #pragma pop
 
-/* 80339D3C 0008 .text      PPCMtpmc4                                                    */
+/* 80339D3C-80339D44 0008 .text      PPCMtpmc4                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +211,7 @@ asm void PPCMtpmc4() {
 }
 #pragma pop
 
-/* 80339D44 0020 .text      PPCMffpscr                                                   */
+/* 80339D44-80339D64 0020 .text      PPCMffpscr                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +221,7 @@ asm void PPCMffpscr() {
 }
 #pragma pop
 
-/* 80339D64 0028 .text      PPCMtfpscr                                                   */
+/* 80339D64-80339D8C 0028 .text      PPCMtfpscr                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +231,7 @@ asm void PPCMtfpscr() {
 }
 #pragma pop
 
-/* 80339D8C 0008 .text      PPCMfhid2                                                    */
+/* 80339D8C-80339D94 0008 .text      PPCMfhid2                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +241,7 @@ asm void PPCMfhid2() {
 }
 #pragma pop
 
-/* 80339D94 0008 .text      PPCMthid2                                                    */
+/* 80339D94-80339D9C 0008 .text      PPCMthid2                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +251,7 @@ asm void PPCMthid2() {
 }
 #pragma pop
 
-/* 80339D9C 0008 .text      PPCMtwpar                                                    */
+/* 80339D9C-80339DA4 0008 .text      PPCMtwpar                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +261,7 @@ asm void PPCMtwpar() {
 }
 #pragma pop
 
-/* 80339DA4 0028 .text      PPCDisableSpeculation                                        */
+/* 80339DA4-80339DCC 0028 .text      PPCDisableSpeculation                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +271,7 @@ asm void PPCDisableSpeculation() {
 }
 #pragma pop
 
-/* 80339DCC 0008 .text      PPCSetFpNonIEEEMode                                          */
+/* 80339DCC-80339DD4 0008 .text      PPCSetFpNonIEEEMode                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

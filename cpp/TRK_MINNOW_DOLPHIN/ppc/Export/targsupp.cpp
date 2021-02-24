@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void TRKAccessFile();
+/* Function             */
+extern void TRKOpenFile();
+/* Function             */
+extern void TRKCloseFile();
+/* Function             */
+extern void TRKPositionFile();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803711D0 0008 .text      TRKAccessFile                                                */
+/* 803711D0-803711D8 0008 .text      TRKAccessFile                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25,7 +36,7 @@ asm void TRKAccessFile() {
 }
 #pragma pop
 
-/* 803711D8 0008 .text      TRKOpenFile                                                  */
+/* 803711D8-803711E0 0008 .text      TRKOpenFile                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35,7 +46,7 @@ asm void TRKOpenFile() {
 }
 #pragma pop
 
-/* 803711E0 0008 .text      TRKCloseFile                                                 */
+/* 803711E0-803711E8 0008 .text      TRKCloseFile                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +56,7 @@ asm void TRKCloseFile() {
 }
 #pragma pop
 
-/* 803711E8 0008 .text      TRKPositionFile                                              */
+/* 803711E8-803711F0 0008 .text      TRKPositionFile                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

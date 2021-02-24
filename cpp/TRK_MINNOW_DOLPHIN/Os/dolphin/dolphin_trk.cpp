@@ -9,22 +9,54 @@
 // 
 
 extern "C" {
-extern void TRK_memcpy();
-SECTION_INIT extern const u8 __metrowerks_RTK_logo[44];
+/* Function             */
+SECTION_INIT extern void TRK_memcpy();
+/* InitializedData      */
+SECTION_INIT extern const u8 __TRK_unknown_data[7988];
+/* Function             */
 extern void ARGetDMAStatus();
+/* Function             */
 extern void ARStartDMA();
+/* Function             */
 extern void __ARClearInterrupt();
+/* Function             */
 extern void __ARGetInterruptStatus();
+/* Function             */
 extern void TRK_flush_cache();
+/* Function             */
 extern void __TRK_get_MSR();
+/* Function             */
 extern void TRKSaveExtended1Block();
+/* Function             */
+extern void InitMetroTRK();
+/* Function             */
+extern void InitMetroTRK_BBA();
+/* Function             */
+extern void TRK__write_aram();
+/* Function             */
+extern void TRK__read_aram();
+/* Function             */
+extern void TRKInitializeTarget();
+/* Function             */
+extern void __TRK_copy_vectors();
+/* Function             */
+extern void TRKTargetTranslate();
+/* Function             */
+extern void EnableMetroTRKInterrupts();
+/* Function             */
 extern void TRK_main();
+/* Function             */
 extern void EnableEXI2Interrupts();
+/* Function             */
 extern void InitMetroTRKCommTable();
+/* InitializedData      */
 SECTION_DATA extern u8 TRK_ISR_OFFSETS[64];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 gTRKState[164];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 gTRKCPUState[1072];
-SECTION_BSS extern u8 lc_base[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 lc_base[4 + 4 /* padding */];
 }
 
 
@@ -33,7 +65,7 @@ SECTION_BSS extern u8 lc_base[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D3268 003C .data      TRK_ISR_OFFSETS                                              */
+/* 803D3268-803D32A8 003C .data      TRK_ISR_OFFSETS                                              InitializedData */
 SECTION_DATA u8 TRK_ISR_OFFSETS[64] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00, 0x00, 0x04, 0x00,
 	0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x08, 0x00,
@@ -50,9 +82,8 @@ SECTION_DATA u8 TRK_ISR_OFFSETS[64] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044F810 0004 .bss       lc_base                                                      */
-SECTION_BSS u8 lc_base[4];
-SECTION_BSS u8 pad_8044F814[4];
+/* 8044F810-8044F818 0004 .bss       lc_base                                                      ZeroInitializedData */
+SECTION_BSS u8 lc_base[4 + 4 /* padding */];
 }
 
 
@@ -61,7 +92,7 @@ SECTION_BSS u8 pad_8044F814[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80371560 0098 .text      InitMetroTRK                                                 */
+/* 80371560-803715F8 0098 .text      InitMetroTRK                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +102,7 @@ asm void InitMetroTRK() {
 }
 #pragma pop
 
-/* 803715F8 0094 .text      InitMetroTRK_BBA                                             */
+/* 803715F8-8037168C 0094 .text      InitMetroTRK_BBA                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +112,7 @@ asm void InitMetroTRK_BBA() {
 }
 #pragma pop
 
-/* 8037168C 01EC .text      TRK__write_aram                                              */
+/* 8037168C-80371878 01EC .text      TRK__write_aram                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +122,7 @@ asm void TRK__write_aram() {
 }
 #pragma pop
 
-/* 80371878 0134 .text      TRK__read_aram                                               */
+/* 80371878-803719AC 0134 .text      TRK__read_aram                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +132,7 @@ asm void TRK__read_aram() {
 }
 #pragma pop
 
-/* 803719AC 004C .text      TRKInitializeTarget                                          */
+/* 803719AC-803719F8 004C .text      TRKInitializeTarget                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +142,7 @@ asm void TRKInitializeTarget() {
 }
 #pragma pop
 
-/* 803719F8 012C .text      __TRK_copy_vectors                                           */
+/* 803719F8-80371B24 012C .text      __TRK_copy_vectors                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +152,7 @@ asm void __TRK_copy_vectors() {
 }
 #pragma pop
 
-/* 80371B24 0058 .text      TRKTargetTranslate                                           */
+/* 80371B24-80371B7C 0058 .text      TRKTargetTranslate                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +162,7 @@ asm void TRKTargetTranslate() {
 }
 #pragma pop
 
-/* 80371B7C 0020 .text      EnableMetroTRKInterrupts                                     */
+/* 80371B7C-80371B9C 0020 .text      EnableMetroTRKInterrupts                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

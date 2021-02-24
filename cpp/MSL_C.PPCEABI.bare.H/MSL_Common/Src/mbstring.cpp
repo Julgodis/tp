@@ -9,7 +9,11 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void wcstombs();
+/* Function             */
 extern void strncpy();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 MSL_Common_Src_mbstring__LIT_74[8];
 }
 
@@ -19,7 +23,7 @@ SECTION_SDATA2 extern u8 MSL_Common_Src_mbstring__LIT_74[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456668 0004 .sdata2    @74                                                          */
+/* 80456668-80456670 0004 .sdata2    @74                                                          InitializedData */
 SECTION_SDATA2 u8 MSL_Common_Src_mbstring__LIT_74[8] = {
 	0x00, 0x00, 0xC0, 0xE0,
 	/* padding */
@@ -33,7 +37,7 @@ SECTION_SDATA2 u8 MSL_Common_Src_mbstring__LIT_74[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80365F74 0118 .text      wcstombs                                                     */
+/* 80365F74-8036608C 0118 .text      wcstombs                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

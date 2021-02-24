@@ -22,8 +22,9 @@ GF_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libgf.a: dirs $(GF_A_O_FILES)
+$(BUILD_DIR)/libgf.a: $(GF_A_O_FILES)
 	$(LD) -xm l $(GF_A_LDFLAGS) -o $(BUILD_DIR)/libgf.a $(GF_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgf.a
 
 $(BUILD_DIR)/libs/gf/%.o: cpp/gf/%.cpp
 	mkdir -p $(@D)

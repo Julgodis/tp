@@ -19,26 +19,57 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__15dKantera_icon_cFv();
+/* Function             */
 extern void __dt__15dKantera_icon_cFv();
+/* Function             */
 extern void initiate__15dKantera_icon_cFv();
+/* Function             */
+extern void setAlphaRate__15dKantera_icon_cFf();
+/* Function             */
+extern void setPos__15dKantera_icon_cFff();
+/* Function             */
+extern void setScale__15dKantera_icon_cFff();
+/* Function             */
+extern void setNowGauge__15dKantera_icon_cFUsUs();
+/* Function             */
 extern void draw__19dDlst_KanteraIcon_cFv();
+/* Function             */
 extern void __dt__19dDlst_KanteraIcon_cFv();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_kantera_icon_meter__stringBase0[32];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern const void* __vt__19dDlst_KanteraIcon_c[4];
-SECTION_DATA extern const void* __vt__15dKantera_icon_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dDlst_KanteraIcon_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dKantera_icon_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__LIT_3759[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kantera_icon_meter__LIT_3761;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__LIT_3776[8];
 }
 
@@ -48,8 +79,14 @@ SECTION_SDATA2 extern u8 d_d_kantera_icon_meter__LIT_3776[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80394F50 001D .rodata    @stringBase0                                                 */
-const char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
+/* 80394F50-80394F70 001D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80394F6D = "\0\0";
+#pragma pop
 }
 
 
@@ -58,15 +95,15 @@ const char* const stringBase_80394F50 = "zelda_kantera_icon_mater.blo";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BC218 0010 .data      __vt__19dDlst_KanteraIcon_c                                  */
-SECTION_DATA const  void* __vt__19dDlst_KanteraIcon_c[4] = {
+/* 803BC218-803BC228 0010 .data      __vt__19dDlst_KanteraIcon_c                                  VTableData */
+SECTION_DATA void* __vt__19dDlst_KanteraIcon_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__19dDlst_KanteraIcon_cFv,
 	(void*)__dt__19dDlst_KanteraIcon_cFv,
 };
-/* 803BC228 000C .data      __vt__15dKantera_icon_c                                      */
-SECTION_DATA const  void* __vt__15dKantera_icon_c[4] = {
+/* 803BC228-803BC238 000C .data      __vt__15dKantera_icon_c                                      VTableData */
+SECTION_DATA void* __vt__15dKantera_icon_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dKantera_icon_cFv,
@@ -81,16 +118,16 @@ SECTION_DATA const  void* __vt__15dKantera_icon_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453EF8 0004 .sdata2    @3759                                                        */
+/* 80453EF8-80453F00 0004 .sdata2    @3759                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kantera_icon_meter__LIT_3759[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453F00 0008 .sdata2    @3761                                                        */
+/* 80453F00-80453F08 0008 .sdata2    @3761                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_kantera_icon_meter__LIT_3761 = 4503599627370496.000000;
-/* 80453F08 0004 .sdata2    @3776                                                        */
+/* 80453F08-80453F10 0004 .sdata2    @3776                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kantera_icon_meter__LIT_3776[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -104,7 +141,7 @@ SECTION_SDATA2 u8 d_d_kantera_icon_meter__LIT_3776[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 801AE938 003C .text      __ct__15dKantera_icon_cFv                                    */
+/* 801AE938-801AE974 003C .text      __ct__15dKantera_icon_cFv                                    Function */
 // dKantera_icon_c::dKantera_icon_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -115,7 +152,7 @@ asm void __ct__15dKantera_icon_cFv() {
 }
 #pragma pop
 
-/* 801AE974 00F4 .text      __dt__15dKantera_icon_cFv                                    */
+/* 801AE974-801AEA68 00F4 .text      __dt__15dKantera_icon_cFv                                    Function */
 // dKantera_icon_c::~dKantera_icon_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -126,7 +163,7 @@ asm void __dt__15dKantera_icon_cFv() {
 }
 #pragma pop
 
-/* 801AEA68 0114 .text      initiate__15dKantera_icon_cFv                                */
+/* 801AEA68-801AEB7C 0114 .text      initiate__15dKantera_icon_cFv                                Function */
 // dKantera_icon_c::initiate(void)
 #pragma push
 #pragma optimization_level 0
@@ -137,7 +174,7 @@ asm void initiate__15dKantera_icon_cFv() {
 }
 #pragma pop
 
-/* 801AEB7C 0024 .text      setAlphaRate__15dKantera_icon_cFf                            */
+/* 801AEB7C-801AEBA0 0024 .text      setAlphaRate__15dKantera_icon_cFf                            Function */
 // dKantera_icon_c::setAlphaRate(f32)
 #pragma push
 #pragma optimization_level 0
@@ -148,7 +185,7 @@ asm void setAlphaRate__15dKantera_icon_cFf() {
 }
 #pragma pop
 
-/* 801AEBA0 0054 .text      setPos__15dKantera_icon_cFff                                 */
+/* 801AEBA0-801AEBF4 0054 .text      setPos__15dKantera_icon_cFff                                 Function */
 // dKantera_icon_c::setPos(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -159,7 +196,7 @@ asm void setPos__15dKantera_icon_cFff() {
 }
 #pragma pop
 
-/* 801AEBF4 0050 .text      setScale__15dKantera_icon_cFff                               */
+/* 801AEBF4-801AEC44 0050 .text      setScale__15dKantera_icon_cFff                               Function */
 // dKantera_icon_c::setScale(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -170,7 +207,7 @@ asm void setScale__15dKantera_icon_cFff() {
 }
 #pragma pop
 
-/* 801AEC44 0074 .text      setNowGauge__15dKantera_icon_cFUsUs                          */
+/* 801AEC44-801AECB8 0074 .text      setNowGauge__15dKantera_icon_cFUsUs                          Function */
 // dKantera_icon_c::setNowGauge(u16, u16)
 #pragma push
 #pragma optimization_level 0
@@ -181,7 +218,7 @@ asm void setNowGauge__15dKantera_icon_cFUsUs() {
 }
 #pragma pop
 
-/* 801AECB8 0064 .text      draw__19dDlst_KanteraIcon_cFv                                */
+/* 801AECB8-801AED1C 0064 .text      draw__19dDlst_KanteraIcon_cFv                                Function */
 // dDlst_KanteraIcon_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -192,7 +229,7 @@ asm void draw__19dDlst_KanteraIcon_cFv() {
 }
 #pragma pop
 
-/* 801AED1C 0048 .text      __dt__19dDlst_KanteraIcon_cFv                                */
+/* 801AED1C-801AED64 0048 .text      __dt__19dDlst_KanteraIcon_cFv                                Function */
 // dDlst_KanteraIcon_c::~dDlst_KanteraIcon_c(void)
 #pragma push
 #pragma optimization_level 0

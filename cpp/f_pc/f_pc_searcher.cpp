@@ -8,13 +8,23 @@
 // Additional Symbols:
 // 
 
+extern void fpcSch_JudgeForPName(void*, void*); /* fpcSch_JudgeForPName__FPvPv */
+extern void fpcSch_JudgeByID(void*, void*); /* fpcSch_JudgeByID__FPvPv */
+
+extern "C" {
+/* Function             */
+extern void fpcSch_JudgeForPName__FPvPv();
+/* Function             */
+extern void fpcSch_JudgeByID__FPvPv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023578 0018 .text      fpcSch_JudgeForPName__FPvPv                                  */
+/* 80023578-80023590 0018 .text      fpcSch_JudgeForPName__FPvPv                                  Function */
 }
 
 #pragma push
@@ -27,7 +37,7 @@ asm void fpcSch_JudgeForPName(void*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80023590 0018 .text      fpcSch_JudgeByID__FPvPv                                      */
+/* 80023590-800235A8 0018 .text      fpcSch_JudgeByID__FPvPv                                      Function */
 }
 
 #pragma push

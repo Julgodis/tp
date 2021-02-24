@@ -11,14 +11,22 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void getInstParam__12JASVoiceBankCFiiiP12JASInstParam();
+/* Function             */
 extern void __dt__12JASVoiceBankFv();
+/* Function             */
 extern void getType__12JASVoiceBankCFv();
+/* Function             */
 extern void __dl__FPv();
+/* InitializedData      */
 SECTION_RODATA extern const u8 sOscData__12JASVoiceBank[24];
-SECTION_DATA extern const void* __vt__7JASBank[5];
-SECTION_DATA extern const void* __vt__12JASVoiceBank[6];
-SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JASBank[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JASVoiceBank[6];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 }
 
 
@@ -27,7 +35,7 @@ SECTION_SBSS extern u8 sOscTable__12JASVoiceBank[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039B1B8 0018 .rodata    sOscData__12JASVoiceBank                                     */
+/* 8039B1B8-8039B1D0 0018 .rodata    sOscData__12JASVoiceBank                                     InitializedData */
 SECTION_RODATA const u8 sOscData__12JASVoiceBank[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -40,8 +48,8 @@ SECTION_RODATA const u8 sOscData__12JASVoiceBank[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C76D0 0014 .data      __vt__12JASVoiceBank                                         */
-SECTION_DATA const  void* __vt__12JASVoiceBank[6] = {
+/* 803C76D0-803C76E8 0014 .data      __vt__12JASVoiceBank                                         VTableData */
+SECTION_DATA void* __vt__12JASVoiceBank[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JASVoiceBankFv,
@@ -58,9 +66,8 @@ SECTION_DATA const  void* __vt__12JASVoiceBank[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451268 0004 .sbss      sOscTable__12JASVoiceBank                                    */
-SECTION_SBSS u8 sOscTable__12JASVoiceBank[4];
-SECTION_SBSS u8 pad_8045126C[4];
+/* 80451268-80451270 0004 .sbss      sOscTable__12JASVoiceBank                                    ZeroInitializedData */
+SECTION_SBSS u8 sOscTable__12JASVoiceBank[4 + 4 /* padding */];
 }
 
 
@@ -69,7 +76,7 @@ SECTION_SBSS u8 pad_8045126C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80297F74 0038 .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             */
+/* 80297F74-80297FAC 0038 .text      getInstParam__12JASVoiceBankCFiiiP12JASInstParam             Function */
 // JASVoiceBank::getInstParam(int, int, int, JASInstParam*) const
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +87,7 @@ asm void getInstParam__12JASVoiceBankCFiiiP12JASInstParam() {
 }
 #pragma pop
 
-/* 80297FAC 005C .text      __dt__12JASVoiceBankFv                                       */
+/* 80297FAC-80298008 005C .text      __dt__12JASVoiceBankFv                                       Function */
 // JASVoiceBank::~JASVoiceBank(void)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +98,7 @@ asm void __dt__12JASVoiceBankFv() {
 }
 #pragma pop
 
-/* 80298008 000C .text      getType__12JASVoiceBankCFv                                   */
+/* 80298008-80298014 000C .text      getType__12JASVoiceBankCFv                                   Function */
 // JASVoiceBank::getType(void) const
 #pragma push
 #pragma optimization_level 0

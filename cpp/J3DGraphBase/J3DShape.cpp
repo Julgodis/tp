@@ -14,54 +14,115 @@ extern void J3DFifoLoadNrmMtxImm(f32 (*)[4], u32); /* J3DFifoLoadNrmMtxImm__FPA4
 extern void J3DLoadCPCmd(u8, u32); /* J3DLoadCPCmd__FUcUl */
 
 extern "C" {
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb();
+/* Function             */
 extern void J3DFifoLoadPosMtxImm__FPA4_fUl();
+/* Function             */
 extern void J3DFifoLoadNrmMtxImm__FPA4_fUl();
+/* Function             */
 extern void resetMtxLoadCache__11J3DShapeMtxFv();
+/* Function             */
 extern void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
+/* Function             */
 extern void draw__12J3DShapeDrawCFv();
+/* Function             */
+extern void initialize__8J3DShapeFv();
+/* Function             */
+extern void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
+/* Function             */
+extern void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
+/* Function             */
+extern void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
+/* Function             */
+extern void countBumpMtxNum__8J3DShapeCFv();
+/* Function             */
 extern void J3DLoadCPCmd__FUcUl();
+/* Function             */
 extern void J3DLoadArrayBasePtr__F7_GXAttrPv();
+/* Function             */
 extern void loadVtxArray__8J3DShapeCFv();
+/* Function             */
+extern void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
+/* Function             */
 extern void makeVtxArrayCmd__8J3DShapeFv();
+/* Function             */
 extern void makeVcdVatCmd__8J3DShapeFv();
+/* Function             */
 extern void loadPreDrawSetting__8J3DShapeCFv();
+/* Function             */
 extern void setArrayAndBindPipeline__8J3DShapeCFv();
+/* Function             */
 extern void drawFast__8J3DShapeCFv();
+/* Function             */
 extern void draw__8J3DShapeCFv();
+/* Function             */
 extern void simpleDraw__8J3DShapeCFv();
+/* Function             */
 extern void simpleDrawCache__8J3DShapeCFv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSDisableScheduler();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void GXSetArray();
+/* Function             */
 extern void GXCallDisplayList();
+/* Function             */
 extern void GDInitGDLObj();
+/* Function             */
 extern void GDFlushCurrToMem();
+/* Function             */
 extern void GDPadCurr32();
+/* Function             */
 extern void GDSetVtxDescv();
+/* Function             */
 extern void GDSetArray();
+/* Function             */
 extern void GDSetArrayRaw();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 J3DShape__LIT_697[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8J3DShape[6];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_SBSS extern u8 j3dDefaultViewNo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentPipeline__11J3DShapeMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentScaleFlag__11J3DShapeMtx[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_804515B0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexMtxLoadType__11J3DShapeMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804515C8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804515CC[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804515D4[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_687[8];
 }
 
@@ -71,7 +132,7 @@ SECTION_SDATA2 extern u8 LIT_687[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A1E98 0010 .rodata    @697                                                         */
+/* 803A1E98-803A1EA8 0010 .rodata    @697                                                         InitializedData */
 SECTION_RODATA const u8 J3DShape__LIT_697[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
@@ -83,8 +144,8 @@ SECTION_RODATA const u8 J3DShape__LIT_697[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CDC78 0018 .data      __vt__8J3DShape                                              */
-SECTION_DATA const  void* __vt__8J3DShape[6] = {
+/* 803CDC78-803CDC90 0018 .data      __vt__8J3DShape                                              VTableData */
+SECTION_DATA void* __vt__8J3DShape[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__8J3DShapeCFv,
@@ -100,7 +161,7 @@ SECTION_DATA const  void* __vt__8J3DShape[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804563A0 0004 .sdata2    @687                                                         */
+/* 804563A0-804563A8 0004 .sdata2    @687                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_687[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -114,13 +175,13 @@ SECTION_SDATA2 u8 LIT_687[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515C8 0004 .sbss      sInterruptFlag$903                                           */
+/* 804515C8-804515CC 0004 .sbss      sInterruptFlag$903                                           ZeroInitializedData */
 SECTION_SBSS u8 data_804515C8[4];
-/* 804515CC 0004 .sbss      data_804515CC                                                */
+/* 804515CC-804515D0 0004 .sbss      data_804515CC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804515CC[4];
-/* 804515D0 0004 .sbss      sOldVcdVatCmd__8J3DShape                                     */
+/* 804515D0-804515D4 0004 .sbss      sOldVcdVatCmd__8J3DShape                                     ZeroInitializedData */
 SECTION_SBSS u8 sOldVcdVatCmd__8J3DShape[4];
-/* 804515D4 0004 .sbss      data_804515D4                                                */
+/* 804515D4-804515D8 0004 .sbss      data_804515D4                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804515D4[4];
 }
 
@@ -130,7 +191,7 @@ SECTION_SBSS u8 data_804515D4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80314B48 0070 .text      initialize__8J3DShapeFv                                      */
+/* 80314B48-80314BB8 0070 .text      initialize__8J3DShapeFv                                      Function */
 // J3DShape::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +202,7 @@ asm void initialize__8J3DShapeFv() {
 }
 #pragma pop
 
-/* 80314BB8 0104 .text      addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl                     */
+/* 80314BB8-80314CBC 0104 .text      addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl                     Function */
 // J3DShape::addTexMtxIndexInDL(_GXAttr, u32)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +213,7 @@ asm void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl() {
 }
 #pragma pop
 
-/* 80314CBC 00EC .text      addTexMtxIndexInVcd__8J3DShapeF7_GXAttr                      */
+/* 80314CBC-80314DA8 00EC .text      addTexMtxIndexInVcd__8J3DShapeF7_GXAttr                      Function */
 // J3DShape::addTexMtxIndexInVcd(_GXAttr)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +224,7 @@ asm void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr() {
 }
 #pragma pop
 
-/* 80314DA8 0080 .text      calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f               */
+/* 80314DA8-80314E28 0080 .text      calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f               Function */
 // J3DShape::calcNBTScale(const Vec&, f32 (*)[3][3], f32 (*)[3][3])
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +235,7 @@ asm void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f() {
 }
 #pragma pop
 
-/* 80314E28 0070 .text      countBumpMtxNum__8J3DShapeCFv                                */
+/* 80314E28-80314E98 0070 .text      countBumpMtxNum__8J3DShapeCFv                                Function */
 // J3DShape::countBumpMtxNum(void) const
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +246,7 @@ asm void countBumpMtxNum__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 80314E98 0018 .text      J3DLoadCPCmd__FUcUl                                          */
+/* 80314E98-80314EB0 0018 .text      J3DLoadCPCmd__FUcUl                                          Function */
 }
 
 #pragma push
@@ -198,7 +259,7 @@ asm void J3DLoadCPCmd(u8, u32) {
 #pragma pop
 
 extern "C" {
-/* 80314EB0 003C .text      J3DLoadArrayBasePtr__F7_GXAttrPv                             */
+/* 80314EB0-80314EEC 003C .text      J3DLoadArrayBasePtr__F7_GXAttrPv                             Function */
 // J3DLoadArrayBasePtr(_GXAttr, void*)
 #pragma push
 #pragma optimization_level 0
@@ -209,7 +270,7 @@ asm void J3DLoadArrayBasePtr__F7_GXAttrPv() {
 }
 #pragma pop
 
-/* 80314EEC 0070 .text      loadVtxArray__8J3DShapeCFv                                   */
+/* 80314EEC-80314F5C 0070 .text      loadVtxArray__8J3DShapeCFv                                   Function */
 // J3DShape::loadVtxArray(void) const
 #pragma push
 #pragma optimization_level 0
@@ -220,7 +281,7 @@ asm void loadVtxArray__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 80314F5C 003C .text      isSameVcdVatCmd__8J3DShapeFP8J3DShape                        */
+/* 80314F5C-80314F98 003C .text      isSameVcdVatCmd__8J3DShapeFP8J3DShape                        Function */
 // J3DShape::isSameVcdVatCmd(J3DShape*)
 #pragma push
 #pragma optimization_level 0
@@ -231,7 +292,7 @@ asm void isSameVcdVatCmd__8J3DShapeFP8J3DShape() {
 }
 #pragma pop
 
-/* 80314F98 02C8 .text      makeVtxArrayCmd__8J3DShapeFv                                 */
+/* 80314F98-80315260 02C8 .text      makeVtxArrayCmd__8J3DShapeFv                                 Function */
 // J3DShape::makeVtxArrayCmd(void)
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +303,7 @@ asm void makeVtxArrayCmd__8J3DShapeFv() {
 }
 #pragma pop
 
-/* 80315260 00A0 .text      makeVcdVatCmd__8J3DShapeFv                                   */
+/* 80315260-80315300 00A0 .text      makeVcdVatCmd__8J3DShapeFv                                   Function */
 // J3DShape::makeVcdVatCmd(void)
 #pragma push
 #pragma optimization_level 0
@@ -253,7 +314,7 @@ asm void makeVcdVatCmd__8J3DShapeFv() {
 }
 #pragma pop
 
-/* 80315300 0098 .text      loadPreDrawSetting__8J3DShapeCFv                             */
+/* 80315300-80315398 0098 .text      loadPreDrawSetting__8J3DShapeCFv                             Function */
 // J3DShape::loadPreDrawSetting(void) const
 #pragma push
 #pragma optimization_level 0
@@ -264,7 +325,7 @@ asm void loadPreDrawSetting__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 80315398 00B4 .text      setArrayAndBindPipeline__8J3DShapeCFv                        */
+/* 80315398-8031544C 00B4 .text      setArrayAndBindPipeline__8J3DShapeCFv                        Function */
 // J3DShape::setArrayAndBindPipeline(void) const
 #pragma push
 #pragma optimization_level 0
@@ -275,7 +336,7 @@ asm void setArrayAndBindPipeline__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 8031544C 0194 .text      drawFast__8J3DShapeCFv                                       */
+/* 8031544C-803155E0 0194 .text      drawFast__8J3DShapeCFv                                       Function */
 // J3DShape::drawFast(void) const
 #pragma push
 #pragma optimization_level 0
@@ -286,7 +347,7 @@ asm void drawFast__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 803155E0 0048 .text      draw__8J3DShapeCFv                                           */
+/* 803155E0-80315628 0048 .text      draw__8J3DShapeCFv                                           Function */
 // J3DShape::draw(void) const
 #pragma push
 #pragma optimization_level 0
@@ -297,7 +358,7 @@ asm void draw__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 80315628 0084 .text      simpleDraw__8J3DShapeCFv                                     */
+/* 80315628-803156AC 0084 .text      simpleDraw__8J3DShapeCFv                                     Function */
 // J3DShape::simpleDraw(void) const
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +369,7 @@ asm void simpleDraw__8J3DShapeCFv() {
 }
 #pragma pop
 
-/* 803156AC 00F4 .text      simpleDrawCache__8J3DShapeCFv                                */
+/* 803156AC-803157A0 00F4 .text      simpleDrawCache__8J3DShapeCFv                                Function */
 // J3DShape::simpleDrawCache(void) const
 #pragma push
 #pragma optimization_level 0

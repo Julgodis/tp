@@ -9,16 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void OSFreeToHeap();
+/* Function             */
 extern void OSSetCurrentHeap();
+/* Function             */
 extern void OSInitAlloc();
+/* Function             */
 extern void OSCreateHeap();
+/* GlobalFunction       */
 extern u32 OSGetArenaHi();
+/* GlobalFunction       */
 extern u32 OSGetArenaLo();
+/* Function             */
 extern void OSSetArenaLo();
+/* Function             */
+extern void __sys_free();
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_55[56];
+/* InitializedData      */
 SECTION_RODATA extern const u8 GCN_mem_alloc__LIT_56[64];
+/* InitializedData      */
 SECTION_SDATA extern u8 __OSCurrHeap[8];
 }
 
@@ -28,7 +41,7 @@ SECTION_SDATA extern u8 __OSCurrHeap[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A21A8 0036 .rodata    @55                                                          */
+/* 803A21A8-803A21E0 0036 .rodata    @55                                                          InitializedData */
 SECTION_RODATA const u8 LIT_55[56] = {
 	0x47, 0x43, 0x4E, 0x5F, 0x4D, 0x65, 0x6D, 0x5F, 0x41, 0x6C, 0x6C, 0x6F, 0x63, 0x2E, 0x63, 0x20,
 	0x3A, 0x20, 0x49, 0x6E, 0x69, 0x74, 0x44, 0x65, 0x66, 0x61, 0x75, 0x6C, 0x74, 0x48, 0x65, 0x61,
@@ -37,7 +50,7 @@ SECTION_RODATA const u8 LIT_55[56] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A21E0 0039 .rodata    @56                                                          */
+/* 803A21E0-803A2220 0039 .rodata    @56                                                          InitializedData */
 SECTION_RODATA const u8 GCN_mem_alloc__LIT_56[64] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x77, 0x65, 0x72, 0x6B, 0x73, 0x20, 0x43, 0x57, 0x20, 0x72, 0x75,
 	0x6E, 0x74, 0x69, 0x6D, 0x65, 0x20, 0x6C, 0x69, 0x62, 0x72, 0x61, 0x72, 0x79, 0x20, 0x69, 0x6E,
@@ -54,7 +67,7 @@ SECTION_RODATA const u8 GCN_mem_alloc__LIT_56[64] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80362914 00B8 .text      __sys_free                                                   */
+/* 80362914-803629CC 00B8 .text      __sys_free                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

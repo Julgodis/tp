@@ -11,22 +11,53 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void isFirstBit__21dSv_player_get_item_cCFUc();
+/* Function             */
 extern void __ct__9dMw_HIO_cFv();
+/* Function             */
 extern void init__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getBombFlag__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getArrowFlag__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getPachinkoFlag__9dMw_HIO_cFv();
+/* Function             */
 extern void __ct__10dMw_DHIO_cFv();
+/* Function             */
 extern void __dt__10dMw_DHIO_cFv();
+/* Function             */
 extern void __dt__9dMw_HIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_menu_window_HIO_cpp();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
-SECTION_DATA extern const void* __vt__10dMw_DHIO_c[3];
-SECTION_DATA extern const void* __vt__9dMw_HIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10dMw_DHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dMw_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_menu_window_HIO__LIT_3773[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_mwHIO[304];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_menu_window_HIO__LIT_3774[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_mwDHIO[520];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450748[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_8045074C[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450750[8];
 }
 
@@ -36,14 +67,14 @@ SECTION_SDATA extern u8 data_80450750[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BE8E0 000C .data      __vt__10dMw_DHIO_c                                           */
-SECTION_DATA const  void* __vt__10dMw_DHIO_c[3] = {
+/* 803BE8E0-803BE8EC 000C .data      __vt__10dMw_DHIO_c                                           VTableData */
+SECTION_DATA void* __vt__10dMw_DHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10dMw_DHIO_cFv,
 };
-/* 803BE8EC 000C .data      __vt__9dMw_HIO_c                                             */
-SECTION_DATA const  void* __vt__9dMw_HIO_c[3] = {
+/* 803BE8EC-803BE8F8 000C .data      __vt__9dMw_HIO_c                                             VTableData */
+SECTION_DATA void* __vt__9dMw_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dMw_HIO_cFv,
@@ -56,17 +87,17 @@ SECTION_DATA const  void* __vt__9dMw_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450748 0003 .sdata     m_cloth_item$3797                                            */
+/* 80450748-8045074C 0003 .sdata     m_cloth_item$3797                                            InitializedData */
 SECTION_SDATA u8 data_80450748[4] = {
 	0x2F, 0x30, 0x31,
 	/* padding */
 	0x00,
 };
-/* 8045074C 0004 .sdata     m_sword_item$3798                                            */
+/* 8045074C-80450750 0004 .sdata     m_sword_item$3798                                            InitializedData */
 SECTION_SDATA u8 data_8045074C[4] = {
 	0x28, 0x29, 0x49, 0x3F,
 };
-/* 80450750 0003 .sdata     m_shield_item$3799                                           */
+/* 80450750-80450758 0003 .sdata     m_shield_item$3799                                           InitializedData */
 SECTION_SDATA u8 data_80450750[8] = {
 	0x2B, 0x2C, 0x2A,
 	/* padding */
@@ -80,14 +111,14 @@ SECTION_SDATA u8 data_80450750[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8042E860 0000 .bss       ...bss.0                                                     */
-/* 8042E860 000C .bss       @3773                                                        */
+/* 8042E860-8042E860 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8042E860-8042E86C 000C .bss       @3773                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_menu_window_HIO__LIT_3773[12];
-/* 8042E86C 0130 .bss       g_mwHIO                                                      */
+/* 8042E86C-8042E99C 0130 .bss       g_mwHIO                                                      ZeroInitializedData */
 SECTION_BSS u8 g_mwHIO[304];
-/* 8042E99C 000C .bss       @3774                                                        */
+/* 8042E99C-8042E9A8 000C .bss       @3774                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_menu_window_HIO__LIT_3774[12];
-/* 8042E9A8 0208 .bss       g_mwDHIO                                                     */
+/* 8042E9A8-8042EBB0 0208 .bss       g_mwDHIO                                                     ZeroInitializedData */
 SECTION_BSS u8 g_mwDHIO[520];
 }
 
@@ -97,7 +128,7 @@ SECTION_BSS u8 g_mwDHIO[520];
 /* ###################################################################################### */
 
 extern "C" {
-/* 801F9AFC 003C .text      __ct__9dMw_HIO_cFv                                           */
+/* 801F9AFC-801F9B38 003C .text      __ct__9dMw_HIO_cFv                                           Function */
 // dMw_HIO_c::dMw_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +139,7 @@ asm void __ct__9dMw_HIO_cFv() {
 }
 #pragma pop
 
-/* 801F9B38 02DC .text      init__9dMw_HIO_cFv                                           */
+/* 801F9B38-801F9E14 02DC .text      init__9dMw_HIO_cFv                                           Function */
 // dMw_HIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -119,25 +150,25 @@ asm void init__9dMw_HIO_cFv() {
 }
 #pragma pop
 
-/* 801F9E14 0008 .text      getBombFlag__9dMw_HIO_cFv                                    */
+/* 801F9E14-801F9E1C 0008 .text      getBombFlag__9dMw_HIO_cFv                                    ReturnIntegerFunction */
 // dMw_HIO_c::getBombFlag(void)
 int getBombFlag__9dMw_HIO_cFv() {
 	return 0;
 }
 
-/* 801F9E1C 0008 .text      getArrowFlag__9dMw_HIO_cFv                                   */
+/* 801F9E1C-801F9E24 0008 .text      getArrowFlag__9dMw_HIO_cFv                                   ReturnIntegerFunction */
 // dMw_HIO_c::getArrowFlag(void)
 int getArrowFlag__9dMw_HIO_cFv() {
 	return 0;
 }
 
-/* 801F9E24 0008 .text      getPachinkoFlag__9dMw_HIO_cFv                                */
+/* 801F9E24-801F9E2C 0008 .text      getPachinkoFlag__9dMw_HIO_cFv                                ReturnIntegerFunction */
 // dMw_HIO_c::getPachinkoFlag(void)
 int getPachinkoFlag__9dMw_HIO_cFv() {
 	return 0;
 }
 
-/* 801F9E2C 006C .text      __ct__10dMw_DHIO_cFv                                         */
+/* 801F9E2C-801F9E98 006C .text      __ct__10dMw_DHIO_cFv                                         Function */
 // dMw_DHIO_c::dMw_DHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -148,7 +179,7 @@ asm void __ct__10dMw_DHIO_cFv() {
 }
 #pragma pop
 
-/* 801F9E98 0048 .text      __dt__10dMw_DHIO_cFv                                         */
+/* 801F9E98-801F9EE0 0048 .text      __dt__10dMw_DHIO_cFv                                         Function */
 // dMw_DHIO_c::~dMw_DHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -159,7 +190,7 @@ asm void __dt__10dMw_DHIO_cFv() {
 }
 #pragma pop
 
-/* 801F9EE0 0048 .text      __dt__9dMw_HIO_cFv                                           */
+/* 801F9EE0-801F9F28 0048 .text      __dt__9dMw_HIO_cFv                                           Function */
 // dMw_HIO_c::~dMw_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -170,7 +201,7 @@ asm void __dt__9dMw_HIO_cFv() {
 }
 #pragma pop
 
-/* 801F9F28 005C .text      __sinit_d_menu_window_HIO_cpp                                */
+/* 801F9F28-801F9F84 005C .text      __sinit_d_menu_window_HIO_cpp                                SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

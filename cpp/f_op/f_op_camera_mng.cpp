@@ -10,13 +10,29 @@
 
 struct layer_class;
 
-extern void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
+extern void fopCamM_Create(int, short, void*); /* fopCamM_Create__FisPv */
+extern void fopCamM_Management(void); /* fopCamM_Management__Fv */
+extern void fopCamM_Init(void); /* fopCamM_Init__Fv */
+extern void fpcSCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
 
 extern "C" {
+/* FirstParamFunction   */
+extern u32 fopCamM_GetParam__FP12camera_class(u8*);
+/* Function             */
+extern void fopCamM_Create__FisPv();
+/* ReturnFunction       */
+extern void fopCamM_Management__Fv();
+/* ReturnFunction       */
+extern void fopCamM_Init__Fv();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_fopCamM_id[16];
 }
 
@@ -26,7 +42,7 @@ SECTION_BSS extern u8 l_fopCamM_id[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F1DD8 0010 .bss       l_fopCamM_id                                                 */
+/* 803F1DD8-803F1DE8 0010 .bss       l_fopCamM_id                                                 ZeroInitializedData */
 SECTION_BSS u8 l_fopCamM_id[16];
 }
 
@@ -36,36 +52,40 @@ SECTION_BSS u8 l_fopCamM_id[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001E308 0008 .text      fopCamM_GetParam__FP12camera_class                           */
+/* 8001E308-8001E310 0008 .text      fopCamM_GetParam__FP12camera_class                           FirstParamFunction */
 // fopCamM_GetParam(camera_class*)
 u32 fopCamM_GetParam__FP12camera_class(u8* param0) {
 	return *(u32*)&param0[176]; /* param0->field_0xb0 */
 }
 
-/* 8001E310 0064 .text      fopCamM_Create__FisPv                                        */
+/* 8001E310-8001E374 0064 .text      fopCamM_Create__FisPv                                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopCamM_Create(int, s16, void*) {
+asm void fopCamM_Create(int, short, void*) {
 	nofralloc
 #include "_include/f_op/f_op_camera_mng/fopCamM_Create__FisPv.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8001E374 0004 .text      fopCamM_Management__Fv                                       */
-// fopCamM_Management(void)
+/* 8001E374-8001E378 0004 .text      fopCamM_Management__Fv                                       ReturnFunction */
+}
+
 void fopCamM_Management__Fv() {
 	return;
 }
 
-/* 8001E378 0004 .text      fopCamM_Init__Fv                                             */
-// fopCamM_Init(void)
+extern "C" {
+/* 8001E378-8001E37C 0004 .text      fopCamM_Init__Fv                                             ReturnFunction */
+}
+
 void fopCamM_Init__Fv() {
 	return;
 }
 
+extern "C" {
 }
 

@@ -16,10 +16,9 @@ SSTANDARD_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-SSTANDRAD_OUTPUT := $(BUILD_DIR)/libSStandard.a
-
-$(SSTANDRAD_OUTPUT): $(SSTANDARD_A_O_FILES)
-	$(LD) -xm l $(SSTANDARD_A_LDFLAGS) -o $@ $(SSTANDARD_A_O_FILES)
+$(BUILD_DIR)/libSStandard.a: $(SSTANDARD_A_O_FILES)
+	$(LD) -xm l $(SSTANDARD_A_LDFLAGS) -o $(BUILD_DIR)/libSStandard.a $(SSTANDARD_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libSStandard.a
 
 $(BUILD_DIR)/libs/SStandard/%.o: cpp/SStandard/%.cpp
 	mkdir -p $(@D)

@@ -9,9 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
+/* Function             */
+extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+/* Function             */
+extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
+/* Function             */
+extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+/* Function             */
+extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
+/* Function             */
+extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+/* Function             */
+extern void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
+/* Function             */
+extern void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
+/* Function             */
+extern void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void PSMTXTrans();
 }
 
@@ -21,7 +41,7 @@ extern void PSMTXTrans();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028A1F8 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A1F8-8028A290 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl Function */
 // JStudio_JStage::transform_toGlobalFromLocal(f32 (*)[4], JStudio::TControl::TTransform_translation_rotation_scaling, JStage::TObject, u32)
 #pragma push
 #pragma optimization_level 0
@@ -32,7 +52,7 @@ asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TContro
 }
 #pragma pop
 
-/* 8028A290 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A290-8028A328 0098 .text      transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl Function */
 // JStudio_JStage::transform_toGlobalFromLocal(f32 (*)[4], JStudio::TControl::TTransform_position, JStage::TObject, u32)
 #pragma push
 #pragma optimization_level 0
@@ -43,7 +63,7 @@ asm void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TContro
 }
 #pragma pop
 
-/* 8028A328 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl */
+/* 8028A328-8028A3CC 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl Function */
 // JStudio_JStage::transform_toLocalFromGlobal(f32 (*)[4], JStudio::TControl::TTransform_translation_rotation_scaling, JStage::TObject, u32)
 #pragma push
 #pragma optimization_level 0
@@ -54,7 +74,7 @@ asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TContro
 }
 #pragma pop
 
-/* 8028A3CC 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl */
+/* 8028A3CC-8028A470 00A4 .text      transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl Function */
 // JStudio_JStage::transform_toLocalFromGlobal(f32 (*)[4], JStudio::TControl::TTransform_position, JStage::TObject, u32)
 #pragma push
 #pragma optimization_level 0
@@ -65,7 +85,7 @@ asm void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TContro
 }
 #pragma pop
 
-/* 8028A470 004C .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl */
+/* 8028A470-8028A4BC 004C .text      adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl Function */
 // JStudio_JStage::TAdaptor_object_::adaptor_object_data_(const void*, u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -76,8 +96,8 @@ asm void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl()
 }
 #pragma pop
 
-/* 8028A4BC 0050 .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc */
-// JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObject_(const s8*)
+/* 8028A4BC-8028A50C 0050 .text      adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc Function */
+// JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObject_(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,8 +107,8 @@ asm void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc
 }
 #pragma pop
 
-/* 8028A50C 0044 .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc */
-// JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObjectNode_(JStage::TObject, const s8*)
+/* 8028A50C-8028A550 0044 .text      adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc Function */
+// JStudio_JStage::TAdaptor_object_::adaptor_object_findJSGObjectNode_(JStage::TObject, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -98,7 +118,7 @@ asm void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_
 }
 #pragma pop
 
-/* 8028A550 00A0 .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A550-8028A5F0 00A0 .text      adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_object_::adaptor_object_ENABLE_(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0

@@ -16,100 +16,203 @@ extern void* operator new[](u32); /* __nwa__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void calcMtx__7J2DPaneFv();
+/* Function             */
 extern void makeMatrix__7J2DPaneFff();
+/* FirstParamFunction   */
 extern u32 getMaterial__12J2DTextBoxExCFv(u8*);
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP15J2DAnmTransform();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
 extern void peek__20JSURandomInputStreamFPvl();
+/* Function             */
 extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+/* Function             */
 extern void setGX__11J2DMaterialFv();
+/* Function             */
 extern void setAnimation__11J2DMaterialFP11J2DAnmColor();
+/* Function             */
 extern void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
+/* Function             */
 extern void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
+/* Function             */
 extern void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
+/* Function             */
 extern void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void __dt__8J2DPrintFv();
+/* Function             */
 extern void locate__8J2DPrintFff();
+/* Function             */
 extern void print__8J2DPrintFffUcPCce();
+/* Function             */
 extern void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc();
+/* Function             */
 extern void move__7J2DPaneFff();
+/* Function             */
 extern void add__7J2DPaneFff();
+/* Function             */
 extern void search__7J2DPaneFUx();
+/* Function             */
 extern void searchUserInfo__7J2DPaneFUx();
+/* Function             */
 extern void isUsed__7J2DPaneFPC7ResTIMG();
+/* Function             */
 extern void isUsed__7J2DPaneFPC7ResFONT();
+/* Function             */
 extern void makeMatrix__7J2DPaneFffff();
+/* Function             */
 extern void setCullBack__7J2DPaneF11_GXCullMode();
+/* Function             */
 extern void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+/* Function             */
 extern void setAnimation__7J2DPaneFP10J2DAnmBase();
+/* Function             */
 extern void clearAnmTransform__7J2DPaneFv();
+/* Function             */
 extern void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+/* Function             */
 extern void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+/* Function             */
 extern void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+/* Function             */
 extern void animationPane__7J2DPaneFPC15J2DAnmTransform();
+/* Function             */
 extern void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
+/* Function             */
 extern void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
+/* ReturnFunction       */
 extern void update__7J2DPaneFv();
+/* Function             */
 extern void __ct__10J2DTextBoxFv();
+/* Function             */
 extern void __dt__10J2DTextBoxFv();
+/* Function             */
 extern void setConnectParent__10J2DTextBoxFb();
+/* Function             */
 extern void drawSelf__10J2DTextBoxFff();
+/* Function             */
 extern void resize__10J2DTextBoxFff();
-extern int getTypeID__10J2DTextBoxCFv();
+/* ReturnIntegerFunction */
+extern  int getTypeID__10J2DTextBoxCFv();
+/* Function             */
+extern void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+/* Function             */
 extern void __dt__12J2DTextBoxExFv();
+/* Function             */
 extern void drawSelf__12J2DTextBoxExFffPA3_A4_f();
+/* Function             */
 extern void draw__12J2DTextBoxExFff();
+/* Function             */
 extern void draw__12J2DTextBoxExFfff18J2DTextBoxHBinding();
+/* Function             */
 extern void setFont__12J2DTextBoxExFP7JUTFont();
+/* Function             */
 extern void getFont__12J2DTextBoxExCFv();
+/* Function             */
 extern void setTevOrder__12J2DTextBoxExFb();
+/* Function             */
 extern void setTevStage__12J2DTextBoxExFb();
+/* Function             */
 extern void setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum();
+/* Function             */
 extern void setBlack__12J2DTextBoxExFQ28JUtility6TColor();
+/* Function             */
 extern void setWhite__12J2DTextBoxExFQ28JUtility6TColor();
+/* Function             */
 extern void setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor();
+/* Function             */
 extern void isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void getBlack__12J2DTextBoxExCFv();
+/* Function             */
 extern void getWhite__12J2DTextBoxExCFv();
+/* Function             */
 extern void setAlpha__12J2DTextBoxExFUc();
+/* Function             */
 extern void setCullBack__12J2DTextBoxExF11_GXCullMode();
+/* Function             */
 extern void rewriteAlpha__12J2DTextBoxExFv();
+/* Function             */
 extern void isUsed__12J2DTextBoxExFPC7ResFONT();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP11J2DAnmColor();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull();
+/* Function             */
 extern void animationPane__12J2DTextBoxExFPC15J2DAnmTransform();
+/* Function             */
 extern void setCullBack__12J2DTextBoxExFb();
+/* Function             */
 extern void isUsed__12J2DTextBoxExFPC7ResTIMG();
+/* ReturnFunction       */
 extern void setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor();
+/* Function             */
 extern void setAnimation__12J2DTextBoxExFP10J2DAnmBase();
+/* Function             */
 extern void getVisibility__20J2DAnmVisibilityFullCFUsPUc();
+/* Function             */
 extern void PSMTXIdentity();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetChanMatColor();
+/* Function             */
 extern void GXSetNumIndStages();
+/* Function             */
 extern void GXSetTevDirect();
+/* Function             */
 extern void GXSetTevSwapModeTable();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_1953[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_1954[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_1955[16];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_1956[16];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J2DTextBoxEx__stringBase0[8];
-SECTION_DATA extern const void* __vt__12J2DTextBoxEx[48];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J2DTextBoxEx[48];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1534[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1536;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 J2DTextBoxEx__LIT_1539;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1731[8];
 }
 
@@ -119,29 +222,35 @@ SECTION_SDATA2 extern u8 LIT_1731[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A1DB8 0000 .rodata    ...rodata.0                                                  */
-/* 803A1DB8 000C .rodata    @1953                                                        */
+/* 803A1DF0-803A1DF8 0003 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A1DF0 = "%s";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A1DF3 = "\0\0\0\0";
+#pragma pop
+/* 803A1DB8-803A1DB8 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 803A1DB8-803A1DC4 000C .rodata    @1953                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1953[12] = {
 	0x0F, 0x08, 0x0A, 0x0F, 0x02, 0x04, 0x08, 0x0F, 0x0F, 0x0A, 0x00, 0x0F,
 };
-/* 803A1DC4 000C .rodata    @1954                                                        */
+/* 803A1DC4-803A1DD0 000C .rodata    @1954                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1954[12] = {
 	0x07, 0x04, 0x05, 0x07, 0x01, 0x02, 0x04, 0x07, 0x07, 0x05, 0x00, 0x07,
 };
-/* 803A1DD0 000F .rodata    @1955                                                        */
+/* 803A1DD0-803A1DE0 000F .rodata    @1955                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1955[16] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803A1DE0 000F .rodata    @1956                                                        */
+/* 803A1DE0-803A1DF0 000F .rodata    @1956                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1956[16] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803A1DF0 0003 .rodata    @stringBase0                                                 */
-const char* const stringBase_803A1DF0 = "%s";
 }
 
 
@@ -150,8 +259,8 @@ const char* const stringBase_803A1DF0 = "%s";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CD608 00BC .data      __vt__12J2DTextBoxEx                                         */
-SECTION_DATA const  void* __vt__12J2DTextBoxEx[48] = {
+/* 803CD608-803CD6C8 00BC .data      __vt__12J2DTextBoxEx                                         VTableData */
+SECTION_DATA void* __vt__12J2DTextBoxEx[48] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J2DTextBoxExFv,
@@ -210,19 +319,19 @@ SECTION_DATA const  void* __vt__12J2DTextBoxEx[48] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804562D8 0004 .sdata2    @1534                                                        */
+/* 804562D8-804562E0 0004 .sdata2    @1534                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1534[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804562E0 0008 .sdata2    @1536                                                        */
+/* 804562E0-804562E8 0008 .sdata2    @1536                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_1536 = 4503601774854144.000000;
-/* 804562E8 0008 .sdata2    @1539                                                        */
+/* 804562E8-804562F0 0008 .sdata2    @1539                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 J2DTextBoxEx__LIT_1539 = 4503599627370496.000000;
-/* 804562F0 0004 .sdata2    @1731                                                        */
+/* 804562F0-804562F8 0004 .sdata2    @1731                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1731[8] = {
 	0x38, 0xD1, 0xB7, 0x17,
 	/* padding */
@@ -236,7 +345,7 @@ SECTION_SDATA2 u8 LIT_1731[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803071E4 0338 .text      __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial */
+/* 803071E4-8030751C 0338 .text      __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial Function */
 // J2DTextBoxEx::J2DTextBoxEx(J2DPane*, JSURandomInputStream*, u32, J2DMaterial*)
 #pragma push
 #pragma optimization_level 0
@@ -247,7 +356,7 @@ asm void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial()
 }
 #pragma pop
 
-/* 8030751C 0090 .text      __dt__12J2DTextBoxExFv                                       */
+/* 8030751C-803075AC 0090 .text      __dt__12J2DTextBoxExFv                                       Function */
 // J2DTextBoxEx::~J2DTextBoxEx(void)
 #pragma push
 #pragma optimization_level 0
@@ -258,7 +367,7 @@ asm void __dt__12J2DTextBoxExFv() {
 }
 #pragma pop
 
-/* 803075AC 0300 .text      drawSelf__12J2DTextBoxExFffPA3_A4_f                          */
+/* 803075AC-803078AC 0300 .text      drawSelf__12J2DTextBoxExFffPA3_A4_f                          Function */
 // J2DTextBoxEx::drawSelf(f32, f32, f32 (*)[3][4])
 #pragma push
 #pragma optimization_level 0
@@ -269,7 +378,7 @@ asm void drawSelf__12J2DTextBoxExFffPA3_A4_f() {
 }
 #pragma pop
 
-/* 803078AC 0244 .text      draw__12J2DTextBoxExFff                                      */
+/* 803078AC-80307AF0 0244 .text      draw__12J2DTextBoxExFff                                      Function */
 // J2DTextBoxEx::draw(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -280,7 +389,7 @@ asm void draw__12J2DTextBoxExFff() {
 }
 #pragma pop
 
-/* 80307AF0 026C .text      draw__12J2DTextBoxExFfff18J2DTextBoxHBinding                 */
+/* 80307AF0-80307D5C 026C .text      draw__12J2DTextBoxExFfff18J2DTextBoxHBinding                 Function */
 // J2DTextBoxEx::draw(f32, f32, f32, J2DTextBoxHBinding)
 #pragma push
 #pragma optimization_level 0
@@ -291,7 +400,7 @@ asm void draw__12J2DTextBoxExFfff18J2DTextBoxHBinding() {
 }
 #pragma pop
 
-/* 80307D5C 0064 .text      setFont__12J2DTextBoxExFP7JUTFont                            */
+/* 80307D5C-80307DC0 0064 .text      setFont__12J2DTextBoxExFP7JUTFont                            Function */
 // J2DTextBoxEx::setFont(JUTFont*)
 #pragma push
 #pragma optimization_level 0
@@ -302,7 +411,7 @@ asm void setFont__12J2DTextBoxExFP7JUTFont() {
 }
 #pragma pop
 
-/* 80307DC0 004C .text      getFont__12J2DTextBoxExCFv                                   */
+/* 80307DC0-80307E0C 004C .text      getFont__12J2DTextBoxExCFv                                   Function */
 // J2DTextBoxEx::getFont(void) const
 #pragma push
 #pragma optimization_level 0
@@ -313,7 +422,7 @@ asm void getFont__12J2DTextBoxExCFv() {
 }
 #pragma pop
 
-/* 80307E0C 00E4 .text      setTevOrder__12J2DTextBoxExFb                                */
+/* 80307E0C-80307EF0 00E4 .text      setTevOrder__12J2DTextBoxExFb                                Function */
 // J2DTextBoxEx::setTevOrder(bool)
 #pragma push
 #pragma optimization_level 0
@@ -324,7 +433,7 @@ asm void setTevOrder__12J2DTextBoxExFb() {
 }
 #pragma pop
 
-/* 80307EF0 00A4 .text      setTevStage__12J2DTextBoxExFb                                */
+/* 80307EF0-80307F94 00A4 .text      setTevStage__12J2DTextBoxExFb                                Function */
 // J2DTextBoxEx::setTevStage(bool)
 #pragma push
 #pragma optimization_level 0
@@ -335,7 +444,7 @@ asm void setTevStage__12J2DTextBoxExFb() {
 }
 #pragma pop
 
-/* 80307F94 02A8 .text      setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum */
+/* 80307F94-8030823C 02A8 .text      setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum Function */
 // J2DTextBoxEx::setStage(J2DTevStage*, J2DTextBoxEx::stage_enum)
 #pragma push
 #pragma optimization_level 0
@@ -346,7 +455,7 @@ asm void setStage__12J2DTextBoxExFP11J2DTevStageQ212J2DTextBoxEx10stage_enum() {
 }
 #pragma pop
 
-/* 8030823C 0088 .text      setBlack__12J2DTextBoxExFQ28JUtility6TColor                  */
+/* 8030823C-803082C4 0088 .text      setBlack__12J2DTextBoxExFQ28JUtility6TColor                  Function */
 // J2DTextBoxEx::setBlack(JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -357,7 +466,7 @@ asm void setBlack__12J2DTextBoxExFQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 803082C4 0088 .text      setWhite__12J2DTextBoxExFQ28JUtility6TColor                  */
+/* 803082C4-8030834C 0088 .text      setWhite__12J2DTextBoxExFQ28JUtility6TColor                  Function */
 // J2DTextBoxEx::setWhite(JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -368,7 +477,7 @@ asm void setWhite__12J2DTextBoxExFQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 8030834C 0180 .text      setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor */
+/* 8030834C-803084CC 0180 .text      setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor Function */
 // J2DTextBoxEx::setBlackWhite(JUtility::TColor, JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -379,7 +488,7 @@ asm void setBlackWhite__12J2DTextBoxExFQ28JUtility6TColorQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 803084CC 019C .text      getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor */
+/* 803084CC-80308668 019C .text      getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor Function */
 // J2DTextBoxEx::getBlackWhite(JUtility::TColor, JUtility::TColor) const
 #pragma push
 #pragma optimization_level 0
@@ -390,7 +499,7 @@ asm void getBlackWhite__12J2DTextBoxExCFPQ28JUtility6TColorPQ28JUtility6TColor()
 }
 #pragma pop
 
-/* 80308668 0094 .text      isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor */
+/* 80308668-803086FC 0094 .text      isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor Function */
 // J2DTextBoxEx::isSetBlackWhite(JUtility::TColor, JUtility::TColor) const
 #pragma push
 #pragma optimization_level 0
@@ -401,7 +510,7 @@ asm void isSetBlackWhite__12J2DTextBoxExCFQ28JUtility6TColorQ28JUtility6TColor()
 }
 #pragma pop
 
-/* 803086FC 0060 .text      getBlack__12J2DTextBoxExCFv                                  */
+/* 803086FC-8030875C 0060 .text      getBlack__12J2DTextBoxExCFv                                  Function */
 // J2DTextBoxEx::getBlack(void) const
 #pragma push
 #pragma optimization_level 0
@@ -412,7 +521,7 @@ asm void getBlack__12J2DTextBoxExCFv() {
 }
 #pragma pop
 
-/* 8030875C 0060 .text      getWhite__12J2DTextBoxExCFv                                  */
+/* 8030875C-803087BC 0060 .text      getWhite__12J2DTextBoxExCFv                                  Function */
 // J2DTextBoxEx::getWhite(void) const
 #pragma push
 #pragma optimization_level 0
@@ -423,7 +532,7 @@ asm void getWhite__12J2DTextBoxExCFv() {
 }
 #pragma pop
 
-/* 803087BC 0020 .text      setAlpha__12J2DTextBoxExFUc                                  */
+/* 803087BC-803087DC 0020 .text      setAlpha__12J2DTextBoxExFUc                                  Function */
 // J2DTextBoxEx::setAlpha(u8)
 #pragma push
 #pragma optimization_level 0
@@ -434,7 +543,7 @@ asm void setAlpha__12J2DTextBoxExFUc() {
 }
 #pragma pop
 
-/* 803087DC 0034 .text      setCullBack__12J2DTextBoxExF11_GXCullMode                    */
+/* 803087DC-80308810 0034 .text      setCullBack__12J2DTextBoxExF11_GXCullMode                    Function */
 // J2DTextBoxEx::setCullBack(_GXCullMode)
 #pragma push
 #pragma optimization_level 0
@@ -445,7 +554,7 @@ asm void setCullBack__12J2DTextBoxExF11_GXCullMode() {
 }
 #pragma pop
 
-/* 80308810 0018 .text      rewriteAlpha__12J2DTextBoxExFv                               */
+/* 80308810-80308828 0018 .text      rewriteAlpha__12J2DTextBoxExFv                               Function */
 // J2DTextBoxEx::rewriteAlpha(void)
 #pragma push
 #pragma optimization_level 0
@@ -456,7 +565,7 @@ asm void rewriteAlpha__12J2DTextBoxExFv() {
 }
 #pragma pop
 
-/* 80308828 008C .text      isUsed__12J2DTextBoxExFPC7ResFONT                            */
+/* 80308828-803088B4 008C .text      isUsed__12J2DTextBoxExFPC7ResFONT                            Function */
 // J2DTextBoxEx::isUsed(const ResFONT*)
 #pragma push
 #pragma optimization_level 0
@@ -467,7 +576,7 @@ asm void isUsed__12J2DTextBoxExFPC7ResFONT() {
 }
 #pragma pop
 
-/* 803088B4 002C .text      setAnimation__12J2DTextBoxExFP11J2DAnmColor                  */
+/* 803088B4-803088E0 002C .text      setAnimation__12J2DTextBoxExFP11J2DAnmColor                  Function */
 // J2DTextBoxEx::setAnimation(J2DAnmColor*)
 #pragma push
 #pragma optimization_level 0
@@ -478,7 +587,7 @@ asm void setAnimation__12J2DTextBoxExFP11J2DAnmColor() {
 }
 #pragma pop
 
-/* 803088E0 002C .text      setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey          */
+/* 803088E0-8030890C 002C .text      setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey          Function */
 // J2DTextBoxEx::setAnimation(J2DAnmTextureSRTKey*)
 #pragma push
 #pragma optimization_level 0
@@ -489,7 +598,7 @@ asm void setAnimation__12J2DTextBoxExFP19J2DAnmTextureSRTKey() {
 }
 #pragma pop
 
-/* 8030890C 002C .text      setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern             */
+/* 8030890C-80308938 002C .text      setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern             Function */
 // J2DTextBoxEx::setAnimation(J2DAnmTexPattern*)
 #pragma push
 #pragma optimization_level 0
@@ -500,7 +609,7 @@ asm void setAnimation__12J2DTextBoxExFP16J2DAnmTexPattern() {
 }
 #pragma pop
 
-/* 80308938 002C .text      setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey              */
+/* 80308938-80308964 002C .text      setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey              Function */
 // J2DTextBoxEx::setAnimation(J2DAnmTevRegKey*)
 #pragma push
 #pragma optimization_level 0
@@ -511,7 +620,7 @@ asm void setAnimation__12J2DTextBoxExFP15J2DAnmTevRegKey() {
 }
 #pragma pop
 
-/* 80308964 0008 .text      setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull         */
+/* 80308964-8030896C 0008 .text      setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull         Function */
 // J2DTextBoxEx::setAnimation(J2DAnmVisibilityFull*)
 #pragma push
 #pragma optimization_level 0
@@ -522,7 +631,7 @@ asm void setAnimation__12J2DTextBoxExFP20J2DAnmVisibilityFull() {
 }
 #pragma pop
 
-/* 8030896C 0080 .text      animationPane__12J2DTextBoxExFPC15J2DAnmTransform            */
+/* 8030896C-803089EC 0080 .text      animationPane__12J2DTextBoxExFPC15J2DAnmTransform            Function */
 // J2DTextBoxEx::animationPane(const J2DAnmTransform*)
 #pragma push
 #pragma optimization_level 0
@@ -533,7 +642,7 @@ asm void animationPane__12J2DTextBoxExFPC15J2DAnmTransform() {
 }
 #pragma pop
 
-/* 803089EC 003C .text      setCullBack__12J2DTextBoxExFb                                */
+/* 803089EC-80308A28 003C .text      setCullBack__12J2DTextBoxExFb                                Function */
 // J2DTextBoxEx::setCullBack(bool)
 #pragma push
 #pragma optimization_level 0
@@ -544,7 +653,7 @@ asm void setCullBack__12J2DTextBoxExFb() {
 }
 #pragma pop
 
-/* 80308A28 0020 .text      isUsed__12J2DTextBoxExFPC7ResTIMG                            */
+/* 80308A28-80308A48 0020 .text      isUsed__12J2DTextBoxExFPC7ResTIMG                            Function */
 // J2DTextBoxEx::isUsed(const ResTIMG*)
 #pragma push
 #pragma optimization_level 0
@@ -555,13 +664,13 @@ asm void isUsed__12J2DTextBoxExFPC7ResTIMG() {
 }
 #pragma pop
 
-/* 80308A48 0004 .text      setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor               */
+/* 80308A48-80308A4C 0004 .text      setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor               ReturnFunction */
 // J2DTextBoxEx::setAnimation(J2DAnmVtxColor*)
 void setAnimation__12J2DTextBoxExFP14J2DAnmVtxColor() {
 	return;
 }
 
-/* 80308A4C 0020 .text      setAnimation__12J2DTextBoxExFP10J2DAnmBase                   */
+/* 80308A4C-80308A6C 0020 .text      setAnimation__12J2DTextBoxExFP10J2DAnmBase                   Function */
 // J2DTextBoxEx::setAnimation(J2DAnmBase*)
 #pragma push
 #pragma optimization_level 0

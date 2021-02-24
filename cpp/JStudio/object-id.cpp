@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80288988 00F0 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData */
+/* 80288988-80288A78 00F0 .text      isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData Function */
 // JStudio::object::TIDData::isEqual(JStudio::object::TIDData, JStudio::object::TIDData)
 #pragma push
 #pragma optimization_level 0

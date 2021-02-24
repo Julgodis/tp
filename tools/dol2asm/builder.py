@@ -2,24 +2,20 @@ import os
 import codecs
 
 class Builder:
-    def __init__(self, path, DRY_RUN, baserom):
+    def __init__(self, path, OVERRIDE_FUNCTION):
         self.path = path
         self.file = open(path, 'w', 1 << 16, encoding="utf-8")
-        self.br = baserom
-        self.DRY_RUN = DRY_RUN
+        self.OVERRIDE_FUNCTION = OVERRIDE_FUNCTION
         self.new_line = "\n"
 
     def write(self, text):
-        if not self.DRY_RUN:
-            self.file.write(text)
-            self.file.write(self.new_line)
+        self.file.write(text)
+        self.file.write(self.new_line)
+    
+    def write_nonewline(self, text):
+        self.file.write(text)
 
     def close(self):
-        if not self.DRY_RUN:
-            self.file.close()
+        self.file.close()
 
-    def baserom(self, offset, n):
-        data = self.br[offset:offset+n]
-        assert len(data) == n
-        return data
 

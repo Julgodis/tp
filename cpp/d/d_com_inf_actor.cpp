@@ -8,17 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* InitializedData      */
+SECTION_SDATA extern u8 g_dComIfAc_gameInfo[8];
+/* InitializedData      */
+SECTION_SDATA extern u8 g_dComIfGoat_gameInfo[8];
+}
+
 
 /* ###################################################################################### */
 /*                                         .sdata                                         */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450610 0008 .sdata     g_dComIfAc_gameInfo                                          */
+/* 80450610-80450618 0008 .sdata     g_dComIfAc_gameInfo                                          InitializedData */
 SECTION_SDATA u8 g_dComIfAc_gameInfo[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80450618 0004 .sdata     g_dComIfGoat_gameInfo                                        */
+/* 80450618-80450620 0004 .sdata     g_dComIfGoat_gameInfo                                        InitializedData */
 SECTION_SDATA u8 g_dComIfGoat_gameInfo[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */

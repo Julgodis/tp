@@ -9,13 +9,23 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __flush_buffer();
+/* Function             */
 extern void __prep_buffer();
+/* Function             */
+extern void fputs();
+/* Function             */
 extern void __put_char();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* Function             */
 extern void fseek();
+/* Function             */
 extern void __stdio_atexit();
+/* Function             */
 extern void fwide();
 }
 
@@ -25,7 +35,7 @@ extern void fwide();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803651D8 00D4 .text      fputs                                                        */
+/* 803651D8-803652AC 00D4 .text      fputs                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35,7 +45,7 @@ asm void fputs() {
 }
 #pragma pop
 
-/* 803652AC 01B8 .text      __put_char                                                   */
+/* 803652AC-80365464 01B8 .text      __put_char                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

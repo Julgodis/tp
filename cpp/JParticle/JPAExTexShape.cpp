@@ -10,8 +10,16 @@
 
 struct JPAEmitterWorkData;
 
+extern void JPALoadExTex(JPAEmitterWorkData*); /* JPALoadExTex__FP18JPAEmitterWorkData */
+
 extern "C" {
+/* Function             */
+extern void JPALoadExTex__FP18JPAEmitterWorkData();
+/* Function             */
+extern void __ct__13JPAExTexShapeFPCUc();
+/* Function             */
 extern void load__10JUTTextureF11_GXTexMapID();
+/* Function             */
 extern void GXSetTexCoordGen2();
 }
 
@@ -21,7 +29,7 @@ extern void GXSetTexCoordGen2();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027B040 00FC .text      JPALoadExTex__FP18JPAEmitterWorkData                         */
+/* 8027B040-8027B13C 00FC .text      JPALoadExTex__FP18JPAEmitterWorkData                         Function */
 }
 
 #pragma push
@@ -34,7 +42,7 @@ asm void JPALoadExTex(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B13C 0008 .text      __ct__13JPAExTexShapeFPCUc                                   */
+/* 8027B13C-8027B144 0008 .text      __ct__13JPAExTexShapeFPCUc                                   Function */
 // JPAExTexShape::JPAExTexShape(const u8*)
 #pragma push
 #pragma optimization_level 0

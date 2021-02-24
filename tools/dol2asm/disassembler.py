@@ -24,6 +24,7 @@ def sign_extend_12(value):
 # TODO: find all of them
 loadStoreInsns = {
     PPC_INS_LWZ,
+    PPC_INS_LWZU,
     PPC_INS_LMW,
     PPC_INS_LHA,
     PPC_INS_LHAU,
@@ -337,6 +338,9 @@ class Disassembler:
 
         if insn.id == PPC_INS_LIS:
             self.lisInsns[insn.operands[0].reg] = insn
+        #elif insn.id == PPC_INS_LWZU and insn.operands[1].mem.base in self.lisInsns:
+        #    hiLoadInsn = self.lisInsns[insn.operands[1].reg]
+
         elif (insn.id in {PPC_INS_ADDI, PPC_INS_ORI} and insn.operands[1].reg in self.lisInsns) \
                 or (is_load_store_reg_offset(insn, None) and insn.operands[1].mem.base in self.lisInsns):
             hiLoadInsn = self.lisInsns[insn.operands[1].reg]
@@ -364,6 +368,13 @@ class LCDisassembler(Disassembler):
         super().__init__()
         self.labels = set()
         self.functions = set()
+        self.reference_fix = False
+
+    def addFunction(self, insn, value):
+        self.functions.add(value)
+
+    def addLabel(self, insn, value):
+        self.labels.add(value)
 
     def callback(self, address, offset, insn, bytes):
         if insn == None:
@@ -375,38 +386,38 @@ class LCDisassembler(Disassembler):
         if insn.id in {PPC_INS_B, PPC_INS_BL, PPC_INS_BC, PPC_INS_BDZ, PPC_INS_BDNZ}:
             for op in insn.operands:
                 if op.type == PPC_OP_IMM:
-                    self.functions.add(op.imm)
+                    self.addFunction(insn, op.imm)
 
         if r13_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
                 value = r13_addr + sign_extend_16(insn.operands[2].imm)
-                if is_label_candidate(value):
-                    self.labels.add(value)
+                if is_label_candidate(value) and not self.reference_fix:
+                    self.addLabel(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
                 if is_label_candidate(value):
-                    self.labels.add(value)
+                    self.addLabel(insn, value)
 
         if r2_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)
-                if is_label_candidate(value):
-                    self.labels.add(value)
+                if is_label_candidate(value) and not self.reference_fix:
+                    self.addLabel(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
                 if is_label_candidate(value):
-                    self.labels.add(value)
+                    self.addLabel(insn, value)
 
         #
         if insn.address in self.splitDataLoads and insn.id == PPC_INS_LIS:
             value = self.splitDataLoads[insn.address]
             if is_label_candidate(value):
-                self.labels.add(value)
+                self.addLabel(insn, value)
         elif insn.address in self.splitDataLoads and insn.id in {PPC_INS_ADDI, PPC_INS_ORI}:
             value = self.splitDataLoads[insn.address]
             if is_label_candidate(value):
-                self.labels.add(value)
+                self.addLabel(insn, value)
         elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
             value = self.splitDataLoads[insn.address]
             if is_label_candidate(value):
-                self.labels.add(value)
+                self.addLabel(insn, value)

@@ -11,22 +11,40 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__12JUTGraphFifoFUl();
+/* Function             */
 extern void __dt__12JUTGraphFifoFv();
+/* Function             */
 extern void GXInit();
+/* Function             */
 extern void GXInitFifoBase();
+/* Function             */
 extern void GXInitFifoPtrs();
+/* Function             */
 extern void GXSaveCPUFifo();
+/* Function             */
 extern void GXGetGPStatus();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
-SECTION_DATA extern const void* __vt__12JUTGraphFifo[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JUTGraphFifo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804514B8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentFifo__12JUTGraphFifo[4];
-SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 }
 
 
@@ -35,8 +53,8 @@ SECTION_SBSS extern u8 mGpStatus__12JUTGraphFifo[5];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC590 000C .data      __vt__12JUTGraphFifo                                         */
-SECTION_DATA const  void* __vt__12JUTGraphFifo[4] = {
+/* 803CC590-803CC5A0 000C .data      __vt__12JUTGraphFifo                                         VTableData */
+SECTION_DATA void* __vt__12JUTGraphFifo[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JUTGraphFifoFv,
@@ -51,10 +69,12 @@ SECTION_DATA const  void* __vt__12JUTGraphFifo[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804514BC 0004 .sbss      sCurrentFifo__12JUTGraphFifo                                 */
+/* 804514B8-804514BC 0004 .sbss      data_804514B8                                                ZeroInitializedData */
+SECTION_SBSS u8 data_804514B8[4];
+/* 804514BC-804514C0 0004 .sbss      sCurrentFifo__12JUTGraphFifo                                 ZeroInitializedData */
 SECTION_SBSS u8 sCurrentFifo__12JUTGraphFifo[4];
-/* 804514C0 0005 .sbss      mGpStatus__12JUTGraphFifo                                    */
-SECTION_SBSS u8 mGpStatus__12JUTGraphFifo[5];
+/* 804514C0-804514C8 0005 .sbss      mGpStatus__12JUTGraphFifo                                    ZeroInitializedData */
+SECTION_SBSS u8 mGpStatus__12JUTGraphFifo[5 + 3 /* padding */];
 }
 
 
@@ -63,7 +83,7 @@ SECTION_SBSS u8 mGpStatus__12JUTGraphFifo[5];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DEB58 00DC .text      __ct__12JUTGraphFifoFUl                                      */
+/* 802DEB58-802DEC34 00DC .text      __ct__12JUTGraphFifoFUl                                      Function */
 // JUTGraphFifo::JUTGraphFifo(u32)
 #pragma push
 #pragma optimization_level 0
@@ -74,7 +94,7 @@ asm void __ct__12JUTGraphFifoFUl() {
 }
 #pragma pop
 
-/* 802DEC34 00C4 .text      __dt__12JUTGraphFifoFv                                       */
+/* 802DEC34-802DECF8 00C4 .text      __dt__12JUTGraphFifoFv                                       Function */
 // JUTGraphFifo::~JUTGraphFifo(void)
 #pragma push
 #pragma optimization_level 0

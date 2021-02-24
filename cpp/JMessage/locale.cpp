@@ -8,14 +8,21 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
+/* Function             */
+extern void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A9528 0064 .text      parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc             */
-// JMessage::locale::parseCharacter_ShiftJIS(const s8**)
+/* 802A9528-802A958C 0064 .text      parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc             Function */
+// JMessage::locale::parseCharacter_ShiftJIS(const char**)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -25,8 +32,8 @@ asm void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc() {
 }
 #pragma pop
 
-/* 802A958C 0100 .text      parseCharacter_UTF8__Q28JMessage6localeFPPCc                 */
-// JMessage::locale::parseCharacter_UTF8(const s8**)
+/* 802A958C-802A968C 0100 .text      parseCharacter_UTF8__Q28JMessage6localeFPPCc                 Function */
+// JMessage::locale::parseCharacter_UTF8(const char**)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

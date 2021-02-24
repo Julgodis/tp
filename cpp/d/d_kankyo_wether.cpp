@@ -12,13 +12,13 @@
 // Additional Symbols:
 // 
 
-struct WIND_INFLUENCE;
+struct cXyz;
 struct J3DPacket;
 struct _GXColor;
-struct cXyz;
+struct WIND_INFLUENCE;
 
 extern void dComIfGp_getReverb(int); /* dComIfGp_getReverb__Fi */
-extern void dComIfG_getStageRes(const s8*); /* dComIfG_getStageRes__FPCc */
+extern void dComIfG_getStageRes(const char*); /* dComIfG_getStageRes__FPCc */
 extern void dKyw_setDrawPacketList(J3DPacket*, int); /* dKyw_setDrawPacketList__FP9J3DPacketi */
 extern void dKyw_setDrawPacketListIndScreen(J3DPacket*, int); /* dKyw_setDrawPacketListIndScreen__FP9J3DPacketi */
 extern void dKyw_setDrawPacketListSky(J3DPacket*, int); /* dKyw_setDrawPacketListSky__FP9J3DPacketi */
@@ -47,7 +47,12 @@ extern void dKyw_mud_packet(int); /* dKyw_mud_packet__Fi */
 extern void dKyw_mud_Draw(void); /* dKyw_mud_Draw__Fv */
 extern void dKyw_evil_packet(int); /* dKyw_evil_packet__Fi */
 extern void dKyw_evil_Draw(void); /* dKyw_evil_Draw__Fv */
+extern void dKyw_wether_init(void); /* dKyw_wether_init__Fv */
+extern void dKyw_wether_init2(void); /* dKyw_wether_init2__Fv */
+extern void dKyw_wether_delete(void); /* dKyw_wether_delete__Fv */
+extern void dKyw_wether_delete2(void); /* dKyw_wether_delete2__Fv */
 extern void wether_move_thunder(void); /* wether_move_thunder__Fv */
+extern void dKyw_wether_move(void); /* dKyw_wether_move__Fv */
 extern void wether_move_sun(void); /* wether_move_sun__Fv */
 extern void wether_move_rain(void); /* wether_move_rain__Fv */
 extern void wether_move_snow(void); /* wether_move_snow__Fv */
@@ -58,16 +63,33 @@ extern void wether_move_moya(void); /* wether_move_moya__Fv */
 extern void wether_move_vrkumo(void); /* wether_move_vrkumo__Fv */
 extern void wether_move_mud(void); /* wether_move_mud__Fv */
 extern void wether_move_evil(void); /* wether_move_evil__Fv */
+extern void dKyw_wether_move_draw(void); /* dKyw_wether_move_draw__Fv */
+extern void dKyw_wether_move_draw2(void); /* dKyw_wether_move_draw2__Fv */
+extern void dKyw_wether_draw(void); /* dKyw_wether_draw__Fv */
+extern void dKyw_wether_draw2(void); /* dKyw_wether_draw2__Fv */
+extern void dKyw_wether_proc(void); /* dKyw_wether_proc__Fv */
 extern void dKyw_wind_init(void); /* dKyw_wind_init__Fv */
+extern void dKyw_wind_set(void); /* dKyw_wind_set__Fv */
 extern void dKyw_get_wind_vec(void); /* dKyw_get_wind_vec__Fv */
 extern void dKyw_get_wind_pow(void); /* dKyw_get_wind_pow__Fv */
+extern void dKyw_get_wind_vecpow(void); /* dKyw_get_wind_vecpow__Fv */
+extern void dKyw_plight_collision_set(cXyz*, short, short, f32, f32, f32, f32, f32); /* dKyw_plight_collision_set__FP4cXyzssfffff */
 extern void squal_proc(void); /* squal_proc__Fv */
 extern void dKyw_pntwind_init(void); /* dKyw_pntwind_init__Fv */
 extern void pntwind_set(WIND_INFLUENCE*); /* pntwind_set__FP14WIND_INFLUENCE */
+extern void dKyw_pntwind_set(WIND_INFLUENCE*); /* dKyw_pntwind_set__FP14WIND_INFLUENCE */
 extern void dKyw_pntlight_set(WIND_INFLUENCE*); /* dKyw_pntlight_set__FP14WIND_INFLUENCE */
 extern void dKyw_pntwind_cut(WIND_INFLUENCE*); /* dKyw_pntwind_cut__FP14WIND_INFLUENCE */
 extern void pntwind_get_info(cXyz*, cXyz*, f32*, u8); /* pntwind_get_info__FP4cXyzP4cXyzPfUc */
 extern void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*); /* dKyw_pntwind_get_info__FP4cXyzP4cXyzPf */
+extern void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*); /* dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf */
+extern void dKyw_pntwind_get_vecpow(cXyz*); /* dKyw_pntwind_get_vecpow__FP4cXyz */
+extern void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); /* dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf */
+extern void dKyw_get_AllWind_vecpow(cXyz*); /* dKyw_get_AllWind_vecpow__FP4cXyz */
+extern void dKyw_custom_windpower(f32); /* dKyw_custom_windpower__Ff */
+extern void dKyw_evt_wind_set(short, short); /* dKyw_evt_wind_set__Fss */
+extern void dKyw_evt_wind_set_go(void); /* dKyw_evt_wind_set_go__Fv */
+extern void dKyw_rain_set(int); /* dKyw_rain_set__Fi */
 extern void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); /* dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz */
 extern void dKyr_lenzflare_move(void); /* dKyr_lenzflare_move__Fv */
 extern void dKyr_sun_move(void); /* dKyr_sun_move__Fv */
@@ -91,6 +113,8 @@ extern void drawCloudShadow(f32 (*)[4], u8**); /* drawCloudShadow__FPA4_fPPUc */
 extern void drawVrkumo(f32 (*)[4], _GXColor&, u8**); /* drawVrkumo__FPA4_fR8_GXColorPPUc */
 extern void dKyr_thunder_init(void); /* dKyr_thunder_init__Fv */
 extern void dKyr_thunder_move(void); /* dKyr_thunder_move__Fv */
+extern void dKyr_shstar_init(void); /* dKyr_shstar_init__Fv */
+extern void dKyr_shstar_move(void); /* dKyr_shstar_move__Fv */
 extern void dKyr_odour_init(void); /* dKyr_odour_init__Fv */
 extern void dKyr_odour_move(void); /* dKyr_odour_move__Fv */
 extern void dKyr_odour_draw(f32 (*)[4], u8**); /* dKyr_odour_draw__FPA4_fPPUc */
@@ -109,241 +133,525 @@ extern void* operator new(u32, int); /* __nw__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__4cXyzFv();
+/* ReturnFunction       */
 extern void __ct__4cXyzFv();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* Function             */
 extern void dComIfGp_getReverb__Fi();
+/* Function             */
 extern void dComIfG_getStageRes__FPCc();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void dKyw_setDrawPacketList__FP9J3DPacketi();
+/* Function             */
 extern void dKyw_setDrawPacketListIndScreen__FP9J3DPacketi();
+/* Function             */
 extern void dKyw_setDrawPacketListSky__FP9J3DPacketi();
+/* Function             */
 extern void dKyw_setDrawPacketListXluBg__FP9J3DPacketi();
+/* Function             */
 extern void draw__18dKankyo_sun_PacketFv();
+/* Function             */
 extern void draw__22dKankyo_sunlenz_PacketFv();
+/* Function             */
 extern void __dt__8RAIN_EFFFv();
+/* ReturnFunction       */
 extern void __ct__8RAIN_EFFFv();
+/* Function             */
 extern void draw__19dKankyo_rain_PacketFv();
+/* Function             */
 extern void __dt__8SNOW_EFFFv();
+/* ReturnFunction       */
+extern void __ct__8SNOW_EFFFv();
+/* Function             */
 extern void draw__19dKankyo_snow_PacketFv();
+/* Function             */
 extern void __dt__8STAR_EFFFv();
+/* ReturnFunction       */
+extern void __ct__8STAR_EFFFv();
+/* Function             */
 extern void draw__19dKankyo_star_PacketFv();
+/* Function             */
 extern void __dt__9CLOUD_EFFFv();
+/* ReturnFunction       */
 extern void __ct__9CLOUD_EFFFv();
+/* Function             */
 extern void draw__20dKankyo_cloud_PacketFv();
+/* Function             */
 extern void __dt__9HOUSI_EFFFv();
+/* ReturnFunction       */
 extern void __ct__9HOUSI_EFFFv();
+/* Function             */
 extern void draw__20dKankyo_housi_PacketFv();
+/* Function             */
 extern void __dt__10VRKUMO_EFFFv();
+/* ReturnFunction       */
 extern void __ct__10VRKUMO_EFFFv();
+/* Function             */
 extern void draw__21dKankyo_vrkumo_PacketFv();
+/* Function             */
 extern void __dt__12EF_ODOUR_EFFFv();
+/* ReturnFunction       */
 extern void __ct__12EF_ODOUR_EFFFv();
+/* Function             */
 extern void draw__20dKankyo_odour_PacketFv();
+/* Function             */
 extern void __dt__10EF_MUD_EFFFv();
+/* ReturnFunction       */
 extern void __ct__10EF_MUD_EFFFv();
+/* Function             */
 extern void draw__18dKankyo_mud_PacketFv();
+/* Function             */
 extern void __dt__11EF_EVIL_EFFFv();
+/* ReturnFunction       */
 extern void __ct__11EF_EVIL_EFFFv();
+/* Function             */
 extern void draw__19dKankyo_evil_PacketFv();
+/* Function             */
 extern void dKyw_drawSun__Fi();
+/* Function             */
 extern void dKyw_Sun_Draw__Fv();
+/* Function             */
 extern void dKyw_drawSunlenz__Fi();
+/* Function             */
 extern void dKyw_Sunlenz_Draw__Fv();
+/* Function             */
 extern void dKyw_drawRain__Fi();
+/* Function             */
 extern void dKyw_Rain_Draw__Fv();
+/* Function             */
 extern void dKyw_drawSnow__Fi();
+/* Function             */
 extern void dKyw_Snow_Draw__Fv();
+/* Function             */
 extern void dKyw_drawStar__Fi();
+/* Function             */
 extern void dKyw_Star_Draw__Fv();
+/* Function             */
 extern void dKyw_drawHousi__Fi();
+/* Function             */
 extern void dKyw_Housi_Draw__Fv();
+/* Function             */
 extern void dKyw_drawCloud__Fi();
+/* Function             */
 extern void dKyw_Cloud_Draw__Fv();
+/* Function             */
 extern void dKyw_drawVrkumo__Fi();
+/* Function             */
 extern void dKyw_Vrkumo_Draw__Fv();
+/* Function             */
 extern void dKyw_shstar_packet__Fi();
+/* Function             */
 extern void dKyw_shstar_Draw__Fv();
+/* Function             */
 extern void dKyw_odour_packet__Fi();
+/* Function             */
 extern void dKyw_Odour_Draw__Fv();
+/* Function             */
 extern void dKyw_mud_packet__Fi();
+/* Function             */
 extern void dKyw_mud_Draw__Fv();
+/* Function             */
 extern void dKyw_evil_packet__Fi();
+/* Function             */
 extern void dKyw_evil_Draw__Fv();
+/* Function             */
+extern void dKyw_wether_init__Fv();
+/* Function             */
+extern void dKyw_wether_init2__Fv();
+/* Function             */
+extern void dKyw_wether_delete__Fv();
+/* Function             */
 extern void __dt__19dKankyo_evil_PacketFv();
+/* Function             */
 extern void __dt__18dKankyo_mud_PacketFv();
+/* Function             */
 extern void __dt__20dKankyo_odour_PacketFv();
+/* Function             */
 extern void __dt__20dKankyo_cloud_PacketFv();
+/* Function             */
 extern void __dt__20dKankyo_housi_PacketFv();
+/* Function             */
 extern void __dt__19dKankyo_star_PacketFv();
+/* Function             */
 extern void __dt__19dKankyo_snow_PacketFv();
+/* Function             */
 extern void __dt__19dKankyo_rain_PacketFv();
+/* Function             */
 extern void __dt__22dKankyo_sunlenz_PacketFv();
+/* Function             */
 extern void __dt__18dKankyo_sun_PacketFv();
+/* Function             */
+extern void dKyw_wether_delete2__Fv();
+/* Function             */
 extern void __dt__21dKankyo_vrkumo_PacketFv();
+/* Function             */
 extern void wether_move_thunder__Fv();
+/* Function             */
+extern void dKyw_wether_move__Fv();
+/* Function             */
 extern void wether_move_sun__Fv();
+/* Function             */
 extern void wether_move_rain__Fv();
+/* Function             */
 extern void wether_move_snow__Fv();
+/* Function             */
 extern void wether_move_star__Fv();
+/* Function             */
 extern void wether_move_housi__Fv();
+/* Function             */
 extern void wether_move_odour__Fv();
+/* Function             */
 extern void wether_move_moya__Fv();
+/* Function             */
 extern void wether_move_vrkumo__Fv();
+/* Function             */
 extern void wether_move_mud__Fv();
+/* Function             */
 extern void wether_move_evil__Fv();
+/* Function             */
+extern void dKyw_wether_move_draw__Fv();
+/* Function             */
+extern void dKyw_wether_move_draw2__Fv();
+/* Function             */
+extern void dKyw_wether_draw__Fv();
+/* Function             */
+extern void dKyw_wether_draw2__Fv();
+/* Function             */
+extern void dKyw_wether_proc__Fv();
+/* Function             */
 extern void dKyw_wind_init__Fv();
+/* Function             */
+extern void dKyw_wind_set__Fv();
+/* Function             */
 extern void dKyw_get_wind_vec__Fv();
+/* Function             */
 extern void dKyw_get_wind_pow__Fv();
+/* Function             */
+extern void dKyw_get_wind_vecpow__Fv();
+/* Function             */
+extern void dKyw_plight_collision_set__FP4cXyzssfffff();
+/* Function             */
 extern void squal_proc__Fv();
+/* Function             */
 extern void dKyw_pntwind_init__Fv();
+/* Function             */
 extern void pntwind_set__FP14WIND_INFLUENCE();
+/* Function             */
+extern void dKyw_pntwind_set__FP14WIND_INFLUENCE();
+/* Function             */
 extern void dKyw_pntlight_set__FP14WIND_INFLUENCE();
+/* Function             */
 extern void dKyw_pntwind_cut__FP14WIND_INFLUENCE();
+/* Function             */
 extern void pntwind_get_info__FP4cXyzP4cXyzPfUc();
+/* Function             */
 extern void dKyw_pntwind_get_info__FP4cXyzP4cXyzPf();
+/* Function             */
+extern void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf();
+/* Function             */
+extern void dKyw_pntwind_get_vecpow__FP4cXyz();
+/* Function             */
+extern void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
+/* Function             */
+extern void dKyw_get_AllWind_vecpow__FP4cXyz();
+/* Function             */
+extern void dKyw_custom_windpower__Ff();
+/* Function             */
+extern void dKyw_evt_wind_set__Fss();
+/* Function             */
+extern void dKyw_evt_wind_set_go__Fv();
+/* Function             */
+extern void dKyw_rain_set__Fi();
+/* Function             */
 extern void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+/* Function             */
 extern void dKyr_lenzflare_move__Fv();
+/* Function             */
 extern void dKyr_sun_move__Fv();
+/* Function             */
 extern void dKyr_rain_init__Fv();
+/* Function             */
 extern void dKyr_rain_move__Fv();
+/* Function             */
 extern void dKyr_housi_move__Fv();
+/* Function             */
 extern void dKyr_snow_init__Fv();
+/* Function             */
 extern void dKyr_snow_move__Fv();
+/* Function             */
 extern void dKyr_star_init__Fv();
+/* Function             */
 extern void dKyr_star_move__Fv();
+/* Function             */
 extern void cloud_shadow_move__Fv();
+/* Function             */
 extern void vrkumo_move__Fv();
+/* Function             */
 extern void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc();
+/* Function             */
 extern void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc();
+/* Function             */
 extern void dKyr_drawRain__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_drawSibuki__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_drawHousi__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_drawSnow__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_drawStar__FPA4_fPPUc();
+/* Function             */
 extern void drawCloudShadow__FPA4_fPPUc();
+/* Function             */
 extern void drawVrkumo__FPA4_fR8_GXColorPPUc();
+/* Function             */
 extern void dKyr_thunder_init__Fv();
+/* Function             */
 extern void dKyr_thunder_move__Fv();
+/* ReturnFunction       */
 extern void dKyr_shstar_init__Fv();
+/* ReturnFunction       */
 extern void dKyr_shstar_move__Fv();
+/* Function             */
 extern void dKyr_odour_init__Fv();
+/* Function             */
 extern void dKyr_odour_move__Fv();
+/* Function             */
 extern void dKyr_odour_draw__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_mud_init__Fv();
+/* Function             */
 extern void dKyr_mud_move__Fv();
+/* Function             */
 extern void dKyr_mud_draw__FPA4_fPPUc();
+/* Function             */
 extern void dKyr_evil_init__Fv();
+/* Function             */
 extern void dKyr_evil_move__Fv();
+/* Function             */
 extern void dKyr_evil_draw__FPA4_fPPUc();
+/* Function             */
 extern void getDaytime__18dScnKy_env_light_cFv();
+/* Function             */
 extern void dKy_undwater_filter_draw__Fv();
+/* Function             */
 extern void dKy_get_dayofweek__Fv();
+/* Function             */
 extern void dKy_darkworld_check__Fv();
+/* Function             */
 extern void __pl__4cXyzCFRC3Vec();
+/* Function             */
 extern void __ml__4cXyzCFf();
+/* Function             */
 extern void normZP__4cXyzCFv();
+/* Function             */
 extern void __ne__4cXyzCFRC3Vec();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void cLib_addCalc__FPfffff();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void startRainSe__10Z2EnvSeMgrFlSc();
+/* Function             */
 extern void initStrongWindSe__10Z2EnvSeMgrFv();
+/* Function             */
 extern void setWindDirection__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startStrongWindSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void __nw__FUli();
+/* Function             */
 extern void __dl__FPv();
-extern int entry__9J3DPacketFP13J3DDrawBuffer();
+/* ReturnIntegerFunction */
+extern  int entry__9J3DPacketFP13J3DDrawBuffer();
+/* Function             */
 extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void memcmp();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_kankyo_wether__stringBase0[344];
-SECTION_DATA extern const void* __vt__19dKankyo_evil_Packet[5];
-SECTION_DATA extern const void* __vt__18dKankyo_mud_Packet[5];
-SECTION_DATA extern const void* __vt__20dKankyo_odour_Packet[5];
-SECTION_DATA extern const void* __vt__21dKankyo_vrkumo_Packet[5];
-SECTION_DATA extern const void* __vt__20dKankyo_housi_Packet[5];
-SECTION_DATA extern const void* __vt__20dKankyo_cloud_Packet[5];
-SECTION_DATA extern const void* __vt__19dKankyo_star_Packet[5];
-SECTION_DATA extern const void* __vt__19dKankyo_snow_Packet[5];
-SECTION_DATA extern const void* __vt__19dKankyo_rain_Packet[5];
-SECTION_DATA extern const void* __vt__22dKankyo_sunlenz_Packet[5];
-SECTION_DATA extern const void* __vt__18dKankyo_sun_Packet[6];
-SECTION_DATA extern const void* __vt__9J3DPacket[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dKankyo_evil_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dKankyo_mud_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20dKankyo_odour_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21dKankyo_vrkumo_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20dKankyo_housi_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20dKankyo_cloud_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dKankyo_star_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dKankyo_snow_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dKankyo_rain_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dKankyo_sunlenz_Packet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dKankyo_sun_Packet[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9J3DPacket[5];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_kankyo_wether__LIT_4965[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80424944[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Zero__4cXyz[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450EE0[8];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4378[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4379;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4610;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4611;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4668;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4669;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kankyo_wether__LIT_4671;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4761;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4762;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4763;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_4764[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4765;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4766;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4767;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_4768[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_4769[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_4770[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4771;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_4772;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5181;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5182;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5183;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5184[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5185[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5186[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_5187[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5188[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_5189;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_5190;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_5191[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo_wether__LIT_5192;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_5193[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5361;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5362[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5363[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5364[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5524;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5525;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5526[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5527[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5528[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5529;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5530[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_5531[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo_wether__LIT_5630[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5855[8];
 }
 
@@ -353,40 +661,46 @@ SECTION_SDATA2 extern u8 LIT_5855[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037A368 0153 .rodata    @stringBase0                                                 */
-const char* const stringBase_8037A368 = "F_SP113";
-const char* const stringBase_8037A370 = "D_MN07";
-const char* const stringBase_8037A377 = "F_SP200";
-const char* const stringBase_8037A37F = "D_MN09";
-const char* const stringBase_8037A386 = "D_MN09A";
-const char* const stringBase_8037A38E = "F_moon.bti";
-const char* const stringBase_8037A399 = "F_moon_A.bti";
-const char* const stringBase_8037A3A6 = "F_moon_A_A00.bti";
-const char* const stringBase_8037A3B7 = "F_moon_A_A01.bti";
-const char* const stringBase_8037A3C8 = "F_moon_A_A02.bti";
-const char* const stringBase_8037A3D9 = "F_moon_A_A03.bti";
-const char* const stringBase_8037A3EA = "Always";
-const char* const stringBase_8037A3F1 = "R_SP127";
-const char* const stringBase_8037A3F9 = "F_SP121";
-const char* const stringBase_8037A401 = "F_SP122";
-const char* const stringBase_8037A409 = "F_SP128";
-const char* const stringBase_8037A411 = "D_MN08";
-const char* const stringBase_8037A418 = "D_MN08A";
-const char* const stringBase_8037A420 = "D_MN08B";
-const char* const stringBase_8037A428 = "D_MN08C";
-const char* const stringBase_8037A430 = "F_SP115";
-const char* const stringBase_8037A438 = "F_SP108";
-const char* const stringBase_8037A440 = "F_SP116";
-const char* const stringBase_8037A448 = "momiji64s3tc.bti";
-const char* const stringBase_8037A459 = "sakura32ia4.bti";
-const char* const stringBase_8037A469 = "F_SP114";
-const char* const stringBase_8037A471 = "D_MN09B";
-const char* const stringBase_8037A479 = "F_SP104";
-const char* const stringBase_8037A481 = "cloudtx_01.bti";
-const char* const stringBase_8037A490 = "cloudtx_02.bti";
-const char* const stringBase_8037A49F = "cloudtx_03.bti";
-const char* const stringBase_8037A4AE = "Name";
-const char* const stringBase_8037A4B3 = "F_SP127";
+/* 8037A368-8037A4C0 0153 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037A368 = "F_SP113";
+SECTION_DEAD const char* const stringBase_8037A370 = "D_MN07";
+SECTION_DEAD const char* const stringBase_8037A377 = "F_SP200";
+SECTION_DEAD const char* const stringBase_8037A37F = "D_MN09";
+SECTION_DEAD const char* const stringBase_8037A386 = "D_MN09A";
+SECTION_DEAD const char* const stringBase_8037A38E = "F_moon.bti";
+SECTION_DEAD const char* const stringBase_8037A399 = "F_moon_A.bti";
+SECTION_DEAD const char* const stringBase_8037A3A6 = "F_moon_A_A00.bti";
+SECTION_DEAD const char* const stringBase_8037A3B7 = "F_moon_A_A01.bti";
+SECTION_DEAD const char* const stringBase_8037A3C8 = "F_moon_A_A02.bti";
+SECTION_DEAD const char* const stringBase_8037A3D9 = "F_moon_A_A03.bti";
+SECTION_DEAD const char* const stringBase_8037A3EA = "Always";
+SECTION_DEAD const char* const stringBase_8037A3F1 = "R_SP127";
+SECTION_DEAD const char* const stringBase_8037A3F9 = "F_SP121";
+SECTION_DEAD const char* const stringBase_8037A401 = "F_SP122";
+SECTION_DEAD const char* const stringBase_8037A409 = "F_SP128";
+SECTION_DEAD const char* const stringBase_8037A411 = "D_MN08";
+SECTION_DEAD const char* const stringBase_8037A418 = "D_MN08A";
+SECTION_DEAD const char* const stringBase_8037A420 = "D_MN08B";
+SECTION_DEAD const char* const stringBase_8037A428 = "D_MN08C";
+SECTION_DEAD const char* const stringBase_8037A430 = "F_SP115";
+SECTION_DEAD const char* const stringBase_8037A438 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8037A440 = "F_SP116";
+SECTION_DEAD const char* const stringBase_8037A448 = "momiji64s3tc.bti";
+SECTION_DEAD const char* const stringBase_8037A459 = "sakura32ia4.bti";
+SECTION_DEAD const char* const stringBase_8037A469 = "F_SP114";
+SECTION_DEAD const char* const stringBase_8037A471 = "D_MN09B";
+SECTION_DEAD const char* const stringBase_8037A479 = "F_SP104";
+SECTION_DEAD const char* const stringBase_8037A481 = "cloudtx_01.bti";
+SECTION_DEAD const char* const stringBase_8037A490 = "cloudtx_02.bti";
+SECTION_DEAD const char* const stringBase_8037A49F = "cloudtx_03.bti";
+SECTION_DEAD const char* const stringBase_8037A4AE = "Name";
+SECTION_DEAD const char* const stringBase_8037A4B3 = "F_SP127";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A4BB = "\0\0\0\0";
+#pragma pop
 }
 
 
@@ -395,88 +709,88 @@ const char* const stringBase_8037A4B3 = "F_SP127";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A9AC0 0014 .data      __vt__19dKankyo_evil_Packet                                  */
-SECTION_DATA const  void* __vt__19dKankyo_evil_Packet[5] = {
+/* 803A9AC0-803A9AD4 0014 .data      __vt__19dKankyo_evil_Packet                                  VTableData */
+SECTION_DATA void* __vt__19dKankyo_evil_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__19dKankyo_evil_PacketFv,
 	(void*)__dt__19dKankyo_evil_PacketFv,
 };
-/* 803A9AD4 0014 .data      __vt__18dKankyo_mud_Packet                                   */
-SECTION_DATA const  void* __vt__18dKankyo_mud_Packet[5] = {
+/* 803A9AD4-803A9AE8 0014 .data      __vt__18dKankyo_mud_Packet                                   VTableData */
+SECTION_DATA void* __vt__18dKankyo_mud_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__18dKankyo_mud_PacketFv,
 	(void*)__dt__18dKankyo_mud_PacketFv,
 };
-/* 803A9AE8 0014 .data      __vt__20dKankyo_odour_Packet                                 */
-SECTION_DATA const  void* __vt__20dKankyo_odour_Packet[5] = {
+/* 803A9AE8-803A9AFC 0014 .data      __vt__20dKankyo_odour_Packet                                 VTableData */
+SECTION_DATA void* __vt__20dKankyo_odour_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__20dKankyo_odour_PacketFv,
 	(void*)__dt__20dKankyo_odour_PacketFv,
 };
-/* 803A9AFC 0014 .data      __vt__21dKankyo_vrkumo_Packet                                */
-SECTION_DATA const  void* __vt__21dKankyo_vrkumo_Packet[5] = {
+/* 803A9AFC-803A9B10 0014 .data      __vt__21dKankyo_vrkumo_Packet                                VTableData */
+SECTION_DATA void* __vt__21dKankyo_vrkumo_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__21dKankyo_vrkumo_PacketFv,
 	(void*)__dt__21dKankyo_vrkumo_PacketFv,
 };
-/* 803A9B10 0014 .data      __vt__20dKankyo_housi_Packet                                 */
-SECTION_DATA const  void* __vt__20dKankyo_housi_Packet[5] = {
+/* 803A9B10-803A9B24 0014 .data      __vt__20dKankyo_housi_Packet                                 VTableData */
+SECTION_DATA void* __vt__20dKankyo_housi_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__20dKankyo_housi_PacketFv,
 	(void*)__dt__20dKankyo_housi_PacketFv,
 };
-/* 803A9B24 0014 .data      __vt__20dKankyo_cloud_Packet                                 */
-SECTION_DATA const  void* __vt__20dKankyo_cloud_Packet[5] = {
+/* 803A9B24-803A9B38 0014 .data      __vt__20dKankyo_cloud_Packet                                 VTableData */
+SECTION_DATA void* __vt__20dKankyo_cloud_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__20dKankyo_cloud_PacketFv,
 	(void*)__dt__20dKankyo_cloud_PacketFv,
 };
-/* 803A9B38 0014 .data      __vt__19dKankyo_star_Packet                                  */
-SECTION_DATA const  void* __vt__19dKankyo_star_Packet[5] = {
+/* 803A9B38-803A9B4C 0014 .data      __vt__19dKankyo_star_Packet                                  VTableData */
+SECTION_DATA void* __vt__19dKankyo_star_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__19dKankyo_star_PacketFv,
 	(void*)__dt__19dKankyo_star_PacketFv,
 };
-/* 803A9B4C 0014 .data      __vt__19dKankyo_snow_Packet                                  */
-SECTION_DATA const  void* __vt__19dKankyo_snow_Packet[5] = {
+/* 803A9B4C-803A9B60 0014 .data      __vt__19dKankyo_snow_Packet                                  VTableData */
+SECTION_DATA void* __vt__19dKankyo_snow_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__19dKankyo_snow_PacketFv,
 	(void*)__dt__19dKankyo_snow_PacketFv,
 };
-/* 803A9B60 0014 .data      __vt__19dKankyo_rain_Packet                                  */
-SECTION_DATA const  void* __vt__19dKankyo_rain_Packet[5] = {
+/* 803A9B60-803A9B74 0014 .data      __vt__19dKankyo_rain_Packet                                  VTableData */
+SECTION_DATA void* __vt__19dKankyo_rain_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__19dKankyo_rain_PacketFv,
 	(void*)__dt__19dKankyo_rain_PacketFv,
 };
-/* 803A9B74 0014 .data      __vt__22dKankyo_sunlenz_Packet                               */
-SECTION_DATA const  void* __vt__22dKankyo_sunlenz_Packet[5] = {
+/* 803A9B74-803A9B88 0014 .data      __vt__22dKankyo_sunlenz_Packet                               VTableData */
+SECTION_DATA void* __vt__22dKankyo_sunlenz_Packet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__22dKankyo_sunlenz_PacketFv,
 	(void*)__dt__22dKankyo_sunlenz_PacketFv,
 };
-/* 803A9B88 0014 .data      __vt__18dKankyo_sun_Packet                                   */
-SECTION_DATA const  void* __vt__18dKankyo_sun_Packet[6] = {
+/* 803A9B88-803A9BA0 0014 .data      __vt__18dKankyo_sun_Packet                                   VTableData */
+SECTION_DATA void* __vt__18dKankyo_sun_Packet[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
@@ -493,165 +807,165 @@ SECTION_DATA const  void* __vt__18dKankyo_sun_Packet[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804520E0 0004 .sdata2    @4378                                                        */
+/* 804520E0-804520E4 0004 .sdata2    @4378                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4378[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804520E4 0004 .sdata2    @4379                                                        */
+/* 804520E4-804520E8 0004 .sdata2    @4379                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4379 = 1.000000f;
-/* 804520E8 0004 .sdata2    @4610                                                        */
+/* 804520E8-804520EC 0004 .sdata2    @4610                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4610 = 255.000000f;
-/* 804520EC 0004 .sdata2    @4611                                                        */
+/* 804520EC-804520F0 0004 .sdata2    @4611                                                        Float32Data */
 // 0x4e6e6b28
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4611 = 1000000000.000000f;
-/* 804520F0 0004 .sdata2    @4668                                                        */
+/* 804520F0-804520F4 0004 .sdata2    @4668                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4668 = -1.000000f;
-/* 804520F4 0004 .sdata2    @4669                                                        */
+/* 804520F4-804520F8 0004 .sdata2    @4669                                                        Float32Data */
 // 0x42fa0000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4669 = 125.000000f;
-/* 804520F8 0008 .sdata2    @4671                                                        */
+/* 804520F8-80452100 0008 .sdata2    @4671                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_kankyo_wether__LIT_4671 = 4503601774854144.000000;
-/* 80452100 0004 .sdata2    @4761                                                        */
+/* 80452100-80452104 0004 .sdata2    @4761                                                        Float32Data */
 // 0x43a50000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4761 = 330.000000f;
-/* 80452104 0004 .sdata2    @4762                                                        */
+/* 80452104-80452108 0004 .sdata2    @4762                                                        Float32Data */
 // 0x42340000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4762 = 45.000000f;
-/* 80452108 0004 .sdata2    @4763                                                        */
+/* 80452108-8045210C 0004 .sdata2    @4763                                                        Float32Data */
 // 0x438e8000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4763 = 285.000000f;
-/* 8045210C 0004 .sdata2    @4764                                                        */
+/* 8045210C-80452110 0004 .sdata2    @4764                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_4764[4] = {
 	0x3C, 0xB6, 0x0B, 0x61,
 };
-/* 80452110 0004 .sdata2    @4765                                                        */
+/* 80452110-80452114 0004 .sdata2    @4765                                                        Float32Data */
 // 0x42960000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4765 = 75.000000f;
-/* 80452114 0004 .sdata2    @4766                                                        */
+/* 80452114-80452118 0004 .sdata2    @4766                                                        Fraction32Data */
 // 0.033333335f 0x3d088889
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4766 = 1.000000f / 30.000000f;
-/* 80452118 0004 .sdata2    @4767                                                        */
+/* 80452118-8045211C 0004 .sdata2    @4767                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4767 = 0.500000f;
-/* 8045211C 0004 .sdata2    @4768                                                        */
+/* 8045211C-80452120 0004 .sdata2    @4768                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_4768[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80452120 0004 .sdata2    @4769                                                        */
+/* 80452120-80452124 0004 .sdata2    @4769                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_4769[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
-/* 80452124 0004 .sdata2    @4770                                                        */
+/* 80452124-80452128 0004 .sdata2    @4770                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_4770[4] = {
 	0x35, 0x86, 0x37, 0xBD,
 };
-/* 80452128 0004 .sdata2    @4771                                                        */
+/* 80452128-8045212C 0004 .sdata2    @4771                                                        Float32Data */
 // 0x44960000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4771 = 1200.000000f;
-/* 8045212C 0004 .sdata2    @4772                                                        */
+/* 8045212C-80452130 0004 .sdata2    @4772                                                        Float32Data */
 // 0x43fa0000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_4772 = 500.000000f;
-/* 80452130 0004 .sdata2    @5181                                                        */
+/* 80452130-80452134 0004 .sdata2    @5181                                                        Float32Data */
 // 0xc82fc800
 SECTION_SDATA2 f32 LIT_5181 = -180000.000000f;
-/* 80452134 0004 .sdata2    @5182                                                        */
+/* 80452134-80452138 0004 .sdata2    @5182                                                        Float32Data */
 // 0x443b8000
 SECTION_SDATA2 f32 LIT_5182 = 750.000000f;
-/* 80452138 0004 .sdata2    @5183                                                        */
+/* 80452138-8045213C 0004 .sdata2    @5183                                                        Float32Data */
 // 0xc8435000
 SECTION_SDATA2 f32 LIT_5183 = -200000.000000f;
-/* 8045213C 0004 .sdata2    @5184                                                        */
+/* 8045213C-80452140 0004 .sdata2    @5184                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5184[4] = {
 	0x3B, 0x44, 0x9B, 0xA6,
 };
-/* 80452140 0004 .sdata2    @5185                                                        */
+/* 80452140-80452144 0004 .sdata2    @5185                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5185[4] = {
 	0x33, 0xD6, 0xBF, 0x95,
 };
-/* 80452144 0004 .sdata2    @5186                                                        */
+/* 80452144-80452148 0004 .sdata2    @5186                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5186[4] = {
 	0x3D, 0xA3, 0xD7, 0x0A,
 };
-/* 80452148 0004 .sdata2    @5187                                                        */
+/* 80452148-8045214C 0004 .sdata2    @5187                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_5187[4] = {
 	0x3B, 0x03, 0x12, 0x6F,
 };
-/* 8045214C 0004 .sdata2    @5188                                                        */
+/* 8045214C-80452150 0004 .sdata2    @5188                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5188[4] = {
 	0x32, 0x2B, 0xCC, 0x77,
 };
-/* 80452150 0004 .sdata2    @5189                                                        */
+/* 80452150-80452154 0004 .sdata2    @5189                                                        Float32Data */
 // 0x40c00000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_5189 = 6.000000f;
-/* 80452154 0004 .sdata2    @5190                                                        */
+/* 80452154-80452158 0004 .sdata2    @5190                                                        Float32Data */
 // 0x42600000
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_5190 = 56.000000f;
-/* 80452158 0004 .sdata2    @5191                                                        */
+/* 80452158-8045215C 0004 .sdata2    @5191                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_5191[4] = {
 	0x3E, 0x99, 0x99, 0x9A,
 };
-/* 8045215C 0004 .sdata2    @5192                                                        */
+/* 8045215C-80452160 0004 .sdata2    @5192                                                        Float32Data */
 // 0x46bffe00
 SECTION_SDATA2 f32 d_d_kankyo_wether__LIT_5192 = 24575.000000f;
-/* 80452160 0004 .sdata2    @5193                                                        */
+/* 80452160-80452164 0004 .sdata2    @5193                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_5193[4] = {
 	0x3A, 0xB7, 0x80, 0x34,
 };
-/* 80452164 0004 .sdata2    @5361                                                        */
+/* 80452164-80452168 0004 .sdata2    @5361                                                        Float32Data */
 // 0x42f00000
 SECTION_SDATA2 f32 LIT_5361 = 120.000000f;
-/* 80452168 0004 .sdata2    @5362                                                        */
+/* 80452168-8045216C 0004 .sdata2    @5362                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5362[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 8045216C 0004 .sdata2    @5363                                                        */
+/* 8045216C-80452170 0004 .sdata2    @5363                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5363[4] = {
 	0x3B, 0x23, 0xD7, 0x0A,
 };
-/* 80452170 0004 .sdata2    @5364                                                        */
+/* 80452170-80452178 0004 .sdata2    @5364                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5364[8] = {
 	0x37, 0x27, 0xC5, 0xAC,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80452178 0008 .sdata2    @5524                                                        */
+/* 80452178-80452180 0008 .sdata2    @5524                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 LIT_5524 = 0.500000;
-/* 80452180 0008 .sdata2    @5525                                                        */
+/* 80452180-80452188 0008 .sdata2    @5525                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_5525 = 3.000000;
-/* 80452188 0008 .sdata2    @5526                                                        */
+/* 80452188-80452190 0008 .sdata2    @5526                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5526[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80452190 0004 .sdata2    @5527                                                        */
+/* 80452190-80452194 0004 .sdata2    @5527                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5527[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80452194 0004 .sdata2    @5528                                                        */
+/* 80452194-80452198 0004 .sdata2    @5528                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5528[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 80452198 0004 .sdata2    @5529                                                        */
+/* 80452198-8045219C 0004 .sdata2    @5529                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 LIT_5529 = 2.000000f;
-/* 8045219C 0004 .sdata2    @5530                                                        */
+/* 8045219C-804521A0 0004 .sdata2    @5530                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5530[4] = {
 	0x3A, 0x83, 0x12, 0x6F,
 };
-/* 804521A0 0004 .sdata2    @5531                                                        */
+/* 804521A0-804521A4 0004 .sdata2    @5531                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_5531[4] = {
 	0x3B, 0xA3, 0xD7, 0x0A,
 };
-/* 804521A4 0004 .sdata2    @5630                                                        */
+/* 804521A4-804521A8 0004 .sdata2    @5630                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo_wether__LIT_5630[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 804521A8 0004 .sdata2    @5855                                                        */
+/* 804521A8-804521B0 0004 .sdata2    @5855                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5855[8] = {
 	0x40, 0xA0, 0x00, 0x00,
 	/* padding */
@@ -665,9 +979,9 @@ SECTION_SDATA2 u8 LIT_5855[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80424938 000C .bss       @4965                                                        */
+/* 80424938-80424944 000C .bss       @4965                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_kankyo_wether__LIT_4965[12];
-/* 80424944 000C .bss       r09o$4964                                                    */
+/* 80424944-80424950 000C .bss       r09o$4964                                                    ZeroInitializedData */
 SECTION_BSS u8 data_80424944[12];
 }
 
@@ -677,7 +991,7 @@ SECTION_BSS u8 data_80424944[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80056AA8 0050 .text      dKyw_setDrawPacketList__FP9J3DPacketi                        */
+/* 80056AA8-80056AF8 0050 .text      dKyw_setDrawPacketList__FP9J3DPacketi                        Function */
 }
 
 #pragma push
@@ -690,7 +1004,7 @@ asm void dKyw_setDrawPacketList(J3DPacket*, int) {
 #pragma pop
 
 extern "C" {
-/* 80056AF8 0050 .text      dKyw_setDrawPacketListIndScreen__FP9J3DPacketi               */
+/* 80056AF8-80056B48 0050 .text      dKyw_setDrawPacketListIndScreen__FP9J3DPacketi               Function */
 }
 
 #pragma push
@@ -703,7 +1017,7 @@ asm void dKyw_setDrawPacketListIndScreen(J3DPacket*, int) {
 #pragma pop
 
 extern "C" {
-/* 80056B48 0090 .text      dKyw_setDrawPacketListSky__FP9J3DPacketi                     */
+/* 80056B48-80056BD8 0090 .text      dKyw_setDrawPacketListSky__FP9J3DPacketi                     Function */
 }
 
 #pragma push
@@ -716,7 +1030,7 @@ asm void dKyw_setDrawPacketListSky(J3DPacket*, int) {
 #pragma pop
 
 extern "C" {
-/* 80056BD8 0088 .text      dKyw_setDrawPacketListXluBg__FP9J3DPacketi                   */
+/* 80056BD8-80056C60 0088 .text      dKyw_setDrawPacketListXluBg__FP9J3DPacketi                   Function */
 }
 
 #pragma push
@@ -729,7 +1043,7 @@ asm void dKyw_setDrawPacketListXluBg(J3DPacket*, int) {
 #pragma pop
 
 extern "C" {
-/* 80056C60 0038 .text      draw__18dKankyo_sun_PacketFv                                 */
+/* 80056C60-80056C98 0038 .text      draw__18dKankyo_sun_PacketFv                                 Function */
 // dKankyo_sun_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -740,7 +1054,7 @@ asm void draw__18dKankyo_sun_PacketFv() {
 }
 #pragma pop
 
-/* 80056C98 0038 .text      draw__22dKankyo_sunlenz_PacketFv                             */
+/* 80056C98-80056CD0 0038 .text      draw__22dKankyo_sunlenz_PacketFv                             Function */
 // dKankyo_sunlenz_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -751,7 +1065,7 @@ asm void draw__22dKankyo_sunlenz_PacketFv() {
 }
 #pragma pop
 
-/* 80056CD0 003C .text      __dt__8RAIN_EFFFv                                            */
+/* 80056CD0-80056D0C 003C .text      __dt__8RAIN_EFFFv                                            Function */
 // RAIN_EFF::~RAIN_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -762,13 +1076,13 @@ asm void __dt__8RAIN_EFFFv() {
 }
 #pragma pop
 
-/* 80056D0C 0004 .text      __ct__8RAIN_EFFFv                                            */
+/* 80056D0C-80056D10 0004 .text      __ct__8RAIN_EFFFv                                            ReturnFunction */
 // RAIN_EFF::RAIN_EFF(void)
 void __ct__8RAIN_EFFFv() {
 	return;
 }
 
-/* 80056D10 0048 .text      draw__19dKankyo_rain_PacketFv                                */
+/* 80056D10-80056D58 0048 .text      draw__19dKankyo_rain_PacketFv                                Function */
 // dKankyo_rain_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -779,7 +1093,7 @@ asm void draw__19dKankyo_rain_PacketFv() {
 }
 #pragma pop
 
-/* 80056D58 003C .text      __dt__8SNOW_EFFFv                                            */
+/* 80056D58-80056D94 003C .text      __dt__8SNOW_EFFFv                                            Function */
 // SNOW_EFF::~SNOW_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -790,13 +1104,13 @@ asm void __dt__8SNOW_EFFFv() {
 }
 #pragma pop
 
-/* 80056D94 0004 .text      __ct__8SNOW_EFFFv                                            */
+/* 80056D94-80056D98 0004 .text      __ct__8SNOW_EFFFv                                            ReturnFunction */
 // SNOW_EFF::SNOW_EFF(void)
 void __ct__8SNOW_EFFFv() {
 	return;
 }
 
-/* 80056D98 0030 .text      draw__19dKankyo_snow_PacketFv                                */
+/* 80056D98-80056DC8 0030 .text      draw__19dKankyo_snow_PacketFv                                Function */
 // dKankyo_snow_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -807,7 +1121,7 @@ asm void draw__19dKankyo_snow_PacketFv() {
 }
 #pragma pop
 
-/* 80056DC8 003C .text      __dt__8STAR_EFFFv                                            */
+/* 80056DC8-80056E04 003C .text      __dt__8STAR_EFFFv                                            Function */
 // STAR_EFF::~STAR_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -818,13 +1132,13 @@ asm void __dt__8STAR_EFFFv() {
 }
 #pragma pop
 
-/* 80056E04 0004 .text      __ct__8STAR_EFFFv                                            */
+/* 80056E04-80056E08 0004 .text      __ct__8STAR_EFFFv                                            ReturnFunction */
 // STAR_EFF::STAR_EFF(void)
 void __ct__8STAR_EFFFv() {
 	return;
 }
 
-/* 80056E08 0030 .text      draw__19dKankyo_star_PacketFv                                */
+/* 80056E08-80056E38 0030 .text      draw__19dKankyo_star_PacketFv                                Function */
 // dKankyo_star_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -835,7 +1149,7 @@ asm void draw__19dKankyo_star_PacketFv() {
 }
 #pragma pop
 
-/* 80056E38 003C .text      __dt__9CLOUD_EFFFv                                           */
+/* 80056E38-80056E74 003C .text      __dt__9CLOUD_EFFFv                                           Function */
 // CLOUD_EFF::~CLOUD_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -846,13 +1160,13 @@ asm void __dt__9CLOUD_EFFFv() {
 }
 #pragma pop
 
-/* 80056E74 0004 .text      __ct__9CLOUD_EFFFv                                           */
+/* 80056E74-80056E78 0004 .text      __ct__9CLOUD_EFFFv                                           ReturnFunction */
 // CLOUD_EFF::CLOUD_EFF(void)
 void __ct__9CLOUD_EFFFv() {
 	return;
 }
 
-/* 80056E78 0030 .text      draw__20dKankyo_cloud_PacketFv                               */
+/* 80056E78-80056EA8 0030 .text      draw__20dKankyo_cloud_PacketFv                               Function */
 // dKankyo_cloud_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -863,7 +1177,7 @@ asm void draw__20dKankyo_cloud_PacketFv() {
 }
 #pragma pop
 
-/* 80056EA8 003C .text      __dt__9HOUSI_EFFFv                                           */
+/* 80056EA8-80056EE4 003C .text      __dt__9HOUSI_EFFFv                                           Function */
 // HOUSI_EFF::~HOUSI_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -874,13 +1188,13 @@ asm void __dt__9HOUSI_EFFFv() {
 }
 #pragma pop
 
-/* 80056EE4 0004 .text      __ct__9HOUSI_EFFFv                                           */
+/* 80056EE4-80056EE8 0004 .text      __ct__9HOUSI_EFFFv                                           ReturnFunction */
 // HOUSI_EFF::HOUSI_EFF(void)
 void __ct__9HOUSI_EFFFv() {
 	return;
 }
 
-/* 80056EE8 0030 .text      draw__20dKankyo_housi_PacketFv                               */
+/* 80056EE8-80056F18 0030 .text      draw__20dKankyo_housi_PacketFv                               Function */
 // dKankyo_housi_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -891,7 +1205,7 @@ asm void draw__20dKankyo_housi_PacketFv() {
 }
 #pragma pop
 
-/* 80056F18 003C .text      __dt__10VRKUMO_EFFFv                                         */
+/* 80056F18-80056F54 003C .text      __dt__10VRKUMO_EFFFv                                         Function */
 // VRKUMO_EFF::~VRKUMO_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -902,13 +1216,13 @@ asm void __dt__10VRKUMO_EFFFv() {
 }
 #pragma pop
 
-/* 80056F54 0004 .text      __ct__10VRKUMO_EFFFv                                         */
+/* 80056F54-80056F58 0004 .text      __ct__10VRKUMO_EFFFv                                         ReturnFunction */
 // VRKUMO_EFF::VRKUMO_EFF(void)
 void __ct__10VRKUMO_EFFFv() {
 	return;
 }
 
-/* 80056F58 0034 .text      draw__21dKankyo_vrkumo_PacketFv                              */
+/* 80056F58-80056F8C 0034 .text      draw__21dKankyo_vrkumo_PacketFv                              Function */
 // dKankyo_vrkumo_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -919,7 +1233,7 @@ asm void draw__21dKankyo_vrkumo_PacketFv() {
 }
 #pragma pop
 
-/* 80056F8C 003C .text      __dt__12EF_ODOUR_EFFFv                                       */
+/* 80056F8C-80056FC8 003C .text      __dt__12EF_ODOUR_EFFFv                                       Function */
 // EF_ODOUR_EFF::~EF_ODOUR_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -930,13 +1244,13 @@ asm void __dt__12EF_ODOUR_EFFFv() {
 }
 #pragma pop
 
-/* 80056FC8 0004 .text      __ct__12EF_ODOUR_EFFFv                                       */
+/* 80056FC8-80056FCC 0004 .text      __ct__12EF_ODOUR_EFFFv                                       ReturnFunction */
 // EF_ODOUR_EFF::EF_ODOUR_EFF(void)
 void __ct__12EF_ODOUR_EFFFv() {
 	return;
 }
 
-/* 80056FCC 0030 .text      draw__20dKankyo_odour_PacketFv                               */
+/* 80056FCC-80056FFC 0030 .text      draw__20dKankyo_odour_PacketFv                               Function */
 // dKankyo_odour_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -947,7 +1261,7 @@ asm void draw__20dKankyo_odour_PacketFv() {
 }
 #pragma pop
 
-/* 80056FFC 003C .text      __dt__10EF_MUD_EFFFv                                         */
+/* 80056FFC-80057038 003C .text      __dt__10EF_MUD_EFFFv                                         Function */
 // EF_MUD_EFF::~EF_MUD_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -958,13 +1272,13 @@ asm void __dt__10EF_MUD_EFFFv() {
 }
 #pragma pop
 
-/* 80057038 0004 .text      __ct__10EF_MUD_EFFFv                                         */
+/* 80057038-8005703C 0004 .text      __ct__10EF_MUD_EFFFv                                         ReturnFunction */
 // EF_MUD_EFF::EF_MUD_EFF(void)
 void __ct__10EF_MUD_EFFFv() {
 	return;
 }
 
-/* 8005703C 0030 .text      draw__18dKankyo_mud_PacketFv                                 */
+/* 8005703C-8005706C 0030 .text      draw__18dKankyo_mud_PacketFv                                 Function */
 // dKankyo_mud_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -975,7 +1289,7 @@ asm void draw__18dKankyo_mud_PacketFv() {
 }
 #pragma pop
 
-/* 8005706C 003C .text      __dt__11EF_EVIL_EFFFv                                        */
+/* 8005706C-800570A8 003C .text      __dt__11EF_EVIL_EFFFv                                        Function */
 // EF_EVIL_EFF::~EF_EVIL_EFF(void)
 #pragma push
 #pragma optimization_level 0
@@ -986,13 +1300,13 @@ asm void __dt__11EF_EVIL_EFFFv() {
 }
 #pragma pop
 
-/* 800570A8 0004 .text      __ct__11EF_EVIL_EFFFv                                        */
+/* 800570A8-800570AC 0004 .text      __ct__11EF_EVIL_EFFFv                                        ReturnFunction */
 // EF_EVIL_EFF::EF_EVIL_EFF(void)
 void __ct__11EF_EVIL_EFFFv() {
 	return;
 }
 
-/* 800570AC 0030 .text      draw__19dKankyo_evil_PacketFv                                */
+/* 800570AC-800570DC 0030 .text      draw__19dKankyo_evil_PacketFv                                Function */
 // dKankyo_evil_Packet::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -1003,7 +1317,7 @@ asm void draw__19dKankyo_evil_PacketFv() {
 }
 #pragma pop
 
-/* 800570DC 0030 .text      dKyw_drawSun__Fi                                             */
+/* 800570DC-8005710C 0030 .text      dKyw_drawSun__Fi                                             Function */
 }
 
 #pragma push
@@ -1016,7 +1330,7 @@ asm void dKyw_drawSun(int) {
 #pragma pop
 
 extern "C" {
-/* 8005710C 0024 .text      dKyw_Sun_Draw__Fv                                            */
+/* 8005710C-80057130 0024 .text      dKyw_Sun_Draw__Fv                                            Function */
 }
 
 #pragma push
@@ -1029,7 +1343,7 @@ asm void dKyw_Sun_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057130 0044 .text      dKyw_drawSunlenz__Fi                                         */
+/* 80057130-80057174 0044 .text      dKyw_drawSunlenz__Fi                                         Function */
 }
 
 #pragma push
@@ -1042,7 +1356,7 @@ asm void dKyw_drawSunlenz(int) {
 #pragma pop
 
 extern "C" {
-/* 80057174 0024 .text      dKyw_Sunlenz_Draw__Fv                                        */
+/* 80057174-80057198 0024 .text      dKyw_Sunlenz_Draw__Fv                                        Function */
 }
 
 #pragma push
@@ -1055,7 +1369,7 @@ asm void dKyw_Sunlenz_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057198 0030 .text      dKyw_drawRain__Fi                                            */
+/* 80057198-800571C8 0030 .text      dKyw_drawRain__Fi                                            Function */
 }
 
 #pragma push
@@ -1068,7 +1382,7 @@ asm void dKyw_drawRain(int) {
 #pragma pop
 
 extern "C" {
-/* 800571C8 0024 .text      dKyw_Rain_Draw__Fv                                           */
+/* 800571C8-800571EC 0024 .text      dKyw_Rain_Draw__Fv                                           Function */
 }
 
 #pragma push
@@ -1081,7 +1395,7 @@ asm void dKyw_Rain_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 800571EC 0030 .text      dKyw_drawSnow__Fi                                            */
+/* 800571EC-8005721C 0030 .text      dKyw_drawSnow__Fi                                            Function */
 }
 
 #pragma push
@@ -1094,7 +1408,7 @@ asm void dKyw_drawSnow(int) {
 #pragma pop
 
 extern "C" {
-/* 8005721C 0024 .text      dKyw_Snow_Draw__Fv                                           */
+/* 8005721C-80057240 0024 .text      dKyw_Snow_Draw__Fv                                           Function */
 }
 
 #pragma push
@@ -1107,7 +1421,7 @@ asm void dKyw_Snow_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057240 0030 .text      dKyw_drawStar__Fi                                            */
+/* 80057240-80057270 0030 .text      dKyw_drawStar__Fi                                            Function */
 }
 
 #pragma push
@@ -1120,7 +1434,7 @@ asm void dKyw_drawStar(int) {
 #pragma pop
 
 extern "C" {
-/* 80057270 0024 .text      dKyw_Star_Draw__Fv                                           */
+/* 80057270-80057294 0024 .text      dKyw_Star_Draw__Fv                                           Function */
 }
 
 #pragma push
@@ -1133,7 +1447,7 @@ asm void dKyw_Star_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057294 0030 .text      dKyw_drawHousi__Fi                                           */
+/* 80057294-800572C4 0030 .text      dKyw_drawHousi__Fi                                           Function */
 }
 
 #pragma push
@@ -1146,7 +1460,7 @@ asm void dKyw_drawHousi(int) {
 #pragma pop
 
 extern "C" {
-/* 800572C4 0024 .text      dKyw_Housi_Draw__Fv                                          */
+/* 800572C4-800572E8 0024 .text      dKyw_Housi_Draw__Fv                                          Function */
 }
 
 #pragma push
@@ -1159,7 +1473,7 @@ asm void dKyw_Housi_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 800572E8 0030 .text      dKyw_drawCloud__Fi                                           */
+/* 800572E8-80057318 0030 .text      dKyw_drawCloud__Fi                                           Function */
 }
 
 #pragma push
@@ -1172,7 +1486,7 @@ asm void dKyw_drawCloud(int) {
 #pragma pop
 
 extern "C" {
-/* 80057318 0024 .text      dKyw_Cloud_Draw__Fv                                          */
+/* 80057318-8005733C 0024 .text      dKyw_Cloud_Draw__Fv                                          Function */
 }
 
 #pragma push
@@ -1185,7 +1499,7 @@ asm void dKyw_Cloud_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 8005733C 0030 .text      dKyw_drawVrkumo__Fi                                          */
+/* 8005733C-8005736C 0030 .text      dKyw_drawVrkumo__Fi                                          Function */
 }
 
 #pragma push
@@ -1198,7 +1512,7 @@ asm void dKyw_drawVrkumo(int) {
 #pragma pop
 
 extern "C" {
-/* 8005736C 0024 .text      dKyw_Vrkumo_Draw__Fv                                         */
+/* 8005736C-80057390 0024 .text      dKyw_Vrkumo_Draw__Fv                                         Function */
 }
 
 #pragma push
@@ -1211,7 +1525,7 @@ asm void dKyw_Vrkumo_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057390 0030 .text      dKyw_shstar_packet__Fi                                       */
+/* 80057390-800573C0 0030 .text      dKyw_shstar_packet__Fi                                       Function */
 }
 
 #pragma push
@@ -1224,7 +1538,7 @@ asm void dKyw_shstar_packet(int) {
 #pragma pop
 
 extern "C" {
-/* 800573C0 0024 .text      dKyw_shstar_Draw__Fv                                         */
+/* 800573C0-800573E4 0024 .text      dKyw_shstar_Draw__Fv                                         Function */
 }
 
 #pragma push
@@ -1237,7 +1551,7 @@ asm void dKyw_shstar_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 800573E4 0030 .text      dKyw_odour_packet__Fi                                        */
+/* 800573E4-80057414 0030 .text      dKyw_odour_packet__Fi                                        Function */
 }
 
 #pragma push
@@ -1250,7 +1564,7 @@ asm void dKyw_odour_packet(int) {
 #pragma pop
 
 extern "C" {
-/* 80057414 0024 .text      dKyw_Odour_Draw__Fv                                          */
+/* 80057414-80057438 0024 .text      dKyw_Odour_Draw__Fv                                          Function */
 }
 
 #pragma push
@@ -1263,7 +1577,7 @@ asm void dKyw_Odour_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 80057438 0030 .text      dKyw_mud_packet__Fi                                          */
+/* 80057438-80057468 0030 .text      dKyw_mud_packet__Fi                                          Function */
 }
 
 #pragma push
@@ -1276,7 +1590,7 @@ asm void dKyw_mud_packet(int) {
 #pragma pop
 
 extern "C" {
-/* 80057468 0024 .text      dKyw_mud_Draw__Fv                                            */
+/* 80057468-8005748C 0024 .text      dKyw_mud_Draw__Fv                                            Function */
 }
 
 #pragma push
@@ -1289,7 +1603,7 @@ asm void dKyw_mud_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 8005748C 0030 .text      dKyw_evil_packet__Fi                                         */
+/* 8005748C-800574BC 0030 .text      dKyw_evil_packet__Fi                                         Function */
 }
 
 #pragma push
@@ -1302,7 +1616,7 @@ asm void dKyw_evil_packet(int) {
 #pragma pop
 
 extern "C" {
-/* 800574BC 0024 .text      dKyw_evil_Draw__Fv                                           */
+/* 800574BC-800574E0 0024 .text      dKyw_evil_Draw__Fv                                           Function */
 }
 
 #pragma push
@@ -1315,7 +1629,7 @@ asm void dKyw_evil_Draw(void) {
 #pragma pop
 
 extern "C" {
-/* 800574E0 050C .text      dKyw_wether_init__Fv                                         */
+/* 800574E0-800579EC 050C .text      dKyw_wether_init__Fv                                         Function */
 }
 
 #pragma push
@@ -1328,7 +1642,7 @@ asm void dKyw_wether_init(void) {
 #pragma pop
 
 extern "C" {
-/* 800579EC 0018 .text      dKyw_wether_init2__Fv                                        */
+/* 800579EC-80057A04 0018 .text      dKyw_wether_init2__Fv                                        Function */
 }
 
 #pragma push
@@ -1341,7 +1655,7 @@ asm void dKyw_wether_init2(void) {
 #pragma pop
 
 extern "C" {
-/* 80057A04 0280 .text      dKyw_wether_delete__Fv                                       */
+/* 80057A04-80057C84 0280 .text      dKyw_wether_delete__Fv                                       Function */
 }
 
 #pragma push
@@ -1354,7 +1668,7 @@ asm void dKyw_wether_delete(void) {
 #pragma pop
 
 extern "C" {
-/* 80057C84 0084 .text      __dt__19dKankyo_evil_PacketFv                                */
+/* 80057C84-80057D08 0084 .text      __dt__19dKankyo_evil_PacketFv                                Function */
 // dKankyo_evil_Packet::~dKankyo_evil_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1365,7 +1679,7 @@ asm void __dt__19dKankyo_evil_PacketFv() {
 }
 #pragma pop
 
-/* 80057D08 0084 .text      __dt__18dKankyo_mud_PacketFv                                 */
+/* 80057D08-80057D8C 0084 .text      __dt__18dKankyo_mud_PacketFv                                 Function */
 // dKankyo_mud_Packet::~dKankyo_mud_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1376,7 +1690,7 @@ asm void __dt__18dKankyo_mud_PacketFv() {
 }
 #pragma pop
 
-/* 80057D8C 0084 .text      __dt__20dKankyo_odour_PacketFv                               */
+/* 80057D8C-80057E10 0084 .text      __dt__20dKankyo_odour_PacketFv                               Function */
 // dKankyo_odour_Packet::~dKankyo_odour_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1387,7 +1701,7 @@ asm void __dt__20dKankyo_odour_PacketFv() {
 }
 #pragma pop
 
-/* 80057E10 0084 .text      __dt__20dKankyo_cloud_PacketFv                               */
+/* 80057E10-80057E94 0084 .text      __dt__20dKankyo_cloud_PacketFv                               Function */
 // dKankyo_cloud_Packet::~dKankyo_cloud_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1398,7 +1712,7 @@ asm void __dt__20dKankyo_cloud_PacketFv() {
 }
 #pragma pop
 
-/* 80057E94 0084 .text      __dt__20dKankyo_housi_PacketFv                               */
+/* 80057E94-80057F18 0084 .text      __dt__20dKankyo_housi_PacketFv                               Function */
 // dKankyo_housi_Packet::~dKankyo_housi_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1409,7 +1723,7 @@ asm void __dt__20dKankyo_housi_PacketFv() {
 }
 #pragma pop
 
-/* 80057F18 0084 .text      __dt__19dKankyo_star_PacketFv                                */
+/* 80057F18-80057F9C 0084 .text      __dt__19dKankyo_star_PacketFv                                Function */
 // dKankyo_star_Packet::~dKankyo_star_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1420,7 +1734,7 @@ asm void __dt__19dKankyo_star_PacketFv() {
 }
 #pragma pop
 
-/* 80057F9C 0084 .text      __dt__19dKankyo_snow_PacketFv                                */
+/* 80057F9C-80058020 0084 .text      __dt__19dKankyo_snow_PacketFv                                Function */
 // dKankyo_snow_Packet::~dKankyo_snow_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1431,7 +1745,7 @@ asm void __dt__19dKankyo_snow_PacketFv() {
 }
 #pragma pop
 
-/* 80058020 0084 .text      __dt__19dKankyo_rain_PacketFv                                */
+/* 80058020-800580A4 0084 .text      __dt__19dKankyo_rain_PacketFv                                Function */
 // dKankyo_rain_Packet::~dKankyo_rain_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1442,7 +1756,7 @@ asm void __dt__19dKankyo_rain_PacketFv() {
 }
 #pragma pop
 
-/* 800580A4 0084 .text      __dt__22dKankyo_sunlenz_PacketFv                             */
+/* 800580A4-80058128 0084 .text      __dt__22dKankyo_sunlenz_PacketFv                             Function */
 // dKankyo_sunlenz_Packet::~dKankyo_sunlenz_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1453,7 +1767,7 @@ asm void __dt__22dKankyo_sunlenz_PacketFv() {
 }
 #pragma pop
 
-/* 80058128 0084 .text      __dt__18dKankyo_sun_PacketFv                                 */
+/* 80058128-800581AC 0084 .text      __dt__18dKankyo_sun_PacketFv                                 Function */
 // dKankyo_sun_Packet::~dKankyo_sun_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1464,7 +1778,7 @@ asm void __dt__18dKankyo_sun_PacketFv() {
 }
 #pragma pop
 
-/* 800581AC 0060 .text      dKyw_wether_delete2__Fv                                      */
+/* 800581AC-8005820C 0060 .text      dKyw_wether_delete2__Fv                                      Function */
 }
 
 #pragma push
@@ -1477,7 +1791,7 @@ asm void dKyw_wether_delete2(void) {
 #pragma pop
 
 extern "C" {
-/* 8005820C 0084 .text      __dt__21dKankyo_vrkumo_PacketFv                              */
+/* 8005820C-80058290 0084 .text      __dt__21dKankyo_vrkumo_PacketFv                              Function */
 // dKankyo_vrkumo_Packet::~dKankyo_vrkumo_Packet(void)
 #pragma push
 #pragma optimization_level 0
@@ -1488,7 +1802,7 @@ asm void __dt__21dKankyo_vrkumo_PacketFv() {
 }
 #pragma pop
 
-/* 80058290 0068 .text      wether_move_thunder__Fv                                      */
+/* 80058290-800582F8 0068 .text      wether_move_thunder__Fv                                      Function */
 }
 
 #pragma push
@@ -1501,7 +1815,7 @@ asm void wether_move_thunder(void) {
 #pragma pop
 
 extern "C" {
-/* 800582F8 0020 .text      dKyw_wether_move__Fv                                         */
+/* 800582F8-80058318 0020 .text      dKyw_wether_move__Fv                                         Function */
 }
 
 #pragma push
@@ -1514,7 +1828,7 @@ asm void dKyw_wether_move(void) {
 #pragma pop
 
 extern "C" {
-/* 80058318 057C .text      wether_move_sun__Fv                                          */
+/* 80058318-80058894 057C .text      wether_move_sun__Fv                                          Function */
 }
 
 #pragma push
@@ -1527,7 +1841,7 @@ asm void wether_move_sun(void) {
 #pragma pop
 
 extern "C" {
-/* 80058894 026C .text      wether_move_rain__Fv                                         */
+/* 80058894-80058B00 026C .text      wether_move_rain__Fv                                         Function */
 }
 
 #pragma push
@@ -1540,7 +1854,7 @@ asm void wether_move_rain(void) {
 #pragma pop
 
 extern "C" {
-/* 80058B00 008C .text      wether_move_snow__Fv                                         */
+/* 80058B00-80058B8C 008C .text      wether_move_snow__Fv                                         Function */
 }
 
 #pragma push
@@ -1553,7 +1867,7 @@ asm void wether_move_snow(void) {
 #pragma pop
 
 extern "C" {
-/* 80058B8C 038C .text      wether_move_star__Fv                                         */
+/* 80058B8C-80058F18 038C .text      wether_move_star__Fv                                         Function */
 }
 
 #pragma push
@@ -1566,7 +1880,7 @@ asm void wether_move_star(void) {
 #pragma pop
 
 extern "C" {
-/* 80058F18 04C4 .text      wether_move_housi__Fv                                        */
+/* 80058F18-800593DC 04C4 .text      wether_move_housi__Fv                                        Function */
 }
 
 #pragma push
@@ -1579,7 +1893,7 @@ asm void wether_move_housi(void) {
 #pragma pop
 
 extern "C" {
-/* 800593DC 01A4 .text      wether_move_odour__Fv                                        */
+/* 800593DC-80059580 01A4 .text      wether_move_odour__Fv                                        Function */
 }
 
 #pragma push
@@ -1592,7 +1906,7 @@ asm void wether_move_odour(void) {
 #pragma pop
 
 extern "C" {
-/* 80059580 01A8 .text      wether_move_moya__Fv                                         */
+/* 80059580-80059728 01A8 .text      wether_move_moya__Fv                                         Function */
 }
 
 #pragma push
@@ -1605,7 +1919,7 @@ asm void wether_move_moya(void) {
 #pragma pop
 
 extern "C" {
-/* 80059728 0710 .text      wether_move_vrkumo__Fv                                       */
+/* 80059728-80059E38 0710 .text      wether_move_vrkumo__Fv                                       Function */
 }
 
 #pragma push
@@ -1618,7 +1932,7 @@ asm void wether_move_vrkumo(void) {
 #pragma pop
 
 extern "C" {
-/* 80059E38 013C .text      wether_move_mud__Fv                                          */
+/* 80059E38-80059F74 013C .text      wether_move_mud__Fv                                          Function */
 }
 
 #pragma push
@@ -1631,7 +1945,7 @@ asm void wether_move_mud(void) {
 #pragma pop
 
 extern "C" {
-/* 80059F74 0144 .text      wether_move_evil__Fv                                         */
+/* 80059F74-8005A0B8 0144 .text      wether_move_evil__Fv                                         Function */
 }
 
 #pragma push
@@ -1644,7 +1958,7 @@ asm void wether_move_evil(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A0B8 009C .text      dKyw_wether_move_draw__Fv                                    */
+/* 8005A0B8-8005A154 009C .text      dKyw_wether_move_draw__Fv                                    Function */
 }
 
 #pragma push
@@ -1657,7 +1971,7 @@ asm void dKyw_wether_move_draw(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A154 0020 .text      dKyw_wether_move_draw2__Fv                                   */
+/* 8005A154-8005A174 0020 .text      dKyw_wether_move_draw2__Fv                                   Function */
 }
 
 #pragma push
@@ -1670,7 +1984,7 @@ asm void dKyw_wether_move_draw2(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A174 0190 .text      dKyw_wether_draw__Fv                                         */
+/* 8005A174-8005A304 0190 .text      dKyw_wether_draw__Fv                                         Function */
 }
 
 #pragma push
@@ -1683,7 +1997,7 @@ asm void dKyw_wether_draw(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A304 003C .text      dKyw_wether_draw2__Fv                                        */
+/* 8005A304-8005A340 003C .text      dKyw_wether_draw2__Fv                                        Function */
 }
 
 #pragma push
@@ -1696,7 +2010,7 @@ asm void dKyw_wether_draw2(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A340 023C .text      dKyw_wether_proc__Fv                                         */
+/* 8005A340-8005A57C 023C .text      dKyw_wether_proc__Fv                                         Function */
 }
 
 #pragma push
@@ -1709,7 +2023,7 @@ asm void dKyw_wether_proc(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A57C 0044 .text      dKyw_wind_init__Fv                                           */
+/* 8005A57C-8005A5C0 0044 .text      dKyw_wind_init__Fv                                           Function */
 }
 
 #pragma push
@@ -1722,7 +2036,7 @@ asm void dKyw_wind_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8005A5C0 0520 .text      dKyw_wind_set__Fv                                            */
+/* 8005A5C0-8005AAE0 0520 .text      dKyw_wind_set__Fv                                            Function */
 }
 
 #pragma push
@@ -1735,7 +2049,7 @@ asm void dKyw_wind_set(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AAE0 0010 .text      dKyw_get_wind_vec__Fv                                        */
+/* 8005AAE0-8005AAF0 0010 .text      dKyw_get_wind_vec__Fv                                        Function */
 }
 
 #pragma push
@@ -1748,7 +2062,7 @@ asm void dKyw_get_wind_vec(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AAF0 0010 .text      dKyw_get_wind_pow__Fv                                        */
+/* 8005AAF0-8005AB00 0010 .text      dKyw_get_wind_pow__Fv                                        Function */
 }
 
 #pragma push
@@ -1761,7 +2075,7 @@ asm void dKyw_get_wind_pow(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AB00 0064 .text      dKyw_get_wind_vecpow__Fv                                     */
+/* 8005AB00-8005AB64 0064 .text      dKyw_get_wind_vecpow__Fv                                     Function */
 }
 
 #pragma push
@@ -1774,20 +2088,20 @@ asm void dKyw_get_wind_vecpow(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AB64 00CC .text      dKyw_plight_collision_set__FP4cXyzssfffff                    */
+/* 8005AB64-8005AC30 00CC .text      dKyw_plight_collision_set__FP4cXyzssfffff                    Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKyw_plight_collision_set(cXyz*, s16, s16, f32, f32, f32, f32, f32) {
+asm void dKyw_plight_collision_set(cXyz*, short, short, f32, f32, f32, f32, f32) {
 	nofralloc
 #include "_include/d/d_kankyo_wether/dKyw_plight_collision_set__FP4cXyzssfffff.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8005AC30 0114 .text      squal_proc__Fv                                               */
+/* 8005AC30-8005AD44 0114 .text      squal_proc__Fv                                               Function */
 }
 
 #pragma push
@@ -1800,7 +2114,7 @@ asm void squal_proc(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AD44 0054 .text      dKyw_pntwind_init__Fv                                        */
+/* 8005AD44-8005AD98 0054 .text      dKyw_pntwind_init__Fv                                        Function */
 }
 
 #pragma push
@@ -1813,7 +2127,7 @@ asm void dKyw_pntwind_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8005AD98 0064 .text      pntwind_set__FP14WIND_INFLUENCE                              */
+/* 8005AD98-8005ADFC 0064 .text      pntwind_set__FP14WIND_INFLUENCE                              Function */
 }
 
 #pragma push
@@ -1826,7 +2140,7 @@ asm void pntwind_set(WIND_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 8005ADFC 002C .text      dKyw_pntwind_set__FP14WIND_INFLUENCE                         */
+/* 8005ADFC-8005AE28 002C .text      dKyw_pntwind_set__FP14WIND_INFLUENCE                         Function */
 }
 
 #pragma push
@@ -1839,7 +2153,7 @@ asm void dKyw_pntwind_set(WIND_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 8005AE28 0030 .text      dKyw_pntlight_set__FP14WIND_INFLUENCE                        */
+/* 8005AE28-8005AE58 0030 .text      dKyw_pntlight_set__FP14WIND_INFLUENCE                        Function */
 }
 
 #pragma push
@@ -1852,7 +2166,7 @@ asm void dKyw_pntlight_set(WIND_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 8005AE58 0038 .text      dKyw_pntwind_cut__FP14WIND_INFLUENCE                         */
+/* 8005AE58-8005AE90 0038 .text      dKyw_pntwind_cut__FP14WIND_INFLUENCE                         Function */
 }
 
 #pragma push
@@ -1865,7 +2179,7 @@ asm void dKyw_pntwind_cut(WIND_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 8005AE90 03AC .text      pntwind_get_info__FP4cXyzP4cXyzPfUc                          */
+/* 8005AE90-8005B23C 03AC .text      pntwind_get_info__FP4cXyzP4cXyzPfUc                          Function */
 }
 
 #pragma push
@@ -1878,7 +2192,7 @@ asm void pntwind_get_info(cXyz*, cXyz*, f32*, u8) {
 #pragma pop
 
 extern "C" {
-/* 8005B23C 0024 .text      dKyw_pntwind_get_info__FP4cXyzP4cXyzPf                       */
+/* 8005B23C-8005B260 0024 .text      dKyw_pntwind_get_info__FP4cXyzP4cXyzPf                       Function */
 }
 
 #pragma push
@@ -1891,7 +2205,7 @@ asm void dKyw_pntwind_get_info(cXyz*, cXyz*, f32*) {
 #pragma pop
 
 extern "C" {
-/* 8005B260 0024 .text      dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf            */
+/* 8005B260-8005B284 0024 .text      dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf            Function */
 }
 
 #pragma push
@@ -1904,7 +2218,7 @@ asm void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*) {
 #pragma pop
 
 extern "C" {
-/* 8005B284 0074 .text      dKyw_pntwind_get_vecpow__FP4cXyz                             */
+/* 8005B284-8005B2F8 0074 .text      dKyw_pntwind_get_vecpow__FP4cXyz                             Function */
 }
 
 #pragma push
@@ -1917,7 +2231,7 @@ asm void dKyw_pntwind_get_vecpow(cXyz*) {
 #pragma pop
 
 extern "C" {
-/* 8005B2F8 0238 .text      dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf                        */
+/* 8005B2F8-8005B530 0238 .text      dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf                        Function */
 }
 
 #pragma push
@@ -1930,7 +2244,7 @@ asm void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*) {
 #pragma pop
 
 extern "C" {
-/* 8005B530 00DC .text      dKyw_get_AllWind_vecpow__FP4cXyz                             */
+/* 8005B530-8005B60C 00DC .text      dKyw_get_AllWind_vecpow__FP4cXyz                             Function */
 }
 
 #pragma push
@@ -1943,7 +2257,7 @@ asm void dKyw_get_AllWind_vecpow(cXyz*) {
 #pragma pop
 
 extern "C" {
-/* 8005B60C 0010 .text      dKyw_custom_windpower__Ff                                    */
+/* 8005B60C-8005B61C 0010 .text      dKyw_custom_windpower__Ff                                    Function */
 }
 
 #pragma push
@@ -1956,20 +2270,20 @@ asm void dKyw_custom_windpower(f32) {
 #pragma pop
 
 extern "C" {
-/* 8005B61C 001C .text      dKyw_evt_wind_set__Fss                                       */
+/* 8005B61C-8005B638 001C .text      dKyw_evt_wind_set__Fss                                       Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKyw_evt_wind_set(s16, s16) {
+asm void dKyw_evt_wind_set(short, short) {
 	nofralloc
 #include "_include/d/d_kankyo_wether/dKyw_evt_wind_set__Fss.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8005B638 0014 .text      dKyw_evt_wind_set_go__Fv                                     */
+/* 8005B638-8005B64C 0014 .text      dKyw_evt_wind_set_go__Fv                                     Function */
 }
 
 #pragma push
@@ -1982,7 +2296,7 @@ asm void dKyw_evt_wind_set_go(void) {
 #pragma pop
 
 extern "C" {
-/* 8005B64C 0014 .text      dKyw_rain_set__Fi                                            */
+/* 8005B64C-8005B660 0014 .text      dKyw_rain_set__Fi                                            Function */
 }
 
 #pragma push

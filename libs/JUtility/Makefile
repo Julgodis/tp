@@ -54,8 +54,9 @@ JUTILITY_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJUtility.a: dirs $(JUTILITY_A_O_FILES)
+$(BUILD_DIR)/libJUtility.a: $(JUTILITY_A_O_FILES)
 	$(LD) -xm l $(JUTILITY_A_LDFLAGS) -o $(BUILD_DIR)/libJUtility.a $(JUTILITY_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJUtility.a
 
 $(BUILD_DIR)/libs/JUtility/%.o: cpp/JUtility/%.cpp
 	mkdir -p $(@D)

@@ -9,133 +9,273 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PPCSync();
+/* Function             */
 extern void PPCMfhid2();
+/* Function             */
 extern void PPCMthid2();
+/* Function             */
 extern void PPCMtwpar();
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void OSRegisterResetFunction();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void VIGetTvFormat();
+/* Function             */
 extern void __GXDefaultTexRegionCallback();
+/* Function             */
 extern void __GXDefaultTlutRegionCallback();
+/* Function             */
+extern void __GXShutdown();
+/* Function             */
 extern void __GXInitRevisionBits();
+/* Function             */
+extern void GXInit();
+/* Function             */
 extern void __GXInitGX();
+/* Function             */
 extern void GXInitFifoBase();
+/* Function             */
 extern void GXSetCPUFifo();
+/* Function             */
 extern void GXSetGPFifo();
+/* Function             */
 extern void GXSetBreakPtCallback();
+/* Function             */
 extern void __GXFifoInit();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmtv();
+/* Function             */
 extern void GXSetArray();
+/* Function             */
 extern void GXInvalidateVtxCache();
+/* Function             */
 extern void GXSetTexCoordGen2();
+/* Function             */
 extern void GXSetNumTexGens();
+/* Function             */
 extern void GXSetMisc();
+/* Function             */
 extern void __GXAbort();
+/* Function             */
 extern void GXPokeAlphaMode();
+/* Function             */
 extern void GXPokeAlphaRead();
+/* Function             */
 extern void GXPokeAlphaUpdate();
+/* Function             */
 extern void GXPokeBlendMode();
+/* Function             */
 extern void GXPokeColorUpdate();
+/* Function             */
 extern void GXPokeDstAlpha();
+/* Function             */
 extern void GXPokeDither();
+/* Function             */
 extern void GXPokeZMode();
+/* Function             */
 extern void GXSetDrawSyncCallback();
+/* Function             */
 extern void GXSetDrawDoneCallback();
+/* Function             */
 extern void __GXPEInit();
+/* Function             */
 extern void GXSetLineWidth();
+/* Function             */
 extern void GXSetPointSize();
+/* Function             */
 extern void GXEnableTexOffsets();
+/* Function             */
 extern void GXSetCullMode();
+/* Function             */
 extern void GXSetCoPlanar();
+/* Function             */
 extern void GXSetDispCopySrc();
+/* Function             */
 extern void GXSetDispCopyDst();
+/* Function             */
 extern void GXSetDispCopyFrame2Field();
+/* Function             */
 extern void GXSetCopyClamp();
+/* Function             */
 extern void GXSetDispCopyYScale();
+/* Function             */
 extern void GXSetCopyClear();
+/* Function             */
 extern void GXSetCopyFilter();
+/* Function             */
 extern void GXSetDispCopyGamma();
+/* Function             */
 extern void GXClearBoundingBox();
+/* Function             */
 extern void GXSetChanAmbColor();
+/* Function             */
 extern void GXSetChanMatColor();
+/* Function             */
 extern void GXSetNumChans();
+/* Function             */
 extern void GXSetChanCtrl();
+/* Function             */
 extern void GXInitTexObj();
+/* FirstParamFunction   */
 extern u32 GXGetTexObjFmt(u8*);
+/* Function             */
 extern void GXGetTexObjMipMap();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXInitTexCacheRegion();
+/* Function             */
 extern void GXInitTlutRegion();
+/* Function             */
 extern void GXInvalidateTexAll();
+/* Function             */
 extern void GXSetTexRegionCallback();
+/* Function             */
 extern void GXSetTlutRegionCallback();
+/* Function             */
 extern void __GXSetTmemConfig();
+/* Function             */
 extern void GXSetIndTexCoordScale();
+/* Function             */
 extern void GXSetNumIndStages();
+/* Function             */
 extern void GXSetTevDirect();
+/* Function             */
 extern void __GXSetIndirectMask();
+/* Function             */
 extern void __GXFlushTextureState();
+/* Function             */
 extern void GXSetTevOp();
+/* Function             */
 extern void GXSetTevKColorSel();
+/* Function             */
 extern void GXSetTevKAlphaSel();
+/* Function             */
 extern void GXSetTevSwapMode();
+/* Function             */
 extern void GXSetTevSwapModeTable();
+/* Function             */
 extern void GXSetAlphaCompare();
+/* Function             */
 extern void GXSetZTexture();
+/* Function             */
 extern void GXSetTevOrder();
+/* Function             */
 extern void GXSetNumTevStages();
+/* Function             */
 extern void GXSetFog();
+/* Function             */
 extern void GXSetFogRangeAdj();
+/* Function             */
 extern void GXSetBlendMode();
+/* Function             */
 extern void GXSetColorUpdate();
+/* Function             */
 extern void GXSetAlphaUpdate();
+/* Function             */
 extern void GXSetZMode();
+/* Function             */
 extern void GXSetZCompLoc();
+/* Function             */
 extern void GXSetPixelFmt();
+/* Function             */
 extern void GXSetDither();
+/* Function             */
 extern void GXSetDstAlpha();
+/* Function             */
 extern void GXSetFieldMask();
+/* Function             */
 extern void GXSetFieldMode();
+/* Function             */
 extern void GXSetProjectionv();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXLoadNrmMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void GXLoadTexMtxImm();
+/* Function             */
 extern void GXSetViewport();
+/* Function             */
 extern void GXSetScissor();
+/* Function             */
 extern void GXSetScissorBoxOffset();
+/* Function             */
 extern void GXSetClipMode();
+/* Function             */
 extern void GXSetGPMetric();
+/* Function             */
 extern void GXClearGPMetric();
+/* InitializedData      */
 SECTION_DATA extern u8 GXInit__LIT_1[96];
+/* InitializedData      */
+SECTION_DATA extern u8 DefaultTexData[32];
+/* InitializedData      */
+SECTION_DATA extern u8 GXDefaultVATList[208];
+/* InitializedData      */
+SECTION_DATA extern u8 GXDefaultProjData[28];
+/* InitializedData      */
 SECTION_DATA extern u8 GXTexRegionAddrTable[192];
-SECTION_DATA extern u8 GXResetFuncInfo[20];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GXResetFuncInfo[5];
+/* InitializedData      */
 SECTION_DATA extern u8 GXNtsc480IntDf[60];
+/* InitializedData      */
 SECTION_DATA extern u8 GXMpal480IntDf[60];
+/* InitializedData      */
 SECTION_DATA extern u8 GXPal528IntDf[60];
+/* InitializedData      */
 SECTION_DATA extern u8 GXEurgb60Hz480IntDf[64];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 FifoObj[128];
-SECTION_SDATA extern u8 __GXVersion[8];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 gxData[1456];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __GXVersion[2];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __piReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __cpReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __peReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __memReg[4];
-SECTION_SBSS extern u8 data_80451930[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451930[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451938[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045193C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451940[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451944[4];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 GXInit__LIT_267;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 GXInit__LIT_268[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 GXInit__LIT_269[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 GXInit__LIT_270[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 GXInit__LIT_271[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_331;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_332[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_334;
 }
 
@@ -145,8 +285,8 @@ SECTION_SDATA2 extern f64 LIT_334;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D2040 0000 .data      ...data.0                                                    */
-/* 803D2040 0044 .data      @1                                                           */
+/* 803D2040-803D2040 0000 .data      ...data.0                                                    InitializedData */
+/* 803D2040-803D20A0 0044 .data      @1                                                           InitializedData */
 SECTION_DATA u8 GXInit__LIT_1[96] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x47, 0x58, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
@@ -157,12 +297,12 @@ SECTION_DATA u8 GXInit__LIT_1[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803D20A0 0020 .data      DefaultTexData                                               */
+/* 803D20A0-803D20C0 0020 .data      DefaultTexData                                               InitializedData */
 SECTION_DATA u8 DefaultTexData[32] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 803D20C0 00D0 .data      GXDefaultVATList                                             */
+/* 803D20C0-803D2190 00D0 .data      GXDefaultVATList                                             InitializedData */
 SECTION_DATA u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
@@ -178,12 +318,12 @@ SECTION_DATA u8 GXDefaultVATList[208] = {
 	0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803D2190 001C .data      GXDefaultProjData                                            */
+/* 803D2190-803D21AC 001C .data      GXDefaultProjData                                            InitializedData */
 SECTION_DATA u8 GXDefaultProjData[28] = {
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xBF, 0x80, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803D21AC 00C0 .data      GXTexRegionAddrTable                                         */
+/* 803D21AC-803D226C 00C0 .data      GXTexRegionAddrTable                                         InitializedData */
 SECTION_DATA u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00,
 	0x00, 0x04, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
@@ -198,11 +338,14 @@ SECTION_DATA u8 GXTexRegionAddrTable[192] = {
 	0x00, 0x08, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x03, 0x00, 0x00,
 	0x00, 0x08, 0x00, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x0A, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00,
 };
-/* 803D226C 0010 .data      GXResetFuncInfo                                              */
-SECTION_DATA u8 GXResetFuncInfo[20] = {
-	0x80, 0x35, 0x93, 0x3C, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803D226C-803D2280 0010 .data      GXResetFuncInfo                                              SymbolReferenceArrayData */
+SECTION_DATA void* GXResetFuncInfo[5] = {
+	(void*)__GXShutdown,
+	(void*)0x0000007F,
+	NULL,
+	NULL,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -212,11 +355,11 @@ SECTION_DATA u8 GXResetFuncInfo[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A78 0004 .sdata     __GXVersion                                                  */
-SECTION_SDATA u8 __GXVersion[8] = {
-	0x80, 0x3D, 0x20, 0x40,
+/* 80450A78-80450A80 0004 .sdata     __GXVersion                                                  SymbolReferenceArrayData */
+SECTION_SDATA void* __GXVersion[2] = {
+	(void*)&GXInit__LIT_1,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -226,37 +369,35 @@ SECTION_SDATA u8 __GXVersion[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456580 0004 .sdata2    __GXData                                                     */
-SECTION_SDATA2 u8 __GXData[4] = {
-	0x80, 0x44, 0xCE, 0x80,
-};
-/* 80456584 0004 .sdata2    @267                                                         */
+/* 80456580-80456584 0004 .sdata2    __GXData                                                     SymbolReferenceArrayData */
+SECTION_SDATA2 void* __GXData = (void*)&gxData;
+/* 80456584-80456588 0004 .sdata2    @267                                                         Float32Data */
 // 0x4b800000
 SECTION_SDATA2 f32 GXInit__LIT_267 = 16777216.000000f;
-/* 80456588 0004 .sdata2    @268                                                         */
+/* 80456588-8045658C 0004 .sdata2    @268                                                         InitializedData */
 SECTION_SDATA2 u8 GXInit__LIT_268[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045658C 0004 .sdata2    @269                                                         */
+/* 8045658C-80456590 0004 .sdata2    @269                                                         InitializedData */
 SECTION_SDATA2 u8 GXInit__LIT_269[4] = {
 	0x40, 0x40, 0x40, 0xFF,
 };
-/* 80456590 0004 .sdata2    @270                                                         */
+/* 80456590-80456594 0004 .sdata2    @270                                                         InitializedData */
 SECTION_SDATA2 u8 GXInit__LIT_270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456594 0004 .sdata2    @271                                                         */
+/* 80456594-80456598 0004 .sdata2    @271                                                         InitializedData */
 SECTION_SDATA2 u8 GXInit__LIT_271[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80456598 0004 .sdata2    @331                                                         */
+/* 80456598-8045659C 0004 .sdata2    @331                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_331 = 1.000000f;
-/* 8045659C 0004 .sdata2    @332                                                         */
+/* 8045659C-804565A0 0004 .sdata2    @332                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_332[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 804565A0 0008 .sdata2    @334                                                         */
+/* 804565A0-804565A8 0008 .sdata2    @334                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_334 = 4503599627370496.000000;
 }
@@ -267,10 +408,10 @@ SECTION_SDATA2 f64 LIT_334 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044CE00 0000 .bss       ...bss.0                                                     */
-/* 8044CE00 0080 .bss       FifoObj                                                      */
+/* 8044CE00-8044CE00 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8044CE00-8044CE80 0080 .bss       FifoObj                                                      ZeroInitializedData */
 SECTION_BSS u8 FifoObj[128];
-/* 8044CE80 05B0 .bss       gxData                                                       */
+/* 8044CE80-8044D430 05B0 .bss       gxData                                                       ZeroInitializedData */
 SECTION_BSS u8 gxData[1456];
 }
 
@@ -280,24 +421,23 @@ SECTION_BSS u8 gxData[1456];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451920 0004 .sbss      __piReg                                                      */
+/* 80451920-80451924 0004 .sbss      __piReg                                                      ZeroInitializedData */
 SECTION_SBSS u8 __piReg[4];
-/* 80451924 0004 .sbss      __cpReg                                                      */
+/* 80451924-80451928 0004 .sbss      __cpReg                                                      ZeroInitializedData */
 SECTION_SBSS u8 __cpReg[4];
-/* 80451928 0004 .sbss      __peReg                                                      */
+/* 80451928-8045192C 0004 .sbss      __peReg                                                      ZeroInitializedData */
 SECTION_SBSS u8 __peReg[4];
-/* 8045192C 0004 .sbss      __memReg                                                     */
+/* 8045192C-80451930 0004 .sbss      __memReg                                                     ZeroInitializedData */
 SECTION_SBSS u8 __memReg[4];
-/* 80451930 0004 .sbss      peCount$35                                                   */
-SECTION_SBSS u8 data_80451930[4];
-SECTION_SBSS u8 pad_80451934[4];
-/* 80451938 0004 .sbss      time$36                                                      */
+/* 80451930-80451938 0004 .sbss      peCount$35                                                   ZeroInitializedData */
+SECTION_SBSS u8 data_80451930[4 + 4 /* padding */];
+/* 80451938-8045193C 0004 .sbss      time$36                                                      ZeroInitializedData */
 SECTION_SBSS u8 data_80451938[4];
-/* 8045193C 0004 .sbss      data_8045193C                                                */
+/* 8045193C-80451940 0004 .sbss      data_8045193C                                                ZeroInitializedData */
 SECTION_SBSS u8 data_8045193C[4];
-/* 80451940 0004 .sbss      calledOnce$37                                                */
+/* 80451940-80451944 0004 .sbss      calledOnce$37                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451940[4];
-/* 80451944 0004 .sbss      resetFuncRegistered$145                                      */
+/* 80451944-80451948 0004 .sbss      resetFuncRegistered$145                                      ZeroInitializedData */
 SECTION_SBSS u8 data_80451944[4];
 }
 
@@ -307,7 +447,7 @@ SECTION_SBSS u8 data_80451944[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035921C 00FC .text      __GXDefaultTexRegionCallback                                 */
+/* 8035921C-80359318 00FC .text      __GXDefaultTexRegionCallback                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +457,7 @@ asm void __GXDefaultTexRegionCallback() {
 }
 #pragma pop
 
-/* 80359318 0024 .text      __GXDefaultTlutRegionCallback                                */
+/* 80359318-8035933C 0024 .text      __GXDefaultTlutRegionCallback                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +467,7 @@ asm void __GXDefaultTlutRegionCallback() {
 }
 #pragma pop
 
-/* 8035933C 0190 .text      __GXShutdown                                                 */
+/* 8035933C-803594CC 0190 .text      __GXShutdown                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +477,7 @@ asm void __GXShutdown() {
 }
 #pragma pop
 
-/* 803594CC 01A4 .text      __GXInitRevisionBits                                         */
+/* 803594CC-80359670 01A4 .text      __GXInitRevisionBits                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +487,7 @@ asm void __GXInitRevisionBits() {
 }
 #pragma pop
 
-/* 80359670 0600 .text      GXInit                                                       */
+/* 80359670-80359C70 0600 .text      GXInit                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +497,7 @@ asm void GXInit() {
 }
 #pragma pop
 
-/* 80359C70 0938 .text      __GXInitGX                                                   */
+/* 80359C70-8035A5A8 0938 .text      __GXInitGX                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,9 +9,21 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
+extern void CircleBufferReadBytes();
+/* Function             */
+extern void CircleBufferWriteBytes();
+/* Function             */
+extern void CircleBufferInitialize();
+/* FirstParamFunction   */
+extern u32 CBGetBytesAvailableForRead(u8*);
+/* Function             */
 extern void MWExitCriticalSection();
+/* Function             */
 extern void MWEnterCriticalSection();
+/* ReturnFunction       */
 extern void MWInitializeCriticalSection();
 }
 
@@ -21,7 +33,7 @@ extern void MWInitializeCriticalSection();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803726A0 0108 .text      CircleBufferReadBytes                                        */
+/* 803726A0-803727A8 0108 .text      CircleBufferReadBytes                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -31,7 +43,7 @@ asm void CircleBufferReadBytes() {
 }
 #pragma pop
 
-/* 803727A8 0108 .text      CircleBufferWriteBytes                                       */
+/* 803727A8-803728B0 0108 .text      CircleBufferWriteBytes                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +53,7 @@ asm void CircleBufferWriteBytes() {
 }
 #pragma pop
 
-/* 803728B0 0050 .text      CircleBufferInitialize                                       */
+/* 803728B0-80372900 0050 .text      CircleBufferInitialize                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +63,7 @@ asm void CircleBufferInitialize() {
 }
 #pragma pop
 
-/* 80372900 0008 .text      CBGetBytesAvailableForRead                                   */
+/* 80372900-80372908 0008 .text      CBGetBytesAvailableForRead                                   FirstParamFunction */
 u32 CBGetBytesAvailableForRead(u8* param0) {
 	return *(u32*)&param0[16]; /* param0->field_0x10 */
 }

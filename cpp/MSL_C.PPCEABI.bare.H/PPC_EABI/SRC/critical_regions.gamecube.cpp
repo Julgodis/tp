@@ -8,23 +8,32 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* ReturnFunction       */
+extern void __end_critical_region();
+/* ReturnFunction       */
+extern void __begin_critical_region();
+/* ReturnFunction       */
+extern void __kill_critical_regions();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80365464 0004 .text      __end_critical_region                                        */
+/* 80365464-80365468 0004 .text      __end_critical_region                                        ReturnFunction */
 void __end_critical_region() {
 	return;
 }
 
-/* 80365468 0004 .text      __begin_critical_region                                      */
+/* 80365468-8036546C 0004 .text      __begin_critical_region                                      ReturnFunction */
 void __begin_critical_region() {
 	return;
 }
 
-/* 8036546C 0004 .text      __kill_critical_regions                                      */
+/* 8036546C-80365470 0004 .text      __kill_critical_regions                                      ReturnFunction */
 void __kill_critical_regions() {
 	return;
 }

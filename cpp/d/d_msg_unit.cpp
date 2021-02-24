@@ -15,26 +15,51 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void getDaytime__18dScnKy_env_light_cFv();
+/* Function             */
 extern void __ct__10dMsgUnit_cFv();
+/* Function             */
 extern void __dt__10dMsgUnit_cFv();
+/* Function             */
 extern void setTag__10dMsgUnit_cFiiPcb();
+/* SInitFunction        */
+extern void __sinit_d_msg_unit_cpp();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcat();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_unit__stringBase0[32];
-SECTION_DATA extern const void* __vt__10dMsgUnit_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10dMsgUnit_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_BSS extern u8 LIT_3640[16];
-SECTION_SBSS extern u8 g_msg_unit[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_3640[12 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_msg_unit[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_804510D8[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_unit__LIT_3702;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_unit__LIT_3703;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_unit__LIT_3704[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3707;
 }
 
@@ -44,13 +69,19 @@ SECTION_SDATA2 extern f64 LIT_3707;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803996E8 001D .rodata    @stringBase0                                                 */
-const char* const stringBase_803996E8 = "%d";
-const char* const stringBase_803996EB = "%d-%d";
-const char* const stringBase_803996F1 = "%d:%02d";
-const char* const stringBase_803996F9 = "";
-const char* const stringBase_803996FA = "%d%s";
-const char* const stringBase_803996FF = "%d %s";
+/* 803996E8-80399708 001D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803996E8 = "%d";
+SECTION_DEAD const char* const stringBase_803996EB = "%d-%d";
+SECTION_DEAD const char* const stringBase_803996F1 = "%d:%02d";
+SECTION_DEAD const char* const stringBase_803996F9 = "";
+SECTION_DEAD const char* const stringBase_803996FA = "%d%s";
+SECTION_DEAD const char* const stringBase_803996FF = "%d %s";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399705 = "\0\0";
+#pragma pop
 }
 
 
@@ -59,8 +90,8 @@ const char* const stringBase_803996FF = "%d %s";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C0BF0 000C .data      __vt__10dMsgUnit_c                                           */
-SECTION_DATA const  void* __vt__10dMsgUnit_c[4] = {
+/* 803C0BF0-803C0C00 000C .data      __vt__10dMsgUnit_c                                           VTableData */
+SECTION_DATA void* __vt__10dMsgUnit_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10dMsgUnit_cFv,
@@ -75,19 +106,19 @@ SECTION_DATA const  void* __vt__10dMsgUnit_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454B40 0004 .sdata2    @3702                                                        */
+/* 80454B40-80454B44 0004 .sdata2    @3702                                                        Float32Data */
 // 0x49742400
 SECTION_SDATA2 f32 d_d_msg_unit__LIT_3702 = 1000000.000000f;
-/* 80454B44 0004 .sdata2    @3703                                                        */
+/* 80454B44-80454B48 0004 .sdata2    @3703                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 d_d_msg_unit__LIT_3703 = 60.000000f;
-/* 80454B48 0004 .sdata2    @3704                                                        */
+/* 80454B48-80454B50 0004 .sdata2    @3704                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_unit__LIT_3704[8] = {
 	0x41, 0x70, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454B50 0008 .sdata2    @3707                                                        */
+/* 80454B50-80454B58 0008 .sdata2    @3707                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_3707 = 4503601774854144.000000;
 }
@@ -98,8 +129,8 @@ SECTION_SDATA2 f64 LIT_3707 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804306B8 000C .bss       @3640                                                        */
-SECTION_BSS u8 LIT_3640[16];
+/* 804306B8-804306C8 000C .bss       @3640                                                        ZeroInitializedData */
+SECTION_BSS u8 LIT_3640[12 + 4 /* padding */];
 }
 
 
@@ -108,10 +139,9 @@ SECTION_BSS u8 LIT_3640[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510D0 0004 .sbss      g_msg_unit                                                   */
-SECTION_SBSS u8 g_msg_unit[4];
-SECTION_SBSS u8 pad_804510D4[4];
-/* 804510D8 0008 .sbss      data_804510D8                                                */
+/* 804510D0-804510D8 0004 .sbss      g_msg_unit                                                   ZeroInitializedData */
+SECTION_SBSS u8 g_msg_unit[4 + 4 /* padding */];
+/* 804510D8-804510E0 0008 .sbss      data_804510D8                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804510D8[8];
 }
 
@@ -121,7 +151,7 @@ SECTION_SBSS u8 data_804510D8[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80238C94 0010 .text      __ct__10dMsgUnit_cFv                                         */
+/* 80238C94-80238CA4 0010 .text      __ct__10dMsgUnit_cFv                                         Function */
 // dMsgUnit_c::dMsgUnit_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -132,7 +162,7 @@ asm void __ct__10dMsgUnit_cFv() {
 }
 #pragma pop
 
-/* 80238CA4 0048 .text      __dt__10dMsgUnit_cFv                                         */
+/* 80238CA4-80238CEC 0048 .text      __dt__10dMsgUnit_cFv                                         Function */
 // dMsgUnit_c::~dMsgUnit_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -143,8 +173,8 @@ asm void __dt__10dMsgUnit_cFv() {
 }
 #pragma pop
 
-/* 80238CEC 0390 .text      setTag__10dMsgUnit_cFiiPcb                                   */
-// dMsgUnit_c::setTag(int, int, s8*, bool)
+/* 80238CEC-8023907C 0390 .text      setTag__10dMsgUnit_cFiiPcb                                   Function */
+// dMsgUnit_c::setTag(int, int, char*, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +184,7 @@ asm void setTag__10dMsgUnit_cFiiPcb() {
 }
 #pragma pop
 
-/* 8023907C 0038 .text      __sinit_d_msg_unit_cpp                                       */
+/* 8023907C-802390B4 0038 .text      __sinit_d_msg_unit_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

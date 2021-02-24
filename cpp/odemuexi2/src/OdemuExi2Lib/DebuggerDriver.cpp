@@ -9,25 +9,58 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* ReturnFunction       */
+extern void DBClose();
+/* ReturnFunction       */
+extern void DBOpen();
+/* Function             */
+extern void DBWrite();
+/* Function             */
+extern void DBRead();
+/* Function             */
+extern void DBQueryData();
+/* Function             */
+extern void DBInitInterrupts();
+/* Function             */
+extern void DBInitComm();
+/* Function             */
 extern void DBGHandler();
+/* Function             */
 extern void MWCallback();
+/* Function             */
 extern void DBGReadStatus();
+/* Function             */
 extern void DBGWrite();
+/* Function             */
 extern void DBGRead();
+/* Function             */
 extern void DBGReadMailbox();
+/* Function             */
 extern void DBGEXIImm();
-SECTION_SDATA extern u8 data_80450AF0[16];
+/* Float32Data          */
+SECTION_SDATA extern f32 data_80450AF0;
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 MTRCallback[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 DBGCallback[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SendMailData[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 RecvDataLeng[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 pEXIInputFlag[4];
-SECTION_SBSS extern u8 data_804519E4[28];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_804519E4[4];
 }
 
 
@@ -36,18 +69,18 @@ SECTION_SBSS extern u8 data_804519E4[28];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804519D0 0004 .sbss      MTRCallback                                                  */
+/* 804519D0-804519D4 0004 .sbss      MTRCallback                                                  ZeroInitializedData */
 SECTION_SBSS u8 MTRCallback[4];
-/* 804519D4 0004 .sbss      DBGCallback                                                  */
+/* 804519D4-804519D8 0004 .sbss      DBGCallback                                                  ZeroInitializedData */
 SECTION_SBSS u8 DBGCallback[4];
-/* 804519D8 0004 .sbss      SendMailData                                                 */
+/* 804519D8-804519DC 0004 .sbss      SendMailData                                                 ZeroInitializedData */
 SECTION_SBSS u8 SendMailData[4];
-/* 804519DC 0004 .sbss      RecvDataLeng                                                 */
+/* 804519DC-804519E0 0004 .sbss      RecvDataLeng                                                 ZeroInitializedData */
 SECTION_SBSS u8 RecvDataLeng[4];
-/* 804519E0 0004 .sbss      pEXIInputFlag                                                */
+/* 804519E0-804519E4 0004 .sbss      pEXIInputFlag                                                ZeroInitializedData */
 SECTION_SBSS u8 pEXIInputFlag[4];
-/* 804519E4 001C .sbss      data_804519E4                                                */
-SECTION_SBSS u8 data_804519E4[28];
+/* 804519E4-804519E8 0004 .sbss      data_804519E4                                                ZeroInitializedData */
+SECTION_SBSS u8 data_804519E4[4];
 }
 
 
@@ -56,17 +89,17 @@ SECTION_SBSS u8 data_804519E4[28];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80372D2C 0004 .text      DBClose                                                      */
+/* 80372D2C-80372D30 0004 .text      DBClose                                                      ReturnFunction */
 void DBClose() {
 	return;
 }
 
-/* 80372D30 0004 .text      DBOpen                                                       */
+/* 80372D30-80372D34 0004 .text      DBOpen                                                       ReturnFunction */
 void DBOpen() {
 	return;
 }
 
-/* 80372D34 0260 .text      DBWrite                                                      */
+/* 80372D34-80372F94 0260 .text      DBWrite                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +109,7 @@ asm void DBWrite() {
 }
 #pragma pop
 
-/* 80372F94 008C .text      DBRead                                                       */
+/* 80372F94-80373020 008C .text      DBRead                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +119,7 @@ asm void DBRead() {
 }
 #pragma pop
 
-/* 80373020 009C .text      DBQueryData                                                  */
+/* 80373020-803730BC 009C .text      DBQueryData                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +129,7 @@ asm void DBQueryData() {
 }
 #pragma pop
 
-/* 803730BC 0054 .text      DBInitInterrupts                                             */
+/* 803730BC-80373110 0054 .text      DBInitInterrupts                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +139,7 @@ asm void DBInitInterrupts() {
 }
 #pragma pop
 
-/* 80373110 0078 .text      DBInitComm                                                   */
+/* 80373110-80373188 0078 .text      DBInitComm                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +149,7 @@ asm void DBInitComm() {
 }
 #pragma pop
 
-/* 80373188 0040 .text      DBGHandler                                                   */
+/* 80373188-803731C8 0040 .text      DBGHandler                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +159,7 @@ asm void DBGHandler() {
 }
 #pragma pop
 
-/* 803731C8 003C .text      MWCallback                                                   */
+/* 803731C8-80373204 003C .text      MWCallback                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +169,7 @@ asm void MWCallback() {
 }
 #pragma pop
 
-/* 80373204 00AC .text      DBGReadStatus                                                */
+/* 80373204-803732B0 00AC .text      DBGReadStatus                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,7 +179,7 @@ asm void DBGReadStatus() {
 }
 #pragma pop
 
-/* 803732B0 00DC .text      DBGWrite                                                     */
+/* 803732B0-8037338C 00DC .text      DBGWrite                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -156,7 +189,7 @@ asm void DBGWrite() {
 }
 #pragma pop
 
-/* 8037338C 00DC .text      DBGRead                                                      */
+/* 8037338C-80373468 00DC .text      DBGRead                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,7 +199,7 @@ asm void DBGRead() {
 }
 #pragma pop
 
-/* 80373468 00AC .text      DBGReadMailbox                                               */
+/* 80373468-80373514 00AC .text      DBGReadMailbox                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -176,7 +209,7 @@ asm void DBGReadMailbox() {
 }
 #pragma pop
 
-/* 80373514 0298 .text      DBGEXIImm                                                    */
+/* 80373514-803737AC 0298 .text      DBGEXIImm                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

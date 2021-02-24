@@ -18,8 +18,9 @@ JFRAMEWORK_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJFramework.a: dirs $(JFRAMEWORK_A_O_FILES)
+$(BUILD_DIR)/libJFramework.a: $(JFRAMEWORK_A_O_FILES)
 	$(LD) -xm l $(JFRAMEWORK_A_LDFLAGS) -o $(BUILD_DIR)/libJFramework.a $(JFRAMEWORK_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJFramework.a
 
 $(BUILD_DIR)/libs/JFramework/%.o: cpp/JFramework/%.cpp
 	mkdir -p $(@D)

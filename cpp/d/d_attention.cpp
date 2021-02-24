@@ -12,11 +12,11 @@
 // Additional Symbols:
 // 
 
-struct JKRSolidHeap;
 struct cXyz;
-struct J3DModelData;
-struct J3DModel;
 struct fopAc_ac_c;
+struct J3DModel;
+struct J3DModelData;
+struct JKRSolidHeap;
 
 extern void mDoExt_modelUpdateDL(J3DModel*); /* mDoExt_modelUpdateDL__FP8J3DModel */
 extern void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); /* mDoExt_createSolidHeapFromGameToCurrent__FUlUl */
@@ -29,184 +29,396 @@ extern void fopAcIt_Judge(void* (*)(void*, void*), void*); /* fopAcIt_Judge__FPF
 extern void fopAcM_searchActorDistance(const fopAc_ac_c*, const fopAc_ac_c*); /* fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c */
 extern void fpcSch_JudgeByID(void*, void*); /* fpcSch_JudgeByID__FPvPv */
 extern void check_event_condition(u32, u16); /* check_event_condition__FUlUs */
-extern void check_flontofplayer(u32, s16, s16); /* check_flontofplayer__FUlss */
-extern void distace_weight(f32, s16, f32); /* distace_weight__Ffsf */
-extern void distace_angle_adjust(f32, s16, f32); /* distace_angle_adjust__Ffsf */
-extern void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); /* check_distace__FP4cXyzsP4cXyzffff */
+extern void check_flontofplayer(u32, short, short); /* check_flontofplayer__FUlss */
+extern void distace_weight(f32, short, f32); /* distace_weight__Ffsf */
+extern void distace_angle_adjust(f32, short, f32); /* distace_angle_adjust__Ffsf */
+extern void check_distace(cXyz*, short, cXyz*, f32, f32, f32, f32); /* check_distace__FP4cXyzsP4cXyzffff */
 extern void select_attention(fopAc_ac_c*, void*); /* select_attention__FP10fopAc_ac_cPv */
 extern void sound_attention(fopAc_ac_c*, void*); /* sound_attention__FP10fopAc_ac_cPv */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void play__14mDoExt_baseAnmFv();
+/* Function             */
 extern void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+/* Function             */
 extern void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+/* Function             */
 extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+/* Function             */
 extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+/* Function             */
 extern void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+/* Function             */
 extern void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+/* Function             */
 extern void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+/* Function             */
 extern void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+/* Function             */
 extern void mDoExt_modelUpdateDL__FP8J3DModel();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_restoreCurrentHeap__Fv();
+/* Function             */
 extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+/* Function             */
 extern void fopAcIt_Executor__FPFPvPv_iPv();
+/* Function             */
 extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
+/* Function             */
 extern void fpcSch_JudgeByID__FPvPv();
+/* Function             */
 extern void __dt__10dAttList_cFv();
+/* ReturnFunction       */
 extern void __ct__10dAttList_cFv();
+/* Function             */
 extern void __dt__10dAttDraw_cFv();
+/* Function             */
 extern void __ct__10dAttDraw_cFv();
+/* Function             */
 extern void isSwitch__12dSv_danBit_cCFi();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void func_80070018();
+/* Function             */
 extern void __ct__11dAttParam_cFl();
+/* Function             */
 extern void __dt__11dAttParam_cFv();
+/* Function             */
 extern void __ct__15dAttDrawParam_cFv();
+/* Function             */
 extern void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo();
+/* Function             */
+extern void __ct__12dAttention_cFP10fopAc_ac_cUl();
+/* Function             */
+extern void __dt__12dAttention_cFv();
+/* Function             */
 extern void GetLockonList__12dAttention_cFl();
+/* Function             */
+extern void getActionBtnB__12dAttention_cFv();
+/* Function             */
+extern void getActionBtnXY__12dAttention_cFv();
+/* Function             */
 extern void chkAttMask__12dAttention_cFUlUl();
+/* Function             */
 extern void check_event_condition__FUlUs();
+/* Function             */
 extern void check_flontofplayer__FUlss();
+/* Function             */
 extern void distace_weight__Ffsf();
+/* Function             */
 extern void distace_angle_adjust__Ffsf();
+/* Function             */
 extern void check_distace__FP4cXyzsP4cXyzffff();
+/* Function             */
 extern void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl();
+/* Function             */
 extern void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl();
+/* Function             */
 extern void initList__12dAttention_cFUl();
+/* Function             */
 extern void select_attention__FP10fopAc_ac_cPv();
+/* Function             */
 extern void makeList__12dAttention_cFv();
+/* Function             */
 extern void setOwnerAttentionPos__12dAttention_cFv();
+/* Function             */
 extern void SelectAttention__12dAttention_cFP10fopAc_ac_c();
+/* Function             */
+extern void __dt__7cSGlobeFv();
+/* Function             */
 extern void sortList__12dAttention_cFv();
+/* Function             */
 extern void stockAttention__12dAttention_cFv();
+/* Function             */
 extern void nextAttention__12dAttention_cFv();
+/* Function             */
 extern void freeAttention__12dAttention_cFv();
+/* Function             */
 extern void chaseAttention__12dAttention_cFv();
+/* Function             */
 extern void EnemyDistance__12dAttention_cFP10fopAc_ac_c();
+/* Function             */
 extern void sound_attention__FP10fopAc_ac_cPv();
+/* Function             */
 extern void runSoundProc__12dAttention_cFv();
+/* Function             */
 extern void runDrawProc__12dAttention_cFv();
+/* ReturnFunction       */
 extern void runDebugDisp__12dAttention_cFv();
+/* Function             */
 extern void checkButton__12dAttention_cFv();
+/* Function             */
 extern void triggerProc__12dAttention_cFv();
+/* Function             */
 extern void lostCheck__12dAttention_cFv();
+/* Function             */
 extern void judgementStatus4Hold__12dAttention_cFv();
+/* Function             */
 extern void judgementStatus4Switch__12dAttention_cFv();
+/* Function             */
+extern void Run__12dAttention_cFv();
+/* Function             */
+extern void Draw__12dAttention_cFv();
+/* Function             */
 extern void lockSoundStart__12dAttention_cFUl();
+/* Function             */
 extern void setAnm__10dAttDraw_cFUcf();
+/* Function             */
 extern void setAlphaAnm__10dAttDraw_cFUcUc();
+/* Function             */
 extern void alphaAnm__10dAttDraw_cFv();
+/* ReturnFunction       */
+extern void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
+/* Function             */
 extern void draw__10dAttDraw_cFR4cXyzPA4_f();
+/* Function             */
 extern void LockonTarget__12dAttention_cFl();
+/* Function             */
+extern void LockonReleaseDistanse__12dAttention_cFv();
+/* Function             */
 extern void LockonTargetPId__12dAttention_cFl();
+/* Function             */
+extern void ActionTarget__12dAttention_cFl();
+/* Function             */
+extern void CheckObjectTarget__12dAttention_cFl();
+/* Function             */
 extern void LockonTruth__12dAttention_cFv();
+/* Function             */
+extern void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
+/* Function             */
 extern void getActor__10dAttList_cFv();
+/* Function             */
 extern void setActor__10dAttList_cFP10fopAc_ac_c();
+/* Function             */
 extern void getPId__10dAttHint_cFPv();
+/* Function             */
+extern void convPId__10dAttHint_cFUi();
+/* Function             */
+extern void request__10dAttHint_cFP10fopAc_ac_ci();
+/* Function             */
 extern void init__10dAttHint_cFv();
+/* Function             */
 extern void proc__10dAttHint_cFv();
+/* Function             */
+extern void convPId__11dAttCatch_cFUi();
+/* Function             */
 extern void init__11dAttCatch_cFv();
+/* Function             */
 extern void proc__11dAttCatch_cFv();
+/* Function             */
+extern void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+/* Function             */
+extern void convPId__10dAttLook_cFUi();
+/* Function             */
 extern void init__10dAttLook_cFv();
+/* Function             */
 extern void proc__10dAttLook_cFv();
+/* Function             */
+extern void request__10dAttLook_cFP10fopAc_ac_cfffsi();
+/* Function             */
 extern void __dt__15dAttDrawParam_cFv();
+/* SInitFunction        */
+extern void __sinit_d_attention_cpp();
+/* Function             */
 extern void getAttentionOffsetY__9daPy_py_cFv();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void __ct__7cSAngleFRC7cSAngle();
+/* Function             */
 extern void __ct__7cSAngleFs();
+/* Function             */
 extern void Inv__7cSAngleCFv();
+/* Function             */
 extern void __mi__7cSAngleCFs();
+/* Function             */
 extern void __ct__7cSGlobeFRC4cXyz();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* ReturnFunction       */
 extern void bgmNowBattle__8Z2SeqMgrFf();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void tan();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_attention__stringBase0[16];
-SECTION_DATA extern const void* __vt__25mDoExt_McaMorfCallBack1_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25mDoExt_McaMorfCallBack1_c[3];
+/* InitializedData      */
 SECTION_DATA extern u8 loc_type_tbl__12dAttention_c[12];
+/* InitializedData      */
 SECTION_DATA extern u8 act_type_tbl__12dAttention_c[20];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A9C18[36];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A9C3C[12];
-SECTION_DATA extern const void* __vt__19dAttDraw_CallBack_c[3];
-SECTION_DATA extern const void* __vt__15dAttDrawParam_c[3];
-SECTION_DATA extern const void* __vt__11dAttParam_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dAttDraw_CallBack_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dAttDrawParam_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dAttParam_c[4];
+/* InitializedData      */
 SECTION_DATA extern u8 dist_table__12dAttention_c[6552];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_attention__LIT_4093[12];
-SECTION_BSS extern u8 g_AttDwHIO[20];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_AttDwHIO[16 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* InitializedData      */
 SECTION_SDATA extern u8 loc_type_num__12dAttention_c[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 act_type_num__12dAttention_c[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 chk_type_tbl__12dAttention_c[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 chk_type_num__12dAttention_c[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450670[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450674[12];
+/* InitializedData      */
+SECTION_SDATA extern u8 data_80450680[8];
+/* InitializedData      */
+SECTION_SDATA extern u8 data_80450688[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_max[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450F58[8];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4061;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4062;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4063;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4064[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4065;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4066;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4067;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4068;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4069;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4070;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4071[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4072[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4073;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4084;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4085;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4092[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4448[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_attention__LIT_4450;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_attention__LIT_4514;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_attention__LIT_4515;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_4516[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4562;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_4563;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5137;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5138[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5668[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5670;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_attention__LIT_5784[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_attention__LIT_5785;
 }
 
@@ -216,9 +428,15 @@ SECTION_SDATA2 extern f32 d_d_attention__LIT_5785;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037A770 000F .rodata    @stringBase0                                                 */
-const char* const stringBase_8037A770 = "D_MN09B";
-const char* const stringBase_8037A778 = "Always";
+/* 8037A770-8037A780 000F .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037A770 = "D_MN09B";
+SECTION_DEAD const char* const stringBase_8037A778 = "Always";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A77F = "";
+#pragma pop
 }
 
 
@@ -227,39 +445,39 @@ const char* const stringBase_8037A778 = "Always";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A9BF8 000C .data      loc_type_tbl__12dAttention_c                                 */
+/* 803A9BF8-803A9C04 000C .data      loc_type_tbl__12dAttention_c                                 InitializedData */
 SECTION_DATA u8 loc_type_tbl__12dAttention_c[12] = {
 	0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x02, 0x00, 0x02, 0x00, 0x04,
 };
-/* 803A9C04 0014 .data      act_type_tbl__12dAttention_c                                 */
+/* 803A9C04-803A9C18 0014 .data      act_type_tbl__12dAttention_c                                 InitializedData */
 SECTION_DATA u8 act_type_tbl__12dAttention_c[20] = {
 	0x00, 0x03, 0x00, 0x08, 0x00, 0x04, 0x00, 0x10, 0x00, 0x05, 0x00, 0x20, 0x00, 0x06, 0x00, 0x40,
 	0x00, 0x07, 0x00, 0x80,
 };
-/* 803A9C18 0024 .data      ftp_table$4417                                               */
+/* 803A9C18-803A9C3C 0024 .data      ftp_table$4417                                               InitializedData */
 SECTION_DATA u8 data_803A9C18[36] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08,
 	0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80,
 	0x00, 0x00, 0x01, 0x00,
 };
-/* 803A9C3C 000C .data      ang_table2$4419                                              */
+/* 803A9C3C-803A9C48 000C .data      ang_table2$4419                                              InitializedData */
 SECTION_DATA u8 data_803A9C3C[12] = {
 	0x0A, 0xAA, 0x20, 0x00, 0x2A, 0xAA, 0x40, 0x00, 0x4E, 0x38, 0x60, 0x00,
 };
-/* 803A9C48 000C .data      __vt__19dAttDraw_CallBack_c                                  */
-SECTION_DATA const  void* __vt__19dAttDraw_CallBack_c[3] = {
+/* 803A9C48-803A9C54 000C .data      __vt__19dAttDraw_CallBack_c                                  VTableData */
+SECTION_DATA void* __vt__19dAttDraw_CallBack_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
 };
-/* 803A9C54 000C .data      __vt__15dAttDrawParam_c                                      */
-SECTION_DATA const  void* __vt__15dAttDrawParam_c[3] = {
+/* 803A9C54-803A9C60 000C .data      __vt__15dAttDrawParam_c                                      VTableData */
+SECTION_DATA void* __vt__15dAttDrawParam_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dAttDrawParam_cFv,
 };
-/* 803A9C60 000C .data      __vt__11dAttParam_c                                          */
-SECTION_DATA const  void* __vt__11dAttParam_c[4] = {
+/* 803A9C60-803A9C70 000C .data      __vt__11dAttParam_c                                          VTableData */
+SECTION_DATA void* __vt__11dAttParam_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dAttParam_cFv,
@@ -274,37 +492,37 @@ SECTION_DATA const  void* __vt__11dAttParam_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450660 0004 .sdata     loc_type_num__12dAttention_c                                 */
+/* 80450660-80450664 0004 .sdata     loc_type_num__12dAttention_c                                 InitializedData */
 SECTION_SDATA u8 loc_type_num__12dAttention_c[4] = {
 	0x00, 0x00, 0x00, 0x03,
 };
-/* 80450664 0004 .sdata     act_type_num__12dAttention_c                                 */
+/* 80450664-80450668 0004 .sdata     act_type_num__12dAttention_c                                 InitializedData */
 SECTION_SDATA u8 act_type_num__12dAttention_c[4] = {
 	0x00, 0x00, 0x00, 0x05,
 };
-/* 80450668 0004 .sdata     chk_type_tbl__12dAttention_c                                 */
+/* 80450668-8045066C 0004 .sdata     chk_type_tbl__12dAttention_c                                 InitializedData */
 SECTION_SDATA u8 chk_type_tbl__12dAttention_c[4] = {
 	0x00, 0x08, 0x01, 0x00,
 };
-/* 8045066C 0004 .sdata     chk_type_num__12dAttention_c                                 */
+/* 8045066C-80450670 0004 .sdata     chk_type_num__12dAttention_c                                 InitializedData */
 SECTION_SDATA u8 chk_type_num__12dAttention_c[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
-/* 80450670 0004 .sdata     data_80450670                                                */
+/* 80450670-80450674 0004 .sdata     data_80450670                                                InitializedData */
 SECTION_SDATA u8 data_80450670[4] = {
 	0x01, 0x00, 0x00, 0x00,
 };
-/* 80450674 0006 .sdata     ang_table$4418                                               */
+/* 80450674-80450680 0006 .sdata     ang_table$4418                                               InitializedData */
 SECTION_SDATA u8 data_80450674[12] = {
 	0x40, 0x00, 0x20, 0x00, 0x0A, 0xAA,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80450680 0008 .sdata     data_80450680                                                */
+/* 80450680-80450688 0008 .sdata     data_80450680                                                InitializedData */
 SECTION_SDATA u8 data_80450680[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80450688 0008 .sdata     data_80450688                                                */
+/* 80450688-80450690 0008 .sdata     data_80450688                                                InitializedData */
 SECTION_SDATA u8 data_80450688[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -316,104 +534,104 @@ SECTION_SDATA u8 data_80450688[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452628 0004 .sdata2    @4061                                                        */
+/* 80452628-8045262C 0004 .sdata2    @4061                                                        Float32Data */
 // 0x42340000
 SECTION_SDATA2 f32 d_d_attention__LIT_4061 = 45.000000f;
-/* 8045262C 0004 .sdata2    @4062                                                        */
+/* 8045262C-80452630 0004 .sdata2    @4062                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 d_d_attention__LIT_4062 = 30.000000f;
-/* 80452630 0004 .sdata2    @4063                                                        */
+/* 80452630-80452634 0004 .sdata2    @4063                                                        Float32Data */
 // 0x42b40000
 SECTION_SDATA2 f32 d_d_attention__LIT_4063 = 90.000000f;
-/* 80452634 0004 .sdata2    @4064                                                        */
+/* 80452634-80452638 0004 .sdata2    @4064                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4064[4] = {
 	0xBF, 0x66, 0x66, 0x66,
 };
-/* 80452638 0004 .sdata2    @4065                                                        */
+/* 80452638-8045263C 0004 .sdata2    @4065                                                        Float32Data */
 // 0x453b8000
 SECTION_SDATA2 f32 d_d_attention__LIT_4065 = 3000.000000f;
-/* 8045263C 0004 .sdata2    @4066                                                        */
+/* 8045263C-80452640 0004 .sdata2    @4066                                                        Float32Data */
 // 0x447a0000
 SECTION_SDATA2 f32 d_d_attention__LIT_4066 = 1000.000000f;
-/* 80452640 0004 .sdata2    @4067                                                        */
+/* 80452640-80452644 0004 .sdata2    @4067                                                        Float32Data */
 // 0x40c00000
 SECTION_SDATA2 f32 d_d_attention__LIT_4067 = 6.000000f;
-/* 80452644 0004 .sdata2    @4068                                                        */
+/* 80452644-80452648 0004 .sdata2    @4068                                                        Float32Data */
 // 0x40900000
 SECTION_SDATA2 f32 d_d_attention__LIT_4068 = 4.500000f;
-/* 80452648 0004 .sdata2    @4069                                                        */
+/* 80452648-8045264C 0004 .sdata2    @4069                                                        Float32Data */
 // 0x41600000
 SECTION_SDATA2 f32 d_d_attention__LIT_4069 = 14.000000f;
-/* 8045264C 0004 .sdata2    @4070                                                        */
+/* 8045264C-80452650 0004 .sdata2    @4070                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_attention__LIT_4070 = 10.000000f;
-/* 80452650 0004 .sdata2    @4071                                                        */
+/* 80452650-80452654 0004 .sdata2    @4071                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4071[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80452654 0004 .sdata2    @4072                                                        */
+/* 80452654-80452658 0004 .sdata2    @4072                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4072[4] = {
 	0x3F, 0xD9, 0x99, 0x9A,
 };
-/* 80452658 0004 .sdata2    @4073                                                        */
+/* 80452658-8045265C 0004 .sdata2    @4073                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_attention__LIT_4073 = 1.000000f;
-/* 8045265C 0004 .sdata2    @4084                                                        */
+/* 8045265C-80452660 0004 .sdata2    @4084                                                        Float32Data */
 // 0x437a0000
 SECTION_SDATA2 f32 d_d_attention__LIT_4084 = 250.000000f;
-/* 80452660 0004 .sdata2    @4085                                                        */
+/* 80452660-80452664 0004 .sdata2    @4085                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_attention__LIT_4085 = 2.000000f;
-/* 80452664 0004 .sdata2    @4092                                                        */
+/* 80452664-80452668 0004 .sdata2    @4092                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4092[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80452668 0004 .sdata2    @4448                                                        */
+/* 80452668-80452670 0004 .sdata2    @4448                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4448[8] = {
 	0x47, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80452670 0008 .sdata2    @4450                                                        */
+/* 80452670-80452678 0008 .sdata2    @4450                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_attention__LIT_4450 = 4503601774854144.000000;
-/* 80452678 0008 .sdata2    @4514                                                        */
+/* 80452678-80452680 0008 .sdata2    @4514                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_attention__LIT_4514 = 0.500000;
-/* 80452680 0008 .sdata2    @4515                                                        */
+/* 80452680-80452688 0008 .sdata2    @4515                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_attention__LIT_4515 = 3.000000;
-/* 80452688 0008 .sdata2    @4516                                                        */
+/* 80452688-80452690 0008 .sdata2    @4516                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_4516[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80452690 0004 .sdata2    @4562                                                        */
+/* 80452690-80452694 0004 .sdata2    @4562                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_attention__LIT_4562 = -1.000000f;
-/* 80452694 0004 .sdata2    @4563                                                        */
+/* 80452694-80452698 0004 .sdata2    @4563                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_attention__LIT_4563 = 0.500000f;
-/* 80452698 0004 .sdata2    @5137                                                        */
+/* 80452698-8045269C 0004 .sdata2    @5137                                                        Float32Data */
 // 0x461c4000
 SECTION_SDATA2 f32 LIT_5137 = 10000.000000f;
-/* 8045269C 0004 .sdata2    @5138                                                        */
+/* 8045269C-804526A0 0004 .sdata2    @5138                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5138[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 804526A0 0004 .sdata2    @5668                                                        */
+/* 804526A0-804526A8 0004 .sdata2    @5668                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5668[8] = {
 	0x43, 0x7F, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804526A8 0008 .sdata2    @5670                                                        */
+/* 804526A8-804526B0 0008 .sdata2    @5670                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_5670 = 4503599627370496.000000;
-/* 804526B0 0004 .sdata2    @5784                                                        */
+/* 804526B0-804526B4 0004 .sdata2    @5784                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_attention__LIT_5784[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 804526B4 0004 .sdata2    @5785                                                        */
+/* 804526B4-804526B8 0004 .sdata2    @5785                                                        Float32Data */
 // 0xc2c80000
 SECTION_SDATA2 f32 d_d_attention__LIT_5785 = -100.000000f;
 }
@@ -424,10 +642,10 @@ SECTION_SDATA2 f32 d_d_attention__LIT_5785 = -100.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80424B00 000C .bss       @4093                                                        */
+/* 80424B00-80424B0C 000C .bss       @4093                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_attention__LIT_4093[12];
-/* 80424B0C 0010 .bss       g_AttDwHIO                                                   */
-SECTION_BSS u8 g_AttDwHIO[20];
+/* 80424B0C-80424B20 0010 .bss       g_AttDwHIO                                                   ZeroInitializedData */
+SECTION_BSS u8 g_AttDwHIO[16 + 4 /* padding */];
 }
 
 
@@ -436,8 +654,8 @@ SECTION_BSS u8 g_AttDwHIO[20];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80070018 0020 .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 */
-// @unnamed@d_attention_cpp@::padLockButton(s32)
+/* 80070018-80070038 0020 .text      padLockButton__25@unnamed@d_attention_cpp@Fl                 Function */
+// @unnamed@d_attention_cpp@::padLockButton(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -447,8 +665,8 @@ asm void func_80070018() {
 }
 #pragma pop
 
-/* 80070038 00D8 .text      __ct__11dAttParam_cFl                                        */
-// dAttParam_c::dAttParam_c(s32)
+/* 80070038-80070110 00D8 .text      __ct__11dAttParam_cFl                                        Function */
+// dAttParam_c::dAttParam_c(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,7 +676,7 @@ asm void __ct__11dAttParam_cFl() {
 }
 #pragma pop
 
-/* 80070110 0048 .text      __dt__11dAttParam_cFv                                        */
+/* 80070110-80070158 0048 .text      __dt__11dAttParam_cFv                                        Function */
 // dAttParam_c::~dAttParam_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -469,7 +687,7 @@ asm void __dt__11dAttParam_cFv() {
 }
 #pragma pop
 
-/* 80070158 0020 .text      __ct__15dAttDrawParam_cFv                                    */
+/* 80070158-80070178 0020 .text      __ct__15dAttDrawParam_cFv                                    Function */
 // dAttDrawParam_c::dAttDrawParam_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -480,7 +698,7 @@ asm void __ct__15dAttDrawParam_cFv() {
 }
 #pragma pop
 
-/* 80070178 0020 .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         */
+/* 80070178-80070198 0020 .text      execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo         Function */
 // dAttDraw_CallBack_c::execute(u16, J3DTransformInfo*)
 #pragma push
 #pragma optimization_level 0
@@ -491,7 +709,7 @@ asm void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo() {
 }
 #pragma pop
 
-/* 80070198 05DC .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         */
+/* 80070198-80070774 05DC .text      __ct__12dAttention_cFP10fopAc_ac_cUl                         Function */
 // dAttention_c::dAttention_c(fopAc_ac_c*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -502,7 +720,7 @@ asm void __ct__12dAttention_cFP10fopAc_ac_cUl() {
 }
 #pragma pop
 
-/* 80070774 00D0 .text      __dt__12dAttention_cFv                                       */
+/* 80070774-80070844 00D0 .text      __dt__12dAttention_cFv                                       Function */
 // dAttention_c::~dAttention_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -513,8 +731,8 @@ asm void __dt__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80070844 003C .text      GetLockonList__12dAttention_cFl                              */
-// dAttention_c::GetLockonList(s32)
+/* 80070844-80070880 003C .text      GetLockonList__12dAttention_cFl                              Function */
+// dAttention_c::GetLockonList(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,7 +742,7 @@ asm void GetLockonList__12dAttention_cFl() {
 }
 #pragma pop
 
-/* 80070880 00F4 .text      getActionBtnB__12dAttention_cFv                              */
+/* 80070880-80070974 00F4 .text      getActionBtnB__12dAttention_cFv                              Function */
 // dAttention_c::getActionBtnB(void)
 #pragma push
 #pragma optimization_level 0
@@ -535,7 +753,7 @@ asm void getActionBtnB__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80070974 00FC .text      getActionBtnXY__12dAttention_cFv                             */
+/* 80070974-80070A70 00FC .text      getActionBtnXY__12dAttention_cFv                             Function */
 // dAttention_c::getActionBtnXY(void)
 #pragma push
 #pragma optimization_level 0
@@ -546,7 +764,7 @@ asm void getActionBtnXY__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80070A70 0050 .text      chkAttMask__12dAttention_cFUlUl                              */
+/* 80070A70-80070AC0 0050 .text      chkAttMask__12dAttention_cFUlUl                              Function */
 // dAttention_c::chkAttMask(u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -557,7 +775,7 @@ asm void chkAttMask__12dAttention_cFUlUl() {
 }
 #pragma pop
 
-/* 80070AC0 006C .text      check_event_condition__FUlUs                                 */
+/* 80070AC0-80070B2C 006C .text      check_event_condition__FUlUs                                 Function */
 }
 
 #pragma push
@@ -570,60 +788,60 @@ asm void check_event_condition(u32, u16) {
 #pragma pop
 
 extern "C" {
-/* 80070B2C 00C8 .text      check_flontofplayer__FUlss                                   */
+/* 80070B2C-80070BF4 00C8 .text      check_flontofplayer__FUlss                                   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_flontofplayer(u32, s16, s16) {
+asm void check_flontofplayer(u32, short, short) {
 	nofralloc
 #include "_include/d/d_attention/check_flontofplayer__FUlss.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80070BF4 004C .text      distace_weight__Ffsf                                         */
+/* 80070BF4-80070C40 004C .text      distace_weight__Ffsf                                         Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void distace_weight(f32, s16, f32) {
+asm void distace_weight(f32, short, f32) {
 	nofralloc
 #include "_include/d/d_attention/distace_weight__Ffsf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80070C40 0060 .text      distace_angle_adjust__Ffsf                                   */
+/* 80070C40-80070CA0 0060 .text      distace_angle_adjust__Ffsf                                   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void distace_angle_adjust(f32, s16, f32) {
+asm void distace_angle_adjust(f32, short, f32) {
 	nofralloc
 #include "_include/d/d_attention/distace_angle_adjust__Ffsf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80070CA0 01F0 .text      check_distace__FP4cXyzsP4cXyzffff                            */
+/* 80070CA0-80070E90 01F0 .text      check_distace__FP4cXyzsP4cXyzffff                            Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32) {
+asm void check_distace(cXyz*, short, cXyz*, f32, f32, f32, f32) {
 	nofralloc
 #include "_include/d/d_attention/check_distace__FP4cXyzsP4cXyzffff.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80070E90 0230 .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              */
-// dAttention_c::calcWeight(int, fopAc_ac_c*, f32, s16, s16, u32*)
+/* 80070E90-800710C0 0230 .text      calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl              Function */
+// dAttention_c::calcWeight(int, fopAc_ac_c*, f32, short, short, u32*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -633,7 +851,7 @@ asm void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl() {
 }
 #pragma pop
 
-/* 800710C0 0180 .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           */
+/* 800710C0-80071240 0180 .text      setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl           Function */
 // dAttention_c::setList(int, fopAc_ac_c*, f32, f32, cSAngle, u32)
 #pragma push
 #pragma optimization_level 0
@@ -644,7 +862,7 @@ asm void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl() {
 }
 #pragma pop
 
-/* 80071240 014C .text      initList__12dAttention_cFUl                                  */
+/* 80071240-8007138C 014C .text      initList__12dAttention_cFUl                                  Function */
 // dAttention_c::initList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -655,7 +873,7 @@ asm void initList__12dAttention_cFUl() {
 }
 #pragma pop
 
-/* 8007138C 0040 .text      select_attention__FP10fopAc_ac_cPv                           */
+/* 8007138C-800713CC 0040 .text      select_attention__FP10fopAc_ac_cPv                           Function */
 }
 
 #pragma push
@@ -668,7 +886,7 @@ asm void select_attention(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 800713CC 0058 .text      makeList__12dAttention_cFv                                   */
+/* 800713CC-80071424 0058 .text      makeList__12dAttention_cFv                                   Function */
 // dAttention_c::makeList(void)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +897,7 @@ asm void makeList__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071424 0064 .text      setOwnerAttentionPos__12dAttention_cFv                       */
+/* 80071424-80071488 0064 .text      setOwnerAttentionPos__12dAttention_cFv                       Function */
 // dAttention_c::setOwnerAttentionPos(void)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +908,7 @@ asm void setOwnerAttentionPos__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071488 01F4 .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                */
+/* 80071488-8007167C 01F4 .text      SelectAttention__12dAttention_cFP10fopAc_ac_c                Function */
 // dAttention_c::SelectAttention(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +919,7 @@ asm void SelectAttention__12dAttention_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8007167C 003C .text      __dt__7cSGlobeFv                                             */
+/* 8007167C-800716B8 003C .text      __dt__7cSGlobeFv                                             Function */
 // cSGlobe::~cSGlobe(void)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +930,7 @@ asm void __dt__7cSGlobeFv() {
 }
 #pragma pop
 
-/* 800716B8 01EC .text      sortList__12dAttention_cFv                                   */
+/* 800716B8-800718A4 01EC .text      sortList__12dAttention_cFv                                   Function */
 // dAttention_c::sortList(void)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +941,7 @@ asm void sortList__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800718A4 00BC .text      stockAttention__12dAttention_cFv                             */
+/* 800718A4-80071960 00BC .text      stockAttention__12dAttention_cFv                             Function */
 // dAttention_c::stockAttention(void)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +952,7 @@ asm void stockAttention__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071960 0108 .text      nextAttention__12dAttention_cFv                              */
+/* 80071960-80071A68 0108 .text      nextAttention__12dAttention_cFv                              Function */
 // dAttention_c::nextAttention(void)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +963,7 @@ asm void nextAttention__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071A68 0030 .text      freeAttention__12dAttention_cFv                              */
+/* 80071A68-80071A98 0030 .text      freeAttention__12dAttention_cFv                              Function */
 // dAttention_c::freeAttention(void)
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +974,7 @@ asm void freeAttention__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071A98 0228 .text      chaseAttention__12dAttention_cFv                             */
+/* 80071A98-80071CC0 0228 .text      chaseAttention__12dAttention_cFv                             Function */
 // dAttention_c::chaseAttention(void)
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +985,7 @@ asm void chaseAttention__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071CC0 00AC .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  */
+/* 80071CC0-80071D6C 00AC .text      EnemyDistance__12dAttention_cFP10fopAc_ac_c                  Function */
 // dAttention_c::EnemyDistance(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +996,7 @@ asm void EnemyDistance__12dAttention_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 80071D6C 0080 .text      sound_attention__FP10fopAc_ac_cPv                            */
+/* 80071D6C-80071DEC 0080 .text      sound_attention__FP10fopAc_ac_cPv                            Function */
 }
 
 #pragma push
@@ -791,7 +1009,7 @@ asm void sound_attention(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80071DEC 0098 .text      runSoundProc__12dAttention_cFv                               */
+/* 80071DEC-80071E84 0098 .text      runSoundProc__12dAttention_cFv                               Function */
 // dAttention_c::runSoundProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -802,7 +1020,7 @@ asm void runSoundProc__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80071E84 0270 .text      runDrawProc__12dAttention_cFv                                */
+/* 80071E84-800720F4 0270 .text      runDrawProc__12dAttention_cFv                                Function */
 // dAttention_c::runDrawProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -813,13 +1031,13 @@ asm void runDrawProc__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800720F4 0004 .text      runDebugDisp__12dAttention_cFv                               */
+/* 800720F4-800720F8 0004 .text      runDebugDisp__12dAttention_cFv                               ReturnFunction */
 // dAttention_c::runDebugDisp(void)
 void runDebugDisp__12dAttention_cFv() {
 	return;
 }
 
-/* 800720F8 01A8 .text      checkButton__12dAttention_cFv                                */
+/* 800720F8-800722A0 01A8 .text      checkButton__12dAttention_cFv                                Function */
 // dAttention_c::checkButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -830,7 +1048,7 @@ asm void checkButton__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800722A0 004C .text      triggerProc__12dAttention_cFv                                */
+/* 800722A0-800722EC 004C .text      triggerProc__12dAttention_cFv                                Function */
 // dAttention_c::triggerProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -841,7 +1059,7 @@ asm void triggerProc__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800722EC 0058 .text      lostCheck__12dAttention_cFv                                  */
+/* 800722EC-80072344 0058 .text      lostCheck__12dAttention_cFv                                  Function */
 // dAttention_c::lostCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -852,7 +1070,7 @@ asm void lostCheck__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80072344 02AC .text      judgementStatus4Hold__12dAttention_cFv                       */
+/* 80072344-800725F0 02AC .text      judgementStatus4Hold__12dAttention_cFv                       Function */
 // dAttention_c::judgementStatus4Hold(void)
 #pragma push
 #pragma optimization_level 0
@@ -863,7 +1081,7 @@ asm void judgementStatus4Hold__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800725F0 0334 .text      judgementStatus4Switch__12dAttention_cFv                     */
+/* 800725F0-80072924 0334 .text      judgementStatus4Switch__12dAttention_cFv                     Function */
 // dAttention_c::judgementStatus4Switch(void)
 #pragma push
 #pragma optimization_level 0
@@ -874,7 +1092,7 @@ asm void judgementStatus4Switch__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80072924 02B0 .text      Run__12dAttention_cFv                                        */
+/* 80072924-80072BD4 02B0 .text      Run__12dAttention_cFv                                        Function */
 // dAttention_c::Run(void)
 #pragma push
 #pragma optimization_level 0
@@ -885,7 +1103,7 @@ asm void Run__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80072BD4 01AC .text      Draw__12dAttention_cFv                                       */
+/* 80072BD4-80072D80 01AC .text      Draw__12dAttention_cFv                                       Function */
 // dAttention_c::Draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -896,7 +1114,7 @@ asm void Draw__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80072D80 0058 .text      lockSoundStart__12dAttention_cFUl                            */
+/* 80072D80-80072DD8 0058 .text      lockSoundStart__12dAttention_cFUl                            Function */
 // dAttention_c::lockSoundStart(u32)
 #pragma push
 #pragma optimization_level 0
@@ -907,7 +1125,7 @@ asm void lockSoundStart__12dAttention_cFUl() {
 }
 #pragma pop
 
-/* 80072DD8 0210 .text      setAnm__10dAttDraw_cFUcf                                     */
+/* 80072DD8-80072FE8 0210 .text      setAnm__10dAttDraw_cFUcf                                     Function */
 // dAttDraw_c::setAnm(u8, f32)
 #pragma push
 #pragma optimization_level 0
@@ -918,7 +1136,7 @@ asm void setAnm__10dAttDraw_cFUcf() {
 }
 #pragma pop
 
-/* 80072FE8 001C .text      setAlphaAnm__10dAttDraw_cFUcUc                               */
+/* 80072FE8-80073004 001C .text      setAlphaAnm__10dAttDraw_cFUcUc                               Function */
 // dAttDraw_c::setAlphaAnm(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -929,7 +1147,7 @@ asm void setAlphaAnm__10dAttDraw_cFUcUc() {
 }
 #pragma pop
 
-/* 80073004 02A8 .text      alphaAnm__10dAttDraw_cFv                                     */
+/* 80073004-800732AC 02A8 .text      alphaAnm__10dAttDraw_cFv                                     Function */
 // dAttDraw_c::alphaAnm(void)
 #pragma push
 #pragma optimization_level 0
@@ -940,13 +1158,13 @@ asm void alphaAnm__10dAttDraw_cFv() {
 }
 #pragma pop
 
-/* 800732AC 0004 .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 */
+/* 800732AC-800732B0 0004 .text      setTevKColor__11J3DTevBlockFUlPC10J3DGXColor                 ReturnFunction */
 // J3DTevBlock::setTevKColor(u32, const J3DGXColor*)
 void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor() {
 	return;
 }
 
-/* 800732B0 028C .text      draw__10dAttDraw_cFR4cXyzPA4_f                               */
+/* 800732B0-8007353C 028C .text      draw__10dAttDraw_cFR4cXyzPA4_f                               Function */
 // dAttDraw_c::draw(cXyz&, f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -957,8 +1175,8 @@ asm void draw__10dAttDraw_cFR4cXyzPA4_f() {
 }
 #pragma pop
 
-/* 8007353C 00A0 .text      LockonTarget__12dAttention_cFl                               */
-// dAttention_c::LockonTarget(s32)
+/* 8007353C-800735DC 00A0 .text      LockonTarget__12dAttention_cFl                               Function */
+// dAttention_c::LockonTarget(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -968,7 +1186,7 @@ asm void LockonTarget__12dAttention_cFl() {
 }
 #pragma pop
 
-/* 800735DC 00F0 .text      LockonReleaseDistanse__12dAttention_cFv                      */
+/* 800735DC-800736CC 00F0 .text      LockonReleaseDistanse__12dAttention_cFv                      Function */
 // dAttention_c::LockonReleaseDistanse(void)
 #pragma push
 #pragma optimization_level 0
@@ -979,8 +1197,8 @@ asm void LockonReleaseDistanse__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 800736CC 0068 .text      LockonTargetPId__12dAttention_cFl                            */
-// dAttention_c::LockonTargetPId(s32)
+/* 800736CC-80073734 0068 .text      LockonTargetPId__12dAttention_cFl                            Function */
+// dAttention_c::LockonTargetPId(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -990,8 +1208,8 @@ asm void LockonTargetPId__12dAttention_cFl() {
 }
 #pragma pop
 
-/* 80073734 0058 .text      ActionTarget__12dAttention_cFl                               */
-// dAttention_c::ActionTarget(s32)
+/* 80073734-8007378C 0058 .text      ActionTarget__12dAttention_cFl                               Function */
+// dAttention_c::ActionTarget(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1001,8 +1219,8 @@ asm void ActionTarget__12dAttention_cFl() {
 }
 #pragma pop
 
-/* 8007378C 0058 .text      CheckObjectTarget__12dAttention_cFl                          */
-// dAttention_c::CheckObjectTarget(s32)
+/* 8007378C-800737E4 0058 .text      CheckObjectTarget__12dAttention_cFl                          Function */
+// dAttention_c::CheckObjectTarget(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1012,7 +1230,7 @@ asm void CheckObjectTarget__12dAttention_cFl() {
 }
 #pragma pop
 
-/* 800737E4 0054 .text      LockonTruth__12dAttention_cFv                                */
+/* 800737E4-80073838 0054 .text      LockonTruth__12dAttention_cFv                                Function */
 // dAttention_c::LockonTruth(void)
 #pragma push
 #pragma optimization_level 0
@@ -1023,8 +1241,8 @@ asm void LockonTruth__12dAttention_cFv() {
 }
 #pragma pop
 
-/* 80073838 002C .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              */
-// dAttention_c::checkDistance(cXyz*, s16, cXyz*, f32, f32, f32, f32)
+/* 80073838-80073864 002C .text      checkDistance__12dAttention_cFP4cXyzsP4cXyzffff              Function */
+// dAttention_c::checkDistance(cXyz*, short, cXyz*, f32, f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1034,7 +1252,7 @@ asm void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff() {
 }
 #pragma pop
 
-/* 80073864 0034 .text      getActor__10dAttList_cFv                                     */
+/* 80073864-80073898 0034 .text      getActor__10dAttList_cFv                                     Function */
 // dAttList_c::getActor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1045,7 +1263,7 @@ asm void getActor__10dAttList_cFv() {
 }
 #pragma pop
 
-/* 80073898 001C .text      setActor__10dAttList_cFP10fopAc_ac_c                         */
+/* 80073898-800738B4 001C .text      setActor__10dAttList_cFP10fopAc_ac_c                         Function */
 // dAttList_c::setActor(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -1056,7 +1274,7 @@ asm void setActor__10dAttList_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 800738B4 0018 .text      getPId__10dAttHint_cFPv                                      */
+/* 800738B4-800738CC 0018 .text      getPId__10dAttHint_cFPv                                      Function */
 // dAttHint_c::getPId(void*)
 #pragma push
 #pragma optimization_level 0
@@ -1067,7 +1285,7 @@ asm void getPId__10dAttHint_cFPv() {
 }
 #pragma pop
 
-/* 800738CC 0030 .text      convPId__10dAttHint_cFUi                                     */
+/* 800738CC-800738FC 0030 .text      convPId__10dAttHint_cFUi                                     Function */
 // dAttHint_c::convPId(unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -1078,7 +1296,7 @@ asm void convPId__10dAttHint_cFUi() {
 }
 #pragma pop
 
-/* 800738FC 005C .text      request__10dAttHint_cFP10fopAc_ac_ci                         */
+/* 800738FC-80073958 005C .text      request__10dAttHint_cFP10fopAc_ac_ci                         Function */
 // dAttHint_c::request(fopAc_ac_c*, int)
 #pragma push
 #pragma optimization_level 0
@@ -1089,7 +1307,7 @@ asm void request__10dAttHint_cFP10fopAc_ac_ci() {
 }
 #pragma pop
 
-/* 80073958 0018 .text      init__10dAttHint_cFv                                         */
+/* 80073958-80073970 0018 .text      init__10dAttHint_cFv                                         Function */
 // dAttHint_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1100,7 +1318,7 @@ asm void init__10dAttHint_cFv() {
 }
 #pragma pop
 
-/* 80073970 001C .text      proc__10dAttHint_cFv                                         */
+/* 80073970-8007398C 001C .text      proc__10dAttHint_cFv                                         Function */
 // dAttHint_c::proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1111,7 +1329,7 @@ asm void proc__10dAttHint_cFv() {
 }
 #pragma pop
 
-/* 8007398C 0030 .text      convPId__11dAttCatch_cFUi                                    */
+/* 8007398C-800739BC 0030 .text      convPId__11dAttCatch_cFUi                                    Function */
 // dAttCatch_c::convPId(unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -1122,7 +1340,7 @@ asm void convPId__11dAttCatch_cFUi() {
 }
 #pragma pop
 
-/* 800739BC 0020 .text      init__11dAttCatch_cFv                                        */
+/* 800739BC-800739DC 0020 .text      init__11dAttCatch_cFv                                        Function */
 // dAttCatch_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1133,7 +1351,7 @@ asm void init__11dAttCatch_cFv() {
 }
 #pragma pop
 
-/* 800739DC 002C .text      proc__11dAttCatch_cFv                                        */
+/* 800739DC-80073A08 002C .text      proc__11dAttCatch_cFv                                        Function */
 // dAttCatch_c::proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1144,8 +1362,8 @@ asm void proc__11dAttCatch_cFv() {
 }
 #pragma pop
 
-/* 80073A08 029C .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  */
-// dAttCatch_c::request(fopAc_ac_c*, u8, f32, f32, f32, s16, int)
+/* 80073A08-80073CA4 029C .text      request__11dAttCatch_cFP10fopAc_ac_cUcfffsi                  Function */
+// dAttCatch_c::request(fopAc_ac_c*, u8, f32, f32, f32, short, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1155,7 +1373,7 @@ asm void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi() {
 }
 #pragma pop
 
-/* 80073CA4 0030 .text      convPId__10dAttLook_cFUi                                     */
+/* 80073CA4-80073CD4 0030 .text      convPId__10dAttLook_cFUi                                     Function */
 // dAttLook_c::convPId(unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -1166,7 +1384,7 @@ asm void convPId__10dAttLook_cFUi() {
 }
 #pragma pop
 
-/* 80073CD4 0018 .text      init__10dAttLook_cFv                                         */
+/* 80073CD4-80073CEC 0018 .text      init__10dAttLook_cFv                                         Function */
 // dAttLook_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1177,7 +1395,7 @@ asm void init__10dAttLook_cFv() {
 }
 #pragma pop
 
-/* 80073CEC 001C .text      proc__10dAttLook_cFv                                         */
+/* 80073CEC-80073D08 001C .text      proc__10dAttLook_cFv                                         Function */
 // dAttLook_c::proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1188,8 +1406,8 @@ asm void proc__10dAttLook_cFv() {
 }
 #pragma pop
 
-/* 80073D08 02BC .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     */
-// dAttLook_c::request(fopAc_ac_c*, f32, f32, f32, s16, int)
+/* 80073D08-80073FC4 02BC .text      request__10dAttLook_cFP10fopAc_ac_cfffsi                     Function */
+// dAttLook_c::request(fopAc_ac_c*, f32, f32, f32, short, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1199,7 +1417,7 @@ asm void request__10dAttLook_cFP10fopAc_ac_cfffsi() {
 }
 #pragma pop
 
-/* 80073FC4 0048 .text      __dt__15dAttDrawParam_cFv                                    */
+/* 80073FC4-8007400C 0048 .text      __dt__15dAttDrawParam_cFv                                    Function */
 // dAttDrawParam_c::~dAttDrawParam_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1210,7 +1428,7 @@ asm void __dt__15dAttDrawParam_cFv() {
 }
 #pragma pop
 
-/* 8007400C 003C .text      __sinit_d_attention_cpp                                      */
+/* 8007400C-80074048 003C .text      __sinit_d_attention_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

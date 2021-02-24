@@ -9,12 +9,21 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __kernel_sin();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_60[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_61[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_62[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_63[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_64[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_k_sin__LIT_65[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__LIT_66;
 }
 
@@ -24,31 +33,31 @@ SECTION_SDATA2 extern f64 Math_Double_precision_k_sin__LIT_66;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456A48 0008 .sdata2    @60                                                          */
+/* 80456A48-80456A50 0008 .sdata2    @60                                                          InitializedData */
 SECTION_SDATA2 u8 LIT_60[8] = {
 	0x3F, 0x81, 0x11, 0x11, 0x11, 0x10, 0xF8, 0xA6,
 };
-/* 80456A50 0008 .sdata2    @61                                                          */
+/* 80456A50-80456A58 0008 .sdata2    @61                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_61[8] = {
 	0xBF, 0x2A, 0x01, 0xA0, 0x19, 0xC1, 0x61, 0xD5,
 };
-/* 80456A58 0008 .sdata2    @62                                                          */
+/* 80456A58-80456A60 0008 .sdata2    @62                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_62[8] = {
 	0x3E, 0xC7, 0x1D, 0xE3, 0x57, 0xB1, 0xFE, 0x7D,
 };
-/* 80456A60 0008 .sdata2    @63                                                          */
+/* 80456A60-80456A68 0008 .sdata2    @63                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_63[8] = {
 	0xBE, 0x5A, 0xE5, 0xE6, 0x8A, 0x2B, 0x9C, 0xEB,
 };
-/* 80456A68 0008 .sdata2    @64                                                          */
+/* 80456A68-80456A70 0008 .sdata2    @64                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_64[8] = {
 	0x3D, 0xE5, 0xD9, 0x3A, 0x5A, 0xCF, 0xD5, 0x7C,
 };
-/* 80456A70 0008 .sdata2    @65                                                          */
+/* 80456A70-80456A78 0008 .sdata2    @65                                                          InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_k_sin__LIT_65[8] = {
 	0xBF, 0xC5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x49,
 };
-/* 80456A78 0008 .sdata2    @66                                                          */
+/* 80456A78-80456A80 0008 .sdata2    @66                                                          Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_k_sin__LIT_66 = 0.500000;
 }
@@ -59,7 +68,7 @@ SECTION_SDATA2 f64 Math_Double_precision_k_sin__LIT_66 = 0.500000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036B9F0 00A0 .text      __kernel_sin                                                 */
+/* 8036B9F0-8036BA90 00A0 .text      __kernel_sin                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

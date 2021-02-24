@@ -9,8 +9,20 @@
 // 
 
 extern "C" {
+/* GlobalFunction       */
+extern u32 OSGetArenaHi();
+/* GlobalFunction       */
+extern u32 OSGetArenaLo();
+/* Function             */
+extern void OSSetArenaHi();
+/* Function             */
+extern void OSSetArenaLo();
+/* Function             */
+extern void OSAllocFromArenaLo();
+/* InitializedData      */
 SECTION_SDATA extern u8 __OSArenaLo[8];
-SECTION_SBSS extern u8 __OSArenaHi[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __OSArenaHi[4 + 4 /* padding */];
 }
 
 
@@ -19,7 +31,7 @@ SECTION_SBSS extern u8 __OSArenaHi[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450998 0004 .sdata     __OSArenaLo                                                  */
+/* 80450998-804509A0 0004 .sdata     __OSArenaLo                                                  InitializedData */
 SECTION_SDATA u8 __OSArenaLo[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
@@ -33,9 +45,8 @@ SECTION_SDATA u8 __OSArenaLo[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451650 0004 .sbss      __OSArenaHi                                                  */
-SECTION_SBSS u8 __OSArenaHi[4];
-SECTION_SBSS u8 pad_80451654[4];
+/* 80451650-80451658 0004 .sbss      __OSArenaHi                                                  ZeroInitializedData */
+SECTION_SBSS u8 __OSArenaHi[4 + 4 /* padding */];
 }
 
 
@@ -44,17 +55,17 @@ SECTION_SBSS u8 pad_80451654[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033B28C 0008 .text      OSGetArenaHi                                                 */
+/* 8033B28C-8033B294 0008 .text      OSGetArenaHi                                                 GlobalFunction */
 u32 OSGetArenaHi() {
 	return *(u32*)&__OSArenaHi;
 }
 
-/* 8033B294 0008 .text      OSGetArenaLo                                                 */
+/* 8033B294-8033B29C 0008 .text      OSGetArenaLo                                                 GlobalFunction */
 u32 OSGetArenaLo() {
 	return *(u32*)&__OSArenaLo;
 }
 
-/* 8033B29C 0008 .text      OSSetArenaHi                                                 */
+/* 8033B29C-8033B2A4 0008 .text      OSSetArenaHi                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +75,7 @@ asm void OSSetArenaHi() {
 }
 #pragma pop
 
-/* 8033B2A4 0008 .text      OSSetArenaLo                                                 */
+/* 8033B2A4-8033B2AC 0008 .text      OSSetArenaLo                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +85,7 @@ asm void OSSetArenaLo() {
 }
 #pragma pop
 
-/* 8033B2AC 002C .text      OSAllocFromArenaLo                                           */
+/* 8033B2AC-8033B2D8 002C .text      OSAllocFromArenaLo                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -12,23 +12,47 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* Function             */
 extern void __ct__10COutFont_cFUc();
+/* Function             */
 extern void __ct__16dMsgStringBase_cFv();
+/* Function             */
 extern void __dt__16dMsgStringBase_cFv();
+/* Function             */
 extern void getResource__16dMsgStringBase_cFv();
+/* Function             */
 extern void getMessage__16dMsgStringBase_cFUlPc();
+/* Function             */
+extern void __ct__12dMsgString_cFv();
+/* Function             */
+extern void __ct__12dMsgString_cFUc();
+/* Function             */
+extern void __dt__12dMsgString_cFv();
+/* Function             */
 extern void resetStringLocal__12dMsgString_cFP10J2DTextBox();
+/* Function             */
 extern void drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf();
+/* Function             */
 extern void drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbVtx__7J2DPaneCFUc();
-SECTION_DATA extern const void* __vt__12dMsgString_c[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dMsgString_c[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_string__LIT_3777;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_string__LIT_3778;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_string__LIT_3779[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3781;
 }
 
@@ -38,8 +62,8 @@ SECTION_SDATA2 extern f64 LIT_3781;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C1498 0020 .data      __vt__12dMsgString_c                                         */
-SECTION_DATA const  void* __vt__12dMsgString_c[8] = {
+/* 803C1498-803C14B8 0020 .data      __vt__12dMsgString_c                                         VTableData */
+SECTION_DATA void* __vt__12dMsgString_c[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
@@ -57,19 +81,19 @@ SECTION_DATA const  void* __vt__12dMsgString_c[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454D78 0004 .sdata2    @3777                                                        */
+/* 80454D78-80454D7C 0004 .sdata2    @3777                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_msg_string__LIT_3777 = 255.000000f;
-/* 80454D7C 0004 .sdata2    @3778                                                        */
+/* 80454D7C-80454D80 0004 .sdata2    @3778                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_msg_string__LIT_3778 = -1.000000f;
-/* 80454D80 0004 .sdata2    @3779                                                        */
+/* 80454D80-80454D88 0004 .sdata2    @3779                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_string__LIT_3779[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454D88 0008 .sdata2    @3781                                                        */
+/* 80454D88-80454D90 0008 .sdata2    @3781                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3781 = 4503599627370496.000000;
 }
@@ -80,7 +104,7 @@ SECTION_SDATA2 f64 LIT_3781 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80249C20 0080 .text      __ct__12dMsgString_cFv                                       */
+/* 80249C20-80249CA0 0080 .text      __ct__12dMsgString_cFv                                       Function */
 // dMsgString_c::dMsgString_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +115,7 @@ asm void __ct__12dMsgString_cFv() {
 }
 #pragma pop
 
-/* 80249CA0 0088 .text      __ct__12dMsgString_cFUc                                      */
+/* 80249CA0-80249D28 0088 .text      __ct__12dMsgString_cFUc                                      Function */
 // dMsgString_c::dMsgString_c(u8)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +126,7 @@ asm void __ct__12dMsgString_cFUc() {
 }
 #pragma pop
 
-/* 80249D28 008C .text      __dt__12dMsgString_cFv                                       */
+/* 80249D28-80249DB4 008C .text      __dt__12dMsgString_cFv                                       Function */
 // dMsgString_c::~dMsgString_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +137,7 @@ asm void __dt__12dMsgString_cFv() {
 }
 #pragma pop
 
-/* 80249DB4 0030 .text      resetStringLocal__12dMsgString_cFP10J2DTextBox               */
+/* 80249DB4-80249DE4 0030 .text      resetStringLocal__12dMsgString_cFP10J2DTextBox               Function */
 // dMsgString_c::resetStringLocal(J2DTextBox*)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +148,7 @@ asm void resetStringLocal__12dMsgString_cFP10J2DTextBox() {
 }
 #pragma pop
 
-/* 80249DE4 00EC .text      drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf              */
+/* 80249DE4-80249ED0 00EC .text      drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf              Function */
 // dMsgString_c::drawOutFontLocal(J2DTextBox*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -135,7 +159,7 @@ asm void drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf() {
 }
 #pragma pop
 
-/* 80249ED0 0030 .text      drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc        */
+/* 80249ED0-80249F00 0030 .text      drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc        Function */
 // dMsgString_c::drawFontLocal(J2DTextBox*, u8, f32, f32, f32, f32, u32, u8)
 #pragma push
 #pragma optimization_level 0

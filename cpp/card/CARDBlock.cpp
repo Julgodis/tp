@@ -9,15 +9,29 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void __CARDEraseSector();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDWrite();
+/* FirstParamFunction   */
+extern u32 __CARDGetFatBlock(u8*);
+/* Function             */
 extern void CARDBlock__WriteCallback();
+/* Function             */
 extern void CARDBlock__EraseCallback();
+/* Function             */
+extern void __CARDAllocBlock();
+/* Function             */
 extern void __CARDUpdateFatBlock();
+/* Function             */
 extern void __CARDCheckSum();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -27,12 +41,12 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80355414 0008 .text      __CARDGetFatBlock                                            */
+/* 80355414-8035541C 0008 .text      __CARDGetFatBlock                                            FirstParamFunction */
 u32 __CARDGetFatBlock(u8* param0) {
 	return *(u32*)&param0[136]; /* param0->field_0x88 */
 }
 
-/* 8035541C 00D4 .text      WriteCallback                                                */
+/* 8035541C-803554F0 00D4 .text      WriteCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +56,7 @@ asm void CARDBlock__WriteCallback() {
 }
 #pragma pop
 
-/* 803554F0 00C8 .text      EraseCallback                                                */
+/* 803554F0-803555B8 00C8 .text      EraseCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +66,7 @@ asm void CARDBlock__EraseCallback() {
 }
 #pragma pop
 
-/* 803555B8 0118 .text      __CARDAllocBlock                                             */
+/* 803555B8-803556D0 0118 .text      __CARDAllocBlock                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +76,7 @@ asm void __CARDAllocBlock() {
 }
 #pragma pop
 
-/* 803556D0 00AC .text      __CARDUpdateFatBlock                                         */
+/* 803556D0-8035577C 00AC .text      __CARDUpdateFatBlock                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

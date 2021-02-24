@@ -8,16 +8,40 @@
 // Additional Symbols:
 // 
 
+extern void JPAGetYZRotateMtx(short, short, f32 (*)[4]); /* JPAGetYZRotateMtx__FssPA4_f */
+extern void JPAGetXYZRotateMtx(short, short, short, f32 (*)[4]); /* JPAGetXYZRotateMtx__FsssPA4_f */
+extern void JPACalcKeyAnmValue(f32, u16, const f32*); /* JPACalcKeyAnmValue__FfUsPCf */
+
 extern "C" {
+/* Function             */
+extern void func_80280588();
+/* Function             */
+extern void JPAGetYZRotateMtx__FssPA4_f();
+/* Function             */
+extern void JPAGetXYZRotateMtx__FsssPA4_f();
+/* Function             */
+extern void func_802807E0();
+/* Function             */
 extern void func_80280808();
+/* Function             */
+extern void JPACalcKeyAnmValue__FfUsPCf();
+/* Function             */
 extern void PSMTXIdentity();
+/* Function             */
 extern void PSVECMag();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_epsilon[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2193;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2238[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2239[8];
 }
 
@@ -27,14 +51,14 @@ SECTION_SDATA2 extern u8 LIT_2239[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804553B8 0004 .sdata2    @2193                                                        */
+/* 804553B8-804553BC 0004 .sdata2    @2193                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_2193 = 1.000000f;
-/* 804553BC 0004 .sdata2    @2238                                                        */
+/* 804553BC-804553C0 0004 .sdata2    @2238                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2238[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804553C0 0004 .sdata2    @2239                                                        */
+/* 804553C0-804553C8 0004 .sdata2    @2239                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2239[8] = {
 	0x42, 0x00, 0x00, 0x00,
 	/* padding */
@@ -48,7 +72,7 @@ SECTION_SDATA2 u8 LIT_2239[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80280588 0138 .text      JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f                  */
+/* 80280588-802806C0 0138 .text      JPAGetDirMtx__FRCQ29JGeometry8TVec3<f>PA4_f                  Function */
 // JPAGetDirMtx(JGeometry::TVec3<f>, f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -59,33 +83,33 @@ asm void func_80280588() {
 }
 #pragma pop
 
-/* 802806C0 0074 .text      JPAGetYZRotateMtx__FssPA4_f                                  */
+/* 802806C0-80280734 0074 .text      JPAGetYZRotateMtx__FssPA4_f                                  Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAGetYZRotateMtx(s16, s16, f32 (*)[4]) {
+asm void JPAGetYZRotateMtx(short, short, f32 (*)[4]) {
 	nofralloc
 #include "_include/JParticle/JPAMath/JPAGetYZRotateMtx__FssPA4_f.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80280734 00AC .text      JPAGetXYZRotateMtx__FsssPA4_f                                */
+/* 80280734-802807E0 00AC .text      JPAGetXYZRotateMtx__FsssPA4_f                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JPAGetXYZRotateMtx(s16, s16, s16, f32 (*)[4]) {
+asm void JPAGetXYZRotateMtx(short, short, short, f32 (*)[4]) {
 	nofralloc
 #include "_include/JParticle/JPAMath/JPAGetXYZRotateMtx__FsssPA4_f.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802807E0 0028 .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    */
+/* 802807E0-80280808 0028 .text      JPASetRMtxTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>    Function */
 // JPASetRMtxTVecfromMtx(const f32 (*)[4], f32 (*)[4], JGeometry::TVec3<f>)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +120,7 @@ asm void func_802807E0() {
 }
 #pragma pop
 
-/* 80280808 017C .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> */
+/* 80280808-80280984 017C .text      JPASetRMtxSTVecfromMtx__FPA4_CfPA4_fPQ29JGeometry8TVec3<f>PQ29JGeometry8TVec3<f> Function */
 // JPASetRMtxSTVecfromMtx(const f32 (*)[4], f32 (*)[4], JGeometry::TVec3<f>, JGeometry::TVec3<f>)
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +131,7 @@ asm void func_80280808() {
 }
 #pragma pop
 
-/* 80280984 00C4 .text      JPACalcKeyAnmValue__FfUsPCf                                  */
+/* 80280984-80280A48 00C4 .text      JPACalcKeyAnmValue__FfUsPCf                                  Function */
 }
 
 #pragma push

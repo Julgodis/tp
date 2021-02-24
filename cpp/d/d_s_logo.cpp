@@ -12,10 +12,10 @@
 // Additional Symbols:
 // 
 
-struct JKRHeap;
-struct scene_class;
 struct dScnLogo_c;
+struct JKRHeap;
 struct request_of_phase_process_class;
+struct scene_class;
 
 extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHeap */
 extern void mDoExt_getMesgFont(void); /* mDoExt_getMesgFont__Fv */
@@ -25,122 +25,326 @@ extern void mDoExt_setAraCacheSize(u32); /* mDoExt_setAraCacheSize__FUl */
 extern void mDoRst_reset(int, u32, int); /* mDoRst_reset__FiUli */
 extern void mDoRst_resetCallBack(int, void*); /* mDoRst_resetCallBack__FiPv */
 extern void cDyl_InitAsyncIsDone(void); /* cDyl_InitAsyncIsDone__Fv */
-extern void fopScnM_ChangeReq(scene_class*, s16, s16, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
-extern void dComIfG_changeOpeningScene(scene_class*, s16); /* dComIfG_changeOpeningScene__FP11scene_classs */
-extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (*)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
+extern void fopScnM_ChangeReq(scene_class*, short, short, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
+extern void dComIfG_changeOpeningScene(scene_class*, short); /* dComIfG_changeOpeningScene__FP11scene_classs */
+extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
+extern void phase_0(dScnLogo_c*); /* phase_0__FP10dScnLogo_c */
+extern void phase_1(dScnLogo_c*); /* phase_1__FP10dScnLogo_c */
+extern void phase_2(dScnLogo_c*); /* phase_2__FP10dScnLogo_c */
 extern void resLoad(request_of_phase_process_class*, dScnLogo_c*); /* resLoad__FP30request_of_phase_process_classP10dScnLogo_c */
+extern void dScnLogo_Create(scene_class*); /* dScnLogo_Create__FP11scene_class */
+extern void dScnLogo_Execute(dScnLogo_c*); /* dScnLogo_Execute__FP10dScnLogo_c */
+extern void dScnLogo_Draw(dScnLogo_c*); /* dScnLogo_Draw__FP10dScnLogo_c */
+extern void dScnLogo_Delete(dScnLogo_c*); /* dScnLogo_Delete__FP10dScnLogo_c */
 extern void* operator new(u32); /* __nw__FUl */
 extern void* operator new[](u32); /* __nwa__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 extern void operator delete[](void*); /* __dla__FPv */
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* GlobalFunction       */
 extern u32 mDoExt_getGameHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getJ2dHeap__Fv();
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void mDoExt_getRubyFont__Fv();
+/* Function             */
 extern void mDoExt_getSubFont__Fv();
+/* Function             */
 extern void mDoExt_setAraCacheSize__FUl();
+/* Function             */
 extern void mDoRst_reset__FiUli();
+/* Function             */
 extern void mDoRst_resetCallBack__FiPv();
+/* Function             */
 extern void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+/* Function             */
 extern void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+/* Function             */
 extern void cDyl_InitAsyncIsDone__Fv();
+/* Function             */
 extern void Link__7cDylPhsFP30request_of_phase_process_classs();
+/* Function             */
 extern void fopScnM_ChangeReq__FP11scene_classssUs();
+/* Function             */
 extern void createParticle__14dComIfG_play_cFv();
+/* Function             */
 extern void dComIfG_changeOpeningScene__FP11scene_classs();
+/* Function             */
 extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+/* Function             */
 extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+/* Function             */
 extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+/* Function             */
 extern void createWork__8dMpath_cFv();
+/* Function             */
 extern void createCommon__13dPa_control_cFPCv();
+/* Function             */
 extern void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
+/* Function             */
 extern void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void createWork__7dTres_cFv();
+/* Function             */
 extern void __ct__10dLog_HIO_cFv();
+/* Function             */
 extern void preLoad_dyl_create__10dScnLogo_cFv();
+/* Function             */
 extern void preLoad_dyl_remove__10dScnLogo_cFv();
+/* Function             */
 extern void preLoad_dyl__10dScnLogo_cFv();
+/* Function             */
 extern void checkProgSelect__10dScnLogo_cFv();
+/* Function             */
 extern void draw__10dScnLogo_cFv();
+/* Function             */
+extern void progInDraw__10dScnLogo_cFv();
+/* Function             */
+extern void progSelDraw__10dScnLogo_cFv();
+/* Function             */
+extern void progOutDraw__10dScnLogo_cFv();
+/* Function             */
+extern void progSetDraw__10dScnLogo_cFv();
+/* Function             */
+extern void progSet2Draw__10dScnLogo_cFv();
+/* Function             */
+extern void progChangeDraw__10dScnLogo_cFv();
+/* Function             */
+extern void warningInDraw__10dScnLogo_cFv();
+/* Function             */
+extern void warningDispDraw__10dScnLogo_cFv();
+/* Function             */
+extern void warningOutDraw__10dScnLogo_cFv();
+/* Function             */
+extern void nintendoInDraw__10dScnLogo_cFv();
+/* Function             */
+extern void nintendoOutDraw__10dScnLogo_cFv();
+/* Function             */
+extern void dolbyInDraw__10dScnLogo_cFv();
+/* Function             */
+extern void dolbyOutDraw__10dScnLogo_cFv();
+/* Function             */
+extern void dolbyOutDraw2__10dScnLogo_cFv();
+/* Function             */
+extern void dvdWaitDraw__10dScnLogo_cFv();
+/* Function             */
+extern void nextSceneChange__10dScnLogo_cFv();
+/* Function             */
 extern void __dt__10dScnLogo_cFv();
+/* Function             */
+extern void phase_0__FP10dScnLogo_c();
+/* Function             */
+extern void phase_1__FP10dScnLogo_c();
+/* Function             */
+extern void phase_2__FP10dScnLogo_c();
+/* Function             */
 extern void resLoad__FP30request_of_phase_process_classP10dScnLogo_c();
+/* Function             */
 extern void create__10dScnLogo_cFv();
+/* Function             */
 extern void logoInitGC__10dScnLogo_cFv();
+/* Function             */
 extern void dvdDataLoad__10dScnLogo_cFv();
+/* Function             */
+extern void dScnLogo_Create__FP11scene_class();
+/* Function             */
+extern void dScnLogo_Execute__FP10dScnLogo_c();
+/* Function             */
+extern void dScnLogo_Draw__FP10dScnLogo_c();
+/* Function             */
+extern void dScnLogo_Delete__FP10dScnLogo_c();
+/* ReturnIntegerFunction */
+extern  int dScnLogo_IsDelete__FP10dScnLogo_c();
+/* Function             */
 extern void setProgressiveMode__10dScnLogo_cFUc();
+/* Function             */
 extern void getProgressiveMode__10dScnLogo_cFv();
+/* Function             */
 extern void isProgressiveMode__10dScnLogo_cFv();
+/* Function             */
 extern void setRenderMode__10dScnLogo_cFv();
+/* Function             */
 extern void __dt__10dLog_HIO_cFv();
+/* Function             */
 extern void func_802585A4();
+/* SInitFunction        */
+extern void __sinit_d_s_logo_cpp();
+/* Function             */
 extern void waitBlanking__10JFWDisplayFi();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void loadStaticWaves__10Z2SceneMgrFv();
-extern int checkFirstWaves__10Z2SceneMgrFv();
+/* ReturnIntegerFunction */
+extern  int checkFirstWaves__10Z2SceneMgrFv();
+/* Function             */
 extern void resetProcess__10Z2AudioMgrFUlb();
+/* Function             */
 extern void becomeCurrentHeap__7JKRHeapFv();
+/* Function             */
 extern void destroy__7JKRHeapFv();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dla__FPv();
+/* Function             */
 extern void create__10JKRExpHeapFUlP7JKRHeapb();
+/* Function             */
 extern void create__10JKRExpHeapFPvUlP7JKRHeapb();
+/* Function             */
 extern void getTotalFreeSize__11JKRAramHeapFv();
+/* Function             */
 extern void __dt__10J2DPictureFv();
+/* Function             */
 extern void OSGetProgressiveMode();
+/* Function             */
 extern void OSSetProgressiveMode();
+/* Function             */
 extern void VIGetDTVStatus();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 l_preLoad_dylKeyTbl[28];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_s_logo__stringBase0[684];
+/* InitializedData      */
 SECTION_DATA extern u8 g_ntscZeldaProg[60];
-SECTION_DATA extern const void* __vt__10dDlst_2D_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopScn_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcNd_Method[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10dDlst_2D_c[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_s_logo__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3737[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3738[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3739[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3740[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3741[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3742[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3743[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3744[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3745[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3746[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3747[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3748[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3749[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3750[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3751[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_logo__LIT_3752[3];
+/* InitializedData      */
 SECTION_DATA extern u8 l_execFunc[192];
-SECTION_DATA extern u8 data_803C2FC4[12];
-SECTION_DATA extern const void* __vt__10dLog_HIO_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803C2FC4[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dScnLogo_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_LOGO_SCENE[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10dLog_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 d_d_s_logo__LIT_3702[16];
-SECTION_SDATA extern u8 mRenderModeObj__15mDoMch_render_c[8];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_s_logo__LIT_3702[12 + 4 /* padding */];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* mRenderModeObj__15mDoMch_render_c[2];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_blackColor[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BB8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFader__13mDoGph_gInf_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 archiveHeap[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
-SECTION_SBSS extern u8 mData__12dEnemyItem_c[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mData__12dEnemyItem_c[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_LogHIO[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451500[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3933;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3934;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_logo__LIT_3935;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_logo__LIT_3936;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_logo__LIT_3937;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3938;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_s_logo__LIT_3940;
 }
 
@@ -150,42 +354,48 @@ SECTION_SDATA2 extern f64 d_d_s_logo__LIT_3940;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399FE0 001C .rodata    l_preLoad_dylKeyTbl                                          */
+/* 80399FFC-8039A2A8 02AA .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399FFC = "LogoUs";
+SECTION_DEAD const char* const stringBase_8039A003 = "Always";
+SECTION_DEAD const char* const stringBase_8039A00A = "/res/Object/";
+SECTION_DEAD const char* const stringBase_8039A017 = "Alink";
+SECTION_DEAD const char* const stringBase_8039A01D = "/res/FieldMap/Field0.arc";
+SECTION_DEAD const char* const stringBase_8039A036 = "/res/Object/AlAnm.arc";
+SECTION_DEAD const char* const stringBase_8039A04C = "/res/Layout/fmapres.arc";
+SECTION_DEAD const char* const stringBase_8039A064 = "/res/Layout/dmapres.arc";
+SECTION_DEAD const char* const stringBase_8039A07C = "/res/Layout/clctres.arc";
+SECTION_DEAD const char* const stringBase_8039A094 = "/res/Layout/itemicon.arc";
+SECTION_DEAD const char* const stringBase_8039A0AD = "/res/Layout/ringres.arc";
+SECTION_DEAD const char* const stringBase_8039A0C5 = "/res/Layout/playerName.arc";
+SECTION_DEAD const char* const stringBase_8039A0E0 = "/res/Layout/itmInfRes.arc";
+SECTION_DEAD const char* const stringBase_8039A0FA = "/res/Layout/button.arc";
+SECTION_DEAD const char* const stringBase_8039A111 = "/res/CardIcon/cardicon.arc";
+SECTION_DEAD const char* const stringBase_8039A12C = "/res/Msgus/bmgres.arc";
+SECTION_DEAD const char* const stringBase_8039A142 = "/res/Layout/msgcom.arc";
+SECTION_DEAD const char* const stringBase_8039A159 = "/res/Layout/msgres00.arc";
+SECTION_DEAD const char* const stringBase_8039A172 = "/res/Layout/msgres01.arc";
+SECTION_DEAD const char* const stringBase_8039A18B = "/res/Layout/msgres02.arc";
+SECTION_DEAD const char* const stringBase_8039A1A4 = "/res/Layout/msgres03.arc";
+SECTION_DEAD const char* const stringBase_8039A1BD = "/res/Layout/msgres04F.arc";
+SECTION_DEAD const char* const stringBase_8039A1D7 = "/res/Layout/msgres05.arc";
+SECTION_DEAD const char* const stringBase_8039A1F0 = "/res/Layout/msgres06.arc";
+SECTION_DEAD const char* const stringBase_8039A209 = "/res/Layout/main2D.arc";
+SECTION_DEAD const char* const stringBase_8039A220 = "/res/Fontus/fontres.arc";
+SECTION_DEAD const char* const stringBase_8039A238 = "/res/Fontus/rubyres.arc";
+SECTION_DEAD const char* const stringBase_8039A250 = "/res/Particle/common.jpc";
+SECTION_DEAD const char* const stringBase_8039A269 = "/res/ItemTable/item_table.bin";
+SECTION_DEAD const char* const stringBase_8039A287 = "/res/ItemTable/enemy_table.bin";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A2A6 = "\0";
+#pragma pop
+/* 80399FE0-80399FFC 001C .rodata    l_preLoad_dylKeyTbl                                          InitializedData */
 SECTION_RODATA const u8 l_preLoad_dylKeyTbl[28] = {
 	0x02, 0xDC, 0x02, 0xCE, 0x02, 0x21, 0x00, 0xF2, 0x02, 0x1B, 0x02, 0xF4, 0x01, 0x39, 0x01, 0x5A,
 	0x02, 0xE4, 0x00, 0xFE, 0x03, 0x08, 0x03, 0x0F, 0x00, 0xFF, 0x01, 0x3F,
 };
-/* 80399FFC 02AA .rodata    @stringBase0                                                 */
-const char* const stringBase_80399FFC = "LogoUs";
-const char* const stringBase_8039A003 = "Always";
-const char* const stringBase_8039A00A = "/res/Object/";
-const char* const stringBase_8039A017 = "Alink";
-const char* const stringBase_8039A01D = "/res/FieldMap/Field0.arc";
-const char* const stringBase_8039A036 = "/res/Object/AlAnm.arc";
-const char* const stringBase_8039A04C = "/res/Layout/fmapres.arc";
-const char* const stringBase_8039A064 = "/res/Layout/dmapres.arc";
-const char* const stringBase_8039A07C = "/res/Layout/clctres.arc";
-const char* const stringBase_8039A094 = "/res/Layout/itemicon.arc";
-const char* const stringBase_8039A0AD = "/res/Layout/ringres.arc";
-const char* const stringBase_8039A0C5 = "/res/Layout/playerName.arc";
-const char* const stringBase_8039A0E0 = "/res/Layout/itmInfRes.arc";
-const char* const stringBase_8039A0FA = "/res/Layout/button.arc";
-const char* const stringBase_8039A111 = "/res/CardIcon/cardicon.arc";
-const char* const stringBase_8039A12C = "/res/Msgus/bmgres.arc";
-const char* const stringBase_8039A142 = "/res/Layout/msgcom.arc";
-const char* const stringBase_8039A159 = "/res/Layout/msgres00.arc";
-const char* const stringBase_8039A172 = "/res/Layout/msgres01.arc";
-const char* const stringBase_8039A18B = "/res/Layout/msgres02.arc";
-const char* const stringBase_8039A1A4 = "/res/Layout/msgres03.arc";
-const char* const stringBase_8039A1BD = "/res/Layout/msgres04F.arc";
-const char* const stringBase_8039A1D7 = "/res/Layout/msgres05.arc";
-const char* const stringBase_8039A1F0 = "/res/Layout/msgres06.arc";
-const char* const stringBase_8039A209 = "/res/Layout/main2D.arc";
-const char* const stringBase_8039A220 = "/res/Fontus/fontres.arc";
-const char* const stringBase_8039A238 = "/res/Fontus/rubyres.arc";
-const char* const stringBase_8039A250 = "/res/Particle/common.jpc";
-const char* const stringBase_8039A269 = "/res/ItemTable/item_table.bin";
-const char* const stringBase_8039A287 = "/res/ItemTable/enemy_table.bin";
 }
 
 
@@ -194,76 +404,108 @@ const char* const stringBase_8039A287 = "/res/ItemTable/enemy_table.bin";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C2E38 0000 .data      ...data.0                                                    */
-/* 803C2E38 000C .data      cNullVec__6Z2Calc                                            */
+/* 803C2E38-803C2E38 0000 .data      ...data.0                                                    InitializedData */
+/* 803C2E38-803C2E44 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_s_logo__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C2E44 000C .data      @3737                                                        */
-SECTION_DATA u8 LIT_3737[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6B, 0xF4,
+/* 803C2E44-803C2E50 000C .data      @3737                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3737[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)warningInDraw__10dScnLogo_cFv,
 };
-/* 803C2E50 000C .data      @3738                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3738[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6C, 0x68,
+/* 803C2E50-803C2E5C 000C .data      @3738                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3738[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)warningDispDraw__10dScnLogo_cFv,
 };
-/* 803C2E5C 000C .data      @3739                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3739[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6D, 0xC4,
+/* 803C2E5C-803C2E68 000C .data      @3739                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3739[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)warningOutDraw__10dScnLogo_cFv,
 };
-/* 803C2E68 000C .data      @3740                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3740[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6E, 0x48,
+/* 803C2E68-803C2E74 000C .data      @3740                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3740[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)nintendoInDraw__10dScnLogo_cFv,
 };
-/* 803C2E74 000C .data      @3741                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3741[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6E, 0xCC,
+/* 803C2E74-803C2E80 000C .data      @3741                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3741[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)nintendoOutDraw__10dScnLogo_cFv,
 };
-/* 803C2E80 000C .data      @3742                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3742[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6F, 0x50,
+/* 803C2E80-803C2E8C 000C .data      @3742                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3742[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)dolbyInDraw__10dScnLogo_cFv,
 };
-/* 803C2E8C 000C .data      @3743                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3743[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6F, 0xD4,
+/* 803C2E8C-803C2E98 000C .data      @3743                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3743[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)dolbyOutDraw__10dScnLogo_cFv,
 };
-/* 803C2E98 000C .data      @3744                                                        */
-SECTION_DATA u8 LIT_3744[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x70, 0x58,
+/* 803C2E98-803C2EA4 000C .data      @3744                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3744[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)dolbyOutDraw2__10dScnLogo_cFv,
 };
-/* 803C2EA4 000C .data      @3745                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3745[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x62, 0x64,
+/* 803C2EA4-803C2EB0 000C .data      @3745                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3745[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progInDraw__10dScnLogo_cFv,
 };
-/* 803C2EB0 000C .data      @3746                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3746[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x63, 0x1C,
+/* 803C2EB0-803C2EBC 000C .data      @3746                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3746[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progSelDraw__10dScnLogo_cFv,
 };
-/* 803C2EBC 000C .data      @3747                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3747[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x68, 0xE0,
+/* 803C2EBC-803C2EC8 000C .data      @3747                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3747[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progOutDraw__10dScnLogo_cFv,
 };
-/* 803C2EC8 000C .data      @3748                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3748[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6A, 0x3C,
+/* 803C2EC8-803C2ED4 000C .data      @3748                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3748[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progSetDraw__10dScnLogo_cFv,
 };
-/* 803C2ED4 000C .data      @3749                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3749[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6A, 0xC0,
+/* 803C2ED4-803C2EE0 000C .data      @3749                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3749[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progSet2Draw__10dScnLogo_cFv,
 };
-/* 803C2EE0 000C .data      @3750                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3750[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x6B, 0x3C,
+/* 803C2EE0-803C2EEC 000C .data      @3750                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3750[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)progChangeDraw__10dScnLogo_cFv,
 };
-/* 803C2EEC 000C .data      @3751                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3751[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x70, 0x70,
+/* 803C2EEC-803C2EF8 000C .data      @3751                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3751[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)dvdWaitDraw__10dScnLogo_cFv,
 };
-/* 803C2EF8 000C .data      @3752                                                        */
-SECTION_DATA u8 d_d_s_logo__LIT_3752[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x72, 0x84,
+/* 803C2EF8-803C2F04 000C .data      @3752                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_logo__LIT_3752[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)nextSceneChange__10dScnLogo_cFv,
 };
-/* 803C2F04 00C0 .data      l_execFunc                                                   */
+/* 803C2F04-803C2FC4 00C0 .data      l_execFunc                                                   InitializedData */
 SECTION_DATA u8 l_execFunc[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -278,23 +520,35 @@ SECTION_DATA u8 l_execFunc[192] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C2FC4 000C .data      l_method$4611                                                */
-SECTION_DATA u8 data_803C2FC4[12] = {
-	0x80, 0x25, 0x79, 0x10, 0x80, 0x25, 0x79, 0xBC, 0x80, 0x25, 0x7A, 0x70,
+/* 803C2FC4-803C2FD0 000C .data      l_method$4611                                                SymbolReferenceArrayData */
+SECTION_DATA void* data_803C2FC4[3] = {
+	(void*)phase_0,
+	(void*)phase_1,
+	(void*)phase_2,
 };
-/* 803C2FD0 0014 .data      l_dScnLogo_Method                                            */
-SECTION_DATA u8 l_dScnLogo_Method[20] = {
-	0x80, 0x25, 0x84, 0x20, 0x80, 0x25, 0x84, 0xA8, 0x80, 0x25, 0x84, 0x44, 0x80, 0x25, 0x84, 0xD0,
-	0x80, 0x25, 0x84, 0x84,
+/* 803C2FD0-803C2FE4 0014 .data      l_dScnLogo_Method                                            SymbolReferenceArrayData */
+SECTION_DATA void* l_dScnLogo_Method[5] = {
+	(void*)dScnLogo_Create,
+	(void*)dScnLogo_Delete,
+	(void*)dScnLogo_Execute,
+	(void*)dScnLogo_IsDelete__FP10dScnLogo_c,
+	(void*)dScnLogo_Draw,
 };
-/* 803C2FE4 0028 .data      g_profile_LOGO_SCENE                                         */
-SECTION_DATA u8 g_profile_LOGO_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x09, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x02, 0xA8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x80, 0x3C, 0x2F, 0xD0, 0x00, 0x00, 0x00, 0x00,
+/* 803C2FE4-803C300C 0028 .data      g_profile_LOGO_SCENE                                         SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_LOGO_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x00090000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000002A8,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnLogo_Method,
+	NULL,
 };
-/* 803C300C 000C .data      __vt__10dLog_HIO_c                                           */
-SECTION_DATA const  void* __vt__10dLog_HIO_c[3] = {
+/* 803C300C-803C3018 000C .data      __vt__10dLog_HIO_c                                           VTableData */
+SECTION_DATA void* __vt__10dLog_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10dLog_HIO_cFv,
@@ -307,25 +561,25 @@ SECTION_DATA const  void* __vt__10dLog_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454ED8 0004 .sdata2    @3933                                                        */
+/* 80454ED8-80454EDC 0004 .sdata2    @3933                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_3933 = 0.500000f;
-/* 80454EDC 0004 .sdata2    @3934                                                        */
+/* 80454EDC-80454EE0 0004 .sdata2    @3934                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3934 = 1.000000f;
-/* 80454EE0 0004 .sdata2    @3935                                                        */
+/* 80454EE0-80454EE4 0004 .sdata2    @3935                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_s_logo__LIT_3935 = -1.000000f;
-/* 80454EE4 0004 .sdata2    @3936                                                        */
+/* 80454EE4-80454EE8 0004 .sdata2    @3936                                                        Float32Data */
 // 0xbf000000
 SECTION_SDATA2 f32 d_d_s_logo__LIT_3936 = -0.500000f;
-/* 80454EE8 0004 .sdata2    @3937                                                        */
+/* 80454EE8-80454EEC 0004 .sdata2    @3937                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_s_logo__LIT_3937 = 255.000000f;
-/* 80454EEC 0004 .sdata2    @3938                                                        */
+/* 80454EEC-80454EF0 0004 .sdata2    @3938                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 LIT_3938 = 200.000000f;
-/* 80454EF0 0008 .sdata2    @3940                                                        */
+/* 80454EF0-80454EF8 0008 .sdata2    @3940                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_s_logo__LIT_3940 = 4503599627370496.000000;
 }
@@ -336,8 +590,8 @@ SECTION_SDATA2 f64 d_d_s_logo__LIT_3940 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430758 000C .bss       @3702                                                        */
-SECTION_BSS u8 d_d_s_logo__LIT_3702[16];
+/* 80430758-80430768 000C .bss       @3702                                                        ZeroInitializedData */
+SECTION_BSS u8 d_d_s_logo__LIT_3702[12 + 4 /* padding */];
 }
 
 
@@ -346,7 +600,7 @@ SECTION_BSS u8 d_d_s_logo__LIT_3702[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510E8 0008 .sbss      g_LogHIO                                                     */
+/* 804510E8-804510F0 0008 .sbss      g_LogHIO                                                     ZeroInitializedData */
 SECTION_SBSS u8 g_LogHIO[8];
 }
 
@@ -356,7 +610,7 @@ SECTION_SBSS u8 g_LogHIO[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802560A4 0010 .text      __ct__10dLog_HIO_cFv                                         */
+/* 802560A4-802560B4 0010 .text      __ct__10dLog_HIO_cFv                                         Function */
 // dLog_HIO_c::dLog_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -367,7 +621,7 @@ asm void __ct__10dLog_HIO_cFv() {
 }
 #pragma pop
 
-/* 802560B4 0044 .text      preLoad_dyl_create__10dScnLogo_cFv                           */
+/* 802560B4-802560F8 0044 .text      preLoad_dyl_create__10dScnLogo_cFv                           Function */
 // dScnLogo_c::preLoad_dyl_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -378,7 +632,7 @@ asm void preLoad_dyl_create__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 802560F8 0024 .text      preLoad_dyl_remove__10dScnLogo_cFv                           */
+/* 802560F8-8025611C 0024 .text      preLoad_dyl_remove__10dScnLogo_cFv                           Function */
 // dScnLogo_c::preLoad_dyl_remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -389,7 +643,7 @@ asm void preLoad_dyl_remove__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 8025611C 007C .text      preLoad_dyl__10dScnLogo_cFv                                  */
+/* 8025611C-80256198 007C .text      preLoad_dyl__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::preLoad_dyl(void)
 #pragma push
 #pragma optimization_level 0
@@ -400,7 +654,7 @@ asm void preLoad_dyl__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256198 0078 .text      checkProgSelect__10dScnLogo_cFv                              */
+/* 80256198-80256210 0078 .text      checkProgSelect__10dScnLogo_cFv                              Function */
 // dScnLogo_c::checkProgSelect(void)
 #pragma push
 #pragma optimization_level 0
@@ -411,7 +665,7 @@ asm void checkProgSelect__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256210 0054 .text      draw__10dScnLogo_cFv                                         */
+/* 80256210-80256264 0054 .text      draw__10dScnLogo_cFv                                         Function */
 // dScnLogo_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -422,7 +676,7 @@ asm void draw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256264 00B8 .text      progInDraw__10dScnLogo_cFv                                   */
+/* 80256264-8025631C 00B8 .text      progInDraw__10dScnLogo_cFv                                   Function */
 // dScnLogo_c::progInDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -433,7 +687,7 @@ asm void progInDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 8025631C 05C4 .text      progSelDraw__10dScnLogo_cFv                                  */
+/* 8025631C-802568E0 05C4 .text      progSelDraw__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::progSelDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -444,7 +698,7 @@ asm void progSelDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 802568E0 015C .text      progOutDraw__10dScnLogo_cFv                                  */
+/* 802568E0-80256A3C 015C .text      progOutDraw__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::progOutDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -455,7 +709,7 @@ asm void progOutDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256A3C 0084 .text      progSetDraw__10dScnLogo_cFv                                  */
+/* 80256A3C-80256AC0 0084 .text      progSetDraw__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::progSetDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -466,7 +720,7 @@ asm void progSetDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256AC0 007C .text      progSet2Draw__10dScnLogo_cFv                                 */
+/* 80256AC0-80256B3C 007C .text      progSet2Draw__10dScnLogo_cFv                                 Function */
 // dScnLogo_c::progSet2Draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -477,7 +731,7 @@ asm void progSet2Draw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256B3C 00B8 .text      progChangeDraw__10dScnLogo_cFv                               */
+/* 80256B3C-80256BF4 00B8 .text      progChangeDraw__10dScnLogo_cFv                               Function */
 // dScnLogo_c::progChangeDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -488,7 +742,7 @@ asm void progChangeDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256BF4 0074 .text      warningInDraw__10dScnLogo_cFv                                */
+/* 80256BF4-80256C68 0074 .text      warningInDraw__10dScnLogo_cFv                                Function */
 // dScnLogo_c::warningInDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -499,7 +753,7 @@ asm void warningInDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256C68 015C .text      warningDispDraw__10dScnLogo_cFv                              */
+/* 80256C68-80256DC4 015C .text      warningDispDraw__10dScnLogo_cFv                              Function */
 // dScnLogo_c::warningDispDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -510,7 +764,7 @@ asm void warningDispDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256DC4 0084 .text      warningOutDraw__10dScnLogo_cFv                               */
+/* 80256DC4-80256E48 0084 .text      warningOutDraw__10dScnLogo_cFv                               Function */
 // dScnLogo_c::warningOutDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -521,7 +775,7 @@ asm void warningOutDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256E48 0084 .text      nintendoInDraw__10dScnLogo_cFv                               */
+/* 80256E48-80256ECC 0084 .text      nintendoInDraw__10dScnLogo_cFv                               Function */
 // dScnLogo_c::nintendoInDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -532,7 +786,7 @@ asm void nintendoInDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256ECC 0084 .text      nintendoOutDraw__10dScnLogo_cFv                              */
+/* 80256ECC-80256F50 0084 .text      nintendoOutDraw__10dScnLogo_cFv                              Function */
 // dScnLogo_c::nintendoOutDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -543,7 +797,7 @@ asm void nintendoOutDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256F50 0084 .text      dolbyInDraw__10dScnLogo_cFv                                  */
+/* 80256F50-80256FD4 0084 .text      dolbyInDraw__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::dolbyInDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -554,7 +808,7 @@ asm void dolbyInDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80256FD4 0084 .text      dolbyOutDraw__10dScnLogo_cFv                                 */
+/* 80256FD4-80257058 0084 .text      dolbyOutDraw__10dScnLogo_cFv                                 Function */
 // dScnLogo_c::dolbyOutDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -565,7 +819,7 @@ asm void dolbyOutDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257058 0018 .text      dolbyOutDraw2__10dScnLogo_cFv                                */
+/* 80257058-80257070 0018 .text      dolbyOutDraw2__10dScnLogo_cFv                                Function */
 // dScnLogo_c::dolbyOutDraw2(void)
 #pragma push
 #pragma optimization_level 0
@@ -576,7 +830,7 @@ asm void dolbyOutDraw2__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257070 0214 .text      dvdWaitDraw__10dScnLogo_cFv                                  */
+/* 80257070-80257284 0214 .text      dvdWaitDraw__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::dvdWaitDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -587,7 +841,7 @@ asm void dvdWaitDraw__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257284 0034 .text      nextSceneChange__10dScnLogo_cFv                              */
+/* 80257284-802572B8 0034 .text      nextSceneChange__10dScnLogo_cFv                              Function */
 // dScnLogo_c::nextSceneChange(void)
 #pragma push
 #pragma optimization_level 0
@@ -598,7 +852,7 @@ asm void nextSceneChange__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 802572B8 0658 .text      __dt__10dScnLogo_cFv                                         */
+/* 802572B8-80257910 0658 .text      __dt__10dScnLogo_cFv                                         Function */
 // dScnLogo_c::~dScnLogo_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -609,7 +863,7 @@ asm void __dt__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257910 00AC .text      phase_0__FP10dScnLogo_c                                      */
+/* 80257910-802579BC 00AC .text      phase_0__FP10dScnLogo_c                                      Function */
 }
 
 #pragma push
@@ -622,7 +876,7 @@ asm void phase_0(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 802579BC 00B4 .text      phase_1__FP10dScnLogo_c                                      */
+/* 802579BC-80257A70 00B4 .text      phase_1__FP10dScnLogo_c                                      Function */
 }
 
 #pragma push
@@ -635,7 +889,7 @@ asm void phase_1(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 80257A70 0044 .text      phase_2__FP10dScnLogo_c                                      */
+/* 80257A70-80257AB4 0044 .text      phase_2__FP10dScnLogo_c                                      Function */
 }
 
 #pragma push
@@ -648,7 +902,7 @@ asm void phase_2(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 80257AB4 002C .text      resLoad__FP30request_of_phase_process_classP10dScnLogo_c     */
+/* 80257AB4-80257AE0 002C .text      resLoad__FP30request_of_phase_process_classP10dScnLogo_c     Function */
 }
 
 #pragma push
@@ -661,7 +915,7 @@ asm void resLoad(request_of_phase_process_class*, dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 80257AE0 0184 .text      create__10dScnLogo_cFv                                       */
+/* 80257AE0-80257C64 0184 .text      create__10dScnLogo_cFv                                       Function */
 // dScnLogo_c::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -672,7 +926,7 @@ asm void create__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257C64 0388 .text      logoInitGC__10dScnLogo_cFv                                   */
+/* 80257C64-80257FEC 0388 .text      logoInitGC__10dScnLogo_cFv                                   Function */
 // dScnLogo_c::logoInitGC(void)
 #pragma push
 #pragma optimization_level 0
@@ -683,7 +937,7 @@ asm void logoInitGC__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80257FEC 0434 .text      dvdDataLoad__10dScnLogo_cFv                                  */
+/* 80257FEC-80258420 0434 .text      dvdDataLoad__10dScnLogo_cFv                                  Function */
 // dScnLogo_c::dvdDataLoad(void)
 #pragma push
 #pragma optimization_level 0
@@ -694,7 +948,7 @@ asm void dvdDataLoad__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80258420 0024 .text      dScnLogo_Create__FP11scene_class                             */
+/* 80258420-80258444 0024 .text      dScnLogo_Create__FP11scene_class                             Function */
 }
 
 #pragma push
@@ -707,7 +961,7 @@ asm void dScnLogo_Create(scene_class*) {
 #pragma pop
 
 extern "C" {
-/* 80258444 0040 .text      dScnLogo_Execute__FP10dScnLogo_c                             */
+/* 80258444-80258484 0040 .text      dScnLogo_Execute__FP10dScnLogo_c                             Function */
 }
 
 #pragma push
@@ -720,7 +974,7 @@ asm void dScnLogo_Execute(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 80258484 0024 .text      dScnLogo_Draw__FP10dScnLogo_c                                */
+/* 80258484-802584A8 0024 .text      dScnLogo_Draw__FP10dScnLogo_c                                Function */
 }
 
 #pragma push
@@ -733,7 +987,7 @@ asm void dScnLogo_Draw(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 802584A8 0028 .text      dScnLogo_Delete__FP10dScnLogo_c                              */
+/* 802584A8-802584D0 0028 .text      dScnLogo_Delete__FP10dScnLogo_c                              Function */
 }
 
 #pragma push
@@ -746,13 +1000,13 @@ asm void dScnLogo_Delete(dScnLogo_c*) {
 #pragma pop
 
 extern "C" {
-/* 802584D0 0008 .text      dScnLogo_IsDelete__FP10dScnLogo_c                            */
+/* 802584D0-802584D8 0008 .text      dScnLogo_IsDelete__FP10dScnLogo_c                            ReturnIntegerFunction */
 // dScnLogo_IsDelete(dScnLogo_c*)
 int dScnLogo_IsDelete__FP10dScnLogo_c() {
 	return 1;
 }
 
-/* 802584D8 0024 .text      setProgressiveMode__10dScnLogo_cFUc                          */
+/* 802584D8-802584FC 0024 .text      setProgressiveMode__10dScnLogo_cFUc                          Function */
 // dScnLogo_c::setProgressiveMode(u8)
 #pragma push
 #pragma optimization_level 0
@@ -763,7 +1017,7 @@ asm void setProgressiveMode__10dScnLogo_cFUc() {
 }
 #pragma pop
 
-/* 802584FC 0024 .text      getProgressiveMode__10dScnLogo_cFv                           */
+/* 802584FC-80258520 0024 .text      getProgressiveMode__10dScnLogo_cFv                           Function */
 // dScnLogo_c::getProgressiveMode(void)
 #pragma push
 #pragma optimization_level 0
@@ -774,7 +1028,7 @@ asm void getProgressiveMode__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 80258520 002C .text      isProgressiveMode__10dScnLogo_cFv                            */
+/* 80258520-8025854C 002C .text      isProgressiveMode__10dScnLogo_cFv                            Function */
 // dScnLogo_c::isProgressiveMode(void)
 #pragma push
 #pragma optimization_level 0
@@ -785,7 +1039,7 @@ asm void isProgressiveMode__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 8025854C 0010 .text      setRenderMode__10dScnLogo_cFv                                */
+/* 8025854C-8025855C 0010 .text      setRenderMode__10dScnLogo_cFv                                Function */
 // dScnLogo_c::setRenderMode(void)
 #pragma push
 #pragma optimization_level 0
@@ -796,7 +1050,7 @@ asm void setRenderMode__10dScnLogo_cFv() {
 }
 #pragma pop
 
-/* 8025855C 0048 .text      __dt__10dLog_HIO_cFv                                         */
+/* 8025855C-802585A4 0048 .text      __dt__10dLog_HIO_cFv                                         Function */
 // dLog_HIO_c::~dLog_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -807,7 +1061,7 @@ asm void __dt__10dLog_HIO_cFv() {
 }
 #pragma pop
 
-/* 802585A4 001C .text      cLib_calcTimer<Us>__FPUs                                     */
+/* 802585A4-802585C0 001C .text      cLib_calcTimer<Us>__FPUs                                     Function */
 // cLib_calcTimer<Us>(u16*)
 #pragma push
 #pragma optimization_level 0
@@ -818,7 +1072,7 @@ asm void func_802585A4() {
 }
 #pragma pop
 
-/* 802585C0 01CC .text      __sinit_d_s_logo_cpp                                         */
+/* 802585C0-8025878C 01CC .text      __sinit_d_s_logo_cpp                                         SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

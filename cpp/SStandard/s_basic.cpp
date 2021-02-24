@@ -8,10 +8,14 @@
 // Additional Symbols:
 // 
 
-extern void sBs_FillArea_s(void*, u32, s16); /* sBs_FillArea_s__FPvUls */
+extern void sBs_FillArea_s(void*, u32, short); /* sBs_FillArea_s__FPvUls */
+extern void sBs_ClearArea(void*, u32); /* sBs_ClearArea__FPvUl */
 
 extern "C" {
+/* Function             */
 extern void sBs_FillArea_s__FPvUls();
+/* Function             */
+extern void sBs_ClearArea__FPvUl();
 }
 
 
@@ -20,20 +24,20 @@ extern void sBs_FillArea_s__FPvUls();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80271C8C 0020 .text      sBs_FillArea_s__FPvUls                                       */
+/* 80271C8C-80271CAC 0020 .text      sBs_FillArea_s__FPvUls                                       Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void sBs_FillArea_s(void*, u32, s16) {
+asm void sBs_FillArea_s(void*, u32, short) {
 	nofralloc
 #include "_include/SStandard/s_basic/sBs_FillArea_s__FPvUls.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80271CAC 0024 .text      sBs_ClearArea__FPvUl                                         */
+/* 80271CAC-80271CD0 0024 .text      sBs_ClearArea__FPvUl                                         Function */
 }
 
 #pragma push

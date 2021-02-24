@@ -8,22 +8,41 @@
 // Additional Symbols:
 // 
 
-struct cBgS_PolyInfo;
 struct cXyz;
 struct dPath;
+struct cBgS_PolyInfo;
 
+extern void dPath_GetPnt(const dPath*, int); /* dPath_GetPnt__FPC5dPathi */
 extern void dPath_GetRoomPath(int, int); /* dPath_GetRoomPath__Fii */
+extern void dPath_GetNextRoomPath(const dPath*, int); /* dPath_GetNextRoomPath__FPC5dPathi */
+extern void dPath_GetPolyRoomPathVec(const cBgS_PolyInfo&, cXyz*, int*); /* dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi */
 
 extern "C" {
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
+extern void dPath_GetPnt__FPC5dPathi();
+/* Function             */
 extern void dPath_GetRoomPath__Fii();
+/* Function             */
+extern void dPath_GetNextRoomPath__FPC5dPathi();
+/* Function             */
+extern void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
+/* Function             */
 extern void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_path__LIT_3685[8];
 }
 
@@ -33,7 +52,7 @@ SECTION_SDATA2 extern u8 d_d_path__LIT_3685[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452000 0004 .sdata2    @3685                                                        */
+/* 80452000-80452008 0004 .sdata2    @3685                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_path__LIT_3685[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -47,7 +66,7 @@ SECTION_SDATA2 u8 d_d_path__LIT_3685[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 800517B0 003C .text      dPath_GetPnt__FPC5dPathi                                     */
+/* 800517B0-800517EC 003C .text      dPath_GetPnt__FPC5dPathi                                     Function */
 }
 
 #pragma push
@@ -60,7 +79,7 @@ asm void dPath_GetPnt(const dPath*, int) {
 #pragma pop
 
 extern "C" {
-/* 800517EC 00AC .text      dPath_GetRoomPath__Fii                                       */
+/* 800517EC-80051898 00AC .text      dPath_GetRoomPath__Fii                                       Function */
 }
 
 #pragma push
@@ -73,7 +92,7 @@ asm void dPath_GetRoomPath(int, int) {
 #pragma pop
 
 extern "C" {
-/* 80051898 00C4 .text      dPath_GetNextRoomPath__FPC5dPathi                            */
+/* 80051898-8005195C 00C4 .text      dPath_GetNextRoomPath__FPC5dPathi                            Function */
 }
 
 #pragma push
@@ -86,7 +105,7 @@ asm void dPath_GetNextRoomPath(const dPath*, int) {
 #pragma pop
 
 extern "C" {
-/* 8005195C 0164 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         */
+/* 8005195C-80051AC0 0164 .text      dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi         Function */
 }
 
 #pragma push

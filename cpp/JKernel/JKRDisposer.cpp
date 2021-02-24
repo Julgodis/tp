@@ -11,14 +11,24 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void findFromRoot__7JKRHeapFPv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__11JKRDisposerFv();
+/* Function             */
 extern void __dt__11JKRDisposerFv();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
-SECTION_DATA extern const void* __vt__11JKRDisposer[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11JKRDisposer[4];
 }
 
 
@@ -27,8 +37,8 @@ SECTION_DATA extern const void* __vt__11JKRDisposer[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC0F0 000C .data      __vt__11JKRDisposer                                          */
-SECTION_DATA const  void* __vt__11JKRDisposer[4] = {
+/* 803CC0F0-803CC100 000C .data      __vt__11JKRDisposer                                          VTableData */
+SECTION_DATA void* __vt__11JKRDisposer[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JKRDisposerFv,
@@ -43,7 +53,7 @@ SECTION_DATA const  void* __vt__11JKRDisposer[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D147C 0068 .text      __ct__11JKRDisposerFv                                        */
+/* 802D147C-802D14E4 0068 .text      __ct__11JKRDisposerFv                                        Function */
 // JKRDisposer::JKRDisposer(void)
 #pragma push
 #pragma optimization_level 0
@@ -54,7 +64,7 @@ asm void __ct__11JKRDisposerFv() {
 }
 #pragma pop
 
-/* 802D14E4 0084 .text      __dt__11JKRDisposerFv                                        */
+/* 802D14E4-802D1568 0084 .text      __dt__11JKRDisposerFv                                        Function */
 // JKRDisposer::~JKRDisposer(void)
 #pragma push
 #pragma optimization_level 0

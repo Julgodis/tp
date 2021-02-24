@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_atan2();
+/* Function             */
+extern void atan2();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_atan2();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C720 0020 .text      atan2                                                        */
+/* 8036C720-8036C740 0020 .text      atan2                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -11,68 +11,145 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__Q37JStudio14TVariableValue7TOutputFv();
+/* ReturnFunction       */
 extern void adaptor_do_begin__Q27JStudio8TAdaptorFv();
+/* ReturnFunction       */
 extern void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
+/* Function             */
 extern void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
+/* Function             */
 extern void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+/* Function             */
 extern void __dt__Q27JStudio14TAdaptor_soundFv();
+/* Function             */
 extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl19TTransform_positionPCQ26JStage7TObjectUl();
+/* Function             */
 extern void __ct__Q27JStudio14TVariableValueFv();
+/* Function             */
 extern void func_8028D728();
+/* Function             */
 extern void func_8028D750();
+/* Function             */
 extern void func_8028D778();
+/* Function             */
 extern void func_8028D7A0();
+/* Function             */
 extern void func_8028D800();
+/* Function             */
+extern void __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject();
+/* Function             */
 extern void __dt__Q215JStudio_JAudio214TAdaptor_soundFv();
+/* Function             */
 extern void adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv();
+/* ReturnFunction       */
 extern void adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv();
+/* Function             */
 extern void adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl();
+/* Function             */
 extern void adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void __cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor();
+/* Function             */
 extern void prepareSound___Q215JStudio_JAudio214TAdaptor_soundFv();
+/* Function             */
 extern void beginSound_fadeIn___Q215JStudio_JAudio214TAdaptor_soundFv();
+/* Function             */
 extern void endSound_fadeOut___Q215JStudio_JAudio214TAdaptor_soundFUl();
+/* Function             */
 extern void __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv();
+/* SInitFunction        */
+extern void func_8028E0F4();
+/* Function             */
 extern void releaseSound__14JAISoundHandleFv();
+/* Function             */
 extern void lockWhenPrepared__15JAISoundStatus_Fv();
+/* Function             */
 extern void unlockIfLocked__15JAISoundStatus_Fv();
+/* Function             */
 extern void stop__8JAISoundFUl();
+/* Function             */
 extern void stop__8JAISoundFv();
+/* Function             */
 extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePitch__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void moveFxMix__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePan__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void func_802A2FEC();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* InitializedData      */
 SECTION_RODATA extern const u8 sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12];
-SECTION_DATA extern const void* __vt__Q27JStudio14TAdaptor_sound[20];
-SECTION_DATA extern const void* __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern const void* __vt__Q37JStudio14TVariableValue7TOutput[4];
-SECTION_DATA extern const void* __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_[4];
-SECTION_DATA extern const void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio14TAdaptor_sound[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio8TAdaptor[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 object_sound__data_80431490[32];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 object_sound__LIT_1817[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 object_sound__LIT_1818[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1819[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1820[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1821[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1822[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound[72];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804511F8[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1470[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1805;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1807;
 }
 
@@ -82,15 +159,15 @@ SECTION_SDATA2 extern f64 LIT_1807;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5A78 0010 .data      __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_     */
-SECTION_DATA const  void* __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_[4] = {
+/* 803C5A78-803C5A88 0010 .data      __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_     VTableData */
+SECTION_DATA void* __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor,
 	(void*)__dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv,
 };
-/* 803C5A88 0050 .data      __vt__Q215JStudio_JAudio214TAdaptor_sound                    */
-SECTION_DATA const  void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20] = {
+/* 803C5A88-803C5AD8 0050 .data      __vt__Q215JStudio_JAudio214TAdaptor_sound                    VTableData */
+SECTION_DATA void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q215JStudio_JAudio214TAdaptor_soundFv,
@@ -120,14 +197,14 @@ SECTION_DATA const  void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455510 0004 .sdata2    @1470                                                        */
+/* 80455510-80455514 0004 .sdata2    @1470                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1470[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455514 0004 .sdata2    @1805                                                        */
+/* 80455514-80455518 0004 .sdata2    @1805                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_1805 = 1.000000f;
-/* 80455518 0008 .sdata2    @1807                                                        */
+/* 80455518-80455520 0008 .sdata2    @1807                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_1807 = 4503599627370496.000000;
 }
@@ -138,22 +215,22 @@ SECTION_SDATA2 f64 LIT_1807 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431490 0000 .bss       ...bss.0                                                     */
-/* 80431490 0020 .bss       aoData$1517                                                  */
+/* 80431490-80431490 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80431490-804314B0 0020 .bss       aoData$1517                                                  ZeroInitializedData */
 SECTION_BSS u8 object_sound__data_80431490[32];
-/* 804314B0 000C .bss       @1817                                                        */
+/* 804314B0-804314BC 000C .bss       @1817                                                        ZeroInitializedData */
 SECTION_BSS u8 object_sound__LIT_1817[12];
-/* 804314BC 000C .bss       @1818                                                        */
+/* 804314BC-804314C8 000C .bss       @1818                                                        ZeroInitializedData */
 SECTION_BSS u8 object_sound__LIT_1818[12];
-/* 804314C8 000C .bss       @1819                                                        */
+/* 804314C8-804314D4 000C .bss       @1819                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1819[12];
-/* 804314D4 000C .bss       @1820                                                        */
+/* 804314D4-804314E0 000C .bss       @1820                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1820[12];
-/* 804314E0 000C .bss       @1821                                                        */
+/* 804314E0-804314EC 000C .bss       @1821                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1821[12];
-/* 804314EC 000C .bss       @1822                                                        */
+/* 804314EC-804314F8 000C .bss       @1822                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1822[12];
-/* 804314F8 0048 .bss       saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound         */
+/* 804314F8-80431540 0048 .bss       saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound         ZeroInitializedData */
 SECTION_BSS u8 saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound[72];
 }
 
@@ -163,7 +240,7 @@ SECTION_BSS u8 saoVVOSetValue___Q215JStudio_JAudio214TAdaptor_sound[72];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028D728 0028 .text      setValue_VOLUME___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+/* 8028D728-8028D750 0028 .text      setValue_VOLUME___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf Function */
 // JStudio_JAudio2::@unnamed@object_sound_cpp@::setValue_VOLUME_(JAISound*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +251,7 @@ asm void func_8028D728() {
 }
 #pragma pop
 
-/* 8028D750 0028 .text      setValue_PAN___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+/* 8028D750-8028D778 0028 .text      setValue_PAN___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf Function */
 // JStudio_JAudio2::@unnamed@object_sound_cpp@::setValue_PAN_(JAISound*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +262,7 @@ asm void func_8028D750() {
 }
 #pragma pop
 
-/* 8028D778 0028 .text      setValue_PITCH___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+/* 8028D778-8028D7A0 0028 .text      setValue_PITCH___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf Function */
 // JStudio_JAudio2::@unnamed@object_sound_cpp@::setValue_PITCH_(JAISound*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +273,7 @@ asm void func_8028D778() {
 }
 #pragma pop
 
-/* 8028D7A0 0060 .text      setValue_TEMPO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+/* 8028D7A0-8028D800 0060 .text      setValue_TEMPO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf Function */
 // JStudio_JAudio2::@unnamed@object_sound_cpp@::setValue_TEMPO_(JAISound*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +284,7 @@ asm void func_8028D7A0() {
 }
 #pragma pop
 
-/* 8028D800 0028 .text      setValue_ECHO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf */
+/* 8028D800-8028D828 0028 .text      setValue_ECHO___Q215JStudio_JAudio226@unnamed@object_sound_cpp@FP8JAISoundf Function */
 // JStudio_JAudio2::@unnamed@object_sound_cpp@::setValue_ECHO_(JAISound*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +295,7 @@ asm void func_8028D800() {
 }
 #pragma pop
 
-/* 8028D828 00CC .text      __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject */
+/* 8028D828-8028D8F4 00CC .text      __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject Function */
 // JStudio_JAudio2::TAdaptor_sound::JStudio_JAudio2::TAdaptor_sound(JStudio_JAudio2::TCreateObject)
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +306,7 @@ asm void __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreate
 }
 #pragma pop
 
-/* 8028D8F4 00B0 .text      __dt__Q215JStudio_JAudio214TAdaptor_soundFv                  */
+/* 8028D8F4-8028D9A4 00B0 .text      __dt__Q215JStudio_JAudio214TAdaptor_soundFv                  Function */
 // JStudio_JAudio2::TAdaptor_sound::~JStudio_JAudio2::TAdaptor_sound(void)
 #pragma push
 #pragma optimization_level 0
@@ -240,7 +317,7 @@ asm void __dt__Q215JStudio_JAudio214TAdaptor_soundFv() {
 }
 #pragma pop
 
-/* 8028D9A4 00D0 .text      adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv    */
+/* 8028D9A4-8028DA74 00D0 .text      adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv    Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -251,13 +328,13 @@ asm void adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv() {
 }
 #pragma pop
 
-/* 8028DA74 0004 .text      adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv        */
+/* 8028DA74-8028DA78 0004 .text      adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv        ReturnFunction */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_end(void)
 void adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv() {
 	return;
 }
 
-/* 8028DA78 01A8 .text      adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl    */
+/* 8028DA78-8028DC20 01A8 .text      adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl    Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_update(u32)
 #pragma push
 #pragma optimization_level 0
@@ -268,7 +345,7 @@ asm void adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl() {
 }
 #pragma pop
 
-/* 8028DC20 0034 .text      adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DC20-8028DC54 0034 .text      adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_SOUND(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -279,7 +356,7 @@ asm void adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15
 }
 #pragma pop
 
-/* 8028DC54 0034 .text      adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DC54-8028DC88 0034 .text      adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_BEGIN(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -290,7 +367,7 @@ asm void adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15
 }
 #pragma pop
 
-/* 8028DC88 0048 .text      adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DC88-8028DCD0 0048 .text      adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_BEGIN_FADE_IN(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -301,7 +378,7 @@ asm void adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudi
 }
 #pragma pop
 
-/* 8028DCD0 0030 .text      adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DCD0-8028DD00 0030 .text      adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_END(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -312,7 +389,7 @@ asm void adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TE
 }
 #pragma pop
 
-/* 8028DD00 0048 .text      adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DD00-8028DD48 0048 .text      adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_END_FADE_OUT(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -323,7 +400,7 @@ asm void adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio
 }
 #pragma pop
 
-/* 8028DD48 006C .text      adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DD48-8028DDB4 006C .text      adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_PARENT(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -334,7 +411,7 @@ asm void adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data1
 }
 #pragma pop
 
-/* 8028DDB4 0080 .text      adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DDB4-8028DE34 0080 .text      adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_PARENT_NODE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -345,7 +422,7 @@ asm void adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4
 }
 #pragma pop
 
-/* 8028DE34 001C .text      adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DE34-8028DE50 001C .text      adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_PARENT_ENABLE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -356,7 +433,7 @@ asm void adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudi
 }
 #pragma pop
 
-/* 8028DE50 001C .text      adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DE50-8028DE6C 001C .text      adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_REPEAT(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -367,7 +444,7 @@ asm void adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data1
 }
 #pragma pop
 
-/* 8028DE6C 001C .text      adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DE6C-8028DE88 001C .text      adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_CONTINUOUS(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -378,7 +455,7 @@ asm void adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4d
 }
 #pragma pop
 
-/* 8028DE88 0028 .text      adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DE88-8028DEB0 0028 .text      adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_LOCATED(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -389,7 +466,7 @@ asm void adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data
 }
 #pragma pop
 
-/* 8028DEB0 001C .text      adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028DEB0-8028DECC 001C .text      adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JAudio2::TAdaptor_sound::adaptor_do_ON_EXIT_NOT_END(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -400,7 +477,7 @@ asm void adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStu
 }
 #pragma pop
 
-/* 8028DECC 0038 .text      __cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor */
+/* 8028DECC-8028DF04 0038 .text      __cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor Function */
 // JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_::operator()(f32, JStudio::TAdaptor) const
 #pragma push
 #pragma optimization_level 0
@@ -411,7 +488,7 @@ asm void __cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8
 }
 #pragma pop
 
-/* 8028DF04 00A0 .text      prepareSound___Q215JStudio_JAudio214TAdaptor_soundFv         */
+/* 8028DF04-8028DFA4 00A0 .text      prepareSound___Q215JStudio_JAudio214TAdaptor_soundFv         Function */
 // JStudio_JAudio2::TAdaptor_sound::prepareSound_(void)
 #pragma push
 #pragma optimization_level 0
@@ -422,7 +499,7 @@ asm void prepareSound___Q215JStudio_JAudio214TAdaptor_soundFv() {
 }
 #pragma pop
 
-/* 8028DFA4 00B0 .text      beginSound_fadeIn___Q215JStudio_JAudio214TAdaptor_soundFv    */
+/* 8028DFA4-8028E054 00B0 .text      beginSound_fadeIn___Q215JStudio_JAudio214TAdaptor_soundFv    Function */
 // JStudio_JAudio2::TAdaptor_sound::beginSound_fadeIn_(void)
 #pragma push
 #pragma optimization_level 0
@@ -433,7 +510,7 @@ asm void beginSound_fadeIn___Q215JStudio_JAudio214TAdaptor_soundFv() {
 }
 #pragma pop
 
-/* 8028E054 0040 .text      endSound_fadeOut___Q215JStudio_JAudio214TAdaptor_soundFUl    */
+/* 8028E054-8028E094 0040 .text      endSound_fadeOut___Q215JStudio_JAudio214TAdaptor_soundFUl    Function */
 // JStudio_JAudio2::TAdaptor_sound::endSound_fadeOut_(u32)
 #pragma push
 #pragma optimization_level 0
@@ -444,7 +521,7 @@ asm void endSound_fadeOut___Q215JStudio_JAudio214TAdaptor_soundFUl() {
 }
 #pragma pop
 
-/* 8028E094 0060 .text      __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv   */
+/* 8028E094-8028E0F4 0060 .text      __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv   Function */
 // JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_::~JStudio_JAudio2::TAdaptor_sound::TVVOSetValue_(void)
 #pragma push
 #pragma optimization_level 0
@@ -455,7 +532,7 @@ asm void __dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv() {
 }
 #pragma pop
 
-/* 8028E0F4 02AC .text      __sinit_object-sound_cpp                                     */
+/* 8028E0F4-8028E3A0 02AC .text      __sinit_object-sound_cpp                                     SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

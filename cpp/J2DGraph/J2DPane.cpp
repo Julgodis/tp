@@ -11,98 +11,223 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void setAlpha__7J2DPaneFUc();
+/* Function             */
 extern void calcMtx__7J2DPaneFv();
+/* Function             */
 extern void makeMatrix__7J2DPaneFff();
-extern int getTypeID__7J2DPaneCFv();
+/* ReturnIntegerFunction */
+extern  int getTypeID__7J2DPaneCFv();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP15J2DAnmTevRegKey();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP11J2DAnmColor();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+/* ReturnFunction       */
 extern void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
 extern void align__20JSURandomInputStreamFl();
+/* Function             */
 extern void peek__20JSURandomInputStreamFPvl();
+/* Function             */
 extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+/* Function             */
 extern void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive();
+/* Function             */
 extern void setScissor__14J2DGrafContextFv();
+/* Function             */
 extern void func_802E90C0();
+/* Function             */
 extern void func_802E987C();
+/* Function             */
+extern void __ct__7J2DPaneFv();
+/* Function             */
 extern void initiate__7J2DPaneFv();
+/* Function             */
+extern void func_802F5D40();
+/* Function             */
 extern void func_802F5DD0();
+/* Function             */
+extern void func_802F5E88();
+/* Function             */
 extern void func_802F5F08();
+/* Function             */
+extern void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc();
+/* Function             */
 extern void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+/* Function             */
 extern void changeUseTrans__7J2DPaneFP7J2DPane();
+/* Function             */
 extern void __dt__7J2DPaneFv();
+/* Function             */
+extern void appendChild__7J2DPaneFP7J2DPane();
+/* Function             */
+extern void insertChild__7J2DPaneFP7J2DPaneP7J2DPane();
+/* Function             */
 extern void draw__7J2DPaneFffPC14J2DGrafContextbb();
+/* Function             */
 extern void func_802F6D18();
+/* Function             */
 extern void move__7J2DPaneFff();
+/* Function             */
 extern void add__7J2DPaneFff();
+/* Function             */
 extern void resize__7J2DPaneFff();
+/* Function             */
+extern void getBounds__7J2DPaneFv();
+/* Function             */
+extern void rotate__7J2DPaneFff13J2DRotateAxisf();
+/* Function             */
 extern void rotate__7J2DPaneFf();
+/* Function             */
+extern void func_802F7264();
+/* Function             */
 extern void search__7J2DPaneFUx();
+/* Function             */
 extern void searchUserInfo__7J2DPaneFUx();
+/* Function             */
 extern void isUsed__7J2DPaneFPC7ResTIMG();
+/* Function             */
 extern void isUsed__7J2DPaneFPC7ResFONT();
+/* Function             */
 extern void makeMatrix__7J2DPaneFffff();
+/* Function             */
 extern void setCullBack__7J2DPaneF11_GXCullMode();
+/* Function             */
+extern void setBasePosition__7J2DPaneF15J2DBasePosition();
+/* Function             */
+extern void setInfluencedAlpha__7J2DPaneFbb();
+/* Function             */
+extern void getGlbVtx__7J2DPaneCFUc();
+/* Function             */
 extern void getFirstChildPane__7J2DPaneFv();
+/* Function             */
 extern void getNextChildPane__7J2DPaneFv();
+/* Function             */
 extern void getParentPane__7J2DPaneFv();
+/* Function             */
 extern void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+/* Function             */
+extern void J2DCast_F32_to_S16__7J2DPaneFfUc();
+/* Function             */
+extern void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive();
+/* Function             */
 extern void setAnimation__7J2DPaneFP10J2DAnmBase();
+/* Function             */
 extern void setAnimation__7J2DPaneFP15J2DAnmTransform();
+/* Function             */
+extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void clearAnmTransform__7J2DPaneFv();
+/* Function             */
 extern void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+/* Function             */
 extern void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+/* Function             */
 extern void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+/* Function             */
 extern void animationPane__7J2DPaneFPC15J2DAnmTransform();
+/* Function             */
 extern void updateTransform__7J2DPaneFPC15J2DAnmTransform();
+/* ReturnFunction       */
 extern void drawSelf__7J2DPaneFffPA3_A4_f();
+/* ReturnFunction       */
 extern void rewriteAlpha__7J2DPaneFv();
+/* Function             */
 extern void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
+/* Function             */
 extern void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
+/* Function             */
 extern void setCullBack__7J2DPaneFb();
+/* Function             */
 extern void setConnectParent__7J2DPaneFb();
+/* ReturnFunction       */
 extern void update__7J2DPaneFv();
+/* ReturnFunction       */
 extern void drawSelf__7J2DPaneFff();
+/* SInitFunction        */
+extern void __sinit_J2DPane_cpp();
+/* Function             */
 extern void get__13J2DDataManageFP14JSUInputStream();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXRotRad();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSMTXTransApply();
+/* Function             */
 extern void PSMTXScaleApply();
+/* Function             */
 extern void GXSetCullMode();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern u8 LIT_2709[32];
-SECTION_DATA extern const void* __vt__7J2DPane[38];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J2DGrafContext[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_2709[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7J2DPane[38];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 static_mBounds__7J2DPane[16];
-SECTION_SBSS extern u8 mDataManage__9J2DScreen[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1469[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J2DPane__LIT_1489;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1651;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1655;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1725;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J2DPane__LIT_2466[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2547;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2890;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2891[8];
 }
 
@@ -112,13 +237,19 @@ SECTION_SDATA2 extern u8 LIT_2891[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CCFB0 0020 .data      @2709                                                        */
-SECTION_DATA u8 LIT_2709[32] = {
-	0x80, 0x2F, 0x7F, 0x2C, 0x80, 0x2F, 0x7F, 0x40, 0x80, 0x2F, 0x7F, 0x7C, 0x80, 0x2F, 0x7F, 0xB4,
-	0x80, 0x2F, 0x7F, 0x68, 0x80, 0x2F, 0x7F, 0xA4, 0x80, 0x2F, 0x7F, 0x90, 0x80, 0x2F, 0x7F, 0x54,
+/* 803CCFB0-803CCFD0 0020 .data      @2709                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_2709[8] = {
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+14),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+19),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+34),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+48),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+29),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+44),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+39),
+	(void*)(((u32*)setAnimation__7J2DPaneFP10J2DAnmBase)+24),
 };
-/* 803CCFD0 0094 .data      __vt__7J2DPane                                               */
-SECTION_DATA const  void* __vt__7J2DPane[38] = {
+/* 803CCFD0-803CD068 0094 .data      __vt__7J2DPane                                               VTableData */
+SECTION_DATA void* __vt__7J2DPane[38] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__7J2DPaneFv,
@@ -167,33 +298,33 @@ SECTION_DATA const  void* __vt__7J2DPane[38] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804561F0 0004 .sdata2    @1469                                                        */
+/* 804561F0-804561F4 0004 .sdata2    @1469                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1469[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804561F4 0004 .sdata2    @1489                                                        */
+/* 804561F4-804561F8 0004 .sdata2    @1489                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 J2DPane__LIT_1489 = 1.000000f;
-/* 804561F8 0008 .sdata2    @1651                                                        */
+/* 804561F8-80456200 0008 .sdata2    @1651                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_1651 = 4503601774854144.000000;
-/* 80456200 0008 .sdata2    @1655                                                        */
+/* 80456200-80456208 0008 .sdata2    @1655                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_1655 = 4503599627370496.000000;
-/* 80456208 0004 .sdata2    @1725                                                        */
+/* 80456208-8045620C 0004 .sdata2    @1725                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_1725 = 0.500000f;
-/* 8045620C 0004 .sdata2    @2466                                                        */
+/* 8045620C-80456210 0004 .sdata2    @2466                                                        InitializedData */
 SECTION_SDATA2 u8 J2DPane__LIT_2466[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 80456210 0004 .sdata2    @2547                                                        */
+/* 80456210-80456214 0004 .sdata2    @2547                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 LIT_2547 = 255.000000f;
-/* 80456214 0004 .sdata2    @2890                                                        */
+/* 80456214-80456218 0004 .sdata2    @2890                                                        Float32Data */
 // 0x43b40000
 SECTION_SDATA2 f32 LIT_2890 = 360.000000f;
-/* 80456218 0004 .sdata2    @2891                                                        */
+/* 80456218-80456220 0004 .sdata2    @2891                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2891[8] = {
 	0x47, 0x7F, 0xFF, 0x00,
 	/* padding */
@@ -207,7 +338,7 @@ SECTION_SDATA2 u8 LIT_2891[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804349B0 0010 .bss       static_mBounds__7J2DPane                                     */
+/* 804349B0-804349C0 0010 .bss       static_mBounds__7J2DPane                                     ZeroInitializedData */
 SECTION_BSS u8 static_mBounds__7J2DPane[16];
 }
 
@@ -217,7 +348,7 @@ SECTION_BSS u8 static_mBounds__7J2DPane[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802F5BF8 00C0 .text      __ct__7J2DPaneFv                                             */
+/* 802F5BF8-802F5CB8 00C0 .text      __ct__7J2DPaneFv                                             Function */
 // J2DPane::J2DPane(void)
 #pragma push
 #pragma optimization_level 0
@@ -228,7 +359,7 @@ asm void __ct__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F5CB8 0088 .text      initiate__7J2DPaneFv                                         */
+/* 802F5CB8-802F5D40 0088 .text      initiate__7J2DPaneFv                                         Function */
 // J2DPane::initiate(void)
 #pragma push
 #pragma optimization_level 0
@@ -239,7 +370,7 @@ asm void initiate__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F5D40 0090 .text      __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>           */
+/* 802F5D40-802F5DD0 0090 .text      __ct__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>           Function */
 // J2DPane::J2DPane(J2DPane*, bool, u64, JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -250,7 +381,7 @@ asm void func_802F5D40() {
 }
 #pragma pop
 
-/* 802F5DD0 00B8 .text      initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>     */
+/* 802F5DD0-802F5E88 00B8 .text      initialize__7J2DPaneFP7J2DPanebUxRCQ29JGeometry8TBox2<f>     Function */
 // J2DPane::initialize(J2DPane*, bool, u64, JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -261,7 +392,7 @@ asm void func_802F5DD0() {
 }
 #pragma pop
 
-/* 802F5E88 0080 .text      __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>                     */
+/* 802F5E88-802F5F08 0080 .text      __ct__7J2DPaneFUxRCQ29JGeometry8TBox2<f>                     Function */
 // J2DPane::J2DPane(u64, JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -272,7 +403,7 @@ asm void func_802F5E88() {
 }
 #pragma pop
 
-/* 802F5F08 0094 .text      initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>               */
+/* 802F5F08-802F5F9C 0094 .text      initialize__7J2DPaneFUxRCQ29JGeometry8TBox2<f>               Function */
 // J2DPane::initialize(u64, JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -283,7 +414,7 @@ asm void func_802F5F08() {
 }
 #pragma pop
 
-/* 802F5F9C 0128 .text      __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc            */
+/* 802F5F9C-802F60C4 0128 .text      __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc            Function */
 // J2DPane::J2DPane(J2DPane*, JSURandomInputStream*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -294,7 +425,7 @@ asm void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc() {
 }
 #pragma pop
 
-/* 802F60C4 0334 .text      makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream    */
+/* 802F60C4-802F63F8 0334 .text      makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream    Function */
 // J2DPane::makePaneStream(J2DPane*, JSURandomInputStream*)
 #pragma push
 #pragma optimization_level 0
@@ -305,7 +436,7 @@ asm void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream() {
 }
 #pragma pop
 
-/* 802F63F8 0194 .text      changeUseTrans__7J2DPaneFP7J2DPane                           */
+/* 802F63F8-802F658C 0194 .text      changeUseTrans__7J2DPaneFP7J2DPane                           Function */
 // J2DPane::changeUseTrans(J2DPane*)
 #pragma push
 #pragma optimization_level 0
@@ -316,7 +447,7 @@ asm void changeUseTrans__7J2DPaneFP7J2DPane() {
 }
 #pragma pop
 
-/* 802F658C 00E0 .text      __dt__7J2DPaneFv                                             */
+/* 802F658C-802F666C 00E0 .text      __dt__7J2DPaneFv                                             Function */
 // J2DPane::~J2DPane(void)
 #pragma push
 #pragma optimization_level 0
@@ -327,7 +458,7 @@ asm void __dt__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F666C 00A8 .text      appendChild__7J2DPaneFP7J2DPane                              */
+/* 802F666C-802F6714 00A8 .text      appendChild__7J2DPaneFP7J2DPane                              Function */
 // J2DPane::appendChild(J2DPane*)
 #pragma push
 #pragma optimization_level 0
@@ -338,7 +469,7 @@ asm void appendChild__7J2DPaneFP7J2DPane() {
 }
 #pragma pop
 
-/* 802F6714 00CC .text      insertChild__7J2DPaneFP7J2DPaneP7J2DPane                     */
+/* 802F6714-802F67E0 00CC .text      insertChild__7J2DPaneFP7J2DPaneP7J2DPane                     Function */
 // J2DPane::insertChild(J2DPane*, J2DPane*)
 #pragma push
 #pragma optimization_level 0
@@ -349,7 +480,7 @@ asm void insertChild__7J2DPaneFP7J2DPaneP7J2DPane() {
 }
 #pragma pop
 
-/* 802F67E0 0538 .text      draw__7J2DPaneFffPC14J2DGrafContextbb                        */
+/* 802F67E0-802F6D18 0538 .text      draw__7J2DPaneFffPC14J2DGrafContextbb                        Function */
 // J2DPane::draw(f32, f32, const J2DGrafContext*, bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -360,7 +491,7 @@ asm void draw__7J2DPaneFffPC14J2DGrafContextbb() {
 }
 #pragma pop
 
-/* 802F6D18 0248 .text      place__7J2DPaneFRCQ29JGeometry8TBox2<f>                      */
+/* 802F6D18-802F6F60 0248 .text      place__7J2DPaneFRCQ29JGeometry8TBox2<f>                      Function */
 // J2DPane::place(JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -371,7 +502,7 @@ asm void func_802F6D18() {
 }
 #pragma pop
 
-/* 802F6F60 0054 .text      move__7J2DPaneFff                                            */
+/* 802F6F60-802F6FB4 0054 .text      move__7J2DPaneFff                                            Function */
 // J2DPane::move(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -382,7 +513,7 @@ asm void move__7J2DPaneFff() {
 }
 #pragma pop
 
-/* 802F6FB4 0044 .text      add__7J2DPaneFff                                             */
+/* 802F6FB4-802F6FF8 0044 .text      add__7J2DPaneFff                                             Function */
 // J2DPane::add(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -393,7 +524,7 @@ asm void add__7J2DPaneFff() {
 }
 #pragma pop
 
-/* 802F6FF8 0108 .text      resize__7J2DPaneFff                                          */
+/* 802F6FF8-802F7100 0108 .text      resize__7J2DPaneFff                                          Function */
 // J2DPane::resize(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -404,7 +535,7 @@ asm void resize__7J2DPaneFff() {
 }
 #pragma pop
 
-/* 802F7100 00DC .text      getBounds__7J2DPaneFv                                        */
+/* 802F7100-802F71DC 00DC .text      getBounds__7J2DPaneFv                                        Function */
 // J2DPane::getBounds(void)
 #pragma push
 #pragma optimization_level 0
@@ -415,7 +546,7 @@ asm void getBounds__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F71DC 0030 .text      rotate__7J2DPaneFff13J2DRotateAxisf                          */
+/* 802F71DC-802F720C 0030 .text      rotate__7J2DPaneFff13J2DRotateAxisf                          Function */
 // J2DPane::rotate(f32, f32, J2DRotateAxis, f32)
 #pragma push
 #pragma optimization_level 0
@@ -426,7 +557,7 @@ asm void rotate__7J2DPaneFff13J2DRotateAxisf() {
 }
 #pragma pop
 
-/* 802F720C 0058 .text      rotate__7J2DPaneFf                                           */
+/* 802F720C-802F7264 0058 .text      rotate__7J2DPaneFf                                           Function */
 // J2DPane::rotate(f32)
 #pragma push
 #pragma optimization_level 0
@@ -437,7 +568,7 @@ asm void rotate__7J2DPaneFf() {
 }
 #pragma pop
 
-/* 802F7264 007C .text      clip__7J2DPaneFRCQ29JGeometry8TBox2<f>                       */
+/* 802F7264-802F72E0 007C .text      clip__7J2DPaneFRCQ29JGeometry8TBox2<f>                       Function */
 // J2DPane::clip(JGeometry::TBox2<f>)
 #pragma push
 #pragma optimization_level 0
@@ -448,7 +579,7 @@ asm void func_802F7264() {
 }
 #pragma pop
 
-/* 802F72E0 00A8 .text      search__7J2DPaneFUx                                          */
+/* 802F72E0-802F7388 00A8 .text      search__7J2DPaneFUx                                          Function */
 // J2DPane::search(u64)
 #pragma push
 #pragma optimization_level 0
@@ -459,7 +590,7 @@ asm void search__7J2DPaneFUx() {
 }
 #pragma pop
 
-/* 802F7388 00A8 .text      searchUserInfo__7J2DPaneFUx                                  */
+/* 802F7388-802F7430 00A8 .text      searchUserInfo__7J2DPaneFUx                                  Function */
 // J2DPane::searchUserInfo(u64)
 #pragma push
 #pragma optimization_level 0
@@ -470,7 +601,7 @@ asm void searchUserInfo__7J2DPaneFUx() {
 }
 #pragma pop
 
-/* 802F7430 0088 .text      isUsed__7J2DPaneFPC7ResTIMG                                  */
+/* 802F7430-802F74B8 0088 .text      isUsed__7J2DPaneFPC7ResTIMG                                  Function */
 // J2DPane::isUsed(const ResTIMG*)
 #pragma push
 #pragma optimization_level 0
@@ -481,7 +612,7 @@ asm void isUsed__7J2DPaneFPC7ResTIMG() {
 }
 #pragma pop
 
-/* 802F74B8 0088 .text      isUsed__7J2DPaneFPC7ResFONT                                  */
+/* 802F74B8-802F7540 0088 .text      isUsed__7J2DPaneFPC7ResFONT                                  Function */
 // J2DPane::isUsed(const ResFONT*)
 #pragma push
 #pragma optimization_level 0
@@ -492,7 +623,7 @@ asm void isUsed__7J2DPaneFPC7ResFONT() {
 }
 #pragma pop
 
-/* 802F7540 0140 .text      makeMatrix__7J2DPaneFffff                                    */
+/* 802F7540-802F7680 0140 .text      makeMatrix__7J2DPaneFffff                                    Function */
 // J2DPane::makeMatrix(f32, f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -503,7 +634,7 @@ asm void makeMatrix__7J2DPaneFffff() {
 }
 #pragma pop
 
-/* 802F7680 0078 .text      setCullBack__7J2DPaneF11_GXCullMode                          */
+/* 802F7680-802F76F8 0078 .text      setCullBack__7J2DPaneF11_GXCullMode                          Function */
 // J2DPane::setCullBack(_GXCullMode)
 #pragma push
 #pragma optimization_level 0
@@ -514,7 +645,7 @@ asm void setCullBack__7J2DPaneF11_GXCullMode() {
 }
 #pragma pop
 
-/* 802F76F8 00D8 .text      setBasePosition__7J2DPaneF15J2DBasePosition                  */
+/* 802F76F8-802F77D0 00D8 .text      setBasePosition__7J2DPaneF15J2DBasePosition                  Function */
 // J2DPane::setBasePosition(J2DBasePosition)
 #pragma push
 #pragma optimization_level 0
@@ -525,7 +656,7 @@ asm void setBasePosition__7J2DPaneF15J2DBasePosition() {
 }
 #pragma pop
 
-/* 802F77D0 01D8 .text      setInfluencedAlpha__7J2DPaneFbb                              */
+/* 802F77D0-802F79A8 01D8 .text      setInfluencedAlpha__7J2DPaneFbb                              Function */
 // J2DPane::setInfluencedAlpha(bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -536,7 +667,7 @@ asm void setInfluencedAlpha__7J2DPaneFbb() {
 }
 #pragma pop
 
-/* 802F79A8 00E4 .text      getGlbVtx__7J2DPaneCFUc                                      */
+/* 802F79A8-802F7A8C 00E4 .text      getGlbVtx__7J2DPaneCFUc                                      Function */
 // J2DPane::getGlbVtx(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -547,7 +678,7 @@ asm void getGlbVtx__7J2DPaneCFUc() {
 }
 #pragma pop
 
-/* 802F7A8C 0038 .text      getFirstChildPane__7J2DPaneFv                                */
+/* 802F7A8C-802F7AC4 0038 .text      getFirstChildPane__7J2DPaneFv                                Function */
 // J2DPane::getFirstChildPane(void)
 #pragma push
 #pragma optimization_level 0
@@ -558,7 +689,7 @@ asm void getFirstChildPane__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F7AC4 0038 .text      getNextChildPane__7J2DPaneFv                                 */
+/* 802F7AC4-802F7AFC 0038 .text      getNextChildPane__7J2DPaneFv                                 Function */
 // J2DPane::getNextChildPane(void)
 #pragma push
 #pragma optimization_level 0
@@ -569,7 +700,7 @@ asm void getNextChildPane__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F7AFC 001C .text      getParentPane__7J2DPaneFv                                    */
+/* 802F7AFC-802F7B18 001C .text      getParentPane__7J2DPaneFv                                    Function */
 // J2DPane::getParentPane(void)
 #pragma push
 #pragma optimization_level 0
@@ -580,7 +711,7 @@ asm void getParentPane__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F7B18 01E8 .text      makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream  */
+/* 802F7B18-802F7D00 01E8 .text      makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream  Function */
 // J2DPane::makePaneExStream(J2DPane*, JSURandomInputStream*)
 #pragma push
 #pragma optimization_level 0
@@ -591,7 +722,7 @@ asm void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream() {
 }
 #pragma pop
 
-/* 802F7D00 00B8 .text      J2DCast_F32_to_S16__7J2DPaneFfUc                             */
+/* 802F7D00-802F7DB8 00B8 .text      J2DCast_F32_to_S16__7J2DPaneFfUc                             Function */
 // J2DPane::J2DCast_F32_to_S16(f32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -602,7 +733,7 @@ asm void J2DCast_F32_to_S16__7J2DPaneFfUc() {
 }
 #pragma pop
 
-/* 802F7DB8 013C .text      getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive  */
+/* 802F7DB8-802F7EF4 013C .text      getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive  Function */
 // J2DPane::getPointer(JSURandomInputStream*, u32, JKRArchive*)
 #pragma push
 #pragma optimization_level 0
@@ -613,7 +744,7 @@ asm void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive() {
 }
 #pragma pop
 
-/* 802F7EF4 00D0 .text      setAnimation__7J2DPaneFP10J2DAnmBase                         */
+/* 802F7EF4-802F7FC4 00D0 .text      setAnimation__7J2DPaneFP10J2DAnmBase                         Function */
 // J2DPane::setAnimation(J2DAnmBase*)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +755,7 @@ asm void setAnimation__7J2DPaneFP10J2DAnmBase() {
 }
 #pragma pop
 
-/* 802F7FC4 0008 .text      setAnimation__7J2DPaneFP15J2DAnmTransform                    */
+/* 802F7FC4-802F7FCC 0008 .text      setAnimation__7J2DPaneFP15J2DAnmTransform                    Function */
 // J2DPane::setAnimation(J2DAnmTransform*)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +766,7 @@ asm void setAnimation__7J2DPaneFP15J2DAnmTransform() {
 }
 #pragma pop
 
-/* 802F7FCC 0038 .text      animationTransform__7J2DPaneFv                               */
+/* 802F7FCC-802F8004 0038 .text      animationTransform__7J2DPaneFv                               Function */
 // J2DPane::animationTransform(void)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +777,7 @@ asm void animationTransform__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F8004 007C .text      clearAnmTransform__7J2DPaneFv                                */
+/* 802F8004-802F8080 007C .text      clearAnmTransform__7J2DPaneFv                                Function */
 // J2DPane::clearAnmTransform(void)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +788,7 @@ asm void clearAnmTransform__7J2DPaneFv() {
 }
 #pragma pop
 
-/* 802F8080 0098 .text      animationTransform__7J2DPaneFPC15J2DAnmTransform             */
+/* 802F8080-802F8118 0098 .text      animationTransform__7J2DPaneFPC15J2DAnmTransform             Function */
 // J2DPane::animationTransform(const J2DAnmTransform*)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +799,7 @@ asm void animationTransform__7J2DPaneFPC15J2DAnmTransform() {
 }
 #pragma pop
 
-/* 802F8118 0088 .text      setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull       */
+/* 802F8118-802F81A0 0088 .text      setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull       Function */
 // J2DPane::setVisibileAnimation(J2DAnmVisibilityFull*)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +810,7 @@ asm void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull() {
 }
 #pragma pop
 
-/* 802F81A0 0088 .text      setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor             */
+/* 802F81A0-802F8228 0088 .text      setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor             Function */
 // J2DPane::setVtxColorAnimation(J2DAnmVtxColor*)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +821,7 @@ asm void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor() {
 }
 #pragma pop
 
-/* 802F8228 0098 .text      animationPane__7J2DPaneFPC15J2DAnmTransform                  */
+/* 802F8228-802F82C0 0098 .text      animationPane__7J2DPaneFPC15J2DAnmTransform                  Function */
 // J2DPane::animationPane(const J2DAnmTransform*)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +832,7 @@ asm void animationPane__7J2DPaneFPC15J2DAnmTransform() {
 }
 #pragma pop
 
-/* 802F82C0 0108 .text      updateTransform__7J2DPaneFPC15J2DAnmTransform                */
+/* 802F82C0-802F83C8 0108 .text      updateTransform__7J2DPaneFPC15J2DAnmTransform                Function */
 // J2DPane::updateTransform(const J2DAnmTransform*)
 #pragma push
 #pragma optimization_level 0
@@ -712,19 +843,19 @@ asm void updateTransform__7J2DPaneFPC15J2DAnmTransform() {
 }
 #pragma pop
 
-/* 802F83C8 0004 .text      drawSelf__7J2DPaneFffPA3_A4_f                                */
+/* 802F83C8-802F83CC 0004 .text      drawSelf__7J2DPaneFffPA3_A4_f                                ReturnFunction */
 // J2DPane::drawSelf(f32, f32, f32 (*)[3][4])
 void drawSelf__7J2DPaneFffPA3_A4_f() {
 	return;
 }
 
-/* 802F83CC 0004 .text      rewriteAlpha__7J2DPaneFv                                     */
+/* 802F83CC-802F83D0 0004 .text      rewriteAlpha__7J2DPaneFv                                     ReturnFunction */
 // J2DPane::rewriteAlpha(void)
 void rewriteAlpha__7J2DPaneFv() {
 	return;
 }
 
-/* 802F83D0 002C .text      setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull             */
+/* 802F83D0-802F83FC 002C .text      setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull             Function */
 // J2DPane::setAnimationVF(J2DAnmVisibilityFull*)
 #pragma push
 #pragma optimization_level 0
@@ -735,7 +866,7 @@ asm void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull() {
 }
 #pragma pop
 
-/* 802F83FC 002C .text      setAnimationVC__7J2DPaneFP14J2DAnmVtxColor                   */
+/* 802F83FC-802F8428 002C .text      setAnimationVC__7J2DPaneFP14J2DAnmVtxColor                   Function */
 // J2DPane::setAnimationVC(J2DAnmVtxColor*)
 #pragma push
 #pragma optimization_level 0
@@ -746,7 +877,7 @@ asm void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor() {
 }
 #pragma pop
 
-/* 802F8428 003C .text      setCullBack__7J2DPaneFb                                      */
+/* 802F8428-802F8464 003C .text      setCullBack__7J2DPaneFb                                      Function */
 // J2DPane::setCullBack(bool)
 #pragma push
 #pragma optimization_level 0
@@ -757,7 +888,7 @@ asm void setCullBack__7J2DPaneFb() {
 }
 #pragma pop
 
-/* 802F8464 0010 .text      setConnectParent__7J2DPaneFb                                 */
+/* 802F8464-802F8474 0010 .text      setConnectParent__7J2DPaneFb                                 Function */
 // J2DPane::setConnectParent(bool)
 #pragma push
 #pragma optimization_level 0
@@ -768,19 +899,19 @@ asm void setConnectParent__7J2DPaneFb() {
 }
 #pragma pop
 
-/* 802F8474 0004 .text      update__7J2DPaneFv                                           */
+/* 802F8474-802F8478 0004 .text      update__7J2DPaneFv                                           ReturnFunction */
 // J2DPane::update(void)
 void update__7J2DPaneFv() {
 	return;
 }
 
-/* 802F8478 0004 .text      drawSelf__7J2DPaneFff                                        */
+/* 802F8478-802F847C 0004 .text      drawSelf__7J2DPaneFff                                        ReturnFunction */
 // J2DPane::drawSelf(f32, f32)
 void drawSelf__7J2DPaneFff() {
 	return;
 }
 
-/* 802F847C 001C .text      __sinit_J2DPane_cpp                                          */
+/* 802F847C-802F8498 001C .text      __sinit_J2DPane_cpp                                          SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

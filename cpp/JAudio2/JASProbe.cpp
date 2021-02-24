@@ -9,15 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void start__8JASProbeFPCc();
+/* Function             */
 extern void stop__8JASProbeFv();
+/* Function             */
+extern void start__8JASProbeFlPCc();
+/* Function             */
+extern void stop__8JASProbeFl();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSGetTime();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sProbeTable__8JASProbe[64];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASProbe__LIT_125[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASProbe__LIT_126[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASProbe__LIT_127[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_129;
 }
 
@@ -27,21 +41,21 @@ SECTION_SDATA2 extern f64 LIT_129;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455588 0004 .sdata2    @125                                                         */
+/* 80455588-8045558C 0004 .sdata2    @125                                                         InitializedData */
 SECTION_SDATA2 u8 JASProbe__LIT_125[4] = {
 	0x42, 0x6F, 0xC2, 0x8F,
 };
-/* 8045558C 0004 .sdata2    @126                                                         */
+/* 8045558C-80455590 0004 .sdata2    @126                                                         InitializedData */
 SECTION_SDATA2 u8 JASProbe__LIT_126[4] = {
 	0x3F, 0x75, 0xC2, 0x8F,
 };
-/* 80455590 0004 .sdata2    @127                                                         */
+/* 80455590-80455598 0004 .sdata2    @127                                                         InitializedData */
 SECTION_SDATA2 u8 JASProbe__LIT_127[8] = {
 	0x3D, 0x23, 0xD7, 0x0A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455598 0008 .sdata2    @129                                                         */
+/* 80455598-804555A0 0008 .sdata2    @129                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_129 = 4503599627370496.000000;
 }
@@ -52,7 +66,7 @@ SECTION_SDATA2 f64 LIT_129 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431620 0040 .bss       sProbeTable__8JASProbe                                       */
+/* 80431620-80431660 0040 .bss       sProbeTable__8JASProbe                                       ZeroInitializedData */
 SECTION_BSS u8 sProbeTable__8JASProbe[64];
 }
 
@@ -62,8 +76,8 @@ SECTION_BSS u8 sProbeTable__8JASProbe[64];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80290D74 0050 .text      start__8JASProbeFPCc                                         */
-// JASProbe::start(const s8*)
+/* 80290D74-80290DC4 0050 .text      start__8JASProbeFPCc                                         Function */
+// JASProbe::start(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +87,7 @@ asm void start__8JASProbeFPCc() {
 }
 #pragma pop
 
-/* 80290DC4 0120 .text      stop__8JASProbeFv                                            */
+/* 80290DC4-80290EE4 0120 .text      stop__8JASProbeFv                                            Function */
 // JASProbe::stop(void)
 #pragma push
 #pragma optimization_level 0
@@ -84,8 +98,8 @@ asm void stop__8JASProbeFv() {
 }
 #pragma pop
 
-/* 80290EE4 0040 .text      start__8JASProbeFlPCc                                        */
-// JASProbe::start(s32, const s8*)
+/* 80290EE4-80290F24 0040 .text      start__8JASProbeFlPCc                                        Function */
+// JASProbe::start(long, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,8 +109,8 @@ asm void start__8JASProbeFlPCc() {
 }
 #pragma pop
 
-/* 80290F24 0040 .text      stop__8JASProbeFl                                            */
-// JASProbe::stop(s32)
+/* 80290F24-80290F64 0040 .text      stop__8JASProbeFl                                            Function */
+// JASProbe::stop(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

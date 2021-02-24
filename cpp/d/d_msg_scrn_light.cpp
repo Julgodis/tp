@@ -19,35 +19,73 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__19dMsgScrnLight_HIO_cFv();
+/* Function             */
 extern void updateColor__19dMsgScrnLight_HIO_cFUc();
+/* Function             */
+extern void __ct__15dMsgScrnLight_cFUcUc();
+/* Function             */
 extern void __dt__15dMsgScrnLight_cFv();
+/* Function             */
+extern void draw__15dMsgScrnLight_cFPffffffUc();
+/* Function             */
+extern void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void drawCommon__15dMsgScrnLight_cFfffff();
+/* Function             */
 extern void __dt__19dMsgScrnLight_HIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_light_cpp();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getAlphaRate__13CPaneMgrAlphaFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void __register_global_object();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_scrn_light__stringBase0[112];
-SECTION_DATA extern const void* __vt__15dMsgScrnLight_c[3];
-SECTION_DATA extern const void* __vt__19dMsgScrnLight_HIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dMsgScrnLight_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dMsgScrnLight_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_3735[12];
-SECTION_BSS extern u8 g_MsgScrnLight_HIO_c[84];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804510D8[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_light__LIT_3808[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_light__LIT_3869;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_scrn_light__LIT_3871;
 }
 
@@ -57,16 +95,25 @@ SECTION_SDATA2 extern f64 d_d_msg_scrn_light__LIT_3871;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399B08 006C .rodata    @stringBase0                                                 */
-const char* const stringBase_80399B08 = 
-    "zelda_message_window_text_light."
+/* 80399B08-80399B78 006C .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399B08 = 
+    "zelda_message_wi"
+    "ndow_text_light."
     "blo";
-const char* const stringBase_80399B2C = 
-    "zelda_message_window_text_light."
+SECTION_DEAD const char* const stringBase_80399B2C = 
+    "zelda_message_wi"
+    "ndow_text_light."
     "bck";
-const char* const stringBase_80399B50 = 
-    "zelda_message_window_text_light."
+SECTION_DEAD const char* const stringBase_80399B50 = 
+    "zelda_message_wi"
+    "ndow_text_light."
     "bpk";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399B74 = "\0\0\0";
+#pragma pop
 }
 
 
@@ -75,14 +122,14 @@ const char* const stringBase_80399B50 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C1298 000C .data      __vt__15dMsgScrnLight_c                                      */
-SECTION_DATA const  void* __vt__15dMsgScrnLight_c[3] = {
+/* 803C1298-803C12A4 000C .data      __vt__15dMsgScrnLight_c                                      VTableData */
+SECTION_DATA void* __vt__15dMsgScrnLight_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dMsgScrnLight_cFv,
 };
-/* 803C12A4 000C .data      __vt__19dMsgScrnLight_HIO_c                                  */
-SECTION_DATA const  void* __vt__19dMsgScrnLight_HIO_c[3] = {
+/* 803C12A4-803C12B0 000C .data      __vt__19dMsgScrnLight_HIO_c                                  VTableData */
+SECTION_DATA void* __vt__19dMsgScrnLight_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dMsgScrnLight_HIO_cFv,
@@ -95,14 +142,14 @@ SECTION_DATA const  void* __vt__19dMsgScrnLight_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454CD8 0004 .sdata2    @3808                                                        */
+/* 80454CD8-80454CDC 0004 .sdata2    @3808                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_light__LIT_3808[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454CDC 0004 .sdata2    @3869                                                        */
+/* 80454CDC-80454CE0 0004 .sdata2    @3869                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_scrn_light__LIT_3869 = 1.000000f;
-/* 80454CE0 0008 .sdata2    @3871                                                        */
+/* 80454CE0-80454CE8 0008 .sdata2    @3871                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_msg_scrn_light__LIT_3871 = 4503601774854144.000000;
 }
@@ -113,10 +160,10 @@ SECTION_SDATA2 f64 d_d_msg_scrn_light__LIT_3871 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804306C8 000C .bss       @3735                                                        */
+/* 804306C8-804306D4 000C .bss       @3735                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_3735[12];
-/* 804306D4 0050 .bss       g_MsgScrnLight_HIO_c                                         */
-SECTION_BSS u8 g_MsgScrnLight_HIO_c[84];
+/* 804306D4-80430728 0050 .bss       g_MsgScrnLight_HIO_c                                         ZeroInitializedData */
+SECTION_BSS u8 g_MsgScrnLight_HIO_c[80 + 4 /* padding */];
 }
 
 
@@ -125,7 +172,7 @@ SECTION_BSS u8 g_MsgScrnLight_HIO_c[84];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8024575C 0068 .text      __ct__19dMsgScrnLight_HIO_cFv                                */
+/* 8024575C-802457C4 0068 .text      __ct__19dMsgScrnLight_HIO_cFv                                Function */
 // dMsgScrnLight_HIO_c::dMsgScrnLight_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -136,7 +183,7 @@ asm void __ct__19dMsgScrnLight_HIO_cFv() {
 }
 #pragma pop
 
-/* 802457C4 0170 .text      updateColor__19dMsgScrnLight_HIO_cFUc                        */
+/* 802457C4-80245934 0170 .text      updateColor__19dMsgScrnLight_HIO_cFUc                        Function */
 // dMsgScrnLight_HIO_c::updateColor(u8)
 #pragma push
 #pragma optimization_level 0
@@ -147,7 +194,7 @@ asm void updateColor__19dMsgScrnLight_HIO_cFUc() {
 }
 #pragma pop
 
-/* 80245934 01CC .text      __ct__15dMsgScrnLight_cFUcUc                                 */
+/* 80245934-80245B00 01CC .text      __ct__15dMsgScrnLight_cFUcUc                                 Function */
 // dMsgScrnLight_c::dMsgScrnLight_c(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -158,7 +205,7 @@ asm void __ct__15dMsgScrnLight_cFUcUc() {
 }
 #pragma pop
 
-/* 80245B00 0104 .text      __dt__15dMsgScrnLight_cFv                                    */
+/* 80245B00-80245C04 0104 .text      __dt__15dMsgScrnLight_cFv                                    Function */
 // dMsgScrnLight_c::~dMsgScrnLight_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -169,7 +216,7 @@ asm void __dt__15dMsgScrnLight_cFv() {
 }
 #pragma pop
 
-/* 80245C04 038C .text      draw__15dMsgScrnLight_cFPffffffUc                            */
+/* 80245C04-80245F90 038C .text      draw__15dMsgScrnLight_cFPffffffUc                            Function */
 // dMsgScrnLight_c::draw(f32*, f32, f32, f32, f32, f32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -180,7 +227,7 @@ asm void draw__15dMsgScrnLight_cFPffffffUc() {
 }
 #pragma pop
 
-/* 80245F90 014C .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor */
+/* 80245F90-802460DC 014C .text      draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor Function */
 // dMsgScrnLight_c::draw(f32*, f32, f32, f32, f32, f32, f32, JUtility::TColor, JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -191,7 +238,7 @@ asm void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor() 
 }
 #pragma pop
 
-/* 802460DC 026C .text      drawCommon__15dMsgScrnLight_cFfffff                          */
+/* 802460DC-80246348 026C .text      drawCommon__15dMsgScrnLight_cFfffff                          Function */
 // dMsgScrnLight_c::drawCommon(f32, f32, f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -202,7 +249,7 @@ asm void drawCommon__15dMsgScrnLight_cFfffff() {
 }
 #pragma pop
 
-/* 80246348 0048 .text      __dt__19dMsgScrnLight_HIO_cFv                                */
+/* 80246348-80246390 0048 .text      __dt__19dMsgScrnLight_HIO_cFv                                Function */
 // dMsgScrnLight_HIO_c::~dMsgScrnLight_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -213,7 +260,7 @@ asm void __dt__19dMsgScrnLight_HIO_cFv() {
 }
 #pragma pop
 
-/* 80246390 003C .text      __sinit_d_msg_scrn_light_cpp                                 */
+/* 80246390-802463CC 003C .text      __sinit_d_msg_scrn_light_cpp                                 SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

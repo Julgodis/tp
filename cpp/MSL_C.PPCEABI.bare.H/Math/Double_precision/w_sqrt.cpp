@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_sqrt();
+/* Function             */
+extern void sqrt();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_sqrt();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CA54 0020 .text      sqrt                                                         */
+/* 8036CA54-8036CA74 0020 .text      sqrt                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

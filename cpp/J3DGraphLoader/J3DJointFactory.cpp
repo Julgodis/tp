@@ -11,9 +11,17 @@
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __ct__8J3DJointFv();
+/* Function             */
 extern void func_8033677C();
+/* Function             */
+extern void __ct__15J3DJointFactoryFRC13J3DJointBlock();
+/* Function             */
+extern void create__15J3DJointFactoryFi();
+/* Function             */
 extern void func_80337338();
 }
 
@@ -23,7 +31,7 @@ extern void func_80337338();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80337178 0058 .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    */
+/* 80337178-803371D0 0058 .text      __ct__15J3DJointFactoryFRC13J3DJointBlock                    Function */
 // J3DJointFactory::J3DJointFactory(const J3DJointBlock&)
 #pragma push
 #pragma optimization_level 0
@@ -34,7 +42,7 @@ asm void __ct__15J3DJointFactoryFRC13J3DJointBlock() {
 }
 #pragma pop
 
-/* 803371D0 0168 .text      create__15J3DJointFactoryFi                                  */
+/* 803371D0-80337338 0168 .text      create__15J3DJointFactoryFi                                  Function */
 // J3DJointFactory::create(int)
 #pragma push
 #pragma optimization_level 0
@@ -45,7 +53,7 @@ asm void create__15J3DJointFactoryFi() {
 }
 #pragma pop
 
-/* 80337338 0018 .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            */
+/* 80337338-80337350 0018 .text      JSUConvertOffsetToPtr<16J3DJointInitData>__FPCvUl            Function */
 // JSUConvertOffsetToPtr<16J3DJointInitData>(const void*, u32)
 #pragma push
 #pragma optimization_level 0

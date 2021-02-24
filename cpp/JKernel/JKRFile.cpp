@@ -9,8 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void read__7JKRFileFPvll();
+/* Function             */
 extern void VIWaitForRetrace();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
 }
 
@@ -20,8 +25,8 @@ extern void _restgpr_28();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D9518 006C .text      read__7JKRFileFPvll                                          */
-// JKRFile::read(void*, s32, s32)
+/* 802D9518-802D9584 006C .text      read__7JKRFileFPvll                                          Function */
+// JKRFile::read(void*, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

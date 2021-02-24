@@ -11,98 +11,231 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void toFunction_outside__Q27JStudio14TFunctionValueFi();
+/* Function             */
 extern void __ct__Q27JStudio14TFunctionValueFv();
+/* Function             */
 extern void __dt__Q27JStudio14TFunctionValueFv();
+/* Function             */
 extern void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv();
+/* Function             */
 extern void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd();
+/* Function             */
 extern void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd();
+/* Function             */
 extern void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd();
+/* Function             */
+extern void extrapolateParameter_turn__Q27JStudio13functionvalueFdd();
+/* Function             */
 extern void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv();
+/* Function             */
 extern void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv();
+/* Function             */
+extern void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd();
+/* Function             */
 extern void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd();
+/* Function             */
 extern void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv();
-extern int getType__Q27JStudio24TFunctionValue_compositeCFv();
+/* Function             */
+extern void __ct__Q27JStudio24TFunctionValue_compositeFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio24TFunctionValue_compositeCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv();
+/* Function             */
 extern void initialize__Q27JStudio24TFunctionValue_compositeFv();
+/* ReturnFunction       */
 extern void prepare__Q27JStudio24TFunctionValue_compositeFv();
+/* Function             */
 extern void getValue__Q27JStudio24TFunctionValue_compositeFd();
-extern int getType__Q27JStudio23TFunctionValue_constantCFv();
+/* Function             */
+extern void func_80281E5C();
+/* Function             */
+extern void func_80281EC8();
+/* Function             */
+extern void func_8028202C();
+/* Function             */
+extern void func_80282094();
+/* Function             */
+extern void func_80282118();
+/* Function             */
+extern void func_80282200();
+/* Function             */
+extern void func_80282284();
+/* Function             */
+extern void __ct__Q27JStudio23TFunctionValue_constantFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio23TFunctionValue_constantCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio23TFunctionValue_constantFv();
+/* Function             */
 extern void initialize__Q27JStudio23TFunctionValue_constantFv();
+/* ReturnFunction       */
 extern void prepare__Q27JStudio23TFunctionValue_constantFv();
+/* Function             */
 extern void getValue__Q27JStudio23TFunctionValue_constantFd();
-extern int getType__Q27JStudio25TFunctionValue_transitionCFv();
+/* Function             */
+extern void __ct__Q27JStudio25TFunctionValue_transitionFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio25TFunctionValue_transitionCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv();
+/* Function             */
 extern void initialize__Q27JStudio25TFunctionValue_transitionFv();
+/* Function             */
 extern void prepare__Q27JStudio25TFunctionValue_transitionFv();
+/* Function             */
 extern void getValue__Q27JStudio25TFunctionValue_transitionFd();
-extern int getType__Q27JStudio19TFunctionValue_listCFv();
+/* Function             */
+extern void __ct__Q27JStudio19TFunctionValue_listFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio19TFunctionValue_listCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio19TFunctionValue_listFv();
+/* Function             */
 extern void initialize__Q27JStudio19TFunctionValue_listFv();
+/* Function             */
 extern void prepare__Q27JStudio19TFunctionValue_listFv();
+/* Function             */
 extern void getValue__Q27JStudio19TFunctionValue_listFd();
+/* Function             */
 extern void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+/* Function             */
 extern void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+/* Function             */
 extern void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+/* Function             */
 extern void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
-extern int getType__Q27JStudio29TFunctionValue_list_parameterCFv();
+/* Function             */
+extern void __ct__Q27JStudio29TFunctionValue_list_parameterFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio29TFunctionValue_list_parameterCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv();
+/* Function             */
+extern void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl();
+/* Function             */
 extern void initialize__Q27JStudio29TFunctionValue_list_parameterFv();
+/* Function             */
 extern void prepare__Q27JStudio29TFunctionValue_list_parameterFv();
+/* Function             */
 extern void getValue__Q27JStudio29TFunctionValue_list_parameterFd();
+/* Function             */
 extern void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+/* Function             */
 extern void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+/* Function             */
 extern void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+/* Function             */
 extern void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
-extern int getType__Q27JStudio22TFunctionValue_hermiteCFv();
+/* Function             */
+extern void __ct__Q27JStudio22TFunctionValue_hermiteFv();
+/* ReturnIntegerFunction */
+extern  int getType__Q27JStudio22TFunctionValue_hermiteCFv();
+/* Function             */
 extern void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv();
+/* Function             */
+extern void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl();
+/* Function             */
 extern void initialize__Q27JStudio22TFunctionValue_hermiteFv();
+/* Function             */
 extern void prepare__Q27JStudio22TFunctionValue_hermiteFv();
+/* Function             */
 extern void getValue__Q27JStudio22TFunctionValue_hermiteFd();
+/* ReturnFunction       */
+extern void extrapolateParameter_raw__Q27JStudio13functionvalueFdd();
+/* Function             */
+extern void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd();
+/* Function             */
+extern void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd();
+/* Function             */
 extern void func_802835DC();
+/* Function             */
 extern void func_80283634();
+/* Function             */
 extern void func_80283858();
+/* Function             */
 extern void func_802838C8();
+/* Function             */
 extern void __dt__Q27JStudio22TFunctionValue_hermiteFv();
+/* Function             */
 extern void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
+/* Function             */
 extern void __dt__Q27JStudio19TFunctionValue_listFv();
+/* Function             */
 extern void __dt__Q27JStudio25TFunctionValue_transitionFv();
+/* Function             */
 extern void __dt__Q27JStudio23TFunctionValue_constantFv();
+/* Function             */
 extern void __dt__Q27JStudio24TFunctionValue_compositeFv();
+/* Function             */
 extern void func_80283E24();
+/* Function             */
 extern void func_80283EB8();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void func_802DCCD0();
+/* Function             */
 extern void __dt__Q27JGadget20TVector_pointer_voidFv();
+/* Function             */
 extern void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savefpr_29();
+/* Function             */
 extern void _restfpr_29();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void div();
+/* Function             */
 extern void floor();
+/* Function             */
 extern void fmod();
-SECTION_RODATA extern const u8 data_8039A9F0[16];
-SECTION_DATA extern const void* __vt__Q27JStudio22TFunctionValue_hermite[8];
-SECTION_DATA extern const void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];
-SECTION_DATA extern const void* __vt__Q27JStudio19TFunctionValue_list[8];
-SECTION_DATA extern const void* __vt__Q27JStudio25TFunctionValue_transition[8];
-SECTION_DATA extern const void* __vt__Q27JStudio23TFunctionValue_constant[8];
-SECTION_DATA extern const void* __vt__Q27JStudio24TFunctionValue_composite[8];
-SECTION_DATA extern const void* __vt__Q27JStudio14TFunctionValue[8];
+/* SymbolReferenceArrayData */
+SECTION_RODATA extern const void* const data_8039A9F0[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio22TFunctionValue_hermite[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio19TFunctionValue_list[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio25TFunctionValue_transition[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio23TFunctionValue_constant[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio24TFunctionValue_composite[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio14TFunctionValue[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SBSS extern u8 LIT_569[1];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 LIT_569[1 + 7 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_652[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 functionvalue__LIT_792;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_793;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_794;
+/* Fraction64Data       */
 SECTION_SDATA2 extern f64 LIT_799;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_800;
+/* Fraction64Data       */
 SECTION_SDATA2 extern f64 LIT_801;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 functionvalue__LIT_842;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 functionvalue__LIT_867;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 functionvalue__LIT_1517;
 }
 
@@ -112,9 +245,12 @@ SECTION_SDATA2 extern f64 functionvalue__LIT_1517;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A9F0 0010 .rodata    gapfnExtrapolateParameter___Q27JStudio27@unnamed@functionvalue_cpp@ */
-SECTION_RODATA const u8 data_8039A9F0[16] = {
-	0x80, 0x28, 0x35, 0x70, 0x80, 0x28, 0x35, 0x74, 0x80, 0x28, 0x18, 0xB8, 0x80, 0x28, 0x35, 0xB0,
+/* 8039A9F0-8039AA00 0010 .rodata    gapfnExtrapolateParameter___Q27JStudio27@unnamed@functionvalue_cpp@ SymbolReferenceArrayData */
+SECTION_RODATA const void* const data_8039A9F0[4] = {
+	(void*)extrapolateParameter_raw__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_repeat__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_turn__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_clamp__Q27JStudio13functionvalueFdd,
 };
 }
 
@@ -124,8 +260,8 @@ SECTION_RODATA const u8 data_8039A9F0[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C48E0 0020 .data      __vt__Q27JStudio22TFunctionValue_hermite                     */
-SECTION_DATA const  void* __vt__Q27JStudio22TFunctionValue_hermite[8] = {
+/* 803C48E0-803C4900 0020 .data      __vt__Q27JStudio22TFunctionValue_hermite                     VTableData */
+SECTION_DATA void* __vt__Q27JStudio22TFunctionValue_hermite[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio22TFunctionValue_hermiteFv,
@@ -135,8 +271,8 @@ SECTION_DATA const  void* __vt__Q27JStudio22TFunctionValue_hermite[8] = {
 	(void*)prepare__Q27JStudio22TFunctionValue_hermiteFv,
 	(void*)getValue__Q27JStudio22TFunctionValue_hermiteFd,
 };
-/* 803C4900 0020 .data      __vt__Q27JStudio29TFunctionValue_list_parameter              */
-SECTION_DATA const  void* __vt__Q27JStudio29TFunctionValue_list_parameter[8] = {
+/* 803C4900-803C4920 0020 .data      __vt__Q27JStudio29TFunctionValue_list_parameter              VTableData */
+SECTION_DATA void* __vt__Q27JStudio29TFunctionValue_list_parameter[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio29TFunctionValue_list_parameterFv,
@@ -146,8 +282,8 @@ SECTION_DATA const  void* __vt__Q27JStudio29TFunctionValue_list_parameter[8] = {
 	(void*)prepare__Q27JStudio29TFunctionValue_list_parameterFv,
 	(void*)getValue__Q27JStudio29TFunctionValue_list_parameterFd,
 };
-/* 803C4920 0020 .data      __vt__Q27JStudio19TFunctionValue_list                        */
-SECTION_DATA const  void* __vt__Q27JStudio19TFunctionValue_list[8] = {
+/* 803C4920-803C4940 0020 .data      __vt__Q27JStudio19TFunctionValue_list                        VTableData */
+SECTION_DATA void* __vt__Q27JStudio19TFunctionValue_list[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio19TFunctionValue_listFv,
@@ -157,8 +293,8 @@ SECTION_DATA const  void* __vt__Q27JStudio19TFunctionValue_list[8] = {
 	(void*)prepare__Q27JStudio19TFunctionValue_listFv,
 	(void*)getValue__Q27JStudio19TFunctionValue_listFd,
 };
-/* 803C4940 0020 .data      __vt__Q27JStudio25TFunctionValue_transition                  */
-SECTION_DATA const  void* __vt__Q27JStudio25TFunctionValue_transition[8] = {
+/* 803C4940-803C4960 0020 .data      __vt__Q27JStudio25TFunctionValue_transition                  VTableData */
+SECTION_DATA void* __vt__Q27JStudio25TFunctionValue_transition[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio25TFunctionValue_transitionFv,
@@ -168,8 +304,8 @@ SECTION_DATA const  void* __vt__Q27JStudio25TFunctionValue_transition[8] = {
 	(void*)prepare__Q27JStudio25TFunctionValue_transitionFv,
 	(void*)getValue__Q27JStudio25TFunctionValue_transitionFd,
 };
-/* 803C4960 0020 .data      __vt__Q27JStudio23TFunctionValue_constant                    */
-SECTION_DATA const  void* __vt__Q27JStudio23TFunctionValue_constant[8] = {
+/* 803C4960-803C4980 0020 .data      __vt__Q27JStudio23TFunctionValue_constant                    VTableData */
+SECTION_DATA void* __vt__Q27JStudio23TFunctionValue_constant[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio23TFunctionValue_constantFv,
@@ -179,8 +315,8 @@ SECTION_DATA const  void* __vt__Q27JStudio23TFunctionValue_constant[8] = {
 	(void*)prepare__Q27JStudio23TFunctionValue_constantFv,
 	(void*)getValue__Q27JStudio23TFunctionValue_constantFd,
 };
-/* 803C4980 0020 .data      __vt__Q27JStudio24TFunctionValue_composite                   */
-SECTION_DATA const  void* __vt__Q27JStudio24TFunctionValue_composite[8] = {
+/* 803C4980-803C49A0 0020 .data      __vt__Q27JStudio24TFunctionValue_composite                   VTableData */
+SECTION_DATA void* __vt__Q27JStudio24TFunctionValue_composite[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio24TFunctionValue_compositeFv,
@@ -190,8 +326,8 @@ SECTION_DATA const  void* __vt__Q27JStudio24TFunctionValue_composite[8] = {
 	(void*)prepare__Q27JStudio24TFunctionValue_compositeFv,
 	(void*)getValue__Q27JStudio24TFunctionValue_compositeFd,
 };
-/* 803C49A0 0020 .data      __vt__Q27JStudio14TFunctionValue                             */
-SECTION_DATA const  void* __vt__Q27JStudio14TFunctionValue[8] = {
+/* 803C49A0-803C49C0 0020 .data      __vt__Q27JStudio14TFunctionValue                             VTableData */
+SECTION_DATA void* __vt__Q27JStudio14TFunctionValue[8] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -209,35 +345,35 @@ SECTION_DATA const  void* __vt__Q27JStudio14TFunctionValue[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455400 0008 .sdata2    @652                                                         */
+/* 80455400-80455408 0008 .sdata2    @652                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_652[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80455408 0008 .sdata2    @792                                                         */
+/* 80455408-80455410 0008 .sdata2    @792                                                         Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 functionvalue__LIT_792 = 1.000000;
-/* 80455410 0008 .sdata2    @793                                                         */
+/* 80455410-80455418 0008 .sdata2    @793                                                         Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_793 = 3.000000;
-/* 80455418 0008 .sdata2    @794                                                         */
+/* 80455418-80455420 0008 .sdata2    @794                                                         Float64Data */
 // 0xc000000000000000
 SECTION_SDATA2 f64 LIT_794 = -2.000000;
-/* 80455420 0008 .sdata2    @799                                                         */
+/* 80455420-80455428 0008 .sdata2    @799                                                         Fraction64Data */
 // 0.16666666666666666 0x3fc5555555555555
 SECTION_SDATA2 f64 LIT_799 = 1.000000 / 6.000000;
-/* 80455428 0008 .sdata2    @800                                                         */
+/* 80455428-80455430 0008 .sdata2    @800                                                         Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 LIT_800 = 0.500000;
-/* 80455430 0008 .sdata2    @801                                                         */
+/* 80455430-80455438 0008 .sdata2    @801                                                         Fraction64Data */
 // 0.6666666666666666 0x3fe5555555555555
 SECTION_SDATA2 f64 LIT_801 = 2.000000 / 3.000000;
-/* 80455438 0008 .sdata2    @842                                                         */
+/* 80455438-80455440 0008 .sdata2    @842                                                         Float64Data */
 // 0x4000000000000000
 SECTION_SDATA2 f64 functionvalue__LIT_842 = 2.000000;
-/* 80455440 0008 .sdata2    @867                                                         */
+/* 80455440-80455448 0008 .sdata2    @867                                                         Float64Data */
 // 0xbff0000000000000
 SECTION_SDATA2 f64 functionvalue__LIT_867 = -1.000000;
-/* 80455448 0008 .sdata2    @1517                                                        */
+/* 80455448-80455450 0008 .sdata2    @1517                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 functionvalue__LIT_1517 = 4503599627370496.000000;
 }
@@ -248,9 +384,8 @@ SECTION_SDATA2 f64 functionvalue__LIT_1517 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804511E8 0001 .sbss      @569                                                         */
-SECTION_SBSS u8 LIT_569[1];
-SECTION_SBSS u8 pad_804511EC[4];
+/* 804511E8-804511F0 0001 .sbss      @569                                                         ZeroInitializedData */
+SECTION_SBSS u8 LIT_569[1 + 7 /* padding */];
 }
 
 
@@ -259,7 +394,7 @@ SECTION_SBSS u8 pad_804511EC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80281648 0048 .text      toFunction_outside__Q27JStudio14TFunctionValueFi             */
+/* 80281648-80281690 0048 .text      toFunction_outside__Q27JStudio14TFunctionValueFi             Function */
 // JStudio::TFunctionValue::toFunction_outside(int)
 #pragma push
 #pragma optimization_level 0
@@ -270,7 +405,7 @@ asm void toFunction_outside__Q27JStudio14TFunctionValueFi() {
 }
 #pragma pop
 
-/* 80281690 0010 .text      __ct__Q27JStudio14TFunctionValueFv                           */
+/* 80281690-802816A0 0010 .text      __ct__Q27JStudio14TFunctionValueFv                           Function */
 // JStudio::TFunctionValue::JStudio::TFunctionValue(void)
 #pragma push
 #pragma optimization_level 0
@@ -281,7 +416,7 @@ asm void __ct__Q27JStudio14TFunctionValueFv() {
 }
 #pragma pop
 
-/* 802816A0 0048 .text      __dt__Q27JStudio14TFunctionValueFv                           */
+/* 802816A0-802816E8 0048 .text      __dt__Q27JStudio14TFunctionValueFv                           Function */
 // JStudio::TFunctionValue::~JStudio::TFunctionValue(void)
 #pragma push
 #pragma optimization_level 0
@@ -292,7 +427,7 @@ asm void __dt__Q27JStudio14TFunctionValueFv() {
 }
 #pragma pop
 
-/* 802816E8 0028 .text      refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv */
+/* 802816E8-80281710 0028 .text      refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv Function */
 // JStudio::TFunctionValueAttribute_refer::refer_initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -303,7 +438,7 @@ asm void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv() {
 }
 #pragma pop
 
-/* 80281710 0064 .text      interpolateValue_hermite__Q27JStudio13functionvalueFddddddd  */
+/* 80281710-80281774 0064 .text      interpolateValue_hermite__Q27JStudio13functionvalueFddddddd  Function */
 // JStudio::functionvalue::interpolateValue_hermite(f64, f64, f64, f64, f64, f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -314,7 +449,7 @@ asm void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd() {
 }
 #pragma pop
 
-/* 80281774 0064 .text      interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd */
+/* 80281774-802817D8 0064 .text      interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd Function */
 // JStudio::functionvalue::interpolateValue_BSpline_uniform(f64, f64, f64, f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -325,7 +460,7 @@ asm void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd() {
 }
 #pragma pop
 
-/* 802817D8 00E0 .text      interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd */
+/* 802817D8-802818B8 00E0 .text      interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd Function */
 // JStudio::functionvalue::interpolateValue_BSpline_nonuniform(f64, const f64*, const f64*)
 #pragma push
 #pragma optimization_level 0
@@ -336,7 +471,7 @@ asm void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd(
 }
 #pragma pop
 
-/* 802818B8 0060 .text      extrapolateParameter_turn__Q27JStudio13functionvalueFdd      */
+/* 802818B8-80281918 0060 .text      extrapolateParameter_turn__Q27JStudio13functionvalueFdd      Function */
 // JStudio::functionvalue::extrapolateParameter_turn(f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -347,7 +482,7 @@ asm void extrapolateParameter_turn__Q27JStudio13functionvalueFdd() {
 }
 #pragma pop
 
-/* 80281918 0034 .text      range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv */
+/* 80281918-8028194C 0034 .text      range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv Function */
 // JStudio::TFunctionValueAttribute_range::range_initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -358,7 +493,7 @@ asm void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv() {
 }
 #pragma pop
 
-/* 8028194C 00A8 .text      range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv   */
+/* 8028194C-802819F4 00A8 .text      range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv   Function */
 // JStudio::TFunctionValueAttribute_range::range_prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -369,7 +504,7 @@ asm void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv() {
 }
 #pragma pop
 
-/* 802819F4 0014 .text      range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd      */
+/* 802819F4-80281A08 0014 .text      range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd      Function */
 // JStudio::TFunctionValueAttribute_range::range_set(f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -380,7 +515,7 @@ asm void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd() {
 }
 #pragma pop
 
-/* 80281A08 0310 .text      range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd */
+/* 80281A08-80281D18 0310 .text      range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd Function */
 // JStudio::TFunctionValueAttribute_range::range_getParameter(f64, f64, f64) const
 #pragma push
 #pragma optimization_level 0
@@ -391,7 +526,7 @@ asm void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd() {
 }
 #pragma pop
 
-/* 80281D18 0044 .text      __ct__Q27JStudio29TFunctionValueAttribute_rangeFv            */
+/* 80281D18-80281D5C 0044 .text      __ct__Q27JStudio29TFunctionValueAttribute_rangeFv            Function */
 // JStudio::TFunctionValueAttribute_range::JStudio::TFunctionValueAttribute_range(void)
 #pragma push
 #pragma optimization_level 0
@@ -402,7 +537,7 @@ asm void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv() {
 }
 #pragma pop
 
-/* 80281D5C 005C .text      __ct__Q27JStudio24TFunctionValue_compositeFv                 */
+/* 80281D5C-80281DB8 005C .text      __ct__Q27JStudio24TFunctionValue_compositeFv                 Function */
 // JStudio::TFunctionValue_composite::JStudio::TFunctionValue_composite(void)
 #pragma push
 #pragma optimization_level 0
@@ -413,13 +548,13 @@ asm void __ct__Q27JStudio24TFunctionValue_compositeFv() {
 }
 #pragma pop
 
-/* 80281DB8 0008 .text      getType__Q27JStudio24TFunctionValue_compositeCFv             */
+/* 80281DB8-80281DC0 0008 .text      getType__Q27JStudio24TFunctionValue_compositeCFv             ReturnIntegerFunction */
 // JStudio::TFunctionValue_composite::getType(void) const
 int getType__Q27JStudio24TFunctionValue_compositeCFv() {
 	return 1;
 }
 
-/* 80281DC0 0020 .text      getAttributeSet__Q27JStudio24TFunctionValue_compositeFv      */
+/* 80281DC0-80281DE0 0020 .text      getAttributeSet__Q27JStudio24TFunctionValue_compositeFv      Function */
 // JStudio::TFunctionValue_composite::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -430,7 +565,7 @@ asm void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv() {
 }
 #pragma pop
 
-/* 80281DE0 0044 .text      initialize__Q27JStudio24TFunctionValue_compositeFv           */
+/* 80281DE0-80281E24 0044 .text      initialize__Q27JStudio24TFunctionValue_compositeFv           Function */
 // JStudio::TFunctionValue_composite::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -441,13 +576,13 @@ asm void initialize__Q27JStudio24TFunctionValue_compositeFv() {
 }
 #pragma pop
 
-/* 80281E24 0004 .text      prepare__Q27JStudio24TFunctionValue_compositeFv              */
+/* 80281E24-80281E28 0004 .text      prepare__Q27JStudio24TFunctionValue_compositeFv              ReturnFunction */
 // JStudio::TFunctionValue_composite::prepare(void)
 void prepare__Q27JStudio24TFunctionValue_compositeFv() {
 	return;
 }
 
-/* 80281E28 0034 .text      getValue__Q27JStudio24TFunctionValue_compositeFd             */
+/* 80281E28-80281E5C 0034 .text      getValue__Q27JStudio24TFunctionValue_compositeFd             Function */
 // JStudio::TFunctionValue_composite::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -458,7 +593,7 @@ asm void getValue__Q27JStudio24TFunctionValue_compositeFd() {
 }
 #pragma pop
 
-/* 80281E5C 006C .text      composite_raw__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80281E5C-80281EC8 006C .text      composite_raw__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_raw(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -469,7 +604,7 @@ asm void func_80281E5C() {
 }
 #pragma pop
 
-/* 80281EC8 0164 .text      composite_index__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80281EC8-8028202C 0164 .text      composite_index__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_index(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -480,7 +615,7 @@ asm void func_80281EC8() {
 }
 #pragma pop
 
-/* 8028202C 0068 .text      composite_parameter__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 8028202C-80282094 0068 .text      composite_parameter__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_parameter(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -491,7 +626,7 @@ asm void func_8028202C() {
 }
 #pragma pop
 
-/* 80282094 0084 .text      composite_add__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80282094-80282118 0084 .text      composite_add__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_add(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -502,7 +637,7 @@ asm void func_80282094() {
 }
 #pragma pop
 
-/* 80282118 00E8 .text      composite_subtract__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80282118-80282200 00E8 .text      composite_subtract__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_subtract(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -513,7 +648,7 @@ asm void func_80282118() {
 }
 #pragma pop
 
-/* 80282200 0084 .text      composite_multiply__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80282200-80282284 0084 .text      composite_multiply__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_multiply(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -524,7 +659,7 @@ asm void func_80282200() {
 }
 #pragma pop
 
-/* 80282284 00E8 .text      composite_divide__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad */
+/* 80282284-8028236C 00E8 .text      composite_divide__Q27JStudio24TFunctionValue_compositeFRCQ27JGadget44TVector_pointer<PQ27JStudio14TFunctionValue>RCQ37JStudio24TFunctionValue_composite5TDatad Function */
 // JStudio::TFunctionValue_composite::composite_divide(JGadget::TVector_pointer<PQ27JStudio14TFunctionValue>, JStudio::TFunctionValue_composite::TData, f64)
 #pragma push
 #pragma optimization_level 0
@@ -535,7 +670,7 @@ asm void func_80282284() {
 }
 #pragma pop
 
-/* 8028236C 0048 .text      __ct__Q27JStudio23TFunctionValue_constantFv                  */
+/* 8028236C-802823B4 0048 .text      __ct__Q27JStudio23TFunctionValue_constantFv                  Function */
 // JStudio::TFunctionValue_constant::JStudio::TFunctionValue_constant(void)
 #pragma push
 #pragma optimization_level 0
@@ -546,13 +681,13 @@ asm void __ct__Q27JStudio23TFunctionValue_constantFv() {
 }
 #pragma pop
 
-/* 802823B4 0008 .text      getType__Q27JStudio23TFunctionValue_constantCFv              */
+/* 802823B4-802823BC 0008 .text      getType__Q27JStudio23TFunctionValue_constantCFv              ReturnIntegerFunction */
 // JStudio::TFunctionValue_constant::getType(void) const
 int getType__Q27JStudio23TFunctionValue_constantCFv() {
 	return 2;
 }
 
-/* 802823BC 0014 .text      getAttributeSet__Q27JStudio23TFunctionValue_constantFv       */
+/* 802823BC-802823D0 0014 .text      getAttributeSet__Q27JStudio23TFunctionValue_constantFv       Function */
 // JStudio::TFunctionValue_constant::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -563,7 +698,7 @@ asm void getAttributeSet__Q27JStudio23TFunctionValue_constantFv() {
 }
 #pragma pop
 
-/* 802823D0 0010 .text      initialize__Q27JStudio23TFunctionValue_constantFv            */
+/* 802823D0-802823E0 0010 .text      initialize__Q27JStudio23TFunctionValue_constantFv            Function */
 // JStudio::TFunctionValue_constant::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -574,13 +709,13 @@ asm void initialize__Q27JStudio23TFunctionValue_constantFv() {
 }
 #pragma pop
 
-/* 802823E0 0004 .text      prepare__Q27JStudio23TFunctionValue_constantFv               */
+/* 802823E0-802823E4 0004 .text      prepare__Q27JStudio23TFunctionValue_constantFv               ReturnFunction */
 // JStudio::TFunctionValue_constant::prepare(void)
 void prepare__Q27JStudio23TFunctionValue_constantFv() {
 	return;
 }
 
-/* 802823E4 0008 .text      getValue__Q27JStudio23TFunctionValue_constantFd              */
+/* 802823E4-802823EC 0008 .text      getValue__Q27JStudio23TFunctionValue_constantFd              Function */
 // JStudio::TFunctionValue_constant::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -591,7 +726,7 @@ asm void getValue__Q27JStudio23TFunctionValue_constantFd() {
 }
 #pragma pop
 
-/* 802823EC 0060 .text      __ct__Q27JStudio25TFunctionValue_transitionFv                */
+/* 802823EC-8028244C 0060 .text      __ct__Q27JStudio25TFunctionValue_transitionFv                Function */
 // JStudio::TFunctionValue_transition::JStudio::TFunctionValue_transition(void)
 #pragma push
 #pragma optimization_level 0
@@ -602,13 +737,13 @@ asm void __ct__Q27JStudio25TFunctionValue_transitionFv() {
 }
 #pragma pop
 
-/* 8028244C 0008 .text      getType__Q27JStudio25TFunctionValue_transitionCFv            */
+/* 8028244C-80282454 0008 .text      getType__Q27JStudio25TFunctionValue_transitionCFv            ReturnIntegerFunction */
 // JStudio::TFunctionValue_transition::getType(void) const
 int getType__Q27JStudio25TFunctionValue_transitionCFv() {
 	return 3;
 }
 
-/* 80282454 0030 .text      getAttributeSet__Q27JStudio25TFunctionValue_transitionFv     */
+/* 80282454-80282484 0030 .text      getAttributeSet__Q27JStudio25TFunctionValue_transitionFv     Function */
 // JStudio::TFunctionValue_transition::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -619,7 +754,7 @@ asm void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv() {
 }
 #pragma pop
 
-/* 80282484 004C .text      initialize__Q27JStudio25TFunctionValue_transitionFv          */
+/* 80282484-802824D0 004C .text      initialize__Q27JStudio25TFunctionValue_transitionFv          Function */
 // JStudio::TFunctionValue_transition::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -630,7 +765,7 @@ asm void initialize__Q27JStudio25TFunctionValue_transitionFv() {
 }
 #pragma pop
 
-/* 802824D0 0024 .text      prepare__Q27JStudio25TFunctionValue_transitionFv             */
+/* 802824D0-802824F4 0024 .text      prepare__Q27JStudio25TFunctionValue_transitionFv             Function */
 // JStudio::TFunctionValue_transition::prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -641,7 +776,7 @@ asm void prepare__Q27JStudio25TFunctionValue_transitionFv() {
 }
 #pragma pop
 
-/* 802824F4 01C8 .text      getValue__Q27JStudio25TFunctionValue_transitionFd            */
+/* 802824F4-802826BC 01C8 .text      getValue__Q27JStudio25TFunctionValue_transitionFd            Function */
 // JStudio::TFunctionValue_transition::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -652,7 +787,7 @@ asm void getValue__Q27JStudio25TFunctionValue_transitionFd() {
 }
 #pragma pop
 
-/* 802826BC 0064 .text      __ct__Q27JStudio19TFunctionValue_listFv                      */
+/* 802826BC-80282720 0064 .text      __ct__Q27JStudio19TFunctionValue_listFv                      Function */
 // JStudio::TFunctionValue_list::JStudio::TFunctionValue_list(void)
 #pragma push
 #pragma optimization_level 0
@@ -663,13 +798,13 @@ asm void __ct__Q27JStudio19TFunctionValue_listFv() {
 }
 #pragma pop
 
-/* 80282720 0008 .text      getType__Q27JStudio19TFunctionValue_listCFv                  */
+/* 80282720-80282728 0008 .text      getType__Q27JStudio19TFunctionValue_listCFv                  ReturnIntegerFunction */
 // JStudio::TFunctionValue_list::getType(void) const
 int getType__Q27JStudio19TFunctionValue_listCFv() {
 	return 4;
 }
 
-/* 80282728 0030 .text      getAttributeSet__Q27JStudio19TFunctionValue_listFv           */
+/* 80282728-80282758 0030 .text      getAttributeSet__Q27JStudio19TFunctionValue_listFv           Function */
 // JStudio::TFunctionValue_list::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -680,7 +815,7 @@ asm void getAttributeSet__Q27JStudio19TFunctionValue_listFv() {
 }
 #pragma pop
 
-/* 80282758 0050 .text      initialize__Q27JStudio19TFunctionValue_listFv                */
+/* 80282758-802827A8 0050 .text      initialize__Q27JStudio19TFunctionValue_listFv                Function */
 // JStudio::TFunctionValue_list::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -691,7 +826,7 @@ asm void initialize__Q27JStudio19TFunctionValue_listFv() {
 }
 #pragma pop
 
-/* 802827A8 00B0 .text      prepare__Q27JStudio19TFunctionValue_listFv                   */
+/* 802827A8-80282858 00B0 .text      prepare__Q27JStudio19TFunctionValue_listFv                   Function */
 // JStudio::TFunctionValue_list::prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -702,7 +837,7 @@ asm void prepare__Q27JStudio19TFunctionValue_listFv() {
 }
 #pragma pop
 
-/* 80282858 03B8 .text      getValue__Q27JStudio19TFunctionValue_listFd                  */
+/* 80282858-80282C10 03B8 .text      getValue__Q27JStudio19TFunctionValue_listFd                  Function */
 // JStudio::TFunctionValue_list::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -713,7 +848,7 @@ asm void getValue__Q27JStudio19TFunctionValue_listFd() {
 }
 #pragma pop
 
-/* 80282C10 0014 .text      update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ */
+/* 80282C10-80282C24 0014 .text      update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ Function */
 // JStudio::TFunctionValue_list::update_INTERPOLATE_NONE_(JStudio::TFunctionValue_list, JStudio::TFunctionValue_list::TIndexData_)
 #pragma push
 #pragma optimization_level 0
@@ -724,7 +859,7 @@ asm void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio1
 }
 #pragma pop
 
-/* 80282C24 0034 .text      update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ */
+/* 80282C24-80282C58 0034 .text      update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ Function */
 // JStudio::TFunctionValue_list::update_INTERPOLATE_LINEAR_(JStudio::TFunctionValue_list, JStudio::TFunctionValue_list::TIndexData_)
 #pragma push
 #pragma optimization_level 0
@@ -735,7 +870,7 @@ asm void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudi
 }
 #pragma pop
 
-/* 80282C58 0050 .text      update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ */
+/* 80282C58-80282CA8 0050 .text      update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ Function */
 // JStudio::TFunctionValue_list::update_INTERPOLATE_PLATEAU_(JStudio::TFunctionValue_list, JStudio::TFunctionValue_list::TIndexData_)
 #pragma push
 #pragma optimization_level 0
@@ -746,7 +881,7 @@ asm void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStud
 }
 #pragma pop
 
-/* 80282CA8 008C .text      update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ */
+/* 80282CA8-80282D34 008C .text      update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_ Function */
 // JStudio::TFunctionValue_list::update_INTERPOLATE_BSPLINE_dataMore3_(JStudio::TFunctionValue_list, JStudio::TFunctionValue_list::TIndexData_)
 #pragma push
 #pragma optimization_level 0
@@ -757,7 +892,7 @@ asm void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listF
 }
 #pragma pop
 
-/* 80282D34 006C .text      __ct__Q27JStudio29TFunctionValue_list_parameterFv            */
+/* 80282D34-80282DA0 006C .text      __ct__Q27JStudio29TFunctionValue_list_parameterFv            Function */
 // JStudio::TFunctionValue_list_parameter::JStudio::TFunctionValue_list_parameter(void)
 #pragma push
 #pragma optimization_level 0
@@ -768,13 +903,13 @@ asm void __ct__Q27JStudio29TFunctionValue_list_parameterFv() {
 }
 #pragma pop
 
-/* 80282DA0 0008 .text      getType__Q27JStudio29TFunctionValue_list_parameterCFv        */
+/* 80282DA0-80282DA8 0008 .text      getType__Q27JStudio29TFunctionValue_list_parameterCFv        ReturnIntegerFunction */
 // JStudio::TFunctionValue_list_parameter::getType(void) const
 int getType__Q27JStudio29TFunctionValue_list_parameterCFv() {
 	return 5;
 }
 
-/* 80282DA8 0030 .text      getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv */
+/* 80282DA8-80282DD8 0030 .text      getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv Function */
 // JStudio::TFunctionValue_list_parameter::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -785,7 +920,7 @@ asm void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv() {
 }
 #pragma pop
 
-/* 80282DD8 0030 .text      data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl    */
+/* 80282DD8-80282E08 0030 .text      data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl    Function */
 // JStudio::TFunctionValue_list_parameter::data_set(const f32*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -796,7 +931,7 @@ asm void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl() {
 }
 #pragma pop
 
-/* 80282E08 0058 .text      initialize__Q27JStudio29TFunctionValue_list_parameterFv      */
+/* 80282E08-80282E60 0058 .text      initialize__Q27JStudio29TFunctionValue_list_parameterFv      Function */
 // JStudio::TFunctionValue_list_parameter::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -807,7 +942,7 @@ asm void initialize__Q27JStudio29TFunctionValue_list_parameterFv() {
 }
 #pragma pop
 
-/* 80282E60 00B0 .text      prepare__Q27JStudio29TFunctionValue_list_parameterFv         */
+/* 80282E60-80282F10 00B0 .text      prepare__Q27JStudio29TFunctionValue_list_parameterFv         Function */
 // JStudio::TFunctionValue_list_parameter::prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -818,7 +953,7 @@ asm void prepare__Q27JStudio29TFunctionValue_list_parameterFv() {
 }
 #pragma pop
 
-/* 80282F10 00D8 .text      getValue__Q27JStudio29TFunctionValue_list_parameterFd        */
+/* 80282F10-80282FE8 00D8 .text      getValue__Q27JStudio29TFunctionValue_list_parameterFd        Function */
 // JStudio::TFunctionValue_list_parameter::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -829,7 +964,7 @@ asm void getValue__Q27JStudio29TFunctionValue_list_parameterFd() {
 }
 #pragma pop
 
-/* 80282FE8 000C .text      update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd */
+/* 80282FE8-80282FF4 000C .text      update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd Function */
 // JStudio::TFunctionValue_list_parameter::update_INTERPOLATE_NONE_(JStudio::TFunctionValue_list_parameter, f64)
 #pragma push
 #pragma optimization_level 0
@@ -840,7 +975,7 @@ asm void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ
 }
 #pragma pop
 
-/* 80282FF4 0030 .text      update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd */
+/* 80282FF4-80283024 0030 .text      update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd Function */
 // JStudio::TFunctionValue_list_parameter::update_INTERPOLATE_LINEAR_(JStudio::TFunctionValue_list_parameter, f64)
 #pragma push
 #pragma optimization_level 0
@@ -851,7 +986,7 @@ asm void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFR
 }
 #pragma pop
 
-/* 80283024 003C .text      update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd */
+/* 80283024-80283060 003C .text      update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd Function */
 // JStudio::TFunctionValue_list_parameter::update_INTERPOLATE_PLATEAU_(JStudio::TFunctionValue_list_parameter, f64)
 #pragma push
 #pragma optimization_level 0
@@ -862,7 +997,7 @@ asm void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterF
 }
 #pragma pop
 
-/* 80283060 0264 .text      update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd */
+/* 80283060-802832C4 0264 .text      update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd Function */
 // JStudio::TFunctionValue_list_parameter::update_INTERPOLATE_BSPLINE_dataMore3_(JStudio::TFunctionValue_list_parameter, f64)
 #pragma push
 #pragma optimization_level 0
@@ -873,7 +1008,7 @@ asm void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_
 }
 #pragma pop
 
-/* 802832C4 0080 .text      __ct__Q27JStudio22TFunctionValue_hermiteFv                   */
+/* 802832C4-80283344 0080 .text      __ct__Q27JStudio22TFunctionValue_hermiteFv                   Function */
 // JStudio::TFunctionValue_hermite::JStudio::TFunctionValue_hermite(void)
 #pragma push
 #pragma optimization_level 0
@@ -884,13 +1019,13 @@ asm void __ct__Q27JStudio22TFunctionValue_hermiteFv() {
 }
 #pragma pop
 
-/* 80283344 0008 .text      getType__Q27JStudio22TFunctionValue_hermiteCFv               */
+/* 80283344-8028334C 0008 .text      getType__Q27JStudio22TFunctionValue_hermiteCFv               ReturnIntegerFunction */
 // JStudio::TFunctionValue_hermite::getType(void) const
 int getType__Q27JStudio22TFunctionValue_hermiteCFv() {
 	return 6;
 }
 
-/* 8028334C 0020 .text      getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv        */
+/* 8028334C-8028336C 0020 .text      getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv        Function */
 // JStudio::TFunctionValue_hermite::getAttributeSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -901,7 +1036,7 @@ asm void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv() {
 }
 #pragma pop
 
-/* 8028336C 0050 .text      data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl         */
+/* 8028336C-802833BC 0050 .text      data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl         Function */
 // JStudio::TFunctionValue_hermite::data_set(const f32*, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -912,7 +1047,7 @@ asm void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl() {
 }
 #pragma pop
 
-/* 802833BC 006C .text      initialize__Q27JStudio22TFunctionValue_hermiteFv             */
+/* 802833BC-80283428 006C .text      initialize__Q27JStudio22TFunctionValue_hermiteFv             Function */
 // JStudio::TFunctionValue_hermite::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -923,7 +1058,7 @@ asm void initialize__Q27JStudio22TFunctionValue_hermiteFv() {
 }
 #pragma pop
 
-/* 80283428 0024 .text      prepare__Q27JStudio22TFunctionValue_hermiteFv                */
+/* 80283428-8028344C 0024 .text      prepare__Q27JStudio22TFunctionValue_hermiteFv                Function */
 // JStudio::TFunctionValue_hermite::prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -934,7 +1069,7 @@ asm void prepare__Q27JStudio22TFunctionValue_hermiteFv() {
 }
 #pragma pop
 
-/* 8028344C 0124 .text      getValue__Q27JStudio22TFunctionValue_hermiteFd               */
+/* 8028344C-80283570 0124 .text      getValue__Q27JStudio22TFunctionValue_hermiteFd               Function */
 // JStudio::TFunctionValue_hermite::getValue(f64)
 #pragma push
 #pragma optimization_level 0
@@ -945,13 +1080,13 @@ asm void getValue__Q27JStudio22TFunctionValue_hermiteFd() {
 }
 #pragma pop
 
-/* 80283570 0004 .text      extrapolateParameter_raw__Q27JStudio13functionvalueFdd       */
+/* 80283570-80283574 0004 .text      extrapolateParameter_raw__Q27JStudio13functionvalueFdd       ReturnFunction */
 // JStudio::functionvalue::extrapolateParameter_raw(f64, f64)
 void extrapolateParameter_raw__Q27JStudio13functionvalueFdd() {
 	return;
 }
 
-/* 80283574 003C .text      extrapolateParameter_repeat__Q27JStudio13functionvalueFdd    */
+/* 80283574-802835B0 003C .text      extrapolateParameter_repeat__Q27JStudio13functionvalueFdd    Function */
 // JStudio::functionvalue::extrapolateParameter_repeat(f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -962,7 +1097,7 @@ asm void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd() {
 }
 #pragma pop
 
-/* 802835B0 002C .text      extrapolateParameter_clamp__Q27JStudio13functionvalueFdd     */
+/* 802835B0-802835DC 002C .text      extrapolateParameter_clamp__Q27JStudio13functionvalueFdd     Function */
 // JStudio::functionvalue::extrapolateParameter_clamp(f64, f64)
 #pragma push
 #pragma optimization_level 0
@@ -973,7 +1108,7 @@ asm void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd() {
 }
 #pragma pop
 
-/* 802835DC 0058 .text      findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d>__7JGadgetFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCd */
+/* 802835DC-80283634 0058 .text      findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d>__7JGadgetFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCd Function */
 // JGadget::findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d>(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, const f64&)
 #pragma push
 #pragma optimization_level 0
@@ -984,7 +1119,7 @@ asm void func_802835DC() {
 }
 #pragma pop
 
-/* 80283634 0224 .text      findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>__7JGadgetFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCdQ23std7less<d> */
+/* 80283634-80283858 0224 .text      findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>__7JGadgetFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCdQ23std7less<d> Function */
 // JGadget::findUpperBound_binary_current<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, const f64&, std::less<d>)
 #pragma push
 #pragma optimization_level 0
@@ -995,7 +1130,7 @@ asm void func_80283634() {
 }
 #pragma pop
 
-/* 80283858 0070 .text      findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d>__7JGadgetFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCd */
+/* 80283858-802838C8 0070 .text      findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d>__7JGadgetFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCd Function */
 // JGadget::findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d>(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, const f64&)
 #pragma push
 #pragma optimization_level 0
@@ -1006,7 +1141,7 @@ asm void func_80283858() {
 }
 #pragma pop
 
-/* 802838C8 02FC .text      findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>__7JGadgetFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCdQ23std7less<d> */
+/* 802838C8-80283BC4 02FC .text      findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>__7JGadgetFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCdQ23std7less<d> Function */
 // JGadget::findUpperBound_binary_current<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, const f64&, std::less<d>)
 #pragma push
 #pragma optimization_level 0
@@ -1017,7 +1152,7 @@ asm void func_802838C8() {
 }
 #pragma pop
 
-/* 80283BC4 0060 .text      __dt__Q27JStudio22TFunctionValue_hermiteFv                   */
+/* 80283BC4-80283C24 0060 .text      __dt__Q27JStudio22TFunctionValue_hermiteFv                   Function */
 // JStudio::TFunctionValue_hermite::~JStudio::TFunctionValue_hermite(void)
 #pragma push
 #pragma optimization_level 0
@@ -1028,7 +1163,7 @@ asm void __dt__Q27JStudio22TFunctionValue_hermiteFv() {
 }
 #pragma pop
 
-/* 80283C24 0060 .text      __dt__Q27JStudio29TFunctionValue_list_parameterFv            */
+/* 80283C24-80283C84 0060 .text      __dt__Q27JStudio29TFunctionValue_list_parameterFv            Function */
 // JStudio::TFunctionValue_list_parameter::~JStudio::TFunctionValue_list_parameter(void)
 #pragma push
 #pragma optimization_level 0
@@ -1039,7 +1174,7 @@ asm void __dt__Q27JStudio29TFunctionValue_list_parameterFv() {
 }
 #pragma pop
 
-/* 80283C84 0060 .text      __dt__Q27JStudio19TFunctionValue_listFv                      */
+/* 80283C84-80283CE4 0060 .text      __dt__Q27JStudio19TFunctionValue_listFv                      Function */
 // JStudio::TFunctionValue_list::~JStudio::TFunctionValue_list(void)
 #pragma push
 #pragma optimization_level 0
@@ -1050,7 +1185,7 @@ asm void __dt__Q27JStudio19TFunctionValue_listFv() {
 }
 #pragma pop
 
-/* 80283CE4 0060 .text      __dt__Q27JStudio25TFunctionValue_transitionFv                */
+/* 80283CE4-80283D44 0060 .text      __dt__Q27JStudio25TFunctionValue_transitionFv                Function */
 // JStudio::TFunctionValue_transition::~JStudio::TFunctionValue_transition(void)
 #pragma push
 #pragma optimization_level 0
@@ -1061,7 +1196,7 @@ asm void __dt__Q27JStudio25TFunctionValue_transitionFv() {
 }
 #pragma pop
 
-/* 80283D44 0060 .text      __dt__Q27JStudio23TFunctionValue_constantFv                  */
+/* 80283D44-80283DA4 0060 .text      __dt__Q27JStudio23TFunctionValue_constantFv                  Function */
 // JStudio::TFunctionValue_constant::~JStudio::TFunctionValue_constant(void)
 #pragma push
 #pragma optimization_level 0
@@ -1072,7 +1207,7 @@ asm void __dt__Q27JStudio23TFunctionValue_constantFv() {
 }
 #pragma pop
 
-/* 80283DA4 0080 .text      __dt__Q27JStudio24TFunctionValue_compositeFv                 */
+/* 80283DA4-80283E24 0080 .text      __dt__Q27JStudio24TFunctionValue_compositeFv                 Function */
 // JStudio::TFunctionValue_composite::~JStudio::TFunctionValue_composite(void)
 #pragma push
 #pragma optimization_level 0
@@ -1083,7 +1218,7 @@ asm void __dt__Q27JStudio24TFunctionValue_compositeFv() {
 }
 #pragma pop
 
-/* 80283E24 0094 .text      upper_bound<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>__3stdFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCdQ23std7less<d> */
+/* 80283E24-80283EB8 0094 .text      upper_bound<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>__3stdFQ37JStudio29TFunctionValue_list_parameter15TIterator_data_Q37JStudio29TFunctionValue_list_parameter15TIterator_data_RCdQ23std7less<d> Function */
 // std::upper_bound<Q37JStudio29TFunctionValue_list_parameter15TIterator_data_,d,Q23std7less<d>>(JStudio::TFunctionValue_list_parameter::TIterator_data_, JStudio::TFunctionValue_list_parameter::TIterator_data_, const f64&, std::less<d>)
 #pragma push
 #pragma optimization_level 0
@@ -1094,7 +1229,7 @@ asm void func_80283E24() {
 }
 #pragma pop
 
-/* 80283EB8 00C8 .text      upper_bound<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>__3stdFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCdQ23std7less<d> */
+/* 80283EB8-80283F80 00C8 .text      upper_bound<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>__3stdFQ37JStudio22TFunctionValue_hermite15TIterator_data_Q37JStudio22TFunctionValue_hermite15TIterator_data_RCdQ23std7less<d> Function */
 // std::upper_bound<Q37JStudio22TFunctionValue_hermite15TIterator_data_,d,Q23std7less<d>>(JStudio::TFunctionValue_hermite::TIterator_data_, JStudio::TFunctionValue_hermite::TIterator_data_, const f64&, std::less<d>)
 #pragma push
 #pragma optimization_level 0

@@ -9,26 +9,49 @@
 // 
 
 extern "C" {
-extern void memset();
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void __OSLockSram();
+/* Function             */
 extern void __OSLockSramEx();
+/* Function             */
 extern void __OSUnlockSram();
+/* Function             */
 extern void __OSUnlockSramEx();
+/* Function             */
 extern void OSGetTime();
+/* ReturnFunction       */
 extern void __CARDDefaultApiCallback();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDEraseSector();
+/* GlobalFunction       */
 extern void __CARDGetFontEncode();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* Function             */
 extern void __CARDWrite();
+/* Function             */
 extern void __CARDCheckSum();
+/* Function             */
 extern void FormatCallback();
+/* Function             */
 extern void __CARDFormatRegionAsync();
+/* Function             */
+extern void CARDFormat();
+/* Function             */
 extern void __shr2i();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -38,7 +61,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80357484 0144 .text      FormatCallback                                               */
+/* 80357484-803575C8 0144 .text      FormatCallback                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +71,7 @@ asm void FormatCallback() {
 }
 #pragma pop
 
-/* 803575C8 0658 .text      __CARDFormatRegionAsync                                      */
+/* 803575C8-80357C20 0658 .text      __CARDFormatRegionAsync                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +81,7 @@ asm void __CARDFormatRegionAsync() {
 }
 #pragma pop
 
-/* 80357C20 0054 .text      CARDFormat                                                   */
+/* 80357C20-80357C74 0054 .text      CARDFormat                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

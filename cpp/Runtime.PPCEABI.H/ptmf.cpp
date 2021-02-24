@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __ptmf_test();
+/* Function             */
+extern void __ptmf_cmpr();
+/* Function             */
+extern void __ptmf_scall();
+/* InitializedData      */
+SECTION_RODATA extern const u8 __ptmf_null[16];
+}
+
 
 /* ###################################################################################### */
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2180 000C .rodata    __ptmf_null                                                  */
+/* 803A2180-803A2190 000C .rodata    __ptmf_null                                                  InitializedData */
 SECTION_RODATA const u8 __ptmf_null[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -28,7 +39,7 @@ SECTION_RODATA const u8 __ptmf_null[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80362018 0030 .text      __ptmf_test                                                  */
+/* 80362018-80362048 0030 .text      __ptmf_test                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +49,7 @@ asm void __ptmf_test() {
 }
 #pragma pop
 
-/* 80362048 003C .text      __ptmf_cmpr                                                  */
+/* 80362048-80362084 003C .text      __ptmf_cmpr                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +59,7 @@ asm void __ptmf_cmpr() {
 }
 #pragma pop
 
-/* 80362084 0028 .text      __ptmf_scall                                                 */
+/* 80362084-803620AC 0028 .text      __ptmf_scall                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

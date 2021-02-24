@@ -9,7 +9,11 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __close_all();
+/* Function             */
+extern void __stdio_atexit();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __stdio_exit[4];
 }
 
@@ -19,7 +23,7 @@ SECTION_SBSS extern u8 __stdio_exit[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803664CC 0010 .text      __stdio_atexit                                               */
+/* 803664CC-803664DC 0010 .text      __stdio_atexit                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

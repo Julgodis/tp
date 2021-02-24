@@ -9,19 +9,51 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __DSPHandler();
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
+extern void DSPCheckMailToDSP();
+/* Function             */
+extern void DSPCheckMailFromDSP();
+/* Function             */
+extern void DSPReadMailFromDSP();
+/* Function             */
+extern void DSPSendMailToDSP();
+/* Function             */
+extern void DSPAssertInt();
+/* Function             */
+extern void DSPInit();
+/* Function             */
 extern void __DSP_debug_printf();
+/* InitializedData      */
 SECTION_DATA extern u8 dsp__LIT_1[72];
-SECTION_SDATA extern u8 __DSPVersion[8];
-SECTION_SBSS extern u8 __DSP_init_flag[4];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_19[32];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_20[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_21[12];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __DSPVersion[2];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __DSP_init_flag[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_tmp_task[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_last_task[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_first_task[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_curr_task[4];
 }
 
@@ -31,8 +63,8 @@ SECTION_SBSS extern u8 __DSP_curr_task[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1C78 0000 .data      ...data.0                                                    */
-/* 803D1C78 0045 .data      @1                                                           */
+/* 803D1C78-803D1C78 0000 .data      ...data.0                                                    InitializedData */
+/* 803D1C78-803D1CC0 0045 .data      @1                                                           InitializedData */
 SECTION_DATA u8 dsp__LIT_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x44, 0x53, 0x50, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
@@ -42,18 +74,18 @@ SECTION_DATA u8 dsp__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1CC0 001E .data      @19                                                          */
+/* 803D1CC0-803D1CE0 001E .data      @19                                                          InitializedData */
 SECTION_DATA u8 LIT_19[32] = {
 	0x44, 0x53, 0x50, 0x49, 0x6E, 0x69, 0x74, 0x28, 0x29, 0x3A, 0x20, 0x42, 0x75, 0x69, 0x6C, 0x64,
 	0x20, 0x44, 0x61, 0x74, 0x65, 0x3A, 0x20, 0x25, 0x73, 0x20, 0x25, 0x73, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D1CE0 000C .data      @20                                                          */
+/* 803D1CE0-803D1CEC 000C .data      @20                                                          InitializedData */
 SECTION_DATA u8 LIT_20[12] = {
 	0x41, 0x70, 0x72, 0x20, 0x20, 0x35, 0x20, 0x32, 0x30, 0x30, 0x34, 0x00,
 };
-/* 803D1CEC 0009 .data      @21                                                          */
+/* 803D1CEC-803D1CF8 0009 .data      @21                                                          InitializedData */
 SECTION_DATA u8 LIT_21[12] = {
 	0x30, 0x34, 0x3A, 0x31, 0x35, 0x3A, 0x33, 0x32, 0x00,
 	/* padding */
@@ -67,11 +99,11 @@ SECTION_DATA u8 LIT_21[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A58 0004 .sdata     __DSPVersion                                                 */
-SECTION_SDATA u8 __DSPVersion[8] = {
-	0x80, 0x3D, 0x1C, 0x78,
+/* 80450A58-80450A60 0004 .sdata     __DSPVersion                                                 SymbolReferenceArrayData */
+SECTION_SDATA void* __DSPVersion[2] = {
+	(void*)&dsp__LIT_1,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -81,9 +113,8 @@ SECTION_SDATA u8 __DSPVersion[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451900 0004 .sbss      __DSP_init_flag                                              */
-SECTION_SBSS u8 __DSP_init_flag[4];
-SECTION_SBSS u8 pad_80451904[4];
+/* 80451900-80451908 0004 .sbss      __DSP_init_flag                                              ZeroInitializedData */
+SECTION_SBSS u8 __DSP_init_flag[4 + 4 /* padding */];
 }
 
 
@@ -92,7 +123,7 @@ SECTION_SBSS u8 pad_80451904[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80352430 0010 .text      DSPCheckMailToDSP                                            */
+/* 80352430-80352440 0010 .text      DSPCheckMailToDSP                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +133,7 @@ asm void DSPCheckMailToDSP() {
 }
 #pragma pop
 
-/* 80352440 0010 .text      DSPCheckMailFromDSP                                          */
+/* 80352440-80352450 0010 .text      DSPCheckMailFromDSP                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +143,7 @@ asm void DSPCheckMailFromDSP() {
 }
 #pragma pop
 
-/* 80352450 0018 .text      DSPReadMailFromDSP                                           */
+/* 80352450-80352468 0018 .text      DSPReadMailFromDSP                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +153,7 @@ asm void DSPReadMailFromDSP() {
 }
 #pragma pop
 
-/* 80352468 0014 .text      DSPSendMailToDSP                                             */
+/* 80352468-8035247C 0014 .text      DSPSendMailToDSP                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +163,7 @@ asm void DSPSendMailToDSP() {
 }
 #pragma pop
 
-/* 8035247C 0040 .text      DSPAssertInt                                                 */
+/* 8035247C-803524BC 0040 .text      DSPAssertInt                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +173,7 @@ asm void DSPAssertInt() {
 }
 #pragma pop
 
-/* 803524BC 00C4 .text      DSPInit                                                      */
+/* 803524BC-80352580 00C4 .text      DSPInit                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

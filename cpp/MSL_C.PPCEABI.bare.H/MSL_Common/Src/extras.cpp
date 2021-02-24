@@ -9,8 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __msl_strnicmp();
+/* Function             */
+extern void strnicmp();
+/* Function             */
 extern void stricmp();
+/* InitializedData      */
 SECTION_DATA extern u8 __lower_map[256];
 }
 
@@ -20,7 +25,7 @@ SECTION_DATA extern u8 __lower_map[256];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CA74 0020 .text      strnicmp                                                     */
+/* 8036CA74-8036CA94 0020 .text      strnicmp                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30,7 +35,7 @@ asm void strnicmp() {
 }
 #pragma pop
 
-/* 8036CA94 008C .text      stricmp                                                      */
+/* 8036CA94-8036CB20 008C .text      stricmp                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

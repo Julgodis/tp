@@ -9,11 +9,20 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __flush_buffer();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* Function             */
+extern void fseek();
+/* Function             */
 extern void _fseek();
-SECTION_SBSS extern u8 errno[4];
+/* Function             */
+extern void ftell();
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 }
 
 
@@ -22,7 +31,7 @@ SECTION_SBSS extern u8 errno[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80365BB4 006C .text      fseek                                                        */
+/* 80365BB4-80365C20 006C .text      fseek                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -32,7 +41,7 @@ asm void fseek() {
 }
 #pragma pop
 
-/* 80365C20 0270 .text      _fseek                                                       */
+/* 80365C20-80365E90 0270 .text      _fseek                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +51,7 @@ asm void _fseek() {
 }
 #pragma pop
 
-/* 80365E90 00E4 .text      ftell                                                        */
+/* 80365E90-80365F74 00E4 .text      ftell                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

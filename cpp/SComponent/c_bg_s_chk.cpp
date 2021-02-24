@@ -11,9 +11,18 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__8cBgS_ChkFv();
+/* Function             */
 extern void __dt__8cBgS_ChkFv();
+/* Function             */
+extern void SetExtChk__8cBgS_ChkFR8cBgS_Chk();
+/* Function             */
+extern void ChkSameActorPid__8cBgS_ChkCFUi();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__8cBgS_Chk[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cBgS_Chk[4];
 }
 
 
@@ -22,8 +31,8 @@ SECTION_DATA extern const void* __vt__8cBgS_Chk[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3F80 000C .data      __vt__8cBgS_Chk                                              */
-SECTION_DATA const  void* __vt__8cBgS_Chk[4] = {
+/* 803C3F80-803C3F90 000C .data      __vt__8cBgS_Chk                                              VTableData */
+SECTION_DATA void* __vt__8cBgS_Chk[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cBgS_ChkFv,
@@ -38,7 +47,7 @@ SECTION_DATA const  void* __vt__8cBgS_Chk[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80267B4C 0024 .text      __ct__8cBgS_ChkFv                                            */
+/* 80267B4C-80267B70 0024 .text      __ct__8cBgS_ChkFv                                            Function */
 // cBgS_Chk::cBgS_Chk(void)
 #pragma push
 #pragma optimization_level 0
@@ -49,7 +58,7 @@ asm void __ct__8cBgS_ChkFv() {
 }
 #pragma pop
 
-/* 80267B70 0048 .text      __dt__8cBgS_ChkFv                                            */
+/* 80267B70-80267BB8 0048 .text      __dt__8cBgS_ChkFv                                            Function */
 // cBgS_Chk::~cBgS_Chk(void)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +69,7 @@ asm void __dt__8cBgS_ChkFv() {
 }
 #pragma pop
 
-/* 80267BB8 0024 .text      SetExtChk__8cBgS_ChkFR8cBgS_Chk                              */
+/* 80267BB8-80267BDC 0024 .text      SetExtChk__8cBgS_ChkFR8cBgS_Chk                              Function */
 // cBgS_Chk::SetExtChk(cBgS_Chk&)
 #pragma push
 #pragma optimization_level 0
@@ -71,7 +80,7 @@ asm void SetExtChk__8cBgS_ChkFR8cBgS_Chk() {
 }
 #pragma pop
 
-/* 80267BDC 0040 .text      ChkSameActorPid__8cBgS_ChkCFUi                               */
+/* 80267BDC-80267C1C 0040 .text      ChkSameActorPid__8cBgS_ChkCFUi                               Function */
 // cBgS_Chk::ChkSameActorPid(unsigned int) const
 #pragma push
 #pragma optimization_level 0

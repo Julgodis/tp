@@ -12,8 +12,8 @@
 // Additional Symbols:
 // 
 
-struct dKyeff_c;
 struct kankyo_class;
+struct dKyeff_c;
 
 extern void dKyw_wether_init(void); /* dKyw_wether_init__Fv */
 extern void dKyw_wether_delete(void); /* dKyw_wether_delete__Fv */
@@ -21,27 +21,69 @@ extern void dKyw_wether_move(void); /* dKyw_wether_move__Fv */
 extern void dKyw_wether_move_draw(void); /* dKyw_wether_move_draw__Fv */
 extern void dKyw_wether_draw(void); /* dKyw_wether_draw__Fv */
 extern void dKy_FiveSenses_fullthrottle_dark(void); /* dKy_FiveSenses_fullthrottle_dark__Fv */
+extern void dKyeff_Draw(dKyeff_c*); /* dKyeff_Draw__FP8dKyeff_c */
+extern void dKyeff_Execute(dKyeff_c*); /* dKyeff_Execute__FP8dKyeff_c */
+extern void dKyeff_Delete(dKyeff_c*); /* dKyeff_Delete__FP8dKyeff_c */
+extern void dKyeff_Create(kankyo_class*); /* dKyeff_Create__FP12kankyo_class */
 
 extern "C" {
+/* Function             */
 extern void dKyw_wether_init__Fv();
+/* Function             */
 extern void dKyw_wether_delete__Fv();
+/* Function             */
 extern void dKyw_wether_move__Fv();
+/* Function             */
 extern void dKyw_wether_move_draw__Fv();
+/* Function             */
 extern void dKyw_wether_draw__Fv();
+/* Function             */
 extern void dKy_FiveSenses_fullthrottle_dark__Fv();
+/* Function             */
+extern void dKyeff_Draw__FP8dKyeff_c();
+/* Function             */
 extern void execute__8dKyeff_cFv();
+/* Function             */
+extern void dKyeff_Execute__FP8dKyeff_c();
+/* ReturnIntegerFunction */
+extern  int dKyeff_IsDelete__FP8dKyeff_c();
+/* Function             */
+extern void dKyeff_Delete__FP8dKyeff_c();
+/* Function             */
+extern void dKyeff_Create__FP12kankyo_class();
+/* Function             */
 extern void framework__10Z2EnvSeMgrFv();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void OSTicksToCalendarTime();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_kyeff__stringBase0[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dKyeff_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_KYEFF[11];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3804[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kyeff__LIT_3805;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kyeff__LIT_3812;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kyeff__LIT_3843[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kyeff__LIT_3844;
 }
 
@@ -51,8 +93,14 @@ SECTION_SDATA2 extern f32 d_d_kyeff__LIT_3844;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80394F38 0005 .rodata    @stringBase0                                                 */
-const char* const stringBase_80394F38 = "Name";
+/* 80394F38-80394F40 0005 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80394F38 = "Name";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80394F3D = "\0\0";
+#pragma pop
 }
 
 
@@ -61,18 +109,28 @@ const char* const stringBase_80394F38 = "Name";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BC158 0014 .data      l_dKyeff_Method                                              */
-SECTION_DATA u8 l_dKyeff_Method[20] = {
-	0x80, 0x1A, 0xDE, 0x00, 0x80, 0x1A, 0xDD, 0xDC, 0x80, 0x1A, 0xDD, 0xB4, 0x80, 0x1A, 0xDD, 0xD4,
-	0x80, 0x1A, 0xDD, 0x38,
+/* 803BC158-803BC16C 0014 .data      l_dKyeff_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* l_dKyeff_Method[5] = {
+	(void*)dKyeff_Create,
+	(void*)dKyeff_Delete,
+	(void*)dKyeff_Execute,
+	(void*)dKyeff_IsDelete__FP8dKyeff_c,
+	(void*)dKyeff_Draw,
 };
-/* 803BC16C 0028 .data      g_profile_KYEFF                                              */
-SECTION_DATA u8 g_profile_KYEFF[44] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x0C, 0xFF, 0xFD, 0x03, 0x11, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x40,
-	0x00, 0x05, 0x00, 0x00, 0x80, 0x3B, 0xC1, 0x58,
+/* 803BC16C-803BC198 0028 .data      g_profile_KYEFF                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_KYEFF[11] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03110000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000F8,
+	NULL,
+	NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x00050000,
+	(void*)&l_dKyeff_Method,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -82,21 +140,21 @@ SECTION_DATA u8 g_profile_KYEFF[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453E58 0004 .sdata2    @3804                                                        */
+/* 80453E58-80453E5C 0004 .sdata2    @3804                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kyeff__LIT_3804[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453E5C 0004 .sdata2    @3805                                                        */
+/* 80453E5C-80453E60 0004 .sdata2    @3805                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_kyeff__LIT_3805 = 1.000000f;
-/* 80453E60 0008 .sdata2    @3812                                                        */
+/* 80453E60-80453E68 0008 .sdata2    @3812                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_kyeff__LIT_3812 = 4503601774854144.000000;
-/* 80453E68 0004 .sdata2    @3843                                                        */
+/* 80453E68-80453E6C 0004 .sdata2    @3843                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kyeff__LIT_3843[4] = {
 	0x3F, 0x33, 0x33, 0x33,
 };
-/* 80453E6C 0004 .sdata2    @3844                                                        */
+/* 80453E6C-80453E70 0004 .sdata2    @3844                                                        Float32Data */
 // 0x41700000
 SECTION_SDATA2 f32 d_d_kyeff__LIT_3844 = 15.000000f;
 }
@@ -107,7 +165,7 @@ SECTION_SDATA2 f32 d_d_kyeff__LIT_3844 = 15.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 801ADD38 0024 .text      dKyeff_Draw__FP8dKyeff_c                                     */
+/* 801ADD38-801ADD5C 0024 .text      dKyeff_Draw__FP8dKyeff_c                                     Function */
 }
 
 #pragma push
@@ -120,7 +178,7 @@ asm void dKyeff_Draw(dKyeff_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADD5C 0058 .text      execute__8dKyeff_cFv                                         */
+/* 801ADD5C-801ADDB4 0058 .text      execute__8dKyeff_cFv                                         Function */
 // dKyeff_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -131,7 +189,7 @@ asm void execute__8dKyeff_cFv() {
 }
 #pragma pop
 
-/* 801ADDB4 0020 .text      dKyeff_Execute__FP8dKyeff_c                                  */
+/* 801ADDB4-801ADDD4 0020 .text      dKyeff_Execute__FP8dKyeff_c                                  Function */
 }
 
 #pragma push
@@ -144,13 +202,13 @@ asm void dKyeff_Execute(dKyeff_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADDD4 0008 .text      dKyeff_IsDelete__FP8dKyeff_c                                 */
+/* 801ADDD4-801ADDDC 0008 .text      dKyeff_IsDelete__FP8dKyeff_c                                 ReturnIntegerFunction */
 // dKyeff_IsDelete(dKyeff_c*)
 int dKyeff_IsDelete__FP8dKyeff_c() {
 	return 1;
 }
 
-/* 801ADDDC 0024 .text      dKyeff_Delete__FP8dKyeff_c                                   */
+/* 801ADDDC-801ADE00 0024 .text      dKyeff_Delete__FP8dKyeff_c                                   Function */
 }
 
 #pragma push
@@ -163,7 +221,7 @@ asm void dKyeff_Delete(dKyeff_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADE00 00A0 .text      dKyeff_Create__FP12kankyo_class                              */
+/* 801ADE00-801ADEA0 00A0 .text      dKyeff_Create__FP12kankyo_class                              Function */
 }
 
 #pragma push

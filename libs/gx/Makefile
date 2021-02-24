@@ -42,8 +42,9 @@ GX_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libgx.a: dirs $(GX_A_O_FILES)
+$(BUILD_DIR)/libgx.a: $(GX_A_O_FILES)
 	$(LD) -xm l $(GX_A_LDFLAGS) -o $(BUILD_DIR)/libgx.a $(GX_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libgx.a
 
 $(BUILD_DIR)/libs/gx/%.o: cpp/gx/%.cpp
 	mkdir -p $(@D)

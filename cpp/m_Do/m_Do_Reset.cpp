@@ -12,54 +12,104 @@
 // Additional Symbols:
 // 
 
+extern void my_OSCancelAlarmAll(void); /* my_OSCancelAlarmAll__Fv */
 extern void destroyVideo(void); /* destroyVideo__Fv */
+extern void mDoRst_reset(int, u32, int); /* mDoRst_reset__FiUli */
 extern void mDoRst_resetCallBack(int, void*); /* mDoRst_resetCallBack__FiPv */
 extern void mDoDvdErr_ThdCleanup(void); /* mDoDvdErr_ThdCleanup__Fv */
 extern void cAPICPad_recalibrate(void); /* cAPICPad_recalibrate__Fv */
 
 extern "C" {
+/* Function             */
 extern void OSAttention();
+/* ReturnFunction       */
 extern void my_OSCancelAlarmAll__Fv();
+/* Function             */
 extern void destroyVideo__Fv();
+/* Function             */
+extern void mDoRst_reset__FiUli();
+/* Function             */
 extern void mDoRst_resetCallBack__FiPv();
+/* GlobalFunction       */
 extern u32 getResetData__6mDoRstFv();
+/* Function             */
 extern void mDoDvdErr_ThdCleanup__Fv();
+/* Function             */
 extern void cAPICPad_recalibrate__Fv();
+/* Function             */
 extern void pause__13JASTaskThreadFb();
+/* GlobalFunction       */
 extern u32 getThreadPointer__6JASDvdFv();
+/* Function             */
 extern void hasReset__10Z2AudioMgrCFv();
+/* Function             */
 extern void destroyManager__8JUTVideoFv();
+/* Function             */
 extern void clearIndex__6JUTXfbFv();
+/* Function             */
 extern void LCDisable();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSSetSaveRegion();
+/* Function             */
 extern void OSResetSystem();
+/* Function             */
 extern void OSGetCurrentThread();
+/* Function             */
 extern void OSCancelThread();
+/* Function             */
 extern void OSDetachThread();
+/* Function             */
 extern void OSSuspendThread();
+/* Function             */
 extern void DVDGetDriveStatus();
+/* Function             */
 extern void DVDCheckDisk();
+/* Function             */
 extern void VIWaitForRetrace();
+/* Function             */
 extern void VIFlush();
+/* Function             */
 extern void VISetBlack();
+/* Function             */
 extern void GXSetCurrentGXThread();
+/* GlobalFunction       */
 extern u32 GXGetCurrentGXThread();
+/* Function             */
 extern void GXFlush();
+/* Function             */
 extern void GXAbortFrame();
+/* Function             */
 extern void GXDrawDone();
+/* Function             */
 extern void GXSetDrawDoneCallback();
+/* Function             */
 extern void _savegpr_27();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_Reset__stringBase0[16];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BB8[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
+SECTION_SBSS extern u8 merged_80450C80[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450C88[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
-SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451500[4];
-SECTION_SBSS extern u8 sManager__6JUTXfb[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 }
 
 
@@ -68,8 +118,12 @@ SECTION_SBSS extern u8 sManager__6JUTXfb[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80374198 0010 .rodata    @stringBase0                                                 */
-const char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
+/* 80374198-803741A8 0010 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
+#pragma pop
 }
 
 
@@ -78,14 +132,13 @@ const char* const stringBase_80374198 = "DVD_STATE_BUSY\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450C78 0004 .sbss      mResetData__6mDoRst                                          */
-SECTION_SBSS u8 mResetData__6mDoRst[4];
-SECTION_SBSS u8 pad_80450C7C[4];
-/* 80450C80 0008 .sbss      merged_80450C80                                              */
+/* 80450C78-80450C80 0004 .sbss      mResetData__6mDoRst                                          ZeroInitializedData */
+SECTION_SBSS u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* 80450C80-80450C88 0008 .sbss      merged_80450C80                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450C80[8];
 /* 80450C80 0001 data_80450C80 */
 /* 80450C81 0007 data_80450C81 */
-/* 80450C88 0008 .sbss      data_80450C88                                                */
+/* 80450C88-80450C90 0008 .sbss      data_80450C88                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450C88[8];
 }
 
@@ -95,13 +148,15 @@ SECTION_SBSS u8 data_80450C88[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800155D8 0004 .text      my_OSCancelAlarmAll__Fv                                      */
-// my_OSCancelAlarmAll(void)
+/* 800155D8-800155DC 0004 .text      my_OSCancelAlarmAll__Fv                                      ReturnFunction */
+}
+
 void my_OSCancelAlarmAll__Fv() {
 	return;
 }
 
-/* 800155DC 0038 .text      destroyVideo__Fv                                             */
+extern "C" {
+/* 800155DC-80015614 0038 .text      destroyVideo__Fv                                             Function */
 }
 
 #pragma push
@@ -114,7 +169,7 @@ asm void destroyVideo(void) {
 #pragma pop
 
 extern "C" {
-/* 80015614 0138 .text      mDoRst_reset__FiUli                                          */
+/* 80015614-8001574C 0138 .text      mDoRst_reset__FiUli                                          Function */
 }
 
 #pragma push
@@ -127,7 +182,7 @@ asm void mDoRst_reset(int, u32, int) {
 #pragma pop
 
 extern "C" {
-/* 8001574C 00A8 .text      mDoRst_resetCallBack__FiPv                                   */
+/* 8001574C-800157F4 00A8 .text      mDoRst_resetCallBack__FiPv                                   Function */
 }
 
 #pragma push
@@ -140,7 +195,7 @@ asm void mDoRst_resetCallBack(int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800157F4 0008 .text      getResetData__6mDoRstFv                                      */
+/* 800157F4-800157FC 0008 .text      getResetData__6mDoRstFv                                      GlobalFunction */
 // mDoRst::getResetData(void)
 u32 getResetData__6mDoRstFv() {
 	return *(u32*)&mResetData__6mDoRst;

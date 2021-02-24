@@ -9,11 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ct__18JPAResourceManagerFPCvP7JKRHeap();
+/* Function             */
 extern void getResource__18JPAResourceManagerCFUs();
+/* Function             */
+extern void checkUserIndexDuplication__18JPAResourceManagerCFUs();
+/* Function             */
+extern void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
+/* Function             */
+extern void registRes__18JPAResourceManagerFP11JPAResource();
+/* Function             */
+extern void registTex__18JPAResourceManagerFP10JPATexture();
+/* Function             */
+extern void getResUserWork__18JPAResourceManagerCFUs();
+/* Function             */
 extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+/* Function             */
 extern void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void strcmp();
 }
 
@@ -23,7 +41,7 @@ extern void strcmp();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80273E10 0058 .text      __ct__18JPAResourceManagerFPCvP7JKRHeap                      */
+/* 80273E10-80273E68 0058 .text      __ct__18JPAResourceManagerFPCvP7JKRHeap                      Function */
 // JPAResourceManager::JPAResourceManager(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -34,7 +52,7 @@ asm void __ct__18JPAResourceManagerFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80273E68 0040 .text      getResource__18JPAResourceManagerCFUs                        */
+/* 80273E68-80273EA8 0040 .text      getResource__18JPAResourceManagerCFUs                        Function */
 // JPAResourceManager::getResource(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -45,7 +63,7 @@ asm void getResource__18JPAResourceManagerCFUs() {
 }
 #pragma pop
 
-/* 80273EA8 0044 .text      checkUserIndexDuplication__18JPAResourceManagerCFUs          */
+/* 80273EA8-80273EEC 0044 .text      checkUserIndexDuplication__18JPAResourceManagerCFUs          Function */
 // JPAResourceManager::checkUserIndexDuplication(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -56,8 +74,8 @@ asm void checkUserIndexDuplication__18JPAResourceManagerCFUs() {
 }
 #pragma pop
 
-/* 80273EEC 00A0 .text      swapTexture__18JPAResourceManagerFPC7ResTIMGPCc              */
-// JPAResourceManager::swapTexture(const ResTIMG*, const s8*)
+/* 80273EEC-80273F8C 00A0 .text      swapTexture__18JPAResourceManagerFPC7ResTIMGPCc              Function */
+// JPAResourceManager::swapTexture(const ResTIMG*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +85,7 @@ asm void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc() {
 }
 #pragma pop
 
-/* 80273F8C 0020 .text      registRes__18JPAResourceManagerFP11JPAResource               */
+/* 80273F8C-80273FAC 0020 .text      registRes__18JPAResourceManagerFP11JPAResource               Function */
 // JPAResourceManager::registRes(JPAResource*)
 #pragma push
 #pragma optimization_level 0
@@ -78,7 +96,7 @@ asm void registRes__18JPAResourceManagerFP11JPAResource() {
 }
 #pragma pop
 
-/* 80273FAC 0020 .text      registTex__18JPAResourceManagerFP10JPATexture                */
+/* 80273FAC-80273FCC 0020 .text      registTex__18JPAResourceManagerFP10JPATexture                Function */
 // JPAResourceManager::registTex(JPATexture*)
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +107,7 @@ asm void registTex__18JPAResourceManagerFP10JPATexture() {
 }
 #pragma pop
 
-/* 80273FCC 0044 .text      getResUserWork__18JPAResourceManagerCFUs                     */
+/* 80273FCC-80274010 0044 .text      getResUserWork__18JPAResourceManagerCFUs                     Function */
 // JPAResourceManager::getResUserWork(u16) const
 #pragma push
 #pragma optimization_level 0

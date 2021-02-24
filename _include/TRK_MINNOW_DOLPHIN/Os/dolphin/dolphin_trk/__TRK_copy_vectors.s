@@ -62,9 +62,9 @@ lbl_80371AD4:
 /* 80371AD4 00000000  54 C0 00 BE */	clrlwi r0, r6, 2
 /* 80371AD8 00000004  64 1B 80 00 */	oris r27, r0, 0x8000
 lbl_80371ADC:
-/* 80371ADC 00000000  3C 80 80 00 */	lis r4, __metrowerks_RTK_logo@ha
+/* 80371ADC 00000000  3C 80 80 00 */	lis r4, __TRK_unknown_data@ha
 /* 80371AE0 00000004  7F 63 DB 78 */	mr r3, r27
-/* 80371AE4 00000008  38 04 35 E4 */	addi r0, r4, __metrowerks_RTK_logo@l
+/* 80371AE4 00000008  38 04 35 E4 */	addi r0, r4, __TRK_unknown_data@l
 /* 80371AE8 0000000C  38 A0 01 00 */	li r5, 0x100
 /* 80371AEC 00000010  7C 80 32 14 */	add r4, r0, r6
 /* 80371AF0 00000014  4B C9 1A D1 */	bl TRK_memcpy

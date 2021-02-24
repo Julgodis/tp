@@ -11,13 +11,33 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
+extern void __dt__10JSUPtrLinkFv();
+/* Function             */
+extern void __ct__10JSUPtrListFb();
+/* Function             */
+extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void setFirst__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void prepend__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
+extern void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
+extern void getNthLink__10JSUPtrListCFUl();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -27,7 +47,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DBDFC 0018 .text      __ct__10JSUPtrLinkFPv                                        */
+/* 802DBDFC-802DBE14 0018 .text      __ct__10JSUPtrLinkFPv                                        Function */
 // JSUPtrLink::JSUPtrLink(void*)
 #pragma push
 #pragma optimization_level 0
@@ -38,7 +58,7 @@ asm void __ct__10JSUPtrLinkFPv() {
 }
 #pragma pop
 
-/* 802DBE14 0060 .text      __dt__10JSUPtrLinkFv                                         */
+/* 802DBE14-802DBE74 0060 .text      __dt__10JSUPtrLinkFv                                         Function */
 // JSUPtrLink::~JSUPtrLink(void)
 #pragma push
 #pragma optimization_level 0
@@ -49,7 +69,7 @@ asm void __dt__10JSUPtrLinkFv() {
 }
 #pragma pop
 
-/* 802DBE74 0038 .text      __ct__10JSUPtrListFb                                         */
+/* 802DBE74-802DBEAC 0038 .text      __ct__10JSUPtrListFb                                         Function */
 // JSUPtrList::JSUPtrList(bool)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +80,7 @@ asm void __ct__10JSUPtrListFb() {
 }
 #pragma pop
 
-/* 802DBEAC 0068 .text      __dt__10JSUPtrListFv                                         */
+/* 802DBEAC-802DBF14 0068 .text      __dt__10JSUPtrListFv                                         Function */
 // JSUPtrList::~JSUPtrList(void)
 #pragma push
 #pragma optimization_level 0
@@ -71,7 +91,7 @@ asm void __dt__10JSUPtrListFv() {
 }
 #pragma pop
 
-/* 802DBF14 0014 .text      initiate__10JSUPtrListFv                                     */
+/* 802DBF14-802DBF28 0014 .text      initiate__10JSUPtrListFv                                     Function */
 // JSUPtrList::initiate(void)
 #pragma push
 #pragma optimization_level 0
@@ -82,7 +102,7 @@ asm void initiate__10JSUPtrListFv() {
 }
 #pragma pop
 
-/* 802DBF28 0024 .text      setFirst__10JSUPtrListFP10JSUPtrLink                         */
+/* 802DBF28-802DBF4C 0024 .text      setFirst__10JSUPtrListFP10JSUPtrLink                         Function */
 // JSUPtrList::setFirst(JSUPtrLink*)
 #pragma push
 #pragma optimization_level 0
@@ -93,7 +113,7 @@ asm void setFirst__10JSUPtrListFP10JSUPtrLink() {
 }
 #pragma pop
 
-/* 802DBF4C 00A4 .text      append__10JSUPtrListFP10JSUPtrLink                           */
+/* 802DBF4C-802DBFF0 00A4 .text      append__10JSUPtrListFP10JSUPtrLink                           Function */
 // JSUPtrList::append(JSUPtrLink*)
 #pragma push
 #pragma optimization_level 0
@@ -104,7 +124,7 @@ asm void append__10JSUPtrListFP10JSUPtrLink() {
 }
 #pragma pop
 
-/* 802DBFF0 00A4 .text      prepend__10JSUPtrListFP10JSUPtrLink                          */
+/* 802DBFF0-802DC094 00A4 .text      prepend__10JSUPtrListFP10JSUPtrLink                          Function */
 // JSUPtrList::prepend(JSUPtrLink*)
 #pragma push
 #pragma optimization_level 0
@@ -115,7 +135,7 @@ asm void prepend__10JSUPtrListFP10JSUPtrLink() {
 }
 #pragma pop
 
-/* 802DC094 00C8 .text      insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink              */
+/* 802DC094-802DC15C 00C8 .text      insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink              Function */
 // JSUPtrList::insert(JSUPtrLink*, JSUPtrLink*)
 #pragma push
 #pragma optimization_level 0
@@ -126,7 +146,7 @@ asm void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink() {
 }
 #pragma pop
 
-/* 802DC15C 00B0 .text      remove__10JSUPtrListFP10JSUPtrLink                           */
+/* 802DC15C-802DC20C 00B0 .text      remove__10JSUPtrListFP10JSUPtrLink                           Function */
 // JSUPtrList::remove(JSUPtrLink*)
 #pragma push
 #pragma optimization_level 0
@@ -137,7 +157,7 @@ asm void remove__10JSUPtrListFP10JSUPtrLink() {
 }
 #pragma pop
 
-/* 802DC20C 0030 .text      getNthLink__10JSUPtrListCFUl                                 */
+/* 802DC20C-802DC23C 0030 .text      getNthLink__10JSUPtrListCFUl                                 Function */
 // JSUPtrList::getNthLink(u32) const
 #pragma push
 #pragma optimization_level 0

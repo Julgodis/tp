@@ -9,21 +9,38 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void getAvailable__20JSURandomInputStreamCFv();
+/* Function             */
 extern void __dt__18JSUFileInputStreamFv();
+/* Function             */
 extern void skip__20JSURandomInputStreamFl();
+/* Function             */
+extern void __ct__18JSUFileInputStreamFP7JKRFile();
+/* Function             */
 extern void readData__18JSUFileInputStreamFPvl();
+/* Function             */
 extern void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom();
+/* Function             */
 extern void getLength__18JSUFileInputStreamCFv();
+/* FirstParamFunction   */
 extern u32 getPosition__18JSUFileInputStreamCFv(u8*);
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__10JSUIosBase[3];
-SECTION_DATA extern const void* __vt__20JSURandomInputStream[9];
-SECTION_DATA extern const void* __vt__14JSUInputStream[7];
-SECTION_DATA extern const void* __vt__18JSUFileInputStream[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JSUIosBase[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20JSURandomInputStream[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JSUInputStream[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18JSUFileInputStream[10];
 }
 
 
@@ -32,8 +49,8 @@ SECTION_DATA extern const void* __vt__18JSUFileInputStream[10];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC518 0024 .data      __vt__18JSUFileInputStream                                   */
-SECTION_DATA const  void* __vt__18JSUFileInputStream[10] = {
+/* 803CC518-803CC540 0024 .data      __vt__18JSUFileInputStream                                   VTableData */
+SECTION_DATA void* __vt__18JSUFileInputStream[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18JSUFileInputStreamFv,
@@ -54,7 +71,7 @@ SECTION_DATA const  void* __vt__18JSUFileInputStream[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DC638 0044 .text      __ct__18JSUFileInputStreamFP7JKRFile                         */
+/* 802DC638-802DC67C 0044 .text      __ct__18JSUFileInputStreamFP7JKRFile                         Function */
 // JSUFileInputStream::JSUFileInputStream(JKRFile*)
 #pragma push
 #pragma optimization_level 0
@@ -65,8 +82,8 @@ asm void __ct__18JSUFileInputStreamFP7JKRFile() {
 }
 #pragma pop
 
-/* 802DC67C 00D0 .text      readData__18JSUFileInputStreamFPvl                           */
-// JSUFileInputStream::readData(void*, s32)
+/* 802DC67C-802DC74C 00D0 .text      readData__18JSUFileInputStreamFPvl                           Function */
+// JSUFileInputStream::readData(void*, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,8 +93,8 @@ asm void readData__18JSUFileInputStreamFPvl() {
 }
 #pragma pop
 
-/* 802DC74C 00E0 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           */
-// JSUFileInputStream::seekPos(s32, JSUStreamSeekFrom)
+/* 802DC74C-802DC82C 00E0 .text      seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom           Function */
+// JSUFileInputStream::seekPos(long, JSUStreamSeekFrom)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +104,7 @@ asm void seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom() {
 }
 #pragma pop
 
-/* 802DC82C 0030 .text      getLength__18JSUFileInputStreamCFv                           */
+/* 802DC82C-802DC85C 0030 .text      getLength__18JSUFileInputStreamCFv                           Function */
 // JSUFileInputStream::getLength(void) const
 #pragma push
 #pragma optimization_level 0
@@ -98,7 +115,7 @@ asm void getLength__18JSUFileInputStreamCFv() {
 }
 #pragma pop
 
-/* 802DC85C 0008 .text      getPosition__18JSUFileInputStreamCFv                         */
+/* 802DC85C-802DC864 0008 .text      getPosition__18JSUFileInputStreamCFv                         FirstParamFunction */
 // JSUFileInputStream::getPosition(void) const
 u32 getPosition__18JSUFileInputStreamCFv(u8* param0) {
 	return *(u32*)&param0[12]; /* param0->field_0xc */

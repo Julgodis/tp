@@ -18,45 +18,91 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void func_802D2DF0();
+/* Function             */
 extern void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+/* Function             */
+extern void sendCommand__12JKRAramPieceFP12JKRAMCommand();
+/* Function             */
 extern void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+/* Function             */
 extern void sync__12JKRAramPieceFP12JKRAMCommandi();
+/* Function             */
+extern void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+/* Function             */
 extern void startDMA__12JKRAramPieceFP12JKRAMCommand();
+/* Function             */
 extern void doneDMA__12JKRAramPieceFUl();
+/* Function             */
 extern void __ct__12JKRAMCommandFv();
+/* Function             */
 extern void __dt__12JKRAMCommandFv();
+/* SInitFunction        */
+extern void __sinit_JKRAramPiece_cpp();
+/* Function             */
 extern void sendCommand__9JKRDecompFP16JKRDecompCommand();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void panic_f__12JUTExceptionFPCciPCce();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void OSInitMessageQueue();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void OSReceiveMessage();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void ARQPostRequest();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRAramPiece__stringBase0[104];
+/* InitializedData      */
 SECTION_DATA extern u8 sMessageQueue__7JKRAram[32];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JKRAramPiece__LIT_492[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sAramPieceCommandList__12JKRAramPiece[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mMutex__12JKRAramPiece[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 }
 
@@ -66,14 +112,18 @@ SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039D0B8 0068 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039D0B8 = "direction = %x\n";
-const char* const stringBase_8039D0C8 = "source = %x\n";
-const char* const stringBase_8039D0D5 = "destination = %x\n";
-const char* const stringBase_8039D0E7 = "length = %x\n";
-const char* const stringBase_8039D0F4 = "JKRAramPiece.cpp";
-const char* const stringBase_8039D105 = "%s";
-const char* const stringBase_8039D108 = "illegal address. abort.";
+/* 8039D0B8-8039D120 0068 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D0B8 = "direction = %x\n";
+SECTION_DEAD const char* const stringBase_8039D0C8 = "source = %x\n";
+SECTION_DEAD const char* const stringBase_8039D0D5 = "destination = %x\n";
+SECTION_DEAD const char* const stringBase_8039D0E7 = "length = %x\n";
+SECTION_DEAD const char* const stringBase_8039D0F4 = "JKRAramPiece.cpp";
+SECTION_DEAD const char* const stringBase_8039D105 = "%s";
+SECTION_DEAD const char* const stringBase_8039D108 = "illegal address. abort.";
+#pragma pop
 }
 
 
@@ -82,11 +132,11 @@ const char* const stringBase_8039D108 = "illegal address. abort.";
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434318 000C .bss       @492                                                         */
+/* 80434318-80434324 000C .bss       @492                                                         ZeroInitializedData */
 SECTION_BSS u8 JKRAramPiece__LIT_492[12];
-/* 80434324 000C .bss       sAramPieceCommandList__12JKRAramPiece                        */
+/* 80434324-80434330 000C .bss       sAramPieceCommandList__12JKRAramPiece                        ZeroInitializedData */
 SECTION_BSS u8 sAramPieceCommandList__12JKRAramPiece[12];
-/* 80434330 0018 .bss       mMutex__12JKRAramPiece                                       */
+/* 80434330-80434348 0018 .bss       mMutex__12JKRAramPiece                                       ZeroInitializedData */
 SECTION_BSS u8 mMutex__12JKRAramPiece[24];
 }
 
@@ -96,7 +146,7 @@ SECTION_BSS u8 mMutex__12JKRAramPiece[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D3574 0080 .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  */
+/* 802D3574-802D35F4 0080 .text      prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v  Function */
 // JKRAramPiece::prepareCommand(int, u32, u32, u32, JKRAramBlock*, void (*)(u32))
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +157,7 @@ asm void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
 }
 #pragma pop
 
-/* 802D35F4 0020 .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  */
+/* 802D35F4-802D3614 0020 .text      sendCommand__12JKRAramPieceFP12JKRAMCommand                  Function */
 // JKRAramPiece::sendCommand(JKRAMCommand*)
 #pragma push
 #pragma optimization_level 0
@@ -118,7 +168,7 @@ asm void sendCommand__12JKRAramPieceFP12JKRAMCommand() {
 }
 #pragma pop
 
-/* 802D3614 015C .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v      */
+/* 802D3614-802D3770 015C .text      orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v      Function */
 // JKRAramPiece::orderAsync(int, u32, u32, u32, JKRAramBlock*, void (*)(u32))
 #pragma push
 #pragma optimization_level 0
@@ -129,7 +179,7 @@ asm void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v() {
 }
 #pragma pop
 
-/* 802D3770 00C8 .text      sync__12JKRAramPieceFP12JKRAMCommandi                        */
+/* 802D3770-802D3838 00C8 .text      sync__12JKRAramPieceFP12JKRAMCommandi                        Function */
 // JKRAramPiece::sync(JKRAMCommand*, int)
 #pragma push
 #pragma optimization_level 0
@@ -140,7 +190,7 @@ asm void sync__12JKRAramPieceFP12JKRAMCommandi() {
 }
 #pragma pop
 
-/* 802D3838 0094 .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock             */
+/* 802D3838-802D38CC 0094 .text      orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock             Function */
 // JKRAramPiece::orderSync(int, u32, u32, u32, JKRAramBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -151,7 +201,7 @@ asm void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock() {
 }
 #pragma pop
 
-/* 802D38CC 0078 .text      startDMA__12JKRAramPieceFP12JKRAMCommand                     */
+/* 802D38CC-802D3944 0078 .text      startDMA__12JKRAramPieceFP12JKRAMCommand                     Function */
 // JKRAramPiece::startDMA(JKRAMCommand*)
 #pragma push
 #pragma optimization_level 0
@@ -162,7 +212,7 @@ asm void startDMA__12JKRAramPieceFP12JKRAMCommand() {
 }
 #pragma pop
 
-/* 802D3944 00A8 .text      doneDMA__12JKRAramPieceFUl                                   */
+/* 802D3944-802D39EC 00A8 .text      doneDMA__12JKRAramPieceFUl                                   Function */
 // JKRAramPiece::doneDMA(u32)
 #pragma push
 #pragma optimization_level 0
@@ -173,7 +223,7 @@ asm void doneDMA__12JKRAramPieceFUl() {
 }
 #pragma pop
 
-/* 802D39EC 0070 .text      __ct__12JKRAMCommandFv                                       */
+/* 802D39EC-802D3A5C 0070 .text      __ct__12JKRAMCommandFv                                       Function */
 // JKRAMCommand::JKRAMCommand(void)
 #pragma push
 #pragma optimization_level 0
@@ -184,7 +234,7 @@ asm void __ct__12JKRAMCommandFv() {
 }
 #pragma pop
 
-/* 802D3A5C 00A8 .text      __dt__12JKRAMCommandFv                                       */
+/* 802D3A5C-802D3B04 00A8 .text      __dt__12JKRAMCommandFv                                       Function */
 // JKRAMCommand::~JKRAMCommand(void)
 #pragma push
 #pragma optimization_level 0
@@ -195,7 +245,7 @@ asm void __dt__12JKRAMCommandFv() {
 }
 #pragma pop
 
-/* 802D3B04 0044 .text      __sinit_JKRAramPiece_cpp                                     */
+/* 802D3B04-802D3B48 0044 .text      __sinit_JKRAramPiece_cpp                                     SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

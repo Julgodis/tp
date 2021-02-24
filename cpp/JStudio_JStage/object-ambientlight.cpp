@@ -11,25 +11,46 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+/* Function             */
 extern void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+/* Function             */
 extern void __dt__Q27JStudio21TAdaptor_ambientLightFv();
+/* Function             */
 extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+/* Function             */
 extern void __ct__Q27JStudio14TVariableValueFv();
+/* Function             */
+extern void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
+/* Function             */
 extern void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+/* ReturnFunction       */
 extern void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+/* Function             */
 extern void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+/* Function             */
 extern void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+/* Function             */
 extern void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl();
+/* Function             */
 extern void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
-SECTION_DATA extern const void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
-SECTION_DATA extern const void* __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern const void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio8TAdaptor[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8];
 }
 
 
@@ -38,8 +59,8 @@ SECTION_DATA extern const void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5888 0020 .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight              */
-SECTION_DATA const  void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
+/* 803C5888-803C58A8 0020 .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight              VTableData */
+SECTION_DATA void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q214JStudio_JStage21TAdaptor_ambientLightFv,
@@ -57,7 +78,7 @@ SECTION_DATA const  void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028B610 009C .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */
+/* 8028B610-8028B6AC 009C .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight Function */
 // JStudio_JStage::TAdaptor_ambientLight::JStudio_JStage::TAdaptor_ambientLight(JStage::TSystem, JStage::TAmbientLight)
 #pragma push
 #pragma optimization_level 0
@@ -68,7 +89,7 @@ asm void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26
 }
 #pragma pop
 
-/* 8028B6AC 0074 .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv            */
+/* 8028B6AC-8028B720 0074 .text      __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv            Function */
 // JStudio_JStage::TAdaptor_ambientLight::~JStudio_JStage::TAdaptor_ambientLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -79,13 +100,13 @@ asm void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv() {
 }
 #pragma pop
 
-/* 8028B720 0004 .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+/* 8028B720-8028B724 0004 .text      adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv ReturnFunction */
 // JStudio_JStage::TAdaptor_ambientLight::adaptor_do_prepare(void)
 void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv() {
 	return;
 }
 
-/* 8028B724 008C .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv */
+/* 8028B724-8028B7B0 008C .text      adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv Function */
 // JStudio_JStage::TAdaptor_ambientLight::adaptor_do_begin(void)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +117,7 @@ asm void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv() {
 }
 #pragma pop
 
-/* 8028B7B0 0054 .text      adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv  */
+/* 8028B7B0-8028B804 0054 .text      adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv  Function */
 // JStudio_JStage::TAdaptor_ambientLight::adaptor_do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +128,7 @@ asm void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv() {
 }
 #pragma pop
 
-/* 8028B804 0078 .text      adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl */
+/* 8028B804-8028B87C 0078 .text      adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl Function */
 // JStudio_JStage::TAdaptor_ambientLight::adaptor_do_update(u32)
 #pragma push
 #pragma optimization_level 0
@@ -118,7 +139,7 @@ asm void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl() {
 }
 #pragma pop
 
-/* 8028B87C 0024 .text      adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl */
+/* 8028B87C-8028B8A0 0024 .text      adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl Function */
 // JStudio_JStage::TAdaptor_ambientLight::adaptor_do_data(const void*, u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0

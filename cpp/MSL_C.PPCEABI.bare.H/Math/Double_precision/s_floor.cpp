@@ -9,7 +9,11 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void floor();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__LIT_124[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__LIT_125[8];
 }
 
@@ -19,11 +23,11 @@ SECTION_SDATA2 extern u8 Math_Double_precision_s_floor__LIT_125[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456AF8 0008 .sdata2    @124                                                         */
+/* 80456AF8-80456B00 0008 .sdata2    @124                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_s_floor__LIT_124[8] = {
 	0x7E, 0x37, 0xE4, 0x3C, 0x88, 0x00, 0x75, 0x9C,
 };
-/* 80456B00 0008 .sdata2    @125                                                         */
+/* 80456B00-80456B08 0008 .sdata2    @125                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_s_floor__LIT_125[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -35,7 +39,7 @@ SECTION_SDATA2 u8 Math_Double_precision_s_floor__LIT_125[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C0FC 0148 .text      floor                                                        */
+/* 8036C0FC-8036C244 0148 .text      floor                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

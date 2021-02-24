@@ -9,8 +9,15 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* ReturnFunction       */
+extern void usr_put_initialize();
+/* Function             */
+extern void usr_puts_serial();
+/* Function             */
 extern void SetTRKConnected();
+/* Function             */
 extern void GetTRKConnected();
 }
 
@@ -20,12 +27,12 @@ extern void GetTRKConnected();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036DB10 0004 .text      usr_put_initialize                                           */
+/* 8036DB10-8036DB14 0004 .text      usr_put_initialize                                           ReturnFunction */
 void usr_put_initialize() {
 	return;
 }
 
-/* 8036DB14 0088 .text      usr_puts_serial                                              */
+/* 8036DB14-8036DB9C 0088 .text      usr_puts_serial                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

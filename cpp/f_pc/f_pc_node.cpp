@@ -9,10 +9,10 @@
 // 
 
 struct layer_class;
-struct process_method_class;
-struct nodedraw_method_class;
 struct node_list_class;
 struct process_node_class;
+struct nodedraw_method_class;
+struct process_method_class;
 
 extern void fpcBs_Is_JustOfType(int, int); /* fpcBs_Is_JustOfType__Fii */
 extern void fpcBs_MakeOfType(int*); /* fpcBs_MakeOfType__FPi */
@@ -28,29 +28,69 @@ extern void fpcMtd_IsDelete(process_method_class*, void*); /* fpcMtd_IsDelete__F
 extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20process_method_classPv */
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 extern void fpcNd_DrawMethod(nodedraw_method_class*, void*); /* fpcNd_DrawMethod__FP21nodedraw_method_classPv */
+extern void fpcNd_Draw(process_node_class*); /* fpcNd_Draw__FP18process_node_class */
+extern void fpcNd_Execute(process_node_class*); /* fpcNd_Execute__FP18process_node_class */
 extern void fpcNd_IsCreatingFromUnder(void*); /* fpcNd_IsCreatingFromUnder__FPv */
+extern void fpcNd_IsDeleteTiming(process_node_class*); /* fpcNd_IsDeleteTiming__FP18process_node_class */
+extern void fpcNd_IsDelete(process_node_class*); /* fpcNd_IsDelete__FP18process_node_class */
+extern void fpcNd_Delete(process_node_class*); /* fpcNd_Delete__FP18process_node_class */
+extern void fpcNd_Create(process_node_class*); /* fpcNd_Create__FP18process_node_class */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* Function             */
 extern void fpcLy_IsDeletingMesg__FP11layer_class();
+/* Function             */
 extern void fpcLy_IsCreatingMesg__FP11layer_class();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcLy_Delete__FP11layer_class();
+/* Function             */
 extern void fpcLy_Create__FP11layer_classPvP15node_list_classi();
+/* Function             */
 extern void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
+/* Function             */
 extern void fpcMtd_Method__FPFPv_iPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* Function             */
 extern void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
+/* Function             */
+extern void fpcNd_Draw__FP18process_node_class();
+/* Function             */
+extern void fpcNd_Execute__FP18process_node_class();
+/* Function             */
 extern void fpcNd_IsCreatingFromUnder__FPv();
+/* Function             */
+extern void fpcNd_IsDeleteTiming__FP18process_node_class();
+/* Function             */
+extern void fpcNd_IsDelete__FP18process_node_class();
+/* Function             */
+extern void fpcNd_Delete__FP18process_node_class();
+/* Function             */
+extern void fpcNd_Create__FP18process_node_class();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcNd_Method[6];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_fpcNd_IsCheckOfDeleteTiming[8];
-SECTION_SBSS extern u8 g_fpcNd_type[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 }
 
 
@@ -59,12 +99,15 @@ SECTION_SBSS extern u8 g_fpcNd_type[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3A20 0014 .data      g_fpcNd_Method                                               */
-SECTION_DATA u8 g_fpcNd_Method[24] = {
-	0x80, 0x02, 0x27, 0x28, 0x80, 0x02, 0x26, 0xC4, 0x80, 0x02, 0x25, 0x80, 0x80, 0x02, 0x26, 0x9C,
-	0x80, 0x02, 0x25, 0x14,
+/* 803A3A20-803A3A38 0014 .data      g_fpcNd_Method                                               SymbolReferenceArrayData */
+SECTION_DATA void* g_fpcNd_Method[6] = {
+	(void*)fpcNd_Create,
+	(void*)fpcNd_Delete,
+	(void*)fpcNd_Execute,
+	(void*)fpcNd_IsDelete,
+	(void*)fpcNd_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -74,7 +117,7 @@ SECTION_DATA u8 g_fpcNd_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505E0 0004 .sdata     g_fpcNd_IsCheckOfDeleteTiming                                */
+/* 804505E0-804505E8 0004 .sdata     g_fpcNd_IsCheckOfDeleteTiming                                InitializedData */
 SECTION_SDATA u8 g_fpcNd_IsCheckOfDeleteTiming[8] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
@@ -88,9 +131,8 @@ SECTION_SDATA u8 g_fpcNd_IsCheckOfDeleteTiming[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D40 0004 .sbss      g_fpcNd_type                                                 */
-SECTION_SBSS u8 g_fpcNd_type[4];
-SECTION_SBSS u8 pad_80450D44[4];
+/* 80450D40-80450D48 0004 .sbss      g_fpcNd_type                                                 ZeroInitializedData */
+SECTION_SBSS u8 g_fpcNd_type[4 + 4 /* padding */];
 }
 
 
@@ -99,7 +141,7 @@ SECTION_SBSS u8 pad_80450D44[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800224F0 0024 .text      fpcNd_DrawMethod__FP21nodedraw_method_classPv                */
+/* 800224F0-80022514 0024 .text      fpcNd_DrawMethod__FP21nodedraw_method_classPv                Function */
 }
 
 #pragma push
@@ -112,7 +154,7 @@ asm void fpcNd_DrawMethod(nodedraw_method_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80022514 006C .text      fpcNd_Draw__FP18process_node_class                           */
+/* 80022514-80022580 006C .text      fpcNd_Draw__FP18process_node_class                           Function */
 }
 
 #pragma push
@@ -125,7 +167,7 @@ asm void fpcNd_Draw(process_node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80022580 005C .text      fpcNd_Execute__FP18process_node_class                        */
+/* 80022580-800225DC 005C .text      fpcNd_Execute__FP18process_node_class                        Function */
 }
 
 #pragma push
@@ -138,7 +180,7 @@ asm void fpcNd_Execute(process_node_class*) {
 #pragma pop
 
 extern "C" {
-/* 800225DC 0080 .text      fpcNd_IsCreatingFromUnder__FPv                               */
+/* 800225DC-8002265C 0080 .text      fpcNd_IsCreatingFromUnder__FPv                               Function */
 }
 
 #pragma push
@@ -151,7 +193,7 @@ asm void fpcNd_IsCreatingFromUnder(void*) {
 #pragma pop
 
 extern "C" {
-/* 8002265C 0040 .text      fpcNd_IsDeleteTiming__FP18process_node_class                 */
+/* 8002265C-8002269C 0040 .text      fpcNd_IsDeleteTiming__FP18process_node_class                 Function */
 }
 
 #pragma push
@@ -164,7 +206,7 @@ asm void fpcNd_IsDeleteTiming(process_node_class*) {
 #pragma pop
 
 extern "C" {
-/* 8002269C 0028 .text      fpcNd_IsDelete__FP18process_node_class                       */
+/* 8002269C-800226C4 0028 .text      fpcNd_IsDelete__FP18process_node_class                       Function */
 }
 
 #pragma push
@@ -177,7 +219,7 @@ asm void fpcNd_IsDelete(process_node_class*) {
 #pragma pop
 
 extern "C" {
-/* 800226C4 0064 .text      fpcNd_Delete__FP18process_node_class                         */
+/* 800226C4-80022728 0064 .text      fpcNd_Delete__FP18process_node_class                         Function */
 }
 
 #pragma push
@@ -190,7 +232,7 @@ asm void fpcNd_Delete(process_node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80022728 009C .text      fpcNd_Create__FP18process_node_class                         */
+/* 80022728-800227C4 009C .text      fpcNd_Create__FP18process_node_class                         Function */
 }
 
 #pragma push

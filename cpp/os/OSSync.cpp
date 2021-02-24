@@ -9,11 +9,18 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void DCFlushRangeNoSync();
+/* Function             */
 extern void ICInvalidateRange();
+/* Function             */
 extern void SystemCallVector();
+/* Function             */
 extern void __OSSystemCallVectorEnd();
+/* Function             */
+extern void __OSInitSystemCall();
 }
 
 
@@ -22,8 +29,8 @@ extern void __OSSystemCallVectorEnd();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80340A20 0000 .text      __OSSystemCallVectorStart                                    */
-/* 80340A20 001C .text      SystemCallVector                                             */
+/* 80340A20-80340A20 0000 .text      __OSSystemCallVectorStart                                    Function */
+/* 80340A20-80340A3C 001C .text      SystemCallVector                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -33,7 +40,7 @@ asm void SystemCallVector() {
 }
 #pragma pop
 
-/* 80340A3C 0004 .text      __OSSystemCallVectorEnd                                      */
+/* 80340A3C-80340A40 0004 .text      __OSSystemCallVectorEnd                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +50,7 @@ asm void __OSSystemCallVectorEnd() {
 }
 #pragma pop
 
-/* 80340A40 0064 .text      __OSInitSystemCall                                           */
+/* 80340A40-80340AA4 0064 .text      __OSInitSystemCall                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

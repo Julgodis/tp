@@ -13,8 +13,8 @@
 // 
 
 struct cXyz;
-struct ResTIMG;
 struct csXyz;
+struct ResTIMG;
 
 extern void dComIfGs_setSelectItemIndex(int, u8); /* dComIfGs_setSelectItemIndex__FiUc */
 extern void dComIfGs_setMixItemIndex(int, u8); /* dComIfGs_setMixItemIndex__FiUc */
@@ -23,95 +23,299 @@ extern void dComIfGp_setSelectItem(int); /* dComIfGp_setSelectItem__Fi */
 extern void dComIfGs_setSelectEquipClothes(u8); /* dComIfGs_setSelectEquipClothes__FUc */
 extern void dComIfGs_setSelectEquipSword(u8); /* dComIfGs_setSelectEquipSword__FUc */
 extern void dComIfGs_setSelectEquipShield(u8); /* dComIfGs_setSelectEquipShield__FUc */
+extern void dComIfGs_setWarpMarkFlag(u8); /* dComIfGs_setWarpMarkFlag__FUc */
 extern void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&); /* daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz */
+extern void dMeter2Info_getNowLifeGauge(void); /* dMeter2Info_getNowLifeGauge__Fv */
+extern void dMeter2Info_getNumberTextureName(int); /* dMeter2Info_getNumberTextureName__Fi */
+extern void dMeter2Info_getPlusTextureName(void); /* dMeter2Info_getPlusTextureName__Fv */
+extern void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, const ResTIMG*); /* dMeter2Info_getPixel__FffffffPC7ResTIMG */
+extern void dMeter2Info_setCloth(u8, bool); /* dMeter2Info_setCloth__FUcb */
+extern void dMeter2Info_setSword(u8, bool); /* dMeter2Info_setSword__FUcb */
+extern void dMeter2Info_setShield(u8, bool); /* dMeter2Info_setShield__FUcb */
+extern void dMeter2Info_isMapOpenCheck(void); /* dMeter2Info_isMapOpenCheck__Fv */
+extern void dMeter2Info_isItemOpenCheck(void); /* dMeter2Info_isItemOpenCheck__Fv */
 extern void dMeter2Info_getRecieveLetterNum(void); /* dMeter2Info_getRecieveLetterNum__Fv */
+extern void dMeter2Info_getNewLetterNum(void); /* dMeter2Info_getNewLetterNum__Fv */
+extern void dMeter2Info_setNewLetterSender(void); /* dMeter2Info_setNewLetterSender__Fv */
+extern void dMeter2Info_recieveLetter(void); /* dMeter2Info_recieveLetter__Fv */
+extern void dMeter2Info_set2DVibration(void); /* dMeter2Info_set2DVibration__Fv */
+extern void dMeter2Info_set2DVibrationM(void); /* dMeter2Info_set2DVibrationM__Fv */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void dComIfGs_setSelectItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_setMixItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_getMixItemIndex__Fi();
+/* Function             */
 extern void dComIfGp_setSelectItem__Fi();
+/* Function             */
 extern void dComIfGs_setSelectEquipClothes__FUc();
+/* Function             */
 extern void dComIfGs_setSelectEquipSword__FUc();
+/* Function             */
 extern void dComIfGs_setSelectEquipShield__FUc();
+/* Function             */
 extern void dComIfGs_setWarpItemData__FPCc4cXyzsScUcUc();
+/* ReturnFunction       */
 extern void dComIfGs_setWarpMarkFlag__FUc();
+/* Function             */
 extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
+/* Function             */
 extern void setItem__17dSv_player_item_cFiUc();
+/* Function             */
 extern void getItem__17dSv_player_item_cCFib();
+/* Function             */
 extern void offFirstBit__21dSv_player_get_item_cFUc();
+/* Function             */
 extern void setBombNum__24dSv_player_item_record_cFUcUc();
+/* Function             */
 extern void getBombNum__24dSv_player_item_record_cCFUc();
+/* Function             */
 extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void onLetterGetFlag__17dSv_letter_info_cFi();
+/* Function             */
 extern void isLetterGetFlag__17dSv_letter_info_cCFi();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
+/* Function             */
 extern void isMapOpenCheck__11dMeterMap_cFv();
+/* Function             */
 extern void __ct__13dMeter2Info_cFv();
+/* Function             */
 extern void __dt__13dMeter2Info_cFv();
+/* Function             */
 extern void init__13dMeter2Info_cFv();
+/* Function             */
+extern void setFloatingMessage__13dMeter2Info_cFUssb();
+/* Function             */
+extern void setFloatingFlow__13dMeter2Info_cFUssb();
+/* Function             */
+extern void isFloatingMessageVisible__13dMeter2Info_cFv();
+/* Function             */
+extern void decFloatingMessageTimer__13dMeter2Info_cFv();
+/* Function             */
+extern void resetFloatingMessage__13dMeter2Info_cFv();
+/* Function             */
+extern void decMsgKeyWaitTimer__13dMeter2Info_cFv();
+/* Function             */
+extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
+extern void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
+extern void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
+extern void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc();
+/* FirstParamFunction   */
+extern u32 getFont__10J2DTextBoxCFv(u8*);
+/* Function             */
+extern void getStringLength__13dMeter2Info_cFP7JUTFontffPc();
+/* Function             */
+extern void onDirectUseItem__13dMeter2Info_cFi();
+/* Function             */
+extern void isDirectUseItem__13dMeter2Info_cFi();
+/* Function             */
+extern void setMeterString__13dMeter2Info_cFl();
+/* Function             */
 extern void resetWarpStatus__13dMeter2Info_cFv();
+/* Function             */
+extern void warpInProc__13dMeter2Info_cFv();
+/* Function             */
+extern void warpOutProc__13dMeter2Info_cFv();
+/* Function             */
+extern void resetMeterString__13dMeter2Info_cFv();
+/* Function             */
 extern void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc();
+/* Function             */
 extern void getItemType__13dMeter2Info_cFUc();
+/* Function             */
+extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+/* Function             */
+extern void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
+/* Function             */
 extern void get2ndTexture__13dMeter2Info_cFUc();
+/* Function             */
 extern void get3rdTexture__13dMeter2Info_cFUc();
+/* Function             */
 extern void get4thTexture__13dMeter2Info_cFUc();
+/* Function             */
 extern void set1stColor__13dMeter2Info_cFUcP10J2DPicture();
+/* Function             */
 extern void set2ndColor__13dMeter2Info_cFUcP10J2DPicture();
+/* Function             */
 extern void set3rdColor__13dMeter2Info_cFUcP10J2DPicture();
+/* Function             */
 extern void set4thColor__13dMeter2Info_cFUcP10J2DPicture();
+/* Function             */
+extern void setHotSpringTimer__13dMeter2Info_cFUc();
+/* Function             */
+extern void decHotSpringTimer__13dMeter2Info_cFv();
+/* Function             */
 extern void changeWater__13dMeter2Info_cFUc();
+/* Function             */
+extern void setMiniGameItem__13dMeter2Info_cFUc();
+/* Function             */
+extern void resetMiniGameItem__13dMeter2Info_cFb();
+/* Function             */
+extern void setMiniGameCount__13dMeter2Info_cFSc();
+/* Function             */
 extern void setSaveStageName__13dMeter2Info_cFPCc();
+/* Function             */
+extern void dMeter2Info_getNowLifeGauge__Fv();
+/* Function             */
+extern void dMeter2Info_getNumberTextureName__Fi();
+/* Function             */
+extern void dMeter2Info_getPlusTextureName__Fv();
+/* Function             */
+extern void dMeter2Info_getPixel__FffffffPC7ResTIMG();
+/* Function             */
+extern void dMeter2Info_setCloth__FUcb();
+/* Function             */
+extern void dMeter2Info_setSword__FUcb();
+/* Function             */
+extern void dMeter2Info_setShield__FUcb();
+/* ReturnIntegerFunction */
+extern  int dMeter2Info_is2DActiveTouchArea__Fv();
+/* Function             */
+extern void dMeter2Info_isMapOpenCheck__Fv();
+/* Function             */
+extern void dMeter2Info_isItemOpenCheck__Fv();
+/* Function             */
 extern void dMeter2Info_getRecieveLetterNum__Fv();
+/* Function             */
+extern void dMeter2Info_getNewLetterNum__Fv();
+/* Function             */
+extern void dMeter2Info_setNewLetterSender__Fv();
+/* Function             */
+extern void dMeter2Info_recieveLetter__Fv();
+/* ReturnFunction       */
+extern void dMeter2Info_set2DVibration__Fv();
+/* ReturnFunction       */
+extern void dMeter2Info_set2DVibrationM__Fv();
+/* SInitFunction        */
+extern void __sinit_d_meter2_info_cpp();
+/* Function             */
 extern void setLetterNameID__12dMsgObject_cFUs();
+/* Function             */
 extern void __ct__10dMsgFlow_cFv();
+/* Function             */
 extern void __dt__10dMsgFlow_cFv();
+/* Function             */
 extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+/* Function             */
 extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+/* FirstParamFunction   */
 extern u32 getMsgNo__10dMsgFlow_cFv(u8*);
+/* Function             */
 extern void __ct__5csXyzFsss();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+/* Function             */
 extern void readIdxResource__10JKRArchiveFPvUlUl();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_meter2_info__data_80398A78[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398B0C[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398BA0[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398C34[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398CC8[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398D5C[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398DF0[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398E84[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398F18[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80398FAC[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80399040[148];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_803990D4[148];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter2_info__stringBase0[464];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
+/* InitializedData      */
 SECTION_DATA extern u8 item_resource__10dItem_data[6120];
-SECTION_DATA extern u8 d_d_meter2_info__LIT_4572[148];
-SECTION_DATA extern u8 data_803BF7F4[40];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_meter2_info__LIT_4572[37];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803BF7F4[10];
+/* InitializedData      */
 SECTION_DATA extern u8 letter_data__12dMenu_Letter[512];
-SECTION_DATA extern const void* __vt__13dMeter2Info_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13dMeter2Info_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 d_d_meter2_info__LIT_3846[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_meter2_info__LIT_3846[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804510B8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804510BC[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter2_info__LIT_3916[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2_info__LIT_3917;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2_info__LIT_3918;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2_info__LIT_3919;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2_info__LIT_3920;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2_info__LIT_3921;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter2_info__LIT_3922[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter2_info__LIT_4108;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5206;
 }
 
@@ -121,8 +325,58 @@ SECTION_SDATA2 extern f64 LIT_5206;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80398A78 0000 .rodata    ...rodata.0                                                  */
-/* 80398A78 0094 .rodata    black_color$4634                                             */
+/* 80399168-80399338 01D0 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399168 = "";
+SECTION_DEAD const char* const stringBase_80399169 = "zel_00.bmg";
+SECTION_DEAD const char* const stringBase_80399174 = "D_MN01";
+SECTION_DEAD const char* const stringBase_8039917B = "D_MN07";
+SECTION_DEAD const char* const stringBase_80399182 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "0_02.bti";
+SECTION_DEAD const char* const stringBase_803991AB = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "1_02.bti";
+SECTION_DEAD const char* const stringBase_803991D4 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "2_02.bti";
+SECTION_DEAD const char* const stringBase_803991FD = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "3_02.bti";
+SECTION_DEAD const char* const stringBase_80399226 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "4_03.bti";
+SECTION_DEAD const char* const stringBase_8039924F = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "5_02.bti";
+SECTION_DEAD const char* const stringBase_80399278 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "6_02.bti";
+SECTION_DEAD const char* const stringBase_803992A1 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "7_02.bti";
+SECTION_DEAD const char* const stringBase_803992CA = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "8_02.bti";
+SECTION_DEAD const char* const stringBase_803992F3 = 
+    "im_font_number_3"
+    "2_32_ganshinkyo_"
+    "9_02.bti";
+SECTION_DEAD const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
+#pragma pop
+/* 80398A78-80398A78 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 80398A78-80398B0C 0094 .rodata    black_color$4634                                             InitializedData */
 SECTION_RODATA const u8 d_d_meter2_info__data_80398A78[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00, 0xC0, 0x00, 0xA0, 0x60, 0x00, 0x00,
 	0xA0, 0x00, 0x00, 0x00, 0x40, 0x00, 0x60, 0x00, 0xE0, 0x00, 0x00, 0x00, 0x40, 0x40, 0x40, 0x00,
@@ -135,7 +389,7 @@ SECTION_RODATA const u8 d_d_meter2_info__data_80398A78[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80398B0C 0094 .rodata    white_color$4635                                             */
+/* 80398B0C-80398BA0 0094 .rodata    white_color$4635                                             InitializedData */
 SECTION_RODATA const u8 data_80398B0C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0x60, 0xFF, 0x00, 0xFF, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0xFF,
 	0xFF, 0x80, 0x80, 0xFF, 0xBE, 0x40, 0xFF, 0xFF, 0xFF, 0xC0, 0x00, 0xFF, 0xC0, 0xC0, 0xC0, 0xFF,
@@ -148,7 +402,7 @@ SECTION_RODATA const u8 data_80398B0C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398BA0 0094 .rodata    vertex_color_lu$4636                                         */
+/* 80398BA0-80398C34 0094 .rodata    vertex_color_lu$4636                                         InitializedData */
 SECTION_RODATA const u8 data_80398BA0[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -161,7 +415,7 @@ SECTION_RODATA const u8 data_80398BA0[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398C34 0094 .rodata    vertex_color_ru$4637                                         */
+/* 80398C34-80398CC8 0094 .rodata    vertex_color_ru$4637                                         InitializedData */
 SECTION_RODATA const u8 data_80398C34[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -174,7 +428,7 @@ SECTION_RODATA const u8 data_80398C34[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398CC8 0094 .rodata    vertex_color_ld$4638                                         */
+/* 80398CC8-80398D5C 0094 .rodata    vertex_color_ld$4638                                         InitializedData */
 SECTION_RODATA const u8 data_80398CC8[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -187,7 +441,7 @@ SECTION_RODATA const u8 data_80398CC8[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398D5C 0094 .rodata    vertex_color_rd$4639                                         */
+/* 80398D5C-80398DF0 0094 .rodata    vertex_color_rd$4639                                         InitializedData */
 SECTION_RODATA const u8 data_80398D5C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -200,7 +454,7 @@ SECTION_RODATA const u8 data_80398D5C[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398DF0 0094 .rodata    black_color$4675                                             */
+/* 80398DF0-80398E84 0094 .rodata    black_color$4675                                             InitializedData */
 SECTION_RODATA const u8 data_80398DF0[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -213,7 +467,7 @@ SECTION_RODATA const u8 data_80398DF0[148] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80398E84 0094 .rodata    white_color$4676                                             */
+/* 80398E84-80398F18 0094 .rodata    white_color$4676                                             InitializedData */
 SECTION_RODATA const u8 data_80398E84[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -226,7 +480,7 @@ SECTION_RODATA const u8 data_80398E84[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398F18 0094 .rodata    vertex_color_lu$4677                                         */
+/* 80398F18-80398FAC 0094 .rodata    vertex_color_lu$4677                                         InitializedData */
 SECTION_RODATA const u8 data_80398F18[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -239,7 +493,7 @@ SECTION_RODATA const u8 data_80398F18[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80398FAC 0094 .rodata    vertex_color_ru$4678                                         */
+/* 80398FAC-80399040 0094 .rodata    vertex_color_ru$4678                                         InitializedData */
 SECTION_RODATA const u8 data_80398FAC[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -252,7 +506,7 @@ SECTION_RODATA const u8 data_80398FAC[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80399040 0094 .rodata    vertex_color_ld$4679                                         */
+/* 80399040-803990D4 0094 .rodata    vertex_color_ld$4679                                         InitializedData */
 SECTION_RODATA const u8 data_80399040[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -265,7 +519,7 @@ SECTION_RODATA const u8 data_80399040[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 803990D4 0094 .rodata    vertex_color_rd$4680                                         */
+/* 803990D4-80399168 0094 .rodata    vertex_color_rd$4680                                         InitializedData */
 SECTION_RODATA const u8 data_803990D4[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -278,42 +532,6 @@ SECTION_RODATA const u8 data_803990D4[148] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80399168 01D0 .rodata    @stringBase0                                                 */
-const char* const stringBase_80399168 = "";
-const char* const stringBase_80399169 = "zel_00.bmg";
-const char* const stringBase_80399174 = "D_MN01";
-const char* const stringBase_8039917B = "D_MN07";
-const char* const stringBase_80399182 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "0_02.bti";
-const char* const stringBase_803991AB = 
-    "im_font_number_32_32_ganshinkyo_"
-    "1_02.bti";
-const char* const stringBase_803991D4 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "2_02.bti";
-const char* const stringBase_803991FD = 
-    "im_font_number_32_32_ganshinkyo_"
-    "3_02.bti";
-const char* const stringBase_80399226 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "4_03.bti";
-const char* const stringBase_8039924F = 
-    "im_font_number_32_32_ganshinkyo_"
-    "5_02.bti";
-const char* const stringBase_80399278 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "6_02.bti";
-const char* const stringBase_803992A1 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "7_02.bti";
-const char* const stringBase_803992CA = 
-    "im_font_number_32_32_ganshinkyo_"
-    "8_02.bti";
-const char* const stringBase_803992F3 = 
-    "im_font_number_32_32_ganshinkyo_"
-    "9_02.bti";
-const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
 }
 
 
@@ -322,26 +540,60 @@ const char* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.bti";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BF760 0094 .data      @4572                                                        */
-SECTION_DATA u8 d_d_meter2_info__LIT_4572[148] = {
-	0x80, 0x21, 0xD4, 0xB0, 0x80, 0x21, 0xD4, 0x70, 0x80, 0x21, 0xD4, 0x70, 0x80, 0x21, 0xD4, 0x70,
-	0x80, 0x21, 0xD4, 0x70, 0x80, 0x21, 0xD4, 0x70, 0x80, 0x21, 0xD4, 0x70, 0x80, 0x21, 0xD4, 0x70,
-	0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78,
-	0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78,
-	0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78,
-	0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78,
-	0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x78, 0x80, 0x21, 0xD4, 0x80,
-	0x80, 0x21, 0xD4, 0x88, 0x80, 0x21, 0xD4, 0x90, 0x80, 0x21, 0xD4, 0x98, 0x80, 0x21, 0xD4, 0x78,
-	0x80, 0x21, 0xD4, 0xB0, 0x80, 0x21, 0xD4, 0xA0, 0x80, 0x21, 0xD4, 0xA0, 0x80, 0x21, 0xD4, 0xA0,
-	0x80, 0x21, 0xD4, 0xA8,
+/* 803BF760-803BF7F4 0094 .data      @4572                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_meter2_info__LIT_4572[37] = {
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+25),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+9),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+13),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+15),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+17),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+19),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+11),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+25),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+21),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+21),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+21),
+	(void*)(((u32*)get2ndTexture__13dMeter2Info_cFUc)+23),
 };
-/* 803BF7F4 0028 .data      tex_name$5183                                                */
-SECTION_DATA u8 data_803BF7F4[40] = {
-	0x80, 0x39, 0x91, 0x82, 0x80, 0x39, 0x91, 0xAB, 0x80, 0x39, 0x91, 0xD4, 0x80, 0x39, 0x91, 0xFD,
-	0x80, 0x39, 0x92, 0x26, 0x80, 0x39, 0x92, 0x4F, 0x80, 0x39, 0x92, 0x78, 0x80, 0x39, 0x92, 0xA1,
-	0x80, 0x39, 0x92, 0xCA, 0x80, 0x39, 0x92, 0xF3,
+/* 803BF7F4-803BF81C 0028 .data      tex_name$5183                                                SymbolReferenceArrayData */
+SECTION_DATA void* data_803BF7F4[10] = {
+	(void*)((char*)d_d_meter2_info__stringBase0+26) /* stringBase_80399182 */,
+	(void*)((char*)d_d_meter2_info__stringBase0+67) /* stringBase_803991AB */,
+	(void*)((char*)d_d_meter2_info__stringBase0+108) /* stringBase_803991D4 */,
+	(void*)((char*)d_d_meter2_info__stringBase0+149) /* stringBase_803991FD */,
+	(void*)((char*)d_d_meter2_info__stringBase0+190) /* stringBase_80399226 */,
+	(void*)((char*)d_d_meter2_info__stringBase0+231) /* stringBase_8039924F */,
+	(void*)((char*)d_d_meter2_info__stringBase0+272) /* stringBase_80399278 */,
+	(void*)((char*)d_d_meter2_info__stringBase0+313) /* stringBase_803992A1 */,
+	(void*)((char*)d_d_meter2_info__stringBase0+354) /* stringBase_803992CA */,
+	(void*)((char*)d_d_meter2_info__stringBase0+395) /* stringBase_803992F3 */,
 };
-/* 803BF81C 0200 .data      letter_data__12dMenu_Letter                                  */
+/* 803BF81C-803BFA1C 0200 .data      letter_data__12dMenu_Letter                                  InitializedData */
 SECTION_DATA u8 letter_data__12dMenu_Letter[512] = {
 	0x09, 0xC5, 0x0A, 0x29, 0x0A, 0x8D, 0x01, 0x0B, 0x09, 0xC6, 0x0A, 0x2A, 0x0A, 0x8E, 0x02, 0x37,
 	0x09, 0xC7, 0x0A, 0x2B, 0x0A, 0x8F, 0x02, 0x36, 0x09, 0xC8, 0x0A, 0x2C, 0x0A, 0x90, 0x00, 0x37,
@@ -376,8 +628,8 @@ SECTION_DATA u8 letter_data__12dMenu_Letter[512] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BFA1C 000C .data      __vt__13dMeter2Info_c                                        */
-SECTION_DATA const  void* __vt__13dMeter2Info_c[3] = {
+/* 803BFA1C-803BFA28 000C .data      __vt__13dMeter2Info_c                                        VTableData */
+SECTION_DATA void* __vt__13dMeter2Info_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13dMeter2Info_cFv,
@@ -390,35 +642,35 @@ SECTION_DATA const  void* __vt__13dMeter2Info_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454998 0004 .sdata2    @3916                                                        */
+/* 80454998-8045499C 0004 .sdata2    @3916                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter2_info__LIT_3916[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045499C 0004 .sdata2    @3917                                                        */
+/* 8045499C-804549A0 0004 .sdata2    @3917                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter2_info__LIT_3917 = 1.000000f;
-/* 804549A0 0004 .sdata2    @3918                                                        */
+/* 804549A0-804549A4 0004 .sdata2    @3918                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 d_d_meter2_info__LIT_3918 = 30.000000f;
-/* 804549A4 0004 .sdata2    @3919                                                        */
+/* 804549A4-804549A8 0004 .sdata2    @3919                                                        Float32Data */
 // 0x43980000
 SECTION_SDATA2 f32 d_d_meter2_info__LIT_3919 = 304.000000f;
-/* 804549A8 0004 .sdata2    @3920                                                        */
+/* 804549A8-804549AC 0004 .sdata2    @3920                                                        Float32Data */
 // 0x43600000
 SECTION_SDATA2 f32 d_d_meter2_info__LIT_3920 = 224.000000f;
-/* 804549AC 0004 .sdata2    @3921                                                        */
+/* 804549AC-804549B0 0004 .sdata2    @3921                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_meter2_info__LIT_3921 = 608.000000f;
-/* 804549B0 0004 .sdata2    @3922                                                        */
+/* 804549B0-804549B8 0004 .sdata2    @3922                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter2_info__LIT_3922[8] = {
 	0x43, 0xE0, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804549B8 0008 .sdata2    @4108                                                        */
+/* 804549B8-804549C0 0008 .sdata2    @4108                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter2_info__LIT_4108 = 4503601774854144.000000;
-/* 804549C0 0008 .sdata2    @5206                                                        */
+/* 804549C0-804549C8 0008 .sdata2    @5206                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_5206 = 4503599627370496.000000;
 }
@@ -429,9 +681,9 @@ SECTION_SDATA2 f64 LIT_5206 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430178 000C .bss       @3846                                                        */
-SECTION_BSS u8 d_d_meter2_info__LIT_3846[16];
-/* 80430188 00F8 .bss       g_meter2_info                                                */
+/* 80430178-80430188 000C .bss       @3846                                                        ZeroInitializedData */
+SECTION_BSS u8 d_d_meter2_info__LIT_3846[12 + 4 /* padding */];
+/* 80430188-80430280 00F8 .bss       g_meter2_info                                                ZeroInitializedData */
 SECTION_BSS u8 g_meter2_info[248];
 }
 
@@ -441,9 +693,9 @@ SECTION_BSS u8 g_meter2_info[248];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510B8 0004 .sbss      tex_name$5188                                                */
+/* 804510B8-804510BC 0004 .sbss      tex_name$5188                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804510B8[4];
-/* 804510BC 0004 .sbss      data_804510BC                                                */
+/* 804510BC-804510C0 0004 .sbss      data_804510BC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804510BC[4];
 }
 
@@ -453,7 +705,7 @@ SECTION_SBSS u8 data_804510BC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8021BDDC 0044 .text      __ct__13dMeter2Info_cFv                                      */
+/* 8021BDDC-8021BE20 0044 .text      __ct__13dMeter2Info_cFv                                      Function */
 // dMeter2Info_c::dMeter2Info_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -464,7 +716,7 @@ asm void __ct__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021BE20 0048 .text      __dt__13dMeter2Info_cFv                                      */
+/* 8021BE20-8021BE68 0048 .text      __dt__13dMeter2Info_cFv                                      Function */
 // dMeter2Info_c::~dMeter2Info_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -475,7 +727,7 @@ asm void __dt__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021BE68 0278 .text      init__13dMeter2Info_cFv                                      */
+/* 8021BE68-8021C0E0 0278 .text      init__13dMeter2Info_cFv                                      Function */
 // dMeter2Info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -486,8 +738,8 @@ asm void init__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021C0E0 003C .text      setFloatingMessage__13dMeter2Info_cFUssb                     */
-// dMeter2Info_c::setFloatingMessage(u16, s16, bool)
+/* 8021C0E0-8021C11C 003C .text      setFloatingMessage__13dMeter2Info_cFUssb                     Function */
+// dMeter2Info_c::setFloatingMessage(u16, short, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -497,8 +749,8 @@ asm void setFloatingMessage__13dMeter2Info_cFUssb() {
 }
 #pragma pop
 
-/* 8021C11C 00C0 .text      setFloatingFlow__13dMeter2Info_cFUssb                        */
-// dMeter2Info_c::setFloatingFlow(u16, s16, bool)
+/* 8021C11C-8021C1DC 00C0 .text      setFloatingFlow__13dMeter2Info_cFUssb                        Function */
+// dMeter2Info_c::setFloatingFlow(u16, short, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -508,7 +760,7 @@ asm void setFloatingFlow__13dMeter2Info_cFUssb() {
 }
 #pragma pop
 
-/* 8021C1DC 0014 .text      isFloatingMessageVisible__13dMeter2Info_cFv                  */
+/* 8021C1DC-8021C1F0 0014 .text      isFloatingMessageVisible__13dMeter2Info_cFv                  Function */
 // dMeter2Info_c::isFloatingMessageVisible(void)
 #pragma push
 #pragma optimization_level 0
@@ -519,7 +771,7 @@ asm void isFloatingMessageVisible__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021C1F0 0028 .text      decFloatingMessageTimer__13dMeter2Info_cFv                   */
+/* 8021C1F0-8021C218 0028 .text      decFloatingMessageTimer__13dMeter2Info_cFv                   Function */
 // dMeter2Info_c::decFloatingMessageTimer(void)
 #pragma push
 #pragma optimization_level 0
@@ -530,7 +782,7 @@ asm void decFloatingMessageTimer__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021C218 0020 .text      resetFloatingMessage__13dMeter2Info_cFv                      */
+/* 8021C218-8021C238 0020 .text      resetFloatingMessage__13dMeter2Info_cFv                      Function */
 // dMeter2Info_c::resetFloatingMessage(void)
 #pragma push
 #pragma optimization_level 0
@@ -541,7 +793,7 @@ asm void resetFloatingMessage__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021C238 0018 .text      decMsgKeyWaitTimer__13dMeter2Info_cFv                        */
+/* 8021C238-8021C250 0018 .text      decMsgKeyWaitTimer__13dMeter2Info_cFv                        Function */
 // dMeter2Info_c::decMsgKeyWaitTimer(void)
 #pragma push
 #pragma optimization_level 0
@@ -552,8 +804,8 @@ asm void decMsgKeyWaitTimer__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021C250 0120 .text      getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c             */
-// dMeter2Info_c::getString(u32, s8*, JMSMesgEntry_c*)
+/* 8021C250-8021C370 0120 .text      getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c             Function */
+// dMeter2Info_c::getString(u32, char*, JMSMesgEntry_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,8 +815,8 @@ asm void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 }
 #pragma pop
 
-/* 8021C370 01D4 .text      getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c         */
-// dMeter2Info_c::getStringKana(u32, s8*, JMSMesgEntry_c*)
+/* 8021C370-8021C544 01D4 .text      getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c         Function */
+// dMeter2Info_c::getStringKana(u32, char*, JMSMesgEntry_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -574,8 +826,8 @@ asm void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 }
 #pragma pop
 
-/* 8021C544 0160 .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        */
-// dMeter2Info_c::getStringKanji(u32, s8*, JMSMesgEntry_c*)
+/* 8021C544-8021C6A4 0160 .text      getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c        Function */
+// dMeter2Info_c::getStringKanji(u32, char*, JMSMesgEntry_c*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,8 +837,8 @@ asm void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c() {
 }
 #pragma pop
 
-/* 8021C6A4 0150 .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             */
-// dMeter2Info_c::getStringLength(J2DTextBox*, s8*)
+/* 8021C6A4-8021C7F4 0150 .text      getStringLength__13dMeter2Info_cFP10J2DTextBoxPc             Function */
+// dMeter2Info_c::getStringLength(J2DTextBox*, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,14 +848,14 @@ asm void getStringLength__13dMeter2Info_cFP10J2DTextBoxPc() {
 }
 #pragma pop
 
-/* 8021C7F4 0008 .text      getFont__10J2DTextBoxCFv                                     */
+/* 8021C7F4-8021C7FC 0008 .text      getFont__10J2DTextBoxCFv                                     FirstParamFunction */
 // J2DTextBox::getFont(void) const
 u32 getFont__10J2DTextBoxCFv(u8* param0) {
 	return *(u32*)&param0[256]; /* param0->field_0x100 */
 }
 
-/* 8021C7FC 0138 .text      getStringLength__13dMeter2Info_cFP7JUTFontffPc               */
-// dMeter2Info_c::getStringLength(JUTFont*, f32, f32, s8*)
+/* 8021C7FC-8021C934 0138 .text      getStringLength__13dMeter2Info_cFP7JUTFontffPc               Function */
+// dMeter2Info_c::getStringLength(JUTFont*, f32, f32, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -613,7 +865,7 @@ asm void getStringLength__13dMeter2Info_cFP7JUTFontffPc() {
 }
 #pragma pop
 
-/* 8021C934 001C .text      onDirectUseItem__13dMeter2Info_cFi                           */
+/* 8021C934-8021C950 001C .text      onDirectUseItem__13dMeter2Info_cFi                           Function */
 // dMeter2Info_c::onDirectUseItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +876,7 @@ asm void onDirectUseItem__13dMeter2Info_cFi() {
 }
 #pragma pop
 
-/* 8021C950 0020 .text      isDirectUseItem__13dMeter2Info_cFi                           */
+/* 8021C950-8021C970 0020 .text      isDirectUseItem__13dMeter2Info_cFi                           Function */
 // dMeter2Info_c::isDirectUseItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -635,8 +887,8 @@ asm void isDirectUseItem__13dMeter2Info_cFi() {
 }
 #pragma pop
 
-/* 8021C970 006C .text      setMeterString__13dMeter2Info_cFl                            */
-// dMeter2Info_c::setMeterString(s32)
+/* 8021C970-8021C9DC 006C .text      setMeterString__13dMeter2Info_cFl                            Function */
+// dMeter2Info_c::setMeterString(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -646,7 +898,7 @@ asm void setMeterString__13dMeter2Info_cFl() {
 }
 #pragma pop
 
-/* 8021C9DC 0028 .text      resetWarpStatus__13dMeter2Info_cFv                           */
+/* 8021C9DC-8021CA04 0028 .text      resetWarpStatus__13dMeter2Info_cFv                           Function */
 // dMeter2Info_c::resetWarpStatus(void)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +909,7 @@ asm void resetWarpStatus__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021CA04 006C .text      warpInProc__13dMeter2Info_cFv                                */
+/* 8021CA04-8021CA70 006C .text      warpInProc__13dMeter2Info_cFv                                Function */
 // dMeter2Info_c::warpInProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +920,7 @@ asm void warpInProc__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021CA70 0190 .text      warpOutProc__13dMeter2Info_cFv                               */
+/* 8021CA70-8021CC00 0190 .text      warpOutProc__13dMeter2Info_cFv                               Function */
 // dMeter2Info_c::warpOutProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +931,7 @@ asm void warpOutProc__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021CC00 000C .text      resetMeterString__13dMeter2Info_cFv                          */
+/* 8021CC00-8021CC0C 000C .text      resetMeterString__13dMeter2Info_cFv                          Function */
 // dMeter2Info_c::resetMeterString(void)
 #pragma push
 #pragma optimization_level 0
@@ -690,8 +942,8 @@ asm void resetMeterString__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021CC0C 0074 .text      setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc               */
-// dMeter2Info_c::setWarpInfo(const s8*, const cXyz&, s16, u8, u8, u8)
+/* 8021CC0C-8021CC80 0074 .text      setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc               Function */
+// dMeter2Info_c::setWarpInfo(const char*, const cXyz&, short, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -701,7 +953,7 @@ asm void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc() {
 }
 #pragma pop
 
-/* 8021CC80 0288 .text      getItemType__13dMeter2Info_cFUc                              */
+/* 8021CC80-8021CF08 0288 .text      getItemType__13dMeter2Info_cFUc                              Function */
 // dMeter2Info_c::getItemType(u8)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +964,7 @@ asm void getItemType__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021CF08 0464 .text      readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei */
+/* 8021CF08-8021D36C 0464 .text      readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei Function */
 // dMeter2Info_c::readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +975,7 @@ asm void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J
 }
 #pragma pop
 
-/* 8021D36C 00E0 .text      setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture */
+/* 8021D36C-8021D44C 00E0 .text      setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture Function */
 // dMeter2Info_c::setItemColor(u8, J2DPicture*, J2DPicture*, J2DPicture*, J2DPicture*)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +986,7 @@ asm void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPicture
 }
 #pragma pop
 
-/* 8021D44C 006C .text      get2ndTexture__13dMeter2Info_cFUc                            */
+/* 8021D44C-8021D4B8 006C .text      get2ndTexture__13dMeter2Info_cFUc                            Function */
 // dMeter2Info_c::get2ndTexture(u8)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +997,7 @@ asm void get2ndTexture__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021D4B8 0044 .text      get3rdTexture__13dMeter2Info_cFUc                            */
+/* 8021D4B8-8021D4FC 0044 .text      get3rdTexture__13dMeter2Info_cFUc                            Function */
 // dMeter2Info_c::get3rdTexture(u8)
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +1008,7 @@ asm void get3rdTexture__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021D4FC 0028 .text      get4thTexture__13dMeter2Info_cFUc                            */
+/* 8021D4FC-8021D524 0028 .text      get4thTexture__13dMeter2Info_cFUc                            Function */
 // dMeter2Info_c::get4thTexture(u8)
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +1019,7 @@ asm void get4thTexture__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021D524 0120 .text      set1stColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D524-8021D644 0120 .text      set1stColor__13dMeter2Info_cFUcP10J2DPicture                 Function */
 // dMeter2Info_c::set1stColor(u8, J2DPicture*)
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +1030,7 @@ asm void set1stColor__13dMeter2Info_cFUcP10J2DPicture() {
 }
 #pragma pop
 
-/* 8021D644 0120 .text      set2ndColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D644-8021D764 0120 .text      set2ndColor__13dMeter2Info_cFUcP10J2DPicture                 Function */
 // dMeter2Info_c::set2ndColor(u8, J2DPicture*)
 #pragma push
 #pragma optimization_level 0
@@ -789,7 +1041,7 @@ asm void set2ndColor__13dMeter2Info_cFUcP10J2DPicture() {
 }
 #pragma pop
 
-/* 8021D764 0400 .text      set3rdColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021D764-8021DB64 0400 .text      set3rdColor__13dMeter2Info_cFUcP10J2DPicture                 Function */
 // dMeter2Info_c::set3rdColor(u8, J2DPicture*)
 #pragma push
 #pragma optimization_level 0
@@ -800,7 +1052,7 @@ asm void set3rdColor__13dMeter2Info_cFUcP10J2DPicture() {
 }
 #pragma pop
 
-/* 8021DB64 0160 .text      set4thColor__13dMeter2Info_cFUcP10J2DPicture                 */
+/* 8021DB64-8021DCC4 0160 .text      set4thColor__13dMeter2Info_cFUcP10J2DPicture                 Function */
 // dMeter2Info_c::set4thColor(u8, J2DPicture*)
 #pragma push
 #pragma optimization_level 0
@@ -811,7 +1063,7 @@ asm void set4thColor__13dMeter2Info_cFUcP10J2DPicture() {
 }
 #pragma pop
 
-/* 8021DCC4 001C .text      setHotSpringTimer__13dMeter2Info_cFUc                        */
+/* 8021DCC4-8021DCE0 001C .text      setHotSpringTimer__13dMeter2Info_cFUc                        Function */
 // dMeter2Info_c::setHotSpringTimer(u8)
 #pragma push
 #pragma optimization_level 0
@@ -822,7 +1074,7 @@ asm void setHotSpringTimer__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021DCE0 007C .text      decHotSpringTimer__13dMeter2Info_cFv                         */
+/* 8021DCE0-8021DD5C 007C .text      decHotSpringTimer__13dMeter2Info_cFv                         Function */
 // dMeter2Info_c::decHotSpringTimer(void)
 #pragma push
 #pragma optimization_level 0
@@ -833,7 +1085,7 @@ asm void decHotSpringTimer__13dMeter2Info_cFv() {
 }
 #pragma pop
 
-/* 8021DD5C 00BC .text      changeWater__13dMeter2Info_cFUc                              */
+/* 8021DD5C-8021DE18 00BC .text      changeWater__13dMeter2Info_cFUc                              Function */
 // dMeter2Info_c::changeWater(u8)
 #pragma push
 #pragma optimization_level 0
@@ -844,7 +1096,7 @@ asm void changeWater__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021DE18 02AC .text      setMiniGameItem__13dMeter2Info_cFUc                          */
+/* 8021DE18-8021E0C4 02AC .text      setMiniGameItem__13dMeter2Info_cFUc                          Function */
 // dMeter2Info_c::setMiniGameItem(u8)
 #pragma push
 #pragma optimization_level 0
@@ -855,7 +1107,7 @@ asm void setMiniGameItem__13dMeter2Info_cFUc() {
 }
 #pragma pop
 
-/* 8021E0C4 01A4 .text      resetMiniGameItem__13dMeter2Info_cFb                         */
+/* 8021E0C4-8021E268 01A4 .text      resetMiniGameItem__13dMeter2Info_cFb                         Function */
 // dMeter2Info_c::resetMiniGameItem(bool)
 #pragma push
 #pragma optimization_level 0
@@ -866,7 +1118,7 @@ asm void resetMiniGameItem__13dMeter2Info_cFb() {
 }
 #pragma pop
 
-/* 8021E268 0028 .text      setMiniGameCount__13dMeter2Info_cFSc                         */
+/* 8021E268-8021E290 0028 .text      setMiniGameCount__13dMeter2Info_cFSc                         Function */
 // dMeter2Info_c::setMiniGameCount(s8)
 #pragma push
 #pragma optimization_level 0
@@ -877,8 +1129,8 @@ asm void setMiniGameCount__13dMeter2Info_cFSc() {
 }
 #pragma pop
 
-/* 8021E290 0024 .text      setSaveStageName__13dMeter2Info_cFPCc                        */
-// dMeter2Info_c::setSaveStageName(const s8*)
+/* 8021E290-8021E2B4 0024 .text      setSaveStageName__13dMeter2Info_cFPCc                        Function */
+// dMeter2Info_c::setSaveStageName(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -888,7 +1140,7 @@ asm void setSaveStageName__13dMeter2Info_cFPCc() {
 }
 #pragma pop
 
-/* 8021E2B4 0014 .text      dMeter2Info_getNowLifeGauge__Fv                              */
+/* 8021E2B4-8021E2C8 0014 .text      dMeter2Info_getNowLifeGauge__Fv                              Function */
 }
 
 #pragma push
@@ -901,7 +1153,7 @@ asm void dMeter2Info_getNowLifeGauge(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E2C8 0014 .text      dMeter2Info_getNumberTextureName__Fi                         */
+/* 8021E2C8-8021E2DC 0014 .text      dMeter2Info_getNumberTextureName__Fi                         Function */
 }
 
 #pragma push
@@ -914,7 +1166,7 @@ asm void dMeter2Info_getNumberTextureName(int) {
 #pragma pop
 
 extern "C" {
-/* 8021E2DC 002C .text      dMeter2Info_getPlusTextureName__Fv                           */
+/* 8021E2DC-8021E308 002C .text      dMeter2Info_getPlusTextureName__Fv                           Function */
 }
 
 #pragma push
@@ -927,7 +1179,7 @@ asm void dMeter2Info_getPlusTextureName(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E308 01A8 .text      dMeter2Info_getPixel__FffffffPC7ResTIMG                      */
+/* 8021E308-8021E4B0 01A8 .text      dMeter2Info_getPixel__FffffffPC7ResTIMG                      Function */
 }
 
 #pragma push
@@ -940,7 +1192,7 @@ asm void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, const ResTIMG*) {
 #pragma pop
 
 extern "C" {
-/* 8021E4B0 0080 .text      dMeter2Info_setCloth__FUcb                                   */
+/* 8021E4B0-8021E530 0080 .text      dMeter2Info_setCloth__FUcb                                   Function */
 }
 
 #pragma push
@@ -953,7 +1205,7 @@ asm void dMeter2Info_setCloth(u8, bool) {
 #pragma pop
 
 extern "C" {
-/* 8021E530 00A4 .text      dMeter2Info_setSword__FUcb                                   */
+/* 8021E530-8021E5D4 00A4 .text      dMeter2Info_setSword__FUcb                                   Function */
 }
 
 #pragma push
@@ -966,7 +1218,7 @@ asm void dMeter2Info_setSword(u8, bool) {
 #pragma pop
 
 extern "C" {
-/* 8021E5D4 008C .text      dMeter2Info_setShield__FUcb                                  */
+/* 8021E5D4-8021E660 008C .text      dMeter2Info_setShield__FUcb                                  Function */
 }
 
 #pragma push
@@ -979,13 +1231,13 @@ asm void dMeter2Info_setShield(u8, bool) {
 #pragma pop
 
 extern "C" {
-/* 8021E660 0008 .text      dMeter2Info_is2DActiveTouchArea__Fv                          */
+/* 8021E660-8021E668 0008 .text      dMeter2Info_is2DActiveTouchArea__Fv                          ReturnIntegerFunction */
 // dMeter2Info_is2DActiveTouchArea(void)
 int dMeter2Info_is2DActiveTouchArea__Fv() {
 	return 0;
 }
 
-/* 8021E668 0020 .text      dMeter2Info_isMapOpenCheck__Fv                               */
+/* 8021E668-8021E688 0020 .text      dMeter2Info_isMapOpenCheck__Fv                               Function */
 }
 
 #pragma push
@@ -998,7 +1250,7 @@ asm void dMeter2Info_isMapOpenCheck(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E688 005C .text      dMeter2Info_isItemOpenCheck__Fv                              */
+/* 8021E688-8021E6E4 005C .text      dMeter2Info_isItemOpenCheck__Fv                              Function */
 }
 
 #pragma push
@@ -1011,7 +1263,7 @@ asm void dMeter2Info_isItemOpenCheck(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E6E4 0070 .text      dMeter2Info_getRecieveLetterNum__Fv                          */
+/* 8021E6E4-8021E754 0070 .text      dMeter2Info_getRecieveLetterNum__Fv                          Function */
 }
 
 #pragma push
@@ -1024,7 +1276,7 @@ asm void dMeter2Info_getRecieveLetterNum(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E754 00B0 .text      dMeter2Info_getNewLetterNum__Fv                              */
+/* 8021E754-8021E804 00B0 .text      dMeter2Info_getNewLetterNum__Fv                              Function */
 }
 
 #pragma push
@@ -1037,7 +1289,7 @@ asm void dMeter2Info_getNewLetterNum(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E804 00D8 .text      dMeter2Info_setNewLetterSender__Fv                           */
+/* 8021E804-8021E8DC 00D8 .text      dMeter2Info_setNewLetterSender__Fv                           Function */
 }
 
 #pragma push
@@ -1050,7 +1302,7 @@ asm void dMeter2Info_setNewLetterSender(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E8DC 00F4 .text      dMeter2Info_recieveLetter__Fv                                */
+/* 8021E8DC-8021E9D0 00F4 .text      dMeter2Info_recieveLetter__Fv                                Function */
 }
 
 #pragma push
@@ -1063,19 +1315,23 @@ asm void dMeter2Info_recieveLetter(void) {
 #pragma pop
 
 extern "C" {
-/* 8021E9D0 0004 .text      dMeter2Info_set2DVibration__Fv                               */
-// dMeter2Info_set2DVibration(void)
+/* 8021E9D0-8021E9D4 0004 .text      dMeter2Info_set2DVibration__Fv                               ReturnFunction */
+}
+
 void dMeter2Info_set2DVibration__Fv() {
 	return;
 }
 
-/* 8021E9D4 0004 .text      dMeter2Info_set2DVibrationM__Fv                              */
-// dMeter2Info_set2DVibrationM(void)
+extern "C" {
+/* 8021E9D4-8021E9D8 0004 .text      dMeter2Info_set2DVibrationM__Fv                              ReturnFunction */
+}
+
 void dMeter2Info_set2DVibrationM__Fv() {
 	return;
 }
 
-/* 8021E9D8 003C .text      __sinit_d_meter2_info_cpp                                    */
+extern "C" {
+/* 8021E9D8-8021EA14 003C .text      __sinit_d_meter2_info_cpp                                    SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

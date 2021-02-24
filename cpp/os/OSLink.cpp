@@ -9,16 +9,37 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void ICInvalidateRange();
+/* ReturnFunction       */
 extern void OSNotifyLink();
+/* ReturnFunction       */
 extern void OSNotifyUnlink();
+/* Function             */
+extern void OSSetStringTable();
+/* Function             */
 extern void Relocate();
+/* Function             */
 extern void Link();
+/* Function             */
+extern void OSLink();
+/* Function             */
+extern void OSLinkFixed();
+/* Function             */
 extern void Undo();
+/* Function             */
+extern void OSUnlink();
+/* Function             */
+extern void __OSModuleInit();
+/* InitializedData      */
 SECTION_DATA extern u8 OSLink__LIT_62[40];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_189[40];
 }
 
@@ -28,7 +49,7 @@ SECTION_DATA extern u8 LIT_189[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D0788 0025 .data      @62                                                          */
+/* 803D0788-803D07B0 0025 .data      @62                                                          InitializedData */
 SECTION_DATA u8 OSLink__LIT_62[40] = {
 	0x4F, 0x53, 0x4C, 0x69, 0x6E, 0x6B, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20,
 	0x72, 0x65, 0x6C, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x74, 0x79, 0x70, 0x65, 0x20,
@@ -36,7 +57,7 @@ SECTION_DATA u8 OSLink__LIT_62[40] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D07B0 0027 .data      @189                                                         */
+/* 803D07B0-803D07D8 0027 .data      @189                                                         InitializedData */
 SECTION_DATA u8 LIT_189[40] = {
 	0x4F, 0x53, 0x55, 0x6E, 0x6C, 0x69, 0x6E, 0x6B, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77,
 	0x6E, 0x20, 0x72, 0x65, 0x6C, 0x6F, 0x63, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x20, 0x74, 0x79, 0x70,
@@ -52,17 +73,17 @@ SECTION_DATA u8 LIT_189[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033DF60 0004 .text      OSNotifyLink                                                 */
+/* 8033DF60-8033DF64 0004 .text      OSNotifyLink                                                 ReturnFunction */
 void OSNotifyLink() {
 	return;
 }
 
-/* 8033DF64 0004 .text      OSNotifyUnlink                                               */
+/* 8033DF64-8033DF68 0004 .text      OSNotifyUnlink                                               ReturnFunction */
 void OSNotifyUnlink() {
 	return;
 }
 
-/* 8033DF68 000C .text      OSSetStringTable                                             */
+/* 8033DF68-8033DF74 000C .text      OSSetStringTable                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +93,7 @@ asm void OSSetStringTable() {
 }
 #pragma pop
 
-/* 8033DF74 02BC .text      Relocate                                                     */
+/* 8033DF74-8033E230 02BC .text      Relocate                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +103,7 @@ asm void Relocate() {
 }
 #pragma pop
 
-/* 8033E230 02E0 .text      Link                                                         */
+/* 8033E230-8033E510 02E0 .text      Link                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +113,7 @@ asm void Link() {
 }
 #pragma pop
 
-/* 8033E510 0024 .text      OSLink                                                       */
+/* 8033E510-8033E534 0024 .text      OSLink                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +123,7 @@ asm void OSLink() {
 }
 #pragma pop
 
-/* 8033E534 003C .text      OSLinkFixed                                                  */
+/* 8033E534-8033E570 003C .text      OSLinkFixed                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +133,7 @@ asm void OSLinkFixed() {
 }
 #pragma pop
 
-/* 8033E570 0238 .text      Undo                                                         */
+/* 8033E570-8033E7A8 0238 .text      Undo                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +143,7 @@ asm void Undo() {
 }
 #pragma pop
 
-/* 8033E7A8 01D4 .text      OSUnlink                                                     */
+/* 8033E7A8-8033E97C 01D4 .text      OSUnlink                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +153,7 @@ asm void OSUnlink() {
 }
 #pragma pop
 
-/* 8033E97C 0018 .text      __OSModuleInit                                               */
+/* 8033E97C-8033E994 0018 .text      __OSModuleInit                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

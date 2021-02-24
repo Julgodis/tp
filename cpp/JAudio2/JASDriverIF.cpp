@@ -9,21 +9,63 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void regist__14JASCallbackMgrFPFPv_lPv();
+/* Function             */
 extern void reject__14JASCallbackMgrFPFPv_lPv();
+/* Function             */
 extern void callback__14JASCallbackMgrFv();
+/* GlobalFunction       */
 extern u32 getSubFrameCounter__9JASDriverFv();
+/* Function             */
 extern void setDSPMixerLevel__6JASDspFf();
+/* Function             */
 extern void getDSPMixerLevel__6JASDspFv();
+/* Function             */
+extern void setDSPLevel__9JASDriverFf();
+/* GlobalFunction       */
+extern u16 getChannelLevel_dsp__9JASDriverFv();
+/* Function             */
+extern void getDSPLevel__9JASDriverFv();
+/* Function             */
+extern void setOutputMode__9JASDriverFUl();
+/* GlobalFunction       */
+extern u32 getOutputMode__9JASDriverFv();
+/* Function             */
+extern void waitSubFrame__9JASDriverFv();
+/* Function             */
+extern void rejectCallback__9JASDriverFPFPv_lPv();
+/* Function             */
+extern void registerDspSyncCallback__9JASDriverFPFPv_lPv();
+/* Function             */
+extern void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+/* Function             */
+extern void subframeCallback__9JASDriverFv();
+/* Function             */
+extern void DSPSyncCallback__9JASDriverFv();
+/* Function             */
+extern void updateDacCallback__9JASDriverFv();
+/* SInitFunction        */
+extern void __sinit_JASDriverIF_cpp();
+/* Function             */
 extern void __ct__Q214JASCallbackMgr9TCallbackFv();
+/* Function             */
 extern void OSYieldThread();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sDspSyncCallback__9JASDriver[256];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sSubFrameCallback__9JASDriver[256];
-SECTION_BSS extern u8 sUpdateDacCallback__9JASDriver[264];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sUpdateDacCallback__9JASDriver[256 + 8 /* padding */];
+/* InitializedData      */
 SECTION_SDATA extern u8 MAX_MIXERLEVEL__9JASDriver[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 JAS_SYSTEM_OUTPUT_MODE__9JASDriver[4];
 }
 
@@ -33,13 +75,13 @@ SECTION_SDATA extern u8 JAS_SYSTEM_OUTPUT_MODE__9JASDriver[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804507C0 0002 .sdata     MAX_MIXERLEVEL__9JASDriver                                   */
+/* 804507C0-804507C4 0002 .sdata     MAX_MIXERLEVEL__9JASDriver                                   InitializedData */
 SECTION_SDATA u8 MAX_MIXERLEVEL__9JASDriver[4] = {
 	0x2E, 0xE0,
 	/* padding */
 	0x00, 0x00,
 };
-/* 804507C4 0004 .sdata     JAS_SYSTEM_OUTPUT_MODE__9JASDriver                           */
+/* 804507C4-804507C8 0004 .sdata     JAS_SYSTEM_OUTPUT_MODE__9JASDriver                           InitializedData */
 SECTION_SDATA u8 JAS_SYSTEM_OUTPUT_MODE__9JASDriver[4] = {
 	0x00, 0x00, 0x00, 0x01,
 };
@@ -51,13 +93,13 @@ SECTION_SDATA u8 JAS_SYSTEM_OUTPUT_MODE__9JASDriver[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431C78 0000 .bss       ...bss.0                                                     */
-/* 80431C78 0100 .bss       sDspSyncCallback__9JASDriver                                 */
+/* 80431C78-80431C78 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80431C78-80431D78 0100 .bss       sDspSyncCallback__9JASDriver                                 ZeroInitializedData */
 SECTION_BSS u8 sDspSyncCallback__9JASDriver[256];
-/* 80431D78 0100 .bss       sSubFrameCallback__9JASDriver                                */
+/* 80431D78-80431E78 0100 .bss       sSubFrameCallback__9JASDriver                                ZeroInitializedData */
 SECTION_BSS u8 sSubFrameCallback__9JASDriver[256];
-/* 80431E78 0100 .bss       sUpdateDacCallback__9JASDriver                               */
-SECTION_BSS u8 sUpdateDacCallback__9JASDriver[264];
+/* 80431E78-80431F80 0100 .bss       sUpdateDacCallback__9JASDriver                               ZeroInitializedData */
+SECTION_BSS u8 sUpdateDacCallback__9JASDriver[256 + 8 /* padding */];
 }
 
 
@@ -66,7 +108,7 @@ SECTION_BSS u8 sUpdateDacCallback__9JASDriver[264];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029E130 0020 .text      setDSPLevel__9JASDriverFf                                    */
+/* 8029E130-8029E150 0020 .text      setDSPLevel__9JASDriverFf                                    Function */
 // JASDriver::setDSPLevel(f32)
 #pragma push
 #pragma optimization_level 0
@@ -77,13 +119,13 @@ asm void setDSPLevel__9JASDriverFf() {
 }
 #pragma pop
 
-/* 8029E150 0008 .text      getChannelLevel_dsp__9JASDriverFv                            */
+/* 8029E150-8029E158 0008 .text      getChannelLevel_dsp__9JASDriverFv                            GlobalFunction */
 // JASDriver::getChannelLevel_dsp(void)
 u16 getChannelLevel_dsp__9JASDriverFv() {
 	return *(u16*)&MAX_MIXERLEVEL__9JASDriver;
 }
 
-/* 8029E158 0020 .text      getDSPLevel__9JASDriverFv                                    */
+/* 8029E158-8029E178 0020 .text      getDSPLevel__9JASDriverFv                                    Function */
 // JASDriver::getDSPLevel(void)
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +136,7 @@ asm void getDSPLevel__9JASDriverFv() {
 }
 #pragma pop
 
-/* 8029E178 0008 .text      setOutputMode__9JASDriverFUl                                 */
+/* 8029E178-8029E180 0008 .text      setOutputMode__9JASDriverFUl                                 Function */
 // JASDriver::setOutputMode(u32)
 #pragma push
 #pragma optimization_level 0
@@ -105,13 +147,13 @@ asm void setOutputMode__9JASDriverFUl() {
 }
 #pragma pop
 
-/* 8029E180 0008 .text      getOutputMode__9JASDriverFv                                  */
+/* 8029E180-8029E188 0008 .text      getOutputMode__9JASDriverFv                                  GlobalFunction */
 // JASDriver::getOutputMode(void)
 u32 getOutputMode__9JASDriverFv() {
 	return *(u32*)&JAS_SYSTEM_OUTPUT_MODE__9JASDriver;
 }
 
-/* 8029E188 003C .text      waitSubFrame__9JASDriverFv                                   */
+/* 8029E188-8029E1C4 003C .text      waitSubFrame__9JASDriverFv                                   Function */
 // JASDriver::waitSubFrame(void)
 #pragma push
 #pragma optimization_level 0
@@ -122,8 +164,8 @@ asm void waitSubFrame__9JASDriverFv() {
 }
 #pragma pop
 
-/* 8029E1C4 007C .text      rejectCallback__9JASDriverFPFPv_lPv                          */
-// JASDriver::rejectCallback(s32 (*)(void*), void*)
+/* 8029E1C4-8029E240 007C .text      rejectCallback__9JASDriverFPFPv_lPv                          Function */
+// JASDriver::rejectCallback(long (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -133,8 +175,8 @@ asm void rejectCallback__9JASDriverFPFPv_lPv() {
 }
 #pragma pop
 
-/* 8029E240 0034 .text      registerDspSyncCallback__9JASDriverFPFPv_lPv                 */
-// JASDriver::registerDspSyncCallback(s32 (*)(void*), void*)
+/* 8029E240-8029E274 0034 .text      registerDspSyncCallback__9JASDriverFPFPv_lPv                 Function */
+// JASDriver::registerDspSyncCallback(long (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,8 +186,8 @@ asm void registerDspSyncCallback__9JASDriverFPFPv_lPv() {
 }
 #pragma pop
 
-/* 8029E274 0034 .text      registerSubFrameCallback__9JASDriverFPFPv_lPv                */
-// JASDriver::registerSubFrameCallback(s32 (*)(void*), void*)
+/* 8029E274-8029E2A8 0034 .text      registerSubFrameCallback__9JASDriverFPFPv_lPv                Function */
+// JASDriver::registerSubFrameCallback(long (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +197,7 @@ asm void registerSubFrameCallback__9JASDriverFPFPv_lPv() {
 }
 #pragma pop
 
-/* 8029E2A8 0028 .text      subframeCallback__9JASDriverFv                               */
+/* 8029E2A8-8029E2D0 0028 .text      subframeCallback__9JASDriverFv                               Function */
 // JASDriver::subframeCallback(void)
 #pragma push
 #pragma optimization_level 0
@@ -166,7 +208,7 @@ asm void subframeCallback__9JASDriverFv() {
 }
 #pragma pop
 
-/* 8029E2D0 0028 .text      DSPSyncCallback__9JASDriverFv                                */
+/* 8029E2D0-8029E2F8 0028 .text      DSPSyncCallback__9JASDriverFv                                Function */
 // JASDriver::DSPSyncCallback(void)
 #pragma push
 #pragma optimization_level 0
@@ -177,7 +219,7 @@ asm void DSPSyncCallback__9JASDriverFv() {
 }
 #pragma pop
 
-/* 8029E2F8 0028 .text      updateDacCallback__9JASDriverFv                              */
+/* 8029E2F8-8029E320 0028 .text      updateDacCallback__9JASDriverFv                              Function */
 // JASDriver::updateDacCallback(void)
 #pragma push
 #pragma optimization_level 0
@@ -188,7 +230,7 @@ asm void updateDacCallback__9JASDriverFv() {
 }
 #pragma pop
 
-/* 8029E320 0080 .text      __sinit_JASDriverIF_cpp                                      */
+/* 8029E320-8029E3A0 0080 .text      __sinit_JASDriverIF_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +240,7 @@ asm void __sinit_JASDriverIF_cpp() {
 }
 #pragma pop
 
-/* 8029E3A0 0010 .text      __ct__Q214JASCallbackMgr9TCallbackFv                         */
+/* 8029E3A0-8029E3B0 0010 .text      __ct__Q214JASCallbackMgr9TCallbackFv                         Function */
 // JASCallbackMgr::TCallback::JASCallbackMgr::TCallback(void)
 #pragma push
 #pragma optimization_level 0

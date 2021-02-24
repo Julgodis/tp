@@ -8,11 +8,16 @@
 // Additional Symbols:
 // 
 
+struct process_method_class;
 struct create_tag_class;
 struct leafdraw_class;
-struct process_method_class;
 struct leafdraw_method_class;
 
+extern void fopKy_Draw(void*); /* fopKy_Draw__FPv */
+extern void fopKy_Execute(void*); /* fopKy_Execute__FPv */
+extern void fopKy_IsDelete(void*); /* fopKy_IsDelete__FPv */
+extern void fopKy_Delete(void*); /* fopKy_Delete__FPv */
+extern void fopKy_Create(void*); /* fopKy_Create__FPv */
 extern void fopDwTg_ToDrawQ(create_tag_class*, int); /* fopDwTg_ToDrawQ__FP16create_tag_classi */
 extern void fopDwTg_DrawQTo(create_tag_class*); /* fopDwTg_DrawQTo__FP16create_tag_class */
 extern void fopDwTg_Init(create_tag_class*, void*); /* fopDwTg_Init__FP16create_tag_classPv */
@@ -25,18 +30,43 @@ extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20p
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopKy_Draw__FPv();
+/* Function             */
+extern void fopKy_Execute__FPv();
+/* Function             */
+extern void fopKy_IsDelete__FPv();
+/* Function             */
+extern void fopKy_Delete__FPv();
+/* Function             */
+extern void fopKy_Create__FPv();
+/* Function             */
 extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+/* Function             */
 extern void fopDwTg_DrawQTo__FP16create_tag_class();
+/* Function             */
 extern void fopDwTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* Function             */
 extern void fpcLf_GetPriority__FPC14leafdraw_class();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 fopKy_KANKYO_TYPE[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 fopKy_KANKYO_TYPE[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
 }
 
@@ -46,12 +76,15 @@ SECTION_SBSS extern u8 merged_80451124[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3940 0014 .data      g_fopKy_Method                                               */
-SECTION_DATA u8 g_fopKy_Method[24] = {
-	0x80, 0x01, 0xF3, 0xB4, 0x80, 0x01, 0xF3, 0x68, 0x80, 0x01, 0xF2, 0xC0, 0x80, 0x01, 0xF3, 0x14,
-	0x80, 0x01, 0xF2, 0x84,
+/* 803A3940-803A3958 0014 .data      g_fopKy_Method                                               SymbolReferenceArrayData */
+SECTION_DATA void* g_fopKy_Method[6] = {
+	(void*)fopKy_Create,
+	(void*)fopKy_Delete,
+	(void*)fopKy_Execute,
+	(void*)fopKy_IsDelete,
+	(void*)fopKy_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -61,9 +94,8 @@ SECTION_DATA u8 g_fopKy_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450CE8 0004 .sbss      fopKy_KANKYO_TYPE                                            */
-SECTION_SBSS u8 fopKy_KANKYO_TYPE[4];
-SECTION_SBSS u8 pad_80450CEC[4];
+/* 80450CE8-80450CF0 0004 .sbss      fopKy_KANKYO_TYPE                                            ZeroInitializedData */
+SECTION_SBSS u8 fopKy_KANKYO_TYPE[4 + 4 /* padding */];
 }
 
 
@@ -72,7 +104,7 @@ SECTION_SBSS u8 pad_80450CEC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001F284 003C .text      fopKy_Draw__FPv                                              */
+/* 8001F284-8001F2C0 003C .text      fopKy_Draw__FPv                                              Function */
 }
 
 #pragma push
@@ -85,7 +117,7 @@ asm void fopKy_Draw(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F2C0 0054 .text      fopKy_Execute__FPv                                           */
+/* 8001F2C0-8001F314 0054 .text      fopKy_Execute__FPv                                           Function */
 }
 
 #pragma push
@@ -98,7 +130,7 @@ asm void fopKy_Execute(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F314 0054 .text      fopKy_IsDelete__FPv                                          */
+/* 8001F314-8001F368 0054 .text      fopKy_IsDelete__FPv                                          Function */
 }
 
 #pragma push
@@ -111,7 +143,7 @@ asm void fopKy_IsDelete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F368 004C .text      fopKy_Delete__FPv                                            */
+/* 8001F368-8001F3B4 004C .text      fopKy_Delete__FPv                                            Function */
 }
 
 #pragma push
@@ -124,7 +156,7 @@ asm void fopKy_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F3B4 00D4 .text      fopKy_Create__FPv                                            */
+/* 8001F3B4-8001F488 00D4 .text      fopKy_Create__FPv                                            Function */
 }
 
 #pragma push

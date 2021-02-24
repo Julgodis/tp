@@ -18,102 +18,223 @@ extern void dComIfGs_getStartPoint(void); /* dComIfGs_getStartPoint__Fv */
 extern void dComIfGs_isSaveSwitch(int); /* dComIfGs_isSaveSwitch__Fi */
 
 extern "C" {
+/* Function             */
 extern void dComIfGs_isStageSwitch__Fii();
+/* Function             */
 extern void isSwitch__12dSv_memBit_cCFi();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void dComIfGs_isEventBit__FUs();
+/* Function             */
 extern void load__10JASWaveArcFP7JASHeap();
+/* Function             */
 extern void loadTail__10JASWaveArcFP7JASHeap();
+/* Function             */
 extern void erase__10JASWaveArcFv();
+/* Function             */
 extern void stop__8JAISoundFUl();
+/* Function             */
 extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void getTypeID__13JAUSoundTableCF10JAISoundID();
+/* Function             */
 extern void resetFilterAll__10Z2SoundMgrFv();
+/* Function             */
 extern void resetModY__7Z2SeMgrFv();
+/* Function             */
 extern void seStopAll__7Z2SeMgrFUl();
+/* Function             */
 extern void seMoveVolumeAll__7Z2SeMgrFfUl();
+/* Function             */
 extern void bgmStart__8Z2SeqMgrFUlUll();
+/* Function             */
 extern void bgmStop__8Z2SeqMgrFUll();
+/* Function             */
 extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+/* Function             */
 extern void bgmStreamCheckReady__8Z2SeqMgrFv();
+/* Function             */
 extern void bgmStreamPlay__8Z2SeqMgrFv();
+/* Function             */
 extern void changeBgmStatus__8Z2SeqMgrFl();
+/* Function             */
 extern void setHeightVolMod__8Z2SeqMgrFbUl();
+/* Function             */
 extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
+/* Function             */
 extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
+/* Function             */
 extern void resetBattleBgmParams__8Z2SeqMgrFv();
+/* Function             */
 extern void setBattleBgmOff__8Z2SeqMgrFb();
+/* Function             */
 extern void menuOut__11Z2StatusMgrFv();
+/* Function             */
 extern void setDemoName__11Z2StatusMgrFPc();
+/* Function             */
 extern void checkDayTime__11Z2StatusMgrFv();
+/* Function             */
+extern void __ct__10Z2SceneMgrFv();
+/* Function             */
+extern void setInDarkness__10Z2SceneMgrFb();
+/* Function             */
 extern void setSceneExist__10Z2SceneMgrFb();
+/* Function             */
+extern void setFadeOutStart__10Z2SceneMgrFUc();
+/* Function             */
+extern void setFadeInStart__10Z2SceneMgrFUc();
+/* Function             */
+extern void setSceneName__10Z2SceneMgrFPcll();
+/* Function             */
 extern void __ct__10JAISoundIDFRC10JAISoundID();
+/* Function             */
 extern void setFieldBgmPlay__8Z2SeqMgrFb();
+/* Function             */
 extern void isActive__12JAIStreamMgrCFv();
+/* Function             */
 extern void getID__8JAISoundCFv();
+/* FirstParamFunction   */
 extern u32 func_802B9994(u8*);
+/* Function             */
 extern void dComIfGs_getStartPoint__Fv();
+/* Function             */
 extern void unMuteSceneBgm__8Z2SeqMgrFUl();
+/* Function             */
 extern void muteSceneBgm__8Z2SeqMgrFUlf();
+/* Function             */
 extern void __as__10JAISoundIDFRC10JAISoundID();
+/* Function             */
 extern void dComIfGs_isSaveSwitch__Fi();
+/* Function             */
 extern void resetCrowdSize__7Z2SeMgrFv();
+/* Function             */
 extern void setTwilightGateVol__8Z2SeqMgrFf();
+/* Function             */
 extern void setWindStoneVol__8Z2SeqMgrFfUl();
+/* Function             */
 extern void __ct__10JAISoundIDFUl();
+/* Function             */
 extern void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb();
+/* Function             */
+extern void framework__10Z2SceneMgrFv();
+/* Function             */
+extern void load1stDynamicWave__10Z2SceneMgrFv();
+/* Function             */
 extern void _load1stWaveInner_1__10Z2SceneMgrFv();
+/* Function             */
 extern void _load1stWaveInner_2__10Z2SceneMgrFv();
+/* Function             */
+extern void check1stDynamicWave__10Z2SceneMgrFv();
+/* Function             */
+extern void load2ndDynamicWave__10Z2SceneMgrFv();
+/* Function             */
+extern void sceneBgmStart__10Z2SceneMgrFv();
+/* Function             */
+extern void loadStaticWaves__10Z2SceneMgrFv();
+/* ReturnIntegerFunction */
+extern  int checkFirstWaves__10Z2SceneMgrFv();
+/* Function             */
 extern void eraseSeWave__10Z2SceneMgrFUl();
+/* Function             */
 extern void eraseBgmWave__10Z2SceneMgrFUl();
+/* Function             */
 extern void getWaveLoadStatus__10Z2SceneMgrFUlUl();
+/* Function             */
 extern void loadSeWave__10Z2SceneMgrFUl();
+/* Function             */
 extern void loadBgmWave__10Z2SceneMgrFUl();
+/* Function             */
 extern void setSceneFx__11Z2FxLineMgrFl();
+/* Function             */
 extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+/* Function             */
 extern void setGhostEnemyState__13Z2SoundObjMgrFUc();
+/* Function             */
 extern void deleteEnemyAll__13Z2SoundObjMgrFv();
+/* Function             */
 extern void resetSceneInner__10Z2EnvSeMgrFv();
+/* Function             */
 extern void initSceneEnvSe__10Z2EnvSeMgrFlScf();
+/* Function             */
 extern void _savegpr_16();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_16();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 Z2SceneMgr__stringBase0[632];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
+/* InitializedData      */
 SECTION_DATA extern u8 sSpotName[324];
-SECTION_DATA extern u8 LIT_5354[64];
-SECTION_DATA extern u8 LIT_5353[64];
-SECTION_DATA extern u8 LIT_5352[56];
-SECTION_DATA extern u8 LIT_5351[56];
-SECTION_DATA extern u8 LIT_5350[48];
-SECTION_DATA extern u8 Z2SceneMgr__LIT_5349[32];
-SECTION_DATA extern u8 Z2SceneMgr__LIT_5348[52];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5354[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5353[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5352[14];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5351[14];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5350[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2SceneMgr__LIT_5349[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2SceneMgr__LIT_5348[13];
+/* InitializedData      */
 SECTION_DATA extern u8 Z2SceneMgr__LIT_5347[324];
+/* InitializedData      */
 SECTION_DATA extern u8 Z2SceneMgr__LIT_5852[348];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450860[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B3C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B40[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B48[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B58[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B7C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B80[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B84[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 data_80450CC0[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3511[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3512;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3529[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3531;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5341;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5342;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5343[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5344[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5345[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5346[4];
 }
 
@@ -123,89 +244,95 @@ SECTION_SDATA2 extern u8 Z2SceneMgr__LIT_5346[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039BFA8 0274 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039BFA8 = "F_SP00";
-const char* const stringBase_8039BFAF = "F_SP103";
-const char* const stringBase_8039BFB7 = "R_SP01";
-const char* const stringBase_8039BFBE = "F_SP104";
-const char* const stringBase_8039BFC6 = "R_SP107";
-const char* const stringBase_8039BFCE = "F_SP108";
-const char* const stringBase_8039BFD6 = "R_SP108";
-const char* const stringBase_8039BFDE = "F_SP117";
-const char* const stringBase_8039BFE6 = "F_SP109";
-const char* const stringBase_8039BFEE = "R_SP109";
-const char* const stringBase_8039BFF6 = "R_SP209";
-const char* const stringBase_8039BFFE = "F_SP110";
-const char* const stringBase_8039C006 = "R_SP110";
-const char* const stringBase_8039C00E = "F_SP111";
-const char* const stringBase_8039C016 = "F_SP128";
-const char* const stringBase_8039C01E = "R_SP128";
-const char* const stringBase_8039C026 = "F_SP115";
-const char* const stringBase_8039C02E = "F_SP112";
-const char* const stringBase_8039C036 = "F_SP126";
-const char* const stringBase_8039C03E = "F_SP127";
-const char* const stringBase_8039C046 = "R_SP127";
-const char* const stringBase_8039C04E = "F_SP113";
-const char* const stringBase_8039C056 = "F_SP116";
-const char* const stringBase_8039C05E = "R_SP116";
-const char* const stringBase_8039C066 = "R_SP160";
-const char* const stringBase_8039C06E = "R_SP161";
-const char* const stringBase_8039C076 = "F_SP114";
-const char* const stringBase_8039C07E = "F_SP118";
-const char* const stringBase_8039C086 = "F_SP124";
-const char* const stringBase_8039C08E = "F_SP125";
-const char* const stringBase_8039C096 = "F_SP121";
-const char* const stringBase_8039C09E = "F_SP122";
-const char* const stringBase_8039C0A6 = "F_SP123";
-const char* const stringBase_8039C0AE = "F_SP200";
-const char* const stringBase_8039C0B6 = "F_SP102";
-const char* const stringBase_8039C0BE = "";
-const char* const stringBase_8039C0BF = "R_SP300";
-const char* const stringBase_8039C0C7 = "R_SP301";
-const char* const stringBase_8039C0CF = "T_ENEMY";
-const char* const stringBase_8039C0D7 = "D_MN54";
-const char* const stringBase_8039C0DE = "D_MN05";
-const char* const stringBase_8039C0E5 = "D_MN05B";
-const char* const stringBase_8039C0ED = "D_MN05A";
-const char* const stringBase_8039C0F5 = "D_MN04";
-const char* const stringBase_8039C0FC = "D_MN04B";
-const char* const stringBase_8039C104 = "D_MN04A";
-const char* const stringBase_8039C10C = "D_MN01";
-const char* const stringBase_8039C113 = "D_MN01B";
-const char* const stringBase_8039C11B = "D_MN01A";
-const char* const stringBase_8039C123 = "D_MN10";
-const char* const stringBase_8039C12A = "D_MN10B";
-const char* const stringBase_8039C132 = "D_MN10A";
-const char* const stringBase_8039C13A = "D_MN11";
-const char* const stringBase_8039C141 = "D_MN11B";
-const char* const stringBase_8039C149 = "D_MN11A";
-const char* const stringBase_8039C151 = "D_MN06";
-const char* const stringBase_8039C158 = "D_MN06B";
-const char* const stringBase_8039C160 = "D_MN06A";
-const char* const stringBase_8039C168 = "D_MN07";
-const char* const stringBase_8039C16F = "D_MN07B";
-const char* const stringBase_8039C177 = "D_MN07A";
-const char* const stringBase_8039C17F = "D_MN08";
-const char* const stringBase_8039C186 = "D_MN08B";
-const char* const stringBase_8039C18E = "D_MN08C";
-const char* const stringBase_8039C196 = "D_MN08A";
-const char* const stringBase_8039C19E = "D_MN08D";
-const char* const stringBase_8039C1A6 = "D_MN09";
-const char* const stringBase_8039C1AD = "D_MN09A";
-const char* const stringBase_8039C1B5 = "D_MN09B";
-const char* const stringBase_8039C1BD = "D_MN09C";
-const char* const stringBase_8039C1C5 = "D_SB00";
-const char* const stringBase_8039C1CC = "D_SB01";
-const char* const stringBase_8039C1D3 = "D_SB02";
-const char* const stringBase_8039C1DA = "D_SB03";
-const char* const stringBase_8039C1E1 = "D_SB04";
-const char* const stringBase_8039C1E8 = "D_SB05";
-const char* const stringBase_8039C1EF = "D_SB06";
-const char* const stringBase_8039C1F6 = "D_SB07";
-const char* const stringBase_8039C1FD = "D_SB08";
-const char* const stringBase_8039C204 = "D_SB09";
-const char* const stringBase_8039C20B = "D_SB10";
-const char* const stringBase_8039C212 = "force_end";
+/* 8039BFA8-8039C220 0274 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039BFA8 = "F_SP00";
+SECTION_DEAD const char* const stringBase_8039BFAF = "F_SP103";
+SECTION_DEAD const char* const stringBase_8039BFB7 = "R_SP01";
+SECTION_DEAD const char* const stringBase_8039BFBE = "F_SP104";
+SECTION_DEAD const char* const stringBase_8039BFC6 = "R_SP107";
+SECTION_DEAD const char* const stringBase_8039BFCE = "F_SP108";
+SECTION_DEAD const char* const stringBase_8039BFD6 = "R_SP108";
+SECTION_DEAD const char* const stringBase_8039BFDE = "F_SP117";
+SECTION_DEAD const char* const stringBase_8039BFE6 = "F_SP109";
+SECTION_DEAD const char* const stringBase_8039BFEE = "R_SP109";
+SECTION_DEAD const char* const stringBase_8039BFF6 = "R_SP209";
+SECTION_DEAD const char* const stringBase_8039BFFE = "F_SP110";
+SECTION_DEAD const char* const stringBase_8039C006 = "R_SP110";
+SECTION_DEAD const char* const stringBase_8039C00E = "F_SP111";
+SECTION_DEAD const char* const stringBase_8039C016 = "F_SP128";
+SECTION_DEAD const char* const stringBase_8039C01E = "R_SP128";
+SECTION_DEAD const char* const stringBase_8039C026 = "F_SP115";
+SECTION_DEAD const char* const stringBase_8039C02E = "F_SP112";
+SECTION_DEAD const char* const stringBase_8039C036 = "F_SP126";
+SECTION_DEAD const char* const stringBase_8039C03E = "F_SP127";
+SECTION_DEAD const char* const stringBase_8039C046 = "R_SP127";
+SECTION_DEAD const char* const stringBase_8039C04E = "F_SP113";
+SECTION_DEAD const char* const stringBase_8039C056 = "F_SP116";
+SECTION_DEAD const char* const stringBase_8039C05E = "R_SP116";
+SECTION_DEAD const char* const stringBase_8039C066 = "R_SP160";
+SECTION_DEAD const char* const stringBase_8039C06E = "R_SP161";
+SECTION_DEAD const char* const stringBase_8039C076 = "F_SP114";
+SECTION_DEAD const char* const stringBase_8039C07E = "F_SP118";
+SECTION_DEAD const char* const stringBase_8039C086 = "F_SP124";
+SECTION_DEAD const char* const stringBase_8039C08E = "F_SP125";
+SECTION_DEAD const char* const stringBase_8039C096 = "F_SP121";
+SECTION_DEAD const char* const stringBase_8039C09E = "F_SP122";
+SECTION_DEAD const char* const stringBase_8039C0A6 = "F_SP123";
+SECTION_DEAD const char* const stringBase_8039C0AE = "F_SP200";
+SECTION_DEAD const char* const stringBase_8039C0B6 = "F_SP102";
+SECTION_DEAD const char* const stringBase_8039C0BE = "";
+SECTION_DEAD const char* const stringBase_8039C0BF = "R_SP300";
+SECTION_DEAD const char* const stringBase_8039C0C7 = "R_SP301";
+SECTION_DEAD const char* const stringBase_8039C0CF = "T_ENEMY";
+SECTION_DEAD const char* const stringBase_8039C0D7 = "D_MN54";
+SECTION_DEAD const char* const stringBase_8039C0DE = "D_MN05";
+SECTION_DEAD const char* const stringBase_8039C0E5 = "D_MN05B";
+SECTION_DEAD const char* const stringBase_8039C0ED = "D_MN05A";
+SECTION_DEAD const char* const stringBase_8039C0F5 = "D_MN04";
+SECTION_DEAD const char* const stringBase_8039C0FC = "D_MN04B";
+SECTION_DEAD const char* const stringBase_8039C104 = "D_MN04A";
+SECTION_DEAD const char* const stringBase_8039C10C = "D_MN01";
+SECTION_DEAD const char* const stringBase_8039C113 = "D_MN01B";
+SECTION_DEAD const char* const stringBase_8039C11B = "D_MN01A";
+SECTION_DEAD const char* const stringBase_8039C123 = "D_MN10";
+SECTION_DEAD const char* const stringBase_8039C12A = "D_MN10B";
+SECTION_DEAD const char* const stringBase_8039C132 = "D_MN10A";
+SECTION_DEAD const char* const stringBase_8039C13A = "D_MN11";
+SECTION_DEAD const char* const stringBase_8039C141 = "D_MN11B";
+SECTION_DEAD const char* const stringBase_8039C149 = "D_MN11A";
+SECTION_DEAD const char* const stringBase_8039C151 = "D_MN06";
+SECTION_DEAD const char* const stringBase_8039C158 = "D_MN06B";
+SECTION_DEAD const char* const stringBase_8039C160 = "D_MN06A";
+SECTION_DEAD const char* const stringBase_8039C168 = "D_MN07";
+SECTION_DEAD const char* const stringBase_8039C16F = "D_MN07B";
+SECTION_DEAD const char* const stringBase_8039C177 = "D_MN07A";
+SECTION_DEAD const char* const stringBase_8039C17F = "D_MN08";
+SECTION_DEAD const char* const stringBase_8039C186 = "D_MN08B";
+SECTION_DEAD const char* const stringBase_8039C18E = "D_MN08C";
+SECTION_DEAD const char* const stringBase_8039C196 = "D_MN08A";
+SECTION_DEAD const char* const stringBase_8039C19E = "D_MN08D";
+SECTION_DEAD const char* const stringBase_8039C1A6 = "D_MN09";
+SECTION_DEAD const char* const stringBase_8039C1AD = "D_MN09A";
+SECTION_DEAD const char* const stringBase_8039C1B5 = "D_MN09B";
+SECTION_DEAD const char* const stringBase_8039C1BD = "D_MN09C";
+SECTION_DEAD const char* const stringBase_8039C1C5 = "D_SB00";
+SECTION_DEAD const char* const stringBase_8039C1CC = "D_SB01";
+SECTION_DEAD const char* const stringBase_8039C1D3 = "D_SB02";
+SECTION_DEAD const char* const stringBase_8039C1DA = "D_SB03";
+SECTION_DEAD const char* const stringBase_8039C1E1 = "D_SB04";
+SECTION_DEAD const char* const stringBase_8039C1E8 = "D_SB05";
+SECTION_DEAD const char* const stringBase_8039C1EF = "D_SB06";
+SECTION_DEAD const char* const stringBase_8039C1F6 = "D_SB07";
+SECTION_DEAD const char* const stringBase_8039C1FD = "D_SB08";
+SECTION_DEAD const char* const stringBase_8039C204 = "D_SB09";
+SECTION_DEAD const char* const stringBase_8039C20B = "D_SB10";
+SECTION_DEAD const char* const stringBase_8039C212 = "force_end";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039C21C = "\0\0\0";
+#pragma pop
 }
 
 
@@ -214,7 +341,7 @@ const char* const stringBase_8039C212 = "force_end";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CA5C0 0144 .data      sSpotName                                                    */
+/* 803CA5C0-803CA704 0144 .data      sSpotName                                                    InitializedData */
 SECTION_DATA u8 sSpotName[324] = {
 	0x80, 0x39, 0xBF, 0xA8, 0x80, 0x39, 0xBF, 0xAF, 0x80, 0x39, 0xBF, 0xB7, 0x80, 0x39, 0xBF, 0xBE,
 	0x80, 0x39, 0xBF, 0xC6, 0x80, 0x39, 0xBF, 0xCE, 0x80, 0x39, 0xBF, 0xD6, 0x80, 0x39, 0xBF, 0xDE,
@@ -238,53 +365,121 @@ SECTION_DATA u8 sSpotName[324] = {
 	0x80, 0x39, 0xC1, 0xEF, 0x80, 0x39, 0xC1, 0xF6, 0x80, 0x39, 0xC1, 0xFD, 0x80, 0x39, 0xC2, 0x04,
 	0x80, 0x39, 0xC2, 0x0B,
 };
-/* 803CA704 0040 .data      @5354                                                        */
-SECTION_DATA u8 LIT_5354[64] = {
-	0x80, 0x2B, 0x86, 0xD4, 0x80, 0x2B, 0x86, 0xDC, 0x80, 0x2B, 0x86, 0xDC, 0x80, 0x2B, 0x86, 0xD4,
-	0x80, 0x2B, 0x86, 0xDC, 0x80, 0x2B, 0x86, 0xDC, 0x80, 0x2B, 0x86, 0xD4, 0x80, 0x2B, 0x86, 0xE4,
-	0x80, 0x2B, 0x96, 0xB8, 0x80, 0x2B, 0x86, 0xE4, 0x80, 0x2B, 0x86, 0xD4, 0x80, 0x2B, 0x86, 0xE4,
-	0x80, 0x2B, 0x86, 0xE4, 0x80, 0x2B, 0x86, 0xD4, 0x80, 0x2B, 0x86, 0xDC, 0x80, 0x2B, 0x86, 0xDC,
+/* 803CA704-803CA744 0040 .data      @5354                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5354[16] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1783),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1783),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1783),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1787),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+2800),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1787),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1783),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1787),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1787),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1783),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1785),
 };
-/* 803CA744 0040 .data      @5353                                                        */
-SECTION_DATA u8 LIT_5353[64] = {
-	0x80, 0x2B, 0x86, 0x98, 0x80, 0x2B, 0x86, 0xB0, 0x80, 0x2B, 0x86, 0x90, 0x80, 0x2B, 0x86, 0x90,
-	0x80, 0x2B, 0x86, 0x90, 0x80, 0x2B, 0x86, 0x98, 0x80, 0x2B, 0x86, 0xB0, 0x80, 0x2B, 0x86, 0x98,
-	0x80, 0x2B, 0x86, 0xB4, 0x80, 0x2B, 0x86, 0xA0, 0x80, 0x2B, 0x86, 0xA0, 0x80, 0x2B, 0x86, 0xA0,
-	0x80, 0x2B, 0x86, 0xA8, 0x80, 0x2B, 0x86, 0xA8, 0x80, 0x2B, 0x86, 0xA8, 0x80, 0x2B, 0x86, 0xB0,
+/* 803CA744-803CA784 0040 .data      @5353                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5353[16] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1768),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1774),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1766),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1766),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1766),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1768),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1774),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1768),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1775),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1770),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1770),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1770),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1772),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1772),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1772),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+1774),
 };
-/* 803CA784 0038 .data      @5352                                                        */
-SECTION_DATA u8 LIT_5352[56] = {
-	0x80, 0x2B, 0x77, 0x40, 0x80, 0x2B, 0x77, 0x70, 0x80, 0x2B, 0x77, 0xC0, 0x80, 0x2B, 0x77, 0xC0,
-	0x80, 0x2B, 0x77, 0x98, 0x80, 0x2B, 0x77, 0xC0, 0x80, 0x2B, 0x77, 0x00, 0x80, 0x2B, 0x77, 0x00,
-	0x80, 0x2B, 0x77, 0xC0, 0x80, 0x2B, 0x77, 0x10, 0x80, 0x2B, 0x77, 0x18, 0x80, 0x2B, 0x77, 0x20,
-	0x80, 0x2B, 0x77, 0x2C, 0x80, 0x2B, 0x77, 0x34,
+/* 803CA784-803CA7BC 0038 .data      @5352                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5352[14] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+786),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+798),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+818),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+818),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+808),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+818),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+770),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+770),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+818),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+774),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+776),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+778),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+781),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+783),
 };
-/* 803CA7BC 0038 .data      @5351                                                        */
-SECTION_DATA u8 LIT_5351[56] = {
-	0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x75, 0xEC, 0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x76, 0x40,
-	0x80, 0x2B, 0x75, 0xD4, 0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x75, 0xD4, 0x80, 0x2B, 0x76, 0x40,
-	0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x76, 0x40, 0x80, 0x2B, 0x76, 0x40,
-	0x80, 0x2B, 0x75, 0xD4, 0x80, 0x2B, 0x75, 0xE4,
+/* 803CA7BC-803CA7F4 0038 .data      @5351                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5351[14] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+701),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+695),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+695),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+722),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+695),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+699),
 };
-/* 803CA7F4 0030 .data      @5350                                                        */
-SECTION_DATA u8 LIT_5350[48] = {
-	0x80, 0x2B, 0x72, 0xA8, 0x80, 0x2B, 0x72, 0x24, 0x80, 0x2B, 0x72, 0xFC, 0x80, 0x2B, 0x72, 0xFC,
-	0x80, 0x2B, 0x72, 0x70, 0x80, 0x2B, 0x72, 0x80, 0x80, 0x2B, 0x72, 0x90, 0x80, 0x2B, 0x72, 0x88,
-	0x80, 0x2B, 0x72, 0x90, 0x80, 0x2B, 0x72, 0x98, 0x80, 0x2B, 0x72, 0xA0, 0x80, 0x2B, 0x72, 0xA0,
+/* 803CA7F4-803CA824 0030 .data      @5350                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5350[12] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+492),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+459),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+513),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+513),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+478),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+482),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+486),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+484),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+486),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+488),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+490),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+490),
 };
-/* 803CA824 0020 .data      @5349                                                        */
-SECTION_DATA u8 Z2SceneMgr__LIT_5349[32] = {
-	0x80, 0x2B, 0x6F, 0x28, 0x80, 0x2B, 0x6F, 0x54, 0x80, 0x2B, 0x70, 0x24, 0x80, 0x2B, 0x70, 0xFC,
-	0x80, 0x2B, 0x70, 0xFC, 0x80, 0x2B, 0x71, 0x20, 0x80, 0x2B, 0x71, 0xEC, 0x80, 0x2B, 0x70, 0xFC,
+/* 803CA824-803CA844 0020 .data      @5349                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2SceneMgr__LIT_5349[8] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+268),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+279),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+331),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+385),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+385),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+394),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+445),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+385),
 };
-/* 803CA844 0034 .data      @5348                                                        */
-SECTION_DATA u8 Z2SceneMgr__LIT_5348[52] = {
-	0x80, 0x2B, 0x6E, 0xDC, 0x80, 0x2B, 0x6D, 0xD8, 0x80, 0x2B, 0x6E, 0xDC, 0x80, 0x2B, 0x6E, 0x5C,
-	0x80, 0x2B, 0x6E, 0x70, 0x80, 0x2B, 0x6E, 0x30, 0x80, 0x2B, 0x6E, 0xDC, 0x80, 0x2B, 0x6E, 0xDC,
-	0x80, 0x2B, 0x6E, 0x30, 0x80, 0x2B, 0x6E, 0x54, 0x80, 0x2B, 0x6E, 0xDC, 0x80, 0x2B, 0x6E, 0xDC,
-	0x80, 0x2B, 0x6E, 0x20,
+/* 803CA844-803CA878 0034 .data      @5348                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2SceneMgr__LIT_5348[13] = {
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+184),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+217),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+222),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+206),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+206),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+215),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+249),
+	(void*)(((u32*)setSceneName__10Z2SceneMgrFPcll)+202),
 };
-/* 803CA878 0144 .data      @5347                                                        */
+/* 803CA878-803CA9BC 0144 .data      @5347                                                        InitializedData */
 SECTION_DATA u8 Z2SceneMgr__LIT_5347[324] = {
 	0x80, 0x2B, 0x6C, 0x48, 0x80, 0x2B, 0x6C, 0xD8, 0x80, 0x2B, 0x6F, 0x04, 0x80, 0x2B, 0x71, 0xF8,
 	0x80, 0x2B, 0x73, 0x04, 0x80, 0x2B, 0x75, 0x00, 0x80, 0x2B, 0x74, 0x60, 0x80, 0x2B, 0x83, 0x1C,
@@ -308,7 +503,7 @@ SECTION_DATA u8 Z2SceneMgr__LIT_5347[324] = {
 	0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C, 0x80, 0x2B, 0x96, 0x3C,
 	0x80, 0x2B, 0x96, 0x64,
 };
-/* 803CA9BC 015C .data      @5852                                                        */
+/* 803CA9BC-803CAB18 015C .data      @5852                                                        InitializedData */
 SECTION_DATA u8 Z2SceneMgr__LIT_5852[348] = {
 	0x80, 0x2B, 0xA3, 0xE4, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
 	0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34, 0x80, 0x2B, 0xA5, 0x34,
@@ -341,41 +536,41 @@ SECTION_DATA u8 Z2SceneMgr__LIT_5852[348] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455A38 0004 .sdata2    @3511                                                        */
+/* 80455A38-80455A3C 0004 .sdata2    @3511                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3511[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455A3C 0004 .sdata2    @3512                                                        */
+/* 80455A3C-80455A40 0004 .sdata2    @3512                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3512 = 1.000000f;
-/* 80455A40 0004 .sdata2    @3529                                                        */
+/* 80455A40-80455A48 0004 .sdata2    @3529                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3529[8] = {
 	0x3E, 0x99, 0x99, 0x9A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455A48 0008 .sdata2    @3531                                                        */
+/* 80455A48-80455A50 0008 .sdata2    @3531                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3531 = 4503599627370496.000000;
-/* 80455A50 0004 .sdata2    @5341                                                        */
+/* 80455A50-80455A54 0004 .sdata2    @5341                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 LIT_5341 = -1.000000f;
-/* 80455A54 0004 .sdata2    @5342                                                        */
+/* 80455A54-80455A58 0004 .sdata2    @5342                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_5342 = 0.500000f;
-/* 80455A58 0004 .sdata2    @5343                                                        */
+/* 80455A58-80455A5C 0004 .sdata2    @5343                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SceneMgr__LIT_5343[4] = {
 	0x3F, 0x33, 0x33, 0x33,
 };
-/* 80455A5C 0004 .sdata2    @5344                                                        */
+/* 80455A5C-80455A60 0004 .sdata2    @5344                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SceneMgr__LIT_5344[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
-/* 80455A60 0004 .sdata2    @5345                                                        */
+/* 80455A60-80455A64 0004 .sdata2    @5345                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SceneMgr__LIT_5345[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80455A64 0004 .sdata2    @5346                                                        */
+/* 80455A64-80455A68 0004 .sdata2    @5346                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SceneMgr__LIT_5346[4] = {
 	0x3D, 0xA3, 0xD7, 0x0A,
 };
@@ -387,7 +582,7 @@ SECTION_SDATA2 u8 Z2SceneMgr__LIT_5346[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802B6840 0070 .text      __ct__10Z2SceneMgrFv                                         */
+/* 802B6840-802B68B0 0070 .text      __ct__10Z2SceneMgrFv                                         Function */
 // Z2SceneMgr::Z2SceneMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -398,7 +593,7 @@ asm void __ct__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802B68B0 0030 .text      setInDarkness__10Z2SceneMgrFb                                */
+/* 802B68B0-802B68E0 0030 .text      setInDarkness__10Z2SceneMgrFb                                Function */
 // Z2SceneMgr::setInDarkness(bool)
 #pragma push
 #pragma optimization_level 0
@@ -409,7 +604,7 @@ asm void setInDarkness__10Z2SceneMgrFb() {
 }
 #pragma pop
 
-/* 802B68E0 009C .text      setSceneExist__10Z2SceneMgrFb                                */
+/* 802B68E0-802B697C 009C .text      setSceneExist__10Z2SceneMgrFb                                Function */
 // Z2SceneMgr::setSceneExist(bool)
 #pragma push
 #pragma optimization_level 0
@@ -420,7 +615,7 @@ asm void setSceneExist__10Z2SceneMgrFb() {
 }
 #pragma pop
 
-/* 802B697C 009C .text      setFadeOutStart__10Z2SceneMgrFUc                             */
+/* 802B697C-802B6A18 009C .text      setFadeOutStart__10Z2SceneMgrFUc                             Function */
 // Z2SceneMgr::setFadeOutStart(u8)
 #pragma push
 #pragma optimization_level 0
@@ -431,7 +626,7 @@ asm void setFadeOutStart__10Z2SceneMgrFUc() {
 }
 #pragma pop
 
-/* 802B6A18 00E0 .text      setFadeInStart__10Z2SceneMgrFUc                              */
+/* 802B6A18-802B6AF8 00E0 .text      setFadeInStart__10Z2SceneMgrFUc                              Function */
 // Z2SceneMgr::setFadeInStart(u8)
 #pragma push
 #pragma optimization_level 0
@@ -442,8 +637,8 @@ asm void setFadeInStart__10Z2SceneMgrFUc() {
 }
 #pragma pop
 
-/* 802B6AF8 2E64 .text      setSceneName__10Z2SceneMgrFPcll                              */
-// Z2SceneMgr::setSceneName(s8*, s32, s32)
+/* 802B6AF8-802B995C 2E64 .text      setSceneName__10Z2SceneMgrFPcll                              Function */
+// Z2SceneMgr::setSceneName(char*, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +648,7 @@ asm void setSceneName__10Z2SceneMgrFPcll() {
 }
 #pragma pop
 
-/* 802B995C 000C .text      __ct__10JAISoundIDFRC10JAISoundID                            */
+/* 802B995C-802B9968 000C .text      __ct__10JAISoundIDFRC10JAISoundID                            Function */
 // JAISoundID::JAISoundID(const JAISoundID&)
 #pragma push
 #pragma optimization_level 0
@@ -464,7 +659,7 @@ asm void __ct__10JAISoundIDFRC10JAISoundID() {
 }
 #pragma pop
 
-/* 802B9968 0010 .text      setFieldBgmPlay__8Z2SeqMgrFb                                 */
+/* 802B9968-802B9978 0010 .text      setFieldBgmPlay__8Z2SeqMgrFb                                 Function */
 // Z2SeqMgr::setFieldBgmPlay(bool)
 #pragma push
 #pragma optimization_level 0
@@ -475,7 +670,7 @@ asm void setFieldBgmPlay__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B9978 0010 .text      isActive__12JAIStreamMgrCFv                                  */
+/* 802B9978-802B9988 0010 .text      isActive__12JAIStreamMgrCFv                                  Function */
 // JAIStreamMgr::isActive(void) const
 #pragma push
 #pragma optimization_level 0
@@ -486,7 +681,7 @@ asm void isActive__12JAIStreamMgrCFv() {
 }
 #pragma pop
 
-/* 802B9988 000C .text      getID__8JAISoundCFv                                          */
+/* 802B9988-802B9994 000C .text      getID__8JAISoundCFv                                          Function */
 // JAISound::getID(void) const
 #pragma push
 #pragma optimization_level 0
@@ -497,13 +692,13 @@ asm void getID__8JAISoundCFv() {
 }
 #pragma pop
 
-/* 802B9994 0008 .text      getFirst__19JSUList<9JAIStream>CFv                           */
+/* 802B9994-802B999C 0008 .text      getFirst__19JSUList<9JAIStream>CFv                           FirstParamFunction */
 // JSUList<9JAIStream>::getFirst(void) const
 u32 func_802B9994(u8* param0) {
 	return *(u32*)&param0[0]; /* param0->field_0x0 */
 }
 
-/* 802B999C 0010 .text      dComIfGs_getStartPoint__Fv                                   */
+/* 802B999C-802B99AC 0010 .text      dComIfGs_getStartPoint__Fv                                   Function */
 }
 
 #pragma push
@@ -516,7 +711,7 @@ asm void dComIfGs_getStartPoint(void) {
 #pragma pop
 
 extern "C" {
-/* 802B99AC 0078 .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 */
+/* 802B99AC-802B9A24 0078 .text      unMuteSceneBgm__8Z2SeqMgrFUl                                 Function */
 // Z2SeqMgr::unMuteSceneBgm(u32)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +722,7 @@ asm void unMuteSceneBgm__8Z2SeqMgrFUl() {
 }
 #pragma pop
 
-/* 802B9A24 0064 .text      muteSceneBgm__8Z2SeqMgrFUlf                                  */
+/* 802B9A24-802B9A88 0064 .text      muteSceneBgm__8Z2SeqMgrFUlf                                  Function */
 // Z2SeqMgr::muteSceneBgm(u32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -538,7 +733,7 @@ asm void muteSceneBgm__8Z2SeqMgrFUlf() {
 }
 #pragma pop
 
-/* 802B9A88 000C .text      __as__10JAISoundIDFRC10JAISoundID                            */
+/* 802B9A88-802B9A94 000C .text      __as__10JAISoundIDFRC10JAISoundID                            Function */
 // JAISoundID::operator=(const JAISoundID&)
 #pragma push
 #pragma optimization_level 0
@@ -549,7 +744,7 @@ asm void __as__10JAISoundIDFRC10JAISoundID() {
 }
 #pragma pop
 
-/* 802B9A94 0030 .text      dComIfGs_isSaveSwitch__Fi                                    */
+/* 802B9A94-802B9AC4 0030 .text      dComIfGs_isSaveSwitch__Fi                                    Function */
 }
 
 #pragma push
@@ -562,7 +757,7 @@ asm void dComIfGs_isSaveSwitch(int) {
 #pragma pop
 
 extern "C" {
-/* 802B9AC4 000C .text      resetCrowdSize__7Z2SeMgrFv                                   */
+/* 802B9AC4-802B9AD0 000C .text      resetCrowdSize__7Z2SeMgrFv                                   Function */
 // Z2SeMgr::resetCrowdSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -573,7 +768,7 @@ asm void resetCrowdSize__7Z2SeMgrFv() {
 }
 #pragma pop
 
-/* 802B9AD0 002C .text      setTwilightGateVol__8Z2SeqMgrFf                              */
+/* 802B9AD0-802B9AFC 002C .text      setTwilightGateVol__8Z2SeqMgrFf                              Function */
 // Z2SeqMgr::setTwilightGateVol(f32)
 #pragma push
 #pragma optimization_level 0
@@ -584,7 +779,7 @@ asm void setTwilightGateVol__8Z2SeqMgrFf() {
 }
 #pragma pop
 
-/* 802B9AFC 0064 .text      setWindStoneVol__8Z2SeqMgrFfUl                               */
+/* 802B9AFC-802B9B60 0064 .text      setWindStoneVol__8Z2SeqMgrFfUl                               Function */
 // Z2SeqMgr::setWindStoneVol(f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -595,7 +790,7 @@ asm void setWindStoneVol__8Z2SeqMgrFfUl() {
 }
 #pragma pop
 
-/* 802B9B60 0008 .text      __ct__10JAISoundIDFUl                                        */
+/* 802B9B60-802B9B68 0008 .text      __ct__10JAISoundIDFUl                                        Function */
 // JAISoundID::JAISoundID(u32)
 #pragma push
 #pragma optimization_level 0
@@ -606,7 +801,7 @@ asm void __ct__10JAISoundIDFUl() {
 }
 #pragma pop
 
-/* 802B9B68 00E8 .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            */
+/* 802B9B68-802B9C50 00E8 .text      sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb            Function */
 // Z2SceneMgr::sceneChange(JAISoundID, u8, u8, u8, u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -617,7 +812,7 @@ asm void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb() {
 }
 #pragma pop
 
-/* 802B9C50 00F0 .text      framework__10Z2SceneMgrFv                                    */
+/* 802B9C50-802B9D40 00F0 .text      framework__10Z2SceneMgrFv                                    Function */
 // Z2SceneMgr::framework(void)
 #pragma push
 #pragma optimization_level 0
@@ -628,7 +823,7 @@ asm void framework__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802B9D40 0058 .text      load1stDynamicWave__10Z2SceneMgrFv                           */
+/* 802B9D40-802B9D98 0058 .text      load1stDynamicWave__10Z2SceneMgrFv                           Function */
 // Z2SceneMgr::load1stDynamicWave(void)
 #pragma push
 #pragma optimization_level 0
@@ -639,7 +834,7 @@ asm void load1stDynamicWave__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802B9D98 0230 .text      _load1stWaveInner_1__10Z2SceneMgrFv                          */
+/* 802B9D98-802B9FC8 0230 .text      _load1stWaveInner_1__10Z2SceneMgrFv                          Function */
 // Z2SceneMgr::_load1stWaveInner_1(void)
 #pragma push
 #pragma optimization_level 0
@@ -650,7 +845,7 @@ asm void _load1stWaveInner_1__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802B9FC8 00D4 .text      _load1stWaveInner_2__10Z2SceneMgrFv                          */
+/* 802B9FC8-802BA09C 00D4 .text      _load1stWaveInner_2__10Z2SceneMgrFv                          Function */
 // Z2SceneMgr::_load1stWaveInner_2(void)
 #pragma push
 #pragma optimization_level 0
@@ -661,7 +856,7 @@ asm void _load1stWaveInner_2__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802BA09C 0084 .text      check1stDynamicWave__10Z2SceneMgrFv                          */
+/* 802BA09C-802BA120 0084 .text      check1stDynamicWave__10Z2SceneMgrFv                          Function */
 // Z2SceneMgr::check1stDynamicWave(void)
 #pragma push
 #pragma optimization_level 0
@@ -672,7 +867,7 @@ asm void check1stDynamicWave__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802BA120 0174 .text      load2ndDynamicWave__10Z2SceneMgrFv                           */
+/* 802BA120-802BA294 0174 .text      load2ndDynamicWave__10Z2SceneMgrFv                           Function */
 // Z2SceneMgr::load2ndDynamicWave(void)
 #pragma push
 #pragma optimization_level 0
@@ -683,7 +878,7 @@ asm void load2ndDynamicWave__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802BA294 02D8 .text      sceneBgmStart__10Z2SceneMgrFv                                */
+/* 802BA294-802BA56C 02D8 .text      sceneBgmStart__10Z2SceneMgrFv                                Function */
 // Z2SceneMgr::sceneBgmStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -694,7 +889,7 @@ asm void sceneBgmStart__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802BA56C 0054 .text      loadStaticWaves__10Z2SceneMgrFv                              */
+/* 802BA56C-802BA5C0 0054 .text      loadStaticWaves__10Z2SceneMgrFv                              Function */
 // Z2SceneMgr::loadStaticWaves(void)
 #pragma push
 #pragma optimization_level 0
@@ -705,13 +900,13 @@ asm void loadStaticWaves__10Z2SceneMgrFv() {
 }
 #pragma pop
 
-/* 802BA5C0 0008 .text      checkFirstWaves__10Z2SceneMgrFv                              */
+/* 802BA5C0-802BA5C8 0008 .text      checkFirstWaves__10Z2SceneMgrFv                              ReturnIntegerFunction */
 // Z2SceneMgr::checkFirstWaves(void)
 int checkFirstWaves__10Z2SceneMgrFv() {
 	return 0;
 }
 
-/* 802BA5C8 0068 .text      eraseSeWave__10Z2SceneMgrFUl                                 */
+/* 802BA5C8-802BA630 0068 .text      eraseSeWave__10Z2SceneMgrFUl                                 Function */
 // Z2SceneMgr::eraseSeWave(u32)
 #pragma push
 #pragma optimization_level 0
@@ -722,7 +917,7 @@ asm void eraseSeWave__10Z2SceneMgrFUl() {
 }
 #pragma pop
 
-/* 802BA630 0068 .text      eraseBgmWave__10Z2SceneMgrFUl                                */
+/* 802BA630-802BA698 0068 .text      eraseBgmWave__10Z2SceneMgrFUl                                Function */
 // Z2SceneMgr::eraseBgmWave(u32)
 #pragma push
 #pragma optimization_level 0
@@ -733,7 +928,7 @@ asm void eraseBgmWave__10Z2SceneMgrFUl() {
 }
 #pragma pop
 
-/* 802BA698 006C .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         */
+/* 802BA698-802BA704 006C .text      getWaveLoadStatus__10Z2SceneMgrFUlUl                         Function */
 // Z2SceneMgr::getWaveLoadStatus(u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -744,7 +939,7 @@ asm void getWaveLoadStatus__10Z2SceneMgrFUlUl() {
 }
 #pragma pop
 
-/* 802BA704 006C .text      loadSeWave__10Z2SceneMgrFUl                                  */
+/* 802BA704-802BA770 006C .text      loadSeWave__10Z2SceneMgrFUl                                  Function */
 // Z2SceneMgr::loadSeWave(u32)
 #pragma push
 #pragma optimization_level 0
@@ -755,7 +950,7 @@ asm void loadSeWave__10Z2SceneMgrFUl() {
 }
 #pragma pop
 
-/* 802BA770 006C .text      loadBgmWave__10Z2SceneMgrFUl                                 */
+/* 802BA770-802BA7DC 006C .text      loadBgmWave__10Z2SceneMgrFUl                                 Function */
 // Z2SceneMgr::loadBgmWave(u32)
 #pragma push
 #pragma optimization_level 0

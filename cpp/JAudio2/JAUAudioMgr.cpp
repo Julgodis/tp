@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ct__7JASHeapFP11JASDisposer();
+/* Function             */
+extern void __defctor__7JASHeapFv();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ct__7JASHeapFP11JASDisposer();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A4A5C 0024 .text      __defctor__7JASHeapFv                                        */
+/* 802A4A5C-802A4A80 0024 .text      __defctor__7JASHeapFv                                        Function */
 // JASHeap::__defctor(void)
 #pragma push
 #pragma optimization_level 0

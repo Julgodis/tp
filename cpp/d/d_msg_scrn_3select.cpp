@@ -20,76 +20,209 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+/* Function             */
 extern void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+/* Function             */
 extern void setParam__16dSelect_cursor_cFfffff();
+/* Function             */
 extern void setAlphaRate__16dSelect_cursor_cFf();
+/* Function             */
+extern void __ct__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void __dt__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void __dt__14J2DAnmColorKeyFv();
+/* Function             */
+extern void isSelect__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void setString__17dMsgScrn3Select_cFPcPcPc();
+/* Function             */
+extern void setRubyString__17dMsgScrn3Select_cFPcPcPc();
+/* Function             */
+extern void translate__17dMsgScrn3Select_cFff();
+/* Function             */
+extern void draw__17dMsgScrn3Select_cFff();
+/* Function             */
+extern void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc();
+/* Function             */
+extern void selAnimeMove__17dMsgScrn3Select_cFUcUcb();
+/* Function             */
+extern void selAnimeEnd__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getTextBoxWidth__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getFontSize__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getRubyFontSize__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getCharSpace__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getRubyCharSpace__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void getTextBoxGlobalPosX__17dMsgScrn3Select_cFi();
+/* Function             */
+extern void getTextBoxGlobalPosY__17dMsgScrn3Select_cFi();
+/* Function             */
+extern void open1Proc__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void open2Proc__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void waitProc__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void selectProc__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void changeProc__17dMsgScrn3Select_cFv();
+/* Function             */
+extern void closeProc__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void selectScale__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void selectTrans__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void selectAnimeTransform__17dMsgScrn3Select_cFi();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_3select_cpp();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void getGlobalPosX__8CPaneMgrFv();
+/* Function             */
 extern void getGlobalPosY__8CPaneMgrFv();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void paneScale__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void show__13CPaneMgrAlphaFv();
+/* Function             */
 extern void hide__13CPaneMgrAlphaFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void getBounds__7J2DPaneFv();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* FirstParamFunction   */
 extern u32 getStringPtr__10J2DTextBoxCFv(u8*);
+/* Function             */
 extern void setString__10J2DTextBoxFsPCce();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80399708[288];
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_msg_scrn_3select__LIT_4497[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_msg_scrn_3select__LIT_4520[12];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_scrn_3select__stringBase0[96];
-SECTION_DATA extern const void* __vt__10J2DAnmBase[4];
-SECTION_DATA extern const void* __vt__10JUTNameTab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10J2DAnmBase[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JUTNameTab[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_msg_scrn_3select__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3754[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3755[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3756[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3757[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3758[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_scrn_3select__LIT_3759[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_msg_scrn_3select__process[76];
-SECTION_DATA extern const void* __vt__17dMsgScrn3Select_c[4];
-SECTION_DATA extern const void* __vt__14J2DAnmColorKey[5];
-SECTION_DATA extern const void* __vt__11J2DAnmColor[5];
+/* InitializedData      */
+SECTION_DATA extern u8 data_803C0CA0[72];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dMsgScrn3Select_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J2DAnmColorKey[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J2DAnmColor[5];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_3select__LIT_3909[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3910;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_3select__LIT_3911;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4154;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4155;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4156[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_3select__LIT_4157[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_3select__LIT_4158[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_scrn_3select__LIT_4345;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_3select__LIT_4434;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_3select__LIT_4604;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_3select__LIT_4605;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_3select__LIT_4606;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_3select__LIT_4607[8];
 }
 
@@ -99,7 +232,19 @@ SECTION_SDATA2 extern u8 d_d_msg_scrn_3select__LIT_4607[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399708 0120 .rodata    tag_name$3763                                                */
+/* 80399840-803998A0 005D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399840 = "zelda_window_3menu.blo";
+SECTION_DEAD const char* const stringBase_80399857 = "zelda_window_3menu.bck";
+SECTION_DEAD const char* const stringBase_8039986E = "zelda_window_3menu.bpk";
+SECTION_DEAD const char* const stringBase_80399885 = "zelda_window_3menu.btk";
+SECTION_DEAD const char* const stringBase_8039989C = "";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039989D = "\0\0";
+#pragma pop
+/* 80399708-80399828 0120 .rodata    tag_name$3763                                                InitializedData */
 SECTION_RODATA const u8 data_80399708[288] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x61, 0x5F, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x61, 0x5F, 0x67,
 	0x00, 0x00, 0x00, 0x00, 0x61, 0x5F, 0x67, 0x72, 0x00, 0x00, 0x00, 0x00, 0x00, 0x61, 0x5F, 0x6D,
@@ -120,20 +265,14 @@ SECTION_RODATA const u8 data_80399708[288] = {
 	0x77, 0x5F, 0x79, 0x65, 0x73, 0x5F, 0x31, 0x34, 0x73, 0x65, 0x6C, 0x5F, 0x70, 0x6F, 0x30, 0x32,
 	0x00, 0x63, 0x5F, 0x6B, 0x61, 0x68, 0x65, 0x6E, 0x63, 0x5F, 0x63, 0x75, 0x72, 0x73, 0x6F, 0x72,
 };
-/* 80399828 000C .rodata    @4497                                                        */
+/* 80399828-80399834 000C .rodata    @4497                                                        InitializedData */
 SECTION_RODATA const u8 d_d_msg_scrn_3select__LIT_4497[12] = {
 	0x43, 0x4C, 0x00, 0x00, 0x43, 0x98, 0x00, 0x00, 0x43, 0xCA, 0x00, 0x00,
 };
-/* 80399834 000C .rodata    @4520                                                        */
+/* 80399834-80399840 000C .rodata    @4520                                                        InitializedData */
 SECTION_RODATA const u8 d_d_msg_scrn_3select__LIT_4520[12] = {
 	0x43, 0x4C, 0x00, 0x00, 0x43, 0x98, 0x00, 0x00, 0x43, 0xCA, 0x00, 0x00,
 };
-/* 80399840 005D .rodata    @stringBase0                                                 */
-const char* const stringBase_80399840 = "zelda_window_3menu.blo";
-const char* const stringBase_80399857 = "zelda_window_3menu.bck";
-const char* const stringBase_8039986E = "zelda_window_3menu.bpk";
-const char* const stringBase_80399885 = "zelda_window_3menu.btk";
-const char* const stringBase_8039989C = "";
 }
 
 
@@ -142,36 +281,48 @@ const char* const stringBase_8039989C = "";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C0C00 0000 .data      ...data.0                                                    */
-/* 803C0C00 000C .data      cNullVec__6Z2Calc                                            */
+/* 803C0C00-803C0C00 0000 .data      ...data.0                                                    InitializedData */
+/* 803C0C00-803C0C0C 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_msg_scrn_3select__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C0C0C 000C .data      @3754                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3754[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xAA, 0x04,
+/* 803C0C0C-803C0C18 000C .data      @3754                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3754[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open1Proc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C18 000C .data      @3755                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3755[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xAA, 0xF4,
+/* 803C0C18-803C0C24 000C .data      @3755                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3755[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open2Proc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C24 000C .data      @3756                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3756[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xAC, 0x14,
+/* 803C0C24-803C0C30 000C .data      @3756                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3756[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)waitProc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C30 000C .data      @3757                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3757[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xAC, 0x44,
+/* 803C0C30-803C0C3C 000C .data      @3757                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3757[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)selectProc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C3C 000C .data      @3758                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3758[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xAE, 0x68,
+/* 803C0C3C-803C0C48 000C .data      @3758                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3758[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)changeProc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C48 000C .data      @3759                                                        */
-SECTION_DATA u8 d_d_msg_scrn_3select__LIT_3759[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x23, 0xB1, 0x48,
+/* 803C0C48-803C0C54 000C .data      @3759                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_scrn_3select__LIT_3759[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)closeProc__17dMsgScrn3Select_cFv,
 };
-/* 803C0C54 0048 .data      process                                                      */
+/* 803C0C54-803C0CA0 0048 .data      process                                                      InitializedData */
 SECTION_DATA u8 d_d_msg_scrn_3select__process[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -181,7 +332,7 @@ SECTION_DATA u8 d_d_msg_scrn_3select__process[76] = {
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 803C0CA0 0018 .data      tag_n$4921                                                   */
+/* 803C0CA0-803C0CE8 0018 .data      tag_n$4921                                                   InitializedData */
 SECTION_DATA u8 data_803C0CA0[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x61, 0x5F, 0x74, 0x00, 0x00, 0x00, 0x00, 0x00, 0x62, 0x5F, 0x74,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x63, 0x5F, 0x74,
@@ -190,8 +341,8 @@ SECTION_DATA u8 data_803C0CA0[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C0CE8 000C .data      __vt__17dMsgScrn3Select_c                                    */
-SECTION_DATA const  void* __vt__17dMsgScrn3Select_c[4] = {
+/* 803C0CE8-803C0CF8 000C .data      __vt__17dMsgScrn3Select_c                                    VTableData */
+SECTION_DATA void* __vt__17dMsgScrn3Select_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dMsgScrn3Select_cFv,
@@ -206,50 +357,50 @@ SECTION_DATA const  void* __vt__17dMsgScrn3Select_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454B58 0004 .sdata2    @3909                                                        */
+/* 80454B58-80454B5C 0004 .sdata2    @3909                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_3select__LIT_3909[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454B5C 0004 .sdata2    @3910                                                        */
+/* 80454B5C-80454B60 0004 .sdata2    @3910                                                        Float32Data */
 // 0x433e0000
 SECTION_SDATA2 f32 LIT_3910 = 190.000000f;
-/* 80454B60 0004 .sdata2    @3911                                                        */
+/* 80454B60-80454B64 0004 .sdata2    @3911                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_scrn_3select__LIT_3911 = 1.000000f;
-/* 80454B64 0004 .sdata2    @4154                                                        */
+/* 80454B64-80454B68 0004 .sdata2    @4154                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_4154 = 0.500000f;
-/* 80454B68 0004 .sdata2    @4155                                                        */
+/* 80454B68-80454B6C 0004 .sdata2    @4155                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 LIT_4155 = 3.000000f;
-/* 80454B6C 0004 .sdata2    @4156                                                        */
+/* 80454B6C-80454B70 0004 .sdata2    @4156                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4156[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 80454B70 0004 .sdata2    @4157                                                        */
+/* 80454B70-80454B74 0004 .sdata2    @4157                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_3select__LIT_4157[4] = {
 	0x3F, 0x33, 0x33, 0x33,
 };
-/* 80454B74 0004 .sdata2    @4158                                                        */
+/* 80454B74-80454B78 0004 .sdata2    @4158                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_3select__LIT_4158[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80454B78 0008 .sdata2    @4345                                                        */
+/* 80454B78-80454B80 0008 .sdata2    @4345                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_msg_scrn_3select__LIT_4345 = 4503601774854144.000000;
-/* 80454B80 0004 .sdata2    @4434                                                        */
+/* 80454B80-80454B84 0004 .sdata2    @4434                                                        Float32Data */
 // 0x43470000
 SECTION_SDATA2 f32 d_d_msg_scrn_3select__LIT_4434 = 199.000000f;
-/* 80454B84 0004 .sdata2    @4604                                                        */
+/* 80454B84-80454B88 0004 .sdata2    @4604                                                        Float32Data */
 // 0x43978000
 SECTION_SDATA2 f32 d_d_msg_scrn_3select__LIT_4604 = 303.000000f;
-/* 80454B88 0004 .sdata2    @4605                                                        */
+/* 80454B88-80454B8C 0004 .sdata2    @4605                                                        Float32Data */
 // 0x43960000
 SECTION_SDATA2 f32 d_d_msg_scrn_3select__LIT_4605 = 300.000000f;
-/* 80454B8C 0004 .sdata2    @4606                                                        */
+/* 80454B8C-80454B90 0004 .sdata2    @4606                                                        Float32Data */
 // 0x43c98000
 SECTION_SDATA2 f32 d_d_msg_scrn_3select__LIT_4606 = 403.000000f;
-/* 80454B90 0004 .sdata2    @4607                                                        */
+/* 80454B90-80454B98 0004 .sdata2    @4607                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_3select__LIT_4607[8] = {
 	0x43, 0xC8, 0x00, 0x00,
 	/* padding */
@@ -263,7 +414,7 @@ SECTION_SDATA2 u8 d_d_msg_scrn_3select__LIT_4607[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802390B4 0818 .text      __ct__17dMsgScrn3Select_cFv                                  */
+/* 802390B4-802398CC 0818 .text      __ct__17dMsgScrn3Select_cFv                                  Function */
 // dMsgScrn3Select_c::dMsgScrn3Select_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -274,7 +425,7 @@ asm void __ct__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 802398CC 0314 .text      __dt__17dMsgScrn3Select_cFv                                  */
+/* 802398CC-80239BE0 0314 .text      __dt__17dMsgScrn3Select_cFv                                  Function */
 // dMsgScrn3Select_c::~dMsgScrn3Select_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -285,7 +436,7 @@ asm void __dt__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 80239BE0 0084 .text      __dt__14J2DAnmColorKeyFv                                     */
+/* 80239BE0-80239C64 0084 .text      __dt__14J2DAnmColorKeyFv                                     Function */
 // J2DAnmColorKey::~J2DAnmColorKey(void)
 #pragma push
 #pragma optimization_level 0
@@ -296,7 +447,7 @@ asm void __dt__14J2DAnmColorKeyFv() {
 }
 #pragma pop
 
-/* 80239C64 0014 .text      isSelect__17dMsgScrn3Select_cFv                              */
+/* 80239C64-80239C78 0014 .text      isSelect__17dMsgScrn3Select_cFv                              Function */
 // dMsgScrn3Select_c::isSelect(void)
 #pragma push
 #pragma optimization_level 0
@@ -307,8 +458,8 @@ asm void isSelect__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 80239C78 0090 .text      setString__17dMsgScrn3Select_cFPcPcPc                        */
-// dMsgScrn3Select_c::setString(s8*, s8*, s8*)
+/* 80239C78-80239D08 0090 .text      setString__17dMsgScrn3Select_cFPcPcPc                        Function */
+// dMsgScrn3Select_c::setString(char*, char*, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,8 +469,8 @@ asm void setString__17dMsgScrn3Select_cFPcPcPc() {
 }
 #pragma pop
 
-/* 80239D08 0090 .text      setRubyString__17dMsgScrn3Select_cFPcPcPc                    */
-// dMsgScrn3Select_c::setRubyString(s8*, s8*, s8*)
+/* 80239D08-80239D98 0090 .text      setRubyString__17dMsgScrn3Select_cFPcPcPc                    Function */
+// dMsgScrn3Select_c::setRubyString(char*, char*, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,7 +480,7 @@ asm void setRubyString__17dMsgScrn3Select_cFPcPcPc() {
 }
 #pragma pop
 
-/* 80239D98 003C .text      translate__17dMsgScrn3Select_cFff                            */
+/* 80239D98-80239DD4 003C .text      translate__17dMsgScrn3Select_cFff                            Function */
 // dMsgScrn3Select_c::translate(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -340,7 +491,7 @@ asm void translate__17dMsgScrn3Select_cFff() {
 }
 #pragma pop
 
-/* 80239DD4 02C0 .text      draw__17dMsgScrn3Select_cFff                                 */
+/* 80239DD4-8023A094 02C0 .text      draw__17dMsgScrn3Select_cFff                                 Function */
 // dMsgScrn3Select_c::draw(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -351,7 +502,7 @@ asm void draw__17dMsgScrn3Select_cFff() {
 }
 #pragma pop
 
-/* 8023A094 0304 .text      selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc                  */
+/* 8023A094-8023A398 0304 .text      selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc                  Function */
 // dMsgScrn3Select_c::selAnimeInit(u8, u8, u8, f32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -362,7 +513,7 @@ asm void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc() {
 }
 #pragma pop
 
-/* 8023A398 02E8 .text      selAnimeMove__17dMsgScrn3Select_cFUcUcb                      */
+/* 8023A398-8023A680 02E8 .text      selAnimeMove__17dMsgScrn3Select_cFUcUcb                      Function */
 // dMsgScrn3Select_c::selAnimeMove(u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -373,7 +524,7 @@ asm void selAnimeMove__17dMsgScrn3Select_cFUcUcb() {
 }
 #pragma pop
 
-/* 8023A680 02B4 .text      selAnimeEnd__17dMsgScrn3Select_cFv                           */
+/* 8023A680-8023A934 02B4 .text      selAnimeEnd__17dMsgScrn3Select_cFv                           Function */
 // dMsgScrn3Select_c::selAnimeEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -384,7 +535,7 @@ asm void selAnimeEnd__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A934 0018 .text      getTextBoxWidth__17dMsgScrn3Select_cFv                       */
+/* 8023A934-8023A94C 0018 .text      getTextBoxWidth__17dMsgScrn3Select_cFv                       Function */
 // dMsgScrn3Select_c::getTextBoxWidth(void)
 #pragma push
 #pragma optimization_level 0
@@ -395,7 +546,7 @@ asm void getTextBoxWidth__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A94C 0010 .text      getFontSize__17dMsgScrn3Select_cFv                           */
+/* 8023A94C-8023A95C 0010 .text      getFontSize__17dMsgScrn3Select_cFv                           Function */
 // dMsgScrn3Select_c::getFontSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -406,7 +557,7 @@ asm void getFontSize__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A95C 0020 .text      getRubyFontSize__17dMsgScrn3Select_cFv                       */
+/* 8023A95C-8023A97C 0020 .text      getRubyFontSize__17dMsgScrn3Select_cFv                       Function */
 // dMsgScrn3Select_c::getRubyFontSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -417,7 +568,7 @@ asm void getRubyFontSize__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A97C 0010 .text      getCharSpace__17dMsgScrn3Select_cFv                          */
+/* 8023A97C-8023A98C 0010 .text      getCharSpace__17dMsgScrn3Select_cFv                          Function */
 // dMsgScrn3Select_c::getCharSpace(void)
 #pragma push
 #pragma optimization_level 0
@@ -428,7 +579,7 @@ asm void getCharSpace__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A98C 0020 .text      getRubyCharSpace__17dMsgScrn3Select_cFv                      */
+/* 8023A98C-8023A9AC 0020 .text      getRubyCharSpace__17dMsgScrn3Select_cFv                      Function */
 // dMsgScrn3Select_c::getRubyCharSpace(void)
 #pragma push
 #pragma optimization_level 0
@@ -439,7 +590,7 @@ asm void getRubyCharSpace__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023A9AC 002C .text      getTextBoxGlobalPosX__17dMsgScrn3Select_cFi                  */
+/* 8023A9AC-8023A9D8 002C .text      getTextBoxGlobalPosX__17dMsgScrn3Select_cFi                  Function */
 // dMsgScrn3Select_c::getTextBoxGlobalPosX(int)
 #pragma push
 #pragma optimization_level 0
@@ -450,7 +601,7 @@ asm void getTextBoxGlobalPosX__17dMsgScrn3Select_cFi() {
 }
 #pragma pop
 
-/* 8023A9D8 002C .text      getTextBoxGlobalPosY__17dMsgScrn3Select_cFi                  */
+/* 8023A9D8-8023AA04 002C .text      getTextBoxGlobalPosY__17dMsgScrn3Select_cFi                  Function */
 // dMsgScrn3Select_c::getTextBoxGlobalPosY(int)
 #pragma push
 #pragma optimization_level 0
@@ -461,7 +612,7 @@ asm void getTextBoxGlobalPosY__17dMsgScrn3Select_cFi() {
 }
 #pragma pop
 
-/* 8023AA04 00F0 .text      open1Proc__17dMsgScrn3Select_cFv                             */
+/* 8023AA04-8023AAF4 00F0 .text      open1Proc__17dMsgScrn3Select_cFv                             Function */
 // dMsgScrn3Select_c::open1Proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -472,7 +623,7 @@ asm void open1Proc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023AAF4 0120 .text      open2Proc__17dMsgScrn3Select_cFv                             */
+/* 8023AAF4-8023AC14 0120 .text      open2Proc__17dMsgScrn3Select_cFv                             Function */
 // dMsgScrn3Select_c::open2Proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -483,7 +634,7 @@ asm void open2Proc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023AC14 0030 .text      waitProc__17dMsgScrn3Select_cFv                              */
+/* 8023AC14-8023AC44 0030 .text      waitProc__17dMsgScrn3Select_cFv                              Function */
 // dMsgScrn3Select_c::waitProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -494,7 +645,7 @@ asm void waitProc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023AC44 0224 .text      selectProc__17dMsgScrn3Select_cFv                            */
+/* 8023AC44-8023AE68 0224 .text      selectProc__17dMsgScrn3Select_cFv                            Function */
 // dMsgScrn3Select_c::selectProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -505,7 +656,7 @@ asm void selectProc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023AE68 02E0 .text      changeProc__17dMsgScrn3Select_cFv                            */
+/* 8023AE68-8023B148 02E0 .text      changeProc__17dMsgScrn3Select_cFv                            Function */
 // dMsgScrn3Select_c::changeProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -516,7 +667,7 @@ asm void changeProc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023B148 00E0 .text      closeProc__17dMsgScrn3Select_cFv                             */
+/* 8023B148-8023B228 00E0 .text      closeProc__17dMsgScrn3Select_cFv                             Function */
 // dMsgScrn3Select_c::closeProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +678,7 @@ asm void closeProc__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023B228 0284 .text      selectScale__17dMsgScrn3Select_cFv                           */
+/* 8023B228-8023B4AC 0284 .text      selectScale__17dMsgScrn3Select_cFv                           Function */
 // dMsgScrn3Select_c::selectScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -538,7 +689,7 @@ asm void selectScale__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023B4AC 03C4 .text      selectTrans__17dMsgScrn3Select_cFv                           */
+/* 8023B4AC-8023B870 03C4 .text      selectTrans__17dMsgScrn3Select_cFv                           Function */
 // dMsgScrn3Select_c::selectTrans(void)
 #pragma push
 #pragma optimization_level 0
@@ -549,7 +700,7 @@ asm void selectTrans__17dMsgScrn3Select_cFv() {
 }
 #pragma pop
 
-/* 8023B870 00A4 .text      selectAnimeTransform__17dMsgScrn3Select_cFi                  */
+/* 8023B870-8023B914 00A4 .text      selectAnimeTransform__17dMsgScrn3Select_cFi                  Function */
 // dMsgScrn3Select_c::selectAnimeTransform(int)
 #pragma push
 #pragma optimization_level 0
@@ -560,7 +711,7 @@ asm void selectAnimeTransform__17dMsgScrn3Select_cFi() {
 }
 #pragma pop
 
-/* 8023B914 00A0 .text      __sinit_d_msg_scrn_3select_cpp                               */
+/* 8023B914-8023B9B4 00A0 .text      __sinit_d_msg_scrn_3select_cpp                               SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

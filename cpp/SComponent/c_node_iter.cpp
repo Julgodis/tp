@@ -10,10 +10,21 @@
 
 struct node_class;
 
+extern void cNdIt_Method(node_class*, int (*)(node_class*, void*), void*); /* cNdIt_Method__FP10node_classPFP10node_classPv_iPv */
+extern void cNdIt_Judge(node_class*, void* (*)(node_class*, void*), void*); /* cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv */
+
 extern "C" {
+/* Function             */
+extern void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+/* Function             */
+extern void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -23,7 +34,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266324 0090 .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            */
+/* 80266324-802663B4 0090 .text      cNdIt_Method__FP10node_classPFP10node_classPv_iPv            Function */
 }
 
 #pragma push
@@ -36,7 +47,7 @@ asm void cNdIt_Method(node_class*, int (*)(node_class*, void*), void*) {
 #pragma pop
 
 extern "C" {
-/* 802663B4 008C .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            */
+/* 802663B4-80266440 008C .text      cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv            Function */
 }
 
 #pragma push

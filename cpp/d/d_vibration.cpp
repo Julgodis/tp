@@ -13,36 +13,87 @@ extern void dKy_darkworld_check(void); /* dKy_darkworld_check__Fv */
 extern void cM_rnd(void); /* cM_rnd__Fv */
 
 extern "C" {
+/* Function             */
 extern void checkVibration__19dSv_player_config_cCFv();
+/* Function             */
 extern void func_8006F168();
+/* Function             */
 extern void func_8006F184();
+/* Function             */
 extern void func_8006F1A4();
+/* Function             */
 extern void func_8006F1D8();
+/* Function             */
+extern void Run__12dVibration_cFv();
+/* Function             */
+extern void StartShock__12dVibration_cFii4cXyz();
+/* Function             */
+extern void StartQuake__12dVibration_cFii4cXyz();
+/* Function             */
+extern void StartQuake__12dVibration_cFPCUcii4cXyz();
+/* Function             */
+extern void StopQuake__12dVibration_cFi();
+/* Function             */
 extern void Kill__12dVibration_cFv();
+/* Function             */
+extern void CheckQuake__12dVibration_cFv();
+/* Function             */
 extern void setDefault__12dVibration_cFv();
+/* Function             */
+extern void Init__12dVibration_cFv();
+/* Function             */
+extern void Pause__12dVibration_cFv();
+/* Function             */
+extern void Remove__12dVibration_cFv();
+/* Function             */
 extern void StartShake__9dCamera_cFlPUcl4cXyz();
+/* Function             */
 extern void StopShake__9dCamera_cFv();
+/* Function             */
 extern void dCam_getBody__Fv();
+/* Function             */
 extern void dKy_darkworld_check__Fv();
+/* Function             */
 extern void __pl__4cXyzCFRC3Vec();
+/* Function             */
 extern void norm__4cXyzCFv();
+/* Function             */
 extern void cM_rnd__Fv();
+/* Function             */
 extern void stopMotor__Q210JUTGamePad7CRumbleFib();
+/* Function             */
 extern void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+/* Function             */
 extern void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+/* Function             */
 extern void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 MS_patt__12dVibration_c[88];
+/* InitializedData      */
 SECTION_RODATA extern const u8 CS_patt__12dVibration_c[88];
+/* InitializedData      */
 SECTION_RODATA extern const u8 MQ_patt__12dVibration_c[80];
+/* InitializedData      */
 SECTION_RODATA extern const u8 CQ_patt__12dVibration_c[80];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450F50[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450F58[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_vibration__LIT_3756;
 }
 
@@ -52,7 +103,7 @@ SECTION_SDATA2 extern f64 d_d_vibration__LIT_3756;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452620 0008 .sdata2    @3756                                                        */
+/* 80452620-80452628 0008 .sdata2    @3756                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_vibration__LIT_3756 = 4503601774854144.000000;
 }
@@ -63,9 +114,9 @@ SECTION_SDATA2 f64 d_d_vibration__LIT_3756 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450F50 0008 .sbss      data$3831                                                    */
+/* 80450F50-80450F58 0008 .sbss      data$3831                                                    ZeroInitializedData */
 SECTION_SBSS u8 data_80450F50[8];
-/* 80450F58 0008 .sbss      data_80450F58                                                */
+/* 80450F58-80450F60 0008 .sbss      data_80450F58                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450F58[8];
 }
 
@@ -75,8 +126,8 @@ SECTION_SBSS u8 data_80450F58[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8006F168 001C .text      makedata__25@unnamed@d_vibration_cpp@FPUsUll                 */
-// @unnamed@d_vibration_cpp@::makedata(u16*, u32, s32)
+/* 8006F168-8006F184 001C .text      makedata__25@unnamed@d_vibration_cpp@FPUsUll                 Function */
+// @unnamed@d_vibration_cpp@::makedata(u16*, u32, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,8 +137,8 @@ asm void func_8006F168() {
 }
 #pragma pop
 
-/* 8006F184 0020 .text      rollshift__25@unnamed@d_vibration_cpp@FUlll                  */
-// @unnamed@d_vibration_cpp@::rollshift(u32, s32, s32)
+/* 8006F184-8006F1A4 0020 .text      rollshift__25@unnamed@d_vibration_cpp@FUlll                  Function */
+// @unnamed@d_vibration_cpp@::rollshift(u32, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,8 +148,8 @@ asm void func_8006F184() {
 }
 #pragma pop
 
-/* 8006F1A4 0034 .text      makebits__25@unnamed@d_vibration_cpp@FUlll                   */
-// @unnamed@d_vibration_cpp@::makebits(u32, s32, s32)
+/* 8006F1A4-8006F1D8 0034 .text      makebits__25@unnamed@d_vibration_cpp@FUlll                   Function */
+// @unnamed@d_vibration_cpp@::makebits(u32, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,8 +159,8 @@ asm void func_8006F1A4() {
 }
 #pragma pop
 
-/* 8006F1D8 0090 .text      randombit__25@unnamed@d_vibration_cpp@Fll                    */
-// @unnamed@d_vibration_cpp@::randombit(s32, s32)
+/* 8006F1D8-8006F268 0090 .text      randombit__25@unnamed@d_vibration_cpp@Fll                    Function */
+// @unnamed@d_vibration_cpp@::randombit(long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +170,7 @@ asm void func_8006F1D8() {
 }
 #pragma pop
 
-/* 8006F268 07BC .text      Run__12dVibration_cFv                                        */
+/* 8006F268-8006FA24 07BC .text      Run__12dVibration_cFv                                        Function */
 // dVibration_c::Run(void)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +181,7 @@ asm void Run__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FA24 00EC .text      StartShock__12dVibration_cFii4cXyz                           */
+/* 8006FA24-8006FB10 00EC .text      StartShock__12dVibration_cFii4cXyz                           Function */
 // dVibration_c::StartShock(int, int, cXyz)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +192,7 @@ asm void StartShock__12dVibration_cFii4cXyz() {
 }
 #pragma pop
 
-/* 8006FB10 00FC .text      StartQuake__12dVibration_cFii4cXyz                           */
+/* 8006FB10-8006FC0C 00FC .text      StartQuake__12dVibration_cFii4cXyz                           Function */
 // dVibration_c::StartQuake(int, int, cXyz)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +203,7 @@ asm void StartQuake__12dVibration_cFii4cXyz() {
 }
 #pragma pop
 
-/* 8006FC0C 0188 .text      StartQuake__12dVibration_cFPCUcii4cXyz                       */
+/* 8006FC0C-8006FD94 0188 .text      StartQuake__12dVibration_cFPCUcii4cXyz                       Function */
 // dVibration_c::StartQuake(const u8*, int, int, cXyz)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +214,7 @@ asm void StartQuake__12dVibration_cFPCUcii4cXyz() {
 }
 #pragma pop
 
-/* 8006FD94 006C .text      StopQuake__12dVibration_cFi                                  */
+/* 8006FD94-8006FE00 006C .text      StopQuake__12dVibration_cFi                                  Function */
 // dVibration_c::StopQuake(int)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +225,7 @@ asm void StopQuake__12dVibration_cFi() {
 }
 #pragma pop
 
-/* 8006FE00 005C .text      Kill__12dVibration_cFv                                       */
+/* 8006FE00-8006FE5C 005C .text      Kill__12dVibration_cFv                                       Function */
 // dVibration_c::Kill(void)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +236,7 @@ asm void Kill__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FE5C 0028 .text      CheckQuake__12dVibration_cFv                                 */
+/* 8006FE5C-8006FE84 0028 .text      CheckQuake__12dVibration_cFv                                 Function */
 // dVibration_c::CheckQuake(void)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +247,7 @@ asm void CheckQuake__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FE84 0080 .text      setDefault__12dVibration_cFv                                 */
+/* 8006FE84-8006FF04 0080 .text      setDefault__12dVibration_cFv                                 Function */
 // dVibration_c::setDefault(void)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +258,7 @@ asm void setDefault__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FF04 0034 .text      Init__12dVibration_cFv                                       */
+/* 8006FF04-8006FF38 0034 .text      Init__12dVibration_cFv                                       Function */
 // dVibration_c::Init(void)
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +269,7 @@ asm void Init__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FF38 00C0 .text      Pause__12dVibration_cFv                                      */
+/* 8006FF38-8006FFF8 00C0 .text      Pause__12dVibration_cFv                                      Function */
 // dVibration_c::Pause(void)
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +280,7 @@ asm void Pause__12dVibration_cFv() {
 }
 #pragma pop
 
-/* 8006FFF8 0020 .text      Remove__12dVibration_cFv                                     */
+/* 8006FFF8-80070018 0020 .text      Remove__12dVibration_cFv                                     Function */
 // dVibration_c::Remove(void)
 #pragma push
 #pragma optimization_level 0

@@ -10,14 +10,28 @@
 
 struct STRUCT_DSP_TASK;
 
+extern void DSPAddPriorTask(STRUCT_DSP_TASK*); /* DSPAddPriorTask__FP15STRUCT_DSP_TASK */
+
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
+extern void DSPAddTask();
+/* Function             */
+extern void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __DSP_boot_task();
+/* Function             */
 extern void __DSP_insert_task();
+/* InitializedData      */
 SECTION_RODATA extern const u8 osdsp__LIT_81[28];
+/* InitializedData      */
 SECTION_RODATA extern const u8 osdsp__LIT_88[36];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 DSP_prior_task[4];
 }
 
@@ -27,14 +41,14 @@ SECTION_SBSS extern u8 DSP_prior_task[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039B8B8 001A .rodata    @81                                                          */
+/* 8039B8B8-8039B8D4 001A .rodata    @81                                                          InitializedData */
 SECTION_RODATA const u8 osdsp__LIT_81[28] = {
 	0x50, 0x72, 0x69, 0x6F, 0x72, 0x20, 0x54, 0x61, 0x73, 0x6B, 0x20, 0x69, 0x73, 0x20, 0x6E, 0x6F,
 	0x74, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 8039B8D4 001F .rodata    @88                                                          */
+/* 8039B8D4-8039B8F8 001F .rodata    @88                                                          InitializedData */
 SECTION_RODATA const u8 osdsp__LIT_88[36] = {
 	0x41, 0x6C, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x65, 0x64, 0x20, 0x70,
 	0x72, 0x69, 0x6F, 0x72, 0x20, 0x44, 0x53, 0x50, 0x20, 0x74, 0x61, 0x73, 0x6B, 0x0A, 0x00,
@@ -49,7 +63,7 @@ SECTION_RODATA const u8 osdsp__LIT_88[36] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029EA00 0084 .text      DSPAddTask                                                   */
+/* 8029EA00-8029EA84 0084 .text      DSPAddTask                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +74,7 @@ asm void DSPAddTask() {
 }
 #pragma pop
 
-/* 8029EAA0 007C .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         */
+/* 8029EAA0-8029EB1C 007C .text      DSPAddPriorTask__FP15STRUCT_DSP_TASK                         Function */
 }
 
 #pragma push

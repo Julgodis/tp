@@ -9,45 +9,93 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSCancelAlarm();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSLockSramEx();
+/* Function             */
 extern void __OSUnlockSramEx();
+/* Function             */
 extern void EXISetExiCallback();
+/* Function             */
 extern void EXIProbe();
+/* Function             */
 extern void EXIProbeEx();
+/* Function             */
 extern void EXIAttach();
+/* Function             */
 extern void EXIDetach();
+/* Function             */
 extern void EXILock();
+/* Function             */
 extern void EXIUnlock();
+/* Function             */
 extern void EXIGetState();
+/* Function             */
 extern void EXIGetID();
+/* ReturnFunction       */
 extern void __CARDDefaultApiCallback();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDExtHandler();
+/* Function             */
 extern void __CARDExiHandler();
+/* Function             */
 extern void __CARDUnlockedHandler();
+/* Function             */
 extern void __CARDEnableInterrupt();
+/* Function             */
 extern void __CARDReadStatus();
+/* Function             */
 extern void __CARDReadVendorID();
+/* Function             */
 extern void __CARDClearStatus();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* Function             */
 extern void CARDGetFastMode();
+/* Function             */
 extern void __CARDUnlock();
+/* Function             */
 extern void __CARDRead();
+/* Function             */
 extern void __CARDVerify();
+/* Function             */
 extern void IsCard();
+/* Function             */
+extern void CARDProbe();
+/* Function             */
+extern void CARDProbeEx();
+/* Function             */
 extern void DoMount();
+/* Function             */
 extern void __CARDMountCallback();
+/* Function             */
 extern void CARDMountAsync();
+/* Function             */
+extern void CARDMount();
+/* Function             */
 extern void DoUnmount();
+/* Function             */
+extern void CARDUnmount();
+/* InitializedData      */
 SECTION_DATA extern u8 SectorSizeTable[32];
+/* InitializedData      */
 SECTION_DATA extern u8 LatencyTable[32];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450A70[8];
 }
 
@@ -57,12 +105,12 @@ SECTION_SDATA extern u8 merged_80450A70[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D2000 0020 .data      SectorSizeTable                                              */
+/* 803D2000-803D2020 0020 .data      SectorSizeTable                                              InitializedData */
 SECTION_DATA u8 SectorSizeTable[32] = {
 	0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00,
 	0x00, 0x02, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803D2020 0020 .data      LatencyTable                                                 */
+/* 803D2020-803D2040 0020 .data      LatencyTable                                                 InitializedData */
 SECTION_DATA u8 LatencyTable[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x00,
@@ -75,7 +123,7 @@ SECTION_DATA u8 LatencyTable[32] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80356948 00CC .text      IsCard                                                       */
+/* 80356948-80356A14 00CC .text      IsCard                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +133,7 @@ asm void IsCard() {
 }
 #pragma pop
 
-/* 80356A14 0038 .text      CARDProbe                                                    */
+/* 80356A14-80356A4C 0038 .text      CARDProbe                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +143,7 @@ asm void CARDProbe() {
 }
 #pragma pop
 
-/* 80356A4C 017C .text      CARDProbeEx                                                  */
+/* 80356A4C-80356BC8 017C .text      CARDProbeEx                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +153,7 @@ asm void CARDProbeEx() {
 }
 #pragma pop
 
-/* 80356BC8 0454 .text      DoMount                                                      */
+/* 80356BC8-8035701C 0454 .text      DoMount                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +163,7 @@ asm void DoMount() {
 }
 #pragma pop
 
-/* 8035701C 0138 .text      __CARDMountCallback                                          */
+/* 8035701C-80357154 0138 .text      __CARDMountCallback                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +173,7 @@ asm void __CARDMountCallback() {
 }
 #pragma pop
 
-/* 80357154 01A0 .text      CARDMountAsync                                               */
+/* 80357154-803572F4 01A0 .text      CARDMountAsync                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +183,7 @@ asm void CARDMountAsync() {
 }
 #pragma pop
 
-/* 803572F4 0048 .text      CARDMount                                                    */
+/* 803572F4-8035733C 0048 .text      CARDMount                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +193,7 @@ asm void CARDMount() {
 }
 #pragma pop
 
-/* 8035733C 009C .text      DoUnmount                                                    */
+/* 8035733C-803573D8 009C .text      DoUnmount                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +203,7 @@ asm void DoUnmount() {
 }
 #pragma pop
 
-/* 803573D8 00AC .text      CARDUnmount                                                  */
+/* 803573D8-80357484 00AC .text      CARDUnmount                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

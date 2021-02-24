@@ -9,24 +9,45 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSGetTime();
+/* ReturnFunction       */
 extern void __CARDDefaultApiCallback();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* FirstParamFunction   */
 extern u32 __CARDGetFatBlock(u8*);
+/* Function             */
 extern void __CARDAllocBlock();
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void __CARDUpdateDir();
+/* Function             */
 extern void __CARDCompareFileName();
+/* Function             */
 extern void CreateCallbackFat();
+/* Function             */
 extern void CARDCreateAsync();
+/* Function             */
+extern void CARDCreate();
+/* Function             */
 extern void __div2i();
+/* Function             */
 extern void memcmp();
+/* Function             */
 extern void strncpy();
+/* Function             */
 extern void strlen();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -36,7 +57,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80358108 0130 .text      CreateCallbackFat                                            */
+/* 80358108-80358238 0130 .text      CreateCallbackFat                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +67,7 @@ asm void CreateCallbackFat() {
 }
 #pragma pop
 
-/* 80358238 0220 .text      CARDCreateAsync                                              */
+/* 80358238-80358458 0220 .text      CARDCreateAsync                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +77,7 @@ asm void CARDCreateAsync() {
 }
 #pragma pop
 
-/* 80358458 0048 .text      CARDCreate                                                   */
+/* 80358458-803584A0 0048 .text      CARDCreate                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

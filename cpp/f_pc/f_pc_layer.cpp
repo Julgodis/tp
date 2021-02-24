@@ -8,18 +8,33 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct node_class;
-struct layer_class;
 struct node_lists_tree_class;
+struct layer_class;
 struct node_list_class;
 struct process_method_tag_class;
+struct node_class;
+struct create_tag_class;
 
+extern void fpcLy_CancelQTo(process_method_tag_class*); /* fpcLy_CancelQTo__FP24process_method_tag_class */
+extern void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); /* fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class */
 extern void fpcLy_CancelMethod(process_method_tag_class*); /* fpcLy_CancelMethod__FP24process_method_tag_class */
+extern void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int); /* fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi */
+extern void fpcLy_ToQueue(layer_class*, int, create_tag_class*); /* fpcLy_ToQueue__FP11layer_classiP16create_tag_class */
+extern void fpcLy_QueueTo(layer_class*, create_tag_class*); /* fpcLy_QueueTo__FP11layer_classP16create_tag_class */
+extern void fpcLy_IsDeletingMesg(layer_class*); /* fpcLy_IsDeletingMesg__FP11layer_class */
+extern void fpcLy_DeletingMesg(layer_class*); /* fpcLy_DeletingMesg__FP11layer_class */
+extern void fpcLy_DeletedMesg(layer_class*); /* fpcLy_DeletedMesg__FP11layer_class */
+extern void fpcLy_IsCreatingMesg(layer_class*); /* fpcLy_IsCreatingMesg__FP11layer_class */
+extern void fpcLy_CreatingMesg(layer_class*); /* fpcLy_CreatingMesg__FP11layer_class */
+extern void fpcLy_CreatedMesg(layer_class*); /* fpcLy_CreatedMesg__FP11layer_class */
 extern void fpcLy_RootLayer(void); /* fpcLy_RootLayer__Fv */
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
 extern void fpcLy_Search(unsigned int); /* fpcLy_Search__FUi */
+extern void fpcLy_Layer(unsigned int); /* fpcLy_Layer__FUi */
 extern void fpcLy_Regist(layer_class*); /* fpcLy_Regist__FP11layer_class */
+extern void fpcLy_Delete(layer_class*); /* fpcLy_Delete__FP11layer_class */
+extern void fpcLy_Cancel(layer_class*); /* fpcLy_Cancel__FP11layer_class */
+extern void fpcLy_Create(layer_class*, void*, node_list_class*, int); /* fpcLy_Create__FP11layer_classPvP15node_list_classi */
 extern void fpcMtdIt_Method(node_list_class*, int (*)(void*)); /* fpcMtdIt_Method__FP15node_list_classPFPv_i */
 extern void fpcMtdTg_Do(process_method_tag_class*); /* fpcMtdTg_Do__FP24process_method_tag_class */
 extern void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); /* fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
@@ -34,32 +49,89 @@ extern void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); 
 extern void cTg_InsertToTree(node_lists_tree_class*, int, create_tag_class*, int); /* cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi */
 
 extern "C" {
+/* Function             */
+extern void fpcLy_CancelQTo__FP24process_method_tag_class();
+/* Function             */
+extern void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
+/* Function             */
 extern void fpcLy_CancelMethod__FP24process_method_tag_class();
+/* Function             */
+extern void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
+/* Function             */
+extern void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
+/* Function             */
+extern void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
+/* Function             */
+extern void fpcLy_IsDeletingMesg__FP11layer_class();
+/* Function             */
+extern void fpcLy_DeletingMesg__FP11layer_class();
+/* Function             */
+extern void fpcLy_DeletedMesg__FP11layer_class();
+/* Function             */
+extern void fpcLy_IsCreatingMesg__FP11layer_class();
+/* Function             */
+extern void fpcLy_CreatingMesg__FP11layer_class();
+/* Function             */
+extern void fpcLy_CreatedMesg__FP11layer_class();
+/* Function             */
 extern void fpcLy_RootLayer__Fv();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcLy_Search__FUi();
+/* Function             */
+extern void fpcLy_Layer__FUi();
+/* Function             */
 extern void fpcLy_Regist__FP11layer_class();
+/* Function             */
+extern void fpcLy_Delete__FP11layer_class();
+/* Function             */
+extern void fpcLy_Cancel__FP11layer_class();
+/* Function             */
+extern void fpcLy_Create__FP11layer_classPvP15node_list_classi();
+/* Function             */
 extern void fpcMtdIt_Method__FP15node_list_classPFPv_i();
+/* Function             */
 extern void fpcMtdTg_Do__FP24process_method_tag_class();
+/* Function             */
 extern void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
+/* Function             */
 extern void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
+/* Function             */
 extern void cLs_SingleCut__FP10node_class();
+/* Function             */
 extern void cLs_Addition__FP15node_list_classP10node_class();
+/* Function             */
 extern void cLs_Create__FP15node_list_class();
+/* Function             */
 extern void cNd_Create__FP10node_classPv();
+/* Function             */
 extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
+/* Function             */
 extern void cTg_SingleCutFromTree__FP16create_tag_class();
+/* Function             */
 extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+/* Function             */
 extern void cTg_InsertToTree__FP21node_lists_tree_classiP16create_tag_classi();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_DATA extern u8 l_fpcLy_Crear[44];
+/* InitializedData      */
 SECTION_DATA extern u8 l_fpcLy_LayerList[12];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 l_fpcLy_CurrLayer_p[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D1C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D20[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D24[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D28[8];
 }
 
@@ -69,13 +141,13 @@ SECTION_SBSS extern u8 data_80450D28[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A39B0 002C .data      l_fpcLy_Crear                                                */
+/* 803A39B0-803A39DC 002C .data      l_fpcLy_Crear                                                InitializedData */
 SECTION_DATA u8 l_fpcLy_Crear[44] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A39DC 000C .data      l_fpcLy_LayerList                                            */
+/* 803A39DC-803A39E8 000C .data      l_fpcLy_LayerList                                            InitializedData */
 SECTION_DATA u8 l_fpcLy_LayerList[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -87,15 +159,15 @@ SECTION_DATA u8 l_fpcLy_LayerList[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D18 0004 .sbss      l_fpcLy_CurrLayer_p                                          */
+/* 80450D18-80450D1C 0004 .sbss      l_fpcLy_CurrLayer_p                                          ZeroInitializedData */
 SECTION_SBSS u8 l_fpcLy_CurrLayer_p[4];
-/* 80450D1C 0004 .sbss      IsInitOfLayerList$2308                                       */
+/* 80450D1C-80450D20 0004 .sbss      IsInitOfLayerList$2308                                       ZeroInitializedData */
 SECTION_SBSS u8 data_80450D1C[4];
-/* 80450D20 0004 .sbss      data_80450D20                                                */
+/* 80450D20-80450D24 0004 .sbss      data_80450D20                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D20[4];
-/* 80450D24 0004 .sbss      layer_id$2311                                                */
+/* 80450D24-80450D28 0004 .sbss      layer_id$2311                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D24[4];
-/* 80450D28 0008 .sbss      data_80450D28                                                */
+/* 80450D28-80450D30 0008 .sbss      data_80450D28                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D28[8];
 }
 
@@ -105,7 +177,7 @@ SECTION_SBSS u8 data_80450D28[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021588 0020 .text      fpcLy_CancelQTo__FP24process_method_tag_class                */
+/* 80021588-800215A8 0020 .text      fpcLy_CancelQTo__FP24process_method_tag_class                Function */
 }
 
 #pragma push
@@ -118,7 +190,7 @@ asm void fpcLy_CancelQTo(process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800215A8 0024 .text      fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class  */
+/* 800215A8-800215CC 0024 .text      fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class  Function */
 }
 
 #pragma push
@@ -131,7 +203,7 @@ asm void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800215CC 002C .text      fpcLy_CancelMethod__FP24process_method_tag_class             */
+/* 800215CC-800215F8 002C .text      fpcLy_CancelMethod__FP24process_method_tag_class             Function */
 }
 
 #pragma push
@@ -144,7 +216,7 @@ asm void fpcLy_CancelMethod(process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800215F8 0024 .text      fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi        */
+/* 800215F8-8002161C 0024 .text      fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi        Function */
 }
 
 #pragma push
@@ -157,7 +229,7 @@ asm void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 8002161C 0024 .text      fpcLy_ToQueue__FP11layer_classiP16create_tag_class           */
+/* 8002161C-80021640 0024 .text      fpcLy_ToQueue__FP11layer_classiP16create_tag_class           Function */
 }
 
 #pragma push
@@ -170,7 +242,7 @@ asm void fpcLy_ToQueue(layer_class*, int, create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021640 0024 .text      fpcLy_QueueTo__FP11layer_classP16create_tag_class            */
+/* 80021640-80021664 0024 .text      fpcLy_QueueTo__FP11layer_classP16create_tag_class            Function */
 }
 
 #pragma push
@@ -183,7 +255,7 @@ asm void fpcLy_QueueTo(layer_class*, create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021664 0014 .text      fpcLy_IsDeletingMesg__FP11layer_class                        */
+/* 80021664-80021678 0014 .text      fpcLy_IsDeletingMesg__FP11layer_class                        Function */
 }
 
 #pragma push
@@ -196,7 +268,7 @@ asm void fpcLy_IsDeletingMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021678 0010 .text      fpcLy_DeletingMesg__FP11layer_class                          */
+/* 80021678-80021688 0010 .text      fpcLy_DeletingMesg__FP11layer_class                          Function */
 }
 
 #pragma push
@@ -209,7 +281,7 @@ asm void fpcLy_DeletingMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021688 0018 .text      fpcLy_DeletedMesg__FP11layer_class                           */
+/* 80021688-800216A0 0018 .text      fpcLy_DeletedMesg__FP11layer_class                           Function */
 }
 
 #pragma push
@@ -222,7 +294,7 @@ asm void fpcLy_DeletedMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800216A0 0014 .text      fpcLy_IsCreatingMesg__FP11layer_class                        */
+/* 800216A0-800216B4 0014 .text      fpcLy_IsCreatingMesg__FP11layer_class                        Function */
 }
 
 #pragma push
@@ -235,7 +307,7 @@ asm void fpcLy_IsCreatingMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800216B4 0010 .text      fpcLy_CreatingMesg__FP11layer_class                          */
+/* 800216B4-800216C4 0010 .text      fpcLy_CreatingMesg__FP11layer_class                          Function */
 }
 
 #pragma push
@@ -248,7 +320,7 @@ asm void fpcLy_CreatingMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800216C4 0018 .text      fpcLy_CreatedMesg__FP11layer_class                           */
+/* 800216C4-800216DC 0018 .text      fpcLy_CreatedMesg__FP11layer_class                           Function */
 }
 
 #pragma push
@@ -261,7 +333,7 @@ asm void fpcLy_CreatedMesg(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800216DC 0010 .text      fpcLy_RootLayer__Fv                                          */
+/* 800216DC-800216EC 0010 .text      fpcLy_RootLayer__Fv                                          Function */
 }
 
 #pragma push
@@ -274,7 +346,7 @@ asm void fpcLy_RootLayer(void) {
 #pragma pop
 
 extern "C" {
-/* 800216EC 0008 .text      fpcLy_SetCurrentLayer__FP11layer_class                       */
+/* 800216EC-800216F4 0008 .text      fpcLy_SetCurrentLayer__FP11layer_class                       Function */
 }
 
 #pragma push
@@ -287,13 +359,13 @@ asm void fpcLy_SetCurrentLayer(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800216F4 0008 .text      fpcLy_CurrentLayer__Fv                                       */
+/* 800216F4-800216FC 0008 .text      fpcLy_CurrentLayer__Fv                                       GlobalFunction */
 // fpcLy_CurrentLayer(void)
 u32 fpcLy_CurrentLayer__Fv() {
 	return *(u32*)&l_fpcLy_CurrLayer_p;
 }
 
-/* 800216FC 0050 .text      fpcLy_Search__FUi                                            */
+/* 800216FC-8002174C 0050 .text      fpcLy_Search__FUi                                            Function */
 }
 
 #pragma push
@@ -306,7 +378,7 @@ asm void fpcLy_Search(unsigned int) {
 #pragma pop
 
 extern "C" {
-/* 8002174C 0070 .text      fpcLy_Layer__FUi                                             */
+/* 8002174C-800217BC 0070 .text      fpcLy_Layer__FUi                                             Function */
 }
 
 #pragma push
@@ -319,7 +391,7 @@ asm void fpcLy_Layer(unsigned int) {
 #pragma pop
 
 extern "C" {
-/* 800217BC 002C .text      fpcLy_Regist__FP11layer_class                                */
+/* 800217BC-800217E8 002C .text      fpcLy_Regist__FP11layer_class                                Function */
 }
 
 #pragma push
@@ -332,7 +404,7 @@ asm void fpcLy_Regist(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800217E8 00B4 .text      fpcLy_Delete__FP11layer_class                                */
+/* 800217E8-8002189C 00B4 .text      fpcLy_Delete__FP11layer_class                                Function */
 }
 
 #pragma push
@@ -345,7 +417,7 @@ asm void fpcLy_Delete(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 8002189C 002C .text      fpcLy_Cancel__FP11layer_class                                */
+/* 8002189C-800218C8 002C .text      fpcLy_Cancel__FP11layer_class                                Function */
 }
 
 #pragma push
@@ -358,7 +430,7 @@ asm void fpcLy_Cancel(layer_class*) {
 #pragma pop
 
 extern "C" {
-/* 800218C8 0138 .text      fpcLy_Create__FP11layer_classPvP15node_list_classi           */
+/* 800218C8-80021A00 0138 .text      fpcLy_Create__FP11layer_classPvP15node_list_classi           Function */
 }
 
 #pragma push

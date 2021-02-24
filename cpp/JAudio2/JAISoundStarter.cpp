@@ -11,9 +11,17 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__15JAISoundStarterFb();
+/* Function             */
 extern void __dt__15JAISoundStarterFv();
+/* Function             */
+extern void func_802A2FEC();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__15JAISoundStarter[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15JAISoundStarter[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B78[4];
 }
 
@@ -23,8 +31,8 @@ SECTION_SBSS extern u8 data_80450B78[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C99C8 0010 .data      __vt__15JAISoundStarter                                      */
-SECTION_DATA const  void* __vt__15JAISoundStarter[4] = {
+/* 803C99C8-803C99D8 0010 .data      __vt__15JAISoundStarter                                      VTableData */
+SECTION_DATA void* __vt__15JAISoundStarter[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15JAISoundStarterFv,
@@ -38,7 +46,7 @@ SECTION_DATA const  void* __vt__15JAISoundStarter[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A2F6C 001C .text      __ct__15JAISoundStarterFb                                    */
+/* 802A2F6C-802A2F88 001C .text      __ct__15JAISoundStarterFb                                    Function */
 // JAISoundStarter::JAISoundStarter(bool)
 #pragma push
 #pragma optimization_level 0
@@ -49,7 +57,7 @@ asm void __ct__15JAISoundStarterFb() {
 }
 #pragma pop
 
-/* 802A2F88 0064 .text      __dt__15JAISoundStarterFv                                    */
+/* 802A2F88-802A2FEC 0064 .text      __dt__15JAISoundStarterFv                                    Function */
 // JAISoundStarter::~JAISoundStarter(void)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +68,7 @@ asm void __dt__15JAISoundStarterFv() {
 }
 #pragma pop
 
-/* 802A2FEC 00E8 .text      startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> */
+/* 802A2FEC-802A30D4 00E8 .text      startLevelSound__15JAISoundStarterF10JAISoundIDP14JAISoundHandlePCQ29JGeometry8TVec3<f> Function */
 // JAISoundStarter::startLevelSound(JAISoundID, JAISoundHandle*, JGeometry::TVec3<f>)
 #pragma push
 #pragma optimization_level 0

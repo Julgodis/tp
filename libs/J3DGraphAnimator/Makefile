@@ -36,8 +36,9 @@ J3DGRAPHANIMATOR_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJ3DGraphAnimator.a: dirs $(J3DGRAPHANIMATOR_A_O_FILES)
+$(BUILD_DIR)/libJ3DGraphAnimator.a: $(J3DGRAPHANIMATOR_A_O_FILES)
 	$(LD) -xm l $(J3DGRAPHANIMATOR_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DGraphAnimator.a $(J3DGRAPHANIMATOR_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DGraphAnimator.a
 
 $(BUILD_DIR)/libs/J3DGraphAnimator/%.o: cpp/J3DGraphAnimator/%.cpp
 	mkdir -p $(@D)

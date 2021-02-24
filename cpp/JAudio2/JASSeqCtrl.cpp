@@ -11,19 +11,48 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void checkNoteStop__8JASTrackCFUl();
+/* Function             */
+extern void __ct__10JASSeqCtrlFv();
+/* Function             */
+extern void init__10JASSeqCtrlFv();
+/* Function             */
+extern void start__10JASSeqCtrlFPvUl();
+/* Function             */
+extern void tickProc__10JASSeqCtrlFP8JASTrack();
+/* Function             */
 extern void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
+/* Function             */
+extern void setIntrMask__10JASSeqCtrlFUl();
+/* Function             */
+extern void clrIntrMask__10JASSeqCtrlFUl();
+/* Function             */
+extern void retIntr__10JASSeqCtrlFv();
+/* Function             */
 extern void findIntr__10JASSeqCtrlFv();
+/* Function             */
 extern void checkIntr__10JASSeqCtrlFv();
+/* Function             */
 extern void timerProcess__10JASSeqCtrlFv();
+/* SInitFunction        */
+extern void __sinit_JASSeqCtrl_cpp();
+/* Function             */
 extern void __dt__12JASSeqParserFv();
+/* Function             */
 extern void init__12JASSeqReaderFv();
+/* Function             */
 extern void init__12JASSeqReaderFPv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __register_global_object();
-SECTION_DATA extern const void* __vt__12JASSeqParser[8];
-SECTION_BSS extern u8 JASSeqCtrl__LIT_433[16];
-SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JASSeqParser[8];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 JASSeqCtrl__LIT_433[12 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 }
 
 
@@ -32,8 +61,8 @@ SECTION_SBSS extern u8 sDefaultParser__10JASSeqCtrl[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431B18 000C .bss       @433                                                         */
-SECTION_BSS u8 JASSeqCtrl__LIT_433[16];
+/* 80431B18-80431B28 000C .bss       @433                                                         ZeroInitializedData */
+SECTION_BSS u8 JASSeqCtrl__LIT_433[12 + 4 /* padding */];
 }
 
 
@@ -42,9 +71,8 @@ SECTION_BSS u8 JASSeqCtrl__LIT_433[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451238 0004 .sbss      sDefaultParser__10JASSeqCtrl                                 */
-SECTION_SBSS u8 sDefaultParser__10JASSeqCtrl[4];
-SECTION_SBSS u8 pad_8045123C[4];
+/* 80451238-80451240 0004 .sbss      sDefaultParser__10JASSeqCtrl                                 ZeroInitializedData */
+SECTION_SBSS u8 sDefaultParser__10JASSeqCtrl[4 + 4 /* padding */];
 }
 
 
@@ -53,7 +81,7 @@ SECTION_SBSS u8 pad_8045123C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802938BC 0068 .text      __ct__10JASSeqCtrlFv                                         */
+/* 802938BC-80293924 0068 .text      __ct__10JASSeqCtrlFv                                         Function */
 // JASSeqCtrl::JASSeqCtrl(void)
 #pragma push
 #pragma optimization_level 0
@@ -64,7 +92,7 @@ asm void __ct__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293924 005C .text      init__10JASSeqCtrlFv                                         */
+/* 80293924-80293980 005C .text      init__10JASSeqCtrlFv                                         Function */
 // JASSeqCtrl::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -75,7 +103,7 @@ asm void init__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293980 0044 .text      start__10JASSeqCtrlFPvUl                                     */
+/* 80293980-802939C4 0044 .text      start__10JASSeqCtrlFPvUl                                     Function */
 // JASSeqCtrl::start(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -86,7 +114,7 @@ asm void start__10JASSeqCtrlFPvUl() {
 }
 #pragma pop
 
-/* 802939C4 00F8 .text      tickProc__10JASSeqCtrlFP8JASTrack                            */
+/* 802939C4-80293ABC 00F8 .text      tickProc__10JASSeqCtrlFP8JASTrack                            Function */
 // JASSeqCtrl::tickProc(JASTrack*)
 #pragma push
 #pragma optimization_level 0
@@ -97,7 +125,7 @@ asm void tickProc__10JASSeqCtrlFP8JASTrack() {
 }
 #pragma pop
 
-/* 80293ABC 0024 .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              */
+/* 80293ABC-80293AE0 0024 .text      interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType              Function */
 // JASSeqCtrl::interrupt(JASSeqCtrl::IntrType)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +136,7 @@ asm void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType() {
 }
 #pragma pop
 
-/* 80293AE0 0010 .text      setIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AE0-80293AF0 0010 .text      setIntrMask__10JASSeqCtrlFUl                                 Function */
 // JASSeqCtrl::setIntrMask(u32)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +147,7 @@ asm void setIntrMask__10JASSeqCtrlFUl() {
 }
 #pragma pop
 
-/* 80293AF0 0010 .text      clrIntrMask__10JASSeqCtrlFUl                                 */
+/* 80293AF0-80293B00 0010 .text      clrIntrMask__10JASSeqCtrlFUl                                 Function */
 // JASSeqCtrl::clrIntrMask(u32)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +158,7 @@ asm void clrIntrMask__10JASSeqCtrlFUl() {
 }
 #pragma pop
 
-/* 80293B00 0028 .text      retIntr__10JASSeqCtrlFv                                      */
+/* 80293B00-80293B28 0028 .text      retIntr__10JASSeqCtrlFv                                      Function */
 // JASSeqCtrl::retIntr(void)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +169,7 @@ asm void retIntr__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293B28 0050 .text      findIntr__10JASSeqCtrlFv                                     */
+/* 80293B28-80293B78 0050 .text      findIntr__10JASSeqCtrlFv                                     Function */
 // JASSeqCtrl::findIntr(void)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +180,7 @@ asm void findIntr__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293B78 0070 .text      checkIntr__10JASSeqCtrlFv                                    */
+/* 80293B78-80293BE8 0070 .text      checkIntr__10JASSeqCtrlFv                                    Function */
 // JASSeqCtrl::checkIntr(void)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +191,7 @@ asm void checkIntr__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293BE8 0084 .text      timerProcess__10JASSeqCtrlFv                                 */
+/* 80293BE8-80293C6C 0084 .text      timerProcess__10JASSeqCtrlFv                                 Function */
 // JASSeqCtrl::timerProcess(void)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +202,7 @@ asm void timerProcess__10JASSeqCtrlFv() {
 }
 #pragma pop
 
-/* 80293C6C 0040 .text      __sinit_JASSeqCtrl_cpp                                       */
+/* 80293C6C-80293CAC 0040 .text      __sinit_JASSeqCtrl_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +212,7 @@ asm void __sinit_JASSeqCtrl_cpp() {
 }
 #pragma pop
 
-/* 80293CAC 0048 .text      __dt__12JASSeqParserFv                                       */
+/* 80293CAC-80293CF4 0048 .text      __dt__12JASSeqParserFv                                       Function */
 // JASSeqParser::~JASSeqParser(void)
 #pragma push
 #pragma optimization_level 0

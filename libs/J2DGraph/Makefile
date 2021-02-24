@@ -50,8 +50,9 @@ J2DGRAPH_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJ2DGraph.a: dirs $(J2DGRAPH_A_O_FILES)
+$(BUILD_DIR)/libJ2DGraph.a: $(J2DGRAPH_A_O_FILES)
 	$(LD) -xm l $(J2DGRAPH_A_LDFLAGS) -o $(BUILD_DIR)/libJ2DGraph.a $(J2DGRAPH_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ2DGraph.a
 
 $(BUILD_DIR)/libs/J2DGraph/%.o: cpp/J2DGraph/%.cpp
 	mkdir -p $(@D)

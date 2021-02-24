@@ -9,18 +9,35 @@
 // 
 
 struct create_tag_class;
-struct node_list_class;
 struct process_method_tag_class;
+struct node_list_class;
 
+extern void fpcMtdTg_Do(process_method_tag_class*); /* fpcMtdTg_Do__FP24process_method_tag_class */
+extern void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); /* fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
+extern void fpcMtdTg_MethodQTo(process_method_tag_class*); /* fpcMtdTg_MethodQTo__FP24process_method_tag_class */
+extern void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); /* fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv */
 extern void cTg_SingleCut(create_tag_class*); /* cTg_SingleCut__FP16create_tag_class */
 extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fpcMtdTg_Do__FP24process_method_tag_class();
+/* Function             */
+extern void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
+/* Function             */
+extern void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
+/* Function             */
+extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+/* Function             */
 extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -30,7 +47,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023788 0030 .text      fpcMtdTg_Do__FP24process_method_tag_class                    */
+/* 80023788-800237B8 0030 .text      fpcMtdTg_Do__FP24process_method_tag_class                    Function */
 }
 
 #pragma push
@@ -43,7 +60,7 @@ asm void fpcMtdTg_Do(process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800237B8 0020 .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class */
+/* 800237B8-800237D8 0020 .text      fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class Function */
 }
 
 #pragma push
@@ -56,7 +73,7 @@ asm void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800237D8 0020 .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class             */
+/* 800237D8-800237F8 0020 .text      fpcMtdTg_MethodQTo__FP24process_method_tag_class             Function */
 }
 
 #pragma push
@@ -69,7 +86,7 @@ asm void fpcMtdTg_MethodQTo(process_method_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800237F8 004C .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv          */
+/* 800237F8-80023844 004C .text      fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv          Function */
 }
 
 #pragma push

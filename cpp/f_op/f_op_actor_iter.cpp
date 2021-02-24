@@ -8,22 +8,33 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct node_class;
-struct method_filter;
 struct node_list_class;
+struct method_filter;
+struct node_class;
+struct create_tag_class;
 struct judge_filter;
 
+extern void fopAcIt_Executor(int (*)(void*, void*), void*); /* fopAcIt_Executor__FPFPvPv_iPv */
+extern void fopAcIt_Judge(void* (*)(void*, void*), void*); /* fopAcIt_Judge__FPFPvPv_PvPv */
 extern void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); /* cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv */
 extern void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); /* cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv */
 extern void cTgIt_MethodCall(create_tag_class*, method_filter*); /* cTgIt_MethodCall__FP16create_tag_classP13method_filter */
 extern void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); /* cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
 
 extern "C" {
+/* Function             */
+extern void fopAcIt_Executor__FPFPvPv_iPv();
+/* Function             */
+extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+/* Function             */
 extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+/* Function             */
 extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+/* Function             */
 extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fopAcTg_Queue[16];
 }
 
@@ -33,7 +44,7 @@ SECTION_DATA extern u8 g_fopAcTg_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800197BC 003C .text      fopAcIt_Executor__FPFPvPv_iPv                                */
+/* 800197BC-800197F8 003C .text      fopAcIt_Executor__FPFPvPv_iPv                                Function */
 }
 
 #pragma push
@@ -46,7 +57,7 @@ asm void fopAcIt_Executor(int (*)(void*, void*), void*) {
 #pragma pop
 
 extern "C" {
-/* 800197F8 003C .text      fopAcIt_Judge__FPFPvPv_PvPv                                  */
+/* 800197F8-80019834 003C .text      fopAcIt_Judge__FPFPvPv_PvPv                                  Function */
 }
 
 #pragma push

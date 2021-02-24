@@ -11,10 +11,20 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+/* Function             */
+extern void __dt__Q37JGadget6binary19TParse_header_blockFv();
+/* Function             */
+extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
-SECTION_DATA extern const void* __vt__Q37JGadget6binary19TParse_header_block[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 }
 
 
@@ -23,7 +33,7 @@ SECTION_DATA extern const void* __vt__Q37JGadget6binary19TParse_header_block[5];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DC864 0064 .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit */
+/* 802DC864-802DC8C8 0064 .text      parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit Function */
 // JGadget::binary::parseVariableUInt_16_32_following(const void*, u32*, u32*, JGadget::binary::TEBit)
 #pragma push
 #pragma optimization_level 0
@@ -34,7 +44,7 @@ asm void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadg
 }
 #pragma pop
 
-/* 802DC8C8 0048 .text      __dt__Q37JGadget6binary19TParse_header_blockFv               */
+/* 802DC8C8-802DC910 0048 .text      __dt__Q37JGadget6binary19TParse_header_blockFv               Function */
 // JGadget::binary::TParse_header_block::~JGadget::binary::TParse_header_block(void)
 #pragma push
 #pragma optimization_level 0
@@ -45,7 +55,7 @@ asm void __dt__Q37JGadget6binary19TParse_header_blockFv() {
 }
 #pragma pop
 
-/* 802DC910 010C .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    */
+/* 802DC910-802DCA1C 010C .text      parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl    Function */
 // JGadget::binary::TParse_header_block::parse_next(const void**, u32)
 #pragma push
 #pragma optimization_level 0

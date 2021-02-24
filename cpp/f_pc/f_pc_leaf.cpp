@@ -8,14 +8,20 @@
 // Additional Symbols:
 // 
 
-struct draw_priority_class;
-struct leafdraw_class;
 struct process_method_class;
+struct leafdraw_class;
 struct leafdraw_method_class;
+struct draw_priority_class;
 
 extern void fpcBs_MakeOfType(int*); /* fpcBs_MakeOfType__FPi */
-extern void fpcDwPi_Init(draw_priority_class*, s16); /* fpcDwPi_Init__FP19draw_priority_classs */
+extern void fpcDwPi_Init(draw_priority_class*, short); /* fpcDwPi_Init__FP19draw_priority_classs */
+extern void fpcLf_GetPriority(const leafdraw_class*); /* fpcLf_GetPriority__FPC14leafdraw_class */
 extern void fpcLf_DrawMethod(leafdraw_method_class*, void*); /* fpcLf_DrawMethod__FP21leafdraw_method_classPv */
+extern void fpcLf_Draw(leafdraw_class*); /* fpcLf_Draw__FP14leafdraw_class */
+extern void fpcLf_Execute(leafdraw_class*); /* fpcLf_Execute__FP14leafdraw_class */
+extern void fpcLf_IsDelete(leafdraw_class*); /* fpcLf_IsDelete__FP14leafdraw_class */
+extern void fpcLf_Delete(leafdraw_class*); /* fpcLf_Delete__FP14leafdraw_class */
+extern void fpcLf_Create(leafdraw_class*); /* fpcLf_Create__FP14leafdraw_class */
 extern void fpcMtd_Method(int (*)(void*), void*); /* fpcMtd_Method__FPFPv_iPv */
 extern void fpcMtd_Execute(process_method_class*, void*); /* fpcMtd_Execute__FP20process_method_classPv */
 extern void fpcMtd_IsDelete(process_method_class*, void*); /* fpcMtd_IsDelete__FP20process_method_classPv */
@@ -23,16 +29,42 @@ extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20p
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* FirstParamFunction   */
 extern s16 fpcDwPi_Get__FPC19draw_priority_class(u8*);
+/* Function             */
 extern void fpcDwPi_Init__FP19draw_priority_classs();
+/* Function             */
+extern void fpcLf_GetPriority__FPC14leafdraw_class();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
+extern void fpcLf_Draw__FP14leafdraw_class();
+/* Function             */
+extern void fpcLf_Execute__FP14leafdraw_class();
+/* Function             */
+extern void fpcLf_IsDelete__FP14leafdraw_class();
+/* Function             */
+extern void fpcLf_Delete__FP14leafdraw_class();
+/* Function             */
+extern void fpcLf_Create__FP14leafdraw_class();
+/* Function             */
 extern void fpcMtd_Method__FPFPv_iPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
-SECTION_SBSS extern u8 g_fpcLf_type[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
+SECTION_SBSS extern u8 merged_80450D38[8];
 }
 
 
@@ -41,12 +73,15 @@ SECTION_SBSS extern u8 g_fpcLf_type[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A39E8 0014 .data      g_fpcLf_Method                                               */
-SECTION_DATA u8 g_fpcLf_Method[24] = {
-	0x80, 0x02, 0x1B, 0x14, 0x80, 0x02, 0x1A, 0xD0, 0x80, 0x02, 0x1A, 0x80, 0x80, 0x02, 0x1A, 0xA8,
-	0x80, 0x02, 0x1A, 0x48,
+/* 803A39E8-803A3A00 0014 .data      g_fpcLf_Method                                               SymbolReferenceArrayData */
+SECTION_DATA void* g_fpcLf_Method[6] = {
+	(void*)fpcLf_Create,
+	(void*)fpcLf_Delete,
+	(void*)fpcLf_Execute,
+	(void*)fpcLf_IsDelete,
+	(void*)fpcLf_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -56,10 +91,9 @@ SECTION_DATA u8 g_fpcLf_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D30 0004 .sbss      g_fpcLf_type                                                 */
-SECTION_SBSS u8 g_fpcLf_type[4];
-SECTION_SBSS u8 pad_80450D34[4];
-/* 80450D38 0008 .sbss      merged_80450D38                                              */
+/* 80450D30-80450D38 0004 .sbss      g_fpcLf_type                                                 ZeroInitializedData */
+SECTION_SBSS u8 g_fpcLf_type[4 + 4 /* padding */];
+/* 80450D38-80450D40 0008 .sbss      merged_80450D38                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450D38[8];
 /* 80450D38 0001 data_80450D38 */
 /* 80450D39 0007 data_80450D39 */
@@ -71,7 +105,7 @@ SECTION_SBSS u8 merged_80450D38[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021A00 0024 .text      fpcLf_GetPriority__FPC14leafdraw_class                       */
+/* 80021A00-80021A24 0024 .text      fpcLf_GetPriority__FPC14leafdraw_class                       Function */
 }
 
 #pragma push
@@ -84,7 +118,7 @@ asm void fpcLf_GetPriority(const leafdraw_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021A24 0024 .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                */
+/* 80021A24-80021A48 0024 .text      fpcLf_DrawMethod__FP21leafdraw_method_classPv                Function */
 }
 
 #pragma push
@@ -97,7 +131,7 @@ asm void fpcLf_DrawMethod(leafdraw_method_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80021A48 0038 .text      fpcLf_Draw__FP14leafdraw_class                               */
+/* 80021A48-80021A80 0038 .text      fpcLf_Draw__FP14leafdraw_class                               Function */
 }
 
 #pragma push
@@ -110,7 +144,7 @@ asm void fpcLf_Draw(leafdraw_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021A80 0028 .text      fpcLf_Execute__FP14leafdraw_class                            */
+/* 80021A80-80021AA8 0028 .text      fpcLf_Execute__FP14leafdraw_class                            Function */
 }
 
 #pragma push
@@ -123,7 +157,7 @@ asm void fpcLf_Execute(leafdraw_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021AA8 0028 .text      fpcLf_IsDelete__FP14leafdraw_class                           */
+/* 80021AA8-80021AD0 0028 .text      fpcLf_IsDelete__FP14leafdraw_class                           Function */
 }
 
 #pragma push
@@ -136,7 +170,7 @@ asm void fpcLf_IsDelete(leafdraw_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021AD0 0044 .text      fpcLf_Delete__FP14leafdraw_class                             */
+/* 80021AD0-80021B14 0044 .text      fpcLf_Delete__FP14leafdraw_class                             Function */
 }
 
 #pragma push
@@ -149,7 +183,7 @@ asm void fpcLf_Delete(leafdraw_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021B14 0074 .text      fpcLf_Create__FP14leafdraw_class                             */
+/* 80021B14-80021B88 0074 .text      fpcLf_Create__FP14leafdraw_class                             Function */
 }
 
 #pragma push

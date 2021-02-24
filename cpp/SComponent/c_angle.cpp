@@ -11,58 +11,173 @@
 struct cSAngle;
 
 extern void cM_atan2f(f32, f32); /* cM_atan2f__Fff */
+extern void operator+(short, const cSAngle&); /* __pl__FsRC7cSAngle */
+extern void operator-(short, const cSAngle&); /* __mi__FsRC7cSAngle */
 
 extern "C" {
+/* Function             */
 extern void __dt__7cSAngleFv();
+/* Function             */
 extern void cM_atan2f__Fff();
+/* Function             */
+extern void __ct__7cSAngleFRC7cSAngle();
+/* Function             */
 extern void __ct__7cSAngleFs();
+/* Function             */
+extern void __ct__7cSAngleFf();
+/* Function             */
 extern void Val__7cSAngleFRC7cSAngle();
+/* Function             */
 extern void Val__7cSAngleFs();
+/* Function             */
 extern void Val__7cSAngleFf();
+/* Function             */
+extern void Degree__7cSAngleCFv();
+/* Function             */
 extern void Radian__7cSAngleCFv();
+/* Function             */
+extern void Norm__7cSAngleCFv();
+/* Function             */
+extern void Abs__7cSAngleCFv();
+/* Function             */
 extern void Inv__7cSAngleCFv();
+/* Function             */
+extern void Sin__7cSAngleCFv();
+/* Function             */
+extern void Cos__7cSAngleCFv();
+/* Function             */
 extern void __mi__7cSAngleCFv();
+/* Function             */
+extern void __pl__7cSAngleCFRC7cSAngle();
+/* Function             */
 extern void __mi__7cSAngleCFRC7cSAngle();
+/* Function             */
+extern void __apl__7cSAngleFRC7cSAngle();
+/* Function             */
+extern void __ami__7cSAngleFRC7cSAngle();
+/* Function             */
+extern void __pl__7cSAngleCFs();
+/* Function             */
+extern void __mi__7cSAngleCFs();
+/* Function             */
+extern void __apl__7cSAngleFs();
+/* Function             */
+extern void __ml__7cSAngleCFf();
+/* Function             */
+extern void __amu__7cSAngleFf();
+/* Function             */
+extern void __pl__FsRC7cSAngle();
+/* Function             */
+extern void __mi__FsRC7cSAngle();
+/* Function             */
+extern void __ct__7cDegreeFf();
+/* Function             */
 extern void Formal__7cDegreeFv();
+/* Function             */
 extern void Val__7cDegreeFf();
+/* Function             */
 extern void Radian__7cDegreeCFv();
+/* Function             */
+extern void Sin__7cDegreeCFv();
+/* Function             */
+extern void Cos__7cDegreeCFv();
+/* Function             */
+extern void Tan__7cDegreeCFv();
+/* Function             */
 extern void __ct__7cSPolarFRC4cXyz();
+/* Function             */
 extern void Formal__7cSPolarFv();
+/* Function             */
 extern void Val__7cSPolarFfss();
+/* Function             */
 extern void Val__7cSPolarFRC4cXyz();
+/* Function             */
 extern void Xyz__7cSPolarCFv();
+/* Function             */
 extern void Globe__7cSPolarCFP7cSGlobe();
+/* Function             */
+extern void __ct__7cSGlobeFRC7cSGlobe();
+/* Function             */
+extern void __ct__7cSGlobeFfss();
+/* Function             */
 extern void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
+/* Function             */
+extern void __ct__7cSGlobeFRC4cXyz();
+/* Function             */
 extern void Formal__7cSGlobeFv();
+/* Function             */
 extern void Val__7cSGlobeFRC7cSGlobe();
+/* Function             */
 extern void Val__7cSGlobeFfss();
+/* Function             */
 extern void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
+/* Function             */
 extern void Val__7cSGlobeFRC4cXyz();
+/* Function             */
 extern void Xyz__7cSGlobeCFv();
+/* Function             */
 extern void Polar__7cSGlobeCFP7cSPolar();
+/* Function             */
+extern void Norm__7cSGlobeCFv();
+/* Function             */
+extern void Invert__7cSGlobeFv();
+/* Function             */
 extern void func_80271BA8();
+/* SInitFunction        */
+extern void __sinit_c_angle_cpp();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void cos();
+/* Function             */
 extern void sin();
+/* Function             */
 extern void tan();
+/* Function             */
 extern void sqrt();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_2401[12];
-SECTION_SBSS extern u8 _0__7cSAngle[2];
-SECTION_SBSS extern u8 _1__7cSAngle[2];
-SECTION_SBSS extern u8 _90__7cSAngle[2];
-SECTION_SBSS extern u8 _180__7cSAngle[2];
-SECTION_SBSS extern u8 _270__7cSAngle[2];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_2402[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_2403[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_2404[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 c_angle__LIT_2405[12 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 _0__7cSAngle[2 + 2 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 _1__7cSAngle[2 + 2 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 _90__7cSAngle[2 + 2 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 _180__7cSAngle[2 + 2 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 _270__7cSAngle[2 + 6 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2248[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2260[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2263;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_angle__LIT_2269[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_angle__LIT_2277[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_angle__LIT_2440;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_angle__LIT_2441;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2474[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2491[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2671[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2672[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_angle__LIT_2744;
 }
 
@@ -72,48 +187,48 @@ SECTION_SDATA2 extern f32 c_angle__LIT_2744;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455208 0004 .sdata2    @2248                                                        */
+/* 80455208-8045520C 0004 .sdata2    @2248                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2248[4] = {
 	0x43, 0x36, 0x0B, 0x61,
 };
-/* 8045520C 0004 .sdata2    @2260                                                        */
+/* 8045520C-80455210 0004 .sdata2    @2260                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2260[4] = {
 	0x3B, 0xB4, 0x00, 0x00,
 };
-/* 80455210 0008 .sdata2    @2263                                                        */
+/* 80455210-80455218 0008 .sdata2    @2263                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_2263 = 4503601774854144.000000;
-/* 80455218 0004 .sdata2    @2269                                                        */
+/* 80455218-8045521C 0004 .sdata2    @2269                                                        InitializedData */
 SECTION_SDATA2 u8 c_angle__LIT_2269[4] = {
 	0x38, 0xC9, 0x0F, 0xDB,
 };
-/* 8045521C 0004 .sdata2    @2277                                                        */
+/* 8045521C-80455220 0004 .sdata2    @2277                                                        InitializedData */
 SECTION_SDATA2 u8 c_angle__LIT_2277[4] = {
 	0x38, 0x00, 0x00, 0x00,
 };
-/* 80455220 0004 .sdata2    @2440                                                        */
+/* 80455220-80455224 0004 .sdata2    @2440                                                        Float32Data */
 // 0xc3340000
 SECTION_SDATA2 f32 c_angle__LIT_2440 = -180.000000f;
-/* 80455224 0004 .sdata2    @2441                                                        */
+/* 80455224-80455228 0004 .sdata2    @2441                                                        Float32Data */
 // 0x43340000
 SECTION_SDATA2 f32 c_angle__LIT_2441 = 180.000000f;
-/* 80455228 0004 .sdata2    @2474                                                        */
+/* 80455228-8045522C 0004 .sdata2    @2474                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2474[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 8045522C 0004 .sdata2    @2491                                                        */
+/* 8045522C-80455230 0004 .sdata2    @2491                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2491[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455230 0008 .sdata2    @2671                                                        */
+/* 80455230-80455238 0008 .sdata2    @2671                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2671[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80455238 0004 .sdata2    @2672                                                        */
+/* 80455238-8045523C 0004 .sdata2    @2672                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2672[4] = {
 	0x46, 0x22, 0xF9, 0x83,
 };
-/* 8045523C 0004 .sdata2    @2744                                                        */
+/* 8045523C-80455240 0004 .sdata2    @2744                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 c_angle__LIT_2744 = 1.000000f;
 }
@@ -124,17 +239,17 @@ SECTION_SDATA2 f32 c_angle__LIT_2744 = 1.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430F98 0000 .bss       ...bss.0                                                     */
-/* 80430F98 000C .bss       @2401                                                        */
+/* 80430F98-80430F98 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80430F98-80430FA4 000C .bss       @2401                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_2401[12];
-/* 80430FA4 000C .bss       @2402                                                        */
+/* 80430FA4-80430FB0 000C .bss       @2402                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_2402[12];
-/* 80430FB0 000C .bss       @2403                                                        */
+/* 80430FB0-80430FBC 000C .bss       @2403                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_2403[12];
-/* 80430FBC 000C .bss       @2404                                                        */
+/* 80430FBC-80430FC8 000C .bss       @2404                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_2404[12];
-/* 80430FC8 000C .bss       @2405                                                        */
-SECTION_BSS u8 c_angle__LIT_2405[16];
+/* 80430FC8-80430FD8 000C .bss       @2405                                                        ZeroInitializedData */
+SECTION_BSS u8 c_angle__LIT_2405[12 + 4 /* padding */];
 }
 
 
@@ -143,17 +258,16 @@ SECTION_BSS u8 c_angle__LIT_2405[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451188 0002 .sbss      _0__7cSAngle                                                 */
-SECTION_SBSS u8 _0__7cSAngle[2];
-/* 8045118C 0002 .sbss      _1__7cSAngle                                                 */
-SECTION_SBSS u8 _1__7cSAngle[2];
-/* 80451190 0002 .sbss      _90__7cSAngle                                                */
-SECTION_SBSS u8 _90__7cSAngle[2];
-/* 80451194 0002 .sbss      _180__7cSAngle                                               */
-SECTION_SBSS u8 _180__7cSAngle[2];
-/* 80451198 0002 .sbss      _270__7cSAngle                                               */
-SECTION_SBSS u8 _270__7cSAngle[2];
-SECTION_SBSS u8 pad_8045119C[4];
+/* 80451188-8045118C 0002 .sbss      _0__7cSAngle                                                 ZeroInitializedData */
+SECTION_SBSS u8 _0__7cSAngle[2 + 2 /* padding */];
+/* 8045118C-80451190 0002 .sbss      _1__7cSAngle                                                 ZeroInitializedData */
+SECTION_SBSS u8 _1__7cSAngle[2 + 2 /* padding */];
+/* 80451190-80451194 0002 .sbss      _90__7cSAngle                                                ZeroInitializedData */
+SECTION_SBSS u8 _90__7cSAngle[2 + 2 /* padding */];
+/* 80451194-80451198 0002 .sbss      _180__7cSAngle                                               ZeroInitializedData */
+SECTION_SBSS u8 _180__7cSAngle[2 + 2 /* padding */];
+/* 80451198-804511A0 0002 .sbss      _270__7cSAngle                                               ZeroInitializedData */
+SECTION_SBSS u8 _270__7cSAngle[2 + 6 /* padding */];
 }
 
 
@@ -162,7 +276,7 @@ SECTION_SBSS u8 pad_8045119C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80270F68 0030 .text      __ct__7cSAngleFRC7cSAngle                                    */
+/* 80270F68-80270F98 0030 .text      __ct__7cSAngleFRC7cSAngle                                    Function */
 // cSAngle::cSAngle(const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -173,8 +287,8 @@ asm void __ct__7cSAngleFRC7cSAngle() {
 }
 #pragma pop
 
-/* 80270F98 0030 .text      __ct__7cSAngleFs                                             */
-// cSAngle::cSAngle(s16)
+/* 80270F98-80270FC8 0030 .text      __ct__7cSAngleFs                                             Function */
+// cSAngle::cSAngle(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +298,7 @@ asm void __ct__7cSAngleFs() {
 }
 #pragma pop
 
-/* 80270FC8 0030 .text      __ct__7cSAngleFf                                             */
+/* 80270FC8-80270FF8 0030 .text      __ct__7cSAngleFf                                             Function */
 // cSAngle::cSAngle(f32)
 #pragma push
 #pragma optimization_level 0
@@ -195,7 +309,7 @@ asm void __ct__7cSAngleFf() {
 }
 #pragma pop
 
-/* 80270FF8 000C .text      Val__7cSAngleFRC7cSAngle                                     */
+/* 80270FF8-80271004 000C .text      Val__7cSAngleFRC7cSAngle                                     Function */
 // cSAngle::Val(const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -206,8 +320,8 @@ asm void Val__7cSAngleFRC7cSAngle() {
 }
 #pragma pop
 
-/* 80271004 0008 .text      Val__7cSAngleFs                                              */
-// cSAngle::Val(s16)
+/* 80271004-8027100C 0008 .text      Val__7cSAngleFs                                              Function */
+// cSAngle::Val(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +331,7 @@ asm void Val__7cSAngleFs() {
 }
 #pragma pop
 
-/* 8027100C 0024 .text      Val__7cSAngleFf                                              */
+/* 8027100C-80271030 0024 .text      Val__7cSAngleFf                                              Function */
 // cSAngle::Val(f32)
 #pragma push
 #pragma optimization_level 0
@@ -228,7 +342,7 @@ asm void Val__7cSAngleFf() {
 }
 #pragma pop
 
-/* 80271030 0034 .text      Degree__7cSAngleCFv                                          */
+/* 80271030-80271064 0034 .text      Degree__7cSAngleCFv                                          Function */
 // cSAngle::Degree(void) const
 #pragma push
 #pragma optimization_level 0
@@ -239,7 +353,7 @@ asm void Degree__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 80271064 0034 .text      Radian__7cSAngleCFv                                          */
+/* 80271064-80271098 0034 .text      Radian__7cSAngleCFv                                          Function */
 // cSAngle::Radian(void) const
 #pragma push
 #pragma optimization_level 0
@@ -250,7 +364,7 @@ asm void Radian__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 80271098 0034 .text      Norm__7cSAngleCFv                                            */
+/* 80271098-802710CC 0034 .text      Norm__7cSAngleCFv                                            Function */
 // cSAngle::Norm(void) const
 #pragma push
 #pragma optimization_level 0
@@ -261,7 +375,7 @@ asm void Norm__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 802710CC 001C .text      Abs__7cSAngleCFv                                             */
+/* 802710CC-802710E8 001C .text      Abs__7cSAngleCFv                                             Function */
 // cSAngle::Abs(void) const
 #pragma push
 #pragma optimization_level 0
@@ -272,7 +386,7 @@ asm void Abs__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 802710E8 0010 .text      Inv__7cSAngleCFv                                             */
+/* 802710E8-802710F8 0010 .text      Inv__7cSAngleCFv                                             Function */
 // cSAngle::Inv(void) const
 #pragma push
 #pragma optimization_level 0
@@ -283,7 +397,7 @@ asm void Inv__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 802710F8 0028 .text      Sin__7cSAngleCFv                                             */
+/* 802710F8-80271120 0028 .text      Sin__7cSAngleCFv                                             Function */
 // cSAngle::Sin(void) const
 #pragma push
 #pragma optimization_level 0
@@ -294,7 +408,7 @@ asm void Sin__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 80271120 0028 .text      Cos__7cSAngleCFv                                             */
+/* 80271120-80271148 0028 .text      Cos__7cSAngleCFv                                             Function */
 // cSAngle::Cos(void) const
 #pragma push
 #pragma optimization_level 0
@@ -305,7 +419,7 @@ asm void Cos__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 80271148 002C .text      __mi__7cSAngleCFv                                            */
+/* 80271148-80271174 002C .text      __mi__7cSAngleCFv                                            Function */
 // cSAngle::operator-(void) const
 #pragma push
 #pragma optimization_level 0
@@ -316,7 +430,7 @@ asm void __mi__7cSAngleCFv() {
 }
 #pragma pop
 
-/* 80271174 0030 .text      __pl__7cSAngleCFRC7cSAngle                                   */
+/* 80271174-802711A4 0030 .text      __pl__7cSAngleCFRC7cSAngle                                   Function */
 // cSAngle::operator+(const cSAngle&) const
 #pragma push
 #pragma optimization_level 0
@@ -327,7 +441,7 @@ asm void __pl__7cSAngleCFRC7cSAngle() {
 }
 #pragma pop
 
-/* 802711A4 0030 .text      __mi__7cSAngleCFRC7cSAngle                                   */
+/* 802711A4-802711D4 0030 .text      __mi__7cSAngleCFRC7cSAngle                                   Function */
 // cSAngle::operator-(const cSAngle&) const
 #pragma push
 #pragma optimization_level 0
@@ -338,7 +452,7 @@ asm void __mi__7cSAngleCFRC7cSAngle() {
 }
 #pragma pop
 
-/* 802711D4 0014 .text      __apl__7cSAngleFRC7cSAngle                                   */
+/* 802711D4-802711E8 0014 .text      __apl__7cSAngleFRC7cSAngle                                   Function */
 // cSAngle::operator+=(const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -349,7 +463,7 @@ asm void __apl__7cSAngleFRC7cSAngle() {
 }
 #pragma pop
 
-/* 802711E8 0014 .text      __ami__7cSAngleFRC7cSAngle                                   */
+/* 802711E8-802711FC 0014 .text      __ami__7cSAngleFRC7cSAngle                                   Function */
 // cSAngle::operator-=(const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -360,8 +474,8 @@ asm void __ami__7cSAngleFRC7cSAngle() {
 }
 #pragma pop
 
-/* 802711FC 002C .text      __pl__7cSAngleCFs                                            */
-// cSAngle::operator+(s16) const
+/* 802711FC-80271228 002C .text      __pl__7cSAngleCFs                                            Function */
+// cSAngle::operator+(short) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -371,8 +485,8 @@ asm void __pl__7cSAngleCFs() {
 }
 #pragma pop
 
-/* 80271228 002C .text      __mi__7cSAngleCFs                                            */
-// cSAngle::operator-(s16) const
+/* 80271228-80271254 002C .text      __mi__7cSAngleCFs                                            Function */
+// cSAngle::operator-(short) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -382,8 +496,8 @@ asm void __mi__7cSAngleCFs() {
 }
 #pragma pop
 
-/* 80271254 0010 .text      __apl__7cSAngleFs                                            */
-// cSAngle::operator+=(s16)
+/* 80271254-80271264 0010 .text      __apl__7cSAngleFs                                            Function */
+// cSAngle::operator+=(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +507,7 @@ asm void __apl__7cSAngleFs() {
 }
 #pragma pop
 
-/* 80271264 0050 .text      __ml__7cSAngleCFf                                            */
+/* 80271264-802712B4 0050 .text      __ml__7cSAngleCFf                                            Function */
 // cSAngle::operator*(f32) const
 #pragma push
 #pragma optimization_level 0
@@ -404,7 +518,7 @@ asm void __ml__7cSAngleCFf() {
 }
 #pragma pop
 
-/* 802712B4 0040 .text      __amu__7cSAngleFf                                            */
+/* 802712B4-802712F4 0040 .text      __amu__7cSAngleFf                                            Function */
 // cSAngle::operator*=(f32)
 #pragma push
 #pragma optimization_level 0
@@ -415,33 +529,33 @@ asm void __amu__7cSAngleFf() {
 }
 #pragma pop
 
-/* 802712F4 002C .text      __pl__FsRC7cSAngle                                           */
+/* 802712F4-80271320 002C .text      __pl__FsRC7cSAngle                                           Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void operator+(s16, const cSAngle&) {
+asm void operator+(short, const cSAngle&) {
 	nofralloc
 #include "_include/SComponent/c_angle/__pl__FsRC7cSAngle.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80271320 002C .text      __mi__FsRC7cSAngle                                           */
+/* 80271320-8027134C 002C .text      __mi__FsRC7cSAngle                                           Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void operator-(s16, const cSAngle&) {
+asm void operator-(short, const cSAngle&) {
 	nofralloc
 #include "_include/SComponent/c_angle/__mi__FsRC7cSAngle.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8027134C 0030 .text      __ct__7cDegreeFf                                             */
+/* 8027134C-8027137C 0030 .text      __ct__7cDegreeFf                                             Function */
 // cDegree::cDegree(f32)
 #pragma push
 #pragma optimization_level 0
@@ -452,7 +566,7 @@ asm void __ct__7cDegreeFf() {
 }
 #pragma pop
 
-/* 8027137C 0040 .text      Formal__7cDegreeFv                                           */
+/* 8027137C-802713BC 0040 .text      Formal__7cDegreeFv                                           Function */
 // cDegree::Formal(void)
 #pragma push
 #pragma optimization_level 0
@@ -463,7 +577,7 @@ asm void Formal__7cDegreeFv() {
 }
 #pragma pop
 
-/* 802713BC 0024 .text      Val__7cDegreeFf                                              */
+/* 802713BC-802713E0 0024 .text      Val__7cDegreeFf                                              Function */
 // cDegree::Val(f32)
 #pragma push
 #pragma optimization_level 0
@@ -474,7 +588,7 @@ asm void Val__7cDegreeFf() {
 }
 #pragma pop
 
-/* 802713E0 0010 .text      Radian__7cDegreeCFv                                          */
+/* 802713E0-802713F0 0010 .text      Radian__7cDegreeCFv                                          Function */
 // cDegree::Radian(void) const
 #pragma push
 #pragma optimization_level 0
@@ -485,7 +599,7 @@ asm void Radian__7cDegreeCFv() {
 }
 #pragma pop
 
-/* 802713F0 0028 .text      Sin__7cDegreeCFv                                             */
+/* 802713F0-80271418 0028 .text      Sin__7cDegreeCFv                                             Function */
 // cDegree::Sin(void) const
 #pragma push
 #pragma optimization_level 0
@@ -496,7 +610,7 @@ asm void Sin__7cDegreeCFv() {
 }
 #pragma pop
 
-/* 80271418 0028 .text      Cos__7cDegreeCFv                                             */
+/* 80271418-80271440 0028 .text      Cos__7cDegreeCFv                                             Function */
 // cDegree::Cos(void) const
 #pragma push
 #pragma optimization_level 0
@@ -507,7 +621,7 @@ asm void Cos__7cDegreeCFv() {
 }
 #pragma pop
 
-/* 80271440 0028 .text      Tan__7cDegreeCFv                                             */
+/* 80271440-80271468 0028 .text      Tan__7cDegreeCFv                                             Function */
 // cDegree::Tan(void) const
 #pragma push
 #pragma optimization_level 0
@@ -518,7 +632,7 @@ asm void Tan__7cDegreeCFv() {
 }
 #pragma pop
 
-/* 80271468 0030 .text      __ct__7cSPolarFRC4cXyz                                       */
+/* 80271468-80271498 0030 .text      __ct__7cSPolarFRC4cXyz                                       Function */
 // cSPolar::cSPolar(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -529,7 +643,7 @@ asm void __ct__7cSPolarFRC4cXyz() {
 }
 #pragma pop
 
-/* 80271498 00C0 .text      Formal__7cSPolarFv                                           */
+/* 80271498-80271558 00C0 .text      Formal__7cSPolarFv                                           Function */
 // cSPolar::Formal(void)
 #pragma push
 #pragma optimization_level 0
@@ -540,8 +654,8 @@ asm void Formal__7cSPolarFv() {
 }
 #pragma pop
 
-/* 80271558 0064 .text      Val__7cSPolarFfss                                            */
-// cSPolar::Val(f32, s16, s16)
+/* 80271558-802715BC 0064 .text      Val__7cSPolarFfss                                            Function */
+// cSPolar::Val(f32, short, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +665,7 @@ asm void Val__7cSPolarFfss() {
 }
 #pragma pop
 
-/* 802715BC 0130 .text      Val__7cSPolarFRC4cXyz                                        */
+/* 802715BC-802716EC 0130 .text      Val__7cSPolarFRC4cXyz                                        Function */
 // cSPolar::Val(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -562,7 +676,7 @@ asm void Val__7cSPolarFRC4cXyz() {
 }
 #pragma pop
 
-/* 802716EC 00C8 .text      Xyz__7cSPolarCFv                                             */
+/* 802716EC-802717B4 00C8 .text      Xyz__7cSPolarCFv                                             Function */
 // cSPolar::Xyz(void) const
 #pragma push
 #pragma optimization_level 0
@@ -573,7 +687,7 @@ asm void Xyz__7cSPolarCFv() {
 }
 #pragma pop
 
-/* 802717B4 003C .text      Globe__7cSPolarCFP7cSGlobe                                   */
+/* 802717B4-802717F0 003C .text      Globe__7cSPolarCFP7cSGlobe                                   Function */
 // cSPolar::Globe(cSGlobe*) const
 #pragma push
 #pragma optimization_level 0
@@ -584,7 +698,7 @@ asm void Globe__7cSPolarCFP7cSGlobe() {
 }
 #pragma pop
 
-/* 802717F0 0030 .text      __ct__7cSGlobeFRC7cSGlobe                                    */
+/* 802717F0-80271820 0030 .text      __ct__7cSGlobeFRC7cSGlobe                                    Function */
 // cSGlobe::cSGlobe(const cSGlobe&)
 #pragma push
 #pragma optimization_level 0
@@ -595,8 +709,8 @@ asm void __ct__7cSGlobeFRC7cSGlobe() {
 }
 #pragma pop
 
-/* 80271820 0030 .text      __ct__7cSGlobeFfss                                           */
-// cSGlobe::cSGlobe(f32, s16, s16)
+/* 80271820-80271850 0030 .text      __ct__7cSGlobeFfss                                           Function */
+// cSGlobe::cSGlobe(f32, short, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +720,7 @@ asm void __ct__7cSGlobeFfss() {
 }
 #pragma pop
 
-/* 80271850 0030 .text      __ct__7cSGlobeFfRC7cSAngleRC7cSAngle                         */
+/* 80271850-80271880 0030 .text      __ct__7cSGlobeFfRC7cSAngleRC7cSAngle                         Function */
 // cSGlobe::cSGlobe(f32, const cSAngle&, const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -617,7 +731,7 @@ asm void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle() {
 }
 #pragma pop
 
-/* 80271880 0030 .text      __ct__7cSGlobeFRC4cXyz                                       */
+/* 80271880-802718B0 0030 .text      __ct__7cSGlobeFRC4cXyz                                       Function */
 // cSGlobe::cSGlobe(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -628,7 +742,7 @@ asm void __ct__7cSGlobeFRC4cXyz() {
 }
 #pragma pop
 
-/* 802718B0 00BC .text      Formal__7cSGlobeFv                                           */
+/* 802718B0-8027196C 00BC .text      Formal__7cSGlobeFv                                           Function */
 // cSGlobe::Formal(void)
 #pragma push
 #pragma optimization_level 0
@@ -639,7 +753,7 @@ asm void Formal__7cSGlobeFv() {
 }
 #pragma pop
 
-/* 8027196C 0038 .text      Val__7cSGlobeFRC7cSGlobe                                     */
+/* 8027196C-802719A4 0038 .text      Val__7cSGlobeFRC7cSGlobe                                     Function */
 // cSGlobe::Val(const cSGlobe&)
 #pragma push
 #pragma optimization_level 0
@@ -650,8 +764,8 @@ asm void Val__7cSGlobeFRC7cSGlobe() {
 }
 #pragma pop
 
-/* 802719A4 0064 .text      Val__7cSGlobeFfss                                            */
-// cSGlobe::Val(f32, s16, s16)
+/* 802719A4-80271A08 0064 .text      Val__7cSGlobeFfss                                            Function */
+// cSGlobe::Val(f32, short, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -661,7 +775,7 @@ asm void Val__7cSGlobeFfss() {
 }
 #pragma pop
 
-/* 80271A08 0068 .text      Val__7cSGlobeFfRC7cSAngleRC7cSAngle                          */
+/* 80271A08-80271A70 0068 .text      Val__7cSGlobeFfRC7cSAngleRC7cSAngle                          Function */
 // cSGlobe::Val(f32, const cSAngle&, const cSAngle&)
 #pragma push
 #pragma optimization_level 0
@@ -672,7 +786,7 @@ asm void Val__7cSGlobeFfRC7cSAngleRC7cSAngle() {
 }
 #pragma pop
 
-/* 80271A70 0044 .text      Val__7cSGlobeFRC4cXyz                                        */
+/* 80271A70-80271AB4 0044 .text      Val__7cSGlobeFRC4cXyz                                        Function */
 // cSGlobe::Val(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -683,7 +797,7 @@ asm void Val__7cSGlobeFRC4cXyz() {
 }
 #pragma pop
 
-/* 80271AB4 0040 .text      Xyz__7cSGlobeCFv                                             */
+/* 80271AB4-80271AF4 0040 .text      Xyz__7cSGlobeCFv                                             Function */
 // cSGlobe::Xyz(void) const
 #pragma push
 #pragma optimization_level 0
@@ -694,7 +808,7 @@ asm void Xyz__7cSGlobeCFv() {
 }
 #pragma pop
 
-/* 80271AF4 003C .text      Polar__7cSGlobeCFP7cSPolar                                   */
+/* 80271AF4-80271B30 003C .text      Polar__7cSGlobeCFP7cSPolar                                   Function */
 // cSGlobe::Polar(cSPolar*) const
 #pragma push
 #pragma optimization_level 0
@@ -705,7 +819,7 @@ asm void Polar__7cSGlobeCFP7cSPolar() {
 }
 #pragma pop
 
-/* 80271B30 004C .text      Norm__7cSGlobeCFv                                            */
+/* 80271B30-80271B7C 004C .text      Norm__7cSGlobeCFv                                            Function */
 // cSGlobe::Norm(void) const
 #pragma push
 #pragma optimization_level 0
@@ -716,7 +830,7 @@ asm void Norm__7cSGlobeCFv() {
 }
 #pragma pop
 
-/* 80271B7C 002C .text      Invert__7cSGlobeFv                                           */
+/* 80271B7C-80271BA8 002C .text      Invert__7cSGlobeFv                                           Function */
 // cSGlobe::Invert(void)
 #pragma push
 #pragma optimization_level 0
@@ -727,7 +841,7 @@ asm void Invert__7cSGlobeFv() {
 }
 #pragma pop
 
-/* 80271BA8 002C .text      Adjust<f>__6cAngleFfff                                       */
+/* 80271BA8-80271BD4 002C .text      Adjust<f>__6cAngleFfff                                       Function */
 // cAngle::Adjust<f>(f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -738,7 +852,7 @@ asm void func_80271BA8() {
 }
 #pragma pop
 
-/* 80271BD4 00B8 .text      __sinit_c_angle_cpp                                          */
+/* 80271BD4-80271C8C 00B8 .text      __sinit_c_angle_cpp                                          SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

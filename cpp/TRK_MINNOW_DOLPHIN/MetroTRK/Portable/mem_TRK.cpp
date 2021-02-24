@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void TRK_fill_mem();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036F580 00B8 .text      TRK_fill_mem                                                 */
+/* 8036F580-8036F638 00B8 .text      TRK_fill_mem                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

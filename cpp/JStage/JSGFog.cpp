@@ -11,31 +11,59 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern int JSGFGetType__Q26JStage4TFogCFv();
-extern int JSGGetFogFunction__Q26JStage4TFogCFv();
+/* Function             */
+extern void __dt__Q26JStage4TFogFv();
+/* ReturnIntegerFunction */
+extern  int JSGFGetType__Q26JStage4TFogCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetFogFunction__Q26JStage4TFogCFv();
+/* ReturnFunction       */
 extern void JSGSetFogFunction__Q26JStage4TFogF10_GXFogType();
+/* Function             */
 extern void JSGGetStartZ__Q26JStage4TFogCFv();
+/* ReturnFunction       */
 extern void JSGSetStartZ__Q26JStage4TFogFf();
+/* Function             */
 extern void JSGGetEndZ__Q26JStage4TFogCFv();
+/* ReturnFunction       */
 extern void JSGSetEndZ__Q26JStage4TFogFf();
+/* Function             */
 extern void JSGGetColor__Q26JStage4TFogCFv();
+/* ReturnFunction       */
 extern void JSGSetColor__Q26JStage4TFogF8_GXColor();
+/* Function             */
 extern void __dt__Q26JStage7TObjectFv();
-extern int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGUpdate__Q26JStage7TObjectFv();
-extern int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnIntegerFunction */
+extern  int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnFunction       */
 extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+/* ReturnFunction       */
 extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+/* ReturnFunction       */
 extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+/* ReturnFunction       */
 extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* ReturnIntegerFunction */
+extern  int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* Function             */
 extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__Q26JStage4TFog[24];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q26JStage4TFog[24];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_max[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JSGFog__LIT_319[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JSGFog__LIT_336[4];
 }
 
@@ -45,8 +73,8 @@ SECTION_SDATA2 extern u8 JSGFog__LIT_336[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4718 005C .data      __vt__Q26JStage4TFog                                         */
-SECTION_DATA const  void* __vt__Q26JStage4TFog[24] = {
+/* 803C4718-803C4778 005C .data      __vt__Q26JStage4TFog                                         VTableData */
+SECTION_DATA void* __vt__Q26JStage4TFog[24] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -81,11 +109,11 @@ SECTION_DATA const  void* __vt__Q26JStage4TFog[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804553E0 0004 .sdata2    @319                                                         */
+/* 804553E0-804553E4 0004 .sdata2    @319                                                         InitializedData */
 SECTION_SDATA2 u8 JSGFog__LIT_319[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804553E4 0004 .sdata2    @336                                                         */
+/* 804553E4-804553E8 0004 .sdata2    @336                                                         InitializedData */
 SECTION_SDATA2 u8 JSGFog__LIT_336[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
@@ -97,7 +125,7 @@ SECTION_SDATA2 u8 JSGFog__LIT_336[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80280C80 0060 .text      __dt__Q26JStage4TFogFv                                       */
+/* 80280C80-80280CE0 0060 .text      __dt__Q26JStage4TFogFv                                       Function */
 // JStage::TFog::~JStage::TFog(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,25 +136,25 @@ asm void __dt__Q26JStage4TFogFv() {
 }
 #pragma pop
 
-/* 80280CE0 0008 .text      JSGFGetType__Q26JStage4TFogCFv                               */
+/* 80280CE0-80280CE8 0008 .text      JSGFGetType__Q26JStage4TFogCFv                               ReturnIntegerFunction */
 // JStage::TFog::JSGFGetType(void) const
 int JSGFGetType__Q26JStage4TFogCFv() {
 	return 6;
 }
 
-/* 80280CE8 0008 .text      JSGGetFogFunction__Q26JStage4TFogCFv                         */
+/* 80280CE8-80280CF0 0008 .text      JSGGetFogFunction__Q26JStage4TFogCFv                         ReturnIntegerFunction */
 // JStage::TFog::JSGGetFogFunction(void) const
 int JSGGetFogFunction__Q26JStage4TFogCFv() {
 	return 0;
 }
 
-/* 80280CF0 0004 .text      JSGSetFogFunction__Q26JStage4TFogF10_GXFogType               */
+/* 80280CF0-80280CF4 0004 .text      JSGSetFogFunction__Q26JStage4TFogF10_GXFogType               ReturnFunction */
 // JStage::TFog::JSGSetFogFunction(_GXFogType)
 void JSGSetFogFunction__Q26JStage4TFogF10_GXFogType() {
 	return;
 }
 
-/* 80280CF4 0008 .text      JSGGetStartZ__Q26JStage4TFogCFv                              */
+/* 80280CF4-80280CFC 0008 .text      JSGGetStartZ__Q26JStage4TFogCFv                              Function */
 // JStage::TFog::JSGGetStartZ(void) const
 #pragma push
 #pragma optimization_level 0
@@ -137,13 +165,13 @@ asm void JSGGetStartZ__Q26JStage4TFogCFv() {
 }
 #pragma pop
 
-/* 80280CFC 0004 .text      JSGSetStartZ__Q26JStage4TFogFf                               */
+/* 80280CFC-80280D00 0004 .text      JSGSetStartZ__Q26JStage4TFogFf                               ReturnFunction */
 // JStage::TFog::JSGSetStartZ(f32)
 void JSGSetStartZ__Q26JStage4TFogFf() {
 	return;
 }
 
-/* 80280D00 000C .text      JSGGetEndZ__Q26JStage4TFogCFv                                */
+/* 80280D00-80280D0C 000C .text      JSGGetEndZ__Q26JStage4TFogCFv                                Function */
 // JStage::TFog::JSGGetEndZ(void) const
 #pragma push
 #pragma optimization_level 0
@@ -154,13 +182,13 @@ asm void JSGGetEndZ__Q26JStage4TFogCFv() {
 }
 #pragma pop
 
-/* 80280D0C 0004 .text      JSGSetEndZ__Q26JStage4TFogFf                                 */
+/* 80280D0C-80280D10 0004 .text      JSGSetEndZ__Q26JStage4TFogFf                                 ReturnFunction */
 // JStage::TFog::JSGSetEndZ(f32)
 void JSGSetEndZ__Q26JStage4TFogFf() {
 	return;
 }
 
-/* 80280D10 0014 .text      JSGGetColor__Q26JStage4TFogCFv                               */
+/* 80280D10-80280D24 0014 .text      JSGGetColor__Q26JStage4TFogCFv                               Function */
 // JStage::TFog::JSGGetColor(void) const
 #pragma push
 #pragma optimization_level 0
@@ -171,7 +199,7 @@ asm void JSGGetColor__Q26JStage4TFogCFv() {
 }
 #pragma pop
 
-/* 80280D24 0004 .text      JSGSetColor__Q26JStage4TFogF8_GXColor                        */
+/* 80280D24-80280D28 0004 .text      JSGSetColor__Q26JStage4TFogF8_GXColor                        ReturnFunction */
 // JStage::TFog::JSGSetColor(_GXColor)
 void JSGSetColor__Q26JStage4TFogF8_GXColor() {
 	return;

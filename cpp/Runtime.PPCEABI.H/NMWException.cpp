@@ -12,8 +12,20 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void operator delete[](void*); /* __dla__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dla__FPv();
+/* Function             */
+extern void __destroy_new_array();
+/* Function             */
+extern void __destroy_arr();
+/* Function             */
+extern void __construct_array();
+/* Function             */
+extern void __dt__26__partial_array_destructorFv();
+/* Function             */
+extern void __construct_new_array();
 }
 
 
@@ -22,7 +34,7 @@ extern void __dla__FPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80361C6C 007C .text      __destroy_new_array                                          */
+/* 80361C6C-80361CE8 007C .text      __destroy_new_array                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -32,7 +44,7 @@ asm void __destroy_new_array() {
 }
 #pragma pop
 
-/* 80361CE8 0078 .text      __destroy_arr                                                */
+/* 80361CE8-80361D60 0078 .text      __destroy_arr                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +54,7 @@ asm void __destroy_arr() {
 }
 #pragma pop
 
-/* 80361D60 00FC .text      __construct_array                                            */
+/* 80361D60-80361E5C 00FC .text      __construct_array                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +64,7 @@ asm void __construct_array() {
 }
 #pragma pop
 
-/* 80361E5C 00B8 .text      __dt__26__partial_array_destructorFv                         */
+/* 80361E5C-80361F14 00B8 .text      __dt__26__partial_array_destructorFv                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +74,7 @@ asm void __dt__26__partial_array_destructorFv() {
 }
 #pragma pop
 
-/* 80361F14 0104 .text      __construct_new_array                                        */
+/* 80361F14-80362018 0104 .text      __construct_new_array                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

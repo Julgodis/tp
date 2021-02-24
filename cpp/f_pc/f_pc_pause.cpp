@@ -12,15 +12,26 @@ struct layer_class;
 
 extern void fpcBs_Is_JustOfType(int, int); /* fpcBs_Is_JustOfType__Fii */
 extern void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); /* fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv */
+extern void fpcPause_IsEnable(void*, u8); /* fpcPause_IsEnable__FPvUc */
 extern void fpcPause_Enable(void*, u8); /* fpcPause_Enable__FPvUc */
 extern void fpcPause_Disable(void*, u8); /* fpcPause_Disable__FPvUc */
+extern void fpcPause_Init(void*); /* fpcPause_Init__FPv */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+/* Function             */
+extern void fpcPause_IsEnable__FPvUc();
+/* Function             */
 extern void fpcPause_Enable__FPvUc();
+/* Function             */
 extern void fpcPause_Disable__FPvUc();
-SECTION_SBSS extern u8 g_fpcNd_type[4];
+/* Function             */
+extern void fpcPause_Init__FPv();
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 }
 
 
@@ -29,7 +40,7 @@ SECTION_SBSS extern u8 g_fpcNd_type[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023844 0024 .text      fpcPause_IsEnable__FPvUc                                     */
+/* 80023844-80023868 0024 .text      fpcPause_IsEnable__FPvUc                                     Function */
 }
 
 #pragma push
@@ -42,7 +53,7 @@ asm void fpcPause_IsEnable(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 80023868 006C .text      fpcPause_Enable__FPvUc                                       */
+/* 80023868-800238D4 006C .text      fpcPause_Enable__FPvUc                                       Function */
 }
 
 #pragma push
@@ -55,7 +66,7 @@ asm void fpcPause_Enable(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 800238D4 0074 .text      fpcPause_Disable__FPvUc                                      */
+/* 800238D4-80023948 0074 .text      fpcPause_Disable__FPvUc                                      Function */
 }
 
 #pragma push
@@ -68,7 +79,7 @@ asm void fpcPause_Disable(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 80023948 000C .text      fpcPause_Init__FPv                                           */
+/* 80023948-80023954 000C .text      fpcPause_Init__FPv                                           Function */
 }
 
 #pragma push

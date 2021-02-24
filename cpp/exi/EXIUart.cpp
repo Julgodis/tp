@@ -9,20 +9,41 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSGetConsoleType();
+/* Function             */
 extern void EXIImm();
+/* Function             */
 extern void EXISync();
+/* Function             */
 extern void EXIAttach();
+/* Function             */
 extern void EXIDetach();
+/* Function             */
 extern void EXISelect();
+/* Function             */
 extern void EXIDeselect();
+/* Function             */
 extern void EXILock();
+/* Function             */
 extern void EXIUnlock();
+/* Function             */
 extern void EXIGetID();
+/* Function             */
 extern void ProbeBarnacle();
+/* Function             */
+extern void __OSEnableBarnacle();
+/* Function             */
+extern void InitializeUART();
+/* Function             */
+extern void WriteUARTN();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Chan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Dev[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Enabled[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 BarnacleEnabled[4];
 }
 
@@ -32,13 +53,13 @@ SECTION_SBSS extern u8 BarnacleEnabled[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804516E0 0004 .sbss      Chan                                                         */
+/* 804516E0-804516E4 0004 .sbss      Chan                                                         ZeroInitializedData */
 SECTION_SBSS u8 Chan[4];
-/* 804516E4 0004 .sbss      Dev                                                          */
+/* 804516E4-804516E8 0004 .sbss      Dev                                                          ZeroInitializedData */
 SECTION_SBSS u8 Dev[4];
-/* 804516E8 0004 .sbss      Enabled                                                      */
+/* 804516E8-804516EC 0004 .sbss      Enabled                                                      ZeroInitializedData */
 SECTION_SBSS u8 Enabled[4];
-/* 804516EC 0004 .sbss      BarnacleEnabled                                              */
+/* 804516EC-804516F0 0004 .sbss      BarnacleEnabled                                              ZeroInitializedData */
 SECTION_SBSS u8 BarnacleEnabled[4];
 }
 
@@ -48,7 +69,7 @@ SECTION_SBSS u8 BarnacleEnabled[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803445E8 018C .text      ProbeBarnacle                                                */
+/* 803445E8-80344774 018C .text      ProbeBarnacle                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +79,7 @@ asm void ProbeBarnacle() {
 }
 #pragma pop
 
-/* 80344774 01BC .text      __OSEnableBarnacle                                           */
+/* 80344774-80344930 01BC .text      __OSEnableBarnacle                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +89,7 @@ asm void __OSEnableBarnacle() {
 }
 #pragma pop
 
-/* 80344930 0070 .text      InitializeUART                                               */
+/* 80344930-803449A0 0070 .text      InitializeUART                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +99,7 @@ asm void InitializeUART() {
 }
 #pragma pop
 
-/* 803449A0 0200 .text      WriteUARTN                                                   */
+/* 803449A0-80344BA0 0200 .text      WriteUARTN                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

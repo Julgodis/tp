@@ -13,25 +13,59 @@ extern void DsyncFrame4ch(u32, u32, u32, u32, u32); /* DsyncFrame4ch__FUlUlUlUlU
 extern void DsyncFrame2(u32, u32, u32); /* DsyncFrame2__FUlUlUl */
 extern void DsyncFrame3(u32, u32, u32, u32, u32); /* DsyncFrame3__FUlUlUlUlUl */
 extern void Dsp_Update_Request(void); /* Dsp_Update_Request__Fv */
+extern void Dsp_Running_Check(void); /* Dsp_Running_Check__Fv */
+extern void Dsp_Running_Start(void); /* Dsp_Running_Start__Fv */
 
 extern "C" {
+/* Function             */
 extern void DsyncFrame2ch__FUlUlUl();
+/* Function             */
 extern void DsyncFrame4ch__FUlUlUlUlUl();
+/* Function             */
+extern void __DSPHandler();
+/* Function             */
 extern void DsyncFrame2__FUlUlUl();
+/* Function             */
 extern void DsyncFrame3__FUlUlUlUlUl();
+/* Function             */
 extern void Dsp_Update_Request__Fv();
+/* Function             */
+extern void Dsp_Running_Check__Fv();
+/* Function             */
+extern void Dsp_Running_Start__Fv();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void DSPCheckMailToDSP();
+/* Function             */
 extern void DSPCheckMailFromDSP();
+/* Function             */
 extern void DSPReadMailFromDSP();
+/* Function             */
 extern void DSPSendMailToDSP();
+/* Function             */
 extern void __DSP_exec_task();
+/* Function             */
 extern void __DSP_remove_task();
-SECTION_BSS extern u8 sync_stack[24];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sync_stack[20 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451308[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 DSP_prior_task[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451310[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451318[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451320[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451328[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_first_task[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DSP_curr_task[4];
 }
 
@@ -41,8 +75,8 @@ SECTION_SBSS extern u8 __DSP_curr_task[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434060 0014 .bss       sync_stack                                                   */
-SECTION_BSS u8 sync_stack[24];
+/* 80434060-80434078 0014 .bss       sync_stack                                                   ZeroInitializedData */
+SECTION_BSS u8 sync_stack[20 + 4 /* padding */];
 }
 
 
@@ -51,18 +85,20 @@ SECTION_BSS u8 sync_stack[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8045130C 0004 .sbss      DSP_prior_task                                               */
+/* 80451308-8045130C 0004 .sbss      merged_80451308                                              MergedZeroInitializedData */
+SECTION_SBSS u8 merged_80451308[4];
+/* 80451308 0001 data_80451308 */
+/* 80451309 0003 data_80451309 */
+/* 8045130C-80451310 0004 .sbss      DSP_prior_task                                               ZeroInitializedData */
 SECTION_SBSS u8 DSP_prior_task[4];
-/* 80451310 0008 .sbss      data_80451310                                                */
+/* 80451310-80451318 0008 .sbss      data_80451310                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451310[8];
-/* 80451318 0008 .sbss      data_80451318                                                */
+/* 80451318-80451320 0008 .sbss      data_80451318                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451318[8];
-/* 80451320 0008 .sbss      data_80451320                                                */
+/* 80451320-80451328 0008 .sbss      data_80451320                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451320[8];
-/* 80451328 0008 .sbss      data_80451328                                                */
+/* 80451328-80451330 0008 .sbss      data_80451328                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451328[8];
-/* 80451330 0004 .sbss      data_80451330                                                */
-SECTION_SBSS u8 data_80451330[4];
 }
 
 
@@ -71,7 +107,7 @@ SECTION_SBSS u8 data_80451330[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029EB20 0304 .text      __DSPHandler                                                 */
+/* 8029EB20-8029EE24 0304 .text      __DSPHandler                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +118,7 @@ asm void __DSPHandler() {
 }
 #pragma pop
 
-/* 8029EE40 0050 .text      DsyncFrame2__FUlUlUl                                         */
+/* 8029EE40-8029EE90 0050 .text      DsyncFrame2__FUlUlUl                                         Function */
 }
 
 #pragma push
@@ -96,7 +132,7 @@ asm void DsyncFrame2(u32, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8029EEA0 0058 .text      DsyncFrame3__FUlUlUlUlUl                                     */
+/* 8029EEA0-8029EEF8 0058 .text      DsyncFrame3__FUlUlUlUlUl                                     Function */
 }
 
 #pragma push
@@ -110,7 +146,7 @@ asm void DsyncFrame3(u32, u32, u32, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8029EF00 0078 .text      Dsp_Update_Request__Fv                                       */
+/* 8029EF00-8029EF78 0078 .text      Dsp_Update_Request__Fv                                       Function */
 }
 
 #pragma push
@@ -124,7 +160,7 @@ asm void Dsp_Update_Request(void) {
 #pragma pop
 
 extern "C" {
-/* 8029EF80 0014 .text      Dsp_Running_Check__Fv                                        */
+/* 8029EF80-8029EF94 0014 .text      Dsp_Running_Check__Fv                                        Function */
 }
 
 #pragma push
@@ -138,7 +174,7 @@ asm void Dsp_Running_Check(void) {
 #pragma pop
 
 extern "C" {
-/* 8029EFA0 000C .text      Dsp_Running_Start__Fv                                        */
+/* 8029EFA0-8029EFAC 000C .text      Dsp_Running_Start__Fv                                        Function */
 }
 
 #pragma push

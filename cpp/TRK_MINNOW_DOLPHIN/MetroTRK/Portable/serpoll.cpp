@@ -9,19 +9,62 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void TRKConstructEvent();
+/* Function             */
 extern void TRKPostEvent();
+/* Function             */
 extern void TRKAppendBuffer_ui8();
+/* Function             */
 extern void TRKSetBufferPosition();
+/* Function             */
 extern void TRKReleaseBuffer();
+/* Function             */
 extern void TRKGetBuffer();
+/* Function             */
 extern void TRKGetFreeBuffer();
+/* ReturnIntegerFunction */
+extern  int TRKTerminateSerialHandler();
+/* Function             */
+extern void TRKInitializeSerialHandler();
+/* Function             */
+extern void TRKProcessInput();
+/* Function             */
+extern void TRKGetInput();
+/* Function             */
 extern void TRKTestForPacket();
+/* Function             */
 extern void TRKReadUARTN();
+/* Function             */
 extern void TRKPollUART();
+/* Function             */
 extern void MWTRACE();
+/* InitializedData      */
 SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_121[36];
-SECTION_BSS extern u8 gTRKFramingState[24];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_122[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_123[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_124[32];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_125[32];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_126[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_146[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_147[28];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_148[52];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_149[40];
+/* InitializedData      */
+SECTION_RODATA extern const u8 MetroTRK_Portable_serpoll__LIT_150[36];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 gTRKFramingState[20 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 }
 
 
@@ -30,8 +73,8 @@ SECTION_BSS extern u8 gTRKFramingState[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2700 0000 .rodata    ...rodata.0                                                  */
-/* 803A2700 0022 .rodata    @121                                                         */
+/* 803A2700-803A2700 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 803A2700-803A2724 0022 .rodata    @121                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_121[36] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x50, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x5F, 0x48, 0x65, 0x61, 0x64, 0x65,
 	0x72, 0x20, 0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73,
@@ -39,7 +82,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_121[36] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A2724 0022 .rodata    @122                                                         */
+/* 803A2724-803A2748 0022 .rodata    @122                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_122[36] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x43, 0x4D, 0x44, 0x5F, 0x52, 0x65, 0x61, 0x64, 0x4D, 0x65, 0x6D, 0x6F,
 	0x72, 0x79, 0x20, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73,
@@ -47,7 +90,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_122[36] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A2748 0022 .rodata    @123                                                         */
+/* 803A2748-803A276C 0022 .rodata    @123                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_123[36] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x43, 0x4D, 0x44, 0x5F, 0x57, 0x72, 0x69, 0x74, 0x65, 0x4D, 0x65, 0x6D,
 	0x6F, 0x72, 0x79, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73,
@@ -55,17 +98,17 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_123[36] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A276C 0020 .rodata    @124                                                         */
+/* 803A276C-803A278C 0020 .rodata    @124                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_124[32] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x43, 0x4D, 0x44, 0x5F, 0x43, 0x6F, 0x6E, 0x6E, 0x65, 0x63, 0x74, 0x20,
 	0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,
 };
-/* 803A278C 0020 .rodata    @125                                                         */
+/* 803A278C-803A27AC 0020 .rodata    @125                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_125[32] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x43, 0x4D, 0x44, 0x5F, 0x52, 0x65, 0x70, 0x6C, 0x79, 0x41, 0x63, 0x6B,
 	0x09, 0x20, 0x20, 0x20, 0x20, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,
 };
-/* 803A27AC 0021 .rodata    @126                                                         */
+/* 803A27AC-803A27D0 0021 .rodata    @126                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_126[36] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x43, 0x4D, 0x44, 0x5F, 0x52, 0x65, 0x61, 0x64, 0x52, 0x65, 0x67, 0x69,
 	0x73, 0x74, 0x65, 0x72, 0x73, 0x09, 0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A,
@@ -73,20 +116,20 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_126[36] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803A27D0 0024 .rodata    @146                                                         */
+/* 803A27D0-803A27F4 0024 .rodata    @146                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_146[36] = {
 	0x54, 0x65, 0x73, 0x74, 0x46, 0x6F, 0x72, 0x50, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20, 0x3A, 0x20,
 	0x46, 0x72, 0x65, 0x65, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x69, 0x73, 0x20, 0x20, 0x25,
 	0x6C, 0x64, 0x0A, 0x00,
 };
-/* 803A27F4 001B .rodata    @147                                                         */
+/* 803A27F4-803A2810 001B .rodata    @147                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_147[28] = {
 	0x52, 0x65, 0x61, 0x64, 0x69, 0x6E, 0x67, 0x20, 0x70, 0x61, 0x79, 0x6C, 0x6F, 0x61, 0x64, 0x20,
 	0x25, 0x6C, 0x64, 0x20, 0x62, 0x79, 0x74, 0x65, 0x73, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803A2810 0031 .rodata    @148                                                         */
+/* 803A2810-803A2844 0031 .rodata    @148                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_148[52] = {
 	0x54, 0x65, 0x73, 0x74, 0x46, 0x6F, 0x72, 0x50, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20, 0x3A, 0x20,
 	0x49, 0x6E, 0x76, 0x61, 0x6C, 0x69, 0x64, 0x20, 0x73, 0x69, 0x7A, 0x65, 0x20, 0x6F, 0x66, 0x20,
@@ -95,13 +138,13 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_148[52] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803A2844 0028 .rodata    @149                                                         */
+/* 803A2844-803A286C 0028 .rodata    @149                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_149[40] = {
 	0x54, 0x65, 0x73, 0x74, 0x46, 0x6F, 0x72, 0x50, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20, 0x3A, 0x20,
 	0x49, 0x6E, 0x76, 0x61, 0x6C, 0x69, 0x64, 0x20, 0x73, 0x69, 0x7A, 0x65, 0x20, 0x6F, 0x66, 0x20,
 	0x70, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x0A, 0x00,
 };
-/* 803A286C 001D .rodata    @150                                                         */
+/* 803A286C-803A2890 001D .rodata    @150                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_150[36] = {
 	0x54, 0x65, 0x73, 0x74, 0x46, 0x6F, 0x72, 0x50, 0x61, 0x63, 0x6B, 0x65, 0x74, 0x20, 0x72, 0x65,
 	0x74, 0x75, 0x72, 0x6E, 0x69, 0x6E, 0x67, 0x20, 0x25, 0x6C, 0x64, 0x0A, 0x00,
@@ -116,8 +159,8 @@ SECTION_RODATA const u8 MetroTRK_Portable_serpoll__LIT_150[36] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044F270 0014 .bss       gTRKFramingState                                             */
-SECTION_BSS u8 gTRKFramingState[24];
+/* 8044F270-8044F288 0014 .bss       gTRKFramingState                                             ZeroInitializedData */
+SECTION_BSS u8 gTRKFramingState[20 + 4 /* padding */];
 }
 
 
@@ -126,9 +169,8 @@ SECTION_BSS u8 gTRKFramingState[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804519B8 0004 .sbss      gTRKInputPendingPtr                                          */
-SECTION_SBSS u8 gTRKInputPendingPtr[4];
-SECTION_SBSS u8 pad_804519BC[4];
+/* 804519B8-804519C0 0004 .sbss      gTRKInputPendingPtr                                          ZeroInitializedData */
+SECTION_SBSS u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 }
 
 
@@ -137,12 +179,12 @@ SECTION_SBSS u8 pad_804519BC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036D858 0008 .text      TRKTerminateSerialHandler                                    */
+/* 8036D858-8036D860 0008 .text      TRKTerminateSerialHandler                                    ReturnIntegerFunction */
 int TRKTerminateSerialHandler() {
 	return 0;
 }
 
-/* 8036D860 00C4 .text      TRKInitializeSerialHandler                                   */
+/* 8036D860-8036D924 00C4 .text      TRKInitializeSerialHandler                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +194,7 @@ asm void TRKInitializeSerialHandler() {
 }
 #pragma pop
 
-/* 8036D924 0050 .text      TRKProcessInput                                              */
+/* 8036D924-8036D974 0050 .text      TRKProcessInput                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +204,7 @@ asm void TRKProcessInput() {
 }
 #pragma pop
 
-/* 8036D974 0060 .text      TRKGetInput                                                  */
+/* 8036D974-8036D9D4 0060 .text      TRKGetInput                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +214,7 @@ asm void TRKGetInput() {
 }
 #pragma pop
 
-/* 8036D9D4 013C .text      TRKTestForPacket                                             */
+/* 8036D9D4-8036DB10 013C .text      TRKTestForPacket                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

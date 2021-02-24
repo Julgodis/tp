@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __DSP_debug_printf();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80352580 0050 .text      __DSP_debug_printf                                           */
+/* 80352580-803525D0 0050 .text      __DSP_debug_printf                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

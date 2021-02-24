@@ -8,23 +8,27 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
 struct layer_class;
-struct line_tag;
 struct process_priority_class;
 struct node_list_class;
-struct layer_management_tag_class;
 struct process_method_tag_class;
+struct layer_management_tag_class;
+struct line_tag;
+struct create_tag_class;
 
 extern void fpcLy_CancelQTo(process_method_tag_class*); /* fpcLy_CancelQTo__FP24process_method_tag_class */
 extern void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); /* fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class */
 extern void fpcLy_Layer(unsigned int); /* fpcLy_Layer__FUi */
 extern void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16); /* fpcLyTg_Move__FP26layer_management_tag_classUiUsUs */
+extern void fpcPi_IsInQueue(process_priority_class*); /* fpcPi_IsInQueue__FP22process_priority_class */
 extern void fpcPi_QueueTo(process_priority_class*); /* fpcPi_QueueTo__FP22process_priority_class */
 extern void fpcPi_ToQueue(process_priority_class*); /* fpcPi_ToQueue__FP22process_priority_class */
 extern void fpcPi_GetFromQueue(void); /* fpcPi_GetFromQueue__Fv */
 extern void fpcPi_Delete(process_priority_class*); /* fpcPi_Delete__FP22process_priority_class */
 extern void fpcPi_IsNormal(unsigned int, u16, u16); /* fpcPi_IsNormal__FUiUsUs */
+extern void fpcPi_Change(process_priority_class*, unsigned int, u16, u16); /* fpcPi_Change__FP22process_priority_classUiUsUs */
+extern void fpcPi_Handler(void); /* fpcPi_Handler__Fv */
+extern void fpcPi_Init(process_priority_class*, void*, unsigned int, u16, u16); /* fpcPi_Init__FP22process_priority_classPvUiUsUs */
 extern void fpcLnTg_Move(line_tag*, int); /* fpcLnTg_Move__FP8line_tagi */
 extern void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); /* fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv */
 extern void cTg_IsUse(create_tag_class*); /* cTg_IsUse__FP16create_tag_class */
@@ -34,28 +38,60 @@ extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
 extern void fpcLy_CancelQTo__FP24process_method_tag_class();
+/* Function             */
 extern void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
+/* Function             */
 extern void fpcLy_Layer__FUi();
+/* Function             */
 extern void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
+/* Function             */
+extern void fpcPi_IsInQueue__FP22process_priority_class();
+/* Function             */
 extern void fpcPi_QueueTo__FP22process_priority_class();
+/* Function             */
 extern void fpcPi_ToQueue__FP22process_priority_class();
+/* Function             */
 extern void fpcPi_GetFromQueue__Fv();
+/* Function             */
 extern void fpcPi_Delete__FP22process_priority_class();
+/* Function             */
 extern void fpcPi_IsNormal__FUiUsUs();
+/* Function             */
+extern void fpcPi_Change__FP22process_priority_classUiUsUs();
+/* Function             */
+extern void fpcPi_Handler__Fv();
+/* Function             */
+extern void fpcPi_Init__FP22process_priority_classPvUiUsUs();
+/* Function             */
 extern void fpcLnTg_Move__FP8line_tagi();
+/* Function             */
 extern void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+/* Function             */
 extern void cTg_IsUse__FP16create_tag_class();
+/* Function             */
 extern void cTg_GetFirst__FP15node_list_class();
+/* Function             */
 extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
-SECTION_BSS extern u8 l_fpcPi_Queue[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 l_fpcPi_Queue[12 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505E8[8];
+/* InitializedData      */
+SECTION_SDATA extern u8 data_804505F0[8];
 }
 
 
@@ -64,11 +100,11 @@ SECTION_SDATA extern u8 data_804505E8[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505E8 0008 .sdata     crear$2224                                                   */
+/* 804505E8-804505F0 0008 .sdata     crear$2224                                                   InitializedData */
 SECTION_SDATA u8 data_804505E8[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 804505F0 0008 .sdata     data_804505F0                                                */
+/* 804505F0-804505F8 0008 .sdata     data_804505F0                                                InitializedData */
 SECTION_SDATA u8 data_804505F0[8] = {
 	0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -80,8 +116,8 @@ SECTION_SDATA u8 data_804505F0[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F4E58 000C .bss       l_fpcPi_Queue                                                */
-SECTION_BSS u8 l_fpcPi_Queue[16];
+/* 803F4E58-803F4E68 000C .bss       l_fpcPi_Queue                                                ZeroInitializedData */
+SECTION_BSS u8 l_fpcPi_Queue[12 + 4 /* padding */];
 }
 
 
@@ -90,7 +126,7 @@ SECTION_BSS u8 l_fpcPi_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023130 0020 .text      fpcPi_IsInQueue__FP22process_priority_class                  */
+/* 80023130-80023150 0020 .text      fpcPi_IsInQueue__FP22process_priority_class                  Function */
 }
 
 #pragma push
@@ -103,7 +139,7 @@ asm void fpcPi_IsInQueue(process_priority_class*) {
 #pragma pop
 
 extern "C" {
-/* 80023150 0038 .text      fpcPi_QueueTo__FP22process_priority_class                    */
+/* 80023150-80023188 0038 .text      fpcPi_QueueTo__FP22process_priority_class                    Function */
 }
 
 #pragma push
@@ -116,7 +152,7 @@ asm void fpcPi_QueueTo(process_priority_class*) {
 #pragma pop
 
 extern "C" {
-/* 80023188 008C .text      fpcPi_ToQueue__FP22process_priority_class                    */
+/* 80023188-80023214 008C .text      fpcPi_ToQueue__FP22process_priority_class                    Function */
 }
 
 #pragma push
@@ -129,7 +165,7 @@ asm void fpcPi_ToQueue(process_priority_class*) {
 #pragma pop
 
 extern "C" {
-/* 80023214 0054 .text      fpcPi_GetFromQueue__Fv                                       */
+/* 80023214-80023268 0054 .text      fpcPi_GetFromQueue__Fv                                       Function */
 }
 
 #pragma push
@@ -142,7 +178,7 @@ asm void fpcPi_GetFromQueue(void) {
 #pragma pop
 
 extern "C" {
-/* 80023268 004C .text      fpcPi_Delete__FP22process_priority_class                     */
+/* 80023268-800232B4 004C .text      fpcPi_Delete__FP22process_priority_class                     Function */
 }
 
 #pragma push
@@ -155,7 +191,7 @@ asm void fpcPi_Delete(process_priority_class*) {
 #pragma pop
 
 extern "C" {
-/* 800232B4 0034 .text      fpcPi_IsNormal__FUiUsUs                                      */
+/* 800232B4-800232E8 0034 .text      fpcPi_IsNormal__FUiUsUs                                      Function */
 }
 
 #pragma push
@@ -168,7 +204,7 @@ asm void fpcPi_IsNormal(unsigned int, u16, u16) {
 #pragma pop
 
 extern "C" {
-/* 800232E8 0140 .text      fpcPi_Change__FP22process_priority_classUiUsUs               */
+/* 800232E8-80023428 0140 .text      fpcPi_Change__FP22process_priority_classUiUsUs               Function */
 }
 
 #pragma push
@@ -181,7 +217,7 @@ asm void fpcPi_Change(process_priority_class*, unsigned int, u16, u16) {
 #pragma pop
 
 extern "C" {
-/* 80023428 0094 .text      fpcPi_Handler__Fv                                            */
+/* 80023428-800234BC 0094 .text      fpcPi_Handler__Fv                                            Function */
 }
 
 #pragma push
@@ -194,7 +230,7 @@ asm void fpcPi_Handler(void) {
 #pragma pop
 
 extern "C" {
-/* 800234BC 00A8 .text      fpcPi_Init__FP22process_priority_classPvUiUsUs               */
+/* 800234BC-80023564 00A8 .text      fpcPi_Init__FP22process_priority_classPvUiUsUs               Function */
 }
 
 #pragma push

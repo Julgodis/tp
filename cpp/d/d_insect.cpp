@@ -13,9 +13,9 @@
 // 
 
 struct cXyz;
+struct csXyz;
 struct fopAc_ac_c;
 struct Vec;
-struct csXyz;
 
 extern void mDoLib_project(Vec*, Vec*); /* mDoLib_project__FP3VecP3Vec */
 extern void mDoLib_pos2camera(Vec*, Vec*); /* mDoLib_pos2camera__FP3VecP3Vec */
@@ -26,31 +26,63 @@ extern void fopAcM_createItem(const cXyz*, int, int, int, const csXyz*, const cX
 extern void fopAcM_cancelCarryNow(fopAc_ac_c*); /* fopAcM_cancelCarryNow__FP10fopAc_ac_c */
 
 extern "C" {
+/* Function             */
 extern void mDoLib_project__FP3VecP3Vec();
+/* Function             */
 extern void mDoLib_pos2camera__FP3VecP3Vec();
+/* Function             */
 extern void __ct__10fopAc_ac_cFv();
+/* Function             */
 extern void fopAcM_delete__FP10fopAc_ac_c();
+/* Function             */
 extern void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
+/* Function             */
 extern void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
+/* Function             */
 extern void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi();
+/* Function             */
 extern void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void reset__14dEvt_control_cFv();
+/* Function             */
 extern void setPtI_Id__14dEvt_control_cFUi();
+/* Function             */
 extern void endCheckOld__16dEvent_manager_cFPCc();
+/* Function             */
 extern void newData__13dDlst_peekZ_cFssPUl();
+/* Function             */
 extern void Insect_Release__9dInsect_cFv();
+/* Function             */
+extern void __ct__9dInsect_cFv();
+/* Function             */
+extern void Insect_GetDemoMain__9dInsect_cFv();
+/* Function             */
+extern void CalcZBuffer__9dInsect_cFf();
+/* Function             */
 extern void isCatchNotGiveInsect__14dMenu_Insect_cFUc();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_insect__stringBase0[16];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern const void* __vt__9dInsect_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dInsect_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_insect__LIT_3871;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3872[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_insect__LIT_3873;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3874;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3875;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_insect__LIT_3876;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_insect__LIT_3877[8];
 }
 
@@ -60,8 +92,12 @@ SECTION_SDATA2 extern u8 d_d_insect__LIT_3877[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80393D98 0010 .rodata    @stringBase0                                                 */
-const char* const stringBase_80393D98 = "DEFAULT_GETITEM";
+/* 80393D98-80393DA8 0010 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80393D98 = "DEFAULT_GETITEM";
+#pragma pop
 }
 
 
@@ -70,8 +106,8 @@ const char* const stringBase_80393D98 = "DEFAULT_GETITEM";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BA078 000C .data      __vt__9dInsect_c                                             */
-SECTION_DATA const  void* __vt__9dInsect_c[4] = {
+/* 803BA078-803BA088 000C .data      __vt__9dInsect_c                                             VTableData */
+SECTION_DATA void* __vt__9dInsect_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)Insect_Release__9dInsect_cFv,
@@ -86,26 +122,26 @@ SECTION_DATA const  void* __vt__9dInsect_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804535E0 0004 .sdata2    @3871                                                        */
+/* 804535E0-804535E4 0004 .sdata2    @3871                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 d_d_insect__LIT_3871 = 20.000000f;
-/* 804535E4 0004 .sdata2    @3872                                                        */
+/* 804535E4-804535E8 0004 .sdata2    @3872                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3872[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804535E8 0004 .sdata2    @3873                                                        */
+/* 804535E8-804535EC 0004 .sdata2    @3873                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_insect__LIT_3873 = 608.000000f;
-/* 804535EC 0004 .sdata2    @3874                                                        */
+/* 804535EC-804535F0 0004 .sdata2    @3874                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 LIT_3874 = 448.000000f;
-/* 804535F0 0004 .sdata2    @3875                                                        */
+/* 804535F0-804535F4 0004 .sdata2    @3875                                                        Float32Data */
 // 0xc1200000
 SECTION_SDATA2 f32 LIT_3875 = -10.000000f;
-/* 804535F4 0004 .sdata2    @3876                                                        */
+/* 804535F4-804535F8 0004 .sdata2    @3876                                                        Float32Data */
 // 0x4b7fffff
 SECTION_SDATA2 f32 d_d_insect__LIT_3876 = 16777215.000000f;
-/* 804535F8 0004 .sdata2    @3877                                                        */
+/* 804535F8-80453600 0004 .sdata2    @3877                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_insect__LIT_3877[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -119,7 +155,7 @@ SECTION_SDATA2 u8 d_d_insect__LIT_3877[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8015E010 0068 .text      __ct__9dInsect_cFv                                           */
+/* 8015E010-8015E078 0068 .text      __ct__9dInsect_cFv                                           Function */
 // dInsect_c::dInsect_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +166,7 @@ asm void __ct__9dInsect_cFv() {
 }
 #pragma pop
 
-/* 8015E078 01F4 .text      Insect_GetDemoMain__9dInsect_cFv                             */
+/* 8015E078-8015E26C 01F4 .text      Insect_GetDemoMain__9dInsect_cFv                             Function */
 // dInsect_c::Insect_GetDemoMain(void)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +177,7 @@ asm void Insect_GetDemoMain__9dInsect_cFv() {
 }
 #pragma pop
 
-/* 8015E26C 018C .text      CalcZBuffer__9dInsect_cFf                                    */
+/* 8015E26C-8015E3F8 018C .text      CalcZBuffer__9dInsect_cFf                                    Function */
 // dInsect_c::CalcZBuffer(f32)
 #pragma push
 #pragma optimization_level 0

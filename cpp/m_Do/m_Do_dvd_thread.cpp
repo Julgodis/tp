@@ -13,10 +13,10 @@
 // 
 
 struct JKRHeap;
-struct node_list_class;
 struct node_class;
+struct node_list_class;
 
-extern void my_DVDConvertPathToEntrynum(const s8*); /* my_DVDConvertPathToEntrynum__FPCc */
+extern void my_DVDConvertPathToEntrynum(const char*); /* my_DVDConvertPathToEntrynum__FPCc */
 extern void cb(void*); /* cb__FPv */
 extern void cLs_SingleCut(node_class*); /* cLs_SingleCut__FP10node_class */
 extern void cLs_Addition(node_list_class*, node_class*); /* cLs_Addition__FP15node_list_classP10node_class */
@@ -26,81 +26,173 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport_FatalError();
+/* Function             */
 extern void OSReport_Error();
+/* GlobalFunction       */
 extern u32 mDoExt_getAssertHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getGameHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getZeldaHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getCommandHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getArchiveHeap__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getArchiveHeapPtr__Fv();
+/* GlobalFunction       */
 extern u32 mDoExt_getJ2dHeap__Fv();
+/* Function             */
 extern void main__9mDoDvdThdFPv();
+/* Function             */
+extern void create__9mDoDvdThdFl();
+/* Function             */
+extern void suspend__9mDoDvdThdFv();
+/* Function             */
 extern void my_DVDConvertPathToEntrynum__FPCc();
+/* Function             */
 extern void __dt__19mDoDvdThd_command_cFv();
+/* Function             */
 extern void __ct__17mDoDvdThd_param_cFv();
+/* Function             */
 extern void kick__17mDoDvdThd_param_cFv();
+/* Function             */
 extern void waitForKick__17mDoDvdThd_param_cFv();
+/* FirstParamFunction   */
 extern u32 getFirstCommand__17mDoDvdThd_param_cFv(u8*);
+/* Function             */
 extern void addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c();
+/* Function             */
 extern void cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c();
+/* Function             */
 extern void cb__FPv();
+/* Function             */
 extern void mainLoop__17mDoDvdThd_param_cFv();
+/* Function             */
 extern void __ct__19mDoDvdThd_command_cFv();
+/* Function             */
 extern void __dt__20mDoDvdThd_callback_cFv();
+/* Function             */
 extern void __ct__20mDoDvdThd_callback_cFPFPv_PvPv();
+/* Function             */
+extern void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+/* Function             */
 extern void execute__20mDoDvdThd_callback_cFv();
+/* Function             */
 extern void __dt__24mDoDvdThd_mountArchive_cFv();
+/* Function             */
 extern void __ct__24mDoDvdThd_mountArchive_cFUc();
+/* Function             */
+extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+/* Function             */
 extern void execute__24mDoDvdThd_mountArchive_cFv();
+/* Function             */
 extern void __dt__25mDoDvdThd_mountXArchive_cFv();
+/* Function             */
 extern void __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode();
+/* Function             */
+extern void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+/* Function             */
 extern void execute__25mDoDvdThd_mountXArchive_cFv();
+/* Function             */
 extern void __ct__21mDoDvdThd_toMainRam_cFUc();
+/* Function             */
+extern void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+/* Function             */
 extern void __dt__21mDoDvdThd_toMainRam_cFv();
+/* Function             */
 extern void execute__21mDoDvdThd_toMainRam_cFv();
+/* SInitFunction        */
+extern void __sinit_m_Do_dvd_thread_cpp();
+/* Function             */
 extern void cLs_SingleCut__FP10node_class();
+/* Function             */
 extern void cLs_Addition__FP15node_list_classP10node_class();
+/* Function             */
 extern void cLs_Create__FP15node_list_class();
+/* Function             */
 extern void cNd_ForcedClear__FP10node_class();
+/* Function             */
 extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+/* GlobalFunction       */
 extern u32 getThreadPointer__6JASDvdFv();
+/* Function             */
 extern void becomeCurrentHeap__7JKRHeapFv();
+/* Function             */
 extern void getSize__7JKRHeapFPv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__9JKRThreadFP8OSThreadi();
+/* Function             */
 extern void __dt__9JKRThreadFv();
+/* Function             */
 extern void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+/* Function             */
 extern void OSInitMessageQueue();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void OSReceiveMessage();
+/* Function             */
 extern void OSInitMutex();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void OSGetCurrentThread();
+/* Function             */
 extern void OSCreateThread();
+/* Function             */
 extern void OSResumeThread();
+/* Function             */
 extern void OSSuspendThread();
+/* Function             */
 extern void DVDConvertPathToEntrynum();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_dvd_thread__stringBase0[592];
-SECTION_DATA extern const void* __vt__21mDoDvdThd_toMainRam_c[4];
-SECTION_DATA extern const void* __vt__25mDoDvdThd_mountXArchive_c[4];
-SECTION_DATA extern const void* __vt__24mDoDvdThd_mountArchive_c[4];
-SECTION_DATA extern const void* __vt__20mDoDvdThd_callback_c[4];
-SECTION_DATA extern const void* __vt__19mDoDvdThd_command_c[4];
-SECTION_BSS extern u8 l_thread__9mDoDvdThd[800];
-SECTION_BSS extern u8 l_param__9mDoDvdThd[96];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21mDoDvdThd_toMainRam_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25mDoDvdThd_mountXArchive_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__24mDoDvdThd_mountArchive_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20mDoDvdThd_callback_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19mDoDvdThd_command_c[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 l_thread__9mDoDvdThd[792 + 8 /* padding */];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 l_threadStack__9mDoDvdThd[4096];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 l_param__9mDoDvdThd[72 + 24 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450C80[8];
 }
 
@@ -110,43 +202,62 @@ SECTION_SBSS extern u8 merged_80450C80[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803741A8 0250 .rodata    @stringBase0                                                 */
-const char* const stringBase_803741A8 = 
-    "mDoDvdThd_param_c::mainLoop() コマ"
+/* 803741A8-803743F8 0250 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803741A8 = 
+    "mDoDvdThd_param_"
+    "c::mainLoop() コマ"
     "ンドの実行が失敗しました。\n";
-const char* const stringBase_803741E6 = 
-    "mDoDvdThd_mountArchive_c::execut"
+SECTION_DEAD const char* const stringBase_803741E6 = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
     "e マウント失敗\n";
-const char* const stringBase_80374216 = 
-    "mDoDvdThd_mountArchive_c::execut"
-    "e ゼルダヒープで再チャレンジ！\n";
-const char* const stringBase_80374256 = 
-    "mDoDvdThd_mountArchive_c::execut"
-    "e アーカイブヒープで再チャレンジ！\n";
-const char* const stringBase_8037429A = 
-    "mDoDvdThd_mountArchive_c::execut"
-    "e ゲームヒープで再チャレンジ！\n";
-const char* const stringBase_803742DA = 
-    "mDoDvdThd_mountArchive_c::execut"
-    "e J2Dヒープで再チャレンジ！\n";
-const char* const stringBase_80374317 = 
-    "mDoDvdThd_mountArchive_c::execut"
-    "e ヒープが致命的に足りません！\n";
-const char* const stringBase_80374357 = 
-    "mDoDvdThd_getResource_c::create("
+SECTION_DEAD const char* const stringBase_80374216 = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
+    "e ゼルダヒープで再チャレンジ！"
+    "\n";
+SECTION_DEAD const char* const stringBase_80374256 = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
+    "e アーカイブヒープで再チャレン"
+    "ジ！\n";
+SECTION_DEAD const char* const stringBase_8037429A = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
+    "e ゲームヒープで再チャレンジ！"
+    "\n";
+SECTION_DEAD const char* const stringBase_803742DA = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
+    "e J2Dヒープで再チャレンジ！"
+    "\n";
+SECTION_DEAD const char* const stringBase_80374317 = 
+    "mDoDvdThd_mountA"
+    "rchive_c::execut"
+    "e ヒープが致命的に足りません！"
+    "\n";
+SECTION_DEAD const char* const stringBase_80374357 = 
+    "mDoDvdThd_getRes"
+    "ource_c::create("
     ") クラス生成に失敗\n";
 // MWCC ignores mapping of some japanese characters using the 
-// byte 0x5C (ASCII '\') because of a C++98 standard. This is
-// why this string is hex-encoded.
-const char* const stringBase_8037438B = 
-    """\x6D""""\x44""""\x6F""""\x44""""\x76""""\x64""""\x54""""\x68""""\x64""""\x5F""""\x67""""\x65""""\x74""""\x52""""\x65""""\x73""""\x6F""""\x75""""\x72""""\x63""""\x65""""\x5F""""\x63""""\x3A""""\x3A""""\x63""""\x72""""\x65""""\x61""""\x74""""\x65""""\x28"""
-    """\x29""""\x20""""\x83""""\x8A""""\x83""""\x5C""""\x81""""\x5B""""\x83""""\x58""""\x8E""""\xE6""""\x93""""\xBE""""\x82""""\xC9""""\x8E""""\xB8""""\x94""""\x73""""\x0A""";
+// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
+SECTION_DEAD const char* const stringBase_8037438B = 
+    "\x6D\x44\x6F\x44\x76\x64\x54\x68\x64\x5F\x67\x65\x74\x52\x65\x73"
+    "\x6F\x75\x72\x63\x65\x5F\x63\x3A\x3A\x63\x72\x65\x61\x74\x65\x28"
+    "\x29\x20\x83\x8A\x83\x5C\x81\x5B\x83\x58\x8E\xE6\x93\xBE\x82\xC9"
+    "\x8E\xB8\x94\x73\x0A";
 // MWCC ignores mapping of some japanese characters using the 
-// byte 0x5C (ASCII '\') because of a C++98 standard. This is
-// why this string is hex-encoded.
-const char* const stringBase_803743C1 = 
-    """\x6D""""\x44""""\x6F""""\x44""""\x76""""\x64""""\x54""""\x68""""\x64""""\x5F""""\x67""""\x65""""\x74""""\x52""""\x65""""\x73""""\x6F""""\x75""""\x72""""\x63""""\x65""""\x5F""""\x63""""\x3A""""\x3A""""\x65""""\x78""""\x65""""\x63""""\x75""""\x74""""\x65"""
-    """\x28""""\x29""""\x20""""\x83""""\x8A""""\x83""""\x5C""""\x81""""\x5B""""\x83""""\x58""""\x8E""""\xE6""""\x93""""\xBE""""\x82""""\xC9""""\x8E""""\xB8""""\x94""""\x73""""\x0A""";
+// byte 0x5C (ASCII '\'). This is why this string is hex-encoded.
+SECTION_DEAD const char* const stringBase_803743C1 = 
+    "\x6D\x44\x6F\x44\x76\x64\x54\x68\x64\x5F\x67\x65\x74\x52\x65\x73"
+    "\x6F\x75\x72\x63\x65\x5F\x63\x3A\x3A\x65\x78\x65\x63\x75\x74\x65"
+    "\x28\x29\x20\x83\x8A\x83\x5C\x81\x5B\x83\x58\x8E\xE6\x93\xBE\x82"
+    "\xC9\x8E\xB8\x94\x73\x0A";
+#pragma pop
 }
 
 
@@ -155,36 +266,36 @@ const char* const stringBase_803743C1 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A34A8 0010 .data      __vt__21mDoDvdThd_toMainRam_c                                */
-SECTION_DATA const  void* __vt__21mDoDvdThd_toMainRam_c[4] = {
+/* 803A34A8-803A34B8 0010 .data      __vt__21mDoDvdThd_toMainRam_c                                VTableData */
+SECTION_DATA void* __vt__21mDoDvdThd_toMainRam_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21mDoDvdThd_toMainRam_cFv,
 	(void*)execute__21mDoDvdThd_toMainRam_cFv,
 };
-/* 803A34B8 0010 .data      __vt__25mDoDvdThd_mountXArchive_c                            */
-SECTION_DATA const  void* __vt__25mDoDvdThd_mountXArchive_c[4] = {
+/* 803A34B8-803A34C8 0010 .data      __vt__25mDoDvdThd_mountXArchive_c                            VTableData */
+SECTION_DATA void* __vt__25mDoDvdThd_mountXArchive_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25mDoDvdThd_mountXArchive_cFv,
 	(void*)execute__25mDoDvdThd_mountXArchive_cFv,
 };
-/* 803A34C8 0010 .data      __vt__24mDoDvdThd_mountArchive_c                             */
-SECTION_DATA const  void* __vt__24mDoDvdThd_mountArchive_c[4] = {
+/* 803A34C8-803A34D8 0010 .data      __vt__24mDoDvdThd_mountArchive_c                             VTableData */
+SECTION_DATA void* __vt__24mDoDvdThd_mountArchive_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__24mDoDvdThd_mountArchive_cFv,
 	(void*)execute__24mDoDvdThd_mountArchive_cFv,
 };
-/* 803A34D8 0010 .data      __vt__20mDoDvdThd_callback_c                                 */
-SECTION_DATA const  void* __vt__20mDoDvdThd_callback_c[4] = {
+/* 803A34D8-803A34E8 0010 .data      __vt__20mDoDvdThd_callback_c                                 VTableData */
+SECTION_DATA void* __vt__20mDoDvdThd_callback_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20mDoDvdThd_callback_cFv,
 	(void*)execute__20mDoDvdThd_callback_cFv,
 };
-/* 803A34E8 0010 .data      __vt__19mDoDvdThd_command_c                                  */
-SECTION_DATA const  void* __vt__19mDoDvdThd_command_c[4] = {
+/* 803A34E8-803A34F8 0010 .data      __vt__19mDoDvdThd_command_c                                  VTableData */
+SECTION_DATA void* __vt__19mDoDvdThd_command_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19mDoDvdThd_command_cFv,
@@ -198,13 +309,13 @@ SECTION_DATA const  void* __vt__19mDoDvdThd_command_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803DD940 0000 .bss       ...bss.0                                                     */
-/* 803DD940 0318 .bss       l_thread__9mDoDvdThd                                         */
-SECTION_BSS u8 l_thread__9mDoDvdThd[800];
-/* 803DDC60 1000 .bss       l_threadStack__9mDoDvdThd                                    */
+/* 803DD940-803DD940 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 803DD940-803DDC60 0318 .bss       l_thread__9mDoDvdThd                                         ZeroInitializedData */
+SECTION_BSS u8 l_thread__9mDoDvdThd[792 + 8 /* padding */];
+/* 803DDC60-803DEC60 1000 .bss       l_threadStack__9mDoDvdThd                                    ZeroInitializedData */
 SECTION_BSS u8 l_threadStack__9mDoDvdThd[4096];
-/* 803DEC60 0048 .bss       l_param__9mDoDvdThd                                          */
-SECTION_BSS u8 l_param__9mDoDvdThd[96];
+/* 803DEC60-803DECC0 0048 .bss       l_param__9mDoDvdThd                                          ZeroInitializedData */
+SECTION_BSS u8 l_param__9mDoDvdThd[72 + 24 /* padding */];
 }
 
 
@@ -213,7 +324,7 @@ SECTION_BSS u8 l_param__9mDoDvdThd[96];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800157FC 005C .text      main__9mDoDvdThdFPv                                          */
+/* 800157FC-80015858 005C .text      main__9mDoDvdThdFPv                                          Function */
 // mDoDvdThd::main(void*)
 #pragma push
 #pragma optimization_level 0
@@ -224,8 +335,8 @@ asm void main__9mDoDvdThdFPv() {
 }
 #pragma pop
 
-/* 80015858 005C .text      create__9mDoDvdThdFl                                         */
-// mDoDvdThd::create(s32)
+/* 80015858-800158B4 005C .text      create__9mDoDvdThdFl                                         Function */
+// mDoDvdThd::create(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +346,7 @@ asm void create__9mDoDvdThdFl() {
 }
 #pragma pop
 
-/* 800158B4 0028 .text      suspend__9mDoDvdThdFv                                        */
+/* 800158B4-800158DC 0028 .text      suspend__9mDoDvdThdFv                                        Function */
 // mDoDvdThd::suspend(void)
 #pragma push
 #pragma optimization_level 0
@@ -246,20 +357,20 @@ asm void suspend__9mDoDvdThdFv() {
 }
 #pragma pop
 
-/* 800158DC 0020 .text      my_DVDConvertPathToEntrynum__FPCc                            */
+/* 800158DC-800158FC 0020 .text      my_DVDConvertPathToEntrynum__FPCc                            Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void my_DVDConvertPathToEntrynum(const s8*) {
+asm void my_DVDConvertPathToEntrynum(const char*) {
 	nofralloc
 #include "_include/m_Do/m_Do_dvd_thread/my_DVDConvertPathToEntrynum__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 800158FC 0048 .text      __dt__19mDoDvdThd_command_cFv                                */
+/* 800158FC-80015944 0048 .text      __dt__19mDoDvdThd_command_cFv                                Function */
 // mDoDvdThd_command_c::~mDoDvdThd_command_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -270,7 +381,7 @@ asm void __dt__19mDoDvdThd_command_cFv() {
 }
 #pragma pop
 
-/* 80015944 0048 .text      __ct__17mDoDvdThd_param_cFv                                  */
+/* 80015944-8001598C 0048 .text      __ct__17mDoDvdThd_param_cFv                                  Function */
 // mDoDvdThd_param_c::mDoDvdThd_param_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -281,7 +392,7 @@ asm void __ct__17mDoDvdThd_param_cFv() {
 }
 #pragma pop
 
-/* 8001598C 0028 .text      kick__17mDoDvdThd_param_cFv                                  */
+/* 8001598C-800159B4 0028 .text      kick__17mDoDvdThd_param_cFv                                  Function */
 // mDoDvdThd_param_c::kick(void)
 #pragma push
 #pragma optimization_level 0
@@ -292,7 +403,7 @@ asm void kick__17mDoDvdThd_param_cFv() {
 }
 #pragma pop
 
-/* 800159B4 0028 .text      waitForKick__17mDoDvdThd_param_cFv                           */
+/* 800159B4-800159DC 0028 .text      waitForKick__17mDoDvdThd_param_cFv                           Function */
 // mDoDvdThd_param_c::waitForKick(void)
 #pragma push
 #pragma optimization_level 0
@@ -303,13 +414,13 @@ asm void waitForKick__17mDoDvdThd_param_cFv() {
 }
 #pragma pop
 
-/* 800159DC 0008 .text      getFirstCommand__17mDoDvdThd_param_cFv                       */
+/* 800159DC-800159E4 0008 .text      getFirstCommand__17mDoDvdThd_param_cFv                       FirstParamFunction */
 // mDoDvdThd_param_c::getFirstCommand(void)
 u32 getFirstCommand__17mDoDvdThd_param_cFv(u8* param0) {
 	return *(u32*)&param0[36]; /* param0->field_0x24 */
 }
 
-/* 800159E4 0058 .text      addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c         */
+/* 800159E4-80015A3C 0058 .text      addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c         Function */
 // mDoDvdThd_param_c::addition(mDoDvdThd_command_c*)
 #pragma push
 #pragma optimization_level 0
@@ -320,7 +431,7 @@ asm void addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c() {
 }
 #pragma pop
 
-/* 80015A3C 0054 .text      cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c              */
+/* 80015A3C-80015A90 0054 .text      cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c              Function */
 // mDoDvdThd_param_c::cut(mDoDvdThd_command_c*)
 #pragma push
 #pragma optimization_level 0
@@ -331,7 +442,7 @@ asm void cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c() {
 }
 #pragma pop
 
-/* 80015A90 0048 .text      cb__FPv                                                      */
+/* 80015A90-80015AD8 0048 .text      cb__FPv                                                      Function */
 }
 
 #pragma push
@@ -344,7 +455,7 @@ asm void cb(void*) {
 #pragma pop
 
 extern "C" {
-/* 80015AD8 009C .text      mainLoop__17mDoDvdThd_param_cFv                              */
+/* 80015AD8-80015B74 009C .text      mainLoop__17mDoDvdThd_param_cFv                              Function */
 // mDoDvdThd_param_c::mainLoop(void)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +466,7 @@ asm void mainLoop__17mDoDvdThd_param_cFv() {
 }
 #pragma pop
 
-/* 80015B74 0044 .text      __ct__19mDoDvdThd_command_cFv                                */
+/* 80015B74-80015BB8 0044 .text      __ct__19mDoDvdThd_command_cFv                                Function */
 // mDoDvdThd_command_c::mDoDvdThd_command_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +477,7 @@ asm void __ct__19mDoDvdThd_command_cFv() {
 }
 #pragma pop
 
-/* 80015BB8 0060 .text      __dt__20mDoDvdThd_callback_cFv                               */
+/* 80015BB8-80015C18 0060 .text      __dt__20mDoDvdThd_callback_cFv                               Function */
 // mDoDvdThd_callback_c::~mDoDvdThd_callback_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +488,7 @@ asm void __dt__20mDoDvdThd_callback_cFv() {
 }
 #pragma pop
 
-/* 80015C18 005C .text      __ct__20mDoDvdThd_callback_cFPFPv_PvPv                       */
+/* 80015C18-80015C74 005C .text      __ct__20mDoDvdThd_callback_cFPFPv_PvPv                       Function */
 // mDoDvdThd_callback_c::mDoDvdThd_callback_c(void* (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +499,7 @@ asm void __ct__20mDoDvdThd_callback_cFPFPv_PvPv() {
 }
 #pragma pop
 
-/* 80015C74 007C .text      create__20mDoDvdThd_callback_cFPFPv_PvPv                     */
+/* 80015C74-80015CF0 007C .text      create__20mDoDvdThd_callback_cFPFPv_PvPv                     Function */
 // mDoDvdThd_callback_c::create(void* (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
@@ -399,7 +510,7 @@ asm void create__20mDoDvdThd_callback_cFPFPv_PvPv() {
 }
 #pragma pop
 
-/* 80015CF0 0054 .text      execute__20mDoDvdThd_callback_cFv                            */
+/* 80015CF0-80015D44 0054 .text      execute__20mDoDvdThd_callback_cFv                            Function */
 // mDoDvdThd_callback_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -410,7 +521,7 @@ asm void execute__20mDoDvdThd_callback_cFv() {
 }
 #pragma pop
 
-/* 80015D44 0060 .text      __dt__24mDoDvdThd_mountArchive_cFv                           */
+/* 80015D44-80015DA4 0060 .text      __dt__24mDoDvdThd_mountArchive_cFv                           Function */
 // mDoDvdThd_mountArchive_c::~mDoDvdThd_mountArchive_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +532,7 @@ asm void __dt__24mDoDvdThd_mountArchive_cFv() {
 }
 #pragma pop
 
-/* 80015DA4 0070 .text      __ct__24mDoDvdThd_mountArchive_cFUc                          */
+/* 80015DA4-80015E14 0070 .text      __ct__24mDoDvdThd_mountArchive_cFUc                          Function */
 // mDoDvdThd_mountArchive_c::mDoDvdThd_mountArchive_c(u8)
 #pragma push
 #pragma optimization_level 0
@@ -432,8 +543,8 @@ asm void __ct__24mDoDvdThd_mountArchive_cFUc() {
 }
 #pragma pop
 
-/* 80015E14 00C8 .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            */
-// mDoDvdThd_mountArchive_c::create(const s8*, u8, JKRHeap*)
+/* 80015E14-80015EDC 00C8 .text      create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap            Function */
+// mDoDvdThd_mountArchive_c::create(const char*, u8, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +554,7 @@ asm void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap() {
 }
 #pragma pop
 
-/* 80015EDC 022C .text      execute__24mDoDvdThd_mountArchive_cFv                        */
+/* 80015EDC-80016108 022C .text      execute__24mDoDvdThd_mountArchive_cFv                        Function */
 // mDoDvdThd_mountArchive_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -454,7 +565,7 @@ asm void execute__24mDoDvdThd_mountArchive_cFv() {
 }
 #pragma pop
 
-/* 80016108 0060 .text      __dt__25mDoDvdThd_mountXArchive_cFv                          */
+/* 80016108-80016168 0060 .text      __dt__25mDoDvdThd_mountXArchive_cFv                          Function */
 // mDoDvdThd_mountXArchive_c::~mDoDvdThd_mountXArchive_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -465,7 +576,7 @@ asm void __dt__25mDoDvdThd_mountXArchive_cFv() {
 }
 #pragma pop
 
-/* 80016168 0078 .text      __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode */
+/* 80016168-800161E0 0078 .text      __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode Function */
 // mDoDvdThd_mountXArchive_c::mDoDvdThd_mountXArchive_c(u8, JKRArchive::EMountMode)
 #pragma push
 #pragma optimization_level 0
@@ -476,8 +587,8 @@ asm void __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode() {
 }
 #pragma pop
 
-/* 800161E0 00D0 .text      create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap */
-// mDoDvdThd_mountXArchive_c::create(const s8*, u8, JKRArchive::EMountMode, JKRHeap*)
+/* 800161E0-800162B0 00D0 .text      create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap Function */
+// mDoDvdThd_mountXArchive_c::create(const char*, u8, JKRArchive::EMountMode, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -487,7 +598,7 @@ asm void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JK
 }
 #pragma pop
 
-/* 800162B0 0088 .text      execute__25mDoDvdThd_mountXArchive_cFv                       */
+/* 800162B0-80016338 0088 .text      execute__25mDoDvdThd_mountXArchive_cFv                       Function */
 // mDoDvdThd_mountXArchive_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -498,7 +609,7 @@ asm void execute__25mDoDvdThd_mountXArchive_cFv() {
 }
 #pragma pop
 
-/* 80016338 005C .text      __ct__21mDoDvdThd_toMainRam_cFUc                             */
+/* 80016338-80016394 005C .text      __ct__21mDoDvdThd_toMainRam_cFUc                             Function */
 // mDoDvdThd_toMainRam_c::mDoDvdThd_toMainRam_c(u8)
 #pragma push
 #pragma optimization_level 0
@@ -509,8 +620,8 @@ asm void __ct__21mDoDvdThd_toMainRam_cFUc() {
 }
 #pragma pop
 
-/* 80016394 00C8 .text      create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap               */
-// mDoDvdThd_toMainRam_c::create(const s8*, u8, JKRHeap*)
+/* 80016394-8001645C 00C8 .text      create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap               Function */
+// mDoDvdThd_toMainRam_c::create(const char*, u8, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -520,7 +631,7 @@ asm void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap() {
 }
 #pragma pop
 
-/* 8001645C 0060 .text      __dt__21mDoDvdThd_toMainRam_cFv                              */
+/* 8001645C-800164BC 0060 .text      __dt__21mDoDvdThd_toMainRam_cFv                              Function */
 // mDoDvdThd_toMainRam_c::~mDoDvdThd_toMainRam_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -531,7 +642,7 @@ asm void __dt__21mDoDvdThd_toMainRam_cFv() {
 }
 #pragma pop
 
-/* 800164BC 00B8 .text      execute__21mDoDvdThd_toMainRam_cFv                           */
+/* 800164BC-80016574 00B8 .text      execute__21mDoDvdThd_toMainRam_cFv                           Function */
 // mDoDvdThd_toMainRam_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -542,7 +653,7 @@ asm void execute__21mDoDvdThd_toMainRam_cFv() {
 }
 #pragma pop
 
-/* 80016574 0028 .text      __sinit_m_Do_dvd_thread_cpp                                  */
+/* 80016574-8001659C 0028 .text      __sinit_m_Do_dvd_thread_cpp                                  SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

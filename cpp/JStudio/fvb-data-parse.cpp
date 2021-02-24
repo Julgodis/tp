@@ -9,6 +9,9 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData();
+/* Function             */
 extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
 }
 
@@ -18,7 +21,7 @@ extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JG
 /* ###################################################################################### */
 
 extern "C" {
-/* 802850AC 0068 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData */
+/* 802850AC-80285114 0068 .text      getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData Function */
 // JStudio::fvb::data::TParse_TParagraph::getData(JStudio::fvb::data::TParse_TParagraph::TData) const
 #pragma push
 #pragma optimization_level 0

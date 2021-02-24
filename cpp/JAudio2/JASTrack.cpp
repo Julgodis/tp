@@ -11,121 +11,297 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void __ct__17JASGenericMemPoolFv();
+/* Function             */
 extern void __dt__17JASGenericMemPoolFv();
+/* Function             */
 extern void alloc__17JASGenericMemPoolFUl();
+/* Function             */
 extern void free__17JASGenericMemPoolFPvUl();
+/* Function             */
 extern void __ct__8JASTrackFv();
+/* Function             */
 extern void __dt__8JASTrackFv();
+/* Function             */
 extern void setChannelMgrCount__8JASTrackFUl();
+/* Function             */
 extern void init__8JASTrackFv();
+/* Function             */
 extern void initTimed__8JASTrackFv();
+/* Function             */
 extern void inherit__8JASTrackFRC8JASTrack();
+/* Function             */
+extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+/* Function             */
+extern void setSeqData__8JASTrackFPvUl();
+/* Function             */
+extern void startSeq__8JASTrackFv();
+/* Function             */
+extern void stopSeq__8JASTrackFv();
+/* Function             */
+extern void start__8JASTrackFv();
+/* Function             */
 extern void close__8JASTrackFv();
+/* Function             */
 extern void connectChild__8JASTrackFUlP8JASTrack();
+/* Function             */
+extern void closeChild__8JASTrackFUl();
+/* Function             */
+extern void openChild__8JASTrackFUl();
+/* Function             */
+extern void connectBus__8JASTrackFii();
+/* Function             */
+extern void setLatestKey__8JASTrackFUc();
+/* Function             */
 extern void channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl();
+/* Function             */
+extern void noteOn__8JASTrackFUlUlUl();
+/* Function             */
+extern void gateOn__8JASTrackFUlUlfUl();
+/* Function             */
 extern void noteOff__8JASTrackFUlUs();
+/* Function             */
+extern void checkNoteStop__8JASTrackCFUl();
+/* Function             */
 extern void overwriteOsc__8JASTrackFP10JASChannel();
+/* Function             */
 extern void updateTimedParam__8JASTrackFv();
+/* Function             */
 extern void updateTrack__8JASTrackFf();
+/* Function             */
 extern void updateTempo__8JASTrackFv();
+/* Function             */
 extern void updateSeq__8JASTrackFbf();
+/* Function             */
 extern void seqTimeToDspTime__8JASTrackFf();
+/* Function             */
+extern void setParam__8JASTrackFUlfUl();
+/* Function             */
 extern void noteOffAll__8JASTrackFUs();
+/* Function             */
+extern void mute__8JASTrackFb();
+/* Function             */
+extern void setOscScale__8JASTrackFUlf();
+/* Function             */
+extern void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point();
+/* Function             */
+extern void setOscAdsr__8JASTrackFssssUs();
+/* Function             */
+extern void setFIR__8JASTrackFPCs();
+/* Function             */
+extern void setIIR__8JASTrackFPCs();
+/* Function             */
+extern void readPortSelf__8JASTrackFUl();
+/* Function             */
+extern void writePortSelf__8JASTrackFUlUs();
+/* Function             */
+extern void writePort__8JASTrackFUlUs();
+/* Function             */
+extern void readPort__8JASTrackFUl();
+/* Function             */
 extern void setChannelPauseFlag__8JASTrackFb();
+/* Function             */
+extern void pause__8JASTrackFb();
+/* Function             */
 extern void getTransposeTotal__8JASTrackCFv();
+/* Function             */
 extern void isMute__8JASTrackCFv();
+/* Function             */
+extern void setTempo__8JASTrackFUs();
+/* Function             */
+extern void setTempoRate__8JASTrackFf();
+/* Function             */
+extern void setTimebase__8JASTrackFUs();
+/* Function             */
 extern void updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel();
+/* Function             */
 extern void channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv();
+/* Function             */
 extern void getRootTrack__8JASTrackFv();
+/* Function             */
 extern void tickProc__8JASTrackFv();
+/* Function             */
 extern void seqMain__8JASTrackFv();
+/* Function             */
 extern void cbSeqMain__Q28JASTrack5TListFPv();
+/* Function             */
 extern void append__Q28JASTrack5TListFP8JASTrack();
+/* Function             */
 extern void seqMain__Q28JASTrack5TListFv();
+/* Function             */
 extern void __ct__Q28JASTrack11TChannelMgrFP8JASTrack();
+/* Function             */
 extern void init__Q28JASTrack11TChannelMgrFv();
+/* Function             */
 extern void releaseAll__Q28JASTrack11TChannelMgrFv();
+/* Function             */
 extern void noteOff__Q28JASTrack11TChannelMgrFUlUs();
+/* Function             */
 extern void setPauseFlag__Q28JASTrack11TChannelMgrFb();
+/* Function             */
 extern void __ct__Q28JASTrack10MoveParam_Fv();
+/* Function             */
 extern void func_802932E0();
+/* Function             */
 extern void func_80293334();
+/* SInitFunction        */
+extern void __sinit_JASTrack_cpp();
+/* Function             */
 extern void __dt__Q28JASTrack5TListFv();
+/* Function             */
 extern void __dt__19JASDefaultBankTableFv();
+/* Function             */
 extern void func_80293528();
+/* Function             */
 extern void init__12JASTrackPortFv();
+/* Function             */
 extern void readImport__12JASTrackPortFUl();
+/* Function             */
 extern void readExport__12JASTrackPortFUl();
+/* Function             */
 extern void writeImport__12JASTrackPortFUlUs();
+/* Function             */
 extern void writeExport__12JASTrackPortFUlUs();
+/* Function             */
 extern void __ct__16JASRegisterParamFv();
+/* Function             */
 extern void init__16JASRegisterParamFv();
+/* Function             */
 extern void __ct__10JASSeqCtrlFv();
+/* Function             */
 extern void init__10JASSeqCtrlFv();
+/* Function             */
 extern void start__10JASSeqCtrlFPvUl();
+/* Function             */
 extern void tickProc__10JASSeqCtrlFP8JASTrack();
+/* Function             */
 extern void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
+/* Function             */
 extern void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+/* Function             */
 extern void release__10JASChannelFUs();
+/* Function             */
 extern void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
+/* Function             */
 extern void setMixConfig__10JASChannelFUlUs();
+/* Function             */
 extern void setKeySweepTarget__10JASChannelFlUl();
+/* Function             */
 extern void free__10JASChannelFv();
+/* Function             */
 extern void getDacRate__9JASDriverFv();
+/* GlobalFunction       */
 extern u32 getSubFrames__9JASDriverFv();
+/* Function             */
 extern void setFilterMode__Q26JASDsp8TChannelFUs();
+/* Function             */
 extern void setIIRFilterParam__Q26JASDsp8TChannelFPs();
+/* Function             */
 extern void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
+/* Function             */
 extern void setDistFilter__Q26JASDsp8TChannelFs();
+/* Function             */
 extern void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dt__Q27JGadget13TNodeLinkListFv();
+/* Function             */
 extern void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+/* Function             */
 extern void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 sAdsTable__8JASTrack[24];
-SECTION_RODATA extern const u8 data_803A0004[7036];
-SECTION_DATA extern const void* __vt__19JASDefaultBankTable[3];
-SECTION_DATA extern const void* data_803C5B74[3];
-SECTION_DATA extern const void* __vt__11JASBankList[4];
+/* InitializedData      */
+SECTION_RODATA extern const u8 sEnvOsc__8JASTrack[24];
+/* InitializedData      */
+SECTION_RODATA extern const u8 sPitchEnvOsc__8JASTrack[24];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19JASDefaultBankTable[3];
+/* VTableData           */
+SECTION_DATA extern void* data_803C5B74[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11JASBankList[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JASTrack__LIT_431[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sDefaultBankTable__8JASTrack[1036];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 JASTrack__LIT_433[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sTrackList__8JASTrack[16];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_470[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JASTrack__LIT_476[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80431AF4[16];
-SECTION_BSS extern u8 data_80431B04[20];
-SECTION_SBSS extern u8 data_80450B90[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_80431B04[16 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450B90[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451230[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASTrack__LIT_457[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_679;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASTrack__LIT_690;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_952;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_954;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 JASTrack__LIT_1032;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 JASTrack__LIT_1042;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1044;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1069;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASTrack__LIT_1070;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 FILTER_MODE_IIR__6JASDsp[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1246;
 }
 
@@ -135,18 +311,18 @@ SECTION_SDATA2 extern f32 LIT_1246;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039AFD0 0000 .rodata    ...rodata.0                                                  */
-/* 8039AFD0 0018 .rodata    sAdsTable__8JASTrack                                         */
+/* 8039AFD0-8039AFD0 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 8039AFD0-8039AFE8 0018 .rodata    sAdsTable__8JASTrack                                         InitializedData */
 SECTION_RODATA const u8 sAdsTable__8JASTrack[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x0E, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039AFE8 0018 .rodata    sEnvOsc__8JASTrack                                           */
+/* 8039AFE8-8039B000 0018 .rodata    sEnvOsc__8JASTrack                                           InitializedData */
 SECTION_RODATA const u8 sEnvOsc__8JASTrack[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039B000 0018 .rodata    sPitchEnvOsc__8JASTrack                                      */
+/* 8039B000-8039B018 0018 .rodata    sPitchEnvOsc__8JASTrack                                      InitializedData */
 SECTION_RODATA const u8 sPitchEnvOsc__8JASTrack[24] = {
 	0x00, 0x00, 0x00, 0x01, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -159,20 +335,20 @@ SECTION_RODATA const u8 sPitchEnvOsc__8JASTrack[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5B68 000C .data      __vt__19JASDefaultBankTable                                  */
-SECTION_DATA const  void* __vt__19JASDefaultBankTable[3] = {
+/* 803C5B68-803C5B74 000C .data      __vt__19JASDefaultBankTable                                  VTableData */
+SECTION_DATA void* __vt__19JASDefaultBankTable[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_80293528,
 };
-/* 803C5B74 000C .data      __vt__17JASBankTable<256>                                    */
-SECTION_DATA const  void* data_803C5B74[3] = {
+/* 803C5B74-803C5B80 000C .data      __vt__17JASBankTable<256>                                    VTableData */
+SECTION_DATA void* data_803C5B74[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_80293528,
 };
-/* 803C5B80 000C .data      __vt__11JASBankList                                          */
-SECTION_DATA const  void* __vt__11JASBankList[4] = {
+/* 803C5B80-803C5B90 000C .data      __vt__11JASBankList                                          VTableData */
+SECTION_DATA void* __vt__11JASBankList[4] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -187,42 +363,42 @@ SECTION_DATA const  void* __vt__11JASBankList[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804555A0 0004 .sdata2    @457                                                         */
+/* 804555A0-804555A4 0004 .sdata2    @457                                                         InitializedData */
 SECTION_SDATA2 u8 JASTrack__LIT_457[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804555A4 0004 .sdata2    @679                                                         */
+/* 804555A4-804555A8 0004 .sdata2    @679                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_679 = 1.000000f;
-/* 804555A8 0004 .sdata2    @690                                                         */
+/* 804555A8-804555AC 0004 .sdata2    @690                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 JASTrack__LIT_690 = 0.500000f;
-/* 804555AC 0004 .sdata2    @952                                                         */
+/* 804555AC-804555B0 0004 .sdata2    @952                                                         Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 LIT_952 = 100.000000f;
-/* 804555B0 0008 .sdata2    @954                                                         */
+/* 804555B0-804555B8 0008 .sdata2    @954                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_954 = 4503599627370496.000000;
-/* 804555B8 0004 .sdata2    @1032                                                        */
+/* 804555B8-804555BC 0004 .sdata2    @1032                                                        Fraction32Data */
 // 0.33333334f 0x3eaaaaab
 SECTION_SDATA2 f32 JASTrack__LIT_1032 = 1.000000f / 3.000000f;
-/* 804555BC 0004 .sdata2    @1042                                                        */
+/* 804555BC-804555C0 0004 .sdata2    @1042                                                        Fraction32Data */
 // 1.3333334f 0x3faaaaab
 SECTION_SDATA2 f32 JASTrack__LIT_1042 = 4.000000f / 3.000000f;
-/* 804555C0 0008 .sdata2    @1044                                                        */
+/* 804555C0-804555C8 0008 .sdata2    @1044                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_1044 = 4503601774854144.000000;
-/* 804555C8 0004 .sdata2    @1069                                                        */
+/* 804555C8-804555CC 0004 .sdata2    @1069                                                        Float32Data */
 // 0x42f00000
 SECTION_SDATA2 f32 LIT_1069 = 120.000000f;
-/* 804555CC 0004 .sdata2    @1070                                                        */
+/* 804555CC-804555D0 0004 .sdata2    @1070                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 JASTrack__LIT_1070 = 10.000000f;
-/* 804555D0 0004 .sdata2    FILTER_MODE_IIR__6JASDsp                                     */
+/* 804555D0-804555D4 0004 .sdata2    FILTER_MODE_IIR__6JASDsp                                     InitializedData */
 SECTION_SDATA2 u8 FILTER_MODE_IIR__6JASDsp[4] = {
 	0x00, 0x00, 0x00, 0x20,
 };
-/* 804555D4 0004 .sdata2    @1246                                                        */
+/* 804555D4-804555D8 0004 .sdata2    @1246                                                        Float32Data */
 // 0x46fffe00
 SECTION_SDATA2 f32 LIT_1246 = 32767.000000f;
 }
@@ -233,23 +409,23 @@ SECTION_SDATA2 f32 LIT_1246 = 32767.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804316A8 0000 .bss       ...bss.0                                                     */
-/* 804316A8 000C .bss       @431                                                         */
+/* 804316A8-804316A8 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 804316A8-804316B4 000C .bss       @431                                                         ZeroInitializedData */
 SECTION_BSS u8 JASTrack__LIT_431[12];
-/* 804316B4 040C .bss       sDefaultBankTable__8JASTrack                                 */
+/* 804316B4-80431AC0 040C .bss       sDefaultBankTable__8JASTrack                                 ZeroInitializedData */
 SECTION_BSS u8 sDefaultBankTable__8JASTrack[1036];
-/* 80431AC0 000C .bss       @433                                                         */
+/* 80431AC0-80431ACC 000C .bss       @433                                                         ZeroInitializedData */
 SECTION_BSS u8 JASTrack__LIT_433[12];
-/* 80431ACC 0010 .bss       sTrackList__8JASTrack                                        */
+/* 80431ACC-80431ADC 0010 .bss       sTrackList__8JASTrack                                        ZeroInitializedData */
 SECTION_BSS u8 sTrackList__8JASTrack[16];
-/* 80431ADC 000C .bss       @470                                                         */
+/* 80431ADC-80431AE8 000C .bss       @470                                                         ZeroInitializedData */
 SECTION_BSS u8 LIT_470[12];
-/* 80431AE8 000C .bss       @476                                                         */
+/* 80431AE8-80431AF4 000C .bss       @476                                                         ZeroInitializedData */
 SECTION_BSS u8 JASTrack__LIT_476[12];
-/* 80431AF4 0010 .bss       memPool_$localstatic3$getMemPool___58JASPoolAllocObject_MultiThreaded<Q28JASTrack11TChannelMgr>Fv */
+/* 80431AF4-80431B04 0010 .bss       memPool_$localstatic3$getMemPool___58JASPoolAllocObject_MultiThreaded<Q28JASTrack11TChannelMgr>Fv ZeroInitializedData */
 SECTION_BSS u8 data_80431AF4[16];
-/* 80431B04 0010 .bss       memPool_$localstatic3$getMemPool___43JASPoolAllocObject_MultiThreaded<8JASTrack>Fv */
-SECTION_BSS u8 data_80431B04[20];
+/* 80431B04-80431B18 0010 .bss       memPool_$localstatic3$getMemPool___43JASPoolAllocObject_MultiThreaded<8JASTrack>Fv ZeroInitializedData */
+SECTION_BSS u8 data_80431B04[16 + 4 /* padding */];
 }
 
 
@@ -258,7 +434,7 @@ SECTION_BSS u8 data_80431B04[20];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80291228 00F4 .text      __ct__8JASTrackFv                                            */
+/* 80291228-8029131C 00F4 .text      __ct__8JASTrackFv                                            Function */
 // JASTrack::JASTrack(void)
 #pragma push
 #pragma optimization_level 0
@@ -269,7 +445,7 @@ asm void __ct__8JASTrackFv() {
 }
 #pragma pop
 
-/* 8029131C 0128 .text      __dt__8JASTrackFv                                            */
+/* 8029131C-80291444 0128 .text      __dt__8JASTrackFv                                            Function */
 // JASTrack::~JASTrack(void)
 #pragma push
 #pragma optimization_level 0
@@ -280,7 +456,7 @@ asm void __dt__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80291444 0190 .text      setChannelMgrCount__8JASTrackFUl                             */
+/* 80291444-802915D4 0190 .text      setChannelMgrCount__8JASTrackFUl                             Function */
 // JASTrack::setChannelMgrCount(u32)
 #pragma push
 #pragma optimization_level 0
@@ -291,7 +467,7 @@ asm void setChannelMgrCount__8JASTrackFUl() {
 }
 #pragma pop
 
-/* 802915D4 0328 .text      init__8JASTrackFv                                            */
+/* 802915D4-802918FC 0328 .text      init__8JASTrackFv                                            Function */
 // JASTrack::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -302,7 +478,7 @@ asm void init__8JASTrackFv() {
 }
 #pragma pop
 
-/* 802918FC 0050 .text      initTimed__8JASTrackFv                                       */
+/* 802918FC-8029194C 0050 .text      initTimed__8JASTrackFv                                       Function */
 // JASTrack::initTimed(void)
 #pragma push
 #pragma optimization_level 0
@@ -313,7 +489,7 @@ asm void initTimed__8JASTrackFv() {
 }
 #pragma pop
 
-/* 8029194C 00A8 .text      inherit__8JASTrackFRC8JASTrack                               */
+/* 8029194C-802919F4 00A8 .text      inherit__8JASTrackFRC8JASTrack                               Function */
 // JASTrack::inherit(const JASTrack&)
 #pragma push
 #pragma optimization_level 0
@@ -324,7 +500,7 @@ asm void inherit__8JASTrackFRC8JASTrack() {
 }
 #pragma pop
 
-/* 802919F4 0014 .text      assignExtBuffer__8JASTrackFUlP14JASSoundParams               */
+/* 802919F4-80291A08 0014 .text      assignExtBuffer__8JASTrackFUlP14JASSoundParams               Function */
 // JASTrack::assignExtBuffer(u32, JASSoundParams*)
 #pragma push
 #pragma optimization_level 0
@@ -335,7 +511,7 @@ asm void assignExtBuffer__8JASTrackFUlP14JASSoundParams() {
 }
 #pragma pop
 
-/* 80291A08 0020 .text      setSeqData__8JASTrackFPvUl                                   */
+/* 80291A08-80291A28 0020 .text      setSeqData__8JASTrackFPvUl                                   Function */
 // JASTrack::setSeqData(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -346,7 +522,7 @@ asm void setSeqData__8JASTrackFPvUl() {
 }
 #pragma pop
 
-/* 80291A28 0050 .text      startSeq__8JASTrackFv                                        */
+/* 80291A28-80291A78 0050 .text      startSeq__8JASTrackFv                                        Function */
 // JASTrack::startSeq(void)
 #pragma push
 #pragma optimization_level 0
@@ -357,7 +533,7 @@ asm void startSeq__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80291A78 0044 .text      stopSeq__8JASTrackFv                                         */
+/* 80291A78-80291ABC 0044 .text      stopSeq__8JASTrackFv                                         Function */
 // JASTrack::stopSeq(void)
 #pragma push
 #pragma optimization_level 0
@@ -368,7 +544,7 @@ asm void stopSeq__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80291ABC 000C .text      start__8JASTrackFv                                           */
+/* 80291ABC-80291AC8 000C .text      start__8JASTrackFv                                           Function */
 // JASTrack::start(void)
 #pragma push
 #pragma optimization_level 0
@@ -379,7 +555,7 @@ asm void start__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80291AC8 00C4 .text      close__8JASTrackFv                                           */
+/* 80291AC8-80291B8C 00C4 .text      close__8JASTrackFv                                           Function */
 // JASTrack::close(void)
 #pragma push
 #pragma optimization_level 0
@@ -390,7 +566,7 @@ asm void close__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80291B8C 002C .text      connectChild__8JASTrackFUlP8JASTrack                         */
+/* 80291B8C-80291BB8 002C .text      connectChild__8JASTrackFUlP8JASTrack                         Function */
 // JASTrack::connectChild(u32, JASTrack*)
 #pragma push
 #pragma optimization_level 0
@@ -401,7 +577,7 @@ asm void connectChild__8JASTrackFUlP8JASTrack() {
 }
 #pragma pop
 
-/* 80291BB8 0078 .text      closeChild__8JASTrackFUl                                     */
+/* 80291BB8-80291C30 0078 .text      closeChild__8JASTrackFUl                                     Function */
 // JASTrack::closeChild(u32)
 #pragma push
 #pragma optimization_level 0
@@ -412,7 +588,7 @@ asm void closeChild__8JASTrackFUl() {
 }
 #pragma pop
 
-/* 80291C30 017C .text      openChild__8JASTrackFUl                                      */
+/* 80291C30-80291DAC 017C .text      openChild__8JASTrackFUl                                      Function */
 // JASTrack::openChild(u32)
 #pragma push
 #pragma optimization_level 0
@@ -423,7 +599,7 @@ asm void openChild__8JASTrackFUl() {
 }
 #pragma pop
 
-/* 80291DAC 0010 .text      connectBus__8JASTrackFii                                     */
+/* 80291DAC-80291DBC 0010 .text      connectBus__8JASTrackFii                                     Function */
 // JASTrack::connectBus(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -434,7 +610,7 @@ asm void connectBus__8JASTrackFii() {
 }
 #pragma pop
 
-/* 80291DBC 003C .text      setLatestKey__8JASTrackFUc                                   */
+/* 80291DBC-80291DF8 003C .text      setLatestKey__8JASTrackFUc                                   Function */
 // JASTrack::setLatestKey(u8)
 #pragma push
 #pragma optimization_level 0
@@ -445,7 +621,7 @@ asm void setLatestKey__8JASTrackFUc() {
 }
 #pragma pop
 
-/* 80291DF8 0140 .text      channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl      */
+/* 80291DF8-80291F38 0140 .text      channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl      Function */
 // JASTrack::channelStart(JASTrack::TChannelMgr, u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -456,7 +632,7 @@ asm void channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl() {
 }
 #pragma pop
 
-/* 80291F38 00D0 .text      noteOn__8JASTrackFUlUlUl                                     */
+/* 80291F38-80292008 00D0 .text      noteOn__8JASTrackFUlUlUl                                     Function */
 // JASTrack::noteOn(u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -467,7 +643,7 @@ asm void noteOn__8JASTrackFUlUlUl() {
 }
 #pragma pop
 
-/* 80292008 0190 .text      gateOn__8JASTrackFUlUlfUl                                    */
+/* 80292008-80292198 0190 .text      gateOn__8JASTrackFUlUlfUl                                    Function */
 // JASTrack::gateOn(u32, u32, f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -478,7 +654,7 @@ asm void gateOn__8JASTrackFUlUlfUl() {
 }
 #pragma pop
 
-/* 80292198 0088 .text      noteOff__8JASTrackFUlUs                                      */
+/* 80292198-80292220 0088 .text      noteOff__8JASTrackFUlUs                                      Function */
 // JASTrack::noteOff(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -489,7 +665,7 @@ asm void noteOff__8JASTrackFUlUs() {
 }
 #pragma pop
 
-/* 80292220 004C .text      checkNoteStop__8JASTrackCFUl                                 */
+/* 80292220-8029226C 004C .text      checkNoteStop__8JASTrackCFUl                                 Function */
 // JASTrack::checkNoteStop(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -500,7 +676,7 @@ asm void checkNoteStop__8JASTrackCFUl() {
 }
 #pragma pop
 
-/* 8029226C 006C .text      overwriteOsc__8JASTrackFP10JASChannel                        */
+/* 8029226C-802922D8 006C .text      overwriteOsc__8JASTrackFP10JASChannel                        Function */
 // JASTrack::overwriteOsc(JASChannel*)
 #pragma push
 #pragma optimization_level 0
@@ -511,7 +687,7 @@ asm void overwriteOsc__8JASTrackFP10JASChannel() {
 }
 #pragma pop
 
-/* 802922D8 0070 .text      updateTimedParam__8JASTrackFv                                */
+/* 802922D8-80292348 0070 .text      updateTimedParam__8JASTrackFv                                Function */
 // JASTrack::updateTimedParam(void)
 #pragma push
 #pragma optimization_level 0
@@ -522,7 +698,7 @@ asm void updateTimedParam__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80292348 019C .text      updateTrack__8JASTrackFf                                     */
+/* 80292348-802924E4 019C .text      updateTrack__8JASTrackFf                                     Function */
 // JASTrack::updateTrack(f32)
 #pragma push
 #pragma optimization_level 0
@@ -533,7 +709,7 @@ asm void updateTrack__8JASTrackFf() {
 }
 #pragma pop
 
-/* 802924E4 009C .text      updateTempo__8JASTrackFv                                     */
+/* 802924E4-80292580 009C .text      updateTempo__8JASTrackFv                                     Function */
 // JASTrack::updateTempo(void)
 #pragma push
 #pragma optimization_level 0
@@ -544,7 +720,7 @@ asm void updateTempo__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80292580 00C4 .text      updateSeq__8JASTrackFbf                                      */
+/* 80292580-80292644 00C4 .text      updateSeq__8JASTrackFbf                                      Function */
 // JASTrack::updateSeq(bool, f32)
 #pragma push
 #pragma optimization_level 0
@@ -555,7 +731,7 @@ asm void updateSeq__8JASTrackFbf() {
 }
 #pragma pop
 
-/* 80292644 009C .text      seqTimeToDspTime__8JASTrackFf                                */
+/* 80292644-802926E0 009C .text      seqTimeToDspTime__8JASTrackFf                                Function */
 // JASTrack::seqTimeToDspTime(f32)
 #pragma push
 #pragma optimization_level 0
@@ -566,7 +742,7 @@ asm void seqTimeToDspTime__8JASTrackFf() {
 }
 #pragma pop
 
-/* 802926E0 0028 .text      setParam__8JASTrackFUlfUl                                    */
+/* 802926E0-80292708 0028 .text      setParam__8JASTrackFUlfUl                                    Function */
 // JASTrack::setParam(u32, f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -577,7 +753,7 @@ asm void setParam__8JASTrackFUlfUl() {
 }
 #pragma pop
 
-/* 80292708 0098 .text      noteOffAll__8JASTrackFUs                                     */
+/* 80292708-802927A0 0098 .text      noteOffAll__8JASTrackFUs                                     Function */
 // JASTrack::noteOffAll(u16)
 #pragma push
 #pragma optimization_level 0
@@ -588,7 +764,7 @@ asm void noteOffAll__8JASTrackFUs() {
 }
 #pragma pop
 
-/* 802927A0 0038 .text      mute__8JASTrackFb                                            */
+/* 802927A0-802927D8 0038 .text      mute__8JASTrackFb                                            Function */
 // JASTrack::mute(bool)
 #pragma push
 #pragma optimization_level 0
@@ -599,7 +775,7 @@ asm void mute__8JASTrackFb() {
 }
 #pragma pop
 
-/* 802927D8 0010 .text      setOscScale__8JASTrackFUlf                                   */
+/* 802927D8-802927E8 0010 .text      setOscScale__8JASTrackFUlf                                   Function */
 // JASTrack::setOscScale(u32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -610,7 +786,7 @@ asm void setOscScale__8JASTrackFUlf() {
 }
 #pragma pop
 
-/* 802927E8 0020 .text      setOscTable__8JASTrackFUlPCQ213JASOscillator5Point           */
+/* 802927E8-80292808 0020 .text      setOscTable__8JASTrackFUlPCQ213JASOscillator5Point           Function */
 // JASTrack::setOscTable(u32, JASOscillator::Point)
 #pragma push
 #pragma optimization_level 0
@@ -621,8 +797,8 @@ asm void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point() {
 }
 #pragma pop
 
-/* 80292808 0054 .text      setOscAdsr__8JASTrackFssssUs                                 */
-// JASTrack::setOscAdsr(s16, s16, s16, s16, u16)
+/* 80292808-8029285C 0054 .text      setOscAdsr__8JASTrackFssssUs                                 Function */
+// JASTrack::setOscAdsr(short, short, short, short, u16)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -632,8 +808,8 @@ asm void setOscAdsr__8JASTrackFssssUs() {
 }
 #pragma pop
 
-/* 8029285C 0040 .text      setFIR__8JASTrackFPCs                                        */
-// JASTrack::setFIR(const s16*)
+/* 8029285C-8029289C 0040 .text      setFIR__8JASTrackFPCs                                        Function */
+// JASTrack::setFIR(const short*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -643,8 +819,8 @@ asm void setFIR__8JASTrackFPCs() {
 }
 #pragma pop
 
-/* 8029289C 0034 .text      setIIR__8JASTrackFPCs                                        */
-// JASTrack::setIIR(const s16*)
+/* 8029289C-802928D0 0034 .text      setIIR__8JASTrackFPCs                                        Function */
+// JASTrack::setIIR(const short*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +830,7 @@ asm void setIIR__8JASTrackFPCs() {
 }
 #pragma pop
 
-/* 802928D0 0024 .text      readPortSelf__8JASTrackFUl                                   */
+/* 802928D0-802928F4 0024 .text      readPortSelf__8JASTrackFUl                                   Function */
 // JASTrack::readPortSelf(u32)
 #pragma push
 #pragma optimization_level 0
@@ -665,7 +841,7 @@ asm void readPortSelf__8JASTrackFUl() {
 }
 #pragma pop
 
-/* 802928F4 0024 .text      writePortSelf__8JASTrackFUlUs                                */
+/* 802928F4-80292918 0024 .text      writePortSelf__8JASTrackFUlUs                                Function */
 // JASTrack::writePortSelf(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -676,7 +852,7 @@ asm void writePortSelf__8JASTrackFUlUs() {
 }
 #pragma pop
 
-/* 80292918 0064 .text      writePort__8JASTrackFUlUs                                    */
+/* 80292918-8029297C 0064 .text      writePort__8JASTrackFUlUs                                    Function */
 // JASTrack::writePort(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -687,7 +863,7 @@ asm void writePort__8JASTrackFUlUs() {
 }
 #pragma pop
 
-/* 8029297C 0024 .text      readPort__8JASTrackFUl                                       */
+/* 8029297C-802929A0 0024 .text      readPort__8JASTrackFUl                                       Function */
 // JASTrack::readPort(u32)
 #pragma push
 #pragma optimization_level 0
@@ -698,7 +874,7 @@ asm void readPort__8JASTrackFUl() {
 }
 #pragma pop
 
-/* 802929A0 009C .text      setChannelPauseFlag__8JASTrackFb                             */
+/* 802929A0-80292A3C 009C .text      setChannelPauseFlag__8JASTrackFb                             Function */
 // JASTrack::setChannelPauseFlag(bool)
 #pragma push
 #pragma optimization_level 0
@@ -709,7 +885,7 @@ asm void setChannelPauseFlag__8JASTrackFb() {
 }
 #pragma pop
 
-/* 80292A3C 0068 .text      pause__8JASTrackFb                                           */
+/* 80292A3C-80292AA4 0068 .text      pause__8JASTrackFb                                           Function */
 // JASTrack::pause(bool)
 #pragma push
 #pragma optimization_level 0
@@ -720,7 +896,7 @@ asm void pause__8JASTrackFb() {
 }
 #pragma pop
 
-/* 80292AA4 0050 .text      getTransposeTotal__8JASTrackCFv                              */
+/* 80292AA4-80292AF4 0050 .text      getTransposeTotal__8JASTrackCFv                              Function */
 // JASTrack::getTransposeTotal(void) const
 #pragma push
 #pragma optimization_level 0
@@ -731,7 +907,7 @@ asm void getTransposeTotal__8JASTrackCFv() {
 }
 #pragma pop
 
-/* 80292AF4 0064 .text      isMute__8JASTrackCFv                                         */
+/* 80292AF4-80292B58 0064 .text      isMute__8JASTrackCFv                                         Function */
 // JASTrack::isMute(void) const
 #pragma push
 #pragma optimization_level 0
@@ -742,7 +918,7 @@ asm void isMute__8JASTrackCFv() {
 }
 #pragma pop
 
-/* 80292B58 0034 .text      setTempo__8JASTrackFUs                                       */
+/* 80292B58-80292B8C 0034 .text      setTempo__8JASTrackFUs                                       Function */
 // JASTrack::setTempo(u16)
 #pragma push
 #pragma optimization_level 0
@@ -753,7 +929,7 @@ asm void setTempo__8JASTrackFUs() {
 }
 #pragma pop
 
-/* 80292B8C 0034 .text      setTempoRate__8JASTrackFf                                    */
+/* 80292B8C-80292BC0 0034 .text      setTempoRate__8JASTrackFf                                    Function */
 // JASTrack::setTempoRate(f32)
 #pragma push
 #pragma optimization_level 0
@@ -764,7 +940,7 @@ asm void setTempoRate__8JASTrackFf() {
 }
 #pragma pop
 
-/* 80292BC0 0034 .text      setTimebase__8JASTrackFUs                                    */
+/* 80292BC0-80292BF4 0034 .text      setTimebase__8JASTrackFUs                                    Function */
 // JASTrack::setTimebase(u16)
 #pragma push
 #pragma optimization_level 0
@@ -775,7 +951,7 @@ asm void setTimebase__8JASTrackFUs() {
 }
 #pragma pop
 
-/* 80292BF4 00B0 .text      updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel    */
+/* 80292BF4-80292CA4 00B0 .text      updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel    Function */
 // JASTrack::updateChannel(JASChannel*, JASDsp::TChannel)
 #pragma push
 #pragma optimization_level 0
@@ -786,7 +962,7 @@ asm void updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel() {
 }
 #pragma pop
 
-/* 80292CA4 00E4 .text      channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv */
+/* 80292CA4-80292D88 00E4 .text      channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv Function */
 // JASTrack::channelUpdateCallback(u32, JASChannel*, JASDsp::TChannel, void*)
 #pragma push
 #pragma optimization_level 0
@@ -797,7 +973,7 @@ asm void channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv()
 }
 #pragma pop
 
-/* 80292D88 0018 .text      getRootTrack__8JASTrackFv                                    */
+/* 80292D88-80292DA0 0018 .text      getRootTrack__8JASTrackFv                                    Function */
 // JASTrack::getRootTrack(void)
 #pragma push
 #pragma optimization_level 0
@@ -808,7 +984,7 @@ asm void getRootTrack__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80292DA0 00FC .text      tickProc__8JASTrackFv                                        */
+/* 80292DA0-80292E9C 00FC .text      tickProc__8JASTrackFv                                        Function */
 // JASTrack::tickProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -819,7 +995,7 @@ asm void tickProc__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80292E9C 00D0 .text      seqMain__8JASTrackFv                                         */
+/* 80292E9C-80292F6C 00D0 .text      seqMain__8JASTrackFv                                         Function */
 // JASTrack::seqMain(void)
 #pragma push
 #pragma optimization_level 0
@@ -830,7 +1006,7 @@ asm void seqMain__8JASTrackFv() {
 }
 #pragma pop
 
-/* 80292F6C 0024 .text      cbSeqMain__Q28JASTrack5TListFPv                              */
+/* 80292F6C-80292F90 0024 .text      cbSeqMain__Q28JASTrack5TListFPv                              Function */
 // JASTrack::TList::cbSeqMain(void*)
 #pragma push
 #pragma optimization_level 0
@@ -841,7 +1017,7 @@ asm void cbSeqMain__Q28JASTrack5TListFPv() {
 }
 #pragma pop
 
-/* 80292F90 008C .text      append__Q28JASTrack5TListFP8JASTrack                         */
+/* 80292F90-8029301C 008C .text      append__Q28JASTrack5TListFP8JASTrack                         Function */
 // JASTrack::TList::append(JASTrack*)
 #pragma push
 #pragma optimization_level 0
@@ -852,7 +1028,7 @@ asm void append__Q28JASTrack5TListFP8JASTrack() {
 }
 #pragma pop
 
-/* 8029301C 00C0 .text      seqMain__Q28JASTrack5TListFv                                 */
+/* 8029301C-802930DC 00C0 .text      seqMain__Q28JASTrack5TListFv                                 Function */
 // JASTrack::TList::seqMain(void)
 #pragma push
 #pragma optimization_level 0
@@ -863,7 +1039,7 @@ asm void seqMain__Q28JASTrack5TListFv() {
 }
 #pragma pop
 
-/* 802930DC 006C .text      __ct__Q28JASTrack11TChannelMgrFP8JASTrack                    */
+/* 802930DC-80293148 006C .text      __ct__Q28JASTrack11TChannelMgrFP8JASTrack                    Function */
 // JASTrack::TChannelMgr::JASTrack::TChannelMgr(JASTrack*)
 #pragma push
 #pragma optimization_level 0
@@ -874,7 +1050,7 @@ asm void __ct__Q28JASTrack11TChannelMgrFP8JASTrack() {
 }
 #pragma pop
 
-/* 80293148 0068 .text      init__Q28JASTrack11TChannelMgrFv                             */
+/* 80293148-802931B0 0068 .text      init__Q28JASTrack11TChannelMgrFv                             Function */
 // JASTrack::TChannelMgr::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -885,7 +1061,7 @@ asm void init__Q28JASTrack11TChannelMgrFv() {
 }
 #pragma pop
 
-/* 802931B0 0070 .text      releaseAll__Q28JASTrack11TChannelMgrFv                       */
+/* 802931B0-80293220 0070 .text      releaseAll__Q28JASTrack11TChannelMgrFv                       Function */
 // JASTrack::TChannelMgr::releaseAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -896,7 +1072,7 @@ asm void releaseAll__Q28JASTrack11TChannelMgrFv() {
 }
 #pragma pop
 
-/* 80293220 0080 .text      noteOff__Q28JASTrack11TChannelMgrFUlUs                       */
+/* 80293220-802932A0 0080 .text      noteOff__Q28JASTrack11TChannelMgrFUlUs                       Function */
 // JASTrack::TChannelMgr::noteOff(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -907,7 +1083,7 @@ asm void noteOff__Q28JASTrack11TChannelMgrFUlUs() {
 }
 #pragma pop
 
-/* 802932A0 0028 .text      setPauseFlag__Q28JASTrack11TChannelMgrFb                     */
+/* 802932A0-802932C8 0028 .text      setPauseFlag__Q28JASTrack11TChannelMgrFb                     Function */
 // JASTrack::TChannelMgr::setPauseFlag(bool)
 #pragma push
 #pragma optimization_level 0
@@ -918,7 +1094,7 @@ asm void setPauseFlag__Q28JASTrack11TChannelMgrFb() {
 }
 #pragma pop
 
-/* 802932C8 0018 .text      __ct__Q28JASTrack10MoveParam_Fv                              */
+/* 802932C8-802932E0 0018 .text      __ct__Q28JASTrack10MoveParam_Fv                              Function */
 // JASTrack::MoveParam_::JASTrack::MoveParam_(void)
 #pragma push
 #pragma optimization_level 0
@@ -929,7 +1105,7 @@ asm void __ct__Q28JASTrack10MoveParam_Fv() {
 }
 #pragma pop
 
-/* 802932E0 0054 .text      __dt__35JASMemPool_MultiThreaded<8JASTrack>Fv                */
+/* 802932E0-80293334 0054 .text      __dt__35JASMemPool_MultiThreaded<8JASTrack>Fv                Function */
 // JASMemPool_MultiThreaded<8JASTrack>::~JASMemPool_MultiThreaded<8JASTrack>(void)
 #pragma push
 #pragma optimization_level 0
@@ -940,7 +1116,7 @@ asm void func_802932E0() {
 }
 #pragma pop
 
-/* 80293334 0054 .text      __dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv */
+/* 80293334-80293388 0054 .text      __dt__50JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>Fv Function */
 // JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>::~JASMemPool_MultiThreaded<Q28JASTrack11TChannelMgr>(void)
 #pragma push
 #pragma optimization_level 0
@@ -951,7 +1127,7 @@ asm void func_80293334() {
 }
 #pragma pop
 
-/* 80293388 00D4 .text      __sinit_JASTrack_cpp                                         */
+/* 80293388-8029345C 00D4 .text      __sinit_JASTrack_cpp                                         SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -961,7 +1137,7 @@ asm void __sinit_JASTrack_cpp() {
 }
 #pragma pop
 
-/* 8029345C 0058 .text      __dt__Q28JASTrack5TListFv                                    */
+/* 8029345C-802934B4 0058 .text      __dt__Q28JASTrack5TListFv                                    Function */
 // JASTrack::TList::~JASTrack::TList(void)
 #pragma push
 #pragma optimization_level 0
@@ -972,7 +1148,7 @@ asm void __dt__Q28JASTrack5TListFv() {
 }
 #pragma pop
 
-/* 802934B4 0074 .text      __dt__19JASDefaultBankTableFv                                */
+/* 802934B4-80293528 0074 .text      __dt__19JASDefaultBankTableFv                                Function */
 // JASDefaultBankTable::~JASDefaultBankTable(void)
 #pragma push
 #pragma optimization_level 0
@@ -983,7 +1159,7 @@ asm void __dt__19JASDefaultBankTableFv() {
 }
 #pragma pop
 
-/* 80293528 0024 .text      getBank__17JASBankTable<256>CFUl                             */
+/* 80293528-8029354C 0024 .text      getBank__17JASBankTable<256>CFUl                             Function */
 // JASBankTable<256>::getBank(u32) const
 #pragma push
 #pragma optimization_level 0

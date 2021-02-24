@@ -18,127 +18,251 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* ReturnFunction       */
 extern void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
+/* ReturnFunction       */
 extern void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
-extern int getAnmTransform__10J3DMtxCalcFUc();
-extern int getAnmTransform__10J3DMtxCalcFv();
+/* ReturnIntegerFunction */
+extern  int getAnmTransform__10J3DMtxCalcFUc();
+/* ReturnIntegerFunction */
+extern  int getAnmTransform__10J3DMtxCalcFv();
+/* ReturnFunction       */
 extern void setWeight__10J3DMtxCalcFUcf();
+/* Function             */
 extern void getWeight__10J3DMtxCalcCFUc();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10JUTNameTabFPC7ResNTAB();
+/* Function             */
 extern void func_802F4260();
+/* Function             */
 extern void func_802F42C0();
+/* Function             */
 extern void func_8030A530();
+/* Function             */
 extern void func_8030A560();
+/* Function             */
 extern void initialize__11J3DMaterialFv();
+/* Function             */
 extern void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
+/* Function             */
 extern void sortVcdVatCmd__13J3DShapeTableFv();
+/* Function             */
 extern void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
+/* Function             */
 extern void findImportantMtxIndex__12J3DJointTreeFv();
+/* Function             */
 extern void clear__12J3DModelDataFv();
+/* Function             */
 extern void __ct__12J3DModelDataFv();
+/* Function             */
 extern void indexToPtr__12J3DModelDataFv();
+/* Function             */
 extern void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
+/* Function             */
 extern void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
+/* Function             */
 extern void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
+/* Function             */
 extern void clear__16J3DMaterialTableFv();
+/* Function             */
 extern void __ct__16J3DMaterialTableFv();
+/* Function             */
 extern void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
+/* Function             */
 extern void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
+/* Function             */
 extern void countUniqueMaterials__18J3DMaterialFactoryFv();
+/* Function             */
 extern void create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
+/* Function             */
 extern void modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali();
+/* Function             */
 extern void __dt__11J3DMaterialFv();
+/* Function             */
 extern void __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21();
+/* Function             */
 extern void countUniqueMaterials__22J3DMaterialFactory_v21Fv();
+/* Function             */
 extern void create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl();
+/* Function             */
 extern void __ct__14J3DModelLoaderFv();
+/* Function             */
+extern void load__22J3DModelLoaderDataBaseFPCvUl();
+/* Function             */
 extern void load__14J3DModelLoaderFPCvUl();
+/* Function             */
 extern void loadMaterialTable__14J3DModelLoaderFPCv();
+/* Function             */
 extern void loadBinaryDisplayList__14J3DModelLoaderFPCvUl();
+/* Function             */
 extern void setupBBoardInfo__14J3DModelLoaderFv();
+/* Function             */
 extern void readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl();
+/* Function             */
 extern void getFmtType__FP17_GXVtxAttrFmtList7_GXAttr();
+/* Function             */
 extern void readVertex__14J3DModelLoaderFPC14J3DVertexBlock();
+/* Function             */
 extern void readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock();
+/* Function             */
 extern void readDraw__14J3DModelLoaderFPC12J3DDrawBlock();
+/* Function             */
 extern void readJoint__14J3DModelLoaderFPC13J3DJointBlock();
+/* Function             */
 extern void readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul();
+/* Function             */
 extern void readShape__14J3DModelLoaderFPC13J3DShapeBlockUl();
+/* Function             */
 extern void readTexture__14J3DModelLoaderFPC15J3DTextureBlock();
+/* Function             */
 extern void readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul();
+/* Function             */
 extern void readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock();
+/* Function             */
 extern void readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* Function             */
 extern void readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl();
+/* Function             */
 extern void modifyMaterial__14J3DModelLoaderFUl();
+/* Function             */
 extern void __dt__18J3DModelLoader_v26Fv();
+/* Function             */
 extern void __dt__18J3DModelLoader_v21Fv();
+/* Function             */
 extern void __dt__14J3DModelLoaderFv();
+/* ReturnFunction       */
 extern void readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul();
+/* ReturnFunction       */
 extern void readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* ReturnFunction       */
 extern void readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul();
+/* ReturnFunction       */
 extern void readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl();
-extern int calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
-extern int calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* ReturnIntegerFunction */
+extern  int calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* ReturnIntegerFunction */
+extern  int calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* Function             */
 extern void func_803364B8();
+/* Function             */
 extern void func_80336524();
+/* Function             */
 extern void func_8033656C();
+/* Function             */
 extern void func_80336594();
+/* Function             */
 extern void func_80336600();
+/* Function             */
 extern void func_80336628();
+/* Function             */
 extern void __ct__11J3DMaterialFv();
+/* Function             */
 extern void __dt__10J3DTextureFv();
+/* Function             */
 extern void func_803366EC();
+/* Function             */
 extern void func_80336704();
+/* Function             */
 extern void func_8033671C();
+/* Function             */
 extern void func_80336734();
+/* Function             */
 extern void func_8033674C();
+/* Function             */
 extern void func_80336764();
+/* Function             */
 extern void func_8033677C();
+/* Function             */
 extern void countMaterialNum__14J3DModelLoaderFPCv();
+/* Function             */
 extern void calcLoadSize__14J3DModelLoaderFPCvUl();
+/* Function             */
 extern void calcLoadMaterialTableSize__14J3DModelLoaderFPCv();
+/* Function             */
 extern void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl();
+/* Function             */
 extern void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void __ct__15J3DJointFactoryFRC13J3DJointBlock();
+/* Function             */
 extern void create__15J3DJointFactoryFi();
+/* Function             */
 extern void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+/* Function             */
 extern void create__15J3DShapeFactoryFiUlP14_GXVtxDescList();
+/* Function             */
 extern void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void __construct_new_array();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DModelLoader__stringBase0[56];
-SECTION_DATA extern const void* data_803A3360[11];
-SECTION_DATA extern const void* __vt__19J3DMtxCalcNoAnmBase[11];
-SECTION_DATA extern const void* __vt__10J3DMtxCalc[12];
-SECTION_DATA extern const void* __vt__11J3DMaterial[12];
-SECTION_DATA extern const void* __vt__18J3DModelLoader_v21[17];
-SECTION_DATA extern const void* __vt__18J3DModelLoader_v26[17];
-SECTION_DATA extern const void* data_803CF190[11];
-SECTION_DATA extern const void* data_803CF1BC[11];
-SECTION_DATA extern const void* __vt__10J3DTexture[3];
-SECTION_DATA extern const void* __vt__14J3DModelLoader[17];
+/* VTableData           */
+SECTION_DATA extern void* data_803A3360[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19J3DMtxCalcNoAnmBase[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10J3DMtxCalc[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DMaterial[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18J3DModelLoader_v21[17];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18J3DModelLoader_v26[17];
+/* VTableData           */
+SECTION_DATA extern void* data_803CF190[11];
+/* VTableData           */
+SECTION_DATA extern void* data_803CF1BC[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10J3DTexture[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J3DModelLoader[17];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mCurrentMtx__6J3DSys[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mCurrentS__6J3DSys[12];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mJoint__10J3DMtxCalc[4];
 }
 
@@ -148,11 +272,16 @@ SECTION_SBSS extern u8 mJoint__10J3DMtxCalc[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A20B0 0038 .rodata    @stringBase0                                                 */
-const char* const stringBase_803A20B0 = "Unknown data block\n";
-const char* const stringBase_803A20C4 = 
-    "WRONG SHAPE MATRIX TYPE (__FILE_"
+/* 803A20B0-803A20E8 0038 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A20B0 = "Unknown data block\n";
+SECTION_DEAD const char* const stringBase_803A20C4 = 
+    "WRONG SHAPE MATR"
+    "IX TYPE (__FILE_"
     "_)\n";
+#pragma pop
 }
 
 
@@ -161,8 +290,8 @@ const char* const stringBase_803A20C4 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF108 0044 .data      __vt__18J3DModelLoader_v21                                   */
-SECTION_DATA const  void* __vt__18J3DModelLoader_v21[17] = {
+/* 803CF108-803CF14C 0044 .data      __vt__18J3DModelLoader_v21                                   VTableData */
+SECTION_DATA void* __vt__18J3DModelLoader_v21[17] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__14J3DModelLoaderFPCvUl,
@@ -181,8 +310,8 @@ SECTION_DATA const  void* __vt__18J3DModelLoader_v21[17] = {
 	(void*)calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
 	(void*)calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
 };
-/* 803CF14C 0044 .data      __vt__18J3DModelLoader_v26                                   */
-SECTION_DATA const  void* __vt__18J3DModelLoader_v26[17] = {
+/* 803CF14C-803CF190 0044 .data      __vt__18J3DModelLoader_v26                                   VTableData */
+SECTION_DATA void* __vt__18J3DModelLoader_v26[17] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__14J3DModelLoaderFPCvUl,
@@ -201,8 +330,8 @@ SECTION_DATA const  void* __vt__18J3DModelLoader_v26[17] = {
 	(void*)calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
 	(void*)calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
 };
-/* 803CF190 002C .data      __vt__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage> */
-SECTION_DATA const  void* data_803CF190[11] = {
+/* 803CF190-803CF1BC 002C .data      __vt__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage> VTableData */
+SECTION_DATA void* data_803CF190[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_803364B8,
@@ -215,8 +344,8 @@ SECTION_DATA const  void* data_803CF190[11] = {
 	(void*)func_80336524,
 	(void*)func_8033656C,
 };
-/* 803CF1BC 002C .data      __vt__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic> */
-SECTION_DATA const  void* data_803CF1BC[11] = {
+/* 803CF1BC-803CF1E8 002C .data      __vt__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic> VTableData */
+SECTION_DATA void* data_803CF1BC[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_80336594,
@@ -229,14 +358,14 @@ SECTION_DATA const  void* data_803CF1BC[11] = {
 	(void*)func_80336600,
 	(void*)func_80336628,
 };
-/* 803CF1E8 000C .data      __vt__10J3DTexture                                           */
-SECTION_DATA const  void* __vt__10J3DTexture[3] = {
+/* 803CF1E8-803CF1F4 000C .data      __vt__10J3DTexture                                           VTableData */
+SECTION_DATA void* __vt__10J3DTexture[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10J3DTextureFv,
 };
-/* 803CF1F4 0044 .data      __vt__14J3DModelLoader                                       */
-SECTION_DATA const  void* __vt__14J3DModelLoader[17] = {
+/* 803CF1F4-803CF238 0044 .data      __vt__14J3DModelLoader                                       VTableData */
+SECTION_DATA void* __vt__14J3DModelLoader[17] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__14J3DModelLoaderFPCvUl,
@@ -263,7 +392,7 @@ SECTION_DATA const  void* __vt__14J3DModelLoader[17] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033468C 0030 .text      __ct__14J3DModelLoaderFv                                     */
+/* 8033468C-803346BC 0030 .text      __ct__14J3DModelLoaderFv                                     Function */
 // J3DModelLoader::J3DModelLoader(void)
 #pragma push
 #pragma optimization_level 0
@@ -274,7 +403,7 @@ asm void __ct__14J3DModelLoaderFv() {
 }
 #pragma pop
 
-/* 803346BC 0124 .text      load__22J3DModelLoaderDataBaseFPCvUl                         */
+/* 803346BC-803347E0 0124 .text      load__22J3DModelLoaderDataBaseFPCvUl                         Function */
 // J3DModelLoaderDataBase::load(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -285,7 +414,7 @@ asm void load__22J3DModelLoaderDataBaseFPCvUl() {
 }
 #pragma pop
 
-/* 803347E0 02DC .text      load__14J3DModelLoaderFPCvUl                                 */
+/* 803347E0-80334ABC 02DC .text      load__14J3DModelLoaderFPCvUl                                 Function */
 // J3DModelLoader::load(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -296,7 +425,7 @@ asm void load__14J3DModelLoaderFPCvUl() {
 }
 #pragma pop
 
-/* 80334ABC 0164 .text      loadMaterialTable__14J3DModelLoaderFPCv                      */
+/* 80334ABC-80334C20 0164 .text      loadMaterialTable__14J3DModelLoaderFPCv                      Function */
 // J3DModelLoader::loadMaterialTable(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -307,7 +436,7 @@ asm void loadMaterialTable__14J3DModelLoaderFPCv() {
 }
 #pragma pop
 
-/* 80334C20 02C0 .text      loadBinaryDisplayList__14J3DModelLoaderFPCvUl                */
+/* 80334C20-80334EE0 02C0 .text      loadBinaryDisplayList__14J3DModelLoaderFPCvUl                Function */
 // J3DModelLoader::loadBinaryDisplayList(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -318,7 +447,7 @@ asm void loadBinaryDisplayList__14J3DModelLoaderFPCvUl() {
 }
 #pragma pop
 
-/* 80334EE0 0168 .text      setupBBoardInfo__14J3DModelLoaderFv                          */
+/* 80334EE0-80335048 0168 .text      setupBBoardInfo__14J3DModelLoaderFv                          Function */
 // J3DModelLoader::setupBBoardInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -329,7 +458,7 @@ asm void setupBBoardInfo__14J3DModelLoaderFv() {
 }
 #pragma pop
 
-/* 80335048 015C .text      readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl    */
+/* 80335048-803351A4 015C .text      readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl    Function */
 // J3DModelLoader::readInformation(const J3DModelInfoBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -340,7 +469,7 @@ asm void readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl() {
 }
 #pragma pop
 
-/* 803351A4 002C .text      getFmtType__FP17_GXVtxAttrFmtList7_GXAttr                    */
+/* 803351A4-803351D0 002C .text      getFmtType__FP17_GXVtxAttrFmtList7_GXAttr                    Function */
 // getFmtType(_GXVtxAttrFmtList*, _GXAttr)
 #pragma push
 #pragma optimization_level 0
@@ -351,7 +480,7 @@ asm void getFmtType__FP17_GXVtxAttrFmtList7_GXAttr() {
 }
 #pragma pop
 
-/* 803351D0 0220 .text      readVertex__14J3DModelLoaderFPC14J3DVertexBlock              */
+/* 803351D0-803353F0 0220 .text      readVertex__14J3DModelLoaderFPC14J3DVertexBlock              Function */
 // J3DModelLoader::readVertex(const J3DVertexBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -362,7 +491,7 @@ asm void readVertex__14J3DModelLoaderFPC14J3DVertexBlock() {
 }
 #pragma pop
 
-/* 803353F0 0090 .text      readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock           */
+/* 803353F0-80335480 0090 .text      readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock           Function */
 // J3DModelLoader::readEnvelop(const J3DEnvelopeBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -373,7 +502,7 @@ asm void readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock() {
 }
 #pragma pop
 
-/* 80335480 00B0 .text      readDraw__14J3DModelLoaderFPC12J3DDrawBlock                  */
+/* 80335480-80335530 00B0 .text      readDraw__14J3DModelLoaderFPC12J3DDrawBlock                  Function */
 // J3DModelLoader::readDraw(const J3DDrawBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -384,7 +513,7 @@ asm void readDraw__14J3DModelLoaderFPC12J3DDrawBlock() {
 }
 #pragma pop
 
-/* 80335530 00E4 .text      readJoint__14J3DModelLoaderFPC13J3DJointBlock                */
+/* 80335530-80335614 00E4 .text      readJoint__14J3DModelLoaderFPC13J3DJointBlock                Function */
 // J3DModelLoader::readJoint(const J3DJointBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -395,7 +524,7 @@ asm void readJoint__14J3DModelLoaderFPC13J3DJointBlock() {
 }
 #pragma pop
 
-/* 80335614 027C .text      readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl    */
+/* 80335614-80335890 027C .text      readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl    Function */
 // J3DModelLoader_v26::readMaterial(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -406,7 +535,7 @@ asm void readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 80335890 0264 .text      readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul */
+/* 80335890-80335AF4 0264 .text      readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul Function */
 // J3DModelLoader_v21::readMaterial_v21(const J3DMaterialBlock_v21*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -417,7 +546,7 @@ asm void readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul() {
 }
 #pragma pop
 
-/* 80335AF4 0124 .text      readShape__14J3DModelLoaderFPC13J3DShapeBlockUl              */
+/* 80335AF4-80335C18 0124 .text      readShape__14J3DModelLoaderFPC13J3DShapeBlockUl              Function */
 // J3DModelLoader::readShape(const J3DShapeBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -428,7 +557,7 @@ asm void readShape__14J3DModelLoaderFPC13J3DShapeBlockUl() {
 }
 #pragma pop
 
-/* 80335C18 00CC .text      readTexture__14J3DModelLoaderFPC15J3DTextureBlock            */
+/* 80335C18-80335CE4 00CC .text      readTexture__14J3DModelLoaderFPC15J3DTextureBlock            Function */
 // J3DModelLoader::readTexture(const J3DTextureBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -439,7 +568,7 @@ asm void readTexture__14J3DModelLoaderFPC15J3DTextureBlock() {
 }
 #pragma pop
 
-/* 80335CE4 013C .text      readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80335CE4-80335E20 013C .text      readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl Function */
 // J3DModelLoader_v26::readMaterialTable(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -450,7 +579,7 @@ asm void readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 80335E20 013C .text      readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul */
+/* 80335E20-80335F5C 013C .text      readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul Function */
 // J3DModelLoader_v21::readMaterialTable_v21(const J3DMaterialBlock_v21*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -461,7 +590,7 @@ asm void readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul(
 }
 #pragma pop
 
-/* 80335F5C 00CC .text      readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock       */
+/* 80335F5C-80336028 00CC .text      readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock       Function */
 // J3DModelLoader::readTextureTable(const J3DTextureBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -472,7 +601,7 @@ asm void readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock() {
 }
 #pragma pop
 
-/* 80336028 0140 .text      readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
+/* 80336028-80336168 0140 .text      readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl Function */
 // J3DModelLoader::readPatchedMaterial(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -483,7 +612,7 @@ asm void readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 80336168 01B4 .text      readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl    */
+/* 80336168-8033631C 01B4 .text      readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl    Function */
 // J3DModelLoader::readMaterialDL(const J3DMaterialDLBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -494,7 +623,7 @@ asm void readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl() {
 }
 #pragma pop
 
-/* 8033631C 007C .text      modifyMaterial__14J3DModelLoaderFUl                          */
+/* 8033631C-80336398 007C .text      modifyMaterial__14J3DModelLoaderFUl                          Function */
 // J3DModelLoader::modifyMaterial(u32)
 #pragma push
 #pragma optimization_level 0
@@ -505,7 +634,7 @@ asm void modifyMaterial__14J3DModelLoaderFUl() {
 }
 #pragma pop
 
-/* 80336398 005C .text      __dt__18J3DModelLoader_v26Fv                                 */
+/* 80336398-803363F4 005C .text      __dt__18J3DModelLoader_v26Fv                                 Function */
 // J3DModelLoader_v26::~J3DModelLoader_v26(void)
 #pragma push
 #pragma optimization_level 0
@@ -516,7 +645,7 @@ asm void __dt__18J3DModelLoader_v26Fv() {
 }
 #pragma pop
 
-/* 803363F4 005C .text      __dt__18J3DModelLoader_v21Fv                                 */
+/* 803363F4-80336450 005C .text      __dt__18J3DModelLoader_v21Fv                                 Function */
 // J3DModelLoader_v21::~J3DModelLoader_v21(void)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +656,7 @@ asm void __dt__18J3DModelLoader_v21Fv() {
 }
 #pragma pop
 
-/* 80336450 0048 .text      __dt__14J3DModelLoaderFv                                     */
+/* 80336450-80336498 0048 .text      __dt__14J3DModelLoaderFv                                     Function */
 // J3DModelLoader::~J3DModelLoader(void)
 #pragma push
 #pragma optimization_level 0
@@ -538,43 +667,43 @@ asm void __dt__14J3DModelLoaderFv() {
 }
 #pragma pop
 
-/* 80336498 0004 .text      readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul */
+/* 80336498-8033649C 0004 .text      readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul ReturnFunction */
 // J3DModelLoader::readMaterial_v21(const J3DMaterialBlock_v21*, u32)
 void readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul() {
 	return;
 }
 
-/* 8033649C 0004 .text      readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl        */
+/* 8033649C-803364A0 0004 .text      readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl        ReturnFunction */
 // J3DModelLoader::readMaterial(const J3DMaterialBlock*, u32)
 void readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 	return;
 }
 
-/* 803364A0 0004 .text      readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul */
+/* 803364A0-803364A4 0004 .text      readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul ReturnFunction */
 // J3DModelLoader::readMaterialTable_v21(const J3DMaterialBlock_v21*, u32)
 void readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul() {
 	return;
 }
 
-/* 803364A4 0004 .text      readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl   */
+/* 803364A4-803364A8 0004 .text      readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl   ReturnFunction */
 // J3DModelLoader::readMaterialTable(const J3DMaterialBlock*, u32)
 void readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 	return;
 }
 
-/* 803364A8 0008 .text      calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl    */
+/* 803364A8-803364B0 0008 .text      calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl    ReturnIntegerFunction */
 // J3DModelLoader::calcSizeMaterial(const J3DMaterialBlock*, u32)
 int calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 	return 0;
 }
 
-/* 803364B0 0008 .text      calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl */
+/* 803364B0-803364B8 0008 .text      calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl ReturnIntegerFunction */
 // J3DModelLoader::calcSizeMaterialTable(const J3DMaterialBlock*, u32)
 int calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 	return 0;
 }
 
-/* 803364B8 006C .text      __dt__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>Fv */
+/* 803364B8-80336524 006C .text      __dt__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>Fv Function */
 // J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>::~J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>(void)
 #pragma push
 #pragma optimization_level 0
@@ -585,7 +714,7 @@ asm void func_803364B8() {
 }
 #pragma pop
 
-/* 80336524 0048 .text      init__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>FRC3VecRA3_A4_Cf */
+/* 80336524-8033656C 0048 .text      init__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>FRC3VecRA3_A4_Cf Function */
 // J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>::init(const Vec&, const f32 (&)[3][4])
 #pragma push
 #pragma optimization_level 0
@@ -596,7 +725,7 @@ asm void func_80336524() {
 }
 #pragma pop
 
-/* 8033656C 0028 .text      calc__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>Fv */
+/* 8033656C-80336594 0028 .text      calc__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>Fv Function */
 // J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage>::calc(void)
 #pragma push
 #pragma optimization_level 0
@@ -607,7 +736,7 @@ asm void func_8033656C() {
 }
 #pragma pop
 
-/* 80336594 006C .text      __dt__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>Fv */
+/* 80336594-80336600 006C .text      __dt__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>Fv Function */
 // J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>::~J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>(void)
 #pragma push
 #pragma optimization_level 0
@@ -618,7 +747,7 @@ asm void func_80336594() {
 }
 #pragma pop
 
-/* 80336600 0028 .text      init__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>FRC3VecRA3_A4_Cf */
+/* 80336600-80336628 0028 .text      init__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>FRC3VecRA3_A4_Cf Function */
 // J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>::init(const Vec&, const f32 (&)[3][4])
 #pragma push
 #pragma optimization_level 0
@@ -629,7 +758,7 @@ asm void func_80336600() {
 }
 #pragma pop
 
-/* 80336628 0028 .text      calc__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>Fv */
+/* 80336628-80336650 0028 .text      calc__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>Fv Function */
 // J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic>::calc(void)
 #pragma push
 #pragma optimization_level 0
@@ -640,7 +769,7 @@ asm void func_80336628() {
 }
 #pragma pop
 
-/* 80336650 0054 .text      __ct__11J3DMaterialFv                                        */
+/* 80336650-803366A4 0054 .text      __ct__11J3DMaterialFv                                        Function */
 // J3DMaterial::J3DMaterial(void)
 #pragma push
 #pragma optimization_level 0
@@ -651,7 +780,7 @@ asm void __ct__11J3DMaterialFv() {
 }
 #pragma pop
 
-/* 803366A4 0048 .text      __dt__10J3DTextureFv                                         */
+/* 803366A4-803366EC 0048 .text      __dt__10J3DTextureFv                                         Function */
 // J3DTexture::~J3DTexture(void)
 #pragma push
 #pragma optimization_level 0
@@ -662,7 +791,7 @@ asm void __dt__10J3DTextureFv() {
 }
 #pragma pop
 
-/* 803366EC 0018 .text      JSUConvertOffsetToPtr<7ResTIMG>__FPCvPCv                     */
+/* 803366EC-80336704 0018 .text      JSUConvertOffsetToPtr<7ResTIMG>__FPCvPCv                     Function */
 // JSUConvertOffsetToPtr<7ResTIMG>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -673,7 +802,7 @@ asm void func_803366EC() {
 }
 #pragma pop
 
-/* 80336704 0018 .text      JSUConvertOffsetToPtr<A3_A4_f>__FPCvPCv                      */
+/* 80336704-8033671C 0018 .text      JSUConvertOffsetToPtr<A3_A4_f>__FPCvPCv                      Function */
 // JSUConvertOffsetToPtr<A3_A4_f>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -684,7 +813,7 @@ asm void func_80336704() {
 }
 #pragma pop
 
-/* 8033671C 0018 .text      JSUConvertOffsetToPtr<v>__FPCvPCv                            */
+/* 8033671C-80336734 0018 .text      JSUConvertOffsetToPtr<v>__FPCvPCv                            Function */
 // JSUConvertOffsetToPtr<v>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -695,7 +824,7 @@ asm void func_8033671C() {
 }
 #pragma pop
 
-/* 80336734 0018 .text      JSUConvertOffsetToPtr<17_GXVtxAttrFmtList>__FPCvPCv          */
+/* 80336734-8033674C 0018 .text      JSUConvertOffsetToPtr<17_GXVtxAttrFmtList>__FPCvPCv          Function */
 // JSUConvertOffsetToPtr<17_GXVtxAttrFmtList>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -706,7 +835,7 @@ asm void func_80336734() {
 }
 #pragma pop
 
-/* 8033674C 0018 .text      JSUConvertOffsetToPtr<17J3DModelHierarchy>__FPCvPCv          */
+/* 8033674C-80336764 0018 .text      JSUConvertOffsetToPtr<17J3DModelHierarchy>__FPCvPCv          Function */
 // JSUConvertOffsetToPtr<17J3DModelHierarchy>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -717,7 +846,7 @@ asm void func_8033674C() {
 }
 #pragma pop
 
-/* 80336764 0018 .text      JSUConvertOffsetToPtr<16J3DShapeInitData>__FPCvUl            */
+/* 80336764-8033677C 0018 .text      JSUConvertOffsetToPtr<16J3DShapeInitData>__FPCvUl            Function */
 // JSUConvertOffsetToPtr<16J3DShapeInitData>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -728,7 +857,7 @@ asm void func_80336764() {
 }
 #pragma pop
 
-/* 8033677C 0018 .text      JSUConvertOffsetToPtr<Us>__FPCvUl                            */
+/* 8033677C-80336794 0018 .text      JSUConvertOffsetToPtr<Us>__FPCvUl                            Function */
 // JSUConvertOffsetToPtr<Us>(const void*, u32)
 #pragma push
 #pragma optimization_level 0

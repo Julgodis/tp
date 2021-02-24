@@ -12,6 +12,11 @@ struct request_base_class;
 struct process_method_class;
 struct leafdraw_method_class;
 
+extern void fopOvlp_Draw(void*); /* fopOvlp_Draw__FPv */
+extern void fopOvlp_Execute(void*); /* fopOvlp_Execute__FPv */
+extern void fopOvlp_IsDelete(void*); /* fopOvlp_IsDelete__FPv */
+extern void fopOvlp_Delete(void*); /* fopOvlp_Delete__FPv */
+extern void fopOvlp_Create(void*); /* fopOvlp_Create__FPv */
 extern void fpcLf_DrawMethod(leafdraw_method_class*, void*); /* fpcLf_DrawMethod__FP21leafdraw_method_classPv */
 extern void fpcMtd_Execute(process_method_class*, void*); /* fpcMtd_Execute__FP20process_method_classPv */
 extern void fpcMtd_IsDelete(process_method_class*, void*); /* fpcMtd_IsDelete__FP20process_method_classPv */
@@ -20,12 +25,30 @@ extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20p
 extern void cReq_Create(request_base_class*, u8); /* cReq_Create__FP18request_base_classUc */
 
 extern "C" {
+/* Function             */
+extern void fopOvlp_Draw__FPv();
+/* Function             */
+extern void fopOvlp_Execute__FPv();
+/* Function             */
+extern void fopOvlp_IsDelete__FPv();
+/* Function             */
+extern void fopOvlp_Delete__FPv();
+/* Function             */
+extern void fopOvlp_Create__FPv();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* Function             */
 extern void cReq_Create__FP18request_base_classUc();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopOvlp_Method[6];
 }
 
 
@@ -34,12 +57,15 @@ extern void cReq_Create__FP18request_base_classUc();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3878 0014 .data      g_fopOvlp_Method                                             */
-SECTION_DATA u8 g_fopOvlp_Method[24] = {
-	0x80, 0x01, 0xE4, 0x1C, 0x80, 0x01, 0xE3, 0xF4, 0x80, 0x01, 0xE3, 0xA4, 0x80, 0x01, 0xE3, 0xCC,
-	0x80, 0x01, 0xE3, 0x7C,
+/* 803A3878-803A3890 0014 .data      g_fopOvlp_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* g_fopOvlp_Method[6] = {
+	(void*)fopOvlp_Create,
+	(void*)fopOvlp_Delete,
+	(void*)fopOvlp_Execute,
+	(void*)fopOvlp_IsDelete,
+	(void*)fopOvlp_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -49,7 +75,7 @@ SECTION_DATA u8 g_fopOvlp_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001E37C 0028 .text      fopOvlp_Draw__FPv                                            */
+/* 8001E37C-8001E3A4 0028 .text      fopOvlp_Draw__FPv                                            Function */
 }
 
 #pragma push
@@ -62,7 +88,7 @@ asm void fopOvlp_Draw(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001E3A4 0028 .text      fopOvlp_Execute__FPv                                         */
+/* 8001E3A4-8001E3CC 0028 .text      fopOvlp_Execute__FPv                                         Function */
 }
 
 #pragma push
@@ -75,7 +101,7 @@ asm void fopOvlp_Execute(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001E3CC 0028 .text      fopOvlp_IsDelete__FPv                                        */
+/* 8001E3CC-8001E3F4 0028 .text      fopOvlp_IsDelete__FPv                                        Function */
 }
 
 #pragma push
@@ -88,7 +114,7 @@ asm void fopOvlp_IsDelete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001E3F4 0028 .text      fopOvlp_Delete__FPv                                          */
+/* 8001E3F4-8001E41C 0028 .text      fopOvlp_Delete__FPv                                          Function */
 }
 
 #pragma push
@@ -101,7 +127,7 @@ asm void fopOvlp_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001E41C 0068 .text      fopOvlp_Create__FPv                                          */
+/* 8001E41C-8001E484 0068 .text      fopOvlp_Create__FPv                                          Function */
 }
 
 #pragma push

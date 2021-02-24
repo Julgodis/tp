@@ -9,45 +9,89 @@
 // 
 
 extern "C" {
-extern void memset();
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void OSSetArenaLo();
+/* Function             */
 extern void OSAllocFromArenaLo();
+/* Function             */
 extern void ICInvalidateRange();
+/* Function             */
 extern void ICFlashInvalidate();
+/* Function             */
 extern void PackArgs();
+/* Function             */
 extern void Run();
+/* Function             */
 extern void ReadDisc();
+/* Function             */
 extern void OSExec__Callback();
+/* Function             */
+extern void __OSGetExecParams();
+/* Function             */
 extern void GetApploaderPosition();
+/* Function             */
 extern void __OSBootDolSimple();
+/* Function             */
+extern void __OSBootDol();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSEnableInterrupts();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
 extern void OSGetSaveRegion();
+/* Function             */
 extern void __OSDoHotReset();
+/* Function             */
 extern void DVDInit();
+/* Function             */
 extern void DVDReadAbsAsyncPrio();
+/* Function             */
 extern void DVDCancelStreamAsync();
+/* Function             */
 extern void DVDGetCommandBlockStatus();
+/* Function             */
 extern void DVDSetAutoInvalidation();
+/* Function             */
 extern void DVDResume();
+/* Function             */
 extern void DVDGetCurrentDiskID();
+/* Function             */
 extern void DVDCheckDisk();
+/* Function             */
 extern void __DVDPrepareResetAsync();
+/* Function             */
 extern void AISetStreamPlayState();
+/* Function             */
 extern void AISetStreamVolLeft();
+/* Function             */
 extern void AISetStreamVolRight();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void strncmp();
+/* Function             */
 extern void strcpy();
+/* Function             */
 extern void strlen();
+/* InitializedData      */
 SECTION_DATA extern u8 OSExec__LIT_115[16];
+/* InitializedData      */
 SECTION_SDATA extern u8 OSExec__LIT_213[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __OSIsGcam[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Prepared[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045165C[4];
 }
 
@@ -57,7 +101,7 @@ SECTION_SBSS extern u8 data_8045165C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CFC38 000B .data      @115                                                         */
+/* 803CFC38-803CFC48 000B .data      @115                                                         InitializedData */
 SECTION_DATA u8 OSExec__LIT_115[16] = {
 	0x32, 0x30, 0x30, 0x34, 0x2F, 0x30, 0x32, 0x2F, 0x30, 0x31, 0x00,
 	/* padding */
@@ -71,7 +115,7 @@ SECTION_DATA u8 OSExec__LIT_115[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804509A8 0003 .sdata     @213                                                         */
+/* 804509A8-804509B0 0003 .sdata     @213                                                         InitializedData */
 SECTION_SDATA u8 OSExec__LIT_213[8] = {
 	0x25, 0x64, 0x00,
 	/* padding */
@@ -85,9 +129,9 @@ SECTION_SDATA u8 OSExec__LIT_213[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451658 0004 .sbss      Prepared                                                     */
+/* 80451658-8045165C 0004 .sbss      Prepared                                                     ZeroInitializedData */
 SECTION_SBSS u8 Prepared[4];
-/* 8045165C 0004 .sbss      apploaderPosition$69                                         */
+/* 8045165C-80451660 0004 .sbss      apploaderPosition$69                                         ZeroInitializedData */
 SECTION_SBSS u8 data_8045165C[4];
 }
 
@@ -97,7 +141,7 @@ SECTION_SBSS u8 data_8045165C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033CA80 0188 .text      PackArgs                                                     */
+/* 8033CA80-8033CC08 0188 .text      PackArgs                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +151,7 @@ asm void PackArgs() {
 }
 #pragma pop
 
-/* 8033CC08 003C .text      Run                                                          */
+/* 8033CC08-8033CC44 003C .text      Run                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +161,7 @@ asm void Run() {
 }
 #pragma pop
 
-/* 8033CC44 006C .text      ReadDisc                                                     */
+/* 8033CC44-8033CCB0 006C .text      ReadDisc                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +171,7 @@ asm void ReadDisc() {
 }
 #pragma pop
 
-/* 8033CCB0 000C .text      Callback                                                     */
+/* 8033CCB0-8033CCBC 000C .text      Callback                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +181,7 @@ asm void OSExec__Callback() {
 }
 #pragma pop
 
-/* 8033CCBC 0040 .text      __OSGetExecParams                                            */
+/* 8033CCBC-8033CCFC 0040 .text      __OSGetExecParams                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +191,7 @@ asm void __OSGetExecParams() {
 }
 #pragma pop
 
-/* 8033CCFC 00C4 .text      GetApploaderPosition                                         */
+/* 8033CCFC-8033CDC0 00C4 .text      GetApploaderPosition                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +201,7 @@ asm void GetApploaderPosition() {
 }
 #pragma pop
 
-/* 8033CDC0 0484 .text      __OSBootDolSimple                                            */
+/* 8033CDC0-8033D244 0484 .text      __OSBootDolSimple                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +211,7 @@ asm void __OSBootDolSimple() {
 }
 #pragma pop
 
-/* 8033D244 019C .text      __OSBootDol                                                  */
+/* 8033D244-8033D3E0 019C .text      __OSBootDol                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

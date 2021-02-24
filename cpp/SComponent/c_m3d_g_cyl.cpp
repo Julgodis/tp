@@ -8,20 +8,38 @@
 // Additional Symbols:
 // 
 
-struct cM3dGSph;
 struct Vec;
+struct cM3dGSph;
 struct cM3dGCyl;
 
 extern void cM3d_Cross_CylSph(const cM3dGCyl*, const cM3dGSph*, Vec*, f32*); /* cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf */
 extern void cM3d_Cross_CylCyl(const cM3dGCyl*, const cM3dGCyl*, Vec*); /* cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec */
 
 extern "C" {
+/* Function             */
 extern void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
+/* Function             */
 extern void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec();
+/* Function             */
+extern void __ct__8cM3dGCylFPC4cXyzff();
+/* Function             */
+extern void Set__8cM3dGCylFRC9cM3dGCylS();
+/* Function             */
+extern void Set__8cM3dGCylFRC4cXyzff();
+/* Function             */
 extern void SetC__8cM3dGCylFRC4cXyz();
+/* Function             */
 extern void SetH__8cM3dGCylFf();
+/* Function             */
 extern void SetR__8cM3dGCylFf();
-SECTION_DATA extern const void* __vt__8cM3dGCyl[3];
+/* Function             */
+extern void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
+/* Function             */
+extern void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
+/* Function             */
+extern void calcMinMax__8cM3dGCylFP4cXyzP4cXyz();
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGCyl[3];
 }
 
 
@@ -30,7 +48,7 @@ SECTION_DATA extern const void* __vt__8cM3dGCyl[3];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026F0A8 006C .text      __ct__8cM3dGCylFPC4cXyzff                                    */
+/* 8026F0A8-8026F114 006C .text      __ct__8cM3dGCylFPC4cXyzff                                    Function */
 // cM3dGCyl::cM3dGCyl(const cXyz*, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -41,7 +59,7 @@ asm void __ct__8cM3dGCylFPC4cXyzff() {
 }
 #pragma pop
 
-/* 8026F114 006C .text      Set__8cM3dGCylFRC9cM3dGCylS                                  */
+/* 8026F114-8026F180 006C .text      Set__8cM3dGCylFRC9cM3dGCylS                                  Function */
 // cM3dGCyl::Set(const cM3dGCylS&)
 #pragma push
 #pragma optimization_level 0
@@ -52,7 +70,7 @@ asm void Set__8cM3dGCylFRC9cM3dGCylS() {
 }
 #pragma pop
 
-/* 8026F180 005C .text      Set__8cM3dGCylFRC4cXyzff                                     */
+/* 8026F180-8026F1DC 005C .text      Set__8cM3dGCylFRC4cXyzff                                     Function */
 // cM3dGCyl::Set(const cXyz&, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -63,7 +81,7 @@ asm void Set__8cM3dGCylFRC4cXyzff() {
 }
 #pragma pop
 
-/* 8026F1DC 001C .text      SetC__8cM3dGCylFRC4cXyz                                      */
+/* 8026F1DC-8026F1F8 001C .text      SetC__8cM3dGCylFRC4cXyz                                      Function */
 // cM3dGCyl::SetC(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -74,7 +92,7 @@ asm void SetC__8cM3dGCylFRC4cXyz() {
 }
 #pragma pop
 
-/* 8026F1F8 0008 .text      SetH__8cM3dGCylFf                                            */
+/* 8026F1F8-8026F200 0008 .text      SetH__8cM3dGCylFf                                            Function */
 // cM3dGCyl::SetH(f32)
 #pragma push
 #pragma optimization_level 0
@@ -85,7 +103,7 @@ asm void SetH__8cM3dGCylFf() {
 }
 #pragma pop
 
-/* 8026F200 0008 .text      SetR__8cM3dGCylFf                                            */
+/* 8026F200-8026F208 0008 .text      SetR__8cM3dGCylFf                                            Function */
 // cM3dGCyl::SetR(f32)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +114,7 @@ asm void SetR__8cM3dGCylFf() {
 }
 #pragma pop
 
-/* 8026F208 0024 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          */
+/* 8026F208-8026F22C 0024 .text      cross__8cM3dGCylCFPC8cM3dGSphP4cXyz                          Function */
 // cM3dGCyl::cross(const cM3dGSph*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +125,7 @@ asm void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz() {
 }
 #pragma pop
 
-/* 8026F22C 0020 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          */
+/* 8026F22C-8026F24C 0020 .text      cross__8cM3dGCylCFPC8cM3dGCylP4cXyz                          Function */
 // cM3dGCyl::cross(const cM3dGCyl*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -118,7 +136,7 @@ asm void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz() {
 }
 #pragma pop
 
-/* 8026F24C 005C .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           */
+/* 8026F24C-8026F2A8 005C .text      calcMinMax__8cM3dGCylFP4cXyzP4cXyz                           Function */
 // cM3dGCyl::calcMinMax(cXyz*, cXyz*)
 #pragma push
 #pragma optimization_level 0

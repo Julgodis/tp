@@ -23,60 +23,129 @@ extern void J3DPSWeightMTXMultVec(f32 (*)[4], f32, Vec*, Vec*); /* J3DPSWeightMT
 extern void J3DPSWeightMTXMultVecSR(f32 (*)[4], f32, Vec*, Vec*); /* J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void J3DGQRSetup7__FUlUlUlUl();
+/* Function             */
 extern void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
+/* Function             */
 extern void makeVcdVatCmd__8J3DShapeFv();
+/* Function             */
 extern void __ct__12J3DSkinNListFv();
+/* Function             */
 extern void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec();
+/* Function             */
 extern void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec();
+/* Function             */
 extern void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
+/* Function             */
 extern void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
+/* Function             */
+extern void __ct__13J3DSkinDeformFv();
+/* Function             */
+extern void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
+extern void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
+extern void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer();
+/* Function             */
+extern void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer();
+/* Function             */
 extern void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+/* Function             */
 extern void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+/* Function             */
 extern void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+/* Function             */
 extern void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+/* Function             */
 extern void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer();
+/* Function             */
 extern void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer();
+/* Function             */
+extern void deform__13J3DSkinDeformFP8J3DModel();
+/* Function             */
 extern void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer();
+/* Function             */
+extern void calc__15J3DVtxColorCalcFP8J3DModel();
+/* Function             */
 extern void __dt__13J3DSkinDeformFv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSMTXMultVecSR();
+/* Function             */
 extern void __construct_new_array();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_17();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_17();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_1142[16];
+/* InitializedData      */
 SECTION_RODATA extern const u8 J3DSkinDeform__LIT_1270[16];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DSkinDeform__stringBase0[64];
+/* InitializedData      */
 SECTION_DATA extern u8 PSMulUnit01[8];
-SECTION_DATA extern const void* __vt__13J3DSkinDeform[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DSkinDeform[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sWorkArea_WEvlpMixMtx__13J3DSkinDeform[4096];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sWorkArea_WEvlpMixWeight__13J3DSkinDeform[4096];
-SECTION_BSS extern u8 sWorkArea_MtxReg__13J3DSkinDeform[2056];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sWorkArea_MtxReg__13J3DSkinDeform[2048 + 8 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1110;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1578[4];
 }
 
@@ -86,18 +155,26 @@ SECTION_SDATA2 extern u8 LIT_1578[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2008 0010 .rodata    @1142                                                        */
+/* 803A2028-803A2068 003A .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A2028 = 
+    " Invlid Data : C"
+    "PU Pipeline proc"
+    "ess GX_INDEX16 D"
+    "ata Only\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A2062 = "\0\0\0\0\0";
+#pragma pop
+/* 803A2008-803A2018 0010 .rodata    @1142                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1142[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
-/* 803A2018 0010 .rodata    @1270                                                        */
+/* 803A2018-803A2028 0010 .rodata    @1270                                                        InitializedData */
 SECTION_RODATA const u8 J3DSkinDeform__LIT_1270[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02,
 };
-/* 803A2028 003A .rodata    @stringBase0                                                 */
-const char* const stringBase_803A2028 = 
-    " Invlid Data : CPU Pipeline proc"
-    "ess GX_INDEX16 Data Only\n";
 }
 
 
@@ -106,8 +183,8 @@ const char* const stringBase_803A2028 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CEE70 0010 .data      __vt__13J3DSkinDeform                                        */
-SECTION_DATA const  void* __vt__13J3DSkinDeform[4] = {
+/* 803CEE70-803CEE80 0010 .data      __vt__13J3DSkinDeform                                        VTableData */
+SECTION_DATA void* __vt__13J3DSkinDeform[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer,
@@ -121,10 +198,10 @@ SECTION_DATA const  void* __vt__13J3DSkinDeform[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456468 0004 .sdata2    @1110                                                        */
+/* 80456468-8045646C 0004 .sdata2    @1110                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_1110 = 1.000000f;
-/* 8045646C 0004 .sdata2    @1578                                                        */
+/* 8045646C-80456470 0004 .sdata2    @1578                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1578[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -136,12 +213,12 @@ SECTION_SDATA2 u8 LIT_1578[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80437218 1000 .bss       sWorkArea_WEvlpMixMtx__13J3DSkinDeform                       */
+/* 80437218-80438218 1000 .bss       sWorkArea_WEvlpMixMtx__13J3DSkinDeform                       ZeroInitializedData */
 SECTION_BSS u8 sWorkArea_WEvlpMixMtx__13J3DSkinDeform[4096];
-/* 80438218 1000 .bss       sWorkArea_WEvlpMixWeight__13J3DSkinDeform                    */
+/* 80438218-80439218 1000 .bss       sWorkArea_WEvlpMixWeight__13J3DSkinDeform                    ZeroInitializedData */
 SECTION_BSS u8 sWorkArea_WEvlpMixWeight__13J3DSkinDeform[4096];
-/* 80439218 0800 .bss       sWorkArea_MtxReg__13J3DSkinDeform                            */
-SECTION_BSS u8 sWorkArea_MtxReg__13J3DSkinDeform[2056];
+/* 80439218-80439A20 0800 .bss       sWorkArea_MtxReg__13J3DSkinDeform                            ZeroInitializedData */
+SECTION_BSS u8 sWorkArea_MtxReg__13J3DSkinDeform[2048 + 8 /* padding */];
 }
 
 
@@ -150,7 +227,7 @@ SECTION_BSS u8 sWorkArea_MtxReg__13J3DSkinDeform[2056];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8032C6E4 0020 .text      __ct__12J3DSkinNListFv                                       */
+/* 8032C6E4-8032C704 0020 .text      __ct__12J3DSkinNListFv                                       Function */
 // J3DSkinNList::J3DSkinNList(void)
 #pragma push
 #pragma optimization_level 0
@@ -161,7 +238,7 @@ asm void __ct__12J3DSkinNListFv() {
 }
 #pragma pop
 
-/* 8032C704 00B8 .text      J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec                     */
+/* 8032C704-8032C7BC 00B8 .text      J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec                     Function */
 }
 
 #pragma push
@@ -174,7 +251,7 @@ asm void J3DPSWeightMTXMultVec(f32 (*)[4], f32, Vec*, Vec*) {
 #pragma pop
 
 extern "C" {
-/* 8032C7BC 00A0 .text      J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec                   */
+/* 8032C7BC-8032C85C 00A0 .text      J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec                   Function */
 }
 
 #pragma push
@@ -187,7 +264,7 @@ asm void J3DPSWeightMTXMultVecSR(f32 (*)[4], f32, Vec*, Vec*) {
 #pragma pop
 
 extern "C" {
-/* 8032C85C 0088 .text      calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv                 */
+/* 8032C85C-8032C8E4 0088 .text      calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv                 Function */
 // J3DSkinNList::calcSkin_VtxPosF32(f32 (*)[4], void*, void*)
 #pragma push
 #pragma optimization_level 0
@@ -198,7 +275,7 @@ asm void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv() {
 }
 #pragma pop
 
-/* 8032C8E4 0088 .text      calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv                 */
+/* 8032C8E4-8032C96C 0088 .text      calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv                 Function */
 // J3DSkinNList::calcSkin_VtxNrmF32(f32 (*)[4], void*, void*)
 #pragma push
 #pragma optimization_level 0
@@ -209,7 +286,7 @@ asm void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv() {
 }
 #pragma pop
 
-/* 8032C96C 0044 .text      __ct__13J3DSkinDeformFv                                      */
+/* 8032C96C-8032C9B0 0044 .text      __ct__13J3DSkinDeformFv                                      Function */
 // J3DSkinDeform::J3DSkinDeform(void)
 #pragma push
 #pragma optimization_level 0
@@ -220,7 +297,7 @@ asm void __ct__13J3DSkinDeformFv() {
 }
 #pragma pop
 
-/* 8032C9B0 0594 .text      initSkinInfo__13J3DSkinDeformFP12J3DModelData                */
+/* 8032C9B0-8032CF44 0594 .text      initSkinInfo__13J3DSkinDeformFP12J3DModelData                Function */
 // J3DSkinDeform::initSkinInfo(J3DModelData*)
 #pragma push
 #pragma optimization_level 0
@@ -231,7 +308,7 @@ asm void initSkinInfo__13J3DSkinDeformFP12J3DModelData() {
 }
 #pragma pop
 
-/* 8032CF44 0434 .text      initMtxIndexArray__13J3DSkinDeformFP12J3DModelData           */
+/* 8032CF44-8032D378 0434 .text      initMtxIndexArray__13J3DSkinDeformFP12J3DModelData           Function */
 // J3DSkinDeform::initMtxIndexArray(J3DModelData*)
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +319,7 @@ asm void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData() {
 }
 #pragma pop
 
-/* 8032D378 024C .text      changeFastSkinDL__13J3DSkinDeformFP12J3DModelData            */
+/* 8032D378-8032D5C4 024C .text      changeFastSkinDL__13J3DSkinDeformFP12J3DModelData            Function */
 // J3DSkinDeform::changeFastSkinDL(J3DModelData*)
 #pragma push
 #pragma optimization_level 0
@@ -253,7 +330,7 @@ asm void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData() {
 }
 #pragma pop
 
-/* 8032D5C4 0174 .text      calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer                  */
+/* 8032D5C4-8032D738 0174 .text      calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer                  Function */
 // J3DSkinDeform::calcNrmMtx(J3DMtxBuffer*)
 #pragma push
 #pragma optimization_level 0
@@ -264,7 +341,7 @@ asm void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer() {
 }
 #pragma pop
 
-/* 8032D738 0144 .text      transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData          */
+/* 8032D738-8032D87C 0144 .text      transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData          Function */
 // J3DSkinDeform::transformVtxPosNrm(J3DModelData*)
 #pragma push
 #pragma optimization_level 0
@@ -275,7 +352,7 @@ asm void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData() {
 }
 #pragma pop
 
-/* 8032D87C 0078 .text      calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer          */
+/* 8032D87C-8032D8F4 0078 .text      calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer          Function */
 // J3DSkinDeform::calcAnmInvJointMtx(J3DMtxBuffer*)
 #pragma push
 #pragma optimization_level 0
@@ -286,7 +363,7 @@ asm void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer() {
 }
 #pragma pop
 
-/* 8032D8F4 0128 .text      deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer */
+/* 8032D8F4-8032DA1C 0128 .text      deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer Function */
 // J3DSkinDeform::deformFastVtxPos_F32(J3DVertexBuffer*, J3DMtxBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -297,7 +374,7 @@ asm void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffe
 }
 #pragma pop
 
-/* 8032DA1C 0134 .text      deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer */
+/* 8032DA1C-8032DB50 0134 .text      deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer Function */
 // J3DSkinDeform::deformFastVtxNrm_F32(J3DVertexBuffer*, J3DMtxBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +385,7 @@ asm void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffe
 }
 #pragma pop
 
-/* 8032DB50 0124 .text      deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer */
+/* 8032DB50-8032DC74 0124 .text      deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer Function */
 // J3DSkinDeform::deformVtxPos_F32(J3DVertexBuffer*, J3DMtxBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -319,7 +396,7 @@ asm void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer() 
 }
 #pragma pop
 
-/* 8032DC74 0144 .text      deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer */
+/* 8032DC74-8032DDB8 0144 .text      deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer Function */
 // J3DSkinDeform::deformVtxPos_S16(J3DVertexBuffer*, J3DMtxBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -330,7 +407,7 @@ asm void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer() 
 }
 #pragma pop
 
-/* 8032DDB8 0104 .text      deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer        */
+/* 8032DDB8-8032DEBC 0104 .text      deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer        Function */
 // J3DSkinDeform::deformVtxNrm_F32(J3DVertexBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -341,7 +418,7 @@ asm void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer() {
 }
 #pragma pop
 
-/* 8032DEBC 0120 .text      deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer        */
+/* 8032DEBC-8032DFDC 0120 .text      deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer        Function */
 // J3DSkinDeform::deformVtxNrm_S16(J3DVertexBuffer*) const
 #pragma push
 #pragma optimization_level 0
@@ -352,7 +429,7 @@ asm void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer() {
 }
 #pragma pop
 
-/* 8032DFDC 0088 .text      deform__13J3DSkinDeformFP8J3DModel                           */
+/* 8032DFDC-8032E064 0088 .text      deform__13J3DSkinDeformFP8J3DModel                           Function */
 // J3DSkinDeform::deform(J3DModel*)
 #pragma push
 #pragma optimization_level 0
@@ -363,7 +440,7 @@ asm void deform__13J3DSkinDeformFP8J3DModel() {
 }
 #pragma pop
 
-/* 8032E064 011C .text      deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer    */
+/* 8032E064-8032E180 011C .text      deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer    Function */
 // J3DSkinDeform::deform(J3DVertexBuffer*, J3DMtxBuffer*)
 #pragma push
 #pragma optimization_level 0
@@ -374,7 +451,7 @@ asm void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer() {
 }
 #pragma pop
 
-/* 8032E180 0030 .text      calc__15J3DVtxColorCalcFP8J3DModel                           */
+/* 8032E180-8032E1B0 0030 .text      calc__15J3DVtxColorCalcFP8J3DModel                           Function */
 // J3DVtxColorCalc::calc(J3DModel*)
 #pragma push
 #pragma optimization_level 0
@@ -385,7 +462,7 @@ asm void calc__15J3DVtxColorCalcFP8J3DModel() {
 }
 #pragma pop
 
-/* 8032E1B0 0048 .text      __dt__13J3DSkinDeformFv                                      */
+/* 8032E1B0-8032E1F8 0048 .text      __dt__13J3DSkinDeformFv                                      Function */
 // J3DSkinDeform::~J3DSkinDeform(void)
 #pragma push
 #pragma optimization_level 0

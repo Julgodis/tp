@@ -12,17 +12,23 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct leafdraw_class;
-struct J3DModelData;
-struct process_method_class;
-struct J3DModel;
 struct fopAc_ac_c;
+struct J3DModel;
+struct J3DModelData;
 struct dKy_tevstr_c;
+struct leafdraw_class;
+struct create_tag_class;
+struct process_method_class;
 struct leafdraw_method_class;
 
 extern void mDoExt_modelUpdateDL(J3DModel*); /* mDoExt_modelUpdateDL__FP8J3DModel */
 extern void mDoExt_J3DModel__create(J3DModelData*, u32, u32); /* mDoExt_J3DModel__create__FP12J3DModelDataUlUl */
+extern void fopAc_IsActor(void*); /* fopAc_IsActor__FPv */
+extern void fopAc_Draw(void*); /* fopAc_Draw__FPv */
+extern void fopAc_Execute(void*); /* fopAc_Execute__FPv */
+extern void fopAc_IsDelete(void*); /* fopAc_IsDelete__FPv */
+extern void fopAc_Delete(void*); /* fopAc_Delete__FPv */
+extern void fopAc_Create(void*); /* fopAc_Create__FPv */
 extern void fopAcTg_ToActorQ(create_tag_class*); /* fopAcTg_ToActorQ__FP16create_tag_class */
 extern void fopAcTg_ActorQTo(create_tag_class*); /* fopAcTg_ActorQTo__FP16create_tag_class */
 extern void fopAcTg_Init(create_tag_class*, void*); /* fopAcTg_Init__FP16create_tag_classPv */
@@ -46,73 +52,169 @@ extern void cLib_chaseF(f32*, f32, f32); /* cLib_chaseF__FPfff */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_modelUpdateDL__FP8J3DModel();
+/* Function             */
 extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+/* Function             */
+extern void __ct__10fopAc_ac_cFv();
+/* Function             */
+extern void __dt__5csXyzFv();
+/* Function             */
 extern void __ct__11J3DLightObjFv();
+/* Function             */
 extern void __dt__11dEvt_info_cFv();
+/* Function             */
+extern void __dt__10fopAc_ac_cFv();
+/* Function             */
+extern void fopAc_IsActor__FPv();
+/* Function             */
+extern void fopAc_Draw__FPv();
+/* Function             */
+extern void fopAc_Execute__FPv();
+/* Function             */
+extern void fopAc_IsDelete__FPv();
+/* Function             */
+extern void fopAc_Delete__FPv();
+/* Function             */
+extern void fopAc_Create__FPv();
+/* FirstParamFunction   */
+extern u32 getFileListInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
+extern void initBallModel__13fopEn_enemy_cFv();
+/* Function             */
 extern void checkBallModelDraw__13fopEn_enemy_cFv();
+/* Function             */
+extern void setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c();
+/* Function             */
+extern void drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c();
+/* Function             */
 extern void fopAcTg_ToActorQ__FP16create_tag_class();
+/* Function             */
 extern void fopAcTg_ActorQTo__FP16create_tag_class();
+/* Function             */
 extern void fopAcTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void fopAcM_delete__FP10fopAc_ac_c();
+/* Function             */
 extern void fopAcM_DeleteHeap__FP10fopAc_ac_c();
+/* Function             */
 extern void fopAcM_cullingCheck__FPC10fopAc_ac_c();
+/* Function             */
 extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+/* Function             */
 extern void fopDwTg_DrawQTo__FP16create_tag_class();
+/* Function             */
 extern void fopDwTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* Function             */
 extern void fpcLf_GetPriority__FPC14leafdraw_class();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void check__7daSus_cFP10fopAc_ac_c();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void setActor__13dDemo_actor_cFP10fopAc_ac_c();
+/* Function             */
 extern void getActor__14dDemo_object_cFUc();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void moveApproval__14dEvt_control_cFPv();
+/* Function             */
 extern void __ct__11dEvt_info_cFv();
+/* Function             */
 extern void beforeProc__11dEvt_info_cFv();
+/* Function             */
 extern void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+/* Function             */
 extern void dKy_depth_dist_set__FPv();
+/* Function             */
 extern void cLib_chaseF__FPfff();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
 extern void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData();
+/* Function             */
 extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+/* Function             */
 extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+/* Function             */
 extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 f_op_f_op_actor__stringBase0[8];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern const void* __vt__11dEvt_info_c[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopAc_Method[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dEvt_info_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Zero__4cXyz[12];
-SECTION_SDATA extern u8 g_dComIfAc_gameInfo[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_fopAc_type[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 stopStatus__10fopAc_ac_c[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_object__7dDemo_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 f_op_f_op_actor__LIT_4324;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4325[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4431[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 f_op_f_op_actor__LIT_4432;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 f_op_f_op_actor__LIT_4434;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4505[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 f_op_f_op_actor__LIT_4507;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4555[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4556[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4557[8];
 }
 
@@ -122,8 +224,14 @@ SECTION_SDATA2 extern u8 f_op_f_op_actor__LIT_4557[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80378878 0006 .rodata    @stringBase0                                                 */
-const char* const stringBase_80378878 = "Alink";
+/* 80378878-80378880 0006 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80378878 = "Alink";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037887E = "\0";
+#pragma pop
 }
 
 
@@ -132,13 +240,19 @@ const char* const stringBase_80378878 = "Alink";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A35B0 0020 .data      g_fopAc_Method                                               */
-SECTION_DATA u8 g_fopAc_Method[32] = {
-	0x80, 0x01, 0x90, 0x4C, 0x80, 0x01, 0x8F, 0xCC, 0x80, 0x01, 0x8D, 0xD8, 0x80, 0x01, 0x8F, 0x78,
-	0x80, 0x01, 0x8D, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803A35B0-803A35D0 0020 .data      g_fopAc_Method                                               SymbolReferenceArrayData */
+SECTION_DATA void* g_fopAc_Method[8] = {
+	(void*)fopAc_Create,
+	(void*)fopAc_Delete,
+	(void*)fopAc_Execute,
+	(void*)fopAc_IsDelete,
+	(void*)fopAc_Draw,
+	NULL,
+	NULL,
+	NULL,
 };
-/* 803A35D0 000C .data      __vt__11dEvt_info_c                                          */
-SECTION_DATA const  void* __vt__11dEvt_info_c[4] = {
+/* 803A35D0-803A35E0 000C .data      __vt__11dEvt_info_c                                          VTableData */
+SECTION_DATA void* __vt__11dEvt_info_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dEvt_info_cFv,
@@ -153,41 +267,41 @@ SECTION_DATA const  void* __vt__11dEvt_info_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451BC8 0004 .sdata2    @4324                                                        */
+/* 80451BC8-80451BCC 0004 .sdata2    @4324                                                        Float32Data */
 // 0x459c4000
 SECTION_SDATA2 f32 f_op_f_op_actor__LIT_4324 = 5000.000000f;
-/* 80451BCC 0004 .sdata2    @4325                                                        */
+/* 80451BCC-80451BD0 0004 .sdata2    @4325                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4325[4] = {
 	0xF2, 0xFC, 0x6F, 0x7C,
 };
-/* 80451BD0 0004 .sdata2    @4431                                                        */
+/* 80451BD0-80451BD4 0004 .sdata2    @4431                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4431[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80451BD4 0004 .sdata2    @4432                                                        */
+/* 80451BD4-80451BD8 0004 .sdata2    @4432                                                        Float32Data */
 // 0xc2c80000
 SECTION_SDATA2 f32 f_op_f_op_actor__LIT_4432 = -100.000000f;
-/* 80451BD8 0008 .sdata2    @4434                                                        */
+/* 80451BD8-80451BE0 0008 .sdata2    @4434                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 f_op_f_op_actor__LIT_4434 = 4503599627370496.000000;
-/* 80451BE0 0004 .sdata2    @4505                                                        */
+/* 80451BE0-80451BE8 0004 .sdata2    @4505                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4505[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451BE8 0008 .sdata2    @4507                                                        */
+/* 80451BE8-80451BF0 0008 .sdata2    @4507                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 f_op_f_op_actor__LIT_4507 = 4503601774854144.000000;
-/* 80451BF0 0004 .sdata2    @4555                                                        */
+/* 80451BF0-80451BF4 0004 .sdata2    @4555                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4555[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451BF4 0004 .sdata2    @4556                                                        */
+/* 80451BF4-80451BF8 0004 .sdata2    @4556                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4556[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80451BF8 0004 .sdata2    @4557                                                        */
+/* 80451BF8-80451C00 0004 .sdata2    @4557                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4557[8] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 	/* padding */
@@ -201,17 +315,12 @@ SECTION_SDATA2 u8 f_op_f_op_actor__LIT_4557[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450CB8 0004 .sbss      g_fopAc_type                                                 */
+/* 80450CB8-80450CBC 0004 .sbss      g_fopAc_type                                                 ZeroInitializedData */
 SECTION_SBSS u8 g_fopAc_type[4];
-/* 80450CBC 0004 .sbss      stopStatus__10fopAc_ac_c                                     */
+/* 80450CBC-80450CC0 0004 .sbss      stopStatus__10fopAc_ac_c                                     ZeroInitializedData */
 SECTION_SBSS u8 stopStatus__10fopAc_ac_c[4];
-/* 80450CC0 0004 .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             */
-SECTION_SBSS u8 data_80450CC0[4];
-SECTION_SBSS u8 pad_80450CC4[4];
-/* 80450CC8 0004 .sbss      merged_80450CC8                                              */
-SECTION_SBSS u8 merged_80450CC8[4];
-/* 80450CC8 0001 data_80450CC8 */
-/* 80450CC9 0003 data_80450CC9 */
+/* 80450CC0-80450CC8 0004 .sbss      sInstance__35JASGlobalInstance<14JAUSectionHeap>             ZeroInitializedData */
+SECTION_SBSS u8 data_80450CC0[4 + 4 /* padding */];
 }
 
 
@@ -220,7 +329,7 @@ SECTION_SBSS u8 merged_80450CC8[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80018B64 006C .text      __ct__10fopAc_ac_cFv                                         */
+/* 80018B64-80018BD0 006C .text      __ct__10fopAc_ac_cFv                                         Function */
 // fopAc_ac_c::fopAc_ac_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -231,7 +340,7 @@ asm void __ct__10fopAc_ac_cFv() {
 }
 #pragma pop
 
-/* 80018BD0 003C .text      __dt__5csXyzFv                                               */
+/* 80018BD0-80018C0C 003C .text      __dt__5csXyzFv                                               Function */
 // csXyz::~csXyz(void)
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +351,7 @@ asm void __dt__5csXyzFv() {
 }
 #pragma pop
 
-/* 80018C0C 0038 .text      __ct__11J3DLightObjFv                                        */
+/* 80018C0C-80018C44 0038 .text      __ct__11J3DLightObjFv                                        Function */
 // J3DLightObj::J3DLightObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -253,7 +362,7 @@ asm void __ct__11J3DLightObjFv() {
 }
 #pragma pop
 
-/* 80018C44 0048 .text      __dt__11dEvt_info_cFv                                        */
+/* 80018C44-80018C8C 0048 .text      __dt__11dEvt_info_cFv                                        Function */
 // dEvt_info_c::~dEvt_info_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -264,7 +373,7 @@ asm void __dt__11dEvt_info_cFv() {
 }
 #pragma pop
 
-/* 80018C8C 0054 .text      __dt__10fopAc_ac_cFv                                         */
+/* 80018C8C-80018CE0 0054 .text      __dt__10fopAc_ac_cFv                                         Function */
 // fopAc_ac_c::~fopAc_ac_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -275,7 +384,7 @@ asm void __dt__10fopAc_ac_cFv() {
 }
 #pragma pop
 
-/* 80018CE0 002C .text      fopAc_IsActor__FPv                                           */
+/* 80018CE0-80018D0C 002C .text      fopAc_IsActor__FPv                                           Function */
 }
 
 #pragma push
@@ -288,7 +397,7 @@ asm void fopAc_IsActor(void*) {
 #pragma pop
 
 extern "C" {
-/* 80018D0C 00CC .text      fopAc_Draw__FPv                                              */
+/* 80018D0C-80018DD8 00CC .text      fopAc_Draw__FPv                                              Function */
 }
 
 #pragma push
@@ -301,7 +410,7 @@ asm void fopAc_Draw(void*) {
 #pragma pop
 
 extern "C" {
-/* 80018DD8 01A0 .text      fopAc_Execute__FPv                                           */
+/* 80018DD8-80018F78 01A0 .text      fopAc_Execute__FPv                                           Function */
 }
 
 #pragma push
@@ -314,7 +423,7 @@ asm void fopAc_Execute(void*) {
 #pragma pop
 
 extern "C" {
-/* 80018F78 0054 .text      fopAc_IsDelete__FPv                                          */
+/* 80018F78-80018FCC 0054 .text      fopAc_IsDelete__FPv                                          Function */
 }
 
 #pragma push
@@ -327,7 +436,7 @@ asm void fopAc_IsDelete(void*) {
 #pragma pop
 
 extern "C" {
-/* 80018FCC 0080 .text      fopAc_Delete__FPv                                            */
+/* 80018FCC-8001904C 0080 .text      fopAc_Delete__FPv                                            Function */
 }
 
 #pragma push
@@ -340,7 +449,7 @@ asm void fopAc_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001904C 03B0 .text      fopAc_Create__FPv                                            */
+/* 8001904C-800193FC 03B0 .text      fopAc_Create__FPv                                            Function */
 }
 
 #pragma push
@@ -353,13 +462,13 @@ asm void fopAc_Create(void*) {
 #pragma pop
 
 extern "C" {
-/* 800193FC 0008 .text      getFileListInfo__15dStage_roomDt_cCFv                        */
+/* 800193FC-80019404 0008 .text      getFileListInfo__15dStage_roomDt_cCFv                        FirstParamFunction */
 // dStage_roomDt_c::getFileListInfo(void) const
 u32 getFileListInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[36]; /* param0->field_0x24 */
 }
 
-/* 80019404 00F8 .text      initBallModel__13fopEn_enemy_cFv                             */
+/* 80019404-800194FC 00F8 .text      initBallModel__13fopEn_enemy_cFv                             Function */
 // fopEn_enemy_c::initBallModel(void)
 #pragma push
 #pragma optimization_level 0
@@ -370,7 +479,7 @@ asm void initBallModel__13fopEn_enemy_cFv() {
 }
 #pragma pop
 
-/* 800194FC 0024 .text      checkBallModelDraw__13fopEn_enemy_cFv                        */
+/* 800194FC-80019520 0024 .text      checkBallModelDraw__13fopEn_enemy_cFv                        Function */
 // fopEn_enemy_c::checkBallModelDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -381,7 +490,7 @@ asm void checkBallModelDraw__13fopEn_enemy_cFv() {
 }
 #pragma pop
 
-/* 80019520 0180 .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          */
+/* 80019520-800196A0 0180 .text      setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c          Function */
 // fopEn_enemy_c::setBallModelEffect(dKy_tevstr_c*)
 #pragma push
 #pragma optimization_level 0
@@ -392,7 +501,7 @@ asm void setBallModelEffect__13fopEn_enemy_cFP12dKy_tevstr_c() {
 }
 #pragma pop
 
-/* 800196A0 011C .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               */
+/* 800196A0-800197BC 011C .text      drawBallModel__13fopEn_enemy_cFP12dKy_tevstr_c               Function */
 // fopEn_enemy_c::drawBallModel(dKy_tevstr_c*)
 #pragma push
 #pragma optimization_level 0

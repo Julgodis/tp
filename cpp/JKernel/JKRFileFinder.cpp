@@ -11,19 +11,36 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__12JKRArcFinderFP10JKRArchivell();
+/* Function             */
 extern void findNextFile__12JKRArcFinderFv();
+/* Function             */
+extern void __ct__12JKRDvdFinderFPCc();
+/* Function             */
 extern void __dt__12JKRDvdFinderFv();
+/* Function             */
 extern void findNextFile__12JKRDvdFinderFv();
+/* Function             */
 extern void __dt__13JKRFileFinderFv();
+/* Function             */
 extern void __dt__12JKRArcFinderFv();
+/* Function             */
 extern void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
+/* Function             */
 extern void DVDOpenDir();
+/* Function             */
 extern void DVDReadDir();
-extern int DVDCloseDir();
-SECTION_DATA extern const void* __vt__12JKRDvdFinder[4];
-SECTION_DATA extern const void* __vt__12JKRArcFinder[4];
-SECTION_DATA extern const void* __vt__13JKRFileFinder[4];
+/* ReturnIntegerFunction */
+extern  int DVDCloseDir();
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JKRDvdFinder[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JKRArcFinder[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13JKRFileFinder[4];
 }
 
 
@@ -32,22 +49,22 @@ SECTION_DATA extern const void* __vt__13JKRFileFinder[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC208 0010 .data      __vt__12JKRDvdFinder                                         */
-SECTION_DATA const  void* __vt__12JKRDvdFinder[4] = {
+/* 803CC208-803CC218 0010 .data      __vt__12JKRDvdFinder                                         VTableData */
+SECTION_DATA void* __vt__12JKRDvdFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRDvdFinderFv,
 	(void*)findNextFile__12JKRDvdFinderFv,
 };
-/* 803CC218 0010 .data      __vt__12JKRArcFinder                                         */
-SECTION_DATA const  void* __vt__12JKRArcFinder[4] = {
+/* 803CC218-803CC228 0010 .data      __vt__12JKRArcFinder                                         VTableData */
+SECTION_DATA void* __vt__12JKRArcFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRArcFinderFv,
 	(void*)findNextFile__12JKRArcFinderFv,
 };
-/* 803CC228 0010 .data      __vt__13JKRFileFinder                                        */
-SECTION_DATA const  void* __vt__13JKRFileFinder[4] = {
+/* 803CC228-803CC238 0010 .data      __vt__13JKRFileFinder                                        VTableData */
+SECTION_DATA void* __vt__13JKRFileFinder[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JKRFileFinderFv,
@@ -61,8 +78,8 @@ SECTION_DATA const  void* __vt__13JKRFileFinder[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D4638 008C .text      __ct__12JKRArcFinderFP10JKRArchivell                         */
-// JKRArcFinder::JKRArcFinder(JKRArchive*, s32, s32)
+/* 802D4638-802D46C4 008C .text      __ct__12JKRArcFinderFP10JKRArchivell                         Function */
+// JKRArcFinder::JKRArcFinder(JKRArchive*, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +89,7 @@ asm void __ct__12JKRArcFinderFP10JKRArchivell() {
 }
 #pragma pop
 
-/* 802D46C4 00AC .text      findNextFile__12JKRArcFinderFv                               */
+/* 802D46C4-802D4770 00AC .text      findNextFile__12JKRArcFinderFv                               Function */
 // JKRArcFinder::findNextFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -83,8 +100,8 @@ asm void findNextFile__12JKRArcFinderFv() {
 }
 #pragma pop
 
-/* 802D4770 0084 .text      __ct__12JKRDvdFinderFPCc                                     */
-// JKRDvdFinder::JKRDvdFinder(const s8*)
+/* 802D4770-802D47F4 0084 .text      __ct__12JKRDvdFinderFPCc                                     Function */
+// JKRDvdFinder::JKRDvdFinder(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +111,7 @@ asm void __ct__12JKRDvdFinderFPCc() {
 }
 #pragma pop
 
-/* 802D47F4 0080 .text      __dt__12JKRDvdFinderFv                                       */
+/* 802D47F4-802D4874 0080 .text      __dt__12JKRDvdFinderFv                                       Function */
 // JKRDvdFinder::~JKRDvdFinder(void)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +122,7 @@ asm void __dt__12JKRDvdFinderFv() {
 }
 #pragma pop
 
-/* 802D4874 009C .text      findNextFile__12JKRDvdFinderFv                               */
+/* 802D4874-802D4910 009C .text      findNextFile__12JKRDvdFinderFv                               Function */
 // JKRDvdFinder::findNextFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -116,7 +133,7 @@ asm void findNextFile__12JKRDvdFinderFv() {
 }
 #pragma pop
 
-/* 802D4910 0048 .text      __dt__13JKRFileFinderFv                                      */
+/* 802D4910-802D4958 0048 .text      __dt__13JKRFileFinderFv                                      Function */
 // JKRFileFinder::~JKRFileFinder(void)
 #pragma push
 #pragma optimization_level 0
@@ -127,7 +144,7 @@ asm void __dt__13JKRFileFinderFv() {
 }
 #pragma pop
 
-/* 802D4958 005C .text      __dt__12JKRArcFinderFv                                       */
+/* 802D4958-802D49B4 005C .text      __dt__12JKRArcFinderFv                                       Function */
 // JKRArcFinder::~JKRArcFinder(void)
 #pragma push
 #pragma optimization_level 0

@@ -10,181 +10,397 @@
 
 struct Vec;
 
-extern void mDoMtx_YrotS(f32 (*)[4], s16); /* mDoMtx_YrotS__FPA4_fs */
-extern void mDoMtx_YrotM(f32 (*)[4], s16); /* mDoMtx_YrotM__FPA4_fs */
-extern void mDoMtx_ZrotM(f32 (*)[4], s16); /* mDoMtx_ZrotM__FPA4_fs */
-extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, const Vec*, s16); /* mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs */
+extern void mDoMtx_YrotS(f32 (*)[4], short); /* mDoMtx_YrotS__FPA4_fs */
+extern void mDoMtx_YrotM(f32 (*)[4], short); /* mDoMtx_YrotM__FPA4_fs */
+extern void mDoMtx_ZrotM(f32 (*)[4], short); /* mDoMtx_ZrotM__FPA4_fs */
+extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, const Vec*, short); /* mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs */
 extern void dStage_GetKeepDoorInfo(void); /* dStage_GetKeepDoorInfo__Fv */
 extern void dStage_GetRoomKeepDoorInfo(void); /* dStage_GetRoomKeepDoorInfo__Fv */
 extern void dComIfGs_isVisitedRoom(int); /* dComIfGs_isVisitedRoom__Fi */
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void mDoMtx_YrotS__FPA4_fs();
+/* Function             */
 extern void mDoMtx_YrotM__FPA4_fs();
+/* Function             */
 extern void mDoMtx_ZrotM__FPA4_fs();
+/* Function             */
 extern void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+/* Function             */
 extern void scaleM__14mDoMtx_stack_cFfff();
+/* Function             */
 extern void dStage_GetKeepDoorInfo__Fv();
+/* Function             */
 extern void dStage_GetRoomKeepDoorInfo__Fv();
-extern int isDrawType__11dDrawPath_cFi();
+/* ReturnIntegerFunction */
+extern  int isDrawType__11dDrawPath_cFi();
+/* Function             */
 extern void getLineColor__11dDrawPath_cFii();
+/* Function             */
 extern void __dt__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
 extern void __dt__19renderingPlusDoor_cFv();
+/* Function             */
 extern void __dt__16renderingDAmap_cFv();
+/* Function             */
 extern void dComIfGs_isVisitedRoom__Fi();
+/* Function             */
 extern void isDungeonItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void create__Q28dMpath_n18dTexObjAggregate_cFv();
+/* Function             */
 extern void remove__Q28dMpath_n18dTexObjAggregate_cFv();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+/* Function             */
 extern void drawPath__11dDrawPath_cFv();
+/* Function             */
 extern void renderingMap__15dRenderingMap_cFv();
+/* Function             */
 extern void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv();
+/* Function             */
 extern void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv();
+/* Function             */
 extern void preRenderingMap__18dRenderingFDAmap_cFv();
+/* Function             */
 extern void postRenderingMap__18dRenderingFDAmap_cFv();
+/* Function             */
 extern void getDecoLineColor__18dRenderingFDAmap_cFii();
+/* Function             */
 extern void getDecorationLineWidth__18dRenderingFDAmap_cFi();
+/* Function             */
+extern void chkGetCompass__10dMapInfo_nFv();
+/* Function             */
+extern void chkGetMap__10dMapInfo_nFv();
+/* Function             */
 extern void isVisitedRoom__10dMapInfo_nFi();
+/* Function             */
 extern void correctionOriginPos__10dMapInfo_nFScP3Vec();
+/* Function             */
 extern void offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec();
+/* Function             */
 extern void rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec();
+/* Function             */
 extern void getMapPlayerPos__10dMapInfo_nFv();
+/* Function             */
 extern void getMapPlayerAngleY__10dMapInfo_nFv();
+/* Function             */
 extern void getConstRestartIconPointer__10dMapInfo_nFv();
+/* Function             */
 extern void getMapRestartPos__10dMapInfo_nFv();
+/* Function             */
 extern void getMapRestartAngleY__10dMapInfo_nFv();
+/* Function             */
+extern void getRoomCenter__10dMapInfo_nFiPfPf();
+/* Function             */
 extern void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf();
+/* Function             */
 extern void getFloorParameter__10dMapInfo_nFfPScPfPfPfPf();
+/* Function             */
 extern void calcFloorNo__10dMapInfo_cFfbi();
+/* Function             */
 extern void calcNowStayFloorNo__10dMapInfo_cFfb();
+/* Function             */
+extern void move__10dMapInfo_cFif();
+/* Function             */
 extern void init__10dMapInfo_cFv();
+/* Function             */
 extern void reset__10dMapInfo_cFv();
+/* Function             */
 extern void create__10dMapInfo_cFv();
+/* ReturnFunction       */
 extern void remove__10dMapInfo_cFv();
+/* GlobalFunction       */
 extern u8 isExistMapPathData__8dMpath_cFv();
+/* Function             */
+extern void getTopBottomFloorNo__8dMpath_cFPScPSc();
+/* Function             */
+extern void createWork__8dMpath_cFv();
+/* Function             */
 extern void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
+/* Function             */
+extern void setPointer__8dMpath_cFScPvi();
+/* Function             */
+extern void create__8dMpath_cFv();
+/* Function             */
 extern void reset__8dMpath_cFv();
+/* Function             */
+extern void remove__8dMpath_cFv();
+/* Function             */
 extern void calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi();
+/* Function             */
+extern void init__16renderingDAmap_cFPUcUsUsUsUs();
+/* Function             */
+extern void entry__16renderingDAmap_cFfffiSc();
+/* Function             */
 extern void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class();
+/* Function             */
 extern void draw__16renderingDAmap_cFv();
+/* Function             */
 extern void getBackColor__16renderingDAmap_cCFv();
+/* Function             */
 extern void isRenderingFloor__16renderingDAmap_cFi();
+/* ReturnFunction       */
 extern void setSingleRoomSetting__16renderingDAmap_cFv();
+/* Function             */
 extern void isDrawRoom__16renderingDAmap_cCFii();
+/* Function             */
 extern void preDrawPath__16renderingDAmap_cFv();
+/* Function             */
 extern void postDrawPath__16renderingDAmap_cFv();
+/* FirstParamFunction   */
 extern u32 getRoomNoSingle__16renderingDAmap_cFv(u8*);
+/* Function             */
 extern void getFirstDrawRoomNo__16renderingDAmap_cFv();
+/* Function             */
 extern void getNextDrawRoomNo__16renderingDAmap_cFi();
+/* Function             */
 extern void getFirstRoomPointer__16renderingDAmap_cFv();
+/* Function             */
 extern void getNextRoomPointer__16renderingDAmap_cFv();
+/* Function             */
 extern void isDrawPath__16renderingDAmap_cFv();
-extern int getFirstDrawLayerNo__16renderingDAmap_cFv();
+/* ReturnIntegerFunction */
+extern  int getFirstDrawLayerNo__16renderingDAmap_cFv();
+/* Function             */
 extern void getNextDrawLayerNo__16renderingDAmap_cFi();
+/* Function             */
 extern void afterDrawPath__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
 extern void afterDrawPath__19renderingPlusDoor_cFv();
+/* Function             */
 extern void drawDoor1__19renderingPlusDoor_cFv();
+/* Function             */
 extern void drawDoor2__19renderingPlusDoor_cFv();
+/* Function             */
 extern void drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib();
+/* Function             */
 extern void checkDispDoorS__19renderingPlusDoor_cFiif();
+/* Function             */
 extern void drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib();
+/* Function             */
 extern void isDrawRoomIcon__16renderingDAmap_cCFii();
+/* Function             */
 extern void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec();
+/* Function             */
 extern void getFirstData__28renderingPlusDoorAndCursor_cFUc();
+/* Function             */
 extern void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getIconGroupNumber__16renderingDAmap_cCFUc();
+/* Function             */
 extern void drawTreasure__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
 extern void drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
 extern void drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff();
+/* Function             */
 extern void drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif();
+/* ReturnFunction       */
 extern void beforeDrawPath__19renderingPlusDoor_cFv();
+/* SInitFunction        */
+extern void __sinit_d_map_path_dmap_cpp();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void getFirstData__7dTres_cFUc();
+/* Function             */
 extern void getNextData__7dTres_cFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getNextData__7dTres_cFPCQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSMTXMultVecArray();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmt();
+/* Function             */
 extern void GXSetArray();
+/* Function             */
 extern void GXSetMisc();
+/* Function             */
 extern void GXBegin();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXInvalidateTexAll();
+/* Function             */
 extern void GXSetTevColor();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void floor();
+/* InitializedData      */
 SECTION_RODATA extern const u8 l_100x100BoxVertexList[48];
-SECTION_RODATA extern const u8 data_80379C88[48];
-SECTION_RODATA extern const u8 data_80379CB8[132];
+/* SymbolReferenceArrayData */
+SECTION_RODATA extern const void* const data_80379C88[12];
+/* SymbolReferenceArrayData */
+SECTION_RODATA extern const void* const data_80379CB8[33];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80379D3C[32];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80379D5C[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19renderingPlusDoor_c[41];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28renderingPlusDoorAndCursor_c[47];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16renderingDAmap_c[38];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_texObjAgg__8dMpath_n[28];
-SECTION_BSS extern u8 mTypeGroupListAll__7dTres_c[208];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mTypeGroupListAll__7dTres_c[204 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_fmapHIO[1188];
+/* InitializedData      */
+SECTION_SDATA extern u8 mNextRoomNo__10dMapInfo_c[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450634[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450638[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_max[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450E58[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mNowStayRoomNo__10dMapInfo_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450E60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mLayerList__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMinX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMaxX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMinZ__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMaxZ__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mAllCenterX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mAllCenterZ__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mAllSizeX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mAllSizeZ__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450E88[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_map_path_dmap__LIT_3796[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_3887;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_map_path_dmap__LIT_3957;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_map_path_dmap__LIT_4202[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_map_path_dmap__LIT_4211;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451E48[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_4264;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_4265;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_4266;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 l_doorWhite[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 l_doorWhiteNoStay[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 l_doorWhite2[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 l_doorWhiteNoStay2[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451E68[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_4484;
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_entranceStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_entranceLv8StartColor[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 l_treasureStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_smallKeyStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_bossStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_npc0StartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_destinationStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_npcYkmStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_npcYkwStartColor[4];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 l_tksStartColor[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451E9C[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 data_80451EA4;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map_path_dmap__LIT_4600;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451EAC[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 data_80451EB4;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_map_path_dmap__LIT_4731[8];
 }
 
@@ -194,36 +410,69 @@ SECTION_SDATA2 extern u8 d_d_map_path_dmap__LIT_4731[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80379C58 0030 .rodata    l_100x100BoxVertexList                                       */
+/* 80379C58-80379C88 0030 .rodata    l_100x100BoxVertexList                                       InitializedData */
 SECTION_RODATA const u8 l_100x100BoxVertexList[48] = {
 	0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80379C88 0030 .rodata    l_treasureDispList$4524                                      */
-SECTION_RODATA const u8 data_80379C88[48] = {
-	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x80, 0x45, 0x1E, 0x74, 0x08, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x05, 0x80, 0x45, 0x1E, 0x78, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
-	0x80, 0x45, 0x1E, 0x7C, 0x05, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x03, 0x80, 0x45, 0x1E, 0x8C,
+/* 80379C88-80379CB8 0030 .rodata    l_treasureDispList$4524                                      SymbolReferenceArrayData */
+SECTION_RODATA const void* const data_80379C88[12] = {
+	(void*)0x01000000,
+	(void*)0x00000002,
+	(void*)&l_entranceStartColor,
+	(void*)0x08000000,
+	(void*)0x00000005,
+	(void*)&l_entranceLv8StartColor,
+	NULL,
+	(void*)0x00000001,
+	(void*)&l_treasureStartColor,
+	(void*)0x05000000,
+	(void*)0x00000003,
+	(void*)&l_destinationStartColor,
 };
-/* 80379CB8 0084 .rodata    l_treasureDispList$4606                                      */
-SECTION_RODATA const u8 data_80379CB8[132] = {
-	0x10, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x98, 0x02, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x80, 0x0A, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04,
-	0x80, 0x45, 0x1E, 0x88, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x88,
-	0x0E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x94, 0x0D, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x90, 0x0F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04,
-	0x80, 0x45, 0x1E, 0x88, 0x0B, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x88,
-	0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x88, 0x04, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x04, 0x80, 0x45, 0x1E, 0x80, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04,
-	0x80, 0x45, 0x1E, 0x84,
+/* 80379CB8-80379D3C 0084 .rodata    l_treasureDispList$4606                                      SymbolReferenceArrayData */
+SECTION_RODATA const void* const data_80379CB8[33] = {
+	(void*)0x10000000,
+	(void*)0x00000004,
+	(void*)&l_tksStartColor,
+	(void*)0x02000000,
+	(void*)0x00000004,
+	(void*)&l_smallKeyStartColor,
+	(void*)0x0A000000,
+	(void*)0x00000004,
+	(void*)&l_npc0StartColor,
+	(void*)0x09000000,
+	(void*)0x00000004,
+	(void*)&l_npc0StartColor,
+	(void*)0x0E000000,
+	(void*)0x00000004,
+	(void*)&l_npcYkwStartColor,
+	(void*)0x0D000000,
+	(void*)0x00000004,
+	(void*)&l_npcYkmStartColor,
+	(void*)0x0F000000,
+	(void*)0x00000004,
+	(void*)&l_npc0StartColor,
+	(void*)0x0B000000,
+	(void*)0x00000004,
+	(void*)&l_npc0StartColor,
+	(void*)0x0C000000,
+	(void*)0x00000004,
+	(void*)&l_npc0StartColor,
+	(void*)0x04000000,
+	(void*)0x00000004,
+	(void*)&l_smallKeyStartColor,
+	(void*)0x03000000,
+	(void*)0x00000004,
+	(void*)&l_bossStartColor,
 };
-/* 80379D3C 0020 .rodata    l_iconPosData$4686                                           */
+/* 80379D3C-80379D5C 0020 .rodata    l_iconPosData$4686                                           InitializedData */
 SECTION_RODATA const u8 data_80379D3C[32] = {
 	0xC2, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
 	0x42, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00,
 };
-/* 80379D5C 0024 .rodata    l_offset$4703                                                */
+/* 80379D5C-80379D80 0024 .rodata    l_offset$4703                                                InitializedData */
 SECTION_RODATA const u8 data_80379D5C[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0xC8, 0x00, 0x00, 0xC3, 0x48, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xC3, 0x70, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -237,8 +486,8 @@ SECTION_RODATA const u8 data_80379D5C[36] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A7D80 00A4 .data      __vt__19renderingPlusDoor_c                                  */
-SECTION_DATA const  void* __vt__19renderingPlusDoor_c[41] = {
+/* 803A7D80-803A7E24 00A4 .data      __vt__19renderingPlusDoor_c                                  VTableData */
+SECTION_DATA void* __vt__19renderingPlusDoor_c[41] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__16renderingDAmap_cFv,
@@ -281,8 +530,8 @@ SECTION_DATA const  void* __vt__19renderingPlusDoor_c[41] = {
 	NULL,
 	NULL,
 };
-/* 803A7E24 00BC .data      __vt__28renderingPlusDoorAndCursor_c                         */
-SECTION_DATA const  void* __vt__28renderingPlusDoorAndCursor_c[47] = {
+/* 803A7E24-803A7EE0 00BC .data      __vt__28renderingPlusDoorAndCursor_c                         VTableData */
+SECTION_DATA void* __vt__28renderingPlusDoorAndCursor_c[47] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__16renderingDAmap_cFv,
@@ -331,8 +580,8 @@ SECTION_DATA const  void* __vt__28renderingPlusDoorAndCursor_c[47] = {
 	NULL,
 	NULL,
 };
-/* 803A7EE0 0098 .data      __vt__16renderingDAmap_c                                     */
-SECTION_DATA const  void* __vt__16renderingDAmap_c[38] = {
+/* 803A7EE0-803A7F78 0098 .data      __vt__16renderingDAmap_c                                     VTableData */
+SECTION_DATA void* __vt__16renderingDAmap_c[38] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__16renderingDAmap_cFv,
@@ -380,11 +629,11 @@ SECTION_DATA const  void* __vt__16renderingDAmap_c[38] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450630 0004 .sdata     mNextRoomNo__10dMapInfo_c                                    */
+/* 80450630-80450634 0004 .sdata     mNextRoomNo__10dMapInfo_c                                    InitializedData */
 SECTION_SDATA u8 mNextRoomNo__10dMapInfo_c[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80450634 0004 .sdata     merged_80450634                                              */
+/* 80450634-80450638 0004 .sdata     merged_80450634                                              MergedInitializedData */
 SECTION_SDATA u8 merged_80450634[4] = {
 	/* data_80450634 */
 	0x7F,
@@ -393,7 +642,7 @@ SECTION_SDATA u8 merged_80450634[4] = {
 	/* data_80450636 */
 	0x01, 0x00,
 };
-/* 80450638 0004 .sdata     l_cursorColor$4709                                           */
+/* 80450638-80450640 0004 .sdata     l_cursorColor$4709                                           InitializedData */
 SECTION_SDATA u8 data_80450638[8] = {
 	0x78, 0x00, 0x00, 0x00,
 	/* padding */
@@ -407,119 +656,119 @@ SECTION_SDATA u8 data_80450638[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451E28 0004 .sdata2    @3796                                                        */
+/* 80451E28-80451E2C 0004 .sdata2    @3796                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_map_path_dmap__LIT_3796[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451E2C 0004 .sdata2    @3887                                                        */
+/* 80451E2C-80451E30 0004 .sdata2    @3887                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_3887 = 0.500000f;
-/* 80451E30 0008 .sdata2    @3957                                                        */
+/* 80451E30-80451E38 0008 .sdata2    @3957                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_map_path_dmap__LIT_3957 = 4503601774854144.000000;
-/* 80451E38 0004 .sdata2    @4202                                                        */
+/* 80451E38-80451E40 0004 .sdata2    @4202                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_map_path_dmap__LIT_4202[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451E40 0008 .sdata2    @4211                                                        */
+/* 80451E40-80451E48 0008 .sdata2    @4211                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_map_path_dmap__LIT_4211 = 4503599627370496.000000;
-/* 80451E48 0004 .sdata2    l_mapBaseColor$4239                                          */
+/* 80451E48-80451E4C 0004 .sdata2    l_mapBaseColor$4239                                          InitializedData */
 SECTION_SDATA2 u8 data_80451E48[4] = {
 	0x04, 0x00, 0x00, 0x00,
 };
-/* 80451E4C 0004 .sdata2    @4264                                                        */
+/* 80451E4C-80451E50 0004 .sdata2    @4264                                                        Float32Data */
 // 0xc59c4000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_4264 = -5000.000000f;
-/* 80451E50 0004 .sdata2    @4265                                                        */
+/* 80451E50-80451E54 0004 .sdata2    @4265                                                        Float32Data */
 // 0x459c4000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_4265 = 5000.000000f;
-/* 80451E54 0004 .sdata2    @4266                                                        */
+/* 80451E54-80451E58 0004 .sdata2    @4266                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_4266 = -1.000000f;
-/* 80451E58 0004 .sdata2    l_doorWhite                                                  */
+/* 80451E58-80451E5C 0004 .sdata2    l_doorWhite                                                  InitializedData */
 SECTION_SDATA2 u8 l_doorWhite[4] = {
 	0x64, 0x00, 0x00, 0x00,
 };
-/* 80451E5C 0004 .sdata2    l_doorWhiteNoStay                                            */
+/* 80451E5C-80451E60 0004 .sdata2    l_doorWhiteNoStay                                            InitializedData */
 SECTION_SDATA2 u8 l_doorWhiteNoStay[4] = {
 	0x6C, 0x00, 0x00, 0x00,
 };
-/* 80451E60 0004 .sdata2    l_doorWhite2                                                 */
+/* 80451E60-80451E64 0004 .sdata2    l_doorWhite2                                                 InitializedData */
 SECTION_SDATA2 u8 l_doorWhite2[4] = {
 	0x64, 0x00, 0x00, 0x00,
 };
-/* 80451E64 0004 .sdata2    l_doorWhiteNoStay2                                           */
+/* 80451E64-80451E68 0004 .sdata2    l_doorWhiteNoStay2                                           InitializedData */
 SECTION_SDATA2 u8 l_doorWhiteNoStay2[4] = {
 	0x6C, 0x00, 0x00, 0x00,
 };
-/* 80451E68 0008 .sdata2    l_tex0$4406                                                  */
+/* 80451E68-80451E70 0008 .sdata2    l_tex0$4406                                                  InitializedData */
 SECTION_SDATA2 u8 data_80451E68[8] = {
 	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
 };
-/* 80451E70 0004 .sdata2    @4484                                                        */
+/* 80451E70-80451E74 0004 .sdata2    @4484                                                        Float32Data */
 // 0x40c00000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_4484 = 6.000000f;
-/* 80451E74 0004 .sdata2    l_entranceStartColor                                         */
+/* 80451E74-80451E78 0004 .sdata2    l_entranceStartColor                                         InitializedData */
 SECTION_SDATA2 u8 l_entranceStartColor[4] = {
 	0x94, 0x00, 0x00, 0x00,
 };
-/* 80451E78 0004 .sdata2    l_entranceLv8StartColor                                      */
+/* 80451E78-80451E7C 0004 .sdata2    l_entranceLv8StartColor                                      InitializedData */
 SECTION_SDATA2 u8 l_entranceLv8StartColor[4] = {
 	0x9C, 0x00, 0x00, 0x00,
 };
-/* 80451E7C 0004 .sdata2    l_treasureStartColor                                         */
+/* 80451E7C-80451E80 0004 .sdata2    l_treasureStartColor                                         InitializedData */
 SECTION_SDATA2 u8 l_treasureStartColor[4] = {
 	0x7C, 0x00, 0x00, 0x00,
 };
-/* 80451E80 0004 .sdata2    l_smallKeyStartColor                                         */
+/* 80451E80-80451E84 0004 .sdata2    l_smallKeyStartColor                                         InitializedData */
 SECTION_SDATA2 u8 l_smallKeyStartColor[4] = {
 	0x84, 0x00, 0x00, 0x00,
 };
-/* 80451E84 0004 .sdata2    l_bossStartColor                                             */
+/* 80451E84-80451E88 0004 .sdata2    l_bossStartColor                                             InitializedData */
 SECTION_SDATA2 u8 l_bossStartColor[4] = {
 	0x88, 0x00, 0x00, 0x00,
 };
-/* 80451E88 0004 .sdata2    l_npc0StartColor                                             */
+/* 80451E88-80451E8C 0004 .sdata2    l_npc0StartColor                                             InitializedData */
 SECTION_SDATA2 u8 l_npc0StartColor[4] = {
 	0x8C, 0x00, 0x00, 0x00,
 };
-/* 80451E8C 0004 .sdata2    l_destinationStartColor                                      */
+/* 80451E8C-80451E90 0004 .sdata2    l_destinationStartColor                                      InitializedData */
 SECTION_SDATA2 u8 l_destinationStartColor[4] = {
 	0x90, 0x00, 0x00, 0x00,
 };
-/* 80451E90 0004 .sdata2    l_npcYkmStartColor                                           */
+/* 80451E90-80451E94 0004 .sdata2    l_npcYkmStartColor                                           InitializedData */
 SECTION_SDATA2 u8 l_npcYkmStartColor[4] = {
 	0x8C, 0x00, 0x00, 0x00,
 };
-/* 80451E94 0004 .sdata2    l_npcYkwStartColor                                           */
+/* 80451E94-80451E98 0004 .sdata2    l_npcYkwStartColor                                           InitializedData */
 SECTION_SDATA2 u8 l_npcYkwStartColor[4] = {
 	0x8C, 0x00, 0x00, 0x00,
 };
-/* 80451E98 0004 .sdata2    l_tksStartColor                                              */
+/* 80451E98-80451E9C 0004 .sdata2    l_tksStartColor                                              InitializedData */
 SECTION_SDATA2 u8 l_tksStartColor[4] = {
 	0xA4, 0x00, 0x00, 0x00,
 };
-/* 80451E9C 0008 .sdata2    l_iconTex0$4523                                              */
+/* 80451E9C-80451EA4 0008 .sdata2    l_iconTex0$4523                                              InitializedData */
 SECTION_SDATA2 u8 data_80451E9C[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
-/* 80451EA4 0004 .sdata2    tboxNotStayColor$4542                                        */
+/* 80451EA4-80451EA8 0004 .sdata2    tboxNotStayColor$4542                                        Float32Data */
 // 0x80000000
 SECTION_SDATA2 f32 data_80451EA4 = -0.000000f;
-/* 80451EA8 0004 .sdata2    @4600                                                        */
+/* 80451EA8-80451EAC 0004 .sdata2    @4600                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_map_path_dmap__LIT_4600 = 2.000000f;
-/* 80451EAC 0008 .sdata2    l_iconTex0$4605                                              */
+/* 80451EAC-80451EB4 0008 .sdata2    l_iconTex0$4605                                              InitializedData */
 SECTION_SDATA2 u8 data_80451EAC[8] = {
 	0x00, 0x01, 0x01, 0x01, 0x01, 0x00, 0x00, 0x00,
 };
-/* 80451EB4 0004 .sdata2    tboxNotStayColor$4624                                        */
+/* 80451EB4-80451EB8 0004 .sdata2    tboxNotStayColor$4624                                        Float32Data */
 // 0x80000000
 SECTION_SDATA2 f32 data_80451EB4 = -0.000000f;
-/* 80451EB8 0004 .sdata2    @4731                                                        */
+/* 80451EB8-80451EC0 0004 .sdata2    @4731                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_map_path_dmap__LIT_4731[8] = {
 	0x44, 0x20, 0x00, 0x00,
 	/* padding */
@@ -533,29 +782,31 @@ SECTION_SDATA2 u8 d_d_map_path_dmap__LIT_4731[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450E5C 0004 .sbss      mNowStayRoomNo__10dMapInfo_c                                 */
+/* 80450E58-80450E5C 0004 .sbss      data_80450E58                                                ZeroInitializedData */
+SECTION_SBSS u8 data_80450E58[4];
+/* 80450E5C-80450E60 0004 .sbss      mNowStayRoomNo__10dMapInfo_c                                 ZeroInitializedData */
 SECTION_SBSS u8 mNowStayRoomNo__10dMapInfo_c[4];
-/* 80450E60 0004 .sbss      data_80450E60                                                */
+/* 80450E60-80450E64 0004 .sbss      data_80450E60                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450E60[4];
-/* 80450E64 0004 .sbss      mLayerList__8dMpath_c                                        */
+/* 80450E64-80450E68 0004 .sbss      mLayerList__8dMpath_c                                        ZeroInitializedData */
 SECTION_SBSS u8 mLayerList__8dMpath_c[4];
-/* 80450E68 0004 .sbss      mMinX__8dMpath_c                                             */
+/* 80450E68-80450E6C 0004 .sbss      mMinX__8dMpath_c                                             ZeroInitializedData */
 SECTION_SBSS u8 mMinX__8dMpath_c[4];
-/* 80450E6C 0004 .sbss      mMaxX__8dMpath_c                                             */
+/* 80450E6C-80450E70 0004 .sbss      mMaxX__8dMpath_c                                             ZeroInitializedData */
 SECTION_SBSS u8 mMaxX__8dMpath_c[4];
-/* 80450E70 0004 .sbss      mMinZ__8dMpath_c                                             */
+/* 80450E70-80450E74 0004 .sbss      mMinZ__8dMpath_c                                             ZeroInitializedData */
 SECTION_SBSS u8 mMinZ__8dMpath_c[4];
-/* 80450E74 0004 .sbss      mMaxZ__8dMpath_c                                             */
+/* 80450E74-80450E78 0004 .sbss      mMaxZ__8dMpath_c                                             ZeroInitializedData */
 SECTION_SBSS u8 mMaxZ__8dMpath_c[4];
-/* 80450E78 0004 .sbss      mAllCenterX__8dMpath_c                                       */
+/* 80450E78-80450E7C 0004 .sbss      mAllCenterX__8dMpath_c                                       ZeroInitializedData */
 SECTION_SBSS u8 mAllCenterX__8dMpath_c[4];
-/* 80450E7C 0004 .sbss      mAllCenterZ__8dMpath_c                                       */
+/* 80450E7C-80450E80 0004 .sbss      mAllCenterZ__8dMpath_c                                       ZeroInitializedData */
 SECTION_SBSS u8 mAllCenterZ__8dMpath_c[4];
-/* 80450E80 0004 .sbss      mAllSizeX__8dMpath_c                                         */
+/* 80450E80-80450E84 0004 .sbss      mAllSizeX__8dMpath_c                                         ZeroInitializedData */
 SECTION_SBSS u8 mAllSizeX__8dMpath_c[4];
-/* 80450E84 0004 .sbss      mAllSizeZ__8dMpath_c                                         */
+/* 80450E84-80450E88 0004 .sbss      mAllSizeZ__8dMpath_c                                         ZeroInitializedData */
 SECTION_SBSS u8 mAllSizeZ__8dMpath_c[4];
-/* 80450E88 0008 .sbss      data_80450E88                                                */
+/* 80450E88-80450E90 0008 .sbss      data_80450E88                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450E88[8];
 }
 
@@ -565,7 +816,7 @@ SECTION_SBSS u8 data_80450E88[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8003ECA0 0038 .text      chkGetCompass__10dMapInfo_nFv                                */
+/* 8003ECA0-8003ECD8 0038 .text      chkGetCompass__10dMapInfo_nFv                                Function */
 // dMapInfo_n::chkGetCompass(void)
 #pragma push
 #pragma optimization_level 0
@@ -576,7 +827,7 @@ asm void chkGetCompass__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003ECD8 0038 .text      chkGetMap__10dMapInfo_nFv                                    */
+/* 8003ECD8-8003ED10 0038 .text      chkGetMap__10dMapInfo_nFv                                    Function */
 // dMapInfo_n::chkGetMap(void)
 #pragma push
 #pragma optimization_level 0
@@ -587,7 +838,7 @@ asm void chkGetMap__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003ED10 0050 .text      isVisitedRoom__10dMapInfo_nFi                                */
+/* 8003ED10-8003ED60 0050 .text      isVisitedRoom__10dMapInfo_nFi                                Function */
 // dMapInfo_n::isVisitedRoom(int)
 #pragma push
 #pragma optimization_level 0
@@ -598,7 +849,7 @@ asm void isVisitedRoom__10dMapInfo_nFi() {
 }
 #pragma pop
 
-/* 8003ED60 0060 .text      correctionOriginPos__10dMapInfo_nFScP3Vec                    */
+/* 8003ED60-8003EDC0 0060 .text      correctionOriginPos__10dMapInfo_nFScP3Vec                    Function */
 // dMapInfo_n::correctionOriginPos(s8, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -609,7 +860,7 @@ asm void correctionOriginPos__10dMapInfo_nFScP3Vec() {
 }
 #pragma pop
 
-/* 8003EDC0 002C .text      offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec      */
+/* 8003EDC0-8003EDEC 002C .text      offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec      Function */
 // dMapInfo_n::offsetPlus(const dStage_FileList2_dt_c*, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -620,7 +871,7 @@ asm void offsetPlus__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec() {
 }
 #pragma pop
 
-/* 8003EDEC 0070 .text      rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec        */
+/* 8003EDEC-8003EE5C 0070 .text      rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec        Function */
 // dMapInfo_n::rotAngle(const dStage_FileList2_dt_c*, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -631,7 +882,7 @@ asm void rotAngle__10dMapInfo_nFPC21dStage_FileList2_dt_cP3Vec() {
 }
 #pragma pop
 
-/* 8003EE5C 00C4 .text      getMapPlayerPos__10dMapInfo_nFv                              */
+/* 8003EE5C-8003EF20 00C4 .text      getMapPlayerPos__10dMapInfo_nFv                              Function */
 // dMapInfo_n::getMapPlayerPos(void)
 #pragma push
 #pragma optimization_level 0
@@ -642,7 +893,7 @@ asm void getMapPlayerPos__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003EF20 0050 .text      getMapPlayerAngleY__10dMapInfo_nFv                           */
+/* 8003EF20-8003EF70 0050 .text      getMapPlayerAngleY__10dMapInfo_nFv                           Function */
 // dMapInfo_n::getMapPlayerAngleY(void)
 #pragma push
 #pragma optimization_level 0
@@ -653,7 +904,7 @@ asm void getMapPlayerAngleY__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003EF70 00BC .text      getConstRestartIconPointer__10dMapInfo_nFv                   */
+/* 8003EF70-8003F02C 00BC .text      getConstRestartIconPointer__10dMapInfo_nFv                   Function */
 // dMapInfo_n::getConstRestartIconPointer(void)
 #pragma push
 #pragma optimization_level 0
@@ -664,7 +915,7 @@ asm void getConstRestartIconPointer__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003F02C 00CC .text      getMapRestartPos__10dMapInfo_nFv                             */
+/* 8003F02C-8003F0F8 00CC .text      getMapRestartPos__10dMapInfo_nFv                             Function */
 // dMapInfo_n::getMapRestartPos(void)
 #pragma push
 #pragma optimization_level 0
@@ -675,7 +926,7 @@ asm void getMapRestartPos__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003F0F8 00A4 .text      getMapRestartAngleY__10dMapInfo_nFv                          */
+/* 8003F0F8-8003F19C 00A4 .text      getMapRestartAngleY__10dMapInfo_nFv                          Function */
 // dMapInfo_n::getMapRestartAngleY(void)
 #pragma push
 #pragma optimization_level 0
@@ -686,7 +937,7 @@ asm void getMapRestartAngleY__10dMapInfo_nFv() {
 }
 #pragma pop
 
-/* 8003F19C 0058 .text      getRoomCenter__10dMapInfo_nFiPfPf                            */
+/* 8003F19C-8003F1F4 0058 .text      getRoomCenter__10dMapInfo_nFiPfPf                            Function */
 // dMapInfo_n::getRoomCenter(int, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -697,7 +948,7 @@ asm void getRoomCenter__10dMapInfo_nFiPfPf() {
 }
 #pragma pop
 
-/* 8003F1F4 0058 .text      getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf                      */
+/* 8003F1F4-8003F24C 0058 .text      getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf                      Function */
 // dMapInfo_n::getRoomMinMaxXZ(int, f32*, f32*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -708,7 +959,7 @@ asm void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf() {
 }
 #pragma pop
 
-/* 8003F24C 01C0 .text      getFloorParameter__10dMapInfo_nFfPScPfPfPfPf                 */
+/* 8003F24C-8003F40C 01C0 .text      getFloorParameter__10dMapInfo_nFfPScPfPfPfPf                 Function */
 // dMapInfo_n::getFloorParameter(f32, s8*, f32*, f32*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -719,7 +970,7 @@ asm void getFloorParameter__10dMapInfo_nFfPScPfPfPfPf() {
 }
 #pragma pop
 
-/* 8003F40C 0164 .text      calcFloorNo__10dMapInfo_cFfbi                                */
+/* 8003F40C-8003F570 0164 .text      calcFloorNo__10dMapInfo_cFfbi                                Function */
 // dMapInfo_c::calcFloorNo(f32, bool, int)
 #pragma push
 #pragma optimization_level 0
@@ -730,7 +981,7 @@ asm void calcFloorNo__10dMapInfo_cFfbi() {
 }
 #pragma pop
 
-/* 8003F570 0158 .text      calcNowStayFloorNo__10dMapInfo_cFfb                          */
+/* 8003F570-8003F6C8 0158 .text      calcNowStayFloorNo__10dMapInfo_cFfb                          Function */
 // dMapInfo_c::calcNowStayFloorNo(f32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -741,7 +992,7 @@ asm void calcNowStayFloorNo__10dMapInfo_cFfb() {
 }
 #pragma pop
 
-/* 8003F6C8 0034 .text      move__10dMapInfo_cFif                                        */
+/* 8003F6C8-8003F6FC 0034 .text      move__10dMapInfo_cFif                                        Function */
 // dMapInfo_c::move(int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -752,7 +1003,7 @@ asm void move__10dMapInfo_cFif() {
 }
 #pragma pop
 
-/* 8003F6FC 0018 .text      init__10dMapInfo_cFv                                         */
+/* 8003F6FC-8003F714 0018 .text      init__10dMapInfo_cFv                                         Function */
 // dMapInfo_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -763,7 +1014,7 @@ asm void init__10dMapInfo_cFv() {
 }
 #pragma pop
 
-/* 8003F714 0020 .text      reset__10dMapInfo_cFv                                        */
+/* 8003F714-8003F734 0020 .text      reset__10dMapInfo_cFv                                        Function */
 // dMapInfo_c::reset(void)
 #pragma push
 #pragma optimization_level 0
@@ -774,7 +1025,7 @@ asm void reset__10dMapInfo_cFv() {
 }
 #pragma pop
 
-/* 8003F734 0020 .text      create__10dMapInfo_cFv                                       */
+/* 8003F734-8003F754 0020 .text      create__10dMapInfo_cFv                                       Function */
 // dMapInfo_c::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -785,19 +1036,19 @@ asm void create__10dMapInfo_cFv() {
 }
 #pragma pop
 
-/* 8003F754 0004 .text      remove__10dMapInfo_cFv                                       */
+/* 8003F754-8003F758 0004 .text      remove__10dMapInfo_cFv                                       ReturnFunction */
 // dMapInfo_c::remove(void)
 void remove__10dMapInfo_cFv() {
 	return;
 }
 
-/* 8003F758 0008 .text      isExistMapPathData__8dMpath_cFv                              */
+/* 8003F758-8003F760 0008 .text      isExistMapPathData__8dMpath_cFv                              GlobalFunction */
 // dMpath_c::isExistMapPathData(void)
 u8 isExistMapPathData__8dMpath_cFv() {
 	return *(u8*)&data_80450E88;
 }
 
-/* 8003F760 0088 .text      getTopBottomFloorNo__8dMpath_cFPScPSc                        */
+/* 8003F760-8003F7E8 0088 .text      getTopBottomFloorNo__8dMpath_cFPScPSc                        Function */
 // dMpath_c::getTopBottomFloorNo(s8*, s8*)
 #pragma push
 #pragma optimization_level 0
@@ -808,7 +1059,7 @@ asm void getTopBottomFloorNo__8dMpath_cFPScPSc() {
 }
 #pragma pop
 
-/* 8003F7E8 0028 .text      createWork__8dMpath_cFv                                      */
+/* 8003F7E8-8003F810 0028 .text      createWork__8dMpath_cFv                                      Function */
 // dMpath_c::createWork(void)
 #pragma push
 #pragma optimization_level 0
@@ -819,7 +1070,7 @@ asm void createWork__8dMpath_cFv() {
 }
 #pragma pop
 
-/* 8003F810 0230 .text      setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc     */
+/* 8003F810-8003FA40 0230 .text      setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc     Function */
 // dMpath_c::setPointer(dDrawPath_c::room_class, s8*, s8*)
 #pragma push
 #pragma optimization_level 0
@@ -830,7 +1081,7 @@ asm void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc() {
 }
 #pragma pop
 
-/* 8003FA40 0130 .text      setPointer__8dMpath_cFScPvi                                  */
+/* 8003FA40-8003FB70 0130 .text      setPointer__8dMpath_cFScPvi                                  Function */
 // dMpath_c::setPointer(s8, void*, int)
 #pragma push
 #pragma optimization_level 0
@@ -841,7 +1092,7 @@ asm void setPointer__8dMpath_cFScPvi() {
 }
 #pragma pop
 
-/* 8003FB70 0060 .text      create__8dMpath_cFv                                          */
+/* 8003FB70-8003FBD0 0060 .text      create__8dMpath_cFv                                          Function */
 // dMpath_c::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -852,7 +1103,7 @@ asm void create__8dMpath_cFv() {
 }
 #pragma pop
 
-/* 8003FBD0 00A0 .text      reset__8dMpath_cFv                                           */
+/* 8003FBD0-8003FC70 00A0 .text      reset__8dMpath_cFv                                           Function */
 // dMpath_c::reset(void)
 #pragma push
 #pragma optimization_level 0
@@ -863,7 +1114,7 @@ asm void reset__8dMpath_cFv() {
 }
 #pragma pop
 
-/* 8003FC70 0034 .text      remove__8dMpath_cFv                                          */
+/* 8003FC70-8003FCA4 0034 .text      remove__8dMpath_cFv                                          Function */
 // dMpath_c::remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -874,7 +1125,7 @@ asm void remove__8dMpath_cFv() {
 }
 #pragma pop
 
-/* 8003FCA4 0024 .text      calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi    */
+/* 8003FCA4-8003FCC8 0024 .text      calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi    Function */
 // renderingDAmap_c::calcFloorNoForObjectByMapPathRend(f32, int) const
 #pragma push
 #pragma optimization_level 0
@@ -885,7 +1136,7 @@ asm void calcFloorNoForObjectByMapPathRend__16renderingDAmap_cCFfi() {
 }
 #pragma pop
 
-/* 8003FCC8 0040 .text      init__16renderingDAmap_cFPUcUsUsUsUs                         */
+/* 8003FCC8-8003FD08 0040 .text      init__16renderingDAmap_cFPUcUsUsUsUs                         Function */
 // renderingDAmap_c::init(u8*, u16, u16, u16, u16)
 #pragma push
 #pragma optimization_level 0
@@ -896,7 +1147,7 @@ asm void init__16renderingDAmap_cFPUcUsUsUsUs() {
 }
 #pragma pop
 
-/* 8003FD08 0094 .text      entry__16renderingDAmap_cFfffiSc                             */
+/* 8003FD08-8003FD9C 0094 .text      entry__16renderingDAmap_cFfffiSc                             Function */
 // renderingDAmap_c::entry(f32, f32, f32, int, s8)
 #pragma push
 #pragma optimization_level 0
@@ -907,7 +1158,7 @@ asm void entry__16renderingDAmap_cFfffiSc() {
 }
 #pragma pop
 
-/* 8003FD9C 007C .text      isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class  */
+/* 8003FD9C-8003FE18 007C .text      isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class  Function */
 // renderingDAmap_c::isSwitch(dDrawPath_c::group_class)
 #pragma push
 #pragma optimization_level 0
@@ -918,7 +1169,7 @@ asm void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class() {
 }
 #pragma pop
 
-/* 8003FE18 0034 .text      draw__16renderingDAmap_cFv                                   */
+/* 8003FE18-8003FE4C 0034 .text      draw__16renderingDAmap_cFv                                   Function */
 // renderingDAmap_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -929,7 +1180,7 @@ asm void draw__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 8003FE4C 0008 .text      getBackColor__16renderingDAmap_cCFv                          */
+/* 8003FE4C-8003FE54 0008 .text      getBackColor__16renderingDAmap_cCFv                          Function */
 // renderingDAmap_c::getBackColor(void) const
 #pragma push
 #pragma optimization_level 0
@@ -940,7 +1191,7 @@ asm void getBackColor__16renderingDAmap_cCFv() {
 }
 #pragma pop
 
-/* 8003FE54 0018 .text      isRenderingFloor__16renderingDAmap_cFi                       */
+/* 8003FE54-8003FE6C 0018 .text      isRenderingFloor__16renderingDAmap_cFi                       Function */
 // renderingDAmap_c::isRenderingFloor(int)
 #pragma push
 #pragma optimization_level 0
@@ -951,13 +1202,13 @@ asm void isRenderingFloor__16renderingDAmap_cFi() {
 }
 #pragma pop
 
-/* 8003FE6C 0004 .text      setSingleRoomSetting__16renderingDAmap_cFv                   */
+/* 8003FE6C-8003FE70 0004 .text      setSingleRoomSetting__16renderingDAmap_cFv                   ReturnFunction */
 // renderingDAmap_c::setSingleRoomSetting(void)
 void setSingleRoomSetting__16renderingDAmap_cFv() {
 	return;
 }
 
-/* 8003FE70 00A4 .text      isDrawRoom__16renderingDAmap_cCFii                           */
+/* 8003FE70-8003FF14 00A4 .text      isDrawRoom__16renderingDAmap_cCFii                           Function */
 // renderingDAmap_c::isDrawRoom(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -968,7 +1219,7 @@ asm void isDrawRoom__16renderingDAmap_cCFii() {
 }
 #pragma pop
 
-/* 8003FF14 00B0 .text      preDrawPath__16renderingDAmap_cFv                            */
+/* 8003FF14-8003FFC4 00B0 .text      preDrawPath__16renderingDAmap_cFv                            Function */
 // renderingDAmap_c::preDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -979,7 +1230,7 @@ asm void preDrawPath__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 8003FFC4 0028 .text      postDrawPath__16renderingDAmap_cFv                           */
+/* 8003FFC4-8003FFEC 0028 .text      postDrawPath__16renderingDAmap_cFv                           Function */
 // renderingDAmap_c::postDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -990,13 +1241,13 @@ asm void postDrawPath__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 8003FFEC 0008 .text      getRoomNoSingle__16renderingDAmap_cFv                        */
+/* 8003FFEC-8003FFF4 0008 .text      getRoomNoSingle__16renderingDAmap_cFv                        FirstParamFunction */
 // renderingDAmap_c::getRoomNoSingle(void)
 u32 getRoomNoSingle__16renderingDAmap_cFv(u8* param0) {
 	return *(u32*)&param0[44]; /* param0->field_0x2c */
 }
 
-/* 8003FFF4 00A0 .text      getFirstDrawRoomNo__16renderingDAmap_cFv                     */
+/* 8003FFF4-80040094 00A0 .text      getFirstDrawRoomNo__16renderingDAmap_cFv                     Function */
 // renderingDAmap_c::getFirstDrawRoomNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -1007,7 +1258,7 @@ asm void getFirstDrawRoomNo__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 80040094 00A0 .text      getNextDrawRoomNo__16renderingDAmap_cFi                      */
+/* 80040094-80040134 00A0 .text      getNextDrawRoomNo__16renderingDAmap_cFi                      Function */
 // renderingDAmap_c::getNextDrawRoomNo(int)
 #pragma push
 #pragma optimization_level 0
@@ -1018,7 +1269,7 @@ asm void getNextDrawRoomNo__16renderingDAmap_cFi() {
 }
 #pragma pop
 
-/* 80040134 00B4 .text      getFirstRoomPointer__16renderingDAmap_cFv                    */
+/* 80040134-800401E8 00B4 .text      getFirstRoomPointer__16renderingDAmap_cFv                    Function */
 // renderingDAmap_c::getFirstRoomPointer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1029,7 +1280,7 @@ asm void getFirstRoomPointer__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 800401E8 00D8 .text      getNextRoomPointer__16renderingDAmap_cFv                     */
+/* 800401E8-800402C0 00D8 .text      getNextRoomPointer__16renderingDAmap_cFv                     Function */
 // renderingDAmap_c::getNextRoomPointer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1040,7 +1291,7 @@ asm void getNextRoomPointer__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 800402C0 0020 .text      isDrawPath__16renderingDAmap_cFv                             */
+/* 800402C0-800402E0 0020 .text      isDrawPath__16renderingDAmap_cFv                             Function */
 // renderingDAmap_c::isDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -1051,13 +1302,13 @@ asm void isDrawPath__16renderingDAmap_cFv() {
 }
 #pragma pop
 
-/* 800402E0 0008 .text      getFirstDrawLayerNo__16renderingDAmap_cFv                    */
+/* 800402E0-800402E8 0008 .text      getFirstDrawLayerNo__16renderingDAmap_cFv                    ReturnIntegerFunction */
 // renderingDAmap_c::getFirstDrawLayerNo(void)
 int getFirstDrawLayerNo__16renderingDAmap_cFv() {
 	return 0;
 }
 
-/* 800402E8 0014 .text      getNextDrawLayerNo__16renderingDAmap_cFi                     */
+/* 800402E8-800402FC 0014 .text      getNextDrawLayerNo__16renderingDAmap_cFi                     Function */
 // renderingDAmap_c::getNextDrawLayerNo(int)
 #pragma push
 #pragma optimization_level 0
@@ -1068,7 +1319,7 @@ asm void getNextDrawLayerNo__16renderingDAmap_cFi() {
 }
 #pragma pop
 
-/* 800402FC 021C .text      afterDrawPath__28renderingPlusDoorAndCursor_cFv              */
+/* 800402FC-80040518 021C .text      afterDrawPath__28renderingPlusDoorAndCursor_cFv              Function */
 // renderingPlusDoorAndCursor_c::afterDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -1079,7 +1330,7 @@ asm void afterDrawPath__28renderingPlusDoorAndCursor_cFv() {
 }
 #pragma pop
 
-/* 80040518 005C .text      afterDrawPath__19renderingPlusDoor_cFv                       */
+/* 80040518-80040574 005C .text      afterDrawPath__19renderingPlusDoor_cFv                       Function */
 // renderingPlusDoor_c::afterDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -1090,7 +1341,7 @@ asm void afterDrawPath__19renderingPlusDoor_cFv() {
 }
 #pragma pop
 
-/* 80040574 0044 .text      drawDoor1__19renderingPlusDoor_cFv                           */
+/* 80040574-800405B8 0044 .text      drawDoor1__19renderingPlusDoor_cFv                           Function */
 // renderingPlusDoor_c::drawDoor1(void)
 #pragma push
 #pragma optimization_level 0
@@ -1101,7 +1352,7 @@ asm void drawDoor1__19renderingPlusDoor_cFv() {
 }
 #pragma pop
 
-/* 800405B8 0044 .text      drawDoor2__19renderingPlusDoor_cFv                           */
+/* 800405B8-800405FC 0044 .text      drawDoor2__19renderingPlusDoor_cFv                           Function */
 // renderingPlusDoor_c::drawDoor2(void)
 #pragma push
 #pragma optimization_level 0
@@ -1112,7 +1363,7 @@ asm void drawDoor2__19renderingPlusDoor_cFv() {
 }
 #pragma pop
 
-/* 800405FC 0114 .text      drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib */
+/* 800405FC-80040710 0114 .text      drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib Function */
 // renderingPlusDoor_c::drawDoorCommon(const stage_tgsc_data_class*, int, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1123,7 +1374,7 @@ asm void drawDoorCommon__19renderingPlusDoor_cFPC21stage_tgsc_data_classib() {
 }
 #pragma pop
 
-/* 80040710 0128 .text      checkDispDoorS__19renderingPlusDoor_cFiif                    */
+/* 80040710-80040838 0128 .text      checkDispDoorS__19renderingPlusDoor_cFiif                    Function */
 // renderingPlusDoor_c::checkDispDoorS(int, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1134,7 +1385,7 @@ asm void checkDispDoorS__19renderingPlusDoor_cFiif() {
 }
 #pragma pop
 
-/* 80040838 017C .text      drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib */
+/* 80040838-800409B4 017C .text      drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib Function */
 // renderingPlusDoor_c::drawNormalDoorS(const stage_tgsc_data_class*, int, int, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1145,7 +1396,7 @@ asm void drawNormalDoorS__19renderingPlusDoor_cFPC21stage_tgsc_data_classiib() {
 }
 #pragma pop
 
-/* 800409B4 002C .text      isDrawRoomIcon__16renderingDAmap_cCFii                       */
+/* 800409B4-800409E0 002C .text      isDrawRoomIcon__16renderingDAmap_cCFii                       Function */
 // renderingDAmap_c::isDrawRoomIcon(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -1156,7 +1407,7 @@ asm void isDrawRoomIcon__16renderingDAmap_cCFii() {
 }
 #pragma pop
 
-/* 800409E0 00B4 .text      isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec */
+/* 800409E0-80040A94 00B4 .text      isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec Function */
 // renderingDAmap_c::isDrawIconSingle(dTres_c::data_s, int, int, bool, bool, const Vec*) const
 #pragma push
 #pragma optimization_level 0
@@ -1167,7 +1418,7 @@ asm void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec() {
 }
 #pragma pop
 
-/* 80040A94 0024 .text      getFirstData__28renderingPlusDoorAndCursor_cFUc              */
+/* 80040A94-80040AB8 0024 .text      getFirstData__28renderingPlusDoorAndCursor_cFUc              Function */
 // renderingPlusDoorAndCursor_c::getFirstData(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1178,7 +1429,7 @@ asm void getFirstData__28renderingPlusDoorAndCursor_cFUc() {
 }
 #pragma pop
 
-/* 80040AB8 0024 .text      getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c */
+/* 80040AB8-80040ADC 0024 .text      getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c Function */
 // renderingPlusDoorAndCursor_c::getNextData(dTres_c::typeGroupData_c)
 #pragma push
 #pragma optimization_level 0
@@ -1189,7 +1440,7 @@ asm void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_
 }
 #pragma pop
 
-/* 80040ADC 0008 .text      getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c */
+/* 80040ADC-80040AE4 0008 .text      getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c Function */
 // renderingPlusDoorAndCursor_c::getIconPosition(dTres_c::typeGroupData_c) const
 #pragma push
 #pragma optimization_level 0
@@ -1200,7 +1451,7 @@ asm void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroup
 }
 #pragma pop
 
-/* 80040AE4 001C .text      getIconGroupNumber__16renderingDAmap_cCFUc                   */
+/* 80040AE4-80040B00 001C .text      getIconGroupNumber__16renderingDAmap_cCFUc                   Function */
 // renderingDAmap_c::getIconGroupNumber(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1211,7 +1462,7 @@ asm void getIconGroupNumber__16renderingDAmap_cCFUc() {
 }
 #pragma pop
 
-/* 80040B00 0384 .text      drawTreasure__28renderingPlusDoorAndCursor_cFv               */
+/* 80040B00-80040E84 0384 .text      drawTreasure__28renderingPlusDoorAndCursor_cFv               Function */
 // renderingPlusDoorAndCursor_c::drawTreasure(void)
 #pragma push
 #pragma optimization_level 0
@@ -1222,7 +1473,7 @@ asm void drawTreasure__28renderingPlusDoorAndCursor_cFv() {
 }
 #pragma pop
 
-/* 80040E84 0384 .text      drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv    */
+/* 80040E84-80041208 0384 .text      drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv    Function */
 // renderingPlusDoorAndCursor_c::drawTreasureAfterPlayer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1233,7 +1484,7 @@ asm void drawTreasureAfterPlayer__28renderingPlusDoorAndCursor_cFv() {
 }
 #pragma pop
 
-/* 80041208 00B8 .text      drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff      */
+/* 80041208-800412C0 00B8 .text      drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff      Function */
 // renderingPlusDoorAndCursor_c::drawIconSingle(const Vec&, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1244,8 +1495,8 @@ asm void drawIconSingle__28renderingPlusDoorAndCursor_cFRC3Vecff() {
 }
 #pragma pop
 
-/* 800412C0 019C .text      drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif         */
-// renderingPlusDoorAndCursor_c::drawCursor(const Vec&, s16, int, f32)
+/* 800412C0-8004145C 019C .text      drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif         Function */
+// renderingPlusDoorAndCursor_c::drawCursor(const Vec&, short, int, f32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1255,13 +1506,13 @@ asm void drawCursor__28renderingPlusDoorAndCursor_cFRC3Vecsif() {
 }
 #pragma pop
 
-/* 8004145C 0004 .text      beforeDrawPath__19renderingPlusDoor_cFv                      */
+/* 8004145C-80041460 0004 .text      beforeDrawPath__19renderingPlusDoor_cFv                      ReturnFunction */
 // renderingPlusDoor_c::beforeDrawPath(void)
 void beforeDrawPath__19renderingPlusDoor_cFv() {
 	return;
 }
 
-/* 80041460 0020 .text      __sinit_d_map_path_dmap_cpp                                  */
+/* 80041460-80041480 0020 .text      __sinit_d_map_path_dmap_cpp                                  SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

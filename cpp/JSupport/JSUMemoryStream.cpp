@@ -9,14 +9,26 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void __dt__20JSUMemoryInputStreamFv();
+/* Function             */
 extern void getAvailable__20JSURandomInputStreamCFv();
+/* Function             */
 extern void skip__20JSURandomInputStreamFl();
+/* Function             */
+extern void setBuffer__20JSUMemoryInputStreamFPCvl();
+/* Function             */
 extern void readData__20JSUMemoryInputStreamFPvl();
+/* Function             */
 extern void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom();
+/* FirstParamFunction   */
 extern u32 getLength__20JSUMemoryInputStreamCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getPosition__20JSUMemoryInputStreamCFv(u8*);
+/* VTableData           */
+SECTION_DATA extern void* __vt__20JSUMemoryInputStream[10];
 }
 
 
@@ -25,8 +37,8 @@ extern u32 getPosition__20JSUMemoryInputStreamCFv(u8*);
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC4F0 0024 .data      __vt__20JSUMemoryInputStream                                 */
-SECTION_DATA const  void* __vt__20JSUMemoryInputStream[10] = {
+/* 803CC4F0-803CC518 0024 .data      __vt__20JSUMemoryInputStream                                 VTableData */
+SECTION_DATA void* __vt__20JSUMemoryInputStream[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20JSUMemoryInputStreamFv,
@@ -47,8 +59,8 @@ SECTION_DATA const  void* __vt__20JSUMemoryInputStream[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DC520 0014 .text      setBuffer__20JSUMemoryInputStreamFPCvl                       */
-// JSUMemoryInputStream::setBuffer(const void*, s32)
+/* 802DC520-802DC534 0014 .text      setBuffer__20JSUMemoryInputStreamFPCvl                       Function */
+// JSUMemoryInputStream::setBuffer(const void*, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,8 +70,8 @@ asm void setBuffer__20JSUMemoryInputStreamFPCvl() {
 }
 #pragma pop
 
-/* 802DC534 0078 .text      readData__20JSUMemoryInputStreamFPvl                         */
-// JSUMemoryInputStream::readData(void*, s32)
+/* 802DC534-802DC5AC 0078 .text      readData__20JSUMemoryInputStreamFPvl                         Function */
+// JSUMemoryInputStream::readData(void*, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,8 +81,8 @@ asm void readData__20JSUMemoryInputStreamFPvl() {
 }
 #pragma pop
 
-/* 802DC5AC 007C .text      seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom         */
-// JSUMemoryInputStream::seekPos(s32, JSUStreamSeekFrom)
+/* 802DC5AC-802DC628 007C .text      seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom         Function */
+// JSUMemoryInputStream::seekPos(long, JSUStreamSeekFrom)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,13 +92,13 @@ asm void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom() {
 }
 #pragma pop
 
-/* 802DC628 0008 .text      getLength__20JSUMemoryInputStreamCFv                         */
+/* 802DC628-802DC630 0008 .text      getLength__20JSUMemoryInputStreamCFv                         FirstParamFunction */
 // JSUMemoryInputStream::getLength(void) const
 u32 getLength__20JSUMemoryInputStreamCFv(u8* param0) {
 	return *(u32*)&param0[12]; /* param0->field_0xc */
 }
 
-/* 802DC630 0008 .text      getPosition__20JSUMemoryInputStreamCFv                       */
+/* 802DC630-802DC638 0008 .text      getPosition__20JSUMemoryInputStreamCFv                       FirstParamFunction */
 // JSUMemoryInputStream::getPosition(void) const
 u32 getPosition__20JSUMemoryInputStreamCFv(u8* param0) {
 	return *(u32*)&param0[16]; /* param0->field_0x10 */

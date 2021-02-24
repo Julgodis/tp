@@ -8,15 +8,29 @@
 // Additional Symbols:
 // 
 
+extern void JASReport(const char*, ...); /* JASReport__FPCce */
+
 extern "C" {
+/* Function             */
+extern void JASReport__FPCce();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void vsnprintf();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sMutex[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sBuffer[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sLineMax[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sLineCount[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTop[4];
+/* MergedZeroInitializedData */
+SECTION_SBSS extern u8 merged_80451230[8];
 }
 
 
@@ -25,7 +39,7 @@ SECTION_SBSS extern u8 sTop[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431660 0018 .bss       sMutex                                                       */
+/* 80431660-80431678 0018 .bss       sMutex                                                       ZeroInitializedData */
 SECTION_BSS u8 sMutex[24];
 }
 
@@ -35,15 +49,15 @@ SECTION_BSS u8 sMutex[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451220 0004 .sbss      sBuffer                                                      */
+/* 80451220-80451224 0004 .sbss      sBuffer                                                      ZeroInitializedData */
 SECTION_SBSS u8 sBuffer[4];
-/* 80451224 0004 .sbss      sLineMax                                                     */
+/* 80451224-80451228 0004 .sbss      sLineMax                                                     ZeroInitializedData */
 SECTION_SBSS u8 sLineMax[4];
-/* 80451228 0004 .sbss      sLineCount                                                   */
+/* 80451228-8045122C 0004 .sbss      sLineCount                                                   ZeroInitializedData */
 SECTION_SBSS u8 sLineCount[4];
-/* 8045122C 0004 .sbss      sTop                                                         */
+/* 8045122C-80451230 0004 .sbss      sTop                                                         ZeroInitializedData */
 SECTION_SBSS u8 sTop[4];
-/* 80451230 0008 .sbss      merged_80451230                                              */
+/* 80451230-80451238 0008 .sbss      merged_80451230                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80451230[8];
 /* 80451230 0001 data_80451230 */
 /* 80451231 0007 data_80451231 */
@@ -55,7 +69,7 @@ SECTION_SBSS u8 merged_80451230[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80290F64 00FC .text      JASReport__FPCce                                             */
+/* 80290F64-80291060 00FC .text      JASReport__FPCce                                             Function */
 }
 
 #pragma push

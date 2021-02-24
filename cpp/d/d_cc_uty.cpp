@@ -8,45 +8,81 @@
 // Additional Symbols:
 // 
 
-struct fopAc_ac_c;
-struct cCcD_Obj;
-struct Z2Creature;
 struct dCcU_AtInfo;
+struct cCcD_Obj;
+struct fopAc_ac_c;
+struct Z2Creature;
 
 extern void dCcD_GetGObjInf(cCcD_Obj*); /* dCcD_GetGObjInf__FP8cCcD_Obj */
+extern void pl_cut_LRC(int); /* pl_cut_LRC__Fi */
 extern void cc_pl_cut_bit_get(void); /* cc_pl_cut_bit_get__Fv */
 extern void getMapInfo(s8); /* getMapInfo__FSc */
 extern void getHitId(cCcD_Obj*, int); /* getHitId__FP8cCcD_Obji */
+extern void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*); /* def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c */
 extern void at_power_get(dCcU_AtInfo*); /* at_power_get__FP11dCcU_AtInfo */
 extern void at_power_check(dCcU_AtInfo*); /* at_power_check__FP11dCcU_AtInfo */
+extern void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*); /* cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
 extern void cM_rndFX(f32); /* cM_rndFX__Ff */
 
 extern "C" {
+/* Function             */
 extern void getHitSeID__12dCcD_GObjInfFUci();
+/* Function             */
 extern void dCcD_GetGObjInf__FP8cCcD_Obj();
+/* Function             */
+extern void pl_cut_LRC__Fi();
+/* Function             */
 extern void cc_pl_cut_bit_get__Fv();
+/* Function             */
 extern void getMapInfo__FSc();
+/* Function             */
 extern void getHitId__FP8cCcD_Obji();
+/* Function             */
+extern void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c();
+/* Function             */
 extern void at_power_get__FP11dCcU_AtInfo();
+/* Function             */
 extern void at_power_check__FP11dCcU_AtInfo();
+/* Function             */
+extern void cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo();
+/* ReturnIntegerFunction */
+extern  int checkCutJumpCancelTurn__9daPy_py_cCFv();
+/* Function             */
 extern void checkMasterSwordEquip__9daPy_py_cFv();
+/* Function             */
 extern void GetAc__8cCcD_ObjFv();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void cM_rndFX__Ff();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _restgpr_25();
+/* InitializedData      */
 SECTION_DATA extern u8 plCutLRC[232];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_cc_uty__LIT_4212[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_cc_uty__LIT_4213;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_4214;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_cc_uty__LIT_4215[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4216;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4217;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4218[8];
 }
 
@@ -56,7 +92,7 @@ SECTION_SDATA2 extern u8 LIT_4218[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AC418 00E8 .data      plCutLRC                                                     */
+/* 803AC418-803AC500 00E8 .data      plCutLRC                                                     InitializedData */
 SECTION_DATA u8 plCutLRC[232] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x01,
@@ -82,29 +118,29 @@ SECTION_DATA u8 plCutLRC[232] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452798 0004 .sdata2    @4212                                                        */
+/* 80452798-804527A0 0004 .sdata2    @4212                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_cc_uty__LIT_4212[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804527A0 0008 .sdata2    @4213                                                        */
+/* 804527A0-804527A8 0008 .sdata2    @4213                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_cc_uty__LIT_4213 = 0.500000;
-/* 804527A8 0008 .sdata2    @4214                                                        */
+/* 804527A8-804527B0 0008 .sdata2    @4214                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_4214 = 3.000000;
-/* 804527B0 0008 .sdata2    @4215                                                        */
+/* 804527B0-804527B8 0008 .sdata2    @4215                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_cc_uty__LIT_4215[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 804527B8 0004 .sdata2    @4216                                                        */
+/* 804527B8-804527BC 0004 .sdata2    @4216                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 LIT_4216 = 100.000000f;
-/* 804527BC 0004 .sdata2    @4217                                                        */
+/* 804527BC-804527C0 0004 .sdata2    @4217                                                        Float32Data */
 // 0x457a0000
 SECTION_SDATA2 f32 LIT_4217 = 4000.000000f;
-/* 804527C0 0004 .sdata2    @4218                                                        */
+/* 804527C0-804527C8 0004 .sdata2    @4218                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4218[8] = {
 	0x46, 0x1C, 0x40, 0x00,
 	/* padding */
@@ -118,7 +154,7 @@ SECTION_SDATA2 u8 LIT_4218[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 800873B0 0024 .text      pl_cut_LRC__Fi                                               */
+/* 800873B0-800873D4 0024 .text      pl_cut_LRC__Fi                                               Function */
 }
 
 #pragma push
@@ -131,7 +167,7 @@ asm void pl_cut_LRC(int) {
 #pragma pop
 
 extern "C" {
-/* 800873D4 00F0 .text      cc_pl_cut_bit_get__Fv                                        */
+/* 800873D4-800874C4 00F0 .text      cc_pl_cut_bit_get__Fv                                        Function */
 }
 
 #pragma push
@@ -144,7 +180,7 @@ asm void cc_pl_cut_bit_get(void) {
 #pragma pop
 
 extern "C" {
-/* 800874C4 002C .text      getMapInfo__FSc                                              */
+/* 800874C4-800874F0 002C .text      getMapInfo__FSc                                              Function */
 }
 
 #pragma push
@@ -157,7 +193,7 @@ asm void getMapInfo(s8) {
 #pragma pop
 
 extern "C" {
-/* 800874F0 0024 .text      getHitId__FP8cCcD_Obji                                       */
+/* 800874F0-80087514 0024 .text      getHitId__FP8cCcD_Obji                                       Function */
 }
 
 #pragma push
@@ -170,7 +206,7 @@ asm void getHitId(cCcD_Obj*, int) {
 #pragma pop
 
 extern "C" {
-/* 80087514 0080 .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          */
+/* 80087514-80087594 0080 .text      def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c          Function */
 }
 
 #pragma push
@@ -183,7 +219,7 @@ asm void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*) {
 #pragma pop
 
 extern "C" {
-/* 80087594 04C4 .text      at_power_get__FP11dCcU_AtInfo                                */
+/* 80087594-80087A58 04C4 .text      at_power_get__FP11dCcU_AtInfo                                Function */
 }
 
 #pragma push
@@ -196,7 +232,7 @@ asm void at_power_get(dCcU_AtInfo*) {
 #pragma pop
 
 extern "C" {
-/* 80087A58 01AC .text      at_power_check__FP11dCcU_AtInfo                              */
+/* 80087A58-80087C04 01AC .text      at_power_check__FP11dCcU_AtInfo                              Function */
 }
 
 #pragma push
@@ -209,7 +245,7 @@ asm void at_power_check(dCcU_AtInfo*) {
 #pragma pop
 
 extern "C" {
-/* 80087C04 0530 .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    */
+/* 80087C04-80088134 0530 .text      cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo                    Function */
 }
 
 #pragma push
@@ -222,7 +258,7 @@ asm void cc_at_check(fopAc_ac_c*, dCcU_AtInfo*) {
 #pragma pop
 
 extern "C" {
-/* 80088134 0008 .text      checkCutJumpCancelTurn__9daPy_py_cCFv                        */
+/* 80088134-8008813C 0008 .text      checkCutJumpCancelTurn__9daPy_py_cCFv                        ReturnIntegerFunction */
 // daPy_py_c::checkCutJumpCancelTurn(void) const
 int checkCutJumpCancelTurn__9daPy_py_cCFv() {
 	return 0;

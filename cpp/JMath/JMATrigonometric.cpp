@@ -9,22 +9,41 @@
 // 
 
 extern "C" {
+/* SInitFunction        */
+extern void __sinit_JMATrigonometric_cpp();
+/* Function             */
 extern void func_80339CB0();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void atan();
+/* Function             */
 extern void cos();
+/* Function             */
 extern void sin();
+/* Function             */
 extern void asin();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 atanTable___5JMath[4128];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 asinAcosTable___5JMath[4128];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_326[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JMATrigonometric__LIT_436[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JMATrigonometric__LIT_437;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JMATrigonometric__LIT_438[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JMATrigonometric__LIT_439[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JMATrigonometric__LIT_441;
 }
 
@@ -34,30 +53,30 @@ SECTION_SDATA2 extern f64 JMATrigonometric__LIT_441;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804564D8 0004 .sdata2    @326                                                         */
+/* 804564D8-804564E0 0004 .sdata2    @326                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_326[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804564E0 0008 .sdata2    @436                                                         */
+/* 804564E0-804564E8 0008 .sdata2    @436                                                         InitializedData */
 SECTION_SDATA2 u8 JMATrigonometric__LIT_436[8] = {
 	0x40, 0x19, 0x21, 0xFB, 0x60, 0x00, 0x00, 0x00,
 };
-/* 804564E8 0008 .sdata2    @437                                                         */
+/* 804564E8-804564F0 0008 .sdata2    @437                                                         Float64Data */
 // 0x40c0000000000000
 SECTION_SDATA2 f64 JMATrigonometric__LIT_437 = 8192.000000;
-/* 804564F0 0008 .sdata2    @438                                                         */
+/* 804564F0-804564F8 0008 .sdata2    @438                                                         InitializedData */
 SECTION_SDATA2 u8 JMATrigonometric__LIT_438[8] = {
 	0x3F, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 804564F8 0004 .sdata2    @439                                                         */
+/* 804564F8-80456500 0004 .sdata2    @439                                                         InitializedData */
 SECTION_SDATA2 u8 JMATrigonometric__LIT_439[8] = {
 	0x3F, 0x49, 0x0F, 0xDB,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456500 0008 .sdata2    @441                                                         */
+/* 80456500-80456508 0008 .sdata2    @441                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JMATrigonometric__LIT_441 = 4503601774854144.000000;
 }
@@ -68,11 +87,11 @@ SECTION_SDATA2 f64 JMATrigonometric__LIT_441 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80439A20 10000 .bss       sincosTable___5JMath                                         */
+/* 80439A20-80449A20 10000 .bss       sincosTable___5JMath                                         ZeroInitializedData */
 SECTION_BSS u8 sincosTable___5JMath[65536];
-/* 80449A20 1020 .bss       atanTable___5JMath                                           */
+/* 80449A20-8044AA40 1020 .bss       atanTable___5JMath                                           ZeroInitializedData */
 SECTION_BSS u8 atanTable___5JMath[4128];
-/* 8044AA40 1020 .bss       asinAcosTable___5JMath                                       */
+/* 8044AA40-8044BA60 1020 .bss       asinAcosTable___5JMath                                       ZeroInitializedData */
 SECTION_BSS u8 asinAcosTable___5JMath[4128];
 }
 
@@ -82,7 +101,7 @@ SECTION_BSS u8 asinAcosTable___5JMath[4128];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80339AEC 01C4 .text      __sinit_JMATrigonometric_cpp                                 */
+/* 80339AEC-80339CB0 01C4 .text      __sinit_JMATrigonometric_cpp                                 SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +111,7 @@ asm void __sinit_JMATrigonometric_cpp() {
 }
 #pragma pop
 
-/* 80339CB0 0010 .text      __ct__Q23std9pair<f,f>Fv                                     */
+/* 80339CB0-80339CC0 0010 .text      __ct__Q23std9pair<f,f>Fv                                     Function */
 // std::pair<f,f>::std::pair<f,f>(void)
 #pragma push
 #pragma optimization_level 0

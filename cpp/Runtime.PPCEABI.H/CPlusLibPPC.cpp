@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __copy();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80361C3C 0030 .text      __copy                                                       */
+/* 80361C3C-80361C6C 0030 .text      __copy                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

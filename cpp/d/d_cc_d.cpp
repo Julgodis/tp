@@ -16,197 +16,447 @@ extern void dCcD_GetGObjInf(cCcD_Obj*); /* dCcD_GetGObjInf__FP8cCcD_Obj */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fpcSch_JudgeByID__FPvPv();
+/* FirstParamFunction   */
 extern u8* GetCoCP__12cCcD_CylAttrFv(u8*);
+/* FirstParamFunction   */
 extern u8* GetCoCP__12cCcD_SphAttrFv(u8*);
+/* Function             */
 extern void ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
 extern void ct__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
+extern void SetHitApid__22dCcD_GAtTgCoCommonBaseFUi();
+/* Function             */
 extern void GetAc__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
 extern void Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase();
+/* Function             */
+extern void SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
 extern void SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
+extern void ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
+extern void __ct__10dCcD_GSttsFv();
+/* Function             */
 extern void __dt__10cCcD_GSttsFv();
+/* Function             */
 extern void Ct__10dCcD_GSttsFv();
+/* Function             */
+extern void Move__10dCcD_GSttsFv();
+/* Function             */
 extern void GetGStts__9dCcD_SttsFv();
+/* Function             */
+extern void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+/* Function             */
 extern void Ct__9dCcD_SttsFv();
+/* Function             */
 extern void ClrAt__9dCcD_SttsFv();
+/* Function             */
 extern void ClrTg__9dCcD_SttsFv();
+/* Function             */
 extern void Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt();
+/* Function             */
 extern void Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg();
+/* Function             */
+extern void __ct__12dCcD_GObjInfFv();
+/* Function             */
 extern void __dt__11dCcD_GObjCoFv();
+/* Function             */
 extern void __dt__11dCcD_GObjTgFv();
+/* Function             */
 extern void __dt__11dCcD_GObjAtFv();
+/* Function             */
 extern void __dt__22dCcD_GAtTgCoCommonBaseFv();
+/* Function             */
 extern void __dt__12cCcD_GObjInfFv();
+/* Function             */
 extern void __dt__8cCcD_ObjFv();
+/* Function             */
 extern void __dt__14cCcD_ObjHitInfFv();
+/* Function             */
 extern void __dt__10cCcD_ObjCoFv();
+/* Function             */
 extern void __dt__10cCcD_ObjTgFv();
+/* Function             */
 extern void __dt__10cCcD_ObjAtFv();
+/* Function             */
 extern void __dt__18cCcD_ObjCommonBaseFv();
+/* Function             */
 extern void __dt__12dCcD_GObjInfFv();
+/* ReturnFunction       */
 extern void GetGObjInf__12dCcD_GObjInfFv();
+/* Function             */
 extern void ClrAtHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ChkAtHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ResetAtHit__12dCcD_GObjInfFv();
+/* Function             */
 extern void GetAtHitObj__12dCcD_GObjInfFv();
+/* Function             */
+extern void GetAtHitGObj__12dCcD_GObjInfFv();
+/* Function             */
+extern void ChkAtNoGuard__12dCcD_GObjInfFv();
+/* Function             */
 extern void ClrTgHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ChkTgHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ResetTgHit__12dCcD_GObjInfFv();
+/* Function             */
 extern void GetTgHitObj__12dCcD_GObjInfFv();
+/* Function             */
 extern void GetTgHitGObj__12dCcD_GObjInfFv();
+/* Function             */
+extern void GetTgHitObjSe__12dCcD_GObjInfFv();
+/* Function             */
+extern void getHitSeID__12dCcD_GObjInfFUci();
+/* Function             */
 extern void ClrCoHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ChkCoHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void ResetCoHit__12dCcD_GObjInfFv();
+/* Function             */
+extern void GetCoHitObj__12dCcD_GObjInfFv();
+/* Function             */
 extern void Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf();
+/* Function             */
 extern void dCcD_GetGObjInf__FP8cCcD_Obj();
-extern int GetGObjInf__8cCcD_ObjFv();
+/* ReturnIntegerFunction */
+extern  int GetGObjInf__8cCcD_ObjFv();
+/* Function             */
+extern void Set__8dCcD_CpsFRC11dCcD_SrcCps();
+/* Function             */
 extern void GetShapeAttr__8dCcD_CpsFv();
+/* Function             */
+extern void CalcAtVec__8dCcD_CpsFv();
+/* Function             */
+extern void CalcTgVec__8dCcD_CpsFv();
+/* Function             */
+extern void Set__8dCcD_TriFRC11dCcD_SrcTri();
+/* Function             */
 extern void GetShapeAttr__8dCcD_TriFv();
+/* Function             */
+extern void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+/* Function             */
 extern void GetShapeAttr__8dCcD_CylFv();
+/* Function             */
+extern void StartCAt__8dCcD_CylFR4cXyz();
+/* Function             */
+extern void MoveCAt__8dCcD_CylFR4cXyz();
+/* Function             */
+extern void MoveCTg__8dCcD_CylFR4cXyz();
+/* Function             */
+extern void Set__8dCcD_SphFRC11dCcD_SrcSph();
+/* Function             */
+extern void StartCAt__8dCcD_SphFR4cXyz();
+/* Function             */
+extern void MoveCAt__8dCcD_SphFR4cXyz();
+/* Function             */
 extern void GetShapeAttr__8dCcD_SphFv();
+/* FirstParamFunction   */
 extern u8* GetCoCP__12cCcD_SphAttrCFv(u8*);
-extern int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz();
-extern int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern int CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf();
-extern int CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf();
-extern int CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf();
+/* ReturnFunction       */
 extern void GetGObjInf__12cCcD_GObjInfCFv();
-extern int GetShapeAttr__8cCcD_ObjCFv();
+/* ReturnIntegerFunction */
+extern  int GetShapeAttr__8cCcD_ObjCFv();
+/* ReturnFunction       */
 extern void Draw__8cCcD_ObjFRC8_GXColor();
+/* Function             */
 extern void __dt__8dCcD_SphFv();
+/* FirstParamFunction   */
 extern u8* GetCoCP__12cCcD_CylAttrCFv(u8*);
-extern int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz();
-extern int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern int CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf();
-extern int CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf();
-extern int CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf();
+/* Function             */
 extern void __dt__8dCcD_CylFv();
+/* Function             */
 extern void GetCoCP__14cCcD_ShapeAttrFv();
+/* Function             */
 extern void GetCoCP__14cCcD_ShapeAttrCFv();
-extern int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz();
-extern int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf();
-extern int CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf();
+/* Function             */
 extern void __dt__8dCcD_TriFv();
-extern int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz();
-extern int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz();
+/* ReturnIntegerFunction */
+extern  int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz();
-extern int CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf();
-extern int CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf();
-extern int CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf();
+/* ReturnIntegerFunction */
+extern  int CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf();
+/* Function             */
 extern void __dt__8dCcD_CpsFv();
-extern int GetShapeAttr__8cCcD_ObjFv();
+/* ReturnIntegerFunction */
+extern  int GetShapeAttr__8cCcD_ObjFv();
+/* Function             */
 extern void ClrAtHit__12cCcD_GObjInfFv();
+/* Function             */
 extern void ClrTgHit__12cCcD_GObjInfFv();
+/* Function             */
 extern void ClrCoHit__12cCcD_GObjInfFv();
+/* ReturnFunction       */
 extern void GetGObjInf__12cCcD_GObjInfFv();
-extern int GetGObjInf__8cCcD_ObjCFv();
+/* ReturnIntegerFunction */
+extern  int GetGObjInf__8cCcD_ObjCFv();
+/* Function             */
 extern void __dt__9dCcD_SttsFv();
+/* Function             */
 extern void __dt__10dCcD_GSttsFv();
+/* Function             */
 extern void func_80085298();
+/* Function             */
 extern void func_800852A0();
+/* Function             */
 extern void func_800852A8();
+/* Function             */
 extern void func_800852B0();
+/* Function             */
 extern void func_800852B8();
+/* Function             */
 extern void func_800852C0();
+/* Function             */
 extern void func_800852C8();
+/* Function             */
 extern void func_800852D0();
+/* Function             */
 extern void func_800852D8();
-extern int GetGStts__9cCcD_SttsCFv();
+/* ReturnIntegerFunction */
+extern  int GetGStts__9cCcD_SttsCFv();
+/* Function             */
 extern void Init__9cCcD_SttsFiiPvUi();
+/* Function             */
 extern void Ct__9cCcD_SttsFv();
+/* Function             */
 extern void ct__18cCcD_ObjCommonBaseFv();
+/* Function             */
 extern void ct__8cCcD_ObjFv();
+/* Function             */
 extern void Set__8cCcD_ObjFRC11cCcD_SrcObj();
+/* Function             */
 extern void getShapeAccess__14cCcD_ShapeAttrCFPQ214cCcD_ShapeAttr5Shape();
+/* Function             */
 extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CpsAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_CylAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_SphAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_TriAttrCFRC12cCcD_TriAttrP4cXyz();
+/* Function             */
 extern void CalcAabBox__12cCcD_TriAttrFv();
+/* Function             */
 extern void GetNVec__12cCcD_TriAttrCFRC4cXyzP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CpsAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_CylAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_SphAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_TriAttrP4cXyz();
+/* Function             */
 extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CpsAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_CylAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CpsAttrCFRC12cCcD_SphAttrPf();
+/* Function             */
 extern void CalcAabBox__12cCcD_CpsAttrFv();
+/* Function             */
 extern void GetNVec__12cCcD_CpsAttrCFRC4cXyzP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CpsAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_CylAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_SphAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_CylAttrCFRC12cCcD_TriAttrP4cXyz();
+/* Function             */
 extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_CylAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_SphAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_CylAttrCFRC12cCcD_CpsAttrPf();
+/* Function             */
 extern void CalcAabBox__12cCcD_CylAttrFv();
+/* Function             */
 extern void GetNVec__12cCcD_CylAttrCFRC4cXyzP4cXyz();
+/* Function             */
 extern void getShapeAccess__12cCcD_CylAttrCFPQ214cCcD_ShapeAttr5Shape();
+/* Function             */
 extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CpsAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_CylAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_SphAttrP4cXyz();
+/* Function             */
 extern void CrossAtTg__12cCcD_SphAttrCFRC12cCcD_TriAttrP4cXyz();
+/* Function             */
 extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_CylAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_SphAttrPf();
+/* Function             */
 extern void CrossCo__12cCcD_SphAttrCFRC12cCcD_CpsAttrPf();
+/* Function             */
 extern void CalcAabBox__12cCcD_SphAttrFv();
+/* Function             */
 extern void GetNVec__12cCcD_SphAttrCFRC4cXyzP4cXyz();
+/* Function             */
 extern void getShapeAccess__12cCcD_SphAttrCFPQ214cCcD_ShapeAttr5Shape();
+/* Function             */
 extern void ClrHit__10cCcD_ObjAtFv();
+/* Function             */
 extern void ClrHit__10cCcD_ObjTgFv();
+/* Function             */
 extern void ClrHit__10cCcD_ObjCoFv();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void __dt__8cM3dGCpsFv();
+/* Function             */
 extern void Set__8cM3dGCpsFRC9cM3dGCpsS();
+/* Function             */
 extern void Set__8cM3dGCylFRC9cM3dGCylS();
+/* Function             */
 extern void SetC__8cM3dGCylFRC4cXyz();
+/* Function             */
 extern void SetC__8cM3dGSphFRC4cXyz();
+/* Function             */
 extern void Set__8cM3dGSphFRC9cM3dGSphS();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSVECSubtract();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 m_hitSeID__12dCcD_GObjInf[96];
-SECTION_DATA extern const void* __vt__8cM3dGPla[3];
-SECTION_DATA extern const void* __vt__8cM3dGCyl[3];
-SECTION_DATA extern const void* __vt__8cM3dGAab[3];
-SECTION_DATA extern const void* __vt__15cCcD_DivideInfo[3];
-SECTION_DATA extern const void* __vt__8cM3dGSph[3];
-SECTION_DATA extern const void* __vt__8cM3dGTri[3];
-SECTION_DATA extern const void* __vt__8dCcD_Sph[36];
-SECTION_DATA extern const void* __vt__8dCcD_Cyl[36];
-SECTION_DATA extern const void* __vt__8dCcD_Tri[36];
-SECTION_DATA extern const void* __vt__8dCcD_Cps[36];
-SECTION_DATA extern const void* __vt__12dCcD_GObjInf[11];
-SECTION_DATA extern const void* __vt__11dCcD_GObjCo[3];
-SECTION_DATA extern const void* __vt__11dCcD_GObjTg[3];
-SECTION_DATA extern const void* __vt__11dCcD_GObjAt[3];
-SECTION_DATA extern const void* __vt__22dCcD_GAtTgCoCommonBase[3];
-SECTION_DATA extern const void* __vt__12cCcD_GObjInf[11];
-SECTION_DATA extern const void* __vt__8cCcD_Obj[8];
-SECTION_DATA extern const void* __vt__10cCcD_ObjCo[3];
-SECTION_DATA extern const void* __vt__10cCcD_ObjTg[3];
-SECTION_DATA extern const void* __vt__10cCcD_ObjAt[3];
-SECTION_DATA extern const void* __vt__18cCcD_ObjCommonBase[3];
-SECTION_DATA extern const void* __vt__14cCcD_ObjHitInf[3];
-SECTION_DATA extern const void* __vt__9dCcD_Stts[11];
-SECTION_DATA extern const void* __vt__10dCcD_GStts[3];
-SECTION_DATA extern const void* __vt__10cCcD_GStts[3];
-SECTION_DATA extern const void* __vt__12cCcD_SphAttr[25];
-SECTION_DATA extern const void* __vt__12cCcD_CylAttr[25];
-SECTION_DATA extern const void* __vt__12cCcD_CpsAttr[25];
-SECTION_DATA extern const void* __vt__12cCcD_TriAttr[25];
-SECTION_DATA extern const void* __vt__14cCcD_ShapeAttr[22];
-SECTION_DATA extern const void* __vt__9cCcD_Stts[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGCyl[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGAab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15cCcD_DivideInfo[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGSph[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGTri[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dCcD_Sph[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dCcD_Cyl[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dCcD_Tri[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dCcD_Cps[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dCcD_GObjInf[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dCcD_GObjCo[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dCcD_GObjTg[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dCcD_GObjAt[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dCcD_GAtTgCoCommonBase[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12cCcD_GObjInf[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cCcD_Obj[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10cCcD_ObjCo[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10cCcD_ObjTg[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10cCcD_ObjAt[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18cCcD_ObjCommonBase[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14cCcD_ObjHitInf[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dCcD_Stts[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10dCcD_GStts[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10cCcD_GStts[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12cCcD_SphAttr[25];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12cCcD_CylAttr[25];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12cCcD_CpsAttr[25];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12cCcD_TriAttr[25];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14cCcD_ShapeAttr[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9cCcD_Stts[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_virtual_center__14cCcD_ShapeAttr[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Zero__4cXyz[12];
 }
 
@@ -216,7 +466,7 @@ SECTION_BSS extern u8 Zero__4cXyz[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037A780 0060 .rodata    m_hitSeID__12dCcD_GObjInf                                    */
+/* 8037A780-8037A7E0 0060 .rodata    m_hitSeID__12dCcD_GObjInf                                    InitializedData */
 SECTION_RODATA const u8 m_hitSeID__12dCcD_GObjInf[96] = {
 	0x00, 0x04, 0x00, 0x0F, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x04, 0x00, 0x04,
 	0x00, 0x04, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x04, 0x00, 0x06, 0x00, 0x04, 0x00, 0x07,
@@ -233,8 +483,8 @@ SECTION_RODATA const u8 m_hitSeID__12dCcD_GObjInf[96] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803ABFC0 0090 .data      __vt__8dCcD_Sph                                              */
-SECTION_DATA const  void* __vt__8dCcD_Sph[36] = {
+/* 803ABFC0-803AC050 0090 .data      __vt__8dCcD_Sph                                              VTableData */
+SECTION_DATA void* __vt__8dCcD_Sph[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dCcD_SphFv,
@@ -272,8 +522,8 @@ SECTION_DATA const  void* __vt__8dCcD_Sph[36] = {
 	NULL,
 	(void*)func_800852D0,
 };
-/* 803AC050 0090 .data      __vt__8dCcD_Cyl                                              */
-SECTION_DATA const  void* __vt__8dCcD_Cyl[36] = {
+/* 803AC050-803AC0E0 0090 .data      __vt__8dCcD_Cyl                                              VTableData */
+SECTION_DATA void* __vt__8dCcD_Cyl[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dCcD_CylFv,
@@ -311,8 +561,8 @@ SECTION_DATA const  void* __vt__8dCcD_Cyl[36] = {
 	NULL,
 	(void*)func_800852C0,
 };
-/* 803AC0E0 0090 .data      __vt__8dCcD_Tri                                              */
-SECTION_DATA const  void* __vt__8dCcD_Tri[36] = {
+/* 803AC0E0-803AC170 0090 .data      __vt__8dCcD_Tri                                              VTableData */
+SECTION_DATA void* __vt__8dCcD_Tri[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dCcD_TriFv,
@@ -350,8 +600,8 @@ SECTION_DATA const  void* __vt__8dCcD_Tri[36] = {
 	NULL,
 	(void*)func_800852B0,
 };
-/* 803AC170 0090 .data      __vt__8dCcD_Cps                                              */
-SECTION_DATA const  void* __vt__8dCcD_Cps[36] = {
+/* 803AC170-803AC200 0090 .data      __vt__8dCcD_Cps                                              VTableData */
+SECTION_DATA void* __vt__8dCcD_Cps[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dCcD_CpsFv,
@@ -389,8 +639,8 @@ SECTION_DATA const  void* __vt__8dCcD_Cps[36] = {
 	NULL,
 	(void*)func_800852A0,
 };
-/* 803AC200 002C .data      __vt__12dCcD_GObjInf                                         */
-SECTION_DATA const  void* __vt__12dCcD_GObjInf[11] = {
+/* 803AC200-803AC22C 002C .data      __vt__12dCcD_GObjInf                                         VTableData */
+SECTION_DATA void* __vt__12dCcD_GObjInf[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dCcD_GObjInfFv,
@@ -403,32 +653,32 @@ SECTION_DATA const  void* __vt__12dCcD_GObjInf[11] = {
 	(void*)ClrTgHit__12dCcD_GObjInfFv,
 	(void*)ClrCoHit__12dCcD_GObjInfFv,
 };
-/* 803AC22C 000C .data      __vt__11dCcD_GObjCo                                          */
-SECTION_DATA const  void* __vt__11dCcD_GObjCo[3] = {
+/* 803AC22C-803AC238 000C .data      __vt__11dCcD_GObjCo                                          VTableData */
+SECTION_DATA void* __vt__11dCcD_GObjCo[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dCcD_GObjCoFv,
 };
-/* 803AC238 000C .data      __vt__11dCcD_GObjTg                                          */
-SECTION_DATA const  void* __vt__11dCcD_GObjTg[3] = {
+/* 803AC238-803AC244 000C .data      __vt__11dCcD_GObjTg                                          VTableData */
+SECTION_DATA void* __vt__11dCcD_GObjTg[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dCcD_GObjTgFv,
 };
-/* 803AC244 000C .data      __vt__11dCcD_GObjAt                                          */
-SECTION_DATA const  void* __vt__11dCcD_GObjAt[3] = {
+/* 803AC244-803AC250 000C .data      __vt__11dCcD_GObjAt                                          VTableData */
+SECTION_DATA void* __vt__11dCcD_GObjAt[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dCcD_GObjAtFv,
 };
-/* 803AC250 000C .data      __vt__22dCcD_GAtTgCoCommonBase                               */
-SECTION_DATA const  void* __vt__22dCcD_GAtTgCoCommonBase[3] = {
+/* 803AC250-803AC25C 000C .data      __vt__22dCcD_GAtTgCoCommonBase                               VTableData */
+SECTION_DATA void* __vt__22dCcD_GAtTgCoCommonBase[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dCcD_GAtTgCoCommonBaseFv,
 };
-/* 803AC25C 002C .data      __vt__12cCcD_GObjInf                                         */
-SECTION_DATA const  void* __vt__12cCcD_GObjInf[11] = {
+/* 803AC25C-803AC288 002C .data      __vt__12cCcD_GObjInf                                         VTableData */
+SECTION_DATA void* __vt__12cCcD_GObjInf[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12cCcD_GObjInfFv,
@@ -441,8 +691,8 @@ SECTION_DATA const  void* __vt__12cCcD_GObjInf[11] = {
 	(void*)ClrTgHit__12cCcD_GObjInfFv,
 	(void*)ClrCoHit__12cCcD_GObjInfFv,
 };
-/* 803AC288 0020 .data      __vt__8cCcD_Obj                                              */
-SECTION_DATA const  void* __vt__8cCcD_Obj[8] = {
+/* 803AC288-803AC2A8 0020 .data      __vt__8cCcD_Obj                                              VTableData */
+SECTION_DATA void* __vt__8cCcD_Obj[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8cCcD_ObjFv,
@@ -452,38 +702,38 @@ SECTION_DATA const  void* __vt__8cCcD_Obj[8] = {
 	(void*)GetShapeAttr__8cCcD_ObjFv,
 	(void*)Draw__8cCcD_ObjFRC8_GXColor,
 };
-/* 803AC2A8 000C .data      __vt__10cCcD_ObjCo                                           */
-SECTION_DATA const  void* __vt__10cCcD_ObjCo[3] = {
+/* 803AC2A8-803AC2B4 000C .data      __vt__10cCcD_ObjCo                                           VTableData */
+SECTION_DATA void* __vt__10cCcD_ObjCo[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10cCcD_ObjCoFv,
 };
-/* 803AC2B4 000C .data      __vt__10cCcD_ObjTg                                           */
-SECTION_DATA const  void* __vt__10cCcD_ObjTg[3] = {
+/* 803AC2B4-803AC2C0 000C .data      __vt__10cCcD_ObjTg                                           VTableData */
+SECTION_DATA void* __vt__10cCcD_ObjTg[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10cCcD_ObjTgFv,
 };
-/* 803AC2C0 000C .data      __vt__10cCcD_ObjAt                                           */
-SECTION_DATA const  void* __vt__10cCcD_ObjAt[3] = {
+/* 803AC2C0-803AC2CC 000C .data      __vt__10cCcD_ObjAt                                           VTableData */
+SECTION_DATA void* __vt__10cCcD_ObjAt[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10cCcD_ObjAtFv,
 };
-/* 803AC2CC 000C .data      __vt__18cCcD_ObjCommonBase                                   */
-SECTION_DATA const  void* __vt__18cCcD_ObjCommonBase[3] = {
+/* 803AC2CC-803AC2D8 000C .data      __vt__18cCcD_ObjCommonBase                                   VTableData */
+SECTION_DATA void* __vt__18cCcD_ObjCommonBase[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18cCcD_ObjCommonBaseFv,
 };
-/* 803AC2D8 000C .data      __vt__14cCcD_ObjHitInf                                       */
-SECTION_DATA const  void* __vt__14cCcD_ObjHitInf[3] = {
+/* 803AC2D8-803AC2E4 000C .data      __vt__14cCcD_ObjHitInf                                       VTableData */
+SECTION_DATA void* __vt__14cCcD_ObjHitInf[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14cCcD_ObjHitInfFv,
 };
-/* 803AC2E4 002C .data      __vt__9dCcD_Stts                                             */
-SECTION_DATA const  void* __vt__9dCcD_Stts[11] = {
+/* 803AC2E4-803AC310 002C .data      __vt__9dCcD_Stts                                             VTableData */
+SECTION_DATA void* __vt__9dCcD_Stts[11] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dCcD_SttsFv,
@@ -496,14 +746,14 @@ SECTION_DATA const  void* __vt__9dCcD_Stts[11] = {
 	NULL,
 	(void*)func_80085298,
 };
-/* 803AC310 000C .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA const  void* __vt__10dCcD_GStts[3] = {
+/* 803AC310-803AC31C 000C .data      __vt__10dCcD_GStts                                           VTableData */
+SECTION_DATA void* __vt__10dCcD_GStts[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10dCcD_GSttsFv,
 };
-/* 803AC31C 000C .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA const  void* __vt__10cCcD_GStts[3] = {
+/* 803AC31C-803AC328 000C .data      __vt__10cCcD_GStts                                           VTableData */
+SECTION_DATA void* __vt__10cCcD_GStts[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10cCcD_GSttsFv,
@@ -516,7 +766,7 @@ SECTION_DATA const  void* __vt__10cCcD_GStts[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8008364C 0014 .text      ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv                     */
+/* 8008364C-80083660 0014 .text      ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv                     Function */
 // dCcD_GAtTgCoCommonBase::ClrActorInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +777,7 @@ asm void ClrActorInfo__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083660 0018 .text      ct__22dCcD_GAtTgCoCommonBaseFv                               */
+/* 80083660-80083678 0018 .text      ct__22dCcD_GAtTgCoCommonBaseFv                               Function */
 // dCcD_GAtTgCoCommonBase::ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -538,7 +788,7 @@ asm void ct__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083678 0010 .text      SetHitApid__22dCcD_GAtTgCoCommonBaseFUi                      */
+/* 80083678-80083688 0010 .text      SetHitApid__22dCcD_GAtTgCoCommonBaseFUi                      Function */
 // dCcD_GAtTgCoCommonBase::SetHitApid(unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -549,7 +799,7 @@ asm void SetHitApid__22dCcD_GAtTgCoCommonBaseFUi() {
 }
 #pragma pop
 
-/* 80083688 007C .text      GetAc__22dCcD_GAtTgCoCommonBaseFv                            */
+/* 80083688-80083704 007C .text      GetAc__22dCcD_GAtTgCoCommonBaseFv                            Function */
 // dCcD_GAtTgCoCommonBase::GetAc(void)
 #pragma push
 #pragma optimization_level 0
@@ -560,7 +810,7 @@ asm void GetAc__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083704 0014 .text      Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase  */
+/* 80083704-80083718 0014 .text      Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase  Function */
 // dCcD_GAtTgCoCommonBase::Set(const dCcD_SrcGAtTgCoCommonBase&)
 #pragma push
 #pragma optimization_level 0
@@ -571,7 +821,7 @@ asm void Set__22dCcD_GAtTgCoCommonBaseFRC25dCcD_SrcGAtTgCoCommonBase() {
 }
 #pragma pop
 
-/* 80083718 000C .text      SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv               */
+/* 80083718-80083724 000C .text      SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv               Function */
 // dCcD_GAtTgCoCommonBase::SetEffCounterTimer(void)
 #pragma push
 #pragma optimization_level 0
@@ -582,7 +832,7 @@ asm void SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083724 0024 .text      SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv               */
+/* 80083724-80083748 0024 .text      SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv               Function */
 // dCcD_GAtTgCoCommonBase::SubtractEffCounter(void)
 #pragma push
 #pragma optimization_level 0
@@ -593,7 +843,7 @@ asm void SubtractEffCounter__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083748 0018 .text      ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv                    */
+/* 80083748-80083760 0018 .text      ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv                    Function */
 // dCcD_GAtTgCoCommonBase::ChkEffCounter(void)
 #pragma push
 #pragma optimization_level 0
@@ -604,7 +854,7 @@ asm void ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083760 0050 .text      __ct__10dCcD_GSttsFv                                         */
+/* 80083760-800837B0 0050 .text      __ct__10dCcD_GSttsFv                                         Function */
 // dCcD_GStts::dCcD_GStts(void)
 #pragma push
 #pragma optimization_level 0
@@ -615,7 +865,7 @@ asm void __ct__10dCcD_GSttsFv() {
 }
 #pragma pop
 
-/* 800837B0 0048 .text      __dt__10cCcD_GSttsFv                                         */
+/* 800837B0-800837F8 0048 .text      __dt__10cCcD_GSttsFv                                         Function */
 // cCcD_GStts::~cCcD_GStts(void)
 #pragma push
 #pragma optimization_level 0
@@ -626,7 +876,7 @@ asm void __dt__10cCcD_GSttsFv() {
 }
 #pragma pop
 
-/* 800837F8 0038 .text      Ct__10dCcD_GSttsFv                                           */
+/* 800837F8-80083830 0038 .text      Ct__10dCcD_GSttsFv                                           Function */
 // dCcD_GStts::Ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -637,7 +887,7 @@ asm void Ct__10dCcD_GSttsFv() {
 }
 #pragma pop
 
-/* 80083830 0020 .text      Move__10dCcD_GSttsFv                                         */
+/* 80083830-80083850 0020 .text      Move__10dCcD_GSttsFv                                         Function */
 // dCcD_GStts::Move(void)
 #pragma push
 #pragma optimization_level 0
@@ -648,7 +898,7 @@ asm void Move__10dCcD_GSttsFv() {
 }
 #pragma pop
 
-/* 80083850 0010 .text      GetGStts__9dCcD_SttsFv                                       */
+/* 80083850-80083860 0010 .text      GetGStts__9dCcD_SttsFv                                       Function */
 // dCcD_Stts::GetGStts(void)
 #pragma push
 #pragma optimization_level 0
@@ -659,7 +909,7 @@ asm void GetGStts__9dCcD_SttsFv() {
 }
 #pragma pop
 
-/* 80083860 0094 .text      Init__9dCcD_SttsFiiP10fopAc_ac_c                             */
+/* 80083860-800838F4 0094 .text      Init__9dCcD_SttsFiiP10fopAc_ac_c                             Function */
 // dCcD_Stts::Init(int, int, fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -670,7 +920,7 @@ asm void Init__9dCcD_SttsFiiP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 800838F4 0034 .text      Ct__9dCcD_SttsFv                                             */
+/* 800838F4-80083928 0034 .text      Ct__9dCcD_SttsFv                                             Function */
 // dCcD_Stts::Ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -681,7 +931,7 @@ asm void Ct__9dCcD_SttsFv() {
 }
 #pragma pop
 
-/* 80083928 000C .text      ClrAt__9dCcD_SttsFv                                          */
+/* 80083928-80083934 000C .text      ClrAt__9dCcD_SttsFv                                          Function */
 // dCcD_Stts::ClrAt(void)
 #pragma push
 #pragma optimization_level 0
@@ -692,7 +942,7 @@ asm void ClrAt__9dCcD_SttsFv() {
 }
 #pragma pop
 
-/* 80083934 0010 .text      ClrTg__9dCcD_SttsFv                                          */
+/* 80083934-80083944 0010 .text      ClrTg__9dCcD_SttsFv                                          Function */
 // dCcD_Stts::ClrTg(void)
 #pragma push
 #pragma optimization_level 0
@@ -703,7 +953,7 @@ asm void ClrTg__9dCcD_SttsFv() {
 }
 #pragma pop
 
-/* 80083944 005C .text      Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt                        */
+/* 80083944-800839A0 005C .text      Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt                        Function */
 // dCcD_GObjAt::Set(const dCcD_SrcGObjAt&)
 #pragma push
 #pragma optimization_level 0
@@ -714,7 +964,7 @@ asm void Set__11dCcD_GObjAtFRC14dCcD_SrcGObjAt() {
 }
 #pragma pop
 
-/* 800839A0 0088 .text      Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg                        */
+/* 800839A0-80083A28 0088 .text      Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg                        Function */
 // dCcD_GObjTg::Set(const dCcD_SrcGObjTg&)
 #pragma push
 #pragma optimization_level 0
@@ -725,7 +975,7 @@ asm void Set__11dCcD_GObjTgFRC14dCcD_SrcGObjTg() {
 }
 #pragma pop
 
-/* 80083A28 0164 .text      __ct__12dCcD_GObjInfFv                                       */
+/* 80083A28-80083B8C 0164 .text      __ct__12dCcD_GObjInfFv                                       Function */
 // dCcD_GObjInf::dCcD_GObjInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -736,7 +986,7 @@ asm void __ct__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80083B8C 005C .text      __dt__11dCcD_GObjCoFv                                        */
+/* 80083B8C-80083BE8 005C .text      __dt__11dCcD_GObjCoFv                                        Function */
 // dCcD_GObjCo::~dCcD_GObjCo(void)
 #pragma push
 #pragma optimization_level 0
@@ -747,7 +997,7 @@ asm void __dt__11dCcD_GObjCoFv() {
 }
 #pragma pop
 
-/* 80083BE8 005C .text      __dt__11dCcD_GObjTgFv                                        */
+/* 80083BE8-80083C44 005C .text      __dt__11dCcD_GObjTgFv                                        Function */
 // dCcD_GObjTg::~dCcD_GObjTg(void)
 #pragma push
 #pragma optimization_level 0
@@ -758,7 +1008,7 @@ asm void __dt__11dCcD_GObjTgFv() {
 }
 #pragma pop
 
-/* 80083C44 005C .text      __dt__11dCcD_GObjAtFv                                        */
+/* 80083C44-80083CA0 005C .text      __dt__11dCcD_GObjAtFv                                        Function */
 // dCcD_GObjAt::~dCcD_GObjAt(void)
 #pragma push
 #pragma optimization_level 0
@@ -769,7 +1019,7 @@ asm void __dt__11dCcD_GObjAtFv() {
 }
 #pragma pop
 
-/* 80083CA0 0048 .text      __dt__22dCcD_GAtTgCoCommonBaseFv                             */
+/* 80083CA0-80083CE8 0048 .text      __dt__22dCcD_GAtTgCoCommonBaseFv                             Function */
 // dCcD_GAtTgCoCommonBase::~dCcD_GAtTgCoCommonBase(void)
 #pragma push
 #pragma optimization_level 0
@@ -780,7 +1030,7 @@ asm void __dt__22dCcD_GAtTgCoCommonBaseFv() {
 }
 #pragma pop
 
-/* 80083CE8 00F8 .text      __dt__12cCcD_GObjInfFv                                       */
+/* 80083CE8-80083DE0 00F8 .text      __dt__12cCcD_GObjInfFv                                       Function */
 // cCcD_GObjInf::~cCcD_GObjInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -791,7 +1041,7 @@ asm void __dt__12cCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80083DE0 00E8 .text      __dt__8cCcD_ObjFv                                            */
+/* 80083DE0-80083EC8 00E8 .text      __dt__8cCcD_ObjFv                                            Function */
 // cCcD_Obj::~cCcD_Obj(void)
 #pragma push
 #pragma optimization_level 0
@@ -802,7 +1052,7 @@ asm void __dt__8cCcD_ObjFv() {
 }
 #pragma pop
 
-/* 80083EC8 00C0 .text      __dt__14cCcD_ObjHitInfFv                                     */
+/* 80083EC8-80083F88 00C0 .text      __dt__14cCcD_ObjHitInfFv                                     Function */
 // cCcD_ObjHitInf::~cCcD_ObjHitInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -813,7 +1063,7 @@ asm void __dt__14cCcD_ObjHitInfFv() {
 }
 #pragma pop
 
-/* 80083F88 005C .text      __dt__10cCcD_ObjCoFv                                         */
+/* 80083F88-80083FE4 005C .text      __dt__10cCcD_ObjCoFv                                         Function */
 // cCcD_ObjCo::~cCcD_ObjCo(void)
 #pragma push
 #pragma optimization_level 0
@@ -824,7 +1074,7 @@ asm void __dt__10cCcD_ObjCoFv() {
 }
 #pragma pop
 
-/* 80083FE4 005C .text      __dt__10cCcD_ObjTgFv                                         */
+/* 80083FE4-80084040 005C .text      __dt__10cCcD_ObjTgFv                                         Function */
 // cCcD_ObjTg::~cCcD_ObjTg(void)
 #pragma push
 #pragma optimization_level 0
@@ -835,7 +1085,7 @@ asm void __dt__10cCcD_ObjTgFv() {
 }
 #pragma pop
 
-/* 80084040 005C .text      __dt__10cCcD_ObjAtFv                                         */
+/* 80084040-8008409C 005C .text      __dt__10cCcD_ObjAtFv                                         Function */
 // cCcD_ObjAt::~cCcD_ObjAt(void)
 #pragma push
 #pragma optimization_level 0
@@ -846,7 +1096,7 @@ asm void __dt__10cCcD_ObjAtFv() {
 }
 #pragma pop
 
-/* 8008409C 0048 .text      __dt__18cCcD_ObjCommonBaseFv                                 */
+/* 8008409C-800840E4 0048 .text      __dt__18cCcD_ObjCommonBaseFv                                 Function */
 // cCcD_ObjCommonBase::~cCcD_ObjCommonBase(void)
 #pragma push
 #pragma optimization_level 0
@@ -857,7 +1107,7 @@ asm void __dt__18cCcD_ObjCommonBaseFv() {
 }
 #pragma pop
 
-/* 800840E4 0184 .text      __dt__12dCcD_GObjInfFv                                       */
+/* 800840E4-80084268 0184 .text      __dt__12dCcD_GObjInfFv                                       Function */
 // dCcD_GObjInf::~dCcD_GObjInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -868,13 +1118,13 @@ asm void __dt__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084268 0004 .text      GetGObjInf__12dCcD_GObjInfFv                                 */
+/* 80084268-8008426C 0004 .text      GetGObjInf__12dCcD_GObjInfFv                                 ReturnFunction */
 // dCcD_GObjInf::GetGObjInf(void)
 void GetGObjInf__12dCcD_GObjInfFv() {
 	return;
 }
 
-/* 8008426C 0054 .text      ClrAtHit__12dCcD_GObjInfFv                                   */
+/* 8008426C-800842C0 0054 .text      ClrAtHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ClrAtHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -885,7 +1135,7 @@ asm void ClrAtHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800842C0 0058 .text      ChkAtHit__12dCcD_GObjInfFv                                   */
+/* 800842C0-80084318 0058 .text      ChkAtHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ChkAtHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -896,7 +1146,7 @@ asm void ChkAtHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084318 0040 .text      ResetAtHit__12dCcD_GObjInfFv                                 */
+/* 80084318-80084358 0040 .text      ResetAtHit__12dCcD_GObjInfFv                                 Function */
 // dCcD_GObjInf::ResetAtHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -907,7 +1157,7 @@ asm void ResetAtHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084358 0050 .text      GetAtHitObj__12dCcD_GObjInfFv                                */
+/* 80084358-800843A8 0050 .text      GetAtHitObj__12dCcD_GObjInfFv                                Function */
 // dCcD_GObjInf::GetAtHitObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -918,7 +1168,7 @@ asm void GetAtHitObj__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800843A8 0034 .text      GetAtHitGObj__12dCcD_GObjInfFv                               */
+/* 800843A8-800843DC 0034 .text      GetAtHitGObj__12dCcD_GObjInfFv                               Function */
 // dCcD_GObjInf::GetAtHitGObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -929,7 +1179,7 @@ asm void GetAtHitGObj__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800843DC 0020 .text      ChkAtNoGuard__12dCcD_GObjInfFv                               */
+/* 800843DC-800843FC 0020 .text      ChkAtNoGuard__12dCcD_GObjInfFv                               Function */
 // dCcD_GObjInf::ChkAtNoGuard(void)
 #pragma push
 #pragma optimization_level 0
@@ -940,7 +1190,7 @@ asm void ChkAtNoGuard__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800843FC 0064 .text      ClrTgHit__12dCcD_GObjInfFv                                   */
+/* 800843FC-80084460 0064 .text      ClrTgHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ClrTgHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -951,7 +1201,7 @@ asm void ClrTgHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084460 0058 .text      ChkTgHit__12dCcD_GObjInfFv                                   */
+/* 80084460-800844B8 0058 .text      ChkTgHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ChkTgHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -962,7 +1212,7 @@ asm void ChkTgHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800844B8 0040 .text      ResetTgHit__12dCcD_GObjInfFv                                 */
+/* 800844B8-800844F8 0040 .text      ResetTgHit__12dCcD_GObjInfFv                                 Function */
 // dCcD_GObjInf::ResetTgHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -973,7 +1223,7 @@ asm void ResetTgHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800844F8 0050 .text      GetTgHitObj__12dCcD_GObjInfFv                                */
+/* 800844F8-80084548 0050 .text      GetTgHitObj__12dCcD_GObjInfFv                                Function */
 // dCcD_GObjInf::GetTgHitObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -984,7 +1234,7 @@ asm void GetTgHitObj__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084548 0034 .text      GetTgHitGObj__12dCcD_GObjInfFv                               */
+/* 80084548-8008457C 0034 .text      GetTgHitGObj__12dCcD_GObjInfFv                               Function */
 // dCcD_GObjInf::GetTgHitGObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -995,7 +1245,7 @@ asm void GetTgHitGObj__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 8008457C 0034 .text      GetTgHitObjSe__12dCcD_GObjInfFv                              */
+/* 8008457C-800845B0 0034 .text      GetTgHitObjSe__12dCcD_GObjInfFv                              Function */
 // dCcD_GObjInf::GetTgHitObjSe(void)
 #pragma push
 #pragma optimization_level 0
@@ -1006,7 +1256,7 @@ asm void GetTgHitObjSe__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800845B0 005C .text      getHitSeID__12dCcD_GObjInfFUci                               */
+/* 800845B0-8008460C 005C .text      getHitSeID__12dCcD_GObjInfFUci                               Function */
 // dCcD_GObjInf::getHitSeID(u8, int)
 #pragma push
 #pragma optimization_level 0
@@ -1017,7 +1267,7 @@ asm void getHitSeID__12dCcD_GObjInfFUci() {
 }
 #pragma pop
 
-/* 8008460C 004C .text      ClrCoHit__12dCcD_GObjInfFv                                   */
+/* 8008460C-80084658 004C .text      ClrCoHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ClrCoHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1028,7 +1278,7 @@ asm void ClrCoHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084658 0058 .text      ChkCoHit__12dCcD_GObjInfFv                                   */
+/* 80084658-800846B0 0058 .text      ChkCoHit__12dCcD_GObjInfFv                                   Function */
 // dCcD_GObjInf::ChkCoHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1039,7 +1289,7 @@ asm void ChkCoHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800846B0 0040 .text      ResetCoHit__12dCcD_GObjInfFv                                 */
+/* 800846B0-800846F0 0040 .text      ResetCoHit__12dCcD_GObjInfFv                                 Function */
 // dCcD_GObjInf::ResetCoHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1050,7 +1300,7 @@ asm void ResetCoHit__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800846F0 0050 .text      GetCoHitObj__12dCcD_GObjInfFv                                */
+/* 800846F0-80084740 0050 .text      GetCoHitObj__12dCcD_GObjInfFv                                Function */
 // dCcD_GObjInf::GetCoHitObj(void)
 #pragma push
 #pragma optimization_level 0
@@ -1061,7 +1311,7 @@ asm void GetCoHitObj__12dCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80084740 005C .text      Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf                      */
+/* 80084740-8008479C 005C .text      Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf                      Function */
 // dCcD_GObjInf::Set(const dCcD_SrcGObjInf&)
 #pragma push
 #pragma optimization_level 0
@@ -1072,7 +1322,7 @@ asm void Set__12dCcD_GObjInfFRC15dCcD_SrcGObjInf() {
 }
 #pragma pop
 
-/* 8008479C 002C .text      dCcD_GetGObjInf__FP8cCcD_Obj                                 */
+/* 8008479C-800847C8 002C .text      dCcD_GetGObjInf__FP8cCcD_Obj                                 Function */
 }
 
 #pragma push
@@ -1085,13 +1335,13 @@ asm void dCcD_GetGObjInf(cCcD_Obj*) {
 #pragma pop
 
 extern "C" {
-/* 800847C8 0008 .text      GetGObjInf__8cCcD_ObjFv                                      */
+/* 800847C8-800847D0 0008 .text      GetGObjInf__8cCcD_ObjFv                                      ReturnIntegerFunction */
 // cCcD_Obj::GetGObjInf(void)
 int GetGObjInf__8cCcD_ObjFv() {
 	return 0;
 }
 
-/* 800847D0 0044 .text      Set__8dCcD_CpsFRC11dCcD_SrcCps                               */
+/* 800847D0-80084814 0044 .text      Set__8dCcD_CpsFRC11dCcD_SrcCps                               Function */
 // dCcD_Cps::Set(const dCcD_SrcCps&)
 #pragma push
 #pragma optimization_level 0
@@ -1102,7 +1352,7 @@ asm void Set__8dCcD_CpsFRC11dCcD_SrcCps() {
 }
 #pragma pop
 
-/* 80084814 0010 .text      GetShapeAttr__8dCcD_CpsFv                                    */
+/* 80084814-80084824 0010 .text      GetShapeAttr__8dCcD_CpsFv                                    Function */
 // dCcD_Cps::GetShapeAttr(void)
 #pragma push
 #pragma optimization_level 0
@@ -1113,7 +1363,7 @@ asm void GetShapeAttr__8dCcD_CpsFv() {
 }
 #pragma pop
 
-/* 80084824 0030 .text      CalcAtVec__8dCcD_CpsFv                                       */
+/* 80084824-80084854 0030 .text      CalcAtVec__8dCcD_CpsFv                                       Function */
 // dCcD_Cps::CalcAtVec(void)
 #pragma push
 #pragma optimization_level 0
@@ -1124,7 +1374,7 @@ asm void CalcAtVec__8dCcD_CpsFv() {
 }
 #pragma pop
 
-/* 80084854 0030 .text      CalcTgVec__8dCcD_CpsFv                                       */
+/* 80084854-80084884 0030 .text      CalcTgVec__8dCcD_CpsFv                                       Function */
 // dCcD_Cps::CalcTgVec(void)
 #pragma push
 #pragma optimization_level 0
@@ -1135,7 +1385,7 @@ asm void CalcTgVec__8dCcD_CpsFv() {
 }
 #pragma pop
 
-/* 80084884 0020 .text      Set__8dCcD_TriFRC11dCcD_SrcTri                               */
+/* 80084884-800848A4 0020 .text      Set__8dCcD_TriFRC11dCcD_SrcTri                               Function */
 // dCcD_Tri::Set(const dCcD_SrcTri&)
 #pragma push
 #pragma optimization_level 0
@@ -1146,7 +1396,7 @@ asm void Set__8dCcD_TriFRC11dCcD_SrcTri() {
 }
 #pragma pop
 
-/* 800848A4 0010 .text      GetShapeAttr__8dCcD_TriFv                                    */
+/* 800848A4-800848B4 0010 .text      GetShapeAttr__8dCcD_TriFv                                    Function */
 // dCcD_Tri::GetShapeAttr(void)
 #pragma push
 #pragma optimization_level 0
@@ -1157,7 +1407,7 @@ asm void GetShapeAttr__8dCcD_TriFv() {
 }
 #pragma pop
 
-/* 800848B4 0044 .text      Set__8dCcD_CylFRC11dCcD_SrcCyl                               */
+/* 800848B4-800848F8 0044 .text      Set__8dCcD_CylFRC11dCcD_SrcCyl                               Function */
 // dCcD_Cyl::Set(const dCcD_SrcCyl&)
 #pragma push
 #pragma optimization_level 0
@@ -1168,7 +1418,7 @@ asm void Set__8dCcD_CylFRC11dCcD_SrcCyl() {
 }
 #pragma pop
 
-/* 800848F8 0010 .text      GetShapeAttr__8dCcD_CylFv                                    */
+/* 800848F8-80084908 0010 .text      GetShapeAttr__8dCcD_CylFv                                    Function */
 // dCcD_Cyl::GetShapeAttr(void)
 #pragma push
 #pragma optimization_level 0
@@ -1179,7 +1429,7 @@ asm void GetShapeAttr__8dCcD_CylFv() {
 }
 #pragma pop
 
-/* 80084908 004C .text      StartCAt__8dCcD_CylFR4cXyz                                   */
+/* 80084908-80084954 004C .text      StartCAt__8dCcD_CylFR4cXyz                                   Function */
 // dCcD_Cyl::StartCAt(cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -1190,7 +1440,7 @@ asm void StartCAt__8dCcD_CylFR4cXyz() {
 }
 #pragma pop
 
-/* 80084954 0070 .text      MoveCAt__8dCcD_CylFR4cXyz                                    */
+/* 80084954-800849C4 0070 .text      MoveCAt__8dCcD_CylFR4cXyz                                    Function */
 // dCcD_Cyl::MoveCAt(cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -1201,7 +1451,7 @@ asm void MoveCAt__8dCcD_CylFR4cXyz() {
 }
 #pragma pop
 
-/* 800849C4 0070 .text      MoveCTg__8dCcD_CylFR4cXyz                                    */
+/* 800849C4-80084A34 0070 .text      MoveCTg__8dCcD_CylFR4cXyz                                    Function */
 // dCcD_Cyl::MoveCTg(cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -1212,7 +1462,7 @@ asm void MoveCTg__8dCcD_CylFR4cXyz() {
 }
 #pragma pop
 
-/* 80084A34 0044 .text      Set__8dCcD_SphFRC11dCcD_SrcSph                               */
+/* 80084A34-80084A78 0044 .text      Set__8dCcD_SphFRC11dCcD_SrcSph                               Function */
 // dCcD_Sph::Set(const dCcD_SrcSph&)
 #pragma push
 #pragma optimization_level 0
@@ -1223,7 +1473,7 @@ asm void Set__8dCcD_SphFRC11dCcD_SrcSph() {
 }
 #pragma pop
 
-/* 80084A78 004C .text      StartCAt__8dCcD_SphFR4cXyz                                   */
+/* 80084A78-80084AC4 004C .text      StartCAt__8dCcD_SphFR4cXyz                                   Function */
 // dCcD_Sph::StartCAt(cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -1234,7 +1484,7 @@ asm void StartCAt__8dCcD_SphFR4cXyz() {
 }
 #pragma pop
 
-/* 80084AC4 0070 .text      MoveCAt__8dCcD_SphFR4cXyz                                    */
+/* 80084AC4-80084B34 0070 .text      MoveCAt__8dCcD_SphFR4cXyz                                    Function */
 // dCcD_Sph::MoveCAt(cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -1245,7 +1495,7 @@ asm void MoveCAt__8dCcD_SphFR4cXyz() {
 }
 #pragma pop
 
-/* 80084B34 0010 .text      GetShapeAttr__8dCcD_SphFv                                    */
+/* 80084B34-80084B44 0010 .text      GetShapeAttr__8dCcD_SphFv                                    Function */
 // dCcD_Sph::GetShapeAttr(void)
 #pragma push
 #pragma optimization_level 0
@@ -1256,25 +1506,25 @@ asm void GetShapeAttr__8dCcD_SphFv() {
 }
 #pragma pop
 
-/* 80084B44 0008 .text      GetCoCP__12cCcD_SphAttrCFv                                   */
+/* 80084B44-80084B4C 0008 .text      GetCoCP__12cCcD_SphAttrCFv                                   FirstParamFunction */
 // cCcD_SphAttr::GetCoCP(void) const
 u8* GetCoCP__12cCcD_SphAttrCFv(u8* param0) {
 	return (u8*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 80084B4C 0008 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084B4C-80084B54 0008 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_SphAttr::CrossAtTg(const cCcD_AabAttr&, cXyz*) const
 int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_AabAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084B54 0008 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084B54-80084B5C 0008 .text      CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_SphAttr::CrossAtTg(const cCcD_PntAttr&, cXyz*) const
 int CrossAtTg__12cCcD_SphAttrCFRC12cCcD_PntAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084B5C 0038 .text      CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084B5C-80084B94 0038 .text      CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz          Function */
 // cCcD_SphAttr::CrossAtTg(const cCcD_ShapeAttr&, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -1285,25 +1535,25 @@ asm void CrossAtTg__12cCcD_SphAttrCFRC14cCcD_ShapeAttrP4cXyz() {
 }
 #pragma pop
 
-/* 80084B94 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084B94-80084B9C 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf                  ReturnIntegerFunction */
 // cCcD_SphAttr::CrossCo(const cCcD_AabAttr&, f32*) const
 int CrossCo__12cCcD_SphAttrCFRC12cCcD_AabAttrPf() {
 	return 0;
 }
 
-/* 80084B9C 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084B9C-80084BA4 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf                  ReturnIntegerFunction */
 // cCcD_SphAttr::CrossCo(const cCcD_TriAttr&, f32*) const
 int CrossCo__12cCcD_SphAttrCFRC12cCcD_TriAttrPf() {
 	return 0;
 }
 
-/* 80084BA4 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084BA4-80084BAC 0008 .text      CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf                  ReturnIntegerFunction */
 // cCcD_SphAttr::CrossCo(const cCcD_PntAttr&, f32*) const
 int CrossCo__12cCcD_SphAttrCFRC12cCcD_PntAttrPf() {
 	return 0;
 }
 
-/* 80084BAC 0038 .text      CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084BAC-80084BE4 0038 .text      CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf                Function */
 // cCcD_SphAttr::CrossCo(const cCcD_ShapeAttr&, f32*) const
 #pragma push
 #pragma optimization_level 0
@@ -1314,25 +1564,25 @@ asm void CrossCo__12cCcD_SphAttrCFRC14cCcD_ShapeAttrPf() {
 }
 #pragma pop
 
-/* 80084BE4 0004 .text      GetGObjInf__12cCcD_GObjInfCFv                                */
+/* 80084BE4-80084BE8 0004 .text      GetGObjInf__12cCcD_GObjInfCFv                                ReturnFunction */
 // cCcD_GObjInf::GetGObjInf(void) const
 void GetGObjInf__12cCcD_GObjInfCFv() {
 	return;
 }
 
-/* 80084BE8 0008 .text      GetShapeAttr__8cCcD_ObjCFv                                   */
+/* 80084BE8-80084BF0 0008 .text      GetShapeAttr__8cCcD_ObjCFv                                   ReturnIntegerFunction */
 // cCcD_Obj::GetShapeAttr(void) const
 int GetShapeAttr__8cCcD_ObjCFv() {
 	return 0;
 }
 
-/* 80084BF0 0004 .text      Draw__8cCcD_ObjFRC8_GXColor                                  */
+/* 80084BF0-80084BF4 0004 .text      Draw__8cCcD_ObjFRC8_GXColor                                  ReturnFunction */
 // cCcD_Obj::Draw(const _GXColor&)
 void Draw__8cCcD_ObjFRC8_GXColor() {
 	return;
 }
 
-/* 80084BF4 00CC .text      __dt__8dCcD_SphFv                                            */
+/* 80084BF4-80084CC0 00CC .text      __dt__8dCcD_SphFv                                            Function */
 // dCcD_Sph::~dCcD_Sph(void)
 #pragma push
 #pragma optimization_level 0
@@ -1343,25 +1593,25 @@ asm void __dt__8dCcD_SphFv() {
 }
 #pragma pop
 
-/* 80084CC0 0008 .text      GetCoCP__12cCcD_CylAttrCFv                                   */
+/* 80084CC0-80084CC8 0008 .text      GetCoCP__12cCcD_CylAttrCFv                                   FirstParamFunction */
 // cCcD_CylAttr::GetCoCP(void) const
 u8* GetCoCP__12cCcD_CylAttrCFv(u8* param0) {
 	return (u8*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 80084CC8 0008 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084CC8-80084CD0 0008 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_CylAttr::CrossAtTg(const cCcD_AabAttr&, cXyz*) const
 int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_AabAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084CD0 0008 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084CD0-80084CD8 0008 .text      CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_CylAttr::CrossAtTg(const cCcD_PntAttr&, cXyz*) const
 int CrossAtTg__12cCcD_CylAttrCFRC12cCcD_PntAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084CD8 0038 .text      CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084CD8-80084D10 0038 .text      CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz          Function */
 // cCcD_CylAttr::CrossAtTg(const cCcD_ShapeAttr&, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -1372,25 +1622,25 @@ asm void CrossAtTg__12cCcD_CylAttrCFRC14cCcD_ShapeAttrP4cXyz() {
 }
 #pragma pop
 
-/* 80084D10 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084D10-80084D18 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf                  ReturnIntegerFunction */
 // cCcD_CylAttr::CrossCo(const cCcD_AabAttr&, f32*) const
 int CrossCo__12cCcD_CylAttrCFRC12cCcD_AabAttrPf() {
 	return 0;
 }
 
-/* 80084D18 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084D18-80084D20 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf                  ReturnIntegerFunction */
 // cCcD_CylAttr::CrossCo(const cCcD_TriAttr&, f32*) const
 int CrossCo__12cCcD_CylAttrCFRC12cCcD_TriAttrPf() {
 	return 0;
 }
 
-/* 80084D20 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084D20-80084D28 0008 .text      CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf                  ReturnIntegerFunction */
 // cCcD_CylAttr::CrossCo(const cCcD_PntAttr&, f32*) const
 int CrossCo__12cCcD_CylAttrCFRC12cCcD_PntAttrPf() {
 	return 0;
 }
 
-/* 80084D28 0038 .text      CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084D28-80084D60 0038 .text      CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf                Function */
 // cCcD_CylAttr::CrossCo(const cCcD_ShapeAttr&, f32*) const
 #pragma push
 #pragma optimization_level 0
@@ -1401,7 +1651,7 @@ asm void CrossCo__12cCcD_CylAttrCFRC14cCcD_ShapeAttrPf() {
 }
 #pragma pop
 
-/* 80084D60 00CC .text      __dt__8dCcD_CylFv                                            */
+/* 80084D60-80084E2C 00CC .text      __dt__8dCcD_CylFv                                            Function */
 // dCcD_Cyl::~dCcD_Cyl(void)
 #pragma push
 #pragma optimization_level 0
@@ -1412,7 +1662,7 @@ asm void __dt__8dCcD_CylFv() {
 }
 #pragma pop
 
-/* 80084E2C 000C .text      GetCoCP__14cCcD_ShapeAttrFv                                  */
+/* 80084E2C-80084E38 000C .text      GetCoCP__14cCcD_ShapeAttrFv                                  Function */
 // cCcD_ShapeAttr::GetCoCP(void)
 #pragma push
 #pragma optimization_level 0
@@ -1423,7 +1673,7 @@ asm void GetCoCP__14cCcD_ShapeAttrFv() {
 }
 #pragma pop
 
-/* 80084E38 000C .text      GetCoCP__14cCcD_ShapeAttrCFv                                 */
+/* 80084E38-80084E44 000C .text      GetCoCP__14cCcD_ShapeAttrCFv                                 Function */
 // cCcD_ShapeAttr::GetCoCP(void) const
 #pragma push
 #pragma optimization_level 0
@@ -1434,19 +1684,19 @@ asm void GetCoCP__14cCcD_ShapeAttrCFv() {
 }
 #pragma pop
 
-/* 80084E44 0008 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084E44-80084E4C 0008 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_TriAttr::CrossAtTg(const cCcD_AabAttr&, cXyz*) const
 int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_AabAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084E4C 0008 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084E4C-80084E54 0008 .text      CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_TriAttr::CrossAtTg(const cCcD_PntAttr&, cXyz*) const
 int CrossAtTg__12cCcD_TriAttrCFRC12cCcD_PntAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084E54 0038 .text      CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084E54-80084E8C 0038 .text      CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz          Function */
 // cCcD_TriAttr::CrossAtTg(const cCcD_ShapeAttr&, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -1457,43 +1707,43 @@ asm void CrossAtTg__12cCcD_TriAttrCFRC14cCcD_ShapeAttrP4cXyz() {
 }
 #pragma pop
 
-/* 80084E8C 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf                  */
+/* 80084E8C-80084E94 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_SphAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_SphAttrPf() {
 	return 0;
 }
 
-/* 80084E94 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf                  */
+/* 80084E94-80084E9C 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_CylAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_CylAttrPf() {
 	return 0;
 }
 
-/* 80084E9C 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf                  */
+/* 80084E9C-80084EA4 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_AabAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_AabAttrPf() {
 	return 0;
 }
 
-/* 80084EA4 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf                  */
+/* 80084EA4-80084EAC 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_TriAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_TriAttrPf() {
 	return 0;
 }
 
-/* 80084EAC 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf                  */
+/* 80084EAC-80084EB4 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_CpsAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_CpsAttrPf() {
 	return 0;
 }
 
-/* 80084EB4 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf                  */
+/* 80084EB4-80084EBC 0008 .text      CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf                  ReturnIntegerFunction */
 // cCcD_TriAttr::CrossCo(const cCcD_PntAttr&, f32*) const
 int CrossCo__12cCcD_TriAttrCFRC12cCcD_PntAttrPf() {
 	return 0;
 }
 
-/* 80084EBC 0038 .text      CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80084EBC-80084EF4 0038 .text      CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf                Function */
 // cCcD_TriAttr::CrossCo(const cCcD_ShapeAttr&, f32*) const
 #pragma push
 #pragma optimization_level 0
@@ -1504,7 +1754,7 @@ asm void CrossCo__12cCcD_TriAttrCFRC14cCcD_ShapeAttrPf() {
 }
 #pragma pop
 
-/* 80084EF4 00E0 .text      __dt__8dCcD_TriFv                                            */
+/* 80084EF4-80084FD4 00E0 .text      __dt__8dCcD_TriFv                                            Function */
 // dCcD_Tri::~dCcD_Tri(void)
 #pragma push
 #pragma optimization_level 0
@@ -1515,19 +1765,19 @@ asm void __dt__8dCcD_TriFv() {
 }
 #pragma pop
 
-/* 80084FD4 0008 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz            */
+/* 80084FD4-80084FDC 0008 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_CpsAttr::CrossAtTg(const cCcD_AabAttr&, cXyz*) const
 int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_AabAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084FDC 0008 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz            */
+/* 80084FDC-80084FE4 0008 .text      CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz            ReturnIntegerFunction */
 // cCcD_CpsAttr::CrossAtTg(const cCcD_PntAttr&, cXyz*) const
 int CrossAtTg__12cCcD_CpsAttrCFRC12cCcD_PntAttrP4cXyz() {
 	return 0;
 }
 
-/* 80084FE4 0038 .text      CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz          */
+/* 80084FE4-8008501C 0038 .text      CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz          Function */
 // cCcD_CpsAttr::CrossAtTg(const cCcD_ShapeAttr&, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -1538,25 +1788,25 @@ asm void CrossAtTg__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrP4cXyz() {
 }
 #pragma pop
 
-/* 8008501C 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf                  */
+/* 8008501C-80085024 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf                  ReturnIntegerFunction */
 // cCcD_CpsAttr::CrossCo(const cCcD_AabAttr&, f32*) const
 int CrossCo__12cCcD_CpsAttrCFRC12cCcD_AabAttrPf() {
 	return 0;
 }
 
-/* 80085024 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf                  */
+/* 80085024-8008502C 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf                  ReturnIntegerFunction */
 // cCcD_CpsAttr::CrossCo(const cCcD_TriAttr&, f32*) const
 int CrossCo__12cCcD_CpsAttrCFRC12cCcD_TriAttrPf() {
 	return 0;
 }
 
-/* 8008502C 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf                  */
+/* 8008502C-80085034 0008 .text      CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf                  ReturnIntegerFunction */
 // cCcD_CpsAttr::CrossCo(const cCcD_PntAttr&, f32*) const
 int CrossCo__12cCcD_CpsAttrCFRC12cCcD_PntAttrPf() {
 	return 0;
 }
 
-/* 80085034 0038 .text      CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf                */
+/* 80085034-8008506C 0038 .text      CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf                Function */
 // cCcD_CpsAttr::CrossCo(const cCcD_ShapeAttr&, f32*) const
 #pragma push
 #pragma optimization_level 0
@@ -1567,7 +1817,7 @@ asm void CrossCo__12cCcD_CpsAttrCFRC14cCcD_ShapeAttrPf() {
 }
 #pragma pop
 
-/* 8008506C 00C4 .text      __dt__8dCcD_CpsFv                                            */
+/* 8008506C-80085130 00C4 .text      __dt__8dCcD_CpsFv                                            Function */
 // dCcD_Cps::~dCcD_Cps(void)
 #pragma push
 #pragma optimization_level 0
@@ -1578,13 +1828,13 @@ asm void __dt__8dCcD_CpsFv() {
 }
 #pragma pop
 
-/* 80085130 0008 .text      GetShapeAttr__8cCcD_ObjFv                                    */
+/* 80085130-80085138 0008 .text      GetShapeAttr__8cCcD_ObjFv                                    ReturnIntegerFunction */
 // cCcD_Obj::GetShapeAttr(void)
 int GetShapeAttr__8cCcD_ObjFv() {
 	return 0;
 }
 
-/* 80085138 0020 .text      ClrAtHit__12cCcD_GObjInfFv                                   */
+/* 80085138-80085158 0020 .text      ClrAtHit__12cCcD_GObjInfFv                                   Function */
 // cCcD_GObjInf::ClrAtHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1595,7 +1845,7 @@ asm void ClrAtHit__12cCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 80085158 0024 .text      ClrTgHit__12cCcD_GObjInfFv                                   */
+/* 80085158-8008517C 0024 .text      ClrTgHit__12cCcD_GObjInfFv                                   Function */
 // cCcD_GObjInf::ClrTgHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1606,7 +1856,7 @@ asm void ClrTgHit__12cCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 8008517C 0024 .text      ClrCoHit__12cCcD_GObjInfFv                                   */
+/* 8008517C-800851A0 0024 .text      ClrCoHit__12cCcD_GObjInfFv                                   Function */
 // cCcD_GObjInf::ClrCoHit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1617,19 +1867,19 @@ asm void ClrCoHit__12cCcD_GObjInfFv() {
 }
 #pragma pop
 
-/* 800851A0 0004 .text      GetGObjInf__12cCcD_GObjInfFv                                 */
+/* 800851A0-800851A4 0004 .text      GetGObjInf__12cCcD_GObjInfFv                                 ReturnFunction */
 // cCcD_GObjInf::GetGObjInf(void)
 void GetGObjInf__12cCcD_GObjInfFv() {
 	return;
 }
 
-/* 800851A4 0008 .text      GetGObjInf__8cCcD_ObjCFv                                     */
+/* 800851A4-800851AC 0008 .text      GetGObjInf__8cCcD_ObjCFv                                     ReturnIntegerFunction */
 // cCcD_Obj::GetGObjInf(void) const
 int GetGObjInf__8cCcD_ObjCFv() {
 	return 0;
 }
 
-/* 800851AC 0090 .text      __dt__9dCcD_SttsFv                                           */
+/* 800851AC-8008523C 0090 .text      __dt__9dCcD_SttsFv                                           Function */
 // dCcD_Stts::~dCcD_Stts(void)
 #pragma push
 #pragma optimization_level 0
@@ -1640,7 +1890,7 @@ asm void __dt__9dCcD_SttsFv() {
 }
 #pragma pop
 
-/* 8008523C 005C .text      __dt__10dCcD_GSttsFv                                         */
+/* 8008523C-80085298 005C .text      __dt__10dCcD_GSttsFv                                         Function */
 // dCcD_GStts::~dCcD_GStts(void)
 #pragma push
 #pragma optimization_level 0
@@ -1651,7 +1901,7 @@ asm void __dt__10dCcD_GSttsFv() {
 }
 #pragma pop
 
-/* 80085298 0008 .text      @28@__dt__9dCcD_SttsFv                                       */
+/* 80085298-800852A0 0008 .text      @28@__dt__9dCcD_SttsFv                                       Function */
 // dCcD_Stts::@28@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1662,7 +1912,7 @@ asm void func_80085298() {
 }
 #pragma pop
 
-/* 800852A0 0008 .text      @292@__dt__8dCcD_CpsFv                                       */
+/* 800852A0-800852A8 0008 .text      @292@__dt__8dCcD_CpsFv                                       Function */
 // dCcD_Cps::@292@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1673,7 +1923,7 @@ asm void func_800852A0() {
 }
 #pragma pop
 
-/* 800852A8 0008 .text      @260@__dt__8dCcD_CpsFv                                       */
+/* 800852A8-800852B0 0008 .text      @260@__dt__8dCcD_CpsFv                                       Function */
 // dCcD_Cps::@260@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1684,7 +1934,7 @@ asm void func_800852A8() {
 }
 #pragma pop
 
-/* 800852B0 0008 .text      @292@__dt__8dCcD_TriFv                                       */
+/* 800852B0-800852B8 0008 .text      @292@__dt__8dCcD_TriFv                                       Function */
 // dCcD_Tri::@292@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1695,7 +1945,7 @@ asm void func_800852B0() {
 }
 #pragma pop
 
-/* 800852B8 0008 .text      @260@__dt__8dCcD_TriFv                                       */
+/* 800852B8-800852C0 0008 .text      @260@__dt__8dCcD_TriFv                                       Function */
 // dCcD_Tri::@260@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1706,7 +1956,7 @@ asm void func_800852B8() {
 }
 #pragma pop
 
-/* 800852C0 0008 .text      @292@__dt__8dCcD_CylFv                                       */
+/* 800852C0-800852C8 0008 .text      @292@__dt__8dCcD_CylFv                                       Function */
 // dCcD_Cyl::@292@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1717,7 +1967,7 @@ asm void func_800852C0() {
 }
 #pragma pop
 
-/* 800852C8 0008 .text      @260@__dt__8dCcD_CylFv                                       */
+/* 800852C8-800852D0 0008 .text      @260@__dt__8dCcD_CylFv                                       Function */
 // dCcD_Cyl::@260@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1728,7 +1978,7 @@ asm void func_800852C8() {
 }
 #pragma pop
 
-/* 800852D0 0008 .text      @292@__dt__8dCcD_SphFv                                       */
+/* 800852D0-800852D8 0008 .text      @292@__dt__8dCcD_SphFv                                       Function */
 // dCcD_Sph::@292@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -1739,7 +1989,7 @@ asm void func_800852D0() {
 }
 #pragma pop
 
-/* 800852D8 0008 .text      @260@__dt__8dCcD_SphFv                                       */
+/* 800852D8-800852E0 0008 .text      @260@__dt__8dCcD_SphFv                                       Function */
 // dCcD_Sph::@260@__dt(void)
 #pragma push
 #pragma optimization_level 0

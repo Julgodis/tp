@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void copysign();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C000 0028 .text      copysign                                                     */
+/* 8036C000-8036C028 0028 .text      copysign                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

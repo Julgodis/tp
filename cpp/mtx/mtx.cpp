@@ -9,20 +9,63 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void PSMTXIdentity();
+/* Function             */
+extern void PSMTXCopy();
+/* Function             */
+extern void PSMTXConcat();
+/* Function             */
+extern void PSMTXInverse();
+/* Function             */
+extern void PSMTXRotRad();
+/* Function             */
 extern void PSMTXRotTrig();
+/* Function             */
 extern void __PSMTXRotAxisRadInternal();
+/* Function             */
+extern void PSMTXRotAxisRad();
+/* Function             */
+extern void PSMTXTrans();
+/* Function             */
+extern void PSMTXTransApply();
+/* Function             */
+extern void PSMTXScale();
+/* Function             */
+extern void PSMTXScaleApply();
+/* Function             */
+extern void PSMTXQuat();
+/* Function             */
+extern void C_MTXLookAt();
+/* Function             */
+extern void C_MTXLightPerspective();
+/* Function             */
+extern void C_MTXLightOrtho();
+/* Function             */
 extern void PSVECNormalize();
+/* Function             */
 extern void PSVECCrossProduct();
+/* Function             */
 extern void tanf();
+/* Function             */
 extern void sinf();
+/* Function             */
 extern void cosf();
+/* InitializedData      */
 SECTION_SDATA extern u8 mtx__Unit01[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx__LIT_96;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 mtx__LIT_97[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_190;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_191;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx__LIT_206;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_227;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_230[8];
 }
 
@@ -32,7 +75,7 @@ SECTION_SDATA2 extern u8 LIT_230[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804509D0 0008 .sdata     Unit01                                                       */
+/* 804509D0-804509D8 0008 .sdata     Unit01                                                       InitializedData */
 SECTION_SDATA u8 mtx__Unit01[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
@@ -44,26 +87,26 @@ SECTION_SDATA u8 mtx__Unit01[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456508 0004 .sdata2    @96                                                          */
+/* 80456508-8045650C 0004 .sdata2    @96                                                          Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 mtx__LIT_96 = 1.000000f;
-/* 8045650C 0004 .sdata2    @97                                                          */
+/* 8045650C-80456510 0004 .sdata2    @97                                                          InitializedData */
 SECTION_SDATA2 u8 mtx__LIT_97[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456510 0004 .sdata2    @190                                                         */
+/* 80456510-80456514 0004 .sdata2    @190                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_190 = 0.500000f;
-/* 80456514 0004 .sdata2    @191                                                         */
+/* 80456514-80456518 0004 .sdata2    @191                                                         Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 LIT_191 = 3.000000f;
-/* 80456518 0004 .sdata2    @206                                                         */
+/* 80456518-8045651C 0004 .sdata2    @206                                                         Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 mtx__LIT_206 = 2.000000f;
-/* 8045651C 0004 .sdata2    @227                                                         */
+/* 8045651C-80456520 0004 .sdata2    @227                                                         Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 LIT_227 = -1.000000f;
-/* 80456520 0004 .sdata2    @230                                                         */
+/* 80456520-80456528 0004 .sdata2    @230                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_230[8] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 	/* padding */
@@ -77,7 +120,7 @@ SECTION_SDATA2 u8 LIT_230[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80346484 002C .text      PSMTXIdentity                                                */
+/* 80346484-803464B0 002C .text      PSMTXIdentity                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +130,7 @@ asm void PSMTXIdentity() {
 }
 #pragma pop
 
-/* 803464B0 0034 .text      PSMTXCopy                                                    */
+/* 803464B0-803464E4 0034 .text      PSMTXCopy                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +140,7 @@ asm void PSMTXCopy() {
 }
 #pragma pop
 
-/* 803464E4 00CC .text      PSMTXConcat                                                  */
+/* 803464E4-803465B0 00CC .text      PSMTXConcat                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +150,7 @@ asm void PSMTXConcat() {
 }
 #pragma pop
 
-/* 803465B0 00F8 .text      PSMTXInverse                                                 */
+/* 803465B0-803466A8 00F8 .text      PSMTXInverse                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +160,7 @@ asm void PSMTXInverse() {
 }
 #pragma pop
 
-/* 803466A8 0070 .text      PSMTXRotRad                                                  */
+/* 803466A8-80346718 0070 .text      PSMTXRotRad                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +170,7 @@ asm void PSMTXRotRad() {
 }
 #pragma pop
 
-/* 80346718 00B0 .text      PSMTXRotTrig                                                 */
+/* 80346718-803467C8 00B0 .text      PSMTXRotTrig                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +180,7 @@ asm void PSMTXRotTrig() {
 }
 #pragma pop
 
-/* 803467C8 00B0 .text      __PSMTXRotAxisRadInternal                                    */
+/* 803467C8-80346878 00B0 .text      __PSMTXRotAxisRadInternal                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +190,7 @@ asm void __PSMTXRotAxisRadInternal() {
 }
 #pragma pop
 
-/* 80346878 0070 .text      PSMTXRotAxisRad                                              */
+/* 80346878-803468E8 0070 .text      PSMTXRotAxisRad                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +200,7 @@ asm void PSMTXRotAxisRad() {
 }
 #pragma pop
 
-/* 803468E8 0034 .text      PSMTXTrans                                                   */
+/* 803468E8-8034691C 0034 .text      PSMTXTrans                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +210,7 @@ asm void PSMTXTrans() {
 }
 #pragma pop
 
-/* 8034691C 004C .text      PSMTXTransApply                                              */
+/* 8034691C-80346968 004C .text      PSMTXTransApply                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +220,7 @@ asm void PSMTXTransApply() {
 }
 #pragma pop
 
-/* 80346968 0028 .text      PSMTXScale                                                   */
+/* 80346968-80346990 0028 .text      PSMTXScale                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +230,7 @@ asm void PSMTXScale() {
 }
 #pragma pop
 
-/* 80346990 0058 .text      PSMTXScaleApply                                              */
+/* 80346990-803469E8 0058 .text      PSMTXScaleApply                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +240,7 @@ asm void PSMTXScaleApply() {
 }
 #pragma pop
 
-/* 803469E8 00A4 .text      PSMTXQuat                                                    */
+/* 803469E8-80346A8C 00A4 .text      PSMTXQuat                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +250,7 @@ asm void PSMTXQuat() {
 }
 #pragma pop
 
-/* 80346A8C 018C .text      C_MTXLookAt                                                  */
+/* 80346A8C-80346C18 018C .text      C_MTXLookAt                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +260,7 @@ asm void C_MTXLookAt() {
 }
 #pragma pop
 
-/* 80346C18 00CC .text      C_MTXLightPerspective                                        */
+/* 80346C18-80346CE4 00CC .text      C_MTXLightPerspective                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +270,7 @@ asm void C_MTXLightPerspective() {
 }
 #pragma pop
 
-/* 80346CE4 0088 .text      C_MTXLightOrtho                                              */
+/* 80346CE4-80346D6C 0088 .text      C_MTXLightOrtho                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

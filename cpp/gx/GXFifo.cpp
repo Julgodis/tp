@@ -9,40 +9,94 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PPCSync();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
 extern void OSGetCurrentThread();
+/* Function             */
 extern void OSResumeThread();
+/* Function             */
 extern void OSSuspendThread();
+/* Function             */
 extern void GXCPInterruptHandler();
+/* Function             */
+extern void GXInitFifoBase();
+/* Function             */
 extern void GXInitFifoPtrs();
+/* Function             */
 extern void GXInitFifoLimits();
+/* Function             */
 extern void GXSetCPUFifo();
+/* Function             */
 extern void GXSetGPFifo();
+/* Function             */
+extern void GXSaveCPUFifo();
+/* Function             */
 extern void __GXSaveCPUFifoAux();
+/* Function             */
+extern void GXGetGPStatus();
+/* FirstParamFunction   */
+extern u32 GXGetFifoBase(u8*);
+/* FirstParamFunction   */
+extern u32 GXGetFifoSize(u8*);
+/* Function             */
+extern void GXSetBreakPtCallback();
+/* Function             */
+extern void __GXFifoInit();
+/* Function             */
 extern void __GXFifoReadEnable();
+/* Function             */
 extern void __GXFifoReadDisable();
+/* Function             */
 extern void __GXFifoLink();
+/* Function             */
 extern void __GXWriteFifoIntEnable();
+/* Function             */
 extern void __GXWriteFifoIntReset();
+/* Function             */
+extern void __GXCleanGPFifo();
+/* Function             */
+extern void GXSetCurrentGXThread();
+/* GlobalFunction       */
+extern u32 GXGetCurrentGXThread();
+/* GlobalFunction       */
 extern u32 GXGetCPUFifo();
+/* GlobalFunction       */
 extern u32 GXGetGPFifo();
+/* Function             */
 extern void GXFlush();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __piReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __cpReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 CPUFifo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 GPFifo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GXCurrentThread[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451954[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 GXOverflowSuspendInProgress[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 BreakPointCB[4];
-SECTION_SBSS extern u8 __GXOverflowCount[4];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __GXOverflowCount[4 + 4 /* padding */];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -51,21 +105,20 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451948 0004 .sbss      CPUFifo                                                      */
+/* 80451948-8045194C 0004 .sbss      CPUFifo                                                      ZeroInitializedData */
 SECTION_SBSS u8 CPUFifo[4];
-/* 8045194C 0004 .sbss      GPFifo                                                       */
+/* 8045194C-80451950 0004 .sbss      GPFifo                                                       ZeroInitializedData */
 SECTION_SBSS u8 GPFifo[4];
-/* 80451950 0004 .sbss      __GXCurrentThread                                            */
+/* 80451950-80451954 0004 .sbss      __GXCurrentThread                                            ZeroInitializedData */
 SECTION_SBSS u8 __GXCurrentThread[4];
-/* 80451954 0004 .sbss      data_80451954                                                */
+/* 80451954-80451958 0004 .sbss      data_80451954                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451954[4];
-/* 80451958 0004 .sbss      GXOverflowSuspendInProgress                                  */
+/* 80451958-8045195C 0004 .sbss      GXOverflowSuspendInProgress                                  ZeroInitializedData */
 SECTION_SBSS u8 GXOverflowSuspendInProgress[4];
-/* 8045195C 0004 .sbss      BreakPointCB                                                 */
+/* 8045195C-80451960 0004 .sbss      BreakPointCB                                                 ZeroInitializedData */
 SECTION_SBSS u8 BreakPointCB[4];
-/* 80451960 0004 .sbss      __GXOverflowCount                                            */
-SECTION_SBSS u8 __GXOverflowCount[4];
-SECTION_SBSS u8 pad_80451964[4];
+/* 80451960-80451968 0004 .sbss      __GXOverflowCount                                            ZeroInitializedData */
+SECTION_SBSS u8 __GXOverflowCount[4 + 4 /* padding */];
 }
 
 
@@ -74,7 +127,7 @@ SECTION_SBSS u8 pad_80451964[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035A5A8 0134 .text      GXCPInterruptHandler                                         */
+/* 8035A5A8-8035A6DC 0134 .text      GXCPInterruptHandler                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +137,7 @@ asm void GXCPInterruptHandler() {
 }
 #pragma pop
 
-/* 8035A6DC 006C .text      GXInitFifoBase                                               */
+/* 8035A6DC-8035A748 006C .text      GXInitFifoBase                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +147,7 @@ asm void GXInitFifoBase() {
 }
 #pragma pop
 
-/* 8035A748 0070 .text      GXInitFifoPtrs                                               */
+/* 8035A748-8035A7B8 0070 .text      GXInitFifoPtrs                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +157,7 @@ asm void GXInitFifoPtrs() {
 }
 #pragma pop
 
-/* 8035A7B8 000C .text      GXInitFifoLimits                                             */
+/* 8035A7B8-8035A7C4 000C .text      GXInitFifoLimits                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -114,7 +167,7 @@ asm void GXInitFifoLimits() {
 }
 #pragma pop
 
-/* 8035A7C4 0128 .text      GXSetCPUFifo                                                 */
+/* 8035A7C4-8035A8EC 0128 .text      GXSetCPUFifo                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -124,7 +177,7 @@ asm void GXSetCPUFifo() {
 }
 #pragma pop
 
-/* 8035A8EC 01A0 .text      GXSetGPFifo                                                  */
+/* 8035A8EC-8035AA8C 01A0 .text      GXSetGPFifo                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +187,7 @@ asm void GXSetGPFifo() {
 }
 #pragma pop
 
-/* 8035AA8C 0034 .text      GXSaveCPUFifo                                                */
+/* 8035AA8C-8035AAC0 0034 .text      GXSaveCPUFifo                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +197,7 @@ asm void GXSaveCPUFifo() {
 }
 #pragma pop
 
-/* 8035AAC0 00C8 .text      __GXSaveCPUFifoAux                                           */
+/* 8035AAC0-8035AB88 00C8 .text      __GXSaveCPUFifoAux                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +207,7 @@ asm void __GXSaveCPUFifoAux() {
 }
 #pragma pop
 
-/* 8035AB88 0050 .text      GXGetGPStatus                                                */
+/* 8035AB88-8035ABD8 0050 .text      GXGetGPStatus                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,17 +217,17 @@ asm void GXGetGPStatus() {
 }
 #pragma pop
 
-/* 8035ABD8 0008 .text      GXGetFifoBase                                                */
+/* 8035ABD8-8035ABE0 0008 .text      GXGetFifoBase                                                FirstParamFunction */
 u32 GXGetFifoBase(u8* param0) {
 	return *(u32*)&param0[0]; /* param0->field_0x0 */
 }
 
-/* 8035ABE0 0008 .text      GXGetFifoSize                                                */
+/* 8035ABE0-8035ABE8 0008 .text      GXGetFifoSize                                                FirstParamFunction */
 u32 GXGetFifoSize(u8* param0) {
 	return *(u32*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 8035ABE8 0044 .text      GXSetBreakPtCallback                                         */
+/* 8035ABE8-8035AC2C 0044 .text      GXSetBreakPtCallback                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +237,7 @@ asm void GXSetBreakPtCallback() {
 }
 #pragma pop
 
-/* 8035AC2C 004C .text      __GXFifoInit                                                 */
+/* 8035AC2C-8035AC78 004C .text      __GXFifoInit                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +247,7 @@ asm void __GXFifoInit() {
 }
 #pragma pop
 
-/* 8035AC78 0024 .text      __GXFifoReadEnable                                           */
+/* 8035AC78-8035AC9C 0024 .text      __GXFifoReadEnable                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +257,7 @@ asm void __GXFifoReadEnable() {
 }
 #pragma pop
 
-/* 8035AC9C 0024 .text      __GXFifoReadDisable                                          */
+/* 8035AC9C-8035ACC0 0024 .text      __GXFifoReadDisable                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +267,7 @@ asm void __GXFifoReadDisable() {
 }
 #pragma pop
 
-/* 8035ACC0 0034 .text      __GXFifoLink                                                 */
+/* 8035ACC0-8035ACF4 0034 .text      __GXFifoLink                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +277,7 @@ asm void __GXFifoLink() {
 }
 #pragma pop
 
-/* 8035ACF4 0030 .text      __GXWriteFifoIntEnable                                       */
+/* 8035ACF4-8035AD24 0030 .text      __GXWriteFifoIntEnable                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +287,7 @@ asm void __GXWriteFifoIntEnable() {
 }
 #pragma pop
 
-/* 8035AD24 0030 .text      __GXWriteFifoIntReset                                        */
+/* 8035AD24-8035AD54 0030 .text      __GXWriteFifoIntReset                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +297,7 @@ asm void __GXWriteFifoIntReset() {
 }
 #pragma pop
 
-/* 8035AD54 0100 .text      __GXCleanGPFifo                                              */
+/* 8035AD54-8035AE54 0100 .text      __GXCleanGPFifo                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +307,7 @@ asm void __GXCleanGPFifo() {
 }
 #pragma pop
 
-/* 8035AE54 004C .text      GXSetCurrentGXThread                                         */
+/* 8035AE54-8035AEA0 004C .text      GXSetCurrentGXThread                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,17 +317,17 @@ asm void GXSetCurrentGXThread() {
 }
 #pragma pop
 
-/* 8035AEA0 0008 .text      GXGetCurrentGXThread                                         */
+/* 8035AEA0-8035AEA8 0008 .text      GXGetCurrentGXThread                                         GlobalFunction */
 u32 GXGetCurrentGXThread() {
 	return *(u32*)&__GXCurrentThread;
 }
 
-/* 8035AEA8 0008 .text      GXGetCPUFifo                                                 */
+/* 8035AEA8-8035AEB0 0008 .text      GXGetCPUFifo                                                 GlobalFunction */
 u32 GXGetCPUFifo() {
 	return *(u32*)&CPUFifo;
 }
 
-/* 8035AEB0 0008 .text      GXGetGPFifo                                                  */
+/* 8035AEB0-8035AEB8 0008 .text      GXGetGPFifo                                                  GlobalFunction */
 u32 GXGetGPFifo() {
 	return *(u32*)&GPFifo;
 }

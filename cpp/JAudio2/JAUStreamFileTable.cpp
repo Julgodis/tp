@@ -11,13 +11,26 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__16JAIStreamDataMgrFv();
+/* Function             */
+extern void __ct__18JAUStreamFileTableFv();
+/* Function             */
+extern void init__18JAUStreamFileTableFPCv();
+/* Function             */
+extern void getNumFiles__18JAUStreamFileTableCFv();
+/* Function             */
 extern void getFilePath__18JAUStreamFileTableCFi();
+/* Function             */
 extern void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID();
+/* Function             */
 extern void __dt__32JAUStreamDataMgr_StreamFileTableFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void DVDConvertPathToEntrynum();
-SECTION_DATA extern const void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
 }
 
 
@@ -26,8 +39,8 @@ SECTION_DATA extern const void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9B50 0010 .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
-SECTION_DATA const  void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
+/* 803C9B50-803C9B60 0010 .data      __vt__32JAUStreamDataMgr_StreamFileTable                     VTableData */
+SECTION_DATA void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID,
@@ -41,7 +54,7 @@ SECTION_DATA const  void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A7420 000C .text      __ct__18JAUStreamFileTableFv                                 */
+/* 802A7420-802A742C 000C .text      __ct__18JAUStreamFileTableFv                                 Function */
 // JAUStreamFileTable::JAUStreamFileTable(void)
 #pragma push
 #pragma optimization_level 0
@@ -52,7 +65,7 @@ asm void __ct__18JAUStreamFileTableFv() {
 }
 #pragma pop
 
-/* 802A742C 004C .text      init__18JAUStreamFileTableFPCv                               */
+/* 802A742C-802A7478 004C .text      init__18JAUStreamFileTableFPCv                               Function */
 // JAUStreamFileTable::init(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -63,7 +76,7 @@ asm void init__18JAUStreamFileTableFPCv() {
 }
 #pragma pop
 
-/* 802A7478 000C .text      getNumFiles__18JAUStreamFileTableCFv                         */
+/* 802A7478-802A7484 000C .text      getNumFiles__18JAUStreamFileTableCFv                         Function */
 // JAUStreamFileTable::getNumFiles(void) const
 #pragma push
 #pragma optimization_level 0
@@ -74,7 +87,7 @@ asm void getNumFiles__18JAUStreamFileTableCFv() {
 }
 #pragma pop
 
-/* 802A7484 0028 .text      getFilePath__18JAUStreamFileTableCFi                         */
+/* 802A7484-802A74AC 0028 .text      getFilePath__18JAUStreamFileTableCFi                         Function */
 // JAUStreamFileTable::getFilePath(int) const
 #pragma push
 #pragma optimization_level 0
@@ -85,7 +98,7 @@ asm void getFilePath__18JAUStreamFileTableCFi() {
 }
 #pragma pop
 
-/* 802A74AC 003C .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID */
+/* 802A74AC-802A74E8 003C .text      getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID Function */
 // JAUStreamDataMgr_StreamFileTable::getStreamFileEntry(JAISoundID)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +109,7 @@ asm void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID() {
 }
 #pragma pop
 
-/* 802A74E8 0060 .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */
+/* 802A74E8-802A7548 0060 .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   Function */
 // JAUStreamDataMgr_StreamFileTable::~JAUStreamDataMgr_StreamFileTable(void)
 #pragma push
 #pragma optimization_level 0

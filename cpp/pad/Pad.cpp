@@ -9,67 +9,144 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSRegisterResetFunction();
+/* Function             */
 extern void OSSetWirelessID();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void SIBusy();
+/* Function             */
 extern void SIIsChanBusy();
+/* Function             */
 extern void SIRegisterPollingHandler();
+/* Function             */
 extern void SIUnregisterPollingHandler();
+/* Function             */
 extern void SIGetStatus();
+/* Function             */
 extern void SISetCommand();
+/* Function             */
 extern void SITransferCommands();
+/* Function             */
 extern void SIEnablePolling();
+/* Function             */
 extern void SIDisablePolling();
+/* Function             */
 extern void SIGetResponse();
+/* Function             */
 extern void SITransfer();
+/* Function             */
 extern void SIGetType();
+/* Function             */
 extern void SIGetTypeAsync();
+/* Function             */
 extern void SIRefreshSamplingRate();
+/* Function             */
 extern void UpdateOrigin();
+/* Function             */
 extern void PADOriginCallback();
+/* Function             */
 extern void PADOriginUpdateCallback();
+/* Function             */
 extern void PADProbeCallback();
+/* Function             */
 extern void PADTypeAndStatusCallback();
+/* Function             */
 extern void PADReceiveCheckCallback();
+/* Function             */
 extern void PADReset();
+/* Function             */
 extern void PADRecalibrate();
+/* Function             */
+extern void PADInit();
+/* Function             */
+extern void PADRead();
+/* Function             */
+extern void PADControlMotor();
+/* Function             */
 extern void PADSetSpec();
+/* Function             */
 extern void SPEC0_MakeStatus();
+/* Function             */
 extern void SPEC1_MakeStatus();
+/* Function             */
 extern void SPEC2_MakeStatus();
+/* Function             */
+extern void PADSetAnalogMode();
+/* Function             */
+extern void Pad__OnReset();
+/* Function             */
 extern void SamplingHandler();
+/* Function             */
 extern void PADSetSamplingCallback();
+/* Function             */
+extern void __PADDisableRecalibration();
+/* Function             */
 extern void __shr2i();
-SECTION_DATA extern u8 Pad__ResetFunctionInfo[16];
+/* InitializedData      */
+SECTION_DATA extern u8 Pad__LIT_1[72];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Pad__ResetFunctionInfo[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Pad__Type[16];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Origin[48];
-SECTION_SDATA extern u8 __PADVersion[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 CmdProbeDevice[16];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __PADVersion;
+/* InitializedData      */
 SECTION_SDATA extern u8 ResettingChan[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 XPatchBits[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 AnalogMode[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 Spec[4];
-SECTION_SDATA extern u8 MakeStatus[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* MakeStatus;
+/* Float32Data          */
 SECTION_SDATA extern f32 CmdReadOrigin;
+/* Float32Data          */
 SECTION_SDATA extern f32 CmdCalibrate;
-SECTION_SBSS extern u8 __PADFixBits[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __PADFixBits[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Initialized[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 EnabledBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ResettingBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 RecalibrateBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 WaitingBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 CheckingBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 PendingBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 BarrelBits[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SamplingCallback[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045186C[4];
-SECTION_SBSS extern u8 __PADSpec[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __PADSpec[4 + 4 /* padding */];
 }
 
 
@@ -78,8 +155,8 @@ SECTION_SBSS extern u8 __PADSpec[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1B48 0000 .data      ...data.0                                                    */
-/* 803D1B48 0045 .data      @1                                                           */
+/* 803D1B48-803D1B48 0000 .data      ...data.0                                                    InitializedData */
+/* 803D1B48-803D1B90 0045 .data      @1                                                           InitializedData */
 SECTION_DATA u8 Pad__LIT_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x50, 0x41, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
@@ -89,9 +166,12 @@ SECTION_DATA u8 Pad__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1B90 0010 .data      ResetFunctionInfo                                            */
-SECTION_DATA u8 Pad__ResetFunctionInfo[16] = {
-	0x80, 0x34, 0xFA, 0x84, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803D1B90-803D1BA0 0010 .data      ResetFunctionInfo                                            SymbolReferenceArrayData */
+SECTION_DATA void* Pad__ResetFunctionInfo[4] = {
+	(void*)Pad__OnReset,
+	(void*)0x0000007F,
+	NULL,
+	NULL,
 };
 }
 
@@ -101,34 +181,30 @@ SECTION_DATA u8 Pad__ResetFunctionInfo[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A20 0004 .sdata     __PADVersion                                                 */
-SECTION_SDATA u8 __PADVersion[4] = {
-	0x80, 0x3D, 0x1B, 0x48,
-};
-/* 80450A24 0004 .sdata     ResettingChan                                                */
+/* 80450A20-80450A24 0004 .sdata     __PADVersion                                                 SymbolReferenceArrayData */
+SECTION_SDATA void* __PADVersion = (void*)&Pad__LIT_1;
+/* 80450A24-80450A28 0004 .sdata     ResettingChan                                                InitializedData */
 SECTION_SDATA u8 ResettingChan[4] = {
 	0x00, 0x00, 0x00, 0x20,
 };
-/* 80450A28 0004 .sdata     XPatchBits                                                   */
+/* 80450A28-80450A2C 0004 .sdata     XPatchBits                                                   InitializedData */
 SECTION_SDATA u8 XPatchBits[4] = {
 	0xF0, 0x00, 0x00, 0x00,
 };
-/* 80450A2C 0004 .sdata     AnalogMode                                                   */
+/* 80450A2C-80450A30 0004 .sdata     AnalogMode                                                   InitializedData */
 SECTION_SDATA u8 AnalogMode[4] = {
 	0x00, 0x00, 0x03, 0x00,
 };
-/* 80450A30 0004 .sdata     Spec                                                         */
+/* 80450A30-80450A34 0004 .sdata     Spec                                                         InitializedData */
 SECTION_SDATA u8 Spec[4] = {
 	0x00, 0x00, 0x00, 0x05,
 };
-/* 80450A34 0004 .sdata     MakeStatus                                                   */
-SECTION_SDATA u8 MakeStatus[4] = {
-	0x80, 0x34, 0xF5, 0xA0,
-};
-/* 80450A38 0004 .sdata     CmdReadOrigin                                                */
+/* 80450A34-80450A38 0004 .sdata     MakeStatus                                                   SymbolReferenceArrayData */
+SECTION_SDATA void* MakeStatus = (void*)SPEC2_MakeStatus;
+/* 80450A38-80450A3C 0004 .sdata     CmdReadOrigin                                                Float32Data */
 // 0x41000000
 SECTION_SDATA f32 CmdReadOrigin = 8.000000f;
-/* 80450A3C 0004 .sdata     CmdCalibrate                                                 */
+/* 80450A3C-80450A40 0004 .sdata     CmdCalibrate                                                 Float32Data */
 // 0x42000000
 SECTION_SDATA f32 CmdCalibrate = 32.000000f;
 }
@@ -139,12 +215,12 @@ SECTION_SDATA f32 CmdCalibrate = 32.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044CB70 0000 .bss       ...bss.0                                                     */
-/* 8044CB70 0010 .bss       Type                                                         */
+/* 8044CB70-8044CB70 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8044CB70-8044CB80 0010 .bss       Type                                                         ZeroInitializedData */
 SECTION_BSS u8 Pad__Type[16];
-/* 8044CB80 0030 .bss       Origin                                                       */
+/* 8044CB80-8044CBB0 0030 .bss       Origin                                                       ZeroInitializedData */
 SECTION_BSS u8 Origin[48];
-/* 8044CBB0 0010 .bss       CmdProbeDevice                                               */
+/* 8044CBB0-8044CBC0 0010 .bss       CmdProbeDevice                                               ZeroInitializedData */
 SECTION_BSS u8 CmdProbeDevice[16];
 }
 
@@ -154,29 +230,28 @@ SECTION_BSS u8 CmdProbeDevice[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451848 0004 .sbss      Initialized                                                  */
+/* 80451848-8045184C 0004 .sbss      Initialized                                                  ZeroInitializedData */
 SECTION_SBSS u8 Initialized[4];
-/* 8045184C 0004 .sbss      EnabledBits                                                  */
+/* 8045184C-80451850 0004 .sbss      EnabledBits                                                  ZeroInitializedData */
 SECTION_SBSS u8 EnabledBits[4];
-/* 80451850 0004 .sbss      ResettingBits                                                */
+/* 80451850-80451854 0004 .sbss      ResettingBits                                                ZeroInitializedData */
 SECTION_SBSS u8 ResettingBits[4];
-/* 80451854 0004 .sbss      RecalibrateBits                                              */
+/* 80451854-80451858 0004 .sbss      RecalibrateBits                                              ZeroInitializedData */
 SECTION_SBSS u8 RecalibrateBits[4];
-/* 80451858 0004 .sbss      WaitingBits                                                  */
+/* 80451858-8045185C 0004 .sbss      WaitingBits                                                  ZeroInitializedData */
 SECTION_SBSS u8 WaitingBits[4];
-/* 8045185C 0004 .sbss      CheckingBits                                                 */
+/* 8045185C-80451860 0004 .sbss      CheckingBits                                                 ZeroInitializedData */
 SECTION_SBSS u8 CheckingBits[4];
-/* 80451860 0004 .sbss      PendingBits                                                  */
+/* 80451860-80451864 0004 .sbss      PendingBits                                                  ZeroInitializedData */
 SECTION_SBSS u8 PendingBits[4];
-/* 80451864 0004 .sbss      BarrelBits                                                   */
+/* 80451864-80451868 0004 .sbss      BarrelBits                                                   ZeroInitializedData */
 SECTION_SBSS u8 BarrelBits[4];
-/* 80451868 0004 .sbss      SamplingCallback                                             */
+/* 80451868-8045186C 0004 .sbss      SamplingCallback                                             ZeroInitializedData */
 SECTION_SBSS u8 SamplingCallback[4];
-/* 8045186C 0004 .sbss      recalibrated$388                                             */
+/* 8045186C-80451870 0004 .sbss      recalibrated$388                                             ZeroInitializedData */
 SECTION_SBSS u8 data_8045186C[4];
-/* 80451870 0004 .sbss      __PADSpec                                                    */
-SECTION_SBSS u8 __PADSpec[4];
-SECTION_SBSS u8 pad_80451874[4];
+/* 80451870-80451878 0004 .sbss      __PADSpec                                                    ZeroInitializedData */
+SECTION_SBSS u8 __PADSpec[4 + 4 /* padding */];
 }
 
 
@@ -185,7 +260,7 @@ SECTION_SBSS u8 pad_80451874[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034E2B4 01A4 .text      UpdateOrigin                                                 */
+/* 8034E2B4-8034E458 01A4 .text      UpdateOrigin                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +270,7 @@ asm void UpdateOrigin() {
 }
 #pragma pop
 
-/* 8034E458 00C4 .text      PADOriginCallback                                            */
+/* 8034E458-8034E51C 00C4 .text      PADOriginCallback                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +280,7 @@ asm void PADOriginCallback() {
 }
 #pragma pop
 
-/* 8034E51C 00CC .text      PADOriginUpdateCallback                                      */
+/* 8034E51C-8034E5E8 00CC .text      PADOriginUpdateCallback                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -215,7 +290,7 @@ asm void PADOriginUpdateCallback() {
 }
 #pragma pop
 
-/* 8034E5E8 00D8 .text      PADProbeCallback                                             */
+/* 8034E5E8-8034E6C0 00D8 .text      PADProbeCallback                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +300,7 @@ asm void PADProbeCallback() {
 }
 #pragma pop
 
-/* 8034E6C0 032C .text      PADTypeAndStatusCallback                                     */
+/* 8034E6C0-8034E9EC 032C .text      PADTypeAndStatusCallback                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,7 +310,7 @@ asm void PADTypeAndStatusCallback() {
 }
 #pragma pop
 
-/* 8034E9EC 0140 .text      PADReceiveCheckCallback                                      */
+/* 8034E9EC-8034EB2C 0140 .text      PADReceiveCheckCallback                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -245,7 +320,7 @@ asm void PADReceiveCheckCallback() {
 }
 #pragma pop
 
-/* 8034EB2C 0110 .text      PADReset                                                     */
+/* 8034EB2C-8034EC3C 0110 .text      PADReset                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +330,7 @@ asm void PADReset() {
 }
 #pragma pop
 
-/* 8034EC3C 0114 .text      PADRecalibrate                                               */
+/* 8034EC3C-8034ED50 0114 .text      PADRecalibrate                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +340,7 @@ asm void PADRecalibrate() {
 }
 #pragma pop
 
-/* 8034ED50 0150 .text      PADInit                                                      */
+/* 8034ED50-8034EEA0 0150 .text      PADInit                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +350,7 @@ asm void PADInit() {
 }
 #pragma pop
 
-/* 8034EEA0 0300 .text      PADRead                                                      */
+/* 8034EEA0-8034F1A0 0300 .text      PADRead                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +360,7 @@ asm void PADRead() {
 }
 #pragma pop
 
-/* 8034F1A0 00B8 .text      PADControlMotor                                              */
+/* 8034F1A0-8034F258 00B8 .text      PADControlMotor                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +370,7 @@ asm void PADControlMotor() {
 }
 #pragma pop
 
-/* 8034F258 0060 .text      PADSetSpec                                                   */
+/* 8034F258-8034F2B8 0060 .text      PADSetSpec                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,7 +380,7 @@ asm void PADSetSpec() {
 }
 #pragma pop
 
-/* 8034F2B8 0174 .text      SPEC0_MakeStatus                                             */
+/* 8034F2B8-8034F42C 0174 .text      SPEC0_MakeStatus                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -315,7 +390,7 @@ asm void SPEC0_MakeStatus() {
 }
 #pragma pop
 
-/* 8034F42C 0174 .text      SPEC1_MakeStatus                                             */
+/* 8034F42C-8034F5A0 0174 .text      SPEC1_MakeStatus                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -325,7 +400,7 @@ asm void SPEC1_MakeStatus() {
 }
 #pragma pop
 
-/* 8034F5A0 0470 .text      SPEC2_MakeStatus                                             */
+/* 8034F5A0-8034FA10 0470 .text      SPEC2_MakeStatus                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,7 +410,7 @@ asm void SPEC2_MakeStatus() {
 }
 #pragma pop
 
-/* 8034FA10 0074 .text      PADSetAnalogMode                                             */
+/* 8034FA10-8034FA84 0074 .text      PADSetAnalogMode                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,7 +420,7 @@ asm void PADSetAnalogMode() {
 }
 #pragma pop
 
-/* 8034FA84 00BC .text      OnReset                                                      */
+/* 8034FA84-8034FB40 00BC .text      OnReset                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +430,7 @@ asm void Pad__OnReset() {
 }
 #pragma pop
 
-/* 8034FB40 0060 .text      SamplingHandler                                              */
+/* 8034FB40-8034FBA0 0060 .text      SamplingHandler                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -365,7 +440,7 @@ asm void SamplingHandler() {
 }
 #pragma pop
 
-/* 8034FBA0 0054 .text      PADSetSamplingCallback                                       */
+/* 8034FBA0-8034FBF4 0054 .text      PADSetSamplingCallback                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -375,7 +450,7 @@ asm void PADSetSamplingCallback() {
 }
 #pragma pop
 
-/* 8034FBF4 007C .text      __PADDisableRecalibration                                    */
+/* 8034FBF4-8034FC70 007C .text      __PADDisableRecalibration                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

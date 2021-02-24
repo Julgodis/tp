@@ -123,8 +123,8 @@ lbl_80157E88:
 /* 80157EC4 0000003C  D0 23 00 44 */	stfs f1, 0x44(r3)
 /* 80157EC8 00000040  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 80157ECC 00000044  38 A0 00 00 */	li r5, 0
-/* 80157ED0 00000048  3C 60 80 15 */	lis r3, d_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi@ha
-/* 80157ED4 0000004C  38 83 7C B4 */	addi r4, r3, d_d_a_npc_cd2__jntNodeCallBack__FP8J3DJointi@l
+/* 80157ED0 00000048  3C 60 80 15 */	lis r3, jntNodeCallBack__FP8J3DJointi@ha
+/* 80157ED4 0000004C  38 83 7C B4 */	addi r4, r3, jntNodeCallBack__FP8J3DJointi@l
 /* 80157ED8 00000050  48 00 00 18 */	b lbl_80157EF0
 lbl_80157EDC:
 /* 80157EDC 00000000  80 7F 00 28 */	lwz r3, 0x28(r31)

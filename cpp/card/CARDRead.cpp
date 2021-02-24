@@ -9,19 +9,35 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DCInvalidateRange();
+/* ReturnFunction       */
 extern void __CARDDefaultApiCallback();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* Function             */
 extern void __CARDRead();
+/* FirstParamFunction   */
 extern u32 __CARDGetFatBlock(u8*);
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void __CARDIsReadable();
+/* Function             */
 extern void __CARDSeek();
+/* Function             */
 extern void ReadCallback();
+/* Function             */
 extern void CARDReadAsync();
+/* Function             */
+extern void CARDRead();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -31,7 +47,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803584A0 01B8 .text      __CARDSeek                                                   */
+/* 803584A0-80358658 01B8 .text      __CARDSeek                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +57,7 @@ asm void __CARDSeek() {
 }
 #pragma pop
 
-/* 80358658 0130 .text      ReadCallback                                                 */
+/* 80358658-80358788 0130 .text      ReadCallback                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +67,7 @@ asm void ReadCallback() {
 }
 #pragma pop
 
-/* 80358788 0144 .text      CARDReadAsync                                                */
+/* 80358788-803588CC 0144 .text      CARDReadAsync                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +77,7 @@ asm void CARDReadAsync() {
 }
 #pragma pop
 
-/* 803588CC 0048 .text      CARDRead                                                     */
+/* 803588CC-80358914 0048 .text      CARDRead                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

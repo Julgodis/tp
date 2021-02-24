@@ -11,18 +11,42 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__Q28JMessage8TControlFv();
+/* Function             */
 extern void __dt__Q28JMessage8TControlFv();
+/* Function             */
+extern void reset__Q28JMessage8TControlFv();
+/* Function             */
+extern void update__Q28JMessage8TControlFv();
+/* Function             */
+extern void render__Q28JMessage8TControlFv();
+/* Function             */
+extern void setMessageCode__Q28JMessage8TControlFUsUs();
+/* Function             */
+extern void setMessageID__Q28JMessage8TControlFUlUlPb();
+/* Function             */
 extern void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
+/* Function             */
 extern void reset__Q28JMessage10TProcessorFv();
+/* Function             */
 extern void getResource_groupID__Q28JMessage10TProcessorCFUs();
+/* Function             */
 extern void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
+/* Function             */
 extern void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+/* Function             */
 extern void process__Q28JMessage18TSequenceProcessorFPCc();
+/* Function             */
 extern void process__Q28JMessage19TRenderingProcessorFPCc();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
-SECTION_DATA extern const void* __vt__Q28JMessage8TControl[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q28JMessage8TControl[4];
 }
 
 
@@ -31,8 +55,8 @@ SECTION_DATA extern const void* __vt__Q28JMessage8TControl[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9B60 000C .data      __vt__Q28JMessage8TControl                                   */
-SECTION_DATA const  void* __vt__Q28JMessage8TControl[4] = {
+/* 803C9B60-803C9B70 000C .data      __vt__Q28JMessage8TControl                                   VTableData */
+SECTION_DATA void* __vt__Q28JMessage8TControl[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q28JMessage8TControlFv,
@@ -47,7 +71,7 @@ SECTION_DATA const  void* __vt__Q28JMessage8TControl[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A7548 0044 .text      __ct__Q28JMessage8TControlFv                                 */
+/* 802A7548-802A758C 0044 .text      __ct__Q28JMessage8TControlFv                                 Function */
 // JMessage::TControl::JMessage::TControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -58,7 +82,7 @@ asm void __ct__Q28JMessage8TControlFv() {
 }
 #pragma pop
 
-/* 802A758C 0048 .text      __dt__Q28JMessage8TControlFv                                 */
+/* 802A758C-802A75D4 0048 .text      __dt__Q28JMessage8TControlFv                                 Function */
 // JMessage::TControl::~JMessage::TControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -69,7 +93,7 @@ asm void __dt__Q28JMessage8TControlFv() {
 }
 #pragma pop
 
-/* 802A75D4 0060 .text      reset__Q28JMessage8TControlFv                                */
+/* 802A75D4-802A7634 0060 .text      reset__Q28JMessage8TControlFv                                Function */
 // JMessage::TControl::reset(void)
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +104,7 @@ asm void reset__Q28JMessage8TControlFv() {
 }
 #pragma pop
 
-/* 802A7634 0088 .text      update__Q28JMessage8TControlFv                               */
+/* 802A7634-802A76BC 0088 .text      update__Q28JMessage8TControlFv                               Function */
 // JMessage::TControl::update(void)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +115,7 @@ asm void update__Q28JMessage8TControlFv() {
 }
 #pragma pop
 
-/* 802A76BC 012C .text      render__Q28JMessage8TControlFv                               */
+/* 802A76BC-802A77E8 012C .text      render__Q28JMessage8TControlFv                               Function */
 // JMessage::TControl::render(void)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +126,7 @@ asm void render__Q28JMessage8TControlFv() {
 }
 #pragma pop
 
-/* 802A77E8 010C .text      setMessageCode__Q28JMessage8TControlFUsUs                    */
+/* 802A77E8-802A78F4 010C .text      setMessageCode__Q28JMessage8TControlFUsUs                    Function */
 // JMessage::TControl::setMessageCode(u16, u16)
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +137,7 @@ asm void setMessageCode__Q28JMessage8TControlFUsUs() {
 }
 #pragma pop
 
-/* 802A78F4 012C .text      setMessageID__Q28JMessage8TControlFUlUlPb                    */
+/* 802A78F4-802A7A20 012C .text      setMessageID__Q28JMessage8TControlFUlUlPb                    Function */
 // JMessage::TControl::setMessageID(u32, u32, bool*)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +148,7 @@ asm void setMessageID__Q28JMessage8TControlFUlUlPb() {
 }
 #pragma pop
 
-/* 802A7A20 00D8 .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs */
+/* 802A7A20-802A7AF8 00D8 .text      setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs Function */
 // JMessage::TControl::setMessageCode_inSequence_(JMessage::TProcessor, u16, u16)
 #pragma push
 #pragma optimization_level 0

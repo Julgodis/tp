@@ -9,7 +9,21 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
+extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+/* Function             */
+extern void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+/* Function             */
+extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+/* Function             */
+extern void __as__10J3DFogInfoFRC10J3DFogInfo();
+/* Function             */
+extern void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_409;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_410[4];
 }
 
@@ -19,10 +33,10 @@ SECTION_SDATA2 extern u8 LIT_410[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456410 0004 .sdata2    @409                                                         */
+/* 80456410-80456414 0004 .sdata2    @409                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_409 = 1.000000f;
-/* 80456414 0004 .sdata2    @410                                                         */
+/* 80456414-80456418 0004 .sdata2    @410                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_410[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -34,7 +48,7 @@ SECTION_SDATA2 u8 LIT_410[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803256C4 0054 .text      __as__12J3DLightInfoFRC12J3DLightInfo                        */
+/* 803256C4-80325718 0054 .text      __as__12J3DLightInfoFRC12J3DLightInfo                        Function */
 // J3DLightInfo::operator=(const J3DLightInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -45,7 +59,7 @@ asm void __as__12J3DLightInfoFRC12J3DLightInfo() {
 }
 #pragma pop
 
-/* 80325718 007C .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo                      */
+/* 80325718-80325794 007C .text      __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo                      Function */
 // J3DTexMtxInfo::operator=(const J3DTexMtxInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -56,7 +70,7 @@ asm void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo() {
 }
 #pragma pop
 
-/* 80325794 0048 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          */
+/* 80325794-803257DC 0048 .text      setEffectMtx__13J3DTexMtxInfoFPA4_f                          Function */
 // J3DTexMtxInfo::setEffectMtx(f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -67,7 +81,7 @@ asm void setEffectMtx__13J3DTexMtxInfoFPA4_f() {
 }
 #pragma pop
 
-/* 803257DC 0024 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo                */
+/* 803257DC-80325800 0024 .text      __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo                Function */
 // J3DIndTexMtxInfo::operator=(const J3DIndTexMtxInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -78,7 +92,7 @@ asm void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo() {
 }
 #pragma pop
 
-/* 80325800 007C .text      __as__10J3DFogInfoFRC10J3DFogInfo                            */
+/* 80325800-8032587C 007C .text      __as__10J3DFogInfoFRC10J3DFogInfo                            Function */
 // J3DFogInfo::operator=(const J3DFogInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +103,7 @@ asm void __as__10J3DFogInfoFRC10J3DFogInfo() {
 }
 #pragma pop
 
-/* 8032587C 0024 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo                  */
+/* 8032587C-803258A0 0024 .text      __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo                  Function */
 // J3DNBTScaleInfo::operator=(const J3DNBTScaleInfo&)
 #pragma push
 #pragma optimization_level 0

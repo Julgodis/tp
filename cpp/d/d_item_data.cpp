@@ -12,104 +12,121 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* StringBaseData       */
+SECTION_RODATA extern const u8 d_d_item_data__stringBase0[872];
+/* InitializedData      */
+SECTION_DATA extern u8 item_resource__10dItem_data[6120];
+/* InitializedData      */
+SECTION_DATA extern u8 field_item_res__10dItem_data[4080];
+/* InitializedData      */
+SECTION_DATA extern u8 item_info__10dItem_data[1024];
+}
+
 
 /* ###################################################################################### */
 /*                                        .rodata                                         */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037AD68 0366 .rodata    @stringBase0                                                 */
-const char* const stringBase_8037AD68 = "F_gD_rupy";
-const char* const stringBase_8037AD72 = "O_gD_bomb";
-const char* const stringBase_8037AD7C = "O_gD_arow";
-const char* const stringBase_8037AD86 = "O_gD_tane";
-const char* const stringBase_8037AD90 = "O_gD_PG";
-const char* const stringBase_8037AD98 = "O_gD_BI";
-const char* const stringBase_8037ADA0 = "T_gD_key";
-const char* const stringBase_8037ADA9 = "O_gD_hutk";
-const char* const stringBase_8037ADB3 = "O_gD_hutu";
-const char* const stringBase_8037ADBD = "T_gD_map";
-const char* const stringBase_8037ADC6 = "T_gD_kmps";
-const char* const stringBase_8037ADD0 = "O_gD_TKS";
-const char* const stringBase_8037ADD9 = "T_gD_bkey";
-const char* const stringBase_8037ADE3 = "O_gD_TKC";
-const char* const stringBase_8037ADEC = "O_gD_SWA";
-const char* const stringBase_8037ADF5 = "T_gD_SHB";
-const char* const stringBase_8037ADFE = "O_gD_SHC";
-const char* const stringBase_8037AE07 = "O_gD_SHA";
-const char* const stringBase_8037AE10 = "O_gD_mem2";
-const char* const stringBase_8037AE1A = "O_gD_marm";
-const char* const stringBase_8037AE24 = "O_gD_zora";
-const char* const stringBase_8037AE2E = "O_gD_Injy";
-const char* const stringBase_8037AE38 = "O_gD_puL2";
-const char* const stringBase_8037AE42 = "O_gD_puL3";
-const char* const stringBase_8037AE4C = "O_gD_sang";
-const char* const stringBase_8037AE56 = "O_gD_hawk";
-const char* const stringBase_8037AE60 = "O_gD_SWB";
-const char* const stringBase_8037AE69 = "O_gD_boom";
-const char* const stringBase_8037AE73 = "O_gD_SP";
-const char* const stringBase_8037AE7B = "O_gD_IB";
-const char* const stringBase_8037AE83 = "O_gD_bow";
-const char* const stringBase_8037AE8C = "O_gD_HS";
-const char* const stringBase_8037AE94 = "O_gD_boot";
-const char* const stringBase_8037AE9E = "O_gD_CROD";
-const char* const stringBase_8037AEA8 = "T_gD_kt";
-const char* const stringBase_8037AEB0 = "O_gD_uktr";
-const char* const stringBase_8037AEBA = "O_gD_pach";
-const char* const stringBase_8037AEC4 = "O_gD_bmL2";
-const char* const stringBase_8037AECE = "O_gD_bomc";
-const char* const stringBase_8037AED8 = "O_gD_quL1";
-const char* const stringBase_8037AEE2 = "O_gD_quL2";
-const char* const stringBase_8037AEEC = "O_gD_quL3";
-const char* const stringBase_8037AEF6 = "O_gD_bott";
-const char* const stringBase_8037AF00 = "Obj_kntr";
-const char* const stringBase_8037AF09 = "O_gD_lttr";
-const char* const stringBase_8037AF13 = "O_gD_bill";
-const char* const stringBase_8037AF1D = "O_gD_wood";
-const char* const stringBase_8037AF27 = "O_gD_pend";
-const char* const stringBase_8037AF31 = "O_gD_hk_s";
-const char* const stringBase_8037AF3B = "N_gD_Lpod";
-const char* const stringBase_8037AF45 = "O_gD_kabo";
-const char* const stringBase_8037AF4F = "O_gD_kabm";
-const char* const stringBase_8037AF59 = "O_gD_choo";
-const char* const stringBase_8037AF63 = "O_gD_chom";
-const char* const stringBase_8037AF6D = "O_gD_kuwo";
-const char* const stringBase_8037AF77 = "O_gD_kuwm";
-const char* const stringBase_8037AF81 = "O_gD_bato";
-const char* const stringBase_8037AF8B = "O_gD_batm";
-const char* const stringBase_8037AF95 = "O_gD_nano";
-const char* const stringBase_8037AF9F = "O_gD_nanm";
-const char* const stringBase_8037AFA9 = "O_gD_dano";
-const char* const stringBase_8037AFB3 = "O_gD_danm";
-const char* const stringBase_8037AFBD = "O_gD_kamo";
-const char* const stringBase_8037AFC7 = "O_gD_kamm";
-const char* const stringBase_8037AFD1 = "O_gD_teno";
-const char* const stringBase_8037AFDB = "O_gD_tenm";
-const char* const stringBase_8037AFE5 = "O_gD_kato";
-const char* const stringBase_8037AFEF = "O_gD_katm";
-const char* const stringBase_8037AFF9 = "O_gD_tono";
-const char* const stringBase_8037B003 = "O_gD_tonm";
-const char* const stringBase_8037B00D = "O_gD_ario";
-const char* const stringBase_8037B017 = "O_gD_arim";
-const char* const stringBase_8037B021 = "O_gD_kago";
-const char* const stringBase_8037B02B = "O_gD_kagm";
-const char* const stringBase_8037B035 = "O_gD_tama";
-const char* const stringBase_8037B03F = "O_gD_komo";
-const char* const stringBase_8037B049 = "O_gD_pump";
-const char* const stringBase_8037B053 = "O_gD_chee";
-const char* const stringBase_8037B05D = "O_gD_bkey";
-const char* const stringBase_8037B067 = "D_MKey_01";
-const char* const stringBase_8037B071 = "D_MKey_02";
-const char* const stringBase_8037B07B = "D_MKey_03";
-const char* const stringBase_8037B085 = "O_gD_Mkey";
-const char* const stringBase_8037B08F = "Always";
-const char* const stringBase_8037B096 = "T_g_key";
-const char* const stringBase_8037B09E = "T_g_bkey";
-const char* const stringBase_8037B0A7 = "O_g_SWA";
-const char* const stringBase_8037B0AF = "T_g_SHB";
-const char* const stringBase_8037B0B7 = "O_g_ZORA";
-const char* const stringBase_8037B0C0 = "T_g_kt";
-const char* const stringBase_8037B0C7 = "O_wood";
+/* 8037AD68-8037B0D0 0366 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037AD68 = "F_gD_rupy";
+SECTION_DEAD const char* const stringBase_8037AD72 = "O_gD_bomb";
+SECTION_DEAD const char* const stringBase_8037AD7C = "O_gD_arow";
+SECTION_DEAD const char* const stringBase_8037AD86 = "O_gD_tane";
+SECTION_DEAD const char* const stringBase_8037AD90 = "O_gD_PG";
+SECTION_DEAD const char* const stringBase_8037AD98 = "O_gD_BI";
+SECTION_DEAD const char* const stringBase_8037ADA0 = "T_gD_key";
+SECTION_DEAD const char* const stringBase_8037ADA9 = "O_gD_hutk";
+SECTION_DEAD const char* const stringBase_8037ADB3 = "O_gD_hutu";
+SECTION_DEAD const char* const stringBase_8037ADBD = "T_gD_map";
+SECTION_DEAD const char* const stringBase_8037ADC6 = "T_gD_kmps";
+SECTION_DEAD const char* const stringBase_8037ADD0 = "O_gD_TKS";
+SECTION_DEAD const char* const stringBase_8037ADD9 = "T_gD_bkey";
+SECTION_DEAD const char* const stringBase_8037ADE3 = "O_gD_TKC";
+SECTION_DEAD const char* const stringBase_8037ADEC = "O_gD_SWA";
+SECTION_DEAD const char* const stringBase_8037ADF5 = "T_gD_SHB";
+SECTION_DEAD const char* const stringBase_8037ADFE = "O_gD_SHC";
+SECTION_DEAD const char* const stringBase_8037AE07 = "O_gD_SHA";
+SECTION_DEAD const char* const stringBase_8037AE10 = "O_gD_mem2";
+SECTION_DEAD const char* const stringBase_8037AE1A = "O_gD_marm";
+SECTION_DEAD const char* const stringBase_8037AE24 = "O_gD_zora";
+SECTION_DEAD const char* const stringBase_8037AE2E = "O_gD_Injy";
+SECTION_DEAD const char* const stringBase_8037AE38 = "O_gD_puL2";
+SECTION_DEAD const char* const stringBase_8037AE42 = "O_gD_puL3";
+SECTION_DEAD const char* const stringBase_8037AE4C = "O_gD_sang";
+SECTION_DEAD const char* const stringBase_8037AE56 = "O_gD_hawk";
+SECTION_DEAD const char* const stringBase_8037AE60 = "O_gD_SWB";
+SECTION_DEAD const char* const stringBase_8037AE69 = "O_gD_boom";
+SECTION_DEAD const char* const stringBase_8037AE73 = "O_gD_SP";
+SECTION_DEAD const char* const stringBase_8037AE7B = "O_gD_IB";
+SECTION_DEAD const char* const stringBase_8037AE83 = "O_gD_bow";
+SECTION_DEAD const char* const stringBase_8037AE8C = "O_gD_HS";
+SECTION_DEAD const char* const stringBase_8037AE94 = "O_gD_boot";
+SECTION_DEAD const char* const stringBase_8037AE9E = "O_gD_CROD";
+SECTION_DEAD const char* const stringBase_8037AEA8 = "T_gD_kt";
+SECTION_DEAD const char* const stringBase_8037AEB0 = "O_gD_uktr";
+SECTION_DEAD const char* const stringBase_8037AEBA = "O_gD_pach";
+SECTION_DEAD const char* const stringBase_8037AEC4 = "O_gD_bmL2";
+SECTION_DEAD const char* const stringBase_8037AECE = "O_gD_bomc";
+SECTION_DEAD const char* const stringBase_8037AED8 = "O_gD_quL1";
+SECTION_DEAD const char* const stringBase_8037AEE2 = "O_gD_quL2";
+SECTION_DEAD const char* const stringBase_8037AEEC = "O_gD_quL3";
+SECTION_DEAD const char* const stringBase_8037AEF6 = "O_gD_bott";
+SECTION_DEAD const char* const stringBase_8037AF00 = "Obj_kntr";
+SECTION_DEAD const char* const stringBase_8037AF09 = "O_gD_lttr";
+SECTION_DEAD const char* const stringBase_8037AF13 = "O_gD_bill";
+SECTION_DEAD const char* const stringBase_8037AF1D = "O_gD_wood";
+SECTION_DEAD const char* const stringBase_8037AF27 = "O_gD_pend";
+SECTION_DEAD const char* const stringBase_8037AF31 = "O_gD_hk_s";
+SECTION_DEAD const char* const stringBase_8037AF3B = "N_gD_Lpod";
+SECTION_DEAD const char* const stringBase_8037AF45 = "O_gD_kabo";
+SECTION_DEAD const char* const stringBase_8037AF4F = "O_gD_kabm";
+SECTION_DEAD const char* const stringBase_8037AF59 = "O_gD_choo";
+SECTION_DEAD const char* const stringBase_8037AF63 = "O_gD_chom";
+SECTION_DEAD const char* const stringBase_8037AF6D = "O_gD_kuwo";
+SECTION_DEAD const char* const stringBase_8037AF77 = "O_gD_kuwm";
+SECTION_DEAD const char* const stringBase_8037AF81 = "O_gD_bato";
+SECTION_DEAD const char* const stringBase_8037AF8B = "O_gD_batm";
+SECTION_DEAD const char* const stringBase_8037AF95 = "O_gD_nano";
+SECTION_DEAD const char* const stringBase_8037AF9F = "O_gD_nanm";
+SECTION_DEAD const char* const stringBase_8037AFA9 = "O_gD_dano";
+SECTION_DEAD const char* const stringBase_8037AFB3 = "O_gD_danm";
+SECTION_DEAD const char* const stringBase_8037AFBD = "O_gD_kamo";
+SECTION_DEAD const char* const stringBase_8037AFC7 = "O_gD_kamm";
+SECTION_DEAD const char* const stringBase_8037AFD1 = "O_gD_teno";
+SECTION_DEAD const char* const stringBase_8037AFDB = "O_gD_tenm";
+SECTION_DEAD const char* const stringBase_8037AFE5 = "O_gD_kato";
+SECTION_DEAD const char* const stringBase_8037AFEF = "O_gD_katm";
+SECTION_DEAD const char* const stringBase_8037AFF9 = "O_gD_tono";
+SECTION_DEAD const char* const stringBase_8037B003 = "O_gD_tonm";
+SECTION_DEAD const char* const stringBase_8037B00D = "O_gD_ario";
+SECTION_DEAD const char* const stringBase_8037B017 = "O_gD_arim";
+SECTION_DEAD const char* const stringBase_8037B021 = "O_gD_kago";
+SECTION_DEAD const char* const stringBase_8037B02B = "O_gD_kagm";
+SECTION_DEAD const char* const stringBase_8037B035 = "O_gD_tama";
+SECTION_DEAD const char* const stringBase_8037B03F = "O_gD_komo";
+SECTION_DEAD const char* const stringBase_8037B049 = "O_gD_pump";
+SECTION_DEAD const char* const stringBase_8037B053 = "O_gD_chee";
+SECTION_DEAD const char* const stringBase_8037B05D = "O_gD_bkey";
+SECTION_DEAD const char* const stringBase_8037B067 = "D_MKey_01";
+SECTION_DEAD const char* const stringBase_8037B071 = "D_MKey_02";
+SECTION_DEAD const char* const stringBase_8037B07B = "D_MKey_03";
+SECTION_DEAD const char* const stringBase_8037B085 = "O_gD_Mkey";
+SECTION_DEAD const char* const stringBase_8037B08F = "Always";
+SECTION_DEAD const char* const stringBase_8037B096 = "T_g_key";
+SECTION_DEAD const char* const stringBase_8037B09E = "T_g_bkey";
+SECTION_DEAD const char* const stringBase_8037B0A7 = "O_g_SWA";
+SECTION_DEAD const char* const stringBase_8037B0AF = "T_g_SHB";
+SECTION_DEAD const char* const stringBase_8037B0B7 = "O_g_ZORA";
+SECTION_DEAD const char* const stringBase_8037B0C0 = "T_g_kt";
+SECTION_DEAD const char* const stringBase_8037B0C7 = "O_wood";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037B0CE = "\0";
+#pragma pop
 }
 
 
@@ -118,7 +135,7 @@ const char* const stringBase_8037B0C7 = "O_wood";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AC5A0 17E8 .data      item_resource__10dItem_data                                  */
+/* 803AC5A0-803ADD88 17E8 .data      item_resource__10dItem_data                                  InitializedData */
 SECTION_DATA u8 item_resource__10dItem_data[6120] = {
 	0x80, 0x37, 0xAD, 0x68, 0x00, 0x04, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x07, 0xFF, 0xFF, 0x00, 0xFF,
 	0x00, 0x2D, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xAD, 0x68, 0x00, 0x04, 0xFF, 0xFF,
@@ -504,7 +521,7 @@ SECTION_DATA u8 item_resource__10dItem_data[6120] = {
 	0x80, 0x37, 0xAD, 0xA0, 0x00, 0x03, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x00, 0x6E, 0x64, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803ADD88 0FF0 .data      field_item_res__10dItem_data                                 */
+/* 803ADD88-803AED78 0FF0 .data      field_item_res__10dItem_data                                 InitializedData */
 SECTION_DATA u8 field_item_res__10dItem_data[4080] = {
 	0x80, 0x37, 0xB0, 0x8F, 0x00, 0x14, 0xFF, 0xFF, 0x00, 0x30, 0xFF, 0x00, 0x10, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xB0, 0x8F, 0x00, 0x17, 0xFF, 0xFF, 0x00, 0x31, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00,
@@ -762,7 +779,7 @@ SECTION_DATA u8 field_item_res__10dItem_data[4080] = {
 	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x10, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xB0, 0x96, 0x00, 0x03, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x10, 0x00, 0x00, 0x00,
 };
-/* 803AED78 03FC .data      item_info__10dItem_data                                      */
+/* 803AED78-803AF178 03FC .data      item_info__10dItem_data                                      InitializedData */
 SECTION_DATA u8 item_info__10dItem_data[1024] = {
 	0x0F, 0x28, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,
 	0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04, 0x14, 0x46, 0x1E, 0x04,

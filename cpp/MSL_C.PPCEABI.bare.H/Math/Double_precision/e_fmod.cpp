@@ -9,6 +9,9 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ieee754_fmod();
+/* InitializedData      */
 SECTION_RODATA extern const u8 Zero[16];
 }
 
@@ -18,7 +21,7 @@ SECTION_RODATA extern const u8 Zero[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2370 0010 .rodata    Zero                                                         */
+/* 803A2370-803A2380 0010 .rodata    Zero                                                         InitializedData */
 SECTION_RODATA const u8 Zero[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -30,7 +33,7 @@ SECTION_RODATA const u8 Zero[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80369B9C 033C .text      __ieee754_fmod                                               */
+/* 80369B9C-80369ED8 033C .text      __ieee754_fmod                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,15 +9,27 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void __flush_buffer();
+/* Function             */
 extern void __prep_buffer();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* Function             */
 extern void __fwrite();
+/* Function             */
+extern void fwrite();
+/* Function             */
 extern void fseek();
+/* Function             */
 extern void __memrchr();
+/* Function             */
 extern void __stdio_atexit();
+/* Function             */
 extern void fwide();
 }
 
@@ -27,7 +39,7 @@ extern void fwide();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80365494 030C .text      __fwrite                                                     */
+/* 80365494-803657A0 030C .text      __fwrite                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -37,7 +49,7 @@ asm void __fwrite() {
 }
 #pragma pop
 
-/* 803657A0 007C .text      fwrite                                                       */
+/* 803657A0-8036581C 007C .text      fwrite                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

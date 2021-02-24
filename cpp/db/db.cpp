@@ -9,13 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void PPCHalt();
+/* Function             */
 extern void OSDumpContext();
+/* Function             */
+extern void DBInit();
+/* Function             */
 extern void __DBExceptionDestinationAux();
+/* Function             */
 extern void __DBExceptionDestination();
+/* Function             */
+extern void __DBIsExceptionMarked();
+/* Function             */
+extern void DBPrintf();
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_9[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __DBInterface[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 DBVerbose[4];
 }
 
@@ -25,7 +39,7 @@ SECTION_SBSS extern u8 DBVerbose[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1368 0018 .data      @9                                                           */
+/* 803D1368-803D1380 0018 .data      @9                                                           InitializedData */
 SECTION_DATA u8 LIT_9[24] = {
 	0x44, 0x42, 0x45, 0x78, 0x63, 0x65, 0x70, 0x74, 0x69, 0x6F, 0x6E, 0x44, 0x65, 0x73, 0x74, 0x69,
 	0x6E, 0x61, 0x74, 0x69, 0x6F, 0x6E, 0x0A, 0x00,
@@ -38,9 +52,9 @@ SECTION_DATA u8 LIT_9[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451708 0004 .sbss      __DBInterface                                                */
+/* 80451708-8045170C 0004 .sbss      __DBInterface                                                ZeroInitializedData */
 SECTION_SBSS u8 __DBInterface[4];
-/* 8045170C 0004 .sbss      DBVerbose                                                    */
+/* 8045170C-80451710 0004 .sbss      DBVerbose                                                    ZeroInitializedData */
 SECTION_SBSS u8 DBVerbose[4];
 }
 
@@ -50,7 +64,7 @@ SECTION_SBSS u8 DBVerbose[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80346398 0028 .text      DBInit                                                       */
+/* 80346398-803463C0 0028 .text      DBInit                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +74,7 @@ asm void DBInit() {
 }
 #pragma pop
 
-/* 803463C0 0048 .text      __DBExceptionDestinationAux                                  */
+/* 803463C0-80346408 0048 .text      __DBExceptionDestinationAux                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -70,7 +84,7 @@ asm void __DBExceptionDestinationAux() {
 }
 #pragma pop
 
-/* 80346408 0010 .text      __DBExceptionDestination                                     */
+/* 80346408-80346418 0010 .text      __DBExceptionDestination                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -80,7 +94,7 @@ asm void __DBExceptionDestination() {
 }
 #pragma pop
 
-/* 80346418 001C .text      __DBIsExceptionMarked                                        */
+/* 80346418-80346434 001C .text      __DBIsExceptionMarked                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -90,7 +104,7 @@ asm void __DBIsExceptionMarked() {
 }
 #pragma pop
 
-/* 80346434 0050 .text      DBPrintf                                                     */
+/* 80346434-80346484 0050 .text      DBPrintf                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,8 +9,19 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
+extern void GDInitGDLObj();
+/* Function             */
+extern void GDFlushCurrToMem();
+/* Function             */
+extern void GDPadCurr32();
+/* Function             */
+extern void GDOverflowed();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 overflowcb[4];
 }
 
@@ -20,9 +31,9 @@ SECTION_SBSS extern u8 overflowcb[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451980 0004 .sbss      __GDCurrentDL                                                */
+/* 80451980-80451984 0004 .sbss      __GDCurrentDL                                                ZeroInitializedData */
 SECTION_SBSS u8 __GDCurrentDL[4];
-/* 80451984 0004 .sbss      overflowcb                                                   */
+/* 80451984-80451988 0004 .sbss      overflowcb                                                   ZeroInitializedData */
 SECTION_SBSS u8 overflowcb[4];
 }
 
@@ -32,7 +43,7 @@ SECTION_SBSS u8 overflowcb[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80360F98 0018 .text      GDInitGDLObj                                                 */
+/* 80360F98-80360FB0 0018 .text      GDInitGDLObj                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +53,7 @@ asm void GDInitGDLObj() {
 }
 #pragma pop
 
-/* 80360FB0 002C .text      GDFlushCurrToMem                                             */
+/* 80360FB0-80360FDC 002C .text      GDFlushCurrToMem                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +63,7 @@ asm void GDFlushCurrToMem() {
 }
 #pragma pop
 
-/* 80360FDC 00F8 .text      GDPadCurr32                                                  */
+/* 80360FDC-803610D4 00F8 .text      GDPadCurr32                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +73,7 @@ asm void GDPadCurr32() {
 }
 #pragma pop
 
-/* 803610D4 0030 .text      GDOverflowed                                                 */
+/* 803610D4-80361104 0030 .text      GDOverflowed                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,10 +9,15 @@
 // 
 
 struct nodedraw_method_class;
-struct scene_class;
-struct process_method_class;
 struct scene_tag_class;
+struct process_method_class;
+struct scene_class;
 
+extern void fopScn_Draw(scene_class*); /* fopScn_Draw__FP11scene_class */
+extern void fopScn_Execute(scene_class*); /* fopScn_Execute__FP11scene_class */
+extern void fopScn_IsDelete(void*); /* fopScn_IsDelete__FPv */
+extern void fopScn_Delete(void*); /* fopScn_Delete__FPv */
+extern void fopScn_Create(void*); /* fopScn_Create__FPv */
 extern void fopScnTg_QueueTo(scene_tag_class*); /* fopScnTg_QueueTo__FP15scene_tag_class */
 extern void fopScnTg_ToQueue(scene_tag_class*); /* fopScnTg_ToQueue__FP15scene_tag_class */
 extern void fopScnTg_Init(scene_tag_class*, void*); /* fopScnTg_Init__FP15scene_tag_classPv */
@@ -23,14 +28,34 @@ extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20p
 extern void fpcNd_DrawMethod(nodedraw_method_class*, void*); /* fpcNd_DrawMethod__FP21nodedraw_method_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopScn_Draw__FP11scene_class();
+/* Function             */
+extern void fopScn_Execute__FP11scene_class();
+/* Function             */
+extern void fopScn_IsDelete__FPv();
+/* Function             */
+extern void fopScn_Delete__FPv();
+/* Function             */
+extern void fopScn_Create__FPv();
+/* Function             */
 extern void fopScnTg_QueueTo__FP15scene_tag_class();
+/* Function             */
 extern void fopScnTg_ToQueue__FP15scene_tag_class();
+/* Function             */
 extern void fopScnTg_Init__FP15scene_tag_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* Function             */
 extern void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopScn_Method[6];
 }
 
 
@@ -39,12 +64,15 @@ extern void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A38B0 0014 .data      g_fopScn_Method                                              */
-SECTION_DATA u8 g_fopScn_Method[24] = {
-	0x80, 0x01, 0xEC, 0x00, 0x80, 0x01, 0xEB, 0xAC, 0x80, 0x01, 0xEB, 0x5C, 0x80, 0x01, 0xEB, 0x84,
-	0x80, 0x01, 0xEB, 0x34,
+/* 803A38B0-803A38C8 0014 .data      g_fopScn_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_fopScn_Method[6] = {
+	(void*)fopScn_Create,
+	(void*)fopScn_Delete,
+	(void*)fopScn_Execute,
+	(void*)fopScn_IsDelete,
+	(void*)fopScn_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -54,7 +82,7 @@ SECTION_DATA u8 g_fopScn_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001EB34 0028 .text      fopScn_Draw__FP11scene_class                                 */
+/* 8001EB34-8001EB5C 0028 .text      fopScn_Draw__FP11scene_class                                 Function */
 }
 
 #pragma push
@@ -67,7 +95,7 @@ asm void fopScn_Draw(scene_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001EB5C 0028 .text      fopScn_Execute__FP11scene_class                              */
+/* 8001EB5C-8001EB84 0028 .text      fopScn_Execute__FP11scene_class                              Function */
 }
 
 #pragma push
@@ -80,7 +108,7 @@ asm void fopScn_Execute(scene_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001EB84 0028 .text      fopScn_IsDelete__FPv                                         */
+/* 8001EB84-8001EBAC 0028 .text      fopScn_IsDelete__FPv                                         Function */
 }
 
 #pragma push
@@ -93,7 +121,7 @@ asm void fopScn_IsDelete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001EBAC 0054 .text      fopScn_Delete__FPv                                           */
+/* 8001EBAC-8001EC00 0054 .text      fopScn_Delete__FPv                                           Function */
 }
 
 #pragma push
@@ -106,7 +134,7 @@ asm void fopScn_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001EC00 0074 .text      fopScn_Create__FPv                                           */
+/* 8001EC00-8001EC74 0074 .text      fopScn_Create__FPv                                           Function */
 }
 
 #pragma push

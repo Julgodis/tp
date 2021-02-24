@@ -11,17 +11,35 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
+/* Function             */
+extern void control__8JUTFaderFv();
+/* Function             */
 extern void draw__8JUTFaderFv();
+/* Function             */
 extern void startFadeIn__8JUTFaderFi();
+/* Function             */
 extern void startFadeOut__8JUTFaderFi();
+/* Function             */
+extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+/* Function             */
 extern void __dt__8JUTFaderFv();
+/* Function             */
 extern void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void func_802E9260();
+/* Function             */
 extern void __ct__13J2DOrthoGraphFv();
-SECTION_DATA extern const void* __vt__8JUTFader[6];
-SECTION_DATA extern const void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern const void* __vt__13J2DOrthoGraph[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8JUTFader[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J2DGrafContext[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2196;
 }
 
@@ -31,8 +49,8 @@ SECTION_SDATA2 extern f64 LIT_2196;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC990 0018 .data      __vt__8JUTFader                                              */
-SECTION_DATA const  void* __vt__8JUTFader[6] = {
+/* 803CC990-803CC9A8 0018 .data      __vt__8JUTFader                                              VTableData */
+SECTION_DATA void* __vt__8JUTFader[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8JUTFaderFv,
@@ -48,7 +66,7 @@ SECTION_DATA const  void* __vt__8JUTFader[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804560D0 0008 .sdata2    @2196                                                        */
+/* 804560D0-804560D8 0008 .sdata2    @2196                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_2196 = 4503601774854144.000000;
 }
@@ -59,7 +77,7 @@ SECTION_SDATA2 f64 LIT_2196 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E5530 00AC .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       */
+/* 802E5530-802E55DC 00AC .text      __ct__8JUTFaderFiiiiQ28JUtility6TColor                       Function */
 // JUTFader::JUTFader(int, int, int, int, JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -70,7 +88,7 @@ asm void __ct__8JUTFaderFiiiiQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 802E55DC 0100 .text      control__8JUTFaderFv                                         */
+/* 802E55DC-802E56DC 0100 .text      control__8JUTFaderFv                                         Function */
 // JUTFader::control(void)
 #pragma push
 #pragma optimization_level 0
@@ -81,7 +99,7 @@ asm void control__8JUTFaderFv() {
 }
 #pragma pop
 
-/* 802E56DC 0090 .text      draw__8JUTFaderFv                                            */
+/* 802E56DC-802E576C 0090 .text      draw__8JUTFaderFv                                            Function */
 // JUTFader::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -92,7 +110,7 @@ asm void draw__8JUTFaderFv() {
 }
 #pragma pop
 
-/* 802E576C 0030 .text      startFadeIn__8JUTFaderFi                                     */
+/* 802E576C-802E579C 0030 .text      startFadeIn__8JUTFaderFi                                     Function */
 // JUTFader::startFadeIn(int)
 #pragma push
 #pragma optimization_level 0
@@ -103,7 +121,7 @@ asm void startFadeIn__8JUTFaderFi() {
 }
 #pragma pop
 
-/* 802E579C 0034 .text      startFadeOut__8JUTFaderFi                                    */
+/* 802E579C-802E57D0 0034 .text      startFadeOut__8JUTFaderFi                                    Function */
 // JUTFader::startFadeOut(int)
 #pragma push
 #pragma optimization_level 0
@@ -114,7 +132,7 @@ asm void startFadeOut__8JUTFaderFi() {
 }
 #pragma pop
 
-/* 802E57D0 0070 .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    */
+/* 802E57D0-802E5840 0070 .text      setStatus__8JUTFaderFQ28JUTFader7EStatusi                    Function */
 // JUTFader::setStatus(JUTFader::EStatus, int)
 #pragma push
 #pragma optimization_level 0
@@ -125,7 +143,7 @@ asm void setStatus__8JUTFaderFQ28JUTFader7EStatusi() {
 }
 #pragma pop
 
-/* 802E5840 0048 .text      __dt__8JUTFaderFv                                            */
+/* 802E5840-802E5888 0048 .text      __dt__8JUTFaderFv                                            Function */
 // JUTFader::~JUTFader(void)
 #pragma push
 #pragma optimization_level 0

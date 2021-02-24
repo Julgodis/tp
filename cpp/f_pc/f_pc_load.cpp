@@ -8,17 +8,28 @@
 // Additional Symbols:
 // 
 
-extern void cDyl_IsLinked(s16); /* cDyl_IsLinked__Fs */
-extern void cDyl_Unlink(s16); /* cDyl_Unlink__Fs */
-extern void cDyl_LinkASync(s16); /* cDyl_LinkASync__Fs */
-extern void fpcLd_IsLoaded(s16); /* fpcLd_IsLoaded__Fs */
-extern void fpcLd_Load(s16); /* fpcLd_Load__Fs */
+extern void cDyl_IsLinked(short); /* cDyl_IsLinked__Fs */
+extern void cDyl_Unlink(short); /* cDyl_Unlink__Fs */
+extern void cDyl_LinkASync(short); /* cDyl_LinkASync__Fs */
+extern void fpcLd_Use(short); /* fpcLd_Use__Fs */
+extern void fpcLd_IsLoaded(short); /* fpcLd_IsLoaded__Fs */
+extern void fpcLd_Free(short); /* fpcLd_Free__Fs */
+extern void fpcLd_Load(short); /* fpcLd_Load__Fs */
 
 extern "C" {
+/* Function             */
 extern void cDyl_IsLinked__Fs();
+/* Function             */
 extern void cDyl_Unlink__Fs();
+/* Function             */
 extern void cDyl_LinkASync__Fs();
+/* Function             */
+extern void fpcLd_Use__Fs();
+/* Function             */
 extern void fpcLd_IsLoaded__Fs();
+/* Function             */
+extern void fpcLd_Free__Fs();
+/* Function             */
 extern void fpcLd_Load__Fs();
 }
 
@@ -28,52 +39,52 @@ extern void fpcLd_Load__Fs();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021FB8 0050 .text      fpcLd_Use__Fs                                                */
+/* 80021FB8-80022008 0050 .text      fpcLd_Use__Fs                                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLd_Use(s16) {
+asm void fpcLd_Use(short) {
 	nofralloc
 #include "_include/f_pc/f_pc_load/fpcLd_Use__Fs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80022008 0024 .text      fpcLd_IsLoaded__Fs                                           */
+/* 80022008-8002202C 0024 .text      fpcLd_IsLoaded__Fs                                           Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLd_IsLoaded(s16) {
+asm void fpcLd_IsLoaded(short) {
 	nofralloc
 #include "_include/f_pc/f_pc_load/fpcLd_IsLoaded__Fs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8002202C 0024 .text      fpcLd_Free__Fs                                               */
+/* 8002202C-80022050 0024 .text      fpcLd_Free__Fs                                               Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLd_Free(s16) {
+asm void fpcLd_Free(short) {
 	nofralloc
 #include "_include/f_pc/f_pc_load/fpcLd_Free__Fs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80022050 0050 .text      fpcLd_Load__Fs                                               */
+/* 80022050-800220A0 0050 .text      fpcLd_Load__Fs                                               Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcLd_Load(s16) {
+asm void fpcLd_Load(short) {
 	nofralloc
 #include "_include/f_pc/f_pc_load/fpcLd_Load__Fs.s"
 }

@@ -8,8 +8,19 @@
 // Additional Symbols:
 // 
 
+extern void cAPIGph_Painter(void); /* cAPIGph_Painter__Fv */
+extern void cAPIGph_BeforeOfDraw(void); /* cAPIGph_BeforeOfDraw__Fv */
+extern void cAPIGph_AfterOfDraw(void); /* cAPIGph_AfterOfDraw__Fv */
+
 extern "C" {
-SECTION_DATA extern u8 g_cAPI_Interface[24];
+/* Function             */
+extern void cAPIGph_Painter__Fv();
+/* Function             */
+extern void cAPIGph_BeforeOfDraw__Fv();
+/* Function             */
+extern void cAPIGph_AfterOfDraw__Fv();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_cAPI_Interface[6];
 }
 
 
@@ -18,7 +29,7 @@ SECTION_DATA extern u8 g_cAPI_Interface[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802632C8 0030 .text      cAPIGph_Painter__Fv                                          */
+/* 802632C8-802632F8 0030 .text      cAPIGph_Painter__Fv                                          Function */
 }
 
 #pragma push
@@ -31,7 +42,7 @@ asm void cAPIGph_Painter(void) {
 #pragma pop
 
 extern "C" {
-/* 802632F8 0030 .text      cAPIGph_BeforeOfDraw__Fv                                     */
+/* 802632F8-80263328 0030 .text      cAPIGph_BeforeOfDraw__Fv                                     Function */
 }
 
 #pragma push
@@ -44,7 +55,7 @@ asm void cAPIGph_BeforeOfDraw(void) {
 #pragma pop
 
 extern "C" {
-/* 80263328 0030 .text      cAPIGph_AfterOfDraw__Fv                                      */
+/* 80263328-80263358 0030 .text      cAPIGph_AfterOfDraw__Fv                                      Function */
 }
 
 #pragma push

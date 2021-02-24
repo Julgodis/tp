@@ -9,12 +9,22 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __StringRead();
+/* Function             */
+extern void strtol();
+/* Function             */
+extern void strtoul();
+/* Function             */
 extern void __strtoul();
+/* InitializedData      */
 SECTION_DATA extern u8 __ctype_map[256];
+/* InitializedData      */
 SECTION_DATA extern u8 __upper_map[256];
-SECTION_DATA extern u8 MSL_Common_Src_strtoul__LIT_431[72];
-SECTION_SBSS extern u8 errno[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* MSL_Common_Src_strtoul__LIT_431[18];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
 }
 
 
@@ -23,15 +33,27 @@ SECTION_SBSS extern u8 errno[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D3148 0044 .data      @431                                                         */
-SECTION_DATA u8 MSL_Common_Src_strtoul__LIT_431[72] = {
-	0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x8E, 0x60, 0x80, 0x36, 0x8F, 0x00, 0x80, 0x36, 0x90, 0xAC,
-	0x80, 0x36, 0x8F, 0x48, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC,
-	0x80, 0x36, 0x8F, 0x98, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC,
-	0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC, 0x80, 0x36, 0x90, 0xAC,
-	0x80, 0x36, 0x8F, 0x98,
+/* 803D3148-803D3190 0044 .data      @431                                                         SymbolReferenceArrayData */
+SECTION_DATA void* MSL_Common_Src_strtoul__LIT_431[18] = {
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+49),
+	(void*)(((u32*)__strtoul)+89),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+107),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+127),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+196),
+	(void*)(((u32*)__strtoul)+127),
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -41,7 +63,7 @@ SECTION_DATA u8 MSL_Common_Src_strtoul__LIT_431[72] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80368C00 00F0 .text      strtol                                                       */
+/* 80368C00-80368CF0 00F0 .text      strtol                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +73,7 @@ asm void strtol() {
 }
 #pragma pop
 
-/* 80368CF0 00AC .text      strtoul                                                      */
+/* 80368CF0-80368D9C 00AC .text      strtoul                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +83,7 @@ asm void strtoul() {
 }
 #pragma pop
 
-/* 80368D9C 0378 .text      __strtoul                                                    */
+/* 80368D9C-80369114 0378 .text      __strtoul                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

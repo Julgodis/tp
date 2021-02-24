@@ -8,36 +8,85 @@
 // Additional Symbols:
 // 
 
+extern void cM_rad2s(f32); /* cM_rad2s__Ff */
 extern void U_GetAtanTable(f32, f32); /* U_GetAtanTable__Fff */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
+extern void cM_atan2f(f32, f32); /* cM_atan2f__Fff */
+extern void cM_initRnd(int, int, int); /* cM_initRnd__Fiii */
 extern void cM_rnd(void); /* cM_rnd__Fv */
+extern void cM_rndF(f32); /* cM_rndF__Ff */
+extern void cM_rndFX(f32); /* cM_rndFX__Ff */
+extern void cM_initRnd2(int, int, int); /* cM_initRnd2__Fiii */
 extern void cM_rnd2(void); /* cM_rnd2__Fv */
+extern void cM_rndF2(f32); /* cM_rndF2__Ff */
+extern void cM_rndFX2(f32); /* cM_rndFX2__Ff */
 
 extern "C" {
+/* Function             */
+extern void cM_rad2s__Ff();
+/* Function             */
 extern void U_GetAtanTable__Fff();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
+extern void cM_atan2f__Fff();
+/* Function             */
+extern void cM_initRnd__Fiii();
+/* Function             */
 extern void cM_rnd__Fv();
+/* Function             */
+extern void cM_rndF__Ff();
+/* Function             */
+extern void cM_rndFX__Ff();
+/* Function             */
+extern void cM_initRnd2__Fiii();
+/* Function             */
 extern void cM_rnd2__Fv();
+/* Function             */
+extern void cM_rndF2__Ff();
+/* Function             */
+extern void cM_rndFX2__Ff();
+/* Function             */
 extern void fmod();
+/* InitializedData      */
 SECTION_DATA extern u8 atntable[2056];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451168[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045116C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451170[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451174[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451178[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045117C[4];
-SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_math__LIT_2201[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_math__LIT_2215[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2232;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_math__LIT_2277[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2282[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2284;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2296;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2297;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2298[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 c_math__LIT_2299;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_math__LIT_2311;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_math__LIT_2312;
 }
 
@@ -47,7 +96,7 @@ SECTION_SDATA2 extern f32 c_math__LIT_2312;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3778 0802 .data      atntable                                                     */
+/* 803C3778-803C3F80 0802 .data      atntable                                                     InitializedData */
 SECTION_DATA u8 atntable[2056] = {
 	0x00, 0x00, 0x00, 0x0A, 0x00, 0x14, 0x00, 0x1F, 0x00, 0x29, 0x00, 0x33, 0x00, 0x3D, 0x00, 0x47,
 	0x00, 0x51, 0x00, 0x5C, 0x00, 0x66, 0x00, 0x70, 0x00, 0x7A, 0x00, 0x84, 0x00, 0x8F, 0x00, 0x99,
@@ -189,47 +238,47 @@ SECTION_DATA u8 atntable[2056] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804550A8 0008 .sdata2    @2201                                                        */
+/* 804550A8-804550B0 0008 .sdata2    @2201                                                        InitializedData */
 SECTION_SDATA2 u8 c_math__LIT_2201[8] = {
 	0x40, 0x19, 0x21, 0xFB, 0x60, 0x00, 0x00, 0x00,
 };
-/* 804550B0 0004 .sdata2    @2215                                                        */
+/* 804550B0-804550B4 0004 .sdata2    @2215                                                        InitializedData */
 SECTION_SDATA2 u8 c_math__LIT_2215[4] = {
 	0x46, 0x22, 0xF9, 0x83,
 };
-/* 804550B4 0004 .sdata2    @2232                                                        */
+/* 804550B4-804550B8 0004 .sdata2    @2232                                                        Float32Data */
 // 0x44800000
 SECTION_SDATA2 f32 LIT_2232 = 1024.000000f;
-/* 804550B8 0004 .sdata2    @2277                                                        */
+/* 804550B8-804550BC 0004 .sdata2    @2277                                                        InitializedData */
 SECTION_SDATA2 u8 c_math__LIT_2277[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804550BC 0004 .sdata2    @2282                                                        */
+/* 804550BC-804550C0 0004 .sdata2    @2282                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2282[4] = {
 	0x38, 0xC9, 0x0F, 0xDB,
 };
-/* 804550C0 0008 .sdata2    @2284                                                        */
+/* 804550C0-804550C8 0008 .sdata2    @2284                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_2284 = 4503601774854144.000000;
-/* 804550C8 0004 .sdata2    @2296                                                        */
+/* 804550C8-804550CC 0004 .sdata2    @2296                                                        Float32Data */
 // 0x46ece600
 SECTION_SDATA2 f32 LIT_2296 = 30323.000000f;
-/* 804550CC 0004 .sdata2    @2297                                                        */
+/* 804550CC-804550D0 0004 .sdata2    @2297                                                        Float32Data */
 // 0x46ec7a00
 SECTION_SDATA2 f32 LIT_2297 = 30269.000000f;
-/* 804550D0 0004 .sdata2    @2298                                                        */
+/* 804550D0-804550D8 0004 .sdata2    @2298                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2298[8] = {
 	0x46, 0xEC, 0xC6, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804550D8 0008 .sdata2    @2299                                                        */
+/* 804550D8-804550E0 0008 .sdata2    @2299                                                        Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 c_math__LIT_2299 = 1.000000;
-/* 804550E0 0004 .sdata2    @2311                                                        */
+/* 804550E0-804550E4 0004 .sdata2    @2311                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 c_math__LIT_2311 = 2.000000f;
-/* 804550E4 0004 .sdata2    @2312                                                        */
+/* 804550E4-804550E8 0004 .sdata2    @2312                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 c_math__LIT_2312 = 0.500000f;
 }
@@ -240,17 +289,17 @@ SECTION_SDATA2 f32 c_math__LIT_2312 = 0.500000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451168 0004 .sbss      r0                                                           */
+/* 80451168-8045116C 0004 .sbss      r0                                                           ZeroInitializedData */
 SECTION_SBSS u8 data_80451168[4];
-/* 8045116C 0004 .sbss      r1                                                           */
+/* 8045116C-80451170 0004 .sbss      r1                                                           ZeroInitializedData */
 SECTION_SBSS u8 data_8045116C[4];
-/* 80451170 0004 .sbss      r2                                                           */
+/* 80451170-80451174 0004 .sbss      r2                                                           ZeroInitializedData */
 SECTION_SBSS u8 data_80451170[4];
-/* 80451174 0004 .sbss      r02                                                          */
+/* 80451174-80451178 0004 .sbss      r02                                                          ZeroInitializedData */
 SECTION_SBSS u8 data_80451174[4];
-/* 80451178 0004 .sbss      r12                                                          */
+/* 80451178-8045117C 0004 .sbss      r12                                                          ZeroInitializedData */
 SECTION_SBSS u8 data_80451178[4];
-/* 8045117C 0004 .sbss      r22                                                          */
+/* 8045117C-80451180 0004 .sbss      r22                                                          ZeroInitializedData */
 SECTION_SBSS u8 data_8045117C[4];
 }
 
@@ -260,7 +309,7 @@ SECTION_SBSS u8 data_8045117C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802675E4 005C .text      cM_rad2s__Ff                                                 */
+/* 802675E4-80267640 005C .text      cM_rad2s__Ff                                                 Function */
 }
 
 #pragma push
@@ -273,7 +322,7 @@ asm void cM_rad2s(f32) {
 #pragma pop
 
 extern "C" {
-/* 80267640 0034 .text      U_GetAtanTable__Fff                                          */
+/* 80267640-80267674 0034 .text      U_GetAtanTable__Fff                                          Function */
 }
 
 #pragma push
@@ -286,7 +335,7 @@ asm void U_GetAtanTable(f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 80267674 01A0 .text      cM_atan2s__Fff                                               */
+/* 80267674-80267814 01A0 .text      cM_atan2s__Fff                                               Function */
 }
 
 #pragma push
@@ -299,7 +348,7 @@ asm void cM_atan2s(f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 80267814 0048 .text      cM_atan2f__Fff                                               */
+/* 80267814-8026785C 0048 .text      cM_atan2f__Fff                                               Function */
 }
 
 #pragma push
@@ -312,7 +361,7 @@ asm void cM_atan2f(f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 8026785C 0010 .text      cM_initRnd__Fiii                                             */
+/* 8026785C-8026786C 0010 .text      cM_initRnd__Fiii                                             Function */
 }
 
 #pragma push
@@ -325,7 +374,7 @@ asm void cM_initRnd(int, int, int) {
 #pragma pop
 
 extern "C" {
-/* 8026786C 00E8 .text      cM_rnd__Fv                                                   */
+/* 8026786C-80267954 00E8 .text      cM_rnd__Fv                                                   Function */
 }
 
 #pragma push
@@ -338,7 +387,7 @@ asm void cM_rnd(void) {
 #pragma pop
 
 extern "C" {
-/* 80267954 0038 .text      cM_rndF__Ff                                                  */
+/* 80267954-8026798C 0038 .text      cM_rndF__Ff                                                  Function */
 }
 
 #pragma push
@@ -351,7 +400,7 @@ asm void cM_rndF(f32) {
 #pragma pop
 
 extern "C" {
-/* 8026798C 0048 .text      cM_rndFX__Ff                                                 */
+/* 8026798C-802679D4 0048 .text      cM_rndFX__Ff                                                 Function */
 }
 
 #pragma push
@@ -364,7 +413,7 @@ asm void cM_rndFX(f32) {
 #pragma pop
 
 extern "C" {
-/* 802679D4 0010 .text      cM_initRnd2__Fiii                                            */
+/* 802679D4-802679E4 0010 .text      cM_initRnd2__Fiii                                            Function */
 }
 
 #pragma push
@@ -377,7 +426,7 @@ asm void cM_initRnd2(int, int, int) {
 #pragma pop
 
 extern "C" {
-/* 802679E4 00E8 .text      cM_rnd2__Fv                                                  */
+/* 802679E4-80267ACC 00E8 .text      cM_rnd2__Fv                                                  Function */
 }
 
 #pragma push
@@ -390,7 +439,7 @@ asm void cM_rnd2(void) {
 #pragma pop
 
 extern "C" {
-/* 80267ACC 0038 .text      cM_rndF2__Ff                                                 */
+/* 80267ACC-80267B04 0038 .text      cM_rndF2__Ff                                                 Function */
 }
 
 #pragma push
@@ -403,7 +452,7 @@ asm void cM_rndF2(f32) {
 #pragma pop
 
 extern "C" {
-/* 80267B04 0048 .text      cM_rndFX2__Ff                                                */
+/* 80267B04-80267B4C 0048 .text      cM_rndFX2__Ff                                                Function */
 }
 
 #pragma push

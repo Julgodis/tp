@@ -9,10 +9,19 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* GlobalFunction       */
 extern u32 OSGetArenaHi();
+/* Function             */
+extern void __OSInitAudioSystem();
+/* Function             */
+extern void __OSStopAudioSystem();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void OSGetTick();
+/* InitializedData      */
 SECTION_DATA extern u8 DSPInitCode[128];
 }
 
@@ -22,7 +31,7 @@ SECTION_DATA extern u8 DSPInitCode[128];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF490 0080 .data      DSPInitCode                                                  */
+/* 803CF490-803CF510 0080 .data      DSPInitCode                                                  InitializedData */
 SECTION_DATA u8 DSPInitCode[128] = {
 	0x02, 0x9F, 0x00, 0x10, 0x02, 0x9F, 0x00, 0x33, 0x02, 0x9F, 0x00, 0x34, 0x02, 0x9F, 0x00, 0x35,
 	0x02, 0x9F, 0x00, 0x36, 0x02, 0x9F, 0x00, 0x37, 0x02, 0x9F, 0x00, 0x38, 0x02, 0x9F, 0x00, 0x39,
@@ -41,7 +50,7 @@ SECTION_DATA u8 DSPInitCode[128] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033B2D8 01BC .text      __OSInitAudioSystem                                          */
+/* 8033B2D8-8033B494 01BC .text      __OSInitAudioSystem                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +60,7 @@ asm void __OSInitAudioSystem() {
 }
 #pragma pop
 
-/* 8033B494 00D8 .text      __OSStopAudioSystem                                          */
+/* 8033B494-8033B56C 00D8 .text      __OSStopAudioSystem                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

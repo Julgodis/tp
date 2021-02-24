@@ -11,13 +11,26 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__8cBgS_ChkFv();
+/* Function             */
 extern void __dt__8cBgS_ChkFv();
+/* Function             */
+extern void __ct__13cBgS_ShdwDrawFv();
+/* Function             */
 extern void __dt__13cBgS_ShdwDrawFv();
+/* Function             */
+extern void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
+/* Function             */
+extern void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
+/* Function             */
 extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__8cM3dGAab[3];
-SECTION_DATA extern const void* __vt__13cBgS_ShdwDraw[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGAab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13cBgS_ShdwDraw[4];
 }
 
 
@@ -26,8 +39,8 @@ SECTION_DATA extern const void* __vt__13cBgS_ShdwDraw[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3FC0 000C .data      __vt__13cBgS_ShdwDraw                                        */
-SECTION_DATA const  void* __vt__13cBgS_ShdwDraw[4] = {
+/* 803C3FC0-803C3FD0 000C .data      __vt__13cBgS_ShdwDraw                                        VTableData */
+SECTION_DATA void* __vt__13cBgS_ShdwDraw[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13cBgS_ShdwDrawFv,
@@ -42,7 +55,7 @@ SECTION_DATA const  void* __vt__13cBgS_ShdwDraw[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80267F88 0048 .text      __ct__13cBgS_ShdwDrawFv                                      */
+/* 80267F88-80267FD0 0048 .text      __ct__13cBgS_ShdwDrawFv                                      Function */
 // cBgS_ShdwDraw::cBgS_ShdwDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -53,7 +66,7 @@ asm void __ct__13cBgS_ShdwDrawFv() {
 }
 #pragma pop
 
-/* 80267FD0 0078 .text      __dt__13cBgS_ShdwDrawFv                                      */
+/* 80267FD0-80268048 0078 .text      __dt__13cBgS_ShdwDrawFv                                      Function */
 // cBgS_ShdwDraw::~cBgS_ShdwDraw(void)
 #pragma push
 #pragma optimization_level 0
@@ -64,7 +77,7 @@ asm void __dt__13cBgS_ShdwDrawFv() {
 }
 #pragma pop
 
-/* 80268048 0024 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            */
+/* 80268048-8026806C 0024 .text      Set__13cBgS_ShdwDrawFR4cXyzR4cXyz                            Function */
 // cBgS_ShdwDraw::Set(cXyz&, cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -75,7 +88,7 @@ asm void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz() {
 }
 #pragma pop
 
-/* 8026806C 0008 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i */
+/* 8026806C-80268074 0008 .text      SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i Function */
 // cBgS_ShdwDraw::SetCallback(int (*)(cBgS_ShdwDraw*, cBgD_Vtx_t*, int, int, int, cM3dGPla*))
 #pragma push
 #pragma optimization_level 0

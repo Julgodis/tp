@@ -11,33 +11,63 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern int JSGFGetType__Q26JStage6TLightCFv();
-extern int JSGGetLightType__Q26JStage6TLightCFv();
+/* Function             */
+extern void __dt__Q26JStage6TLightFv();
+/* ReturnIntegerFunction */
+extern  int JSGFGetType__Q26JStage6TLightCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetLightType__Q26JStage6TLightCFv();
+/* ReturnFunction       */
 extern void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight();
+/* Function             */
 extern void JSGGetColor__Q26JStage6TLightCFv();
+/* ReturnFunction       */
 extern void JSGSetColor__Q26JStage6TLightF8_GXColor();
+/* ReturnFunction       */
 extern void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
+/* ReturnFunction       */
 extern void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn();
+/* ReturnFunction       */
 extern void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
+/* ReturnFunction       */
 extern void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn();
+/* ReturnFunction       */
 extern void JSGGetPosition__Q26JStage6TLightCFP3Vec();
+/* ReturnFunction       */
 extern void JSGSetPosition__Q26JStage6TLightFRC3Vec();
+/* ReturnFunction       */
 extern void JSGGetDirection__Q26JStage6TLightCFP3Vec();
+/* ReturnFunction       */
 extern void JSGSetDirection__Q26JStage6TLightFRC3Vec();
+/* Function             */
 extern void __dt__Q26JStage7TObjectFv();
-extern int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGUpdate__Q26JStage7TObjectFv();
-extern int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnIntegerFunction */
+extern  int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnFunction       */
 extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+/* ReturnFunction       */
 extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+/* ReturnFunction       */
 extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+/* ReturnFunction       */
 extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* ReturnIntegerFunction */
+extern  int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* Function             */
 extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__Q26JStage6TLight[28];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q26JStage6TLight[28];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JSGLight__LIT_311[8];
 }
 
@@ -47,8 +77,8 @@ SECTION_SDATA2 extern u8 JSGLight__LIT_311[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4778 006C .data      __vt__Q26JStage6TLight                                       */
-SECTION_DATA const  void* __vt__Q26JStage6TLight[28] = {
+/* 803C4778-803C47E8 006C .data      __vt__Q26JStage6TLight                                       VTableData */
+SECTION_DATA void* __vt__Q26JStage6TLight[28] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -87,7 +117,7 @@ SECTION_DATA const  void* __vt__Q26JStage6TLight[28] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804553E8 0004 .sdata2    @311                                                         */
+/* 804553E8-804553F0 0004 .sdata2    @311                                                         InitializedData */
 SECTION_SDATA2 u8 JSGLight__LIT_311[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
@@ -101,7 +131,7 @@ SECTION_SDATA2 u8 JSGLight__LIT_311[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80280D28 0060 .text      __dt__Q26JStage6TLightFv                                     */
+/* 80280D28-80280D88 0060 .text      __dt__Q26JStage6TLightFv                                     Function */
 // JStage::TLight::~JStage::TLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -112,25 +142,25 @@ asm void __dt__Q26JStage6TLightFv() {
 }
 #pragma pop
 
-/* 80280D88 0008 .text      JSGFGetType__Q26JStage6TLightCFv                             */
+/* 80280D88-80280D90 0008 .text      JSGFGetType__Q26JStage6TLightCFv                             ReturnIntegerFunction */
 // JStage::TLight::JSGFGetType(void) const
 int JSGFGetType__Q26JStage6TLightCFv() {
 	return 5;
 }
 
-/* 80280D90 0008 .text      JSGGetLightType__Q26JStage6TLightCFv                         */
+/* 80280D90-80280D98 0008 .text      JSGGetLightType__Q26JStage6TLightCFv                         ReturnIntegerFunction */
 // JStage::TLight::JSGGetLightType(void) const
 int JSGGetLightType__Q26JStage6TLightCFv() {
 	return 1;
 }
 
-/* 80280D98 0004 .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          */
+/* 80280D98-80280D9C 0004 .text      JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight          ReturnFunction */
 // JStage::TLight::JSGSetLightType(JStage::TELight)
 void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight() {
 	return;
 }
 
-/* 80280D9C 0014 .text      JSGGetColor__Q26JStage6TLightCFv                             */
+/* 80280D9C-80280DB0 0014 .text      JSGGetColor__Q26JStage6TLightCFv                             Function */
 // JStage::TLight::JSGGetColor(void) const
 #pragma push
 #pragma optimization_level 0
@@ -141,55 +171,55 @@ asm void JSGGetColor__Q26JStage6TLightCFv() {
 }
 #pragma pop
 
-/* 80280DB0 0004 .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      */
+/* 80280DB0-80280DB4 0004 .text      JSGSetColor__Q26JStage6TLightF8_GXColor                      ReturnFunction */
 // JStage::TLight::JSGSetColor(_GXColor)
 void JSGSetColor__Q26JStage6TLightF8_GXColor() {
 	return;
 }
 
-/* 80280DB4 0004 .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn */
+/* 80280DB4-80280DB8 0004 .text      JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn ReturnFunction */
 // JStage::TLight::JSGGetDistanceAttenuation(f32*, f32*, _GXDistAttnFn*) const
 void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn() {
 	return;
 }
 
-/* 80280DB8 0004 .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn */
+/* 80280DB8-80280DBC 0004 .text      JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn ReturnFunction */
 // JStage::TLight::JSGSetDistanceAttenuation(f32, f32, _GXDistAttnFn)
 void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn() {
 	return;
 }
 
-/* 80280DBC 0004 .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      */
+/* 80280DBC-80280DC0 0004 .text      JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn      ReturnFunction */
 // JStage::TLight::JSGGetAngleAttenuation(f32*, _GXSpotFn*) const
 void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn() {
 	return;
 }
 
-/* 80280DC0 0004 .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         */
+/* 80280DC0-80280DC4 0004 .text      JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn         ReturnFunction */
 // JStage::TLight::JSGSetAngleAttenuation(f32, _GXSpotFn)
 void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn() {
 	return;
 }
 
-/* 80280DC4 0004 .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      */
+/* 80280DC4-80280DC8 0004 .text      JSGGetPosition__Q26JStage6TLightCFP3Vec                      ReturnFunction */
 // JStage::TLight::JSGGetPosition(Vec*) const
 void JSGGetPosition__Q26JStage6TLightCFP3Vec() {
 	return;
 }
 
-/* 80280DC8 0004 .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      */
+/* 80280DC8-80280DCC 0004 .text      JSGSetPosition__Q26JStage6TLightFRC3Vec                      ReturnFunction */
 // JStage::TLight::JSGSetPosition(const Vec&)
 void JSGSetPosition__Q26JStage6TLightFRC3Vec() {
 	return;
 }
 
-/* 80280DCC 0004 .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     */
+/* 80280DCC-80280DD0 0004 .text      JSGGetDirection__Q26JStage6TLightCFP3Vec                     ReturnFunction */
 // JStage::TLight::JSGGetDirection(Vec*) const
 void JSGGetDirection__Q26JStage6TLightCFP3Vec() {
 	return;
 }
 
-/* 80280DD0 0004 .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     */
+/* 80280DD0-80280DD4 0004 .text      JSGSetDirection__Q26JStage6TLightFRC3Vec                     ReturnFunction */
 // JStage::TLight::JSGSetDirection(const Vec&)
 void JSGSetDirection__Q26JStage6TLightFRC3Vec() {
 	return;

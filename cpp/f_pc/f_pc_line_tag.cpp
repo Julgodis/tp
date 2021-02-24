@@ -8,23 +8,33 @@
 // Additional Symbols:
 // 
 
+struct line_tag;
 struct create_tag_class;
 struct node_lists_tree_class;
-struct line_tag;
 
+extern void fpcLnTg_Move(line_tag*, int); /* fpcLnTg_Move__FP8line_tagi */
 extern void fpcLnTg_QueueTo(line_tag*); /* fpcLnTg_QueueTo__FP8line_tag */
 extern void fpcLnTg_ToQueue(line_tag*, int); /* fpcLnTg_ToQueue__FP8line_tagi */
+extern void fpcLnTg_Init(line_tag*, void*); /* fpcLnTg_Init__FP8line_tagPv */
 extern void cTg_SingleCutFromTree(create_tag_class*); /* cTg_SingleCutFromTree__FP16create_tag_class */
 extern void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); /* cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fpcLnTg_Move__FP8line_tagi();
+/* Function             */
 extern void fpcLnTg_QueueTo__FP8line_tag();
+/* Function             */
 extern void fpcLnTg_ToQueue__FP8line_tagi();
+/* Function             */
+extern void fpcLnTg_Init__FP8line_tagPv();
+/* Function             */
 extern void cTg_SingleCutFromTree__FP16create_tag_class();
+/* Function             */
 extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
-SECTION_SDATA extern u8 g_fpcLn_Queue[8];
 }
 
 
@@ -33,7 +43,7 @@ SECTION_SDATA extern u8 g_fpcLn_Queue[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800235A8 0058 .text      fpcLnTg_Move__FP8line_tagi                                   */
+/* 800235A8-80023600 0058 .text      fpcLnTg_Move__FP8line_tagi                                   Function */
 }
 
 #pragma push
@@ -46,7 +56,7 @@ asm void fpcLnTg_Move(line_tag*, int) {
 #pragma pop
 
 extern "C" {
-/* 80023600 0034 .text      fpcLnTg_QueueTo__FP8line_tag                                 */
+/* 80023600-80023634 0034 .text      fpcLnTg_QueueTo__FP8line_tag                                 Function */
 }
 
 #pragma push
@@ -59,7 +69,7 @@ asm void fpcLnTg_QueueTo(line_tag*) {
 #pragma pop
 
 extern "C" {
-/* 80023634 0058 .text      fpcLnTg_ToQueue__FP8line_tagi                                */
+/* 80023634-8002368C 0058 .text      fpcLnTg_ToQueue__FP8line_tagi                                Function */
 }
 
 #pragma push
@@ -72,7 +82,7 @@ asm void fpcLnTg_ToQueue(line_tag*, int) {
 #pragma pop
 
 extern "C" {
-/* 8002368C 0034 .text      fpcLnTg_Init__FP8line_tagPv                                  */
+/* 8002368C-800236C0 0034 .text      fpcLnTg_Init__FP8line_tagPv                                  Function */
 }
 
 #pragma push

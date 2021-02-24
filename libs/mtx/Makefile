@@ -24,8 +24,9 @@ MTX_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libmtx.a: dirs $(MTX_A_O_FILES)
+$(BUILD_DIR)/libmtx.a: $(MTX_A_O_FILES)
 	$(LD) -xm l $(MTX_A_LDFLAGS) -o $(BUILD_DIR)/libmtx.a $(MTX_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libmtx.a
 
 $(BUILD_DIR)/libs/mtx/%.o: cpp/mtx/%.cpp
 	mkdir -p $(@D)

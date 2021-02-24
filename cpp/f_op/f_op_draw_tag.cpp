@@ -9,20 +9,38 @@
 // 
 
 struct create_tag_class;
-struct node_list_class;
 struct node_lists_tree_class;
+struct node_list_class;
 
+extern void fopDwTg_ToDrawQ(create_tag_class*, int); /* fopDwTg_ToDrawQ__FP16create_tag_classi */
+extern void fopDwTg_DrawQTo(create_tag_class*); /* fopDwTg_DrawQTo__FP16create_tag_class */
+extern void fopDwTg_Init(create_tag_class*, void*); /* fopDwTg_Init__FP16create_tag_classPv */
+extern void fopDwTg_CreateQueue(void); /* fopDwTg_CreateQueue__Fv */
 extern void cTr_Create(node_lists_tree_class*, node_list_class*, int); /* cTr_Create__FP21node_lists_tree_classP15node_list_classi */
 extern void cTg_SingleCutFromTree(create_tag_class*); /* cTg_SingleCutFromTree__FP16create_tag_class */
 extern void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); /* cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+/* Function             */
+extern void fopDwTg_DrawQTo__FP16create_tag_class();
+/* Function             */
+extern void fopDwTg_Init__FP16create_tag_classPv();
+/* Function             */
+extern void fopDwTg_CreateQueue__Fv();
+/* Function             */
 extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
+/* Function             */
 extern void cTg_SingleCutFromTree__FP16create_tag_class();
+/* Function             */
 extern void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_803F1E10[12000];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 }
 
@@ -32,7 +50,7 @@ SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505D0 0008 .sdata     g_fopDwTg_Queue                                              */
+/* 804505D0-804505D8 0008 .sdata     g_fopDwTg_Queue                                              InitializedData */
 SECTION_SDATA u8 g_fopDwTg_Queue[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -44,7 +62,7 @@ SECTION_SDATA u8 g_fopDwTg_Queue[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F1E10 2EE0 .bss       lists$2216                                                   */
+/* 803F1E10-803F4CF0 2EE0 .bss       lists$2216                                                   ZeroInitializedData */
 SECTION_BSS u8 data_803F1E10[12000];
 }
 
@@ -54,7 +72,7 @@ SECTION_BSS u8 data_803F1E10[12000];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800204AC 0028 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       */
+/* 800204AC-800204D4 0028 .text      fopDwTg_ToDrawQ__FP16create_tag_classi                       Function */
 }
 
 #pragma push
@@ -67,7 +85,7 @@ asm void fopDwTg_ToDrawQ(create_tag_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 800204D4 0020 .text      fopDwTg_DrawQTo__FP16create_tag_class                        */
+/* 800204D4-800204F4 0020 .text      fopDwTg_DrawQTo__FP16create_tag_class                        Function */
 }
 
 #pragma push
@@ -80,7 +98,7 @@ asm void fopDwTg_DrawQTo(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 800204F4 0024 .text      fopDwTg_Init__FP16create_tag_classPv                         */
+/* 800204F4-80020518 0024 .text      fopDwTg_Init__FP16create_tag_classPv                         Function */
 }
 
 #pragma push
@@ -93,7 +111,7 @@ asm void fopDwTg_Init(create_tag_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80020518 0030 .text      fopDwTg_CreateQueue__Fv                                      */
+/* 80020518-80020548 0030 .text      fopDwTg_CreateQueue__Fv                                      Function */
 }
 
 #pragma push

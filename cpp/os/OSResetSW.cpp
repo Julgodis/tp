@@ -9,20 +9,39 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
+extern void __OSResetSWInterruptHandler();
+/* Function             */
 extern void OSGetResetButtonState();
+/* Function             */
+extern void OSGetResetSwitchState();
+/* Function             */
 extern void __OSGetSystemTime();
+/* Function             */
 extern void __div2i();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __OSStartTime[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451634[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ResetCallback[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Down[4];
-SECTION_SBSS extern u8 OSResetSW__LastState[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 OSResetSW__LastState[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 HoldUp[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804516B4[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 HoldDown[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804516BC[4];
 }
 
@@ -32,20 +51,19 @@ SECTION_SBSS extern u8 data_804516BC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804516A0 0004 .sbss      ResetCallback                                                */
+/* 804516A0-804516A4 0004 .sbss      ResetCallback                                                ZeroInitializedData */
 SECTION_SBSS u8 ResetCallback[4];
-/* 804516A4 0004 .sbss      Down                                                         */
+/* 804516A4-804516A8 0004 .sbss      Down                                                         ZeroInitializedData */
 SECTION_SBSS u8 Down[4];
-/* 804516A8 0004 .sbss      LastState                                                    */
-SECTION_SBSS u8 OSResetSW__LastState[4];
-SECTION_SBSS u8 pad_804516AC[4];
-/* 804516B0 0004 .sbss      HoldUp                                                       */
+/* 804516A8-804516B0 0004 .sbss      LastState                                                    ZeroInitializedData */
+SECTION_SBSS u8 OSResetSW__LastState[4 + 4 /* padding */];
+/* 804516B0-804516B4 0004 .sbss      HoldUp                                                       ZeroInitializedData */
 SECTION_SBSS u8 HoldUp[4];
-/* 804516B4 0004 .sbss      data_804516B4                                                */
+/* 804516B4-804516B8 0004 .sbss      data_804516B4                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804516B4[4];
-/* 804516B8 0004 .sbss      HoldDown                                                     */
+/* 804516B8-804516BC 0004 .sbss      HoldDown                                                     ZeroInitializedData */
 SECTION_SBSS u8 HoldDown[4];
-/* 804516BC 0004 .sbss      data_804516BC                                                */
+/* 804516BC-804516C0 0004 .sbss      data_804516BC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804516BC[4];
 }
 
@@ -55,7 +73,7 @@ SECTION_SBSS u8 data_804516BC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033FAE4 00F4 .text      __OSResetSWInterruptHandler                                  */
+/* 8033FAE4-8033FBD8 00F4 .text      __OSResetSWInterruptHandler                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +83,7 @@ asm void __OSResetSWInterruptHandler() {
 }
 #pragma pop
 
-/* 8033FBD8 0298 .text      OSGetResetButtonState                                        */
+/* 8033FBD8-8033FE70 0298 .text      OSGetResetButtonState                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +93,7 @@ asm void OSGetResetButtonState() {
 }
 #pragma pop
 
-/* 8033FE70 0020 .text      OSGetResetSwitchState                                        */
+/* 8033FE70-8033FE90 0020 .text      OSGetResetSwitchState                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

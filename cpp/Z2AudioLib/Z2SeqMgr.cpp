@@ -13,114 +13,267 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void calc__9JAISeqMgrFv();
+/* Function             */
 extern void stop__9JAISeqMgrFUl();
+/* Function             */
 extern void mixOut__9JAISeqMgrFv();
+/* Function             */
 extern void releaseSound__14JAISoundHandleFv();
+/* Function             */
 extern void releaseHandle__8JAISoundFv();
+/* Function             */
 extern void lockWhenPrepared__15JAISoundStatus_Fv();
+/* Function             */
 extern void unlockIfLocked__15JAISoundStatus_Fv();
+/* Function             */
 extern void stop__8JAISoundFUl();
+/* Function             */
 extern void stop__8JAISoundFv();
+/* Function             */
 extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePan__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void moveDolby__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void stop__12JAIStreamMgrFUl();
+/* Function             */
 extern void linearTransform__6Z2CalcFfffffb();
+/* Function             */
 extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+/* Function             */
 extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+/* Function             */
 extern void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+/* Function             */
+extern void __ct__8Z2SeqMgrFv();
+/* Function             */
 extern void bgmStart__8Z2SeqMgrFUlUll();
+/* Function             */
 extern void bgmStop__8Z2SeqMgrFUll();
+/* Function             */
 extern void subBgmStart__8Z2SeqMgrFUl();
+/* Function             */
 extern void subBgmStop__8Z2SeqMgrFv();
+/* Function             */
 extern void subBgmStopInner__8Z2SeqMgrFv();
+/* Function             */
 extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+/* Function             */
+extern void bgmStreamCheckReady__8Z2SeqMgrFv();
+/* Function             */
 extern void bgmStreamPlay__8Z2SeqMgrFv();
+/* Function             */
 extern void bgmStreamStop__8Z2SeqMgrFUl();
+/* Function             */
 extern void changeBgmStatus__8Z2SeqMgrFl();
+/* Function             */
 extern void changeSubBgmStatus__8Z2SeqMgrFl();
+/* Function             */
+extern void onVariantBgmJumpEnd__8Z2SeqMgrFb();
+/* Function             */
 extern void changeFishingBgm__8Z2SeqMgrFl();
+/* Function             */
+extern void talkInBgm__8Z2SeqMgrFv();
+/* Function             */
+extern void talkOutBgm__8Z2SeqMgrFv();
+/* Function             */
+extern void menuInBgm__8Z2SeqMgrFv();
+/* Function             */
+extern void menuOutBgm__8Z2SeqMgrFv();
+/* Function             */
 extern void fanfareFramework__8Z2SeqMgrFv();
+/* Function             */
+extern void stopWolfHowlSong__8Z2SeqMgrFv();
+/* Function             */
+extern void setHeightVolMod__8Z2SeqMgrFbUl();
+/* Function             */
+extern void setTimeProcVolMod__8Z2SeqMgrFbUl();
+/* Function             */
+extern void processBgmFramework__8Z2SeqMgrFv();
+/* Function             */
+extern void checkBgmIDPlaying__8Z2SeqMgrFUl();
+/* Function             */
 extern void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
+/* Function             */
 extern void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+/* Function             */
 extern void resetBattleBgmParams__8Z2SeqMgrFv();
+/* Function             */
 extern void setBattleBgmOff__8Z2SeqMgrFb();
+/* Function             */
+extern void setBattleSearched__8Z2SeqMgrFb();
+/* Function             */
 extern void setBattleDistIgnore__8Z2SeqMgrFb();
+/* Function             */
+extern void setBattleGhostMute__8Z2SeqMgrFb();
+/* Function             */
+extern void setBattleDistState__8Z2SeqMgrFUc();
+/* Function             */
 extern void setBattleSeqState__8Z2SeqMgrFUc();
+/* Function             */
+extern void setBattleLastHit__8Z2SeqMgrFUc();
+/* Function             */
 extern void battleBgmFramework__8Z2SeqMgrFv();
+/* Function             */
 extern void startBattleBgm__8Z2SeqMgrFb();
+/* Function             */
 extern void stopBattleBgm__8Z2SeqMgrFUcUc();
+/* Function             */
 extern void fieldBgmStart__8Z2SeqMgrFv();
+/* Function             */
 extern void fieldRidingMute__8Z2SeqMgrFv();
+/* Function             */
+extern void onFieldBgmJumpStart__8Z2SeqMgrFv();
+/* Function             */
+extern void onFieldBgmJumpEnd__8Z2SeqMgrFv();
+/* Function             */
 extern void fieldBgmFramework__8Z2SeqMgrFv();
+/* ReturnFunction       */
 extern void mbossBgmMuteProcess__8Z2SeqMgrFv();
+/* ReturnFunction       */
+extern void bgmSetSwordUsing__8Z2SeqMgrFl();
+/* ReturnFunction       */
+extern void bgmNowBattle__8Z2SeqMgrFf();
+/* Function             */
+extern void taktModeMute__8Z2SeqMgrFv();
+/* Function             */
+extern void taktModeMuteOff__8Z2SeqMgrFv();
+/* Function             */
 extern void setDemoName__11Z2StatusMgrFPc();
+/* Function             */
 extern void checkDayTime__11Z2StatusMgrFv();
+/* Function             */
 extern void setSceneExist__10Z2SceneMgrFb();
+/* Function             */
 extern void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+/* Function             */
 extern void searchEnemy__13Z2SoundObjMgrFv();
+/* Function             */
 extern void setBattleInit__13Z2SoundObjMgrFv();
+/* Function             */
 extern void checkBattleFinish__13Z2SoundObjMgrFv();
+/* FirstParamFunction   */
 extern u8 isTwilightBattle__13Z2SoundObjMgrFv(u8*);
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 Z2SeqMgr__stringBase0[640];
+/* InitializedData      */
 SECTION_DATA extern u8 Z2SeqMgr__LIT_3900[660];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_3988[636];
-SECTION_DATA extern u8 Z2SeqMgr__LIT_4739[52];
-SECTION_DATA extern u8 LIT_5219[188];
-SECTION_DATA extern u8 LIT_5218[188];
-SECTION_DATA extern u8 Z2SeqMgr__LIT_6877[84];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2SeqMgr__LIT_4739[13];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5219[47];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5218[47];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2SeqMgr__LIT_6877[21];
+/* Float32Data          */
 SECTION_SDATA extern f32 VOL_BGM_DEFAULT__7Z2Param;
+/* Float32Data          */
 SECTION_SDATA extern f32 VOL_BGM_TALKING__7Z2Param;
+/* InitializedData      */
 SECTION_SDATA extern u8 VOL_BGM_PAUSING__7Z2Param[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450860[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450864[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450868[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_8045086C[4];
+/* Float32Data          */
 SECTION_SDATA extern f32 sDeathMtBottom;
+/* Float32Data          */
 SECTION_SDATA extern f32 sDeathMtTop;
+/* InitializedData      */
 SECTION_SDATA extern u8 sUnderWaterDepthMax[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B48[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B74[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B7C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B80[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B84[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param[4];
-SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3372;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3373[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_3559[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Z2SeqMgr__LIT_3561;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4726[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4727;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4728[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4729[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4730[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4731;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4732[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4733;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4734;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4735;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4736[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2SeqMgr__LIT_4737;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2SeqMgr__LIT_4738[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Z2SeqMgr__LIT_4741;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5673;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5674;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5675[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5676;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5677;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5678;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5679;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5680;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5681;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5913[4];
 }
 
@@ -130,90 +283,94 @@ SECTION_SDATA2 extern u8 LIT_5913[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039BA08 0280 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039BA08 = "F_SP00";
-const char* const stringBase_8039BA0F = "F_SP103";
-const char* const stringBase_8039BA17 = "R_SP01";
-const char* const stringBase_8039BA1E = "F_SP104";
-const char* const stringBase_8039BA26 = "R_SP107";
-const char* const stringBase_8039BA2E = "F_SP108";
-const char* const stringBase_8039BA36 = "R_SP108";
-const char* const stringBase_8039BA3E = "F_SP117";
-const char* const stringBase_8039BA46 = "F_SP109";
-const char* const stringBase_8039BA4E = "R_SP109";
-const char* const stringBase_8039BA56 = "R_SP209";
-const char* const stringBase_8039BA5E = "F_SP110";
-const char* const stringBase_8039BA66 = "R_SP110";
-const char* const stringBase_8039BA6E = "F_SP111";
-const char* const stringBase_8039BA76 = "F_SP128";
-const char* const stringBase_8039BA7E = "R_SP128";
-const char* const stringBase_8039BA86 = "F_SP115";
-const char* const stringBase_8039BA8E = "F_SP112";
-const char* const stringBase_8039BA96 = "F_SP126";
-const char* const stringBase_8039BA9E = "F_SP127";
-const char* const stringBase_8039BAA6 = "R_SP127";
-const char* const stringBase_8039BAAE = "F_SP113";
-const char* const stringBase_8039BAB6 = "F_SP116";
-const char* const stringBase_8039BABE = "R_SP116";
-const char* const stringBase_8039BAC6 = "R_SP160";
-const char* const stringBase_8039BACE = "R_SP161";
-const char* const stringBase_8039BAD6 = "F_SP114";
-const char* const stringBase_8039BADE = "F_SP118";
-const char* const stringBase_8039BAE6 = "F_SP124";
-const char* const stringBase_8039BAEE = "F_SP125";
-const char* const stringBase_8039BAF6 = "F_SP121";
-const char* const stringBase_8039BAFE = "F_SP122";
-const char* const stringBase_8039BB06 = "F_SP123";
-const char* const stringBase_8039BB0E = "F_SP200";
-const char* const stringBase_8039BB16 = "F_SP102";
-const char* const stringBase_8039BB1E = "";
-const char* const stringBase_8039BB1F = "R_SP300";
-const char* const stringBase_8039BB27 = "R_SP301";
-const char* const stringBase_8039BB2F = "T_ENEMY";
-const char* const stringBase_8039BB37 = "D_MN54";
-const char* const stringBase_8039BB3E = "D_MN05";
-const char* const stringBase_8039BB45 = "D_MN05B";
-const char* const stringBase_8039BB4D = "D_MN05A";
-const char* const stringBase_8039BB55 = "D_MN04";
-const char* const stringBase_8039BB5C = "D_MN04B";
-const char* const stringBase_8039BB64 = "D_MN04A";
-const char* const stringBase_8039BB6C = "D_MN01";
-const char* const stringBase_8039BB73 = "D_MN01B";
-const char* const stringBase_8039BB7B = "D_MN01A";
-const char* const stringBase_8039BB83 = "D_MN10";
-const char* const stringBase_8039BB8A = "D_MN10B";
-const char* const stringBase_8039BB92 = "D_MN10A";
-const char* const stringBase_8039BB9A = "D_MN11";
-const char* const stringBase_8039BBA1 = "D_MN11B";
-const char* const stringBase_8039BBA9 = "D_MN11A";
-const char* const stringBase_8039BBB1 = "D_MN06";
-const char* const stringBase_8039BBB8 = "D_MN06B";
-const char* const stringBase_8039BBC0 = "D_MN06A";
-const char* const stringBase_8039BBC8 = "D_MN07";
-const char* const stringBase_8039BBCF = "D_MN07B";
-const char* const stringBase_8039BBD7 = "D_MN07A";
-const char* const stringBase_8039BBDF = "D_MN08";
-const char* const stringBase_8039BBE6 = "D_MN08B";
-const char* const stringBase_8039BBEE = "D_MN08C";
-const char* const stringBase_8039BBF6 = "D_MN08A";
-const char* const stringBase_8039BBFE = "D_MN08D";
-const char* const stringBase_8039BC06 = "D_MN09";
-const char* const stringBase_8039BC0D = "D_MN09A";
-const char* const stringBase_8039BC15 = "D_MN09B";
-const char* const stringBase_8039BC1D = "D_MN09C";
-const char* const stringBase_8039BC25 = "D_SB00";
-const char* const stringBase_8039BC2C = "D_SB01";
-const char* const stringBase_8039BC33 = "D_SB02";
-const char* const stringBase_8039BC3A = "D_SB03";
-const char* const stringBase_8039BC41 = "D_SB04";
-const char* const stringBase_8039BC48 = "D_SB05";
-const char* const stringBase_8039BC4F = "D_SB06";
-const char* const stringBase_8039BC56 = "D_SB07";
-const char* const stringBase_8039BC5D = "D_SB08";
-const char* const stringBase_8039BC64 = "D_SB09";
-const char* const stringBase_8039BC6B = "D_SB10";
-const char* const stringBase_8039BC72 = "force_start";
-const char* const stringBase_8039BC7E = "force_end";
+/* 8039BA08-8039BC88 0280 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039BA08 = "F_SP00";
+SECTION_DEAD const char* const stringBase_8039BA0F = "F_SP103";
+SECTION_DEAD const char* const stringBase_8039BA17 = "R_SP01";
+SECTION_DEAD const char* const stringBase_8039BA1E = "F_SP104";
+SECTION_DEAD const char* const stringBase_8039BA26 = "R_SP107";
+SECTION_DEAD const char* const stringBase_8039BA2E = "F_SP108";
+SECTION_DEAD const char* const stringBase_8039BA36 = "R_SP108";
+SECTION_DEAD const char* const stringBase_8039BA3E = "F_SP117";
+SECTION_DEAD const char* const stringBase_8039BA46 = "F_SP109";
+SECTION_DEAD const char* const stringBase_8039BA4E = "R_SP109";
+SECTION_DEAD const char* const stringBase_8039BA56 = "R_SP209";
+SECTION_DEAD const char* const stringBase_8039BA5E = "F_SP110";
+SECTION_DEAD const char* const stringBase_8039BA66 = "R_SP110";
+SECTION_DEAD const char* const stringBase_8039BA6E = "F_SP111";
+SECTION_DEAD const char* const stringBase_8039BA76 = "F_SP128";
+SECTION_DEAD const char* const stringBase_8039BA7E = "R_SP128";
+SECTION_DEAD const char* const stringBase_8039BA86 = "F_SP115";
+SECTION_DEAD const char* const stringBase_8039BA8E = "F_SP112";
+SECTION_DEAD const char* const stringBase_8039BA96 = "F_SP126";
+SECTION_DEAD const char* const stringBase_8039BA9E = "F_SP127";
+SECTION_DEAD const char* const stringBase_8039BAA6 = "R_SP127";
+SECTION_DEAD const char* const stringBase_8039BAAE = "F_SP113";
+SECTION_DEAD const char* const stringBase_8039BAB6 = "F_SP116";
+SECTION_DEAD const char* const stringBase_8039BABE = "R_SP116";
+SECTION_DEAD const char* const stringBase_8039BAC6 = "R_SP160";
+SECTION_DEAD const char* const stringBase_8039BACE = "R_SP161";
+SECTION_DEAD const char* const stringBase_8039BAD6 = "F_SP114";
+SECTION_DEAD const char* const stringBase_8039BADE = "F_SP118";
+SECTION_DEAD const char* const stringBase_8039BAE6 = "F_SP124";
+SECTION_DEAD const char* const stringBase_8039BAEE = "F_SP125";
+SECTION_DEAD const char* const stringBase_8039BAF6 = "F_SP121";
+SECTION_DEAD const char* const stringBase_8039BAFE = "F_SP122";
+SECTION_DEAD const char* const stringBase_8039BB06 = "F_SP123";
+SECTION_DEAD const char* const stringBase_8039BB0E = "F_SP200";
+SECTION_DEAD const char* const stringBase_8039BB16 = "F_SP102";
+SECTION_DEAD const char* const stringBase_8039BB1E = "";
+SECTION_DEAD const char* const stringBase_8039BB1F = "R_SP300";
+SECTION_DEAD const char* const stringBase_8039BB27 = "R_SP301";
+SECTION_DEAD const char* const stringBase_8039BB2F = "T_ENEMY";
+SECTION_DEAD const char* const stringBase_8039BB37 = "D_MN54";
+SECTION_DEAD const char* const stringBase_8039BB3E = "D_MN05";
+SECTION_DEAD const char* const stringBase_8039BB45 = "D_MN05B";
+SECTION_DEAD const char* const stringBase_8039BB4D = "D_MN05A";
+SECTION_DEAD const char* const stringBase_8039BB55 = "D_MN04";
+SECTION_DEAD const char* const stringBase_8039BB5C = "D_MN04B";
+SECTION_DEAD const char* const stringBase_8039BB64 = "D_MN04A";
+SECTION_DEAD const char* const stringBase_8039BB6C = "D_MN01";
+SECTION_DEAD const char* const stringBase_8039BB73 = "D_MN01B";
+SECTION_DEAD const char* const stringBase_8039BB7B = "D_MN01A";
+SECTION_DEAD const char* const stringBase_8039BB83 = "D_MN10";
+SECTION_DEAD const char* const stringBase_8039BB8A = "D_MN10B";
+SECTION_DEAD const char* const stringBase_8039BB92 = "D_MN10A";
+SECTION_DEAD const char* const stringBase_8039BB9A = "D_MN11";
+SECTION_DEAD const char* const stringBase_8039BBA1 = "D_MN11B";
+SECTION_DEAD const char* const stringBase_8039BBA9 = "D_MN11A";
+SECTION_DEAD const char* const stringBase_8039BBB1 = "D_MN06";
+SECTION_DEAD const char* const stringBase_8039BBB8 = "D_MN06B";
+SECTION_DEAD const char* const stringBase_8039BBC0 = "D_MN06A";
+SECTION_DEAD const char* const stringBase_8039BBC8 = "D_MN07";
+SECTION_DEAD const char* const stringBase_8039BBCF = "D_MN07B";
+SECTION_DEAD const char* const stringBase_8039BBD7 = "D_MN07A";
+SECTION_DEAD const char* const stringBase_8039BBDF = "D_MN08";
+SECTION_DEAD const char* const stringBase_8039BBE6 = "D_MN08B";
+SECTION_DEAD const char* const stringBase_8039BBEE = "D_MN08C";
+SECTION_DEAD const char* const stringBase_8039BBF6 = "D_MN08A";
+SECTION_DEAD const char* const stringBase_8039BBFE = "D_MN08D";
+SECTION_DEAD const char* const stringBase_8039BC06 = "D_MN09";
+SECTION_DEAD const char* const stringBase_8039BC0D = "D_MN09A";
+SECTION_DEAD const char* const stringBase_8039BC15 = "D_MN09B";
+SECTION_DEAD const char* const stringBase_8039BC1D = "D_MN09C";
+SECTION_DEAD const char* const stringBase_8039BC25 = "D_SB00";
+SECTION_DEAD const char* const stringBase_8039BC2C = "D_SB01";
+SECTION_DEAD const char* const stringBase_8039BC33 = "D_SB02";
+SECTION_DEAD const char* const stringBase_8039BC3A = "D_SB03";
+SECTION_DEAD const char* const stringBase_8039BC41 = "D_SB04";
+SECTION_DEAD const char* const stringBase_8039BC48 = "D_SB05";
+SECTION_DEAD const char* const stringBase_8039BC4F = "D_SB06";
+SECTION_DEAD const char* const stringBase_8039BC56 = "D_SB07";
+SECTION_DEAD const char* const stringBase_8039BC5D = "D_SB08";
+SECTION_DEAD const char* const stringBase_8039BC64 = "D_SB09";
+SECTION_DEAD const char* const stringBase_8039BC6B = "D_SB10";
+SECTION_DEAD const char* const stringBase_8039BC72 = "force_start";
+SECTION_DEAD const char* const stringBase_8039BC7E = "force_end";
+#pragma pop
 }
 
 
@@ -222,7 +379,7 @@ const char* const stringBase_8039BC7E = "force_end";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9DF8 0294 .data      @3900                                                        */
+/* 803C9DF8-803CA08C 0294 .data      @3900                                                        InitializedData */
 SECTION_DATA u8 Z2SeqMgr__LIT_3900[660] = {
 	0x80, 0x2A, 0xF5, 0xE8, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF5, 0x98, 0x80, 0x2A, 0xF5, 0x28,
 	0x80, 0x2A, 0xF5, 0xD4, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF4, 0xEC,
@@ -267,7 +424,7 @@ SECTION_DATA u8 Z2SeqMgr__LIT_3900[660] = {
 	0x80, 0x2A, 0xF4, 0xEC, 0x80, 0x2A, 0xF5, 0x80, 0x80, 0x2A, 0xF6, 0x28, 0x80, 0x2A, 0xF6, 0x28,
 	0x80, 0x2A, 0xF5, 0xE8,
 };
-/* 803CA08C 027C .data      @3988                                                        */
+/* 803CA08C-803CA308 027C .data      @3988                                                        InitializedData */
 SECTION_DATA u8 LIT_3988[636] = {
 	0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18, 0x80, 0x2A, 0xF9, 0xB4,
 	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4,
@@ -310,51 +467,145 @@ SECTION_DATA u8 LIT_3988[636] = {
 	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF8, 0xDC, 0x80, 0x2A, 0xF9, 0x18,
 	0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0xB4, 0x80, 0x2A, 0xF9, 0x78,
 };
-/* 803CA308 0034 .data      @4739                                                        */
-SECTION_DATA u8 Z2SeqMgr__LIT_4739[52] = {
-	0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xB4, 0x80, 0x2B, 0x03, 0xCC,
-	0x80, 0x2B, 0x03, 0x4C, 0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xAC,
-	0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xCC, 0x80, 0x2B, 0x03, 0xCC,
-	0x80, 0x2B, 0x03, 0x4C,
+/* 803CA308-803CA33C 0034 .data      @4739                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2SeqMgr__LIT_4739[13] = {
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+266),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+240),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+264),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+272),
+	(void*)(((u32*)changeBgmStatus__8Z2SeqMgrFl)+240),
 };
-/* 803CA33C 00BC .data      @5219                                                        */
-SECTION_DATA u8 LIT_5219[188] = {
-	0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x00,
-	0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00,
-	0x80, 0x2B, 0x33, 0x08, 0x80, 0x2B, 0x33, 0x00, 0x80, 0x2B, 0x33, 0x00,
+/* 803CA33C-803CA3F8 00BC .data      @5219                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5219[47] = {
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+35),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+33),
 };
-/* 803CA3F8 00BC .data      @5218                                                        */
-SECTION_DATA u8 LIT_5218[188] = {
-	0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xB4,
-	0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4,
-	0x80, 0x2B, 0x32, 0xC4, 0x80, 0x2B, 0x32, 0xB4, 0x80, 0x2B, 0x32, 0xB4,
+/* 803CA3F8-803CA4B4 00BC .data      @5218                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5218[47] = {
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+18),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
+	(void*)(((u32*)stopWolfHowlSong__8Z2SeqMgrFv)+14),
 };
-/* 803CA4B4 0054 .data      @6877                                                        */
-SECTION_DATA u8 Z2SeqMgr__LIT_6877[84] = {
-	0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x14, 0x80, 0x2B, 0x5B, 0x24,
-	0x80, 0x2B, 0x5B, 0x34, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44,
-	0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44,
-	0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44,
-	0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44, 0x80, 0x2B, 0x5B, 0x44,
-	0x80, 0x2B, 0x5B, 0x44,
+/* 803CA4B4-803CA508 0054 .data      @6877                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2SeqMgr__LIT_6877[21] = {
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+114),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+118),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+122),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
+	(void*)(((u32*)fieldBgmFramework__8Z2SeqMgrFv)+126),
 };
 }
 
@@ -364,13 +615,13 @@ SECTION_DATA u8 Z2SeqMgr__LIT_6877[84] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450870 0004 .sdata     sDeathMtBottom                                               */
+/* 80450870-80450874 0004 .sdata     sDeathMtBottom                                               Float32Data */
 // 0xc47a0000
 SECTION_SDATA f32 sDeathMtBottom = -1000.000000f;
-/* 80450874 0004 .sdata     sDeathMtTop                                                  */
+/* 80450874-80450878 0004 .sdata     sDeathMtTop                                                  Float32Data */
 // 0x45642000
 SECTION_SDATA f32 sDeathMtTop = 3650.000000f;
-/* 80450878 0004 .sdata     sUnderWaterDepthMax                                          */
+/* 80450878-80450880 0004 .sdata     sUnderWaterDepthMax                                          InitializedData */
 SECTION_SDATA u8 sUnderWaterDepthMax[8] = {
 	0x45, 0x5A, 0xC0, 0x00,
 	/* padding */
@@ -384,102 +635,102 @@ SECTION_SDATA u8 sUnderWaterDepthMax[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455998 0004 .sdata2    @3372                                                        */
+/* 80455998-8045599C 0004 .sdata2    @3372                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3372 = 1.000000f;
-/* 8045599C 0004 .sdata2    @3373                                                        */
+/* 8045599C-804559A0 0004 .sdata2    @3373                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3373[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804559A0 0004 .sdata2    @3559                                                        */
+/* 804559A0-804559A8 0004 .sdata2    @3559                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_3559[8] = {
 	0xC6, 0x1C, 0x40, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804559A8 0008 .sdata2    @3561                                                        */
+/* 804559A8-804559B0 0008 .sdata2    @3561                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 Z2SeqMgr__LIT_3561 = 4503599627370496.000000;
-/* 804559B0 0004 .sdata2    @4726                                                        */
+/* 804559B0-804559B4 0004 .sdata2    @4726                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4726[4] = {
 	0x3F, 0x26, 0x66, 0x66,
 };
-/* 804559B4 0004 .sdata2    @4727                                                        */
+/* 804559B4-804559B8 0004 .sdata2    @4727                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4727 = -1.000000f;
-/* 804559B8 0004 .sdata2    @4728                                                        */
+/* 804559B8-804559BC 0004 .sdata2    @4728                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4728[4] = {
 	0x3E, 0x94, 0x7A, 0xE1,
 };
-/* 804559BC 0004 .sdata2    @4729                                                        */
+/* 804559BC-804559C0 0004 .sdata2    @4729                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4729[4] = {
 	0x3E, 0xB3, 0x33, 0x33,
 };
-/* 804559C0 0004 .sdata2    @4730                                                        */
+/* 804559C0-804559C4 0004 .sdata2    @4730                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4730[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 804559C4 0004 .sdata2    @4731                                                        */
+/* 804559C4-804559C8 0004 .sdata2    @4731                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4731 = 0.500000f;
-/* 804559C8 0004 .sdata2    @4732                                                        */
+/* 804559C8-804559CC 0004 .sdata2    @4732                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4732[4] = {
 	0x3E, 0x99, 0x99, 0x9A,
 };
-/* 804559CC 0004 .sdata2    @4733                                                        */
+/* 804559CC-804559D0 0004 .sdata2    @4733                                                        Float32Data */
 // 0x4541c000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4733 = 3100.000000f;
-/* 804559D0 0004 .sdata2    @4734                                                        */
+/* 804559D0-804559D4 0004 .sdata2    @4734                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4734 = 200.000000f;
-/* 804559D4 0004 .sdata2    @4735                                                        */
+/* 804559D4-804559D8 0004 .sdata2    @4735                                                        Float32Data */
 // 0x44c80000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4735 = 1600.000000f;
-/* 804559D8 0004 .sdata2    @4736                                                        */
+/* 804559D8-804559DC 0004 .sdata2    @4736                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4736[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
-/* 804559DC 0004 .sdata2    @4737                                                        */
+/* 804559DC-804559E0 0004 .sdata2    @4737                                                        Float32Data */
 // 0x4544e000
 SECTION_SDATA2 f32 Z2SeqMgr__LIT_4737 = 3150.000000f;
-/* 804559E0 0004 .sdata2    @4738                                                        */
+/* 804559E0-804559E8 0004 .sdata2    @4738                                                        InitializedData */
 SECTION_SDATA2 u8 Z2SeqMgr__LIT_4738[8] = {
 	0x45, 0xC0, 0x30, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804559E8 0008 .sdata2    @4741                                                        */
+/* 804559E8-804559F0 0008 .sdata2    @4741                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 Z2SeqMgr__LIT_4741 = 4503601774854144.000000;
-/* 804559F0 0004 .sdata2    @5673                                                        */
+/* 804559F0-804559F4 0004 .sdata2    @5673                                                        Float32Data */
 // 0xc6241000
 SECTION_SDATA2 f32 LIT_5673 = -10500.000000f;
-/* 804559F4 0004 .sdata2    @5674                                                        */
+/* 804559F4-804559F8 0004 .sdata2    @5674                                                        Float32Data */
 // 0xc5ea6000
 SECTION_SDATA2 f32 LIT_5674 = -7500.000000f;
-/* 804559F8 0004 .sdata2    @5675                                                        */
+/* 804559F8-804559FC 0004 .sdata2    @5675                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5675[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 804559FC 0004 .sdata2    @5676                                                        */
+/* 804559FC-80455A00 0004 .sdata2    @5676                                                        Float32Data */
 // 0xc4bb8000
 SECTION_SDATA2 f32 LIT_5676 = -1500.000000f;
-/* 80455A00 0004 .sdata2    @5677                                                        */
+/* 80455A00-80455A04 0004 .sdata2    @5677                                                        Float32Data */
 // 0xc64b2000
 SECTION_SDATA2 f32 LIT_5677 = -13000.000000f;
-/* 80455A04 0004 .sdata2    @5678                                                        */
+/* 80455A04-80455A08 0004 .sdata2    @5678                                                        Float32Data */
 // 0xc58ca000
 SECTION_SDATA2 f32 LIT_5678 = -4500.000000f;
-/* 80455A08 0004 .sdata2    @5679                                                        */
+/* 80455A08-80455A0C 0004 .sdata2    @5679                                                        Float32Data */
 // 0xc72fc800
 SECTION_SDATA2 f32 LIT_5679 = -45000.000000f;
-/* 80455A0C 0004 .sdata2    @5680                                                        */
+/* 80455A0C-80455A10 0004 .sdata2    @5680                                                        Float32Data */
 // 0xc53b8000
 SECTION_SDATA2 f32 LIT_5680 = -3000.000000f;
-/* 80455A10 0004 .sdata2    @5681                                                        */
+/* 80455A10-80455A14 0004 .sdata2    @5681                                                        Float32Data */
 // 0x44610000
 SECTION_SDATA2 f32 LIT_5681 = 900.000000f;
-/* 80455A14 0004 .sdata2    @5913                                                        */
+/* 80455A14-80455A18 0004 .sdata2    @5913                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5913[4] = {
 	0x3E, 0xCC, 0xCC, 0xCD,
 };
@@ -491,7 +742,7 @@ SECTION_SDATA2 u8 LIT_5913[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802AEEA0 0170 .text      __ct__8Z2SeqMgrFv                                            */
+/* 802AEEA0-802AF010 0170 .text      __ct__8Z2SeqMgrFv                                            Function */
 // Z2SeqMgr::Z2SeqMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -502,8 +753,8 @@ asm void __ct__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802AF010 03F8 .text      bgmStart__8Z2SeqMgrFUlUll                                    */
-// Z2SeqMgr::bgmStart(u32, u32, s32)
+/* 802AF010-802AF408 03F8 .text      bgmStart__8Z2SeqMgrFUlUll                                    Function */
+// Z2SeqMgr::bgmStart(u32, u32, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,8 +764,8 @@ asm void bgmStart__8Z2SeqMgrFUlUll() {
 }
 #pragma pop
 
-/* 802AF408 0094 .text      bgmStop__8Z2SeqMgrFUll                                       */
-// Z2SeqMgr::bgmStop(u32, s32)
+/* 802AF408-802AF49C 0094 .text      bgmStop__8Z2SeqMgrFUll                                       Function */
+// Z2SeqMgr::bgmStop(u32, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -524,7 +775,7 @@ asm void bgmStop__8Z2SeqMgrFUll() {
 }
 #pragma pop
 
-/* 802AF49C 03E8 .text      subBgmStart__8Z2SeqMgrFUl                                    */
+/* 802AF49C-802AF884 03E8 .text      subBgmStart__8Z2SeqMgrFUl                                    Function */
 // Z2SeqMgr::subBgmStart(u32)
 #pragma push
 #pragma optimization_level 0
@@ -535,7 +786,7 @@ asm void subBgmStart__8Z2SeqMgrFUl() {
 }
 #pragma pop
 
-/* 802AF884 014C .text      subBgmStop__8Z2SeqMgrFv                                      */
+/* 802AF884-802AF9D0 014C .text      subBgmStop__8Z2SeqMgrFv                                      Function */
 // Z2SeqMgr::subBgmStop(void)
 #pragma push
 #pragma optimization_level 0
@@ -546,7 +797,7 @@ asm void subBgmStop__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802AF9D0 01C4 .text      subBgmStopInner__8Z2SeqMgrFv                                 */
+/* 802AF9D0-802AFB94 01C4 .text      subBgmStopInner__8Z2SeqMgrFv                                 Function */
 // Z2SeqMgr::subBgmStopInner(void)
 #pragma push
 #pragma optimization_level 0
@@ -557,7 +808,7 @@ asm void subBgmStopInner__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802AFB94 0258 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               */
+/* 802AFB94-802AFDEC 0258 .text      bgmStreamPrepare__8Z2SeqMgrFUl                               Function */
 // Z2SeqMgr::bgmStreamPrepare(u32)
 #pragma push
 #pragma optimization_level 0
@@ -568,7 +819,7 @@ asm void bgmStreamPrepare__8Z2SeqMgrFUl() {
 }
 #pragma pop
 
-/* 802AFDEC 002C .text      bgmStreamCheckReady__8Z2SeqMgrFv                             */
+/* 802AFDEC-802AFE18 002C .text      bgmStreamCheckReady__8Z2SeqMgrFv                             Function */
 // Z2SeqMgr::bgmStreamCheckReady(void)
 #pragma push
 #pragma optimization_level 0
@@ -579,7 +830,7 @@ asm void bgmStreamCheckReady__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802AFE18 00C4 .text      bgmStreamPlay__8Z2SeqMgrFv                                   */
+/* 802AFE18-802AFEDC 00C4 .text      bgmStreamPlay__8Z2SeqMgrFv                                   Function */
 // Z2SeqMgr::bgmStreamPlay(void)
 #pragma push
 #pragma optimization_level 0
@@ -590,7 +841,7 @@ asm void bgmStreamPlay__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802AFEDC 00B0 .text      bgmStreamStop__8Z2SeqMgrFUl                                  */
+/* 802AFEDC-802AFF8C 00B0 .text      bgmStreamStop__8Z2SeqMgrFUl                                  Function */
 // Z2SeqMgr::bgmStreamStop(u32)
 #pragma push
 #pragma optimization_level 0
@@ -601,8 +852,8 @@ asm void bgmStreamStop__8Z2SeqMgrFUl() {
 }
 #pragma pop
 
-/* 802AFF8C 1E68 .text      changeBgmStatus__8Z2SeqMgrFl                                 */
-// Z2SeqMgr::changeBgmStatus(s32)
+/* 802AFF8C-802B1DF4 1E68 .text      changeBgmStatus__8Z2SeqMgrFl                                 Function */
+// Z2SeqMgr::changeBgmStatus(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,8 +863,8 @@ asm void changeBgmStatus__8Z2SeqMgrFl() {
 }
 #pragma pop
 
-/* 802B1DF4 0BA8 .text      changeSubBgmStatus__8Z2SeqMgrFl                              */
-// Z2SeqMgr::changeSubBgmStatus(s32)
+/* 802B1DF4-802B299C 0BA8 .text      changeSubBgmStatus__8Z2SeqMgrFl                              Function */
+// Z2SeqMgr::changeSubBgmStatus(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -623,7 +874,7 @@ asm void changeSubBgmStatus__8Z2SeqMgrFl() {
 }
 #pragma pop
 
-/* 802B299C 00EC .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             */
+/* 802B299C-802B2A88 00EC .text      onVariantBgmJumpEnd__8Z2SeqMgrFb                             Function */
 // Z2SeqMgr::onVariantBgmJumpEnd(bool)
 #pragma push
 #pragma optimization_level 0
@@ -634,8 +885,8 @@ asm void onVariantBgmJumpEnd__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B2A88 021C .text      changeFishingBgm__8Z2SeqMgrFl                                */
-// Z2SeqMgr::changeFishingBgm(s32)
+/* 802B2A88-802B2CA4 021C .text      changeFishingBgm__8Z2SeqMgrFl                                Function */
+// Z2SeqMgr::changeFishingBgm(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -645,7 +896,7 @@ asm void changeFishingBgm__8Z2SeqMgrFl() {
 }
 #pragma pop
 
-/* 802B2CA4 00C0 .text      talkInBgm__8Z2SeqMgrFv                                       */
+/* 802B2CA4-802B2D64 00C0 .text      talkInBgm__8Z2SeqMgrFv                                       Function */
 // Z2SeqMgr::talkInBgm(void)
 #pragma push
 #pragma optimization_level 0
@@ -656,7 +907,7 @@ asm void talkInBgm__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B2D64 0048 .text      talkOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2D64-802B2DAC 0048 .text      talkOutBgm__8Z2SeqMgrFv                                      Function */
 // Z2SeqMgr::talkOutBgm(void)
 #pragma push
 #pragma optimization_level 0
@@ -667,7 +918,7 @@ asm void talkOutBgm__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B2DAC 0048 .text      menuInBgm__8Z2SeqMgrFv                                       */
+/* 802B2DAC-802B2DF4 0048 .text      menuInBgm__8Z2SeqMgrFv                                       Function */
 // Z2SeqMgr::menuInBgm(void)
 #pragma push
 #pragma optimization_level 0
@@ -678,7 +929,7 @@ asm void menuInBgm__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B2DF4 0048 .text      menuOutBgm__8Z2SeqMgrFv                                      */
+/* 802B2DF4-802B2E3C 0048 .text      menuOutBgm__8Z2SeqMgrFv                                      Function */
 // Z2SeqMgr::menuOutBgm(void)
 #pragma push
 #pragma optimization_level 0
@@ -689,7 +940,7 @@ asm void menuOutBgm__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B2E3C 0440 .text      fanfareFramework__8Z2SeqMgrFv                                */
+/* 802B2E3C-802B327C 0440 .text      fanfareFramework__8Z2SeqMgrFv                                Function */
 // Z2SeqMgr::fanfareFramework(void)
 #pragma push
 #pragma optimization_level 0
@@ -700,7 +951,7 @@ asm void fanfareFramework__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B327C 009C .text      stopWolfHowlSong__8Z2SeqMgrFv                                */
+/* 802B327C-802B3318 009C .text      stopWolfHowlSong__8Z2SeqMgrFv                                Function */
 // Z2SeqMgr::stopWolfHowlSong(void)
 #pragma push
 #pragma optimization_level 0
@@ -711,7 +962,7 @@ asm void stopWolfHowlSong__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B3318 0080 .text      setHeightVolMod__8Z2SeqMgrFbUl                               */
+/* 802B3318-802B3398 0080 .text      setHeightVolMod__8Z2SeqMgrFbUl                               Function */
 // Z2SeqMgr::setHeightVolMod(bool, u32)
 #pragma push
 #pragma optimization_level 0
@@ -722,7 +973,7 @@ asm void setHeightVolMod__8Z2SeqMgrFbUl() {
 }
 #pragma pop
 
-/* 802B3398 0010 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             */
+/* 802B3398-802B33A8 0010 .text      setTimeProcVolMod__8Z2SeqMgrFbUl                             Function */
 // Z2SeqMgr::setTimeProcVolMod(bool, u32)
 #pragma push
 #pragma optimization_level 0
@@ -733,7 +984,7 @@ asm void setTimeProcVolMod__8Z2SeqMgrFbUl() {
 }
 #pragma pop
 
-/* 802B33A8 0B04 .text      processBgmFramework__8Z2SeqMgrFv                             */
+/* 802B33A8-802B3EAC 0B04 .text      processBgmFramework__8Z2SeqMgrFv                             Function */
 // Z2SeqMgr::processBgmFramework(void)
 #pragma push
 #pragma optimization_level 0
@@ -744,7 +995,7 @@ asm void processBgmFramework__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B3EAC 0094 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              */
+/* 802B3EAC-802B3F40 0094 .text      checkBgmIDPlaying__8Z2SeqMgrFUl                              Function */
 // Z2SeqMgr::checkBgmIDPlaying(u32)
 #pragma push
 #pragma optimization_level 0
@@ -755,7 +1006,7 @@ asm void checkBgmIDPlaying__8Z2SeqMgrFUl() {
 }
 #pragma pop
 
-/* 802B3F40 00AC .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            */
+/* 802B3F40-802B3FEC 00AC .text      getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei            Function */
 // Z2SeqMgr::getChildTrackVolume(JAISoundHandle*, int)
 #pragma push
 #pragma optimization_level 0
@@ -766,7 +1017,7 @@ asm void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei() {
 }
 #pragma pop
 
-/* 802B3FEC 013C .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       */
+/* 802B3FEC-802B4128 013C .text      setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff       Function */
 // Z2SeqMgr::setChildTrackVolume(JAISoundHandle*, int, f32, u32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -777,7 +1028,7 @@ asm void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff() {
 }
 #pragma pop
 
-/* 802B4128 003C .text      resetBattleBgmParams__8Z2SeqMgrFv                            */
+/* 802B4128-802B4164 003C .text      resetBattleBgmParams__8Z2SeqMgrFv                            Function */
 // Z2SeqMgr::resetBattleBgmParams(void)
 #pragma push
 #pragma optimization_level 0
@@ -788,7 +1039,7 @@ asm void resetBattleBgmParams__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B4164 00B8 .text      setBattleBgmOff__8Z2SeqMgrFb                                 */
+/* 802B4164-802B421C 00B8 .text      setBattleBgmOff__8Z2SeqMgrFb                                 Function */
 // Z2SeqMgr::setBattleBgmOff(bool)
 #pragma push
 #pragma optimization_level 0
@@ -799,7 +1050,7 @@ asm void setBattleBgmOff__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B421C 01B4 .text      setBattleSearched__8Z2SeqMgrFb                               */
+/* 802B421C-802B43D0 01B4 .text      setBattleSearched__8Z2SeqMgrFb                               Function */
 // Z2SeqMgr::setBattleSearched(bool)
 #pragma push
 #pragma optimization_level 0
@@ -810,7 +1061,7 @@ asm void setBattleSearched__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B43D0 0010 .text      setBattleDistIgnore__8Z2SeqMgrFb                             */
+/* 802B43D0-802B43E0 0010 .text      setBattleDistIgnore__8Z2SeqMgrFb                             Function */
 // Z2SeqMgr::setBattleDistIgnore(bool)
 #pragma push
 #pragma optimization_level 0
@@ -821,7 +1072,7 @@ asm void setBattleDistIgnore__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B43E0 00B8 .text      setBattleGhostMute__8Z2SeqMgrFb                              */
+/* 802B43E0-802B4498 00B8 .text      setBattleGhostMute__8Z2SeqMgrFb                              Function */
 // Z2SeqMgr::setBattleGhostMute(bool)
 #pragma push
 #pragma optimization_level 0
@@ -832,7 +1083,7 @@ asm void setBattleGhostMute__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B4498 03AC .text      setBattleDistState__8Z2SeqMgrFUc                             */
+/* 802B4498-802B4844 03AC .text      setBattleDistState__8Z2SeqMgrFUc                             Function */
 // Z2SeqMgr::setBattleDistState(u8)
 #pragma push
 #pragma optimization_level 0
@@ -843,7 +1094,7 @@ asm void setBattleDistState__8Z2SeqMgrFUc() {
 }
 #pragma pop
 
-/* 802B4844 02B8 .text      setBattleSeqState__8Z2SeqMgrFUc                              */
+/* 802B4844-802B4AFC 02B8 .text      setBattleSeqState__8Z2SeqMgrFUc                              Function */
 // Z2SeqMgr::setBattleSeqState(u8)
 #pragma push
 #pragma optimization_level 0
@@ -854,7 +1105,7 @@ asm void setBattleSeqState__8Z2SeqMgrFUc() {
 }
 #pragma pop
 
-/* 802B4AFC 00D4 .text      setBattleLastHit__8Z2SeqMgrFUc                               */
+/* 802B4AFC-802B4BD0 00D4 .text      setBattleLastHit__8Z2SeqMgrFUc                               Function */
 // Z2SeqMgr::setBattleLastHit(u8)
 #pragma push
 #pragma optimization_level 0
@@ -865,7 +1116,7 @@ asm void setBattleLastHit__8Z2SeqMgrFUc() {
 }
 #pragma pop
 
-/* 802B4BD0 02E0 .text      battleBgmFramework__8Z2SeqMgrFv                              */
+/* 802B4BD0-802B4EB0 02E0 .text      battleBgmFramework__8Z2SeqMgrFv                              Function */
 // Z2SeqMgr::battleBgmFramework(void)
 #pragma push
 #pragma optimization_level 0
@@ -876,7 +1127,7 @@ asm void battleBgmFramework__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B4EB0 0354 .text      startBattleBgm__8Z2SeqMgrFb                                  */
+/* 802B4EB0-802B5204 0354 .text      startBattleBgm__8Z2SeqMgrFb                                  Function */
 // Z2SeqMgr::startBattleBgm(bool)
 #pragma push
 #pragma optimization_level 0
@@ -887,7 +1138,7 @@ asm void startBattleBgm__8Z2SeqMgrFb() {
 }
 #pragma pop
 
-/* 802B5204 0258 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                */
+/* 802B5204-802B545C 0258 .text      stopBattleBgm__8Z2SeqMgrFUcUc                                Function */
 // Z2SeqMgr::stopBattleBgm(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -898,7 +1149,7 @@ asm void stopBattleBgm__8Z2SeqMgrFUcUc() {
 }
 #pragma pop
 
-/* 802B545C 0110 .text      fieldBgmStart__8Z2SeqMgrFv                                   */
+/* 802B545C-802B556C 0110 .text      fieldBgmStart__8Z2SeqMgrFv                                   Function */
 // Z2SeqMgr::fieldBgmStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -909,7 +1160,7 @@ asm void fieldBgmStart__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B556C 01E4 .text      fieldRidingMute__8Z2SeqMgrFv                                 */
+/* 802B556C-802B5750 01E4 .text      fieldRidingMute__8Z2SeqMgrFv                                 Function */
 // Z2SeqMgr::fieldRidingMute(void)
 #pragma push
 #pragma optimization_level 0
@@ -920,7 +1171,7 @@ asm void fieldRidingMute__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B5750 004C .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             */
+/* 802B5750-802B579C 004C .text      onFieldBgmJumpStart__8Z2SeqMgrFv                             Function */
 // Z2SeqMgr::onFieldBgmJumpStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -931,7 +1182,7 @@ asm void onFieldBgmJumpStart__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B579C 01B0 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               */
+/* 802B579C-802B594C 01B0 .text      onFieldBgmJumpEnd__8Z2SeqMgrFv                               Function */
 // Z2SeqMgr::onFieldBgmJumpEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -942,7 +1193,7 @@ asm void onFieldBgmJumpEnd__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B594C 0534 .text      fieldBgmFramework__8Z2SeqMgrFv                               */
+/* 802B594C-802B5E80 0534 .text      fieldBgmFramework__8Z2SeqMgrFv                               Function */
 // Z2SeqMgr::fieldBgmFramework(void)
 #pragma push
 #pragma optimization_level 0
@@ -953,25 +1204,25 @@ asm void fieldBgmFramework__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B5E80 0004 .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             */
+/* 802B5E80-802B5E84 0004 .text      mbossBgmMuteProcess__8Z2SeqMgrFv                             ReturnFunction */
 // Z2SeqMgr::mbossBgmMuteProcess(void)
 void mbossBgmMuteProcess__8Z2SeqMgrFv() {
 	return;
 }
 
-/* 802B5E84 0004 .text      bgmSetSwordUsing__8Z2SeqMgrFl                                */
-// Z2SeqMgr::bgmSetSwordUsing(s32)
+/* 802B5E84-802B5E88 0004 .text      bgmSetSwordUsing__8Z2SeqMgrFl                                ReturnFunction */
+// Z2SeqMgr::bgmSetSwordUsing(long)
 void bgmSetSwordUsing__8Z2SeqMgrFl() {
 	return;
 }
 
-/* 802B5E88 0004 .text      bgmNowBattle__8Z2SeqMgrFf                                    */
+/* 802B5E88-802B5E8C 0004 .text      bgmNowBattle__8Z2SeqMgrFf                                    ReturnFunction */
 // Z2SeqMgr::bgmNowBattle(f32)
 void bgmNowBattle__8Z2SeqMgrFf() {
 	return;
 }
 
-/* 802B5E8C 0048 .text      taktModeMute__8Z2SeqMgrFv                                    */
+/* 802B5E8C-802B5ED4 0048 .text      taktModeMute__8Z2SeqMgrFv                                    Function */
 // Z2SeqMgr::taktModeMute(void)
 #pragma push
 #pragma optimization_level 0
@@ -982,7 +1233,7 @@ asm void taktModeMute__8Z2SeqMgrFv() {
 }
 #pragma pop
 
-/* 802B5ED4 0048 .text      taktModeMuteOff__8Z2SeqMgrFv                                 */
+/* 802B5ED4-802B5F1C 0048 .text      taktModeMuteOff__8Z2SeqMgrFv                                 Function */
 // Z2SeqMgr::taktModeMuteOff(void)
 #pragma push
 #pragma optimization_level 0

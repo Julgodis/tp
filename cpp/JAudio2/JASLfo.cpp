@@ -9,13 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ct__6JASLfoFv();
+/* Function             */
+extern void getValue__6JASLfoCFv();
+/* Function             */
+extern void incCounter__6JASLfoFf();
+/* Function             */
+extern void resetCounter__6JASLfoFv();
+/* SInitFunction        */
+extern void __sinit_JASLfo_cpp();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sFreeRunLfo__6JASLfo[24];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASLfo__LIT_341[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASLfo__LIT_342;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASLfo__LIT_363;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASLfo__LIT_364;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASLfo__LIT_376[8];
 }
 
@@ -25,20 +41,20 @@ SECTION_SDATA2 extern u8 JASLfo__LIT_376[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804556E0 0004 .sdata2    @341                                                         */
+/* 804556E0-804556E4 0004 .sdata2    @341                                                         InitializedData */
 SECTION_SDATA2 u8 JASLfo__LIT_341[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804556E4 0004 .sdata2    @342                                                         */
+/* 804556E4-804556E8 0004 .sdata2    @342                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JASLfo__LIT_342 = 1.000000f;
-/* 804556E8 0004 .sdata2    @363                                                         */
+/* 804556E8-804556EC 0004 .sdata2    @363                                                         Float32Data */
 // 0xc6000000
 SECTION_SDATA2 f32 JASLfo__LIT_363 = -8192.000000f;
-/* 804556EC 0004 .sdata2    @364                                                         */
+/* 804556EC-804556F0 0004 .sdata2    @364                                                         Float32Data */
 // 0x46000000
 SECTION_SDATA2 f32 JASLfo__LIT_364 = 8192.000000f;
-/* 804556F0 0004 .sdata2    @376                                                         */
+/* 804556F0-804556F8 0004 .sdata2    @376                                                         InitializedData */
 SECTION_SDATA2 u8 JASLfo__LIT_376[8] = {
 	0x3C, 0x63, 0x8E, 0x39,
 	/* padding */
@@ -52,7 +68,7 @@ SECTION_SDATA2 u8 JASLfo__LIT_376[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431C40 0018 .bss       sFreeRunLfo__6JASLfo                                         */
+/* 80431C40-80431C58 0018 .bss       sFreeRunLfo__6JASLfo                                         ZeroInitializedData */
 SECTION_BSS u8 sFreeRunLfo__6JASLfo[24];
 }
 
@@ -62,7 +78,7 @@ SECTION_BSS u8 sFreeRunLfo__6JASLfo[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029BD14 0030 .text      __ct__6JASLfoFv                                              */
+/* 8029BD14-8029BD44 0030 .text      __ct__6JASLfoFv                                              Function */
 // JASLfo::JASLfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -73,7 +89,7 @@ asm void __ct__6JASLfoFv() {
 }
 #pragma pop
 
-/* 8029BD44 0094 .text      getValue__6JASLfoCFv                                         */
+/* 8029BD44-8029BDD8 0094 .text      getValue__6JASLfoCFv                                         Function */
 // JASLfo::getValue(void) const
 #pragma push
 #pragma optimization_level 0
@@ -84,7 +100,7 @@ asm void getValue__6JASLfoCFv() {
 }
 #pragma pop
 
-/* 8029BDD8 0054 .text      incCounter__6JASLfoFf                                        */
+/* 8029BDD8-8029BE2C 0054 .text      incCounter__6JASLfoFf                                        Function */
 // JASLfo::incCounter(f32)
 #pragma push
 #pragma optimization_level 0
@@ -95,7 +111,7 @@ asm void incCounter__6JASLfoFf() {
 }
 #pragma pop
 
-/* 8029BE2C 0040 .text      resetCounter__6JASLfoFv                                      */
+/* 8029BE2C-8029BE6C 0040 .text      resetCounter__6JASLfoFv                                      Function */
 // JASLfo::resetCounter(void)
 #pragma push
 #pragma optimization_level 0
@@ -106,7 +122,7 @@ asm void resetCounter__6JASLfoFv() {
 }
 #pragma pop
 
-/* 8029BE6C 0028 .text      __sinit_JASLfo_cpp                                           */
+/* 8029BE6C-8029BE94 0028 .text      __sinit_JASLfo_cpp                                           SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

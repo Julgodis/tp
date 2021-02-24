@@ -9,36 +9,77 @@
 // 
 
 extern void* operator new(u32); /* __nw__FUl */
+extern void JUTReport(int, int, const char*, ...); /* JUTReport__FiiPCce */
+extern void JUTReport(int, int, int, const char*, ...); /* JUTReport__FiiiPCce */
 
 extern "C" {
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void setCharColor__7JUTFontFQ28JUtility6TColor();
+/* Function             */
 extern void drawString_size_scale__7JUTFontFffffPCcUlb();
+/* Function             */
 extern void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
+/* Function             */
+extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+/* Function             */
+extern void changeFont__10JUTDbPrintFP7JUTFont();
+/* Function             */
 extern void enter__10JUTDbPrintFiiiPCci();
+/* Function             */
+extern void flush__10JUTDbPrintFv();
+/* Function             */
 extern void flush__10JUTDbPrintFiiii();
+/* Function             */
 extern void drawString__10JUTDbPrintFiiiPCUc();
+/* Function             */
+extern void JUTReport__FiiPCce();
+/* Function             */
+extern void JUTReport__FiiiPCce();
+/* Function             */
 extern void __ct__13J2DOrthoGraphFffffff();
+/* Function             */
 extern void setPort__13J2DOrthoGraphFv();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void vsnprintf();
+/* Function             */
 extern void strcpy();
-SECTION_DATA extern const void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern const void* __vt__13J2DOrthoGraph[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J2DGrafContext[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JUTDbPrint__LIT_835;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JUTDbPrint__LIT_836;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JUTDbPrint__LIT_838;
 }
 
@@ -48,13 +89,13 @@ SECTION_SDATA2 extern f64 JUTDbPrint__LIT_838;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456008 0004 .sdata2    @835                                                         */
+/* 80456008-8045600C 0004 .sdata2    @835                                                         Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 JUTDbPrint__LIT_835 = -1.000000f;
-/* 8045600C 0004 .sdata2    @836                                                         */
+/* 8045600C-80456010 0004 .sdata2    @836                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JUTDbPrint__LIT_836 = 1.000000f;
-/* 80456010 0008 .sdata2    @838                                                         */
+/* 80456010-80456018 0008 .sdata2    @838                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JUTDbPrint__LIT_838 = 4503601774854144.000000;
 }
@@ -65,11 +106,8 @@ SECTION_SDATA2 f64 JUTDbPrint__LIT_838 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804514C8 0004 .sbss      sDebugPrint__10JUTDbPrint                                    */
-SECTION_SBSS u8 sDebugPrint__10JUTDbPrint[4];
-SECTION_SBSS u8 pad_804514CC[4];
-/* 804514D0 0004 .sbss      data_804514D0                                                */
-SECTION_SBSS u8 data_804514D0[4];
+/* 804514C8-804514D0 0004 .sbss      sDebugPrint__10JUTDbPrint                                    ZeroInitializedData */
+SECTION_SBSS u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 }
 
 
@@ -78,7 +116,7 @@ SECTION_SBSS u8 data_804514D0[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E0148 0048 .text      __ct__10JUTDbPrintFP7JUTFontP7JKRHeap                        */
+/* 802E0148-802E0190 0048 .text      __ct__10JUTDbPrintFP7JUTFontP7JKRHeap                        Function */
 // JUTDbPrint::JUTDbPrint(JUTFont*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +127,7 @@ asm void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap() {
 }
 #pragma pop
 
-/* 802E0190 0074 .text      start__10JUTDbPrintFP7JUTFontP7JKRHeap                       */
+/* 802E0190-802E0204 0074 .text      start__10JUTDbPrintFP7JUTFontP7JKRHeap                       Function */
 // JUTDbPrint::start(JUTFont*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -100,7 +138,7 @@ asm void start__10JUTDbPrintFP7JUTFontP7JKRHeap() {
 }
 #pragma pop
 
-/* 802E0204 0018 .text      changeFont__10JUTDbPrintFP7JUTFont                           */
+/* 802E0204-802E021C 0018 .text      changeFont__10JUTDbPrintFP7JUTFont                           Function */
 // JUTDbPrint::changeFont(JUTFont*)
 #pragma push
 #pragma optimization_level 0
@@ -111,8 +149,8 @@ asm void changeFont__10JUTDbPrintFP7JUTFont() {
 }
 #pragma pop
 
-/* 802E021C 0088 .text      enter__10JUTDbPrintFiiiPCci                                  */
-// JUTDbPrint::enter(int, int, int, const s8*, int)
+/* 802E021C-802E02A4 0088 .text      enter__10JUTDbPrintFiiiPCci                                  Function */
+// JUTDbPrint::enter(int, int, int, const char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +160,7 @@ asm void enter__10JUTDbPrintFiiiPCci() {
 }
 #pragma pop
 
-/* 802E02A4 0038 .text      flush__10JUTDbPrintFv                                        */
+/* 802E02A4-802E02DC 0038 .text      flush__10JUTDbPrintFv                                        Function */
 // JUTDbPrint::flush(void)
 #pragma push
 #pragma optimization_level 0
@@ -133,7 +171,7 @@ asm void flush__10JUTDbPrintFv() {
 }
 #pragma pop
 
-/* 802E02DC 0164 .text      flush__10JUTDbPrintFiiii                                     */
+/* 802E02DC-802E0440 0164 .text      flush__10JUTDbPrintFiiii                                     Function */
 // JUTDbPrint::flush(int, int, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -144,7 +182,7 @@ asm void flush__10JUTDbPrintFiiii() {
 }
 #pragma pop
 
-/* 802E0440 00F0 .text      drawString__10JUTDbPrintFiiiPCUc                             */
+/* 802E0440-802E0530 00F0 .text      drawString__10JUTDbPrintFiiiPCUc                             Function */
 // JUTDbPrint::drawString(int, int, int, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -155,7 +193,7 @@ asm void drawString__10JUTDbPrintFiiiPCUc() {
 }
 #pragma pop
 
-/* 802E0530 00D0 .text      JUTReport__FiiPCce                                           */
+/* 802E0530-802E0600 00D0 .text      JUTReport__FiiPCce                                           Function */
 }
 
 #pragma push
@@ -168,7 +206,7 @@ asm void JUTReport(int, int, const char*, ...) {
 #pragma pop
 
 extern "C" {
-/* 802E0600 00DC .text      JUTReport__FiiiPCce                                          */
+/* 802E0600-802E06DC 00DC .text      JUTReport__FiiiPCce                                          Function */
 }
 
 #pragma push

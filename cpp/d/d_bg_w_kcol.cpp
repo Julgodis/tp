@@ -10,8 +10,8 @@
 
 struct cM2dGCir;
 struct cM3dGSph;
-struct cM3dGTri;
 struct Vec;
+struct cM3dGTri;
 
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
 extern void cBgW_CheckBGround(f32); /* cBgW_CheckBGround__Ff */
@@ -24,136 +24,273 @@ extern void cM3d_Cross_SphTri(const cM3dGSph*, const cM3dGTri*, Vec*); /* cM3d_C
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void setCode__5dBgPcFR5sBgPc();
+/* Function             */
 extern void __ct__6dBgPlcFv();
+/* Function             */
 extern void __dt__6dBgPlcFv();
+/* Function             */
 extern void setBase__6dBgPlcFPv();
+/* Function             */
 extern void getCode__6dBgPlcCFiPP5sBgPc();
+/* Function             */
 extern void getGrpCode__6dBgPlcCFi();
+/* Function             */
 extern void SetOldShapeAngleY__9dBgW_BaseFs();
+/* Function             */
 extern void GetSpeedY__9dBgS_AcchFv();
+/* Function             */
 extern void GetWallAddY__9dBgS_AcchFR3Vec();
+/* Function             */
 extern void SetWallPolyIndex__9dBgS_AcchFii();
+/* Function             */
 extern void CalcMovePosWork__9dBgS_AcchFv();
+/* Function             */
 extern void ChkNoHorse__16dBgS_PolyPassChkFv();
+/* Function             */
 extern void __ct__9dBgW_BaseFv();
+/* Function             */
 extern void __dt__9dBgW_BaseFv();
+/* Function             */
 extern void ClrDBgWBase__9dBgW_BaseFv();
-extern int ChkMemoryError__9dBgW_BaseFv();
+/* ReturnIntegerFunction */
+extern  int ChkMemoryError__9dBgW_BaseFv();
+/* ReturnFunction       */
 extern void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
+/* ReturnFunction       */
 extern void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
+/* Function             */
+extern void __ct__8dBgWKColFv();
+/* Function             */
 extern void __dt__8dBgWKColFv();
+/* Function             */
+extern void initKCollision__8dBgWKColFPv();
+/* Function             */
+extern void create__8dBgWKColFPvPv();
+/* Function             */
 extern void getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec();
+/* Function             */
 extern void ChkNotReady__8dBgWKColCFv();
-extern int ChkLock__8dBgWKColCFv();
-extern int ChkMoveBg__8dBgWKColCFv();
-extern int ChkMoveFlag__8dBgWKColCFv();
+/* ReturnIntegerFunction */
+extern  int ChkLock__8dBgWKColCFv();
+/* ReturnIntegerFunction */
+extern  int ChkMoveBg__8dBgWKColCFv();
+/* ReturnIntegerFunction */
+extern  int ChkMoveFlag__8dBgWKColCFv();
+/* Function             */
 extern void GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetTriPla__8dBgWKColCFi();
+/* Function             */
 extern void GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz();
+/* Function             */
 extern void GetTriPnt__8dBgWKColCFiP3VecP3VecP3Vec();
+/* Function             */
 extern void GetTriPnt__8dBgWKColCFPC12KC_PrismDataP3VecP3VecP3Vec();
+/* FirstParamFunction   */
 extern u8* GetBnd__8dBgWKColCFv(u8*);
+/* Function             */
 extern void GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo();
+/* ReturnFunction       */
 extern void OffMoveFlag__8dBgWKColFv();
+/* Function             */
 extern void getPolyCode__8dBgWKColCFiP5dBgPc();
+/* Function             */
 extern void chkPolyThrough__8dBgWKColCFP5dBgPcP16cBgS_PolyPassChkP15cBgS_GrpPassChkR4cXyz();
+/* Function             */
 extern void LineCheck__8dBgWKColFP11cBgS_LinChk();
+/* Function             */
 extern void GroundCross__8dBgWKColFP11cBgS_GndChk();
+/* Function             */
 extern void ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw();
+/* Function             */
 extern void ChkShdwDrawThrough__8dBgWKColFP5dBgPc();
+/* Function             */
 extern void CaptPoly__8dBgWKColFR13dBgS_CaptPoly();
+/* Function             */
 extern void WallCorrectSort__8dBgWKColFP9dBgS_Acch();
+/* Function             */
 extern void WallCorrect__8dBgWKColFP9dBgS_Acch();
+/* Function             */
 extern void RoofChk__8dBgWKColFP12dBgS_RoofChk();
+/* Function             */
 extern void SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk();
+/* Function             */
 extern void SphChk__8dBgWKColFP11dBgS_SphChkPv();
+/* Function             */
 extern void GetTopUnder__8dBgWKColCFPfPf();
+/* Function             */
 extern void GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetExitId__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetSpecialCode__8dBgWKColFi();
+/* Function             */
 extern void GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyObjThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyCamThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyLinkThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyArrowThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyHSStick__8dBgWKColFi();
+/* Function             */
 extern void GetPolyBoomerangThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyRopeThrough__8dBgWKColFi();
+/* Function             */
 extern void GetPolyBombThrough__8dBgWKColFi();
+/* Function             */
 extern void GetUnderwaterRoofCode__8dBgWKColFi();
+/* Function             */
 extern void GetShdwThrough__8dBgWKColFi();
+/* Function             */
 extern void GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetWallCode__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetIronBallThrough__8dBgWKColFi();
+/* Function             */
 extern void GetAttackThrough__8dBgWKColFi();
+/* Function             */
 extern void GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo();
+/* ReturnFunction       */
 extern void CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
+/* ReturnFunction       */
 extern void TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
+/* ReturnFunction       */
 extern void MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void SetPolyIndex__13cBgS_PolyInfoFi();
+/* Function             */
 extern void cBgW_CheckBGround__Ff();
+/* Function             */
 extern void cBgW_CheckBRoof__Ff();
+/* Function             */
 extern void cBgW_CheckBWall__Ff();
+/* Function             */
 extern void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
+/* Function             */
 extern void cM3d_Len2dSq__Fffff();
+/* Function             */
 extern void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf();
+/* Function             */
 extern void cM3d_Cross_SphTri__FPC8cM3dGSphPC8cM3dGTriP3Vec();
+/* Function             */
 extern void calcMinMax__8cM3dGCylFP4cXyzP4cXyz();
+/* Function             */
 extern void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
+/* Function             */
 extern void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz();
+/* Function             */
 extern void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSVECAdd();
+/* Function             */
 extern void PSVECSubtract();
+/* Function             */
 extern void PSVECScale();
+/* Function             */
 extern void PSVECDotProduct();
+/* Function             */
 extern void PSVECCrossProduct();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__8cM3dGPla[3];
-SECTION_DATA extern const void* __vt__8cM3dGAab[3];
-SECTION_DATA extern const void* __vt__8cM3dGTri[3];
-SECTION_DATA extern const void* __vt__8dBgWKCol[60];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGAab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGTri[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dBgWKCol[60];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80424F70[36];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_bg_w_kcol__l_wcsbuf[1008];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80425384[36];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_bg_w_kcol__LIT_4187[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_bg_w_kcol__LIT_4188;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_bg_w_kcol__LIT_4189;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_bg_w_kcol__LIT_4190[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_bg_w_kcol__LIT_4191[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_bg_w_kcol__LIT_4293[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_bg_w_kcol__LIT_5298;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5299;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5300[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5301[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_6099;
 }
 
@@ -163,8 +300,8 @@ SECTION_SDATA2 extern f64 LIT_6099;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803ABDC8 00F0 .data      __vt__8dBgWKCol                                              */
-SECTION_DATA const  void* __vt__8dBgWKCol[60] = {
+/* 803ABDC8-803ABEB8 00F0 .data      __vt__8dBgWKCol                                              VTableData */
+SECTION_DATA void* __vt__8dBgWKCol[60] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dBgWKColFv,
@@ -234,45 +371,45 @@ SECTION_DATA const  void* __vt__8dBgWKCol[60] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452718 0004 .sdata2    @4187                                                        */
+/* 80452718-8045271C 0004 .sdata2    @4187                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_bg_w_kcol__LIT_4187[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045271C 0004 .sdata2    @4188                                                        */
+/* 8045271C-80452720 0004 .sdata2    @4188                                                        Float32Data */
 // 0x43fa0000
 SECTION_SDATA2 f32 d_d_bg_w_kcol__LIT_4188 = 500.000000f;
-/* 80452720 0004 .sdata2    @4189                                                        */
+/* 80452720-80452724 0004 .sdata2    @4189                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_bg_w_kcol__LIT_4189 = 1.000000f;
-/* 80452724 0004 .sdata2    @4190                                                        */
+/* 80452724-80452728 0004 .sdata2    @4190                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_bg_w_kcol__LIT_4190[4] = {
 	0x3B, 0xF5, 0xC2, 0x8F,
 };
-/* 80452728 0004 .sdata2    @4191                                                        */
+/* 80452728-8045272C 0004 .sdata2    @4191                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_bg_w_kcol__LIT_4191[4] = {
 	0xBB, 0xF5, 0xC2, 0x8F,
 };
-/* 8045272C 0004 .sdata2    @4293                                                        */
+/* 8045272C-80452730 0004 .sdata2    @4293                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_bg_w_kcol__LIT_4293[4] = {
 	0x3C, 0x65, 0x60, 0x42,
 };
-/* 80452730 0008 .sdata2    @5298                                                        */
+/* 80452730-80452738 0008 .sdata2    @5298                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_bg_w_kcol__LIT_5298 = 0.500000;
-/* 80452738 0008 .sdata2    @5299                                                        */
+/* 80452738-80452740 0008 .sdata2    @5299                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_5299 = 3.000000;
-/* 80452740 0008 .sdata2    @5300                                                        */
+/* 80452740-80452748 0008 .sdata2    @5300                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5300[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80452748 0004 .sdata2    @5301                                                        */
+/* 80452748-80452750 0004 .sdata2    @5301                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5301[8] = {
 	0x3C, 0x03, 0x12, 0x6F,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80452750 0008 .sdata2    @6099                                                        */
+/* 80452750-80452758 0008 .sdata2    @6099                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_6099 = 4503599627370496.000000;
 }
@@ -283,11 +420,11 @@ SECTION_SDATA2 f64 LIT_6099 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80424F70 0024 .bss       vtx_tbl$4582                                                 */
+/* 80424F70-80424F94 0024 .bss       vtx_tbl$4582                                                 ZeroInitializedData */
 SECTION_BSS u8 data_80424F70[36];
-/* 80424F94 03F0 .bss       l_wcsbuf                                                     */
+/* 80424F94-80425384 03F0 .bss       l_wcsbuf                                                     ZeroInitializedData */
 SECTION_BSS u8 d_d_bg_w_kcol__l_wcsbuf[1008];
-/* 80425384 0024 .bss       vtx_tbl$5950                                                 */
+/* 80425384-804253A8 0024 .bss       vtx_tbl$5950                                                 ZeroInitializedData */
 SECTION_BSS u8 data_80425384[36];
 }
 
@@ -297,7 +434,7 @@ SECTION_BSS u8 data_80425384[36];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8007E6F4 0058 .text      __ct__8dBgWKColFv                                            */
+/* 8007E6F4-8007E74C 0058 .text      __ct__8dBgWKColFv                                            Function */
 // dBgWKCol::dBgWKCol(void)
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +445,7 @@ asm void __ct__8dBgWKColFv() {
 }
 #pragma pop
 
-/* 8007E74C 0084 .text      __dt__8dBgWKColFv                                            */
+/* 8007E74C-8007E7D0 0084 .text      __dt__8dBgWKColFv                                            Function */
 // dBgWKCol::~dBgWKCol(void)
 #pragma push
 #pragma optimization_level 0
@@ -319,7 +456,7 @@ asm void __dt__8dBgWKColFv() {
 }
 #pragma pop
 
-/* 8007E7D0 0034 .text      initKCollision__8dBgWKColFPv                                 */
+/* 8007E7D0-8007E804 0034 .text      initKCollision__8dBgWKColFPv                                 Function */
 // dBgWKCol::initKCollision(void*)
 #pragma push
 #pragma optimization_level 0
@@ -330,7 +467,7 @@ asm void initKCollision__8dBgWKColFPv() {
 }
 #pragma pop
 
-/* 8007E804 004C .text      create__8dBgWKColFPvPv                                       */
+/* 8007E804-8007E850 004C .text      create__8dBgWKColFPvPv                                       Function */
 // dBgWKCol::create(void*, void*)
 #pragma push
 #pragma optimization_level 0
@@ -341,7 +478,7 @@ asm void create__8dBgWKColFPvPv() {
 }
 #pragma pop
 
-/* 8007E850 001C .text      getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec                  */
+/* 8007E850-8007E86C 001C .text      getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec                  Function */
 // dBgWKCol::getTriNrm(KC_PrismData*, Vec**) const
 #pragma push
 #pragma optimization_level 0
@@ -352,7 +489,7 @@ asm void getTriNrm__8dBgWKColCFP12KC_PrismDataPP3Vec() {
 }
 #pragma pop
 
-/* 8007E86C 0010 .text      ChkNotReady__8dBgWKColCFv                                    */
+/* 8007E86C-8007E87C 0010 .text      ChkNotReady__8dBgWKColCFv                                    Function */
 // dBgWKCol::ChkNotReady(void) const
 #pragma push
 #pragma optimization_level 0
@@ -363,25 +500,25 @@ asm void ChkNotReady__8dBgWKColCFv() {
 }
 #pragma pop
 
-/* 8007E87C 0008 .text      ChkLock__8dBgWKColCFv                                        */
+/* 8007E87C-8007E884 0008 .text      ChkLock__8dBgWKColCFv                                        ReturnIntegerFunction */
 // dBgWKCol::ChkLock(void) const
 int ChkLock__8dBgWKColCFv() {
 	return 0;
 }
 
-/* 8007E884 0008 .text      ChkMoveBg__8dBgWKColCFv                                      */
+/* 8007E884-8007E88C 0008 .text      ChkMoveBg__8dBgWKColCFv                                      ReturnIntegerFunction */
 // dBgWKCol::ChkMoveBg(void) const
 int ChkMoveBg__8dBgWKColCFv() {
 	return 0;
 }
 
-/* 8007E88C 0008 .text      ChkMoveFlag__8dBgWKColCFv                                    */
+/* 8007E88C-8007E894 0008 .text      ChkMoveFlag__8dBgWKColCFv                                    ReturnIntegerFunction */
 // dBgWKCol::ChkMoveFlag(void) const
 int ChkMoveFlag__8dBgWKColCFv() {
 	return 0;
 }
 
-/* 8007E894 002C .text      GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo                      */
+/* 8007E894-8007E8C0 002C .text      GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo                      Function */
 // dBgWKCol::GetTriPla(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -392,7 +529,7 @@ asm void GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 8007E8C0 00C0 .text      GetTriPla__8dBgWKColCFi                                      */
+/* 8007E8C0-8007E980 00C0 .text      GetTriPla__8dBgWKColCFi                                      Function */
 // dBgWKCol::GetTriPla(int) const
 #pragma push
 #pragma optimization_level 0
@@ -403,7 +540,7 @@ asm void GetTriPla__8dBgWKColCFi() {
 }
 #pragma pop
 
-/* 8007E980 0024 .text      GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz    */
+/* 8007E980-8007E9A4 0024 .text      GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz    Function */
 // dBgWKCol::GetTriPnt(const cBgS_PolyInfo&, cXyz*, cXyz*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -414,7 +551,7 @@ asm void GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz() {
 }
 #pragma pop
 
-/* 8007E9A4 0030 .text      GetTriPnt__8dBgWKColCFiP3VecP3VecP3Vec                       */
+/* 8007E9A4-8007E9D4 0030 .text      GetTriPnt__8dBgWKColCFiP3VecP3VecP3Vec                       Function */
 // dBgWKCol::GetTriPnt(int, Vec*, Vec*, Vec*) const
 #pragma push
 #pragma optimization_level 0
@@ -425,7 +562,7 @@ asm void GetTriPnt__8dBgWKColCFiP3VecP3VecP3Vec() {
 }
 #pragma pop
 
-/* 8007E9D4 0154 .text      GetTriPnt__8dBgWKColCFPC12KC_PrismDataP3VecP3VecP3Vec        */
+/* 8007E9D4-8007EB28 0154 .text      GetTriPnt__8dBgWKColCFPC12KC_PrismDataP3VecP3VecP3Vec        Function */
 // dBgWKCol::GetTriPnt(const KC_PrismData*, Vec*, Vec*, Vec*) const
 #pragma push
 #pragma optimization_level 0
@@ -436,13 +573,13 @@ asm void GetTriPnt__8dBgWKColCFPC12KC_PrismDataP3VecP3VecP3Vec() {
 }
 #pragma pop
 
-/* 8007EB28 0008 .text      GetBnd__8dBgWKColCFv                                         */
+/* 8007EB28-8007EB30 0008 .text      GetBnd__8dBgWKColCFv                                         FirstParamFunction */
 // dBgWKCol::GetBnd(void) const
 u8* GetBnd__8dBgWKColCFv(u8* param0) {
 	return (u8*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 8007EB30 003C .text      GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo                      */
+/* 8007EB30-8007EB6C 003C .text      GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo                      Function */
 // dBgWKCol::GetGrpInf(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -453,13 +590,13 @@ asm void GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 8007EB6C 0004 .text      OffMoveFlag__8dBgWKColFv                                     */
+/* 8007EB6C-8007EB70 0004 .text      OffMoveFlag__8dBgWKColFv                                     ReturnFunction */
 // dBgWKCol::OffMoveFlag(void)
 void OffMoveFlag__8dBgWKColFv() {
 	return;
 }
 
-/* 8007EB70 0054 .text      getPolyCode__8dBgWKColCFiP5dBgPc                             */
+/* 8007EB70-8007EBC4 0054 .text      getPolyCode__8dBgWKColCFiP5dBgPc                             Function */
 // dBgWKCol::getPolyCode(int, dBgPc*) const
 #pragma push
 #pragma optimization_level 0
@@ -470,7 +607,7 @@ asm void getPolyCode__8dBgWKColCFiP5dBgPc() {
 }
 #pragma pop
 
-/* 8007EBC4 0270 .text      chkPolyThrough__8dBgWKColCFP5dBgPcP16cBgS_PolyPassChkP15cBgS_GrpPassChkR4cXyz */
+/* 8007EBC4-8007EE34 0270 .text      chkPolyThrough__8dBgWKColCFP5dBgPcP16cBgS_PolyPassChkP15cBgS_GrpPassChkR4cXyz Function */
 // dBgWKCol::chkPolyThrough(dBgPc*, cBgS_PolyPassChk*, cBgS_GrpPassChk*, cXyz&) const
 #pragma push
 #pragma optimization_level 0
@@ -481,7 +618,7 @@ asm void chkPolyThrough__8dBgWKColCFP5dBgPcP16cBgS_PolyPassChkP15cBgS_GrpPassChk
 }
 #pragma pop
 
-/* 8007EE34 07F4 .text      LineCheck__8dBgWKColFP11cBgS_LinChk                          */
+/* 8007EE34-8007F628 07F4 .text      LineCheck__8dBgWKColFP11cBgS_LinChk                          Function */
 // dBgWKCol::LineCheck(cBgS_LinChk*)
 #pragma push
 #pragma optimization_level 0
@@ -492,7 +629,7 @@ asm void LineCheck__8dBgWKColFP11cBgS_LinChk() {
 }
 #pragma pop
 
-/* 8007F628 037C .text      GroundCross__8dBgWKColFP11cBgS_GndChk                        */
+/* 8007F628-8007F9A4 037C .text      GroundCross__8dBgWKColFP11cBgS_GndChk                        Function */
 // dBgWKCol::GroundCross(cBgS_GndChk*)
 #pragma push
 #pragma optimization_level 0
@@ -503,7 +640,7 @@ asm void GroundCross__8dBgWKColFP11cBgS_GndChk() {
 }
 #pragma pop
 
-/* 8007F9A4 055C .text      ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw                         */
+/* 8007F9A4-8007FF00 055C .text      ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw                         Function */
 // dBgWKCol::ShdwDraw(cBgS_ShdwDraw*)
 #pragma push
 #pragma optimization_level 0
@@ -514,7 +651,7 @@ asm void ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw() {
 }
 #pragma pop
 
-/* 8007FF00 001C .text      ChkShdwDrawThrough__8dBgWKColFP5dBgPc                        */
+/* 8007FF00-8007FF1C 001C .text      ChkShdwDrawThrough__8dBgWKColFP5dBgPc                        Function */
 // dBgWKCol::ChkShdwDrawThrough(dBgPc*)
 #pragma push
 #pragma optimization_level 0
@@ -525,7 +662,7 @@ asm void ChkShdwDrawThrough__8dBgWKColFP5dBgPc() {
 }
 #pragma pop
 
-/* 8007FF1C 0414 .text      CaptPoly__8dBgWKColFR13dBgS_CaptPoly                         */
+/* 8007FF1C-80080330 0414 .text      CaptPoly__8dBgWKColFR13dBgS_CaptPoly                         Function */
 // dBgWKCol::CaptPoly(dBgS_CaptPoly&)
 #pragma push
 #pragma optimization_level 0
@@ -536,7 +673,7 @@ asm void CaptPoly__8dBgWKColFR13dBgS_CaptPoly() {
 }
 #pragma pop
 
-/* 80080330 0E70 .text      WallCorrectSort__8dBgWKColFP9dBgS_Acch                       */
+/* 80080330-800811A0 0E70 .text      WallCorrectSort__8dBgWKColFP9dBgS_Acch                       Function */
 // dBgWKCol::WallCorrectSort(dBgS_Acch*)
 #pragma push
 #pragma optimization_level 0
@@ -547,7 +684,7 @@ asm void WallCorrectSort__8dBgWKColFP9dBgS_Acch() {
 }
 #pragma pop
 
-/* 800811A0 0C78 .text      WallCorrect__8dBgWKColFP9dBgS_Acch                           */
+/* 800811A0-80081E18 0C78 .text      WallCorrect__8dBgWKColFP9dBgS_Acch                           Function */
 // dBgWKCol::WallCorrect(dBgS_Acch*)
 #pragma push
 #pragma optimization_level 0
@@ -558,7 +695,7 @@ asm void WallCorrect__8dBgWKColFP9dBgS_Acch() {
 }
 #pragma pop
 
-/* 80081E18 036C .text      RoofChk__8dBgWKColFP12dBgS_RoofChk                           */
+/* 80081E18-80082184 036C .text      RoofChk__8dBgWKColFP12dBgS_RoofChk                           Function */
 // dBgWKCol::RoofChk(dBgS_RoofChk*)
 #pragma push
 #pragma optimization_level 0
@@ -569,7 +706,7 @@ asm void RoofChk__8dBgWKColFP12dBgS_RoofChk() {
 }
 #pragma pop
 
-/* 80082184 0368 .text      SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk                       */
+/* 80082184-800824EC 0368 .text      SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk                       Function */
 // dBgWKCol::SplGrpChk(dBgS_SplGrpChk*)
 #pragma push
 #pragma optimization_level 0
@@ -580,7 +717,7 @@ asm void SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk() {
 }
 #pragma pop
 
-/* 800824EC 04C0 .text      SphChk__8dBgWKColFP11dBgS_SphChkPv                           */
+/* 800824EC-800829AC 04C0 .text      SphChk__8dBgWKColFP11dBgS_SphChkPv                           Function */
 // dBgWKCol::SphChk(dBgS_SphChk*, void*)
 #pragma push
 #pragma optimization_level 0
@@ -591,7 +728,7 @@ asm void SphChk__8dBgWKColFP11dBgS_SphChkPv() {
 }
 #pragma pop
 
-/* 800829AC 0044 .text      GetTopUnder__8dBgWKColCFPfPf                                 */
+/* 800829AC-800829F0 0044 .text      GetTopUnder__8dBgWKColCFPfPf                                 Function */
 // dBgWKCol::GetTopUnder(f32*, f32*) const
 #pragma push
 #pragma optimization_level 0
@@ -602,7 +739,7 @@ asm void GetTopUnder__8dBgWKColCFPfPf() {
 }
 #pragma pop
 
-/* 800829F0 0030 .text      GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo                */
+/* 800829F0-80082A20 0030 .text      GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo                Function */
 // dBgWKCol::GetGrpRoomIndex(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -613,7 +750,7 @@ asm void GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082A20 0030 .text      GetExitId__8dBgWKColFRC13cBgS_PolyInfo                       */
+/* 80082A20-80082A50 0030 .text      GetExitId__8dBgWKColFRC13cBgS_PolyInfo                       Function */
 // dBgWKCol::GetExitId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +761,7 @@ asm void GetExitId__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082A50 0030 .text      GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo                    */
+/* 80082A50-80082A80 0030 .text      GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo                    Function */
 // dBgWKCol::GetPolyColor(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +772,7 @@ asm void GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082A80 0030 .text      GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo                 */
+/* 80082A80-80082AB0 0030 .text      GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo                 Function */
 // dBgWKCol::GetHorseNoEntry(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +783,7 @@ asm void GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082AB0 0030 .text      GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo                  */
+/* 80082AB0-80082AE0 0030 .text      GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo                  Function */
 // dBgWKCol::GetSpecialCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +794,7 @@ asm void GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082AE0 002C .text      GetSpecialCode__8dBgWKColFi                                  */
+/* 80082AE0-80082B0C 002C .text      GetSpecialCode__8dBgWKColFi                                  Function */
 // dBgWKCol::GetSpecialCode(int)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +805,7 @@ asm void GetSpecialCode__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082B0C 0030 .text      GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo                   */
+/* 80082B0C-80082B3C 0030 .text      GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo                   Function */
 // dBgWKCol::GetMagnetCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +816,7 @@ asm void GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082B3C 0030 .text      GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo               */
+/* 80082B3C-80082B6C 0030 .text      GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo               Function */
 // dBgWKCol::GetMonkeyBarsCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +827,7 @@ asm void GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082B6C 002C .text      GetPolyObjThrough__8dBgWKColFi                               */
+/* 80082B6C-80082B98 002C .text      GetPolyObjThrough__8dBgWKColFi                               Function */
 // dBgWKCol::GetPolyObjThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +838,7 @@ asm void GetPolyObjThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082B98 002C .text      GetPolyCamThrough__8dBgWKColFi                               */
+/* 80082B98-80082BC4 002C .text      GetPolyCamThrough__8dBgWKColFi                               Function */
 // dBgWKCol::GetPolyCamThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +849,7 @@ asm void GetPolyCamThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082BC4 002C .text      GetPolyLinkThrough__8dBgWKColFi                              */
+/* 80082BC4-80082BF0 002C .text      GetPolyLinkThrough__8dBgWKColFi                              Function */
 // dBgWKCol::GetPolyLinkThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +860,7 @@ asm void GetPolyLinkThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082BF0 002C .text      GetPolyArrowThrough__8dBgWKColFi                             */
+/* 80082BF0-80082C1C 002C .text      GetPolyArrowThrough__8dBgWKColFi                             Function */
 // dBgWKCol::GetPolyArrowThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +871,7 @@ asm void GetPolyArrowThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082C1C 002C .text      GetPolyHSStick__8dBgWKColFi                                  */
+/* 80082C1C-80082C48 002C .text      GetPolyHSStick__8dBgWKColFi                                  Function */
 // dBgWKCol::GetPolyHSStick(int)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +882,7 @@ asm void GetPolyHSStick__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082C48 002C .text      GetPolyBoomerangThrough__8dBgWKColFi                         */
+/* 80082C48-80082C74 002C .text      GetPolyBoomerangThrough__8dBgWKColFi                         Function */
 // dBgWKCol::GetPolyBoomerangThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +893,7 @@ asm void GetPolyBoomerangThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082C74 002C .text      GetPolyRopeThrough__8dBgWKColFi                              */
+/* 80082C74-80082CA0 002C .text      GetPolyRopeThrough__8dBgWKColFi                              Function */
 // dBgWKCol::GetPolyRopeThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +904,7 @@ asm void GetPolyRopeThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082CA0 002C .text      GetPolyBombThrough__8dBgWKColFi                              */
+/* 80082CA0-80082CCC 002C .text      GetPolyBombThrough__8dBgWKColFi                              Function */
 // dBgWKCol::GetPolyBombThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +915,7 @@ asm void GetPolyBombThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082CCC 002C .text      GetUnderwaterRoofCode__8dBgWKColFi                           */
+/* 80082CCC-80082CF8 002C .text      GetUnderwaterRoofCode__8dBgWKColFi                           Function */
 // dBgWKCol::GetUnderwaterRoofCode(int)
 #pragma push
 #pragma optimization_level 0
@@ -789,7 +926,7 @@ asm void GetUnderwaterRoofCode__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082CF8 002C .text      GetShdwThrough__8dBgWKColFi                                  */
+/* 80082CF8-80082D24 002C .text      GetShdwThrough__8dBgWKColFi                                  Function */
 // dBgWKCol::GetShdwThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -800,7 +937,7 @@ asm void GetShdwThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082D24 0030 .text      GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo                       */
+/* 80082D24-80082D54 0030 .text      GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo                       Function */
 // dBgWKCol::GetLinkNo(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -811,7 +948,7 @@ asm void GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082D54 0030 .text      GetWallCode__8dBgWKColFRC13cBgS_PolyInfo                     */
+/* 80082D54-80082D84 0030 .text      GetWallCode__8dBgWKColFRC13cBgS_PolyInfo                     Function */
 // dBgWKCol::GetWallCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -822,7 +959,7 @@ asm void GetWallCode__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082D84 0030 .text      GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo                     */
+/* 80082D84-80082DB4 0030 .text      GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo                     Function */
 // dBgWKCol::GetPolyAtt0(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -833,7 +970,7 @@ asm void GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082DB4 0030 .text      GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo                     */
+/* 80082DB4-80082DE4 0030 .text      GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo                     Function */
 // dBgWKCol::GetPolyAtt1(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -844,7 +981,7 @@ asm void GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082DE4 0030 .text      GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo                   */
+/* 80082DE4-80082E14 0030 .text      GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo                   Function */
 // dBgWKCol::GetGroundCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -855,7 +992,7 @@ asm void GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082E14 002C .text      GetIronBallThrough__8dBgWKColFi                              */
+/* 80082E14-80082E40 002C .text      GetIronBallThrough__8dBgWKColFi                              Function */
 // dBgWKCol::GetIronBallThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -866,7 +1003,7 @@ asm void GetIronBallThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082E40 002C .text      GetAttackThrough__8dBgWKColFi                                */
+/* 80082E40-80082E6C 002C .text      GetAttackThrough__8dBgWKColFi                                Function */
 // dBgWKCol::GetAttackThrough(int)
 #pragma push
 #pragma optimization_level 0
@@ -877,7 +1014,7 @@ asm void GetAttackThrough__8dBgWKColFi() {
 }
 #pragma pop
 
-/* 80082E6C 0030 .text      GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo                    */
+/* 80082E6C-80082E9C 0030 .text      GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo                    Function */
 // dBgWKCol::GetCamMoveBG(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -888,7 +1025,7 @@ asm void GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082E9C 0030 .text      GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo                    */
+/* 80082E9C-80082ECC 0030 .text      GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo                    Function */
 // dBgWKCol::GetRoomCamId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -899,7 +1036,7 @@ asm void GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082ECC 0030 .text      GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo                   */
+/* 80082ECC-80082EFC 0030 .text      GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo                   Function */
 // dBgWKCol::GetRoomPathId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -910,7 +1047,7 @@ asm void GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082EFC 0030 .text      GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo                */
+/* 80082EFC-80082F2C 0030 .text      GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo                Function */
 // dBgWKCol::GetRoomPathPntNo(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -921,7 +1058,7 @@ asm void GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082F2C 0030 .text      GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo             */
+/* 80082F2C-80082F5C 0030 .text      GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo             Function */
 // dBgWKCol::GetPolyGrpRoomInfId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -932,7 +1069,7 @@ asm void GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082F5C 0030 .text      GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo                   */
+/* 80082F5C-80082F8C 0030 .text      GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo                   Function */
 // dBgWKCol::GetGrpSoundId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -943,19 +1080,19 @@ asm void GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80082F8C 0004 .text      CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   */
+/* 80082F8C-80082F90 0004 .text      CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz   ReturnFunction */
 // dBgWKCol::CrrPos(const cBgS_PolyInfo&, void*, bool, cXyz*, csXyz*, csXyz*)
 void CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz() {
 	return;
 }
 
-/* 80082F90 0004 .text      TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
+/* 80082F90-80082F94 0004 .text      TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz ReturnFunction */
 // dBgWKCol::TransPos(const cBgS_PolyInfo&, void*, bool, cXyz*, csXyz*, csXyz*)
 void TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz() {
 	return;
 }
 
-/* 80082F94 0004 .text      MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz */
+/* 80082F94-80082F98 0004 .text      MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz ReturnFunction */
 // dBgWKCol::MatrixCrrPos(const cBgS_PolyInfo&, void*, bool, cXyz*, csXyz*, csXyz*)
 void MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz() {
 	return;

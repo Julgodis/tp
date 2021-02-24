@@ -12,15 +12,33 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void extend_default__Q27JGadget6vectorFUlUlUl();
+/* Function             */
+extern void func_802DCCD0();
+/* Function             */
+extern void __dt__Q27JGadget20TVector_pointer_voidFv();
+/* Function             */
+extern void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv();
+/* Function             */
+extern void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
+/* Function             */
 extern void func_802DCE1C();
+/* Function             */
 extern void func_802DCE8C();
+/* Function             */
 extern void func_802DD130();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -30,7 +48,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DCCC8 0008 .text      extend_default__Q27JGadget6vectorFUlUlUl                     */
+/* 802DCCC8-802DCCD0 0008 .text      extend_default__Q27JGadget6vectorFUlUlUl                     Function */
 // JGadget::vector::extend_default(u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -41,7 +59,7 @@ asm void extend_default__Q27JGadget6vectorFUlUlUl() {
 }
 #pragma pop
 
-/* 802DCCD0 002C .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> */
+/* 802DCCD0-802DCCFC 002C .text      __ct__Q27JGadget20TVector_pointer_voidFRCQ27JGadget14TAllocator<Pv> Function */
 // JGadget::TVector_pointer_void::JGadget::TVector_pointer_void(JGadget::TAllocator<Pv>)
 #pragma push
 #pragma optimization_level 0
@@ -52,7 +70,7 @@ asm void func_802DCCD0() {
 }
 #pragma pop
 
-/* 802DCCFC 00A8 .text      __dt__Q27JGadget20TVector_pointer_voidFv                     */
+/* 802DCCFC-802DCDA4 00A8 .text      __dt__Q27JGadget20TVector_pointer_voidFv                     Function */
 // JGadget::TVector_pointer_void::~JGadget::TVector_pointer_void(void)
 #pragma push
 #pragma optimization_level 0
@@ -63,7 +81,7 @@ asm void __dt__Q27JGadget20TVector_pointer_voidFv() {
 }
 #pragma pop
 
-/* 802DCDA4 0020 .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             */
+/* 802DCDA4-802DCDC4 0020 .text      insert__Q27JGadget20TVector_pointer_voidFPPvRCPv             Function */
 // JGadget::TVector_pointer_void::insert(void**, const void*&)
 #pragma push
 #pragma optimization_level 0
@@ -74,7 +92,7 @@ asm void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv() {
 }
 #pragma pop
 
-/* 802DCDC4 0058 .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               */
+/* 802DCDC4-802DCE1C 0058 .text      erase__Q27JGadget20TVector_pointer_voidFPPvPPv               Function */
 // JGadget::TVector_pointer_void::erase(void**, void**)
 #pragma push
 #pragma optimization_level 0
@@ -85,7 +103,7 @@ asm void erase__Q27JGadget20TVector_pointer_voidFPPvPPv() {
 }
 #pragma pop
 
-/* 802DCE1C 0070 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv */
+/* 802DCE1C-802DCE8C 0070 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUlRCPv Function */
 // JGadget::TVector<Pv,Q27JGadget14TAllocator<Pv>>::insert(void**, u32, const void*&)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +114,7 @@ asm void func_802DCE1C() {
 }
 #pragma pop
 
-/* 802DCE8C 02A4 .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl */
+/* 802DCE8C-802DD130 02A4 .text      Insert_raw__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvUl Function */
 // JGadget::TVector<Pv,Q27JGadget14TAllocator<Pv>>::Insert_raw(void**, u32)
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +125,7 @@ asm void func_802DCE8C() {
 }
 #pragma pop
 
-/* 802DD130 0058 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv */
+/* 802DD130-802DD188 0058 .text      insert__Q27JGadget38TVector<Pv,Q27JGadget14TAllocator<Pv>>FPPvRCPv Function */
 // JGadget::TVector<Pv,Q27JGadget14TAllocator<Pv>>::insert(void**, const void*&)
 #pragma push
 #pragma optimization_level 0

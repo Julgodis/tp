@@ -9,6 +9,11 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void GetUseSerialIO();
+/* Function             */
+extern void SetUseSerialIO();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_8044F828[8];
 }
 
@@ -18,7 +23,7 @@ SECTION_BSS extern u8 data_8044F828[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80372180 0010 .text      GetUseSerialIO                                               */
+/* 80372180-80372190 0010 .text      GetUseSerialIO                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -28,7 +33,7 @@ asm void GetUseSerialIO() {
 }
 #pragma pop
 
-/* 80372190 000C .text      SetUseSerialIO                                               */
+/* 80372190-8037219C 000C .text      SetUseSerialIO                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

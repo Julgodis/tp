@@ -18,74 +18,161 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void becomeCurrentHeap__7JKRHeapFv();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void findFromRoot__7JKRHeapFPv();
+/* Function             */
 extern void isSubHeap__7JKRHeapCFP7JKRHeap();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__11JKRDisposerFv();
+/* Function             */
 extern void __dt__11JKRDisposerFv();
+/* Function             */
+extern void __ct__9JKRThreadFUlii();
+/* Function             */
+extern void __ct__9JKRThreadFP7JKRHeapUlii();
+/* Function             */
+extern void __ct__9JKRThreadFP8OSThreadi();
+/* Function             */
 extern void __dt__9JKRThreadFv();
+/* Function             */
 extern void setCommon_mesgQueue__9JKRThreadFP7JKRHeapi();
+/* Function             */
 extern void setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli();
+/* Function             */
 extern void start__9JKRThreadFPv();
+/* Function             */
 extern void searchThread__9JKRThreadFP8OSThread();
+/* Function             */
 extern void __ct__15JKRThreadSwitchFP7JKRHeap();
+/* Function             */
+extern void createManager__15JKRThreadSwitchFP7JKRHeap();
+/* Function             */
+extern void enter__15JKRThreadSwitchFP9JKRThreadi();
+/* Function             */
 extern void callback__15JKRThreadSwitchFP8OSThreadP8OSThread();
+/* Function             */
 extern void draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole();
-extern int run__9JKRThreadFv();
+/* ReturnIntegerFunction */
+extern  int run__9JKRThreadFv();
+/* Function             */
 extern void draw__15JKRThreadSwitchFP14JKRThreadName_();
+/* Function             */
 extern void __dt__15JKRThreadSwitchFv();
+/* SInitFunction        */
+extern void __sinit_JKRThread_cpp();
+/* Function             */
 extern void func_802D1EFC();
+/* Function             */
 extern void func_802D1F50();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void __ct__10JSUPtrListFb();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void clear__10JUTConsoleFv();
+/* Function             */
 extern void print_f__10JUTConsoleFPCce();
+/* Function             */
 extern void print__10JUTConsoleFPCc();
+/* Function             */
 extern void JUTWarningConsole();
+/* Function             */
 extern void OSInitMessageQueue();
+/* Function             */
 extern void OSSetSwitchThreadCallback();
+/* Function             */
 extern void OSIsThreadTerminated();
+/* Function             */
 extern void OSCreateThread();
+/* Function             */
 extern void OSCancelThread();
+/* Function             */
 extern void OSDetachThread();
+/* Function             */
 extern void OSGetTick();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void __cvt_sll_flt();
+/* Function             */
 extern void sprintf();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRThread__stringBase0[208];
-SECTION_DATA extern const void* __vt__15JKRThreadSwitch[5];
-SECTION_DATA extern const void* __vt__9JKRThread[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15JKRThreadSwitch[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9JKRThread[5];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_481[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sThreadList__9JKRThread[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_989[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sTaskList__7JKRTask[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sEndMesgQueue__7JKRTask[32];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__15JKRThreadSwitch[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTotalCount__15JKRThreadSwitch[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTotalStart__15JKRThreadSwitch[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804513BC[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mUserPreCallback__15JKRThreadSwitch[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mUserPostCallback__15JKRThreadSwitch[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JKRThread__LIT_934;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JKRThread__LIT_935;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JKRThread__LIT_937;
 }
 
@@ -95,25 +182,36 @@ SECTION_SDATA2 extern f64 JKRThread__LIT_937;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039CFA8 00CD .rodata    @stringBase0                                                 */
-const char* const stringBase_8039CFA8 = "on";
-const char* const stringBase_8039CFAB = "off";
-const char* const stringBase_8039CFAF = 
-    "JKRThread:%x  OSThread:%x  Load:"
+/* 8039CFA8-8039D078 00CD .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039CFA8 = "on";
+SECTION_DEAD const char* const stringBase_8039CFAB = "off";
+SECTION_DEAD const char* const stringBase_8039CFAF = 
+    "JKRThread:%x  OS"
+    "Thread:%x  Load:"
     "ID:%d  (%s)\n";
-const char* const stringBase_8039CFDC = 
-    "JKRThreadSwitch: currentHeap des"
+SECTION_DEAD const char* const stringBase_8039CFDC = 
+    "JKRThreadSwitch:"
+    " currentHeap des"
     "troyed.\n";
-const char* const stringBase_8039D005 = 
-    " total: switch:%3d  time:%d(%df)"
+SECTION_DEAD const char* const stringBase_8039D005 = 
+    " total: switch:%"
+    "3d  time:%d(%df)"
     "\n";
-const char* const stringBase_8039D027 = 
-    " -------------------------------"
+SECTION_DEAD const char* const stringBase_8039D027 = 
+    " ---------------"
+    "----------------"
     "------\n";
-const char* const stringBase_8039D04F = "%d";
-const char* const stringBase_8039D052 = 
-    " [%10s] switch:%5d  cost:%2d.%d%"
+SECTION_DEAD const char* const stringBase_8039D04F = "%d";
+SECTION_DEAD const char* const stringBase_8039D052 = 
+    " [%10s] switch:%"
+    "5d  cost:%2d.%d%"
     "%\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D075 = "\0\0";
+#pragma pop
 }
 
 
@@ -122,16 +220,16 @@ const char* const stringBase_8039D052 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC100 0014 .data      __vt__15JKRThreadSwitch                                      */
-SECTION_DATA const  void* __vt__15JKRThreadSwitch[5] = {
+/* 803CC100-803CC114 0014 .data      __vt__15JKRThreadSwitch                                      VTableData */
+SECTION_DATA void* __vt__15JKRThreadSwitch[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole,
 	(void*)draw__15JKRThreadSwitchFP14JKRThreadName_,
 	(void*)__dt__15JKRThreadSwitchFv,
 };
-/* 803CC114 0010 .data      __vt__9JKRThread                                             */
-SECTION_DATA const  void* __vt__9JKRThread[5] = {
+/* 803CC114-803CC128 0010 .data      __vt__9JKRThread                                             VTableData */
+SECTION_DATA void* __vt__9JKRThread[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9JKRThreadFv,
@@ -147,13 +245,13 @@ SECTION_DATA const  void* __vt__9JKRThread[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455FC0 0004 .sdata2    @934                                                         */
+/* 80455FC0-80455FC4 0004 .sdata2    @934                                                         Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 JKRThread__LIT_934 = 100.000000f;
-/* 80455FC4 0004 .sdata2    @935                                                         */
+/* 80455FC4-80455FC8 0004 .sdata2    @935                                                         Float32Data */
 // 0x447a0000
 SECTION_SDATA2 f32 JKRThread__LIT_935 = 1000.000000f;
-/* 80455FC8 0008 .sdata2    @937                                                         */
+/* 80455FC8-80455FD0 0008 .sdata2    @937                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JKRThread__LIT_937 = 4503599627370496.000000;
 }
@@ -164,16 +262,16 @@ SECTION_SDATA2 f64 JKRThread__LIT_937 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434280 0000 .bss       ...bss.0                                                     */
-/* 80434280 000C .bss       @481                                                         */
+/* 80434280-80434280 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80434280-8043428C 000C .bss       @481                                                         ZeroInitializedData */
 SECTION_BSS u8 LIT_481[12];
-/* 8043428C 000C .bss       sThreadList__9JKRThread                                      */
+/* 8043428C-80434298 000C .bss       sThreadList__9JKRThread                                      ZeroInitializedData */
 SECTION_BSS u8 sThreadList__9JKRThread[12];
-/* 80434298 000C .bss       @989                                                         */
+/* 80434298-804342A4 000C .bss       @989                                                         ZeroInitializedData */
 SECTION_BSS u8 LIT_989[12];
-/* 804342A4 000C .bss       sTaskList__7JKRTask                                          */
+/* 804342A4-804342B0 000C .bss       sTaskList__7JKRTask                                          ZeroInitializedData */
 SECTION_BSS u8 sTaskList__7JKRTask[12];
-/* 804342B0 0020 .bss       sEndMesgQueue__7JKRTask                                      */
+/* 804342B0-804342D0 0020 .bss       sEndMesgQueue__7JKRTask                                      ZeroInitializedData */
 SECTION_BSS u8 sEndMesgQueue__7JKRTask[32];
 }
 
@@ -183,17 +281,17 @@ SECTION_BSS u8 sEndMesgQueue__7JKRTask[32];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804513B0 0004 .sbss      sManager__15JKRThreadSwitch                                  */
+/* 804513B0-804513B4 0004 .sbss      sManager__15JKRThreadSwitch                                  ZeroInitializedData */
 SECTION_SBSS u8 sManager__15JKRThreadSwitch[4];
-/* 804513B4 0004 .sbss      sTotalCount__15JKRThreadSwitch                               */
+/* 804513B4-804513B8 0004 .sbss      sTotalCount__15JKRThreadSwitch                               ZeroInitializedData */
 SECTION_SBSS u8 sTotalCount__15JKRThreadSwitch[4];
-/* 804513B8 0004 .sbss      sTotalStart__15JKRThreadSwitch                               */
+/* 804513B8-804513BC 0004 .sbss      sTotalStart__15JKRThreadSwitch                               ZeroInitializedData */
 SECTION_SBSS u8 sTotalStart__15JKRThreadSwitch[4];
-/* 804513BC 0004 .sbss      data_804513BC                                                */
+/* 804513BC-804513C0 0004 .sbss      data_804513BC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804513BC[4];
-/* 804513C0 0004 .sbss      mUserPreCallback__15JKRThreadSwitch                          */
+/* 804513C0-804513C4 0004 .sbss      mUserPreCallback__15JKRThreadSwitch                          ZeroInitializedData */
 SECTION_SBSS u8 mUserPreCallback__15JKRThreadSwitch[4];
-/* 804513C4 0004 .sbss      mUserPostCallback__15JKRThreadSwitch                         */
+/* 804513C4-804513C8 0004 .sbss      mUserPostCallback__15JKRThreadSwitch                         ZeroInitializedData */
 SECTION_SBSS u8 mUserPostCallback__15JKRThreadSwitch[4];
 }
 
@@ -203,7 +301,7 @@ SECTION_SBSS u8 mUserPostCallback__15JKRThreadSwitch[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D1568 00A8 .text      __ct__9JKRThreadFUlii                                        */
+/* 802D1568-802D1610 00A8 .text      __ct__9JKRThreadFUlii                                        Function */
 // JKRThread::JKRThread(u32, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -214,7 +312,7 @@ asm void __ct__9JKRThreadFUlii() {
 }
 #pragma pop
 
-/* 802D1610 00A8 .text      __ct__9JKRThreadFP7JKRHeapUlii                               */
+/* 802D1610-802D16B8 00A8 .text      __ct__9JKRThreadFP7JKRHeapUlii                               Function */
 // JKRThread::JKRThread(JKRHeap*, u32, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -225,7 +323,7 @@ asm void __ct__9JKRThreadFP7JKRHeapUlii() {
 }
 #pragma pop
 
-/* 802D16B8 00A0 .text      __ct__9JKRThreadFP8OSThreadi                                 */
+/* 802D16B8-802D1758 00A0 .text      __ct__9JKRThreadFP8OSThreadi                                 Function */
 // JKRThread::JKRThread(OSThread*, int)
 #pragma push
 #pragma optimization_level 0
@@ -236,7 +334,7 @@ asm void __ct__9JKRThreadFP8OSThreadi() {
 }
 #pragma pop
 
-/* 802D1758 00D8 .text      __dt__9JKRThreadFv                                           */
+/* 802D1758-802D1830 00D8 .text      __dt__9JKRThreadFv                                           Function */
 // JKRThread::~JKRThread(void)
 #pragma push
 #pragma optimization_level 0
@@ -247,7 +345,7 @@ asm void __dt__9JKRThreadFv() {
 }
 #pragma pop
 
-/* 802D1830 0074 .text      setCommon_mesgQueue__9JKRThreadFP7JKRHeapi                   */
+/* 802D1830-802D18A4 0074 .text      setCommon_mesgQueue__9JKRThreadFP7JKRHeapi                   Function */
 // JKRThread::setCommon_mesgQueue(JKRHeap*, int)
 #pragma push
 #pragma optimization_level 0
@@ -258,7 +356,7 @@ asm void setCommon_mesgQueue__9JKRThreadFP7JKRHeapi() {
 }
 #pragma pop
 
-/* 802D18A4 0090 .text      setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli             */
+/* 802D18A4-802D1934 0090 .text      setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli             Function */
 // JKRThread::setCommon_heapSpecified(JKRHeap*, u32, int)
 #pragma push
 #pragma optimization_level 0
@@ -269,7 +367,7 @@ asm void setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli() {
 }
 #pragma pop
 
-/* 802D1934 002C .text      start__9JKRThreadFPv                                         */
+/* 802D1934-802D1960 002C .text      start__9JKRThreadFPv                                         Function */
 // JKRThread::start(void*)
 #pragma push
 #pragma optimization_level 0
@@ -280,7 +378,7 @@ asm void start__9JKRThreadFPv() {
 }
 #pragma pop
 
-/* 802D1960 003C .text      searchThread__9JKRThreadFP8OSThread                          */
+/* 802D1960-802D199C 003C .text      searchThread__9JKRThreadFP8OSThread                          Function */
 // JKRThread::searchThread(OSThread*)
 #pragma push
 #pragma optimization_level 0
@@ -291,7 +389,7 @@ asm void searchThread__9JKRThreadFP8OSThread() {
 }
 #pragma pop
 
-/* 802D199C 0078 .text      __ct__15JKRThreadSwitchFP7JKRHeap                            */
+/* 802D199C-802D1A14 0078 .text      __ct__15JKRThreadSwitchFP7JKRHeap                            Function */
 // JKRThreadSwitch::JKRThreadSwitch(JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -302,7 +400,7 @@ asm void __ct__15JKRThreadSwitchFP7JKRHeap() {
 }
 #pragma pop
 
-/* 802D1A14 005C .text      createManager__15JKRThreadSwitchFP7JKRHeap                   */
+/* 802D1A14-802D1A70 005C .text      createManager__15JKRThreadSwitchFP7JKRHeap                   Function */
 // JKRThreadSwitch::createManager(JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -313,7 +411,7 @@ asm void createManager__15JKRThreadSwitchFP7JKRHeap() {
 }
 #pragma pop
 
-/* 802D1A70 0074 .text      enter__15JKRThreadSwitchFP9JKRThreadi                        */
+/* 802D1A70-802D1AE4 0074 .text      enter__15JKRThreadSwitchFP9JKRThreadi                        Function */
 // JKRThreadSwitch::enter(JKRThread*, int)
 #pragma push
 #pragma optimization_level 0
@@ -324,7 +422,7 @@ asm void enter__15JKRThreadSwitchFP9JKRThreadi() {
 }
 #pragma pop
 
-/* 802D1AE4 0190 .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread             */
+/* 802D1AE4-802D1C74 0190 .text      callback__15JKRThreadSwitchFP8OSThreadP8OSThread             Function */
 // JKRThreadSwitch::callback(OSThread*, OSThread*)
 #pragma push
 #pragma optimization_level 0
@@ -335,7 +433,7 @@ asm void callback__15JKRThreadSwitchFP8OSThreadP8OSThread() {
 }
 #pragma pop
 
-/* 802D1C74 01A0 .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole       */
+/* 802D1C74-802D1E14 01A0 .text      draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole       Function */
 // JKRThreadSwitch::draw(JKRThreadName_*, JUTConsole*)
 #pragma push
 #pragma optimization_level 0
@@ -346,13 +444,13 @@ asm void draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole() {
 }
 #pragma pop
 
-/* 802D1E14 0008 .text      run__9JKRThreadFv                                            */
+/* 802D1E14-802D1E1C 0008 .text      run__9JKRThreadFv                                            ReturnIntegerFunction */
 // JKRThread::run(void)
 int run__9JKRThreadFv() {
 	return 0;
 }
 
-/* 802D1E1C 0030 .text      draw__15JKRThreadSwitchFP14JKRThreadName_                    */
+/* 802D1E1C-802D1E4C 0030 .text      draw__15JKRThreadSwitchFP14JKRThreadName_                    Function */
 // JKRThreadSwitch::draw(JKRThreadName_*)
 #pragma push
 #pragma optimization_level 0
@@ -363,7 +461,7 @@ asm void draw__15JKRThreadSwitchFP14JKRThreadName_() {
 }
 #pragma pop
 
-/* 802D1E4C 0048 .text      __dt__15JKRThreadSwitchFv                                    */
+/* 802D1E4C-802D1E94 0048 .text      __dt__15JKRThreadSwitchFv                                    Function */
 // JKRThreadSwitch::~JKRThreadSwitch(void)
 #pragma push
 #pragma optimization_level 0
@@ -374,7 +472,7 @@ asm void __dt__15JKRThreadSwitchFv() {
 }
 #pragma pop
 
-/* 802D1E94 0068 .text      __sinit_JKRThread_cpp                                        */
+/* 802D1E94-802D1EFC 0068 .text      __sinit_JKRThread_cpp                                        SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -384,7 +482,7 @@ asm void __sinit_JKRThread_cpp() {
 }
 #pragma pop
 
-/* 802D1EFC 0054 .text      __dt__17JSUList<7JKRTask>Fv                                  */
+/* 802D1EFC-802D1F50 0054 .text      __dt__17JSUList<7JKRTask>Fv                                  Function */
 // JSUList<7JKRTask>::~JSUList<7JKRTask>(void)
 #pragma push
 #pragma optimization_level 0
@@ -395,7 +493,7 @@ asm void func_802D1EFC() {
 }
 #pragma pop
 
-/* 802D1F50 0054 .text      __dt__19JSUList<9JKRThread>Fv                                */
+/* 802D1F50-802D1FA4 0054 .text      __dt__19JSUList<9JKRThread>Fv                                Function */
 // JSUList<9JKRThread>::~JSUList<9JKRThread>(void)
 #pragma push
 #pragma optimization_level 0

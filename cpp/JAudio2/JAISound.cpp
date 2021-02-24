@@ -15,22 +15,67 @@
 extern void JASReport(const char*, ...); /* JASReport__FPCce */
 
 extern "C" {
+/* Function             */
 extern void JASReport__FPCce();
+/* Function             */
 extern void setChannelMgrCount__8JASTrackFUl();
+/* Function             */
 extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+/* Function             */
+extern void releaseSound__14JAISoundHandleFv();
+/* Function             */
 extern void releaseHandle__8JAISoundFv();
+/* Function             */
+extern void attachHandle__8JAISoundFP14JAISoundHandle();
+/* Function             */
+extern void lockWhenPrepared__15JAISoundStatus_Fv();
+/* Function             */
+extern void unlockIfLocked__15JAISoundStatus_Fv();
+/* Function             */
+extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+/* Function             */
+extern void __ct__8JAISoundFv();
+/* Function             */
+extern void func_802A2328();
+/* Function             */
+extern void acceptsNewAudible__8JAISoundCFv();
+/* Function             */
+extern void func_802A2474();
+/* Function             */
+extern void stop__8JAISoundFUl();
+/* Function             */
 extern void stop__8JAISoundFv();
-extern int asSe__8JAISoundFv();
-extern int asSeq__8JAISoundFv();
-extern int asStream__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asSe__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asSeq__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asStream__8JAISoundFv();
+/* Function             */
+extern void die_JAISound___8JAISoundFv();
+/* Function             */
+extern void increasePrepareCount_JAISound___8JAISoundFv();
+/* Function             */
+extern void calc_JAISound___8JAISoundFv();
+/* Function             */
+extern void initTrack_JAISound___8JAISoundFP8JASTrack();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JAISound__stringBase0[64];
-SECTION_DATA extern const void* __vt__8JAISound[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8JAISound[12];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_659;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JAISound__LIT_697;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_698[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JAISound__LIT_766;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_887[8];
 }
 
@@ -40,10 +85,18 @@ SECTION_SDATA2 extern u8 LIT_887[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039B910 003A .rodata    @stringBase0                                                 */
-const char* const stringBase_8039B910 = 
-    "It cost %d steps to prepare Soun"
-    "d(ID:%08x, Address%08x).\n";
+/* 8039B910-8039B950 003A .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039B910 = 
+    "It cost %d steps"
+    " to prepare Soun"
+    "d(ID:%08x, Addre"
+    "ss%08x).\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039B94A = "\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -52,8 +105,8 @@ const char* const stringBase_8039B910 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9970 0030 .data      __vt__8JAISound                                              */
-SECTION_DATA const  void* __vt__8JAISound[12] = {
+/* 803C9970-803C99A0 0030 .data      __vt__8JAISound                                              VTableData */
+SECTION_DATA void* __vt__8JAISound[12] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -75,22 +128,22 @@ SECTION_DATA const  void* __vt__8JAISound[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804557B8 0004 .sdata2    @659                                                         */
+/* 804557B8-804557BC 0004 .sdata2    @659                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_659 = 0.500000f;
-/* 804557BC 0004 .sdata2    @697                                                         */
+/* 804557BC-804557C0 0004 .sdata2    @697                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JAISound__LIT_697 = 1.000000f;
-/* 804557C0 0004 .sdata2    @698                                                         */
+/* 804557C0-804557C8 0004 .sdata2    @698                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_698[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804557C8 0008 .sdata2    @766                                                         */
+/* 804557C8-804557D0 0008 .sdata2    @766                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JAISound__LIT_766 = 4503599627370496.000000;
-/* 804557D0 0004 .sdata2    @887                                                         */
+/* 804557D0-804557D8 0004 .sdata2    @887                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_887[8] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 	/* padding */
@@ -104,7 +157,7 @@ SECTION_SDATA2 u8 LIT_887[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A2184 001C .text      releaseSound__14JAISoundHandleFv                             */
+/* 802A2184-802A21A0 001C .text      releaseSound__14JAISoundHandleFv                             Function */
 // JAISoundHandle::releaseSound(void)
 #pragma push
 #pragma optimization_level 0
@@ -115,7 +168,7 @@ asm void releaseSound__14JAISoundHandleFv() {
 }
 #pragma pop
 
-/* 802A21A0 001C .text      releaseHandle__8JAISoundFv                                   */
+/* 802A21A0-802A21BC 001C .text      releaseHandle__8JAISoundFv                                   Function */
 // JAISound::releaseHandle(void)
 #pragma push
 #pragma optimization_level 0
@@ -126,7 +179,7 @@ asm void releaseHandle__8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A21BC 0064 .text      attachHandle__8JAISoundFP14JAISoundHandle                    */
+/* 802A21BC-802A2220 0064 .text      attachHandle__8JAISoundFP14JAISoundHandle                    Function */
 // JAISound::attachHandle(JAISoundHandle*)
 #pragma push
 #pragma optimization_level 0
@@ -137,7 +190,7 @@ asm void attachHandle__8JAISoundFP14JAISoundHandle() {
 }
 #pragma pop
 
-/* 802A2220 0024 .text      lockWhenPrepared__15JAISoundStatus_Fv                        */
+/* 802A2220-802A2244 0024 .text      lockWhenPrepared__15JAISoundStatus_Fv                        Function */
 // JAISoundStatus_::lockWhenPrepared(void)
 #pragma push
 #pragma optimization_level 0
@@ -148,7 +201,7 @@ asm void lockWhenPrepared__15JAISoundStatus_Fv() {
 }
 #pragma pop
 
-/* 802A2244 003C .text      unlockIfLocked__15JAISoundStatus_Fv                          */
+/* 802A2244-802A2280 003C .text      unlockIfLocked__15JAISoundStatus_Fv                          Function */
 // JAISoundStatus_::unlockIfLocked(void)
 #pragma push
 #pragma optimization_level 0
@@ -159,7 +212,7 @@ asm void unlockIfLocked__15JAISoundStatus_Fv() {
 }
 #pragma pop
 
-/* 802A2280 0078 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf */
+/* 802A2280-802A22F8 0078 .text      mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf Function */
 // JAISoundParams::mixOutAll(const JASSoundParams&, JASSoundParams*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -170,7 +223,7 @@ asm void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf() {
 }
 #pragma pop
 
-/* 802A22F8 0030 .text      __ct__8JAISoundFv                                            */
+/* 802A22F8-802A2328 0030 .text      __ct__8JAISoundFv                                            Function */
 // JAISound::JAISound(void)
 #pragma push
 #pragma optimization_level 0
@@ -181,7 +234,7 @@ asm void __ct__8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A2328 0124 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+/* 802A2328-802A244C 0124 .text      start_JAISound___8JAISoundF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience Function */
 // JAISound::start_JAISound_(JAISoundID, JGeometry::TVec3<f>, JAIAudience*)
 #pragma push
 #pragma optimization_level 0
@@ -192,7 +245,7 @@ asm void func_802A2328() {
 }
 #pragma pop
 
-/* 802A244C 0028 .text      acceptsNewAudible__8JAISoundCFv                              */
+/* 802A244C-802A2474 0028 .text      acceptsNewAudible__8JAISoundCFv                              Function */
 // JAISound::acceptsNewAudible(void) const
 #pragma push
 #pragma optimization_level 0
@@ -203,7 +256,7 @@ asm void acceptsNewAudible__8JAISoundCFv() {
 }
 #pragma pop
 
-/* 802A2474 0068 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience */
+/* 802A2474-802A24DC 0068 .text      newAudible__8JAISoundFRCQ29JGeometry8TVec3<f>PCQ29JGeometry8TVec3<f>UlP11JAIAudience Function */
 // JAISound::newAudible(JGeometry::TVec3<f>, JGeometry::TVec3<f>, u32, JAIAudience*)
 #pragma push
 #pragma optimization_level 0
@@ -214,7 +267,7 @@ asm void func_802A2474() {
 }
 #pragma pop
 
-/* 802A24DC 00BC .text      stop__8JAISoundFUl                                           */
+/* 802A24DC-802A2598 00BC .text      stop__8JAISoundFUl                                           Function */
 // JAISound::stop(u32)
 #pragma push
 #pragma optimization_level 0
@@ -225,7 +278,7 @@ asm void stop__8JAISoundFUl() {
 }
 #pragma pop
 
-/* 802A2598 0040 .text      stop__8JAISoundFv                                            */
+/* 802A2598-802A25D8 0040 .text      stop__8JAISoundFv                                            Function */
 // JAISound::stop(void)
 #pragma push
 #pragma optimization_level 0
@@ -236,25 +289,25 @@ asm void stop__8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A25D8 0008 .text      asSe__8JAISoundFv                                            */
+/* 802A25D8-802A25E0 0008 .text      asSe__8JAISoundFv                                            ReturnIntegerFunction */
 // JAISound::asSe(void)
 int asSe__8JAISoundFv() {
 	return 0;
 }
 
-/* 802A25E0 0008 .text      asSeq__8JAISoundFv                                           */
+/* 802A25E0-802A25E8 0008 .text      asSeq__8JAISoundFv                                           ReturnIntegerFunction */
 // JAISound::asSeq(void)
 int asSeq__8JAISoundFv() {
 	return 0;
 }
 
-/* 802A25E8 0008 .text      asStream__8JAISoundFv                                        */
+/* 802A25E8-802A25F0 0008 .text      asStream__8JAISoundFv                                        ReturnIntegerFunction */
 // JAISound::asStream(void)
 int asStream__8JAISoundFv() {
 	return 0;
 }
 
-/* 802A25F0 007C .text      die_JAISound___8JAISoundFv                                   */
+/* 802A25F0-802A266C 007C .text      die_JAISound___8JAISoundFv                                   Function */
 // JAISound::die_JAISound_(void)
 #pragma push
 #pragma optimization_level 0
@@ -265,7 +318,7 @@ asm void die_JAISound___8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A266C 004C .text      increasePrepareCount_JAISound___8JAISoundFv                  */
+/* 802A266C-802A26B8 004C .text      increasePrepareCount_JAISound___8JAISoundFv                  Function */
 // JAISound::increasePrepareCount_JAISound_(void)
 #pragma push
 #pragma optimization_level 0
@@ -276,7 +329,7 @@ asm void increasePrepareCount_JAISound___8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A26B8 0324 .text      calc_JAISound___8JAISoundFv                                  */
+/* 802A26B8-802A29DC 0324 .text      calc_JAISound___8JAISoundFv                                  Function */
 // JAISound::calc_JAISound_(void)
 #pragma push
 #pragma optimization_level 0
@@ -287,7 +340,7 @@ asm void calc_JAISound___8JAISoundFv() {
 }
 #pragma pop
 
-/* 802A29DC 00D4 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    */
+/* 802A29DC-802A2AB0 00D4 .text      initTrack_JAISound___8JAISoundFP8JASTrack                    Function */
 // JAISound::initTrack_JAISound_(JASTrack*)
 #pragma push
 #pragma optimization_level 0

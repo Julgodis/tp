@@ -9,24 +9,52 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport();
+/* GlobalFunction       */
 extern u32 OSGetArenaHi();
+/* Function             */
 extern void OSSetArenaHi();
+/* Function             */
 extern void DVDReadAbsAsyncForBS();
+/* Function             */
 extern void DVDReadDiskID();
+/* Function             */
 extern void DVDReset();
+/* Function             */
 extern void DVDGetDriveStatus();
+/* Function             */
 extern void cb();
+/* Function             */
+extern void __fstLoad();
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_38[28];
-SECTION_BSS extern u8 bb2Buf[64];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_39[24];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_40[20];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_41[20];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_44[20];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 bb2Buf[63 + 1 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_8044C9F8[48];
+/* InitializedData      */
 SECTION_SDATA extern u8 LIT_37[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 LIT_42[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 LIT_43[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 status[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 bb2[4];
-SECTION_SBSS extern u8 idTmp[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 idTmp[4 + 4 /* padding */];
 }
 
 
@@ -35,32 +63,32 @@ SECTION_SBSS extern u8 idTmp[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D16F0 0000 .data      ...data.0                                                    */
-/* 803D16F0 001A .data      @38                                                          */
+/* 803D16F0-803D16F0 0000 .data      ...data.0                                                    InitializedData */
+/* 803D16F0-803D170C 001A .data      @38                                                          InitializedData */
 SECTION_DATA u8 LIT_38[28] = {
 	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x4E, 0x61, 0x6D, 0x65, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D170C 0016 .data      @39                                                          */
+/* 803D170C-803D1724 0016 .data      @39                                                          InitializedData */
 SECTION_DATA u8 LIT_39[24] = {
 	0x20, 0x20, 0x43, 0x6F, 0x6D, 0x70, 0x61, 0x6E, 0x79, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x63, 0x25, 0x63, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D1724 0014 .data      @40                                                          */
+/* 803D1724-803D1738 0014 .data      @40                                                          InitializedData */
 SECTION_DATA u8 LIT_40[20] = {
 	0x20, 0x20, 0x44, 0x69, 0x73, 0x6B, 0x20, 0x23, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
-/* 803D1738 0014 .data      @41                                                          */
+/* 803D1738-803D174C 0014 .data      @41                                                          InitializedData */
 SECTION_DATA u8 LIT_41[20] = {
 	0x20, 0x20, 0x47, 0x61, 0x6D, 0x65, 0x20, 0x76, 0x65, 0x72, 0x20, 0x2E, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x64, 0x0A, 0x00,
 };
-/* 803D174C 0014 .data      @44                                                          */
+/* 803D174C-803D1760 0014 .data      @44                                                          InitializedData */
 SECTION_DATA u8 LIT_44[20] = {
 	0x20, 0x20, 0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x69, 0x6E, 0x67, 0x20, 0x2E, 0x2E, 0x2E, 0x20,
 	0x25, 0x73, 0x0A, 0x00,
@@ -73,17 +101,17 @@ SECTION_DATA u8 LIT_44[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A00 0002 .sdata     @37                                                          */
+/* 80450A00-80450A04 0002 .sdata     @37                                                          InitializedData */
 SECTION_SDATA u8 LIT_37[4] = {
 	0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80450A04 0004 .sdata     @42                                                          */
+/* 80450A04-80450A08 0004 .sdata     @42                                                          InitializedData */
 SECTION_SDATA u8 LIT_42[4] = {
 	0x4F, 0x46, 0x46, 0x00,
 };
-/* 80450A08 0003 .sdata     @43                                                          */
+/* 80450A08-80450A10 0003 .sdata     @43                                                          InitializedData */
 SECTION_SDATA u8 LIT_43[8] = {
 	0x4F, 0x4E, 0x00,
 	/* padding */
@@ -97,9 +125,9 @@ SECTION_SDATA u8 LIT_43[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044C9B8 003F .bss       bb2Buf                                                       */
-SECTION_BSS u8 bb2Buf[64];
-/* 8044C9F8 0030 .bss       block$18                                                     */
+/* 8044C9B8-8044C9F8 003F .bss       bb2Buf                                                       ZeroInitializedData */
+SECTION_BSS u8 bb2Buf[63 + 1 /* padding */];
+/* 8044C9F8-8044CA28 0030 .bss       block$18                                                     ZeroInitializedData */
 SECTION_BSS u8 data_8044C9F8[48];
 }
 
@@ -109,13 +137,12 @@ SECTION_BSS u8 data_8044C9F8[48];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804517D0 0004 .sbss      status                                                       */
+/* 804517D0-804517D4 0004 .sbss      status                                                       ZeroInitializedData */
 SECTION_SBSS u8 status[4];
-/* 804517D4 0004 .sbss      bb2                                                          */
+/* 804517D4-804517D8 0004 .sbss      bb2                                                          ZeroInitializedData */
 SECTION_SBSS u8 bb2[4];
-/* 804517D8 0004 .sbss      idTmp                                                        */
-SECTION_SBSS u8 idTmp[4];
-SECTION_SBSS u8 pad_804517DC[4];
+/* 804517D8-804517E0 0004 .sbss      idTmp                                                        ZeroInitializedData */
+SECTION_SBSS u8 idTmp[4 + 4 /* padding */];
 }
 
 
@@ -124,7 +151,7 @@ SECTION_SBSS u8 pad_804517DC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034BD2C 00D8 .text      cb                                                           */
+/* 8034BD2C-8034BE04 00D8 .text      cb                                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,7 +161,7 @@ asm void cb() {
 }
 #pragma pop
 
-/* 8034BE04 0168 .text      __fstLoad                                                    */
+/* 8034BE04-8034BF6C 0168 .text      __fstLoad                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

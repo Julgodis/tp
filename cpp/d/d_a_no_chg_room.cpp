@@ -15,38 +15,83 @@
 struct process_node_class;
 struct daNocrm_c;
 
-extern void mDoMtx_YrotM(f32 (*)[4], s16); /* mDoMtx_YrotM__FPA4_fs */
+extern void mDoMtx_YrotM(f32 (*)[4], short); /* mDoMtx_YrotM__FPA4_fs */
 extern void fopScnM_SearchByID(unsigned int); /* fopScnM_SearchByID__FUi */
 extern void fpcNd_IsDeleteTiming(process_node_class*); /* fpcNd_IsDeleteTiming__FP18process_node_class */
 extern void isLoadRoom(int); /* isLoadRoom__Fi */
+extern void daNocrm_create(daNocrm_c*); /* daNocrm_create__FP9daNocrm_c */
+extern void daNocrm_execute(daNocrm_c*); /* daNocrm_execute__FP9daNocrm_c */
 
 extern "C" {
+/* Function             */
 extern void OSReport_Warning();
+/* Function             */
 extern void mDoMtx_YrotM__FPA4_fs();
+/* Function             */
 extern void __ct__10fopAc_ac_cFv();
+/* Function             */
 extern void gndCheck__11fopAcM_gc_cFPC4cXyz();
+/* Function             */
 extern void fopScnM_SearchByID__FUi();
+/* Function             */
 extern void fpcNd_IsDeleteTiming__FP18process_node_class();
+/* Function             */
 extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void isLoadRoom__Fi();
+/* Function             */
 extern void execute__9daNocrm_cFv();
+/* Function             */
 extern void getRoomNo__9daNocrm_cFi();
+/* Function             */
+extern void daNocrm_create__FP9daNocrm_c();
+/* ReturnIntegerFunction */
+extern  int daNocrm_Delete__FP9daNocrm_c();
+/* Function             */
+extern void daNocrm_execute__FP9daNocrm_c();
+/* ReturnIntegerFunction */
+extern  int daNocrm_draw__FP9daNocrm_c();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECScale();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_a_no_chg_room__stringBase0[64];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopAc_Method[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* daNocrm_METHODS[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_NO_CHG_ROOM[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mGndCheck__11fopAcM_gc_c[84];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505F0[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D68[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_no_chg_room__LIT_3762[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_no_chg_room__LIT_3832;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_no_chg_room__LIT_3833[8];
 }
 
@@ -56,8 +101,14 @@ SECTION_SDATA2 extern u8 d_d_a_no_chg_room__LIT_3833[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80392640 003C .rodata    @stringBase0                                                 */
-const char* const stringBase_80392640 = "部屋読み込み矩形：読み込みＩＤが−１ですので、自滅します！\n";
+/* 80392640-80392680 003C .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80392640 = "部屋読み込み矩形：読み込みＩＤが−１ですので、自滅します！\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039267C = "\0\0\0";
+#pragma pop
 }
 
 
@@ -66,16 +117,31 @@ const char* const stringBase_80392640 = "部屋読み込み矩形：読み込み
 /* ###################################################################################### */
 
 extern "C" {
-/* 803B3658 0020 .data      daNocrm_METHODS                                              */
-SECTION_DATA u8 daNocrm_METHODS[32] = {
-	0x80, 0x14, 0x55, 0xA8, 0x80, 0x14, 0x56, 0xA4, 0x80, 0x14, 0x56, 0xAC, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x14, 0x56, 0xCC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803B3658-803B3678 0020 .data      daNocrm_METHODS                                              SymbolReferenceArrayData */
+SECTION_DATA void* daNocrm_METHODS[8] = {
+	(void*)daNocrm_create,
+	(void*)daNocrm_Delete__FP9daNocrm_c,
+	(void*)daNocrm_execute,
+	NULL,
+	(void*)daNocrm_draw__FP9daNocrm_c,
+	NULL,
+	NULL,
+	NULL,
 };
-/* 803B3678 0030 .data      g_profile_NO_CHG_ROOM                                        */
-SECTION_DATA u8 g_profile_NO_CHG_ROOM[48] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x02, 0xFF, 0xFD, 0x00, 0x1A, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x05, 0xCC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x35, 0xB0,
-	0x02, 0xFA, 0x00, 0x00, 0x80, 0x3B, 0x36, 0x58, 0x00, 0x06, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00,
+/* 803B3678-803B36A8 0030 .data      g_profile_NO_CHG_ROOM                                        SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_NO_CHG_ROOM[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0002FFFD,
+	(void*)0x001A0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000005CC,
+	NULL,
+	NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x02FA0000,
+	(void*)&daNocrm_METHODS,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 }
 
@@ -85,14 +151,14 @@ SECTION_DATA u8 g_profile_NO_CHG_ROOM[48] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804533C8 0004 .sdata2    @3762                                                        */
+/* 804533C8-804533CC 0004 .sdata2    @3762                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_no_chg_room__LIT_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804533CC 0004 .sdata2    @3832                                                        */
+/* 804533CC-804533D0 0004 .sdata2    @3832                                                        Float32Data */
 // 0x447a0000
 SECTION_SDATA2 f32 d_d_a_no_chg_room__LIT_3832 = 1000.000000f;
-/* 804533D0 0004 .sdata2    @3833                                                        */
+/* 804533D0-804533D8 0004 .sdata2    @3833                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_no_chg_room__LIT_3833[8] = {
 	0x42, 0xC8, 0x00, 0x00,
 	/* padding */
@@ -106,7 +172,7 @@ SECTION_SDATA2 u8 d_d_a_no_chg_room__LIT_3833[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 801451EC 00F0 .text      isLoadRoom__Fi                                               */
+/* 801451EC-801452DC 00F0 .text      isLoadRoom__Fi                                               Function */
 }
 
 #pragma push
@@ -119,7 +185,7 @@ asm void isLoadRoom(int) {
 #pragma pop
 
 extern "C" {
-/* 801452DC 022C .text      execute__9daNocrm_cFv                                        */
+/* 801452DC-80145508 022C .text      execute__9daNocrm_cFv                                        Function */
 // daNocrm_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +196,7 @@ asm void execute__9daNocrm_cFv() {
 }
 #pragma pop
 
-/* 80145508 00A0 .text      getRoomNo__9daNocrm_cFi                                      */
+/* 80145508-801455A8 00A0 .text      getRoomNo__9daNocrm_cFi                                      Function */
 // daNocrm_c::getRoomNo(int)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +207,7 @@ asm void getRoomNo__9daNocrm_cFi() {
 }
 #pragma pop
 
-/* 801455A8 00FC .text      daNocrm_create__FP9daNocrm_c                                 */
+/* 801455A8-801456A4 00FC .text      daNocrm_create__FP9daNocrm_c                                 Function */
 }
 
 #pragma push
@@ -154,13 +220,13 @@ asm void daNocrm_create(daNocrm_c*) {
 #pragma pop
 
 extern "C" {
-/* 801456A4 0008 .text      daNocrm_Delete__FP9daNocrm_c                                 */
+/* 801456A4-801456AC 0008 .text      daNocrm_Delete__FP9daNocrm_c                                 ReturnIntegerFunction */
 // daNocrm_Delete(daNocrm_c*)
 int daNocrm_Delete__FP9daNocrm_c() {
 	return 1;
 }
 
-/* 801456AC 0020 .text      daNocrm_execute__FP9daNocrm_c                                */
+/* 801456AC-801456CC 0020 .text      daNocrm_execute__FP9daNocrm_c                                Function */
 }
 
 #pragma push
@@ -173,7 +239,7 @@ asm void daNocrm_execute(daNocrm_c*) {
 #pragma pop
 
 extern "C" {
-/* 801456CC 0008 .text      daNocrm_draw__FP9daNocrm_c                                   */
+/* 801456CC-801456D4 0008 .text      daNocrm_draw__FP9daNocrm_c                                   ReturnIntegerFunction */
 // daNocrm_draw(daNocrm_c*)
 int daNocrm_draw__FP9daNocrm_c() {
 	return 1;

@@ -11,18 +11,49 @@
 struct node_class;
 
 extern void cNd_Join(node_class*, node_class*); /* cNd_Join__FP10node_classP10node_class */
+extern void cNd_LengthOf(node_class*); /* cNd_LengthOf__FP10node_class */
+extern void cNd_First(node_class*); /* cNd_First__FP10node_class */
 extern void cNd_Last(node_class*); /* cNd_Last__FP10node_class */
+extern void cNd_Order(node_class*, int); /* cNd_Order__FP10node_classi */
+extern void cNd_SingleCut(node_class*); /* cNd_SingleCut__FP10node_class */
 extern void cNd_Cut(node_class*); /* cNd_Cut__FP10node_class */
 extern void cNd_Addition(node_class*, node_class*); /* cNd_Addition__FP10node_classP10node_class */
+extern void cNd_Insert(node_class*, node_class*); /* cNd_Insert__FP10node_classP10node_class */
 extern void cNd_SetObject(node_class*, void*); /* cNd_SetObject__FP10node_classPv */
+extern void cNd_ClearObject(node_class*); /* cNd_ClearObject__FP10node_class */
+extern void cNd_ForcedClear(node_class*); /* cNd_ForcedClear__FP10node_class */
+extern void cNd_Create(node_class*, void*); /* cNd_Create__FP10node_classPv */
 
 extern "C" {
+/* Function             */
 extern void cNd_Join__FP10node_classP10node_class();
+/* Function             */
+extern void cNd_LengthOf__FP10node_class();
+/* Function             */
+extern void cNd_First__FP10node_class();
+/* Function             */
 extern void cNd_Last__FP10node_class();
+/* Function             */
+extern void cNd_Order__FP10node_classi();
+/* Function             */
+extern void cNd_SingleCut__FP10node_class();
+/* Function             */
 extern void cNd_Cut__FP10node_class();
+/* Function             */
 extern void cNd_Addition__FP10node_classP10node_class();
+/* Function             */
+extern void cNd_Insert__FP10node_classP10node_class();
+/* Function             */
 extern void cNd_SetObject__FP10node_classPv();
+/* Function             */
+extern void cNd_ClearObject__FP10node_class();
+/* Function             */
+extern void cNd_ForcedClear__FP10node_class();
+/* Function             */
+extern void cNd_Create__FP10node_classPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -32,7 +63,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802660D0 000C .text      cNd_Join__FP10node_classP10node_class                        */
+/* 802660D0-802660DC 000C .text      cNd_Join__FP10node_classP10node_class                        Function */
 }
 
 #pragma push
@@ -45,7 +76,7 @@ asm void cNd_Join(node_class*, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 802660DC 0030 .text      cNd_LengthOf__FP10node_class                                 */
+/* 802660DC-8026610C 0030 .text      cNd_LengthOf__FP10node_class                                 Function */
 }
 
 #pragma push
@@ -58,7 +89,7 @@ asm void cNd_LengthOf(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 8026610C 0030 .text      cNd_First__FP10node_class                                    */
+/* 8026610C-8026613C 0030 .text      cNd_First__FP10node_class                                    Function */
 }
 
 #pragma push
@@ -71,7 +102,7 @@ asm void cNd_First(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 8026613C 0030 .text      cNd_Last__FP10node_class                                     */
+/* 8026613C-8026616C 0030 .text      cNd_Last__FP10node_class                                     Function */
 }
 
 #pragma push
@@ -84,7 +115,7 @@ asm void cNd_Last(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 8026616C 0050 .text      cNd_Order__FP10node_classi                                   */
+/* 8026616C-802661BC 0050 .text      cNd_Order__FP10node_classi                                   Function */
 }
 
 #pragma push
@@ -97,7 +128,7 @@ asm void cNd_Order(node_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 802661BC 0034 .text      cNd_SingleCut__FP10node_class                                */
+/* 802661BC-802661F0 0034 .text      cNd_SingleCut__FP10node_class                                Function */
 }
 
 #pragma push
@@ -110,7 +141,7 @@ asm void cNd_SingleCut(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 802661F0 0020 .text      cNd_Cut__FP10node_class                                      */
+/* 802661F0-80266210 0020 .text      cNd_Cut__FP10node_class                                      Function */
 }
 
 #pragma push
@@ -123,7 +154,7 @@ asm void cNd_Cut(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266210 0034 .text      cNd_Addition__FP10node_classP10node_class                    */
+/* 80266210-80266244 0034 .text      cNd_Addition__FP10node_classP10node_class                    Function */
 }
 
 #pragma push
@@ -136,7 +167,7 @@ asm void cNd_Addition(node_class*, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266244 006C .text      cNd_Insert__FP10node_classP10node_class                      */
+/* 80266244-802662B0 006C .text      cNd_Insert__FP10node_classP10node_class                      Function */
 }
 
 #pragma push
@@ -149,7 +180,7 @@ asm void cNd_Insert(node_class*, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 802662B0 0028 .text      cNd_SetObject__FP10node_classPv                              */
+/* 802662B0-802662D8 0028 .text      cNd_SetObject__FP10node_classPv                              Function */
 }
 
 #pragma push
@@ -162,7 +193,7 @@ asm void cNd_SetObject(node_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 802662D8 0024 .text      cNd_ClearObject__FP10node_class                              */
+/* 802662D8-802662FC 0024 .text      cNd_ClearObject__FP10node_class                              Function */
 }
 
 #pragma push
@@ -175,7 +206,7 @@ asm void cNd_ClearObject(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 802662FC 0014 .text      cNd_ForcedClear__FP10node_class                              */
+/* 802662FC-80266310 0014 .text      cNd_ForcedClear__FP10node_class                              Function */
 }
 
 #pragma push
@@ -188,7 +219,7 @@ asm void cNd_ForcedClear(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266310 0014 .text      cNd_Create__FP10node_classPv                                 */
+/* 80266310-80266324 0014 .text      cNd_Create__FP10node_classPv                                 Function */
 }
 
 #pragma push

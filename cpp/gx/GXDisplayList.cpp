@@ -9,9 +9,14 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __GXSetDirtyState();
+/* Function             */
 extern void __GXSendFlushPrim();
-SECTION_SDATA2 extern u8 __GXData[4];
+/* Function             */
+extern void GXCallDisplayList();
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -20,7 +25,7 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035FEF0 0070 .text      GXCallDisplayList                                            */
+/* 8035FEF0-8035FF60 0070 .text      GXCallDisplayList                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

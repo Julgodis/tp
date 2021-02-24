@@ -31,7 +31,7 @@ class CPPDisassembler(dasm.Disassembler):
 
     def addr_to_label(self, addr) -> str:
         if addr in self.symbol_map:
-            return self.symbol_map[addr].name.reference
+            return self.symbol_map[addr].getASMReferenceLabel(addr)
         if addr in self.block_map:
             return self.block_map[addr].name.reference
         if not dasm.is_label_candidate(addr):
@@ -39,11 +39,7 @@ class CPPDisassembler(dasm.Disassembler):
 
         symbols = list(self.address_interval_tree[addr])
         if len(symbols) == 1:
-            symbol = symbols[0].data
-            if addr - symbol.addr != 0:
-                return f"{symbol.name.reference}+f{addr - symbol.addr}"
-            else:
-                return symbol.name.reference
+            return symbols[0].getASMReferenceLabel(addr)
         elif len(symbols) > 1:
             print("error: multiple possible symbols for %08X (@%08X in %s)" % (addr, self.last_address, self.function.name))
             print("symbols")
@@ -230,7 +226,7 @@ class CPPDisassembler(dasm.Disassembler):
 def export_symbol_header(builder: Builder, section: SectionPart, symbol: Symbol):
     assert symbol.name.name
     assert symbol.name.label
-    builder.write("/* %08X %04X %-10s %-60s */" % (symbol.addr, symbol.size, section.name, symbol.name.name))
+    builder.write("/* %08X-%08X %04X %-10s %-60s %s */" % (symbol.addr, symbol.addr+symbol.size+symbol.padding, symbol.size, section.name, symbol.name.name, type(symbol).__name__))
 
 
 def disassemble_cpp_callback(address, offset, insn, bytes, userdata):
@@ -274,10 +270,17 @@ def disassemble_cpp_callback(address, offset, insn, bytes, userdata):
         asm = '.4byte 0x%08X  /* unknown instruction */' % raw
     builder.write('%s\t%s' % (prefixComment, asm))
 
-def symbol_get_dsc(section: SectionPart, symbol: Symbol):
+def symbol_get_desc(section: SectionPart, symbol: Symbol, forward: bool, **kwargs):
     declspec = ""
+    is_extern = ""
     is_const = ""
     is_static = ""
+
+    if forward:
+        is_extern = "extern "
+
+    if symbol.name.is_static:
+        is_extern = "static "
 
     if section.name == ".data":
         declspec = "SECTION_DATA "
@@ -293,18 +296,38 @@ def symbol_get_dsc(section: SectionPart, symbol: Symbol):
         declspec = "SECTION_SBSS2 "
     if section.name == ".init":
         declspec = "SECTION_INIT "
-        is_const = "const "
+        if not isinstance(symbol, Function):
+            is_const = "const "
     if section.name == ".rodata":
         declspec = "SECTION_RODATA "
         is_const = "const "
     if section.name == ".ctors":
-        declspec = "SECTION_CTORS "
         is_const = "const "
+        if not forward:
+            if symbol.name.label == "__init_cpp_exceptions_reference":
+                declspec = "__declspec(section \".ctors$10\") "
+            elif symbol.name.label == "_ctors":
+                declspec = "__declspec(section \".ctors$10\") "
     if section.name == ".dtors":
-        declspec = "SECTION_DTORS "
+        if not forward:
+            if symbol.name.label == "__destroy_global_chain_reference":
+                declspec = "__declspec(section \".dtors$10\") "
+            elif symbol.name.label == "__fini_cpp_exceptions_reference":
+                declspec = "__declspec(section \".dtors$15\") "   
         is_const = "const "
 
-    return declspec, is_static, is_const
+    if isinstance(symbol, StringData):
+        # using declspec for string will cause the compiler to add a extern symbol.
+        declspec = ""
+
+    if "dead" in kwargs and kwargs["dead"]:
+        declspec = "SECTION_DEAD "
+
+    return declspec, is_extern, is_static, is_const
+
+def export_desc(builder, section, symbol, forward, **kwargs):
+    a, b, c, d = symbol_get_desc(section, symbol, forward, **kwargs)
+    builder.write_nonewline(f"{a}{b}{c}{d}")
 
 def export_symbol_function_normal(builder: Builder, section: SectionPart, function: Function, symbol_map: Dict[int,Symbol], address_interval_tree, declspec: str):
     file_label = function.name.label
@@ -321,8 +344,6 @@ def export_symbol_function_normal(builder: Builder, section: SectionPart, functi
     section.function_files.add(include_path.lower())
     util.mkdir(include_path)
     #print("\t\t%s" % include_path)
-
-    assert function.padding == 0
 
     builder.write("#pragma push")
     builder.write("#pragma optimization_level 0")
@@ -341,22 +362,27 @@ def export_symbol_function_normal(builder: Builder, section: SectionPart, functi
     builder.write("\tnofralloc")
     builder.write("#include \"%s\"" % include_path)
     builder.write("}")
+    if function.padding != 0:
+        print("error: function %s has padding" % function.name)
+        builder.write("/* function padding */")
     builder.write("#pragma pop")
     builder.write("")
 
-    def write():
+    function_path = Path(include_path)
+    if not function_path.exists() or builder.OVERRIDE_FUNCTION:
         block_map = dict()
         for block in function.blocks:
             block_map[block.addr] = block
 
-        include_builder = Builder(include_path, builder.DRY_RUN, [])
+        include_builder = Builder(include_path, False)
         cppd = CPPDisassembler(include_builder, function, block_map, symbol_map, address_interval_tree)
 
         for block in function.blocks:
             cppd.execute(block.addr, block.data, block.size)
         include_builder.close()
+    else:
+        section.tu.function_skip_count += 1
 
-    write()
     return 
 
 def export_symbol_function_return(builder: Builder, section: SectionPart, function: ReturnFunction, declspec: str):
@@ -403,6 +429,7 @@ def export_symbol_function(builder: Builder, section: SectionPart, function: Fun
         # Metrowerks doesn't support 0 instructions asm functions
         return
 
+    section.tu.function_count += 1
     if function.name.demangled and not function.name.is_function:
         demangled = function.name.demangled.to_str()
         if demangled:
@@ -412,8 +439,8 @@ def export_symbol_function(builder: Builder, section: SectionPart, function: Fun
         builder.write("}")
         builder.write("")
 
-    declspec, _, _ = symbol_get_dsc(section, function)
-    if type(function) != Function and not hasattr(function, 'decompile_fail'):
+    declspec, _, _, _ = symbol_get_desc(section, function, False)
+    if type(function) != Function and not hasattr(function, 'decompile_fail') and not isinstance(function, SInitFunction):
         if function.alignment:
             builder.write("#pragma push")
             builder.write("#pragma function_align %i" % function.alignment)
@@ -439,19 +466,24 @@ def export_symbol_function(builder: Builder, section: SectionPart, function: Fun
         builder.write("extern \"C\" {")
 
 def export_symbol_vtable_data(builder: Builder, section: SectionPart, vtable: VTableData):
-    is_static = ""
-    is_const = "const "
-    declspec = "SECTION_DATA "
+    const = ""
+    if section.name == ".rodata":
+        const = " const"
+
     size = len(vtable.table) + vtable.padding // 4
-    builder.write("%s%s%s void* %s[%i] = {" % (declspec, is_static, is_const, vtable.name.label, size))
-    for i, symbol in enumerate(vtable.table):
-        if not symbol:
+    export_desc(builder, section, vtable, False)
+    builder.write(f"void*{const} %s[%i] = {{" % (vtable.name.label, size))
+    for i, vas in enumerate(vtable.table):
+        addr = vas[0]
+        symbol = vas[1]
+
+        if addr == 0 and not symbol:
             if i == 0:
                 builder.write("\tNULL, /* RTTI */")
             else:
                 builder.write("\tNULL,")
         else:
-            builder.write("\t(void*)%s," % symbol.name.reference)
+            builder.write("\t(void*)%s," % symbol.getCPPReferenceLabel(vtable, addr))
     if vtable.padding > 0:
         assert vtable.padding == len(vtable.padding_data)
         assert vtable.padding % 4 == 0
@@ -460,49 +492,79 @@ def export_symbol_vtable_data(builder: Builder, section: SectionPart, vtable: VT
             builder.write("\tNULL,")
     builder.write("};")
 
-def export_symbol_float32_data(builder: Builder, section: SectionPart, fp: Float32Data):
-    declspec, is_static, is_const = symbol_get_dsc(section, fp)
+def export_symbol_sra_data(builder: Builder, section: SectionPart, sra: SymbolReferenceArrayData):
+    const = ""
+    if section.name == ".rodata":
+        const = " const"
 
+    size = len(sra.array) + sra.padding // 4
+    export_desc(builder, section, sra, False)
+    if size == 1:
+        addr = sra.array[0][0]
+        symbol = sra.array[0][1]
+        builder.write(f"void*{const} %s = (void*)%s;" % (sra.name.label, symbol.getCPPReferenceLabel(sra, addr)))
+    else:
+        builder.write(f"void*{const} %s[%i] = {{" % (sra.name.label, size))
+        for i, vas in enumerate(sra.array):
+            addr = vas[0]
+            symbol = vas[1]
+
+            if addr == 0 and not symbol:
+                builder.write("\tNULL,")
+            elif symbol != None:
+                builder.write("\t(void*)%s," % symbol.getCPPReferenceLabel(sra, addr))
+            else:
+                builder.write("\t(void*)0x%08X," % addr)
+        if sra.padding > 0:
+            assert sra.padding == len(sra.padding_data)
+            assert sra.padding % 4 == 0
+            builder.write("\t/* padding */")
+            for i in range(sra.padding // 4):
+                builder.write("\tNULL,")
+        builder.write("};")
+
+def export_symbol_float32_data(builder: Builder, section: SectionPart, fp: Float32Data):
     if fp.comment:
         builder.write("// %s" % fp.comment)
-    builder.write("%s%s%sf32 %s = %ff;" % (declspec, is_static, is_const, fp.name.label, fp.value))
+
+    export_desc(builder, section, fp, False)
+    builder.write("f32 %s = %ff;" % (fp.name.label, fp.value))
 
 def export_symbol_fraction32_data(builder: Builder, section: SectionPart, fp: Fraction32Data):
-    declspec, is_static, is_const = symbol_get_dsc(section, fp)
-
     if fp.comment:
         builder.write("// %s" % fp.comment)
-    builder.write("%s%s%sf32 %s = %ff / %ff;" % (declspec, is_static, is_const, fp.name.label, fp.numerator, fp.denominator))
+
+    export_desc(builder, section, fp, False)
+    builder.write("f32 %s = %ff / %ff;" % (fp.name.label, fp.numerator, fp.denominator))
 
 def export_symbol_float64_data(builder: Builder, section: SectionPart, fp: Float64Data):
-    declspec, is_static, is_const = symbol_get_dsc(section, fp)
-
     if fp.comment:
         builder.write("// %s" % fp.comment)
-    builder.write("%s%s%sf64 %s = %f;" % (declspec, is_static, is_const, fp.name.label, fp.value))
+
+    export_desc(builder, section, fp, False)
+    builder.write("f64 %s = %f;" % (fp.name.label, fp.value))
 
 def export_symbol_fraction64_data(builder: Builder, section: SectionPart, fp: Fraction64Data):
-    declspec, is_static, is_const = symbol_get_dsc(section, fp)
-
     if fp.comment:
         builder.write("// %s" % fp.comment)
-    builder.write("%s%s%sf64 %s = %f / %f;" % (declspec, is_static, is_const, fp.name.label, fp.numerator, fp.denominator))
+
+    export_desc(builder, section, fp, False)
+    builder.write("f64 %s = %f / %f;" % (fp.name.label, fp.numerator, fp.denominator))
 
 def export_symbol_integer_data(builder: Builder, section: SectionPart, data: IntegerData):
-    declspec, is_static, is_const = symbol_get_dsc(section, data)
-
     if data.comment:
         builder.write("// %s" % data.comment)
-    builder.write(f"{declspec}{is_static}{is_const}{data.integer_type} {data.name.label} = {data.integer_value};")
+
+    export_desc(builder, section, data, False)
+    builder.write(f"{data.integer_type} {data.name.label} = {data.integer_value};")
 
 def export_symbol_init_data(builder: Builder, section: SectionPart, init_data: InitializedData):
-    declspec, is_static, is_const = symbol_get_dsc(section, init_data)
-
     count = len(init_data.data) + init_data.padding
     if count <= 0:
         return
 
-    builder.write("%s%s%su8 %s[%i] = {" % (declspec, is_static, is_const, init_data.name.label, count))
+    export_desc(builder, section, init_data, False)
+    builder.write(f"u8 %s[%i] = {{" % (init_data.name.label, count))
     for chunk in util.chunks(init_data.data, 16):
         hex_data = ", ".join(["0x%02X" % x for x in chunk])
         builder.write("\t%s," % hex_data)
@@ -515,14 +577,13 @@ def export_symbol_init_data(builder: Builder, section: SectionPart, init_data: I
     builder.write("};")
 
 def export_symbol_merged_init_data(builder: Builder, section: SectionPart, merged: MergedInitializedData):
-    declspec, is_static, is_const = symbol_get_dsc(section, merged)
-
     count = 0
     for part in merged.internal_data:
         count += len(part.data)
     count += len(merged.padding_data)
 
-    builder.write("%s%s%su8 %s[%i] = {" % (declspec, is_static, is_const, merged.name.label, count))
+    export_desc(builder, section, merged, False)
+    builder.write(f"u8 %s[%i] = {{" % (merged.name.label, count))
     for part in merged.internal_data:
         builder.write("\t/* %s */" % part.name.label)
         for chunk in util.chunks(part.data, 16):
@@ -538,40 +599,56 @@ def export_symbol_merged_init_data(builder: Builder, section: SectionPart, merge
     builder.write("};")
 
 def export_symbol_zero_data(builder: Builder, section: SectionPart, zero: ZeroInitializedData):
-    declspec, is_static, is_const = symbol_get_dsc(section, zero)
-
     count = zero.size + zero.padding
     if count <= 0:
         return
 
+    pad_str = ""
+    if zero.padding > 0:
+        pad_str = " + %i /* padding */" % zero.padding
+        
+    export_desc(builder, section, zero, False)
+    builder.write("u8 %s[%i%s];" % (zero.name.label, zero.size, pad_str))
+
+    """
     if zero.size <= 8:
         if zero.size > 0:
-            builder.write("%s%s%su8 %s[%i];" % (declspec, is_static, is_const, zero.name.label, zero.size))
+            export_desc(builder, section, zero, False)
+            builder.write("u8 %s[%i];" % (zero.name.label, zero.size))
         
         offset = (zero.size + 3) & ~3
         padding = zero.padding & ~3
         for x in range(padding // 4):
-            builder.write("%s%s%su8 %s[4];" % (declspec, is_static, is_const, "pad_%08X" % (zero.addr + offset)))
+            export_desc(builder, section, zero, False)
+            builder.write("u8 %s[4];" % ("pad_%08X" % (zero.addr + offset)))
             offset += 4
     else:
-        builder.write("%s%s%su8 %s[%i];" % (declspec, is_static, is_const, zero.name.label, zero.size + zero.padding))
+        export_desc(builder, section, zero, False)
+        builder.write("u8 %s[%i];" % (zero.name.label, zero.size + zero.padding))
+    """
 
 def export_symbol_merged_zero_data(builder: Builder, section: SectionPart, merged: MergedZeroInitializedData):
-    declspec, is_static, is_const = symbol_get_dsc(section, merged)
-
     count = 0
     for part in merged.internal_data:
         count += part.size
 
-    builder.write("%s%s%su8 %s[%i];" % (declspec, is_static, is_const, merged.name.label, count))
+    pad_str = ""
+    if merged.padding > 0:
+        pad_str = " + %i /* padding */" % merged.padding
+
+    export_desc(builder, section, merged, False)
+    builder.write(f"u8 %s[%i%s];" % (merged.name.label, count, pad_str))
     for part in merged.internal_data:
         builder.write("/* %08X %04X %s */" % (part.addr, part.size, part.name.label))
 
+    """
     offset = (merged.size + 3) & ~3
     padding = merged.padding & ~3
     for x in range(padding // 4):
-        builder.write("%s%s%su8 %s[4];" % (declspec, is_static, is_const, "pad_%08X" % (merged.addr + offset)))
+        export_desc(builder, section, merged, False)
+        builder.write(f"u8 %s[4];" % ("pad_%08X" % (merged.addr + offset)))
         offset += 4
+    """
 
 def string_to_cstr(data):
     return "".join(data)
@@ -606,26 +683,20 @@ def escape_char_hard(v):
 def escape_string(data):
     return [ escape_char(x) for x in data ]
 
-def export_symbol_string_data(builder: Builder, section: SectionPart, string: StringData):
-    declspec, is_static, is_const = symbol_get_dsc(section, string)
+def escape_char_hex(v):
+    if v == 0:
+        return "\\0"
+    return "\\x%02X" % v
 
-    # using declspec for string will cause the compiler to add a extern symbol.
-    declspec = ""
+def escape_full_string(data):
+    return [escape_char_hex(x) for x in data]
 
-    sjis = string.decoded_string.encode("shift_jisx0213")
-    if 0x5c in sjis:
-        builder.write("// MWCC ignores mapping of some japanese characters using the ")
-        builder.write("// byte 0x5C (ASCII '\\') because of a C++98 standard. This is")
-        builder.write("// why this string is hex-encoded.")
-        data = [escape_char_hard(x) for x in sjis]
-    else:
-        data = escape_string(string.decoded_string)
-
+def export_symbol_string_output(builder, label, data):
     if len(data) < 32:
-        builder.write("%s%s%schar* const %s = \"%s\";" % (declspec, is_static, is_const, string.name.label, string_to_cstr(data)))
+        builder.write("char* const %s = \"%s\";" % (label, string_to_cstr(data)))
     else:
-        builder.write("%s%s%schar* const %s = " % (declspec, is_static, is_const, string.name.label))
-        data_chunks = util.chunks(data, 32)
+        builder.write("char* const %s = " % label)
+        data_chunks = util.chunks(data, 16)
 
         lines = []
         for chunk in data_chunks:
@@ -635,18 +706,48 @@ def export_symbol_string_data(builder: Builder, section: SectionPart, string: St
         for line in lines:
             builder.write(line)
 
+
+def export_symbol_string_data(builder: Builder, section: SectionPart, string: StringData, dead_strip: bool):
+    sjis = string.decoded_string.encode("shift_jisx0213")
+    if 0x5c in sjis:
+        builder.write("// MWCC ignores mapping of some japanese characters using the ")
+        builder.write("// byte 0x5C (ASCII '\\'). This is why this string is hex-encoded.")
+        data = escape_full_string(sjis)
+    else:
+        data = escape_string(string.decoded_string)
+
+    export_desc(builder, section, string, False, dead=dead_strip)
+    export_symbol_string_output(builder, string.name.label, data)
+    if string.padding > 0:
+        assert len(string.padding_data) == string.padding
+        assert string.padding_data[-1] == 0
+        data = escape_full_string(string.padding_data[:-1])
+        builder.write("/* padding */")
+        export_desc(builder, section, string, False, dead=dead_strip)
+        export_symbol_string_output(builder, "pad_%08X" % (string.addr + string.size), data)
+
 def export_symbol_string_base_data(builder: Builder, section: SectionPart, string_base: StringBaseData):
-
+    builder.write("#pragma push")
+    builder.write("#pragma force_active on")
+    builder.write("#pragma section \".dead\"")
     for string in string_base.strings:
-        export_symbol_string_data(builder, section, string)
+        export_symbol_string_data(builder, section, string, True)
+
+    if string_base.padding > 0:
+        assert len(string_base.padding_data) == string_base.padding
+        assert string_base.padding_data[-1] == 0
+        data = escape_full_string(string_base.padding_data[:-1])
+        builder.write("/* @stringBase0 padding */")
+        export_desc(builder, section, string_base.strings[0], False, dead=True)
+        export_symbol_string_output(builder, "pad_%08X" % (string_base.addr + string_base.size), data)
+    builder.write("#pragma pop")
     
-
-
 def export_symbol(builder: Builder, section: SectionPart, symbol: Symbol, symbol_map, address_interval_tree):
-    if builder.DRY_RUN:
-        return
-
     export_symbol_header(builder, section, symbol)
+
+    if symbol.name.label == "_rom_copy_info" or symbol.name.label == "_bss_init_info":
+        builder.write("/* generated by the linker */")
+        return
 
     if isinstance(symbol, Function):
         export_symbol_function(builder, section, symbol, symbol_map, address_interval_tree)
@@ -654,6 +755,8 @@ def export_symbol(builder: Builder, section: SectionPart, symbol: Symbol, symbol
         export_symbol_merged_init_data(builder, section, symbol)
     elif isinstance(symbol, VTableData):
         export_symbol_vtable_data(builder, section, symbol)
+    elif isinstance(symbol, SymbolReferenceArrayData):
+        export_symbol_sra_data(builder, section, symbol)
     elif isinstance(symbol, Fraction32Data):
         export_symbol_fraction32_data(builder, section, symbol)
     elif isinstance(symbol, Float32Data):
@@ -698,6 +801,42 @@ def export_section_preprocess(section: SectionPart, symbol_map, my_labels, label
             else:
                 symbol.load_symbol = symbol_map[addr]
 
+def export_section_ctors(builder: Builder, section: SectionPart, symbol_map, address_interval_tree):
+    builder.write("extern \"C\" {")
+    builder.write("#pragma section \".ctors$10\"")
+
+    for symbol in section.symbols:
+        if symbol.name.label == "__init_cpp_exceptions_reference":
+            export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+            break
+
+    for symbol in section.symbols:
+        if symbol.name.label == "_ctors":
+            export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+            break
+
+    builder.write("}")
+    builder.write("")
+
+def export_section_dtors(builder: Builder, section: SectionPart, symbol_map, address_interval_tree):
+    builder.write("extern \"C\" {")
+    builder.write("#pragma section \".dtors$10\"")
+
+    for symbol in section.symbols:
+        if symbol.name.label == "__destroy_global_chain_reference":
+            export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+            break
+
+    builder.write("")
+    builder.write("#pragma section \".dtors$15\"")
+
+    for symbol in section.symbols:
+        if symbol.name.label == "__fini_cpp_exceptions_reference":
+            export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+            break
+
+    builder.write("}")
+    builder.write("")
 
 def export_section(builder: Builder, section: SectionPart, symbol_map, address_interval_tree):
     builder.write("")
@@ -711,18 +850,36 @@ def export_section(builder: Builder, section: SectionPart, symbol_map, address_i
     # stores lower-cased filenames, this can later be used to detected the problem.
     section.function_files = set()
 
-    builder.write("extern \"C\" {")
-    for symbol in section.symbols:
-        export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
-    builder.write("}")
-    builder.write("")
+    if section.name == ".ctors":
+        export_section_ctors(builder, section, symbol_map, address_interval_tree)
+    elif section.name == ".dtors":
+        export_section_dtors(builder, section, symbol_map, address_interval_tree)
+    else:
+        builder.write("extern \"C\" {")
+        if section.name == ".rodata":
+            # @stringBase0 will always be last (because it's generated by the compiler). But we place it
+            # in the beginning of the .rodata section for referencing to work. 
+            for symbol in section.symbols:
+                if isinstance(symbol, StringBaseData):
+                    export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
 
-def export_translation_unit(BASEROM, DRY_RUN, tu: TranslationUnit, symbol_map, address_interval_tree):
+            for symbol in section.symbols:
+                if not isinstance(symbol, StringBaseData):
+                    export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+        else:
+            for symbol in section.symbols:
+                export_symbol(builder, section, symbol, symbol_map, address_interval_tree)
+        builder.write("}")
+        builder.write("")
+
+def export_translation_unit(OVERRIDE_FUNCTION, tu: TranslationUnit, symbol_map, address_interval_tree):
     filepath = tu.getFilePath("cpp/", ".cpp")
     util.mkdir(filepath)
-    #print("\t%s" % filepath)
 
-    builder = Builder(filepath, DRY_RUN, BASEROM)
+    tu.function_skip_count = 0
+    tu.function_count = 0
+
+    builder = Builder(filepath, OVERRIDE_FUNCTION)
     builder.write("// ")
     builder.write("// Generated By: dol2asm")
     builder.write("// ")
@@ -754,8 +911,10 @@ def export_translation_unit(BASEROM, DRY_RUN, tu: TranslationUnit, symbol_map, a
     for addr in my_labels:
         if addr in symbol_map:
             symbol = symbol_map[addr] 
-            for type in symbol.name.pointer_types:
-                forward_types.add(type.name)
+            for tp in symbol.name.pointer_types:
+                forward_types.add(tp.name)
+
+    labels.update(my_labels)
 
     already_added = set()
     sorted_labels = list(labels)
@@ -769,53 +928,62 @@ def export_translation_unit(BASEROM, DRY_RUN, tu: TranslationUnit, symbol_map, a
             if symbol.addr in already_added:
                 continue
 
-            for type in symbol.name.pointer_types:
-                forward_types.add(type.name)
+            for tp in symbol.name.pointer_types:
+                forward_types.add(tp.name)
 
             already_added.add(symbol.addr)
+
+            const = ""
+            if symbol.section.name == ".rodata":
+                const = " const"
+
+            c_extern.append("/* %-20s */" % type(symbol).__name__)
+
+            a, b, c, d = symbol_get_desc(symbol.section, symbol, True)
             if isinstance(symbol, ReturnIntegerFunction) and not hasattr(symbol, 'decompile_fail'):
-                c_extern.append("extern int %s();" % symbol.name.label)
+                c_extern.append(f"{a}{b}{c}{d} int %s();" % symbol.name.label)
             elif isinstance(symbol, FirstParamFunction) and not hasattr(symbol, 'decompile_fail'):
-                type = symbol.load_type
+                tp = symbol.load_type
                 if symbol.kind != "load":
-                    type = f"{type}*"
-                c_extern.append("extern %s %s(u8*);" % (type, symbol.name.label))
+                    tp = f"{tp}*"
+                c_extern.append(f"{a}{b}{c}{d}%s %s(u8*);" % (tp, symbol.name.label))
             elif isinstance(symbol, GlobalFunction) and not hasattr(symbol, 'decompile_fail'):
-                type = symbol.load_type
+                tp = symbol.load_type
                 if symbol.kind != "load":
-                    type = f"{type}*"
-                c_extern.append("extern %s %s();" % (type, symbol.name.label))
+                    tp = f"{tp}*"
+                c_extern.append(f"{a}{b}{c}{d}%s %s();" % (tp, symbol.name.label))
             elif isinstance(symbol, Function):
-                if symbol.name.is_function and not symbol.name.is_static:
-                    cpp_extern.append("extern %s %s; /* %s */" % (symbol.return_type if symbol.return_type else "void", symbol.name.demangled.to_str(), symbol.name.label))
+                if symbol.name.is_function:
+                    cpp_extern.append(f"{a}{b}{c}{d}%s %s; /* %s */" % (symbol.return_type if symbol.return_type else "void", symbol.name.demangled.to_str(), symbol.name.label))
+
                 # NOTE: even if we have the demanlged symbol name available it's important to add a mangled symbol name for the asm to find it. 
-                c_extern.append("extern void %s();" % symbol.name.label)
+                c_extern.append(f"{a}{b}{c}{d}void %s();" % symbol.name.label)
             elif isinstance(symbol, VTableData):
-                declspec, _, _ = symbol_get_dsc(symbol.section, symbol)
                 count = len(symbol.table) + symbol.padding // 4
-                c_extern.append("%sextern const void* %s[%i];" % (declspec, symbol.name.label, count))
-            elif isinstance(symbol, Float32Data) or isinstance(symbol, Fraction32Data):
-                declspec, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                c_extern.append("%sextern %s%sf32 %s;" % (declspec, is_static, is_const, symbol.name.label))
-            elif isinstance(symbol, Float64Data) or isinstance(symbol, Fraction64Data):
-                declspec, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                c_extern.append("%sextern %s%sf64 %s;" % (declspec, is_static, is_const, symbol.name.label))
-            elif isinstance(symbol, IntegerData):
-                declspec, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                c_extern.append("%sextern %s%s%s %s;" % (declspec, is_static, is_const, symbol.integer_type, symbol.name.label))
-            elif isinstance(symbol, InitializedData) or isinstance(symbol, MergedInitializedData):
-                declspec, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                count = symbol.size + symbol.padding
-                c_extern.append("%sextern %s%su8 %s[%i];" % (declspec, is_static, is_const, symbol.name.label, count))
-            elif isinstance(symbol, ZeroInitializedData) or isinstance(symbol, MergedZeroInitializedData):
-                declspec, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                if symbol.size <= 8:
-                    c_extern.append("%sextern %s%su8 %s[%i];" % (declspec, is_static, is_const, symbol.name.label, symbol.size))
+                c_extern.append(f"{a}{b}{c}{d}void*{const} %s[%i];" % (symbol.name.label, count))
+            elif isinstance(symbol, SymbolReferenceArrayData):
+                count = len(symbol.array) + symbol.padding // 4
+                if count == 1:
+                    c_extern.append(f"{a}{b}{c}{d}void*{const} %s;" % symbol.name.label)
                 else:
-                    c_extern.append("%sextern %s%su8 %s[%i];" % (declspec, is_static, is_const, symbol.name.label, symbol.size + symbol.padding))
+                    c_extern.append(f"{a}{b}{c}{d}void*{const} %s[%i];" % (symbol.name.label, count))
+            elif isinstance(symbol, Float32Data) or isinstance(symbol, Fraction32Data):
+                c_extern.append(f"{a}{b}{c}{d}f32 %s;" % symbol.name.label)
+            elif isinstance(symbol, Float64Data) or isinstance(symbol, Fraction64Data):
+                c_extern.append(f"{a}{b}{c}{d}f64 %s;" % symbol.name.label)
+            elif isinstance(symbol, IntegerData):
+                c_extern.append(f"{a}{b}{c}{d}%s %s;" % (symbol.integer_type, symbol.name.label))
+            elif isinstance(symbol, InitializedData) or isinstance(symbol, MergedInitializedData):
+                count = symbol.size + symbol.padding
+                c_extern.append(f"{a}{b}{c}{d}u8 %s[%i];" % (symbol.name.label, count))
+            elif isinstance(symbol, ZeroInitializedData) or isinstance(symbol, MergedZeroInitializedData):
+                pad_str = ""
+                if symbol.padding > 0:
+                    pad_str = " + %i /* padding */" % symbol.padding
+
+                c_extern.append(f"{a}{b}{c}{d}u8 %s[%i%s];" % (symbol.name.label, symbol.size, pad_str))
             else:
-                _, is_static, is_const = symbol_get_dsc(symbol.section, symbol)
-                c_extern.append("extern %s%sint %s;" % (is_static, is_const, symbol.name.label))
+                assert False
 
     if len(forward_types) > 0:
         for s in forward_types:
@@ -835,6 +1003,8 @@ def export_translation_unit(BASEROM, DRY_RUN, tu: TranslationUnit, symbol_map, a
         builder.write("")
 
     order = {
+        ".ctors": -2,
+        ".dtors": -1,
         ".rodata": 0,
         ".data": 1,
         ".sdata": 2,
@@ -851,10 +1021,35 @@ def export_translation_unit(BASEROM, DRY_RUN, tu: TranslationUnit, symbol_map, a
     for section in sections:
         export_section(builder, section, symbol_map, address_interval_tree)
 
+    """
+    sinit_functions = []
+    for addr in my_labels:
+         if addr in symbol_map:
+            symbol = symbol_map[addr]
+            if isinstance(symbol, SInitFunction):
+                sinit_functions.append(symbol)
+
+    if sinit_functions:
+        assert len(sinit_functions) == 1
+        builder.write("// ")
+        builder.write("// Static Initialization Function:")
+        builder.write("// ")
+        builder.write("")
+        builder.write("extern \"C\" {")
+
+        sinit = sinit_functions[0]
+        builder.write("__declspec(section \".ctors\")")
+        builder.write("extern const void* const %s_ctors = (void*)%s;" % (sinit.name.label, sinit.name.label))
+        builder.write("}")
+        builder.write("")
+    """
+
     builder.close()
 
+    print("\t%s: function generated %i/%i" % (filepath, tu.function_count-tu.function_skip_count, tu.function_count))
 
-def export_library(BASEROM, DRY_RUN, library: Library, symbol_map, address_interval_tree):
+
+def export_library(OVERRIDE_FUNCTION, library: Library, symbol_map, address_interval_tree):
     path = library.getPath("cpp/")
 
     if library.name:
@@ -864,7 +1059,7 @@ def export_library(BASEROM, DRY_RUN, library: Library, symbol_map, address_inter
 
         prefix = library.name.replace(".", "_").upper()
 
-        builder = Builder(lib_makefile, DRY_RUN, BASEROM)
+        builder = Builder(lib_makefile, OVERRIDE_FUNCTION)
         builder.write("#")
         builder.write("# Generated By: dol2asm")
         builder.write("#")
@@ -894,8 +1089,9 @@ def export_library(BASEROM, DRY_RUN, library: Library, symbol_map, address_inter
 
         target = library.fileName()
         target_path = f"$(BUILD_DIR)/{target}"
-        builder.write(f"{target_path}: dirs $({prefix}_O_FILES)")
+        builder.write(f"{target_path}: $({prefix}_O_FILES)")
         builder.write(f"\t$(LD) -xm l $({prefix}_LDFLAGS) -o {target_path} $({prefix}_O_FILES)")
+        builder.write(f"\t$(STRIP) -d -R .dead -R .comment {target_path}")
         builder.write("")
 
         o_path = library.getPath("$(BUILD_DIR)/libs/")
@@ -908,23 +1104,23 @@ def export_library(BASEROM, DRY_RUN, library: Library, symbol_map, address_inter
         builder.close()
 
     for tu in library.translation_units:
-        export_translation_unit(BASEROM, DRY_RUN, tu, symbol_map, address_interval_tree)
+        export_translation_unit(OVERRIDE_FUNCTION, tu, symbol_map, address_interval_tree)
     print("[C++] Exported", path)
 
-async def async_export_all(BASEROM, DRY_RUN, libraries, symbol_map, address_interval_tree):
+async def async_export_all(OVERRIDE_FUNCTION, libraries, symbol_map, address_interval_tree):
     tasks = []
     for library in libraries:
         for tu in library.translation_units:
-            tasks.append(asyncio.to_thread(export_translation_unit, BASEROM, DRY_RUN, tu, symbol_map))
+            tasks.append(asyncio.to_thread(export_translation_unit, OVERRIDE_FUNCTION, tu, symbol_map))
 
     await asyncio.gather(*tasks)
 
-def export_all(BASEROM, DRY_RUN, libraries, symbol_map, address_interval_tree):
+def export_all(OVERRIDE_FUNCTION, libraries, symbol_map, address_interval_tree):
     if False:
-        asyncio.run(async_export_all(BASEROM, DRY_RUN, libraries, symbol_map, address_interval_tree))
+        asyncio.run(async_export_all(OVERRIDE_FUNCTION, libraries, symbol_map, address_interval_tree))
     else:
         for library in libraries:
-            export_library(BASEROM, DRY_RUN, library, symbol_map, address_interval_tree)
+            export_library(OVERRIDE_FUNCTION, library, symbol_map, address_interval_tree)
 
         for library in libraries:
             if library.name:

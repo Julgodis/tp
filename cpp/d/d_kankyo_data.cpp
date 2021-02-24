@@ -12,19 +12,71 @@
 // Additional Symbols:
 // 
 
+extern void dKyd_dmpalet_getp(void); /* dKyd_dmpalet_getp__Fv */
+extern void dKyd_dmpselect_getp(void); /* dKyd_dmpselect_getp__Fv */
+extern void dKyd_dmenvr_getp(void); /* dKyd_dmenvr_getp__Fv */
+extern void dKyd_dmvrbox_getp(void); /* dKyd_dmvrbox_getp__Fv */
+extern void dKyd_schejule_getp(void); /* dKyd_schejule_getp__Fv */
+extern void dKyd_schejule_boss_getp(void); /* dKyd_schejule_boss_getp__Fv */
+extern void dKyd_xfog_table_set(u8); /* dKyd_xfog_table_set__FUc */
+extern void dKyd_maple_col_getp(void); /* dKyd_maple_col_getp__Fv */
+extern void dKyd_darkworld_tbl_getp(void); /* dKyd_darkworld_tbl_getp__Fv */
+extern void dKyd_light_size_tbl_getp(void); /* dKyd_light_size_tbl_getp__Fv */
+extern void dKyd_light_tw_size_tbl_getp(void); /* dKyd_light_tw_size_tbl_getp__Fv */
+extern void dKyd_BloomInf_tbl_getp(int); /* dKyd_BloomInf_tbl_getp__Fi */
+
 extern "C" {
+/* Function             */
+extern void dKyd_dmpalet_getp__Fv();
+/* Function             */
+extern void dKyd_dmpselect_getp__Fv();
+/* Function             */
+extern void dKyd_dmenvr_getp__Fv();
+/* Function             */
+extern void dKyd_dmvrbox_getp__Fv();
+/* Function             */
+extern void dKyd_schejule_getp__Fv();
+/* Function             */
+extern void dKyd_schejule_boss_getp__Fv();
+/* Function             */
+extern void dKyd_xfog_table_set__FUc();
+/* Function             */
+extern void dKyd_maple_col_getp__Fv();
+/* Function             */
+extern void dKyd_darkworld_tbl_getp__Fv();
+/* Function             */
+extern void dKyd_light_size_tbl_getp__Fv();
+/* Function             */
+extern void dKyd_light_tw_size_tbl_getp__Fv();
+/* Function             */
+extern void dKyd_BloomInf_tbl_getp__Fi();
+/* StringBaseData       */
+SECTION_RODATA extern const u8 d_d_kankyo_data__stringBase0[424];
+/* InitializedData      */
 SECTION_DATA extern u8 l_kydata_BloomInf_tbl[768];
+/* InitializedData      */
 SECTION_DATA extern u8 l_darkworld_tbl[272];
+/* InitializedData      */
 SECTION_DATA extern u8 l_light_size_tbl[288];
-SECTION_DATA extern u8 l_light_size_tbl_tw[72];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_light_size_tbl_tw[18];
+/* InitializedData      */
 SECTION_DATA extern u8 l_maple_col[36];
+/* InitializedData      */
 SECTION_DATA extern u8 l_time_attribute[132];
+/* InitializedData      */
 SECTION_DATA extern u8 l_time_attribute_boss[132];
+/* InitializedData      */
 SECTION_DATA extern u8 l_field_data[832];
+/* InitializedData      */
 SECTION_DATA extern u8 l_pselect_default[24];
+/* InitializedData      */
 SECTION_DATA extern u8 l_envr_default[132];
+/* InitializedData      */
 SECTION_DATA extern u8 l_vr_box_data[380];
+/* InitializedData      */
 SECTION_DATA extern u8 S_xfog_table_data[44];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
 }
 
@@ -34,61 +86,67 @@ SECTION_BSS extern u8 g_env_light[4880];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037A1C0 01A4 .rodata    @stringBase0                                                 */
-const char* const stringBase_8037A1C0 = "R_SP30";
-const char* const stringBase_8037A1C7 = "T_SP05";
-const char* const stringBase_8037A1CE = "T_SP05A";
-const char* const stringBase_8037A1D6 = "T_WARP2";
-const char* const stringBase_8037A1DE = "T_IMAI";
-const char* const stringBase_8037A1E5 = "T_IMAI0";
-const char* const stringBase_8037A1ED = "T_TOMI";
-const char* const stringBase_8037A1F4 = "T_SASA1";
-const char* const stringBase_8037A1FC = "F_SP105";
-const char* const stringBase_8037A204 = "F_SP05";
-const char* const stringBase_8037A20B = "R_SP107";
-const char* const stringBase_8037A213 = "F_SP108";
-const char* const stringBase_8037A21B = "R_SP108";
-const char* const stringBase_8037A223 = "TEST11";
-const char* const stringBase_8037A22A = "F_SP109";
-const char* const stringBase_8037A232 = "F_SP110";
-const char* const stringBase_8037A23A = "R_SP109";
-const char* const stringBase_8037A242 = "F_SP111";
-const char* const stringBase_8037A24A = "F_SP112";
-const char* const stringBase_8037A252 = "F_SP113";
-const char* const stringBase_8037A25A = "F_SP115";
-const char* const stringBase_8037A262 = "F_SP116";
-const char* const stringBase_8037A26A = "F_SP122";
-const char* const stringBase_8037A272 = "F_SP121";
-const char* const stringBase_8037A27A = "F_SP126";
-const char* const stringBase_8037A282 = "R_SP209";
-const char* const stringBase_8037A28A = "R_SP116";
-const char* const stringBase_8037A292 = "D_MN08";
-const char* const stringBase_8037A299 = "D_MN08B";
-const char* const stringBase_8037A2A1 = "D_MN08C";
-const char* const stringBase_8037A2A9 = "D_MN08A";
-const char* const stringBase_8037A2B1 = "D_SB10";
-const char* const stringBase_8037A2B8 = "R_SP01";
-const char* const stringBase_8037A2BF = "R_SP128";
-const char* const stringBase_8037A2C7 = "F_SP114";
-const char* const stringBase_8037A2CF = "F_SP102";
-const char* const stringBase_8037A2D7 = "F_SP123";
-const char* const stringBase_8037A2DF = "R_SP160";
-const char* const stringBase_8037A2E7 = "R_SP161";
-const char* const stringBase_8037A2EF = "F_SP118";
-const char* const stringBase_8037A2F7 = "F_SP124";
-const char* const stringBase_8037A2FF = "F_SP125";
-const char* const stringBase_8037A307 = "R_SP127";
-const char* const stringBase_8037A30F = "D_MN01A";
-const char* const stringBase_8037A317 = "D_MN10A";
-const char* const stringBase_8037A31F = "D_MN06A";
-const char* const stringBase_8037A327 = "D_MN07A";
-const char* const stringBase_8037A32F = "D_MN08D";
-const char* const stringBase_8037A337 = "D_MN09";
-const char* const stringBase_8037A33E = "D_MN09B";
-const char* const stringBase_8037A346 = "D_MN09C";
-const char* const stringBase_8037A34E = "R_SP300";
-const char* const stringBase_8037A356 = "D_SB02";
-const char* const stringBase_8037A35D = "D_SB03";
+/* 8037A1C0-8037A368 01A4 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037A1C0 = "R_SP30";
+SECTION_DEAD const char* const stringBase_8037A1C7 = "T_SP05";
+SECTION_DEAD const char* const stringBase_8037A1CE = "T_SP05A";
+SECTION_DEAD const char* const stringBase_8037A1D6 = "T_WARP2";
+SECTION_DEAD const char* const stringBase_8037A1DE = "T_IMAI";
+SECTION_DEAD const char* const stringBase_8037A1E5 = "T_IMAI0";
+SECTION_DEAD const char* const stringBase_8037A1ED = "T_TOMI";
+SECTION_DEAD const char* const stringBase_8037A1F4 = "T_SASA1";
+SECTION_DEAD const char* const stringBase_8037A1FC = "F_SP105";
+SECTION_DEAD const char* const stringBase_8037A204 = "F_SP05";
+SECTION_DEAD const char* const stringBase_8037A20B = "R_SP107";
+SECTION_DEAD const char* const stringBase_8037A213 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8037A21B = "R_SP108";
+SECTION_DEAD const char* const stringBase_8037A223 = "TEST11";
+SECTION_DEAD const char* const stringBase_8037A22A = "F_SP109";
+SECTION_DEAD const char* const stringBase_8037A232 = "F_SP110";
+SECTION_DEAD const char* const stringBase_8037A23A = "R_SP109";
+SECTION_DEAD const char* const stringBase_8037A242 = "F_SP111";
+SECTION_DEAD const char* const stringBase_8037A24A = "F_SP112";
+SECTION_DEAD const char* const stringBase_8037A252 = "F_SP113";
+SECTION_DEAD const char* const stringBase_8037A25A = "F_SP115";
+SECTION_DEAD const char* const stringBase_8037A262 = "F_SP116";
+SECTION_DEAD const char* const stringBase_8037A26A = "F_SP122";
+SECTION_DEAD const char* const stringBase_8037A272 = "F_SP121";
+SECTION_DEAD const char* const stringBase_8037A27A = "F_SP126";
+SECTION_DEAD const char* const stringBase_8037A282 = "R_SP209";
+SECTION_DEAD const char* const stringBase_8037A28A = "R_SP116";
+SECTION_DEAD const char* const stringBase_8037A292 = "D_MN08";
+SECTION_DEAD const char* const stringBase_8037A299 = "D_MN08B";
+SECTION_DEAD const char* const stringBase_8037A2A1 = "D_MN08C";
+SECTION_DEAD const char* const stringBase_8037A2A9 = "D_MN08A";
+SECTION_DEAD const char* const stringBase_8037A2B1 = "D_SB10";
+SECTION_DEAD const char* const stringBase_8037A2B8 = "R_SP01";
+SECTION_DEAD const char* const stringBase_8037A2BF = "R_SP128";
+SECTION_DEAD const char* const stringBase_8037A2C7 = "F_SP114";
+SECTION_DEAD const char* const stringBase_8037A2CF = "F_SP102";
+SECTION_DEAD const char* const stringBase_8037A2D7 = "F_SP123";
+SECTION_DEAD const char* const stringBase_8037A2DF = "R_SP160";
+SECTION_DEAD const char* const stringBase_8037A2E7 = "R_SP161";
+SECTION_DEAD const char* const stringBase_8037A2EF = "F_SP118";
+SECTION_DEAD const char* const stringBase_8037A2F7 = "F_SP124";
+SECTION_DEAD const char* const stringBase_8037A2FF = "F_SP125";
+SECTION_DEAD const char* const stringBase_8037A307 = "R_SP127";
+SECTION_DEAD const char* const stringBase_8037A30F = "D_MN01A";
+SECTION_DEAD const char* const stringBase_8037A317 = "D_MN10A";
+SECTION_DEAD const char* const stringBase_8037A31F = "D_MN06A";
+SECTION_DEAD const char* const stringBase_8037A327 = "D_MN07A";
+SECTION_DEAD const char* const stringBase_8037A32F = "D_MN08D";
+SECTION_DEAD const char* const stringBase_8037A337 = "D_MN09";
+SECTION_DEAD const char* const stringBase_8037A33E = "D_MN09B";
+SECTION_DEAD const char* const stringBase_8037A346 = "D_MN09C";
+SECTION_DEAD const char* const stringBase_8037A34E = "R_SP300";
+SECTION_DEAD const char* const stringBase_8037A356 = "D_SB02";
+SECTION_DEAD const char* const stringBase_8037A35D = "D_SB03";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A364 = "\0\0\0";
+#pragma pop
 }
 
 
@@ -97,7 +155,7 @@ const char* const stringBase_8037A35D = "D_SB03";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A8E98 0300 .data      l_kydata_BloomInf_tbl                                        */
+/* 803A8E98-803A9198 0300 .data      l_kydata_BloomInf_tbl                                        InitializedData */
 SECTION_DATA u8 l_kydata_BloomInf_tbl[768] = {
 	0x01, 0xFF, 0x40, 0x80, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x28, 0x46, 0x87,
 	0xCF, 0xB1, 0x38, 0xD2, 0xFF, 0xFF, 0xFF, 0x60, 0x00, 0x2D, 0x46, 0x73, 0xCF, 0xB1, 0x38, 0xD2,
@@ -148,7 +206,7 @@ SECTION_DATA u8 l_kydata_BloomInf_tbl[768] = {
 	0xFF, 0xFF, 0xFF, 0xF3, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A9198 0110 .data      l_darkworld_tbl                                              */
+/* 803A9198-803A92A8 0110 .data      l_darkworld_tbl                                              InitializedData */
 SECTION_DATA u8 l_darkworld_tbl[272] = {
 	0x80, 0x37, 0xA1, 0xC0, 0x06, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA1, 0xC7, 0x05, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA1, 0xCE, 0x05, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA1, 0xD6, 0x05, 0x00, 0x00, 0x00,
@@ -168,7 +226,7 @@ SECTION_DATA u8 l_darkworld_tbl[272] = {
 	0x80, 0x37, 0xA2, 0x99, 0x06, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xA1, 0x06, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA2, 0xA9, 0x06, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xB1, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A92A8 0120 .data      l_light_size_tbl                                             */
+/* 803A92A8-803A93C8 0120 .data      l_light_size_tbl                                             InitializedData */
 SECTION_DATA u8 l_light_size_tbl[288] = {
 	0x80, 0x37, 0xA2, 0xB8, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x1B, 0x00, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
@@ -189,21 +247,34 @@ SECTION_DATA u8 l_light_size_tbl[288] = {
 	0x80, 0x37, 0xA3, 0x4E, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA3, 0x56, 0x00, 0x00, 0x00, 0x00,
 	0x80, 0x37, 0xA3, 0x5D, 0x00, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xB1, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A93C8 0048 .data      l_light_size_tbl_tw                                          */
-SECTION_DATA u8 l_light_size_tbl_tw[72] = {
-	0x80, 0x37, 0xA2, 0x2A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x32, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x82, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x52, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x7A, 0x02, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0x5A, 0x02, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x72, 0x03, 0x00, 0x00, 0x00, 0x80, 0x37, 0xA2, 0xCF, 0x03, 0x00, 0x00, 0x00,
-	0x80, 0x37, 0xA2, 0x6A, 0x03, 0x00, 0x00, 0x00,
+/* 803A93C8-803A9410 0048 .data      l_light_size_tbl_tw                                          SymbolReferenceArrayData */
+SECTION_DATA void* l_light_size_tbl_tw[18] = {
+	(void*)((char*)d_d_kankyo_data__stringBase0+106) /* stringBase_8037A22A */,
+	(void*)0x02000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+114) /* stringBase_8037A232 */,
+	(void*)0x02000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+194) /* stringBase_8037A282 */,
+	(void*)0x02000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+146) /* stringBase_8037A252 */,
+	NULL,
+	(void*)((char*)d_d_kankyo_data__stringBase0+186) /* stringBase_8037A27A */,
+	(void*)0x02000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+154) /* stringBase_8037A25A */,
+	(void*)0x02000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+178) /* stringBase_8037A272 */,
+	(void*)0x03000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+271) /* stringBase_8037A2CF */,
+	(void*)0x03000000,
+	(void*)((char*)d_d_kankyo_data__stringBase0+170) /* stringBase_8037A26A */,
+	(void*)0x03000000,
 };
-/* 803A9410 0024 .data      l_maple_col                                                  */
+/* 803A9410-803A9434 0024 .data      l_maple_col                                                  InitializedData */
 SECTION_DATA u8 l_maple_col[36] = {
 	0x56, 0x4B, 0x39, 0x37, 0x28, 0x1E, 0x6E, 0x32, 0x0F, 0x64, 0x64, 0x80, 0x52, 0x41, 0x66, 0x19,
 	0x0F, 0x00, 0x46, 0x00, 0x0F, 0x64, 0x64, 0x80, 0x65, 0x5E, 0x69, 0x0E, 0x23, 0x0B, 0x28, 0x14,
 	0x05, 0x5A, 0x5A, 0x6E,
 };
-/* 803A9434 0084 .data      l_time_attribute                                             */
+/* 803A9434-803A94B8 0084 .data      l_time_attribute                                             InitializedData */
 SECTION_DATA u8 l_time_attribute[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00, 0x05, 0x05, 0x00, 0x00, 0x42, 0x96, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x05, 0x00, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x42, 0xD2, 0x00, 0x00,
@@ -215,7 +286,7 @@ SECTION_DATA u8 l_time_attribute[132] = {
 	0x43, 0x96, 0x00, 0x00, 0x04, 0x05, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00, 0x43, 0xB4, 0x00, 0x00,
 	0x05, 0x05, 0x00, 0x00,
 };
-/* 803A94B8 0084 .data      l_time_attribute_boss                                        */
+/* 803A94B8-803A953C 0084 .data      l_time_attribute_boss                                        InitializedData */
 SECTION_DATA u8 l_time_attribute_boss[132] = {
 	0x00, 0x00, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x42, 0x34, 0x00, 0x00,
 	0x42, 0xB4, 0x00, 0x00, 0x01, 0x02, 0x00, 0x00, 0x42, 0xB4, 0x00, 0x00, 0x43, 0x34, 0x00, 0x00,
@@ -227,7 +298,7 @@ SECTION_DATA u8 l_time_attribute_boss[132] = {
 	0x43, 0xB4, 0x00, 0x00, 0x05, 0x05, 0x00, 0x00, 0x43, 0xB4, 0x00, 0x00, 0x43, 0xB4, 0x00, 0x00,
 	0x05, 0x05, 0x00, 0x00,
 };
-/* 803A953C 0340 .data      l_field_data                                                 */
+/* 803A953C-803A987C 0340 .data      l_field_data                                                 InitializedData */
 SECTION_DATA u8 l_field_data[832] = {
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
@@ -282,12 +353,12 @@ SECTION_DATA u8 l_field_data[832] = {
 	0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40, 0x40,
 	0xC5, 0x9C, 0x40, 0x00, 0x46, 0xEA, 0x60, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A987C 0018 .data      l_pselect_default                                            */
+/* 803A987C-803A9894 0018 .data      l_pselect_default                                            InitializedData */
 SECTION_DATA u8 l_pselect_default[24] = {
 	0x00, 0x00, 0x01, 0x02, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x04, 0x05, 0x06,
 	0x06, 0x07, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A9894 0082 .data      l_envr_default                                               */
+/* 803A9894-803A9918 0082 .data      l_envr_default                                               InitializedData */
 SECTION_DATA u8 l_envr_default[132] = {
 	0x00, 0x01, 0x02, 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -301,7 +372,7 @@ SECTION_DATA u8 l_envr_default[132] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A9918 017A .data      l_vr_box_data                                                */
+/* 803A9918-803A9A94 017A .data      l_vr_box_data                                                InitializedData */
 SECTION_DATA u8 l_vr_box_data[380] = {
 	0x2F, 0x1A, 0x07, 0x44, 0x1E, 0x10, 0xF5, 0xA5, 0x6C, 0x9A, 0x5C, 0x3B, 0xFF, 0x44, 0x1E, 0x10,
 	0xA3, 0xFF, 0x5B, 0x49, 0x72, 0x39, 0x5B, 0xA7, 0xFF, 0xF7, 0xF7, 0x83, 0x7E, 0x7D, 0x1D, 0x1E,
@@ -330,7 +401,7 @@ SECTION_DATA u8 l_vr_box_data[380] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803A9A94 0028 .data      S_xfog_table_data                                            */
+/* 803A9A94-803A9AC0 0028 .data      S_xfog_table_data                                            InitializedData */
 SECTION_DATA u8 S_xfog_table_data[44] = {
 	0x01, 0x04, 0x01, 0x04, 0x01, 0x0E, 0x01, 0x18, 0x01, 0x22, 0x01, 0x2C, 0x01, 0x36, 0x01, 0x40,
 	0x01, 0x4A, 0x01, 0x54, 0x00, 0xFA, 0x01, 0x04, 0x01, 0x18, 0x01, 0x40, 0x01, 0x5E, 0x01, 0x90,
@@ -346,7 +417,7 @@ SECTION_DATA u8 S_xfog_table_data[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 800569DC 000C .text      dKyd_dmpalet_getp__Fv                                        */
+/* 800569DC-800569E8 000C .text      dKyd_dmpalet_getp__Fv                                        Function */
 }
 
 #pragma push
@@ -359,7 +430,7 @@ asm void dKyd_dmpalet_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 800569E8 000C .text      dKyd_dmpselect_getp__Fv                                      */
+/* 800569E8-800569F4 000C .text      dKyd_dmpselect_getp__Fv                                      Function */
 }
 
 #pragma push
@@ -372,7 +443,7 @@ asm void dKyd_dmpselect_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 800569F4 000C .text      dKyd_dmenvr_getp__Fv                                         */
+/* 800569F4-80056A00 000C .text      dKyd_dmenvr_getp__Fv                                         Function */
 }
 
 #pragma push
@@ -385,7 +456,7 @@ asm void dKyd_dmenvr_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A00 000C .text      dKyd_dmvrbox_getp__Fv                                        */
+/* 80056A00-80056A0C 000C .text      dKyd_dmvrbox_getp__Fv                                        Function */
 }
 
 #pragma push
@@ -398,7 +469,7 @@ asm void dKyd_dmvrbox_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A0C 000C .text      dKyd_schejule_getp__Fv                                       */
+/* 80056A0C-80056A18 000C .text      dKyd_schejule_getp__Fv                                       Function */
 }
 
 #pragma push
@@ -411,7 +482,7 @@ asm void dKyd_schejule_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A18 000C .text      dKyd_schejule_boss_getp__Fv                                  */
+/* 80056A18-80056A24 000C .text      dKyd_schejule_boss_getp__Fv                                  Function */
 }
 
 #pragma push
@@ -424,7 +495,7 @@ asm void dKyd_schejule_boss_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A24 0040 .text      dKyd_xfog_table_set__FUc                                     */
+/* 80056A24-80056A64 0040 .text      dKyd_xfog_table_set__FUc                                     Function */
 }
 
 #pragma push
@@ -437,7 +508,7 @@ asm void dKyd_xfog_table_set(u8) {
 #pragma pop
 
 extern "C" {
-/* 80056A64 000C .text      dKyd_maple_col_getp__Fv                                      */
+/* 80056A64-80056A70 000C .text      dKyd_maple_col_getp__Fv                                      Function */
 }
 
 #pragma push
@@ -450,7 +521,7 @@ asm void dKyd_maple_col_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A70 000C .text      dKyd_darkworld_tbl_getp__Fv                                  */
+/* 80056A70-80056A7C 000C .text      dKyd_darkworld_tbl_getp__Fv                                  Function */
 }
 
 #pragma push
@@ -463,7 +534,7 @@ asm void dKyd_darkworld_tbl_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A7C 000C .text      dKyd_light_size_tbl_getp__Fv                                 */
+/* 80056A7C-80056A88 000C .text      dKyd_light_size_tbl_getp__Fv                                 Function */
 }
 
 #pragma push
@@ -476,7 +547,7 @@ asm void dKyd_light_size_tbl_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A88 000C .text      dKyd_light_tw_size_tbl_getp__Fv                              */
+/* 80056A88-80056A94 000C .text      dKyd_light_tw_size_tbl_getp__Fv                              Function */
 }
 
 #pragma push
@@ -489,7 +560,7 @@ asm void dKyd_light_tw_size_tbl_getp(void) {
 #pragma pop
 
 extern "C" {
-/* 80056A94 0014 .text      dKyd_BloomInf_tbl_getp__Fi                                   */
+/* 80056A94-80056AA8 0014 .text      dKyd_BloomInf_tbl_getp__Fi                                   Function */
 }
 
 #pragma push

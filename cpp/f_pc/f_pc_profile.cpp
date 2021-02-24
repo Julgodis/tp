@@ -8,8 +8,13 @@
 // Additional Symbols:
 // 
 
+extern void fpcPf_Get(short); /* fpcPf_Get__Fs */
+
 extern "C" {
-SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4];
+/* Function             */
+extern void fpcPf_Get__Fs();
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 }
 
 
@@ -18,9 +23,8 @@ SECTION_SBSS extern u8 g_fpcPf_ProfileList_p[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D50 0004 .sbss      g_fpcPf_ProfileList_p                                        */
-SECTION_SBSS u8 g_fpcPf_ProfileList_p[4];
-SECTION_SBSS u8 pad_80450D54[4];
+/* 80450D50-80450D58 0004 .sbss      g_fpcPf_ProfileList_p                                        ZeroInitializedData */
+SECTION_SBSS u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 }
 
 
@@ -29,13 +33,13 @@ SECTION_SBSS u8 pad_80450D54[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023564 0014 .text      fpcPf_Get__Fs                                                */
+/* 80023564-80023578 0014 .text      fpcPf_Get__Fs                                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcPf_Get(s16) {
+asm void fpcPf_Get(short) {
 	nofralloc
 #include "_include/f_pc/f_pc_profile/fpcPf_Get__Fs.s"
 }

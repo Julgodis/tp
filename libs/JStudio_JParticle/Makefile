@@ -18,8 +18,9 @@ JSTUDIO_JPARTICLE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJStudio_JParticle.a: dirs $(JSTUDIO_JPARTICLE_A_O_FILES)
+$(BUILD_DIR)/libJStudio_JParticle.a: $(JSTUDIO_JPARTICLE_A_O_FILES)
 	$(LD) -xm l $(JSTUDIO_JPARTICLE_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio_JParticle.a $(JSTUDIO_JPARTICLE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio_JParticle.a
 
 $(BUILD_DIR)/libs/JStudio_JParticle/%.o: cpp/JStudio_JParticle/%.cpp
 	mkdir -p $(@D)

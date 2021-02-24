@@ -9,7 +9,12 @@
 // 
 
 extern "C" {
-SECTION_BSS extern u8 fragmentinfo[16];
+/* Function             */
+extern void __unregister_fragment();
+/* Function             */
+extern void __register_fragment();
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 fragmentinfo[12 + 4 /* padding */];
 }
 
 
@@ -18,8 +23,8 @@ SECTION_BSS extern u8 fragmentinfo[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D430 000C .bss       fragmentinfo                                                 */
-SECTION_BSS u8 fragmentinfo[16];
+/* 8044D430-8044D440 000C .bss       fragmentinfo                                                 ZeroInitializedData */
+SECTION_BSS u8 fragmentinfo[12 + 4 /* padding */];
 }
 
 
@@ -28,7 +33,7 @@ SECTION_BSS u8 fragmentinfo[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803628AC 0034 .text      __unregister_fragment                                        */
+/* 803628AC-803628E0 0034 .text      __unregister_fragment                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -38,7 +43,7 @@ asm void __unregister_fragment() {
 }
 #pragma pop
 
-/* 803628E0 0034 .text      __register_fragment                                          */
+/* 803628E0-80362914 0034 .text      __register_fragment                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

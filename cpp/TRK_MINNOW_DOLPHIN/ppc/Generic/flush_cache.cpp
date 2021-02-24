@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void TRK_flush_cache();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036F548 0038 .text      TRK_flush_cache                                              */
+/* 8036F548-8036F580 0038 .text      TRK_flush_cache                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

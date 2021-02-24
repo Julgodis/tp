@@ -9,14 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+/* GlobalFunction       */
 extern u32 getThreadPointer__6JASDvdFv();
+/* Function             */
+extern void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+/* Function             */
+extern void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
+/* Function             */
 extern void loadResourceCallback__15JASResArcLoaderFPv();
+/* Function             */
+extern void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
+/* Function             */
 extern void readResource__10JKRArchiveFPvUlUs();
+/* Function             */
 extern void findIdxResource__10JKRArchiveCFUl();
+/* Function             */
 extern void findIdResource__10JKRArchiveCFUs();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
 }
 
@@ -26,7 +41,7 @@ extern void _restgpr_28();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80290BD0 0034 .text      getResSize__15JASResArcLoaderFPC10JKRArchiveUs               */
+/* 80290BD0-80290C04 0034 .text      getResSize__15JASResArcLoaderFPC10JKRArchiveUs               Function */
 // JASResArcLoader::getResSize(const JKRArchive*, u16)
 #pragma push
 #pragma optimization_level 0
@@ -37,7 +52,7 @@ asm void getResSize__15JASResArcLoaderFPC10JKRArchiveUs() {
 }
 #pragma pop
 
-/* 80290C04 0078 .text      getResMaxSize__15JASResArcLoaderFPC10JKRArchive              */
+/* 80290C04-80290C7C 0078 .text      getResMaxSize__15JASResArcLoaderFPC10JKRArchive              Function */
 // JASResArcLoader::getResMaxSize(const JKRArchive*)
 #pragma push
 #pragma optimization_level 0
@@ -48,7 +63,7 @@ asm void getResMaxSize__15JASResArcLoaderFPC10JKRArchive() {
 }
 #pragma pop
 
-/* 80290C7C 009C .text      loadResourceCallback__15JASResArcLoaderFPv                   */
+/* 80290C7C-80290D18 009C .text      loadResourceCallback__15JASResArcLoaderFPv                   Function */
 // JASResArcLoader::loadResourceCallback(void*)
 #pragma push
 #pragma optimization_level 0
@@ -59,7 +74,7 @@ asm void loadResourceCallback__15JASResArcLoaderFPv() {
 }
 #pragma pop
 
-/* 80290D18 005C .text      loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl */
+/* 80290D18-80290D74 005C .text      loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl Function */
 // JASResArcLoader::loadResourceAsync(JKRArchive*, u16, u8*, u32, void (*)(u32, u32), u32)
 #pragma push
 #pragma optimization_level 0

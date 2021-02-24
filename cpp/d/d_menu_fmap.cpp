@@ -24,7 +24,7 @@ extern void dComIfGs_isOneZoneSwitch(int, int); /* dComIfGs_isOneZoneSwitch__Fii
 extern void dComIfGp_isLightDropMapVisible(void); /* dComIfGp_isLightDropMapVisible__Fv */
 extern void dComIfGp_getNowLevel(void); /* dComIfGp_getNowLevel__Fv */
 extern void dComIfGp_SelectWarpPt_set(u8); /* dComIfGp_SelectWarpPt_set__FUc */
-extern void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, const s8*); /* dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc */
+extern void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, const char*); /* dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc */
 extern void dMenuFmap_getStartStageName(void*); /* dMenuFmap_getStartStageName__FPv */
 extern void dMw_UP_TRIGGER(void); /* dMw_UP_TRIGGER__Fv */
 extern void dMw_DOWN_TRIGGER(void); /* dMw_DOWN_TRIGGER__Fv */
@@ -34,243 +34,745 @@ extern void dMw_A_TRIGGER(void); /* dMw_A_TRIGGER__Fv */
 extern void dMw_B_TRIGGER(void); /* dMw_B_TRIGGER__Fv */
 extern void dMw_Z_TRIGGER(void); /* dMw_Z_TRIGGER__Fv */
 extern void dMw_START_TRIGGER(void); /* dMw_START_TRIGGER__Fv */
+extern void dMeter2Info_set2DVibrationM(void); /* dMeter2Info_set2DVibrationM__Fv */
 extern void cLib_addCalc2(f32*, f32, f32, f32); /* cLib_addCalc2__FPffff */
 extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+/* Function             */
 extern void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+/* Function             */
 extern void fopMsgM_messageSet__FUlUl();
+/* Function             */
 extern void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
+/* Function             */
 extern void dComIfGs_isStageSwitch__Fii();
+/* Function             */
 extern void dComIfGs_isOneZoneSwitch__Fii();
+/* Function             */
 extern void dComIfGp_isLightDropMapVisible__Fv();
+/* Function             */
 extern void dComIfGp_getNowLevel__Fv();
+/* Function             */
 extern void dComIfGp_SelectWarpPt_set__FUc();
+/* Function             */
 extern void checkTrigger__9STControlFv();
+/* Function             */
 extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void getMenuFmapStageData__24dMenu_Fmap_region_data_cFi();
+/* Function             */
 extern void buildFmapRegionData__24dMenu_Fmap_region_data_cFi();
+/* Function             */
 extern void create__23dMenu_Fmap_world_data_cFP24dMenu_Fmap_region_data_c();
+/* Function             */
 extern void init__22dMenuFmapIconPointer_cFP24dMenu_Fmap_region_data_cP23dMenu_Fmap_stage_data_cUcii();
+/* Function             */
 extern void nextData__22dMenuFmapIconPointer_cFv();
+/* Function             */
 extern void getValidData__22dMenuFmapIconPointer_cFv();
+/* Function             */
 extern void getPosition__19dMenuFmapIconDisp_cFPiPiPfPfPPCQ27dTres_c6data_s();
+/* Function             */
 extern void isDrawDisp__19dMenuFmapIconDisp_cFv();
+/* Function             */
 extern void __dt__26fmpTresTypeGroupDataList_cFv();
+/* Function             */
 extern void getMapPlayerPos__10dMapInfo_nFv();
+/* Function             */
 extern void getMapRestartPos__10dMapInfo_nFv();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void iconScale__16dMenuMapCommon_cFifff();
+/* Function             */
 extern void clearIconInfo__16dMenuMapCommon_cFv();
+/* Function             */
 extern void __ct__9dMf_HIO_cFv();
+/* Function             */
 extern void dMenuFmap_getStartStageName__FPv();
+/* Function             */
+extern void __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc();
+/* Function             */
 extern void __dt__12dMenu_Fmap_cFv();
+/* Function             */
 extern void _create__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void _delete__12dMenu_Fmap_cFv();
+/* Function             */
+extern void _move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void _draw__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getNextStatus__12dMenu_Fmap_cFPUc();
+/* Function             */
 extern void isSync__12dMenu_Fmap_cFv();
+/* Function             */
+extern void all_map_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void all_map_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_all_to_region_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_all_to_region_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_region_to_all_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_region_to_all_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void region_map_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void region_map_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void to_portal_warp_map_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void to_portal_warp_map_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_warp_map_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_warp_map_proc__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void portal_warp_select_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_warp_select_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_warp_forbid_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_warp_forbid_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_region_to_spot_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_region_to_spot_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_spot_to_region_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void zoom_spot_to_region_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void spot_map_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void spot_map_proc__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo1_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo1_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo2_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo2_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo3_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo3_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo4_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo4_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo5_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo5_move__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void portal_demo6_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void portal_demo6_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo1_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo1_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo2_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo2_move__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void yamiboss_demo3_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo3_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo4_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo4_move__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void yamiboss_demo5_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void yamiboss_demo5_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void light_demo1_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void light_demo1_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void light_demo2_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void light_demo2_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo1_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo1_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo2_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo2_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo3_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void table_demo3_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void howl_demo1_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void howl_demo1_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void howl_demo2_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void howl_demo2_move__12dMenu_Fmap_cFv();
+/* ReturnFunction       */
+extern void howl_demo3_init__12dMenu_Fmap_cFv();
+/* Function             */
+extern void howl_demo3_move__12dMenu_Fmap_cFv();
+/* Function             */
+extern void isOpen__12dMenu_Fmap_cFv();
+/* Function             */
+extern void isClose__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getProcess__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getRegionCursor__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getStageCursor__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getStageTransX__12dMenu_Fmap_cFv();
+/* Function             */
+extern void getStageTransZ__12dMenu_Fmap_cFv();
+/* Function             */
 extern void isRoomCheck__12dMenu_Fmap_cFii();
+/* Function             */
 extern void checkStRoomData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void talkButton__12dMenu_Fmap_cFv();
+/* Function             */
 extern void setProcess__12dMenu_Fmap_cFUc();
+/* Function             */
 extern void setFlash__12dMenu_Fmap_cFUcb();
+/* Function             */
 extern void readWorldData__12dMenu_Fmap_cFUc();
+/* Function             */
 extern void readAreaData__12dMenu_Fmap_cFUcb();
+/* Function             */
 extern void readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc();
+/* Function             */
 extern void readFieldMapData__12dMenu_Fmap_cFPPvPCcbb();
+/* Function             */
+extern void getExpandedResSize__10JKRArchiveCFPCv();
+/* Function             */
 extern void decodeFieldMapData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void decodePortalData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc();
+/* Function             */
 extern void removeAreaData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c();
+/* Function             */
 extern void setTitleName__12dMenu_Fmap_cFUl();
+/* Function             */
 extern void setAreaName__12dMenu_Fmap_cFUl();
+/* Function             */
 extern void setAreaNameZero__12dMenu_Fmap_cFv();
+/* Function             */
 extern void portalWarpMapMove__12dMenu_Fmap_cFP9STControl();
+/* Function             */
 extern void onRoomDataBit__12dMenu_Fmap_cFi();
+/* Function             */
 extern void isRoomDataBit__12dMenu_Fmap_cFi();
+/* Function             */
 extern void resetRoomDataBit__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawIcon__12dMenu_Fmap_cFfb();
+/* Function             */
 extern void drawLightDropIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawBatsumarkIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawSnowmanIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawGoldWolfIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawCoachIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawPlayEnterIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void checkDrawPortalIcon__12dMenu_Fmap_cFii();
+/* Function             */
 extern void searchIcon__12dMenu_Fmap_cFUciPfPf();
+/* Function             */
 extern void drawIcon__12dMenu_Fmap_cFUci();
+/* Function             */
 extern void drawEnterIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void drawPortalIcon__12dMenu_Fmap_cFv();
+/* Function             */
 extern void getRegionStageNum__12dMenu_Fmap_cFi();
+/* Function             */
 extern void getNowFmapRegionData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void getNowFmapStageData__12dMenu_Fmap_cFv();
+/* Function             */
 extern void searchPortalStageID__12dMenu_Fmap_cFPc();
+/* Function             */
 extern void drawDebugStage__12dMenu_Fmap_cFv();
+/* Function             */
 extern void arrowPosInit__12dMenu_Fmap_cFv();
+/* Function             */
 extern void tableArrowPosInit__12dMenu_Fmap_cFb();
+/* Function             */
 extern void yamibossArrowPosInit__12dMenu_Fmap_cFv();
+/* Function             */
 extern void howlArrowPosInit__12dMenu_Fmap_cFv();
+/* Function             */
 extern void getHowlRegionID__12dMenu_Fmap_cFv();
+/* Function             */
 extern void isLightVesselGet__12dMenu_Fmap_cFv();
+/* Function             */
 extern void getPlayerPos2D__12dMenu_Fmap_cFv();
+/* Function             */
 extern void __dt__9dMf_HIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_menu_fmap_cpp();
+/* Function             */
 extern void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
+/* Function             */
 extern void __ct__15dMenu_FmapMap_cFv();
+/* Function             */
 extern void _create__15dMenu_FmapMap_cFUsUsUsUsPv();
+/* Function             */
 extern void _delete__15dMenu_FmapMap_cFv();
+/* Function             */
 extern void setFlashOn__15dMenu_FmapMap_cFiiPUci();
+/* Function             */
 extern void setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff();
+/* Function             */
 extern void __ct__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff();
+/* Function             */
 extern void calcAllMapPos__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf();
+/* Function             */
 extern void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf();
+/* Function             */
 extern void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf();
+/* Function             */
 extern void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG();
+/* Function             */
 extern void deleteSpotPane__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void zoomMapCalc__18dMenu_Fmap2DBack_cFf();
+/* Function             */
 extern void zoomMapCalc2__18dMenu_Fmap2DBack_cFf();
+/* Function             */
 extern void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void mapBlink__18dMenu_Fmap2DBack_cFPs();
+/* Function             */
 extern void setSpotCursor__18dMenu_Fmap2DBack_cFUc();
+/* Function             */
 extern void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl();
+/* Function             */
 extern void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb();
+/* Function             */
 extern void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb();
+/* Function             */
 extern void isShowRegion__18dMenu_Fmap2DBack_cFi();
+/* Function             */
 extern void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void calcBackAlpha__18dMenu_Fmap2DBack_cFb();
+/* Function             */
 extern void btkAnimeLoop__18dMenu_Fmap2DBack_cFf();
+/* Function             */
 extern void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc();
+/* Function             */
 extern void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl();
+/* Function             */
 extern void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb();
+/* Function             */
 extern void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb();
+/* Function             */
 extern void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff();
+/* Function             */
 extern void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff();
+/* Function             */
 extern void calcDrawPriority__18dMenu_Fmap2DBack_cFv();
+/* Function             */
 extern void setArrowPosAxis__18dMenu_Fmap2DBack_cFff();
+/* Function             */
 extern void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+/* Function             */
 extern void _execute__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb();
+/* Function             */
 extern void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf();
+/* Function             */
 extern void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc();
+/* Function             */
 extern void setTitleNameString__17dMenu_Fmap2DTop_cFUl();
+/* Function             */
 extern void setAreaNameString__17dMenu_Fmap2DTop_cFUl();
+/* Function             */
 extern void setZButtonString__17dMenu_Fmap2DTop_cFUlUc();
+/* Function             */
 extern void setBButtonString__17dMenu_Fmap2DTop_cFUlUc();
+/* Function             */
 extern void setAButtonString__17dMenu_Fmap2DTop_cFUlUc();
+/* Function             */
 extern void setCrossLRString__17dMenu_Fmap2DTop_cFUl();
+/* Function             */
 extern void set3DStickString__17dMenu_Fmap2DTop_cFUl();
+/* Function             */
 extern void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+/* Function             */
 extern void deleteExplain__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf();
+/* Function             */
 extern void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void isWarpAccept__17dMenu_Fmap2DTop_cFv();
+/* Function             */
 extern void dMw_UP_TRIGGER__Fv();
+/* Function             */
 extern void dMw_DOWN_TRIGGER__Fv();
+/* Function             */
 extern void dMw_LEFT_TRIGGER__Fv();
+/* Function             */
 extern void dMw_RIGHT_TRIGGER__Fv();
+/* Function             */
 extern void dMw_A_TRIGGER__Fv();
+/* Function             */
 extern void dMw_B_TRIGGER__Fv();
+/* Function             */
 extern void dMw_Z_TRIGGER__Fv();
+/* Function             */
 extern void dMw_START_TRIGGER__Fv();
+/* Function             */
 extern void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
+/* Function             */
 extern void setWarpInfo__13dMeter2Info_cFPCcRC4cXyzsUcUcUc();
+/* ReturnFunction       */
 extern void dMeter2Info_set2DVibrationM__Fv();
+/* Function             */
 extern void setTalkHeap__12dMsgObject_cFPv();
+/* Function             */
 extern void getTalkHeap__12dMsgObject_cFv();
+/* Function             */
 extern void setStatus__12dMsgObject_cFUs();
+/* Function             */
 extern void getStatus__12dMsgObject_cFv();
+/* Function             */
 extern void getMessageID__12dMsgObject_cFv();
+/* Function             */
 extern void setPortalMessageID__12dMsgObject_cFUs();
+/* Function             */
 extern void move__17dMsgScrnExplain_cFv();
+/* Function             */
 extern void openExplain__17dMsgScrnExplain_cFUlUcUcUcb();
+/* Function             */
 extern void __ct__10dMsgFlow_cFv();
+/* Function             */
 extern void __dt__10dMsgFlow_cFv();
+/* Function             */
 extern void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+/* Function             */
 extern void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+/* Function             */
 extern void cLib_addCalc2__FPffff();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void create__10JKRExpHeapFUlP7JKRHeapb();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_15();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_15();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_803960D0[24];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_menu_fmap__stringBase0[200];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern const void* __vt__19dMenuFmapIconDisp_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dMenuFmapIconDisp_c[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_menu_fmap__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_4019[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4020[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4021[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_4022[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_4023[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_4024[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4025[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4026[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4027[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4028[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4029[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4030[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4031[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4032[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4033[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4034[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4035[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4036[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4037[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4038[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4039[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4040[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4041[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4042[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4043[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4044[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4045[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4046[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4047[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4048[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_menu_fmap__init_process[360];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4049[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4050[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4051[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4052[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4053[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4054[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4055[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4056[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4057[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4058[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4059[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4060[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4061[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4062[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4063[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4064[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4065[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4066[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4067[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4068[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4069[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4070[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4071[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4072[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4073[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4074[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4075[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4076[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4077[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_menu_fmap__LIT_4078[3];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_menu_fmap__move_process[360];
-SECTION_DATA extern u8 data_803BD63C[16];
-SECTION_DATA extern u8 data_803BD64C[24];
-SECTION_DATA extern const void* __vt__12dMenu_Fmap_c[3];
-SECTION_DATA extern const void* __vt__9dMf_HIO_c[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803BD63C[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803BD64C[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dMenu_Fmap_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dMf_HIO_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_3989[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_fmHIO[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_fmapHIO[1188];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_midnaActor__9daPy_py_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMySelfPointer__9dMf_HIO_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804510A4[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 MyClass__12dMenu_Fmap_c[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3994[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_menu_fmap__LIT_3995;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_menu_fmap__LIT_4158[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_menu_fmap__LIT_4159;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4160;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4161;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4162;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_menu_fmap__LIT_4353;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_menu_fmap__LIT_4358;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_menu_fmap__LIT_4397[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_menu_fmap__LIT_4398;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_menu_fmap__LIT_4399[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_menu_fmap__LIT_4541;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4939;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4940;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6855;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6987[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7300;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7348;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7356[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_menu_fmap__LIT_7357[4];
 }
 
@@ -280,30 +782,36 @@ SECTION_SDATA2 extern u8 d_d_menu_fmap__LIT_7357[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803960D0 0018 .rodata    i_swBit$7362                                                 */
+/* 803960E8-803961B0 00C7 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803960E8 = "";
+SECTION_DEAD const char* const stringBase_803960E9 = "dat/field.dat";
+SECTION_DEAD const char* const stringBase_803960F7 = "dat/portal.dat";
+SECTION_DEAD const char* const stringBase_80396106 = "F_SP124";
+SECTION_DEAD const char* const stringBase_8039610E = "/res/FieldMap/res-f.arc";
+SECTION_DEAD const char* const stringBase_80396126 = "dat/data.dat";
+SECTION_DEAD const char* const stringBase_80396133 = "%s/stage.dat";
+SECTION_DEAD const char* const stringBase_80396140 = "%s/room%d.dzs";
+SECTION_DEAD const char* const stringBase_8039614E = "tex/region8.bti";
+SECTION_DEAD const char* const stringBase_8039615E = "tex/region%d.bti";
+SECTION_DEAD const char* const stringBase_8039616F = "F_SP115";
+SECTION_DEAD const char* const stringBase_80396177 = "F_SP113";
+SECTION_DEAD const char* const stringBase_8039617F = "F_SP109";
+SECTION_DEAD const char* const stringBase_80396187 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8039618F = "F_SP104";
+SECTION_DEAD const char* const stringBase_80396197 = "F_SP122";
+SECTION_DEAD const char* const stringBase_8039619F = "F_SP111";
+SECTION_DEAD const char* const stringBase_803961A7 = "F_SP116";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803961AF = "";
+#pragma pop
+/* 803960D0-803960E8 0018 .rodata    i_swBit$7362                                                 InitializedData */
 SECTION_RODATA const u8 data_803960D0[24] = {
 	0x00, 0x00, 0x00, 0x41, 0x00, 0x00, 0x00, 0x29, 0x00, 0x00, 0x00, 0x2A, 0x00, 0x00, 0x00, 0x32,
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x32,
 };
-/* 803960E8 00C7 .rodata    @stringBase0                                                 */
-const char* const stringBase_803960E8 = "";
-const char* const stringBase_803960E9 = "dat/field.dat";
-const char* const stringBase_803960F7 = "dat/portal.dat";
-const char* const stringBase_80396106 = "F_SP124";
-const char* const stringBase_8039610E = "/res/FieldMap/res-f.arc";
-const char* const stringBase_80396126 = "dat/data.dat";
-const char* const stringBase_80396133 = "%s/stage.dat";
-const char* const stringBase_80396140 = "%s/room%d.dzs";
-const char* const stringBase_8039614E = "tex/region8.bti";
-const char* const stringBase_8039615E = "tex/region%d.bti";
-const char* const stringBase_8039616F = "F_SP115";
-const char* const stringBase_80396177 = "F_SP113";
-const char* const stringBase_8039617F = "F_SP109";
-const char* const stringBase_80396187 = "F_SP108";
-const char* const stringBase_8039618F = "F_SP104";
-const char* const stringBase_80396197 = "F_SP122";
-const char* const stringBase_8039619F = "F_SP111";
-const char* const stringBase_803961A7 = "F_SP116";
 }
 
 
@@ -312,132 +820,192 @@ const char* const stringBase_803961A7 = "F_SP116";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BD090 0000 .data      ...data.0                                                    */
-/* 803BD090 000C .data      cNullVec__6Z2Calc                                            */
+/* 803BD090-803BD090 0000 .data      ...data.0                                                    InitializedData */
+/* 803BD090-803BD09C 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_menu_fmap__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BD09C 000C .data      @4019                                                        */
-SECTION_DATA u8 LIT_4019[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x7B, 0x24,
+/* 803BD09C-803BD0A8 000C .data      @4019                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_4019[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)all_map_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0A8 000C .data      @4020                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4020[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9C, 0x7C,
+/* 803BD0A8-803BD0B4 000C .data      @4020                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4020[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo2_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0B4 000C .data      @4021                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4021[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9D, 0x60,
+/* 803BD0B4-803BD0C0 000C .data      @4021                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4021[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo3_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0C0 000C .data      @4022                                                        */
-SECTION_DATA u8 LIT_4022[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA8, 0x74,
+/* 803BD0C0-803BD0CC 000C .data      @4022                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_4022[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo1_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0CC 000C .data      @4023                                                        */
-SECTION_DATA u8 LIT_4023[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x82, 0x30,
+/* 803BD0CC-803BD0D8 000C .data      @4023                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_4023[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_all_to_region_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0D8 000C .data      @4024                                                        */
-SECTION_DATA u8 LIT_4024[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x83, 0xE0,
+/* 803BD0D8-803BD0E4 000C .data      @4024                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_4024[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_region_to_all_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0E4 000C .data      @4025                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4025[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x85, 0x18,
+/* 803BD0E4-803BD0F0 000C .data      @4025                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4025[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)region_map_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0F0 000C .data      @4026                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4026[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x8B, 0x00,
+/* 803BD0F0-803BD0FC 000C .data      @4026                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4026[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)to_portal_warp_map_init__12dMenu_Fmap_cFv,
 };
-/* 803BD0FC 000C .data      @4027                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4027[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x8B, 0x48,
+/* 803BD0FC-803BD108 000C .data      @4027                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4027[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_map_init__12dMenu_Fmap_cFv,
 };
-/* 803BD108 000C .data      @4028                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4028[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x90, 0xA4,
+/* 803BD108-803BD114 000C .data      @4028                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4028[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_select_init__12dMenu_Fmap_cFv,
 };
-/* 803BD114 000C .data      @4029                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4029[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x91, 0xD8,
+/* 803BD114-803BD120 000C .data      @4029                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4029[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_forbid_init__12dMenu_Fmap_cFv,
 };
-/* 803BD120 000C .data      @4030                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4030[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x92, 0xA4,
+/* 803BD120-803BD12C 000C .data      @4030                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4030[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_region_to_spot_init__12dMenu_Fmap_cFv,
 };
-/* 803BD12C 000C .data      @4031                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4031[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x93, 0xCC,
+/* 803BD12C-803BD138 000C .data      @4031                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4031[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_spot_to_region_init__12dMenu_Fmap_cFv,
 };
-/* 803BD138 000C .data      @4032                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4032[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x95, 0x0C,
+/* 803BD138-803BD144 000C .data      @4032                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4032[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)spot_map_init__12dMenu_Fmap_cFv,
 };
-/* 803BD144 000C .data      @4033                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4033[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9A, 0x4C,
+/* 803BD144-803BD150 000C .data      @4033                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4033[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo1_init__12dMenu_Fmap_cFv,
 };
-/* 803BD150 000C .data      @4034                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4034[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9E, 0xB8,
+/* 803BD150-803BD15C 000C .data      @4034                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4034[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo4_init__12dMenu_Fmap_cFv,
 };
-/* 803BD15C 000C .data      @4035                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4035[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9F, 0x7C,
+/* 803BD15C-803BD168 000C .data      @4035                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4035[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo5_init__12dMenu_Fmap_cFv,
 };
-/* 803BD168 000C .data      @4036                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4036[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA1, 0x58,
+/* 803BD168-803BD174 000C .data      @4036                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4036[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo6_init__12dMenu_Fmap_cFv,
 };
-/* 803BD174 000C .data      @4037                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4037[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA1, 0xE8,
+/* 803BD174-803BD180 000C .data      @4037                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4037[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo1_init__12dMenu_Fmap_cFv,
 };
-/* 803BD180 000C .data      @4038                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4038[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA3, 0x4C,
+/* 803BD180-803BD18C 000C .data      @4038                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4038[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo2_init__12dMenu_Fmap_cFv,
 };
-/* 803BD18C 000C .data      @4039                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4039[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA4, 0x0C,
+/* 803BD18C-803BD198 000C .data      @4039                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4039[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo3_init__12dMenu_Fmap_cFv,
 };
-/* 803BD198 000C .data      @4040                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4040[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA4, 0x68,
+/* 803BD198-803BD1A4 000C .data      @4040                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4040[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo4_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1A4 000C .data      @4041                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4041[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA5, 0x44,
+/* 803BD1A4-803BD1B0 000C .data      @4041                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4041[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo5_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1B0 000C .data      @4042                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4042[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA5, 0xCC,
+/* 803BD1B0-803BD1BC 000C .data      @4042                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4042[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)light_demo1_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1BC 000C .data      @4043                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4043[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA7, 0xE0,
+/* 803BD1BC-803BD1C8 000C .data      @4043                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4043[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)light_demo2_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1C8 000C .data      @4044                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4044[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAA, 0x78,
+/* 803BD1C8-803BD1D4 000C .data      @4044                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4044[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo2_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1D4 000C .data      @4045                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4045[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAB, 0x88,
+/* 803BD1D4-803BD1E0 000C .data      @4045                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4045[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo3_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1E0 000C .data      @4046                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4046[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAC, 0x30,
+/* 803BD1E0-803BD1EC 000C .data      @4046                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4046[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo1_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1EC 000C .data      @4047                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4047[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAD, 0x48,
+/* 803BD1EC-803BD1F8 000C .data      @4047                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4047[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo2_init__12dMenu_Fmap_cFv,
 };
-/* 803BD1F8 000C .data      @4048                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4048[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAD, 0x9C,
+/* 803BD1F8-803BD204 000C .data      @4048                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4048[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo3_init__12dMenu_Fmap_cFv,
 };
-/* 803BD204 0168 .data      init_process                                                 */
+/* 803BD204-803BD36C 0168 .data      init_process                                                 InitializedData */
 SECTION_DATA u8 d_d_menu_fmap__init_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -463,127 +1031,187 @@ SECTION_DATA u8 d_d_menu_fmap__init_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BD36C 000C .data      @4049                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4049[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x7C, 0x2C,
+/* 803BD36C-803BD378 000C .data      @4049                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4049[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)all_map_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD378 000C .data      @4050                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4050[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9C, 0xC8,
+/* 803BD378-803BD384 000C .data      @4050                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4050[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo2_move__12dMenu_Fmap_cFv,
 };
-/* 803BD384 000C .data      @4051                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4051[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9D, 0xB4,
+/* 803BD384-803BD390 000C .data      @4051                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4051[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo3_move__12dMenu_Fmap_cFv,
 };
-/* 803BD390 000C .data      @4052                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4052[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA9, 0xB4,
+/* 803BD390-803BD39C 000C .data      @4052                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4052[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo1_move__12dMenu_Fmap_cFv,
 };
-/* 803BD39C 000C .data      @4053                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4053[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x83, 0x08,
+/* 803BD39C-803BD3A8 000C .data      @4053                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4053[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_all_to_region_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3A8 000C .data      @4054                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4054[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x84, 0x38,
+/* 803BD3A8-803BD3B4 000C .data      @4054                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4054[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_region_to_all_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3B4 000C .data      @4055                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4055[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x86, 0x00,
+/* 803BD3B4-803BD3C0 000C .data      @4055                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4055[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)region_map_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3C0 000C .data      @4056                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4056[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x8B, 0x0C,
+/* 803BD3C0-803BD3CC 000C .data      @4056                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4056[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)to_portal_warp_map_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3CC 000C .data      @4057                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4057[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x8C, 0x0C,
+/* 803BD3CC-803BD3D8 000C .data      @4057                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4057[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_map_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3D8 000C .data      @4058                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4058[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x90, 0xA8,
+/* 803BD3D8-803BD3E4 000C .data      @4058                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4058[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_select_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3E4 000C .data      @4059                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4059[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x92, 0x38,
+/* 803BD3E4-803BD3F0 000C .data      @4059                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4059[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_warp_forbid_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3F0 000C .data      @4060                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4060[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x93, 0x04,
+/* 803BD3F0-803BD3FC 000C .data      @4060                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4060[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_region_to_spot_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD3FC 000C .data      @4061                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4061[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x94, 0x28,
+/* 803BD3FC-803BD408 000C .data      @4061                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4061[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoom_spot_to_region_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD408 000C .data      @4062                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4062[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x96, 0x18,
+/* 803BD408-803BD414 000C .data      @4062                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4062[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)spot_map_proc__12dMenu_Fmap_cFv,
 };
-/* 803BD414 000C .data      @4063                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4063[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9B, 0x64,
+/* 803BD414-803BD420 000C .data      @4063                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4063[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo1_move__12dMenu_Fmap_cFv,
 };
-/* 803BD420 000C .data      @4064                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4064[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9F, 0x14,
+/* 803BD420-803BD42C 000C .data      @4064                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4064[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo4_move__12dMenu_Fmap_cFv,
 };
-/* 803BD42C 000C .data      @4065                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4065[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0x9F, 0xBC,
+/* 803BD42C-803BD438 000C .data      @4065                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4065[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo5_move__12dMenu_Fmap_cFv,
 };
-/* 803BD438 000C .data      @4066                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4066[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA1, 0x5C,
+/* 803BD438-803BD444 000C .data      @4066                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4066[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)portal_demo6_move__12dMenu_Fmap_cFv,
 };
-/* 803BD444 000C .data      @4067                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4067[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA2, 0xF4,
+/* 803BD444-803BD450 000C .data      @4067                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4067[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo1_move__12dMenu_Fmap_cFv,
 };
-/* 803BD450 000C .data      @4068                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4068[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA3, 0x5C,
+/* 803BD450-803BD45C 000C .data      @4068                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4068[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo2_move__12dMenu_Fmap_cFv,
 };
-/* 803BD45C 000C .data      @4069                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4069[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA4, 0x10,
+/* 803BD45C-803BD468 000C .data      @4069                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4069[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo3_move__12dMenu_Fmap_cFv,
 };
-/* 803BD468 000C .data      @4070                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4070[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA4, 0xC0,
+/* 803BD468-803BD474 000C .data      @4070                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4070[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo4_move__12dMenu_Fmap_cFv,
 };
-/* 803BD474 000C .data      @4071                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4071[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA5, 0x48,
+/* 803BD474-803BD480 000C .data      @4071                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4071[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)yamiboss_demo5_move__12dMenu_Fmap_cFv,
 };
-/* 803BD480 000C .data      @4072                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4072[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA7, 0xA4,
+/* 803BD480-803BD48C 000C .data      @4072                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4072[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)light_demo1_move__12dMenu_Fmap_cFv,
 };
-/* 803BD48C 000C .data      @4073                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4073[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xA8, 0x14,
+/* 803BD48C-803BD498 000C .data      @4073                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4073[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)light_demo2_move__12dMenu_Fmap_cFv,
 };
-/* 803BD498 000C .data      @4074                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4074[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAA, 0xBC,
+/* 803BD498-803BD4A4 000C .data      @4074                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4074[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo2_move__12dMenu_Fmap_cFv,
 };
-/* 803BD4A4 000C .data      @4075                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4075[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAB, 0xD0,
+/* 803BD4A4-803BD4B0 000C .data      @4075                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4075[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)table_demo3_move__12dMenu_Fmap_cFv,
 };
-/* 803BD4B0 000C .data      @4076                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4076[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAC, 0x7C,
+/* 803BD4B0-803BD4BC 000C .data      @4076                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4076[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo1_move__12dMenu_Fmap_cFv,
 };
-/* 803BD4BC 000C .data      @4077                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4077[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAD, 0x54,
+/* 803BD4BC-803BD4C8 000C .data      @4077                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4077[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo2_move__12dMenu_Fmap_cFv,
 };
-/* 803BD4C8 000C .data      @4078                                                        */
-SECTION_DATA u8 d_d_menu_fmap__LIT_4078[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x1C, 0xAD, 0xA0,
+/* 803BD4C8-803BD4D4 000C .data      @4078                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_menu_fmap__LIT_4078[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)howl_demo3_move__12dMenu_Fmap_cFv,
 };
-/* 803BD4D4 0168 .data      move_process                                                 */
+/* 803BD4D4-803BD63C 0168 .data      move_process                                                 InitializedData */
 SECTION_DATA u8 d_d_menu_fmap__move_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -609,23 +1237,30 @@ SECTION_DATA u8 d_d_menu_fmap__move_process[360] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BD63C 0010 .data      stage_name$7304                                              */
-SECTION_DATA u8 data_803BD63C[16] = {
-	0x80, 0x39, 0x61, 0x6F, 0x80, 0x39, 0x61, 0x77, 0x80, 0x39, 0x61, 0x7F, 0x80, 0x39, 0x61, 0x87,
+/* 803BD63C-803BD64C 0010 .data      stage_name$7304                                              SymbolReferenceArrayData */
+SECTION_DATA void* data_803BD63C[4] = {
+	(void*)((char*)d_d_menu_fmap__stringBase0+135) /* stringBase_8039616F */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+143) /* stringBase_80396177 */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+151) /* stringBase_8039617F */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+159) /* stringBase_80396187 */,
 };
-/* 803BD64C 0018 .data      stage_name$7361                                              */
-SECTION_DATA u8 data_803BD64C[24] = {
-	0x80, 0x39, 0x61, 0x8F, 0x80, 0x39, 0x61, 0x97, 0x80, 0x39, 0x61, 0x97, 0x80, 0x39, 0x61, 0x06,
-	0x80, 0x39, 0x61, 0x9F, 0x80, 0x39, 0x61, 0xA7,
+/* 803BD64C-803BD664 0018 .data      stage_name$7361                                              SymbolReferenceArrayData */
+SECTION_DATA void* data_803BD64C[6] = {
+	(void*)((char*)d_d_menu_fmap__stringBase0+167) /* stringBase_8039618F */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+175) /* stringBase_80396197 */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+175) /* stringBase_80396197 */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+30) /* stringBase_80396106 */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+183) /* stringBase_8039619F */,
+	(void*)((char*)d_d_menu_fmap__stringBase0+191) /* stringBase_803961A7 */,
 };
-/* 803BD664 000C .data      __vt__12dMenu_Fmap_c                                         */
-SECTION_DATA const  void* __vt__12dMenu_Fmap_c[3] = {
+/* 803BD664-803BD670 000C .data      __vt__12dMenu_Fmap_c                                         VTableData */
+SECTION_DATA void* __vt__12dMenu_Fmap_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dMenu_Fmap_cFv,
 };
-/* 803BD670 000C .data      __vt__9dMf_HIO_c                                             */
-SECTION_DATA const  void* __vt__9dMf_HIO_c[4] = {
+/* 803BD670-803BD680 000C .data      __vt__9dMf_HIO_c                                             VTableData */
+SECTION_DATA void* __vt__9dMf_HIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dMf_HIO_cFv,
@@ -640,73 +1275,73 @@ SECTION_DATA const  void* __vt__9dMf_HIO_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454120 0004 .sdata2    @3994                                                        */
+/* 80454120-80454124 0004 .sdata2    @3994                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3994[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 80454124 0004 .sdata2    @3995                                                        */
+/* 80454124-80454128 0004 .sdata2    @3995                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_menu_fmap__LIT_3995 = 1.000000f;
-/* 80454128 0004 .sdata2    @4158                                                        */
+/* 80454128-8045412C 0004 .sdata2    @4158                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_menu_fmap__LIT_4158[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045412C 0004 .sdata2    @4159                                                        */
+/* 8045412C-80454130 0004 .sdata2    @4159                                                        Float32Data */
 // 0xc4180000
 SECTION_SDATA2 f32 d_d_menu_fmap__LIT_4159 = -608.000000f;
-/* 80454130 0004 .sdata2    @4160                                                        */
+/* 80454130-80454134 0004 .sdata2    @4160                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 LIT_4160 = 608.000000f;
-/* 80454134 0004 .sdata2    @4161                                                        */
+/* 80454134-80454138 0004 .sdata2    @4161                                                        Float32Data */
 // 0xc3e00000
 SECTION_SDATA2 f32 LIT_4161 = -448.000000f;
-/* 80454138 0004 .sdata2    @4162                                                        */
+/* 80454138-8045413C 0004 .sdata2    @4162                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 LIT_4162 = 448.000000f;
-/* 8045413C 0004 .sdata2    @4353                                                        */
+/* 8045413C-80454140 0004 .sdata2    @4353                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_menu_fmap__LIT_4353 = 10.000000f;
-/* 80454140 0008 .sdata2    @4358                                                        */
+/* 80454140-80454148 0008 .sdata2    @4358                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_menu_fmap__LIT_4358 = 4503601774854144.000000;
-/* 80454148 0004 .sdata2    @4397                                                        */
+/* 80454148-8045414C 0004 .sdata2    @4397                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_menu_fmap__LIT_4397[4] = {
 	0x3E, 0xCC, 0xCC, 0xCD,
 };
-/* 8045414C 0004 .sdata2    @4398                                                        */
+/* 8045414C-80454150 0004 .sdata2    @4398                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_menu_fmap__LIT_4398 = 0.500000f;
-/* 80454150 0004 .sdata2    @4399                                                        */
+/* 80454150-80454154 0004 .sdata2    @4399                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_menu_fmap__LIT_4399[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80454154 0004 .sdata2    @4541                                                        */
+/* 80454154-80454158 0004 .sdata2    @4541                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_menu_fmap__LIT_4541 = -1.000000f;
-/* 80454158 0004 .sdata2    @4939                                                        */
+/* 80454158-8045415C 0004 .sdata2    @4939                                                        Float32Data */
 // 0x43980000
 SECTION_SDATA2 f32 LIT_4939 = 304.000000f;
-/* 8045415C 0004 .sdata2    @4940                                                        */
+/* 8045415C-80454160 0004 .sdata2    @4940                                                        Float32Data */
 // 0x43600000
 SECTION_SDATA2 f32 LIT_4940 = 224.000000f;
-/* 80454160 0004 .sdata2    @6855                                                        */
+/* 80454160-80454164 0004 .sdata2    @6855                                                        Float32Data */
 // 0x43fa0000
 SECTION_SDATA2 f32 LIT_6855 = 500.000000f;
-/* 80454164 0004 .sdata2    @6987                                                        */
+/* 80454164-80454168 0004 .sdata2    @6987                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6987[4] = {
 	0x3B, 0xB4, 0x00, 0x00,
 };
-/* 80454168 0004 .sdata2    @7300                                                        */
+/* 80454168-8045416C 0004 .sdata2    @7300                                                        Float32Data */
 // 0xc2480000
 SECTION_SDATA2 f32 LIT_7300 = -50.000000f;
-/* 8045416C 0004 .sdata2    @7348                                                        */
+/* 8045416C-80454170 0004 .sdata2    @7348                                                        Float32Data */
 // 0xc1a00000
 SECTION_SDATA2 f32 LIT_7348 = -20.000000f;
-/* 80454170 0004 .sdata2    @7356                                                        */
+/* 80454170-80454174 0004 .sdata2    @7356                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7356[4] = {
 	0xC7, 0x16, 0x98, 0x78,
 };
-/* 80454174 0004 .sdata2    @7357                                                        */
+/* 80454174-80454178 0004 .sdata2    @7357                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_menu_fmap__LIT_7357[4] = {
 	0x47, 0x16, 0xF7, 0x97,
 };
@@ -718,9 +1353,9 @@ SECTION_SDATA2 u8 d_d_menu_fmap__LIT_7357[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8042E820 000C .bss       @3989                                                        */
+/* 8042E820-8042E82C 000C .bss       @3989                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_3989[12];
-/* 8042E82C 0014 .bss       g_fmHIO                                                      */
+/* 8042E82C-8042E840 0014 .bss       g_fmHIO                                                      ZeroInitializedData */
 SECTION_BSS u8 g_fmHIO[20];
 }
 
@@ -730,11 +1365,11 @@ SECTION_BSS u8 g_fmHIO[20];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510A0 0004 .sbss      mMySelfPointer__9dMf_HIO_c                                   */
+/* 804510A0-804510A4 0004 .sbss      mMySelfPointer__9dMf_HIO_c                                   ZeroInitializedData */
 SECTION_SBSS u8 mMySelfPointer__9dMf_HIO_c[4];
-/* 804510A4 0008 .sbss      virtual_stage$3999                                           */
+/* 804510A4-804510AC 0008 .sbss      virtual_stage$3999                                           ZeroInitializedData */
 SECTION_SBSS u8 data_804510A4[8];
-/* 804510AC 0004 .sbss      MyClass__12dMenu_Fmap_c                                      */
+/* 804510AC-804510B0 0004 .sbss      MyClass__12dMenu_Fmap_c                                      ZeroInitializedData */
 SECTION_SBSS u8 MyClass__12dMenu_Fmap_c[4];
 }
 
@@ -744,7 +1379,7 @@ SECTION_SBSS u8 MyClass__12dMenu_Fmap_c[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 801C65F8 0034 .text      __ct__9dMf_HIO_cFv                                           */
+/* 801C65F8-801C662C 0034 .text      __ct__9dMf_HIO_cFv                                           Function */
 // dMf_HIO_c::dMf_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -755,7 +1390,7 @@ asm void __ct__9dMf_HIO_cFv() {
 }
 #pragma pop
 
-/* 801C662C 00B8 .text      dMenuFmap_getStartStageName__FPv                             */
+/* 801C662C-801C66E4 00B8 .text      dMenuFmap_getStartStageName__FPv                             Function */
 }
 
 #pragma push
@@ -768,7 +1403,7 @@ asm void dMenuFmap_getStartStageName(void*) {
 #pragma pop
 
 extern "C" {
-/* 801C66E4 03E4 .text      __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc */
+/* 801C66E4-801C6AC8 03E4 .text      __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc Function */
 // dMenu_Fmap_c::dMenu_Fmap_c(JKRExpHeap*, STControl*, CSTControl*, u8, u8, u8, f32, f32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -779,7 +1414,7 @@ asm void __ct__12dMenu_Fmap_cFP10JKRExpHeapP9STControlP10CSTControlUcUcUcffUc() 
 }
 #pragma pop
 
-/* 801C6AC8 029C .text      __dt__12dMenu_Fmap_cFv                                       */
+/* 801C6AC8-801C6D64 029C .text      __dt__12dMenu_Fmap_cFv                                       Function */
 // dMenu_Fmap_c::~dMenu_Fmap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -790,7 +1425,7 @@ asm void __dt__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C6D64 0740 .text      _create__12dMenu_Fmap_cFv                                    */
+/* 801C6D64-801C74A4 0740 .text      _create__12dMenu_Fmap_cFv                                    Function */
 // dMenu_Fmap_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -801,13 +1436,13 @@ asm void _create__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C74A4 0004 .text      _delete__12dMenu_Fmap_cFv                                    */
+/* 801C74A4-801C74A8 0004 .text      _delete__12dMenu_Fmap_cFv                                    ReturnFunction */
 // dMenu_Fmap_c::_delete(void)
 void _delete__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801C74A8 01A8 .text      _move__12dMenu_Fmap_cFv                                      */
+/* 801C74A8-801C7650 01A8 .text      _move__12dMenu_Fmap_cFv                                      Function */
 // dMenu_Fmap_c::_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -818,7 +1453,7 @@ asm void _move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C7650 01A0 .text      _draw__12dMenu_Fmap_cFv                                      */
+/* 801C7650-801C77F0 01A0 .text      _draw__12dMenu_Fmap_cFv                                      Function */
 // dMenu_Fmap_c::_draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -829,7 +1464,7 @@ asm void _draw__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C77F0 030C .text      getNextStatus__12dMenu_Fmap_cFPUc                            */
+/* 801C77F0-801C7AFC 030C .text      getNextStatus__12dMenu_Fmap_cFPUc                            Function */
 // dMenu_Fmap_c::getNextStatus(u8*)
 #pragma push
 #pragma optimization_level 0
@@ -840,7 +1475,7 @@ asm void getNextStatus__12dMenu_Fmap_cFPUc() {
 }
 #pragma pop
 
-/* 801C7AFC 0028 .text      isSync__12dMenu_Fmap_cFv                                     */
+/* 801C7AFC-801C7B24 0028 .text      isSync__12dMenu_Fmap_cFv                                     Function */
 // dMenu_Fmap_c::isSync(void)
 #pragma push
 #pragma optimization_level 0
@@ -851,7 +1486,7 @@ asm void isSync__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C7B24 0108 .text      all_map_init__12dMenu_Fmap_cFv                               */
+/* 801C7B24-801C7C2C 0108 .text      all_map_init__12dMenu_Fmap_cFv                               Function */
 // dMenu_Fmap_c::all_map_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -862,7 +1497,7 @@ asm void all_map_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C7C2C 0604 .text      all_map_proc__12dMenu_Fmap_cFv                               */
+/* 801C7C2C-801C8230 0604 .text      all_map_proc__12dMenu_Fmap_cFv                               Function */
 // dMenu_Fmap_c::all_map_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -873,7 +1508,7 @@ asm void all_map_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8230 00D8 .text      zoom_all_to_region_init__12dMenu_Fmap_cFv                    */
+/* 801C8230-801C8308 00D8 .text      zoom_all_to_region_init__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::zoom_all_to_region_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -884,7 +1519,7 @@ asm void zoom_all_to_region_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8308 00D8 .text      zoom_all_to_region_proc__12dMenu_Fmap_cFv                    */
+/* 801C8308-801C83E0 00D8 .text      zoom_all_to_region_proc__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::zoom_all_to_region_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -895,7 +1530,7 @@ asm void zoom_all_to_region_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C83E0 0058 .text      zoom_region_to_all_init__12dMenu_Fmap_cFv                    */
+/* 801C83E0-801C8438 0058 .text      zoom_region_to_all_init__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::zoom_region_to_all_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -906,7 +1541,7 @@ asm void zoom_region_to_all_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8438 00E0 .text      zoom_region_to_all_proc__12dMenu_Fmap_cFv                    */
+/* 801C8438-801C8518 00E0 .text      zoom_region_to_all_proc__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::zoom_region_to_all_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -917,7 +1552,7 @@ asm void zoom_region_to_all_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8518 00E8 .text      region_map_init__12dMenu_Fmap_cFv                            */
+/* 801C8518-801C8600 00E8 .text      region_map_init__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::region_map_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -928,7 +1563,7 @@ asm void region_map_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8600 0500 .text      region_map_proc__12dMenu_Fmap_cFv                            */
+/* 801C8600-801C8B00 0500 .text      region_map_proc__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::region_map_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -939,7 +1574,7 @@ asm void region_map_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8B00 000C .text      to_portal_warp_map_init__12dMenu_Fmap_cFv                    */
+/* 801C8B00-801C8B0C 000C .text      to_portal_warp_map_init__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::to_portal_warp_map_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -950,7 +1585,7 @@ asm void to_portal_warp_map_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8B0C 003C .text      to_portal_warp_map_proc__12dMenu_Fmap_cFv                    */
+/* 801C8B0C-801C8B48 003C .text      to_portal_warp_map_proc__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::to_portal_warp_map_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -961,7 +1596,7 @@ asm void to_portal_warp_map_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8B48 00C4 .text      portal_warp_map_init__12dMenu_Fmap_cFv                       */
+/* 801C8B48-801C8C0C 00C4 .text      portal_warp_map_init__12dMenu_Fmap_cFv                       Function */
 // dMenu_Fmap_c::portal_warp_map_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -972,7 +1607,7 @@ asm void portal_warp_map_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C8C0C 0498 .text      portal_warp_map_proc__12dMenu_Fmap_cFv                       */
+/* 801C8C0C-801C90A4 0498 .text      portal_warp_map_proc__12dMenu_Fmap_cFv                       Function */
 // dMenu_Fmap_c::portal_warp_map_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -983,13 +1618,13 @@ asm void portal_warp_map_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C90A4 0004 .text      portal_warp_select_init__12dMenu_Fmap_cFv                    */
+/* 801C90A4-801C90A8 0004 .text      portal_warp_select_init__12dMenu_Fmap_cFv                    ReturnFunction */
 // dMenu_Fmap_c::portal_warp_select_init(void)
 void portal_warp_select_init__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801C90A8 0130 .text      portal_warp_select_proc__12dMenu_Fmap_cFv                    */
+/* 801C90A8-801C91D8 0130 .text      portal_warp_select_proc__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::portal_warp_select_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1000,7 +1635,7 @@ asm void portal_warp_select_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C91D8 0060 .text      portal_warp_forbid_init__12dMenu_Fmap_cFv                    */
+/* 801C91D8-801C9238 0060 .text      portal_warp_forbid_init__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::portal_warp_forbid_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1011,7 +1646,7 @@ asm void portal_warp_forbid_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9238 006C .text      portal_warp_forbid_proc__12dMenu_Fmap_cFv                    */
+/* 801C9238-801C92A4 006C .text      portal_warp_forbid_proc__12dMenu_Fmap_cFv                    Function */
 // dMenu_Fmap_c::portal_warp_forbid_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1022,7 +1657,7 @@ asm void portal_warp_forbid_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C92A4 0060 .text      zoom_region_to_spot_init__12dMenu_Fmap_cFv                   */
+/* 801C92A4-801C9304 0060 .text      zoom_region_to_spot_init__12dMenu_Fmap_cFv                   Function */
 // dMenu_Fmap_c::zoom_region_to_spot_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1033,7 +1668,7 @@ asm void zoom_region_to_spot_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9304 00C8 .text      zoom_region_to_spot_proc__12dMenu_Fmap_cFv                   */
+/* 801C9304-801C93CC 00C8 .text      zoom_region_to_spot_proc__12dMenu_Fmap_cFv                   Function */
 // dMenu_Fmap_c::zoom_region_to_spot_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1044,7 +1679,7 @@ asm void zoom_region_to_spot_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C93CC 005C .text      zoom_spot_to_region_init__12dMenu_Fmap_cFv                   */
+/* 801C93CC-801C9428 005C .text      zoom_spot_to_region_init__12dMenu_Fmap_cFv                   Function */
 // dMenu_Fmap_c::zoom_spot_to_region_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1055,7 +1690,7 @@ asm void zoom_spot_to_region_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9428 00E4 .text      zoom_spot_to_region_proc__12dMenu_Fmap_cFv                   */
+/* 801C9428-801C950C 00E4 .text      zoom_spot_to_region_proc__12dMenu_Fmap_cFv                   Function */
 // dMenu_Fmap_c::zoom_spot_to_region_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1066,7 +1701,7 @@ asm void zoom_spot_to_region_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C950C 010C .text      spot_map_init__12dMenu_Fmap_cFv                              */
+/* 801C950C-801C9618 010C .text      spot_map_init__12dMenu_Fmap_cFv                              Function */
 // dMenu_Fmap_c::spot_map_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1077,7 +1712,7 @@ asm void spot_map_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9618 0434 .text      spot_map_proc__12dMenu_Fmap_cFv                              */
+/* 801C9618-801C9A4C 0434 .text      spot_map_proc__12dMenu_Fmap_cFv                              Function */
 // dMenu_Fmap_c::spot_map_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -1088,7 +1723,7 @@ asm void spot_map_proc__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9A4C 0118 .text      portal_demo1_init__12dMenu_Fmap_cFv                          */
+/* 801C9A4C-801C9B64 0118 .text      portal_demo1_init__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo1_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1099,7 +1734,7 @@ asm void portal_demo1_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9B64 0118 .text      portal_demo1_move__12dMenu_Fmap_cFv                          */
+/* 801C9B64-801C9C7C 0118 .text      portal_demo1_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo1_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1110,7 +1745,7 @@ asm void portal_demo1_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9C7C 004C .text      portal_demo2_init__12dMenu_Fmap_cFv                          */
+/* 801C9C7C-801C9CC8 004C .text      portal_demo2_init__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo2_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1121,7 +1756,7 @@ asm void portal_demo2_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9CC8 0098 .text      portal_demo2_move__12dMenu_Fmap_cFv                          */
+/* 801C9CC8-801C9D60 0098 .text      portal_demo2_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo2_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1132,7 +1767,7 @@ asm void portal_demo2_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9D60 0054 .text      portal_demo3_init__12dMenu_Fmap_cFv                          */
+/* 801C9D60-801C9DB4 0054 .text      portal_demo3_init__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo3_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1143,7 +1778,7 @@ asm void portal_demo3_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9DB4 0104 .text      portal_demo3_move__12dMenu_Fmap_cFv                          */
+/* 801C9DB4-801C9EB8 0104 .text      portal_demo3_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo3_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1154,7 +1789,7 @@ asm void portal_demo3_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9EB8 005C .text      portal_demo4_init__12dMenu_Fmap_cFv                          */
+/* 801C9EB8-801C9F14 005C .text      portal_demo4_init__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo4_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1165,7 +1800,7 @@ asm void portal_demo4_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9F14 0068 .text      portal_demo4_move__12dMenu_Fmap_cFv                          */
+/* 801C9F14-801C9F7C 0068 .text      portal_demo4_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo4_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1176,7 +1811,7 @@ asm void portal_demo4_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9F7C 0040 .text      portal_demo5_init__12dMenu_Fmap_cFv                          */
+/* 801C9F7C-801C9FBC 0040 .text      portal_demo5_init__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo5_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1187,7 +1822,7 @@ asm void portal_demo5_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801C9FBC 019C .text      portal_demo5_move__12dMenu_Fmap_cFv                          */
+/* 801C9FBC-801CA158 019C .text      portal_demo5_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo5_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1198,13 +1833,13 @@ asm void portal_demo5_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA158 0004 .text      portal_demo6_init__12dMenu_Fmap_cFv                          */
+/* 801CA158-801CA15C 0004 .text      portal_demo6_init__12dMenu_Fmap_cFv                          ReturnFunction */
 // dMenu_Fmap_c::portal_demo6_init(void)
 void portal_demo6_init__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801CA15C 008C .text      portal_demo6_move__12dMenu_Fmap_cFv                          */
+/* 801CA15C-801CA1E8 008C .text      portal_demo6_move__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::portal_demo6_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1215,7 +1850,7 @@ asm void portal_demo6_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA1E8 010C .text      yamiboss_demo1_init__12dMenu_Fmap_cFv                        */
+/* 801CA1E8-801CA2F4 010C .text      yamiboss_demo1_init__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo1_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1226,7 +1861,7 @@ asm void yamiboss_demo1_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA2F4 0058 .text      yamiboss_demo1_move__12dMenu_Fmap_cFv                        */
+/* 801CA2F4-801CA34C 0058 .text      yamiboss_demo1_move__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo1_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1237,7 +1872,7 @@ asm void yamiboss_demo1_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA34C 0010 .text      yamiboss_demo2_init__12dMenu_Fmap_cFv                        */
+/* 801CA34C-801CA35C 0010 .text      yamiboss_demo2_init__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo2_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1248,7 +1883,7 @@ asm void yamiboss_demo2_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA35C 00B0 .text      yamiboss_demo2_move__12dMenu_Fmap_cFv                        */
+/* 801CA35C-801CA40C 00B0 .text      yamiboss_demo2_move__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo2_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1259,13 +1894,13 @@ asm void yamiboss_demo2_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA40C 0004 .text      yamiboss_demo3_init__12dMenu_Fmap_cFv                        */
+/* 801CA40C-801CA410 0004 .text      yamiboss_demo3_init__12dMenu_Fmap_cFv                        ReturnFunction */
 // dMenu_Fmap_c::yamiboss_demo3_init(void)
 void yamiboss_demo3_init__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801CA410 0058 .text      yamiboss_demo3_move__12dMenu_Fmap_cFv                        */
+/* 801CA410-801CA468 0058 .text      yamiboss_demo3_move__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo3_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1276,7 +1911,7 @@ asm void yamiboss_demo3_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA468 0058 .text      yamiboss_demo4_init__12dMenu_Fmap_cFv                        */
+/* 801CA468-801CA4C0 0058 .text      yamiboss_demo4_init__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo4_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1287,7 +1922,7 @@ asm void yamiboss_demo4_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA4C0 0084 .text      yamiboss_demo4_move__12dMenu_Fmap_cFv                        */
+/* 801CA4C0-801CA544 0084 .text      yamiboss_demo4_move__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo4_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1298,13 +1933,13 @@ asm void yamiboss_demo4_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA544 0004 .text      yamiboss_demo5_init__12dMenu_Fmap_cFv                        */
+/* 801CA544-801CA548 0004 .text      yamiboss_demo5_init__12dMenu_Fmap_cFv                        ReturnFunction */
 // dMenu_Fmap_c::yamiboss_demo5_init(void)
 void yamiboss_demo5_init__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801CA548 0084 .text      yamiboss_demo5_move__12dMenu_Fmap_cFv                        */
+/* 801CA548-801CA5CC 0084 .text      yamiboss_demo5_move__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::yamiboss_demo5_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1315,7 +1950,7 @@ asm void yamiboss_demo5_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA5CC 01D8 .text      light_demo1_init__12dMenu_Fmap_cFv                           */
+/* 801CA5CC-801CA7A4 01D8 .text      light_demo1_init__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::light_demo1_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1326,7 +1961,7 @@ asm void light_demo1_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA7A4 003C .text      light_demo1_move__12dMenu_Fmap_cFv                           */
+/* 801CA7A4-801CA7E0 003C .text      light_demo1_move__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::light_demo1_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1337,7 +1972,7 @@ asm void light_demo1_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA7E0 0034 .text      light_demo2_init__12dMenu_Fmap_cFv                           */
+/* 801CA7E0-801CA814 0034 .text      light_demo2_init__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::light_demo2_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1348,7 +1983,7 @@ asm void light_demo2_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA814 0060 .text      light_demo2_move__12dMenu_Fmap_cFv                           */
+/* 801CA814-801CA874 0060 .text      light_demo2_move__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::light_demo2_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1359,7 +1994,7 @@ asm void light_demo2_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA874 0140 .text      table_demo1_init__12dMenu_Fmap_cFv                           */
+/* 801CA874-801CA9B4 0140 .text      table_demo1_init__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo1_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1370,7 +2005,7 @@ asm void table_demo1_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CA9B4 00C4 .text      table_demo1_move__12dMenu_Fmap_cFv                           */
+/* 801CA9B4-801CAA78 00C4 .text      table_demo1_move__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo1_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1381,7 +2016,7 @@ asm void table_demo1_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAA78 0044 .text      table_demo2_init__12dMenu_Fmap_cFv                           */
+/* 801CAA78-801CAABC 0044 .text      table_demo2_init__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo2_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1392,7 +2027,7 @@ asm void table_demo2_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAABC 00CC .text      table_demo2_move__12dMenu_Fmap_cFv                           */
+/* 801CAABC-801CAB88 00CC .text      table_demo2_move__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo2_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1403,7 +2038,7 @@ asm void table_demo2_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAB88 0048 .text      table_demo3_init__12dMenu_Fmap_cFv                           */
+/* 801CAB88-801CABD0 0048 .text      table_demo3_init__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo3_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1414,7 +2049,7 @@ asm void table_demo3_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CABD0 0060 .text      table_demo3_move__12dMenu_Fmap_cFv                           */
+/* 801CABD0-801CAC30 0060 .text      table_demo3_move__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::table_demo3_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1425,7 +2060,7 @@ asm void table_demo3_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAC30 004C .text      howl_demo1_init__12dMenu_Fmap_cFv                            */
+/* 801CAC30-801CAC7C 004C .text      howl_demo1_init__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::howl_demo1_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1436,7 +2071,7 @@ asm void howl_demo1_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAC7C 00CC .text      howl_demo1_move__12dMenu_Fmap_cFv                            */
+/* 801CAC7C-801CAD48 00CC .text      howl_demo1_move__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::howl_demo1_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1447,7 +2082,7 @@ asm void howl_demo1_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAD48 000C .text      howl_demo2_init__12dMenu_Fmap_cFv                            */
+/* 801CAD48-801CAD54 000C .text      howl_demo2_init__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::howl_demo2_init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1458,7 +2093,7 @@ asm void howl_demo2_init__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAD54 0048 .text      howl_demo2_move__12dMenu_Fmap_cFv                            */
+/* 801CAD54-801CAD9C 0048 .text      howl_demo2_move__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::howl_demo2_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1469,13 +2104,13 @@ asm void howl_demo2_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CAD9C 0004 .text      howl_demo3_init__12dMenu_Fmap_cFv                            */
+/* 801CAD9C-801CADA0 0004 .text      howl_demo3_init__12dMenu_Fmap_cFv                            ReturnFunction */
 // dMenu_Fmap_c::howl_demo3_init(void)
 void howl_demo3_init__12dMenu_Fmap_cFv() {
 	return;
 }
 
-/* 801CADA0 0024 .text      howl_demo3_move__12dMenu_Fmap_cFv                            */
+/* 801CADA0-801CADC4 0024 .text      howl_demo3_move__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::howl_demo3_move(void)
 #pragma push
 #pragma optimization_level 0
@@ -1486,7 +2121,7 @@ asm void howl_demo3_move__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CADC4 0274 .text      isOpen__12dMenu_Fmap_cFv                                     */
+/* 801CADC4-801CB038 0274 .text      isOpen__12dMenu_Fmap_cFv                                     Function */
 // dMenu_Fmap_c::isOpen(void)
 #pragma push
 #pragma optimization_level 0
@@ -1497,7 +2132,7 @@ asm void isOpen__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB038 01A4 .text      isClose__12dMenu_Fmap_cFv                                    */
+/* 801CB038-801CB1DC 01A4 .text      isClose__12dMenu_Fmap_cFv                                    Function */
 // dMenu_Fmap_c::isClose(void)
 #pragma push
 #pragma optimization_level 0
@@ -1508,7 +2143,7 @@ asm void isClose__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB1DC 0024 .text      getProcess__12dMenu_Fmap_cFv                                 */
+/* 801CB1DC-801CB200 0024 .text      getProcess__12dMenu_Fmap_cFv                                 Function */
 // dMenu_Fmap_c::getProcess(void)
 #pragma push
 #pragma optimization_level 0
@@ -1519,7 +2154,7 @@ asm void getProcess__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB200 0030 .text      getRegionCursor__12dMenu_Fmap_cFv                            */
+/* 801CB200-801CB230 0030 .text      getRegionCursor__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::getRegionCursor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1530,7 +2165,7 @@ asm void getRegionCursor__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB230 0030 .text      getStageCursor__12dMenu_Fmap_cFv                             */
+/* 801CB230-801CB260 0030 .text      getStageCursor__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::getStageCursor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1541,7 +2176,7 @@ asm void getStageCursor__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB260 0030 .text      getStageTransX__12dMenu_Fmap_cFv                             */
+/* 801CB260-801CB290 0030 .text      getStageTransX__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::getStageTransX(void)
 #pragma push
 #pragma optimization_level 0
@@ -1552,7 +2187,7 @@ asm void getStageTransX__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB290 0030 .text      getStageTransZ__12dMenu_Fmap_cFv                             */
+/* 801CB290-801CB2C0 0030 .text      getStageTransZ__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::getStageTransZ(void)
 #pragma push
 #pragma optimization_level 0
@@ -1563,7 +2198,7 @@ asm void getStageTransZ__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB2C0 02B0 .text      isRoomCheck__12dMenu_Fmap_cFii                               */
+/* 801CB2C0-801CB570 02B0 .text      isRoomCheck__12dMenu_Fmap_cFii                               Function */
 // dMenu_Fmap_c::isRoomCheck(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1574,7 +2209,7 @@ asm void isRoomCheck__12dMenu_Fmap_cFii() {
 }
 #pragma pop
 
-/* 801CB570 00F4 .text      checkStRoomData__12dMenu_Fmap_cFv                            */
+/* 801CB570-801CB664 00F4 .text      checkStRoomData__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::checkStRoomData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1585,7 +2220,7 @@ asm void checkStRoomData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB664 006C .text      talkButton__12dMenu_Fmap_cFv                                 */
+/* 801CB664-801CB6D0 006C .text      talkButton__12dMenu_Fmap_cFv                                 Function */
 // dMenu_Fmap_c::talkButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -1596,7 +2231,7 @@ asm void talkButton__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CB6D0 0010 .text      setProcess__12dMenu_Fmap_cFUc                                */
+/* 801CB6D0-801CB6E0 0010 .text      setProcess__12dMenu_Fmap_cFUc                                Function */
 // dMenu_Fmap_c::setProcess(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1607,7 +2242,7 @@ asm void setProcess__12dMenu_Fmap_cFUc() {
 }
 #pragma pop
 
-/* 801CB6E0 0090 .text      setFlash__12dMenu_Fmap_cFUcb                                 */
+/* 801CB6E0-801CB770 0090 .text      setFlash__12dMenu_Fmap_cFUcb                                 Function */
 // dMenu_Fmap_c::setFlash(u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1618,7 +2253,7 @@ asm void setFlash__12dMenu_Fmap_cFUcb() {
 }
 #pragma pop
 
-/* 801CB770 01C8 .text      readWorldData__12dMenu_Fmap_cFUc                             */
+/* 801CB770-801CB938 01C8 .text      readWorldData__12dMenu_Fmap_cFUc                             Function */
 // dMenu_Fmap_c::readWorldData(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1629,7 +2264,7 @@ asm void readWorldData__12dMenu_Fmap_cFUc() {
 }
 #pragma pop
 
-/* 801CB938 05CC .text      readAreaData__12dMenu_Fmap_cFUcb                             */
+/* 801CB938-801CBF04 05CC .text      readAreaData__12dMenu_Fmap_cFUcb                             Function */
 // dMenu_Fmap_c::readAreaData(u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1640,8 +2275,8 @@ asm void readAreaData__12dMenu_Fmap_cFUcb() {
 }
 #pragma pop
 
-/* 801CBF04 0190 .text      readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc */
-// dMenu_Fmap_c::readRoomData(const s8*, dMenu_Fmap_stage_data_c*, void*, int, u8)
+/* 801CBF04-801CC094 0190 .text      readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc Function */
+// dMenu_Fmap_c::readRoomData(const char*, dMenu_Fmap_stage_data_c*, void*, int, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1651,8 +2286,8 @@ asm void readRoomData__12dMenu_Fmap_cFPCcP23dMenu_Fmap_stage_data_cPviUc() {
 }
 #pragma pop
 
-/* 801CC094 01F0 .text      readFieldMapData__12dMenu_Fmap_cFPPvPCcbb                    */
-// dMenu_Fmap_c::readFieldMapData(void**, const s8*, bool, bool)
+/* 801CC094-801CC284 01F0 .text      readFieldMapData__12dMenu_Fmap_cFPPvPCcbb                    Function */
+// dMenu_Fmap_c::readFieldMapData(void**, const char*, bool, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1662,7 +2297,7 @@ asm void readFieldMapData__12dMenu_Fmap_cFPPvPCcbb() {
 }
 #pragma pop
 
-/* 801CC284 002C .text      getExpandedResSize__10JKRArchiveCFPCv                        */
+/* 801CC284-801CC2B0 002C .text      getExpandedResSize__10JKRArchiveCFPCv                        Function */
 // JKRArchive::getExpandedResSize(const void*) const
 #pragma push
 #pragma optimization_level 0
@@ -1673,7 +2308,7 @@ asm void getExpandedResSize__10JKRArchiveCFPCv() {
 }
 #pragma pop
 
-/* 801CC2B0 023C .text      decodeFieldMapData__12dMenu_Fmap_cFv                         */
+/* 801CC2B0-801CC4EC 023C .text      decodeFieldMapData__12dMenu_Fmap_cFv                         Function */
 // dMenu_Fmap_c::decodeFieldMapData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1684,7 +2319,7 @@ asm void decodeFieldMapData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CC4EC 0030 .text      decodePortalData__12dMenu_Fmap_cFv                           */
+/* 801CC4EC-801CC51C 0030 .text      decodePortalData__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::decodePortalData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1695,8 +2330,8 @@ asm void decodePortalData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CC51C 0100 .text      readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc                     */
-// dMenu_Fmap_c::readRoomDzsData(void**, u32, const s8*)
+/* 801CC51C-801CC61C 0100 .text      readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc                     Function */
+// dMenu_Fmap_c::readRoomDzsData(void**, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1706,7 +2341,7 @@ asm void readRoomDzsData__12dMenu_Fmap_cFPPvUlPCc() {
 }
 #pragma pop
 
-/* 801CC61C 018C .text      removeAreaData__12dMenu_Fmap_cFv                             */
+/* 801CC61C-801CC7A8 018C .text      removeAreaData__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::removeAreaData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1717,7 +2352,7 @@ asm void removeAreaData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CC7A8 00B4 .text      removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c    */
+/* 801CC7A8-801CC85C 00B4 .text      removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c    Function */
 // dMenu_Fmap_c::removeRoomData(dMenu_Fmap_stage_data_c*)
 #pragma push
 #pragma optimization_level 0
@@ -1728,7 +2363,7 @@ asm void removeRoomData__12dMenu_Fmap_cFP23dMenu_Fmap_stage_data_c() {
 }
 #pragma pop
 
-/* 801CC85C 0024 .text      setTitleName__12dMenu_Fmap_cFUl                              */
+/* 801CC85C-801CC880 0024 .text      setTitleName__12dMenu_Fmap_cFUl                              Function */
 // dMenu_Fmap_c::setTitleName(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1739,7 +2374,7 @@ asm void setTitleName__12dMenu_Fmap_cFUl() {
 }
 #pragma pop
 
-/* 801CC880 002C .text      setAreaName__12dMenu_Fmap_cFUl                               */
+/* 801CC880-801CC8AC 002C .text      setAreaName__12dMenu_Fmap_cFUl                               Function */
 // dMenu_Fmap_c::setAreaName(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1750,7 +2385,7 @@ asm void setAreaName__12dMenu_Fmap_cFUl() {
 }
 #pragma pop
 
-/* 801CC8AC 0030 .text      setAreaNameZero__12dMenu_Fmap_cFv                            */
+/* 801CC8AC-801CC8DC 0030 .text      setAreaNameZero__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::setAreaNameZero(void)
 #pragma push
 #pragma optimization_level 0
@@ -1761,7 +2396,7 @@ asm void setAreaNameZero__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CC8DC 0194 .text      portalWarpMapMove__12dMenu_Fmap_cFP9STControl                */
+/* 801CC8DC-801CCA70 0194 .text      portalWarpMapMove__12dMenu_Fmap_cFP9STControl                Function */
 // dMenu_Fmap_c::portalWarpMapMove(STControl*)
 #pragma push
 #pragma optimization_level 0
@@ -1772,7 +2407,7 @@ asm void portalWarpMapMove__12dMenu_Fmap_cFP9STControl() {
 }
 #pragma pop
 
-/* 801CCA70 0028 .text      onRoomDataBit__12dMenu_Fmap_cFi                              */
+/* 801CCA70-801CCA98 0028 .text      onRoomDataBit__12dMenu_Fmap_cFi                              Function */
 // dMenu_Fmap_c::onRoomDataBit(int)
 #pragma push
 #pragma optimization_level 0
@@ -1783,7 +2418,7 @@ asm void onRoomDataBit__12dMenu_Fmap_cFi() {
 }
 #pragma pop
 
-/* 801CCA98 002C .text      isRoomDataBit__12dMenu_Fmap_cFi                              */
+/* 801CCA98-801CCAC4 002C .text      isRoomDataBit__12dMenu_Fmap_cFi                              Function */
 // dMenu_Fmap_c::isRoomDataBit(int)
 #pragma push
 #pragma optimization_level 0
@@ -1794,7 +2429,7 @@ asm void isRoomDataBit__12dMenu_Fmap_cFi() {
 }
 #pragma pop
 
-/* 801CCAC4 0044 .text      resetRoomDataBit__12dMenu_Fmap_cFv                           */
+/* 801CCAC4-801CCB08 0044 .text      resetRoomDataBit__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::resetRoomDataBit(void)
 #pragma push
 #pragma optimization_level 0
@@ -1805,7 +2440,7 @@ asm void resetRoomDataBit__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCB08 0290 .text      drawIcon__12dMenu_Fmap_cFfb                                  */
+/* 801CCB08-801CCD98 0290 .text      drawIcon__12dMenu_Fmap_cFfb                                  Function */
 // dMenu_Fmap_c::drawIcon(f32, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1816,7 +2451,7 @@ asm void drawIcon__12dMenu_Fmap_cFfb() {
 }
 #pragma pop
 
-/* 801CCD98 0044 .text      drawLightDropIcon__12dMenu_Fmap_cFv                          */
+/* 801CCD98-801CCDDC 0044 .text      drawLightDropIcon__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::drawLightDropIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1827,7 +2462,7 @@ asm void drawLightDropIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCDDC 0028 .text      drawBatsumarkIcon__12dMenu_Fmap_cFv                          */
+/* 801CCDDC-801CCE04 0028 .text      drawBatsumarkIcon__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::drawBatsumarkIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1838,7 +2473,7 @@ asm void drawBatsumarkIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCE04 0044 .text      drawSnowmanIcon__12dMenu_Fmap_cFv                            */
+/* 801CCE04-801CCE48 0044 .text      drawSnowmanIcon__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::drawSnowmanIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1849,7 +2484,7 @@ asm void drawSnowmanIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCE48 0028 .text      drawGoldWolfIcon__12dMenu_Fmap_cFv                           */
+/* 801CCE48-801CCE70 0028 .text      drawGoldWolfIcon__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::drawGoldWolfIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1860,7 +2495,7 @@ asm void drawGoldWolfIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCE70 0028 .text      drawCoachIcon__12dMenu_Fmap_cFv                              */
+/* 801CCE70-801CCE98 0028 .text      drawCoachIcon__12dMenu_Fmap_cFv                              Function */
 // dMenu_Fmap_c::drawCoachIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1871,7 +2506,7 @@ asm void drawCoachIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCE98 0118 .text      drawPlayEnterIcon__12dMenu_Fmap_cFv                          */
+/* 801CCE98-801CCFB0 0118 .text      drawPlayEnterIcon__12dMenu_Fmap_cFv                          Function */
 // dMenu_Fmap_c::drawPlayEnterIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1882,7 +2517,7 @@ asm void drawPlayEnterIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CCFB0 0050 .text      checkDrawPortalIcon__12dMenu_Fmap_cFii                       */
+/* 801CCFB0-801CD000 0050 .text      checkDrawPortalIcon__12dMenu_Fmap_cFii                       Function */
 // dMenu_Fmap_c::checkDrawPortalIcon(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1893,7 +2528,7 @@ asm void checkDrawPortalIcon__12dMenu_Fmap_cFii() {
 }
 #pragma pop
 
-/* 801CD000 010C .text      searchIcon__12dMenu_Fmap_cFUciPfPf                           */
+/* 801CD000-801CD10C 010C .text      searchIcon__12dMenu_Fmap_cFUciPfPf                           Function */
 // dMenu_Fmap_c::searchIcon(u8, int, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -1904,7 +2539,7 @@ asm void searchIcon__12dMenu_Fmap_cFUciPfPf() {
 }
 #pragma pop
 
-/* 801CD10C 0104 .text      drawIcon__12dMenu_Fmap_cFUci                                 */
+/* 801CD10C-801CD210 0104 .text      drawIcon__12dMenu_Fmap_cFUci                                 Function */
 // dMenu_Fmap_c::drawIcon(u8, int)
 #pragma push
 #pragma optimization_level 0
@@ -1915,7 +2550,7 @@ asm void drawIcon__12dMenu_Fmap_cFUci() {
 }
 #pragma pop
 
-/* 801CD210 0044 .text      drawEnterIcon__12dMenu_Fmap_cFv                              */
+/* 801CD210-801CD254 0044 .text      drawEnterIcon__12dMenu_Fmap_cFv                              Function */
 // dMenu_Fmap_c::drawEnterIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1926,7 +2561,7 @@ asm void drawEnterIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD254 00A8 .text      drawPortalIcon__12dMenu_Fmap_cFv                             */
+/* 801CD254-801CD2FC 00A8 .text      drawPortalIcon__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::drawPortalIcon(void)
 #pragma push
 #pragma optimization_level 0
@@ -1937,7 +2572,7 @@ asm void drawPortalIcon__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD2FC 0054 .text      getRegionStageNum__12dMenu_Fmap_cFi                          */
+/* 801CD2FC-801CD350 0054 .text      getRegionStageNum__12dMenu_Fmap_cFi                          Function */
 // dMenu_Fmap_c::getRegionStageNum(int)
 #pragma push
 #pragma optimization_level 0
@@ -1948,7 +2583,7 @@ asm void getRegionStageNum__12dMenu_Fmap_cFi() {
 }
 #pragma pop
 
-/* 801CD350 0018 .text      getNowFmapRegionData__12dMenu_Fmap_cFv                       */
+/* 801CD350-801CD368 0018 .text      getNowFmapRegionData__12dMenu_Fmap_cFv                       Function */
 // dMenu_Fmap_c::getNowFmapRegionData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1959,7 +2594,7 @@ asm void getNowFmapRegionData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD368 0018 .text      getNowFmapStageData__12dMenu_Fmap_cFv                        */
+/* 801CD368-801CD380 0018 .text      getNowFmapStageData__12dMenu_Fmap_cFv                        Function */
 // dMenu_Fmap_c::getNowFmapStageData(void)
 #pragma push
 #pragma optimization_level 0
@@ -1970,8 +2605,8 @@ asm void getNowFmapStageData__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD380 0070 .text      searchPortalStageID__12dMenu_Fmap_cFPc                       */
-// dMenu_Fmap_c::searchPortalStageID(s8*)
+/* 801CD380-801CD3F0 0070 .text      searchPortalStageID__12dMenu_Fmap_cFPc                       Function */
+// dMenu_Fmap_c::searchPortalStageID(char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1981,7 +2616,7 @@ asm void searchPortalStageID__12dMenu_Fmap_cFPc() {
 }
 #pragma pop
 
-/* 801CD3F0 0070 .text      drawDebugStage__12dMenu_Fmap_cFv                             */
+/* 801CD3F0-801CD460 0070 .text      drawDebugStage__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::drawDebugStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -1992,7 +2627,7 @@ asm void drawDebugStage__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD460 016C .text      arrowPosInit__12dMenu_Fmap_cFv                               */
+/* 801CD460-801CD5CC 016C .text      arrowPosInit__12dMenu_Fmap_cFv                               Function */
 // dMenu_Fmap_c::arrowPosInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -2003,7 +2638,7 @@ asm void arrowPosInit__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD5CC 01A4 .text      tableArrowPosInit__12dMenu_Fmap_cFb                          */
+/* 801CD5CC-801CD770 01A4 .text      tableArrowPosInit__12dMenu_Fmap_cFb                          Function */
 // dMenu_Fmap_c::tableArrowPosInit(bool)
 #pragma push
 #pragma optimization_level 0
@@ -2014,7 +2649,7 @@ asm void tableArrowPosInit__12dMenu_Fmap_cFb() {
 }
 #pragma pop
 
-/* 801CD770 00A4 .text      yamibossArrowPosInit__12dMenu_Fmap_cFv                       */
+/* 801CD770-801CD814 00A4 .text      yamibossArrowPosInit__12dMenu_Fmap_cFv                       Function */
 // dMenu_Fmap_c::yamibossArrowPosInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -2025,7 +2660,7 @@ asm void yamibossArrowPosInit__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD814 00A0 .text      howlArrowPosInit__12dMenu_Fmap_cFv                           */
+/* 801CD814-801CD8B4 00A0 .text      howlArrowPosInit__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::howlArrowPosInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -2036,7 +2671,7 @@ asm void howlArrowPosInit__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD8B4 0078 .text      getHowlRegionID__12dMenu_Fmap_cFv                            */
+/* 801CD8B4-801CD92C 0078 .text      getHowlRegionID__12dMenu_Fmap_cFv                            Function */
 // dMenu_Fmap_c::getHowlRegionID(void)
 #pragma push
 #pragma optimization_level 0
@@ -2047,7 +2682,7 @@ asm void getHowlRegionID__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD92C 0030 .text      isLightVesselGet__12dMenu_Fmap_cFv                           */
+/* 801CD92C-801CD95C 0030 .text      isLightVesselGet__12dMenu_Fmap_cFv                           Function */
 // dMenu_Fmap_c::isLightVesselGet(void)
 #pragma push
 #pragma optimization_level 0
@@ -2058,7 +2693,7 @@ asm void isLightVesselGet__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CD95C 00D0 .text      getPlayerPos2D__12dMenu_Fmap_cFv                             */
+/* 801CD95C-801CDA2C 00D0 .text      getPlayerPos2D__12dMenu_Fmap_cFv                             Function */
 // dMenu_Fmap_c::getPlayerPos2D(void)
 #pragma push
 #pragma optimization_level 0
@@ -2069,7 +2704,7 @@ asm void getPlayerPos2D__12dMenu_Fmap_cFv() {
 }
 #pragma pop
 
-/* 801CDA2C 0048 .text      __dt__9dMf_HIO_cFv                                           */
+/* 801CDA2C-801CDA74 0048 .text      __dt__9dMf_HIO_cFv                                           Function */
 // dMf_HIO_c::~dMf_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2080,7 +2715,7 @@ asm void __dt__9dMf_HIO_cFv() {
 }
 #pragma pop
 
-/* 801CDA74 05F4 .text      __sinit_d_menu_fmap_cpp                                      */
+/* 801CDA74-801CE068 05F4 .text      __sinit_d_menu_fmap_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

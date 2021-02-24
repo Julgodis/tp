@@ -11,7 +11,13 @@
 extern void JPACalcKeyAnmValue(f32, u16, const f32*); /* JPACalcKeyAnmValue__FfUsPCf */
 
 extern "C" {
+/* Function             */
+extern void __ct__11JPAKeyBlockFPCUc();
+/* Function             */
+extern void calc__11JPAKeyBlockFf();
+/* Function             */
 extern void JPACalcKeyAnmValue__FfUsPCf();
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JPAKeyBlock__LIT_2215;
 }
 
@@ -21,7 +27,7 @@ SECTION_SDATA2 extern f64 JPAKeyBlock__LIT_2215;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455350 0008 .sdata2    @2215                                                        */
+/* 80455350-80455358 0008 .sdata2    @2215                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JPAKeyBlock__LIT_2215 = 4503601774854144.000000;
 }
@@ -32,7 +38,7 @@ SECTION_SDATA2 f64 JPAKeyBlock__LIT_2215 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027D730 0010 .text      __ct__11JPAKeyBlockFPCUc                                     */
+/* 8027D730-8027D740 0010 .text      __ct__11JPAKeyBlockFPCUc                                     Function */
 // JPAKeyBlock::JPAKeyBlock(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -43,7 +49,7 @@ asm void __ct__11JPAKeyBlockFPCUc() {
 }
 #pragma pop
 
-/* 8027D740 0094 .text      calc__11JPAKeyBlockFf                                        */
+/* 8027D740-8027D7D4 0094 .text      calc__11JPAKeyBlockFf                                        Function */
 // JPAKeyBlock::calc(f32)
 #pragma push
 #pragma optimization_level 0

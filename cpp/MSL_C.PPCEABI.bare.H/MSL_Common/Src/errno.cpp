@@ -8,14 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+}
+
 
 /* ###################################################################################### */
 /*                                         .sbss                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 804519A8 0004 .sbss      errno                                                        */
-SECTION_SBSS u8 errno[4];
-SECTION_SBSS u8 pad_804519AC[4];
+/* 804519A8-804519B0 0004 .sbss      errno                                                        ZeroInitializedData */
+SECTION_SBSS u8 errno[4 + 4 /* padding */];
 }
 

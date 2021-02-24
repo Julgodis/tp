@@ -8,13 +8,30 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void init__12JASSeqReaderFv();
+/* Function             */
+extern void init__12JASSeqReaderFPv();
+/* Function             */
+extern void call__12JASSeqReaderFUl();
+/* Function             */
+extern void loopStart__12JASSeqReaderFUl();
+/* Function             */
+extern void loopEnd__12JASSeqReaderFv();
+/* Function             */
+extern void ret__12JASSeqReaderFv();
+/* Function             */
+extern void readMidiValue__12JASSeqReaderFv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80296108 0040 .text      init__12JASSeqReaderFv                                       */
+/* 80296108-80296148 0040 .text      init__12JASSeqReaderFv                                       Function */
 // JASSeqReader::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +42,7 @@ asm void init__12JASSeqReaderFv() {
 }
 #pragma pop
 
-/* 80296148 0044 .text      init__12JASSeqReaderFPv                                      */
+/* 80296148-8029618C 0044 .text      init__12JASSeqReaderFPv                                      Function */
 // JASSeqReader::init(void*)
 #pragma push
 #pragma optimization_level 0
@@ -36,7 +53,7 @@ asm void init__12JASSeqReaderFPv() {
 }
 #pragma pop
 
-/* 8029618C 0040 .text      call__12JASSeqReaderFUl                                      */
+/* 8029618C-802961CC 0040 .text      call__12JASSeqReaderFUl                                      Function */
 // JASSeqReader::call(u32)
 #pragma push
 #pragma optimization_level 0
@@ -47,7 +64,7 @@ asm void call__12JASSeqReaderFUl() {
 }
 #pragma pop
 
-/* 802961CC 0044 .text      loopStart__12JASSeqReaderFUl                                 */
+/* 802961CC-80296210 0044 .text      loopStart__12JASSeqReaderFUl                                 Function */
 // JASSeqReader::loopStart(u32)
 #pragma push
 #pragma optimization_level 0
@@ -58,7 +75,7 @@ asm void loopStart__12JASSeqReaderFUl() {
 }
 #pragma pop
 
-/* 80296210 006C .text      loopEnd__12JASSeqReaderFv                                    */
+/* 80296210-8029627C 006C .text      loopEnd__12JASSeqReaderFv                                    Function */
 // JASSeqReader::loopEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -69,7 +86,7 @@ asm void loopEnd__12JASSeqReaderFv() {
 }
 #pragma pop
 
-/* 8029627C 0034 .text      ret__12JASSeqReaderFv                                        */
+/* 8029627C-802962B0 0034 .text      ret__12JASSeqReaderFv                                        Function */
 // JASSeqReader::ret(void)
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +97,7 @@ asm void ret__12JASSeqReaderFv() {
 }
 #pragma pop
 
-/* 802962B0 006C .text      readMidiValue__12JASSeqReaderFv                              */
+/* 802962B0-8029631C 006C .text      readMidiValue__12JASSeqReaderFv                              Function */
 // JASSeqReader::readMidiValue(void)
 #pragma push
 #pragma optimization_level 0

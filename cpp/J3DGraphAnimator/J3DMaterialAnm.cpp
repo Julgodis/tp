@@ -9,13 +9,34 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __dt__14J3DMaterialAnmFv();
+/* Function             */
 extern void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+/* Function             */
 extern void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
+/* Function             */
 extern void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor();
+/* Function             */
+extern void initialize__14J3DMaterialAnmFv();
+/* Function             */
 extern void calc__14J3DMaterialAnmCFP11J3DMaterial();
+/* Function             */
+extern void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+/* Function             */
+extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+/* Function             */
+extern void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+/* Function             */
+extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+/* Function             */
+extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_27();
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J3DMaterialAnm[4];
 }
 
 
@@ -24,8 +45,8 @@ extern void _restgpr_27();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CEE60 0010 .data      __vt__14J3DMaterialAnm                                       */
-SECTION_DATA const  void* __vt__14J3DMaterialAnm[4] = {
+/* 803CEE60-803CEE70 0010 .data      __vt__14J3DMaterialAnm                                       VTableData */
+SECTION_DATA void* __vt__14J3DMaterialAnm[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14J3DMaterialAnmFv,
@@ -39,7 +60,7 @@ SECTION_DATA const  void* __vt__14J3DMaterialAnm[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8032C320 00A4 .text      initialize__14J3DMaterialAnmFv                               */
+/* 8032C320-8032C3C4 00A4 .text      initialize__14J3DMaterialAnmFv                               Function */
 // J3DMaterialAnm::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +71,7 @@ asm void initialize__14J3DMaterialAnmFv() {
 }
 #pragma pop
 
-/* 8032C3C4 01E0 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       */
+/* 8032C3C4-8032C5A4 01E0 .text      calc__14J3DMaterialAnmCFP11J3DMaterial                       Function */
 // J3DMaterialAnm::calc(J3DMaterial*) const
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +82,7 @@ asm void calc__14J3DMaterialAnmCFP11J3DMaterial() {
 }
 #pragma pop
 
-/* 8032C5A4 0040 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          */
+/* 8032C5A4-8032C5E4 0040 .text      setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm          Function */
 // J3DMaterialAnm::setMatColorAnm(int, J3DMatColorAnm*)
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +93,7 @@ asm void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm() {
 }
 #pragma pop
 
-/* 8032C5E4 0040 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              */
+/* 8032C5E4-8032C624 0040 .text      setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm              Function */
 // J3DMaterialAnm::setTexMtxAnm(int, J3DTexMtxAnm*)
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +104,7 @@ asm void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm() {
 }
 #pragma pop
 
-/* 8032C624 0040 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                */
+/* 8032C624-8032C664 0040 .text      setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm                Function */
 // J3DMaterialAnm::setTexNoAnm(int, J3DTexNoAnm*)
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +115,7 @@ asm void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm() {
 }
 #pragma pop
 
-/* 8032C664 0040 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          */
+/* 8032C664-8032C6A4 0040 .text      setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm          Function */
 // J3DMaterialAnm::setTevColorAnm(int, J3DTevColorAnm*)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +126,7 @@ asm void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm() {
 }
 #pragma pop
 
-/* 8032C6A4 0040 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        */
+/* 8032C6A4-8032C6E4 0040 .text      setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm        Function */
 // J3DMaterialAnm::setTevKColorAnm(int, J3DTevKColorAnm*)
 #pragma push
 #pragma optimization_level 0

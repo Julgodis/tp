@@ -14,61 +14,119 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* ReturnFunction       */
 extern void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf();
+/* Function             */
 extern void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
 extern void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock();
+/* Function             */
 extern void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+/* Function             */
+extern void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+/* Function             */
 extern void init__13JPAFieldBlockFP7JKRHeap();
+/* Function             */
 extern void __dt__12JPAFieldBaseFv();
+/* Function             */
 extern void __dt__12JPAFieldSpinFv();
+/* Function             */
 extern void __dt__12JPAFieldDragFv();
+/* Function             */
 extern void __dt__14JPAFieldRandomFv();
+/* Function             */
 extern void __dt__18JPAFieldConvectionFv();
+/* Function             */
 extern void __dt__14JPAFieldVortexFv();
+/* Function             */
 extern void __dt__14JPAFieldNewtonFv();
+/* Function             */
 extern void __dt__14JPAFieldMagnetFv();
+/* Function             */
 extern void __dt__11JPAFieldAirFv();
+/* Function             */
 extern void __dt__15JPAFieldGravityFv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSMTXRotAxisRad();
+/* Function             */
 extern void PSMTXMultVecSR();
+/* Function             */
 extern void PSVECMag();
+/* Function             */
 extern void PSVECCrossProduct();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern u8 LIT_3259[36];
-SECTION_DATA extern const void* __vt__12JPAFieldBase[5];
-SECTION_DATA extern const void* __vt__12JPAFieldSpin[5];
-SECTION_DATA extern const void* __vt__12JPAFieldDrag[5];
-SECTION_DATA extern const void* __vt__14JPAFieldRandom[5];
-SECTION_DATA extern const void* __vt__18JPAFieldConvection[5];
-SECTION_DATA extern const void* __vt__14JPAFieldVortex[5];
-SECTION_DATA extern const void* __vt__14JPAFieldNewton[5];
-SECTION_DATA extern const void* __vt__14JPAFieldMagnet[5];
-SECTION_DATA extern const void* __vt__11JPAFieldAir[5];
-SECTION_DATA extern const void* __vt__15JPAFieldGravity[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3259[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JPAFieldBase[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JPAFieldSpin[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JPAFieldDrag[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JPAFieldRandom[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18JPAFieldConvection[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JPAFieldVortex[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JPAFieldNewton[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JPAFieldMagnet[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11JPAFieldAir[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15JPAFieldGravity[6];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_epsilon[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2353;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2354[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2459;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JPAFieldBlock__LIT_2460;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JPAFieldBlock__LIT_2461;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2656;
 }
 
@@ -78,86 +136,92 @@ SECTION_SDATA2 extern f32 LIT_2656;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C44A8 0024 .data      @3259                                                        */
-SECTION_DATA u8 LIT_3259[36] = {
-	0x80, 0x27, 0xD1, 0xBC, 0x80, 0x27, 0xD1, 0xF0, 0x80, 0x27, 0xD2, 0x24, 0x80, 0x27, 0xD2, 0x58,
-	0x80, 0x27, 0xD2, 0x8C, 0x80, 0x27, 0xD2, 0xC0, 0x80, 0x27, 0xD2, 0xF4, 0x80, 0x27, 0xD3, 0x28,
-	0x80, 0x27, 0xD3, 0x5C,
+/* 803C44A8-803C44CC 0024 .data      @3259                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3259[9] = {
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+63),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+76),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+89),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+102),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+115),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+128),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+141),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+154),
+	(void*)(((u32*)init__13JPAFieldBlockFP7JKRHeap)+167),
 };
-/* 803C44CC 0014 .data      __vt__12JPAFieldBase                                         */
-SECTION_DATA const  void* __vt__12JPAFieldBase[5] = {
+/* 803C44CC-803C44E0 0014 .data      __vt__12JPAFieldBase                                         VTableData */
+SECTION_DATA void* __vt__12JPAFieldBase[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JPAFieldBaseFv,
 	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	NULL,
 };
-/* 803C44E0 0014 .data      __vt__12JPAFieldSpin                                         */
-SECTION_DATA const  void* __vt__12JPAFieldSpin[5] = {
+/* 803C44E0-803C44F4 0014 .data      __vt__12JPAFieldSpin                                         VTableData */
+SECTION_DATA void* __vt__12JPAFieldSpin[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JPAFieldSpinFv,
 	(void*)prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C44F4 0014 .data      __vt__12JPAFieldDrag                                         */
-SECTION_DATA const  void* __vt__12JPAFieldDrag[5] = {
+/* 803C44F4-803C4508 0014 .data      __vt__12JPAFieldDrag                                         VTableData */
+SECTION_DATA void* __vt__12JPAFieldDrag[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JPAFieldDragFv,
 	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C4508 0014 .data      __vt__14JPAFieldRandom                                       */
-SECTION_DATA const  void* __vt__14JPAFieldRandom[5] = {
+/* 803C4508-803C451C 0014 .data      __vt__14JPAFieldRandom                                       VTableData */
+SECTION_DATA void* __vt__14JPAFieldRandom[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JPAFieldRandomFv,
 	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C451C 0014 .data      __vt__18JPAFieldConvection                                   */
-SECTION_DATA const  void* __vt__18JPAFieldConvection[5] = {
+/* 803C451C-803C4530 0014 .data      __vt__18JPAFieldConvection                                   VTableData */
+SECTION_DATA void* __vt__18JPAFieldConvection[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18JPAFieldConvectionFv,
 	(void*)prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C4530 0014 .data      __vt__14JPAFieldVortex                                       */
-SECTION_DATA const  void* __vt__14JPAFieldVortex[5] = {
+/* 803C4530-803C4544 0014 .data      __vt__14JPAFieldVortex                                       VTableData */
+SECTION_DATA void* __vt__14JPAFieldVortex[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JPAFieldVortexFv,
 	(void*)prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C4544 0014 .data      __vt__14JPAFieldNewton                                       */
-SECTION_DATA const  void* __vt__14JPAFieldNewton[5] = {
+/* 803C4544-803C4558 0014 .data      __vt__14JPAFieldNewton                                       VTableData */
+SECTION_DATA void* __vt__14JPAFieldNewton[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JPAFieldNewtonFv,
 	(void*)prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C4558 0014 .data      __vt__14JPAFieldMagnet                                       */
-SECTION_DATA const  void* __vt__14JPAFieldMagnet[5] = {
+/* 803C4558-803C456C 0014 .data      __vt__14JPAFieldMagnet                                       VTableData */
+SECTION_DATA void* __vt__14JPAFieldMagnet[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JPAFieldMagnetFv,
 	(void*)prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C456C 0014 .data      __vt__11JPAFieldAir                                          */
-SECTION_DATA const  void* __vt__11JPAFieldAir[5] = {
+/* 803C456C-803C4580 0014 .data      __vt__11JPAFieldAir                                          VTableData */
+SECTION_DATA void* __vt__11JPAFieldAir[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JPAFieldAirFv,
 	(void*)prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock,
 	(void*)calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
-/* 803C4580 0014 .data      __vt__15JPAFieldGravity                                      */
-SECTION_DATA const  void* __vt__15JPAFieldGravity[6] = {
+/* 803C4580-803C4598 0014 .data      __vt__15JPAFieldGravity                                      VTableData */
+SECTION_DATA void* __vt__15JPAFieldGravity[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15JPAFieldGravityFv,
@@ -174,23 +238,23 @@ SECTION_DATA const  void* __vt__15JPAFieldGravity[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455338 0004 .sdata2    @2353                                                        */
+/* 80455338-8045533C 0004 .sdata2    @2353                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_2353 = 1.000000f;
-/* 8045533C 0004 .sdata2    @2354                                                        */
+/* 8045533C-80455340 0004 .sdata2    @2354                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2354[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455340 0004 .sdata2    @2459                                                        */
+/* 80455340-80455344 0004 .sdata2    @2459                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 LIT_2459 = 32.000000f;
-/* 80455344 0004 .sdata2    @2460                                                        */
+/* 80455344-80455348 0004 .sdata2    @2460                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 JPAFieldBlock__LIT_2460 = 0.500000f;
-/* 80455348 0004 .sdata2    @2461                                                        */
+/* 80455348-8045534C 0004 .sdata2    @2461                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 JPAFieldBlock__LIT_2461 = 3.000000f;
-/* 8045534C 0004 .sdata2    @2656                                                        */
+/* 8045534C-80455350 0004 .sdata2    @2656                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 LIT_2656 = 10.000000f;
 }
@@ -201,7 +265,7 @@ SECTION_SDATA2 f32 LIT_2656 = 10.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027BDEC 012C .text      calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle */
+/* 8027BDEC-8027BF18 012C .text      calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldBase::calcAffect(JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -212,7 +276,7 @@ asm void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8027BF18 009C .text      calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf            */
+/* 8027BF18-8027BFB4 009C .text      calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf            Function */
 // JPAFieldBase::calcFadeAffect(JPAFieldBlock*, f32) const
 #pragma push
 #pragma optimization_level 0
@@ -223,7 +287,7 @@ asm void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf() {
 }
 #pragma pop
 
-/* 8027BFB4 00A0 .text      prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027BFB4-8027C054 00A0 .text      prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldGravity::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -234,7 +298,7 @@ asm void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027C054 0028 .text      calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027C054-8027C07C 0028 .text      calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldGravity::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -245,7 +309,7 @@ asm void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABase
 }
 #pragma pop
 
-/* 8027C07C 013C .text      prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027C07C-8027C1B8 013C .text      prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldAir::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -256,7 +320,7 @@ asm void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027C1B8 0094 .text      calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027C1B8-8027C24C 0094 .text      calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldAir::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -267,7 +331,7 @@ asm void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABasePart
 }
 #pragma pop
 
-/* 8027C24C 0050 .text      prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027C24C-8027C29C 0050 .text      prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldMagnet::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -278,7 +342,7 @@ asm void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027C29C 00D0 .text      calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027C29C-8027C36C 00D0 .text      calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldMagnet::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -289,7 +353,7 @@ asm void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseP
 }
 #pragma pop
 
-/* 8027C36C 0074 .text      prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027C36C-8027C3E0 0074 .text      prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldNewton::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -300,7 +364,7 @@ asm void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027C3E0 018C .text      calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027C3E0-8027C56C 018C .text      calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldNewton::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -311,7 +375,7 @@ asm void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseP
 }
 #pragma pop
 
-/* 8027C56C 0108 .text      prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027C56C-8027C674 0108 .text      prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldVortex::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -322,7 +386,7 @@ asm void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027C674 01A0 .text      calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027C674-8027C814 01A0 .text      calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldVortex::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -333,7 +397,7 @@ asm void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseP
 }
 #pragma pop
 
-/* 8027C814 0280 .text      prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027C814-8027CA94 0280 .text      prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldConvection::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -344,7 +408,7 @@ asm void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027CA94 0238 .text      calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027CA94-8027CCCC 0238 .text      calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldConvection::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +419,7 @@ asm void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPAB
 }
 #pragma pop
 
-/* 8027CCCC 0118 .text      calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027CCCC-8027CDE4 0118 .text      calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldRandom::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +430,7 @@ asm void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseP
 }
 #pragma pop
 
-/* 8027CDE4 0080 .text      calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027CDE4-8027CE64 0080 .text      calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldDrag::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +441,7 @@ asm void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABasePar
 }
 #pragma pop
 
-/* 8027CE64 0144 .text      prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock */
+/* 8027CE64-8027CFA8 0144 .text      prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock Function */
 // JPAFieldSpin::prepare(JPAEmitterWorkData*, JPAFieldBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +452,7 @@ asm void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock() {
 }
 #pragma pop
 
-/* 8027CFA8 00E0 .text      calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle */
+/* 8027CFA8-8027D088 00E0 .text      calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle Function */
 // JPAFieldSpin::calc(JPAEmitterWorkData*, JPAFieldBlock*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -399,7 +463,7 @@ asm void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABasePar
 }
 #pragma pop
 
-/* 8027D088 0038 .text      __ct__13JPAFieldBlockFPCUcP7JKRHeap                          */
+/* 8027D088-8027D0C0 0038 .text      __ct__13JPAFieldBlockFPCUcP7JKRHeap                          Function */
 // JPAFieldBlock::JPAFieldBlock(const u8*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -410,7 +474,7 @@ asm void __ct__13JPAFieldBlockFPCUcP7JKRHeap() {
 }
 #pragma pop
 
-/* 8027D0C0 02EC .text      init__13JPAFieldBlockFP7JKRHeap                              */
+/* 8027D0C0-8027D3AC 02EC .text      init__13JPAFieldBlockFP7JKRHeap                              Function */
 // JPAFieldBlock::init(JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +485,7 @@ asm void init__13JPAFieldBlockFP7JKRHeap() {
 }
 #pragma pop
 
-/* 8027D3AC 0048 .text      __dt__12JPAFieldBaseFv                                       */
+/* 8027D3AC-8027D3F4 0048 .text      __dt__12JPAFieldBaseFv                                       Function */
 // JPAFieldBase::~JPAFieldBase(void)
 #pragma push
 #pragma optimization_level 0
@@ -432,7 +496,7 @@ asm void __dt__12JPAFieldBaseFv() {
 }
 #pragma pop
 
-/* 8027D3F4 005C .text      __dt__12JPAFieldSpinFv                                       */
+/* 8027D3F4-8027D450 005C .text      __dt__12JPAFieldSpinFv                                       Function */
 // JPAFieldSpin::~JPAFieldSpin(void)
 #pragma push
 #pragma optimization_level 0
@@ -443,7 +507,7 @@ asm void __dt__12JPAFieldSpinFv() {
 }
 #pragma pop
 
-/* 8027D450 005C .text      __dt__12JPAFieldDragFv                                       */
+/* 8027D450-8027D4AC 005C .text      __dt__12JPAFieldDragFv                                       Function */
 // JPAFieldDrag::~JPAFieldDrag(void)
 #pragma push
 #pragma optimization_level 0
@@ -454,7 +518,7 @@ asm void __dt__12JPAFieldDragFv() {
 }
 #pragma pop
 
-/* 8027D4AC 005C .text      __dt__14JPAFieldRandomFv                                     */
+/* 8027D4AC-8027D508 005C .text      __dt__14JPAFieldRandomFv                                     Function */
 // JPAFieldRandom::~JPAFieldRandom(void)
 #pragma push
 #pragma optimization_level 0
@@ -465,7 +529,7 @@ asm void __dt__14JPAFieldRandomFv() {
 }
 #pragma pop
 
-/* 8027D508 005C .text      __dt__18JPAFieldConvectionFv                                 */
+/* 8027D508-8027D564 005C .text      __dt__18JPAFieldConvectionFv                                 Function */
 // JPAFieldConvection::~JPAFieldConvection(void)
 #pragma push
 #pragma optimization_level 0
@@ -476,7 +540,7 @@ asm void __dt__18JPAFieldConvectionFv() {
 }
 #pragma pop
 
-/* 8027D564 005C .text      __dt__14JPAFieldVortexFv                                     */
+/* 8027D564-8027D5C0 005C .text      __dt__14JPAFieldVortexFv                                     Function */
 // JPAFieldVortex::~JPAFieldVortex(void)
 #pragma push
 #pragma optimization_level 0
@@ -487,7 +551,7 @@ asm void __dt__14JPAFieldVortexFv() {
 }
 #pragma pop
 
-/* 8027D5C0 005C .text      __dt__14JPAFieldNewtonFv                                     */
+/* 8027D5C0-8027D61C 005C .text      __dt__14JPAFieldNewtonFv                                     Function */
 // JPAFieldNewton::~JPAFieldNewton(void)
 #pragma push
 #pragma optimization_level 0
@@ -498,7 +562,7 @@ asm void __dt__14JPAFieldNewtonFv() {
 }
 #pragma pop
 
-/* 8027D61C 005C .text      __dt__14JPAFieldMagnetFv                                     */
+/* 8027D61C-8027D678 005C .text      __dt__14JPAFieldMagnetFv                                     Function */
 // JPAFieldMagnet::~JPAFieldMagnet(void)
 #pragma push
 #pragma optimization_level 0
@@ -509,7 +573,7 @@ asm void __dt__14JPAFieldMagnetFv() {
 }
 #pragma pop
 
-/* 8027D678 005C .text      __dt__11JPAFieldAirFv                                        */
+/* 8027D678-8027D6D4 005C .text      __dt__11JPAFieldAirFv                                        Function */
 // JPAFieldAir::~JPAFieldAir(void)
 #pragma push
 #pragma optimization_level 0
@@ -520,7 +584,7 @@ asm void __dt__11JPAFieldAirFv() {
 }
 #pragma pop
 
-/* 8027D6D4 005C .text      __dt__15JPAFieldGravityFv                                    */
+/* 8027D6D4-8027D730 005C .text      __dt__15JPAFieldGravityFv                                    Function */
 // JPAFieldGravity::~JPAFieldGravity(void)
 #pragma push
 #pragma optimization_level 0

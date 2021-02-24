@@ -11,77 +11,151 @@
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
+/* Function             */
 extern void calc__9J2DTexMtxFv();
+/* Function             */
 extern void createTevBlock__11J2DMaterialFib();
+/* Function             */
 extern void createIndBlock__11J2DMaterialFib();
+/* Function             */
 extern void __ct__11J2DTevStageFv();
+/* Function             */
 extern void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo();
+/* Function             */
+extern void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock();
+/* Function             */
 extern void countStages__18J2DMaterialFactoryCFi();
+/* Function             */
+extern void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive();
+/* Function             */
 extern void newMatColor__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newColorChanNum__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newColorChan__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTexGenNum__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newTexCoord__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTexMtx__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newCullMode__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newTexNo__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newFontNo__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newTevOrder__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTevColor__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTevKColor__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTevStageNum__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newTevStage__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newTevSwapModeTable__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newIndTexStageNum__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newIndTexOrder__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newIndTexMtx__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newIndTevStage__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newIndTexCoordScale__18J2DMaterialFactoryCFii();
+/* Function             */
 extern void newAlphaComp__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newBlend__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void newDither__18J2DMaterialFactoryCFi();
+/* Function             */
 extern void __ct__11J2DTevStageFRC15J2DTevStageInfo();
+/* Function             */
 extern void func_802F4170();
+/* Function             */
 extern void func_802F4188();
+/* Function             */
 extern void func_802F41A0();
+/* Function             */
 extern void func_802F41B8();
+/* Function             */
 extern void func_802F41D0();
+/* Function             */
 extern void func_802F41E8();
+/* Function             */
 extern void func_802F4200();
+/* Function             */
 extern void func_802F4218();
+/* Function             */
 extern void func_802F4230();
+/* Function             */
 extern void func_802F4248();
+/* Function             */
 extern void func_802F4260();
+/* Function             */
 extern void func_802F4278();
+/* Function             */
 extern void func_802F4290();
+/* Function             */
 extern void func_802F42A8();
+/* Function             */
 extern void func_802F42C0();
+/* Function             */
 extern void func_802F42D8();
+/* Function             */
 extern void get__13J2DDataManageFPCc();
+/* Function             */
 extern void getResReference__15J2DResReferenceCFUs();
+/* Function             */
 extern void getName__15J2DResReferenceCFUs();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 j2dDefaultTexCoordInfo[32];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j2dDefaultIndTexMtxInfo[28];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j2dDefaultIndTevStageInfo[12];
-SECTION_SBSS extern u8 mDataManage__9J2DScreen[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultTevOrderInfoNull[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultIndTexOrderNull[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultIndTexCoordScaleInfo[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultTevSwapMode[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultTevSwapModeTable[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j2dDefaultBlendInfo[4];
-SECTION_SDATA2 extern u8 j2dDefaultColorChanInfo[4];
+/* MergedInitializedData */
 SECTION_SDATA2 extern u8 merged_804561AC[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1887[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2039[4];
+/* ZeroInitializedData  */
 SECTION_SBSS2 extern u8 LIT_2018[4];
+/* ZeroInitializedData  */
 SECTION_SBSS2 extern u8 data_80456BB4[4];
 }
 
@@ -91,11 +165,11 @@ SECTION_SBSS2 extern u8 data_80456BB4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804561C0 0004 .sdata2    @1887                                                        */
+/* 804561C0-804561C4 0004 .sdata2    @1887                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1887[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 804561C4 0004 .sdata2    @2039                                                        */
+/* 804561C4-804561C8 0004 .sdata2    @2039                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2039[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
@@ -107,9 +181,9 @@ SECTION_SDATA2 u8 LIT_2039[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456BB0 0004 .sbss2     @2018                                                        */
+/* 80456BB0-80456BB4 0004 .sbss2     @2018                                                        ZeroInitializedData */
 SECTION_SBSS2 u8 LIT_2018[4];
-/* 80456BB4 0004 .sbss2     data_80456BB4                                                */
+/* 80456BB4-80456BB8 0004 .sbss2     data_80456BB4                                                ZeroInitializedData */
 SECTION_SBSS2 u8 data_80456BB4[4];
 }
 
@@ -119,7 +193,7 @@ SECTION_SBSS2 u8 data_80456BB4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802F2AD0 01C4 .text      __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock              */
+/* 802F2AD0-802F2C94 01C4 .text      __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock              Function */
 // J2DMaterialFactory::J2DMaterialFactory(const J2DMaterialBlock&)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +204,7 @@ asm void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock() {
 }
 #pragma pop
 
-/* 802F2C94 0088 .text      countStages__18J2DMaterialFactoryCFi                         */
+/* 802F2C94-802F2D1C 0088 .text      countStages__18J2DMaterialFactoryCFi                         Function */
 // J2DMaterialFactory::countStages(int) const
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +215,7 @@ asm void countStages__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F2D1C 0910 .text      create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive */
+/* 802F2D1C-802F362C 0910 .text      create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive Function */
 // J2DMaterialFactory::create(J2DMaterial*, int, u32, J2DResReference*, J2DResReference*, JKRArchive*) const
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +226,7 @@ asm void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2D
 }
 #pragma pop
 
-/* 802F362C 00A0 .text      newMatColor__18J2DMaterialFactoryCFii                        */
+/* 802F362C-802F36CC 00A0 .text      newMatColor__18J2DMaterialFactoryCFii                        Function */
 // J2DMaterialFactory::newMatColor(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +237,7 @@ asm void newMatColor__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F36CC 0038 .text      newColorChanNum__18J2DMaterialFactoryCFi                     */
+/* 802F36CC-802F3704 0038 .text      newColorChanNum__18J2DMaterialFactoryCFi                     Function */
 // J2DMaterialFactory::newColorChanNum(int) const
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +248,7 @@ asm void newColorChanNum__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F3704 0054 .text      newColorChan__18J2DMaterialFactoryCFii                       */
+/* 802F3704-802F3758 0054 .text      newColorChan__18J2DMaterialFactoryCFii                       Function */
 // J2DMaterialFactory::newColorChan(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +259,7 @@ asm void newColorChan__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3758 0038 .text      newTexGenNum__18J2DMaterialFactoryCFi                        */
+/* 802F3758-802F3790 0038 .text      newTexGenNum__18J2DMaterialFactoryCFi                        Function */
 // J2DMaterialFactory::newTexGenNum(int) const
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +270,7 @@ asm void newTexGenNum__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F3790 0074 .text      newTexCoord__18J2DMaterialFactoryCFii                        */
+/* 802F3790-802F3804 0074 .text      newTexCoord__18J2DMaterialFactoryCFii                        Function */
 // J2DMaterialFactory::newTexCoord(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +281,7 @@ asm void newTexCoord__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3804 00DC .text      newTexMtx__18J2DMaterialFactoryCFii                          */
+/* 802F3804-802F38E0 00DC .text      newTexMtx__18J2DMaterialFactoryCFii                          Function */
 // J2DMaterialFactory::newTexMtx(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +292,7 @@ asm void newTexMtx__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F38E0 0040 .text      newCullMode__18J2DMaterialFactoryCFi                         */
+/* 802F38E0-802F3920 0040 .text      newCullMode__18J2DMaterialFactoryCFi                         Function */
 // J2DMaterialFactory::newCullMode(int) const
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +303,7 @@ asm void newCullMode__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F3920 0048 .text      newTexNo__18J2DMaterialFactoryCFii                           */
+/* 802F3920-802F3968 0048 .text      newTexNo__18J2DMaterialFactoryCFii                           Function */
 // J2DMaterialFactory::newTexNo(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -240,7 +314,7 @@ asm void newTexNo__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3968 0040 .text      newFontNo__18J2DMaterialFactoryCFi                           */
+/* 802F3968-802F39A8 0040 .text      newFontNo__18J2DMaterialFactoryCFi                           Function */
 // J2DMaterialFactory::newFontNo(int) const
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +325,7 @@ asm void newFontNo__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F39A8 0074 .text      newTevOrder__18J2DMaterialFactoryCFii                        */
+/* 802F39A8-802F3A1C 0074 .text      newTevOrder__18J2DMaterialFactoryCFii                        Function */
 // J2DMaterialFactory::newTevOrder(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +336,7 @@ asm void newTevOrder__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3A1C 0098 .text      newTevColor__18J2DMaterialFactoryCFii                        */
+/* 802F3A1C-802F3AB4 0098 .text      newTevColor__18J2DMaterialFactoryCFii                        Function */
 // J2DMaterialFactory::newTevColor(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -273,7 +347,7 @@ asm void newTevColor__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3AB4 00A0 .text      newTevKColor__18J2DMaterialFactoryCFii                       */
+/* 802F3AB4-802F3B54 00A0 .text      newTevKColor__18J2DMaterialFactoryCFii                       Function */
 // J2DMaterialFactory::newTevKColor(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -284,7 +358,7 @@ asm void newTevKColor__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3B54 0038 .text      newTevStageNum__18J2DMaterialFactoryCFi                      */
+/* 802F3B54-802F3B8C 0038 .text      newTevStageNum__18J2DMaterialFactoryCFi                      Function */
 // J2DMaterialFactory::newTevStageNum(int) const
 #pragma push
 #pragma optimization_level 0
@@ -295,7 +369,7 @@ asm void newTevStageNum__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F3B8C 0060 .text      newTevStage__18J2DMaterialFactoryCFii                        */
+/* 802F3B8C-802F3BEC 0060 .text      newTevStage__18J2DMaterialFactoryCFii                        Function */
 // J2DMaterialFactory::newTevStage(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -306,7 +380,7 @@ asm void newTevStage__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3BEC 009C .text      newTevSwapModeTable__18J2DMaterialFactoryCFii                */
+/* 802F3BEC-802F3C88 009C .text      newTevSwapModeTable__18J2DMaterialFactoryCFii                Function */
 // J2DMaterialFactory::newTevSwapModeTable(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -317,7 +391,7 @@ asm void newTevSwapModeTable__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3C88 0030 .text      newIndTexStageNum__18J2DMaterialFactoryCFi                   */
+/* 802F3C88-802F3CB8 0030 .text      newIndTexStageNum__18J2DMaterialFactoryCFi                   Function */
 // J2DMaterialFactory::newIndTexStageNum(int) const
 #pragma push
 #pragma optimization_level 0
@@ -328,7 +402,7 @@ asm void newIndTexStageNum__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F3CB8 0068 .text      newIndTexOrder__18J2DMaterialFactoryCFii                     */
+/* 802F3CB8-802F3D20 0068 .text      newIndTexOrder__18J2DMaterialFactoryCFii                     Function */
 // J2DMaterialFactory::newIndTexOrder(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -339,7 +413,7 @@ asm void newIndTexOrder__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3D20 0104 .text      newIndTexMtx__18J2DMaterialFactoryCFii                       */
+/* 802F3D20-802F3E24 0104 .text      newIndTexMtx__18J2DMaterialFactoryCFii                       Function */
 // J2DMaterialFactory::newIndTexMtx(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -350,7 +424,7 @@ asm void newIndTexMtx__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3E24 0154 .text      newIndTevStage__18J2DMaterialFactoryCFii                     */
+/* 802F3E24-802F3F78 0154 .text      newIndTevStage__18J2DMaterialFactoryCFii                     Function */
 // J2DMaterialFactory::newIndTevStage(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -361,7 +435,7 @@ asm void newIndTevStage__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3F78 0068 .text      newIndTexCoordScale__18J2DMaterialFactoryCFii                */
+/* 802F3F78-802F3FE0 0068 .text      newIndTexCoordScale__18J2DMaterialFactoryCFii                Function */
 // J2DMaterialFactory::newIndTexCoordScale(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -372,7 +446,7 @@ asm void newIndTexCoordScale__18J2DMaterialFactoryCFii() {
 }
 #pragma pop
 
-/* 802F3FE0 007C .text      newAlphaComp__18J2DMaterialFactoryCFi                        */
+/* 802F3FE0-802F405C 007C .text      newAlphaComp__18J2DMaterialFactoryCFi                        Function */
 // J2DMaterialFactory::newAlphaComp(int) const
 #pragma push
 #pragma optimization_level 0
@@ -383,7 +457,7 @@ asm void newAlphaComp__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F405C 007C .text      newBlend__18J2DMaterialFactoryCFi                            */
+/* 802F405C-802F40D8 007C .text      newBlend__18J2DMaterialFactoryCFi                            Function */
 // J2DMaterialFactory::newBlend(int) const
 #pragma push
 #pragma optimization_level 0
@@ -394,7 +468,7 @@ asm void newBlend__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F40D8 0038 .text      newDither__18J2DMaterialFactoryCFi                           */
+/* 802F40D8-802F4110 0038 .text      newDither__18J2DMaterialFactoryCFi                           Function */
 // J2DMaterialFactory::newDither(int) const
 #pragma push
 #pragma optimization_level 0
@@ -405,7 +479,7 @@ asm void newDither__18J2DMaterialFactoryCFi() {
 }
 #pragma pop
 
-/* 802F4110 0060 .text      __ct__11J2DTevStageFRC15J2DTevStageInfo                      */
+/* 802F4110-802F4170 0060 .text      __ct__11J2DTevStageFRC15J2DTevStageInfo                      Function */
 // J2DTevStage::J2DTevStage(const J2DTevStageInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -416,7 +490,7 @@ asm void __ct__11J2DTevStageFRC15J2DTevStageInfo() {
 }
 #pragma pop
 
-/* 802F4170 0018 .text      JSUConvertOffsetToPtr<12J2DBlendInfo>__FPCvPCv               */
+/* 802F4170-802F4188 0018 .text      JSUConvertOffsetToPtr<12J2DBlendInfo>__FPCvPCv               Function */
 // JSUConvertOffsetToPtr<12J2DBlendInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -427,7 +501,7 @@ asm void func_802F4170() {
 }
 #pragma pop
 
-/* 802F4188 0018 .text      JSUConvertOffsetToPtr<16J2DAlphaCompInfo>__FPCvPCv           */
+/* 802F4188-802F41A0 0018 .text      JSUConvertOffsetToPtr<16J2DAlphaCompInfo>__FPCvPCv           Function */
 // JSUConvertOffsetToPtr<16J2DAlphaCompInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -438,7 +512,7 @@ asm void func_802F4188() {
 }
 #pragma pop
 
-/* 802F41A0 0018 .text      JSUConvertOffsetToPtr<23J2DTevSwapModeTableInfo>__FPCvPCv    */
+/* 802F41A0-802F41B8 0018 .text      JSUConvertOffsetToPtr<23J2DTevSwapModeTableInfo>__FPCvPCv    Function */
 // JSUConvertOffsetToPtr<23J2DTevSwapModeTableInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -449,7 +523,7 @@ asm void func_802F41A0() {
 }
 #pragma pop
 
-/* 802F41B8 0018 .text      JSUConvertOffsetToPtr<18J2DTevSwapModeInfo>__FPCvPCv         */
+/* 802F41B8-802F41D0 0018 .text      JSUConvertOffsetToPtr<18J2DTevSwapModeInfo>__FPCvPCv         Function */
 // JSUConvertOffsetToPtr<18J2DTevSwapModeInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -460,7 +534,7 @@ asm void func_802F41B8() {
 }
 #pragma pop
 
-/* 802F41D0 0018 .text      JSUConvertOffsetToPtr<15J2DTevStageInfo>__FPCvPCv            */
+/* 802F41D0-802F41E8 0018 .text      JSUConvertOffsetToPtr<15J2DTevStageInfo>__FPCvPCv            Function */
 // JSUConvertOffsetToPtr<15J2DTevStageInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -471,7 +545,7 @@ asm void func_802F41D0() {
 }
 #pragma pop
 
-/* 802F41E8 0018 .text      JSUConvertOffsetToPtr<11_GXColorS10>__FPCvPCv                */
+/* 802F41E8-802F4200 0018 .text      JSUConvertOffsetToPtr<11_GXColorS10>__FPCvPCv                Function */
 // JSUConvertOffsetToPtr<11_GXColorS10>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -482,7 +556,7 @@ asm void func_802F41E8() {
 }
 #pragma pop
 
-/* 802F4200 0018 .text      JSUConvertOffsetToPtr<15J2DTevOrderInfo>__FPCvPCv            */
+/* 802F4200-802F4218 0018 .text      JSUConvertOffsetToPtr<15J2DTevOrderInfo>__FPCvPCv            Function */
 // JSUConvertOffsetToPtr<15J2DTevOrderInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -493,7 +567,7 @@ asm void func_802F4200() {
 }
 #pragma pop
 
-/* 802F4218 0018 .text      JSUConvertOffsetToPtr<13J2DTexMtxInfo>__FPCvPCv              */
+/* 802F4218-802F4230 0018 .text      JSUConvertOffsetToPtr<13J2DTexMtxInfo>__FPCvPCv              Function */
 // JSUConvertOffsetToPtr<13J2DTexMtxInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -504,7 +578,7 @@ asm void func_802F4218() {
 }
 #pragma pop
 
-/* 802F4230 0018 .text      JSUConvertOffsetToPtr<15J2DTexCoordInfo>__FPCvPCv            */
+/* 802F4230-802F4248 0018 .text      JSUConvertOffsetToPtr<15J2DTexCoordInfo>__FPCvPCv            Function */
 // JSUConvertOffsetToPtr<15J2DTexCoordInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -515,7 +589,7 @@ asm void func_802F4230() {
 }
 #pragma pop
 
-/* 802F4248 0018 .text      JSUConvertOffsetToPtr<16J2DColorChanInfo>__FPCvPCv           */
+/* 802F4248-802F4260 0018 .text      JSUConvertOffsetToPtr<16J2DColorChanInfo>__FPCvPCv           Function */
 // JSUConvertOffsetToPtr<16J2DColorChanInfo>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -526,7 +600,7 @@ asm void func_802F4248() {
 }
 #pragma pop
 
-/* 802F4260 0018 .text      JSUConvertOffsetToPtr<Uc>__FPCvPCv                           */
+/* 802F4260-802F4278 0018 .text      JSUConvertOffsetToPtr<Uc>__FPCvPCv                           Function */
 // JSUConvertOffsetToPtr<Uc>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -537,7 +611,7 @@ asm void func_802F4260() {
 }
 #pragma pop
 
-/* 802F4278 0018 .text      JSUConvertOffsetToPtr<8_GXColor>__FPCvPCv                    */
+/* 802F4278-802F4290 0018 .text      JSUConvertOffsetToPtr<8_GXColor>__FPCvPCv                    Function */
 // JSUConvertOffsetToPtr<8_GXColor>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -548,7 +622,7 @@ asm void func_802F4278() {
 }
 #pragma pop
 
-/* 802F4290 0018 .text      JSUConvertOffsetToPtr<11_GXCullMode>__FPCvPCv                */
+/* 802F4290-802F42A8 0018 .text      JSUConvertOffsetToPtr<11_GXCullMode>__FPCvPCv                Function */
 // JSUConvertOffsetToPtr<11_GXCullMode>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -559,7 +633,7 @@ asm void func_802F4290() {
 }
 #pragma pop
 
-/* 802F42A8 0018 .text      JSUConvertOffsetToPtr<14J2DIndInitData>__FPCvPCv             */
+/* 802F42A8-802F42C0 0018 .text      JSUConvertOffsetToPtr<14J2DIndInitData>__FPCvPCv             Function */
 // JSUConvertOffsetToPtr<14J2DIndInitData>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -570,7 +644,7 @@ asm void func_802F42A8() {
 }
 #pragma pop
 
-/* 802F42C0 0018 .text      JSUConvertOffsetToPtr<Us>__FPCvPCv                           */
+/* 802F42C0-802F42D8 0018 .text      JSUConvertOffsetToPtr<Us>__FPCvPCv                           Function */
 // JSUConvertOffsetToPtr<Us>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -581,7 +655,7 @@ asm void func_802F42C0() {
 }
 #pragma pop
 
-/* 802F42D8 0018 .text      JSUConvertOffsetToPtr<19J2DMaterialInitData>__FPCvPCv        */
+/* 802F42D8-802F42F0 0018 .text      JSUConvertOffsetToPtr<19J2DMaterialInitData>__FPCvPCv        Function */
 // JSUConvertOffsetToPtr<19J2DMaterialInitData>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0

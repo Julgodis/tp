@@ -11,20 +11,41 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__8cBgS_ChkFv();
+/* Function             */
 extern void __dt__8cBgS_ChkFv();
+/* Function             */
+extern void __ct__11cBgS_LinChkFv();
+/* Function             */
 extern void __dt__11cBgS_LinChkFv();
+/* Function             */
 extern void ct__11cBgS_LinChkFv();
+/* Function             */
+extern void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
+/* Function             */
+extern void PreCalc__11cBgS_LinChkFv();
+/* Function             */
 extern void func_80267F80();
+/* Function             */
 extern void __ct__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dt__13cBgS_PolyInfoFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
 extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__8cM3dGLin[3];
-SECTION_DATA extern const void* __vt__11cBgS_LinChk[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGLin[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11cBgS_LinChk[6];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Zero__4cXyz[12];
 }
 
@@ -34,8 +55,8 @@ SECTION_BSS extern u8 Zero__4cXyz[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3FA8 0018 .data      __vt__11cBgS_LinChk                                          */
-SECTION_DATA const  void* __vt__11cBgS_LinChk[6] = {
+/* 803C3FA8-803C3FC0 0018 .data      __vt__11cBgS_LinChk                                          VTableData */
+SECTION_DATA void* __vt__11cBgS_LinChk[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11cBgS_LinChkFv,
@@ -51,7 +72,7 @@ SECTION_DATA const  void* __vt__11cBgS_LinChk[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80267D5C 0060 .text      __ct__11cBgS_LinChkFv                                        */
+/* 80267D5C-80267DBC 0060 .text      __ct__11cBgS_LinChkFv                                        Function */
 // cBgS_LinChk::cBgS_LinChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -62,7 +83,7 @@ asm void __ct__11cBgS_LinChkFv() {
 }
 #pragma pop
 
-/* 80267DBC 008C .text      __dt__11cBgS_LinChkFv                                        */
+/* 80267DBC-80267E48 008C .text      __dt__11cBgS_LinChkFv                                        Function */
 // cBgS_LinChk::~cBgS_LinChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -73,7 +94,7 @@ asm void __dt__11cBgS_LinChkFv() {
 }
 #pragma pop
 
-/* 80267E48 0088 .text      ct__11cBgS_LinChkFv                                          */
+/* 80267E48-80267ED0 0088 .text      ct__11cBgS_LinChkFv                                          Function */
 // cBgS_LinChk::ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -84,7 +105,7 @@ asm void ct__11cBgS_LinChkFv() {
 }
 #pragma pop
 
-/* 80267ED0 0070 .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         */
+/* 80267ED0-80267F40 0070 .text      Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi                         Function */
 // cBgS_LinChk::Set2(const cXyz*, const cXyz*, unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -95,7 +116,7 @@ asm void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi() {
 }
 #pragma pop
 
-/* 80267F40 0040 .text      PreCalc__11cBgS_LinChkFv                                     */
+/* 80267F40-80267F80 0040 .text      PreCalc__11cBgS_LinChkFv                                     Function */
 // cBgS_LinChk::PreCalc(void)
 #pragma push
 #pragma optimization_level 0
@@ -106,7 +127,7 @@ asm void PreCalc__11cBgS_LinChkFv() {
 }
 #pragma pop
 
-/* 80267F80 0008 .text      @20@__dt__11cBgS_LinChkFv                                    */
+/* 80267F80-80267F88 0008 .text      @20@__dt__11cBgS_LinChkFv                                    Function */
 // cBgS_LinChk::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0

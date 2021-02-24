@@ -15,18 +15,18 @@
 struct cXyz;
 struct csXyz;
 
-extern void fopAcM_create(s16, u32, const cXyz*, int, const csXyz*, const cXyz*, s8); /* fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc */
-extern void fopAcM_searchFromName4Event(const s8*, s16); /* fopAcM_searchFromName4Event__FPCcs */
+extern void fopAcM_create(short, u32, const cXyz*, int, const csXyz*, const cXyz*, s8); /* fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc */
+extern void fopAcM_searchFromName4Event(const char*, short); /* fopAcM_searchFromName4Event__FPCcs */
 extern void fopMsgM_SearchByID(unsigned int); /* fopMsgM_SearchByID__FUi */
 extern void fopMsgM_messageSet(u32, u32); /* fopMsgM_messageSet__FUlUl */
 extern void fopMsgM_messageSetDemo(u32); /* fopMsgM_messageSetDemo__FUl */
-extern void dStage_searchName(const s8*); /* dStage_searchName__FPCc */
-extern void dComIfGp_setNextStage(const s8*, s16, s8, s8, f32, u32, int, s8, s16, int, int); /* dComIfGp_setNextStage__FPCcsScScfUliScsii */
+extern void dStage_searchName(const char*); /* dStage_searchName__FPCc */
+extern void dComIfGp_setNextStage(const char*, short, s8, s8, f32, u32, int, s8, short, int, int); /* dComIfGp_setNextStage__FPCcsScScfUliScsii */
 extern void dComIfGs_onStageSwitch(int, int); /* dComIfGs_onStageSwitch__Fii */
 extern void dComIfGs_offStageSwitch(int, int); /* dComIfGs_offStageSwitch__Fii */
 extern void dComIfGs_isStageSwitch(int, int); /* dComIfGs_isStageSwitch__Fii */
 extern void dEv_defaultSkipProc(void*, int); /* dEv_defaultSkipProc__FPvi */
-extern void getTelopNo(const s8*); /* getTelopNo__FPCc */
+extern void getTelopNo(const char*); /* getTelopNo__FPCc */
 extern void getTelopNo(void); /* getTelopNo__Fv */
 extern void getStartTelopNo(void); /* getStartTelopNo__Fv */
 extern void dEvDt_Next_Stage(int, int); /* dEvDt_Next_Stage__Fii */
@@ -38,115 +38,239 @@ extern void dKy_instant_timechg(f32); /* dKy_instant_timechg__Ff */
 extern void dKy_instant_rainchg(void); /* dKy_instant_rainchg__Fv */
 
 extern "C" {
+/* Function             */
 extern void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+/* Function             */
 extern void fadeOut__13mDoGph_gInf_cFf();
+/* Function             */
 extern void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+/* Function             */
 extern void fopAcM_searchFromName4Event__FPCcs();
+/* Function             */
 extern void fopMsgM_SearchByID__FUi();
+/* Function             */
 extern void fopMsgM_messageSet__FUlUl();
+/* Function             */
 extern void fopMsgM_messageSetDemo__FUl();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void dStage_searchName__FPCc();
+/* Function             */
 extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+/* Function             */
 extern void dComIfGs_onStageSwitch__Fii();
+/* Function             */
 extern void dComIfGs_offStageSwitch__Fii();
+/* Function             */
 extern void dComIfGs_isStageSwitch__Fii();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void offEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void start__7dDemo_cFPCUcP4cXyzf();
+/* Function             */
 extern void end__7dDemo_cFv();
+/* Function             */
 extern void dEv_defaultSkipProc__FPvi();
+/* Function             */
 extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+/* Function             */
 extern void setSkipZev__14dEvt_control_cFPvPc();
+/* FirstParamFunction   */
 extern u32 getStageEventDt__14dEvt_control_cFv(u8*);
+/* Function             */
 extern void convPId__14dEvt_control_cFUi();
+/* Function             */
 extern void getStbDemoData__14dEvt_control_cFPc();
+/* Function             */
 extern void searchMapEventData__14dEvt_control_cFUc();
+/* Function             */
 extern void setPt2__14dEvt_control_cFPv();
+/* Function             */
 extern void setPtT__14dEvt_control_cFPv();
+/* Function             */
 extern void setPtI__14dEvt_control_cFPv();
+/* Function             */
 extern void setPtD__14dEvt_control_cFPv();
+/* Function             */
 extern void getTelopNo__FPCc();
+/* Function             */
 extern void getTelopNo__Fv();
+/* Function             */
 extern void getStartTelopNo__Fv();
+/* Function             */
 extern void dEvDt_Next_Stage__Fii();
+/* Function             */
 extern void flagCheck__11dEvDtFlag_cFi();
+/* Function             */
 extern void flagSet__11dEvDtFlag_cFi();
+/* Function             */
 extern void flagMaxCheck__11dEvDtFlag_cFi();
+/* Function             */
+extern void init__11dEvDtFlag_cFv();
+/* Function             */
+extern void finishCheck__12dEvDtEvent_cFv();
+/* Function             */
+extern void forceFinish__12dEvDtEvent_cFv();
+/* Function             */
+extern void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
+/* Function             */
 extern void specialProc_WaitStart__12dEvDtStaff_cFi();
+/* Function             */
 extern void specialProc_WaitProc__12dEvDtStaff_cFi();
+/* Function             */
 extern void specialProc__12dEvDtStaff_cFv();
+/* Function             */
+extern void init__12dEvDtStaff_cFv();
+/* Function             */
 extern void advanceCut__12dEvDtStaff_cFi();
+/* Function             */
 extern void specialProcLight__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcMessage__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcSound__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcCreate__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcDirector__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcPackage__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcTimekeeper__12dEvDtStaff_cFv();
+/* Function             */
 extern void specialProcEffect__12dEvDtStaff_cFv();
+/* Function             */
 extern void startCheck__10dEvDtCut_cFv();
+/* Function             */
 extern void init__11dEvDtBase_cFv();
+/* Function             */
+extern void init__11dEvDtBase_cFPci();
+/* Function             */
+extern void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
+/* Function             */
 extern void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c();
+/* Function             */
 extern void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+/* Function             */
 extern void getIsAddvance__16dEvent_manager_cFi();
+/* Function             */
 extern void getMyNowCutName__16dEvent_manager_cFi();
+/* Function             */
 extern void getMySubstanceP__16dEvent_manager_cFiPCci();
+/* Function             */
 extern void getMySubstanceNum__16dEvent_manager_cFiPCc();
+/* Function             */
 extern void cutEnd__16dEvent_manager_cFi();
+/* Function             */
 extern void wipeIn__12dDlst_list_cFf();
+/* Function             */
 extern void StartShock__12dVibration_cFii4cXyz();
+/* Function             */
 extern void StartQuake__12dVibration_cFii4cXyz();
+/* Function             */
 extern void StartQuake__12dVibration_cFPCUcii4cXyz();
+/* Function             */
 extern void StopQuake__12dVibration_cFi();
+/* Function             */
 extern void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+/* Function             */
 extern void dCam_getBody__Fv();
+/* Function             */
 extern void d_GameOver_Create__FUc();
+/* Function             */
 extern void d_GameOver_Delete__FRUi();
+/* Function             */
 extern void dKy_set_nexttime__Ff();
+/* Function             */
 extern void dKy_instant_timechg__Ff();
+/* Function             */
 extern void dKy_instant_rainchg__Fv();
+/* Function             */
 extern void demoMessageGroup__12dMsgObject_cFv();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void bgmStop__8Z2SeqMgrFUll();
+/* Function             */
 extern void bgmStreamPlay__8Z2SeqMgrFv();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* InitializedData      */
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_event_data__stringBase0[384];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
+/* InitializedData      */
 SECTION_DATA extern u8 TelopData[648];
-SECTION_DATA extern u8 d_d_event_data__LIT_4398[56];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_event_data__LIT_4398[14];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA extern u8 numTelopData[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFadeRate__13mDoGph_gInf_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BE4[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_control__7dDemo_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_frameNoMsg__7dDemo_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_mode__7dDemo_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mWipeRate__12dDlst_list_c[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_event_data__LIT_4264[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_data__LIT_4265;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_event_data__LIT_4267;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_event_data__LIT_4460[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_event_data__LIT_4461;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_data__LIT_4668;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_data__LIT_4669;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_data__LIT_5057;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5200[4];
 }
 
@@ -156,60 +280,66 @@ SECTION_SDATA2 extern u8 LIT_5200[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80379DD0 017E .rodata    @stringBase0                                                 */
-const char* const stringBase_80379DD0 = "ID";
-const char* const stringBase_80379DD3 = "Stage";
-const char* const stringBase_80379DD9 = "StartCode";
-const char* const stringBase_80379DE3 = "RoomNo";
-const char* const stringBase_80379DEA = "Layer";
-const char* const stringBase_80379DF0 = "Wipe";
-const char* const stringBase_80379DF5 = "Mode";
-const char* const stringBase_80379DFA = "Speed";
-const char* const stringBase_80379E00 = "Hour";
-const char* const stringBase_80379E05 = "NoVisit";
-const char* const stringBase_80379E0D = "Timer";
-const char* const stringBase_80379E13 = "LIGHT";
-const char* const stringBase_80379E19 = "Weather";
-const char* const stringBase_80379E21 = "MESSAGE";
-const char* const stringBase_80379E29 = "msgNo";
-const char* const stringBase_80379E2F = "No";
-const char* const stringBase_80379E32 = "Type";
-const char* const stringBase_80379E37 = "ForStart";
-const char* const stringBase_80379E40 = "SOUND";
-const char* const stringBase_80379E46 = "CREATER";
-const char* const stringBase_80379E4E = "MAKECAST";
-const char* const stringBase_80379E57 = "ARG";
-const char* const stringBase_80379E5B = "POS";
-const char* const stringBase_80379E5F = "ANGLE";
-const char* const stringBase_80379E65 = "SCALE";
-const char* const stringBase_80379E6B = "DIRECTOR";
-const char* const stringBase_80379E74 = "EventFlag";
-const char* const stringBase_80379E7E = "EventFlagOff";
-const char* const stringBase_80379E8B = "SwitchTable";
-const char* const stringBase_80379E97 = "SwitchBit";
-const char* const stringBase_80379EA1 = "SwitchOff";
-const char* const stringBase_80379EAB = "TmpBit";
-const char* const stringBase_80379EB2 = "TmpBitOff";
-const char* const stringBase_80379EBC = "PLAYER_NODRAW";
-const char* const stringBase_80379ECA = "PLAYER_DRAW";
-const char* const stringBase_80379ED6 = "Zev";
-const char* const stringBase_80379EDA = "Rate";
-const char* const stringBase_80379EDF = "Color";
-const char* const stringBase_80379EE5 = "Pattern";
-const char* const stringBase_80379EED = "Pt2";
-const char* const stringBase_80379EF1 = "PtT";
-const char* const stringBase_80379EF5 = "PtI";
-const char* const stringBase_80379EF9 = "PtD";
-const char* const stringBase_80379EFD = "PACKAGE";
-const char* const stringBase_80379F05 = "FileName";
-const char* const stringBase_80379F0E = "OffsetPos";
-const char* const stringBase_80379F18 = "OffsetAngY";
-const char* const stringBase_80379F23 = "TIMEKEEPER";
-const char* const stringBase_80379F2E = "EFFECT";
-const char* const stringBase_80379F35 = "Power";
-const char* const stringBase_80379F3B = "Random";
-const char* const stringBase_80379F42 = "Alpha";
-const char* const stringBase_80379F48 = "Scale";
+/* 80379DD0-80379F50 017E .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80379DD0 = "ID";
+SECTION_DEAD const char* const stringBase_80379DD3 = "Stage";
+SECTION_DEAD const char* const stringBase_80379DD9 = "StartCode";
+SECTION_DEAD const char* const stringBase_80379DE3 = "RoomNo";
+SECTION_DEAD const char* const stringBase_80379DEA = "Layer";
+SECTION_DEAD const char* const stringBase_80379DF0 = "Wipe";
+SECTION_DEAD const char* const stringBase_80379DF5 = "Mode";
+SECTION_DEAD const char* const stringBase_80379DFA = "Speed";
+SECTION_DEAD const char* const stringBase_80379E00 = "Hour";
+SECTION_DEAD const char* const stringBase_80379E05 = "NoVisit";
+SECTION_DEAD const char* const stringBase_80379E0D = "Timer";
+SECTION_DEAD const char* const stringBase_80379E13 = "LIGHT";
+SECTION_DEAD const char* const stringBase_80379E19 = "Weather";
+SECTION_DEAD const char* const stringBase_80379E21 = "MESSAGE";
+SECTION_DEAD const char* const stringBase_80379E29 = "msgNo";
+SECTION_DEAD const char* const stringBase_80379E2F = "No";
+SECTION_DEAD const char* const stringBase_80379E32 = "Type";
+SECTION_DEAD const char* const stringBase_80379E37 = "ForStart";
+SECTION_DEAD const char* const stringBase_80379E40 = "SOUND";
+SECTION_DEAD const char* const stringBase_80379E46 = "CREATER";
+SECTION_DEAD const char* const stringBase_80379E4E = "MAKECAST";
+SECTION_DEAD const char* const stringBase_80379E57 = "ARG";
+SECTION_DEAD const char* const stringBase_80379E5B = "POS";
+SECTION_DEAD const char* const stringBase_80379E5F = "ANGLE";
+SECTION_DEAD const char* const stringBase_80379E65 = "SCALE";
+SECTION_DEAD const char* const stringBase_80379E6B = "DIRECTOR";
+SECTION_DEAD const char* const stringBase_80379E74 = "EventFlag";
+SECTION_DEAD const char* const stringBase_80379E7E = "EventFlagOff";
+SECTION_DEAD const char* const stringBase_80379E8B = "SwitchTable";
+SECTION_DEAD const char* const stringBase_80379E97 = "SwitchBit";
+SECTION_DEAD const char* const stringBase_80379EA1 = "SwitchOff";
+SECTION_DEAD const char* const stringBase_80379EAB = "TmpBit";
+SECTION_DEAD const char* const stringBase_80379EB2 = "TmpBitOff";
+SECTION_DEAD const char* const stringBase_80379EBC = "PLAYER_NODRAW";
+SECTION_DEAD const char* const stringBase_80379ECA = "PLAYER_DRAW";
+SECTION_DEAD const char* const stringBase_80379ED6 = "Zev";
+SECTION_DEAD const char* const stringBase_80379EDA = "Rate";
+SECTION_DEAD const char* const stringBase_80379EDF = "Color";
+SECTION_DEAD const char* const stringBase_80379EE5 = "Pattern";
+SECTION_DEAD const char* const stringBase_80379EED = "Pt2";
+SECTION_DEAD const char* const stringBase_80379EF1 = "PtT";
+SECTION_DEAD const char* const stringBase_80379EF5 = "PtI";
+SECTION_DEAD const char* const stringBase_80379EF9 = "PtD";
+SECTION_DEAD const char* const stringBase_80379EFD = "PACKAGE";
+SECTION_DEAD const char* const stringBase_80379F05 = "FileName";
+SECTION_DEAD const char* const stringBase_80379F0E = "OffsetPos";
+SECTION_DEAD const char* const stringBase_80379F18 = "OffsetAngY";
+SECTION_DEAD const char* const stringBase_80379F23 = "TIMEKEEPER";
+SECTION_DEAD const char* const stringBase_80379F2E = "EFFECT";
+SECTION_DEAD const char* const stringBase_80379F35 = "Power";
+SECTION_DEAD const char* const stringBase_80379F3B = "Random";
+SECTION_DEAD const char* const stringBase_80379F42 = "Alpha";
+SECTION_DEAD const char* const stringBase_80379F48 = "Scale";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80379F4E = "\0";
+#pragma pop
 }
 
 
@@ -218,7 +348,7 @@ const char* const stringBase_80379F48 = "Scale";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A7FB0 0288 .data      TelopData                                                    */
+/* 803A7FB0-803A8238 0288 .data      TelopData                                                    InitializedData */
 SECTION_DATA u8 TelopData[648] = {
 	0x44, 0x30, 0x35, 0x00, 0x04, 0x4D, 0x10, 0x69, 0x00, 0x03, 0x00, 0x00, 0x44, 0x30, 0x35, 0x41,
 	0x04, 0x4D, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x44, 0x30, 0x35, 0x42, 0x04, 0x4D, 0xFF, 0xFF,
@@ -262,14 +392,23 @@ SECTION_DATA u8 TelopData[648] = {
 	0x52, 0x31, 0x32, 0x37, 0x04, 0x74, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x46, 0x31, 0x32, 0x36,
 	0x04, 0x75, 0xFF, 0xFF, 0x00, 0x01, 0x00, 0x00,
 };
-/* 803A8238 0034 .data      @4398                                                        */
-SECTION_DATA u8 d_d_event_data__LIT_4398[56] = {
-	0x80, 0x04, 0x41, 0x20, 0x80, 0x04, 0x40, 0xD0, 0x80, 0x04, 0x41, 0x20, 0x80, 0x04, 0x40, 0xE8,
-	0x80, 0x04, 0x40, 0xC8, 0x80, 0x04, 0x41, 0x20, 0x80, 0x04, 0x40, 0xC0, 0x80, 0x04, 0x41, 0x14,
-	0x80, 0x04, 0x41, 0x0C, 0x80, 0x04, 0x41, 0x1C, 0x80, 0x04, 0x41, 0x20, 0x80, 0x04, 0x40, 0xB8,
-	0x80, 0x04, 0x40, 0xF0,
+/* 803A8238-803A8270 0034 .data      @4398                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_event_data__LIT_4398[14] = {
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+40),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+20),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+40),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+26),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+18),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+40),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+16),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+37),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+35),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+39),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+40),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+14),
+	(void*)(((u32*)specialProc__12dEvDtStaff_cFv)+28),
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -279,7 +418,7 @@ SECTION_DATA u8 d_d_event_data__LIT_4398[56] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450640 0004 .sdata     numTelopData                                                 */
+/* 80450640-80450648 0004 .sdata     numTelopData                                                 InitializedData */
 SECTION_SDATA u8 numTelopData[8] = {
 	0x00, 0x00, 0x00, 0x36,
 	/* padding */
@@ -293,35 +432,35 @@ SECTION_SDATA u8 numTelopData[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451ED0 0004 .sdata2    @4264                                                        */
+/* 80451ED0-80451ED4 0004 .sdata2    @4264                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_event_data__LIT_4264[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451ED4 0004 .sdata2    @4265                                                        */
+/* 80451ED4-80451ED8 0004 .sdata2    @4265                                                        Float32Data */
 // 0x41700000
 SECTION_SDATA2 f32 d_d_event_data__LIT_4265 = 15.000000f;
-/* 80451ED8 0008 .sdata2    @4267                                                        */
+/* 80451ED8-80451EE0 0008 .sdata2    @4267                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_event_data__LIT_4267 = 4503601774854144.000000;
-/* 80451EE0 0004 .sdata2    @4460                                                        */
+/* 80451EE0-80451EE8 0004 .sdata2    @4460                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_event_data__LIT_4460[8] = {
 	0x3D, 0x88, 0x88, 0x89,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451EE8 0008 .sdata2    @4461                                                        */
+/* 80451EE8-80451EF0 0008 .sdata2    @4461                                                        Float64Data */
 // 0x4038000000000000
 SECTION_SDATA2 f64 d_d_event_data__LIT_4461 = 24.000000;
-/* 80451EF0 0004 .sdata2    @4668                                                        */
+/* 80451EF0-80451EF4 0004 .sdata2    @4668                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_event_data__LIT_4668 = 1.000000f;
-/* 80451EF4 0004 .sdata2    @4669                                                        */
+/* 80451EF4-80451EF8 0004 .sdata2    @4669                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_event_data__LIT_4669 = -1.000000f;
-/* 80451EF8 0004 .sdata2    @5057                                                        */
+/* 80451EF8-80451EFC 0004 .sdata2    @5057                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_event_data__LIT_5057 = 10.000000f;
-/* 80451EFC 0004 .sdata2    @5200                                                        */
+/* 80451EFC-80451F00 0004 .sdata2    @5200                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5200[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
@@ -333,20 +472,20 @@ SECTION_SDATA2 u8 LIT_5200[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8004372C 0098 .text      getTelopNo__FPCc                                             */
+/* 8004372C-800437C4 0098 .text      getTelopNo__FPCc                                             Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void getTelopNo(const s8*) {
+asm void getTelopNo(const char*) {
 	nofralloc
 #include "_include/d/d_event_data/getTelopNo__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 800437C4 002C .text      getTelopNo__Fv                                               */
+/* 800437C4-800437F0 002C .text      getTelopNo__Fv                                               Function */
 }
 
 #pragma push
@@ -359,7 +498,7 @@ asm void getTelopNo(void) {
 #pragma pop
 
 extern "C" {
-/* 800437F0 0224 .text      getStartTelopNo__Fv                                          */
+/* 800437F0-80043A14 0224 .text      getStartTelopNo__Fv                                          Function */
 }
 
 #pragma push
@@ -372,7 +511,7 @@ asm void getStartTelopNo(void) {
 #pragma pop
 
 extern "C" {
-/* 80043A14 034C .text      dEvDt_Next_Stage__Fii                                        */
+/* 80043A14-80043D60 034C .text      dEvDt_Next_Stage__Fii                                        Function */
 }
 
 #pragma push
@@ -385,7 +524,7 @@ asm void dEvDt_Next_Stage(int, int) {
 #pragma pop
 
 extern "C" {
-/* 80043D60 0068 .text      flagCheck__11dEvDtFlag_cFi                                   */
+/* 80043D60-80043DC8 0068 .text      flagCheck__11dEvDtFlag_cFi                                   Function */
 // dEvDtFlag_c::flagCheck(int)
 #pragma push
 #pragma optimization_level 0
@@ -396,7 +535,7 @@ asm void flagCheck__11dEvDtFlag_cFi() {
 }
 #pragma pop
 
-/* 80043DC8 0068 .text      flagSet__11dEvDtFlag_cFi                                     */
+/* 80043DC8-80043E30 0068 .text      flagSet__11dEvDtFlag_cFi                                     Function */
 // dEvDtFlag_c::flagSet(int)
 #pragma push
 #pragma optimization_level 0
@@ -407,7 +546,7 @@ asm void flagSet__11dEvDtFlag_cFi() {
 }
 #pragma pop
 
-/* 80043E30 0028 .text      flagMaxCheck__11dEvDtFlag_cFi                                */
+/* 80043E30-80043E58 0028 .text      flagMaxCheck__11dEvDtFlag_cFi                                Function */
 // dEvDtFlag_c::flagMaxCheck(int)
 #pragma push
 #pragma optimization_level 0
@@ -418,7 +557,7 @@ asm void flagMaxCheck__11dEvDtFlag_cFi() {
 }
 #pragma pop
 
-/* 80043E58 0020 .text      init__11dEvDtFlag_cFv                                        */
+/* 80043E58-80043E78 0020 .text      init__11dEvDtFlag_cFv                                        Function */
 // dEvDtFlag_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -429,7 +568,7 @@ asm void init__11dEvDtFlag_cFv() {
 }
 #pragma pop
 
-/* 80043E78 0084 .text      finishCheck__12dEvDtEvent_cFv                                */
+/* 80043E78-80043EFC 0084 .text      finishCheck__12dEvDtEvent_cFv                                Function */
 // dEvDtEvent_c::finishCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -440,7 +579,7 @@ asm void finishCheck__12dEvDtEvent_cFv() {
 }
 #pragma pop
 
-/* 80043EFC 0074 .text      forceFinish__12dEvDtEvent_cFv                                */
+/* 80043EFC-80043F70 0074 .text      forceFinish__12dEvDtEvent_cFv                                Function */
 // dEvDtEvent_c::forceFinish(void)
 #pragma push
 #pragma optimization_level 0
@@ -451,7 +590,7 @@ asm void forceFinish__12dEvDtEvent_cFv() {
 }
 #pragma pop
 
-/* 80043F70 0068 .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             */
+/* 80043F70-80043FD8 0068 .text      specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c             Function */
 // dEvDtEvent_c::specialStaffProc(dEvDtStaff_c*)
 #pragma push
 #pragma optimization_level 0
@@ -462,7 +601,7 @@ asm void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c() {
 }
 #pragma pop
 
-/* 80043FD8 0064 .text      specialProc_WaitStart__12dEvDtStaff_cFi                      */
+/* 80043FD8-8004403C 0064 .text      specialProc_WaitStart__12dEvDtStaff_cFi                      Function */
 // dEvDtStaff_c::specialProc_WaitStart(int)
 #pragma push
 #pragma optimization_level 0
@@ -473,7 +612,7 @@ asm void specialProc_WaitStart__12dEvDtStaff_cFi() {
 }
 #pragma pop
 
-/* 8004403C 0044 .text      specialProc_WaitProc__12dEvDtStaff_cFi                       */
+/* 8004403C-80044080 0044 .text      specialProc_WaitProc__12dEvDtStaff_cFi                       Function */
 // dEvDtStaff_c::specialProc_WaitProc(int)
 #pragma push
 #pragma optimization_level 0
@@ -484,7 +623,7 @@ asm void specialProc_WaitProc__12dEvDtStaff_cFi() {
 }
 #pragma pop
 
-/* 80044080 00B4 .text      specialProc__12dEvDtStaff_cFv                                */
+/* 80044080-80044134 00B4 .text      specialProc__12dEvDtStaff_cFv                                Function */
 // dEvDtStaff_c::specialProc(void)
 #pragma push
 #pragma optimization_level 0
@@ -495,7 +634,7 @@ asm void specialProc__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044134 003C .text      init__12dEvDtStaff_cFv                                       */
+/* 80044134-80044170 003C .text      init__12dEvDtStaff_cFv                                       Function */
 // dEvDtStaff_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -506,7 +645,7 @@ asm void init__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044170 0020 .text      advanceCut__12dEvDtStaff_cFi                                 */
+/* 80044170-80044190 0020 .text      advanceCut__12dEvDtStaff_cFi                                 Function */
 // dEvDtStaff_c::advanceCut(int)
 #pragma push
 #pragma optimization_level 0
@@ -517,7 +656,7 @@ asm void advanceCut__12dEvDtStaff_cFi() {
 }
 #pragma pop
 
-/* 80044190 0194 .text      specialProcLight__12dEvDtStaff_cFv                           */
+/* 80044190-80044324 0194 .text      specialProcLight__12dEvDtStaff_cFv                           Function */
 // dEvDtStaff_c::specialProcLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -528,7 +667,7 @@ asm void specialProcLight__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044324 0734 .text      specialProcMessage__12dEvDtStaff_cFv                         */
+/* 80044324-80044A58 0734 .text      specialProcMessage__12dEvDtStaff_cFv                         Function */
 // dEvDtStaff_c::specialProcMessage(void)
 #pragma push
 #pragma optimization_level 0
@@ -539,7 +678,7 @@ asm void specialProcMessage__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044A58 0260 .text      specialProcSound__12dEvDtStaff_cFv                           */
+/* 80044A58-80044CB8 0260 .text      specialProcSound__12dEvDtStaff_cFv                           Function */
 // dEvDtStaff_c::specialProcSound(void)
 #pragma push
 #pragma optimization_level 0
@@ -550,7 +689,7 @@ asm void specialProcSound__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044CB8 022C .text      specialProcCreate__12dEvDtStaff_cFv                          */
+/* 80044CB8-80044EE4 022C .text      specialProcCreate__12dEvDtStaff_cFv                          Function */
 // dEvDtStaff_c::specialProcCreate(void)
 #pragma push
 #pragma optimization_level 0
@@ -561,7 +700,7 @@ asm void specialProcCreate__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80044EE4 0994 .text      specialProcDirector__12dEvDtStaff_cFv                        */
+/* 80044EE4-80045878 0994 .text      specialProcDirector__12dEvDtStaff_cFv                        Function */
 // dEvDtStaff_c::specialProcDirector(void)
 #pragma push
 #pragma optimization_level 0
@@ -572,7 +711,7 @@ asm void specialProcDirector__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80045878 0284 .text      specialProcPackage__12dEvDtStaff_cFv                         */
+/* 80045878-80045AFC 0284 .text      specialProcPackage__12dEvDtStaff_cFv                         Function */
 // dEvDtStaff_c::specialProcPackage(void)
 #pragma push
 #pragma optimization_level 0
@@ -583,7 +722,7 @@ asm void specialProcPackage__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80045AFC 0138 .text      specialProcTimekeeper__12dEvDtStaff_cFv                      */
+/* 80045AFC-80045C34 0138 .text      specialProcTimekeeper__12dEvDtStaff_cFv                      Function */
 // dEvDtStaff_c::specialProcTimekeeper(void)
 #pragma push
 #pragma optimization_level 0
@@ -594,7 +733,7 @@ asm void specialProcTimekeeper__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 80045C34 0474 .text      specialProcEffect__12dEvDtStaff_cFv                          */
+/* 80045C34-800460A8 0474 .text      specialProcEffect__12dEvDtStaff_cFv                          Function */
 // dEvDtStaff_c::specialProcEffect(void)
 #pragma push
 #pragma optimization_level 0
@@ -605,7 +744,7 @@ asm void specialProcEffect__12dEvDtStaff_cFv() {
 }
 #pragma pop
 
-/* 800460A8 0090 .text      startCheck__10dEvDtCut_cFv                                   */
+/* 800460A8-80046138 0090 .text      startCheck__10dEvDtCut_cFv                                   Function */
 // dEvDtCut_c::startCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -616,7 +755,7 @@ asm void startCheck__10dEvDtCut_cFv() {
 }
 #pragma pop
 
-/* 80046138 0034 .text      init__11dEvDtBase_cFv                                        */
+/* 80046138-8004616C 0034 .text      init__11dEvDtBase_cFv                                        Function */
 // dEvDtBase_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -627,8 +766,8 @@ asm void init__11dEvDtBase_cFv() {
 }
 #pragma pop
 
-/* 8004616C 0120 .text      init__11dEvDtBase_cFPci                                      */
-// dEvDtBase_c::init(s8*, int)
+/* 8004616C-8004628C 0120 .text      init__11dEvDtBase_cFPci                                      Function */
+// dEvDtBase_c::init(char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -638,7 +777,7 @@ asm void init__11dEvDtBase_cFPci() {
 }
 #pragma pop
 
-/* 8004628C 0070 .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    */
+/* 8004628C-800462FC 0070 .text      advanceCut__11dEvDtBase_cFP12dEvDtEvent_c                    Function */
 // dEvDtBase_c::advanceCut(dEvDtEvent_c*)
 #pragma push
 #pragma optimization_level 0
@@ -649,7 +788,7 @@ asm void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c() {
 }
 #pragma pop
 
-/* 800462FC 00E0 .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               */
+/* 800462FC-800463DC 00E0 .text      advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c               Function */
 // dEvDtBase_c::advanceCutLocal(dEvDtStaff_c*)
 #pragma push
 #pragma optimization_level 0

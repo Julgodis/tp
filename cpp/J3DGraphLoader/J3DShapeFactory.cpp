@@ -17,33 +17,70 @@ extern void* operator new[](u32); /* __nwa__FUl */
 extern void* operator new[](u32, int); /* __nwa__FUli */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __ct__12J3DShapeDrawFPCUcUl();
+/* Function             */
 extern void initialize__8J3DShapeFv();
+/* Function             */
 extern void func_80336764();
+/* Function             */
 extern void func_8033677C();
+/* Function             */
+extern void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+/* Function             */
+extern void create__15J3DShapeFactoryFiUlP14_GXVtxDescList();
+/* Function             */
 extern void newShapeMtx__15J3DShapeFactoryCFUlii();
+/* Function             */
 extern void newShapeDraw__15J3DShapeFactoryCFii();
+/* Function             */
+extern void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+/* Function             */
+extern void calcSize__15J3DShapeFactoryFiUl();
+/* Function             */
+extern void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+/* Function             */
 extern void calcSizeShapeMtx__15J3DShapeFactoryCFUlii();
+/* Function             */
 extern void func_80337AE0();
+/* Function             */
 extern void func_80337AF8();
+/* Function             */
 extern void func_80337B10();
+/* Function             */
 extern void func_80337B28();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DShapeFactory__stringBase0[48];
-SECTION_DATA extern const void* __vt__28J3DShapeMtxYBBoardConcatView[10];
-SECTION_DATA extern const void* __vt__27J3DShapeMtxBBoardConcatView[10];
-SECTION_DATA extern const void* __vt__26J3DShapeMtxMultiConcatView[10];
-SECTION_DATA extern const void* __vt__16J3DShapeMtxMulti[8];
-SECTION_DATA extern const void* __vt__21J3DShapeMtxConcatView[10];
-SECTION_DATA extern const void* __vt__11J3DShapeMtx[9];
-SECTION_DATA extern const void* __vt__8J3DShape[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28J3DShapeMtxYBBoardConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__27J3DShapeMtxBBoardConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26J3DShapeMtxMultiConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DShapeMtxMulti[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21J3DShapeMtxConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DShapeMtx[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8J3DShape[6];
 }
 
 
@@ -52,10 +89,17 @@ SECTION_DATA extern const void* __vt__8J3DShape[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2100 002C .rodata    @stringBase0                                                 */
-const char* const stringBase_803A2100 = 
-    "WRONG SHAPE MATRIX TYPE (J3DMode"
+/* 803A2100-803A2130 002C .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A2100 = 
+    "WRONG SHAPE MATR"
+    "IX TYPE (J3DMode"
     "lInit.cpp)\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A212C = "\0\0\0";
+#pragma pop
 }
 
 
@@ -64,7 +108,7 @@ const char* const stringBase_803A2100 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 80337350 00B0 .text      __ct__15J3DShapeFactoryFRC13J3DShapeBlock                    */
+/* 80337350-80337400 00B0 .text      __ct__15J3DShapeFactoryFRC13J3DShapeBlock                    Function */
 // J3DShapeFactory::J3DShapeFactory(const J3DShapeBlock&)
 #pragma push
 #pragma optimization_level 0
@@ -75,7 +119,7 @@ asm void __ct__15J3DShapeFactoryFRC13J3DShapeBlock() {
 }
 #pragma pop
 
-/* 80337400 01BC .text      create__15J3DShapeFactoryFiUlP14_GXVtxDescList               */
+/* 80337400-803375BC 01BC .text      create__15J3DShapeFactoryFiUlP14_GXVtxDescList               Function */
 // J3DShapeFactory::create(int, u32, _GXVtxDescList*)
 #pragma push
 #pragma optimization_level 0
@@ -86,7 +130,7 @@ asm void create__15J3DShapeFactoryFiUlP14_GXVtxDescList() {
 }
 #pragma pop
 
-/* 803375BC 0290 .text      newShapeMtx__15J3DShapeFactoryCFUlii                         */
+/* 803375BC-8033784C 0290 .text      newShapeMtx__15J3DShapeFactoryCFUlii                         Function */
 // J3DShapeFactory::newShapeMtx(u32, int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -97,7 +141,7 @@ asm void newShapeMtx__15J3DShapeFactoryCFUlii() {
 }
 #pragma pop
 
-/* 8033784C 008C .text      newShapeDraw__15J3DShapeFactoryCFii                          */
+/* 8033784C-803378D8 008C .text      newShapeDraw__15J3DShapeFactoryCFii                          Function */
 // J3DShapeFactory::newShapeDraw(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +152,7 @@ asm void newShapeDraw__15J3DShapeFactoryCFii() {
 }
 #pragma pop
 
-/* 803378D8 006C .text      allocVcdVatCmdBuffer__15J3DShapeFactoryFUl                   */
+/* 803378D8-80337944 006C .text      allocVcdVatCmdBuffer__15J3DShapeFactoryFUl                   Function */
 // J3DShapeFactory::allocVcdVatCmdBuffer(u32)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +163,7 @@ asm void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl() {
 }
 #pragma pop
 
-/* 80337944 0094 .text      calcSize__15J3DShapeFactoryFiUl                              */
+/* 80337944-803379D8 0094 .text      calcSize__15J3DShapeFactoryFiUl                              Function */
 // J3DShapeFactory::calcSize(int, u32)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +174,7 @@ asm void calcSize__15J3DShapeFactoryFiUl() {
 }
 #pragma pop
 
-/* 803379D8 0010 .text      calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl                */
+/* 803379D8-803379E8 0010 .text      calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl                Function */
 // J3DShapeFactory::calcSizeVcdVatCmdBuffer(u32)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +185,7 @@ asm void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl() {
 }
 #pragma pop
 
-/* 803379E8 00F8 .text      calcSizeShapeMtx__15J3DShapeFactoryCFUlii                    */
+/* 803379E8-80337AE0 00F8 .text      calcSizeShapeMtx__15J3DShapeFactoryCFUlii                    Function */
 // J3DShapeFactory::calcSizeShapeMtx(u32, int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +196,7 @@ asm void calcSizeShapeMtx__15J3DShapeFactoryCFUlii() {
 }
 #pragma pop
 
-/* 80337AE0 0018 .text      JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl        */
+/* 80337AE0-80337AF8 0018 .text      JSUConvertOffsetToPtr<20J3DShapeDrawInitData>__FPCvUl        Function */
 // JSUConvertOffsetToPtr<20J3DShapeDrawInitData>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +207,7 @@ asm void func_80337AE0() {
 }
 #pragma pop
 
-/* 80337AF8 0018 .text      JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl         */
+/* 80337AF8-80337B10 0018 .text      JSUConvertOffsetToPtr<19J3DShapeMtxInitData>__FPCvUl         Function */
 // JSUConvertOffsetToPtr<19J3DShapeMtxInitData>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +218,7 @@ asm void func_80337AF8() {
 }
 #pragma pop
 
-/* 80337B10 0018 .text      JSUConvertOffsetToPtr<Uc>__FPCvUl                            */
+/* 80337B10-80337B28 0018 .text      JSUConvertOffsetToPtr<Uc>__FPCvUl                            Function */
 // JSUConvertOffsetToPtr<Uc>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +229,7 @@ asm void func_80337B10() {
 }
 #pragma pop
 
-/* 80337B28 0018 .text      JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl              */
+/* 80337B28-80337B40 0018 .text      JSUConvertOffsetToPtr<14_GXVtxDescList>__FPCvUl              Function */
 // JSUConvertOffsetToPtr<14_GXVtxDescList>(const void*, u32)
 #pragma push
 #pragma optimization_level 0

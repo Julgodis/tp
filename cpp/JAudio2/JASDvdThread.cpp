@@ -13,14 +13,27 @@ struct JKRHeap;
 extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void __ct__13JASTaskThreadFiiUl();
+/* GlobalFunction       */
+extern u32 getThreadPointer__6JASDvdFv();
+/* Function             */
+extern void createThread__6JASDvdFliUl();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void OSResumeThread();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_SBSS extern u8 sThread__6JASDvd[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sThread__6JASDvd[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JASDram[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 }
 
@@ -30,9 +43,8 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451208 0004 .sbss      sThread__6JASDvd                                             */
-SECTION_SBSS u8 sThread__6JASDvd[4];
-SECTION_SBSS u8 pad_8045120C[4];
+/* 80451208-80451210 0004 .sbss      sThread__6JASDvd                                             ZeroInitializedData */
+SECTION_SBSS u8 sThread__6JASDvd[4 + 4 /* padding */];
 }
 
 
@@ -41,14 +53,14 @@ SECTION_SBSS u8 pad_8045120C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028FEFC 0008 .text      getThreadPointer__6JASDvdFv                                  */
+/* 8028FEFC-8028FF04 0008 .text      getThreadPointer__6JASDvdFv                                  GlobalFunction */
 // JASDvd::getThreadPointer(void)
 u32 getThreadPointer__6JASDvdFv() {
 	return *(u32*)&sThread__6JASDvd;
 }
 
-/* 8028FF04 00A4 .text      createThread__6JASDvdFliUl                                   */
-// JASDvd::createThread(s32, int, u32)
+/* 8028FF04-8028FFA8 00A4 .text      createThread__6JASDvdFliUl                                   Function */
+// JASDvd::createThread(long, int, u32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

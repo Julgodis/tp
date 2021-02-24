@@ -9,22 +9,49 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void setCharColor__7JUTFontFQ28JUtility6TColor();
+/* Function             */
 extern void drawString_size_scale__7JUTFontFffffPCcUlb();
+/* Function             */
 extern void drawString__14JUTDirectPrintFUsUsPc();
+/* Function             */
 extern void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+/* ReturnFunction       */
+extern void create__12JUTAssertionFv();
+/* Function             */
 extern void flush_subroutine__12JUTAssertionFv();
+/* Function             */
+extern void flushMessage__12JUTAssertionFv();
+/* Function             */
+extern void flushMessage_dbPrint__12JUTAssertionFv();
+/* Function             */
+extern void setVisible__12JUTAssertionFb();
+/* Function             */
+extern void setMessageCount__12JUTAssertionFi();
+/* GlobalFunction       */
 extern u32 VIGetRetraceCount();
+/* Function             */
 extern void strlen();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80434870[64];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_804348B0[256];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804508F8[8];
-SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4];
-SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4];
-SECTION_SBSS extern u8 data_80451530[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451530[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_724;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_725;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_726[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_728;
 }
 
@@ -34,19 +61,19 @@ SECTION_SDATA2 extern f64 LIT_728;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804560B8 0004 .sdata2    @724                                                         */
+/* 804560B8-804560BC 0004 .sdata2    @724                                                         Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 LIT_724 = 30.000000f;
-/* 804560BC 0004 .sdata2    @725                                                         */
+/* 804560BC-804560C0 0004 .sdata2    @725                                                         Float32Data */
 // 0x42100000
 SECTION_SDATA2 f32 LIT_725 = 36.000000f;
-/* 804560C0 0004 .sdata2    @726                                                         */
+/* 804560C0-804560C8 0004 .sdata2    @726                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_726[8] = {
 	0x42, 0x58, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804560C8 0008 .sdata2    @728                                                         */
+/* 804560C8-804560D0 0008 .sdata2    @728                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_728 = 4503601774854144.000000;
 }
@@ -57,9 +84,9 @@ SECTION_SDATA2 f64 LIT_728 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434870 0040 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@  */
+/* 80434870-804348B0 0040 .bss       sMessageFileLine__Q212JUTAssertion23@unnamed@JUTAssert_cpp@  ZeroInitializedData */
 SECTION_BSS u8 data_80434870[64];
-/* 804348B0 0100 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@    */
+/* 804348B0-804349B0 0100 .bss       sMessageString__Q212JUTAssertion23@unnamed@JUTAssert_cpp@    ZeroInitializedData */
 SECTION_BSS u8 data_804348B0[256];
 }
 
@@ -69,9 +96,8 @@ SECTION_BSS u8 data_804348B0[256];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451530 0004 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@      */
-SECTION_SBSS u8 data_80451530[4];
-SECTION_SBSS u8 pad_80451534[4];
+/* 80451530-80451538 0004 .sbss      sMessageLife__Q212JUTAssertion23@unnamed@JUTAssert_cpp@      ZeroInitializedData */
+SECTION_SBSS u8 data_80451530[4 + 4 /* padding */];
 }
 
 
@@ -80,13 +106,13 @@ SECTION_SBSS u8 pad_80451534[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E495C 0004 .text      create__12JUTAssertionFv                                     */
+/* 802E495C-802E4960 0004 .text      create__12JUTAssertionFv                                     ReturnFunction */
 // JUTAssertion::create(void)
 void create__12JUTAssertionFv() {
 	return;
 }
 
-/* 802E4960 003C .text      flush_subroutine__12JUTAssertionFv                           */
+/* 802E4960-802E499C 003C .text      flush_subroutine__12JUTAssertionFv                           Function */
 // JUTAssertion::flush_subroutine(void)
 #pragma push
 #pragma optimization_level 0
@@ -97,7 +123,7 @@ asm void flush_subroutine__12JUTAssertionFv() {
 }
 #pragma pop
 
-/* 802E499C 00B8 .text      flushMessage__12JUTAssertionFv                               */
+/* 802E499C-802E4A54 00B8 .text      flushMessage__12JUTAssertionFv                               Function */
 // JUTAssertion::flushMessage(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +134,7 @@ asm void flushMessage__12JUTAssertionFv() {
 }
 #pragma pop
 
-/* 802E4A54 01E0 .text      flushMessage_dbPrint__12JUTAssertionFv                       */
+/* 802E4A54-802E4C34 01E0 .text      flushMessage_dbPrint__12JUTAssertionFv                       Function */
 // JUTAssertion::flushMessage_dbPrint(void)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +145,7 @@ asm void flushMessage_dbPrint__12JUTAssertionFv() {
 }
 #pragma pop
 
-/* 802E4C34 0008 .text      setVisible__12JUTAssertionFb                                 */
+/* 802E4C34-802E4C3C 0008 .text      setVisible__12JUTAssertionFb                                 Function */
 // JUTAssertion::setVisible(bool)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +156,7 @@ asm void setVisible__12JUTAssertionFb() {
 }
 #pragma pop
 
-/* 802E4C3C 0018 .text      setMessageCount__12JUTAssertionFi                            */
+/* 802E4C3C-802E4C54 0018 .text      setMessageCount__12JUTAssertionFi                            Function */
 // JUTAssertion::setMessageCount(int)
 #pragma push
 #pragma optimization_level 0

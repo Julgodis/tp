@@ -13,33 +13,67 @@ struct cXyz;
 extern void fopAcIt_Judge(void* (*)(void*, void*), void*); /* fopAcIt_Judge__FPFPvPv_PvPv */
 extern void fpcSch_JudgeByID(void*, void*); /* fpcSch_JudgeByID__FPvPv */
 extern void cLib_addCalcPos2(cXyz*, const cXyz&, f32, f32); /* cLib_addCalcPos2__FP4cXyzRC4cXyzff */
-extern void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); /* cLib_addCalcAngleS__FPsssss */
+extern void cLib_addCalcAngleS(short*, short, short, short, short); /* cLib_addCalcAngleS__FPsssss */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fpcSch_JudgeByID__FPvPv();
+/* FirstParamFunction   */
 extern u8* getRotateP__12daShopItem_cFv(u8*);
+/* FirstParamFunction   */
 extern u8* getPosP__12daShopItem_cFv(u8*);
+/* Function             */
+extern void __ct__15dShopItemCtrl_cFv();
+/* Function             */
 extern void __dt__15dShopItemCtrl_cFv();
+/* Function             */
+extern void getCurrentPos__15dShopItemCtrl_cFi();
+/* Function             */
+extern void isHomePos__15dShopItemCtrl_cFi();
+/* Function             */
+extern void setRotateAnime__15dShopItemCtrl_cFi();
+/* Function             */
+extern void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
+/* Function             */
 extern void cLib_addCalcAngleS__FPsssss();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_27();
-SECTION_DATA extern const void* __vt__15dShopItemCtrl_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dShopItemCtrl_c[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3659[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_shop_item_ctrl__LIT_3838;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_shop_item_ctrl__LIT_3839;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3840[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_shop_item_ctrl__LIT_3841;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3842[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3843[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3844[4];
 }
 
@@ -49,8 +83,8 @@ SECTION_SDATA2 extern u8 d_d_shop_item_ctrl__LIT_3844[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BB888 000C .data      __vt__15dShopItemCtrl_c                                      */
-SECTION_DATA const  void* __vt__15dShopItemCtrl_c[4] = {
+/* 803BB888-803BB898 000C .data      __vt__15dShopItemCtrl_c                                      VTableData */
+SECTION_DATA void* __vt__15dShopItemCtrl_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dShopItemCtrl_cFv,
@@ -65,34 +99,34 @@ SECTION_DATA const  void* __vt__15dShopItemCtrl_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453AD0 0004 .sdata2    @3659                                                        */
+/* 80453AD0-80453AD8 0004 .sdata2    @3659                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3659[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453AD8 0008 .sdata2    @3838                                                        */
+/* 80453AD8-80453AE0 0008 .sdata2    @3838                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_shop_item_ctrl__LIT_3838 = 0.500000;
-/* 80453AE0 0008 .sdata2    @3839                                                        */
+/* 80453AE0-80453AE8 0008 .sdata2    @3839                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_shop_item_ctrl__LIT_3839 = 3.000000;
-/* 80453AE8 0008 .sdata2    @3840                                                        */
+/* 80453AE8-80453AF0 0008 .sdata2    @3840                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3840[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80453AF0 0004 .sdata2    @3841                                                        */
+/* 80453AF0-80453AF4 0004 .sdata2    @3841                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_shop_item_ctrl__LIT_3841 = 0.500000f;
-/* 80453AF4 0004 .sdata2    @3842                                                        */
+/* 80453AF4-80453AF8 0004 .sdata2    @3842                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3842[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80453AF8 0004 .sdata2    @3843                                                        */
+/* 80453AF8-80453AFC 0004 .sdata2    @3843                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3843[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80453AFC 0004 .sdata2    @3844                                                        */
+/* 80453AFC-80453B00 0004 .sdata2    @3844                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3844[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
@@ -104,7 +138,7 @@ SECTION_SDATA2 u8 d_d_shop_item_ctrl__LIT_3844[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80196914 0044 .text      __ct__15dShopItemCtrl_cFv                                    */
+/* 80196914-80196958 0044 .text      __ct__15dShopItemCtrl_cFv                                    Function */
 // dShopItemCtrl_c::dShopItemCtrl_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -115,7 +149,7 @@ asm void __ct__15dShopItemCtrl_cFv() {
 }
 #pragma pop
 
-/* 80196958 0048 .text      __dt__15dShopItemCtrl_cFv                                    */
+/* 80196958-801969A0 0048 .text      __dt__15dShopItemCtrl_cFv                                    Function */
 // dShopItemCtrl_c::~dShopItemCtrl_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -126,7 +160,7 @@ asm void __dt__15dShopItemCtrl_cFv() {
 }
 #pragma pop
 
-/* 801969A0 009C .text      getCurrentPos__15dShopItemCtrl_cFi                           */
+/* 801969A0-80196A3C 009C .text      getCurrentPos__15dShopItemCtrl_cFi                           Function */
 // dShopItemCtrl_c::getCurrentPos(int)
 #pragma push
 #pragma optimization_level 0
@@ -137,7 +171,7 @@ asm void getCurrentPos__15dShopItemCtrl_cFi() {
 }
 #pragma pop
 
-/* 80196A3C 00B4 .text      isHomePos__15dShopItemCtrl_cFi                               */
+/* 80196A3C-80196AF0 00B4 .text      isHomePos__15dShopItemCtrl_cFi                               Function */
 // dShopItemCtrl_c::isHomePos(int)
 #pragma push
 #pragma optimization_level 0
@@ -148,7 +182,7 @@ asm void isHomePos__15dShopItemCtrl_cFi() {
 }
 #pragma pop
 
-/* 80196AF0 00B4 .text      setRotateAnime__15dShopItemCtrl_cFi                          */
+/* 80196AF0-80196BA4 00B4 .text      setRotateAnime__15dShopItemCtrl_cFi                          Function */
 // dShopItemCtrl_c::setRotateAnime(int)
 #pragma push
 #pragma optimization_level 0
@@ -159,8 +193,8 @@ asm void setRotateAnime__15dShopItemCtrl_cFi() {
 }
 #pragma pop
 
-/* 80196BA4 04F4 .text      setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb                    */
-// dShopItemCtrl_c::setZoomAnime(int, cXyz*, s16, bool)
+/* 80196BA4-80197098 04F4 .text      setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb                    Function */
+// dShopItemCtrl_c::setZoomAnime(int, cXyz*, short, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

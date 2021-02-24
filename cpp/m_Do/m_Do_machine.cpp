@@ -12,20 +12,23 @@
 // Additional Symbols:
 // 
 
+struct JUTConsole;
 struct JKRHeap;
 struct OSContext;
-struct JUTConsole;
 
 extern void myGetHeapTypeByString(JKRHeap*); /* myGetHeapTypeByString__FP7JKRHeap */
 extern void myMemoryErrorRoutine(void*, u32, int); /* myMemoryErrorRoutine__FPvUli */
 extern void myHeapCheckRecursive(JKRHeap*); /* myHeapCheckRecursive__FP7JKRHeap */
+extern void mDoMch_HeapCheckAll(void); /* mDoMch_HeapCheckAll__Fv */
 extern void developKeyCheck(u32, u32); /* developKeyCheck__FUlUl */
 extern void mDoMch_IsProgressiveMode(void); /* mDoMch_IsProgressiveMode__Fv */
 extern void exceptionReadPad(u32*, u32*); /* exceptionReadPad__FPUlPUl */
 extern void exceptionRestart(void); /* exceptionRestart__Fv */
 extern void myExceptionCallback(u16, OSContext*, u32, u32); /* myExceptionCallback__FUsP9OSContextUlUl */
 extern void fault_callback_scroll(u16, OSContext*, u32, u32); /* fault_callback_scroll__FUsP9OSContextUlUl */
-extern void my_SysPrintHeap(const s8*, void*, u32); /* my_SysPrintHeap__FPCcPvUl */
+extern void my_PrintHeap(const char*, u32); /* my_PrintHeap__FPCcUl */
+extern void my_SysPrintHeap(const char*, void*, u32); /* my_SysPrintHeap__FPCcPvUl */
+extern void mDoMch_Create(void); /* mDoMch_Create__Fv */
 extern void mDoExt_createAssertHeap(JKRHeap*); /* mDoExt_createAssertHeap__FP7JKRHeap */
 extern void mDoExt_createDbPrintHeap(u32, JKRHeap*); /* mDoExt_createDbPrintHeap__FUlP7JKRHeap */
 extern void mDoExt_createGameHeap(u32, JKRHeap*); /* mDoExt_createGameHeap__FUlP7JKRHeap */
@@ -41,135 +44,271 @@ extern void cM_initRnd(int, int, int); /* cM_initRnd__Fiii */
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void OSReportDisable();
+/* Function             */
 extern void OSReportEnable();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void OSReport_Error();
+/* Function             */
 extern void OSReport_System();
+/* Function             */
 extern void myGetHeapTypeByString__FP7JKRHeap();
+/* Function             */
 extern void myMemoryErrorRoutine__FPvUli();
+/* Function             */
 extern void myHeapCheckRecursive__FP7JKRHeap();
+/* Function             */
+extern void mDoMch_HeapCheckAll__Fv();
+/* Function             */
 extern void developKeyCheck__FUlUl();
+/* Function             */
 extern void mDoMch_IsProgressiveMode__Fv();
+/* Function             */
 extern void exceptionReadPad__FPUlPUl();
+/* Function             */
 extern void exceptionRestart__Fv();
+/* Function             */
 extern void myExceptionCallback__FUsP9OSContextUlUl();
+/* Function             */
 extern void fault_callback_scroll__FUsP9OSContextUlUl();
+/* ReturnFunction       */
 extern void my_PrintHeap__FPCcUl();
+/* Function             */
 extern void my_SysPrintHeap__FPCcPvUl();
+/* Function             */
+extern void mDoMch_Create__Fv();
+/* Function             */
 extern void mDoExt_createAssertHeap__FP7JKRHeap();
+/* Function             */
 extern void mDoExt_createDbPrintHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getDbPrintHeap__Fv();
+/* Function             */
 extern void mDoExt_createGameHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getGameHeap__Fv();
+/* Function             */
 extern void mDoExt_createZeldaHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getZeldaHeap__Fv();
+/* Function             */
 extern void mDoExt_createCommandHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getCommandHeap__Fv();
+/* Function             */
 extern void mDoExt_createArchiveHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getArchiveHeap__Fv();
+/* Function             */
 extern void mDoExt_createJ2dHeap__FUlP7JKRHeap();
+/* GlobalFunction       */
 extern u32 mDoExt_getJ2dHeap__Fv();
+/* Function             */
 extern void mDoRst_reset__FiUli();
+/* Function             */
 extern void create__9mDoDvdThdFl();
+/* Function             */
 extern void mDoDvdErr_ThdInit__Fv();
+/* Function             */
 extern void ThdInit__15mDoMemCd_Ctrl_cFv();
+/* Function             */
 extern void exception_addition__FP10JUTConsole();
+/* Function             */
 extern void init__3cMlFP7JKRHeap();
+/* Function             */
 extern void cAPICPad_recalibrate__Fv();
+/* Function             */
 extern void cM_initRnd__Fiii();
+/* Function             */
 extern void firstInit__9JFWSystemFv();
+/* Function             */
 extern void init__9JFWSystemFv();
+/* Function             */
 extern void becomeCurrentHeap__7JKRHeapFv();
+/* Function             */
 extern void getFreeSize__7JKRHeapFv();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void setErrorFlag__7JKRHeapFb();
+/* Function             */
 extern void setErrorHandler__7JKRHeapFPFPvUli_v();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __ct__9JKRThreadFP8OSThreadi();
+/* Function             */
 extern void createManager__15JKRThreadSwitchFP7JKRHeap();
+/* Function             */
 extern void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
+/* Function             */
 extern void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+/* Function             */
 extern void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+/* Function             */
 extern void __dt__10JUTGamePadFv();
+/* Function             */
 extern void isEnablePad__12JUTExceptionCFv();
+/* Function             */
 extern void readPad__12JUTExceptionFPUlPUl();
+/* Function             */
 extern void waitTime__12JUTExceptionFl();
+/* Function             */
 extern void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+/* Function             */
 extern void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+/* Function             */
 extern void appendMapFile__12JUTExceptionFPCc();
+/* Function             */
 extern void setVisible__12JUTAssertionFb();
+/* Function             */
 extern void destroyManager__8JUTVideoFv();
+/* Function             */
 extern void print_f__10JUTConsoleFPCce();
+/* Function             */
 extern void print__10JUTConsoleFPCc();
+/* Function             */
 extern void scroll__10JUTConsoleFi();
+/* Function             */
 extern void getUsedLine__10JUTConsoleCFv();
+/* Function             */
 extern void getLineOffset__10JUTConsoleCFv();
+/* Function             */
 extern void drawDirect__17JUTConsoleManagerCFb();
+/* Function             */
 extern void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
+/* Function             */
 extern void PPCHalt();
+/* Function             */
 extern void OSGetConsoleType();
+/* GlobalFunction       */
 extern u32 OSGetArenaHi();
+/* GlobalFunction       */
 extern u32 OSGetArenaLo();
+/* Function             */
 extern void OSSetArenaHi();
+/* Function             */
 extern void OSEnableInterrupts();
+/* Function             */
 extern void OSResetSystem();
+/* Function             */
 extern void OSGetResetCode();
+/* Function             */
 extern void OSGetProgressiveMode();
+/* Function             */
 extern void OSSetProgressiveMode();
+/* Function             */
 extern void OSGetCurrentThread();
+/* FirstParamFunction   */
 extern u32 OSGetThreadPriority(u8*);
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void DVDChangeDir();
+/* Function             */
 extern void VIFlush();
+/* Function             */
 extern void VISetBlack();
+/* GlobalFunction       */
 extern u32 VIGetRetraceCount();
+/* Function             */
 extern void VIGetDTVStatus();
+/* Function             */
 extern void GXSetDrawDoneCallback();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_machine__stringBase0[728];
+/* InitializedData      */
+SECTION_DATA extern u8 g_ntscZeldaIntDf[60];
+/* InitializedData      */
 SECTION_DATA extern u8 g_ntscZeldaProg[60];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450580[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 memMargin__7mDoMain[4];
-SECTION_SDATA extern u8 mRenderModeObj__15mDoMch_render_c[8];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* mRenderModeObj__15mDoMch_render_c[2];
+/* InitializedData      */
 SECTION_SDATA extern u8 maxStdHeaps__Q29JFWSystem11CSetUpParam[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 sysHeapSize__Q29JFWSystem11CSetUpParam[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 fifoBufSize__Q29JFWSystem11CSetUpParam[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 aramAudioBufSize__Q29JFWSystem11CSetUpParam[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 aramGraphBufSize__Q29JFWSystem11CSetUpParam[4];
-SECTION_SDATA extern u8 renderMode__Q29JFWSystem11CSetUpParam[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* renderMode__Q29JFWSystem11CSetUpParam;
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804508B0[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 sSZSBufferSize__7JKRAram[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 sSZSBufferSize__12JKRDvdRipper[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 sSZSBufferSize__16JKRDvdAramRipper[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sHungUpTime__7mDoMain[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B14[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450BF0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 solidHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 gameHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 zeldaHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 commandHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 archiveHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 unknownHeapErrors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 heapErrors[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450C10[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 gameHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 zeldaHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 commandHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 archiveHeap[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 systemHeap__9JFWSystem[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 systemConsole__9JFWSystem[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451500[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sErrorManager__12JUTException[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sConsole__12JUTException[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__17JUTConsoleManager[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 m_Do_m_Do_machine__LIT_3940;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 m_Do_m_Do_machine__LIT_3941;
 }
 
@@ -179,55 +318,67 @@ SECTION_SDATA2 extern f32 m_Do_m_Do_machine__LIT_3941;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80373DE8 02D8 .rodata    @stringBase0                                                 */
-const char* const stringBase_80373DE8 = "SystemHeap";
-const char* const stringBase_80373DF3 = "ZeldaHeap";
-const char* const stringBase_80373DFD = "GameHeap";
-const char* const stringBase_80373E06 = "ArchiveHeap";
-const char* const stringBase_80373E12 = "CommandHeap";
-const char* const stringBase_80373E1E = "DbPrintHeap";
-const char* const stringBase_80373E2A = "J2dHeap";
-const char* const stringBase_80373E32 = "ASTH";
-const char* const stringBase_80373E37 = "EXPH";
-const char* const stringBase_80373E3C = "SLID";
-const char* const stringBase_80373E41 = "STDH";
-const char* const stringBase_80373E46 = "UNIT";
-const char* const stringBase_80373E4B = "(Null)";
-const char* const stringBase_80373E52 = 
-    "エラー: メモリを確保できません %d(0x%x)バイト、 %d"
-    " バイトアライメント from %08x\n";
-const char* const stringBase_80373EA3 = 
-    "FreeSize=%08x TotalFreeSize=%08x"
-    " HeapType=%08x(%c%c%c%c) HeapSiz"
+/* 80373DE8-803740C0 02D8 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80373DE8 = "SystemHeap";
+SECTION_DEAD const char* const stringBase_80373DF3 = "ZeldaHeap";
+SECTION_DEAD const char* const stringBase_80373DFD = "GameHeap";
+SECTION_DEAD const char* const stringBase_80373E06 = "ArchiveHeap";
+SECTION_DEAD const char* const stringBase_80373E12 = "CommandHeap";
+SECTION_DEAD const char* const stringBase_80373E1E = "DbPrintHeap";
+SECTION_DEAD const char* const stringBase_80373E2A = "J2dHeap";
+SECTION_DEAD const char* const stringBase_80373E32 = "ASTH";
+SECTION_DEAD const char* const stringBase_80373E37 = "EXPH";
+SECTION_DEAD const char* const stringBase_80373E3C = "SLID";
+SECTION_DEAD const char* const stringBase_80373E41 = "STDH";
+SECTION_DEAD const char* const stringBase_80373E46 = "UNIT";
+SECTION_DEAD const char* const stringBase_80373E4B = "(Null)";
+SECTION_DEAD const char* const stringBase_80373E52 = 
+    "エラー: メモリを確保できません"
+    " %d(0x%x)バイト、 %d"
+    " バイトアライメント from "
+    "%08x\n";
+SECTION_DEAD const char* const stringBase_80373EA3 = 
+    "FreeSize=%08x To"
+    "talFreeSize=%08x"
+    " HeapType=%08x(%"
+    "c%c%c%c) HeapSiz"
     "e=%08x %s\n";
-const char* const stringBase_80373EEE = "error in %08x(%s)\n";
-const char* const stringBase_80373F01 = "振動停止＆原点復帰\n";
-const char* const stringBase_80373F15 = "例外マネージャがありません\n";
-const char* const stringBase_80373F31 = "キー入力を受け付けています\n";
-const char* const stringBase_80373F4D = "JUTAssertionを可視化しました\n";
-const char* const stringBase_80373F6B = "3秒間停止\n";
-const char* const stringBase_80373F76 = "/map/Final/Release";
-const char* const stringBase_80373F89 = "(SRR0-3):%08X %08X %08X %08X\n";
-const char* const stringBase_80373FA7 = 
-    "PUSH START BUTTON TO ADDITIONAL "
+SECTION_DEAD const char* const stringBase_80373EEE = "error in %08x(%s)\n";
+SECTION_DEAD const char* const stringBase_80373F01 = "振動停止＆原点復帰\n";
+SECTION_DEAD const char* const stringBase_80373F15 = "例外マネージャがありません\n";
+SECTION_DEAD const char* const stringBase_80373F31 = "キー入力を受け付けています\n";
+SECTION_DEAD const char* const stringBase_80373F4D = "JUTAssertionを可視化しました\n";
+SECTION_DEAD const char* const stringBase_80373F6B = "3秒間停止\n";
+SECTION_DEAD const char* const stringBase_80373F76 = "/map/Final/Release";
+SECTION_DEAD const char* const stringBase_80373F89 = "(SRR0-3):%08X %08X %08X %08X\n";
+SECTION_DEAD const char* const stringBase_80373FA7 = 
+    "PUSH START BUTTO"
+    "N TO ADDITIONAL "
     "INFOMATION\n";
-const char* const stringBase_80373FD3 = 
-    "--------------------------------"
+SECTION_DEAD const char* const stringBase_80373FD3 = 
+    "----------------"
+    "----------------"
     "------\n";
-const char* const stringBase_80373FFB = """\x1B""[32m%-24s = size=%d KB\n""\x1B""[m";
-const char* const stringBase_80374017 = 
-    """\x1B""[32m%-24s = %08x-%08x size=%d K"
+SECTION_DEAD const char* const stringBase_80373FFB = """\x1B""[32m%-24s = size=%d KB\n""\x1B""[m";
+SECTION_DEAD const char* const stringBase_80374017 = 
+    """\x1B""[32m%-24s = %08"
+    "x-%08x size=%d K"
     "B\n""\x1B""[m";
-const char* const stringBase_8037403D = "アリーナ";
-const char* const stringBase_80374046 = "システムヒープ";
-const char* const stringBase_80374055 = "コマンドヒープ";
-const char* const stringBase_80374064 = "アーカイブヒープ";
-const char* const stringBase_80374075 = "Ｊ２Ｄ用ヒープ";
-const char* const stringBase_80374084 = "ゲームヒープ";
-const char* const stringBase_80374091 = "ゼルダヒープ";
-const char* const stringBase_8037409E = 
-    "/map/Final/Release/frameworkF.ma"
+SECTION_DEAD const char* const stringBase_8037403D = "アリーナ";
+SECTION_DEAD const char* const stringBase_80374046 = "システムヒープ";
+SECTION_DEAD const char* const stringBase_80374055 = "コマンドヒープ";
+SECTION_DEAD const char* const stringBase_80374064 = "アーカイブヒープ";
+SECTION_DEAD const char* const stringBase_80374075 = "Ｊ２Ｄ用ヒープ";
+SECTION_DEAD const char* const stringBase_80374084 = "ゲームヒープ";
+SECTION_DEAD const char* const stringBase_80374091 = "ゼルダヒープ";
+SECTION_DEAD const char* const stringBase_8037409E = 
+    "/map/Final/Relea"
+    "se/frameworkF.ma"
     "p";
+#pragma pop
 }
 
 
@@ -236,14 +387,14 @@ const char* const stringBase_8037409E =
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2F60 003C .data      g_ntscZeldaIntDf                                             */
+/* 803A2F60-803A2F9C 003C .data      g_ntscZeldaIntDf                                             InitializedData */
 SECTION_DATA u8 g_ntscZeldaIntDf[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x06, 0x06, 0x08, 0x08, 0x0A, 0x0C, 0x0A, 0x08, 0x08, 0x00, 0x00, 0x00,
 };
-/* 803A2F9C 003C .data      g_ntscZeldaProg                                              */
+/* 803A2F9C-803A2FD8 003C .data      g_ntscZeldaProg                                              InitializedData */
 SECTION_DATA u8 g_ntscZeldaProg[60] = {
 	0x00, 0x00, 0x00, 0x02, 0x02, 0x60, 0x01, 0xC0, 0x01, 0xC0, 0x00, 0x1B, 0x00, 0x10, 0x02, 0x9A,
 	0x01, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -258,11 +409,11 @@ SECTION_DATA u8 g_ntscZeldaProg[60] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505A0 0004 .sdata     mRenderModeObj__15mDoMch_render_c                            */
-SECTION_SDATA u8 mRenderModeObj__15mDoMch_render_c[8] = {
-	0x80, 0x3A, 0x2F, 0x60,
+/* 804505A0-804505A8 0004 .sdata     mRenderModeObj__15mDoMch_render_c                            SymbolReferenceArrayData */
+SECTION_SDATA void* mRenderModeObj__15mDoMch_render_c[2] = {
+	(void*)&g_ntscZeldaIntDf,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -272,10 +423,10 @@ SECTION_SDATA u8 mRenderModeObj__15mDoMch_render_c[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451B00 0004 .sdata2    @3940                                                        */
+/* 80451B00-80451B04 0004 .sdata2    @3940                                                        Float32Data */
 // 0x41000000
 SECTION_SDATA2 f32 m_Do_m_Do_machine__LIT_3940 = 8.000000f;
-/* 80451B04 0004 .sdata2    @3941                                                        */
+/* 80451B04-80451B08 0004 .sdata2    @3941                                                        Float32Data */
 // 0x40c00000
 SECTION_SDATA2 f32 m_Do_m_Do_machine__LIT_3941 = 6.000000f;
 }
@@ -286,21 +437,23 @@ SECTION_SDATA2 f32 m_Do_m_Do_machine__LIT_3941 = 6.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450BF4 0004 .sbss      solidHeapErrors                                              */
+/* 80450BF0-80450BF4 0004 .sbss      data_80450BF0                                                ZeroInitializedData */
+SECTION_SBSS u8 data_80450BF0[4];
+/* 80450BF4-80450BF8 0004 .sbss      solidHeapErrors                                              ZeroInitializedData */
 SECTION_SBSS u8 solidHeapErrors[4];
-/* 80450BF8 0004 .sbss      gameHeapErrors                                               */
+/* 80450BF8-80450BFC 0004 .sbss      gameHeapErrors                                               ZeroInitializedData */
 SECTION_SBSS u8 gameHeapErrors[4];
-/* 80450BFC 0004 .sbss      zeldaHeapErrors                                              */
+/* 80450BFC-80450C00 0004 .sbss      zeldaHeapErrors                                              ZeroInitializedData */
 SECTION_SBSS u8 zeldaHeapErrors[4];
-/* 80450C00 0004 .sbss      commandHeapErrors                                            */
+/* 80450C00-80450C04 0004 .sbss      commandHeapErrors                                            ZeroInitializedData */
 SECTION_SBSS u8 commandHeapErrors[4];
-/* 80450C04 0004 .sbss      archiveHeapErrors                                            */
+/* 80450C04-80450C08 0004 .sbss      archiveHeapErrors                                            ZeroInitializedData */
 SECTION_SBSS u8 archiveHeapErrors[4];
-/* 80450C08 0004 .sbss      unknownHeapErrors                                            */
+/* 80450C08-80450C0C 0004 .sbss      unknownHeapErrors                                            ZeroInitializedData */
 SECTION_SBSS u8 unknownHeapErrors[4];
-/* 80450C0C 0004 .sbss      heapErrors                                                   */
+/* 80450C0C-80450C10 0004 .sbss      heapErrors                                                   ZeroInitializedData */
 SECTION_SBSS u8 heapErrors[4];
-/* 80450C10 0008 .sbss      merged_80450C10                                              */
+/* 80450C10-80450C18 0008 .sbss      merged_80450C10                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450C10[8];
 /* 80450C10 0005 tmpString$3651 */
 /* 80450C15 0001 data_80450C15 */
@@ -314,7 +467,7 @@ SECTION_SBSS u8 merged_80450C10[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8000B1EC 0200 .text      myGetHeapTypeByString__FP7JKRHeap                            */
+/* 8000B1EC-8000B3EC 0200 .text      myGetHeapTypeByString__FP7JKRHeap                            Function */
 }
 
 #pragma push
@@ -327,7 +480,7 @@ asm void myGetHeapTypeByString(JKRHeap*) {
 #pragma pop
 
 extern "C" {
-/* 8000B3EC 01DC .text      myMemoryErrorRoutine__FPvUli                                 */
+/* 8000B3EC-8000B5C8 01DC .text      myMemoryErrorRoutine__FPvUli                                 Function */
 }
 
 #pragma push
@@ -340,7 +493,7 @@ asm void myMemoryErrorRoutine(void*, u32, int) {
 #pragma pop
 
 extern "C" {
-/* 8000B5C8 00A0 .text      myHeapCheckRecursive__FP7JKRHeap                             */
+/* 8000B5C8-8000B668 00A0 .text      myHeapCheckRecursive__FP7JKRHeap                             Function */
 }
 
 #pragma push
@@ -353,7 +506,7 @@ asm void myHeapCheckRecursive(JKRHeap*) {
 #pragma pop
 
 extern "C" {
-/* 8000B668 0024 .text      mDoMch_HeapCheckAll__Fv                                      */
+/* 8000B668-8000B68C 0024 .text      mDoMch_HeapCheckAll__Fv                                      Function */
 }
 
 #pragma push
@@ -366,7 +519,7 @@ asm void mDoMch_HeapCheckAll(void) {
 #pragma pop
 
 extern "C" {
-/* 8000B68C 00B0 .text      developKeyCheck__FUlUl                                       */
+/* 8000B68C-8000B73C 00B0 .text      developKeyCheck__FUlUl                                       Function */
 }
 
 #pragma push
@@ -379,7 +532,7 @@ asm void developKeyCheck(u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8000B73C 002C .text      mDoMch_IsProgressiveMode__Fv                                 */
+/* 8000B73C-8000B768 002C .text      mDoMch_IsProgressiveMode__Fv                                 Function */
 }
 
 #pragma push
@@ -392,7 +545,7 @@ asm void mDoMch_IsProgressiveMode(void) {
 #pragma pop
 
 extern "C" {
-/* 8000B768 0030 .text      exceptionReadPad__FPUlPUl                                    */
+/* 8000B768-8000B798 0030 .text      exceptionReadPad__FPUlPUl                                    Function */
 }
 
 #pragma push
@@ -405,7 +558,7 @@ asm void exceptionReadPad(u32*, u32*) {
 #pragma pop
 
 extern "C" {
-/* 8000B798 0030 .text      exceptionRestart__Fv                                         */
+/* 8000B798-8000B7C8 0030 .text      exceptionRestart__Fv                                         Function */
 }
 
 #pragma push
@@ -418,7 +571,7 @@ asm void exceptionRestart(void) {
 #pragma pop
 
 extern "C" {
-/* 8000B7C8 0194 .text      myExceptionCallback__FUsP9OSContextUlUl                      */
+/* 8000B7C8-8000B95C 0194 .text      myExceptionCallback__FUsP9OSContextUlUl                      Function */
 }
 
 #pragma push
@@ -431,7 +584,7 @@ asm void myExceptionCallback(u16, OSContext*, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8000B95C 0398 .text      fault_callback_scroll__FUsP9OSContextUlUl                    */
+/* 8000B95C-8000BCF4 0398 .text      fault_callback_scroll__FUsP9OSContextUlUl                    Function */
 }
 
 #pragma push
@@ -444,26 +597,28 @@ asm void fault_callback_scroll(u16, OSContext*, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8000BCF4 0004 .text      my_PrintHeap__FPCcUl                                         */
-// my_PrintHeap(const s8*, u32)
+/* 8000BCF4-8000BCF8 0004 .text      my_PrintHeap__FPCcUl                                         ReturnFunction */
+}
+
 void my_PrintHeap__FPCcUl() {
 	return;
 }
 
-/* 8000BCF8 004C .text      my_SysPrintHeap__FPCcPvUl                                    */
+extern "C" {
+/* 8000BCF8-8000BD44 004C .text      my_SysPrintHeap__FPCcPvUl                                    Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void my_SysPrintHeap(const s8*, void*, u32) {
+asm void my_SysPrintHeap(const char*, void*, u32) {
 	nofralloc
 #include "_include/m_Do/m_Do_machine/my_SysPrintHeap__FPCcPvUl.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8000BD44 0388 .text      mDoMch_Create__Fv                                            */
+/* 8000BD44-8000C0CC 0388 .text      mDoMch_Create__Fv                                            Function */
 }
 
 #pragma push

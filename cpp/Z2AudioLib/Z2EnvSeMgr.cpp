@@ -15,163 +15,363 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void JMAFastVECNormalize(const Vec*, Vec*); /* JMAFastVECNormalize__FPC3VecP3Vec */
 
 extern "C" {
+/* Function             */
 extern void dComIfGp_getReverb__Fi();
+/* Function             */
 extern void isSwitch__12dSv_memBit_cCFi();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void releaseSound__14JAISoundHandleFv();
+/* Function             */
 extern void releaseHandle__8JAISoundFv();
+/* Function             */
 extern void stop__8JAISoundFUl();
+/* Function             */
 extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePitch__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void moveFxMix__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePan__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void moveDolby__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void func_802A2FEC();
+/* Function             */
 extern void linearTransform__6Z2CalcFfffffb();
+/* Function             */
 extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+/* Function             */
 extern void getRandom__6Z2CalcFfff();
+/* Function             */
 extern void setParam__Q26Z2Calc8FNoise1fFfff();
+/* Function             */
 extern void calcNoise1f__Q26Z2Calc8FNoise1fFv();
+/* Function             */
 extern void setIIR__10Z2SoundMgrFP8JAISoundPCs();
+/* Function             */
 extern void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void __ct__12Z2MultiSeMgrFv();
+/* Function             */
 extern void __dt__12Z2MultiSeMgrFv();
+/* Function             */
 extern void registMultiSePos__12Z2MultiSeMgrFP3Vec();
+/* Function             */
 extern void resetMultiSePos__12Z2MultiSeMgrFv();
+/* Function             */
 extern void getPanPower__12Z2MultiSeMgrFv();
+/* Function             */
 extern void getDolbyPower__12Z2MultiSeMgrFv();
+/* Function             */
 extern void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+/* Function             */
 extern void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+/* Function             */
 extern void calcRelPosPan__10Z2AudienceFRC3Veci();
+/* Function             */
 extern void calcRelPosDolby__10Z2AudienceFRC3Veci();
+/* Function             */
 extern void __ct__11Z2EnvSeBaseFP3Vec();
+/* Function             */
 extern void __dt__11Z2EnvSeBaseFv();
+/* Function             */
 extern void startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl();
+/* Function             */
 extern void startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl();
+/* Function             */
 extern void __ct__10Z2EnvSeDirFP3Vec();
+/* Function             */
 extern void __dt__10Z2EnvSeDirFv();
+/* Function             */
 extern void setPanDir__10Z2EnvSeDirFP3Vec();
+/* Function             */
 extern void calcPan__10Z2EnvSeDirFf();
+/* Function             */
 extern void startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff();
+/* Function             */
 extern void __ct__14Z2EnvSeAutoPanFv();
+/* Function             */
 extern void __dt__14Z2EnvSeAutoPanFv();
+/* Function             */
 extern void setPanParam__14Z2EnvSeAutoPanFffbbff();
+/* Function             */
 extern void calcPan__14Z2EnvSeAutoPanFv();
+/* Function             */
 extern void startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff();
+/* Function             */
+extern void __ct__10Z2EnvSeMgrFv();
+/* Function             */
+extern void __dt__10Z2EnvSeMgrFv();
+/* Function             */
+extern void framework__10Z2EnvSeMgrFv();
+/* ReturnFunction       */
+extern void resetScene__10Z2EnvSeMgrFv();
+/* Function             */
+extern void resetSceneInner__10Z2EnvSeMgrFv();
+/* Function             */
+extern void initSceneEnvSe__10Z2EnvSeMgrFlScf();
+/* Function             */
 extern void playSceneEnvSe__10Z2EnvSeMgrFv();
+/* Function             */
 extern void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
+/* Function             */
 extern void startStaticEnvSe__10Z2EnvSeMgrFSc();
+/* Function             */
+extern void registWindowPos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startRainSe__10Z2EnvSeMgrFlSc();
+/* Function             */
+extern void startNearThunderSe__10Z2EnvSeMgrFSc();
+/* Function             */
+extern void startFarThunderSe__10Z2EnvSeMgrFP3VecSc();
+/* Function             */
+extern void setSnowPower__10Z2EnvSeMgrFSc();
+/* Function             */
+extern void initStrongWindSe__10Z2EnvSeMgrFv();
+/* Function             */
+extern void setWindDirection__10Z2EnvSeMgrFP3Vec();
+/* Function             */
+extern void startStrongWindSe__10Z2EnvSeMgrFSc();
+/* Function             */
+extern void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registRiverSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
+extern void setHyrulSewerOpen__10Z2EnvSeMgrFb();
+/* Function             */
 extern void startRiverSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
+extern void registFallSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startFallSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registEtcSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startEtcSe__10Z2EnvSeMgrFSc();
+/* Function             */
+extern void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
+extern void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec();
+/* Function             */
+extern void setFogWipeWidth__10Z2EnvSeMgrFf();
+/* Function             */
 extern void getFogDensity__10Z2EnvSeMgrFv();
+/* Function             */
+extern void startFogSe__10Z2EnvSeMgrFv();
+/* Function             */
 extern void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
+extern void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
+/* Function             */
 extern void startLv3WaterSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void JMAFastVECNormalize__FPC3VecP3Vec();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+/* InitializedData      */
 SECTION_RODATA extern const u8 Z2EnvSeMgr__cNullVec__6Z2Calc[16];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_4025[48];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_4272[48];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_4622[168];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_4734[64];
-SECTION_DATA extern u8 LIT_4839[128];
-SECTION_DATA extern u8 LIT_5076[56];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_5074[40];
-SECTION_DATA extern u8 LIT_5259[56];
-SECTION_DATA extern u8 Z2EnvSeMgr__LIT_5258[40];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_4025[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_4272[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_4622[42];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_4734[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_4839[32];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5076[14];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_5074[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5259[14];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* Z2EnvSeMgr__LIT_5258[10];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B3C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B44[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B74[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B7C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B80[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 cEqualCSlope__6Z2Calc;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 cEqualPSlope__6Z2Calc;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3501[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3502;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3503[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3504;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3505[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3508;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3574;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3585;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3654[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3655[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_3704;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_3705;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3749[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3750[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3751[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3752[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3753[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3754[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3755[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3756[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3757[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3758[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3759[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3760[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3761[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3762[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3763[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3764[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3765[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3766[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3767[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3768[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3769[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3770[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3771[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3772[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3773[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3774[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3775[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3776[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_3777[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_3928;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_3963;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4260;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4261[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4262;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4263[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4264[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4265[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4266[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4267[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4268[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4269[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Z2EnvSeMgr__LIT_4271;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4400[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4422;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4510;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4511;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4619;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4621;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4732;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4833[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4834[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4835[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4836[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2EnvSeMgr__LIT_4837[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4856;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4879;
 }
 
@@ -181,7 +381,7 @@ SECTION_SDATA2 extern f32 Z2EnvSeMgr__LIT_4879;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039C250 000C .rodata    cNullVec__6Z2Calc                                            */
+/* 8039C250-8039C260 000C .rodata    cNullVec__6Z2Calc                                            InitializedData */
 SECTION_RODATA const u8 Z2EnvSeMgr__cNullVec__6Z2Calc[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -195,75 +395,194 @@ SECTION_RODATA const u8 Z2EnvSeMgr__cNullVec__6Z2Calc[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CB9C8 0030 .data      @4025                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_4025[48] = {
-	0x80, 0x2C, 0x70, 0xAC, 0x80, 0x2C, 0x6E, 0x4C, 0x80, 0x2C, 0x6E, 0x90, 0x80, 0x2C, 0x6E, 0xD4,
-	0x80, 0x2C, 0x6F, 0x18, 0x80, 0x2C, 0x6F, 0x5C, 0x80, 0x2C, 0x6F, 0xA0, 0x80, 0x2C, 0x6F, 0xE4,
-	0x80, 0x2C, 0x70, 0x28, 0x80, 0x2C, 0x70, 0x6C, 0x80, 0x2C, 0x6F, 0xA0, 0x80, 0x2C, 0x6F, 0x5C,
+/* 803CB9C8-803CB9F8 0030 .data      @4025                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_4025[12] = {
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+266),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+114),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+131),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+148),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+165),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+182),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+199),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+216),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+233),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+250),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+199),
+	(void*)(((u32*)initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec)+182),
 };
-/* 803CB9F8 0030 .data      @4272                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_4272[48] = {
-	0x80, 0x2C, 0x72, 0x30, 0x80, 0x2C, 0x72, 0x38, 0x80, 0x2C, 0x72, 0x8C, 0x80, 0x2C, 0x72, 0xCC,
-	0x80, 0x2C, 0x72, 0xE8, 0x80, 0x2C, 0x75, 0x34, 0x80, 0x2C, 0x75, 0x54, 0x80, 0x2C, 0x75, 0xF0,
-	0x80, 0x2C, 0x76, 0x20, 0x80, 0x2C, 0x76, 0x40, 0x80, 0x2C, 0x75, 0xA4, 0x80, 0x2C, 0x75, 0x2C,
+/* 803CB9F8-803CBA28 0030 .data      @4272                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_4272[12] = {
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+90),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+92),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+113),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+129),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+136),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+283),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+291),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+330),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+342),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+350),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+311),
+	(void*)(((u32*)startStaticEnvSe__10Z2EnvSeMgrFSc)+281),
 };
-/* 803CBA28 00A8 .data      @4622                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_4622[168] = {
-	0x80, 0x2C, 0x83, 0x80, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0x9C,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0x8C,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xAC, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xAC, 0x80, 0x2C, 0x83, 0xAC, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xA0,
-	0x80, 0x2C, 0x83, 0xA0, 0x80, 0x2C, 0x83, 0xAC,
+/* 803CBA28-803CBAD0 00A8 .data      @4622                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_4622[42] = {
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+32),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+39),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+35),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+43),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+43),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+43),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+40),
+	(void*)(((u32*)startRiverSe__10Z2EnvSeMgrFSc)+43),
 };
-/* 803CBAD0 0040 .data      @4734                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_4734[64] = {
-	0x80, 0x2C, 0x8B, 0xEC, 0x80, 0x2C, 0x8B, 0x84, 0x80, 0x2C, 0x8B, 0x98, 0x80, 0x2C, 0x8C, 0x10,
-	0x80, 0x2C, 0x8B, 0xE0, 0x80, 0x2C, 0x8C, 0x10, 0x80, 0x2C, 0x8C, 0x10, 0x80, 0x2C, 0x8C, 0x10,
-	0x80, 0x2C, 0x8C, 0x00, 0x80, 0x2C, 0x8B, 0xAC, 0x80, 0x2C, 0x8B, 0xCC, 0x80, 0x2C, 0x8C, 0x10,
-	0x80, 0x2C, 0x8C, 0x10, 0x80, 0x2C, 0x8C, 0x10, 0x80, 0x2C, 0x8B, 0xCC, 0x80, 0x2C, 0x8B, 0xCC,
+/* 803CBAD0-803CBB10 0040 .data      @4734                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_4734[16] = {
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+87),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+61),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+66),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+84),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+92),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+71),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+79),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+96),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+79),
+	(void*)(((u32*)initEtcSe__10Z2EnvSeMgrFUcUcUcUc)+79),
 };
-/* 803CBB10 0080 .data      @4839                                                        */
-SECTION_DATA u8 LIT_4839[128] = {
-	0x80, 0x2C, 0x92, 0x74, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x91, 0x60, 0x80, 0x2C, 0x8D, 0x2C, 0x80, 0x2C, 0x8E, 0x54, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x90, 0xE0, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x8E, 0xD4, 0x80, 0x2C, 0x8F, 0xBC, 0x80, 0x2C, 0x8F, 0x20, 0x80, 0x2C, 0x92, 0x6C,
-	0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x92, 0x6C, 0x80, 0x2C, 0x8F, 0x20, 0x80, 0x2C, 0x8F, 0x6C,
+/* 803CBB10-803CBB90 0080 .data      @4839                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_4839[32] = {
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+395),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+326),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+57),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+131),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+294),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+163),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+221),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+182),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+393),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+182),
+	(void*)(((u32*)startEtcSe__10Z2EnvSeMgrFSc)+201),
 };
-/* 803CBB90 0038 .data      @5076                                                        */
-SECTION_DATA u8 LIT_5076[56] = {
-	0x80, 0x2C, 0x9B, 0x4C, 0x80, 0x2C, 0x9B, 0x28, 0x80, 0x2C, 0x9B, 0x74, 0x80, 0x2C, 0x9B, 0xD0,
-	0x80, 0x2C, 0x9F, 0x40, 0x80, 0x2C, 0x9B, 0x4C, 0x80, 0x2C, 0x9B, 0x4C, 0x80, 0x2C, 0x9C, 0x8C,
-	0x80, 0x2C, 0x9C, 0xD8, 0x80, 0x2C, 0x9B, 0x4C, 0x80, 0x2C, 0x9D, 0x50, 0x80, 0x2C, 0x9D, 0xE4,
-	0x80, 0x2C, 0x9E, 0x5C, 0x80, 0x2C, 0x9E, 0xA8,
+/* 803CBB90-803CBBC8 0038 .data      @5076                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5076[14] = {
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+400),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+391),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+410),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+433),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+653),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+400),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+400),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+480),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+499),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+400),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+529),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+566),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+596),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+615),
 };
-/* 803CBBC8 0028 .data      @5074                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_5074[40] = {
-	0x80, 0x2C, 0x95, 0x5C, 0x80, 0x2C, 0x96, 0xF4, 0x80, 0x2C, 0x98, 0x8C, 0x80, 0x2C, 0x9A, 0xF0,
-	0x80, 0x2C, 0x9A, 0xF0, 0x80, 0x2C, 0x96, 0x28, 0x80, 0x2C, 0x97, 0xC0, 0x80, 0x2C, 0x99, 0x58,
-	0x80, 0x2C, 0x9A, 0xF0, 0x80, 0x2C, 0x9A, 0x24,
+/* 803CBBC8-803CBBF0 0028 .data      @5074                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_5074[10] = {
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+20),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+122),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+224),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+377),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+377),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+71),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+173),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+275),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+377),
+	(void*)(((u32*)initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc)+326),
 };
-/* 803CBBF0 0038 .data      @5259                                                        */
-SECTION_DATA u8 LIT_5259[56] = {
-	0x80, 0x2C, 0xA0, 0x14, 0x80, 0x2C, 0x9F, 0xFC, 0x80, 0x2C, 0xA0, 0x30, 0x80, 0x2C, 0xA1, 0x58,
-	0x80, 0x2C, 0xA7, 0x7C, 0x80, 0x2C, 0xA0, 0x14, 0x80, 0x2C, 0xA0, 0x14, 0x80, 0x2C, 0xA4, 0x10,
-	0x80, 0x2C, 0xA4, 0x60, 0x80, 0x2C, 0xA0, 0x14, 0x80, 0x2C, 0xA4, 0xFC, 0x80, 0x2C, 0xA5, 0xDC,
-	0x80, 0x2C, 0xA6, 0x60, 0x80, 0x2C, 0xA6, 0xC8,
+/* 803CBBF0-803CBC28 0038 .data      @5259                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5259[14] = {
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+47),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+41),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+54),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+128),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+521),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+47),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+47),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+302),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+322),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+47),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+361),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+417),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+450),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+476),
 };
-/* 803CBC28 0028 .data      @5258                                                        */
-SECTION_DATA u8 Z2EnvSeMgr__LIT_5258[40] = {
-	0x80, 0x2C, 0x9F, 0xA0, 0x80, 0x2C, 0x9F, 0xB0, 0x80, 0x2C, 0x9F, 0xC0, 0x80, 0x2C, 0x9F, 0xD0,
-	0x80, 0x2C, 0x9F, 0xD0, 0x80, 0x2C, 0x9F, 0xA0, 0x80, 0x2C, 0x9F, 0xB0, 0x80, 0x2C, 0x9F, 0xC0,
-	0x80, 0x2C, 0x9F, 0xD0, 0x80, 0x2C, 0x9F, 0xC0,
+/* 803CBC28-803CBC50 0028 .data      @5258                                                        SymbolReferenceArrayData */
+SECTION_DATA void* Z2EnvSeMgr__LIT_5258[10] = {
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+18),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+22),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+26),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+30),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+30),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+18),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+22),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+26),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+30),
+	(void*)(((u32*)registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec)+26),
 };
 }
 
@@ -273,260 +592,260 @@ SECTION_DATA u8 Z2EnvSeMgr__LIT_5258[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455D40 0004 .sdata2    @3501                                                        */
+/* 80455D40-80455D44 0004 .sdata2    @3501                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3501[4] = {
 	0x3E, 0xA8, 0xF5, 0xC3,
 };
-/* 80455D44 0004 .sdata2    @3502                                                        */
+/* 80455D44-80455D48 0004 .sdata2    @3502                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3502 = 1.000000f;
-/* 80455D48 0004 .sdata2    @3503                                                        */
+/* 80455D48-80455D4C 0004 .sdata2    @3503                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3503[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455D4C 0004 .sdata2    @3504                                                        */
+/* 80455D4C-80455D50 0004 .sdata2    @3504                                                        Float32Data */
 // 0x44bb8000
 SECTION_SDATA2 f32 LIT_3504 = 1500.000000f;
-/* 80455D50 0004 .sdata2    @3505                                                        */
+/* 80455D50-80455D58 0004 .sdata2    @3505                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3505[8] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455D58 0008 .sdata2    @3508                                                        */
+/* 80455D58-80455D60 0008 .sdata2    @3508                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3508 = 4503599627370496.000000;
-/* 80455D60 0004 .sdata2    @3574                                                        */
+/* 80455D60-80455D64 0004 .sdata2    @3574                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_3574 = 0.500000f;
-/* 80455D64 0004 .sdata2    @3585                                                        */
+/* 80455D64-80455D68 0004 .sdata2    @3585                                                        Float32Data */
 // 0xc47a0000
 SECTION_SDATA2 f32 LIT_3585 = -1000.000000f;
-/* 80455D68 0004 .sdata2    @3654                                                        */
+/* 80455D68-80455D6C 0004 .sdata2    @3654                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3654[4] = {
 	0x3A, 0xF3, 0x30, 0xE5,
 };
-/* 80455D6C 0004 .sdata2    @3655                                                        */
+/* 80455D6C-80455D70 0004 .sdata2    @3655                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3655[4] = {
 	0x3A, 0x60, 0x3C, 0xEC,
 };
-/* 80455D70 0004 .sdata2    @3704                                                        */
+/* 80455D70-80455D74 0004 .sdata2    @3704                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_3704 = 2.000000f;
-/* 80455D74 0004 .sdata2    @3705                                                        */
+/* 80455D74-80455D78 0004 .sdata2    @3705                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_3705 = -1.000000f;
-/* 80455D78 0004 .sdata2    @3749                                                        */
+/* 80455D78-80455D7C 0004 .sdata2    @3749                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3749[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
-/* 80455D7C 0004 .sdata2    @3750                                                        */
+/* 80455D7C-80455D80 0004 .sdata2    @3750                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3750[4] = {
 	0x3C, 0x00, 0x2F, 0x3F,
 };
-/* 80455D80 0004 .sdata2    @3751                                                        */
+/* 80455D80-80455D84 0004 .sdata2    @3751                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3751[4] = {
 	0x3D, 0x75, 0xC2, 0x8F,
 };
-/* 80455D84 0004 .sdata2    @3752                                                        */
+/* 80455D84-80455D88 0004 .sdata2    @3752                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3752[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 80455D88 0004 .sdata2    @3753                                                        */
+/* 80455D88-80455D8C 0004 .sdata2    @3753                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3753[4] = {
 	0x3C, 0xD7, 0x78, 0x64,
 };
-/* 80455D8C 0004 .sdata2    @3754                                                        */
+/* 80455D8C-80455D90 0004 .sdata2    @3754                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3754[4] = {
 	0x3B, 0xA3, 0xD7, 0x0A,
 };
-/* 80455D90 0004 .sdata2    @3755                                                        */
+/* 80455D90-80455D94 0004 .sdata2    @3755                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3755[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 80455D94 0004 .sdata2    @3756                                                        */
+/* 80455D94-80455D98 0004 .sdata2    @3756                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3756[4] = {
 	0x3C, 0xBE, 0xF4, 0xDA,
 };
-/* 80455D98 0004 .sdata2    @3757                                                        */
+/* 80455D98-80455D9C 0004 .sdata2    @3757                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3757[4] = {
 	0x3B, 0x44, 0x9B, 0xA6,
 };
-/* 80455D9C 0004 .sdata2    @3758                                                        */
+/* 80455D9C-80455DA0 0004 .sdata2    @3758                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3758[4] = {
 	0x3B, 0xD1, 0x3A, 0x95,
 };
-/* 80455DA0 0004 .sdata2    @3759                                                        */
+/* 80455DA0-80455DA4 0004 .sdata2    @3759                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3759[4] = {
 	0x3B, 0x83, 0x12, 0x6F,
 };
-/* 80455DA4 0004 .sdata2    @3760                                                        */
+/* 80455DA4-80455DA8 0004 .sdata2    @3760                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3760[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
-/* 80455DA8 0004 .sdata2    @3761                                                        */
+/* 80455DA8-80455DAC 0004 .sdata2    @3761                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3761[4] = {
 	0x3B, 0xCA, 0xCB, 0x76,
 };
-/* 80455DAC 0004 .sdata2    @3762                                                        */
+/* 80455DAC-80455DB0 0004 .sdata2    @3762                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3762[4] = {
 	0x3B, 0x93, 0x74, 0xBC,
 };
-/* 80455DB0 0004 .sdata2    @3763                                                        */
+/* 80455DB0-80455DB4 0004 .sdata2    @3763                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3763[4] = {
 	0x3E, 0x99, 0x99, 0x9A,
 };
-/* 80455DB4 0004 .sdata2    @3764                                                        */
+/* 80455DB4-80455DB8 0004 .sdata2    @3764                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3764[4] = {
 	0x3D, 0x5A, 0xDC, 0x8B,
 };
-/* 80455DB8 0004 .sdata2    @3765                                                        */
+/* 80455DB8-80455DBC 0004 .sdata2    @3765                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3765[4] = {
 	0x3B, 0x03, 0x12, 0x6F,
 };
-/* 80455DBC 0004 .sdata2    @3766                                                        */
+/* 80455DBC-80455DC0 0004 .sdata2    @3766                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3766[4] = {
 	0x3F, 0x33, 0x33, 0x33,
 };
-/* 80455DC0 0004 .sdata2    @3767                                                        */
+/* 80455DC0-80455DC4 0004 .sdata2    @3767                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3767[4] = {
 	0x3D, 0x2E, 0x59, 0xF9,
 };
-/* 80455DC4 0004 .sdata2    @3768                                                        */
+/* 80455DC4-80455DC8 0004 .sdata2    @3768                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3768[4] = {
 	0x3B, 0x23, 0xD7, 0x0A,
 };
-/* 80455DC8 0004 .sdata2    @3769                                                        */
+/* 80455DC8-80455DCC 0004 .sdata2    @3769                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3769[4] = {
 	0x3E, 0xCC, 0xCC, 0xCD,
 };
-/* 80455DCC 0004 .sdata2    @3770                                                        */
+/* 80455DCC-80455DD0 0004 .sdata2    @3770                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3770[4] = {
 	0x3C, 0x53, 0xE8, 0xF0,
 };
-/* 80455DD0 0004 .sdata2    @3771                                                        */
+/* 80455DD0-80455DD4 0004 .sdata2    @3771                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3771[4] = {
 	0x3B, 0xC4, 0x9B, 0xA6,
 };
-/* 80455DD4 0004 .sdata2    @3772                                                        */
+/* 80455DD4-80455DD8 0004 .sdata2    @3772                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3772[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80455DD8 0004 .sdata2    @3773                                                        */
+/* 80455DD8-80455DDC 0004 .sdata2    @3773                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3773[4] = {
 	0x3C, 0x47, 0x2F, 0xE3,
 };
-/* 80455DDC 0004 .sdata2    @3774                                                        */
+/* 80455DDC-80455DE0 0004 .sdata2    @3774                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3774[4] = {
 	0x3B, 0xD4, 0xFD, 0xF4,
 };
-/* 80455DE0 0004 .sdata2    @3775                                                        */
+/* 80455DE0-80455DE4 0004 .sdata2    @3775                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3775[4] = {
 	0x3C, 0xAB, 0x67, 0xEA,
 };
-/* 80455DE4 0004 .sdata2    @3776                                                        */
+/* 80455DE4-80455DE8 0004 .sdata2    @3776                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3776[4] = {
 	0x3A, 0x83, 0x12, 0x6F,
 };
-/* 80455DE8 0004 .sdata2    @3777                                                        */
+/* 80455DE8-80455DEC 0004 .sdata2    @3777                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_3777[4] = {
 	0x3B, 0x78, 0x70, 0x63,
 };
-/* 80455DEC 0004 .sdata2    @3928                                                        */
+/* 80455DEC-80455DF0 0004 .sdata2    @3928                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_3928 = 30.000000f;
-/* 80455DF0 0004 .sdata2    @3963                                                        */
+/* 80455DF0-80455DF4 0004 .sdata2    @3963                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_3963 = 100.000000f;
-/* 80455DF4 0004 .sdata2    @4260                                                        */
+/* 80455DF4-80455DF8 0004 .sdata2    @4260                                                        Float32Data */
 // 0x42fe0000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4260 = 127.000000f;
-/* 80455DF8 0004 .sdata2    @4261                                                        */
+/* 80455DF8-80455DFC 0004 .sdata2    @4261                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4261[4] = {
 	0x40, 0x06, 0x66, 0x66,
 };
-/* 80455DFC 0004 .sdata2    @4262                                                        */
+/* 80455DFC-80455E00 0004 .sdata2    @4262                                                        Float32Data */
 // 0x42800000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4262 = 64.000000f;
-/* 80455E00 0004 .sdata2    @4263                                                        */
+/* 80455E00-80455E04 0004 .sdata2    @4263                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4263[4] = {
 	0x3E, 0xB3, 0x33, 0x33,
 };
-/* 80455E04 0004 .sdata2    @4264                                                        */
+/* 80455E04-80455E08 0004 .sdata2    @4264                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4264[4] = {
 	0x3F, 0x93, 0x33, 0x33,
 };
-/* 80455E08 0004 .sdata2    @4265                                                        */
+/* 80455E08-80455E0C 0004 .sdata2    @4265                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4265[4] = {
 	0x3F, 0xCC, 0xCC, 0xCD,
 };
-/* 80455E0C 0004 .sdata2    @4266                                                        */
+/* 80455E0C-80455E10 0004 .sdata2    @4266                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4266[4] = {
 	0x3F, 0x26, 0x66, 0x66,
 };
-/* 80455E10 0004 .sdata2    @4267                                                        */
+/* 80455E10-80455E14 0004 .sdata2    @4267                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4267[4] = {
 	0x3D, 0xF5, 0xC2, 0x8F,
 };
-/* 80455E14 0004 .sdata2    @4268                                                        */
+/* 80455E14-80455E18 0004 .sdata2    @4268                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4268[4] = {
 	0x3F, 0x59, 0x99, 0x9A,
 };
-/* 80455E18 0004 .sdata2    @4269                                                        */
+/* 80455E18-80455E20 0004 .sdata2    @4269                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4269[8] = {
 	0x3F, 0x40, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455E20 0008 .sdata2    @4271                                                        */
+/* 80455E20-80455E28 0008 .sdata2    @4271                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 Z2EnvSeMgr__LIT_4271 = 4503601774854144.000000;
-/* 80455E28 0004 .sdata2    @4400                                                        */
+/* 80455E28-80455E2C 0004 .sdata2    @4400                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4400[4] = {
 	0x3F, 0x8C, 0xCC, 0xCD,
 };
-/* 80455E2C 0004 .sdata2    @4422                                                        */
+/* 80455E2C-80455E30 0004 .sdata2    @4422                                                        Float32Data */
 // 0x3e800000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4422 = 0.250000f;
-/* 80455E30 0004 .sdata2    @4510                                                        */
+/* 80455E30-80455E34 0004 .sdata2    @4510                                                        Float32Data */
 // 0x3fc00000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4510 = 1.500000f;
-/* 80455E34 0004 .sdata2    @4511                                                        */
+/* 80455E34-80455E38 0004 .sdata2    @4511                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4511 = 3.000000f;
-/* 80455E38 0004 .sdata2    @4619                                                        */
+/* 80455E38-80455E3C 0004 .sdata2    @4619                                                        Float32Data */
 // 0xc6629000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4619 = -14500.000000f;
-/* 80455E3C 0004 .sdata2    @4621                                                        */
+/* 80455E3C-80455E40 0004 .sdata2    @4621                                                        Float32Data */
 // 0x43160000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4621 = 150.000000f;
-/* 80455E40 0004 .sdata2    @4732                                                        */
+/* 80455E40-80455E44 0004 .sdata2    @4732                                                        Float32Data */
 // 0x40800000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4732 = 4.000000f;
-/* 80455E44 0004 .sdata2    @4833                                                        */
+/* 80455E44-80455E48 0004 .sdata2    @4833                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4833[4] = {
 	0x3F, 0x99, 0x99, 0x9A,
 };
-/* 80455E48 0004 .sdata2    @4834                                                        */
+/* 80455E48-80455E4C 0004 .sdata2    @4834                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4834[4] = {
 	0x3F, 0xA6, 0x66, 0x66,
 };
-/* 80455E4C 0004 .sdata2    @4835                                                        */
+/* 80455E4C-80455E50 0004 .sdata2    @4835                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4835[4] = {
 	0x3F, 0x63, 0xD7, 0x0A,
 };
-/* 80455E50 0004 .sdata2    @4836                                                        */
+/* 80455E50-80455E54 0004 .sdata2    @4836                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4836[4] = {
 	0x3E, 0xA9, 0xFB, 0xE7,
 };
-/* 80455E54 0004 .sdata2    @4837                                                        */
+/* 80455E54-80455E58 0004 .sdata2    @4837                                                        InitializedData */
 SECTION_SDATA2 u8 Z2EnvSeMgr__LIT_4837[4] = {
 	0x3F, 0x2B, 0x02, 0x0C,
 };
-/* 80455E58 0004 .sdata2    @4856                                                        */
+/* 80455E58-80455E5C 0004 .sdata2    @4856                                                        Float32Data */
 // 0x43aa0000
 SECTION_SDATA2 f32 LIT_4856 = 340.000000f;
-/* 80455E5C 0004 .sdata2    @4879                                                        */
+/* 80455E5C-80455E60 0004 .sdata2    @4879                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4879 = 20.000000f;
 }
@@ -537,7 +856,7 @@ SECTION_SDATA2 f32 Z2EnvSeMgr__LIT_4879 = 20.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 802C589C 0010 .text      __ct__11Z2EnvSeBaseFP3Vec                                    */
+/* 802C589C-802C58AC 0010 .text      __ct__11Z2EnvSeBaseFP3Vec                                    Function */
 // Z2EnvSeBase::Z2EnvSeBase(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -548,7 +867,7 @@ asm void __ct__11Z2EnvSeBaseFP3Vec() {
 }
 #pragma pop
 
-/* 802C58AC 005C .text      __dt__11Z2EnvSeBaseFv                                        */
+/* 802C58AC-802C5908 005C .text      __dt__11Z2EnvSeBaseFv                                        Function */
 // Z2EnvSeBase::~Z2EnvSeBase(void)
 #pragma push
 #pragma optimization_level 0
@@ -559,7 +878,7 @@ asm void __dt__11Z2EnvSeBaseFv() {
 }
 #pragma pop
 
-/* 802C5908 01AC .text      startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl                */
+/* 802C5908-802C5AB4 01AC .text      startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl                Function */
 // Z2EnvSeBase::startEnvSe(JAISoundID, f32, f32, f32, f32, f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -570,7 +889,7 @@ asm void startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl() {
 }
 #pragma pop
 
-/* 802C5AB4 01E8 .text      startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl           */
+/* 802C5AB4-802C5C9C 01E8 .text      startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl           Function */
 // Z2EnvSeBase::startEnvSeLevel(JAISoundID, f32, f32, f32, f32, f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -581,7 +900,7 @@ asm void startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl() {
 }
 #pragma pop
 
-/* 802C5C9C 0080 .text      __ct__10Z2EnvSeDirFP3Vec                                     */
+/* 802C5C9C-802C5D1C 0080 .text      __ct__10Z2EnvSeDirFP3Vec                                     Function */
 // Z2EnvSeDir::Z2EnvSeDir(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -592,7 +911,7 @@ asm void __ct__10Z2EnvSeDirFP3Vec() {
 }
 #pragma pop
 
-/* 802C5D1C 0054 .text      __dt__10Z2EnvSeDirFv                                         */
+/* 802C5D1C-802C5D70 0054 .text      __dt__10Z2EnvSeDirFv                                         Function */
 // Z2EnvSeDir::~Z2EnvSeDir(void)
 #pragma push
 #pragma optimization_level 0
@@ -603,7 +922,7 @@ asm void __dt__10Z2EnvSeDirFv() {
 }
 #pragma pop
 
-/* 802C5D70 002C .text      setPanDir__10Z2EnvSeDirFP3Vec                                */
+/* 802C5D70-802C5D9C 002C .text      setPanDir__10Z2EnvSeDirFP3Vec                                Function */
 // Z2EnvSeDir::setPanDir(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -614,7 +933,7 @@ asm void setPanDir__10Z2EnvSeDirFP3Vec() {
 }
 #pragma pop
 
-/* 802C5D9C 00F4 .text      calcPan__10Z2EnvSeDirFf                                      */
+/* 802C5D9C-802C5E90 00F4 .text      calcPan__10Z2EnvSeDirFf                                      Function */
 // Z2EnvSeDir::calcPan(f32)
 #pragma push
 #pragma optimization_level 0
@@ -625,7 +944,7 @@ asm void calcPan__10Z2EnvSeDirFf() {
 }
 #pragma pop
 
-/* 802C5E90 003C .text      startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff              */
+/* 802C5E90-802C5ECC 003C .text      startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff              Function */
 // Z2EnvSeDir::startEnvSeDirLevel(JAISoundID, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -636,7 +955,7 @@ asm void startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff() {
 }
 #pragma pop
 
-/* 802C5ECC 005C .text      __ct__14Z2EnvSeAutoPanFv                                     */
+/* 802C5ECC-802C5F28 005C .text      __ct__14Z2EnvSeAutoPanFv                                     Function */
 // Z2EnvSeAutoPan::Z2EnvSeAutoPan(void)
 #pragma push
 #pragma optimization_level 0
@@ -647,7 +966,7 @@ asm void __ct__14Z2EnvSeAutoPanFv() {
 }
 #pragma pop
 
-/* 802C5F28 0054 .text      __dt__14Z2EnvSeAutoPanFv                                     */
+/* 802C5F28-802C5F7C 0054 .text      __dt__14Z2EnvSeAutoPanFv                                     Function */
 // Z2EnvSeAutoPan::~Z2EnvSeAutoPan(void)
 #pragma push
 #pragma optimization_level 0
@@ -658,7 +977,7 @@ asm void __dt__14Z2EnvSeAutoPanFv() {
 }
 #pragma pop
 
-/* 802C5F7C 001C .text      setPanParam__14Z2EnvSeAutoPanFffbbff                         */
+/* 802C5F7C-802C5F98 001C .text      setPanParam__14Z2EnvSeAutoPanFffbbff                         Function */
 // Z2EnvSeAutoPan::setPanParam(f32, f32, bool, bool, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -669,7 +988,7 @@ asm void setPanParam__14Z2EnvSeAutoPanFffbbff() {
 }
 #pragma pop
 
-/* 802C5F98 0148 .text      calcPan__14Z2EnvSeAutoPanFv                                  */
+/* 802C5F98-802C60E0 0148 .text      calcPan__14Z2EnvSeAutoPanFv                                  Function */
 // Z2EnvSeAutoPan::calcPan(void)
 #pragma push
 #pragma optimization_level 0
@@ -680,7 +999,7 @@ asm void calcPan__14Z2EnvSeAutoPanFv() {
 }
 #pragma pop
 
-/* 802C60E0 003C .text      startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff     */
+/* 802C60E0-802C611C 003C .text      startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff     Function */
 // Z2EnvSeAutoPan::startEnvSeAutoPanLevel(JAISoundID, f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -691,7 +1010,7 @@ asm void startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff() {
 }
 #pragma pop
 
-/* 802C611C 0424 .text      __ct__10Z2EnvSeMgrFv                                         */
+/* 802C611C-802C6540 0424 .text      __ct__10Z2EnvSeMgrFv                                         Function */
 // Z2EnvSeMgr::Z2EnvSeMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -702,7 +1021,7 @@ asm void __ct__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C6540 0170 .text      __dt__10Z2EnvSeMgrFv                                         */
+/* 802C6540-802C66B0 0170 .text      __dt__10Z2EnvSeMgrFv                                         Function */
 // Z2EnvSeMgr::~Z2EnvSeMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -713,7 +1032,7 @@ asm void __dt__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C66B0 02E8 .text      framework__10Z2EnvSeMgrFv                                    */
+/* 802C66B0-802C6998 02E8 .text      framework__10Z2EnvSeMgrFv                                    Function */
 // Z2EnvSeMgr::framework(void)
 #pragma push
 #pragma optimization_level 0
@@ -724,13 +1043,13 @@ asm void framework__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C6998 0004 .text      resetScene__10Z2EnvSeMgrFv                                   */
+/* 802C6998-802C699C 0004 .text      resetScene__10Z2EnvSeMgrFv                                   ReturnFunction */
 // Z2EnvSeMgr::resetScene(void)
 void resetScene__10Z2EnvSeMgrFv() {
 	return;
 }
 
-/* 802C699C 0124 .text      resetSceneInner__10Z2EnvSeMgrFv                              */
+/* 802C699C-802C6AC0 0124 .text      resetSceneInner__10Z2EnvSeMgrFv                              Function */
 // Z2EnvSeMgr::resetSceneInner(void)
 #pragma push
 #pragma optimization_level 0
@@ -741,8 +1060,8 @@ asm void resetSceneInner__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C6AC0 015C .text      initSceneEnvSe__10Z2EnvSeMgrFlScf                            */
-// Z2EnvSeMgr::initSceneEnvSe(s32, s8, f32)
+/* 802C6AC0-802C6C1C 015C .text      initSceneEnvSe__10Z2EnvSeMgrFlScf                            Function */
+// Z2EnvSeMgr::initSceneEnvSe(long, s8, f32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -752,7 +1071,7 @@ asm void initSceneEnvSe__10Z2EnvSeMgrFlScf() {
 }
 #pragma pop
 
-/* 802C6C1C 0068 .text      playSceneEnvSe__10Z2EnvSeMgrFv                               */
+/* 802C6C1C-802C6C84 0068 .text      playSceneEnvSe__10Z2EnvSeMgrFv                               Function */
 // Z2EnvSeMgr::playSceneEnvSe(void)
 #pragma push
 #pragma optimization_level 0
@@ -763,7 +1082,7 @@ asm void playSceneEnvSe__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C6C84 0444 .text      initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec                  */
+/* 802C6C84-802C70C8 0444 .text      initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec                  Function */
 // Z2EnvSeMgr::initStaticEnvSe(u8, u8, u8, u8, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -774,7 +1093,7 @@ asm void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec() {
 }
 #pragma pop
 
-/* 802C70C8 0744 .text      startStaticEnvSe__10Z2EnvSeMgrFSc                            */
+/* 802C70C8-802C780C 0744 .text      startStaticEnvSe__10Z2EnvSeMgrFSc                            Function */
 // Z2EnvSeMgr::startStaticEnvSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -785,7 +1104,7 @@ asm void startStaticEnvSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C780C 0024 .text      registWindowPos__10Z2EnvSeMgrFP3Vec                          */
+/* 802C780C-802C7830 0024 .text      registWindowPos__10Z2EnvSeMgrFP3Vec                          Function */
 // Z2EnvSeMgr::registWindowPos(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -796,8 +1115,8 @@ asm void registWindowPos__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C7830 04C4 .text      startRainSe__10Z2EnvSeMgrFlSc                                */
-// Z2EnvSeMgr::startRainSe(s32, s8)
+/* 802C7830-802C7CF4 04C4 .text      startRainSe__10Z2EnvSeMgrFlSc                                Function */
+// Z2EnvSeMgr::startRainSe(long, s8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -807,7 +1126,7 @@ asm void startRainSe__10Z2EnvSeMgrFlSc() {
 }
 #pragma pop
 
-/* 802C7CF4 0174 .text      startNearThunderSe__10Z2EnvSeMgrFSc                          */
+/* 802C7CF4-802C7E68 0174 .text      startNearThunderSe__10Z2EnvSeMgrFSc                          Function */
 // Z2EnvSeMgr::startNearThunderSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -818,7 +1137,7 @@ asm void startNearThunderSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C7E68 014C .text      startFarThunderSe__10Z2EnvSeMgrFP3VecSc                      */
+/* 802C7E68-802C7FB4 014C .text      startFarThunderSe__10Z2EnvSeMgrFP3VecSc                      Function */
 // Z2EnvSeMgr::startFarThunderSe(Vec*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -829,7 +1148,7 @@ asm void startFarThunderSe__10Z2EnvSeMgrFP3VecSc() {
 }
 #pragma pop
 
-/* 802C7FB4 0008 .text      setSnowPower__10Z2EnvSeMgrFSc                                */
+/* 802C7FB4-802C7FBC 0008 .text      setSnowPower__10Z2EnvSeMgrFSc                                Function */
 // Z2EnvSeMgr::setSnowPower(s8)
 #pragma push
 #pragma optimization_level 0
@@ -840,7 +1159,7 @@ asm void setSnowPower__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C7FBC 000C .text      initStrongWindSe__10Z2EnvSeMgrFv                             */
+/* 802C7FBC-802C7FC8 000C .text      initStrongWindSe__10Z2EnvSeMgrFv                             Function */
 // Z2EnvSeMgr::initStrongWindSe(void)
 #pragma push
 #pragma optimization_level 0
@@ -851,7 +1170,7 @@ asm void initStrongWindSe__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C7FC8 0044 .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         */
+/* 802C7FC8-802C800C 0044 .text      setWindDirection__10Z2EnvSeMgrFP3Vec                         Function */
 // Z2EnvSeMgr::setWindDirection(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -862,7 +1181,7 @@ asm void setWindDirection__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C800C 00EC .text      startStrongWindSe__10Z2EnvSeMgrFSc                           */
+/* 802C800C-802C80F8 00EC .text      startStrongWindSe__10Z2EnvSeMgrFSc                           Function */
 // Z2EnvSeMgr::startStrongWindSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -873,7 +1192,7 @@ asm void startStrongWindSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C80F8 013C .text      initRiverSe__10Z2EnvSeMgrFUcUcUcUc                           */
+/* 802C80F8-802C8234 013C .text      initRiverSe__10Z2EnvSeMgrFUcUcUcUc                           Function */
 // Z2EnvSeMgr::initRiverSe(u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -884,7 +1203,7 @@ asm void initRiverSe__10Z2EnvSeMgrFUcUcUcUc() {
 }
 #pragma pop
 
-/* 802C8234 0024 .text      registRiverSePos__10Z2EnvSeMgrFP3Vec                         */
+/* 802C8234-802C8258 0024 .text      registRiverSePos__10Z2EnvSeMgrFP3Vec                         Function */
 // Z2EnvSeMgr::registRiverSePos(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -895,7 +1214,7 @@ asm void registRiverSePos__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C8258 00A8 .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            */
+/* 802C8258-802C8300 00A8 .text      setHyrulSewerOpen__10Z2EnvSeMgrFb                            Function */
 // Z2EnvSeMgr::setHyrulSewerOpen(bool)
 #pragma push
 #pragma optimization_level 0
@@ -906,7 +1225,7 @@ asm void setHyrulSewerOpen__10Z2EnvSeMgrFb() {
 }
 #pragma pop
 
-/* 802C8300 0430 .text      startRiverSe__10Z2EnvSeMgrFSc                                */
+/* 802C8300-802C8730 0430 .text      startRiverSe__10Z2EnvSeMgrFSc                                Function */
 // Z2EnvSeMgr::startRiverSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -917,7 +1236,7 @@ asm void startRiverSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C8730 013C .text      initFallSe__10Z2EnvSeMgrFUcUcUcUc                            */
+/* 802C8730-802C886C 013C .text      initFallSe__10Z2EnvSeMgrFUcUcUcUc                            Function */
 // Z2EnvSeMgr::initFallSe(u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -928,7 +1247,7 @@ asm void initFallSe__10Z2EnvSeMgrFUcUcUcUc() {
 }
 #pragma pop
 
-/* 802C886C 0024 .text      registFallSePos__10Z2EnvSeMgrFP3Vec                          */
+/* 802C886C-802C8890 0024 .text      registFallSePos__10Z2EnvSeMgrFP3Vec                          Function */
 // Z2EnvSeMgr::registFallSePos(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -939,7 +1258,7 @@ asm void registFallSePos__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C8890 0200 .text      startFallSe__10Z2EnvSeMgrFSc                                 */
+/* 802C8890-802C8A90 0200 .text      startFallSe__10Z2EnvSeMgrFSc                                 Function */
 // Z2EnvSeMgr::startFallSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -950,7 +1269,7 @@ asm void startFallSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C8A90 0194 .text      initEtcSe__10Z2EnvSeMgrFUcUcUcUc                             */
+/* 802C8A90-802C8C24 0194 .text      initEtcSe__10Z2EnvSeMgrFUcUcUcUc                             Function */
 // Z2EnvSeMgr::initEtcSe(u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -961,7 +1280,7 @@ asm void initEtcSe__10Z2EnvSeMgrFUcUcUcUc() {
 }
 #pragma pop
 
-/* 802C8C24 0024 .text      registEtcSePos__10Z2EnvSeMgrFP3Vec                           */
+/* 802C8C24-802C8C48 0024 .text      registEtcSePos__10Z2EnvSeMgrFP3Vec                           Function */
 // Z2EnvSeMgr::registEtcSePos(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -972,7 +1291,7 @@ asm void registEtcSePos__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C8C48 0680 .text      startEtcSe__10Z2EnvSeMgrFSc                                  */
+/* 802C8C48-802C92C8 0680 .text      startEtcSe__10Z2EnvSeMgrFSc                                  Function */
 // Z2EnvSeMgr::startEtcSe(s8)
 #pragma push
 #pragma optimization_level 0
@@ -983,7 +1302,7 @@ asm void startEtcSe__10Z2EnvSeMgrFSc() {
 }
 #pragma pop
 
-/* 802C92C8 0024 .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     */
+/* 802C92C8-802C92EC 0024 .text      registWolfSmellSePos__10Z2EnvSeMgrFP3Vec                     Function */
 // Z2EnvSeMgr::registWolfSmellSePos(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -994,7 +1313,7 @@ asm void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C92EC 00B4 .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      */
+/* 802C92EC-802C93A0 00B4 .text      startFogWipeTrigger__10Z2EnvSeMgrFP3Vec                      Function */
 // Z2EnvSeMgr::startFogWipeTrigger(Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -1005,7 +1324,7 @@ asm void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec() {
 }
 #pragma pop
 
-/* 802C93A0 0044 .text      setFogWipeWidth__10Z2EnvSeMgrFf                              */
+/* 802C93A0-802C93E4 0044 .text      setFogWipeWidth__10Z2EnvSeMgrFf                              Function */
 // Z2EnvSeMgr::setFogWipeWidth(f32)
 #pragma push
 #pragma optimization_level 0
@@ -1016,7 +1335,7 @@ asm void setFogWipeWidth__10Z2EnvSeMgrFf() {
 }
 #pragma pop
 
-/* 802C93E4 001C .text      getFogDensity__10Z2EnvSeMgrFv                                */
+/* 802C93E4-802C9400 001C .text      getFogDensity__10Z2EnvSeMgrFv                                Function */
 // Z2EnvSeMgr::getFogDensity(void)
 #pragma push
 #pragma optimization_level 0
@@ -1027,7 +1346,7 @@ asm void getFogDensity__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C9400 010C .text      startFogSe__10Z2EnvSeMgrFv                                   */
+/* 802C9400-802C950C 010C .text      startFogSe__10Z2EnvSeMgrFv                                   Function */
 // Z2EnvSeMgr::startFogSe(void)
 #pragma push
 #pragma optimization_level 0
@@ -1038,7 +1357,7 @@ asm void startFogSe__10Z2EnvSeMgrFv() {
 }
 #pragma pop
 
-/* 802C950C 0A4C .text      initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc                        */
+/* 802C950C-802C9F58 0A4C .text      initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc                        Function */
 // Z2EnvSeMgr::initLv3WaterSe(u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1049,7 +1368,7 @@ asm void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc() {
 }
 #pragma pop
 
-/* 802C9F58 083C .text      registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec                    */
+/* 802C9F58-802CA794 083C .text      registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec                    Function */
 // Z2EnvSeMgr::registLv3WaterSePos(u8, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -1060,7 +1379,7 @@ asm void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec() {
 }
 #pragma pop
 
-/* 802CA794 032C .text      startLv3WaterSe__10Z2EnvSeMgrFSc                             */
+/* 802CA794-802CAAC0 032C .text      startLv3WaterSe__10Z2EnvSeMgrFSc                             Function */
 // Z2EnvSeMgr::startLv3WaterSe(s8)
 #pragma push
 #pragma optimization_level 0

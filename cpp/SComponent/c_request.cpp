@@ -10,9 +10,19 @@
 
 struct request_base_class;
 
+extern void cReq_Is_Done(request_base_class*); /* cReq_Is_Done__FP18request_base_class */
+extern void cReq_Done(request_base_class*); /* cReq_Done__FP18request_base_class */
+extern void cReq_Command(request_base_class*, u8); /* cReq_Command__FP18request_base_classUc */
 extern void cReq_Create(request_base_class*, u8); /* cReq_Create__FP18request_base_classUc */
 
 extern "C" {
+/* Function             */
+extern void cReq_Is_Done__FP18request_base_class();
+/* Function             */
+extern void cReq_Done__FP18request_base_class();
+/* Function             */
+extern void cReq_Command__FP18request_base_classUc();
+/* Function             */
 extern void cReq_Create__FP18request_base_classUc();
 }
 
@@ -22,7 +32,7 @@ extern void cReq_Create__FP18request_base_classUc();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802667D4 002C .text      cReq_Is_Done__FP18request_base_class                         */
+/* 802667D4-80266800 002C .text      cReq_Is_Done__FP18request_base_class                         Function */
 }
 
 #pragma push
@@ -35,7 +45,7 @@ asm void cReq_Is_Done(request_base_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266800 0030 .text      cReq_Done__FP18request_base_class                            */
+/* 80266800-80266830 0030 .text      cReq_Done__FP18request_base_class                            Function */
 }
 
 #pragma push
@@ -48,7 +58,7 @@ asm void cReq_Done(request_base_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266830 0020 .text      cReq_Command__FP18request_base_classUc                       */
+/* 80266830-80266850 0020 .text      cReq_Command__FP18request_base_classUc                       Function */
 }
 
 #pragma push
@@ -61,7 +71,7 @@ asm void cReq_Command(request_base_class*, u8) {
 #pragma pop
 
 extern "C" {
-/* 80266850 0030 .text      cReq_Create__FP18request_base_classUc                        */
+/* 80266850-80266880 0030 .text      cReq_Create__FP18request_base_classUc                        Function */
 }
 
 #pragma push

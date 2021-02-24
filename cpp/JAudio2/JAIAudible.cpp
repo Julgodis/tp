@@ -11,9 +11,12 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__10JAIAudibleFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__10JAIAudible[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JAIAudible[6];
 }
 
 
@@ -22,8 +25,8 @@ SECTION_DATA extern const void* __vt__10JAIAudible[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9820 0014 .data      __vt__10JAIAudible                                           */
-SECTION_DATA const  void* __vt__10JAIAudible[6] = {
+/* 803C9820-803C9838 0014 .data      __vt__10JAIAudible                                           VTableData */
+SECTION_DATA void* __vt__10JAIAudible[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JAIAudibleFv,
@@ -40,7 +43,7 @@ SECTION_DATA const  void* __vt__10JAIAudible[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029EFAC 0048 .text      __dt__10JAIAudibleFv                                         */
+/* 8029EFAC-8029EFF4 0048 .text      __dt__10JAIAudibleFv                                         Function */
 // JAIAudible::~JAIAudible(void)
 #pragma push
 #pragma optimization_level 0

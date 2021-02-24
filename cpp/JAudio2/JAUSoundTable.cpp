@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void init__13JAUSoundTableFPCv();
+/* Function             */
+extern void getTypeID__13JAUSoundTableCF10JAISoundID();
+/* Function             */
+extern void getData__13JAUSoundTableCF10JAISoundID();
+/* Function             */
+extern void init__17JAUSoundNameTableFPCv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A7114 004C .text      init__13JAUSoundTableFPCv                                    */
+/* 802A7114-802A7160 004C .text      init__13JAUSoundTableFPCv                                    Function */
 // JAUSoundTable::init(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +36,7 @@ asm void init__13JAUSoundTableFPCv() {
 }
 #pragma pop
 
-/* 802A7160 012C .text      getTypeID__13JAUSoundTableCF10JAISoundID                     */
+/* 802A7160-802A728C 012C .text      getTypeID__13JAUSoundTableCF10JAISoundID                     Function */
 // JAUSoundTable::getTypeID(JAISoundID) const
 #pragma push
 #pragma optimization_level 0
@@ -36,7 +47,7 @@ asm void getTypeID__13JAUSoundTableCF10JAISoundID() {
 }
 #pragma pop
 
-/* 802A728C 0148 .text      getData__13JAUSoundTableCF10JAISoundID                       */
+/* 802A728C-802A73D4 0148 .text      getData__13JAUSoundTableCF10JAISoundID                       Function */
 // JAUSoundTable::getData(JAISoundID) const
 #pragma push
 #pragma optimization_level 0
@@ -47,7 +58,7 @@ asm void getData__13JAUSoundTableCF10JAISoundID() {
 }
 #pragma pop
 
-/* 802A73D4 004C .text      init__17JAUSoundNameTableFPCv                                */
+/* 802A73D4-802A7420 004C .text      init__17JAUSoundNameTableFPCv                                Function */
 // JAUSoundNameTable::init(const void*)
 #pragma push
 #pragma optimization_level 0

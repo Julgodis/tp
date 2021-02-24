@@ -9,13 +9,24 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
 extern void get__13J2DDataManageFPCc();
+/* Function             */
+extern void get__13J2DDataManageFP14JSUInputStream();
+/* Function             */
 extern void getResReference__15J2DResReferenceCFUs();
+/* Function             */
+extern void getName__15J2DResReferenceCFUs();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
-SECTION_BSS extern u8 data_804349C0[264];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_804349C0[257 + 7 /* padding */];
 }
 
 
@@ -24,8 +35,8 @@ SECTION_BSS extern u8 data_804349C0[264];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804349C0 0101 .bss       p_name$494                                                   */
-SECTION_BSS u8 data_804349C0[264];
+/* 804349C0-80434AC8 0101 .bss       p_name$494                                                   ZeroInitializedData */
+SECTION_BSS u8 data_804349C0[257 + 7 /* padding */];
 }
 
 
@@ -34,8 +45,8 @@ SECTION_BSS u8 data_804349C0[264];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8030CE18 0064 .text      get__13J2DDataManageFPCc                                     */
-// J2DDataManage::get(const s8*)
+/* 8030CE18-8030CE7C 0064 .text      get__13J2DDataManageFPCc                                     Function */
+// J2DDataManage::get(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +56,7 @@ asm void get__13J2DDataManageFPCc() {
 }
 #pragma pop
 
-/* 8030CE7C 0094 .text      get__13J2DDataManageFP14JSUInputStream                       */
+/* 8030CE7C-8030CF10 0094 .text      get__13J2DDataManageFP14JSUInputStream                       Function */
 // J2DDataManage::get(JSUInputStream*)
 #pragma push
 #pragma optimization_level 0
@@ -56,7 +67,7 @@ asm void get__13J2DDataManageFP14JSUInputStream() {
 }
 #pragma pop
 
-/* 8030CF10 0034 .text      getResReference__15J2DResReferenceCFUs                       */
+/* 8030CF10-8030CF44 0034 .text      getResReference__15J2DResReferenceCFUs                       Function */
 // J2DResReference::getResReference(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -67,7 +78,7 @@ asm void getResReference__15J2DResReferenceCFUs() {
 }
 #pragma pop
 
-/* 8030CF44 0154 .text      getName__15J2DResReferenceCFUs                               */
+/* 8030CF44-8030D098 0154 .text      getName__15J2DResReferenceCFUs                               Function */
 // J2DResReference::getName(u16) const
 #pragma push
 #pragma optimization_level 0

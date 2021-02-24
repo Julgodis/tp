@@ -23,126 +23,249 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void mDoLib_project__FP3VecP3Vec();
+/* Function             */
 extern void dComIfGp_getSubHeap2D__Fi();
+/* Function             */
 extern void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+/* Function             */
 extern void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
+/* Function             */
 extern void getActor__12dMsgObject_cFv();
+/* Function             */
 extern void getMessageID__12dMsgObject_cFv();
+/* Function             */
 extern void __ct__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void isSelect__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void setString__17dMsgScrn3Select_cFPcPcPc();
+/* Function             */
 extern void setRubyString__17dMsgScrn3Select_cFPcPcPc();
+/* Function             */
 extern void translate__17dMsgScrn3Select_cFff();
+/* Function             */
 extern void draw__17dMsgScrn3Select_cFff();
+/* Function             */
 extern void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc();
+/* Function             */
 extern void selAnimeMove__17dMsgScrn3Select_cFUcUcb();
+/* Function             */
 extern void selAnimeEnd__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getTextBoxWidth__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getFontSize__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getRubyFontSize__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getCharSpace__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getRubyCharSpace__17dMsgScrn3Select_cFv();
+/* Function             */
 extern void getTextBoxGlobalPosX__17dMsgScrn3Select_cFi();
+/* Function             */
 extern void getTextBoxGlobalPosY__17dMsgScrn3Select_cFi();
+/* Function             */
 extern void __ct__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void draw__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void setPos__15dMsgScrnArrow_cFff();
+/* Function             */
 extern void arwAnimeInit__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void arwAnimeMove__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void dotAnimeInit__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void dotAnimeMove__15dMsgScrnArrow_cFv();
+/* Function             */
 extern void __ct__14dMsgScrnBase_cFv();
+/* Function             */
 extern void __dt__14dMsgScrnBase_cFv();
+/* Function             */
 extern void init__14dMsgScrnBase_cFv();
+/* Function             */
 extern void multiDraw__14dMsgScrnBase_cFv();
+/* Function             */
 extern void draw__14dMsgScrnBase_cFv();
+/* Function             */
 extern void drawOutFont__14dMsgScrnBase_cFfff();
+/* Function             */
 extern void fontAlpha__14dMsgScrnBase_cFf();
+/* Function             */
 extern void isTalkNow__14dMsgScrnBase_cFv();
+/* Function             */
+extern void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap();
+/* Function             */
 extern void __dt__14dMsgScrnItem_cFv();
+/* Function             */
 extern void exec__14dMsgScrnItem_cFv();
+/* Function             */
 extern void drawSelf__14dMsgScrnItem_cFv();
+/* Function             */
 extern void arwAnimeInit__14dMsgScrnItem_cFv();
+/* Function             */
 extern void arwAnimeMove__14dMsgScrnItem_cFv();
+/* Function             */
 extern void dotAnimeInit__14dMsgScrnItem_cFv();
+/* Function             */
 extern void dotAnimeMove__14dMsgScrnItem_cFv();
+/* Function             */
 extern void setSelectString__14dMsgScrnItem_cFPcPcPc();
+/* Function             */
 extern void setSelectRubyString__14dMsgScrnItem_cFPcPcPc();
+/* Function             */
 extern void isSelect__14dMsgScrnItem_cFv();
+/* Function             */
 extern void selectAnimeInit__14dMsgScrnItem_cFUcUcfUc();
+/* Function             */
 extern void selectAnimeMove__14dMsgScrnItem_cFUcUcb();
+/* Function             */
 extern void selectAnimeEnd__14dMsgScrnItem_cFv();
+/* ReturnFunction       */
 extern void fukiScale__14dMsgScrnItem_cFf();
+/* Function             */
 extern void fukiTrans__14dMsgScrnItem_cFff();
+/* Function             */
 extern void fukiAlpha__14dMsgScrnItem_cFf();
+/* Function             */
 extern void fukiPosCalc__14dMsgScrnItem_cFUc();
+/* Function             */
 extern void setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey();
+/* Function             */
 extern void setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor();
+/* Function             */
 extern void setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor();
+/* Function             */
 extern void isOugiID__14dMsgScrnItem_cFv();
+/* Function             */
 extern void __ct__15dMsgScrnLight_cFUcUc();
+/* Function             */
 extern void draw__15dMsgScrnLight_cFPffffffUc();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void reinit__8CPaneMgrFv();
+/* Function             */
 extern void getGlobalPosX__8CPaneMgrFv();
+/* Function             */
 extern void getGlobalPosY__8CPaneMgrFv();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getAlphaRate__13CPaneMgrAlphaFv();
+/* Function             */
 extern void __eq__4cXyzCFRC3Vec();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void readIdxResource__10JKRArchiveFPvUlUl();
+/* Function             */
 extern void getBounds__7J2DPaneFv();
+/* Function             */
 extern void setBasePosition__7J2DPaneF15J2DBasePosition();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* Function             */
 extern void __ct__10J2DPictureFPC7ResTIMG();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_scrn_item__stringBase0[144];
+/* InitializedData      */
 SECTION_DATA extern u8 item_resource__10dItem_data[6120];
-SECTION_DATA extern const void* __vt__14dMsgScrnItem_c[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dMsgScrnItem_c[22];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4192;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4193;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4194;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_item__LIT_4195[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_item__LIT_4196[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4197;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_scrn_item__LIT_4199;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_4388;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4476;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4477;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_item__LIT_4478[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4663;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4664;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4665;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4666;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4667;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4668;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4669;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4670;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4671;
 }
 
@@ -152,12 +275,18 @@ SECTION_SDATA2 extern f32 d_d_msg_scrn_item__LIT_4671;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399990 008A .rodata    @stringBase0                                                 */
-const char* const stringBase_80399990 = "zelda_item_get_window.blo";
-const char* const stringBase_803999AA = "zelda_item_get_window_text.blo";
-const char* const stringBase_803999C9 = "zelda_item_get_window.btk";
-const char* const stringBase_803999E3 = "zelda_item_get_window.bpk";
-const char* const stringBase_803999FD = "zelda_item_get_window_02.bpk";
+/* 80399990-80399A20 008A .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399990 = "zelda_item_get_window.blo";
+SECTION_DEAD const char* const stringBase_803999AA = "zelda_item_get_window_text.blo";
+SECTION_DEAD const char* const stringBase_803999C9 = "zelda_item_get_window.btk";
+SECTION_DEAD const char* const stringBase_803999E3 = "zelda_item_get_window.bpk";
+SECTION_DEAD const char* const stringBase_803999FD = "zelda_item_get_window_02.bpk";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399A1A = "\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -166,8 +295,8 @@ const char* const stringBase_803999FD = "zelda_item_get_window_02.bpk";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C0F78 0058 .data      __vt__14dMsgScrnItem_c                                       */
-SECTION_DATA const  void* __vt__14dMsgScrnItem_c[22] = {
+/* 803C0F78-803C0FD0 0058 .data      __vt__14dMsgScrnItem_c                                       VTableData */
+SECTION_DATA void* __vt__14dMsgScrnItem_c[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMsgScrnBase_cFv,
@@ -199,67 +328,67 @@ SECTION_DATA const  void* __vt__14dMsgScrnItem_c[22] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454BF8 0004 .sdata2    @4192                                                        */
+/* 80454BF8-80454BFC 0004 .sdata2    @4192                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4192 = 100.000000f;
-/* 80454BFC 0004 .sdata2    @4193                                                        */
+/* 80454BFC-80454C00 0004 .sdata2    @4193                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4193 = 1.000000f;
-/* 80454C00 0004 .sdata2    @4194                                                        */
+/* 80454C00-80454C04 0004 .sdata2    @4194                                                        Float32Data */
 // 0x42400000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4194 = 48.000000f;
-/* 80454C04 0004 .sdata2    @4195                                                        */
+/* 80454C04-80454C08 0004 .sdata2    @4195                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_item__LIT_4195[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454C08 0004 .sdata2    @4196                                                        */
+/* 80454C08-80454C0C 0004 .sdata2    @4196                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_item__LIT_4196[4] = {
 	0x3F, 0x99, 0x99, 0x9A,
 };
-/* 80454C0C 0004 .sdata2    @4197                                                        */
+/* 80454C0C-80454C10 0004 .sdata2    @4197                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4197 = 0.500000f;
-/* 80454C10 0008 .sdata2    @4199                                                        */
+/* 80454C10-80454C18 0008 .sdata2    @4199                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_msg_scrn_item__LIT_4199 = 4503599627370496.000000;
-/* 80454C18 0008 .sdata2    @4388                                                        */
+/* 80454C18-80454C20 0008 .sdata2    @4388                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_4388 = 4503601774854144.000000;
-/* 80454C20 0004 .sdata2    @4476                                                        */
+/* 80454C20-80454C24 0004 .sdata2    @4476                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4476 = 2.000000f;
-/* 80454C24 0004 .sdata2    @4477                                                        */
+/* 80454C24-80454C28 0004 .sdata2    @4477                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4477 = 255.000000f;
-/* 80454C28 0004 .sdata2    @4478                                                        */
+/* 80454C28-80454C2C 0004 .sdata2    @4478                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_item__LIT_4478[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80454C2C 0004 .sdata2    @4663                                                        */
+/* 80454C2C-80454C30 0004 .sdata2    @4663                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4663 = 608.000000f;
-/* 80454C30 0004 .sdata2    @4664                                                        */
+/* 80454C30-80454C34 0004 .sdata2    @4664                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4664 = 448.000000f;
-/* 80454C34 0004 .sdata2    @4665                                                        */
+/* 80454C34-80454C38 0004 .sdata2    @4665                                                        Float32Data */
 // 0x42480000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4665 = 50.000000f;
-/* 80454C38 0004 .sdata2    @4666                                                        */
+/* 80454C38-80454C3C 0004 .sdata2    @4666                                                        Float32Data */
 // 0x42d20000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4666 = 105.000000f;
-/* 80454C3C 0004 .sdata2    @4667                                                        */
+/* 80454C3C-80454C40 0004 .sdata2    @4667                                                        Float32Data */
 // 0x43f30000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4667 = 486.000000f;
-/* 80454C40 0004 .sdata2    @4668                                                        */
+/* 80454C40-80454C44 0004 .sdata2    @4668                                                        Float32Data */
 // 0x43660000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4668 = 230.000000f;
-/* 80454C44 0004 .sdata2    @4669                                                        */
+/* 80454C44-80454C48 0004 .sdata2    @4669                                                        Float32Data */
 // 0x436b0000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4669 = 235.000000f;
-/* 80454C48 0004 .sdata2    @4670                                                        */
+/* 80454C48-80454C4C 0004 .sdata2    @4670                                                        Float32Data */
 // 0x43b18000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4670 = 355.000000f;
-/* 80454C4C 0004 .sdata2    @4671                                                        */
+/* 80454C4C-80454C50 0004 .sdata2    @4671                                                        Float32Data */
 // 0x43510000
 SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4671 = 209.000000f;
 }
@@ -270,7 +399,7 @@ SECTION_SDATA2 f32 d_d_msg_scrn_item__LIT_4671 = 209.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8023E79C 0D80 .text      __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap                     */
+/* 8023E79C-8023F51C 0D80 .text      __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap                     Function */
 // dMsgScrnItem_c::dMsgScrnItem_c(u8, u8, JKRExpHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -281,7 +410,7 @@ asm void __ct__14dMsgScrnItem_cFUcUcP10JKRExpHeap() {
 }
 #pragma pop
 
-/* 8023F51C 036C .text      __dt__14dMsgScrnItem_cFv                                     */
+/* 8023F51C-8023F888 036C .text      __dt__14dMsgScrnItem_cFv                                     Function */
 // dMsgScrnItem_c::~dMsgScrnItem_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -292,7 +421,7 @@ asm void __dt__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023F888 029C .text      exec__14dMsgScrnItem_cFv                                     */
+/* 8023F888-8023FB24 029C .text      exec__14dMsgScrnItem_cFv                                     Function */
 // dMsgScrnItem_c::exec(void)
 #pragma push
 #pragma optimization_level 0
@@ -303,7 +432,7 @@ asm void exec__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FB24 040C .text      drawSelf__14dMsgScrnItem_cFv                                 */
+/* 8023FB24-8023FF30 040C .text      drawSelf__14dMsgScrnItem_cFv                                 Function */
 // dMsgScrnItem_c::drawSelf(void)
 #pragma push
 #pragma optimization_level 0
@@ -314,7 +443,7 @@ asm void drawSelf__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FF30 0024 .text      arwAnimeInit__14dMsgScrnItem_cFv                             */
+/* 8023FF30-8023FF54 0024 .text      arwAnimeInit__14dMsgScrnItem_cFv                             Function */
 // dMsgScrnItem_c::arwAnimeInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -325,7 +454,7 @@ asm void arwAnimeInit__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FF54 0024 .text      arwAnimeMove__14dMsgScrnItem_cFv                             */
+/* 8023FF54-8023FF78 0024 .text      arwAnimeMove__14dMsgScrnItem_cFv                             Function */
 // dMsgScrnItem_c::arwAnimeMove(void)
 #pragma push
 #pragma optimization_level 0
@@ -336,7 +465,7 @@ asm void arwAnimeMove__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FF78 0024 .text      dotAnimeInit__14dMsgScrnItem_cFv                             */
+/* 8023FF78-8023FF9C 0024 .text      dotAnimeInit__14dMsgScrnItem_cFv                             Function */
 // dMsgScrnItem_c::dotAnimeInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -347,7 +476,7 @@ asm void dotAnimeInit__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FF9C 0024 .text      dotAnimeMove__14dMsgScrnItem_cFv                             */
+/* 8023FF9C-8023FFC0 0024 .text      dotAnimeMove__14dMsgScrnItem_cFv                             Function */
 // dMsgScrnItem_c::dotAnimeMove(void)
 #pragma push
 #pragma optimization_level 0
@@ -358,8 +487,8 @@ asm void dotAnimeMove__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8023FFC0 0024 .text      setSelectString__14dMsgScrnItem_cFPcPcPc                     */
-// dMsgScrnItem_c::setSelectString(s8*, s8*, s8*)
+/* 8023FFC0-8023FFE4 0024 .text      setSelectString__14dMsgScrnItem_cFPcPcPc                     Function */
+// dMsgScrnItem_c::setSelectString(char*, char*, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,8 +498,8 @@ asm void setSelectString__14dMsgScrnItem_cFPcPcPc() {
 }
 #pragma pop
 
-/* 8023FFE4 0024 .text      setSelectRubyString__14dMsgScrnItem_cFPcPcPc                 */
-// dMsgScrnItem_c::setSelectRubyString(s8*, s8*, s8*)
+/* 8023FFE4-80240008 0024 .text      setSelectRubyString__14dMsgScrnItem_cFPcPcPc                 Function */
+// dMsgScrnItem_c::setSelectRubyString(char*, char*, char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +509,7 @@ asm void setSelectRubyString__14dMsgScrnItem_cFPcPcPc() {
 }
 #pragma pop
 
-/* 80240008 0024 .text      isSelect__14dMsgScrnItem_cFv                                 */
+/* 80240008-8024002C 0024 .text      isSelect__14dMsgScrnItem_cFv                                 Function */
 // dMsgScrnItem_c::isSelect(void)
 #pragma push
 #pragma optimization_level 0
@@ -391,7 +520,7 @@ asm void isSelect__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 8024002C 0030 .text      selectAnimeInit__14dMsgScrnItem_cFUcUcfUc                    */
+/* 8024002C-8024005C 0030 .text      selectAnimeInit__14dMsgScrnItem_cFUcUcfUc                    Function */
 // dMsgScrnItem_c::selectAnimeInit(u8, u8, f32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -402,7 +531,7 @@ asm void selectAnimeInit__14dMsgScrnItem_cFUcUcfUc() {
 }
 #pragma pop
 
-/* 8024005C 0024 .text      selectAnimeMove__14dMsgScrnItem_cFUcUcb                      */
+/* 8024005C-80240080 0024 .text      selectAnimeMove__14dMsgScrnItem_cFUcUcb                      Function */
 // dMsgScrnItem_c::selectAnimeMove(u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -413,7 +542,7 @@ asm void selectAnimeMove__14dMsgScrnItem_cFUcUcb() {
 }
 #pragma pop
 
-/* 80240080 0024 .text      selectAnimeEnd__14dMsgScrnItem_cFv                           */
+/* 80240080-802400A4 0024 .text      selectAnimeEnd__14dMsgScrnItem_cFv                           Function */
 // dMsgScrnItem_c::selectAnimeEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -424,13 +553,13 @@ asm void selectAnimeEnd__14dMsgScrnItem_cFv() {
 }
 #pragma pop
 
-/* 802400A4 0004 .text      fukiScale__14dMsgScrnItem_cFf                                */
+/* 802400A4-802400A8 0004 .text      fukiScale__14dMsgScrnItem_cFf                                ReturnFunction */
 // dMsgScrnItem_c::fukiScale(f32)
 void fukiScale__14dMsgScrnItem_cFf() {
 	return;
 }
 
-/* 802400A8 0024 .text      fukiTrans__14dMsgScrnItem_cFff                               */
+/* 802400A8-802400CC 0024 .text      fukiTrans__14dMsgScrnItem_cFff                               Function */
 // dMsgScrnItem_c::fukiTrans(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -441,7 +570,7 @@ asm void fukiTrans__14dMsgScrnItem_cFff() {
 }
 #pragma pop
 
-/* 802400CC 00A8 .text      fukiAlpha__14dMsgScrnItem_cFf                                */
+/* 802400CC-80240174 00A8 .text      fukiAlpha__14dMsgScrnItem_cFf                                Function */
 // dMsgScrnItem_c::fukiAlpha(f32)
 #pragma push
 #pragma optimization_level 0
@@ -452,7 +581,7 @@ asm void fukiAlpha__14dMsgScrnItem_cFf() {
 }
 #pragma pop
 
-/* 80240174 05D8 .text      fukiPosCalc__14dMsgScrnItem_cFUc                             */
+/* 80240174-8024074C 05D8 .text      fukiPosCalc__14dMsgScrnItem_cFUc                             Function */
 // dMsgScrnItem_c::fukiPosCalc(u8)
 #pragma push
 #pragma optimization_level 0
@@ -463,7 +592,7 @@ asm void fukiPosCalc__14dMsgScrnItem_cFUc() {
 }
 #pragma pop
 
-/* 8024074C 009C .text      setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey    */
+/* 8024074C-802407E8 009C .text      setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey    Function */
 // dMsgScrnItem_c::setBtk0Animation(J2DAnmTextureSRTKey*)
 #pragma push
 #pragma optimization_level 0
@@ -474,7 +603,7 @@ asm void setBtk0Animation__14dMsgScrnItem_cFP19J2DAnmTextureSRTKey() {
 }
 #pragma pop
 
-/* 802407E8 005C .text      setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor            */
+/* 802407E8-80240844 005C .text      setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor            Function */
 // dMsgScrnItem_c::setBpk0Animation(J2DAnmColor*)
 #pragma push
 #pragma optimization_level 0
@@ -485,7 +614,7 @@ asm void setBpk0Animation__14dMsgScrnItem_cFP11J2DAnmColor() {
 }
 #pragma pop
 
-/* 80240844 0060 .text      setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor            */
+/* 80240844-802408A4 0060 .text      setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor            Function */
 // dMsgScrnItem_c::setBpk1Animation(J2DAnmColor*)
 #pragma push
 #pragma optimization_level 0
@@ -496,7 +625,7 @@ asm void setBpk1Animation__14dMsgScrnItem_cFP11J2DAnmColor() {
 }
 #pragma pop
 
-/* 802408A4 00C8 .text      isOugiID__14dMsgScrnItem_cFv                                 */
+/* 802408A4-8024096C 00C8 .text      isOugiID__14dMsgScrnItem_cFv                                 Function */
 // dMsgScrnItem_c::isOugiID(void)
 #pragma push
 #pragma optimization_level 0

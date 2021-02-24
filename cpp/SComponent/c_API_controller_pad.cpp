@@ -8,8 +8,17 @@
 // Additional Symbols:
 // 
 
+extern void cAPICPad_recalibrate(void); /* cAPICPad_recalibrate__Fv */
+extern void cAPICPad_ANY_BUTTON(u32); /* cAPICPad_ANY_BUTTON__FUl */
+
 extern "C" {
+/* Function             */
 extern void recalibrate__8mDoCPd_cFv();
+/* Function             */
+extern void cAPICPad_recalibrate__Fv();
+/* Function             */
+extern void cAPICPad_ANY_BUTTON__FUl();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 }
 
@@ -19,7 +28,7 @@ SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026328C 0020 .text      cAPICPad_recalibrate__Fv                                     */
+/* 8026328C-802632AC 0020 .text      cAPICPad_recalibrate__Fv                                     Function */
 }
 
 #pragma push
@@ -32,7 +41,7 @@ asm void cAPICPad_recalibrate(void) {
 #pragma pop
 
 extern "C" {
-/* 802632AC 001C .text      cAPICPad_ANY_BUTTON__FUl                                     */
+/* 802632AC-802632C8 001C .text      cAPICPad_ANY_BUTTON__FUl                                     Function */
 }
 
 #pragma push

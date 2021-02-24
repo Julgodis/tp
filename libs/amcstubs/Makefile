@@ -16,8 +16,9 @@ AMCSTUBS_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libamcstubs.a: dirs $(AMCSTUBS_A_O_FILES)
+$(BUILD_DIR)/libamcstubs.a: $(AMCSTUBS_A_O_FILES)
 	$(LD) -xm l $(AMCSTUBS_A_LDFLAGS) -o $(BUILD_DIR)/libamcstubs.a $(AMCSTUBS_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libamcstubs.a
 
 $(BUILD_DIR)/libs/amcstubs/%.o: cpp/amcstubs/%.cpp
 	mkdir -p $(@D)

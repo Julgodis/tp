@@ -42,8 +42,9 @@ CARD_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libcard.a: dirs $(CARD_A_O_FILES)
+$(BUILD_DIR)/libcard.a: $(CARD_A_O_FILES)
 	$(LD) -xm l $(CARD_A_LDFLAGS) -o $(BUILD_DIR)/libcard.a $(CARD_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libcard.a
 
 $(BUILD_DIR)/libs/card/%.o: cpp/card/%.cpp
 	mkdir -p $(@D)

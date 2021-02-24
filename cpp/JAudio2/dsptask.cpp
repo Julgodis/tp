@@ -11,34 +11,65 @@
 struct STRUCT_DSP_TASK;
 
 extern void DspHandShake(void*); /* DspHandShake__FPv */
+extern void DspBoot(void (*)(void*)); /* DspBoot__FPFPv_v */
+extern void DSPSendCommands2(u32*, u32, void (*)(u16)); /* DSPSendCommands2__FPUlUlPFUs_v */
 extern void DspInitWork(void); /* DspInitWork__Fv */
 extern void DspStartWork(u32, void (*)(u16)); /* DspStartWork__FUlPFUs_v */
+extern void DspFinishWork(u16); /* DspFinishWork__FUs */
 extern void DSPAddPriorTask(STRUCT_DSP_TASK*); /* DSPAddPriorTask__FP15STRUCT_DSP_TASK */
 extern void Dsp_Running_Check(void); /* Dsp_Running_Check__Fv */
 extern void Dsp_Running_Start(void); /* Dsp_Running_Start__Fv */
 
 extern "C" {
+/* Function             */
 extern void DspHandShake__FPv();
+/* Function             */
+extern void DspBoot__FPFPv_v();
+/* Function             */
+extern void DSPSendCommands2__FPUlUlPFUs_v();
+/* Function             */
 extern void DspInitWork__Fv();
+/* Function             */
 extern void DspStartWork__FUlPFUs_v();
+/* Function             */
+extern void DspFinishWork__FUs();
+/* Function             */
 extern void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
+/* Function             */
 extern void Dsp_Running_Check__Fv();
+/* Function             */
 extern void Dsp_Running_Start__Fv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void DSPCheckMailToDSP();
+/* Function             */
 extern void DSPCheckMailFromDSP();
+/* Function             */
 extern void DSPReadMailFromDSP();
+/* Function             */
 extern void DSPSendMailToDSP();
+/* Function             */
 extern void DSPAssertInt();
+/* Function             */
 extern void DSPInit();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* InitializedData      */
 SECTION_DATA extern u8 jdsp[7936];
-SECTION_BSS extern u8 audio_task[96];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 audio_task[80 + 16 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 AUDIO_YIELD_BUFFER[8192];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 taskwork[128];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 taskreadp[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 taskwritep[4];
 }
 
@@ -48,7 +79,7 @@ SECTION_SBSS extern u8 taskwritep[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C7920 1F00 .data      jdsp                                                         */
+/* 803C7920-803C9820 1F00 .data      jdsp                                                         InitializedData */
 SECTION_DATA u8 jdsp[7936] = {
 	0x02, 0x9F, 0x00, 0x12, 0x00, 0x00, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00,
 	0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0xFF, 0x00, 0x00, 0x02, 0x9F, 0x06, 0xA5,
@@ -555,11 +586,11 @@ SECTION_DATA u8 jdsp[7936] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431F80 0050 .bss       audio_task                                                   */
-SECTION_BSS u8 audio_task[96];
-/* 80431FE0 2000 .bss       AUDIO_YIELD_BUFFER                                           */
+/* 80431F80-80431FE0 0050 .bss       audio_task                                                   ZeroInitializedData */
+SECTION_BSS u8 audio_task[80 + 16 /* padding */];
+/* 80431FE0-80433FE0 2000 .bss       AUDIO_YIELD_BUFFER                                           ZeroInitializedData */
 SECTION_BSS u8 AUDIO_YIELD_BUFFER[8192];
-/* 80433FE0 0080 .bss       taskwork                                                     */
+/* 80433FE0-80434060 0080 .bss       taskwork                                                     ZeroInitializedData */
 SECTION_BSS u8 taskwork[128];
 }
 
@@ -569,14 +600,10 @@ SECTION_BSS u8 taskwork[128];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451300 0004 .sbss      taskreadp                                                    */
+/* 80451300-80451304 0004 .sbss      taskreadp                                                    ZeroInitializedData */
 SECTION_SBSS u8 taskreadp[4];
-/* 80451304 0004 .sbss      taskwritep                                                   */
+/* 80451304-80451308 0004 .sbss      taskwritep                                                   ZeroInitializedData */
 SECTION_SBSS u8 taskwritep[4];
-/* 80451308 0004 .sbss      merged_80451308                                              */
-SECTION_SBSS u8 merged_80451308[4];
-/* 80451308 0001 data_80451308 */
-/* 80451309 0003 data_80451309 */
 }
 
 
@@ -585,7 +612,7 @@ SECTION_SBSS u8 merged_80451308[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029E6E0 0038 .text      DspHandShake__FPv                                            */
+/* 8029E6E0-8029E718 0038 .text      DspHandShake__FPv                                            Function */
 }
 
 #pragma push
@@ -599,7 +626,7 @@ asm void DspHandShake(void*) {
 #pragma pop
 
 extern "C" {
-/* 8029E720 00AC .text      DspBoot__FPFPv_v                                             */
+/* 8029E720-8029E7CC 00AC .text      DspBoot__FPFPv_v                                             Function */
 }
 
 #pragma push
@@ -613,7 +640,7 @@ asm void DspBoot(void (*)(void*)) {
 #pragma pop
 
 extern "C" {
-/* 8029E7E0 00E8 .text      DSPSendCommands2__FPUlUlPFUs_v                               */
+/* 8029E7E0-8029E8C8 00E8 .text      DSPSendCommands2__FPUlUlPFUs_v                               Function */
 }
 
 #pragma push
@@ -627,7 +654,7 @@ asm void DSPSendCommands2(u32*, u32, void (*)(u16)) {
 #pragma pop
 
 extern "C" {
-/* 8029E8E0 002C .text      DspInitWork__Fv                                              */
+/* 8029E8E0-8029E90C 002C .text      DspInitWork__Fv                                              Function */
 }
 
 #pragma push
@@ -641,7 +668,7 @@ asm void DspInitWork(void) {
 #pragma pop
 
 extern "C" {
-/* 8029E920 0048 .text      DspStartWork__FUlPFUs_v                                      */
+/* 8029E920-8029E968 0048 .text      DspStartWork__FUlPFUs_v                                      Function */
 }
 
 #pragma push
@@ -655,7 +682,7 @@ asm void DspStartWork(u32, void (*)(u16)) {
 #pragma pop
 
 extern "C" {
-/* 8029E980 0068 .text      DspFinishWork__FUs                                           */
+/* 8029E980-8029E9E8 0068 .text      DspFinishWork__FUs                                           Function */
 }
 
 #pragma push

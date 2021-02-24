@@ -11,13 +11,22 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__10fopAc_ac_cFv();
+/* Function             */
 extern void __dt__10fopAc_ac_cFv();
+/* Function             */
+extern void __ct__14daObj_SSBase_cFv();
+/* Function             */
 extern void __dt__14daObj_SSBase_cFv();
+/* Function             */
 extern void getProcessID__14daObj_SSBase_cFv();
+/* ReturnFunction       */
 extern void setSoldOut__14daObj_SSBase_cFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__14daObj_SSBase_c[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14daObj_SSBase_c[6];
 }
 
 
@@ -26,8 +35,8 @@ SECTION_DATA extern const void* __vt__14daObj_SSBase_c[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BA088 0014 .data      __vt__14daObj_SSBase_c                                       */
-SECTION_DATA const  void* __vt__14daObj_SSBase_c[6] = {
+/* 803BA088-803BA0A0 0014 .data      __vt__14daObj_SSBase_c                                       VTableData */
+SECTION_DATA void* __vt__14daObj_SSBase_c[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14daObj_SSBase_cFv,
@@ -44,7 +53,7 @@ SECTION_DATA const  void* __vt__14daObj_SSBase_c[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8015E3F8 0058 .text      __ct__14daObj_SSBase_cFv                                     */
+/* 8015E3F8-8015E450 0058 .text      __ct__14daObj_SSBase_cFv                                     Function */
 // daObj_SSBase_c::daObj_SSBase_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -55,7 +64,7 @@ asm void __ct__14daObj_SSBase_cFv() {
 }
 #pragma pop
 
-/* 8015E450 0060 .text      __dt__14daObj_SSBase_cFv                                     */
+/* 8015E450-8015E4B0 0060 .text      __dt__14daObj_SSBase_cFv                                     Function */
 // daObj_SSBase_c::~daObj_SSBase_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -66,7 +75,7 @@ asm void __dt__14daObj_SSBase_cFv() {
 }
 #pragma pop
 
-/* 8015E4B0 0018 .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018 .text      getProcessID__14daObj_SSBase_cFv                             Function */
 // daObj_SSBase_c::getProcessID(void)
 #pragma push
 #pragma optimization_level 0
@@ -77,7 +86,7 @@ asm void getProcessID__14daObj_SSBase_cFv() {
 }
 #pragma pop
 
-/* 8015E4C8 0004 .text      setSoldOut__14daObj_SSBase_cFv                               */
+/* 8015E4C8-8015E4CC 0004 .text      setSoldOut__14daObj_SSBase_cFv                               ReturnFunction */
 // daObj_SSBase_c::setSoldOut(void)
 void setSoldOut__14daObj_SSBase_cFv() {
 	return;

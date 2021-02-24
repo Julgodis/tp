@@ -8,23 +8,32 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* ReturnIntegerFunction */
+extern  int TRKReleaseMutex();
+/* ReturnIntegerFunction */
+extern  int TRKAcquireMutex();
+/* ReturnIntegerFunction */
+extern  int TRKInitializeMutex();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036F498 0008 .text      TRKReleaseMutex                                              */
+/* 8036F498-8036F4A0 0008 .text      TRKReleaseMutex                                              ReturnIntegerFunction */
 int TRKReleaseMutex() {
 	return 0;
 }
 
-/* 8036F4A0 0008 .text      TRKAcquireMutex                                              */
+/* 8036F4A0-8036F4A8 0008 .text      TRKAcquireMutex                                              ReturnIntegerFunction */
 int TRKAcquireMutex() {
 	return 0;
 }
 
-/* 8036F4A8 0008 .text      TRKInitializeMutex                                           */
+/* 8036F4A8-8036F4B0 0008 .text      TRKInitializeMutex                                           ReturnIntegerFunction */
 int TRKInitializeMutex() {
 	return 0;
 }

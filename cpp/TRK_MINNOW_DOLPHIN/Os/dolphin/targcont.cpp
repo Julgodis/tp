@@ -9,10 +9,16 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void TRKSwapAndGo();
+/* Function             */
 extern void TRKTargetSetStopped();
+/* Function             */
 extern void UnreserveEXI2Port();
+/* Function             */
 extern void ReserveEXI2Port();
+/* Function             */
+extern void TRKTargetContinue();
 }
 
 
@@ -21,7 +27,7 @@ extern void ReserveEXI2Port();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037214C 0034 .text      TRKTargetContinue                                            */
+/* 8037214C-80372180 0034 .text      TRKTargetContinue                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

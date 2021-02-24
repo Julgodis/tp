@@ -32,8 +32,9 @@ RUNTIME_PPCEABI_H_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libRuntime.PPCEABI.H.a: dirs $(RUNTIME_PPCEABI_H_A_O_FILES)
+$(BUILD_DIR)/libRuntime.PPCEABI.H.a: $(RUNTIME_PPCEABI_H_A_O_FILES)
 	$(LD) -xm l $(RUNTIME_PPCEABI_H_A_LDFLAGS) -o $(BUILD_DIR)/libRuntime.PPCEABI.H.a $(RUNTIME_PPCEABI_H_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libRuntime.PPCEABI.H.a
 
 $(BUILD_DIR)/libs/Runtime.PPCEABI.H/%.o: cpp/Runtime.PPCEABI.H/%.cpp
 	mkdir -p $(@D)

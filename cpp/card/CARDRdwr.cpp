@@ -9,11 +9,21 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __CARDReadSegment();
+/* Function             */
 extern void __CARDWritePage();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void BlockReadCallback();
+/* Function             */
+extern void __CARDRead();
+/* Function             */
 extern void BlockWriteCallback();
+/* Function             */
+extern void __CARDWrite();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -23,7 +33,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80355184 00DC .text      BlockReadCallback                                            */
+/* 80355184-80355260 00DC .text      BlockReadCallback                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -33,7 +43,7 @@ asm void BlockReadCallback() {
 }
 #pragma pop
 
-/* 80355260 0064 .text      __CARDRead                                                   */
+/* 80355260-803552C4 0064 .text      __CARDRead                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +53,7 @@ asm void __CARDRead() {
 }
 #pragma pop
 
-/* 803552C4 00E8 .text      BlockWriteCallback                                           */
+/* 803552C4-803553AC 00E8 .text      BlockWriteCallback                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +63,7 @@ asm void BlockWriteCallback() {
 }
 #pragma pop
 
-/* 803553AC 0068 .text      __CARDWrite                                                  */
+/* 803553AC-80355414 0068 .text      __CARDWrite                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

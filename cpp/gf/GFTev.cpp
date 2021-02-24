@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802CE0D0 0068 .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                */
+/* 802CE0D0-802CE138 0068 .text      GFSetTevColorS10__F11_GXTevRegID11_GXColorS10                Function */
 // GFSetTevColorS10(_GXTevRegID, _GXColorS10)
 #pragma push
 #pragma optimization_level 0

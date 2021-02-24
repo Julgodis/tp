@@ -5,6 +5,7 @@
 Z2AUDIOLIB_A_CPP_FILES := \
 	cpp/Z2AudioLib/Z2Calc.cpp \
 	cpp/Z2AudioLib/Z2AudioArcLoader.cpp \
+	cpp/Z2AudioLib/Z2Param.cpp \
 	cpp/Z2AudioLib/Z2SoundMgr.cpp \
 	cpp/Z2AudioLib/Z2SoundStarter.cpp \
 	cpp/Z2AudioLib/Z2SoundHandles.cpp \
@@ -23,11 +24,11 @@ Z2AUDIOLIB_A_CPP_FILES := \
 	cpp/Z2AudioLib/Z2WolfHowlMgr.cpp \
 	cpp/Z2AudioLib/Z2SpeechMgr2.cpp \
 	cpp/Z2AudioLib/Z2AudioMgr.cpp \
-	cpp/Z2AudioLib/Z2Param.cpp \
 
 Z2AUDIOLIB_A_O_FILES := \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2Calc.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2AudioArcLoader.o \
+	$(BUILD_DIR)/libs/Z2AudioLib/Z2Param.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2SoundMgr.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2SoundStarter.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2SoundHandles.o \
@@ -46,7 +47,6 @@ Z2AUDIOLIB_A_O_FILES := \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2WolfHowlMgr.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2SpeechMgr2.o \
 	$(BUILD_DIR)/libs/Z2AudioLib/Z2AudioMgr.o \
-	$(BUILD_DIR)/libs/Z2AudioLib/Z2Param.o \
 
 Z2AUDIOLIB_A_CFLAGS := \
 
@@ -56,8 +56,9 @@ Z2AUDIOLIB_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libZ2AudioLib.a: dirs $(Z2AUDIOLIB_A_O_FILES)
+$(BUILD_DIR)/libZ2AudioLib.a: $(Z2AUDIOLIB_A_O_FILES)
 	$(LD) -xm l $(Z2AUDIOLIB_A_LDFLAGS) -o $(BUILD_DIR)/libZ2AudioLib.a $(Z2AUDIOLIB_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libZ2AudioLib.a
 
 $(BUILD_DIR)/libs/Z2AudioLib/%.o: cpp/Z2AudioLib/%.cpp
 	mkdir -p $(@D)

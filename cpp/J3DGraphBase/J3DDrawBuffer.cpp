@@ -13,25 +13,89 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void operator delete[](void*); /* __dla__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dla__FPv();
+/* Function             */
 extern void addChildPacket__9J3DPacketFP9J3DPacket();
+/* Function             */
 extern void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+/* Function             */
 extern void isSame__12J3DMatPacketCFP12J3DMatPacket();
+/* Function             */
+extern void initialize__13J3DDrawBufferFv();
+/* Function             */
+extern void allocBuffer__13J3DDrawBufferFUl();
+/* Function             */
+extern void __dt__13J3DDrawBufferFv();
+/* Function             */
 extern void frameInit__13J3DDrawBufferFv();
+/* Function             */
 extern void entryMatSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryZSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryModelSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryNonSort__13J3DDrawBufferFP12J3DMatPacket();
+/* Function             */
+extern void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+/* Function             */
+extern void draw__13J3DDrawBufferCFv();
+/* Function             */
+extern void drawHead__13J3DDrawBufferCFv();
+/* Function             */
+extern void drawTail__13J3DDrawBufferCFv();
+/* SInitFunction        */
+extern void __sinit_J3DDrawBuffer_cpp();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
-SECTION_DATA extern u8 LIT_992[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_992[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_993[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DDrawBuffer__LIT_994[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DDrawBuffer__LIT_995[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_996[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_997[3];
+/* InitializedData      */
+SECTION_DATA extern u8 sortFuncTable__13J3DDrawBuffer[72];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DDrawBuffer__LIT_998[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DDrawBuffer__LIT_999[3];
+/* InitializedData      */
 SECTION_DATA extern u8 drawFuncTable__13J3DDrawBuffer[24];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_781;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_782;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_784;
 }
 
@@ -41,32 +105,44 @@ SECTION_SDATA2 extern f64 LIT_784;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CEBE8 0000 .data      ...data.0                                                    */
-/* 803CEBE8 000C .data      @992                                                         */
-SECTION_DATA u8 LIT_992[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x50, 0x9C,
+/* 803CEBE8-803CEBE8 0000 .data      ...data.0                                                    InitializedData */
+/* 803CEBE8-803CEBF4 000C .data      @992                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_992[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryMatSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEBF4 000C .data      @993                                                         */
-SECTION_DATA u8 LIT_993[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x51, 0xE4,
+/* 803CEBF4-803CEC00 000C .data      @993                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_993[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEC00 000C .data      @994                                                         */
-SECTION_DATA u8 J3DDrawBuffer__LIT_994[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x52, 0x9C,
+/* 803CEC00-803CEC0C 000C .data      @994                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DDrawBuffer__LIT_994[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryZSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEC0C 000C .data      @995                                                         */
-SECTION_DATA u8 J3DDrawBuffer__LIT_995[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x53, 0xB4,
+/* 803CEC0C-803CEC18 000C .data      @995                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DDrawBuffer__LIT_995[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryModelSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEC18 000C .data      @996                                                         */
-SECTION_DATA u8 LIT_996[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x54, 0x04,
+/* 803CEC18-803CEC24 000C .data      @996                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_996[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEC24 000C .data      @997                                                         */
-SECTION_DATA u8 LIT_997[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x54, 0x58,
+/* 803CEC24-803CEC30 000C .data      @997                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_997[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)entryNonSort__13J3DDrawBufferFP12J3DMatPacket,
 };
-/* 803CEC30 0048 .data      sortFuncTable__13J3DDrawBuffer                               */
+/* 803CEC30-803CEC78 0048 .data      sortFuncTable__13J3DDrawBuffer                               InitializedData */
 SECTION_DATA u8 sortFuncTable__13J3DDrawBuffer[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -74,15 +150,19 @@ SECTION_DATA u8 sortFuncTable__13J3DDrawBuffer[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CEC78 000C .data      @998                                                         */
-SECTION_DATA u8 J3DDrawBuffer__LIT_998[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x55, 0x00,
+/* 803CEC78-803CEC84 000C .data      @998                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DDrawBuffer__LIT_998[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drawHead__13J3DDrawBufferCFv,
 };
-/* 803CEC84 000C .data      @999                                                         */
-SECTION_DATA u8 J3DDrawBuffer__LIT_999[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x32, 0x55, 0x78,
+/* 803CEC84-803CEC90 000C .data      @999                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DDrawBuffer__LIT_999[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)drawTail__13J3DDrawBufferCFv,
 };
-/* 803CEC90 0018 .data      drawFuncTable__13J3DDrawBuffer                               */
+/* 803CEC90-803CECA8 0018 .data      drawFuncTable__13J3DDrawBuffer                               InitializedData */
 SECTION_DATA u8 drawFuncTable__13J3DDrawBuffer[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -95,13 +175,13 @@ SECTION_DATA u8 drawFuncTable__13J3DDrawBuffer[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456400 0004 .sdata2    @781                                                         */
+/* 80456400-80456404 0004 .sdata2    @781                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_781 = 1.000000f;
-/* 80456404 0004 .sdata2    @782                                                         */
+/* 80456404-80456408 0004 .sdata2    @782                                                         Float32Data */
 // 0x461c4000
 SECTION_SDATA2 f32 LIT_782 = 10000.000000f;
-/* 80456408 0008 .sdata2    @784                                                         */
+/* 80456408-80456410 0008 .sdata2    @784                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_784 = 4503599627370496.000000;
 }
@@ -112,9 +192,8 @@ SECTION_SDATA2 f64 LIT_784 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515E0 0004 .sbss      entryNum__13J3DDrawBuffer                                    */
-SECTION_SBSS u8 entryNum__13J3DDrawBuffer[4];
-SECTION_SBSS u8 pad_804515E4[4];
+/* 804515E0-804515E8 0004 .sbss      entryNum__13J3DDrawBuffer                                    ZeroInitializedData */
+SECTION_SBSS u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 }
 
 
@@ -123,7 +202,7 @@ SECTION_SBSS u8 pad_804515E4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80324F08 0068 .text      initialize__13J3DDrawBufferFv                                */
+/* 80324F08-80324F70 0068 .text      initialize__13J3DDrawBufferFv                                Function */
 // J3DDrawBuffer::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -134,7 +213,7 @@ asm void initialize__13J3DDrawBufferFv() {
 }
 #pragma pop
 
-/* 80324F70 0098 .text      allocBuffer__13J3DDrawBufferFUl                              */
+/* 80324F70-80325008 0098 .text      allocBuffer__13J3DDrawBufferFUl                              Function */
 // J3DDrawBuffer::allocBuffer(u32)
 #pragma push
 #pragma optimization_level 0
@@ -145,7 +224,7 @@ asm void allocBuffer__13J3DDrawBufferFUl() {
 }
 #pragma pop
 
-/* 80325008 0060 .text      __dt__13J3DDrawBufferFv                                      */
+/* 80325008-80325068 0060 .text      __dt__13J3DDrawBufferFv                                      Function */
 // J3DDrawBuffer::~J3DDrawBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -156,7 +235,7 @@ asm void __dt__13J3DDrawBufferFv() {
 }
 #pragma pop
 
-/* 80325068 0034 .text      frameInit__13J3DDrawBufferFv                                 */
+/* 80325068-8032509C 0034 .text      frameInit__13J3DDrawBufferFv                                 Function */
 // J3DDrawBuffer::frameInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -167,7 +246,7 @@ asm void frameInit__13J3DDrawBufferFv() {
 }
 #pragma pop
 
-/* 8032509C 0148 .text      entryMatSort__13J3DDrawBufferFP12J3DMatPacket                */
+/* 8032509C-803251E4 0148 .text      entryMatSort__13J3DDrawBufferFP12J3DMatPacket                Function */
 // J3DDrawBuffer::entryMatSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -178,7 +257,7 @@ asm void entryMatSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 803251E4 00B8 .text      entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket             */
+/* 803251E4-8032529C 00B8 .text      entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket             Function */
 // J3DDrawBuffer::entryMatAnmSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -189,7 +268,7 @@ asm void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 8032529C 0118 .text      entryZSort__13J3DDrawBufferFP12J3DMatPacket                  */
+/* 8032529C-803253B4 0118 .text      entryZSort__13J3DDrawBufferFP12J3DMatPacket                  Function */
 // J3DDrawBuffer::entryZSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -200,7 +279,7 @@ asm void entryZSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 803253B4 0050 .text      entryModelSort__13J3DDrawBufferFP12J3DMatPacket              */
+/* 803253B4-80325404 0050 .text      entryModelSort__13J3DDrawBufferFP12J3DMatPacket              Function */
 // J3DDrawBuffer::entryModelSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -211,7 +290,7 @@ asm void entryModelSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 80325404 0054 .text      entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket            */
+/* 80325404-80325458 0054 .text      entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket            Function */
 // J3DDrawBuffer::entryInvalidSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -222,7 +301,7 @@ asm void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 80325458 0034 .text      entryNonSort__13J3DDrawBufferFP12J3DMatPacket                */
+/* 80325458-8032548C 0034 .text      entryNonSort__13J3DDrawBufferFP12J3DMatPacket                Function */
 // J3DDrawBuffer::entryNonSort(J3DMatPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -233,7 +312,7 @@ asm void entryNonSort__13J3DDrawBufferFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 8032548C 0020 .text      entryImm__13J3DDrawBufferFP9J3DPacketUs                      */
+/* 8032548C-803254AC 0020 .text      entryImm__13J3DDrawBufferFP9J3DPacketUs                      Function */
 // J3DDrawBuffer::entryImm(J3DPacket*, u16)
 #pragma push
 #pragma optimization_level 0
@@ -244,7 +323,7 @@ asm void entryImm__13J3DDrawBufferFP9J3DPacketUs() {
 }
 #pragma pop
 
-/* 803254AC 0054 .text      draw__13J3DDrawBufferCFv                                     */
+/* 803254AC-80325500 0054 .text      draw__13J3DDrawBufferCFv                                     Function */
 // J3DDrawBuffer::draw(void) const
 #pragma push
 #pragma optimization_level 0
@@ -255,7 +334,7 @@ asm void draw__13J3DDrawBufferCFv() {
 }
 #pragma pop
 
-/* 80325500 0078 .text      drawHead__13J3DDrawBufferCFv                                 */
+/* 80325500-80325578 0078 .text      drawHead__13J3DDrawBufferCFv                                 Function */
 // J3DDrawBuffer::drawHead(void) const
 #pragma push
 #pragma optimization_level 0
@@ -266,7 +345,7 @@ asm void drawHead__13J3DDrawBufferCFv() {
 }
 #pragma pop
 
-/* 80325578 0078 .text      drawTail__13J3DDrawBufferCFv                                 */
+/* 80325578-803255F0 0078 .text      drawTail__13J3DDrawBufferCFv                                 Function */
 // J3DDrawBuffer::drawTail(void) const
 #pragma push
 #pragma optimization_level 0
@@ -277,7 +356,7 @@ asm void drawTail__13J3DDrawBufferCFv() {
 }
 #pragma pop
 
-/* 803255F0 00D4 .text      __sinit_J3DDrawBuffer_cpp                                    */
+/* 803255F0-803256C4 00D4 .text      __sinit_J3DDrawBuffer_cpp                                    SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

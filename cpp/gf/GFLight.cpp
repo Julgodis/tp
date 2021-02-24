@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void GFSetChanAmbColor__F12_GXChannelID8_GXColor();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802CDE54 0048 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor                  */
+/* 802CDE54-802CDE9C 0048 .text      GFSetChanAmbColor__F12_GXChannelID8_GXColor                  Function */
 // GFSetChanAmbColor(_GXChannelID, _GXColor)
 #pragma push
 #pragma optimization_level 0

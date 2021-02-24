@@ -9,8 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_rem_pio2();
+/* Function             */
 extern void __kernel_tan();
+/* Function             */
+extern void tan();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_58[8];
 }
 
@@ -20,7 +25,7 @@ SECTION_SDATA2 extern u8 LIT_58[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456B40 0008 .sdata2    @58                                                          */
+/* 80456B40-80456B48 0008 .sdata2    @58                                                          InitializedData */
 SECTION_SDATA2 u8 LIT_58[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -32,7 +37,7 @@ SECTION_SDATA2 u8 LIT_58[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C668 0078 .text      tan                                                          */
+/* 8036C668-8036C6E0 0078 .text      tan                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

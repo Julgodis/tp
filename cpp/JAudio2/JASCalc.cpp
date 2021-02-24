@@ -9,17 +9,41 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void imixcopy__7JASCalcFPCsPCsPsUl();
+/* Function             */
 extern void bcopyfast__7JASCalcFPCvPvUl();
+/* Function             */
+extern void bcopy__7JASCalcFPCvPvUl();
+/* Function             */
 extern void bzerofast__7JASCalcFPvUl();
+/* Function             */
+extern void bzero__7JASCalcFPvUl();
+/* Function             */
+extern void pow2__7JASCalcFf();
+/* Function             */
+extern void func_8028F69C();
+/* Function             */
 extern void DCZeroRange();
+/* InitializedData      */
+SECTION_RODATA extern const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_8039AFB8[24];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_huge[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASCalc__LIT_847[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JASCalc__LIT_850;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASCalc__LIT_969[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_8045556C[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80455574[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASCalc__LIT_994;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASCalc__LIT_995[8];
 }
 
@@ -29,7 +53,7 @@ SECTION_SDATA2 extern u8 JASCalc__LIT_995[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039ABB8 0400 .rodata    CUTOFF_TO_IIR_TABLE__7JASCalc                                */
+/* 8039ABB8-8039AFB8 0400 .rodata    CUTOFF_TO_IIR_TABLE__7JASCalc                                InitializedData */
 SECTION_RODATA const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024] = {
 	0x0F, 0x5C, 0x0A, 0x3D, 0x46, 0x65, 0x1E, 0x73, 0x0F, 0x5E, 0x0A, 0x3D, 0x46, 0x64, 0x1E, 0x73,
 	0x0F, 0x63, 0x0A, 0x3C, 0x46, 0x61, 0x1E, 0x71, 0x0F, 0x6C, 0x0A, 0x3C, 0x46, 0x5B, 0x1E, 0x6F,
@@ -96,7 +120,7 @@ SECTION_RODATA const u8 CUTOFF_TO_IIR_TABLE__7JASCalc[1024] = {
 	0x7A, 0xBD, 0x00, 0x7A, 0x03, 0x49, 0x01, 0x6C, 0x7C, 0x7A, 0x00, 0x52, 0x02, 0x33, 0x00, 0xF4,
 	0x7E, 0x3B, 0x00, 0x29, 0x01, 0x1B, 0x00, 0x7A, 0x7F, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039AFB8 0018 .rodata    __two_to_x$982                                               */
+/* 8039AFB8-8039AFD0 0018 .rodata    __two_to_x$982                                               InitializedData */
 SECTION_RODATA const u8 data_8039AFB8[24] = {
 	0x3F, 0x31, 0x72, 0x18, 0x3E, 0x75, 0xFD, 0xF7, 0x3D, 0x63, 0x57, 0x06, 0x3C, 0x1D, 0xB2, 0x45,
 	0x3A, 0xAC, 0x1C, 0x81, 0x39, 0x3F, 0xE5, 0xDA,
@@ -109,31 +133,31 @@ SECTION_RODATA const u8 data_8039AFB8[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455558 0004 .sdata2    @847                                                         */
+/* 80455558-80455560 0004 .sdata2    @847                                                         InitializedData */
 SECTION_SDATA2 u8 JASCalc__LIT_847[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455560 0008 .sdata2    @850                                                         */
+/* 80455560-80455568 0008 .sdata2    @850                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JASCalc__LIT_850 = 4503601774854144.000000;
-/* 80455568 0004 .sdata2    @969                                                         */
+/* 80455568-8045556C 0004 .sdata2    @969                                                         InitializedData */
 SECTION_SDATA2 u8 JASCalc__LIT_969[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045556C 0008 .sdata2    scale_frac$980                                               */
+/* 8045556C-80455574 0008 .sdata2    scale_frac$980                                               InitializedData */
 SECTION_SDATA2 u8 data_8045556C[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 };
-/* 80455574 0008 .sdata2    two_to_frac$981                                              */
+/* 80455574-8045557C 0008 .sdata2    two_to_frac$981                                              InitializedData */
 SECTION_SDATA2 u8 data_80455574[8] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x35, 0x04, 0xF3,
 };
-/* 8045557C 0004 .sdata2    @994                                                         */
+/* 8045557C-80455580 0004 .sdata2    @994                                                         Float32Data */
 // 0x3f400000
 SECTION_SDATA2 f32 JASCalc__LIT_994 = 0.750000f;
-/* 80455580 0004 .sdata2    @995                                                         */
+/* 80455580-80455588 0004 .sdata2    @995                                                         InitializedData */
 SECTION_SDATA2 u8 JASCalc__LIT_995[8] = {
 	0x3E, 0x80, 0x00, 0x00,
 	/* padding */
@@ -147,8 +171,8 @@ SECTION_SDATA2 u8 JASCalc__LIT_995[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028F2E8 0030 .text      imixcopy__7JASCalcFPCsPCsPsUl                                */
-// JASCalc::imixcopy(const s16*, const s16*, s16*, u32)
+/* 8028F2E8-8028F318 0030 .text      imixcopy__7JASCalcFPCsPCsPsUl                                Function */
+// JASCalc::imixcopy(const short*, const short*, short*, u32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +182,7 @@ asm void imixcopy__7JASCalcFPCsPCsPsUl() {
 }
 #pragma pop
 
-/* 8028F318 003C .text      bcopyfast__7JASCalcFPCvPvUl                                  */
+/* 8028F318-8028F354 003C .text      bcopyfast__7JASCalcFPCvPvUl                                  Function */
 // JASCalc::bcopyfast(const void*, void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -169,7 +193,7 @@ asm void bcopyfast__7JASCalcFPCvPvUl() {
 }
 #pragma pop
 
-/* 8028F354 0100 .text      bcopy__7JASCalcFPCvPvUl                                      */
+/* 8028F354-8028F454 0100 .text      bcopy__7JASCalcFPCvPvUl                                      Function */
 // JASCalc::bcopy(const void*, void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -180,7 +204,7 @@ asm void bcopy__7JASCalcFPCvPvUl() {
 }
 #pragma pop
 
-/* 8028F454 002C .text      bzerofast__7JASCalcFPvUl                                     */
+/* 8028F454-8028F480 002C .text      bzerofast__7JASCalcFPvUl                                     Function */
 // JASCalc::bzerofast(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -191,7 +215,7 @@ asm void bzerofast__7JASCalcFPvUl() {
 }
 #pragma pop
 
-/* 8028F480 00F8 .text      bzero__7JASCalcFPvUl                                         */
+/* 8028F480-8028F578 00F8 .text      bzero__7JASCalcFPvUl                                         Function */
 // JASCalc::bzero(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -202,7 +226,7 @@ asm void bzero__7JASCalcFPvUl() {
 }
 #pragma pop
 
-/* 8028F578 0124 .text      pow2__7JASCalcFf                                             */
+/* 8028F578-8028F69C 0124 .text      pow2__7JASCalcFf                                             Function */
 // JASCalc::pow2(f32)
 #pragma push
 #pragma optimization_level 0
@@ -213,8 +237,8 @@ asm void pow2__7JASCalcFf() {
 }
 #pragma pop
 
-/* 8028F69C 0028 .text      clamp<s,l>__7JASCalcFl                                       */
-// JASCalc::clamp<s,l>(s32)
+/* 8028F69C-8028F6C4 0028 .text      clamp<s,l>__7JASCalcFl                                       Function */
+// JASCalc::clamp<s,l>(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

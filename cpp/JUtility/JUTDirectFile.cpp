@@ -11,17 +11,39 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void fetch32byte__13JUTDirectFileFv();
+/* Function             */
+extern void __ct__13JUTDirectFileFv();
+/* Function             */
+extern void __dt__13JUTDirectFileFv();
+/* Function             */
+extern void fopen__13JUTDirectFileFPCc();
+/* Function             */
+extern void fclose__13JUTDirectFileFv();
+/* Function             */
+extern void fgets__13JUTDirectFileFPvi();
+/* Function             */
 extern void OSEnableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void DVDOpen();
+/* Function             */
 extern void DVDClose();
+/* Function             */
 extern void DVDReadAsyncPrio();
+/* Function             */
 extern void DVDGetCommandBlockStatus();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -31,7 +53,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E8730 00C8 .text      fetch32byte__13JUTDirectFileFv                               */
+/* 802E8730-802E87F8 00C8 .text      fetch32byte__13JUTDirectFileFv                               Function */
 // JUTDirectFile::fetch32byte(void)
 #pragma push
 #pragma optimization_level 0
@@ -42,7 +64,7 @@ asm void fetch32byte__13JUTDirectFileFv() {
 }
 #pragma pop
 
-/* 802E87F8 0024 .text      __ct__13JUTDirectFileFv                                      */
+/* 802E87F8-802E881C 0024 .text      __ct__13JUTDirectFileFv                                      Function */
 // JUTDirectFile::JUTDirectFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -53,7 +75,7 @@ asm void __ct__13JUTDirectFileFv() {
 }
 #pragma pop
 
-/* 802E881C 0044 .text      __dt__13JUTDirectFileFv                                      */
+/* 802E881C-802E8860 0044 .text      __dt__13JUTDirectFileFv                                      Function */
 // JUTDirectFile::~JUTDirectFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -64,8 +86,8 @@ asm void __dt__13JUTDirectFileFv() {
 }
 #pragma pop
 
-/* 802E8860 009C .text      fopen__13JUTDirectFileFPCc                                   */
-// JUTDirectFile::fopen(const s8*)
+/* 802E8860-802E88FC 009C .text      fopen__13JUTDirectFileFPCc                                   Function */
+// JUTDirectFile::fopen(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +97,7 @@ asm void fopen__13JUTDirectFileFPCc() {
 }
 #pragma pop
 
-/* 802E88FC 005C .text      fclose__13JUTDirectFileFv                                    */
+/* 802E88FC-802E8958 005C .text      fclose__13JUTDirectFileFv                                    Function */
 // JUTDirectFile::fclose(void)
 #pragma push
 #pragma optimization_level 0
@@ -86,7 +108,7 @@ asm void fclose__13JUTDirectFileFv() {
 }
 #pragma pop
 
-/* 802E8958 01B0 .text      fgets__13JUTDirectFileFPvi                                   */
+/* 802E8958-802E8B08 01B0 .text      fgets__13JUTDirectFileFPvi                                   Function */
 // JUTDirectFile::fgets(void*, int)
 #pragma push
 #pragma optimization_level 0

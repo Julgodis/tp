@@ -11,23 +11,42 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__8dBgS_ChkFv();
+/* Function             */
 extern void __dt__8dBgS_ChkFv();
+/* ReturnFunction       */
 extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+/* Function             */
 extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+/* Function             */
+extern void __ct__11dBgS_SphChkFv();
+/* Function             */
 extern void __dt__11dBgS_SphChkFv();
+/* Function             */
 extern void func_80078B70();
+/* Function             */
 extern void func_80078B78();
+/* Function             */
 extern void func_80078B80();
+/* Function             */
 extern void func_80078B88();
+/* Function             */
 extern void __ct__8cBgS_ChkFv();
+/* Function             */
 extern void __dt__8cBgS_ChkFv();
+/* Function             */
 extern void __ct__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dt__13cBgS_PolyInfoFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__8cM3dGSph[3];
-SECTION_DATA extern const void* __vt__11dBgS_SphChk[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGSph[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dBgS_SphChk[16];
 }
 
 
@@ -36,8 +55,8 @@ SECTION_DATA extern const void* __vt__11dBgS_SphChk[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB9C8 003C .data      __vt__11dBgS_SphChk                                          */
-SECTION_DATA const  void* __vt__11dBgS_SphChk[16] = {
+/* 803AB9C8-803ABA08 003C .data      __vt__11dBgS_SphChk                                          VTableData */
+SECTION_DATA void* __vt__11dBgS_SphChk[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dBgS_SphChkFv,
@@ -64,7 +83,7 @@ SECTION_DATA const  void* __vt__11dBgS_SphChk[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80078A14 00AC .text      __ct__11dBgS_SphChkFv                                        */
+/* 80078A14-80078AC0 00AC .text      __ct__11dBgS_SphChkFv                                        Function */
 // dBgS_SphChk::dBgS_SphChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -75,7 +94,7 @@ asm void __ct__11dBgS_SphChkFv() {
 }
 #pragma pop
 
-/* 80078AC0 00B0 .text      __dt__11dBgS_SphChkFv                                        */
+/* 80078AC0-80078B70 00B0 .text      __dt__11dBgS_SphChkFv                                        Function */
 // dBgS_SphChk::~dBgS_SphChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -86,7 +105,7 @@ asm void __dt__11dBgS_SphChkFv() {
 }
 #pragma pop
 
-/* 80078B70 0008 .text      @20@__dt__11dBgS_SphChkFv                                    */
+/* 80078B70-80078B78 0008 .text      @20@__dt__11dBgS_SphChkFv                                    Function */
 // dBgS_SphChk::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -97,7 +116,7 @@ asm void func_80078B70() {
 }
 #pragma pop
 
-/* 80078B78 0008 .text      @36@__dt__11dBgS_SphChkFv                                    */
+/* 80078B78-80078B80 0008 .text      @36@__dt__11dBgS_SphChkFv                                    Function */
 // dBgS_SphChk::@36@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +127,7 @@ asm void func_80078B78() {
 }
 #pragma pop
 
-/* 80078B80 0008 .text      @72@__dt__11dBgS_SphChkFv                                    */
+/* 80078B80-80078B88 0008 .text      @72@__dt__11dBgS_SphChkFv                                    Function */
 // dBgS_SphChk::@72@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +138,7 @@ asm void func_80078B80() {
 }
 #pragma pop
 
-/* 80078B88 0008 .text      @56@__dt__11dBgS_SphChkFv                                    */
+/* 80078B88-80078B90 0008 .text      @56@__dt__11dBgS_SphChkFv                                    Function */
 // dBgS_SphChk::@56@__dt(void)
 #pragma push
 #pragma optimization_level 0

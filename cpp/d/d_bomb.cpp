@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void checkStateCarry__7dBomb_cFv();
+/* Function             */
+extern void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
+/* Function             */
+extern void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+/* Function             */
+extern void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80031F94 0038 .text      checkStateCarry__7dBomb_cFv                                  */
+/* 80031F94-80031FCC 0038 .text      checkStateCarry__7dBomb_cFv                                  Function */
 // dBomb_c::checkStateCarry(void)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +36,7 @@ asm void checkStateCarry__7dBomb_cFv() {
 }
 #pragma pop
 
-/* 80031FCC 0028 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  */
+/* 80031FCC-80031FF4 0028 .text      checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c                  Function */
 // dBomb_c::checkFlowerBombWait(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -36,7 +47,7 @@ asm void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 80031FF4 0028 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       */
+/* 80031FF4-8003201C 0028 .text      checkWaterBomb__7dBomb_cFP10fopAc_ac_c                       Function */
 // dBomb_c::checkWaterBomb(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -47,7 +58,7 @@ asm void checkWaterBomb__7dBomb_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8003201C 0028 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  */
+/* 8003201C-80032044 0028 .text      checkInsectBombMove__7dBomb_cFP10fopAc_ac_c                  Function */
 // dBomb_c::checkInsectBombMove(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0

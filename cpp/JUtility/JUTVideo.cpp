@@ -12,41 +12,86 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+/* Function             */
+extern void createManager__8JUTVideoFPC16_GXRenderModeObj();
+/* Function             */
+extern void destroyManager__8JUTVideoFv();
+/* Function             */
 extern void __ct__8JUTVideoFPC16_GXRenderModeObj();
+/* Function             */
 extern void __dt__8JUTVideoFv();
+/* Function             */
 extern void preRetraceProc__8JUTVideoFUl();
+/* Function             */
+extern void drawDoneStart__8JUTVideoFv();
+/* Function             */
+extern void dummyNoDrawWait__8JUTVideoFv();
+/* Function             */
 extern void drawDoneCallback__8JUTVideoFv();
+/* Function             */
 extern void postRetraceProc__8JUTVideoFUl();
+/* Function             */
 extern void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+/* ReturnFunction       */
+extern void waitRetraceIfNeed__8JUTVideoFv();
+/* Function             */
 extern void OSInitMessageQueue();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void OSGetTick();
+/* Function             */
 extern void VISetPreRetraceCallback();
+/* Function             */
 extern void VISetPostRetraceCallback();
+/* Function             */
 extern void VIInit();
+/* Function             */
 extern void VIWaitForRetrace();
+/* Function             */
 extern void VIConfigure();
+/* Function             */
 extern void VIFlush();
+/* Function             */
 extern void VISetNextFrameBuffer();
+/* GlobalFunction       */
 extern u32 VIGetNextFrameBuffer();
+/* Function             */
 extern void VISetBlack();
+/* GlobalFunction       */
 extern u32 VIGetRetraceCount();
+/* Function             */
 extern void GXFlush();
+/* Function             */
 extern void GXSetDrawDone();
+/* Function             */
 extern void GXSetDrawDoneCallback();
+/* Function             */
 extern void GXCopyDisp();
-SECTION_DATA extern const void* __vt__8JUTVideo[4];
-SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8JUTVideo[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sVideoLastTick__8JUTVideo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sVideoInterval__8JUTVideo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451544[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451548[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045154C[4];
-SECTION_SBSS extern u8 sManager__6JUTXfb[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 }
 
 
@@ -55,8 +100,8 @@ SECTION_SBSS extern u8 sManager__6JUTXfb[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC980 000C .data      __vt__8JUTVideo                                              */
-SECTION_DATA const  void* __vt__8JUTVideo[4] = {
+/* 803CC980-803CC990 000C .data      __vt__8JUTVideo                                              VTableData */
+SECTION_DATA void* __vt__8JUTVideo[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8JUTVideoFv,
@@ -71,17 +116,17 @@ SECTION_DATA const  void* __vt__8JUTVideo[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451538 0004 .sbss      sManager__8JUTVideo                                          */
+/* 80451538-8045153C 0004 .sbss      sManager__8JUTVideo                                          ZeroInitializedData */
 SECTION_SBSS u8 sManager__8JUTVideo[4];
-/* 8045153C 0004 .sbss      sVideoLastTick__8JUTVideo                                    */
+/* 8045153C-80451540 0004 .sbss      sVideoLastTick__8JUTVideo                                    ZeroInitializedData */
 SECTION_SBSS u8 sVideoLastTick__8JUTVideo[4];
-/* 80451540 0004 .sbss      sVideoInterval__8JUTVideo                                    */
+/* 80451540-80451544 0004 .sbss      sVideoInterval__8JUTVideo                                    ZeroInitializedData */
 SECTION_SBSS u8 sVideoInterval__8JUTVideo[4];
-/* 80451544 0004 .sbss      data_80451544                                                */
+/* 80451544-80451548 0004 .sbss      data_80451544                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451544[4];
-/* 80451548 0004 .sbss      frameBuffer$2222                                             */
+/* 80451548-8045154C 0004 .sbss      frameBuffer$2222                                             ZeroInitializedData */
 SECTION_SBSS u8 data_80451548[4];
-/* 8045154C 0004 .sbss      data_8045154C                                                */
+/* 8045154C-80451550 0004 .sbss      data_8045154C                                                ZeroInitializedData */
 SECTION_SBSS u8 data_8045154C[4];
 }
 
@@ -91,7 +136,7 @@ SECTION_SBSS u8 data_8045154C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E4C54 0058 .text      createManager__8JUTVideoFPC16_GXRenderModeObj                */
+/* 802E4C54-802E4CAC 0058 .text      createManager__8JUTVideoFPC16_GXRenderModeObj                Function */
 // JUTVideo::createManager(const _GXRenderModeObj*)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +147,7 @@ asm void createManager__8JUTVideoFPC16_GXRenderModeObj() {
 }
 #pragma pop
 
-/* 802E4CAC 0048 .text      destroyManager__8JUTVideoFv                                  */
+/* 802E4CAC-802E4CF4 0048 .text      destroyManager__8JUTVideoFv                                  Function */
 // JUTVideo::destroyManager(void)
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +158,7 @@ asm void destroyManager__8JUTVideoFv() {
 }
 #pragma pop
 
-/* 802E4CF4 00F4 .text      __ct__8JUTVideoFPC16_GXRenderModeObj                         */
+/* 802E4CF4-802E4DE8 00F4 .text      __ct__8JUTVideoFPC16_GXRenderModeObj                         Function */
 // JUTVideo::JUTVideo(const _GXRenderModeObj*)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +169,7 @@ asm void __ct__8JUTVideoFPC16_GXRenderModeObj() {
 }
 #pragma pop
 
-/* 802E4DE8 0068 .text      __dt__8JUTVideoFv                                            */
+/* 802E4DE8-802E4E50 0068 .text      __dt__8JUTVideoFv                                            Function */
 // JUTVideo::~JUTVideo(void)
 #pragma push
 #pragma optimization_level 0
@@ -135,7 +180,7 @@ asm void __dt__8JUTVideoFv() {
 }
 #pragma pop
 
-/* 802E4E50 0238 .text      preRetraceProc__8JUTVideoFUl                                 */
+/* 802E4E50-802E5088 0238 .text      preRetraceProc__8JUTVideoFUl                                 Function */
 // JUTVideo::preRetraceProc(u32)
 #pragma push
 #pragma optimization_level 0
@@ -146,7 +191,7 @@ asm void preRetraceProc__8JUTVideoFUl() {
 }
 #pragma pop
 
-/* 802E5088 0028 .text      drawDoneStart__8JUTVideoFv                                   */
+/* 802E5088-802E50B0 0028 .text      drawDoneStart__8JUTVideoFv                                   Function */
 // JUTVideo::drawDoneStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -157,7 +202,7 @@ asm void drawDoneStart__8JUTVideoFv() {
 }
 #pragma pop
 
-/* 802E50B0 000C .text      dummyNoDrawWait__8JUTVideoFv                                 */
+/* 802E50B0-802E50BC 000C .text      dummyNoDrawWait__8JUTVideoFv                                 Function */
 // JUTVideo::dummyNoDrawWait(void)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +213,7 @@ asm void dummyNoDrawWait__8JUTVideoFv() {
 }
 #pragma pop
 
-/* 802E50BC 0088 .text      drawDoneCallback__8JUTVideoFv                                */
+/* 802E50BC-802E5144 0088 .text      drawDoneCallback__8JUTVideoFv                                Function */
 // JUTVideo::drawDoneCallback(void)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +224,7 @@ asm void drawDoneCallback__8JUTVideoFv() {
 }
 #pragma pop
 
-/* 802E5144 0054 .text      postRetraceProc__8JUTVideoFUl                                */
+/* 802E5144-802E5198 0054 .text      postRetraceProc__8JUTVideoFUl                                Function */
 // JUTVideo::postRetraceProc(u32)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +235,7 @@ asm void postRetraceProc__8JUTVideoFUl() {
 }
 #pragma pop
 
-/* 802E5198 0078 .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj                */
+/* 802E5198-802E5210 0078 .text      setRenderMode__8JUTVideoFPC16_GXRenderModeObj                Function */
 // JUTVideo::setRenderMode(const _GXRenderModeObj*)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +246,7 @@ asm void setRenderMode__8JUTVideoFPC16_GXRenderModeObj() {
 }
 #pragma pop
 
-/* 802E5210 0004 .text      waitRetraceIfNeed__8JUTVideoFv                               */
+/* 802E5210-802E5214 0004 .text      waitRetraceIfNeed__8JUTVideoFv                               ReturnFunction */
 // JUTVideo::waitRetraceIfNeed(void)
 void waitRetraceIfNeed__8JUTVideoFv() {
 	return;

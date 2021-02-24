@@ -3,8 +3,8 @@ lbl_80342B98:
 /* 80342B9C 00000004  90 01 00 04 */	stw r0, 4(r1)
 /* 80342BA0 00000008  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80342BA4 0000000C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80342BA8 00000010  3C 60 80 37 */	lis r3, _ctors@ha
-/* 80342BAC 00000014  38 03 37 C0 */	addi r0, r3, _ctors@l
+/* 80342BA8 00000010  3C 60 80 37 */	lis r3, __init_cpp_exceptions_reference@ha
+/* 80342BAC 00000014  38 03 37 C0 */	addi r0, r3, __init_cpp_exceptions_reference@l
 /* 80342BB0 00000018  7C 1F 03 78 */	mr r31, r0
 /* 80342BB4 0000001C  48 00 00 04 */	b lbl_80342BB8
 lbl_80342BB8:

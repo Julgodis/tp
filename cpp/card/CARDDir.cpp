@@ -9,14 +9,27 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void __CARDEraseSector();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDWrite();
+/* FirstParamFunction   */
+extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void CARDDir__WriteCallback();
+/* Function             */
 extern void CARDDir__EraseCallback();
+/* Function             */
+extern void __CARDUpdateDir();
+/* Function             */
 extern void __CARDCheckSum();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -26,12 +39,12 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035577C 0008 .text      __CARDGetDirBlock                                            */
+/* 8035577C-80355784 0008 .text      __CARDGetDirBlock                                            FirstParamFunction */
 u32 __CARDGetDirBlock(u8* param0) {
 	return *(u32*)&param0[132]; /* param0->field_0x84 */
 }
 
-/* 80355784 00D0 .text      WriteCallback                                                */
+/* 80355784-80355854 00D0 .text      WriteCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +54,7 @@ asm void CARDDir__WriteCallback() {
 }
 #pragma pop
 
-/* 80355854 00C8 .text      EraseCallback                                                */
+/* 80355854-8035591C 00C8 .text      EraseCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +64,7 @@ asm void CARDDir__EraseCallback() {
 }
 #pragma pop
 
-/* 8035591C 00C4 .text      __CARDUpdateDir                                              */
+/* 8035591C-803559E0 00C4 .text      __CARDUpdateDir                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

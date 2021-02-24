@@ -9,7 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void getStartSoundIndex__17JAUSoundAnimationCFf();
+/* Function             */
+extern void getEndSoundIndex__17JAUSoundAnimationCFf();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
 }
 
@@ -19,7 +25,7 @@ extern void _restgpr_28();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A6F70 00D4 .text      getStartSoundIndex__17JAUSoundAnimationCFf                   */
+/* 802A6F70-802A7044 00D4 .text      getStartSoundIndex__17JAUSoundAnimationCFf                   Function */
 // JAUSoundAnimation::getStartSoundIndex(f32) const
 #pragma push
 #pragma optimization_level 0
@@ -30,7 +36,7 @@ asm void getStartSoundIndex__17JAUSoundAnimationCFf() {
 }
 #pragma pop
 
-/* 802A7044 00D0 .text      getEndSoundIndex__17JAUSoundAnimationCFf                     */
+/* 802A7044-802A7114 00D0 .text      getEndSoundIndex__17JAUSoundAnimationCFf                     Function */
 // JAUSoundAnimation::getEndSoundIndex(f32) const
 #pragma push
 #pragma optimization_level 0

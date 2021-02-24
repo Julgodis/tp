@@ -18,8 +18,9 @@ SI_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libsi.a: dirs $(SI_A_O_FILES)
+$(BUILD_DIR)/libsi.a: $(SI_A_O_FILES)
 	$(LD) -xm l $(SI_A_LDFLAGS) -o $(BUILD_DIR)/libsi.a $(SI_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libsi.a
 
 $(BUILD_DIR)/libs/si/%.o: cpp/si/%.cpp
 	mkdir -p $(@D)

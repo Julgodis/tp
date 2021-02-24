@@ -9,15 +9,29 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCc();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
+extern void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive();
+/* Function             */
+extern void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
+/* Function             */
 extern void getResource__15JUTResReferenceFUlP10JKRArchive();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -27,7 +41,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DE078 00A8 .text      getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive */
+/* 802DE078-802DE120 00A8 .text      getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive Function */
 // JUTResReference::getResource(JSUInputStream*, u32, JKRArchive*)
 #pragma push
 #pragma optimization_level 0
@@ -38,7 +52,7 @@ asm void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive() {
 }
 #pragma pop
 
-/* 802DE120 009C .text      getResource__15JUTResReferenceFPCvUlP10JKRArchive            */
+/* 802DE120-802DE1BC 009C .text      getResource__15JUTResReferenceFPCvUlP10JKRArchive            Function */
 // JUTResReference::getResource(const void*, u32, JKRArchive*)
 #pragma push
 #pragma optimization_level 0
@@ -49,7 +63,7 @@ asm void getResource__15JUTResReferenceFPCvUlP10JKRArchive() {
 }
 #pragma pop
 
-/* 802DE1BC 0078 .text      getResource__15JUTResReferenceFUlP10JKRArchive               */
+/* 802DE1BC-802DE234 0078 .text      getResource__15JUTResReferenceFUlP10JKRArchive               Function */
 // JUTResReference::getResource(u32, JKRArchive*)
 #pragma push
 #pragma optimization_level 0

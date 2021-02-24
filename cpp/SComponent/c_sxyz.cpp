@@ -9,12 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __dt__5csXyzFv();
+/* Function             */
 extern void __ct__5csXyzFsss();
+/* Function             */
+extern void __pl__5csXyzFR5csXyz();
+/* Function             */
+extern void __apl__5csXyzFR5csXyz();
+/* Function             */
+extern void __mi__5csXyzFR5csXyz();
+/* Function             */
+extern void __ml__5csXyzFf();
+/* SInitFunction        */
+extern void __sinit_c_sxyz_cpp();
+/* Function             */
 extern void __register_global_object();
-SECTION_BSS extern u8 LIT_262[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_262[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 Zero__5csXyz[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451164[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 c_sxyz__LIT_151;
 }
 
@@ -24,7 +41,7 @@ SECTION_SDATA2 extern f64 c_sxyz__LIT_151;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804550A0 0008 .sdata2    @151                                                         */
+/* 804550A0-804550A8 0008 .sdata2    @151                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 c_sxyz__LIT_151 = 4503601774854144.000000;
 }
@@ -35,8 +52,8 @@ SECTION_SDATA2 f64 c_sxyz__LIT_151 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430DA8 000C .bss       @262                                                         */
-SECTION_BSS u8 LIT_262[16];
+/* 80430DA8-80430DB8 000C .bss       @262                                                         ZeroInitializedData */
+SECTION_BSS u8 LIT_262[12 + 4 /* padding */];
 }
 
 
@@ -45,9 +62,9 @@ SECTION_BSS u8 LIT_262[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451160 0004 .sbss      Zero__5csXyz                                                 */
+/* 80451160-80451164 0004 .sbss      Zero__5csXyz                                                 ZeroInitializedData */
 SECTION_SBSS u8 Zero__5csXyz[4];
-/* 80451164 0004 .sbss      data_80451164                                                */
+/* 80451164-80451168 0004 .sbss      data_80451164                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451164[4];
 }
 
@@ -57,8 +74,8 @@ SECTION_SBSS u8 data_80451164[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802673F4 0010 .text      __ct__5csXyzFsss                                             */
-// csXyz::csXyz(s16, s16, s16)
+/* 802673F4-80267404 0010 .text      __ct__5csXyzFsss                                             Function */
+// csXyz::csXyz(short, short, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -68,7 +85,7 @@ asm void __ct__5csXyzFsss() {
 }
 #pragma pop
 
-/* 80267404 0058 .text      __pl__5csXyzFR5csXyz                                         */
+/* 80267404-8026745C 0058 .text      __pl__5csXyzFR5csXyz                                         Function */
 // csXyz::operator+(csXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -79,7 +96,7 @@ asm void __pl__5csXyzFR5csXyz() {
 }
 #pragma pop
 
-/* 8026745C 0034 .text      __apl__5csXyzFR5csXyz                                        */
+/* 8026745C-80267490 0034 .text      __apl__5csXyzFR5csXyz                                        Function */
 // csXyz::operator+=(csXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -90,7 +107,7 @@ asm void __apl__5csXyzFR5csXyz() {
 }
 #pragma pop
 
-/* 80267490 0058 .text      __mi__5csXyzFR5csXyz                                         */
+/* 80267490-802674E8 0058 .text      __mi__5csXyzFR5csXyz                                         Function */
 // csXyz::operator-(csXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -101,7 +118,7 @@ asm void __mi__5csXyzFR5csXyz() {
 }
 #pragma pop
 
-/* 802674E8 00A4 .text      __ml__5csXyzFf                                               */
+/* 802674E8-8026758C 00A4 .text      __ml__5csXyzFf                                               Function */
 // csXyz::operator*(f32)
 #pragma push
 #pragma optimization_level 0
@@ -112,7 +129,7 @@ asm void __ml__5csXyzFf() {
 }
 #pragma pop
 
-/* 8026758C 0058 .text      __sinit_c_sxyz_cpp                                           */
+/* 8026758C-802675E4 0058 .text      __sinit_c_sxyz_cpp                                           SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

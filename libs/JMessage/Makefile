@@ -4,17 +4,17 @@
 
 JMESSAGE_A_CPP_FILES := \
 	cpp/JMessage/control.cpp \
+	cpp/JMessage/data.cpp \
 	cpp/JMessage/processor.cpp \
 	cpp/JMessage/resource.cpp \
 	cpp/JMessage/locale.cpp \
-	cpp/JMessage/data.cpp \
 
 JMESSAGE_A_O_FILES := \
 	$(BUILD_DIR)/libs/JMessage/control.o \
+	$(BUILD_DIR)/libs/JMessage/data.o \
 	$(BUILD_DIR)/libs/JMessage/processor.o \
 	$(BUILD_DIR)/libs/JMessage/resource.o \
 	$(BUILD_DIR)/libs/JMessage/locale.o \
-	$(BUILD_DIR)/libs/JMessage/data.o \
 
 JMESSAGE_A_CFLAGS := \
 
@@ -24,8 +24,9 @@ JMESSAGE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJMessage.a: dirs $(JMESSAGE_A_O_FILES)
+$(BUILD_DIR)/libJMessage.a: $(JMESSAGE_A_O_FILES)
 	$(LD) -xm l $(JMESSAGE_A_LDFLAGS) -o $(BUILD_DIR)/libJMessage.a $(JMESSAGE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJMessage.a
 
 $(BUILD_DIR)/libs/JMessage/%.o: cpp/JMessage/%.cpp
 	mkdir -p $(@D)

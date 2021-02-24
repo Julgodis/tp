@@ -9,24 +9,49 @@
 // 
 
 extern "C" {
-extern void memset();
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSLockSramEx();
+/* Function             */
 extern void __OSUnlockSramEx();
+/* Function             */
 extern void __CARDSyncCallback();
+/* GlobalFunction       */
 extern void __CARDGetFontEncode();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* Function             */
 extern void __CARDUpdateFatBlock();
+/* Function             */
 extern void __CARDUpdateDir();
+/* Function             */
+extern void __CARDCheckSum();
+/* Function             */
 extern void VerifyID();
+/* Function             */
 extern void VerifyDir();
+/* Function             */
 extern void VerifyFAT();
+/* Function             */
+extern void __CARDVerify();
+/* Function             */
 extern void CARDCheckExAsync();
+/* Function             */
+extern void CARDCheck();
+/* Function             */
 extern void __shr2i();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -36,7 +61,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803559E0 01B0 .text      __CARDCheckSum                                               */
+/* 803559E0-80355B90 01B0 .text      __CARDCheckSum                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +71,7 @@ asm void __CARDCheckSum() {
 }
 #pragma pop
 
-/* 80355B90 0284 .text      VerifyID                                                     */
+/* 80355B90-80355E14 0284 .text      VerifyID                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,7 +81,7 @@ asm void VerifyID() {
 }
 #pragma pop
 
-/* 80355E14 0240 .text      VerifyDir                                                    */
+/* 80355E14-80356054 0240 .text      VerifyDir                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -66,7 +91,7 @@ asm void VerifyDir() {
 }
 #pragma pop
 
-/* 80356054 0284 .text      VerifyFAT                                                    */
+/* 80356054-803562D8 0284 .text      VerifyFAT                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +101,7 @@ asm void VerifyFAT() {
 }
 #pragma pop
 
-/* 803562D8 008C .text      __CARDVerify                                                 */
+/* 803562D8-80356364 008C .text      __CARDVerify                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -86,7 +111,7 @@ asm void __CARDVerify() {
 }
 #pragma pop
 
-/* 80356364 0590 .text      CARDCheckExAsync                                             */
+/* 80356364-803568F4 0590 .text      CARDCheckExAsync                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +121,7 @@ asm void CARDCheckExAsync() {
 }
 #pragma pop
 
-/* 803568F4 0054 .text      CARDCheck                                                    */
+/* 803568F4-80356948 0054 .text      CARDCheck                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

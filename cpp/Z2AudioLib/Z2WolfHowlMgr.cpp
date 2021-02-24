@@ -9,76 +9,181 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void stop__8JAISoundFUl();
+/* Function             */
 extern void stop__8JAISoundFv();
+/* Function             */
 extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void movePitch__18JAISoundParamsMoveFfUl();
+/* Function             */
 extern void func_802A2FEC();
+/* Function             */
 extern void linearTransform__6Z2CalcFfffffb();
+/* Function             */
 extern void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void subBgmStart__8Z2SeqMgrFUl();
+/* Function             */
 extern void stopWolfHowlSong__8Z2SeqMgrFv();
+/* Function             */
+extern void __ct__13Z2WolfHowlMgrFv();
+/* Function             */
 extern void resetState__13Z2WolfHowlMgrFv();
+/* Function             */
 extern void calcVolumeMod__13Z2WolfHowlMgrFf();
+/* Function             */
 extern void getNowPitch__13Z2WolfHowlMgrFv();
+/* Function             */
+extern void getNowInputValue__13Z2WolfHowlMgrFv();
+/* Function             */
 extern void calcPitchMod__13Z2WolfHowlMgrFff();
+/* Function             */
+extern void startWolfHowlSound__13Z2WolfHowlMgrFffbf();
+/* Function             */
+extern void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData();
+/* Function             */
 extern void getCorrectLine__13Z2WolfHowlMgrFUc();
+/* Function             */
 extern void getCorrectLineNum__13Z2WolfHowlMgrFv();
+/* Function             */
 extern void checkLine__13Z2WolfHowlMgrFv();
+/* Function             */
 extern void getOnLineNum__13Z2WolfHowlMgrFv();
+/* Function             */
+extern void startWindStoneSound__13Z2WolfHowlMgrFScP3Vec();
+/* Function             */
+extern void startGuideMelody__13Z2WolfHowlMgrFb();
+/* Function             */
+extern void skipCorrectDemo__13Z2WolfHowlMgrFv();
+/* SInitFunction        */
+extern void __sinit_Z2WolfHowlMgr_cpp();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern u8 sGuideData[72];
+/* InitializedData      */
+SECTION_DATA extern u8 sHowlUmakusa[12];
+/* InitializedData      */
+SECTION_DATA extern u8 sHowlZeldaSong[12];
+/* InitializedData      */
+SECTION_DATA extern u8 sHowlLightPrelude[12];
+/* InitializedData      */
+SECTION_DATA extern u8 sHowlSoulRequiem[12];
+/* InitializedData      */
+SECTION_DATA extern u8 sHealingSong[12];
+/* InitializedData      */
+SECTION_DATA extern u8 sNewSong1[16];
+/* InitializedData      */
+SECTION_DATA extern u8 sNewSong2[16];
+/* InitializedData      */
+SECTION_DATA extern u8 sNewSong3[20];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* sGuideData[18];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sCorrectPhrase[36];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sWindStoneSound[36];
-SECTION_BSS extern u8 sCorrectDuo[40];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sCorrectDuo[36 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA extern u8 cPitchDown[4];
+/* Float32Data          */
 SECTION_SDATA extern f32 cPitchCenter;
+/* InitializedData      */
 SECTION_SDATA extern u8 cPitchUp[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_8045088C[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 cR_FlatWidth[4];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450894[4];
+/* Float32Data          */
 SECTION_SDATA extern f32 sStickHigh;
+/* InitializedData      */
 SECTION_SDATA extern u8 sStickCenter[4];
+/* InitializedData      */
+SECTION_SDATA extern u8 sHowlTobikusa[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B38[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B44[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B74[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B80[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B84[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B88[4];
-SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3485[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3486;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3527;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3528;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3530;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3589[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3590;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3711[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3712[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3713[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3714[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3715[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3716[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3717[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3718[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3719[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_3720[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Z2WolfHowlMgr__LIT_4032;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Z2WolfHowlMgr__LIT_4033;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4034[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2WolfHowlMgr__LIT_4035;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2WolfHowlMgr__LIT_4036;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 Z2WolfHowlMgr__LIT_4037;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4038[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4039[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4040[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4041[8];
 }
 
@@ -88,50 +193,63 @@ SECTION_SDATA2 extern u8 Z2WolfHowlMgr__LIT_4041[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CBC50 000C .data      sHowlUmakusa                                                 */
+/* 803CBC50-803CBC5C 000C .data      sHowlUmakusa                                                 InitializedData */
 SECTION_DATA u8 sHowlUmakusa[12] = {
 	0x01, 0x0F, 0x02, 0x0F, 0x03, 0x3C, 0x01, 0x0F, 0x02, 0x0F, 0x03, 0x3C,
 };
-/* 803CBC5C 000C .data      sHowlZeldaSong                                               */
+/* 803CBC5C-803CBC68 000C .data      sHowlZeldaSong                                               InitializedData */
 SECTION_DATA u8 sHowlZeldaSong[12] = {
 	0x02, 0x1E, 0x01, 0x0F, 0x03, 0x2D, 0x02, 0x1E, 0x01, 0x0F, 0x03, 0x2D,
 };
-/* 803CBC68 000C .data      sHowlLightPrelude                                            */
+/* 803CBC68-803CBC74 000C .data      sHowlLightPrelude                                            InitializedData */
 SECTION_DATA u8 sHowlLightPrelude[12] = {
 	0x01, 0x14, 0x03, 0x28, 0x01, 0x14, 0x03, 0x14, 0x02, 0x14, 0x01, 0x1E,
 };
-/* 803CBC74 000C .data      sHowlSoulRequiem                                             */
+/* 803CBC74-803CBC80 000C .data      sHowlSoulRequiem                                             InitializedData */
 SECTION_DATA u8 sHowlSoulRequiem[12] = {
 	0x03, 0x1E, 0x02, 0x0F, 0x03, 0x0F, 0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E,
 };
-/* 803CBC80 000C .data      sHealingSong                                                 */
+/* 803CBC80-803CBC8C 000C .data      sHealingSong                                                 InitializedData */
 SECTION_DATA u8 sHealingSong[12] = {
 	0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E, 0x01, 0x1E, 0x02, 0x1E, 0x03, 0x1E,
 };
-/* 803CBC8C 000E .data      sNewSong1                                                    */
+/* 803CBC8C-803CBC9C 000E .data      sNewSong1                                                    InitializedData */
 SECTION_DATA u8 sNewSong1[16] = {
 	0x03, 0x1E, 0x02, 0x1E, 0x01, 0x1E, 0x03, 0x28, 0x02, 0x14, 0x03, 0x1E, 0x01, 0x1E,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CBC9C 0010 .data      sNewSong2                                                    */
+/* 803CBC9C-803CBCAC 0010 .data      sNewSong2                                                    InitializedData */
 SECTION_DATA u8 sNewSong2[16] = {
 	0x01, 0x14, 0x02, 0x14, 0x03, 0x14, 0x02, 0x3C, 0x03, 0x14, 0x01, 0x14, 0x02, 0x14, 0x03, 0x1E,
 };
-/* 803CBCAC 0012 .data      sNewSong3                                                    */
+/* 803CBCAC-803CBCC0 0012 .data      sNewSong3                                                    InitializedData */
 SECTION_DATA u8 sNewSong3[20] = {
 	0x02, 0x1E, 0x03, 0x3C, 0x02, 0x28, 0x01, 0x14, 0x03, 0x3C, 0x01, 0x14, 0x02, 0x14, 0x01, 0x14,
 	0x02, 0x2D,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CBCC0 0048 .data      sGuideData                                                   */
-SECTION_DATA u8 sGuideData[72] = {
-	0x04, 0x00, 0x00, 0x00, 0x80, 0x45, 0x08, 0xA0, 0x06, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x50,
-	0x06, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x5C, 0x06, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x80,
-	0x06, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x74, 0x06, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x68,
-	0x07, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x8C, 0x08, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0x9C,
-	0x09, 0x00, 0x00, 0x00, 0x80, 0x3C, 0xBC, 0xAC,
+/* 803CBCC0-803CBD08 0048 .data      sGuideData                                                   SymbolReferenceArrayData */
+SECTION_DATA void* sGuideData[18] = {
+	(void*)0x04000000,
+	(void*)&sHowlTobikusa,
+	(void*)0x06000000,
+	(void*)&sHowlUmakusa,
+	(void*)0x06000000,
+	(void*)&sHowlZeldaSong,
+	(void*)0x06000000,
+	(void*)&sHealingSong,
+	(void*)0x06000000,
+	(void*)&sHowlSoulRequiem,
+	(void*)0x06000000,
+	(void*)&sHowlLightPrelude,
+	(void*)0x07000000,
+	(void*)&sNewSong1,
+	(void*)0x08000000,
+	(void*)&sNewSong2,
+	(void*)0x09000000,
+	(void*)&sNewSong3,
 };
 }
 
@@ -141,18 +259,18 @@ SECTION_DATA u8 sGuideData[72] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450880 0004 .sdata     cPitchDown                                                   */
+/* 80450880-80450884 0004 .sdata     cPitchDown                                                   InitializedData */
 SECTION_SDATA u8 cPitchDown[4] = {
 	0x3F, 0x64, 0x12, 0x06,
 };
-/* 80450884 0004 .sdata     cPitchCenter                                                 */
+/* 80450884-80450888 0004 .sdata     cPitchCenter                                                 Float32Data */
 // 0x3f800000
 SECTION_SDATA f32 cPitchCenter = 1.000000f;
-/* 80450888 0004 .sdata     cPitchUp                                                     */
+/* 80450888-8045088C 0004 .sdata     cPitchUp                                                     InitializedData */
 SECTION_SDATA u8 cPitchUp[4] = {
 	0x3F, 0x98, 0x37, 0xB5,
 };
-/* 8045088C 0004 .sdata     merged_8045088C                                              */
+/* 8045088C-80450890 0004 .sdata     merged_8045088C                                              MergedInitializedData */
 SECTION_SDATA u8 merged_8045088C[4] = {
 	/* data_8045088C */
 	0x07,
@@ -161,25 +279,25 @@ SECTION_SDATA u8 merged_8045088C[4] = {
 	/* data_8045088E */
 	0x1E, 0x00,
 };
-/* 80450890 0004 .sdata     cR_FlatWidth                                                 */
+/* 80450890-80450894 0004 .sdata     cR_FlatWidth                                                 InitializedData */
 SECTION_SDATA u8 cR_FlatWidth[4] = {
 	0x3F, 0x71, 0xA1, 0x77,
 };
-/* 80450894 0004 .sdata     merged_80450894                                              */
+/* 80450894-80450898 0004 .sdata     merged_80450894                                              MergedInitializedData */
 SECTION_SDATA u8 merged_80450894[4] = {
 	/* data_80450894 */
 	0x05,
 	/* data_80450895 */
 	0x1E, 0x00, 0x00,
 };
-/* 80450898 0004 .sdata     sStickHigh                                                   */
+/* 80450898-8045089C 0004 .sdata     sStickHigh                                                   Float32Data */
 // 0x3f000000
 SECTION_SDATA f32 sStickHigh = 0.500000f;
-/* 8045089C 0004 .sdata     sStickCenter                                                 */
+/* 8045089C-804508A0 0004 .sdata     sStickCenter                                                 InitializedData */
 SECTION_SDATA u8 sStickCenter[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 804508A0 0008 .sdata     sHowlTobikusa                                                */
+/* 804508A0-804508A8 0008 .sdata     sHowlTobikusa                                                InitializedData */
 SECTION_SDATA u8 sHowlTobikusa[8] = {
 	0x01, 0x1E, 0x03, 0x1E, 0x01, 0x1E, 0x03, 0x1E,
 };
@@ -191,101 +309,101 @@ SECTION_SDATA u8 sHowlTobikusa[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455E60 0004 .sdata2    @3485                                                        */
+/* 80455E60-80455E64 0004 .sdata2    @3485                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3485[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455E64 0004 .sdata2    @3486                                                        */
+/* 80455E64-80455E68 0004 .sdata2    @3486                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3486 = 1.000000f;
-/* 80455E68 0004 .sdata2    @3527                                                        */
+/* 80455E68-80455E6C 0004 .sdata2    @3527                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 LIT_3527 = 30.000000f;
-/* 80455E6C 0004 .sdata2    @3528                                                        */
+/* 80455E6C-80455E70 0004 .sdata2    @3528                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 LIT_3528 = 2.000000f;
-/* 80455E70 0008 .sdata2    @3530                                                        */
+/* 80455E70-80455E78 0008 .sdata2    @3530                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3530 = 4503599627370496.000000;
-/* 80455E78 0004 .sdata2    @3589                                                        */
+/* 80455E78-80455E7C 0004 .sdata2    @3589                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3589[4] = {
 	0x3F, 0x78, 0x51, 0xEC,
 };
-/* 80455E7C 0004 .sdata2    @3590                                                        */
+/* 80455E7C-80455E80 0004 .sdata2    @3590                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 LIT_3590 = -1.000000f;
-/* 80455E80 0004 .sdata2    @3711                                                        */
+/* 80455E80-80455E84 0004 .sdata2    @3711                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3711[4] = {
 	0x3F, 0x8F, 0xAC, 0xC5,
 };
-/* 80455E84 0004 .sdata2    @3712                                                        */
+/* 80455E84-80455E88 0004 .sdata2    @3712                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3712[4] = {
 	0x3F, 0x87, 0x9C, 0x63,
 };
-/* 80455E88 0004 .sdata2    @3713                                                        */
+/* 80455E88-80455E8C 0004 .sdata2    @3713                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3713[4] = {
 	0x3F, 0x4B, 0x2F, 0x01,
 };
-/* 80455E8C 0004 .sdata2    @3714                                                        */
+/* 80455E8C-80455E90 0004 .sdata2    @3714                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3714[4] = {
 	0x3F, 0xA1, 0x44, 0x9A,
 };
-/* 80455E90 0004 .sdata2    @3715                                                        */
+/* 80455E90-80455E94 0004 .sdata2    @3715                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3715[4] = {
 	0x3F, 0x71, 0xA1, 0x77,
 };
-/* 80455E94 0004 .sdata2    @3716                                                        */
+/* 80455E94-80455E98 0004 .sdata2    @3716                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3716[4] = {
 	0x3F, 0x57, 0x44, 0x3D,
 };
-/* 80455E98 0004 .sdata2    @3717                                                        */
+/* 80455E98-80455E9C 0004 .sdata2    @3717                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3717[4] = {
 	0x3F, 0xAA, 0xDC, 0x0A,
 };
-/* 80455E9C 0004 .sdata2    @3718                                                        */
+/* 80455E9C-80455EA0 0004 .sdata2    @3718                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3718[4] = {
 	0x3F, 0x64, 0x12, 0x06,
 };
-/* 80455EA0 0004 .sdata2    @3719                                                        */
+/* 80455EA0-80455EA4 0004 .sdata2    @3719                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3719[4] = {
 	0x3F, 0x3F, 0xC8, 0x4B,
 };
-/* 80455EA4 0004 .sdata2    @3720                                                        */
+/* 80455EA4-80455EA8 0004 .sdata2    @3720                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_3720[4] = {
 	0x3F, 0x98, 0x37, 0xB5,
 };
-/* 80455EA8 0008 .sdata2    @4032                                                        */
+/* 80455EA8-80455EB0 0008 .sdata2    @4032                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 Z2WolfHowlMgr__LIT_4032 = 0.500000;
-/* 80455EB0 0008 .sdata2    @4033                                                        */
+/* 80455EB0-80455EB8 0008 .sdata2    @4033                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 Z2WolfHowlMgr__LIT_4033 = 3.000000;
-/* 80455EB8 0008 .sdata2    @4034                                                        */
+/* 80455EB8-80455EC0 0008 .sdata2    @4034                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4034[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80455EC0 0004 .sdata2    @4035                                                        */
+/* 80455EC0-80455EC4 0004 .sdata2    @4035                                                        Float32Data */
 // 0x45034000
 SECTION_SDATA2 f32 Z2WolfHowlMgr__LIT_4035 = 2100.000000f;
-/* 80455EC4 0004 .sdata2    @4036                                                        */
+/* 80455EC4-80455EC8 0004 .sdata2    @4036                                                        Float32Data */
 // 0x43160000
 SECTION_SDATA2 f32 Z2WolfHowlMgr__LIT_4036 = 150.000000f;
-/* 80455EC8 0004 .sdata2    @4037                                                        */
+/* 80455EC8-80455ECC 0004 .sdata2    @4037                                                        Float32Data */
 // 0x44fa0000
 SECTION_SDATA2 f32 Z2WolfHowlMgr__LIT_4037 = 2000.000000f;
-/* 80455ECC 0004 .sdata2    @4038                                                        */
+/* 80455ECC-80455ED0 0004 .sdata2    @4038                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4038[4] = {
 	0x3E, 0xE6, 0x66, 0x66,
 };
-/* 80455ED0 0004 .sdata2    @4039                                                        */
+/* 80455ED0-80455ED4 0004 .sdata2    @4039                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4039[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80455ED4 0004 .sdata2    @4040                                                        */
+/* 80455ED4-80455ED8 0004 .sdata2    @4040                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4040[4] = {
 	0x3E, 0xCC, 0xCC, 0xCD,
 };
-/* 80455ED8 0004 .sdata2    @4041                                                        */
+/* 80455ED8-80455EE0 0004 .sdata2    @4041                                                        InitializedData */
 SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4041[8] = {
 	0x3D, 0x23, 0xD7, 0x0A,
 	/* padding */
@@ -299,13 +417,13 @@ SECTION_SDATA2 u8 Z2WolfHowlMgr__LIT_4041[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804341F8 0000 .bss       ...bss.0                                                     */
-/* 804341F8 0024 .bss       sCorrectPhrase                                               */
+/* 804341F8-804341F8 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 804341F8-8043421C 0024 .bss       sCorrectPhrase                                               ZeroInitializedData */
 SECTION_BSS u8 sCorrectPhrase[36];
-/* 8043421C 0024 .bss       sWindStoneSound                                              */
+/* 8043421C-80434240 0024 .bss       sWindStoneSound                                              ZeroInitializedData */
 SECTION_BSS u8 sWindStoneSound[36];
-/* 80434240 0024 .bss       sCorrectDuo                                                  */
-SECTION_BSS u8 sCorrectDuo[40];
+/* 80434240-80434268 0024 .bss       sCorrectDuo                                                  ZeroInitializedData */
+SECTION_BSS u8 sCorrectDuo[36 + 4 /* padding */];
 }
 
 
@@ -314,7 +432,7 @@ SECTION_BSS u8 sCorrectDuo[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802CAAC0 00CC .text      __ct__13Z2WolfHowlMgrFv                                      */
+/* 802CAAC0-802CAB8C 00CC .text      __ct__13Z2WolfHowlMgrFv                                      Function */
 // Z2WolfHowlMgr::Z2WolfHowlMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -325,7 +443,7 @@ asm void __ct__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CAB8C 0060 .text      resetState__13Z2WolfHowlMgrFv                                */
+/* 802CAB8C-802CABEC 0060 .text      resetState__13Z2WolfHowlMgrFv                                Function */
 // Z2WolfHowlMgr::resetState(void)
 #pragma push
 #pragma optimization_level 0
@@ -336,7 +454,7 @@ asm void resetState__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CABEC 00C4 .text      calcVolumeMod__13Z2WolfHowlMgrFf                             */
+/* 802CABEC-802CACB0 00C4 .text      calcVolumeMod__13Z2WolfHowlMgrFf                             Function */
 // Z2WolfHowlMgr::calcVolumeMod(f32)
 #pragma push
 #pragma optimization_level 0
@@ -347,7 +465,7 @@ asm void calcVolumeMod__13Z2WolfHowlMgrFf() {
 }
 #pragma pop
 
-/* 802CACB0 001C .text      getNowPitch__13Z2WolfHowlMgrFv                               */
+/* 802CACB0-802CACCC 001C .text      getNowPitch__13Z2WolfHowlMgrFv                               Function */
 // Z2WolfHowlMgr::getNowPitch(void)
 #pragma push
 #pragma optimization_level 0
@@ -358,7 +476,7 @@ asm void getNowPitch__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CACCC 0008 .text      getNowInputValue__13Z2WolfHowlMgrFv                          */
+/* 802CACCC-802CACD4 0008 .text      getNowInputValue__13Z2WolfHowlMgrFv                          Function */
 // Z2WolfHowlMgr::getNowInputValue(void)
 #pragma push
 #pragma optimization_level 0
@@ -369,7 +487,7 @@ asm void getNowInputValue__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CACD4 0200 .text      calcPitchMod__13Z2WolfHowlMgrFff                             */
+/* 802CACD4-802CAED4 0200 .text      calcPitchMod__13Z2WolfHowlMgrFff                             Function */
 // Z2WolfHowlMgr::calcPitchMod(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -380,7 +498,7 @@ asm void calcPitchMod__13Z2WolfHowlMgrFff() {
 }
 #pragma pop
 
-/* 802CAED4 022C .text      startWolfHowlSound__13Z2WolfHowlMgrFffbf                     */
+/* 802CAED4-802CB100 022C .text      startWolfHowlSound__13Z2WolfHowlMgrFffbf                     Function */
 // Z2WolfHowlMgr::startWolfHowlSound(f32, f32, bool, f32)
 #pragma push
 #pragma optimization_level 0
@@ -391,7 +509,7 @@ asm void startWolfHowlSound__13Z2WolfHowlMgrFffbf() {
 }
 #pragma pop
 
-/* 802CB100 0220 .text      setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData          */
+/* 802CB100-802CB320 0220 .text      setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData          Function */
 // Z2WolfHowlMgr::setCorrectData(s8, Z2WolfHowlData*)
 #pragma push
 #pragma optimization_level 0
@@ -402,7 +520,7 @@ asm void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData() {
 }
 #pragma pop
 
-/* 802CB320 0050 .text      getCorrectLine__13Z2WolfHowlMgrFUc                           */
+/* 802CB320-802CB370 0050 .text      getCorrectLine__13Z2WolfHowlMgrFUc                           Function */
 // Z2WolfHowlMgr::getCorrectLine(u8)
 #pragma push
 #pragma optimization_level 0
@@ -413,7 +531,7 @@ asm void getCorrectLine__13Z2WolfHowlMgrFUc() {
 }
 #pragma pop
 
-/* 802CB370 001C .text      getCorrectLineNum__13Z2WolfHowlMgrFv                         */
+/* 802CB370-802CB38C 001C .text      getCorrectLineNum__13Z2WolfHowlMgrFv                         Function */
 // Z2WolfHowlMgr::getCorrectLineNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -424,7 +542,7 @@ asm void getCorrectLineNum__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CB38C 02C4 .text      checkLine__13Z2WolfHowlMgrFv                                 */
+/* 802CB38C-802CB650 02C4 .text      checkLine__13Z2WolfHowlMgrFv                                 Function */
 // Z2WolfHowlMgr::checkLine(void)
 #pragma push
 #pragma optimization_level 0
@@ -435,7 +553,7 @@ asm void checkLine__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CB650 009C .text      getOnLineNum__13Z2WolfHowlMgrFv                              */
+/* 802CB650-802CB6EC 009C .text      getOnLineNum__13Z2WolfHowlMgrFv                              Function */
 // Z2WolfHowlMgr::getOnLineNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -446,7 +564,7 @@ asm void getOnLineNum__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CB6EC 039C .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 */
+/* 802CB6EC-802CBA88 039C .text      startWindStoneSound__13Z2WolfHowlMgrFScP3Vec                 Function */
 // Z2WolfHowlMgr::startWindStoneSound(s8, Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -457,7 +575,7 @@ asm void startWindStoneSound__13Z2WolfHowlMgrFScP3Vec() {
 }
 #pragma pop
 
-/* 802CBA88 00D0 .text      startGuideMelody__13Z2WolfHowlMgrFb                          */
+/* 802CBA88-802CBB58 00D0 .text      startGuideMelody__13Z2WolfHowlMgrFb                          Function */
 // Z2WolfHowlMgr::startGuideMelody(bool)
 #pragma push
 #pragma optimization_level 0
@@ -468,7 +586,7 @@ asm void startGuideMelody__13Z2WolfHowlMgrFb() {
 }
 #pragma pop
 
-/* 802CBB58 0024 .text      skipCorrectDemo__13Z2WolfHowlMgrFv                           */
+/* 802CBB58-802CBB7C 0024 .text      skipCorrectDemo__13Z2WolfHowlMgrFv                           Function */
 // Z2WolfHowlMgr::skipCorrectDemo(void)
 #pragma push
 #pragma optimization_level 0
@@ -479,7 +597,7 @@ asm void skipCorrectDemo__13Z2WolfHowlMgrFv() {
 }
 #pragma pop
 
-/* 802CBB7C 00E4 .text      __sinit_Z2WolfHowlMgr_cpp                                    */
+/* 802CBB7C-802CBC60 00E4 .text      __sinit_Z2WolfHowlMgr_cpp                                    SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

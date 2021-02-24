@@ -9,27 +9,51 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void DSPAddTask();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void OSGetTick();
+/* Function             */
 extern void EXIImmEx();
+/* Function             */
 extern void EXIProbe();
+/* Function             */
 extern void EXISelect();
+/* Function             */
 extern void EXIDeselect();
+/* Function             */
 extern void EXIUnlock();
+/* Function             */
 extern void DSPCheckMailToDSP();
+/* Function             */
 extern void DSPSendMailToDSP();
+/* Function             */
 extern void __CARDReadStatus();
+/* Function             */
 extern void bitrev();
+/* Function             */
 extern void ReadArrayUnlock();
+/* Function             */
 extern void DummyLen();
+/* Function             */
+extern void __CARDUnlock();
+/* Function             */
 extern void InitCallback();
+/* Function             */
 extern void DoneCallback();
+/* Function             */
 extern void __CARDMountCallback();
+/* InitializedData      */
 SECTION_DATA extern u8 CardData[352];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
+/* InitializedData      */
 SECTION_SDATA extern u8 next[8];
 }
 
@@ -39,7 +63,7 @@ SECTION_SDATA extern u8 next[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1EA0 0160 .data      CardData                                                     */
+/* 803D1EA0-803D2000 0160 .data      CardData                                                     InitializedData */
 SECTION_DATA u8 CardData[352] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x21, 0x02, 0xFF, 0x00, 0x21,
@@ -72,7 +96,7 @@ SECTION_DATA u8 CardData[352] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A68 0004 .sdata     next                                                         */
+/* 80450A68-80450A70 0004 .sdata     next                                                         InitializedData */
 SECTION_SDATA u8 next[8] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
@@ -86,7 +110,7 @@ SECTION_SDATA u8 next[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80353F24 016C .text      bitrev                                                       */
+/* 80353F24-80354090 016C .text      bitrev                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,7 +120,7 @@ asm void bitrev() {
 }
 #pragma pop
 
-/* 80354090 0144 .text      ReadArrayUnlock                                              */
+/* 80354090-803541D4 0144 .text      ReadArrayUnlock                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +130,7 @@ asm void ReadArrayUnlock() {
 }
 #pragma pop
 
-/* 803541D4 00C4 .text      DummyLen                                                     */
+/* 803541D4-80354298 00C4 .text      DummyLen                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +140,7 @@ asm void DummyLen() {
 }
 #pragma pop
 
-/* 80354298 0B58 .text      __CARDUnlock                                                 */
+/* 80354298-80354DF0 0B58 .text      __CARDUnlock                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +150,7 @@ asm void __CARDUnlock() {
 }
 #pragma pop
 
-/* 80354DF0 0070 .text      InitCallback                                                 */
+/* 80354DF0-80354E60 0070 .text      InitCallback                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +160,7 @@ asm void InitCallback() {
 }
 #pragma pop
 
-/* 80354E60 0324 .text      DoneCallback                                                 */
+/* 80354E60-80355184 0324 .text      DoneCallback                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

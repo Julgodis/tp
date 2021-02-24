@@ -9,9 +9,15 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void exit();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* Function             */
+extern void raise();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 signal_funcs[24];
 }
 
@@ -21,7 +27,7 @@ SECTION_BSS extern u8 signal_funcs[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D878 0018 .bss       signal_funcs                                                 */
+/* 8044D878-8044D890 0018 .bss       signal_funcs                                                 ZeroInitializedData */
 SECTION_BSS u8 signal_funcs[24];
 }
 
@@ -31,7 +37,7 @@ SECTION_BSS u8 signal_funcs[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036881C 00C0 .text      raise                                                        */
+/* 8036881C-803688DC 00C0 .text      raise                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

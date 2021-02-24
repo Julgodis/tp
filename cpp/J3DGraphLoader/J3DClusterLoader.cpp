@@ -18,34 +18,64 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10JUTNameTabFPC7ResNTAB();
+/* Function             */
 extern void func_802F42C0();
+/* Function             */
 extern void func_8030A530();
+/* Function             */
 extern void func_8030A560();
+/* Function             */
 extern void __ct__13J3DDeformDataFv();
+/* Function             */
 extern void __ct__11J3DDeformerFP13J3DDeformData();
+/* Function             */
+extern void load__24J3DClusterLoaderDataBaseFPCv();
+/* Function             */
 extern void __ct__20J3DClusterLoader_v15Fv();
+/* Function             */
 extern void __dt__20J3DClusterLoader_v15Fv();
+/* Function             */
 extern void load__20J3DClusterLoader_v15FPCv();
+/* Function             */
 extern void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock();
+/* Function             */
 extern void __dt__16J3DClusterLoaderFv();
+/* Function             */
 extern void func_80334644();
+/* Function             */
 extern void func_8033465C();
+/* Function             */
 extern void func_80334674();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_26();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DClusterLoader__stringBase0[24];
-SECTION_DATA extern const void* __vt__20J3DClusterLoader_v15[4];
-SECTION_DATA extern const void* __vt__16J3DClusterLoader[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20J3DClusterLoader_v15[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DClusterLoader[4];
 }
 
 
@@ -54,8 +84,14 @@ SECTION_DATA extern const void* __vt__16J3DClusterLoader[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2098 0014 .rodata    @stringBase0                                                 */
-const char* const stringBase_803A2098 = "Unknown data block\n";
+/* 803A2098-803A20B0 0014 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A2098 = "Unknown data block\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A20AC = "\0\0\0";
+#pragma pop
 }
 
 
@@ -64,15 +100,15 @@ const char* const stringBase_803A2098 = "Unknown data block\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF0E8 0010 .data      __vt__20J3DClusterLoader_v15                                 */
-SECTION_DATA const  void* __vt__20J3DClusterLoader_v15[4] = {
+/* 803CF0E8-803CF0F8 0010 .data      __vt__20J3DClusterLoader_v15                                 VTableData */
+SECTION_DATA void* __vt__20J3DClusterLoader_v15[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__20J3DClusterLoader_v15FPCv,
 	(void*)__dt__20J3DClusterLoader_v15Fv,
 };
-/* 803CF0F8 0010 .data      __vt__16J3DClusterLoader                                     */
-SECTION_DATA const  void* __vt__16J3DClusterLoader[4] = {
+/* 803CF0F8-803CF108 0010 .data      __vt__16J3DClusterLoader                                     VTableData */
+SECTION_DATA void* __vt__16J3DClusterLoader[4] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -86,7 +122,7 @@ SECTION_DATA const  void* __vt__16J3DClusterLoader[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80334130 009C .text      load__24J3DClusterLoaderDataBaseFPCv                         */
+/* 80334130-803341CC 009C .text      load__24J3DClusterLoaderDataBaseFPCv                         Function */
 // J3DClusterLoaderDataBase::load(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -97,7 +133,7 @@ asm void load__24J3DClusterLoaderDataBaseFPCv() {
 }
 #pragma pop
 
-/* 803341CC 001C .text      __ct__20J3DClusterLoader_v15Fv                               */
+/* 803341CC-803341E8 001C .text      __ct__20J3DClusterLoader_v15Fv                               Function */
 // J3DClusterLoader_v15::J3DClusterLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +144,7 @@ asm void __ct__20J3DClusterLoader_v15Fv() {
 }
 #pragma pop
 
-/* 803341E8 005C .text      __dt__20J3DClusterLoader_v15Fv                               */
+/* 803341E8-80334244 005C .text      __dt__20J3DClusterLoader_v15Fv                               Function */
 // J3DClusterLoader_v15::~J3DClusterLoader_v15(void)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +155,7 @@ asm void __dt__20J3DClusterLoader_v15Fv() {
 }
 #pragma pop
 
-/* 80334244 00B4 .text      load__20J3DClusterLoader_v15FPCv                             */
+/* 80334244-803342F8 00B4 .text      load__20J3DClusterLoader_v15FPCv                             Function */
 // J3DClusterLoader_v15::load(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +166,7 @@ asm void load__20J3DClusterLoader_v15FPCv() {
 }
 #pragma pop
 
-/* 803342F8 0304 .text      readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock      */
+/* 803342F8-803345FC 0304 .text      readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock      Function */
 // J3DClusterLoader_v15::readCluster(const J3DClusterBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +177,7 @@ asm void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock() {
 }
 #pragma pop
 
-/* 803345FC 0048 .text      __dt__16J3DClusterLoaderFv                                   */
+/* 803345FC-80334644 0048 .text      __dt__16J3DClusterLoaderFv                                   Function */
 // J3DClusterLoader::~J3DClusterLoader(void)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +188,7 @@ asm void __dt__16J3DClusterLoaderFv() {
 }
 #pragma pop
 
-/* 80334644 0018 .text      JSUConvertOffsetToPtr<16J3DClusterVertex>__FPCvPCv           */
+/* 80334644-8033465C 0018 .text      JSUConvertOffsetToPtr<16J3DClusterVertex>__FPCvPCv           Function */
 // JSUConvertOffsetToPtr<16J3DClusterVertex>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +199,7 @@ asm void func_80334644() {
 }
 #pragma pop
 
-/* 8033465C 0018 .text      JSUConvertOffsetToPtr<13J3DClusterKey>__FPCvPCv              */
+/* 8033465C-80334674 0018 .text      JSUConvertOffsetToPtr<13J3DClusterKey>__FPCvPCv              Function */
 // JSUConvertOffsetToPtr<13J3DClusterKey>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +210,7 @@ asm void func_8033465C() {
 }
 #pragma pop
 
-/* 80334674 0018 .text      JSUConvertOffsetToPtr<10J3DCluster>__FPCvPCv                 */
+/* 80334674-8033468C 0018 .text      JSUConvertOffsetToPtr<10J3DCluster>__FPCvPCv                 Function */
 // JSUConvertOffsetToPtr<10J3DCluster>(const void*, const void*)
 #pragma push
 #pragma optimization_level 0

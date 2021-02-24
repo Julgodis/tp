@@ -150,8 +150,9 @@ JAUDIO2_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJAudio2.a: dirs $(JAUDIO2_A_O_FILES)
+$(BUILD_DIR)/libJAudio2.a: $(JAUDIO2_A_O_FILES)
 	$(LD) -xm l $(JAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJAudio2.a $(JAUDIO2_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJAudio2.a
 
 $(BUILD_DIR)/libs/JAudio2/%.o: cpp/JAudio2/%.cpp
 	mkdir -p $(@D)

@@ -69,7 +69,7 @@ lbl_802DB0E8:
 /* 802DB0E8 00000000  90 6D 8F 28 */	stw r3, JKRDvdAramRipper__tsPtr(r13)
 /* 802DB0EC 00000004  38 00 00 00 */	li r0, 0
 /* 802DB0F0 00000008  90 03 00 00 */	stw r0, 0(r3)
-/* 802DB0F4 0000000C  48 00 02 F5 */	bl JKRDvdAramRipper__firstSrcData__Fv
+/* 802DB0F4 0000000C  48 00 02 F5 */	bl firstSrcData__Fv
 /* 802DB0F8 00000010  28 03 00 00 */	cmplwi r3, 0
 /* 802DB0FC 00000014  41 82 00 14 */	beq lbl_802DB110
 /* 802DB100 00000018  7F 44 D3 78 */	mr r4, r26

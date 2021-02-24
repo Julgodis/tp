@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_asin();
+/* Function             */
+extern void asin();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_asin();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C700 0020 .text      asin                                                         */
+/* 8036C700-8036C720 0020 .text      asin                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

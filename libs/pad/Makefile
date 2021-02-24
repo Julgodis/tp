@@ -18,8 +18,9 @@ PAD_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libpad.a: dirs $(PAD_A_O_FILES)
+$(BUILD_DIR)/libpad.a: $(PAD_A_O_FILES)
 	$(LD) -xm l $(PAD_A_LDFLAGS) -o $(BUILD_DIR)/libpad.a $(PAD_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libpad.a
 
 $(BUILD_DIR)/libs/pad/%.o: cpp/pad/%.cpp
 	mkdir -p $(@D)

@@ -11,47 +11,94 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__8dBgS_ChkFv();
+/* Function             */
 extern void __dt__8dBgS_ChkFv();
+/* ReturnFunction       */
 extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+/* Function             */
 extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+/* Function             */
 extern void __ct__11dBgS_GndChkFv();
+/* Function             */
 extern void __dt__11dBgS_GndChkFv();
+/* Function             */
+extern void __ct__18dBgS_ObjGndChk_WtrFv();
+/* Function             */
 extern void __dt__18dBgS_ObjGndChk_WtrFv();
+/* Function             */
+extern void __ct__18dBgS_ObjGndChk_SplFv();
+/* Function             */
 extern void __dt__18dBgS_ObjGndChk_SplFv();
+/* Function             */
 extern void __dt__18dBgS_ObjGndChk_AllFv();
+/* Function             */
 extern void __dt__14dBgS_CamGndChkFv();
+/* Function             */
+extern void __ct__18dBgS_CamGndChk_WtrFv();
+/* Function             */
 extern void __dt__18dBgS_CamGndChk_WtrFv();
+/* Function             */
 extern void func_80077B10();
+/* Function             */
 extern void func_80077B18();
+/* Function             */
 extern void func_80077B20();
+/* Function             */
 extern void func_80077B28();
+/* Function             */
 extern void func_80077B30();
+/* Function             */
 extern void func_80077B38();
+/* Function             */
 extern void func_80077B40();
+/* Function             */
 extern void func_80077B48();
+/* Function             */
 extern void func_80077B50();
+/* Function             */
 extern void func_80077B58();
+/* Function             */
 extern void func_80077B60();
+/* Function             */
 extern void func_80077B68();
+/* Function             */
 extern void func_80077B70();
+/* Function             */
 extern void func_80077B78();
+/* Function             */
 extern void func_80077B80();
+/* Function             */
 extern void func_80077B88();
+/* Function             */
 extern void func_80077B90();
+/* Function             */
 extern void func_80077B98();
+/* Function             */
 extern void SetObj__16dBgS_PolyPassChkFv();
+/* Function             */
 extern void SetCam__16dBgS_PolyPassChkFv();
+/* Function             */
 extern void __ct__11cBgS_GndChkFv();
+/* Function             */
 extern void __dt__11cBgS_GndChkFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__14dBgS_ObjGndChk[13];
-SECTION_DATA extern const void* __vt__18dBgS_CamGndChk_Wtr[12];
-SECTION_DATA extern const void* __vt__14dBgS_CamGndChk[12];
-SECTION_DATA extern const void* __vt__18dBgS_ObjGndChk_All[12];
-SECTION_DATA extern const void* __vt__18dBgS_ObjGndChk_Spl[12];
-SECTION_DATA extern const void* __vt__18dBgS_ObjGndChk_Wtr[12];
-SECTION_DATA extern const void* __vt__11dBgS_GndChk[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dBgS_ObjGndChk[13];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dBgS_CamGndChk_Wtr[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dBgS_CamGndChk[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_All[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_Spl[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dBgS_ObjGndChk_Wtr[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dBgS_GndChk[12];
 }
 
 
@@ -60,8 +107,8 @@ SECTION_DATA extern const void* __vt__11dBgS_GndChk[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB688 0030 .data      __vt__18dBgS_CamGndChk_Wtr                                   */
-SECTION_DATA const  void* __vt__18dBgS_CamGndChk_Wtr[12] = {
+/* 803AB688-803AB6B8 0030 .data      __vt__18dBgS_CamGndChk_Wtr                                   VTableData */
+SECTION_DATA void* __vt__18dBgS_CamGndChk_Wtr[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_CamGndChk_WtrFv,
@@ -75,8 +122,8 @@ SECTION_DATA const  void* __vt__18dBgS_CamGndChk_Wtr[12] = {
 	NULL,
 	(void*)func_80077B90,
 };
-/* 803AB6B8 0030 .data      __vt__14dBgS_CamGndChk                                       */
-SECTION_DATA const  void* __vt__14dBgS_CamGndChk[12] = {
+/* 803AB6B8-803AB6E8 0030 .data      __vt__14dBgS_CamGndChk                                       VTableData */
+SECTION_DATA void* __vt__14dBgS_CamGndChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14dBgS_CamGndChkFv,
@@ -90,8 +137,8 @@ SECTION_DATA const  void* __vt__14dBgS_CamGndChk[12] = {
 	NULL,
 	(void*)func_80077B78,
 };
-/* 803AB6E8 0030 .data      __vt__18dBgS_ObjGndChk_All                                   */
-SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_All[12] = {
+/* 803AB6E8-803AB718 0030 .data      __vt__18dBgS_ObjGndChk_All                                   VTableData */
+SECTION_DATA void* __vt__18dBgS_ObjGndChk_All[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_AllFv,
@@ -105,8 +152,8 @@ SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_All[12] = {
 	NULL,
 	(void*)func_80077B60,
 };
-/* 803AB718 0030 .data      __vt__18dBgS_ObjGndChk_Spl                                   */
-SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_Spl[12] = {
+/* 803AB718-803AB748 0030 .data      __vt__18dBgS_ObjGndChk_Spl                                   VTableData */
+SECTION_DATA void* __vt__18dBgS_ObjGndChk_Spl[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_SplFv,
@@ -120,8 +167,8 @@ SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_Spl[12] = {
 	NULL,
 	(void*)func_80077B48,
 };
-/* 803AB748 0030 .data      __vt__18dBgS_ObjGndChk_Wtr                                   */
-SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
+/* 803AB748-803AB778 0030 .data      __vt__18dBgS_ObjGndChk_Wtr                                   VTableData */
+SECTION_DATA void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dBgS_ObjGndChk_WtrFv,
@@ -135,8 +182,8 @@ SECTION_DATA const  void* __vt__18dBgS_ObjGndChk_Wtr[12] = {
 	NULL,
 	(void*)func_80077B30,
 };
-/* 803AB778 0030 .data      __vt__11dBgS_GndChk                                          */
-SECTION_DATA const  void* __vt__11dBgS_GndChk[12] = {
+/* 803AB778-803AB7A8 0030 .data      __vt__11dBgS_GndChk                                          VTableData */
+SECTION_DATA void* __vt__11dBgS_GndChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11dBgS_GndChkFv,
@@ -158,7 +205,7 @@ SECTION_DATA const  void* __vt__11dBgS_GndChk[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8007757C 0074 .text      __ct__11dBgS_GndChkFv                                        */
+/* 8007757C-800775F0 0074 .text      __ct__11dBgS_GndChkFv                                        Function */
 // dBgS_GndChk::dBgS_GndChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -169,7 +216,7 @@ asm void __ct__11dBgS_GndChkFv() {
 }
 #pragma pop
 
-/* 800775F0 0088 .text      __dt__11dBgS_GndChkFv                                        */
+/* 800775F0-80077678 0088 .text      __dt__11dBgS_GndChkFv                                        Function */
 // dBgS_GndChk::~dBgS_GndChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -180,7 +227,7 @@ asm void __dt__11dBgS_GndChkFv() {
 }
 #pragma pop
 
-/* 80077678 0098 .text      __ct__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077678-80077710 0098 .text      __ct__18dBgS_ObjGndChk_WtrFv                                 Function */
 // dBgS_ObjGndChk_Wtr::dBgS_ObjGndChk_Wtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -191,7 +238,7 @@ asm void __ct__18dBgS_ObjGndChk_WtrFv() {
 }
 #pragma pop
 
-/* 80077710 00A0 .text      __dt__18dBgS_ObjGndChk_WtrFv                                 */
+/* 80077710-800777B0 00A0 .text      __dt__18dBgS_ObjGndChk_WtrFv                                 Function */
 // dBgS_ObjGndChk_Wtr::~dBgS_ObjGndChk_Wtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -202,7 +249,7 @@ asm void __dt__18dBgS_ObjGndChk_WtrFv() {
 }
 #pragma pop
 
-/* 800777B0 0098 .text      __ct__18dBgS_ObjGndChk_SplFv                                 */
+/* 800777B0-80077848 0098 .text      __ct__18dBgS_ObjGndChk_SplFv                                 Function */
 // dBgS_ObjGndChk_Spl::dBgS_ObjGndChk_Spl(void)
 #pragma push
 #pragma optimization_level 0
@@ -213,7 +260,7 @@ asm void __ct__18dBgS_ObjGndChk_SplFv() {
 }
 #pragma pop
 
-/* 80077848 00A0 .text      __dt__18dBgS_ObjGndChk_SplFv                                 */
+/* 80077848-800778E8 00A0 .text      __dt__18dBgS_ObjGndChk_SplFv                                 Function */
 // dBgS_ObjGndChk_Spl::~dBgS_ObjGndChk_Spl(void)
 #pragma push
 #pragma optimization_level 0
@@ -224,7 +271,7 @@ asm void __dt__18dBgS_ObjGndChk_SplFv() {
 }
 #pragma pop
 
-/* 800778E8 00A0 .text      __dt__18dBgS_ObjGndChk_AllFv                                 */
+/* 800778E8-80077988 00A0 .text      __dt__18dBgS_ObjGndChk_AllFv                                 Function */
 // dBgS_ObjGndChk_All::~dBgS_ObjGndChk_All(void)
 #pragma push
 #pragma optimization_level 0
@@ -235,7 +282,7 @@ asm void __dt__18dBgS_ObjGndChk_AllFv() {
 }
 #pragma pop
 
-/* 80077988 0078 .text      __dt__14dBgS_CamGndChkFv                                     */
+/* 80077988-80077A00 0078 .text      __dt__14dBgS_CamGndChkFv                                     Function */
 // dBgS_CamGndChk::~dBgS_CamGndChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -246,7 +293,7 @@ asm void __dt__14dBgS_CamGndChkFv() {
 }
 #pragma pop
 
-/* 80077A00 0098 .text      __ct__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A00-80077A98 0098 .text      __ct__18dBgS_CamGndChk_WtrFv                                 Function */
 // dBgS_CamGndChk_Wtr::dBgS_CamGndChk_Wtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -257,7 +304,7 @@ asm void __ct__18dBgS_CamGndChk_WtrFv() {
 }
 #pragma pop
 
-/* 80077A98 0078 .text      __dt__18dBgS_CamGndChk_WtrFv                                 */
+/* 80077A98-80077B10 0078 .text      __dt__18dBgS_CamGndChk_WtrFv                                 Function */
 // dBgS_CamGndChk_Wtr::~dBgS_CamGndChk_Wtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -268,7 +315,7 @@ asm void __dt__18dBgS_CamGndChk_WtrFv() {
 }
 #pragma pop
 
-/* 80077B10 0008 .text      @20@__dt__11dBgS_GndChkFv                                    */
+/* 80077B10-80077B18 0008 .text      @20@__dt__11dBgS_GndChkFv                                    Function */
 // dBgS_GndChk::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -279,7 +326,7 @@ asm void func_80077B10() {
 }
 #pragma pop
 
-/* 80077B18 0008 .text      @76@__dt__11dBgS_GndChkFv                                    */
+/* 80077B18-80077B20 0008 .text      @76@__dt__11dBgS_GndChkFv                                    Function */
 // dBgS_GndChk::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -290,7 +337,7 @@ asm void func_80077B18() {
 }
 #pragma pop
 
-/* 80077B20 0008 .text      @60@__dt__11dBgS_GndChkFv                                    */
+/* 80077B20-80077B28 0008 .text      @60@__dt__11dBgS_GndChkFv                                    Function */
 // dBgS_GndChk::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -301,7 +348,7 @@ asm void func_80077B20() {
 }
 #pragma pop
 
-/* 80077B28 0008 .text      @20@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B28-80077B30 0008 .text      @20@__dt__18dBgS_ObjGndChk_WtrFv                             Function */
 // dBgS_ObjGndChk_Wtr::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -312,7 +359,7 @@ asm void func_80077B28() {
 }
 #pragma pop
 
-/* 80077B30 0008 .text      @76@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B30-80077B38 0008 .text      @76@__dt__18dBgS_ObjGndChk_WtrFv                             Function */
 // dBgS_ObjGndChk_Wtr::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -323,7 +370,7 @@ asm void func_80077B30() {
 }
 #pragma pop
 
-/* 80077B38 0008 .text      @60@__dt__18dBgS_ObjGndChk_WtrFv                             */
+/* 80077B38-80077B40 0008 .text      @60@__dt__18dBgS_ObjGndChk_WtrFv                             Function */
 // dBgS_ObjGndChk_Wtr::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -334,7 +381,7 @@ asm void func_80077B38() {
 }
 #pragma pop
 
-/* 80077B40 0008 .text      @20@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B40-80077B48 0008 .text      @20@__dt__18dBgS_ObjGndChk_SplFv                             Function */
 // dBgS_ObjGndChk_Spl::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -345,7 +392,7 @@ asm void func_80077B40() {
 }
 #pragma pop
 
-/* 80077B48 0008 .text      @76@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B48-80077B50 0008 .text      @76@__dt__18dBgS_ObjGndChk_SplFv                             Function */
 // dBgS_ObjGndChk_Spl::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -356,7 +403,7 @@ asm void func_80077B48() {
 }
 #pragma pop
 
-/* 80077B50 0008 .text      @60@__dt__18dBgS_ObjGndChk_SplFv                             */
+/* 80077B50-80077B58 0008 .text      @60@__dt__18dBgS_ObjGndChk_SplFv                             Function */
 // dBgS_ObjGndChk_Spl::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -367,7 +414,7 @@ asm void func_80077B50() {
 }
 #pragma pop
 
-/* 80077B58 0008 .text      @20@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B58-80077B60 0008 .text      @20@__dt__18dBgS_ObjGndChk_AllFv                             Function */
 // dBgS_ObjGndChk_All::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -378,7 +425,7 @@ asm void func_80077B58() {
 }
 #pragma pop
 
-/* 80077B60 0008 .text      @76@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B60-80077B68 0008 .text      @76@__dt__18dBgS_ObjGndChk_AllFv                             Function */
 // dBgS_ObjGndChk_All::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -389,7 +436,7 @@ asm void func_80077B60() {
 }
 #pragma pop
 
-/* 80077B68 0008 .text      @60@__dt__18dBgS_ObjGndChk_AllFv                             */
+/* 80077B68-80077B70 0008 .text      @60@__dt__18dBgS_ObjGndChk_AllFv                             Function */
 // dBgS_ObjGndChk_All::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -400,7 +447,7 @@ asm void func_80077B68() {
 }
 #pragma pop
 
-/* 80077B70 0008 .text      @20@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B70-80077B78 0008 .text      @20@__dt__14dBgS_CamGndChkFv                                 Function */
 // dBgS_CamGndChk::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -411,7 +458,7 @@ asm void func_80077B70() {
 }
 #pragma pop
 
-/* 80077B78 0008 .text      @76@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B78-80077B80 0008 .text      @76@__dt__14dBgS_CamGndChkFv                                 Function */
 // dBgS_CamGndChk::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -422,7 +469,7 @@ asm void func_80077B78() {
 }
 #pragma pop
 
-/* 80077B80 0008 .text      @60@__dt__14dBgS_CamGndChkFv                                 */
+/* 80077B80-80077B88 0008 .text      @60@__dt__14dBgS_CamGndChkFv                                 Function */
 // dBgS_CamGndChk::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -433,7 +480,7 @@ asm void func_80077B80() {
 }
 #pragma pop
 
-/* 80077B88 0008 .text      @20@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B88-80077B90 0008 .text      @20@__dt__18dBgS_CamGndChk_WtrFv                             Function */
 // dBgS_CamGndChk_Wtr::@20@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -444,7 +491,7 @@ asm void func_80077B88() {
 }
 #pragma pop
 
-/* 80077B90 0008 .text      @76@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B90-80077B98 0008 .text      @76@__dt__18dBgS_CamGndChk_WtrFv                             Function */
 // dBgS_CamGndChk_Wtr::@76@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -455,7 +502,7 @@ asm void func_80077B90() {
 }
 #pragma pop
 
-/* 80077B98 0008 .text      @60@__dt__18dBgS_CamGndChk_WtrFv                             */
+/* 80077B98-80077BA0 0008 .text      @60@__dt__18dBgS_CamGndChk_WtrFv                             Function */
 // dBgS_CamGndChk_Wtr::@60@__dt(void)
 #pragma push
 #pragma optimization_level 0

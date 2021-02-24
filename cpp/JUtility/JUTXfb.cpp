@@ -15,26 +15,50 @@ extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void clearIndex__6JUTXfbFv();
+/* Function             */
 extern void common_init__6JUTXfbFi();
+/* Function             */
 extern void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber();
+/* Function             */
 extern void __dt__6JUTXfbFv();
+/* Function             */
 extern void delXfb__6JUTXfbFi();
+/* Function             */
+extern void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
+/* Function             */
+extern void destroyManager__6JUTXfbFv();
+/* Function             */
 extern void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber();
+/* Function             */
 extern void GXGetNumXfbLines();
+/* Function             */
 extern void GXGetYScaleFactor();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
-SECTION_SBSS extern u8 sManager__6JUTXfb[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 }
 
 
@@ -43,9 +67,8 @@ SECTION_SBSS extern u8 sManager__6JUTXfb[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451550 0004 .sbss      sManager__6JUTXfb                                            */
-SECTION_SBSS u8 sManager__6JUTXfb[4];
-SECTION_SBSS u8 pad_80451554[4];
+/* 80451550-80451558 0004 .sbss      sManager__6JUTXfb                                            ZeroInitializedData */
+SECTION_SBSS u8 sManager__6JUTXfb[4 + 4 /* padding */];
 }
 
 
@@ -54,7 +77,7 @@ SECTION_SBSS u8 pad_80451554[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E5214 0014 .text      clearIndex__6JUTXfbFv                                        */
+/* 802E5214-802E5228 0014 .text      clearIndex__6JUTXfbFv                                        Function */
 // JUTXfb::clearIndex(void)
 #pragma push
 #pragma optimization_level 0
@@ -65,7 +88,7 @@ asm void clearIndex__6JUTXfbFv() {
 }
 #pragma pop
 
-/* 802E5228 0038 .text      common_init__6JUTXfbFi                                       */
+/* 802E5228-802E5260 0038 .text      common_init__6JUTXfbFi                                       Function */
 // JUTXfb::common_init(int)
 #pragma push
 #pragma optimization_level 0
@@ -76,7 +99,7 @@ asm void common_init__6JUTXfbFi() {
 }
 #pragma pop
 
-/* 802E5260 00A8 .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber */
+/* 802E5260-802E5308 00A8 .text      __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber Function */
 // JUTXfb::JUTXfb(const _GXRenderModeObj*, JKRHeap*, JUTXfb::EXfbNumber)
 #pragma push
 #pragma optimization_level 0
@@ -87,7 +110,7 @@ asm void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber() {
 }
 #pragma pop
 
-/* 802E5308 0070 .text      __dt__6JUTXfbFv                                              */
+/* 802E5308-802E5378 0070 .text      __dt__6JUTXfbFv                                              Function */
 // JUTXfb::~JUTXfb(void)
 #pragma push
 #pragma optimization_level 0
@@ -98,7 +121,7 @@ asm void __dt__6JUTXfbFv() {
 }
 #pragma pop
 
-/* 802E5378 0040 .text      delXfb__6JUTXfbFi                                            */
+/* 802E5378-802E53B8 0040 .text      delXfb__6JUTXfbFi                                            Function */
 // JUTXfb::delXfb(int)
 #pragma push
 #pragma optimization_level 0
@@ -109,7 +132,7 @@ asm void delXfb__6JUTXfbFi() {
 }
 #pragma pop
 
-/* 802E53B8 006C .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        */
+/* 802E53B8-802E5424 006C .text      createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber        Function */
 // JUTXfb::createManager(JKRHeap*, JUTXfb::EXfbNumber)
 #pragma push
 #pragma optimization_level 0
@@ -120,7 +143,7 @@ asm void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber() {
 }
 #pragma pop
 
-/* 802E5424 0030 .text      destroyManager__6JUTXfbFv                                    */
+/* 802E5424-802E5454 0030 .text      destroyManager__6JUTXfbFv                                    Function */
 // JUTXfb::destroyManager(void)
 #pragma push
 #pragma optimization_level 0
@@ -131,7 +154,7 @@ asm void destroyManager__6JUTXfbFv() {
 }
 #pragma pop
 
-/* 802E5454 00DC .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         */
+/* 802E5454-802E5530 00DC .text      initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber         Function */
 // JUTXfb::initiate(u16, u16, JKRHeap*, JUTXfb::EXfbNumber)
 #pragma push
 #pragma optimization_level 0

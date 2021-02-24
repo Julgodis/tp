@@ -9,12 +9,23 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void ClampStick();
+/* Function             */
 extern void ClampCircle();
+/* Function             */
+extern void PADClamp();
+/* Function             */
+extern void PADClampCircle();
+/* InitializedData      */
 SECTION_RODATA extern const u8 ClampRegion[16];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Padclamp__LIT_160[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Padclamp__LIT_161;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_162;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Padclamp__LIT_164;
 }
 
@@ -24,8 +35,8 @@ SECTION_SDATA2 extern f64 Padclamp__LIT_164;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2170 0000 .rodata    ...rodata.0                                                  */
-/* 803A2170 000A .rodata    ClampRegion                                                  */
+/* 803A2170-803A2170 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 803A2170-803A2180 000A .rodata    ClampRegion                                                  InitializedData */
 SECTION_RODATA const u8 ClampRegion[16] = {
 	0x1E, 0xB4, 0x0F, 0x48, 0x28, 0x0F, 0x3B, 0x1F, 0x38, 0x2C,
 	/* padding */
@@ -39,19 +50,19 @@ SECTION_RODATA const u8 ClampRegion[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456560 0004 .sdata2    @160                                                         */
+/* 80456560-80456568 0004 .sdata2    @160                                                         InitializedData */
 SECTION_SDATA2 u8 Padclamp__LIT_160[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456568 0008 .sdata2    @161                                                         */
+/* 80456568-80456570 0008 .sdata2    @161                                                         Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 Padclamp__LIT_161 = 0.500000;
-/* 80456570 0008 .sdata2    @162                                                         */
+/* 80456570-80456578 0008 .sdata2    @162                                                         Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_162 = 3.000000;
-/* 80456578 0008 .sdata2    @164                                                         */
+/* 80456578-80456580 0008 .sdata2    @164                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 Padclamp__LIT_164 = 4503601774854144.000000;
 }
@@ -62,7 +73,7 @@ SECTION_SDATA2 f64 Padclamp__LIT_164 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034DDBC 0130 .text      ClampStick                                                   */
+/* 8034DDBC-8034DEEC 0130 .text      ClampStick                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +83,7 @@ asm void ClampStick() {
 }
 #pragma pop
 
-/* 8034DEEC 01A8 .text      ClampCircle                                                  */
+/* 8034DEEC-8034E094 01A8 .text      ClampCircle                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +93,7 @@ asm void ClampCircle() {
 }
 #pragma pop
 
-/* 8034E094 0114 .text      PADClamp                                                     */
+/* 8034E094-8034E1A8 0114 .text      PADClamp                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +103,7 @@ asm void PADClamp() {
 }
 #pragma pop
 
-/* 8034E1A8 010C .text      PADClampCircle                                               */
+/* 8034E1A8-8034E2B4 010C .text      PADClampCircle                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

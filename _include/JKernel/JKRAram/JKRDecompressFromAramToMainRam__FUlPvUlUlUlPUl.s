@@ -72,9 +72,9 @@ lbl_802D2930:
 /* 802D2930 00000000  90 6D 8E 80 */	stw r3, JKRAram__tsPtr(r13)
 /* 802D2934 00000004  38 00 00 00 */	li r0, 0
 /* 802D2938 00000008  90 03 00 00 */	stw r0, 0(r3)
-/* 802D293C 0000000C  48 00 03 05 */	bl JKRAram__firstSrcData__Fv
+/* 802D293C 0000000C  48 00 03 05 */	bl firstSrcData__Fv
 /* 802D2940 00000010  7F 64 DB 78 */	mr r4, r27
-/* 802D2944 00000014  48 00 00 5D */	bl JKRAram__decompSZS_subroutine__FPUcPUc
+/* 802D2944 00000014  48 00 00 5D */	bl decompSZS_subroutine__FPUcPUc
 /* 802D2948 00000018  80 6D 8E 4C */	lwz r3, JKRAram__szpBuf(r13)
 /* 802D294C 0000001C  38 80 00 00 */	li r4, 0
 /* 802D2950 00000020  4B FF BB B1 */	bl free__7JKRHeapFPvP7JKRHeap

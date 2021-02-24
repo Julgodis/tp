@@ -9,12 +9,47 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void GXProject();
+/* Function             */
+extern void GXSetProjection();
+/* Function             */
+extern void GXSetProjectionv();
+/* Function             */
+extern void GXGetProjectionv();
+/* Function             */
+extern void GXLoadPosMtxImm();
+/* Function             */
+extern void GXLoadNrmMtxImm();
+/* Function             */
+extern void GXSetCurrentMtx();
+/* Function             */
+extern void GXLoadTexMtxImm();
+/* Function             */
 extern void __GXSetViewport();
+/* Function             */
+extern void GXSetViewport();
+/* Function             */
+extern void GXGetViewportv();
+/* Function             */
+extern void GXSetScissor();
+/* Function             */
+extern void GXGetScissor();
+/* Function             */
+extern void GXSetScissorBoxOffset();
+/* Function             */
+extern void GXSetClipMode();
+/* Function             */
 extern void __GXSetMatrixIndex();
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_26[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_27;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_28;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_201;
 }
 
@@ -24,17 +59,17 @@ SECTION_SDATA2 extern f32 LIT_201;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456650 0004 .sdata2    @26                                                          */
+/* 80456650-80456654 0004 .sdata2    @26                                                          InitializedData */
 SECTION_SDATA2 u8 LIT_26[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456654 0004 .sdata2    @27                                                          */
+/* 80456654-80456658 0004 .sdata2    @27                                                          Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_27 = 1.000000f;
-/* 80456658 0004 .sdata2    @28                                                          */
+/* 80456658-8045665C 0004 .sdata2    @28                                                          Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_28 = 0.500000f;
-/* 8045665C 0004 .sdata2    @201                                                         */
+/* 8045665C-80456660 0004 .sdata2    @201                                                         Float32Data */
 // 0x43ab0000
 SECTION_SDATA2 f32 LIT_201 = 342.000000f;
 }
@@ -45,7 +80,7 @@ SECTION_SDATA2 f32 LIT_201 = 342.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035FF60 0174 .text      GXProject                                                    */
+/* 8035FF60-803600D4 0174 .text      GXProject                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +90,7 @@ asm void GXProject() {
 }
 #pragma pop
 
-/* 803600D4 00A4 .text      GXSetProjection                                              */
+/* 803600D4-80360178 00A4 .text      GXSetProjection                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +100,7 @@ asm void GXSetProjection() {
 }
 #pragma pop
 
-/* 80360178 008C .text      GXSetProjectionv                                             */
+/* 80360178-80360204 008C .text      GXSetProjectionv                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +110,7 @@ asm void GXSetProjectionv() {
 }
 #pragma pop
 
-/* 80360204 0048 .text      GXGetProjectionv                                             */
+/* 80360204-8036024C 0048 .text      GXGetProjectionv                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +120,7 @@ asm void GXGetProjectionv() {
 }
 #pragma pop
 
-/* 8036024C 0050 .text      GXLoadPosMtxImm                                              */
+/* 8036024C-8036029C 0050 .text      GXLoadPosMtxImm                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +130,7 @@ asm void GXLoadPosMtxImm() {
 }
 #pragma pop
 
-/* 8036029C 0050 .text      GXLoadNrmMtxImm                                              */
+/* 8036029C-803602EC 0050 .text      GXLoadNrmMtxImm                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +140,7 @@ asm void GXLoadNrmMtxImm() {
 }
 #pragma pop
 
-/* 803602EC 0034 .text      GXSetCurrentMtx                                              */
+/* 803602EC-80360320 0034 .text      GXSetCurrentMtx                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +150,7 @@ asm void GXSetCurrentMtx() {
 }
 #pragma pop
 
-/* 80360320 00B4 .text      GXLoadTexMtxImm                                              */
+/* 80360320-803603D4 00B4 .text      GXLoadTexMtxImm                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +160,7 @@ asm void GXLoadTexMtxImm() {
 }
 #pragma pop
 
-/* 803603D4 0090 .text      __GXSetViewport                                              */
+/* 803603D4-80360464 0090 .text      __GXSetViewport                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +170,7 @@ asm void __GXSetViewport() {
 }
 #pragma pop
 
-/* 80360464 0048 .text      GXSetViewport                                                */
+/* 80360464-803604AC 0048 .text      GXSetViewport                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +180,7 @@ asm void GXSetViewport() {
 }
 #pragma pop
 
-/* 803604AC 0024 .text      GXGetViewportv                                               */
+/* 803604AC-803604D0 0024 .text      GXGetViewportv                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +190,7 @@ asm void GXGetViewportv() {
 }
 #pragma pop
 
-/* 803604D0 0078 .text      GXSetScissor                                                 */
+/* 803604D0-80360548 0078 .text      GXSetScissor                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +200,7 @@ asm void GXSetScissor() {
 }
 #pragma pop
 
-/* 80360548 0048 .text      GXGetScissor                                                 */
+/* 80360548-80360590 0048 .text      GXGetScissor                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +210,7 @@ asm void GXGetScissor() {
 }
 #pragma pop
 
-/* 80360590 0040 .text      GXSetScissorBoxOffset                                        */
+/* 80360590-803605D0 0040 .text      GXSetScissorBoxOffset                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +220,7 @@ asm void GXSetScissorBoxOffset() {
 }
 #pragma pop
 
-/* 803605D0 0028 .text      GXSetClipMode                                                */
+/* 803605D0-803605F8 0028 .text      GXSetClipMode                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +230,7 @@ asm void GXSetClipMode() {
 }
 #pragma pop
 
-/* 803605F8 0084 .text      __GXSetMatrixIndex                                           */
+/* 803605F8-8036067C 0084 .text      __GXSetMatrixIndex                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

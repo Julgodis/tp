@@ -14,22 +14,41 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void registRes__18JPAResourceManagerFP11JPAResource();
+/* Function             */
 extern void registTex__18JPAResourceManagerFP10JPATexture();
+/* Function             */
 extern void __ct__11JPAResourceFv();
+/* Function             */
 extern void init__11JPAResourceFP7JKRHeap();
+/* Function             */
 extern void __ct__12JPABaseShapeFPCUcP7JKRHeap();
+/* Function             */
 extern void __ct__13JPAExtraShapeFPCUc();
+/* Function             */
 extern void __ct__13JPAChildShapeFPCUc();
+/* Function             */
 extern void __ct__13JPAExTexShapeFPCUc();
+/* Function             */
 extern void __ct__16JPADynamicsBlockFPCUc();
+/* Function             */
 extern void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+/* Function             */
 extern void __ct__11JPAKeyBlockFPCUc();
+/* Function             */
 extern void __ct__10JPATextureFPCUc();
+/* Function             */
+extern void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+/* Function             */
 extern void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void _savegpr_18();
+/* Function             */
 extern void _restgpr_18();
 }
 
@@ -39,7 +58,7 @@ extern void _restgpr_18();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027D8A0 0040 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          */
+/* 8027D8A0-8027D8E0 0040 .text      __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager          Function */
 // JPAResourceLoader::JPAResourceLoader(const u8*, JPAResourceManager*)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +69,7 @@ asm void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager() {
 }
 #pragma pop
 
-/* 8027D8E0 03C0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      */
+/* 8027D8E0-8027DCA0 03C0 .text      load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager      Function */
 // JPAResourceLoader::load_jpc(const u8*, JPAResourceManager*)
 #pragma push
 #pragma optimization_level 0

@@ -10,10 +10,16 @@
 
 struct draw_priority_class;
 
-extern void fpcDwPi_Set(draw_priority_class*, s16); /* fpcDwPi_Set__FP19draw_priority_classs */
+extern void fpcDwPi_Set(draw_priority_class*, short); /* fpcDwPi_Set__FP19draw_priority_classs */
+extern void fpcDwPi_Init(draw_priority_class*, short); /* fpcDwPi_Init__FP19draw_priority_classs */
 
 extern "C" {
+/* FirstParamFunction   */
+extern s16 fpcDwPi_Get__FPC19draw_priority_class(u8*);
+/* Function             */
 extern void fpcDwPi_Set__FP19draw_priority_classs();
+/* Function             */
+extern void fpcDwPi_Init__FP19draw_priority_classs();
 }
 
 
@@ -22,32 +28,32 @@ extern void fpcDwPi_Set__FP19draw_priority_classs();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021308 0008 .text      fpcDwPi_Get__FPC19draw_priority_class                        */
+/* 80021308-80021310 0008 .text      fpcDwPi_Get__FPC19draw_priority_class                        FirstParamFunction */
 // fpcDwPi_Get(const draw_priority_class*)
 s16 fpcDwPi_Get__FPC19draw_priority_class(u8* param0) {
 	return *(s16*)&param0[0]; /* param0->field_0x0 */
 }
 
-/* 80021310 0008 .text      fpcDwPi_Set__FP19draw_priority_classs                        */
+/* 80021310-80021318 0008 .text      fpcDwPi_Set__FP19draw_priority_classs                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDwPi_Set(draw_priority_class*, s16) {
+asm void fpcDwPi_Set(draw_priority_class*, short) {
 	nofralloc
 #include "_include/f_pc/f_pc_draw_priority/fpcDwPi_Set__FP19draw_priority_classs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80021318 0020 .text      fpcDwPi_Init__FP19draw_priority_classs                       */
+/* 80021318-80021338 0020 .text      fpcDwPi_Init__FP19draw_priority_classs                       Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcDwPi_Init(draw_priority_class*, s16) {
+asm void fpcDwPi_Init(draw_priority_class*, short) {
 	nofralloc
 #include "_include/f_pc/f_pc_draw_priority/fpcDwPi_Init__FP19draw_priority_classs.s"
 }

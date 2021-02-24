@@ -18,74 +18,144 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void findFromRoot__7JKRHeapFPv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__13JKRFileLoaderFv();
+/* Function             */
 extern void __dt__13JKRFileLoaderFv();
+/* Function             */
 extern void unmount__13JKRFileLoaderFv();
+/* Function             */
 extern void __ct__12JKRDvdFinderFPCc();
+/* Function             */
+extern void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
+/* Function             */
 extern void __ct__12JKRFileCacheFPCcPCc();
+/* Function             */
 extern void __dt__12JKRFileCacheFv();
+/* Function             */
 extern void becomeCurrent__12JKRFileCacheFPCc();
+/* Function             */
 extern void getResource__12JKRFileCacheFPCc();
+/* Function             */
 extern void getResource__12JKRFileCacheFUlPCc();
+/* Function             */
 extern void readResource__12JKRFileCacheFPvUlPCc();
+/* Function             */
 extern void readResource__12JKRFileCacheFPvUlUlPCc();
+/* Function             */
 extern void removeResourceAll__12JKRFileCacheFv();
+/* Function             */
 extern void removeResource__12JKRFileCacheFPv();
+/* Function             */
 extern void detachResource__12JKRFileCacheFPv();
+/* Function             */
 extern void getResSize__12JKRFileCacheCFPCv();
+/* Function             */
 extern void countFile__12JKRFileCacheCFPCc();
+/* Function             */
 extern void getFirstFile__12JKRFileCacheCFPCc();
+/* Function             */
 extern void findCacheBlock__12JKRFileCacheCFPCv();
+/* Function             */
 extern void findCacheBlock__12JKRFileCacheCFUl();
+/* Function             */
 extern void findFile__12JKRFileCacheCFPcPCc();
+/* Function             */
 extern void getDvdPathName__12JKRFileCacheCFPCc();
+/* Function             */
 extern void convStrLower__12JKRFileCacheCFPc();
+/* Function             */
 extern void __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv();
+/* Function             */
 extern void getFsResource__12JKRFileCacheFPCc();
+/* Function             */
 extern void getNameResource__12JKRFileCacheFUlPCc();
+/* Function             */
 extern void readFsResource__12JKRFileCacheFPvUlPCc();
+/* Function             */
 extern void readNameResource__12JKRFileCacheFPvUlUlPCc();
+/* Function             */
 extern void read__7JKRFileFPvll();
+/* Function             */
 extern void __ct__10JKRDvdFileFPCc();
+/* Function             */
 extern void __dt__10JKRDvdFileFv();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void prepend__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void DVDChangeDir();
+/* Function             */
 extern void DVDOpenDir();
+/* Function             */
 extern void DVDReadDir();
-extern int DVDCloseDir();
+/* ReturnIntegerFunction */
+extern  int DVDCloseDir();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void tolower();
+/* Function             */
 extern void strrchr();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcat();
+/* Function             */
 extern void strcpy();
+/* Function             */
 extern void strlen();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRFileCache__stringBase0[8];
-SECTION_DATA extern const void* __vt__12JKRFileCache[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JKRFileCache[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sVolumeList__13JKRFileLoader[12];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 }
 
 
@@ -94,9 +164,15 @@ SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039D158 0006 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039D158 = "/";
-const char* const stringBase_8039D15A = "dvd";
+/* 8039D158-8039D160 0006 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D158 = "/";
+SECTION_DEAD const char* const stringBase_8039D15A = "dvd";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D15E = "\0";
+#pragma pop
 }
 
 
@@ -105,8 +181,8 @@ const char* const stringBase_8039D15A = "dvd";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC238 004C .data      __vt__12JKRFileCache                                         */
-SECTION_DATA const  void* __vt__12JKRFileCache[20] = {
+/* 803CC238-803CC288 004C .data      __vt__12JKRFileCache                                         VTableData */
+SECTION_DATA void* __vt__12JKRFileCache[20] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRFileCacheFv,
@@ -137,8 +213,8 @@ SECTION_DATA const  void* __vt__12JKRFileCache[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D49B4 0100 .text      mount__12JKRFileCacheFPCcP7JKRHeapPCc                        */
-// JKRFileCache::mount(const s8*, JKRHeap*, const s8*)
+/* 802D49B4-802D4AB4 0100 .text      mount__12JKRFileCacheFPCcP7JKRHeapPCc                        Function */
+// JKRFileCache::mount(const char*, JKRHeap*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,8 +224,8 @@ asm void mount__12JKRFileCacheFPCcP7JKRHeapPCc() {
 }
 #pragma pop
 
-/* 802D4AB4 01BC .text      __ct__12JKRFileCacheFPCcPCc                                  */
-// JKRFileCache::JKRFileCache(const s8*, const s8*)
+/* 802D4AB4-802D4C70 01BC .text      __ct__12JKRFileCacheFPCcPCc                                  Function */
+// JKRFileCache::JKRFileCache(const char*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +235,7 @@ asm void __ct__12JKRFileCacheFPCcPCc() {
 }
 #pragma pop
 
-/* 802D4C70 00D4 .text      __dt__12JKRFileCacheFv                                       */
+/* 802D4C70-802D4D44 00D4 .text      __dt__12JKRFileCacheFv                                       Function */
 // JKRFileCache::~JKRFileCache(void)
 #pragma push
 #pragma optimization_level 0
@@ -170,8 +246,8 @@ asm void __dt__12JKRFileCacheFv() {
 }
 #pragma pop
 
-/* 802D4D44 0094 .text      becomeCurrent__12JKRFileCacheFPCc                            */
-// JKRFileCache::becomeCurrent(const s8*)
+/* 802D4D44-802D4DD8 0094 .text      becomeCurrent__12JKRFileCacheFPCc                            Function */
+// JKRFileCache::becomeCurrent(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,8 +257,8 @@ asm void becomeCurrent__12JKRFileCacheFPCc() {
 }
 #pragma pop
 
-/* 802D4DD8 0104 .text      getResource__12JKRFileCacheFPCc                              */
-// JKRFileCache::getResource(const s8*)
+/* 802D4DD8-802D4EDC 0104 .text      getResource__12JKRFileCacheFPCc                              Function */
+// JKRFileCache::getResource(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,8 +268,8 @@ asm void getResource__12JKRFileCacheFPCc() {
 }
 #pragma pop
 
-/* 802D4EDC 0088 .text      getResource__12JKRFileCacheFUlPCc                            */
-// JKRFileCache::getResource(u32, const s8*)
+/* 802D4EDC-802D4F64 0088 .text      getResource__12JKRFileCacheFUlPCc                            Function */
+// JKRFileCache::getResource(u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -203,8 +279,8 @@ asm void getResource__12JKRFileCacheFUlPCc() {
 }
 #pragma pop
 
-/* 802D4F64 00D8 .text      readResource__12JKRFileCacheFPvUlPCc                         */
-// JKRFileCache::readResource(void*, u32, const s8*)
+/* 802D4F64-802D503C 00D8 .text      readResource__12JKRFileCacheFPvUlPCc                         Function */
+// JKRFileCache::readResource(void*, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,8 +290,8 @@ asm void readResource__12JKRFileCacheFPvUlPCc() {
 }
 #pragma pop
 
-/* 802D503C 0098 .text      readResource__12JKRFileCacheFPvUlUlPCc                       */
-// JKRFileCache::readResource(void*, u32, u32, const s8*)
+/* 802D503C-802D50D4 0098 .text      readResource__12JKRFileCacheFPvUlUlPCc                       Function */
+// JKRFileCache::readResource(void*, u32, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -225,7 +301,7 @@ asm void readResource__12JKRFileCacheFPvUlUlPCc() {
 }
 #pragma pop
 
-/* 802D50D4 0090 .text      removeResourceAll__12JKRFileCacheFv                          */
+/* 802D50D4-802D5164 0090 .text      removeResourceAll__12JKRFileCacheFv                          Function */
 // JKRFileCache::removeResourceAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -236,7 +312,7 @@ asm void removeResourceAll__12JKRFileCacheFv() {
 }
 #pragma pop
 
-/* 802D5164 0094 .text      removeResource__12JKRFileCacheFPv                            */
+/* 802D5164-802D51F8 0094 .text      removeResource__12JKRFileCacheFPv                            Function */
 // JKRFileCache::removeResource(void*)
 #pragma push
 #pragma optimization_level 0
@@ -247,7 +323,7 @@ asm void removeResource__12JKRFileCacheFPv() {
 }
 #pragma pop
 
-/* 802D51F8 0074 .text      detachResource__12JKRFileCacheFPv                            */
+/* 802D51F8-802D526C 0074 .text      detachResource__12JKRFileCacheFPv                            Function */
 // JKRFileCache::detachResource(void*)
 #pragma push
 #pragma optimization_level 0
@@ -258,7 +334,7 @@ asm void detachResource__12JKRFileCacheFPv() {
 }
 #pragma pop
 
-/* 802D526C 0034 .text      getResSize__12JKRFileCacheCFPCv                              */
+/* 802D526C-802D52A0 0034 .text      getResSize__12JKRFileCacheCFPCv                              Function */
 // JKRFileCache::getResSize(const void*) const
 #pragma push
 #pragma optimization_level 0
@@ -269,8 +345,8 @@ asm void getResSize__12JKRFileCacheCFPCv() {
 }
 #pragma pop
 
-/* 802D52A0 007C .text      countFile__12JKRFileCacheCFPCc                               */
-// JKRFileCache::countFile(const s8*) const
+/* 802D52A0-802D531C 007C .text      countFile__12JKRFileCacheCFPCc                               Function */
+// JKRFileCache::countFile(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,8 +356,8 @@ asm void countFile__12JKRFileCacheCFPCc() {
 }
 #pragma pop
 
-/* 802D531C 009C .text      getFirstFile__12JKRFileCacheCFPCc                            */
-// JKRFileCache::getFirstFile(const s8*) const
+/* 802D531C-802D53B8 009C .text      getFirstFile__12JKRFileCacheCFPCc                            Function */
+// JKRFileCache::getFirstFile(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -291,7 +367,7 @@ asm void getFirstFile__12JKRFileCacheCFPCc() {
 }
 #pragma pop
 
-/* 802D53B8 002C .text      findCacheBlock__12JKRFileCacheCFPCv                          */
+/* 802D53B8-802D53E4 002C .text      findCacheBlock__12JKRFileCacheCFPCv                          Function */
 // JKRFileCache::findCacheBlock(const void*) const
 #pragma push
 #pragma optimization_level 0
@@ -302,7 +378,7 @@ asm void findCacheBlock__12JKRFileCacheCFPCv() {
 }
 #pragma pop
 
-/* 802D53E4 002C .text      findCacheBlock__12JKRFileCacheCFUl                           */
+/* 802D53E4-802D5410 002C .text      findCacheBlock__12JKRFileCacheCFUl                           Function */
 // JKRFileCache::findCacheBlock(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -313,8 +389,8 @@ asm void findCacheBlock__12JKRFileCacheCFUl() {
 }
 #pragma pop
 
-/* 802D5410 010C .text      findFile__12JKRFileCacheCFPcPCc                              */
-// JKRFileCache::findFile(s8*, const s8*) const
+/* 802D5410-802D551C 010C .text      findFile__12JKRFileCacheCFPcPCc                              Function */
+// JKRFileCache::findFile(char*, const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -324,8 +400,8 @@ asm void findFile__12JKRFileCacheCFPcPCc() {
 }
 #pragma pop
 
-/* 802D551C 0108 .text      getDvdPathName__12JKRFileCacheCFPCc                          */
-// JKRFileCache::getDvdPathName(const s8*) const
+/* 802D551C-802D5624 0108 .text      getDvdPathName__12JKRFileCacheCFPCc                          Function */
+// JKRFileCache::getDvdPathName(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -335,8 +411,8 @@ asm void getDvdPathName__12JKRFileCacheCFPCc() {
 }
 #pragma pop
 
-/* 802D5624 0048 .text      convStrLower__12JKRFileCacheCFPc                             */
-// JKRFileCache::convStrLower(s8*) const
+/* 802D5624-802D566C 0048 .text      convStrLower__12JKRFileCacheCFPc                             Function */
+// JKRFileCache::convStrLower(char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -346,7 +422,7 @@ asm void convStrLower__12JKRFileCacheCFPc() {
 }
 #pragma pop
 
-/* 802D566C 005C .text      __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv                  */
+/* 802D566C-802D56C8 005C .text      __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv                  Function */
 // JKRFileCache::CCacheBlock::JKRFileCache::CCacheBlock(u32, u32, const void*)
 #pragma push
 #pragma optimization_level 0
@@ -357,8 +433,8 @@ asm void __ct__Q212JKRFileCache11CCacheBlockFUlUlPCv() {
 }
 #pragma pop
 
-/* 802D56C8 002C .text      getFsResource__12JKRFileCacheFPCc                            */
-// JKRFileCache::getFsResource(const s8*)
+/* 802D56C8-802D56F4 002C .text      getFsResource__12JKRFileCacheFPCc                            Function */
+// JKRFileCache::getFsResource(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,8 +444,8 @@ asm void getFsResource__12JKRFileCacheFPCc() {
 }
 #pragma pop
 
-/* 802D56F4 002C .text      getNameResource__12JKRFileCacheFUlPCc                        */
-// JKRFileCache::getNameResource(u32, const s8*)
+/* 802D56F4-802D5720 002C .text      getNameResource__12JKRFileCacheFUlPCc                        Function */
+// JKRFileCache::getNameResource(u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,8 +455,8 @@ asm void getNameResource__12JKRFileCacheFUlPCc() {
 }
 #pragma pop
 
-/* 802D5720 002C .text      readFsResource__12JKRFileCacheFPvUlPCc                       */
-// JKRFileCache::readFsResource(void*, u32, const s8*)
+/* 802D5720-802D574C 002C .text      readFsResource__12JKRFileCacheFPvUlPCc                       Function */
+// JKRFileCache::readFsResource(void*, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,8 +466,8 @@ asm void readFsResource__12JKRFileCacheFPvUlPCc() {
 }
 #pragma pop
 
-/* 802D574C 002C .text      readNameResource__12JKRFileCacheFPvUlUlPCc                   */
-// JKRFileCache::readNameResource(void*, u32, u32, const s8*)
+/* 802D574C-802D5778 002C .text      readNameResource__12JKRFileCacheFPvUlUlPCc                   Function */
+// JKRFileCache::readNameResource(void*, u32, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

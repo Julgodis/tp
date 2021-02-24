@@ -14,19 +14,34 @@ struct layer_class;
 extern void fpcBs_Is_JustOfType(int, int); /* fpcBs_Is_JustOfType__Fii */
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
 extern void fpcPause_IsEnable(void*, u8); /* fpcPause_IsEnable__FPvUc */
+extern void fpcDw_Execute(base_process_class*); /* fpcDw_Execute__FP18base_process_class */
+extern void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); /* fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i */
 extern void cAPIGph_BeforeOfDraw(void); /* cAPIGph_BeforeOfDraw__Fv */
 extern void cAPIGph_AfterOfDraw(void); /* cAPIGph_AfterOfDraw__Fv */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcPause_IsEnable__FPvUc();
+/* Function             */
+extern void fpcDw_Execute__FP18base_process_class();
+/* Function             */
+extern void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+/* Function             */
 extern void cAPIGph_BeforeOfDraw__Fv();
+/* Function             */
 extern void cAPIGph_AfterOfDraw__Fv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_SBSS extern u8 g_fpcLf_type[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcLf_type[4 + 4 /* padding */];
 }
 
 
@@ -35,7 +50,7 @@ SECTION_SBSS extern u8 g_fpcLf_type[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023954 00A0 .text      fpcDw_Execute__FP18base_process_class                        */
+/* 80023954-800239F4 00A0 .text      fpcDw_Execute__FP18base_process_class                        Function */
 }
 
 #pragma push
@@ -48,7 +63,7 @@ asm void fpcDw_Execute(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 800239F4 0054 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         */
+/* 800239F4-80023A48 0054 .text      fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i                         Function */
 }
 
 #pragma push

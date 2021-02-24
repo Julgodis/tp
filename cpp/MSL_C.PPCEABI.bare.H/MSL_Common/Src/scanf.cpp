@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __StringRead();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036878C 0090 .text      __StringRead                                                 */
+/* 8036878C-8036881C 0090 .text      __StringRead                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

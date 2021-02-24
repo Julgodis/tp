@@ -9,14 +9,28 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void SISetXY();
+/* Function             */
 extern void SISetSamplingRate();
+/* Function             */
+extern void SIRefreshSamplingRate();
+/* Function             */
 extern void VIGetTvFormat();
+/* InitializedData      */
 SECTION_DATA extern u8 XYNTSC[48];
-SECTION_SBSS extern u8 SamplingRate[4];
+/* InitializedData      */
+SECTION_DATA extern u8 XYPAL[48];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_16[56];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 SamplingRate[4 + 4 /* padding */];
 }
 
 
@@ -25,20 +39,20 @@ SECTION_SBSS extern u8 SamplingRate[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D12D0 0000 .data      ...data.0                                                    */
-/* 803D12D0 0030 .data      XYNTSC                                                       */
+/* 803D12D0-803D12D0 0000 .data      ...data.0                                                    InitializedData */
+/* 803D12D0-803D1300 0030 .data      XYNTSC                                                       InitializedData */
 SECTION_DATA u8 XYNTSC[48] = {
 	0x00, 0xF6, 0x02, 0x00, 0x00, 0x0E, 0x13, 0x00, 0x00, 0x1E, 0x09, 0x00, 0x00, 0x2C, 0x06, 0x00,
 	0x00, 0x34, 0x05, 0x00, 0x00, 0x41, 0x04, 0x00, 0x00, 0x57, 0x03, 0x00, 0x00, 0x57, 0x03, 0x00,
 	0x00, 0x57, 0x03, 0x00, 0x00, 0x83, 0x02, 0x00, 0x00, 0x83, 0x02, 0x00, 0x00, 0x83, 0x02, 0x00,
 };
-/* 803D1300 0030 .data      XYPAL                                                        */
+/* 803D1300-803D1330 0030 .data      XYPAL                                                        InitializedData */
 SECTION_DATA u8 XYPAL[48] = {
 	0x01, 0x28, 0x02, 0x00, 0x00, 0x0F, 0x15, 0x00, 0x00, 0x1D, 0x0B, 0x00, 0x00, 0x2D, 0x07, 0x00,
 	0x00, 0x34, 0x06, 0x00, 0x00, 0x3F, 0x05, 0x00, 0x00, 0x4E, 0x04, 0x00, 0x00, 0x68, 0x03, 0x00,
 	0x00, 0x68, 0x03, 0x00, 0x00, 0x68, 0x03, 0x00, 0x00, 0x68, 0x03, 0x00, 0x00, 0x9C, 0x02, 0x00,
 };
-/* 803D1330 0033 .data      @16                                                          */
+/* 803D1330-803D1368 0033 .data      @16                                                          InitializedData */
 SECTION_DATA u8 LIT_16[56] = {
 	0x53, 0x49, 0x53, 0x65, 0x74, 0x53, 0x61, 0x6D, 0x70, 0x6C, 0x69, 0x6E, 0x67, 0x52, 0x61, 0x74,
 	0x65, 0x3A, 0x20, 0x75, 0x6E, 0x6B, 0x6E, 0x6F, 0x77, 0x6E, 0x20, 0x54, 0x56, 0x20, 0x66, 0x6F,
@@ -55,9 +69,8 @@ SECTION_DATA u8 LIT_16[56] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451700 0004 .sbss      SamplingRate                                                 */
-SECTION_SBSS u8 SamplingRate[4];
-SECTION_SBSS u8 pad_80451704[4];
+/* 80451700-80451708 0004 .sbss      SamplingRate                                                 ZeroInitializedData */
+SECTION_SBSS u8 SamplingRate[4 + 4 /* padding */];
 }
 
 
@@ -66,7 +79,7 @@ SECTION_SBSS u8 pad_80451704[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80346290 00E4 .text      SISetSamplingRate                                            */
+/* 80346290-80346374 00E4 .text      SISetSamplingRate                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -76,7 +89,7 @@ asm void SISetSamplingRate() {
 }
 #pragma pop
 
-/* 80346374 0024 .text      SIRefreshSamplingRate                                        */
+/* 80346374-80346398 0024 .text      SIRefreshSamplingRate                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

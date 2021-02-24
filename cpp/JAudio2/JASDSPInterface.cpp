@@ -10,6 +10,7 @@
 
 struct JKRHeap;
 
+extern void DSP_CreateMap2(u32); /* DSP_CreateMap2__FUl */
 extern void DSPReleaseHalt2(u32); /* DSPReleaseHalt2__FUl */
 extern void DsetupTable(u32, u32, u32, u32, u32); /* DsetupTable__FUlUlUlUlUl */
 extern void DsetMixerLevel(f32); /* DsetMixerLevel__Ff */
@@ -19,38 +20,133 @@ extern void DsyncFrame2(u32, u32, u32); /* DsyncFrame2__FUlUlUl */
 extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void bzero__7JASCalcFPvUl();
+/* Function             */
+extern void boot__6JASDspFPFPv_v();
+/* Function             */
+extern void releaseHalt__6JASDspFUl();
+/* Function             */
+extern void finishWork__6JASDspFUs();
+/* Function             */
+extern void syncFrame__6JASDspFUlUlUl();
+/* Function             */
+extern void setDSPMixerLevel__6JASDspFf();
+/* Function             */
+extern void getDSPMixerLevel__6JASDspFv();
+/* Function             */
+extern void getDSPHandle__6JASDspFi();
+/* Function             */
 extern void setFilterTable__6JASDspFPsPsUl();
+/* Function             */
 extern void flushBuffer__6JASDspFv();
+/* Function             */
+extern void invalChannelAll__6JASDspFv();
+/* Function             */
+extern void initBuffer__6JASDspFv();
+/* Function             */
 extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+/* Function             */
+extern void init__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void playStart__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void playStop__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void replyFinishRequest__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void forceStop__Q26JASDsp8TChannelFv();
+/* Function             */
 extern void isActive__Q26JASDsp8TChannelCFv();
+/* Function             */
+extern void isFinish__Q26JASDsp8TChannelCFv();
+/* Function             */
+extern void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
+/* Function             */
+extern void setOscInfo__Q26JASDsp8TChannelFUl();
+/* Function             */
+extern void initAutoMixer__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
+/* Function             */
+extern void setPitch__Q26JASDsp8TChannelFUs();
+/* Function             */
+extern void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
+/* Function             */
+extern void setMixerVolume__Q26JASDsp8TChannelFUcs();
+/* Function             */
+extern void setPauseFlag__Q26JASDsp8TChannelFUc();
+/* Function             */
+extern void flush__Q26JASDsp8TChannelFv();
+/* Function             */
 extern void initFilter__Q26JASDsp8TChannelFv();
+/* Function             */
+extern void setFilterMode__Q26JASDsp8TChannelFUs();
+/* Function             */
+extern void setIIRFilterParam__Q26JASDsp8TChannelFPs();
+/* Function             */
+extern void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
+/* Function             */
+extern void setDistFilter__Q26JASDsp8TChannelFs();
+/* Function             */
+extern void setBusConnect__Q26JASDsp8TChannelFUcUc();
+/* Function             */
+extern void DSP_CreateMap2__FUl();
+/* Function             */
 extern void DSPReleaseHalt2__FUl();
+/* Function             */
 extern void DsetupTable__FUlUlUlUlUl();
+/* Function             */
 extern void DsetMixerLevel__Ff();
+/* Function             */
 extern void DspBoot__FPFPv_v();
+/* Function             */
 extern void DspFinishWork__FUs();
+/* Function             */
 extern void DsyncFrame2__FUlUlUl();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 DSPADPCM_FILTER__6JASDsp[64];
+/* InitializedData      */
 SECTION_RODATA extern const u8 DSPRES_FILTER__6JASDsp[1280];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_8039B8A0[24];
+/* InitializedData      */
 SECTION_DATA extern u8 SEND_TABLE__6JASDsp[48];
+/* InitializedData      */
+SECTION_SDATA extern u8 one__11JASWaveInfo[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JASDram[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 CH_BUF__6JASDsp[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 FX_BUF__6JASDsp[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sDSPVolume__6JASDsp[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_804512F4[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASDSPInterface__LIT_176;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_8045574C[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80455754[12];
 }
 
@@ -60,14 +156,14 @@ SECTION_SDATA2 extern u8 data_80455754[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039B360 0040 .rodata    DSPADPCM_FILTER__6JASDsp                                     */
+/* 8039B360-8039B3A0 0040 .rodata    DSPADPCM_FILTER__6JASDsp                                     InitializedData */
 SECTION_RODATA const u8 DSPADPCM_FILTER__6JASDsp[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00, 0x04, 0x00,
 	0x10, 0x00, 0xF8, 0x00, 0x0E, 0x00, 0xFA, 0x00, 0x0C, 0x00, 0xFC, 0x00, 0x12, 0x00, 0xF6, 0x00,
 	0x10, 0x68, 0xF7, 0x38, 0x12, 0xC0, 0xF7, 0x04, 0x14, 0x00, 0xF4, 0x00, 0x08, 0x00, 0xF8, 0x00,
 	0x04, 0x00, 0xFC, 0x00, 0xFC, 0x00, 0x04, 0x00, 0xFC, 0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00,
 };
-/* 8039B3A0 0500 .rodata    DSPRES_FILTER__6JASDsp                                       */
+/* 8039B3A0-8039B8A0 0500 .rodata    DSPRES_FILTER__6JASDsp                                       InitializedData */
 SECTION_RODATA const u8 DSPRES_FILTER__6JASDsp[1280] = {
 	0x0C, 0x39, 0x66, 0xAD, 0x0D, 0x46, 0xFF, 0xDF, 0x0B, 0x39, 0x66, 0x96, 0x0E, 0x5F, 0xFF, 0xD8,
 	0x0A, 0x44, 0x66, 0x69, 0x0F, 0x83, 0xFF, 0xD0, 0x09, 0x5A, 0x66, 0x26, 0x10, 0xB4, 0xFF, 0xC8,
@@ -150,7 +246,7 @@ SECTION_RODATA const u8 DSPRES_FILTER__6JASDsp[1280] = {
 	0x7D, 0x89, 0x7D, 0xD5, 0x7E, 0x1D, 0x7E, 0x5F, 0x7E, 0x9C, 0x7E, 0xD5, 0x7F, 0x09, 0x7F, 0x37,
 	0x7F, 0x61, 0x7F, 0x86, 0x7F, 0xA6, 0x7F, 0xC1, 0x7F, 0xD8, 0x7F, 0xE9, 0x7F, 0xF5, 0x7F, 0xFD,
 };
-/* 8039B8A0 0018 .rodata    connect_table$463                                            */
+/* 8039B8A0-8039B8B8 0018 .rodata    connect_table$463                                            InitializedData */
 SECTION_RODATA const u8 data_8039B8A0[24] = {
 	0x00, 0x00, 0x0D, 0x00, 0x0D, 0x60, 0x0D, 0xC0, 0x0E, 0x20, 0x0E, 0x80, 0x0E, 0xE0, 0x0C, 0xA0,
 	0x0F, 0x40, 0x0F, 0xA0, 0x0B, 0x00, 0x09, 0xA0,
@@ -163,7 +259,7 @@ SECTION_RODATA const u8 data_8039B8A0[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C78F0 0018 .data      SEND_TABLE__6JASDsp                                          */
+/* 803C78F0-803C7920 0018 .data      SEND_TABLE__6JASDsp                                          InitializedData */
 SECTION_DATA u8 SEND_TABLE__6JASDsp[48] = {
 	0x0D, 0x00, 0x0D, 0x60, 0x0D, 0xC8, 0x0E, 0x28, 0x0E, 0x88, 0x0E, 0xE8, 0x0C, 0xA0, 0x0F, 0x40,
 	0x0F, 0xA0, 0x0B, 0x00, 0x09, 0xA0, 0x00, 0x00,
@@ -179,7 +275,7 @@ SECTION_DATA u8 SEND_TABLE__6JASDsp[48] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804507B8 0004 .sdata     one__11JASWaveInfo                                           */
+/* 804507B8-804507C0 0004 .sdata     one__11JASWaveInfo                                           InitializedData */
 SECTION_SDATA u8 one__11JASWaveInfo[8] = {
 	0x00, 0x00, 0x00, 0x01,
 	/* padding */
@@ -193,14 +289,14 @@ SECTION_SDATA u8 one__11JASWaveInfo[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455748 0004 .sdata2    @176                                                         */
+/* 80455748-8045574C 0004 .sdata2    @176                                                         Float32Data */
 // 0x40800000
 SECTION_SDATA2 f32 JASDSPInterface__LIT_176 = 4.000000f;
-/* 8045574C 0008 .sdata2    COMP_BLOCKSAMPLES$331                                        */
+/* 8045574C-80455754 0008 .sdata2    COMP_BLOCKSAMPLES$331                                        InitializedData */
 SECTION_SDATA2 u8 data_8045574C[8] = {
 	0x10, 0x10, 0x01, 0x01, 0x01, 0x10, 0x10, 0x01,
 };
-/* 80455754 0008 .sdata2    COMP_BLOCKBYTES$332                                          */
+/* 80455754-80455760 0008 .sdata2    COMP_BLOCKBYTES$332                                          InitializedData */
 SECTION_SDATA2 u8 data_80455754[12] = {
 	0x09, 0x05, 0x08, 0x10, 0x01, 0x01, 0x01, 0x01,
 	/* padding */
@@ -214,13 +310,13 @@ SECTION_SDATA2 u8 data_80455754[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804512E8 0004 .sbss      CH_BUF__6JASDsp                                              */
+/* 804512E8-804512EC 0004 .sbss      CH_BUF__6JASDsp                                              ZeroInitializedData */
 SECTION_SBSS u8 CH_BUF__6JASDsp[4];
-/* 804512EC 0004 .sbss      FX_BUF__6JASDsp                                              */
+/* 804512EC-804512F0 0004 .sbss      FX_BUF__6JASDsp                                              ZeroInitializedData */
 SECTION_SBSS u8 FX_BUF__6JASDsp[4];
-/* 804512F0 0004 .sbss      sDSPVolume__6JASDsp                                          */
+/* 804512F0-804512F4 0004 .sbss      sDSPVolume__6JASDsp                                          ZeroInitializedData */
 SECTION_SBSS u8 sDSPVolume__6JASDsp[4];
-/* 804512F4 0004 .sbss      merged_804512F4                                              */
+/* 804512F4-804512F8 0004 .sbss      merged_804512F4                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_804512F4[4];
 /* 804512F4 0001 data_804512F4 */
 /* 804512F5 0003 data_804512F5 */
@@ -232,7 +328,7 @@ SECTION_SBSS u8 merged_804512F4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029D958 004C .text      boot__6JASDspFPFPv_v                                         */
+/* 8029D958-8029D9A4 004C .text      boot__6JASDspFPFPv_v                                         Function */
 // JASDsp::boot(void (*)(void*))
 #pragma push
 #pragma optimization_level 0
@@ -243,7 +339,7 @@ asm void boot__6JASDspFPFPv_v() {
 }
 #pragma pop
 
-/* 8029D9A4 0020 .text      releaseHalt__6JASDspFUl                                      */
+/* 8029D9A4-8029D9C4 0020 .text      releaseHalt__6JASDspFUl                                      Function */
 // JASDsp::releaseHalt(u32)
 #pragma push
 #pragma optimization_level 0
@@ -254,7 +350,7 @@ asm void releaseHalt__6JASDspFUl() {
 }
 #pragma pop
 
-/* 8029D9C4 0020 .text      finishWork__6JASDspFUs                                       */
+/* 8029D9C4-8029D9E4 0020 .text      finishWork__6JASDspFUs                                       Function */
 // JASDsp::finishWork(u16)
 #pragma push
 #pragma optimization_level 0
@@ -265,7 +361,7 @@ asm void finishWork__6JASDspFUs() {
 }
 #pragma pop
 
-/* 8029D9E4 0020 .text      syncFrame__6JASDspFUlUlUl                                    */
+/* 8029D9E4-8029DA04 0020 .text      syncFrame__6JASDspFUlUlUl                                    Function */
 // JASDsp::syncFrame(u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -276,7 +372,7 @@ asm void syncFrame__6JASDspFUlUlUl() {
 }
 #pragma pop
 
-/* 8029DA04 002C .text      setDSPMixerLevel__6JASDspFf                                  */
+/* 8029DA04-8029DA30 002C .text      setDSPMixerLevel__6JASDspFf                                  Function */
 // JASDsp::setDSPMixerLevel(f32)
 #pragma push
 #pragma optimization_level 0
@@ -287,7 +383,7 @@ asm void setDSPMixerLevel__6JASDspFf() {
 }
 #pragma pop
 
-/* 8029DA30 0008 .text      getDSPMixerLevel__6JASDspFv                                  */
+/* 8029DA30-8029DA38 0008 .text      getDSPMixerLevel__6JASDspFv                                  Function */
 // JASDsp::getDSPMixerLevel(void)
 #pragma push
 #pragma optimization_level 0
@@ -298,7 +394,7 @@ asm void getDSPMixerLevel__6JASDspFv() {
 }
 #pragma pop
 
-/* 8029DA38 0010 .text      getDSPHandle__6JASDspFi                                      */
+/* 8029DA38-8029DA48 0010 .text      getDSPHandle__6JASDspFi                                      Function */
 // JASDsp::getDSPHandle(int)
 #pragma push
 #pragma optimization_level 0
@@ -309,8 +405,8 @@ asm void getDSPHandle__6JASDspFi() {
 }
 #pragma pop
 
-/* 8029DA48 0024 .text      setFilterTable__6JASDspFPsPsUl                               */
-// JASDsp::setFilterTable(s16*, s16*, u32)
+/* 8029DA48-8029DA6C 0024 .text      setFilterTable__6JASDspFPsPsUl                               Function */
+// JASDsp::setFilterTable(short*, short*, u32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +416,7 @@ asm void setFilterTable__6JASDspFPsPsUl() {
 }
 #pragma pop
 
-/* 8029DA6C 0034 .text      flushBuffer__6JASDspFv                                       */
+/* 8029DA6C-8029DAA0 0034 .text      flushBuffer__6JASDspFv                                       Function */
 // JASDsp::flushBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -331,7 +427,7 @@ asm void flushBuffer__6JASDspFv() {
 }
 #pragma pop
 
-/* 8029DAA0 0028 .text      invalChannelAll__6JASDspFv                                   */
+/* 8029DAA0-8029DAC8 0028 .text      invalChannelAll__6JASDspFv                                   Function */
 // JASDsp::invalChannelAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -342,7 +438,7 @@ asm void invalChannelAll__6JASDspFv() {
 }
 #pragma pop
 
-/* 8029DAC8 00B0 .text      initBuffer__6JASDspFv                                        */
+/* 8029DAC8-8029DB78 00B0 .text      initBuffer__6JASDspFv                                        Function */
 // JASDsp::initBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -353,8 +449,8 @@ asm void initBuffer__6JASDspFv() {
 }
 #pragma pop
 
-/* 8029DB78 012C .text      setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_             */
-// JASDsp::setFXLine(u8, s16*, JASDsp::FxlineConfig_)
+/* 8029DB78-8029DCA4 012C .text      setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_             Function */
+// JASDsp::setFXLine(u8, short*, JASDsp::FxlineConfig_)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -364,7 +460,7 @@ asm void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_() {
 }
 #pragma pop
 
-/* 8029DCA4 003C .text      init__Q26JASDsp8TChannelFv                                   */
+/* 8029DCA4-8029DCE0 003C .text      init__Q26JASDsp8TChannelFv                                   Function */
 // JASDsp::TChannel::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -375,7 +471,7 @@ asm void init__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DCE0 0064 .text      playStart__Q26JASDsp8TChannelFv                              */
+/* 8029DCE0-8029DD44 0064 .text      playStart__Q26JASDsp8TChannelFv                              Function */
 // JASDsp::TChannel::playStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -386,7 +482,7 @@ asm void playStart__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DD44 000C .text      playStop__Q26JASDsp8TChannelFv                               */
+/* 8029DD44-8029DD50 000C .text      playStop__Q26JASDsp8TChannelFv                               Function */
 // JASDsp::TChannel::playStop(void)
 #pragma push
 #pragma optimization_level 0
@@ -397,7 +493,7 @@ asm void playStop__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DD50 0010 .text      replyFinishRequest__Q26JASDsp8TChannelFv                     */
+/* 8029DD50-8029DD60 0010 .text      replyFinishRequest__Q26JASDsp8TChannelFv                     Function */
 // JASDsp::TChannel::replyFinishRequest(void)
 #pragma push
 #pragma optimization_level 0
@@ -408,7 +504,7 @@ asm void replyFinishRequest__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DD60 000C .text      forceStop__Q26JASDsp8TChannelFv                              */
+/* 8029DD60-8029DD6C 000C .text      forceStop__Q26JASDsp8TChannelFv                              Function */
 // JASDsp::TChannel::forceStop(void)
 #pragma push
 #pragma optimization_level 0
@@ -419,7 +515,7 @@ asm void forceStop__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DD6C 0010 .text      isActive__Q26JASDsp8TChannelCFv                              */
+/* 8029DD6C-8029DD7C 0010 .text      isActive__Q26JASDsp8TChannelCFv                              Function */
 // JASDsp::TChannel::isActive(void) const
 #pragma push
 #pragma optimization_level 0
@@ -430,7 +526,7 @@ asm void isActive__Q26JASDsp8TChannelCFv() {
 }
 #pragma pop
 
-/* 8029DD7C 0010 .text      isFinish__Q26JASDsp8TChannelCFv                              */
+/* 8029DD7C-8029DD8C 0010 .text      isFinish__Q26JASDsp8TChannelCFv                              Function */
 // JASDsp::TChannel::isFinish(void) const
 #pragma push
 #pragma optimization_level 0
@@ -441,7 +537,7 @@ asm void isFinish__Q26JASDsp8TChannelCFv() {
 }
 #pragma pop
 
-/* 8029DD8C 0120 .text      setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl          */
+/* 8029DD8C-8029DEAC 0120 .text      setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl          Function */
 // JASDsp::TChannel::setWaveInfo(const JASWaveInfo&, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -452,7 +548,7 @@ asm void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl() {
 }
 #pragma pop
 
-/* 8029DEAC 0018 .text      setOscInfo__Q26JASDsp8TChannelFUl                            */
+/* 8029DEAC-8029DEC4 0018 .text      setOscInfo__Q26JASDsp8TChannelFUl                            Function */
 // JASDsp::TChannel::setOscInfo(u32)
 #pragma push
 #pragma optimization_level 0
@@ -463,7 +559,7 @@ asm void setOscInfo__Q26JASDsp8TChannelFUl() {
 }
 #pragma pop
 
-/* 8029DEC4 002C .text      initAutoMixer__Q26JASDsp8TChannelFv                          */
+/* 8029DEC4-8029DEF0 002C .text      initAutoMixer__Q26JASDsp8TChannelFv                          Function */
 // JASDsp::TChannel::initAutoMixer(void)
 #pragma push
 #pragma optimization_level 0
@@ -474,7 +570,7 @@ asm void initAutoMixer__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DEF0 002C .text      setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc                  */
+/* 8029DEF0-8029DF1C 002C .text      setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc                  Function */
 // JASDsp::TChannel::setAutoMixer(u16, u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -485,7 +581,7 @@ asm void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc() {
 }
 #pragma pop
 
-/* 8029DF1C 0018 .text      setPitch__Q26JASDsp8TChannelFUs                              */
+/* 8029DF1C-8029DF34 0018 .text      setPitch__Q26JASDsp8TChannelFUs                              Function */
 // JASDsp::TChannel::setPitch(u16)
 #pragma push
 #pragma optimization_level 0
@@ -496,8 +592,8 @@ asm void setPitch__Q26JASDsp8TChannelFUs() {
 }
 #pragma pop
 
-/* 8029DF34 0020 .text      setMixerInitVolume__Q26JASDsp8TChannelFUcs                   */
-// JASDsp::TChannel::setMixerInitVolume(u8, s16)
+/* 8029DF34-8029DF54 0020 .text      setMixerInitVolume__Q26JASDsp8TChannelFUcs                   Function */
+// JASDsp::TChannel::setMixerInitVolume(u8, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -507,8 +603,8 @@ asm void setMixerInitVolume__Q26JASDsp8TChannelFUcs() {
 }
 #pragma pop
 
-/* 8029DF54 002C .text      setMixerVolume__Q26JASDsp8TChannelFUcs                       */
-// JASDsp::TChannel::setMixerVolume(u8, s16)
+/* 8029DF54-8029DF80 002C .text      setMixerVolume__Q26JASDsp8TChannelFUcs                       Function */
+// JASDsp::TChannel::setMixerVolume(u8, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +614,7 @@ asm void setMixerVolume__Q26JASDsp8TChannelFUcs() {
 }
 #pragma pop
 
-/* 8029DF80 000C .text      setPauseFlag__Q26JASDsp8TChannelFUc                          */
+/* 8029DF80-8029DF8C 000C .text      setPauseFlag__Q26JASDsp8TChannelFUc                          Function */
 // JASDsp::TChannel::setPauseFlag(u8)
 #pragma push
 #pragma optimization_level 0
@@ -529,7 +625,7 @@ asm void setPauseFlag__Q26JASDsp8TChannelFUc() {
 }
 #pragma pop
 
-/* 8029DF8C 0024 .text      flush__Q26JASDsp8TChannelFv                                  */
+/* 8029DF8C-8029DFB0 0024 .text      flush__Q26JASDsp8TChannelFv                                  Function */
 // JASDsp::TChannel::flush(void)
 #pragma push
 #pragma optimization_level 0
@@ -540,7 +636,7 @@ asm void flush__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029DFB0 005C .text      initFilter__Q26JASDsp8TChannelFv                             */
+/* 8029DFB0-8029E00C 005C .text      initFilter__Q26JASDsp8TChannelFv                             Function */
 // JASDsp::TChannel::initFilter(void)
 #pragma push
 #pragma optimization_level 0
@@ -551,7 +647,7 @@ asm void initFilter__Q26JASDsp8TChannelFv() {
 }
 #pragma pop
 
-/* 8029E00C 0038 .text      setFilterMode__Q26JASDsp8TChannelFUs                         */
+/* 8029E00C-8029E044 0038 .text      setFilterMode__Q26JASDsp8TChannelFUs                         Function */
 // JASDsp::TChannel::setFilterMode(u16)
 #pragma push
 #pragma optimization_level 0
@@ -562,8 +658,8 @@ asm void setFilterMode__Q26JASDsp8TChannelFUs() {
 }
 #pragma pop
 
-/* 8029E044 0028 .text      setIIRFilterParam__Q26JASDsp8TChannelFPs                     */
-// JASDsp::TChannel::setIIRFilterParam(s16*)
+/* 8029E044-8029E06C 0028 .text      setIIRFilterParam__Q26JASDsp8TChannelFPs                     Function */
+// JASDsp::TChannel::setIIRFilterParam(short*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,8 +669,8 @@ asm void setIIRFilterParam__Q26JASDsp8TChannelFPs() {
 }
 #pragma pop
 
-/* 8029E06C 0028 .text      setFIR8FilterParam__Q26JASDsp8TChannelFPs                    */
-// JASDsp::TChannel::setFIR8FilterParam(s16*)
+/* 8029E06C-8029E094 0028 .text      setFIR8FilterParam__Q26JASDsp8TChannelFPs                    Function */
+// JASDsp::TChannel::setFIR8FilterParam(short*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,8 +680,8 @@ asm void setFIR8FilterParam__Q26JASDsp8TChannelFPs() {
 }
 #pragma pop
 
-/* 8029E094 0008 .text      setDistFilter__Q26JASDsp8TChannelFs                          */
-// JASDsp::TChannel::setDistFilter(s16)
+/* 8029E094-8029E09C 0008 .text      setDistFilter__Q26JASDsp8TChannelFs                          Function */
+// JASDsp::TChannel::setDistFilter(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +691,7 @@ asm void setDistFilter__Q26JASDsp8TChannelFs() {
 }
 #pragma pop
 
-/* 8029E09C 0020 .text      setBusConnect__Q26JASDsp8TChannelFUcUc                       */
+/* 8029E09C-8029E0BC 0020 .text      setBusConnect__Q26JASDsp8TChannelFUcUc                       Function */
 // JASDsp::TChannel::setBusConnect(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -606,7 +702,7 @@ asm void setBusConnect__Q26JASDsp8TChannelFUcUc() {
 }
 #pragma pop
 
-/* 8029E0BC 0074 .text      DSP_CreateMap2__FUl                                          */
+/* 8029E0BC-8029E130 0074 .text      DSP_CreateMap2__FUl                                          Function */
 }
 
 #pragma push

@@ -11,14 +11,28 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__8dBgS_ChkFv();
+/* Function             */
 extern void __dt__8dBgS_ChkFv();
+/* ReturnFunction       */
+extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+/* Function             */
+extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+/* Function             */
 extern void func_80077574();
+/* Function             */
 extern void __ct__15dBgS_GrpPassChkFv();
+/* Function             */
 extern void __dt__15dBgS_GrpPassChkFv();
+/* Function             */
 extern void __ct__16dBgS_PolyPassChkFv();
+/* Function             */
 extern void __dt__16dBgS_PolyPassChkFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__8dBgS_Chk[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8dBgS_Chk[6];
 }
 
 
@@ -27,8 +41,8 @@ SECTION_DATA extern const void* __vt__8dBgS_Chk[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB670 0018 .data      __vt__8dBgS_Chk                                              */
-SECTION_DATA const  void* __vt__8dBgS_Chk[6] = {
+/* 803AB670-803AB688 0018 .data      __vt__8dBgS_Chk                                              VTableData */
+SECTION_DATA void* __vt__8dBgS_Chk[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__8dBgS_ChkFv,
@@ -44,7 +58,7 @@ SECTION_DATA const  void* __vt__8dBgS_Chk[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8007749C 004C .text      __ct__8dBgS_ChkFv                                            */
+/* 8007749C-800774E8 004C .text      __ct__8dBgS_ChkFv                                            Function */
 // dBgS_Chk::dBgS_Chk(void)
 #pragma push
 #pragma optimization_level 0
@@ -55,7 +69,7 @@ asm void __ct__8dBgS_ChkFv() {
 }
 #pragma pop
 
-/* 800774E8 0078 .text      __dt__8dBgS_ChkFv                                            */
+/* 800774E8-80077560 0078 .text      __dt__8dBgS_ChkFv                                            Function */
 // dBgS_Chk::~dBgS_Chk(void)
 #pragma push
 #pragma optimization_level 0
@@ -66,13 +80,13 @@ asm void __dt__8dBgS_ChkFv() {
 }
 #pragma pop
 
-/* 80077560 0004 .text      GetPolyPassChkInfo__8dBgS_ChkFv                              */
+/* 80077560-80077564 0004 .text      GetPolyPassChkInfo__8dBgS_ChkFv                              ReturnFunction */
 // dBgS_Chk::GetPolyPassChkInfo(void)
 void GetPolyPassChkInfo__8dBgS_ChkFv() {
 	return;
 }
 
-/* 80077564 0010 .text      GetGrpPassChkInfo__8dBgS_ChkFv                               */
+/* 80077564-80077574 0010 .text      GetGrpPassChkInfo__8dBgS_ChkFv                               Function */
 // dBgS_Chk::GetGrpPassChkInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +97,7 @@ asm void GetGrpPassChkInfo__8dBgS_ChkFv() {
 }
 #pragma pop
 
-/* 80077574 0008 .text      @16@__dt__8dBgS_ChkFv                                        */
+/* 80077574-8007757C 0008 .text      @16@__dt__8dBgS_ChkFv                                        Function */
 // dBgS_Chk::@16@__dt(void)
 #pragma push
 #pragma optimization_level 0

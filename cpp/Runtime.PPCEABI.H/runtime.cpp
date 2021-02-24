@@ -9,6 +9,115 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __cvt_fp2unsigned();
+/* Function             */
+extern void __save_fpr();
+/* Function             */
+extern void _savefpr_25();
+/* Function             */
+extern void _savefpr_26();
+/* Function             */
+extern void _savefpr_27();
+/* Function             */
+extern void _savefpr_28();
+/* Function             */
+extern void _savefpr_29();
+/* Function             */
+extern void __restore_fpr();
+/* Function             */
+extern void _restfpr_25();
+/* Function             */
+extern void _restfpr_26();
+/* Function             */
+extern void _restfpr_27();
+/* Function             */
+extern void _restfpr_28();
+/* Function             */
+extern void _restfpr_29();
+/* Function             */
+extern void __save_gpr();
+/* Function             */
+extern void _savegpr_15();
+/* Function             */
+extern void _savegpr_16();
+/* Function             */
+extern void _savegpr_17();
+/* Function             */
+extern void _savegpr_18();
+/* Function             */
+extern void _savegpr_19();
+/* Function             */
+extern void _savegpr_20();
+/* Function             */
+extern void _savegpr_21();
+/* Function             */
+extern void _savegpr_22();
+/* Function             */
+extern void _savegpr_23();
+/* Function             */
+extern void _savegpr_24();
+/* Function             */
+extern void _savegpr_25();
+/* Function             */
+extern void _savegpr_26();
+/* Function             */
+extern void _savegpr_27();
+/* Function             */
+extern void _savegpr_28();
+/* Function             */
+extern void _savegpr_29();
+/* Function             */
+extern void __restore_gpr();
+/* Function             */
+extern void _restgpr_15();
+/* Function             */
+extern void _restgpr_16();
+/* Function             */
+extern void _restgpr_17();
+/* Function             */
+extern void _restgpr_18();
+/* Function             */
+extern void _restgpr_19();
+/* Function             */
+extern void _restgpr_20();
+/* Function             */
+extern void _restgpr_21();
+/* Function             */
+extern void _restgpr_22();
+/* Function             */
+extern void _restgpr_23();
+/* Function             */
+extern void _restgpr_24();
+/* Function             */
+extern void _restgpr_25();
+/* Function             */
+extern void _restgpr_26();
+/* Function             */
+extern void _restgpr_27();
+/* Function             */
+extern void _restgpr_28();
+/* Function             */
+extern void _restgpr_29();
+/* Function             */
+extern void __div2u();
+/* Function             */
+extern void __div2i();
+/* Function             */
+extern void __mod2u();
+/* Function             */
+extern void __mod2i();
+/* Function             */
+extern void __shl2i();
+/* Function             */
+extern void __shr2u();
+/* Function             */
+extern void __shr2i();
+/* Function             */
+extern void __cvt_sll_flt();
+/* Function             */
+extern void __cvt_dbl_usll();
+/* InitializedData      */
 SECTION_RODATA extern const u8 __constants[24];
 }
 
@@ -18,7 +127,7 @@ SECTION_RODATA extern const u8 __constants[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2190 0018 .rodata    __constants                                                  */
+/* 803A2190-803A21A8 0018 .rodata    __constants                                                  InitializedData */
 SECTION_RODATA const u8 __constants[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x41, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x41, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -31,7 +140,7 @@ SECTION_RODATA const u8 __constants[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803620AC 005C .text      __cvt_fp2unsigned                                            */
+/* 803620AC-80362108 005C .text      __cvt_fp2unsigned                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +150,7 @@ asm void __cvt_fp2unsigned() {
 }
 #pragma pop
 
-/* 80362108 002C .text      __save_fpr                                                   */
+/* 80362108-80362134 002C .text      __save_fpr                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +160,7 @@ asm void __save_fpr() {
 }
 #pragma pop
 
-/* 80362134 0004 .text      _savefpr_25                                                  */
+/* 80362134-80362138 0004 .text      _savefpr_25                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +170,7 @@ asm void _savefpr_25() {
 }
 #pragma pop
 
-/* 80362138 0004 .text      _savefpr_26                                                  */
+/* 80362138-8036213C 0004 .text      _savefpr_26                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +180,7 @@ asm void _savefpr_26() {
 }
 #pragma pop
 
-/* 8036213C 0004 .text      _savefpr_27                                                  */
+/* 8036213C-80362140 0004 .text      _savefpr_27                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +190,7 @@ asm void _savefpr_27() {
 }
 #pragma pop
 
-/* 80362140 0004 .text      _savefpr_28                                                  */
+/* 80362140-80362144 0004 .text      _savefpr_28                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +200,7 @@ asm void _savefpr_28() {
 }
 #pragma pop
 
-/* 80362144 0010 .text      _savefpr_29                                                  */
+/* 80362144-80362154 0010 .text      _savefpr_29                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +210,7 @@ asm void _savefpr_29() {
 }
 #pragma pop
 
-/* 80362154 002C .text      __restore_fpr                                                */
+/* 80362154-80362180 002C .text      __restore_fpr                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +220,7 @@ asm void __restore_fpr() {
 }
 #pragma pop
 
-/* 80362180 0004 .text      _restfpr_25                                                  */
+/* 80362180-80362184 0004 .text      _restfpr_25                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +230,7 @@ asm void _restfpr_25() {
 }
 #pragma pop
 
-/* 80362184 0004 .text      _restfpr_26                                                  */
+/* 80362184-80362188 0004 .text      _restfpr_26                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +240,7 @@ asm void _restfpr_26() {
 }
 #pragma pop
 
-/* 80362188 0004 .text      _restfpr_27                                                  */
+/* 80362188-8036218C 0004 .text      _restfpr_27                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +250,7 @@ asm void _restfpr_27() {
 }
 #pragma pop
 
-/* 8036218C 0004 .text      _restfpr_28                                                  */
+/* 8036218C-80362190 0004 .text      _restfpr_28                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -151,7 +260,7 @@ asm void _restfpr_28() {
 }
 #pragma pop
 
-/* 80362190 0010 .text      _restfpr_29                                                  */
+/* 80362190-803621A0 0010 .text      _restfpr_29                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,8 +270,8 @@ asm void _restfpr_29() {
 }
 #pragma pop
 
-/* 803621A0 0000 .text      _savegpr_14                                                  */
-/* 803621A0 0004 .text      __save_gpr                                                   */
+/* 803621A0-803621A0 0000 .text      _savegpr_14                                                  Function */
+/* 803621A0-803621A4 0004 .text      __save_gpr                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +281,7 @@ asm void __save_gpr() {
 }
 #pragma pop
 
-/* 803621A4 0004 .text      _savegpr_15                                                  */
+/* 803621A4-803621A8 0004 .text      _savegpr_15                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +291,7 @@ asm void _savegpr_15() {
 }
 #pragma pop
 
-/* 803621A8 0004 .text      _savegpr_16                                                  */
+/* 803621A8-803621AC 0004 .text      _savegpr_16                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -192,7 +301,7 @@ asm void _savegpr_16() {
 }
 #pragma pop
 
-/* 803621AC 0004 .text      _savegpr_17                                                  */
+/* 803621AC-803621B0 0004 .text      _savegpr_17                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -202,7 +311,7 @@ asm void _savegpr_17() {
 }
 #pragma pop
 
-/* 803621B0 0004 .text      _savegpr_18                                                  */
+/* 803621B0-803621B4 0004 .text      _savegpr_18                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,7 +321,7 @@ asm void _savegpr_18() {
 }
 #pragma pop
 
-/* 803621B4 0004 .text      _savegpr_19                                                  */
+/* 803621B4-803621B8 0004 .text      _savegpr_19                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -222,7 +331,7 @@ asm void _savegpr_19() {
 }
 #pragma pop
 
-/* 803621B8 0004 .text      _savegpr_20                                                  */
+/* 803621B8-803621BC 0004 .text      _savegpr_20                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -232,7 +341,7 @@ asm void _savegpr_20() {
 }
 #pragma pop
 
-/* 803621BC 0004 .text      _savegpr_21                                                  */
+/* 803621BC-803621C0 0004 .text      _savegpr_21                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -242,7 +351,7 @@ asm void _savegpr_21() {
 }
 #pragma pop
 
-/* 803621C0 0004 .text      _savegpr_22                                                  */
+/* 803621C0-803621C4 0004 .text      _savegpr_22                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -252,7 +361,7 @@ asm void _savegpr_22() {
 }
 #pragma pop
 
-/* 803621C4 0004 .text      _savegpr_23                                                  */
+/* 803621C4-803621C8 0004 .text      _savegpr_23                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -262,7 +371,7 @@ asm void _savegpr_23() {
 }
 #pragma pop
 
-/* 803621C8 0004 .text      _savegpr_24                                                  */
+/* 803621C8-803621CC 0004 .text      _savegpr_24                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +381,7 @@ asm void _savegpr_24() {
 }
 #pragma pop
 
-/* 803621CC 0004 .text      _savegpr_25                                                  */
+/* 803621CC-803621D0 0004 .text      _savegpr_25                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -282,7 +391,7 @@ asm void _savegpr_25() {
 }
 #pragma pop
 
-/* 803621D0 0004 .text      _savegpr_26                                                  */
+/* 803621D0-803621D4 0004 .text      _savegpr_26                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -292,7 +401,7 @@ asm void _savegpr_26() {
 }
 #pragma pop
 
-/* 803621D4 0004 .text      _savegpr_27                                                  */
+/* 803621D4-803621D8 0004 .text      _savegpr_27                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -302,7 +411,7 @@ asm void _savegpr_27() {
 }
 #pragma pop
 
-/* 803621D8 0004 .text      _savegpr_28                                                  */
+/* 803621D8-803621DC 0004 .text      _savegpr_28                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -312,7 +421,7 @@ asm void _savegpr_28() {
 }
 #pragma pop
 
-/* 803621DC 0010 .text      _savegpr_29                                                  */
+/* 803621DC-803621EC 0010 .text      _savegpr_29                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -322,8 +431,8 @@ asm void _savegpr_29() {
 }
 #pragma pop
 
-/* 803621EC 0000 .text      _restgpr_14                                                  */
-/* 803621EC 0004 .text      __restore_gpr                                                */
+/* 803621EC-803621EC 0000 .text      _restgpr_14                                                  Function */
+/* 803621EC-803621F0 0004 .text      __restore_gpr                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +442,7 @@ asm void __restore_gpr() {
 }
 #pragma pop
 
-/* 803621F0 0004 .text      _restgpr_15                                                  */
+/* 803621F0-803621F4 0004 .text      _restgpr_15                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -343,7 +452,7 @@ asm void _restgpr_15() {
 }
 #pragma pop
 
-/* 803621F4 0004 .text      _restgpr_16                                                  */
+/* 803621F4-803621F8 0004 .text      _restgpr_16                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -353,7 +462,7 @@ asm void _restgpr_16() {
 }
 #pragma pop
 
-/* 803621F8 0004 .text      _restgpr_17                                                  */
+/* 803621F8-803621FC 0004 .text      _restgpr_17                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +472,7 @@ asm void _restgpr_17() {
 }
 #pragma pop
 
-/* 803621FC 0004 .text      _restgpr_18                                                  */
+/* 803621FC-80362200 0004 .text      _restgpr_18                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,7 +482,7 @@ asm void _restgpr_18() {
 }
 #pragma pop
 
-/* 80362200 0004 .text      _restgpr_19                                                  */
+/* 80362200-80362204 0004 .text      _restgpr_19                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -383,7 +492,7 @@ asm void _restgpr_19() {
 }
 #pragma pop
 
-/* 80362204 0004 .text      _restgpr_20                                                  */
+/* 80362204-80362208 0004 .text      _restgpr_20                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -393,7 +502,7 @@ asm void _restgpr_20() {
 }
 #pragma pop
 
-/* 80362208 0004 .text      _restgpr_21                                                  */
+/* 80362208-8036220C 0004 .text      _restgpr_21                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -403,7 +512,7 @@ asm void _restgpr_21() {
 }
 #pragma pop
 
-/* 8036220C 0004 .text      _restgpr_22                                                  */
+/* 8036220C-80362210 0004 .text      _restgpr_22                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -413,7 +522,7 @@ asm void _restgpr_22() {
 }
 #pragma pop
 
-/* 80362210 0004 .text      _restgpr_23                                                  */
+/* 80362210-80362214 0004 .text      _restgpr_23                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +532,7 @@ asm void _restgpr_23() {
 }
 #pragma pop
 
-/* 80362214 0004 .text      _restgpr_24                                                  */
+/* 80362214-80362218 0004 .text      _restgpr_24                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -433,7 +542,7 @@ asm void _restgpr_24() {
 }
 #pragma pop
 
-/* 80362218 0004 .text      _restgpr_25                                                  */
+/* 80362218-8036221C 0004 .text      _restgpr_25                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -443,7 +552,7 @@ asm void _restgpr_25() {
 }
 #pragma pop
 
-/* 8036221C 0004 .text      _restgpr_26                                                  */
+/* 8036221C-80362220 0004 .text      _restgpr_26                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,7 +562,7 @@ asm void _restgpr_26() {
 }
 #pragma pop
 
-/* 80362220 0004 .text      _restgpr_27                                                  */
+/* 80362220-80362224 0004 .text      _restgpr_27                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +572,7 @@ asm void _restgpr_27() {
 }
 #pragma pop
 
-/* 80362224 0004 .text      _restgpr_28                                                  */
+/* 80362224-80362228 0004 .text      _restgpr_28                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +582,7 @@ asm void _restgpr_28() {
 }
 #pragma pop
 
-/* 80362228 0010 .text      _restgpr_29                                                  */
+/* 80362228-80362238 0010 .text      _restgpr_29                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,7 +592,7 @@ asm void _restgpr_29() {
 }
 #pragma pop
 
-/* 80362238 00EC .text      __div2u                                                      */
+/* 80362238-80362324 00EC .text      __div2u                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -493,7 +602,7 @@ asm void __div2u() {
 }
 #pragma pop
 
-/* 80362324 0138 .text      __div2i                                                      */
+/* 80362324-8036245C 0138 .text      __div2i                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -503,7 +612,7 @@ asm void __div2i() {
 }
 #pragma pop
 
-/* 8036245C 00E4 .text      __mod2u                                                      */
+/* 8036245C-80362540 00E4 .text      __mod2u                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +622,7 @@ asm void __mod2u() {
 }
 #pragma pop
 
-/* 80362540 010C .text      __mod2i                                                      */
+/* 80362540-8036264C 010C .text      __mod2i                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,7 +632,7 @@ asm void __mod2i() {
 }
 #pragma pop
 
-/* 8036264C 0024 .text      __shl2i                                                      */
+/* 8036264C-80362670 0024 .text      __shl2i                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -533,7 +642,7 @@ asm void __shl2i() {
 }
 #pragma pop
 
-/* 80362670 0024 .text      __shr2u                                                      */
+/* 80362670-80362694 0024 .text      __shr2u                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -543,7 +652,7 @@ asm void __shr2u() {
 }
 #pragma pop
 
-/* 80362694 0028 .text      __shr2i                                                      */
+/* 80362694-803626BC 0028 .text      __shr2i                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -553,7 +662,7 @@ asm void __shr2i() {
 }
 #pragma pop
 
-/* 803626BC 00B4 .text      __cvt_sll_flt                                                */
+/* 803626BC-80362770 00B4 .text      __cvt_sll_flt                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +672,7 @@ asm void __cvt_sll_flt() {
 }
 #pragma pop
 
-/* 80362770 00CC .text      __cvt_dbl_usll                                               */
+/* 80362770-8036283C 00CC .text      __cvt_dbl_usll                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

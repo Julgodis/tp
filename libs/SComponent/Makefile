@@ -4,6 +4,7 @@
 
 SCOMPONENT_A_CPP_FILES := \
 	cpp/SComponent/c_malloc.cpp \
+	cpp/SComponent/c_API.cpp \
 	cpp/SComponent/c_API_controller_pad.cpp \
 	cpp/SComponent/c_API_graphic.cpp \
 	cpp/SComponent/c_cc_d.cpp \
@@ -40,10 +41,10 @@ SCOMPONENT_A_CPP_FILES := \
 	cpp/SComponent/c_m3d_g_tri.cpp \
 	cpp/SComponent/c_lib.cpp \
 	cpp/SComponent/c_angle.cpp \
-	cpp/SComponent/c_API.cpp \
 
 SCOMPONENT_A_O_FILES := \
 	$(BUILD_DIR)/libs/SComponent/c_malloc.o \
+	$(BUILD_DIR)/libs/SComponent/c_API.o \
 	$(BUILD_DIR)/libs/SComponent/c_API_controller_pad.o \
 	$(BUILD_DIR)/libs/SComponent/c_API_graphic.o \
 	$(BUILD_DIR)/libs/SComponent/c_cc_d.o \
@@ -80,7 +81,6 @@ SCOMPONENT_A_O_FILES := \
 	$(BUILD_DIR)/libs/SComponent/c_m3d_g_tri.o \
 	$(BUILD_DIR)/libs/SComponent/c_lib.o \
 	$(BUILD_DIR)/libs/SComponent/c_angle.o \
-	$(BUILD_DIR)/libs/SComponent/c_API.o \
 
 SCOMPONENT_A_CFLAGS := \
 
@@ -90,8 +90,9 @@ SCOMPONENT_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libSComponent.a: dirs $(SCOMPONENT_A_O_FILES)
+$(BUILD_DIR)/libSComponent.a: $(SCOMPONENT_A_O_FILES)
 	$(LD) -xm l $(SCOMPONENT_A_LDFLAGS) -o $(BUILD_DIR)/libSComponent.a $(SCOMPONENT_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libSComponent.a
 
 $(BUILD_DIR)/libs/SComponent/%.o: cpp/SComponent/%.cpp
 	mkdir -p $(@D)

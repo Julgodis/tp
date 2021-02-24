@@ -8,20 +8,36 @@
 // Additional Symbols:
 // 
 
-struct node_list_class;
 struct node_class;
 struct node_lists_tree_class;
+struct node_list_class;
 
 extern void cLs_SingleCut(node_class*); /* cLs_SingleCut__FP10node_class */
 extern void cLs_Addition(node_list_class*, node_class*); /* cLs_Addition__FP15node_list_classP10node_class */
 extern void cLs_Insert(node_list_class*, int, node_class*); /* cLs_Insert__FP15node_list_classiP10node_class */
 extern void cLs_Create(node_list_class*); /* cLs_Create__FP15node_list_class */
+extern void cTr_SingleCut(node_class*); /* cTr_SingleCut__FP10node_class */
+extern void cTr_Addition(node_lists_tree_class*, int, node_class*); /* cTr_Addition__FP21node_lists_tree_classiP10node_class */
+extern void cTr_Insert(node_lists_tree_class*, int, node_class*, int); /* cTr_Insert__FP21node_lists_tree_classiP10node_classi */
+extern void cTr_Create(node_lists_tree_class*, node_list_class*, int); /* cTr_Create__FP21node_lists_tree_classP15node_list_classi */
 
 extern "C" {
+/* Function             */
 extern void cLs_SingleCut__FP10node_class();
+/* Function             */
 extern void cLs_Addition__FP15node_list_classP10node_class();
+/* Function             */
 extern void cLs_Insert__FP15node_list_classiP10node_class();
+/* Function             */
 extern void cLs_Create__FP15node_list_class();
+/* Function             */
+extern void cTr_SingleCut__FP10node_class();
+/* Function             */
+extern void cTr_Addition__FP21node_lists_tree_classiP10node_class();
+/* Function             */
+extern void cTr_Insert__FP21node_lists_tree_classiP10node_classi();
+/* Function             */
+extern void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
 }
 
 
@@ -30,7 +46,7 @@ extern void cLs_Create__FP15node_list_class();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266440 0020 .text      cTr_SingleCut__FP10node_class                                */
+/* 80266440-80266460 0020 .text      cTr_SingleCut__FP10node_class                                Function */
 }
 
 #pragma push
@@ -43,7 +59,7 @@ asm void cTr_SingleCut(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266460 0044 .text      cTr_Addition__FP21node_lists_tree_classiP10node_class        */
+/* 80266460-802664A4 0044 .text      cTr_Addition__FP21node_lists_tree_classiP10node_class        Function */
 }
 
 #pragma push
@@ -56,7 +72,7 @@ asm void cTr_Addition(node_lists_tree_class*, int, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 802664A4 0044 .text      cTr_Insert__FP21node_lists_tree_classiP10node_classi         */
+/* 802664A4-802664E8 0044 .text      cTr_Insert__FP21node_lists_tree_classiP10node_classi         Function */
 }
 
 #pragma push
@@ -69,7 +85,7 @@ asm void cTr_Insert(node_lists_tree_class*, int, node_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 802664E8 0058 .text      cTr_Create__FP21node_lists_tree_classP15node_list_classi     */
+/* 802664E8-80266540 0058 .text      cTr_Create__FP21node_lists_tree_classP15node_list_classi     Function */
 }
 
 #pragma push

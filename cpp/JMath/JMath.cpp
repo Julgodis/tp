@@ -8,12 +8,31 @@
 // Additional Symbols:
 // 
 
-struct Quaternion;
 struct Vec;
+struct Quaternion;
+
+extern void JMAEulerToQuat(short, short, short, Quaternion*); /* JMAEulerToQuat__FsssP10Quaternion */
+extern void JMAQuatLerp(const Quaternion*, const Quaternion*, f32, Quaternion*); /* JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion */
+extern void JMAFastVECNormalize(const Vec*, Vec*); /* JMAFastVECNormalize__FPC3VecP3Vec */
+extern void JMAVECScaleAdd(const Vec*, const Vec*, Vec*, f32); /* JMAVECScaleAdd__FPC3VecPC3VecP3Vecf */
+extern void JMAMTXApplyScale(const f32 (*)[4], f32 (*)[4], f32, f32, f32); /* JMAMTXApplyScale__FPA4_CfPA4_ffff */
 
 extern "C" {
+/* Function             */
+extern void JMAEulerToQuat__FsssP10Quaternion();
+/* Function             */
+extern void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
+/* Function             */
+extern void JMAFastVECNormalize__FPC3VecP3Vec();
+/* Function             */
+extern void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
+/* Function             */
+extern void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JMath__LIT_376[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_411[8];
 }
 
@@ -23,11 +42,11 @@ SECTION_SDATA2 extern u8 LIT_411[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804564C8 0008 .sdata2    @376                                                         */
+/* 804564C8-804564D0 0008 .sdata2    @376                                                         InitializedData */
 SECTION_SDATA2 u8 JMath__LIT_376[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 804564D0 0004 .sdata2    @411                                                         */
+/* 804564D0-804564D8 0004 .sdata2    @411                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_411[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -41,20 +60,20 @@ SECTION_SDATA2 u8 LIT_411[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80339878 00C0 .text      JMAEulerToQuat__FsssP10Quaternion                            */
+/* 80339878-80339938 00C0 .text      JMAEulerToQuat__FsssP10Quaternion                            Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void JMAEulerToQuat(s16, s16, s16, Quaternion*) {
+asm void JMAEulerToQuat(short, short, short, Quaternion*) {
 	nofralloc
 #include "_include/JMath/JMath/JMAEulerToQuat__FsssP10Quaternion.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80339938 00F8 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     */
+/* 80339938-80339A30 00F8 .text      JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion     Function */
 }
 
 #pragma push
@@ -67,7 +86,7 @@ asm void JMAQuatLerp(const Quaternion*, const Quaternion*, f32, Quaternion*) {
 #pragma pop
 
 extern "C" {
-/* 80339A30 002C .text      JMAFastVECNormalize__FPC3VecP3Vec                            */
+/* 80339A30-80339A5C 002C .text      JMAFastVECNormalize__FPC3VecP3Vec                            Function */
 }
 
 #pragma push
@@ -80,7 +99,7 @@ asm void JMAFastVECNormalize(const Vec*, Vec*) {
 #pragma pop
 
 extern "C" {
-/* 80339A5C 0028 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          */
+/* 80339A5C-80339A84 0028 .text      JMAVECScaleAdd__FPC3VecPC3VecP3Vecf                          Function */
 }
 
 #pragma push
@@ -93,7 +112,7 @@ asm void JMAVECScaleAdd(const Vec*, const Vec*, Vec*, f32) {
 #pragma pop
 
 extern "C" {
-/* 80339A84 0060 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            */
+/* 80339A84-80339AE4 0060 .text      JMAMTXApplyScale__FPA4_CfPA4_ffff                            Function */
 }
 
 #pragma push

@@ -18,8 +18,9 @@ JSTUDIO_JAUDIO2_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJStudio_JAudio2.a: dirs $(JSTUDIO_JAUDIO2_A_O_FILES)
+$(BUILD_DIR)/libJStudio_JAudio2.a: $(JSTUDIO_JAUDIO2_A_O_FILES)
 	$(LD) -xm l $(JSTUDIO_JAUDIO2_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio_JAudio2.a $(JSTUDIO_JAUDIO2_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio_JAudio2.a
 
 $(BUILD_DIR)/libs/JStudio_JAudio2/%.o: cpp/JStudio_JAudio2/%.cpp
 	mkdir -p $(@D)

@@ -11,6 +11,17 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__6dBgPlcFv();
+/* Function             */
+extern void __dt__6dBgPlcFv();
+/* Function             */
+extern void setBase__6dBgPlcFPv();
+/* Function             */
+extern void getCode__6dBgPlcCFiPP5sBgPc();
+/* Function             */
+extern void getGrpCode__6dBgPlcCFi();
+/* Function             */
 extern void __dl__FPv();
 }
 
@@ -20,7 +31,7 @@ extern void __dl__FPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80074074 000C .text      __ct__6dBgPlcFv                                              */
+/* 80074074-80074080 000C .text      __ct__6dBgPlcFv                                              Function */
 // dBgPlc::dBgPlc(void)
 #pragma push
 #pragma optimization_level 0
@@ -31,7 +42,7 @@ asm void __ct__6dBgPlcFv() {
 }
 #pragma pop
 
-/* 80074080 003C .text      __dt__6dBgPlcFv                                              */
+/* 80074080-800740BC 003C .text      __dt__6dBgPlcFv                                              Function */
 // dBgPlc::~dBgPlc(void)
 #pragma push
 #pragma optimization_level 0
@@ -42,7 +53,7 @@ asm void __dt__6dBgPlcFv() {
 }
 #pragma pop
 
-/* 800740BC 0008 .text      setBase__6dBgPlcFPv                                          */
+/* 800740BC-800740C4 0008 .text      setBase__6dBgPlcFPv                                          Function */
 // dBgPlc::setBase(void*)
 #pragma push
 #pragma optimization_level 0
@@ -53,7 +64,7 @@ asm void setBase__6dBgPlcFPv() {
 }
 #pragma pop
 
-/* 800740C4 0018 .text      getCode__6dBgPlcCFiPP5sBgPc                                  */
+/* 800740C4-800740DC 0018 .text      getCode__6dBgPlcCFiPP5sBgPc                                  Function */
 // dBgPlc::getCode(int, sBgPc**) const
 #pragma push
 #pragma optimization_level 0
@@ -64,7 +75,7 @@ asm void getCode__6dBgPlcCFiPP5sBgPc() {
 }
 #pragma pop
 
-/* 800740DC 0018 .text      getGrpCode__6dBgPlcCFi                                       */
+/* 800740DC-800740F4 0018 .text      getGrpCode__6dBgPlcCFi                                       Function */
 // dBgPlc::getGrpCode(int) const
 #pragma push
 #pragma optimization_level 0

@@ -8,13 +8,32 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void strrchr();
+/* Function             */
+extern void strchr();
+/* Function             */
+extern void strncmp();
+/* Function             */
+extern void strcmp();
+/* Function             */
+extern void strcat();
+/* Function             */
+extern void strncpy();
+/* Function             */
+extern void strcpy();
+/* Function             */
+extern void strlen();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803688DC 0048 .text      strrchr                                                      */
+/* 803688DC-80368924 0048 .text      strrchr                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24,7 +43,7 @@ asm void strrchr() {
 }
 #pragma pop
 
-/* 80368924 0030 .text      strchr                                                       */
+/* 80368924-80368954 0030 .text      strchr                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34,7 +53,7 @@ asm void strchr() {
 }
 #pragma pop
 
-/* 80368954 0040 .text      strncmp                                                      */
+/* 80368954-80368994 0040 .text      strncmp                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +63,7 @@ asm void strncmp() {
 }
 #pragma pop
 
-/* 80368994 0128 .text      strcmp                                                       */
+/* 80368994-80368ABC 0128 .text      strcmp                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +73,7 @@ asm void strcmp() {
 }
 #pragma pop
 
-/* 80368ABC 002C .text      strcat                                                       */
+/* 80368ABC-80368AE8 002C .text      strcat                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +83,7 @@ asm void strcat() {
 }
 #pragma pop
 
-/* 80368AE8 0044 .text      strncpy                                                      */
+/* 80368AE8-80368B2C 0044 .text      strncpy                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +93,7 @@ asm void strncpy() {
 }
 #pragma pop
 
-/* 80368B2C 00B8 .text      strcpy                                                       */
+/* 80368B2C-80368BE4 00B8 .text      strcpy                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +103,7 @@ asm void strcpy() {
 }
 #pragma pop
 
-/* 80368BE4 001C .text      strlen                                                       */
+/* 80368BE4-80368C00 001C .text      strlen                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -8,12 +8,27 @@
 // Additional Symbols:
 // 
 
-struct JPABaseParticle;
 struct JPAEmitterWorkData;
+struct JPABaseParticle;
+
+extern void JPARegistChildPrmEnv(JPAEmitterWorkData*); /* JPARegistChildPrmEnv__FP18JPAEmitterWorkData */
+extern void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*); /* JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
+extern void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); /* JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
 
 extern "C" {
+/* Function             */
+extern void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
+/* Function             */
+extern void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+/* Function             */
+extern void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+/* Function             */
+extern void __ct__13JPAChildShapeFPCUc();
+/* Function             */
 extern void GXSetTevColor();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2318;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2319;
 }
 
@@ -23,10 +38,10 @@ SECTION_SDATA2 extern f32 LIT_2319;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455308 0004 .sdata2    @2318                                                        */
+/* 80455308-8045530C 0004 .sdata2    @2318                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 LIT_2318 = 255.000000f;
-/* 8045530C 0004 .sdata2    @2319                                                        */
+/* 8045530C-80455310 0004 .sdata2    @2319                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_2319 = 1.000000f;
 }
@@ -37,7 +52,7 @@ SECTION_SDATA2 f32 LIT_2319 = 1.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027AEBC 0120 .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData                 */
+/* 8027AEBC-8027AFDC 0120 .text      JPARegistChildPrmEnv__FP18JPAEmitterWorkData                 Function */
 }
 
 #pragma push
@@ -50,7 +65,7 @@ asm void JPARegistChildPrmEnv(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027AFDC 002C .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027AFDC-8027B008 002C .text      JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle Function */
 }
 
 #pragma push
@@ -63,7 +78,7 @@ asm void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*) {
 #pragma pop
 
 extern "C" {
-/* 8027B008 0030 .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle */
+/* 8027B008-8027B038 0030 .text      JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle Function */
 }
 
 #pragma push
@@ -76,7 +91,7 @@ asm void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*) {
 #pragma pop
 
 extern "C" {
-/* 8027B038 0008 .text      __ct__13JPAChildShapeFPCUc                                   */
+/* 8027B038-8027B040 0008 .text      __ct__13JPAChildShapeFPCUc                                   Function */
 // JPAChildShape::JPAChildShape(const u8*)
 #pragma push
 #pragma optimization_level 0

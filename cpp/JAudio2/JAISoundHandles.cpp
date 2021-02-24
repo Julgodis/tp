@@ -8,13 +8,20 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
+/* Function             */
+extern void getFreeHandle__15JAISoundHandlesFv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A2C98 005C .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             */
+/* 802A2C98-802A2CF4 005C .text      getHandleSoundID__15JAISoundHandlesF10JAISoundID             Function */
 // JAISoundHandles::getHandleSoundID(JAISoundID)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +32,7 @@ asm void getHandleSoundID__15JAISoundHandlesF10JAISoundID() {
 }
 #pragma pop
 
-/* 802A2CF4 0040 .text      getFreeHandle__15JAISoundHandlesFv                           */
+/* 802A2CF4-802A2D34 0040 .text      getFreeHandle__15JAISoundHandlesFv                           Function */
 // JAISoundHandles::getFreeHandle(void)
 #pragma push
 #pragma optimization_level 0

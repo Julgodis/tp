@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __ct__14JAISoundHandleFv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A4AC4 000C .text      __ct__14JAISoundHandleFv                                     */
+/* 802A4AC4-802A4AD0 000C .text      __ct__14JAISoundHandleFv                                     Function */
 // JAISoundHandle::JAISoundHandle(void)
 #pragma push
 #pragma optimization_level 0

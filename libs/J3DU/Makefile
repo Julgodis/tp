@@ -18,8 +18,9 @@ J3DU_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJ3DU.a: dirs $(J3DU_A_O_FILES)
+$(BUILD_DIR)/libJ3DU.a: $(J3DU_A_O_FILES)
 	$(LD) -xm l $(J3DU_A_LDFLAGS) -o $(BUILD_DIR)/libJ3DU.a $(J3DU_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJ3DU.a
 
 $(BUILD_DIR)/libs/J3DU/%.o: cpp/J3DU/%.cpp
 	mkdir -p $(@D)

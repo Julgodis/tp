@@ -8,26 +8,35 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct node_class;
-struct layer_class;
 struct node_lists_tree_class;
+struct layer_class;
 struct method_filter;
+struct node_class;
+struct create_tag_class;
 
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
 extern void fpcLnIt_MethodCall(create_tag_class*, method_filter*); /* fpcLnIt_MethodCall__FP16create_tag_classP13method_filter */
+extern void fpcLnIt_Queue(int (*)(void*, void*)); /* fpcLnIt_Queue__FPFPvPv_i */
 extern void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); /* cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
 extern void cTgIt_MethodCall(create_tag_class*, method_filter*); /* cTgIt_MethodCall__FP16create_tag_classP13method_filter */
 
 extern "C" {
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcLnIt_MethodCall__FP16create_tag_classP13method_filter();
+/* Function             */
+extern void fpcLnIt_Queue__FPFPvPv_i();
+/* Function             */
 extern void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+/* Function             */
 extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
-SECTION_SDATA extern u8 g_fpcLn_Queue[8];
 }
 
 
@@ -36,7 +45,7 @@ SECTION_SDATA extern u8 g_fpcLn_Queue[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800236C0 0068 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     */
+/* 800236C0-80023728 0068 .text      fpcLnIt_MethodCall__FP16create_tag_classP13method_filter     Function */
 }
 
 #pragma push
@@ -49,7 +58,7 @@ asm void fpcLnIt_MethodCall(create_tag_class*, method_filter*) {
 #pragma pop
 
 extern "C" {
-/* 80023728 003C .text      fpcLnIt_Queue__FPFPvPv_i                                     */
+/* 80023728-80023764 003C .text      fpcLnIt_Queue__FPFPvPv_i                                     Function */
 }
 
 #pragma push

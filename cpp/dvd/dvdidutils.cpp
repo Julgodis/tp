@@ -9,6 +9,9 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void DVDCompareDiskID();
+/* Function             */
 extern void strncmp();
 }
 
@@ -18,7 +21,7 @@ extern void strncmp();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034BC04 00F8 .text      DVDCompareDiskID                                             */
+/* 8034BC04-8034BCFC 00F8 .text      DVDCompareDiskID                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

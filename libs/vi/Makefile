@@ -16,8 +16,9 @@ VI_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libvi.a: dirs $(VI_A_O_FILES)
+$(BUILD_DIR)/libvi.a: $(VI_A_O_FILES)
 	$(LD) -xm l $(VI_A_LDFLAGS) -o $(BUILD_DIR)/libvi.a $(VI_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libvi.a
 
 $(BUILD_DIR)/libs/vi/%.o: cpp/vi/%.cpp
 	mkdir -p $(@D)

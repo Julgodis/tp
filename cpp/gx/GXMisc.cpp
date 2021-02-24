@@ -9,31 +9,92 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PPCSync();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
 extern void OSInitThreadQueue();
+/* Function             */
 extern void OSSleepThread();
+/* Function             */
 extern void OSWakeupThread();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void __GXInitRevisionBits();
+/* Function             */
 extern void __GXCleanGPFifo();
+/* GlobalFunction       */
 extern u32 GXGetGPFifo();
+/* Function             */
+extern void GXSetMisc();
+/* Function             */
 extern void GXFlush();
+/* Function             */
+extern void __GXAbort();
+/* Function             */
+extern void GXAbortFrame();
+/* Function             */
+extern void GXSetDrawDone();
+/* Function             */
+extern void GXDrawDone();
+/* Function             */
+extern void GXPixModeSync();
+/* Function             */
+extern void GXPokeAlphaMode();
+/* Function             */
+extern void GXPokeAlphaRead();
+/* Function             */
+extern void GXPokeAlphaUpdate();
+/* Function             */
+extern void GXPokeBlendMode();
+/* Function             */
+extern void GXPokeColorUpdate();
+/* Function             */
+extern void GXPokeDstAlpha();
+/* Function             */
+extern void GXPokeDither();
+/* Function             */
+extern void GXPokeZMode();
+/* Function             */
+extern void GXPeekZ();
+/* Function             */
+extern void GXSetDrawSyncCallback();
+/* Function             */
 extern void GXTokenInterruptHandler();
+/* Function             */
+extern void GXSetDrawDoneCallback();
+/* Function             */
 extern void GXFinishInterruptHandler();
+/* Function             */
+extern void __GXPEInit();
+/* Function             */
 extern void __GXSetDirtyState();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __peReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __memReg[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 TokenCB[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 DrawDoneCB[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451970[4];
-SECTION_SBSS extern u8 FinishQueue[8];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 FinishQueue[8 + 4 /* padding */];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -42,15 +103,14 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451968 0004 .sbss      TokenCB                                                      */
+/* 80451968-8045196C 0004 .sbss      TokenCB                                                      ZeroInitializedData */
 SECTION_SBSS u8 TokenCB[4];
-/* 8045196C 0004 .sbss      DrawDoneCB                                                   */
+/* 8045196C-80451970 0004 .sbss      DrawDoneCB                                                   ZeroInitializedData */
 SECTION_SBSS u8 DrawDoneCB[4];
-/* 80451970 0004 .sbss      data_80451970                                                */
+/* 80451970-80451974 0004 .sbss      data_80451970                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451970[4];
-/* 80451974 0008 .sbss      FinishQueue                                                  */
-SECTION_SBSS u8 FinishQueue[8];
-SECTION_SBSS u8 pad_8045197C[4];
+/* 80451974-80451980 0008 .sbss      FinishQueue                                                  ZeroInitializedData */
+SECTION_SBSS u8 FinishQueue[8 + 4 /* padding */];
 }
 
 
@@ -59,7 +119,7 @@ SECTION_SBSS u8 pad_8045197C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035BE38 0094 .text      GXSetMisc                                                    */
+/* 8035BE38-8035BECC 0094 .text      GXSetMisc                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -69,7 +129,7 @@ asm void GXSetMisc() {
 }
 #pragma pop
 
-/* 8035BECC 005C .text      GXFlush                                                      */
+/* 8035BECC-8035BF28 005C .text      GXFlush                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +139,7 @@ asm void GXFlush() {
 }
 #pragma pop
 
-/* 8035BF28 016C .text      __GXAbort                                                    */
+/* 8035BF28-8035C094 016C .text      __GXAbort                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +149,7 @@ asm void __GXAbort() {
 }
 #pragma pop
 
-/* 8035C094 01C8 .text      GXAbortFrame                                                 */
+/* 8035C094-8035C25C 01C8 .text      GXAbortFrame                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +159,7 @@ asm void GXAbortFrame() {
 }
 #pragma pop
 
-/* 8035C25C 0098 .text      GXSetDrawDone                                                */
+/* 8035C25C-8035C2F4 0098 .text      GXSetDrawDone                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +169,7 @@ asm void GXSetDrawDone() {
 }
 #pragma pop
 
-/* 8035C2F4 0080 .text      GXDrawDone                                                   */
+/* 8035C2F4-8035C374 0080 .text      GXDrawDone                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +179,7 @@ asm void GXDrawDone() {
 }
 #pragma pop
 
-/* 8035C374 0024 .text      GXPixModeSync                                                */
+/* 8035C374-8035C398 0024 .text      GXPixModeSync                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +189,7 @@ asm void GXPixModeSync() {
 }
 #pragma pop
 
-/* 8035C398 0014 .text      GXPokeAlphaMode                                              */
+/* 8035C398-8035C3AC 0014 .text      GXPokeAlphaMode                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -139,7 +199,7 @@ asm void GXPokeAlphaMode() {
 }
 #pragma pop
 
-/* 8035C3AC 0020 .text      GXPokeAlphaRead                                              */
+/* 8035C3AC-8035C3CC 0020 .text      GXPokeAlphaRead                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -149,7 +209,7 @@ asm void GXPokeAlphaRead() {
 }
 #pragma pop
 
-/* 8035C3CC 0018 .text      GXPokeAlphaUpdate                                            */
+/* 8035C3CC-8035C3E4 0018 .text      GXPokeAlphaUpdate                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -159,7 +219,7 @@ asm void GXPokeAlphaUpdate() {
 }
 #pragma pop
 
-/* 8035C3E4 0064 .text      GXPokeBlendMode                                              */
+/* 8035C3E4-8035C448 0064 .text      GXPokeBlendMode                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -169,7 +229,7 @@ asm void GXPokeBlendMode() {
 }
 #pragma pop
 
-/* 8035C448 0018 .text      GXPokeColorUpdate                                            */
+/* 8035C448-8035C460 0018 .text      GXPokeColorUpdate                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -179,7 +239,7 @@ asm void GXPokeColorUpdate() {
 }
 #pragma pop
 
-/* 8035C460 0024 .text      GXPokeDstAlpha                                               */
+/* 8035C460-8035C484 0024 .text      GXPokeDstAlpha                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +249,7 @@ asm void GXPokeDstAlpha() {
 }
 #pragma pop
 
-/* 8035C484 0018 .text      GXPokeDither                                                 */
+/* 8035C484-8035C49C 0018 .text      GXPokeDither                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -199,7 +259,7 @@ asm void GXPokeDither() {
 }
 #pragma pop
 
-/* 8035C49C 0020 .text      GXPokeZMode                                                  */
+/* 8035C49C-8035C4BC 0020 .text      GXPokeZMode                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -209,7 +269,7 @@ asm void GXPokeZMode() {
 }
 #pragma pop
 
-/* 8035C4BC 0024 .text      GXPeekZ                                                      */
+/* 8035C4BC-8035C4E0 0024 .text      GXPeekZ                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -219,7 +279,7 @@ asm void GXPeekZ() {
 }
 #pragma pop
 
-/* 8035C4E0 0044 .text      GXSetDrawSyncCallback                                        */
+/* 8035C4E0-8035C524 0044 .text      GXSetDrawSyncCallback                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,7 +289,7 @@ asm void GXSetDrawSyncCallback() {
 }
 #pragma pop
 
-/* 8035C524 0088 .text      GXTokenInterruptHandler                                      */
+/* 8035C524-8035C5AC 0088 .text      GXTokenInterruptHandler                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,7 +299,7 @@ asm void GXTokenInterruptHandler() {
 }
 #pragma pop
 
-/* 8035C5AC 0044 .text      GXSetDrawDoneCallback                                        */
+/* 8035C5AC-8035C5F0 0044 .text      GXSetDrawDoneCallback                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -249,7 +309,7 @@ asm void GXSetDrawDoneCallback() {
 }
 #pragma pop
 
-/* 8035C5F0 0080 .text      GXFinishInterruptHandler                                     */
+/* 8035C5F0-8035C670 0080 .text      GXFinishInterruptHandler                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +319,7 @@ asm void GXFinishInterruptHandler() {
 }
 #pragma pop
 
-/* 8035C670 0074 .text      __GXPEInit                                                   */
+/* 8035C670-8035C6E4 0074 .text      __GXPEInit                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

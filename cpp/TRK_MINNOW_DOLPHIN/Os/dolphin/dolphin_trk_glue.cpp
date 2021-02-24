@@ -9,50 +9,134 @@
 // 
 
 extern "C" {
-extern void TRK_memcpy();
+/* Function             */
+SECTION_INIT extern void TRK_memcpy();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void PPCHalt();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void ICInvalidateRange();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void TRKInterruptHandler();
+/* Function             */
 extern void TRKLoadContext();
+/* ReturnFunction       */
+extern void TRKUARTInterruptHandler();
+/* Function             */
+extern void InitializeProgramEndTrap();
+/* Function             */
+extern void TRK_board_display();
+/* Function             */
+extern void UnreserveEXI2Port();
+/* Function             */
+extern void ReserveEXI2Port();
+/* Function             */
+extern void TRKWriteUARTN();
+/* Function             */
+extern void TRKReadUARTN();
+/* Function             */
+extern void TRKPollUART();
+/* Function             */
+extern void EnableEXI2Interrupts();
+/* Function             */
+extern void TRKInitializeIntDrivenUART();
+/* Function             */
+extern void InitMetroTRKCommTable();
+/* Function             */
 extern void TRKEXICallBack();
-extern int udp_cc_post_stop();
-extern int udp_cc_pre_continue();
-extern int udp_cc_peek();
-extern int udp_cc_write();
-extern int udp_cc_read();
-extern int udp_cc_close();
-extern int udp_cc_open();
-extern int udp_cc_shutdown();
-extern int udp_cc_initialize();
+/* ReturnIntegerFunction */
+extern  int udp_cc_post_stop();
+/* ReturnIntegerFunction */
+extern  int udp_cc_pre_continue();
+/* ReturnIntegerFunction */
+extern  int udp_cc_peek();
+/* ReturnIntegerFunction */
+extern  int udp_cc_write();
+/* ReturnIntegerFunction */
+extern  int udp_cc_read();
+/* ReturnIntegerFunction */
+extern  int udp_cc_close();
+/* ReturnIntegerFunction */
+extern  int udp_cc_open();
+/* ReturnIntegerFunction */
+extern  int udp_cc_shutdown();
+/* ReturnIntegerFunction */
+extern  int udp_cc_initialize();
+/* Function             */
 extern void ddh_cc_initinterrupts();
+/* Function             */
 extern void ddh_cc_peek();
+/* Function             */
 extern void ddh_cc_post_stop();
+/* Function             */
 extern void ddh_cc_pre_continue();
+/* Function             */
 extern void ddh_cc_write();
+/* Function             */
 extern void ddh_cc_read();
-extern int ddh_cc_close();
+/* ReturnIntegerFunction */
+extern  int ddh_cc_close();
+/* Function             */
 extern void ddh_cc_open();
-extern int ddh_cc_shutdown();
+/* ReturnIntegerFunction */
+extern  int ddh_cc_shutdown();
+/* Function             */
 extern void ddh_cc_initialize();
+/* Function             */
 extern void gdev_cc_initinterrupts();
+/* Function             */
 extern void gdev_cc_peek();
+/* Function             */
 extern void gdev_cc_post_stop();
+/* Function             */
 extern void gdev_cc_pre_continue();
+/* Function             */
 extern void gdev_cc_write();
+/* Function             */
 extern void gdev_cc_read();
-extern int gdev_cc_close();
+/* ReturnIntegerFunction */
+extern  int gdev_cc_close();
+/* Function             */
 extern void gdev_cc_open();
-extern int gdev_cc_shutdown();
+/* ReturnIntegerFunction */
+extern  int gdev_cc_shutdown();
+/* Function             */
 extern void gdev_cc_initialize();
-extern int AMC_IsStub();
-extern int Hu_IsStub();
+/* ReturnIntegerFunction */
+extern  int AMC_IsStub();
+/* ReturnIntegerFunction */
+extern  int Hu_IsStub();
+/* InitializedData      */
 SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__data_803A2C08[4];
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_165[4];
+/* InitializedData      */
+SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__LIT_215[24];
+/* InitializedData      */
+SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__LIT_216[24];
+/* InitializedData      */
+SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__LIT_217[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_218[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__LIT_219[44];
+/* InitializedData      */
+SECTION_RODATA extern const u8 Os_dolphin_dolphin_trk_glue__LIT_220[48];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_221[44];
+/* InitializedData      */
 SECTION_DATA extern u8 gDBCommTable[40];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_8044F820[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 _MetroTRK_Has_Framing[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_8044F828[8];
 }
 
 
@@ -61,30 +145,30 @@ SECTION_BSS extern u8 data_8044F820[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2C08 0000 .rodata    ...rodata.0                                                  */
-/* 803A2C08 0004 .rodata    EndofProgramInstruction$162                                  */
+/* 803A2C08-803A2C08 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 803A2C08-803A2C0C 0004 .rodata    EndofProgramInstruction$162                                  InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__data_803A2C08[4] = {
 	0x00, 0x45, 0x4E, 0x44,
 };
-/* 803A2C0C 0004 .rodata    @165                                                         */
+/* 803A2C0C-803A2C10 0004 .rodata    @165                                                         InitializedData */
 SECTION_RODATA const u8 LIT_165[4] = {
 	0x25, 0x73, 0x0A, 0x00,
 };
-/* 803A2C10 0015 .rodata    @215                                                         */
+/* 803A2C10-803A2C28 0015 .rodata    @215                                                         InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_215[24] = {
 	0x44, 0x65, 0x76, 0x6B, 0x69, 0x74, 0x20, 0x73, 0x65, 0x74, 0x20, 0x74, 0x6F, 0x20, 0x3A, 0x20,
 	0x25, 0x6C, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803A2C28 0017 .rodata    @216                                                         */
+/* 803A2C28-803A2C40 0017 .rodata    @216                                                         InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_216[24] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x42, 0x42, 0x41, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803A2C40 0021 .rodata    @217                                                         */
+/* 803A2C40-803A2C64 0021 .rodata    @217                                                         InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_217[36] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x0A,
@@ -92,13 +176,13 @@ SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_217[36] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803A2C64 0024 .rodata    @218                                                         */
+/* 803A2C64-803A2C88 0024 .rodata    @218                                                         InitializedData */
 SECTION_RODATA const u8 LIT_218[36] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x41, 0x4D, 0x43, 0x20, 0x44, 0x44, 0x48, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,
 	0x72, 0x65, 0x0A, 0x00,
 };
-/* 803A2C88 002B .rodata    @219                                                         */
+/* 803A2C88-803A2CB4 002B .rodata    @219                                                         InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_219[44] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x53, 0x65, 0x74, 0x20, 0x74,
 	0x6F, 0x20, 0x55, 0x4E, 0x4B, 0x4E, 0x4F, 0x57, 0x4E, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61,
@@ -106,7 +190,7 @@ SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_219[44] = {
 	/* padding */
 	0x00,
 };
-/* 803A2CB4 002F .rodata    @220                                                         */
+/* 803A2CB4-803A2CE4 002F .rodata    @220                                                         InitializedData */
 SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_220[48] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x49, 0x6E, 0x76, 0x61, 0x6C,
 	0x69, 0x64, 0x20, 0x68, 0x61, 0x72, 0x64, 0x77, 0x61, 0x72, 0x65, 0x20, 0x49, 0x44, 0x20, 0x70,
@@ -114,7 +198,7 @@ SECTION_RODATA const u8 Os_dolphin_dolphin_trk_glue__LIT_220[48] = {
 	/* padding */
 	0x00,
 };
-/* 803A2CE4 0028 .rodata    @221                                                         */
+/* 803A2CE4-803A2D10 0028 .rodata    @221                                                         InitializedData */
 SECTION_RODATA const u8 LIT_221[44] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x3A, 0x20, 0x44, 0x65, 0x66, 0x61, 0x75,
 	0x6C, 0x74, 0x69, 0x6E, 0x67, 0x20, 0x74, 0x6F, 0x20, 0x47, 0x44, 0x45, 0x56, 0x20, 0x48, 0x61,
@@ -130,7 +214,7 @@ SECTION_RODATA const u8 LIT_221[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D32A8 0028 .data      gDBCommTable                                                 */
+/* 803D32A8-803D32D0 0028 .data      gDBCommTable                                                 InitializedData */
 SECTION_DATA u8 gDBCommTable[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -144,9 +228,11 @@ SECTION_DATA u8 gDBCommTable[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044F824 0004 .bss       _MetroTRK_Has_Framing                                        */
+/* 8044F820-8044F824 0004 .bss       data_8044F820                                                ZeroInitializedData */
+SECTION_BSS u8 data_8044F820[4];
+/* 8044F824-8044F828 0004 .bss       _MetroTRK_Has_Framing                                        ZeroInitializedData */
 SECTION_BSS u8 _MetroTRK_Has_Framing[4];
-/* 8044F828 0008 .bss       data_8044F828                                                */
+/* 8044F828-8044F830 0008 .bss       data_8044F828                                                ZeroInitializedData */
 SECTION_BSS u8 data_8044F828[8];
 }
 
@@ -156,7 +242,7 @@ SECTION_BSS u8 data_8044F828[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80371BF4 0088 .text      TRKLoadContext                                               */
+/* 80371BF4-80371C7C 0088 .text      TRKLoadContext                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -166,12 +252,12 @@ asm void TRKLoadContext() {
 }
 #pragma pop
 
-/* 80371C7C 0004 .text      TRKUARTInterruptHandler                                      */
+/* 80371C7C-80371C80 0004 .text      TRKUARTInterruptHandler                                      ReturnFunction */
 void TRKUARTInterruptHandler() {
 	return;
 }
 
-/* 80371C80 0058 .text      InitializeProgramEndTrap                                     */
+/* 80371C80-80371CD8 0058 .text      InitializeProgramEndTrap                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +267,7 @@ asm void InitializeProgramEndTrap() {
 }
 #pragma pop
 
-/* 80371CD8 0030 .text      TRK_board_display                                            */
+/* 80371CD8-80371D08 0030 .text      TRK_board_display                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +277,7 @@ asm void TRK_board_display() {
 }
 #pragma pop
 
-/* 80371D08 0030 .text      UnreserveEXI2Port                                            */
+/* 80371D08-80371D38 0030 .text      UnreserveEXI2Port                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +287,7 @@ asm void UnreserveEXI2Port() {
 }
 #pragma pop
 
-/* 80371D38 0030 .text      ReserveEXI2Port                                              */
+/* 80371D38-80371D68 0030 .text      ReserveEXI2Port                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +297,7 @@ asm void ReserveEXI2Port() {
 }
 #pragma pop
 
-/* 80371D68 003C .text      TRKWriteUARTN                                                */
+/* 80371D68-80371DA4 003C .text      TRKWriteUARTN                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -221,7 +307,7 @@ asm void TRKWriteUARTN() {
 }
 #pragma pop
 
-/* 80371DA4 003C .text      TRKReadUARTN                                                 */
+/* 80371DA4-80371DE0 003C .text      TRKReadUARTN                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -231,7 +317,7 @@ asm void TRKReadUARTN() {
 }
 #pragma pop
 
-/* 80371DE0 0030 .text      TRKPollUART                                                  */
+/* 80371DE0-80371E10 0030 .text      TRKPollUART                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -241,7 +327,7 @@ asm void TRKPollUART() {
 }
 #pragma pop
 
-/* 80371E10 0048 .text      EnableEXI2Interrupts                                         */
+/* 80371E10-80371E58 0048 .text      EnableEXI2Interrupts                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -251,7 +337,7 @@ asm void EnableEXI2Interrupts() {
 }
 #pragma pop
 
-/* 80371E58 0050 .text      TRKInitializeIntDrivenUART                                   */
+/* 80371E58-80371EA8 0050 .text      TRKInitializeIntDrivenUART                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -261,7 +347,7 @@ asm void TRKInitializeIntDrivenUART() {
 }
 #pragma pop
 
-/* 80371EA8 026C .text      InitMetroTRKCommTable                                        */
+/* 80371EA8-80372114 026C .text      InitMetroTRKCommTable                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,7 +357,7 @@ asm void InitMetroTRKCommTable() {
 }
 #pragma pop
 
-/* 80372114 0038 .text      TRKEXICallBack                                               */
+/* 80372114-8037214C 0038 .text      TRKEXICallBack                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,9 +9,15 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __OSLockSramEx();
+/* Function             */
 extern void __OSUnlockSramEx();
+/* Function             */
 extern void ErrorCode2Num();
+/* Function             */
+extern void __DVDStoreErrorCode();
+/* InitializedData      */
 SECTION_DATA extern u8 ErrorTable[72];
 }
 
@@ -21,7 +27,7 @@ SECTION_DATA extern u8 ErrorTable[72];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D16A8 0048 .data      ErrorTable                                                   */
+/* 803D16A8-803D16F0 0048 .data      ErrorTable                                                   InitializedData */
 SECTION_DATA u8 ErrorTable[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x3A, 0x00, 0x00, 0x06, 0x28, 0x00, 0x00, 0x03, 0x02, 0x00,
 	0x00, 0x03, 0x11, 0x00, 0x00, 0x05, 0x20, 0x00, 0x00, 0x05, 0x20, 0x01, 0x00, 0x05, 0x21, 0x00,
@@ -37,7 +43,7 @@ SECTION_DATA u8 ErrorTable[72] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034BA6C 011C .text      ErrorCode2Num                                                */
+/* 8034BA6C-8034BB88 011C .text      ErrorCode2Num                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +53,7 @@ asm void ErrorCode2Num() {
 }
 #pragma pop
 
-/* 8034BB88 007C .text      __DVDStoreErrorCode                                          */
+/* 8034BB88-8034BC04 007C .text      __DVDStoreErrorCode                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,12 +9,23 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void C_MTXPerspective();
+/* Function             */
+extern void C_MTXOrtho();
+/* Function             */
 extern void tanf();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx44__LIT_99;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx44__LIT_100;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 mtx44__LIT_101[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx44__LIT_102;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 mtx44__LIT_105;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 mtx44__LIT_106[4];
 }
 
@@ -24,23 +35,23 @@ SECTION_SDATA2 extern u8 mtx44__LIT_106[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456528 0004 .sdata2    @99                                                          */
+/* 80456528-8045652C 0004 .sdata2    @99                                                          Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 mtx44__LIT_99 = 1.000000f;
-/* 8045652C 0004 .sdata2    @100                                                         */
+/* 8045652C-80456530 0004 .sdata2    @100                                                         Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 mtx44__LIT_100 = 2.000000f;
-/* 80456530 0004 .sdata2    @101                                                         */
+/* 80456530-80456534 0004 .sdata2    @101                                                         InitializedData */
 SECTION_SDATA2 u8 mtx44__LIT_101[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456534 0004 .sdata2    @102                                                         */
+/* 80456534-80456538 0004 .sdata2    @102                                                         Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 mtx44__LIT_102 = -1.000000f;
-/* 80456538 0004 .sdata2    @105                                                         */
+/* 80456538-8045653C 0004 .sdata2    @105                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 mtx44__LIT_105 = 0.500000f;
-/* 8045653C 0004 .sdata2    @106                                                         */
+/* 8045653C-80456540 0004 .sdata2    @106                                                         InitializedData */
 SECTION_SDATA2 u8 mtx44__LIT_106[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
@@ -52,7 +63,7 @@ SECTION_SDATA2 u8 mtx44__LIT_106[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80346F28 00D0 .text      C_MTXPerspective                                             */
+/* 80346F28-80346FF8 00D0 .text      C_MTXPerspective                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +73,7 @@ asm void C_MTXPerspective() {
 }
 #pragma pop
 
-/* 80346FF8 0098 .text      C_MTXOrtho                                                   */
+/* 80346FF8-80347090 0098 .text      C_MTXOrtho                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

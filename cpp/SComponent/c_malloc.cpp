@@ -9,9 +9,20 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void init__3cMlFP7JKRHeap();
+/* Function             */
+extern void memalignB__3cMlFiUl();
+/* Function             */
+extern void free__3cMlFPv();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPv();
-SECTION_SBSS extern u8 Heap__3cMl[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 Heap__3cMl[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80451158[8];
 }
 
 
@@ -20,10 +31,9 @@ SECTION_SBSS extern u8 Heap__3cMl[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451150 0004 .sbss      Heap__3cMl                                                   */
-SECTION_SBSS u8 Heap__3cMl[4];
-SECTION_SBSS u8 pad_80451154[4];
-/* 80451158 0008 .sbss      data_80451158                                                */
+/* 80451150-80451158 0004 .sbss      Heap__3cMl                                                   ZeroInitializedData */
+SECTION_SBSS u8 Heap__3cMl[4 + 4 /* padding */];
+/* 80451158-80451160 0008 .sbss      data_80451158                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451158[8];
 }
 
@@ -33,7 +43,7 @@ SECTION_SBSS u8 data_80451158[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80263220 0008 .text      init__3cMlFP7JKRHeap                                         */
+/* 80263220-80263228 0008 .text      init__3cMlFP7JKRHeap                                         Function */
 // cMl::init(JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -44,7 +54,7 @@ asm void init__3cMlFP7JKRHeap() {
 }
 #pragma pop
 
-/* 80263228 0038 .text      memalignB__3cMlFiUl                                          */
+/* 80263228-80263260 0038 .text      memalignB__3cMlFiUl                                          Function */
 // cMl::memalignB(int, u32)
 #pragma push
 #pragma optimization_level 0
@@ -55,7 +65,7 @@ asm void memalignB__3cMlFiUl() {
 }
 #pragma pop
 
-/* 80263260 002C .text      free__3cMlFPv                                                */
+/* 80263260-8026328C 002C .text      free__3cMlFPv                                                Function */
 // cMl::free(void*)
 #pragma push
 #pragma optimization_level 0

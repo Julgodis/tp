@@ -12,16 +12,32 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void countVertex__12J3DShapeDrawFUl();
+/* Function             */
+extern void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
+/* Function             */
+extern void __ct__12J3DShapeDrawFPCUcUl();
+/* Function             */
+extern void draw__12J3DShapeDrawCFv();
+/* Function             */
 extern void __dt__12J3DShapeDrawFv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void GXCallDisplayList();
+/* Function             */
 extern void _savegpr_18();
+/* Function             */
 extern void _restgpr_18();
-SECTION_DATA extern const void* __vt__12J3DShapeDraw[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DShapeDraw[4];
 }
 
 
@@ -30,8 +46,8 @@ SECTION_DATA extern const void* __vt__12J3DShapeDraw[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CDC68 000C .data      __vt__12J3DShapeDraw                                         */
-SECTION_DATA const  void* __vt__12J3DShapeDraw[4] = {
+/* 803CDC68-803CDC78 000C .data      __vt__12J3DShapeDraw                                         VTableData */
+SECTION_DATA void* __vt__12J3DShapeDraw[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J3DShapeDrawFv,
@@ -46,7 +62,7 @@ SECTION_DATA const  void* __vt__12J3DShapeDraw[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80314924 0050 .text      countVertex__12J3DShapeDrawFUl                               */
+/* 80314924-80314974 0050 .text      countVertex__12J3DShapeDrawFUl                               Function */
 // J3DShapeDraw::countVertex(u32)
 #pragma push
 #pragma optimization_level 0
@@ -57,7 +73,7 @@ asm void countVertex__12J3DShapeDrawFUl() {
 }
 #pragma pop
 
-/* 80314974 0148 .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    */
+/* 80314974-80314ABC 0148 .text      addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl                    Function */
 // J3DShapeDraw::addTexMtxIndexInDL(u32, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -68,7 +84,7 @@ asm void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl() {
 }
 #pragma pop
 
-/* 80314ABC 0018 .text      __ct__12J3DShapeDrawFPCUcUl                                  */
+/* 80314ABC-80314AD4 0018 .text      __ct__12J3DShapeDrawFPCUcUl                                  Function */
 // J3DShapeDraw::J3DShapeDraw(const u8*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -79,7 +95,7 @@ asm void __ct__12J3DShapeDrawFPCUcUl() {
 }
 #pragma pop
 
-/* 80314AD4 002C .text      draw__12J3DShapeDrawCFv                                      */
+/* 80314AD4-80314B00 002C .text      draw__12J3DShapeDrawCFv                                      Function */
 // J3DShapeDraw::draw(void) const
 #pragma push
 #pragma optimization_level 0
@@ -90,7 +106,7 @@ asm void draw__12J3DShapeDrawCFv() {
 }
 #pragma pop
 
-/* 80314B00 0048 .text      __dt__12J3DShapeDrawFv                                       */
+/* 80314B00-80314B48 0048 .text      __dt__12J3DShapeDrawFv                                       Function */
 // J3DShapeDraw::~J3DShapeDraw(void)
 #pragma push
 #pragma optimization_level 0

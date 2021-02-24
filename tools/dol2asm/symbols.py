@@ -106,6 +106,15 @@ class SectionPart:
         symbol.section = self
         self.symbols.append(symbol)
 
+    def replaceSymbol(self, old, new):
+        new.section = self
+        for i, sym in enumerate(self.symbols):
+            if sym == old:
+                self.symbols[i] = new
+                return
+
+        assert False
+        
     def __repr__(self):
         return self.__str__()
 
@@ -122,6 +131,16 @@ class Symbol:
         self.size = size
         self.padding = padding
         self.section = None
+
+    def getASMReferenceLabel(self, addr):
+        if addr - self.addr != 0:
+            return f"{self.name.reference}+f{addr - self.addr}"
+        else:
+            return self.name.reference
+
+    def getCPPReferenceLabel(self, parent, addr):
+        print(vars(self))
+        assert False
 
     def getInternalReferences(self):
         raise Exception("NOT IMPLEMENTED")
@@ -146,6 +165,7 @@ class Code(Symbol):
     def getInternalReferences(self):
         if not self.internal_references:
             lcd = dasm.LCDisassembler()
+            lcd.reference_fix = True
             lcd.execute(self.addr, self.data, self.size)
             self.internal_references = lcd.labels | lcd.functions
 
@@ -195,6 +215,23 @@ class Function(Symbol):
             self.size -= last_block.padding
             last_block.padding = 0
 
+    def getCPPReferenceLabel(self, parent, addr):
+        assert addr >= self.addr and addr < self.addr + self.size
+        name = self.name.reference
+        if self.name.is_function:
+            name = self.name.demangled.func_name
+
+        if addr == self.addr:
+            return name
+
+        # Althrough, C/C++ will never have reference to the middle of 
+        # functions. This can happen when the compiler create a 
+        # "switchdata" look up array.
+        offset = addr - self.addr
+        assert offset > 0
+        assert offset % 4 == 0
+        return f"(((u32*){name})+{offset // 4})"
+
     def getInternalReferences(self):
         references = set()
         for block in self.blocks:
@@ -236,11 +273,18 @@ class GlobalFunction(Function):
         self.kind = kind
         assert kind == "load" or kind == "reference"
 
+class SInitFunction(Function):
+    def __init__(self, group, section):
+        super().__init__(group, section)
+
 class Data(Symbol):
     def __init__(self, name, addr, size, data=None, offset=0, padding=0):
         super().__init__(name, addr, size, padding)
         self.data = data
         self.offset = offset
+
+    def getCPPReferenceLabel(self, parent, addr):
+        return f"&{self.name.reference}"
 
     def getInternalReferences(self):
         return set()
@@ -284,31 +328,70 @@ class VTableData(InitializedData):
         super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.table = []
 
-    def resolve(self, function_map):
+    def resolve(self, address_interval_tree):
         assert self.section
         library = self.section.tu.library
 
         chunks = util.chunks(self.data, 4)
         addresses = [ struct.unpack(">I", bytes(x))[0] for x in chunks ]
+        self.table = []
         for addr in addresses:
             if addr == 0:
-                self.table.append(None)
+                self.table.append((0, None))
             else:
-                function = function_map[addr]
-                self.table.append(function)
+                symbols = list(address_interval_tree[addr])
+                assert len(symbols) == 1
+                self.table.append((addr, symbols[0].data))
                 library.addReference(addr)
 
     def getInternalReferences(self):
-        return set([ x.addr for x in self.table if x != None ])
+        addrs = [ x[0] for x in self.table if x[1] != None and x[0] > 0 ]
+        base_addr = [ x[1].addr for x in self.table if x[1]]
+        return set(addrs + base_addr)
 
-class Float32Data(InitializedData):
+class SymbolReferenceArrayData(InitializedData):
+    def __init__(self, name, array, addr, offset, data, padding_data=[]):
+        assert len(data) // 4 == len(array)
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+        self.raw_array = array
+        self.array = []
+
+    def resolve(self, address_interval_tree):
+        assert self.section
+        library = self.section.tu.library
+
+        self.array = []
+        for addr in self.raw_array:
+            if addr == 0:
+                self.array.append((0, None))
+            else:
+                symbols = list(address_interval_tree[addr])
+                if len(symbols) == 1:
+                    self.array.append((addr, symbols[0].data))
+                    library.addReference(addr)
+                else:
+                    self.array.append((addr, None))
+
+    def getInternalReferences(self):
+        addrs = [ x[0] for x in self.array if x[1] != None and x[0] > 0 ]
+        base_addr = [ x[1].addr for x in self.array if x[1]]
+        return set(addrs + base_addr)
+
+class LiteralData(InitializedData):
+    def __init__(self, name, addr, offset, data, padding_data=[], comment=None):
+        super().__init__(name, addr, offset, data, padding_data=padding_data)
+
+    def getCPPReferenceLabel(self, parent, addr):
+        return f"&{self.name.reference}"
+
+class Float32Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         assert len(data) == 4
         super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.comment = comment
         self.value = value
 
-class Fraction32Data(InitializedData):
+class Fraction32Data(LiteralData):
     def __init__(self, name, numerator, denominator, addr, offset, data, padding_data=[], comment=None):
         assert len(data) == 4
         super().__init__(name, addr, offset, data, padding_data=padding_data)
@@ -316,14 +399,14 @@ class Fraction32Data(InitializedData):
         self.numerator = numerator
         self.denominator = denominator
 
-class Float64Data(InitializedData):
+class Float64Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         assert len(data) == 8
         super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.comment = comment
         self.value = value
 
-class Fraction64Data(InitializedData):
+class Fraction64Data(LiteralData):
     def __init__(self, name, numerator, denominator, addr, offset, data, padding_data=[], comment=None):
         assert len(data) == 8
         super().__init__(name, addr, offset, data, padding_data=padding_data)
@@ -331,26 +414,26 @@ class Fraction64Data(InitializedData):
         self.numerator = numerator
         self.denominator = denominator
 
-class IntegerData(InitializedData):
+class IntegerData(LiteralData):
     def __init__(self, name, value, type, addr, offset, data, padding_data=[], comment=None):
         super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.comment = comment
         self.integer_value = value
         self.integer_type = type
 
-class S32Data(IntegerData):
+class S32Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         super().__init__(name, value, "s32", addr, offset, data, padding_data=padding_data, comment=comment)
 
-class U32Data(IntegerData):
+class U32Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         super().__init__(name, value, "u32", addr, offset, data, padding_data=padding_data, comment=comment)
 
-class S64Data(IntegerData):
+class S64Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         super().__init__(name, value, "s64", addr, offset, data, padding_data=padding_data, comment=comment)
 
-class U64Data(IntegerData):
+class U64Data(LiteralData):
     def __init__(self, name, value, addr, offset, data, padding_data=[], comment=None):
         super().__init__(name, value, "u64", addr, offset, data, padding_data=padding_data, comment=comment)
 
@@ -361,11 +444,25 @@ class StringData(InitializedData):
         self.encoding_type = encoding_type
         self.decoded_string = decoded_string
 
+    def getCPPReferenceLabel(self, parent, addr):
+        return f"{self.name.reference}"
+
 class StringBaseData(InitializedData):
     def __init__(self, name, strings, addr, offset, data, padding_data=[], comment=None):
         assert len(data) > 0
         super().__init__(name, addr, offset, data, padding_data=padding_data)
         self.strings = strings
+
+    def getCPPReferenceLabel(self, parent, addr):
+        if addr == None:
+            addr = self.addr
+        if addr != self.addr:
+            for string in self.strings:
+                if string.addr == addr:
+                    return f"((char*){self.name.reference}+{addr-self.addr}) /* {string.getCPPReferenceLabel(self, addr)} */"
+            assert False
+        else:
+            return self.name.reference
 
 class MergedInitializedData(Data):
     def __init__(self, group):
@@ -405,8 +502,7 @@ class Section:
         self.binaryExport = False
         self.segments = []
         self.start = self.addr
-        self.end = (self.addr + self.size + self.alignment -
-                    1) & ~(self.alignment - 1)
+        self.end = self.addr + self.size
         self.extra_flags = ""
 
         self.flags = "a"
@@ -430,6 +526,8 @@ class Section:
             self.export_name = "extabindex_"
         if name == ".extab":
             self.export_name = "extab_"
+
+        self.code_segments = [ (self.start, self.end - self.start) ]
 
     def hasAddr(self, addr):
         return addr >= self.start and addr < self.end

@@ -9,10 +9,20 @@
 // 
 
 extern "C" {
-SECTION_DATA extern u8 LIT_182[92];
-SECTION_DATA extern u8 LIT_181[148];
+/* Function             */
+extern void GXSetGPMetric();
+/* Function             */
+extern void GXClearGPMetric();
+/* Function             */
+extern void GXReadXfRasMetric();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_182[23];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_181[37];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __cpReg[4];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -21,28 +31,72 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D2858 005C .data      @182                                                         */
-SECTION_DATA u8 LIT_182[92] = {
-	0x80, 0x36, 0x0B, 0xE4, 0x80, 0x36, 0x0C, 0x00, 0x80, 0x36, 0x0C, 0x1C, 0x80, 0x36, 0x0C, 0x38,
-	0x80, 0x36, 0x0C, 0x8C, 0x80, 0x36, 0x0C, 0xA8, 0x80, 0x36, 0x0C, 0xC4, 0x80, 0x36, 0x0C, 0xE0,
-	0x80, 0x36, 0x0C, 0x54, 0x80, 0x36, 0x0C, 0xFC, 0x80, 0x36, 0x0D, 0x2C, 0x80, 0x36, 0x0D, 0x5C,
-	0x80, 0x36, 0x0D, 0x8C, 0x80, 0x36, 0x0D, 0xBC, 0x80, 0x36, 0x0D, 0xEC, 0x80, 0x36, 0x0E, 0x1C,
-	0x80, 0x36, 0x0E, 0x4C, 0x80, 0x36, 0x0E, 0x78, 0x80, 0x36, 0x0E, 0x88, 0x80, 0x36, 0x0E, 0x98,
-	0x80, 0x36, 0x0E, 0xA8, 0x80, 0x36, 0x0C, 0x70, 0x80, 0x36, 0x0E, 0xB4,
+/* 803D2858-803D28B4 005C .data      @182                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_182[23] = {
+	(void*)(((u32*)GXSetGPMetric)+346),
+	(void*)(((u32*)GXSetGPMetric)+353),
+	(void*)(((u32*)GXSetGPMetric)+360),
+	(void*)(((u32*)GXSetGPMetric)+367),
+	(void*)(((u32*)GXSetGPMetric)+388),
+	(void*)(((u32*)GXSetGPMetric)+395),
+	(void*)(((u32*)GXSetGPMetric)+402),
+	(void*)(((u32*)GXSetGPMetric)+409),
+	(void*)(((u32*)GXSetGPMetric)+374),
+	(void*)(((u32*)GXSetGPMetric)+416),
+	(void*)(((u32*)GXSetGPMetric)+428),
+	(void*)(((u32*)GXSetGPMetric)+440),
+	(void*)(((u32*)GXSetGPMetric)+452),
+	(void*)(((u32*)GXSetGPMetric)+464),
+	(void*)(((u32*)GXSetGPMetric)+476),
+	(void*)(((u32*)GXSetGPMetric)+488),
+	(void*)(((u32*)GXSetGPMetric)+500),
+	(void*)(((u32*)GXSetGPMetric)+511),
+	(void*)(((u32*)GXSetGPMetric)+515),
+	(void*)(((u32*)GXSetGPMetric)+519),
+	(void*)(((u32*)GXSetGPMetric)+523),
+	(void*)(((u32*)GXSetGPMetric)+381),
+	(void*)(((u32*)GXSetGPMetric)+526),
 };
-/* 803D28B4 0090 .data      @181                                                         */
-SECTION_DATA u8 LIT_181[148] = {
-	0x80, 0x36, 0x07, 0xB8, 0x80, 0x36, 0x07, 0xD8, 0x80, 0x36, 0x07, 0xF8, 0x80, 0x36, 0x08, 0x18,
-	0x80, 0x36, 0x08, 0x38, 0x80, 0x36, 0x08, 0x58, 0x80, 0x36, 0x08, 0x78, 0x80, 0x36, 0x08, 0x98,
-	0x80, 0x36, 0x08, 0xB8, 0x80, 0x36, 0x08, 0xD8, 0x80, 0x36, 0x09, 0x18, 0x80, 0x36, 0x09, 0x38,
-	0x80, 0x36, 0x09, 0x54, 0x80, 0x36, 0x09, 0x70, 0x80, 0x36, 0x09, 0x8C, 0x80, 0x36, 0x09, 0xA8,
-	0x80, 0x36, 0x09, 0xC4, 0x80, 0x36, 0x09, 0xE0, 0x80, 0x36, 0x09, 0xFC, 0x80, 0x36, 0x0A, 0x18,
-	0x80, 0x36, 0x0A, 0x34, 0x80, 0x36, 0x0A, 0x50, 0x80, 0x36, 0x0A, 0x6C, 0x80, 0x36, 0x0A, 0x88,
-	0x80, 0x36, 0x0A, 0xA4, 0x80, 0x36, 0x0A, 0xC0, 0x80, 0x36, 0x0A, 0xDC, 0x80, 0x36, 0x0A, 0xF8,
-	0x80, 0x36, 0x0B, 0x14, 0x80, 0x36, 0x0B, 0x30, 0x80, 0x36, 0x0B, 0x4C, 0x80, 0x36, 0x0B, 0x68,
-	0x80, 0x36, 0x0B, 0x84, 0x80, 0x36, 0x0B, 0xA0, 0x80, 0x36, 0x08, 0xF8, 0x80, 0x36, 0x0B, 0xB8,
+/* 803D28B4-803D2948 0090 .data      @181                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_181[37] = {
+	(void*)(((u32*)GXSetGPMetric)+79),
+	(void*)(((u32*)GXSetGPMetric)+87),
+	(void*)(((u32*)GXSetGPMetric)+95),
+	(void*)(((u32*)GXSetGPMetric)+103),
+	(void*)(((u32*)GXSetGPMetric)+111),
+	(void*)(((u32*)GXSetGPMetric)+119),
+	(void*)(((u32*)GXSetGPMetric)+127),
+	(void*)(((u32*)GXSetGPMetric)+135),
+	(void*)(((u32*)GXSetGPMetric)+143),
+	(void*)(((u32*)GXSetGPMetric)+151),
+	(void*)(((u32*)GXSetGPMetric)+167),
+	(void*)(((u32*)GXSetGPMetric)+175),
+	(void*)(((u32*)GXSetGPMetric)+182),
+	(void*)(((u32*)GXSetGPMetric)+189),
+	(void*)(((u32*)GXSetGPMetric)+196),
+	(void*)(((u32*)GXSetGPMetric)+203),
+	(void*)(((u32*)GXSetGPMetric)+210),
+	(void*)(((u32*)GXSetGPMetric)+217),
+	(void*)(((u32*)GXSetGPMetric)+224),
+	(void*)(((u32*)GXSetGPMetric)+231),
+	(void*)(((u32*)GXSetGPMetric)+238),
+	(void*)(((u32*)GXSetGPMetric)+245),
+	(void*)(((u32*)GXSetGPMetric)+252),
+	(void*)(((u32*)GXSetGPMetric)+259),
+	(void*)(((u32*)GXSetGPMetric)+266),
+	(void*)(((u32*)GXSetGPMetric)+273),
+	(void*)(((u32*)GXSetGPMetric)+280),
+	(void*)(((u32*)GXSetGPMetric)+287),
+	(void*)(((u32*)GXSetGPMetric)+294),
+	(void*)(((u32*)GXSetGPMetric)+301),
+	(void*)(((u32*)GXSetGPMetric)+308),
+	(void*)(((u32*)GXSetGPMetric)+315),
+	(void*)(((u32*)GXSetGPMetric)+322),
+	(void*)(((u32*)GXSetGPMetric)+329),
+	(void*)(((u32*)GXSetGPMetric)+159),
+	(void*)(((u32*)GXSetGPMetric)+335),
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -52,7 +106,7 @@ SECTION_DATA u8 LIT_181[148] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036067C 0848 .text      GXSetGPMetric                                                */
+/* 8036067C-80360EC4 0848 .text      GXSetGPMetric                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -62,7 +116,7 @@ asm void GXSetGPMetric() {
 }
 #pragma pop
 
-/* 80360EC4 0010 .text      GXClearGPMetric                                              */
+/* 80360EC4-80360ED4 0010 .text      GXClearGPMetric                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -72,7 +126,7 @@ asm void GXClearGPMetric() {
 }
 #pragma pop
 
-/* 80360ED4 00C4 .text      GXReadXfRasMetric                                            */
+/* 80360ED4-80360F98 00C4 .text      GXReadXfRasMetric                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

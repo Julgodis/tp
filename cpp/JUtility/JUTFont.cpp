@@ -9,10 +9,22 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ct__7JUTFontFv();
+/* Function             */
+extern void initialize_state__7JUTFontFv();
+/* Function             */
 extern void setCharColor__7JUTFontFQ28JUtility6TColor();
+/* Function             */
+extern void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
+extern void drawString_size_scale__7JUTFontFffffPCcUlb();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_27();
-SECTION_DATA extern const void* __vt__7JUTFont[17];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JUTFont[17];
 }
 
 
@@ -21,7 +33,7 @@ SECTION_DATA extern const void* __vt__7JUTFont[17];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DECF8 002C .text      __ct__7JUTFontFv                                             */
+/* 802DECF8-802DED24 002C .text      __ct__7JUTFontFv                                             Function */
 // JUTFont::JUTFont(void)
 #pragma push
 #pragma optimization_level 0
@@ -32,7 +44,7 @@ asm void __ct__7JUTFontFv() {
 }
 #pragma pop
 
-/* 802DED24 004C .text      initialize_state__7JUTFontFv                                 */
+/* 802DED24-802DED70 004C .text      initialize_state__7JUTFontFv                                 Function */
 // JUTFont::initialize_state(void)
 #pragma push
 #pragma optimization_level 0
@@ -43,7 +55,7 @@ asm void initialize_state__7JUTFontFv() {
 }
 #pragma pop
 
-/* 802DED70 0054 .text      setCharColor__7JUTFontFQ28JUtility6TColor                    */
+/* 802DED70-802DEDC4 0054 .text      setCharColor__7JUTFontFQ28JUtility6TColor                    Function */
 // JUTFont::setCharColor(JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -54,7 +66,7 @@ asm void setCharColor__7JUTFontFQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 802DEDC4 0064 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  */
+/* 802DEDC4-802DEE28 0064 .text      setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor  Function */
 // JUTFont::setGradColor(JUtility::TColor, JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -65,8 +77,8 @@ asm void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor() {
 }
 #pragma pop
 
-/* 802DEE28 0120 .text      drawString_size_scale__7JUTFontFffffPCcUlb                   */
-// JUTFont::drawString_size_scale(f32, f32, f32, f32, const s8*, u32, bool)
+/* 802DEE28-802DEF48 0120 .text      drawString_size_scale__7JUTFontFffffPCcUlb                   Function */
+// JUTFont::drawString_size_scale(f32, f32, f32, f32, const char*, u32, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

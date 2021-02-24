@@ -8,12 +8,16 @@
 // Additional Symbols:
 // 
 
-struct node_list_class;
 struct node_class;
+struct node_list_class;
 
+extern void fpcMtdIt_Method(node_list_class*, int (*)(void*)); /* fpcMtdIt_Method__FP15node_list_classPFPv_i */
 extern void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); /* cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv */
 
 extern "C" {
+/* Function             */
+extern void fpcMtdIt_Method__FP15node_list_classPFPv_i();
+/* Function             */
 extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
 }
 
@@ -23,7 +27,7 @@ extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023764 0024 .text      fpcMtdIt_Method__FP15node_list_classPFPv_i                   */
+/* 80023764-80023788 0024 .text      fpcMtdIt_Method__FP15node_list_classPFPv_i                   Function */
 }
 
 #pragma push

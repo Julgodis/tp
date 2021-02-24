@@ -8,9 +8,9 @@
 // Additional Symbols:
 // 
 
-struct node_list_class;
 struct base_process_class;
 struct layer_class;
+struct node_list_class;
 
 extern void fpcCtIt_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); /* fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv */
 extern void fpcCt_IsCreatingByID(unsigned int); /* fpcCt_IsCreatingByID__FUi */
@@ -28,59 +28,129 @@ extern void fpcLn_Create(void); /* fpcLn_Create__Fv */
 extern void fpcM_Draw(void*); /* fpcM_Draw__FPv */
 extern void fpcM_DrawIterater(int (*)(void*, void*)); /* fpcM_DrawIterater__FPFPvPv_i */
 extern void fpcM_Execute(void*); /* fpcM_Execute__FPv */
+extern void fpcM_Delete(void*); /* fpcM_Delete__FPv */
+extern void fpcM_IsCreating(unsigned int); /* fpcM_IsCreating__FUi */
+extern void fpcM_Management(void (*)(void), void (*)(void)); /* fpcM_Management__FPFv_vPFv_v */
+extern void fpcM_Init(void); /* fpcM_Init__Fv */
+extern void fpcM_FastCreate(short, int (*)(void*), void*, void*); /* fpcM_FastCreate__FsPFPv_iPvPv */
+extern void fpcM_IsPause(void*, u8); /* fpcM_IsPause__FPvUc */
+extern void fpcM_PauseEnable(void*, u8); /* fpcM_PauseEnable__FPvUc */
+extern void fpcM_PauseDisable(void*, u8); /* fpcM_PauseDisable__FPvUc */
+extern void fpcM_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); /* fpcM_JudgeInLayer__FUiPFPvPv_PvPv */
 extern void fpcPi_Handler(void); /* fpcPi_Handler__Fv */
 extern void fpcPause_IsEnable(void*, u8); /* fpcPause_IsEnable__FPvUc */
 extern void fpcPause_Enable(void*, u8); /* fpcPause_Enable__FPvUc */
 extern void fpcPause_Disable(void*, u8); /* fpcPause_Disable__FPvUc */
 extern void fpcDw_Execute(base_process_class*); /* fpcDw_Execute__FP18base_process_class */
 extern void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); /* fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i */
-extern void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); /* fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
+extern void fpcFCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*); /* fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
 extern void cAPIGph_Painter(void); /* cAPIGph_Painter__Fv */
 extern void MtxInit(void); /* MtxInit__Fv */
 
 extern "C" {
+/* Function             */
 extern void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
+/* Function             */
 extern void fpcCt_IsCreatingByID__FUi();
+/* Function             */
 extern void fpcCt_Handler__Fv();
+/* Function             */
 extern void fpcDt_Handler__Fv();
+/* Function             */
 extern void fpcDt_Delete__FPv();
+/* Function             */
 extern void fpcEx_Execute__FP18base_process_class();
+/* Function             */
 extern void fpcEx_Handler__FPFPvPv_i();
+/* Function             */
 extern void fpcLy_RootLayer__Fv();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcLy_Layer__FUi();
+/* Function             */
 extern void fpcLy_Create__FP11layer_classPvP15node_list_classi();
+/* Function             */
 extern void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+/* Function             */
 extern void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
+/* Function             */
 extern void fpcLn_Create__Fv();
+/* Function             */
 extern void fpcM_Draw__FPv();
+/* Function             */
 extern void fpcM_DrawIterater__FPFPvPv_i();
+/* Function             */
 extern void fpcM_Execute__FPv();
+/* Function             */
+extern void fpcM_Delete__FPv();
+/* Function             */
+extern void fpcM_IsCreating__FUi();
+/* Function             */
+extern void fpcM_Management__FPFv_vPFv_v();
+/* Function             */
+extern void fpcM_Init__Fv();
+/* Function             */
+extern void fpcM_FastCreate__FsPFPv_iPvPv();
+/* Function             */
+extern void fpcM_IsPause__FPvUc();
+/* Function             */
+extern void fpcM_PauseEnable__FPvUc();
+/* Function             */
+extern void fpcM_PauseDisable__FPvUc();
+/* Function             */
+extern void fpcM_JudgeInLayer__FUiPFPvPv_PvPv();
+/* Function             */
 extern void fpcPi_Handler__Fv();
+/* Function             */
 extern void fpcPause_IsEnable__FPvUc();
+/* Function             */
 extern void fpcPause_Enable__FPvUc();
+/* Function             */
 extern void fpcPause_Disable__FPvUc();
+/* Function             */
 extern void fpcDw_Execute__FP18base_process_class();
+/* Function             */
 extern void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+/* Function             */
 extern void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+/* Function             */
 extern void drawSimpleModel__14dComIfG_play_cFv();
+/* Function             */
 extern void stopTime__11dLib_time_cFv();
+/* Function             */
 extern void startTime__11dLib_time_cFv();
+/* Function             */
 extern void peekData__13dDlst_peekZ_cFv();
+/* Function             */
 extern void execute__14dDvdErrorMsg_cFv();
+/* Function             */
 extern void execute__19dShutdownErrorMsg_cFv();
+/* Function             */
 extern void cAPIGph_Painter__Fv();
+/* Function             */
 extern void MtxInit__Fv();
+/* Function             */
 extern void pauseAllGameSound__10Z2SoundMgrFb();
+/* Function             */
 extern void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_gamePad__8mDoCPd_c[16];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_803F4DB0[44];
-SECTION_BSS extern u8 data_803F4DDC[124];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_803F4DDC[120 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B60[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D38[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450EC4[4];
 }
 
@@ -90,10 +160,10 @@ SECTION_SBSS extern u8 data_80450EC4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F4DB0 002C .bss       rootlayer$3716                                               */
+/* 803F4DB0-803F4DDC 002C .bss       rootlayer$3716                                               ZeroInitializedData */
 SECTION_BSS u8 data_803F4DB0[44];
-/* 803F4DDC 0078 .bss       queue$3717                                                   */
-SECTION_BSS u8 data_803F4DDC[124];
+/* 803F4DDC-803F4E58 0078 .bss       queue$3717                                                   ZeroInitializedData */
+SECTION_BSS u8 data_803F4DDC[120 + 4 /* padding */];
 }
 
 
@@ -102,7 +172,7 @@ SECTION_BSS u8 data_803F4DDC[124];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800220A0 0020 .text      fpcM_Draw__FPv                                               */
+/* 800220A0-800220C0 0020 .text      fpcM_Draw__FPv                                               Function */
 }
 
 #pragma push
@@ -115,7 +185,7 @@ asm void fpcM_Draw(void*) {
 #pragma pop
 
 extern "C" {
-/* 800220C0 0038 .text      fpcM_DrawIterater__FPFPvPv_i                                 */
+/* 800220C0-800220F8 0038 .text      fpcM_DrawIterater__FPFPvPv_i                                 Function */
 }
 
 #pragma push
@@ -128,7 +198,7 @@ asm void fpcM_DrawIterater(int (*)(void*, void*)) {
 #pragma pop
 
 extern "C" {
-/* 800220F8 0020 .text      fpcM_Execute__FPv                                            */
+/* 800220F8-80022118 0020 .text      fpcM_Execute__FPv                                            Function */
 }
 
 #pragma push
@@ -141,7 +211,7 @@ asm void fpcM_Execute(void*) {
 #pragma pop
 
 extern "C" {
-/* 80022118 0020 .text      fpcM_Delete__FPv                                             */
+/* 80022118-80022138 0020 .text      fpcM_Delete__FPv                                             Function */
 }
 
 #pragma push
@@ -154,7 +224,7 @@ asm void fpcM_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 80022138 0020 .text      fpcM_IsCreating__FUi                                         */
+/* 80022138-80022158 0020 .text      fpcM_IsCreating__FUi                                         Function */
 }
 
 #pragma push
@@ -167,7 +237,7 @@ asm void fpcM_IsCreating(unsigned int) {
 #pragma pop
 
 extern "C" {
-/* 80022158 0160 .text      fpcM_Management__FPFv_vPFv_v                                 */
+/* 80022158-800222B8 0160 .text      fpcM_Management__FPFv_vPFv_v                                 Function */
 }
 
 #pragma push
@@ -180,7 +250,7 @@ asm void fpcM_Management(void (*)(void), void (*)(void)) {
 #pragma pop
 
 extern "C" {
-/* 800222B8 003C .text      fpcM_Init__Fv                                                */
+/* 800222B8-800222F4 003C .text      fpcM_Init__Fv                                                Function */
 }
 
 #pragma push
@@ -193,20 +263,20 @@ asm void fpcM_Init(void) {
 #pragma pop
 
 extern "C" {
-/* 800222F4 0054 .text      fpcM_FastCreate__FsPFPv_iPvPv                                */
+/* 800222F4-80022348 0054 .text      fpcM_FastCreate__FsPFPv_iPvPv                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcM_FastCreate(s16, int (*)(void*), void*, void*) {
+asm void fpcM_FastCreate(short, int (*)(void*), void*, void*) {
 	nofralloc
 #include "_include/f_pc/f_pc_manager/fpcM_FastCreate__FsPFPv_iPvPv.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80022348 0024 .text      fpcM_IsPause__FPvUc                                          */
+/* 80022348-8002236C 0024 .text      fpcM_IsPause__FPvUc                                          Function */
 }
 
 #pragma push
@@ -219,7 +289,7 @@ asm void fpcM_IsPause(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 8002236C 0024 .text      fpcM_PauseEnable__FPvUc                                      */
+/* 8002236C-80022390 0024 .text      fpcM_PauseEnable__FPvUc                                      Function */
 }
 
 #pragma push
@@ -232,7 +302,7 @@ asm void fpcM_PauseEnable(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 80022390 0024 .text      fpcM_PauseDisable__FPvUc                                     */
+/* 80022390-800223B4 0024 .text      fpcM_PauseDisable__FPvUc                                     Function */
 }
 
 #pragma push
@@ -245,7 +315,7 @@ asm void fpcM_PauseDisable(void*, u8) {
 #pragma pop
 
 extern "C" {
-/* 800223B4 0074 .text      fpcM_JudgeInLayer__FUiPFPvPv_PvPv                            */
+/* 800223B4-80022428 0074 .text      fpcM_JudgeInLayer__FUiPFPvPv_PvPv                            Function */
 }
 
 #pragma push

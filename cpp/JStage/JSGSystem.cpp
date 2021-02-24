@@ -11,26 +11,48 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__Q26JStage7TObjectFv();
-extern int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGUpdate__Q26JStage7TObjectFv();
-extern int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnIntegerFunction */
+extern  int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnFunction       */
 extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+/* ReturnFunction       */
 extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+/* ReturnFunction       */
 extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+/* ReturnFunction       */
 extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* ReturnIntegerFunction */
+extern  int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* Function             */
 extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
-extern int JSGFGetType__Q26JStage7TSystemCFv();
-extern int JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
-extern int JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+/* Function             */
+extern void __dt__Q26JStage7TSystemFv();
+/* ReturnIntegerFunction */
+extern  int JSGFGetType__Q26JStage7TSystemCFv();
+/* ReturnIntegerFunction */
+extern  int JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
+/* ReturnIntegerFunction */
+extern  int JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+/* ReturnFunction       */
 extern void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
-extern int JSGGetSystemData__Q26JStage7TSystemFUl();
+/* ReturnIntegerFunction */
+extern  int JSGGetSystemData__Q26JStage7TSystemFUl();
+/* ReturnFunction       */
 extern void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__Q26JStage7TSystem[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q26JStage7TSystem[20];
 }
 
 
@@ -39,8 +61,8 @@ SECTION_DATA extern const void* __vt__Q26JStage7TSystem[20];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4828 0050 .data      __vt__Q26JStage7TSystem                                      */
-SECTION_DATA const  void* __vt__Q26JStage7TSystem[20] = {
+/* 803C4828-803C4878 0050 .data      __vt__Q26JStage7TSystem                                      VTableData */
+SECTION_DATA void* __vt__Q26JStage7TSystem[20] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -70,7 +92,7 @@ SECTION_DATA const  void* __vt__Q26JStage7TSystem[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80280E90 0060 .text      __dt__Q26JStage7TSystemFv                                    */
+/* 80280E90-80280EF0 0060 .text      __dt__Q26JStage7TSystemFv                                    Function */
 // JStage::TSystem::~JStage::TSystem(void)
 #pragma push
 #pragma optimization_level 0
@@ -81,37 +103,37 @@ asm void __dt__Q26JStage7TSystemFv() {
 }
 #pragma pop
 
-/* 80280EF0 0008 .text      JSGFGetType__Q26JStage7TSystemCFv                            */
+/* 80280EF0-80280EF8 0008 .text      JSGFGetType__Q26JStage7TSystemCFv                            ReturnIntegerFunction */
 // JStage::TSystem::JSGFGetType(void) const
 int JSGFGetType__Q26JStage7TSystemCFv() {
 	return 1;
 }
 
-/* 80280EF8 0008 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject */
-// JStage::TSystem::JSGFindObject(JStage::TObject, const s8*, JStage::TEObject) const
+/* 80280EF8-80280F00 0008 .text      JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject ReturnIntegerFunction */
+// JStage::TSystem::JSGFindObject(JStage::TObject, const char*, JStage::TEObject) const
 int JSGFindObject__Q26JStage7TSystemCFPPQ26JStage7TObjectPCcQ26JStage8TEObject() {
 	return 1;
 }
 
-/* 80280F00 0008 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   */
-// JStage::TSystem::JSGCreateObject(const s8*, JStage::TEObject, u32)
+/* 80280F00-80280F08 0008 .text      JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl   ReturnIntegerFunction */
+// JStage::TSystem::JSGCreateObject(const char*, JStage::TEObject, u32)
 int JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl() {
 	return 0;
 }
 
-/* 80280F08 0004 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       */
+/* 80280F08-80280F0C 0004 .text      JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject       ReturnFunction */
 // JStage::TSystem::JSGDestroyObject(JStage::TObject)
 void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject() {
 	return;
 }
 
-/* 80280F0C 0008 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       */
+/* 80280F0C-80280F14 0008 .text      JSGGetSystemData__Q26JStage7TSystemFUl                       ReturnIntegerFunction */
 // JStage::TSystem::JSGGetSystemData(u32)
 int JSGGetSystemData__Q26JStage7TSystemFUl() {
 	return 0;
 }
 
-/* 80280F14 0004 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     */
+/* 80280F14-80280F18 0004 .text      JSGSetSystemData__Q26JStage7TSystemFUlUl                     ReturnFunction */
 // JStage::TSystem::JSGSetSystemData(u32, u32)
 void JSGSetSystemData__Q26JStage7TSystemFUlUl() {
 	return;

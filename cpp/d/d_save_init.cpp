@@ -8,17 +8,26 @@
 // Additional Symbols:
 // 
 
+extern void setInitEventBit(void); /* setInitEventBit__Fv */
+
+extern "C" {
+/* ReturnFunction       */
+extern void setInitEventBit__Fv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80035C88 0004 .text      setInitEventBit__Fv                                          */
-// setInitEventBit(void)
+/* 80035C88-80035C8C 0004 .text      setInitEventBit__Fv                                          ReturnFunction */
+}
+
 void setInitEventBit__Fv() {
 	return;
 }
 
+extern "C" {
 }
 

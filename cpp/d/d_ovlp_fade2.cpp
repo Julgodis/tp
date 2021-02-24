@@ -11,96 +11,205 @@
 struct overlap_task_class;
 struct dOvlpFd2_c;
 
-extern void mDoMtx_ZrotM(f32 (*)[4], s16); /* mDoMtx_ZrotM__FPA4_fs */
+extern void mDoMtx_ZrotM(f32 (*)[4], short); /* mDoMtx_ZrotM__FPA4_fs */
 extern void fopOvlpM_SceneIsStop(void); /* fopOvlpM_SceneIsStop__Fv */
 extern void fopOvlpM_SceneIsStart(void); /* fopOvlpM_SceneIsStart__Fv */
 extern void fopOvlpM_IsOutReq(overlap_task_class*); /* fopOvlpM_IsOutReq__FP18overlap_task_class */
 extern void fopOvlpM_Done(overlap_task_class*); /* fopOvlpM_Done__FP18overlap_task_class */
+extern void dOvlpFd2_Draw(dOvlpFd2_c*); /* dOvlpFd2_Draw__FP10dOvlpFd2_c */
+extern void dOvlpFd2_Execute(dOvlpFd2_c*); /* dOvlpFd2_Execute__FP10dOvlpFd2_c */
+extern void dOvlpFd2_Create(void*); /* dOvlpFd2_Create__FPv */
 extern void cLib_addCalc2(f32*, f32, f32, f32); /* cLib_addCalc2__FPffff */
 extern void cLib_addCalc0(f32*, f32, f32); /* cLib_addCalc0__FPfff */
-extern void cLib_chaseAngleS(s16*, s16, s16); /* cLib_chaseAngleS__FPsss */
+extern void cLib_chaseAngleS(short*, short, short); /* cLib_chaseAngleS__FPsss */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoMtx_ZrotM__FPA4_fs();
+/* Function             */
 extern void scaleM__14mDoMtx_stack_cFfff();
+/* Function             */
 extern void fopOvlpM_SceneIsStop__Fv();
+/* Function             */
 extern void fopOvlpM_SceneIsStart__Fv();
+/* Function             */
 extern void fopOvlpM_IsOutReq__FP18overlap_task_class();
+/* Function             */
 extern void fopOvlpM_Done__FP18overlap_task_class();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void draw__15dOvlpFd2_dlst_cFv();
+/* Function             */
 extern void __ct__10dOvlpFd2_cFv();
+/* Function             */
+extern void execFirstSnap__10dOvlpFd2_cFv();
+/* Function             */
+extern void execFadeOut__10dOvlpFd2_cFv();
+/* Function             */
+extern void execNextSnap__10dOvlpFd2_cFv();
+/* Function             */
+extern void execFadeIn__10dOvlpFd2_cFv();
+/* Function             */
+extern void dOvlpFd2_Draw__FP10dOvlpFd2_c();
+/* Function             */
+extern void dOvlpFd2_Execute__FP10dOvlpFd2_c();
+/* ReturnIntegerFunction */
+extern  int dOvlpFd2_IsDelete__FP10dOvlpFd2_c();
+/* ReturnIntegerFunction */
+extern  int dOvlpFd2_Delete__FP10dOvlpFd2_c();
+/* Function             */
+extern void dOvlpFd2_Create__FPv();
+/* Function             */
 extern void func_80252E70();
+/* Function             */
 extern void __dt__15dOvlpFd2_dlst_cFv();
+/* Function             */
 extern void cLib_addCalc2__FPffff();
+/* Function             */
 extern void cLib_addCalc0__FPfff();
+/* Function             */
 extern void cLib_chaseAngleS__FPsss();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void func_802E980C();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void C_MTXPerspective();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmt();
+/* Function             */
 extern void GXSetTexCoordGen2();
+/* Function             */
 extern void GXSetNumTexGens();
+/* Function             */
 extern void GXBegin();
+/* Function             */
 extern void GXSetCullMode();
+/* Function             */
 extern void GXSetChanMatColor();
+/* Function             */
 extern void GXSetNumChans();
+/* Function             */
 extern void GXSetChanCtrl();
+/* Function             */
 extern void GXInitTexObj();
+/* Function             */
 extern void GXInitTexObjLOD();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXSetTevColorIn();
+/* Function             */
 extern void GXSetTevAlphaIn();
+/* Function             */
 extern void GXSetTevColorOp();
+/* Function             */
 extern void GXSetTevAlphaOp();
+/* Function             */
 extern void GXSetAlphaCompare();
+/* Function             */
 extern void GXSetTevOrder();
+/* Function             */
 extern void GXSetNumTevStages();
+/* Function             */
 extern void GXSetFog();
+/* Function             */
 extern void GXSetBlendMode();
+/* Function             */
 extern void GXSetZMode();
+/* Function             */
 extern void GXSetZCompLoc();
+/* Function             */
 extern void GXSetDither();
+/* Function             */
 extern void GXSetProjection();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void GXSetViewport();
+/* Function             */
 extern void GXSetScissor();
+/* Function             */
 extern void GXSetClipMode();
+/* Function             */
 extern void __ptmf_scall();
+/* InitializedData      */
 SECTION_DATA extern u8 g_mDoMtx_identity[72];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern u8 d_d_ovlp_fade2__LIT_3695[12];
-SECTION_DATA extern u8 d_d_ovlp_fade2__LIT_3721[12];
-SECTION_DATA extern u8 d_d_ovlp_fade2__LIT_3736[12];
-SECTION_DATA extern u8 d_d_ovlp_fade2__LIT_3765[12];
-SECTION_DATA extern const void* __vt__15dOvlpFd2_dlst_c[5];
-SECTION_DATA extern const void* __vt__16dDlst_snapShot_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopOvlp_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_ovlp_fade2__LIT_3695[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_ovlp_fade2__LIT_3721[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_ovlp_fade2__LIT_3736[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_ovlp_fade2__LIT_3765[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dOvlpFd2_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP2[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dOvlpFd2_dlst_c[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16dDlst_snapShot_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_clearColor[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BE4[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3631[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3683[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3684;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3685;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3686;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_3687;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3688;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3689;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3690;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3691;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_ovlp_fade2__LIT_3757[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_ovlp_fade2__LIT_3794[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_ovlp_fade2__LIT_3795[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3822;
 }
 
@@ -110,35 +219,53 @@ SECTION_SDATA2 extern f32 d_d_ovlp_fade2__LIT_3822;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C2CF0 000C .data      @3695                                                        */
-SECTION_DATA u8 d_d_ovlp_fade2__LIT_3695[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x29, 0xF4,
+/* 803C2CF0-803C2CFC 000C .data      @3695                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_ovlp_fade2__LIT_3695[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFirstSnap__10dOvlpFd2_cFv,
 };
-/* 803C2CFC 000C .data      @3721                                                        */
-SECTION_DATA u8 d_d_ovlp_fade2__LIT_3721[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x2A, 0x78,
+/* 803C2CFC-803C2D08 000C .data      @3721                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_ovlp_fade2__LIT_3721[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFadeOut__10dOvlpFd2_cFv,
 };
-/* 803C2D08 000C .data      @3736                                                        */
-SECTION_DATA u8 d_d_ovlp_fade2__LIT_3736[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x2B, 0xC0,
+/* 803C2D08-803C2D14 000C .data      @3736                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_ovlp_fade2__LIT_3736[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execNextSnap__10dOvlpFd2_cFv,
 };
-/* 803C2D14 000C .data      @3765                                                        */
-SECTION_DATA u8 d_d_ovlp_fade2__LIT_3765[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x2C, 0x68,
+/* 803C2D14-803C2D20 000C .data      @3765                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_ovlp_fade2__LIT_3765[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFadeIn__10dOvlpFd2_cFv,
 };
-/* 803C2D20 0014 .data      l_dOvlpFd2_Method                                            */
-SECTION_DATA u8 l_dOvlpFd2_Method[20] = {
-	0x80, 0x25, 0x2E, 0x44, 0x80, 0x25, 0x2E, 0x3C, 0x80, 0x25, 0x2E, 0x08, 0x80, 0x25, 0x2E, 0x34,
-	0x80, 0x25, 0x2D, 0x0C,
+/* 803C2D20-803C2D34 0014 .data      l_dOvlpFd2_Method                                            SymbolReferenceArrayData */
+SECTION_DATA void* l_dOvlpFd2_Method[5] = {
+	(void*)dOvlpFd2_Create,
+	(void*)dOvlpFd2_Delete__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_Execute,
+	(void*)dOvlpFd2_IsDelete__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_Draw,
 };
-/* 803C2D34 0028 .data      g_profile_OVERLAP2                                           */
-SECTION_DATA u8 g_profile_OVERLAP2[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xFF, 0xFD, 0x00, 0x11, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x01, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x07, 0x00, 0x00, 0x80, 0x3C, 0x2D, 0x20,
+/* 803C2D34-803C2D5C 0028 .data      g_profile_OVERLAP2                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP2[10] = {
+	NULL,
+	(void*)0x0002FFFD,
+	(void*)0x00110000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000120,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x03070000,
+	(void*)&l_dOvlpFd2_Method,
 };
-/* 803C2D5C 0010 .data      __vt__15dOvlpFd2_dlst_c                                      */
-SECTION_DATA const  void* __vt__15dOvlpFd2_dlst_c[5] = {
+/* 803C2D5C-803C2D70 0010 .data      __vt__15dOvlpFd2_dlst_c                                      VTableData */
+SECTION_DATA void* __vt__15dOvlpFd2_dlst_c[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15dOvlpFd2_dlst_cFv,
@@ -154,51 +281,51 @@ SECTION_DATA const  void* __vt__15dOvlpFd2_dlst_c[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454E20 0004 .sdata2    @3631                                                        */
+/* 80454E20-80454E24 0004 .sdata2    @3631                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3631[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80454E24 0004 .sdata2    @3683                                                        */
+/* 80454E24-80454E28 0004 .sdata2    @3683                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3683[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454E28 0004 .sdata2    @3684                                                        */
+/* 80454E28-80454E2C 0004 .sdata2    @3684                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3684 = 608.000000f;
-/* 80454E2C 0004 .sdata2    @3685                                                        */
+/* 80454E2C-80454E30 0004 .sdata2    @3685                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3685 = 448.000000f;
-/* 80454E30 0004 .sdata2    @3686                                                        */
+/* 80454E30-80454E34 0004 .sdata2    @3686                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_3686 = 1.000000f;
-/* 80454E34 0004 .sdata2    @3687                                                        */
+/* 80454E34-80454E38 0004 .sdata2    @3687                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 LIT_3687 = 60.000000f;
-/* 80454E38 0004 .sdata2    @3688                                                        */
+/* 80454E38-80454E3C 0004 .sdata2    @3688                                                        Fraction32Data */
 // 1.3571428f 0x3fadb6db
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3688 = 19.000000f / 14.000000f;
-/* 80454E3C 0004 .sdata2    @3689                                                        */
+/* 80454E3C-80454E40 0004 .sdata2    @3689                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3689 = 100.000000f;
-/* 80454E40 0004 .sdata2    @3690                                                        */
+/* 80454E40-80454E44 0004 .sdata2    @3690                                                        Float32Data */
 // 0x47c35000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3690 = 100000.000000f;
-/* 80454E44 0004 .sdata2    @3691                                                        */
+/* 80454E44-80454E48 0004 .sdata2    @3691                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3691 = -1.000000f;
-/* 80454E48 0004 .sdata2    @3757                                                        */
+/* 80454E48-80454E4C 0004 .sdata2    @3757                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_ovlp_fade2__LIT_3757[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80454E4C 0004 .sdata2    @3794                                                        */
+/* 80454E4C-80454E50 0004 .sdata2    @3794                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_ovlp_fade2__LIT_3794[4] = {
 	0x3C, 0xF5, 0xC2, 0x8F,
 };
-/* 80454E50 0004 .sdata2    @3795                                                        */
+/* 80454E50-80454E54 0004 .sdata2    @3795                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_ovlp_fade2__LIT_3795[4] = {
 	0x3A, 0x83, 0x12, 0x6F,
 };
-/* 80454E54 0004 .sdata2    @3822                                                        */
+/* 80454E54-80454E58 0004 .sdata2    @3822                                                        Float32Data */
 // 0xc3d20000
 SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3822 = -420.000000f;
 }
@@ -209,7 +336,7 @@ SECTION_SDATA2 f32 d_d_ovlp_fade2__LIT_3822 = -420.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8025247C 0514 .text      draw__15dOvlpFd2_dlst_cFv                                    */
+/* 8025247C-80252990 0514 .text      draw__15dOvlpFd2_dlst_cFv                                    Function */
 // dOvlpFd2_dlst_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -220,7 +347,7 @@ asm void draw__15dOvlpFd2_dlst_cFv() {
 }
 #pragma pop
 
-/* 80252990 0064 .text      __ct__10dOvlpFd2_cFv                                         */
+/* 80252990-802529F4 0064 .text      __ct__10dOvlpFd2_cFv                                         Function */
 // dOvlpFd2_c::dOvlpFd2_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -231,7 +358,7 @@ asm void __ct__10dOvlpFd2_cFv() {
 }
 #pragma pop
 
-/* 802529F4 0084 .text      execFirstSnap__10dOvlpFd2_cFv                                */
+/* 802529F4-80252A78 0084 .text      execFirstSnap__10dOvlpFd2_cFv                                Function */
 // dOvlpFd2_c::execFirstSnap(void)
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +369,7 @@ asm void execFirstSnap__10dOvlpFd2_cFv() {
 }
 #pragma pop
 
-/* 80252A78 0148 .text      execFadeOut__10dOvlpFd2_cFv                                  */
+/* 80252A78-80252BC0 0148 .text      execFadeOut__10dOvlpFd2_cFv                                  Function */
 // dOvlpFd2_c::execFadeOut(void)
 #pragma push
 #pragma optimization_level 0
@@ -253,7 +380,7 @@ asm void execFadeOut__10dOvlpFd2_cFv() {
 }
 #pragma pop
 
-/* 80252BC0 00A8 .text      execNextSnap__10dOvlpFd2_cFv                                 */
+/* 80252BC0-80252C68 00A8 .text      execNextSnap__10dOvlpFd2_cFv                                 Function */
 // dOvlpFd2_c::execNextSnap(void)
 #pragma push
 #pragma optimization_level 0
@@ -264,7 +391,7 @@ asm void execNextSnap__10dOvlpFd2_cFv() {
 }
 #pragma pop
 
-/* 80252C68 00A4 .text      execFadeIn__10dOvlpFd2_cFv                                   */
+/* 80252C68-80252D0C 00A4 .text      execFadeIn__10dOvlpFd2_cFv                                   Function */
 // dOvlpFd2_c::execFadeIn(void)
 #pragma push
 #pragma optimization_level 0
@@ -275,7 +402,7 @@ asm void execFadeIn__10dOvlpFd2_cFv() {
 }
 #pragma pop
 
-/* 80252D0C 00FC .text      dOvlpFd2_Draw__FP10dOvlpFd2_c                                */
+/* 80252D0C-80252E08 00FC .text      dOvlpFd2_Draw__FP10dOvlpFd2_c                                Function */
 }
 
 #pragma push
@@ -288,7 +415,7 @@ asm void dOvlpFd2_Draw(dOvlpFd2_c*) {
 #pragma pop
 
 extern "C" {
-/* 80252E08 002C .text      dOvlpFd2_Execute__FP10dOvlpFd2_c                             */
+/* 80252E08-80252E34 002C .text      dOvlpFd2_Execute__FP10dOvlpFd2_c                             Function */
 }
 
 #pragma push
@@ -301,19 +428,19 @@ asm void dOvlpFd2_Execute(dOvlpFd2_c*) {
 #pragma pop
 
 extern "C" {
-/* 80252E34 0008 .text      dOvlpFd2_IsDelete__FP10dOvlpFd2_c                            */
+/* 80252E34-80252E3C 0008 .text      dOvlpFd2_IsDelete__FP10dOvlpFd2_c                            ReturnIntegerFunction */
 // dOvlpFd2_IsDelete(dOvlpFd2_c*)
 int dOvlpFd2_IsDelete__FP10dOvlpFd2_c() {
 	return 1;
 }
 
-/* 80252E3C 0008 .text      dOvlpFd2_Delete__FP10dOvlpFd2_c                              */
+/* 80252E3C-80252E44 0008 .text      dOvlpFd2_Delete__FP10dOvlpFd2_c                              ReturnIntegerFunction */
 // dOvlpFd2_Delete(dOvlpFd2_c*)
 int dOvlpFd2_Delete__FP10dOvlpFd2_c() {
 	return 1;
 }
 
-/* 80252E44 002C .text      dOvlpFd2_Create__FPv                                         */
+/* 80252E44-80252E70 002C .text      dOvlpFd2_Create__FPv                                         Function */
 }
 
 #pragma push
@@ -326,7 +453,7 @@ asm void dOvlpFd2_Create(void*) {
 #pragma pop
 
 extern "C" {
-/* 80252E70 001C .text      cLib_calcTimer<Sc>__FPSc                                     */
+/* 80252E70-80252E8C 001C .text      cLib_calcTimer<Sc>__FPSc                                     Function */
 // cLib_calcTimer<Sc>(s8*)
 #pragma push
 #pragma optimization_level 0
@@ -337,7 +464,7 @@ asm void func_80252E70() {
 }
 #pragma pop
 
-/* 80252E8C 0048 .text      __dt__15dOvlpFd2_dlst_cFv                                    */
+/* 80252E8C-80252ED4 0048 .text      __dt__15dOvlpFd2_dlst_cFv                                    Function */
 // dOvlpFd2_dlst_c::~dOvlpFd2_dlst_c(void)
 #pragma push
 #pragma optimization_level 0

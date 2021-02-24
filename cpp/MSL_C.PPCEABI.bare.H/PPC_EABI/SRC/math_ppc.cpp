@@ -9,10 +9,22 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void cos();
+/* Function             */
 extern void sin();
+/* Function             */
 extern void tan();
+/* Function             */
 extern void acos();
+/* Function             */
+extern void tanf();
+/* Function             */
+extern void sinf();
+/* Function             */
+extern void cosf();
+/* Function             */
+extern void acosf();
 }
 
 
@@ -21,7 +33,7 @@ extern void acos();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C9C4 0024 .text      tanf                                                         */
+/* 8036C9C4-8036C9E8 0024 .text      tanf                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -31,7 +43,7 @@ asm void tanf() {
 }
 #pragma pop
 
-/* 8036C9E8 0024 .text      sinf                                                         */
+/* 8036C9E8-8036CA0C 0024 .text      sinf                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +53,7 @@ asm void sinf() {
 }
 #pragma pop
 
-/* 8036CA0C 0024 .text      cosf                                                         */
+/* 8036CA0C-8036CA30 0024 .text      cosf                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +63,7 @@ asm void cosf() {
 }
 #pragma pop
 
-/* 8036CA30 0024 .text      acosf                                                        */
+/* 8036CA30-8036CA54 0024 .text      acosf                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

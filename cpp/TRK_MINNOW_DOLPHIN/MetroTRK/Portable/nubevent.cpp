@@ -9,11 +9,27 @@
 // 
 
 extern "C" {
-extern void TRK_memcpy();
+/* Function             */
+SECTION_INIT extern void TRK_memcpy();
+/* Function             */
+extern void TRKDestructEvent();
+/* Function             */
+extern void TRKConstructEvent();
+/* Function             */
+extern void TRKPostEvent();
+/* Function             */
+extern void TRKGetNextEvent();
+/* Function             */
+extern void TRKInitializeEventQueue();
+/* Function             */
 extern void TRKReleaseBuffer();
-extern int TRKReleaseMutex();
-extern int TRKAcquireMutex();
-extern int TRKInitializeMutex();
+/* ReturnIntegerFunction */
+extern  int TRKReleaseMutex();
+/* ReturnIntegerFunction */
+extern  int TRKAcquireMutex();
+/* ReturnIntegerFunction */
+extern  int TRKInitializeMutex();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 gTRKEventQueue[40];
 }
 
@@ -23,7 +39,7 @@ SECTION_BSS extern u8 gTRKEventQueue[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D890 0028 .bss       gTRKEventQueue                                               */
+/* 8044D890-8044D8B8 0028 .bss       gTRKEventQueue                                               ZeroInitializedData */
 SECTION_BSS u8 gTRKEventQueue[40];
 }
 
@@ -33,7 +49,7 @@ SECTION_BSS u8 gTRKEventQueue[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CC18 0024 .text      TRKDestructEvent                                             */
+/* 8036CC18-8036CC3C 0024 .text      TRKDestructEvent                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -43,7 +59,7 @@ asm void TRKDestructEvent() {
 }
 #pragma pop
 
-/* 8036CC3C 0018 .text      TRKConstructEvent                                            */
+/* 8036CC3C-8036CC54 0018 .text      TRKConstructEvent                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -53,7 +69,7 @@ asm void TRKConstructEvent() {
 }
 #pragma pop
 
-/* 8036CC54 00E0 .text      TRKPostEvent                                                 */
+/* 8036CC54-8036CD34 00E0 .text      TRKPostEvent                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +79,7 @@ asm void TRKPostEvent() {
 }
 #pragma pop
 
-/* 8036CD34 00B4 .text      TRKGetNextEvent                                              */
+/* 8036CD34-8036CDE8 00B4 .text      TRKGetNextEvent                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +89,7 @@ asm void TRKGetNextEvent() {
 }
 #pragma pop
 
-/* 8036CDE8 0058 .text      TRKInitializeEventQueue                                      */
+/* 8036CDE8-8036CE40 0058 .text      TRKInitializeEventQueue                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

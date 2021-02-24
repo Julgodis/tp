@@ -13,108 +13,247 @@
 // 
 
 struct JKRHeap;
-struct dScnName_c;
+struct request_of_phase_process_class;
 struct scene_class;
 struct Vec;
-struct request_of_phase_process_class;
+struct dScnName_c;
 
-extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, s16); /* mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs */
+extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, short); /* mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs */
 extern void mDoMtx_concatProjView(const f32 (*)[4], const f32 (*)[4], f32 (*)[4]); /* mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f */
 extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHeap */
 extern void fopOvlpM_IsPeek(void); /* fopOvlpM_IsPeek__Fv */
-extern void fopScnM_ChangeReq(scene_class*, s16, s16, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
+extern void fopScnM_ChangeReq(scene_class*, short, short, u16); /* fopScnM_ChangeReq__FP11scene_classssUs */
 extern void dComIfG_resetToOpening(scene_class*); /* dComIfG_resetToOpening__FP11scene_class */
-extern void dComIfGp_setNextStage(const s8*, s16, s8, s8); /* dComIfGp_setNextStage__FPCcsScSc */
+extern void dComIfGp_setNextStage(const char*, short, s8, s8); /* dComIfGp_setNextStage__FPCcsScSc */
 extern void dComIfGs_gameStart(void); /* dComIfGs_gameStart__Fv */
-extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (*)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
+extern void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); /* dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv */
 extern void dKy_clear_game_init(void); /* dKy_clear_game_init__Fv */
 extern void dKy_setLight_init(void); /* dKy_setLight_init__Fv */
-extern void resLoad(request_of_phase_process_class*, s8*); /* resLoad__FP30request_of_phase_process_classPc */
+static void phase_1(char*); /* phase_1__FPc */
+static void phase_2(char*); /* phase_2__FPc */
+extern void resLoad(request_of_phase_process_class*, char*); /* resLoad__FP30request_of_phase_process_classPc */
+extern void dScnName_Draw(dScnName_c*); /* dScnName_Draw__FP10dScnName_c */
+extern void dScnName_Execute(dScnName_c*); /* dScnName_Execute__FP10dScnName_c */
+extern void dScnName_IsDelete(dScnName_c*); /* dScnName_IsDelete__FP10dScnName_c */
+extern void dScnName_Delete(dScnName_c*); /* dScnName_Delete__FP10dScnName_c */
+extern void dScnName_Create(scene_class*); /* dScnName_Create__FP11scene_class */
 extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+/* Function             */
 extern void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+/* GlobalFunction       */
 extern u32 mDoExt_getGameHeap__Fv();
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void fopOvlpM_IsPeek__Fv();
+/* Function             */
 extern void fopScnM_ChangeReq__FP11scene_classssUs();
+/* Function             */
 extern void dComIfG_resetToOpening__FP11scene_class();
+/* Function             */
 extern void dComIfGp_setNextStage__FPCcsScSc();
+/* Function             */
 extern void dComIfGs_gameStart__Fv();
+/* Function             */
 extern void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+/* Function             */
 extern void offFirstBit__21dSv_player_get_item_cFUc();
+/* Function             */
 extern void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+/* Function             */
 extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void cleanup__13dPa_control_cFv();
+/* Function             */
 extern void setViewPort__14dDlst_window_cFffffff();
+/* Function             */
 extern void setScissor__14dDlst_window_cFffff();
+/* Function             */
 extern void Run__12dVibration_cFv();
+/* Function             */
 extern void Init__12dVibration_cFv();
+/* Function             */
 extern void __ct__14dFile_select_cFP10JKRArchive();
+/* Function             */
 extern void _create__14dFile_select_cFv();
+/* Function             */
 extern void _move__14dFile_select_cFv();
+/* Function             */
 extern void _draw__14dFile_select_cFv();
+/* Function             */
 extern void __ct__14dBrightCheck_cFP10JKRArchive();
+/* Function             */
 extern void _move__14dBrightCheck_cFv();
+/* Function             */
 extern void _draw__14dBrightCheck_cFv();
+/* Function             */
 extern void dKy_clear_game_init__Fv();
+/* Function             */
 extern void dKy_setLight_init__Fv();
+/* Function             */
 extern void changeWater__13dMeter2Info_cFUc();
+/* Function             */
 extern void __ct__9dSn_HIO_cFv();
+/* Function             */
+static void phase_1__FPc();
+/* Function             */
+static void phase_2__FPc();
+/* Function             */
 extern void resLoad__FP30request_of_phase_process_classPc();
+/* Function             */
 extern void create__10dScnName_cFv();
+/* Function             */
 extern void setView__10dScnName_cFv();
+/* Function             */
 extern void execute__10dScnName_cFv();
+/* Function             */
 extern void draw__10dScnName_cFv();
+/* Function             */
 extern void __dt__10dScnName_cFv();
+/* Function             */
+extern void FileSelectOpen__10dScnName_cFv();
+/* Function             */
+extern void FileSelectMain__10dScnName_cFv();
+/* Function             */
 extern void FileSelectMainNormal__10dScnName_cFv();
+/* Function             */
+extern void FileSelectClose__10dScnName_cFv();
+/* Function             */
+extern void brightCheckOpen__10dScnName_cFv();
+/* Function             */
+extern void brightCheck__10dScnName_cFv();
+/* Function             */
+extern void changeGameScene__10dScnName_cFv();
+/* Function             */
+extern void dScnName_Draw__FP10dScnName_c();
+/* Function             */
+extern void dScnName_Execute__FP10dScnName_c();
+/* Function             */
+extern void dScnName_IsDelete__FP10dScnName_c();
+/* Function             */
+extern void dScnName_Delete__FP10dScnName_c();
+/* Function             */
+extern void dScnName_Create__FP11scene_class();
+/* Function             */
 extern void __dt__17dScnName_camera_cFv();
+/* Function             */
 extern void __dt__9dSn_HIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_s_name_cpp();
+/* Function             */
 extern void bgmStart__8Z2SeqMgrFUlUll();
+/* Function             */
 extern void bgmStop__8Z2SeqMgrFUll();
+/* Function             */
 extern void bgmStreamPrepare__8Z2SeqMgrFUl();
+/* Function             */
 extern void bgmStreamPlay__8Z2SeqMgrFv();
+/* Function             */
 extern void becomeCurrentHeap__7JKRHeapFv();
+/* Function             */
 extern void destroy__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void create__10JKRExpHeapFUlP7JKRHeapb();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void C_MTXPerspective();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_s_name__stringBase0[32];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopScn_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcNd_Method[6];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_s_name__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3942[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3943[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3944[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3945[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3946[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_s_name__LIT_3947[3];
+/* InitializedData      */
 SECTION_DATA extern u8 MainProc[72];
-SECTION_DATA extern const void* __vt__17dScnName_camera_c[3];
-SECTION_DATA extern const void* __vt__9dSn_HIO_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dScnName_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_NAME_SCENE[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_NAMEEX_SCENE[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dScnName_camera_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dSn_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_BSS extern u8 d_d_s_name__LIT_3822[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_s_name__LIT_3822[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_SDATA extern u8 mRenderModeObj__15mDoMch_render_c[8];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* mRenderModeObj__15mDoMch_render_c[2];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_blackColor[4];
-SECTION_SDATA extern u8 data_80450758[8];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* data_80450758[2];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFader__13mDoGph_gInf_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BE4[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_snHIO[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_s_name__LIT_3923[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_name__LIT_3924;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_name__LIT_3925;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_name__LIT_3926;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 d_d_s_name__LIT_3927;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_s_name__LIT_3928;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3930;
 }
 
@@ -124,10 +263,16 @@ SECTION_SDATA2 extern f64 LIT_3930;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A2A8 001D .rodata    @stringBase0                                                 */
-const char* const stringBase_8039A2A8 = "/res/Object/";
-const char* const stringBase_8039A2B5 = "fileSel";
-const char* const stringBase_8039A2BD = "F_SP108";
+/* 8039A2A8-8039A2C8 001D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039A2A8 = "/res/Object/";
+SECTION_DEAD const char* const stringBase_8039A2B5 = "fileSel";
+SECTION_DEAD const char* const stringBase_8039A2BD = "F_SP108";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A2C5 = "\0\0";
+#pragma pop
 }
 
 
@@ -136,36 +281,48 @@ const char* const stringBase_8039A2BD = "F_SP108";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3040 0000 .data      ...data.0                                                    */
-/* 803C3040 000C .data      cNullVec__6Z2Calc                                            */
+/* 803C3040-803C3040 0000 .data      ...data.0                                                    InitializedData */
+/* 803C3040-803C304C 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_s_name__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C304C 000C .data      @3942                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3942[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x8D, 0xD0,
+/* 803C304C-803C3058 000C .data      @3942                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3942[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectOpen__10dScnName_cFv,
 };
-/* 803C3058 000C .data      @3943                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3943[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x8E, 0x34,
+/* 803C3058-803C3064 000C .data      @3943                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3943[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectMain__10dScnName_cFv,
 };
-/* 803C3064 000C .data      @3944                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3944[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x8F, 0x20,
+/* 803C3064-803C3070 000C .data      @3944                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3944[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectClose__10dScnName_cFv,
 };
-/* 803C3070 000C .data      @3945                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3945[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x8F, 0xD4,
+/* 803C3070-803C307C 000C .data      @3945                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3945[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)brightCheckOpen__10dScnName_cFv,
 };
-/* 803C307C 000C .data      @3946                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3946[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x90, 0x08,
+/* 803C307C-803C3088 000C .data      @3946                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3946[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)brightCheck__10dScnName_cFv,
 };
-/* 803C3088 000C .data      @3947                                                        */
-SECTION_DATA u8 d_d_s_name__LIT_3947[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x25, 0x90, 0xF8,
+/* 803C3088-803C3094 000C .data      @3947                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_s_name__LIT_3947[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)changeGameScene__10dScnName_cFv,
 };
-/* 803C3094 0048 .data      MainProc                                                     */
+/* 803C3094-803C30DC 0048 .data      MainProc                                                     InitializedData */
 SECTION_DATA u8 MainProc[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -173,31 +330,48 @@ SECTION_DATA u8 MainProc[72] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C30DC 0014 .data      l_dScnName_Method                                            */
-SECTION_DATA u8 l_dScnName_Method[20] = {
-	0x80, 0x25, 0x92, 0x58, 0x80, 0x25, 0x92, 0x30, 0x80, 0x25, 0x91, 0xE0, 0x80, 0x25, 0x92, 0x00,
-	0x80, 0x25, 0x91, 0xC0,
+/* 803C30DC-803C30F0 0014 .data      l_dScnName_Method                                            SymbolReferenceArrayData */
+SECTION_DATA void* l_dScnName_Method[5] = {
+	(void*)dScnName_Create,
+	(void*)dScnName_Delete,
+	(void*)dScnName_Execute,
+	(void*)dScnName_IsDelete,
+	(void*)dScnName_Draw,
 };
-/* 803C30F0 0028 .data      g_profile_NAME_SCENE                                         */
-SECTION_DATA u8 g_profile_NAME_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x0D, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x04, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x80, 0x3C, 0x30, 0xDC, 0x00, 0x00, 0x00, 0x00,
+/* 803C30F0-803C3118 0028 .data      g_profile_NAME_SCENE                                         SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_NAME_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000D0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x00000424,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnName_Method,
+	NULL,
 };
-/* 803C3118 0028 .data      g_profile_NAMEEX_SCENE                                       */
-SECTION_DATA u8 g_profile_NAMEEX_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x0E, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x04, 0x24, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x80, 0x3C, 0x30, 0xDC, 0x00, 0x00, 0x00, 0x00,
+/* 803C3118-803C3140 0028 .data      g_profile_NAMEEX_SCENE                                       SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000E0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x00000424,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnName_Method,
+	NULL,
 };
-/* 803C3140 000C .data      __vt__17dScnName_camera_c                                    */
-SECTION_DATA const  void* __vt__17dScnName_camera_c[3] = {
+/* 803C3140-803C314C 000C .data      __vt__17dScnName_camera_c                                    VTableData */
+SECTION_DATA void* __vt__17dScnName_camera_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dScnName_camera_cFv,
 };
-/* 803C314C 000C .data      __vt__9dSn_HIO_c                                             */
-SECTION_DATA const  void* __vt__9dSn_HIO_c[3] = {
+/* 803C314C-803C3158 000C .data      __vt__9dSn_HIO_c                                             VTableData */
+SECTION_DATA void* __vt__9dSn_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dSn_HIO_cFv,
@@ -210,9 +384,10 @@ SECTION_DATA const  void* __vt__9dSn_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450758 0008 .sdata     l_method$3851                                                */
-SECTION_SDATA u8 data_80450758[8] = {
-	0x80, 0x25, 0x87, 0xA4, 0x80, 0x25, 0x88, 0x20,
+/* 80450758-80450760 0008 .sdata     l_method$3851                                                SymbolReferenceArrayData */
+SECTION_SDATA void* data_80450758[2] = {
+	(void*)phase_1,
+	(void*)phase_2,
 };
 }
 
@@ -222,26 +397,26 @@ SECTION_SDATA u8 data_80450758[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454EF8 0004 .sdata2    @3923                                                        */
+/* 80454EF8-80454EFC 0004 .sdata2    @3923                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_s_name__LIT_3923[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454EFC 0004 .sdata2    @3924                                                        */
+/* 80454EFC-80454F00 0004 .sdata2    @3924                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_s_name__LIT_3924 = 1.000000f;
-/* 80454F00 0004 .sdata2    @3925                                                        */
+/* 80454F00-80454F04 0004 .sdata2    @3925                                                        Float32Data */
 // 0x47c35000
 SECTION_SDATA2 f32 d_d_s_name__LIT_3925 = 100000.000000f;
-/* 80454F04 0004 .sdata2    @3926                                                        */
+/* 80454F04-80454F08 0004 .sdata2    @3926                                                        Float32Data */
 // 0x42340000
 SECTION_SDATA2 f32 d_d_s_name__LIT_3926 = 45.000000f;
-/* 80454F08 0004 .sdata2    @3927                                                        */
+/* 80454F08-80454F0C 0004 .sdata2    @3927                                                        Fraction32Data */
 // 1.3571428f 0x3fadb6db
 SECTION_SDATA2 f32 d_d_s_name__LIT_3927 = 19.000000f / 14.000000f;
-/* 80454F0C 0004 .sdata2    @3928                                                        */
+/* 80454F0C-80454F10 0004 .sdata2    @3928                                                        Float32Data */
 // 0xc47a0000
 SECTION_SDATA2 f32 d_d_s_name__LIT_3928 = -1000.000000f;
-/* 80454F10 0008 .sdata2    @3930                                                        */
+/* 80454F10-80454F18 0008 .sdata2    @3930                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_3930 = 4503599627370496.000000;
 }
@@ -252,8 +427,8 @@ SECTION_SDATA2 f64 LIT_3930 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430768 000C .bss       @3822                                                        */
-SECTION_BSS u8 d_d_s_name__LIT_3822[16];
+/* 80430768-80430778 000C .bss       @3822                                                        ZeroInitializedData */
+SECTION_BSS u8 d_d_s_name__LIT_3822[12 + 4 /* padding */];
 }
 
 
@@ -262,7 +437,7 @@ SECTION_BSS u8 d_d_s_name__LIT_3822[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510F0 0008 .sbss      g_snHIO                                                      */
+/* 804510F0-804510F8 0008 .sbss      g_snHIO                                                      ZeroInitializedData */
 SECTION_SBSS u8 g_snHIO[8];
 }
 
@@ -272,7 +447,7 @@ SECTION_SBSS u8 g_snHIO[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8025878C 0018 .text      __ct__9dSn_HIO_cFv                                           */
+/* 8025878C-802587A4 0018 .text      __ct__9dSn_HIO_cFv                                           Function */
 // dSn_HIO_c::dSn_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -283,46 +458,46 @@ asm void __ct__9dSn_HIO_cFv() {
 }
 #pragma pop
 
-/* 802587A4 007C .text      phase_1__FPc                                                 */
+/* 802587A4-80258820 007C .text      phase_1__FPc                                                 Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_1(s8*) {
+asm static void phase_1(char*) {
 	nofralloc
-#include "_include/d/d_s_name/d_d_s_name__phase_1__FPc.s"
+#include "_include/d/d_s_name/phase_1__FPc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80258820 0058 .text      phase_2__FPc                                                 */
+/* 80258820-80258878 0058 .text      phase_2__FPc                                                 Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void phase_2(s8*) {
+asm static void phase_2(char*) {
 	nofralloc
-#include "_include/d/d_s_name/d_d_s_name__phase_2__FPc.s"
+#include "_include/d/d_s_name/phase_2__FPc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80258878 0028 .text      resLoad__FP30request_of_phase_process_classPc                */
+/* 80258878-802588A0 0028 .text      resLoad__FP30request_of_phase_process_classPc                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void resLoad(request_of_phase_process_class*, s8*) {
+asm void resLoad(request_of_phase_process_class*, char*) {
 	nofralloc
 #include "_include/d/d_s_name/resLoad__FP30request_of_phase_process_classPc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802588A0 028C .text      create__10dScnName_cFv                                       */
+/* 802588A0-80258B2C 028C .text      create__10dScnName_cFv                                       Function */
 // dScnName_c::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -333,7 +508,7 @@ asm void create__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258B2C 009C .text      setView__10dScnName_cFv                                      */
+/* 80258B2C-80258BC8 009C .text      setView__10dScnName_cFv                                      Function */
 // dScnName_c::setView(void)
 #pragma push
 #pragma optimization_level 0
@@ -344,7 +519,7 @@ asm void setView__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258BC8 0094 .text      execute__10dScnName_cFv                                      */
+/* 80258BC8-80258C5C 0094 .text      execute__10dScnName_cFv                                      Function */
 // dScnName_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +530,7 @@ asm void execute__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258C5C 006C .text      draw__10dScnName_cFv                                         */
+/* 80258C5C-80258CC8 006C .text      draw__10dScnName_cFv                                         Function */
 // dScnName_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +541,7 @@ asm void draw__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258CC8 0108 .text      __dt__10dScnName_cFv                                         */
+/* 80258CC8-80258DD0 0108 .text      __dt__10dScnName_cFv                                         Function */
 // dScnName_c::~dScnName_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +552,7 @@ asm void __dt__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258DD0 0064 .text      FileSelectOpen__10dScnName_cFv                               */
+/* 80258DD0-80258E34 0064 .text      FileSelectOpen__10dScnName_cFv                               Function */
 // dScnName_c::FileSelectOpen(void)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +563,7 @@ asm void FileSelectOpen__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258E34 0044 .text      FileSelectMain__10dScnName_cFv                               */
+/* 80258E34-80258E78 0044 .text      FileSelectMain__10dScnName_cFv                               Function */
 // dScnName_c::FileSelectMain(void)
 #pragma push
 #pragma optimization_level 0
@@ -399,7 +574,7 @@ asm void FileSelectMain__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258E78 00A8 .text      FileSelectMainNormal__10dScnName_cFv                         */
+/* 80258E78-80258F20 00A8 .text      FileSelectMainNormal__10dScnName_cFv                         Function */
 // dScnName_c::FileSelectMainNormal(void)
 #pragma push
 #pragma optimization_level 0
@@ -410,7 +585,7 @@ asm void FileSelectMainNormal__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258F20 00B4 .text      FileSelectClose__10dScnName_cFv                              */
+/* 80258F20-80258FD4 00B4 .text      FileSelectClose__10dScnName_cFv                              Function */
 // dScnName_c::FileSelectClose(void)
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +596,7 @@ asm void FileSelectClose__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80258FD4 0034 .text      brightCheckOpen__10dScnName_cFv                              */
+/* 80258FD4-80259008 0034 .text      brightCheckOpen__10dScnName_cFv                              Function */
 // dScnName_c::brightCheckOpen(void)
 #pragma push
 #pragma optimization_level 0
@@ -432,7 +607,7 @@ asm void brightCheckOpen__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 80259008 00F0 .text      brightCheck__10dScnName_cFv                                  */
+/* 80259008-802590F8 00F0 .text      brightCheck__10dScnName_cFv                                  Function */
 // dScnName_c::brightCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -443,7 +618,7 @@ asm void brightCheck__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 802590F8 00C8 .text      changeGameScene__10dScnName_cFv                              */
+/* 802590F8-802591C0 00C8 .text      changeGameScene__10dScnName_cFv                              Function */
 // dScnName_c::changeGameScene(void)
 #pragma push
 #pragma optimization_level 0
@@ -454,7 +629,7 @@ asm void changeGameScene__10dScnName_cFv() {
 }
 #pragma pop
 
-/* 802591C0 0020 .text      dScnName_Draw__FP10dScnName_c                                */
+/* 802591C0-802591E0 0020 .text      dScnName_Draw__FP10dScnName_c                                Function */
 }
 
 #pragma push
@@ -467,7 +642,7 @@ asm void dScnName_Draw(dScnName_c*) {
 #pragma pop
 
 extern "C" {
-/* 802591E0 0020 .text      dScnName_Execute__FP10dScnName_c                             */
+/* 802591E0-80259200 0020 .text      dScnName_Execute__FP10dScnName_c                             Function */
 }
 
 #pragma push
@@ -480,7 +655,7 @@ asm void dScnName_Execute(dScnName_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259200 0030 .text      dScnName_IsDelete__FP10dScnName_c                            */
+/* 80259200-80259230 0030 .text      dScnName_IsDelete__FP10dScnName_c                            Function */
 }
 
 #pragma push
@@ -493,7 +668,7 @@ asm void dScnName_IsDelete(dScnName_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259230 0028 .text      dScnName_Delete__FP10dScnName_c                              */
+/* 80259230-80259258 0028 .text      dScnName_Delete__FP10dScnName_c                              Function */
 }
 
 #pragma push
@@ -506,7 +681,7 @@ asm void dScnName_Delete(dScnName_c*) {
 #pragma pop
 
 extern "C" {
-/* 80259258 003C .text      dScnName_Create__FP11scene_class                             */
+/* 80259258-80259294 003C .text      dScnName_Create__FP11scene_class                             Function */
 }
 
 #pragma push
@@ -519,7 +694,7 @@ asm void dScnName_Create(scene_class*) {
 #pragma pop
 
 extern "C" {
-/* 80259294 0048 .text      __dt__17dScnName_camera_cFv                                  */
+/* 80259294-802592DC 0048 .text      __dt__17dScnName_camera_cFv                                  Function */
 // dScnName_camera_c::~dScnName_camera_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -530,7 +705,7 @@ asm void __dt__17dScnName_camera_cFv() {
 }
 #pragma pop
 
-/* 802592DC 0048 .text      __dt__9dSn_HIO_cFv                                           */
+/* 802592DC-80259324 0048 .text      __dt__9dSn_HIO_cFv                                           Function */
 // dSn_HIO_c::~dSn_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -541,7 +716,7 @@ asm void __dt__9dSn_HIO_cFv() {
 }
 #pragma pop
 
-/* 80259324 00DC .text      __sinit_d_s_name_cpp                                         */
+/* 80259324-80259400 00DC .text      __sinit_d_s_name_cpp                                         SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

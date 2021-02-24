@@ -8,22 +8,37 @@
 // Additional Symbols:
 // 
 
+struct delete_tag_class;
 struct create_tag_class;
 struct node_list_class;
-struct delete_tag_class;
 
+extern void fpcDtTg_IsEmpty(void); /* fpcDtTg_IsEmpty__Fv */
 extern void fpcDtTg_ToDeleteQ(delete_tag_class*); /* fpcDtTg_ToDeleteQ__FP16delete_tag_class */
 extern void fpcDtTg_DeleteQTo(delete_tag_class*); /* fpcDtTg_DeleteQTo__FP16delete_tag_class */
+extern void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); /* fpcDtTg_Do__FP16delete_tag_classPFPv_i */
+extern void fpcDtTg_Init(delete_tag_class*, void*); /* fpcDtTg_Init__FP16delete_tag_classPv */
 extern void cTg_SingleCut(create_tag_class*); /* cTg_SingleCut__FP16create_tag_class */
 extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fpcDtTg_IsEmpty__Fv();
+/* Function             */
 extern void fpcDtTg_ToDeleteQ__FP16delete_tag_class();
+/* Function             */
 extern void fpcDtTg_DeleteQTo__FP16delete_tag_class();
+/* Function             */
+extern void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
+/* Function             */
+extern void fpcDtTg_Init__FP16delete_tag_classPv();
+/* Function             */
 extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fpcDtTg_Queue[16];
 }
 
@@ -33,7 +48,7 @@ SECTION_DATA extern u8 g_fpcDtTg_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A39A0 000C .data      g_fpcDtTg_Queue                                              */
+/* 803A39A0-803A39B0 000C .data      g_fpcDtTg_Queue                                              InitializedData */
 SECTION_DATA u8 g_fpcDtTg_Queue[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -47,7 +62,7 @@ SECTION_DATA u8 g_fpcDtTg_Queue[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80020F30 0018 .text      fpcDtTg_IsEmpty__Fv                                          */
+/* 80020F30-80020F48 0018 .text      fpcDtTg_IsEmpty__Fv                                          Function */
 }
 
 #pragma push
@@ -60,7 +75,7 @@ asm void fpcDtTg_IsEmpty(void) {
 #pragma pop
 
 extern "C" {
-/* 80020F48 0034 .text      fpcDtTg_ToDeleteQ__FP16delete_tag_class                      */
+/* 80020F48-80020F7C 0034 .text      fpcDtTg_ToDeleteQ__FP16delete_tag_class                      Function */
 }
 
 #pragma push
@@ -73,7 +88,7 @@ asm void fpcDtTg_ToDeleteQ(delete_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020F7C 0020 .text      fpcDtTg_DeleteQTo__FP16delete_tag_class                      */
+/* 80020F7C-80020F9C 0020 .text      fpcDtTg_DeleteQTo__FP16delete_tag_class                      Function */
 }
 
 #pragma push
@@ -86,7 +101,7 @@ asm void fpcDtTg_DeleteQTo(delete_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020F9C 0080 .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i                       */
+/* 80020F9C-8002101C 0080 .text      fpcDtTg_Do__FP16delete_tag_classPFPv_i                       Function */
 }
 
 #pragma push
@@ -99,7 +114,7 @@ asm void fpcDtTg_Do(delete_tag_class*, int (*)(void*)) {
 #pragma pop
 
 extern "C" {
-/* 8002101C 0024 .text      fpcDtTg_Init__FP16delete_tag_classPv                         */
+/* 8002101C-80021040 0024 .text      fpcDtTg_Init__FP16delete_tag_classPv                         Function */
 }
 
 #pragma push

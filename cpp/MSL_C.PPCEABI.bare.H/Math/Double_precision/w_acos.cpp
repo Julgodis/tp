@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_acos();
+/* Function             */
+extern void acos();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_acos();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C6E0 0020 .text      acos                                                         */
+/* 8036C6E0-8036C700 0020 .text      acos                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

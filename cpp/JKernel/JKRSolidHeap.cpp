@@ -15,56 +15,111 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern int dump_sort__7JKRHeapFv();
+/* ReturnIntegerFunction */
+extern  int dump_sort__7JKRHeapFv();
+/* Function             */
 extern void __ct__7JKRHeapFPvUlP7JKRHeapb();
+/* Function             */
 extern void __dt__7JKRHeapFv();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void callAllDisposer__7JKRHeapFv();
+/* Function             */
 extern void resize__7JKRHeapFPvUl();
+/* Function             */
 extern void getFreeSize__7JKRHeapFv();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void getMaxAllocatableSize__7JKRHeapFi();
+/* Function             */
 extern void dispose__7JKRHeapFPvPv();
+/* Function             */
 extern void dispose__7JKRHeapFv();
+/* Function             */
 extern void __dl__FPv();
+/* ReturnFunction       */
 extern void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
-extern int do_changeGroupID__7JKRHeapFUc();
-extern int do_getCurrentGroupId__7JKRHeapFv();
+/* ReturnIntegerFunction */
+extern  int do_changeGroupID__7JKRHeapFUc();
+/* ReturnIntegerFunction */
+extern  int do_getCurrentGroupId__7JKRHeapFv();
+/* Function             */
+extern void create__12JKRSolidHeapFUlP7JKRHeapb();
+/* Function             */
 extern void do_destroy__12JKRSolidHeapFv();
+/* Function             */
 extern void __ct__12JKRSolidHeapFPvUlP7JKRHeapb();
+/* Function             */
 extern void __dt__12JKRSolidHeapFv();
+/* Function             */
+extern void adjustSize__12JKRSolidHeapFv();
+/* Function             */
 extern void do_alloc__12JKRSolidHeapFUli();
+/* Function             */
 extern void allocFromHead__12JKRSolidHeapFUli();
+/* Function             */
 extern void allocFromTail__12JKRSolidHeapFUli();
+/* Function             */
 extern void do_free__12JKRSolidHeapFPv();
+/* Function             */
 extern void do_freeAll__12JKRSolidHeapFv();
+/* Function             */
 extern void do_freeTail__12JKRSolidHeapFv();
+/* ReturnFunction       */
 extern void do_fillFreeArea__12JKRSolidHeapFv();
+/* Function             */
 extern void do_resize__12JKRSolidHeapFPvUl();
+/* Function             */
 extern void do_getSize__12JKRSolidHeapFPv();
+/* Function             */
 extern void check__12JKRSolidHeapFv();
+/* Function             */
 extern void dump__12JKRSolidHeapFv();
+/* Function             */
 extern void state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl();
+/* Function             */
 extern void state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
+/* Function             */
 extern void getHeapType__12JKRSolidHeapFv();
+/* FirstParamFunction   */
 extern u32 do_getFreeSize__12JKRSolidHeapFv(u8*);
+/* FirstParamFunction   */
 extern u32 do_getMaxFreeBlock__12JKRSolidHeapFv(u8*);
+/* Function             */
 extern void do_getTotalFreeSize__12JKRSolidHeapFv();
+/* Function             */
 extern void JUTReportConsole_f();
+/* Function             */
 extern void JUTWarningConsole_f();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRSolidHeap__stringBase0[344];
-SECTION_DATA extern const void* __vt__12JKRSolidHeap[24];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JKRSolidHeap[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mErrorHandler__7JKRHeap[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JKRSolidHeap__LIT_693[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JKRSolidHeap__LIT_695;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JKRSolidHeap__LIT_697;
 }
 
@@ -74,28 +129,40 @@ SECTION_SDATA2 extern f64 JKRSolidHeap__LIT_697;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039CE50 0157 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039CE50 = 
-    "allocFromHead: cannot alloc memo"
+/* 8039CE50-8039CFA8 0157 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039CE50 = 
+    "allocFromHead: c"
+    "annot alloc memo"
     "ry (0x%x byte).\n";
-const char* const stringBase_8039CE81 = 
-    "allocFromTail: cannot alloc memo"
+SECTION_DEAD const char* const stringBase_8039CE81 = 
+    "allocFromTail: c"
+    "annot alloc memo"
     "ry (0x%x byte).\n";
-const char* const stringBase_8039CEB2 = 
-    "free: cannot free memory block ("
+SECTION_DEAD const char* const stringBase_8039CEB2 = 
+    "free: cannot fre"
+    "e memory block ("
     "%08x)\n";
-const char* const stringBase_8039CED9 = 
-    "resize: cannot resize memory blo"
+SECTION_DEAD const char* const stringBase_8039CED9 = 
+    "resize: cannot r"
+    "esize memory blo"
     "ck (%08x: %d)\n";
-const char* const stringBase_8039CF08 = 
-    "getSize: cannot get memory block"
+SECTION_DEAD const char* const stringBase_8039CF08 = 
+    "getSize: cannot "
+    "get memory block"
     " size (%08x)\n";
-const char* const stringBase_8039CF36 = 
-    "check: bad total memory block si"
+SECTION_DEAD const char* const stringBase_8039CF36 = 
+    "check: bad total"
+    " memory block si"
     "ze (%08X, %08X)\n";
-const char* const stringBase_8039CF67 = "head %08x: %08x\n";
-const char* const stringBase_8039CF78 = "tail %08x: %08x\n";
-const char* const stringBase_8039CF89 = "%d / %d bytes (%6.2f%%) used\n";
+SECTION_DEAD const char* const stringBase_8039CF67 = "head %08x: %08x\n";
+SECTION_DEAD const char* const stringBase_8039CF78 = "tail %08x: %08x\n";
+SECTION_DEAD const char* const stringBase_8039CF89 = "%d / %d bytes (%6.2f%%) used\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039CFA7 = "";
+#pragma pop
 }
 
 
@@ -104,8 +171,8 @@ const char* const stringBase_8039CF89 = "%d / %d bytes (%6.2f%%) used\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC030 0060 .data      __vt__12JKRSolidHeap                                         */
-SECTION_DATA const  void* __vt__12JKRSolidHeap[24] = {
+/* 803CC030-803CC090 0060 .data      __vt__12JKRSolidHeap                                         VTableData */
+SECTION_DATA void* __vt__12JKRSolidHeap[24] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRSolidHeapFv,
@@ -139,16 +206,16 @@ SECTION_DATA const  void* __vt__12JKRSolidHeap[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455FA8 0004 .sdata2    @693                                                         */
+/* 80455FA8-80455FB0 0004 .sdata2    @693                                                         InitializedData */
 SECTION_SDATA2 u8 JKRSolidHeap__LIT_693[8] = {
 	0x42, 0xC8, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455FB0 0008 .sdata2    @695                                                         */
+/* 80455FB0-80455FB8 0008 .sdata2    @695                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 JKRSolidHeap__LIT_695 = 4503601774854144.000000;
-/* 80455FB8 0008 .sdata2    @697                                                         */
+/* 80455FB8-80455FC0 0008 .sdata2    @697                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JKRSolidHeap__LIT_697 = 4503599627370496.000000;
 }
@@ -159,7 +226,7 @@ SECTION_SDATA2 f64 JKRSolidHeap__LIT_697 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D0A24 00AC .text      create__12JKRSolidHeapFUlP7JKRHeapb                          */
+/* 802D0A24-802D0AD0 00AC .text      create__12JKRSolidHeapFUlP7JKRHeapb                          Function */
 // JKRSolidHeap::create(u32, JKRHeap*, bool)
 #pragma push
 #pragma optimization_level 0
@@ -170,7 +237,7 @@ asm void create__12JKRSolidHeapFUlP7JKRHeapb() {
 }
 #pragma pop
 
-/* 802D0AD0 0060 .text      do_destroy__12JKRSolidHeapFv                                 */
+/* 802D0AD0-802D0B30 0060 .text      do_destroy__12JKRSolidHeapFv                                 Function */
 // JKRSolidHeap::do_destroy(void)
 #pragma push
 #pragma optimization_level 0
@@ -181,7 +248,7 @@ asm void do_destroy__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D0B30 005C .text      __ct__12JKRSolidHeapFPvUlP7JKRHeapb                          */
+/* 802D0B30-802D0B8C 005C .text      __ct__12JKRSolidHeapFPvUlP7JKRHeapb                          Function */
 // JKRSolidHeap::JKRSolidHeap(void*, u32, JKRHeap*, bool)
 #pragma push
 #pragma optimization_level 0
@@ -192,7 +259,7 @@ asm void __ct__12JKRSolidHeapFPvUlP7JKRHeapb() {
 }
 #pragma pop
 
-/* 802D0B8C 0068 .text      __dt__12JKRSolidHeapFv                                       */
+/* 802D0B8C-802D0BF4 0068 .text      __dt__12JKRSolidHeapFv                                       Function */
 // JKRSolidHeap::~JKRSolidHeap(void)
 #pragma push
 #pragma optimization_level 0
@@ -203,7 +270,7 @@ asm void __dt__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D0BF4 00BC .text      adjustSize__12JKRSolidHeapFv                                 */
+/* 802D0BF4-802D0CB0 00BC .text      adjustSize__12JKRSolidHeapFv                                 Function */
 // JKRSolidHeap::adjustSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -214,7 +281,7 @@ asm void adjustSize__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D0CB0 00A8 .text      do_alloc__12JKRSolidHeapFUli                                 */
+/* 802D0CB0-802D0D58 00A8 .text      do_alloc__12JKRSolidHeapFUli                                 Function */
 // JKRSolidHeap::do_alloc(u32, int)
 #pragma push
 #pragma optimization_level 0
@@ -225,7 +292,7 @@ asm void do_alloc__12JKRSolidHeapFUli() {
 }
 #pragma pop
 
-/* 802D0D58 00C8 .text      allocFromHead__12JKRSolidHeapFUli                            */
+/* 802D0D58-802D0E20 00C8 .text      allocFromHead__12JKRSolidHeapFUli                            Function */
 // JKRSolidHeap::allocFromHead(u32, int)
 #pragma push
 #pragma optimization_level 0
@@ -236,7 +303,7 @@ asm void allocFromHead__12JKRSolidHeapFUli() {
 }
 #pragma pop
 
-/* 802D0E20 00C4 .text      allocFromTail__12JKRSolidHeapFUli                            */
+/* 802D0E20-802D0EE4 00C4 .text      allocFromTail__12JKRSolidHeapFUli                            Function */
 // JKRSolidHeap::allocFromTail(u32, int)
 #pragma push
 #pragma optimization_level 0
@@ -247,7 +314,7 @@ asm void allocFromTail__12JKRSolidHeapFUli() {
 }
 #pragma pop
 
-/* 802D0EE4 0030 .text      do_free__12JKRSolidHeapFPv                                   */
+/* 802D0EE4-802D0F14 0030 .text      do_free__12JKRSolidHeapFPv                                   Function */
 // JKRSolidHeap::do_free(void*)
 #pragma push
 #pragma optimization_level 0
@@ -258,7 +325,7 @@ asm void do_free__12JKRSolidHeapFPv() {
 }
 #pragma pop
 
-/* 802D0F14 0060 .text      do_freeAll__12JKRSolidHeapFv                                 */
+/* 802D0F14-802D0F74 0060 .text      do_freeAll__12JKRSolidHeapFv                                 Function */
 // JKRSolidHeap::do_freeAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -269,7 +336,7 @@ asm void do_freeAll__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D0F74 008C .text      do_freeTail__12JKRSolidHeapFv                                */
+/* 802D0F74-802D1000 008C .text      do_freeTail__12JKRSolidHeapFv                                Function */
 // JKRSolidHeap::do_freeTail(void)
 #pragma push
 #pragma optimization_level 0
@@ -280,13 +347,13 @@ asm void do_freeTail__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D1000 0004 .text      do_fillFreeArea__12JKRSolidHeapFv                            */
+/* 802D1000-802D1004 0004 .text      do_fillFreeArea__12JKRSolidHeapFv                            ReturnFunction */
 // JKRSolidHeap::do_fillFreeArea(void)
 void do_fillFreeArea__12JKRSolidHeapFv() {
 	return;
 }
 
-/* 802D1004 0034 .text      do_resize__12JKRSolidHeapFPvUl                               */
+/* 802D1004-802D1038 0034 .text      do_resize__12JKRSolidHeapFPvUl                               Function */
 // JKRSolidHeap::do_resize(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -297,7 +364,7 @@ asm void do_resize__12JKRSolidHeapFPvUl() {
 }
 #pragma pop
 
-/* 802D1038 0034 .text      do_getSize__12JKRSolidHeapFPv                                */
+/* 802D1038-802D106C 0034 .text      do_getSize__12JKRSolidHeapFPv                                Function */
 // JKRSolidHeap::do_getSize(void*)
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +375,7 @@ asm void do_getSize__12JKRSolidHeapFPv() {
 }
 #pragma pop
 
-/* 802D106C 0090 .text      check__12JKRSolidHeapFv                                      */
+/* 802D106C-802D10FC 0090 .text      check__12JKRSolidHeapFv                                      Function */
 // JKRSolidHeap::check(void)
 #pragma push
 #pragma optimization_level 0
@@ -319,7 +386,7 @@ asm void check__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D10FC 0100 .text      dump__12JKRSolidHeapFv                                       */
+/* 802D10FC-802D11FC 0100 .text      dump__12JKRSolidHeapFv                                       Function */
 // JKRSolidHeap::dump(void)
 #pragma push
 #pragma optimization_level 0
@@ -330,7 +397,7 @@ asm void dump__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D11FC 005C .text      state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl         */
+/* 802D11FC-802D1258 005C .text      state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl         Function */
 // JKRSolidHeap::state_register(JKRHeap::TState, u32) const
 #pragma push
 #pragma optimization_level 0
@@ -341,7 +408,7 @@ asm void state_register__12JKRSolidHeapCFPQ27JKRHeap6TStateUl() {
 }
 #pragma pop
 
-/* 802D1258 0030 .text      state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState */
+/* 802D1258-802D1288 0030 .text      state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState Function */
 // JKRSolidHeap::state_compare(JKRHeap::TState, JKRHeap::TState) const
 #pragma push
 #pragma optimization_level 0
@@ -352,7 +419,7 @@ asm void state_compare__12JKRSolidHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState()
 }
 #pragma pop
 
-/* 802D1288 000C .text      getHeapType__12JKRSolidHeapFv                                */
+/* 802D1288-802D1294 000C .text      getHeapType__12JKRSolidHeapFv                                Function */
 // JKRSolidHeap::getHeapType(void)
 #pragma push
 #pragma optimization_level 0
@@ -363,19 +430,19 @@ asm void getHeapType__12JKRSolidHeapFv() {
 }
 #pragma pop
 
-/* 802D1294 0008 .text      do_getFreeSize__12JKRSolidHeapFv                             */
+/* 802D1294-802D129C 0008 .text      do_getFreeSize__12JKRSolidHeapFv                             FirstParamFunction */
 // JKRSolidHeap::do_getFreeSize(void)
 u32 do_getFreeSize__12JKRSolidHeapFv(u8* param0) {
 	return *(u32*)&param0[108]; /* param0->field_0x6c */
 }
 
-/* 802D129C 0008 .text      do_getMaxFreeBlock__12JKRSolidHeapFv                         */
+/* 802D129C-802D12A4 0008 .text      do_getMaxFreeBlock__12JKRSolidHeapFv                         FirstParamFunction */
 // JKRSolidHeap::do_getMaxFreeBlock(void)
 u32 do_getMaxFreeBlock__12JKRSolidHeapFv(u8* param0) {
 	return *(u32*)&param0[112]; /* param0->field_0x70 */
 }
 
-/* 802D12A4 0020 .text      do_getTotalFreeSize__12JKRSolidHeapFv                        */
+/* 802D12A4-802D12C4 0020 .text      do_getTotalFreeSize__12JKRSolidHeapFv                        Function */
 // JKRSolidHeap::do_getTotalFreeSize(void)
 #pragma push
 #pragma optimization_level 0

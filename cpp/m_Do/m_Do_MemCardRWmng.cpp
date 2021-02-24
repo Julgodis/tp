@@ -12,40 +12,73 @@
 // Additional Symbols:
 // 
 
-struct CARDFileInfo;
 struct mDoMemCdRWm_HeaderData;
+struct CARDFileInfo;
 
+extern void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32); /* mDoMemCdRWm_Store__FP12CARDFileInfoPvUl */
+extern void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32); /* mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl */
 extern void mDoMemCdRWm_BuildHeader(mDoMemCdRWm_HeaderData*); /* mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData */
 extern void mDoMemCdRWm_SetCardStat(CARDFileInfo*); /* mDoMemCdRWm_SetCardStat__FP12CARDFileInfo */
 extern void mDoMemCdRWm_CheckCardStat(CARDFileInfo*); /* mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo */
 extern void mDoMemCdRWm_CalcCheckSum(void*, u32); /* mDoMemCdRWm_CalcCheckSum__FPvUl */
 extern void mDoMemCdRWm_CalcCheckSumGameData(void*, u32); /* mDoMemCdRWm_CalcCheckSumGameData__FPvUl */
 extern void mDoMemCdRWm_TestCheckSumGameData(void*); /* mDoMemCdRWm_TestCheckSumGameData__FPv */
+extern void mDoMemCdRWm_SetCheckSumGameData(u8*, u8); /* mDoMemCdRWm_SetCheckSumGameData__FPUcUc */
 
 extern "C" {
-extern void memset();
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
+extern void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
+/* Function             */
+extern void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
+/* Function             */
 extern void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData();
+/* Function             */
 extern void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo();
+/* Function             */
 extern void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo();
+/* Function             */
 extern void mDoMemCdRWm_CalcCheckSum__FPvUl();
+/* Function             */
 extern void mDoMemCdRWm_CalcCheckSumGameData__FPvUl();
+/* Function             */
 extern void mDoMemCdRWm_TestCheckSumGameData__FPv();
+/* Function             */
+extern void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void OSTicksToCalendarTime();
+/* Function             */
 extern void CARDRead();
+/* Function             */
 extern void CARDWrite();
+/* Function             */
 extern void CARDGetStatus();
+/* Function             */
 extern void CARDSetStatus();
+/* Function             */
 extern void CARDGetSerialNo();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void snprintf();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_MemCardRWmng__stringBase0[88];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mDoMemCd_control[8192];
-SECTION_BSS extern u8 sTmpBuf[12480];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sTmpBuf[16384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 }
 
@@ -55,11 +88,17 @@ SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80374408 0051 .rodata    @stringBase0                                                 */
-const char* const stringBase_80374408 = "Zelda: Twilight Princess";
-const char* const stringBase_80374421 = "%d/%d Save Data";
-const char* const stringBase_80374431 = "zelda2_gc_banner.bti";
-const char* const stringBase_80374446 = "zelda2_gc_icon.bti";
+/* 80374408-80374460 0051 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80374408 = "Zelda: Twilight Princess";
+SECTION_DEAD const char* const stringBase_80374421 = "%d/%d Save Data";
+SECTION_DEAD const char* const stringBase_80374431 = "zelda2_gc_banner.bti";
+SECTION_DEAD const char* const stringBase_80374446 = "zelda2_gc_icon.bti";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80374459 = "\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -68,10 +107,8 @@ const char* const stringBase_80374446 = "zelda2_gc_icon.bti";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803ECF40 30C0 .bss       sTmpBuf                                                      */
-SECTION_BSS u8 sTmpBuf[12480];
-/* 803F0000 0F40 .bss       data_803F0000                                                */
-SECTION_BSS u8 data_803F0000[3904];
+/* 803ECF40-803F0F40 4000 .bss       sTmpBuf                                                      ZeroInitializedData */
+SECTION_BSS u8 sTmpBuf[16384];
 }
 
 
@@ -80,7 +117,7 @@ SECTION_BSS u8 data_803F0000[3904];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80017498 0204 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      */
+/* 80017498-8001769C 0204 .text      mDoMemCdRWm_Store__FP12CARDFileInfoPvUl                      Function */
 }
 
 #pragma push
@@ -93,7 +130,7 @@ asm void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32) {
 #pragma pop
 
 extern "C" {
-/* 8001769C 01E0 .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    */
+/* 8001769C-8001787C 01E0 .text      mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl                    Function */
 }
 
 #pragma push
@@ -106,7 +143,7 @@ asm void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32) {
 #pragma pop
 
 extern "C" {
-/* 8001787C 0168 .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData          */
+/* 8001787C-800179E4 0168 .text      mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData          Function */
 }
 
 #pragma push
@@ -119,7 +156,7 @@ asm void mDoMemCdRWm_BuildHeader(mDoMemCdRWm_HeaderData*) {
 #pragma pop
 
 extern "C" {
-/* 800179E4 0168 .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo                    */
+/* 800179E4-80017B4C 0168 .text      mDoMemCdRWm_SetCardStat__FP12CARDFileInfo                    Function */
 }
 
 #pragma push
@@ -132,7 +169,7 @@ asm void mDoMemCdRWm_SetCardStat(CARDFileInfo*) {
 #pragma pop
 
 extern "C" {
-/* 80017B4C 0128 .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo                  */
+/* 80017B4C-80017C74 0128 .text      mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo                  Function */
 }
 
 #pragma push
@@ -145,7 +182,7 @@ asm void mDoMemCdRWm_CheckCardStat(CARDFileInfo*) {
 #pragma pop
 
 extern "C" {
-/* 80017C74 0040 .text      mDoMemCdRWm_CalcCheckSum__FPvUl                              */
+/* 80017C74-80017CB4 0040 .text      mDoMemCdRWm_CalcCheckSum__FPvUl                              Function */
 }
 
 #pragma push
@@ -158,7 +195,7 @@ asm void mDoMemCdRWm_CalcCheckSum(void*, u32) {
 #pragma pop
 
 extern "C" {
-/* 80017CB4 0038 .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl                      */
+/* 80017CB4-80017CEC 0038 .text      mDoMemCdRWm_CalcCheckSumGameData__FPvUl                      Function */
 }
 
 #pragma push
@@ -171,7 +208,7 @@ asm void mDoMemCdRWm_CalcCheckSumGameData(void*, u32) {
 #pragma pop
 
 extern "C" {
-/* 80017CEC 004C .text      mDoMemCdRWm_TestCheckSumGameData__FPv                        */
+/* 80017CEC-80017D38 004C .text      mDoMemCdRWm_TestCheckSumGameData__FPv                        Function */
 }
 
 #pragma push
@@ -184,7 +221,7 @@ asm void mDoMemCdRWm_TestCheckSumGameData(void*) {
 #pragma pop
 
 extern "C" {
-/* 80017D38 0044 .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc                      */
+/* 80017D38-80017D7C 0044 .text      mDoMemCdRWm_SetCheckSumGameData__FPUcUc                      Function */
 }
 
 #pragma push

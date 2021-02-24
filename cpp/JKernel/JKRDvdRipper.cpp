@@ -16,71 +16,143 @@ struct JKRDvdFile;
 
 extern void operator delete(void*); /* __dl__FPv */
 extern void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*); /* JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl */
+static void decompSZS_subroutine(u8*, u8*); /* decompSZS_subroutine__FPUcPUc */
+static void firstSrcData(void); /* firstSrcData__Fv */
+static void nextSrcData(u8*); /* nextSrcData__FPUc */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10JKRDvdFileFv();
+/* Function             */
 extern void __dt__10JKRDvdFileFv();
+/* Function             */
 extern void open__10JKRDvdFileFPCc();
+/* Function             */
 extern void open__10JKRDvdFileFl();
+/* Function             */
+extern void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+/* Function             */
+extern void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+/* Function             */
 extern void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+/* Function             */
 extern void JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl();
-extern void JKRDvdRipper__decompSZS_subroutine__FPUcPUc();
-extern void JKRDvdRipper__firstSrcData__Fv();
-extern void JKRDvdRipper__nextSrcData__FPUc();
+/* Function             */
+static void decompSZS_subroutine__FPUcPUc();
+/* Function             */
+static void firstSrcData__Fv();
+/* Function             */
+static void nextSrcData__FPUc();
+/* GlobalFunction       */
 extern u8 isErrorRetry__12JKRDvdRipperFv();
+/* SInitFunction        */
+extern void __sinit_JKRDvdRipper_cpp();
+/* Function             */
 extern void func_802DA820();
+/* Function             */
 extern void orderSync__9JKRDecompFPUcPUcUlUl();
+/* Function             */
 extern void checkCompressed__9JKRDecompFPUc();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void panic_f__12JUTExceptionFPCciPCce();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSInitMutex();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void DVDReadPrio();
+/* Function             */
 extern void VIWaitForRetrace();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_18();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_18();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRDvdRipper__stringBase0[96];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JKRDvdRipper__LIT_491[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sDvdAsyncList__12JKRDvdRipper[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JKRDvdRipper__decompMutex[24];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804508C8[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 sSZSBufferSize__12JKRDvdRipper[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__szpBuf[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__szpEnd[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__refBuf[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__refEnd[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__refCurrent[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__srcOffset[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__transLeft[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__srcLimit[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__srcFile[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__fileOffset[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__readCount[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__maxDest[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451458[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JKRDvdRipper__tsPtr[4];
-SECTION_SBSS extern u8 JKRDvdRipper__tsArea[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 JKRDvdRipper__tsArea[4 + 4 /* padding */];
 }
 
 
@@ -89,14 +161,22 @@ SECTION_SBSS extern u8 JKRDvdRipper__tsArea[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039D290 0059 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039D290 = "JKRDvdRipper.cpp";
-const char* const stringBase_8039D2A1 = "%s";
-const char* const stringBase_8039D2A4 = 
-    "Sorry, not applied for SZP archi"
+/* 8039D290-8039D2F0 0059 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D290 = "JKRDvdRipper.cpp";
+SECTION_DEAD const char* const stringBase_8039D2A1 = "%s";
+SECTION_DEAD const char* const stringBase_8039D2A4 = 
+    "Sorry, not appli"
+    "ed for SZP archi"
     "ve.";
-const char* const stringBase_8039D2C8 = 
-    "Not support SZP with offset read";
+SECTION_DEAD const char* const stringBase_8039D2C8 = 
+    "Not support SZP "
+    "with offset read";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D2E9 = "\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -105,13 +185,13 @@ const char* const stringBase_8039D2C8 =
 /* ###################################################################################### */
 
 extern "C" {
-/* 804508CC 0004 .sdata     sSZSBufferSize__12JKRDvdRipper                               */
+/* 804508C8-804508CC 0004 .sdata     data_804508C8                                                InitializedData */
+SECTION_SDATA u8 data_804508C8[4] = {
+	0x01, 0x00, 0x00, 0x00,
+};
+/* 804508CC-804508D0 0004 .sdata     sSZSBufferSize__12JKRDvdRipper                               InitializedData */
 SECTION_SDATA u8 sSZSBufferSize__12JKRDvdRipper[4] = {
 	0x00, 0x00, 0x04, 0x00,
-};
-/* 804508D0 0004 .sdata     data_804508D0                                                */
-SECTION_SDATA u8 data_804508D0[4] = {
-	0x01, 0x00, 0x00, 0x00,
 };
 }
 
@@ -121,11 +201,11 @@ SECTION_SDATA u8 data_804508D0[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434378 000C .bss       @491                                                         */
+/* 80434378-80434384 000C .bss       @491                                                         ZeroInitializedData */
 SECTION_BSS u8 JKRDvdRipper__LIT_491[12];
-/* 80434384 000C .bss       sDvdAsyncList__12JKRDvdRipper                                */
+/* 80434384-80434390 000C .bss       sDvdAsyncList__12JKRDvdRipper                                ZeroInitializedData */
 SECTION_BSS u8 sDvdAsyncList__12JKRDvdRipper[12];
-/* 80434390 0018 .bss       decompMutex                                                  */
+/* 80434390-804343A8 0018 .bss       decompMutex                                                  ZeroInitializedData */
 SECTION_BSS u8 JKRDvdRipper__decompMutex[24];
 }
 
@@ -135,37 +215,36 @@ SECTION_BSS u8 JKRDvdRipper__decompMutex[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451428 0004 .sbss      szpBuf                                                       */
+/* 80451428-8045142C 0004 .sbss      szpBuf                                                       ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__szpBuf[4];
-/* 8045142C 0004 .sbss      szpEnd                                                       */
+/* 8045142C-80451430 0004 .sbss      szpEnd                                                       ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__szpEnd[4];
-/* 80451430 0004 .sbss      refBuf                                                       */
+/* 80451430-80451434 0004 .sbss      refBuf                                                       ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__refBuf[4];
-/* 80451434 0004 .sbss      refEnd                                                       */
+/* 80451434-80451438 0004 .sbss      refEnd                                                       ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__refEnd[4];
-/* 80451438 0004 .sbss      refCurrent                                                   */
+/* 80451438-8045143C 0004 .sbss      refCurrent                                                   ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__refCurrent[4];
-/* 8045143C 0004 .sbss      srcOffset                                                    */
+/* 8045143C-80451440 0004 .sbss      srcOffset                                                    ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__srcOffset[4];
-/* 80451440 0004 .sbss      transLeft                                                    */
+/* 80451440-80451444 0004 .sbss      transLeft                                                    ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__transLeft[4];
-/* 80451444 0004 .sbss      srcLimit                                                     */
+/* 80451444-80451448 0004 .sbss      srcLimit                                                     ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__srcLimit[4];
-/* 80451448 0004 .sbss      srcFile                                                      */
+/* 80451448-8045144C 0004 .sbss      srcFile                                                      ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__srcFile[4];
-/* 8045144C 0004 .sbss      fileOffset                                                   */
+/* 8045144C-80451450 0004 .sbss      fileOffset                                                   ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__fileOffset[4];
-/* 80451450 0004 .sbss      readCount                                                    */
+/* 80451450-80451454 0004 .sbss      readCount                                                    ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__readCount[4];
-/* 80451454 0004 .sbss      maxDest                                                      */
+/* 80451454-80451458 0004 .sbss      maxDest                                                      ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__maxDest[4];
-/* 80451458 0004 .sbss      data_80451458                                                */
+/* 80451458-8045145C 0004 .sbss      data_80451458                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451458[4];
-/* 8045145C 0004 .sbss      tsPtr                                                        */
+/* 8045145C-80451460 0004 .sbss      tsPtr                                                        ZeroInitializedData */
 SECTION_SBSS u8 JKRDvdRipper__tsPtr[4];
-/* 80451460 0004 .sbss      tsArea                                                       */
-SECTION_SBSS u8 JKRDvdRipper__tsArea[4];
-SECTION_SBSS u8 pad_80451464[4];
+/* 80451460-80451468 0004 .sbss      tsArea                                                       ZeroInitializedData */
+SECTION_SBSS u8 JKRDvdRipper__tsArea[4 + 4 /* padding */];
 }
 
 
@@ -174,8 +253,8 @@ SECTION_SBSS u8 pad_80451464[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D9B98 00BC .text      loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl */
-// JKRDvdRipper::loadToMainRAM(const s8*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*)
+/* 802D9B98-802D9C54 00BC .text      loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl Function */
+// JKRDvdRipper::loadToMainRAM(const char*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,8 +264,8 @@ asm void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKR
 }
 #pragma pop
 
-/* 802D9C54 00BC .text      loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl */
-// JKRDvdRipper::loadToMainRAM(s32, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*)
+/* 802D9C54-802D9D10 00BC .text      loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl Function */
+// JKRDvdRipper::loadToMainRAM(long, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +275,7 @@ asm void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDv
 }
 #pragma pop
 
-/* 802D9D10 04D4 .text      loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl */
+/* 802D9D10-802DA1E4 04D4 .text      loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl Function */
 // JKRDvdRipper::loadToMainRAM(JKRDvdFile*, u8*, JKRExpandSwitch, u32, JKRHeap*, JKRDvdRipper::EAllocDirection, u32, int*, u32*)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +286,7 @@ asm void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRH
 }
 #pragma pop
 
-/* 802DA1E4 0178 .text      JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl            */
+/* 802DA1E4-802DA35C 0178 .text      JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl            Function */
 }
 
 #pragma push
@@ -220,7 +299,7 @@ asm void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*) {
 #pragma pop
 
 extern "C" {
-/* 802DA35C 02B0 .text      decompSZS_subroutine__FPUcPUc                                */
+/* 802DA35C-802DA60C 02B0 .text      decompSZS_subroutine__FPUcPUc                                Function */
 }
 
 #pragma push
@@ -228,12 +307,12 @@ extern "C" {
 #pragma optimizewithasm off
 asm static void decompSZS_subroutine(u8*, u8*) {
 	nofralloc
-#include "_include/JKernel/JKRDvdRipper/JKRDvdRipper__decompSZS_subroutine__FPUcPUc.s"
+#include "_include/JKernel/JKRDvdRipper/decompSZS_subroutine__FPUcPUc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802DA60C 00CC .text      firstSrcData__Fv                                             */
+/* 802DA60C-802DA6D8 00CC .text      firstSrcData__Fv                                             Function */
 }
 
 #pragma push
@@ -241,12 +320,12 @@ extern "C" {
 #pragma optimizewithasm off
 asm static void firstSrcData(void) {
 	nofralloc
-#include "_include/JKernel/JKRDvdRipper/JKRDvdRipper__firstSrcData__Fv.s"
+#include "_include/JKernel/JKRDvdRipper/firstSrcData__Fv.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802DA6D8 00FC .text      nextSrcData__FPUc                                            */
+/* 802DA6D8-802DA7D4 00FC .text      nextSrcData__FPUc                                            Function */
 }
 
 #pragma push
@@ -254,18 +333,18 @@ extern "C" {
 #pragma optimizewithasm off
 asm static void nextSrcData(u8*) {
 	nofralloc
-#include "_include/JKernel/JKRDvdRipper/JKRDvdRipper__nextSrcData__FPUc.s"
+#include "_include/JKernel/JKRDvdRipper/nextSrcData__FPUc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802DA7D4 0008 .text      isErrorRetry__12JKRDvdRipperFv                               */
+/* 802DA7D4-802DA7DC 0008 .text      isErrorRetry__12JKRDvdRipperFv                               GlobalFunction */
 // JKRDvdRipper::isErrorRetry(void)
 u8 isErrorRetry__12JKRDvdRipperFv() {
 	return *(u8*)&data_804508C8;
 }
 
-/* 802DA7DC 0044 .text      __sinit_JKRDvdRipper_cpp                                     */
+/* 802DA7DC-802DA820 0044 .text      __sinit_JKRDvdRipper_cpp                                     SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,7 +354,7 @@ asm void __sinit_JKRDvdRipper_cpp() {
 }
 #pragma pop
 
-/* 802DA820 0054 .text      __dt__23JSUList<12JKRDMCommand>Fv                            */
+/* 802DA820-802DA874 0054 .text      __dt__23JSUList<12JKRDMCommand>Fv                            Function */
 // JSUList<12JKRDMCommand>::~JSUList<12JKRDMCommand>(void)
 #pragma push
 #pragma optimization_level 0

@@ -9,18 +9,30 @@
 // 
 
 struct node_class;
-struct node_list_class;
 struct node_lists_tree_class;
+struct node_list_class;
 
 extern void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); /* cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv */
 extern void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); /* cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv */
+extern void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); /* cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
+extern void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*); /* cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
 
 extern "C" {
+/* Function             */
 extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+/* Function             */
 extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+/* Function             */
+extern void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+/* Function             */
+extern void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
 }
 
@@ -30,7 +42,7 @@ extern void _restgpr_28();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266540 0074 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv */
+/* 80266540-802665B4 0074 .text      cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv Function */
 }
 
 #pragma push
@@ -43,7 +55,7 @@ asm void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*
 #pragma pop
 
 extern "C" {
-/* 802665B4 0070 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv */
+/* 802665B4-80266624 0070 .text      cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv Function */
 }
 
 #pragma push

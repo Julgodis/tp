@@ -9,8 +9,12 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ct__14dBgS_SplGrpChkFv();
-SECTION_DATA extern const void* __vt__11dBgS_WtrChk[12];
+/* Function             */
+extern void __ct__11dBgS_WtrChkFv();
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dBgS_WtrChk[12];
 }
 
 
@@ -19,7 +23,7 @@ SECTION_DATA extern const void* __vt__11dBgS_WtrChk[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80079164 0060 .text      __ct__11dBgS_WtrChkFv                                        */
+/* 80079164-800791C4 0060 .text      __ct__11dBgS_WtrChkFv                                        Function */
 // dBgS_WtrChk::dBgS_WtrChk(void)
 #pragma push
 #pragma optimization_level 0

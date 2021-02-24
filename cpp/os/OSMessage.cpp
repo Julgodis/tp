@@ -9,10 +9,23 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
+extern void OSInitMessageQueue();
+/* Function             */
+extern void OSSendMessage();
+/* Function             */
+extern void OSReceiveMessage();
+/* Function             */
+extern void OSJamMessage();
+/* Function             */
 extern void OSInitThreadQueue();
+/* Function             */
 extern void OSSleepThread();
+/* Function             */
 extern void OSWakeupThread();
 }
 
@@ -22,7 +35,7 @@ extern void OSWakeupThread();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033E994 0060 .text      OSInitMessageQueue                                           */
+/* 8033E994-8033E9F4 0060 .text      OSInitMessageQueue                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -32,7 +45,7 @@ asm void OSInitMessageQueue() {
 }
 #pragma pop
 
-/* 8033E9F4 00C8 .text      OSSendMessage                                                */
+/* 8033E9F4-8033EABC 00C8 .text      OSSendMessage                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +55,7 @@ asm void OSSendMessage() {
 }
 #pragma pop
 
-/* 8033EABC 00DC .text      OSReceiveMessage                                             */
+/* 8033EABC-8033EB98 00DC .text      OSReceiveMessage                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -52,7 +65,7 @@ asm void OSReceiveMessage() {
 }
 #pragma pop
 
-/* 8033EB98 00D4 .text      OSJamMessage                                                 */
+/* 8033EB98-8033EC6C 00D4 .text      OSJamMessage                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

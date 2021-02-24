@@ -11,72 +11,165 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void toFunction_outside__Q27JStudio14TFunctionValueFi();
+/* Function             */
 extern void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
+/* Function             */
 extern void __dt__Q37JStudio14TVariableValue7TOutputFv();
+/* Function             */
 extern void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+/* Function             */
 extern void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
+/* Function             */
 extern void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+/* Function             */
 extern void __dt__Q27JStudio14TAdaptor_actorFv();
+/* Function             */
 extern void transform_toGlobalFromLocal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+/* Function             */
 extern void transform_toLocalFromGlobal__14JStudio_JStageFPA4_fRCQ37JStudio8TControl39TTransform_translation_rotation_scalingPCQ26JStage7TObjectUl();
+/* Function             */
 extern void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+/* Function             */
 extern void adaptor_object_findJSGObject___Q214JStudio_JStage16TAdaptor_object_FPCc();
+/* Function             */
 extern void adaptor_object_findJSGObjectNode___Q214JStudio_JStage16TAdaptor_object_FPCQ26JStage7TObjectPCc();
+/* Function             */
+extern void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor();
+/* Function             */
 extern void __dt__Q214JStudio_JStage14TAdaptor_actorFv();
+/* Function             */
 extern void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv();
+/* Function             */
 extern void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv();
+/* Function             */
 extern void adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv();
+/* Function             */
 extern void adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl();
+/* Function             */
 extern void adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl();
+/* Function             */
 extern void adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl();
+/* Function             */
 extern void setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl();
+/* Function             */
 extern void getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl();
+/* Function             */
 extern void __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor();
+/* Function             */
 extern void __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv();
+/* SInitFunction        */
+extern void func_8028B198();
+/* Function             */
 extern void __ct__Q27JStudio14TVariableValueFv();
+/* Function             */
 extern void func_8028B580();
+/* Function             */
 extern void func_8028B5E0();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
-SECTION_RODATA extern const u8 data_803A0004[7036];
-SECTION_DATA extern const void* __vt__Q27JStudio14TAdaptor_actor[20];
-SECTION_DATA extern const void* __vt__Q27JStudio8TAdaptor[8];
-SECTION_DATA extern const void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+/* InitializedData      */
+SECTION_RODATA extern const u8 __ptmf_null[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio14TAdaptor_actor[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio8TAdaptor[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_890[12];
+/* InitializedData      */
 SECTION_DATA extern u8 object_actor__LIT_899[12];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_916[12];
-SECTION_DATA extern const void* __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_[4];
-SECTION_DATA extern const void* __vt__Q214JStudio_JStage14TAdaptor_actor[40];
-SECTION_DATA extern const void* data_803C5864[9];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1083[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1084[12];
+/* InitializedData      */
+SECTION_DATA extern u8 object_actor__LIT_1089[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1090[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1091[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1096[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1097[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_1098[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q214JStudio_JStage14TAdaptor_actor[40];
+/* VTableData           */
+SECTION_DATA extern void* data_803C5864[9];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_1087[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1088[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 saoVVOutput___Q214JStudio_JStage14TAdaptor_actor[64];
-SECTION_BSS extern u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[148];
-SECTION_SBSS extern u8 soOutput_none___Q27JStudio14TVariableValue[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 object_actor__LIT_1095[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1102[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_1103[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[144 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1081[8];
 }
 
@@ -86,60 +179,60 @@ SECTION_SDATA2 extern u8 LIT_1081[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5730 0000 .data      ...data.0                                                    */
-/* 803C5730 000C .data      @890                                                         */
+/* 803C5730-803C5730 0000 .data      ...data.0                                                    InitializedData */
+/* 803C5730-803C573C 000C .data      @890                                                         InitializedData */
 SECTION_DATA u8 LIT_890[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C573C 000C .data      @899                                                         */
+/* 803C573C-803C5748 000C .data      @899                                                         InitializedData */
 SECTION_DATA u8 object_actor__LIT_899[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5748 000C .data      @916                                                         */
+/* 803C5748-803C5754 000C .data      @916                                                         InitializedData */
 SECTION_DATA u8 LIT_916[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x7C, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5754 000C .data      @1083                                                        */
+/* 803C5754-803C5760 000C .data      @1083                                                        InitializedData */
 SECTION_DATA u8 LIT_1083[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x74, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5760 000C .data      @1084                                                        */
+/* 803C5760-803C576C 000C .data      @1084                                                        InitializedData */
 SECTION_DATA u8 LIT_1084[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x70, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C576C 000C .data      @1089                                                        */
+/* 803C576C-803C5778 000C .data      @1089                                                        InitializedData */
 SECTION_DATA u8 object_actor__LIT_1089[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x68, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5778 000C .data      @1090                                                        */
+/* 803C5778-803C5784 000C .data      @1090                                                        InitializedData */
 SECTION_DATA u8 LIT_1090[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x64, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5784 000C .data      @1091                                                        */
+/* 803C5784-803C5790 000C .data      @1091                                                        InitializedData */
 SECTION_DATA u8 LIT_1091[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x6C, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C5790 000C .data      @1096                                                        */
+/* 803C5790-803C579C 000C .data      @1096                                                        InitializedData */
 SECTION_DATA u8 LIT_1096[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x84, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C579C 000C .data      @1097                                                        */
+/* 803C579C-803C57A8 000C .data      @1097                                                        InitializedData */
 SECTION_DATA u8 LIT_1097[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C57A8 000C .data      @1098                                                        */
+/* 803C57A8-803C57B4 000C .data      @1098                                                        InitializedData */
 SECTION_DATA u8 LIT_1098[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x88, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803C57B4 0010 .data      __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_ */
-SECTION_DATA const  void* __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_[4] = {
+/* 803C57B4-803C57C4 0010 .data      __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_ VTableData */
+SECTION_DATA void* __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor,
 	(void*)__dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv,
 };
-/* 803C57C4 0050 .data      __vt__Q214JStudio_JStage14TAdaptor_actor                     */
-SECTION_DATA const  void* __vt__Q214JStudio_JStage14TAdaptor_actor[40] = {
+/* 803C57C4-803C5864 0050 .data      __vt__Q214JStudio_JStage14TAdaptor_actor                     VTableData */
+SECTION_DATA void* __vt__Q214JStudio_JStage14TAdaptor_actor[40] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q214JStudio_JStage14TAdaptor_actorFv,
@@ -182,8 +275,8 @@ SECTION_DATA const  void* __vt__Q214JStudio_JStage14TAdaptor_actor[40] = {
 	NULL,
 	NULL,
 };
-/* 803C5864 0010 .data      __vt__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor> */
-SECTION_DATA const  void* data_803C5864[9] = {
+/* 803C5864-803C5888 0010 .data      __vt__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor> VTableData */
+SECTION_DATA void* data_803C5864[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)func_8028B5E0,
@@ -203,7 +296,7 @@ SECTION_DATA const  void* data_803C5864[9] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804554E0 0004 .sdata2    @1081                                                        */
+/* 804554E0-804554E8 0004 .sdata2    @1081                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1081[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -217,21 +310,21 @@ SECTION_SDATA2 u8 LIT_1081[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431188 0000 .bss       ...bss.0                                                     */
-/* 80431188 000C .bss       @1087                                                        */
+/* 80431188-80431188 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80431188-80431194 000C .bss       @1087                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1087[12];
-/* 80431194 000C .bss       @1088                                                        */
+/* 80431194-804311A0 000C .bss       @1088                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1088[12];
-/* 804311A0 0040 .bss       saoVVOutput___Q214JStudio_JStage14TAdaptor_actor             */
+/* 804311A0-804311E0 0040 .bss       saoVVOutput___Q214JStudio_JStage14TAdaptor_actor             ZeroInitializedData */
 SECTION_BSS u8 saoVVOutput___Q214JStudio_JStage14TAdaptor_actor[64];
-/* 804311E0 000C .bss       @1095                                                        */
+/* 804311E0-804311EC 000C .bss       @1095                                                        ZeroInitializedData */
 SECTION_BSS u8 object_actor__LIT_1095[12];
-/* 804311EC 000C .bss       @1102                                                        */
+/* 804311EC-804311F8 000C .bss       @1102                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1102[12];
-/* 804311F8 000C .bss       @1103                                                        */
+/* 804311F8-80431204 000C .bss       @1103                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_1103[12];
-/* 80431204 0090 .bss       saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor */
-SECTION_BSS u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[148];
+/* 80431204-80431298 0090 .bss       saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor ZeroInitializedData */
+SECTION_BSS u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[144 + 4 /* padding */];
 }
 
 
@@ -240,7 +333,7 @@ SECTION_BSS u8 saoVVOutput_ANIMATION_FRAME___Q214JStudio_JStage14TAdaptor_actor[
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028A5F0 00C4 .text      __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor */
+/* 8028A5F0-8028A6B4 00C4 .text      __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor Function */
 // JStudio_JStage::TAdaptor_actor::JStudio_JStage::TAdaptor_actor(JStage::TSystem, JStage::TActor)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +344,7 @@ asm void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6
 }
 #pragma pop
 
-/* 8028A6B4 0074 .text      __dt__Q214JStudio_JStage14TAdaptor_actorFv                   */
+/* 8028A6B4-8028A728 0074 .text      __dt__Q214JStudio_JStage14TAdaptor_actorFv                   Function */
 // JStudio_JStage::TAdaptor_actor::~JStudio_JStage::TAdaptor_actor(void)
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +355,7 @@ asm void __dt__Q214JStudio_JStage14TAdaptor_actorFv() {
 }
 #pragma pop
 
-/* 8028A728 008C .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv     */
+/* 8028A728-8028A7B4 008C .text      adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv     Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_prepare(void)
 #pragma push
 #pragma optimization_level 0
@@ -273,7 +366,7 @@ asm void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv() {
 }
 #pragma pop
 
-/* 8028A7B4 0124 .text      adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv       */
+/* 8028A7B4-8028A8D8 0124 .text      adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv       Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_begin(void)
 #pragma push
 #pragma optimization_level 0
@@ -284,7 +377,7 @@ asm void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv() {
 }
 #pragma pop
 
-/* 8028A8D8 0054 .text      adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv         */
+/* 8028A8D8-8028A92C 0054 .text      adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv         Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -295,7 +388,7 @@ asm void adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv() {
 }
 #pragma pop
 
-/* 8028A92C 0048 .text      adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl     */
+/* 8028A92C-8028A974 0048 .text      adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl     Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_update(u32)
 #pragma push
 #pragma optimization_level 0
@@ -306,7 +399,7 @@ asm void adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl() {
 }
 #pragma pop
 
-/* 8028A974 0024 .text      adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl */
+/* 8028A974-8028A998 0024 .text      adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_data(const void*, u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -317,7 +410,7 @@ asm void adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl() {
 }
 #pragma pop
 
-/* 8028A998 0058 .text      adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A998-8028A9F0 0058 .text      adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_SHAPE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -328,7 +421,7 @@ asm void adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15T
 }
 #pragma pop
 
-/* 8028A9F0 0058 .text      adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028A9F0-8028AA48 0058 .text      adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_ANIMATION(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -339,7 +432,7 @@ asm void adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4dat
 }
 #pragma pop
 
-/* 8028AA48 0014 .text      adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AA48-8028AA5C 0014 .text      adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_ANIMATION_MODE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -350,7 +443,7 @@ asm void adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudi
 }
 #pragma pop
 
-/* 8028AA5C 0058 .text      adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AA5C-8028AAB4 0058 .text      adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_TEXTURE_ANIMATION(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -361,7 +454,7 @@ asm void adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JSt
 }
 #pragma pop
 
-/* 8028AAB4 0014 .text      adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AAB4-8028AAC8 0014 .text      adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_TEXTURE_ANIMATION_MODE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -372,7 +465,7 @@ asm void adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ
 }
 #pragma pop
 
-/* 8028AAC8 0044 .text      adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AAC8-8028AB0C 0044 .text      adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_PARENT(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -383,7 +476,7 @@ asm void adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15
 }
 #pragma pop
 
-/* 8028AB0C 005C .text      adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AB0C-8028AB68 005C .text      adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_PARENT_NODE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -394,7 +487,7 @@ asm void adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4d
 }
 #pragma pop
 
-/* 8028AB68 0088 .text      adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AB68-8028ABF0 0088 .text      adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_PARENT_ENABLE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -405,7 +498,7 @@ asm void adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio
 }
 #pragma pop
 
-/* 8028ABF0 0014 .text      adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028ABF0-8028AC04 0014 .text      adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_PARENT_FUNCTION(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -416,7 +509,7 @@ asm void adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStud
 }
 #pragma pop
 
-/* 8028AC04 0044 .text      adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AC04-8028AC48 0044 .text      adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_RELATION(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -427,7 +520,7 @@ asm void adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data
 }
 #pragma pop
 
-/* 8028AC48 005C .text      adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028AC48-8028ACA4 005C .text      adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_RELATION_NODE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -438,7 +531,7 @@ asm void adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio
 }
 #pragma pop
 
-/* 8028ACA4 0058 .text      adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028ACA4-8028ACFC 0058 .text      adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl Function */
 // JStudio_JStage::TAdaptor_actor::adaptor_do_RELATION_ENABLE(JStudio::data::TEOperationData, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -449,7 +542,7 @@ asm void adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStud
 }
 #pragma pop
 
-/* 8028ACFC 003C .text      setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl */
+/* 8028ACFC-8028AD38 003C .text      setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvUl_vQ37JStudio4data15TEOperationDataPCvUl Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -459,7 +552,7 @@ asm void setJSG_ID___Q214JStudio_JStage14TAdaptor_actorFMQ26JStage6TActorFPCvPvU
 }
 #pragma pop
 
-/* 8028AD38 0194 .text      setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl */
+/* 8028AD38-8028AECC 0194 .text      setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl Function */
 // JStudio_JStage::TAdaptor_actor::setJSG_SRT_(JStudio::TControl)
 #pragma push
 #pragma optimization_level 0
@@ -470,7 +563,7 @@ asm void setJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl()
 }
 #pragma pop
 
-/* 8028AECC 0198 .text      getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl */
+/* 8028AECC-8028B064 0198 .text      getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl Function */
 // JStudio_JStage::TAdaptor_actor::getJSG_SRT_(JStudio::TControl)
 #pragma push
 #pragma optimization_level 0
@@ -481,7 +574,7 @@ asm void getJSG_SRT___Q214JStudio_JStage14TAdaptor_actorFPCQ27JStudio8TControl()
 }
 #pragma pop
 
-/* 8028B064 00D4 .text      __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor */
+/* 8028B064-8028B138 00D4 .text      __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor Function */
 // JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_::operator()(f32, JStudio::TAdaptor) const
 #pragma push
 #pragma optimization_level 0
@@ -492,7 +585,7 @@ asm void __cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFf
 }
 #pragma pop
 
-/* 8028B138 0060 .text      __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv */
+/* 8028B138-8028B198 0060 .text      __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv Function */
 // JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_::~JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_(void)
 #pragma push
 #pragma optimization_level 0
@@ -503,7 +596,7 @@ asm void __dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv(
 }
 #pragma pop
 
-/* 8028B198 03D0 .text      __sinit_object-actor_cpp                                     */
+/* 8028B198-8028B568 03D0 .text      __sinit_object-actor_cpp                                     SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,7 +606,7 @@ asm void func_8028B198() {
 }
 #pragma pop
 
-/* 8028B568 0018 .text      __ct__Q27JStudio14TVariableValueFv                           */
+/* 8028B568-8028B580 0018 .text      __ct__Q27JStudio14TVariableValueFv                           Function */
 // JStudio::TVariableValue::JStudio::TVariableValue(void)
 #pragma push
 #pragma optimization_level 0
@@ -524,7 +617,7 @@ asm void __ct__Q27JStudio14TVariableValueFv() {
 }
 #pragma pop
 
-/* 8028B580 0060 .text      __dt__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>Fv */
+/* 8028B580-8028B5E0 0060 .text      __dt__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>Fv Function */
 // JStudio_JStage::TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>::~JStudio_JStage::TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>(void)
 #pragma push
 #pragma optimization_level 0
@@ -535,7 +628,7 @@ asm void func_8028B580() {
 }
 #pragma pop
 
-/* 8028B5E0 0030 .text      __cl__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>CFfPQ27JStudio8TAdaptor */
+/* 8028B5E0-8028B610 0030 .text      __cl__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>CFfPQ27JStudio8TAdaptor Function */
 // JStudio_JStage::TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor>::operator()(f32, JStudio::TAdaptor) const
 #pragma push
 #pragma optimization_level 0

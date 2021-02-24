@@ -13,29 +13,61 @@ struct layer_class;
 
 extern void fopKyM_CreateAppend(void); /* fopKyM_CreateAppend__Fv */
 extern void createAppend(int, cXyz*, cXyz*); /* createAppend__FiP4cXyzP4cXyz */
-extern void fopKyM_Create(s16, int (*)(void*), void*); /* fopKyM_Create__FsPFPv_iPv */
+extern void fopKyM_Delete(void*); /* fopKyM_Delete__FPv */
+extern void fopKyM_Create(short, int (*)(void*), void*); /* fopKyM_Create__FsPFPv_iPv */
+extern void fopKyM_create(short, int, cXyz*, cXyz*, int (*)(void*)); /* fopKyM_create__FsiP4cXyzP4cXyzPFPv_i */
+extern void fopKyM_fastCreate(short, int, cXyz*, cXyz*, int (*)(void*)); /* fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i */
+extern void fopKyM_createWpillar(const cXyz*, f32, int); /* fopKyM_createWpillar__FPC4cXyzfi */
+extern void fopKyM_createMpillar(const cXyz*, f32); /* fopKyM_createMpillar__FPC4cXyzf */
 extern void fpcM_Delete(void*); /* fpcM_Delete__FPv */
-extern void fpcM_FastCreate(s16, int (*)(void*), void*, void*); /* fpcM_FastCreate__FsPFPv_iPvPv */
-extern void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
+extern void fpcM_FastCreate(short, int (*)(void*), void*, void*); /* fpcM_FastCreate__FsPFPv_iPvPv */
+extern void fpcSCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
 extern void cLib_memSet(void*, int, u32); /* cLib_memSet__FPviUl */
 
 extern "C" {
+/* Function             */
 extern void fopKyM_CreateAppend__Fv();
+/* Function             */
 extern void createAppend__FiP4cXyzP4cXyz();
+/* Function             */
+extern void fopKyM_Delete__FPv();
+/* Function             */
 extern void fopKyM_Create__FsPFPv_iPv();
+/* Function             */
+extern void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
+/* Function             */
+extern void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+/* Function             */
+extern void fopKyM_createWpillar__FPC4cXyzfi();
+/* Function             */
+extern void fopKyM_createMpillar__FPC4cXyzf();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcM_Delete__FPv();
+/* Function             */
 extern void fpcM_FastCreate__FsPFPv_iPvPv();
+/* Function             */
 extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+/* Function             */
 extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void memalignB__3cMlFiUl();
+/* Function             */
 extern void cLib_memSet__FPviUl();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505C0[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 f_op_f_op_kankyo_mng__LIT_3713[8];
 }
 
@@ -45,7 +77,7 @@ SECTION_SDATA2 extern u8 f_op_f_op_kankyo_mng__LIT_3713[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505C0 0004 .sdata     m_name$3788                                                  */
+/* 804505C0-804505C8 0004 .sdata     m_name$3788                                                  InitializedData */
 SECTION_SDATA u8 data_804505C0[8] = {
 	0x87, 0x57, 0x87, 0x58,
 	/* padding */
@@ -59,7 +91,7 @@ SECTION_SDATA u8 data_804505C0[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451C68 0004 .sdata2    @3713                                                        */
+/* 80451C68-80451C70 0004 .sdata2    @3713                                                        InitializedData */
 SECTION_SDATA2 u8 f_op_f_op_kankyo_mng__LIT_3713[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -73,7 +105,7 @@ SECTION_SDATA2 u8 f_op_f_op_kankyo_mng__LIT_3713[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001F660 0058 .text      fopKyM_CreateAppend__Fv                                      */
+/* 8001F660-8001F6B8 0058 .text      fopKyM_CreateAppend__Fv                                      Function */
 }
 
 #pragma push
@@ -86,7 +118,7 @@ asm void fopKyM_CreateAppend(void) {
 #pragma pop
 
 extern "C" {
-/* 8001F6B8 0090 .text      createAppend__FiP4cXyzP4cXyz                                 */
+/* 8001F6B8-8001F748 0090 .text      createAppend__FiP4cXyzP4cXyz                                 Function */
 }
 
 #pragma push
@@ -99,7 +131,7 @@ asm void createAppend(int, cXyz*, cXyz*) {
 #pragma pop
 
 extern "C" {
-/* 8001F748 0020 .text      fopKyM_Delete__FPv                                           */
+/* 8001F748-8001F768 0020 .text      fopKyM_Delete__FPv                                           Function */
 }
 
 #pragma push
@@ -112,46 +144,46 @@ asm void fopKyM_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F768 0050 .text      fopKyM_Create__FsPFPv_iPv                                    */
+/* 8001F768-8001F7B8 0050 .text      fopKyM_Create__FsPFPv_iPv                                    Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopKyM_Create(s16, int (*)(void*), void*) {
+asm void fopKyM_Create(short, int (*)(void*), void*) {
 	nofralloc
 #include "_include/f_op/f_op_kankyo_mng/fopKyM_Create__FsPFPv_iPv.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8001F7B8 0060 .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         */
+/* 8001F7B8-8001F818 0060 .text      fopKyM_create__FsiP4cXyzP4cXyzPFPv_i                         Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)) {
+asm void fopKyM_create(short, int, cXyz*, cXyz*, int (*)(void*)) {
 	nofralloc
 #include "_include/f_op/f_op_kankyo_mng/fopKyM_create__FsiP4cXyzP4cXyzPFPv_i.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8001F818 0064 .text      fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i                     */
+/* 8001F818-8001F87C 0064 .text      fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i                     Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)) {
+asm void fopKyM_fastCreate(short, int, cXyz*, cXyz*, int (*)(void*)) {
 	nofralloc
 #include "_include/f_op/f_op_kankyo_mng/fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8001F87C 0090 .text      fopKyM_createWpillar__FPC4cXyzfi                             */
+/* 8001F87C-8001F90C 0090 .text      fopKyM_createWpillar__FPC4cXyzfi                             Function */
 }
 
 #pragma push
@@ -164,7 +196,7 @@ asm void fopKyM_createWpillar(const cXyz*, f32, int) {
 #pragma pop
 
 extern "C" {
-/* 8001F90C 00A8 .text      fopKyM_createMpillar__FPC4cXyzf                              */
+/* 8001F90C-8001F9B4 00A8 .text      fopKyM_createMpillar__FPC4cXyzf                              Function */
 }
 
 #pragma push

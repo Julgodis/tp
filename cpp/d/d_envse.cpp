@@ -12,8 +12,8 @@
 // Additional Symbols:
 // 
 
-struct cXyz;
 struct cM3dGLin;
+struct cXyz;
 struct Vec;
 struct dPath;
 struct dEnvSe_c;
@@ -22,49 +22,110 @@ extern void dComIfGp_getReverb(int); /* dComIfGp_getReverb__Fi */
 extern void dPath_GetRoomPath(int, int); /* dPath_GetRoomPath__Fii */
 extern void dPath_GetNextRoomPath(const dPath*, int); /* dPath_GetNextRoomPath__FPC5dPathi */
 extern void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*); /* dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath */
+extern void dEnvSe_Execute(dEnvSe_c*); /* dEnvSe_Execute__FP8dEnvSe_c */
+extern void dEnvSe_Create(dEnvSe_c*); /* dEnvSe_Create__FP8dEnvSe_c */
 extern void cM3d_Len3dSqPntAndSegLine(const cM3dGLin*, const Vec*, Vec*, f32*); /* cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf */
 
 extern "C" {
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void dComIfGp_getReverb__Fi();
+/* Function             */
 extern void dPath_GetRoomPath__Fii();
+/* Function             */
 extern void dPath_GetNextRoomPath__FPC5dPathi();
+/* Function             */
 extern void Eye__9dCamera_cFv();
+/* ReturnIntegerFunction */
+extern  int dEnvSe_Draw__FP8dEnvSe_c();
+/* Function             */
 extern void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
+/* Function             */
 extern void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc();
+/* Function             */
 extern void execute__8dEnvSe_cFv();
+/* Function             */
+extern void dEnvSe_Execute__FP8dEnvSe_c();
+/* ReturnIntegerFunction */
+extern  int dEnvSe_IsDelete__FP8dEnvSe_c();
+/* ReturnIntegerFunction */
+extern  int dEnvSe_Delete__FP8dEnvSe_c();
+/* Function             */
+extern void dEnvSe_Create__FP8dEnvSe_c();
+/* Function             */
 extern void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
+/* Function             */
 extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+/* Function             */
 extern void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
+/* Function             */
 extern void startStaticEnvSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void registWindowPos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registRiverSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startRiverSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registFallSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startFallSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registEtcSePos__10Z2EnvSeMgrFP3Vec();
+/* Function             */
 extern void startEtcSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
+/* Function             */
 extern void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
+/* Function             */
 extern void startLv3WaterSe__10Z2EnvSeMgrFSc();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void memcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_envse__stringBase0[8];
-SECTION_DATA extern const void* __vt__8cM3dGLin[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGLin[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dEnvSe_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_ENVSE[11];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_max[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS2 extern u8 d_d_envse__LIT_3752[4];
+/* ZeroInitializedData  */
 SECTION_SBSS2 extern u8 data_80456B84[4];
 }
 
@@ -74,8 +135,14 @@ SECTION_SBSS2 extern u8 data_80456B84[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80394308 0007 .rodata    @stringBase0                                                 */
-const char* const stringBase_80394308 = "sndtag";
+/* 80394308-80394310 0007 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80394308 = "sndtag";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039430F = "";
+#pragma pop
 }
 
 
@@ -84,18 +151,28 @@ const char* const stringBase_80394308 = "sndtag";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BA808 0014 .data      l_dEnvSe_Method                                              */
-SECTION_DATA u8 l_dEnvSe_Method[20] = {
-	0x80, 0x18, 0x35, 0xD0, 0x80, 0x18, 0x35, 0xC8, 0x80, 0x18, 0x35, 0xA0, 0x80, 0x18, 0x35, 0xC0,
-	0x80, 0x18, 0x2D, 0xD4,
+/* 803BA808-803BA81C 0014 .data      l_dEnvSe_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* l_dEnvSe_Method[5] = {
+	(void*)dEnvSe_Create,
+	(void*)dEnvSe_Delete__FP8dEnvSe_c,
+	(void*)dEnvSe_Execute,
+	(void*)dEnvSe_IsDelete__FP8dEnvSe_c,
+	(void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
-/* 803BA81C 0028 .data      g_profile_ENVSE                                              */
-SECTION_DATA u8 g_profile_ENVSE[44] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x02, 0xFF, 0xFD, 0x00, 0x15, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x01, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x40,
-	0x02, 0xB1, 0x00, 0x00, 0x80, 0x3B, 0xA8, 0x08,
+/* 803BA81C-803BA848 0028 .data      g_profile_ENVSE                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_ENVSE[11] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0002FFFD,
+	(void*)0x00150000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x0000010C,
+	NULL,
+	NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x02B10000,
+	(void*)&l_dEnvSe_Method,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -105,9 +182,9 @@ SECTION_DATA u8 g_profile_ENVSE[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456B80 0004 .sbss2     @3752                                                        */
+/* 80456B80-80456B84 0004 .sbss2     @3752                                                        ZeroInitializedData */
 SECTION_SBSS2 u8 d_d_envse__LIT_3752[4];
-/* 80456B84 0004 .sbss2     data_80456B84                                                */
+/* 80456B84-80456B88 0004 .sbss2     data_80456B84                                                ZeroInitializedData */
 SECTION_SBSS2 u8 data_80456B84[4];
 }
 
@@ -117,13 +194,13 @@ SECTION_SBSS2 u8 data_80456B84[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80182DD4 0008 .text      dEnvSe_Draw__FP8dEnvSe_c                                     */
+/* 80182DD4-80182DDC 0008 .text      dEnvSe_Draw__FP8dEnvSe_c                                     ReturnIntegerFunction */
 // dEnvSe_Draw(dEnvSe_c*)
 int dEnvSe_Draw__FP8dEnvSe_c() {
 	return 1;
 }
 
-/* 80182DDC 01FC .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  */
+/* 80182DDC-80182FD8 01FC .text      dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath                  Function */
 }
 
 #pragma push
@@ -136,7 +213,7 @@ asm void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*) {
 #pragma pop
 
 extern "C" {
-/* 80182FD8 04A8 .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         */
+/* 80182FD8-80183480 04A8 .text      execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc         Function */
 // dEnvSe_c::execute_common(dStage_SoundInfo_c*, s8*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -147,7 +224,7 @@ asm void execute_common__8dEnvSe_cFP18dStage_SoundInfo_cPScUc() {
 }
 #pragma pop
 
-/* 80183480 0120 .text      execute__8dEnvSe_cFv                                         */
+/* 80183480-801835A0 0120 .text      execute__8dEnvSe_cFv                                         Function */
 // dEnvSe_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -158,7 +235,7 @@ asm void execute__8dEnvSe_cFv() {
 }
 #pragma pop
 
-/* 801835A0 0020 .text      dEnvSe_Execute__FP8dEnvSe_c                                  */
+/* 801835A0-801835C0 0020 .text      dEnvSe_Execute__FP8dEnvSe_c                                  Function */
 }
 
 #pragma push
@@ -171,19 +248,19 @@ asm void dEnvSe_Execute(dEnvSe_c*) {
 #pragma pop
 
 extern "C" {
-/* 801835C0 0008 .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 */
+/* 801835C0-801835C8 0008 .text      dEnvSe_IsDelete__FP8dEnvSe_c                                 ReturnIntegerFunction */
 // dEnvSe_IsDelete(dEnvSe_c*)
 int dEnvSe_IsDelete__FP8dEnvSe_c() {
 	return 1;
 }
 
-/* 801835C8 0008 .text      dEnvSe_Delete__FP8dEnvSe_c                                   */
+/* 801835C8-801835D0 0008 .text      dEnvSe_Delete__FP8dEnvSe_c                                   ReturnIntegerFunction */
 // dEnvSe_Delete(dEnvSe_c*)
 int dEnvSe_Delete__FP8dEnvSe_c() {
 	return 1;
 }
 
-/* 801835D0 0028 .text      dEnvSe_Create__FP8dEnvSe_c                                   */
+/* 801835D0-801835F8 0028 .text      dEnvSe_Create__FP8dEnvSe_c                                   Function */
 }
 
 #pragma push

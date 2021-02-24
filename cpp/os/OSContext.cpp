@@ -9,19 +9,73 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __OSSetExceptionHandler();
+/* Function             */
 extern void __OSLoadFPUContext();
+/* Function             */
 extern void __OSSaveFPUContext();
+/* Function             */
+extern void OSSaveFPUContext();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
+extern void OSGetCurrentContext();
+/* Function             */
+extern void OSSaveContext();
+/* Function             */
+extern void OSLoadContext();
+/* Function             */
+extern void OSGetStackPointer();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
+extern void OSInitContext();
+/* Function             */
+extern void OSDumpContext();
+/* Function             */
 extern void OSSwitchFPUContext();
+/* Function             */
+extern void __OSContextInit();
+/* Function             */
+extern void OSFillFPUContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void __RAS_OSDisableInterrupts_end();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void DBPrintf();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* InitializedData      */
 SECTION_DATA extern u8 OSContext__LIT_61[68];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_62[48];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_63[48];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_64[48];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_65[20];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_66[36];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_67[20];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_68[28];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_69[20];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_70[32];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_71[40];
+/* InitializedData      */
+SECTION_DATA extern u8 OSContext__LIT_72[28];
+/* InitializedData      */
 SECTION_DATA extern u8 OSContext__LIT_76[36];
 }
 
@@ -31,8 +85,8 @@ SECTION_DATA extern u8 OSContext__LIT_76[36];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF740 0000 .data      ...data.0                                                    */
-/* 803CF740 0044 .data      @61                                                          */
+/* 803CF740-803CF740 0000 .data      ...data.0                                                    InitializedData */
+/* 803CF740-803CF784 0044 .data      @61                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_61[68] = {
 	0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x20, 0x43, 0x6F, 0x6E, 0x74, 0x65, 0x78,
@@ -40,13 +94,13 @@ SECTION_DATA u8 OSContext__LIT_61[68] = {
 	0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x2D, 0x2D, 0x0A, 0x00,
 };
-/* 803CF784 0030 .data      @62                                                          */
+/* 803CF784-803CF7B4 0030 .data      @62                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_62[48] = {
 	0x72, 0x25, 0x2D, 0x32, 0x64, 0x20, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20,
 	0x28, 0x25, 0x31, 0x34, 0x64, 0x29, 0x20, 0x20, 0x72, 0x25, 0x2D, 0x32, 0x64, 0x20, 0x20, 0x3D,
 	0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x28, 0x25, 0x31, 0x34, 0x64, 0x29, 0x0A, 0x00,
 };
-/* 803CF7B4 002F .data      @63                                                          */
+/* 803CF7B4-803CF7E4 002F .data      @63                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_63[48] = {
 	0x4C, 0x52, 0x20, 0x20, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
@@ -54,7 +108,7 @@ SECTION_DATA u8 OSContext__LIT_63[48] = {
 	/* padding */
 	0x00,
 };
-/* 803CF7E4 002F .data      @64                                                          */
+/* 803CF7E4-803CF814 002F .data      @64                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_64[48] = {
 	0x53, 0x52, 0x52, 0x30, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x20, 0x20,
 	0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,
@@ -62,14 +116,14 @@ SECTION_DATA u8 OSContext__LIT_64[48] = {
 	/* padding */
 	0x00,
 };
-/* 803CF814 0011 .data      @65                                                          */
+/* 803CF814-803CF828 0011 .data      @65                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_65[20] = {
 	0x0A, 0x47, 0x51, 0x52, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x0A,
 	0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF828 0021 .data      @66                                                          */
+/* 803CF828-803CF84C 0021 .data      @66                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_66[36] = {
 	0x67, 0x71, 0x72, 0x25, 0x64, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x20, 0x09,
 	0x20, 0x67, 0x71, 0x72, 0x25, 0x64, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A,
@@ -77,35 +131,35 @@ SECTION_DATA u8 OSContext__LIT_66[36] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF84C 0012 .data      @67                                                          */
+/* 803CF84C-803CF860 0012 .data      @67                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_67[20] = {
 	0x0A, 0x0A, 0x46, 0x50, 0x52, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CF860 0019 .data      @68                                                          */
+/* 803CF860-803CF87C 0019 .data      @68                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_68[28] = {
 	0x66, 0x72, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x25, 0x64, 0x20, 0x09, 0x20, 0x66, 0x72, 0x25,
 	0x64, 0x20, 0x09, 0x3D, 0x20, 0x25, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF87C 0012 .data      @69                                                          */
+/* 803CF87C-803CF890 0012 .data      @69                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_69[20] = {
 	0x0A, 0x0A, 0x50, 0x53, 0x46, 0x73, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D, 0x2D,
 	0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CF890 001D .data      @70                                                          */
+/* 803CF890-803CF8B0 001D .data      @70                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_70[32] = {
 	0x70, 0x73, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x09, 0x20, 0x70,
 	0x73, 0x25, 0x64, 0x20, 0x09, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF8B0 0026 .data      @71                                                          */
+/* 803CF8B0-803CF8D8 0026 .data      @71                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_71[40] = {
 	0x0A, 0x41, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x3A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x42,
 	0x61, 0x63, 0x6B, 0x20, 0x43, 0x68, 0x61, 0x69, 0x6E, 0x20, 0x20, 0x20, 0x20, 0x4C, 0x52, 0x20,
@@ -113,12 +167,12 @@ SECTION_DATA u8 OSContext__LIT_71[40] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CF8D8 001C .data      @72                                                          */
+/* 803CF8D8-803CF8F4 001C .data      @72                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_72[28] = {
 	0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x3A, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78,
 	0x20, 0x20, 0x20, 0x20, 0x30, 0x78, 0x25, 0x30, 0x38, 0x78, 0x0A, 0x00,
 };
-/* 803CF8F4 0023 .data      @76                                                          */
+/* 803CF8F4-803CF918 0023 .data      @76                                                          InitializedData */
 SECTION_DATA u8 OSContext__LIT_76[36] = {
 	0x46, 0x50, 0x55, 0x2D, 0x75, 0x6E, 0x61, 0x76, 0x61, 0x69, 0x6C, 0x61, 0x62, 0x6C, 0x65, 0x20,
 	0x68, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x72, 0x20, 0x69, 0x6E, 0x73, 0x74, 0x61, 0x6C, 0x6C, 0x65,
@@ -134,7 +188,7 @@ SECTION_DATA u8 OSContext__LIT_76[36] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033BBE4 0124 .text      __OSLoadFPUContext                                           */
+/* 8033BBE4-8033BD08 0124 .text      __OSLoadFPUContext                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -144,7 +198,7 @@ asm void __OSLoadFPUContext() {
 }
 #pragma pop
 
-/* 8033BD08 0128 .text      __OSSaveFPUContext                                           */
+/* 8033BD08-8033BE30 0128 .text      __OSSaveFPUContext                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -154,7 +208,7 @@ asm void __OSSaveFPUContext() {
 }
 #pragma pop
 
-/* 8033BE30 0008 .text      OSSaveFPUContext                                             */
+/* 8033BE30-8033BE38 0008 .text      OSSaveFPUContext                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -164,7 +218,7 @@ asm void OSSaveFPUContext() {
 }
 #pragma pop
 
-/* 8033BE38 005C .text      OSSetCurrentContext                                          */
+/* 8033BE38-8033BE94 005C .text      OSSetCurrentContext                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,7 +228,7 @@ asm void OSSetCurrentContext() {
 }
 #pragma pop
 
-/* 8033BE94 000C .text      OSGetCurrentContext                                          */
+/* 8033BE94-8033BEA0 000C .text      OSGetCurrentContext                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -184,7 +238,7 @@ asm void OSGetCurrentContext() {
 }
 #pragma pop
 
-/* 8033BEA0 0080 .text      OSSaveContext                                                */
+/* 8033BEA0-8033BF20 0080 .text      OSSaveContext                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -194,7 +248,7 @@ asm void OSSaveContext() {
 }
 #pragma pop
 
-/* 8033BF20 00D8 .text      OSLoadContext                                                */
+/* 8033BF20-8033BFF8 00D8 .text      OSLoadContext                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -204,7 +258,7 @@ asm void OSLoadContext() {
 }
 #pragma pop
 
-/* 8033BFF8 0008 .text      OSGetStackPointer                                            */
+/* 8033BFF8-8033C000 0008 .text      OSGetStackPointer                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -214,7 +268,7 @@ asm void OSGetStackPointer() {
 }
 #pragma pop
 
-/* 8033C000 0024 .text      OSClearContext                                               */
+/* 8033C000-8033C024 0024 .text      OSClearContext                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -224,7 +278,7 @@ asm void OSClearContext() {
 }
 #pragma pop
 
-/* 8033C024 00BC .text      OSInitContext                                                */
+/* 8033C024-8033C0E0 00BC .text      OSInitContext                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,7 +288,7 @@ asm void OSInitContext() {
 }
 #pragma pop
 
-/* 8033C0E0 02A8 .text      OSDumpContext                                                */
+/* 8033C0E0-8033C388 02A8 .text      OSDumpContext                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -244,7 +298,7 @@ asm void OSDumpContext() {
 }
 #pragma pop
 
-/* 8033C388 0084 .text      OSSwitchFPUContext                                           */
+/* 8033C388-8033C40C 0084 .text      OSSwitchFPUContext                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,7 +308,7 @@ asm void OSSwitchFPUContext() {
 }
 #pragma pop
 
-/* 8033C40C 0048 .text      __OSContextInit                                              */
+/* 8033C40C-8033C454 0048 .text      __OSContextInit                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -264,7 +318,7 @@ asm void __OSContextInit() {
 }
 #pragma pop
 
-/* 8033C454 012C .text      OSFillFPUContext                                             */
+/* 8033C454-8033C580 012C .text      OSFillFPUContext                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

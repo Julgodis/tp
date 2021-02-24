@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __copy_longs_rev_unaligned();
+/* Function             */
+extern void __copy_longs_unaligned();
+/* Function             */
+extern void __copy_longs_rev_aligned();
+/* Function             */
+extern void __copy_longs_aligned();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803661FC 00AC .text      __copy_longs_rev_unaligned                                   */
+/* 803661FC-803662A8 00AC .text      __copy_longs_rev_unaligned                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24,7 +35,7 @@ asm void __copy_longs_rev_unaligned() {
 }
 #pragma pop
 
-/* 803662A8 00C0 .text      __copy_longs_unaligned                                       */
+/* 803662A8-80366368 00C0 .text      __copy_longs_unaligned                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34,7 +45,7 @@ asm void __copy_longs_unaligned() {
 }
 #pragma pop
 
-/* 80366368 00A8 .text      __copy_longs_rev_aligned                                     */
+/* 80366368-80366410 00A8 .text      __copy_longs_rev_aligned                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +55,7 @@ asm void __copy_longs_rev_aligned() {
 }
 #pragma pop
 
-/* 80366410 00BC .text      __copy_longs_aligned                                         */
+/* 80366410-803664CC 00BC .text      __copy_longs_aligned                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

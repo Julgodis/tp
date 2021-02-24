@@ -16,8 +16,9 @@ BASE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libbase.a: dirs $(BASE_A_O_FILES)
+$(BUILD_DIR)/libbase.a: $(BASE_A_O_FILES)
 	$(LD) -xm l $(BASE_A_LDFLAGS) -o $(BUILD_DIR)/libbase.a $(BASE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libbase.a
 
 $(BUILD_DIR)/libs/base/%.o: cpp/base/%.cpp
 	mkdir -p $(@D)

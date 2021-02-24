@@ -11,11 +11,18 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__15dBgS_GrpPassChkFv();
+/* Function             */
 extern void __dt__15dBgS_GrpPassChkFv();
+/* Function             */
 extern void __dt__15cBgS_GrpPassChkFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__15dBgS_GrpPassChk[3];
-SECTION_DATA extern const void* __vt__15cBgS_GrpPassChk[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dBgS_GrpPassChk[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15cBgS_GrpPassChk[3];
 }
 
 
@@ -24,14 +31,14 @@ SECTION_DATA extern const void* __vt__15cBgS_GrpPassChk[3];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB7A8 000C .data      __vt__15dBgS_GrpPassChk                                      */
-SECTION_DATA const  void* __vt__15dBgS_GrpPassChk[3] = {
+/* 803AB7A8-803AB7B4 000C .data      __vt__15dBgS_GrpPassChk                                      VTableData */
+SECTION_DATA void* __vt__15dBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dBgS_GrpPassChkFv,
 };
-/* 803AB7B4 000C .data      __vt__15cBgS_GrpPassChk                                      */
-SECTION_DATA const  void* __vt__15cBgS_GrpPassChk[3] = {
+/* 803AB7B4-803AB7C0 000C .data      __vt__15cBgS_GrpPassChk                                      VTableData */
+SECTION_DATA void* __vt__15cBgS_GrpPassChk[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15cBgS_GrpPassChkFv,
@@ -44,7 +51,7 @@ SECTION_DATA const  void* __vt__15cBgS_GrpPassChk[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80077BA0 0024 .text      __ct__15dBgS_GrpPassChkFv                                    */
+/* 80077BA0-80077BC4 0024 .text      __ct__15dBgS_GrpPassChkFv                                    Function */
 // dBgS_GrpPassChk::dBgS_GrpPassChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -55,7 +62,7 @@ asm void __ct__15dBgS_GrpPassChkFv() {
 }
 #pragma pop
 
-/* 80077BC4 005C .text      __dt__15dBgS_GrpPassChkFv                                    */
+/* 80077BC4-80077C20 005C .text      __dt__15dBgS_GrpPassChkFv                                    Function */
 // dBgS_GrpPassChk::~dBgS_GrpPassChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -66,7 +73,7 @@ asm void __dt__15dBgS_GrpPassChkFv() {
 }
 #pragma pop
 
-/* 80077C20 0048 .text      __dt__15cBgS_GrpPassChkFv                                    */
+/* 80077C20-80077C68 0048 .text      __dt__15cBgS_GrpPassChkFv                                    Function */
 // cBgS_GrpPassChk::~cBgS_GrpPassChk(void)
 #pragma push
 #pragma optimization_level 0

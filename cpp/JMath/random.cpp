@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __ct__Q25JMath13TRandom_fast_FUl();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80339AE4 0008 .text      __ct__Q25JMath13TRandom_fast_FUl                             */
+/* 80339AE4-80339AEC 0008 .text      __ct__Q25JMath13TRandom_fast_FUl                             Function */
 // JMath::TRandom_fast_::JMath::TRandom_fast_(u32)
 #pragma push
 #pragma optimization_level 0

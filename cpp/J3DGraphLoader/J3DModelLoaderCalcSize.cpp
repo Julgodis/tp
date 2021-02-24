@@ -13,32 +13,71 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
+/* Function             */
 extern void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
+/* Function             */
 extern void countUniqueMaterials__18J3DMaterialFactoryFv();
+/* Function             */
 extern void calcSize__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
+/* Function             */
 extern void func_8033674C();
+/* Function             */
+extern void countMaterialNum__14J3DModelLoaderFPCv();
+/* Function             */
+extern void calcLoadSize__14J3DModelLoaderFPCvUl();
+/* Function             */
+extern void calcLoadMaterialTableSize__14J3DModelLoaderFPCv();
+/* Function             */
+extern void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl();
+/* Function             */
 extern void calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl();
+/* Function             */
 extern void calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock();
+/* Function             */
 extern void calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock();
+/* Function             */
 extern void calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock();
+/* Function             */
+extern void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl();
+/* Function             */
 extern void calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock();
+/* Function             */
+extern void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+/* Function             */
 extern void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock();
+/* Function             */
 extern void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+/* Function             */
 extern void calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl();
+/* Function             */
 extern void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+/* Function             */
 extern void calcSize__15J3DShapeFactoryFiUl();
+/* Function             */
 extern void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DModelLoaderCalcSize__stringBase0[24];
 }
 
@@ -48,8 +87,14 @@ SECTION_RODATA extern const u8 J3DModelLoaderCalcSize__stringBase0[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A20E8 0014 .rodata    @stringBase0                                                 */
-const char* const stringBase_803A20E8 = "Unknown data block\n";
+/* 803A20E8-803A2100 0014 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A20E8 = "Unknown data block\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A20FC = "\0\0\0";
+#pragma pop
 }
 
 
@@ -58,7 +103,7 @@ const char* const stringBase_803A20E8 = "Unknown data block\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 80336794 0040 .text      countMaterialNum__14J3DModelLoaderFPCv                       */
+/* 80336794-803367D4 0040 .text      countMaterialNum__14J3DModelLoaderFPCv                       Function */
 // J3DModelLoader::countMaterialNum(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -69,7 +114,7 @@ asm void countMaterialNum__14J3DModelLoaderFPCv() {
 }
 #pragma pop
 
-/* 803367D4 01CC .text      calcLoadSize__14J3DModelLoaderFPCvUl                         */
+/* 803367D4-803369A0 01CC .text      calcLoadSize__14J3DModelLoaderFPCvUl                         Function */
 // J3DModelLoader::calcLoadSize(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +125,7 @@ asm void calcLoadSize__14J3DModelLoaderFPCvUl() {
 }
 #pragma pop
 
-/* 803369A0 00F8 .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              */
+/* 803369A0-80336A98 00F8 .text      calcLoadMaterialTableSize__14J3DModelLoaderFPCv              Function */
 // J3DModelLoader::calcLoadMaterialTableSize(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +136,7 @@ asm void calcLoadMaterialTableSize__14J3DModelLoaderFPCv() {
 }
 #pragma pop
 
-/* 80336A98 0240 .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        */
+/* 80336A98-80336CD8 0240 .text      calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl        Function */
 // J3DModelLoader::calcLoadBinaryDisplayListSize(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +147,7 @@ asm void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl() {
 }
 #pragma pop
 
-/* 80336CD8 008C .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl */
+/* 80336CD8-80336D64 008C .text      calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl Function */
 // J3DModelLoader::calcSizeInformation(const J3DModelInfoBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +158,7 @@ asm void calcSizeInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl() {
 }
 #pragma pop
 
-/* 80336D64 002C .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            */
+/* 80336D64-80336D90 002C .text      calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock            Function */
 // J3DModelLoader::calcSizeJoint(const J3DJointBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +169,7 @@ asm void calcSizeJoint__14J3DModelLoaderFPC13J3DJointBlock() {
 }
 #pragma pop
 
-/* 80336D90 0010 .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      */
+/* 80336D90-80336DA0 0010 .text      calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock      Function */
 // J3DModelLoader::calcSizeEnvelope(const J3DEnvelopeBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -135,7 +180,7 @@ asm void calcSizeEnvelope__14J3DModelLoaderFPC16J3DEnvelopeBlock() {
 }
 #pragma pop
 
-/* 80336DA0 0014 .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              */
+/* 80336DA0-80336DB4 0014 .text      calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock              Function */
 // J3DModelLoader::calcSizeDraw(const J3DDrawBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -146,7 +191,7 @@ asm void calcSizeDraw__14J3DModelLoaderFPC12J3DDrawBlock() {
 }
 #pragma pop
 
-/* 80336DB4 00EC .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336DB4-80336EA0 00EC .text      calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl Function */
 // J3DModelLoader_v26::calcSizeMaterial(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -157,7 +202,7 @@ asm void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 80336EA0 00A4 .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          */
+/* 80336EA0-80336F44 00A4 .text      calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl          Function */
 // J3DModelLoader::calcSizeShape(const J3DShapeBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +213,7 @@ asm void calcSizeShape__14J3DModelLoaderFPC13J3DShapeBlockUl() {
 }
 #pragma pop
 
-/* 80336F44 001C .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        */
+/* 80336F44-80336F60 001C .text      calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock        Function */
 // J3DModelLoader::calcSizeTexture(const J3DTextureBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +224,7 @@ asm void calcSizeTexture__14J3DModelLoaderFPC15J3DTextureBlock() {
 }
 #pragma pop
 
-/* 80336F60 0090 .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl */
+/* 80336F60-80336FF0 0090 .text      calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl Function */
 // J3DModelLoader_v26::calcSizeMaterialTable(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +235,7 @@ asm void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 80336FF0 0020 .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   */
+/* 80336FF0-80337010 0020 .text      calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock   Function */
 // J3DModelLoader::calcSizeTextureTable(const J3DTextureBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +246,7 @@ asm void calcSizeTextureTable__14J3DModelLoaderFPC15J3DTextureBlock() {
 }
 #pragma pop
 
-/* 80337010 0090 .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl */
+/* 80337010-803370A0 0090 .text      calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl Function */
 // J3DModelLoader::calcSizePatchedMaterial(const J3DMaterialBlock*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -212,7 +257,7 @@ asm void calcSizePatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl() {
 }
 #pragma pop
 
-/* 803370A0 00D8 .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl */
+/* 803370A0-80337178 00D8 .text      calcSizeMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl Function */
 // J3DModelLoader::calcSizeMaterialDL(const J3DMaterialDLBlock*, u32)
 #pragma push
 #pragma optimization_level 0

@@ -15,10 +15,10 @@
 struct fopAc_ac_c;
 
 extern void fopAcIt_Judge(void* (*)(void*, void*), void*); /* fopAcIt_Judge__FPFPvPv_PvPv */
-extern void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); /* fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs */
-extern void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); /* fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs */
-extern void fopAcM_searchFromName4Event(const s8*, s16); /* fopAcM_searchFromName4Event__FPCcs */
-extern void dComIfG_getStageRes(const s8*); /* dComIfG_getStageRes__FPCc */
+extern void fopAcM_orderOtherEventId(fopAc_ac_c*, short, u8, u16, u16, u16); /* fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs */
+extern void fopAcM_orderMapToolAutoNextEvent(fopAc_ac_c*, u8, short, u16, u16, u16); /* fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs */
+extern void fopAcM_searchFromName4Event(const char*, short); /* fopAcM_searchFromName4Event__FPCcs */
+extern void dComIfG_getStageRes(const char*); /* dComIfG_getStageRes__FPCc */
 extern void dComIfG_getRoomArcName(int); /* dComIfG_getRoomArcName__Fi */
 extern void dComIfGp_SelectWarpPt_get(void); /* dComIfGp_SelectWarpPt_get__Fv */
 extern void dEv_defaultSkipProc(void*, int); /* dEv_defaultSkipProc__FPvi */
@@ -27,120 +27,281 @@ extern void dEv_defaultSkipStb(void*, int); /* dEv_defaultSkipStb__FPvi */
 extern void extraOnObjectCallBack(fopAc_ac_c*, void*); /* extraOnObjectCallBack__FP10fopAc_ac_cPv */
 extern void extraOffObjectCallBack(fopAc_ac_c*, void*); /* extraOffObjectCallBack__FP10fopAc_ac_cPv */
 extern void allOffObjectCallBack(fopAc_ac_c*, void*); /* allOffObjectCallBack__FP10fopAc_ac_cPv */
-extern void dEvmng_strcmp(const s8*, s8*); /* dEvmng_strcmp__FPCcPc */
+extern void dEvmng_strcmp(const char*, char*); /* dEvmng_strcmp__FPCcPc */
 extern void findShutterCallBack(fopAc_ac_c*, void*); /* findShutterCallBack__FP10fopAc_ac_cPv */
 extern void dEv_talkman_get_action(int); /* dEv_talkman_get_action__Fi */
 extern void dCam_getBody(void); /* dCam_getBody__Fv */
 
 extern "C" {
+/* Function             */
 extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+/* Function             */
 extern void fopAcM_orderMapToolAutoNextEvent__FP10fopAc_ac_cUcsUsUsUs();
+/* Function             */
 extern void fopAcM_searchFromName4Event__FPCcs();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void dComIfG_getStageRes__FPCc();
+/* Function             */
 extern void dComIfG_getRoomArcName__Fi();
+/* Function             */
 extern void dComIfGp_SelectWarpPt_get__Fv();
+/* Function             */
 extern void __dt__11dEvDtBase_cFv();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+/* Function             */
 extern void reset__14dEvt_control_cFv();
+/* Function             */
 extern void dEv_defaultSkipProc__FPvi();
+/* Function             */
 extern void dEv_defaultSkipZev__FPvi();
+/* Function             */
 extern void dEv_defaultSkipStb__FPvi();
+/* Function             */
 extern void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+/* Function             */
 extern void onSkipFade__14dEvt_control_cFv();
+/* FirstParamFunction   */
 extern u32 getStageEventDt__14dEvt_control_cFv(u8*);
+/* Function             */
 extern void sceneChange__14dEvt_control_cFi();
+/* Function             */
 extern void convPId__14dEvt_control_cFUi();
+/* Function             */
 extern void searchMapEventData__14dEvt_control_cFUcl();
+/* Function             */
 extern void runningEventID__14dEvt_control_cFs();
+/* Function             */
 extern void setPt2__14dEvt_control_cFPv();
+/* Function             */
 extern void setPtI__14dEvt_control_cFPv();
+/* Function             */
 extern void setPtD__14dEvt_control_cFPv();
+/* Function             */
 extern void flagSet__11dEvDtFlag_cFi();
+/* Function             */
 extern void init__11dEvDtFlag_cFv();
+/* Function             */
 extern void finishCheck__12dEvDtEvent_cFv();
+/* Function             */
 extern void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
+/* Function             */
 extern void init__12dEvDtStaff_cFv();
+/* Function             */
 extern void init__11dEvDtBase_cFv();
+/* Function             */
 extern void init__11dEvDtBase_cFPci();
+/* Function             */
 extern void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
+/* Function             */
 extern void init__18dEvent_exception_cFv();
+/* Function             */
+extern void setStartDemo__18dEvent_exception_cFi();
+/* Function             */
 extern void getEventName__18dEvent_exception_cFv();
+/* Function             */
 extern void getSubstance__16dEvent_manager_cFP11dEvDtData_ci();
+/* Function             */
+extern void __ct__16dEvent_manager_cFv();
+/* Function             */
 extern void __ct__11dEvDtBase_cFv();
+/* Function             */
+extern void create__16dEvent_manager_cFv();
+/* Function             */
+extern void setObjectArchive__16dEvent_manager_cFPc();
+/* Function             */
+extern void demoInit__16dEvent_manager_cFv();
+/* Function             */
+extern void roomInit__16dEvent_manager_cFi();
+/* Function             */
+extern void roomFinish__16dEvent_manager_cFi();
+/* Function             */
+extern void orderStartDemo__16dEvent_manager_cFv();
+/* Function             */
+extern void remove__16dEvent_manager_cFv();
+/* Function             */
 extern void extraOnObjectCallBack__FP10fopAc_ac_cPv();
+/* Function             */
 extern void extraOffObjectCallBack__FP10fopAc_ac_cPv();
+/* Function             */
 extern void allOffObjectCallBack__FP10fopAc_ac_cPv();
+/* Function             */
 extern void startProc__16dEvent_manager_cFP12dEvDtEvent_c();
+/* Function             */
 extern void closeProc__16dEvent_manager_cFP12dEvDtEvent_c();
+/* Function             */
+extern void endProc__16dEvent_manager_cFsi();
+/* Function             */
+extern void Sequencer__16dEvent_manager_cFv();
+/* Function             */
+extern void Experts__16dEvent_manager_cFv();
+/* Function             */
 extern void getEventData__16dEvent_manager_cFsi();
+/* Function             */
 extern void getEventData__16dEvent_manager_cFs();
+/* Function             */
 extern void getEventIdx__16dEvent_manager_cFPCcUcl();
+/* Function             */
+extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+/* Function             */
 extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+/* Function             */
+extern void isMapToolCamera__16dEvent_manager_cFUcl();
+/* Function             */
+extern void order__16dEvent_manager_cFs();
+/* Function             */
 extern void startCheck__16dEvent_manager_cFs();
+/* Function             */
+extern void startCheckOld__16dEvent_manager_cFPCc();
+/* Function             */
 extern void endCheck__16dEvent_manager_cFs();
+/* Function             */
+extern void endCheckOld__16dEvent_manager_cFPCc();
+/* Function             */
 extern void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+/* Function             */
+extern void getIsAddvance__16dEvent_manager_cFi();
+/* Function             */
 extern void dEvmng_strcmp__FPCcPc();
+/* Function             */
 extern void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+/* Function             */
 extern void getMyNowCutName__16dEvent_manager_cFi();
+/* Function             */
 extern void getMyDataP__16dEvent_manager_cFiPCci();
+/* Function             */
+extern void getMySubstanceP__16dEvent_manager_cFiPCci();
+/* Function             */
+extern void getMySubstanceNum__16dEvent_manager_cFiPCc();
+/* Function             */
 extern void cutEnd__16dEvent_manager_cFi();
+/* Function             */
+extern void getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs();
+/* Function             */
 extern void issueStaff__16dEvent_manager_cFPCc();
+/* Function             */
+extern void cancelStaff__16dEvent_manager_cFPCc();
+/* Function             */
 extern void setGoal__16dEvent_manager_cFP4cXyz();
+/* FirstParamFunction   */
+extern u8* getGoal__16dEvent_manager_cFv(u8*);
+/* Function             */
+extern void getRunEventName__16dEvent_manager_cFv();
+/* Function             */
 extern void findShutterCallBack__FP10fopAc_ac_cPv();
+/* Function             */
 extern void specialCast_Shutter__16dEvent_manager_cFsi();
+/* Function             */
 extern void specialCast__16dEvent_manager_cFPCci();
+/* Function             */
 extern void dEv_talkman_get_action__Fi();
+/* Function             */
+extern void ChkPresentEnd__16dEvent_manager_cFv();
+/* Function             */
+extern void checkStartDemo__16dEvent_manager_cFv();
+/* Function             */
 extern void EventRecoverNotime__9dCamera_cFv();
+/* Function             */
 extern void dCam_getBody__Fv();
+/* Function             */
 extern void Center__9dCamera_cFv();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void setDemoName__11Z2StatusMgrFPc();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void strchr();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80379F50[16];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_event_manager__stringBase0[424];
-SECTION_DATA extern u8 data_803A8270[56];
-SECTION_DATA extern u8 data_803A82A8[16];
-SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A8270[14];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A82A8[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 data_804246A0[20];
-SECTION_BSS extern u8 data_804246B4[20];
-SECTION_BSS extern u8 data_804246C8[24];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_804246A0[17 + 3 /* padding */];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_804246B4[17 + 3 /* padding */];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_804246C8[17 + 7 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_event_manager__LIT_4398[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_event_manager__LIT_4399;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_event_manager__LIT_4400;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4401[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4402;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4403;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_manager__LIT_4404;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_manager__LIT_5025;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_manager__LIT_5026;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_event_manager__LIT_5055;
 }
 
@@ -150,46 +311,52 @@ SECTION_SDATA2 extern f32 d_d_event_manager__LIT_5055;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80379F50 000F .rodata    DataFileName__29@unnamed@d_event_manager_cpp@                */
+/* 80379F60-8037A108 01A4 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80379F60 = "NORMAL_COMEBACK";
+SECTION_DEAD const char* const stringBase_80379F70 = "DEFAULT_START";
+SECTION_DEAD const char* const stringBase_80379F7E = "SHUTTER_START";
+SECTION_DEAD const char* const stringBase_80379F8C = "SHUTTER_START_STOP";
+SECTION_DEAD const char* const stringBase_80379F9F = "BS_SHUTTER_START";
+SECTION_DEAD const char* const stringBase_80379FB0 = "BS_SHUTTER_START_B";
+SECTION_DEAD const char* const stringBase_80379FC3 = "KNOB_START";
+SECTION_DEAD const char* const stringBase_80379FCE = "KNOB_START_B";
+SECTION_DEAD const char* const stringBase_80379FDB = "FMASTER_START";
+SECTION_DEAD const char* const stringBase_80379FE9 = "FALL_START";
+SECTION_DEAD const char* const stringBase_80379FF4 = "CRAWLOUT_START";
+SECTION_DEAD const char* const stringBase_8037A003 = "BOSSWARP_START";
+SECTION_DEAD const char* const stringBase_8037A012 = "PORTALWARP_START";
+SECTION_DEAD const char* const stringBase_8037A023 = "PORTALWARP_START_B";
+SECTION_DEAD const char* const stringBase_8037A036 = "(!NO REGIST!)";
+SECTION_DEAD const char* const stringBase_8037A044 = "(!NO INFO!)";
+SECTION_DEAD const char* const stringBase_8037A050 = "(!BAD NUMBER!)";
+SECTION_DEAD const char* const stringBase_8037A05F = "(MAP TOOL CAMERA)";
+SECTION_DEAD const char* const stringBase_8037A071 = "(!BAD DATA!)";
+SECTION_DEAD const char* const stringBase_8037A07E = "Event";
+SECTION_DEAD const char* const stringBase_8037A084 = "WOLF_WORLD_CHANGE_OUT";
+SECTION_DEAD const char* const stringBase_8037A09A = "WORLD_CHANGE_OUT";
+SECTION_DEAD const char* const stringBase_8037A0AB = "ALL";
+SECTION_DEAD const char* const stringBase_8037A0AF = "MapToolCamera%d";
+SECTION_DEAD const char* const stringBase_8037A0BF = "Alink";
+SECTION_DEAD const char* const stringBase_8037A0C5 = "Link";
+SECTION_DEAD const char* const stringBase_8037A0CA = "NO DATA";
+SECTION_DEAD const char* const stringBase_8037A0D2 = "NOT RUNNING";
+SECTION_DEAD const char* const stringBase_8037A0DE = "SHUTTER_DOOR";
+SECTION_DEAD const char* const stringBase_8037A0EB = "WAIT";
+SECTION_DEAD const char* const stringBase_8037A0F0 = "TALK0";
+SECTION_DEAD const char* const stringBase_8037A0F6 = "TALK1";
+SECTION_DEAD const char* const stringBase_8037A0FC = "TALKMAN";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A104 = "\0\0\0";
+#pragma pop
+/* 80379F50-80379F60 000F .rodata    DataFileName__29@unnamed@d_event_manager_cpp@                InitializedData */
 SECTION_RODATA const u8 data_80379F50[16] = {
 	0x65, 0x76, 0x65, 0x6E, 0x74, 0x5F, 0x6C, 0x69, 0x73, 0x74, 0x2E, 0x64, 0x61, 0x74, 0x00,
 	/* padding */
 	0x00,
 };
-/* 80379F60 01A4 .rodata    @stringBase0                                                 */
-const char* const stringBase_80379F60 = "NORMAL_COMEBACK";
-const char* const stringBase_80379F70 = "DEFAULT_START";
-const char* const stringBase_80379F7E = "SHUTTER_START";
-const char* const stringBase_80379F8C = "SHUTTER_START_STOP";
-const char* const stringBase_80379F9F = "BS_SHUTTER_START";
-const char* const stringBase_80379FB0 = "BS_SHUTTER_START_B";
-const char* const stringBase_80379FC3 = "KNOB_START";
-const char* const stringBase_80379FCE = "KNOB_START_B";
-const char* const stringBase_80379FDB = "FMASTER_START";
-const char* const stringBase_80379FE9 = "FALL_START";
-const char* const stringBase_80379FF4 = "CRAWLOUT_START";
-const char* const stringBase_8037A003 = "BOSSWARP_START";
-const char* const stringBase_8037A012 = "PORTALWARP_START";
-const char* const stringBase_8037A023 = "PORTALWARP_START_B";
-const char* const stringBase_8037A036 = "(!NO REGIST!)";
-const char* const stringBase_8037A044 = "(!NO INFO!)";
-const char* const stringBase_8037A050 = "(!BAD NUMBER!)";
-const char* const stringBase_8037A05F = "(MAP TOOL CAMERA)";
-const char* const stringBase_8037A071 = "(!BAD DATA!)";
-const char* const stringBase_8037A07E = "Event";
-const char* const stringBase_8037A084 = "WOLF_WORLD_CHANGE_OUT";
-const char* const stringBase_8037A09A = "WORLD_CHANGE_OUT";
-const char* const stringBase_8037A0AB = "ALL";
-const char* const stringBase_8037A0AF = "MapToolCamera%d";
-const char* const stringBase_8037A0BF = "Alink";
-const char* const stringBase_8037A0C5 = "Link";
-const char* const stringBase_8037A0CA = "NO DATA";
-const char* const stringBase_8037A0D2 = "NOT RUNNING";
-const char* const stringBase_8037A0DE = "SHUTTER_DOOR";
-const char* const stringBase_8037A0EB = "WAIT";
-const char* const stringBase_8037A0F0 = "TALK0";
-const char* const stringBase_8037A0F6 = "TALK1";
-const char* const stringBase_8037A0FC = "TALKMAN";
 }
 
 
@@ -198,18 +365,30 @@ const char* const stringBase_8037A0FC = "TALKMAN";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A8270 0038 .data      soecial_names$3966                                           */
-SECTION_DATA u8 data_803A8270[56] = {
-	0x80, 0x37, 0x9F, 0x60, 0x80, 0x37, 0x9F, 0x70, 0x80, 0x37, 0x9F, 0x7E, 0x80, 0x37, 0x9F, 0x8C,
-	0x80, 0x37, 0x9F, 0x9F, 0x80, 0x37, 0x9F, 0xB0, 0x80, 0x37, 0x9F, 0xC3, 0x80, 0x37, 0x9F, 0xCE,
-	0x80, 0x37, 0x9F, 0xDB, 0x80, 0x37, 0x9F, 0xE9, 0x80, 0x37, 0x9F, 0xF4, 0x80, 0x37, 0xA0, 0x03,
-	0x80, 0x37, 0xA0, 0x12, 0x80, 0x37, 0xA0, 0x23,
+/* 803A8270-803A82A8 0038 .data      soecial_names$3966                                           SymbolReferenceArrayData */
+SECTION_DATA void* data_803A8270[14] = {
+	(void*)d_d_event_manager__stringBase0,
+	(void*)((char*)d_d_event_manager__stringBase0+16) /* stringBase_80379F70 */,
+	(void*)((char*)d_d_event_manager__stringBase0+30) /* stringBase_80379F7E */,
+	(void*)((char*)d_d_event_manager__stringBase0+44) /* stringBase_80379F8C */,
+	(void*)((char*)d_d_event_manager__stringBase0+63) /* stringBase_80379F9F */,
+	(void*)((char*)d_d_event_manager__stringBase0+80) /* stringBase_80379FB0 */,
+	(void*)((char*)d_d_event_manager__stringBase0+99) /* stringBase_80379FC3 */,
+	(void*)((char*)d_d_event_manager__stringBase0+110) /* stringBase_80379FCE */,
+	(void*)((char*)d_d_event_manager__stringBase0+123) /* stringBase_80379FDB */,
+	(void*)((char*)d_d_event_manager__stringBase0+137) /* stringBase_80379FE9 */,
+	(void*)((char*)d_d_event_manager__stringBase0+148) /* stringBase_80379FF4 */,
+	(void*)((char*)d_d_event_manager__stringBase0+163) /* stringBase_8037A003 */,
+	(void*)((char*)d_d_event_manager__stringBase0+178) /* stringBase_8037A012 */,
+	(void*)((char*)d_d_event_manager__stringBase0+195) /* stringBase_8037A023 */,
 };
-/* 803A82A8 000C .data      action_table$5100                                            */
-SECTION_DATA u8 data_803A82A8[16] = {
-	0x80, 0x37, 0xA0, 0xEB, 0x80, 0x37, 0xA0, 0xF0, 0x80, 0x37, 0xA0, 0xF6,
+/* 803A82A8-803A82B8 000C .data      action_table$5100                                            SymbolReferenceArrayData */
+SECTION_DATA void* data_803A82A8[4] = {
+	(void*)((char*)d_d_event_manager__stringBase0+395) /* stringBase_8037A0EB */,
+	(void*)((char*)d_d_event_manager__stringBase0+400) /* stringBase_8037A0F0 */,
+	(void*)((char*)d_d_event_manager__stringBase0+406) /* stringBase_8037A0F6 */,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -219,38 +398,38 @@ SECTION_DATA u8 data_803A82A8[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451F00 0004 .sdata2    @4398                                                        */
+/* 80451F00-80451F08 0004 .sdata2    @4398                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_event_manager__LIT_4398[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451F08 0008 .sdata2    @4399                                                        */
+/* 80451F08-80451F10 0008 .sdata2    @4399                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_event_manager__LIT_4399 = 0.500000;
-/* 80451F10 0008 .sdata2    @4400                                                        */
+/* 80451F10-80451F18 0008 .sdata2    @4400                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_event_manager__LIT_4400 = 3.000000;
-/* 80451F18 0008 .sdata2    @4401                                                        */
+/* 80451F18-80451F20 0008 .sdata2    @4401                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4401[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80451F20 0004 .sdata2    @4402                                                        */
+/* 80451F20-80451F24 0004 .sdata2    @4402                                                        Float32Data */
 // 0x43340000
 SECTION_SDATA2 f32 LIT_4402 = 180.000000f;
-/* 80451F24 0004 .sdata2    @4403                                                        */
+/* 80451F24-80451F28 0004 .sdata2    @4403                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_4403 = 1.000000f;
-/* 80451F28 0004 .sdata2    @4404                                                        */
+/* 80451F28-80451F2C 0004 .sdata2    @4404                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_event_manager__LIT_4404 = -1.000000f;
-/* 80451F2C 0004 .sdata2    @5025                                                        */
+/* 80451F2C-80451F30 0004 .sdata2    @5025                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_event_manager__LIT_5025 = 10.000000f;
-/* 80451F30 0004 .sdata2    @5026                                                        */
+/* 80451F30-80451F34 0004 .sdata2    @5026                                                        Float32Data */
 // 0xc1200000
 SECTION_SDATA2 f32 d_d_event_manager__LIT_5026 = -10.000000f;
-/* 80451F34 0004 .sdata2    @5055                                                        */
+/* 80451F34-80451F38 0004 .sdata2    @5055                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_event_manager__LIT_5055 = 100.000000f;
 }
@@ -261,12 +440,12 @@ SECTION_SDATA2 f32 d_d_event_manager__LIT_5055 = 100.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804246A0 0011 .bss       map_tool_name$4449                                           */
-SECTION_BSS u8 data_804246A0[20];
-/* 804246B4 0011 .bss       map_tool_name$4498                                           */
-SECTION_BSS u8 data_804246B4[20];
-/* 804246C8 0011 .bss       map_tool_name$4511                                           */
-SECTION_BSS u8 data_804246C8[24];
+/* 804246A0-804246B4 0011 .bss       map_tool_name$4449                                           ZeroInitializedData */
+SECTION_BSS u8 data_804246A0[17 + 3 /* padding */];
+/* 804246B4-804246C8 0011 .bss       map_tool_name$4498                                           ZeroInitializedData */
+SECTION_BSS u8 data_804246B4[17 + 3 /* padding */];
+/* 804246C8-804246E0 0011 .bss       map_tool_name$4511                                           ZeroInitializedData */
+SECTION_BSS u8 data_804246C8[17 + 7 /* padding */];
 }
 
 
@@ -275,7 +454,7 @@ SECTION_BSS u8 data_804246C8[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800463DC 0014 .text      init__18dEvent_exception_cFv                                 */
+/* 800463DC-800463F0 0014 .text      init__18dEvent_exception_cFv                                 Function */
 // dEvent_exception_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -286,7 +465,7 @@ asm void init__18dEvent_exception_cFv() {
 }
 #pragma pop
 
-/* 800463F0 0090 .text      setStartDemo__18dEvent_exception_cFi                         */
+/* 800463F0-80046480 0090 .text      setStartDemo__18dEvent_exception_cFi                         Function */
 // dEvent_exception_c::setStartDemo(int)
 #pragma push
 #pragma optimization_level 0
@@ -297,7 +476,7 @@ asm void setStartDemo__18dEvent_exception_cFi() {
 }
 #pragma pop
 
-/* 80046480 0168 .text      getEventName__18dEvent_exception_cFv                         */
+/* 80046480-800465E8 0168 .text      getEventName__18dEvent_exception_cFv                         Function */
 // dEvent_exception_c::getEventName(void)
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +487,7 @@ asm void getEventName__18dEvent_exception_cFv() {
 }
 #pragma pop
 
-/* 800465E8 00A0 .text      getSubstance__16dEvent_manager_cFP11dEvDtData_ci             */
+/* 800465E8-80046688 00A0 .text      getSubstance__16dEvent_manager_cFP11dEvDtData_ci             Function */
 // dEvent_manager_c::getSubstance(dEvDtData_c*, int)
 #pragma push
 #pragma optimization_level 0
@@ -319,7 +498,7 @@ asm void getSubstance__16dEvent_manager_cFP11dEvDtData_ci() {
 }
 #pragma pop
 
-/* 80046688 0058 .text      __ct__16dEvent_manager_cFv                                   */
+/* 80046688-800466E0 0058 .text      __ct__16dEvent_manager_cFv                                   Function */
 // dEvent_manager_c::dEvent_manager_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -330,7 +509,7 @@ asm void __ct__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 800466E0 0030 .text      __ct__11dEvDtBase_cFv                                        */
+/* 800466E0-80046710 0030 .text      __ct__11dEvDtBase_cFv                                        Function */
 // dEvDtBase_c::dEvDtBase_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -341,7 +520,7 @@ asm void __ct__11dEvDtBase_cFv() {
 }
 #pragma pop
 
-/* 80046710 00F0 .text      create__16dEvent_manager_cFv                                 */
+/* 80046710-80046800 00F0 .text      create__16dEvent_manager_cFv                                 Function */
 // dEvent_manager_c::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -352,8 +531,8 @@ asm void create__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 80046800 0088 .text      setObjectArchive__16dEvent_manager_cFPc                      */
-// dEvent_manager_c::setObjectArchive(s8*)
+/* 80046800-80046888 0088 .text      setObjectArchive__16dEvent_manager_cFPc                      Function */
+// dEvent_manager_c::setObjectArchive(char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -363,7 +542,7 @@ asm void setObjectArchive__16dEvent_manager_cFPc() {
 }
 #pragma pop
 
-/* 80046888 007C .text      demoInit__16dEvent_manager_cFv                               */
+/* 80046888-80046904 007C .text      demoInit__16dEvent_manager_cFv                               Function */
 // dEvent_manager_c::demoInit(void)
 #pragma push
 #pragma optimization_level 0
@@ -374,7 +553,7 @@ asm void demoInit__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 80046904 00E8 .text      roomInit__16dEvent_manager_cFi                               */
+/* 80046904-800469EC 00E8 .text      roomInit__16dEvent_manager_cFi                               Function */
 // dEvent_manager_c::roomInit(int)
 #pragma push
 #pragma optimization_level 0
@@ -385,7 +564,7 @@ asm void roomInit__16dEvent_manager_cFi() {
 }
 #pragma pop
 
-/* 800469EC 006C .text      roomFinish__16dEvent_manager_cFi                             */
+/* 800469EC-80046A58 006C .text      roomFinish__16dEvent_manager_cFi                             Function */
 // dEvent_manager_c::roomFinish(int)
 #pragma push
 #pragma optimization_level 0
@@ -396,7 +575,7 @@ asm void roomFinish__16dEvent_manager_cFi() {
 }
 #pragma pop
 
-/* 80046A58 01B4 .text      orderStartDemo__16dEvent_manager_cFv                         */
+/* 80046A58-80046C0C 01B4 .text      orderStartDemo__16dEvent_manager_cFv                         Function */
 // dEvent_manager_c::orderStartDemo(void)
 #pragma push
 #pragma optimization_level 0
@@ -407,7 +586,7 @@ asm void orderStartDemo__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 80046C0C 0068 .text      remove__16dEvent_manager_cFv                                 */
+/* 80046C0C-80046C74 0068 .text      remove__16dEvent_manager_cFv                                 Function */
 // dEvent_manager_c::remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -418,7 +597,7 @@ asm void remove__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 80046C74 0014 .text      extraOnObjectCallBack__FP10fopAc_ac_cPv                      */
+/* 80046C74-80046C88 0014 .text      extraOnObjectCallBack__FP10fopAc_ac_cPv                      Function */
 }
 
 #pragma push
@@ -431,7 +610,7 @@ asm void extraOnObjectCallBack(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80046C88 0014 .text      extraOffObjectCallBack__FP10fopAc_ac_cPv                     */
+/* 80046C88-80046C9C 0014 .text      extraOffObjectCallBack__FP10fopAc_ac_cPv                     Function */
 }
 
 #pragma push
@@ -444,7 +623,7 @@ asm void extraOffObjectCallBack(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80046C9C 001C .text      allOffObjectCallBack__FP10fopAc_ac_cPv                       */
+/* 80046C9C-80046CB8 001C .text      allOffObjectCallBack__FP10fopAc_ac_cPv                       Function */
 }
 
 #pragma push
@@ -457,7 +636,7 @@ asm void allOffObjectCallBack(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80046CB8 00E8 .text      startProc__16dEvent_manager_cFP12dEvDtEvent_c                */
+/* 80046CB8-80046DA0 00E8 .text      startProc__16dEvent_manager_cFP12dEvDtEvent_c                Function */
 // dEvent_manager_c::startProc(dEvDtEvent_c*)
 #pragma push
 #pragma optimization_level 0
@@ -468,7 +647,7 @@ asm void startProc__16dEvent_manager_cFP12dEvDtEvent_c() {
 }
 #pragma pop
 
-/* 80046DA0 000C .text      closeProc__16dEvent_manager_cFP12dEvDtEvent_c                */
+/* 80046DA0-80046DAC 000C .text      closeProc__16dEvent_manager_cFP12dEvDtEvent_c                Function */
 // dEvent_manager_c::closeProc(dEvDtEvent_c*)
 #pragma push
 #pragma optimization_level 0
@@ -479,8 +658,8 @@ asm void closeProc__16dEvent_manager_cFP12dEvDtEvent_c() {
 }
 #pragma pop
 
-/* 80046DAC 00B8 .text      endProc__16dEvent_manager_cFsi                               */
-// dEvent_manager_c::endProc(s16, int)
+/* 80046DAC-80046E64 00B8 .text      endProc__16dEvent_manager_cFsi                               Function */
+// dEvent_manager_c::endProc(short, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -490,7 +669,7 @@ asm void endProc__16dEvent_manager_cFsi() {
 }
 #pragma pop
 
-/* 80046E64 0598 .text      Sequencer__16dEvent_manager_cFv                              */
+/* 80046E64-800473FC 0598 .text      Sequencer__16dEvent_manager_cFv                              Function */
 // dEvent_manager_c::Sequencer(void)
 #pragma push
 #pragma optimization_level 0
@@ -501,7 +680,7 @@ asm void Sequencer__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 800473FC 0058 .text      Experts__16dEvent_manager_cFv                                */
+/* 800473FC-80047454 0058 .text      Experts__16dEvent_manager_cFv                                Function */
 // dEvent_manager_c::Experts(void)
 #pragma push
 #pragma optimization_level 0
@@ -512,8 +691,8 @@ asm void Experts__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 80047454 0068 .text      getEventData__16dEvent_manager_cFsi                          */
-// dEvent_manager_c::getEventData(s16, int)
+/* 80047454-800474BC 0068 .text      getEventData__16dEvent_manager_cFsi                          Function */
+// dEvent_manager_c::getEventData(short, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -523,8 +702,8 @@ asm void getEventData__16dEvent_manager_cFsi() {
 }
 #pragma pop
 
-/* 800474BC 0058 .text      getEventData__16dEvent_manager_cFs                           */
-// dEvent_manager_c::getEventData(s16)
+/* 800474BC-80047514 0058 .text      getEventData__16dEvent_manager_cFs                           Function */
+// dEvent_manager_c::getEventData(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -534,8 +713,8 @@ asm void getEventData__16dEvent_manager_cFs() {
 }
 #pragma pop
 
-/* 80047514 0184 .text      getEventIdx__16dEvent_manager_cFPCcUcl                       */
-// dEvent_manager_c::getEventIdx(const s8*, u8, s32)
+/* 80047514-80047698 0184 .text      getEventIdx__16dEvent_manager_cFPCcUcl                       Function */
+// dEvent_manager_c::getEventIdx(const char*, u8, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +724,7 @@ asm void getEventIdx__16dEvent_manager_cFPCcUcl() {
 }
 #pragma pop
 
-/* 80047698 00C0 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc              */
+/* 80047698-80047758 00C0 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc              Function */
 // dEvent_manager_c::getEventIdx(fopAc_ac_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -556,8 +735,8 @@ asm void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc() {
 }
 #pragma pop
 
-/* 80047758 01D8 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc           */
-// dEvent_manager_c::getEventIdx(fopAc_ac_c*, const s8*, u8)
+/* 80047758-80047930 01D8 .text      getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc           Function */
+// dEvent_manager_c::getEventIdx(fopAc_ac_c*, const char*, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,8 +746,8 @@ asm void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc() {
 }
 #pragma pop
 
-/* 80047930 0054 .text      isMapToolCamera__16dEvent_manager_cFUcl                      */
-// dEvent_manager_c::isMapToolCamera(u8, s32)
+/* 80047930-80047984 0054 .text      isMapToolCamera__16dEvent_manager_cFUcl                      Function */
+// dEvent_manager_c::isMapToolCamera(u8, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,8 +757,8 @@ asm void isMapToolCamera__16dEvent_manager_cFUcl() {
 }
 #pragma pop
 
-/* 80047984 0074 .text      order__16dEvent_manager_cFs                                  */
-// dEvent_manager_c::order(s16)
+/* 80047984-800479F8 0074 .text      order__16dEvent_manager_cFs                                  Function */
+// dEvent_manager_c::order(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,8 +768,8 @@ asm void order__16dEvent_manager_cFs() {
 }
 #pragma pop
 
-/* 800479F8 0040 .text      startCheck__16dEvent_manager_cFs                             */
-// dEvent_manager_c::startCheck(s16)
+/* 800479F8-80047A38 0040 .text      startCheck__16dEvent_manager_cFs                             Function */
+// dEvent_manager_c::startCheck(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,8 +779,8 @@ asm void startCheck__16dEvent_manager_cFs() {
 }
 #pragma pop
 
-/* 80047A38 0040 .text      startCheckOld__16dEvent_manager_cFPCc                        */
-// dEvent_manager_c::startCheckOld(const s8*)
+/* 80047A38-80047A78 0040 .text      startCheckOld__16dEvent_manager_cFPCc                        Function */
+// dEvent_manager_c::startCheckOld(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -611,8 +790,8 @@ asm void startCheckOld__16dEvent_manager_cFPCc() {
 }
 #pragma pop
 
-/* 80047A78 0064 .text      endCheck__16dEvent_manager_cFs                               */
-// dEvent_manager_c::endCheck(s16)
+/* 80047A78-80047ADC 0064 .text      endCheck__16dEvent_manager_cFs                               Function */
+// dEvent_manager_c::endCheck(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -622,8 +801,8 @@ asm void endCheck__16dEvent_manager_cFs() {
 }
 #pragma pop
 
-/* 80047ADC 0040 .text      endCheckOld__16dEvent_manager_cFPCc                          */
-// dEvent_manager_c::endCheckOld(const s8*)
+/* 80047ADC-80047B1C 0040 .text      endCheckOld__16dEvent_manager_cFPCc                          Function */
+// dEvent_manager_c::endCheckOld(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -633,8 +812,8 @@ asm void endCheckOld__16dEvent_manager_cFPCc() {
 }
 #pragma pop
 
-/* 80047B1C 0230 .text      getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci           */
-// dEvent_manager_c::getMyStaffId(const s8*, fopAc_ac_c*, int)
+/* 80047B1C-80047D4C 0230 .text      getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci           Function */
+// dEvent_manager_c::getMyStaffId(const char*, fopAc_ac_c*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -644,7 +823,7 @@ asm void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci() {
 }
 #pragma pop
 
-/* 80047D4C 0060 .text      getIsAddvance__16dEvent_manager_cFi                          */
+/* 80047D4C-80047DAC 0060 .text      getIsAddvance__16dEvent_manager_cFi                          Function */
 // dEvent_manager_c::getIsAddvance(int)
 #pragma push
 #pragma optimization_level 0
@@ -655,21 +834,21 @@ asm void getIsAddvance__16dEvent_manager_cFi() {
 }
 #pragma pop
 
-/* 80047DAC 0064 .text      dEvmng_strcmp__FPCcPc                                        */
+/* 80047DAC-80047E10 0064 .text      dEvmng_strcmp__FPCcPc                                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dEvmng_strcmp(const s8*, s8*) {
+asm void dEvmng_strcmp(const char*, char*) {
 	nofralloc
 #include "_include/d/d_event_manager/dEvmng_strcmp__FPCcPc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80047E10 014C .text      getMyActIdx__16dEvent_manager_cFiPCPCciii                    */
-// dEvent_manager_c::getMyActIdx(int, const s8**, int, int, int)
+/* 80047E10-80047F5C 014C .text      getMyActIdx__16dEvent_manager_cFiPCPCciii                    Function */
+// dEvent_manager_c::getMyActIdx(int, const char**, int, int, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -679,7 +858,7 @@ asm void getMyActIdx__16dEvent_manager_cFiPCPCciii() {
 }
 #pragma pop
 
-/* 80047F5C 006C .text      getMyNowCutName__16dEvent_manager_cFi                        */
+/* 80047F5C-80047FC8 006C .text      getMyNowCutName__16dEvent_manager_cFi                        Function */
 // dEvent_manager_c::getMyNowCutName(int)
 #pragma push
 #pragma optimization_level 0
@@ -690,8 +869,8 @@ asm void getMyNowCutName__16dEvent_manager_cFi() {
 }
 #pragma pop
 
-/* 80047FC8 0124 .text      getMyDataP__16dEvent_manager_cFiPCci                         */
-// dEvent_manager_c::getMyDataP(int, const s8*, int)
+/* 80047FC8-800480EC 0124 .text      getMyDataP__16dEvent_manager_cFiPCci                         Function */
+// dEvent_manager_c::getMyDataP(int, const char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -701,8 +880,8 @@ asm void getMyDataP__16dEvent_manager_cFiPCci() {
 }
 #pragma pop
 
-/* 800480EC 0058 .text      getMySubstanceP__16dEvent_manager_cFiPCci                    */
-// dEvent_manager_c::getMySubstanceP(int, const s8*, int)
+/* 800480EC-80048144 0058 .text      getMySubstanceP__16dEvent_manager_cFiPCci                    Function */
+// dEvent_manager_c::getMySubstanceP(int, const char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -712,8 +891,8 @@ asm void getMySubstanceP__16dEvent_manager_cFiPCci() {
 }
 #pragma pop
 
-/* 80048144 0038 .text      getMySubstanceNum__16dEvent_manager_cFiPCc                   */
-// dEvent_manager_c::getMySubstanceNum(int, const s8*)
+/* 80048144-8004817C 0038 .text      getMySubstanceNum__16dEvent_manager_cFiPCc                   Function */
+// dEvent_manager_c::getMySubstanceNum(int, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -723,7 +902,7 @@ asm void getMySubstanceNum__16dEvent_manager_cFiPCc() {
 }
 #pragma pop
 
-/* 8004817C 0078 .text      cutEnd__16dEvent_manager_cFi                                 */
+/* 8004817C-800481F4 0078 .text      cutEnd__16dEvent_manager_cFi                                 Function */
 // dEvent_manager_c::cutEnd(int)
 #pragma push
 #pragma optimization_level 0
@@ -734,8 +913,8 @@ asm void cutEnd__16dEvent_manager_cFi() {
 }
 #pragma pop
 
-/* 800481F4 00D8 .text      getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs              */
-// dEvent_manager_c::getEventPrio(fopAc_ac_c*, s16)
+/* 800481F4-800482CC 00D8 .text      getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs              Function */
+// dEvent_manager_c::getEventPrio(fopAc_ac_c*, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -745,8 +924,8 @@ asm void getEventPrio__16dEvent_manager_cFP10fopAc_ac_cs() {
 }
 #pragma pop
 
-/* 800482CC 007C .text      issueStaff__16dEvent_manager_cFPCc                           */
-// dEvent_manager_c::issueStaff(const s8*)
+/* 800482CC-80048348 007C .text      issueStaff__16dEvent_manager_cFPCc                           Function */
+// dEvent_manager_c::issueStaff(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -756,8 +935,8 @@ asm void issueStaff__16dEvent_manager_cFPCc() {
 }
 #pragma pop
 
-/* 80048348 007C .text      cancelStaff__16dEvent_manager_cFPCc                          */
-// dEvent_manager_c::cancelStaff(const s8*)
+/* 80048348-800483C4 007C .text      cancelStaff__16dEvent_manager_cFPCc                          Function */
+// dEvent_manager_c::cancelStaff(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -767,7 +946,7 @@ asm void cancelStaff__16dEvent_manager_cFPCc() {
 }
 #pragma pop
 
-/* 800483C4 001C .text      setGoal__16dEvent_manager_cFP4cXyz                           */
+/* 800483C4-800483E0 001C .text      setGoal__16dEvent_manager_cFP4cXyz                           Function */
 // dEvent_manager_c::setGoal(cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -778,13 +957,13 @@ asm void setGoal__16dEvent_manager_cFP4cXyz() {
 }
 #pragma pop
 
-/* 800483E0 0008 .text      getGoal__16dEvent_manager_cFv                                */
+/* 800483E0-800483E8 0008 .text      getGoal__16dEvent_manager_cFv                                FirstParamFunction */
 // dEvent_manager_c::getGoal(void)
 u8* getGoal__16dEvent_manager_cFv(u8* param0) {
 	return (u8*)&param0[412]; /* param0->field_0x19c */
 }
 
-/* 800483E8 0084 .text      getRunEventName__16dEvent_manager_cFv                        */
+/* 800483E8-8004846C 0084 .text      getRunEventName__16dEvent_manager_cFv                        Function */
 // dEvent_manager_c::getRunEventName(void)
 #pragma push
 #pragma optimization_level 0
@@ -795,7 +974,7 @@ asm void getRunEventName__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 8004846C 00B4 .text      findShutterCallBack__FP10fopAc_ac_cPv                        */
+/* 8004846C-80048520 00B4 .text      findShutterCallBack__FP10fopAc_ac_cPv                        Function */
 }
 
 #pragma push
@@ -808,8 +987,8 @@ asm void findShutterCallBack(fopAc_ac_c*, void*) {
 #pragma pop
 
 extern "C" {
-/* 80048520 00F8 .text      specialCast_Shutter__16dEvent_manager_cFsi                   */
-// dEvent_manager_c::specialCast_Shutter(s16, int)
+/* 80048520-80048618 00F8 .text      specialCast_Shutter__16dEvent_manager_cFsi                   Function */
+// dEvent_manager_c::specialCast_Shutter(short, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -819,8 +998,8 @@ asm void specialCast_Shutter__16dEvent_manager_cFsi() {
 }
 #pragma pop
 
-/* 80048618 0130 .text      specialCast__16dEvent_manager_cFPCci                         */
-// dEvent_manager_c::specialCast(const s8*, int)
+/* 80048618-80048748 0130 .text      specialCast__16dEvent_manager_cFPCci                         Function */
+// dEvent_manager_c::specialCast(const char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -830,7 +1009,7 @@ asm void specialCast__16dEvent_manager_cFPCci() {
 }
 #pragma pop
 
-/* 80048748 00A8 .text      dEv_talkman_get_action__Fi                                   */
+/* 80048748-800487F0 00A8 .text      dEv_talkman_get_action__Fi                                   Function */
 }
 
 #pragma push
@@ -843,7 +1022,7 @@ asm void dEv_talkman_get_action(int) {
 #pragma pop
 
 extern "C" {
-/* 800487F0 003C .text      ChkPresentEnd__16dEvent_manager_cFv                          */
+/* 800487F0-8004882C 003C .text      ChkPresentEnd__16dEvent_manager_cFv                          Function */
 // dEvent_manager_c::ChkPresentEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -854,7 +1033,7 @@ asm void ChkPresentEnd__16dEvent_manager_cFv() {
 }
 #pragma pop
 
-/* 8004882C 0040 .text      checkStartDemo__16dEvent_manager_cFv                         */
+/* 8004882C-8004886C 0040 .text      checkStartDemo__16dEvent_manager_cFv                         Function */
 // dEvent_manager_c::checkStartDemo(void)
 #pragma push
 #pragma optimization_level 0

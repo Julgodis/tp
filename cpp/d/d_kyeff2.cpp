@@ -15,13 +15,40 @@ extern void dKyw_wether_init2(void); /* dKyw_wether_init2__Fv */
 extern void dKyw_wether_delete2(void); /* dKyw_wether_delete2__Fv */
 extern void dKyw_wether_move_draw2(void); /* dKyw_wether_move_draw2__Fv */
 extern void dKyw_wether_draw2(void); /* dKyw_wether_draw2__Fv */
+extern void dKyeff2_Draw(dKyeff2_c*); /* dKyeff2_Draw__FP9dKyeff2_c */
+extern void dKyeff2_Execute(dKyeff2_c*); /* dKyeff2_Execute__FP9dKyeff2_c */
+extern void dKyeff2_Delete(dKyeff2_c*); /* dKyeff2_Delete__FP9dKyeff2_c */
+extern void dKyeff2_Create(kankyo_class*); /* dKyeff2_Create__FP12kankyo_class */
 
 extern "C" {
+/* Function             */
 extern void dKyw_wether_init2__Fv();
+/* Function             */
 extern void dKyw_wether_delete2__Fv();
+/* Function             */
 extern void dKyw_wether_move_draw2__Fv();
+/* Function             */
 extern void dKyw_wether_draw2__Fv();
+/* Function             */
+extern void dKyeff2_Draw__FP9dKyeff2_c();
+/* Function             */
 extern void execute__9dKyeff2_cFv();
+/* Function             */
+extern void dKyeff2_Execute__FP9dKyeff2_c();
+/* ReturnIntegerFunction */
+extern  int dKyeff2_IsDelete__FP9dKyeff2_c();
+/* Function             */
+extern void dKyeff2_Delete__FP9dKyeff2_c();
+/* Function             */
+extern void dKyeff2_Create__FP12kankyo_class();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dKyeff2_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_KYEFF2[11];
 }
 
 
@@ -30,18 +57,28 @@ extern void execute__9dKyeff2_cFv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BC198 0014 .data      l_dKyeff2_Method                                             */
-SECTION_DATA u8 l_dKyeff2_Method[20] = {
-	0x80, 0x1A, 0xDF, 0x34, 0x80, 0x1A, 0xDF, 0x10, 0x80, 0x1A, 0xDE, 0xE8, 0x80, 0x1A, 0xDF, 0x08,
-	0x80, 0x1A, 0xDE, 0xA0,
+/* 803BC198-803BC1AC 0014 .data      l_dKyeff2_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* l_dKyeff2_Method[5] = {
+	(void*)dKyeff2_Create,
+	(void*)dKyeff2_Delete,
+	(void*)dKyeff2_Execute,
+	(void*)dKyeff2_IsDelete__FP9dKyeff2_c,
+	(void*)dKyeff2_Draw,
 };
-/* 803BC1AC 0028 .data      g_profile_KYEFF2                                             */
-SECTION_DATA u8 g_profile_KYEFF2[44] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x0C, 0xFF, 0xFD, 0x03, 0x12, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x40,
-	0x00, 0x03, 0x00, 0x00, 0x80, 0x3B, 0xC1, 0x98,
+/* 803BC1AC-803BC1D8 0028 .data      g_profile_KYEFF2                                             SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_KYEFF2[11] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03120000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000F8,
+	NULL,
+	NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x00030000,
+	(void*)&l_dKyeff2_Method,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -51,7 +88,7 @@ SECTION_DATA u8 g_profile_KYEFF2[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 801ADEA0 0024 .text      dKyeff2_Draw__FP9dKyeff2_c                                   */
+/* 801ADEA0-801ADEC4 0024 .text      dKyeff2_Draw__FP9dKyeff2_c                                   Function */
 }
 
 #pragma push
@@ -64,7 +101,7 @@ asm void dKyeff2_Draw(dKyeff2_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADEC4 0024 .text      execute__9dKyeff2_cFv                                        */
+/* 801ADEC4-801ADEE8 0024 .text      execute__9dKyeff2_cFv                                        Function */
 // dKyeff2_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -75,7 +112,7 @@ asm void execute__9dKyeff2_cFv() {
 }
 #pragma pop
 
-/* 801ADEE8 0020 .text      dKyeff2_Execute__FP9dKyeff2_c                                */
+/* 801ADEE8-801ADF08 0020 .text      dKyeff2_Execute__FP9dKyeff2_c                                Function */
 }
 
 #pragma push
@@ -88,13 +125,13 @@ asm void dKyeff2_Execute(dKyeff2_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADF08 0008 .text      dKyeff2_IsDelete__FP9dKyeff2_c                               */
+/* 801ADF08-801ADF10 0008 .text      dKyeff2_IsDelete__FP9dKyeff2_c                               ReturnIntegerFunction */
 // dKyeff2_IsDelete(dKyeff2_c*)
 int dKyeff2_IsDelete__FP9dKyeff2_c() {
 	return 1;
 }
 
-/* 801ADF10 0024 .text      dKyeff2_Delete__FP9dKyeff2_c                                 */
+/* 801ADF10-801ADF34 0024 .text      dKyeff2_Delete__FP9dKyeff2_c                                 Function */
 }
 
 #pragma push
@@ -107,7 +144,7 @@ asm void dKyeff2_Delete(dKyeff2_c*) {
 #pragma pop
 
 extern "C" {
-/* 801ADF34 0024 .text      dKyeff2_Create__FP12kankyo_class                             */
+/* 801ADF34-801ADF58 0024 .text      dKyeff2_Create__FP12kankyo_class                             Function */
 }
 
 #pragma push

@@ -29,95 +29,231 @@ extern void J3DScaleNrmMtx33(f32 (*)[3], const Vec&); /* J3DScaleNrmMtx33__FPA3_
 extern void J3DMtxProjConcat(f32 (*)[4], f32 (*)[4], f32 (*)[4]); /* J3DMtxProjConcat__FPA4_fPA4_fPA4_f */
 
 extern "C" {
-extern int getUseMtxNum__11J3DShapeMtxCFv();
+/* ReturnIntegerFunction */
+extern  int getUseMtxNum__11J3DShapeMtxCFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void J3DFifoLoadPosMtxImm__FPA4_fUl();
+/* Function             */
 extern void J3DFifoLoadNrmMtxImm__FPA4_fUl();
+/* Function             */
 extern void J3DFifoLoadNrmMtxImm3x3__FPA3_fUl();
+/* Function             */
 extern void J3DFifoLoadNrmMtxToTexMtx__FPA4_fUl();
+/* Function             */
 extern void J3DFifoLoadNrmMtxToTexMtx3x3__FPA3_fUl();
+/* Function             */
 extern void loadPosMtxIndx__6J3DSysCFiUs();
+/* Function             */
 extern void loadNrmMtxIndx__6J3DSysCFiUs();
+/* Function             */
 extern void J3DCalcBBoardMtx__FPA4_f();
+/* Function             */
 extern void J3DCalcYBBoardMtx__FPA4_f();
+/* Function             */
 extern void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
+/* Function             */
 extern void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
+/* Function             */
 extern void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
+/* Function             */
 extern void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
+/* Function             */
 extern void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
+/* Function             */
 extern void J3DScaleNrmMtx__FPA4_fRC3Vec();
+/* Function             */
 extern void J3DScaleNrmMtx33__FPA3_fRC3Vec();
+/* Function             */
 extern void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
+/* Function             */
+extern void resetMtxLoadCache__11J3DShapeMtxFv();
+/* Function             */
+extern void loadMtxIndx_PNGP__11J3DShapeMtxCFiUs();
+/* Function             */
+extern void loadMtxIndx_PCPU__11J3DShapeMtxCFiUs();
+/* Function             */
+extern void loadMtxIndx_NCPU__11J3DShapeMtxCFiUs();
+/* Function             */
+extern void loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs();
+/* Function             */
 extern void loadExecute__17J3DDifferedTexMtxFPA4_Cf();
+/* Function             */
+extern void loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs();
+/* Function             */
+extern void loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs();
+/* Function             */
+extern void loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs();
+/* Function             */
+extern void loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs();
+/* Function             */
+extern void loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs();
+/* Function             */
 extern void load__11J3DShapeMtxCFv();
+/* Function             */
 extern void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f();
+/* Function             */
 extern void load__21J3DShapeMtxConcatViewCFv();
+/* Function             */
 extern void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f();
+/* Function             */
 extern void load__16J3DShapeMtxMultiCFv();
+/* Function             */
 extern void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f();
+/* Function             */
 extern void load__26J3DShapeMtxMultiConcatViewCFv();
+/* Function             */
 extern void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f();
+/* Function             */
 extern void load__27J3DShapeMtxBBoardConcatViewCFv();
+/* Function             */
 extern void load__28J3DShapeMtxYBBoardConcatViewCFv();
+/* Function             */
 extern void __dt__28J3DShapeMtxYBBoardConcatViewFv();
+/* Function             */
 extern void getType__28J3DShapeMtxYBBoardConcatViewCFv();
+/* ReturnFunction       */
 extern void loadNrmMtx__21J3DShapeMtxConcatViewCFiUs();
+/* FirstParamFunction   */
 extern u16 getUseMtxIndex__11J3DShapeMtxCFUs(u8*);
+/* Function             */
 extern void __dt__27J3DShapeMtxBBoardConcatViewFv();
+/* Function             */
 extern void getType__27J3DShapeMtxBBoardConcatViewCFv();
+/* Function             */
 extern void __dt__26J3DShapeMtxMultiConcatViewFv();
+/* Function             */
 extern void getType__26J3DShapeMtxMultiConcatViewCFv();
+/* FirstParamFunction   */
 extern u16 getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv(u8*);
+/* Function             */
 extern void getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs();
+/* ReturnFunction       */
 extern void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs();
+/* Function             */
 extern void __dt__16J3DShapeMtxMultiFv();
+/* Function             */
 extern void getType__16J3DShapeMtxMultiCFv();
+/* FirstParamFunction   */
 extern u16 getUseMtxNum__16J3DShapeMtxMultiCFv(u8*);
+/* Function             */
 extern void getUseMtxIndex__16J3DShapeMtxMultiCFUs();
+/* Function             */
 extern void __dt__21J3DShapeMtxConcatViewFv();
+/* Function             */
 extern void getType__21J3DShapeMtxConcatViewCFv();
+/* Function             */
 extern void __dt__11J3DShapeMtxFv();
+/* Function             */
 extern void getType__11J3DShapeMtxCFv();
+/* SInitFunction        */
+extern void __sinit_J3DShapeMtx_cpp();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void GXSetArray();
+/* Function             */
 extern void GXLoadTexMtxImm();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern u8 J3DShapeMtx__LIT_832[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_832[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_833[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_834[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_835[3];
+/* InitializedData      */
 SECTION_DATA extern u8 sMtxLoadPipeline__11J3DShapeMtx[48];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_836[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_837[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_838[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_839[3];
+/* InitializedData      */
 SECTION_DATA extern u8 sMtxLoadPipeline__21J3DShapeMtxConcatView[48];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_840[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_841[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_842[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_843[3];
+/* InitializedData      */
 SECTION_DATA extern u8 sMtxLoadLODPipeline__21J3DShapeMtxConcatView[48];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803CDAB0[48];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803CDAE0[48];
-SECTION_DATA extern u8 LIT_1035[48];
-SECTION_DATA extern u8 J3DShapeMtx__LIT_1034[48];
-SECTION_DATA extern const void* __vt__28J3DShapeMtxYBBoardConcatView[10];
-SECTION_DATA extern const void* __vt__27J3DShapeMtxBBoardConcatView[10];
-SECTION_DATA extern const void* __vt__26J3DShapeMtxMultiConcatView[10];
-SECTION_DATA extern const void* __vt__16J3DShapeMtxMulti[8];
-SECTION_DATA extern const void* __vt__21J3DShapeMtxConcatView[10];
-SECTION_DATA extern const void* __vt__11J3DShapeMtx[9];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_1035[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DShapeMtx__LIT_1034[12];
+/* InitializedData      */
+SECTION_DATA extern u8 data_803CDB70[20];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28J3DShapeMtxYBBoardConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__27J3DShapeMtxBBoardConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26J3DShapeMtxMultiConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DShapeMtxMulti[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21J3DShapeMtxConcatView[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DShapeMtx[9];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_BSS extern u8 sMtxLoadCache__11J3DShapeMtx[24];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sMtxLoadCache__11J3DShapeMtx[20 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentPipeline__11J3DShapeMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentScaleFlag__11J3DShapeMtx[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_804515B0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexMtxLoadType__11J3DShapeMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sMtxPtrTbl__21J3DShapeMtxConcatView[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexGenBlock__17J3DDifferedTexMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexMtxObj__17J3DDifferedTexMtx[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DShapeMtx__LIT_1032[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1423;
 }
 
@@ -127,104 +263,146 @@ SECTION_SDATA2 extern f32 LIT_1423;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CD990 0000 .data      ...data.0                                                    */
-/* 803CD990 000C .data      @832                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_832[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x30, 0xE4,
+/* 803CD990-803CD990 0000 .data      ...data.0                                                    InitializedData */
+/* 803CD990-803CD99C 000C .data      @832                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_832[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PNGP__11J3DShapeMtxCFiUs,
 };
-/* 803CD99C 000C .data      @833                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_833[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x31, 0x28,
+/* 803CD99C-803CD9A8 000C .data      @833                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_833[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PCPU__11J3DShapeMtxCFiUs,
 };
-/* 803CD9A8 000C .data      @834                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_834[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x31, 0x88,
+/* 803CD9A8-803CD9B4 000C .data      @834                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_834[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_NCPU__11J3DShapeMtxCFiUs,
 };
-/* 803CD9B4 000C .data      @835                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_835[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x31, 0xD4,
+/* 803CD9B4-803CD9C0 000C .data      @835                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_835[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs,
 };
-/* 803CD9C0 0030 .data      sMtxLoadPipeline__11J3DShapeMtx                              */
+/* 803CD9C0-803CD9F0 0030 .data      sMtxLoadPipeline__11J3DShapeMtx                              InitializedData */
 SECTION_DATA u8 sMtxLoadPipeline__11J3DShapeMtx[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CD9F0 000C .data      @836                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_836[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x38, 0x28,
+/* 803CD9F0-803CD9FC 000C .data      @836                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_836[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CD9FC 000C .data      @837                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_837[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x38, 0xC8,
+/* 803CD9FC-803CDA08 000C .data      @837                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_837[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA08 000C .data      @838                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_838[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x39, 0x6C,
+/* 803CDA08-803CDA14 000C .data      @838                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_838[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA14 000C .data      @839                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_839[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x3A, 0x14,
+/* 803CDA14-803CDA20 000C .data      @839                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_839[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA20 0030 .data      sMtxLoadPipeline__21J3DShapeMtxConcatView                    */
+/* 803CDA20-803CDA50 0030 .data      sMtxLoadPipeline__21J3DShapeMtxConcatView                    InitializedData */
 SECTION_DATA u8 sMtxLoadPipeline__21J3DShapeMtxConcatView[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CDA50 000C .data      @840                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_840[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x3A, 0xC8,
+/* 803CDA50-803CDA5C 000C .data      @840                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_840[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA5C 000C .data      @841                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_841[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x38, 0xC8,
+/* 803CDA5C-803CDA68 000C .data      @841                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_841[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA68 000C .data      @842                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_842[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x39, 0x6C,
+/* 803CDA68-803CDA74 000C .data      @842                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_842[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA74 000C .data      @843                                                         */
-SECTION_DATA u8 J3DShapeMtx__LIT_843[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x31, 0x3A, 0x14,
+/* 803CDA74-803CDA80 000C .data      @843                                                         SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_843[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
-/* 803CDA80 0030 .data      sMtxLoadLODPipeline__21J3DShapeMtxConcatView                 */
+/* 803CDA80-803CDAB0 0030 .data      sMtxLoadLODPipeline__21J3DShapeMtxConcatView                 InitializedData */
 SECTION_DATA u8 sMtxLoadLODPipeline__21J3DShapeMtxConcatView[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CDAB0 0030 .data      qMtx$895                                                     */
+/* 803CDAB0-803CDAE0 0030 .data      qMtx$895                                                     InitializedData */
 SECTION_DATA u8 data_803CDAB0[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CDAE0 0030 .data      qMtx2$896                                                    */
+/* 803CDAE0-803CDB10 0030 .data      qMtx2$896                                                    InitializedData */
 SECTION_DATA u8 data_803CDAE0[48] = {
 	0x3F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0xBF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803CDB10 0030 .data      @1035                                                        */
-SECTION_DATA u8 LIT_1035[48] = {
-	0x80, 0x31, 0x37, 0xE0, 0x80, 0x31, 0x35, 0xBC, 0x80, 0x31, 0x35, 0xF8, 0x80, 0x31, 0x35, 0x9C,
-	0x80, 0x31, 0x37, 0xE0, 0x80, 0x31, 0x36, 0x08, 0x80, 0x31, 0x35, 0xBC, 0x80, 0x31, 0x35, 0xBC,
-	0x80, 0x31, 0x35, 0xF8, 0x80, 0x31, 0x35, 0x9C, 0x80, 0x31, 0x37, 0x3C, 0x80, 0x31, 0x36, 0x98,
+/* 803CDB10-803CDB40 0030 .data      @1035                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_1035[12] = {
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+365),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+228),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+243),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+220),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+365),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+247),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+228),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+228),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+243),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+220),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+324),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+283),
 };
-/* 803CDB40 0030 .data      @1034                                                        */
-SECTION_DATA u8 J3DShapeMtx__LIT_1034[48] = {
-	0x80, 0x31, 0x34, 0xE4, 0x80, 0x31, 0x32, 0xF8, 0x80, 0x31, 0x33, 0x0C, 0x80, 0x31, 0x32, 0xE4,
-	0x80, 0x31, 0x34, 0xE4, 0x80, 0x31, 0x33, 0x3C, 0x80, 0x31, 0x32, 0xF8, 0x80, 0x31, 0x32, 0xF8,
-	0x80, 0x31, 0x33, 0x0C, 0x80, 0x31, 0x32, 0xE4, 0x80, 0x31, 0x34, 0x50, 0x80, 0x31, 0x33, 0xBC,
+/* 803CDB40-803CDB70 0030 .data      @1034                                                        SymbolReferenceArrayData */
+SECTION_DATA void* J3DShapeMtx__LIT_1034[12] = {
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+174),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+51),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+56),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+46),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+174),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+68),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+51),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+51),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+56),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+46),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+137),
+	(void*)(((u32*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+100),
 };
-/* 803CDB70 0014 .data      mtxCache$1263                                                */
+/* 803CDB70-803CDB84 0014 .data      mtxCache$1263                                                InitializedData */
 SECTION_DATA u8 data_803CDB70[20] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 803CDB84 0028 .data      __vt__28J3DShapeMtxYBBoardConcatView                         */
-SECTION_DATA const  void* __vt__28J3DShapeMtxYBBoardConcatView[10] = {
+/* 803CDB84-803CDBAC 0028 .data      __vt__28J3DShapeMtxYBBoardConcatView                         VTableData */
+SECTION_DATA void* __vt__28J3DShapeMtxYBBoardConcatView[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__28J3DShapeMtxYBBoardConcatViewFv,
@@ -236,8 +414,8 @@ SECTION_DATA const  void* __vt__28J3DShapeMtxYBBoardConcatView[10] = {
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
-/* 803CDBAC 0028 .data      __vt__27J3DShapeMtxBBoardConcatView                          */
-SECTION_DATA const  void* __vt__27J3DShapeMtxBBoardConcatView[10] = {
+/* 803CDBAC-803CDBD4 0028 .data      __vt__27J3DShapeMtxBBoardConcatView                          VTableData */
+SECTION_DATA void* __vt__27J3DShapeMtxBBoardConcatView[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__27J3DShapeMtxBBoardConcatViewFv,
@@ -249,8 +427,8 @@ SECTION_DATA const  void* __vt__27J3DShapeMtxBBoardConcatView[10] = {
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
-/* 803CDBD4 0028 .data      __vt__26J3DShapeMtxMultiConcatView                           */
-SECTION_DATA const  void* __vt__26J3DShapeMtxMultiConcatView[10] = {
+/* 803CDBD4-803CDBFC 0028 .data      __vt__26J3DShapeMtxMultiConcatView                           VTableData */
+SECTION_DATA void* __vt__26J3DShapeMtxMultiConcatView[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26J3DShapeMtxMultiConcatViewFv,
@@ -262,8 +440,8 @@ SECTION_DATA const  void* __vt__26J3DShapeMtxMultiConcatView[10] = {
 	(void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs,
 	(void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f,
 };
-/* 803CDBFC 0020 .data      __vt__16J3DShapeMtxMulti                                     */
-SECTION_DATA const  void* __vt__16J3DShapeMtxMulti[8] = {
+/* 803CDBFC-803CDC1C 0020 .data      __vt__16J3DShapeMtxMulti                                     VTableData */
+SECTION_DATA void* __vt__16J3DShapeMtxMulti[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16J3DShapeMtxMultiFv,
@@ -273,8 +451,8 @@ SECTION_DATA const  void* __vt__16J3DShapeMtxMulti[8] = {
 	(void*)load__16J3DShapeMtxMultiCFv,
 	(void*)calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f,
 };
-/* 803CDC1C 0028 .data      __vt__21J3DShapeMtxConcatView                                */
-SECTION_DATA const  void* __vt__21J3DShapeMtxConcatView[10] = {
+/* 803CDC1C-803CDC44 0028 .data      __vt__21J3DShapeMtxConcatView                                VTableData */
+SECTION_DATA void* __vt__21J3DShapeMtxConcatView[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21J3DShapeMtxConcatViewFv,
@@ -286,8 +464,8 @@ SECTION_DATA const  void* __vt__21J3DShapeMtxConcatView[10] = {
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
 	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
-/* 803CDC44 0020 .data      __vt__11J3DShapeMtx                                          */
-SECTION_DATA const  void* __vt__11J3DShapeMtx[9] = {
+/* 803CDC44-803CDC68 0020 .data      __vt__11J3DShapeMtx                                          VTableData */
+SECTION_DATA void* __vt__11J3DShapeMtx[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11J3DShapeMtxFv,
@@ -307,11 +485,11 @@ SECTION_DATA const  void* __vt__11J3DShapeMtx[9] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456398 0004 .sdata2    @1032                                                        */
+/* 80456398-8045639C 0004 .sdata2    @1032                                                        InitializedData */
 SECTION_SDATA2 u8 J3DShapeMtx__LIT_1032[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045639C 0004 .sdata2    @1423                                                        */
+/* 8045639C-804563A0 0004 .sdata2    @1423                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_1423 = 1.000000f;
 }
@@ -322,8 +500,8 @@ SECTION_SDATA2 f32 LIT_1423 = 1.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434C80 0014 .bss       sMtxLoadCache__11J3DShapeMtx                                 */
-SECTION_BSS u8 sMtxLoadCache__11J3DShapeMtx[24];
+/* 80434C80-80434C98 0014 .bss       sMtxLoadCache__11J3DShapeMtx                                 ZeroInitializedData */
+SECTION_BSS u8 sMtxLoadCache__11J3DShapeMtx[20 + 4 /* padding */];
 }
 
 
@@ -332,21 +510,21 @@ SECTION_BSS u8 sMtxLoadCache__11J3DShapeMtx[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515A8 0004 .sbss      sCurrentPipeline__11J3DShapeMtx                              */
+/* 804515A8-804515AC 0004 .sbss      sCurrentPipeline__11J3DShapeMtx                              ZeroInitializedData */
 SECTION_SBSS u8 sCurrentPipeline__11J3DShapeMtx[4];
-/* 804515AC 0004 .sbss      sCurrentScaleFlag__11J3DShapeMtx                             */
+/* 804515AC-804515B0 0004 .sbss      sCurrentScaleFlag__11J3DShapeMtx                             ZeroInitializedData */
 SECTION_SBSS u8 sCurrentScaleFlag__11J3DShapeMtx[4];
-/* 804515B0 0004 .sbss      merged_804515B0                                              */
+/* 804515B0-804515B4 0004 .sbss      merged_804515B0                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_804515B0[4];
 /* 804515B0 0001 data_804515B0 */
 /* 804515B1 0003 data_804515B1 */
-/* 804515B4 0004 .sbss      sTexMtxLoadType__11J3DShapeMtx                               */
+/* 804515B4-804515B8 0004 .sbss      sTexMtxLoadType__11J3DShapeMtx                               ZeroInitializedData */
 SECTION_SBSS u8 sTexMtxLoadType__11J3DShapeMtx[4];
-/* 804515B8 0008 .sbss      sMtxPtrTbl__21J3DShapeMtxConcatView                          */
+/* 804515B8-804515C0 0008 .sbss      sMtxPtrTbl__21J3DShapeMtxConcatView                          ZeroInitializedData */
 SECTION_SBSS u8 sMtxPtrTbl__21J3DShapeMtxConcatView[8];
-/* 804515C0 0004 .sbss      sTexGenBlock__17J3DDifferedTexMtx                            */
+/* 804515C0-804515C4 0004 .sbss      sTexGenBlock__17J3DDifferedTexMtx                            ZeroInitializedData */
 SECTION_SBSS u8 sTexGenBlock__17J3DDifferedTexMtx[4];
-/* 804515C4 0004 .sbss      sTexMtxObj__17J3DDifferedTexMtx                              */
+/* 804515C4-804515C8 0004 .sbss      sTexMtxObj__17J3DDifferedTexMtx                              ZeroInitializedData */
 SECTION_SBSS u8 sTexMtxObj__17J3DDifferedTexMtx[4];
 }
 
@@ -356,7 +534,7 @@ SECTION_SBSS u8 sTexMtxObj__17J3DDifferedTexMtx[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803130A8 003C .text      resetMtxLoadCache__11J3DShapeMtxFv                           */
+/* 803130A8-803130E4 003C .text      resetMtxLoadCache__11J3DShapeMtxFv                           Function */
 // J3DShapeMtx::resetMtxLoadCache(void)
 #pragma push
 #pragma optimization_level 0
@@ -367,7 +545,7 @@ asm void resetMtxLoadCache__11J3DShapeMtxFv() {
 }
 #pragma pop
 
-/* 803130E4 0044 .text      loadMtxIndx_PNGP__11J3DShapeMtxCFiUs                         */
+/* 803130E4-80313128 0044 .text      loadMtxIndx_PNGP__11J3DShapeMtxCFiUs                         Function */
 // J3DShapeMtx::loadMtxIndx_PNGP(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -378,7 +556,7 @@ asm void loadMtxIndx_PNGP__11J3DShapeMtxCFiUs() {
 }
 #pragma pop
 
-/* 80313128 0060 .text      loadMtxIndx_PCPU__11J3DShapeMtxCFiUs                         */
+/* 80313128-80313188 0060 .text      loadMtxIndx_PCPU__11J3DShapeMtxCFiUs                         Function */
 // J3DShapeMtx::loadMtxIndx_PCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -389,7 +567,7 @@ asm void loadMtxIndx_PCPU__11J3DShapeMtxCFiUs() {
 }
 #pragma pop
 
-/* 80313188 004C .text      loadMtxIndx_NCPU__11J3DShapeMtxCFiUs                         */
+/* 80313188-803131D4 004C .text      loadMtxIndx_NCPU__11J3DShapeMtxCFiUs                         Function */
 // J3DShapeMtx::loadMtxIndx_NCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -400,7 +578,7 @@ asm void loadMtxIndx_NCPU__11J3DShapeMtxCFiUs() {
 }
 #pragma pop
 
-/* 803131D4 0058 .text      loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs                        */
+/* 803131D4-8031322C 0058 .text      loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs                        Function */
 // J3DShapeMtx::loadMtxIndx_PNCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -411,7 +589,7 @@ asm void loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs() {
 }
 #pragma pop
 
-/* 8031322C 05FC .text      loadExecute__17J3DDifferedTexMtxFPA4_Cf                      */
+/* 8031322C-80313828 05FC .text      loadExecute__17J3DDifferedTexMtxFPA4_Cf                      Function */
 // J3DDifferedTexMtx::loadExecute(const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -422,7 +600,7 @@ asm void loadExecute__17J3DDifferedTexMtxFPA4_Cf() {
 }
 #pragma pop
 
-/* 80313828 00A0 .text      loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs         */
+/* 80313828-803138C8 00A0 .text      loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs         Function */
 // J3DShapeMtxConcatView::loadMtxConcatView_PNGP(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -433,7 +611,7 @@ asm void loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs() {
 }
 #pragma pop
 
-/* 803138C8 00A4 .text      loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs         */
+/* 803138C8-8031396C 00A4 .text      loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs         Function */
 // J3DShapeMtxConcatView::loadMtxConcatView_PCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -444,7 +622,7 @@ asm void loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs() {
 }
 #pragma pop
 
-/* 8031396C 00A8 .text      loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs         */
+/* 8031396C-80313A14 00A8 .text      loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs         Function */
 // J3DShapeMtxConcatView::loadMtxConcatView_NCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -455,7 +633,7 @@ asm void loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs() {
 }
 #pragma pop
 
-/* 80313A14 00B4 .text      loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs        */
+/* 80313A14-80313AC8 00B4 .text      loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs        Function */
 // J3DShapeMtxConcatView::loadMtxConcatView_PNCPU(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -466,7 +644,7 @@ asm void loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs() {
 }
 #pragma pop
 
-/* 80313AC8 00CC .text      loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs     */
+/* 80313AC8-80313B94 00CC .text      loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs     Function */
 // J3DShapeMtxConcatView::loadMtxConcatView_PNGP_LOD(int, u16) const
 #pragma push
 #pragma optimization_level 0
@@ -477,7 +655,7 @@ asm void loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs() {
 }
 #pragma pop
 
-/* 80313B94 005C .text      load__11J3DShapeMtxCFv                                       */
+/* 80313B94-80313BF0 005C .text      load__11J3DShapeMtxCFv                                       Function */
 // J3DShapeMtx::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -488,7 +666,7 @@ asm void load__11J3DShapeMtxCFv() {
 }
 #pragma pop
 
-/* 80313BF0 0064 .text      calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f           */
+/* 80313BF0-80313C54 0064 .text      calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f           Function */
 // J3DShapeMtx::calcNBTScale(const Vec&, f32 (*)[3][3], f32 (*)[3][3])
 #pragma push
 #pragma optimization_level 0
@@ -499,7 +677,7 @@ asm void calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f() {
 }
 #pragma pop
 
-/* 80313C54 00D4 .text      load__21J3DShapeMtxConcatViewCFv                             */
+/* 80313C54-80313D28 00D4 .text      load__21J3DShapeMtxConcatViewCFv                             Function */
 // J3DShapeMtxConcatView::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -510,7 +688,7 @@ asm void load__21J3DShapeMtxConcatViewCFv() {
 }
 #pragma pop
 
-/* 80313D28 0124 .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f                */
+/* 80313D28-80313E4C 0124 .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f                Function */
 // J3DShapeMtxConcatView::loadNrmMtx(int, u16, f32 (*)[4]) const
 #pragma push
 #pragma optimization_level 0
@@ -521,7 +699,7 @@ asm void loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f() {
 }
 #pragma pop
 
-/* 80313E4C 00A0 .text      load__16J3DShapeMtxMultiCFv                                  */
+/* 80313E4C-80313EEC 00A0 .text      load__16J3DShapeMtxMultiCFv                                  Function */
 // J3DShapeMtxMulti::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -532,7 +710,7 @@ asm void load__16J3DShapeMtxMultiCFv() {
 }
 #pragma pop
 
-/* 80313EEC 00B8 .text      calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f      */
+/* 80313EEC-80313FA4 00B8 .text      calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f      Function */
 // J3DShapeMtxMulti::calcNBTScale(const Vec&, f32 (*)[3][3], f32 (*)[3][3])
 #pragma push
 #pragma optimization_level 0
@@ -543,7 +721,7 @@ asm void calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f() {
 }
 #pragma pop
 
-/* 80313FA4 01F8 .text      load__26J3DShapeMtxMultiConcatViewCFv                        */
+/* 80313FA4-8031419C 01F8 .text      load__26J3DShapeMtxMultiConcatViewCFv                        Function */
 // J3DShapeMtxMultiConcatView::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -554,7 +732,7 @@ asm void load__26J3DShapeMtxMultiConcatViewCFv() {
 }
 #pragma pop
 
-/* 8031419C 0138 .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f           */
+/* 8031419C-803142D4 0138 .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f           Function */
 // J3DShapeMtxMultiConcatView::loadNrmMtx(int, u16, f32 (*)[4]) const
 #pragma push
 #pragma optimization_level 0
@@ -565,7 +743,7 @@ asm void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f() {
 }
 #pragma pop
 
-/* 803142D4 0110 .text      load__27J3DShapeMtxBBoardConcatViewCFv                       */
+/* 803142D4-803143E4 0110 .text      load__27J3DShapeMtxBBoardConcatViewCFv                       Function */
 // J3DShapeMtxBBoardConcatView::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -576,7 +754,7 @@ asm void load__27J3DShapeMtxBBoardConcatViewCFv() {
 }
 #pragma pop
 
-/* 803143E4 013C .text      load__28J3DShapeMtxYBBoardConcatViewCFv                      */
+/* 803143E4-80314520 013C .text      load__28J3DShapeMtxYBBoardConcatViewCFv                      Function */
 // J3DShapeMtxYBBoardConcatView::load(void) const
 #pragma push
 #pragma optimization_level 0
@@ -587,7 +765,7 @@ asm void load__28J3DShapeMtxYBBoardConcatViewCFv() {
 }
 #pragma pop
 
-/* 80314520 006C .text      __dt__28J3DShapeMtxYBBoardConcatViewFv                       */
+/* 80314520-8031458C 006C .text      __dt__28J3DShapeMtxYBBoardConcatViewFv                       Function */
 // J3DShapeMtxYBBoardConcatView::~J3DShapeMtxYBBoardConcatView(void)
 #pragma push
 #pragma optimization_level 0
@@ -598,7 +776,7 @@ asm void __dt__28J3DShapeMtxYBBoardConcatViewFv() {
 }
 #pragma pop
 
-/* 8031458C 000C .text      getType__28J3DShapeMtxYBBoardConcatViewCFv                   */
+/* 8031458C-80314598 000C .text      getType__28J3DShapeMtxYBBoardConcatViewCFv                   Function */
 // J3DShapeMtxYBBoardConcatView::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -609,19 +787,19 @@ asm void getType__28J3DShapeMtxYBBoardConcatViewCFv() {
 }
 #pragma pop
 
-/* 80314598 0004 .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUs                     */
+/* 80314598-8031459C 0004 .text      loadNrmMtx__21J3DShapeMtxConcatViewCFiUs                     ReturnFunction */
 // J3DShapeMtxConcatView::loadNrmMtx(int, u16) const
 void loadNrmMtx__21J3DShapeMtxConcatViewCFiUs() {
 	return;
 }
 
-/* 8031459C 0008 .text      getUseMtxIndex__11J3DShapeMtxCFUs                            */
+/* 8031459C-803145A4 0008 .text      getUseMtxIndex__11J3DShapeMtxCFUs                            FirstParamFunction */
 // J3DShapeMtx::getUseMtxIndex(u16) const
 u16 getUseMtxIndex__11J3DShapeMtxCFUs(u8* param0) {
 	return *(u16*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 803145A4 006C .text      __dt__27J3DShapeMtxBBoardConcatViewFv                        */
+/* 803145A4-80314610 006C .text      __dt__27J3DShapeMtxBBoardConcatViewFv                        Function */
 // J3DShapeMtxBBoardConcatView::~J3DShapeMtxBBoardConcatView(void)
 #pragma push
 #pragma optimization_level 0
@@ -632,7 +810,7 @@ asm void __dt__27J3DShapeMtxBBoardConcatViewFv() {
 }
 #pragma pop
 
-/* 80314610 000C .text      getType__27J3DShapeMtxBBoardConcatViewCFv                    */
+/* 80314610-8031461C 000C .text      getType__27J3DShapeMtxBBoardConcatViewCFv                    Function */
 // J3DShapeMtxBBoardConcatView::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -643,7 +821,7 @@ asm void getType__27J3DShapeMtxBBoardConcatViewCFv() {
 }
 #pragma pop
 
-/* 8031461C 006C .text      __dt__26J3DShapeMtxMultiConcatViewFv                         */
+/* 8031461C-80314688 006C .text      __dt__26J3DShapeMtxMultiConcatViewFv                         Function */
 // J3DShapeMtxMultiConcatView::~J3DShapeMtxMultiConcatView(void)
 #pragma push
 #pragma optimization_level 0
@@ -654,7 +832,7 @@ asm void __dt__26J3DShapeMtxMultiConcatViewFv() {
 }
 #pragma pop
 
-/* 80314688 000C .text      getType__26J3DShapeMtxMultiConcatViewCFv                     */
+/* 80314688-80314694 000C .text      getType__26J3DShapeMtxMultiConcatViewCFv                     Function */
 // J3DShapeMtxMultiConcatView::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -665,13 +843,13 @@ asm void getType__26J3DShapeMtxMultiConcatViewCFv() {
 }
 #pragma pop
 
-/* 80314694 0008 .text      getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv                */
+/* 80314694-8031469C 0008 .text      getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv                FirstParamFunction */
 // J3DShapeMtxMultiConcatView::getUseMtxNum(void) const
 u16 getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv(u8* param0) {
 	return *(u16*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 8031469C 0010 .text      getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs             */
+/* 8031469C-803146AC 0010 .text      getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs             Function */
 // J3DShapeMtxMultiConcatView::getUseMtxIndex(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -682,13 +860,13 @@ asm void getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs() {
 }
 #pragma pop
 
-/* 803146AC 0004 .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs                */
+/* 803146AC-803146B0 0004 .text      loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs                ReturnFunction */
 // J3DShapeMtxMultiConcatView::loadNrmMtx(int, u16) const
 void loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs() {
 	return;
 }
 
-/* 803146B0 005C .text      __dt__16J3DShapeMtxMultiFv                                   */
+/* 803146B0-8031470C 005C .text      __dt__16J3DShapeMtxMultiFv                                   Function */
 // J3DShapeMtxMulti::~J3DShapeMtxMulti(void)
 #pragma push
 #pragma optimization_level 0
@@ -699,7 +877,7 @@ asm void __dt__16J3DShapeMtxMultiFv() {
 }
 #pragma pop
 
-/* 8031470C 000C .text      getType__16J3DShapeMtxMultiCFv                               */
+/* 8031470C-80314718 000C .text      getType__16J3DShapeMtxMultiCFv                               Function */
 // J3DShapeMtxMulti::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -710,13 +888,13 @@ asm void getType__16J3DShapeMtxMultiCFv() {
 }
 #pragma pop
 
-/* 80314718 0008 .text      getUseMtxNum__16J3DShapeMtxMultiCFv                          */
+/* 80314718-80314720 0008 .text      getUseMtxNum__16J3DShapeMtxMultiCFv                          FirstParamFunction */
 // J3DShapeMtxMulti::getUseMtxNum(void) const
 u16 getUseMtxNum__16J3DShapeMtxMultiCFv(u8* param0) {
 	return *(u16*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 80314720 0010 .text      getUseMtxIndex__16J3DShapeMtxMultiCFUs                       */
+/* 80314720-80314730 0010 .text      getUseMtxIndex__16J3DShapeMtxMultiCFUs                       Function */
 // J3DShapeMtxMulti::getUseMtxIndex(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -727,7 +905,7 @@ asm void getUseMtxIndex__16J3DShapeMtxMultiCFUs() {
 }
 #pragma pop
 
-/* 80314730 005C .text      __dt__21J3DShapeMtxConcatViewFv                              */
+/* 80314730-8031478C 005C .text      __dt__21J3DShapeMtxConcatViewFv                              Function */
 // J3DShapeMtxConcatView::~J3DShapeMtxConcatView(void)
 #pragma push
 #pragma optimization_level 0
@@ -738,7 +916,7 @@ asm void __dt__21J3DShapeMtxConcatViewFv() {
 }
 #pragma pop
 
-/* 8031478C 000C .text      getType__21J3DShapeMtxConcatViewCFv                          */
+/* 8031478C-80314798 000C .text      getType__21J3DShapeMtxConcatViewCFv                          Function */
 // J3DShapeMtxConcatView::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -749,7 +927,7 @@ asm void getType__21J3DShapeMtxConcatViewCFv() {
 }
 #pragma pop
 
-/* 80314798 0048 .text      __dt__11J3DShapeMtxFv                                        */
+/* 80314798-803147E0 0048 .text      __dt__11J3DShapeMtxFv                                        Function */
 // J3DShapeMtx::~J3DShapeMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -760,7 +938,7 @@ asm void __dt__11J3DShapeMtxFv() {
 }
 #pragma pop
 
-/* 803147E0 000C .text      getType__11J3DShapeMtxCFv                                    */
+/* 803147E0-803147EC 000C .text      getType__11J3DShapeMtxCFv                                    Function */
 // J3DShapeMtx::getType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -771,7 +949,7 @@ asm void getType__11J3DShapeMtxCFv() {
 }
 #pragma pop
 
-/* 803147EC 0138 .text      __sinit_J3DShapeMtx_cpp                                      */
+/* 803147EC-80314924 0138 .text      __sinit_J3DShapeMtx_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

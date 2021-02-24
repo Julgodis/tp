@@ -9,27 +9,59 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PPCMtdec();
+/* Function             */
 extern void __OSSetExceptionHandler();
+/* Function             */
 extern void __OSGetExceptionHandler();
+/* Function             */
+extern void OSInitAlarm();
+/* Function             */
+extern void OSCreateAlarm();
+/* Function             */
 extern void InsertAlarm();
+/* Function             */
+extern void OSSetAlarm();
+/* Function             */
+extern void OSSetPeriodicAlarm();
+/* Function             */
 extern void OSCancelAlarm();
+/* Function             */
 extern void DecrementerExceptionCallback();
+/* Function             */
 extern void DecrementerExceptionHandler();
+/* Function             */
+extern void OSAlarm__OnReset();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSLoadContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSRegisterResetFunction();
+/* Function             */
 extern void OSDisableScheduler();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void __OSReschedule();
+/* Function             */
 extern void __OSGetSystemTime();
+/* Function             */
 extern void __OSTimeToSystemTime();
+/* Function             */
 extern void __DVDTestAlarm();
+/* Function             */
 extern void __div2i();
-SECTION_DATA extern u8 OSAlarm__ResetFunctionInfo[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* OSAlarm__ResetFunctionInfo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 AlarmQueue[8];
 }
 
@@ -39,9 +71,12 @@ SECTION_SBSS extern u8 AlarmQueue[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF480 0010 .data      ResetFunctionInfo                                            */
-SECTION_DATA u8 OSAlarm__ResetFunctionInfo[16] = {
-	0x80, 0x33, 0xAF, 0xD8, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803CF480-803CF490 0010 .data      ResetFunctionInfo                                            SymbolReferenceArrayData */
+SECTION_DATA void* OSAlarm__ResetFunctionInfo[4] = {
+	(void*)OSAlarm__OnReset,
+	(void*)0xFFFFFFFF,
+	NULL,
+	NULL,
 };
 }
 
@@ -51,7 +86,7 @@ SECTION_DATA u8 OSAlarm__ResetFunctionInfo[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451638 0008 .sbss      AlarmQueue                                                   */
+/* 80451638-80451640 0008 .sbss      AlarmQueue                                                   ZeroInitializedData */
 SECTION_SBSS u8 AlarmQueue[8];
 }
 
@@ -61,7 +96,7 @@ SECTION_SBSS u8 AlarmQueue[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033A8A0 0058 .text      OSInitAlarm                                                  */
+/* 8033A8A0-8033A8F8 0058 .text      OSInitAlarm                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +106,7 @@ asm void OSInitAlarm() {
 }
 #pragma pop
 
-/* 8033A8F8 0010 .text      OSCreateAlarm                                                */
+/* 8033A8F8-8033A908 0010 .text      OSCreateAlarm                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -81,7 +116,7 @@ asm void OSCreateAlarm() {
 }
 #pragma pop
 
-/* 8033A908 0250 .text      InsertAlarm                                                  */
+/* 8033A908-8033AB58 0250 .text      InsertAlarm                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -91,7 +126,7 @@ asm void InsertAlarm() {
 }
 #pragma pop
 
-/* 8033AB58 0068 .text      OSSetAlarm                                                   */
+/* 8033AB58-8033ABC0 0068 .text      OSSetAlarm                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -101,7 +136,7 @@ asm void OSSetAlarm() {
 }
 #pragma pop
 
-/* 8033ABC0 007C .text      OSSetPeriodicAlarm                                           */
+/* 8033ABC0-8033AC3C 007C .text      OSSetPeriodicAlarm                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -111,7 +146,7 @@ asm void OSSetPeriodicAlarm() {
 }
 #pragma pop
 
-/* 8033AC3C 011C .text      OSCancelAlarm                                                */
+/* 8033AC3C-8033AD58 011C .text      OSCancelAlarm                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -121,7 +156,7 @@ asm void OSCancelAlarm() {
 }
 #pragma pop
 
-/* 8033AD58 0230 .text      DecrementerExceptionCallback                                 */
+/* 8033AD58-8033AF88 0230 .text      DecrementerExceptionCallback                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -131,7 +166,7 @@ asm void DecrementerExceptionCallback() {
 }
 #pragma pop
 
-/* 8033AF88 0050 .text      DecrementerExceptionHandler                                  */
+/* 8033AF88-8033AFD8 0050 .text      DecrementerExceptionHandler                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,7 +176,7 @@ asm void DecrementerExceptionHandler() {
 }
 #pragma pop
 
-/* 8033AFD8 00A0 .text      OnReset                                                      */
+/* 8033AFD8-8033B078 00A0 .text      OnReset                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

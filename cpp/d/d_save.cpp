@@ -18,127 +18,420 @@ extern void dComIfGs_getMixItemIndex(int); /* dComIfGs_getMixItemIndex__Fi */
 extern void dComIfGp_setSelectItem(int); /* dComIfGp_setSelectItem__Fi */
 extern void dComIfGs_setKeyNum(int, u8); /* dComIfGs_setKeyNum__FiUc */
 extern void dSv_item_rename(u8); /* dSv_item_rename__FUc */
+extern void setInitEventBit(void); /* setInitEventBit__Fv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport_Error();
+/* Function             */
 extern void setNowVibration__14dComIfG_play_cFUc();
+/* FirstParamFunction   */
 extern u8 getNowVibration__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void getZoneNo__20dStage_roomControl_cFi();
+/* Function             */
 extern void dComIfGs_setSelectItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_setMixItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_getMixItemIndex__Fi();
+/* Function             */
 extern void dComIfGp_setSelectItem__Fi();
-extern int dComIfGs_getBottleMax__Fv();
+/* ReturnIntegerFunction */
+extern  int dComIfGs_getBottleMax__Fv();
+/* Function             */
 extern void dComIfGs_setKeyNum__FiUc();
+/* Function             */
 extern void __ct__13dSv_memory2_cFv();
+/* Function             */
 extern void __ct__12dSv_memory_cFv();
+/* Function             */
 extern void clrSaveFlag__12daObjCarry_cFv();
+/* Function             */
 extern void setSaveFlag__12daObjCarry_cFv();
+/* Function             */
 extern void dSv_item_rename__FUc();
+/* Function             */
 extern void init__21dSv_player_status_a_cFv();
+/* Function             */
+extern void setSelectItemIndex__21dSv_player_status_a_cFiUc();
+/* Function             */
 extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
+/* Function             */
+extern void setMixItemIndex__21dSv_player_status_a_cFiUc();
+/* Function             */
+extern void getMixItemIndex__21dSv_player_status_a_cCFi();
+/* Function             */
+extern void getRupeeMax__21dSv_player_status_a_cCFv();
+/* Function             */
+extern void isMagicFlag__21dSv_player_status_a_cCFUc();
+/* Function             */
 extern void init__21dSv_player_status_b_cFv();
+/* Function             */
+extern void onDarkClearLV__21dSv_player_status_b_cFi();
+/* Function             */
+extern void isDarkClearLV__21dSv_player_status_b_cCFi();
+/* Function             */
+extern void onTransformLV__21dSv_player_status_b_cFi();
+/* Function             */
+extern void isTransformLV__21dSv_player_status_b_cCFi();
+/* Function             */
 extern void init__17dSv_horse_place_cFv();
+/* Function             */
+extern void set__17dSv_horse_place_cFPCcRC4cXyzsSc();
+/* Function             */
 extern void init__25dSv_player_return_place_cFv();
+/* Function             */
+extern void set__25dSv_player_return_place_cFPCcScUc();
+/* Function             */
 extern void init__33dSv_player_field_last_stay_info_cFv();
+/* Function             */
+extern void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
+/* Function             */
+extern void onRegionBit__33dSv_player_field_last_stay_info_cFi();
+/* Function             */
+extern void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+/* Function             */
 extern void init__27dSv_player_last_mark_info_cFv();
+/* Function             */
+extern void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
+/* Function             */
 extern void init__17dSv_player_item_cFv();
+/* Function             */
 extern void setItem__17dSv_player_item_cFiUc();
+/* Function             */
 extern void getItem__17dSv_player_item_cCFib();
+/* Function             */
 extern void setLineUpItem__17dSv_player_item_cFv();
+/* Function             */
+extern void getLineUpItem__17dSv_player_item_cCFi();
+/* Function             */
 extern void setBottleItemIn__17dSv_player_item_cFUcUc();
+/* Function             */
+extern void setEmptyBottleItemIn__17dSv_player_item_cFUc();
+/* Function             */
+extern void setEmptyBottle__17dSv_player_item_cFv();
+/* Function             */
+extern void setEmptyBottle__17dSv_player_item_cFUc();
+/* Function             */
 extern void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
+/* Function             */
+extern void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
+/* Function             */
+extern void checkBottle__17dSv_player_item_cFUc();
+/* Function             */
+extern void checkInsectBottle__17dSv_player_item_cFv();
+/* Function             */
+extern void checkEmptyBottle__17dSv_player_item_cFv();
+/* Function             */
 extern void setBombBagItemIn__17dSv_player_item_cFUcUcb();
+/* Function             */
 extern void setBombBagItemIn__17dSv_player_item_cFUcUcUcb();
+/* Function             */
+extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
+/* Function             */
+extern void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
+/* Function             */
+extern void setEmptyBombBag__17dSv_player_item_cFv();
+/* Function             */
+extern void setEmptyBombBag__17dSv_player_item_cFUcUc();
+/* Function             */
+extern void checkBombBag__17dSv_player_item_cFUc();
+/* Function             */
+extern void setWarashibeItem__17dSv_player_item_cFUc();
+/* Function             */
+extern void setRodTypeLevelUp__17dSv_player_item_cFv();
+/* Function             */
+extern void setBaitItem__17dSv_player_item_cFUc();
+/* Function             */
 extern void init__21dSv_player_get_item_cFv();
+/* Function             */
+extern void onFirstBit__21dSv_player_get_item_cFUc();
+/* Function             */
+extern void offFirstBit__21dSv_player_get_item_cFUc();
+/* Function             */
 extern void isFirstBit__21dSv_player_get_item_cCFUc();
+/* Function             */
 extern void init__24dSv_player_item_record_cFv();
+/* Function             */
 extern void setBombNum__24dSv_player_item_record_cFUcUc();
+/* Function             */
+extern void getBombNum__24dSv_player_item_record_cCFUc();
+/* Function             */
+extern void setBottleNum__24dSv_player_item_record_cFUcUc();
+/* Function             */
+extern void addBottleNum__24dSv_player_item_record_cFUcs();
+/* Function             */
+extern void getBottleNum__24dSv_player_item_record_cCFUc();
+/* Function             */
 extern void init__21dSv_player_item_max_cFv();
+/* Function             */
 extern void setBombNum__21dSv_player_item_max_cFUcUc();
+/* Function             */
 extern void getBombNum__21dSv_player_item_max_cCFUc();
+/* Function             */
 extern void init__20dSv_player_collect_cFv();
+/* Function             */
+extern void setCollect__20dSv_player_collect_cFiUc();
+/* Function             */
+extern void isCollect__20dSv_player_collect_cCFiUc();
+/* Function             */
+extern void onCollectCrystal__20dSv_player_collect_cFUc();
+/* Function             */
+extern void isCollectCrystal__20dSv_player_collect_cCFUc();
+/* Function             */
+extern void onCollectMirror__20dSv_player_collect_cFUc();
+/* Function             */
+extern void isCollectMirror__20dSv_player_collect_cCFUc();
+/* Function             */
 extern void init__17dSv_player_wolf_cFv();
+/* Function             */
 extern void init__16dSv_light_drop_cFv();
+/* Function             */
+extern void setLightDropNum__16dSv_light_drop_cFUcUc();
+/* Function             */
+extern void getLightDropNum__16dSv_light_drop_cCFUc();
+/* Function             */
+extern void onLightDropGetFlag__16dSv_light_drop_cFUc();
+/* Function             */
+extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void init__17dSv_letter_info_cFv();
+/* Function             */
+extern void onLetterGetFlag__17dSv_letter_info_cFi();
+/* Function             */
+extern void isLetterGetFlag__17dSv_letter_info_cCFi();
+/* Function             */
+extern void onLetterReadFlag__17dSv_letter_info_cFi();
+/* Function             */
+extern void isLetterReadFlag__17dSv_letter_info_cCFi();
+/* Function             */
 extern void init__18dSv_fishing_info_cFv();
+/* Function             */
+extern void addFishCount__18dSv_fishing_info_cFUc();
+/* Function             */
 extern void init__17dSv_player_info_cFv();
+/* Function             */
 extern void init__19dSv_player_config_cFv();
+/* Function             */
+extern void checkVibration__19dSv_player_config_cCFv();
+/* FirstParamFunction   */
 extern u8 getSound__19dSv_player_config_cFv(u8*);
+/* Function             */
 extern void setSound__19dSv_player_config_cFUc();
+/* FirstParamFunction   */
 extern u8 getVibration__19dSv_player_config_cFv(u8*);
+/* Function             */
+extern void setVibration__19dSv_player_config_cFUc();
+/* Function             */
 extern void init__12dSv_player_cFv();
+/* Function             */
 extern void init__12dSv_memBit_cFv();
+/* Function             */
+extern void onTbox__12dSv_memBit_cFi();
+/* Function             */
+extern void offTbox__12dSv_memBit_cFi();
+/* Function             */
+extern void isTbox__12dSv_memBit_cCFi();
+/* Function             */
 extern void onSwitch__12dSv_memBit_cFi();
+/* Function             */
 extern void offSwitch__12dSv_memBit_cFi();
+/* Function             */
 extern void isSwitch__12dSv_memBit_cCFi();
+/* Function             */
 extern void revSwitch__12dSv_memBit_cFi();
+/* Function             */
 extern void onItem__12dSv_memBit_cFi();
+/* Function             */
 extern void isItem__12dSv_memBit_cCFi();
+/* Function             */
+extern void onDungeonItem__12dSv_memBit_cFi();
+/* Function             */
+extern void isDungeonItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void init__11dSv_event_cFv();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void offEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
+extern void setEventReg__11dSv_event_cFUsUc();
+/* Function             */
+extern void getEventReg__11dSv_event_cCFUs();
+/* Function             */
 extern void init__14dSv_MiniGame_cFv();
+/* Function             */
 extern void init__12dSv_memory_cFv();
+/* Function             */
 extern void init__13dSv_memory2_cFv();
+/* Function             */
+extern void onVisitedRoom__13dSv_memory2_cFi();
+/* Function             */
+extern void offVisitedRoom__13dSv_memory2_cFi();
+/* Function             */
+extern void isVisitedRoom__13dSv_memory2_cFi();
+/* Function             */
 extern void init__12dSv_danBit_cFSc();
+/* Function             */
 extern void onSwitch__12dSv_danBit_cFi();
+/* Function             */
 extern void offSwitch__12dSv_danBit_cFi();
+/* Function             */
 extern void isSwitch__12dSv_danBit_cCFi();
+/* Function             */
 extern void revSwitch__12dSv_danBit_cFi();
+/* Function             */
 extern void onItem__12dSv_danBit_cFi();
+/* Function             */
 extern void isItem__12dSv_danBit_cCFi();
+/* Function             */
 extern void init__13dSv_zoneBit_cFv();
+/* Function             */
+extern void clearRoomSwitch__13dSv_zoneBit_cFv();
+/* Function             */
+extern void clearRoomItem__13dSv_zoneBit_cFv();
+/* Function             */
 extern void onSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void offSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void isSwitch__13dSv_zoneBit_cCFi();
+/* Function             */
 extern void revSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void onOneSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void offOneSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void isOneSwitch__13dSv_zoneBit_cCFi();
+/* Function             */
 extern void revOneSwitch__13dSv_zoneBit_cFi();
+/* Function             */
 extern void onItem__13dSv_zoneBit_cFi();
+/* Function             */
 extern void isItem__13dSv_zoneBit_cCFi();
+/* Function             */
 extern void onOneItem__13dSv_zoneBit_cFi();
+/* Function             */
 extern void isOneItem__13dSv_zoneBit_cCFi();
+/* Function             */
 extern void init__15dSv_zoneActor_cFv();
+/* Function             */
 extern void on__15dSv_zoneActor_cFi();
+/* Function             */
 extern void off__15dSv_zoneActor_cFi();
+/* Function             */
 extern void is__15dSv_zoneActor_cCFi();
+/* Function             */
 extern void init__10dSv_zone_cFi();
+/* Function             */
+extern void setRoom__13dSv_restart_cFRC4cXyzsSc();
+/* Function             */
+extern void set__17dSv_turnRestart_cFRC4cXyzsScUl();
+/* Function             */
+extern void init__10dSv_info_cFv();
+/* Function             */
 extern void init__10dSv_save_cFv();
+/* Function             */
+extern void getSave2__10dSv_save_cFi();
+/* Function             */
+extern void getSave__10dSv_info_cFi();
+/* Function             */
+extern void putSave__10dSv_info_cFi();
+/* Function             */
 extern void initZone__10dSv_info_cFv();
+/* Function             */
+extern void createZone__10dSv_info_cFi();
+/* Function             */
+extern void onSwitch__10dSv_info_cFii();
+/* Function             */
+extern void offSwitch__10dSv_info_cFii();
+/* Function             */
+extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
+extern void revSwitch__10dSv_info_cFii();
+/* Function             */
+extern void onItem__10dSv_info_cFii();
+/* Function             */
+extern void isItem__10dSv_info_cCFii();
+/* Function             */
+extern void onActor__10dSv_info_cFii();
+/* Function             */
+extern void offActor__10dSv_info_cFii();
+/* Function             */
+extern void isActor__10dSv_info_cCFii();
+/* Function             */
+extern void memory_to_card__10dSv_info_cFPci();
+/* Function             */
+extern void card_to_memory__10dSv_info_cFPci();
+/* Function             */
+extern void initdata_to_card__10dSv_info_cFPci();
+/* ReturnFunction       */
 extern void setInitEventBit__Fv();
+/* Function             */
 extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
 extern void setHotSpringTimer__13dMeter2Info_cFUc();
+/* Function             */
 extern void setSaveStageName__13dMeter2Info_cFPCc();
+/* Function             */
 extern void setOutputMode__10Z2AudioMgrFUl();
+/* Function             */
 extern void OSGetSoundMode();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void __div2i();
+/* Function             */
 extern void printf();
+/* Function             */
 extern void strcpy();
+/* InitializedData      */
+SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_save__stringBase0[100];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A7270[24];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRumbleSupported__10JUTGamePad[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_save__LIT_3775;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3813[4];
 }
 
@@ -148,7 +441,21 @@ SECTION_SDATA2 extern u8 LIT_3813[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803790C0 0172 .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        */
+/* 80379234-80379298 0062 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80379234 = "";
+SECTION_DEAD const char* const stringBase_80379235 = "F_SP108";
+SECTION_DEAD const char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
+SECTION_DEAD const char* const stringBase_8037925D = "Write size:%d\n";
+SECTION_DEAD const char* const stringBase_8037926C = "SAVE size:%d\n";
+SECTION_DEAD const char* const stringBase_8037927A = "LOAD size:%d\n";
+SECTION_DEAD const char* const stringBase_80379288 = "INIT size:%d\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80379296 = "\0";
+#pragma pop
+/* 803790C0-80379234 0172 .rodata    tempBitLabels__20dSv_event_tmp_flag_c                        InitializedData */
 SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x0F, 0xFE, 0xFF, 0x00, 0x40, 0xFD, 0xFF, 0xFC, 0xFF, 0x00, 0x20,
 	0x00, 0x80, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02, 0x00, 0x01, 0x01, 0x80, 0x01, 0x40,
@@ -177,14 +484,6 @@ SECTION_RODATA const u8 tempBitLabels__20dSv_event_tmp_flag_c[372] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 80379234 0062 .rodata    @stringBase0                                                 */
-const char* const stringBase_80379234 = "";
-const char* const stringBase_80379235 = "F_SP108";
-const char* const stringBase_8037923D = "合成アイテム不定＝＝＝＞%d, %d\n";
-const char* const stringBase_8037925D = "Write size:%d\n";
-const char* const stringBase_8037926C = "SAVE size:%d\n";
-const char* const stringBase_8037927A = "LOAD size:%d\n";
-const char* const stringBase_80379288 = "INIT size:%d\n";
 }
 
 
@@ -193,14 +492,14 @@ const char* const stringBase_80379288 = "INIT size:%d\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A7270 0017 .data      i_item_lst$4006                                              */
+/* 803A7270-803A7288 0017 .data      i_item_lst$4006                                              InitializedData */
 SECTION_DATA u8 data_803A7270[24] = {
 	0x0A, 0x08, 0x06, 0x02, 0x09, 0x04, 0x03, 0x00, 0x01, 0x17, 0x14, 0x05, 0x0F, 0x10, 0x11, 0x0B,
 	0x0C, 0x0D, 0x0E, 0x13, 0x12, 0x16, 0x15,
 	/* padding */
 	0x00,
 };
-/* 803A7288 066C .data      saveBitLabels__16dSv_event_flag_c                            */
+/* 803A7288-803A78F8 066C .data      saveBitLabels__16dSv_event_flag_c                            InitializedData */
 SECTION_DATA u8 saveBitLabels__16dSv_event_flag_c[1648] = {
 	0xFF, 0xFF, 0x00, 0x80, 0x00, 0x40, 0x00, 0x20, 0x00, 0x10, 0x00, 0x08, 0x00, 0x04, 0x00, 0x02,
 	0x00, 0x01, 0x01, 0x80, 0x01, 0x40, 0x01, 0x20, 0x01, 0x10, 0x01, 0x08, 0x01, 0x04, 0x01, 0x02,
@@ -316,10 +615,10 @@ SECTION_DATA u8 saveBitLabels__16dSv_event_flag_c[1648] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451D58 0004 .sdata2    @3775                                                        */
+/* 80451D58-80451D5C 0004 .sdata2    @3775                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_save__LIT_3775 = 255.000000f;
-/* 80451D5C 0004 .sdata2    @3813                                                        */
+/* 80451D5C-80451D60 0004 .sdata2    @3813                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3813[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -331,7 +630,7 @@ SECTION_SDATA2 u8 LIT_3813[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80032918 0040 .text      dSv_item_rename__FUc                                         */
+/* 80032918-80032958 0040 .text      dSv_item_rename__FUc                                         Function */
 }
 
 #pragma push
@@ -344,7 +643,7 @@ asm void dSv_item_rename(u8) {
 #pragma pop
 
 extern "C" {
-/* 80032958 00F0 .text      init__21dSv_player_status_a_cFv                              */
+/* 80032958-80032A48 00F0 .text      init__21dSv_player_status_a_cFv                              Function */
 // dSv_player_status_a_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +654,7 @@ asm void init__21dSv_player_status_a_cFv() {
 }
 #pragma pop
 
-/* 80032A48 0014 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              */
+/* 80032A48-80032A5C 0014 .text      setSelectItemIndex__21dSv_player_status_a_cFiUc              Function */
 // dSv_player_status_a_c::setSelectItemIndex(int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +665,7 @@ asm void setSelectItemIndex__21dSv_player_status_a_cFiUc() {
 }
 #pragma pop
 
-/* 80032A5C 001C .text      getSelectItemIndex__21dSv_player_status_a_cCFi               */
+/* 80032A5C-80032A78 001C .text      getSelectItemIndex__21dSv_player_status_a_cCFi               Function */
 // dSv_player_status_a_c::getSelectItemIndex(int) const
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +676,7 @@ asm void getSelectItemIndex__21dSv_player_status_a_cCFi() {
 }
 #pragma pop
 
-/* 80032A78 0014 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 */
+/* 80032A78-80032A8C 0014 .text      setMixItemIndex__21dSv_player_status_a_cFiUc                 Function */
 // dSv_player_status_a_c::setMixItemIndex(int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +687,7 @@ asm void setMixItemIndex__21dSv_player_status_a_cFiUc() {
 }
 #pragma pop
 
-/* 80032A8C 001C .text      getMixItemIndex__21dSv_player_status_a_cCFi                  */
+/* 80032A8C-80032AA8 001C .text      getMixItemIndex__21dSv_player_status_a_cCFi                  Function */
 // dSv_player_status_a_c::getMixItemIndex(int) const
 #pragma push
 #pragma optimization_level 0
@@ -399,7 +698,7 @@ asm void getMixItemIndex__21dSv_player_status_a_cCFi() {
 }
 #pragma pop
 
-/* 80032AA8 0050 .text      getRupeeMax__21dSv_player_status_a_cCFv                      */
+/* 80032AA8-80032AF8 0050 .text      getRupeeMax__21dSv_player_status_a_cCFv                      Function */
 // dSv_player_status_a_c::getRupeeMax(void) const
 #pragma push
 #pragma optimization_level 0
@@ -410,7 +709,7 @@ asm void getRupeeMax__21dSv_player_status_a_cCFv() {
 }
 #pragma pop
 
-/* 80032AF8 0058 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     */
+/* 80032AF8-80032B50 0058 .text      isMagicFlag__21dSv_player_status_a_cCFUc                     Function */
 // dSv_player_status_a_c::isMagicFlag(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +720,7 @@ asm void isMagicFlag__21dSv_player_status_a_cCFUc() {
 }
 #pragma pop
 
-/* 80032B50 0044 .text      init__21dSv_player_status_b_cFv                              */
+/* 80032B50-80032B94 0044 .text      init__21dSv_player_status_b_cFv                              Function */
 // dSv_player_status_b_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -432,7 +731,7 @@ asm void init__21dSv_player_status_b_cFv() {
 }
 #pragma pop
 
-/* 80032B94 001C .text      onDarkClearLV__21dSv_player_status_b_cFi                     */
+/* 80032B94-80032BB0 001C .text      onDarkClearLV__21dSv_player_status_b_cFi                     Function */
 // dSv_player_status_b_c::onDarkClearLV(int)
 #pragma push
 #pragma optimization_level 0
@@ -443,7 +742,7 @@ asm void onDarkClearLV__21dSv_player_status_b_cFi() {
 }
 #pragma pop
 
-/* 80032BB0 0020 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    */
+/* 80032BB0-80032BD0 0020 .text      isDarkClearLV__21dSv_player_status_b_cCFi                    Function */
 // dSv_player_status_b_c::isDarkClearLV(int) const
 #pragma push
 #pragma optimization_level 0
@@ -454,7 +753,7 @@ asm void isDarkClearLV__21dSv_player_status_b_cCFi() {
 }
 #pragma pop
 
-/* 80032BD0 001C .text      onTransformLV__21dSv_player_status_b_cFi                     */
+/* 80032BD0-80032BEC 001C .text      onTransformLV__21dSv_player_status_b_cFi                     Function */
 // dSv_player_status_b_c::onTransformLV(int)
 #pragma push
 #pragma optimization_level 0
@@ -465,7 +764,7 @@ asm void onTransformLV__21dSv_player_status_b_cFi() {
 }
 #pragma pop
 
-/* 80032BEC 0020 .text      isTransformLV__21dSv_player_status_b_cCFi                    */
+/* 80032BEC-80032C0C 0020 .text      isTransformLV__21dSv_player_status_b_cCFi                    Function */
 // dSv_player_status_b_c::isTransformLV(int) const
 #pragma push
 #pragma optimization_level 0
@@ -476,7 +775,7 @@ asm void isTransformLV__21dSv_player_status_b_cCFi() {
 }
 #pragma pop
 
-/* 80032C0C 0058 .text      init__17dSv_horse_place_cFv                                  */
+/* 80032C0C-80032C64 0058 .text      init__17dSv_horse_place_cFv                                  Function */
 // dSv_horse_place_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -487,8 +786,8 @@ asm void init__17dSv_horse_place_cFv() {
 }
 #pragma pop
 
-/* 80032C64 0064 .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       */
-// dSv_horse_place_c::set(const s8*, const cXyz&, s16, s8)
+/* 80032C64-80032CC8 0064 .text      set__17dSv_horse_place_cFPCcRC4cXyzsSc                       Function */
+// dSv_horse_place_c::set(const char*, const cXyz&, short, s8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,7 +797,7 @@ asm void set__17dSv_horse_place_cFPCcRC4cXyzsSc() {
 }
 #pragma pop
 
-/* 80032CC8 0054 .text      init__25dSv_player_return_place_cFv                          */
+/* 80032CC8-80032D1C 0054 .text      init__25dSv_player_return_place_cFv                          Function */
 // dSv_player_return_place_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -509,8 +808,8 @@ asm void init__25dSv_player_return_place_cFv() {
 }
 #pragma pop
 
-/* 80032D1C 0044 .text      set__25dSv_player_return_place_cFPCcScUc                     */
-// dSv_player_return_place_c::set(const s8*, s8, u8)
+/* 80032D1C-80032D60 0044 .text      set__25dSv_player_return_place_cFPCcScUc                     Function */
+// dSv_player_return_place_c::set(const char*, s8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -520,7 +819,7 @@ asm void set__25dSv_player_return_place_cFPCcScUc() {
 }
 #pragma pop
 
-/* 80032D60 0080 .text      init__33dSv_player_field_last_stay_info_cFv                  */
+/* 80032D60-80032DE0 0080 .text      init__33dSv_player_field_last_stay_info_cFv                  Function */
 // dSv_player_field_last_stay_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -531,8 +830,8 @@ asm void init__33dSv_player_field_last_stay_info_cFv() {
 }
 #pragma pop
 
-/* 80032DE0 006C .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     */
-// dSv_player_field_last_stay_info_c::set(const s8*, const cXyz&, s16, s8, u8)
+/* 80032DE0-80032E4C 006C .text      set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc     Function */
+// dSv_player_field_last_stay_info_c::set(const char*, const cXyz&, short, s8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -542,7 +841,7 @@ asm void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc() {
 }
 #pragma pop
 
-/* 80032E4C 002C .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           */
+/* 80032E4C-80032E78 002C .text      onRegionBit__33dSv_player_field_last_stay_info_cFi           Function */
 // dSv_player_field_last_stay_info_c::onRegionBit(int)
 #pragma push
 #pragma optimization_level 0
@@ -553,7 +852,7 @@ asm void onRegionBit__33dSv_player_field_last_stay_info_cFi() {
 }
 #pragma pop
 
-/* 80032E78 0038 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          */
+/* 80032E78-80032EB0 0038 .text      isRegionBit__33dSv_player_field_last_stay_info_cCFi          Function */
 // dSv_player_field_last_stay_info_c::isRegionBit(int) const
 #pragma push
 #pragma optimization_level 0
@@ -564,7 +863,7 @@ asm void isRegionBit__33dSv_player_field_last_stay_info_cCFi() {
 }
 #pragma pop
 
-/* 80032EB0 007C .text      init__27dSv_player_last_mark_info_cFv                        */
+/* 80032EB0-80032F2C 007C .text      init__27dSv_player_last_mark_info_cFv                        Function */
 // dSv_player_last_mark_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -575,8 +874,8 @@ asm void init__27dSv_player_last_mark_info_cFv() {
 }
 #pragma pop
 
-/* 80032F2C 0064 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc */
-// dSv_player_last_mark_info_c::setWarpItemData(const s8*, const cXyz&, s16, s8, u8, u8)
+/* 80032F2C-80032F90 0064 .text      setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc Function */
+// dSv_player_last_mark_info_c::setWarpItemData(const char*, const cXyz&, short, s8, u8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -586,7 +885,7 @@ asm void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc() {
 }
 #pragma pop
 
-/* 80032F90 0028 .text      init__17dSv_player_item_cFv                                  */
+/* 80032F90-80032FB8 0028 .text      init__17dSv_player_item_cFv                                  Function */
 // dSv_player_item_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -597,7 +896,7 @@ asm void init__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80032FB8 0078 .text      setItem__17dSv_player_item_cFiUc                             */
+/* 80032FB8-80033030 0078 .text      setItem__17dSv_player_item_cFiUc                             Function */
 // dSv_player_item_c::setItem(int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -608,7 +907,7 @@ asm void setItem__17dSv_player_item_cFiUc() {
 }
 #pragma pop
 
-/* 80033030 02C8 .text      getItem__17dSv_player_item_cCFib                             */
+/* 80033030-800332F8 02C8 .text      getItem__17dSv_player_item_cCFib                             Function */
 // dSv_player_item_c::getItem(int, bool) const
 #pragma push
 #pragma optimization_level 0
@@ -619,7 +918,7 @@ asm void getItem__17dSv_player_item_cCFib() {
 }
 #pragma pop
 
-/* 800332F8 005C .text      setLineUpItem__17dSv_player_item_cFv                         */
+/* 800332F8-80033354 005C .text      setLineUpItem__17dSv_player_item_cFv                         Function */
 // dSv_player_item_c::setLineUpItem(void)
 #pragma push
 #pragma optimization_level 0
@@ -630,7 +929,7 @@ asm void setLineUpItem__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80033354 001C .text      getLineUpItem__17dSv_player_item_cCFi                        */
+/* 80033354-80033370 001C .text      getLineUpItem__17dSv_player_item_cCFi                        Function */
 // dSv_player_item_c::getLineUpItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -641,7 +940,7 @@ asm void getLineUpItem__17dSv_player_item_cCFi() {
 }
 #pragma pop
 
-/* 80033370 00E0 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    */
+/* 80033370-80033450 00E0 .text      setBottleItemIn__17dSv_player_item_cFUcUc                    Function */
 // dSv_player_item_c::setBottleItemIn(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -652,7 +951,7 @@ asm void setBottleItemIn__17dSv_player_item_cFUcUc() {
 }
 #pragma pop
 
-/* 80033450 0044 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 */
+/* 80033450-80033494 0044 .text      setEmptyBottleItemIn__17dSv_player_item_cFUc                 Function */
 // dSv_player_item_c::setEmptyBottleItemIn(u8)
 #pragma push
 #pragma optimization_level 0
@@ -663,7 +962,7 @@ asm void setEmptyBottleItemIn__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033494 0080 .text      setEmptyBottle__17dSv_player_item_cFv                        */
+/* 80033494-80033514 0080 .text      setEmptyBottle__17dSv_player_item_cFv                        Function */
 // dSv_player_item_c::setEmptyBottle(void)
 #pragma push
 #pragma optimization_level 0
@@ -674,7 +973,7 @@ asm void setEmptyBottle__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80033514 0084 .text      setEmptyBottle__17dSv_player_item_cFUc                       */
+/* 80033514-80033598 0084 .text      setEmptyBottle__17dSv_player_item_cFUc                       Function */
 // dSv_player_item_c::setEmptyBottle(u8)
 #pragma push
 #pragma optimization_level 0
@@ -685,7 +984,7 @@ asm void setEmptyBottle__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033598 0124 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               */
+/* 80033598-800336BC 0124 .text      setEquipBottleItemIn__17dSv_player_item_cFUcUc               Function */
 // dSv_player_item_c::setEquipBottleItemIn(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -696,7 +995,7 @@ asm void setEquipBottleItemIn__17dSv_player_item_cFUcUc() {
 }
 #pragma pop
 
-/* 800336BC 0024 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              */
+/* 800336BC-800336E0 0024 .text      setEquipBottleItemEmpty__17dSv_player_item_cFUc              Function */
 // dSv_player_item_c::setEquipBottleItemEmpty(u8)
 #pragma push
 #pragma optimization_level 0
@@ -707,7 +1006,7 @@ asm void setEquipBottleItemEmpty__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 800336E0 0074 .text      checkBottle__17dSv_player_item_cFUc                          */
+/* 800336E0-80033754 0074 .text      checkBottle__17dSv_player_item_cFUc                          Function */
 // dSv_player_item_c::checkBottle(u8)
 #pragma push
 #pragma optimization_level 0
@@ -718,7 +1017,7 @@ asm void checkBottle__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033754 0098 .text      checkInsectBottle__17dSv_player_item_cFv                     */
+/* 80033754-800337EC 0098 .text      checkInsectBottle__17dSv_player_item_cFv                     Function */
 // dSv_player_item_c::checkInsectBottle(void)
 #pragma push
 #pragma optimization_level 0
@@ -729,7 +1028,7 @@ asm void checkInsectBottle__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 800337EC 003C .text      checkEmptyBottle__17dSv_player_item_cFv                      */
+/* 800337EC-80033828 003C .text      checkEmptyBottle__17dSv_player_item_cFv                      Function */
 // dSv_player_item_c::checkEmptyBottle(void)
 #pragma push
 #pragma optimization_level 0
@@ -740,7 +1039,7 @@ asm void checkEmptyBottle__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80033828 00E8 .text      setBombBagItemIn__17dSv_player_item_cFUcUcb                  */
+/* 80033828-80033910 00E8 .text      setBombBagItemIn__17dSv_player_item_cFUcUcb                  Function */
 // dSv_player_item_c::setBombBagItemIn(u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -751,7 +1050,7 @@ asm void setBombBagItemIn__17dSv_player_item_cFUcUcb() {
 }
 #pragma pop
 
-/* 80033910 0110 .text      setBombBagItemIn__17dSv_player_item_cFUcUcUcb                */
+/* 80033910-80033A20 0110 .text      setBombBagItemIn__17dSv_player_item_cFUcUcUcb                Function */
 // dSv_player_item_c::setBombBagItemIn(u8, u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -762,7 +1061,7 @@ asm void setBombBagItemIn__17dSv_player_item_cFUcUcUcb() {
 }
 #pragma pop
 
-/* 80033A20 0030 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcb               */
+/* 80033A20-80033A50 0030 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcb               Function */
 // dSv_player_item_c::setEmptyBombBagItemIn(u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -773,7 +1072,7 @@ asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcb() {
 }
 #pragma pop
 
-/* 80033A50 0038 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             */
+/* 80033A50-80033A88 0038 .text      setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb             Function */
 // dSv_player_item_c::setEmptyBombBagItemIn(u8, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -784,7 +1083,7 @@ asm void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb() {
 }
 #pragma pop
 
-/* 80033A88 0080 .text      setEmptyBombBag__17dSv_player_item_cFv                       */
+/* 80033A88-80033B08 0080 .text      setEmptyBombBag__17dSv_player_item_cFv                       Function */
 // dSv_player_item_c::setEmptyBombBag(void)
 #pragma push
 #pragma optimization_level 0
@@ -795,7 +1094,7 @@ asm void setEmptyBombBag__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80033B08 00E4 .text      setEmptyBombBag__17dSv_player_item_cFUcUc                    */
+/* 80033B08-80033BEC 00E4 .text      setEmptyBombBag__17dSv_player_item_cFUcUc                    Function */
 // dSv_player_item_c::setEmptyBombBag(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -806,7 +1105,7 @@ asm void setEmptyBombBag__17dSv_player_item_cFUcUc() {
 }
 #pragma pop
 
-/* 80033BEC 0040 .text      checkBombBag__17dSv_player_item_cFUc                         */
+/* 80033BEC-80033C2C 0040 .text      checkBombBag__17dSv_player_item_cFUc                         Function */
 // dSv_player_item_c::checkBombBag(u8)
 #pragma push
 #pragma optimization_level 0
@@ -817,7 +1116,7 @@ asm void checkBombBag__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033C2C 0090 .text      setWarashibeItem__17dSv_player_item_cFUc                     */
+/* 80033C2C-80033CBC 0090 .text      setWarashibeItem__17dSv_player_item_cFUc                     Function */
 // dSv_player_item_c::setWarashibeItem(u8)
 #pragma push
 #pragma optimization_level 0
@@ -828,7 +1127,7 @@ asm void setWarashibeItem__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033CBC 0084 .text      setRodTypeLevelUp__17dSv_player_item_cFv                     */
+/* 80033CBC-80033D40 0084 .text      setRodTypeLevelUp__17dSv_player_item_cFv                     Function */
 // dSv_player_item_c::setRodTypeLevelUp(void)
 #pragma push
 #pragma optimization_level 0
@@ -839,7 +1138,7 @@ asm void setRodTypeLevelUp__17dSv_player_item_cFv() {
 }
 #pragma pop
 
-/* 80033D40 0100 .text      setBaitItem__17dSv_player_item_cFUc                          */
+/* 80033D40-80033E40 0100 .text      setBaitItem__17dSv_player_item_cFUc                          Function */
 // dSv_player_item_c::setBaitItem(u8)
 #pragma push
 #pragma optimization_level 0
@@ -850,7 +1149,7 @@ asm void setBaitItem__17dSv_player_item_cFUc() {
 }
 #pragma pop
 
-/* 80033E40 0020 .text      init__21dSv_player_get_item_cFv                              */
+/* 80033E40-80033E60 0020 .text      init__21dSv_player_get_item_cFv                              Function */
 // dSv_player_get_item_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -861,7 +1160,7 @@ asm void init__21dSv_player_get_item_cFv() {
 }
 #pragma pop
 
-/* 80033E60 0034 .text      onFirstBit__21dSv_player_get_item_cFUc                       */
+/* 80033E60-80033E94 0034 .text      onFirstBit__21dSv_player_get_item_cFUc                       Function */
 // dSv_player_get_item_c::onFirstBit(u8)
 #pragma push
 #pragma optimization_level 0
@@ -872,7 +1171,7 @@ asm void onFirstBit__21dSv_player_get_item_cFUc() {
 }
 #pragma pop
 
-/* 80033E94 0034 .text      offFirstBit__21dSv_player_get_item_cFUc                      */
+/* 80033E94-80033EC8 0034 .text      offFirstBit__21dSv_player_get_item_cFUc                      Function */
 // dSv_player_get_item_c::offFirstBit(u8)
 #pragma push
 #pragma optimization_level 0
@@ -883,7 +1182,7 @@ asm void offFirstBit__21dSv_player_get_item_cFUc() {
 }
 #pragma pop
 
-/* 80033EC8 0038 .text      isFirstBit__21dSv_player_get_item_cCFUc                      */
+/* 80033EC8-80033F00 0038 .text      isFirstBit__21dSv_player_get_item_cCFUc                      Function */
 // dSv_player_get_item_c::isFirstBit(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -894,7 +1193,7 @@ asm void isFirstBit__21dSv_player_get_item_cCFUc() {
 }
 #pragma pop
 
-/* 80033F00 006C .text      init__24dSv_player_item_record_cFv                           */
+/* 80033F00-80033F6C 006C .text      init__24dSv_player_item_record_cFv                           Function */
 // dSv_player_item_record_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -905,7 +1204,7 @@ asm void init__24dSv_player_item_record_cFv() {
 }
 #pragma pop
 
-/* 80033F6C 0010 .text      setBombNum__24dSv_player_item_record_cFUcUc                  */
+/* 80033F6C-80033F7C 0010 .text      setBombNum__24dSv_player_item_record_cFUcUc                  Function */
 // dSv_player_item_record_c::setBombNum(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -916,7 +1215,7 @@ asm void setBombNum__24dSv_player_item_record_cFUcUc() {
 }
 #pragma pop
 
-/* 80033F7C 0010 .text      getBombNum__24dSv_player_item_record_cCFUc                   */
+/* 80033F7C-80033F8C 0010 .text      getBombNum__24dSv_player_item_record_cCFUc                   Function */
 // dSv_player_item_record_c::getBombNum(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -927,7 +1226,7 @@ asm void getBombNum__24dSv_player_item_record_cCFUc() {
 }
 #pragma pop
 
-/* 80033F8C 0010 .text      setBottleNum__24dSv_player_item_record_cFUcUc                */
+/* 80033F8C-80033F9C 0010 .text      setBottleNum__24dSv_player_item_record_cFUcUc                Function */
 // dSv_player_item_record_c::setBottleNum(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -938,8 +1237,8 @@ asm void setBottleNum__24dSv_player_item_record_cFUcUc() {
 }
 #pragma pop
 
-/* 80033F9C 0094 .text      addBottleNum__24dSv_player_item_record_cFUcs                 */
-// dSv_player_item_record_c::addBottleNum(u8, s16)
+/* 80033F9C-80034030 0094 .text      addBottleNum__24dSv_player_item_record_cFUcs                 Function */
+// dSv_player_item_record_c::addBottleNum(u8, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -949,7 +1248,7 @@ asm void addBottleNum__24dSv_player_item_record_cFUcs() {
 }
 #pragma pop
 
-/* 80034030 0010 .text      getBottleNum__24dSv_player_item_record_cCFUc                 */
+/* 80034030-80034040 0010 .text      getBottleNum__24dSv_player_item_record_cCFUc                 Function */
 // dSv_player_item_record_c::getBottleNum(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -960,7 +1259,7 @@ asm void getBottleNum__24dSv_player_item_record_cCFUc() {
 }
 #pragma pop
 
-/* 80034040 0078 .text      init__21dSv_player_item_max_cFv                              */
+/* 80034040-800340B8 0078 .text      init__21dSv_player_item_max_cFv                              Function */
 // dSv_player_item_max_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -971,7 +1270,7 @@ asm void init__21dSv_player_item_max_cFv() {
 }
 #pragma pop
 
-/* 800340B8 0040 .text      setBombNum__21dSv_player_item_max_cFUcUc                     */
+/* 800340B8-800340F8 0040 .text      setBombNum__21dSv_player_item_max_cFUcUc                     Function */
 // dSv_player_item_max_c::setBombNum(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -982,7 +1281,7 @@ asm void setBombNum__21dSv_player_item_max_cFUcUc() {
 }
 #pragma pop
 
-/* 800340F8 00B4 .text      getBombNum__21dSv_player_item_max_cCFUc                      */
+/* 800340F8-800341AC 00B4 .text      getBombNum__21dSv_player_item_max_cCFUc                      Function */
 // dSv_player_item_max_c::getBombNum(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -993,7 +1292,7 @@ asm void getBombNum__21dSv_player_item_max_cCFUc() {
 }
 #pragma pop
 
-/* 800341AC 003C .text      init__20dSv_player_collect_cFv                               */
+/* 800341AC-800341E8 003C .text      init__20dSv_player_collect_cFv                               Function */
 // dSv_player_collect_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1004,7 +1303,7 @@ asm void init__20dSv_player_collect_cFv() {
 }
 #pragma pop
 
-/* 800341E8 0020 .text      setCollect__20dSv_player_collect_cFiUc                       */
+/* 800341E8-80034208 0020 .text      setCollect__20dSv_player_collect_cFiUc                       Function */
 // dSv_player_collect_c::setCollect(int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1015,7 +1314,7 @@ asm void setCollect__20dSv_player_collect_cFiUc() {
 }
 #pragma pop
 
-/* 80034208 0024 .text      isCollect__20dSv_player_collect_cCFiUc                       */
+/* 80034208-8003422C 0024 .text      isCollect__20dSv_player_collect_cCFiUc                       Function */
 // dSv_player_collect_c::isCollect(int, u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1026,7 +1325,7 @@ asm void isCollect__20dSv_player_collect_cCFiUc() {
 }
 #pragma pop
 
-/* 8003422C 0020 .text      onCollectCrystal__20dSv_player_collect_cFUc                  */
+/* 8003422C-8003424C 0020 .text      onCollectCrystal__20dSv_player_collect_cFUc                  Function */
 // dSv_player_collect_c::onCollectCrystal(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1037,7 +1336,7 @@ asm void onCollectCrystal__20dSv_player_collect_cFUc() {
 }
 #pragma pop
 
-/* 8003424C 0024 .text      isCollectCrystal__20dSv_player_collect_cCFUc                 */
+/* 8003424C-80034270 0024 .text      isCollectCrystal__20dSv_player_collect_cCFUc                 Function */
 // dSv_player_collect_c::isCollectCrystal(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1048,7 +1347,7 @@ asm void isCollectCrystal__20dSv_player_collect_cCFUc() {
 }
 #pragma pop
 
-/* 80034270 0020 .text      onCollectMirror__20dSv_player_collect_cFUc                   */
+/* 80034270-80034290 0020 .text      onCollectMirror__20dSv_player_collect_cFUc                   Function */
 // dSv_player_collect_c::onCollectMirror(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1059,7 +1358,7 @@ asm void onCollectMirror__20dSv_player_collect_cFUc() {
 }
 #pragma pop
 
-/* 80034290 0024 .text      isCollectMirror__20dSv_player_collect_cCFUc                  */
+/* 80034290-800342B4 0024 .text      isCollectMirror__20dSv_player_collect_cCFUc                  Function */
 // dSv_player_collect_c::isCollectMirror(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1070,7 +1369,7 @@ asm void isCollectMirror__20dSv_player_collect_cCFUc() {
 }
 #pragma pop
 
-/* 800342B4 0028 .text      init__17dSv_player_wolf_cFv                                  */
+/* 800342B4-800342DC 0028 .text      init__17dSv_player_wolf_cFv                                  Function */
 // dSv_player_wolf_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1081,7 +1380,7 @@ asm void init__17dSv_player_wolf_cFv() {
 }
 #pragma pop
 
-/* 800342DC 0044 .text      init__16dSv_light_drop_cFv                                   */
+/* 800342DC-80034320 0044 .text      init__16dSv_light_drop_cFv                                   Function */
 // dSv_light_drop_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1092,7 +1391,7 @@ asm void init__16dSv_light_drop_cFv() {
 }
 #pragma pop
 
-/* 80034320 0020 .text      setLightDropNum__16dSv_light_drop_cFUcUc                     */
+/* 80034320-80034340 0020 .text      setLightDropNum__16dSv_light_drop_cFUcUc                     Function */
 // dSv_light_drop_c::setLightDropNum(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1103,7 +1402,7 @@ asm void setLightDropNum__16dSv_light_drop_cFUcUc() {
 }
 #pragma pop
 
-/* 80034340 0028 .text      getLightDropNum__16dSv_light_drop_cCFUc                      */
+/* 80034340-80034368 0028 .text      getLightDropNum__16dSv_light_drop_cCFUc                      Function */
 // dSv_light_drop_c::getLightDropNum(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1114,7 +1413,7 @@ asm void getLightDropNum__16dSv_light_drop_cCFUc() {
 }
 #pragma pop
 
-/* 80034368 0034 .text      onLightDropGetFlag__16dSv_light_drop_cFUc                    */
+/* 80034368-8003439C 0034 .text      onLightDropGetFlag__16dSv_light_drop_cFUc                    Function */
 // dSv_light_drop_c::onLightDropGetFlag(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1125,7 +1424,7 @@ asm void onLightDropGetFlag__16dSv_light_drop_cFUc() {
 }
 #pragma pop
 
-/* 8003439C 0040 .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   */
+/* 8003439C-800343DC 0040 .text      isLightDropGetFlag__16dSv_light_drop_cCFUc                   Function */
 // dSv_light_drop_c::isLightDropGetFlag(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -1136,7 +1435,7 @@ asm void isLightDropGetFlag__16dSv_light_drop_cCFUc() {
 }
 #pragma pop
 
-/* 800343DC 004C .text      init__17dSv_letter_info_cFv                                  */
+/* 800343DC-80034428 004C .text      init__17dSv_letter_info_cFv                                  Function */
 // dSv_letter_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1147,7 +1446,7 @@ asm void init__17dSv_letter_info_cFv() {
 }
 #pragma pop
 
-/* 80034428 0024 .text      onLetterGetFlag__17dSv_letter_info_cFi                       */
+/* 80034428-8003444C 0024 .text      onLetterGetFlag__17dSv_letter_info_cFi                       Function */
 // dSv_letter_info_c::onLetterGetFlag(int)
 #pragma push
 #pragma optimization_level 0
@@ -1158,7 +1457,7 @@ asm void onLetterGetFlag__17dSv_letter_info_cFi() {
 }
 #pragma pop
 
-/* 8003444C 0028 .text      isLetterGetFlag__17dSv_letter_info_cCFi                      */
+/* 8003444C-80034474 0028 .text      isLetterGetFlag__17dSv_letter_info_cCFi                      Function */
 // dSv_letter_info_c::isLetterGetFlag(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1169,7 +1468,7 @@ asm void isLetterGetFlag__17dSv_letter_info_cCFi() {
 }
 #pragma pop
 
-/* 80034474 0028 .text      onLetterReadFlag__17dSv_letter_info_cFi                      */
+/* 80034474-8003449C 0028 .text      onLetterReadFlag__17dSv_letter_info_cFi                      Function */
 // dSv_letter_info_c::onLetterReadFlag(int)
 #pragma push
 #pragma optimization_level 0
@@ -1180,7 +1479,7 @@ asm void onLetterReadFlag__17dSv_letter_info_cFi() {
 }
 #pragma pop
 
-/* 8003449C 002C .text      isLetterReadFlag__17dSv_letter_info_cCFi                     */
+/* 8003449C-800344C8 002C .text      isLetterReadFlag__17dSv_letter_info_cCFi                     Function */
 // dSv_letter_info_c::isLetterReadFlag(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1191,7 +1490,7 @@ asm void isLetterReadFlag__17dSv_letter_info_cCFi() {
 }
 #pragma pop
 
-/* 800344C8 0034 .text      init__18dSv_fishing_info_cFv                                 */
+/* 800344C8-800344FC 0034 .text      init__18dSv_fishing_info_cFv                                 Function */
 // dSv_fishing_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1202,7 +1501,7 @@ asm void init__18dSv_fishing_info_cFv() {
 }
 #pragma pop
 
-/* 800344FC 001C .text      addFishCount__18dSv_fishing_info_cFUc                        */
+/* 800344FC-80034518 001C .text      addFishCount__18dSv_fishing_info_cFUc                        Function */
 // dSv_fishing_info_c::addFishCount(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1213,7 +1512,7 @@ asm void addFishCount__18dSv_fishing_info_cFUc() {
 }
 #pragma pop
 
-/* 80034518 0094 .text      init__17dSv_player_info_cFv                                  */
+/* 80034518-800345AC 0094 .text      init__17dSv_player_info_cFv                                  Function */
 // dSv_player_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1224,7 +1523,7 @@ asm void init__17dSv_player_info_cFv() {
 }
 #pragma pop
 
-/* 800345AC 0098 .text      init__19dSv_player_config_cFv                                */
+/* 800345AC-80034644 0098 .text      init__19dSv_player_config_cFv                                Function */
 // dSv_player_config_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1235,7 +1534,7 @@ asm void init__19dSv_player_config_cFv() {
 }
 #pragma pop
 
-/* 80034644 0040 .text      checkVibration__19dSv_player_config_cCFv                     */
+/* 80034644-80034684 0040 .text      checkVibration__19dSv_player_config_cCFv                     Function */
 // dSv_player_config_c::checkVibration(void) const
 #pragma push
 #pragma optimization_level 0
@@ -1246,13 +1545,13 @@ asm void checkVibration__19dSv_player_config_cCFv() {
 }
 #pragma pop
 
-/* 80034684 0008 .text      getSound__19dSv_player_config_cFv                            */
+/* 80034684-8003468C 0008 .text      getSound__19dSv_player_config_cFv                            FirstParamFunction */
 // dSv_player_config_c::getSound(void)
 u8 getSound__19dSv_player_config_cFv(u8* param0) {
 	return *(u8*)&param0[1]; /* param0->field_0x1 */
 }
 
-/* 8003468C 0008 .text      setSound__19dSv_player_config_cFUc                           */
+/* 8003468C-80034694 0008 .text      setSound__19dSv_player_config_cFUc                           Function */
 // dSv_player_config_c::setSound(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1263,13 +1562,13 @@ asm void setSound__19dSv_player_config_cFUc() {
 }
 #pragma pop
 
-/* 80034694 0008 .text      getVibration__19dSv_player_config_cFv                        */
+/* 80034694-8003469C 0008 .text      getVibration__19dSv_player_config_cFv                        FirstParamFunction */
 // dSv_player_config_c::getVibration(void)
 u8 getVibration__19dSv_player_config_cFv(u8* param0) {
 	return *(u8*)&param0[3]; /* param0->field_0x3 */
 }
 
-/* 8003469C 0008 .text      setVibration__19dSv_player_config_cFUc                       */
+/* 8003469C-800346A4 0008 .text      setVibration__19dSv_player_config_cFUc                       Function */
 // dSv_player_config_c::setVibration(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1280,7 +1579,7 @@ asm void setVibration__19dSv_player_config_cFUc() {
 }
 #pragma pop
 
-/* 800346A4 00AC .text      init__12dSv_player_cFv                                       */
+/* 800346A4-80034750 00AC .text      init__12dSv_player_cFv                                       Function */
 // dSv_player_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1291,7 +1590,7 @@ asm void init__12dSv_player_cFv() {
 }
 #pragma pop
 
-/* 80034750 0050 .text      init__12dSv_memBit_cFv                                       */
+/* 80034750-800347A0 0050 .text      init__12dSv_memBit_cFv                                       Function */
 // dSv_memBit_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1302,7 +1601,7 @@ asm void init__12dSv_memBit_cFv() {
 }
 #pragma pop
 
-/* 800347A0 0024 .text      onTbox__12dSv_memBit_cFi                                     */
+/* 800347A0-800347C4 0024 .text      onTbox__12dSv_memBit_cFi                                     Function */
 // dSv_memBit_c::onTbox(int)
 #pragma push
 #pragma optimization_level 0
@@ -1313,7 +1612,7 @@ asm void onTbox__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 800347C4 0024 .text      offTbox__12dSv_memBit_cFi                                    */
+/* 800347C4-800347E8 0024 .text      offTbox__12dSv_memBit_cFi                                    Function */
 // dSv_memBit_c::offTbox(int)
 #pragma push
 #pragma optimization_level 0
@@ -1324,7 +1623,7 @@ asm void offTbox__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 800347E8 0028 .text      isTbox__12dSv_memBit_cCFi                                    */
+/* 800347E8-80034810 0028 .text      isTbox__12dSv_memBit_cCFi                                    Function */
 // dSv_memBit_c::isTbox(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1335,7 +1634,7 @@ asm void isTbox__12dSv_memBit_cCFi() {
 }
 #pragma pop
 
-/* 80034810 0028 .text      onSwitch__12dSv_memBit_cFi                                   */
+/* 80034810-80034838 0028 .text      onSwitch__12dSv_memBit_cFi                                   Function */
 // dSv_memBit_c::onSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1346,7 +1645,7 @@ asm void onSwitch__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 80034838 0028 .text      offSwitch__12dSv_memBit_cFi                                  */
+/* 80034838-80034860 0028 .text      offSwitch__12dSv_memBit_cFi                                  Function */
 // dSv_memBit_c::offSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1357,7 +1656,7 @@ asm void offSwitch__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 80034860 002C .text      isSwitch__12dSv_memBit_cCFi                                  */
+/* 80034860-8003488C 002C .text      isSwitch__12dSv_memBit_cCFi                                  Function */
 // dSv_memBit_c::isSwitch(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1368,7 +1667,7 @@ asm void isSwitch__12dSv_memBit_cCFi() {
 }
 #pragma pop
 
-/* 8003488C 0038 .text      revSwitch__12dSv_memBit_cFi                                  */
+/* 8003488C-800348C4 0038 .text      revSwitch__12dSv_memBit_cFi                                  Function */
 // dSv_memBit_c::revSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1379,7 +1678,7 @@ asm void revSwitch__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 800348C4 0028 .text      onItem__12dSv_memBit_cFi                                     */
+/* 800348C4-800348EC 0028 .text      onItem__12dSv_memBit_cFi                                     Function */
 // dSv_memBit_c::onItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -1390,7 +1689,7 @@ asm void onItem__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 800348EC 002C .text      isItem__12dSv_memBit_cCFi                                    */
+/* 800348EC-80034918 002C .text      isItem__12dSv_memBit_cCFi                                    Function */
 // dSv_memBit_c::isItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1401,7 +1700,7 @@ asm void isItem__12dSv_memBit_cCFi() {
 }
 #pragma pop
 
-/* 80034918 001C .text      onDungeonItem__12dSv_memBit_cFi                              */
+/* 80034918-80034934 001C .text      onDungeonItem__12dSv_memBit_cFi                              Function */
 // dSv_memBit_c::onDungeonItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -1412,7 +1711,7 @@ asm void onDungeonItem__12dSv_memBit_cFi() {
 }
 #pragma pop
 
-/* 80034934 0020 .text      isDungeonItem__12dSv_memBit_cCFi                             */
+/* 80034934-80034954 0020 .text      isDungeonItem__12dSv_memBit_cCFi                             Function */
 // dSv_memBit_c::isDungeonItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1423,7 +1722,7 @@ asm void isDungeonItem__12dSv_memBit_cCFi() {
 }
 #pragma pop
 
-/* 80034954 0038 .text      init__11dSv_event_cFv                                        */
+/* 80034954-8003498C 0038 .text      init__11dSv_event_cFv                                        Function */
 // dSv_event_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1434,7 +1733,7 @@ asm void init__11dSv_event_cFv() {
 }
 #pragma pop
 
-/* 8003498C 0018 .text      onEventBit__11dSv_event_cFUs                                 */
+/* 8003498C-800349A4 0018 .text      onEventBit__11dSv_event_cFUs                                 Function */
 // dSv_event_c::onEventBit(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1445,7 +1744,7 @@ asm void onEventBit__11dSv_event_cFUs() {
 }
 #pragma pop
 
-/* 800349A4 0018 .text      offEventBit__11dSv_event_cFUs                                */
+/* 800349A4-800349BC 0018 .text      offEventBit__11dSv_event_cFUs                                Function */
 // dSv_event_c::offEventBit(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1456,7 +1755,7 @@ asm void offEventBit__11dSv_event_cFUs() {
 }
 #pragma pop
 
-/* 800349BC 0024 .text      isEventBit__11dSv_event_cCFUs                                */
+/* 800349BC-800349E0 0024 .text      isEventBit__11dSv_event_cCFUs                                Function */
 // dSv_event_c::isEventBit(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -1467,7 +1766,7 @@ asm void isEventBit__11dSv_event_cCFUs() {
 }
 #pragma pop
 
-/* 800349E0 0024 .text      setEventReg__11dSv_event_cFUsUc                              */
+/* 800349E0-80034A04 0024 .text      setEventReg__11dSv_event_cFUsUc                              Function */
 // dSv_event_c::setEventReg(u16, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1478,7 +1777,7 @@ asm void setEventReg__11dSv_event_cFUsUc() {
 }
 #pragma pop
 
-/* 80034A04 0018 .text      getEventReg__11dSv_event_cCFUs                               */
+/* 80034A04-80034A1C 0018 .text      getEventReg__11dSv_event_cCFUs                               Function */
 // dSv_event_c::getEventReg(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -1489,7 +1788,7 @@ asm void getEventReg__11dSv_event_cCFUs() {
 }
 #pragma pop
 
-/* 80034A1C 0048 .text      init__14dSv_MiniGame_cFv                                     */
+/* 80034A1C-80034A64 0048 .text      init__14dSv_MiniGame_cFv                                     Function */
 // dSv_MiniGame_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1500,7 +1799,7 @@ asm void init__14dSv_MiniGame_cFv() {
 }
 #pragma pop
 
-/* 80034A64 0020 .text      init__12dSv_memory_cFv                                       */
+/* 80034A64-80034A84 0020 .text      init__12dSv_memory_cFv                                       Function */
 // dSv_memory_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1511,7 +1810,7 @@ asm void init__12dSv_memory_cFv() {
 }
 #pragma pop
 
-/* 80034A84 0020 .text      init__13dSv_memory2_cFv                                      */
+/* 80034A84-80034AA4 0020 .text      init__13dSv_memory2_cFv                                      Function */
 // dSv_memory2_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1522,7 +1821,7 @@ asm void init__13dSv_memory2_cFv() {
 }
 #pragma pop
 
-/* 80034AA4 0024 .text      onVisitedRoom__13dSv_memory2_cFi                             */
+/* 80034AA4-80034AC8 0024 .text      onVisitedRoom__13dSv_memory2_cFi                             Function */
 // dSv_memory2_c::onVisitedRoom(int)
 #pragma push
 #pragma optimization_level 0
@@ -1533,7 +1832,7 @@ asm void onVisitedRoom__13dSv_memory2_cFi() {
 }
 #pragma pop
 
-/* 80034AC8 0024 .text      offVisitedRoom__13dSv_memory2_cFi                            */
+/* 80034AC8-80034AEC 0024 .text      offVisitedRoom__13dSv_memory2_cFi                            Function */
 // dSv_memory2_c::offVisitedRoom(int)
 #pragma push
 #pragma optimization_level 0
@@ -1544,7 +1843,7 @@ asm void offVisitedRoom__13dSv_memory2_cFi() {
 }
 #pragma pop
 
-/* 80034AEC 0028 .text      isVisitedRoom__13dSv_memory2_cFi                             */
+/* 80034AEC-80034B14 0028 .text      isVisitedRoom__13dSv_memory2_cFi                             Function */
 // dSv_memory2_c::isVisitedRoom(int)
 #pragma push
 #pragma optimization_level 0
@@ -1555,7 +1854,7 @@ asm void isVisitedRoom__13dSv_memory2_cFi() {
 }
 #pragma pop
 
-/* 80034B14 0084 .text      init__12dSv_danBit_cFSc                                      */
+/* 80034B14-80034B98 0084 .text      init__12dSv_danBit_cFSc                                      Function */
 // dSv_danBit_c::init(s8)
 #pragma push
 #pragma optimization_level 0
@@ -1566,7 +1865,7 @@ asm void init__12dSv_danBit_cFSc() {
 }
 #pragma pop
 
-/* 80034B98 0028 .text      onSwitch__12dSv_danBit_cFi                                   */
+/* 80034B98-80034BC0 0028 .text      onSwitch__12dSv_danBit_cFi                                   Function */
 // dSv_danBit_c::onSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1577,7 +1876,7 @@ asm void onSwitch__12dSv_danBit_cFi() {
 }
 #pragma pop
 
-/* 80034BC0 0028 .text      offSwitch__12dSv_danBit_cFi                                  */
+/* 80034BC0-80034BE8 0028 .text      offSwitch__12dSv_danBit_cFi                                  Function */
 // dSv_danBit_c::offSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1588,7 +1887,7 @@ asm void offSwitch__12dSv_danBit_cFi() {
 }
 #pragma pop
 
-/* 80034BE8 002C .text      isSwitch__12dSv_danBit_cCFi                                  */
+/* 80034BE8-80034C14 002C .text      isSwitch__12dSv_danBit_cCFi                                  Function */
 // dSv_danBit_c::isSwitch(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1599,7 +1898,7 @@ asm void isSwitch__12dSv_danBit_cCFi() {
 }
 #pragma pop
 
-/* 80034C14 0038 .text      revSwitch__12dSv_danBit_cFi                                  */
+/* 80034C14-80034C4C 0038 .text      revSwitch__12dSv_danBit_cFi                                  Function */
 // dSv_danBit_c::revSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1610,7 +1909,7 @@ asm void revSwitch__12dSv_danBit_cFi() {
 }
 #pragma pop
 
-/* 80034C4C 0028 .text      onItem__12dSv_danBit_cFi                                     */
+/* 80034C4C-80034C74 0028 .text      onItem__12dSv_danBit_cFi                                     Function */
 // dSv_danBit_c::onItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -1621,7 +1920,7 @@ asm void onItem__12dSv_danBit_cFi() {
 }
 #pragma pop
 
-/* 80034C74 002C .text      isItem__12dSv_danBit_cCFi                                    */
+/* 80034C74-80034CA0 002C .text      isItem__12dSv_danBit_cCFi                                    Function */
 // dSv_danBit_c::isItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1632,7 +1931,7 @@ asm void isItem__12dSv_danBit_cCFi() {
 }
 #pragma pop
 
-/* 80034CA0 004C .text      init__13dSv_zoneBit_cFv                                      */
+/* 80034CA0-80034CEC 004C .text      init__13dSv_zoneBit_cFv                                      Function */
 // dSv_zoneBit_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1643,7 +1942,7 @@ asm void init__13dSv_zoneBit_cFv() {
 }
 #pragma pop
 
-/* 80034CEC 000C .text      clearRoomSwitch__13dSv_zoneBit_cFv                           */
+/* 80034CEC-80034CF8 000C .text      clearRoomSwitch__13dSv_zoneBit_cFv                           Function */
 // dSv_zoneBit_c::clearRoomSwitch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1654,7 +1953,7 @@ asm void clearRoomSwitch__13dSv_zoneBit_cFv() {
 }
 #pragma pop
 
-/* 80034CF8 000C .text      clearRoomItem__13dSv_zoneBit_cFv                             */
+/* 80034CF8-80034D04 000C .text      clearRoomItem__13dSv_zoneBit_cFv                             Function */
 // dSv_zoneBit_c::clearRoomItem(void)
 #pragma push
 #pragma optimization_level 0
@@ -1665,7 +1964,7 @@ asm void clearRoomItem__13dSv_zoneBit_cFv() {
 }
 #pragma pop
 
-/* 80034D04 0028 .text      onSwitch__13dSv_zoneBit_cFi                                  */
+/* 80034D04-80034D2C 0028 .text      onSwitch__13dSv_zoneBit_cFi                                  Function */
 // dSv_zoneBit_c::onSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1676,7 +1975,7 @@ asm void onSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034D2C 0024 .text      offSwitch__13dSv_zoneBit_cFi                                 */
+/* 80034D2C-80034D50 0024 .text      offSwitch__13dSv_zoneBit_cFi                                 Function */
 // dSv_zoneBit_c::offSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1687,7 +1986,7 @@ asm void offSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034D50 0028 .text      isSwitch__13dSv_zoneBit_cCFi                                 */
+/* 80034D50-80034D78 0028 .text      isSwitch__13dSv_zoneBit_cCFi                                 Function */
 // dSv_zoneBit_c::isSwitch(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1698,7 +1997,7 @@ asm void isSwitch__13dSv_zoneBit_cCFi() {
 }
 #pragma pop
 
-/* 80034D78 0034 .text      revSwitch__13dSv_zoneBit_cFi                                 */
+/* 80034D78-80034DAC 0034 .text      revSwitch__13dSv_zoneBit_cFi                                 Function */
 // dSv_zoneBit_c::revSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1709,7 +2008,7 @@ asm void revSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034DAC 001C .text      onOneSwitch__13dSv_zoneBit_cFi                               */
+/* 80034DAC-80034DC8 001C .text      onOneSwitch__13dSv_zoneBit_cFi                               Function */
 // dSv_zoneBit_c::onOneSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1720,7 +2019,7 @@ asm void onOneSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034DC8 0018 .text      offOneSwitch__13dSv_zoneBit_cFi                              */
+/* 80034DC8-80034DE0 0018 .text      offOneSwitch__13dSv_zoneBit_cFi                              Function */
 // dSv_zoneBit_c::offOneSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1731,7 +2030,7 @@ asm void offOneSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034DE0 001C .text      isOneSwitch__13dSv_zoneBit_cCFi                              */
+/* 80034DE0-80034DFC 001C .text      isOneSwitch__13dSv_zoneBit_cCFi                              Function */
 // dSv_zoneBit_c::isOneSwitch(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1742,7 +2041,7 @@ asm void isOneSwitch__13dSv_zoneBit_cCFi() {
 }
 #pragma pop
 
-/* 80034DFC 0028 .text      revOneSwitch__13dSv_zoneBit_cFi                              */
+/* 80034DFC-80034E24 0028 .text      revOneSwitch__13dSv_zoneBit_cFi                              Function */
 // dSv_zoneBit_c::revOneSwitch(int)
 #pragma push
 #pragma optimization_level 0
@@ -1753,7 +2052,7 @@ asm void revOneSwitch__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034E24 002C .text      onItem__13dSv_zoneBit_cFi                                    */
+/* 80034E24-80034E50 002C .text      onItem__13dSv_zoneBit_cFi                                    Function */
 // dSv_zoneBit_c::onItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -1764,7 +2063,7 @@ asm void onItem__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034E50 002C .text      isItem__13dSv_zoneBit_cCFi                                   */
+/* 80034E50-80034E7C 002C .text      isItem__13dSv_zoneBit_cCFi                                   Function */
 // dSv_zoneBit_c::isItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1775,7 +2074,7 @@ asm void isItem__13dSv_zoneBit_cCFi() {
 }
 #pragma pop
 
-/* 80034E7C 001C .text      onOneItem__13dSv_zoneBit_cFi                                 */
+/* 80034E7C-80034E98 001C .text      onOneItem__13dSv_zoneBit_cFi                                 Function */
 // dSv_zoneBit_c::onOneItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -1786,7 +2085,7 @@ asm void onOneItem__13dSv_zoneBit_cFi() {
 }
 #pragma pop
 
-/* 80034E98 001C .text      isOneItem__13dSv_zoneBit_cCFi                                */
+/* 80034E98-80034EB4 001C .text      isOneItem__13dSv_zoneBit_cCFi                                Function */
 // dSv_zoneBit_c::isOneItem(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1797,7 +2096,7 @@ asm void isOneItem__13dSv_zoneBit_cCFi() {
 }
 #pragma pop
 
-/* 80034EB4 0020 .text      init__15dSv_zoneActor_cFv                                    */
+/* 80034EB4-80034ED4 0020 .text      init__15dSv_zoneActor_cFv                                    Function */
 // dSv_zoneActor_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1808,7 +2107,7 @@ asm void init__15dSv_zoneActor_cFv() {
 }
 #pragma pop
 
-/* 80034ED4 0024 .text      on__15dSv_zoneActor_cFi                                      */
+/* 80034ED4-80034EF8 0024 .text      on__15dSv_zoneActor_cFi                                      Function */
 // dSv_zoneActor_c::on(int)
 #pragma push
 #pragma optimization_level 0
@@ -1819,7 +2118,7 @@ asm void on__15dSv_zoneActor_cFi() {
 }
 #pragma pop
 
-/* 80034EF8 0024 .text      off__15dSv_zoneActor_cFi                                     */
+/* 80034EF8-80034F1C 0024 .text      off__15dSv_zoneActor_cFi                                     Function */
 // dSv_zoneActor_c::off(int)
 #pragma push
 #pragma optimization_level 0
@@ -1830,7 +2129,7 @@ asm void off__15dSv_zoneActor_cFi() {
 }
 #pragma pop
 
-/* 80034F1C 0028 .text      is__15dSv_zoneActor_cCFi                                     */
+/* 80034F1C-80034F44 0028 .text      is__15dSv_zoneActor_cCFi                                     Function */
 // dSv_zoneActor_c::is(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1841,7 +2140,7 @@ asm void is__15dSv_zoneActor_cCFi() {
 }
 #pragma pop
 
-/* 80034F44 003C .text      init__10dSv_zone_cFi                                         */
+/* 80034F44-80034F80 003C .text      init__10dSv_zone_cFi                                         Function */
 // dSv_zone_c::init(int)
 #pragma push
 #pragma optimization_level 0
@@ -1852,8 +2151,8 @@ asm void init__10dSv_zone_cFi() {
 }
 #pragma pop
 
-/* 80034F80 0024 .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          */
-// dSv_restart_c::setRoom(const cXyz&, s16, s8)
+/* 80034F80-80034FA4 0024 .text      setRoom__13dSv_restart_cFRC4cXyzsSc                          Function */
+// dSv_restart_c::setRoom(const cXyz&, short, s8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1863,8 +2162,8 @@ asm void setRoom__13dSv_restart_cFRC4cXyzsSc() {
 }
 #pragma pop
 
-/* 80034FA4 0028 .text      set__17dSv_turnRestart_cFRC4cXyzsScUl                        */
-// dSv_turnRestart_c::set(const cXyz&, s16, s8, u32)
+/* 80034FA4-80034FCC 0028 .text      set__17dSv_turnRestart_cFRC4cXyzsScUl                        Function */
+// dSv_turnRestart_c::set(const cXyz&, short, s8, u32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1874,7 +2173,7 @@ asm void set__17dSv_turnRestart_cFRC4cXyzsScUl() {
 }
 #pragma pop
 
-/* 80034FCC 0050 .text      init__10dSv_info_cFv                                         */
+/* 80034FCC-8003501C 0050 .text      init__10dSv_info_cFv                                         Function */
 // dSv_info_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1885,7 +2184,7 @@ asm void init__10dSv_info_cFv() {
 }
 #pragma pop
 
-/* 8003501C 008C .text      init__10dSv_save_cFv                                         */
+/* 8003501C-800350A8 008C .text      init__10dSv_save_cFv                                         Function */
 // dSv_save_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1896,7 +2195,7 @@ asm void init__10dSv_save_cFv() {
 }
 #pragma pop
 
-/* 800350A8 0014 .text      getSave2__10dSv_save_cFi                                     */
+/* 800350A8-800350BC 0014 .text      getSave2__10dSv_save_cFi                                     Function */
 // dSv_save_c::getSave2(int)
 #pragma push
 #pragma optimization_level 0
@@ -1907,7 +2206,7 @@ asm void getSave2__10dSv_save_cFi() {
 }
 #pragma pop
 
-/* 800350BC 0034 .text      getSave__10dSv_info_cFi                                      */
+/* 800350BC-800350F0 0034 .text      getSave__10dSv_info_cFi                                      Function */
 // dSv_info_c::getSave(int)
 #pragma push
 #pragma optimization_level 0
@@ -1918,7 +2217,7 @@ asm void getSave__10dSv_info_cFi() {
 }
 #pragma pop
 
-/* 800350F0 005C .text      putSave__10dSv_info_cFi                                      */
+/* 800350F0-8003514C 005C .text      putSave__10dSv_info_cFi                                      Function */
 // dSv_info_c::putSave(int)
 #pragma push
 #pragma optimization_level 0
@@ -1929,7 +2228,7 @@ asm void putSave__10dSv_info_cFi() {
 }
 #pragma pop
 
-/* 8003514C 0058 .text      initZone__10dSv_info_cFv                                     */
+/* 8003514C-800351A4 0058 .text      initZone__10dSv_info_cFv                                     Function */
 // dSv_info_c::initZone(void)
 #pragma push
 #pragma optimization_level 0
@@ -1940,7 +2239,7 @@ asm void initZone__10dSv_info_cFv() {
 }
 #pragma pop
 
-/* 800351A4 005C .text      createZone__10dSv_info_cFi                                   */
+/* 800351A4-80035200 005C .text      createZone__10dSv_info_cFi                                   Function */
 // dSv_info_c::createZone(int)
 #pragma push
 #pragma optimization_level 0
@@ -1951,7 +2250,7 @@ asm void createZone__10dSv_info_cFi() {
 }
 #pragma pop
 
-/* 80035200 00B0 .text      onSwitch__10dSv_info_cFii                                    */
+/* 80035200-800352B0 00B0 .text      onSwitch__10dSv_info_cFii                                    Function */
 // dSv_info_c::onSwitch(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1962,7 +2261,7 @@ asm void onSwitch__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 800352B0 00B0 .text      offSwitch__10dSv_info_cFii                                   */
+/* 800352B0-80035360 00B0 .text      offSwitch__10dSv_info_cFii                                   Function */
 // dSv_info_c::offSwitch(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1973,7 +2272,7 @@ asm void offSwitch__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 80035360 00CC .text      isSwitch__10dSv_info_cCFii                                   */
+/* 80035360-8003542C 00CC .text      isSwitch__10dSv_info_cCFii                                   Function */
 // dSv_info_c::isSwitch(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -1984,7 +2283,7 @@ asm void isSwitch__10dSv_info_cCFii() {
 }
 #pragma pop
 
-/* 8003542C 00B4 .text      revSwitch__10dSv_info_cFii                                   */
+/* 8003542C-800354E0 00B4 .text      revSwitch__10dSv_info_cFii                                   Function */
 // dSv_info_c::revSwitch(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1995,7 +2294,7 @@ asm void revSwitch__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 800354E0 00B0 .text      onItem__10dSv_info_cFii                                      */
+/* 800354E0-80035590 00B0 .text      onItem__10dSv_info_cFii                                      Function */
 // dSv_info_c::onItem(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -2006,7 +2305,7 @@ asm void onItem__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 80035590 00B4 .text      isItem__10dSv_info_cCFii                                     */
+/* 80035590-80035644 00B4 .text      isItem__10dSv_info_cCFii                                     Function */
 // dSv_info_c::isItem(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -2017,7 +2316,7 @@ asm void isItem__10dSv_info_cCFii() {
 }
 #pragma pop
 
-/* 80035644 0070 .text      onActor__10dSv_info_cFii                                     */
+/* 80035644-800356B4 0070 .text      onActor__10dSv_info_cFii                                     Function */
 // dSv_info_c::onActor(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -2028,7 +2327,7 @@ asm void onActor__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 800356B4 0070 .text      offActor__10dSv_info_cFii                                    */
+/* 800356B4-80035724 0070 .text      offActor__10dSv_info_cFii                                    Function */
 // dSv_info_c::offActor(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -2039,7 +2338,7 @@ asm void offActor__10dSv_info_cFii() {
 }
 #pragma pop
 
-/* 80035724 0074 .text      isActor__10dSv_info_cCFii                                    */
+/* 80035724-80035798 0074 .text      isActor__10dSv_info_cCFii                                    Function */
 // dSv_info_c::isActor(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -2050,8 +2349,8 @@ asm void isActor__10dSv_info_cCFii() {
 }
 #pragma pop
 
-/* 80035798 026C .text      memory_to_card__10dSv_info_cFPci                             */
-// dSv_info_c::memory_to_card(s8*, int)
+/* 80035798-80035A04 026C .text      memory_to_card__10dSv_info_cFPci                             Function */
+// dSv_info_c::memory_to_card(char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2061,8 +2360,8 @@ asm void memory_to_card__10dSv_info_cFPci() {
 }
 #pragma pop
 
-/* 80035A04 01CC .text      card_to_memory__10dSv_info_cFPci                             */
-// dSv_info_c::card_to_memory(s8*, int)
+/* 80035A04-80035BD0 01CC .text      card_to_memory__10dSv_info_cFPci                             Function */
+// dSv_info_c::card_to_memory(char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2072,8 +2371,8 @@ asm void card_to_memory__10dSv_info_cFPci() {
 }
 #pragma pop
 
-/* 80035BD0 00B8 .text      initdata_to_card__10dSv_info_cFPci                           */
-// dSv_info_c::initdata_to_card(s8*, int)
+/* 80035BD0-80035C88 00B8 .text      initdata_to_card__10dSv_info_cFPci                           Function */
+// dSv_info_c::initdata_to_card(char*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

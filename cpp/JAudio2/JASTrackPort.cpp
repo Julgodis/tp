@@ -8,13 +8,30 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void init__12JASTrackPortFv();
+/* Function             */
+extern void readImport__12JASTrackPortFUl();
+/* Function             */
+extern void readExport__12JASTrackPortFUl();
+/* Function             */
+extern void writeImport__12JASTrackPortFUlUs();
+/* Function             */
+extern void writeExport__12JASTrackPortFUlUs();
+/* Function             */
+extern void checkImport__12JASTrackPortCFUl();
+/* Function             */
+extern void checkExport__12JASTrackPortCFUl();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029354C 0030 .text      init__12JASTrackPortFv                                       */
+/* 8029354C-8029357C 0030 .text      init__12JASTrackPortFv                                       Function */
 // JASTrackPort::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +42,7 @@ asm void init__12JASTrackPortFv() {
 }
 #pragma pop
 
-/* 8029357C 0024 .text      readImport__12JASTrackPortFUl                                */
+/* 8029357C-802935A0 0024 .text      readImport__12JASTrackPortFUl                                Function */
 // JASTrackPort::readImport(u32)
 #pragma push
 #pragma optimization_level 0
@@ -36,7 +53,7 @@ asm void readImport__12JASTrackPortFUl() {
 }
 #pragma pop
 
-/* 802935A0 0024 .text      readExport__12JASTrackPortFUl                                */
+/* 802935A0-802935C4 0024 .text      readExport__12JASTrackPortFUl                                Function */
 // JASTrackPort::readExport(u32)
 #pragma push
 #pragma optimization_level 0
@@ -47,7 +64,7 @@ asm void readExport__12JASTrackPortFUl() {
 }
 #pragma pop
 
-/* 802935C4 0024 .text      writeImport__12JASTrackPortFUlUs                             */
+/* 802935C4-802935E8 0024 .text      writeImport__12JASTrackPortFUlUs                             Function */
 // JASTrackPort::writeImport(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -58,7 +75,7 @@ asm void writeImport__12JASTrackPortFUlUs() {
 }
 #pragma pop
 
-/* 802935E8 0024 .text      writeExport__12JASTrackPortFUlUs                             */
+/* 802935E8-8029360C 0024 .text      writeExport__12JASTrackPortFUlUs                             Function */
 // JASTrackPort::writeExport(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -69,7 +86,7 @@ asm void writeExport__12JASTrackPortFUlUs() {
 }
 #pragma pop
 
-/* 8029360C 001C .text      checkImport__12JASTrackPortCFUl                              */
+/* 8029360C-80293628 001C .text      checkImport__12JASTrackPortCFUl                              Function */
 // JASTrackPort::checkImport(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +97,7 @@ asm void checkImport__12JASTrackPortCFUl() {
 }
 #pragma pop
 
-/* 80293628 001C .text      checkExport__12JASTrackPortCFUl                              */
+/* 80293628-80293644 001C .text      checkExport__12JASTrackPortCFUl                              Function */
 // JASTrackPort::checkExport(u32) const
 #pragma push
 #pragma optimization_level 0

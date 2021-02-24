@@ -8,8 +8,8 @@
 // Additional Symbols:
 // 
 
-struct overlap1_class;
 struct overlap_task_class;
+struct overlap1_class;
 
 extern void mDoAud_setFadeOutStart(u8); /* mDoAud_setFadeOutStart__FUc */
 extern void mDoAud_setFadeInStart(u8); /* mDoAud_setFadeInStart__FUc */
@@ -20,20 +20,67 @@ extern void dOvlpFd_startFadeIn(int); /* dOvlpFd_startFadeIn__Fi */
 extern void dOvlpFd_FadeOut(overlap1_class*); /* dOvlpFd_FadeOut__FP14overlap1_class */
 extern void dOvlpFd_Wait(overlap1_class*); /* dOvlpFd_Wait__FP14overlap1_class */
 extern void dOvlpFd_FadeIn(overlap1_class*); /* dOvlpFd_FadeIn__FP14overlap1_class */
+extern void dOvlpFd_Execute(overlap1_class*); /* dOvlpFd_Execute__FP14overlap1_class */
+extern void dOvlpFd_Create(void*); /* dOvlpFd_Create__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoAud_setFadeOutStart__FUc();
+/* Function             */
 extern void mDoAud_setFadeInStart__FUc();
+/* Function             */
 extern void fopOvlpM_SceneIsStart__Fv();
+/* Function             */
 extern void fopOvlpM_IsOutReq__FP18overlap_task_class();
+/* Function             */
 extern void fopOvlpM_Done__FP18overlap_task_class();
+/* ReturnIntegerFunction */
+extern  int dOvlpFd_Draw__FP14overlap1_class();
+/* Function             */
 extern void dOvlpFd_startFadeIn__Fi();
+/* Function             */
 extern void dOvlpFd_FadeOut__FP14overlap1_class();
+/* Function             */
 extern void dOvlpFd_Wait__FP14overlap1_class();
+/* Function             */
 extern void dOvlpFd_FadeIn__FP14overlap1_class();
+/* Function             */
+extern void dOvlpFd_Execute__FP14overlap1_class();
+/* ReturnIntegerFunction */
+extern  int dOvlpFd_IsDelete__FP14overlap1_class();
+/* ReturnIntegerFunction */
+extern  int dOvlpFd_Delete__FP14overlap1_class();
+/* Function             */
+extern void dOvlpFd_Create__FPv();
+/* Function             */
 extern void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopOvlp_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dOvlpFd_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP0[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP1[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP6[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP7[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP8[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP9[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP10[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_OVERLAP11[11];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 dOvlpFd_execute_f[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 dOvlpFd_execute_f[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
 }
 
@@ -43,60 +90,119 @@ SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C2B98 0014 .data      l_dOvlpFd_Method                                             */
-SECTION_DATA u8 l_dOvlpFd_Method[20] = {
-	0x80, 0x25, 0x24, 0x68, 0x80, 0x25, 0x24, 0x60, 0x80, 0x25, 0x24, 0x2C, 0x80, 0x25, 0x24, 0x58,
-	0x80, 0x25, 0x21, 0x7C,
+/* 803C2B98-803C2BAC 0014 .data      l_dOvlpFd_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* l_dOvlpFd_Method[5] = {
+	(void*)dOvlpFd_Create,
+	(void*)dOvlpFd_Delete__FP14overlap1_class,
+	(void*)dOvlpFd_Execute,
+	(void*)dOvlpFd_IsDelete__FP14overlap1_class,
+	(void*)dOvlpFd_Draw__FP14overlap1_class,
 };
-/* 803C2BAC 0028 .data      g_profile_OVERLAP0                                           */
-SECTION_DATA u8 g_profile_OVERLAP0[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x05, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2BAC-803C2BD4 0028 .data      g_profile_OVERLAP0                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP0[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	NULL,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x03050000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2BD4 0028 .data      g_profile_OVERLAP1                                           */
-SECTION_DATA u8 g_profile_OVERLAP1[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x01, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x06, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2BD4-803C2BFC 0028 .data      g_profile_OVERLAP1                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP1[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00010000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x03060000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2BFC 0028 .data      g_profile_OVERLAP6                                           */
-SECTION_DATA u8 g_profile_OVERLAP6[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x03, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x09, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2BFC-803C2C24 0028 .data      g_profile_OVERLAP6                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP6[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00030000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x03090000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2C24 0028 .data      g_profile_OVERLAP7                                           */
-SECTION_DATA u8 g_profile_OVERLAP7[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x04, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x0A, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2C24-803C2C4C 0028 .data      g_profile_OVERLAP7                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP7[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00040000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x030A0000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2C4C 0028 .data      g_profile_OVERLAP8                                           */
-SECTION_DATA u8 g_profile_OVERLAP8[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x05, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x0B, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2C4C-803C2C74 0028 .data      g_profile_OVERLAP8                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP8[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00050000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x030B0000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2C74 0028 .data      g_profile_OVERLAP9                                           */
-SECTION_DATA u8 g_profile_OVERLAP9[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x06, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x0C, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2C74-803C2C9C 0028 .data      g_profile_OVERLAP9                                           SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP9[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00060000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x030C0000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2C9C 0028 .data      g_profile_OVERLAP10                                          */
-SECTION_DATA u8 g_profile_OVERLAP10[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x07, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x0D, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2C9C-803C2CC4 0028 .data      g_profile_OVERLAP10                                          SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP10[10] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00070000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x030D0000,
+	(void*)&l_dOvlpFd_Method,
 };
-/* 803C2CC4 0028 .data      g_profile_OVERLAP11                                          */
-SECTION_DATA u8 g_profile_OVERLAP11[44] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFD, 0x00, 0x08, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xD8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0x78,
-	0x03, 0x0E, 0x00, 0x00, 0x80, 0x3C, 0x2B, 0x98,
+/* 803C2CC4-803C2CF0 0028 .data      g_profile_OVERLAP11                                          SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_OVERLAP11[11] = {
+	NULL,
+	(void*)0x0000FFFD,
+	(void*)0x00080000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000D8,
+	NULL,
+	NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x030E0000,
+	(void*)&l_dOvlpFd_Method,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -106,9 +212,8 @@ SECTION_DATA u8 g_profile_OVERLAP11[44] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510E0 0004 .sbss      dOvlpFd_execute_f                                            */
-SECTION_SBSS u8 dOvlpFd_execute_f[4];
-SECTION_SBSS u8 pad_804510E4[4];
+/* 804510E0-804510E8 0004 .sbss      dOvlpFd_execute_f                                            ZeroInitializedData */
+SECTION_SBSS u8 dOvlpFd_execute_f[4 + 4 /* padding */];
 }
 
 
@@ -117,13 +222,13 @@ SECTION_SBSS u8 pad_804510E4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8025217C 0008 .text      dOvlpFd_Draw__FP14overlap1_class                             */
+/* 8025217C-80252184 0008 .text      dOvlpFd_Draw__FP14overlap1_class                             ReturnIntegerFunction */
 // dOvlpFd_Draw(overlap1_class*)
 int dOvlpFd_Draw__FP14overlap1_class() {
 	return 1;
 }
 
-/* 80252184 0070 .text      dOvlpFd_startFadeIn__Fi                                      */
+/* 80252184-802521F4 0070 .text      dOvlpFd_startFadeIn__Fi                                      Function */
 }
 
 #pragma push
@@ -136,7 +241,7 @@ asm void dOvlpFd_startFadeIn(int) {
 #pragma pop
 
 extern "C" {
-/* 802521F4 00D4 .text      dOvlpFd_FadeOut__FP14overlap1_class                          */
+/* 802521F4-802522C8 00D4 .text      dOvlpFd_FadeOut__FP14overlap1_class                          Function */
 }
 
 #pragma push
@@ -149,7 +254,7 @@ asm void dOvlpFd_FadeOut(overlap1_class*) {
 #pragma pop
 
 extern "C" {
-/* 802522C8 0038 .text      dOvlpFd_Wait__FP14overlap1_class                             */
+/* 802522C8-80252300 0038 .text      dOvlpFd_Wait__FP14overlap1_class                             Function */
 }
 
 #pragma push
@@ -162,7 +267,7 @@ asm void dOvlpFd_Wait(overlap1_class*) {
 #pragma pop
 
 extern "C" {
-/* 80252300 012C .text      dOvlpFd_FadeIn__FP14overlap1_class                           */
+/* 80252300-8025242C 012C .text      dOvlpFd_FadeIn__FP14overlap1_class                           Function */
 }
 
 #pragma push
@@ -175,7 +280,7 @@ asm void dOvlpFd_FadeIn(overlap1_class*) {
 #pragma pop
 
 extern "C" {
-/* 8025242C 002C .text      dOvlpFd_Execute__FP14overlap1_class                          */
+/* 8025242C-80252458 002C .text      dOvlpFd_Execute__FP14overlap1_class                          Function */
 }
 
 #pragma push
@@ -188,19 +293,19 @@ asm void dOvlpFd_Execute(overlap1_class*) {
 #pragma pop
 
 extern "C" {
-/* 80252458 0008 .text      dOvlpFd_IsDelete__FP14overlap1_class                         */
+/* 80252458-80252460 0008 .text      dOvlpFd_IsDelete__FP14overlap1_class                         ReturnIntegerFunction */
 // dOvlpFd_IsDelete(overlap1_class*)
 int dOvlpFd_IsDelete__FP14overlap1_class() {
 	return 1;
 }
 
-/* 80252460 0008 .text      dOvlpFd_Delete__FP14overlap1_class                           */
+/* 80252460-80252468 0008 .text      dOvlpFd_Delete__FP14overlap1_class                           ReturnIntegerFunction */
 // dOvlpFd_Delete(overlap1_class*)
 int dOvlpFd_Delete__FP14overlap1_class() {
 	return 1;
 }
 
-/* 80252468 0014 .text      dOvlpFd_Create__FPv                                          */
+/* 80252468-8025247C 0014 .text      dOvlpFd_Create__FPv                                          Function */
 }
 
 #pragma push

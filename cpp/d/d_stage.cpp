@@ -12,412 +12,949 @@
 // Additional Symbols:
 // 
 
-struct stage_tgsc_class;
-struct dStage_dt_c;
-struct FuncTable;
-struct JKRHeap;
 struct roomRead_class;
-struct layer_class;
-struct cBgS_PolyInfo;
-struct cXyz;
-struct stage_stag_info_class;
 struct JKRExpHeap;
-struct dStage_Multi_c;
-struct stage_actor_data_class;
-struct fopAc_ac_c;
-struct JKRAramArchive;
+struct stage_tgsc_class;
+struct JKRHeap;
 struct cBgS_GndChk;
-struct fopAcM_prm_class;
+struct layer_class;
+struct dStage_Multi_c;
+struct cXyz;
+struct JKRAramArchive;
+struct fopAc_ac_c;
 struct stage_camera2_data_class;
+struct FuncTable;
+struct fopAcM_prm_class;
+struct dStage_dt_c;
+struct stage_stag_info_class;
+struct stage_actor_data_class;
+struct cBgS_PolyInfo;
 
 extern void mDoExt_destroyExpHeap(JKRExpHeap*); /* mDoExt_destroyExpHeap__FP10JKRExpHeap */
-extern void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); /* fopAcM_FastCreate__FsPFPv_iPvPv */
+extern void fopAcM_FastCreate(short, int (*)(void*), void*, void*); /* fopAcM_FastCreate__FsPFPv_iPvPv */
 extern void fopAcM_CreateAppend(void); /* fopAcM_CreateAppend__Fv */
 extern void fopAcM_delete(fopAc_ac_c*); /* fopAcM_delete__FP10fopAc_ac_c */
-extern void fopCamM_Create(int, s16, void*); /* fopCamM_Create__FisPv */
+extern void fopCamM_Create(int, short, void*); /* fopCamM_Create__FisPv */
 extern void fopScnM_SearchByID(unsigned int); /* fopScnM_SearchByID__FUi */
-extern void fopScnM_CreateReq(s16, s16, u16, u32); /* fopScnM_CreateReq__FssUsUl */
-extern void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)); /* fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i */
-extern void fopMsgM_Create(s16, int (*)(void*), void*); /* fopMsgM_Create__FsPFPv_iPv */
-extern void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
+extern void fopScnM_CreateReq(short, short, u16, u32); /* fopScnM_CreateReq__FssUsUl */
+extern void fopKyM_fastCreate(short, int, cXyz*, cXyz*, int (*)(void*)); /* fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i */
+extern void fopMsgM_Create(short, int (*)(void*), void*); /* fopMsgM_Create__FsPFPv_iPv */
+extern void fpcSCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*); /* fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
 extern void dStage_SetErrorRoom(void); /* dStage_SetErrorRoom__Fv */
 extern void dStage_SetErrorStage(void); /* dStage_SetErrorStage__Fv */
+extern void dStage_GetKeepDoorInfo(void); /* dStage_GetKeepDoorInfo__Fv */
 extern void dStage_isBossStage(dStage_dt_c*); /* dStage_isBossStage__FP11dStage_dt_c */
 extern void dStage_KeepDoorInfoInit(dStage_dt_c*); /* dStage_KeepDoorInfoInit__FP11dStage_dt_c */
 extern void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); /* dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
+extern void dStage_GetRoomKeepDoorInfo(void); /* dStage_GetRoomKeepDoorInfo__Fv */
 extern void dStage_initRoomKeepDoorInfo(void); /* dStage_initRoomKeepDoorInfo__Fv */
 extern void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); /* dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
+extern void dStage_RoomKeepDoorInit(dStage_dt_c*, void*, int, void*); /* dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv */
 extern void stayRoomCheck(int, u8*, int); /* stayRoomCheck__FiPUci */
 extern void createRoomScene(int); /* createRoomScene__Fi */
 extern void dStage_roomInit(int); /* dStage_roomInit__Fi */
-extern void dStage_searchName(const s8*); /* dStage_searchName__FPCc */
-extern void dStage_getName(s16, s8); /* dStage_getName__FsSc */
+extern void dStage_searchName(const char*); /* dStage_searchName__FPCc */
+extern void dStage_getName(short, s8); /* dStage_getName__FsSc */
+extern void dStage_getName2(short, s8); /* dStage_getName2__FsSc */
 extern void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*); /* dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
 extern void dStage_cameraCreate(stage_camera2_data_class*, int, int); /* dStage_cameraCreate__FP24stage_camera2_data_classii */
+extern void dStage_playerInit(dStage_dt_c*, void*, int, void*); /* dStage_playerInit__FP11dStage_dt_cPviPv */
+extern void dStage_cameraInit(dStage_dt_c*, void*, int, void*); /* dStage_cameraInit__FP11dStage_dt_cPviPv */
+extern void dStage_RoomCameraInit(dStage_dt_c*, void*, int, void*); /* dStage_RoomCameraInit__FP11dStage_dt_cPviPv */
+extern void dStage_arrowInit(dStage_dt_c*, void*, int, void*); /* dStage_arrowInit__FP11dStage_dt_cPviPv */
+extern void dStage_paletteInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_paletteInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_pselectInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_envrInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*); /* dStage_filiInfo2Init__FP11dStage_dt_cPviPv */
+extern void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, int, void*); /* dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv */
+extern void dStage_filiInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_filiInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_vrboxInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_vrboxInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_vrboxcolInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_plightInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_plightInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_lgtvInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_lgtvInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int); /* dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi */
+extern void dStage_stagInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_stagInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_sclsInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_sclsInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_actorCommonLayerInit(dStage_dt_c*, void*, int, void*); /* dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv */
+extern void dStage_tgscCommonLayerInit(dStage_dt_c*, void*, int, void*); /* dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv */
 extern void dStage_actorInit(dStage_dt_c*, void*, int, void*); /* dStage_actorInit__FP11dStage_dt_cPviPv */
+extern void dStage_actorInit_always(dStage_dt_c*, void*, int, void*); /* dStage_actorInit_always__FP11dStage_dt_cPviPv */
 extern void dStage_tgscInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_tgscInfoInit__FP11dStage_dt_cPviPv */
 extern void dStage_doorInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_doorInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_roomReadInit(dStage_dt_c*, void*, int, void*); /* dStage_roomReadInit__FP11dStage_dt_cPviPv */
+extern void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, int); /* dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi */
+extern void dStage_ppntInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_ppntInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_pathInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_pathInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_rppnInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_rppnInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_rpatInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_rpatInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_soundInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_soundInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_soundInfoInitCL(dStage_dt_c*, void*, int, void*); /* dStage_soundInfoInitCL__FP11dStage_dt_cPviPv */
 extern void dStage_setLayerTagName(FuncTable*, int, int); /* dStage_setLayerTagName__FP9FuncTableii */
 extern void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int); /* dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei */
+extern void dStage_stEventInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_stEventInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_mapEventInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_mapEventInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_floorInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_floorInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_memaInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_mecoInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_mecoInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_stageKeepTresureInit(dStage_dt_c*, void*, int, void*); /* dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv */
+extern void dStage_fieldMapTresureInit(dStage_dt_c*, void*, int, void*); /* dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv */
 extern void dStage_dt_c_offsetToPtr(void*); /* dStage_dt_c_offsetToPtr__FPv */
+extern void dStage_mapPathInit(dStage_dt_c*, void*, int, void*); /* dStage_mapPathInit__FP11dStage_dt_cPviPv */
+extern void dStage_mapPathInitCommonLayer(dStage_dt_c*, void*, int, void*); /* dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv */
+extern void dStage_fieldMapMapPathInit(dStage_dt_c*, void*, int, void*); /* dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv */
 extern void readMult(dStage_dt_c*, dStage_Multi_c*, bool); /* readMult__FP11dStage_dt_cP14dStage_Multi_cb */
+extern void dStage_multInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_multInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_lbnkInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_lbnkInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_roomTresureInit(dStage_dt_c*, void*, int, void*); /* dStage_roomTresureInit__FP11dStage_dt_cPviPv */
+extern void dStage_layerTresureInit(dStage_dt_c*, void*, int, void*); /* dStage_layerTresureInit__FP11dStage_dt_cPviPv */
+extern void dStage_dmapInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_dmapInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_stageDrtgInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_roomDrtgInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv */
+extern void dStage_elstInfoInit(dStage_dt_c*, void*, int, void*); /* dStage_elstInfoInit__FP11dStage_dt_cPviPv */
 extern void dKankyo_create(void); /* dKankyo_create__Fv */
 extern void layerMemoryInfoLoader(void*, dStage_dt_c*, int); /* layerMemoryInfoLoader__FPvP11dStage_dt_ci */
 extern void dStage_dt_c_stageInitLoader(void*, dStage_dt_c*); /* dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c */
 extern void layerTableLoader(void*, dStage_dt_c*, int); /* layerTableLoader__FPvP11dStage_dt_ci */
 extern void layerActorLoader(void*, dStage_dt_c*, int); /* layerActorLoader__FPvP11dStage_dt_ci */
 extern void dStage_dt_c_stageLoader(void*, dStage_dt_c*); /* dStage_dt_c_stageLoader__FPvP11dStage_dt_c */
-extern void dStage_changeScene(int, f32, u32, s8, s16, int); /* dStage_changeScene__FifUlScsi */
-extern void dComIfGp_setNextStage(const s8*, s16, s8, s8, f32, u32, int, s8, s16, int, int); /* dComIfGp_setNextStage__FPCcsScScfUliScsii */
-extern void dComIfG_getStageRes(const s8*); /* dComIfG_getStageRes__FPCc */
-extern void dComIfG_getOldStageRes(const s8*); /* dComIfG_getOldStageRes__FPCc */
-extern void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, const s8*); /* dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc */
+extern void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int); /* dStage_dt_c_roomLoader__FPvP11dStage_dt_ci */
+extern void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int); /* dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci */
+extern void dStage_dt_c_fieldMapLoader(void*, dStage_dt_c*); /* dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c */
+extern void dStage_infoCreate(void); /* dStage_infoCreate__Fv */
+extern void dStage_Create(void); /* dStage_Create__Fv */
+extern void dStage_Delete(void); /* dStage_Delete__Fv */
+extern void dStage_RoomCheck(cBgS_GndChk*); /* dStage_RoomCheck__FP11cBgS_GndChk */
+extern void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, short); /* dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs */
+extern void dStage_changeScene(int, f32, u32, s8, short, int); /* dStage_changeScene__FifUlScsi */
+extern void dStage_changeScene4Event(int, s8, int, bool, f32, u32, short, int); /* dStage_changeScene4Event__FiScibfUlsi */
+extern void dStage_restartRoom(u32, u32, int); /* dStage_restartRoom__FUlUli */
+extern void dComIfGp_setNextStage(const char*, short, s8, s8, f32, u32, int, s8, short, int, int); /* dComIfGp_setNextStage__FPCcsScScfUliScsii */
+extern void dComIfG_getStageRes(const char*); /* dComIfG_getStageRes__FPCc */
+extern void dComIfG_getOldStageRes(const char*); /* dComIfG_getOldStageRes__FPCc */
+extern void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, const char*); /* dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc */
 extern void dKy_set_nexttime(f32); /* dKy_set_nexttime__Ff */
 extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 extern void operator delete[](void*); /* __dla__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void OSReport_Error();
+/* GlobalFunction       */
 extern u32 mDoExt_getArchiveHeap__Fv();
+/* Function             */
 extern void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+/* Function             */
 extern void __ct__11J3DLightObjFv();
+/* FirstParamFunction   */
 extern u32 getFileListInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void fopAcM_FastCreate__FsPFPv_iPvPv();
+/* Function             */
 extern void fopAcM_CreateAppend__Fv();
+/* Function             */
 extern void fopAcM_delete__FP10fopAc_ac_c();
+/* Function             */
 extern void fopCamM_Create__FisPv();
+/* Function             */
 extern void fopScnM_SearchByID__FUi();
+/* Function             */
 extern void fopScnM_CreateReq__FssUsUl();
+/* Function             */
 extern void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+/* Function             */
 extern void fopMsgM_Create__FsPFPv_iPv();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+/* Function             */
+extern void set__18dStage_nextStage_cFPCcScsScScUc();
+/* Function             */
 extern void dStage_SetErrorRoom__Fv();
+/* Function             */
 extern void dStage_SetErrorStage__Fv();
+/* Function             */
+extern void dStage_GetKeepDoorInfo__Fv();
+/* Function             */
 extern void dStage_isBossStage__FP11dStage_dt_c();
+/* Function             */
 extern void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
+/* Function             */
 extern void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+/* Function             */
+extern void dStage_GetRoomKeepDoorInfo__Fv();
+/* Function             */
 extern void dStage_initRoomKeepDoorInfo__Fv();
+/* Function             */
 extern void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+/* Function             */
+extern void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void set__19dStage_startStage_cFPCcScsSc();
+/* Function             */
 extern void init__20dStage_roomControl_cFv();
+/* Function             */
 extern void initZone__20dStage_roomControl_cFv();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
+extern void getMemoryBlock__20dStage_roomControl_cFi();
+/* Function             */
 extern void setStayNo__20dStage_roomControl_cFi();
+/* Function             */
+extern void setNextStayNo__20dStage_roomControl_cFi();
+/* Function             */
 extern void stayRoomCheck__FiPUci();
+/* Function             */
 extern void createRoomScene__Fi();
+/* Function             */
+extern void checkRoomDisp__20dStage_roomControl_cCFi();
+/* Function             */
 extern void loadRoom__20dStage_roomControl_cFiPUcb();
+/* Function             */
 extern void zoneCountCheck__20dStage_roomControl_cCFi();
+/* FirstParamFunction   */
 extern u32 getStagInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void createMemoryBlock__20dStage_roomControl_cFiUl();
+/* Function             */
 extern void destroyMemoryBlock__20dStage_roomControl_cFv();
+/* Function             */
 extern void setArcBank__20dStage_roomControl_cFiPCc();
+/* Function             */
 extern void getArcBank__20dStage_roomControl_cFi();
+/* Function             */
+extern void resetArchiveBank__20dStage_roomControl_cFi();
+/* Function             */
 extern void create__Q220dStage_roomControl_c9roomDzs_cFUc();
+/* Function             */
 extern void remove__Q220dStage_roomControl_c9roomDzs_cFv();
+/* Function             */
 extern void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
+/* Function             */
 extern void init__16dStage_stageDt_cFv();
+/* Function             */
 extern void initFileList2__15dStage_roomDt_cFv();
+/* Function             */
 extern void init__15dStage_roomDt_cFv();
+/* Function             */
 extern void dStage_roomInit__Fi();
+/* Function             */
 extern void SetTimePass__20dStage_roomControl_cFi();
+/* FirstParamFunction   */
 extern u32 getRoom__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void dStage_searchName__FPCc();
+/* Function             */
 extern void dStage_getName__FsSc();
+/* Function             */
+extern void dStage_getName2__FsSc();
+/* Function             */
 extern void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
+/* Function             */
 extern void dStage_cameraCreate__FP24stage_camera2_data_classii();
+/* FirstParamFunction   */
 extern u32 getPlayer__15dStage_roomDt_cCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getPlayer__16dStage_stageDt_cCFv(u8*);
+/* Function             */
+extern void dStage_playerInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_cameraInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_arrowInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void getMapInfo2__15dStage_roomDt_cCFi();
+/* FirstParamFunction   */
 extern u32 getMapInfoBase__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void getMapInfo2__16dStage_stageDt_cCFi();
+/* FirstParamFunction   */
 extern u32 getMapInfoBase__16dStage_stageDt_cCFv(u8*);
+/* Function             */
+extern void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+/* Function             */
+extern void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void resetOldMulti__16dStage_stageDt_cFv();
+/* Function             */
+extern void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dStage_actorInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_actorInit_always__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_roomReadInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
+/* Function             */
+extern void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dStage_setLayerTagName__FP9FuncTableii();
+/* Function             */
 extern void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
+/* Function             */
+extern void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dStage_dt_c_offsetToPtr__FPv();
+/* Function             */
+extern void dStage_mapPathInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
+/* Function             */
+extern void dStage_multInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
+extern void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
+/* Function             */
 extern void dKankyo_create__Fv();
+/* Function             */
 extern void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
+/* Function             */
 extern void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
+/* Function             */
 extern void layerTableLoader__FPvP11dStage_dt_ci();
+/* FirstParamFunction   */
 extern u32 getElst__16dStage_stageDt_cFv(u8*);
+/* Function             */
 extern void layerActorLoader__FPvP11dStage_dt_ci();
+/* Function             */
 extern void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
+/* Function             */
+extern void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
+/* Function             */
+extern void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
+/* Function             */
+extern void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
+/* Function             */
+extern void dStage_infoCreate__Fv();
+/* Function             */
+extern void dStage_Create__Fv();
+/* Function             */
+extern void dStage_Delete__Fv();
+/* Function             */
 extern void setOldMulti__16dStage_stageDt_cFv();
+/* Function             */
+extern void dStage_RoomCheck__FP11cBgS_GndChk();
+/* Function             */
+extern void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
+/* Function             */
 extern void dStage_changeScene__FifUlScsi();
+/* FirstParamFunction   */
 extern u32 getSclsInfo__15dStage_roomDt_cCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getSclsInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
+extern void dStage_changeScene4Event__FiScibfUlsi();
+/* Function             */
+extern void dStage_restartRoom__FUlUli();
+/* Function             */
 extern void setCamera__15dStage_roomDt_cFP18stage_camera_class();
+/* FirstParamFunction   */
 extern u32 getCamera__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
+/* FirstParamFunction   */
 extern u32 getArrow__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
+/* Function             */
 extern void setPlayerNum__15dStage_roomDt_cFUs();
+/* FirstParamFunction   */
 extern u16 getPlayerNum__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setRoom__15dStage_roomDt_cFP14roomRead_class();
+/* Function             */
 extern void getRoom__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
+/* FirstParamFunction   */
 extern u32 getMapInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
+/* Function             */
 extern void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
+/* Function             */
 extern void getPaletteInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
+/* Function             */
 extern void getPselectInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
+/* Function             */
 extern void getEnvrInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
+/* FirstParamFunction   */
 extern u32 getVrboxInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
+/* FirstParamFunction   */
 extern u32 getVrboxcolInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
+/* Function             */
 extern void getPlightInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setPaletteNumInfo__15dStage_roomDt_cFi();
+/* Function             */
 extern void getPaletteNumInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setPselectNumInfo__15dStage_roomDt_cFi();
+/* Function             */
 extern void getPselectNumInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setEnvrNumInfo__15dStage_roomDt_cFi();
+/* Function             */
 extern void getEnvrNumInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setVrboxNumInfo__15dStage_roomDt_cFi();
+/* FirstParamFunction   */
 extern u32 getVrboxNumInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxcolNumInfo__15dStage_roomDt_cFi();
+/* FirstParamFunction   */
 extern u32 getVrboxcolNumInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setPlightNumInfo__15dStage_roomDt_cFi();
+/* Function             */
 extern void getPlightNumInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
+/* FirstParamFunction   */
 extern u32 getLightVecInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setLightVecInfoNum__15dStage_roomDt_cFi();
+/* FirstParamFunction   */
 extern u32 getLightVecInfoNum__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
+/* Function             */
 extern void getStagInfo__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
+/* Function             */
 extern void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
+/* Function             */
 extern void getPntInf__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
+/* Function             */
 extern void getPathInf__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
+/* FirstParamFunction   */
 extern u32 getPnt2Inf__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
+/* FirstParamFunction   */
 extern u32 getPath2Inf__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+/* FirstParamFunction   */
 extern u32 getSoundInf__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+/* FirstParamFunction   */
 extern u32 getSoundInfCL__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
+/* FirstParamFunction   */
 extern u32 getMapEventInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
+/* FirstParamFunction   */
 extern u32 getFileList2Info__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
+/* Function             */
 extern void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
+/* FirstParamFunction   */
 extern u32 getFloorInfo__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
+/* Function             */
 extern void getMemoryConfig__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
+/* Function             */
 extern void getMemoryMap__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
+/* Function             */
 extern void getMulti__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setOldMulti__15dStage_roomDt_cFv();
+/* Function             */
 extern void resetOldMulti__15dStage_roomDt_cFv();
+/* Function             */
 extern void getOldMulti__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
+/* FirstParamFunction   */
 extern u32 getLbnk__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
+/* FirstParamFunction   */
 extern u32 getTresure__15dStage_roomDt_cCFv(u8*);
+/* ReturnFunction       */
 extern void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
-extern int getDMap__15dStage_roomDt_cCFv();
+/* ReturnIntegerFunction */
+extern  int getDMap__15dStage_roomDt_cCFv();
+/* Function             */
 extern void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
+/* FirstParamFunction   */
 extern u32 getDrTg__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
+/* FirstParamFunction   */
 extern u32 getDoor__15dStage_roomDt_cCFv(u8*);
+/* Function             */
 extern void setMapPath__15dStage_roomDt_cFPv();
+/* Function             */
 extern void getMapPath__15dStage_roomDt_cFv();
+/* Function             */
 extern void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
+/* Function             */
 extern void getElst__15dStage_roomDt_cFv();
+/* Function             */
 extern void setCamera__16dStage_stageDt_cFP18stage_camera_class();
+/* FirstParamFunction   */
 extern u32 getCamera__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
+/* FirstParamFunction   */
 extern u32 getArrow__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
+/* Function             */
 extern void setPlayerNum__16dStage_stageDt_cFUs();
+/* FirstParamFunction   */
 extern u16 getPlayerNum__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setRoom__16dStage_stageDt_cFP14roomRead_class();
+/* Function             */
 extern void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
+/* FirstParamFunction   */
 extern u32 getMapInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
+/* Function             */
 extern void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
+/* FirstParamFunction   */
 extern u32 getPaletteInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
+/* FirstParamFunction   */
 extern u32 getPselectInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
+/* FirstParamFunction   */
 extern u32 getEnvrInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
+/* FirstParamFunction   */
 extern u32 getVrboxInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
+/* FirstParamFunction   */
 extern u32 getVrboxcolInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
+/* FirstParamFunction   */
 extern u32 getPlightInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPaletteNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getPaletteNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPselectNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getPselectNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setEnvrNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getEnvrNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getVrboxNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setVrboxcolNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getVrboxcolNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
+/* Function             */
 extern void getLightVecInfo__16dStage_stageDt_cCFv();
+/* Function             */
 extern void setLightVecInfoNum__16dStage_stageDt_cFi();
+/* Function             */
 extern void getLightVecInfoNum__16dStage_stageDt_cCFv();
+/* Function             */
 extern void setPlightNumInfo__16dStage_stageDt_cFi();
+/* FirstParamFunction   */
 extern u32 getPlightNumInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
+/* Function             */
 extern void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
+/* Function             */
 extern void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
+/* FirstParamFunction   */
 extern u32 getPntInf__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
+/* FirstParamFunction   */
 extern u32 getPathInf__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
+/* FirstParamFunction   */
 extern u32 getPnt2Inf__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
+/* FirstParamFunction   */
 extern u32 getPath2Inf__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+/* FirstParamFunction   */
 extern u32 getSoundInf__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+/* FirstParamFunction   */
 extern u32 getSoundInfCL__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
+/* FirstParamFunction   */
 extern u32 getMapEventInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
+/* Function             */
 extern void getFileList2Info__16dStage_stageDt_cCFv();
+/* Function             */
 extern void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
+/* Function             */
 extern void getFileListInfo__16dStage_stageDt_cCFv();
+/* Function             */
 extern void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
+/* FirstParamFunction   */
 extern u32 getFloorInfo__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
+/* FirstParamFunction   */
 extern u32 getMemoryConfig__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
+/* FirstParamFunction   */
 extern u32 getMemoryMap__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
+/* FirstParamFunction   */
 extern u32 getMulti__16dStage_stageDt_cCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getOldMulti__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
+/* Function             */
 extern void getLbnk__16dStage_stageDt_cCFv();
+/* Function             */
 extern void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
+/* FirstParamFunction   */
 extern u32 getTresure__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
+/* FirstParamFunction   */
 extern u32 getDMap__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
+/* FirstParamFunction   */
 extern u32 getDrTg__16dStage_stageDt_cCFv(u8*);
+/* Function             */
 extern void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
+/* FirstParamFunction   */
 extern u32 getDoor__16dStage_stageDt_cCFv(u8*);
+/* ReturnFunction       */
 extern void setMapPath__16dStage_stageDt_cFPv();
-extern int getMapPath__16dStage_stageDt_cFv();
+/* ReturnIntegerFunction */
+extern  int getMapPath__16dStage_stageDt_cFv();
+/* Function             */
 extern void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
+/* SInitFunction        */
+extern void __sinit_d_stage_cpp();
+/* Function             */
 extern void func_80028328();
+/* Function             */
 extern void __dt__19dStage_roomStatus_cFv();
+/* Function             */
 extern void __ct__19dStage_roomStatus_cFv();
+/* Function             */
 extern void __dt__19dStage_KeepDoorInfoFv();
+/* Function             */
 extern void __dt__21stage_tgsc_data_classFv();
+/* ReturnFunction       */
 extern void __ct__21stage_tgsc_data_classFv();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* Function             */
 extern void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+/* Function             */
 extern void dComIfG_getStageRes__FPCc();
+/* Function             */
 extern void dComIfG_getOldStageRes__FPCc();
+/* Function             */
 extern void check__7daSus_cFScRC4cXyz();
+/* Function             */
 extern void execute__7daSus_cFv();
+/* Function             */
 extern void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+/* Function             */
 extern void init__12dSv_danBit_cFSc();
+/* Function             */
 extern void clearRoomSwitch__13dSv_zoneBit_cFv();
+/* Function             */
 extern void clearRoomItem__13dSv_zoneBit_cFv();
+/* Function             */
 extern void getSave__10dSv_info_cFi();
+/* Function             */
 extern void putSave__10dSv_info_cFi();
+/* Function             */
 extern void initZone__10dSv_info_cFv();
+/* Function             */
 extern void isActor__10dSv_info_cCFii();
+/* Function             */
 extern void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
+/* Function             */
 extern void setPointer__8dMpath_cFScPvi();
+/* Function             */
 extern void create__16dEvent_manager_cFv();
+/* Function             */
 extern void remove__16dEvent_manager_cFv();
+/* Function             */
 extern void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void addData__7dTres_cFPQ27dTres_c10list_classSc();
+/* Function             */
 extern void dKy_set_nexttime__Ff();
+/* Function             */
 extern void init__12dSvBit_HIO_cFv();
+/* Function             */
 extern void memalignB__3cMlFiUl();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void alloc__7JKRHeapFUli();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void free__7JKRHeapFPv();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dla__FPv();
+/* Function             */
 extern void create__10JKRExpHeapFUlP7JKRHeapb();
+/* Function             */
 extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void snprintf();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strncpy();
+/* Function             */
 extern void strcpy();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_stage__stringBase0[1016];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
+/* InitializedData      */
 SECTION_DATA extern u8 l_objectName[10932];
-SECTION_DATA extern u8 data_803A65CC[48];
-SECTION_DATA extern u8 data_803A65FC[36];
-SECTION_DATA extern u8 data_803A6620[24];
-SECTION_DATA extern u8 data_803A6638[12];
-SECTION_DATA extern u8 data_803A6644[12];
-SECTION_DATA extern u8 data_803A6650[60];
-SECTION_DATA extern u8 data_803A668C[48];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A65CC[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A65FC[9];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A6620[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A6638[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A6644[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A6650[15];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A668C[12];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A66BC[312];
-SECTION_DATA extern u8 data_803A67F4[168];
-SECTION_DATA extern u8 data_803A689C[96];
-SECTION_DATA extern u8 data_803A68FC[36];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A67F4[42];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A689C[24];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A68FC[9];
+/* InitializedData      */
 SECTION_DATA extern u8 mMemoryBlock__20dStage_roomControl_c[76];
+/* InitializedData      */
 SECTION_DATA extern u8 mArcBank__20dStage_roomControl_c[320];
-SECTION_DATA extern const void* __vt__15dStage_roomDt_c[93];
-SECTION_DATA extern const void* __vt__11dStage_dt_c[93];
-SECTION_BSS extern u8 data_803F0000[3904];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dStage_roomDt_c[93];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16dStage_stageDt_c[93];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dStage_dt_c[93];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_stage__LIT_3926[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 DoorInfo[2308];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_stage__LIT_3981[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_RoomKeepDoorInfo[2308];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_stage__LIT_5376[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
-SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_save_bit_HIO[1188];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505F0[8];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D58[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mProcID__20dStage_roomControl_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D68[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mArcBankName__20dStage_roomControl_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mArcBankData__20dStage_roomControl_c[4];
-SECTION_SBSS extern u8 m_roomDzs__20dStage_roomControl_c[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_stage__LIT_4270[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5315;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5317;
 }
 
@@ -427,59 +964,69 @@ SECTION_SDATA2 extern f64 LIT_5317;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80378A50 03F3 .rodata    @stringBase0                                                 */
-const char* const stringBase_80378A50 = "OPENING";
-const char* const stringBase_80378A58 = 
-    "部屋情報が、多分ですが壊れています。\n変換し直してみてください。"
+/* 80378A50-80378E48 03F3 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80378A50 = "OPENING";
+SECTION_DEAD const char* const stringBase_80378A58 = 
+    "部屋情報が、多分ですが壊れていま"
+    "す。\n変換し直してみてください。"
     "\n";
-const char* const stringBase_80378A99 = 
-    "ステージ情報が、多分ですが壊れています。\n変換し直してみてくださ"
+SECTION_DEAD const char* const stringBase_80378A99 = 
+    "ステージ情報が、多分ですが壊れて"
+    "います。\n変換し直してみてくださ"
     "い。";
-const char* const stringBase_80378ADD = "name.bin";
-const char* const stringBase_80378AE6 = "bank.bin";
-const char* const stringBase_80378AEF = "";
-const char* const stringBase_80378AF0 = 
-    "Bank[%d] : %s.arc Sync Read Erro"
+SECTION_DEAD const char* const stringBase_80378ADD = "name.bin";
+SECTION_DEAD const char* const stringBase_80378AE6 = "bank.bin";
+SECTION_DEAD const char* const stringBase_80378AEF = "";
+SECTION_DEAD const char* const stringBase_80378AF0 = 
+    "Bank[%d] : %s.ar"
+    "c Sync Read Erro"
     "r !!\n";
-const char* const stringBase_80378B16 = "%s/room%d.dzs";
-const char* const stringBase_80378B24 = "%d%+0d";
-const char* const stringBase_80378B2B = "S_MV000";
-const char* const stringBase_80378B33 = "Xtg_00";
-const char* const stringBase_80378B3A = 
-    "dStage_dt_c_decode: i_data is NU"
+SECTION_DEAD const char* const stringBase_80378B16 = "%s/room%d.dzs";
+SECTION_DEAD const char* const stringBase_80378B24 = "%d%+0d";
+SECTION_DEAD const char* const stringBase_80378B2B = "S_MV000";
+SECTION_DEAD const char* const stringBase_80378B33 = "Xtg_00";
+SECTION_DEAD const char* const stringBase_80378B3A = 
+    "dStage_dt_c_deco"
+    "de: i_data is NU"
     "LL\n";
-const char* const stringBase_80378B5E = "room%d.dzs";
-const char* const stringBase_80378B69 = "stage.dzs";
-const char* const stringBase_80378B73 = "vrbox_sora.bmd";
-const char* const stringBase_80378B82 = "Stg_00";
-const char* const stringBase_80378B89 = "Event";
-const char* const stringBase_80378B8F = "%s: %d: シーンリストがありません。\n";
-const char* const stringBase_80378BB3 = "d_stage.cpp";
-const char* const stringBase_80378BBF = "Room non room data !!\n";
-const char* const stringBase_80378BD6 = "Room non palet data !!\n";
-const char* const stringBase_80378BEE = "Room non pselect data !!\n";
-const char* const stringBase_80378C08 = "Room non envr data !!\n";
-const char* const stringBase_80378C1F = "Room non plight data !!\n";
-const char* const stringBase_80378C38 = "Room non palette num data !!\n";
-const char* const stringBase_80378C56 = "Room non pselect num data !!\n";
-const char* const stringBase_80378C74 = "Room non envr num data !!\n";
-const char* const stringBase_80378C8F = "Room non plight num data !!\n";
-const char* const stringBase_80378CAC = "Room non stag data !!\n";
-const char* const stringBase_80378CC3 = "Room non Pnt data !\n";
-const char* const stringBase_80378CD8 = "Room non Pnts data !\n";
-const char* const stringBase_80378CEE = "Room non Path data !\n";
-const char* const stringBase_80378D04 = "Room non memory config data!\n";
-const char* const stringBase_80378D22 = "Room non memory map data!\n";
-const char* const stringBase_80378D3D = "Room non multi data!\n";
-const char* const stringBase_80378D53 = "Room non old multi data!\n";
-const char* const stringBase_80378D6D = "stage non 2d map path data !!\n";
-const char* const stringBase_80378D8C = "Room non envLayserSet data\n";
-const char* const stringBase_80378DA8 = "Room no Elst Data!!\n";
-const char* const stringBase_80378DBD = "stage non LightVec data !!\n";
-const char* const stringBase_80378DD9 = "stage non LightVecNum data !!\n";
-const char* const stringBase_80378DF8 = "stage non filelist2 data!\n";
-const char* const stringBase_80378E13 = "stage non filelist data!\n";
-const char* const stringBase_80378E2D = "stage non Lbnk data!\n";
+SECTION_DEAD const char* const stringBase_80378B5E = "room%d.dzs";
+SECTION_DEAD const char* const stringBase_80378B69 = "stage.dzs";
+SECTION_DEAD const char* const stringBase_80378B73 = "vrbox_sora.bmd";
+SECTION_DEAD const char* const stringBase_80378B82 = "Stg_00";
+SECTION_DEAD const char* const stringBase_80378B89 = "Event";
+SECTION_DEAD const char* const stringBase_80378B8F = "%s: %d: シーンリストがありません。\n";
+SECTION_DEAD const char* const stringBase_80378BB3 = "d_stage.cpp";
+SECTION_DEAD const char* const stringBase_80378BBF = "Room non room data !!\n";
+SECTION_DEAD const char* const stringBase_80378BD6 = "Room non palet data !!\n";
+SECTION_DEAD const char* const stringBase_80378BEE = "Room non pselect data !!\n";
+SECTION_DEAD const char* const stringBase_80378C08 = "Room non envr data !!\n";
+SECTION_DEAD const char* const stringBase_80378C1F = "Room non plight data !!\n";
+SECTION_DEAD const char* const stringBase_80378C38 = "Room non palette num data !!\n";
+SECTION_DEAD const char* const stringBase_80378C56 = "Room non pselect num data !!\n";
+SECTION_DEAD const char* const stringBase_80378C74 = "Room non envr num data !!\n";
+SECTION_DEAD const char* const stringBase_80378C8F = "Room non plight num data !!\n";
+SECTION_DEAD const char* const stringBase_80378CAC = "Room non stag data !!\n";
+SECTION_DEAD const char* const stringBase_80378CC3 = "Room non Pnt data !\n";
+SECTION_DEAD const char* const stringBase_80378CD8 = "Room non Pnts data !\n";
+SECTION_DEAD const char* const stringBase_80378CEE = "Room non Path data !\n";
+SECTION_DEAD const char* const stringBase_80378D04 = "Room non memory config data!\n";
+SECTION_DEAD const char* const stringBase_80378D22 = "Room non memory map data!\n";
+SECTION_DEAD const char* const stringBase_80378D3D = "Room non multi data!\n";
+SECTION_DEAD const char* const stringBase_80378D53 = "Room non old multi data!\n";
+SECTION_DEAD const char* const stringBase_80378D6D = "stage non 2d map path data !!\n";
+SECTION_DEAD const char* const stringBase_80378D8C = "Room non envLayserSet data\n";
+SECTION_DEAD const char* const stringBase_80378DA8 = "Room no Elst Data!!\n";
+SECTION_DEAD const char* const stringBase_80378DBD = "stage non LightVec data !!\n";
+SECTION_DEAD const char* const stringBase_80378DD9 = "stage non LightVecNum data !!\n";
+SECTION_DEAD const char* const stringBase_80378DF8 = "stage non filelist2 data!\n";
+SECTION_DEAD const char* const stringBase_80378E13 = "stage non filelist data!\n";
+SECTION_DEAD const char* const stringBase_80378E2D = "stage non Lbnk data!\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80378E43 = "\0\0\0\0";
+#pragma pop
 }
 
 
@@ -488,7 +1035,7 @@ const char* const stringBase_80378E2D = "stage non Lbnk data!\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3B18 2AB4 .data      l_objectName                                                 */
+/* 803A3B18-803A65CC 2AB4 .data      l_objectName                                                 InitializedData */
 SECTION_DATA u8 l_objectName[10932] = {
 	0x47, 0x72, 0x61, 0x73, 0x73, 0x00, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61,
 	0x78, 0x31, 0x00, 0x00, 0x03, 0x10, 0xFF, 0x00, 0x6B, 0x75, 0x73, 0x61, 0x78, 0x37, 0x00, 0x00,
@@ -1175,45 +1722,88 @@ SECTION_DATA u8 l_objectName[10932] = {
 	0x49, 0x74, 0x6D, 0x00, 0x02, 0x1D, 0xFF, 0x00, 0x45, 0x6E, 0x64, 0x43, 0x6F, 0x64, 0x65, 0x00,
 	0x00, 0x0B, 0xFF, 0x00,
 };
-/* 803A65CC 0030 .data      l_roomFuncTable$5052                                         */
-SECTION_DATA u8 data_803A65CC[48] = {
-	0x54, 0x52, 0x45, 0x53, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x63, 0x1C, 0x46, 0x49, 0x4C, 0x49,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0x34, 0x4D, 0x50, 0x41, 0x54, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x63, 0xD0, 0x44, 0x6F, 0x6F, 0x72, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x41, 0x74,
+/* 803A65CC-803A65FC 0030 .data      l_roomFuncTable$5052                                         SymbolReferenceArrayData */
+SECTION_DATA void* data_803A65CC[12] = {
+	(void*)0x54524553,
+	NULL,
+	(void*)dStage_stageKeepTresureInit,
+	(void*)0x46494C49,
+	NULL,
+	(void*)dStage_filiInfo2Init,
+	(void*)0x4D504154,
+	NULL,
+	(void*)dStage_mapPathInitCommonLayer,
+	(void*)0x446F6F72,
+	NULL,
+	(void*)dStage_RoomKeepDoorInit,
 };
-/* 803A65FC 0024 .data      l_layerFuncTable$5053                                        */
-SECTION_DATA u8 data_803A65FC[36] = {
-	0x54, 0x52, 0x45, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x63, 0x1C, 0x4D, 0x50, 0x41, 0x30,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x63, 0xA0, 0x44, 0x6F, 0x6F, 0x30, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x41, 0x74,
+/* 803A65FC-803A6620 0024 .data      l_layerFuncTable$5053                                        SymbolReferenceArrayData */
+SECTION_DATA void* data_803A65FC[9] = {
+	(void*)0x54524530,
+	NULL,
+	(void*)dStage_stageKeepTresureInit,
+	(void*)0x4D504130,
+	NULL,
+	(void*)dStage_mapPathInit,
+	(void*)0x446F6F30,
+	NULL,
+	(void*)dStage_RoomKeepDoorInit,
 };
-/* 803A6620 0018 .data      l_layerFuncTable$5131                                        */
-SECTION_DATA u8 data_803A6620[24] = {
-	0x4D, 0x45, 0x4D, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x62, 0x18, 0x4D, 0x45, 0x43, 0x30,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x62, 0x98,
+/* 803A6620-803A6638 0018 .data      l_layerFuncTable$5131                                        SymbolReferenceArrayData */
+SECTION_DATA void* data_803A6620[6] = {
+	(void*)0x4D454D30,
+	NULL,
+	(void*)dStage_memaInfoInit,
+	(void*)0x4D454330,
+	NULL,
+	(void*)dStage_mecoInfoInit,
 };
-/* 803A6638 000C .data      l_funcTable$5136                                             */
-SECTION_DATA u8 data_803A6638[12] = {
-	0x53, 0x54, 0x41, 0x47, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x57, 0x44,
+/* 803A6638-803A6644 000C .data      l_funcTable$5136                                             SymbolReferenceArrayData */
+SECTION_DATA void* data_803A6638[3] = {
+	(void*)0x53544147,
+	NULL,
+	(void*)dStage_stagInfoInit,
 };
-/* 803A6644 000C .data      l_layerFuncTableA$5141                                       */
-SECTION_DATA u8 data_803A6644[12] = {
-	0x53, 0x4F, 0x4E, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x60, 0x18,
+/* 803A6644-803A6650 000C .data      l_layerFuncTableA$5141                                       SymbolReferenceArrayData */
+SECTION_DATA void* data_803A6644[3] = {
+	(void*)0x534F4E30,
+	NULL,
+	(void*)dStage_soundInfoInit,
 };
-/* 803A6650 003C .data      l_envLayerFuncTable$5142                                     */
-SECTION_DATA u8 data_803A6650[60] = {
-	0x4C, 0x47, 0x54, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x56, 0xAC, 0x45, 0x6E, 0x76, 0x30,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0x00, 0x43, 0x6F, 0x6C, 0x30, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x54, 0xCC, 0x50, 0x41, 0x4C, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x54, 0x98,
-	0x56, 0x52, 0x42, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x56, 0x14,
+/* 803A6650-803A668C 003C .data      l_envLayerFuncTable$5142                                     SymbolReferenceArrayData */
+SECTION_DATA void* data_803A6650[15] = {
+	(void*)0x4C475430,
+	NULL,
+	(void*)dStage_lgtvInfoInit,
+	(void*)0x456E7630,
+	NULL,
+	(void*)dStage_envrInfoInit,
+	(void*)0x436F6C30,
+	NULL,
+	(void*)dStage_pselectInfoInit,
+	(void*)0x50414C30,
+	NULL,
+	(void*)dStage_paletteInfoInit,
+	(void*)0x56524230,
+	NULL,
+	(void*)dStage_vrboxcolInfoInit,
 };
-/* 803A668C 0030 .data      l_layerFuncTable$5158                                        */
-SECTION_DATA u8 data_803A668C[48] = {
-	0x44, 0x6F, 0x6F, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x67, 0xDC, 0x53, 0x43, 0x4F, 0x30,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5B, 0xFC, 0x41, 0x43, 0x54, 0x30, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5A, 0x38, 0x54, 0x52, 0x45, 0x30, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x67, 0x0C,
+/* 803A668C-803A66BC 0030 .data      l_layerFuncTable$5158                                        SymbolReferenceArrayData */
+SECTION_DATA void* data_803A668C[12] = {
+	(void*)0x446F6F30,
+	NULL,
+	(void*)dStage_roomDrtgInfoInit,
+	(void*)0x53434F30,
+	NULL,
+	(void*)dStage_tgscInfoInit,
+	(void*)0x41435430,
+	NULL,
+	(void*)dStage_actorInit,
+	(void*)0x54524530,
+	NULL,
+	(void*)dStage_layerTresureInit,
 };
-/* 803A66BC 0138 .data      l_funcTable$5163                                             */
+/* 803A66BC-803A67F4 0138 .data      l_funcTable$5163                                             InitializedData */
 SECTION_DATA u8 data_803A66BC[312] = {
 	0x45, 0x56, 0x4C, 0x59, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x68, 0x44, 0x52, 0x50, 0x50, 0x4E,
 	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5F, 0x44, 0x52, 0x50, 0x41, 0x54, 0x00, 0x00, 0x00, 0x00,
@@ -1236,36 +1826,91 @@ SECTION_DATA u8 data_803A66BC[312] = {
 	0x52, 0x45, 0x56, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x61, 0x7C, 0x53, 0x4F, 0x4E, 0x44,
 	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x60, 0x4C,
 };
-/* 803A67F4 00A8 .data      l_funcTable$5168                                             */
-SECTION_DATA u8 data_803A67F4[168] = {
-	0x50, 0x4C, 0x59, 0x52, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x50, 0x14, 0x52, 0x43, 0x41, 0x4D,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x53, 0x08, 0x52, 0x41, 0x52, 0x4F, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x53, 0x3C, 0x52, 0x54, 0x42, 0x4C, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5D, 0xA8,
-	0x41, 0x52, 0x4F, 0x42, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x53, 0x3C, 0x56, 0x69, 0x72, 0x74,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0xE0, 0x53, 0x43, 0x4C, 0x53, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x58, 0x38, 0x4C, 0x47, 0x48, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x56, 0x48,
-	0x52, 0x50, 0x50, 0x4E, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5F, 0x44, 0x52, 0x50, 0x41, 0x54,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x5F, 0x78, 0x46, 0x49, 0x4C, 0x49, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x55, 0x8C, 0x46, 0x4C, 0x4F, 0x52, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x61, 0xE4,
-	0x4C, 0x42, 0x4E, 0x4B, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x66, 0x70, 0x53, 0x4F, 0x4E, 0x44,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x60, 0x4C,
+/* 803A67F4-803A689C 00A8 .data      l_funcTable$5168                                             SymbolReferenceArrayData */
+SECTION_DATA void* data_803A67F4[42] = {
+	(void*)0x504C5952,
+	NULL,
+	(void*)dStage_playerInit,
+	(void*)0x5243414D,
+	NULL,
+	(void*)dStage_RoomCameraInit,
+	(void*)0x5241524F,
+	NULL,
+	(void*)dStage_arrowInit,
+	(void*)0x5254424C,
+	NULL,
+	(void*)dStage_roomReadInit,
+	(void*)0x41524F42,
+	NULL,
+	(void*)dStage_arrowInit,
+	(void*)0x56697274,
+	NULL,
+	(void*)dStage_vrboxInfoInit,
+	(void*)0x53434C53,
+	NULL,
+	(void*)dStage_sclsInfoInit,
+	(void*)0x4C474854,
+	NULL,
+	(void*)dStage_plightInfoInit,
+	(void*)0x5250504E,
+	NULL,
+	(void*)dStage_rppnInfoInit,
+	(void*)0x52504154,
+	NULL,
+	(void*)dStage_rpatInfoInit,
+	(void*)0x46494C49,
+	NULL,
+	(void*)dStage_filiInfoInit,
+	(void*)0x464C4F52,
+	NULL,
+	(void*)dStage_floorInfoInit,
+	(void*)0x4C424E4B,
+	NULL,
+	(void*)dStage_lbnkInfoInit,
+	(void*)0x534F4E44,
+	NULL,
+	(void*)dStage_soundInfoInitCL,
 };
-/* 803A689C 0060 .data      l_funcTable$5173                                             */
-SECTION_DATA u8 data_803A689C[96] = {
-	0x44, 0x6F, 0x6F, 0x72, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x67, 0xDC, 0x41, 0x43, 0x54, 0x52,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x58, 0x6C, 0x54, 0x47, 0x4F, 0x42, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x58, 0x6C, 0x54, 0x52, 0x45, 0x53, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x66, 0xA4,
-	0x54, 0x47, 0x53, 0x43, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x59, 0x58, 0x53, 0x43, 0x4F, 0x42,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x59, 0x58, 0x54, 0x47, 0x44, 0x52, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x5B, 0xFC, 0x52, 0x45, 0x56, 0x54, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x61, 0xB0,
+/* 803A689C-803A68FC 0060 .data      l_funcTable$5173                                             SymbolReferenceArrayData */
+SECTION_DATA void* data_803A689C[24] = {
+	(void*)0x446F6F72,
+	NULL,
+	(void*)dStage_roomDrtgInfoInit,
+	(void*)0x41435452,
+	NULL,
+	(void*)dStage_actorCommonLayerInit,
+	(void*)0x54474F42,
+	NULL,
+	(void*)dStage_actorCommonLayerInit,
+	(void*)0x54524553,
+	NULL,
+	(void*)dStage_roomTresureInit,
+	(void*)0x54475343,
+	NULL,
+	(void*)dStage_tgscCommonLayerInit,
+	(void*)0x53434F42,
+	NULL,
+	(void*)dStage_tgscCommonLayerInit,
+	(void*)0x54474452,
+	NULL,
+	(void*)dStage_tgscInfoInit,
+	(void*)0x52455654,
+	NULL,
+	(void*)dStage_mapEventInfoInit,
 };
-/* 803A68FC 0024 .data      l_funcTable$5178                                             */
-SECTION_DATA u8 data_803A68FC[36] = {
-	0x54, 0x52, 0x45, 0x53, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x63, 0x4C, 0x46, 0x49, 0x4C, 0x49,
-	0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x55, 0x6C, 0x4D, 0x50, 0x41, 0x54, 0x00, 0x00, 0x00, 0x00,
-	0x80, 0x02, 0x64, 0x00,
+/* 803A68FC-803A6920 0024 .data      l_funcTable$5178                                             SymbolReferenceArrayData */
+SECTION_DATA void* data_803A68FC[9] = {
+	(void*)0x54524553,
+	NULL,
+	(void*)dStage_fieldMapTresureInit,
+	(void*)0x46494C49,
+	NULL,
+	(void*)dStage_fieldMapFiliInfo2Init,
+	(void*)0x4D504154,
+	NULL,
+	(void*)dStage_fieldMapMapPathInit,
 };
-/* 803A6920 004C .data      mMemoryBlock__20dStage_roomControl_c                         */
+/* 803A6920-803A696C 004C .data      mMemoryBlock__20dStage_roomControl_c                         InitializedData */
 SECTION_DATA u8 mMemoryBlock__20dStage_roomControl_c[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1273,7 +1918,7 @@ SECTION_DATA u8 mMemoryBlock__20dStage_roomControl_c[76] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A696C 0140 .data      mArcBank__20dStage_roomControl_c                             */
+/* 803A696C-803A6AAC 0140 .data      mArcBank__20dStage_roomControl_c                             InitializedData */
 SECTION_DATA u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1296,8 +1941,8 @@ SECTION_DATA u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A6AAC 0174 .data      __vt__15dStage_roomDt_c                                      */
-SECTION_DATA const  void* __vt__15dStage_roomDt_c[93] = {
+/* 803A6AAC-803A6C20 0174 .data      __vt__15dStage_roomDt_c                                      VTableData */
+SECTION_DATA void* __vt__15dStage_roomDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)init__15dStage_roomDt_cFv,
@@ -1392,8 +2037,8 @@ SECTION_DATA const  void* __vt__15dStage_roomDt_c[93] = {
 	(void*)setElst__15dStage_roomDt_cFP13dStage_Elst_c,
 	(void*)getElst__15dStage_roomDt_cFv,
 };
-/* 803A6C20 0174 .data      __vt__16dStage_stageDt_c                                     */
-SECTION_DATA const  void* __vt__16dStage_stageDt_c[93] = {
+/* 803A6C20-803A6D94 0174 .data      __vt__16dStage_stageDt_c                                     VTableData */
+SECTION_DATA void* __vt__16dStage_stageDt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)init__16dStage_stageDt_cFv,
@@ -1488,8 +2133,8 @@ SECTION_DATA const  void* __vt__16dStage_stageDt_c[93] = {
 	(void*)setElst__16dStage_stageDt_cFP13dStage_Elst_c,
 	(void*)getElst__16dStage_stageDt_cFv,
 };
-/* 803A6D94 0174 .data      __vt__11dStage_dt_c                                          */
-SECTION_DATA const  void* __vt__11dStage_dt_c[93] = {
+/* 803A6D94-803A6F08 0174 .data      __vt__11dStage_dt_c                                          VTableData */
+SECTION_DATA void* __vt__11dStage_dt_c[93] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -1592,14 +2237,14 @@ SECTION_DATA const  void* __vt__11dStage_dt_c[93] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451C90 0004 .sdata2    @4270                                                        */
+/* 80451C90-80451C94 0004 .sdata2    @4270                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_stage__LIT_4270[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451C94 0004 .sdata2    @5315                                                        */
+/* 80451C94-80451C98 0004 .sdata2    @5315                                                        Float32Data */
 // 0x41700000
 SECTION_SDATA2 f32 LIT_5315 = 15.000000f;
-/* 80451C98 0008 .sdata2    @5317                                                        */
+/* 80451C98-80451CA0 0008 .sdata2    @5317                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_5317 = 4503601774854144.000000;
 }
@@ -1610,21 +2255,21 @@ SECTION_SDATA2 f64 LIT_5317 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F4E68 0000 .bss       ...bss.0                                                     */
-/* 803F4E68 000C .bss       @3926                                                        */
+/* 803F4E68-803F4E68 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 803F4E68-803F4E74 000C .bss       @3926                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_stage__LIT_3926[12];
-/* 803F4E74 0904 .bss       DoorInfo                                                     */
+/* 803F4E74-803F5778 0904 .bss       DoorInfo                                                     ZeroInitializedData */
 SECTION_BSS u8 DoorInfo[2308];
-/* 803F5778 000C .bss       @3981                                                        */
+/* 803F5778-803F5784 000C .bss       @3981                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_stage__LIT_3981[12];
-/* 803F5784 0904 .bss       l_RoomKeepDoorInfo                                           */
+/* 803F5784-803F6088 0904 .bss       l_RoomKeepDoorInfo                                           ZeroInitializedData */
 SECTION_BSS u8 l_RoomKeepDoorInfo[2308];
-/* 803F6088 000C .bss       @5376                                                        */
+/* 803F6088-803F6094 000C .bss       @5376                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_stage__LIT_5376[12];
-/* 803F6094 10100 .bss       mStatus__20dStage_roomControl_c                              */
+/* 803F6094-80406194 10100 .bss       mStatus__20dStage_roomControl_c                              ZeroInitializedData */
 SECTION_BSS u8 mStatus__20dStage_roomControl_c[65792];
-/* 80406194 000A .bss       mDemoArcName__20dStage_roomControl_c                         */
-SECTION_BSS u8 mDemoArcName__20dStage_roomControl_c[12];
+/* 80406194-804061A0 000A .bss       mDemoArcName__20dStage_roomControl_c                         ZeroInitializedData */
+SECTION_BSS u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
 }
 
 
@@ -1633,25 +2278,24 @@ SECTION_BSS u8 mDemoArcName__20dStage_roomControl_c[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D58 0008 .sbss      tmp_name$4456                                                */
+/* 80450D58-80450D60 0008 .sbss      tmp_name$4456                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D58[8];
-/* 80450D60 0004 .sbss      mProcID__20dStage_roomControl_c                              */
+/* 80450D60-80450D64 0004 .sbss      mProcID__20dStage_roomControl_c                              ZeroInitializedData */
 SECTION_SBSS u8 mProcID__20dStage_roomControl_c[4];
-/* 80450D64 0004 .sbss      merged_80450D64                                              */
+/* 80450D64-80450D68 0004 .sbss      merged_80450D64                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450D64[4];
 /* 80450D64 0001 data_80450D64 */
 /* 80450D65 0001 data_80450D65 */
 /* 80450D66 0001 data_80450D66 */
 /* 80450D67 0001 data_80450D67 */
-/* 80450D68 0004 .sbss      data_80450D68                                                */
+/* 80450D68-80450D6C 0004 .sbss      data_80450D68                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D68[4];
-/* 80450D6C 0004 .sbss      mArcBankName__20dStage_roomControl_c                         */
+/* 80450D6C-80450D70 0004 .sbss      mArcBankName__20dStage_roomControl_c                         ZeroInitializedData */
 SECTION_SBSS u8 mArcBankName__20dStage_roomControl_c[4];
-/* 80450D70 0004 .sbss      mArcBankData__20dStage_roomControl_c                         */
+/* 80450D70-80450D74 0004 .sbss      mArcBankData__20dStage_roomControl_c                         ZeroInitializedData */
 SECTION_SBSS u8 mArcBankData__20dStage_roomControl_c[4];
-/* 80450D74 0008 .sbss      m_roomDzs__20dStage_roomControl_c                            */
-SECTION_SBSS u8 m_roomDzs__20dStage_roomControl_c[8];
-SECTION_SBSS u8 pad_80450D7C[4];
+/* 80450D74-80450D80 0008 .sbss      m_roomDzs__20dStage_roomControl_c                            ZeroInitializedData */
+SECTION_SBSS u8 m_roomDzs__20dStage_roomControl_c[8 + 4 /* padding */];
 }
 
 
@@ -1660,8 +2304,8 @@ SECTION_SBSS u8 pad_80450D7C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023E28 006C .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
-// dStage_nextStage_c::set(const s8*, s8, s16, s8, s8, u8)
+/* 80023E28-80023E94 006C .text      set__18dStage_nextStage_cFPCcScsScScUc                       Function */
+// dStage_nextStage_c::set(const char*, s8, short, s8, s8, u8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1671,7 +2315,7 @@ asm void set__18dStage_nextStage_cFPCcScsScScUc() {
 }
 #pragma pop
 
-/* 80023E94 0030 .text      dStage_SetErrorRoom__Fv                                      */
+/* 80023E94-80023EC4 0030 .text      dStage_SetErrorRoom__Fv                                      Function */
 }
 
 #pragma push
@@ -1684,7 +2328,7 @@ asm void dStage_SetErrorRoom(void) {
 #pragma pop
 
 extern "C" {
-/* 80023EC4 0030 .text      dStage_SetErrorStage__Fv                                     */
+/* 80023EC4-80023EF4 0030 .text      dStage_SetErrorStage__Fv                                     Function */
 }
 
 #pragma push
@@ -1697,7 +2341,7 @@ asm void dStage_SetErrorStage(void) {
 #pragma pop
 
 extern "C" {
-/* 80023EF4 000C .text      dStage_GetKeepDoorInfo__Fv                                   */
+/* 80023EF4-80023F00 000C .text      dStage_GetKeepDoorInfo__Fv                                   Function */
 }
 
 #pragma push
@@ -1710,7 +2354,7 @@ asm void dStage_GetKeepDoorInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80023F00 0050 .text      dStage_isBossStage__FP11dStage_dt_c                          */
+/* 80023F00-80023F50 0050 .text      dStage_isBossStage__FP11dStage_dt_c                          Function */
 }
 
 #pragma push
@@ -1723,7 +2367,7 @@ asm void dStage_isBossStage(dStage_dt_c*) {
 #pragma pop
 
 extern "C" {
-/* 80023F50 0034 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
+/* 80023F50-80023F84 0034 .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     Function */
 }
 
 #pragma push
@@ -1736,7 +2380,7 @@ asm void dStage_KeepDoorInfoInit(dStage_dt_c*) {
 #pragma pop
 
 extern "C" {
-/* 80023F84 00D8 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
+/* 80023F84-8002405C 00D8 .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  Function */
 }
 
 #pragma push
@@ -1749,7 +2393,7 @@ asm void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*) {
 #pragma pop
 
 extern "C" {
-/* 8002405C 000C .text      dStage_GetRoomKeepDoorInfo__Fv                               */
+/* 8002405C-80024068 000C .text      dStage_GetRoomKeepDoorInfo__Fv                               Function */
 }
 
 #pragma push
@@ -1762,7 +2406,7 @@ asm void dStage_GetRoomKeepDoorInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80024068 0010 .text      dStage_initRoomKeepDoorInfo__Fv                              */
+/* 80024068-80024078 0010 .text      dStage_initRoomKeepDoorInfo__Fv                              Function */
 }
 
 #pragma push
@@ -1775,7 +2419,7 @@ asm void dStage_initRoomKeepDoorInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80024078 00FC .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class */
+/* 80024078-80024174 00FC .text      dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class Function */
 }
 
 #pragma push
@@ -1788,7 +2432,7 @@ asm void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*) {
 #pragma pop
 
 extern "C" {
-/* 80024174 0028 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                */
+/* 80024174-8002419C 0028 .text      dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -1801,8 +2445,8 @@ asm void dStage_RoomKeepDoorInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002419C 004C .text      set__19dStage_startStage_cFPCcScsSc                          */
-// dStage_startStage_c::set(const s8*, s8, s16, s8)
+/* 8002419C-800241E8 004C .text      set__19dStage_startStage_cFPCcScsSc                          Function */
+// dStage_startStage_c::set(const char*, s8, short, s8)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1812,7 +2456,7 @@ asm void set__19dStage_startStage_cFPCcScsSc() {
 }
 #pragma pop
 
-/* 800241E8 0150 .text      init__20dStage_roomControl_cFv                               */
+/* 800241E8-80024338 0150 .text      init__20dStage_roomControl_cFv                               Function */
 // dStage_roomControl_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -1823,7 +2467,7 @@ asm void init__20dStage_roomControl_cFv() {
 }
 #pragma pop
 
-/* 80024338 004C .text      initZone__20dStage_roomControl_cFv                           */
+/* 80024338-80024384 004C .text      initZone__20dStage_roomControl_cFv                           Function */
 // dStage_roomControl_c::initZone(void)
 #pragma push
 #pragma optimization_level 0
@@ -1834,7 +2478,7 @@ asm void initZone__20dStage_roomControl_cFv() {
 }
 #pragma pop
 
-/* 80024384 002C .text      getStatusRoomDt__20dStage_roomControl_cFi                    */
+/* 80024384-800243B0 002C .text      getStatusRoomDt__20dStage_roomControl_cFi                    Function */
 // dStage_roomControl_c::getStatusRoomDt(int)
 #pragma push
 #pragma optimization_level 0
@@ -1845,7 +2489,7 @@ asm void getStatusRoomDt__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 800243B0 0038 .text      getMemoryBlock__20dStage_roomControl_cFi                     */
+/* 800243B0-800243E8 0038 .text      getMemoryBlock__20dStage_roomControl_cFi                     Function */
 // dStage_roomControl_c::getMemoryBlock(int)
 #pragma push
 #pragma optimization_level 0
@@ -1856,7 +2500,7 @@ asm void getMemoryBlock__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 800243E8 003C .text      setStayNo__20dStage_roomControl_cFi                          */
+/* 800243E8-80024424 003C .text      setStayNo__20dStage_roomControl_cFi                          Function */
 // dStage_roomControl_c::setStayNo(int)
 #pragma push
 #pragma optimization_level 0
@@ -1867,7 +2511,7 @@ asm void setStayNo__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 80024424 0008 .text      setNextStayNo__20dStage_roomControl_cFi                      */
+/* 80024424-8002442C 0008 .text      setNextStayNo__20dStage_roomControl_cFi                      Function */
 // dStage_roomControl_c::setNextStayNo(int)
 #pragma push
 #pragma optimization_level 0
@@ -1878,7 +2522,7 @@ asm void setNextStayNo__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 8002442C 0034 .text      stayRoomCheck__FiPUci                                        */
+/* 8002442C-80024460 0034 .text      stayRoomCheck__FiPUci                                        Function */
 }
 
 #pragma push
@@ -1891,7 +2535,7 @@ asm void stayRoomCheck(int, u8*, int) {
 #pragma pop
 
 extern "C" {
-/* 80024460 0088 .text      createRoomScene__Fi                                          */
+/* 80024460-800244E8 0088 .text      createRoomScene__Fi                                          Function */
 }
 
 #pragma push
@@ -1904,7 +2548,7 @@ asm void createRoomScene(int) {
 #pragma pop
 
 extern "C" {
-/* 800244E8 0034 .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
+/* 800244E8-8002451C 0034 .text      checkRoomDisp__20dStage_roomControl_cCFi                     Function */
 // dStage_roomControl_c::checkRoomDisp(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1915,7 +2559,7 @@ asm void checkRoomDisp__20dStage_roomControl_cCFi() {
 }
 #pragma pop
 
-/* 8002451C 0200 .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
+/* 8002451C-8002471C 0200 .text      loadRoom__20dStage_roomControl_cFiPUcb                       Function */
 // dStage_roomControl_c::loadRoom(int, u8*, bool)
 #pragma push
 #pragma optimization_level 0
@@ -1926,7 +2570,7 @@ asm void loadRoom__20dStage_roomControl_cFiPUcb() {
 }
 #pragma pop
 
-/* 8002471C 0120 .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
+/* 8002471C-8002483C 0120 .text      zoneCountCheck__20dStage_roomControl_cCFi                    Function */
 // dStage_roomControl_c::zoneCountCheck(int) const
 #pragma push
 #pragma optimization_level 0
@@ -1937,13 +2581,13 @@ asm void zoneCountCheck__20dStage_roomControl_cCFi() {
 }
 #pragma pop
 
-/* 8002483C 0008 .text      getStagInfo__16dStage_stageDt_cCFv                           */
+/* 8002483C-80024844 0008 .text      getStagInfo__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getStagInfo(void) const
 u32 getStagInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[92]; /* param0->field_0x5c */
 }
 
-/* 80024844 0064 .text      createMemoryBlock__20dStage_roomControl_cFiUl                */
+/* 80024844-800248A8 0064 .text      createMemoryBlock__20dStage_roomControl_cFiUl                Function */
 // dStage_roomControl_c::createMemoryBlock(int, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1954,7 +2598,7 @@ asm void createMemoryBlock__20dStage_roomControl_cFiUl() {
 }
 #pragma pop
 
-/* 800248A8 0064 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
+/* 800248A8-8002490C 0064 .text      destroyMemoryBlock__20dStage_roomControl_cFv                 Function */
 // dStage_roomControl_c::destroyMemoryBlock(void)
 #pragma push
 #pragma optimization_level 0
@@ -1965,8 +2609,8 @@ asm void destroyMemoryBlock__20dStage_roomControl_cFv() {
 }
 #pragma pop
 
-/* 8002490C 0034 .text      setArcBank__20dStage_roomControl_cFiPCc                      */
-// dStage_roomControl_c::setArcBank(int, const s8*)
+/* 8002490C-80024940 0034 .text      setArcBank__20dStage_roomControl_cFiPCc                      Function */
+// dStage_roomControl_c::setArcBank(int, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1976,7 +2620,7 @@ asm void setArcBank__20dStage_roomControl_cFiPCc() {
 }
 #pragma pop
 
-/* 80024940 0014 .text      getArcBank__20dStage_roomControl_cFi                         */
+/* 80024940-80024954 0014 .text      getArcBank__20dStage_roomControl_cFi                         Function */
 // dStage_roomControl_c::getArcBank(int)
 #pragma push
 #pragma optimization_level 0
@@ -1987,7 +2631,7 @@ asm void getArcBank__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 80024954 00E0 .text      resetArchiveBank__20dStage_roomControl_cFi                   */
+/* 80024954-80024A34 00E0 .text      resetArchiveBank__20dStage_roomControl_cFi                   Function */
 // dStage_roomControl_c::resetArchiveBank(int)
 #pragma push
 #pragma optimization_level 0
@@ -1998,7 +2642,7 @@ asm void resetArchiveBank__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 80024A34 0088 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
+/* 80024A34-80024ABC 0088 .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                Function */
 // dStage_roomControl_c::roomDzs_c::create(u8)
 #pragma push
 #pragma optimization_level 0
@@ -2009,7 +2653,7 @@ asm void create__Q220dStage_roomControl_c9roomDzs_cFUc() {
 }
 #pragma pop
 
-/* 80024ABC 0088 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 */
+/* 80024ABC-80024B44 0088 .text      remove__Q220dStage_roomControl_c9roomDzs_cFv                 Function */
 // dStage_roomControl_c::roomDzs_c::remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -2020,7 +2664,7 @@ asm void remove__Q220dStage_roomControl_c9roomDzs_cFv() {
 }
 #pragma pop
 
-/* 80024B44 00D8 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
+/* 80024B44-80024C1C 00D8 .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 Function */
 // dStage_roomControl_c::roomDzs_c::add(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -2031,7 +2675,7 @@ asm void add__Q220dStage_roomControl_c9roomDzs_cFUcUc() {
 }
 #pragma pop
 
-/* 80024C1C 008C .text      init__16dStage_stageDt_cFv                                   */
+/* 80024C1C-80024CA8 008C .text      init__16dStage_stageDt_cFv                                   Function */
 // dStage_stageDt_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -2042,7 +2686,7 @@ asm void init__16dStage_stageDt_cFv() {
 }
 #pragma pop
 
-/* 80024CA8 000C .text      initFileList2__15dStage_roomDt_cFv                           */
+/* 80024CA8-80024CB4 000C .text      initFileList2__15dStage_roomDt_cFv                           Function */
 // dStage_roomDt_c::initFileList2(void)
 #pragma push
 #pragma optimization_level 0
@@ -2053,7 +2697,7 @@ asm void initFileList2__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80024CB4 005C .text      init__15dStage_roomDt_cFv                                    */
+/* 80024CB4-80024D10 005C .text      init__15dStage_roomDt_cFv                                    Function */
 // dStage_roomDt_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -2064,7 +2708,7 @@ asm void init__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80024D10 00A0 .text      dStage_roomInit__Fi                                          */
+/* 80024D10-80024DB0 00A0 .text      dStage_roomInit__Fi                                          Function */
 }
 
 #pragma push
@@ -2077,7 +2721,7 @@ asm void dStage_roomInit(int) {
 #pragma pop
 
 extern "C" {
-/* 80024DB0 0008 .text      SetTimePass__20dStage_roomControl_cFi                        */
+/* 80024DB0-80024DB8 0008 .text      SetTimePass__20dStage_roomControl_cFi                        Function */
 // dStage_roomControl_c::SetTimePass(int)
 #pragma push
 #pragma optimization_level 0
@@ -2088,52 +2732,52 @@ asm void SetTimePass__20dStage_roomControl_cFi() {
 }
 #pragma pop
 
-/* 80024DB8 0008 .text      getRoom__16dStage_stageDt_cCFv                               */
+/* 80024DB8-80024DC0 0008 .text      getRoom__16dStage_stageDt_cCFv                               FirstParamFunction */
 // dStage_stageDt_c::getRoom(void) const
 u32 getRoom__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[20]; /* param0->field_0x14 */
 }
 
-/* 80024DC0 0070 .text      dStage_searchName__FPCc                                      */
+/* 80024DC0-80024E30 0070 .text      dStage_searchName__FPCc                                      Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_searchName(const s8*) {
+asm void dStage_searchName(const char*) {
 	nofralloc
 #include "_include/d/d_stage/dStage_searchName__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80024E30 00AC .text      dStage_getName__FsSc                                         */
+/* 80024E30-80024EDC 00AC .text      dStage_getName__FsSc                                         Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_getName(s16, s8) {
+asm void dStage_getName(short, s8) {
 	nofralloc
 #include "_include/d/d_stage/dStage_getName__FsSc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80024EDC 0020 .text      dStage_getName2__FsSc                                        */
+/* 80024EDC-80024EFC 0020 .text      dStage_getName2__FsSc                                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_getName2(s16, s8) {
+asm void dStage_getName2(short, s8) {
 	nofralloc
 #include "_include/d/d_stage/dStage_getName2__FsSc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80024EFC 009C .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class */
+/* 80024EFC-80024F98 009C .text      dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class Function */
 }
 
 #pragma push
@@ -2146,7 +2790,7 @@ asm void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*) {
 #pragma pop
 
 extern "C" {
-/* 80024F98 006C .text      dStage_cameraCreate__FP24stage_camera2_data_classii          */
+/* 80024F98-80025004 006C .text      dStage_cameraCreate__FP24stage_camera2_data_classii          Function */
 }
 
 #pragma push
@@ -2159,19 +2803,19 @@ asm void dStage_cameraCreate(stage_camera2_data_class*, int, int) {
 #pragma pop
 
 extern "C" {
-/* 80025004 0008 .text      getPlayer__15dStage_roomDt_cCFv                              */
+/* 80025004-8002500C 0008 .text      getPlayer__15dStage_roomDt_cCFv                              FirstParamFunction */
 // dStage_roomDt_c::getPlayer(void) const
 u32 getPlayer__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[40]; /* param0->field_0x28 */
 }
 
-/* 8002500C 0008 .text      getPlayer__16dStage_stageDt_cCFv                             */
+/* 8002500C-80025014 0008 .text      getPlayer__16dStage_stageDt_cCFv                             FirstParamFunction */
 // dStage_stageDt_c::getPlayer(void) const
 u32 getPlayer__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[16]; /* param0->field_0x10 */
 }
 
-/* 80025014 02A4 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      */
+/* 80025014-800252B8 02A4 .text      dStage_playerInit__FP11dStage_dt_cPviPv                      Function */
 }
 
 #pragma push
@@ -2184,7 +2828,7 @@ asm void dStage_playerInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800252B8 0050 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      */
+/* 800252B8-80025308 0050 .text      dStage_cameraInit__FP11dStage_dt_cPviPv                      Function */
 }
 
 #pragma push
@@ -2197,7 +2841,7 @@ asm void dStage_cameraInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025308 0034 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  */
+/* 80025308-8002533C 0034 .text      dStage_RoomCameraInit__FP11dStage_dt_cPviPv                  Function */
 }
 
 #pragma push
@@ -2210,7 +2854,7 @@ asm void dStage_RoomCameraInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002533C 0034 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       */
+/* 8002533C-80025370 0034 .text      dStage_arrowInit__FP11dStage_dt_cPviPv                       Function */
 }
 
 #pragma push
@@ -2223,7 +2867,7 @@ asm void dStage_arrowInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025370 008C .text      getMapInfo2__15dStage_roomDt_cCFi                            */
+/* 80025370-800253FC 008C .text      getMapInfo2__15dStage_roomDt_cCFi                            Function */
 // dStage_roomDt_c::getMapInfo2(int) const
 #pragma push
 #pragma optimization_level 0
@@ -2234,13 +2878,13 @@ asm void getMapInfo2__15dStage_roomDt_cCFi() {
 }
 #pragma pop
 
-/* 800253FC 0008 .text      getMapInfoBase__15dStage_roomDt_cCFv                         */
+/* 800253FC-80025404 0008 .text      getMapInfoBase__15dStage_roomDt_cCFv                         FirstParamFunction */
 // dStage_roomDt_c::getMapInfoBase(void) const
 u32 getMapInfoBase__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[20]; /* param0->field_0x14 */
 }
 
-/* 80025404 008C .text      getMapInfo2__16dStage_stageDt_cCFi                           */
+/* 80025404-80025490 008C .text      getMapInfo2__16dStage_stageDt_cCFi                           Function */
 // dStage_stageDt_c::getMapInfo2(int) const
 #pragma push
 #pragma optimization_level 0
@@ -2251,13 +2895,13 @@ asm void getMapInfo2__16dStage_stageDt_cCFi() {
 }
 #pragma pop
 
-/* 80025490 0008 .text      getMapInfoBase__16dStage_stageDt_cCFv                        */
+/* 80025490-80025498 0008 .text      getMapInfoBase__16dStage_stageDt_cCFv                        FirstParamFunction */
 // dStage_stageDt_c::getMapInfoBase(void) const
 u32 getMapInfoBase__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[28]; /* param0->field_0x1c */
 }
 
-/* 80025498 0034 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 */
+/* 80025498-800254CC 0034 .text      dStage_paletteInfoInit__FP11dStage_dt_cPviPv                 Function */
 }
 
 #pragma push
@@ -2270,7 +2914,7 @@ asm void dStage_paletteInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800254CC 0034 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
+/* 800254CC-80025500 0034 .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 Function */
 }
 
 #pragma push
@@ -2283,7 +2927,7 @@ asm void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025500 0034 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025500-80025534 0034 .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2296,7 +2940,7 @@ asm void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025534 0038 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
+/* 80025534-8002556C 0038 .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   Function */
 }
 
 #pragma push
@@ -2309,7 +2953,7 @@ asm void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002556C 0020 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           */
+/* 8002556C-8002558C 0020 .text      dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv           Function */
 }
 
 #pragma push
@@ -2322,7 +2966,7 @@ asm void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002558C 0054 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    */
+/* 8002558C-800255E0 0054 .text      dStage_filiInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2335,7 +2979,7 @@ asm void dStage_filiInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800255E0 0034 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   */
+/* 800255E0-80025614 0034 .text      dStage_vrboxInfoInit__FP11dStage_dt_cPviPv                   Function */
 }
 
 #pragma push
@@ -2348,7 +2992,7 @@ asm void dStage_vrboxInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025614 0034 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                */
+/* 80025614-80025648 0034 .text      dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -2361,7 +3005,7 @@ asm void dStage_vrboxcolInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025648 0064 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  */
+/* 80025648-800256AC 0064 .text      dStage_plightInfoInit__FP11dStage_dt_cPviPv                  Function */
 }
 
 #pragma push
@@ -2374,7 +3018,7 @@ asm void dStage_plightInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800256AC 008C .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    */
+/* 800256AC-80025738 008C .text      dStage_lgtvInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2387,7 +3031,7 @@ asm void dStage_lgtvInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025738 000C .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    */
+/* 80025738-80025744 000C .text      dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi    Function */
 }
 
 #pragma push
@@ -2400,7 +3044,7 @@ asm void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int) {
 #pragma pop
 
 extern "C" {
-/* 80025744 00E8 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025744-8002582C 00E8 .text      dStage_stagInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2413,7 +3057,7 @@ asm void dStage_stagInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002582C 000C .text      resetOldMulti__16dStage_stageDt_cFv                          */
+/* 8002582C-80025838 000C .text      resetOldMulti__16dStage_stageDt_cFv                          Function */
 // dStage_stageDt_c::resetOldMulti(void)
 #pragma push
 #pragma optimization_level 0
@@ -2424,7 +3068,7 @@ asm void resetOldMulti__16dStage_stageDt_cFv() {
 }
 #pragma pop
 
-/* 80025838 0034 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025838-8002586C 0034 .text      dStage_sclsInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2437,7 +3081,7 @@ asm void dStage_sclsInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002586C 00EC .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            */
+/* 8002586C-80025958 00EC .text      dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv            Function */
 }
 
 #pragma push
@@ -2450,7 +3094,7 @@ asm void dStage_actorCommonLayerInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025958 00E0 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             */
+/* 80025958-80025A38 00E0 .text      dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv             Function */
 }
 
 #pragma push
@@ -2463,7 +3107,7 @@ asm void dStage_tgscCommonLayerInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025A38 00EC .text      dStage_actorInit__FP11dStage_dt_cPviPv                       */
+/* 80025A38-80025B24 00EC .text      dStage_actorInit__FP11dStage_dt_cPviPv                       Function */
 }
 
 #pragma push
@@ -2476,7 +3120,7 @@ asm void dStage_actorInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025B24 00D8 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                */
+/* 80025B24-80025BFC 00D8 .text      dStage_actorInit_always__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -2489,7 +3133,7 @@ asm void dStage_actorInit_always(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025BFC 00E0 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025BFC-80025CDC 00E0 .text      dStage_tgscInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2502,7 +3146,7 @@ asm void dStage_tgscInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025CDC 00CC .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025CDC-80025DA8 00CC .text      dStage_doorInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2515,7 +3159,7 @@ asm void dStage_doorInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025DA8 0098 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    */
+/* 80025DA8-80025E40 0098 .text      dStage_roomReadInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2528,7 +3172,7 @@ asm void dStage_roomReadInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025E40 0030 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     */
+/* 80025E40-80025E70 0030 .text      dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi     Function */
 }
 
 #pragma push
@@ -2541,7 +3185,7 @@ asm void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, int) {
 #pragma pop
 
 extern "C" {
-/* 80025E70 0034 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025E70-80025EA4 0034 .text      dStage_ppntInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2554,7 +3198,7 @@ asm void dStage_ppntInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025EA4 00A0 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025EA4-80025F44 00A0 .text      dStage_pathInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2567,7 +3211,7 @@ asm void dStage_pathInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025F44 0034 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025F44-80025F78 0034 .text      dStage_rppnInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2580,7 +3224,7 @@ asm void dStage_rppnInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80025F78 00A0 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025F78-80026018 00A0 .text      dStage_rpatInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2593,7 +3237,7 @@ asm void dStage_rpatInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026018 0034 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   */
+/* 80026018-8002604C 0034 .text      dStage_soundInfoInit__FP11dStage_dt_cPviPv                   Function */
 }
 
 #pragma push
@@ -2606,7 +3250,7 @@ asm void dStage_soundInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002604C 0034 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 */
+/* 8002604C-80026080 0034 .text      dStage_soundInfoInitCL__FP11dStage_dt_cPviPv                 Function */
 }
 
 #pragma push
@@ -2619,7 +3263,7 @@ asm void dStage_soundInfoInitCL(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026080 0034 .text      dStage_setLayerTagName__FP9FuncTableii                       */
+/* 80026080-800260B4 0034 .text      dStage_setLayerTagName__FP9FuncTableii                       Function */
 }
 
 #pragma push
@@ -2632,7 +3276,7 @@ asm void dStage_setLayerTagName(FuncTable*, int, int) {
 #pragma pop
 
 extern "C" {
-/* 800260B4 00C8 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            */
+/* 800260B4-8002617C 00C8 .text      dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei            Function */
 }
 
 #pragma push
@@ -2645,7 +3289,7 @@ asm void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int) {
 #pragma pop
 
 extern "C" {
-/* 8002617C 0034 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 */
+/* 8002617C-800261B0 0034 .text      dStage_stEventInfoInit__FP11dStage_dt_cPviPv                 Function */
 }
 
 #pragma push
@@ -2658,7 +3302,7 @@ asm void dStage_stEventInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800261B0 0034 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                */
+/* 800261B0-800261E4 0034 .text      dStage_mapEventInfoInit__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -2671,7 +3315,7 @@ asm void dStage_mapEventInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800261E4 0034 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   */
+/* 800261E4-80026218 0034 .text      dStage_floorInfoInit__FP11dStage_dt_cPviPv                   Function */
 }
 
 #pragma push
@@ -2684,7 +3328,7 @@ asm void dStage_floorInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026218 0080 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026218-80026298 0080 .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2697,7 +3341,7 @@ asm void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026298 0084 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026298-8002631C 0084 .text      dStage_mecoInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2710,7 +3354,7 @@ asm void dStage_mecoInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002631C 0030 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            */
+/* 8002631C-8002634C 0030 .text      dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv            Function */
 }
 
 #pragma push
@@ -2723,7 +3367,7 @@ asm void dStage_stageKeepTresureInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002634C 0010 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             */
+/* 8002634C-8002635C 0010 .text      dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv             Function */
 }
 
 #pragma push
@@ -2736,7 +3380,7 @@ asm void dStage_fieldMapTresureInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002635C 0044 .text      dStage_dt_c_offsetToPtr__FPv                                 */
+/* 8002635C-800263A0 0044 .text      dStage_dt_c_offsetToPtr__FPv                                 Function */
 }
 
 #pragma push
@@ -2749,7 +3393,7 @@ asm void dStage_dt_c_offsetToPtr(void*) {
 #pragma pop
 
 extern "C" {
-/* 800263A0 0030 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     */
+/* 800263A0-800263D0 0030 .text      dStage_mapPathInit__FP11dStage_dt_cPviPv                     Function */
 }
 
 #pragma push
@@ -2762,7 +3406,7 @@ asm void dStage_mapPathInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800263D0 0030 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          */
+/* 800263D0-80026400 0030 .text      dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv          Function */
 }
 
 #pragma push
@@ -2775,7 +3419,7 @@ asm void dStage_mapPathInitCommonLayer(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026400 005C .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             */
+/* 80026400-8002645C 005C .text      dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv             Function */
 }
 
 #pragma push
@@ -2788,7 +3432,7 @@ asm void dStage_fieldMapMapPathInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002645C 0180 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  */
+/* 8002645C-800265DC 0180 .text      readMult__FP11dStage_dt_cP14dStage_Multi_cb                  Function */
 }
 
 #pragma push
@@ -2801,7 +3445,7 @@ asm void readMult(dStage_dt_c*, dStage_Multi_c*, bool) {
 #pragma pop
 
 extern "C" {
-/* 800265DC 0094 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    */
+/* 800265DC-80026670 0094 .text      dStage_multInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2814,7 +3458,7 @@ asm void dStage_multInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026670 0034 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026670-800266A4 0034 .text      dStage_lbnkInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2827,7 +3471,7 @@ asm void dStage_lbnkInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800266A4 0068 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 */
+/* 800266A4-8002670C 0068 .text      dStage_roomTresureInit__FP11dStage_dt_cPviPv                 Function */
 }
 
 #pragma push
@@ -2840,7 +3484,7 @@ asm void dStage_roomTresureInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 8002670C 0024 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                */
+/* 8002670C-80026730 0024 .text      dStage_layerTresureInit__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -2853,7 +3497,7 @@ asm void dStage_layerTresureInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026730 0034 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026730-80026764 0034 .text      dStage_dmapInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2866,7 +3510,7 @@ asm void dStage_dmapInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026764 0078 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               */
+/* 80026764-800267DC 0078 .text      dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv               Function */
 }
 
 #pragma push
@@ -2879,7 +3523,7 @@ asm void dStage_stageDrtgInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 800267DC 0068 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                */
+/* 800267DC-80026844 0068 .text      dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv                Function */
 }
 
 #pragma push
@@ -2892,7 +3536,7 @@ asm void dStage_roomDrtgInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026844 0054 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026844-80026898 0054 .text      dStage_elstInfoInit__FP11dStage_dt_cPviPv                    Function */
 }
 
 #pragma push
@@ -2905,7 +3549,7 @@ asm void dStage_elstInfoInit(dStage_dt_c*, void*, int, void*) {
 #pragma pop
 
 extern "C" {
-/* 80026898 007C .text      dKankyo_create__Fv                                           */
+/* 80026898-80026914 007C .text      dKankyo_create__Fv                                           Function */
 }
 
 #pragma push
@@ -2918,7 +3562,7 @@ asm void dKankyo_create(void) {
 #pragma pop
 
 extern "C" {
-/* 80026914 002C .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    */
+/* 80026914-80026940 002C .text      layerMemoryInfoLoader__FPvP11dStage_dt_ci                    Function */
 }
 
 #pragma push
@@ -2931,7 +3575,7 @@ asm void layerMemoryInfoLoader(void*, dStage_dt_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 80026940 0074 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               */
+/* 80026940-800269B4 0074 .text      dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c               Function */
 }
 
 #pragma push
@@ -2944,7 +3588,7 @@ asm void dStage_dt_c_stageInitLoader(void*, dStage_dt_c*) {
 #pragma pop
 
 extern "C" {
-/* 800269B4 0134 .text      layerTableLoader__FPvP11dStage_dt_ci                         */
+/* 800269B4-80026AE8 0134 .text      layerTableLoader__FPvP11dStage_dt_ci                         Function */
 }
 
 #pragma push
@@ -2957,13 +3601,13 @@ asm void layerTableLoader(void*, dStage_dt_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 80026AE8 0008 .text      getElst__16dStage_stageDt_cFv                                */
+/* 80026AE8-80026AF0 0008 .text      getElst__16dStage_stageDt_cFv                                FirstParamFunction */
 // dStage_stageDt_c::getElst(void)
 u32 getElst__16dStage_stageDt_cFv(u8* param0) {
 	return *(u32*)&param0[160]; /* param0->field_0xa0 */
 }
 
-/* 80026AF0 0068 .text      layerActorLoader__FPvP11dStage_dt_ci                         */
+/* 80026AF0-80026B58 0068 .text      layerActorLoader__FPvP11dStage_dt_ci                         Function */
 }
 
 #pragma push
@@ -2976,7 +3620,7 @@ asm void layerActorLoader(void*, dStage_dt_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 80026B58 0064 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   */
+/* 80026B58-80026BBC 0064 .text      dStage_dt_c_stageLoader__FPvP11dStage_dt_c                   Function */
 }
 
 #pragma push
@@ -2989,7 +3633,7 @@ asm void dStage_dt_c_stageLoader(void*, dStage_dt_c*) {
 #pragma pop
 
 extern "C" {
-/* 80026BBC 0078 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   */
+/* 80026BBC-80026C34 0078 .text      dStage_dt_c_roomLoader__FPvP11dStage_dt_ci                   Function */
 }
 
 #pragma push
@@ -3002,7 +3646,7 @@ asm void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 80026C34 0058 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 */
+/* 80026C34-80026C8C 0058 .text      dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci                 Function */
 }
 
 #pragma push
@@ -3015,7 +3659,7 @@ asm void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 80026C8C 0050 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                */
+/* 80026C8C-80026CDC 0050 .text      dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c                Function */
 }
 
 #pragma push
@@ -3028,7 +3672,7 @@ asm void dStage_dt_c_fieldMapLoader(void*, dStage_dt_c*) {
 #pragma pop
 
 extern "C" {
-/* 80026CDC 005C .text      dStage_infoCreate__Fv                                        */
+/* 80026CDC-80026D38 005C .text      dStage_infoCreate__Fv                                        Function */
 }
 
 #pragma push
@@ -3041,7 +3685,7 @@ asm void dStage_infoCreate(void) {
 #pragma pop
 
 extern "C" {
-/* 80026D38 00C0 .text      dStage_Create__Fv                                            */
+/* 80026D38-80026DF8 00C0 .text      dStage_Create__Fv                                            Function */
 }
 
 #pragma push
@@ -3054,7 +3698,7 @@ asm void dStage_Create(void) {
 #pragma pop
 
 extern "C" {
-/* 80026DF8 01E4 .text      dStage_Delete__Fv                                            */
+/* 80026DF8-80026FDC 01E4 .text      dStage_Delete__Fv                                            Function */
 }
 
 #pragma push
@@ -3067,7 +3711,7 @@ asm void dStage_Delete(void) {
 #pragma pop
 
 extern "C" {
-/* 80026FDC 000C .text      setOldMulti__16dStage_stageDt_cFv                            */
+/* 80026FDC-80026FE8 000C .text      setOldMulti__16dStage_stageDt_cFv                            Function */
 // dStage_stageDt_c::setOldMulti(void)
 #pragma push
 #pragma optimization_level 0
@@ -3078,7 +3722,7 @@ asm void setOldMulti__16dStage_stageDt_cFv() {
 }
 #pragma pop
 
-/* 80026FE8 0114 .text      dStage_RoomCheck__FP11cBgS_GndChk                            */
+/* 80026FE8-800270FC 0114 .text      dStage_RoomCheck__FP11cBgS_GndChk                            Function */
 }
 
 #pragma push
@@ -3091,58 +3735,58 @@ asm void dStage_RoomCheck(cBgS_GndChk*) {
 #pragma pop
 
 extern "C" {
-/* 800270FC 0074 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            */
+/* 800270FC-80027170 0074 .text      dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs            Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16) {
+asm void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, short) {
 	nofralloc
 #include "_include/d/d_stage/dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80027170 0170 .text      dStage_changeScene__FifUlScsi                                */
+/* 80027170-800272E0 0170 .text      dStage_changeScene__FifUlScsi                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_changeScene(int, f32, u32, s8, s16, int) {
+asm void dStage_changeScene(int, f32, u32, s8, short, int) {
 	nofralloc
 #include "_include/d/d_stage/dStage_changeScene__FifUlScsi.s"
 }
 #pragma pop
 
 extern "C" {
-/* 800272E0 0008 .text      getSclsInfo__15dStage_roomDt_cCFv                            */
+/* 800272E0-800272E8 0008 .text      getSclsInfo__15dStage_roomDt_cCFv                            FirstParamFunction */
 // dStage_roomDt_c::getSclsInfo(void) const
 u32 getSclsInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[72]; /* param0->field_0x48 */
 }
 
-/* 800272E8 0008 .text      getSclsInfo__16dStage_stageDt_cCFv                           */
+/* 800272E8-800272F0 0008 .text      getSclsInfo__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getSclsInfo(void) const
 u32 getSclsInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[96]; /* param0->field_0x60 */
 }
 
-/* 800272F0 01C0 .text      dStage_changeScene4Event__FiScibfUlsi                        */
+/* 800272F0-800274B0 01C0 .text      dStage_changeScene4Event__FiScibfUlsi                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int) {
+asm void dStage_changeScene4Event(int, s8, int, bool, f32, u32, short, int) {
 	nofralloc
 #include "_include/d/d_stage/dStage_changeScene4Event__FiScibfUlsi.s"
 }
 #pragma pop
 
 extern "C" {
-/* 800274B0 0074 .text      dStage_restartRoom__FUlUli                                   */
+/* 800274B0-80027524 0074 .text      dStage_restartRoom__FUlUli                                   Function */
 }
 
 #pragma push
@@ -3155,7 +3799,7 @@ asm void dStage_restartRoom(u32, u32, int) {
 #pragma pop
 
 extern "C" {
-/* 80027524 0008 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           */
+/* 80027524-8002752C 0008 .text      setCamera__15dStage_roomDt_cFP18stage_camera_class           Function */
 // dStage_roomDt_c::setCamera(stage_camera_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3166,13 +3810,13 @@ asm void setCamera__15dStage_roomDt_cFP18stage_camera_class() {
 }
 #pragma pop
 
-/* 8002752C 0008 .text      getCamera__15dStage_roomDt_cCFv                              */
+/* 8002752C-80027534 0008 .text      getCamera__15dStage_roomDt_cCFv                              FirstParamFunction */
 // dStage_roomDt_c::getCamera(void) const
 u32 getCamera__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[52]; /* param0->field_0x34 */
 }
 
-/* 80027534 0008 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             */
+/* 80027534-8002753C 0008 .text      setArrow__15dStage_roomDt_cFP17stage_arrow_class             Function */
 // dStage_roomDt_c::setArrow(stage_arrow_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3183,13 +3827,13 @@ asm void setArrow__15dStage_roomDt_cFP17stage_arrow_class() {
 }
 #pragma pop
 
-/* 8002753C 0008 .text      getArrow__15dStage_roomDt_cCFv                               */
+/* 8002753C-80027544 0008 .text      getArrow__15dStage_roomDt_cCFv                               FirstParamFunction */
 // dStage_roomDt_c::getArrow(void) const
 u32 getArrow__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[56]; /* param0->field_0x38 */
 }
 
-/* 80027544 0008 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            */
+/* 80027544-8002754C 0008 .text      setPlayer__15dStage_roomDt_cFP17stage_actor_class            Function */
 // dStage_roomDt_c::setPlayer(stage_actor_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3200,7 +3844,7 @@ asm void setPlayer__15dStage_roomDt_cFP17stage_actor_class() {
 }
 #pragma pop
 
-/* 8002754C 0008 .text      setPlayerNum__15dStage_roomDt_cFUs                           */
+/* 8002754C-80027554 0008 .text      setPlayerNum__15dStage_roomDt_cFUs                           Function */
 // dStage_roomDt_c::setPlayerNum(u16)
 #pragma push
 #pragma optimization_level 0
@@ -3211,13 +3855,13 @@ asm void setPlayerNum__15dStage_roomDt_cFUs() {
 }
 #pragma pop
 
-/* 80027554 0008 .text      getPlayerNum__15dStage_roomDt_cCFv                           */
+/* 80027554-8002755C 0008 .text      getPlayerNum__15dStage_roomDt_cCFv                           FirstParamFunction */
 // dStage_roomDt_c::getPlayerNum(void) const
 u16 getPlayerNum__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u16*)&param0[96]; /* param0->field_0x60 */
 }
 
-/* 8002755C 0034 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 */
+/* 8002755C-80027590 0034 .text      setRoom__15dStage_roomDt_cFP14roomRead_class                 Function */
 // dStage_roomDt_c::setRoom(roomRead_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3228,7 +3872,7 @@ asm void setRoom__15dStage_roomDt_cFP14roomRead_class() {
 }
 #pragma pop
 
-/* 80027590 0034 .text      getRoom__15dStage_roomDt_cCFv                                */
+/* 80027590-800275C4 0034 .text      getRoom__15dStage_roomDt_cCFv                                Function */
 // dStage_roomDt_c::getRoom(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3239,7 +3883,7 @@ asm void getRoom__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 800275C4 0008 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        */
+/* 800275C4-800275CC 0008 .text      setMapInfo__15dStage_roomDt_cFP20stage_map_info_class        Function */
 // dStage_roomDt_c::setMapInfo(stage_map_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3250,13 +3894,13 @@ asm void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class() {
 }
 #pragma pop
 
-/* 800275CC 0008 .text      getMapInfo__15dStage_roomDt_cCFv                             */
+/* 800275CC-800275D4 0008 .text      getMapInfo__15dStage_roomDt_cCFv                             FirstParamFunction */
 // dStage_roomDt_c::getMapInfo(void) const
 u32 getMapInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[16]; /* param0->field_0x10 */
 }
 
-/* 800275D4 0008 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class */
+/* 800275D4-800275DC 0008 .text      setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class Function */
 // dStage_roomDt_c::setMapInfoBase(stage_map_info_dummy_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3267,7 +3911,7 @@ asm void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class() {
 }
 #pragma pop
 
-/* 800275DC 0034 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class */
+/* 800275DC-80027610 0034 .text      setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class Function */
 // dStage_roomDt_c::setPaletteInfo(stage_palette_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3278,7 +3922,7 @@ asm void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class() {
 }
 #pragma pop
 
-/* 80027610 0034 .text      getPaletteInfo__15dStage_roomDt_cCFv                         */
+/* 80027610-80027644 0034 .text      getPaletteInfo__15dStage_roomDt_cCFv                         Function */
 // dStage_roomDt_c::getPaletteInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3289,7 +3933,7 @@ asm void getPaletteInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027644 0034 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class */
+/* 80027644-80027678 0034 .text      setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class Function */
 // dStage_roomDt_c::setPselectInfo(stage_pselect_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3300,7 +3944,7 @@ asm void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class() {
 }
 #pragma pop
 
-/* 80027678 0034 .text      getPselectInfo__15dStage_roomDt_cCFv                         */
+/* 80027678-800276AC 0034 .text      getPselectInfo__15dStage_roomDt_cCFv                         Function */
 // dStage_roomDt_c::getPselectInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3311,7 +3955,7 @@ asm void getPselectInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 800276AC 0034 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      */
+/* 800276AC-800276E0 0034 .text      setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class      Function */
 // dStage_roomDt_c::setEnvrInfo(stage_envr_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3322,7 +3966,7 @@ asm void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class() {
 }
 #pragma pop
 
-/* 800276E0 0034 .text      getEnvrInfo__15dStage_roomDt_cCFv                            */
+/* 800276E0-80027714 0034 .text      getEnvrInfo__15dStage_roomDt_cCFv                            Function */
 // dStage_roomDt_c::getEnvrInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3333,7 +3977,7 @@ asm void getEnvrInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027714 0008 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    */
+/* 80027714-8002771C 0008 .text      setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class    Function */
 // dStage_roomDt_c::setVrboxInfo(stage_vrbox_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3344,13 +3988,13 @@ asm void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class() {
 }
 #pragma pop
 
-/* 8002771C 0008 .text      getVrboxInfo__15dStage_roomDt_cCFv                           */
+/* 8002771C-80027724 0008 .text      getVrboxInfo__15dStage_roomDt_cCFv                           FirstParamFunction */
 // dStage_roomDt_c::getVrboxInfo(void) const
 u32 getVrboxInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[24]; /* param0->field_0x18 */
 }
 
-/* 80027724 0008 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class */
+/* 80027724-8002772C 0008 .text      setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class Function */
 // dStage_roomDt_c::setVrboxcolInfo(stage_vrboxcol_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3361,13 +4005,13 @@ asm void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class() {
 }
 #pragma pop
 
-/* 8002772C 0008 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        */
+/* 8002772C-80027734 0008 .text      getVrboxcolInfo__15dStage_roomDt_cCFv                        FirstParamFunction */
 // dStage_roomDt_c::getVrboxcolInfo(void) const
 u32 getVrboxcolInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[28]; /* param0->field_0x1c */
 }
 
-/* 80027734 0034 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  */
+/* 80027734-80027768 0034 .text      setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class  Function */
 // dStage_roomDt_c::setPlightInfo(stage_plight_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3378,7 +4022,7 @@ asm void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class() {
 }
 #pragma pop
 
-/* 80027768 0034 .text      getPlightInfo__15dStage_roomDt_cCFv                          */
+/* 80027768-8002779C 0034 .text      getPlightInfo__15dStage_roomDt_cCFv                          Function */
 // dStage_roomDt_c::getPlightInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3389,7 +4033,7 @@ asm void getPlightInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 8002779C 0034 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       */
+/* 8002779C-800277D0 0034 .text      setPaletteNumInfo__15dStage_roomDt_cFi                       Function */
 // dStage_roomDt_c::setPaletteNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3400,7 +4044,7 @@ asm void setPaletteNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 800277D0 0034 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      */
+/* 800277D0-80027804 0034 .text      getPaletteNumInfo__15dStage_roomDt_cCFv                      Function */
 // dStage_roomDt_c::getPaletteNumInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3411,7 +4055,7 @@ asm void getPaletteNumInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027804 0034 .text      setPselectNumInfo__15dStage_roomDt_cFi                       */
+/* 80027804-80027838 0034 .text      setPselectNumInfo__15dStage_roomDt_cFi                       Function */
 // dStage_roomDt_c::setPselectNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3422,7 +4066,7 @@ asm void setPselectNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 80027838 0034 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      */
+/* 80027838-8002786C 0034 .text      getPselectNumInfo__15dStage_roomDt_cCFv                      Function */
 // dStage_roomDt_c::getPselectNumInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3433,7 +4077,7 @@ asm void getPselectNumInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 8002786C 0034 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          */
+/* 8002786C-800278A0 0034 .text      setEnvrNumInfo__15dStage_roomDt_cFi                          Function */
 // dStage_roomDt_c::setEnvrNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3444,7 +4088,7 @@ asm void setEnvrNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 800278A0 0034 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         */
+/* 800278A0-800278D4 0034 .text      getEnvrNumInfo__15dStage_roomDt_cCFv                         Function */
 // dStage_roomDt_c::getEnvrNumInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3455,7 +4099,7 @@ asm void getEnvrNumInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 800278D4 0008 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         */
+/* 800278D4-800278DC 0008 .text      setVrboxNumInfo__15dStage_roomDt_cFi                         Function */
 // dStage_roomDt_c::setVrboxNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3466,13 +4110,13 @@ asm void setVrboxNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 800278DC 0008 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        */
+/* 800278DC-800278E4 0008 .text      getVrboxNumInfo__15dStage_roomDt_cCFv                        FirstParamFunction */
 // dStage_roomDt_c::getVrboxNumInfo(void) const
 u32 getVrboxNumInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[100]; /* param0->field_0x64 */
 }
 
-/* 800278E4 0008 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      */
+/* 800278E4-800278EC 0008 .text      setVrboxcolNumInfo__15dStage_roomDt_cFi                      Function */
 // dStage_roomDt_c::setVrboxcolNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3483,13 +4127,13 @@ asm void setVrboxcolNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 800278EC 0008 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     */
+/* 800278EC-800278F4 0008 .text      getVrboxcolNumInfo__15dStage_roomDt_cCFv                     FirstParamFunction */
 // dStage_roomDt_c::getVrboxcolNumInfo(void) const
 u32 getVrboxcolNumInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[104]; /* param0->field_0x68 */
 }
 
-/* 800278F4 0034 .text      setPlightNumInfo__15dStage_roomDt_cFi                        */
+/* 800278F4-80027928 0034 .text      setPlightNumInfo__15dStage_roomDt_cFi                        Function */
 // dStage_roomDt_c::setPlightNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -3500,7 +4144,7 @@ asm void setPlightNumInfo__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 80027928 0034 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       */
+/* 80027928-8002795C 0034 .text      getPlightNumInfo__15dStage_roomDt_cCFv                       Function */
 // dStage_roomDt_c::getPlightNumInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3511,7 +4155,7 @@ asm void getPlightNumInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 8002795C 0008 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class */
+/* 8002795C-80027964 0008 .text      setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class Function */
 // dStage_roomDt_c::setLightVecInfo(stage_pure_lightvec_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3522,13 +4166,13 @@ asm void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class() 
 }
 #pragma pop
 
-/* 80027964 0008 .text      getLightVecInfo__15dStage_roomDt_cCFv                        */
+/* 80027964-8002796C 0008 .text      getLightVecInfo__15dStage_roomDt_cCFv                        FirstParamFunction */
 // dStage_roomDt_c::getLightVecInfo(void) const
 u32 getLightVecInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 8002796C 0008 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      */
+/* 8002796C-80027974 0008 .text      setLightVecInfoNum__15dStage_roomDt_cFi                      Function */
 // dStage_roomDt_c::setLightVecInfoNum(int)
 #pragma push
 #pragma optimization_level 0
@@ -3539,13 +4183,13 @@ asm void setLightVecInfoNum__15dStage_roomDt_cFi() {
 }
 #pragma pop
 
-/* 80027974 0008 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     */
+/* 80027974-8002797C 0008 .text      getLightVecInfoNum__15dStage_roomDt_cCFv                     FirstParamFunction */
 // dStage_roomDt_c::getLightVecInfoNum(void) const
 u32 getLightVecInfoNum__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[12]; /* param0->field_0xc */
 }
 
-/* 8002797C 0034 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      */
+/* 8002797C-800279B0 0034 .text      setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class      Function */
 // dStage_roomDt_c::setStagInfo(stage_stag_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3556,7 +4200,7 @@ asm void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class() {
 }
 #pragma pop
 
-/* 800279B0 0034 .text      getStagInfo__15dStage_roomDt_cCFv                            */
+/* 800279B0-800279E4 0034 .text      getStagInfo__15dStage_roomDt_cCFv                            Function */
 // dStage_roomDt_c::getStagInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3567,7 +4211,7 @@ asm void getStagInfo__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 800279E4 0008 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class */
+/* 800279E4-800279EC 0008 .text      setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class Function */
 // dStage_roomDt_c::setSclsInfo(stage_scls_info_dummy_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3578,7 +4222,7 @@ asm void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class() {
 }
 #pragma pop
 
-/* 800279EC 0034 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               */
+/* 800279EC-80027A20 0034 .text      setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c               Function */
 // dStage_roomDt_c::setPntInfo(dStage_dPnt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3589,7 +4233,7 @@ asm void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c() {
 }
 #pragma pop
 
-/* 80027A20 0034 .text      getPntInf__15dStage_roomDt_cCFv                              */
+/* 80027A20-80027A54 0034 .text      getPntInf__15dStage_roomDt_cCFv                              Function */
 // dStage_roomDt_c::getPntInf(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3600,7 +4244,7 @@ asm void getPntInf__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027A54 0034 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             */
+/* 80027A54-80027A88 0034 .text      setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c             Function */
 // dStage_roomDt_c::setPathInfo(dStage_dPath_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3611,7 +4255,7 @@ asm void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c() {
 }
 #pragma pop
 
-/* 80027A88 0034 .text      getPathInf__15dStage_roomDt_cCFv                             */
+/* 80027A88-80027ABC 0034 .text      getPathInf__15dStage_roomDt_cCFv                             Function */
 // dStage_roomDt_c::getPathInf(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3622,7 +4266,7 @@ asm void getPathInf__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027ABC 0008 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              */
+/* 80027ABC-80027AC4 0008 .text      setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c              Function */
 // dStage_roomDt_c::setPnt2Info(dStage_dPnt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3633,13 +4277,13 @@ asm void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c() {
 }
 #pragma pop
 
-/* 80027AC4 0008 .text      getPnt2Inf__15dStage_roomDt_cCFv                             */
+/* 80027AC4-80027ACC 0008 .text      getPnt2Inf__15dStage_roomDt_cCFv                             FirstParamFunction */
 // dStage_roomDt_c::getPnt2Inf(void) const
 u32 getPnt2Inf__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[44]; /* param0->field_0x2c */
 }
 
-/* 80027ACC 0008 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            */
+/* 80027ACC-80027AD4 0008 .text      setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c            Function */
 // dStage_roomDt_c::setPath2Info(dStage_dPath_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3650,13 +4294,13 @@ asm void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c() {
 }
 #pragma pop
 
-/* 80027AD4 0008 .text      getPath2Inf__15dStage_roomDt_cCFv                            */
+/* 80027AD4-80027ADC 0008 .text      getPath2Inf__15dStage_roomDt_cCFv                            FirstParamFunction */
 // dStage_roomDt_c::getPath2Inf(void) const
 u32 getPath2Inf__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[48]; /* param0->field_0x30 */
 }
 
-/* 80027ADC 0008 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         */
+/* 80027ADC-80027AE4 0008 .text      setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c         Function */
 // dStage_roomDt_c::setSoundInf(dStage_SoundInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3667,13 +4311,13 @@ asm void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
 }
 #pragma pop
 
-/* 80027AE4 0008 .text      getSoundInf__15dStage_roomDt_cCFv                            */
+/* 80027AE4-80027AEC 0008 .text      getSoundInf__15dStage_roomDt_cCFv                            FirstParamFunction */
 // dStage_roomDt_c::getSoundInf(void) const
 u32 getSoundInf__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[64]; /* param0->field_0x40 */
 }
 
-/* 80027AEC 0008 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       */
+/* 80027AEC-80027AF4 0008 .text      setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c       Function */
 // dStage_roomDt_c::setSoundInfCL(dStage_SoundInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3684,13 +4328,13 @@ asm void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c() {
 }
 #pragma pop
 
-/* 80027AF4 0008 .text      getSoundInfCL__15dStage_roomDt_cCFv                          */
+/* 80027AF4-80027AFC 0008 .text      getSoundInfCL__15dStage_roomDt_cCFv                          FirstParamFunction */
 // dStage_roomDt_c::getSoundInfCL(void) const
 u32 getSoundInfCL__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[68]; /* param0->field_0x44 */
 }
 
-/* 80027AFC 0008 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  */
+/* 80027AFC-80027B04 0008 .text      setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c  Function */
 // dStage_roomDt_c::setMapEventInfo(dStage_MapEventInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3701,13 +4345,13 @@ asm void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c() {
 }
 #pragma pop
 
-/* 80027B04 0008 .text      getMapEventInfo__15dStage_roomDt_cCFv                        */
+/* 80027B04-80027B0C 0008 .text      getMapEventInfo__15dStage_roomDt_cCFv                        FirstParamFunction */
 // dStage_roomDt_c::getMapEventInfo(void) const
 u32 getMapEventInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[60]; /* param0->field_0x3c */
 }
 
-/* 80027B0C 0008 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c */
+/* 80027B0C-80027B14 0008 .text      setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c Function */
 // dStage_roomDt_c::setFileList2Info(dStage_FileList2_dt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3718,13 +4362,13 @@ asm void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c() {
 }
 #pragma pop
 
-/* 80027B14 0008 .text      getFileList2Info__15dStage_roomDt_cCFv                       */
+/* 80027B14-80027B1C 0008 .text      getFileList2Info__15dStage_roomDt_cCFv                       FirstParamFunction */
 // dStage_roomDt_c::getFileList2Info(void) const
 u32 getFileList2Info__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 80027B1C 0008 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   */
+/* 80027B1C-80027B24 0008 .text      setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c   Function */
 // dStage_roomDt_c::setFileListInfo(dStage_FileList_dt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3735,7 +4379,7 @@ asm void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c() {
 }
 #pragma pop
 
-/* 80027B24 0008 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        */
+/* 80027B24-80027B2C 0008 .text      setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c        Function */
 // dStage_roomDt_c::setFloorInfo(dStage_FloorInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3746,13 +4390,13 @@ asm void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c() {
 }
 #pragma pop
 
-/* 80027B2C 0008 .text      getFloorInfo__15dStage_roomDt_cCFv                           */
+/* 80027B2C-80027B34 0008 .text      getFloorInfo__15dStage_roomDt_cCFv                           FirstParamFunction */
 // dStage_roomDt_c::getFloorInfo(void) const
 u32 getFloorInfo__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[92]; /* param0->field_0x5c */
 }
 
-/* 80027B34 0030 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  */
+/* 80027B34-80027B64 0030 .text      setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c  Function */
 // dStage_roomDt_c::setMemoryConfig(dStage_MemoryConfig_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3763,7 +4407,7 @@ asm void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c() {
 }
 #pragma pop
 
-/* 80027B64 0034 .text      getMemoryConfig__15dStage_roomDt_cCFv                        */
+/* 80027B64-80027B98 0034 .text      getMemoryConfig__15dStage_roomDt_cCFv                        Function */
 // dStage_roomDt_c::getMemoryConfig(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3774,7 +4418,7 @@ asm void getMemoryConfig__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027B98 0030 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        */
+/* 80027B98-80027BC8 0030 .text      setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c        Function */
 // dStage_roomDt_c::setMemoryMap(dStage_MemoryMap_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3785,7 +4429,7 @@ asm void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c() {
 }
 #pragma pop
 
-/* 80027BC8 0034 .text      getMemoryMap__15dStage_roomDt_cCFv                           */
+/* 80027BC8-80027BFC 0034 .text      getMemoryMap__15dStage_roomDt_cCFv                           Function */
 // dStage_roomDt_c::getMemoryMap(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3796,7 +4440,7 @@ asm void getMemoryMap__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027BFC 0030 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                */
+/* 80027BFC-80027C2C 0030 .text      setMulti__15dStage_roomDt_cFP14dStage_Multi_c                Function */
 // dStage_roomDt_c::setMulti(dStage_Multi_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3807,7 +4451,7 @@ asm void setMulti__15dStage_roomDt_cFP14dStage_Multi_c() {
 }
 #pragma pop
 
-/* 80027C2C 0034 .text      getMulti__15dStage_roomDt_cCFv                               */
+/* 80027C2C-80027C60 0034 .text      getMulti__15dStage_roomDt_cCFv                               Function */
 // dStage_roomDt_c::getMulti(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3818,7 +4462,7 @@ asm void getMulti__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027C60 0030 .text      setOldMulti__15dStage_roomDt_cFv                             */
+/* 80027C60-80027C90 0030 .text      setOldMulti__15dStage_roomDt_cFv                             Function */
 // dStage_roomDt_c::setOldMulti(void)
 #pragma push
 #pragma optimization_level 0
@@ -3829,7 +4473,7 @@ asm void setOldMulti__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80027C90 0030 .text      resetOldMulti__15dStage_roomDt_cFv                           */
+/* 80027C90-80027CC0 0030 .text      resetOldMulti__15dStage_roomDt_cFv                           Function */
 // dStage_roomDt_c::resetOldMulti(void)
 #pragma push
 #pragma optimization_level 0
@@ -3840,7 +4484,7 @@ asm void resetOldMulti__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80027CC0 0034 .text      getOldMulti__15dStage_roomDt_cCFv                            */
+/* 80027CC0-80027CF4 0034 .text      getOldMulti__15dStage_roomDt_cCFv                            Function */
 // dStage_roomDt_c::getOldMulti(void) const
 #pragma push
 #pragma optimization_level 0
@@ -3851,7 +4495,7 @@ asm void getOldMulti__15dStage_roomDt_cCFv() {
 }
 #pragma pop
 
-/* 80027CF4 0008 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  */
+/* 80027CF4-80027CFC 0008 .text      setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c                  Function */
 // dStage_roomDt_c::setLbnk(dStage_Lbnk_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3862,13 +4506,13 @@ asm void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c() {
 }
 #pragma pop
 
-/* 80027CFC 0008 .text      getLbnk__15dStage_roomDt_cCFv                                */
+/* 80027CFC-80027D04 0008 .text      getLbnk__15dStage_roomDt_cCFv                                FirstParamFunction */
 // dStage_roomDt_c::getLbnk(void) const
 u32 getLbnk__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[76]; /* param0->field_0x4c */
 }
 
-/* 80027D04 0008 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         */
+/* 80027D04-80027D0C 0008 .text      setTresure__15dStage_roomDt_cFP19stage_tresure_class         Function */
 // dStage_roomDt_c::setTresure(stage_tresure_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3879,25 +4523,25 @@ asm void setTresure__15dStage_roomDt_cFP19stage_tresure_class() {
 }
 #pragma pop
 
-/* 80027D0C 0008 .text      getTresure__15dStage_roomDt_cCFv                             */
+/* 80027D0C-80027D14 0008 .text      getTresure__15dStage_roomDt_cCFv                             FirstParamFunction */
 // dStage_roomDt_c::getTresure(void) const
 u32 getTresure__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[80]; /* param0->field_0x50 */
 }
 
-/* 80027D14 0004 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  */
+/* 80027D14-80027D18 0004 .text      setDMap__15dStage_roomDt_cFP13dStage_DMap_c                  ReturnFunction */
 // dStage_roomDt_c::setDMap(dStage_DMap_c*)
 void setDMap__15dStage_roomDt_cFP13dStage_DMap_c() {
 	return;
 }
 
-/* 80027D18 0008 .text      getDMap__15dStage_roomDt_cCFv                                */
+/* 80027D18-80027D20 0008 .text      getDMap__15dStage_roomDt_cCFv                                ReturnIntegerFunction */
 // dStage_roomDt_c::getDMap(void) const
 int getDMap__15dStage_roomDt_cCFv() {
 	return 0;
 }
 
-/* 80027D20 0008 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               */
+/* 80027D20-80027D28 0008 .text      setDrTg__15dStage_roomDt_cFP16stage_tgsc_class               Function */
 // dStage_roomDt_c::setDrTg(stage_tgsc_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3908,13 +4552,13 @@ asm void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class() {
 }
 #pragma pop
 
-/* 80027D28 0008 .text      getDrTg__15dStage_roomDt_cCFv                                */
+/* 80027D28-80027D30 0008 .text      getDrTg__15dStage_roomDt_cCFv                                FirstParamFunction */
 // dStage_roomDt_c::getDrTg(void) const
 u32 getDrTg__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[84]; /* param0->field_0x54 */
 }
 
-/* 80027D30 0008 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               */
+/* 80027D30-80027D38 0008 .text      setDoor__15dStage_roomDt_cFP16stage_tgsc_class               Function */
 // dStage_roomDt_c::setDoor(stage_tgsc_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3925,13 +4569,13 @@ asm void setDoor__15dStage_roomDt_cFP16stage_tgsc_class() {
 }
 #pragma pop
 
-/* 80027D38 0008 .text      getDoor__15dStage_roomDt_cCFv                                */
+/* 80027D38-80027D40 0008 .text      getDoor__15dStage_roomDt_cCFv                                FirstParamFunction */
 // dStage_roomDt_c::getDoor(void) const
 u32 getDoor__15dStage_roomDt_cCFv(u8* param0) {
 	return *(u32*)&param0[88]; /* param0->field_0x58 */
 }
 
-/* 80027D40 0030 .text      setMapPath__15dStage_roomDt_cFPv                             */
+/* 80027D40-80027D70 0030 .text      setMapPath__15dStage_roomDt_cFPv                             Function */
 // dStage_roomDt_c::setMapPath(void*)
 #pragma push
 #pragma optimization_level 0
@@ -3942,7 +4586,7 @@ asm void setMapPath__15dStage_roomDt_cFPv() {
 }
 #pragma pop
 
-/* 80027D70 0034 .text      getMapPath__15dStage_roomDt_cFv                              */
+/* 80027D70-80027DA4 0034 .text      getMapPath__15dStage_roomDt_cFv                              Function */
 // dStage_roomDt_c::getMapPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -3953,7 +4597,7 @@ asm void getMapPath__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80027DA4 0034 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  */
+/* 80027DA4-80027DD8 0034 .text      setElst__15dStage_roomDt_cFP13dStage_Elst_c                  Function */
 // dStage_roomDt_c::setElst(dStage_Elst_c*)
 #pragma push
 #pragma optimization_level 0
@@ -3964,7 +4608,7 @@ asm void setElst__15dStage_roomDt_cFP13dStage_Elst_c() {
 }
 #pragma pop
 
-/* 80027DD8 0038 .text      getElst__15dStage_roomDt_cFv                                 */
+/* 80027DD8-80027E10 0038 .text      getElst__15dStage_roomDt_cFv                                 Function */
 // dStage_roomDt_c::getElst(void)
 #pragma push
 #pragma optimization_level 0
@@ -3975,7 +4619,7 @@ asm void getElst__15dStage_roomDt_cFv() {
 }
 #pragma pop
 
-/* 80027E10 0008 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          */
+/* 80027E10-80027E18 0008 .text      setCamera__16dStage_stageDt_cFP18stage_camera_class          Function */
 // dStage_stageDt_c::setCamera(stage_camera_class*)
 #pragma push
 #pragma optimization_level 0
@@ -3986,13 +4630,13 @@ asm void setCamera__16dStage_stageDt_cFP18stage_camera_class() {
 }
 #pragma pop
 
-/* 80027E18 0008 .text      getCamera__16dStage_stageDt_cCFv                             */
+/* 80027E18-80027E20 0008 .text      getCamera__16dStage_stageDt_cCFv                             FirstParamFunction */
 // dStage_stageDt_c::getCamera(void) const
 u32 getCamera__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 80027E20 0008 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            */
+/* 80027E20-80027E28 0008 .text      setArrow__16dStage_stageDt_cFP17stage_arrow_class            Function */
 // dStage_stageDt_c::setArrow(stage_arrow_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4003,13 +4647,13 @@ asm void setArrow__16dStage_stageDt_cFP17stage_arrow_class() {
 }
 #pragma pop
 
-/* 80027E28 0008 .text      getArrow__16dStage_stageDt_cCFv                              */
+/* 80027E28-80027E30 0008 .text      getArrow__16dStage_stageDt_cCFv                              FirstParamFunction */
 // dStage_stageDt_c::getArrow(void) const
 u32 getArrow__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[12]; /* param0->field_0xc */
 }
 
-/* 80027E30 0008 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           */
+/* 80027E30-80027E38 0008 .text      setPlayer__16dStage_stageDt_cFP17stage_actor_class           Function */
 // dStage_stageDt_c::setPlayer(stage_actor_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4020,7 +4664,7 @@ asm void setPlayer__16dStage_stageDt_cFP17stage_actor_class() {
 }
 #pragma pop
 
-/* 80027E38 0008 .text      setPlayerNum__16dStage_stageDt_cFUs                          */
+/* 80027E38-80027E40 0008 .text      setPlayerNum__16dStage_stageDt_cFUs                          Function */
 // dStage_stageDt_c::setPlayerNum(u16)
 #pragma push
 #pragma optimization_level 0
@@ -4031,13 +4675,13 @@ asm void setPlayerNum__16dStage_stageDt_cFUs() {
 }
 #pragma pop
 
-/* 80027E40 0008 .text      getPlayerNum__16dStage_stageDt_cCFv                          */
+/* 80027E40-80027E48 0008 .text      getPlayerNum__16dStage_stageDt_cCFv                          FirstParamFunction */
 // dStage_stageDt_c::getPlayerNum(void) const
 u16 getPlayerNum__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u16*)&param0[84]; /* param0->field_0x54 */
 }
 
-/* 80027E48 0008 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                */
+/* 80027E48-80027E50 0008 .text      setRoom__16dStage_stageDt_cFP14roomRead_class                Function */
 // dStage_stageDt_c::setRoom(roomRead_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4048,7 +4692,7 @@ asm void setRoom__16dStage_stageDt_cFP14roomRead_class() {
 }
 #pragma pop
 
-/* 80027E50 0008 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       */
+/* 80027E50-80027E58 0008 .text      setMapInfo__16dStage_stageDt_cFP20stage_map_info_class       Function */
 // dStage_stageDt_c::setMapInfo(stage_map_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4059,13 +4703,13 @@ asm void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class() {
 }
 #pragma pop
 
-/* 80027E58 0008 .text      getMapInfo__16dStage_stageDt_cCFv                            */
+/* 80027E58-80027E60 0008 .text      getMapInfo__16dStage_stageDt_cCFv                            FirstParamFunction */
 // dStage_stageDt_c::getMapInfo(void) const
 u32 getMapInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[24]; /* param0->field_0x18 */
 }
 
-/* 80027E60 0008 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class */
+/* 80027E60-80027E68 0008 .text      setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class Function */
 // dStage_stageDt_c::setMapInfoBase(stage_map_info_dummy_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4076,7 +4720,7 @@ asm void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class() {
 }
 #pragma pop
 
-/* 80027E68 0008 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class */
+/* 80027E68-80027E70 0008 .text      setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class Function */
 // dStage_stageDt_c::setPaletteInfo(stage_palette_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4087,13 +4731,13 @@ asm void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class() {
 }
 #pragma pop
 
-/* 80027E70 0008 .text      getPaletteInfo__16dStage_stageDt_cCFv                        */
+/* 80027E70-80027E78 0008 .text      getPaletteInfo__16dStage_stageDt_cCFv                        FirstParamFunction */
 // dStage_stageDt_c::getPaletteInfo(void) const
 u32 getPaletteInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 80027E78 0008 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class */
+/* 80027E78-80027E80 0008 .text      setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class Function */
 // dStage_stageDt_c::setPselectInfo(stage_pselect_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4104,13 +4748,13 @@ asm void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class() {
 }
 #pragma pop
 
-/* 80027E80 0008 .text      getPselectInfo__16dStage_stageDt_cCFv                        */
+/* 80027E80-80027E88 0008 .text      getPselectInfo__16dStage_stageDt_cCFv                        FirstParamFunction */
 // dStage_stageDt_c::getPselectInfo(void) const
 u32 getPselectInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[36]; /* param0->field_0x24 */
 }
 
-/* 80027E88 0008 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     */
+/* 80027E88-80027E90 0008 .text      setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class     Function */
 // dStage_stageDt_c::setEnvrInfo(stage_envr_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4121,13 +4765,13 @@ asm void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class() {
 }
 #pragma pop
 
-/* 80027E90 0008 .text      getEnvrInfo__16dStage_stageDt_cCFv                           */
+/* 80027E90-80027E98 0008 .text      getEnvrInfo__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getEnvrInfo(void) const
 u32 getEnvrInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[40]; /* param0->field_0x28 */
 }
 
-/* 80027E98 0008 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   */
+/* 80027E98-80027EA0 0008 .text      setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class   Function */
 // dStage_stageDt_c::setVrboxInfo(stage_vrbox_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4138,13 +4782,13 @@ asm void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class() {
 }
 #pragma pop
 
-/* 80027EA0 0008 .text      getVrboxInfo__16dStage_stageDt_cCFv                          */
+/* 80027EA0-80027EA8 0008 .text      getVrboxInfo__16dStage_stageDt_cCFv                          FirstParamFunction */
 // dStage_stageDt_c::getVrboxInfo(void) const
 u32 getVrboxInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[44]; /* param0->field_0x2c */
 }
 
-/* 80027EA8 0008 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class */
+/* 80027EA8-80027EB0 0008 .text      setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class Function */
 // dStage_stageDt_c::setVrboxcolInfo(stage_vrboxcol_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4155,13 +4799,13 @@ asm void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class() {
 }
 #pragma pop
 
-/* 80027EB0 0008 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       */
+/* 80027EB0-80027EB8 0008 .text      getVrboxcolInfo__16dStage_stageDt_cCFv                       FirstParamFunction */
 // dStage_stageDt_c::getVrboxcolInfo(void) const
 u32 getVrboxcolInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[48]; /* param0->field_0x30 */
 }
 
-/* 80027EB8 0008 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class */
+/* 80027EB8-80027EC0 0008 .text      setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class Function */
 // dStage_stageDt_c::setPlightInfo(stage_plight_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4172,13 +4816,13 @@ asm void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class() {
 }
 #pragma pop
 
-/* 80027EC0 0008 .text      getPlightInfo__16dStage_stageDt_cCFv                         */
+/* 80027EC0-80027EC8 0008 .text      getPlightInfo__16dStage_stageDt_cCFv                         FirstParamFunction */
 // dStage_stageDt_c::getPlightInfo(void) const
 u32 getPlightInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[52]; /* param0->field_0x34 */
 }
 
-/* 80027EC8 0008 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      */
+/* 80027EC8-80027ED0 0008 .text      setPaletteNumInfo__16dStage_stageDt_cFi                      Function */
 // dStage_stageDt_c::setPaletteNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4189,13 +4833,13 @@ asm void setPaletteNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027ED0 0008 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     */
+/* 80027ED0-80027ED8 0008 .text      getPaletteNumInfo__16dStage_stageDt_cCFv                     FirstParamFunction */
 // dStage_stageDt_c::getPaletteNumInfo(void) const
 u32 getPaletteNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[60]; /* param0->field_0x3c */
 }
 
-/* 80027ED8 0008 .text      setPselectNumInfo__16dStage_stageDt_cFi                      */
+/* 80027ED8-80027EE0 0008 .text      setPselectNumInfo__16dStage_stageDt_cFi                      Function */
 // dStage_stageDt_c::setPselectNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4206,13 +4850,13 @@ asm void setPselectNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027EE0 0008 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     */
+/* 80027EE0-80027EE8 0008 .text      getPselectNumInfo__16dStage_stageDt_cCFv                     FirstParamFunction */
 // dStage_stageDt_c::getPselectNumInfo(void) const
 u32 getPselectNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[64]; /* param0->field_0x40 */
 }
 
-/* 80027EE8 0008 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         */
+/* 80027EE8-80027EF0 0008 .text      setEnvrNumInfo__16dStage_stageDt_cFi                         Function */
 // dStage_stageDt_c::setEnvrNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4223,13 +4867,13 @@ asm void setEnvrNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027EF0 0008 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        */
+/* 80027EF0-80027EF8 0008 .text      getEnvrNumInfo__16dStage_stageDt_cCFv                        FirstParamFunction */
 // dStage_stageDt_c::getEnvrNumInfo(void) const
 u32 getEnvrNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[68]; /* param0->field_0x44 */
 }
 
-/* 80027EF8 0008 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        */
+/* 80027EF8-80027F00 0008 .text      setVrboxNumInfo__16dStage_stageDt_cFi                        Function */
 // dStage_stageDt_c::setVrboxNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4240,13 +4884,13 @@ asm void setVrboxNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027F00 0008 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       */
+/* 80027F00-80027F08 0008 .text      getVrboxNumInfo__16dStage_stageDt_cCFv                       FirstParamFunction */
 // dStage_stageDt_c::getVrboxNumInfo(void) const
 u32 getVrboxNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[72]; /* param0->field_0x48 */
 }
 
-/* 80027F08 0008 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     */
+/* 80027F08-80027F10 0008 .text      setVrboxcolNumInfo__16dStage_stageDt_cFi                     Function */
 // dStage_stageDt_c::setVrboxcolNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4257,13 +4901,13 @@ asm void setVrboxcolNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027F10 0008 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    */
+/* 80027F10-80027F18 0008 .text      getVrboxcolNumInfo__16dStage_stageDt_cCFv                    FirstParamFunction */
 // dStage_stageDt_c::getVrboxcolNumInfo(void) const
 u32 getVrboxcolNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[76]; /* param0->field_0x4c */
 }
 
-/* 80027F18 0034 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class */
+/* 80027F18-80027F4C 0034 .text      setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class Function */
 // dStage_stageDt_c::setLightVecInfo(stage_pure_lightvec_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4274,7 +4918,7 @@ asm void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class()
 }
 #pragma pop
 
-/* 80027F4C 0034 .text      getLightVecInfo__16dStage_stageDt_cCFv                       */
+/* 80027F4C-80027F80 0034 .text      getLightVecInfo__16dStage_stageDt_cCFv                       Function */
 // dStage_stageDt_c::getLightVecInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -4285,7 +4929,7 @@ asm void getLightVecInfo__16dStage_stageDt_cCFv() {
 }
 #pragma pop
 
-/* 80027F80 0034 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     */
+/* 80027F80-80027FB4 0034 .text      setLightVecInfoNum__16dStage_stageDt_cFi                     Function */
 // dStage_stageDt_c::setLightVecInfoNum(int)
 #pragma push
 #pragma optimization_level 0
@@ -4296,7 +4940,7 @@ asm void setLightVecInfoNum__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027FB4 0034 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    */
+/* 80027FB4-80027FE8 0034 .text      getLightVecInfoNum__16dStage_stageDt_cCFv                    Function */
 // dStage_stageDt_c::getLightVecInfoNum(void) const
 #pragma push
 #pragma optimization_level 0
@@ -4307,7 +4951,7 @@ asm void getLightVecInfoNum__16dStage_stageDt_cCFv() {
 }
 #pragma pop
 
-/* 80027FE8 0008 .text      setPlightNumInfo__16dStage_stageDt_cFi                       */
+/* 80027FE8-80027FF0 0008 .text      setPlightNumInfo__16dStage_stageDt_cFi                       Function */
 // dStage_stageDt_c::setPlightNumInfo(int)
 #pragma push
 #pragma optimization_level 0
@@ -4318,13 +4962,13 @@ asm void setPlightNumInfo__16dStage_stageDt_cFi() {
 }
 #pragma pop
 
-/* 80027FF0 0008 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      */
+/* 80027FF0-80027FF8 0008 .text      getPlightNumInfo__16dStage_stageDt_cCFv                      FirstParamFunction */
 // dStage_stageDt_c::getPlightNumInfo(void) const
 u32 getPlightNumInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[80]; /* param0->field_0x50 */
 }
 
-/* 80027FF8 0008 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     */
+/* 80027FF8-80028000 0008 .text      setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class     Function */
 // dStage_stageDt_c::setStagInfo(stage_stag_info_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4335,7 +4979,7 @@ asm void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class() {
 }
 #pragma pop
 
-/* 80028000 0008 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class */
+/* 80028000-80028008 0008 .text      setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class Function */
 // dStage_stageDt_c::setSclsInfo(stage_scls_info_dummy_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4346,7 +4990,7 @@ asm void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class() {
 }
 #pragma pop
 
-/* 80028008 0008 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              */
+/* 80028008-80028010 0008 .text      setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c              Function */
 // dStage_stageDt_c::setPntInfo(dStage_dPnt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4357,13 +5001,13 @@ asm void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c() {
 }
 #pragma pop
 
-/* 80028010 0008 .text      getPntInf__16dStage_stageDt_cCFv                             */
+/* 80028010-80028018 0008 .text      getPntInf__16dStage_stageDt_cCFv                             FirstParamFunction */
 // dStage_stageDt_c::getPntInf(void) const
 u32 getPntInf__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[100]; /* param0->field_0x64 */
 }
 
-/* 80028018 0008 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            */
+/* 80028018-80028020 0008 .text      setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c            Function */
 // dStage_stageDt_c::setPathInfo(dStage_dPath_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4374,13 +5018,13 @@ asm void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c() {
 }
 #pragma pop
 
-/* 80028020 0008 .text      getPathInf__16dStage_stageDt_cCFv                            */
+/* 80028020-80028028 0008 .text      getPathInf__16dStage_stageDt_cCFv                            FirstParamFunction */
 // dStage_stageDt_c::getPathInf(void) const
 u32 getPathInf__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[104]; /* param0->field_0x68 */
 }
 
-/* 80028028 0008 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             */
+/* 80028028-80028030 0008 .text      setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c             Function */
 // dStage_stageDt_c::setPnt2Info(dStage_dPnt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4391,13 +5035,13 @@ asm void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c() {
 }
 #pragma pop
 
-/* 80028030 0008 .text      getPnt2Inf__16dStage_stageDt_cCFv                            */
+/* 80028030-80028038 0008 .text      getPnt2Inf__16dStage_stageDt_cCFv                            FirstParamFunction */
 // dStage_stageDt_c::getPnt2Inf(void) const
 u32 getPnt2Inf__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[108]; /* param0->field_0x6c */
 }
 
-/* 80028038 0008 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           */
+/* 80028038-80028040 0008 .text      setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c           Function */
 // dStage_stageDt_c::setPath2Info(dStage_dPath_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4408,13 +5052,13 @@ asm void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c() {
 }
 #pragma pop
 
-/* 80028040 0008 .text      getPath2Inf__16dStage_stageDt_cCFv                           */
+/* 80028040-80028048 0008 .text      getPath2Inf__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getPath2Inf(void) const
 u32 getPath2Inf__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[112]; /* param0->field_0x70 */
 }
 
-/* 80028048 0008 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        */
+/* 80028048-80028050 0008 .text      setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c        Function */
 // dStage_stageDt_c::setSoundInf(dStage_SoundInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4425,13 +5069,13 @@ asm void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
 }
 #pragma pop
 
-/* 80028050 0008 .text      getSoundInf__16dStage_stageDt_cCFv                           */
+/* 80028050-80028058 0008 .text      getSoundInf__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getSoundInf(void) const
 u32 getSoundInf__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[116]; /* param0->field_0x74 */
 }
 
-/* 80028058 0008 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      */
+/* 80028058-80028060 0008 .text      setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c      Function */
 // dStage_stageDt_c::setSoundInfCL(dStage_SoundInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4442,13 +5086,13 @@ asm void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c() {
 }
 #pragma pop
 
-/* 80028060 0008 .text      getSoundInfCL__16dStage_stageDt_cCFv                         */
+/* 80028060-80028068 0008 .text      getSoundInfCL__16dStage_stageDt_cCFv                         FirstParamFunction */
 // dStage_stageDt_c::getSoundInfCL(void) const
 u32 getSoundInfCL__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[120]; /* param0->field_0x78 */
 }
 
-/* 80028068 0008 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c */
+/* 80028068-80028070 0008 .text      setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c Function */
 // dStage_stageDt_c::setMapEventInfo(dStage_MapEventInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4459,13 +5103,13 @@ asm void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c() {
 }
 #pragma pop
 
-/* 80028070 0008 .text      getMapEventInfo__16dStage_stageDt_cCFv                       */
+/* 80028070-80028078 0008 .text      getMapEventInfo__16dStage_stageDt_cCFv                       FirstParamFunction */
 // dStage_stageDt_c::getMapEventInfo(void) const
 u32 getMapEventInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[56]; /* param0->field_0x38 */
 }
 
-/* 80028078 0034 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c */
+/* 80028078-800280AC 0034 .text      setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c Function */
 // dStage_stageDt_c::setFileList2Info(dStage_FileList2_dt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4476,7 +5120,7 @@ asm void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c() {
 }
 #pragma pop
 
-/* 800280AC 0034 .text      getFileList2Info__16dStage_stageDt_cCFv                      */
+/* 800280AC-800280E0 0034 .text      getFileList2Info__16dStage_stageDt_cCFv                      Function */
 // dStage_stageDt_c::getFileList2Info(void) const
 #pragma push
 #pragma optimization_level 0
@@ -4487,7 +5131,7 @@ asm void getFileList2Info__16dStage_stageDt_cCFv() {
 }
 #pragma pop
 
-/* 800280E0 0034 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  */
+/* 800280E0-80028114 0034 .text      setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c  Function */
 // dStage_stageDt_c::setFileListInfo(dStage_FileList_dt_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4498,7 +5142,7 @@ asm void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c() {
 }
 #pragma pop
 
-/* 80028114 0034 .text      getFileListInfo__16dStage_stageDt_cCFv                       */
+/* 80028114-80028148 0034 .text      getFileListInfo__16dStage_stageDt_cCFv                       Function */
 // dStage_stageDt_c::getFileListInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -4509,7 +5153,7 @@ asm void getFileListInfo__16dStage_stageDt_cCFv() {
 }
 #pragma pop
 
-/* 80028148 0008 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       */
+/* 80028148-80028150 0008 .text      setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c       Function */
 // dStage_stageDt_c::setFloorInfo(dStage_FloorInfo_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4520,13 +5164,13 @@ asm void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c() {
 }
 #pragma pop
 
-/* 80028150 0008 .text      getFloorInfo__16dStage_stageDt_cCFv                          */
+/* 80028150-80028158 0008 .text      getFloorInfo__16dStage_stageDt_cCFv                          FirstParamFunction */
 // dStage_stageDt_c::getFloorInfo(void) const
 u32 getFloorInfo__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[124]; /* param0->field_0x7c */
 }
 
-/* 80028158 0008 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c */
+/* 80028158-80028160 0008 .text      setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c Function */
 // dStage_stageDt_c::setMemoryConfig(dStage_MemoryConfig_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4537,13 +5181,13 @@ asm void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c() {
 }
 #pragma pop
 
-/* 80028160 0008 .text      getMemoryConfig__16dStage_stageDt_cCFv                       */
+/* 80028160-80028168 0008 .text      getMemoryConfig__16dStage_stageDt_cCFv                       FirstParamFunction */
 // dStage_stageDt_c::getMemoryConfig(void) const
 u32 getMemoryConfig__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[128]; /* param0->field_0x80 */
 }
 
-/* 80028168 0008 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       */
+/* 80028168-80028170 0008 .text      setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c       Function */
 // dStage_stageDt_c::setMemoryMap(dStage_MemoryMap_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4554,13 +5198,13 @@ asm void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c() {
 }
 #pragma pop
 
-/* 80028170 0008 .text      getMemoryMap__16dStage_stageDt_cCFv                          */
+/* 80028170-80028178 0008 .text      getMemoryMap__16dStage_stageDt_cCFv                          FirstParamFunction */
 // dStage_stageDt_c::getMemoryMap(void) const
 u32 getMemoryMap__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[132]; /* param0->field_0x84 */
 }
 
-/* 80028178 0008 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               */
+/* 80028178-80028180 0008 .text      setMulti__16dStage_stageDt_cFP14dStage_Multi_c               Function */
 // dStage_stageDt_c::setMulti(dStage_Multi_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4571,19 +5215,19 @@ asm void setMulti__16dStage_stageDt_cFP14dStage_Multi_c() {
 }
 #pragma pop
 
-/* 80028180 0008 .text      getMulti__16dStage_stageDt_cCFv                              */
+/* 80028180-80028188 0008 .text      getMulti__16dStage_stageDt_cCFv                              FirstParamFunction */
 // dStage_stageDt_c::getMulti(void) const
 u32 getMulti__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[136]; /* param0->field_0x88 */
 }
 
-/* 80028188 0008 .text      getOldMulti__16dStage_stageDt_cCFv                           */
+/* 80028188-80028190 0008 .text      getOldMulti__16dStage_stageDt_cCFv                           FirstParamFunction */
 // dStage_stageDt_c::getOldMulti(void) const
 u32 getOldMulti__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[140]; /* param0->field_0x8c */
 }
 
-/* 80028190 0034 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 */
+/* 80028190-800281C4 0034 .text      setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c                 Function */
 // dStage_stageDt_c::setLbnk(dStage_Lbnk_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4594,7 +5238,7 @@ asm void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c() {
 }
 #pragma pop
 
-/* 800281C4 0034 .text      getLbnk__16dStage_stageDt_cCFv                               */
+/* 800281C4-800281F8 0034 .text      getLbnk__16dStage_stageDt_cCFv                               Function */
 // dStage_stageDt_c::getLbnk(void) const
 #pragma push
 #pragma optimization_level 0
@@ -4605,7 +5249,7 @@ asm void getLbnk__16dStage_stageDt_cCFv() {
 }
 #pragma pop
 
-/* 800281F8 0008 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        */
+/* 800281F8-80028200 0008 .text      setTresure__16dStage_stageDt_cFP19stage_tresure_class        Function */
 // dStage_stageDt_c::setTresure(stage_tresure_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4616,13 +5260,13 @@ asm void setTresure__16dStage_stageDt_cFP19stage_tresure_class() {
 }
 #pragma pop
 
-/* 80028200 0008 .text      getTresure__16dStage_stageDt_cCFv                            */
+/* 80028200-80028208 0008 .text      getTresure__16dStage_stageDt_cCFv                            FirstParamFunction */
 // dStage_stageDt_c::getTresure(void) const
 u32 getTresure__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[144]; /* param0->field_0x90 */
 }
 
-/* 80028208 0008 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 */
+/* 80028208-80028210 0008 .text      setDMap__16dStage_stageDt_cFP13dStage_DMap_c                 Function */
 // dStage_stageDt_c::setDMap(dStage_DMap_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4633,13 +5277,13 @@ asm void setDMap__16dStage_stageDt_cFP13dStage_DMap_c() {
 }
 #pragma pop
 
-/* 80028210 0008 .text      getDMap__16dStage_stageDt_cCFv                               */
+/* 80028210-80028218 0008 .text      getDMap__16dStage_stageDt_cCFv                               FirstParamFunction */
 // dStage_stageDt_c::getDMap(void) const
 u32 getDMap__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[148]; /* param0->field_0x94 */
 }
 
-/* 80028218 0008 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              */
+/* 80028218-80028220 0008 .text      setDrTg__16dStage_stageDt_cFP16stage_tgsc_class              Function */
 // dStage_stageDt_c::setDrTg(stage_tgsc_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4650,13 +5294,13 @@ asm void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class() {
 }
 #pragma pop
 
-/* 80028220 0008 .text      getDrTg__16dStage_stageDt_cCFv                               */
+/* 80028220-80028228 0008 .text      getDrTg__16dStage_stageDt_cCFv                               FirstParamFunction */
 // dStage_stageDt_c::getDrTg(void) const
 u32 getDrTg__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[152]; /* param0->field_0x98 */
 }
 
-/* 80028228 0008 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              */
+/* 80028228-80028230 0008 .text      setDoor__16dStage_stageDt_cFP16stage_tgsc_class              Function */
 // dStage_stageDt_c::setDoor(stage_tgsc_class*)
 #pragma push
 #pragma optimization_level 0
@@ -4667,25 +5311,25 @@ asm void setDoor__16dStage_stageDt_cFP16stage_tgsc_class() {
 }
 #pragma pop
 
-/* 80028230 0008 .text      getDoor__16dStage_stageDt_cCFv                               */
+/* 80028230-80028238 0008 .text      getDoor__16dStage_stageDt_cCFv                               FirstParamFunction */
 // dStage_stageDt_c::getDoor(void) const
 u32 getDoor__16dStage_stageDt_cCFv(u8* param0) {
 	return *(u32*)&param0[156]; /* param0->field_0x9c */
 }
 
-/* 80028238 0004 .text      setMapPath__16dStage_stageDt_cFPv                            */
+/* 80028238-8002823C 0004 .text      setMapPath__16dStage_stageDt_cFPv                            ReturnFunction */
 // dStage_stageDt_c::setMapPath(void*)
 void setMapPath__16dStage_stageDt_cFPv() {
 	return;
 }
 
-/* 8002823C 0008 .text      getMapPath__16dStage_stageDt_cFv                             */
+/* 8002823C-80028244 0008 .text      getMapPath__16dStage_stageDt_cFv                             ReturnIntegerFunction */
 // dStage_stageDt_c::getMapPath(void)
 int getMapPath__16dStage_stageDt_cFv() {
 	return 0;
 }
 
-/* 80028244 0008 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 */
+/* 80028244-8002824C 0008 .text      setElst__16dStage_stageDt_cFP13dStage_Elst_c                 Function */
 // dStage_stageDt_c::setElst(dStage_Elst_c*)
 #pragma push
 #pragma optimization_level 0
@@ -4696,7 +5340,7 @@ asm void setElst__16dStage_stageDt_cFP13dStage_Elst_c() {
 }
 #pragma pop
 
-/* 8002824C 00DC .text      __sinit_d_stage_cpp                                          */
+/* 8002824C-80028328 00DC .text      __sinit_d_stage_cpp                                          SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4706,7 +5350,7 @@ asm void __sinit_d_stage_cpp() {
 }
 #pragma pop
 
-/* 80028328 0038 .text      __arraydtor$5375                                             */
+/* 80028328-80028360 0038 .text      __arraydtor$5375                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4716,7 +5360,7 @@ asm void func_80028328() {
 }
 #pragma pop
 
-/* 80028360 003C .text      __dt__19dStage_roomStatus_cFv                                */
+/* 80028360-8002839C 003C .text      __dt__19dStage_roomStatus_cFv                                Function */
 // dStage_roomStatus_c::~dStage_roomStatus_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -4727,7 +5371,7 @@ asm void __dt__19dStage_roomStatus_cFv() {
 }
 #pragma pop
 
-/* 8002839C 007C .text      __ct__19dStage_roomStatus_cFv                                */
+/* 8002839C-80028418 007C .text      __ct__19dStage_roomStatus_cFv                                Function */
 // dStage_roomStatus_c::dStage_roomStatus_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -4738,7 +5382,7 @@ asm void __ct__19dStage_roomStatus_cFv() {
 }
 #pragma pop
 
-/* 80028418 0064 .text      __dt__19dStage_KeepDoorInfoFv                                */
+/* 80028418-8002847C 0064 .text      __dt__19dStage_KeepDoorInfoFv                                Function */
 // dStage_KeepDoorInfo::~dStage_KeepDoorInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -4749,7 +5393,7 @@ asm void __dt__19dStage_KeepDoorInfoFv() {
 }
 #pragma pop
 
-/* 8002847C 003C .text      __dt__21stage_tgsc_data_classFv                              */
+/* 8002847C-800284B8 003C .text      __dt__21stage_tgsc_data_classFv                              Function */
 // stage_tgsc_data_class::~stage_tgsc_data_class(void)
 #pragma push
 #pragma optimization_level 0
@@ -4760,7 +5404,7 @@ asm void __dt__21stage_tgsc_data_classFv() {
 }
 #pragma pop
 
-/* 800284B8 0004 .text      __ct__21stage_tgsc_data_classFv                              */
+/* 800284B8-800284BC 0004 .text      __ct__21stage_tgsc_data_classFv                              ReturnFunction */
 // stage_tgsc_data_class::stage_tgsc_data_class(void)
 void __ct__21stage_tgsc_data_classFv() {
 	return;

@@ -11,9 +11,15 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__12JAISoundInfoFb();
+/* Function             */
 extern void __dt__12JAISoundInfoFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__12JAISoundInfo[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JAISoundInfo[10];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B5C[4];
 }
 
@@ -23,8 +29,8 @@ SECTION_SBSS extern u8 data_80450B5C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C99A0 0024 .data      __vt__12JAISoundInfo                                         */
-SECTION_DATA const  void* __vt__12JAISoundInfo[10] = {
+/* 803C99A0-803C99C8 0024 .data      __vt__12JAISoundInfo                                         VTableData */
+SECTION_DATA void* __vt__12JAISoundInfo[10] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -45,7 +51,7 @@ SECTION_DATA const  void* __vt__12JAISoundInfo[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A2D34 001C .text      __ct__12JAISoundInfoFb                                       */
+/* 802A2D34-802A2D50 001C .text      __ct__12JAISoundInfoFb                                       Function */
 // JAISoundInfo::JAISoundInfo(bool)
 #pragma push
 #pragma optimization_level 0
@@ -56,7 +62,7 @@ asm void __ct__12JAISoundInfoFb() {
 }
 #pragma pop
 
-/* 802A2D50 0064 .text      __dt__12JAISoundInfoFv                                       */
+/* 802A2D50-802A2DB4 0064 .text      __dt__12JAISoundInfoFv                                       Function */
 // JAISoundInfo::~JAISoundInfo(void)
 #pragma push
 #pragma optimization_level 0

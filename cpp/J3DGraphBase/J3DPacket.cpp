@@ -13,58 +13,137 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void __dt__9J3DPacketFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void setArray__15J3DVertexBufferCFv();
+/* Function             */
 extern void newDisplayList__17J3DDisplayListObjFUl();
+/* Function             */
 extern void newSingleDisplayList__17J3DDisplayListObjFUl();
+/* Function             */
+extern void single_To_Double__17J3DDisplayListObjFv();
+/* Function             */
+extern void setSingleDisplayList__17J3DDisplayListObjFPvUl();
+/* Function             */
 extern void swapBuffer__17J3DDisplayListObjFv();
+/* Function             */
 extern void callDL__17J3DDisplayListObjCFv();
+/* Function             */
 extern void beginDL__17J3DDisplayListObjFv();
+/* Function             */
 extern void endDL__17J3DDisplayListObjFv();
-extern int entry__9J3DPacketFP13J3DDrawBuffer();
+/* Function             */
+extern void beginPatch__17J3DDisplayListObjFv();
+/* Function             */
+extern void endPatch__17J3DDisplayListObjFv();
+/* ReturnIntegerFunction */
+extern  int entry__9J3DPacketFP13J3DDrawBuffer();
+/* Function             */
+extern void addChildPacket__9J3DPacketFP9J3DPacket();
+/* Function             */
 extern void __ct__13J3DDrawPacketFv();
+/* Function             */
 extern void __dt__13J3DDrawPacketFv();
+/* Function             */
 extern void newDisplayList__13J3DDrawPacketFUl();
+/* Function             */
+extern void newSingleDisplayList__13J3DDrawPacketFUl();
+/* Function             */
 extern void draw__13J3DDrawPacketFv();
+/* Function             */
+extern void __ct__12J3DMatPacketFv();
+/* Function             */
 extern void __dt__12J3DMatPacketFv();
+/* Function             */
+extern void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+/* Function             */
+extern void beginDiff__12J3DMatPacketFv();
+/* Function             */
+extern void endDiff__12J3DMatPacketFv();
+/* Function             */
+extern void isSame__12J3DMatPacketCFP12J3DMatPacket();
+/* Function             */
 extern void draw__12J3DMatPacketFv();
+/* Function             */
+extern void __ct__14J3DShapePacketFv();
+/* Function             */
 extern void __dt__14J3DShapePacketFv();
+/* Function             */
 extern void calcDifferedBufferSize__14J3DShapePacketFUl();
+/* Function             */
+extern void newDifferedDisplayList__14J3DShapePacketFUl();
+/* Function             */
 extern void prepareDraw__14J3DShapePacketCFv();
+/* Function             */
 extern void draw__14J3DShapePacketFv();
+/* Function             */
 extern void drawFast__14J3DShapePacketFv();
+/* ReturnFunction       */
 extern void draw__9J3DPacketFv();
+/* Function             */
 extern void entry__12J3DMatPacketFP13J3DDrawBuffer();
+/* Function             */
 extern void loadPreDrawSetting__8J3DShapeCFv();
+/* Function             */
 extern void syncJ3DSysFlags__12J3DModelDataCFv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void GXCallDisplayList();
+/* Function             */
 extern void GDInitGDLObj();
+/* Function             */
 extern void GDFlushCurrToMem();
+/* Function             */
 extern void GDPadCurr32();
+/* Function             */
 extern void __ptmf_scall();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_DATA extern u8 sDifferedRegister[32];
+/* InitializedData      */
 SECTION_DATA extern u8 sSizeOfDiffered[32];
-SECTION_DATA extern const void* __vt__14J3DShapePacket[5];
-SECTION_DATA extern const void* __vt__12J3DMatPacket[5];
-SECTION_DATA extern const void* __vt__13J3DDrawPacket[5];
-SECTION_DATA extern const void* __vt__9J3DPacket[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J3DShapePacket[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DMatPacket[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DDrawPacket[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9J3DPacket[5];
+/* InitializedData      */
 SECTION_DATA extern u8 sortFuncTable__13J3DDrawBuffer[72];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sGDLObj__17J3DDisplayListObj[16];
-SECTION_SBSS extern u8 sInterruptFlag__17J3DDisplayListObj[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sInterruptFlag__17J3DDisplayListObj[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_804515B0[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexGenBlock__17J3DDifferedTexMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sTexMtxObj__17J3DDifferedTexMtx[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 }
 
@@ -74,42 +153,42 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CD900 0020 .data      sDifferedRegister                                            */
+/* 803CD900-803CD920 0020 .data      sDifferedRegister                                            InitializedData */
 SECTION_DATA u8 sDifferedRegister[32] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x02, 0x01, 0x00, 0x00, 0x00,
 	0x10, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,
 };
-/* 803CD920 0020 .data      sSizeOfDiffered                                              */
+/* 803CD920-803CD940 0020 .data      sSizeOfDiffered                                              InitializedData */
 SECTION_DATA u8 sSizeOfDiffered[32] = {
 	0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x15, 0x00, 0x00, 0x00, 0x78,
 	0x00, 0x00, 0x00, 0x37, 0x00, 0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x13, 0x00, 0x00, 0x00, 0x2D,
 };
-/* 803CD940 0014 .data      __vt__14J3DShapePacket                                       */
-SECTION_DATA const  void* __vt__14J3DShapePacket[5] = {
+/* 803CD940-803CD954 0014 .data      __vt__14J3DShapePacket                                       VTableData */
+SECTION_DATA void* __vt__14J3DShapePacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__14J3DShapePacketFv,
 	(void*)__dt__14J3DShapePacketFv,
 };
-/* 803CD954 0014 .data      __vt__12J3DMatPacket                                         */
-SECTION_DATA const  void* __vt__12J3DMatPacket[5] = {
+/* 803CD954-803CD968 0014 .data      __vt__12J3DMatPacket                                         VTableData */
+SECTION_DATA void* __vt__12J3DMatPacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__12J3DMatPacketFP13J3DDrawBuffer,
 	(void*)draw__12J3DMatPacketFv,
 	(void*)__dt__12J3DMatPacketFv,
 };
-/* 803CD968 0014 .data      __vt__13J3DDrawPacket                                        */
-SECTION_DATA const  void* __vt__13J3DDrawPacket[5] = {
+/* 803CD968-803CD97C 0014 .data      __vt__13J3DDrawPacket                                        VTableData */
+SECTION_DATA void* __vt__13J3DDrawPacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
 	(void*)draw__13J3DDrawPacketFv,
 	(void*)__dt__13J3DDrawPacketFv,
 };
-/* 803CD97C 0014 .data      __vt__9J3DPacket                                             */
-SECTION_DATA const  void* __vt__9J3DPacket[5] = {
+/* 803CD97C-803CD990 0014 .data      __vt__9J3DPacket                                             VTableData */
+SECTION_DATA void* __vt__9J3DPacket[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
@@ -124,7 +203,7 @@ SECTION_DATA const  void* __vt__9J3DPacket[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434C70 0010 .bss       sGDLObj__17J3DDisplayListObj                                 */
+/* 80434C70-80434C80 0010 .bss       sGDLObj__17J3DDisplayListObj                                 ZeroInitializedData */
 SECTION_BSS u8 sGDLObj__17J3DDisplayListObj[16];
 }
 
@@ -134,9 +213,8 @@ SECTION_BSS u8 sGDLObj__17J3DDisplayListObj[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515A0 0004 .sbss      sInterruptFlag__17J3DDisplayListObj                          */
-SECTION_SBSS u8 sInterruptFlag__17J3DDisplayListObj[4];
-SECTION_SBSS u8 pad_804515A4[4];
+/* 804515A0-804515A8 0004 .sbss      sInterruptFlag__17J3DDisplayListObj                          ZeroInitializedData */
+SECTION_SBSS u8 sInterruptFlag__17J3DDisplayListObj[4 + 4 /* padding */];
 }
 
 
@@ -145,7 +223,7 @@ SECTION_SBSS u8 pad_804515A4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80312488 0080 .text      newDisplayList__17J3DDisplayListObjFUl                       */
+/* 80312488-80312508 0080 .text      newDisplayList__17J3DDisplayListObjFUl                       Function */
 // J3DDisplayListObj::newDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -156,7 +234,7 @@ asm void newDisplayList__17J3DDisplayListObjFUl() {
 }
 #pragma pop
 
-/* 80312508 0064 .text      newSingleDisplayList__17J3DDisplayListObjFUl                 */
+/* 80312508-8031256C 0064 .text      newSingleDisplayList__17J3DDisplayListObjFUl                 Function */
 // J3DDisplayListObj::newSingleDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -167,7 +245,7 @@ asm void newSingleDisplayList__17J3DDisplayListObjFUl() {
 }
 #pragma pop
 
-/* 8031256C 0078 .text      single_To_Double__17J3DDisplayListObjFv                      */
+/* 8031256C-803125E4 0078 .text      single_To_Double__17J3DDisplayListObjFv                      Function */
 // J3DDisplayListObj::single_To_Double(void)
 #pragma push
 #pragma optimization_level 0
@@ -178,7 +256,7 @@ asm void single_To_Double__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 803125E4 0020 .text      setSingleDisplayList__17J3DDisplayListObjFPvUl               */
+/* 803125E4-80312604 0020 .text      setSingleDisplayList__17J3DDisplayListObjFPvUl               Function */
 // J3DDisplayListObj::setSingleDisplayList(void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -189,7 +267,7 @@ asm void setSingleDisplayList__17J3DDisplayListObjFPvUl() {
 }
 #pragma pop
 
-/* 80312604 0014 .text      swapBuffer__17J3DDisplayListObjFv                            */
+/* 80312604-80312618 0014 .text      swapBuffer__17J3DDisplayListObjFv                            Function */
 // J3DDisplayListObj::swapBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -200,7 +278,7 @@ asm void swapBuffer__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 80312618 002C .text      callDL__17J3DDisplayListObjCFv                               */
+/* 80312618-80312644 002C .text      callDL__17J3DDisplayListObjCFv                               Function */
 // J3DDisplayListObj::callDL(void) const
 #pragma push
 #pragma optimization_level 0
@@ -211,7 +289,7 @@ asm void callDL__17J3DDisplayListObjCFv() {
 }
 #pragma pop
 
-/* 80312644 0054 .text      beginDL__17J3DDisplayListObjFv                               */
+/* 80312644-80312698 0054 .text      beginDL__17J3DDisplayListObjFv                               Function */
 // J3DDisplayListObj::beginDL(void)
 #pragma push
 #pragma optimization_level 0
@@ -222,7 +300,7 @@ asm void beginDL__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 80312698 005C .text      endDL__17J3DDisplayListObjFv                                 */
+/* 80312698-803126F4 005C .text      endDL__17J3DDisplayListObjFv                                 Function */
 // J3DDisplayListObj::endDL(void)
 #pragma push
 #pragma optimization_level 0
@@ -233,7 +311,7 @@ asm void endDL__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 803126F4 0020 .text      beginPatch__17J3DDisplayListObjFv                            */
+/* 803126F4-80312714 0020 .text      beginPatch__17J3DDisplayListObjFv                            Function */
 // J3DDisplayListObj::beginPatch(void)
 #pragma push
 #pragma optimization_level 0
@@ -244,7 +322,7 @@ asm void beginPatch__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 80312714 003C .text      endPatch__17J3DDisplayListObjFv                              */
+/* 80312714-80312750 003C .text      endPatch__17J3DDisplayListObjFv                              Function */
 // J3DDisplayListObj::endPatch(void)
 #pragma push
 #pragma optimization_level 0
@@ -255,13 +333,13 @@ asm void endPatch__17J3DDisplayListObjFv() {
 }
 #pragma pop
 
-/* 80312750 0008 .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
+/* 80312750-80312758 0008 .text      entry__9J3DPacketFP13J3DDrawBuffer                           ReturnIntegerFunction */
 // J3DPacket::entry(J3DDrawBuffer*)
 int entry__9J3DPacketFP13J3DDrawBuffer() {
 	return 1;
 }
 
-/* 80312758 0020 .text      addChildPacket__9J3DPacketFP9J3DPacket                       */
+/* 80312758-80312778 0020 .text      addChildPacket__9J3DPacketFP9J3DPacket                       Function */
 // J3DPacket::addChildPacket(J3DPacket*)
 #pragma push
 #pragma optimization_level 0
@@ -272,7 +350,7 @@ asm void addChildPacket__9J3DPacketFP9J3DPacket() {
 }
 #pragma pop
 
-/* 80312778 0038 .text      __ct__13J3DDrawPacketFv                                      */
+/* 80312778-803127B0 0038 .text      __ct__13J3DDrawPacketFv                                      Function */
 // J3DDrawPacket::J3DDrawPacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -283,7 +361,7 @@ asm void __ct__13J3DDrawPacketFv() {
 }
 #pragma pop
 
-/* 803127B0 005C .text      __dt__13J3DDrawPacketFv                                      */
+/* 803127B0-8031280C 005C .text      __dt__13J3DDrawPacketFv                                      Function */
 // J3DDrawPacket::~J3DDrawPacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -294,7 +372,7 @@ asm void __dt__13J3DDrawPacketFv() {
 }
 #pragma pop
 
-/* 8031280C 008C .text      newDisplayList__13J3DDrawPacketFUl                           */
+/* 8031280C-80312898 008C .text      newDisplayList__13J3DDrawPacketFUl                           Function */
 // J3DDrawPacket::newDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -305,7 +383,7 @@ asm void newDisplayList__13J3DDrawPacketFUl() {
 }
 #pragma pop
 
-/* 80312898 008C .text      newSingleDisplayList__13J3DDrawPacketFUl                     */
+/* 80312898-80312924 008C .text      newSingleDisplayList__13J3DDrawPacketFUl                     Function */
 // J3DDrawPacket::newSingleDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -316,7 +394,7 @@ asm void newSingleDisplayList__13J3DDrawPacketFUl() {
 }
 #pragma pop
 
-/* 80312924 0024 .text      draw__13J3DDrawPacketFv                                      */
+/* 80312924-80312948 0024 .text      draw__13J3DDrawPacketFv                                      Function */
 // J3DDrawPacket::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -327,7 +405,7 @@ asm void draw__13J3DDrawPacketFv() {
 }
 #pragma pop
 
-/* 80312948 005C .text      __ct__12J3DMatPacketFv                                       */
+/* 80312948-803129A4 005C .text      __ct__12J3DMatPacketFv                                       Function */
 // J3DMatPacket::J3DMatPacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -338,7 +416,7 @@ asm void __ct__12J3DMatPacketFv() {
 }
 #pragma pop
 
-/* 803129A4 0060 .text      __dt__12J3DMatPacketFv                                       */
+/* 803129A4-80312A04 0060 .text      __dt__12J3DMatPacketFv                                       Function */
 // J3DMatPacket::~J3DMatPacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -349,7 +427,7 @@ asm void __dt__12J3DMatPacketFv() {
 }
 #pragma pop
 
-/* 80312A04 0020 .text      addShapePacket__12J3DMatPacketFP14J3DShapePacket             */
+/* 80312A04-80312A24 0020 .text      addShapePacket__12J3DMatPacketFP14J3DShapePacket             Function */
 // J3DMatPacket::addShapePacket(J3DShapePacket*)
 #pragma push
 #pragma optimization_level 0
@@ -360,7 +438,7 @@ asm void addShapePacket__12J3DMatPacketFP14J3DShapePacket() {
 }
 #pragma pop
 
-/* 80312A24 0028 .text      beginDiff__12J3DMatPacketFv                                  */
+/* 80312A24-80312A4C 0028 .text      beginDiff__12J3DMatPacketFv                                  Function */
 // J3DMatPacket::beginDiff(void)
 #pragma push
 #pragma optimization_level 0
@@ -371,7 +449,7 @@ asm void beginDiff__12J3DMatPacketFv() {
 }
 #pragma pop
 
-/* 80312A4C 0028 .text      endDiff__12J3DMatPacketFv                                    */
+/* 80312A4C-80312A74 0028 .text      endDiff__12J3DMatPacketFv                                    Function */
 // J3DMatPacket::endDiff(void)
 #pragma push
 #pragma optimization_level 0
@@ -382,7 +460,7 @@ asm void endDiff__12J3DMatPacketFv() {
 }
 #pragma pop
 
-/* 80312A74 0028 .text      isSame__12J3DMatPacketCFP12J3DMatPacket                      */
+/* 80312A74-80312A9C 0028 .text      isSame__12J3DMatPacketCFP12J3DMatPacket                      Function */
 // J3DMatPacket::isSame(J3DMatPacket*) const
 #pragma push
 #pragma optimization_level 0
@@ -393,7 +471,7 @@ asm void isSame__12J3DMatPacketCFP12J3DMatPacket() {
 }
 #pragma pop
 
-/* 80312A9C 0084 .text      draw__12J3DMatPacketFv                                       */
+/* 80312A9C-80312B20 0084 .text      draw__12J3DMatPacketFv                                       Function */
 // J3DMatPacket::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -404,7 +482,7 @@ asm void draw__12J3DMatPacketFv() {
 }
 #pragma pop
 
-/* 80312B20 0054 .text      __ct__14J3DShapePacketFv                                     */
+/* 80312B20-80312B74 0054 .text      __ct__14J3DShapePacketFv                                     Function */
 // J3DShapePacket::J3DShapePacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -415,7 +493,7 @@ asm void __ct__14J3DShapePacketFv() {
 }
 #pragma pop
 
-/* 80312B74 0060 .text      __dt__14J3DShapePacketFv                                     */
+/* 80312B74-80312BD4 0060 .text      __dt__14J3DShapePacketFv                                     Function */
 // J3DShapePacket::~J3DShapePacket(void)
 #pragma push
 #pragma optimization_level 0
@@ -426,7 +504,7 @@ asm void __dt__14J3DShapePacketFv() {
 }
 #pragma pop
 
-/* 80312BD4 01E8 .text      calcDifferedBufferSize__14J3DShapePacketFUl                  */
+/* 80312BD4-80312DBC 01E8 .text      calcDifferedBufferSize__14J3DShapePacketFUl                  Function */
 // J3DShapePacket::calcDifferedBufferSize(u32)
 #pragma push
 #pragma optimization_level 0
@@ -437,7 +515,7 @@ asm void calcDifferedBufferSize__14J3DShapePacketFUl() {
 }
 #pragma pop
 
-/* 80312DBC 004C .text      newDifferedDisplayList__14J3DShapePacketFUl                  */
+/* 80312DBC-80312E08 004C .text      newDifferedDisplayList__14J3DShapePacketFUl                  Function */
 // J3DShapePacket::newDifferedDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -448,7 +526,7 @@ asm void newDifferedDisplayList__14J3DShapePacketFUl() {
 }
 #pragma pop
 
-/* 80312E08 011C .text      prepareDraw__14J3DShapePacketCFv                             */
+/* 80312E08-80312F24 011C .text      prepareDraw__14J3DShapePacketCFv                             Function */
 // J3DShapePacket::prepareDraw(void) const
 #pragma push
 #pragma optimization_level 0
@@ -459,7 +537,7 @@ asm void prepareDraw__14J3DShapePacketCFv() {
 }
 #pragma pop
 
-/* 80312F24 0098 .text      draw__14J3DShapePacketFv                                     */
+/* 80312F24-80312FBC 0098 .text      draw__14J3DShapePacketFv                                     Function */
 // J3DShapePacket::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -470,7 +548,7 @@ asm void draw__14J3DShapePacketFv() {
 }
 #pragma pop
 
-/* 80312FBC 0088 .text      drawFast__14J3DShapePacketFv                                 */
+/* 80312FBC-80313044 0088 .text      drawFast__14J3DShapePacketFv                                 Function */
 // J3DShapePacket::drawFast(void)
 #pragma push
 #pragma optimization_level 0
@@ -481,13 +559,13 @@ asm void drawFast__14J3DShapePacketFv() {
 }
 #pragma pop
 
-/* 80313044 0004 .text      draw__9J3DPacketFv                                           */
+/* 80313044-80313048 0004 .text      draw__9J3DPacketFv                                           ReturnFunction */
 // J3DPacket::draw(void)
 void draw__9J3DPacketFv() {
 	return;
 }
 
-/* 80313048 0060 .text      entry__12J3DMatPacketFP13J3DDrawBuffer                       */
+/* 80313048-803130A8 0060 .text      entry__12J3DMatPacketFP13J3DDrawBuffer                       Function */
 // J3DMatPacket::entry(J3DDrawBuffer*)
 #pragma push
 #pragma optimization_level 0

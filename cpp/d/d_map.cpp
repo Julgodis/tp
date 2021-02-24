@@ -20,172 +20,361 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void operator delete[](void*); /* __dla__FPv */
 
 extern "C" {
+/* Function             */
 extern void getIconSize__15renderingAmap_cCFUc();
+/* Function             */
 extern void draw__15renderingAmap_cFv();
+/* Function             */
 extern void getDispType__15renderingAmap_cCFv();
+/* Function             */
 extern void beforeDrawPath__15renderingAmap_cFv();
+/* Function             */
 extern void afterDrawPath__15renderingAmap_cFv();
+/* Function             */
 extern void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class();
+/* Function             */
 extern void drawPath__15renderingAmap_cFv();
+/* Function             */
 extern void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class();
+/* Function             */
 extern void getPlayerCursorSize__15renderingAmap_cFv();
+/* Function             */
 extern void getRestartCursorSize__15renderingAmap_cFv();
+/* Function             */
 extern void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class();
+/* Function             */
 extern void isDrawOutSideTrim__15renderingAmap_cFv();
+/* Function             */
 extern void getOutSideBlackLineNumber__15renderingAmap_cFv();
+/* Function             */
 extern void isOutSideBlackLine__15renderingAmap_cFv();
+/* Function             */
 extern void getLineWidthSub__15renderingAmap_cFi();
+/* Function             */
 extern void getDecorationLineWidth__15renderingAmap_cFi();
+/* Function             */
 extern void getLineWidth__15renderingAmap_cFi();
+/* Function             */
 extern void getColor__6dMap_cFi();
+/* Function             */
 extern void getLineColor__15renderingAmap_cFii();
+/* Function             */
 extern void getDecoLineColor__15renderingAmap_cFii();
+/* Function             */
 extern void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getIconGroupNumber__15renderingAmap_cCFUc();
+/* Function             */
 extern void hasMap__15renderingAmap_cCFv();
+/* Function             */
 extern void isRendDoor__15renderingAmap_cCFv();
-extern int isCheckFloor__15renderingAmap_cCFv();
-extern int isRendRestart__15renderingAmap_cCFv();
-extern int isRendCursor__15renderingAmap_cCFv();
+/* ReturnIntegerFunction */
+extern  int isCheckFloor__15renderingAmap_cCFv();
+/* ReturnIntegerFunction */
+extern  int isRendRestart__15renderingAmap_cCFv();
+/* ReturnIntegerFunction */
+extern  int isRendCursor__15renderingAmap_cCFv();
+/* Function             */
 extern void isRendAllRoom__15renderingAmap_cCFv();
+/* Function             */
 extern void getStayType__15renderingAmap_cCFv();
+/* Function             */
 extern void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi();
+/* Function             */
 extern void isDrawType__6dMap_cFi();
+/* Function             */
 extern void isRendAllRoom__6dMap_cCFv();
-extern int isSpecialOutline__6dMap_cFv();
+/* ReturnIntegerFunction */
+extern  int isSpecialOutline__6dMap_cFv();
+/* Function             */
 extern void copyPalette__6dMap_cFv();
+/* Function             */
 extern void setMapPaletteColorAlphaPer__6dMap_cFiif();
+/* Function             */
 extern void resCopy__6dMap_cFv();
+/* Function             */
+extern void __ct__6dMap_cFiiii();
+/* Function             */
 extern void _remove__6dMap_cFv();
+/* Function             */
 extern void getMapMinMaxXZ__6dMap_cFiPfPfPfPf();
+/* Function             */
 extern void getPack__6dMap_cFiPfPf();
+/* Function             */
 extern void calcMapCenterXZ__6dMap_cFiPfPf();
+/* Function             */
 extern void calcMapCmPerTexel__6dMap_cFiPf();
+/* Function             */
 extern void setMapPaletteColorAlphaPer__6dMap_cFif();
+/* Function             */
 extern void copyPalette__6dMap_cFiif();
+/* Function             */
 extern void setAmapPaletteColor__6dMap_cFiUcUcUcUc();
+/* Function             */
 extern void getDispType__6dMap_cCFv();
+/* Function             */
 extern void isDrawRoom__6dMap_cCFii();
+/* Function             */
 extern void getRoomNoSingle__6dMap_cFv();
+/* Function             */
 extern void isDrawRoomIcon__6dMap_cCFii();
+/* Function             */
+extern void _move__6dMap_cFffif();
+/* Function             */
+extern void _draw__6dMap_cFv();
+/* Function             */
 extern void getFirstData__6dMap_cFUc();
+/* Function             */
 extern void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c();
+/* ReturnFunction       */
 extern void draw__12dDlst_base_cFv();
-extern int isDrawType__11dDrawPath_cFi();
+/* ReturnIntegerFunction */
+extern  int isDrawType__11dDrawPath_cFi();
+/* Function             */
+extern void __dt__18dRenderingFDAmap_cFv();
+/* Function             */
 extern void __dt__15dRenderingMap_cFv();
+/* Function             */
 extern void __dt__28dDrawPathWithNormalPattern_cFv();
+/* Function             */
+extern void __dt__11dDrawPath_cFv();
+/* Function             */
 extern void getLineColor__11dDrawPath_cFii();
+/* Function             */
 extern void __dt__15renderingAmap_cFv();
+/* Function             */
 extern void __ct__15renderingAmap_cFv();
+/* Function             */
 extern void __dt__6dMap_cFv();
-extern int isRendIcon__15renderingAmap_cCFv();
+/* ReturnIntegerFunction */
+extern  int isRendIcon__15renderingAmap_cCFv();
+/* Function             */
+extern void __dt__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
+extern void __dt__19renderingPlusDoor_cFv();
+/* Function             */
+extern void __dt__16renderingDAmap_cFv();
+/* Function             */
 extern void dComIfGp_isLightDropMapVisible__Fv();
+/* Function             */
 extern void isTbox__12dSv_memBit_cCFi();
+/* Function             */
 extern void isDungeonItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void isSwitch__12dSv_danBit_cCFi();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+/* Function             */
 extern void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+/* Function             */
 extern void drawPath__11dDrawPath_cFv();
+/* Function             */
 extern void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
+/* Function             */
 extern void preRenderingMap__18dRenderingFDAmap_cFv();
+/* Function             */
 extern void postRenderingMap__18dRenderingFDAmap_cFv();
+/* Function             */
 extern void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
+/* Function             */
 extern void chkGetCompass__10dMapInfo_nFv();
+/* Function             */
 extern void chkGetMap__10dMapInfo_nFv();
+/* Function             */
 extern void isVisitedRoom__10dMapInfo_nFi();
+/* Function             */
 extern void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf();
+/* Function             */
 extern void move__10dMapInfo_cFif();
+/* Function             */
 extern void init__16renderingDAmap_cFPUcUsUsUsUs();
+/* Function             */
 extern void entry__16renderingDAmap_cFfffiSc();
+/* Function             */
 extern void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class();
+/* Function             */
 extern void draw__16renderingDAmap_cFv();
+/* Function             */
 extern void getBackColor__16renderingDAmap_cCFv();
+/* Function             */
 extern void isRenderingFloor__16renderingDAmap_cFi();
+/* Function             */
 extern void isDrawRoom__16renderingDAmap_cCFii();
+/* Function             */
 extern void preDrawPath__16renderingDAmap_cFv();
+/* Function             */
 extern void postDrawPath__16renderingDAmap_cFv();
+/* FirstParamFunction   */
 extern u32 getRoomNoSingle__16renderingDAmap_cFv(u8*);
+/* Function             */
 extern void getFirstRoomPointer__16renderingDAmap_cFv();
+/* Function             */
 extern void getNextRoomPointer__16renderingDAmap_cFv();
+/* Function             */
 extern void isDrawPath__16renderingDAmap_cFv();
-extern int getFirstDrawLayerNo__16renderingDAmap_cFv();
+/* ReturnIntegerFunction */
+extern  int getFirstDrawLayerNo__16renderingDAmap_cFv();
+/* Function             */
 extern void getNextDrawLayerNo__16renderingDAmap_cFi();
+/* Function             */
 extern void afterDrawPath__28renderingPlusDoorAndCursor_cFv();
+/* Function             */
 extern void isDrawRoomIcon__16renderingDAmap_cCFii();
+/* Function             */
 extern void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec();
+/* Function             */
 extern void getFirstData__28renderingPlusDoorAndCursor_cFUc();
+/* Function             */
 extern void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c();
+/* Function             */
 extern void getIconGroupNumber__16renderingDAmap_cCFUc();
+/* Function             */
 extern void getTypeToTypeGroupNo__7dTres_cFUc();
+/* Function             */
 extern void cLib_memCpy__FPvPCvUl();
+/* Function             */
 extern void __nw__FUli();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __dla__FPv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void GXGetTexBufferSize();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_map__data_80378E48[68];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80378E8C[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80378EB0[36];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80378ED4[36];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80378EF8[16];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80378F08[28];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_map__stringBase0[20];
-SECTION_DATA extern u8 d_d_map__LIT_3806[32];
-SECTION_DATA extern u8 d_d_map__LIT_4259[68];
-SECTION_DATA extern u8 d_d_map__LIT_4694[28];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern const void* __vt__28dDrawPathWithNormalPattern_c[16];
-SECTION_DATA extern const void* __vt__15dRenderingMap_c[23];
-SECTION_DATA extern const void* __vt__6dMap_c[49];
-SECTION_DATA extern const void* __vt__15renderingAmap_c[49];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_map__LIT_3806[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_map__LIT_4259[17];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_map__LIT_4694[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28dDrawPathWithNormalPattern_c[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dRenderingMap_c[23];
+/* VTableData           */
+SECTION_DATA extern void* __vt__6dMap_c[49];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15renderingAmap_c[49];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern const void* __vt__18dRenderingFDAmap_c[26];
-SECTION_DATA extern const void* __vt__11dDrawPath_c[16];
-SECTION_DATA extern const void* __vt__19renderingPlusDoor_c[41];
-SECTION_DATA extern const void* __vt__28renderingPlusDoorAndCursor_c[47];
-SECTION_DATA extern const void* __vt__16renderingDAmap_c[38];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dRenderingFDAmap_c[26];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dDrawPath_c[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19renderingPlusDoor_c[41];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28renderingPlusDoorAndCursor_c[47];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16renderingDAmap_c[38];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_BSS extern u8 g_Counter[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804505F8[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 mNextRoomNo__10dMapInfo_c[4];
-SECTION_SBSS extern u8 m_res__22dMap_HIO_prm_res_dst_s[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 m_res__22dMap_HIO_prm_res_dst_s[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450E58[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450E60[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMinX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMaxX__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMinZ__8dMpath_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMaxZ__8dMpath_c[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_3745;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_3746;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_map__LIT_3747[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_map__LIT_3749;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_map__LIT_3751;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451CC0[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451CC8[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451CD0[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451CD8[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451CDC[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4284;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_map__LIT_4321[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4503;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4688;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4689;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4690;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4691;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_map__LIT_4692;
 }
 
@@ -195,8 +384,17 @@ SECTION_SDATA2 extern f32 d_d_map__LIT_4692;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80378E48 0000 .rodata    ...rodata.0                                                  */
-/* 80378E48 0044 .rodata    l_iconSize$3698                                              */
+/* 80378F24-80378F38 000F .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80378F24 = "Always";
+SECTION_DEAD const char* const stringBase_80378F2B = "F_SP121";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80378F33 = "\0\0\0\0";
+#pragma pop
+/* 80378E48-80378E48 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 80378E48-80378E8C 0044 .rodata    l_iconSize$3698                                              InitializedData */
 SECTION_RODATA const u8 d_d_map__data_80378E48[68] = {
 	0x3D, 0xF5, 0xC2, 0x8F, 0x3D, 0xF5, 0xC2, 0x8F, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xF5, 0xC2, 0x8F,
 	0x3D, 0xA3, 0xD7, 0x0A, 0x3E, 0x23, 0xD7, 0x0A, 0x3D, 0xF5, 0xC2, 0x8F, 0x00, 0x00, 0x00, 0x00,
@@ -204,36 +402,33 @@ SECTION_RODATA const u8 d_d_map__data_80378E48[68] = {
 	0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xA3, 0xD7, 0x0A, 0x3D, 0xA3, 0xD7, 0x0A,
 	0x3D, 0xA3, 0xD7, 0x0A,
 };
-/* 80378E8C 0024 .rodata    l_dungeon_offColor$3937                                      */
+/* 80378E8C-80378EB0 0024 .rodata    l_dungeon_offColor$3937                                      InitializedData */
 SECTION_RODATA const u8 data_80378E8C[36] = {
 	0x08, 0x00, 0x00, 0x00, 0x0C, 0x00, 0x00, 0x00, 0x10, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x14, 0x00, 0x00, 0x00, 0x18, 0x00, 0x00, 0x00, 0x1C, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x00,
 	0x24, 0x00, 0x00, 0x00,
 };
-/* 80378EB0 0024 .rodata    l_dungeon_onColor$3938                                       */
+/* 80378EB0-80378ED4 0024 .rodata    l_dungeon_onColor$3938                                       InitializedData */
 SECTION_RODATA const u8 data_80378EB0[36] = {
 	0x28, 0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x34, 0x00, 0x00, 0x00, 0x38, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00,
 	0x44, 0x00, 0x00, 0x00,
 };
-/* 80378ED4 0024 .rodata    l_dungeon_stayColor$3939                                     */
+/* 80378ED4-80378EF8 0024 .rodata    l_dungeon_stayColor$3939                                     InitializedData */
 SECTION_RODATA const u8 data_80378ED4[36] = {
 	0x48, 0x00, 0x00, 0x00, 0x4C, 0x00, 0x00, 0x00, 0x50, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
 	0x54, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5C, 0x00, 0x00, 0x00, 0x60, 0x00, 0x00, 0x00,
 	0x64, 0x00, 0x00, 0x00,
 };
-/* 80378EF8 0010 .rodata    colorTable$3993                                              */
+/* 80378EF8-80378F08 0010 .rodata    colorTable$3993                                              InitializedData */
 SECTION_RODATA const u8 data_80378EF8[16] = {
 	0xBC, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0xC4, 0x00, 0x00, 0x00, 0xC8, 0x00, 0x00, 0x00,
 };
-/* 80378F08 001C .rodata    l_stayType$4046                                              */
+/* 80378F08-80378F24 001C .rodata    l_stayType$4046                                              InitializedData */
 SECTION_RODATA const u8 data_80378F08[28] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80378F24 000F .rodata    @stringBase0                                                 */
-const char* const stringBase_80378F24 = "Always";
-const char* const stringBase_80378F2B = "F_SP121";
 }
 
 
@@ -242,32 +437,55 @@ const char* const stringBase_80378F2B = "F_SP121";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A6F08 0020 .data      @3806                                                        */
-SECTION_DATA u8 d_d_map__LIT_3806[32] = {
-	0x80, 0x02, 0x89, 0x1C, 0x80, 0x02, 0x89, 0x24, 0x80, 0x02, 0x89, 0x2C, 0x80, 0x02, 0x89, 0x34,
-	0x80, 0x02, 0x89, 0x3C, 0x80, 0x02, 0x89, 0x1C, 0x80, 0x02, 0x89, 0x44, 0x80, 0x02, 0x89, 0x14,
+/* 803A6F08-803A6F28 0020 .data      @3806                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_map__LIT_3806[8] = {
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+22),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+24),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+26),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+28),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+30),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+22),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+32),
+	(void*)(((u32*)getDispType__15renderingAmap_cCFv)+20),
 };
-/* 803A6F28 0044 .data      @4259                                                        */
-SECTION_DATA u8 d_d_map__LIT_4259[68] = {
-	0x80, 0x02, 0x92, 0x30, 0x80, 0x02, 0x92, 0x74, 0x80, 0x02, 0x92, 0xE0, 0x80, 0x02, 0x94, 0xA0,
-	0x80, 0x02, 0x93, 0x1C, 0x80, 0x02, 0x94, 0x3C, 0x80, 0x02, 0x96, 0xD0, 0x80, 0x02, 0x96, 0xD0,
-	0x80, 0x02, 0x92, 0x74, 0x80, 0x02, 0x95, 0x08, 0x80, 0x02, 0x95, 0x50, 0x80, 0x02, 0x95, 0x8C,
-	0x80, 0x02, 0x95, 0xAC, 0x80, 0x02, 0x95, 0xF4, 0x80, 0x02, 0x95, 0xF4, 0x80, 0x02, 0x96, 0x30,
-	0x80, 0x02, 0x96, 0x78,
+/* 803A6F28-803A6F6C 0044 .data      @4259                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_map__LIT_4259[17] = {
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+40),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+57),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+84),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+196),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+99),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+171),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+336),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+336),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+57),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+222),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+240),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+255),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+263),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+281),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+281),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+296),
+	(void*)(((u32*)isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi)+314),
 };
-/* 803A6F6C 001C .data      @4694                                                        */
-SECTION_DATA u8 d_d_map__LIT_4694[28] = {
-	0x80, 0x02, 0xA6, 0x7C, 0x80, 0x02, 0xA6, 0xB4, 0x80, 0x02, 0xA6, 0xF8, 0x80, 0x02, 0xA7, 0x24,
-	0x80, 0x02, 0xA7, 0xB0, 0x80, 0x02, 0xA7, 0xD4, 0x80, 0x02, 0xA7, 0xF0,
+/* 803A6F6C-803A6F88 001C .data      @4694                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_map__LIT_4694[7] = {
+	(void*)(((u32*)_move__6dMap_cFffif)+212),
+	(void*)(((u32*)_move__6dMap_cFffif)+226),
+	(void*)(((u32*)_move__6dMap_cFffif)+243),
+	(void*)(((u32*)_move__6dMap_cFffif)+254),
+	(void*)(((u32*)_move__6dMap_cFffif)+289),
+	(void*)(((u32*)_move__6dMap_cFffif)+298),
+	(void*)(((u32*)_move__6dMap_cFffif)+305),
 };
-/* 803A6F88 000C .data      __vt__12dDlst_base_c                                         */
-SECTION_DATA const  void* __vt__12dDlst_base_c[3] = {
+/* 803A6F88-803A6F94 000C .data      __vt__12dDlst_base_c                                         VTableData */
+SECTION_DATA void* __vt__12dDlst_base_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__12dDlst_base_cFv,
 };
-/* 803A6F94 0040 .data      __vt__28dDrawPathWithNormalPattern_c                         */
-SECTION_DATA const  void* __vt__28dDrawPathWithNormalPattern_c[16] = {
+/* 803A6F94-803A6FD4 0040 .data      __vt__28dDrawPathWithNormalPattern_c                         VTableData */
+SECTION_DATA void* __vt__28dDrawPathWithNormalPattern_c[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__12dDlst_base_cFv,
@@ -285,8 +503,8 @@ SECTION_DATA const  void* __vt__28dDrawPathWithNormalPattern_c[16] = {
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
 	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
 };
-/* 803A6FD4 005C .data      __vt__15dRenderingMap_c                                      */
-SECTION_DATA const  void* __vt__15dRenderingMap_c[23] = {
+/* 803A6FD4-803A7030 005C .data      __vt__15dRenderingMap_c                                      VTableData */
+SECTION_DATA void* __vt__15dRenderingMap_c[23] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__12dDlst_base_cFv,
@@ -311,8 +529,8 @@ SECTION_DATA const  void* __vt__15dRenderingMap_c[23] = {
 	NULL,
 	NULL,
 };
-/* 803A7030 00C4 .data      __vt__6dMap_c                                                */
-SECTION_DATA const  void* __vt__6dMap_c[49] = {
+/* 803A7030-803A70F4 00C4 .data      __vt__6dMap_c                                                VTableData */
+SECTION_DATA void* __vt__6dMap_c[49] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15renderingAmap_cFv,
@@ -363,8 +581,8 @@ SECTION_DATA const  void* __vt__6dMap_c[49] = {
 	(void*)setAmapPaletteColor__6dMap_cFiUcUcUcUc,
 	(void*)isSpecialOutline__6dMap_cFv,
 };
-/* 803A70F4 00C4 .data      __vt__15renderingAmap_c                                      */
-SECTION_DATA const  void* __vt__15renderingAmap_c[49] = {
+/* 803A70F4-803A71B8 00C4 .data      __vt__15renderingAmap_c                                      VTableData */
+SECTION_DATA void* __vt__15renderingAmap_c[49] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15renderingAmap_cFv,
@@ -423,7 +641,7 @@ SECTION_DATA const  void* __vt__15renderingAmap_c[49] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505F8 0004 .sdata     backColor$3972                                               */
+/* 804505F8-80450600 0004 .sdata     backColor$3972                                               InitializedData */
 SECTION_SDATA u8 data_804505F8[8] = {
 	0x04, 0x00, 0x00, 0x00,
 	/* padding */
@@ -437,73 +655,73 @@ SECTION_SDATA u8 data_804505F8[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451CA0 0004 .sdata2    @3745                                                        */
+/* 80451CA0-80451CA4 0004 .sdata2    @3745                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_map__LIT_3745 = 0.500000f;
-/* 80451CA4 0004 .sdata2    @3746                                                        */
+/* 80451CA4-80451CA8 0004 .sdata2    @3746                                                        Float32Data */
 // 0x47800000
 SECTION_SDATA2 f32 d_d_map__LIT_3746 = 65536.000000f;
-/* 80451CA8 0004 .sdata2    @3747                                                        */
+/* 80451CA8-80451CB0 0004 .sdata2    @3747                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_map__LIT_3747[8] = {
 	0x47, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451CB0 0008 .sdata2    @3749                                                        */
+/* 80451CB0-80451CB8 0008 .sdata2    @3749                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_map__LIT_3749 = 4503599627370496.000000;
-/* 80451CB8 0008 .sdata2    @3751                                                        */
+/* 80451CB8-80451CC0 0008 .sdata2    @3751                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_map__LIT_3751 = 4503601774854144.000000;
-/* 80451CC0 0005 .sdata2    l_lineWidthPatOff$3899                                       */
+/* 80451CC0-80451CC8 0005 .sdata2    l_lineWidthPatOff$3899                                       InitializedData */
 SECTION_SDATA2 u8 data_80451CC0[8] = {
 	0x00, 0x00, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 80451CC8 0005 .sdata2    l_lineWidthPatOn$3900                                        */
+/* 80451CC8-80451CD0 0005 .sdata2    l_lineWidthPatOn$3900                                        InitializedData */
 SECTION_SDATA2 u8 data_80451CC8[8] = {
 	0x06, 0x06, 0x06, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 80451CD0 0005 .sdata2    l_lineWidthPatStay$3901                                      */
+/* 80451CD0-80451CD8 0005 .sdata2    l_lineWidthPatStay$3901                                      InitializedData */
 SECTION_SDATA2 u8 data_80451CD0[8] = {
 	0x06, 0x06, 0x0C, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 80451CD8 0004 .sdata2    borderColor0$3975                                            */
+/* 80451CD8-80451CDC 0004 .sdata2    borderColor0$3975                                            InitializedData */
 SECTION_SDATA2 u8 data_80451CD8[4] = {
 	0xB4, 0x00, 0x00, 0x00,
 };
-/* 80451CDC 0004 .sdata2    borderColor1$3976                                            */
+/* 80451CDC-80451CE0 0004 .sdata2    borderColor1$3976                                            InitializedData */
 SECTION_SDATA2 u8 data_80451CDC[4] = {
 	0xB8, 0x00, 0x00, 0x00,
 };
-/* 80451CE0 0004 .sdata2    @4284                                                        */
+/* 80451CE0-80451CE4 0004 .sdata2    @4284                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_map__LIT_4284 = 1.000000f;
-/* 80451CE4 0004 .sdata2    @4321                                                        */
+/* 80451CE4-80451CE8 0004 .sdata2    @4321                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_map__LIT_4321[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451CE8 0004 .sdata2    @4503                                                        */
+/* 80451CE8-80451CEC 0004 .sdata2    @4503                                                        Float32Data */
 // 0x4628c000
 SECTION_SDATA2 f32 d_d_map__LIT_4503 = 10800.000000f;
-/* 80451CEC 0004 .sdata2    @4688                                                        */
+/* 80451CEC-80451CF0 0004 .sdata2    @4688                                                        Float32Data */
 // 0xc567e000
 SECTION_SDATA2 f32 d_d_map__LIT_4688 = -3710.000000f;
-/* 80451CF0 0004 .sdata2    @4689                                                        */
+/* 80451CF0-80451CF4 0004 .sdata2    @4689                                                        Float32Data */
 // 0xc6aefa00
 SECTION_SDATA2 f32 d_d_map__LIT_4689 = -22397.000000f;
-/* 80451CF4 0004 .sdata2    @4690                                                        */
+/* 80451CF4-80451CF8 0004 .sdata2    @4690                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 d_d_map__LIT_4690 = 60.000000f;
-/* 80451CF8 0004 .sdata2    @4691                                                        */
+/* 80451CF8-80451CFC 0004 .sdata2    @4691                                                        Float32Data */
 // 0x40a00000
 SECTION_SDATA2 f32 d_d_map__LIT_4691 = 5.000000f;
-/* 80451CFC 0004 .sdata2    @4692                                                        */
+/* 80451CFC-80451D00 0004 .sdata2    @4692                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 d_d_map__LIT_4692 = 20.000000f;
 }
@@ -514,9 +732,8 @@ SECTION_SDATA2 f32 d_d_map__LIT_4692 = 20.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D80 0004 .sbss      m_res__22dMap_HIO_prm_res_dst_s                              */
-SECTION_SBSS u8 m_res__22dMap_HIO_prm_res_dst_s[4];
-SECTION_SBSS u8 pad_80450D84[4];
+/* 80450D80-80450D88 0004 .sbss      m_res__22dMap_HIO_prm_res_dst_s                              ZeroInitializedData */
+SECTION_SBSS u8 m_res__22dMap_HIO_prm_res_dst_s[4 + 4 /* padding */];
 }
 
 
@@ -525,7 +742,7 @@ SECTION_SBSS u8 pad_80450D84[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800284BC 0014 .text      getIconSize__15renderingAmap_cCFUc                           */
+/* 800284BC-800284D0 0014 .text      getIconSize__15renderingAmap_cCFUc                           Function */
 // renderingAmap_c::getIconSize(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -536,7 +753,7 @@ asm void getIconSize__15renderingAmap_cCFUc() {
 }
 #pragma pop
 
-/* 800284D0 03F4 .text      draw__15renderingAmap_cFv                                    */
+/* 800284D0-800288C4 03F4 .text      draw__15renderingAmap_cFv                                    Function */
 // renderingAmap_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -547,7 +764,7 @@ asm void draw__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 800288C4 009C .text      getDispType__15renderingAmap_cCFv                            */
+/* 800288C4-80028960 009C .text      getDispType__15renderingAmap_cCFv                            Function */
 // renderingAmap_c::getDispType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -558,7 +775,7 @@ asm void getDispType__15renderingAmap_cCFv() {
 }
 #pragma pop
 
-/* 80028960 0070 .text      beforeDrawPath__15renderingAmap_cFv                          */
+/* 80028960-800289D0 0070 .text      beforeDrawPath__15renderingAmap_cFv                          Function */
 // renderingAmap_c::beforeDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -569,7 +786,7 @@ asm void beforeDrawPath__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 800289D0 0020 .text      afterDrawPath__15renderingAmap_cFv                           */
+/* 800289D0-800289F0 0020 .text      afterDrawPath__15renderingAmap_cFv                           Function */
 // renderingAmap_c::afterDrawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -580,7 +797,7 @@ asm void afterDrawPath__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 800289F0 0020 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class   */
+/* 800289F0-80028A10 0020 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class   Function */
 // renderingAmap_c::rendering(dDrawPath_c::room_class)
 #pragma push
 #pragma optimization_level 0
@@ -591,7 +808,7 @@ asm void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class() {
 }
 #pragma pop
 
-/* 80028A10 0020 .text      drawPath__15renderingAmap_cFv                                */
+/* 80028A10-80028A30 0020 .text      drawPath__15renderingAmap_cFv                                Function */
 // renderingAmap_c::drawPath(void)
 #pragma push
 #pragma optimization_level 0
@@ -602,7 +819,7 @@ asm void drawPath__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028A30 00D4 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class   */
+/* 80028A30-80028B04 00D4 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class   Function */
 // renderingAmap_c::rendering(dDrawPath_c::line_class)
 #pragma push
 #pragma optimization_level 0
@@ -613,7 +830,7 @@ asm void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class() {
 }
 #pragma pop
 
-/* 80028B04 000C .text      getPlayerCursorSize__15renderingAmap_cFv                     */
+/* 80028B04-80028B10 000C .text      getPlayerCursorSize__15renderingAmap_cFv                     Function */
 // renderingAmap_c::getPlayerCursorSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +841,7 @@ asm void getPlayerCursorSize__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028B10 002C .text      getRestartCursorSize__15renderingAmap_cFv                    */
+/* 80028B10-80028B3C 002C .text      getRestartCursorSize__15renderingAmap_cFv                    Function */
 // renderingAmap_c::getRestartCursorSize(void)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +852,7 @@ asm void getRestartCursorSize__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028B3C 0078 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class   */
+/* 80028B3C-80028BB4 0078 .text      rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class   Function */
 // renderingAmap_c::rendering(dDrawPath_c::poly_class)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +863,7 @@ asm void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class() {
 }
 #pragma pop
 
-/* 80028BB4 0098 .text      isDrawOutSideTrim__15renderingAmap_cFv                       */
+/* 80028BB4-80028C4C 0098 .text      isDrawOutSideTrim__15renderingAmap_cFv                       Function */
 // renderingAmap_c::isDrawOutSideTrim(void)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +874,7 @@ asm void isDrawOutSideTrim__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028C4C 0014 .text      getOutSideBlackLineNumber__15renderingAmap_cFv               */
+/* 80028C4C-80028C60 0014 .text      getOutSideBlackLineNumber__15renderingAmap_cFv               Function */
 // renderingAmap_c::getOutSideBlackLineNumber(void)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +885,7 @@ asm void getOutSideBlackLineNumber__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028C60 0030 .text      isOutSideBlackLine__15renderingAmap_cFv                      */
+/* 80028C60-80028C90 0030 .text      isOutSideBlackLine__15renderingAmap_cFv                      Function */
 // renderingAmap_c::isOutSideBlackLine(void)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +896,7 @@ asm void isOutSideBlackLine__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 80028C90 0064 .text      getLineWidthSub__15renderingAmap_cFi                         */
+/* 80028C90-80028CF4 0064 .text      getLineWidthSub__15renderingAmap_cFi                         Function */
 // renderingAmap_c::getLineWidthSub(int)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +907,7 @@ asm void getLineWidthSub__15renderingAmap_cFi() {
 }
 #pragma pop
 
-/* 80028CF4 00E0 .text      getDecorationLineWidth__15renderingAmap_cFi                  */
+/* 80028CF4-80028DD4 00E0 .text      getDecorationLineWidth__15renderingAmap_cFi                  Function */
 // renderingAmap_c::getDecorationLineWidth(int)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +918,7 @@ asm void getDecorationLineWidth__15renderingAmap_cFi() {
 }
 #pragma pop
 
-/* 80028DD4 0020 .text      getLineWidth__15renderingAmap_cFi                            */
+/* 80028DD4-80028DF4 0020 .text      getLineWidth__15renderingAmap_cFi                            Function */
 // renderingAmap_c::getLineWidth(int)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +929,7 @@ asm void getLineWidth__15renderingAmap_cFi() {
 }
 #pragma pop
 
-/* 80028DF4 00F0 .text      getColor__6dMap_cFi                                          */
+/* 80028DF4-80028EE4 00F0 .text      getColor__6dMap_cFi                                          Function */
 // dMap_c::getColor(int)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +940,7 @@ asm void getColor__6dMap_cFi() {
 }
 #pragma pop
 
-/* 80028EE4 00D0 .text      getLineColor__15renderingAmap_cFii                           */
+/* 80028EE4-80028FB4 00D0 .text      getLineColor__15renderingAmap_cFii                           Function */
 // renderingAmap_c::getLineColor(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +951,7 @@ asm void getLineColor__15renderingAmap_cFii() {
 }
 #pragma pop
 
-/* 80028FB4 0084 .text      getDecoLineColor__15renderingAmap_cFii                       */
+/* 80028FB4-80029038 0084 .text      getDecoLineColor__15renderingAmap_cFii                       Function */
 // renderingAmap_c::getDecoLineColor(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +962,7 @@ asm void getDecoLineColor__15renderingAmap_cFii() {
 }
 #pragma pop
 
-/* 80029038 0020 .text      getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c       */
+/* 80029038-80029058 0020 .text      getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c       Function */
 // dMap_c::getIconPosition(dTres_c::typeGroupData_c) const
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +973,7 @@ asm void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c() {
 }
 #pragma pop
 
-/* 80029058 0020 .text      getIconGroupNumber__15renderingAmap_cCFUc                    */
+/* 80029058-80029078 0020 .text      getIconGroupNumber__15renderingAmap_cCFUc                    Function */
 // renderingAmap_c::getIconGroupNumber(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +984,7 @@ asm void getIconGroupNumber__15renderingAmap_cCFUc() {
 }
 #pragma pop
 
-/* 80029078 0048 .text      hasMap__15renderingAmap_cCFv                                 */
+/* 80029078-800290C0 0048 .text      hasMap__15renderingAmap_cCFv                                 Function */
 // renderingAmap_c::hasMap(void) const
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +995,7 @@ asm void hasMap__15renderingAmap_cCFv() {
 }
 #pragma pop
 
-/* 800290C0 0044 .text      isRendDoor__15renderingAmap_cCFv                             */
+/* 800290C0-80029104 0044 .text      isRendDoor__15renderingAmap_cCFv                             Function */
 // renderingAmap_c::isRendDoor(void) const
 #pragma push
 #pragma optimization_level 0
@@ -789,25 +1006,25 @@ asm void isRendDoor__15renderingAmap_cCFv() {
 }
 #pragma pop
 
-/* 80029104 0008 .text      isCheckFloor__15renderingAmap_cCFv                           */
+/* 80029104-8002910C 0008 .text      isCheckFloor__15renderingAmap_cCFv                           ReturnIntegerFunction */
 // renderingAmap_c::isCheckFloor(void) const
 int isCheckFloor__15renderingAmap_cCFv() {
 	return 1;
 }
 
-/* 8002910C 0008 .text      isRendRestart__15renderingAmap_cCFv                          */
+/* 8002910C-80029114 0008 .text      isRendRestart__15renderingAmap_cCFv                          ReturnIntegerFunction */
 // renderingAmap_c::isRendRestart(void) const
 int isRendRestart__15renderingAmap_cCFv() {
 	return 1;
 }
 
-/* 80029114 0008 .text      isRendCursor__15renderingAmap_cCFv                           */
+/* 80029114-8002911C 0008 .text      isRendCursor__15renderingAmap_cCFv                           ReturnIntegerFunction */
 // renderingAmap_c::isRendCursor(void) const
 int isRendCursor__15renderingAmap_cCFv() {
 	return 1;
 }
 
-/* 8002911C 0044 .text      isRendAllRoom__15renderingAmap_cCFv                          */
+/* 8002911C-80029160 0044 .text      isRendAllRoom__15renderingAmap_cCFv                          Function */
 // renderingAmap_c::isRendAllRoom(void) const
 #pragma push
 #pragma optimization_level 0
@@ -818,7 +1035,7 @@ asm void isRendAllRoom__15renderingAmap_cCFv() {
 }
 #pragma pop
 
-/* 80029160 0030 .text      getStayType__15renderingAmap_cCFv                            */
+/* 80029160-80029190 0030 .text      getStayType__15renderingAmap_cCFv                            Function */
 // renderingAmap_c::getStayType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -829,7 +1046,7 @@ asm void getStayType__15renderingAmap_cCFv() {
 }
 #pragma pop
 
-/* 80029190 055C .text      isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi */
+/* 80029190-800296EC 055C .text      isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi Function */
 // renderingAmap_c::isDrawIconSingle2(dTres_c::data_s, bool, bool, int) const
 #pragma push
 #pragma optimization_level 0
@@ -840,7 +1057,7 @@ asm void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi() {
 }
 #pragma pop
 
-/* 800296EC 000C .text      isDrawType__6dMap_cFi                                        */
+/* 800296EC-800296F8 000C .text      isDrawType__6dMap_cFi                                        Function */
 // dMap_c::isDrawType(int)
 #pragma push
 #pragma optimization_level 0
@@ -851,7 +1068,7 @@ asm void isDrawType__6dMap_cFi() {
 }
 #pragma pop
 
-/* 800296F8 004C .text      isRendAllRoom__6dMap_cCFv                                    */
+/* 800296F8-80029744 004C .text      isRendAllRoom__6dMap_cCFv                                    Function */
 // dMap_c::isRendAllRoom(void) const
 #pragma push
 #pragma optimization_level 0
@@ -862,13 +1079,13 @@ asm void isRendAllRoom__6dMap_cCFv() {
 }
 #pragma pop
 
-/* 80029744 0008 .text      isSpecialOutline__6dMap_cFv                                  */
+/* 80029744-8002974C 0008 .text      isSpecialOutline__6dMap_cFv                                  ReturnIntegerFunction */
 // dMap_c::isSpecialOutline(void)
 int isSpecialOutline__6dMap_cFv() {
 	return 0;
 }
 
-/* 8002974C 005C .text      copyPalette__6dMap_cFv                                       */
+/* 8002974C-800297A8 005C .text      copyPalette__6dMap_cFv                                       Function */
 // dMap_c::copyPalette(void)
 #pragma push
 #pragma optimization_level 0
@@ -879,7 +1096,7 @@ asm void copyPalette__6dMap_cFv() {
 }
 #pragma pop
 
-/* 800297A8 0070 .text      setMapPaletteColorAlphaPer__6dMap_cFiif                      */
+/* 800297A8-80029818 0070 .text      setMapPaletteColorAlphaPer__6dMap_cFiif                      Function */
 // dMap_c::setMapPaletteColorAlphaPer(int, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -890,7 +1107,7 @@ asm void setMapPaletteColorAlphaPer__6dMap_cFiif() {
 }
 #pragma pop
 
-/* 80029818 005C .text      resCopy__6dMap_cFv                                           */
+/* 80029818-80029874 005C .text      resCopy__6dMap_cFv                                           Function */
 // dMap_c::resCopy(void)
 #pragma push
 #pragma optimization_level 0
@@ -901,7 +1118,7 @@ asm void resCopy__6dMap_cFv() {
 }
 #pragma pop
 
-/* 80029874 01A8 .text      __ct__6dMap_cFiiii                                           */
+/* 80029874-80029A1C 01A8 .text      __ct__6dMap_cFiiii                                           Function */
 // dMap_c::dMap_c(int, int, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -912,7 +1129,7 @@ asm void __ct__6dMap_cFiiii() {
 }
 #pragma pop
 
-/* 80029A1C 0070 .text      _remove__6dMap_cFv                                           */
+/* 80029A1C-80029A8C 0070 .text      _remove__6dMap_cFv                                           Function */
 // dMap_c::_remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -923,7 +1140,7 @@ asm void _remove__6dMap_cFv() {
 }
 #pragma pop
 
-/* 80029A8C 0184 .text      getMapMinMaxXZ__6dMap_cFiPfPfPfPf                            */
+/* 80029A8C-80029C10 0184 .text      getMapMinMaxXZ__6dMap_cFiPfPfPfPf                            Function */
 // dMap_c::getMapMinMaxXZ(int, f32*, f32*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -934,7 +1151,7 @@ asm void getMapMinMaxXZ__6dMap_cFiPfPfPfPf() {
 }
 #pragma pop
 
-/* 80029C10 0168 .text      getPack__6dMap_cFiPfPf                                       */
+/* 80029C10-80029D78 0168 .text      getPack__6dMap_cFiPfPf                                       Function */
 // dMap_c::getPack(int, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -945,7 +1162,7 @@ asm void getPack__6dMap_cFiPfPf() {
 }
 #pragma pop
 
-/* 80029D78 00A4 .text      calcMapCenterXZ__6dMap_cFiPfPf                               */
+/* 80029D78-80029E1C 00A4 .text      calcMapCenterXZ__6dMap_cFiPfPf                               Function */
 // dMap_c::calcMapCenterXZ(int, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -956,7 +1173,7 @@ asm void calcMapCenterXZ__6dMap_cFiPfPf() {
 }
 #pragma pop
 
-/* 80029E1C 0168 .text      calcMapCmPerTexel__6dMap_cFiPf                               */
+/* 80029E1C-80029F84 0168 .text      calcMapCmPerTexel__6dMap_cFiPf                               Function */
 // dMap_c::calcMapCmPerTexel(int, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -967,7 +1184,7 @@ asm void calcMapCmPerTexel__6dMap_cFiPf() {
 }
 #pragma pop
 
-/* 80029F84 00E0 .text      setMapPaletteColorAlphaPer__6dMap_cFif                       */
+/* 80029F84-8002A064 00E0 .text      setMapPaletteColorAlphaPer__6dMap_cFif                       Function */
 // dMap_c::setMapPaletteColorAlphaPer(int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -978,7 +1195,7 @@ asm void setMapPaletteColorAlphaPer__6dMap_cFif() {
 }
 #pragma pop
 
-/* 8002A064 00E4 .text      copyPalette__6dMap_cFiif                                     */
+/* 8002A064-8002A148 00E4 .text      copyPalette__6dMap_cFiif                                     Function */
 // dMap_c::copyPalette(int, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -989,7 +1206,7 @@ asm void copyPalette__6dMap_cFiif() {
 }
 #pragma pop
 
-/* 8002A148 0074 .text      setAmapPaletteColor__6dMap_cFiUcUcUcUc                       */
+/* 8002A148-8002A1BC 0074 .text      setAmapPaletteColor__6dMap_cFiUcUcUcUc                       Function */
 // dMap_c::setAmapPaletteColor(int, u8, u8, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1000,7 +1217,7 @@ asm void setAmapPaletteColor__6dMap_cFiUcUcUcUc() {
 }
 #pragma pop
 
-/* 8002A1BC 0020 .text      getDispType__6dMap_cCFv                                      */
+/* 8002A1BC-8002A1DC 0020 .text      getDispType__6dMap_cCFv                                      Function */
 // dMap_c::getDispType(void) const
 #pragma push
 #pragma optimization_level 0
@@ -1011,7 +1228,7 @@ asm void getDispType__6dMap_cCFv() {
 }
 #pragma pop
 
-/* 8002A1DC 0078 .text      isDrawRoom__6dMap_cCFii                                      */
+/* 8002A1DC-8002A254 0078 .text      isDrawRoom__6dMap_cCFii                                      Function */
 // dMap_c::isDrawRoom(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -1022,7 +1239,7 @@ asm void isDrawRoom__6dMap_cCFii() {
 }
 #pragma pop
 
-/* 8002A254 0040 .text      getRoomNoSingle__6dMap_cFv                                   */
+/* 8002A254-8002A294 0040 .text      getRoomNoSingle__6dMap_cFv                                   Function */
 // dMap_c::getRoomNoSingle(void)
 #pragma push
 #pragma optimization_level 0
@@ -1033,7 +1250,7 @@ asm void getRoomNoSingle__6dMap_cFv() {
 }
 #pragma pop
 
-/* 8002A294 0098 .text      isDrawRoomIcon__6dMap_cCFii                                  */
+/* 8002A294-8002A32C 0098 .text      isDrawRoomIcon__6dMap_cCFii                                  Function */
 // dMap_c::isDrawRoomIcon(int, int) const
 #pragma push
 #pragma optimization_level 0
@@ -1044,7 +1261,7 @@ asm void isDrawRoomIcon__6dMap_cCFii() {
 }
 #pragma pop
 
-/* 8002A32C 0828 .text      _move__6dMap_cFffif                                          */
+/* 8002A32C-8002AB54 0828 .text      _move__6dMap_cFffif                                          Function */
 // dMap_c::_move(f32, f32, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1055,7 +1272,7 @@ asm void _move__6dMap_cFffif() {
 }
 #pragma pop
 
-/* 8002AB54 0058 .text      _draw__6dMap_cFv                                             */
+/* 8002AB54-8002ABAC 0058 .text      _draw__6dMap_cFv                                             Function */
 // dMap_c::_draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -1066,7 +1283,7 @@ asm void _draw__6dMap_cFv() {
 }
 #pragma pop
 
-/* 8002ABAC 0020 .text      getFirstData__6dMap_cFUc                                     */
+/* 8002ABAC-8002ABCC 0020 .text      getFirstData__6dMap_cFUc                                     Function */
 // dMap_c::getFirstData(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1077,7 +1294,7 @@ asm void getFirstData__6dMap_cFUc() {
 }
 #pragma pop
 
-/* 8002ABCC 0020 .text      getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c            */
+/* 8002ABCC-8002ABEC 0020 .text      getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c            Function */
 // dMap_c::getNextData(dTres_c::typeGroupData_c)
 #pragma push
 #pragma optimization_level 0
@@ -1088,19 +1305,19 @@ asm void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c() {
 }
 #pragma pop
 
-/* 8002ABEC 0004 .text      draw__12dDlst_base_cFv                                       */
+/* 8002ABEC-8002ABF0 0004 .text      draw__12dDlst_base_cFv                                       ReturnFunction */
 // dDlst_base_c::draw(void)
 void draw__12dDlst_base_cFv() {
 	return;
 }
 
-/* 8002ABF0 0008 .text      isDrawType__11dDrawPath_cFi                                  */
+/* 8002ABF0-8002ABF8 0008 .text      isDrawType__11dDrawPath_cFi                                  ReturnIntegerFunction */
 // dDrawPath_c::isDrawType(int)
 int isDrawType__11dDrawPath_cFi() {
 	return 1;
 }
 
-/* 8002ABF8 007C .text      __dt__18dRenderingFDAmap_cFv                                 */
+/* 8002ABF8-8002AC74 007C .text      __dt__18dRenderingFDAmap_cFv                                 Function */
 // dRenderingFDAmap_c::~dRenderingFDAmap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1111,7 +1328,7 @@ asm void __dt__18dRenderingFDAmap_cFv() {
 }
 #pragma pop
 
-/* 8002AC74 006C .text      __dt__15dRenderingMap_cFv                                    */
+/* 8002AC74-8002ACE0 006C .text      __dt__15dRenderingMap_cFv                                    Function */
 // dRenderingMap_c::~dRenderingMap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1122,7 +1339,7 @@ asm void __dt__15dRenderingMap_cFv() {
 }
 #pragma pop
 
-/* 8002ACE0 005C .text      __dt__28dDrawPathWithNormalPattern_cFv                       */
+/* 8002ACE0-8002AD3C 005C .text      __dt__28dDrawPathWithNormalPattern_cFv                       Function */
 // dDrawPathWithNormalPattern_c::~dDrawPathWithNormalPattern_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1133,7 +1350,7 @@ asm void __dt__28dDrawPathWithNormalPattern_cFv() {
 }
 #pragma pop
 
-/* 8002AD3C 0048 .text      __dt__11dDrawPath_cFv                                        */
+/* 8002AD3C-8002AD84 0048 .text      __dt__11dDrawPath_cFv                                        Function */
 // dDrawPath_c::~dDrawPath_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1144,7 +1361,7 @@ asm void __dt__11dDrawPath_cFv() {
 }
 #pragma pop
 
-/* 8002AD84 002C .text      getLineColor__11dDrawPath_cFii                               */
+/* 8002AD84-8002ADB0 002C .text      getLineColor__11dDrawPath_cFii                               Function */
 // dDrawPath_c::getLineColor(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -1155,7 +1372,7 @@ asm void getLineColor__11dDrawPath_cFii() {
 }
 #pragma pop
 
-/* 8002ADB0 00BC .text      __dt__15renderingAmap_cFv                                    */
+/* 8002ADB0-8002AE6C 00BC .text      __dt__15renderingAmap_cFv                                    Function */
 // renderingAmap_c::~renderingAmap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1166,7 +1383,7 @@ asm void __dt__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 8002AE6C 00B4 .text      __ct__15renderingAmap_cFv                                    */
+/* 8002AE6C-8002AF20 00B4 .text      __ct__15renderingAmap_cFv                                    Function */
 // renderingAmap_c::renderingAmap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1177,7 +1394,7 @@ asm void __ct__15renderingAmap_cFv() {
 }
 #pragma pop
 
-/* 8002AF20 00E0 .text      __dt__6dMap_cFv                                              */
+/* 8002AF20-8002B000 00E0 .text      __dt__6dMap_cFv                                              Function */
 // dMap_c::~dMap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1188,13 +1405,13 @@ asm void __dt__6dMap_cFv() {
 }
 #pragma pop
 
-/* 8002B000 0008 .text      isRendIcon__15renderingAmap_cCFv                             */
+/* 8002B000-8002B008 0008 .text      isRendIcon__15renderingAmap_cCFv                             ReturnIntegerFunction */
 // renderingAmap_c::isRendIcon(void) const
 int isRendIcon__15renderingAmap_cCFv() {
 	return 1;
 }
 
-/* 8002B008 00AC .text      __dt__28renderingPlusDoorAndCursor_cFv                       */
+/* 8002B008-8002B0B4 00AC .text      __dt__28renderingPlusDoorAndCursor_cFv                       Function */
 // renderingPlusDoorAndCursor_c::~renderingPlusDoorAndCursor_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1205,7 +1422,7 @@ asm void __dt__28renderingPlusDoorAndCursor_cFv() {
 }
 #pragma pop
 
-/* 8002B0B4 009C .text      __dt__19renderingPlusDoor_cFv                                */
+/* 8002B0B4-8002B150 009C .text      __dt__19renderingPlusDoor_cFv                                Function */
 // renderingPlusDoor_c::~renderingPlusDoor_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1216,7 +1433,7 @@ asm void __dt__19renderingPlusDoor_cFv() {
 }
 #pragma pop
 
-/* 8002B150 008C .text      __dt__16renderingDAmap_cFv                                   */
+/* 8002B150-8002B1DC 008C .text      __dt__16renderingDAmap_cFv                                   Function */
 // renderingDAmap_c::~renderingDAmap_c(void)
 #pragma push
 #pragma optimization_level 0

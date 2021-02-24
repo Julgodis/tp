@@ -11,41 +11,79 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern int JSGFGetType__Q26JStage6TActorCFv();
+/* Function             */
+extern void __dt__Q26JStage6TActorFv();
+/* ReturnIntegerFunction */
+extern  int JSGFGetType__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGGetTranslation__Q26JStage6TActorCFP3Vec();
+/* ReturnFunction       */
 extern void JSGSetTranslation__Q26JStage6TActorFRC3Vec();
+/* ReturnFunction       */
 extern void JSGGetScaling__Q26JStage6TActorCFP3Vec();
+/* ReturnFunction       */
 extern void JSGSetScaling__Q26JStage6TActorFRC3Vec();
+/* ReturnFunction       */
 extern void JSGGetRotation__Q26JStage6TActorCFP3Vec();
+/* ReturnFunction       */
 extern void JSGSetRotation__Q26JStage6TActorFRC3Vec();
-extern int JSGGetShape__Q26JStage6TActorCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetShape__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetShape__Q26JStage6TActorFUl();
-extern int JSGGetAnimation__Q26JStage6TActorCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetAnimation__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetAnimation__Q26JStage6TActorFUl();
+/* Function             */
 extern void JSGGetAnimationFrame__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetAnimationFrame__Q26JStage6TActorFf();
+/* Function             */
 extern void JSGGetAnimationFrameMax__Q26JStage6TActorCFv();
+/* Function             */
 extern void JSGGetAnimationTransition__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetAnimationTransition__Q26JStage6TActorFf();
-extern int JSGGetTextureAnimation__Q26JStage6TActorCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetTextureAnimation__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetTextureAnimation__Q26JStage6TActorFUl();
+/* Function             */
 extern void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
+/* ReturnFunction       */
 extern void JSGSetTextureAnimationFrame__Q26JStage6TActorFf();
+/* Function             */
 extern void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv();
+/* Function             */
 extern void __dt__Q26JStage7TObjectFv();
-extern int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetName__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGUpdate__Q26JStage7TObjectFv();
-extern int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnIntegerFunction */
+extern  int JSGGetFlag__Q26JStage7TObjectCFv();
+/* ReturnFunction       */
 extern void JSGSetFlag__Q26JStage7TObjectFUl();
-extern int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnIntegerFunction */
+extern  int JSGGetData__Q26JStage7TObjectCFUlPvUl();
+/* ReturnFunction       */
 extern void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+/* ReturnFunction       */
 extern void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+/* ReturnFunction       */
 extern void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+/* ReturnFunction       */
 extern void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
-extern int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* ReturnIntegerFunction */
+extern  int JSGFindNodeID__Q26JStage7TObjectCFPCc();
+/* Function             */
 extern void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__Q26JStage6TActor[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q26JStage6TActor[36];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JSGActor__LIT_343[8];
 }
 
@@ -55,8 +93,8 @@ SECTION_SDATA2 extern u8 JSGActor__LIT_343[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C45A8 008C .data      __vt__Q26JStage6TActor                                       */
-SECTION_DATA const  void* __vt__Q26JStage6TActor[36] = {
+/* 803C45A8-803C4638 008C .data      __vt__Q26JStage6TActor                                       VTableData */
+SECTION_DATA void* __vt__Q26JStage6TActor[36] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -103,7 +141,7 @@ SECTION_DATA const  void* __vt__Q26JStage6TActor[36] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804553C8 0004 .sdata2    @343                                                         */
+/* 804553C8-804553D0 0004 .sdata2    @343                                                         InitializedData */
 SECTION_SDATA2 u8 JSGActor__LIT_343[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -117,7 +155,7 @@ SECTION_SDATA2 u8 JSGActor__LIT_343[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80280A48 0060 .text      __dt__Q26JStage6TActorFv                                     */
+/* 80280A48-80280AA8 0060 .text      __dt__Q26JStage6TActorFv                                     Function */
 // JStage::TActor::~JStage::TActor(void)
 #pragma push
 #pragma optimization_level 0
@@ -128,73 +166,73 @@ asm void __dt__Q26JStage6TActorFv() {
 }
 #pragma pop
 
-/* 80280AA8 0008 .text      JSGFGetType__Q26JStage6TActorCFv                             */
+/* 80280AA8-80280AB0 0008 .text      JSGFGetType__Q26JStage6TActorCFv                             ReturnIntegerFunction */
 // JStage::TActor::JSGFGetType(void) const
 int JSGFGetType__Q26JStage6TActorCFv() {
 	return 2;
 }
 
-/* 80280AB0 0004 .text      JSGGetTranslation__Q26JStage6TActorCFP3Vec                   */
+/* 80280AB0-80280AB4 0004 .text      JSGGetTranslation__Q26JStage6TActorCFP3Vec                   ReturnFunction */
 // JStage::TActor::JSGGetTranslation(Vec*) const
 void JSGGetTranslation__Q26JStage6TActorCFP3Vec() {
 	return;
 }
 
-/* 80280AB4 0004 .text      JSGSetTranslation__Q26JStage6TActorFRC3Vec                   */
+/* 80280AB4-80280AB8 0004 .text      JSGSetTranslation__Q26JStage6TActorFRC3Vec                   ReturnFunction */
 // JStage::TActor::JSGSetTranslation(const Vec&)
 void JSGSetTranslation__Q26JStage6TActorFRC3Vec() {
 	return;
 }
 
-/* 80280AB8 0004 .text      JSGGetScaling__Q26JStage6TActorCFP3Vec                       */
+/* 80280AB8-80280ABC 0004 .text      JSGGetScaling__Q26JStage6TActorCFP3Vec                       ReturnFunction */
 // JStage::TActor::JSGGetScaling(Vec*) const
 void JSGGetScaling__Q26JStage6TActorCFP3Vec() {
 	return;
 }
 
-/* 80280ABC 0004 .text      JSGSetScaling__Q26JStage6TActorFRC3Vec                       */
+/* 80280ABC-80280AC0 0004 .text      JSGSetScaling__Q26JStage6TActorFRC3Vec                       ReturnFunction */
 // JStage::TActor::JSGSetScaling(const Vec&)
 void JSGSetScaling__Q26JStage6TActorFRC3Vec() {
 	return;
 }
 
-/* 80280AC0 0004 .text      JSGGetRotation__Q26JStage6TActorCFP3Vec                      */
+/* 80280AC0-80280AC4 0004 .text      JSGGetRotation__Q26JStage6TActorCFP3Vec                      ReturnFunction */
 // JStage::TActor::JSGGetRotation(Vec*) const
 void JSGGetRotation__Q26JStage6TActorCFP3Vec() {
 	return;
 }
 
-/* 80280AC4 0004 .text      JSGSetRotation__Q26JStage6TActorFRC3Vec                      */
+/* 80280AC4-80280AC8 0004 .text      JSGSetRotation__Q26JStage6TActorFRC3Vec                      ReturnFunction */
 // JStage::TActor::JSGSetRotation(const Vec&)
 void JSGSetRotation__Q26JStage6TActorFRC3Vec() {
 	return;
 }
 
-/* 80280AC8 0008 .text      JSGGetShape__Q26JStage6TActorCFv                             */
+/* 80280AC8-80280AD0 0008 .text      JSGGetShape__Q26JStage6TActorCFv                             ReturnIntegerFunction */
 // JStage::TActor::JSGGetShape(void) const
 int JSGGetShape__Q26JStage6TActorCFv() {
 	return -1;
 }
 
-/* 80280AD0 0004 .text      JSGSetShape__Q26JStage6TActorFUl                             */
+/* 80280AD0-80280AD4 0004 .text      JSGSetShape__Q26JStage6TActorFUl                             ReturnFunction */
 // JStage::TActor::JSGSetShape(u32)
 void JSGSetShape__Q26JStage6TActorFUl() {
 	return;
 }
 
-/* 80280AD4 0008 .text      JSGGetAnimation__Q26JStage6TActorCFv                         */
+/* 80280AD4-80280ADC 0008 .text      JSGGetAnimation__Q26JStage6TActorCFv                         ReturnIntegerFunction */
 // JStage::TActor::JSGGetAnimation(void) const
 int JSGGetAnimation__Q26JStage6TActorCFv() {
 	return -1;
 }
 
-/* 80280ADC 0004 .text      JSGSetAnimation__Q26JStage6TActorFUl                         */
+/* 80280ADC-80280AE0 0004 .text      JSGSetAnimation__Q26JStage6TActorFUl                         ReturnFunction */
 // JStage::TActor::JSGSetAnimation(u32)
 void JSGSetAnimation__Q26JStage6TActorFUl() {
 	return;
 }
 
-/* 80280AE0 0008 .text      JSGGetAnimationFrame__Q26JStage6TActorCFv                    */
+/* 80280AE0-80280AE8 0008 .text      JSGGetAnimationFrame__Q26JStage6TActorCFv                    Function */
 // JStage::TActor::JSGGetAnimationFrame(void) const
 #pragma push
 #pragma optimization_level 0
@@ -205,13 +243,13 @@ asm void JSGGetAnimationFrame__Q26JStage6TActorCFv() {
 }
 #pragma pop
 
-/* 80280AE8 0004 .text      JSGSetAnimationFrame__Q26JStage6TActorFf                     */
+/* 80280AE8-80280AEC 0004 .text      JSGSetAnimationFrame__Q26JStage6TActorFf                     ReturnFunction */
 // JStage::TActor::JSGSetAnimationFrame(f32)
 void JSGSetAnimationFrame__Q26JStage6TActorFf() {
 	return;
 }
 
-/* 80280AEC 0008 .text      JSGGetAnimationFrameMax__Q26JStage6TActorCFv                 */
+/* 80280AEC-80280AF4 0008 .text      JSGGetAnimationFrameMax__Q26JStage6TActorCFv                 Function */
 // JStage::TActor::JSGGetAnimationFrameMax(void) const
 #pragma push
 #pragma optimization_level 0
@@ -222,7 +260,7 @@ asm void JSGGetAnimationFrameMax__Q26JStage6TActorCFv() {
 }
 #pragma pop
 
-/* 80280AF4 0008 .text      JSGGetAnimationTransition__Q26JStage6TActorCFv               */
+/* 80280AF4-80280AFC 0008 .text      JSGGetAnimationTransition__Q26JStage6TActorCFv               Function */
 // JStage::TActor::JSGGetAnimationTransition(void) const
 #pragma push
 #pragma optimization_level 0
@@ -233,25 +271,25 @@ asm void JSGGetAnimationTransition__Q26JStage6TActorCFv() {
 }
 #pragma pop
 
-/* 80280AFC 0004 .text      JSGSetAnimationTransition__Q26JStage6TActorFf                */
+/* 80280AFC-80280B00 0004 .text      JSGSetAnimationTransition__Q26JStage6TActorFf                ReturnFunction */
 // JStage::TActor::JSGSetAnimationTransition(f32)
 void JSGSetAnimationTransition__Q26JStage6TActorFf() {
 	return;
 }
 
-/* 80280B00 0008 .text      JSGGetTextureAnimation__Q26JStage6TActorCFv                  */
+/* 80280B00-80280B08 0008 .text      JSGGetTextureAnimation__Q26JStage6TActorCFv                  ReturnIntegerFunction */
 // JStage::TActor::JSGGetTextureAnimation(void) const
 int JSGGetTextureAnimation__Q26JStage6TActorCFv() {
 	return -1;
 }
 
-/* 80280B08 0004 .text      JSGSetTextureAnimation__Q26JStage6TActorFUl                  */
+/* 80280B08-80280B0C 0004 .text      JSGSetTextureAnimation__Q26JStage6TActorFUl                  ReturnFunction */
 // JStage::TActor::JSGSetTextureAnimation(u32)
 void JSGSetTextureAnimation__Q26JStage6TActorFUl() {
 	return;
 }
 
-/* 80280B0C 0008 .text      JSGGetTextureAnimationFrame__Q26JStage6TActorCFv             */
+/* 80280B0C-80280B14 0008 .text      JSGGetTextureAnimationFrame__Q26JStage6TActorCFv             Function */
 // JStage::TActor::JSGGetTextureAnimationFrame(void) const
 #pragma push
 #pragma optimization_level 0
@@ -262,13 +300,13 @@ asm void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv() {
 }
 #pragma pop
 
-/* 80280B14 0004 .text      JSGSetTextureAnimationFrame__Q26JStage6TActorFf              */
+/* 80280B14-80280B18 0004 .text      JSGSetTextureAnimationFrame__Q26JStage6TActorFf              ReturnFunction */
 // JStage::TActor::JSGSetTextureAnimationFrame(f32)
 void JSGSetTextureAnimationFrame__Q26JStage6TActorFf() {
 	return;
 }
 
-/* 80280B18 0008 .text      JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv          */
+/* 80280B18-80280B20 0008 .text      JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv          Function */
 // JStage::TActor::JSGGetTextureAnimationFrameMax(void) const
 #pragma push
 #pragma optimization_level 0

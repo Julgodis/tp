@@ -9,22 +9,44 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void TRKInitializeEventQueue();
+/* Function             */
+extern void TRKNubWelcome();
+/* Function             */
+extern void TRKTerminateNub();
+/* Function             */
+extern void TRKInitializeNub();
+/* Function             */
 extern void TRKInitializeMessageBuffers();
-extern int TRKTerminateSerialHandler();
+/* ReturnIntegerFunction */
+extern  int TRKTerminateSerialHandler();
+/* Function             */
 extern void TRKInitializeSerialHandler();
+/* ReturnFunction       */
 extern void usr_put_initialize();
-extern int TRKInitializeDispatcher();
+/* ReturnIntegerFunction */
+extern  int TRKInitializeDispatcher();
+/* Function             */
 extern void TRKTargetSetInputPendingPtr();
+/* Function             */
 extern void TRKInitializeTarget();
+/* Function             */
 extern void InitializeProgramEndTrap();
+/* Function             */
 extern void TRK_board_display();
+/* Function             */
 extern void TRKInitializeIntDrivenUART();
+/* Function             */
 extern void MWTRACE();
+/* InitializedData      */
 SECTION_RODATA extern const u8 MetroTRK_Portable_nubinit__LIT_133[28];
+/* InitializedData      */
 SECTION_RODATA extern const u8 MetroTRK_Portable_nubinit__LIT_154[20];
-SECTION_BSS extern u8 gTRKBigEndian[4];
-SECTION_SBSS extern u8 gTRKInputPendingPtr[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 }
 
 
@@ -33,14 +55,14 @@ SECTION_SBSS extern u8 gTRKInputPendingPtr[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2688 001B .rodata    @133                                                         */
+/* 803A2688-803A26A4 001B .rodata    @133                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_nubinit__LIT_133[28] = {
 	0x4D, 0x65, 0x74, 0x72, 0x6F, 0x54, 0x52, 0x4B, 0x20, 0x66, 0x6F, 0x72, 0x20, 0x47, 0x41, 0x4D,
 	0x45, 0x43, 0x55, 0x42, 0x45, 0x20, 0x76, 0x32, 0x2E, 0x36, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803A26A4 0010 .rodata    @154                                                         */
+/* 803A26A4-803A26B8 0010 .rodata    @154                                                         InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_nubinit__LIT_154[20] = {
 	0x49, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x20, 0x4E, 0x55, 0x42, 0x0A, 0x00,
 	/* padding */
@@ -54,9 +76,8 @@ SECTION_RODATA const u8 MetroTRK_Portable_nubinit__LIT_154[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D8B8 0004 .bss       gTRKBigEndian                                                */
-SECTION_BSS u8 gTRKBigEndian[4];
-SECTION_BSS u8 pad_8044D8BC[4];
+/* 8044D8B8-8044D8C0 0004 .bss       gTRKBigEndian                                                ZeroInitializedData */
+SECTION_BSS u8 gTRKBigEndian[4 + 4 /* padding */];
 }
 
 
@@ -65,7 +86,7 @@ SECTION_BSS u8 pad_8044D8BC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CE40 0028 .text      TRKNubWelcome                                                */
+/* 8036CE40-8036CE68 0028 .text      TRKNubWelcome                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +96,7 @@ asm void TRKNubWelcome() {
 }
 #pragma pop
 
-/* 8036CE68 0024 .text      TRKTerminateNub                                              */
+/* 8036CE68-8036CE8C 0024 .text      TRKTerminateNub                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +106,7 @@ asm void TRKTerminateNub() {
 }
 #pragma pop
 
-/* 8036CE8C 014C .text      TRKInitializeNub                                             */
+/* 8036CE8C-8036CFD8 014C .text      TRKInitializeNub                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

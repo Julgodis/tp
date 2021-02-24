@@ -9,10 +9,24 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
+/* Function             */
+extern void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+/* Function             */
+extern void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+/* Function             */
+extern void CalcPos__8cM3dGLinCFP3Vecf();
+/* Function             */
+extern void SetEnd__8cM3dGLinFRC4cXyz();
+/* Function             */
 extern void PSVECAdd();
+/* Function             */
 extern void PSVECSubtract();
+/* Function             */
 extern void PSVECScale();
-SECTION_DATA extern const void* __vt__8cM3dGLin[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGLin[3];
 }
 
 
@@ -21,7 +35,7 @@ SECTION_DATA extern const void* __vt__8cM3dGLin[3];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026F2A8 0040 .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz                               */
+/* 8026F2A8-8026F2E8 0040 .text      __ct__8cM3dGLinFRC4cXyzRC4cXyz                               Function */
 // cM3dGLin::cM3dGLin(const cXyz&, const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -32,7 +46,7 @@ asm void __ct__8cM3dGLinFRC4cXyzRC4cXyz() {
 }
 #pragma pop
 
-/* 8026F2E8 0034 .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz                        */
+/* 8026F2E8-8026F31C 0034 .text      SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz                        Function */
 // cM3dGLin::SetStartEnd(const cXyz&, const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -43,7 +57,7 @@ asm void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz() {
 }
 #pragma pop
 
-/* 8026F31C 0034 .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec                          */
+/* 8026F31C-8026F350 0034 .text      SetStartEnd__8cM3dGLinFRC3VecRC3Vec                          Function */
 // cM3dGLin::SetStartEnd(const Vec&, const Vec&)
 #pragma push
 #pragma optimization_level 0
@@ -54,7 +68,7 @@ asm void SetStartEnd__8cM3dGLinFRC3VecRC3Vec() {
 }
 #pragma pop
 
-/* 8026F350 0070 .text      CalcPos__8cM3dGLinCFP3Vecf                                   */
+/* 8026F350-8026F3C0 0070 .text      CalcPos__8cM3dGLinCFP3Vecf                                   Function */
 // cM3dGLin::CalcPos(Vec*, f32) const
 #pragma push
 #pragma optimization_level 0
@@ -65,7 +79,7 @@ asm void CalcPos__8cM3dGLinCFP3Vecf() {
 }
 #pragma pop
 
-/* 8026F3C0 001C .text      SetEnd__8cM3dGLinFRC4cXyz                                    */
+/* 8026F3C0-8026F3DC 001C .text      SetEnd__8cM3dGLinFRC4cXyz                                    Function */
 // cM3dGLin::SetEnd(const cXyz&)
 #pragma push
 #pragma optimization_level 0

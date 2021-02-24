@@ -8,13 +8,24 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void PSMTXMultVec();
+/* Function             */
+extern void PSMTXMultVecArray();
+/* Function             */
+extern void PSMTXMultVecSR();
+/* Function             */
+extern void PSMTXMultVecArraySR();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80346D6C 0054 .text      PSMTXMultVec                                                 */
+/* 80346D6C-80346DC0 0054 .text      PSMTXMultVec                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24,7 +35,7 @@ asm void PSMTXMultVec() {
 }
 #pragma pop
 
-/* 80346DC0 008C .text      PSMTXMultVecArray                                            */
+/* 80346DC0-80346E4C 008C .text      PSMTXMultVecArray                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -34,7 +45,7 @@ asm void PSMTXMultVecArray() {
 }
 #pragma pop
 
-/* 80346E4C 0054 .text      PSMTXMultVecSR                                               */
+/* 80346E4C-80346EA0 0054 .text      PSMTXMultVecSR                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +55,7 @@ asm void PSMTXMultVecSR() {
 }
 #pragma pop
 
-/* 80346EA0 0088 .text      PSMTXMultVecArraySR                                          */
+/* 80346EA0-80346F28 0088 .text      PSMTXMultVecArraySR                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

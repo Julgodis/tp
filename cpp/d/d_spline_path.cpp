@@ -9,9 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void Init__14d2DBSplinePathFll();
+/* Function             */
+extern void Step__14d2DBSplinePathFv();
+/* Function             */
+extern void Calc__14d2DBSplinePathFP4cXyz();
+/* Function             */
+extern void Calc__14d2DBSplinePathFPf();
+/* Function             */
+extern void Spot__14d2DBSplinePathFPff();
+/* Function             */
+extern void Init__10dPathCurveFP5dPath();
+/* Function             */
+extern void bSpline2__10dPathCurveFf();
+/* Function             */
 extern void PSVECAdd();
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_3632;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_spline_path__LIT_3684;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_spline_path__LIT_3685;
 }
 
@@ -21,13 +39,13 @@ SECTION_SDATA2 extern f32 d_d_spline_path__LIT_3685;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452BC8 0008 .sdata2    @3632                                                        */
+/* 80452BC8-80452BD0 0008 .sdata2    @3632                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_3632 = 4503601774854144.000000;
-/* 80452BD0 0004 .sdata2    @3684                                                        */
+/* 80452BD0-80452BD4 0004 .sdata2    @3684                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_spline_path__LIT_3684 = 1.000000f;
-/* 80452BD4 0004 .sdata2    @3685                                                        */
+/* 80452BD4-80452BD8 0004 .sdata2    @3685                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_spline_path__LIT_3685 = 0.500000f;
 }
@@ -38,8 +56,8 @@ SECTION_SDATA2 f32 d_d_spline_path__LIT_3685 = 0.500000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80097878 008C .text      Init__14d2DBSplinePathFll                                    */
-// d2DBSplinePath::Init(s32, s32)
+/* 80097878-80097904 008C .text      Init__14d2DBSplinePathFll                                    Function */
+// d2DBSplinePath::Init(long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -49,7 +67,7 @@ asm void Init__14d2DBSplinePathFll() {
 }
 #pragma pop
 
-/* 80097904 0168 .text      Step__14d2DBSplinePathFv                                     */
+/* 80097904-80097A6C 0168 .text      Step__14d2DBSplinePathFv                                     Function */
 // d2DBSplinePath::Step(void)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +78,7 @@ asm void Step__14d2DBSplinePathFv() {
 }
 #pragma pop
 
-/* 80097A6C 00B4 .text      Calc__14d2DBSplinePathFP4cXyz                                */
+/* 80097A6C-80097B20 00B4 .text      Calc__14d2DBSplinePathFP4cXyz                                Function */
 // d2DBSplinePath::Calc(cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -71,7 +89,7 @@ asm void Calc__14d2DBSplinePathFP4cXyz() {
 }
 #pragma pop
 
-/* 80097B20 0048 .text      Calc__14d2DBSplinePathFPf                                    */
+/* 80097B20-80097B68 0048 .text      Calc__14d2DBSplinePathFPf                                    Function */
 // d2DBSplinePath::Calc(f32*)
 #pragma push
 #pragma optimization_level 0
@@ -82,7 +100,7 @@ asm void Calc__14d2DBSplinePathFPf() {
 }
 #pragma pop
 
-/* 80097B68 00F4 .text      Spot__14d2DBSplinePathFPff                                   */
+/* 80097B68-80097C5C 00F4 .text      Spot__14d2DBSplinePathFPff                                   Function */
 // d2DBSplinePath::Spot(f32*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -93,7 +111,7 @@ asm void Spot__14d2DBSplinePathFPff() {
 }
 #pragma pop
 
-/* 80097C5C 0018 .text      Init__10dPathCurveFP5dPath                                   */
+/* 80097C5C-80097C74 0018 .text      Init__10dPathCurveFP5dPath                                   Function */
 // dPathCurve::Init(dPath*)
 #pragma push
 #pragma optimization_level 0
@@ -104,7 +122,7 @@ asm void Init__10dPathCurveFP5dPath() {
 }
 #pragma pop
 
-/* 80097C74 0218 .text      bSpline2__10dPathCurveFf                                     */
+/* 80097C74-80097E8C 0218 .text      bSpline2__10dPathCurveFf                                     Function */
 // dPathCurve::bSpline2(f32)
 #pragma push
 #pragma optimization_level 0

@@ -9,11 +9,20 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSGetConsoleType();
+/* Function             */
 extern void InitializeUART();
+/* Function             */
 extern void WriteUARTN();
+/* ReturnIntegerFunction */
+extern  int __close_console();
+/* Function             */
+extern void __write_console();
+/* Function             */
 extern void __TRK_write_console();
-SECTION_SBSS extern u8 data_804519B0[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_804519B0[4 + 4 /* padding */];
 }
 
 
@@ -22,9 +31,8 @@ SECTION_SBSS extern u8 data_804519B0[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804519B0 0004 .sbss      initialized$60                                               */
-SECTION_SBSS u8 data_804519B0[4];
-SECTION_SBSS u8 pad_804519B4[4];
+/* 804519B0-804519B8 0004 .sbss      initialized$60                                               ZeroInitializedData */
+SECTION_SBSS u8 data_804519B0[4 + 4 /* padding */];
 }
 
 
@@ -33,12 +41,12 @@ SECTION_SBSS u8 pad_804519B4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036919C 0008 .text      __close_console                                              */
+/* 8036919C-803691A4 0008 .text      __close_console                                              ReturnIntegerFunction */
 int __close_console() {
 	return 0;
 }
 
-/* 803691A4 00D0 .text      __write_console                                              */
+/* 803691A4-80369274 00D0 .text      __write_console                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

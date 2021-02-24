@@ -11,62 +11,126 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__Q37JStudio3ctb8TControlFv();
+/* Function             */
 extern void __dt__Q37JStudio3ctb8TControlFv();
+/* Function             */
 extern void getObject_index__Q37JStudio3ctb8TControlFUl();
+/* Function             */
 extern void __dt__Q37JStudio3ctb8TFactoryFv();
+/* Function             */
 extern void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
+/* Function             */
 extern void __dt__Q37JStudio3ctb6TParseFv();
+/* Function             */
 extern void __ct__Q37JStudio3fvb8TControlFv();
+/* Function             */
 extern void __dt__Q37JStudio3fvb8TControlFv();
+/* Function             */
 extern void __dt__Q37JStudio3fvb8TFactoryFv();
+/* Function             */
 extern void __ct__Q37JStudio3fvb6TParseFPQ37JStudio3fvb8TControl();
+/* Function             */
 extern void __dt__Q37JStudio3fvb6TParseFv();
+/* Function             */
+extern void __ct__Q27JStudio8TControlFv();
+/* Function             */
 extern void __dt__Q27JStudio8TControlFv();
+/* Function             */
+extern void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory();
+/* Function             */
 extern void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+/* Function             */
 extern void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+/* Function             */
 extern void transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject();
+/* Function             */
 extern void transform_setOrigin_ctb_index__Q27JStudio8TControlFUl();
+/* Function             */
+extern void __dt__Q27JStudio13TCreateObjectFv();
+/* Function             */
 extern void __dt__Q27JStudio8TFactoryFv();
+/* Function             */
+extern void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject();
+/* Function             */
 extern void create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object();
+/* Function             */
+extern void __ct__Q27JStudio6TParseFPQ27JStudio8TControl();
+/* Function             */
 extern void __dt__Q27JStudio6TParseFv();
+/* Function             */
 extern void parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl();
+/* Function             */
 extern void parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+/* Function             */
 extern void parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+/* Function             */
 extern void parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+/* Function             */
 extern void __ct__Q37JStudio3stb8TControlFv();
+/* Function             */
 extern void __dt__Q37JStudio3stb8TControlFv();
+/* Function             */
 extern void __dt__Q37JStudio3stb8TFactoryFv();
+/* Function             */
 extern void destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject();
+/* Function             */
 extern void __ct__Q37JStudio3stb6TParseFPQ37JStudio3stb8TControl();
+/* Function             */
 extern void __dt__Q37JStudio3stb6TParseFv();
+/* Function             */
 extern void parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl();
+/* Function             */
 extern void parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl();
+/* Function             */
 extern void parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+/* Function             */
 extern void parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+/* Function             */
 extern void __dt__Q27JGadget13TNodeLinkListFv();
+/* Function             */
 extern void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXRotRad();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSMTXTransApply();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void memcmp();
+/* InitializedData      */
 SECTION_RODATA extern const u8 jstudio_control__LIT_745[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 jstudio_control__LIT_838[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_1138[16];
-SECTION_DATA extern const void* __vt__Q27JStudio13TCreateObject[4];
-SECTION_DATA extern const void* __vt__Q27JStudio6TParse[8];
-SECTION_DATA extern const void* __vt__Q27JStudio8TFactory[5];
-SECTION_DATA extern const void* __vt__Q27JStudio8TControl[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio13TCreateObject[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio6TParse[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio8TFactory[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q27JStudio8TControl[3];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_control__LIT_748[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_control__LIT_772[4];
-SECTION_SDATA2 extern u8 ga8cSignature__Q27JStudio4data[8];
 }
 
 
@@ -75,15 +139,15 @@ SECTION_SDATA2 extern u8 ga8cSignature__Q27JStudio4data[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039AA40 000C .rodata    @745                                                         */
+/* 8039AA40-8039AA4C 000C .rodata    @745                                                         InitializedData */
 SECTION_RODATA const u8 jstudio_control__LIT_745[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039AA4C 000C .rodata    @838                                                         */
+/* 8039AA4C-8039AA58 000C .rodata    @838                                                         InitializedData */
 SECTION_RODATA const u8 jstudio_control__LIT_838[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039AA58 000C .rodata    @1138                                                        */
+/* 8039AA58-8039AA68 000C .rodata    @1138                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1138[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -97,8 +161,8 @@ SECTION_RODATA const u8 LIT_1138[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4AC0 0020 .data      __vt__Q27JStudio6TParse                                      */
-SECTION_DATA const  void* __vt__Q27JStudio6TParse[8] = {
+/* 803C4AC0-803C4AE0 0020 .data      __vt__Q27JStudio6TParse                                      VTableData */
+SECTION_DATA void* __vt__Q27JStudio6TParse[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio6TParseFv,
@@ -108,16 +172,16 @@ SECTION_DATA const  void* __vt__Q27JStudio6TParse[8] = {
 	(void*)parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl,
 	(void*)parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl,
 };
-/* 803C4AE0 0014 .data      __vt__Q27JStudio8TFactory                                    */
-SECTION_DATA const  void* __vt__Q27JStudio8TFactory[5] = {
+/* 803C4AE0-803C4AF4 0014 .data      __vt__Q27JStudio8TFactory                                    VTableData */
+SECTION_DATA void* __vt__Q27JStudio8TFactory[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio8TFactoryFv,
 	(void*)create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object,
 	(void*)destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject,
 };
-/* 803C4AF4 000C .data      __vt__Q27JStudio8TControl                                    */
-SECTION_DATA const  void* __vt__Q27JStudio8TControl[3] = {
+/* 803C4AF4-803C4B00 000C .data      __vt__Q27JStudio8TControl                                    VTableData */
+SECTION_DATA void* __vt__Q27JStudio8TControl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q27JStudio8TControlFv,
@@ -130,11 +194,11 @@ SECTION_DATA const  void* __vt__Q27JStudio8TControl[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455458 0004 .sdata2    @748                                                         */
+/* 80455458-8045545C 0004 .sdata2    @748                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_control__LIT_748[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045545C 0004 .sdata2    @772                                                         */
+/* 8045545C-80455460 0004 .sdata2    @772                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_control__LIT_772[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
@@ -146,7 +210,7 @@ SECTION_SDATA2 u8 jstudio_control__LIT_772[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80285114 0098 .text      __ct__Q27JStudio8TControlFv                                  */
+/* 80285114-802851AC 0098 .text      __ct__Q27JStudio8TControlFv                                  Function */
 // JStudio::TControl::JStudio::TControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -157,7 +221,7 @@ asm void __ct__Q27JStudio8TControlFv() {
 }
 #pragma pop
 
-/* 802851AC 007C .text      __dt__Q27JStudio8TControlFv                                  */
+/* 802851AC-80285228 007C .text      __dt__Q27JStudio8TControlFv                                  Function */
 // JStudio::TControl::~JStudio::TControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +232,7 @@ asm void __dt__Q27JStudio8TControlFv() {
 }
 #pragma pop
 
-/* 80285228 0028 .text      setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory         */
+/* 80285228-80285250 0028 .text      setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory         Function */
 // JStudio::TControl::setFactory(JStudio::TFactory)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +243,7 @@ asm void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory() {
 }
 #pragma pop
 
-/* 80285250 0080 .text      transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf */
+/* 80285250-802852D0 0080 .text      transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf Function */
 // JStudio::TControl::transformOnSet_setOrigin_TxyzRy(const Vec&, f32)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +254,7 @@ asm void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf() {
 }
 #pragma pop
 
-/* 802852D0 0098 .text      transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf */
+/* 802852D0-80285368 0098 .text      transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf Function */
 // JStudio::TControl::transformOnGet_setOrigin_TxyzRy(const Vec&, f32)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +265,7 @@ asm void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf() {
 }
 #pragma pop
 
-/* 80285368 00D4 .text      transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject */
+/* 80285368-8028543C 00D4 .text      transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject Function */
 // JStudio::TControl::transform_setOrigin_ctb(JStudio::ctb::TObject)
 #pragma push
 #pragma optimization_level 0
@@ -212,7 +276,7 @@ asm void transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject()
 }
 #pragma pop
 
-/* 8028543C 004C .text      transform_setOrigin_ctb_index__Q27JStudio8TControlFUl        */
+/* 8028543C-80285488 004C .text      transform_setOrigin_ctb_index__Q27JStudio8TControlFUl        Function */
 // JStudio::TControl::transform_setOrigin_ctb_index(u32)
 #pragma push
 #pragma optimization_level 0
@@ -223,7 +287,7 @@ asm void transform_setOrigin_ctb_index__Q27JStudio8TControlFUl() {
 }
 #pragma pop
 
-/* 80285488 0048 .text      __dt__Q27JStudio13TCreateObjectFv                            */
+/* 80285488-802854D0 0048 .text      __dt__Q27JStudio13TCreateObjectFv                            Function */
 // JStudio::TCreateObject::~JStudio::TCreateObject(void)
 #pragma push
 #pragma optimization_level 0
@@ -234,7 +298,7 @@ asm void __dt__Q27JStudio13TCreateObjectFv() {
 }
 #pragma pop
 
-/* 802854D0 0090 .text      __dt__Q27JStudio8TFactoryFv                                  */
+/* 802854D0-80285560 0090 .text      __dt__Q27JStudio8TFactoryFv                                  Function */
 // JStudio::TFactory::~JStudio::TFactory(void)
 #pragma push
 #pragma optimization_level 0
@@ -245,7 +309,7 @@ asm void __dt__Q27JStudio8TFactoryFv() {
 }
 #pragma pop
 
-/* 80285560 004C .text      appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject */
+/* 80285560-802855AC 004C .text      appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject Function */
 // JStudio::TFactory::appendCreateObject(JStudio::TCreateObject)
 #pragma push
 #pragma optimization_level 0
@@ -256,7 +320,7 @@ asm void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject() {
 }
 #pragma pop
 
-/* 802855AC 00C0 .text      create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 802855AC-8028566C 00C0 .text      create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object Function */
 // JStudio::TFactory::create(JStudio::stb::data::TParse_TBlock_object)
 #pragma push
 #pragma optimization_level 0
@@ -267,7 +331,7 @@ asm void create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object
 }
 #pragma pop
 
-/* 8028566C 003C .text      __ct__Q27JStudio6TParseFPQ27JStudio8TControl                 */
+/* 8028566C-802856A8 003C .text      __ct__Q27JStudio6TParseFPQ27JStudio8TControl                 Function */
 // JStudio::TParse::JStudio::TParse(JStudio::TControl)
 #pragma push
 #pragma optimization_level 0
@@ -278,7 +342,7 @@ asm void __ct__Q27JStudio6TParseFPQ27JStudio8TControl() {
 }
 #pragma pop
 
-/* 802856A8 0060 .text      __dt__Q27JStudio6TParseFv                                    */
+/* 802856A8-80285708 0060 .text      __dt__Q27JStudio6TParseFv                                    Function */
 // JStudio::TParse::~JStudio::TParse(void)
 #pragma push
 #pragma optimization_level 0
@@ -289,7 +353,7 @@ asm void __dt__Q27JStudio6TParseFv() {
 }
 #pragma pop
 
-/* 80285708 00DC .text      parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl */
+/* 80285708-802857E4 00DC .text      parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl Function */
 // JStudio::TParse::parseHeader(JStudio::stb::data::TParse_THeader, u32)
 #pragma push
 #pragma optimization_level 0
@@ -300,7 +364,7 @@ asm void parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl(
 }
 #pragma pop
 
-/* 802857E4 0060 .text      parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl */
+/* 802857E4-80285844 0060 .text      parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl Function */
 // JStudio::TParse::parseBlock_block(JStudio::stb::data::TParse_TBlock, u32)
 #pragma push
 #pragma optimization_level 0
@@ -311,7 +375,7 @@ asm void parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBloc
 }
 #pragma pop
 
-/* 80285844 00AC .text      parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl */
+/* 80285844-802858F0 00AC .text      parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl Function */
 // JStudio::TParse::parseBlock_block_fvb_(JStudio::stb::data::TParse_TBlock, u32)
 #pragma push
 #pragma optimization_level 0
@@ -322,7 +386,7 @@ asm void parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_
 }
 #pragma pop
 
-/* 802858F0 00EC .text      parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl */
+/* 802858F0-802859DC 00EC .text      parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl Function */
 // JStudio::TParse::parseBlock_block_ctb_(JStudio::stb::data::TParse_TBlock, u32)
 #pragma push
 #pragma optimization_level 0

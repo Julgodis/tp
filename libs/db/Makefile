@@ -16,8 +16,9 @@ DB_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libdb.a: dirs $(DB_A_O_FILES)
+$(BUILD_DIR)/libdb.a: $(DB_A_O_FILES)
 	$(LD) -xm l $(DB_A_LDFLAGS) -o $(BUILD_DIR)/libdb.a $(DB_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libdb.a
 
 $(BUILD_DIR)/libs/db/%.o: cpp/db/%.cpp
 	mkdir -p $(@D)

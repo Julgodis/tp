@@ -9,46 +9,122 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void OSInitAlarm();
+/* Function             */
 extern void OSCreateAlarm();
+/* Function             */
 extern void OSSetAlarm();
+/* Function             */
 extern void OSCancelAlarm();
+/* Function             */
 extern void OSGetFontEncode();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSRegisterResetFunction();
+/* Function             */
 extern void OSInitThreadQueue();
+/* Function             */
 extern void OSSleepThread();
+/* Function             */
 extern void OSWakeupThread();
+/* Function             */
 extern void EXIImm();
+/* Function             */
 extern void EXIImmEx();
+/* Function             */
 extern void EXIDma();
+/* Function             */
 extern void EXISync();
+/* Function             */
 extern void EXISetExiCallback();
+/* Function             */
 extern void EXIProbe();
+/* Function             */
 extern void EXISelect();
+/* Function             */
 extern void EXIDeselect();
+/* Function             */
 extern void EXILock();
+/* Function             */
 extern void EXIUnlock();
+/* Function             */
 extern void DSPInit();
+/* ReturnFunction       */
+extern void __CARDDefaultApiCallback();
+/* Function             */
+extern void __CARDSyncCallback();
+/* Function             */
+extern void __CARDExtHandler();
+/* Function             */
+extern void __CARDExiHandler();
+/* Function             */
 extern void __CARDTxHandler();
+/* Function             */
 extern void __CARDUnlockedHandler();
+/* Function             */
+extern void __CARDEnableInterrupt();
+/* Function             */
 extern void __CARDReadStatus();
+/* Function             */
+extern void __CARDReadVendorID();
+/* Function             */
 extern void __CARDClearStatus();
+/* Function             */
 extern void TimeoutHandler();
+/* Function             */
 extern void Retry();
+/* Function             */
 extern void UnlockedCallback();
+/* Function             */
 extern void __CARDStart();
+/* Function             */
+extern void __CARDReadSegment();
+/* Function             */
+extern void __CARDWritePage();
+/* Function             */
+extern void __CARDEraseSector();
+/* Function             */
+extern void CARDInit();
+/* GlobalFunction       */
+extern void __CARDGetFontEncode();
+/* Function             */
 extern void __CARDSetDiskID();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
+extern void __CARDPutControlBlock();
+/* Function             */
+extern void CARDFreeBlocks();
+/* Function             */
+extern void __CARDSync();
+/* Function             */
+extern void CARDBios__OnReset();
+/* Function             */
+extern void CARDGetFastMode();
+/* FirstParamFunction   */
 extern u32 __CARDGetFatBlock(u8*);
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void CARDUnmount();
-SECTION_DATA extern u8 CARDBios__ResetFunctionInfo[32];
+/* InitializedData      */
+SECTION_DATA extern u8 CARDBios__LIT_1[72];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* CARDBios__ResetFunctionInfo[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
-SECTION_SDATA extern u8 __CARDVersion[8];
-SECTION_SBSS extern u8 merged_80451918[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 __CARDDiskNone[32];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __CARDVersion[2];
+/* MergedZeroInitializedData */
+SECTION_SBSS extern u8 merged_80451918[4 + 4 /* padding */];
 }
 
 
@@ -57,8 +133,8 @@ SECTION_SBSS extern u8 merged_80451918[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1E38 0000 .data      ...data.0                                                    */
-/* 803D1E38 0046 .data      @1                                                           */
+/* 803D1E38-803D1E38 0000 .data      ...data.0                                                    InitializedData */
+/* 803D1E38-803D1E80 0046 .data      @1                                                           InitializedData */
 SECTION_DATA u8 CARDBios__LIT_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x43, 0x41, 0x52, 0x44, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75,
@@ -68,11 +144,17 @@ SECTION_DATA u8 CARDBios__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D1E80 0010 .data      ResetFunctionInfo                                            */
-SECTION_DATA u8 CARDBios__ResetFunctionInfo[32] = {
-	0x80, 0x35, 0x3E, 0xB8, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803D1E80-803D1EA0 0010 .data      ResetFunctionInfo                                            SymbolReferenceArrayData */
+SECTION_DATA void* CARDBios__ResetFunctionInfo[8] = {
+	(void*)CARDBios__OnReset,
+	(void*)0x0000007F,
+	NULL,
+	NULL,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
 };
 }
 
@@ -82,11 +164,11 @@ SECTION_DATA u8 CARDBios__ResetFunctionInfo[32] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A60 0004 .sdata     __CARDVersion                                                */
-SECTION_SDATA u8 __CARDVersion[8] = {
-	0x80, 0x3D, 0x1E, 0x38,
+/* 80450A60-80450A68 0004 .sdata     __CARDVersion                                                SymbolReferenceArrayData */
+SECTION_SDATA void* __CARDVersion[2] = {
+	(void*)&CARDBios__LIT_1,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -96,10 +178,10 @@ SECTION_SDATA u8 __CARDVersion[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044CBC0 0000 .bss       ...bss.0                                                     */
-/* 8044CBC0 0220 .bss       __CARDBlock                                                  */
+/* 8044CBC0-8044CBC0 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8044CBC0-8044CDE0 0220 .bss       __CARDBlock                                                  ZeroInitializedData */
 SECTION_BSS u8 __CARDBlock[544];
-/* 8044CDE0 0020 .bss       __CARDDiskNone                                               */
+/* 8044CDE0-8044CE00 0020 .bss       __CARDDiskNone                                               ZeroInitializedData */
 SECTION_BSS u8 __CARDDiskNone[32];
 }
 
@@ -109,11 +191,10 @@ SECTION_BSS u8 __CARDDiskNone[32];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451918 0004 .sbss      merged_80451918                                              */
-SECTION_SBSS u8 merged_80451918[4];
+/* 80451918-80451920 0004 .sbss      merged_80451918                                              MergedZeroInitializedData */
+SECTION_SBSS u8 merged_80451918[4 + 4 /* padding */];
 /* 80451918 0002 __CARDEncode */
 /* 8045191A 0002 __CARDFastMode */
-SECTION_SBSS u8 pad_8045191C[4];
 }
 
 
@@ -122,12 +203,12 @@ SECTION_SBSS u8 pad_8045191C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80352A30 0004 .text      __CARDDefaultApiCallback                                     */
+/* 80352A30-80352A34 0004 .text      __CARDDefaultApiCallback                                     ReturnFunction */
 void __CARDDefaultApiCallback() {
 	return;
 }
 
-/* 80352A34 0034 .text      __CARDSyncCallback                                           */
+/* 80352A34-80352A68 0034 .text      __CARDSyncCallback                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +218,7 @@ asm void __CARDSyncCallback() {
 }
 #pragma pop
 
-/* 80352A68 00D8 .text      __CARDExtHandler                                             */
+/* 80352A68-80352B40 00D8 .text      __CARDExtHandler                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +228,7 @@ asm void __CARDExtHandler() {
 }
 #pragma pop
 
-/* 80352B40 0118 .text      __CARDExiHandler                                             */
+/* 80352B40-80352C58 0118 .text      __CARDExiHandler                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +238,7 @@ asm void __CARDExiHandler() {
 }
 #pragma pop
 
-/* 80352C58 00A8 .text      __CARDTxHandler                                              */
+/* 80352C58-80352D00 00A8 .text      __CARDTxHandler                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +248,7 @@ asm void __CARDTxHandler() {
 }
 #pragma pop
 
-/* 80352D00 0084 .text      __CARDUnlockedHandler                                        */
+/* 80352D00-80352D84 0084 .text      __CARDUnlockedHandler                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +258,7 @@ asm void __CARDUnlockedHandler() {
 }
 #pragma pop
 
-/* 80352D84 00C0 .text      __CARDEnableInterrupt                                        */
+/* 80352D84-80352E44 00C0 .text      __CARDEnableInterrupt                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +268,7 @@ asm void __CARDEnableInterrupt() {
 }
 #pragma pop
 
-/* 80352E44 00F0 .text      __CARDReadStatus                                             */
+/* 80352E44-80352F34 00F0 .text      __CARDReadStatus                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +278,7 @@ asm void __CARDReadStatus() {
 }
 #pragma pop
 
-/* 80352F34 00F0 .text      __CARDReadVendorID                                           */
+/* 80352F34-80353024 00F0 .text      __CARDReadVendorID                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +288,7 @@ asm void __CARDReadVendorID() {
 }
 #pragma pop
 
-/* 80353024 00AC .text      __CARDClearStatus                                            */
+/* 80353024-803530D0 00AC .text      __CARDClearStatus                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -217,7 +298,7 @@ asm void __CARDClearStatus() {
 }
 #pragma pop
 
-/* 803530D0 00A4 .text      TimeoutHandler                                               */
+/* 803530D0-80353174 00A4 .text      TimeoutHandler                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -227,7 +308,7 @@ asm void TimeoutHandler() {
 }
 #pragma pop
 
-/* 80353174 02A0 .text      Retry                                                        */
+/* 80353174-80353414 02A0 .text      Retry                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +318,7 @@ asm void Retry() {
 }
 #pragma pop
 
-/* 80353414 0110 .text      UnlockedCallback                                             */
+/* 80353414-80353524 0110 .text      UnlockedCallback                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -247,7 +328,7 @@ asm void UnlockedCallback() {
 }
 #pragma pop
 
-/* 80353524 0224 .text      __CARDStart                                                  */
+/* 80353524-80353748 0224 .text      __CARDStart                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -257,7 +338,7 @@ asm void __CARDStart() {
 }
 #pragma pop
 
-/* 80353748 0134 .text      __CARDReadSegment                                            */
+/* 80353748-8035387C 0134 .text      __CARDReadSegment                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -267,7 +348,7 @@ asm void __CARDReadSegment() {
 }
 #pragma pop
 
-/* 8035387C 013C .text      __CARDWritePage                                              */
+/* 8035387C-803539B8 013C .text      __CARDWritePage                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -277,7 +358,7 @@ asm void __CARDWritePage() {
 }
 #pragma pop
 
-/* 803539B8 0110 .text      __CARDEraseSector                                            */
+/* 803539B8-80353AC8 0110 .text      __CARDEraseSector                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,7 +368,7 @@ asm void __CARDEraseSector() {
 }
 #pragma pop
 
-/* 80353AC8 00AC .text      CARDInit                                                     */
+/* 80353AC8-80353B74 00AC .text      CARDInit                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -297,7 +378,7 @@ asm void CARDInit() {
 }
 #pragma pop
 
-/* 80353B74 0008 .text      __CARDGetFontEncode                                          */
+/* 80353B74-80353B7C 0008 .text      __CARDGetFontEncode                                          GlobalFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -307,7 +388,7 @@ asm void __CARDGetFontEncode() {
 }
 #pragma pop
 
-/* 80353B7C 0038 .text      __CARDSetDiskID                                              */
+/* 80353B7C-80353BB4 0038 .text      __CARDSetDiskID                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,7 +398,7 @@ asm void __CARDSetDiskID() {
 }
 #pragma pop
 
-/* 80353BB4 00B8 .text      __CARDGetControlBlock                                        */
+/* 80353BB4-80353C6C 00B8 .text      __CARDGetControlBlock                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -327,7 +408,7 @@ asm void __CARDGetControlBlock() {
 }
 #pragma pop
 
-/* 80353C6C 0064 .text      __CARDPutControlBlock                                        */
+/* 80353C6C-80353CD0 0064 .text      __CARDPutControlBlock                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -337,7 +418,7 @@ asm void __CARDPutControlBlock() {
 }
 #pragma pop
 
-/* 80353CD0 0150 .text      CARDFreeBlocks                                               */
+/* 80353CD0-80353E20 0150 .text      CARDFreeBlocks                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -347,7 +428,7 @@ asm void CARDFreeBlocks() {
 }
 #pragma pop
 
-/* 80353E20 0098 .text      __CARDSync                                                   */
+/* 80353E20-80353EB8 0098 .text      __CARDSync                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,7 +438,7 @@ asm void __CARDSync() {
 }
 #pragma pop
 
-/* 80353EB8 0050 .text      OnReset                                                      */
+/* 80353EB8-80353F08 0050 .text      OnReset                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +448,7 @@ asm void CARDBios__OnReset() {
 }
 #pragma pop
 
-/* 80353F08 001C .text      CARDGetFastMode                                              */
+/* 80353F08-80353F24 001C .text      CARDGetFastMode                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

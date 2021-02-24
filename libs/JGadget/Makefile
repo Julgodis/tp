@@ -20,8 +20,9 @@ JGADGET_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJGadget.a: dirs $(JGADGET_A_O_FILES)
+$(BUILD_DIR)/libJGadget.a: $(JGADGET_A_O_FILES)
 	$(LD) -xm l $(JGADGET_A_LDFLAGS) -o $(BUILD_DIR)/libJGadget.a $(JGADGET_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJGadget.a
 
 $(BUILD_DIR)/libs/JGadget/%.o: cpp/JGadget/%.cpp
 	mkdir -p $(@D)

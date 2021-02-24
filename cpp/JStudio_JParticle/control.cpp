@@ -12,22 +12,38 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void func_8027DEBC();
+/* Function             */
 extern void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__Q27JStudio13TCreateObjectFv();
+/* Function             */
 extern void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
+/* Function             */
 extern void __dt__Q217JStudio_JParticle13TCreateObjectFv();
+/* Function             */
 extern void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+/* Function             */
 extern void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl();
+/* Function             */
 extern void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
+/* Function             */
 extern void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject();
+/* Function             */
 extern void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_1172[16];
-SECTION_DATA extern const void* __vt__Q217JStudio_JParticle13TCreateObject[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q217JStudio_JParticle13TCreateObject[6];
 }
 
 
@@ -36,7 +52,7 @@ SECTION_DATA extern const void* __vt__Q217JStudio_JParticle13TCreateObject[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039ABA8 000C .rodata    @1172                                                        */
+/* 8039ABA8-8039ABB8 000C .rodata    @1172                                                        InitializedData */
 SECTION_RODATA const u8 LIT_1172[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -50,8 +66,8 @@ SECTION_RODATA const u8 LIT_1172[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5AD8 0018 .data      __vt__Q217JStudio_JParticle13TCreateObject                   */
-SECTION_DATA const  void* __vt__Q217JStudio_JParticle13TCreateObject[6] = {
+/* 803C5AD8-803C5AF0 0018 .data      __vt__Q217JStudio_JParticle13TCreateObject                   VTableData */
+SECTION_DATA void* __vt__Q217JStudio_JParticle13TCreateObject[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q217JStudio_JParticle13TCreateObjectFv,
@@ -67,7 +83,7 @@ SECTION_DATA const  void* __vt__Q217JStudio_JParticle13TCreateObject[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028E3A0 0060 .text      __dt__Q217JStudio_JParticle13TCreateObjectFv                 */
+/* 8028E3A0-8028E400 0060 .text      __dt__Q217JStudio_JParticle13TCreateObjectFv                 Function */
 // JStudio_JParticle::TCreateObject::~JStudio_JParticle::TCreateObject(void)
 #pragma push
 #pragma optimization_level 0
@@ -78,7 +94,7 @@ asm void __dt__Q217JStudio_JParticle13TCreateObjectFv() {
 }
 #pragma pop
 
-/* 8028E400 0074 .text      create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 8028E400-8028E474 0074 .text      create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object Function */
 // JStudio_JParticle::TCreateObject::create(JStudio::TObject, JStudio::stb::data::TParse_TBlock_object)
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +105,7 @@ asm void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47J
 }
 #pragma pop
 
-/* 8028E474 0070 .text      emitter_create__Q217JStudio_JParticle13TCreateObjectFUl      */
+/* 8028E474-8028E4E4 0070 .text      emitter_create__Q217JStudio_JParticle13TCreateObjectFUl      Function */
 // JStudio_JParticle::TCreateObject::emitter_create(u32)
 #pragma push
 #pragma optimization_level 0
@@ -100,7 +116,7 @@ asm void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl() {
 }
 #pragma pop
 
-/* 8028E4E4 0024 .text      emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter */
+/* 8028E4E4-8028E508 0024 .text      emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter Function */
 // JStudio_JParticle::TCreateObject::emitter_destroy(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -111,7 +127,7 @@ asm void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter
 }
 #pragma pop
 
-/* 8028E508 0104 .text      createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject */
+/* 8028E508-8028E60C 0104 .text      createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject Function */
 // JStudio_JParticle::TCreateObject::createObject_JPA_PARTICLE_(JStudio::stb::data::TParse_TBlock_object, JStudio_JParticle::TCreateObject)
 #pragma push
 #pragma optimization_level 0

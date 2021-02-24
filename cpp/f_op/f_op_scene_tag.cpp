@@ -8,18 +8,31 @@
 // Additional Symbols:
 // 
 
+struct scene_tag_class;
 struct create_tag_class;
 struct node_list_class;
-struct scene_tag_class;
 
+extern void fopScnTg_QueueTo(scene_tag_class*); /* fopScnTg_QueueTo__FP15scene_tag_class */
+extern void fopScnTg_ToQueue(scene_tag_class*); /* fopScnTg_ToQueue__FP15scene_tag_class */
+extern void fopScnTg_Init(scene_tag_class*, void*); /* fopScnTg_Init__FP15scene_tag_classPv */
 extern void cTg_SingleCut(create_tag_class*); /* cTg_SingleCut__FP16create_tag_class */
 extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopScnTg_QueueTo__FP15scene_tag_class();
+/* Function             */
+extern void fopScnTg_ToQueue__FP15scene_tag_class();
+/* Function             */
+extern void fopScnTg_Init__FP15scene_tag_classPv();
+/* Function             */
 extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fopScnTg_SceneList[16];
 }
 
@@ -29,7 +42,7 @@ SECTION_DATA extern u8 g_fopScnTg_SceneList[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3918 000C .data      g_fopScnTg_SceneList                                         */
+/* 803A3918-803A3928 000C .data      g_fopScnTg_SceneList                                         InitializedData */
 SECTION_DATA u8 g_fopScnTg_SceneList[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -43,7 +56,7 @@ SECTION_DATA u8 g_fopScnTg_SceneList[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001F13C 0020 .text      fopScnTg_QueueTo__FP15scene_tag_class                        */
+/* 8001F13C-8001F15C 0020 .text      fopScnTg_QueueTo__FP15scene_tag_class                        Function */
 }
 
 #pragma push
@@ -56,7 +69,7 @@ asm void fopScnTg_QueueTo(scene_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001F15C 002C .text      fopScnTg_ToQueue__FP15scene_tag_class                        */
+/* 8001F15C-8001F188 002C .text      fopScnTg_ToQueue__FP15scene_tag_class                        Function */
 }
 
 #pragma push
@@ -69,7 +82,7 @@ asm void fopScnTg_ToQueue(scene_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001F188 0020 .text      fopScnTg_Init__FP15scene_tag_classPv                         */
+/* 8001F188-8001F1A8 0020 .text      fopScnTg_Init__FP15scene_tag_classPv                         Function */
 }
 
 #pragma push

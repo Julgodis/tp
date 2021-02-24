@@ -22,41 +22,87 @@ extern void dSmplMdl_modelUpdateDL(J3DModel*); /* dSmplMdl_modelUpdateDL__FP8J3D
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_modelUpdateDL__FP8J3DModel();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_restoreCurrentHeap__Fv();
+/* Function             */
 extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+/* Function             */
 extern void dSmplMdl_modelUpdateDL__FP8J3DModel();
+/* Function             */
+extern void __ct__15dSmplMdl_draw_cFv();
+/* Function             */
 extern void __ct__12diff_model_cFv();
+/* Function             */
 extern void __dt__15dSmplMdl_draw_cFv();
+/* Function             */
+extern void draw__15dSmplMdl_draw_cFv();
+/* Function             */
+extern void entry__15dSmplMdl_draw_cFP8J3DModeli();
+/* Function             */
+extern void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc();
+/* Function             */
+extern void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai();
+/* Function             */
 extern void create__12diff_model_cFP12J3DModelDataiUc();
+/* Function             */
 extern void getModelData__12diff_model_cFv();
+/* Function             */
 extern void remove__12diff_model_cFi();
+/* Function             */
 extern void draw__12diff_model_cFv();
+/* Function             */
 extern void init__12diff_model_cFv();
+/* Function             */
 extern void isSame__12diff_model_cFP12J3DModelDatai();
+/* Function             */
 extern void getRoomNo__12diff_model_cFv();
+/* Function             */
 extern void insert__12diff_model_cFP11modelList_c();
+/* Function             */
 extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_DATA extern u8 g_mDoMtx_identity[72];
-SECTION_DATA extern const void* __vt__15dSmplMdl_draw_c[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dSmplMdl_draw_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_simple_model__LIT_3763[8];
 }
 
@@ -66,8 +112,8 @@ SECTION_SDATA2 extern u8 d_d_simple_model__LIT_3763[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A82F8 000C .data      __vt__15dSmplMdl_draw_c                                      */
-SECTION_DATA const  void* __vt__15dSmplMdl_draw_c[4] = {
+/* 803A82F8-803A8308 000C .data      __vt__15dSmplMdl_draw_c                                      VTableData */
+SECTION_DATA void* __vt__15dSmplMdl_draw_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__15dSmplMdl_draw_cFv,
@@ -82,7 +128,7 @@ SECTION_DATA const  void* __vt__15dSmplMdl_draw_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451F38 0004 .sdata2    @3763                                                        */
+/* 80451F38-80451F40 0004 .sdata2    @3763                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_simple_model__LIT_3763[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -96,7 +142,7 @@ SECTION_SDATA2 u8 d_d_simple_model__LIT_3763[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80048C54 0060 .text      dSmplMdl_modelUpdateDL__FP8J3DModel                          */
+/* 80048C54-80048CB4 0060 .text      dSmplMdl_modelUpdateDL__FP8J3DModel                          Function */
 }
 
 #pragma push
@@ -109,7 +155,7 @@ asm void dSmplMdl_modelUpdateDL(J3DModel*) {
 #pragma pop
 
 extern "C" {
-/* 80048CB4 00AC .text      __ct__15dSmplMdl_draw_cFv                                    */
+/* 80048CB4-80048D60 00AC .text      __ct__15dSmplMdl_draw_cFv                                    Function */
 // dSmplMdl_draw_c::dSmplMdl_draw_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -120,7 +166,7 @@ asm void __ct__15dSmplMdl_draw_cFv() {
 }
 #pragma pop
 
-/* 80048D60 0020 .text      __ct__12diff_model_cFv                                       */
+/* 80048D60-80048D80 0020 .text      __ct__12diff_model_cFv                                       Function */
 // diff_model_c::diff_model_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -131,7 +177,7 @@ asm void __ct__12diff_model_cFv() {
 }
 #pragma pop
 
-/* 80048D80 008C .text      __dt__15dSmplMdl_draw_cFv                                    */
+/* 80048D80-80048E0C 008C .text      __dt__15dSmplMdl_draw_cFv                                    Function */
 // dSmplMdl_draw_c::~dSmplMdl_draw_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -142,7 +188,7 @@ asm void __dt__15dSmplMdl_draw_cFv() {
 }
 #pragma pop
 
-/* 80048E0C 00B0 .text      draw__15dSmplMdl_draw_cFv                                    */
+/* 80048E0C-80048EBC 00B0 .text      draw__15dSmplMdl_draw_cFv                                    Function */
 // dSmplMdl_draw_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -153,7 +199,7 @@ asm void draw__15dSmplMdl_draw_cFv() {
 }
 #pragma pop
 
-/* 80048EBC 00B4 .text      entry__15dSmplMdl_draw_cFP8J3DModeli                         */
+/* 80048EBC-80048F70 00B4 .text      entry__15dSmplMdl_draw_cFP8J3DModeli                         Function */
 // dSmplMdl_draw_c::entry(J3DModel*, int)
 #pragma push
 #pragma optimization_level 0
@@ -164,7 +210,7 @@ asm void entry__15dSmplMdl_draw_cFP8J3DModeli() {
 }
 #pragma pop
 
-/* 80048F70 00E8 .text      addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc               */
+/* 80048F70-80049058 00E8 .text      addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc               Function */
 // dSmplMdl_draw_c::addModel(J3DModelData*, int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -175,7 +221,7 @@ asm void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc() {
 }
 #pragma pop
 
-/* 80049058 0094 .text      removeModel__15dSmplMdl_draw_cFP12J3DModelDatai              */
+/* 80049058-800490EC 0094 .text      removeModel__15dSmplMdl_draw_cFP12J3DModelDatai              Function */
 // dSmplMdl_draw_c::removeModel(J3DModelData*, int)
 #pragma push
 #pragma optimization_level 0
@@ -186,7 +232,7 @@ asm void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai() {
 }
 #pragma pop
 
-/* 800490EC 0108 .text      create__12diff_model_cFP12J3DModelDataiUc                    */
+/* 800490EC-800491F4 0108 .text      create__12diff_model_cFP12J3DModelDataiUc                    Function */
 // diff_model_c::create(J3DModelData*, int, u8)
 #pragma push
 #pragma optimization_level 0
@@ -197,7 +243,7 @@ asm void create__12diff_model_cFP12J3DModelDataiUc() {
 }
 #pragma pop
 
-/* 800491F4 001C .text      getModelData__12diff_model_cFv                               */
+/* 800491F4-80049210 001C .text      getModelData__12diff_model_cFv                               Function */
 // diff_model_c::getModelData(void)
 #pragma push
 #pragma optimization_level 0
@@ -208,7 +254,7 @@ asm void getModelData__12diff_model_cFv() {
 }
 #pragma pop
 
-/* 80049210 0060 .text      remove__12diff_model_cFi                                     */
+/* 80049210-80049270 0060 .text      remove__12diff_model_cFi                                     Function */
 // diff_model_c::remove(int)
 #pragma push
 #pragma optimization_level 0
@@ -219,7 +265,7 @@ asm void remove__12diff_model_cFi() {
 }
 #pragma pop
 
-/* 80049270 00F8 .text      draw__12diff_model_cFv                                       */
+/* 80049270-80049368 00F8 .text      draw__12diff_model_cFv                                       Function */
 // diff_model_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -230,7 +276,7 @@ asm void draw__12diff_model_cFv() {
 }
 #pragma pop
 
-/* 80049368 0020 .text      init__12diff_model_cFv                                       */
+/* 80049368-80049388 0020 .text      init__12diff_model_cFv                                       Function */
 // diff_model_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -241,7 +287,7 @@ asm void init__12diff_model_cFv() {
 }
 #pragma pop
 
-/* 80049388 0074 .text      isSame__12diff_model_cFP12J3DModelDatai                      */
+/* 80049388-800493FC 0074 .text      isSame__12diff_model_cFP12J3DModelDatai                      Function */
 // diff_model_c::isSame(J3DModelData*, int)
 #pragma push
 #pragma optimization_level 0
@@ -252,7 +298,7 @@ asm void isSame__12diff_model_cFP12J3DModelDatai() {
 }
 #pragma pop
 
-/* 800493FC 000C .text      getRoomNo__12diff_model_cFv                                  */
+/* 800493FC-80049408 000C .text      getRoomNo__12diff_model_cFv                                  Function */
 // diff_model_c::getRoomNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -263,7 +309,7 @@ asm void getRoomNo__12diff_model_cFv() {
 }
 #pragma pop
 
-/* 80049408 0018 .text      insert__12diff_model_cFP11modelList_c                        */
+/* 80049408-80049420 0018 .text      insert__12diff_model_cFP11modelList_c                        Function */
 // diff_model_c::insert(modelList_c*)
 #pragma push
 #pragma optimization_level 0

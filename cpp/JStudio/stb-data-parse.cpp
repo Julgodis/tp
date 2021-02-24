@@ -9,7 +9,15 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData();
+/* Function             */
+extern void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData();
+/* Function             */
+extern void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+/* Function             */
 extern void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+/* InitializedData      */
 SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 }
 
@@ -19,7 +27,7 @@ SECTION_RODATA extern const u8 gauDataSize_TEParagraph_data__Q37JStudio3stb4data
 /* ###################################################################################### */
 
 extern "C" {
-/* 802899BC 004C .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData */
+/* 802899BC-80289A08 004C .text      getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData Function */
 // JStudio::stb::data::TParse_TSequence::getData(JStudio::stb::data::TParse_TSequence::TData) const
 #pragma push
 #pragma optimization_level 0
@@ -30,7 +38,7 @@ asm void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16T
 }
 #pragma pop
 
-/* 80289A08 0078 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData */
+/* 80289A08-80289A80 0078 .text      getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData Function */
 // JStudio::stb::data::TParse_TParagraph::getData(JStudio::stb::data::TParse_TParagraph::TData) const
 #pragma push
 #pragma optimization_level 0
@@ -41,7 +49,7 @@ asm void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17
 }
 #pragma pop
 
-/* 80289A80 0080 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData */
+/* 80289A80-80289B00 0080 .text      getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData Function */
 // JStudio::stb::data::TParse_TParagraph_data::getData(JStudio::stb::data::TParse_TParagraph_data::TData) const
 #pragma push
 #pragma optimization_level 0

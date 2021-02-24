@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void modf();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C494 00FC .text      modf                                                         */
+/* 8036C494-8036C590 00FC .text      modf                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

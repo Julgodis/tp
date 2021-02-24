@@ -16,8 +16,9 @@ ODENOTSTUB_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libodenotstub.a: dirs $(ODENOTSTUB_A_O_FILES)
+$(BUILD_DIR)/libodenotstub.a: $(ODENOTSTUB_A_O_FILES)
 	$(LD) -xm l $(ODENOTSTUB_A_LDFLAGS) -o $(BUILD_DIR)/libodenotstub.a $(ODENOTSTUB_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libodenotstub.a
 
 $(BUILD_DIR)/libs/odenotstub/%.o: cpp/odenotstub/%.cpp
 	mkdir -p $(@D)

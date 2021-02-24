@@ -9,44 +9,89 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ieee754_pow();
+/* Function             */
 extern void ldexp();
+/* Function             */
 extern void sqrt();
+/* InitializedData      */
 SECTION_RODATA extern const u8 bp[16];
+/* InitializedData      */
+SECTION_RODATA extern const u8 dp_h[16];
+/* InitializedData      */
+SECTION_RODATA extern const u8 dp_l[16];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SBSS extern u8 errno[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__LIT_336;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_337[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_338[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_339;
+/* Fraction64Data       */
 SECTION_SDATA2 extern f64 LIT_340;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__LIT_341;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_342[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_343[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_344[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_345[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_346[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_347[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_348[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_349[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_350[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_351[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_352;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_353[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_354[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_355[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__LIT_356;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_357[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_358[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_359[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_360[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_361[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_362[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_363[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 Math_Double_precision_e_pow__LIT_364[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_365[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_366[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_367[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_368;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__LIT_370;
 }
 
@@ -56,16 +101,16 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_pow__LIT_370;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2380 0000 .rodata    ...rodata.0                                                  */
-/* 803A2380 0010 .rodata    bp                                                           */
+/* 803A2380-803A2380 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 803A2380-803A2390 0010 .rodata    bp                                                           InitializedData */
 SECTION_RODATA const u8 bp[16] = {
 	0x3F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A2390 0010 .rodata    dp_h                                                         */
+/* 803A2390-803A23A0 0010 .rodata    dp_h                                                         InitializedData */
 SECTION_RODATA const u8 dp_h[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0xE2, 0xB8, 0x03, 0x40, 0x00, 0x00, 0x00,
 };
-/* 803A23A0 0010 .rodata    dp_l                                                         */
+/* 803A23A0-803A23B0 0010 .rodata    dp_l                                                         InitializedData */
 SECTION_RODATA const u8 dp_l[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3E, 0x4C, 0xFD, 0xEB, 0x43, 0xCF, 0xD0, 0x06,
 };
@@ -77,132 +122,132 @@ SECTION_RODATA const u8 dp_l[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456858 0008 .sdata2    @336                                                         */
+/* 80456858-80456860 0008 .sdata2    @336                                                         Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_e_pow__LIT_336 = 1.000000;
-/* 80456860 0008 .sdata2    @337                                                         */
+/* 80456860-80456868 0008 .sdata2    @337                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_337[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80456868 0008 .sdata2    @338                                                         */
+/* 80456868-80456870 0008 .sdata2    @338                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_338[8] = {
 	0x7F, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80456870 0008 .sdata2    @339                                                         */
+/* 80456870-80456878 0008 .sdata2    @339                                                         Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 LIT_339 = 0.500000;
-/* 80456878 0008 .sdata2    @340                                                         */
+/* 80456878-80456880 0008 .sdata2    @340                                                         Fraction64Data */
 // 0.3333333333333333 0x3fd5555555555555
 SECTION_SDATA2 f64 LIT_340 = 1.000000 / 3.000000;
-/* 80456880 0008 .sdata2    @341                                                         */
+/* 80456880-80456888 0008 .sdata2    @341                                                         Float64Data */
 // 0x3fd0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_e_pow__LIT_341 = 0.250000;
-/* 80456888 0008 .sdata2    @342                                                         */
+/* 80456888-80456890 0008 .sdata2    @342                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_342[8] = {
 	0x3F, 0xF7, 0x15, 0x47, 0x60, 0x00, 0x00, 0x00,
 };
-/* 80456890 0008 .sdata2    @343                                                         */
+/* 80456890-80456898 0008 .sdata2    @343                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_343[8] = {
 	0x3E, 0x54, 0xAE, 0x0B, 0xF8, 0x5D, 0xDF, 0x44,
 };
-/* 80456898 0008 .sdata2    @344                                                         */
+/* 80456898-804568A0 0008 .sdata2    @344                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_344[8] = {
 	0x3F, 0xF7, 0x15, 0x47, 0x65, 0x2B, 0x82, 0xFE,
 };
-/* 804568A0 0008 .sdata2    @345                                                         */
+/* 804568A0-804568A8 0008 .sdata2    @345                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_345[8] = {
 	0x43, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 804568A8 0008 .sdata2    @346                                                         */
+/* 804568A8-804568B0 0008 .sdata2    @346                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_346[8] = {
 	0x3F, 0xE3, 0x33, 0x33, 0x33, 0x33, 0x33, 0x03,
 };
-/* 804568B0 0008 .sdata2    @347                                                         */
+/* 804568B0-804568B8 0008 .sdata2    @347                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_347[8] = {
 	0x3F, 0xDB, 0x6D, 0xB6, 0xDB, 0x6F, 0xAB, 0xFF,
 };
-/* 804568B8 0008 .sdata2    @348                                                         */
+/* 804568B8-804568C0 0008 .sdata2    @348                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_348[8] = {
 	0x3F, 0xD5, 0x55, 0x55, 0x51, 0x8F, 0x26, 0x4D,
 };
-/* 804568C0 0008 .sdata2    @349                                                         */
+/* 804568C0-804568C8 0008 .sdata2    @349                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_349[8] = {
 	0x3F, 0xD1, 0x74, 0x60, 0xA9, 0x1D, 0x41, 0x01,
 };
-/* 804568C8 0008 .sdata2    @350                                                         */
+/* 804568C8-804568D0 0008 .sdata2    @350                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_350[8] = {
 	0x3F, 0xCD, 0x86, 0x4A, 0x93, 0xC9, 0xDB, 0x65,
 };
-/* 804568D0 0008 .sdata2    @351                                                         */
+/* 804568D0-804568D8 0008 .sdata2    @351                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_351[8] = {
 	0x3F, 0xCA, 0x7E, 0x28, 0x4A, 0x45, 0x4E, 0xEF,
 };
-/* 804568D8 0008 .sdata2    @352                                                         */
+/* 804568D8-804568E0 0008 .sdata2    @352                                                         Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_352 = 3.000000;
-/* 804568E0 0008 .sdata2    @353                                                         */
+/* 804568E0-804568E8 0008 .sdata2    @353                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_353[8] = {
 	0x3F, 0xEE, 0xC7, 0x09, 0xE0, 0x00, 0x00, 0x00,
 };
-/* 804568E8 0008 .sdata2    @354                                                         */
+/* 804568E8-804568F0 0008 .sdata2    @354                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_354[8] = {
 	0xBE, 0x3E, 0x2F, 0xE0, 0x14, 0x5B, 0x01, 0xF5,
 };
-/* 804568F0 0008 .sdata2    @355                                                         */
+/* 804568F0-804568F8 0008 .sdata2    @355                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_355[8] = {
 	0x3F, 0xEE, 0xC7, 0x09, 0xDC, 0x3A, 0x03, 0xFD,
 };
-/* 804568F8 0008 .sdata2    @356                                                         */
+/* 804568F8-80456900 0008 .sdata2    @356                                                         Float64Data */
 // 0xbff0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_e_pow__LIT_356 = -1.000000;
-/* 80456900 0008 .sdata2    @357                                                         */
+/* 80456900-80456908 0008 .sdata2    @357                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_357[8] = {
 	0x7E, 0x37, 0xE4, 0x3C, 0x88, 0x00, 0x75, 0x9C,
 };
-/* 80456908 0008 .sdata2    @358                                                         */
+/* 80456908-80456910 0008 .sdata2    @358                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_358[8] = {
 	0x3C, 0x97, 0x15, 0x47, 0x65, 0x2B, 0x82, 0xFE,
 };
-/* 80456910 0008 .sdata2    @359                                                         */
+/* 80456910-80456918 0008 .sdata2    @359                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_359[8] = {
 	0x01, 0xA5, 0x6E, 0x1F, 0xC2, 0xF8, 0xF3, 0x59,
 };
-/* 80456918 0008 .sdata2    @360                                                         */
+/* 80456918-80456920 0008 .sdata2    @360                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_360[8] = {
 	0x3F, 0xE6, 0x2E, 0x43, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80456920 0008 .sdata2    @361                                                         */
+/* 80456920-80456928 0008 .sdata2    @361                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_361[8] = {
 	0x3F, 0xE6, 0x2E, 0x42, 0xFE, 0xFA, 0x39, 0xEF,
 };
-/* 80456928 0008 .sdata2    @362                                                         */
+/* 80456928-80456930 0008 .sdata2    @362                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_362[8] = {
 	0xBE, 0x20, 0x5C, 0x61, 0x0C, 0xA8, 0x6C, 0x39,
 };
-/* 80456930 0008 .sdata2    @363                                                         */
+/* 80456930-80456938 0008 .sdata2    @363                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_363[8] = {
 	0x3F, 0xC5, 0x55, 0x55, 0x55, 0x55, 0x55, 0x3E,
 };
-/* 80456938 0008 .sdata2    @364                                                         */
+/* 80456938-80456940 0008 .sdata2    @364                                                         InitializedData */
 SECTION_SDATA2 u8 Math_Double_precision_e_pow__LIT_364[8] = {
 	0xBF, 0x66, 0xC1, 0x6C, 0x16, 0xBE, 0xBD, 0x93,
 };
-/* 80456940 0008 .sdata2    @365                                                         */
+/* 80456940-80456948 0008 .sdata2    @365                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_365[8] = {
 	0x3F, 0x11, 0x56, 0x6A, 0xAF, 0x25, 0xDE, 0x2C,
 };
-/* 80456948 0008 .sdata2    @366                                                         */
+/* 80456948-80456950 0008 .sdata2    @366                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_366[8] = {
 	0xBE, 0xBB, 0xBD, 0x41, 0xC5, 0xD2, 0x6B, 0xF1,
 };
-/* 80456950 0008 .sdata2    @367                                                         */
+/* 80456950-80456958 0008 .sdata2    @367                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_367[8] = {
 	0x3E, 0x66, 0x37, 0x69, 0x72, 0xBE, 0xA4, 0xD0,
 };
-/* 80456958 0008 .sdata2    @368                                                         */
+/* 80456958-80456960 0008 .sdata2    @368                                                         Float64Data */
 // 0x4000000000000000
 SECTION_SDATA2 f64 LIT_368 = 2.000000;
-/* 80456960 0008 .sdata2    @370                                                         */
+/* 80456960-80456968 0008 .sdata2    @370                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 Math_Double_precision_e_pow__LIT_370 = 4503601774854144.000000;
 }
@@ -213,7 +258,7 @@ SECTION_SDATA2 f64 Math_Double_precision_e_pow__LIT_370 = 4503601774854144.00000
 /* ###################################################################################### */
 
 extern "C" {
-/* 80369ED8 0830 .text      __ieee754_pow                                                */
+/* 80369ED8-8036A708 0830 .text      __ieee754_pow                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

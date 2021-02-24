@@ -14,18 +14,36 @@ extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void bzero__7JASCalcFPvUl();
+/* Function             */
+extern void __ct__12JASBasicBankFv();
+/* Function             */
+extern void newInstTable__12JASBasicBankFUcP7JKRHeap();
+/* Function             */
 extern void getInstParam__12JASBasicBankCFiiiP12JASInstParam();
+/* Function             */
+extern void setInst__12JASBasicBankFiP7JASInst();
+/* Function             */
 extern void getInst__12JASBasicBankCFi();
+/* Function             */
 extern void __dt__7JASBankFv();
+/* Function             */
 extern void __dt__12JASBasicBankFv();
+/* Function             */
 extern void getType__12JASBasicBankCFv();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__12JASBasicBank[5];
-SECTION_DATA extern const void* __vt__7JASBank[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JASBasicBank[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JASBank[5];
 }
 
 
@@ -34,16 +52,16 @@ SECTION_DATA extern const void* __vt__7JASBank[5];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C76A8 0014 .data      __vt__12JASBasicBank                                         */
-SECTION_DATA const  void* __vt__12JASBasicBank[5] = {
+/* 803C76A8-803C76BC 0014 .data      __vt__12JASBasicBank                                         VTableData */
+SECTION_DATA void* __vt__12JASBasicBank[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JASBasicBankFv,
 	(void*)getInstParam__12JASBasicBankCFiiiP12JASInstParam,
 	(void*)getType__12JASBasicBankCFv,
 };
-/* 803C76BC 0014 .data      __vt__7JASBank                                               */
-SECTION_DATA const  void* __vt__7JASBank[5] = {
+/* 803C76BC-803C76D0 0014 .data      __vt__7JASBank                                               VTableData */
+SECTION_DATA void* __vt__7JASBank[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__7JASBankFv,
@@ -58,7 +76,7 @@ SECTION_DATA const  void* __vt__7JASBank[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80297D78 002C .text      __ct__12JASBasicBankFv                                       */
+/* 80297D78-80297DA4 002C .text      __ct__12JASBasicBankFv                                       Function */
 // JASBasicBank::JASBasicBank(void)
 #pragma push
 #pragma optimization_level 0
@@ -69,7 +87,7 @@ asm void __ct__12JASBasicBankFv() {
 }
 #pragma pop
 
-/* 80297DA4 005C .text      newInstTable__12JASBasicBankFUcP7JKRHeap                     */
+/* 80297DA4-80297E00 005C .text      newInstTable__12JASBasicBankFUcP7JKRHeap                     Function */
 // JASBasicBank::newInstTable(u8, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -80,7 +98,7 @@ asm void newInstTable__12JASBasicBankFUcP7JKRHeap() {
 }
 #pragma pop
 
-/* 80297E00 0068 .text      getInstParam__12JASBasicBankCFiiiP12JASInstParam             */
+/* 80297E00-80297E68 0068 .text      getInstParam__12JASBasicBankCFiiiP12JASInstParam             Function */
 // JASBasicBank::getInstParam(int, int, int, JASInstParam*) const
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +109,7 @@ asm void getInstParam__12JASBasicBankCFiiiP12JASInstParam() {
 }
 #pragma pop
 
-/* 80297E68 0018 .text      setInst__12JASBasicBankFiP7JASInst                           */
+/* 80297E68-80297E80 0018 .text      setInst__12JASBasicBankFiP7JASInst                           Function */
 // JASBasicBank::setInst(int, JASInst*)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +120,7 @@ asm void setInst__12JASBasicBankFiP7JASInst() {
 }
 #pragma pop
 
-/* 80297E80 0044 .text      getInst__12JASBasicBankCFi                                   */
+/* 80297E80-80297EC4 0044 .text      getInst__12JASBasicBankCFi                                   Function */
 // JASBasicBank::getInst(int) const
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +131,7 @@ asm void getInst__12JASBasicBankCFi() {
 }
 #pragma pop
 
-/* 80297EC4 0048 .text      __dt__7JASBankFv                                             */
+/* 80297EC4-80297F0C 0048 .text      __dt__7JASBankFv                                             Function */
 // JASBank::~JASBank(void)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +142,7 @@ asm void __dt__7JASBankFv() {
 }
 #pragma pop
 
-/* 80297F0C 005C .text      __dt__12JASBasicBankFv                                       */
+/* 80297F0C-80297F68 005C .text      __dt__12JASBasicBankFv                                       Function */
 // JASBasicBank::~JASBasicBank(void)
 #pragma push
 #pragma optimization_level 0
@@ -135,7 +153,7 @@ asm void __dt__12JASBasicBankFv() {
 }
 #pragma pop
 
-/* 80297F68 000C .text      getType__12JASBasicBankCFv                                   */
+/* 80297F68-80297F74 000C .text      getType__12JASBasicBankCFv                                   Function */
 // JASBasicBank::getType(void) const
 #pragma push
 #pragma optimization_level 0

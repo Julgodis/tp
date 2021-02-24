@@ -9,76 +9,157 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __dt__4cXyzFv();
+/* Function             */
 extern void __dt__4cCcSFv();
+/* Function             */
 extern void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
+/* Function             */
 extern void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
+/* Function             */
 extern void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
+/* Function             */
 extern void PlusCcMove__9cCcD_SttsFfff();
+/* Function             */
 extern void ClrCcMove__9cCcD_SttsFv();
+/* Function             */
 extern void PlusDmg__9cCcD_SttsFi();
+/* Function             */
 extern void GetWeightF__9cCcD_SttsCFv();
+/* Function             */
 extern void GetAc__8cCcD_ObjFv();
+/* Function             */
 extern void SetHit__10cCcD_ObjAtFP8cCcD_Obj();
+/* Function             */
 extern void SetHit__10cCcD_ObjTgFP8cCcD_Obj();
+/* Function             */
 extern void SetHit__10cCcD_ObjCoFP8cCcD_Obj();
+/* Function             */
+extern void __ct__4cCcSFv();
+/* Function             */
 extern void Ct__4cCcSFv();
+/* Function             */
+extern void Dt__4cCcSFv();
+/* Function             */
 extern void GetWt__4cCcSCFUc();
+/* Function             */
+extern void Set__4cCcSFP8cCcD_Obj();
+/* Function             */
 extern void ClrCoHitInf__4cCcSFv();
+/* Function             */
 extern void ClrTgHitInf__4cCcSFv();
+/* Function             */
 extern void ClrAtHitInf__4cCcSFv();
+/* Function             */
 extern void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+/* Function             */
 extern void ChkAtTg__4cCcSFv();
+/* Function             */
 extern void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+/* Function             */
 extern void ChkCo__4cCcSFv();
+/* Function             */
 extern void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts();
+/* Function             */
 extern void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz();
+/* Function             */
 extern void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
+/* Function             */
 extern void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
+/* Function             */
 extern void CalcArea__4cCcSFv();
+/* Function             */
+extern void Move__4cCcSFv();
+/* Function             */
+extern void DrawClear__4cCcSFv();
+/* ReturnFunction       */
 extern void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+/* ReturnFunction       */
 extern void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+/* ReturnFunction       */
 extern void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz();
-extern int ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts();
-extern int ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
-extern int ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+/* ReturnIntegerFunction */
+extern  int ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts();
+/* ReturnIntegerFunction */
+extern  int ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+/* ReturnIntegerFunction */
+extern  int ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+/* ReturnFunction       */
 extern void MoveAfterCheck__4cCcSFv();
+/* Function             */
 extern void ClearForMinMax__8cM3dGAabFv();
+/* Function             */
 extern void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+/* Function             */
 extern void CalcCenter__8cM3dGAabCFP4cXyz();
+/* Function             */
 extern void PSVECAdd();
+/* Function             */
 extern void PSVECSubtract();
+/* Function             */
 extern void PSVECScale();
+/* Function             */
 extern void PSVECMag();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__15cCcD_DivideArea[3];
-SECTION_DATA extern const void* __vt__8cM3dGAab[3];
-SECTION_DATA extern const void* __vt__4cCcS[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15cCcD_DivideArea[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGAab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__4cCcS[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_2492[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80430CCC[12];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451158[8];
-SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 G_CM3D_F_ABS_MIN[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_cc_s__LIT_2532[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2759[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2760;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2761;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2762[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2763;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2764;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2765[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2766[8];
 }
 
@@ -88,8 +169,8 @@ SECTION_SDATA2 extern u8 LIT_2766[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3748 0030 .data      __vt__4cCcS                                                  */
-SECTION_DATA const  void* __vt__4cCcS[12] = {
+/* 803C3748-803C3778 0030 .data      __vt__4cCcS                                                  VTableData */
+SECTION_DATA void* __vt__4cCcS[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts,
@@ -111,37 +192,37 @@ SECTION_DATA const  void* __vt__4cCcS[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455038 0004 .sdata2    @2532                                                        */
+/* 80455038-8045503C 0004 .sdata2    @2532                                                        InitializedData */
 SECTION_SDATA2 u8 c_cc_s__LIT_2532[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045503C 0004 .sdata2    @2759                                                        */
+/* 8045503C-80455040 0004 .sdata2    @2759                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2759[4] = {
 	0x3C, 0x03, 0x12, 0x6F,
 };
-/* 80455040 0004 .sdata2    @2760                                                        */
+/* 80455040-80455044 0004 .sdata2    @2760                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_2760 = 1.000000f;
-/* 80455044 0004 .sdata2    @2761                                                        */
+/* 80455044-80455048 0004 .sdata2    @2761                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 LIT_2761 = 2.000000f;
-/* 80455048 0004 .sdata2    @2762                                                        */
+/* 80455048-80455050 0004 .sdata2    @2762                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2762[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455050 0008 .sdata2    @2763                                                        */
+/* 80455050-80455058 0008 .sdata2    @2763                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 LIT_2763 = 0.500000;
-/* 80455058 0008 .sdata2    @2764                                                        */
+/* 80455058-80455060 0008 .sdata2    @2764                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_2764 = 3.000000;
-/* 80455060 0008 .sdata2    @2765                                                        */
+/* 80455060-80455068 0008 .sdata2    @2765                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2765[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80455068 0004 .sdata2    @2766                                                        */
+/* 80455068-80455070 0004 .sdata2    @2766                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2766[8] = {
 	0xBF, 0x80, 0x00, 0x00,
 	/* padding */
@@ -155,9 +236,9 @@ SECTION_SDATA2 u8 LIT_2766[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80430CC0 000C .bss       @2492                                                        */
+/* 80430CC0-80430CCC 000C .bss       @2492                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_2492[12];
-/* 80430CCC 000C .bss       cross$2491                                                   */
+/* 80430CCC-80430CD8 000C .bss       cross$2491                                                   ZeroInitializedData */
 SECTION_BSS u8 data_80430CCC[12];
 }
 
@@ -167,7 +248,7 @@ SECTION_BSS u8 data_80430CCC[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80264A6C 0028 .text      __ct__4cCcSFv                                                */
+/* 80264A6C-80264A94 0028 .text      __ct__4cCcSFv                                                Function */
 // cCcS::cCcS(void)
 #pragma push
 #pragma optimization_level 0
@@ -178,7 +259,7 @@ asm void __ct__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264A94 00CC .text      Ct__4cCcSFv                                                  */
+/* 80264A94-80264B60 00CC .text      Ct__4cCcSFv                                                  Function */
 // cCcS::Ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -189,7 +270,7 @@ asm void Ct__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264B60 0020 .text      Dt__4cCcSFv                                                  */
+/* 80264B60-80264B80 0020 .text      Dt__4cCcSFv                                                  Function */
 // cCcS::Dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -200,7 +281,7 @@ asm void Dt__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264B80 0028 .text      GetWt__4cCcSCFUc                                             */
+/* 80264B80-80264BA8 0028 .text      GetWt__4cCcSCFUc                                             Function */
 // cCcS::GetWt(u8) const
 #pragma push
 #pragma optimization_level 0
@@ -211,7 +292,7 @@ asm void GetWt__4cCcSCFUc() {
 }
 #pragma pop
 
-/* 80264BA8 00B4 .text      Set__4cCcSFP8cCcD_Obj                                        */
+/* 80264BA8-80264C5C 00B4 .text      Set__4cCcSFP8cCcD_Obj                                        Function */
 // cCcS::Set(cCcD_Obj*)
 #pragma push
 #pragma optimization_level 0
@@ -222,7 +303,7 @@ asm void Set__4cCcSFP8cCcD_Obj() {
 }
 #pragma pop
 
-/* 80264C5C 0094 .text      ClrCoHitInf__4cCcSFv                                         */
+/* 80264C5C-80264CF0 0094 .text      ClrCoHitInf__4cCcSFv                                         Function */
 // cCcS::ClrCoHitInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -233,7 +314,7 @@ asm void ClrCoHitInf__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264CF0 00A0 .text      ClrTgHitInf__4cCcSFv                                         */
+/* 80264CF0-80264D90 00A0 .text      ClrTgHitInf__4cCcSFv                                         Function */
 // cCcS::ClrTgHitInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -244,7 +325,7 @@ asm void ClrTgHitInf__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264D90 009C .text      ClrAtHitInf__4cCcSFv                                         */
+/* 80264D90-80264E2C 009C .text      ClrAtHitInf__4cCcSFv                                         Function */
 // cCcS::ClrAtHitInf(void)
 #pragma push
 #pragma optimization_level 0
@@ -255,7 +336,7 @@ asm void ClrAtHitInf__4cCcSFv() {
 }
 #pragma pop
 
-/* 80264E2C 0114 .text      ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj                     */
+/* 80264E2C-80264F40 0114 .text      ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj                     Function */
 // cCcS::ChkNoHitAtTg(cCcD_Obj*, cCcD_Obj*)
 #pragma push
 #pragma optimization_level 0
@@ -266,7 +347,7 @@ asm void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj() {
 }
 #pragma pop
 
-/* 80264F40 021C .text      ChkAtTg__4cCcSFv                                             */
+/* 80264F40-8026515C 021C .text      ChkAtTg__4cCcSFv                                             Function */
 // cCcS::ChkAtTg(void)
 #pragma push
 #pragma optimization_level 0
@@ -277,7 +358,7 @@ asm void ChkAtTg__4cCcSFv() {
 }
 #pragma pop
 
-/* 8026515C 00D4 .text      ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj                       */
+/* 8026515C-80265230 00D4 .text      ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj                       Function */
 // cCcS::ChkNoHitCo(cCcD_Obj*, cCcD_Obj*)
 #pragma push
 #pragma optimization_level 0
@@ -288,7 +369,7 @@ asm void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj() {
 }
 #pragma pop
 
-/* 80265230 0170 .text      ChkCo__4cCcSFv                                               */
+/* 80265230-802653A0 0170 .text      ChkCo__4cCcSFv                                               Function */
 // cCcS::ChkCo(void)
 #pragma push
 #pragma optimization_level 0
@@ -299,7 +380,7 @@ asm void ChkCo__4cCcSFv() {
 }
 #pragma pop
 
-/* 802653A0 0028 .text      CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts */
+/* 802653A0-802653C8 0028 .text      CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts Function */
 // cCcS::CalcTgPlusDmg(cCcD_Obj*, cCcD_Obj*, cCcD_Stts*, cCcD_Stts*)
 #pragma push
 #pragma optimization_level 0
@@ -310,7 +391,7 @@ asm void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts() {
 }
 #pragma pop
 
-/* 802653C8 021C .text      SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz        */
+/* 802653C8-802655E4 021C .text      SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz        Function */
 // cCcS::SetAtTgCommonHitInf(cCcD_Obj*, cCcD_Obj*, cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -321,7 +402,7 @@ asm void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz() {
 }
 #pragma pop
 
-/* 802655E4 016C .text      SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf   */
+/* 802655E4-80265750 016C .text      SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf   Function */
 // cCcS::SetCoCommonHitInf(cCcD_Obj*, cXyz*, cCcD_Obj*, cXyz*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -332,7 +413,7 @@ asm void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf() {
 }
 #pragma pop
 
-/* 80265750 0464 .text      SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf       */
+/* 80265750-80265BB4 0464 .text      SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf       Function */
 // cCcS::SetPosCorrect(cCcD_Obj*, cXyz*, cCcD_Obj*, cXyz*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -343,7 +424,7 @@ asm void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf() {
 }
 #pragma pop
 
-/* 80265BB4 0118 .text      CalcArea__4cCcSFv                                            */
+/* 80265BB4-80265CCC 0118 .text      CalcArea__4cCcSFv                                            Function */
 // cCcS::CalcArea(void)
 #pragma push
 #pragma optimization_level 0
@@ -354,7 +435,7 @@ asm void CalcArea__4cCcSFv() {
 }
 #pragma pop
 
-/* 80265CCC 0064 .text      Move__4cCcSFv                                                */
+/* 80265CCC-80265D30 0064 .text      Move__4cCcSFv                                                Function */
 // cCcS::Move(void)
 #pragma push
 #pragma optimization_level 0
@@ -365,7 +446,7 @@ asm void Move__4cCcSFv() {
 }
 #pragma pop
 
-/* 80265D30 00C4 .text      DrawClear__4cCcSFv                                           */
+/* 80265D30-80265DF4 00C4 .text      DrawClear__4cCcSFv                                           Function */
 // cCcS::DrawClear(void)
 #pragma push
 #pragma optimization_level 0
@@ -376,43 +457,43 @@ asm void DrawClear__4cCcSFv() {
 }
 #pragma pop
 
-/* 80265DF4 0004 .text      SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj                */
+/* 80265DF4-80265DF8 0004 .text      SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj                ReturnFunction */
 // cCcS::SetCoGCorrectProc(cCcD_Obj*, cCcD_Obj*)
 void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj() {
 	return;
 }
 
-/* 80265DF8 0004 .text      SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts */
+/* 80265DF8-80265DFC 0004 .text      SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts ReturnFunction */
 // cCcS::SetCoGObjInf(bool, bool, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*)
 void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts() {
 	return;
 }
 
-/* 80265DFC 0004 .text      SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz */
+/* 80265DFC-80265E00 0004 .text      SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz ReturnFunction */
 // cCcS::SetAtTgGObjInf(bool, bool, cCcD_Obj*, cCcD_Obj*, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*, cXyz*)
 void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz() {
 	return;
 }
 
-/* 80265E00 0008 .text      ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts */
+/* 80265E00-80265E08 0008 .text      ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts ReturnIntegerFunction */
 // cCcS::ChkNoHitGAtTg(const cCcD_GObjInf*, const cCcD_GObjInf*, cCcD_GStts*, cCcD_GStts*)
 int ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts() {
 	return 0;
 }
 
-/* 80265E08 0008 .text      ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts */
+/* 80265E08-80265E10 0008 .text      ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts ReturnIntegerFunction */
 // cCcS::ChkAtTgHitAfterCross(bool, bool, const cCcD_GObjInf*, const cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*)
 int ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts() {
 	return 0;
 }
 
-/* 80265E10 0008 .text      ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj                      */
+/* 80265E10-80265E18 0008 .text      ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj                      ReturnIntegerFunction */
 // cCcS::ChkNoHitGCo(cCcD_Obj*, cCcD_Obj*)
 int ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj() {
 	return 0;
 }
 
-/* 80265E18 0004 .text      MoveAfterCheck__4cCcSFv                                      */
+/* 80265E18-80265E1C 0004 .text      MoveAfterCheck__4cCcSFv                                      ReturnFunction */
 // cCcS::MoveAfterCheck(void)
 void MoveAfterCheck__4cCcSFv() {
 	return;

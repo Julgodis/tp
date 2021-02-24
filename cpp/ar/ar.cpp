@@ -9,27 +9,67 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void PPCSync();
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
+extern void ARRegisterDMACallback();
+/* Function             */
+extern void ARGetDMAStatus();
+/* Function             */
+extern void ARStartDMA();
+/* Function             */
+extern void ARAlloc();
+/* Function             */
+extern void ARInit();
+/* GlobalFunction       */
+extern u32 ARGetSize();
+/* Function             */
 extern void __ARHandler();
+/* Function             */
+extern void __ARClearInterrupt();
+/* Function             */
+extern void __ARGetInterruptStatus();
+/* Function             */
 extern void __ARChecksize();
-SECTION_SDATA extern u8 __ARVersion[8];
+/* InitializedData      */
+SECTION_DATA extern u8 ar__LIT_1[72];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __ARVersion[2];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_Callback[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_Size[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_InternalSize[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_ExpansionSize[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_StackPointer[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_FreeBlocks[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_BlockLength[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __AR_init_flag[4];
 }
 
@@ -39,8 +79,8 @@ SECTION_SBSS extern u8 __AR_init_flag[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1BE8 0000 .data      ...data.0                                                    */
-/* 803D1BE8 0044 .data      @1                                                           */
+/* 803D1BE8-803D1BE8 0000 .data      ...data.0                                                    InitializedData */
+/* 803D1BE8-803D1C30 0044 .data      @1                                                           InitializedData */
 SECTION_DATA u8 ar__LIT_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x41, 0x52, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69, 0x6C,
@@ -58,11 +98,11 @@ SECTION_DATA u8 ar__LIT_1[72] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A48 0004 .sdata     __ARVersion                                                  */
-SECTION_SDATA u8 __ARVersion[8] = {
-	0x80, 0x3D, 0x1B, 0xE8,
+/* 80450A48-80450A50 0004 .sdata     __ARVersion                                                  SymbolReferenceArrayData */
+SECTION_SDATA void* __ARVersion[2] = {
+	(void*)&ar__LIT_1,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -72,21 +112,21 @@ SECTION_SDATA u8 __ARVersion[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804518B8 0004 .sbss      __AR_Callback                                                */
+/* 804518B8-804518BC 0004 .sbss      __AR_Callback                                                ZeroInitializedData */
 SECTION_SBSS u8 __AR_Callback[4];
-/* 804518BC 0004 .sbss      __AR_Size                                                    */
+/* 804518BC-804518C0 0004 .sbss      __AR_Size                                                    ZeroInitializedData */
 SECTION_SBSS u8 __AR_Size[4];
-/* 804518C0 0004 .sbss      __AR_InternalSize                                            */
+/* 804518C0-804518C4 0004 .sbss      __AR_InternalSize                                            ZeroInitializedData */
 SECTION_SBSS u8 __AR_InternalSize[4];
-/* 804518C4 0004 .sbss      __AR_ExpansionSize                                           */
+/* 804518C4-804518C8 0004 .sbss      __AR_ExpansionSize                                           ZeroInitializedData */
 SECTION_SBSS u8 __AR_ExpansionSize[4];
-/* 804518C8 0004 .sbss      __AR_StackPointer                                            */
+/* 804518C8-804518CC 0004 .sbss      __AR_StackPointer                                            ZeroInitializedData */
 SECTION_SBSS u8 __AR_StackPointer[4];
-/* 804518CC 0004 .sbss      __AR_FreeBlocks                                              */
+/* 804518CC-804518D0 0004 .sbss      __AR_FreeBlocks                                              ZeroInitializedData */
 SECTION_SBSS u8 __AR_FreeBlocks[4];
-/* 804518D0 0004 .sbss      __AR_BlockLength                                             */
+/* 804518D0-804518D4 0004 .sbss      __AR_BlockLength                                             ZeroInitializedData */
 SECTION_SBSS u8 __AR_BlockLength[4];
-/* 804518D4 0004 .sbss      __AR_init_flag                                               */
+/* 804518D4-804518D8 0004 .sbss      __AR_init_flag                                               ZeroInitializedData */
 SECTION_SBSS u8 __AR_init_flag[4];
 }
 
@@ -96,7 +136,7 @@ SECTION_SBSS u8 __AR_init_flag[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80350554 0044 .text      ARRegisterDMACallback                                        */
+/* 80350554-80350598 0044 .text      ARRegisterDMACallback                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -106,7 +146,7 @@ asm void ARRegisterDMACallback() {
 }
 #pragma pop
 
-/* 80350598 003C .text      ARGetDMAStatus                                               */
+/* 80350598-803505D4 003C .text      ARGetDMAStatus                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -116,7 +156,7 @@ asm void ARGetDMAStatus() {
 }
 #pragma pop
 
-/* 803505D4 00F0 .text      ARStartDMA                                                   */
+/* 803505D4-803506C4 00F0 .text      ARStartDMA                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -126,7 +166,7 @@ asm void ARStartDMA() {
 }
 #pragma pop
 
-/* 803506C4 0068 .text      ARAlloc                                                      */
+/* 803506C4-8035072C 0068 .text      ARAlloc                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -136,7 +176,7 @@ asm void ARAlloc() {
 }
 #pragma pop
 
-/* 8035072C 00C4 .text      ARInit                                                       */
+/* 8035072C-803507F0 00C4 .text      ARInit                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -146,12 +186,12 @@ asm void ARInit() {
 }
 #pragma pop
 
-/* 803507F0 0008 .text      ARGetSize                                                    */
+/* 803507F0-803507F8 0008 .text      ARGetSize                                                    GlobalFunction */
 u32 ARGetSize() {
 	return *(u32*)&__AR_Size;
 }
 
-/* 803507F8 0078 .text      __ARHandler                                                  */
+/* 803507F8-80350870 0078 .text      __ARHandler                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -161,7 +201,7 @@ asm void __ARHandler() {
 }
 #pragma pop
 
-/* 80350870 0020 .text      __ARClearInterrupt                                           */
+/* 80350870-80350890 0020 .text      __ARClearInterrupt                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +211,7 @@ asm void __ARClearInterrupt() {
 }
 #pragma pop
 
-/* 80350890 0010 .text      __ARGetInterruptStatus                                       */
+/* 80350890-803508A0 0010 .text      __ARGetInterruptStatus                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +221,7 @@ asm void __ARGetInterruptStatus() {
 }
 #pragma pop
 
-/* 803508A0 17F4 .text      __ARChecksize                                                */
+/* 803508A0-80352094 17F4 .text      __ARChecksize                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

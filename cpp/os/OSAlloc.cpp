@@ -9,11 +9,25 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DLInsert();
+/* Function             */
+extern void OSFreeToHeap();
+/* Function             */
+extern void OSSetCurrentHeap();
+/* Function             */
+extern void OSInitAlloc();
+/* Function             */
+extern void OSCreateHeap();
+/* InitializedData      */
 SECTION_SDATA extern u8 __OSCurrHeap[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 HeapArray[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 NumHeaps[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ArenaStart[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ArenaEnd[4];
 }
 
@@ -23,7 +37,7 @@ SECTION_SBSS extern u8 ArenaEnd[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450990 0004 .sdata     __OSCurrHeap                                                 */
+/* 80450990-80450998 0004 .sdata     __OSCurrHeap                                                 InitializedData */
 SECTION_SDATA u8 __OSCurrHeap[8] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 	/* padding */
@@ -37,13 +51,13 @@ SECTION_SDATA u8 __OSCurrHeap[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451640 0004 .sbss      HeapArray                                                    */
+/* 80451640-80451644 0004 .sbss      HeapArray                                                    ZeroInitializedData */
 SECTION_SBSS u8 HeapArray[4];
-/* 80451644 0004 .sbss      NumHeaps                                                     */
+/* 80451644-80451648 0004 .sbss      NumHeaps                                                     ZeroInitializedData */
 SECTION_SBSS u8 NumHeaps[4];
-/* 80451648 0004 .sbss      ArenaStart                                                   */
+/* 80451648-8045164C 0004 .sbss      ArenaStart                                                   ZeroInitializedData */
 SECTION_SBSS u8 ArenaStart[4];
-/* 8045164C 0004 .sbss      ArenaEnd                                                     */
+/* 8045164C-80451650 0004 .sbss      ArenaEnd                                                     ZeroInitializedData */
 SECTION_SBSS u8 ArenaEnd[4];
 }
 
@@ -53,7 +67,7 @@ SECTION_SBSS u8 ArenaEnd[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033B078 00AC .text      DLInsert                                                     */
+/* 8033B078-8033B124 00AC .text      DLInsert                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -63,7 +77,7 @@ asm void DLInsert() {
 }
 #pragma pop
 
-/* 8033B124 007C .text      OSFreeToHeap                                                 */
+/* 8033B124-8033B1A0 007C .text      OSFreeToHeap                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -73,7 +87,7 @@ asm void OSFreeToHeap() {
 }
 #pragma pop
 
-/* 8033B1A0 0010 .text      OSSetCurrentHeap                                             */
+/* 8033B1A0-8033B1B0 0010 .text      OSSetCurrentHeap                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -83,7 +97,7 @@ asm void OSSetCurrentHeap() {
 }
 #pragma pop
 
-/* 8033B1B0 0070 .text      OSInitAlloc                                                  */
+/* 8033B1B0-8033B220 0070 .text      OSInitAlloc                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -93,7 +107,7 @@ asm void OSInitAlloc() {
 }
 #pragma pop
 
-/* 8033B220 006C .text      OSCreateHeap                                                 */
+/* 8033B220-8033B28C 006C .text      OSCreateHeap                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

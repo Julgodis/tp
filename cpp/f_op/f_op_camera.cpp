@@ -8,12 +8,17 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct leafdraw_class;
-struct process_method_class;
 struct camera_class;
+struct leafdraw_class;
+struct create_tag_class;
+struct process_method_class;
 struct leafdraw_method_class;
 
+extern void fopCam_Draw(camera_class*); /* fopCam_Draw__FP12camera_class */
+extern void fopCam_Execute(camera_class*); /* fopCam_Execute__FP12camera_class */
+extern void fopCam_IsDelete(camera_class*); /* fopCam_IsDelete__FP12camera_class */
+extern void fopCam_Delete(camera_class*); /* fopCam_Delete__FP12camera_class */
+extern void fopCam_Create(void*); /* fopCam_Create__FPv */
 extern void fopDwTg_ToDrawQ(create_tag_class*, int); /* fopDwTg_ToDrawQ__FP16create_tag_classi */
 extern void fopDwTg_DrawQTo(create_tag_class*); /* fopDwTg_DrawQTo__FP16create_tag_class */
 extern void fopDwTg_Init(create_tag_class*, void*); /* fopDwTg_Init__FP16create_tag_classPv */
@@ -25,16 +30,39 @@ extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20p
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopCam_Draw__FP12camera_class();
+/* Function             */
+extern void fopCam_Execute__FP12camera_class();
+/* Function             */
+extern void fopCam_IsDelete__FP12camera_class();
+/* Function             */
+extern void fopCam_Delete__FP12camera_class();
+/* Function             */
+extern void fopCam_Create__FPv();
+/* Function             */
 extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+/* Function             */
 extern void fopDwTg_DrawQTo__FP16create_tag_class();
+/* Function             */
 extern void fopDwTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void fpcLf_GetPriority__FPC14leafdraw_class();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopCam_Method[6];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
 }
 
@@ -44,12 +72,15 @@ SECTION_SBSS extern u8 merged_80451124[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3860 0014 .data      g_fopCam_Method                                              */
-SECTION_DATA u8 g_fopCam_Method[24] = {
-	0x80, 0x01, 0xE2, 0x70, 0x80, 0x01, 0xE2, 0x1C, 0x80, 0x01, 0xE1, 0x80, 0x80, 0x01, 0xE1, 0xC8,
-	0x80, 0x01, 0xE1, 0x40,
+/* 803A3860-803A3878 0014 .data      g_fopCam_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_fopCam_Method[6] = {
+	(void*)fopCam_Create,
+	(void*)fopCam_Delete,
+	(void*)fopCam_Execute,
+	(void*)fopCam_IsDelete,
+	(void*)fopCam_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -59,7 +90,7 @@ SECTION_DATA u8 g_fopCam_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001E140 0040 .text      fopCam_Draw__FP12camera_class                                */
+/* 8001E140-8001E180 0040 .text      fopCam_Draw__FP12camera_class                                Function */
 }
 
 #pragma push
@@ -72,7 +103,7 @@ asm void fopCam_Draw(camera_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E180 0048 .text      fopCam_Execute__FP12camera_class                             */
+/* 8001E180-8001E1C8 0048 .text      fopCam_Execute__FP12camera_class                             Function */
 }
 
 #pragma push
@@ -85,7 +116,7 @@ asm void fopCam_Execute(camera_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E1C8 0054 .text      fopCam_IsDelete__FP12camera_class                            */
+/* 8001E1C8-8001E21C 0054 .text      fopCam_IsDelete__FP12camera_class                            Function */
 }
 
 #pragma push
@@ -98,7 +129,7 @@ asm void fopCam_IsDelete(camera_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E21C 0054 .text      fopCam_Delete__FP12camera_class                              */
+/* 8001E21C-8001E270 0054 .text      fopCam_Delete__FP12camera_class                              Function */
 }
 
 #pragma push
@@ -111,7 +142,7 @@ asm void fopCam_Delete(camera_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E270 0098 .text      fopCam_Create__FPv                                           */
+/* 8001E270-8001E308 0098 .text      fopCam_Create__FPv                                           Function */
 }
 
 #pragma push

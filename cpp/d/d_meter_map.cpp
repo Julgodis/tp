@@ -18,78 +18,159 @@ extern void dComIfGp_mapHide(void); /* dComIfGp_mapHide__Fv */
 extern void dComIfGp_checkMapShow(void); /* dComIfGp_checkMapShow__Fv */
 extern void dMw_LEFT_TRIGGER(void); /* dMw_LEFT_TRIGGER__Fv */
 extern void dMw_RIGHT_TRIGGER(void); /* dMw_RIGHT_TRIGGER__Fv */
-extern void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); /* cLib_addCalcAngleS__FPsssss */
+extern void dMeter2Info_set2DVibration(void); /* dMeter2Info_set2DVibration__Fv */
+extern void cLib_addCalcAngleS(short*, short, short, short, short); /* cLib_addCalcAngleS__FPsssss */
 extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void fopOvlpM_IsDoingReq__Fv();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void __ct__6dMap_cFiiii();
+/* Function             */
 extern void _move__6dMap_cFffif();
+/* Function             */
 extern void _draw__6dMap_cFv();
+/* Function             */
 extern void dComIfGp_mapShow__Fv();
+/* Function             */
 extern void dComIfGp_mapHide__Fv();
+/* Function             */
 extern void dComIfGp_checkMapShow__Fv();
+/* Function             */
 extern void isDungeonItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void getMapPlayerPos__10dMapInfo_nFv();
+/* GlobalFunction       */
 extern u8 isExistMapPathData__8dMpath_cFv();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void dMw_LEFT_TRIGGER__Fv();
+/* Function             */
 extern void dMw_RIGHT_TRIGGER__Fv();
+/* Function             */
 extern void isEnableDispMap__11dMeterMap_cFv();
+/* Function             */
 extern void getMapDispSizeTypeNo__11dMeterMap_cFv();
+/* Function             */
 extern void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
+/* Function             */
 extern void getMapDispEdgeBottomY_Layout__11dMeterMap_cFv();
+/* Function             */
 extern void isEventRunCheck__11dMeterMap_cFv();
+/* Function             */
 extern void getMapDispEdgeLeftX_Layout__11dMeterMap_cFv();
-extern int getDispPosInside_OffsetX__11dMeterMap_cFv();
+/* Function             */
+extern void getMapDispEdgeTop__11dMeterMap_cFv();
+/* ReturnIntegerFunction */
+extern  int getDispPosInside_OffsetX__11dMeterMap_cFv();
+/* Function             */
 extern void getDispPosOutSide_OffsetX__11dMeterMap_cFv();
+/* Function             */
 extern void setDispPosInsideFlg_SE_On__11dMeterMap_cFv();
+/* Function             */
 extern void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv();
+/* Function             */
+extern void setMapAlpha__11dMeterMap_cFUc();
+/* Function             */
 extern void isMapOpenCheck__11dMeterMap_cFv();
+/* Function             */
+extern void __ct__11dMeterMap_cFP9J2DScreen();
+/* Function             */
 extern void __dt__11dMeterMap_cFv();
+/* Function             */
 extern void _create__11dMeterMap_cFP9J2DScreen();
+/* Function             */
 extern void _delete__11dMeterMap_cFv();
+/* Function             */
+extern void _move__11dMeterMap_cFUl();
+/* Function             */
+extern void _draw__11dMeterMap_cFv();
+/* Function             */
 extern void draw__11dMeterMap_cFv();
+/* Function             */
 extern void ctrlShowMap__11dMeterMap_cFv();
+/* Function             */
 extern void checkMoveStatus__11dMeterMap_cFv();
+/* Function             */
 extern void isShow__11dMeterMap_cFUl();
+/* Function             */
 extern void isFmapScreen__11dMeterMap_cFv();
+/* Function             */
 extern void isDmapScreen__11dMeterMap_cFv();
+/* Function             */
+extern void meter_map_move__11dMeterMap_cFUl();
+/* Function             */
 extern void keyCheck__11dMeterMap_cFv();
+/* ReturnFunction       */
 extern void dMeter2Info_set2DVibration__Fv();
+/* Function             */
 extern void getStatus__12dMsgObject_cFv();
+/* Function             */
 extern void cLib_addCalcAngleS__FPsssss();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10J2DPictureFPC7ResTIMG();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter_map__stringBase0[8];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern u8 d_d_meter_map__LIT_4516[32];
-SECTION_DATA extern const void* __vt__11dMeterMap_c[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_meter_map__LIT_4516[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dMeterMap_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_map__LIT_4076[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter_map__LIT_4100;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_map__LIT_4128[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_map__LIT_4129;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter_map__LIT_4131;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_map__LIT_4159;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_map__LIT_4515;
 }
 
@@ -99,8 +180,12 @@ SECTION_SDATA2 extern f32 d_d_meter_map__LIT_4515;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80398208 0008 .rodata    @stringBase0                                                 */
-const char* const stringBase_80398208 = "F_SP115";
+/* 80398208-80398210 0008 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80398208 = "F_SP115";
+#pragma pop
 }
 
 
@@ -109,13 +194,19 @@ const char* const stringBase_80398208 = "F_SP115";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BF2D8 0020 .data      @4516                                                        */
-SECTION_DATA u8 d_d_meter_map__LIT_4516[32] = {
-	0x80, 0x20, 0xE2, 0x38, 0x80, 0x20, 0xE1, 0xF4, 0x80, 0x20, 0xE2, 0x24, 0x80, 0x20, 0xE2, 0x0C,
-	0x80, 0x20, 0xE2, 0x38, 0x80, 0x20, 0xE2, 0x18, 0x80, 0x20, 0xE2, 0x30, 0x80, 0x20, 0xE2, 0x00,
+/* 803BF2D8-803BF2F8 0020 .data      @4516                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_meter_map__LIT_4516[8] = {
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+114),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+97),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+109),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+103),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+114),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+106),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+112),
+	(void*)(((u32*)ctrlShowMap__11dMeterMap_cFv)+100),
 };
-/* 803BF2F8 0010 .data      __vt__11dMeterMap_c                                          */
-SECTION_DATA const  void* __vt__11dMeterMap_c[4] = {
+/* 803BF2F8-803BF308 0010 .data      __vt__11dMeterMap_c                                          VTableData */
+SECTION_DATA void* __vt__11dMeterMap_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__11dMeterMap_cFv,
@@ -129,29 +220,29 @@ SECTION_DATA const  void* __vt__11dMeterMap_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454820 0004 .sdata2    @4076                                                        */
+/* 80454820-80454828 0004 .sdata2    @4076                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_map__LIT_4076[8] = {
 	0x43, 0xD2, 0x80, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454828 0008 .sdata2    @4100                                                        */
+/* 80454828-80454830 0008 .sdata2    @4100                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter_map__LIT_4100 = 4503601774854144.000000;
-/* 80454830 0004 .sdata2    @4128                                                        */
+/* 80454830-80454834 0004 .sdata2    @4128                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_map__LIT_4128[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454834 0004 .sdata2    @4129                                                        */
+/* 80454834-80454838 0004 .sdata2    @4129                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter_map__LIT_4129 = 1.000000f;
-/* 80454838 0008 .sdata2    @4131                                                        */
+/* 80454838-80454840 0008 .sdata2    @4131                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_meter_map__LIT_4131 = 4503599627370496.000000;
-/* 80454840 0004 .sdata2    @4159                                                        */
+/* 80454840-80454844 0004 .sdata2    @4159                                                        Float32Data */
 // 0xc2100000
 SECTION_SDATA2 f32 d_d_meter_map__LIT_4159 = -36.000000f;
-/* 80454844 0004 .sdata2    @4515                                                        */
+/* 80454844-80454848 0004 .sdata2    @4515                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_meter_map__LIT_4515 = -1.000000f;
 }
@@ -162,7 +253,7 @@ SECTION_SDATA2 f32 d_d_meter_map__LIT_4515 = -1.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8020D49C 008C .text      isEnableDispMap__11dMeterMap_cFv                             */
+/* 8020D49C-8020D528 008C .text      isEnableDispMap__11dMeterMap_cFv                             Function */
 // dMeterMap_c::isEnableDispMap(void)
 #pragma push
 #pragma optimization_level 0
@@ -173,7 +264,7 @@ asm void isEnableDispMap__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D528 0128 .text      getMapDispSizeTypeNo__11dMeterMap_cFv                        */
+/* 8020D528-8020D650 0128 .text      getMapDispSizeTypeNo__11dMeterMap_cFv                        Function */
 // dMeterMap_c::getMapDispSizeTypeNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -184,7 +275,7 @@ asm void getMapDispSizeTypeNo__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D650 0040 .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv         */
+/* 8020D650-8020D690 0040 .text      isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv         Function */
 // dMeterMap_c::isEnableDispMapAndMapDispSizeTypeNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -195,7 +286,7 @@ asm void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D690 0008 .text      getMapDispEdgeBottomY_Layout__11dMeterMap_cFv                */
+/* 8020D690-8020D698 0008 .text      getMapDispEdgeBottomY_Layout__11dMeterMap_cFv                Function */
 // dMeterMap_c::getMapDispEdgeBottomY_Layout(void)
 #pragma push
 #pragma optimization_level 0
@@ -206,7 +297,7 @@ asm void getMapDispEdgeBottomY_Layout__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D698 0094 .text      isEventRunCheck__11dMeterMap_cFv                             */
+/* 8020D698-8020D72C 0094 .text      isEventRunCheck__11dMeterMap_cFv                             Function */
 // dMeterMap_c::isEventRunCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -217,7 +308,7 @@ asm void isEventRunCheck__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D72C 0030 .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv                  */
+/* 8020D72C-8020D75C 0030 .text      getMapDispEdgeLeftX_Layout__11dMeterMap_cFv                  Function */
 // dMeterMap_c::getMapDispEdgeLeftX_Layout(void)
 #pragma push
 #pragma optimization_level 0
@@ -228,7 +319,7 @@ asm void getMapDispEdgeLeftX_Layout__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D75C 0088 .text      getMapDispEdgeTop__11dMeterMap_cFv                           */
+/* 8020D75C-8020D7E4 0088 .text      getMapDispEdgeTop__11dMeterMap_cFv                           Function */
 // dMeterMap_c::getMapDispEdgeTop(void)
 #pragma push
 #pragma optimization_level 0
@@ -239,13 +330,13 @@ asm void getMapDispEdgeTop__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D7E4 0008 .text      getDispPosInside_OffsetX__11dMeterMap_cFv                    */
+/* 8020D7E4-8020D7EC 0008 .text      getDispPosInside_OffsetX__11dMeterMap_cFv                    ReturnIntegerFunction */
 // dMeterMap_c::getDispPosInside_OffsetX(void)
 int getDispPosInside_OffsetX__11dMeterMap_cFv() {
 	return 0;
 }
 
-/* 8020D7EC 0088 .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv                   */
+/* 8020D7EC-8020D874 0088 .text      getDispPosOutSide_OffsetX__11dMeterMap_cFv                   Function */
 // dMeterMap_c::getDispPosOutSide_OffsetX(void)
 #pragma push
 #pragma optimization_level 0
@@ -256,7 +347,7 @@ asm void getDispPosOutSide_OffsetX__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D874 0048 .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv                   */
+/* 8020D874-8020D8BC 0048 .text      setDispPosInsideFlg_SE_On__11dMeterMap_cFv                   Function */
 // dMeterMap_c::setDispPosInsideFlg_SE_On(void)
 #pragma push
 #pragma optimization_level 0
@@ -267,7 +358,7 @@ asm void setDispPosInsideFlg_SE_On__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D8BC 003C .text      setDispPosOutsideFlg_SE_On__11dMeterMap_cFv                  */
+/* 8020D8BC-8020D8F8 003C .text      setDispPosOutsideFlg_SE_On__11dMeterMap_cFv                  Function */
 // dMeterMap_c::setDispPosOutsideFlg_SE_On(void)
 #pragma push
 #pragma optimization_level 0
@@ -278,7 +369,7 @@ asm void setDispPosOutsideFlg_SE_On__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D8F8 0008 .text      setMapAlpha__11dMeterMap_cFUc                                */
+/* 8020D8F8-8020D900 0008 .text      setMapAlpha__11dMeterMap_cFUc                                Function */
 // dMeterMap_c::setMapAlpha(u8)
 #pragma push
 #pragma optimization_level 0
@@ -289,7 +380,7 @@ asm void setMapAlpha__11dMeterMap_cFUc() {
 }
 #pragma pop
 
-/* 8020D900 0048 .text      isMapOpenCheck__11dMeterMap_cFv                              */
+/* 8020D900-8020D948 0048 .text      isMapOpenCheck__11dMeterMap_cFv                              Function */
 // dMeterMap_c::isMapOpenCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -300,7 +391,7 @@ asm void isMapOpenCheck__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D948 0048 .text      __ct__11dMeterMap_cFP9J2DScreen                              */
+/* 8020D948-8020D990 0048 .text      __ct__11dMeterMap_cFP9J2DScreen                              Function */
 // dMeterMap_c::dMeterMap_c(J2DScreen*)
 #pragma push
 #pragma optimization_level 0
@@ -311,7 +402,7 @@ asm void __ct__11dMeterMap_cFP9J2DScreen() {
 }
 #pragma pop
 
-/* 8020D990 005C .text      __dt__11dMeterMap_cFv                                        */
+/* 8020D990-8020D9EC 005C .text      __dt__11dMeterMap_cFv                                        Function */
 // dMeterMap_c::~dMeterMap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -322,7 +413,7 @@ asm void __dt__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020D9EC 0264 .text      _create__11dMeterMap_cFP9J2DScreen                           */
+/* 8020D9EC-8020DC50 0264 .text      _create__11dMeterMap_cFP9J2DScreen                           Function */
 // dMeterMap_c::_create(J2DScreen*)
 #pragma push
 #pragma optimization_level 0
@@ -333,7 +424,7 @@ asm void _create__11dMeterMap_cFP9J2DScreen() {
 }
 #pragma pop
 
-/* 8020DC50 0094 .text      _delete__11dMeterMap_cFv                                     */
+/* 8020DC50-8020DCE4 0094 .text      _delete__11dMeterMap_cFv                                     Function */
 // dMeterMap_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -344,7 +435,7 @@ asm void _delete__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020DCE4 0238 .text      _move__11dMeterMap_cFUl                                      */
+/* 8020DCE4-8020DF1C 0238 .text      _move__11dMeterMap_cFUl                                      Function */
 // dMeterMap_c::_move(u32)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +446,7 @@ asm void _move__11dMeterMap_cFUl() {
 }
 #pragma pop
 
-/* 8020DF1C 004C .text      _draw__11dMeterMap_cFv                                       */
+/* 8020DF1C-8020DF68 004C .text      _draw__11dMeterMap_cFv                                       Function */
 // dMeterMap_c::_draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +457,7 @@ asm void _draw__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020DF68 0108 .text      draw__11dMeterMap_cFv                                        */
+/* 8020DF68-8020E070 0108 .text      draw__11dMeterMap_cFv                                        Function */
 // dMeterMap_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +468,7 @@ asm void draw__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020E070 03EC .text      ctrlShowMap__11dMeterMap_cFv                                 */
+/* 8020E070-8020E45C 03EC .text      ctrlShowMap__11dMeterMap_cFv                                 Function */
 // dMeterMap_c::ctrlShowMap(void)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +479,7 @@ asm void ctrlShowMap__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020E45C 006C .text      checkMoveStatus__11dMeterMap_cFv                             */
+/* 8020E45C-8020E4C8 006C .text      checkMoveStatus__11dMeterMap_cFv                             Function */
 // dMeterMap_c::checkMoveStatus(void)
 #pragma push
 #pragma optimization_level 0
@@ -399,7 +490,7 @@ asm void checkMoveStatus__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020E4C8 0158 .text      isShow__11dMeterMap_cFUl                                     */
+/* 8020E4C8-8020E620 0158 .text      isShow__11dMeterMap_cFUl                                     Function */
 // dMeterMap_c::isShow(u32)
 #pragma push
 #pragma optimization_level 0
@@ -410,7 +501,7 @@ asm void isShow__11dMeterMap_cFUl() {
 }
 #pragma pop
 
-/* 8020E620 00EC .text      isFmapScreen__11dMeterMap_cFv                                */
+/* 8020E620-8020E70C 00EC .text      isFmapScreen__11dMeterMap_cFv                                Function */
 // dMeterMap_c::isFmapScreen(void)
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +512,7 @@ asm void isFmapScreen__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020E70C 0048 .text      isDmapScreen__11dMeterMap_cFv                                */
+/* 8020E70C-8020E754 0048 .text      isDmapScreen__11dMeterMap_cFv                                Function */
 // dMeterMap_c::isDmapScreen(void)
 #pragma push
 #pragma optimization_level 0
@@ -432,7 +523,7 @@ asm void isDmapScreen__11dMeterMap_cFv() {
 }
 #pragma pop
 
-/* 8020E754 0278 .text      meter_map_move__11dMeterMap_cFUl                             */
+/* 8020E754-8020E9CC 0278 .text      meter_map_move__11dMeterMap_cFUl                             Function */
 // dMeterMap_c::meter_map_move(u32)
 #pragma push
 #pragma optimization_level 0
@@ -443,7 +534,7 @@ asm void meter_map_move__11dMeterMap_cFUl() {
 }
 #pragma pop
 
-/* 8020E9CC 0394 .text      keyCheck__11dMeterMap_cFv                                    */
+/* 8020E9CC-8020ED60 0394 .text      keyCheck__11dMeterMap_cFv                                    Function */
 // dMeterMap_c::keyCheck(void)
 #pragma push
 #pragma optimization_level 0

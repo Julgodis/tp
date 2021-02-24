@@ -19,21 +19,14 @@ from globals import *
 import demangle
 from intervaltree import Interval, IntervalTree
 
-"""
-p = demangle.ParseCtx("basePlaneTypeXY__FPA4_fff")
-p.demangle()
-print(p.to_str())
-sys.exit(1)
-"""
-
 #
 #
 #
 
 FAST_RUN = False
-DRY_RUN = False
+OVERRIDE_FUNCTION = False
 GENERATE_MAKEFILES = False
-EXPORT_ASM = False
+EXPORT_ASM = True
 EXPORT_CPP = True
 UPDATE = False
 PRINT_FORCEACTIVE = False
@@ -64,27 +57,28 @@ def dol2asm():
         collected_functions = set()
         collected_functions.add(ENTRY_POINT)
         print("searching for labels and functions:")
-        for section in SECTIONS.values():
-            if section.isCode:
-                lcd = dasm.LCDisassembler()
-                last_p = 0
-                max_count = 2 * section.size // 4
-                for count in lcd.iter(section.addr, section.data, section.size):
-                    p = count / max_count
-                    if FAST_RUN and p > 0.05:
-                        break
-                    if not last_p or (p - last_p) > 0.001:
-                        sys.stdout.write("\r    %s%3.2f%%" %
-                                        (section.name.ljust(20, ' '), p * 100))
-                        sys.stdout.flush()
-                        last_p = p
-                sys.stdout.write("\r    %s%3.2f%%" %
-                                (section.name.ljust(20, ' '), 100.0))
-                sys.stdout.flush()
-                print()
+        for section, start, stop in LABEL_SEARCH_RANGES:
+            size = stop - start
+            data = section.data[start - section.addr:stop - section.addr]
+            lcd = dasm.LCDisassembler()
+            last_p = 0
+            max_count = 2 * size // 4
+            for count in lcd.iter(start, data, size):
+                p = count / max_count
+                if FAST_RUN and p > 0.05:
+                    break
+                if not last_p or (p - last_p) > 0.001:
+                    sys.stdout.write("\r    %s %08X-%08X %3.2f%%" %
+                                    (section.name.ljust(20, ' '), start, stop, p * 100))
+                    sys.stdout.flush()
+                    last_p = p
+            sys.stdout.write("\r    %s %08X-%08X %3.2f%%" %
+                                    (section.name.ljust(20, ' '), start, stop, p * 100))
+            sys.stdout.flush()
+            print()
 
-                collected_labels.update(lcd.labels)
-                collected_functions.update(lcd.functions)
+            collected_labels.update(lcd.labels)
+            collected_functions.update(lcd.functions)
 
         # Print
         print("stats:")
@@ -208,12 +202,40 @@ def dol2asm():
                     curr_addr = curr.addr + curr.size
                     curr.padding = section.end - curr_addr
                     assert curr.padding >= 0
- 
+
+        # Some section have their object files aligned to 8 bytes. This hacks will move symbols, 
+        # which are not aligned, to the next object file. Not sure if the frameworkF.map have them listed
+        # in the wrong source file or if a different alignment setting was used.
+        if section.name == ".bss" or section.name == ".sdata"  or section.name == ".sbss":
+            for i, curr in enumerate(final_symbols):
+                begin_aligned = ((curr.addr) % 8) == 0
+                end_aligned = ((curr.addr + curr.size + curr.padding) % 8) == 0
+                if not begin_aligned:
+                    continue
+                if end_aligned:
+                    continue
+
+                j = i+1
+                next = None
+                for n in final_symbols[i+1:]:
+                    if ((n.addr + n.size + n.padding) % 8) == 0:
+                        next = n
+                        break
+                    j += 1
+            
+                if not next:
+                    continue
+                if curr.obj == next.obj and curr.lib == next.lib:
+                    continue
+
+                for sym in final_symbols[i:j]:
+                    sym.obj = next.obj
+                    sym.lib = next.lib
+
         if len(final_symbols) > 1:
             last_symbol  = final_symbols[-1]
             end = last_symbol.addr + last_symbol.size
             endp = end + last_symbol.padding
-            assert (end + section.alignment - 1) & ~(section.alignment - 1) == endp
             assert endp == section.end
             last_symbol.padding = 0
 
@@ -227,11 +249,13 @@ def dol2asm():
 
     # Create library, translation units, section, and symbols
     tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+    tree_order = defaultdict(lambda: defaultdict(list))
     for section in SECTIONS.values():
         if section.binaryExport:
             continue
         for symbol in section.symbols:
             tree[symbol.lib][symbol.obj][section].append(symbol)
+            tree_order[symbol.lib][section].append(symbol.obj)
 
     def string_decode(data):
         try:
@@ -257,7 +281,7 @@ def dol2asm():
     def symbol_from_data(section, name, offset, data, padding_data, symbol):
         if name.name.startswith("__vt"):
             assert section.name == ".data"
-            return VTableData(name, symbol.addr, offset, data, padding_data=padding_data)
+            return [VTableData(name, symbol.addr, offset, data, padding_data=padding_data)]
 
         # floats and integer literals will never be in rodata
         if section.name != ".rodata":
@@ -269,15 +293,15 @@ def dol2asm():
                 # MWCC will put zero-initialized variables in .data/.sdata/.sdata2 if they were generated other code. e.g. using a float literal in code. But if we declare a variable with a 0.0 float the compiler will move it to .bss/.sbss/.sbss2. This is the reason we cannot convert variables from u8 arrays to better types.  
                 if u32_data != 0:
                     if (s32_data >= -4096 and s32_data <= 4096) and False:
-                        return S32Data(name, s32_data, symbol.addr, offset, data, padding_data=padding_data) 
+                        return [S32Data(name, s32_data, symbol.addr, offset, data, padding_data=padding_data)] 
                     elif (u32_data < 4096) and False:
-                        return U32Data(name, u32_data, symbol.addr, offset, data, padding_data=padding_data) 
+                        return [U32Data(name, u32_data, symbol.addr, offset, data, padding_data=padding_data)] 
                     elif float_data in util.float32_exact:
                         comment = "%sf %s" % (float_data, hex(u32_data))
-                        return Fraction32Data(name, util.float32_exact[float_data][0], util.float32_exact[float_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment) 
+                        return [Fraction32Data(name, util.float32_exact[float_data][0], util.float32_exact[float_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
                     elif util.is_nice_float32(float_data):
                         comment = hex(u32_data)
-                        return Float32Data(name, float_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment) 
+                        return [Float32Data(name, float_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
 
             elif len(data) == 8 and len(padding_data) < 4:
                 u64_data = struct.unpack('>Q', data)[0]
@@ -287,21 +311,21 @@ def dol2asm():
                 if u64_data != 0:
                     if u64_data == 0x43300000_00000000:
                         comment = "%s | compiler-generated value used in cast: (float)u32" % hex(u64_data)
-                        return Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment) 
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
                     elif u64_data == 0x43300000_80000000:
                         comment = "%s | compiler-generated value used in cast: (float)s32" % hex(u64_data)
-                        return Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment) 
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
 
                     elif (s64_data >= -4096 and s64_data <= 4096) and False:
-                        return S64Data(name, s64_data, symbol.addr, offset, data, padding_data=padding_data) 
+                        return [S64Data(name, s64_data, symbol.addr, offset, data, padding_data=padding_data)]
                     elif (u64_data < 4096) and False:
-                        return U64Data(name, u64_data, symbol.addr, offset, data, padding_data=padding_data) 
+                        return [U64Data(name, u64_data, symbol.addr, offset, data, padding_data=padding_data)] 
                     elif double_data in util.float64_exact:
                         comment = "%s %s" % (double_data, hex(u64_data))
-                        return Fraction64Data(name, util.float64_exact[double_data][0], util.float64_exact[double_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)     
+                        return [Fraction64Data(name, util.float64_exact[double_data][0], util.float64_exact[double_data][1], symbol.addr, offset, data, padding_data=padding_data, comment=comment)]     
                     elif util.is_nice_float64(double_data):
                         comment = hex(u64_data)
-                        return Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment) 
+                        return [Float64Data(name, double_data, symbol.addr, offset, data, padding_data=padding_data, comment=comment)] 
 
         # strings will always be in rodata
         if section.name == ".rodata":
@@ -312,16 +336,49 @@ def dol2asm():
                 for x in split_data[:-1]:
                     strings.append(string_from_data(symbol.addr + x_offset, offset + x_offset, bytes(x + [0])))
                     x_offset += len(x) + 1
-                return StringBaseData(name, strings, symbol.addr, offset, data, padding_data=padding_data)
+                return [StringBaseData(name, strings, symbol.addr, offset, data, padding_data=padding_data)]
 
-        return InitializedData(name, symbol.addr, offset, data, padding_data=padding_data)
+        if section.name == ".ctors":
+            if symbol.name == "__init_cpp_exceptions_reference":
+                assert len(data) == 4
+                __init_cpp_exceptions = struct.unpack(">I", data)[0]
+    
+                assert len(padding_data) % 4 == 0
+                constructor_count = len(padding_data) // 4
+                constructors = list(struct.unpack(">" + "I" * constructor_count, padding_data))
+                print(constructors)
+
+                count = 0
+                for x in constructors:
+                    if x == 0:
+                        break
+                    count += 1
+
+                return [
+                    SymbolReferenceArrayData(name, [__init_cpp_exceptions], symbol.addr, offset, data),
+                    SymbolReferenceArrayData(Name("_ctors", symbol.addr + 4, "_ctors"), constructors[0:count], symbol.addr + 4, offset + 4, padding_data[0:count*4])
+                ]
+            
+        if section.name == ".dtors":
+            if symbol.name == "__destroy_global_chain_reference":
+                assert len(data) == 4
+                assert len(padding_data) == 0
+                __destroy_global_chain = struct.unpack(">I", data)[0]
+                return [SymbolReferenceArrayData(name, [__destroy_global_chain], symbol.addr, offset, data)]
+            elif symbol.name == "__fini_cpp_exceptions_reference":
+                assert len(data) == 4
+                assert len(padding_data) == 0
+                __fini_cpp_exceptions = struct.unpack(">I", data)[0]
+                return [SymbolReferenceArrayData(name, [__fini_cpp_exceptions], symbol.addr, offset, data)]
+
+        return [InitializedData(name, symbol.addr, offset, data, padding_data=padding_data)]
 
     def symbol_from_group(section, group):
         assert len(group) == 1
         first = group[0]
         name = Name("data", first.addr, first.name)
         if section.isBSS:
-            return ZeroInitializedData(name, first.addr, first.size, padding=first.padding)
+            return [ZeroInitializedData(name, first.addr, first.size, padding=first.padding)]
         else:
             offset = section.offset + first.addr - section.addr
             try:
@@ -338,7 +395,7 @@ def dol2asm():
                         (first.addr, first.size, offset, offset + first.size, 0, len(BASEROM)))
                 traceback.print_exc()
                 sys.exit(1)
-                return None
+                return []
 
     # blr
     def is_blr(data):
@@ -468,6 +525,9 @@ def dol2asm():
         return False, None, None, None
 
     def function_from_group(section, group):
+        if group[0].name.startswith("__sinit_"):
+            return SInitFunction(group, section)
+
         if len(group) == 1:
             start = group[0].addr
             end = start + group[0].size
@@ -492,13 +552,100 @@ def dol2asm():
 
         return Function(group, section)
 
+    def unique_keeporder(seq):
+        seen = set()
+        seen_add = seen.add
+        return [x for x in seq if not (x in seen or seen_add(x))]
+
     reference_set = set()
     function_map = dict()
     data_map = dict()
     libraries = list()
     for k, v in tree.items():
         library = Library(k, BASE_PATH, reference_set)
-        for tuk, tuv in v.items():
+
+
+        #
+        #
+        #
+
+        class Node:
+            def __init__(self, name):
+                self.name = name
+                self.depth = 0
+                self.id = name
+
+            def __eq__(self, other):
+                return other.id == self.id
+
+            def __hash__(self):
+                return hash(self.id)
+
+            def __repr__(self):
+                return self.__str__()
+
+            def __str__(self):
+                return str((self.depth, self.name))
+
+        nodes = dict([(x, Node(x)) for x in v.keys()])
+        orders = []
+        order_sections = tree_order[k]
+        for os, osv in order_sections.items():
+            orders.append([ x for x in unique_keeporder(osv)])
+
+        edges = []
+        graph = dict()
+        for node in nodes.values():
+            graph[node.id] = []
+        for order in orders:
+            for a, b in util.mapOverlap(order, 2):
+                if not a or not b:
+                    continue
+                graph[a].append(b)
+                edges.append([a, b])
+
+        predecessor_count = defaultdict(int)
+        for f, t in edges:
+            predecessor_count[t] += 1
+
+        top_node = None
+        top_nodes = [x for x in nodes.keys() if predecessor_count[x] == 0]
+        if len(top_nodes) > 1:
+            print("warning: found multiple top-level nodes (using the first one for new)")
+            for node in top_nodes:
+                print("    ", node)
+        elif len(top_nodes) == 0:
+            print("error: found no top-level node")
+            sys.exit(1)
+
+        def calculate_max_depth(k, depth):
+            node = nodes[k]
+            if depth <= node.depth:
+                return
+
+            node.depth = depth
+            for edge in graph[k]:
+                calculate_max_depth(edge, depth + 1)
+
+        for top_node in top_nodes:
+            calculate_max_depth(top_node, 1)
+
+        if False:
+            # Output graph
+            from graphviz import Digraph
+            dot = Digraph()
+            for node in nodes.values():
+                dot.node(node.id, str(node.depth) + " " + node.id)
+
+            dot.edges(edges)
+            dot.render(f"{library.name}.dot")
+
+        sorted_nodes = list(nodes.values())
+        sorted_nodes.sort(key=lambda x: x.depth)
+
+        for node in sorted_nodes:
+            tuk = node.id
+            tuv = v[tuk]
             translation_unit = TranslationUnit(tuk)
             for sk, sv in tuv.items():
                 section = SectionPart(sk)
@@ -531,14 +678,12 @@ def dol2asm():
                     first = group[0]
                     if first.isFunction:
                         function = function_from_group(section, group)
-                        function.section = section
                         section.addSymbol(function)
                         function_map[function.addr] = function
                     else:
-                        symbol_data = symbol_from_group(section, group)
-                        symbol_data.section = section
-                        section.addSymbol(symbol_data)
-                        data_map[symbol_data.addr] = symbol_data
+                        for symbol_data in symbol_from_group(section, group):
+                            section.addSymbol(symbol_data)
+                            data_map[symbol_data.addr] = symbol_data
 
                 translation_unit.addSectionPart(section)
             library.addTranslationUnit(translation_unit)
@@ -548,14 +693,38 @@ def dol2asm():
         if section.binaryExport:
             for symbol in section.symbols:
                 group = [ symbol ]
-                symbol_data = symbol_from_group(section, group)
-                symbol_data.section = section
-                symbol.symbol_data = symbol_data
-                data_map[symbol_data.addr] = symbol_data
+                for symbol_data in symbol_from_group(section, group):
+                    symbol_data.section = section
+                    symbol.symbol_data = symbol_data
+                    data_map[symbol_data.addr] = symbol_data
 
-    for symbol_data in data_map.values():
+    symbol_map = {**data_map, **function_map}
+    address_interval_tree = IntervalTree(
+        [Interval(x.addr, x.addr + x.size, x) for x in symbol_map.values()]
+    )
+
+    for addr, symbol_data in data_map.items():
         if isinstance(symbol_data, VTableData):
-            symbol_data.resolve(function_map)
+            symbol_data.resolve(address_interval_tree)
+        elif isinstance(symbol_data, SymbolReferenceArrayData):
+            symbol_data.resolve(address_interval_tree)
+        elif isinstance(symbol_data, InitializedData):
+            section = symbol_data.section
+            if not isinstance(section, SectionPart):
+                continue
+            if len(symbol_data.data) % 4 == 0 and len(symbol_data.data) < 4 * 64:
+                count = len(symbol_data.data) // 4
+                values = list(struct.unpack(">" + "I" * count, symbol_data.data))
+                is_all_symbols = [address_interval_tree.overlaps(x) for x in values]
+                if any(is_all_symbols):
+                    new_symbol = SymbolReferenceArrayData(symbol_data.name, values, symbol_data.addr, symbol_data.offset, symbol_data.data, padding_data=symbol_data.padding_data)
+                    section.replaceSymbol(symbol_data, new_symbol)
+                    new_symbol.resolve(address_interval_tree)
+                    data_map[addr] = new_symbol
+                    symbol_map[addr] = new_symbol
+                    address_interval_tree.remove_overlap(symbol_data.addr, symbol_data.addr+symbol_data.size)
+                    address_interval_tree.add(Interval(new_symbol.addr, new_symbol.addr+new_symbol.size, new_symbol))
+
 
     # alignment
     function_list = list(function_map.values())
@@ -652,7 +821,7 @@ def dol2asm():
 
                     util.escape_name(symbol.name)
 
-                    if type(symbol).__name__ == "Function":
+                    if type(symbol).__name__ == "Function" or isinstance(symbol, ReturnFunction):
                         if symbol.name.demangled:
                             parts = symbol.name.demangled.demangled
                             demangled = symbol.name.demangled.to_str()
@@ -701,10 +870,11 @@ def dol2asm():
                     if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
                         obj_prefix = tu.name[:-2].replace(
                             "/", "_").replace(".", "_").replace("-", "_")
-                        symbol.name.label = obj_prefix + "__" + symbol.name.label
-                        symbol.name.reference = obj_prefix + "__" + symbol.name.reference
                         if symbol.name.is_function:
                             symbol.name.is_static = True
+                        else:
+                            symbol.name.label = obj_prefix + "__" + symbol.name.label
+                            symbol.name.reference = obj_prefix + "__" + symbol.name.reference
                     symbol.updateName()
 
 
@@ -714,10 +884,11 @@ def dol2asm():
                 if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
                     obj_prefix = tu.name[:-2].replace("/",
                                                     "_").replace(".", "_").replace("-", "_")
-                    symbol.name.label = obj_prefix + "__" + symbol.name.label
-                    symbol.name.reference = obj_prefix + "__" + symbol.name.reference
                     if symbol.name.is_function:
                         symbol.name.is_static = True
+                    else:
+                        symbol.name.label = obj_prefix + "__" + symbol.name.label
+                        symbol.name.reference = obj_prefix + "__" + symbol.name.reference
 
     # Print everything
     if False:
@@ -728,8 +899,7 @@ def dol2asm():
                 for sec in tu.section_parts:
                     print("\t\t" + sec.name)
                     for sym in sec.symbols:
-                        print("\t\t\t%08X %04X %s %s %s" % (
-                            sym.addr, sym.size, sym.name, sym.label, sym.reference))
+                        print("\t\t\t%08X %04X %s %s %s" % (sym.addr, sym.size, sym.name, sym.label, sym.reference))
                         if isinstance(sym, Function):
                             if len(sym.blocks) > 1:
                                 for block in sym.blocks:
@@ -741,12 +911,29 @@ def dol2asm():
 
     # Print undeifned active function
     if False:
-        for lib in libraries:
-            for tu in lib.translation_units:
-                for sec in tu.section_parts:
-                    for sym in sec.symbols:
-                        if isinstance(sym, Function):
-                            print("\t\"%s\": (0x%08X, \"%s\", elf.STT_FUNC)," % (sym.name.label, sym.addr, sec.name))
+        with open("ud.dump", "w") as file:
+            reference_count = defaultdict(int)
+            for lib in libraries:
+                for tu in lib.translation_units:
+                    for sec in tu.section_parts:
+                        for symbol in sec.symbols:
+                            for ref in symbol.getInternalReferences():
+                                if ref == symbol.addr:
+                                    continue
+                                reference_count[ref] += 1
+
+            func_list = list(function_map.keys())
+            func_list.sort()
+            for addr in func_list:
+                sym = function_map[addr]
+                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_FUNC, %i),\n" % (sym.name.label, sym.addr, sec.name, reference_count[addr]))
+
+            data_list = list(data_map.keys())
+            data_list.sort()
+            for addr in data_list:
+                sym = data_map[addr]
+                file.write("\t\"%s\": (0x%08X, \"%s\", elf.STT_NOTYPE, %i),\n" % (sym.name.label, sym.addr, sec.name, reference_count[addr]))         
+
 
     # Print undeifned active stringBase
     if False:
@@ -779,17 +966,14 @@ def dol2asm():
     if EXPORT_ASM:
         for section in SECTIONS.values():
             if section.binaryExport:
-                asm.export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section)
+                asm.export_binary_section(BASE_PATH, section)
 
-        asm.export_all(BASEROM, DRY_RUN, EXPORT_CPP, libraries)
+        if not EXPORT_CPP:
+            asm.export_all([], False, EXPORT_CPP, libraries)
 
     # Export as c++
     if EXPORT_CPP:
-        symbol_map = {**data_map, **function_map}
-        address_interval_tree = IntervalTree(
-            [Interval(x.addr, x.addr + x.size, x) for x in symbol_map.values()]
-        )
-        cpp.export_all(BASEROM, DRY_RUN, libraries, symbol_map, address_interval_tree)
+        cpp.export_all(OVERRIDE_FUNCTION, libraries, symbol_map, address_interval_tree)
 
     # Generate object file list
     if GENERATE_MAKEFILES:

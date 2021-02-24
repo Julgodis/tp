@@ -9,9 +9,17 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void clamp__14JASSoundParamsFv();
+/* Function             */
+extern void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_299[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_300;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASSoundParams__LIT_301;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASSoundParams__LIT_311;
 }
 
@@ -21,17 +29,17 @@ SECTION_SDATA2 extern f32 JASSoundParams__LIT_311;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455760 0004 .sdata2    @299                                                         */
+/* 80455760-80455764 0004 .sdata2    @299                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_299[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455764 0004 .sdata2    @300                                                         */
+/* 80455764-80455768 0004 .sdata2    @300                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_300 = 1.000000f;
-/* 80455768 0004 .sdata2    @301                                                         */
+/* 80455768-8045576C 0004 .sdata2    @301                                                         Float32Data */
 // 0x41000000
 SECTION_SDATA2 f32 JASSoundParams__LIT_301 = 8.000000f;
-/* 8045576C 0004 .sdata2    @311                                                         */
+/* 8045576C-80455770 0004 .sdata2    @311                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 JASSoundParams__LIT_311 = 0.500000f;
 }
@@ -42,7 +50,7 @@ SECTION_SDATA2 f32 JASSoundParams__LIT_311 = 0.500000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029E3B0 00CC .text      clamp__14JASSoundParamsFv                                    */
+/* 8029E3B0-8029E47C 00CC .text      clamp__14JASSoundParamsFv                                    Function */
 // JASSoundParams::clamp(void)
 #pragma push
 #pragma optimization_level 0
@@ -53,7 +61,7 @@ asm void clamp__14JASSoundParamsFv() {
 }
 #pragma pop
 
-/* 8029E47C 005C .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams */
+/* 8029E47C-8029E4D8 005C .text      combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams Function */
 // JASSoundParams::combine(const JASSoundParams&, const JASSoundParams&)
 #pragma push
 #pragma optimization_level 0

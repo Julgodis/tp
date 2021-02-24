@@ -11,9 +11,12 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__11JAIAudienceFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__11JAIAudience[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11JAIAudience[8];
 }
 
 
@@ -22,8 +25,8 @@ SECTION_DATA extern const void* __vt__11JAIAudience[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9838 0020 .data      __vt__11JAIAudience                                          */
-SECTION_DATA const  void* __vt__11JAIAudience[8] = {
+/* 803C9838-803C9858 0020 .data      __vt__11JAIAudience                                          VTableData */
+SECTION_DATA void* __vt__11JAIAudience[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11JAIAudienceFv,
@@ -41,7 +44,7 @@ SECTION_DATA const  void* __vt__11JAIAudience[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029EFF4 0048 .text      __dt__11JAIAudienceFv                                        */
+/* 8029EFF4-8029F03C 0048 .text      __dt__11JAIAudienceFv                                        Function */
 // JAIAudience::~JAIAudience(void)
 #pragma push
 #pragma optimization_level 0

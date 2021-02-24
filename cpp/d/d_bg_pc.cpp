@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void setCode__5dBgPcFR5sBgPc();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80074048 002C .text      setCode__5dBgPcFR5sBgPc                                      */
+/* 80074048-80074074 002C .text      setCode__5dBgPcFR5sBgPc                                      Function */
 // dBgPc::setCode(sBgPc&)
 #pragma push
 #pragma optimization_level 0

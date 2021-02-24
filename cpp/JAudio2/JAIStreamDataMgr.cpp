@@ -11,11 +11,16 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__16JAIStreamDataMgrFv();
+/* Function             */
 extern void __dt__16JAIStreamAramMgrFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__16JAIStreamAramMgr[5];
-SECTION_DATA extern const void* __vt__16JAIStreamDataMgr[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16JAIStreamAramMgr[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16JAIStreamDataMgr[5];
 }
 
 
@@ -24,16 +29,16 @@ SECTION_DATA extern const void* __vt__16JAIStreamDataMgr[5];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9A08 0014 .data      __vt__16JAIStreamAramMgr                                     */
-SECTION_DATA const  void* __vt__16JAIStreamAramMgr[5] = {
+/* 803C9A08-803C9A1C 0014 .data      __vt__16JAIStreamAramMgr                                     VTableData */
+SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
 	NULL,
 	(void*)__dt__16JAIStreamAramMgrFv,
 };
-/* 803C9A1C 0010 .data      __vt__16JAIStreamDataMgr                                     */
-SECTION_DATA const  void* __vt__16JAIStreamDataMgr[5] = {
+/* 803C9A1C-803C9A30 0010 .data      __vt__16JAIStreamDataMgr                                     VTableData */
+SECTION_DATA void* __vt__16JAIStreamDataMgr[5] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -49,7 +54,7 @@ SECTION_DATA const  void* __vt__16JAIStreamDataMgr[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A3AD8 0048 .text      __dt__16JAIStreamDataMgrFv                                   */
+/* 802A3AD8-802A3B20 0048 .text      __dt__16JAIStreamDataMgrFv                                   Function */
 // JAIStreamDataMgr::~JAIStreamDataMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +65,7 @@ asm void __dt__16JAIStreamDataMgrFv() {
 }
 #pragma pop
 
-/* 802A3B20 0048 .text      __dt__16JAIStreamAramMgrFv                                   */
+/* 802A3B20-802A3B68 0048 .text      __dt__16JAIStreamAramMgrFv                                   Function */
 // JAIStreamAramMgr::~JAIStreamAramMgr(void)
 #pragma push
 #pragma optimization_level 0

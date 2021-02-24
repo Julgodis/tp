@@ -13,14 +13,14 @@
 // 
 
 struct JKRHeap;
+struct msg_class;
 struct dMeter2_c;
 struct JKRExpHeap;
-struct msg_class;
 
 extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHeap */
 extern void fopMsgM_setStageLayer(void*); /* fopMsgM_setStageLayer__FPv */
 extern void fopMsgM_setMessageID(unsigned int); /* fopMsgM_setMessageID__FUi */
-extern void fopMsgM_Create(s16, int (*)(void*), void*); /* fopMsgM_Create__FsPFPv_iPv */
+extern void fopMsgM_Create(short, int (*)(void*), void*); /* fopMsgM_Create__FsPFPv_iPv */
 extern void fopMsgM_createExpHeap(u32, JKRHeap*); /* fopMsgM_createExpHeap__FUlP7JKRHeap */
 extern void fopMsgM_destroyExpHeap(JKRExpHeap*); /* fopMsgM_destroyExpHeap__FP10JKRExpHeap */
 extern void dComIfGs_setSelectItemIndex(int, u8); /* dComIfGs_setSelectItemIndex__FiUc */
@@ -36,229 +36,472 @@ extern void dComIfGp_getSelectItemNum(int); /* dComIfGp_getSelectItemNum__Fi */
 extern void dComIfGp_getSelectItemMaxNum(int); /* dComIfGp_getSelectItemMaxNum__Fi */
 extern void dCam_getBody(void); /* dCam_getBody__Fv */
 extern void dKy_darkworld_check(void); /* dKy_darkworld_check__Fv */
+extern void dMeter2_Draw(dMeter2_c*); /* dMeter2_Draw__FP9dMeter2_c */
+extern void dMeter2_Execute(dMeter2_c*); /* dMeter2_Execute__FP9dMeter2_c */
+extern void dMeter2_Delete(dMeter2_c*); /* dMeter2_Delete__FP9dMeter2_c */
+extern void dMeter2_Create(msg_class*); /* dMeter2_Create__FP9msg_class */
 extern void dTimer_createStockTimer(void); /* dTimer_createStockTimer__Fv */
 extern void cLib_addCalc2(f32*, f32, f32, f32); /* cLib_addCalc2__FPffff */
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void fopMsgM_setStageLayer__FPv();
+/* Function             */
 extern void fopMsgM_setMessageID__FUi();
+/* Function             */
 extern void fopMsgM_Create__FsPFPv_iPv();
+/* Function             */
 extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
+/* Function             */
 extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+/* Function             */
 extern void setItemBombNumCount__14dComIfG_play_cFUcs();
+/* Function             */
 extern void getItemBombNumCount__14dComIfG_play_cFUc();
+/* Function             */
 extern void clearItemBombNumCount__14dComIfG_play_cFUc();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* FirstParamFunction   */
 extern u32 getTimerMode__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void dComIfGs_setSelectItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_setMixItemIndex__FiUc();
+/* Function             */
 extern void dComIfGs_getSelectMixItemNoArrowIndex__Fi();
+/* Function             */
 extern void dComIfGs_getMixItemIndex__Fi();
+/* Function             */
 extern void dComIfGp_setSelectItem__Fi();
+/* Function             */
 extern void dComIfGp_getSelectItem__Fi();
+/* Function             */
 extern void dComIfGp_setHeapLockFlag__FUc();
+/* Function             */
 extern void dComIfGp_offHeapLockFlag__Fi();
+/* Function             */
 extern void dComIfGp_getSubHeap2D__Fi();
+/* Function             */
 extern void dComIfGp_getSelectItemNum__Fi();
+/* Function             */
 extern void dComIfGp_getSelectItemMaxNum__Fi();
+/* Function             */
 extern void getSelectItemIndex__21dSv_player_status_a_cCFi();
+/* Function             */
 extern void getRupeeMax__21dSv_player_status_a_cCFv();
+/* Function             */
 extern void setItem__17dSv_player_item_cFiUc();
+/* Function             */
 extern void getItem__17dSv_player_item_cCFib();
+/* Function             */
 extern void setBombNum__24dSv_player_item_record_cFUcUc();
+/* Function             */
 extern void getBombNum__24dSv_player_item_record_cCFUc();
+/* Function             */
 extern void getBottleNum__24dSv_player_item_record_cCFUc();
+/* Function             */
 extern void getBombNum__21dSv_player_item_max_cCFUc();
+/* Function             */
 extern void onCollectCrystal__20dSv_player_collect_cFUc();
+/* Function             */
 extern void isCollectCrystal__20dSv_player_collect_cCFUc();
+/* Function             */
 extern void onCollectMirror__20dSv_player_collect_cFUc();
+/* Function             */
 extern void isCollectMirror__20dSv_player_collect_cCFUc();
+/* Function             */
 extern void getLightDropNum__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
-extern int CalcSubjectAngle__9dCamera_cFPsPs();
+/* ReturnIntegerFunction */
+extern  int CalcSubjectAngle__9dCamera_cFPsPs();
+/* Function             */
 extern void dCam_getBody__Fv();
+/* Function             */
 extern void __ct__8dScope_cFUc();
+/* Function             */
 extern void dKy_darkworld_check__Fv();
-extern int getBombFlag__9dMw_HIO_cFv();
-extern int getArrowFlag__9dMw_HIO_cFv();
-extern int getPachinkoFlag__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getBombFlag__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getArrowFlag__9dMw_HIO_cFv();
+/* ReturnIntegerFunction */
+extern  int getPachinkoFlag__9dMw_HIO_cFv();
+/* Function             */
 extern void __ct__14dMeterButton_cFv();
+/* Function             */
 extern void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
+/* Function             */
 extern void isClose__14dMeterButton_cFv();
+/* Function             */
 extern void setString__14dMeterButton_cFPcUcUcUc();
+/* Function             */
 extern void hideAll__14dMeterButton_cFv();
+/* Function             */
 extern void __ct__14dMeterHaihai_cFUc();
+/* Function             */
 extern void __ct__15dMeterHakusha_cFPv();
+/* Function             */
 extern void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
+/* Function             */
 extern void getMapDispEdgeTop__11dMeterMap_cFv();
+/* Function             */
 extern void setMapAlpha__11dMeterMap_cFUc();
+/* Function             */
 extern void __ct__11dMeterMap_cFP9J2DScreen();
+/* Function             */
 extern void _move__11dMeterMap_cFUl();
+/* Function             */
 extern void _draw__11dMeterMap_cFv();
+/* Function             */
 extern void meter_map_move__11dMeterMap_cFUl();
+/* Function             */
 extern void __ct__14dMeterString_cFi();
+/* Function             */
 extern void createString__14dMeterString_cFi();
+/* Function             */
 extern void __ct__13dMeter2Draw_cFP10JKRExpHeap();
+/* Function             */
 extern void exec__13dMeter2Draw_cFUl();
+/* Function             */
 extern void drawLife__13dMeter2Draw_cFssff();
+/* Function             */
 extern void setAlphaLifeChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaLifeAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaLifeAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawKantera__13dMeter2Draw_cFllff();
+/* Function             */
 extern void setAlphaKanteraChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawOxygen__13dMeter2Draw_cFllff();
+/* Function             */
 extern void setAlphaOxygenChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawLightDrop__13dMeter2Draw_cFUcUcffffUc();
+/* ReturnFunction       */
 extern void setAlphaLightDropChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void getNowLightDropRateCalc__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawRupee__13dMeter2Draw_cFs();
+/* Function             */
 extern void setAlphaRupeeChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawKey__13dMeter2Draw_cFs();
+/* Function             */
 extern void setAlphaKeyChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaKeyAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaKeyAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawButtonA__13dMeter2Draw_cFUcfffffbb();
+/* Function             */
 extern void drawButtonB__13dMeter2Draw_cFUcbfffffb();
+/* Function             */
 extern void drawButtonR__13dMeter2Draw_cFUcUcbb();
+/* Function             */
 extern void drawButtonZ__13dMeter2Draw_cFUc();
+/* Function             */
 extern void drawButton3D__13dMeter2Draw_cFUc();
+/* Function             */
 extern void drawButtonC__13dMeter2Draw_cFUcb();
+/* Function             */
 extern void drawButtonS__13dMeter2Draw_cFUc();
+/* Function             */
 extern void drawButtonBin__13dMeter2Draw_cFUc();
+/* Function             */
 extern void drawButtonXY__13dMeter2Draw_cFiUcUcbb();
+/* Function             */
 extern void getButtonCrossParentInitTransY__13dMeter2Draw_cFv();
+/* Function             */
 extern void drawButtonCross__13dMeter2Draw_cFff();
+/* Function             */
 extern void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonChange__13dMeter2Draw_cFb();
+/* Function             */
 extern void setAlphaButtonAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv();
+/* Function             */
 extern void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv();
+/* Function             */
 extern void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb();
+/* Function             */
 extern void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb();
+/* Function             */
 extern void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl();
+/* Function             */
 extern void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb();
+/* Function             */
 extern void getActionString__13dMeter2Draw_cFUcUcPUc();
+/* Function             */
 extern void setItemNum__13dMeter2Draw_cFUcUcUc();
+/* Function             */
 extern void drawItemNum__13dMeter2Draw_cFUcf();
+/* Function             */
 extern void drawKanteraMeter__13dMeter2Draw_cFUcf();
+/* Function             */
 extern void isButtonVisible__13dMeter2Draw_cFv();
+/* Function             */
 extern void getCameraSubject__13dMeter2Draw_cFv();
+/* Function             */
 extern void getItemSubject__13dMeter2Draw_cFv();
+/* Function             */
 extern void getPlayerSubject__13dMeter2Draw_cFv();
+/* Function             */
 extern void isBButtonShow__13dMeter2Draw_cFb();
+/* Function             */
 extern void getButtonTimer__13dMeter2Draw_cFv();
+/* Function             */
 extern void isFloatingMessageVisible__13dMeter2Info_cFv();
+/* Function             */
 extern void isDirectUseItem__13dMeter2Info_cFi();
+/* Function             */
 extern void decHotSpringTimer__13dMeter2Info_cFv();
-extern int dMeter2Info_is2DActiveTouchArea__Fv();
+/* ReturnIntegerFunction */
+extern  int dMeter2Info_is2DActiveTouchArea__Fv();
+/* Function             */
 extern void _create__9dMeter2_cFv();
+/* Function             */
 extern void _execute__9dMeter2_cFv();
+/* Function             */
 extern void _draw__9dMeter2_cFv();
+/* Function             */
 extern void _delete__9dMeter2_cFv();
+/* Function             */
 extern void emphasisButtonDelete__9dMeter2_cFv();
+/* Function             */
+extern void setLifeZero__9dMeter2_cFv();
+/* Function             */
 extern void checkStatus__9dMeter2_cFv();
+/* Function             */
 extern void moveLife__9dMeter2_cFv();
+/* Function             */
 extern void moveKantera__9dMeter2_cFv();
+/* Function             */
 extern void moveOxygen__9dMeter2_cFv();
+/* Function             */
 extern void moveLightDrop__9dMeter2_cFv();
+/* Function             */
 extern void moveRupee__9dMeter2_cFv();
+/* Function             */
 extern void moveKey__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonA__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonB__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonR__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonZ__9dMeter2_cFv();
+/* Function             */
 extern void moveButton3D__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonC__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonS__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonXY__9dMeter2_cFv();
+/* Function             */
 extern void moveButtonCross__9dMeter2_cFv();
+/* ReturnFunction       */
 extern void moveTouchSubMenu__9dMeter2_cFv();
+/* Function             */
 extern void moveSubContents__9dMeter2_cFv();
+/* Function             */
 extern void move2DContents__9dMeter2_cFv();
+/* Function             */
 extern void checkSubContents__9dMeter2_cFv();
+/* Function             */
 extern void check2DContents__9dMeter2_cFv();
+/* Function             */
 extern void moveBombNum__9dMeter2_cFv();
+/* Function             */
 extern void moveBottleNum__9dMeter2_cFv();
+/* Function             */
 extern void moveArrowNum__9dMeter2_cFv();
+/* Function             */
 extern void movePachinkoNum__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeLife__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeKantera__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeOxygen__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeLightDrop__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeRupee__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeKey__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeButton__9dMeter2_cFv();
+/* Function             */
 extern void alphaAnimeButtonCross__9dMeter2_cFv();
+/* Function             */
 extern void isShowLightDrop__9dMeter2_cFv();
+/* Function             */
 extern void killSubContents__9dMeter2_cFUc();
+/* Function             */
 extern void isKeyVisible__9dMeter2_cFv();
+/* Function             */
 extern void isArrowEquip__9dMeter2_cFv();
+/* Function             */
 extern void isPachinkoEquip__9dMeter2_cFv();
+/* Function             */
+extern void dMeter2_Draw__FP9dMeter2_c();
+/* Function             */
+extern void dMeter2_Execute__FP9dMeter2_c();
+/* ReturnIntegerFunction */
+extern  int dMeter2_IsDelete__FP9dMeter2_c();
+/* Function             */
+extern void dMeter2_Delete__FP9dMeter2_c();
+/* Function             */
+extern void dMeter2_Create__FP9msg_class();
+/* Function             */
 extern void isPlaceMessage__12dMsgObject_cFv();
+/* Function             */
 extern void getStatus__12dMsgObject_cFv();
+/* Function             */
 extern void dTimer_createStockTimer__Fv();
+/* Function             */
 extern void cLib_addCalc2__FPffff();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void heartGaugeOn__11Z2StatusMgrFv();
+/* Function             */
 extern void freeAll__7JKRHeapFv();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void _savegpr_18();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_18();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter2__stringBase0[24];
-SECTION_DATA extern u8 d_d_meter2__LIT_5038[44];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopMsg_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_meter2__LIT_5038[11];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dMeter2_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_METER2[10];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mwHIO[304];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_ringHIO[344];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_fmapHIO[1188];
-SECTION_BSS extern u8 g_cursorHIO[72];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_cursorHIO[68 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_mode__7dDemo_c[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter2__LIT_4662[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2__LIT_4663;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter2__LIT_4837[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter2__LIT_5267;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter2__LIT_5268;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5791[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5933;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6051;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6052[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6564[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7509;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7510;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter2__LIT_9090;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter2__LIT_9091[8];
 }
 
@@ -268,10 +511,16 @@ SECTION_SDATA2 extern u8 d_d_meter2__LIT_9091[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399338 0017 .rodata    @stringBase0                                                 */
-const char* const stringBase_80399338 = "F_SP00";
-const char* const stringBase_8039933F = "F_SP103";
-const char* const stringBase_80399347 = "R_SP127";
+/* 80399338-80399350 0017 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399338 = "F_SP00";
+SECTION_DEAD const char* const stringBase_8039933F = "F_SP103";
+SECTION_DEAD const char* const stringBase_80399347 = "R_SP127";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039934F = "";
+#pragma pop
 }
 
 
@@ -280,22 +529,40 @@ const char* const stringBase_80399347 = "R_SP127";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BFA28 002C .data      @5038                                                        */
-SECTION_DATA u8 d_d_meter2__LIT_5038[44] = {
-	0x80, 0x21, 0xFC, 0xE0, 0x80, 0x21, 0xFB, 0xAC, 0x80, 0x21, 0xFB, 0xCC, 0x80, 0x21, 0xFB, 0xBC,
-	0x80, 0x21, 0xFC, 0x04, 0x80, 0x21, 0xFC, 0x3C, 0x80, 0x21, 0xFC, 0x04, 0x80, 0x21, 0xFC, 0x74,
-	0x80, 0x21, 0xFC, 0xB0, 0x80, 0x21, 0xFC, 0xE0, 0x80, 0x21, 0xFB, 0xBC,
+/* 803BFA28-803BFA54 002C .data      @5038                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_meter2__LIT_5038[11] = {
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+332),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+255),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+263),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+259),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+277),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+291),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+277),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+305),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+320),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+332),
+	(void*)(((u32*)checkStatus__9dMeter2_cFv)+259),
 };
-/* 803BFA54 0014 .data      l_dMeter2_Method                                             */
-SECTION_DATA u8 l_dMeter2_Method[20] = {
-	0x80, 0x22, 0x5B, 0x08, 0x80, 0x22, 0x5A, 0xE8, 0x80, 0x22, 0x5A, 0xC0, 0x80, 0x22, 0x5A, 0xE0,
-	0x80, 0x22, 0x5A, 0xA0,
+/* 803BFA54-803BFA68 0014 .data      l_dMeter2_Method                                             SymbolReferenceArrayData */
+SECTION_DATA void* l_dMeter2_Method[5] = {
+	(void*)dMeter2_Create,
+	(void*)dMeter2_Delete,
+	(void*)dMeter2_Execute,
+	(void*)dMeter2_IsDelete__FP9dMeter2_c,
+	(void*)dMeter2_Draw,
 };
-/* 803BFA68 0028 .data      g_profile_METER2                                             */
-SECTION_DATA u8 g_profile_METER2[40] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x0C, 0xFF, 0xFD, 0x03, 0x16, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x04, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x58,
-	0x03, 0x01, 0x00, 0x00, 0x80, 0x3B, 0xFA, 0x54,
+/* 803BFA68-803BFA90 0028 .data      g_profile_METER2                                             SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_METER2[10] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03160000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000004C0,
+	NULL,
+	NULL,
+	(void*)&g_fopMsg_Method,
+	(void*)0x03010000,
+	(void*)&l_dMeter2_Method,
 };
 }
 
@@ -305,53 +572,53 @@ SECTION_DATA u8 g_profile_METER2[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804549C8 0004 .sdata2    @4662                                                        */
+/* 804549C8-804549CC 0004 .sdata2    @4662                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter2__LIT_4662[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804549CC 0004 .sdata2    @4663                                                        */
+/* 804549CC-804549D0 0004 .sdata2    @4663                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter2__LIT_4663 = 1.000000f;
-/* 804549D0 0004 .sdata2    @4837                                                        */
+/* 804549D0-804549D8 0004 .sdata2    @4837                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter2__LIT_4837[8] = {
 	0xBF, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804549D8 0008 .sdata2    @5267                                                        */
+/* 804549D8-804549E0 0008 .sdata2    @5267                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter2__LIT_5267 = 4503601774854144.000000;
-/* 804549E0 0008 .sdata2    @5268                                                        */
+/* 804549E0-804549E8 0008 .sdata2    @5268                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_meter2__LIT_5268 = 4503599627370496.000000;
-/* 804549E8 0004 .sdata2    @5791                                                        */
+/* 804549E8-804549EC 0004 .sdata2    @5791                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5791[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 804549EC 0004 .sdata2    @5933                                                        */
+/* 804549EC-804549F0 0004 .sdata2    @5933                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_5933 = 0.500000f;
-/* 804549F0 0004 .sdata2    @6051                                                        */
+/* 804549F0-804549F4 0004 .sdata2    @6051                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 LIT_6051 = 10.000000f;
-/* 804549F4 0004 .sdata2    @6052                                                        */
+/* 804549F4-804549F8 0004 .sdata2    @6052                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6052[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 804549F8 0004 .sdata2    @6564                                                        */
+/* 804549F8-804549FC 0004 .sdata2    @6564                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6564[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
-/* 804549FC 0004 .sdata2    @7509                                                        */
+/* 804549FC-80454A00 0004 .sdata2    @7509                                                        Float32Data */
 // 0x41700000
 SECTION_SDATA2 f32 LIT_7509 = 15.000000f;
-/* 80454A00 0004 .sdata2    @7510                                                        */
+/* 80454A00-80454A04 0004 .sdata2    @7510                                                        Float32Data */
 // 0x42480000
 SECTION_SDATA2 f32 LIT_7510 = 50.000000f;
-/* 80454A04 0004 .sdata2    @9090                                                        */
+/* 80454A04-80454A08 0004 .sdata2    @9090                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_meter2__LIT_9090 = 255.000000f;
-/* 80454A08 0004 .sdata2    @9091                                                        */
+/* 80454A08-80454A10 0004 .sdata2    @9091                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter2__LIT_9091[8] = {
 	0x40, 0xA0, 0x00, 0x00,
 	/* padding */
@@ -365,7 +632,7 @@ SECTION_SDATA2 u8 d_d_meter2__LIT_9091[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8021EA14 0714 .text      _create__9dMeter2_cFv                                        */
+/* 8021EA14-8021F128 0714 .text      _create__9dMeter2_cFv                                        Function */
 // dMeter2_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -376,7 +643,7 @@ asm void _create__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F128 0248 .text      _execute__9dMeter2_cFv                                       */
+/* 8021F128-8021F370 0248 .text      _execute__9dMeter2_cFv                                       Function */
 // dMeter2_c::_execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -387,7 +654,7 @@ asm void _execute__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F370 012C .text      _draw__9dMeter2_cFv                                          */
+/* 8021F370-8021F49C 012C .text      _draw__9dMeter2_cFv                                          Function */
 // dMeter2_c::_draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -398,7 +665,7 @@ asm void _draw__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F49C 0250 .text      _delete__9dMeter2_cFv                                        */
+/* 8021F49C-8021F6EC 0250 .text      _delete__9dMeter2_cFv                                        Function */
 // dMeter2_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -409,7 +676,7 @@ asm void _delete__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F6EC 0094 .text      emphasisButtonDelete__9dMeter2_cFv                           */
+/* 8021F6EC-8021F780 0094 .text      emphasisButtonDelete__9dMeter2_cFv                           Function */
 // dMeter2_c::emphasisButtonDelete(void)
 #pragma push
 #pragma optimization_level 0
@@ -420,7 +687,7 @@ asm void emphasisButtonDelete__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F780 0030 .text      setLifeZero__9dMeter2_cFv                                    */
+/* 8021F780-8021F7B0 0030 .text      setLifeZero__9dMeter2_cFv                                    Function */
 // dMeter2_c::setLifeZero(void)
 #pragma push
 #pragma optimization_level 0
@@ -431,7 +698,7 @@ asm void setLifeZero__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021F7B0 05B0 .text      checkStatus__9dMeter2_cFv                                    */
+/* 8021F7B0-8021FD60 05B0 .text      checkStatus__9dMeter2_cFv                                    Function */
 // dMeter2_c::checkStatus(void)
 #pragma push
 #pragma optimization_level 0
@@ -442,7 +709,7 @@ asm void checkStatus__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8021FD60 0420 .text      moveLife__9dMeter2_cFv                                       */
+/* 8021FD60-80220180 0420 .text      moveLife__9dMeter2_cFv                                       Function */
 // dMeter2_c::moveLife(void)
 #pragma push
 #pragma optimization_level 0
@@ -453,7 +720,7 @@ asm void moveLife__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80220180 039C .text      moveKantera__9dMeter2_cFv                                    */
+/* 80220180-8022051C 039C .text      moveKantera__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveKantera(void)
 #pragma push
 #pragma optimization_level 0
@@ -464,7 +731,7 @@ asm void moveKantera__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 8022051C 036C .text      moveOxygen__9dMeter2_cFv                                     */
+/* 8022051C-80220888 036C .text      moveOxygen__9dMeter2_cFv                                     Function */
 // dMeter2_c::moveOxygen(void)
 #pragma push
 #pragma optimization_level 0
@@ -475,7 +742,7 @@ asm void moveOxygen__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80220888 03A8 .text      moveLightDrop__9dMeter2_cFv                                  */
+/* 80220888-80220C30 03A8 .text      moveLightDrop__9dMeter2_cFv                                  Function */
 // dMeter2_c::moveLightDrop(void)
 #pragma push
 #pragma optimization_level 0
@@ -486,7 +753,7 @@ asm void moveLightDrop__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80220C30 047C .text      moveRupee__9dMeter2_cFv                                      */
+/* 80220C30-802210AC 047C .text      moveRupee__9dMeter2_cFv                                      Function */
 // dMeter2_c::moveRupee(void)
 #pragma push
 #pragma optimization_level 0
@@ -497,7 +764,7 @@ asm void moveRupee__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802210AC 0198 .text      moveKey__9dMeter2_cFv                                        */
+/* 802210AC-80221244 0198 .text      moveKey__9dMeter2_cFv                                        Function */
 // dMeter2_c::moveKey(void)
 #pragma push
 #pragma optimization_level 0
@@ -508,7 +775,7 @@ asm void moveKey__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80221244 05B0 .text      moveButtonA__9dMeter2_cFv                                    */
+/* 80221244-802217F4 05B0 .text      moveButtonA__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonA(void)
 #pragma push
 #pragma optimization_level 0
@@ -519,7 +786,7 @@ asm void moveButtonA__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802217F4 06D4 .text      moveButtonB__9dMeter2_cFv                                    */
+/* 802217F4-80221EC8 06D4 .text      moveButtonB__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonB(void)
 #pragma push
 #pragma optimization_level 0
@@ -530,7 +797,7 @@ asm void moveButtonB__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80221EC8 0138 .text      moveButtonR__9dMeter2_cFv                                    */
+/* 80221EC8-80222000 0138 .text      moveButtonR__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonR(void)
 #pragma push
 #pragma optimization_level 0
@@ -541,7 +808,7 @@ asm void moveButtonR__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80222000 02A0 .text      moveButtonZ__9dMeter2_cFv                                    */
+/* 80222000-802222A0 02A0 .text      moveButtonZ__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonZ(void)
 #pragma push
 #pragma optimization_level 0
@@ -552,7 +819,7 @@ asm void moveButtonZ__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802222A0 00C4 .text      moveButton3D__9dMeter2_cFv                                   */
+/* 802222A0-80222364 00C4 .text      moveButton3D__9dMeter2_cFv                                   Function */
 // dMeter2_c::moveButton3D(void)
 #pragma push
 #pragma optimization_level 0
@@ -563,7 +830,7 @@ asm void moveButton3D__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80222364 0130 .text      moveButtonC__9dMeter2_cFv                                    */
+/* 80222364-80222494 0130 .text      moveButtonC__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonC(void)
 #pragma push
 #pragma optimization_level 0
@@ -574,7 +841,7 @@ asm void moveButtonC__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80222494 0084 .text      moveButtonS__9dMeter2_cFv                                    */
+/* 80222494-80222518 0084 .text      moveButtonS__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveButtonS(void)
 #pragma push
 #pragma optimization_level 0
@@ -585,7 +852,7 @@ asm void moveButtonS__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80222518 0970 .text      moveButtonXY__9dMeter2_cFv                                   */
+/* 80222518-80222E88 0970 .text      moveButtonXY__9dMeter2_cFv                                   Function */
 // dMeter2_c::moveButtonXY(void)
 #pragma push
 #pragma optimization_level 0
@@ -596,7 +863,7 @@ asm void moveButtonXY__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80222E88 0270 .text      moveButtonCross__9dMeter2_cFv                                */
+/* 80222E88-802230F8 0270 .text      moveButtonCross__9dMeter2_cFv                                Function */
 // dMeter2_c::moveButtonCross(void)
 #pragma push
 #pragma optimization_level 0
@@ -607,13 +874,13 @@ asm void moveButtonCross__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802230F8 0004 .text      moveTouchSubMenu__9dMeter2_cFv                               */
+/* 802230F8-802230FC 0004 .text      moveTouchSubMenu__9dMeter2_cFv                               ReturnFunction */
 // dMeter2_c::moveTouchSubMenu(void)
 void moveTouchSubMenu__9dMeter2_cFv() {
 	return;
 }
 
-/* 802230FC 00CC .text      moveSubContents__9dMeter2_cFv                                */
+/* 802230FC-802231C8 00CC .text      moveSubContents__9dMeter2_cFv                                Function */
 // dMeter2_c::moveSubContents(void)
 #pragma push
 #pragma optimization_level 0
@@ -624,7 +891,7 @@ asm void moveSubContents__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802231C8 060C .text      move2DContents__9dMeter2_cFv                                 */
+/* 802231C8-802237D4 060C .text      move2DContents__9dMeter2_cFv                                 Function */
 // dMeter2_c::move2DContents(void)
 #pragma push
 #pragma optimization_level 0
@@ -635,7 +902,7 @@ asm void move2DContents__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802237D4 03F0 .text      checkSubContents__9dMeter2_cFv                               */
+/* 802237D4-80223BC4 03F0 .text      checkSubContents__9dMeter2_cFv                               Function */
 // dMeter2_c::checkSubContents(void)
 #pragma push
 #pragma optimization_level 0
@@ -646,7 +913,7 @@ asm void checkSubContents__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80223BC4 023C .text      check2DContents__9dMeter2_cFv                                */
+/* 80223BC4-80223E00 023C .text      check2DContents__9dMeter2_cFv                                Function */
 // dMeter2_c::check2DContents(void)
 #pragma push
 #pragma optimization_level 0
@@ -657,7 +924,7 @@ asm void check2DContents__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80223E00 0458 .text      moveBombNum__9dMeter2_cFv                                    */
+/* 80223E00-80224258 0458 .text      moveBombNum__9dMeter2_cFv                                    Function */
 // dMeter2_c::moveBombNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -668,7 +935,7 @@ asm void moveBombNum__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224258 00FC .text      moveBottleNum__9dMeter2_cFv                                  */
+/* 80224258-80224354 00FC .text      moveBottleNum__9dMeter2_cFv                                  Function */
 // dMeter2_c::moveBottleNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -679,7 +946,7 @@ asm void moveBottleNum__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224354 032C .text      moveArrowNum__9dMeter2_cFv                                   */
+/* 80224354-80224680 032C .text      moveArrowNum__9dMeter2_cFv                                   Function */
 // dMeter2_c::moveArrowNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -690,7 +957,7 @@ asm void moveArrowNum__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224680 0264 .text      movePachinkoNum__9dMeter2_cFv                                */
+/* 80224680-802248E4 0264 .text      movePachinkoNum__9dMeter2_cFv                                Function */
 // dMeter2_c::movePachinkoNum(void)
 #pragma push
 #pragma optimization_level 0
@@ -701,7 +968,7 @@ asm void movePachinkoNum__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802248E4 0120 .text      alphaAnimeLife__9dMeter2_cFv                                 */
+/* 802248E4-80224A04 0120 .text      alphaAnimeLife__9dMeter2_cFv                                 Function */
 // dMeter2_c::alphaAnimeLife(void)
 #pragma push
 #pragma optimization_level 0
@@ -712,7 +979,7 @@ asm void alphaAnimeLife__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224A04 01A8 .text      alphaAnimeKantera__9dMeter2_cFv                              */
+/* 80224A04-80224BAC 01A8 .text      alphaAnimeKantera__9dMeter2_cFv                              Function */
 // dMeter2_c::alphaAnimeKantera(void)
 #pragma push
 #pragma optimization_level 0
@@ -723,7 +990,7 @@ asm void alphaAnimeKantera__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224BAC 01C0 .text      alphaAnimeOxygen__9dMeter2_cFv                               */
+/* 80224BAC-80224D6C 01C0 .text      alphaAnimeOxygen__9dMeter2_cFv                               Function */
 // dMeter2_c::alphaAnimeOxygen(void)
 #pragma push
 #pragma optimization_level 0
@@ -734,7 +1001,7 @@ asm void alphaAnimeOxygen__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224D6C 0054 .text      alphaAnimeLightDrop__9dMeter2_cFv                            */
+/* 80224D6C-80224DC0 0054 .text      alphaAnimeLightDrop__9dMeter2_cFv                            Function */
 // dMeter2_c::alphaAnimeLightDrop(void)
 #pragma push
 #pragma optimization_level 0
@@ -745,7 +1012,7 @@ asm void alphaAnimeLightDrop__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224DC0 01B0 .text      alphaAnimeRupee__9dMeter2_cFv                                */
+/* 80224DC0-80224F70 01B0 .text      alphaAnimeRupee__9dMeter2_cFv                                Function */
 // dMeter2_c::alphaAnimeRupee(void)
 #pragma push
 #pragma optimization_level 0
@@ -756,7 +1023,7 @@ asm void alphaAnimeRupee__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80224F70 0184 .text      alphaAnimeKey__9dMeter2_cFv                                  */
+/* 80224F70-802250F4 0184 .text      alphaAnimeKey__9dMeter2_cFv                                  Function */
 // dMeter2_c::alphaAnimeKey(void)
 #pragma push
 #pragma optimization_level 0
@@ -767,7 +1034,7 @@ asm void alphaAnimeKey__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802250F4 03CC .text      alphaAnimeButton__9dMeter2_cFv                               */
+/* 802250F4-802254C0 03CC .text      alphaAnimeButton__9dMeter2_cFv                               Function */
 // dMeter2_c::alphaAnimeButton(void)
 #pragma push
 #pragma optimization_level 0
@@ -778,7 +1045,7 @@ asm void alphaAnimeButton__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802254C0 021C .text      alphaAnimeButtonCross__9dMeter2_cFv                          */
+/* 802254C0-802256DC 021C .text      alphaAnimeButtonCross__9dMeter2_cFv                          Function */
 // dMeter2_c::alphaAnimeButtonCross(void)
 #pragma push
 #pragma optimization_level 0
@@ -789,7 +1056,7 @@ asm void alphaAnimeButtonCross__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802256DC 01C4 .text      isShowLightDrop__9dMeter2_cFv                                */
+/* 802256DC-802258A0 01C4 .text      isShowLightDrop__9dMeter2_cFv                                Function */
 // dMeter2_c::isShowLightDrop(void)
 #pragma push
 #pragma optimization_level 0
@@ -800,7 +1067,7 @@ asm void isShowLightDrop__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802258A0 00C0 .text      killSubContents__9dMeter2_cFUc                               */
+/* 802258A0-80225960 00C0 .text      killSubContents__9dMeter2_cFUc                               Function */
 // dMeter2_c::killSubContents(u8)
 #pragma push
 #pragma optimization_level 0
@@ -811,7 +1078,7 @@ asm void killSubContents__9dMeter2_cFUc() {
 }
 #pragma pop
 
-/* 80225960 0098 .text      isKeyVisible__9dMeter2_cFv                                   */
+/* 80225960-802259F8 0098 .text      isKeyVisible__9dMeter2_cFv                                   Function */
 // dMeter2_c::isKeyVisible(void)
 #pragma push
 #pragma optimization_level 0
@@ -822,7 +1089,7 @@ asm void isKeyVisible__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 802259F8 006C .text      isArrowEquip__9dMeter2_cFv                                   */
+/* 802259F8-80225A64 006C .text      isArrowEquip__9dMeter2_cFv                                   Function */
 // dMeter2_c::isArrowEquip(void)
 #pragma push
 #pragma optimization_level 0
@@ -833,7 +1100,7 @@ asm void isArrowEquip__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80225A64 003C .text      isPachinkoEquip__9dMeter2_cFv                                */
+/* 80225A64-80225AA0 003C .text      isPachinkoEquip__9dMeter2_cFv                                Function */
 // dMeter2_c::isPachinkoEquip(void)
 #pragma push
 #pragma optimization_level 0
@@ -844,7 +1111,7 @@ asm void isPachinkoEquip__9dMeter2_cFv() {
 }
 #pragma pop
 
-/* 80225AA0 0020 .text      dMeter2_Draw__FP9dMeter2_c                                   */
+/* 80225AA0-80225AC0 0020 .text      dMeter2_Draw__FP9dMeter2_c                                   Function */
 }
 
 #pragma push
@@ -857,7 +1124,7 @@ asm void dMeter2_Draw(dMeter2_c*) {
 #pragma pop
 
 extern "C" {
-/* 80225AC0 0020 .text      dMeter2_Execute__FP9dMeter2_c                                */
+/* 80225AC0-80225AE0 0020 .text      dMeter2_Execute__FP9dMeter2_c                                Function */
 }
 
 #pragma push
@@ -870,13 +1137,13 @@ asm void dMeter2_Execute(dMeter2_c*) {
 #pragma pop
 
 extern "C" {
-/* 80225AE0 0008 .text      dMeter2_IsDelete__FP9dMeter2_c                               */
+/* 80225AE0-80225AE8 0008 .text      dMeter2_IsDelete__FP9dMeter2_c                               ReturnIntegerFunction */
 // dMeter2_IsDelete(dMeter2_c*)
 int dMeter2_IsDelete__FP9dMeter2_c() {
 	return 1;
 }
 
-/* 80225AE8 0020 .text      dMeter2_Delete__FP9dMeter2_c                                 */
+/* 80225AE8-80225B08 0020 .text      dMeter2_Delete__FP9dMeter2_c                                 Function */
 }
 
 #pragma push
@@ -889,7 +1156,7 @@ asm void dMeter2_Delete(dMeter2_c*) {
 #pragma pop
 
 extern "C" {
-/* 80225B08 00B0 .text      dMeter2_Create__FP9msg_class                                 */
+/* 80225B08-80225BB8 00B0 .text      dMeter2_Create__FP9msg_class                                 Function */
 }
 
 #pragma push

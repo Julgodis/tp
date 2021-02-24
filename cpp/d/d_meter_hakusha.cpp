@@ -19,57 +19,111 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
-extern int isDead__11dMeterSub_cFv();
+/* ReturnIntegerFunction */
+extern  int isDead__11dMeterSub_cFv();
+/* Function             */
+extern void __ct__15dMeterHakusha_cFPv();
+/* Function             */
 extern void __dt__15dMeterHakusha_cFv();
+/* Function             */
 extern void _create__15dMeterHakusha_cFv();
+/* Function             */
 extern void _execute__15dMeterHakusha_cFUl();
+/* Function             */
 extern void draw__15dMeterHakusha_cFv();
+/* Function             */
 extern void _delete__15dMeterHakusha_cFv();
+/* Function             */
 extern void alphaAnimeHakusha__15dMeterHakusha_cFUl();
+/* Function             */
 extern void updateHakusha__15dMeterHakusha_cFv();
+/* Function             */
 extern void setAlphaHakushaAnimeMin__15dMeterHakusha_cFv();
+/* Function             */
 extern void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv();
+/* Function             */
 extern void setAlphaButtonAnimeMin__15dMeterHakusha_cFv();
+/* Function             */
 extern void setAlphaButtonAnimeMax__15dMeterHakusha_cFv();
+/* Function             */
 extern void getHakushaNum__15dMeterHakusha_cFv();
+/* Function             */
 extern void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas();
+/* Function             */
 extern void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void show__13CPaneMgrAlphaFv();
+/* Function             */
 extern void hide__13CPaneMgrAlphaFv();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getAlphaRate__13CPaneMgrAlphaFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void strcmp();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter_hakusha__stringBase0[88];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern const void* __vt__11dMeterSub_c[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dMeterSub_c[11];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BF288[48];
-SECTION_DATA extern const void* __vt__15dMeterHakusha_c[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15dMeterHakusha_c[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_hakusha__LIT_3793[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_hakusha__LIT_3794[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_hakusha__LIT_3936;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_hakusha__LIT_4094;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_hakusha__LIT_4095;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_hakusha__LIT_4096;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter_hakusha__LIT_4098;
 }
 
@@ -79,15 +133,23 @@ SECTION_SDATA2 extern f64 d_d_meter_hakusha__LIT_4098;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803981B0 0055 .rodata    @stringBase0                                                 */
-const char* const stringBase_803981B0 = 
-    "zelda_game_image_hakusha_parts.b"
+/* 803981B0-80398208 0055 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803981B0 = 
+    "zelda_game_image"
+    "_hakusha_parts.b"
     "lo";
-const char* const stringBase_803981D3 = 
-    "zelda_game_image_hakusha_a_btn.b"
+SECTION_DEAD const char* const stringBase_803981D3 = 
+    "zelda_game_image"
+    "_hakusha_a_btn.b"
     "lo";
-const char* const stringBase_803981F6 = "F_SP108";
-const char* const stringBase_803981FE = "F_SP00";
+SECTION_DEAD const char* const stringBase_803981F6 = "F_SP108";
+SECTION_DEAD const char* const stringBase_803981FE = "F_SP00";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80398205 = "\0\0";
+#pragma pop
 }
 
 
@@ -96,14 +158,14 @@ const char* const stringBase_803981FE = "F_SP00";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BF288 0030 .data      haku_tag$3719                                                */
+/* 803BF288-803BF2B8 0030 .data      haku_tag$3719                                                InitializedData */
 SECTION_DATA u8 data_803BF288[48] = {
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x30, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x31,
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x32, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x33,
 	0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x34, 0x68, 0x61, 0x6B, 0x75, 0x5F, 0x6E, 0x30, 0x35,
 };
-/* 803BF2B8 0020 .data      __vt__15dMeterHakusha_c                                      */
-SECTION_DATA const  void* __vt__15dMeterHakusha_c[8] = {
+/* 803BF2B8-803BF2D8 0020 .data      __vt__15dMeterHakusha_c                                      VTableData */
+SECTION_DATA void* __vt__15dMeterHakusha_c[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__15dMeterHakusha_cFv,
@@ -121,27 +183,27 @@ SECTION_DATA const  void* __vt__15dMeterHakusha_c[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454800 0004 .sdata2    @3793                                                        */
+/* 80454800-80454804 0004 .sdata2    @3793                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_hakusha__LIT_3793[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454804 0004 .sdata2    @3794                                                        */
+/* 80454804-80454808 0004 .sdata2    @3794                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_hakusha__LIT_3794[4] = {
 	0x41, 0xE3, 0x33, 0x33,
 };
-/* 80454808 0004 .sdata2    @3936                                                        */
+/* 80454808-8045480C 0004 .sdata2    @3936                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter_hakusha__LIT_3936 = 1.000000f;
-/* 8045480C 0004 .sdata2    @4094                                                        */
+/* 8045480C-80454810 0004 .sdata2    @4094                                                        Float32Data */
 // 0x41900000
 SECTION_SDATA2 f32 d_d_meter_hakusha__LIT_4094 = 18.000000f;
-/* 80454810 0004 .sdata2    @4095                                                        */
+/* 80454810-80454814 0004 .sdata2    @4095                                                        Float32Data */
 // 0x41e00000
 SECTION_SDATA2 f32 d_d_meter_hakusha__LIT_4095 = 28.000000f;
-/* 80454814 0004 .sdata2    @4096                                                        */
+/* 80454814-80454818 0004 .sdata2    @4096                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 d_d_meter_hakusha__LIT_4096 = 20.000000f;
-/* 80454818 0008 .sdata2    @4098                                                        */
+/* 80454818-80454820 0008 .sdata2    @4098                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter_hakusha__LIT_4098 = 4503601774854144.000000;
 }
@@ -152,7 +214,7 @@ SECTION_SDATA2 f64 d_d_meter_hakusha__LIT_4098 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8020C320 0064 .text      __ct__15dMeterHakusha_cFPv                                   */
+/* 8020C320-8020C384 0064 .text      __ct__15dMeterHakusha_cFPv                                   Function */
 // dMeterHakusha_c::dMeterHakusha_c(void*)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +225,7 @@ asm void __ct__15dMeterHakusha_cFPv() {
 }
 #pragma pop
 
-/* 8020C384 007C .text      __dt__15dMeterHakusha_cFv                                    */
+/* 8020C384-8020C400 007C .text      __dt__15dMeterHakusha_cFv                                    Function */
 // dMeterHakusha_c::~dMeterHakusha_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +236,7 @@ asm void __dt__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020C400 0408 .text      _create__15dMeterHakusha_cFv                                 */
+/* 8020C400-8020C808 0408 .text      _create__15dMeterHakusha_cFv                                 Function */
 // dMeterHakusha_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +247,7 @@ asm void _create__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020C808 0048 .text      _execute__15dMeterHakusha_cFUl                               */
+/* 8020C808-8020C850 0048 .text      _execute__15dMeterHakusha_cFUl                               Function */
 // dMeterHakusha_c::_execute(u32)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +258,7 @@ asm void _execute__15dMeterHakusha_cFUl() {
 }
 #pragma pop
 
-/* 8020C850 026C .text      draw__15dMeterHakusha_cFv                                    */
+/* 8020C850-8020CABC 026C .text      draw__15dMeterHakusha_cFv                                    Function */
 // dMeterHakusha_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +269,7 @@ asm void draw__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020CABC 019C .text      _delete__15dMeterHakusha_cFv                                 */
+/* 8020CABC-8020CC58 019C .text      _delete__15dMeterHakusha_cFv                                 Function */
 // dMeterHakusha_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +280,7 @@ asm void _delete__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020CC58 0114 .text      alphaAnimeHakusha__15dMeterHakusha_cFUl                      */
+/* 8020CC58-8020CD6C 0114 .text      alphaAnimeHakusha__15dMeterHakusha_cFUl                      Function */
 // dMeterHakusha_c::alphaAnimeHakusha(u32)
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +291,7 @@ asm void alphaAnimeHakusha__15dMeterHakusha_cFUl() {
 }
 #pragma pop
 
-/* 8020CD6C 04EC .text      updateHakusha__15dMeterHakusha_cFv                           */
+/* 8020CD6C-8020D258 04EC .text      updateHakusha__15dMeterHakusha_cFv                           Function */
 // dMeterHakusha_c::updateHakusha(void)
 #pragma push
 #pragma optimization_level 0
@@ -240,7 +302,7 @@ asm void updateHakusha__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020D258 00B0 .text      setAlphaHakushaAnimeMin__15dMeterHakusha_cFv                 */
+/* 8020D258-8020D308 00B0 .text      setAlphaHakushaAnimeMin__15dMeterHakusha_cFv                 Function */
 // dMeterHakusha_c::setAlphaHakushaAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +313,7 @@ asm void setAlphaHakushaAnimeMin__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020D308 00B0 .text      setAlphaHakushaAnimeMax__15dMeterHakusha_cFv                 */
+/* 8020D308-8020D3B8 00B0 .text      setAlphaHakushaAnimeMax__15dMeterHakusha_cFv                 Function */
 // dMeterHakusha_c::setAlphaHakushaAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +324,7 @@ asm void setAlphaHakushaAnimeMax__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020D3B8 0064 .text      setAlphaButtonAnimeMin__15dMeterHakusha_cFv                  */
+/* 8020D3B8-8020D41C 0064 .text      setAlphaButtonAnimeMin__15dMeterHakusha_cFv                  Function */
 // dMeterHakusha_c::setAlphaButtonAnimeMin(void)
 #pragma push
 #pragma optimization_level 0
@@ -273,7 +335,7 @@ asm void setAlphaButtonAnimeMin__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020D41C 0064 .text      setAlphaButtonAnimeMax__15dMeterHakusha_cFv                  */
+/* 8020D41C-8020D480 0064 .text      setAlphaButtonAnimeMax__15dMeterHakusha_cFv                  Function */
 // dMeterHakusha_c::setAlphaButtonAnimeMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -284,7 +346,7 @@ asm void setAlphaButtonAnimeMax__15dMeterHakusha_cFv() {
 }
 #pragma pop
 
-/* 8020D480 001C .text      getHakushaNum__15dMeterHakusha_cFv                           */
+/* 8020D480-8020D49C 001C .text      getHakushaNum__15dMeterHakusha_cFv                           Function */
 // dMeterHakusha_c::getHakushaNum(void)
 #pragma push
 #pragma optimization_level 0

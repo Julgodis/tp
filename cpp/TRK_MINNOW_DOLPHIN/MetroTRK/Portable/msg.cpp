@@ -9,8 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void TRKMessageSend();
+/* Function             */
 extern void TRKWriteUARTN();
+/* Function             */
 extern void MWTRACE();
+/* InitializedData      */
 SECTION_RODATA extern const u8 MetroTRK_Portable_msg__LIT_98[40];
 }
 
@@ -20,7 +25,7 @@ SECTION_RODATA extern const u8 MetroTRK_Portable_msg__LIT_98[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A26B8 0025 .rodata    @98                                                          */
+/* 803A26B8-803A26E0 0025 .rodata    @98                                                          InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_msg__LIT_98[40] = {
 	0x4D, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x53, 0x65, 0x6E, 0x64, 0x20, 0x3A, 0x20, 0x63, 0x63,
 	0x5F, 0x77, 0x72, 0x69, 0x74, 0x65, 0x20, 0x72, 0x65, 0x74, 0x75, 0x72, 0x6E, 0x65, 0x64, 0x20,
@@ -36,7 +41,7 @@ SECTION_RODATA const u8 MetroTRK_Portable_msg__LIT_98[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CFD8 0044 .text      TRKMessageSend                                               */
+/* 8036CFD8-8036D01C 0044 .text      TRKMessageSend                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

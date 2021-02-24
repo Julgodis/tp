@@ -16,8 +16,9 @@ AI_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libai.a: dirs $(AI_A_O_FILES)
+$(BUILD_DIR)/libai.a: $(AI_A_O_FILES)
 	$(LD) -xm l $(AI_A_LDFLAGS) -o $(BUILD_DIR)/libai.a $(AI_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libai.a
 
 $(BUILD_DIR)/libs/ai/%.o: cpp/ai/%.cpp
 	mkdir -p $(@D)

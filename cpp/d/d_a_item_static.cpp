@@ -8,13 +8,22 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void startCtrl__8daItem_cFv();
+/* Function             */
+extern void startControl__8daItem_cFv();
+/* Function             */
+extern void endControl__8daItem_cFv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80037BE0 0014 .text      startCtrl__8daItem_cFv                                       */
+/* 80037BE0-80037BF4 0014 .text      startCtrl__8daItem_cFv                                       Function */
 // daItem_c::startCtrl(void)
 #pragma push
 #pragma optimization_level 0
@@ -25,7 +34,7 @@ asm void startCtrl__8daItem_cFv() {
 }
 #pragma pop
 
-/* 80037BF4 0010 .text      startControl__8daItem_cFv                                    */
+/* 80037BF4-80037C04 0010 .text      startControl__8daItem_cFv                                    Function */
 // daItem_c::startControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -36,7 +45,7 @@ asm void startControl__8daItem_cFv() {
 }
 #pragma pop
 
-/* 80037C04 0010 .text      endControl__8daItem_cFv                                      */
+/* 80037C04-80037C14 0010 .text      endControl__8daItem_cFv                                      Function */
 // daItem_c::endControl(void)
 #pragma push
 #pragma optimization_level 0

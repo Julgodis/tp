@@ -18,8 +18,9 @@ EXI_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libexi.a: dirs $(EXI_A_O_FILES)
+$(BUILD_DIR)/libexi.a: $(EXI_A_O_FILES)
 	$(LD) -xm l $(EXI_A_LDFLAGS) -o $(BUILD_DIR)/libexi.a $(EXI_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libexi.a
 
 $(BUILD_DIR)/libs/exi/%.o: cpp/exi/%.cpp
 	mkdir -p $(@D)

@@ -13,17 +13,47 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void init__11J3DUClipperFv();
+/* Function             */
+extern void calcViewFrustum__11J3DUClipperFv();
+/* Function             */
+extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
+/* Function             */
+extern void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECNormalize();
+/* Function             */
 extern void PSVECCrossProduct();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void tan();
+/* InitializedData      */
 SECTION_RODATA extern const u8 J3DUClipper__LIT_898[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 J3DUClipper__LIT_899[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_900[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_901[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 LIT_902[12];
+/* StringBaseData       */
+SECTION_RODATA extern const u8 J3DUClipper__stringBase0[108];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J3DUClipper__LIT_893;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J3DUClipper__LIT_894;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DUClipper__LIT_913[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_914;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_991[8];
 }
 
@@ -33,32 +63,38 @@ SECTION_SDATA2 extern u8 LIT_991[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A948 0000 .rodata    ...rodata.0                                                  */
-/* 8039A948 000C .rodata    @898                                                         */
+/* 8039A984-8039A9F0 0065 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039A984 = " J3DUClipper::mFovy = %f";
+SECTION_DEAD const char* const stringBase_8039A99D = " J3DUClipper::mAspect = %f";
+SECTION_DEAD const char* const stringBase_8039A9B8 = " J3DUClipper::mNear = %f";
+SECTION_DEAD const char* const stringBase_8039A9D1 = " J3DUClipper::mFar = %f";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A9E9 = "\0\0\0\0\0\0";
+#pragma pop
+/* 8039A948-8039A948 0000 .rodata    ...rodata.0                                                  InitializedData */
+/* 8039A948-8039A954 000C .rodata    @898                                                         InitializedData */
 SECTION_RODATA const u8 J3DUClipper__LIT_898[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039A954 000C .rodata    @899                                                         */
+/* 8039A954-8039A960 000C .rodata    @899                                                         InitializedData */
 SECTION_RODATA const u8 J3DUClipper__LIT_899[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039A960 000C .rodata    @900                                                         */
+/* 8039A960-8039A96C 000C .rodata    @900                                                         InitializedData */
 SECTION_RODATA const u8 LIT_900[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039A96C 000C .rodata    @901                                                         */
+/* 8039A96C-8039A978 000C .rodata    @901                                                         InitializedData */
 SECTION_RODATA const u8 LIT_901[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039A978 000C .rodata    @902                                                         */
+/* 8039A978-8039A984 000C .rodata    @902                                                         InitializedData */
 SECTION_RODATA const u8 LIT_902[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8039A984 0065 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039A984 = " J3DUClipper::mFovy = %f";
-const char* const stringBase_8039A99D = " J3DUClipper::mAspect = %f";
-const char* const stringBase_8039A9B8 = " J3DUClipper::mNear = %f";
-const char* const stringBase_8039A9D1 = " J3DUClipper::mFar = %f";
 }
 
 
@@ -67,20 +103,20 @@ const char* const stringBase_8039A9D1 = " J3DUClipper::mFar = %f";
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455278 0004 .sdata2    @893                                                         */
+/* 80455278-8045527C 0004 .sdata2    @893                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 J3DUClipper__LIT_893 = 1.000000f;
-/* 8045527C 0004 .sdata2    @894                                                         */
+/* 8045527C-80455280 0004 .sdata2    @894                                                         Float32Data */
 // 0x47c35000
 SECTION_SDATA2 f32 J3DUClipper__LIT_894 = 100000.000000f;
-/* 80455280 0004 .sdata2    @913                                                         */
+/* 80455280-80455284 0004 .sdata2    @913                                                         InitializedData */
 SECTION_SDATA2 u8 J3DUClipper__LIT_913[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 80455284 0004 .sdata2    @914                                                         */
+/* 80455284-80455288 0004 .sdata2    @914                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_914 = 0.500000f;
-/* 80455288 0004 .sdata2    @991                                                         */
+/* 80455288-80455290 0004 .sdata2    @991                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_991[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -94,7 +130,7 @@ SECTION_SDATA2 u8 LIT_991[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80273778 0014 .text      init__11J3DUClipperFv                                        */
+/* 80273778-8027378C 0014 .text      init__11J3DUClipperFv                                        Function */
 // J3DUClipper::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +141,7 @@ asm void init__11J3DUClipperFv() {
 }
 #pragma pop
 
-/* 8027378C 0170 .text      calcViewFrustum__11J3DUClipperFv                             */
+/* 8027378C-802738FC 0170 .text      calcViewFrustum__11J3DUClipperFv                             Function */
 // J3DUClipper::calcViewFrustum(void)
 #pragma push
 #pragma optimization_level 0
@@ -116,7 +152,7 @@ asm void calcViewFrustum__11J3DUClipperFv() {
 }
 #pragma pop
 
-/* 802738FC 0148 .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             */
+/* 802738FC-80273A44 0148 .text      clip__11J3DUClipperCFPA4_Cf3Vecf                             Function */
 // J3DUClipper::clip(const f32 (*)[4], Vec, f32) const
 #pragma push
 #pragma optimization_level 0
@@ -127,7 +163,7 @@ asm void clip__11J3DUClipperCFPA4_Cf3Vecf() {
 }
 #pragma pop
 
-/* 80273A44 03C4 .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        */
+/* 80273A44-80273E08 03C4 .text      clip__11J3DUClipperCFPA4_CfP3VecP3Vec                        Function */
 // J3DUClipper::clip(const f32 (*)[4], Vec*, Vec*) const
 #pragma push
 #pragma optimization_level 0

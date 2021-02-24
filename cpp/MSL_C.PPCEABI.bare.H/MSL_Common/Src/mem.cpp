@@ -9,9 +9,21 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void memcmp();
+/* Function             */
+extern void __memrchr();
+/* Function             */
+extern void memchr();
+/* Function             */
+extern void memmove();
+/* Function             */
 extern void __copy_longs_rev_unaligned();
+/* Function             */
 extern void __copy_longs_unaligned();
+/* Function             */
 extern void __copy_longs_rev_aligned();
+/* Function             */
 extern void __copy_longs_aligned();
 }
 
@@ -21,7 +33,7 @@ extern void __copy_longs_aligned();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036608C 004C .text      memcmp                                                       */
+/* 8036608C-803660D8 004C .text      memcmp                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -31,7 +43,7 @@ asm void memcmp() {
 }
 #pragma pop
 
-/* 803660D8 002C .text      __memrchr                                                    */
+/* 803660D8-80366104 002C .text      __memrchr                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +53,7 @@ asm void __memrchr() {
 }
 #pragma pop
 
-/* 80366104 002C .text      memchr                                                       */
+/* 80366104-80366130 002C .text      memchr                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +63,7 @@ asm void memchr() {
 }
 #pragma pop
 
-/* 80366130 00CC .text      memmove                                                      */
+/* 80366130-803661FC 00CC .text      memmove                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

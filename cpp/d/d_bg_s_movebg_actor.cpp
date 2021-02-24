@@ -10,43 +10,84 @@
 
 struct fopAc_ac_c;
 
-extern void mDoMtx_YrotM(f32 (*)[4], s16); /* mDoMtx_YrotM__FPA4_fs */
+extern void mDoMtx_YrotM(f32 (*)[4], short); /* mDoMtx_YrotM__FPA4_fs */
 extern void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); /* fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl */
+static void CheckCreateHeap(fopAc_ac_c*); /* CheckCreateHeap__FP10fopAc_ac_c */
 extern void* operator new(u32); /* __nw__FUl */
 
 extern "C" {
+/* Function             */
 extern void mDoMtx_YrotM__FPA4_fs();
+/* Function             */
 extern void scaleM__14mDoMtx_stack_cFfff();
+/* Function             */
 extern void __ct__10fopAc_ac_cFv();
+/* Function             */
 extern void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void Release__4cBgSFP9dBgW_Base();
+/* Function             */
 extern void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
-extern void d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c();
-extern int CreateHeap__16dBgS_MoveBgActorFv();
-extern int Create__16dBgS_MoveBgActorFv();
-extern int Execute__16dBgS_MoveBgActorFPPA3_A4_f();
-extern int Draw__16dBgS_MoveBgActorFv();
-extern int Delete__16dBgS_MoveBgActorFv();
-extern int IsDelete__16dBgS_MoveBgActorFv();
-extern int ToFore__16dBgS_MoveBgActorFv();
-extern int ToBack__16dBgS_MoveBgActorFv();
+/* Function             */
+extern void __ct__16dBgS_MoveBgActorFv();
+/* Function             */
+static void CheckCreateHeap__FP10fopAc_ac_c();
+/* ReturnIntegerFunction */
+extern  int CreateHeap__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int Create__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int Execute__16dBgS_MoveBgActorFPPA3_A4_f();
+/* ReturnIntegerFunction */
+extern  int Draw__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int Delete__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int IsDelete__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int ToFore__16dBgS_MoveBgActorFv();
+/* ReturnIntegerFunction */
+extern  int ToBack__16dBgS_MoveBgActorFv();
+/* Function             */
 extern void MoveBGCreateHeap__16dBgS_MoveBgActorFv();
+/* Function             */
+extern void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+/* Function             */
+extern void MoveBGDelete__16dBgS_MoveBgActorFv();
+/* Function             */
+extern void MoveBGExecute__16dBgS_MoveBgActorFv();
+/* Function             */
 extern void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+/* Function             */
 extern void __ct__4dBgWFv();
+/* Function             */
 extern void Move__4dBgWFv();
+/* Function             */
 extern void ChkUsed__9cBgW_BgIdCFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_27();
-SECTION_DATA extern const void* __vt__16dBgS_MoveBgActor[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16dBgS_MoveBgActor[10];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_name__16dBgS_MoveBgActor[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_dzb_id__16dBgS_MoveBgActor[4];
-SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 }
 
 
@@ -55,8 +96,8 @@ SECTION_SBSS extern u8 m_set_func__16dBgS_MoveBgActor[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB9A0 0028 .data      __vt__16dBgS_MoveBgActor                                     */
-SECTION_DATA const  void* __vt__16dBgS_MoveBgActor[10] = {
+/* 803AB9A0-803AB9C8 0028 .data      __vt__16dBgS_MoveBgActor                                     VTableData */
+SECTION_DATA void* __vt__16dBgS_MoveBgActor[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)CreateHeap__16dBgS_MoveBgActorFv,
@@ -76,13 +117,12 @@ SECTION_DATA const  void* __vt__16dBgS_MoveBgActor[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450F70 0004 .sbss      m_name__16dBgS_MoveBgActor                                   */
+/* 80450F70-80450F74 0004 .sbss      m_name__16dBgS_MoveBgActor                                   ZeroInitializedData */
 SECTION_SBSS u8 m_name__16dBgS_MoveBgActor[4];
-/* 80450F74 0004 .sbss      m_dzb_id__16dBgS_MoveBgActor                                 */
+/* 80450F74-80450F78 0004 .sbss      m_dzb_id__16dBgS_MoveBgActor                                 ZeroInitializedData */
 SECTION_SBSS u8 m_dzb_id__16dBgS_MoveBgActor[4];
-/* 80450F78 0004 .sbss      m_set_func__16dBgS_MoveBgActor                               */
-SECTION_SBSS u8 m_set_func__16dBgS_MoveBgActor[4];
-SECTION_SBSS u8 pad_80450F7C[4];
+/* 80450F78-80450F80 0004 .sbss      m_set_func__16dBgS_MoveBgActor                               ZeroInitializedData */
+SECTION_SBSS u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 }
 
 
@@ -91,7 +131,7 @@ SECTION_SBSS u8 pad_80450F7C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80078624 0044 .text      __ct__16dBgS_MoveBgActorFv                                   */
+/* 80078624-80078668 0044 .text      __ct__16dBgS_MoveBgActorFv                                   Function */
 // dBgS_MoveBgActor::dBgS_MoveBgActor(void)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +142,7 @@ asm void __ct__16dBgS_MoveBgActorFv() {
 }
 #pragma pop
 
-/* 80078668 0020 .text      CheckCreateHeap__FP10fopAc_ac_c                              */
+/* 80078668-80078688 0020 .text      CheckCreateHeap__FP10fopAc_ac_c                              Function */
 }
 
 #pragma push
@@ -110,60 +150,60 @@ asm void __ct__16dBgS_MoveBgActorFv() {
 #pragma optimizewithasm off
 asm static void CheckCreateHeap(fopAc_ac_c*) {
 	nofralloc
-#include "_include/d/d_bg_s_movebg_actor/d_d_bg_s_movebg_actor__CheckCreateHeap__FP10fopAc_ac_c.s"
+#include "_include/d/d_bg_s_movebg_actor/CheckCreateHeap__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80078688 0008 .text      CreateHeap__16dBgS_MoveBgActorFv                             */
+/* 80078688-80078690 0008 .text      CreateHeap__16dBgS_MoveBgActorFv                             ReturnIntegerFunction */
 // dBgS_MoveBgActor::CreateHeap(void)
 int CreateHeap__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 80078690 0008 .text      Create__16dBgS_MoveBgActorFv                                 */
+/* 80078690-80078698 0008 .text      Create__16dBgS_MoveBgActorFv                                 ReturnIntegerFunction */
 // dBgS_MoveBgActor::Create(void)
 int Create__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 80078698 0008 .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
+/* 80078698-800786A0 0008 .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        ReturnIntegerFunction */
 // dBgS_MoveBgActor::Execute(f32 (**)[3][4])
 int Execute__16dBgS_MoveBgActorFPPA3_A4_f() {
 	return 1;
 }
 
-/* 800786A0 0008 .text      Draw__16dBgS_MoveBgActorFv                                   */
+/* 800786A0-800786A8 0008 .text      Draw__16dBgS_MoveBgActorFv                                   ReturnIntegerFunction */
 // dBgS_MoveBgActor::Draw(void)
 int Draw__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 800786A8 0008 .text      Delete__16dBgS_MoveBgActorFv                                 */
+/* 800786A8-800786B0 0008 .text      Delete__16dBgS_MoveBgActorFv                                 ReturnIntegerFunction */
 // dBgS_MoveBgActor::Delete(void)
 int Delete__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 800786B0 0008 .text      IsDelete__16dBgS_MoveBgActorFv                               */
+/* 800786B0-800786B8 0008 .text      IsDelete__16dBgS_MoveBgActorFv                               ReturnIntegerFunction */
 // dBgS_MoveBgActor::IsDelete(void)
 int IsDelete__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 800786B8 0008 .text      ToFore__16dBgS_MoveBgActorFv                                 */
+/* 800786B8-800786C0 0008 .text      ToFore__16dBgS_MoveBgActorFv                                 ReturnIntegerFunction */
 // dBgS_MoveBgActor::ToFore(void)
 int ToFore__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 800786C0 0008 .text      ToBack__16dBgS_MoveBgActorFv                                 */
+/* 800786C0-800786C8 0008 .text      ToBack__16dBgS_MoveBgActorFv                                 ReturnIntegerFunction */
 // dBgS_MoveBgActor::ToBack(void)
 int ToBack__16dBgS_MoveBgActorFv() {
 	return 1;
 }
 
-/* 800786C8 00F4 .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       */
+/* 800786C8-800787BC 00F4 .text      MoveBGCreateHeap__16dBgS_MoveBgActorFv                       Function */
 // dBgS_MoveBgActor::MoveBGCreateHeap(void)
 #pragma push
 #pragma optimization_level 0
@@ -174,8 +214,8 @@ asm void MoveBGCreateHeap__16dBgS_MoveBgActorFv() {
 }
 #pragma pop
 
-/* 800787BC 0120 .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f */
-// dBgS_MoveBgActor::MoveBGCreate(const s8*, int, void (*)(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (*)[3][4])
+/* 800787BC-800788DC 0120 .text      MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f Function */
+// dBgS_MoveBgActor::MoveBGCreate(const char*, int, void (*)(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (*)[3][4])
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +225,7 @@ asm void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyz
 }
 #pragma pop
 
-/* 800788DC 0074 .text      MoveBGDelete__16dBgS_MoveBgActorFv                           */
+/* 800788DC-80078950 0074 .text      MoveBGDelete__16dBgS_MoveBgActorFv                           Function */
 // dBgS_MoveBgActor::MoveBGDelete(void)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +236,7 @@ asm void MoveBGDelete__16dBgS_MoveBgActorFv() {
 }
 #pragma pop
 
-/* 80078950 00C4 .text      MoveBGExecute__16dBgS_MoveBgActorFv                          */
+/* 80078950-80078A14 00C4 .text      MoveBGExecute__16dBgS_MoveBgActorFv                          Function */
 // dBgS_MoveBgActor::MoveBGExecute(void)
 #pragma push
 #pragma optimization_level 0

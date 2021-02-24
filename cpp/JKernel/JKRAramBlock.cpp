@@ -14,19 +14,36 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__12JKRAramBlockFUlUlUlUcb();
+/* Function             */
 extern void __dt__12JKRAramBlockFv();
+/* Function             */
+extern void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
+/* Function             */
+extern void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
-SECTION_DATA extern const void* __vt__12JKRAramBlock[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JKRAramBlock[4];
 }
 
 
@@ -35,8 +52,8 @@ SECTION_DATA extern const void* __vt__12JKRAramBlock[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC178 000C .data      __vt__12JKRAramBlock                                         */
-SECTION_DATA const  void* __vt__12JKRAramBlock[4] = {
+/* 803CC178-803CC188 000C .data      __vt__12JKRAramBlock                                         VTableData */
+SECTION_DATA void* __vt__12JKRAramBlock[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JKRAramBlockFv,
@@ -51,7 +68,7 @@ SECTION_DATA const  void* __vt__12JKRAramBlock[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D3304 0074 .text      __ct__12JKRAramBlockFUlUlUlUcb                               */
+/* 802D3304-802D3378 0074 .text      __ct__12JKRAramBlockFUlUlUlUcb                               Function */
 // JKRAramBlock::JKRAramBlock(u32, u32, u32, u8, bool)
 #pragma push
 #pragma optimization_level 0
@@ -62,7 +79,7 @@ asm void __ct__12JKRAramBlockFUlUlUlUcb() {
 }
 #pragma pop
 
-/* 802D3378 00BC .text      __dt__12JKRAramBlockFv                                       */
+/* 802D3378-802D3434 00BC .text      __dt__12JKRAramBlockFv                                       Function */
 // JKRAramBlock::~JKRAramBlock(void)
 #pragma push
 #pragma optimization_level 0
@@ -73,7 +90,7 @@ asm void __dt__12JKRAramBlockFv() {
 }
 #pragma pop
 
-/* 802D3434 009C .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap                 */
+/* 802D3434-802D34D0 009C .text      allocHead__12JKRAramBlockFUlUcP11JKRAramHeap                 Function */
 // JKRAramBlock::allocHead(u32, u8, JKRAramHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -84,7 +101,7 @@ asm void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap() {
 }
 #pragma pop
 
-/* 802D34D0 00A4 .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap                 */
+/* 802D34D0-802D3574 00A4 .text      allocTail__12JKRAramBlockFUlUcP11JKRAramHeap                 Function */
 // JKRAramBlock::allocTail(u32, u8, JKRAramHeap*)
 #pragma push
 #pragma optimization_level 0

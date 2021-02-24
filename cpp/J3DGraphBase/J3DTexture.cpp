@@ -11,18 +11,35 @@
 extern void* operator new[](u32); /* __nwa__FUl */
 
 extern "C" {
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
+extern void loadGX__10J3DTextureCFUs11_GXTexMapID();
+/* Function             */
 extern void entryNum__10J3DTextureFUs();
+/* Function             */
+extern void addResTIMG__10J3DTextureFUsPC7ResTIMG();
+/* Function             */
 extern void GXInitTexObj();
+/* Function             */
 extern void GXInitTexObjCI();
+/* Function             */
 extern void GXInitTexObjLOD();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXInitTlutObj();
+/* Function             */
 extern void GXLoadTlut();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_28();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_284;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_285[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 J3DTexture__LIT_288;
 }
 
@@ -32,14 +49,14 @@ SECTION_SDATA2 extern f64 J3DTexture__LIT_288;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456388 0004 .sdata2    @284                                                         */
+/* 80456388-8045638C 0004 .sdata2    @284                                                         Float32Data */
 // 0x3e000000
 SECTION_SDATA2 f32 LIT_284 = 0.125000f;
-/* 8045638C 0004 .sdata2    @285                                                         */
+/* 8045638C-80456390 0004 .sdata2    @285                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_285[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
-/* 80456390 0008 .sdata2    @288                                                         */
+/* 80456390-80456398 0008 .sdata2    @288                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 J3DTexture__LIT_288 = 4503601774854144.000000;
 }
@@ -50,7 +67,7 @@ SECTION_SDATA2 f64 J3DTexture__LIT_288 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8031204C 0158 .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        */
+/* 8031204C-803121A4 0158 .text      loadGX__10J3DTextureCFUs11_GXTexMapID                        Function */
 // J3DTexture::loadGX(u16, _GXTexMapID) const
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +78,7 @@ asm void loadGX__10J3DTextureCFUs11_GXTexMapID() {
 }
 #pragma pop
 
-/* 803121A4 0078 .text      entryNum__10J3DTextureFUs                                    */
+/* 803121A4-8031221C 0078 .text      entryNum__10J3DTextureFUs                                    Function */
 // J3DTexture::entryNum(u16)
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +89,7 @@ asm void entryNum__10J3DTextureFUs() {
 }
 #pragma pop
 
-/* 8031221C 026C .text      addResTIMG__10J3DTextureFUsPC7ResTIMG                        */
+/* 8031221C-80312488 026C .text      addResTIMG__10J3DTextureFUsPC7ResTIMG                        Function */
 // J3DTexture::addResTIMG(u16, const ResTIMG*)
 #pragma push
 #pragma optimization_level 0

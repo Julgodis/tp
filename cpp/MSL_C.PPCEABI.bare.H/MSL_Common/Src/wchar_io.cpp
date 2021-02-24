@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void fwide();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80369114 0088 .text      fwide                                                        */
+/* 80369114-8036919C 0088 .text      fwide                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,9 +9,50 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void GXSetTevOp();
+/* Function             */
+extern void GXSetTevColorIn();
+/* Function             */
+extern void GXSetTevAlphaIn();
+/* Function             */
+extern void GXSetTevColorOp();
+/* Function             */
+extern void GXSetTevAlphaOp();
+/* Function             */
+extern void GXSetTevColor();
+/* Function             */
+extern void GXSetTevColorS10();
+/* Function             */
+extern void GXSetTevKColor();
+/* Function             */
+extern void GXSetTevKColorSel();
+/* Function             */
+extern void GXSetTevKAlphaSel();
+/* Function             */
+extern void GXSetTevSwapMode();
+/* Function             */
+extern void GXSetTevSwapModeTable();
+/* Function             */
+extern void GXSetAlphaCompare();
+/* Function             */
+extern void GXSetZTexture();
+/* Function             */
+extern void GXSetTevOrder();
+/* Function             */
+extern void GXSetNumTevStages();
+/* InitializedData      */
 SECTION_DATA extern u8 TEVCOpTableST0[20];
+/* InitializedData      */
+SECTION_DATA extern u8 TEVCOpTableST1[20];
+/* InitializedData      */
+SECTION_DATA extern u8 TEVAOpTableST0[20];
+/* InitializedData      */
+SECTION_DATA extern u8 TEVAOpTableST1[20];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803D2810[40];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -20,28 +61,28 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D27C0 0000 .data      ...data.0                                                    */
-/* 803D27C0 0014 .data      TEVCOpTableST0                                               */
+/* 803D27C0-803D27C0 0000 .data      ...data.0                                                    InitializedData */
+/* 803D27C0-803D27D4 0014 .data      TEVCOpTableST0                                               InitializedData */
 SECTION_DATA u8 TEVCOpTableST0[20] = {
 	0xC0, 0x08, 0xF8, 0xAF, 0xC0, 0x08, 0xA8, 0x9F, 0xC0, 0x08, 0xAC, 0x8F, 0xC0, 0x08, 0xFF, 0xF8,
 	0xC0, 0x08, 0xFF, 0xFA,
 };
-/* 803D27D4 0014 .data      TEVCOpTableST1                                               */
+/* 803D27D4-803D27E8 0014 .data      TEVCOpTableST1                                               InitializedData */
 SECTION_DATA u8 TEVCOpTableST1[20] = {
 	0xC0, 0x08, 0xF8, 0x0F, 0xC0, 0x08, 0x08, 0x9F, 0xC0, 0x08, 0x0C, 0x8F, 0xC0, 0x08, 0xFF, 0xF8,
 	0xC0, 0x08, 0xFF, 0xF0,
 };
-/* 803D27E8 0014 .data      TEVAOpTableST0                                               */
+/* 803D27E8-803D27FC 0014 .data      TEVAOpTableST0                                               InitializedData */
 SECTION_DATA u8 TEVAOpTableST0[20] = {
 	0xC1, 0x08, 0xF2, 0xF0, 0xC1, 0x08, 0xFF, 0xD0, 0xC1, 0x08, 0xF2, 0xF0, 0xC1, 0x08, 0xFF, 0xC0,
 	0xC1, 0x08, 0xFF, 0xD0,
 };
-/* 803D27FC 0014 .data      TEVAOpTableST1                                               */
+/* 803D27FC-803D2810 0014 .data      TEVAOpTableST1                                               InitializedData */
 SECTION_DATA u8 TEVAOpTableST1[20] = {
 	0xC1, 0x08, 0xF0, 0x70, 0xC1, 0x08, 0xFF, 0x80, 0xC1, 0x08, 0xF0, 0x70, 0xC1, 0x08, 0xFF, 0xC0,
 	0xC1, 0x08, 0xFF, 0x80,
 };
-/* 803D2810 0024 .data      c2r$334                                                      */
+/* 803D2810-803D2838 0024 .data      c2r$334                                                      InitializedData */
 SECTION_DATA u8 data_803D2810[40] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x05,
@@ -57,7 +98,7 @@ SECTION_DATA u8 data_803D2810[40] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035F198 008C .text      GXSetTevOp                                                   */
+/* 8035F198-8035F224 008C .text      GXSetTevOp                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +108,7 @@ asm void GXSetTevOp() {
 }
 #pragma pop
 
-/* 8035F224 0044 .text      GXSetTevColorIn                                              */
+/* 8035F224-8035F268 0044 .text      GXSetTevColorIn                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -77,7 +118,7 @@ asm void GXSetTevColorIn() {
 }
 #pragma pop
 
-/* 8035F268 0044 .text      GXSetTevAlphaIn                                              */
+/* 8035F268-8035F2AC 0044 .text      GXSetTevAlphaIn                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -87,7 +128,7 @@ asm void GXSetTevAlphaIn() {
 }
 #pragma pop
 
-/* 8035F2AC 0068 .text      GXSetTevColorOp                                              */
+/* 8035F2AC-8035F314 0068 .text      GXSetTevColorOp                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -97,7 +138,7 @@ asm void GXSetTevColorOp() {
 }
 #pragma pop
 
-/* 8035F314 0068 .text      GXSetTevAlphaOp                                              */
+/* 8035F314-8035F37C 0068 .text      GXSetTevAlphaOp                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,7 +148,7 @@ asm void GXSetTevAlphaOp() {
 }
 #pragma pop
 
-/* 8035F37C 0060 .text      GXSetTevColor                                                */
+/* 8035F37C-8035F3DC 0060 .text      GXSetTevColor                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -117,7 +158,7 @@ asm void GXSetTevColor() {
 }
 #pragma pop
 
-/* 8035F3DC 0064 .text      GXSetTevColorS10                                             */
+/* 8035F3DC-8035F440 0064 .text      GXSetTevColorS10                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -127,7 +168,7 @@ asm void GXSetTevColorS10() {
 }
 #pragma pop
 
-/* 8035F440 0064 .text      GXSetTevKColor                                               */
+/* 8035F440-8035F4A4 0064 .text      GXSetTevKColor                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,7 +178,7 @@ asm void GXSetTevKColor() {
 }
 #pragma pop
 
-/* 8035F4A4 005C .text      GXSetTevKColorSel                                            */
+/* 8035F4A4-8035F500 005C .text      GXSetTevKColorSel                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -147,7 +188,7 @@ asm void GXSetTevKColorSel() {
 }
 #pragma pop
 
-/* 8035F500 005C .text      GXSetTevKAlphaSel                                            */
+/* 8035F500-8035F55C 005C .text      GXSetTevKAlphaSel                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +198,7 @@ asm void GXSetTevKAlphaSel() {
 }
 #pragma pop
 
-/* 8035F55C 0048 .text      GXSetTevSwapMode                                             */
+/* 8035F55C-8035F5A4 0048 .text      GXSetTevSwapMode                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -167,7 +208,7 @@ asm void GXSetTevSwapMode() {
 }
 #pragma pop
 
-/* 8035F5A4 0080 .text      GXSetTevSwapModeTable                                        */
+/* 8035F5A4-8035F624 0080 .text      GXSetTevSwapModeTable                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -177,7 +218,7 @@ asm void GXSetTevSwapModeTable() {
 }
 #pragma pop
 
-/* 8035F624 0044 .text      GXSetAlphaCompare                                            */
+/* 8035F624-8035F668 0044 .text      GXSetAlphaCompare                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -187,7 +228,7 @@ asm void GXSetAlphaCompare() {
 }
 #pragma pop
 
-/* 8035F668 008C .text      GXSetZTexture                                                */
+/* 8035F668-8035F6F4 008C .text      GXSetZTexture                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -197,7 +238,7 @@ asm void GXSetZTexture() {
 }
 #pragma pop
 
-/* 8035F6F4 019C .text      GXSetTevOrder                                                */
+/* 8035F6F4-8035F890 019C .text      GXSetTevOrder                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -207,7 +248,7 @@ asm void GXSetTevOrder() {
 }
 #pragma pop
 
-/* 8035F890 0028 .text      GXSetNumTevStages                                            */
+/* 8035F890-8035F8B8 0028 .text      GXSetNumTevStages                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

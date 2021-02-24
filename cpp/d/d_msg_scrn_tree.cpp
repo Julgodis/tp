@@ -21,60 +21,117 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void dComIfGp_getSubHeap2D__Fi();
+/* ReturnFunction       */
 extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+/* ReturnFunction       */
 extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern int selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+/* ReturnIntegerFunction */
+extern  int selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+/* ReturnFunction       */
 extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+/* ReturnFunction       */
 extern void arwAnimeMove__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void arwAnimeInit__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern int isSelect__14dMsgScrnBase_cFv();
-extern int selectAnimeEnd__14dMsgScrnBase_cFv();
+/* ReturnIntegerFunction */
+extern  int isSelect__14dMsgScrnBase_cFv();
+/* ReturnIntegerFunction */
+extern  int selectAnimeEnd__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void dotAnimeMove__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void dotAnimeInit__14dMsgScrnBase_cFv();
+/* Function             */
 extern void __ct__14dMsgScrnBase_cFv();
+/* Function             */
 extern void __dt__14dMsgScrnBase_cFv();
+/* Function             */
 extern void init__14dMsgScrnBase_cFv();
+/* Function             */
 extern void multiDraw__14dMsgScrnBase_cFv();
+/* Function             */
 extern void drawSelf__14dMsgScrnBase_cFv();
+/* Function             */
 extern void fontAlpha__14dMsgScrnBase_cFf();
+/* Function             */
 extern void isTalkNow__14dMsgScrnBase_cFv();
+/* Function             */
+extern void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap();
+/* Function             */
 extern void __dt__14dMsgScrnTree_cFv();
+/* Function             */
 extern void exec__14dMsgScrnTree_cFv();
+/* Function             */
 extern void draw__14dMsgScrnTree_cFv();
+/* Function             */
 extern void fukiAlpha__14dMsgScrnTree_cFf();
+/* ReturnFunction       */
 extern void fukiScale__14dMsgScrnTree_cFf();
+/* ReturnFunction       */
 extern void fukiTrans__14dMsgScrnTree_cFff();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void getGlobalPosX__8CPaneMgrFv();
+/* Function             */
 extern void getGlobalPosY__8CPaneMgrFv();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* Function             */
 extern void setString__10J2DTextBoxFsPCce();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80399C18[24];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_scrn_tree__stringBase0[104];
-SECTION_DATA extern const void* __vt__14dMsgScrnTree_c[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dMsgScrnTree_c[22];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_tree__LIT_3949[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_tree__LIT_3950;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3951[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_scrn_tree__LIT_4053;
 }
 
@@ -84,17 +141,23 @@ SECTION_SDATA2 extern f64 d_d_msg_scrn_tree__LIT_4053;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399C18 0018 .rodata    t_tag$3763                                                   */
+/* 80399C30-80399C98 0064 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
+SECTION_DEAD const char* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
+SECTION_DEAD const char* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
+SECTION_DEAD const char* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
+SECTION_DEAD const char* const stringBase_80399C93 = "";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399C94 = "\0\0\0";
+#pragma pop
+/* 80399C18-80399C30 0018 .rodata    t_tag$3763                                                   InitializedData */
 SECTION_RODATA const u8 data_80399C18[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
-/* 80399C30 0064 .rodata    @stringBase0                                                 */
-const char* const stringBase_80399C30 = "zelda_kanban_wood_a.blo";
-const char* const stringBase_80399C48 = "zelda_kanban_wood_a.bck";
-const char* const stringBase_80399C60 = "zelda_kanban_wood_a.btk";
-const char* const stringBase_80399C78 = "zelda_kanban_wood_a_02.btk";
-const char* const stringBase_80399C93 = "";
 }
 
 
@@ -103,8 +166,8 @@ const char* const stringBase_80399C93 = "";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C1420 0058 .data      __vt__14dMsgScrnTree_c                                       */
-SECTION_DATA const  void* __vt__14dMsgScrnTree_c[22] = {
+/* 803C1420-803C1478 0058 .data      __vt__14dMsgScrnTree_c                                       VTableData */
+SECTION_DATA void* __vt__14dMsgScrnTree_c[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMsgScrnTree_cFv,
@@ -136,20 +199,20 @@ SECTION_DATA const  void* __vt__14dMsgScrnTree_c[22] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454D58 0004 .sdata2    @3949                                                        */
+/* 80454D58-80454D5C 0004 .sdata2    @3949                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_tree__LIT_3949[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454D5C 0004 .sdata2    @3950                                                        */
+/* 80454D5C-80454D60 0004 .sdata2    @3950                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_scrn_tree__LIT_3950 = 1.000000f;
-/* 80454D60 0004 .sdata2    @3951                                                        */
+/* 80454D60-80454D68 0004 .sdata2    @3951                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3951[8] = {
 	0x3F, 0x99, 0x99, 0x9A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454D68 0008 .sdata2    @4053                                                        */
+/* 80454D68-80454D70 0008 .sdata2    @4053                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_msg_scrn_tree__LIT_4053 = 4503601774854144.000000;
 }
@@ -160,7 +223,7 @@ SECTION_SDATA2 f64 d_d_msg_scrn_tree__LIT_4053 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80248954 05C0 .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                */
+/* 80248954-80248F14 05C0 .text      __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap                Function */
 // dMsgScrnTree_c::dMsgScrnTree_c(JUTFont*, JKRExpHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -171,7 +234,7 @@ asm void __ct__14dMsgScrnTree_cFP7JUTFontP10JKRExpHeap() {
 }
 #pragma pop
 
-/* 80248F14 0204 .text      __dt__14dMsgScrnTree_cFv                                     */
+/* 80248F14-80249118 0204 .text      __dt__14dMsgScrnTree_cFv                                     Function */
 // dMsgScrnTree_c::~dMsgScrnTree_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -182,7 +245,7 @@ asm void __dt__14dMsgScrnTree_cFv() {
 }
 #pragma pop
 
-/* 80249118 0158 .text      exec__14dMsgScrnTree_cFv                                     */
+/* 80249118-80249270 0158 .text      exec__14dMsgScrnTree_cFv                                     Function */
 // dMsgScrnTree_c::exec(void)
 #pragma push
 #pragma optimization_level 0
@@ -193,7 +256,7 @@ asm void exec__14dMsgScrnTree_cFv() {
 }
 #pragma pop
 
-/* 80249270 0088 .text      draw__14dMsgScrnTree_cFv                                     */
+/* 80249270-802492F8 0088 .text      draw__14dMsgScrnTree_cFv                                     Function */
 // dMsgScrnTree_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -204,7 +267,7 @@ asm void draw__14dMsgScrnTree_cFv() {
 }
 #pragma pop
 
-/* 802492F8 00B4 .text      fukiAlpha__14dMsgScrnTree_cFf                                */
+/* 802492F8-802493AC 00B4 .text      fukiAlpha__14dMsgScrnTree_cFf                                Function */
 // dMsgScrnTree_c::fukiAlpha(f32)
 #pragma push
 #pragma optimization_level 0
@@ -215,13 +278,13 @@ asm void fukiAlpha__14dMsgScrnTree_cFf() {
 }
 #pragma pop
 
-/* 802493AC 0004 .text      fukiScale__14dMsgScrnTree_cFf                                */
+/* 802493AC-802493B0 0004 .text      fukiScale__14dMsgScrnTree_cFf                                ReturnFunction */
 // dMsgScrnTree_c::fukiScale(f32)
 void fukiScale__14dMsgScrnTree_cFf() {
 	return;
 }
 
-/* 802493B0 0004 .text      fukiTrans__14dMsgScrnTree_cFff                               */
+/* 802493B0-802493B4 0004 .text      fukiTrans__14dMsgScrnTree_cFff                               ReturnFunction */
 // dMsgScrnTree_c::fukiTrans(f32, f32)
 void fukiTrans__14dMsgScrnTree_cFff() {
 	return;

@@ -16,82 +16,175 @@ extern void operator delete(void*); /* __dl__FPv */
 extern void J3DCalcViewBaseMtx(f32 (*)[4], const Vec&, const f32 (&)[3][4], f32 (*)[4]); /* J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void setVertexData__15J3DVertexBufferFP13J3DVertexData();
+/* Function             */
 extern void __dt__15J3DVertexBufferFv();
+/* Function             */
 extern void copyLocalVtxArray__15J3DVertexBufferFUl();
+/* Function             */
 extern void allocTransformedVtxPosArray__15J3DVertexBufferFv();
+/* Function             */
 extern void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
+/* Function             */
 extern void single_To_Double__17J3DDisplayListObjFv();
+/* Function             */
 extern void newDisplayList__13J3DDrawPacketFUl();
+/* Function             */
 extern void newSingleDisplayList__13J3DDrawPacketFUl();
+/* Function             */
 extern void __ct__12J3DMatPacketFv();
+/* Function             */
 extern void __dt__12J3DMatPacketFv();
+/* Function             */
 extern void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+/* Function             */
 extern void __ct__14J3DShapePacketFv();
+/* Function             */
 extern void __dt__14J3DShapePacketFv();
+/* Function             */
 extern void newDifferedDisplayList__14J3DShapePacketFUl();
+/* Function             */
 extern void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
+/* Function             */
 extern void countDLSize__11J3DMaterialFv();
+/* Function             */
 extern void newSharedDisplayList__11J3DMaterialFUl();
+/* Function             */
 extern void newSingleSharedDisplayList__11J3DMaterialFUl();
+/* Function             */
 extern void syncJ3DSysFlags__12J3DModelDataCFv();
+/* Function             */
 extern void initialize__12J3DMtxBufferFv();
+/* Function             */
 extern void create__12J3DMtxBufferFP12J3DModelDataUl();
+/* Function             */
 extern void calcWeightEnvelopeMtx__12J3DMtxBufferFv();
+/* Function             */
 extern void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf();
+/* Function             */
 extern void calcNrmMtx__12J3DMtxBufferFv();
+/* Function             */
 extern void calcBBoardMtx__12J3DMtxBufferFv();
+/* Function             */
 extern void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f();
+/* Function             */
+extern void initialize__8J3DModelFv();
+/* Function             */
+extern void entryModelData__8J3DModelFP12J3DModelDataUlUl();
+/* Function             */
 extern void createShapePacket__8J3DModelFP12J3DModelData();
+/* Function             */
 extern void createMatPacket__8J3DModelFP12J3DModelDataUl();
+/* Function             */
+extern void newDifferedDisplayList__8J3DModelFUl();
+/* Function             */
+extern void lock__8J3DModelFv();
+/* Function             */
+extern void unlock__8J3DModelFv();
+/* Function             */
 extern void calcMaterial__8J3DModelFv();
+/* Function             */
 extern void calcDiffTexMtx__8J3DModelFv();
+/* Function             */
+extern void diff__8J3DModelFv();
+/* Function             */
+extern void setDeformData__8J3DModelFP13J3DDeformDataUl();
+/* Function             */
+extern void setSkinDeform__8J3DModelFP13J3DSkinDeformUl();
+/* Function             */
 extern void calcAnmMtx__8J3DModelFv();
+/* Function             */
 extern void calcWeightEnvelopeMtx__8J3DModelFv();
+/* Function             */
 extern void update__8J3DModelFv();
+/* Function             */
 extern void calc__8J3DModelFv();
+/* Function             */
 extern void entry__8J3DModelFv();
+/* Function             */
 extern void viewCalc__8J3DModelFv();
+/* Function             */
 extern void calcNrmMtx__8J3DModelFv();
+/* Function             */
 extern void calcBumpMtx__8J3DModelFv();
+/* Function             */
 extern void calcBBoardMtx__8J3DModelFv();
+/* Function             */
 extern void prepareShapePackets__8J3DModelFv();
+/* Function             */
 extern void __dt__8J3DModelFv();
+/* Function             */
 extern void __dt__12J3DMtxBufferFv();
+/* Function             */
 extern void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData();
+/* Function             */
 extern void deform__13J3DSkinDeformFP8J3DModel();
+/* Function             */
 extern void calc__15J3DVtxColorCalcFP8J3DModel();
+/* Function             */
 extern void offAllFlag__13J3DDeformDataFUl();
+/* Function             */
 extern void deform__13J3DDeformDataFP8J3DModel();
+/* Function             */
 extern void entryIn__8J3DJointFv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void PSMTXIdentity();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void __construct_new_array();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultScale[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
-SECTION_DATA extern const void* __vt__8J3DModel[9];
-SECTION_DATA extern const void* __vt__12J3DMtxBuffer[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8J3DModel[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DMtxBuffer[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DModel__LIT_896[8];
 }
 
@@ -101,8 +194,8 @@ SECTION_SDATA2 extern u8 J3DModel__LIT_896[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CED20 0024 .data      __vt__8J3DModel                                              */
-SECTION_DATA const  void* __vt__8J3DModel[9] = {
+/* 803CED20-803CED44 0024 .data      __vt__8J3DModel                                              VTableData */
+SECTION_DATA void* __vt__8J3DModel[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)update__8J3DModelFv,
@@ -113,8 +206,8 @@ SECTION_DATA const  void* __vt__8J3DModel[9] = {
 	(void*)viewCalc__8J3DModelFv,
 	(void*)__dt__8J3DModelFv,
 };
-/* 803CED44 000C .data      __vt__12J3DMtxBuffer                                         */
-SECTION_DATA const  void* __vt__12J3DMtxBuffer[3] = {
+/* 803CED44-803CED50 000C .data      __vt__12J3DMtxBuffer                                         VTableData */
+SECTION_DATA void* __vt__12J3DMtxBuffer[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J3DMtxBufferFv,
@@ -127,7 +220,7 @@ SECTION_DATA const  void* __vt__12J3DMtxBuffer[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456428 0004 .sdata2    @896                                                         */
+/* 80456428-80456430 0004 .sdata2    @896                                                         InitializedData */
 SECTION_SDATA2 u8 J3DModel__LIT_896[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -141,7 +234,7 @@ SECTION_SDATA2 u8 J3DModel__LIT_896[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80327100 0084 .text      initialize__8J3DModelFv                                      */
+/* 80327100-80327184 0084 .text      initialize__8J3DModelFv                                      Function */
 // J3DModel::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +245,7 @@ asm void initialize__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327184 017C .text      entryModelData__8J3DModelFP12J3DModelDataUlUl                */
+/* 80327184-80327300 017C .text      entryModelData__8J3DModelFP12J3DModelDataUlUl                Function */
 // J3DModel::entryModelData(J3DModelData*, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +256,7 @@ asm void entryModelData__8J3DModelFP12J3DModelDataUlUl() {
 }
 #pragma pop
 
-/* 80327300 00CC .text      createShapePacket__8J3DModelFP12J3DModelData                 */
+/* 80327300-803273CC 00CC .text      createShapePacket__8J3DModelFP12J3DModelData                 Function */
 // J3DModel::createShapePacket(J3DModelData*)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +267,7 @@ asm void createShapePacket__8J3DModelFP12J3DModelData() {
 }
 #pragma pop
 
-/* 803273CC 0230 .text      createMatPacket__8J3DModelFP12J3DModelDataUl                 */
+/* 803273CC-803275FC 0230 .text      createMatPacket__8J3DModelFP12J3DModelDataUl                 Function */
 // J3DModel::createMatPacket(J3DModelData*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +278,7 @@ asm void createMatPacket__8J3DModelFP12J3DModelDataUl() {
 }
 #pragma pop
 
-/* 803275FC 0080 .text      newDifferedDisplayList__8J3DModelFUl                         */
+/* 803275FC-8032767C 0080 .text      newDifferedDisplayList__8J3DModelFUl                         Function */
 // J3DModel::newDifferedDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +289,7 @@ asm void newDifferedDisplayList__8J3DModelFUl() {
 }
 #pragma pop
 
-/* 8032767C 0038 .text      lock__8J3DModelFv                                            */
+/* 8032767C-803276B4 0038 .text      lock__8J3DModelFv                                            Function */
 // J3DModel::lock(void)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +300,7 @@ asm void lock__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803276B4 0038 .text      unlock__8J3DModelFv                                          */
+/* 803276B4-803276EC 0038 .text      unlock__8J3DModelFv                                          Function */
 // J3DModel::unlock(void)
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +311,7 @@ asm void unlock__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803276EC 016C .text      calcMaterial__8J3DModelFv                                    */
+/* 803276EC-80327858 016C .text      calcMaterial__8J3DModelFv                                    Function */
 // J3DModel::calcMaterial(void)
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +322,7 @@ asm void calcMaterial__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327858 0148 .text      calcDiffTexMtx__8J3DModelFv                                  */
+/* 80327858-803279A0 0148 .text      calcDiffTexMtx__8J3DModelFv                                  Function */
 // J3DModel::calcDiffTexMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -240,7 +333,7 @@ asm void calcDiffTexMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803279A0 008C .text      diff__8J3DModelFv                                            */
+/* 803279A0-80327A2C 008C .text      diff__8J3DModelFv                                            Function */
 // J3DModel::diff(void)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +344,7 @@ asm void diff__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327A2C 0074 .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  */
+/* 80327A2C-80327AA0 0074 .text      setDeformData__8J3DModelFP13J3DDeformDataUl                  Function */
 // J3DModel::setDeformData(J3DDeformData*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +355,7 @@ asm void setDeformData__8J3DModelFP13J3DDeformDataUl() {
 }
 #pragma pop
 
-/* 80327AA0 0134 .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  */
+/* 80327AA0-80327BD4 0134 .text      setSkinDeform__8J3DModelFP13J3DSkinDeformUl                  Function */
 // J3DModel::setSkinDeform(J3DSkinDeform*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -273,7 +366,7 @@ asm void setSkinDeform__8J3DModelFP13J3DSkinDeformUl() {
 }
 #pragma pop
 
-/* 80327BD4 0084 .text      calcAnmMtx__8J3DModelFv                                      */
+/* 80327BD4-80327C58 0084 .text      calcAnmMtx__8J3DModelFv                                      Function */
 // J3DModel::calcAnmMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -284,7 +377,7 @@ asm void calcAnmMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327C58 004C .text      calcWeightEnvelopeMtx__8J3DModelFv                           */
+/* 80327C58-80327CA4 004C .text      calcWeightEnvelopeMtx__8J3DModelFv                           Function */
 // J3DModel::calcWeightEnvelopeMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -295,7 +388,7 @@ asm void calcWeightEnvelopeMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327CA4 004C .text      update__8J3DModelFv                                          */
+/* 80327CA4-80327CF0 004C .text      update__8J3DModelFv                                          Function */
 // J3DModel::update(void)
 #pragma push
 #pragma optimization_level 0
@@ -306,7 +399,7 @@ asm void update__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327CF0 015C .text      calc__8J3DModelFv                                            */
+/* 80327CF0-80327E4C 015C .text      calc__8J3DModelFv                                            Function */
 // J3DModel::calc(void)
 #pragma push
 #pragma optimization_level 0
@@ -317,7 +410,7 @@ asm void calc__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327E4C 00F4 .text      entry__8J3DModelFv                                           */
+/* 80327E4C-80327F40 00F4 .text      entry__8J3DModelFv                                           Function */
 // J3DModel::entry(void)
 #pragma push
 #pragma optimization_level 0
@@ -328,7 +421,7 @@ asm void entry__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80327F40 0250 .text      viewCalc__8J3DModelFv                                        */
+/* 80327F40-80328190 0250 .text      viewCalc__8J3DModelFv                                        Function */
 // J3DModel::viewCalc(void)
 #pragma push
 #pragma optimization_level 0
@@ -339,7 +432,7 @@ asm void viewCalc__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80328190 0024 .text      calcNrmMtx__8J3DModelFv                                      */
+/* 80328190-803281B4 0024 .text      calcNrmMtx__8J3DModelFv                                      Function */
 // J3DModel::calcNrmMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -350,7 +443,7 @@ asm void calcNrmMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803281B4 0104 .text      calcBumpMtx__8J3DModelFv                                     */
+/* 803281B4-803282B8 0104 .text      calcBumpMtx__8J3DModelFv                                     Function */
 // J3DModel::calcBumpMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -361,7 +454,7 @@ asm void calcBumpMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803282B8 0034 .text      calcBBoardMtx__8J3DModelFv                                   */
+/* 803282B8-803282EC 0034 .text      calcBBoardMtx__8J3DModelFv                                   Function */
 // J3DModel::calcBBoardMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -372,7 +465,7 @@ asm void calcBBoardMtx__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803282EC 0064 .text      prepareShapePackets__8J3DModelFv                             */
+/* 803282EC-80328350 0064 .text      prepareShapePackets__8J3DModelFv                             Function */
 // J3DModel::prepareShapePackets(void)
 #pragma push
 #pragma optimization_level 0
@@ -383,7 +476,7 @@ asm void prepareShapePackets__8J3DModelFv() {
 }
 #pragma pop
 
-/* 80328350 0064 .text      __dt__8J3DModelFv                                            */
+/* 80328350-803283B4 0064 .text      __dt__8J3DModelFv                                            Function */
 // J3DModel::~J3DModel(void)
 #pragma push
 #pragma optimization_level 0
@@ -394,7 +487,7 @@ asm void __dt__8J3DModelFv() {
 }
 #pragma pop
 
-/* 803283B4 0048 .text      __dt__12J3DMtxBufferFv                                       */
+/* 803283B4-803283FC 0048 .text      __dt__12J3DMtxBufferFv                                       Function */
 // J3DMtxBuffer::~J3DMtxBuffer(void)
 #pragma push
 #pragma optimization_level 0

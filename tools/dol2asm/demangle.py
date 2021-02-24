@@ -66,7 +66,7 @@ class Param:
         ret = ''
         if self.is_const:
             ret += 'const '
-        if self.name in short_type_names:
+        if self.name in short_type_names and (self.is_signed or self.is_unsigned):
             ret += 'u' if self.is_unsigned else 's'
             ret += short_type_names[self.name]
         else:

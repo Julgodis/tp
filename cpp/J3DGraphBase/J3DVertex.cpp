@@ -12,18 +12,51 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
+extern void __ct__13J3DVertexDataFv();
+/* Function             */
+extern void setVertexData__15J3DVertexBufferFP13J3DVertexData();
+/* Function             */
+extern void init__15J3DVertexBufferFv();
+/* Function             */
+extern void __dt__15J3DVertexBufferFv();
+/* Function             */
+extern void setArray__15J3DVertexBufferCFv();
+/* Function             */
 extern void copyLocalVtxPosArray__15J3DVertexBufferFUl();
+/* Function             */
 extern void copyLocalVtxNrmArray__15J3DVertexBufferFUl();
+/* Function             */
+extern void copyLocalVtxArray__15J3DVertexBufferFUl();
+/* Function             */
+extern void allocTransformedVtxPosArray__15J3DVertexBufferFv();
+/* Function             */
+extern void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
+/* Function             */
+extern void __ct__14J3DDrawMtxDataFv();
+/* Function             */
+extern void __dt__14J3DDrawMtxDataFv();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
 }
 
@@ -33,7 +66,7 @@ SECTION_BSS extern u8 j3dSys[284];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80310EF8 0080 .text      __ct__13J3DVertexDataFv                                      */
+/* 80310EF8-80310F78 0080 .text      __ct__13J3DVertexDataFv                                      Function */
 // J3DVertexData::J3DVertexData(void)
 #pragma push
 #pragma optimization_level 0
@@ -44,7 +77,7 @@ asm void __ct__13J3DVertexDataFv() {
 }
 #pragma pop
 
-/* 80310F78 0060 .text      setVertexData__15J3DVertexBufferFP13J3DVertexData            */
+/* 80310F78-80310FD8 0060 .text      setVertexData__15J3DVertexBufferFP13J3DVertexData            Function */
 // J3DVertexBuffer::setVertexData(J3DVertexData*)
 #pragma push
 #pragma optimization_level 0
@@ -55,7 +88,7 @@ asm void setVertexData__15J3DVertexBufferFP13J3DVertexData() {
 }
 #pragma pop
 
-/* 80310FD8 0058 .text      init__15J3DVertexBufferFv                                    */
+/* 80310FD8-80311030 0058 .text      init__15J3DVertexBufferFv                                    Function */
 // J3DVertexBuffer::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -66,7 +99,7 @@ asm void init__15J3DVertexBufferFv() {
 }
 #pragma pop
 
-/* 80311030 003C .text      __dt__15J3DVertexBufferFv                                    */
+/* 80311030-8031106C 003C .text      __dt__15J3DVertexBufferFv                                    Function */
 // J3DVertexBuffer::~J3DVertexBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -77,7 +110,7 @@ asm void __dt__15J3DVertexBufferFv() {
 }
 #pragma pop
 
-/* 8031106C 0024 .text      setArray__15J3DVertexBufferCFv                               */
+/* 8031106C-80311090 0024 .text      setArray__15J3DVertexBufferCFv                               Function */
 // J3DVertexBuffer::setArray(void) const
 #pragma push
 #pragma optimization_level 0
@@ -88,7 +121,7 @@ asm void setArray__15J3DVertexBufferCFv() {
 }
 #pragma pop
 
-/* 80311090 0120 .text      copyLocalVtxPosArray__15J3DVertexBufferFUl                   */
+/* 80311090-803111B0 0120 .text      copyLocalVtxPosArray__15J3DVertexBufferFUl                   Function */
 // J3DVertexBuffer::copyLocalVtxPosArray(u32)
 #pragma push
 #pragma optimization_level 0
@@ -99,7 +132,7 @@ asm void copyLocalVtxPosArray__15J3DVertexBufferFUl() {
 }
 #pragma pop
 
-/* 803111B0 0120 .text      copyLocalVtxNrmArray__15J3DVertexBufferFUl                   */
+/* 803111B0-803112D0 0120 .text      copyLocalVtxNrmArray__15J3DVertexBufferFUl                   Function */
 // J3DVertexBuffer::copyLocalVtxNrmArray(u32)
 #pragma push
 #pragma optimization_level 0
@@ -110,7 +143,7 @@ asm void copyLocalVtxNrmArray__15J3DVertexBufferFUl() {
 }
 #pragma pop
 
-/* 803112D0 01A8 .text      copyLocalVtxArray__15J3DVertexBufferFUl                      */
+/* 803112D0-80311478 01A8 .text      copyLocalVtxArray__15J3DVertexBufferFUl                      Function */
 // J3DVertexBuffer::copyLocalVtxArray(u32)
 #pragma push
 #pragma optimization_level 0
@@ -121,7 +154,7 @@ asm void copyLocalVtxArray__15J3DVertexBufferFUl() {
 }
 #pragma pop
 
-/* 80311478 00B4 .text      allocTransformedVtxPosArray__15J3DVertexBufferFv             */
+/* 80311478-8031152C 00B4 .text      allocTransformedVtxPosArray__15J3DVertexBufferFv             Function */
 // J3DVertexBuffer::allocTransformedVtxPosArray(void)
 #pragma push
 #pragma optimization_level 0
@@ -132,7 +165,7 @@ asm void allocTransformedVtxPosArray__15J3DVertexBufferFv() {
 }
 #pragma pop
 
-/* 8031152C 00B4 .text      allocTransformedVtxNrmArray__15J3DVertexBufferFv             */
+/* 8031152C-803115E0 00B4 .text      allocTransformedVtxNrmArray__15J3DVertexBufferFv             Function */
 // J3DVertexBuffer::allocTransformedVtxNrmArray(void)
 #pragma push
 #pragma optimization_level 0
@@ -143,7 +176,7 @@ asm void allocTransformedVtxNrmArray__15J3DVertexBufferFv() {
 }
 #pragma pop
 
-/* 803115E0 0014 .text      __ct__14J3DDrawMtxDataFv                                     */
+/* 803115E0-803115F4 0014 .text      __ct__14J3DDrawMtxDataFv                                     Function */
 // J3DDrawMtxData::J3DDrawMtxData(void)
 #pragma push
 #pragma optimization_level 0
@@ -154,7 +187,7 @@ asm void __ct__14J3DDrawMtxDataFv() {
 }
 #pragma pop
 
-/* 803115F4 003C .text      __dt__14J3DDrawMtxDataFv                                     */
+/* 803115F4-80311630 003C .text      __dt__14J3DDrawMtxDataFv                                     Function */
 // J3DDrawMtxData::~J3DDrawMtxData(void)
 #pragma push
 #pragma optimization_level 0

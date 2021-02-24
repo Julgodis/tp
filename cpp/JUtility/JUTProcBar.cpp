@@ -17,60 +17,123 @@ extern void byteToXLen(int, int); /* byteToXLen__Fii */
 extern void heapBar(JKRHeap*, int, int, int, int, int); /* heapBar__FP7JKRHeapiiiii */
 
 extern "C" {
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__10JUTProcBarFv();
+/* Function             */
 extern void __dt__10JUTProcBarFv();
+/* Function             */
+extern void create__10JUTProcBarFv();
+/* Function             */
+extern void destroy__10JUTProcBarFv();
+/* Function             */
+extern void clear__10JUTProcBarFv();
+/* Function             */
 extern void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor();
+/* Function             */
 extern void adjustMeterLength__10JUTProcBarFUlPfffPi();
+/* Function             */
+extern void draw__10JUTProcBarFv();
+/* Function             */
 extern void drawProcessBar__10JUTProcBarFv();
+/* Function             */
 extern void addrToXPos__FPvi();
+/* Function             */
 extern void byteToXLen__Fii();
+/* Function             */
 extern void heapBar__FP7JKRHeapiiiii();
+/* Function             */
 extern void drawHeapBar__10JUTProcBarFv();
+/* Function             */
 extern void __ct__Q210JUTProcBar5CTimeFv();
+/* Function             */
 extern void J2DDrawLine__FffffQ28JUtility6TColori();
+/* Function             */
 extern void J2DFillBox__FffffQ28JUtility6TColor();
+/* Function             */
 extern void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+/* Function             */
 extern void OSGetTick();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Float32Data          */
 SECTION_SDATA extern f32 oneFrameRate;
+/* Float32Data          */
 SECTION_SDATA extern f32 oneFrameRateUser;
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mCodeStart__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mCodeEnd__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mUserRamStart__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mUserRamEnd__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mMemorySize__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__8JUTVideo[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JUTProcBar[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045155C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451560[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451564[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451568[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JUTProcBar__LIT_2258;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JUTProcBar__LIT_2259;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2279[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2281;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2308;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2309;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2310;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JUTProcBar__LIT_2311[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JUTProcBar__LIT_2312[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2313;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2315;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2580;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2581;
 }
 
@@ -80,10 +143,10 @@ SECTION_SDATA2 extern f32 LIT_2581;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450900 0004 .sdata     oneFrameRate                                                 */
+/* 80450900-80450904 0004 .sdata     oneFrameRate                                                 Float32Data */
 // 0x41000000
 SECTION_SDATA f32 oneFrameRate = 8.000000f;
-/* 80450904 0004 .sdata     oneFrameRateUser                                             */
+/* 80450904-80450908 0004 .sdata     oneFrameRateUser                                             Float32Data */
 // 0x41200000
 SECTION_SDATA f32 oneFrameRateUser = 10.000000f;
 }
@@ -94,48 +157,48 @@ SECTION_SDATA f32 oneFrameRateUser = 10.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804560D8 0004 .sdata2    @2258                                                        */
+/* 804560D8-804560DC 0004 .sdata2    @2258                                                        Float32Data */
 // 0x41000000
 SECTION_SDATA2 f32 JUTProcBar__LIT_2258 = 8.000000f;
-/* 804560DC 0004 .sdata2    @2259                                                        */
+/* 804560DC-804560E0 0004 .sdata2    @2259                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 JUTProcBar__LIT_2259 = 10.000000f;
-/* 804560E0 0004 .sdata2    @2279                                                        */
+/* 804560E0-804560E8 0004 .sdata2    @2279                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2279[8] = {
 	0x40, 0xC0, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804560E8 0008 .sdata2    @2281                                                        */
+/* 804560E8-804560F0 0008 .sdata2    @2281                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_2281 = 4503601774854144.000000;
-/* 804560F0 0004 .sdata2    @2308                                                        */
+/* 804560F0-804560F4 0004 .sdata2    @2308                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 LIT_2308 = 20.000000f;
-/* 804560F4 0004 .sdata2    @2309                                                        */
+/* 804560F4-804560F8 0004 .sdata2    @2309                                                        Float32Data */
 // 0x46823400
 SECTION_SDATA2 f32 LIT_2309 = 16666.000000f;
-/* 804560F8 0004 .sdata2    @2310                                                        */
+/* 804560F8-804560FC 0004 .sdata2    @2310                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 LIT_2310 = 30.000000f;
-/* 804560FC 0004 .sdata2    @2311                                                        */
+/* 804560FC-80456100 0004 .sdata2    @2311                                                        InitializedData */
 SECTION_SDATA2 u8 JUTProcBar__LIT_2311[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80456100 0004 .sdata2    @2312                                                        */
+/* 80456100-80456104 0004 .sdata2    @2312                                                        InitializedData */
 SECTION_SDATA2 u8 JUTProcBar__LIT_2312[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 80456104 0004 .sdata2    @2313                                                        */
+/* 80456104-80456108 0004 .sdata2    @2313                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 LIT_2313 = 60.000000f;
-/* 80456108 0008 .sdata2    @2315                                                        */
+/* 80456108-80456110 0008 .sdata2    @2315                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_2315 = 4503599627370496.000000;
-/* 80456110 0004 .sdata2    @2580                                                        */
+/* 80456110-80456114 0004 .sdata2    @2580                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_2580 = 1.000000f;
-/* 80456114 0004 .sdata2    @2581                                                        */
+/* 80456114-80456118 0004 .sdata2    @2581                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 LIT_2581 = 3.000000f;
 }
@@ -146,15 +209,15 @@ SECTION_SDATA2 f32 LIT_2581 = 3.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451558 0004 .sbss      sManager__10JUTProcBar                                       */
+/* 80451558-8045155C 0004 .sbss      sManager__10JUTProcBar                                       ZeroInitializedData */
 SECTION_SBSS u8 sManager__10JUTProcBar[4];
-/* 8045155C 0004 .sbss      cnt$2330                                                     */
+/* 8045155C-80451560 0004 .sbss      cnt$2330                                                     ZeroInitializedData */
 SECTION_SBSS u8 data_8045155C[4];
-/* 80451560 0004 .sbss      data_80451560                                                */
+/* 80451560-80451564 0004 .sbss      data_80451560                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451560[4];
-/* 80451564 0004 .sbss      cntUser$2379                                                 */
+/* 80451564-80451568 0004 .sbss      cntUser$2379                                                 ZeroInitializedData */
 SECTION_SBSS u8 data_80451564[4];
-/* 80451568 0008 .sbss      data_80451568                                                */
+/* 80451568-80451570 0008 .sbss      data_80451568                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451568[8];
 }
 
@@ -164,7 +227,7 @@ SECTION_SBSS u8 data_80451568[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802E5888 0114 .text      __ct__10JUTProcBarFv                                         */
+/* 802E5888-802E599C 0114 .text      __ct__10JUTProcBarFv                                         Function */
 // JUTProcBar::JUTProcBar(void)
 #pragma push
 #pragma optimization_level 0
@@ -175,7 +238,7 @@ asm void __ct__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E599C 0044 .text      __dt__10JUTProcBarFv                                         */
+/* 802E599C-802E59E0 0044 .text      __dt__10JUTProcBarFv                                         Function */
 // JUTProcBar::~JUTProcBar(void)
 #pragma push
 #pragma optimization_level 0
@@ -186,7 +249,7 @@ asm void __dt__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E59E0 0048 .text      create__10JUTProcBarFv                                       */
+/* 802E59E0-802E5A28 0048 .text      create__10JUTProcBarFv                                       Function */
 // JUTProcBar::create(void)
 #pragma push
 #pragma optimization_level 0
@@ -197,7 +260,7 @@ asm void create__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E5A28 0038 .text      destroy__10JUTProcBarFv                                      */
+/* 802E5A28-802E5A60 0038 .text      destroy__10JUTProcBarFv                                      Function */
 // JUTProcBar::destroy(void)
 #pragma push
 #pragma optimization_level 0
@@ -208,7 +271,7 @@ asm void destroy__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E5A60 00D0 .text      clear__10JUTProcBarFv                                        */
+/* 802E5A60-802E5B30 00D0 .text      clear__10JUTProcBarFv                                        Function */
 // JUTProcBar::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -219,7 +282,7 @@ asm void clear__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E5B30 0194 .text      bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor */
+/* 802E5B30-802E5CC4 0194 .text      bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor Function */
 // JUTProcBar::bar_subroutine(int, int, int, int, int, int, int, JUtility::TColor, JUtility::TColor)
 #pragma push
 #pragma optimization_level 0
@@ -230,7 +293,7 @@ asm void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColo
 }
 #pragma pop
 
-/* 802E5CC4 0144 .text      adjustMeterLength__10JUTProcBarFUlPfffPi                     */
+/* 802E5CC4-802E5E08 0144 .text      adjustMeterLength__10JUTProcBarFUlPfffPi                     Function */
 // JUTProcBar::adjustMeterLength(u32, f32*, f32, f32, int*)
 #pragma push
 #pragma optimization_level 0
@@ -241,7 +304,7 @@ asm void adjustMeterLength__10JUTProcBarFUlPfffPi() {
 }
 #pragma pop
 
-/* 802E5E08 0034 .text      draw__10JUTProcBarFv                                         */
+/* 802E5E08-802E5E3C 0034 .text      draw__10JUTProcBarFv                                         Function */
 // JUTProcBar::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -252,7 +315,7 @@ asm void draw__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E5E3C 0F00 .text      drawProcessBar__10JUTProcBarFv                               */
+/* 802E5E3C-802E6D3C 0F00 .text      drawProcessBar__10JUTProcBarFv                               Function */
 // JUTProcBar::drawProcessBar(void)
 #pragma push
 #pragma optimization_level 0
@@ -263,7 +326,7 @@ asm void drawProcessBar__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E6D3C 0068 .text      addrToXPos__FPvi                                             */
+/* 802E6D3C-802E6DA4 0068 .text      addrToXPos__FPvi                                             Function */
 }
 
 #pragma push
@@ -276,7 +339,7 @@ asm void addrToXPos(void*, int) {
 #pragma pop
 
 extern "C" {
-/* 802E6DA4 0068 .text      byteToXLen__Fii                                              */
+/* 802E6DA4-802E6E0C 0068 .text      byteToXLen__Fii                                              Function */
 }
 
 #pragma push
@@ -289,7 +352,7 @@ asm void byteToXLen(int, int) {
 #pragma pop
 
 extern "C" {
-/* 802E6E0C 0194 .text      heapBar__FP7JKRHeapiiiii                                     */
+/* 802E6E0C-802E6FA0 0194 .text      heapBar__FP7JKRHeapiiiii                                     Function */
 }
 
 #pragma push
@@ -302,7 +365,7 @@ asm void heapBar(JKRHeap*, int, int, int, int, int) {
 #pragma pop
 
 extern "C" {
-/* 802E6FA0 03A0 .text      drawHeapBar__10JUTProcBarFv                                  */
+/* 802E6FA0-802E7340 03A0 .text      drawHeapBar__10JUTProcBarFv                                  Function */
 // JUTProcBar::drawHeapBar(void)
 #pragma push
 #pragma optimization_level 0
@@ -313,7 +376,7 @@ asm void drawHeapBar__10JUTProcBarFv() {
 }
 #pragma pop
 
-/* 802E7340 0014 .text      __ct__Q210JUTProcBar5CTimeFv                                 */
+/* 802E7340-802E7354 0014 .text      __ct__Q210JUTProcBar5CTimeFv                                 Function */
 // JUTProcBar::CTime::JUTProcBar::CTime(void)
 #pragma push
 #pragma optimization_level 0

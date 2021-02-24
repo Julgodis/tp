@@ -8,17 +8,33 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopScn_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcNd_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_MENU_SCENE[10];
+}
+
 
 /* ###################################################################################### */
 /*                                         .data                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3018 0028 .data      g_profile_MENU_SCENE                                         */
-SECTION_DATA u8 g_profile_MENU_SCENE[40] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x0A, 0x00, 0x00, 0x80, 0x3A, 0x3A, 0x20,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x38, 0xB0,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803C3018-803C3040 0028 .data      g_profile_MENU_SCENE                                         SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_MENU_SCENE[10] = {
+	NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000A0000,
+	(void*)&g_fpcNd_Method,
+	NULL,
+	NULL,
+	NULL,
+	(void*)&g_fopScn_Method,
+	NULL,
+	NULL,
 };
 }
 

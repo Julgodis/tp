@@ -9,13 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
+extern void OSGetTick();
+/* Function             */
+extern void __OSGetSystemTime();
+/* Function             */
+extern void __OSTimeToSystemTime();
+/* Function             */
 extern void GetDates();
+/* Function             */
+extern void OSTicksToCalendarTime();
+/* Function             */
 extern void __div2i();
+/* Function             */
 extern void __mod2i();
+/* InitializedData      */
 SECTION_DATA extern u8 YearDays[48];
+/* InitializedData      */
 SECTION_DATA extern u8 LeapYearDays[48];
 }
 
@@ -25,13 +41,13 @@ SECTION_DATA extern u8 LeapYearDays[48];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D1048 0030 .data      YearDays                                                     */
+/* 803D1048-803D1078 0030 .data      YearDays                                                     InitializedData */
 SECTION_DATA u8 YearDays[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x3B, 0x00, 0x00, 0x00, 0x5A,
 	0x00, 0x00, 0x00, 0x78, 0x00, 0x00, 0x00, 0x97, 0x00, 0x00, 0x00, 0xB5, 0x00, 0x00, 0x00, 0xD4,
 	0x00, 0x00, 0x00, 0xF3, 0x00, 0x00, 0x01, 0x11, 0x00, 0x00, 0x01, 0x30, 0x00, 0x00, 0x01, 0x4E,
 };
-/* 803D1078 0030 .data      LeapYearDays                                                 */
+/* 803D1078-803D10A8 0030 .data      LeapYearDays                                                 InitializedData */
 SECTION_DATA u8 LeapYearDays[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x1F, 0x00, 0x00, 0x00, 0x3C, 0x00, 0x00, 0x00, 0x5B,
 	0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x98, 0x00, 0x00, 0x00, 0xB6, 0x00, 0x00, 0x00, 0xD5,
@@ -45,7 +61,7 @@ SECTION_DATA u8 LeapYearDays[48] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803426FC 0018 .text      OSGetTime                                                    */
+/* 803426FC-80342714 0018 .text      OSGetTime                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +71,7 @@ asm void OSGetTime() {
 }
 #pragma pop
 
-/* 80342714 0008 .text      OSGetTick                                                    */
+/* 80342714-8034271C 0008 .text      OSGetTick                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +81,7 @@ asm void OSGetTick() {
 }
 #pragma pop
 
-/* 8034271C 0064 .text      __OSGetSystemTime                                            */
+/* 8034271C-80342780 0064 .text      __OSGetSystemTime                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +91,7 @@ asm void __OSGetSystemTime() {
 }
 #pragma pop
 
-/* 80342780 0058 .text      __OSTimeToSystemTime                                         */
+/* 80342780-803427D8 0058 .text      __OSTimeToSystemTime                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +101,7 @@ asm void __OSTimeToSystemTime() {
 }
 #pragma pop
 
-/* 803427D8 019C .text      GetDates                                                     */
+/* 803427D8-80342974 019C .text      GetDates                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +111,7 @@ asm void GetDates() {
 }
 #pragma pop
 
-/* 80342974 0204 .text      OSTicksToCalendarTime                                        */
+/* 80342974-80342B78 0204 .text      OSTicksToCalendarTime                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

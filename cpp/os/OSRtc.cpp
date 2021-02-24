@@ -9,23 +9,64 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void WriteSramCallback();
+/* Function             */
 extern void WriteSram();
+/* Function             */
+extern void __OSInitSram();
+/* Function             */
+extern void __OSLockSram();
+/* Function             */
+extern void __OSLockSramEx();
+/* Function             */
 extern void UnlockSram();
+/* Function             */
+extern void __OSUnlockSram();
+/* Function             */
+extern void __OSUnlockSramEx();
+/* Function             */
+extern void __OSSyncSram();
+/* Function             */
+extern void OSGetSoundMode();
+/* Function             */
+extern void OSSetSoundMode();
+/* Function             */
+extern void OSGetProgressiveMode();
+/* Function             */
+extern void OSSetProgressiveMode();
+/* Function             */
+extern void OSGetWirelessID();
+/* Function             */
+extern void OSSetWirelessID();
+/* Function             */
 extern void OSGetGbsMode();
+/* Function             */
 extern void OSSetGbsMode();
+/* Function             */
 extern void EXIImm();
+/* Function             */
 extern void EXIImmEx();
+/* Function             */
 extern void EXIDma();
+/* Function             */
 extern void EXISync();
+/* Function             */
 extern void EXISelect();
+/* Function             */
 extern void EXIDeselect();
+/* Function             */
 extern void EXILock();
+/* Function             */
 extern void EXIUnlock();
-SECTION_BSS extern u8 Scb[88];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 Scb[84 + 4 /* padding */];
 }
 
 
@@ -34,9 +75,9 @@ SECTION_BSS extern u8 Scb[88];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044BB20 0000 .bss       ...bss.0                                                     */
-/* 8044BB20 0054 .bss       Scb                                                          */
-SECTION_BSS u8 Scb[88];
+/* 8044BB20-8044BB20 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8044BB20-8044BB78 0054 .bss       Scb                                                          ZeroInitializedData */
+SECTION_BSS u8 Scb[84 + 4 /* padding */];
 }
 
 
@@ -45,7 +86,7 @@ SECTION_BSS u8 Scb[88];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033FE90 0060 .text      WriteSramCallback                                            */
+/* 8033FE90-8033FEF0 0060 .text      WriteSramCallback                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +96,7 @@ asm void WriteSramCallback() {
 }
 #pragma pop
 
-/* 8033FEF0 0118 .text      WriteSram                                                    */
+/* 8033FEF0-80340008 0118 .text      WriteSram                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +106,7 @@ asm void WriteSram() {
 }
 #pragma pop
 
-/* 80340008 013C .text      __OSInitSram                                                 */
+/* 80340008-80340144 013C .text      __OSInitSram                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +116,7 @@ asm void __OSInitSram() {
 }
 #pragma pop
 
-/* 80340144 005C .text      __OSLockSram                                                 */
+/* 80340144-803401A0 005C .text      __OSLockSram                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +126,7 @@ asm void __OSLockSram() {
 }
 #pragma pop
 
-/* 803401A0 005C .text      __OSLockSramEx                                               */
+/* 803401A0-803401FC 005C .text      __OSLockSramEx                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +136,7 @@ asm void __OSLockSramEx() {
 }
 #pragma pop
 
-/* 803401FC 033C .text      UnlockSram                                                   */
+/* 803401FC-80340538 033C .text      UnlockSram                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +146,7 @@ asm void UnlockSram() {
 }
 #pragma pop
 
-/* 80340538 0024 .text      __OSUnlockSram                                               */
+/* 80340538-8034055C 0024 .text      __OSUnlockSram                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -115,7 +156,7 @@ asm void __OSUnlockSram() {
 }
 #pragma pop
 
-/* 8034055C 0024 .text      __OSUnlockSramEx                                             */
+/* 8034055C-80340580 0024 .text      __OSUnlockSramEx                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -125,7 +166,7 @@ asm void __OSUnlockSramEx() {
 }
 #pragma pop
 
-/* 80340580 0010 .text      __OSSyncSram                                                 */
+/* 80340580-80340590 0010 .text      __OSSyncSram                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -135,7 +176,7 @@ asm void __OSSyncSram() {
 }
 #pragma pop
 
-/* 80340590 0080 .text      OSGetSoundMode                                               */
+/* 80340590-80340610 0080 .text      OSGetSoundMode                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +186,7 @@ asm void OSGetSoundMode() {
 }
 #pragma pop
 
-/* 80340610 00A4 .text      OSSetSoundMode                                               */
+/* 80340610-803406B4 00A4 .text      OSSetSoundMode                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -155,7 +196,7 @@ asm void OSSetSoundMode() {
 }
 #pragma pop
 
-/* 803406B4 0070 .text      OSGetProgressiveMode                                         */
+/* 803406B4-80340724 0070 .text      OSGetProgressiveMode                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -165,7 +206,7 @@ asm void OSGetProgressiveMode() {
 }
 #pragma pop
 
-/* 80340724 00A4 .text      OSSetProgressiveMode                                         */
+/* 80340724-803407C8 00A4 .text      OSSetProgressiveMode                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -175,7 +216,7 @@ asm void OSSetProgressiveMode() {
 }
 #pragma pop
 
-/* 803407C8 0084 .text      OSGetWirelessID                                              */
+/* 803407C8-8034084C 0084 .text      OSGetWirelessID                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,7 +226,7 @@ asm void OSGetWirelessID() {
 }
 #pragma pop
 
-/* 8034084C 00AC .text      OSSetWirelessID                                              */
+/* 8034084C-803408F8 00AC .text      OSSetWirelessID                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -195,7 +236,7 @@ asm void OSSetWirelessID() {
 }
 #pragma pop
 
-/* 803408F8 0070 .text      OSGetGbsMode                                                 */
+/* 803408F8-80340968 0070 .text      OSGetGbsMode                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,7 +246,7 @@ asm void OSGetGbsMode() {
 }
 #pragma pop
 
-/* 80340968 00B8 .text      OSSetGbsMode                                                 */
+/* 80340968-80340A20 00B8 .text      OSSetGbsMode                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,8 +9,16 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
+extern void MWExitCriticalSection();
+/* Function             */
+extern void MWEnterCriticalSection();
+/* ReturnFunction       */
+extern void MWInitializeCriticalSection();
 }
 
 
@@ -19,7 +27,7 @@ extern void OSRestoreInterrupts();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80372CA4 0024 .text      MWExitCriticalSection                                        */
+/* 80372CA4-80372CC8 0024 .text      MWExitCriticalSection                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -29,7 +37,7 @@ asm void MWExitCriticalSection() {
 }
 #pragma pop
 
-/* 80372CC8 0030 .text      MWEnterCriticalSection                                       */
+/* 80372CC8-80372CF8 0030 .text      MWEnterCriticalSection                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +47,7 @@ asm void MWEnterCriticalSection() {
 }
 #pragma pop
 
-/* 80372CF8 0004 .text      MWInitializeCriticalSection                                  */
+/* 80372CF8-80372CFC 0004 .text      MWInitializeCriticalSection                                  ReturnFunction */
 void MWInitializeCriticalSection() {
 	return;
 }

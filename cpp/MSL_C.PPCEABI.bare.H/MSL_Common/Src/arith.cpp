@@ -8,13 +8,20 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void div();
+/* Function             */
+extern void abs();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80365078 0058 .text      div                                                          */
+/* 80365078-803650D0 0058 .text      div                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24,7 +31,7 @@ asm void div() {
 }
 #pragma pop
 
-/* 803650D0 0010 .text      abs                                                          */
+/* 803650D0-803650E0 0010 .text      abs                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

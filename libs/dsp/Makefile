@@ -20,8 +20,9 @@ DSP_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libdsp.a: dirs $(DSP_A_O_FILES)
+$(BUILD_DIR)/libdsp.a: $(DSP_A_O_FILES)
 	$(LD) -xm l $(DSP_A_LDFLAGS) -o $(BUILD_DIR)/libdsp.a $(DSP_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libdsp.a
 
 $(BUILD_DIR)/libs/dsp/%.o: cpp/dsp/%.cpp
 	mkdir -p $(@D)

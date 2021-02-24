@@ -10,25 +10,61 @@
 
 struct fopAc_ac_c;
 
-extern void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); /* fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs */
-extern void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); /* fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs */
+extern void fopAcM_orderOtherEventId(fopAc_ac_c*, short, u8, u16, u16, u16); /* fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs */
+extern void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, short, u16, u16, u16); /* fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs */
 
 extern "C" {
+/* Function             */
 extern void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+/* Function             */
 extern void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs();
+/* Function             */
 extern void reset__14dEvt_control_cFv();
+/* Function             */
 extern void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+/* Function             */
 extern void endCheck__16dEvent_manager_cFs();
+/* Function             */
+extern void eventUpdate__17dEvLib_callback_cFv();
+/* Function             */
 extern void setEvent__17dEvLib_callback_cFiii();
+/* Function             */
+extern void orderEvent__17dEvLib_callback_cFiii();
+/* Function             */
 extern void func_80048970();
+/* Function             */
 extern void initAction__17dEvLib_callback_cFv();
+/* Function             */
 extern void executeAction__17dEvLib_callback_cFv();
+/* Function             */
+extern void initStart__17dEvLib_callback_cFv();
+/* Function             */
 extern void executeStart__17dEvLib_callback_cFv();
+/* Function             */
+extern void initRun__17dEvLib_callback_cFv();
+/* Function             */
+extern void executeRun__17dEvLib_callback_cFv();
+/* SInitFunction        */
+extern void __sinit_d_event_lib_cpp();
+/* Function             */
 extern void __ptmf_test();
+/* Function             */
 extern void __ptmf_scall();
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_event_lib__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3617[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3618[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_event_lib__LIT_3621[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3622[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_startAction[24];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_runAction[24];
 }
 
@@ -38,28 +74,36 @@ SECTION_BSS extern u8 l_runAction[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A82B8 0000 .data      ...data.0                                                    */
-/* 803A82B8 000C .data      cNullVec__6Z2Calc                                            */
+/* 803A82B8-803A82B8 0000 .data      ...data.0                                                    InitializedData */
+/* 803A82B8-803A82C4 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_event_lib__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A82C4 000C .data      @3617                                                        */
-SECTION_DATA u8 LIT_3617[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x04, 0x8A, 0x50,
+/* 803A82C4-803A82D0 000C .data      @3617                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3617[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)initStart__17dEvLib_callback_cFv,
 };
-/* 803A82D0 000C .data      @3618                                                        */
-SECTION_DATA u8 LIT_3618[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x04, 0x8A, 0x70,
+/* 803A82D0-803A82DC 000C .data      @3618                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3618[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)executeStart__17dEvLib_callback_cFv,
 };
-/* 803A82DC 000C .data      @3621                                                        */
-SECTION_DATA u8 d_d_event_lib__LIT_3621[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x04, 0x8B, 0x1C,
+/* 803A82DC-803A82E8 000C .data      @3621                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_event_lib__LIT_3621[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)initRun__17dEvLib_callback_cFv,
 };
-/* 803A82E8 000C .data      @3622                                                        */
-SECTION_DATA u8 LIT_3622[16] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x04, 0x8B, 0x48,
+/* 803A82E8-803A82F8 000C .data      @3622                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3622[4] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)executeRun__17dEvLib_callback_cFv,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -69,9 +113,9 @@ SECTION_DATA u8 LIT_3622[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804246E0 0018 .bss       l_startAction                                                */
+/* 804246E0-804246F8 0018 .bss       l_startAction                                                ZeroInitializedData */
 SECTION_BSS u8 l_startAction[24];
-/* 804246F8 0018 .bss       l_runAction                                                  */
+/* 804246F8-80424710 0018 .bss       l_runAction                                                  ZeroInitializedData */
 SECTION_BSS u8 l_runAction[24];
 }
 
@@ -81,7 +125,7 @@ SECTION_BSS u8 l_runAction[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8004886C 0038 .text      eventUpdate__17dEvLib_callback_cFv                           */
+/* 8004886C-800488A4 0038 .text      eventUpdate__17dEvLib_callback_cFv                           Function */
 // dEvLib_callback_c::eventUpdate(void)
 #pragma push
 #pragma optimization_level 0
@@ -92,7 +136,7 @@ asm void eventUpdate__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 800488A4 009C .text      setEvent__17dEvLib_callback_cFiii                            */
+/* 800488A4-80048940 009C .text      setEvent__17dEvLib_callback_cFiii                            Function */
 // dEvLib_callback_c::setEvent(int, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -103,7 +147,7 @@ asm void setEvent__17dEvLib_callback_cFiii() {
 }
 #pragma pop
 
-/* 80048940 0030 .text      orderEvent__17dEvLib_callback_cFiii                          */
+/* 80048940-80048970 0030 .text      orderEvent__17dEvLib_callback_cFiii                          Function */
 // dEvLib_callback_c::orderEvent(int, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -114,7 +158,7 @@ asm void orderEvent__17dEvLib_callback_cFiii() {
 }
 #pragma pop
 
-/* 80048970 0038 .text      setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> */
+/* 80048970-800489A8 0038 .text      setAction__17dEvLib_callback_cFP33action_class<17dEvLib_callback_c> Function */
 // dEvLib_callback_c::setAction(action_class<17dEvLib_callback_c>*)
 #pragma push
 #pragma optimization_level 0
@@ -125,7 +169,7 @@ asm void func_80048970() {
 }
 #pragma pop
 
-/* 800489A8 0050 .text      initAction__17dEvLib_callback_cFv                            */
+/* 800489A8-800489F8 0050 .text      initAction__17dEvLib_callback_cFv                            Function */
 // dEvLib_callback_c::initAction(void)
 #pragma push
 #pragma optimization_level 0
@@ -136,7 +180,7 @@ asm void initAction__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 800489F8 0058 .text      executeAction__17dEvLib_callback_cFv                         */
+/* 800489F8-80048A50 0058 .text      executeAction__17dEvLib_callback_cFv                         Function */
 // dEvLib_callback_c::executeAction(void)
 #pragma push
 #pragma optimization_level 0
@@ -147,7 +191,7 @@ asm void executeAction__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 80048A50 0020 .text      initStart__17dEvLib_callback_cFv                             */
+/* 80048A50-80048A70 0020 .text      initStart__17dEvLib_callback_cFv                             Function */
 // dEvLib_callback_c::initStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -158,7 +202,7 @@ asm void initStart__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 80048A70 00AC .text      executeStart__17dEvLib_callback_cFv                          */
+/* 80048A70-80048B1C 00AC .text      executeStart__17dEvLib_callback_cFv                          Function */
 // dEvLib_callback_c::executeStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -169,7 +213,7 @@ asm void executeStart__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 80048B1C 002C .text      initRun__17dEvLib_callback_cFv                               */
+/* 80048B1C-80048B48 002C .text      initRun__17dEvLib_callback_cFv                               Function */
 // dEvLib_callback_c::initRun(void)
 #pragma push
 #pragma optimization_level 0
@@ -180,7 +224,7 @@ asm void initRun__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 80048B48 0090 .text      executeRun__17dEvLib_callback_cFv                            */
+/* 80048B48-80048BD8 0090 .text      executeRun__17dEvLib_callback_cFv                            Function */
 // dEvLib_callback_c::executeRun(void)
 #pragma push
 #pragma optimization_level 0
@@ -191,7 +235,7 @@ asm void executeRun__17dEvLib_callback_cFv() {
 }
 #pragma pop
 
-/* 80048BD8 007C .text      __sinit_d_event_lib_cpp                                      */
+/* 80048BD8-80048C54 007C .text      __sinit_d_event_lib_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

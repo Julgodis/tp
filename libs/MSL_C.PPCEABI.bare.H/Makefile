@@ -5,6 +5,7 @@
 MSL_C_PPCEABI_BARE_H_A_CPP_FILES := \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc.cpp \
+	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/errno.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/ansi_files.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith.cpp \
@@ -21,6 +22,7 @@ MSL_C_PPCEABI_BARE_H_A_CPP_FILES := \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/misc_io.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/scanf.cpp \
+	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/float.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/signal.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/string.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul.cpp \
@@ -57,12 +59,11 @@ MSL_C_PPCEABI_BARE_H_A_CPP_FILES := \
 	cpp/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_sqrt.cpp \
 	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/extras.cpp \
-	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/float.cpp \
-	cpp/MSL_C.PPCEABI.bare.H/MSL_Common/Src/errno.cpp \
 
 MSL_C_PPCEABI_BARE_H_A_O_FILES := \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/abort_exit.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/alloc.o \
+	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/errno.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/ansi_files.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common_Embedded/Src/ansi_fp.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/arith.o \
@@ -79,6 +80,7 @@ MSL_C_PPCEABI_BARE_H_A_O_FILES := \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/misc_io.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/printf.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/scanf.o \
+	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/float.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/signal.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/string.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/strtoul.o \
@@ -115,8 +117,6 @@ MSL_C_PPCEABI_BARE_H_A_O_FILES := \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/PPC_EABI/SRC/math_ppc.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/Math/Double_precision/w_sqrt.o \
 	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/extras.o \
-	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/float.o \
-	$(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/MSL_Common/Src/errno.o \
 
 MSL_C_PPCEABI_BARE_H_A_CFLAGS := \
 
@@ -126,8 +126,9 @@ MSL_C_PPCEABI_BARE_H_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libMSL_C.PPCEABI.bare.H.a: dirs $(MSL_C_PPCEABI_BARE_H_A_O_FILES)
+$(BUILD_DIR)/libMSL_C.PPCEABI.bare.H.a: $(MSL_C_PPCEABI_BARE_H_A_O_FILES)
 	$(LD) -xm l $(MSL_C_PPCEABI_BARE_H_A_LDFLAGS) -o $(BUILD_DIR)/libMSL_C.PPCEABI.bare.H.a $(MSL_C_PPCEABI_BARE_H_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libMSL_C.PPCEABI.bare.H.a
 
 $(BUILD_DIR)/libs/MSL_C.PPCEABI.bare.H/%.o: cpp/MSL_C.PPCEABI.bare.H/%.cpp
 	mkdir -p $(@D)

@@ -11,17 +11,37 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__9dSi_HIO_cFv();
+/* Function             */
+extern void animation__14dSelect_icon_cFv();
+/* Function             */
+extern void setAlpha__14dSelect_icon_cFUc();
+/* Function             */
+extern void setPos__14dSelect_icon_cFP7J2DPaneff();
+/* Function             */
 extern void __dt__9dSi_HIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_select_icon_cpp();
+/* Function             */
 extern void paneScale__8CPaneMgrFff();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* Function             */
 extern void __register_global_object();
-SECTION_DATA extern const void* __vt__9dSi_HIO_c[4];
-SECTION_BSS extern u8 LIT_3648[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9dSi_HIO_c[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_3648[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_siHIO[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_select_icon__LIT_3740[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_select_icon__LIT_3773;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_3814[8];
 }
 
@@ -31,8 +51,8 @@ SECTION_SDATA2 extern u8 LIT_3814[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BB7B8 000C .data      __vt__9dSi_HIO_c                                             */
-SECTION_DATA const  void* __vt__9dSi_HIO_c[4] = {
+/* 803BB7B8-803BB7C8 000C .data      __vt__9dSi_HIO_c                                             VTableData */
+SECTION_DATA void* __vt__9dSi_HIO_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__9dSi_HIO_cFv,
@@ -47,16 +67,16 @@ SECTION_DATA const  void* __vt__9dSi_HIO_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453A70 0004 .sdata2    @3740                                                        */
+/* 80453A70-80453A78 0004 .sdata2    @3740                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_select_icon__LIT_3740[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453A78 0008 .sdata2    @3773                                                        */
+/* 80453A78-80453A80 0008 .sdata2    @3773                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_select_icon__LIT_3773 = 4503601774854144.000000;
-/* 80453A80 0004 .sdata2    @3814                                                        */
+/* 80453A80-80453A88 0004 .sdata2    @3814                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_3814[8] = {
 	0x42, 0xC8, 0x00, 0x00,
 	/* padding */
@@ -70,8 +90,8 @@ SECTION_SDATA2 u8 LIT_3814[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8042CA10 000C .bss       @3648                                                        */
-SECTION_BSS u8 LIT_3648[16];
+/* 8042CA10-8042CA20 000C .bss       @3648                                                        ZeroInitializedData */
+SECTION_BSS u8 LIT_3648[12 + 4 /* padding */];
 }
 
 
@@ -80,10 +100,8 @@ SECTION_BSS u8 LIT_3648[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451050 0008 .sbss      g_siHIO                                                      */
+/* 80451050-80451058 0008 .sbss      g_siHIO                                                      ZeroInitializedData */
 SECTION_SBSS u8 g_siHIO[8];
-/* 80451058 0004 .sbss      data_80451058                                                */
-SECTION_SBSS u8 data_80451058[4];
 }
 
 
@@ -92,7 +110,7 @@ SECTION_SBSS u8 data_80451058[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80195A2C 0010 .text      __ct__9dSi_HIO_cFv                                           */
+/* 80195A2C-80195A3C 0010 .text      __ct__9dSi_HIO_cFv                                           Function */
 // dSi_HIO_c::dSi_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -103,7 +121,7 @@ asm void __ct__9dSi_HIO_cFv() {
 }
 #pragma pop
 
-/* 80195A3C 0104 .text      animation__14dSelect_icon_cFv                                */
+/* 80195A3C-80195B40 0104 .text      animation__14dSelect_icon_cFv                                Function */
 // dSelect_icon_c::animation(void)
 #pragma push
 #pragma optimization_level 0
@@ -114,7 +132,7 @@ asm void animation__14dSelect_icon_cFv() {
 }
 #pragma pop
 
-/* 80195B40 0030 .text      setAlpha__14dSelect_icon_cFUc                                */
+/* 80195B40-80195B70 0030 .text      setAlpha__14dSelect_icon_cFUc                                Function */
 // dSelect_icon_c::setAlpha(u8)
 #pragma push
 #pragma optimization_level 0
@@ -125,7 +143,7 @@ asm void setAlpha__14dSelect_icon_cFUc() {
 }
 #pragma pop
 
-/* 80195B70 00AC .text      setPos__14dSelect_icon_cFP7J2DPaneff                         */
+/* 80195B70-80195C1C 00AC .text      setPos__14dSelect_icon_cFP7J2DPaneff                         Function */
 // dSelect_icon_c::setPos(J2DPane*, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -136,7 +154,7 @@ asm void setPos__14dSelect_icon_cFP7J2DPaneff() {
 }
 #pragma pop
 
-/* 80195C1C 0048 .text      __dt__9dSi_HIO_cFv                                           */
+/* 80195C1C-80195C64 0048 .text      __dt__9dSi_HIO_cFv                                           Function */
 // dSi_HIO_c::~dSi_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -147,7 +165,7 @@ asm void __dt__9dSi_HIO_cFv() {
 }
 #pragma pop
 
-/* 80195C64 0038 .text      __sinit_d_select_icon_cpp                                    */
+/* 80195C64-80195C9C 0038 .text      __sinit_d_select_icon_cpp                                    SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

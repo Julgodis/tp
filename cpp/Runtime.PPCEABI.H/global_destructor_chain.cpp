@@ -9,7 +9,12 @@
 // 
 
 extern "C" {
-SECTION_SBSS extern u8 __global_destructor_chain[4];
+/* Function             */
+extern void __destroy_global_chain();
+/* Function             */
+extern void __register_global_object();
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __global_destructor_chain[4 + 4 /* padding */];
 }
 
 
@@ -18,9 +23,8 @@ SECTION_SBSS extern u8 __global_destructor_chain[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451988 0004 .sbss      __global_destructor_chain                                    */
-SECTION_SBSS u8 __global_destructor_chain[4];
-SECTION_SBSS u8 pad_8045198C[4];
+/* 80451988-80451990 0004 .sbss      __global_destructor_chain                                    ZeroInitializedData */
+SECTION_SBSS u8 __global_destructor_chain[4 + 4 /* padding */];
 }
 
 
@@ -29,7 +33,7 @@ SECTION_SBSS u8 pad_8045198C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80361BDC 0048 .text      __destroy_global_chain                                       */
+/* 80361BDC-80361C24 0048 .text      __destroy_global_chain                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -39,7 +43,7 @@ asm void __destroy_global_chain() {
 }
 #pragma pop
 
-/* 80361C24 0018 .text      __register_global_object                                     */
+/* 80361C24-80361C3C 0018 .text      __register_global_object                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

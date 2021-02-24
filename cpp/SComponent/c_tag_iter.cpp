@@ -8,9 +8,19 @@
 // Additional Symbols:
 // 
 
+struct method_filter;
 struct create_tag_class;
 struct judge_filter;
-struct method_filter;
+
+extern void cTgIt_MethodCall(create_tag_class*, method_filter*); /* cTgIt_MethodCall__FP16create_tag_classP13method_filter */
+extern void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); /* cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
+
+extern "C" {
+/* Function             */
+extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+/* Function             */
+extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+}
 
 
 /* ###################################################################################### */
@@ -18,7 +28,7 @@ struct method_filter;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266A7C 0034 .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter       */
+/* 80266A7C-80266AB0 0034 .text      cTgIt_MethodCall__FP16create_tag_classP13method_filter       Function */
 }
 
 #pragma push
@@ -31,7 +41,7 @@ asm void cTgIt_MethodCall(create_tag_class*, method_filter*) {
 #pragma pop
 
 extern "C" {
-/* 80266AB0 0034 .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter       */
+/* 80266AB0-80266AE4 0034 .text      cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter       Function */
 }
 
 #pragma push

@@ -9,18 +9,36 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void _ExitProcess();
+/* Function             */
 extern void __destroy_global_chain();
+/* Function             */
+extern void exit();
+/* Function             */
+extern void abort();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* ReturnFunction       */
 extern void __kill_critical_regions();
+/* Function             */
 extern void raise();
-SECTION_DTORS extern const u8 __destroy_global_chain_reference[4];
+/* SymbolReferenceArrayData */
+extern const void* __destroy_global_chain_reference;
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __atexit_funcs[256];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __aborting[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __atexit_curr_func[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __stdio_exit[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __console_exit[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_804519A0[8];
 }
 
 
@@ -29,7 +47,7 @@ SECTION_SBSS extern u8 __console_exit[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D440 0100 .bss       __atexit_funcs                                               */
+/* 8044D440-8044D540 0100 .bss       __atexit_funcs                                               ZeroInitializedData */
 SECTION_BSS u8 __atexit_funcs[256];
 }
 
@@ -39,15 +57,15 @@ SECTION_BSS u8 __atexit_funcs[256];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451990 0004 .sbss      __aborting                                                   */
+/* 80451990-80451994 0004 .sbss      __aborting                                                   ZeroInitializedData */
 SECTION_SBSS u8 __aborting[4];
-/* 80451994 0004 .sbss      __atexit_curr_func                                           */
+/* 80451994-80451998 0004 .sbss      __atexit_curr_func                                           ZeroInitializedData */
 SECTION_SBSS u8 __atexit_curr_func[4];
-/* 80451998 0004 .sbss      __stdio_exit                                                 */
+/* 80451998-8045199C 0004 .sbss      __stdio_exit                                                 ZeroInitializedData */
 SECTION_SBSS u8 __stdio_exit[4];
-/* 8045199C 0004 .sbss      __console_exit                                               */
+/* 8045199C-804519A0 0004 .sbss      __console_exit                                               ZeroInitializedData */
 SECTION_SBSS u8 __console_exit[4];
-/* 804519A0 0008 .sbss      data_804519A0                                                */
+/* 804519A0-804519A8 0008 .sbss      data_804519A0                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804519A0[8];
 }
 
@@ -57,7 +75,7 @@ SECTION_SBSS u8 data_804519A0[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803629CC 00F0 .text      exit                                                         */
+/* 803629CC-80362ABC 00F0 .text      exit                                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +85,7 @@ asm void exit() {
 }
 #pragma pop
 
-/* 80362ABC 009C .text      abort                                                        */
+/* 80362ABC-80362B58 009C .text      abort                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

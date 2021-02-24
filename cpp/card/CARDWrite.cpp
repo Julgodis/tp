@@ -9,23 +9,43 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void OSGetTime();
+/* ReturnFunction       */
 extern void __CARDDefaultApiCallback();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDEraseSector();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* Function             */
 extern void __CARDWrite();
+/* FirstParamFunction   */
 extern u32 __CARDGetFatBlock(u8*);
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void __CARDUpdateDir();
+/* Function             */
 extern void __CARDIsWritable();
+/* Function             */
 extern void __CARDSeek();
+/* Function             */
 extern void CARDWrite__WriteCallback();
+/* Function             */
 extern void CARDWrite__EraseCallback();
+/* Function             */
 extern void CARDWriteAsync();
+/* Function             */
+extern void CARDWrite();
+/* Function             */
 extern void __div2i();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDBlock[544];
 }
 
@@ -35,7 +55,7 @@ SECTION_BSS extern u8 __CARDBlock[544];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80358914 0170 .text      WriteCallback                                                */
+/* 80358914-80358A84 0170 .text      WriteCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +65,7 @@ asm void CARDWrite__WriteCallback() {
 }
 #pragma pop
 
-/* 80358A84 00B0 .text      EraseCallback                                                */
+/* 80358A84-80358B34 00B0 .text      EraseCallback                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +75,7 @@ asm void CARDWrite__EraseCallback() {
 }
 #pragma pop
 
-/* 80358B34 0114 .text      CARDWriteAsync                                               */
+/* 80358B34-80358C48 0114 .text      CARDWriteAsync                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +85,7 @@ asm void CARDWriteAsync() {
 }
 #pragma pop
 
-/* 80358C48 0048 .text      CARDWrite                                                    */
+/* 80358C48-80358C90 0048 .text      CARDWrite                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

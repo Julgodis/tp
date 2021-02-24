@@ -44,8 +44,9 @@ JPARTICLE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJParticle.a: dirs $(JPARTICLE_A_O_FILES)
+$(BUILD_DIR)/libJParticle.a: $(JPARTICLE_A_O_FILES)
 	$(LD) -xm l $(JPARTICLE_A_LDFLAGS) -o $(BUILD_DIR)/libJParticle.a $(JPARTICLE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJParticle.a
 
 $(BUILD_DIR)/libs/JParticle/%.o: cpp/JParticle/%.cpp
 	mkdir -p $(@D)

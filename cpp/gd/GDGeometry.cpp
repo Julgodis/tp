@@ -9,8 +9,17 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void GDOverflowed();
-SECTION_DATA extern u8 GDGeometry__LIT_121[104];
+/* Function             */
+extern void GDSetVtxDescv();
+/* Function             */
+extern void GDSetArray();
+/* Function             */
+extern void GDSetArrayRaw();
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GDGeometry__LIT_121[26];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 }
 
@@ -20,15 +29,34 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D2948 0068 .data      @121                                                         */
-SECTION_DATA u8 GDGeometry__LIT_121[104] = {
-	0x80, 0x36, 0x11, 0x7C, 0x80, 0x36, 0x11, 0x84, 0x80, 0x36, 0x11, 0x94, 0x80, 0x36, 0x11, 0xA8,
-	0x80, 0x36, 0x11, 0xBC, 0x80, 0x36, 0x11, 0xD0, 0x80, 0x36, 0x11, 0xE4, 0x80, 0x36, 0x11, 0xF8,
-	0x80, 0x36, 0x12, 0x0C, 0x80, 0x36, 0x12, 0x20, 0x80, 0x36, 0x12, 0x28, 0x80, 0x36, 0x12, 0x58,
-	0x80, 0x36, 0x12, 0x74, 0x80, 0x36, 0x12, 0x90, 0x80, 0x36, 0x12, 0xAC, 0x80, 0x36, 0x12, 0xC8,
-	0x80, 0x36, 0x12, 0xE4, 0x80, 0x36, 0x13, 0x00, 0x80, 0x36, 0x13, 0x1C, 0x80, 0x36, 0x13, 0x38,
-	0x80, 0x36, 0x13, 0x54, 0x80, 0x36, 0x13, 0x6C, 0x80, 0x36, 0x13, 0x6C, 0x80, 0x36, 0x13, 0x6C,
-	0x80, 0x36, 0x13, 0x6C, 0x80, 0x36, 0x12, 0x40,
+/* 803D2948-803D29B0 0068 .data      @121                                                         SymbolReferenceArrayData */
+SECTION_DATA void* GDGeometry__LIT_121[26] = {
+	(void*)(((u32*)GDSetVtxDescv)+30),
+	(void*)(((u32*)GDSetVtxDescv)+32),
+	(void*)(((u32*)GDSetVtxDescv)+36),
+	(void*)(((u32*)GDSetVtxDescv)+41),
+	(void*)(((u32*)GDSetVtxDescv)+46),
+	(void*)(((u32*)GDSetVtxDescv)+51),
+	(void*)(((u32*)GDSetVtxDescv)+56),
+	(void*)(((u32*)GDSetVtxDescv)+61),
+	(void*)(((u32*)GDSetVtxDescv)+66),
+	(void*)(((u32*)GDSetVtxDescv)+71),
+	(void*)(((u32*)GDSetVtxDescv)+73),
+	(void*)(((u32*)GDSetVtxDescv)+85),
+	(void*)(((u32*)GDSetVtxDescv)+92),
+	(void*)(((u32*)GDSetVtxDescv)+99),
+	(void*)(((u32*)GDSetVtxDescv)+106),
+	(void*)(((u32*)GDSetVtxDescv)+113),
+	(void*)(((u32*)GDSetVtxDescv)+120),
+	(void*)(((u32*)GDSetVtxDescv)+127),
+	(void*)(((u32*)GDSetVtxDescv)+134),
+	(void*)(((u32*)GDSetVtxDescv)+141),
+	(void*)(((u32*)GDSetVtxDescv)+148),
+	(void*)(((u32*)GDSetVtxDescv)+154),
+	(void*)(((u32*)GDSetVtxDescv)+154),
+	(void*)(((u32*)GDSetVtxDescv)+154),
+	(void*)(((u32*)GDSetVtxDescv)+154),
+	(void*)(((u32*)GDSetVtxDescv)+79),
 };
 }
 
@@ -38,7 +66,7 @@ SECTION_DATA u8 GDGeometry__LIT_121[104] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80361104 05FC .text      GDSetVtxDescv                                                */
+/* 80361104-80361700 05FC .text      GDSetVtxDescv                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -48,7 +76,7 @@ asm void GDSetVtxDescv() {
 }
 #pragma pop
 
-/* 80361700 020C .text      GDSetArray                                                   */
+/* 80361700-8036190C 020C .text      GDSetArray                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -58,7 +86,7 @@ asm void GDSetArray() {
 }
 #pragma pop
 
-/* 8036190C 0208 .text      GDSetArrayRaw                                                */
+/* 8036190C-80361B14 0208 .text      GDSetArrayRaw                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

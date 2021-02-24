@@ -11,20 +11,57 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __dt__18JPAEmitterCallBackFv();
+/* Function             */
+extern void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
+/* Function             */
+extern void createParticle__14JPABaseEmitterFv();
+/* Function             */
+extern void createChild__14JPABaseEmitterFP15JPABaseParticle();
+/* Function             */
+extern void deleteAllParticle__14JPABaseEmitterFv();
+/* Function             */
+extern void processTillStartFrame__14JPABaseEmitterFv();
+/* Function             */
+extern void processTermination__14JPABaseEmitterFv();
+/* Function             */
+extern void func_8027EEB0();
+/* Function             */
+extern void getCurrentCreateNumber__14JPABaseEmitterCFv();
+/* Function             */
+extern void getDrawCount__14JPABaseEmitterCFv();
+/* Function             */
+extern void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
+/* Function             */
 extern void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
+/* Function             */
 extern void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void load__10JUTTextureF11_GXTexMapID();
+/* Function             */
 extern void PSMTXIdentity();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXScale();
+/* Function             */
 extern void PSMTXMultVec();
-SECTION_DATA extern const void* __vt__18JPAEmitterCallBack[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18JPAEmitterCallBack[7];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_epsilon[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JPAEmitter__LIT_2440;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JPAEmitter__LIT_2441[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2442;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_2443;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2444[8];
 }
 
@@ -34,20 +71,20 @@ SECTION_SDATA2 extern u8 LIT_2444[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455370 0004 .sdata2    @2440                                                        */
+/* 80455370-80455374 0004 .sdata2    @2440                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 JPAEmitter__LIT_2440 = 32.000000f;
-/* 80455374 0004 .sdata2    @2441                                                        */
+/* 80455374-80455378 0004 .sdata2    @2441                                                        InitializedData */
 SECTION_SDATA2 u8 JPAEmitter__LIT_2441[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455378 0004 .sdata2    @2442                                                        */
+/* 80455378-8045537C 0004 .sdata2    @2442                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_2442 = 0.500000f;
-/* 8045537C 0004 .sdata2    @2443                                                        */
+/* 8045537C-80455380 0004 .sdata2    @2443                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 LIT_2443 = 3.000000f;
-/* 80455380 0004 .sdata2    @2444                                                        */
+/* 80455380-80455388 0004 .sdata2    @2444                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2444[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -61,7 +98,7 @@ SECTION_SDATA2 u8 LIT_2444[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027E6A4 0048 .text      __dt__18JPAEmitterCallBackFv                                 */
+/* 8027E6A4-8027E6EC 0048 .text      __dt__18JPAEmitterCallBackFv                                 Function */
 // JPAEmitterCallBack::~JPAEmitterCallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +109,7 @@ asm void __dt__18JPAEmitterCallBackFv() {
 }
 #pragma pop
 
-/* 8027E6EC 0354 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    */
+/* 8027E6EC-8027EA40 0354 .text      init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource    Function */
 // JPABaseEmitter::init(JPAEmitterManager*, JPAResource*)
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +120,7 @@ asm void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource() {
 }
 #pragma pop
 
-/* 8027EA40 0120 .text      createParticle__14JPABaseEmitterFv                           */
+/* 8027EA40-8027EB60 0120 .text      createParticle__14JPABaseEmitterFv                           Function */
 // JPABaseEmitter::createParticle(void)
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +131,7 @@ asm void createParticle__14JPABaseEmitterFv() {
 }
 #pragma pop
 
-/* 8027EB60 0100 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             */
+/* 8027EB60-8027EC60 0100 .text      createChild__14JPABaseEmitterFP15JPABaseParticle             Function */
 // JPABaseEmitter::createChild(JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +142,7 @@ asm void createChild__14JPABaseEmitterFP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8027EC60 0174 .text      deleteAllParticle__14JPABaseEmitterFv                        */
+/* 8027EC60-8027EDD4 0174 .text      deleteAllParticle__14JPABaseEmitterFv                        Function */
 // JPABaseEmitter::deleteAllParticle(void)
 #pragma push
 #pragma optimization_level 0
@@ -116,7 +153,7 @@ asm void deleteAllParticle__14JPABaseEmitterFv() {
 }
 #pragma pop
 
-/* 8027EDD4 0040 .text      processTillStartFrame__14JPABaseEmitterFv                    */
+/* 8027EDD4-8027EE14 0040 .text      processTillStartFrame__14JPABaseEmitterFv                    Function */
 // JPABaseEmitter::processTillStartFrame(void)
 #pragma push
 #pragma optimization_level 0
@@ -127,7 +164,7 @@ asm void processTillStartFrame__14JPABaseEmitterFv() {
 }
 #pragma pop
 
-/* 8027EE14 009C .text      processTermination__14JPABaseEmitterFv                       */
+/* 8027EE14-8027EEB0 009C .text      processTermination__14JPABaseEmitterFv                       Function */
 // JPABaseEmitter::processTermination(void)
 #pragma push
 #pragma optimization_level 0
@@ -138,7 +175,7 @@ asm void processTermination__14JPABaseEmitterFv() {
 }
 #pragma pop
 
-/* 8027EEB0 0080 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> */
+/* 8027EEB0-8027EF30 0080 .text      calcEmitterGlobalPosition__14JPABaseEmitterCFPQ29JGeometry8TVec3<f> Function */
 // JPABaseEmitter::calcEmitterGlobalPosition(JGeometry::TVec3<f>) const
 #pragma push
 #pragma optimization_level 0
@@ -149,7 +186,7 @@ asm void func_8027EEB0() {
 }
 #pragma pop
 
-/* 8027EF30 0010 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  */
+/* 8027EF30-8027EF40 0010 .text      getCurrentCreateNumber__14JPABaseEmitterCFv                  Function */
 // JPABaseEmitter::getCurrentCreateNumber(void) const
 #pragma push
 #pragma optimization_level 0
@@ -160,7 +197,7 @@ asm void getCurrentCreateNumber__14JPABaseEmitterCFv() {
 }
 #pragma pop
 
-/* 8027EF40 0010 .text      getDrawCount__14JPABaseEmitterCFv                            */
+/* 8027EF40-8027EF50 0010 .text      getDrawCount__14JPABaseEmitterCFv                            Function */
 // JPABaseEmitter::getDrawCount(void) const
 #pragma push
 #pragma optimization_level 0
@@ -171,7 +208,7 @@ asm void getDrawCount__14JPABaseEmitterCFv() {
 }
 #pragma pop
 
-/* 8027EF50 0054 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                */
+/* 8027EF50-8027EFA4 0054 .text      loadTexture__14JPABaseEmitterFUc11_GXTexMapID                Function */
 // JPABaseEmitter::loadTexture(u8, _GXTexMapID)
 #pragma push
 #pragma optimization_level 0

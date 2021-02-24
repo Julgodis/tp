@@ -9,14 +9,36 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __GXSetVCD();
+/* Function             */
 extern void __GXCalculateVLim();
+/* Function             */
 extern void __GXSetVAT();
+/* Function             */
+extern void __GXSetDirtyState();
+/* Function             */
+extern void GXBegin();
+/* Function             */
 extern void __GXSendFlushPrim();
+/* Function             */
+extern void GXSetLineWidth();
+/* Function             */
+extern void GXSetPointSize();
+/* Function             */
+extern void GXEnableTexOffsets();
+/* Function             */
+extern void GXSetCullMode();
+/* Function             */
+extern void GXSetCoPlanar();
+/* Function             */
 extern void __GXSetGenMode();
+/* Function             */
 extern void __GXSetSUTexRegs();
+/* ReturnFunction       */
 extern void __GXUpdateBPMask();
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -25,7 +47,7 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035C6E4 0080 .text      __GXSetDirtyState                                            */
+/* 8035C6E4-8035C764 0080 .text      __GXSetDirtyState                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35,7 +57,7 @@ asm void __GXSetDirtyState() {
 }
 #pragma pop
 
-/* 8035C764 00D0 .text      GXBegin                                                      */
+/* 8035C764-8035C834 00D0 .text      GXBegin                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +67,7 @@ asm void GXBegin() {
 }
 #pragma pop
 
-/* 8035C834 0088 .text      __GXSendFlushPrim                                            */
+/* 8035C834-8035C8BC 0088 .text      __GXSendFlushPrim                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +77,7 @@ asm void __GXSendFlushPrim() {
 }
 #pragma pop
 
-/* 8035C8BC 0040 .text      GXSetLineWidth                                               */
+/* 8035C8BC-8035C8FC 0040 .text      GXSetLineWidth                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +87,7 @@ asm void GXSetLineWidth() {
 }
 #pragma pop
 
-/* 8035C8FC 0040 .text      GXSetPointSize                                               */
+/* 8035C8FC-8035C93C 0040 .text      GXSetPointSize                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +97,7 @@ asm void GXSetPointSize() {
 }
 #pragma pop
 
-/* 8035C93C 0048 .text      GXEnableTexOffsets                                           */
+/* 8035C93C-8035C984 0048 .text      GXEnableTexOffsets                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,7 +107,7 @@ asm void GXEnableTexOffsets() {
 }
 #pragma pop
 
-/* 8035C984 0028 .text      GXSetCullMode                                                */
+/* 8035C984-8035C9AC 0028 .text      GXSetCullMode                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -95,7 +117,7 @@ asm void GXSetCullMode() {
 }
 #pragma pop
 
-/* 8035C9AC 0034 .text      GXSetCoPlanar                                                */
+/* 8035C9AC-8035C9E0 0034 .text      GXSetCoPlanar                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -105,7 +127,7 @@ asm void GXSetCoPlanar() {
 }
 #pragma pop
 
-/* 8035C9E0 0024 .text      __GXSetGenMode                                               */
+/* 8035C9E0-8035CA04 0024 .text      __GXSetGenMode                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

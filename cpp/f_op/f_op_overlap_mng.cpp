@@ -9,11 +9,24 @@
 // 
 
 struct request_base_class;
-struct scene_class;
-struct overlap_task_class;
 struct overlap_request_class;
+struct overlap_task_class;
+struct scene_class;
 
-extern void fopOvlpReq_Request(overlap_request_class*, s16, u16); /* fopOvlpReq_Request__FP21overlap_request_classsUs */
+extern void fopOvlpM_SceneIsStop(void); /* fopOvlpM_SceneIsStop__Fv */
+extern void fopOvlpM_SceneIsStart(void); /* fopOvlpM_SceneIsStart__Fv */
+extern void fopOvlpM_IsOutReq(overlap_task_class*); /* fopOvlpM_IsOutReq__FP18overlap_task_class */
+extern void fopOvlpM_Done(overlap_task_class*); /* fopOvlpM_Done__FP18overlap_task_class */
+extern void fopOvlpM_ToldAboutID(unsigned int); /* fopOvlpM_ToldAboutID__FUi */
+extern void fopOvlpM_IsPeek(void); /* fopOvlpM_IsPeek__Fv */
+extern void fopOvlpM_IsDone(void); /* fopOvlpM_IsDone__Fv */
+extern void fopOvlpM_IsDoingReq(void); /* fopOvlpM_IsDoingReq__Fv */
+extern void fopOvlpM_ClearOfReq(void); /* fopOvlpM_ClearOfReq__Fv */
+extern void fopOvlpM_Request(short, u16); /* fopOvlpM_Request__FsUs */
+extern void fopOvlpM_Management(void); /* fopOvlpM_Management__Fv */
+extern void fopOvlpM_Cancel(void); /* fopOvlpM_Cancel__Fv */
+extern void fopOvlpM_Init(void); /* fopOvlpM_Init__Fv */
+extern void fopOvlpReq_Request(overlap_request_class*, short, u16); /* fopOvlpReq_Request__FP21overlap_request_classsUs */
 extern void fopOvlpReq_Handler(overlap_request_class*); /* fopOvlpReq_Handler__FP21overlap_request_class */
 extern void fopOvlpReq_Cancel(overlap_request_class*); /* fopOvlpReq_Cancel__FP21overlap_request_class */
 extern void fopOvlpReq_OverlapClr(overlap_request_class*); /* fopOvlpReq_OverlapClr__FP21overlap_request_class */
@@ -24,16 +37,53 @@ extern void cReq_Is_Done(request_base_class*); /* cReq_Is_Done__FP18request_base
 extern void cReq_Done(request_base_class*); /* cReq_Done__FP18request_base_class */
 
 extern "C" {
+/* Function             */
+extern void fopOvlpM_SceneIsStop__Fv();
+/* Function             */
+extern void fopOvlpM_SceneIsStart__Fv();
+/* Function             */
+extern void fopOvlpM_IsOutReq__FP18overlap_task_class();
+/* Function             */
+extern void fopOvlpM_Done__FP18overlap_task_class();
+/* Function             */
+extern void fopOvlpM_ToldAboutID__FUi();
+/* Function             */
+extern void fopOvlpM_IsPeek__Fv();
+/* Function             */
+extern void fopOvlpM_IsDone__Fv();
+/* Function             */
+extern void fopOvlpM_IsDoingReq__Fv();
+/* Function             */
+extern void fopOvlpM_ClearOfReq__Fv();
+/* Function             */
+extern void fopOvlpM_Request__FsUs();
+/* Function             */
+extern void fopOvlpM_Management__Fv();
+/* Function             */
+extern void fopOvlpM_Cancel__Fv();
+/* ReturnFunction       */
+extern void fopOvlpM_Init__Fv();
+/* Function             */
 extern void fopOvlpReq_Request__FP21overlap_request_classsUs();
+/* Function             */
 extern void fopOvlpReq_Handler__FP21overlap_request_class();
+/* Function             */
 extern void fopOvlpReq_Cancel__FP21overlap_request_class();
+/* Function             */
 extern void fopOvlpReq_OverlapClr__FP21overlap_request_class();
+/* Function             */
 extern void fopScnPause_Enable__FP11scene_class();
+/* Function             */
 extern void fopScnPause_Disable__FP11scene_class();
+/* Function             */
 extern void fpcEx_SearchByID__FUi();
+/* Function             */
 extern void cReq_Is_Done__FP18request_base_class();
+/* Function             */
 extern void cReq_Done__FP18request_base_class();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_fopOvlpM_Request[40];
+/* InitializedData      */
 SECTION_SDATA extern u8 l_fopOvlpM_overlap[8];
 }
 
@@ -43,7 +93,7 @@ SECTION_SDATA extern u8 l_fopOvlpM_overlap[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505B0 0004 .sdata     l_fopOvlpM_overlap                                           */
+/* 804505B0-804505B8 0004 .sdata     l_fopOvlpM_overlap                                           InitializedData */
 SECTION_SDATA u8 l_fopOvlpM_overlap[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -57,7 +107,7 @@ SECTION_SDATA u8 l_fopOvlpM_overlap[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F1DE8 0028 .bss       l_fopOvlpM_Request                                           */
+/* 803F1DE8-803F1E10 0028 .bss       l_fopOvlpM_Request                                           ZeroInitializedData */
 SECTION_BSS u8 l_fopOvlpM_Request[40];
 }
 
@@ -67,7 +117,7 @@ SECTION_BSS u8 l_fopOvlpM_Request[40];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001E484 0040 .text      fopOvlpM_SceneIsStop__Fv                                     */
+/* 8001E484-8001E4C4 0040 .text      fopOvlpM_SceneIsStop__Fv                                     Function */
 }
 
 #pragma push
@@ -80,7 +130,7 @@ asm void fopOvlpM_SceneIsStop(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E4C4 0040 .text      fopOvlpM_SceneIsStart__Fv                                    */
+/* 8001E4C4-8001E504 0040 .text      fopOvlpM_SceneIsStart__Fv                                    Function */
 }
 
 #pragma push
@@ -93,7 +143,7 @@ asm void fopOvlpM_SceneIsStart(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E504 0018 .text      fopOvlpM_IsOutReq__FP18overlap_task_class                    */
+/* 8001E504-8001E51C 0018 .text      fopOvlpM_IsOutReq__FP18overlap_task_class                    Function */
 }
 
 #pragma push
@@ -106,7 +156,7 @@ asm void fopOvlpM_IsOutReq(overlap_task_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E51C 0024 .text      fopOvlpM_Done__FP18overlap_task_class                        */
+/* 8001E51C-8001E540 0024 .text      fopOvlpM_Done__FP18overlap_task_class                        Function */
 }
 
 #pragma push
@@ -119,7 +169,7 @@ asm void fopOvlpM_Done(overlap_task_class*) {
 #pragma pop
 
 extern "C" {
-/* 8001E540 0018 .text      fopOvlpM_ToldAboutID__FUi                                    */
+/* 8001E540-8001E558 0018 .text      fopOvlpM_ToldAboutID__FUi                                    Function */
 }
 
 #pragma push
@@ -132,7 +182,7 @@ asm void fopOvlpM_ToldAboutID(unsigned int) {
 #pragma pop
 
 extern "C" {
-/* 8001E558 001C .text      fopOvlpM_IsPeek__Fv                                          */
+/* 8001E558-8001E574 001C .text      fopOvlpM_IsPeek__Fv                                          Function */
 }
 
 #pragma push
@@ -145,7 +195,7 @@ asm void fopOvlpM_IsPeek(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E574 0034 .text      fopOvlpM_IsDone__Fv                                          */
+/* 8001E574-8001E5A8 0034 .text      fopOvlpM_IsDone__Fv                                          Function */
 }
 
 #pragma push
@@ -158,7 +208,7 @@ asm void fopOvlpM_IsDone(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E5A8 0028 .text      fopOvlpM_IsDoingReq__Fv                                      */
+/* 8001E5A8-8001E5D0 0028 .text      fopOvlpM_IsDoingReq__Fv                                      Function */
 }
 
 #pragma push
@@ -171,7 +221,7 @@ asm void fopOvlpM_IsDoingReq(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E5D0 0034 .text      fopOvlpM_ClearOfReq__Fv                                      */
+/* 8001E5D0-8001E604 0034 .text      fopOvlpM_ClearOfReq__Fv                                      Function */
 }
 
 #pragma push
@@ -184,20 +234,20 @@ asm void fopOvlpM_ClearOfReq(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E604 004C .text      fopOvlpM_Request__FsUs                                       */
+/* 8001E604-8001E650 004C .text      fopOvlpM_Request__FsUs                                       Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fopOvlpM_Request(s16, u16) {
+asm void fopOvlpM_Request(short, u16) {
 	nofralloc
 #include "_include/f_op/f_op_overlap_mng/fopOvlpM_Request__FsUs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8001E650 0048 .text      fopOvlpM_Management__Fv                                      */
+/* 8001E650-8001E698 0048 .text      fopOvlpM_Management__Fv                                      Function */
 }
 
 #pragma push
@@ -210,7 +260,7 @@ asm void fopOvlpM_Management(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E698 0050 .text      fopOvlpM_Cancel__Fv                                          */
+/* 8001E698-8001E6E8 0050 .text      fopOvlpM_Cancel__Fv                                          Function */
 }
 
 #pragma push
@@ -223,11 +273,13 @@ asm void fopOvlpM_Cancel(void) {
 #pragma pop
 
 extern "C" {
-/* 8001E6E8 0004 .text      fopOvlpM_Init__Fv                                            */
-// fopOvlpM_Init(void)
+/* 8001E6E8-8001E6EC 0004 .text      fopOvlpM_Init__Fv                                            ReturnFunction */
+}
+
 void fopOvlpM_Init__Fv() {
 	return;
 }
 
+extern "C" {
 }
 

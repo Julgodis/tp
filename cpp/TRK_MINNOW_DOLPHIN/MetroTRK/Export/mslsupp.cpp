@@ -9,9 +9,16 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void GetTRKConnected();
+/* Function             */
 extern void TRKAccessFile();
+/* Function             */
 extern void GetUseSerialIO();
+/* Function             */
+extern void __TRK_write_console();
+/* Function             */
+extern void __read_console();
 }
 
 
@@ -20,7 +27,7 @@ extern void GetUseSerialIO();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037219C 00BC .text      __TRK_write_console                                          */
+/* 8037219C-80372258 00BC .text      __TRK_write_console                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -30,7 +37,7 @@ asm void __TRK_write_console() {
 }
 #pragma pop
 
-/* 80372258 00BC .text      __read_console                                               */
+/* 80372258-80372314 00BC .text      __read_console                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

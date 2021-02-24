@@ -9,18 +9,35 @@
 // 
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void __CARDSyncCallback();
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
 extern void __CARDSync();
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void __CARDUpdateDir();
+/* Function             */
 extern void __CARDIsWritable();
+/* Function             */
 extern void __CARDIsReadable();
+/* Function             */
 extern void UpdateIconOffsets();
+/* Function             */
+extern void CARDGetStatus();
+/* Function             */
 extern void CARDSetStatusAsync();
+/* Function             */
+extern void CARDSetStatus();
+/* Function             */
 extern void __div2i();
 }
 
@@ -30,7 +47,7 @@ extern void __div2i();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80358C90 01F8 .text      UpdateIconOffsets                                            */
+/* 80358C90-80358E88 01F8 .text      UpdateIconOffsets                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -40,7 +57,7 @@ asm void UpdateIconOffsets() {
 }
 #pragma pop
 
-/* 80358E88 0114 .text      CARDGetStatus                                                */
+/* 80358E88-80358F9C 0114 .text      CARDGetStatus                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -50,7 +67,7 @@ asm void CARDGetStatus() {
 }
 #pragma pop
 
-/* 80358F9C 0174 .text      CARDSetStatusAsync                                           */
+/* 80358F9C-80359110 0174 .text      CARDSetStatusAsync                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -60,7 +77,7 @@ asm void CARDSetStatusAsync() {
 }
 #pragma pop
 
-/* 80359110 0048 .text      CARDSetStatus                                                */
+/* 80359110-80359158 0048 .text      CARDSetStatus                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

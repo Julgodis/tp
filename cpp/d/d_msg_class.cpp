@@ -30,291 +30,605 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void dComIfGp_getReverb__Fi();
+/* Function             */
 extern void dComIfGs_checkGetInsectNum__Fv();
+/* Function             */
 extern void __ct__9STControlFssssffss();
+/* Function             */
 extern void setWaitParm__9STControlFssssffss();
+/* Function             */
 extern void checkTrigger__9STControlFv();
+/* Function             */
 extern void checkLeftTrigger__9STControlFv();
+/* Function             */
 extern void checkRightTrigger__9STControlFv();
+/* Function             */
 extern void checkUpTrigger__9STControlFv();
+/* Function             */
 extern void checkDownTrigger__9STControlFv();
+/* Function             */
 extern void getBombNum__21dSv_player_item_max_cCFUc();
+/* Function             */
 extern void onEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void getEventReg__11dSv_event_cCFUs();
+/* Function             */
 extern void dMeter2Info_getNewLetterNum__Fv();
+/* Function             */
 extern void initialize__10COutFont_cFv();
+/* Function             */
 extern void checkCharInfoCharactor__Fi();
+/* Function             */
 extern void changeCodeToChar__FUs();
+/* Function             */
 extern void change1ByteTo2Bytes__Fi();
+/* Function             */
 extern void changeKataToHira__Fi();
+/* Function             */
 extern void isOutfontKanjiCode__Fi();
+/* Function             */
 extern void getFontCCColorTable__FUcUc();
+/* Function             */
 extern void getFontGCColorTable__FUcUc();
+/* Function             */
 extern void getOutFontNumberType__Fi();
+/* Function             */
 extern void getPohNum__Fv();
+/* Function             */
+extern void __ct__19jmessage_tReferenceFv();
+/* Function             */
 extern void __dt__19jmessage_tReferenceFv();
+/* Function             */
 extern void calcDistance__19jmessage_tReferenceFv();
+/* Function             */
 extern void getLineMax__19jmessage_tReferenceFv();
+/* Function             */
 extern void isKanban__19jmessage_tReferenceFv();
+/* Function             */
 extern void isPlaceName__19jmessage_tReferenceFv();
+/* Function             */
 extern void isBossName__19jmessage_tReferenceFv();
+/* Function             */
 extern void isSaveSeq__19jmessage_tReferenceFv();
+/* Function             */
 extern void isBook__19jmessage_tReferenceFv();
+/* Function             */
 extern void isStaffRoll__19jmessage_tReferenceFv();
+/* Function             */
 extern void isHowl__19jmessage_tReferenceFv();
+/* Function             */
 extern void isMidona__19jmessage_tReferenceFv();
+/* Function             */
 extern void resetReference__19jmessage_tReferenceFv();
+/* Function             */
+extern void pageSend__19jmessage_tReferenceFv();
+/* Function             */
+extern void selectMessage__19jmessage_tReferenceFv();
+/* Function             */
+extern void inputNumber__19jmessage_tReferenceFv();
+/* Function             */
 extern void getWord__19jmessage_tReferenceFi();
+/* Function             */
 extern void resetWord__19jmessage_tReferenceFv();
+/* Function             */
 extern void setCharactor__19jmessage_tReferenceFUs();
+/* Function             */
 extern void addCharactor__19jmessage_tReferenceFUs();
+/* Function             */
 extern void resetCharactor__19jmessage_tReferenceFv();
+/* Function             */
+extern void shiftCharCountBuffer__19jmessage_tReferenceFv();
+/* Function             */
 extern void resetCharCountBuffer__19jmessage_tReferenceFv();
+/* Function             */
 extern void allsetCharCountBuffer__19jmessage_tReferenceFv();
+/* Function             */
 extern void isCharSend__19jmessage_tReferenceFv();
+/* Function             */
 extern void isLightSend__19jmessage_tReferenceFv();
+/* Function             */
+extern void isLightEnd__19jmessage_tReferenceFv();
+/* Function             */
 extern void decideOutFontRupeeColor__19jmessage_tReferenceFi();
+/* Function             */
+extern void __ct__17jmessage_tControlFv();
+/* Function             */
 extern void __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference();
+/* Function             */
 extern void do_begin__26jmessage_tMeasureProcessorFPCvPCc();
+/* Function             */
 extern void do_end__26jmessage_tMeasureProcessorFv();
+/* Function             */
 extern void do_character__26jmessage_tMeasureProcessorFi();
+/* Function             */
 extern void do_tag__26jmessage_tMeasureProcessorFUlPCvUl();
+/* Function             */
 extern void do_scale__26jmessage_tMeasureProcessorFf();
+/* Function             */
 extern void do_space__26jmessage_tMeasureProcessorFUl();
+/* Function             */
 extern void do_pageType__26jmessage_tMeasureProcessorFi();
+/* ReturnFunction       */
 extern void do_name1__26jmessage_tMeasureProcessorFv();
+/* Function             */
 extern void do_rubyset__26jmessage_tMeasureProcessorFPCvUl();
+/* Function             */
 extern void push_word__26jmessage_tMeasureProcessorFPc();
+/* Function             */
+extern void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl();
+/* Function             */
 extern void __dt__26jmessage_tMeasureProcessorFv();
+/* ReturnFunction       */
 extern void do_reset__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void do_begin__27jmessage_tSequenceProcessorFPCvPCc();
+/* Function             */
 extern void do_end__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void do_isReady__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void do_character__27jmessage_tSequenceProcessorFi();
+/* Function             */
 extern void do_tag__27jmessage_tSequenceProcessorFUlPCvUl();
-extern int do_jump_isReady__27jmessage_tSequenceProcessorFv();
+/* ReturnIntegerFunction */
+extern  int do_jump_isReady__27jmessage_tSequenceProcessorFv();
+/* ReturnFunction       */
 extern void do_name1__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void do_space__27jmessage_tSequenceProcessorFUl();
+/* Function             */
 extern void do_rubyset__27jmessage_tSequenceProcessorFPCvUl();
+/* Function             */
 extern void push_word__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz();
+/* ReturnFunction       */
 extern void do_jump__27jmessage_tSequenceProcessorFPCvPCc();
+/* Function             */
 extern void calcStringLength__27jmessage_tSequenceProcessorFv();
+/* Function             */
+extern void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference();
+/* ReturnFunction       */
 extern void do_reset__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_begin__28jmessage_tRenderingProcessorFPCvPCc();
+/* Function             */
 extern void do_end__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_character__28jmessage_tRenderingProcessorFi();
+/* Function             */
 extern void do_tag__28jmessage_tRenderingProcessorFUlPCvUl();
+/* Function             */
+extern void resetRendering__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_widthcenter__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_selwidthcenter__28jmessage_tRenderingProcessorFi();
+/* Function             */
 extern void do_heightcenter__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_color__28jmessage_tRenderingProcessorFUc();
+/* Function             */
 extern void do_scale__28jmessage_tRenderingProcessorFf();
+/* Function             */
 extern void do_linedown__28jmessage_tRenderingProcessorFs();
+/* Function             */
 extern void do_transY__28jmessage_tRenderingProcessorFsb();
+/* Function             */
 extern void do_outfont__28jmessage_tRenderingProcessorFUcUl();
+/* Function             */
 extern void do_arrow2__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void getLineLength__28jmessage_tRenderingProcessorFi();
+/* Function             */
 extern void do_strcat__28jmessage_tRenderingProcessorFPcbbb();
+/* Function             */
 extern void do_rubyset__28jmessage_tRenderingProcessorFPCvUl();
+/* Function             */
 extern void do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff();
+/* ReturnFunction       */
 extern void do_name1__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void do_numset__28jmessage_tRenderingProcessorFs();
+/* Function             */
 extern void push_word__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void getCharInfo__28jmessage_tRenderingProcessorFfffff();
+/* Function             */
+extern void __ct__26jmessage_string_tReferenceFv();
+/* Function             */
 extern void __dt__26jmessage_string_tReferenceFv();
+/* Function             */
+extern void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+/* ReturnFunction       */
 extern void setCharactor__26jmessage_string_tReferenceFUs();
+/* ReturnFunction       */
 extern void addCharactor__26jmessage_string_tReferenceFUs();
+/* ReturnFunction       */
 extern void resetCharactor__26jmessage_string_tReferenceFv();
+/* Function             */
 extern void getLineLength__26jmessage_string_tReferenceFi();
+/* Function             */
 extern void addLineLength__26jmessage_string_tReferenceFif();
+/* Function             */
 extern void getOutfontLength__26jmessage_string_tReferenceFi();
+/* Function             */
 extern void setOutfontLength__26jmessage_string_tReferenceFif();
+/* Function             */
 extern void clearOutfontLength__26jmessage_string_tReferenceFi();
+/* Function             */
 extern void getLineCountNowPage__26jmessage_string_tReferenceFv();
+/* Function             */
+extern void __ct__24jmessage_string_tControlFv();
+/* Function             */
 extern void __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReference();
+/* Function             */
 extern void do_begin__33jmessage_string_tMeasureProcessorFPCvPCc();
+/* Function             */
 extern void do_end__33jmessage_string_tMeasureProcessorFv();
+/* Function             */
 extern void do_character__33jmessage_string_tMeasureProcessorFi();
+/* Function             */
 extern void do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl();
+/* Function             */
 extern void do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl();
+/* Function             */
+extern void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
+/* Function             */
 extern void __dt__33jmessage_string_tMeasureProcessorFv();
+/* ReturnFunction       */
 extern void do_reset__34jmessage_string_tSequenceProcessorFv();
+/* Function             */
 extern void do_begin__34jmessage_string_tSequenceProcessorFPCvPCc();
+/* ReturnFunction       */
 extern void do_end__34jmessage_string_tSequenceProcessorFv();
-extern int do_isReady__34jmessage_string_tSequenceProcessorFv();
+/* ReturnIntegerFunction */
+extern  int do_isReady__34jmessage_string_tSequenceProcessorFv();
+/* ReturnFunction       */
 extern void do_character__34jmessage_string_tSequenceProcessorFi();
+/* Function             */
 extern void do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl();
-extern int do_jump_isReady__34jmessage_string_tSequenceProcessorFv();
+/* ReturnIntegerFunction */
+extern  int do_jump_isReady__34jmessage_string_tSequenceProcessorFv();
+/* ReturnFunction       */
 extern void do_jump__34jmessage_string_tSequenceProcessorFPCvPCc();
+/* Function             */
+extern void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
+/* Function             */
 extern void getLineCountNowPage__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void do_reset__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void do_begin__35jmessage_string_tRenderingProcessorFPCvPCc();
+/* Function             */
 extern void do_end__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void do_character__35jmessage_string_tRenderingProcessorFi();
+/* Function             */
 extern void do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl();
+/* Function             */
 extern void do_widthcenter__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void do_heightcenter__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void do_strcat__35jmessage_string_tRenderingProcessorFPc();
+/* Function             */
 extern void do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl();
+/* Function             */
 extern void do_rubystrcat__35jmessage_string_tRenderingProcessorFPc();
+/* Function             */
 extern void do_outfont__35jmessage_string_tRenderingProcessorFUc();
+/* Function             */
 extern void do_color__35jmessage_string_tRenderingProcessorFUc();
+/* Function             */
 extern void do_scale__35jmessage_string_tRenderingProcessorFf();
+/* Function             */
 extern void do_linedown__35jmessage_string_tRenderingProcessorFs();
+/* Function             */
 extern void do_numset__35jmessage_string_tRenderingProcessorFs();
+/* Function             */
 extern void push_word__35jmessage_string_tRenderingProcessorFPCc();
+/* Function             */
 extern void __dt__35jmessage_string_tRenderingProcessorFv();
+/* Function             */
 extern void __dt__34jmessage_string_tSequenceProcessorFv();
+/* Function             */
 extern void __dt__24jmessage_string_tControlFv();
+/* Function             */
 extern void __dt__28jmessage_tRenderingProcessorFv();
+/* Function             */
 extern void __dt__27jmessage_tSequenceProcessorFv();
+/* Function             */
 extern void getActorPos__19jmessage_tReferenceFv();
+/* Function             */
 extern void talkStartInit__12dMsgObject_cFv();
+/* Function             */
 extern void isKanbanMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isHowlMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isMidonaMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isPlaceMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isBossMessage__12dMsgObject_cFv();
-extern int isBookMessage__12dMsgObject_cFv();
+/* ReturnIntegerFunction */
+extern  int isBookMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isStaffMessage__12dMsgObject_cFv();
+/* Function             */
 extern void isSaveMessage__12dMsgObject_cFv();
+/* Function             */
 extern void getSmellName__12dMsgObject_cFv();
+/* Function             */
 extern void getPortalName__12dMsgObject_cFv();
+/* Function             */
 extern void getBombName__12dMsgObject_cFv();
+/* Function             */
 extern void getInsectName__12dMsgObject_cFv();
+/* Function             */
 extern void getLetterName__12dMsgObject_cFv();
+/* Function             */
 extern void getSelectBombNum__12dMsgObject_cFv();
+/* Function             */
 extern void addSelectBomBag__12dMsgObject_cFUc();
+/* Function             */
 extern void resetSelectBomBag__12dMsgObject_cFv();
+/* Function             */
 extern void getMsgOutputType__12dMsgObject_cFv();
+/* Function             */
 extern void getWord__12dMsgObject_cFv();
+/* Function             */
 extern void getSelectWord__12dMsgObject_cFi();
+/* Function             */
 extern void getSelectWordFlag__12dMsgObject_cFv();
+/* Function             */
 extern void getSelectBombPrice__12dMsgObject_cFv();
+/* Function             */
 extern void getItemEquipButton__12dMsgObject_cFv();
+/* Function             */
 extern void dMsgObject_getFundRaising__Fv();
+/* Function             */
 extern void setTag__10dMsgUnit_cFiiPcb();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void __ct__Q28JMessage8TControlFv();
+/* Function             */
 extern void __dt__Q28JMessage8TControlFv();
+/* Function             */
 extern void __dt__Q28JMessage10TReferenceFv();
-extern int do_word__Q28JMessage10TReferenceCFUl();
+/* ReturnIntegerFunction */
+extern  int do_word__Q28JMessage10TReferenceCFUl();
+/* Function             */
 extern void stack_pushCurrent__Q28JMessage10TProcessorFPCc();
+/* ReturnFunction       */
 extern void do_reset__Q28JMessage10TProcessorFv();
+/* ReturnFunction       */
 extern void do_select_begin__Q28JMessage10TProcessorFUl();
+/* ReturnFunction       */
 extern void do_select_end__Q28JMessage10TProcessorFv();
+/* ReturnFunction       */
 extern void do_select_separate__Q28JMessage10TProcessorFv();
+/* ReturnFunction       */
 extern void do_resetStatus___Q28JMessage10TProcessorFPCc();
-extern int do_setBegin_isReady___Q28JMessage10TProcessorCFv();
+/* ReturnIntegerFunction */
+extern  int do_setBegin_isReady___Q28JMessage10TProcessorCFv();
+/* Function             */
 extern void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+/* Function             */
 extern void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl();
+/* Function             */
 extern void __dt__Q28JMessage18TSequenceProcessorFv();
+/* ReturnFunction       */
 extern void do_branch_query__Q28JMessage18TSequenceProcessorFUl();
-extern int do_branch_queryResult__Q28JMessage18TSequenceProcessorFv();
+/* ReturnIntegerFunction */
+extern  int do_branch_queryResult__Q28JMessage18TSequenceProcessorFv();
+/* ReturnFunction       */
 extern void do_branch__Q28JMessage18TSequenceProcessorFPCvPCc();
+/* Function             */
 extern void do_resetStatus___Q28JMessage18TSequenceProcessorFPCc();
+/* Function             */
 extern void do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv();
+/* ReturnFunction       */
 extern void do_begin___Q28JMessage18TSequenceProcessorFPCvPCc();
+/* Function             */
 extern void do_end___Q28JMessage18TSequenceProcessorFv();
+/* Function             */
 extern void do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl();
+/* Function             */
 extern void __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference();
+/* Function             */
 extern void __dt__Q28JMessage19TRenderingProcessorFv();
+/* Function             */
 extern void process__Q28JMessage19TRenderingProcessorFPCc();
+/* ReturnFunction       */
 extern void do_begin___Q28JMessage19TRenderingProcessorFPCvPCc();
+/* ReturnFunction       */
 extern void do_end___Q28JMessage19TRenderingProcessorFv();
+/* Function             */
 extern void do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void setString__12Z2SpeechMgr2FPCUssUcUs();
+/* Function             */
 extern void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getBounds__7J2DPaneFv();
+/* Function             */
 extern void getParentPane__7J2DPaneFv();
+/* FirstParamFunction   */
 extern u32 getStringPtr__10J2DTextBoxCFv(u8*);
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void _savefpr_27();
+/* Function             */
 extern void _restfpr_27();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void sprintf();
+/* Function             */
 extern void snprintf();
+/* Function             */
 extern void strcat();
+/* Function             */
 extern void strcpy();
+/* Function             */
 extern void strlen();
+/* InitializedData      */
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_803995C8[36];
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_803995EC[36];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_class__stringBase0[80];
+/* InitializedData      */
 SECTION_DATA extern u8 saveBitLabels__16dSv_event_flag_c[1648];
-SECTION_DATA extern const void* __vt__17jmessage_tControl[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17jmessage_tControl[3];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BFDF8[128];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_msg_class__LIT_3831[256];
-SECTION_DATA extern u8 d_d_msg_class__LIT_3903[40];
-SECTION_DATA extern u8 LIT_5158[48];
-SECTION_DATA extern u8 LIT_5157[60];
-SECTION_DATA extern u8 d_d_msg_class__LIT_5156[56];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_class__LIT_3903[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5158[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5157[15];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_class__LIT_5156[14];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_msg_class__LIT_5155[256];
-SECTION_DATA extern u8 d_d_msg_class__LIT_5269[196];
-SECTION_DATA extern u8 d_d_msg_class__LIT_5735[40];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_class__LIT_5269[49];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_class__LIT_5735[10];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_6062[256];
-SECTION_DATA extern u8 LIT_6110[196];
-SECTION_DATA extern u8 LIT_6572[84];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_6110[49];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_6572[21];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_6571[256];
-SECTION_DATA extern u8 LIT_6703[36];
-SECTION_DATA extern u8 LIT_7487[48];
-SECTION_DATA extern u8 LIT_7486[60];
-SECTION_DATA extern u8 d_d_msg_class__LIT_7485[56];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_6703[9];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7487[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7486[15];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_msg_class__LIT_7485[14];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_7484[256];
-SECTION_DATA extern u8 LIT_7997[84];
-SECTION_DATA extern u8 LIT_7996[48];
-SECTION_DATA extern u8 LIT_7995[60];
-SECTION_DATA extern u8 LIT_7994[56];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7997[21];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7996[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7995[15];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7994[14];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_7993[256];
-SECTION_DATA extern const void* __vt__35jmessage_string_tRenderingProcessor[16];
-SECTION_DATA extern const void* __vt__34jmessage_string_tSequenceProcessor[22];
-SECTION_DATA extern const void* __vt__33jmessage_string_tMeasureProcessor[16];
-SECTION_DATA extern const void* __vt__24jmessage_string_tControl[3];
-SECTION_DATA extern const void* __vt__26jmessage_string_tReference[4];
-SECTION_DATA extern const void* __vt__28jmessage_tRenderingProcessor[16];
-SECTION_DATA extern const void* __vt__27jmessage_tSequenceProcessor[22];
-SECTION_DATA extern const void* __vt__26jmessage_tMeasureProcessor[16];
-SECTION_DATA extern const void* __vt__19jmessage_tReference[5];
-SECTION_DATA extern const void* __vt__Q28JMessage10TReference[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__35jmessage_string_tRenderingProcessor[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__34jmessage_string_tSequenceProcessor[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__33jmessage_string_tMeasureProcessor[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__24jmessage_string_tControl[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26jmessage_string_tReference[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28jmessage_tRenderingProcessor[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__27jmessage_tSequenceProcessor[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26jmessage_tMeasureProcessor[16];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19jmessage_tReference[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q28JMessage10TReference[5];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[256];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B70[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
-SECTION_SBSS extern u8 data_804510C0[3];
-SECTION_SBSS extern u8 g_msg_unit[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_804510C0[3 + 5 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_class__LIT_4025[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_class__LIT_4026;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_class__LIT_4027[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_class__LIT_4028;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_class__LIT_4078[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_class__LIT_4198;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_class__LIT_4291;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5151;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_5154;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5490;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5491;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6374[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6781;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7190[8];
 }
 
@@ -324,29 +638,35 @@ SECTION_SDATA2 extern u8 LIT_7190[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803995C8 0024 .rodata    colorTable$3861                                              */
+/* 80399610-80399660 004A .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399610 = "'";
+SECTION_DEAD const char* const stringBase_80399612 = "s";
+SECTION_DEAD const char* const stringBase_80399614 = "%d";
+SECTION_DEAD const char* const stringBase_80399617 = "";
+SECTION_DEAD const char* const stringBase_80399618 = """\x1B""CR[%d]";
+SECTION_DEAD const char* const stringBase_80399620 = """\x1B""CD[%d]";
+SECTION_DEAD const char* const stringBase_80399628 = """\x1B""CC[%08x]""\x1B""GC[%08x]";
+SECTION_DEAD const char* const stringBase_8039963B = """\x1B""FX[%d]""\x1B""FY[%d]";
+SECTION_DEAD const char* const stringBase_8039964A = """\x1B""CU[%d]";
+SECTION_DEAD const char* const stringBase_80399652 = """\x1B""CL[%d]";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039965A = "\0\0\0\0\0";
+#pragma pop
+/* 803995C8-803995EC 0024 .rodata    colorTable$3861                                              InitializedData */
 SECTION_RODATA const u8 data_803995C8[36] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xF0, 0x78, 0x78, 0xFF, 0xAA, 0xDC, 0x8C, 0xFF, 0xA0, 0xB4, 0xDC, 0xFF,
 	0xDC, 0xDC, 0x82, 0xFF, 0xB4, 0xC8, 0xE6, 0xFF, 0xC8, 0xA0, 0xDC, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xDC, 0xAA, 0x78, 0xFF,
 };
-/* 803995EC 0024 .rodata    colorTable$3877                                              */
+/* 803995EC-80399610 0024 .rodata    colorTable$3877                                              InitializedData */
 SECTION_RODATA const u8 data_803995EC[36] = {
 	0xFF, 0xFF, 0xFF, 0xFF, 0xF0, 0x78, 0x78, 0xFF, 0xAA, 0xDC, 0x8C, 0xFF, 0xA0, 0xB4, 0xDC, 0xFF,
 	0xDC, 0xDC, 0x82, 0xFF, 0xB4, 0xC8, 0xE6, 0xFF, 0xC8, 0xA0, 0xDC, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0xDC, 0xAA, 0x78, 0xFF,
 };
-/* 80399610 004A .rodata    @stringBase0                                                 */
-const char* const stringBase_80399610 = "'";
-const char* const stringBase_80399612 = "s";
-const char* const stringBase_80399614 = "%d";
-const char* const stringBase_80399617 = "";
-const char* const stringBase_80399618 = """\x1B""CR[%d]";
-const char* const stringBase_80399620 = """\x1B""CD[%d]";
-const char* const stringBase_80399628 = """\x1B""CC[%08x]""\x1B""GC[%08x]";
-const char* const stringBase_8039963B = """\x1B""FX[%d]""\x1B""FY[%d]";
-const char* const stringBase_8039964A = """\x1B""CU[%d]";
-const char* const stringBase_80399652 = """\x1B""CL[%d]";
 }
 
 
@@ -355,7 +675,7 @@ const char* const stringBase_80399652 = """\x1B""CL[%d]";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BFDF8 0080 .data      char_table$3795                                              */
+/* 803BFDF8-803BFE78 0080 .data      char_table$3795                                              InitializedData */
 SECTION_DATA u8 data_803BFDF8[128] = {
 	0x00, 0x00, 0x81, 0x42, 0x81, 0x75, 0x81, 0x76, 0x81, 0x41, 0x81, 0x45, 0x83, 0x92, 0x83, 0x40,
 	0x83, 0x42, 0x83, 0x44, 0x83, 0x46, 0x83, 0x48, 0x83, 0x83, 0x83, 0x85, 0x83, 0x87, 0x83, 0x62,
@@ -366,7 +686,7 @@ SECTION_DATA u8 data_803BFDF8[128] = {
 	0x83, 0x7E, 0x83, 0x80, 0x83, 0x81, 0x83, 0x82, 0x83, 0x84, 0x83, 0x86, 0x83, 0x88, 0x83, 0x89,
 	0x83, 0x8A, 0x83, 0x8B, 0x83, 0x8C, 0x83, 0x8D, 0x83, 0x8F, 0x83, 0x93, 0x81, 0x4A, 0x81, 0x4B,
 };
-/* 803BFE78 0100 .data      @3831                                                        */
+/* 803BFE78-803BFF78 0100 .data      @3831                                                        InitializedData */
 SECTION_DATA u8 d_d_msg_class__LIT_3831[256] = {
 	0x80, 0x22, 0x86, 0xB8, 0x80, 0x22, 0x86, 0xC4, 0x80, 0x22, 0x86, 0xD0, 0x80, 0x22, 0x86, 0xDC,
 	0x80, 0x22, 0x86, 0xE8, 0x80, 0x22, 0x86, 0xF4, 0x80, 0x22, 0x87, 0x00, 0x80, 0x22, 0x87, 0x0C,
@@ -385,33 +705,70 @@ SECTION_DATA u8 d_d_msg_class__LIT_3831[256] = {
 	0x80, 0x22, 0x88, 0x30, 0x80, 0x22, 0x88, 0x30, 0x80, 0x22, 0x88, 0x30, 0x80, 0x22, 0x87, 0xFC,
 	0x80, 0x22, 0x88, 0x08, 0x80, 0x22, 0x88, 0x14, 0x80, 0x22, 0x88, 0x20, 0x80, 0x22, 0x88, 0x2C,
 };
-/* 803BFF78 0028 .data      @3903                                                        */
-SECTION_DATA u8 d_d_msg_class__LIT_3903[40] = {
-	0x80, 0x22, 0x8A, 0x74, 0x80, 0x22, 0x8A, 0x7C, 0x80, 0x22, 0x8A, 0x84, 0x80, 0x22, 0x8A, 0x8C,
-	0x80, 0x22, 0x8A, 0x94, 0x80, 0x22, 0x8A, 0x9C, 0x80, 0x22, 0x8A, 0xA4, 0x80, 0x22, 0x8A, 0xAC,
-	0x80, 0x22, 0x8A, 0xB4, 0x80, 0x22, 0x8A, 0xBC,
+/* 803BFF78-803BFFA0 0028 .data      @3903                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_class__LIT_3903[10] = {
+	(void*)(((u32*)getOutFontNumberType)+8),
+	(void*)(((u32*)getOutFontNumberType)+10),
+	(void*)(((u32*)getOutFontNumberType)+12),
+	(void*)(((u32*)getOutFontNumberType)+14),
+	(void*)(((u32*)getOutFontNumberType)+16),
+	(void*)(((u32*)getOutFontNumberType)+18),
+	(void*)(((u32*)getOutFontNumberType)+20),
+	(void*)(((u32*)getOutFontNumberType)+22),
+	(void*)(((u32*)getOutFontNumberType)+24),
+	(void*)(((u32*)getOutFontNumberType)+26),
 };
-/* 803BFFA0 0030 .data      @5158                                                        */
-SECTION_DATA u8 LIT_5158[48] = {
-	0x80, 0x22, 0xAF, 0x50, 0x80, 0x22, 0xAF, 0x60, 0x80, 0x22, 0xAF, 0x70, 0x80, 0x22, 0xAF, 0x8C,
-	0x80, 0x22, 0xAF, 0xA8, 0x80, 0x22, 0xAF, 0xC4, 0x80, 0x22, 0xAF, 0xE0, 0x80, 0x22, 0xAF, 0xFC,
-	0x80, 0x22, 0xB0, 0x18, 0x80, 0x22, 0xB0, 0x34, 0x80, 0x22, 0xB0, 0x50, 0x80, 0x22, 0xB0, 0x50,
+/* 803BFFA0-803BFFD0 0030 .data      @5158                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5158[12] = {
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+826),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+830),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+834),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+841),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+848),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+855),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+862),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+869),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+876),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+883),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+890),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+890),
 };
-/* 803BFFD0 003C .data      @5157                                                        */
-SECTION_DATA u8 LIT_5157[60] = {
-	0x80, 0x22, 0xAC, 0x44, 0x80, 0x22, 0xAC, 0xC8, 0x80, 0x22, 0xAC, 0xEC, 0x80, 0x22, 0xAD, 0xC4,
-	0x80, 0x22, 0xAE, 0x00, 0x80, 0x22, 0xAE, 0x1C, 0x80, 0x22, 0xAE, 0x40, 0x80, 0x22, 0xAE, 0xEC,
-	0x80, 0x22, 0xAE, 0x7C, 0x80, 0x22, 0xAD, 0x10, 0x80, 0x22, 0xAD, 0x44, 0x80, 0x22, 0xAD, 0x64,
-	0x80, 0x22, 0xAD, 0x84, 0x80, 0x22, 0xAE, 0xA0, 0x80, 0x22, 0xAE, 0xC4,
+/* 803BFFD0-803C000C 003C .data      @5157                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5157[15] = {
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+631),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+664),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+673),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+727),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+742),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+749),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+758),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+801),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+773),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+682),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+695),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+703),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+711),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+782),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+791),
 };
-/* 803C000C 0038 .data      @5156                                                        */
-SECTION_DATA u8 d_d_msg_class__LIT_5156[56] = {
-	0x80, 0x22, 0xAA, 0x64, 0x80, 0x22, 0xAA, 0x80, 0x80, 0x22, 0xAA, 0x9C, 0x80, 0x22, 0xAA, 0xB8,
-	0x80, 0x22, 0xAA, 0xD8, 0x80, 0x22, 0xAA, 0xF8, 0x80, 0x22, 0xAB, 0x18, 0x80, 0x22, 0xAB, 0x38,
-	0x80, 0x22, 0xAB, 0x58, 0x80, 0x22, 0xAB, 0x78, 0x80, 0x22, 0xAB, 0x98, 0x80, 0x22, 0xAB, 0xB8,
-	0x80, 0x22, 0xAB, 0xD8, 0x80, 0x22, 0xAB, 0xF8,
+/* 803C000C-803C0044 0038 .data      @5156                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_class__LIT_5156[14] = {
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+511),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+518),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+525),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+532),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+540),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+548),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+556),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+564),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+572),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+580),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+588),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+596),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+604),
+	(void*)(((u32*)do_tag__26jmessage_tMeasureProcessorFUlPCvUl)+612),
 };
-/* 803C0044 0100 .data      @5155                                                        */
+/* 803C0044-803C0144 0100 .data      @5155                                                        InitializedData */
 SECTION_DATA u8 d_d_msg_class__LIT_5155[256] = {
 	0x80, 0x22, 0xA5, 0x10, 0x80, 0x22, 0xA4, 0x40, 0x80, 0x22, 0xA4, 0x50, 0x80, 0x22, 0xA4, 0xE0,
 	0x80, 0x22, 0xA4, 0xE0, 0x80, 0x22, 0xA4, 0x50, 0x80, 0x22, 0xA4, 0x50, 0x80, 0x22, 0xA4, 0x50,
@@ -430,29 +787,72 @@ SECTION_DATA u8 d_d_msg_class__LIT_5155[256] = {
 	0x80, 0x22, 0xAA, 0x04, 0x80, 0x22, 0xA8, 0xC4, 0x80, 0x22, 0xA8, 0xC4, 0x80, 0x22, 0xA6, 0x58,
 	0x80, 0x22, 0xA6, 0x88, 0x80, 0x22, 0xA4, 0x50, 0x80, 0x22, 0xA4, 0x58, 0x80, 0x22, 0xA4, 0x98,
 };
-/* 803C0144 00C4 .data      @5269                                                        */
-SECTION_DATA u8 d_d_msg_class__LIT_5269[196] = {
-	0x80, 0x22, 0xB2, 0x1C, 0x80, 0x22, 0xB2, 0x24, 0x80, 0x22, 0xB2, 0x2C, 0x80, 0x22, 0xB2, 0x34,
-	0x80, 0x22, 0xB2, 0x3C, 0x80, 0x22, 0xB2, 0x44, 0x80, 0x22, 0xB2, 0x4C, 0x80, 0x22, 0xB2, 0x54,
-	0x80, 0x22, 0xB2, 0x5C, 0x80, 0x22, 0xB2, 0x64, 0x80, 0x22, 0xB2, 0x6C, 0x80, 0x22, 0xB2, 0x74,
-	0x80, 0x22, 0xB2, 0x7C, 0x80, 0x22, 0xB2, 0x84, 0x80, 0x22, 0xB2, 0x8C, 0x80, 0x22, 0xB2, 0x94,
-	0x80, 0x22, 0xB2, 0x9C, 0x80, 0x22, 0xB2, 0xA4, 0x80, 0x22, 0xB2, 0xAC, 0x80, 0x22, 0xB2, 0xB4,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8,
-	0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xC8, 0x80, 0x22, 0xB2, 0xBC,
-	0x80, 0x22, 0xB2, 0xC4,
+/* 803C0144-803C0208 00C4 .data      @5269                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_class__LIT_5269[49] = {
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+36),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+38),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+40),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+42),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+44),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+46),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+48),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+50),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+52),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+54),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+56),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+58),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+60),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+62),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+64),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+66),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+68),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+70),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+72),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+74),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+79),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+76),
+	(void*)(((u32*)do_space__26jmessage_tMeasureProcessorFUl)+78),
 };
-/* 803C0208 0028 .data      @5735                                                        */
-SECTION_DATA u8 d_d_msg_class__LIT_5735[40] = {
-	0x80, 0x22, 0xBE, 0x90, 0x80, 0x22, 0xBE, 0xCC, 0x80, 0x22, 0xBE, 0xE8, 0x80, 0x22, 0xBE, 0xCC,
-	0x80, 0x22, 0xBE, 0xFC, 0x80, 0x22, 0xBE, 0x90, 0x80, 0x22, 0xBE, 0x90, 0x80, 0x22, 0xBE, 0xFC,
-	0x80, 0x22, 0xBE, 0xCC, 0x80, 0x22, 0xBE, 0xCC,
+/* 803C0208-803C0230 0028 .data      @5735                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_class__LIT_5735[10] = {
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+197),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+212),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+219),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+212),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+224),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+197),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+197),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+224),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+212),
+	(void*)(((u32*)do_isReady__27jmessage_tSequenceProcessorFv)+212),
 };
-/* 803C0230 0100 .data      @6062                                                        */
+/* 803C0230-803C0330 0100 .data      @6062                                                        InitializedData */
 SECTION_DATA u8 LIT_6062[256] = {
 	0x80, 0x22, 0xC3, 0x28, 0x80, 0x22, 0xC3, 0xF4, 0x80, 0x22, 0xC4, 0x08, 0x80, 0x22, 0xC4, 0x18,
 	0x80, 0x22, 0xC4, 0x18, 0x80, 0x22, 0xC4, 0x48, 0x80, 0x22, 0xC4, 0x9C, 0x80, 0x22, 0xC4, 0xB4,
@@ -471,32 +871,83 @@ SECTION_DATA u8 LIT_6062[256] = {
 	0x80, 0x22, 0xC8, 0x08, 0x80, 0x22, 0xC6, 0xF4, 0x80, 0x22, 0xC6, 0xF4, 0x80, 0x22, 0xC3, 0xA4,
 	0x80, 0x22, 0xC3, 0xC0, 0x80, 0x22, 0xC3, 0xDC, 0x80, 0x22, 0xC3, 0xE4, 0x80, 0x22, 0xC3, 0xE4,
 };
-/* 803C0330 00C4 .data      @6110                                                        */
-SECTION_DATA u8 LIT_6110[196] = {
-	0x80, 0x22, 0xC9, 0x5C, 0x80, 0x22, 0xC9, 0x64, 0x80, 0x22, 0xC9, 0x6C, 0x80, 0x22, 0xC9, 0x74,
-	0x80, 0x22, 0xC9, 0x7C, 0x80, 0x22, 0xC9, 0x84, 0x80, 0x22, 0xC9, 0x8C, 0x80, 0x22, 0xC9, 0x94,
-	0x80, 0x22, 0xC9, 0x9C, 0x80, 0x22, 0xC9, 0xA4, 0x80, 0x22, 0xC9, 0xAC, 0x80, 0x22, 0xC9, 0xB4,
-	0x80, 0x22, 0xC9, 0xBC, 0x80, 0x22, 0xC9, 0xC4, 0x80, 0x22, 0xC9, 0xCC, 0x80, 0x22, 0xC9, 0xD4,
-	0x80, 0x22, 0xC9, 0xDC, 0x80, 0x22, 0xC9, 0xE4, 0x80, 0x22, 0xC9, 0xEC, 0x80, 0x22, 0xC9, 0xF4,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08,
-	0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xCA, 0x08, 0x80, 0x22, 0xC9, 0xFC,
-	0x80, 0x22, 0xCA, 0x04,
+/* 803C0330-803C03F4 00C4 .data      @6110                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_6110[49] = {
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+21),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+23),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+25),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+27),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+29),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+31),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+33),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+35),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+37),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+39),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+41),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+43),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+45),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+47),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+49),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+51),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+53),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+55),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+57),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+59),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+64),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+61),
+	(void*)(((u32*)do_space__27jmessage_tSequenceProcessorFUl)+63),
 };
-/* 803C03F4 0054 .data      @6572                                                        */
-SECTION_DATA u8 LIT_6572[84] = {
-	0x80, 0x22, 0xE1, 0x08, 0x80, 0x22, 0xDF, 0x00, 0x80, 0x22, 0xDF, 0x18, 0x80, 0x22, 0xDF, 0x30,
-	0x80, 0x22, 0xDF, 0x48, 0x80, 0x22, 0xDF, 0x60, 0x80, 0x22, 0xDF, 0x78, 0x80, 0x22, 0xDF, 0x90,
-	0x80, 0x22, 0xDF, 0xA8, 0x80, 0x22, 0xDF, 0xC0, 0x80, 0x22, 0xDF, 0xD8, 0x80, 0x22, 0xDF, 0xF0,
-	0x80, 0x22, 0xE0, 0x08, 0x80, 0x22, 0xE0, 0x20, 0x80, 0x22, 0xE0, 0x38, 0x80, 0x22, 0xE0, 0x78,
-	0x80, 0x22, 0xE0, 0x90, 0x80, 0x22, 0xE0, 0xA8, 0x80, 0x22, 0xE0, 0xC0, 0x80, 0x22, 0xE0, 0xD8,
-	0x80, 0x22, 0xE0, 0xF0,
+/* 803C03F4-803C0448 0054 .data      @6572                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_6572[21] = {
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+623),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+493),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+499),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+505),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+511),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+517),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+523),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+529),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+535),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+541),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+547),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+553),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+559),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+565),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+571),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+587),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+593),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+599),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+605),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+611),
+	(void*)(((u32*)do_tag__28jmessage_tRenderingProcessorFUlPCvUl)+617),
 };
-/* 803C0448 0100 .data      @6571                                                        */
+/* 803C0448-803C0548 0100 .data      @6571                                                        InitializedData */
 SECTION_DATA u8 LIT_6571[256] = {
 	0x80, 0x22, 0xD8, 0xA4, 0x80, 0x22, 0xDE, 0x1C, 0x80, 0x22, 0xDE, 0x1C, 0x80, 0x22, 0xDE, 0x1C,
 	0x80, 0x22, 0xDE, 0x1C, 0x80, 0x22, 0xDE, 0x1C, 0x80, 0x22, 0xDE, 0x1C, 0x80, 0x22, 0xDE, 0x1C,
@@ -515,33 +966,69 @@ SECTION_DATA u8 LIT_6571[256] = {
 	0x80, 0x22, 0xDE, 0x0C, 0x80, 0x22, 0xDD, 0x48, 0x80, 0x22, 0xDD, 0x60, 0x80, 0x22, 0xD9, 0x28,
 	0x80, 0x22, 0xD9, 0x44, 0x80, 0x22, 0xD9, 0x60, 0x80, 0x22, 0xD9, 0x78, 0x80, 0x22, 0xD9, 0x78,
 };
-/* 803C0548 0024 .data      @6703                                                        */
-SECTION_DATA u8 LIT_6703[36] = {
-	0x80, 0x22, 0xE3, 0xE0, 0x80, 0x22, 0xE4, 0x4C, 0x80, 0x22, 0xE4, 0xB4, 0x80, 0x22, 0xE4, 0xF0,
-	0x80, 0x22, 0xE5, 0x0C, 0x80, 0x22, 0xE5, 0xE8, 0x80, 0x22, 0xE6, 0x68, 0x80, 0x22, 0xE6, 0x90,
-	0x80, 0x22, 0xE6, 0xC0,
+/* 803C0548-803C056C 0024 .data      @6703                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_6703[9] = {
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+50),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+77),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+103),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+118),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+125),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+180),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+212),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+222),
+	(void*)(((u32*)do_heightcenter__28jmessage_tRenderingProcessorFv)+234),
 };
-/* 803C056C 0030 .data      @7487                                                        */
-SECTION_DATA u8 LIT_7487[48] = {
-	0x80, 0x23, 0x07, 0x30, 0x80, 0x23, 0x07, 0x40, 0x80, 0x23, 0x07, 0x50, 0x80, 0x23, 0x07, 0x68,
-	0x80, 0x23, 0x07, 0x80, 0x80, 0x23, 0x07, 0x98, 0x80, 0x23, 0x07, 0xB0, 0x80, 0x23, 0x07, 0xC8,
-	0x80, 0x23, 0x07, 0xE0, 0x80, 0x23, 0x07, 0xF8, 0x80, 0x23, 0x08, 0x10, 0x80, 0x23, 0x08, 0x10,
+/* 803C056C-803C059C 0030 .data      @7487                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7487[12] = {
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+592),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+596),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+600),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+606),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+612),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+618),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+624),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+630),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+636),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+642),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+648),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+648),
 };
-/* 803C059C 003C .data      @7486                                                        */
-SECTION_DATA u8 LIT_7486[60] = {
-	0x80, 0x23, 0x04, 0x0C, 0x80, 0x23, 0x04, 0x90, 0x80, 0x23, 0x04, 0xB4, 0x80, 0x23, 0x05, 0x94,
-	0x80, 0x23, 0x05, 0xD0, 0x80, 0x23, 0x05, 0xEC, 0x80, 0x23, 0x06, 0x10, 0x80, 0x23, 0x06, 0xBC,
-	0x80, 0x23, 0x06, 0x4C, 0x80, 0x23, 0x04, 0xD8, 0x80, 0x23, 0x05, 0x14, 0x80, 0x23, 0x05, 0x34,
-	0x80, 0x23, 0x05, 0x54, 0x80, 0x23, 0x06, 0x70, 0x80, 0x23, 0x06, 0x94,
+/* 803C059C-803C05D8 003C .data      @7486                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7486[15] = {
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+391),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+424),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+433),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+489),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+504),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+511),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+520),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+563),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+535),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+442),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+457),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+465),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+473),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+544),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+553),
 };
-/* 803C05D8 0038 .data      @7485                                                        */
-SECTION_DATA u8 d_d_msg_class__LIT_7485[56] = {
-	0x80, 0x23, 0x02, 0x58, 0x80, 0x23, 0x02, 0x70, 0x80, 0x23, 0x02, 0x88, 0x80, 0x23, 0x02, 0xA0,
-	0x80, 0x23, 0x02, 0xBC, 0x80, 0x23, 0x02, 0xD8, 0x80, 0x23, 0x02, 0xF4, 0x80, 0x23, 0x03, 0x10,
-	0x80, 0x23, 0x03, 0x2C, 0x80, 0x23, 0x03, 0x48, 0x80, 0x23, 0x03, 0x64, 0x80, 0x23, 0x03, 0x80,
-	0x80, 0x23, 0x03, 0x9C, 0x80, 0x23, 0x03, 0xB8,
+/* 803C05D8-803C0610 0038 .data      @7485                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_msg_class__LIT_7485[14] = {
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+282),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+288),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+294),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+300),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+307),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+314),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+321),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+328),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+335),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+342),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+349),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+356),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+363),
+	(void*)(((u32*)do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl)+370),
 };
-/* 803C0610 0100 .data      @7484                                                        */
+/* 803C0610-803C0710 0100 .data      @7484                                                        InitializedData */
 SECTION_DATA u8 LIT_7484[256] = {
 	0x80, 0x22, 0xFE, 0xF4, 0x80, 0x23, 0x09, 0x60, 0x80, 0x23, 0x09, 0x60, 0x80, 0x23, 0x09, 0x60,
 	0x80, 0x23, 0x09, 0x60, 0x80, 0x23, 0x09, 0x60, 0x80, 0x23, 0x09, 0x60, 0x80, 0x23, 0x09, 0x60,
@@ -560,36 +1047,81 @@ SECTION_DATA u8 LIT_7484[256] = {
 	0x80, 0x23, 0x01, 0xF0, 0x80, 0x23, 0x00, 0x58, 0x80, 0x23, 0x00, 0x58, 0x80, 0x22, 0xFF, 0x98,
 	0x80, 0x22, 0xFF, 0xB8, 0x80, 0x23, 0x09, 0x60, 0x80, 0x22, 0xFF, 0xD8, 0x80, 0x23, 0x00, 0x14,
 };
-/* 803C0710 0054 .data      @7997                                                        */
-SECTION_DATA u8 LIT_7997[84] = {
-	0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1C, 0x48, 0x80, 0x23, 0x1C, 0x54, 0x80, 0x23, 0x1C, 0x60,
-	0x80, 0x23, 0x1C, 0x6C, 0x80, 0x23, 0x1C, 0x78, 0x80, 0x23, 0x1C, 0x84, 0x80, 0x23, 0x1C, 0x90,
-	0x80, 0x23, 0x1C, 0x9C, 0x80, 0x23, 0x1C, 0xA8, 0x80, 0x23, 0x1C, 0xB4, 0x80, 0x23, 0x1C, 0xC0,
-	0x80, 0x23, 0x1C, 0xCC, 0x80, 0x23, 0x1C, 0xD8, 0x80, 0x23, 0x1C, 0xE4, 0x80, 0x23, 0x1D, 0x10,
-	0x80, 0x23, 0x1D, 0x1C, 0x80, 0x23, 0x1D, 0x28, 0x80, 0x23, 0x1D, 0x34, 0x80, 0x23, 0x1D, 0x40,
-	0x80, 0x23, 0x1D, 0x4C,
+/* 803C0710-803C0764 0054 .data      @7997                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7997[21] = {
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+785),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+718),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+721),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+724),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+727),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+730),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+733),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+736),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+739),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+742),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+745),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+748),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+751),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+754),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+757),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+768),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+771),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+774),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+777),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+780),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+783),
 };
-/* 803C0764 0030 .data      @7996                                                        */
-SECTION_DATA u8 LIT_7996[48] = {
-	0x80, 0x23, 0x1B, 0x34, 0x80, 0x23, 0x1B, 0x40, 0x80, 0x23, 0x1B, 0x4C, 0x80, 0x23, 0x1B, 0x64,
-	0x80, 0x23, 0x1B, 0x7C, 0x80, 0x23, 0x1B, 0x94, 0x80, 0x23, 0x1B, 0xAC, 0x80, 0x23, 0x1B, 0xC4,
-	0x80, 0x23, 0x1B, 0xDC, 0x80, 0x23, 0x1B, 0xF4, 0x80, 0x23, 0x1C, 0x0C, 0x80, 0x23, 0x1C, 0x18,
+/* 803C0764-803C0794 0030 .data      @7996                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7996[12] = {
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+649),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+652),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+655),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+661),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+667),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+673),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+679),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+685),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+691),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+697),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+703),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+706),
 };
-/* 803C0794 003C .data      @7995                                                        */
-SECTION_DATA u8 LIT_7995[60] = {
-	0x80, 0x23, 0x18, 0x24, 0x80, 0x23, 0x18, 0xA8, 0x80, 0x23, 0x18, 0xCC, 0x80, 0x23, 0x19, 0xAC,
-	0x80, 0x23, 0x19, 0xE8, 0x80, 0x23, 0x1A, 0x04, 0x80, 0x23, 0x1A, 0x28, 0x80, 0x23, 0x1A, 0xD4,
-	0x80, 0x23, 0x1A, 0x64, 0x80, 0x23, 0x18, 0xF0, 0x80, 0x23, 0x19, 0x2C, 0x80, 0x23, 0x19, 0x4C,
-	0x80, 0x23, 0x19, 0x6C, 0x80, 0x23, 0x1A, 0x88, 0x80, 0x23, 0x1A, 0xAC,
+/* 803C0794-803C07D0 003C .data      @7995                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7995[15] = {
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+453),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+486),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+495),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+551),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+566),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+573),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+582),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+625),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+597),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+504),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+519),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+527),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+535),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+606),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+615),
 };
-/* 803C07D0 0038 .data      @7994                                                        */
-SECTION_DATA u8 LIT_7994[56] = {
-	0x80, 0x23, 0x16, 0x84, 0x80, 0x23, 0x16, 0x9C, 0x80, 0x23, 0x16, 0xB4, 0x80, 0x23, 0x16, 0xCC,
-	0x80, 0x23, 0x16, 0xE8, 0x80, 0x23, 0x17, 0x04, 0x80, 0x23, 0x17, 0x20, 0x80, 0x23, 0x17, 0x3C,
-	0x80, 0x23, 0x17, 0x58, 0x80, 0x23, 0x17, 0x74, 0x80, 0x23, 0x17, 0x90, 0x80, 0x23, 0x17, 0xAC,
-	0x80, 0x23, 0x17, 0xC8, 0x80, 0x23, 0x17, 0xE4,
+/* 803C07D0-803C0808 0038 .data      @7994                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7994[14] = {
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+349),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+355),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+361),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+367),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+374),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+381),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+388),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+395),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+402),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+409),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+416),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+423),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+430),
+	(void*)(((u32*)do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl)+437),
 };
-/* 803C0808 0100 .data      @7993                                                        */
+/* 803C0808-803C0908 0100 .data      @7993                                                        InitializedData */
 SECTION_DATA u8 LIT_7993[256] = {
 	0x80, 0x23, 0x12, 0x28, 0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1D, 0x54,
 	0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1D, 0x54, 0x80, 0x23, 0x1D, 0x54,
@@ -608,8 +1140,8 @@ SECTION_DATA u8 LIT_7993[256] = {
 	0x80, 0x23, 0x16, 0x30, 0x80, 0x23, 0x15, 0x48, 0x80, 0x23, 0x15, 0x54, 0x80, 0x23, 0x12, 0xC4,
 	0x80, 0x23, 0x12, 0xE4, 0x80, 0x23, 0x13, 0x04, 0x80, 0x23, 0x13, 0x14, 0x80, 0x23, 0x13, 0x50,
 };
-/* 803C0908 0040 .data      __vt__35jmessage_string_tRenderingProcessor                  */
-SECTION_DATA const  void* __vt__35jmessage_string_tRenderingProcessor[16] = {
+/* 803C0908-803C0948 0040 .data      __vt__35jmessage_string_tRenderingProcessor                  VTableData */
+SECTION_DATA void* __vt__35jmessage_string_tRenderingProcessor[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__35jmessage_string_tRenderingProcessorFv,
@@ -627,8 +1159,8 @@ SECTION_DATA const  void* __vt__35jmessage_string_tRenderingProcessor[16] = {
 	(void*)do_end___Q28JMessage19TRenderingProcessorFv,
 	(void*)do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl,
 };
-/* 803C0948 0058 .data      __vt__34jmessage_string_tSequenceProcessor                   */
-SECTION_DATA const  void* __vt__34jmessage_string_tSequenceProcessor[22] = {
+/* 803C0948-803C09A0 0058 .data      __vt__34jmessage_string_tSequenceProcessor                   VTableData */
+SECTION_DATA void* __vt__34jmessage_string_tSequenceProcessor[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__34jmessage_string_tSequenceProcessorFv,
@@ -652,8 +1184,8 @@ SECTION_DATA const  void* __vt__34jmessage_string_tSequenceProcessor[22] = {
 	(void*)do_branch_queryResult__Q28JMessage18TSequenceProcessorFv,
 	(void*)do_branch__Q28JMessage18TSequenceProcessorFPCvPCc,
 };
-/* 803C09A0 0040 .data      __vt__33jmessage_string_tMeasureProcessor                    */
-SECTION_DATA const  void* __vt__33jmessage_string_tMeasureProcessor[16] = {
+/* 803C09A0-803C09E0 0040 .data      __vt__33jmessage_string_tMeasureProcessor                    VTableData */
+SECTION_DATA void* __vt__33jmessage_string_tMeasureProcessor[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__33jmessage_string_tMeasureProcessorFv,
@@ -671,21 +1203,21 @@ SECTION_DATA const  void* __vt__33jmessage_string_tMeasureProcessor[16] = {
 	(void*)do_end___Q28JMessage19TRenderingProcessorFv,
 	(void*)do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl,
 };
-/* 803C09E0 000C .data      __vt__24jmessage_string_tControl                             */
-SECTION_DATA const  void* __vt__24jmessage_string_tControl[3] = {
+/* 803C09E0-803C09EC 000C .data      __vt__24jmessage_string_tControl                             VTableData */
+SECTION_DATA void* __vt__24jmessage_string_tControl[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__24jmessage_string_tControlFv,
 };
-/* 803C09EC 0010 .data      __vt__26jmessage_string_tReference                           */
-SECTION_DATA const  void* __vt__26jmessage_string_tReference[4] = {
+/* 803C09EC-803C09FC 0010 .data      __vt__26jmessage_string_tReference                           VTableData */
+SECTION_DATA void* __vt__26jmessage_string_tReference[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26jmessage_string_tReferenceFv,
 	(void*)do_word__Q28JMessage10TReferenceCFUl,
 };
-/* 803C09FC 0040 .data      __vt__28jmessage_tRenderingProcessor                         */
-SECTION_DATA const  void* __vt__28jmessage_tRenderingProcessor[16] = {
+/* 803C09FC-803C0A3C 0040 .data      __vt__28jmessage_tRenderingProcessor                         VTableData */
+SECTION_DATA void* __vt__28jmessage_tRenderingProcessor[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__28jmessage_tRenderingProcessorFv,
@@ -703,8 +1235,8 @@ SECTION_DATA const  void* __vt__28jmessage_tRenderingProcessor[16] = {
 	(void*)do_end___Q28JMessage19TRenderingProcessorFv,
 	(void*)do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl,
 };
-/* 803C0A3C 0058 .data      __vt__27jmessage_tSequenceProcessor                          */
-SECTION_DATA const  void* __vt__27jmessage_tSequenceProcessor[22] = {
+/* 803C0A3C-803C0A94 0058 .data      __vt__27jmessage_tSequenceProcessor                          VTableData */
+SECTION_DATA void* __vt__27jmessage_tSequenceProcessor[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__27jmessage_tSequenceProcessorFv,
@@ -728,8 +1260,8 @@ SECTION_DATA const  void* __vt__27jmessage_tSequenceProcessor[22] = {
 	(void*)do_branch_queryResult__Q28JMessage18TSequenceProcessorFv,
 	(void*)do_branch__Q28JMessage18TSequenceProcessorFPCvPCc,
 };
-/* 803C0A94 0040 .data      __vt__26jmessage_tMeasureProcessor                           */
-SECTION_DATA const  void* __vt__26jmessage_tMeasureProcessor[16] = {
+/* 803C0A94-803C0AD4 0040 .data      __vt__26jmessage_tMeasureProcessor                           VTableData */
+SECTION_DATA void* __vt__26jmessage_tMeasureProcessor[16] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26jmessage_tMeasureProcessorFv,
@@ -747,8 +1279,8 @@ SECTION_DATA const  void* __vt__26jmessage_tMeasureProcessor[16] = {
 	(void*)do_end___Q28JMessage19TRenderingProcessorFv,
 	(void*)do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl,
 };
-/* 803C0AD4 0010 .data      __vt__19jmessage_tReference                                  */
-SECTION_DATA const  void* __vt__19jmessage_tReference[5] = {
+/* 803C0AD4-803C0AE8 0010 .data      __vt__19jmessage_tReference                                  VTableData */
+SECTION_DATA void* __vt__19jmessage_tReference[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19jmessage_tReferenceFv,
@@ -764,50 +1296,50 @@ SECTION_DATA const  void* __vt__19jmessage_tReference[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454A58 0004 .sdata2    @4025                                                        */
+/* 80454A58-80454A5C 0004 .sdata2    @4025                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_class__LIT_4025[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 80454A5C 0004 .sdata2    @4026                                                        */
+/* 80454A5C-80454A60 0004 .sdata2    @4026                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_msg_class__LIT_4026 = 0.500000f;
-/* 80454A60 0004 .sdata2    @4027                                                        */
+/* 80454A60-80454A64 0004 .sdata2    @4027                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_class__LIT_4027[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454A64 0004 .sdata2    @4028                                                        */
+/* 80454A64-80454A68 0004 .sdata2    @4028                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_class__LIT_4028 = 1.000000f;
-/* 80454A68 0008 .sdata2    @4078                                                        */
+/* 80454A68-80454A70 0008 .sdata2    @4078                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_class__LIT_4078[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80454A70 0008 .sdata2    @4198                                                        */
+/* 80454A70-80454A78 0008 .sdata2    @4198                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_msg_class__LIT_4198 = 4503601774854144.000000;
-/* 80454A78 0004 .sdata2    @4291                                                        */
+/* 80454A78-80454A7C 0004 .sdata2    @4291                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_msg_class__LIT_4291 = -1.000000f;
-/* 80454A7C 0004 .sdata2    @5151                                                        */
+/* 80454A7C-80454A80 0004 .sdata2    @5151                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 LIT_5151 = 100.000000f;
-/* 80454A80 0008 .sdata2    @5154                                                        */
+/* 80454A80-80454A88 0008 .sdata2    @5154                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_5154 = 4503599627370496.000000;
-/* 80454A88 0004 .sdata2    @5490                                                        */
+/* 80454A88-80454A8C 0004 .sdata2    @5490                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 LIT_5490 = 10.000000f;
-/* 80454A8C 0004 .sdata2    @5491                                                        */
+/* 80454A8C-80454A90 0004 .sdata2    @5491                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 LIT_5491 = 255.000000f;
-/* 80454A90 0004 .sdata2    @6374                                                        */
+/* 80454A90-80454A94 0004 .sdata2    @6374                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6374[4] = {
 	0x3E, 0x99, 0x99, 0x9A,
 };
-/* 80454A94 0004 .sdata2    @6781                                                        */
+/* 80454A94-80454A98 0004 .sdata2    @6781                                                        Float32Data */
 // 0x41c00000
 SECTION_SDATA2 f32 LIT_6781 = 24.000000f;
-/* 80454A98 0004 .sdata2    @7190                                                        */
+/* 80454A98-80454AA0 0004 .sdata2    @7190                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7190[8] = {
 	0x41, 0xA0, 0x00, 0x00,
 	/* padding */
@@ -821,9 +1353,8 @@ SECTION_SDATA2 u8 LIT_7190[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804510C0 0003 .sbss      mMoji$3770                                                   */
-SECTION_SBSS u8 data_804510C0[3];
-SECTION_SBSS u8 pad_804510C4[4];
+/* 804510C0-804510C8 0003 .sbss      mMoji$3770                                                   ZeroInitializedData */
+SECTION_SBSS u8 data_804510C0[3 + 5 /* padding */];
 }
 
 
@@ -832,7 +1363,7 @@ SECTION_SBSS u8 pad_804510C4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80228578 0054 .text      checkCharInfoCharactor__Fi                                   */
+/* 80228578-802285CC 0054 .text      checkCharInfoCharactor__Fi                                   Function */
 }
 
 #pragma push
@@ -845,7 +1376,7 @@ asm void checkCharInfoCharactor(int) {
 #pragma pop
 
 extern "C" {
-/* 802285CC 003C .text      changeCodeToChar__FUs                                        */
+/* 802285CC-80228608 003C .text      changeCodeToChar__FUs                                        Function */
 }
 
 #pragma push
@@ -858,7 +1389,7 @@ asm void changeCodeToChar(u16) {
 #pragma pop
 
 extern "C" {
-/* 80228608 0230 .text      change1ByteTo2Bytes__Fi                                      */
+/* 80228608-80228838 0230 .text      change1ByteTo2Bytes__Fi                                      Function */
 }
 
 #pragma push
@@ -871,7 +1402,7 @@ asm void change1ByteTo2Bytes(int) {
 #pragma pop
 
 extern "C" {
-/* 80228838 0070 .text      changeKataToHira__Fi                                         */
+/* 80228838-802288A8 0070 .text      changeKataToHira__Fi                                         Function */
 }
 
 #pragma push
@@ -884,7 +1415,7 @@ asm void changeKataToHira(int) {
 #pragma pop
 
 extern "C" {
-/* 802288A8 0054 .text      isOutfontKanjiCode__Fi                                       */
+/* 802288A8-802288FC 0054 .text      isOutfontKanjiCode__Fi                                       Function */
 }
 
 #pragma push
@@ -897,7 +1428,7 @@ asm void isOutfontKanjiCode(int) {
 #pragma pop
 
 extern "C" {
-/* 802288FC 00AC .text      getFontCCColorTable__FUcUc                                   */
+/* 802288FC-802289A8 00AC .text      getFontCCColorTable__FUcUc                                   Function */
 }
 
 #pragma push
@@ -910,7 +1441,7 @@ asm void getFontCCColorTable(u8, u8) {
 #pragma pop
 
 extern "C" {
-/* 802289A8 00AC .text      getFontGCColorTable__FUcUc                                   */
+/* 802289A8-80228A54 00AC .text      getFontGCColorTable__FUcUc                                   Function */
 }
 
 #pragma push
@@ -923,7 +1454,7 @@ asm void getFontGCColorTable(u8, u8) {
 #pragma pop
 
 extern "C" {
-/* 80228A54 0078 .text      getOutFontNumberType__Fi                                     */
+/* 80228A54-80228ACC 0078 .text      getOutFontNumberType__Fi                                     Function */
 }
 
 #pragma push
@@ -936,7 +1467,7 @@ asm void getOutFontNumberType(int) {
 #pragma pop
 
 extern "C" {
-/* 80228ACC 0038 .text      getPohNum__Fv                                                */
+/* 80228ACC-80228B04 0038 .text      getPohNum__Fv                                                Function */
 }
 
 #pragma push
@@ -949,7 +1480,7 @@ asm void getPohNum(void) {
 #pragma pop
 
 extern "C" {
-/* 80228B04 01B0 .text      __ct__19jmessage_tReferenceFv                                */
+/* 80228B04-80228CB4 01B0 .text      __ct__19jmessage_tReferenceFv                                Function */
 // jmessage_tReference::jmessage_tReference(void)
 #pragma push
 #pragma optimization_level 0
@@ -960,7 +1491,7 @@ asm void __ct__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228CB4 0074 .text      __dt__19jmessage_tReferenceFv                                */
+/* 80228CB4-80228D28 0074 .text      __dt__19jmessage_tReferenceFv                                Function */
 // jmessage_tReference::~jmessage_tReference(void)
 #pragma push
 #pragma optimization_level 0
@@ -971,7 +1502,7 @@ asm void __dt__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228D28 00B8 .text      calcDistance__19jmessage_tReferenceFv                        */
+/* 80228D28-80228DE0 00B8 .text      calcDistance__19jmessage_tReferenceFv                        Function */
 // jmessage_tReference::calcDistance(void)
 #pragma push
 #pragma optimization_level 0
@@ -982,7 +1513,7 @@ asm void calcDistance__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228DE0 008C .text      getLineMax__19jmessage_tReferenceFv                          */
+/* 80228DE0-80228E6C 008C .text      getLineMax__19jmessage_tReferenceFv                          Function */
 // jmessage_tReference::getLineMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -993,7 +1524,7 @@ asm void getLineMax__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228E6C 0034 .text      isKanban__19jmessage_tReferenceFv                            */
+/* 80228E6C-80228EA0 0034 .text      isKanban__19jmessage_tReferenceFv                            Function */
 // jmessage_tReference::isKanban(void)
 #pragma push
 #pragma optimization_level 0
@@ -1004,7 +1535,7 @@ asm void isKanban__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228EA0 0034 .text      isPlaceName__19jmessage_tReferenceFv                         */
+/* 80228EA0-80228ED4 0034 .text      isPlaceName__19jmessage_tReferenceFv                         Function */
 // jmessage_tReference::isPlaceName(void)
 #pragma push
 #pragma optimization_level 0
@@ -1015,7 +1546,7 @@ asm void isPlaceName__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228ED4 0034 .text      isBossName__19jmessage_tReferenceFv                          */
+/* 80228ED4-80228F08 0034 .text      isBossName__19jmessage_tReferenceFv                          Function */
 // jmessage_tReference::isBossName(void)
 #pragma push
 #pragma optimization_level 0
@@ -1026,7 +1557,7 @@ asm void isBossName__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228F08 0034 .text      isSaveSeq__19jmessage_tReferenceFv                           */
+/* 80228F08-80228F3C 0034 .text      isSaveSeq__19jmessage_tReferenceFv                           Function */
 // jmessage_tReference::isSaveSeq(void)
 #pragma push
 #pragma optimization_level 0
@@ -1037,7 +1568,7 @@ asm void isSaveSeq__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228F3C 0034 .text      isBook__19jmessage_tReferenceFv                              */
+/* 80228F3C-80228F70 0034 .text      isBook__19jmessage_tReferenceFv                              Function */
 // jmessage_tReference::isBook(void)
 #pragma push
 #pragma optimization_level 0
@@ -1048,7 +1579,7 @@ asm void isBook__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228F70 0034 .text      isStaffRoll__19jmessage_tReferenceFv                         */
+/* 80228F70-80228FA4 0034 .text      isStaffRoll__19jmessage_tReferenceFv                         Function */
 // jmessage_tReference::isStaffRoll(void)
 #pragma push
 #pragma optimization_level 0
@@ -1059,7 +1590,7 @@ asm void isStaffRoll__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228FA4 0034 .text      isHowl__19jmessage_tReferenceFv                              */
+/* 80228FA4-80228FD8 0034 .text      isHowl__19jmessage_tReferenceFv                              Function */
 // jmessage_tReference::isHowl(void)
 #pragma push
 #pragma optimization_level 0
@@ -1070,7 +1601,7 @@ asm void isHowl__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80228FD8 0034 .text      isMidona__19jmessage_tReferenceFv                            */
+/* 80228FD8-8022900C 0034 .text      isMidona__19jmessage_tReferenceFv                            Function */
 // jmessage_tReference::isMidona(void)
 #pragma push
 #pragma optimization_level 0
@@ -1081,7 +1612,7 @@ asm void isMidona__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022900C 0028 .text      resetReference__19jmessage_tReferenceFv                      */
+/* 8022900C-80229034 0028 .text      resetReference__19jmessage_tReferenceFv                      Function */
 // jmessage_tReference::resetReference(void)
 #pragma push
 #pragma optimization_level 0
@@ -1092,7 +1623,7 @@ asm void resetReference__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229034 0134 .text      pageSend__19jmessage_tReferenceFv                            */
+/* 80229034-80229168 0134 .text      pageSend__19jmessage_tReferenceFv                            Function */
 // jmessage_tReference::pageSend(void)
 #pragma push
 #pragma optimization_level 0
@@ -1103,7 +1634,7 @@ asm void pageSend__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229168 0340 .text      selectMessage__19jmessage_tReferenceFv                       */
+/* 80229168-802294A8 0340 .text      selectMessage__19jmessage_tReferenceFv                       Function */
 // jmessage_tReference::selectMessage(void)
 #pragma push
 #pragma optimization_level 0
@@ -1114,7 +1645,7 @@ asm void selectMessage__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 802294A8 0288 .text      inputNumber__19jmessage_tReferenceFv                         */
+/* 802294A8-80229730 0288 .text      inputNumber__19jmessage_tReferenceFv                         Function */
 // jmessage_tReference::inputNumber(void)
 #pragma push
 #pragma optimization_level 0
@@ -1125,7 +1656,7 @@ asm void inputNumber__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229730 0014 .text      getWord__19jmessage_tReferenceFi                             */
+/* 80229730-80229744 0014 .text      getWord__19jmessage_tReferenceFi                             Function */
 // jmessage_tReference::getWord(int)
 #pragma push
 #pragma optimization_level 0
@@ -1136,7 +1667,7 @@ asm void getWord__19jmessage_tReferenceFi() {
 }
 #pragma pop
 
-/* 80229744 0024 .text      resetWord__19jmessage_tReferenceFv                           */
+/* 80229744-80229768 0024 .text      resetWord__19jmessage_tReferenceFv                           Function */
 // jmessage_tReference::resetWord(void)
 #pragma push
 #pragma optimization_level 0
@@ -1147,7 +1678,7 @@ asm void resetWord__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229768 0020 .text      setCharactor__19jmessage_tReferenceFUs                       */
+/* 80229768-80229788 0020 .text      setCharactor__19jmessage_tReferenceFUs                       Function */
 // jmessage_tReference::setCharactor(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1158,7 +1689,7 @@ asm void setCharactor__19jmessage_tReferenceFUs() {
 }
 #pragma pop
 
-/* 80229788 0028 .text      addCharactor__19jmessage_tReferenceFUs                       */
+/* 80229788-802297B0 0028 .text      addCharactor__19jmessage_tReferenceFUs                       Function */
 // jmessage_tReference::addCharactor(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1169,7 +1700,7 @@ asm void addCharactor__19jmessage_tReferenceFUs() {
 }
 #pragma pop
 
-/* 802297B0 0034 .text      resetCharactor__19jmessage_tReferenceFv                      */
+/* 802297B0-802297E4 0034 .text      resetCharactor__19jmessage_tReferenceFv                      Function */
 // jmessage_tReference::resetCharactor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1180,7 +1711,7 @@ asm void resetCharactor__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 802297E4 002C .text      shiftCharCountBuffer__19jmessage_tReferenceFv                */
+/* 802297E4-80229810 002C .text      shiftCharCountBuffer__19jmessage_tReferenceFv                Function */
 // jmessage_tReference::shiftCharCountBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1191,7 +1722,7 @@ asm void shiftCharCountBuffer__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229810 0038 .text      resetCharCountBuffer__19jmessage_tReferenceFv                */
+/* 80229810-80229848 0038 .text      resetCharCountBuffer__19jmessage_tReferenceFv                Function */
 // jmessage_tReference::resetCharCountBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1202,7 +1733,7 @@ asm void resetCharCountBuffer__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 80229848 0024 .text      allsetCharCountBuffer__19jmessage_tReferenceFv               */
+/* 80229848-8022986C 0024 .text      allsetCharCountBuffer__19jmessage_tReferenceFv               Function */
 // jmessage_tReference::allsetCharCountBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -1213,7 +1744,7 @@ asm void allsetCharCountBuffer__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022986C 0070 .text      isCharSend__19jmessage_tReferenceFv                          */
+/* 8022986C-802298DC 0070 .text      isCharSend__19jmessage_tReferenceFv                          Function */
 // jmessage_tReference::isCharSend(void)
 #pragma push
 #pragma optimization_level 0
@@ -1224,7 +1755,7 @@ asm void isCharSend__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 802298DC 0070 .text      isLightSend__19jmessage_tReferenceFv                         */
+/* 802298DC-8022994C 0070 .text      isLightSend__19jmessage_tReferenceFv                         Function */
 // jmessage_tReference::isLightSend(void)
 #pragma push
 #pragma optimization_level 0
@@ -1235,7 +1766,7 @@ asm void isLightSend__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022994C 0060 .text      isLightEnd__19jmessage_tReferenceFv                          */
+/* 8022994C-802299AC 0060 .text      isLightEnd__19jmessage_tReferenceFv                          Function */
 // jmessage_tReference::isLightEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -1246,7 +1777,7 @@ asm void isLightEnd__19jmessage_tReferenceFv() {
 }
 #pragma pop
 
-/* 802299AC 0040 .text      decideOutFontRupeeColor__19jmessage_tReferenceFi             */
+/* 802299AC-802299EC 0040 .text      decideOutFontRupeeColor__19jmessage_tReferenceFi             Function */
 // jmessage_tReference::decideOutFontRupeeColor(int)
 #pragma push
 #pragma optimization_level 0
@@ -1257,7 +1788,7 @@ asm void decideOutFontRupeeColor__19jmessage_tReferenceFi() {
 }
 #pragma pop
 
-/* 802299EC 003C .text      __ct__17jmessage_tControlFv                                  */
+/* 802299EC-80229A28 003C .text      __ct__17jmessage_tControlFv                                  Function */
 // jmessage_tControl::jmessage_tControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -1268,7 +1799,7 @@ asm void __ct__17jmessage_tControlFv() {
 }
 #pragma pop
 
-/* 80229A28 009C .text      __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference   */
+/* 80229A28-80229AC4 009C .text      __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference   Function */
 // jmessage_tMeasureProcessor::jmessage_tMeasureProcessor(const jmessage_tReference*)
 #pragma push
 #pragma optimization_level 0
@@ -1279,8 +1810,8 @@ asm void __ct__26jmessage_tMeasureProcessorFPC19jmessage_tReference() {
 }
 #pragma pop
 
-/* 80229AC4 01F0 .text      do_begin__26jmessage_tMeasureProcessorFPCvPCc                */
-// jmessage_tMeasureProcessor::do_begin(const void*, const s8*)
+/* 80229AC4-80229CB4 01F0 .text      do_begin__26jmessage_tMeasureProcessorFPCvPCc                Function */
+// jmessage_tMeasureProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1290,7 +1821,7 @@ asm void do_begin__26jmessage_tMeasureProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 80229CB4 0188 .text      do_end__26jmessage_tMeasureProcessorFv                       */
+/* 80229CB4-80229E3C 0188 .text      do_end__26jmessage_tMeasureProcessorFv                       Function */
 // jmessage_tMeasureProcessor::do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -1301,7 +1832,7 @@ asm void do_end__26jmessage_tMeasureProcessorFv() {
 }
 #pragma pop
 
-/* 80229E3C 042C .text      do_character__26jmessage_tMeasureProcessorFi                 */
+/* 80229E3C-8022A268 042C .text      do_character__26jmessage_tMeasureProcessorFi                 Function */
 // jmessage_tMeasureProcessor::do_character(int)
 #pragma push
 #pragma optimization_level 0
@@ -1312,7 +1843,7 @@ asm void do_character__26jmessage_tMeasureProcessorFi() {
 }
 #pragma pop
 
-/* 8022A268 0E48 .text      do_tag__26jmessage_tMeasureProcessorFUlPCvUl                 */
+/* 8022A268-8022B0B0 0E48 .text      do_tag__26jmessage_tMeasureProcessorFUlPCvUl                 Function */
 // jmessage_tMeasureProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1323,7 +1854,7 @@ asm void do_tag__26jmessage_tMeasureProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 8022B0B0 00DC .text      do_scale__26jmessage_tMeasureProcessorFf                     */
+/* 8022B0B0-8022B18C 00DC .text      do_scale__26jmessage_tMeasureProcessorFf                     Function */
 // jmessage_tMeasureProcessor::do_scale(f32)
 #pragma push
 #pragma optimization_level 0
@@ -1334,7 +1865,7 @@ asm void do_scale__26jmessage_tMeasureProcessorFf() {
 }
 #pragma pop
 
-/* 8022B18C 0260 .text      do_space__26jmessage_tMeasureProcessorFUl                    */
+/* 8022B18C-8022B3EC 0260 .text      do_space__26jmessage_tMeasureProcessorFUl                    Function */
 // jmessage_tMeasureProcessor::do_space(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1345,7 +1876,7 @@ asm void do_space__26jmessage_tMeasureProcessorFUl() {
 }
 #pragma pop
 
-/* 8022B3EC 0068 .text      do_pageType__26jmessage_tMeasureProcessorFi                  */
+/* 8022B3EC-8022B454 0068 .text      do_pageType__26jmessage_tMeasureProcessorFi                  Function */
 // jmessage_tMeasureProcessor::do_pageType(int)
 #pragma push
 #pragma optimization_level 0
@@ -1356,13 +1887,13 @@ asm void do_pageType__26jmessage_tMeasureProcessorFi() {
 }
 #pragma pop
 
-/* 8022B454 0004 .text      do_name1__26jmessage_tMeasureProcessorFv                     */
+/* 8022B454-8022B458 0004 .text      do_name1__26jmessage_tMeasureProcessorFv                     ReturnFunction */
 // jmessage_tMeasureProcessor::do_name1(void)
 void do_name1__26jmessage_tMeasureProcessorFv() {
 	return;
 }
 
-/* 8022B458 0088 .text      do_rubyset__26jmessage_tMeasureProcessorFPCvUl               */
+/* 8022B458-8022B4E0 0088 .text      do_rubyset__26jmessage_tMeasureProcessorFPCvUl               Function */
 // jmessage_tMeasureProcessor::do_rubyset(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1373,8 +1904,8 @@ asm void do_rubyset__26jmessage_tMeasureProcessorFPCvUl() {
 }
 #pragma pop
 
-/* 8022B4E0 0078 .text      push_word__26jmessage_tMeasureProcessorFPc                   */
-// jmessage_tMeasureProcessor::push_word(s8*)
+/* 8022B4E0-8022B558 0078 .text      push_word__26jmessage_tMeasureProcessorFPc                   Function */
+// jmessage_tMeasureProcessor::push_word(char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1384,7 +1915,7 @@ asm void push_word__26jmessage_tMeasureProcessorFPc() {
 }
 #pragma pop
 
-/* 8022B558 009C .text      __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl */
+/* 8022B558-8022B5F4 009C .text      __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_tControl Function */
 // jmessage_tSequenceProcessor::jmessage_tSequenceProcessor(const jmessage_tReference*, jmessage_tControl*)
 #pragma push
 #pragma optimization_level 0
@@ -1395,7 +1926,7 @@ asm void __ct__27jmessage_tSequenceProcessorFPC19jmessage_tReferenceP17jmessage_
 }
 #pragma pop
 
-/* 8022B5F4 0060 .text      __dt__26jmessage_tMeasureProcessorFv                         */
+/* 8022B5F4-8022B654 0060 .text      __dt__26jmessage_tMeasureProcessorFv                         Function */
 // jmessage_tMeasureProcessor::~jmessage_tMeasureProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1406,14 +1937,14 @@ asm void __dt__26jmessage_tMeasureProcessorFv() {
 }
 #pragma pop
 
-/* 8022B654 0004 .text      do_reset__27jmessage_tSequenceProcessorFv                    */
+/* 8022B654-8022B658 0004 .text      do_reset__27jmessage_tSequenceProcessorFv                    ReturnFunction */
 // jmessage_tSequenceProcessor::do_reset(void)
 void do_reset__27jmessage_tSequenceProcessorFv() {
 	return;
 }
 
-/* 8022B658 03E4 .text      do_begin__27jmessage_tSequenceProcessorFPCvPCc               */
-// jmessage_tSequenceProcessor::do_begin(const void*, const s8*)
+/* 8022B658-8022BA3C 03E4 .text      do_begin__27jmessage_tSequenceProcessorFPCvPCc               Function */
+// jmessage_tSequenceProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1423,7 +1954,7 @@ asm void do_begin__27jmessage_tSequenceProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 8022BA3C 0140 .text      do_end__27jmessage_tSequenceProcessorFv                      */
+/* 8022BA3C-8022BB7C 0140 .text      do_end__27jmessage_tSequenceProcessorFv                      Function */
 // jmessage_tSequenceProcessor::do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -1434,7 +1965,7 @@ asm void do_end__27jmessage_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 8022BB7C 0464 .text      do_isReady__27jmessage_tSequenceProcessorFv                  */
+/* 8022BB7C-8022BFE0 0464 .text      do_isReady__27jmessage_tSequenceProcessorFv                  Function */
 // jmessage_tSequenceProcessor::do_isReady(void)
 #pragma push
 #pragma optimization_level 0
@@ -1445,7 +1976,7 @@ asm void do_isReady__27jmessage_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 8022BFE0 01C0 .text      do_character__27jmessage_tSequenceProcessorFi                */
+/* 8022BFE0-8022C1A0 01C0 .text      do_character__27jmessage_tSequenceProcessorFi                Function */
 // jmessage_tSequenceProcessor::do_character(int)
 #pragma push
 #pragma optimization_level 0
@@ -1456,7 +1987,7 @@ asm void do_character__27jmessage_tSequenceProcessorFi() {
 }
 #pragma pop
 
-/* 8022C1A0 075C .text      do_tag__27jmessage_tSequenceProcessorFUlPCvUl                */
+/* 8022C1A0-8022C8FC 075C .text      do_tag__27jmessage_tSequenceProcessorFUlPCvUl                Function */
 // jmessage_tSequenceProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1467,19 +1998,19 @@ asm void do_tag__27jmessage_tSequenceProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 8022C8FC 0008 .text      do_jump_isReady__27jmessage_tSequenceProcessorFv             */
+/* 8022C8FC-8022C904 0008 .text      do_jump_isReady__27jmessage_tSequenceProcessorFv             ReturnIntegerFunction */
 // jmessage_tSequenceProcessor::do_jump_isReady(void)
 int do_jump_isReady__27jmessage_tSequenceProcessorFv() {
 	return 1;
 }
 
-/* 8022C904 0004 .text      do_name1__27jmessage_tSequenceProcessorFv                    */
+/* 8022C904-8022C908 0004 .text      do_name1__27jmessage_tSequenceProcessorFv                    ReturnFunction */
 // jmessage_tSequenceProcessor::do_name1(void)
 void do_name1__27jmessage_tSequenceProcessorFv() {
 	return;
 }
 
-/* 8022C908 011C .text      do_space__27jmessage_tSequenceProcessorFUl                   */
+/* 8022C908-8022CA24 011C .text      do_space__27jmessage_tSequenceProcessorFUl                   Function */
 // jmessage_tSequenceProcessor::do_space(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1490,7 +2021,7 @@ asm void do_space__27jmessage_tSequenceProcessorFUl() {
 }
 #pragma pop
 
-/* 8022CA24 0088 .text      do_rubyset__27jmessage_tSequenceProcessorFPCvUl              */
+/* 8022CA24-8022CAAC 0088 .text      do_rubyset__27jmessage_tSequenceProcessorFPCvUl              Function */
 // jmessage_tSequenceProcessor::do_rubyset(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1501,7 +2032,7 @@ asm void do_rubyset__27jmessage_tSequenceProcessorFPCvUl() {
 }
 #pragma pop
 
-/* 8022CAAC 0064 .text      push_word__27jmessage_tSequenceProcessorFv                   */
+/* 8022CAAC-8022CB10 0064 .text      push_word__27jmessage_tSequenceProcessorFv                   Function */
 // jmessage_tSequenceProcessor::push_word(void)
 #pragma push
 #pragma optimization_level 0
@@ -1512,7 +2043,7 @@ asm void push_word__27jmessage_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 8022CB10 00D4 .text      messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz      */
+/* 8022CB10-8022CBE4 00D4 .text      messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz      Function */
 // jmessage_tSequenceProcessor::messageSePlay(u8, u8, cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -1523,13 +2054,13 @@ asm void messageSePlay__27jmessage_tSequenceProcessorFUcUcP4cXyz() {
 }
 #pragma pop
 
-/* 8022CBE4 0004 .text      do_jump__27jmessage_tSequenceProcessorFPCvPCc                */
-// jmessage_tSequenceProcessor::do_jump(const void*, const s8*)
+/* 8022CBE4-8022CBE8 0004 .text      do_jump__27jmessage_tSequenceProcessorFPCvPCc                ReturnFunction */
+// jmessage_tSequenceProcessor::do_jump(const void*, const char*)
 void do_jump__27jmessage_tSequenceProcessorFPCvPCc() {
 	return;
 }
 
-/* 8022CBE8 00C8 .text      calcStringLength__27jmessage_tSequenceProcessorFv            */
+/* 8022CBE8-8022CCB0 00C8 .text      calcStringLength__27jmessage_tSequenceProcessorFv            Function */
 // jmessage_tSequenceProcessor::calcStringLength(void)
 #pragma push
 #pragma optimization_level 0
@@ -1540,7 +2071,7 @@ asm void calcStringLength__27jmessage_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 8022CCB0 0118 .text      __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference */
+/* 8022CCB0-8022CDC8 0118 .text      __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference Function */
 // jmessage_tRenderingProcessor::jmessage_tRenderingProcessor(const jmessage_tReference*)
 #pragma push
 #pragma optimization_level 0
@@ -1551,14 +2082,14 @@ asm void __ct__28jmessage_tRenderingProcessorFPC19jmessage_tReference() {
 }
 #pragma pop
 
-/* 8022CDC8 0004 .text      do_reset__28jmessage_tRenderingProcessorFv                   */
+/* 8022CDC8-8022CDCC 0004 .text      do_reset__28jmessage_tRenderingProcessorFv                   ReturnFunction */
 // jmessage_tRenderingProcessor::do_reset(void)
 void do_reset__28jmessage_tRenderingProcessorFv() {
 	return;
 }
 
-/* 8022CDCC 020C .text      do_begin__28jmessage_tRenderingProcessorFPCvPCc              */
-// jmessage_tRenderingProcessor::do_begin(const void*, const s8*)
+/* 8022CDCC-8022CFD8 020C .text      do_begin__28jmessage_tRenderingProcessorFPCvPCc              Function */
+// jmessage_tRenderingProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1568,7 +2099,7 @@ asm void do_begin__28jmessage_tRenderingProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 8022CFD8 00C8 .text      do_end__28jmessage_tRenderingProcessorFv                     */
+/* 8022CFD8-8022D0A0 00C8 .text      do_end__28jmessage_tRenderingProcessorFv                     Function */
 // jmessage_tRenderingProcessor::do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -1579,7 +2110,7 @@ asm void do_end__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022D0A0 06AC .text      do_character__28jmessage_tRenderingProcessorFi               */
+/* 8022D0A0-8022D74C 06AC .text      do_character__28jmessage_tRenderingProcessorFi               Function */
 // jmessage_tRenderingProcessor::do_character(int)
 #pragma push
 #pragma optimization_level 0
@@ -1590,7 +2121,7 @@ asm void do_character__28jmessage_tRenderingProcessorFi() {
 }
 #pragma pop
 
-/* 8022D74C 09E0 .text      do_tag__28jmessage_tRenderingProcessorFUlPCvUl               */
+/* 8022D74C-8022E12C 09E0 .text      do_tag__28jmessage_tRenderingProcessorFUlPCvUl               Function */
 // jmessage_tRenderingProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1601,7 +2132,7 @@ asm void do_tag__28jmessage_tRenderingProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 8022E12C 0050 .text      resetRendering__28jmessage_tRenderingProcessorFv             */
+/* 8022E12C-8022E17C 0050 .text      resetRendering__28jmessage_tRenderingProcessorFv             Function */
 // jmessage_tRenderingProcessor::resetRendering(void)
 #pragma push
 #pragma optimization_level 0
@@ -1612,7 +2143,7 @@ asm void resetRendering__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022E17C 00E4 .text      do_widthcenter__28jmessage_tRenderingProcessorFv             */
+/* 8022E17C-8022E260 00E4 .text      do_widthcenter__28jmessage_tRenderingProcessorFv             Function */
 // jmessage_tRenderingProcessor::do_widthcenter(void)
 #pragma push
 #pragma optimization_level 0
@@ -1623,7 +2154,7 @@ asm void do_widthcenter__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022E260 00B8 .text      do_selwidthcenter__28jmessage_tRenderingProcessorFi          */
+/* 8022E260-8022E318 00B8 .text      do_selwidthcenter__28jmessage_tRenderingProcessorFi          Function */
 // jmessage_tRenderingProcessor::do_selwidthcenter(int)
 #pragma push
 #pragma optimization_level 0
@@ -1634,7 +2165,7 @@ asm void do_selwidthcenter__28jmessage_tRenderingProcessorFi() {
 }
 #pragma pop
 
-/* 8022E318 04B4 .text      do_heightcenter__28jmessage_tRenderingProcessorFv            */
+/* 8022E318-8022E7CC 04B4 .text      do_heightcenter__28jmessage_tRenderingProcessorFv            Function */
 // jmessage_tRenderingProcessor::do_heightcenter(void)
 #pragma push
 #pragma optimization_level 0
@@ -1645,7 +2176,7 @@ asm void do_heightcenter__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022E7CC 0094 .text      do_color__28jmessage_tRenderingProcessorFUc                  */
+/* 8022E7CC-8022E860 0094 .text      do_color__28jmessage_tRenderingProcessorFUc                  Function */
 // jmessage_tRenderingProcessor::do_color(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1656,7 +2187,7 @@ asm void do_color__28jmessage_tRenderingProcessorFUc() {
 }
 #pragma pop
 
-/* 8022E860 0100 .text      do_scale__28jmessage_tRenderingProcessorFf                   */
+/* 8022E860-8022E960 0100 .text      do_scale__28jmessage_tRenderingProcessorFf                   Function */
 // jmessage_tRenderingProcessor::do_scale(f32)
 #pragma push
 #pragma optimization_level 0
@@ -1667,8 +2198,8 @@ asm void do_scale__28jmessage_tRenderingProcessorFf() {
 }
 #pragma pop
 
-/* 8022E960 0060 .text      do_linedown__28jmessage_tRenderingProcessorFs                */
-// jmessage_tRenderingProcessor::do_linedown(s16)
+/* 8022E960-8022E9C0 0060 .text      do_linedown__28jmessage_tRenderingProcessorFs                Function */
+// jmessage_tRenderingProcessor::do_linedown(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1678,8 +2209,8 @@ asm void do_linedown__28jmessage_tRenderingProcessorFs() {
 }
 #pragma pop
 
-/* 8022E9C0 0124 .text      do_transY__28jmessage_tRenderingProcessorFsb                 */
-// jmessage_tRenderingProcessor::do_transY(s16, bool)
+/* 8022E9C0-8022EAE4 0124 .text      do_transY__28jmessage_tRenderingProcessorFsb                 Function */
+// jmessage_tRenderingProcessor::do_transY(short, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1689,7 +2220,7 @@ asm void do_transY__28jmessage_tRenderingProcessorFsb() {
 }
 #pragma pop
 
-/* 8022EAE4 022C .text      do_outfont__28jmessage_tRenderingProcessorFUcUl              */
+/* 8022EAE4-8022ED10 022C .text      do_outfont__28jmessage_tRenderingProcessorFUcUl              Function */
 // jmessage_tRenderingProcessor::do_outfont(u8, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1700,7 +2231,7 @@ asm void do_outfont__28jmessage_tRenderingProcessorFUcUl() {
 }
 #pragma pop
 
-/* 8022ED10 01BC .text      do_arrow2__28jmessage_tRenderingProcessorFv                  */
+/* 8022ED10-8022EECC 01BC .text      do_arrow2__28jmessage_tRenderingProcessorFv                  Function */
 // jmessage_tRenderingProcessor::do_arrow2(void)
 #pragma push
 #pragma optimization_level 0
@@ -1711,7 +2242,7 @@ asm void do_arrow2__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022EECC 0034 .text      getLineLength__28jmessage_tRenderingProcessorFi              */
+/* 8022EECC-8022EF00 0034 .text      getLineLength__28jmessage_tRenderingProcessorFi              Function */
 // jmessage_tRenderingProcessor::getLineLength(int)
 #pragma push
 #pragma optimization_level 0
@@ -1722,8 +2253,8 @@ asm void getLineLength__28jmessage_tRenderingProcessorFi() {
 }
 #pragma pop
 
-/* 8022EF00 0248 .text      do_strcat__28jmessage_tRenderingProcessorFPcbbb              */
-// jmessage_tRenderingProcessor::do_strcat(s8*, bool, bool, bool)
+/* 8022EF00-8022F148 0248 .text      do_strcat__28jmessage_tRenderingProcessorFPcbbb              Function */
+// jmessage_tRenderingProcessor::do_strcat(char*, bool, bool, bool)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1733,7 +2264,7 @@ asm void do_strcat__28jmessage_tRenderingProcessorFPcbbb() {
 }
 #pragma pop
 
-/* 8022F148 023C .text      do_rubyset__28jmessage_tRenderingProcessorFPCvUl             */
+/* 8022F148-8022F384 023C .text      do_rubyset__28jmessage_tRenderingProcessorFPCvUl             Function */
 // jmessage_tRenderingProcessor::do_rubyset(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1744,8 +2275,8 @@ asm void do_rubyset__28jmessage_tRenderingProcessorFPCvUl() {
 }
 #pragma pop
 
-/* 8022F384 01B8 .text      do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff         */
-// jmessage_tRenderingProcessor::do_rubystrcat(s8*, s8*, f32, f32)
+/* 8022F384-8022F53C 01B8 .text      do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff         Function */
+// jmessage_tRenderingProcessor::do_rubystrcat(char*, char*, f32, f32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1755,14 +2286,14 @@ asm void do_rubystrcat__28jmessage_tRenderingProcessorFPcPcff() {
 }
 #pragma pop
 
-/* 8022F53C 0004 .text      do_name1__28jmessage_tRenderingProcessorFv                   */
+/* 8022F53C-8022F540 0004 .text      do_name1__28jmessage_tRenderingProcessorFv                   ReturnFunction */
 // jmessage_tRenderingProcessor::do_name1(void)
 void do_name1__28jmessage_tRenderingProcessorFv() {
 	return;
 }
 
-/* 8022F540 01F4 .text      do_numset__28jmessage_tRenderingProcessorFs                  */
-// jmessage_tRenderingProcessor::do_numset(s16)
+/* 8022F540-8022F734 01F4 .text      do_numset__28jmessage_tRenderingProcessorFs                  Function */
+// jmessage_tRenderingProcessor::do_numset(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1772,7 +2303,7 @@ asm void do_numset__28jmessage_tRenderingProcessorFs() {
 }
 #pragma pop
 
-/* 8022F734 0050 .text      push_word__28jmessage_tRenderingProcessorFv                  */
+/* 8022F734-8022F784 0050 .text      push_word__28jmessage_tRenderingProcessorFv                  Function */
 // jmessage_tRenderingProcessor::push_word(void)
 #pragma push
 #pragma optimization_level 0
@@ -1783,7 +2314,7 @@ asm void push_word__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8022F784 013C .text      getCharInfo__28jmessage_tRenderingProcessorFfffff            */
+/* 8022F784-8022F8C0 013C .text      getCharInfo__28jmessage_tRenderingProcessorFfffff            Function */
 // jmessage_tRenderingProcessor::getCharInfo(f32, f32, f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1794,7 +2325,7 @@ asm void getCharInfo__28jmessage_tRenderingProcessorFfffff() {
 }
 #pragma pop
 
-/* 8022F8C0 008C .text      __ct__26jmessage_string_tReferenceFv                         */
+/* 8022F8C0-8022F94C 008C .text      __ct__26jmessage_string_tReferenceFv                         Function */
 // jmessage_string_tReference::jmessage_string_tReference(void)
 #pragma push
 #pragma optimization_level 0
@@ -1805,7 +2336,7 @@ asm void __ct__26jmessage_string_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022F94C 0060 .text      __dt__26jmessage_string_tReferenceFv                         */
+/* 8022F94C-8022F9AC 0060 .text      __dt__26jmessage_string_tReferenceFv                         Function */
 // jmessage_string_tReference::~jmessage_string_tReference(void)
 #pragma push
 #pragma optimization_level 0
@@ -1816,7 +2347,7 @@ asm void __dt__26jmessage_string_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022F9AC 0080 .text      init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc */
+/* 8022F9AC-8022FA2C 0080 .text      init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc Function */
 // jmessage_string_tReference::init(J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1827,25 +2358,25 @@ asm void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP
 }
 #pragma pop
 
-/* 8022FA2C 0004 .text      setCharactor__26jmessage_string_tReferenceFUs                */
+/* 8022FA2C-8022FA30 0004 .text      setCharactor__26jmessage_string_tReferenceFUs                ReturnFunction */
 // jmessage_string_tReference::setCharactor(u16)
 void setCharactor__26jmessage_string_tReferenceFUs() {
 	return;
 }
 
-/* 8022FA30 0004 .text      addCharactor__26jmessage_string_tReferenceFUs                */
+/* 8022FA30-8022FA34 0004 .text      addCharactor__26jmessage_string_tReferenceFUs                ReturnFunction */
 // jmessage_string_tReference::addCharactor(u16)
 void addCharactor__26jmessage_string_tReferenceFUs() {
 	return;
 }
 
-/* 8022FA34 0004 .text      resetCharactor__26jmessage_string_tReferenceFv               */
+/* 8022FA34-8022FA38 0004 .text      resetCharactor__26jmessage_string_tReferenceFv               ReturnFunction */
 // jmessage_string_tReference::resetCharactor(void)
 void resetCharactor__26jmessage_string_tReferenceFv() {
 	return;
 }
 
-/* 8022FA38 0034 .text      getLineLength__26jmessage_string_tReferenceFi                */
+/* 8022FA38-8022FA6C 0034 .text      getLineLength__26jmessage_string_tReferenceFi                Function */
 // jmessage_string_tReference::getLineLength(int)
 #pragma push
 #pragma optimization_level 0
@@ -1856,7 +2387,7 @@ asm void getLineLength__26jmessage_string_tReferenceFi() {
 }
 #pragma pop
 
-/* 8022FA6C 002C .text      addLineLength__26jmessage_string_tReferenceFif               */
+/* 8022FA6C-8022FA98 002C .text      addLineLength__26jmessage_string_tReferenceFif               Function */
 // jmessage_string_tReference::addLineLength(int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1867,7 +2398,7 @@ asm void addLineLength__26jmessage_string_tReferenceFif() {
 }
 #pragma pop
 
-/* 8022FA98 0034 .text      getOutfontLength__26jmessage_string_tReferenceFi             */
+/* 8022FA98-8022FACC 0034 .text      getOutfontLength__26jmessage_string_tReferenceFi             Function */
 // jmessage_string_tReference::getOutfontLength(int)
 #pragma push
 #pragma optimization_level 0
@@ -1878,7 +2409,7 @@ asm void getOutfontLength__26jmessage_string_tReferenceFi() {
 }
 #pragma pop
 
-/* 8022FACC 0024 .text      setOutfontLength__26jmessage_string_tReferenceFif            */
+/* 8022FACC-8022FAF0 0024 .text      setOutfontLength__26jmessage_string_tReferenceFif            Function */
 // jmessage_string_tReference::setOutfontLength(int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1889,7 +2420,7 @@ asm void setOutfontLength__26jmessage_string_tReferenceFif() {
 }
 #pragma pop
 
-/* 8022FAF0 0034 .text      clearOutfontLength__26jmessage_string_tReferenceFi           */
+/* 8022FAF0-8022FB24 0034 .text      clearOutfontLength__26jmessage_string_tReferenceFi           Function */
 // jmessage_string_tReference::clearOutfontLength(int)
 #pragma push
 #pragma optimization_level 0
@@ -1900,7 +2431,7 @@ asm void clearOutfontLength__26jmessage_string_tReferenceFi() {
 }
 #pragma pop
 
-/* 8022FB24 0038 .text      getLineCountNowPage__26jmessage_string_tReferenceFv          */
+/* 8022FB24-8022FB5C 0038 .text      getLineCountNowPage__26jmessage_string_tReferenceFv          Function */
 // jmessage_string_tReference::getLineCountNowPage(void)
 #pragma push
 #pragma optimization_level 0
@@ -1911,7 +2442,7 @@ asm void getLineCountNowPage__26jmessage_string_tReferenceFv() {
 }
 #pragma pop
 
-/* 8022FB5C 003C .text      __ct__24jmessage_string_tControlFv                           */
+/* 8022FB5C-8022FB98 003C .text      __ct__24jmessage_string_tControlFv                           Function */
 // jmessage_string_tControl::jmessage_string_tControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -1922,7 +2453,7 @@ asm void __ct__24jmessage_string_tControlFv() {
 }
 #pragma pop
 
-/* 8022FB98 004C .text      __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReference */
+/* 8022FB98-8022FBE4 004C .text      __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReference Function */
 // jmessage_string_tMeasureProcessor::jmessage_string_tMeasureProcessor(const jmessage_string_tReference*)
 #pragma push
 #pragma optimization_level 0
@@ -1933,8 +2464,8 @@ asm void __ct__33jmessage_string_tMeasureProcessorFPC26jmessage_string_tReferenc
 }
 #pragma pop
 
-/* 8022FBE4 0030 .text      do_begin__33jmessage_string_tMeasureProcessorFPCvPCc         */
-// jmessage_string_tMeasureProcessor::do_begin(const void*, const s8*)
+/* 8022FBE4-8022FC14 0030 .text      do_begin__33jmessage_string_tMeasureProcessorFPCvPCc         Function */
+// jmessage_string_tMeasureProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1944,7 +2475,7 @@ asm void do_begin__33jmessage_string_tMeasureProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 8022FC14 0014 .text      do_end__33jmessage_string_tMeasureProcessorFv                */
+/* 8022FC14-8022FC28 0014 .text      do_end__33jmessage_string_tMeasureProcessorFv                Function */
 // jmessage_string_tMeasureProcessor::do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -1955,7 +2486,7 @@ asm void do_end__33jmessage_string_tMeasureProcessorFv() {
 }
 #pragma pop
 
-/* 8022FC28 01C8 .text      do_character__33jmessage_string_tMeasureProcessorFi          */
+/* 8022FC28-8022FDF0 01C8 .text      do_character__33jmessage_string_tMeasureProcessorFi          Function */
 // jmessage_string_tMeasureProcessor::do_character(int)
 #pragma push
 #pragma optimization_level 0
@@ -1966,7 +2497,7 @@ asm void do_character__33jmessage_string_tMeasureProcessorFi() {
 }
 #pragma pop
 
-/* 8022FDF0 0B9C .text      do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl          */
+/* 8022FDF0-8023098C 0B9C .text      do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl          Function */
 // jmessage_string_tMeasureProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1977,7 +2508,7 @@ asm void do_tag__33jmessage_string_tMeasureProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 8023098C 007C .text      do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl        */
+/* 8023098C-80230A08 007C .text      do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl        Function */
 // jmessage_string_tMeasureProcessor::do_rubyset(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1988,7 +2519,7 @@ asm void do_rubyset__33jmessage_string_tMeasureProcessorFPCvUl() {
 }
 #pragma pop
 
-/* 80230A08 0054 .text      __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl */
+/* 80230A08-80230A5C 0054 .text      __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl Function */
 // jmessage_string_tSequenceProcessor::jmessage_string_tSequenceProcessor(const jmessage_string_tReference*, jmessage_string_tControl*)
 #pragma push
 #pragma optimization_level 0
@@ -1999,7 +2530,7 @@ asm void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferen
 }
 #pragma pop
 
-/* 80230A5C 0060 .text      __dt__33jmessage_string_tMeasureProcessorFv                  */
+/* 80230A5C-80230ABC 0060 .text      __dt__33jmessage_string_tMeasureProcessorFv                  Function */
 // jmessage_string_tMeasureProcessor::~jmessage_string_tMeasureProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2010,14 +2541,14 @@ asm void __dt__33jmessage_string_tMeasureProcessorFv() {
 }
 #pragma pop
 
-/* 80230ABC 0004 .text      do_reset__34jmessage_string_tSequenceProcessorFv             */
+/* 80230ABC-80230AC0 0004 .text      do_reset__34jmessage_string_tSequenceProcessorFv             ReturnFunction */
 // jmessage_string_tSequenceProcessor::do_reset(void)
 void do_reset__34jmessage_string_tSequenceProcessorFv() {
 	return;
 }
 
-/* 80230AC0 00BC .text      do_begin__34jmessage_string_tSequenceProcessorFPCvPCc        */
-// jmessage_string_tSequenceProcessor::do_begin(const void*, const s8*)
+/* 80230AC0-80230B7C 00BC .text      do_begin__34jmessage_string_tSequenceProcessorFPCvPCc        Function */
+// jmessage_string_tSequenceProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2027,25 +2558,25 @@ asm void do_begin__34jmessage_string_tSequenceProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 80230B7C 0004 .text      do_end__34jmessage_string_tSequenceProcessorFv               */
+/* 80230B7C-80230B80 0004 .text      do_end__34jmessage_string_tSequenceProcessorFv               ReturnFunction */
 // jmessage_string_tSequenceProcessor::do_end(void)
 void do_end__34jmessage_string_tSequenceProcessorFv() {
 	return;
 }
 
-/* 80230B80 0008 .text      do_isReady__34jmessage_string_tSequenceProcessorFv           */
+/* 80230B80-80230B88 0008 .text      do_isReady__34jmessage_string_tSequenceProcessorFv           ReturnIntegerFunction */
 // jmessage_string_tSequenceProcessor::do_isReady(void)
 int do_isReady__34jmessage_string_tSequenceProcessorFv() {
 	return 1;
 }
 
-/* 80230B88 0004 .text      do_character__34jmessage_string_tSequenceProcessorFi         */
+/* 80230B88-80230B8C 0004 .text      do_character__34jmessage_string_tSequenceProcessorFi         ReturnFunction */
 // jmessage_string_tSequenceProcessor::do_character(int)
 void do_character__34jmessage_string_tSequenceProcessorFi() {
 	return;
 }
 
-/* 80230B8C 0030 .text      do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl         */
+/* 80230B8C-80230BBC 0030 .text      do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl         Function */
 // jmessage_string_tSequenceProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -2056,19 +2587,19 @@ asm void do_tag__34jmessage_string_tSequenceProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 80230BBC 0008 .text      do_jump_isReady__34jmessage_string_tSequenceProcessorFv      */
+/* 80230BBC-80230BC4 0008 .text      do_jump_isReady__34jmessage_string_tSequenceProcessorFv      ReturnIntegerFunction */
 // jmessage_string_tSequenceProcessor::do_jump_isReady(void)
 int do_jump_isReady__34jmessage_string_tSequenceProcessorFv() {
 	return 1;
 }
 
-/* 80230BC4 0004 .text      do_jump__34jmessage_string_tSequenceProcessorFPCvPCc         */
-// jmessage_string_tSequenceProcessor::do_jump(const void*, const s8*)
+/* 80230BC4-80230BC8 0004 .text      do_jump__34jmessage_string_tSequenceProcessorFPCvPCc         ReturnFunction */
+// jmessage_string_tSequenceProcessor::do_jump(const void*, const char*)
 void do_jump__34jmessage_string_tSequenceProcessorFPCvPCc() {
 	return;
 }
 
-/* 80230BC8 0058 .text      __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference */
+/* 80230BC8-80230C20 0058 .text      __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference Function */
 // jmessage_string_tRenderingProcessor::jmessage_string_tRenderingProcessor(const jmessage_string_tReference*)
 #pragma push
 #pragma optimization_level 0
@@ -2079,7 +2610,7 @@ asm void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tRefere
 }
 #pragma pop
 
-/* 80230C20 003C .text      getLineCountNowPage__35jmessage_string_tRenderingProcessorFv */
+/* 80230C20-80230C5C 003C .text      getLineCountNowPage__35jmessage_string_tRenderingProcessorFv Function */
 // jmessage_string_tRenderingProcessor::getLineCountNowPage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2090,7 +2621,7 @@ asm void getLineCountNowPage__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80230C5C 0044 .text      do_reset__35jmessage_string_tRenderingProcessorFv            */
+/* 80230C5C-80230CA0 0044 .text      do_reset__35jmessage_string_tRenderingProcessorFv            Function */
 // jmessage_string_tRenderingProcessor::do_reset(void)
 #pragma push
 #pragma optimization_level 0
@@ -2101,8 +2632,8 @@ asm void do_reset__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80230CA0 0048 .text      do_begin__35jmessage_string_tRenderingProcessorFPCvPCc       */
-// jmessage_string_tRenderingProcessor::do_begin(const void*, const s8*)
+/* 80230CA0-80230CE8 0048 .text      do_begin__35jmessage_string_tRenderingProcessorFPCvPCc       Function */
+// jmessage_string_tRenderingProcessor::do_begin(const void*, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2112,7 +2643,7 @@ asm void do_begin__35jmessage_string_tRenderingProcessorFPCvPCc() {
 }
 #pragma pop
 
-/* 80230CE8 0060 .text      do_end__35jmessage_string_tRenderingProcessorFv              */
+/* 80230CE8-80230D48 0060 .text      do_end__35jmessage_string_tRenderingProcessorFv              Function */
 // jmessage_string_tRenderingProcessor::do_end(void)
 #pragma push
 #pragma optimization_level 0
@@ -2123,7 +2654,7 @@ asm void do_end__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80230D48 03C8 .text      do_character__35jmessage_string_tRenderingProcessorFi        */
+/* 80230D48-80231110 03C8 .text      do_character__35jmessage_string_tRenderingProcessorFi        Function */
 // jmessage_string_tRenderingProcessor::do_character(int)
 #pragma push
 #pragma optimization_level 0
@@ -2134,7 +2665,7 @@ asm void do_character__35jmessage_string_tRenderingProcessorFi() {
 }
 #pragma pop
 
-/* 80231110 0C60 .text      do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl        */
+/* 80231110-80231D70 0C60 .text      do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl        Function */
 // jmessage_string_tRenderingProcessor::do_tag(u32, const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -2145,7 +2676,7 @@ asm void do_tag__35jmessage_string_tRenderingProcessorFUlPCvUl() {
 }
 #pragma pop
 
-/* 80231D70 0180 .text      do_widthcenter__35jmessage_string_tRenderingProcessorFv      */
+/* 80231D70-80231EF0 0180 .text      do_widthcenter__35jmessage_string_tRenderingProcessorFv      Function */
 // jmessage_string_tRenderingProcessor::do_widthcenter(void)
 #pragma push
 #pragma optimization_level 0
@@ -2156,7 +2687,7 @@ asm void do_widthcenter__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80231EF0 0154 .text      do_heightcenter__35jmessage_string_tRenderingProcessorFv     */
+/* 80231EF0-80232044 0154 .text      do_heightcenter__35jmessage_string_tRenderingProcessorFv     Function */
 // jmessage_string_tRenderingProcessor::do_heightcenter(void)
 #pragma push
 #pragma optimization_level 0
@@ -2167,8 +2698,8 @@ asm void do_heightcenter__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80232044 006C .text      do_strcat__35jmessage_string_tRenderingProcessorFPc          */
-// jmessage_string_tRenderingProcessor::do_strcat(s8*)
+/* 80232044-802320B0 006C .text      do_strcat__35jmessage_string_tRenderingProcessorFPc          Function */
+// jmessage_string_tRenderingProcessor::do_strcat(char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2178,7 +2709,7 @@ asm void do_strcat__35jmessage_string_tRenderingProcessorFPc() {
 }
 #pragma pop
 
-/* 802320B0 01B0 .text      do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl      */
+/* 802320B0-80232260 01B0 .text      do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl      Function */
 // jmessage_string_tRenderingProcessor::do_rubyset(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -2189,8 +2720,8 @@ asm void do_rubyset__35jmessage_string_tRenderingProcessorFPCvUl() {
 }
 #pragma pop
 
-/* 80232260 006C .text      do_rubystrcat__35jmessage_string_tRenderingProcessorFPc      */
-// jmessage_string_tRenderingProcessor::do_rubystrcat(s8*)
+/* 80232260-802322CC 006C .text      do_rubystrcat__35jmessage_string_tRenderingProcessorFPc      Function */
+// jmessage_string_tRenderingProcessor::do_rubystrcat(char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2200,7 +2731,7 @@ asm void do_rubystrcat__35jmessage_string_tRenderingProcessorFPc() {
 }
 #pragma pop
 
-/* 802322CC 02A0 .text      do_outfont__35jmessage_string_tRenderingProcessorFUc         */
+/* 802322CC-8023256C 02A0 .text      do_outfont__35jmessage_string_tRenderingProcessorFUc         Function */
 // jmessage_string_tRenderingProcessor::do_outfont(u8)
 #pragma push
 #pragma optimization_level 0
@@ -2211,7 +2742,7 @@ asm void do_outfont__35jmessage_string_tRenderingProcessorFUc() {
 }
 #pragma pop
 
-/* 8023256C 0094 .text      do_color__35jmessage_string_tRenderingProcessorFUc           */
+/* 8023256C-80232600 0094 .text      do_color__35jmessage_string_tRenderingProcessorFUc           Function */
 // jmessage_string_tRenderingProcessor::do_color(u8)
 #pragma push
 #pragma optimization_level 0
@@ -2222,7 +2753,7 @@ asm void do_color__35jmessage_string_tRenderingProcessorFUc() {
 }
 #pragma pop
 
-/* 80232600 0090 .text      do_scale__35jmessage_string_tRenderingProcessorFf            */
+/* 80232600-80232690 0090 .text      do_scale__35jmessage_string_tRenderingProcessorFf            Function */
 // jmessage_string_tRenderingProcessor::do_scale(f32)
 #pragma push
 #pragma optimization_level 0
@@ -2233,8 +2764,8 @@ asm void do_scale__35jmessage_string_tRenderingProcessorFf() {
 }
 #pragma pop
 
-/* 80232690 0054 .text      do_linedown__35jmessage_string_tRenderingProcessorFs         */
-// jmessage_string_tRenderingProcessor::do_linedown(s16)
+/* 80232690-802326E4 0054 .text      do_linedown__35jmessage_string_tRenderingProcessorFs         Function */
+// jmessage_string_tRenderingProcessor::do_linedown(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2244,8 +2775,8 @@ asm void do_linedown__35jmessage_string_tRenderingProcessorFs() {
 }
 #pragma pop
 
-/* 802326E4 00D8 .text      do_numset__35jmessage_string_tRenderingProcessorFs           */
-// jmessage_string_tRenderingProcessor::do_numset(s16)
+/* 802326E4-802327BC 00D8 .text      do_numset__35jmessage_string_tRenderingProcessorFs           Function */
+// jmessage_string_tRenderingProcessor::do_numset(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2255,8 +2786,8 @@ asm void do_numset__35jmessage_string_tRenderingProcessorFs() {
 }
 #pragma pop
 
-/* 802327BC 003C .text      push_word__35jmessage_string_tRenderingProcessorFPCc         */
-// jmessage_string_tRenderingProcessor::push_word(const s8*)
+/* 802327BC-802327F8 003C .text      push_word__35jmessage_string_tRenderingProcessorFPCc         Function */
+// jmessage_string_tRenderingProcessor::push_word(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2266,7 +2797,7 @@ asm void push_word__35jmessage_string_tRenderingProcessorFPCc() {
 }
 #pragma pop
 
-/* 802327F8 0060 .text      __dt__35jmessage_string_tRenderingProcessorFv                */
+/* 802327F8-80232858 0060 .text      __dt__35jmessage_string_tRenderingProcessorFv                Function */
 // jmessage_string_tRenderingProcessor::~jmessage_string_tRenderingProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2277,7 +2808,7 @@ asm void __dt__35jmessage_string_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 80232858 0084 .text      __dt__34jmessage_string_tSequenceProcessorFv                 */
+/* 80232858-802328DC 0084 .text      __dt__34jmessage_string_tSequenceProcessorFv                 Function */
 // jmessage_string_tSequenceProcessor::~jmessage_string_tSequenceProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2288,7 +2819,7 @@ asm void __dt__34jmessage_string_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 802328DC 0060 .text      __dt__24jmessage_string_tControlFv                           */
+/* 802328DC-8023293C 0060 .text      __dt__24jmessage_string_tControlFv                           Function */
 // jmessage_string_tControl::~jmessage_string_tControl(void)
 #pragma push
 #pragma optimization_level 0
@@ -2299,7 +2830,7 @@ asm void __dt__24jmessage_string_tControlFv() {
 }
 #pragma pop
 
-/* 8023293C 0060 .text      __dt__28jmessage_tRenderingProcessorFv                       */
+/* 8023293C-8023299C 0060 .text      __dt__28jmessage_tRenderingProcessorFv                       Function */
 // jmessage_tRenderingProcessor::~jmessage_tRenderingProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2310,7 +2841,7 @@ asm void __dt__28jmessage_tRenderingProcessorFv() {
 }
 #pragma pop
 
-/* 8023299C 0084 .text      __dt__27jmessage_tSequenceProcessorFv                        */
+/* 8023299C-80232A20 0084 .text      __dt__27jmessage_tSequenceProcessorFv                        Function */
 // jmessage_tSequenceProcessor::~jmessage_tSequenceProcessor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2321,7 +2852,7 @@ asm void __dt__27jmessage_tSequenceProcessorFv() {
 }
 #pragma pop
 
-/* 80232A20 001C .text      getActorPos__19jmessage_tReferenceFv                         */
+/* 80232A20-80232A3C 001C .text      getActorPos__19jmessage_tReferenceFv                         Function */
 // jmessage_tReference::getActorPos(void)
 #pragma push
 #pragma optimization_level 0

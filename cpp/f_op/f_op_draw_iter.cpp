@@ -11,11 +11,20 @@
 struct create_tag_class;
 
 extern void fopDwIt_GetTag(void); /* fopDwIt_GetTag__Fv */
+extern void fopDwIt_Begin(void); /* fopDwIt_Begin__Fv */
+extern void fopDwIt_Next(create_tag_class*); /* fopDwIt_Next__FP16create_tag_class */
 
 extern "C" {
+/* Function             */
 extern void fopDwIt_GetTag__Fv();
+/* Function             */
+extern void fopDwIt_Begin__Fv();
+/* Function             */
+extern void fopDwIt_Next__FP16create_tag_class();
+/* InitializedData      */
 SECTION_SDATA extern u8 g_fopDwTg_Queue[8];
-SECTION_SBSS extern u8 l_fopDwTg_id[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 l_fopDwTg_id[4 + 4 /* padding */];
 }
 
 
@@ -24,9 +33,8 @@ SECTION_SBSS extern u8 l_fopDwTg_id[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450CF8 0004 .sbss      l_fopDwTg_id                                                 */
-SECTION_SBSS u8 l_fopDwTg_id[4];
-SECTION_SBSS u8 pad_80450CFC[4];
+/* 80450CF8-80450D00 0004 .sbss      l_fopDwTg_id                                                 ZeroInitializedData */
+SECTION_SBSS u8 l_fopDwTg_id[4 + 4 /* padding */];
 }
 
 
@@ -35,7 +43,7 @@ SECTION_SBSS u8 pad_80450CFC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80020400 0044 .text      fopDwIt_GetTag__Fv                                           */
+/* 80020400-80020444 0044 .text      fopDwIt_GetTag__Fv                                           Function */
 }
 
 #pragma push
@@ -48,7 +56,7 @@ asm void fopDwIt_GetTag(void) {
 #pragma pop
 
 extern "C" {
-/* 80020444 003C .text      fopDwIt_Begin__Fv                                            */
+/* 80020444-80020480 003C .text      fopDwIt_Begin__Fv                                            Function */
 }
 
 #pragma push
@@ -61,7 +69,7 @@ asm void fopDwIt_Begin(void) {
 #pragma pop
 
 extern "C" {
-/* 80020480 002C .text      fopDwIt_Next__FP16create_tag_class                           */
+/* 80020480-800204AC 002C .text      fopDwIt_Next__FP16create_tag_class                           Function */
 }
 
 #pragma push

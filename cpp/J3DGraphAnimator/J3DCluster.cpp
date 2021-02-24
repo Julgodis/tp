@@ -9,35 +9,75 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ct__13J3DDeformDataFv();
+/* Function             */
+extern void offAllFlag__13J3DDeformDataFUl();
+/* Function             */
+extern void deform__13J3DDeformDataFP8J3DModel();
+/* Function             */
 extern void deform__13J3DDeformDataFP15J3DVertexBuffer();
+/* Function             */
+extern void setAnm__13J3DDeformDataFP13J3DAnmCluster();
+/* Function             */
+extern void __ct__11J3DDeformerFP13J3DDeformData();
+/* Function             */
 extern void deform__11J3DDeformerFP15J3DVertexBufferUs();
+/* Function             */
 extern void deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf();
+/* Function             */
 extern void deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf();
+/* Function             */
 extern void deform__11J3DDeformerFP15J3DVertexBufferUsPf();
+/* Function             */
 extern void normalizeWeight__11J3DDeformerFiPf();
+/* Function             */
 extern void PPCSync();
+/* Function             */
 extern void DCStoreRangeNoSync();
+/* Function             */
 extern void PSVECNormalize();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 asinAcosTable___5JMath[4128];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_830;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J3DCluster__LIT_840;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 data_80456478;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DCluster__LIT_866[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J3DCluster__LIT_1020;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1021[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1022;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DCluster__LIT_1023[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DCluster__LIT_1024[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 J3DCluster__LIT_1025;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_1027;
 }
 
@@ -47,41 +87,41 @@ SECTION_SDATA2 extern f64 LIT_1027;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456470 0004 .sdata2    @830                                                         */
+/* 80456470-80456474 0004 .sdata2    @830                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_830 = 1.000000f;
-/* 80456474 0004 .sdata2    @840                                                         */
+/* 80456474-80456478 0004 .sdata2    @840                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 J3DCluster__LIT_840 = 1.000000f;
-/* 80456478 0004 .sdata2    data_80456478                                                */
+/* 80456478-8045647C 0004 .sdata2    data_80456478                                                Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 data_80456478 = -1.000000f;
-/* 8045647C 0004 .sdata2    @866                                                         */
+/* 8045647C-80456480 0004 .sdata2    @866                                                         InitializedData */
 SECTION_SDATA2 u8 J3DCluster__LIT_866[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456480 0004 .sdata2    @1020                                                        */
+/* 80456480-80456484 0004 .sdata2    @1020                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 J3DCluster__LIT_1020 = -1.000000f;
-/* 80456484 0004 .sdata2    @1021                                                        */
+/* 80456484-80456488 0004 .sdata2    @1021                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1021[4] = {
 	0x40, 0x49, 0x0F, 0xDB,
 };
-/* 80456488 0004 .sdata2    @1022                                                        */
+/* 80456488-8045648C 0004 .sdata2    @1022                                                        Float32Data */
 // 0x447fe000
 SECTION_SDATA2 f32 LIT_1022 = 1023.500000f;
-/* 8045648C 0004 .sdata2    @1023                                                        */
+/* 8045648C-80456490 0004 .sdata2    @1023                                                        InitializedData */
 SECTION_SDATA2 u8 J3DCluster__LIT_1023[4] = {
 	0x3F, 0xC9, 0x0F, 0xDB,
 };
-/* 80456490 0004 .sdata2    @1024                                                        */
+/* 80456490-80456494 0004 .sdata2    @1024                                                        InitializedData */
 SECTION_SDATA2 u8 J3DCluster__LIT_1024[4] = {
 	0x42, 0x65, 0x2E, 0xE0,
 };
-/* 80456494 0004 .sdata2    @1025                                                        */
+/* 80456494-80456498 0004 .sdata2    @1025                                                        Float32Data */
 // 0x43340000
 SECTION_SDATA2 f32 J3DCluster__LIT_1025 = 180.000000f;
-/* 80456498 0008 .sdata2    @1027                                                        */
+/* 80456498-804564A0 0008 .sdata2    @1027                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_1027 = 4503599627370496.000000;
 }
@@ -92,7 +132,7 @@ SECTION_SDATA2 f64 LIT_1027 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8032E1F8 0038 .text      __ct__13J3DDeformDataFv                                      */
+/* 8032E1F8-8032E230 0038 .text      __ct__13J3DDeformDataFv                                      Function */
 // J3DDeformData::J3DDeformData(void)
 #pragma push
 #pragma optimization_level 0
@@ -103,7 +143,7 @@ asm void __ct__13J3DDeformDataFv() {
 }
 #pragma pop
 
-/* 8032E230 0044 .text      offAllFlag__13J3DDeformDataFUl                               */
+/* 8032E230-8032E274 0044 .text      offAllFlag__13J3DDeformDataFUl                               Function */
 // J3DDeformData::offAllFlag(u32)
 #pragma push
 #pragma optimization_level 0
@@ -114,7 +154,7 @@ asm void offAllFlag__13J3DDeformDataFUl() {
 }
 #pragma pop
 
-/* 8032E274 0024 .text      deform__13J3DDeformDataFP8J3DModel                           */
+/* 8032E274-8032E298 0024 .text      deform__13J3DDeformDataFP8J3DModel                           Function */
 // J3DDeformData::deform(J3DModel*)
 #pragma push
 #pragma optimization_level 0
@@ -125,7 +165,7 @@ asm void deform__13J3DDeformDataFP8J3DModel() {
 }
 #pragma pop
 
-/* 8032E298 00CC .text      deform__13J3DDeformDataFP15J3DVertexBuffer                   */
+/* 8032E298-8032E364 00CC .text      deform__13J3DDeformDataFP15J3DVertexBuffer                   Function */
 // J3DDeformData::deform(J3DVertexBuffer*)
 #pragma push
 #pragma optimization_level 0
@@ -136,7 +176,7 @@ asm void deform__13J3DDeformDataFP15J3DVertexBuffer() {
 }
 #pragma pop
 
-/* 8032E364 0038 .text      setAnm__13J3DDeformDataFP13J3DAnmCluster                     */
+/* 8032E364-8032E39C 0038 .text      setAnm__13J3DDeformDataFP13J3DAnmCluster                     Function */
 // J3DDeformData::setAnm(J3DAnmCluster*)
 #pragma push
 #pragma optimization_level 0
@@ -147,7 +187,7 @@ asm void setAnm__13J3DDeformDataFP13J3DAnmCluster() {
 }
 #pragma pop
 
-/* 8032E39C 0020 .text      __ct__11J3DDeformerFP13J3DDeformData                         */
+/* 8032E39C-8032E3BC 0020 .text      __ct__11J3DDeformerFP13J3DDeformData                         Function */
 // J3DDeformer::J3DDeformer(J3DDeformData*)
 #pragma push
 #pragma optimization_level 0
@@ -158,7 +198,7 @@ asm void __ct__11J3DDeformerFP13J3DDeformData() {
 }
 #pragma pop
 
-/* 8032E3BC 00E8 .text      deform__11J3DDeformerFP15J3DVertexBufferUs                   */
+/* 8032E3BC-8032E4A4 00E8 .text      deform__11J3DDeformerFP15J3DVertexBufferUs                   Function */
 // J3DDeformer::deform(J3DVertexBuffer*, u16)
 #pragma push
 #pragma optimization_level 0
@@ -169,7 +209,7 @@ asm void deform__11J3DDeformerFP15J3DVertexBufferUs() {
 }
 #pragma pop
 
-/* 8032E4A4 0168 .text      deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf */
+/* 8032E4A4-8032E60C 0168 .text      deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf Function */
 // J3DDeformer::deform_VtxPosF32(J3DVertexBuffer*, J3DCluster*, J3DClusterKey*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -180,7 +220,7 @@ asm void deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DCl
 }
 #pragma pop
 
-/* 8032E60C 04A8 .text      deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf */
+/* 8032E60C-8032EAB4 04A8 .text      deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf Function */
 // J3DDeformer::deform_VtxNrmF32(J3DVertexBuffer*, J3DCluster*, J3DClusterKey*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -191,7 +231,7 @@ asm void deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DCl
 }
 #pragma pop
 
-/* 8032EAB4 0118 .text      deform__11J3DDeformerFP15J3DVertexBufferUsPf                 */
+/* 8032EAB4-8032EBCC 0118 .text      deform__11J3DDeformerFP15J3DVertexBufferUsPf                 Function */
 // J3DDeformer::deform(J3DVertexBuffer*, u16, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -202,7 +242,7 @@ asm void deform__11J3DDeformerFP15J3DVertexBufferUsPf() {
 }
 #pragma pop
 
-/* 8032EBCC 005C .text      normalizeWeight__11J3DDeformerFiPf                           */
+/* 8032EBCC-8032EC28 005C .text      normalizeWeight__11J3DDeformerFiPf                           Function */
 // J3DDeformer::normalizeWeight(int, f32*)
 #pragma push
 #pragma optimization_level 0

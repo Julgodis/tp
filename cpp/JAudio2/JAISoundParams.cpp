@@ -9,6 +9,17 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void moveVolume__18JAISoundParamsMoveFfUl();
+/* Function             */
+extern void movePitch__18JAISoundParamsMoveFfUl();
+/* Function             */
+extern void moveFxMix__18JAISoundParamsMoveFfUl();
+/* Function             */
+extern void movePan__18JAISoundParamsMoveFfUl();
+/* Function             */
+extern void moveDolby__18JAISoundParamsMoveFfUl();
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JAISoundParams__LIT_292;
 }
 
@@ -18,7 +29,7 @@ SECTION_SDATA2 extern f64 JAISoundParams__LIT_292;
 /* ###################################################################################### */
 
 extern "C" {
-/* 804557E8 0008 .sdata2    @292                                                         */
+/* 804557E8-804557F0 0008 .sdata2    @292                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JAISoundParams__LIT_292 = 4503599627370496.000000;
 }
@@ -29,7 +40,7 @@ SECTION_SDATA2 f64 JAISoundParams__LIT_292 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A2DB4 0058 .text      moveVolume__18JAISoundParamsMoveFfUl                         */
+/* 802A2DB4-802A2E0C 0058 .text      moveVolume__18JAISoundParamsMoveFfUl                         Function */
 // JAISoundParamsMove::moveVolume(f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -40,7 +51,7 @@ asm void moveVolume__18JAISoundParamsMoveFfUl() {
 }
 #pragma pop
 
-/* 802A2E0C 0058 .text      movePitch__18JAISoundParamsMoveFfUl                          */
+/* 802A2E0C-802A2E64 0058 .text      movePitch__18JAISoundParamsMoveFfUl                          Function */
 // JAISoundParamsMove::movePitch(f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -51,7 +62,7 @@ asm void movePitch__18JAISoundParamsMoveFfUl() {
 }
 #pragma pop
 
-/* 802A2E64 0058 .text      moveFxMix__18JAISoundParamsMoveFfUl                          */
+/* 802A2E64-802A2EBC 0058 .text      moveFxMix__18JAISoundParamsMoveFfUl                          Function */
 // JAISoundParamsMove::moveFxMix(f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -62,7 +73,7 @@ asm void moveFxMix__18JAISoundParamsMoveFfUl() {
 }
 #pragma pop
 
-/* 802A2EBC 0058 .text      movePan__18JAISoundParamsMoveFfUl                            */
+/* 802A2EBC-802A2F14 0058 .text      movePan__18JAISoundParamsMoveFfUl                            Function */
 // JAISoundParamsMove::movePan(f32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -73,7 +84,7 @@ asm void movePan__18JAISoundParamsMoveFfUl() {
 }
 #pragma pop
 
-/* 802A2F14 0058 .text      moveDolby__18JAISoundParamsMoveFfUl                          */
+/* 802A2F14-802A2F6C 0058 .text      moveDolby__18JAISoundParamsMoveFfUl                          Function */
 // JAISoundParamsMove::moveDolby(f32, u32)
 #pragma push
 #pragma optimization_level 0

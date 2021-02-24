@@ -9,17 +9,52 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void GXSetVtxDesc();
+/* Function             */
+extern void GXSetVtxDescv();
+/* Function             */
+extern void __GXSetVCD();
+/* Function             */
+extern void __GXCalculateVLim();
+/* Function             */
+extern void GXClearVtxDesc();
+/* Function             */
+extern void GXSetVtxAttrFmt();
+/* Function             */
+extern void GXSetVtxAttrFmtv();
+/* Function             */
+extern void __GXSetVAT();
+/* Function             */
+extern void GXSetArray();
+/* Function             */
+extern void GXInvalidateVtxCache();
+/* Function             */
+extern void GXSetTexCoordGen2();
+/* Function             */
+extern void GXSetNumTexGens();
+/* Function             */
 extern void __GXSetMatrixIndex();
-SECTION_DATA extern u8 GXAttr__LIT_176[104];
-SECTION_DATA extern u8 LIT_223[104];
-SECTION_DATA extern u8 GXAttr__LIT_476[68];
-SECTION_DATA extern u8 GXAttr__LIT_503[68];
-SECTION_DATA extern u8 GXAttr__LIT_740[28];
-SECTION_DATA extern u8 LIT_739[84];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GXAttr__LIT_176[26];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_223[26];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GXAttr__LIT_476[17];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GXAttr__LIT_503[17];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* GXAttr__LIT_740[7];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_739[21];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450A80[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450A84[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450A88[8];
-SECTION_SDATA2 extern u8 __GXData[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
 }
 
 
@@ -28,55 +63,137 @@ SECTION_SDATA2 extern u8 __GXData[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D2280 0068 .data      @176                                                         */
-SECTION_DATA u8 GXAttr__LIT_176[104] = {
-	0x80, 0x35, 0xAE, 0xD8, 0x80, 0x35, 0xAE, 0xEC, 0x80, 0x35, 0xAF, 0x00, 0x80, 0x35, 0xAF, 0x14,
-	0x80, 0x35, 0xAF, 0x28, 0x80, 0x35, 0xAF, 0x3C, 0x80, 0x35, 0xAF, 0x50, 0x80, 0x35, 0xAF, 0x64,
-	0x80, 0x35, 0xAF, 0x78, 0x80, 0x35, 0xAF, 0x8C, 0x80, 0x35, 0xAF, 0xA0, 0x80, 0x35, 0xB0, 0x08,
-	0x80, 0x35, 0xB0, 0x1C, 0x80, 0x35, 0xB0, 0x30, 0x80, 0x35, 0xB0, 0x44, 0x80, 0x35, 0xB0, 0x58,
-	0x80, 0x35, 0xB0, 0x6C, 0x80, 0x35, 0xB0, 0x80, 0x80, 0x35, 0xB0, 0x94, 0x80, 0x35, 0xB0, 0xA8,
-	0x80, 0x35, 0xB0, 0xBC, 0x80, 0x35, 0xB0, 0xCC, 0x80, 0x35, 0xB0, 0xCC, 0x80, 0x35, 0xB0, 0xCC,
-	0x80, 0x35, 0xB0, 0xCC, 0x80, 0x35, 0xAF, 0xD4,
+/* 803D2280-803D22E8 0068 .data      @176                                                         SymbolReferenceArrayData */
+SECTION_DATA void* GXAttr__LIT_176[26] = {
+	(void*)(((u32*)GXSetVtxDesc)+8),
+	(void*)(((u32*)GXSetVtxDesc)+13),
+	(void*)(((u32*)GXSetVtxDesc)+18),
+	(void*)(((u32*)GXSetVtxDesc)+23),
+	(void*)(((u32*)GXSetVtxDesc)+28),
+	(void*)(((u32*)GXSetVtxDesc)+33),
+	(void*)(((u32*)GXSetVtxDesc)+38),
+	(void*)(((u32*)GXSetVtxDesc)+43),
+	(void*)(((u32*)GXSetVtxDesc)+48),
+	(void*)(((u32*)GXSetVtxDesc)+53),
+	(void*)(((u32*)GXSetVtxDesc)+58),
+	(void*)(((u32*)GXSetVtxDesc)+84),
+	(void*)(((u32*)GXSetVtxDesc)+89),
+	(void*)(((u32*)GXSetVtxDesc)+94),
+	(void*)(((u32*)GXSetVtxDesc)+99),
+	(void*)(((u32*)GXSetVtxDesc)+104),
+	(void*)(((u32*)GXSetVtxDesc)+109),
+	(void*)(((u32*)GXSetVtxDesc)+114),
+	(void*)(((u32*)GXSetVtxDesc)+119),
+	(void*)(((u32*)GXSetVtxDesc)+124),
+	(void*)(((u32*)GXSetVtxDesc)+129),
+	(void*)(((u32*)GXSetVtxDesc)+133),
+	(void*)(((u32*)GXSetVtxDesc)+133),
+	(void*)(((u32*)GXSetVtxDesc)+133),
+	(void*)(((u32*)GXSetVtxDesc)+133),
+	(void*)(((u32*)GXSetVtxDesc)+71),
 };
-/* 803D22E8 0068 .data      @223                                                         */
-SECTION_DATA u8 LIT_223[104] = {
-	0x80, 0x35, 0xB1, 0x50, 0x80, 0x35, 0xB1, 0x64, 0x80, 0x35, 0xB1, 0x78, 0x80, 0x35, 0xB1, 0x8C,
-	0x80, 0x35, 0xB1, 0xA0, 0x80, 0x35, 0xB1, 0xB4, 0x80, 0x35, 0xB1, 0xC8, 0x80, 0x35, 0xB1, 0xDC,
-	0x80, 0x35, 0xB1, 0xF0, 0x80, 0x35, 0xB2, 0x04, 0x80, 0x35, 0xB2, 0x18, 0x80, 0x35, 0xB2, 0x80,
-	0x80, 0x35, 0xB2, 0x94, 0x80, 0x35, 0xB2, 0xA8, 0x80, 0x35, 0xB2, 0xBC, 0x80, 0x35, 0xB2, 0xD0,
-	0x80, 0x35, 0xB2, 0xE4, 0x80, 0x35, 0xB2, 0xF8, 0x80, 0x35, 0xB3, 0x0C, 0x80, 0x35, 0xB3, 0x20,
-	0x80, 0x35, 0xB3, 0x34, 0x80, 0x35, 0xB3, 0x44, 0x80, 0x35, 0xB3, 0x44, 0x80, 0x35, 0xB3, 0x44,
-	0x80, 0x35, 0xB3, 0x44, 0x80, 0x35, 0xB2, 0x4C,
+/* 803D22E8-803D2350 0068 .data      @223                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_223[26] = {
+	(void*)(((u32*)GXSetVtxDescv)+11),
+	(void*)(((u32*)GXSetVtxDescv)+16),
+	(void*)(((u32*)GXSetVtxDescv)+21),
+	(void*)(((u32*)GXSetVtxDescv)+26),
+	(void*)(((u32*)GXSetVtxDescv)+31),
+	(void*)(((u32*)GXSetVtxDescv)+36),
+	(void*)(((u32*)GXSetVtxDescv)+41),
+	(void*)(((u32*)GXSetVtxDescv)+46),
+	(void*)(((u32*)GXSetVtxDescv)+51),
+	(void*)(((u32*)GXSetVtxDescv)+56),
+	(void*)(((u32*)GXSetVtxDescv)+61),
+	(void*)(((u32*)GXSetVtxDescv)+87),
+	(void*)(((u32*)GXSetVtxDescv)+92),
+	(void*)(((u32*)GXSetVtxDescv)+97),
+	(void*)(((u32*)GXSetVtxDescv)+102),
+	(void*)(((u32*)GXSetVtxDescv)+107),
+	(void*)(((u32*)GXSetVtxDescv)+112),
+	(void*)(((u32*)GXSetVtxDescv)+117),
+	(void*)(((u32*)GXSetVtxDescv)+122),
+	(void*)(((u32*)GXSetVtxDescv)+127),
+	(void*)(((u32*)GXSetVtxDescv)+132),
+	(void*)(((u32*)GXSetVtxDescv)+136),
+	(void*)(((u32*)GXSetVtxDescv)+136),
+	(void*)(((u32*)GXSetVtxDescv)+136),
+	(void*)(((u32*)GXSetVtxDescv)+136),
+	(void*)(((u32*)GXSetVtxDescv)+74),
 };
-/* 803D2350 0044 .data      @476                                                         */
-SECTION_DATA u8 GXAttr__LIT_476[68] = {
-	0x80, 0x35, 0xB6, 0x00, 0x80, 0x35, 0xB6, 0x28, 0x80, 0x35, 0xB6, 0x7C, 0x80, 0x35, 0xB6, 0x98,
-	0x80, 0x35, 0xB6, 0xB4, 0x80, 0x35, 0xB6, 0xDC, 0x80, 0x35, 0xB7, 0x04, 0x80, 0x35, 0xB7, 0x2C,
-	0x80, 0x35, 0xB7, 0x54, 0x80, 0x35, 0xB7, 0x7C, 0x80, 0x35, 0xB7, 0xA4, 0x80, 0x35, 0xB7, 0xCC,
-	0x80, 0x35, 0xB7, 0xF0, 0x80, 0x35, 0xB7, 0xF0, 0x80, 0x35, 0xB7, 0xF0, 0x80, 0x35, 0xB7, 0xF0,
-	0x80, 0x35, 0xB6, 0x28,
+/* 803D2350-803D2394 0044 .data      @476                                                         SymbolReferenceArrayData */
+SECTION_DATA void* GXAttr__LIT_476[17] = {
+	(void*)(((u32*)GXSetVtxAttrFmt)+15),
+	(void*)(((u32*)GXSetVtxAttrFmt)+25),
+	(void*)(((u32*)GXSetVtxAttrFmt)+46),
+	(void*)(((u32*)GXSetVtxAttrFmt)+53),
+	(void*)(((u32*)GXSetVtxAttrFmt)+60),
+	(void*)(((u32*)GXSetVtxAttrFmt)+70),
+	(void*)(((u32*)GXSetVtxAttrFmt)+80),
+	(void*)(((u32*)GXSetVtxAttrFmt)+90),
+	(void*)(((u32*)GXSetVtxAttrFmt)+100),
+	(void*)(((u32*)GXSetVtxAttrFmt)+110),
+	(void*)(((u32*)GXSetVtxAttrFmt)+120),
+	(void*)(((u32*)GXSetVtxAttrFmt)+130),
+	(void*)(((u32*)GXSetVtxAttrFmt)+139),
+	(void*)(((u32*)GXSetVtxAttrFmt)+139),
+	(void*)(((u32*)GXSetVtxAttrFmt)+139),
+	(void*)(((u32*)GXSetVtxAttrFmt)+139),
+	(void*)(((u32*)GXSetVtxAttrFmt)+25),
 };
-/* 803D2394 0044 .data      @503                                                         */
-SECTION_DATA u8 GXAttr__LIT_503[68] = {
-	0x80, 0x35, 0xB8, 0x70, 0x80, 0x35, 0xB8, 0x98, 0x80, 0x35, 0xB8, 0xEC, 0x80, 0x35, 0xB9, 0x08,
-	0x80, 0x35, 0xB9, 0x24, 0x80, 0x35, 0xB9, 0x4C, 0x80, 0x35, 0xB9, 0x74, 0x80, 0x35, 0xB9, 0x9C,
-	0x80, 0x35, 0xB9, 0xC4, 0x80, 0x35, 0xB9, 0xEC, 0x80, 0x35, 0xBA, 0x14, 0x80, 0x35, 0xBA, 0x3C,
-	0x80, 0x35, 0xBA, 0x60, 0x80, 0x35, 0xBA, 0x60, 0x80, 0x35, 0xBA, 0x60, 0x80, 0x35, 0xBA, 0x60,
-	0x80, 0x35, 0xB8, 0x98,
+/* 803D2394-803D23D8 0044 .data      @503                                                         SymbolReferenceArrayData */
+SECTION_DATA void* GXAttr__LIT_503[17] = {
+	(void*)(((u32*)GXSetVtxAttrFmtv)+20),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+30),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+51),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+58),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+65),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+75),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+85),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+95),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+105),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+115),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+125),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+135),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+144),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+144),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+144),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+144),
+	(void*)(((u32*)GXSetVtxAttrFmtv)+30),
 };
-/* 803D23D8 001C .data      @740                                                         */
-SECTION_DATA u8 GXAttr__LIT_740[28] = {
-	0x80, 0x35, 0xBD, 0x48, 0x80, 0x35, 0xBD, 0x5C, 0x80, 0x35, 0xBD, 0x70, 0x80, 0x35, 0xBD, 0x84,
-	0x80, 0x35, 0xBD, 0x98, 0x80, 0x35, 0xBD, 0xAC, 0x80, 0x35, 0xBD, 0xC0,
+/* 803D23D8-803D23F4 001C .data      @740                                                         SymbolReferenceArrayData */
+SECTION_DATA void* GXAttr__LIT_740[7] = {
+	(void*)(((u32*)GXSetTexCoordGen2)+115),
+	(void*)(((u32*)GXSetTexCoordGen2)+120),
+	(void*)(((u32*)GXSetTexCoordGen2)+125),
+	(void*)(((u32*)GXSetTexCoordGen2)+130),
+	(void*)(((u32*)GXSetTexCoordGen2)+135),
+	(void*)(((u32*)GXSetTexCoordGen2)+140),
+	(void*)(((u32*)GXSetTexCoordGen2)+145),
 };
-/* 803D23F4 0054 .data      @739                                                         */
-SECTION_DATA u8 LIT_739[84] = {
-	0x80, 0x35, 0xBB, 0xB4, 0x80, 0x35, 0xBB, 0xC0, 0x80, 0x35, 0xBB, 0xCC, 0x80, 0x35, 0xBB, 0xD8,
-	0x80, 0x35, 0xBB, 0xF4, 0x80, 0x35, 0xBB, 0xFC, 0x80, 0x35, 0xBC, 0x04, 0x80, 0x35, 0xBC, 0x0C,
-	0x80, 0x35, 0xBC, 0x14, 0x80, 0x35, 0xBC, 0x1C, 0x80, 0x35, 0xBC, 0x24, 0x80, 0x35, 0xBC, 0x2C,
-	0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBC, 0x30,
-	0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBC, 0x30, 0x80, 0x35, 0xBB, 0xE4,
-	0x80, 0x35, 0xBB, 0xEC,
+/* 803D23F4-803D2448 0054 .data      @739                                                         SymbolReferenceArrayData */
+SECTION_DATA void* LIT_739[21] = {
+	(void*)(((u32*)GXSetTexCoordGen2)+14),
+	(void*)(((u32*)GXSetTexCoordGen2)+17),
+	(void*)(((u32*)GXSetTexCoordGen2)+20),
+	(void*)(((u32*)GXSetTexCoordGen2)+23),
+	(void*)(((u32*)GXSetTexCoordGen2)+30),
+	(void*)(((u32*)GXSetTexCoordGen2)+32),
+	(void*)(((u32*)GXSetTexCoordGen2)+34),
+	(void*)(((u32*)GXSetTexCoordGen2)+36),
+	(void*)(((u32*)GXSetTexCoordGen2)+38),
+	(void*)(((u32*)GXSetTexCoordGen2)+40),
+	(void*)(((u32*)GXSetTexCoordGen2)+42),
+	(void*)(((u32*)GXSetTexCoordGen2)+44),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+45),
+	(void*)(((u32*)GXSetTexCoordGen2)+26),
+	(void*)(((u32*)GXSetTexCoordGen2)+28),
 };
 }
 
@@ -86,15 +203,15 @@ SECTION_DATA u8 LIT_739[84] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A80 0004 .sdata     tbl1$241                                                     */
+/* 80450A80-80450A84 0004 .sdata     tbl1$241                                                     InitializedData */
 SECTION_SDATA u8 data_80450A80[4] = {
 	0x00, 0x04, 0x01, 0x02,
 };
-/* 80450A84 0004 .sdata     tbl2$242                                                     */
+/* 80450A84-80450A88 0004 .sdata     tbl2$242                                                     InitializedData */
 SECTION_SDATA u8 data_80450A84[4] = {
 	0x00, 0x08, 0x01, 0x02,
 };
-/* 80450A88 0004 .sdata     tbl3$243                                                     */
+/* 80450A88-80450A90 0004 .sdata     tbl3$243                                                     InitializedData */
 SECTION_SDATA u8 data_80450A88[8] = {
 	0x00, 0x0C, 0x01, 0x02,
 	/* padding */
@@ -108,7 +225,7 @@ SECTION_SDATA u8 data_80450A88[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035AEB8 026C .text      GXSetVtxDesc                                                 */
+/* 8035AEB8-8035B124 026C .text      GXSetVtxDesc                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,7 +235,7 @@ asm void GXSetVtxDesc() {
 }
 #pragma pop
 
-/* 8035B124 0288 .text      GXSetVtxDescv                                                */
+/* 8035B124-8035B3AC 0288 .text      GXSetVtxDescv                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -128,7 +245,7 @@ asm void GXSetVtxDescv() {
 }
 #pragma pop
 
-/* 8035B3AC 00BC .text      __GXSetVCD                                                   */
+/* 8035B3AC-8035B468 00BC .text      __GXSetVCD                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -138,7 +255,7 @@ asm void __GXSetVCD() {
 }
 #pragma pop
 
-/* 8035B468 0124 .text      __GXCalculateVLim                                            */
+/* 8035B468-8035B58C 0124 .text      __GXCalculateVLim                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -148,7 +265,7 @@ asm void __GXCalculateVLim() {
 }
 #pragma pop
 
-/* 8035B58C 0038 .text      GXClearVtxDesc                                               */
+/* 8035B58C-8035B5C4 0038 .text      GXClearVtxDesc                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -158,7 +275,7 @@ asm void GXClearVtxDesc() {
 }
 #pragma pop
 
-/* 8035B5C4 025C .text      GXSetVtxAttrFmt                                              */
+/* 8035B5C4-8035B820 025C .text      GXSetVtxAttrFmt                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -168,7 +285,7 @@ asm void GXSetVtxAttrFmt() {
 }
 #pragma pop
 
-/* 8035B820 0280 .text      GXSetVtxAttrFmtv                                             */
+/* 8035B820-8035BAA0 0280 .text      GXSetVtxAttrFmtv                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,7 +295,7 @@ asm void GXSetVtxAttrFmtv() {
 }
 #pragma pop
 
-/* 8035BAA0 0088 .text      __GXSetVAT                                                   */
+/* 8035BAA0-8035BB28 0088 .text      __GXSetVAT                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -188,7 +305,7 @@ asm void __GXSetVAT() {
 }
 #pragma pop
 
-/* 8035BB28 0044 .text      GXSetArray                                                   */
+/* 8035BB28-8035BB6C 0044 .text      GXSetArray                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -198,7 +315,7 @@ asm void GXSetArray() {
 }
 #pragma pop
 
-/* 8035BB6C 0010 .text      GXInvalidateVtxCache                                         */
+/* 8035BB6C-8035BB7C 0010 .text      GXInvalidateVtxCache                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -208,7 +325,7 @@ asm void GXInvalidateVtxCache() {
 }
 #pragma pop
 
-/* 8035BB7C 0280 .text      GXSetTexCoordGen2                                            */
+/* 8035BB7C-8035BDFC 0280 .text      GXSetTexCoordGen2                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -218,7 +335,7 @@ asm void GXSetTexCoordGen2() {
 }
 #pragma pop
 
-/* 8035BDFC 003C .text      GXSetNumTexGens                                              */
+/* 8035BDFC-8035BE38 003C .text      GXSetNumTexGens                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

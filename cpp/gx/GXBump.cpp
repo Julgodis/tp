@@ -9,8 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void GXSetTevIndirect();
-SECTION_SDATA2 extern u8 __GXData[4];
+/* Function             */
+extern void GXSetIndTexMtx();
+/* Function             */
+extern void GXSetIndTexCoordScale();
+/* Function             */
+extern void GXSetIndTexOrder();
+/* Function             */
+extern void GXSetNumIndStages();
+/* Function             */
+extern void GXSetTevDirect();
+/* ReturnFunction       */
+extern void __GXUpdateBPMask();
+/* Function             */
+extern void __GXSetIndirectMask();
+/* Function             */
+extern void __GXFlushTextureState();
+/* SymbolReferenceArrayData */
+SECTION_SDATA2 extern void* __GXData;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 GXBump__LIT_149[8];
 }
 
@@ -20,7 +39,7 @@ SECTION_SDATA2 extern u8 GXBump__LIT_149[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456610 0004 .sdata2    @149                                                         */
+/* 80456610-80456618 0004 .sdata2    @149                                                         InitializedData */
 SECTION_SDATA2 u8 GXBump__LIT_149[8] = {
 	0x44, 0x80, 0x00, 0x00,
 	/* padding */
@@ -34,7 +53,7 @@ SECTION_SDATA2 u8 GXBump__LIT_149[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8035ECC0 006C .text      GXSetTevIndirect                                             */
+/* 8035ECC0-8035ED2C 006C .text      GXSetTevIndirect                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -44,7 +63,7 @@ asm void GXSetTevIndirect() {
 }
 #pragma pop
 
-/* 8035ED2C 0178 .text      GXSetIndTexMtx                                               */
+/* 8035ED2C-8035EEA4 0178 .text      GXSetIndTexMtx                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +73,7 @@ asm void GXSetIndTexMtx() {
 }
 #pragma pop
 
-/* 8035EEA4 0144 .text      GXSetIndTexCoordScale                                        */
+/* 8035EEA4-8035EFE8 0144 .text      GXSetIndTexCoordScale                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +83,7 @@ asm void GXSetIndTexCoordScale() {
 }
 #pragma pop
 
-/* 8035EFE8 00EC .text      GXSetIndTexOrder                                             */
+/* 8035EFE8-8035F0D4 00EC .text      GXSetIndTexOrder                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +93,7 @@ asm void GXSetIndTexOrder() {
 }
 #pragma pop
 
-/* 8035F0D4 0024 .text      GXSetNumIndStages                                            */
+/* 8035F0D4-8035F0F8 0024 .text      GXSetNumIndStages                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +103,7 @@ asm void GXSetNumIndStages() {
 }
 #pragma pop
 
-/* 8035F0F8 0048 .text      GXSetTevDirect                                               */
+/* 8035F0F8-8035F140 0048 .text      GXSetTevDirect                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,12 +113,12 @@ asm void GXSetTevDirect() {
 }
 #pragma pop
 
-/* 8035F140 0004 .text      __GXUpdateBPMask                                             */
+/* 8035F140-8035F144 0004 .text      __GXUpdateBPMask                                             ReturnFunction */
 void __GXUpdateBPMask() {
 	return;
 }
 
-/* 8035F144 0030 .text      __GXSetIndirectMask                                          */
+/* 8035F144-8035F174 0030 .text      __GXSetIndirectMask                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +128,7 @@ asm void __GXSetIndirectMask() {
 }
 #pragma pop
 
-/* 8035F174 0024 .text      __GXFlushTextureState                                        */
+/* 8035F174-8035F198 0024 .text      __GXFlushTextureState                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

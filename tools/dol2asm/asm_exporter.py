@@ -207,9 +207,6 @@ def export_symbol_vtable_data(builder: Builder, section: SectionPart, symbol: VT
     export_padding(builder, symbol.padding)
 
 def export_symbol(builder: Builder, section: SectionPart, symbol: Symbol):           
-    if builder.DRY_RUN:
-        return
-
     export_symbol_header(builder, section, symbol)
 
     if isinstance(symbol, Function):
@@ -299,13 +296,14 @@ def export_all(BASEROM, DRY_RUN, EXPORT_CPP, libraries):
     for library in libraries:
         export_library(BASEROM, DRY_RUN, library)
 
-def export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section: Section):
+def export_binary_section(BASE_PATH, section: Section):
     name = section.name[1:] + ".s"
     path = "asm/%s%s" % (BASE_PATH, name)
+    util.mkdir(path)
 
     print("Exporting", path)
 
-    builder = Builder(path, DRY_RUN, BASEROM)
+    builder = Builder(path, False)
     builder.write(".include \"macros.inc\"")
 
     builder.write("")
@@ -317,15 +315,17 @@ def export_binary_section(BASEROM, DRY_RUN, BASE_PATH, section: Section):
     if not section.symbols:
         offset = section.offset
         size = section.size
-        data = builder.baserom(offset, size)
+        data = section.data
         export_symbol_data_output(builder, data, offset)
     else:
         for section_symbol in section.symbols:
-            offset = section.offset + section_symbol.addr - section.addr
-            data = BASEROM[offset:offset+section_symbol.size]
+            offset = section_symbol.addr - section.addr
+            data = section.data[offset:offset+section_symbol.size]
             padding_data = bytes()
             if section_symbol.padding:
-                padding_data = BASEROM[offset+section_symbol.size:offset+section_symbol.size+section_symbol.padding]
+                padding_data = section.data[offset+section_symbol.size:offset+section_symbol.size+section_symbol.padding]
+
+            assert len(data) == section_symbol.size
             name = Name("data", section_symbol.addr, section_symbol.name)
             symbol = InitializedData(name, section_symbol.addr, offset, data, padding_data=padding_data)
             export_symbol(builder, section, symbol)

@@ -19,22 +19,43 @@ extern void JPAVolumeCylinder(JPAEmitterWorkData*); /* JPAVolumeCylinder__FP18JP
 extern void JPAVolumeTorus(JPAEmitterWorkData*); /* JPAVolumeTorus__FP18JPAEmitterWorkData */
 
 extern "C" {
+/* Function             */
 extern void JPAVolumePoint__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeLine__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeCircle__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeCube__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeSphere__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeCylinder__FP18JPAEmitterWorkData();
+/* Function             */
 extern void JPAVolumeTorus__FP18JPAEmitterWorkData();
+/* Function             */
+extern void __ct__16JPADynamicsBlockFPCUc();
+/* Function             */
 extern void init__16JPADynamicsBlockFv();
+/* Function             */
+extern void create__16JPADynamicsBlockFP18JPAEmitterWorkData();
+/* Function             */
 extern void createParticle__14JPABaseEmitterFv();
-SECTION_DATA extern u8 LIT_2631[32];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_2631[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2287[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JPADynamicsBlock__LIT_2288;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2289[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_2321;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2501[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JPADynamicsBlock__LIT_2503;
 }
 
@@ -44,12 +65,17 @@ SECTION_SDATA2 extern f64 JPADynamicsBlock__LIT_2503;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C4488 001C .data      @2631                                                        */
-SECTION_DATA u8 LIT_2631[32] = {
-	0x80, 0x27, 0xBB, 0x78, 0x80, 0x27, 0xBB, 0x88, 0x80, 0x27, 0xBB, 0x98, 0x80, 0x27, 0xBB, 0xA8,
-	0x80, 0x27, 0xBB, 0xB8, 0x80, 0x27, 0xBB, 0xC8, 0x80, 0x27, 0xBB, 0xD8,
+/* 803C4488-803C44A8 001C .data      @2631                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_2631[8] = {
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+11),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+15),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+19),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+23),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+27),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+31),
+	(void*)(((u32*)init__16JPADynamicsBlockFv)+35),
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -59,29 +85,29 @@ SECTION_DATA u8 LIT_2631[32] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455310 0004 .sdata2    @2287                                                        */
+/* 80455310-80455314 0004 .sdata2    @2287                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2287[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455314 0004 .sdata2    @2288                                                        */
+/* 80455314-80455318 0004 .sdata2    @2288                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JPADynamicsBlock__LIT_2288 = 1.000000f;
-/* 80455318 0004 .sdata2    @2289                                                        */
+/* 80455318-80455320 0004 .sdata2    @2289                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2289[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455320 0008 .sdata2    @2321                                                        */
+/* 80455320-80455328 0008 .sdata2    @2321                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_2321 = 4503601774854144.000000;
-/* 80455328 0004 .sdata2    @2501                                                        */
+/* 80455328-80455330 0004 .sdata2    @2501                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2501[8] = {
 	0x47, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455330 0008 .sdata2    @2503                                                        */
+/* 80455330-80455338 0008 .sdata2    @2503                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JPADynamicsBlock__LIT_2503 = 4503599627370496.000000;
 }
@@ -92,7 +118,7 @@ SECTION_SDATA2 f64 JPADynamicsBlock__LIT_2503 = 4503599627370496.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8027B144 00DC .text      JPAVolumePoint__FP18JPAEmitterWorkData                       */
+/* 8027B144-8027B220 00DC .text      JPAVolumePoint__FP18JPAEmitterWorkData                       Function */
 }
 
 #pragma push
@@ -105,7 +131,7 @@ asm void JPAVolumePoint(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B220 011C .text      JPAVolumeLine__FP18JPAEmitterWorkData                        */
+/* 8027B220-8027B33C 011C .text      JPAVolumeLine__FP18JPAEmitterWorkData                        Function */
 }
 
 #pragma push
@@ -118,7 +144,7 @@ asm void JPAVolumeLine(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B33C 01AC .text      JPAVolumeCircle__FP18JPAEmitterWorkData                      */
+/* 8027B33C-8027B4E8 01AC .text      JPAVolumeCircle__FP18JPAEmitterWorkData                      Function */
 }
 
 #pragma push
@@ -131,7 +157,7 @@ asm void JPAVolumeCircle(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B4E8 0108 .text      JPAVolumeCube__FP18JPAEmitterWorkData                        */
+/* 8027B4E8-8027B5F0 0108 .text      JPAVolumeCube__FP18JPAEmitterWorkData                        Function */
 }
 
 #pragma push
@@ -144,7 +170,7 @@ asm void JPAVolumeCube(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B5F0 028C .text      JPAVolumeSphere__FP18JPAEmitterWorkData                      */
+/* 8027B5F0-8027B87C 028C .text      JPAVolumeSphere__FP18JPAEmitterWorkData                      Function */
 }
 
 #pragma push
@@ -157,7 +183,7 @@ asm void JPAVolumeSphere(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B87C 017C .text      JPAVolumeCylinder__FP18JPAEmitterWorkData                    */
+/* 8027B87C-8027B9F8 017C .text      JPAVolumeCylinder__FP18JPAEmitterWorkData                    Function */
 }
 
 #pragma push
@@ -170,7 +196,7 @@ asm void JPAVolumeCylinder(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027B9F8 0120 .text      JPAVolumeTorus__FP18JPAEmitterWorkData                       */
+/* 8027B9F8-8027BB18 0120 .text      JPAVolumeTorus__FP18JPAEmitterWorkData                       Function */
 }
 
 #pragma push
@@ -183,7 +209,7 @@ asm void JPAVolumeTorus(JPAEmitterWorkData*) {
 #pragma pop
 
 extern "C" {
-/* 8027BB18 0034 .text      __ct__16JPADynamicsBlockFPCUc                                */
+/* 8027BB18-8027BB4C 0034 .text      __ct__16JPADynamicsBlockFPCUc                                Function */
 // JPADynamicsBlock::JPADynamicsBlock(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -194,7 +220,7 @@ asm void __ct__16JPADynamicsBlockFPCUc() {
 }
 #pragma pop
 
-/* 8027BB4C 009C .text      init__16JPADynamicsBlockFv                                   */
+/* 8027BB4C-8027BBE8 009C .text      init__16JPADynamicsBlockFv                                   Function */
 // JPADynamicsBlock::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -205,7 +231,7 @@ asm void init__16JPADynamicsBlockFv() {
 }
 #pragma pop
 
-/* 8027BBE8 0204 .text      create__16JPADynamicsBlockFP18JPAEmitterWorkData             */
+/* 8027BBE8-8027BDEC 0204 .text      create__16JPADynamicsBlockFP18JPAEmitterWorkData             Function */
 // JPADynamicsBlock::create(JPAEmitterWorkData*)
 #pragma push
 #pragma optimization_level 0

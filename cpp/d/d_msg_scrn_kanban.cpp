@@ -21,59 +21,115 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void dComIfGp_getSubHeap2D__Fi();
+/* ReturnFunction       */
 extern void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+/* ReturnFunction       */
 extern void setSelectString__14dMsgScrnBase_cFPcPcPc();
-extern int selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+/* ReturnIntegerFunction */
+extern  int selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+/* ReturnFunction       */
 extern void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+/* ReturnFunction       */
 extern void arwAnimeMove__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void arwAnimeInit__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void fukiPosCalc__14dMsgScrnBase_cFUc();
-extern int isSelect__14dMsgScrnBase_cFv();
-extern int selectAnimeEnd__14dMsgScrnBase_cFv();
+/* ReturnIntegerFunction */
+extern  int isSelect__14dMsgScrnBase_cFv();
+/* ReturnIntegerFunction */
+extern  int selectAnimeEnd__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void dotAnimeMove__14dMsgScrnBase_cFv();
+/* ReturnFunction       */
 extern void dotAnimeInit__14dMsgScrnBase_cFv();
+/* Function             */
 extern void __ct__14dMsgScrnBase_cFv();
+/* Function             */
 extern void __dt__14dMsgScrnBase_cFv();
+/* Function             */
 extern void init__14dMsgScrnBase_cFv();
+/* Function             */
 extern void multiDraw__14dMsgScrnBase_cFv();
+/* Function             */
 extern void drawSelf__14dMsgScrnBase_cFv();
+/* Function             */
 extern void fontAlpha__14dMsgScrnBase_cFf();
+/* Function             */
 extern void isTalkNow__14dMsgScrnBase_cFv();
+/* Function             */
+extern void __ct__16dMsgScrnKanban_cFP10JKRExpHeap();
+/* Function             */
 extern void __dt__16dMsgScrnKanban_cFv();
+/* Function             */
 extern void exec__16dMsgScrnKanban_cFv();
+/* Function             */
 extern void draw__16dMsgScrnKanban_cFv();
+/* Function             */
 extern void fukiAlpha__16dMsgScrnKanban_cFf();
+/* ReturnFunction       */
 extern void fukiScale__16dMsgScrnKanban_cFf();
+/* ReturnFunction       */
 extern void fukiTrans__16dMsgScrnKanban_cFff();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void getGlobalPosX__8CPaneMgrFv();
+/* Function             */
 extern void getGlobalPosY__8CPaneMgrFv();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* Function             */
 extern void animation__9J2DScreenFv();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_RODATA extern const u8 data_80399AA0[24];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_msg_scrn_kanban__stringBase0[80];
-SECTION_DATA extern const void* __vt__16dMsgScrnKanban_c[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16dMsgScrnKanban_c[22];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_MsgObject_HIO_c[1040];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_kanban__LIT_3944[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_msg_scrn_kanban__LIT_3945;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_msg_scrn_kanban__LIT_3946[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_msg_scrn_kanban__LIT_4033;
 }
 
@@ -83,15 +139,21 @@ SECTION_SDATA2 extern f64 d_d_msg_scrn_kanban__LIT_4033;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80399AA0 0018 .rodata    t_tag$3768                                                   */
+/* 80399AB8-80399B08 004B .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80399AB8 = "zelda_kanban_stone_a.blo";
+SECTION_DEAD const char* const stringBase_80399AD1 = "zelda_kanban_stone_a.bck";
+SECTION_DEAD const char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80399B03 = "\0\0\0\0";
+#pragma pop
+/* 80399AA0-80399AB8 0018 .rodata    t_tag$3768                                                   InitializedData */
 SECTION_RODATA const u8 data_80399AA0[24] = {
 	0x6D, 0x67, 0x5F, 0x65, 0x34, 0x6C, 0x69, 0x6E, 0x00, 0x00, 0x00, 0x00, 0x66, 0x34, 0x5F, 0x77,
 	0x00, 0x00, 0x00, 0x00, 0x74, 0x34, 0x5F, 0x73,
 };
-/* 80399AB8 004B .rodata    @stringBase0                                                 */
-const char* const stringBase_80399AB8 = "zelda_kanban_stone_a.blo";
-const char* const stringBase_80399AD1 = "zelda_kanban_stone_a.bck";
-const char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
 }
 
 
@@ -100,8 +162,8 @@ const char* const stringBase_80399AEA = "zelda_kanban_stone_a.btk";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C1240 0058 .data      __vt__16dMsgScrnKanban_c                                     */
-SECTION_DATA const  void* __vt__16dMsgScrnKanban_c[22] = {
+/* 803C1240-803C1298 0058 .data      __vt__16dMsgScrnKanban_c                                     VTableData */
+SECTION_DATA void* __vt__16dMsgScrnKanban_c[22] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__16dMsgScrnKanban_cFv,
@@ -133,20 +195,20 @@ SECTION_DATA const  void* __vt__16dMsgScrnKanban_c[22] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454CC0 0004 .sdata2    @3944                                                        */
+/* 80454CC0-80454CC4 0004 .sdata2    @3944                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_kanban__LIT_3944[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454CC4 0004 .sdata2    @3945                                                        */
+/* 80454CC4-80454CC8 0004 .sdata2    @3945                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_msg_scrn_kanban__LIT_3945 = 1.000000f;
-/* 80454CC8 0004 .sdata2    @3946                                                        */
+/* 80454CC8-80454CD0 0004 .sdata2    @3946                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_msg_scrn_kanban__LIT_3946[8] = {
 	0x3F, 0x99, 0x99, 0x9A,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454CD0 0008 .sdata2    @4033                                                        */
+/* 80454CD0-80454CD8 0008 .sdata2    @4033                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_msg_scrn_kanban__LIT_4033 = 4503601774854144.000000;
 }
@@ -157,7 +219,7 @@ SECTION_SDATA2 f64 d_d_msg_scrn_kanban__LIT_4033 = 4503601774854144.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80244E38 0514 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       */
+/* 80244E38-8024534C 0514 .text      __ct__16dMsgScrnKanban_cFP10JKRExpHeap                       Function */
 // dMsgScrnKanban_c::dMsgScrnKanban_c(JKRExpHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +230,7 @@ asm void __ct__16dMsgScrnKanban_cFP10JKRExpHeap() {
 }
 #pragma pop
 
-/* 8024534C 01DC .text      __dt__16dMsgScrnKanban_cFv                                   */
+/* 8024534C-80245528 01DC .text      __dt__16dMsgScrnKanban_cFv                                   Function */
 // dMsgScrnKanban_c::~dMsgScrnKanban_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +241,7 @@ asm void __dt__16dMsgScrnKanban_cFv() {
 }
 #pragma pop
 
-/* 80245528 00F0 .text      exec__16dMsgScrnKanban_cFv                                   */
+/* 80245528-80245618 00F0 .text      exec__16dMsgScrnKanban_cFv                                   Function */
 // dMsgScrnKanban_c::exec(void)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +252,7 @@ asm void exec__16dMsgScrnKanban_cFv() {
 }
 #pragma pop
 
-/* 80245618 0088 .text      draw__16dMsgScrnKanban_cFv                                   */
+/* 80245618-802456A0 0088 .text      draw__16dMsgScrnKanban_cFv                                   Function */
 // dMsgScrnKanban_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +263,7 @@ asm void draw__16dMsgScrnKanban_cFv() {
 }
 #pragma pop
 
-/* 802456A0 00B4 .text      fukiAlpha__16dMsgScrnKanban_cFf                              */
+/* 802456A0-80245754 00B4 .text      fukiAlpha__16dMsgScrnKanban_cFf                              Function */
 // dMsgScrnKanban_c::fukiAlpha(f32)
 #pragma push
 #pragma optimization_level 0
@@ -212,13 +274,13 @@ asm void fukiAlpha__16dMsgScrnKanban_cFf() {
 }
 #pragma pop
 
-/* 80245754 0004 .text      fukiScale__16dMsgScrnKanban_cFf                              */
+/* 80245754-80245758 0004 .text      fukiScale__16dMsgScrnKanban_cFf                              ReturnFunction */
 // dMsgScrnKanban_c::fukiScale(f32)
 void fukiScale__16dMsgScrnKanban_cFf() {
 	return;
 }
 
-/* 80245758 0004 .text      fukiTrans__16dMsgScrnKanban_cFff                             */
+/* 80245758-8024575C 0004 .text      fukiTrans__16dMsgScrnKanban_cFff                             ReturnFunction */
 // dMsgScrnKanban_c::fukiTrans(f32, f32)
 void fukiTrans__16dMsgScrnKanban_cFff() {
 	return;

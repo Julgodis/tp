@@ -8,28 +8,41 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
-struct node_class;
-struct method_filter;
 struct node_list_class;
-struct fpcCtIt_jilprm_c;
+struct method_filter;
 struct create_tag;
+struct node_class;
+struct fpcCtIt_jilprm_c;
+struct create_tag_class;
 struct judge_filter;
 
+extern void fpcCtIt_Method(int (*)(void*, void*), void*); /* fpcCtIt_Method__FPFPvPv_iPv */
 extern void fpcCtIt_Judge(void* (*)(void*, void*), void*); /* fpcCtIt_Judge__FPFPvPv_PvPv */
 extern void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); /* fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
+extern void fpcCtIt_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); /* fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv */
 extern void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); /* cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv */
 extern void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); /* cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv */
 extern void cTgIt_MethodCall(create_tag_class*, method_filter*); /* cTgIt_MethodCall__FP16create_tag_classP13method_filter */
 extern void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); /* cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter */
 
 extern "C" {
+/* Function             */
+extern void fpcCtIt_Method__FPFPvPv_iPv();
+/* Function             */
 extern void fpcCtIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c();
+/* Function             */
+extern void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
+/* Function             */
 extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+/* Function             */
 extern void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+/* Function             */
 extern void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+/* Function             */
 extern void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fpcCtTg_Queue[16];
 }
 
@@ -39,7 +52,7 @@ SECTION_DATA extern u8 g_fpcCtTg_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800209C8 003C .text      fpcCtIt_Method__FPFPvPv_iPv                                  */
+/* 800209C8-80020A04 003C .text      fpcCtIt_Method__FPFPvPv_iPv                                  Function */
 }
 
 #pragma push
@@ -52,7 +65,7 @@ asm void fpcCtIt_Method(int (*)(void*, void*), void*) {
 #pragma pop
 
 extern "C" {
-/* 80020A04 003C .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  */
+/* 80020A04-80020A40 003C .text      fpcCtIt_Judge__FPFPvPv_PvPv                                  Function */
 }
 
 #pragma push
@@ -65,7 +78,7 @@ asm void fpcCtIt_Judge(void* (*)(void*, void*), void*) {
 #pragma pop
 
 extern "C" {
-/* 80020A40 0054 .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c */
+/* 80020A40-80020A94 0054 .text      fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c Function */
 }
 
 #pragma push
@@ -78,7 +91,7 @@ asm void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*) {
 #pragma pop
 
 extern "C" {
-/* 80020A94 0038 .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         */
+/* 80020A94-80020ACC 0038 .text      fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv                         Function */
 }
 
 #pragma push

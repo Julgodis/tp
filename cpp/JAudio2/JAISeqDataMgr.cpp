@@ -11,11 +11,16 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__14JAISeqDataUserFv();
+/* Function             */
 extern void __dt__13JAISeqDataMgrFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__13JAISeqDataMgr[6];
-SECTION_DATA extern const void* __vt__14JAISeqDataUser[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13JAISeqDataMgr[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JAISeqDataUser[6];
 }
 
 
@@ -24,8 +29,8 @@ SECTION_DATA extern const void* __vt__14JAISeqDataUser[6];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9928 0018 .data      __vt__13JAISeqDataMgr                                        */
-SECTION_DATA const  void* __vt__13JAISeqDataMgr[6] = {
+/* 803C9928-803C9940 0018 .data      __vt__13JAISeqDataMgr                                        VTableData */
+SECTION_DATA void* __vt__13JAISeqDataMgr[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JAISeqDataMgrFv,
@@ -33,8 +38,8 @@ SECTION_DATA const  void* __vt__13JAISeqDataMgr[6] = {
 	NULL,
 	NULL,
 };
-/* 803C9940 0014 .data      __vt__14JAISeqDataUser                                       */
-SECTION_DATA const  void* __vt__14JAISeqDataUser[6] = {
+/* 803C9940-803C9958 0014 .data      __vt__14JAISeqDataUser                                       VTableData */
+SECTION_DATA void* __vt__14JAISeqDataUser[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JAISeqDataUserFv,
@@ -51,7 +56,7 @@ SECTION_DATA const  void* __vt__14JAISeqDataUser[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A1774 0048 .text      __dt__14JAISeqDataUserFv                                     */
+/* 802A1774-802A17BC 0048 .text      __dt__14JAISeqDataUserFv                                     Function */
 // JAISeqDataUser::~JAISeqDataUser(void)
 #pragma push
 #pragma optimization_level 0
@@ -62,7 +67,7 @@ asm void __dt__14JAISeqDataUserFv() {
 }
 #pragma pop
 
-/* 802A17BC 0048 .text      __dt__13JAISeqDataMgrFv                                      */
+/* 802A17BC-802A1804 0048 .text      __dt__13JAISeqDataMgrFv                                      Function */
 // JAISeqDataMgr::~JAISeqDataMgr(void)
 #pragma push
 #pragma optimization_level 0

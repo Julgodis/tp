@@ -8,11 +8,16 @@
 // Additional Symbols:
 // 
 
+struct process_method_class;
 struct create_tag_class;
 struct leafdraw_class;
-struct process_method_class;
 struct leafdraw_method_class;
 
+extern void fopMsg_Draw(void*); /* fopMsg_Draw__FPv */
+extern void fopMsg_Execute(void*); /* fopMsg_Execute__FPv */
+extern void fopMsg_IsDelete(void*); /* fopMsg_IsDelete__FPv */
+extern void fopMsg_Delete(void*); /* fopMsg_Delete__FPv */
+extern void fopMsg_Create(void*); /* fopMsg_Create__FPv */
 extern void fopDwTg_ToDrawQ(create_tag_class*, int); /* fopDwTg_ToDrawQ__FP16create_tag_classi */
 extern void fopDwTg_DrawQTo(create_tag_class*); /* fopDwTg_DrawQTo__FP16create_tag_class */
 extern void fopDwTg_Init(create_tag_class*, void*); /* fopDwTg_Init__FP16create_tag_classPv */
@@ -25,18 +30,43 @@ extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20p
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopMsg_Draw__FPv();
+/* Function             */
+extern void fopMsg_Execute__FPv();
+/* Function             */
+extern void fopMsg_IsDelete__FPv();
+/* Function             */
+extern void fopMsg_Delete__FPv();
+/* Function             */
+extern void fopMsg_Create__FPv();
+/* FirstParamFunction   */
 extern u32 fopMsgM_GetAppend__FPv(u8*);
+/* Function             */
 extern void fopDwTg_ToDrawQ__FP16create_tag_classi();
+/* Function             */
 extern void fopDwTg_DrawQTo__FP16create_tag_class();
+/* Function             */
 extern void fopDwTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* Function             */
 extern void fpcLf_GetPriority__FPC14leafdraw_class();
+/* Function             */
 extern void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
-SECTION_SBSS extern u8 fopMsg_MSG_TYPE[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopMsg_Method[6];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451124[4];
 }
 
@@ -46,12 +76,15 @@ SECTION_SBSS extern u8 merged_80451124[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3958 0014 .data      g_fopMsg_Method                                              */
-SECTION_DATA u8 g_fopMsg_Method[24] = {
-	0x80, 0x01, 0xF5, 0x88, 0x80, 0x01, 0xF5, 0x3C, 0x80, 0x01, 0xF4, 0xB0, 0x80, 0x01, 0xF4, 0xE8,
-	0x80, 0x01, 0xF4, 0x88,
+/* 803A3958-803A3970 0014 .data      g_fopMsg_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_fopMsg_Method[6] = {
+	(void*)fopMsg_Create,
+	(void*)fopMsg_Delete,
+	(void*)fopMsg_Execute,
+	(void*)fopMsg_IsDelete,
+	(void*)fopMsg_Draw,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -61,9 +94,8 @@ SECTION_DATA u8 g_fopMsg_Method[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450CF0 0004 .sbss      fopMsg_MSG_TYPE                                              */
-SECTION_SBSS u8 fopMsg_MSG_TYPE[4];
-SECTION_SBSS u8 pad_80450CF4[4];
+/* 80450CF0-80450CF8 0004 .sbss      fopMsg_MSG_TYPE                                              ZeroInitializedData */
+SECTION_SBSS u8 fopMsg_MSG_TYPE[4 + 4 /* padding */];
 }
 
 
@@ -72,7 +104,7 @@ SECTION_SBSS u8 pad_80450CF4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8001F488 0028 .text      fopMsg_Draw__FPv                                             */
+/* 8001F488-8001F4B0 0028 .text      fopMsg_Draw__FPv                                             Function */
 }
 
 #pragma push
@@ -85,7 +117,7 @@ asm void fopMsg_Draw(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F4B0 0038 .text      fopMsg_Execute__FPv                                          */
+/* 8001F4B0-8001F4E8 0038 .text      fopMsg_Execute__FPv                                          Function */
 }
 
 #pragma push
@@ -98,7 +130,7 @@ asm void fopMsg_Execute(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F4E8 0054 .text      fopMsg_IsDelete__FPv                                         */
+/* 8001F4E8-8001F53C 0054 .text      fopMsg_IsDelete__FPv                                         Function */
 }
 
 #pragma push
@@ -111,7 +143,7 @@ asm void fopMsg_IsDelete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F53C 004C .text      fopMsg_Delete__FPv                                           */
+/* 8001F53C-8001F588 004C .text      fopMsg_Delete__FPv                                           Function */
 }
 
 #pragma push
@@ -124,7 +156,7 @@ asm void fopMsg_Delete(void*) {
 #pragma pop
 
 extern "C" {
-/* 8001F588 00D8 .text      fopMsg_Create__FPv                                           */
+/* 8001F588-8001F660 00D8 .text      fopMsg_Create__FPv                                           Function */
 }
 
 #pragma push

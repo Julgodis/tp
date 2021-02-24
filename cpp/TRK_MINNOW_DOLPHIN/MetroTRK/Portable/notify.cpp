@@ -9,10 +9,17 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void TRKReleaseBuffer();
+/* Function             */
 extern void TRKGetFreeBuffer();
+/* Function             */
 extern void TRKRequestSend();
+/* Function             */
+extern void TRKDoNotifyStopped();
+/* Function             */
 extern void TRKTargetAddExceptionInfo();
+/* Function             */
 extern void TRKTargetAddStopInfo();
 }
 
@@ -22,7 +29,7 @@ extern void TRKTargetAddStopInfo();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036F4B0 0098 .text      TRKDoNotifyStopped                                           */
+/* 8036F4B0-8036F548 0098 .text      TRKDoNotifyStopped                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

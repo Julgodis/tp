@@ -14,43 +14,76 @@
 
 struct JUTConsole;
 
-extern void print_f(const s8*, ...); /* print_f__FPCce */
-extern void print(const s8*); /* print__FPCc */
+extern void print_f(const char*, ...); /* print_f__FPCce */
+extern void print(const char*); /* print__FPCc */
 extern void dispHeapInfo(void); /* dispHeapInfo__Fv */
 extern void dispGameInfo(void); /* dispGameInfo__Fv */
 extern void dispDateInfo(void); /* dispDateInfo__Fv */
 extern void dispConsoleToTerminal(void); /* dispConsoleToTerminal__Fv */
+extern void exception_addition(JUTConsole*); /* exception_addition__FP10JUTConsole */
 
 extern "C" {
+/* Function             */
 extern void print_f__FPCce();
+/* Function             */
 extern void print__FPCc();
+/* Function             */
 extern void dispHeapInfo__Fv();
+/* Function             */
 extern void dispGameInfo__Fv();
+/* Function             */
 extern void dispDateInfo__Fv();
+/* Function             */
 extern void dispConsoleToTerminal__Fv();
+/* Function             */
+extern void exception_addition__FP10JUTConsole();
+/* Function             */
 extern void dump__14dRes_control_cFv();
+/* Function             */
 extern void dump__24DynamicModuleControlBaseFv();
+/* Function             */
 extern void getFreeSize__7JKRHeapFv();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void dump__11JKRAramHeapFv();
+/* Function             */
 extern void print__10JUTConsoleFPCc();
+/* Function             */
 extern void JUTConsole_print_f_va_();
+/* Function             */
 extern void dumpToTerminal__10JUTConsoleFUi();
+/* Function             */
 extern void OSTicksToCalendarTime();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _restgpr_23();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_machine_exception__stringBase0[480];
+/* InitializedData      */
 SECTION_DATA extern u8 COPYDATE_STRING__7mDoMain[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sPowerOnTime__7mDoMain[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B0C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sHungUpTime__7mDoMain[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B14[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 gameHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 zeldaHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 archiveHeap[4];
-SECTION_SBSS extern u8 sConsole[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sConsole[4 + 16 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 systemConsole__9JFWSystem[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 }
 
@@ -60,52 +93,52 @@ SECTION_SBSS extern u8 sAramObject__7JKRAram[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80374460 01DF .rodata    @stringBase0                                                 */
-const char* const stringBase_80374460 = 
-    "--------------------------------"
+/* 80374460-80374640 01DF .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80374460 = 
+    "----------------"
+    "----------------"
     "------\n";
-const char* const stringBase_80374488 = 
-    "-- Heap Free / TotalFree (KB) --"
+SECTION_DEAD const char* const stringBase_80374488 = 
+    "-- Heap Free / T"
+    "otalFree (KB) --"
     "\n";
-const char* const stringBase_803744AA = "  Zelda %5d / %5d\n";
-const char* const stringBase_803744BD = "   Game %5d / %5d\n";
-const char* const stringBase_803744D0 = "Archive %5d / %5d\n";
-const char* const stringBase_803744E3 = 
-    "--------------------------------"
+SECTION_DEAD const char* const stringBase_803744AA = "  Zelda %5d / %5d\n";
+SECTION_DEAD const char* const stringBase_803744BD = "   Game %5d / %5d\n";
+SECTION_DEAD const char* const stringBase_803744D0 = "Archive %5d / %5d\n";
+SECTION_DEAD const char* const stringBase_803744E3 = 
+    "----------------"
+    "----------------"
     "\n";
-const char* const stringBase_80374505 = "Start StageName:RoomNo [%s:%d]\n";
-const char* const stringBase_80374525 = 
-    "------------- Date Infomation --"
+SECTION_DEAD const char* const stringBase_80374505 = "Start StageName:RoomNo [%s:%d]\n";
+SECTION_DEAD const char* const stringBase_80374525 = 
+    "------------- Da"
+    "te Infomation --"
     "-------\n";
-const char* const stringBase_8037454E = " FINAL VERSION\n";
-const char* const stringBase_8037455E = "COMPILE USER: FINAL\n";
-const char* const stringBase_80374573 = "COPYDATE   : %17s\n";
-const char* const stringBase_80374586 = 
-    "PowerOnTime: %04d/%2d/%2d %2d:%2"
+SECTION_DEAD const char* const stringBase_8037454E = " FINAL VERSION\n";
+SECTION_DEAD const char* const stringBase_8037455E = "COMPILE USER: FINAL\n";
+SECTION_DEAD const char* const stringBase_80374573 = "COPYDATE   : %17s\n";
+SECTION_DEAD const char* const stringBase_80374586 = 
+    "PowerOnTime: %04"
+    "d/%2d/%2d %2d:%2"
     "d:%2d`%03d\"%03d\n";
-const char* const stringBase_803745B7 = 
-    "HungUpTime : %04d/%2d/%2d %2d:%2"
+SECTION_DEAD const char* const stringBase_803745B7 = 
+    "HungUpTime : %04"
+    "d/%2d/%2d %2d:%2"
     "d:%2d`%03d\"%03d\n";
-const char* const stringBase_803745E8 = 
-    "PlayTime   : %4d days, %2d:%2d:%"
+SECTION_DEAD const char* const stringBase_803745E8 = 
+    "PlayTime   : %4d"
+    " days, %2d:%2d:%"
     "2d`%03d\"%03d\n";
-const char* const stringBase_80374616 = 
-    "--------------------------------"
+SECTION_DEAD const char* const stringBase_80374616 = 
+    "----------------"
+    "----------------"
     "-------\n";
-}
-
-
-/* ###################################################################################### */
-/*                                         .sbss                                          */
-/* ###################################################################################### */
-
-extern "C" {
-/* 80450C90 0004 .sbss      sConsole                                                     */
-SECTION_SBSS u8 sConsole[4];
-SECTION_SBSS u8 pad_80450C94[4];
-SECTION_SBSS u8 pad_80450C98[4];
-SECTION_SBSS u8 pad_80450C9C[4];
-SECTION_SBSS u8 pad_80450CA0[4];
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037463F = "";
+#pragma pop
 }
 
 
@@ -114,33 +147,33 @@ SECTION_SBSS u8 pad_80450CA0[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80017D7C 008C .text      print_f__FPCce                                               */
+/* 80017D7C-80017E08 008C .text      print_f__FPCce                                               Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void print_f(const s8*, ...) {
+asm void print_f(const char*, ...) {
 	nofralloc
 #include "_include/m_Do/m_Do_machine_exception/print_f__FPCce.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80017E08 0028 .text      print__FPCc                                                  */
+/* 80017E08-80017E30 0028 .text      print__FPCc                                                  Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void print(const s8*) {
+asm void print(const char*) {
 	nofralloc
 #include "_include/m_Do/m_Do_machine_exception/print__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80017E30 015C .text      dispHeapInfo__Fv                                             */
+/* 80017E30-80017F8C 015C .text      dispHeapInfo__Fv                                             Function */
 }
 
 #pragma push
@@ -153,7 +186,7 @@ asm void dispHeapInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80017F8C 0044 .text      dispGameInfo__Fv                                             */
+/* 80017F8C-80017FD0 0044 .text      dispGameInfo__Fv                                             Function */
 }
 
 #pragma push
@@ -166,7 +199,7 @@ asm void dispGameInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80017FD0 0154 .text      dispDateInfo__Fv                                             */
+/* 80017FD0-80018124 0154 .text      dispDateInfo__Fv                                             Function */
 }
 
 #pragma push
@@ -179,7 +212,7 @@ asm void dispDateInfo(void) {
 #pragma pop
 
 extern "C" {
-/* 80018124 0028 .text      dispConsoleToTerminal__Fv                                    */
+/* 80018124-8001814C 0028 .text      dispConsoleToTerminal__Fv                                    Function */
 }
 
 #pragma push
@@ -192,7 +225,7 @@ asm void dispConsoleToTerminal(void) {
 #pragma pop
 
 extern "C" {
-/* 8001814C 0030 .text      exception_addition__FP10JUTConsole                           */
+/* 8001814C-8001817C 0030 .text      exception_addition__FP10JUTConsole                           Function */
 }
 
 #pragma push

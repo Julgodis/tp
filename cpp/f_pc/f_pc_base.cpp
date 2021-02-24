@@ -8,16 +8,23 @@
 // Additional Symbols:
 // 
 
-struct base_process_class;
 struct layer_class;
-struct line_tag;
 struct process_priority_class;
-struct process_method_class;
+struct line_tag;
+struct base_process_class;
 struct layer_management_tag_class;
 struct delete_tag_class;
+struct process_method_class;
 
+extern void fpcBs_Is_JustOfType(int, int); /* fpcBs_Is_JustOfType__Fii */
 extern void fpcBs_MakeOfType(int*); /* fpcBs_MakeOfType__FPi */
+extern void fpcBs_MakeOfId(void); /* fpcBs_MakeOfId__Fv */
+extern void fpcBs_Execute(base_process_class*); /* fpcBs_Execute__FP18base_process_class */
 extern void fpcBs_DeleteAppend(base_process_class*); /* fpcBs_DeleteAppend__FP18base_process_class */
+extern void fpcBs_IsDelete(base_process_class*); /* fpcBs_IsDelete__FP18base_process_class */
+extern void fpcBs_Delete(base_process_class*); /* fpcBs_Delete__FP18base_process_class */
+extern void fpcBs_Create(short, unsigned int, void*); /* fpcBs_Create__FsUiPv */
+extern void fpcBs_SubCreate(base_process_class*); /* fpcBs_SubCreate__FP18base_process_class */
 extern void fpcDtTg_Init(delete_tag_class*, void*); /* fpcDtTg_Init__FP16delete_tag_classPv */
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
 extern void fpcLyTg_Init(layer_management_tag_class*, unsigned int, void*); /* fpcLyTg_Init__FP26layer_management_tag_classUiPv */
@@ -26,35 +33,73 @@ extern void fpcMtd_IsDelete(process_method_class*, void*); /* fpcMtd_IsDelete__F
 extern void fpcMtd_Delete(process_method_class*, void*); /* fpcMtd_Delete__FP20process_method_classPv */
 extern void fpcMtd_Create(process_method_class*, void*); /* fpcMtd_Create__FP20process_method_classPv */
 extern void fpcPi_Init(process_priority_class*, void*, unsigned int, u16, u16); /* fpcPi_Init__FP22process_priority_classPvUiUsUs */
-extern void fpcPf_Get(s16); /* fpcPf_Get__Fs */
+extern void fpcPf_Get(short); /* fpcPf_Get__Fs */
 extern void fpcLnTg_Init(line_tag*, void*); /* fpcLnTg_Init__FP8line_tagPv */
 extern void fpcPause_Init(void*); /* fpcPause_Init__FPv */
 extern void sBs_ClearArea(void*, u32); /* sBs_ClearArea__FPvUl */
 
 extern "C" {
+/* Function             */
+extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcBs_MakeOfType__FPi();
+/* Function             */
+extern void fpcBs_MakeOfId__Fv();
+/* Function             */
+extern void fpcBs_Execute__FP18base_process_class();
+/* Function             */
 extern void fpcBs_DeleteAppend__FP18base_process_class();
+/* Function             */
+extern void fpcBs_IsDelete__FP18base_process_class();
+/* Function             */
+extern void fpcBs_Delete__FP18base_process_class();
+/* Function             */
+extern void fpcBs_Create__FsUiPv();
+/* Function             */
+extern void fpcBs_SubCreate__FP18base_process_class();
+/* Function             */
 extern void fpcDtTg_Init__FP16delete_tag_classPv();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* GlobalFunction       */
 extern u32 fpcLy_CurrentLayer__Fv();
+/* Function             */
 extern void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
+/* Function             */
 extern void fpcMtd_Execute__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_IsDelete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Delete__FP20process_method_classPv();
+/* Function             */
 extern void fpcMtd_Create__FP20process_method_classPv();
+/* Function             */
 extern void fpcPi_Init__FP22process_priority_classPvUiUsUs();
+/* Function             */
 extern void fpcPf_Get__Fs();
+/* Function             */
 extern void fpcLnTg_Init__FP8line_tagPv();
+/* Function             */
 extern void fpcPause_Init__FPv();
+/* Function             */
 extern void memalignB__3cMlFiUl();
+/* Function             */
 extern void free__3cMlFPv();
+/* Function             */
 extern void sBs_ClearArea__FPvUl();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 g_fpcBs_type[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D04[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D08[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D0C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450D10[8];
 }
 
@@ -64,15 +109,15 @@ SECTION_SBSS extern u8 data_80450D10[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450D00 0004 .sbss      g_fpcBs_type                                                 */
+/* 80450D00-80450D04 0004 .sbss      g_fpcBs_type                                                 ZeroInitializedData */
 SECTION_SBSS u8 g_fpcBs_type[4];
-/* 80450D04 0004 .sbss      t_type$2207                                                  */
+/* 80450D04-80450D08 0004 .sbss      t_type$2207                                                  ZeroInitializedData */
 SECTION_SBSS u8 data_80450D04[4];
-/* 80450D08 0004 .sbss      data_80450D08                                                */
+/* 80450D08-80450D0C 0004 .sbss      data_80450D08                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D08[4];
-/* 80450D0C 0004 .sbss      process_id$2216                                              */
+/* 80450D0C-80450D10 0004 .sbss      process_id$2216                                              ZeroInitializedData */
 SECTION_SBSS u8 data_80450D0C[4];
-/* 80450D10 0008 .sbss      data_80450D10                                                */
+/* 80450D10-80450D18 0008 .sbss      data_80450D10                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450D10[8];
 }
 
@@ -82,7 +127,7 @@ SECTION_SBSS u8 data_80450D10[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8002064C 0010 .text      fpcBs_Is_JustOfType__Fii                                     */
+/* 8002064C-8002065C 0010 .text      fpcBs_Is_JustOfType__Fii                                     Function */
 }
 
 #pragma push
@@ -95,7 +140,7 @@ asm void fpcBs_Is_JustOfType(int, int) {
 #pragma pop
 
 extern "C" {
-/* 8002065C 0040 .text      fpcBs_MakeOfType__FPi                                        */
+/* 8002065C-8002069C 0040 .text      fpcBs_MakeOfType__FPi                                        Function */
 }
 
 #pragma push
@@ -108,7 +153,7 @@ asm void fpcBs_MakeOfType(int*) {
 #pragma pop
 
 extern "C" {
-/* 8002069C 0028 .text      fpcBs_MakeOfId__Fv                                           */
+/* 8002069C-800206C4 0028 .text      fpcBs_MakeOfId__Fv                                           Function */
 }
 
 #pragma push
@@ -121,7 +166,7 @@ asm void fpcBs_MakeOfId(void) {
 #pragma pop
 
 extern "C" {
-/* 800206C4 005C .text      fpcBs_Execute__FP18base_process_class                        */
+/* 800206C4-80020720 005C .text      fpcBs_Execute__FP18base_process_class                        Function */
 }
 
 #pragma push
@@ -134,7 +179,7 @@ asm void fpcBs_Execute(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020720 0040 .text      fpcBs_DeleteAppend__FP18base_process_class                   */
+/* 80020720-80020760 0040 .text      fpcBs_DeleteAppend__FP18base_process_class                   Function */
 }
 
 #pragma push
@@ -147,7 +192,7 @@ asm void fpcBs_DeleteAppend(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020760 005C .text      fpcBs_IsDelete__FP18base_process_class                       */
+/* 80020760-800207BC 005C .text      fpcBs_IsDelete__FP18base_process_class                       Function */
 }
 
 #pragma push
@@ -160,7 +205,7 @@ asm void fpcBs_IsDelete(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 800207BC 0064 .text      fpcBs_Delete__FP18base_process_class                         */
+/* 800207BC-80020820 0064 .text      fpcBs_Delete__FP18base_process_class                         Function */
 }
 
 #pragma push
@@ -173,20 +218,20 @@ asm void fpcBs_Delete(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020820 00FC .text      fpcBs_Create__FsUiPv                                         */
+/* 80020820-8002091C 00FC .text      fpcBs_Create__FsUiPv                                         Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcBs_Create(s16, unsigned int, void*) {
+asm void fpcBs_Create(short, unsigned int, void*) {
 	nofralloc
 #include "_include/f_pc/f_pc_base/fpcBs_Create__FsUiPv.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8002091C 00AC .text      fpcBs_SubCreate__FP18base_process_class                      */
+/* 8002091C-800209C8 00AC .text      fpcBs_SubCreate__FP18base_process_class                      Function */
 }
 
 #pragma push

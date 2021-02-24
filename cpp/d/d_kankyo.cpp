@@ -12,24 +12,24 @@
 // Additional Symbols:
 // 
 
-struct J3DLightInfo;
-struct JKRSolidHeap;
-struct LIGHT_INFLUENCE;
-struct cBgS_PolyInfo;
+struct _GXColor;
+struct DALKMIST_INFLUENCE;
 struct _GXColorS10;
 struct sub_kankyo__class;
-struct Vec;
 struct cXyz;
+struct J3DMaterial;
+struct Vec;
+struct stage_pure_lightvec_info_class;
 struct J3DModelData;
 struct J3DModel;
-struct DALKMIST_INFLUENCE;
 struct dKy_tevstr_c;
-struct _GXColor;
-struct stage_pure_lightvec_info_class;
-struct J3DMaterial;
+struct JKRSolidHeap;
+struct LIGHT_INFLUENCE;
+struct J3DLightInfo;
+struct cBgS_PolyInfo;
 
-extern void mDoAud_setSceneName(const s8*, s32, s32); /* mDoAud_setSceneName__FPCcll */
-extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, s16); /* mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs */
+extern void mDoAud_setSceneName(const char*, long, long); /* mDoAud_setSceneName__FPCcll */
+extern void mDoMtx_lookAt(f32 (*)[4], const Vec*, const Vec*, short); /* mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs */
 extern void mDoMtx_inverseTranspose(const f32 (*)[4], f32 (*)[4]); /* mDoMtx_inverseTranspose__FPA4_CfPA4_f */
 extern void mDoExt_modelUpdateDL(J3DModel*); /* mDoExt_modelUpdateDL__FP8J3DModel */
 extern void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); /* mDoExt_createSolidHeapFromGameToCurrent__FUlUl */
@@ -39,7 +39,7 @@ extern void mDoExt_restoreCurrentHeap(void); /* mDoExt_restoreCurrentHeap__Fv */
 extern void mDoExt_J3DModel__create(J3DModelData*, u32, u32); /* mDoExt_J3DModel__create__FP12J3DModelDataUlUl */
 extern void mDoLib_project(Vec*, Vec*); /* mDoLib_project__FP3VecP3Vec */
 extern void dComIfGs_sense_type_change_Get(void); /* dComIfGs_sense_type_change_Get__Fv */
-extern void dComIfG_getStageRes(const s8*); /* dComIfG_getStageRes__FPCc */
+extern void dComIfG_getStageRes(const char*); /* dComIfG_getStageRes__FPCc */
 extern void dComIfGp_world_dark_get(void); /* dComIfGp_world_dark_get__Fv */
 extern void dComIfGs_PolyDamageOff_Set(s8); /* dComIfGs_PolyDamageOff_Set__FSc */
 extern void dKyd_dmpalet_getp(void); /* dKyd_dmpalet_getp__Fv */
@@ -64,19 +64,21 @@ extern void dKy_WolfPowerup_AmbCol(_GXColorS10*); /* dKy_WolfPowerup_AmbCol__FP1
 extern void dKy_sense_pat_get(void); /* dKy_sense_pat_get__Fv */
 extern void dKy_WolfPowerup_BgAmbCol(_GXColorS10*); /* dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10 */
 extern void dKy_WolfPowerup_FogNearFar(f32*, f32*); /* dKy_WolfPowerup_FogNearFar__FPfPf */
-extern void dKy_pos2_get_angle(cXyz*, cXyz*, s16*, s16*); /* dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs */
+extern void dKy_pos2_get_angle(cXyz*, cXyz*, short*, short*); /* dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs */
 extern void dKy_twi_wolflight_set(int); /* dKy_twi_wolflight_set__Fi */
 extern void dKy_lightdir_set(f32, f32, Vec*); /* dKy_lightdir_set__FffP3Vec */
 extern void dKy_GXInitLightSpot(J3DLightInfo*, f32, u8); /* dKy_GXInitLightSpot__FP12J3DLightInfofUc */
 extern void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, u8); /* dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc */
 extern void u8_data_ratio_set(u8, u8, f32); /* u8_data_ratio_set__FUcUcf */
-extern void s16_data_ratio_set(s16, s16, f32); /* s16_data_ratio_set__Fssf */
-extern void kankyo_color_ratio_calc_common(s16, f32); /* kankyo_color_ratio_calc_common__Fsf */
-extern void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, s16, f32); /* kankyo_color_ratio_set__FUcUcfUcUcfsf */
+extern void s16_data_ratio_set(short, short, f32); /* s16_data_ratio_set__Fssf */
+extern void kankyo_color_ratio_calc_common(short, f32); /* kankyo_color_ratio_calc_common__Fsf */
+extern void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, short, f32); /* kankyo_color_ratio_set__FUcUcfUcUcfsf */
 extern void fl_data_ratio_set(f32, f32, f32); /* fl_data_ratio_set__Ffff */
 extern void float_kankyo_color_ratio_set(f32, f32, f32, f32, f32, f32, f32, f32); /* float_kankyo_color_ratio_set__Fffffffff */
 extern void get_parcent(f32, f32, f32); /* get_parcent__Ffff */
+extern void dKy_get_parcent(f32, f32, f32); /* dKy_get_parcent__Ffff */
 extern void dKy_FiveSenses_fullthrottle_dark_static1(void); /* dKy_FiveSenses_fullthrottle_dark_static1__Fv */
+extern void dKy_FiveSenses_fullthrottle_dark(void); /* dKy_FiveSenses_fullthrottle_dark__Fv */
 extern void dKy_light_influence_col(int); /* dKy_light_influence_col__Fi */
 extern void dKy_light_influence_col(_GXColor*, f32); /* dKy_light_influence_col__FP8_GXColorf */
 extern void dKy_light_influence_power(int); /* dKy_light_influence_power__Fi */
@@ -87,61 +89,121 @@ extern void plight_set(void); /* plight_set__Fv */
 extern void bgparts_activelight_init(void); /* bgparts_activelight_init__Fv */
 extern void dungeonlight_init(void); /* dungeonlight_init__Fv */
 extern void undwater_init(void); /* undwater_init__Fv */
-extern void dKy_light_size_get(const s8*); /* dKy_light_size_get__FPCc */
+extern void dKy_light_size_get(const char*); /* dKy_light_size_get__FPCc */
 extern void envcolor_init(void); /* envcolor_init__Fv */
 extern void dKy_clear_game_init(void); /* dKy_clear_game_init__Fv */
 extern void dKy_getdaytime_hour(void); /* dKy_getdaytime_hour__Fv */
 extern void dKy_getdaytime_minute(void); /* dKy_getdaytime_minute__Fv */
-extern void cLib_addCalcU8(u8*, u8, s16, s16); /* cLib_addCalcU8__FPUcUcss */
+extern void dKy_daynight_check(void); /* dKy_daynight_check__Fv */
+extern void dKy_getDarktime_hour(void); /* dKy_getDarktime_hour__Fv */
+extern void dKy_getDarktime_minute(void); /* dKy_getDarktime_minute__Fv */
+extern void dKy_getDarktime_week(void); /* dKy_getDarktime_week__Fv */
+extern void cLib_addCalcU8(u8*, u8, short, short); /* cLib_addCalcU8__FPUcUcss */
 extern void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int); /* setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci */
 extern void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int); /* dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci */
+extern void dKy_undwater_filter_draw(void); /* dKy_undwater_filter_draw__Fv */
+extern void dKy_Draw(sub_kankyo__class*); /* dKy_Draw__FP17sub_kankyo__class */
+extern void dKy_Execute(sub_kankyo__class*); /* dKy_Execute__FP17sub_kankyo__class */
+extern void dKy_Delete(sub_kankyo__class*); /* dKy_Delete__FP17sub_kankyo__class */
+extern void dKy_Create(void*); /* dKy_Create__FPv */
 extern void dKy_setLight_init(void); /* dKy_setLight_init__Fv */
+extern void dKy_setLight(void); /* dKy_setLight__Fv */
 extern void dKy_GlobalLight_set(void); /* dKy_GlobalLight_set__Fv */
-extern void dKy_lightswitch_check(stage_pure_lightvec_info_class*, s8); /* dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc */
-extern void dKy_setLight_nowroom_common(s8, f32); /* dKy_setLight_nowroom_common__Fcf */
-extern void dKy_setLight_nowroom(s8); /* dKy_setLight_nowroom__Fc */
+extern void dKy_lightswitch_check(stage_pure_lightvec_info_class*, char); /* dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc */
+extern void dKy_setLight_nowroom_common(char, f32); /* dKy_setLight_nowroom_common__Fcf */
+extern void dKy_setLight_nowroom(char); /* dKy_setLight_nowroom__Fc */
+extern void dKy_setLight_nowroom_grass(char, f32); /* dKy_setLight_nowroom_grass__Fcf */
 extern void dKy_move_room_ratio(dKy_tevstr_c*, s8*); /* dKy_move_room_ratio__FP12dKy_tevstr_cPSc */
 extern void dKy_setLight_nowroom_actor(dKy_tevstr_c*); /* dKy_setLight_nowroom_actor__FP12dKy_tevstr_c */
+extern void dKy_setLight_again(void); /* dKy_setLight_again__Fv */
+extern void dKy_Global_amb_set(dKy_tevstr_c*); /* dKy_Global_amb_set__FP12dKy_tevstr_c */
 extern void dKy_light_influence_pos(int); /* dKy_light_influence_pos__Fi */
+extern void dKy_plight_near_pos(void); /* dKy_plight_near_pos__Fv */
+extern void dKy_mock_light_every_set(LIGHT_INFLUENCE*); /* dKy_mock_light_every_set__FP15LIGHT_INFLUENCE */
 extern void dKy_plight_set(LIGHT_INFLUENCE*); /* dKy_plight_set__FP15LIGHT_INFLUENCE */
+extern void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*); /* dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE */
+extern void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*); /* dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE */
+extern void dKy_plight_priority_set(LIGHT_INFLUENCE*); /* dKy_plight_priority_set__FP15LIGHT_INFLUENCE */
+extern void dKy_plight_cut(LIGHT_INFLUENCE*); /* dKy_plight_cut__FP15LIGHT_INFLUENCE */
 extern void dKy_efplight_set(LIGHT_INFLUENCE*); /* dKy_efplight_set__FP15LIGHT_INFLUENCE */
 extern void dKy_efplight_cut(LIGHT_INFLUENCE*); /* dKy_efplight_cut__FP15LIGHT_INFLUENCE */
 extern void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, int); /* dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi */
 extern void dKy_bgparts_activelight_cut(int); /* dKy_bgparts_activelight_cut__Fi */
-extern void dKy_actor_addcol_amb_set(s16, s16, s16, f32); /* dKy_actor_addcol_amb_set__Fsssf */
-extern void dKy_bg_addcol_amb_set(s16, s16, s16, f32); /* dKy_bg_addcol_amb_set__Fsssf */
-extern void dKy_bg1_addcol_amb_set(s16, s16, s16, f32); /* dKy_bg1_addcol_amb_set__Fsssf */
-extern void dKy_bg2_addcol_amb_set(s16, s16, s16, f32); /* dKy_bg2_addcol_amb_set__Fsssf */
-extern void dKy_bg3_addcol_amb_set(s16, s16, s16, f32); /* dKy_bg3_addcol_amb_set__Fsssf */
-extern void dKy_addcol_fog_set(s16, s16, s16, f32); /* dKy_addcol_fog_set__Fsssf */
-extern void dKy_actor_addcol_set(s16, s16, s16, f32); /* dKy_actor_addcol_set__Fsssf */
-extern void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32); /* dKy_vrbox_addcol_sky0_set__Fsssf */
-extern void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32); /* dKy_vrbox_addcol_kasumi_set__Fsssf */
-extern void dKy_vrbox_addcol_set(s16, s16, s16, f32); /* dKy_vrbox_addcol_set__Fsssf */
+extern void dKy_actor_addcol_amb_set(short, short, short, f32); /* dKy_actor_addcol_amb_set__Fsssf */
+extern void dKy_bg_addcol_amb_set(short, short, short, f32); /* dKy_bg_addcol_amb_set__Fsssf */
+extern void dKy_bg1_addcol_amb_set(short, short, short, f32); /* dKy_bg1_addcol_amb_set__Fsssf */
+extern void dKy_bg2_addcol_amb_set(short, short, short, f32); /* dKy_bg2_addcol_amb_set__Fsssf */
+extern void dKy_bg3_addcol_amb_set(short, short, short, f32); /* dKy_bg3_addcol_amb_set__Fsssf */
+extern void dKy_addcol_fog_set(short, short, short, f32); /* dKy_addcol_fog_set__Fsssf */
+extern void dKy_actor_addcol_set(short, short, short, f32); /* dKy_actor_addcol_set__Fsssf */
+extern void dKy_vrbox_addcol_sky0_set(short, short, short, f32); /* dKy_vrbox_addcol_sky0_set__Fsssf */
+extern void dKy_vrbox_addcol_kasumi_set(short, short, short, f32); /* dKy_vrbox_addcol_kasumi_set__Fsssf */
+extern void dKy_vrbox_addcol_set(short, short, short, f32); /* dKy_vrbox_addcol_set__Fsssf */
 extern void dKy_fog_startendz_set(f32, f32, f32); /* dKy_fog_startendz_set__Ffff */
+extern void dKy_Itemgetcol_chg_on(void); /* dKy_Itemgetcol_chg_on__Fv */
 extern void dKy_Sound_init(void); /* dKy_Sound_init__Fv */
+extern void dKy_Sound_get(void); /* dKy_Sound_get__Fv */
 extern void GxFogSet_Sub(_GXColor*); /* GxFogSet_Sub__FP8_GXColor */
 extern void GxFog_set(void); /* GxFog_set__Fv */
+extern void dKy_GxFog_set(void); /* dKy_GxFog_set__Fv */
+extern void dKy_GxFog_tevstr_set(dKy_tevstr_c*); /* dKy_GxFog_tevstr_set__FP12dKy_tevstr_c */
+extern void dKy_GfFog_tevstr_set(dKy_tevstr_c*); /* dKy_GfFog_tevstr_set__FP12dKy_tevstr_c */
 extern void GxXFog_set(void); /* GxXFog_set__Fv */
+extern void dKy_change_colpat(u8); /* dKy_change_colpat__FUc */
+extern void dKy_custom_colset(u8, u8, f32); /* dKy_custom_colset__FUcUcf */
+extern void dKy_setLight_mine(dKy_tevstr_c*); /* dKy_setLight_mine__FP12dKy_tevstr_c */
 extern void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); /* dKy_tevstr_init__FP12dKy_tevstr_cScUc */
+extern void dKy_rain_check(void); /* dKy_rain_check__Fv */
+extern void dKy_set_allcol_ratio(f32); /* dKy_set_allcol_ratio__Ff */
+extern void dKy_set_actcol_ratio(f32); /* dKy_set_actcol_ratio__Ff */
+extern void dKy_set_bgcol_ratio(f32); /* dKy_set_bgcol_ratio__Ff */
+extern void dKy_set_fogcol_ratio(f32); /* dKy_set_fogcol_ratio__Ff */
+extern void dKy_set_vrboxcol_ratio(f32); /* dKy_set_vrboxcol_ratio__Ff */
 extern void dKy_set_vrboxsoracol_ratio(f32); /* dKy_set_vrboxsoracol_ratio__Ff */
 extern void dKy_set_vrboxkumocol_ratio(f32); /* dKy_set_vrboxkumocol_ratio__Ff */
+extern void dKy_itudemo_se(void); /* dKy_itudemo_se__Fv */
 extern void dKy_get_dayofweek(void); /* dKy_get_dayofweek__Fv */
+extern void dKy_set_nexttime(f32); /* dKy_set_nexttime__Ff */
+extern void dKy_instant_timechg(f32); /* dKy_instant_timechg__Ff */
+extern void dKy_instant_rainchg(void); /* dKy_instant_rainchg__Fv */
 extern void NewAmbColGet(_GXColorS10*); /* NewAmbColGet__FP11_GXColorS10 */
 extern void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); /* dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
+extern void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); /* dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
+extern void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); /* dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
 extern void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); /* dKy_BossLight_set__FP4cXyzP8_GXColorfUc */
+extern void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); /* dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc */
+extern void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); /* dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc */
 extern void dKy_twilight_camelight_set(void); /* dKy_twilight_camelight_set__Fv */
 extern void dKy_WaterIn_Light_set(void); /* dKy_WaterIn_Light_set__Fv */
+extern void dKy_camera_water_in_status_set(u8); /* dKy_camera_water_in_status_set__FUc */
 extern void dKy_camera_water_in_status_check(void); /* dKy_camera_water_in_status_check__Fv */
+extern void dKy_pol_efftype_get(const cBgS_PolyInfo*); /* dKy_pol_efftype_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_efftype2_get(const cBgS_PolyInfo*); /* dKy_pol_efftype2_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_sound_get(const cBgS_PolyInfo*); /* dKy_pol_sound_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_argument_get(const cBgS_PolyInfo*); /* dKy_pol_argument_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_eff_prim_get(const cBgS_PolyInfo*, _GXColor*); /* dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor */
+extern void dKy_pol_eff_env_get(const cBgS_PolyInfo*, _GXColor*); /* dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor */
+extern void dKy_pol_eff2_prim_get(const cBgS_PolyInfo*, _GXColor*); /* dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor */
+extern void dKy_pol_eff2_env_get(const cBgS_PolyInfo*, _GXColor*); /* dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor */
+extern void dKy_pol_eff_alpha_get(const cBgS_PolyInfo*); /* dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_eff_ratio_get(const cBgS_PolyInfo*); /* dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_eff2_alpha_get(const cBgS_PolyInfo*); /* dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo */
+extern void dKy_pol_eff2_ratio_get(const cBgS_PolyInfo*); /* dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo */
+extern void dKy_TeachWind_existence_chk(void); /* dKy_TeachWind_existence_chk__Fv */
 extern void dKy_SunMoon_Light_Check(void); /* dKy_SunMoon_Light_Check__Fv */
 extern void dKy_Outdoor_check(void); /* dKy_Outdoor_check__Fv */
 extern void dKy_Indoor_check(void); /* dKy_Indoor_check__Fv */
+extern void dKy_depth_dist_set(void*); /* dKy_depth_dist_set__FPv */
 extern void dKy_darkworld_check(void); /* dKy_darkworld_check__Fv */
-extern void dKy_F_SP121Check(const s8*, int, u8*, int); /* dKy_F_SP121Check__FPCciPUci */
+extern void dKy_F_SP121Check(const char*, int, u8*, int); /* dKy_F_SP121Check__FPCciPUci */
+extern void dKy_darkworld_stage_check(const char*, int); /* dKy_darkworld_stage_check__FPCci */
+extern void dKy_darkworld_spot_check(const char*, int); /* dKy_darkworld_spot_check__FPCci */
+extern void dKy_darkworld_Area_set(const char*, int); /* dKy_darkworld_Area_set__FPCci */
 extern void dKy_murky_set(J3DMaterial*); /* dKy_murky_set__FP11J3DMaterial */
 extern void dKy_shadow_mode_set(u8); /* dKy_shadow_mode_set__FUc */
 extern void dKy_shadow_mode_reset(u8); /* dKy_shadow_mode_reset__FUc */
 extern void dKy_shadow_mode_check(u8); /* dKy_shadow_mode_check__FUc */
+extern void dKy_bg_MAxx_proc(void*); /* dKy_bg_MAxx_proc__FPv */
 extern void dKankyo_DayProc(void); /* dKankyo_DayProc__Fv */
 extern void cM_rad2s(f32); /* cM_rad2s__Ff */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
@@ -152,458 +214,1079 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
-extern void memset();
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport_Warning();
+/* Function             */
 extern void mDoAud_setSceneName__FPCcll();
+/* Function             */
 extern void __dt__4cXyzFv();
+/* Function             */
 extern void create__Q213mDoGph_gInf_c7bloom_cFv();
+/* Function             */
 extern void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+/* Function             */
 extern void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+/* Function             */
 extern void play__14mDoExt_baseAnmFv();
+/* Function             */
 extern void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+/* Function             */
 extern void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+/* Function             */
 extern void mDoExt_modelUpdateDL__FP8J3DModel();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_restoreCurrentHeap__Fv();
+/* Function             */
 extern void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+/* Function             */
 extern void mDoLib_project__FP3VecP3Vec();
+/* Function             */
 extern void getStatusRoomDt__20dStage_roomControl_cFi();
+/* Function             */
 extern void getLayerNo_common__14dComIfG_play_cFPCcii();
+/* Function             */
 extern void getLayerNo__14dComIfG_play_cFi();
+/* Function             */
 extern void dComIfGs_sense_type_change_Get__Fv();
+/* Function             */
 extern void dComIfG_getStageRes__FPCc();
+/* Function             */
 extern void dComIfGp_world_dark_get__Fv();
+/* Function             */
 extern void dComIfGs_PolyDamageOff_Set__FSc();
+/* Function             */
 extern void isDarkClearLV__21dSv_player_status_b_cCFi();
+/* Function             */
 extern void isSwitch__12dSv_memBit_cCFi();
+/* Function             */
 extern void isDungeonItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void offEventBit__11dSv_event_cFUs();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void isSwitch__10dSv_info_cCFii();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void dKyd_dmpalet_getp__Fv();
+/* Function             */
 extern void dKyd_dmpselect_getp__Fv();
+/* Function             */
 extern void dKyd_dmenvr_getp__Fv();
+/* Function             */
 extern void dKyd_dmvrbox_getp__Fv();
+/* Function             */
 extern void dKyd_schejule_getp__Fv();
+/* Function             */
 extern void dKyd_schejule_boss_getp__Fv();
+/* Function             */
 extern void dKyd_xfog_table_set__FUc();
+/* Function             */
 extern void dKyd_maple_col_getp__Fv();
+/* Function             */
 extern void dKyd_darkworld_tbl_getp__Fv();
+/* Function             */
 extern void dKyd_light_size_tbl_getp__Fv();
+/* Function             */
 extern void dKyd_light_tw_size_tbl_getp__Fv();
+/* Function             */
 extern void dKyd_BloomInf_tbl_getp__Fi();
+/* Function             */
 extern void dKyw_wether_proc__Fv();
+/* Function             */
 extern void dKyw_wind_set__Fv();
+/* Function             */
 extern void dKyw_get_wind_vec__Fv();
+/* Function             */
 extern void dKyw_rain_set__Fi();
+/* Function             */
 extern void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+/* Function             */
 extern void GroundCross__4cBgSFP11cBgS_GndChk();
+/* Function             */
 extern void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void __ct__18dBgS_CamGndChk_WtrFv();
+/* Function             */
 extern void __dt__18dBgS_CamGndChk_WtrFv();
+/* Function             */
 extern void __dt__15LIGHT_INFLUENCEFv();
+/* Function             */
 extern void checkNowWolfEyeUp__9daPy_py_cFv();
+/* Function             */
 extern void dCam_getBody__Fv();
+/* Function             */
 extern void dKy_WolfPowerup_AmbCol__FP11_GXColorS10();
+/* Function             */
 extern void dKy_sense_pat_get__Fv();
+/* Function             */
 extern void dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10();
+/* Function             */
 extern void dKy_WolfPowerup_FogNearFar__FPfPf();
+/* Function             */
 extern void dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs();
+/* Function             */
 extern void dKy_twi_wolflight_set__Fi();
+/* Function             */
 extern void dKy_lightdir_set__FffP3Vec();
+/* Function             */
 extern void dKy_GXInitLightSpot__FP12J3DLightInfofUc();
+/* Function             */
 extern void dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc();
+/* Function             */
 extern void u8_data_ratio_set__FUcUcf();
+/* Function             */
 extern void s16_data_ratio_set__Fssf();
+/* Function             */
 extern void kankyo_color_ratio_calc_common__Fsf();
+/* Function             */
 extern void kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f();
+/* Function             */
 extern void kankyo_color_ratio_set__FUcUcfUcUcfsf();
+/* Function             */
 extern void fl_data_ratio_set__Ffff();
+/* Function             */
 extern void float_kankyo_color_ratio_set__Fffffffff();
+/* Function             */
 extern void get_parcent__Ffff();
+/* Function             */
+extern void dKy_get_parcent__Ffff();
+/* Function             */
 extern void dKy_FiveSenses_fullthrottle_dark_static1__Fv();
+/* Function             */
+extern void dKy_FiveSenses_fullthrottle_dark__Fv();
+/* Function             */
 extern void dKy_light_influence_id__F4cXyzi();
+/* Function             */
 extern void dKy_eflight_influence_id__F4cXyzi();
+/* Function             */
 extern void dKy_light_influence_col__Fi();
+/* Function             */
 extern void dKy_light_influence_col__FP8_GXColorf();
+/* Function             */
 extern void dKy_light_influence_power__Fi();
+/* Function             */
 extern void dKy_light_influence_yuragi__Fi();
+/* Function             */
 extern void dKy_light_influence_distance__F4cXyzi();
+/* Function             */
 extern void plight_init__Fv();
+/* Function             */
 extern void darkmist_init__Fv();
+/* Function             */
 extern void plight_set__Fv();
+/* Function             */
 extern void bgparts_activelight_init__Fv();
+/* Function             */
 extern void dungeonlight_init__Fv();
+/* Function             */
 extern void undwater_init__Fv();
+/* Function             */
 extern void dKy_light_size_get__FPCc();
+/* Function             */
 extern void envcolor_init__Fv();
+/* Function             */
 extern void dKy_clear_game_init__Fv();
+/* Function             */
 extern void __ct__18dScnKy_env_light_cFv();
+/* Function             */
 extern void __ct__19GB_MAPLE_COL_CHANGEFv();
+/* Function             */
 extern void __dt__10BOSS_LIGHTFv();
+/* ReturnFunction       */
 extern void __ct__10BOSS_LIGHTFv();
+/* Function             */
 extern void __dt__13DUNGEON_LIGHTFv();
+/* ReturnFunction       */
 extern void __ct__13DUNGEON_LIGHTFv();
+/* Function             */
 extern void __dt__15WIND_INF_ENTITYFv();
+/* ReturnFunction       */
 extern void __ct__15WIND_INF_ENTITYFv();
+/* ReturnFunction       */
 extern void __ct__15LIGHT_INFLUENCEFv();
+/* Function             */
 extern void setDaytime__18dScnKy_env_light_cFv();
+/* GlobalFunction       */
 extern void GetTimePass__20dStage_roomControl_cFv();
+/* Function             */
 extern void setSunpos__18dScnKy_env_light_cFv();
+/* Function             */
 extern void getDaytime__18dScnKy_env_light_cFv();
+/* Function             */
 extern void dKy_getdaytime_hour__Fv();
+/* Function             */
 extern void dKy_getdaytime_minute__Fv();
+/* Function             */
+extern void dKy_daynight_check__Fv();
+/* Function             */
+extern void dKy_getDarktime_hour__Fv();
+/* Function             */
+extern void dKy_getDarktime_minute__Fv();
+/* Function             */
+extern void dKy_getDarktime_week__Fv();
+/* Function             */
 extern void getDarkDaytime__18dScnKy_env_light_cFv();
+/* Function             */
 extern void setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc();
+/* Function             */
 extern void dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f();
+/* Function             */
 extern void setLight__18dScnKy_env_light_cFv();
+/* Function             */
 extern void setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf();
+/* Function             */
 extern void setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf();
+/* Function             */
 extern void settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf();
+/* Function             */
 extern void settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c();
+/* Function             */
 extern void cLib_addCalcU8__FPUcUcss();
+/* Function             */
 extern void settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc();
+/* Function             */
 extern void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+/* ReturnFunction       */
+extern void setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+/* Function             */
 extern void setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci();
+/* ReturnFunction       */
+extern void setLight__13J3DColorBlockFUlP11J3DLightObj();
+/* ReturnFunction       */
+extern void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor();
+/* Function             */
 extern void dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci();
+/* Function             */
+extern void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+/* Function             */
 extern void CalcTevColor__18dScnKy_env_light_cFv();
+/* Function             */
 extern void Sndpos__18dScnKy_env_light_cFv();
+/* Function             */
 extern void Eflight_flush_proc__18dScnKy_env_light_cFv();
+/* Function             */
 extern void SetBaseLight__18dScnKy_env_light_cFv();
+/* Function             */
 extern void exeKankyo__18dScnKy_env_light_cFv();
+/* Function             */
 extern void drawKankyo__18dScnKy_env_light_cFv();
+/* Function             */
+extern void dKy_undwater_filter_draw__Fv();
+/* Function             */
+extern void dKy_Draw__FP17sub_kankyo__class();
+/* Function             */
+extern void dKy_Execute__FP17sub_kankyo__class();
+/* ReturnIntegerFunction */
+extern  int dKy_IsDelete__FP17sub_kankyo__class();
+/* Function             */
+extern void dKy_Delete__FP17sub_kankyo__class();
+/* Function             */
+extern void dKy_Create__FPv();
+/* Function             */
 extern void dKy_setLight_init__Fv();
+/* Function             */
+extern void dKy_setLight__Fv();
+/* Function             */
 extern void dKy_GlobalLight_set__Fv();
+/* Function             */
 extern void dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc();
+/* Function             */
 extern void dKy_setLight_nowroom_common__Fcf();
+/* Function             */
 extern void dKy_setLight_nowroom__Fc();
+/* Function             */
+extern void dKy_setLight_nowroom_grass__Fcf();
+/* Function             */
 extern void dKy_move_room_ratio__FP12dKy_tevstr_cPSc();
+/* Function             */
 extern void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c();
+/* Function             */
+extern void dKy_setLight_again__Fv();
+/* Function             */
+extern void dKy_Global_amb_set__FP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_light_influence_pos__Fi();
+/* Function             */
+extern void dKy_plight_near_pos__Fv();
+/* Function             */
+extern void dKy_mock_light_every_set__FP15LIGHT_INFLUENCE();
+/* Function             */
 extern void dKy_plight_set__FP15LIGHT_INFLUENCE();
+/* Function             */
+extern void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE();
+/* Function             */
+extern void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE();
+/* Function             */
+extern void dKy_plight_priority_set__FP15LIGHT_INFLUENCE();
+/* Function             */
+extern void dKy_plight_cut__FP15LIGHT_INFLUENCE();
+/* Function             */
 extern void dKy_efplight_set__FP15LIGHT_INFLUENCE();
+/* Function             */
 extern void dKy_efplight_cut__FP15LIGHT_INFLUENCE();
+/* Function             */
 extern void dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi();
+/* Function             */
 extern void dKy_bgparts_activelight_cut__Fi();
+/* Function             */
 extern void dKy_actor_addcol_amb_set__Fsssf();
+/* Function             */
 extern void dKy_bg_addcol_amb_set__Fsssf();
+/* Function             */
 extern void dKy_bg1_addcol_amb_set__Fsssf();
+/* Function             */
 extern void dKy_bg2_addcol_amb_set__Fsssf();
+/* Function             */
 extern void dKy_bg3_addcol_amb_set__Fsssf();
+/* Function             */
 extern void dKy_addcol_fog_set__Fsssf();
+/* Function             */
 extern void dKy_actor_addcol_set__Fsssf();
+/* Function             */
 extern void dKy_vrbox_addcol_sky0_set__Fsssf();
+/* Function             */
 extern void dKy_vrbox_addcol_kasumi_set__Fsssf();
+/* Function             */
 extern void dKy_vrbox_addcol_set__Fsssf();
+/* Function             */
 extern void dKy_fog_startendz_set__Ffff();
+/* Function             */
+extern void dKy_Itemgetcol_chg_on__Fv();
+/* Function             */
 extern void dKy_Sound_init__Fv();
+/* Function             */
+extern void dKy_Sound_set__F4cXyziUii();
+/* Function             */
+extern void dKy_Sound_get__Fv();
+/* Function             */
+extern void dKy_SordFlush_set__F4cXyzi();
+/* Function             */
 extern void GxFogSet_Sub__FP8_GXColor();
+/* Function             */
 extern void GxFog_set__Fv();
+/* Function             */
+extern void dKy_GxFog_set__Fv();
+/* Function             */
+extern void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+/* Function             */
+extern void dKy_GfFog_tevstr_set__FP12dKy_tevstr_c();
+/* Function             */
 extern void GxXFog_set__Fv();
+/* Function             */
+extern void dKy_change_colpat__FUc();
+/* Function             */
+extern void dKy_custom_colset__FUcUcf();
+/* Function             */
+extern void dKy_setLight_mine__FP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+/* Function             */
+extern void dKy_rain_check__Fv();
+/* Function             */
+extern void dKy_set_allcol_ratio__Ff();
+/* Function             */
+extern void dKy_set_actcol_ratio__Ff();
+/* Function             */
+extern void dKy_set_bgcol_ratio__Ff();
+/* Function             */
+extern void dKy_set_fogcol_ratio__Ff();
+/* Function             */
+extern void dKy_set_vrboxcol_ratio__Ff();
+/* Function             */
 extern void dKy_set_vrboxsoracol_ratio__Ff();
+/* Function             */
 extern void dKy_set_vrboxkumocol_ratio__Ff();
+/* Function             */
+extern void dKy_itudemo_se__Fv();
+/* Function             */
 extern void dKy_get_dayofweek__Fv();
+/* Function             */
+extern void dKy_set_nexttime__Ff();
+/* Function             */
+extern void dKy_instant_timechg__Ff();
+/* Function             */
+extern void dKy_instant_rainchg__Fv();
+/* Function             */
 extern void NewAmbColGet__FP11_GXColorS10();
+/* Function             */
 extern void dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+/* Function             */
+extern void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+/* Function             */
+extern void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+/* Function             */
 extern void dKy_BossLight_set__FP4cXyzP8_GXColorfUc();
+/* Function             */
+extern void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc();
+/* Function             */
+extern void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc();
+/* Function             */
 extern void dKy_twilight_camelight_set__Fv();
+/* Function             */
 extern void dKy_WaterIn_Light_set__Fv();
+/* Function             */
+extern void dKy_camera_water_in_status_set__FUc();
+/* Function             */
 extern void dKy_camera_water_in_status_check__Fv();
+/* Function             */
+extern void dKy_pol_efftype_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_argument_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
+extern void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
+extern void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
+extern void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
+extern void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo();
+/* Function             */
+extern void dKy_TeachWind_existence_chk__Fv();
+/* Function             */
 extern void dKy_SunMoon_Light_Check__Fv();
+/* Function             */
 extern void dKy_Outdoor_check__Fv();
+/* Function             */
 extern void dKy_Indoor_check__Fv();
+/* ReturnIntegerFunction */
+extern  int dKy_withwarp_capture_check__Fv();
+/* Function             */
+extern void dKy_depth_dist_set__FPv();
+/* Function             */
 extern void dKy_darkworld_check__Fv();
+/* Function             */
 extern void dKy_F_SP121Check__FPCciPUci();
+/* Function             */
+extern void dKy_darkworld_stage_check__FPCci();
+/* Function             */
+extern void dKy_darkworld_spot_check__FPCci();
+/* Function             */
+extern void dKy_darkworld_Area_set__FPCci();
+/* Function             */
 extern void dKy_murky_set__FP11J3DMaterial();
+/* Function             */
 extern void dKy_shadow_mode_set__FUc();
+/* Function             */
 extern void dKy_shadow_mode_reset__FUc();
+/* Function             */
 extern void dKy_shadow_mode_check__FUc();
+/* Function             */
+extern void dKy_bg_MAxx_proc__FPv();
+/* Function             */
 extern void __dt__18dScnKy_env_light_cFv();
+/* SInitFunction        */
+extern void __sinit_d_kankyo_cpp();
+/* Function             */
 extern void dKankyo_DayProc__Fv();
+/* Function             */
 extern void getActor__12dMsgObject_cFv();
+/* Function             */
 extern void __pl__4cXyzCFRC3Vec();
+/* Function             */
 extern void __mi__4cXyzCFRC3Vec();
+/* Function             */
 extern void __ml__4cXyzCFf();
+/* Function             */
 extern void cM_rad2s__Ff();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void cM_rndF__Ff();
+/* Function             */
 extern void SetPos__11cBgS_GndChkFPC4cXyz();
+/* Function             */
 extern void cM3d_VectorProduct2d__Fffffff();
+/* Function             */
 extern void cLib_addCalc__FPfffff();
+/* Function             */
 extern void deleteAllParticle__14JPABaseEmitterFv();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void load2ndDynamicWave__10Z2SceneMgrFv();
+/* Function             */
 extern void __ct__10Z2EnvSeMgrFv();
+/* Function             */
 extern void __dt__10Z2EnvSeMgrFv();
+/* ReturnFunction       */
 extern void resetScene__10Z2EnvSeMgrFv();
+/* Function             */
 extern void GFSetFog__F10_GXFogTypeffff8_GXColor();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getName__10JUTNameTabCFUs();
+/* Function             */
 extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
 extern void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+/* Function             */
 extern void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+/* Function             */
 extern void init__12J3DFrameCtrlFs();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void C_MTXLightPerspective();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void GXInitLightAttn();
+/* Function             */
 extern void GXInitLightSpot();
+/* Function             */
 extern void GXInitLightDistAttn();
+/* Function             */
 extern void GXInitLightPos();
+/* Function             */
 extern void GXInitLightDir();
+/* Function             */
 extern void GXInitLightColor();
+/* Function             */
 extern void GXLoadLightObjImm();
+/* Function             */
 extern void GXSetChanAmbColor();
+/* Function             */
 extern void GXSetFog();
+/* Function             */
 extern void GXSetFogRangeAdj();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void __cvt_fp2unsigned();
+/* Function             */
 extern void _savefpr_29();
+/* Function             */
 extern void _restfpr_29();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_16();
+/* Function             */
 extern void _savegpr_17();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_16();
+/* Function             */
 extern void _restgpr_17();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void abs();
+/* Function             */
 extern void memcmp();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void cos();
+/* Function             */
 extern void sin();
+/* InitializedData      */
 SECTION_RODATA extern const u8 tempBitLabels__20dSv_event_tmp_flag_c[372];
+/* InitializedData      */
 SECTION_RODATA extern const u8 LIT_9035[12];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_kankyo__stringBase0[716];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern const void* __vt__12J3DFrameCtrl[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DFrameCtrl[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopKy_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_kankyo__cNullVec__6Z2Calc[12];
+/* InitializedData      */
 SECTION_DATA extern u8 lightStatusBase[232];
+/* InitializedData      */
 SECTION_DATA extern u8 lightMaskData[16];
-SECTION_DATA extern u8 d_d_kankyo__LIT_4322[64];
-SECTION_DATA extern u8 d_d_kankyo__LIT_4364[64];
-SECTION_DATA extern u8 d_d_kankyo__LIT_4511[28];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_kankyo__LIT_4322[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_kankyo__LIT_4364[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_kankyo__LIT_4511[7];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BBF58[96];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BBFB8[24];
-SECTION_DATA extern u8 LIT_5842[32];
-SECTION_DATA extern u8 LIT_5841[32];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5842[8];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5841[8];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BC010[24];
-SECTION_DATA extern u8 LIT_6776[40];
-SECTION_DATA extern u8 LIT_7029[32];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_6776[10];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_7029[8];
+/* InitializedData      */
+SECTION_DATA extern u8 data_803BC070[16];
+/* InitializedData      */
+SECTION_DATA extern u8 data_803BC080[16];
+/* InitializedData      */
+SECTION_DATA extern u8 data_803BC090[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dKy_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_KANKYO[10];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803BC0DC[96];
-SECTION_DATA extern const void* __vt__18dScnKy_env_light_c[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dScnKy_env_light_c[7];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 m_bloom__13mDoGph_gInf_c[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mStatus__20dStage_roomControl_c[65792];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_kankyo__LIT_4112[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_kankyo__LIT_4113[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_mEnvSeMgr[780];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 lightStatusData[1856];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_kankyo__LIT_7485[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_8042E7C8[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_7489[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_8042E7E0[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_BSS extern u8 g_Counter[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_Counter[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 lightMask[4];
-SECTION_SDATA extern u8 lightStatusPt[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* lightStatusPt;
+/* InitializedData      */
 SECTION_SDATA extern u8 l_zmodeUpEnable[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 l_zmodeUpDisable[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 l_alphaCompInfoOPA[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 l_alphaCompInfo[8];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80451068[8];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* MergedZeroInitializedData */
+SECTION_SBSS extern u8 merged_80451070[8];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4345;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4346;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4347;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4348;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4349;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4350;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4351;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4352;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4353;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4354;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4355;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4356;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4357;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4358;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4359;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4360;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4361;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4362;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4363;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4409[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kankyo__LIT_4410;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kankyo__LIT_4411;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4412[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4441[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4442;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_kankyo__LIT_4444;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4477[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4502[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4503;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4504;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4505;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4506;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4507;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4508;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4509;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4510;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4529;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4730[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_4731[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_4732;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4850;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4851;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4852[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_4964;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5077[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5106;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_5191[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5192;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5193;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5194[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_5344[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5345;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_5346[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5347;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5348;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_5349[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5365;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5554;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5555;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5556;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5613;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5614;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5615;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_5616;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_5617[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5618;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 LIT_5839;
+/* Fraction32Data       */
 SECTION_SDATA2 extern f32 LIT_5840;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6032;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6033;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6034[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_6035[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6036[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6037[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6038[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6039[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_6040[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_kankyo__LIT_6041[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6042[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6761;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6762;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6763;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6764;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6765;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_6766;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6767;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6768[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6769;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6770[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6771;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6772[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6773;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_6774[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7011;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7012[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7013;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7014;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7015;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7016;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7017;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7018;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7019;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7020;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7021;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7022;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7023;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7024[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7025[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7026[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7027[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7186;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7187;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7365;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_7366;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_7608[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_kankyo__LIT_7609;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_8647;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_8975;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9254;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9255;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9256;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9257;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9258;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9259;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9676;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9677;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9722;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_9723[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_9724[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9725;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_9726[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_9727[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9728;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_9779[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9780;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_9781;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10273;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10274;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10483;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10484;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10485;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10486;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10916;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10917;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10918[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10919[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10920[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10921[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10922;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10923;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10924;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10925;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10926;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10927[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10928;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_10929;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10930[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10931[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_10932[8];
 }
 
@@ -613,99 +1296,106 @@ SECTION_SDATA2 extern u8 LIT_10932[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80394C60 000C .rodata    @9035                                                        */
+/* 80394C6C-80394F38 02C9 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80394C6C = "F_SP115";
+SECTION_DEAD const char* const stringBase_80394C74 = "F_SP113";
+SECTION_DEAD const char* const stringBase_80394C7C = "D_SB10";
+SECTION_DEAD const char* const stringBase_80394C83 = "F_SP112";
+SECTION_DEAD const char* const stringBase_80394C8B = "F_SP126";
+SECTION_DEAD const char* const stringBase_80394C93 = "F_SP114";
+SECTION_DEAD const char* const stringBase_80394C9B = "D_MN05";
+SECTION_DEAD const char* const stringBase_80394CA2 = "D_MN04";
+SECTION_DEAD const char* const stringBase_80394CA9 = "D_SB04";
+SECTION_DEAD const char* const stringBase_80394CB0 = "D_SB05";
+SECTION_DEAD const char* const stringBase_80394CB7 = "D_SB06";
+SECTION_DEAD const char* const stringBase_80394CBE = "D_SB07";
+SECTION_DEAD const char* const stringBase_80394CC5 = "D_SB08";
+SECTION_DEAD const char* const stringBase_80394CCC = "D_SB09";
+SECTION_DEAD const char* const stringBase_80394CD3 = "D_MN10A";
+SECTION_DEAD const char* const stringBase_80394CDB = "D_MN07A";
+SECTION_DEAD const char* const stringBase_80394CE3 = "D_MN10B";
+SECTION_DEAD const char* const stringBase_80394CEB = "D_MN10";
+SECTION_DEAD const char* const stringBase_80394CF2 = "D_MN11A";
+SECTION_DEAD const char* const stringBase_80394CFA = "D_MN11";
+SECTION_DEAD const char* const stringBase_80394D01 = "D_MN11B";
+SECTION_DEAD const char* const stringBase_80394D09 = "D_SB00";
+SECTION_DEAD const char* const stringBase_80394D10 = "D_MN09B";
+SECTION_DEAD const char* const stringBase_80394D18 = "D_MN09C";
+SECTION_DEAD const char* const stringBase_80394D20 = "F_SP116";
+SECTION_DEAD const char* const stringBase_80394D28 = "D_MN06";
+SECTION_DEAD const char* const stringBase_80394D2F = "D_MN07";
+SECTION_DEAD const char* const stringBase_80394D36 = "D_MN09A";
+SECTION_DEAD const char* const stringBase_80394D3E = "D_SB01";
+SECTION_DEAD const char* const stringBase_80394D45 = "R_SP300";
+SECTION_DEAD const char* const stringBase_80394D4D = "R_SP301";
+SECTION_DEAD const char* const stringBase_80394D55 = "D_MN01";
+SECTION_DEAD const char* const stringBase_80394D5C = "D_MN01B";
+SECTION_DEAD const char* const stringBase_80394D64 = "D_MN01A";
+SECTION_DEAD const char* const stringBase_80394D6C = "D_MN08";
+SECTION_DEAD const char* const stringBase_80394D73 = "D_SB02";
+SECTION_DEAD const char* const stringBase_80394D7A = "D_SB03";
+SECTION_DEAD const char* const stringBase_80394D81 = "R_SP01";
+SECTION_DEAD const char* const stringBase_80394D88 = "R_SP108";
+SECTION_DEAD const char* const stringBase_80394D90 = "R_SP209";
+SECTION_DEAD const char* const stringBase_80394D98 = "R_SP116";
+SECTION_DEAD const char* const stringBase_80394DA0 = "R_SP161";
+SECTION_DEAD const char* const stringBase_80394DA8 = "F_SP110";
+SECTION_DEAD const char* const stringBase_80394DB0 = "R_SP107";
+SECTION_DEAD const char* const stringBase_80394DB8 = "R_SP128";
+SECTION_DEAD const char* const stringBase_80394DC0 = "R_SP160";
+SECTION_DEAD const char* const stringBase_80394DC8 = "R_SP127";
+SECTION_DEAD const char* const stringBase_80394DD0 = "R_SP109";
+SECTION_DEAD const char* const stringBase_80394DD8 = "D_MN09";
+SECTION_DEAD const char* const stringBase_80394DDF = "Always";
+SECTION_DEAD const char* const stringBase_80394DE6 = "F_SP127";
+SECTION_DEAD const char* const stringBase_80394DEE = "F_SP200";
+SECTION_DEAD const char* const stringBase_80394DF6 = "D_MN08D";
+SECTION_DEAD const char* const stringBase_80394DFE = "F_SP121";
+SECTION_DEAD const char* const stringBase_80394E06 = "pol_efftbl.dat";
+SECTION_DEAD const char* const stringBase_80394E15 = "pol_effcol.dat";
+SECTION_DEAD const char* const stringBase_80394E24 = "pol_efftbl2.dat";
+SECTION_DEAD const char* const stringBase_80394E34 = "pol_effcol2.dat";
+SECTION_DEAD const char* const stringBase_80394E44 = "pol_sound.dat";
+SECTION_DEAD const char* const stringBase_80394E52 = "pol_arg.dat";
+SECTION_DEAD const char* const stringBase_80394E5E = "colordata_tbl.dat";
+SECTION_DEAD const char* const stringBase_80394E70 = "D_MN";
+SECTION_DEAD const char* const stringBase_80394E75 = "\nPOINTLIGHT COUNT OVER!!!\n";
+SECTION_DEAD const char* const stringBase_80394E90 = 
+    "\ndKy_fog_starten"
+    "dz_set ratio err"
+    "or!\n";
+SECTION_DEAD const char* const stringBase_80394EB5 = "F_SP118";
+SECTION_DEAD const char* const stringBase_80394EBD = "F_SP109";
+SECTION_DEAD const char* const stringBase_80394EC5 = "F_SP122";
+SECTION_DEAD const char* const stringBase_80394ECD = "D_MN05A";
+SECTION_DEAD const char* const stringBase_80394ED5 = "F_SP108";
+SECTION_DEAD const char* const stringBase_80394EDD = "MA06";
+SECTION_DEAD const char* const stringBase_80394EE2 = "MA03";
+SECTION_DEAD const char* const stringBase_80394EE7 = "MA09";
+SECTION_DEAD const char* const stringBase_80394EEC = "MA17";
+SECTION_DEAD const char* const stringBase_80394EF1 = "MA19";
+SECTION_DEAD const char* const stringBase_80394EF6 = "MA07";
+SECTION_DEAD const char* const stringBase_80394EFB = "MA10";
+SECTION_DEAD const char* const stringBase_80394F00 = "MA02";
+SECTION_DEAD const char* const stringBase_80394F05 = "MA00";
+SECTION_DEAD const char* const stringBase_80394F0A = "MA01";
+SECTION_DEAD const char* const stringBase_80394F0F = "MA04";
+SECTION_DEAD const char* const stringBase_80394F14 = "MA16";
+SECTION_DEAD const char* const stringBase_80394F19 = "MA11";
+SECTION_DEAD const char* const stringBase_80394F1E = "MA20";
+SECTION_DEAD const char* const stringBase_80394F23 = "MA13";
+SECTION_DEAD const char* const stringBase_80394F28 = "MA14";
+SECTION_DEAD const char* const stringBase_80394F2D = "Rainbow";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80394F35 = "\0\0";
+#pragma pop
+/* 80394C60-80394C6C 000C .rodata    @9035                                                        InitializedData */
 SECTION_RODATA const u8 LIT_9035[12] = {
 	0x4C, 0xBE, 0xBC, 0x20, 0x4C, 0xBE, 0xBC, 0x20, 0x4C, 0xBE, 0xBC, 0x20,
 };
-/* 80394C6C 02C9 .rodata    @stringBase0                                                 */
-const char* const stringBase_80394C6C = "F_SP115";
-const char* const stringBase_80394C74 = "F_SP113";
-const char* const stringBase_80394C7C = "D_SB10";
-const char* const stringBase_80394C83 = "F_SP112";
-const char* const stringBase_80394C8B = "F_SP126";
-const char* const stringBase_80394C93 = "F_SP114";
-const char* const stringBase_80394C9B = "D_MN05";
-const char* const stringBase_80394CA2 = "D_MN04";
-const char* const stringBase_80394CA9 = "D_SB04";
-const char* const stringBase_80394CB0 = "D_SB05";
-const char* const stringBase_80394CB7 = "D_SB06";
-const char* const stringBase_80394CBE = "D_SB07";
-const char* const stringBase_80394CC5 = "D_SB08";
-const char* const stringBase_80394CCC = "D_SB09";
-const char* const stringBase_80394CD3 = "D_MN10A";
-const char* const stringBase_80394CDB = "D_MN07A";
-const char* const stringBase_80394CE3 = "D_MN10B";
-const char* const stringBase_80394CEB = "D_MN10";
-const char* const stringBase_80394CF2 = "D_MN11A";
-const char* const stringBase_80394CFA = "D_MN11";
-const char* const stringBase_80394D01 = "D_MN11B";
-const char* const stringBase_80394D09 = "D_SB00";
-const char* const stringBase_80394D10 = "D_MN09B";
-const char* const stringBase_80394D18 = "D_MN09C";
-const char* const stringBase_80394D20 = "F_SP116";
-const char* const stringBase_80394D28 = "D_MN06";
-const char* const stringBase_80394D2F = "D_MN07";
-const char* const stringBase_80394D36 = "D_MN09A";
-const char* const stringBase_80394D3E = "D_SB01";
-const char* const stringBase_80394D45 = "R_SP300";
-const char* const stringBase_80394D4D = "R_SP301";
-const char* const stringBase_80394D55 = "D_MN01";
-const char* const stringBase_80394D5C = "D_MN01B";
-const char* const stringBase_80394D64 = "D_MN01A";
-const char* const stringBase_80394D6C = "D_MN08";
-const char* const stringBase_80394D73 = "D_SB02";
-const char* const stringBase_80394D7A = "D_SB03";
-const char* const stringBase_80394D81 = "R_SP01";
-const char* const stringBase_80394D88 = "R_SP108";
-const char* const stringBase_80394D90 = "R_SP209";
-const char* const stringBase_80394D98 = "R_SP116";
-const char* const stringBase_80394DA0 = "R_SP161";
-const char* const stringBase_80394DA8 = "F_SP110";
-const char* const stringBase_80394DB0 = "R_SP107";
-const char* const stringBase_80394DB8 = "R_SP128";
-const char* const stringBase_80394DC0 = "R_SP160";
-const char* const stringBase_80394DC8 = "R_SP127";
-const char* const stringBase_80394DD0 = "R_SP109";
-const char* const stringBase_80394DD8 = "D_MN09";
-const char* const stringBase_80394DDF = "Always";
-const char* const stringBase_80394DE6 = "F_SP127";
-const char* const stringBase_80394DEE = "F_SP200";
-const char* const stringBase_80394DF6 = "D_MN08D";
-const char* const stringBase_80394DFE = "F_SP121";
-const char* const stringBase_80394E06 = "pol_efftbl.dat";
-const char* const stringBase_80394E15 = "pol_effcol.dat";
-const char* const stringBase_80394E24 = "pol_efftbl2.dat";
-const char* const stringBase_80394E34 = "pol_effcol2.dat";
-const char* const stringBase_80394E44 = "pol_sound.dat";
-const char* const stringBase_80394E52 = "pol_arg.dat";
-const char* const stringBase_80394E5E = "colordata_tbl.dat";
-const char* const stringBase_80394E70 = "D_MN";
-const char* const stringBase_80394E75 = "\nPOINTLIGHT COUNT OVER!!!\n";
-const char* const stringBase_80394E90 = 
-    "\ndKy_fog_startendz_set ratio err"
-    "or!\n";
-const char* const stringBase_80394EB5 = "F_SP118";
-const char* const stringBase_80394EBD = "F_SP109";
-const char* const stringBase_80394EC5 = "F_SP122";
-const char* const stringBase_80394ECD = "D_MN05A";
-const char* const stringBase_80394ED5 = "F_SP108";
-const char* const stringBase_80394EDD = "MA06";
-const char* const stringBase_80394EE2 = "MA03";
-const char* const stringBase_80394EE7 = "MA09";
-const char* const stringBase_80394EEC = "MA17";
-const char* const stringBase_80394EF1 = "MA19";
-const char* const stringBase_80394EF6 = "MA07";
-const char* const stringBase_80394EFB = "MA10";
-const char* const stringBase_80394F00 = "MA02";
-const char* const stringBase_80394F05 = "MA00";
-const char* const stringBase_80394F0A = "MA01";
-const char* const stringBase_80394F0F = "MA04";
-const char* const stringBase_80394F14 = "MA16";
-const char* const stringBase_80394F19 = "MA11";
-const char* const stringBase_80394F1E = "MA20";
-const char* const stringBase_80394F23 = "MA13";
-const char* const stringBase_80394F28 = "MA14";
-const char* const stringBase_80394F2D = "Rainbow";
 }
 
 
@@ -714,12 +1404,12 @@ const char* const stringBase_80394F2D = "Rainbow";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BBDB8 0000 .data      ...data.0                                                    */
-/* 803BBDB8 000C .data      cNullVec__6Z2Calc                                            */
+/* 803BBDB8-803BBDB8 0000 .data      ...data.0                                                    InitializedData */
+/* 803BBDB8-803BBDC4 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_kankyo__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BBDC4 00E8 .data      lightStatusBase                                              */
+/* 803BBDC4-803BBEAC 00E8 .data      lightStatusBase                                              InitializedData */
 SECTION_DATA u8 lightStatusBase[232] = {
 	0xC7, 0x0E, 0x20, 0x80, 0x46, 0xE3, 0x51, 0x66, 0x46, 0x88, 0x1C, 0x66, 0x43, 0xBC, 0x80, 0x00,
 	0x45, 0xA2, 0xBB, 0x33, 0x44, 0x98, 0x8C, 0xCD, 0xFF, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x00,
@@ -737,30 +1427,59 @@ SECTION_DATA u8 lightStatusBase[232] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x09, 0x56, 0xB0, 0x40, 0x2E, 0x7E, 0x95,
 	0x00, 0x00, 0x00, 0x00, 0x3F, 0x00, 0x00, 0x00,
 };
-/* 803BBEAC 0010 .data      lightMaskData                                                */
+/* 803BBEAC-803BBEBC 0010 .data      lightMaskData                                                InitializedData */
 SECTION_DATA u8 lightMaskData[16] = {
 	0x00, 0x01, 0x00, 0x02, 0x00, 0x04, 0x00, 0x08, 0x00, 0x10, 0x00, 0x20, 0x00, 0x40, 0x00, 0x80,
 };
-/* 803BBEBC 0040 .data      @4322                                                        */
-SECTION_DATA u8 d_d_kankyo__LIT_4322[64] = {
-	0x80, 0x19, 0xCC, 0xC8, 0x80, 0x19, 0xCB, 0x44, 0x80, 0x19, 0xCB, 0x60, 0x80, 0x19, 0xCB, 0x7C,
-	0x80, 0x19, 0xCB, 0x98, 0x80, 0x19, 0xCB, 0xB4, 0x80, 0x19, 0xCB, 0xD0, 0x80, 0x19, 0xCB, 0xEC,
-	0x80, 0x19, 0xCC, 0x08, 0x80, 0x19, 0xCC, 0x24, 0x80, 0x19, 0xCC, 0x5C, 0x80, 0x19, 0xCC, 0x40,
-	0x80, 0x19, 0xCC, 0x40, 0x80, 0x19, 0xCC, 0x78, 0x80, 0x19, 0xCC, 0x94, 0x80, 0x19, 0xCC, 0xB0,
+/* 803BBEBC-803BBEFC 0040 .data      @4322                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_kankyo__LIT_4322[16] = {
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+111),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+14),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+21),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+28),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+35),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+42),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+49),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+56),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+63),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+70),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+84),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+77),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+77),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+91),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+98),
+	(void*)(((u32*)dKy_WolfPowerup_BgAmbCol)+105),
 };
-/* 803BBEFC 0040 .data      @4364                                                        */
-SECTION_DATA u8 d_d_kankyo__LIT_4364[64] = {
-	0x80, 0x19, 0xCE, 0x44, 0x80, 0x19, 0xCD, 0x1C, 0x80, 0x19, 0xCD, 0x30, 0x80, 0x19, 0xCD, 0x44,
-	0x80, 0x19, 0xCD, 0x58, 0x80, 0x19, 0xCD, 0x6C, 0x80, 0x19, 0xCD, 0x80, 0x80, 0x19, 0xCD, 0x94,
-	0x80, 0x19, 0xCD, 0xA8, 0x80, 0x19, 0xCD, 0xBC, 0x80, 0x19, 0xCD, 0xD0, 0x80, 0x19, 0xCD, 0xE4,
-	0x80, 0x19, 0xCD, 0xF8, 0x80, 0x19, 0xCE, 0x0C, 0x80, 0x19, 0xCE, 0x20, 0x80, 0x19, 0xCE, 0x34,
+/* 803BBEFC-803BBF3C 0040 .data      @4364                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_kankyo__LIT_4364[16] = {
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+90),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+16),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+21),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+26),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+31),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+36),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+41),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+46),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+51),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+56),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+61),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+66),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+71),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+76),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+81),
+	(void*)(((u32*)dKy_WolfPowerup_FogNearFar)+86),
 };
-/* 803BBF3C 001C .data      @4511                                                        */
-SECTION_DATA u8 d_d_kankyo__LIT_4511[28] = {
-	0x80, 0x19, 0xD4, 0x1C, 0x80, 0x19, 0xD3, 0x3C, 0x80, 0x19, 0xD3, 0x50, 0x80, 0x19, 0xD3, 0x6C,
-	0x80, 0x19, 0xD3, 0x88, 0x80, 0x19, 0xD3, 0xB4, 0x80, 0x19, 0xD3, 0xE4,
+/* 803BBF3C-803BBF58 001C .data      @4511                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_kankyo__LIT_4511[7] = {
+	(void*)(((u32*)dKy_GXInitLightSpot)+86),
+	(void*)(((u32*)dKy_GXInitLightSpot)+30),
+	(void*)(((u32*)dKy_GXInitLightSpot)+35),
+	(void*)(((u32*)dKy_GXInitLightSpot)+42),
+	(void*)(((u32*)dKy_GXInitLightSpot)+49),
+	(void*)(((u32*)dKy_GXInitLightSpot)+60),
+	(void*)(((u32*)dKy_GXInitLightSpot)+72),
 };
-/* 803BBF58 0060 .data      test_pos_tbl$5126                                            */
+/* 803BBF58-803BBFB8 0060 .data      test_pos_tbl$5126                                            InitializedData */
 SECTION_DATA u8 data_803BBF58[96] = {
 	0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80,
@@ -769,61 +1488,96 @@ SECTION_DATA u8 data_803BBF58[96] = {
 	0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xC7, 0xC3, 0x4F, 0x80, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BBFB8 0018 .data      test_color_tbl$5127                                          */
+/* 803BBFB8-803BBFD0 0018 .data      test_color_tbl$5127                                          InitializedData */
 SECTION_DATA u8 data_803BBFB8[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BBFD0 0020 .data      @5842                                                        */
-SECTION_DATA u8 LIT_5842[32] = {
-	0x80, 0x19, 0xFF, 0xAC, 0x80, 0x19, 0xFF, 0xB4, 0x80, 0x19, 0xFF, 0xBC, 0x80, 0x19, 0xFF, 0xC4,
-	0x80, 0x19, 0xFF, 0xCC, 0x80, 0x19, 0xFF, 0xD4, 0x80, 0x19, 0xFF, 0xDC, 0x80, 0x19, 0xFF, 0xE4,
+/* 803BBFD0-803BBFF0 0020 .data      @5842                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5842[8] = {
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+246),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+248),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+250),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+252),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+254),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+256),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+258),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+260),
 };
-/* 803BBFF0 0020 .data      @5841                                                        */
-SECTION_DATA u8 LIT_5841[32] = {
-	0x80, 0x19, 0xFD, 0x3C, 0x80, 0x19, 0xFD, 0x44, 0x80, 0x19, 0xFD, 0x4C, 0x80, 0x19, 0xFD, 0x54,
-	0x80, 0x19, 0xFD, 0x5C, 0x80, 0x19, 0xFD, 0x64, 0x80, 0x19, 0xFD, 0x6C, 0x80, 0x19, 0xFD, 0x74,
+/* 803BBFF0-803BC010 0020 .data      @5841                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5841[8] = {
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+90),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+92),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+94),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+96),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+98),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+100),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+102),
+	(void*)(((u32*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+104),
 };
-/* 803BC010 0018 .data      now_shadow_alpha$5927                                        */
+/* 803BC010-803BC028 0018 .data      now_shadow_alpha$5927                                        InitializedData */
 SECTION_DATA u8 data_803BC010[24] = {
 	0x3E, 0x80, 0x00, 0x00, 0x3E, 0xB3, 0x33, 0x33, 0x3F, 0x19, 0x99, 0x9A, 0x3F, 0x19, 0x99, 0x9A,
 	0x3E, 0x80, 0x00, 0x00, 0x3E, 0xB3, 0x33, 0x33,
 };
-/* 803BC028 0028 .data      @6776                                                        */
-SECTION_DATA u8 LIT_6776[40] = {
-	0x80, 0x1A, 0x28, 0x54, 0x80, 0x1A, 0x25, 0xFC, 0x80, 0x1A, 0x26, 0x50, 0x80, 0x1A, 0x26, 0x80,
-	0x80, 0x1A, 0x26, 0x18, 0x80, 0x1A, 0x26, 0x34, 0x80, 0x1A, 0x27, 0xD0, 0x80, 0x1A, 0x26, 0xD8,
-	0x80, 0x1A, 0x28, 0x54, 0x80, 0x1A, 0x26, 0xAC,
+/* 803BC028-803BC050 0028 .data      @6776                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_6776[10] = {
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+459),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+309),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+330),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+342),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+316),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+323),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+426),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+364),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+459),
+	(void*)(((u32*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+353),
 };
-/* 803BC050 0020 .data      @7029                                                        */
-SECTION_DATA u8 LIT_7029[32] = {
-	0x80, 0x1A, 0x40, 0xBC, 0x80, 0x1A, 0x40, 0xC8, 0x80, 0x1A, 0x40, 0xD4, 0x80, 0x1A, 0x40, 0xE0,
-	0x80, 0x1A, 0x40, 0xEC, 0x80, 0x1A, 0x40, 0xF8, 0x80, 0x1A, 0x41, 0x04, 0x80, 0x1A, 0x41, 0x10,
+/* 803BC050-803BC070 0020 .data      @7029                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_7029[8] = {
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+574),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+577),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+580),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+583),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+586),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+589),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+592),
+	(void*)(((u32*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+595),
 };
-/* 803BC070 0010 .data      flush_col$7304                                               */
+/* 803BC070-803BC080 0010 .data      flush_col$7304                                               InitializedData */
 SECTION_DATA u8 data_803BC070[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x43, 0x73, 0x58, 0x0A, 0x25, 0x3E, 0x2D, 0x14, 0x00, 0x00, 0x00,
 };
-/* 803BC080 0010 .data      flush_col2$7305                                              */
+/* 803BC080-803BC090 0010 .data      flush_col2$7305                                              InitializedData */
 SECTION_DATA u8 data_803BC080[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x6E, 0x5A, 0x00, 0x08, 0x4B, 0x22, 0x00, 0x0F, 0x00, 0x00, 0x00,
 };
-/* 803BC090 0010 .data      flush_col3$7306                                              */
+/* 803BC090-803BC0A0 0010 .data      flush_col3$7306                                              InitializedData */
 SECTION_DATA u8 data_803BC090[16] = {
 	0x01, 0x00, 0x00, 0x00, 0x04, 0x46, 0x4D, 0x43, 0x0F, 0x22, 0x1E, 0x00, 0x14, 0x00, 0x00, 0x00,
 };
-/* 803BC0A0 0014 .data      l_dKy_Method                                                 */
-SECTION_DATA u8 l_dKy_Method[20] = {
-	0x80, 0x1A, 0x5C, 0x1C, 0x80, 0x1A, 0x5B, 0xD4, 0x80, 0x1A, 0x5B, 0x98, 0x80, 0x1A, 0x5B, 0xCC,
-	0x80, 0x1A, 0x5B, 0x6C,
+/* 803BC0A0-803BC0B4 0014 .data      l_dKy_Method                                                 SymbolReferenceArrayData */
+SECTION_DATA void* l_dKy_Method[5] = {
+	(void*)dKy_Create,
+	(void*)dKy_Delete,
+	(void*)dKy_Execute,
+	(void*)dKy_IsDelete__FP17sub_kankyo__class,
+	(void*)dKy_Draw,
 };
-/* 803BC0B4 0028 .data      g_profile_KANKYO                                             */
-SECTION_DATA u8 g_profile_KANKYO[40] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x01, 0xFF, 0xFD, 0x00, 0x13, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x00, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x40,
-	0x00, 0x02, 0x00, 0x00, 0x80, 0x3B, 0xC0, 0xA0,
+/* 803BC0B4-803BC0DC 0028 .data      g_profile_KANKYO                                             SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_KANKYO[10] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0001FFFD,
+	(void*)0x00130000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000F8,
+	NULL,
+	NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x00020000,
+	(void*)&l_dKy_Method,
 };
-/* 803BC0DC 0030 .data      parcent_tabel$9036                                           */
+/* 803BC0DC-803BC13C 0030 .data      parcent_tabel$9036                                           InitializedData */
 SECTION_DATA u8 data_803BC0DC[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3F, 0x33, 0x33, 0x33, 0x3E, 0x99, 0x99, 0x9A,
@@ -833,8 +1587,8 @@ SECTION_DATA u8 data_803BC0DC[96] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803BC13C 000C .data      __vt__18dScnKy_env_light_c                                   */
-SECTION_DATA const  void* __vt__18dScnKy_env_light_c[7] = {
+/* 803BC13C-803BC158 000C .data      __vt__18dScnKy_env_light_c                                   VTableData */
+SECTION_DATA void* __vt__18dScnKy_env_light_c[7] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dScnKy_env_light_cFv,
@@ -852,29 +1606,27 @@ SECTION_DATA const  void* __vt__18dScnKy_env_light_c[7] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450700 0002 .sdata     lightMask                                                    */
+/* 80450700-80450704 0002 .sdata     lightMask                                                    InitializedData */
 SECTION_SDATA u8 lightMask[4] = {
 	0x00, 0x01,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80450704 0004 .sdata     lightStatusPt                                                */
-SECTION_SDATA u8 lightStatusPt[4] = {
-	0x80, 0x42, 0xE0, 0x7C,
-};
-/* 80450708 0004 .sdata     l_zmodeUpEnable                                              */
+/* 80450704-80450708 0004 .sdata     lightStatusPt                                                SymbolReferenceArrayData */
+SECTION_SDATA void* lightStatusPt = (void*)&lightStatusData;
+/* 80450708-8045070C 0004 .sdata     l_zmodeUpEnable                                              InitializedData */
 SECTION_SDATA u8 l_zmodeUpEnable[4] = {
 	0x01, 0x03, 0x01, 0x00,
 };
-/* 8045070C 0004 .sdata     l_zmodeUpDisable                                             */
+/* 8045070C-80450710 0004 .sdata     l_zmodeUpDisable                                             InitializedData */
 SECTION_SDATA u8 l_zmodeUpDisable[4] = {
 	0x01, 0x03, 0x00, 0x00,
 };
-/* 80450710 0008 .sdata     l_alphaCompInfoOPA                                           */
+/* 80450710-80450718 0008 .sdata     l_alphaCompInfoOPA                                           InitializedData */
 SECTION_SDATA u8 l_alphaCompInfoOPA[8] = {
 	0x07, 0x00, 0x01, 0x07, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80450718 0008 .sdata     l_alphaCompInfo                                              */
+/* 80450718-80450720 0008 .sdata     l_alphaCompInfo                                              InitializedData */
 SECTION_SDATA u8 l_alphaCompInfo[8] = {
 	0x04, 0x80, 0x00, 0x03, 0xFF, 0x00, 0x00, 0x00,
 };
@@ -886,529 +1638,529 @@ SECTION_SDATA u8 l_alphaCompInfo[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453BC0 0004 .sdata2    @4345                                                        */
+/* 80453BC0-80453BC4 0004 .sdata2    @4345                                                        Float32Data */
 // 0x443b8000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4345 = 750.000000f;
-/* 80453BC4 0004 .sdata2    @4346                                                        */
+/* 80453BC4-80453BC8 0004 .sdata2    @4346                                                        Float32Data */
 // 0x44dac000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4346 = 1750.000000f;
-/* 80453BC8 0004 .sdata2    @4347                                                        */
+/* 80453BC8-80453BCC 0004 .sdata2    @4347                                                        Float32Data */
 // 0x459c4000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4347 = 5000.000000f;
-/* 80453BCC 0004 .sdata2    @4348                                                        */
+/* 80453BCC-80453BD0 0004 .sdata2    @4348                                                        Float32Data */
 // 0x471c4000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4348 = 40000.000000f;
-/* 80453BD0 0004 .sdata2    @4349                                                        */
+/* 80453BD0-80453BD4 0004 .sdata2    @4349                                                        Float32Data */
 // 0x457a0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4349 = 4000.000000f;
-/* 80453BD4 0004 .sdata2    @4350                                                        */
+/* 80453BD4-80453BD8 0004 .sdata2    @4350                                                        Float32Data */
 // 0x463b8000
 SECTION_SDATA2 f32 LIT_4350 = 12000.000000f;
-/* 80453BD8 0004 .sdata2    @4351                                                        */
+/* 80453BD8-80453BDC 0004 .sdata2    @4351                                                        Float32Data */
 // 0x43fa0000
 SECTION_SDATA2 f32 LIT_4351 = 500.000000f;
-/* 80453BDC 0004 .sdata2    @4352                                                        */
+/* 80453BDC-80453BE0 0004 .sdata2    @4352                                                        Float32Data */
 // 0x450ca000
 SECTION_SDATA2 f32 LIT_4352 = 2250.000000f;
-/* 80453BE0 0004 .sdata2    @4353                                                        */
+/* 80453BE0-80453BE4 0004 .sdata2    @4353                                                        Float32Data */
 // 0x447a0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4353 = 1000.000000f;
-/* 80453BE4 0004 .sdata2    @4354                                                        */
+/* 80453BE4-80453BE8 0004 .sdata2    @4354                                                        Float32Data */
 // 0x44e10000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4354 = 1800.000000f;
-/* 80453BE8 0004 .sdata2    @4355                                                        */
+/* 80453BE8-80453BEC 0004 .sdata2    @4355                                                        Float32Data */
 // 0x452be000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4355 = 2750.000000f;
-/* 80453BEC 0004 .sdata2    @4356                                                        */
+/* 80453BEC-80453BF0 0004 .sdata2    @4356                                                        Float32Data */
 // 0x44fa0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4356 = 2000.000000f;
-/* 80453BF0 0004 .sdata2    @4357                                                        */
+/* 80453BF0-80453BF4 0004 .sdata2    @4357                                                        Float32Data */
 // 0x453b8000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4357 = 3000.000000f;
-/* 80453BF4 0004 .sdata2    @4358                                                        */
+/* 80453BF4-80453BF8 0004 .sdata2    @4358                                                        Float32Data */
 // 0x43960000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4358 = 300.000000f;
-/* 80453BF8 0004 .sdata2    @4359                                                        */
+/* 80453BF8-80453BFC 0004 .sdata2    @4359                                                        Float32Data */
 // 0x442f0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4359 = 700.000000f;
-/* 80453BFC 0004 .sdata2    @4360                                                        */
+/* 80453BFC-80453C00 0004 .sdata2    @4360                                                        Float32Data */
 // 0x44bb8000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4360 = 1500.000000f;
-/* 80453C00 0004 .sdata2    @4361                                                        */
+/* 80453C00-80453C04 0004 .sdata2    @4361                                                        Float32Data */
 // 0x449c4000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4361 = 1250.000000f;
-/* 80453C04 0004 .sdata2    @4362                                                        */
+/* 80453C04-80453C08 0004 .sdata2    @4362                                                        Float32Data */
 // 0x479c4000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4362 = 80000.000000f;
-/* 80453C08 0004 .sdata2    @4363                                                        */
+/* 80453C08-80453C0C 0004 .sdata2    @4363                                                        Float32Data */
 // 0x45947000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4363 = 4750.000000f;
-/* 80453C0C 0004 .sdata2    @4409                                                        */
+/* 80453C0C-80453C10 0004 .sdata2    @4409                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4409[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453C10 0008 .sdata2    @4410                                                        */
+/* 80453C10-80453C18 0008 .sdata2    @4410                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_kankyo__LIT_4410 = 0.500000;
-/* 80453C18 0008 .sdata2    @4411                                                        */
+/* 80453C18-80453C20 0008 .sdata2    @4411                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_kankyo__LIT_4411 = 3.000000;
-/* 80453C20 0008 .sdata2    @4412                                                        */
+/* 80453C20-80453C28 0008 .sdata2    @4412                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4412[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80453C28 0004 .sdata2    @4441                                                        */
+/* 80453C28-80453C2C 0004 .sdata2    @4441                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4441[4] = {
 	0x3B, 0xB4, 0x00, 0x00,
 };
-/* 80453C2C 0004 .sdata2    @4442                                                        */
+/* 80453C2C-80453C30 0004 .sdata2    @4442                                                        Float32Data */
 // 0x42b40000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4442 = 90.000000f;
-/* 80453C30 0008 .sdata2    @4444                                                        */
+/* 80453C30-80453C38 0008 .sdata2    @4444                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_kankyo__LIT_4444 = 4503601774854144.000000;
-/* 80453C38 0004 .sdata2    @4477                                                        */
+/* 80453C38-80453C3C 0004 .sdata2    @4477                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4477[4] = {
 	0x42, 0x65, 0x2E, 0xE0,
 };
-/* 80453C3C 0004 .sdata2    @4502                                                        */
+/* 80453C3C-80453C40 0004 .sdata2    @4502                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4502[4] = {
 	0x40, 0x49, 0x0F, 0xDB,
 };
-/* 80453C40 0004 .sdata2    @4503                                                        */
+/* 80453C40-80453C44 0004 .sdata2    @4503                                                        Float32Data */
 // 0x43340000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4503 = 180.000000f;
-/* 80453C44 0004 .sdata2    @4504                                                        */
+/* 80453C44-80453C48 0004 .sdata2    @4504                                                        Float32Data */
 // 0xc47a0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4504 = -1000.000000f;
-/* 80453C48 0004 .sdata2    @4505                                                        */
+/* 80453C48-80453C4C 0004 .sdata2    @4505                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4505 = 1.000000f;
-/* 80453C4C 0004 .sdata2    @4506                                                        */
+/* 80453C4C-80453C50 0004 .sdata2    @4506                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4506 = 2.000000f;
-/* 80453C50 0004 .sdata2    @4507                                                        */
+/* 80453C50-80453C54 0004 .sdata2    @4507                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4507 = -1.000000f;
-/* 80453C54 0004 .sdata2    @4508                                                        */
+/* 80453C54-80453C58 0004 .sdata2    @4508                                                        Float32Data */
 // 0xc0800000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4508 = -4.000000f;
-/* 80453C58 0004 .sdata2    @4509                                                        */
+/* 80453C58-80453C5C 0004 .sdata2    @4509                                                        Float32Data */
 // 0x40800000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4509 = 4.000000f;
-/* 80453C5C 0004 .sdata2    @4510                                                        */
+/* 80453C5C-80453C60 0004 .sdata2    @4510                                                        Float32Data */
 // 0xc0000000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4510 = -2.000000f;
-/* 80453C60 0004 .sdata2    @4529                                                        */
+/* 80453C60-80453C64 0004 .sdata2    @4529                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4529 = 0.500000f;
-/* 80453C64 0004 .sdata2    @4730                                                        */
+/* 80453C64-80453C68 0004 .sdata2    @4730                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4730[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80453C68 0004 .sdata2    @4731                                                        */
+/* 80453C68-80453C6C 0004 .sdata2    @4731                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_4731[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
-/* 80453C6C 0004 .sdata2    @4732                                                        */
+/* 80453C6C-80453C70 0004 .sdata2    @4732                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_4732 = 255.000000f;
-/* 80453C70 0004 .sdata2    @4850                                                        */
+/* 80453C70-80453C74 0004 .sdata2    @4850                                                        Float32Data */
 // 0x49742400
 SECTION_SDATA2 f32 LIT_4850 = 1000000.000000f;
-/* 80453C74 0004 .sdata2    @4851                                                        */
+/* 80453C74-80453C78 0004 .sdata2    @4851                                                        Float32Data */
 // 0x44480000
 SECTION_SDATA2 f32 LIT_4851 = 800.000000f;
-/* 80453C78 0004 .sdata2    @4852                                                        */
+/* 80453C78-80453C80 0004 .sdata2    @4852                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4852[8] = {
 	0x43, 0x7A, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453C80 0008 .sdata2    @4964                                                        */
+/* 80453C80-80453C88 0008 .sdata2    @4964                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 LIT_4964 = 4503599627370496.000000;
-/* 80453C88 0004 .sdata2    @5077                                                        */
+/* 80453C88-80453C8C 0004 .sdata2    @5077                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5077[4] = {
 	0x47, 0xC3, 0x4F, 0xF3,
 };
-/* 80453C8C 0004 .sdata2    @5106                                                        */
+/* 80453C8C-80453C90 0004 .sdata2    @5106                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5106 = 200.000000f;
-/* 80453C90 0004 .sdata2    @5191                                                        */
+/* 80453C90-80453C94 0004 .sdata2    @5191                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_5191[4] = {
 	0x3F, 0x7D, 0x70, 0xA4,
 };
-/* 80453C94 0004 .sdata2    @5192                                                        */
+/* 80453C94-80453C98 0004 .sdata2    @5192                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5192 = 100.000000f;
-/* 80453C98 0004 .sdata2    @5193                                                        */
+/* 80453C98-80453C9C 0004 .sdata2    @5193                                                        Float32Data */
 // 0xc2b40000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5193 = -90.000000f;
-/* 80453C9C 0004 .sdata2    @5194                                                        */
+/* 80453C9C-80453CA0 0004 .sdata2    @5194                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5194[4] = {
 	0x3A, 0x83, 0x12, 0x6F,
 };
-/* 80453CA0 0004 .sdata2    @5344                                                        */
+/* 80453CA0-80453CA4 0004 .sdata2    @5344                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_5344[4] = {
 	0x3D, 0xE1, 0x47, 0xAE,
 };
-/* 80453CA4 0004 .sdata2    @5345                                                        */
+/* 80453CA4-80453CA8 0004 .sdata2    @5345                                                        Float32Data */
 // 0xc37f0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5345 = -255.000000f;
-/* 80453CA8 0004 .sdata2    @5346                                                        */
+/* 80453CA8-80453CAC 0004 .sdata2    @5346                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_5346[4] = {
 	0x49, 0x74, 0x23, 0xFE,
 };
-/* 80453CAC 0004 .sdata2    @5347                                                        */
+/* 80453CAC-80453CB0 0004 .sdata2    @5347                                                        Float32Data */
 // 0x41700000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5347 = 15.000000f;
-/* 80453CB0 0004 .sdata2    @5348                                                        */
+/* 80453CB0-80453CB4 0004 .sdata2    @5348                                                        Float32Data */
 // 0x43b40000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5348 = 360.000000f;
-/* 80453CB4 0004 .sdata2    @5349                                                        */
+/* 80453CB4-80453CB8 0004 .sdata2    @5349                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_5349[4] = {
 	0x3C, 0x44, 0x9B, 0xA6,
 };
-/* 80453CB8 0004 .sdata2    @5365                                                        */
+/* 80453CB8-80453CBC 0004 .sdata2    @5365                                                        Float32Data */
 // 0x42f00000
 SECTION_SDATA2 f32 LIT_5365 = 120.000000f;
-/* 80453CBC 0004 .sdata2    @5554                                                        */
+/* 80453CBC-80453CC0 0004 .sdata2    @5554                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 LIT_5554 = 60.000000f;
-/* 80453CC0 0004 .sdata2    @5555                                                        */
+/* 80453CC0-80453CC4 0004 .sdata2    @5555                                                        Float32Data */
 // 0x43160000
 SECTION_SDATA2 f32 LIT_5555 = 150.000000f;
-/* 80453CC4 0004 .sdata2    @5556                                                        */
+/* 80453CC4-80453CC8 0004 .sdata2    @5556                                                        Float32Data */
 // 0x43430000
 SECTION_SDATA2 f32 LIT_5556 = 195.000000f;
-/* 80453CC8 0004 .sdata2    @5613                                                        */
+/* 80453CC8-80453CCC 0004 .sdata2    @5613                                                        Float32Data */
 // 0x43870000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5613 = 270.000000f;
-/* 80453CCC 0004 .sdata2    @5614                                                        */
+/* 80453CCC-80453CD0 0004 .sdata2    @5614                                                        Float32Data */
 // 0x42d20000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5614 = 105.000000f;
-/* 80453CD0 0004 .sdata2    @5615                                                        */
+/* 80453CD0-80453CD4 0004 .sdata2    @5615                                                        Float32Data */
 // 0x43e10000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5615 = 450.000000f;
-/* 80453CD4 0004 .sdata2    @5616                                                        */
+/* 80453CD4-80453CD8 0004 .sdata2    @5616                                                        Float32Data */
 // 0x43520000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_5616 = 210.000000f;
-/* 80453CD8 0004 .sdata2    @5617                                                        */
+/* 80453CD8-80453CDC 0004 .sdata2    @5617                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_5617[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 80453CDC 0004 .sdata2    @5618                                                        */
+/* 80453CDC-80453CE0 0004 .sdata2    @5618                                                        Float32Data */
 // 0xc73b8000
 SECTION_SDATA2 f32 LIT_5618 = -48000.000000f;
-/* 80453CE0 0004 .sdata2    @5839                                                        */
+/* 80453CE0-80453CE4 0004 .sdata2    @5839                                                        Fraction32Data */
 // 0.033333335f 0x3d088889
 SECTION_SDATA2 f32 LIT_5839 = 1.000000f / 30.000000f;
-/* 80453CE4 0004 .sdata2    @5840                                                        */
+/* 80453CE4-80453CE8 0004 .sdata2    @5840                                                        Fraction32Data */
 // 0.06666667f 0x3d888889
 SECTION_SDATA2 f32 LIT_5840 = 1.000000f / 15.000000f;
-/* 80453CE8 0004 .sdata2    @6032                                                        */
+/* 80453CE8-80453CEC 0004 .sdata2    @6032                                                        Float32Data */
 // 0x47c35000
 SECTION_SDATA2 f32 LIT_6032 = 100000.000000f;
-/* 80453CEC 0004 .sdata2    @6033                                                        */
+/* 80453CEC-80453CF0 0004 .sdata2    @6033                                                        Float32Data */
 // 0x3e800000
 SECTION_SDATA2 f32 LIT_6033 = 0.250000f;
-/* 80453CF0 0004 .sdata2    @6034                                                        */
+/* 80453CF0-80453CF4 0004 .sdata2    @6034                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6034[4] = {
 	0x29, 0xE1, 0x2E, 0x13,
 };
-/* 80453CF4 0004 .sdata2    @6035                                                        */
+/* 80453CF4-80453CF8 0004 .sdata2    @6035                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_6035[4] = {
 	0x3E, 0x4C, 0xCC, 0xCD,
 };
-/* 80453CF8 0004 .sdata2    @6036                                                        */
+/* 80453CF8-80453CFC 0004 .sdata2    @6036                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6036[4] = {
 	0x3F, 0x4C, 0xCC, 0xCD,
 };
-/* 80453CFC 0004 .sdata2    @6037                                                        */
+/* 80453CFC-80453D00 0004 .sdata2    @6037                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6037[4] = {
 	0x3E, 0xCC, 0xCC, 0xCD,
 };
-/* 80453D00 0004 .sdata2    @6038                                                        */
+/* 80453D00-80453D04 0004 .sdata2    @6038                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6038[4] = {
 	0x3F, 0x26, 0x66, 0x66,
 };
-/* 80453D04 0004 .sdata2    @6039                                                        */
+/* 80453D04-80453D08 0004 .sdata2    @6039                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6039[4] = {
 	0x3F, 0x0C, 0xCC, 0xCD,
 };
-/* 80453D08 0004 .sdata2    @6040                                                        */
+/* 80453D08-80453D0C 0004 .sdata2    @6040                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_6040[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80453D0C 0004 .sdata2    @6041                                                        */
+/* 80453D0C-80453D10 0004 .sdata2    @6041                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_kankyo__LIT_6041[4] = {
 	0x3B, 0xA3, 0xD7, 0x0A,
 };
-/* 80453D10 0004 .sdata2    @6042                                                        */
+/* 80453D10-80453D14 0004 .sdata2    @6042                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6042[4] = {
 	0x35, 0x86, 0x37, 0xBD,
 };
-/* 80453D14 0004 .sdata2    @6761                                                        */
+/* 80453D14-80453D18 0004 .sdata2    @6761                                                        Float32Data */
 // 0x42200000
 SECTION_SDATA2 f32 LIT_6761 = 40.000000f;
-/* 80453D18 0004 .sdata2    @6762                                                        */
+/* 80453D18-80453D1C 0004 .sdata2    @6762                                                        Float32Data */
 // 0xc4480000
 SECTION_SDATA2 f32 LIT_6762 = -800.000000f;
-/* 80453D1C 0004 .sdata2    @6763                                                        */
+/* 80453D1C-80453D20 0004 .sdata2    @6763                                                        Float32Data */
 // 0xc2f00000
 SECTION_SDATA2 f32 LIT_6763 = -120.000000f;
-/* 80453D20 0004 .sdata2    @6764                                                        */
+/* 80453D20-80453D24 0004 .sdata2    @6764                                                        Float32Data */
 // 0x42a00000
 SECTION_SDATA2 f32 LIT_6764 = 80.000000f;
-/* 80453D24 0004 .sdata2    @6765                                                        */
+/* 80453D24-80453D28 0004 .sdata2    @6765                                                        Float32Data */
 // 0x461c4000
 SECTION_SDATA2 f32 LIT_6765 = 10000.000000f;
-/* 80453D28 0004 .sdata2    @6766                                                        */
+/* 80453D28-80453D2C 0004 .sdata2    @6766                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_6766 = 10.000000f;
-/* 80453D2C 0004 .sdata2    @6767                                                        */
+/* 80453D2C-80453D30 0004 .sdata2    @6767                                                        Float32Data */
 // 0xc1a00000
 SECTION_SDATA2 f32 LIT_6767 = -20.000000f;
-/* 80453D30 0004 .sdata2    @6768                                                        */
+/* 80453D30-80453D34 0004 .sdata2    @6768                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6768[4] = {
 	0x38, 0xD1, 0xB7, 0x17,
 };
-/* 80453D34 0004 .sdata2    @6769                                                        */
+/* 80453D34-80453D38 0004 .sdata2    @6769                                                        Float32Data */
 // 0x3f400000
 SECTION_SDATA2 f32 LIT_6769 = 0.750000f;
-/* 80453D38 0004 .sdata2    @6770                                                        */
+/* 80453D38-80453D3C 0004 .sdata2    @6770                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6770[4] = {
 	0x3E, 0x57, 0x0A, 0x3D,
 };
-/* 80453D3C 0004 .sdata2    @6771                                                        */
+/* 80453D3C-80453D40 0004 .sdata2    @6771                                                        Float32Data */
 // 0xc20c0000
 SECTION_SDATA2 f32 LIT_6771 = -35.000000f;
-/* 80453D40 0004 .sdata2    @6772                                                        */
+/* 80453D40-80453D44 0004 .sdata2    @6772                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6772[4] = {
 	0x37, 0x27, 0xC5, 0xAC,
 };
-/* 80453D44 0004 .sdata2    @6773                                                        */
+/* 80453D44-80453D48 0004 .sdata2    @6773                                                        Float32Data */
 // 0xc2c80000
 SECTION_SDATA2 f32 LIT_6773 = -100.000000f;
-/* 80453D48 0004 .sdata2    @6774                                                        */
+/* 80453D48-80453D4C 0004 .sdata2    @6774                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_6774[4] = {
 	0x3D, 0x23, 0xD7, 0x0A,
 };
-/* 80453D4C 0004 .sdata2    @7011                                                        */
+/* 80453D4C-80453D50 0004 .sdata2    @7011                                                        Float32Data */
 // 0x46ea6000
 SECTION_SDATA2 f32 LIT_7011 = 30000.000000f;
-/* 80453D50 0004 .sdata2    @7012                                                        */
+/* 80453D50-80453D54 0004 .sdata2    @7012                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7012[4] = {
 	0x3F, 0x7F, 0xFF, 0x58,
 };
-/* 80453D54 0004 .sdata2    @7013                                                        */
+/* 80453D54-80453D58 0004 .sdata2    @7013                                                        Float32Data */
 // 0xc3fa0000
 SECTION_SDATA2 f32 LIT_7013 = -500.000000f;
-/* 80453D58 0004 .sdata2    @7014                                                        */
+/* 80453D58-80453D5C 0004 .sdata2    @7014                                                        Float32Data */
 // 0xc6ea6000
 SECTION_SDATA2 f32 LIT_7014 = -30000.000000f;
-/* 80453D5C 0004 .sdata2    @7015                                                        */
+/* 80453D5C-80453D60 0004 .sdata2    @7015                                                        Float32Data */
 // 0x4692e000
 SECTION_SDATA2 f32 LIT_7015 = 18800.000000f;
-/* 80453D60 0004 .sdata2    @7016                                                        */
+/* 80453D60-80453D64 0004 .sdata2    @7016                                                        Float32Data */
 // 0x46e29000
 SECTION_SDATA2 f32 LIT_7016 = 29000.000000f;
-/* 80453D64 0004 .sdata2    @7017                                                        */
+/* 80453D64-80453D68 0004 .sdata2    @7017                                                        Float32Data */
 // 0xc7108800
 SECTION_SDATA2 f32 LIT_7017 = -37000.000000f;
-/* 80453D68 0004 .sdata2    @7018                                                        */
+/* 80453D68-80453D6C 0004 .sdata2    @7018                                                        Float32Data */
 // 0x46610000
 SECTION_SDATA2 f32 LIT_7018 = 14400.000000f;
-/* 80453D6C 0004 .sdata2    @7019                                                        */
+/* 80453D6C-80453D70 0004 .sdata2    @7019                                                        Float32Data */
 // 0x45ea6000
 SECTION_SDATA2 f32 LIT_7019 = 7500.000000f;
-/* 80453D70 0004 .sdata2    @7020                                                        */
+/* 80453D70-80453D74 0004 .sdata2    @7020                                                        Float32Data */
 // 0x4573c000
 SECTION_SDATA2 f32 LIT_7020 = 3900.000000f;
-/* 80453D74 0004 .sdata2    @7021                                                        */
+/* 80453D74-80453D78 0004 .sdata2    @7021                                                        Float32Data */
 // 0x468ca000
 SECTION_SDATA2 f32 LIT_7021 = 18000.000000f;
-/* 80453D78 0004 .sdata2    @7022                                                        */
+/* 80453D78-80453D7C 0004 .sdata2    @7022                                                        Float32Data */
 // 0xc5cb2000
 SECTION_SDATA2 f32 LIT_7022 = -6500.000000f;
-/* 80453D7C 0004 .sdata2    @7023                                                        */
+/* 80453D7C-80453D80 0004 .sdata2    @7023                                                        Float32Data */
 // 0xc61c4000
 SECTION_SDATA2 f32 LIT_7023 = -10000.000000f;
-/* 80453D80 0004 .sdata2    @7024                                                        */
+/* 80453D80-80453D84 0004 .sdata2    @7024                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7024[4] = {
 	0x3E, 0x99, 0x99, 0x9A,
 };
-/* 80453D84 0004 .sdata2    @7025                                                        */
+/* 80453D84-80453D88 0004 .sdata2    @7025                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7025[4] = {
 	0x3F, 0x19, 0x99, 0x9A,
 };
-/* 80453D88 0004 .sdata2    @7026                                                        */
+/* 80453D88-80453D8C 0004 .sdata2    @7026                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7026[4] = {
 	0x3F, 0x66, 0x66, 0x66,
 };
-/* 80453D8C 0004 .sdata2    @7027                                                        */
+/* 80453D8C-80453D90 0004 .sdata2    @7027                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7027[4] = {
 	0x3F, 0x99, 0x99, 0x9A,
 };
-/* 80453D90 0004 .sdata2    @7186                                                        */
+/* 80453D90-80453D94 0004 .sdata2    @7186                                                        Float32Data */
 // 0x43390000
 SECTION_SDATA2 f32 LIT_7186 = 185.000000f;
-/* 80453D94 0004 .sdata2    @7187                                                        */
+/* 80453D94-80453D98 0004 .sdata2    @7187                                                        Float32Data */
 // 0x42be0000
 SECTION_SDATA2 f32 LIT_7187 = 95.000000f;
-/* 80453D98 0004 .sdata2    @7365                                                        */
+/* 80453D98-80453D9C 0004 .sdata2    @7365                                                        Float32Data */
 // 0x42870000
 SECTION_SDATA2 f32 LIT_7365 = 67.500000f;
-/* 80453D9C 0004 .sdata2    @7366                                                        */
+/* 80453D9C-80453DA0 0004 .sdata2    @7366                                                        Float32Data */
 // 0x43924000
 SECTION_SDATA2 f32 LIT_7366 = 292.500000f;
-/* 80453DA0 0004 .sdata2    @7608                                                        */
+/* 80453DA0-80453DA4 0004 .sdata2    @7608                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_7608[4] = {
 	0x3B, 0xAB, 0xB4, 0x4E,
 };
-/* 80453DA4 0004 .sdata2    @7609                                                        */
+/* 80453DA4-80453DA8 0004 .sdata2    @7609                                                        Float32Data */
 // 0x420c0000
 SECTION_SDATA2 f32 d_d_kankyo__LIT_7609 = 35.000000f;
-/* 80453DA8 0004 .sdata2    @8647                                                        */
+/* 80453DA8-80453DAC 0004 .sdata2    @8647                                                        Float32Data */
 // 0x481c4000
 SECTION_SDATA2 f32 LIT_8647 = 160000.000000f;
-/* 80453DAC 0004 .sdata2    @8975                                                        */
+/* 80453DAC-80453DB0 0004 .sdata2    @8975                                                        Float32Data */
 // 0x42480000
 SECTION_SDATA2 f32 LIT_8975 = 50.000000f;
-/* 80453DB0 0004 .sdata2    @9254                                                        */
+/* 80453DB0-80453DB4 0004 .sdata2    @9254                                                        Float32Data */
 // 0x438e8000
 SECTION_SDATA2 f32 LIT_9254 = 285.000000f;
-/* 80453DB4 0004 .sdata2    @9255                                                        */
+/* 80453DB4-80453DB8 0004 .sdata2    @9255                                                        Float32Data */
 // 0x41880000
 SECTION_SDATA2 f32 LIT_9255 = 17.000000f;
-/* 80453DB8 0004 .sdata2    @9256                                                        */
+/* 80453DB8-80453DBC 0004 .sdata2    @9256                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 LIT_9256 = 20.000000f;
-/* 80453DBC 0004 .sdata2    @9257                                                        */
+/* 80453DBC-80453DC0 0004 .sdata2    @9257                                                        Float32Data */
 // 0x433e0000
 SECTION_SDATA2 f32 LIT_9257 = 190.000000f;
-/* 80453DC0 0004 .sdata2    @9258                                                        */
+/* 80453DC0-80453DC4 0004 .sdata2    @9258                                                        Float32Data */
 // 0x4cbebc20
 SECTION_SDATA2 f32 LIT_9258 = 100000000.000000f;
-/* 80453DC4 0004 .sdata2    @9259                                                        */
+/* 80453DC4-80453DC8 0004 .sdata2    @9259                                                        Float32Data */
 // 0x40a00000
 SECTION_SDATA2 f32 LIT_9259 = 5.000000f;
-/* 80453DC8 0004 .sdata2    @9676                                                        */
+/* 80453DC8-80453DCC 0004 .sdata2    @9676                                                        Float32Data */
 // 0x43af0000
 SECTION_SDATA2 f32 LIT_9676 = 350.000000f;
-/* 80453DCC 0004 .sdata2    @9677                                                        */
+/* 80453DCC-80453DD0 0004 .sdata2    @9677                                                        Float32Data */
 // 0x3fc00000
 SECTION_SDATA2 f32 LIT_9677 = 1.500000f;
-/* 80453DD0 0004 .sdata2    @9722                                                        */
+/* 80453DD0-80453DD4 0004 .sdata2    @9722                                                        Float32Data */
 // 0x44160000
 SECTION_SDATA2 f32 LIT_9722 = 600.000000f;
-/* 80453DD4 0004 .sdata2    @9723                                                        */
+/* 80453DD4-80453DD8 0004 .sdata2    @9723                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_9723[4] = {
 	0x3F, 0x88, 0x00, 0x00,
 };
-/* 80453DD8 0004 .sdata2    @9724                                                        */
+/* 80453DD8-80453DDC 0004 .sdata2    @9724                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_9724[4] = {
 	0x3F, 0xD9, 0x99, 0x9A,
 };
-/* 80453DDC 0004 .sdata2    @9725                                                        */
+/* 80453DDC-80453DE0 0004 .sdata2    @9725                                                        Float32Data */
 // 0x428c0000
 SECTION_SDATA2 f32 LIT_9725 = 70.000000f;
-/* 80453DE0 0004 .sdata2    @9726                                                        */
+/* 80453DE0-80453DE4 0004 .sdata2    @9726                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_9726[4] = {
 	0x40, 0x23, 0x33, 0x34,
 };
-/* 80453DE4 0004 .sdata2    @9727                                                        */
+/* 80453DE4-80453DE8 0004 .sdata2    @9727                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_9727[4] = {
 	0x40, 0x59, 0x99, 0x9A,
 };
-/* 80453DE8 0004 .sdata2    @9728                                                        */
+/* 80453DE8-80453DEC 0004 .sdata2    @9728                                                        Float32Data */
 // 0x42820000
 SECTION_SDATA2 f32 LIT_9728 = 65.000000f;
-/* 80453DEC 0004 .sdata2    @9779                                                        */
+/* 80453DEC-80453DF0 0004 .sdata2    @9779                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_9779[4] = {
 	0x40, 0xE7, 0x33, 0x34,
 };
-/* 80453DF0 0004 .sdata2    @9780                                                        */
+/* 80453DF0-80453DF4 0004 .sdata2    @9780                                                        Float32Data */
 // 0x41e00000
 SECTION_SDATA2 f32 LIT_9780 = 28.000000f;
-/* 80453DF4 0004 .sdata2    @9781                                                        */
+/* 80453DF4-80453DF8 0004 .sdata2    @9781                                                        Float32Data */
 // 0x3fa00000
 SECTION_SDATA2 f32 LIT_9781 = 1.250000f;
-/* 80453DF8 0004 .sdata2    @10273                                                       */
+/* 80453DF8-80453DFC 0004 .sdata2    @10273                                                       Float32Data */
 // 0x43c80000
 SECTION_SDATA2 f32 LIT_10273 = 400.000000f;
-/* 80453DFC 0004 .sdata2    @10274                                                       */
+/* 80453DFC-80453E00 0004 .sdata2    @10274                                                       Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 LIT_10274 = 608.000000f;
-/* 80453E00 0004 .sdata2    @10483                                                       */
+/* 80453E00-80453E04 0004 .sdata2    @10483                                                       Float32Data */
 // 0x42100000
 SECTION_SDATA2 f32 LIT_10483 = 36.000000f;
-/* 80453E04 0004 .sdata2    @10484                                                       */
+/* 80453E04-80453E08 0004 .sdata2    @10484                                                       Float32Data */
 // 0x41e80000
 SECTION_SDATA2 f32 LIT_10484 = 29.000000f;
-/* 80453E08 0004 .sdata2    @10485                                                       */
+/* 80453E08-80453E0C 0004 .sdata2    @10485                                                       Float32Data */
 // 0x44c1c000
 SECTION_SDATA2 f32 LIT_10485 = 1550.000000f;
-/* 80453E0C 0004 .sdata2    @10486                                                       */
+/* 80453E0C-80453E10 0004 .sdata2    @10486                                                       Float32Data */
 // 0x430c0000
 SECTION_SDATA2 f32 LIT_10486 = 140.000000f;
-/* 80453E10 0004 .sdata2    @10916                                                       */
+/* 80453E10-80453E14 0004 .sdata2    @10916                                                       Float32Data */
 // 0x43750000
 SECTION_SDATA2 f32 LIT_10916 = 245.000000f;
-/* 80453E14 0004 .sdata2    @10917                                                       */
+/* 80453E14-80453E18 0004 .sdata2    @10917                                                       Float32Data */
 // 0x42340000
 SECTION_SDATA2 f32 LIT_10917 = 45.000000f;
-/* 80453E18 0004 .sdata2    @10918                                                       */
+/* 80453E18-80453E1C 0004 .sdata2    @10918                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10918[4] = {
 	0xBC, 0x23, 0xD7, 0x0A,
 };
-/* 80453E1C 0004 .sdata2    @10919                                                       */
+/* 80453E1C-80453E20 0004 .sdata2    @10919                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10919[4] = {
 	0x3E, 0xFA, 0xE1, 0x48,
 };
-/* 80453E20 0004 .sdata2    @10920                                                       */
+/* 80453E20-80453E24 0004 .sdata2    @10920                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10920[4] = {
 	0xBE, 0xFA, 0xE1, 0x48,
 };
-/* 80453E24 0004 .sdata2    @10921                                                       */
+/* 80453E24-80453E28 0004 .sdata2    @10921                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10921[4] = {
 	0x40, 0x33, 0x33, 0x33,
 };
-/* 80453E28 0004 .sdata2    @10922                                                       */
+/* 80453E28-80453E2C 0004 .sdata2    @10922                                                       Float32Data */
 // 0x432a0000
 SECTION_SDATA2 f32 LIT_10922 = 170.000000f;
-/* 80453E2C 0004 .sdata2    @10923                                                       */
+/* 80453E2C-80453E30 0004 .sdata2    @10923                                                       Float32Data */
 // 0xc666c800
 SECTION_SDATA2 f32 LIT_10923 = -14770.000000f;
-/* 80453E30 0004 .sdata2    @10924                                                       */
+/* 80453E30-80453E34 0004 .sdata2    @10924                                                       Float32Data */
 // 0xc663a800
 SECTION_SDATA2 f32 LIT_10924 = -14570.000000f;
-/* 80453E34 0004 .sdata2    @10925                                                       */
+/* 80453E34-80453E38 0004 .sdata2    @10925                                                       Float32Data */
 // 0xc5b6e800
 SECTION_SDATA2 f32 LIT_10925 = -5853.000000f;
-/* 80453E38 0004 .sdata2    @10926                                                       */
+/* 80453E38-80453E3C 0004 .sdata2    @10926                                                       Float32Data */
 // 0xc45bc000
 SECTION_SDATA2 f32 LIT_10926 = -879.000000f;
-/* 80453E3C 0004 .sdata2    @10927                                                       */
+/* 80453E3C-80453E40 0004 .sdata2    @10927                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10927[4] = {
 	0xBE, 0x4C, 0xCC, 0xCD,
 };
-/* 80453E40 0004 .sdata2    @10928                                                       */
+/* 80453E40-80453E44 0004 .sdata2    @10928                                                       Float32Data */
 // 0x458ca000
 SECTION_SDATA2 f32 LIT_10928 = 4500.000000f;
-/* 80453E44 0004 .sdata2    @10929                                                       */
+/* 80453E44-80453E48 0004 .sdata2    @10929                                                       Float32Data */
 // 0x42960000
 SECTION_SDATA2 f32 LIT_10929 = 75.000000f;
-/* 80453E48 0004 .sdata2    @10930                                                       */
+/* 80453E48-80453E4C 0004 .sdata2    @10930                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10930[4] = {
 	0xBF, 0x4F, 0x5C, 0x29,
 };
-/* 80453E4C 0004 .sdata2    @10931                                                       */
+/* 80453E4C-80453E50 0004 .sdata2    @10931                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10931[4] = {
 	0x3F, 0x15, 0x3F, 0x7D,
 };
-/* 80453E50 0004 .sdata2    @10932                                                       */
+/* 80453E50-80453E58 0004 .sdata2    @10932                                                       InitializedData */
 SECTION_SDATA2 u8 LIT_10932[8] = {
 	0x42, 0xE6, 0x00, 0x00,
 	/* padding */
@@ -1422,25 +2174,25 @@ SECTION_SDATA2 u8 LIT_10932[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8042CA48 0000 .bss       ...bss.0                                                     */
-/* 8042CA48 000C .bss       @4112                                                        */
+/* 8042CA48-8042CA48 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8042CA48-8042CA54 000C .bss       @4112                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_kankyo__LIT_4112[12];
-/* 8042CA54 1310 .bss       g_env_light                                                  */
+/* 8042CA54-8042DD64 1310 .bss       g_env_light                                                  ZeroInitializedData */
 SECTION_BSS u8 g_env_light[4880];
-/* 8042DD64 000C .bss       @4113                                                        */
+/* 8042DD64-8042DD70 000C .bss       @4113                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_kankyo__LIT_4113[12];
-/* 8042DD70 030C .bss       g_mEnvSeMgr                                                  */
+/* 8042DD70-8042E07C 030C .bss       g_mEnvSeMgr                                                  ZeroInitializedData */
 SECTION_BSS u8 g_mEnvSeMgr[780];
-/* 8042E07C 0740 .bss       lightStatusData                                              */
+/* 8042E07C-8042E7BC 0740 .bss       lightStatusData                                              ZeroInitializedData */
 SECTION_BSS u8 lightStatusData[1856];
-/* 8042E7BC 000C .bss       @7485                                                        */
+/* 8042E7BC-8042E7C8 000C .bss       @7485                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_kankyo__LIT_7485[12];
-/* 8042E7C8 000C .bss       S_old_cameye$7484                                            */
+/* 8042E7C8-8042E7D4 000C .bss       S_old_cameye$7484                                            ZeroInitializedData */
 SECTION_BSS u8 data_8042E7C8[12];
-/* 8042E7D4 000C .bss       @7489                                                        */
+/* 8042E7D4-8042E7E0 000C .bss       @7489                                                        ZeroInitializedData */
 SECTION_BSS u8 LIT_7489[12];
-/* 8042E7E0 000C .bss       S_old_camctr$7488                                            */
-SECTION_BSS u8 data_8042E7E0[16];
+/* 8042E7E0-8042E7F0 000C .bss       S_old_camctr$7488                                            ZeroInitializedData */
+SECTION_BSS u8 data_8042E7E0[12 + 4 /* padding */];
 }
 
 
@@ -1449,12 +2201,12 @@ SECTION_BSS u8 data_8042E7E0[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451068 0008 .sbss      merged_80451068                                              */
+/* 80451068-80451070 0008 .sbss      merged_80451068                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80451068[8];
 /* 80451068 0002 S_fuwan_sin$5904 */
 /* 8045106A 0001 data_8045106A */
 /* 8045106B 0005 data_8045106B */
-/* 80451070 0008 .sbss      merged_80451070                                              */
+/* 80451070-80451078 0008 .sbss      merged_80451070                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80451070[8];
 /* 80451070 0001 data_80451070 */
 /* 80451071 0007 data_80451071 */
@@ -1466,7 +2218,7 @@ SECTION_SBSS u8 merged_80451070[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8019C388 001C .text      dKy_WolfPowerup_AmbCol__FP11_GXColorS10                      */
+/* 8019C388-8019C3A4 001C .text      dKy_WolfPowerup_AmbCol__FP11_GXColorS10                      Function */
 }
 
 #pragma push
@@ -1479,7 +2231,7 @@ asm void dKy_WolfPowerup_AmbCol(_GXColorS10*) {
 #pragma pop
 
 extern "C" {
-/* 8019C3A4 0768 .text      dKy_sense_pat_get__Fv                                        */
+/* 8019C3A4-8019CB0C 0768 .text      dKy_sense_pat_get__Fv                                        Function */
 }
 
 #pragma push
@@ -1492,7 +2244,7 @@ asm void dKy_sense_pat_get(void) {
 #pragma pop
 
 extern "C" {
-/* 8019CB0C 01D0 .text      dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10                    */
+/* 8019CB0C-8019CCDC 01D0 .text      dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10                    Function */
 }
 
 #pragma push
@@ -1505,7 +2257,7 @@ asm void dKy_WolfPowerup_BgAmbCol(_GXColorS10*) {
 #pragma pop
 
 extern "C" {
-/* 8019CCDC 0180 .text      dKy_WolfPowerup_FogNearFar__FPfPf                            */
+/* 8019CCDC-8019CE5C 0180 .text      dKy_WolfPowerup_FogNearFar__FPfPf                            Function */
 }
 
 #pragma push
@@ -1518,20 +2270,20 @@ asm void dKy_WolfPowerup_FogNearFar(f32*, f32*) {
 #pragma pop
 
 extern "C" {
-/* 8019CE5C 0188 .text      dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs                        */
+/* 8019CE5C-8019CFE4 0188 .text      dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_pos2_get_angle(cXyz*, cXyz*, s16*, s16*) {
+asm void dKy_pos2_get_angle(cXyz*, cXyz*, short*, short*) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_pos2_get_angle__FP4cXyzP4cXyzPsPs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8019CFE4 01BC .text      dKy_twi_wolflight_set__Fi                                    */
+/* 8019CFE4-8019D1A0 01BC .text      dKy_twi_wolflight_set__Fi                                    Function */
 }
 
 #pragma push
@@ -1544,7 +2296,7 @@ asm void dKy_twi_wolflight_set(int) {
 #pragma pop
 
 extern "C" {
-/* 8019D1A0 0124 .text      dKy_lightdir_set__FffP3Vec                                   */
+/* 8019D1A0-8019D2C4 0124 .text      dKy_lightdir_set__FffP3Vec                                   Function */
 }
 
 #pragma push
@@ -1557,7 +2309,7 @@ asm void dKy_lightdir_set(f32, f32, Vec*) {
 #pragma pop
 
 extern "C" {
-/* 8019D2C4 0188 .text      dKy_GXInitLightSpot__FP12J3DLightInfofUc                     */
+/* 8019D2C4-8019D44C 0188 .text      dKy_GXInitLightSpot__FP12J3DLightInfofUc                     Function */
 }
 
 #pragma push
@@ -1570,7 +2322,7 @@ asm void dKy_GXInitLightSpot(J3DLightInfo*, f32, u8) {
 #pragma pop
 
 extern "C" {
-/* 8019D44C 00D4 .text      dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc                */
+/* 8019D44C-8019D520 00D4 .text      dKy_GXInitLightDistAttn__FP12J3DLightInfoffUc                Function */
 }
 
 #pragma push
@@ -1583,7 +2335,7 @@ asm void dKy_GXInitLightDistAttn(J3DLightInfo*, f32, f32, u8) {
 #pragma pop
 
 extern "C" {
-/* 8019D520 004C .text      u8_data_ratio_set__FUcUcf                                    */
+/* 8019D520-8019D56C 004C .text      u8_data_ratio_set__FUcUcf                                    Function */
 }
 
 #pragma push
@@ -1596,33 +2348,33 @@ asm void u8_data_ratio_set(u8, u8, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019D56C 0050 .text      s16_data_ratio_set__Fssf                                     */
+/* 8019D56C-8019D5BC 0050 .text      s16_data_ratio_set__Fssf                                     Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void s16_data_ratio_set(s16, s16, f32) {
+asm void s16_data_ratio_set(short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/s16_data_ratio_set__Fssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8019D5BC 0060 .text      kankyo_color_ratio_calc_common__Fsf                          */
+/* 8019D5BC-8019D61C 0060 .text      kankyo_color_ratio_calc_common__Fsf                          Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void kankyo_color_ratio_calc_common(s16, f32) {
+asm void kankyo_color_ratio_calc_common(short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/kankyo_color_ratio_calc_common__Fsf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8019D61C 0070 .text      kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f           */
+/* 8019D61C-8019D68C 0070 .text      kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f           Function */
 // kankyo_color_ratio_calc(_GXColor*, _GXColorS10, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1633,20 +2385,20 @@ asm void kankyo_color_ratio_calc__FP8_GXColor11_GXColorS10f() {
 }
 #pragma pop
 
-/* 8019D68C 0104 .text      kankyo_color_ratio_set__FUcUcfUcUcfsf                        */
+/* 8019D68C-8019D790 0104 .text      kankyo_color_ratio_set__FUcUcfUcUcfsf                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, s16, f32) {
+asm void kankyo_color_ratio_set(u8, u8, f32, u8, u8, f32, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/kankyo_color_ratio_set__FUcUcfUcUcfsf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8019D790 0010 .text      fl_data_ratio_set__Ffff                                      */
+/* 8019D790-8019D7A0 0010 .text      fl_data_ratio_set__Ffff                                      Function */
 }
 
 #pragma push
@@ -1659,7 +2411,7 @@ asm void fl_data_ratio_set(f32, f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019D7A0 00D8 .text      float_kankyo_color_ratio_set__Fffffffff                      */
+/* 8019D7A0-8019D878 00D8 .text      float_kankyo_color_ratio_set__Fffffffff                      Function */
 }
 
 #pragma push
@@ -1672,7 +2424,7 @@ asm void float_kankyo_color_ratio_set(f32, f32, f32, f32, f32, f32, f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019D878 0034 .text      get_parcent__Ffff                                            */
+/* 8019D878-8019D8AC 0034 .text      get_parcent__Ffff                                            Function */
 }
 
 #pragma push
@@ -1685,7 +2437,7 @@ asm void get_parcent(f32, f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019D8AC 0020 .text      dKy_get_parcent__Ffff                                        */
+/* 8019D8AC-8019D8CC 0020 .text      dKy_get_parcent__Ffff                                        Function */
 }
 
 #pragma push
@@ -1698,7 +2450,7 @@ asm void dKy_get_parcent(f32, f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019D8CC 0480 .text      dKy_FiveSenses_fullthrottle_dark_static1__Fv                 */
+/* 8019D8CC-8019DD4C 0480 .text      dKy_FiveSenses_fullthrottle_dark_static1__Fv                 Function */
 }
 
 #pragma push
@@ -1711,7 +2463,7 @@ asm void dKy_FiveSenses_fullthrottle_dark_static1(void) {
 #pragma pop
 
 extern "C" {
-/* 8019DD4C 0020 .text      dKy_FiveSenses_fullthrottle_dark__Fv                         */
+/* 8019DD4C-8019DD6C 0020 .text      dKy_FiveSenses_fullthrottle_dark__Fv                         Function */
 }
 
 #pragma push
@@ -1724,7 +2476,7 @@ asm void dKy_FiveSenses_fullthrottle_dark(void) {
 #pragma pop
 
 extern "C" {
-/* 8019DD6C 03D0 .text      dKy_light_influence_id__F4cXyzi                              */
+/* 8019DD6C-8019E13C 03D0 .text      dKy_light_influence_id__F4cXyzi                              Function */
 // dKy_light_influence_id(cXyz, int)
 #pragma push
 #pragma optimization_level 0
@@ -1735,7 +2487,7 @@ asm void dKy_light_influence_id__F4cXyzi() {
 }
 #pragma pop
 
-/* 8019E13C 02C8 .text      dKy_eflight_influence_id__F4cXyzi                            */
+/* 8019E13C-8019E404 02C8 .text      dKy_eflight_influence_id__F4cXyzi                            Function */
 // dKy_eflight_influence_id(cXyz, int)
 #pragma push
 #pragma optimization_level 0
@@ -1746,7 +2498,7 @@ asm void dKy_eflight_influence_id__F4cXyzi() {
 }
 #pragma pop
 
-/* 8019E404 002C .text      dKy_light_influence_col__Fi                                  */
+/* 8019E404-8019E430 002C .text      dKy_light_influence_col__Fi                                  Function */
 }
 
 #pragma push
@@ -1759,7 +2511,7 @@ asm void dKy_light_influence_col(int) {
 #pragma pop
 
 extern "C" {
-/* 8019E430 00F0 .text      dKy_light_influence_col__FP8_GXColorf                        */
+/* 8019E430-8019E520 00F0 .text      dKy_light_influence_col__FP8_GXColorf                        Function */
 }
 
 #pragma push
@@ -1772,7 +2524,7 @@ asm void dKy_light_influence_col(_GXColor*, f32) {
 #pragma pop
 
 extern "C" {
-/* 8019E520 0028 .text      dKy_light_influence_power__Fi                                */
+/* 8019E520-8019E548 0028 .text      dKy_light_influence_power__Fi                                Function */
 }
 
 #pragma push
@@ -1785,7 +2537,7 @@ asm void dKy_light_influence_power(int) {
 #pragma pop
 
 extern "C" {
-/* 8019E548 0028 .text      dKy_light_influence_yuragi__Fi                               */
+/* 8019E548-8019E570 0028 .text      dKy_light_influence_yuragi__Fi                               Function */
 }
 
 #pragma push
@@ -1798,7 +2550,7 @@ asm void dKy_light_influence_yuragi(int) {
 #pragma pop
 
 extern "C" {
-/* 8019E570 0124 .text      dKy_light_influence_distance__F4cXyzi                        */
+/* 8019E570-8019E694 0124 .text      dKy_light_influence_distance__F4cXyzi                        Function */
 // dKy_light_influence_distance(cXyz, int)
 #pragma push
 #pragma optimization_level 0
@@ -1809,7 +2561,7 @@ asm void dKy_light_influence_distance__F4cXyzi() {
 }
 #pragma pop
 
-/* 8019E694 0074 .text      plight_init__Fv                                              */
+/* 8019E694-8019E708 0074 .text      plight_init__Fv                                              Function */
 }
 
 #pragma push
@@ -1822,7 +2574,7 @@ asm void plight_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019E708 002C .text      darkmist_init__Fv                                            */
+/* 8019E708-8019E734 002C .text      darkmist_init__Fv                                            Function */
 }
 
 #pragma push
@@ -1835,7 +2587,7 @@ asm void darkmist_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019E734 0120 .text      plight_set__Fv                                               */
+/* 8019E734-8019E854 0120 .text      plight_set__Fv                                               Function */
 }
 
 #pragma push
@@ -1848,7 +2600,7 @@ asm void plight_set(void) {
 #pragma pop
 
 extern "C" {
-/* 8019E854 0020 .text      bgparts_activelight_init__Fv                                 */
+/* 8019E854-8019E874 0020 .text      bgparts_activelight_init__Fv                                 Function */
 }
 
 #pragma push
@@ -1861,7 +2613,7 @@ asm void bgparts_activelight_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019E874 022C .text      dungeonlight_init__Fv                                        */
+/* 8019E874-8019EAA0 022C .text      dungeonlight_init__Fv                                        Function */
 }
 
 #pragma push
@@ -1874,7 +2626,7 @@ asm void dungeonlight_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019EAA0 0130 .text      undwater_init__Fv                                            */
+/* 8019EAA0-8019EBD0 0130 .text      undwater_init__Fv                                            Function */
 }
 
 #pragma push
@@ -1887,20 +2639,20 @@ asm void undwater_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019EBD0 00C8 .text      dKy_light_size_get__FPCc                                     */
+/* 8019EBD0-8019EC98 00C8 .text      dKy_light_size_get__FPCc                                     Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_light_size_get(const s8*) {
+asm void dKy_light_size_get(const char*) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_light_size_get__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 8019EC98 05CC .text      envcolor_init__Fv                                            */
+/* 8019EC98-8019F264 05CC .text      envcolor_init__Fv                                            Function */
 }
 
 #pragma push
@@ -1913,7 +2665,7 @@ asm void envcolor_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019F264 0084 .text      dKy_clear_game_init__Fv                                      */
+/* 8019F264-8019F2E8 0084 .text      dKy_clear_game_init__Fv                                      Function */
 }
 
 #pragma push
@@ -1926,7 +2678,7 @@ asm void dKy_clear_game_init(void) {
 #pragma pop
 
 extern "C" {
-/* 8019F2E8 0118 .text      __ct__18dScnKy_env_light_cFv                                 */
+/* 8019F2E8-8019F400 0118 .text      __ct__18dScnKy_env_light_cFv                                 Function */
 // dScnKy_env_light_c::dScnKy_env_light_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1937,7 +2689,7 @@ asm void __ct__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 8019F400 0038 .text      __ct__19GB_MAPLE_COL_CHANGEFv                                */
+/* 8019F400-8019F438 0038 .text      __ct__19GB_MAPLE_COL_CHANGEFv                                Function */
 // GB_MAPLE_COL_CHANGE::GB_MAPLE_COL_CHANGE(void)
 #pragma push
 #pragma optimization_level 0
@@ -1948,7 +2700,7 @@ asm void __ct__19GB_MAPLE_COL_CHANGEFv() {
 }
 #pragma pop
 
-/* 8019F438 003C .text      __dt__10BOSS_LIGHTFv                                         */
+/* 8019F438-8019F474 003C .text      __dt__10BOSS_LIGHTFv                                         Function */
 // BOSS_LIGHT::~BOSS_LIGHT(void)
 #pragma push
 #pragma optimization_level 0
@@ -1959,13 +2711,13 @@ asm void __dt__10BOSS_LIGHTFv() {
 }
 #pragma pop
 
-/* 8019F474 0004 .text      __ct__10BOSS_LIGHTFv                                         */
+/* 8019F474-8019F478 0004 .text      __ct__10BOSS_LIGHTFv                                         ReturnFunction */
 // BOSS_LIGHT::BOSS_LIGHT(void)
 void __ct__10BOSS_LIGHTFv() {
 	return;
 }
 
-/* 8019F478 003C .text      __dt__13DUNGEON_LIGHTFv                                      */
+/* 8019F478-8019F4B4 003C .text      __dt__13DUNGEON_LIGHTFv                                      Function */
 // DUNGEON_LIGHT::~DUNGEON_LIGHT(void)
 #pragma push
 #pragma optimization_level 0
@@ -1976,13 +2728,13 @@ asm void __dt__13DUNGEON_LIGHTFv() {
 }
 #pragma pop
 
-/* 8019F4B4 0004 .text      __ct__13DUNGEON_LIGHTFv                                      */
+/* 8019F4B4-8019F4B8 0004 .text      __ct__13DUNGEON_LIGHTFv                                      ReturnFunction */
 // DUNGEON_LIGHT::DUNGEON_LIGHT(void)
 void __ct__13DUNGEON_LIGHTFv() {
 	return;
 }
 
-/* 8019F4B8 003C .text      __dt__15WIND_INF_ENTITYFv                                    */
+/* 8019F4B8-8019F4F4 003C .text      __dt__15WIND_INF_ENTITYFv                                    Function */
 // WIND_INF_ENTITY::~WIND_INF_ENTITY(void)
 #pragma push
 #pragma optimization_level 0
@@ -1993,19 +2745,19 @@ asm void __dt__15WIND_INF_ENTITYFv() {
 }
 #pragma pop
 
-/* 8019F4F4 0004 .text      __ct__15WIND_INF_ENTITYFv                                    */
+/* 8019F4F4-8019F4F8 0004 .text      __ct__15WIND_INF_ENTITYFv                                    ReturnFunction */
 // WIND_INF_ENTITY::WIND_INF_ENTITY(void)
 void __ct__15WIND_INF_ENTITYFv() {
 	return;
 }
 
-/* 8019F4F8 0004 .text      __ct__15LIGHT_INFLUENCEFv                                    */
+/* 8019F4F8-8019F4FC 0004 .text      __ct__15LIGHT_INFLUENCEFv                                    ReturnFunction */
 // LIGHT_INFLUENCE::LIGHT_INFLUENCE(void)
 void __ct__15LIGHT_INFLUENCEFv() {
 	return;
 }
 
-/* 8019F4FC 0284 .text      setDaytime__18dScnKy_env_light_cFv                           */
+/* 8019F4FC-8019F780 0284 .text      setDaytime__18dScnKy_env_light_cFv                           Function */
 // dScnKy_env_light_c::setDaytime(void)
 #pragma push
 #pragma optimization_level 0
@@ -2016,7 +2768,7 @@ asm void setDaytime__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 8019F780 0008 .text      GetTimePass__20dStage_roomControl_cFv                        */
+/* 8019F780-8019F788 0008 .text      GetTimePass__20dStage_roomControl_cFv                        GlobalFunction */
 // dStage_roomControl_c::GetTimePass(void)
 #pragma push
 #pragma optimization_level 0
@@ -2027,7 +2779,7 @@ asm void GetTimePass__20dStage_roomControl_cFv() {
 }
 #pragma pop
 
-/* 8019F788 0280 .text      setSunpos__18dScnKy_env_light_cFv                            */
+/* 8019F788-8019FA08 0280 .text      setSunpos__18dScnKy_env_light_cFv                            Function */
 // dScnKy_env_light_c::setSunpos(void)
 #pragma push
 #pragma optimization_level 0
@@ -2038,7 +2790,7 @@ asm void setSunpos__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 8019FA08 0008 .text      getDaytime__18dScnKy_env_light_cFv                           */
+/* 8019FA08-8019FA10 0008 .text      getDaytime__18dScnKy_env_light_cFv                           Function */
 // dScnKy_env_light_c::getDaytime(void)
 #pragma push
 #pragma optimization_level 0
@@ -2049,7 +2801,7 @@ asm void getDaytime__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 8019FA10 002C .text      dKy_getdaytime_hour__Fv                                      */
+/* 8019FA10-8019FA3C 002C .text      dKy_getdaytime_hour__Fv                                      Function */
 }
 
 #pragma push
@@ -2062,7 +2814,7 @@ asm void dKy_getdaytime_hour(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FA3C 007C .text      dKy_getdaytime_minute__Fv                                    */
+/* 8019FA3C-8019FAB8 007C .text      dKy_getdaytime_minute__Fv                                    Function */
 }
 
 #pragma push
@@ -2075,7 +2827,7 @@ asm void dKy_getdaytime_minute(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FAB8 003C .text      dKy_daynight_check__Fv                                       */
+/* 8019FAB8-8019FAF4 003C .text      dKy_daynight_check__Fv                                       Function */
 }
 
 #pragma push
@@ -2088,7 +2840,7 @@ asm void dKy_daynight_check(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FAF4 003C .text      dKy_getDarktime_hour__Fv                                     */
+/* 8019FAF4-8019FB30 003C .text      dKy_getDarktime_hour__Fv                                     Function */
 }
 
 #pragma push
@@ -2101,7 +2853,7 @@ asm void dKy_getDarktime_hour(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FB30 008C .text      dKy_getDarktime_minute__Fv                                   */
+/* 8019FB30-8019FBBC 008C .text      dKy_getDarktime_minute__Fv                                   Function */
 }
 
 #pragma push
@@ -2114,7 +2866,7 @@ asm void dKy_getDarktime_minute(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FBBC 0010 .text      dKy_getDarktime_week__Fv                                     */
+/* 8019FBBC-8019FBCC 0010 .text      dKy_getDarktime_week__Fv                                     Function */
 }
 
 #pragma push
@@ -2127,7 +2879,7 @@ asm void dKy_getDarktime_week(void) {
 #pragma pop
 
 extern "C" {
-/* 8019FBCC 0008 .text      getDarkDaytime__18dScnKy_env_light_cFv                       */
+/* 8019FBCC-8019FBD4 0008 .text      getDarkDaytime__18dScnKy_env_light_cFv                       Function */
 // dScnKy_env_light_c::getDarkDaytime(void)
 #pragma push
 #pragma optimization_level 0
@@ -2138,7 +2890,7 @@ asm void getDarkDaytime__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 8019FBD4 076C .text      setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc */
+/* 8019FBD4-801A0340 076C .text      setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc Function */
 // dScnKy_env_light_c::setLight_palno_get(u8*, u8*, u8*, u8*, u8*, u8*, u8*, u8*, f32*, int*, int*, f32*, u8*)
 #pragma push
 #pragma optimization_level 0
@@ -2149,7 +2901,7 @@ asm void setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPi
 }
 #pragma pop
 
-/* 801A0340 00CC .text      dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f */
+/* 801A0340-801A040C 00CC .text      dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_classP15color_RGB_classP15color_RGB_classff11_GXColorS10f Function */
 // dKy_calc_color_set(_GXColorS10*, color_RGB_class*, color_RGB_class*, color_RGB_class*, color_RGB_class*, f32, f32, _GXColorS10, f32)
 #pragma push
 #pragma optimization_level 0
@@ -2160,7 +2912,7 @@ asm void dKy_calc_color_set__FP11_GXColorS10P15color_RGB_classP15color_RGB_class
 }
 #pragma pop
 
-/* 801A040C 0F30 .text      setLight__18dScnKy_env_light_cFv                             */
+/* 801A040C-801A133C 0F30 .text      setLight__18dScnKy_env_light_cFv                             Function */
 // dScnKy_env_light_c::setLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -2171,7 +2923,7 @@ asm void setLight__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A133C 0384 .text      setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf */
+/* 801A133C-801A16C0 0384 .text      setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf Function */
 // dScnKy_env_light_c::setLight_bg(dKy_tevstr_c*, _GXColorS10*, _GXColorS10*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -2182,7 +2934,7 @@ asm void setLight_bg__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10P11_GXCo
 }
 #pragma pop
 
-/* 801A16C0 06A4 .text      setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf */
+/* 801A16C0-801A1D64 06A4 .text      setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf Function */
 // dScnKy_env_light_c::setLight_actor(dKy_tevstr_c*, _GXColorS10*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -2193,7 +2945,7 @@ asm void setLight_actor__18dScnKy_env_light_cFP12dKy_tevstr_cP11_GXColorS10PfPf(
 }
 #pragma pop
 
-/* 801A1D64 01F4 .text      settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf */
+/* 801A1D64-801A1F58 01F4 .text      settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_cP11_GXColorS10P11_GXColorS10PfPf Function */
 // dScnKy_env_light_c::settingTevStruct_colget_actor(cXyz*, dKy_tevstr_c*, _GXColorS10*, _GXColorS10*, f32*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -2204,7 +2956,7 @@ asm void settingTevStruct_colget_actor__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr
 }
 #pragma pop
 
-/* 801A1F58 0138 .text      settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c */
+/* 801A1F58-801A2090 0138 .text      settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c Function */
 // dScnKy_env_light_c::settingTevStruct_colget_player(dKy_tevstr_c*)
 #pragma push
 #pragma optimization_level 0
@@ -2215,20 +2967,20 @@ asm void settingTevStruct_colget_player__18dScnKy_env_light_cFP12dKy_tevstr_c() 
 }
 #pragma pop
 
-/* 801A2090 0098 .text      cLib_addCalcU8__FPUcUcss                                     */
+/* 801A2090-801A2128 0098 .text      cLib_addCalcU8__FPUcUcss                                     Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void cLib_addCalcU8(u8*, u8, s16, s16) {
+asm void cLib_addCalcU8(u8*, u8, short, short) {
 	nofralloc
 #include "_include/d/d_kankyo/cLib_addCalcU8__FPUcUcss.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A2128 169C .text      settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc */
+/* 801A2128-801A37C4 169C .text      settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc Function */
 // dScnKy_env_light_c::settingTevStruct_plightcol_plus(cXyz*, dKy_tevstr_c*, _GXColorS10, _GXColorS10, u8)
 #pragma push
 #pragma optimization_level 0
@@ -2239,7 +2991,7 @@ asm void settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevs
 }
 #pragma pop
 
-/* 801A37C4 0C58 .text      settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c */
+/* 801A37C4-801A441C 0C58 .text      settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c Function */
 // dScnKy_env_light_c::settingTevStruct(int, cXyz*, dKy_tevstr_c*)
 #pragma push
 #pragma optimization_level 0
@@ -2250,13 +3002,13 @@ asm void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c() {
 }
 #pragma pop
 
-/* 801A441C 0004 .text      setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
+/* 801A441C-801A4420 0004 .text      setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c ReturnFunction */
 // dScnKy_env_light_c::setLightTevColorType(J3DModelData*, dKy_tevstr_c*)
 void setLightTevColorType__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c() {
 	return;
 }
 
-/* 801A4420 07E8 .text      setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci */
+/* 801A4420-801A4C08 07E8 .text      setLightTevColorType_MAJI_sub__FP11J3DMaterialP12dKy_tevstr_ci Function */
 }
 
 #pragma push
@@ -2269,19 +3021,19 @@ asm void setLightTevColorType_MAJI_sub(J3DMaterial*, dKy_tevstr_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 801A4C08 0004 .text      setLight__13J3DColorBlockFUlP11J3DLightObj                   */
+/* 801A4C08-801A4C0C 0004 .text      setLight__13J3DColorBlockFUlP11J3DLightObj                   ReturnFunction */
 // J3DColorBlock::setLight(u32, J3DLightObj*)
 void setLight__13J3DColorBlockFUlP11J3DLightObj() {
 	return;
 }
 
-/* 801A4C0C 0004 .text      setAmbColor__13J3DColorBlockFUlPC10J3DGXColor                */
+/* 801A4C0C-801A4C10 0004 .text      setAmbColor__13J3DColorBlockFUlPC10J3DGXColor                ReturnFunction */
 // J3DColorBlock::setAmbColor(u32, const J3DGXColor*)
 void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor() {
 	return;
 }
 
-/* 801A4C10 0190 .text      dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci     */
+/* 801A4C10-801A4DA0 0190 .text      dKy_cloudshadow_scroll__FP12J3DModelDataP12dKy_tevstr_ci     Function */
 }
 
 #pragma push
@@ -2294,7 +3046,7 @@ asm void dKy_cloudshadow_scroll(J3DModelData*, dKy_tevstr_c*, int) {
 #pragma pop
 
 extern "C" {
-/* 801A4DA0 00F0 .text      setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c */
+/* 801A4DA0-801A4E90 00F0 .text      setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c Function */
 // dScnKy_env_light_c::setLightTevColorType_MAJI(J3DModelData*, dKy_tevstr_c*)
 #pragma push
 #pragma optimization_level 0
@@ -2305,7 +3057,7 @@ asm void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_t
 }
 #pragma pop
 
-/* 801A4E90 0094 .text      CalcTevColor__18dScnKy_env_light_cFv                         */
+/* 801A4E90-801A4F24 0094 .text      CalcTevColor__18dScnKy_env_light_cFv                         Function */
 // dScnKy_env_light_c::CalcTevColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -2316,7 +3068,7 @@ asm void CalcTevColor__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A4F24 0040 .text      Sndpos__18dScnKy_env_light_cFv                               */
+/* 801A4F24-801A4F64 0040 .text      Sndpos__18dScnKy_env_light_cFv                               Function */
 // dScnKy_env_light_c::Sndpos(void)
 #pragma push
 #pragma optimization_level 0
@@ -2327,7 +3079,7 @@ asm void Sndpos__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A4F64 0208 .text      Eflight_flush_proc__18dScnKy_env_light_cFv                   */
+/* 801A4F64-801A516C 0208 .text      Eflight_flush_proc__18dScnKy_env_light_cFv                   Function */
 // dScnKy_env_light_c::Eflight_flush_proc(void)
 #pragma push
 #pragma optimization_level 0
@@ -2338,7 +3090,7 @@ asm void Eflight_flush_proc__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A516C 011C .text      SetBaseLight__18dScnKy_env_light_cFv                         */
+/* 801A516C-801A5288 011C .text      SetBaseLight__18dScnKy_env_light_cFv                         Function */
 // dScnKy_env_light_c::SetBaseLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -2349,7 +3101,7 @@ asm void SetBaseLight__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A5288 0454 .text      exeKankyo__18dScnKy_env_light_cFv                            */
+/* 801A5288-801A56DC 0454 .text      exeKankyo__18dScnKy_env_light_cFv                            Function */
 // dScnKy_env_light_c::exeKankyo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2360,7 +3112,7 @@ asm void exeKankyo__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A56DC 0050 .text      drawKankyo__18dScnKy_env_light_cFv                           */
+/* 801A56DC-801A572C 0050 .text      drawKankyo__18dScnKy_env_light_cFv                           Function */
 // dScnKy_env_light_c::drawKankyo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2371,7 +3123,7 @@ asm void drawKankyo__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801A572C 0440 .text      dKy_undwater_filter_draw__Fv                                 */
+/* 801A572C-801A5B6C 0440 .text      dKy_undwater_filter_draw__Fv                                 Function */
 }
 
 #pragma push
@@ -2384,7 +3136,7 @@ asm void dKy_undwater_filter_draw(void) {
 #pragma pop
 
 extern "C" {
-/* 801A5B6C 002C .text      dKy_Draw__FP17sub_kankyo__class                              */
+/* 801A5B6C-801A5B98 002C .text      dKy_Draw__FP17sub_kankyo__class                              Function */
 }
 
 #pragma push
@@ -2397,7 +3149,7 @@ asm void dKy_Draw(sub_kankyo__class*) {
 #pragma pop
 
 extern "C" {
-/* 801A5B98 0034 .text      dKy_Execute__FP17sub_kankyo__class                           */
+/* 801A5B98-801A5BCC 0034 .text      dKy_Execute__FP17sub_kankyo__class                           Function */
 }
 
 #pragma push
@@ -2410,13 +3162,13 @@ asm void dKy_Execute(sub_kankyo__class*) {
 #pragma pop
 
 extern "C" {
-/* 801A5BCC 0008 .text      dKy_IsDelete__FP17sub_kankyo__class                          */
+/* 801A5BCC-801A5BD4 0008 .text      dKy_IsDelete__FP17sub_kankyo__class                          ReturnIntegerFunction */
 // dKy_IsDelete(sub_kankyo__class*)
 int dKy_IsDelete__FP17sub_kankyo__class() {
 	return 1;
 }
 
-/* 801A5BD4 0048 .text      dKy_Delete__FP17sub_kankyo__class                            */
+/* 801A5BD4-801A5C1C 0048 .text      dKy_Delete__FP17sub_kankyo__class                            Function */
 }
 
 #pragma push
@@ -2429,7 +3181,7 @@ asm void dKy_Delete(sub_kankyo__class*) {
 #pragma pop
 
 extern "C" {
-/* 801A5C1C 0238 .text      dKy_Create__FPv                                              */
+/* 801A5C1C-801A5E54 0238 .text      dKy_Create__FPv                                              Function */
 }
 
 #pragma push
@@ -2442,7 +3194,7 @@ asm void dKy_Create(void*) {
 #pragma pop
 
 extern "C" {
-/* 801A5E54 0268 .text      dKy_setLight_init__Fv                                        */
+/* 801A5E54-801A60BC 0268 .text      dKy_setLight_init__Fv                                        Function */
 }
 
 #pragma push
@@ -2455,7 +3207,7 @@ asm void dKy_setLight_init(void) {
 #pragma pop
 
 extern "C" {
-/* 801A60BC 0024 .text      dKy_setLight__Fv                                             */
+/* 801A60BC-801A60E0 0024 .text      dKy_setLight__Fv                                             Function */
 }
 
 #pragma push
@@ -2468,7 +3220,7 @@ asm void dKy_setLight(void) {
 #pragma pop
 
 extern "C" {
-/* 801A60E0 0114 .text      dKy_GlobalLight_set__Fv                                      */
+/* 801A60E0-801A61F4 0114 .text      dKy_GlobalLight_set__Fv                                      Function */
 }
 
 #pragma push
@@ -2481,59 +3233,59 @@ asm void dKy_GlobalLight_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801A61F4 0084 .text      dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc   */
+/* 801A61F4-801A6278 0084 .text      dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_lightswitch_check(stage_pure_lightvec_info_class*, s8) {
+asm void dKy_lightswitch_check(stage_pure_lightvec_info_class*, char) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_lightswitch_check__FP30stage_pure_lightvec_info_classc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A6278 09A8 .text      dKy_setLight_nowroom_common__Fcf                             */
+/* 801A6278-801A6C20 09A8 .text      dKy_setLight_nowroom_common__Fcf                             Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_setLight_nowroom_common(s8, f32) {
+asm void dKy_setLight_nowroom_common(char, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_setLight_nowroom_common__Fcf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A6C20 0038 .text      dKy_setLight_nowroom__Fc                                     */
+/* 801A6C20-801A6C58 0038 .text      dKy_setLight_nowroom__Fc                                     Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_setLight_nowroom(s8) {
+asm void dKy_setLight_nowroom(char) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_setLight_nowroom__Fc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A6C58 00F4 .text      dKy_setLight_nowroom_grass__Fcf                              */
+/* 801A6C58-801A6D4C 00F4 .text      dKy_setLight_nowroom_grass__Fcf                              Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_setLight_nowroom_grass(s8, f32) {
+asm void dKy_setLight_nowroom_grass(char, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_setLight_nowroom_grass__Fcf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A6D4C 0150 .text      dKy_move_room_ratio__FP12dKy_tevstr_cPSc                     */
+/* 801A6D4C-801A6E9C 0150 .text      dKy_move_room_ratio__FP12dKy_tevstr_cPSc                     Function */
 }
 
 #pragma push
@@ -2546,7 +3298,7 @@ asm void dKy_move_room_ratio(dKy_tevstr_c*, s8*) {
 #pragma pop
 
 extern "C" {
-/* 801A6E9C 0724 .text      dKy_setLight_nowroom_actor__FP12dKy_tevstr_c                 */
+/* 801A6E9C-801A75C0 0724 .text      dKy_setLight_nowroom_actor__FP12dKy_tevstr_c                 Function */
 }
 
 #pragma push
@@ -2559,7 +3311,7 @@ asm void dKy_setLight_nowroom_actor(dKy_tevstr_c*) {
 #pragma pop
 
 extern "C" {
-/* 801A75C0 0020 .text      dKy_setLight_again__Fv                                       */
+/* 801A75C0-801A75E0 0020 .text      dKy_setLight_again__Fv                                       Function */
 }
 
 #pragma push
@@ -2572,7 +3324,7 @@ asm void dKy_setLight_again(void) {
 #pragma pop
 
 extern "C" {
-/* 801A75E0 00F8 .text      dKy_Global_amb_set__FP12dKy_tevstr_c                         */
+/* 801A75E0-801A76D8 00F8 .text      dKy_Global_amb_set__FP12dKy_tevstr_c                         Function */
 }
 
 #pragma push
@@ -2585,7 +3337,7 @@ asm void dKy_Global_amb_set(dKy_tevstr_c*) {
 #pragma pop
 
 extern "C" {
-/* 801A76D8 003C .text      dKy_light_influence_pos__Fi                                  */
+/* 801A76D8-801A7714 003C .text      dKy_light_influence_pos__Fi                                  Function */
 }
 
 #pragma push
@@ -2598,7 +3350,7 @@ asm void dKy_light_influence_pos(int) {
 #pragma pop
 
 extern "C" {
-/* 801A7714 0024 .text      dKy_plight_near_pos__Fv                                      */
+/* 801A7714-801A7738 0024 .text      dKy_plight_near_pos__Fv                                      Function */
 }
 
 #pragma push
@@ -2611,7 +3363,7 @@ asm void dKy_plight_near_pos(void) {
 #pragma pop
 
 extern "C" {
-/* 801A7738 0058 .text      dKy_mock_light_every_set__FP15LIGHT_INFLUENCE                */
+/* 801A7738-801A7790 0058 .text      dKy_mock_light_every_set__FP15LIGHT_INFLUENCE                Function */
 }
 
 #pragma push
@@ -2624,7 +3376,7 @@ asm void dKy_mock_light_every_set(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A7790 0084 .text      dKy_plight_set__FP15LIGHT_INFLUENCE                          */
+/* 801A7790-801A7814 0084 .text      dKy_plight_set__FP15LIGHT_INFLUENCE                          Function */
 }
 
 #pragma push
@@ -2637,7 +3389,7 @@ asm void dKy_plight_set(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A7814 0054 .text      dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE                 */
+/* 801A7814-801A7868 0054 .text      dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE                 Function */
 }
 
 #pragma push
@@ -2650,7 +3402,7 @@ asm void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A7868 0034 .text      dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE                 */
+/* 801A7868-801A789C 0034 .text      dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE                 Function */
 }
 
 #pragma push
@@ -2663,7 +3415,7 @@ asm void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A789C 0090 .text      dKy_plight_priority_set__FP15LIGHT_INFLUENCE                 */
+/* 801A789C-801A792C 0090 .text      dKy_plight_priority_set__FP15LIGHT_INFLUENCE                 Function */
 }
 
 #pragma push
@@ -2676,7 +3428,7 @@ asm void dKy_plight_priority_set(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A792C 0050 .text      dKy_plight_cut__FP15LIGHT_INFLUENCE                          */
+/* 801A792C-801A797C 0050 .text      dKy_plight_cut__FP15LIGHT_INFLUENCE                          Function */
 }
 
 #pragma push
@@ -2689,7 +3441,7 @@ asm void dKy_plight_cut(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A797C 0084 .text      dKy_efplight_set__FP15LIGHT_INFLUENCE                        */
+/* 801A797C-801A7A00 0084 .text      dKy_efplight_set__FP15LIGHT_INFLUENCE                        Function */
 }
 
 #pragma push
@@ -2702,7 +3454,7 @@ asm void dKy_efplight_set(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A7A00 0040 .text      dKy_efplight_cut__FP15LIGHT_INFLUENCE                        */
+/* 801A7A00-801A7A40 0040 .text      dKy_efplight_cut__FP15LIGHT_INFLUENCE                        Function */
 }
 
 #pragma push
@@ -2715,7 +3467,7 @@ asm void dKy_efplight_cut(LIGHT_INFLUENCE*) {
 #pragma pop
 
 extern "C" {
-/* 801A7A40 006C .text      dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi            */
+/* 801A7A40-801A7AAC 006C .text      dKy_bgparts_activelight_set__FP15LIGHT_INFLUENCEi            Function */
 }
 
 #pragma push
@@ -2728,7 +3480,7 @@ asm void dKy_bgparts_activelight_set(LIGHT_INFLUENCE*, int) {
 #pragma pop
 
 extern "C" {
-/* 801A7AAC 001C .text      dKy_bgparts_activelight_cut__Fi                              */
+/* 801A7AAC-801A7AC8 001C .text      dKy_bgparts_activelight_cut__Fi                              Function */
 }
 
 #pragma push
@@ -2741,137 +3493,137 @@ asm void dKy_bgparts_activelight_cut(int) {
 #pragma pop
 
 extern "C" {
-/* 801A7AC8 00A0 .text      dKy_actor_addcol_amb_set__Fsssf                              */
+/* 801A7AC8-801A7B68 00A0 .text      dKy_actor_addcol_amb_set__Fsssf                              Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_actor_addcol_amb_set(s16, s16, s16, f32) {
+asm void dKy_actor_addcol_amb_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_actor_addcol_amb_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7B68 00A0 .text      dKy_bg_addcol_amb_set__Fsssf                                 */
+/* 801A7B68-801A7C08 00A0 .text      dKy_bg_addcol_amb_set__Fsssf                                 Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_bg_addcol_amb_set(s16, s16, s16, f32) {
+asm void dKy_bg_addcol_amb_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_bg_addcol_amb_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7C08 00A0 .text      dKy_bg1_addcol_amb_set__Fsssf                                */
+/* 801A7C08-801A7CA8 00A0 .text      dKy_bg1_addcol_amb_set__Fsssf                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_bg1_addcol_amb_set(s16, s16, s16, f32) {
+asm void dKy_bg1_addcol_amb_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_bg1_addcol_amb_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7CA8 00A0 .text      dKy_bg2_addcol_amb_set__Fsssf                                */
+/* 801A7CA8-801A7D48 00A0 .text      dKy_bg2_addcol_amb_set__Fsssf                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_bg2_addcol_amb_set(s16, s16, s16, f32) {
+asm void dKy_bg2_addcol_amb_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_bg2_addcol_amb_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7D48 00A0 .text      dKy_bg3_addcol_amb_set__Fsssf                                */
+/* 801A7D48-801A7DE8 00A0 .text      dKy_bg3_addcol_amb_set__Fsssf                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_bg3_addcol_amb_set(s16, s16, s16, f32) {
+asm void dKy_bg3_addcol_amb_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_bg3_addcol_amb_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7DE8 00A0 .text      dKy_addcol_fog_set__Fsssf                                    */
+/* 801A7DE8-801A7E88 00A0 .text      dKy_addcol_fog_set__Fsssf                                    Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_addcol_fog_set(s16, s16, s16, f32) {
+asm void dKy_addcol_fog_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_addcol_fog_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7E88 0098 .text      dKy_actor_addcol_set__Fsssf                                  */
+/* 801A7E88-801A7F20 0098 .text      dKy_actor_addcol_set__Fsssf                                  Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_actor_addcol_set(s16, s16, s16, f32) {
+asm void dKy_actor_addcol_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_actor_addcol_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7F20 00A0 .text      dKy_vrbox_addcol_sky0_set__Fsssf                             */
+/* 801A7F20-801A7FC0 00A0 .text      dKy_vrbox_addcol_sky0_set__Fsssf                             Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32) {
+asm void dKy_vrbox_addcol_sky0_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_vrbox_addcol_sky0_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A7FC0 00A0 .text      dKy_vrbox_addcol_kasumi_set__Fsssf                           */
+/* 801A7FC0-801A8060 00A0 .text      dKy_vrbox_addcol_kasumi_set__Fsssf                           Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32) {
+asm void dKy_vrbox_addcol_kasumi_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_vrbox_addcol_kasumi_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A8060 0070 .text      dKy_vrbox_addcol_set__Fsssf                                  */
+/* 801A8060-801A80D0 0070 .text      dKy_vrbox_addcol_set__Fsssf                                  Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_vrbox_addcol_set(s16, s16, s16, f32) {
+asm void dKy_vrbox_addcol_set(short, short, short, f32) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_vrbox_addcol_set__Fsssf.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801A80D0 0098 .text      dKy_fog_startendz_set__Ffff                                  */
+/* 801A80D0-801A8168 0098 .text      dKy_fog_startendz_set__Ffff                                  Function */
 }
 
 #pragma push
@@ -2884,7 +3636,7 @@ asm void dKy_fog_startendz_set(f32, f32, f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8168 0028 .text      dKy_Itemgetcol_chg_on__Fv                                    */
+/* 801A8168-801A8190 0028 .text      dKy_Itemgetcol_chg_on__Fv                                    Function */
 }
 
 #pragma push
@@ -2897,7 +3649,7 @@ asm void dKy_Itemgetcol_chg_on(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8190 0030 .text      dKy_Sound_init__Fv                                           */
+/* 801A8190-801A81C0 0030 .text      dKy_Sound_init__Fv                                           Function */
 }
 
 #pragma push
@@ -2910,7 +3662,7 @@ asm void dKy_Sound_init(void) {
 #pragma pop
 
 extern "C" {
-/* 801A81C0 02B4 .text      dKy_Sound_set__F4cXyziUii                                    */
+/* 801A81C0-801A8474 02B4 .text      dKy_Sound_set__F4cXyziUii                                    Function */
 // dKy_Sound_set(cXyz, int, unsigned int, int)
 #pragma push
 #pragma optimization_level 0
@@ -2921,7 +3673,7 @@ asm void dKy_Sound_set__F4cXyziUii() {
 }
 #pragma pop
 
-/* 801A8474 0010 .text      dKy_Sound_get__Fv                                            */
+/* 801A8474-801A8484 0010 .text      dKy_Sound_get__Fv                                            Function */
 }
 
 #pragma push
@@ -2934,7 +3686,7 @@ asm void dKy_Sound_get(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8484 00B4 .text      dKy_SordFlush_set__F4cXyzi                                   */
+/* 801A8484-801A8538 00B4 .text      dKy_SordFlush_set__F4cXyzi                                   Function */
 // dKy_SordFlush_set(cXyz, int)
 #pragma push
 #pragma optimization_level 0
@@ -2945,7 +3697,7 @@ asm void dKy_SordFlush_set__F4cXyzi() {
 }
 #pragma pop
 
-/* 801A8538 00B0 .text      GxFogSet_Sub__FP8_GXColor                                    */
+/* 801A8538-801A85E8 00B0 .text      GxFogSet_Sub__FP8_GXColor                                    Function */
 }
 
 #pragma push
@@ -2958,7 +3710,7 @@ asm void GxFogSet_Sub(_GXColor*) {
 #pragma pop
 
 extern "C" {
-/* 801A85E8 0044 .text      GxFog_set__Fv                                                */
+/* 801A85E8-801A862C 0044 .text      GxFog_set__Fv                                                Function */
 }
 
 #pragma push
@@ -2971,7 +3723,7 @@ asm void GxFog_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801A862C 0024 .text      dKy_GxFog_set__Fv                                            */
+/* 801A862C-801A8650 0024 .text      dKy_GxFog_set__Fv                                            Function */
 }
 
 #pragma push
@@ -2984,7 +3736,7 @@ asm void dKy_GxFog_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8650 00A8 .text      dKy_GxFog_tevstr_set__FP12dKy_tevstr_c                       */
+/* 801A8650-801A86F8 00A8 .text      dKy_GxFog_tevstr_set__FP12dKy_tevstr_c                       Function */
 }
 
 #pragma push
@@ -2997,7 +3749,7 @@ asm void dKy_GxFog_tevstr_set(dKy_tevstr_c*) {
 #pragma pop
 
 extern "C" {
-/* 801A86F8 00A8 .text      dKy_GfFog_tevstr_set__FP12dKy_tevstr_c                       */
+/* 801A86F8-801A87A0 00A8 .text      dKy_GfFog_tevstr_set__FP12dKy_tevstr_c                       Function */
 }
 
 #pragma push
@@ -3010,7 +3762,7 @@ asm void dKy_GfFog_tevstr_set(dKy_tevstr_c*) {
 #pragma pop
 
 extern "C" {
-/* 801A87A0 0044 .text      GxXFog_set__Fv                                               */
+/* 801A87A0-801A87E4 0044 .text      GxXFog_set__Fv                                               Function */
 }
 
 #pragma push
@@ -3023,7 +3775,7 @@ asm void GxXFog_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801A87E4 0028 .text      dKy_change_colpat__FUc                                       */
+/* 801A87E4-801A880C 0028 .text      dKy_change_colpat__FUc                                       Function */
 }
 
 #pragma push
@@ -3036,7 +3788,7 @@ asm void dKy_change_colpat(u8) {
 #pragma pop
 
 extern "C" {
-/* 801A880C 0048 .text      dKy_custom_colset__FUcUcf                                    */
+/* 801A880C-801A8854 0048 .text      dKy_custom_colset__FUcUcf                                    Function */
 }
 
 #pragma push
@@ -3049,7 +3801,7 @@ asm void dKy_custom_colset(u8, u8, f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8854 0098 .text      dKy_setLight_mine__FP12dKy_tevstr_c                          */
+/* 801A8854-801A88EC 0098 .text      dKy_setLight_mine__FP12dKy_tevstr_c                          Function */
 }
 
 #pragma push
@@ -3062,7 +3814,7 @@ asm void dKy_setLight_mine(dKy_tevstr_c*) {
 #pragma pop
 
 extern "C" {
-/* 801A88EC 0148 .text      dKy_tevstr_init__FP12dKy_tevstr_cScUc                        */
+/* 801A88EC-801A8A34 0148 .text      dKy_tevstr_init__FP12dKy_tevstr_cScUc                        Function */
 }
 
 #pragma push
@@ -3075,7 +3827,7 @@ asm void dKy_tevstr_init(dKy_tevstr_c*, s8, u8) {
 #pragma pop
 
 extern "C" {
-/* 801A8A34 0010 .text      dKy_rain_check__Fv                                           */
+/* 801A8A34-801A8A44 0010 .text      dKy_rain_check__Fv                                           Function */
 }
 
 #pragma push
@@ -3088,7 +3840,7 @@ asm void dKy_rain_check(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8A44 0010 .text      dKy_set_allcol_ratio__Ff                                     */
+/* 801A8A44-801A8A54 0010 .text      dKy_set_allcol_ratio__Ff                                     Function */
 }
 
 #pragma push
@@ -3101,7 +3853,7 @@ asm void dKy_set_allcol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8A54 0010 .text      dKy_set_actcol_ratio__Ff                                     */
+/* 801A8A54-801A8A64 0010 .text      dKy_set_actcol_ratio__Ff                                     Function */
 }
 
 #pragma push
@@ -3114,7 +3866,7 @@ asm void dKy_set_actcol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8A64 0010 .text      dKy_set_bgcol_ratio__Ff                                      */
+/* 801A8A64-801A8A74 0010 .text      dKy_set_bgcol_ratio__Ff                                      Function */
 }
 
 #pragma push
@@ -3127,7 +3879,7 @@ asm void dKy_set_bgcol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8A74 0010 .text      dKy_set_fogcol_ratio__Ff                                     */
+/* 801A8A74-801A8A84 0010 .text      dKy_set_fogcol_ratio__Ff                                     Function */
 }
 
 #pragma push
@@ -3140,7 +3892,7 @@ asm void dKy_set_fogcol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8A84 0034 .text      dKy_set_vrboxcol_ratio__Ff                                   */
+/* 801A8A84-801A8AB8 0034 .text      dKy_set_vrboxcol_ratio__Ff                                   Function */
 }
 
 #pragma push
@@ -3153,7 +3905,7 @@ asm void dKy_set_vrboxcol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8AB8 0010 .text      dKy_set_vrboxsoracol_ratio__Ff                               */
+/* 801A8AB8-801A8AC8 0010 .text      dKy_set_vrboxsoracol_ratio__Ff                               Function */
 }
 
 #pragma push
@@ -3166,7 +3918,7 @@ asm void dKy_set_vrboxsoracol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8AC8 0010 .text      dKy_set_vrboxkumocol_ratio__Ff                               */
+/* 801A8AC8-801A8AD8 0010 .text      dKy_set_vrboxkumocol_ratio__Ff                               Function */
 }
 
 #pragma push
@@ -3179,7 +3931,7 @@ asm void dKy_set_vrboxkumocol_ratio(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8AD8 0060 .text      dKy_itudemo_se__Fv                                           */
+/* 801A8AD8-801A8B38 0060 .text      dKy_itudemo_se__Fv                                           Function */
 }
 
 #pragma push
@@ -3192,7 +3944,7 @@ asm void dKy_itudemo_se(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8B38 0020 .text      dKy_get_dayofweek__Fv                                        */
+/* 801A8B38-801A8B58 0020 .text      dKy_get_dayofweek__Fv                                        Function */
 }
 
 #pragma push
@@ -3205,7 +3957,7 @@ asm void dKy_get_dayofweek(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8B58 0010 .text      dKy_set_nexttime__Ff                                         */
+/* 801A8B58-801A8B68 0010 .text      dKy_set_nexttime__Ff                                         Function */
 }
 
 #pragma push
@@ -3218,7 +3970,7 @@ asm void dKy_set_nexttime(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8B68 0060 .text      dKy_instant_timechg__Ff                                      */
+/* 801A8B68-801A8BC8 0060 .text      dKy_instant_timechg__Ff                                      Function */
 }
 
 #pragma push
@@ -3231,7 +3983,7 @@ asm void dKy_instant_timechg(f32) {
 #pragma pop
 
 extern "C" {
-/* 801A8BC8 003C .text      dKy_instant_rainchg__Fv                                      */
+/* 801A8BC8-801A8C04 003C .text      dKy_instant_rainchg__Fv                                      Function */
 }
 
 #pragma push
@@ -3244,7 +3996,7 @@ asm void dKy_instant_rainchg(void) {
 #pragma pop
 
 extern "C" {
-/* 801A8C04 021C .text      NewAmbColGet__FP11_GXColorS10                                */
+/* 801A8C04-801A8E20 021C .text      NewAmbColGet__FP11_GXColorS10                                Function */
 }
 
 #pragma push
@@ -3257,7 +4009,7 @@ asm void NewAmbColGet(_GXColorS10*) {
 #pragma pop
 
 extern "C" {
-/* 801A8E20 0DC4 .text      dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
+/* 801A8E20-801A9BE4 0DC4 .text      dKy_ParticleColor_get_base__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf Function */
 }
 
 #pragma push
@@ -3270,7 +4022,7 @@ asm void dKy_ParticleColor_get_base(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, 
 #pragma pop
 
 extern "C" {
-/* 801A9BE4 00D8 .text      dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
+/* 801A9BE4-801A9CBC 00D8 .text      dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf Function */
 }
 
 #pragma push
@@ -3283,7 +4035,7 @@ asm void dKy_ParticleColor_get_actor(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*,
 #pragma pop
 
 extern "C" {
-/* 801A9CBC 00A4 .text      dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf */
+/* 801A9CBC-801A9D60 00A4 .text      dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf Function */
 }
 
 #pragma push
@@ -3296,7 +4048,7 @@ asm void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _G
 #pragma pop
 
 extern "C" {
-/* 801A9D60 0904 .text      dKy_BossLight_set__FP4cXyzP8_GXColorfUc                      */
+/* 801A9D60-801AA664 0904 .text      dKy_BossLight_set__FP4cXyzP8_GXColorfUc                      Function */
 }
 
 #pragma push
@@ -3309,7 +4061,7 @@ asm void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8) {
 #pragma pop
 
 extern "C" {
-/* 801AA664 05F8 .text      dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc             */
+/* 801AA664-801AAC5C 05F8 .text      dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc             Function */
 }
 
 #pragma push
@@ -3322,7 +4074,7 @@ asm void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8) {
 #pragma pop
 
 extern "C" {
-/* 801AAC5C 00F4 .text      dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc              */
+/* 801AAC5C-801AAD50 00F4 .text      dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc              Function */
 }
 
 #pragma push
@@ -3335,7 +4087,7 @@ asm void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8) {
 #pragma pop
 
 extern "C" {
-/* 801AAD50 02CC .text      dKy_twilight_camelight_set__Fv                               */
+/* 801AAD50-801AB01C 02CC .text      dKy_twilight_camelight_set__Fv                               Function */
 }
 
 #pragma push
@@ -3348,7 +4100,7 @@ asm void dKy_twilight_camelight_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801AB01C 0254 .text      dKy_WaterIn_Light_set__Fv                                    */
+/* 801AB01C-801AB270 0254 .text      dKy_WaterIn_Light_set__Fv                                    Function */
 }
 
 #pragma push
@@ -3361,7 +4113,7 @@ asm void dKy_WaterIn_Light_set(void) {
 #pragma pop
 
 extern "C" {
-/* 801AB270 0010 .text      dKy_camera_water_in_status_set__FUc                          */
+/* 801AB270-801AB280 0010 .text      dKy_camera_water_in_status_set__FUc                          Function */
 }
 
 #pragma push
@@ -3374,7 +4126,7 @@ asm void dKy_camera_water_in_status_set(u8) {
 #pragma pop
 
 extern "C" {
-/* 801AB280 0010 .text      dKy_camera_water_in_status_check__Fv                         */
+/* 801AB280-801AB290 0010 .text      dKy_camera_water_in_status_check__Fv                         Function */
 }
 
 #pragma push
@@ -3387,7 +4139,7 @@ asm void dKy_camera_water_in_status_check(void) {
 #pragma pop
 
 extern "C" {
-/* 801AB290 0118 .text      dKy_pol_efftype_get__FPC13cBgS_PolyInfo                      */
+/* 801AB290-801AB3A8 0118 .text      dKy_pol_efftype_get__FPC13cBgS_PolyInfo                      Function */
 }
 
 #pragma push
@@ -3400,7 +4152,7 @@ asm void dKy_pol_efftype_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801AB3A8 0118 .text      dKy_pol_efftype2_get__FPC13cBgS_PolyInfo                     */
+/* 801AB3A8-801AB4C0 0118 .text      dKy_pol_efftype2_get__FPC13cBgS_PolyInfo                     Function */
 }
 
 #pragma push
@@ -3413,7 +4165,7 @@ asm void dKy_pol_efftype2_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801AB4C0 00DC .text      dKy_pol_sound_get__FPC13cBgS_PolyInfo                        */
+/* 801AB4C0-801AB59C 00DC .text      dKy_pol_sound_get__FPC13cBgS_PolyInfo                        Function */
 }
 
 #pragma push
@@ -3426,7 +4178,7 @@ asm void dKy_pol_sound_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801AB59C 00CC .text      dKy_pol_argument_get__FPC13cBgS_PolyInfo                     */
+/* 801AB59C-801AB668 00CC .text      dKy_pol_argument_get__FPC13cBgS_PolyInfo                     Function */
 }
 
 #pragma push
@@ -3439,7 +4191,7 @@ asm void dKy_pol_argument_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801AB668 0168 .text      dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor           */
+/* 801AB668-801AB7D0 0168 .text      dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor           Function */
 }
 
 #pragma push
@@ -3452,7 +4204,7 @@ asm void dKy_pol_eff_prim_get(const cBgS_PolyInfo*, _GXColor*) {
 #pragma pop
 
 extern "C" {
-/* 801AB7D0 016C .text      dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor            */
+/* 801AB7D0-801AB93C 016C .text      dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor            Function */
 }
 
 #pragma push
@@ -3465,7 +4217,7 @@ asm void dKy_pol_eff_env_get(const cBgS_PolyInfo*, _GXColor*) {
 #pragma pop
 
 extern "C" {
-/* 801AB93C 0168 .text      dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor          */
+/* 801AB93C-801ABAA4 0168 .text      dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor          Function */
 }
 
 #pragma push
@@ -3478,7 +4230,7 @@ asm void dKy_pol_eff2_prim_get(const cBgS_PolyInfo*, _GXColor*) {
 #pragma pop
 
 extern "C" {
-/* 801ABAA4 016C .text      dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor           */
+/* 801ABAA4-801ABC10 016C .text      dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor           Function */
 }
 
 #pragma push
@@ -3491,7 +4243,7 @@ asm void dKy_pol_eff2_env_get(const cBgS_PolyInfo*, _GXColor*) {
 #pragma pop
 
 extern "C" {
-/* 801ABC10 013C .text      dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo                    */
+/* 801ABC10-801ABD4C 013C .text      dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo                    Function */
 }
 
 #pragma push
@@ -3504,7 +4256,7 @@ asm void dKy_pol_eff_alpha_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801ABD4C 015C .text      dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo                    */
+/* 801ABD4C-801ABEA8 015C .text      dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo                    Function */
 }
 
 #pragma push
@@ -3517,7 +4269,7 @@ asm void dKy_pol_eff_ratio_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801ABEA8 013C .text      dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo                   */
+/* 801ABEA8-801ABFE4 013C .text      dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo                   Function */
 }
 
 #pragma push
@@ -3530,7 +4282,7 @@ asm void dKy_pol_eff2_alpha_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801ABFE4 015C .text      dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo                   */
+/* 801ABFE4-801AC140 015C .text      dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo                   Function */
 }
 
 #pragma push
@@ -3543,7 +4295,7 @@ asm void dKy_pol_eff2_ratio_get(const cBgS_PolyInfo*) {
 #pragma pop
 
 extern "C" {
-/* 801AC140 0028 .text      dKy_TeachWind_existence_chk__Fv                              */
+/* 801AC140-801AC168 0028 .text      dKy_TeachWind_existence_chk__Fv                              Function */
 }
 
 #pragma push
@@ -3556,7 +4308,7 @@ asm void dKy_TeachWind_existence_chk(void) {
 #pragma pop
 
 extern "C" {
-/* 801AC168 00C0 .text      dKy_SunMoon_Light_Check__Fv                                  */
+/* 801AC168-801AC228 00C0 .text      dKy_SunMoon_Light_Check__Fv                                  Function */
 }
 
 #pragma push
@@ -3569,7 +4321,7 @@ asm void dKy_SunMoon_Light_Check(void) {
 #pragma pop
 
 extern "C" {
-/* 801AC228 0064 .text      dKy_Outdoor_check__Fv                                        */
+/* 801AC228-801AC28C 0064 .text      dKy_Outdoor_check__Fv                                        Function */
 }
 
 #pragma push
@@ -3582,7 +4334,7 @@ asm void dKy_Outdoor_check(void) {
 #pragma pop
 
 extern "C" {
-/* 801AC28C 0054 .text      dKy_Indoor_check__Fv                                         */
+/* 801AC28C-801AC2E0 0054 .text      dKy_Indoor_check__Fv                                         Function */
 }
 
 #pragma push
@@ -3595,13 +4347,13 @@ asm void dKy_Indoor_check(void) {
 #pragma pop
 
 extern "C" {
-/* 801AC2E0 0008 .text      dKy_withwarp_capture_check__Fv                               */
+/* 801AC2E0-801AC2E8 0008 .text      dKy_withwarp_capture_check__Fv                               ReturnIntegerFunction */
 // dKy_withwarp_capture_check(void)
 int dKy_withwarp_capture_check__Fv() {
 	return 0;
 }
 
-/* 801AC2E8 0294 .text      dKy_depth_dist_set__FPv                                      */
+/* 801AC2E8-801AC57C 0294 .text      dKy_depth_dist_set__FPv                                      Function */
 }
 
 #pragma push
@@ -3614,7 +4366,7 @@ asm void dKy_depth_dist_set(void*) {
 #pragma pop
 
 extern "C" {
-/* 801AC57C 0040 .text      dKy_darkworld_check__Fv                                      */
+/* 801AC57C-801AC5BC 0040 .text      dKy_darkworld_check__Fv                                      Function */
 }
 
 #pragma push
@@ -3627,59 +4379,59 @@ asm void dKy_darkworld_check(void) {
 #pragma pop
 
 extern "C" {
-/* 801AC5BC 0150 .text      dKy_F_SP121Check__FPCciPUci                                  */
+/* 801AC5BC-801AC70C 0150 .text      dKy_F_SP121Check__FPCciPUci                                  Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_F_SP121Check(const s8*, int, u8*, int) {
+asm void dKy_F_SP121Check(const char*, int, u8*, int) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_F_SP121Check__FPCciPUci.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801AC70C 00D4 .text      dKy_darkworld_stage_check__FPCci                             */
+/* 801AC70C-801AC7E0 00D4 .text      dKy_darkworld_stage_check__FPCci                             Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_stage_check(const s8*, int) {
+asm void dKy_darkworld_stage_check(const char*, int) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_darkworld_stage_check__FPCci.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801AC7E0 0090 .text      dKy_darkworld_spot_check__FPCci                              */
+/* 801AC7E0-801AC870 0090 .text      dKy_darkworld_spot_check__FPCci                              Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_spot_check(const s8*, int) {
+asm void dKy_darkworld_spot_check(const char*, int) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_darkworld_spot_check__FPCci.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801AC870 00A8 .text      dKy_darkworld_Area_set__FPCci                                */
+/* 801AC870-801AC918 00A8 .text      dKy_darkworld_Area_set__FPCci                                Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dKy_darkworld_Area_set(const s8*, int) {
+asm void dKy_darkworld_Area_set(const char*, int) {
 	nofralloc
 #include "_include/d/d_kankyo/dKy_darkworld_Area_set__FPCci.s"
 }
 #pragma pop
 
 extern "C" {
-/* 801AC918 03C4 .text      dKy_murky_set__FP11J3DMaterial                               */
+/* 801AC918-801ACCDC 03C4 .text      dKy_murky_set__FP11J3DMaterial                               Function */
 }
 
 #pragma push
@@ -3692,7 +4444,7 @@ asm void dKy_murky_set(J3DMaterial*) {
 #pragma pop
 
 extern "C" {
-/* 801ACCDC 0018 .text      dKy_shadow_mode_set__FUc                                     */
+/* 801ACCDC-801ACCF4 0018 .text      dKy_shadow_mode_set__FUc                                     Function */
 }
 
 #pragma push
@@ -3705,7 +4457,7 @@ asm void dKy_shadow_mode_set(u8) {
 #pragma pop
 
 extern "C" {
-/* 801ACCF4 0018 .text      dKy_shadow_mode_reset__FUc                                   */
+/* 801ACCF4-801ACD0C 0018 .text      dKy_shadow_mode_reset__FUc                                   Function */
 }
 
 #pragma push
@@ -3718,7 +4470,7 @@ asm void dKy_shadow_mode_reset(u8) {
 #pragma pop
 
 extern "C" {
-/* 801ACD0C 0018 .text      dKy_shadow_mode_check__FUc                                   */
+/* 801ACD0C-801ACD24 0018 .text      dKy_shadow_mode_check__FUc                                   Function */
 }
 
 #pragma push
@@ -3731,7 +4483,7 @@ asm void dKy_shadow_mode_check(u8) {
 #pragma pop
 
 extern "C" {
-/* 801ACD24 0E98 .text      dKy_bg_MAxx_proc__FPv                                        */
+/* 801ACD24-801ADBBC 0E98 .text      dKy_bg_MAxx_proc__FPv                                        Function */
 }
 
 #pragma push
@@ -3744,7 +4496,7 @@ asm void dKy_bg_MAxx_proc(void*) {
 #pragma pop
 
 extern "C" {
-/* 801ADBBC 00E8 .text      __dt__18dScnKy_env_light_cFv                                 */
+/* 801ADBBC-801ADCA4 00E8 .text      __dt__18dScnKy_env_light_cFv                                 Function */
 // dScnKy_env_light_c::~dScnKy_env_light_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -3755,7 +4507,7 @@ asm void __dt__18dScnKy_env_light_cFv() {
 }
 #pragma pop
 
-/* 801ADCA4 005C .text      __sinit_d_kankyo_cpp                                         */
+/* 801ADCA4-801ADD00 005C .text      __sinit_d_kankyo_cpp                                         SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3765,7 +4517,7 @@ asm void __sinit_d_kankyo_cpp() {
 }
 #pragma pop
 
-/* 801ADD00 0038 .text      dKankyo_DayProc__Fv                                          */
+/* 801ADD00-801ADD38 0038 .text      dKankyo_DayProc__Fv                                          Function */
 }
 
 #pragma push

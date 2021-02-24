@@ -9,8 +9,13 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ieee754_sqrt();
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
-SECTION_SBSS extern u8 errno[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 errno[4 + 4 /* padding */];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 Math_Double_precision_e_sqrt__LIT_164;
 }
 
@@ -20,7 +25,7 @@ SECTION_SDATA2 extern f64 Math_Double_precision_e_sqrt__LIT_164;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456B48 0008 .sdata2    @164                                                         */
+/* 80456B48-80456B50 0008 .sdata2    @164                                                         Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 Math_Double_precision_e_sqrt__LIT_164 = 1.000000;
 }
@@ -31,7 +36,7 @@ SECTION_SDATA2 f64 Math_Double_precision_e_sqrt__LIT_164 = 1.000000;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C7A0 0224 .text      __ieee754_sqrt                                               */
+/* 8036C7A0-8036C9C4 0224 .text      __ieee754_sqrt                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

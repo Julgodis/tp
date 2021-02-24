@@ -12,168 +12,359 @@
 // Additional Symbols:
 // 
 
-struct JKRHeap;
-struct dTimer_c;
-struct Vec;
 struct JKRExpHeap;
-struct J2DScreen;
+struct JKRHeap;
 struct request_of_phase_process_class;
 struct msg_class;
+struct J2DScreen;
+struct Vec;
+struct dTimer_c;
 
 extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHeap */
 extern void mDoExt_getMesgFont(void); /* mDoExt_getMesgFont__Fv */
 extern void mDoLib_project(Vec*, Vec*); /* mDoLib_project__FP3VecP3Vec */
 extern void fopMsgM_Delete(void*); /* fopMsgM_Delete__FPv */
-extern void fop_Timer_create(s16, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*)); /* fop_Timer_create__FsUcUlUcUcffffPFPv_i */
+extern void fop_Timer_create(short, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*)); /* fop_Timer_create__FsUcUlUcUcffffPFPv_i */
 extern void fopMsgM_createExpHeap(u32, JKRHeap*); /* fopMsgM_createExpHeap__FUlP7JKRHeap */
 extern void fopMsgM_destroyExpHeap(JKRExpHeap*); /* fopMsgM_destroyExpHeap__FP10JKRExpHeap */
-extern void dComIfG_resLoad(request_of_phase_process_class*, const s8*); /* dComIfG_resLoad__FP30request_of_phase_process_classPCc */
-extern void dComIfG_resDelete(request_of_phase_process_class*, const s8*); /* dComIfG_resDelete__FP30request_of_phase_process_classPCc */
+extern void dComIfG_resLoad(request_of_phase_process_class*, const char*); /* dComIfG_resLoad__FP30request_of_phase_process_classPCc */
+extern void dComIfG_resDelete(request_of_phase_process_class*, const char*); /* dComIfG_resDelete__FP30request_of_phase_process_classPCc */
 extern void dMeter2Info_getNumberTextureName(int); /* dMeter2Info_getNumberTextureName__Fi */
 extern void dPaneClass_showNullPane(J2DScreen*); /* dPaneClass_showNullPane__FP9J2DScreen */
-extern void dTimer_createStart2D(s32, u16); /* dTimer_createStart2D__FlUs */
+extern void dTimer_Draw(dTimer_c*); /* dTimer_Draw__FP8dTimer_c */
+extern void dTimer_Execute(dTimer_c*); /* dTimer_Execute__FP8dTimer_c */
+extern void dTimer_Delete(dTimer_c*); /* dTimer_Delete__FP8dTimer_c */
+extern void dTimer_Create(msg_class*); /* dTimer_Create__FP9msg_class */
+extern void dTimer_createTimer(long, u32, u8, u8, f32, f32, f32, f32); /* dTimer_createTimer__FlUlUcUcffff */
+extern void dTimer_createStockTimer(void); /* dTimer_createStockTimer__Fv */
+extern void dTimer_createStart2D(long, u16); /* dTimer_createStart2D__FlUs */
+extern void dTimer_isStart(void); /* dTimer_isStart__Fv */
+extern void dTimer_getRestTimeMs(void); /* dTimer_getRestTimeMs__Fv */
+extern void dTimer_show(void); /* dTimer_show__Fv */
+extern void dTimer_hide(void); /* dTimer_hide__Fv */
+extern void dTimer_isReadyFlag(void); /* dTimer_isReadyFlag__Fv */
 extern void cM_rndFX(f32); /* cM_rndFX__Ff */
 extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void mDoLib_project__FP3VecP3Vec();
+/* FirstParamFunction   */
 extern u32 fopMsgM_GetAppend__FPv(u8*);
+/* Function             */
 extern void fopMsgM_Delete__FPv();
+/* Function             */
 extern void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
+/* Function             */
 extern void fopMsgM_createExpHeap__FUlP7JKRHeap();
+/* Function             */
 extern void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+/* Function             */
 extern void setTimerNowTimeMs__14dComIfG_play_cFi();
+/* FirstParamFunction   */
 extern u32 getTimerNowTimeMs__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void setTimerLimitTimeMs__14dComIfG_play_cFi();
+/* FirstParamFunction   */
 extern u32 getTimerLimitTimeMs__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void setTimerMode__14dComIfG_play_cFi();
+/* FirstParamFunction   */
 extern u32 getTimerMode__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void setTimerType__14dComIfG_play_cFUc();
+/* FirstParamFunction   */
 extern u8 getTimerType__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void setTimerPtr__14dComIfG_play_cFP8dTimer_c();
+/* FirstParamFunction   */
 extern u32 getTimerPtr__14dComIfG_play_cFv(u8*);
+/* Function             */
 extern void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+/* Function             */
 extern void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+/* Function             */
 extern void getTime__11dLib_time_cFv();
+/* Function             */
 extern void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+/* Function             */
 extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
 extern void dMeter2Info_getNumberTextureName__Fi();
+/* Function             */
 extern void getStatus__12dMsgObject_cFv();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void show__13CPaneMgrAlphaFv();
+/* Function             */
 extern void hide__13CPaneMgrAlphaFv();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void _create__8dTimer_cFv();
+/* Function             */
 extern void _execute__8dTimer_cFv();
+/* Function             */
 extern void _draw__8dTimer_cFv();
+/* Function             */
 extern void _delete__8dTimer_cFv();
+/* Function             */
+extern void deleteCheck__8dTimer_cFv();
+/* Function             */
 extern void start__8dTimer_cFi();
+/* Function             */
+extern void start__8dTimer_cFis();
+/* Function             */
 extern void stock_start__8dTimer_cFv();
+/* Function             */
 extern void stock_start__8dTimer_cFs();
+/* Function             */
 extern void stop__8dTimer_cFUc();
+/* Function             */
 extern void restart__8dTimer_cFUc();
+/* Function             */
+extern void end__8dTimer_cFi();
+/* Function             */
+extern void deleteRequest__8dTimer_cFv();
+/* Function             */
 extern void getTimeMs__8dTimer_cFv();
+/* Function             */
 extern void getLimitTimeMs__8dTimer_cFv();
+/* Function             */
 extern void getRestTimeMs__8dTimer_cFv();
+/* Function             */
 extern void isStart__8dTimer_cFv();
+/* Function             */
 extern void __ct__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void setHIO__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive();
+/* Function             */
 extern void setScreenBase__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void setScreenBoatRace__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void setScreenRider__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void hideDenominator__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void deleteScreen__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei();
+/* Function             */
 extern void getNumber__21dDlst_TimerScrnDraw_cFi();
+/* Function             */
 extern void setTimer__21dDlst_TimerScrnDraw_cFi();
+/* Function             */
 extern void setCounter__21dDlst_TimerScrnDraw_cFUcUc();
+/* Function             */
 extern void setParentPos__21dDlst_TimerScrnDraw_cFff();
+/* Function             */
 extern void setTimerPos__21dDlst_TimerScrnDraw_cFff();
+/* Function             */
 extern void setCounterPos__21dDlst_TimerScrnDraw_cFff();
+/* Function             */
 extern void setImagePos__21dDlst_TimerScrnDraw_cFff();
+/* Function             */
 extern void setShowType__21dDlst_TimerScrnDraw_cFUc();
+/* Function             */
 extern void anime__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void closeAnime__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void createGetIn__21dDlst_TimerScrnDraw_cF4cXyz();
+/* Function             */
 extern void createStart__21dDlst_TimerScrnDraw_cFUs();
+/* Function             */
 extern void draw__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void playBckAnimation__21dDlst_TimerScrnDraw_cFf();
+/* Function             */
 extern void drawPikari__21dDlst_TimerScrnDraw_cFi();
+/* Function             */
+extern void dTimer_Draw__FP8dTimer_c();
+/* Function             */
+extern void dTimer_Execute__FP8dTimer_c();
+/* ReturnIntegerFunction */
+extern  int dTimer_IsDelete__FP8dTimer_c();
+/* Function             */
+extern void dTimer_Delete__FP8dTimer_c();
+/* Function             */
+extern void dTimer_Create__FP9msg_class();
+/* Function             */
+extern void dTimer_createTimer__FlUlUcUcffff();
+/* Function             */
+extern void dTimer_createStockTimer__Fv();
+/* Function             */
+extern void dTimer_createGetIn2D__Fl4cXyz();
+/* Function             */
 extern void dTimer_createStart2D__FlUs();
+/* Function             */
+extern void dTimer_isStart__Fv();
+/* Function             */
+extern void dTimer_getRestTimeMs__Fv();
+/* Function             */
+extern void dTimer_show__Fv();
+/* Function             */
+extern void dTimer_hide__Fv();
+/* Function             */
+extern void dTimer_isReadyFlag__Fv();
+/* Function             */
 extern void __dt__21dDlst_TimerScrnDraw_cFv();
+/* Function             */
 extern void createGetIn__8dTimer_cF4cXyz();
+/* Function             */
 extern void cM_rndFX__Ff();
+/* Function             */
 extern void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+/* Function             */
 extern void getTotalFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void getParentPane__7J2DPaneFv();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* FirstParamFunction   */
 extern u32 getStringPtr__10J2DTextBoxCFv(u8*);
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void _savefpr_28();
+/* Function             */
 extern void _restfpr_28();
+/* Function             */
 extern void _savegpr_21();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_21();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void __div2i();
+/* Function             */
 extern void strcmp();
+/* Function             */
 extern void strcpy();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_timer__stringBase0[176];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern u8 d_d_timer__LIT_5239[36];
-SECTION_DATA extern const void* __vt__21dDlst_TimerScrnDraw_c[4];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fopMsg_Method[6];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_fpcLf_Method[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_timer__LIT_5239[9];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* l_dTimer_Method[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* g_profile_TIMER[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21dDlst_TimerScrnDraw_c[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_timer__LIT_3919[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_3920;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_4050;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_4124;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_timer__LIT_4125[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_timer__LIT_4627;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80454F60[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5094;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5143;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5227;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5228;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5229;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5230;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5231;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5232;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5233;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_timer__LIT_5234;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5235;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5325[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5326;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5327;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5544;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5545;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5546;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_5547;
 }
 
@@ -183,16 +374,23 @@ SECTION_SDATA2 extern f32 LIT_5547;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039A3D8 00AC .rodata    @stringBase0                                                 */
-const char* const stringBase_8039A3D8 = "Timer";
-const char* const stringBase_8039A3DE = "zelda_game_image_cow_get_in.blo";
-const char* const stringBase_8039A3FE = "zelda_game_image_cow_get_in.bck";
-const char* const stringBase_8039A41E = "zelda_game_image_cow_game.blo";
-const char* const stringBase_8039A43C = 
-    "zelda_game_image_zora_kawakudari"
+/* 8039A3D8-8039A488 00AC .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039A3D8 = "Timer";
+SECTION_DEAD const char* const stringBase_8039A3DE = "zelda_game_image_cow_get_in.blo";
+SECTION_DEAD const char* const stringBase_8039A3FE = "zelda_game_image_cow_get_in.bck";
+SECTION_DEAD const char* const stringBase_8039A41E = "zelda_game_image_cow_game.blo";
+SECTION_DEAD const char* const stringBase_8039A43C = 
+    "zelda_game_image"
+    "_zora_kawakudari"
     ".blo";
-const char* const stringBase_8039A461 = "zelda_game_image_rider.blo";
-const char* const stringBase_8039A47C = "F_SP115";
+SECTION_DEAD const char* const stringBase_8039A461 = "zelda_game_image_rider.blo";
+SECTION_DEAD const char* const stringBase_8039A47C = "F_SP115";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039A484 = "\0\0\0";
+#pragma pop
 }
 
 
@@ -201,25 +399,41 @@ const char* const stringBase_8039A47C = "F_SP115";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C33C0 0024 .data      @5239                                                        */
-SECTION_DATA u8 d_d_timer__LIT_5239[36] = {
-	0x80, 0x26, 0x04, 0x9C, 0x80, 0x26, 0x04, 0x34, 0x80, 0x26, 0x04, 0x3C, 0x80, 0x26, 0x04, 0x44,
-	0x80, 0x26, 0x04, 0x4C, 0x80, 0x26, 0x04, 0x58, 0x80, 0x26, 0x04, 0x64, 0x80, 0x26, 0x04, 0x6C,
-	0x80, 0x26, 0x04, 0x78,
+/* 803C33C0-803C33E4 0024 .data      @5239                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_timer__LIT_5239[9] = {
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+174),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+148),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+150),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+152),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+154),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+157),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+160),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+162),
+	(void*)(((u32*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+165),
 };
-/* 803C33E4 0014 .data      l_dTimer_Method                                              */
-SECTION_DATA u8 l_dTimer_Method[20] = {
-	0x80, 0x26, 0x0F, 0x6C, 0x80, 0x26, 0x0F, 0x4C, 0x80, 0x26, 0x0F, 0x24, 0x80, 0x26, 0x0F, 0x44,
-	0x80, 0x26, 0x0F, 0x04,
+/* 803C33E4-803C33F8 0014 .data      l_dTimer_Method                                              SymbolReferenceArrayData */
+SECTION_DATA void* l_dTimer_Method[5] = {
+	(void*)dTimer_Create,
+	(void*)dTimer_Delete,
+	(void*)dTimer_Execute,
+	(void*)dTimer_IsDelete__FP8dTimer_c,
+	(void*)dTimer_Draw,
 };
-/* 803C33F8 0028 .data      g_profile_TIMER                                              */
-SECTION_DATA u8 g_profile_TIMER[40] = {
-	0xFF, 0xFF, 0xFF, 0xFD, 0x00, 0x0C, 0xFF, 0xFD, 0x03, 0x15, 0x00, 0x00, 0x80, 0x3A, 0x39, 0xE8,
-	0x00, 0x00, 0x01, 0x70, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x3A, 0x39, 0x58,
-	0x03, 0x00, 0x00, 0x00, 0x80, 0x3C, 0x33, 0xE4,
+/* 803C33F8-803C3420 0028 .data      g_profile_TIMER                                              SymbolReferenceArrayData */
+SECTION_DATA void* g_profile_TIMER[10] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03150000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000170,
+	NULL,
+	NULL,
+	(void*)&g_fopMsg_Method,
+	(void*)0x03000000,
+	(void*)&l_dTimer_Method,
 };
-/* 803C3420 0010 .data      __vt__21dDlst_TimerScrnDraw_c                                */
-SECTION_DATA const  void* __vt__21dDlst_TimerScrnDraw_c[4] = {
+/* 803C3420-803C3430 0010 .data      __vt__21dDlst_TimerScrnDraw_c                                VTableData */
+SECTION_DATA void* __vt__21dDlst_TimerScrnDraw_c[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__21dDlst_TimerScrnDraw_cFv,
@@ -233,87 +447,87 @@ SECTION_DATA const  void* __vt__21dDlst_TimerScrnDraw_c[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454F40 0004 .sdata2    @3919                                                        */
+/* 80454F40-80454F44 0004 .sdata2    @3919                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_timer__LIT_3919[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454F44 0004 .sdata2    @3920                                                        */
+/* 80454F44-80454F48 0004 .sdata2    @3920                                                        Float32Data */
 // 0x43110000
 SECTION_SDATA2 f32 d_d_timer__LIT_3920 = 145.000000f;
-/* 80454F48 0004 .sdata2    @4050                                                        */
+/* 80454F48-80454F4C 0004 .sdata2    @4050                                                        Float32Data */
 // 0x41c80000
 SECTION_SDATA2 f32 d_d_timer__LIT_4050 = 25.000000f;
-/* 80454F4C 0004 .sdata2    @4124                                                        */
+/* 80454F4C-80454F50 0004 .sdata2    @4124                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_timer__LIT_4124 = 1.000000f;
-/* 80454F50 0004 .sdata2    @4125                                                        */
+/* 80454F50-80454F58 0004 .sdata2    @4125                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_timer__LIT_4125[8] = {
 	0xBF, 0x80, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454F58 0008 .sdata2    @4627                                                        */
+/* 80454F58-80454F60 0008 .sdata2    @4627                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_timer__LIT_4627 = 4503601774854144.000000;
-/* 80454F60 0006 .sdata2    animeFrame$5017                                              */
+/* 80454F60-80454F68 0006 .sdata2    animeFrame$5017                                              InitializedData */
 SECTION_SDATA2 u8 data_80454F60[8] = {
 	0x00, 0x07, 0x00, 0x0F, 0x00, 0x16,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80454F68 0004 .sdata2    @5094                                                        */
+/* 80454F68-80454F6C 0004 .sdata2    @5094                                                        Float32Data */
 // 0xc2480000
 SECTION_SDATA2 f32 LIT_5094 = -50.000000f;
-/* 80454F6C 0004 .sdata2    @5143                                                        */
+/* 80454F6C-80454F70 0004 .sdata2    @5143                                                        Float32Data */
 // 0x42440000
 SECTION_SDATA2 f32 d_d_timer__LIT_5143 = 49.000000f;
-/* 80454F70 0004 .sdata2    @5227                                                        */
+/* 80454F70-80454F74 0004 .sdata2    @5227                                                        Float32Data */
 // 0x42200000
 SECTION_SDATA2 f32 LIT_5227 = 40.000000f;
-/* 80454F74 0004 .sdata2    @5228                                                        */
+/* 80454F74-80454F78 0004 .sdata2    @5228                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 LIT_5228 = 60.000000f;
-/* 80454F78 0004 .sdata2    @5229                                                        */
+/* 80454F78-80454F7C 0004 .sdata2    @5229                                                        Float32Data */
 // 0xc2c80000
 SECTION_SDATA2 f32 LIT_5229 = -100.000000f;
-/* 80454F7C 0004 .sdata2    @5230                                                        */
+/* 80454F7C-80454F80 0004 .sdata2    @5230                                                        Float32Data */
 // 0x42c80000
 SECTION_SDATA2 f32 d_d_timer__LIT_5230 = 100.000000f;
-/* 80454F80 0004 .sdata2    @5231                                                        */
+/* 80454F80-80454F84 0004 .sdata2    @5231                                                        Float32Data */
 // 0x42960000
 SECTION_SDATA2 f32 d_d_timer__LIT_5231 = 75.000000f;
-/* 80454F84 0004 .sdata2    @5232                                                        */
+/* 80454F84-80454F88 0004 .sdata2    @5232                                                        Float32Data */
 // 0xc2960000
 SECTION_SDATA2 f32 d_d_timer__LIT_5232 = -75.000000f;
-/* 80454F88 0004 .sdata2    @5233                                                        */
+/* 80454F88-80454F8C 0004 .sdata2    @5233                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 d_d_timer__LIT_5233 = 200.000000f;
-/* 80454F8C 0004 .sdata2    @5234                                                        */
+/* 80454F8C-80454F90 0004 .sdata2    @5234                                                        Float32Data */
 // 0x43160000
 SECTION_SDATA2 f32 d_d_timer__LIT_5234 = 150.000000f;
-/* 80454F90 0004 .sdata2    @5235                                                        */
+/* 80454F90-80454F94 0004 .sdata2    @5235                                                        Float32Data */
 // 0x41a00000
 SECTION_SDATA2 f32 LIT_5235 = 20.000000f;
-/* 80454F94 0004 .sdata2    @5325                                                        */
+/* 80454F94-80454F98 0004 .sdata2    @5325                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5325[4] = {
 	0x3E, 0x19, 0x99, 0x9A,
 };
-/* 80454F98 0004 .sdata2    @5326                                                        */
+/* 80454F98-80454F9C 0004 .sdata2    @5326                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 LIT_5326 = 0.500000f;
-/* 80454F9C 0004 .sdata2    @5327                                                        */
+/* 80454F9C-80454FA0 0004 .sdata2    @5327                                                        Float32Data */
 // 0x41900000
 SECTION_SDATA2 f32 LIT_5327 = 18.000000f;
-/* 80454FA0 0004 .sdata2    @5544                                                        */
+/* 80454FA0-80454FA4 0004 .sdata2    @5544                                                        Float32Data */
 // 0x435d0000
 SECTION_SDATA2 f32 LIT_5544 = 221.000000f;
-/* 80454FA4 0004 .sdata2    @5545                                                        */
+/* 80454FA4-80454FA8 0004 .sdata2    @5545                                                        Float32Data */
 // 0x43db8000
 SECTION_SDATA2 f32 LIT_5545 = 439.000000f;
-/* 80454FA8 0004 .sdata2    @5546                                                        */
+/* 80454FA8-80454FAC 0004 .sdata2    @5546                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 LIT_5546 = 32.000000f;
-/* 80454FAC 0004 .sdata2    @5547                                                        */
+/* 80454FAC-80454FB0 0004 .sdata2    @5547                                                        Float32Data */
 // 0x43d18000
 SECTION_SDATA2 f32 LIT_5547 = 419.000000f;
 }
@@ -324,7 +538,7 @@ SECTION_SDATA2 f32 LIT_5547 = 419.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8025CA0C 04F8 .text      _create__8dTimer_cFv                                         */
+/* 8025CA0C-8025CF04 04F8 .text      _create__8dTimer_cFv                                         Function */
 // dTimer_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -335,7 +549,7 @@ asm void _create__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025CF04 0438 .text      _execute__8dTimer_cFv                                        */
+/* 8025CF04-8025D33C 0438 .text      _execute__8dTimer_cFv                                        Function */
 // dTimer_c::_execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -346,7 +560,7 @@ asm void _execute__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D33C 0080 .text      _draw__8dTimer_cFv                                           */
+/* 8025D33C-8025D3BC 0080 .text      _draw__8dTimer_cFv                                           Function */
 // dTimer_c::_draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -357,7 +571,7 @@ asm void _draw__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D3BC 0168 .text      _delete__8dTimer_cFv                                         */
+/* 8025D3BC-8025D524 0168 .text      _delete__8dTimer_cFv                                         Function */
 // dTimer_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -368,7 +582,7 @@ asm void _delete__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D524 0014 .text      deleteCheck__8dTimer_cFv                                     */
+/* 8025D524-8025D538 0014 .text      deleteCheck__8dTimer_cFv                                     Function */
 // dTimer_c::deleteCheck(void)
 #pragma push
 #pragma optimization_level 0
@@ -379,7 +593,7 @@ asm void deleteCheck__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D538 00E0 .text      start__8dTimer_cFi                                           */
+/* 8025D538-8025D618 00E0 .text      start__8dTimer_cFi                                           Function */
 // dTimer_c::start(int)
 #pragma push
 #pragma optimization_level 0
@@ -390,8 +604,8 @@ asm void start__8dTimer_cFi() {
 }
 #pragma pop
 
-/* 8025D618 00F0 .text      start__8dTimer_cFis                                          */
-// dTimer_c::start(int, s16)
+/* 8025D618-8025D708 00F0 .text      start__8dTimer_cFis                                          Function */
+// dTimer_c::start(int, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -401,7 +615,7 @@ asm void start__8dTimer_cFis() {
 }
 #pragma pop
 
-/* 8025D708 00B8 .text      stock_start__8dTimer_cFv                                     */
+/* 8025D708-8025D7C0 00B8 .text      stock_start__8dTimer_cFv                                     Function */
 // dTimer_c::stock_start(void)
 #pragma push
 #pragma optimization_level 0
@@ -412,8 +626,8 @@ asm void stock_start__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D7C0 0028 .text      stock_start__8dTimer_cFs                                     */
-// dTimer_c::stock_start(s16)
+/* 8025D7C0-8025D7E8 0028 .text      stock_start__8dTimer_cFs                                     Function */
+// dTimer_c::stock_start(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -423,7 +637,7 @@ asm void stock_start__8dTimer_cFs() {
 }
 #pragma pop
 
-/* 8025D7E8 0084 .text      stop__8dTimer_cFUc                                           */
+/* 8025D7E8-8025D86C 0084 .text      stop__8dTimer_cFUc                                           Function */
 // dTimer_c::stop(u8)
 #pragma push
 #pragma optimization_level 0
@@ -434,7 +648,7 @@ asm void stop__8dTimer_cFUc() {
 }
 #pragma pop
 
-/* 8025D86C 00B4 .text      restart__8dTimer_cFUc                                        */
+/* 8025D86C-8025D920 00B4 .text      restart__8dTimer_cFUc                                        Function */
 // dTimer_c::restart(u8)
 #pragma push
 #pragma optimization_level 0
@@ -445,7 +659,7 @@ asm void restart__8dTimer_cFUc() {
 }
 #pragma pop
 
-/* 8025D920 00C0 .text      end__8dTimer_cFi                                             */
+/* 8025D920-8025D9E0 00C0 .text      end__8dTimer_cFi                                             Function */
 // dTimer_c::end(int)
 #pragma push
 #pragma optimization_level 0
@@ -456,7 +670,7 @@ asm void end__8dTimer_cFi() {
 }
 #pragma pop
 
-/* 8025D9E0 0010 .text      deleteRequest__8dTimer_cFv                                   */
+/* 8025D9E0-8025D9F0 0010 .text      deleteRequest__8dTimer_cFv                                   Function */
 // dTimer_c::deleteRequest(void)
 #pragma push
 #pragma optimization_level 0
@@ -467,7 +681,7 @@ asm void deleteRequest__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025D9F0 0064 .text      getTimeMs__8dTimer_cFv                                       */
+/* 8025D9F0-8025DA54 0064 .text      getTimeMs__8dTimer_cFv                                       Function */
 // dTimer_c::getTimeMs(void)
 #pragma push
 #pragma optimization_level 0
@@ -478,7 +692,7 @@ asm void getTimeMs__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025DA54 0048 .text      getLimitTimeMs__8dTimer_cFv                                  */
+/* 8025DA54-8025DA9C 0048 .text      getLimitTimeMs__8dTimer_cFv                                  Function */
 // dTimer_c::getLimitTimeMs(void)
 #pragma push
 #pragma optimization_level 0
@@ -489,7 +703,7 @@ asm void getLimitTimeMs__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025DA9C 0074 .text      getRestTimeMs__8dTimer_cFv                                   */
+/* 8025DA9C-8025DB10 0074 .text      getRestTimeMs__8dTimer_cFv                                   Function */
 // dTimer_c::getRestTimeMs(void)
 #pragma push
 #pragma optimization_level 0
@@ -500,7 +714,7 @@ asm void getRestTimeMs__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025DB10 0028 .text      isStart__8dTimer_cFv                                         */
+/* 8025DB10-8025DB38 0028 .text      isStart__8dTimer_cFv                                         Function */
 // dTimer_c::isStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -511,7 +725,7 @@ asm void isStart__8dTimer_cFv() {
 }
 #pragma pop
 
-/* 8025DB38 00A8 .text      __ct__21dDlst_TimerScrnDraw_cFv                              */
+/* 8025DB38-8025DBE0 00A8 .text      __ct__21dDlst_TimerScrnDraw_cFv                              Function */
 // dDlst_TimerScrnDraw_c::dDlst_TimerScrnDraw_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -522,7 +736,7 @@ asm void __ct__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025DBE0 03DC .text      setHIO__21dDlst_TimerScrnDraw_cFv                            */
+/* 8025DBE0-8025DFBC 03DC .text      setHIO__21dDlst_TimerScrnDraw_cFv                            Function */
 // dDlst_TimerScrnDraw_c::setHIO(void)
 #pragma push
 #pragma optimization_level 0
@@ -533,8 +747,8 @@ asm void setHIO__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025DFBC 0284 .text      setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive            */
-// dDlst_TimerScrnDraw_c::setScreen(s32, JKRArchive*)
+/* 8025DFBC-8025E240 0284 .text      setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive            Function */
+// dDlst_TimerScrnDraw_c::setScreen(long, JKRArchive*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -544,7 +758,7 @@ asm void setScreen__21dDlst_TimerScrnDraw_cFlP10JKRArchive() {
 }
 #pragma pop
 
-/* 8025E240 042C .text      setScreenBase__21dDlst_TimerScrnDraw_cFv                     */
+/* 8025E240-8025E66C 042C .text      setScreenBase__21dDlst_TimerScrnDraw_cFv                     Function */
 // dDlst_TimerScrnDraw_c::setScreenBase(void)
 #pragma push
 #pragma optimization_level 0
@@ -555,7 +769,7 @@ asm void setScreenBase__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025E66C 024C .text      setScreenBoatRace__21dDlst_TimerScrnDraw_cFv                 */
+/* 8025E66C-8025E8B8 024C .text      setScreenBoatRace__21dDlst_TimerScrnDraw_cFv                 Function */
 // dDlst_TimerScrnDraw_c::setScreenBoatRace(void)
 #pragma push
 #pragma optimization_level 0
@@ -566,7 +780,7 @@ asm void setScreenBoatRace__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025E8B8 0268 .text      setScreenRider__21dDlst_TimerScrnDraw_cFv                    */
+/* 8025E8B8-8025EB20 0268 .text      setScreenRider__21dDlst_TimerScrnDraw_cFv                    Function */
 // dDlst_TimerScrnDraw_c::setScreenRider(void)
 #pragma push
 #pragma optimization_level 0
@@ -577,7 +791,7 @@ asm void setScreenRider__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025EB20 013C .text      hideDenominator__21dDlst_TimerScrnDraw_cFv                   */
+/* 8025EB20-8025EC5C 013C .text      hideDenominator__21dDlst_TimerScrnDraw_cFv                   Function */
 // dDlst_TimerScrnDraw_c::hideDenominator(void)
 #pragma push
 #pragma optimization_level 0
@@ -588,7 +802,7 @@ asm void hideDenominator__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025EC5C 01C8 .text      deleteScreen__21dDlst_TimerScrnDraw_cFv                      */
+/* 8025EC5C-8025EE24 01C8 .text      deleteScreen__21dDlst_TimerScrnDraw_cFv                      Function */
 // dDlst_TimerScrnDraw_c::deleteScreen(void)
 #pragma push
 #pragma optimization_level 0
@@ -599,7 +813,7 @@ asm void deleteScreen__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025EE24 00A8 .text      changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei      */
+/* 8025EE24-8025EECC 00A8 .text      changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei      Function */
 // dDlst_TimerScrnDraw_c::changeNumberTexture(J2DPane*, int)
 #pragma push
 #pragma optimization_level 0
@@ -610,7 +824,7 @@ asm void changeNumberTexture__21dDlst_TimerScrnDraw_cFP7J2DPanei() {
 }
 #pragma pop
 
-/* 8025EECC 0024 .text      getNumber__21dDlst_TimerScrnDraw_cFi                         */
+/* 8025EECC-8025EEF0 0024 .text      getNumber__21dDlst_TimerScrnDraw_cFi                         Function */
 // dDlst_TimerScrnDraw_c::getNumber(int)
 #pragma push
 #pragma optimization_level 0
@@ -621,7 +835,7 @@ asm void getNumber__21dDlst_TimerScrnDraw_cFi() {
 }
 #pragma pop
 
-/* 8025EEF0 0290 .text      setTimer__21dDlst_TimerScrnDraw_cFi                          */
+/* 8025EEF0-8025F180 0290 .text      setTimer__21dDlst_TimerScrnDraw_cFi                          Function */
 // dDlst_TimerScrnDraw_c::setTimer(int)
 #pragma push
 #pragma optimization_level 0
@@ -632,7 +846,7 @@ asm void setTimer__21dDlst_TimerScrnDraw_cFi() {
 }
 #pragma pop
 
-/* 8025F180 0880 .text      setCounter__21dDlst_TimerScrnDraw_cFUcUc                     */
+/* 8025F180-8025FA00 0880 .text      setCounter__21dDlst_TimerScrnDraw_cFUcUc                     Function */
 // dDlst_TimerScrnDraw_c::setCounter(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -643,7 +857,7 @@ asm void setCounter__21dDlst_TimerScrnDraw_cFUcUc() {
 }
 #pragma pop
 
-/* 8025FA00 002C .text      setParentPos__21dDlst_TimerScrnDraw_cFff                     */
+/* 8025FA00-8025FA2C 002C .text      setParentPos__21dDlst_TimerScrnDraw_cFff                     Function */
 // dDlst_TimerScrnDraw_c::setParentPos(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -654,7 +868,7 @@ asm void setParentPos__21dDlst_TimerScrnDraw_cFff() {
 }
 #pragma pop
 
-/* 8025FA2C 0040 .text      setTimerPos__21dDlst_TimerScrnDraw_cFff                      */
+/* 8025FA2C-8025FA6C 0040 .text      setTimerPos__21dDlst_TimerScrnDraw_cFff                      Function */
 // dDlst_TimerScrnDraw_c::setTimerPos(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -665,7 +879,7 @@ asm void setTimerPos__21dDlst_TimerScrnDraw_cFff() {
 }
 #pragma pop
 
-/* 8025FA6C 002C .text      setCounterPos__21dDlst_TimerScrnDraw_cFff                    */
+/* 8025FA6C-8025FA98 002C .text      setCounterPos__21dDlst_TimerScrnDraw_cFff                    Function */
 // dDlst_TimerScrnDraw_c::setCounterPos(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -676,7 +890,7 @@ asm void setCounterPos__21dDlst_TimerScrnDraw_cFff() {
 }
 #pragma pop
 
-/* 8025FA98 002C .text      setImagePos__21dDlst_TimerScrnDraw_cFff                      */
+/* 8025FA98-8025FAC4 002C .text      setImagePos__21dDlst_TimerScrnDraw_cFff                      Function */
 // dDlst_TimerScrnDraw_c::setImagePos(f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -687,7 +901,7 @@ asm void setImagePos__21dDlst_TimerScrnDraw_cFff() {
 }
 #pragma pop
 
-/* 8025FAC4 00B0 .text      setShowType__21dDlst_TimerScrnDraw_cFUc                      */
+/* 8025FAC4-8025FB74 00B0 .text      setShowType__21dDlst_TimerScrnDraw_cFUc                      Function */
 // dDlst_TimerScrnDraw_c::setShowType(u8)
 #pragma push
 #pragma optimization_level 0
@@ -698,7 +912,7 @@ asm void setShowType__21dDlst_TimerScrnDraw_cFUc() {
 }
 #pragma pop
 
-/* 8025FB74 0424 .text      anime__21dDlst_TimerScrnDraw_cFv                             */
+/* 8025FB74-8025FF98 0424 .text      anime__21dDlst_TimerScrnDraw_cFv                             Function */
 // dDlst_TimerScrnDraw_c::anime(void)
 #pragma push
 #pragma optimization_level 0
@@ -709,7 +923,7 @@ asm void anime__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 8025FF98 024C .text      closeAnime__21dDlst_TimerScrnDraw_cFv                        */
+/* 8025FF98-802601E4 024C .text      closeAnime__21dDlst_TimerScrnDraw_cFv                        Function */
 // dDlst_TimerScrnDraw_c::closeAnime(void)
 #pragma push
 #pragma optimization_level 0
@@ -720,7 +934,7 @@ asm void closeAnime__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 802601E4 0390 .text      createGetIn__21dDlst_TimerScrnDraw_cF4cXyz                   */
+/* 802601E4-80260574 0390 .text      createGetIn__21dDlst_TimerScrnDraw_cF4cXyz                   Function */
 // dDlst_TimerScrnDraw_c::createGetIn(cXyz)
 #pragma push
 #pragma optimization_level 0
@@ -731,7 +945,7 @@ asm void createGetIn__21dDlst_TimerScrnDraw_cF4cXyz() {
 }
 #pragma pop
 
-/* 80260574 011C .text      createStart__21dDlst_TimerScrnDraw_cFUs                      */
+/* 80260574-80260690 011C .text      createStart__21dDlst_TimerScrnDraw_cFUs                      Function */
 // dDlst_TimerScrnDraw_c::createStart(u16)
 #pragma push
 #pragma optimization_level 0
@@ -742,7 +956,7 @@ asm void createStart__21dDlst_TimerScrnDraw_cFUs() {
 }
 #pragma pop
 
-/* 80260690 0418 .text      draw__21dDlst_TimerScrnDraw_cFv                              */
+/* 80260690-80260AA8 0418 .text      draw__21dDlst_TimerScrnDraw_cFv                              Function */
 // dDlst_TimerScrnDraw_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -753,7 +967,7 @@ asm void draw__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 80260AA8 002C .text      checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv                */
+/* 80260AA8-80260AD4 002C .text      checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv                Function */
 // dDlst_TimerScrnDraw_c::checkStartAnimeEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -764,7 +978,7 @@ asm void checkStartAnimeEnd__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 80260AD4 0080 .text      playBckAnimation__21dDlst_TimerScrnDraw_cFf                  */
+/* 80260AD4-80260B54 0080 .text      playBckAnimation__21dDlst_TimerScrnDraw_cFf                  Function */
 // dDlst_TimerScrnDraw_c::playBckAnimation(f32)
 #pragma push
 #pragma optimization_level 0
@@ -775,7 +989,7 @@ asm void playBckAnimation__21dDlst_TimerScrnDraw_cFf() {
 }
 #pragma pop
 
-/* 80260B54 03B0 .text      drawPikari__21dDlst_TimerScrnDraw_cFi                        */
+/* 80260B54-80260F04 03B0 .text      drawPikari__21dDlst_TimerScrnDraw_cFi                        Function */
 // dDlst_TimerScrnDraw_c::drawPikari(int)
 #pragma push
 #pragma optimization_level 0
@@ -786,7 +1000,7 @@ asm void drawPikari__21dDlst_TimerScrnDraw_cFi() {
 }
 #pragma pop
 
-/* 80260F04 0020 .text      dTimer_Draw__FP8dTimer_c                                     */
+/* 80260F04-80260F24 0020 .text      dTimer_Draw__FP8dTimer_c                                     Function */
 }
 
 #pragma push
@@ -799,7 +1013,7 @@ asm void dTimer_Draw(dTimer_c*) {
 #pragma pop
 
 extern "C" {
-/* 80260F24 0020 .text      dTimer_Execute__FP8dTimer_c                                  */
+/* 80260F24-80260F44 0020 .text      dTimer_Execute__FP8dTimer_c                                  Function */
 }
 
 #pragma push
@@ -812,13 +1026,13 @@ asm void dTimer_Execute(dTimer_c*) {
 #pragma pop
 
 extern "C" {
-/* 80260F44 0008 .text      dTimer_IsDelete__FP8dTimer_c                                 */
+/* 80260F44-80260F4C 0008 .text      dTimer_IsDelete__FP8dTimer_c                                 ReturnIntegerFunction */
 // dTimer_IsDelete(dTimer_c*)
 int dTimer_IsDelete__FP8dTimer_c() {
 	return 1;
 }
 
-/* 80260F4C 0020 .text      dTimer_Delete__FP8dTimer_c                                   */
+/* 80260F4C-80260F6C 0020 .text      dTimer_Delete__FP8dTimer_c                                   Function */
 }
 
 #pragma push
@@ -831,7 +1045,7 @@ asm void dTimer_Delete(dTimer_c*) {
 #pragma pop
 
 extern "C" {
-/* 80260F6C 0020 .text      dTimer_Create__FP9msg_class                                  */
+/* 80260F6C-80260F8C 0020 .text      dTimer_Create__FP9msg_class                                  Function */
 }
 
 #pragma push
@@ -844,20 +1058,20 @@ asm void dTimer_Create(msg_class*) {
 #pragma pop
 
 extern "C" {
-/* 80260F8C 00A8 .text      dTimer_createTimer__FlUlUcUcffff                             */
+/* 80260F8C-80261034 00A8 .text      dTimer_createTimer__FlUlUcUcffff                             Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32) {
+asm void dTimer_createTimer(long, u32, u8, u8, f32, f32, f32, f32) {
 	nofralloc
 #include "_include/d/d_timer/dTimer_createTimer__FlUlUcUcffff.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80261034 00CC .text      dTimer_createStockTimer__Fv                                  */
+/* 80261034-80261100 00CC .text      dTimer_createStockTimer__Fv                                  Function */
 }
 
 #pragma push
@@ -870,8 +1084,8 @@ asm void dTimer_createStockTimer(void) {
 #pragma pop
 
 extern "C" {
-/* 80261100 0088 .text      dTimer_createGetIn2D__Fl4cXyz                                */
-// dTimer_createGetIn2D(s32, cXyz)
+/* 80261100-80261188 0088 .text      dTimer_createGetIn2D__Fl4cXyz                                Function */
+// dTimer_createGetIn2D(long, cXyz)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,20 +1095,20 @@ asm void dTimer_createGetIn2D__Fl4cXyz() {
 }
 #pragma pop
 
-/* 80261188 0068 .text      dTimer_createStart2D__FlUs                                   */
+/* 80261188-802611F0 0068 .text      dTimer_createStart2D__FlUs                                   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dTimer_createStart2D(s32, u16) {
+asm void dTimer_createStart2D(long, u16) {
 	nofralloc
 #include "_include/d/d_timer/dTimer_createStart2D__FlUs.s"
 }
 #pragma pop
 
 extern "C" {
-/* 802611F0 0054 .text      dTimer_isStart__Fv                                           */
+/* 802611F0-80261244 0054 .text      dTimer_isStart__Fv                                           Function */
 }
 
 #pragma push
@@ -907,7 +1121,7 @@ asm void dTimer_isStart(void) {
 #pragma pop
 
 extern "C" {
-/* 80261244 0054 .text      dTimer_getRestTimeMs__Fv                                     */
+/* 80261244-80261298 0054 .text      dTimer_getRestTimeMs__Fv                                     Function */
 }
 
 #pragma push
@@ -920,7 +1134,7 @@ asm void dTimer_getRestTimeMs(void) {
 #pragma pop
 
 extern "C" {
-/* 80261298 0054 .text      dTimer_show__Fv                                              */
+/* 80261298-802612EC 0054 .text      dTimer_show__Fv                                              Function */
 }
 
 #pragma push
@@ -933,7 +1147,7 @@ asm void dTimer_show(void) {
 #pragma pop
 
 extern "C" {
-/* 802612EC 0054 .text      dTimer_hide__Fv                                              */
+/* 802612EC-80261340 0054 .text      dTimer_hide__Fv                                              Function */
 }
 
 #pragma push
@@ -946,7 +1160,7 @@ asm void dTimer_hide(void) {
 #pragma pop
 
 extern "C" {
-/* 80261340 0054 .text      dTimer_isReadyFlag__Fv                                       */
+/* 80261340-80261394 0054 .text      dTimer_isReadyFlag__Fv                                       Function */
 }
 
 #pragma push
@@ -959,7 +1173,7 @@ asm void dTimer_isReadyFlag(void) {
 #pragma pop
 
 extern "C" {
-/* 80261394 0048 .text      __dt__21dDlst_TimerScrnDraw_cFv                              */
+/* 80261394-802613DC 0048 .text      __dt__21dDlst_TimerScrnDraw_cFv                              Function */
 // dDlst_TimerScrnDraw_c::~dDlst_TimerScrnDraw_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -970,7 +1184,7 @@ asm void __dt__21dDlst_TimerScrnDraw_cFv() {
 }
 #pragma pop
 
-/* 802613DC 0040 .text      createGetIn__8dTimer_cF4cXyz                                 */
+/* 802613DC-8026141C 0040 .text      createGetIn__8dTimer_cF4cXyz                                 Function */
 // dTimer_c::createGetIn(cXyz)
 #pragma push
 #pragma optimization_level 0

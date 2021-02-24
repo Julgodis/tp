@@ -8,8 +8,8 @@
 // Additional Symbols:
 // 
 
-struct JKRHeap;
 struct JKRSolidHeap;
+struct JKRHeap;
 struct Vec;
 
 extern void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32); /* mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl */
@@ -19,6 +19,7 @@ extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHea
 extern void mDoLib_project(Vec*, Vec*); /* mDoLib_project__FP3VecP3Vec */
 extern void fopAcIt_Judge(void* (*)(void*, void*), void*); /* fopAcIt_Judge__FPFPvPv_PvPv */
 extern void fpcSch_JudgeByID(void*, void*); /* fpcSch_JudgeByID__FPvPv */
+extern void daPy_addCalcShort(short*, short, short, short, short); /* daPy_addCalcShort__FPsssss */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
 extern void cM_rndF(f32); /* cM_rndF__Ff */
 extern void* operator new(u32); /* __nw__FUl */
@@ -27,96 +28,301 @@ extern void* operator new[](u32, int); /* __nwa__FUli */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void scaleM__14mDoMtx_stack_cFfff();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void mDoLib_project__FP3VecP3Vec();
+/* Function             */
 extern void fopAcIt_Judge__FPFPvPv_PvPv();
+/* Function             */
 extern void fpcSch_JudgeByID__FPvPv();
+/* Function             */
 extern void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+/* Function             */
 extern void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+/* Function             */
 extern void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+/* Function             */
 extern void setLookPosFromOut__9daAlink_cFP4cXyz();
+/* Function             */
 extern void startRestartRoom__9daAlink_cFUliii();
+/* Function             */
 extern void setDamagePoint__9daAlink_cFiiii();
+/* Function             */
 extern void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c();
+/* Function             */
 extern void checkBoomerangChargeEnd__9daAlink_cFv();
+/* Function             */
 extern void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c();
+/* Function             */
 extern void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi();
+/* Function             */
 extern void __dt__18daPy_sightPacket_cFv();
+/* Function             */
+extern void checkAnmEnd__16daPy_frameCtrl_cFv();
+/* Function             */
+extern void updateFrame__16daPy_frameCtrl_cFv();
+/* Function             */
+extern void setFrameCtrl__16daPy_frameCtrl_cFUcssff();
+/* Function             */
+extern void initOffset__20daPy_boomerangMove_cFPC4cXyz();
+/* Function             */
+extern void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs();
+/* Function             */
 extern void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz();
+/* Function             */
+extern void setParamData__9daPy_py_cFiiii();
+/* Function             */
+extern void checkFishingRodItem__9daPy_py_cFi();
+/* Function             */
+extern void checkBombItem__9daPy_py_cFi();
+/* Function             */
+extern void checkBottleItem__9daPy_py_cFi();
+/* Function             */
+extern void checkDrinkBottleItem__9daPy_py_cFi();
+/* Function             */
+extern void checkOilBottleItem__9daPy_py_cFi();
+/* Function             */
+extern void checkOpenBottleItem__9daPy_py_cFi();
+/* Function             */
+extern void checkBowItem__9daPy_py_cFi();
+/* Function             */
+extern void checkHookshotItem__9daPy_py_cFi();
+/* Function             */
+extern void checkTradeItem__9daPy_py_cFi();
+/* Function             */
+extern void checkDungeonWarpItem__9daPy_py_cFi();
+/* Function             */
+extern void setActor__16daPy_actorKeep_cFv();
+/* Function             */
+extern void setData__16daPy_actorKeep_cFP10fopAc_ac_c();
+/* Function             */
 extern void clearData__16daPy_actorKeep_cFv();
+/* Function             */
+extern void __ct__14daPy_anmHeap_cFUl();
+/* Function             */
+extern void __dt__14daPy_anmHeap_cFv();
+/* Function             */
 extern void initData__14daPy_anmHeap_cFv();
+/* Function             */
+extern void mallocBuffer__14daPy_anmHeap_cFv();
+/* Function             */
+extern void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE();
+/* Function             */
 extern void loadData__14daPy_anmHeap_cFUs();
+/* Function             */
+extern void loadDataIdx__14daPy_anmHeap_cFUs();
+/* Function             */
+extern void loadDataPriIdx__14daPy_anmHeap_cFUs();
+/* Function             */
+extern void loadDataDemoRID__14daPy_anmHeap_cFUsUs();
+/* Function             */
 extern void setAnimeHeap__14daPy_anmHeap_cFv();
+/* Function             */
 extern void draw__18daPy_sightPacket_cFv();
+/* Function             */
+extern void setSight__18daPy_sightPacket_cFv();
+/* Function             */
+extern void setSightImage__18daPy_sightPacket_cFP7ResTIMG();
+/* Function             */
+extern void checkMasterSwordEquip__9daPy_py_cFv();
+/* Function             */
+extern void checkWoodShieldEquip__9daPy_py_cFv();
+/* Function             */
+extern void getAttentionOffsetY__9daPy_py_cFv();
+/* Function             */
+extern void checkNowWolfEyeUp__9daPy_py_cFv();
+/* Function             */
+extern void forceRestartRoom__9daPy_py_cFiUli();
+/* Function             */
+extern void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi();
+/* Function             */
+extern void cancelFmChainGrab__9daPy_py_cFv();
+/* Function             */
+extern void setLookPos__9daPy_py_cFP4cXyz();
+/* Function             */
+extern void setPlayerSe__9daPy_py_cFUl();
+/* Function             */
 extern void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
+/* Function             */
+extern void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
+/* Function             */
 extern void checkRoomRestartStart__9daPy_py_cFv();
+/* Function             */
+extern void checkCarryStartLightBallA__9daPy_py_cFv();
+/* Function             */
+extern void checkCarryStartLightBallB__9daPy_py_cFv();
+/* Function             */
+extern void getSpinnerRideSpeed__9daPy_py_cCFv();
+/* Function             */
+extern void checkSpinnerReflectEffect__9daPy_py_cFv();
+/* Function             */
+extern void checkBoomerangCharge__9daPy_py_cFv();
+/* ReturnIntegerFunction */
+extern  int checkBoomerangChargeTime__9daPy_py_cFv();
+/* Function             */
 extern void getThrowBoomerangActor__9daPy_py_cFv();
+/* Function             */
+extern void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c();
+/* Function             */
+extern void setPlayerDamage__9daPy_py_cFii();
+/* Function             */
+extern void setMidnaMotionNum__9daPy_py_cFi();
+/* Function             */
+extern void setMidnaFaceNum__9daPy_py_cFi();
+/* Function             */
+extern void daPy_addCalcShort__FPsssss();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void cM_rndF__Ff();
+/* Function             */
 extern void freeAll__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __nwa__FUli();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void readIdxResource__10JKRArchiveFPvUlUl();
+/* Function             */
 extern void reinitGX__6J3DSysFv();
+/* Function             */
 extern void update__12J3DFrameCtrlFv();
+/* Function             */
 extern void __ct__15J3DAnmTransformFsPfPsPf();
+/* Function             */
 extern void __ct__19J3DAnmTextureSRTKeyFv();
+/* Function             */
 extern void __ct__16J3DAnmTexPatternFv();
+/* Function             */
 extern void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXTrans();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmt();
+/* Function             */
 extern void GXInitTexObj();
+/* Function             */
 extern void GXInitTexObjLOD();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXSetNumIndStages();
+/* Function             */
 extern void GXSetTevColor();
+/* Function             */
 extern void GXSetTevOrder();
+/* Function             */
 extern void GXCallDisplayList();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__18mDoExt_transAnmBas[5];
-SECTION_DATA extern const void* __vt__18J3DAnmTransformKey[5];
-SECTION_DATA extern u8 data_803BA0A0[32];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80393DA8[12];
+/* InitializedData      */
+SECTION_RODATA extern const u8 data_80393DB4[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18mDoExt_transAnmBas[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18J3DAnmTransformKey[5];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803BA0A0[8];
+/* InitializedData      */
 SECTION_DATA extern u8 l_sightDL[140];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18daPy_sightPacket_c[5];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 now__14mDoMtx_stack_c[48];
-SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_midnaActor__9daPy_py_c[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_8045101C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_player__LIT_4215[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_a_player__LIT_4237;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4247;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4248;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_player__LIT_4249;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4250;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_player__LIT_4332;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_player__LIT_4333;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_player__LIT_4334[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_a_player__LIT_4379;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_4380;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_4381[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453648[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453650[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453658[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453660[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453668[8];
+/* InitializedData      */
+SECTION_SDATA2 extern u8 data_80453670[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_player__LIT_4668[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_player__LIT_4669[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_player__LIT_4699;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_a_player__LIT_4741;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_a_player__LIT_4742[8];
 }
 
@@ -126,13 +332,13 @@ SECTION_SDATA2 extern u8 d_d_a_player__LIT_4742[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80393DA8 000A .rodata    twglArcName$4616                                             */
+/* 80393DA8-80393DB4 000A .rodata    twglArcName$4616                                             InitializedData */
 SECTION_RODATA const u8 data_80393DA8[12] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x4C, 0x6B, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80393DB4 000A .rodata    twgwArcName$4617                                             */
+/* 80393DB4-80393DC0 000A .rodata    twgwArcName$4617                                             InitializedData */
 SECTION_RODATA const u8 data_80393DB4[12] = {
 	0x54, 0x57, 0x47, 0x61, 0x74, 0x65, 0x5F, 0x57, 0x66, 0x00,
 	/* padding */
@@ -146,12 +352,18 @@ SECTION_RODATA const u8 data_80393DB4[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BA0A0 0020 .data      arcName$4622                                                 */
-SECTION_DATA u8 data_803BA0A0[32] = {
-	0x80, 0x45, 0x36, 0x48, 0x80, 0x45, 0x36, 0x50, 0x80, 0x39, 0x3D, 0xA8, 0x80, 0x39, 0x3D, 0xB4,
-	0x80, 0x45, 0x36, 0x58, 0x80, 0x45, 0x36, 0x60, 0x80, 0x45, 0x36, 0x68, 0x80, 0x45, 0x36, 0x70,
+/* 803BA0A0-803BA0C0 0020 .data      arcName$4622                                                 SymbolReferenceArrayData */
+SECTION_DATA void* data_803BA0A0[8] = {
+	(void*)&data_80453648,
+	(void*)&data_80453650,
+	(void*)&data_80393DA8,
+	(void*)&data_80393DB4,
+	(void*)&data_80453658,
+	(void*)&data_80453660,
+	(void*)&data_80453668,
+	(void*)&data_80453670,
 };
-/* 803BA0C0 0089 .data      l_sightDL                                                    */
+/* 803BA0C0-803BA14C 0089 .data      l_sightDL                                                    InitializedData */
 SECTION_DATA u8 l_sightDL[140] = {
 	0x10, 0x00, 0x00, 0x10, 0x40, 0xFF, 0xFF, 0x42, 0x80, 0x08, 0x30, 0x3C, 0xF3, 0xCF, 0x00, 0x10,
 	0x00, 0x00, 0x10, 0x18, 0x3C, 0xF3, 0xCF, 0x00, 0x61, 0x28, 0x38, 0x03, 0xC0, 0x61, 0xC0, 0x08,
@@ -165,8 +377,8 @@ SECTION_DATA u8 l_sightDL[140] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803BA14C 0010 .data      __vt__18daPy_sightPacket_c                                   */
-SECTION_DATA const  void* __vt__18daPy_sightPacket_c[5] = {
+/* 803BA14C-803BA160 0010 .data      __vt__18daPy_sightPacket_c                                   VTableData */
+SECTION_DATA void* __vt__18daPy_sightPacket_c[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__18daPy_sightPacket_cFv,
@@ -182,96 +394,96 @@ SECTION_DATA const  void* __vt__18daPy_sightPacket_c[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80453600 0004 .sdata2    @4215                                                        */
+/* 80453600-80453608 0004 .sdata2    @4215                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_player__LIT_4215[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453608 0008 .sdata2    @4237                                                        */
+/* 80453608-80453610 0008 .sdata2    @4237                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_a_player__LIT_4237 = 4503601774854144.000000;
-/* 80453610 0004 .sdata2    @4247                                                        */
+/* 80453610-80453614 0004 .sdata2    @4247                                                        Float32Data */
 // 0x41f00000
 SECTION_SDATA2 f32 LIT_4247 = 30.000000f;
-/* 80453614 0004 .sdata2    @4248                                                        */
+/* 80453614-80453618 0004 .sdata2    @4248                                                        Float32Data */
 // 0x428c0000
 SECTION_SDATA2 f32 LIT_4248 = 70.000000f;
-/* 80453618 0004 .sdata2    @4249                                                        */
+/* 80453618-8045361C 0004 .sdata2    @4249                                                        Float32Data */
 // 0x42480000
 SECTION_SDATA2 f32 d_d_a_player__LIT_4249 = 50.000000f;
-/* 8045361C 0004 .sdata2    @4250                                                        */
+/* 8045361C-80453620 0004 .sdata2    @4250                                                        Float32Data */
 // 0x47800000
 SECTION_SDATA2 f32 LIT_4250 = 65536.000000f;
-/* 80453620 0004 .sdata2    @4332                                                        */
+/* 80453620-80453624 0004 .sdata2    @4332                                                        Float32Data */
 // 0x43960000
 SECTION_SDATA2 f32 d_d_a_player__LIT_4332 = 300.000000f;
-/* 80453624 0004 .sdata2    @4333                                                        */
+/* 80453624-80453628 0004 .sdata2    @4333                                                        Float32Data */
 // 0xc42f0000
 SECTION_SDATA2 f32 d_d_a_player__LIT_4333 = -700.000000f;
-/* 80453628 0004 .sdata2    @4334                                                        */
+/* 80453628-80453630 0004 .sdata2    @4334                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_player__LIT_4334[8] = {
 	0x45, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80453630 0008 .sdata2    @4379                                                        */
+/* 80453630-80453638 0008 .sdata2    @4379                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_a_player__LIT_4379 = 0.500000;
-/* 80453638 0008 .sdata2    @4380                                                        */
+/* 80453638-80453640 0008 .sdata2    @4380                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 LIT_4380 = 3.000000;
-/* 80453640 0008 .sdata2    @4381                                                        */
+/* 80453640-80453648 0008 .sdata2    @4381                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_4381[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80453648 0008 .sdata2    sumouArcName$4614                                            */
+/* 80453648-80453650 0008 .sdata2    sumouArcName$4614                                            InitializedData */
 SECTION_SDATA2 u8 data_80453648[8] = {
 	0x61, 0x6C, 0x53, 0x75, 0x6D, 0x6F, 0x75, 0x00,
 };
-/* 80453650 0005 .sdata2    ocArcName$4615                                               */
+/* 80453650-80453658 0005 .sdata2    ocArcName$4615                                               InitializedData */
 SECTION_SDATA2 u8 data_80453650[8] = {
 	0x42, 0x5F, 0x6F, 0x68, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 80453658 0005 .sdata2    drArcName$4618                                               */
+/* 80453658-80453660 0005 .sdata2    drArcName$4618                                               InitializedData */
 SECTION_SDATA2 u8 data_80453658[8] = {
 	0x42, 0x5F, 0x44, 0x52, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 80453660 0008 .sdata2    msDemoArcName$4619                                           */
+/* 80453660-80453668 0008 .sdata2    msDemoArcName$4619                                           InitializedData */
 SECTION_SDATA2 u8 data_80453660[8] = {
 	0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00,
 };
-/* 80453668 0006 .sdata2    lastGanonArcName$4620                                        */
+/* 80453668-80453670 0006 .sdata2    lastGanonArcName$4620                                        InitializedData */
 SECTION_SDATA2 u8 data_80453668[8] = {
 	0x42, 0x5F, 0x67, 0x6E, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80453670 0006 .sdata2    pigGanonArcName$4621                                         */
+/* 80453670-80453678 0006 .sdata2    pigGanonArcName$4621                                         InitializedData */
 SECTION_SDATA2 u8 data_80453670[8] = {
 	0x42, 0x5F, 0x6D, 0x67, 0x6E, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 80453678 0004 .sdata2    @4668                                                        */
+/* 80453678-8045367C 0004 .sdata2    @4668                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_player__LIT_4668[4] = {
 	0xFF, 0x80, 0x00, 0xFF,
 };
-/* 8045367C 0004 .sdata2    @4669                                                        */
+/* 8045367C-80453680 0004 .sdata2    @4669                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_player__LIT_4669[4] = {
 	0x32, 0x14, 0x00, 0xFF,
 };
-/* 80453680 0004 .sdata2    @4699                                                        */
+/* 80453680-80453684 0004 .sdata2    @4699                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 d_d_a_player__LIT_4699 = 32.000000f;
-/* 80453684 0004 .sdata2    @4741                                                        */
+/* 80453684-80453688 0004 .sdata2    @4741                                                        Float32Data */
 // 0xc1480000
 SECTION_SDATA2 f32 d_d_a_player__LIT_4741 = -12.500000f;
-/* 80453688 0004 .sdata2    @4742                                                        */
+/* 80453688-80453690 0004 .sdata2    @4742                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_a_player__LIT_4742[8] = {
 	0x42, 0x66, 0x00, 0x00,
 	/* padding */
@@ -285,9 +497,9 @@ SECTION_SDATA2 u8 d_d_a_player__LIT_4742[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451018 0004 .sbss      m_midnaActor__9daPy_py_c                                     */
+/* 80451018-8045101C 0004 .sbss      m_midnaActor__9daPy_py_c                                     ZeroInitializedData */
 SECTION_SBSS u8 m_midnaActor__9daPy_py_c[4];
-/* 8045101C 0004 .sbss      merged_8045101C                                              */
+/* 8045101C-80451020 0004 .sbss      merged_8045101C                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_8045101C[4];
 /* 8045101C 0002 m_dropAngleY__20daPy_boomerangMove_c */
 /* 8045101E 0002 m_eventKeepFlg__20daPy_boomerangMove_c */
@@ -299,7 +511,7 @@ SECTION_SBSS u8 merged_8045101C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8015E4CC 0044 .text      checkAnmEnd__16daPy_frameCtrl_cFv                            */
+/* 8015E4CC-8015E510 0044 .text      checkAnmEnd__16daPy_frameCtrl_cFv                            Function */
 // daPy_frameCtrl_c::checkAnmEnd(void)
 #pragma push
 #pragma optimization_level 0
@@ -310,7 +522,7 @@ asm void checkAnmEnd__16daPy_frameCtrl_cFv() {
 }
 #pragma pop
 
-/* 8015E510 0034 .text      updateFrame__16daPy_frameCtrl_cFv                            */
+/* 8015E510-8015E544 0034 .text      updateFrame__16daPy_frameCtrl_cFv                            Function */
 // daPy_frameCtrl_c::updateFrame(void)
 #pragma push
 #pragma optimization_level 0
@@ -321,8 +533,8 @@ asm void updateFrame__16daPy_frameCtrl_cFv() {
 }
 #pragma pop
 
-/* 8015E544 006C .text      setFrameCtrl__16daPy_frameCtrl_cFUcssff                      */
-// daPy_frameCtrl_c::setFrameCtrl(u8, s16, s16, f32, f32)
+/* 8015E544-8015E5B0 006C .text      setFrameCtrl__16daPy_frameCtrl_cFUcssff                      Function */
+// daPy_frameCtrl_c::setFrameCtrl(u8, short, short, f32, f32)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -332,7 +544,7 @@ asm void setFrameCtrl__16daPy_frameCtrl_cFUcssff() {
 }
 #pragma pop
 
-/* 8015E5B0 00A4 .text      initOffset__20daPy_boomerangMove_cFPC4cXyz                   */
+/* 8015E5B0-8015E654 00A4 .text      initOffset__20daPy_boomerangMove_cFPC4cXyz                   Function */
 // daPy_boomerangMove_c::initOffset(const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -343,8 +555,8 @@ asm void initOffset__20daPy_boomerangMove_cFPC4cXyz() {
 }
 #pragma pop
 
-/* 8015E654 0228 .text      posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs       */
-// daPy_boomerangMove_c::posMove(cXyz*, s16*, fopAc_ac_c*, s16)
+/* 8015E654-8015E87C 0228 .text      posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs       Function */
+// daPy_boomerangMove_c::posMove(cXyz*, short*, fopAc_ac_c*, short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -354,7 +566,7 @@ asm void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs() {
 }
 #pragma pop
 
-/* 8015E87C 0190 .text      bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz           */
+/* 8015E87C-8015EA0C 0190 .text      bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz           Function */
 // daPy_boomerangMove_c::bgCheckAfterOffset(const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -365,7 +577,7 @@ asm void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz() {
 }
 #pragma pop
 
-/* 8015EA0C 0014 .text      setParamData__9daPy_py_cFiiii                                */
+/* 8015EA0C-8015EA20 0014 .text      setParamData__9daPy_py_cFiiii                                Function */
 // daPy_py_c::setParamData(int, int, int, int)
 #pragma push
 #pragma optimization_level 0
@@ -376,7 +588,7 @@ asm void setParamData__9daPy_py_cFiiii() {
 }
 #pragma pop
 
-/* 8015EA20 0028 .text      checkFishingRodItem__9daPy_py_cFi                            */
+/* 8015EA20-8015EA48 0028 .text      checkFishingRodItem__9daPy_py_cFi                            Function */
 // daPy_py_c::checkFishingRodItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -387,7 +599,7 @@ asm void checkFishingRodItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EA48 0040 .text      checkBombItem__9daPy_py_cFi                                  */
+/* 8015EA48-8015EA88 0040 .text      checkBombItem__9daPy_py_cFi                                  Function */
 // daPy_py_c::checkBombItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -398,7 +610,7 @@ asm void checkBombItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EA88 0050 .text      checkBottleItem__9daPy_py_cFi                                */
+/* 8015EA88-8015EAD8 0050 .text      checkBottleItem__9daPy_py_cFi                                Function */
 // daPy_py_c::checkBottleItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -409,7 +621,7 @@ asm void checkBottleItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EAD8 0068 .text      checkDrinkBottleItem__9daPy_py_cFi                           */
+/* 8015EAD8-8015EB40 0068 .text      checkDrinkBottleItem__9daPy_py_cFi                           Function */
 // daPy_py_c::checkDrinkBottleItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -420,7 +632,7 @@ asm void checkDrinkBottleItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EB40 0028 .text      checkOilBottleItem__9daPy_py_cFi                             */
+/* 8015EB40-8015EB68 0028 .text      checkOilBottleItem__9daPy_py_cFi                             Function */
 // daPy_py_c::checkOilBottleItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -431,7 +643,7 @@ asm void checkOilBottleItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EB68 0028 .text      checkOpenBottleItem__9daPy_py_cFi                            */
+/* 8015EB68-8015EB90 0028 .text      checkOpenBottleItem__9daPy_py_cFi                            Function */
 // daPy_py_c::checkOpenBottleItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -442,7 +654,7 @@ asm void checkOpenBottleItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EB90 0028 .text      checkBowItem__9daPy_py_cFi                                   */
+/* 8015EB90-8015EBB8 0028 .text      checkBowItem__9daPy_py_cFi                                   Function */
 // daPy_py_c::checkBowItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -453,7 +665,7 @@ asm void checkBowItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EBB8 0020 .text      checkHookshotItem__9daPy_py_cFi                              */
+/* 8015EBB8-8015EBD8 0020 .text      checkHookshotItem__9daPy_py_cFi                              Function */
 // daPy_py_c::checkHookshotItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -464,7 +676,7 @@ asm void checkHookshotItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EBD8 0050 .text      checkTradeItem__9daPy_py_cFi                                 */
+/* 8015EBD8-8015EC28 0050 .text      checkTradeItem__9daPy_py_cFi                                 Function */
 // daPy_py_c::checkTradeItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -475,7 +687,7 @@ asm void checkTradeItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EC28 0020 .text      checkDungeonWarpItem__9daPy_py_cFi                           */
+/* 8015EC28-8015EC48 0020 .text      checkDungeonWarpItem__9daPy_py_cFi                           Function */
 // daPy_py_c::checkDungeonWarpItem(int)
 #pragma push
 #pragma optimization_level 0
@@ -486,7 +698,7 @@ asm void checkDungeonWarpItem__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015EC48 0070 .text      setActor__16daPy_actorKeep_cFv                               */
+/* 8015EC48-8015ECB8 0070 .text      setActor__16daPy_actorKeep_cFv                               Function */
 // daPy_actorKeep_c::setActor(void)
 #pragma push
 #pragma optimization_level 0
@@ -497,7 +709,7 @@ asm void setActor__16daPy_actorKeep_cFv() {
 }
 #pragma pop
 
-/* 8015ECB8 0044 .text      setData__16daPy_actorKeep_cFP10fopAc_ac_c                    */
+/* 8015ECB8-8015ECFC 0044 .text      setData__16daPy_actorKeep_cFP10fopAc_ac_c                    Function */
 // daPy_actorKeep_c::setData(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -508,7 +720,7 @@ asm void setData__16daPy_actorKeep_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8015ECFC 0014 .text      clearData__16daPy_actorKeep_cFv                              */
+/* 8015ECFC-8015ED10 0014 .text      clearData__16daPy_actorKeep_cFv                              Function */
 // daPy_actorKeep_c::clearData(void)
 #pragma push
 #pragma optimization_level 0
@@ -519,7 +731,7 @@ asm void clearData__16daPy_actorKeep_cFv() {
 }
 #pragma pop
 
-/* 8015ED10 0040 .text      __ct__14daPy_anmHeap_cFUl                                    */
+/* 8015ED10-8015ED50 0040 .text      __ct__14daPy_anmHeap_cFUl                                    Function */
 // daPy_anmHeap_c::daPy_anmHeap_c(u32)
 #pragma push
 #pragma optimization_level 0
@@ -530,7 +742,7 @@ asm void __ct__14daPy_anmHeap_cFUl() {
 }
 #pragma pop
 
-/* 8015ED50 005C .text      __dt__14daPy_anmHeap_cFv                                     */
+/* 8015ED50-8015EDAC 005C .text      __dt__14daPy_anmHeap_cFv                                     Function */
 // daPy_anmHeap_c::~daPy_anmHeap_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -541,7 +753,7 @@ asm void __dt__14daPy_anmHeap_cFv() {
 }
 #pragma pop
 
-/* 8015EDAC 0018 .text      initData__14daPy_anmHeap_cFv                                 */
+/* 8015EDAC-8015EDC4 0018 .text      initData__14daPy_anmHeap_cFv                                 Function */
 // daPy_anmHeap_c::initData(void)
 #pragma push
 #pragma optimization_level 0
@@ -552,7 +764,7 @@ asm void initData__14daPy_anmHeap_cFv() {
 }
 #pragma pop
 
-/* 8015EDC4 003C .text      mallocBuffer__14daPy_anmHeap_cFv                             */
+/* 8015EDC4-8015EE00 003C .text      mallocBuffer__14daPy_anmHeap_cFv                             Function */
 // daPy_anmHeap_c::mallocBuffer(void)
 #pragma push
 #pragma optimization_level 0
@@ -563,7 +775,7 @@ asm void mallocBuffer__14daPy_anmHeap_cFv() {
 }
 #pragma pop
 
-/* 8015EE00 0184 .text      createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE */
+/* 8015EE00-8015EF84 0184 .text      createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE Function */
 // daPy_anmHeap_c::createHeap(daPy_anmHeap_c::daAlinkHEAP_TYPE)
 #pragma push
 #pragma optimization_level 0
@@ -574,7 +786,7 @@ asm void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE() {
 }
 #pragma pop
 
-/* 8015EF84 00E4 .text      loadData__14daPy_anmHeap_cFUs                                */
+/* 8015EF84-8015F068 00E4 .text      loadData__14daPy_anmHeap_cFUs                                Function */
 // daPy_anmHeap_c::loadData(u16)
 #pragma push
 #pragma optimization_level 0
@@ -585,7 +797,7 @@ asm void loadData__14daPy_anmHeap_cFUs() {
 }
 #pragma pop
 
-/* 8015F068 0068 .text      loadDataIdx__14daPy_anmHeap_cFUs                             */
+/* 8015F068-8015F0D0 0068 .text      loadDataIdx__14daPy_anmHeap_cFUs                             Function */
 // daPy_anmHeap_c::loadDataIdx(u16)
 #pragma push
 #pragma optimization_level 0
@@ -596,7 +808,7 @@ asm void loadDataIdx__14daPy_anmHeap_cFUs() {
 }
 #pragma pop
 
-/* 8015F0D0 0048 .text      loadDataPriIdx__14daPy_anmHeap_cFUs                          */
+/* 8015F0D0-8015F118 0048 .text      loadDataPriIdx__14daPy_anmHeap_cFUs                          Function */
 // daPy_anmHeap_c::loadDataPriIdx(u16)
 #pragma push
 #pragma optimization_level 0
@@ -607,7 +819,7 @@ asm void loadDataPriIdx__14daPy_anmHeap_cFUs() {
 }
 #pragma pop
 
-/* 8015F118 0050 .text      loadDataDemoRID__14daPy_anmHeap_cFUsUs                       */
+/* 8015F118-8015F168 0050 .text      loadDataDemoRID__14daPy_anmHeap_cFUsUs                       Function */
 // daPy_anmHeap_c::loadDataDemoRID(u16, u16)
 #pragma push
 #pragma optimization_level 0
@@ -618,7 +830,7 @@ asm void loadDataDemoRID__14daPy_anmHeap_cFUsUs() {
 }
 #pragma pop
 
-/* 8015F168 0038 .text      setAnimeHeap__14daPy_anmHeap_cFv                             */
+/* 8015F168-8015F1A0 0038 .text      setAnimeHeap__14daPy_anmHeap_cFv                             Function */
 // daPy_anmHeap_c::setAnimeHeap(void)
 #pragma push
 #pragma optimization_level 0
@@ -629,7 +841,7 @@ asm void setAnimeHeap__14daPy_anmHeap_cFv() {
 }
 #pragma pop
 
-/* 8015F1A0 015C .text      draw__18daPy_sightPacket_cFv                                 */
+/* 8015F1A0-8015F2FC 015C .text      draw__18daPy_sightPacket_cFv                                 Function */
 // daPy_sightPacket_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -640,7 +852,7 @@ asm void draw__18daPy_sightPacket_cFv() {
 }
 #pragma pop
 
-/* 8015F2FC 0088 .text      setSight__18daPy_sightPacket_cFv                             */
+/* 8015F2FC-8015F384 0088 .text      setSight__18daPy_sightPacket_cFv                             Function */
 // daPy_sightPacket_c::setSight(void)
 #pragma push
 #pragma optimization_level 0
@@ -651,7 +863,7 @@ asm void setSight__18daPy_sightPacket_cFv() {
 }
 #pragma pop
 
-/* 8015F384 0014 .text      setSightImage__18daPy_sightPacket_cFP7ResTIMG                */
+/* 8015F384-8015F398 0014 .text      setSightImage__18daPy_sightPacket_cFP7ResTIMG                Function */
 // daPy_sightPacket_c::setSightImage(ResTIMG*)
 #pragma push
 #pragma optimization_level 0
@@ -662,7 +874,7 @@ asm void setSightImage__18daPy_sightPacket_cFP7ResTIMG() {
 }
 #pragma pop
 
-/* 8015F398 002C .text      checkMasterSwordEquip__9daPy_py_cFv                          */
+/* 8015F398-8015F3C4 002C .text      checkMasterSwordEquip__9daPy_py_cFv                          Function */
 // daPy_py_c::checkMasterSwordEquip(void)
 #pragma push
 #pragma optimization_level 0
@@ -673,7 +885,7 @@ asm void checkMasterSwordEquip__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F3C4 0038 .text      checkWoodShieldEquip__9daPy_py_cFv                           */
+/* 8015F3C4-8015F3FC 0038 .text      checkWoodShieldEquip__9daPy_py_cFv                           Function */
 // daPy_py_c::checkWoodShieldEquip(void)
 #pragma push
 #pragma optimization_level 0
@@ -684,7 +896,7 @@ asm void checkWoodShieldEquip__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F3FC 0028 .text      getAttentionOffsetY__9daPy_py_cFv                            */
+/* 8015F3FC-8015F424 0028 .text      getAttentionOffsetY__9daPy_py_cFv                            Function */
 // daPy_py_c::getAttentionOffsetY(void)
 #pragma push
 #pragma optimization_level 0
@@ -695,7 +907,7 @@ asm void getAttentionOffsetY__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F424 0014 .text      checkNowWolfEyeUp__9daPy_py_cFv                              */
+/* 8015F424-8015F438 0014 .text      checkNowWolfEyeUp__9daPy_py_cFv                              Function */
 // daPy_py_c::checkNowWolfEyeUp(void)
 #pragma push
 #pragma optimization_level 0
@@ -706,7 +918,7 @@ asm void checkNowWolfEyeUp__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F438 0040 .text      forceRestartRoom__9daPy_py_cFiUli                            */
+/* 8015F438-8015F478 0040 .text      forceRestartRoom__9daPy_py_cFiUli                            Function */
 // daPy_py_c::forceRestartRoom(int, u32, int)
 #pragma push
 #pragma optimization_level 0
@@ -717,7 +929,7 @@ asm void forceRestartRoom__9daPy_py_cFiUli() {
 }
 #pragma pop
 
-/* 8015F478 0040 .text      setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi               */
+/* 8015F478-8015F4B8 0040 .text      setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi               Function */
 // daPy_py_c::setFmChainPos(fopAc_ac_c*, cXyz*, int)
 #pragma push
 #pragma optimization_level 0
@@ -728,7 +940,7 @@ asm void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi() {
 }
 #pragma pop
 
-/* 8015F4B8 0038 .text      cancelFmChainGrab__9daPy_py_cFv                              */
+/* 8015F4B8-8015F4F0 0038 .text      cancelFmChainGrab__9daPy_py_cFv                              Function */
 // daPy_py_c::cancelFmChainGrab(void)
 #pragma push
 #pragma optimization_level 0
@@ -739,7 +951,7 @@ asm void cancelFmChainGrab__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F4F0 0030 .text      setLookPos__9daPy_py_cFP4cXyz                                */
+/* 8015F4F0-8015F520 0030 .text      setLookPos__9daPy_py_cFP4cXyz                                Function */
 // daPy_py_c::setLookPos(cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -750,7 +962,7 @@ asm void setLookPos__9daPy_py_cFP4cXyz() {
 }
 #pragma pop
 
-/* 8015F520 003C .text      setPlayerSe__9daPy_py_cFUl                                   */
+/* 8015F520-8015F55C 003C .text      setPlayerSe__9daPy_py_cFUl                                   Function */
 // daPy_py_c::setPlayerSe(u32)
 #pragma push
 #pragma optimization_level 0
@@ -761,7 +973,7 @@ asm void setPlayerSe__9daPy_py_cFUl() {
 }
 #pragma pop
 
-/* 8015F55C 00B0 .text      linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
+/* 8015F55C-8015F60C 00B0 .text      linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              Function */
 // daPy_py_c::linkGrabSubjectNoDraw(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -772,7 +984,7 @@ asm void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8015F60C 0054 .text      wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              */
+/* 8015F60C-8015F660 0054 .text      wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c              Function */
 // daPy_py_c::wolfGrabSubjectNoDraw(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -783,7 +995,7 @@ asm void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8015F660 0038 .text      checkRoomRestartStart__9daPy_py_cFv                          */
+/* 8015F660-8015F698 0038 .text      checkRoomRestartStart__9daPy_py_cFv                          Function */
 // daPy_py_c::checkRoomRestartStart(void)
 #pragma push
 #pragma optimization_level 0
@@ -794,7 +1006,7 @@ asm void checkRoomRestartStart__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F698 0098 .text      checkCarryStartLightBallA__9daPy_py_cFv                      */
+/* 8015F698-8015F730 0098 .text      checkCarryStartLightBallA__9daPy_py_cFv                      Function */
 // daPy_py_c::checkCarryStartLightBallA(void)
 #pragma push
 #pragma optimization_level 0
@@ -805,7 +1017,7 @@ asm void checkCarryStartLightBallA__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F730 0098 .text      checkCarryStartLightBallB__9daPy_py_cFv                      */
+/* 8015F730-8015F7C8 0098 .text      checkCarryStartLightBallB__9daPy_py_cFv                      Function */
 // daPy_py_c::checkCarryStartLightBallB(void)
 #pragma push
 #pragma optimization_level 0
@@ -816,7 +1028,7 @@ asm void checkCarryStartLightBallB__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F7C8 004C .text      getSpinnerRideSpeed__9daPy_py_cCFv                           */
+/* 8015F7C8-8015F814 004C .text      getSpinnerRideSpeed__9daPy_py_cCFv                           Function */
 // daPy_py_c::getSpinnerRideSpeed(void) const
 #pragma push
 #pragma optimization_level 0
@@ -827,7 +1039,7 @@ asm void getSpinnerRideSpeed__9daPy_py_cCFv() {
 }
 #pragma pop
 
-/* 8015F814 0088 .text      checkSpinnerReflectEffect__9daPy_py_cFv                      */
+/* 8015F814-8015F89C 0088 .text      checkSpinnerReflectEffect__9daPy_py_cFv                      Function */
 // daPy_py_c::checkSpinnerReflectEffect(void)
 #pragma push
 #pragma optimization_level 0
@@ -838,7 +1050,7 @@ asm void checkSpinnerReflectEffect__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F89C 002C .text      checkBoomerangCharge__9daPy_py_cFv                           */
+/* 8015F89C-8015F8C8 002C .text      checkBoomerangCharge__9daPy_py_cFv                           Function */
 // daPy_py_c::checkBoomerangCharge(void)
 #pragma push
 #pragma optimization_level 0
@@ -849,13 +1061,13 @@ asm void checkBoomerangCharge__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F8C8 0008 .text      checkBoomerangChargeTime__9daPy_py_cFv                       */
+/* 8015F8C8-8015F8D0 0008 .text      checkBoomerangChargeTime__9daPy_py_cFv                       ReturnIntegerFunction */
 // daPy_py_c::checkBoomerangChargeTime(void)
 int checkBoomerangChargeTime__9daPy_py_cFv() {
 	return 0;
 }
 
-/* 8015F8D0 0014 .text      getThrowBoomerangActor__9daPy_py_cFv                         */
+/* 8015F8D0-8015F8E4 0014 .text      getThrowBoomerangActor__9daPy_py_cFv                         Function */
 // daPy_py_c::getThrowBoomerangActor(void)
 #pragma push
 #pragma optimization_level 0
@@ -866,7 +1078,7 @@ asm void getThrowBoomerangActor__9daPy_py_cFv() {
 }
 #pragma pop
 
-/* 8015F8E4 0030 .text      cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c           */
+/* 8015F8E4-8015F914 0030 .text      cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c           Function */
 // daPy_py_c::cancelBoomerangLockActor(fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -877,7 +1089,7 @@ asm void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 8015F914 0040 .text      setPlayerDamage__9daPy_py_cFii                               */
+/* 8015F914-8015F954 0040 .text      setPlayerDamage__9daPy_py_cFii                               Function */
 // daPy_py_c::setPlayerDamage(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -888,7 +1100,7 @@ asm void setPlayerDamage__9daPy_py_cFii() {
 }
 #pragma pop
 
-/* 8015F954 0014 .text      setMidnaMotionNum__9daPy_py_cFi                              */
+/* 8015F954-8015F968 0014 .text      setMidnaMotionNum__9daPy_py_cFi                              Function */
 // daPy_py_c::setMidnaMotionNum(int)
 #pragma push
 #pragma optimization_level 0
@@ -899,7 +1111,7 @@ asm void setMidnaMotionNum__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015F968 0014 .text      setMidnaFaceNum__9daPy_py_cFi                                */
+/* 8015F968-8015F97C 0014 .text      setMidnaFaceNum__9daPy_py_cFi                                Function */
 // daPy_py_c::setMidnaFaceNum(int)
 #pragma push
 #pragma optimization_level 0
@@ -910,13 +1122,13 @@ asm void setMidnaFaceNum__9daPy_py_cFi() {
 }
 #pragma pop
 
-/* 8015F97C 00B0 .text      daPy_addCalcShort__FPsssss                                   */
+/* 8015F97C-8015FA2C 00B0 .text      daPy_addCalcShort__FPsssss                                   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daPy_addCalcShort(s16*, s16, s16, s16, s16) {
+asm void daPy_addCalcShort(short*, short, short, short, short) {
 	nofralloc
 #include "_include/d/d_a_player/daPy_addCalcShort__FPsssss.s"
 }

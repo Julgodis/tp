@@ -9,55 +9,113 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ct__8JASTrackFv();
+/* Function             */
 extern void setChannelMgrCount__8JASTrackFUl();
+/* Function             */
 extern void init__8JASTrackFv();
+/* Function             */
 extern void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+/* Function             */
 extern void setSeqData__8JASTrackFPvUl();
+/* Function             */
 extern void startSeq__8JASTrackFv();
+/* Function             */
 extern void stopSeq__8JASTrackFv();
+/* Function             */
 extern void mute__8JASTrackFb();
+/* Function             */
 extern void pause__8JASTrackFb();
+/* Function             */
 extern void setTempoRate__8JASTrackFf();
+/* Function             */
+extern void func_8029F03C();
+/* Function             */
 extern void mixOut___5JAISeFRC14JASSoundParams();
+/* Function             */
 extern void stopTrack___5JAISeFv();
+/* Function             */
 extern void startTrack___5JAISeFRC14JASSoundParams();
+/* Function             */
+extern void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity();
+/* Function             */
+extern void JAISeCategoryMgr_calc___5JAISeFv();
+/* Function             */
 extern void JAISound_tryDie___5JAISeFv();
-extern int getNumChild__5JAISeCFv();
-extern int getChild__5JAISeFi();
+/* Function             */
+extern void func_8029F650();
+/* ReturnIntegerFunction */
+extern  int getNumChild__5JAISeCFv();
+/* ReturnIntegerFunction */
+extern  int getChild__5JAISeFi();
+/* ReturnFunction       */
 extern void releaseChild__5JAISeFi();
+/* Function             */
 extern void prepare_getSeqData___5JAISeFv();
+/* Function             */
 extern void prepare___5JAISeFv();
+/* FirstParamFunction   */
 extern u8* getTrack__5JAISeFv(u8*);
+/* Function             */
 extern void getChildTrack__5JAISeFi();
+/* ReturnFunction       */
 extern void asSe__5JAISeFv();
+/* FirstParamFunction   */
 extern u8* getTempoMgr__5JAISeFv(u8*);
+/* Function             */
 extern void func_8029F870();
+/* Function             */
 extern void func_8029F878();
+/* Function             */
 extern void func_8029F880();
+/* Function             */
 extern void func_8029F888();
+/* Function             */
 extern void func_8029F890();
+/* Function             */
 extern void func_8029F898();
+/* Function             */
 extern void func_8029F8A0();
+/* Function             */
 extern void func_8029F8A8();
+/* Function             */
 extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+/* Function             */
 extern void __ct__8JAISoundFv();
+/* Function             */
 extern void func_802A2328();
-extern int asSeq__8JAISoundFv();
-extern int asStream__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asSeq__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asStream__8JAISoundFv();
+/* Function             */
 extern void die_JAISound___8JAISoundFv();
+/* Function             */
 extern void increasePrepareCount_JAISound___8JAISoundFv();
+/* Function             */
 extern void calc_JAISound___8JAISoundFv();
+/* Function             */
 extern void initTrack_JAISound___8JAISoundFP8JASTrack();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__5JAISe[22];
+/* VTableData           */
+SECTION_DATA extern void* __vt__5JAISe[22];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JAISe__LIT_626;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JAISe__LIT_627[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JAISe__LIT_628;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_736[4];
 }
 
@@ -67,8 +125,8 @@ SECTION_SDATA2 extern u8 LIT_736[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9858 0058 .data      __vt__5JAISe                                                 */
-SECTION_DATA const  void* __vt__5JAISe[22] = {
+/* 803C9858-803C98B0 0058 .data      __vt__5JAISe                                                 VTableData */
+SECTION_DATA void* __vt__5JAISe[22] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -100,17 +158,17 @@ SECTION_DATA const  void* __vt__5JAISe[22] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455778 0004 .sdata2    @626                                                         */
+/* 80455778-8045577C 0004 .sdata2    @626                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JAISe__LIT_626 = 1.000000f;
-/* 8045577C 0004 .sdata2    @627                                                         */
+/* 8045577C-80455780 0004 .sdata2    @627                                                         InitializedData */
 SECTION_SDATA2 u8 JAISe__LIT_627[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455780 0004 .sdata2    @628                                                         */
+/* 80455780-80455784 0004 .sdata2    @628                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 JAISe__LIT_628 = 0.500000f;
-/* 80455784 0004 .sdata2    @736                                                         */
+/* 80455784-80455788 0004 .sdata2    @736                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_736[4] = {
 	0x3C, 0x23, 0xD7, 0x0A,
 };
@@ -122,7 +180,7 @@ SECTION_SDATA2 u8 LIT_736[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029F03C 00BC .text      __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul      */
+/* 8029F03C-8029F0F8 00BC .text      __ct__5JAISeFP8JAISeMgrP27JAISoundStrategyMgr<5JAISe>Ul      Function */
 // JAISe::JAISe(JAISeMgr*, JAISoundStrategyMgr<5JAISe>*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -133,7 +191,7 @@ asm void func_8029F03C() {
 }
 #pragma pop
 
-/* 8029F0F8 011C .text      mixOut___5JAISeFRC14JASSoundParams                           */
+/* 8029F0F8-8029F214 011C .text      mixOut___5JAISeFRC14JASSoundParams                           Function */
 // JAISe::mixOut_(const JASSoundParams&)
 #pragma push
 #pragma optimization_level 0
@@ -144,7 +202,7 @@ asm void mixOut___5JAISeFRC14JASSoundParams() {
 }
 #pragma pop
 
-/* 8029F214 003C .text      stopTrack___5JAISeFv                                         */
+/* 8029F214-8029F250 003C .text      stopTrack___5JAISeFv                                         Function */
 // JAISe::stopTrack_(void)
 #pragma push
 #pragma optimization_level 0
@@ -155,7 +213,7 @@ asm void stopTrack___5JAISeFv() {
 }
 #pragma pop
 
-/* 8029F250 00B4 .text      startTrack___5JAISeFRC14JASSoundParams                       */
+/* 8029F250-8029F304 00B4 .text      startTrack___5JAISeFRC14JASSoundParams                       Function */
 // JAISe::startTrack_(const JASSoundParams&)
 #pragma push
 #pragma optimization_level 0
@@ -166,7 +224,7 @@ asm void startTrack___5JAISeFRC14JASSoundParams() {
 }
 #pragma pop
 
-/* 8029F304 01C8 .text      JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity */
+/* 8029F304-8029F4CC 01C8 .text      JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity Function */
 // JAISe::JAISeCategoryMgr_mixOut_(bool, const JASSoundParams&, JAISoundActivity)
 #pragma push
 #pragma optimization_level 0
@@ -177,7 +235,7 @@ asm void JAISeCategoryMgr_mixOut___5JAISeFbRC14JASSoundParams16JAISoundActivity(
 }
 #pragma pop
 
-/* 8029F4CC 00FC .text      JAISeCategoryMgr_calc___5JAISeFv                             */
+/* 8029F4CC-8029F5C8 00FC .text      JAISeCategoryMgr_calc___5JAISeFv                             Function */
 // JAISe::JAISeCategoryMgr_calc_(void)
 #pragma push
 #pragma optimization_level 0
@@ -188,7 +246,7 @@ asm void JAISeCategoryMgr_calc___5JAISeFv() {
 }
 #pragma pop
 
-/* 8029F5C8 0088 .text      JAISound_tryDie___5JAISeFv                                   */
+/* 8029F5C8-8029F650 0088 .text      JAISound_tryDie___5JAISeFv                                   Function */
 // JAISe::JAISound_tryDie_(void)
 #pragma push
 #pragma optimization_level 0
@@ -199,7 +257,7 @@ asm void JAISound_tryDie___5JAISeFv() {
 }
 #pragma pop
 
-/* 8029F650 0088 .text      JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience */
+/* 8029F650-8029F6D8 0088 .text      JAISeMgr_startID___5JAISeF10JAISoundIDPCQ29JGeometry8TVec3<f>P11JAIAudience Function */
 // JAISe::JAISeMgr_startID_(JAISoundID, JGeometry::TVec3<f>, JAIAudience*)
 #pragma push
 #pragma optimization_level 0
@@ -210,25 +268,25 @@ asm void func_8029F650() {
 }
 #pragma pop
 
-/* 8029F6D8 0008 .text      getNumChild__5JAISeCFv                                       */
+/* 8029F6D8-8029F6E0 0008 .text      getNumChild__5JAISeCFv                                       ReturnIntegerFunction */
 // JAISe::getNumChild(void) const
 int getNumChild__5JAISeCFv() {
 	return 0;
 }
 
-/* 8029F6E0 0008 .text      getChild__5JAISeFi                                           */
+/* 8029F6E0-8029F6E8 0008 .text      getChild__5JAISeFi                                           ReturnIntegerFunction */
 // JAISe::getChild(int)
 int getChild__5JAISeFi() {
 	return 0;
 }
 
-/* 8029F6E8 0004 .text      releaseChild__5JAISeFi                                       */
+/* 8029F6E8-8029F6EC 0004 .text      releaseChild__5JAISeFi                                       ReturnFunction */
 // JAISe::releaseChild(int)
 void releaseChild__5JAISeFi() {
 	return;
 }
 
-/* 8029F6EC 00A0 .text      prepare_getSeqData___5JAISeFv                                */
+/* 8029F6EC-8029F78C 00A0 .text      prepare_getSeqData___5JAISeFv                                Function */
 // JAISe::prepare_getSeqData_(void)
 #pragma push
 #pragma optimization_level 0
@@ -239,7 +297,7 @@ asm void prepare_getSeqData___5JAISeFv() {
 }
 #pragma pop
 
-/* 8029F78C 00C0 .text      prepare___5JAISeFv                                           */
+/* 8029F78C-8029F84C 00C0 .text      prepare___5JAISeFv                                           Function */
 // JAISe::prepare_(void)
 #pragma push
 #pragma optimization_level 0
@@ -250,13 +308,13 @@ asm void prepare___5JAISeFv() {
 }
 #pragma pop
 
-/* 8029F84C 0008 .text      getTrack__5JAISeFv                                           */
+/* 8029F84C-8029F854 0008 .text      getTrack__5JAISeFv                                           FirstParamFunction */
 // JAISe::getTrack(void)
 u8* getTrack__5JAISeFv(u8* param0) {
 	return (u8*)&param0[200]; /* param0->field_0xc8 */
 }
 
-/* 8029F854 0010 .text      getChildTrack__5JAISeFi                                      */
+/* 8029F854-8029F864 0010 .text      getChildTrack__5JAISeFi                                      Function */
 // JAISe::getChildTrack(int)
 #pragma push
 #pragma optimization_level 0
@@ -267,19 +325,19 @@ asm void getChildTrack__5JAISeFi() {
 }
 #pragma pop
 
-/* 8029F864 0004 .text      asSe__5JAISeFv                                               */
+/* 8029F864-8029F868 0004 .text      asSe__5JAISeFv                                               ReturnFunction */
 // JAISe::asSe(void)
 void asSe__5JAISeFv() {
 	return;
 }
 
-/* 8029F868 0008 .text      getTempoMgr__5JAISeFv                                        */
+/* 8029F868-8029F870 0008 .text      getTempoMgr__5JAISeFv                                        FirstParamFunction */
 // JAISe::getTempoMgr(void)
 u8* getTempoMgr__5JAISeFv(u8* param0) {
 	return (u8*)&param0[808]; /* param0->field_0x328 */
 }
 
-/* 8029F870 0008 .text      @16@JAISound_tryDie___5JAISeFv                               */
+/* 8029F870-8029F878 0008 .text      @16@JAISound_tryDie___5JAISeFv                               Function */
 // JAISe::@16@JAISound_tryDie_(void)
 #pragma push
 #pragma optimization_level 0
@@ -290,7 +348,7 @@ asm void func_8029F870() {
 }
 #pragma pop
 
-/* 8029F878 0008 .text      @16@getTempoMgr__5JAISeFv                                    */
+/* 8029F878-8029F880 0008 .text      @16@getTempoMgr__5JAISeFv                                    Function */
 // JAISe::@16@getTempoMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -301,7 +359,7 @@ asm void func_8029F878() {
 }
 #pragma pop
 
-/* 8029F880 0008 .text      @16@getChildTrack__5JAISeFi                                  */
+/* 8029F880-8029F888 0008 .text      @16@getChildTrack__5JAISeFi                                  Function */
 // JAISe::@16@getChildTrack(int)
 #pragma push
 #pragma optimization_level 0
@@ -312,7 +370,7 @@ asm void func_8029F880() {
 }
 #pragma pop
 
-/* 8029F888 0008 .text      @16@getTrack__5JAISeFv                                       */
+/* 8029F888-8029F890 0008 .text      @16@getTrack__5JAISeFv                                       Function */
 // JAISe::@16@getTrack(void)
 #pragma push
 #pragma optimization_level 0
@@ -323,7 +381,7 @@ asm void func_8029F888() {
 }
 #pragma pop
 
-/* 8029F890 0008 .text      @16@asSe__5JAISeFv                                           */
+/* 8029F890-8029F898 0008 .text      @16@asSe__5JAISeFv                                           Function */
 // JAISe::@16@asSe(void)
 #pragma push
 #pragma optimization_level 0
@@ -334,7 +392,7 @@ asm void func_8029F890() {
 }
 #pragma pop
 
-/* 8029F898 0008 .text      @16@releaseChild__5JAISeFi                                   */
+/* 8029F898-8029F8A0 0008 .text      @16@releaseChild__5JAISeFi                                   Function */
 // JAISe::@16@releaseChild(int)
 #pragma push
 #pragma optimization_level 0
@@ -345,7 +403,7 @@ asm void func_8029F898() {
 }
 #pragma pop
 
-/* 8029F8A0 0008 .text      @16@getChild__5JAISeFi                                       */
+/* 8029F8A0-8029F8A8 0008 .text      @16@getChild__5JAISeFi                                       Function */
 // JAISe::@16@getChild(int)
 #pragma push
 #pragma optimization_level 0
@@ -356,7 +414,7 @@ asm void func_8029F8A0() {
 }
 #pragma pop
 
-/* 8029F8A8 0008 .text      @16@getNumChild__5JAISeCFv                                   */
+/* 8029F8A8-8029F8B0 0008 .text      @16@getNumChild__5JAISeCFv                                   Function */
 // JAISe::@16@getNumChild(void) const
 #pragma push
 #pragma optimization_level 0

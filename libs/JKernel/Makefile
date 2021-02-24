@@ -64,8 +64,9 @@ JKERNEL_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJKernel.a: dirs $(JKERNEL_A_O_FILES)
+$(BUILD_DIR)/libJKernel.a: $(JKERNEL_A_O_FILES)
 	$(LD) -xm l $(JKERNEL_A_LDFLAGS) -o $(BUILD_DIR)/libJKernel.a $(JKERNEL_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJKernel.a
 
 $(BUILD_DIR)/libs/JKernel/%.o: cpp/JKernel/%.cpp
 	mkdir -p $(@D)

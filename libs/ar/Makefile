@@ -18,8 +18,9 @@ AR_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libar.a: dirs $(AR_A_O_FILES)
+$(BUILD_DIR)/libar.a: $(AR_A_O_FILES)
 	$(LD) -xm l $(AR_A_LDFLAGS) -o $(BUILD_DIR)/libar.a $(AR_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libar.a
 
 $(BUILD_DIR)/libs/ar/%.o: cpp/ar/%.cpp
 	mkdir -p $(@D)

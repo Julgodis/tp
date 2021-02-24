@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* ReturnIntegerFunction */
+extern  int getUseMtxNum__11J3DShapeMtxCFv();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80273E08 0008 .text      getUseMtxNum__11J3DShapeMtxCFv                               */
+/* 80273E08-80273E10 0008 .text      getUseMtxNum__11J3DShapeMtxCFv                               ReturnIntegerFunction */
 // J3DShapeMtx::getUseMtxNum(void) const
 int getUseMtxNum__11J3DShapeMtxCFv() {
 	return 1;

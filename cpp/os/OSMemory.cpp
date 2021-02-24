@@ -9,21 +9,42 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void DCInvalidateRange();
+/* Function             */
 extern void DCFlushRange();
+/* Function             */
 extern void __OSUnhandledException();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
+extern void OSMemory__OnReset();
+/* Function             */
 extern void MEMIntrruptHandler();
+/* Function             */
+extern void OSProtectRange();
+/* Function             */
 extern void Config24MB();
+/* Function             */
 extern void Config48MB();
+/* Function             */
 extern void RealMode();
+/* Function             */
+extern void __OSInitMemoryProtection();
+/* Function             */
 extern void OSRegisterResetFunction();
-SECTION_DATA extern u8 OSMemory__ResetFunctionInfo[16];
-SECTION_BSS extern u8 __OSErrorTable[80];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* OSMemory__ResetFunctionInfo[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 __OSErrorTable[68 + 12 /* padding */];
 }
 
 
@@ -32,9 +53,12 @@ SECTION_BSS extern u8 __OSErrorTable[80];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D07D8 0010 .data      ResetFunctionInfo                                            */
-SECTION_DATA u8 OSMemory__ResetFunctionInfo[16] = {
-	0x80, 0x33, 0xEC, 0x6C, 0x00, 0x00, 0x00, 0x7F, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 803D07D8-803D07E8 0010 .data      ResetFunctionInfo                                            SymbolReferenceArrayData */
+SECTION_DATA void* OSMemory__ResetFunctionInfo[4] = {
+	(void*)OSMemory__OnReset,
+	(void*)0x0000007F,
+	NULL,
+	NULL,
 };
 }
 
@@ -44,7 +68,7 @@ SECTION_DATA u8 OSMemory__ResetFunctionInfo[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033EC6C 003C .text      OnReset                                                      */
+/* 8033EC6C-8033ECA8 003C .text      OnReset                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -54,7 +78,7 @@ asm void OSMemory__OnReset() {
 }
 #pragma pop
 
-/* 8033ECA8 006C .text      MEMIntrruptHandler                                           */
+/* 8033ECA8-8033ED14 006C .text      MEMIntrruptHandler                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -64,7 +88,7 @@ asm void MEMIntrruptHandler() {
 }
 #pragma pop
 
-/* 8033ED14 00C4 .text      OSProtectRange                                               */
+/* 8033ED14-8033EDD8 00C4 .text      OSProtectRange                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -74,7 +98,7 @@ asm void OSProtectRange() {
 }
 #pragma pop
 
-/* 8033EDD8 0080 .text      Config24MB                                                   */
+/* 8033EDD8-8033EE58 0080 .text      Config24MB                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,7 +108,7 @@ asm void Config24MB() {
 }
 #pragma pop
 
-/* 8033EE58 0080 .text      Config48MB                                                   */
+/* 8033EE58-8033EED8 0080 .text      Config48MB                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -94,7 +118,7 @@ asm void Config48MB() {
 }
 #pragma pop
 
-/* 8033EED8 0018 .text      RealMode                                                     */
+/* 8033EED8-8033EEF0 0018 .text      RealMode                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -104,7 +128,7 @@ asm void RealMode() {
 }
 #pragma pop
 
-/* 8033EEF0 0118 .text      __OSInitMemoryProtection                                     */
+/* 8033EEF0-8033F008 0118 .text      __OSInitMemoryProtection                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

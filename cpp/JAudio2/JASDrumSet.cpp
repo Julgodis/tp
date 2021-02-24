@@ -14,19 +14,43 @@ extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void bzero__7JASCalcFPvUl();
+/* Function             */
+extern void __ct__10JASDrumSetFv();
+/* Function             */
 extern void __dt__10JASDrumSetFv();
+/* Function             */
+extern void newPercArray__10JASDrumSetFUcP7JKRHeap();
+/* Function             */
 extern void getParam__10JASDrumSetCFiiP12JASInstParam();
+/* Function             */
+extern void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc();
+/* Function             */
+extern void __ct__Q210JASDrumSet5TPercFv();
+/* Function             */
+extern void setRelease__Q210JASDrumSet5TPercFUl();
+/* Function             */
 extern void getType__10JASDrumSetCFv();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__7JASInst[5];
-SECTION_DATA extern const void* __vt__10JASDrumSet[6];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JASInst[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JASDrumSet[6];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80431B58[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451270[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451274[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 JASDrumSet__LIT_219;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASDrumSet__LIT_220[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_253[8];
 }
 
@@ -36,8 +60,8 @@ SECTION_SDATA2 extern u8 LIT_253[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C7710 0014 .data      __vt__10JASDrumSet                                           */
-SECTION_DATA const  void* __vt__10JASDrumSet[6] = {
+/* 803C7710-803C7728 0014 .data      __vt__10JASDrumSet                                           VTableData */
+SECTION_DATA void* __vt__10JASDrumSet[6] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JASDrumSetFv,
@@ -54,14 +78,14 @@ SECTION_DATA const  void* __vt__10JASDrumSet[6] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455648 0004 .sdata2    @219                                                         */
+/* 80455648-8045564C 0004 .sdata2    @219                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 JASDrumSet__LIT_219 = 1.000000f;
-/* 8045564C 0004 .sdata2    @220                                                         */
+/* 8045564C-80455650 0004 .sdata2    @220                                                         InitializedData */
 SECTION_SDATA2 u8 JASDrumSet__LIT_220[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455650 0004 .sdata2    @253                                                         */
+/* 80455650-80455658 0004 .sdata2    @253                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_253[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
@@ -75,7 +99,7 @@ SECTION_SDATA2 u8 LIT_253[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431B58 0018 .bss       osc$213                                                      */
+/* 80431B58-80431B70 0018 .bss       osc$213                                                      ZeroInitializedData */
 SECTION_BSS u8 data_80431B58[24];
 }
 
@@ -85,9 +109,9 @@ SECTION_BSS u8 data_80431B58[24];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451270 0004 .sbss      oscp$214                                                     */
+/* 80451270-80451274 0004 .sbss      oscp$214                                                     ZeroInitializedData */
 SECTION_SBSS u8 data_80451270[4];
-/* 80451274 0004 .sbss      data_80451274                                                */
+/* 80451274-80451278 0004 .sbss      data_80451274                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451274[4];
 }
 
@@ -97,7 +121,7 @@ SECTION_SBSS u8 data_80451274[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802982EC 0028 .text      __ct__10JASDrumSetFv                                         */
+/* 802982EC-80298314 0028 .text      __ct__10JASDrumSetFv                                         Function */
 // JASDrumSet::JASDrumSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -108,7 +132,7 @@ asm void __ct__10JASDrumSetFv() {
 }
 #pragma pop
 
-/* 80298314 005C .text      __dt__10JASDrumSetFv                                         */
+/* 80298314-80298370 005C .text      __dt__10JASDrumSetFv                                         Function */
 // JASDrumSet::~JASDrumSet(void)
 #pragma push
 #pragma optimization_level 0
@@ -119,7 +143,7 @@ asm void __dt__10JASDrumSetFv() {
 }
 #pragma pop
 
-/* 80298370 005C .text      newPercArray__10JASDrumSetFUcP7JKRHeap                       */
+/* 80298370-802983CC 005C .text      newPercArray__10JASDrumSetFUcP7JKRHeap                       Function */
 // JASDrumSet::newPercArray(u8, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -130,7 +154,7 @@ asm void newPercArray__10JASDrumSetFUcP7JKRHeap() {
 }
 #pragma pop
 
-/* 802983CC 00E8 .text      getParam__10JASDrumSetCFiiP12JASInstParam                    */
+/* 802983CC-802984B4 00E8 .text      getParam__10JASDrumSetCFiiP12JASInstParam                    Function */
 // JASDrumSet::getParam(int, int, JASInstParam*) const
 #pragma push
 #pragma optimization_level 0
@@ -141,7 +165,7 @@ asm void getParam__10JASDrumSetCFiiP12JASInstParam() {
 }
 #pragma pop
 
-/* 802984B4 0010 .text      setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc                 */
+/* 802984B4-802984C4 0010 .text      setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc                 Function */
 // JASDrumSet::setPerc(int, JASDrumSet::TPerc)
 #pragma push
 #pragma optimization_level 0
@@ -152,7 +176,7 @@ asm void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc() {
 }
 #pragma pop
 
-/* 802984C4 0020 .text      __ct__Q210JASDrumSet5TPercFv                                 */
+/* 802984C4-802984E4 0020 .text      __ct__Q210JASDrumSet5TPercFv                                 Function */
 // JASDrumSet::TPerc::JASDrumSet::TPerc(void)
 #pragma push
 #pragma optimization_level 0
@@ -163,7 +187,7 @@ asm void __ct__Q210JASDrumSet5TPercFv() {
 }
 #pragma pop
 
-/* 802984E4 0008 .text      setRelease__Q210JASDrumSet5TPercFUl                          */
+/* 802984E4-802984EC 0008 .text      setRelease__Q210JASDrumSet5TPercFUl                          Function */
 // JASDrumSet::TPerc::setRelease(u32)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +198,7 @@ asm void setRelease__Q210JASDrumSet5TPercFUl() {
 }
 #pragma pop
 
-/* 802984EC 000C .text      getType__10JASDrumSetCFv                                     */
+/* 802984EC-802984F8 000C .text      getType__10JASDrumSetCFv                                     Function */
 // JASDrumSet::getType(void) const
 #pragma push
 #pragma optimization_level 0

@@ -11,19 +11,40 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__20JSURandomInputStreamFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getAvailable__20JSURandomInputStreamCFv();
+/* Function             */
 extern void __dt__14JSUInputStreamFv();
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
 extern void skip__14JSUInputStreamFl();
+/* Function             */
+extern void align__20JSURandomInputStreamFl();
+/* Function             */
 extern void skip__20JSURandomInputStreamFl();
+/* Function             */
+extern void peek__20JSURandomInputStreamFPvl();
+/* Function             */
+extern void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__10JSUIosBase[3];
-SECTION_DATA extern const void* __vt__14JSUInputStream[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JSUIosBase[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20JSURandomInputStream[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JSUInputStream[7];
 }
 
 
@@ -32,8 +53,8 @@ SECTION_DATA extern const void* __vt__14JSUInputStream[7];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC4B0 0024 .data      __vt__20JSURandomInputStream                                 */
-SECTION_DATA const  void* __vt__20JSURandomInputStream[9] = {
+/* 803CC4B0-803CC4D4 0024 .data      __vt__20JSURandomInputStream                                 VTableData */
+SECTION_DATA void* __vt__20JSURandomInputStream[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__20JSURandomInputStreamFv,
@@ -44,8 +65,8 @@ SECTION_DATA const  void* __vt__20JSURandomInputStream[9] = {
 	NULL,
 	NULL,
 };
-/* 803CC4D4 0018 .data      __vt__14JSUInputStream                                       */
-SECTION_DATA const  void* __vt__14JSUInputStream[7] = {
+/* 803CC4D4-803CC4F0 0018 .data      __vt__14JSUInputStream                                       VTableData */
+SECTION_DATA void* __vt__14JSUInputStream[7] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__14JSUInputStreamFv,
@@ -63,7 +84,7 @@ SECTION_DATA const  void* __vt__14JSUInputStream[7] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DC23C 005C .text      __dt__14JSUInputStreamFv                                     */
+/* 802DC23C-802DC298 005C .text      __dt__14JSUInputStreamFv                                     Function */
 // JSUInputStream::~JSUInputStream(void)
 #pragma push
 #pragma optimization_level 0
@@ -74,8 +95,8 @@ asm void __dt__14JSUInputStreamFv() {
 }
 #pragma pop
 
-/* 802DC298 0058 .text      read__14JSUInputStreamFPvl                                   */
-// JSUInputStream::read(void*, s32)
+/* 802DC298-802DC2F0 0058 .text      read__14JSUInputStreamFPvl                                   Function */
+// JSUInputStream::read(void*, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -85,8 +106,8 @@ asm void read__14JSUInputStreamFPvl() {
 }
 #pragma pop
 
-/* 802DC2F0 0080 .text      skip__14JSUInputStreamFl                                     */
-// JSUInputStream::skip(s32)
+/* 802DC2F0-802DC370 0080 .text      skip__14JSUInputStreamFl                                     Function */
+// JSUInputStream::skip(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -96,8 +117,8 @@ asm void skip__14JSUInputStreamFl() {
 }
 #pragma pop
 
-/* 802DC370 008C .text      align__20JSURandomInputStreamFl                              */
-// JSURandomInputStream::align(s32)
+/* 802DC370-802DC3FC 008C .text      align__20JSURandomInputStreamFl                              Function */
+// JSURandomInputStream::align(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -107,8 +128,8 @@ asm void align__20JSURandomInputStreamFl() {
 }
 #pragma pop
 
-/* 802DC3FC 005C .text      skip__20JSURandomInputStreamFl                               */
-// JSURandomInputStream::skip(s32)
+/* 802DC3FC-802DC458 005C .text      skip__20JSURandomInputStreamFl                               Function */
+// JSURandomInputStream::skip(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -118,8 +139,8 @@ asm void skip__20JSURandomInputStreamFl() {
 }
 #pragma pop
 
-/* 802DC458 0084 .text      peek__20JSURandomInputStreamFPvl                             */
-// JSURandomInputStream::peek(void*, s32)
+/* 802DC458-802DC4DC 0084 .text      peek__20JSURandomInputStreamFPvl                             Function */
+// JSURandomInputStream::peek(void*, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,8 +150,8 @@ asm void peek__20JSURandomInputStreamFPvl() {
 }
 #pragma pop
 
-/* 802DC4DC 0044 .text      seek__20JSURandomInputStreamFl17JSUStreamSeekFrom            */
-// JSURandomInputStream::seek(s32, JSUStreamSeekFrom)
+/* 802DC4DC-802DC520 0044 .text      seek__20JSURandomInputStreamFl17JSUStreamSeekFrom            Function */
+// JSURandomInputStream::seek(long, JSUStreamSeekFrom)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

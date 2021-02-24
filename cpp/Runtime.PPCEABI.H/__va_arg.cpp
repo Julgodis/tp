@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __va_arg();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80361B14 00C8 .text      __va_arg                                                     */
+/* 80361B14-80361BDC 00C8 .text      __va_arg                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

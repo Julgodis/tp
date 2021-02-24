@@ -9,13 +9,37 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+/* Function             */
+extern void CrossY__8cM3dGAabCFPC4cXyz();
+/* Function             */
+extern void UnderPlaneYUnder__8cM3dGAabCFf();
+/* Function             */
+extern void TopPlaneYUnder__8cM3dGAabCFf();
+/* Function             */
+extern void ClearForMinMax__8cM3dGAabFv();
+/* Function             */
 extern void SetMinMax__8cM3dGAabFRC4cXyz();
+/* Function             */
+extern void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+/* Function             */
 extern void SetMin__8cM3dGAabFRC4cXyz();
+/* Function             */
 extern void SetMax__8cM3dGAabFRC4cXyz();
+/* Function             */
+extern void CalcCenter__8cM3dGAabCFP4cXyz();
+/* Function             */
+extern void PlusR__8cM3dGAabFf();
+/* Function             */
 extern void PSVECAdd();
+/* Function             */
 extern void PSVECScale();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_416;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_417;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 c_m3d_g_aab__LIT_493[8];
 }
 
@@ -25,13 +49,13 @@ SECTION_SDATA2 extern u8 c_m3d_g_aab__LIT_493[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804551D0 0004 .sdata2    @416                                                         */
+/* 804551D0-804551D4 0004 .sdata2    @416                                                         Float32Data */
 // 0x4e6e6b28
 SECTION_SDATA2 f32 LIT_416 = 1000000000.000000f;
-/* 804551D4 0004 .sdata2    @417                                                         */
+/* 804551D4-804551D8 0004 .sdata2    @417                                                         Float32Data */
 // 0xce6e6b28
 SECTION_SDATA2 f32 LIT_417 = -1000000000.000000f;
-/* 804551D8 0004 .sdata2    @493                                                         */
+/* 804551D8-804551E0 0004 .sdata2    @493                                                         InitializedData */
 SECTION_SDATA2 u8 c_m3d_g_aab__LIT_493[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
@@ -45,7 +69,7 @@ SECTION_SDATA2 u8 c_m3d_g_aab__LIT_493[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026EC54 0034 .text      Set__8cM3dGAabFPC4cXyzPC4cXyz                                */
+/* 8026EC54-8026EC88 0034 .text      Set__8cM3dGAabFPC4cXyzPC4cXyz                                Function */
 // cM3dGAab::Set(const cXyz*, const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -56,7 +80,7 @@ asm void Set__8cM3dGAabFPC4cXyzPC4cXyz() {
 }
 #pragma pop
 
-/* 8026EC88 0048 .text      CrossY__8cM3dGAabCFPC4cXyz                                   */
+/* 8026EC88-8026ECD0 0048 .text      CrossY__8cM3dGAabCFPC4cXyz                                   Function */
 // cM3dGAab::CrossY(const cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -67,7 +91,7 @@ asm void CrossY__8cM3dGAabCFPC4cXyz() {
 }
 #pragma pop
 
-/* 8026ECD0 0014 .text      UnderPlaneYUnder__8cM3dGAabCFf                               */
+/* 8026ECD0-8026ECE4 0014 .text      UnderPlaneYUnder__8cM3dGAabCFf                               Function */
 // cM3dGAab::UnderPlaneYUnder(f32) const
 #pragma push
 #pragma optimization_level 0
@@ -78,7 +102,7 @@ asm void UnderPlaneYUnder__8cM3dGAabCFf() {
 }
 #pragma pop
 
-/* 8026ECE4 0014 .text      TopPlaneYUnder__8cM3dGAabCFf                                 */
+/* 8026ECE4-8026ECF8 0014 .text      TopPlaneYUnder__8cM3dGAabCFf                                 Function */
 // cM3dGAab::TopPlaneYUnder(f32) const
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +113,7 @@ asm void TopPlaneYUnder__8cM3dGAabCFf() {
 }
 #pragma pop
 
-/* 8026ECF8 0024 .text      ClearForMinMax__8cM3dGAabFv                                  */
+/* 8026ECF8-8026ED1C 0024 .text      ClearForMinMax__8cM3dGAabFv                                  Function */
 // cM3dGAab::ClearForMinMax(void)
 #pragma push
 #pragma optimization_level 0
@@ -100,7 +124,7 @@ asm void ClearForMinMax__8cM3dGAabFv() {
 }
 #pragma pop
 
-/* 8026ED1C 0044 .text      SetMinMax__8cM3dGAabFRC4cXyz                                 */
+/* 8026ED1C-8026ED60 0044 .text      SetMinMax__8cM3dGAabFRC4cXyz                                 Function */
 // cM3dGAab::SetMinMax(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -111,7 +135,7 @@ asm void SetMinMax__8cM3dGAabFRC4cXyz() {
 }
 #pragma pop
 
-/* 8026ED60 0044 .text      SetMinMax__8cM3dGAabFRC8cM3dGAab                             */
+/* 8026ED60-8026EDA4 0044 .text      SetMinMax__8cM3dGAabFRC8cM3dGAab                             Function */
 // cM3dGAab::SetMinMax(const cM3dGAab&)
 #pragma push
 #pragma optimization_level 0
@@ -122,7 +146,7 @@ asm void SetMinMax__8cM3dGAabFRC8cM3dGAab() {
 }
 #pragma pop
 
-/* 8026EDA4 0040 .text      SetMin__8cM3dGAabFRC4cXyz                                    */
+/* 8026EDA4-8026EDE4 0040 .text      SetMin__8cM3dGAabFRC4cXyz                                    Function */
 // cM3dGAab::SetMin(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -133,7 +157,7 @@ asm void SetMin__8cM3dGAabFRC4cXyz() {
 }
 #pragma pop
 
-/* 8026EDE4 0040 .text      SetMax__8cM3dGAabFRC4cXyz                                    */
+/* 8026EDE4-8026EE24 0040 .text      SetMax__8cM3dGAabFRC4cXyz                                    Function */
 // cM3dGAab::SetMax(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -144,7 +168,7 @@ asm void SetMax__8cM3dGAabFRC4cXyz() {
 }
 #pragma pop
 
-/* 8026EE24 0044 .text      CalcCenter__8cM3dGAabCFP4cXyz                                */
+/* 8026EE24-8026EE68 0044 .text      CalcCenter__8cM3dGAabCFP4cXyz                                Function */
 // cM3dGAab::CalcCenter(cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -155,7 +179,7 @@ asm void CalcCenter__8cM3dGAabCFP4cXyz() {
 }
 #pragma pop
 
-/* 8026EE68 004C .text      PlusR__8cM3dGAabFf                                           */
+/* 8026EE68-8026EEB4 004C .text      PlusR__8cM3dGAabFf                                           Function */
 // cM3dGAab::PlusR(f32)
 #pragma push
 #pragma optimization_level 0

@@ -9,11 +9,375 @@
 // 
 
 extern "C" {
-extern u8 data_8000569C[36];
-extern void __unregister_fragment();
-extern void __register_fragment();
+/* InitializedData      */
+extern u8 data_8000569C[32];
+/* SInitFunction        */
+extern void __sinit_m_Do_main_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_audio_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_graphic_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_mtx_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_lib_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_dvd_thread_cpp();
+/* SInitFunction        */
+extern void __sinit_m_Do_MemCard_cpp();
+/* SInitFunction        */
+extern void __sinit_c_damagereaction_cpp();
+/* SInitFunction        */
+extern void __sinit_f_ap_game_cpp();
+/* SInitFunction        */
+extern void __sinit_f_op_actor_mng_cpp();
+/* SInitFunction        */
+extern void __sinit_d_stage_cpp();
+/* SInitFunction        */
+extern void __sinit_d_com_inf_game_cpp();
+/* SInitFunction        */
+extern void __sinit_d_com_static_cpp();
+/* SInitFunction        */
+extern void __sinit_d_map_path_cpp();
+/* SInitFunction        */
+extern void __sinit_d_map_path_dmap_cpp();
+/* SInitFunction        */
+extern void __sinit_d_event_lib_cpp();
+/* SInitFunction        */
+extern void __sinit_d_particle_cpp();
+/* SInitFunction        */
+extern void __sinit_d_particle_copoly_cpp();
+/* SInitFunction        */
+extern void __sinit_d_drawlist_cpp();
+/* SInitFunction        */
+extern void __sinit_d_attention_cpp();
+/* SInitFunction        */
+extern void __sinit_d_ev_camera_cpp();
+/* SInitFunction        */
+extern void __sinit_d_a_alink_cpp();
+/* SInitFunction        */
+extern void __sinit_d_a_npc_cpp();
+/* SInitFunction        */
+extern void __sinit_d_a_npc_cd_cpp();
+/* SInitFunction        */
+extern void __sinit_d_a_npc_cd2_cpp();
+/* SInitFunction        */
+extern void __sinit_d_a_obj_item_cpp();
+/* SInitFunction        */
+extern void __sinit_d_camera_cpp();
+/* SInitFunction        */
+extern void __sinit_d_file_select_cpp();
+/* SInitFunction        */
+extern void __sinit_d_file_sel_warning_cpp();
+/* SInitFunction        */
+extern void __sinit_d_file_sel_info_cpp();
+/* SInitFunction        */
+extern void __sinit_d_bright_check_cpp();
+/* SInitFunction        */
+extern void __sinit_d_scope_cpp();
+/* SInitFunction        */
+extern void __sinit_d_select_icon_cpp();
+/* SInitFunction        */
+extern void __sinit_d_shop_system_cpp();
+/* SInitFunction        */
+extern void __sinit_d_gameover_cpp();
+/* SInitFunction        */
+extern void __sinit_d_kankyo_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_calibration_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_collect_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_dmap_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_dmap_map_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_fishing_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_fmap_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_insect_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_item_explain_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_letter_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_option_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_ring_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_save_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_skill_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_window_HIO_cpp();
+/* SInitFunction        */
+extern void __sinit_d_menu_window_cpp();
+/* SInitFunction        */
+extern void __sinit_d_meter_HIO_cpp();
+/* SInitFunction        */
+extern void __sinit_d_meter2_info_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_object_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_unit_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_3select_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_explain_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_howl_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_scrn_light_cpp();
+/* SInitFunction        */
+extern void __sinit_d_msg_flow_cpp();
+/* SInitFunction        */
+extern void __sinit_d_name_cpp();
+/* SInitFunction        */
+extern void __sinit_d_pane_class_cpp();
+/* SInitFunction        */
+extern void __sinit_d_s_logo_cpp();
+/* SInitFunction        */
+extern void __sinit_d_s_name_cpp();
+/* SInitFunction        */
+extern void __sinit_d_s_play_cpp();
+/* SInitFunction        */
+extern void __sinit_d_save_HIO_cpp();
+/* SInitFunction        */
+extern void __sinit_c_cc_d_cpp();
+/* SInitFunction        */
+extern void __sinit_c_xyz_cpp();
+/* SInitFunction        */
+extern void __sinit_c_sxyz_cpp();
+/* SInitFunction        */
+extern void __sinit_c_m3d_cpp();
+/* SInitFunction        */
+extern void __sinit_c_angle_cpp();
+/* SInitFunction        */
+extern void __sinit_JFWDisplay_cpp();
+/* SInitFunction        */
+extern void func_80288204();
+/* SInitFunction        */
+extern void func_8028B198();
+/* SInitFunction        */
+extern void func_8028C180();
+/* SInitFunction        */
+extern void func_8028C8A4();
+/* SInitFunction        */
+extern void func_8028D2B8();
+/* SInitFunction        */
+extern void func_8028E0F4();
+/* SInitFunction        */
+extern void __sinit_JASHeapCtrl_cpp();
+/* SInitFunction        */
+extern void __sinit_JASCmdStack_cpp();
+/* SInitFunction        */
+extern void __sinit_JASTrack_cpp();
+/* SInitFunction        */
+extern void __sinit_JASSeqCtrl_cpp();
+/* SInitFunction        */
+extern void __sinit_JASSeqParser_cpp();
+/* SInitFunction        */
+extern void __sinit_JASBNKParser_cpp();
+/* SInitFunction        */
+extern void __sinit_JASLfo_cpp();
+/* SInitFunction        */
+extern void __sinit_JASDriverIF_cpp();
+/* SInitFunction        */
+extern void __sinit_Z2Audience_cpp();
+/* SInitFunction        */
+extern void __sinit_Z2SoundObjMgr_cpp();
+/* SInitFunction        */
+extern void __sinit_Z2Creature_cpp();
+/* SInitFunction        */
+extern void __sinit_Z2WolfHowlMgr_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRThread_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRAram_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRAramHeap_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRAramPiece_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRFileLoader_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRDvdFile_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRDvdRipper_cpp();
+/* SInitFunction        */
+extern void __sinit_JKRDvdAramRipper_cpp();
+/* SInitFunction        */
+extern void __sinit_JUTGamePad_cpp();
+/* SInitFunction        */
+extern void __sinit_JUTException_cpp();
+/* SInitFunction        */
+extern void __sinit_J2DPane_cpp();
+/* SInitFunction        */
+extern void __sinit_J3DSys_cpp();
+/* SInitFunction        */
+extern void __sinit_J3DShapeMtx_cpp();
+/* SInitFunction        */
+extern void __sinit_J3DMatBlock_cpp();
+/* SInitFunction        */
+extern void __sinit_J3DDrawBuffer_cpp();
+/* SInitFunction        */
+extern void __sinit_JMATrigonometric_cpp();
+/* Function             */
 extern void __destroy_global_chain();
+/* Function             */
+extern void __fini_cpp_exceptions();
+/* Function             */
+extern void __init_cpp_exceptions();
+/* Function             */
+extern void __unregister_fragment();
+/* Function             */
+extern void __register_fragment();
+/* SymbolReferenceArrayData */
+extern const void* __init_cpp_exceptions_reference;
+/* SymbolReferenceArrayData */
+extern const void* _ctors[106];
+/* SymbolReferenceArrayData */
+extern const void* __destroy_global_chain_reference;
+/* SymbolReferenceArrayData */
+extern const void* __fini_cpp_exceptions_reference;
+/* InitializedData      */
 SECTION_SDATA extern u8 fragmentID[8];
+}
+
+
+/* ###################################################################################### */
+/*                                         .ctors                                         */
+/* ###################################################################################### */
+
+extern "C" {
+#pragma section ".ctors$10"
+/* 803737C0-803737C4 0004 .ctors     __init_cpp_exceptions_reference                              SymbolReferenceArrayData */
+__declspec(section ".ctors$10") const void* __init_cpp_exceptions_reference = (void*)__init_cpp_exceptions;
+/* 803737C4-8037396C 01A8 .ctors     _ctors                                                       SymbolReferenceArrayData */
+__declspec(section ".ctors$10") const void* _ctors[106] = {
+	(void*)__sinit_m_Do_main_cpp,
+	(void*)__sinit_m_Do_audio_cpp,
+	(void*)__sinit_m_Do_graphic_cpp,
+	(void*)__sinit_m_Do_mtx_cpp,
+	(void*)__sinit_m_Do_lib_cpp,
+	(void*)__sinit_m_Do_dvd_thread_cpp,
+	(void*)__sinit_m_Do_MemCard_cpp,
+	(void*)__sinit_c_damagereaction_cpp,
+	(void*)__sinit_f_ap_game_cpp,
+	(void*)__sinit_f_op_actor_mng_cpp,
+	(void*)__sinit_d_stage_cpp,
+	(void*)__sinit_d_com_inf_game_cpp,
+	(void*)__sinit_d_com_static_cpp,
+	(void*)__sinit_d_map_path_cpp,
+	(void*)__sinit_d_map_path_dmap_cpp,
+	(void*)__sinit_d_event_lib_cpp,
+	(void*)__sinit_d_particle_cpp,
+	(void*)__sinit_d_particle_copoly_cpp,
+	(void*)__sinit_d_drawlist_cpp,
+	(void*)__sinit_d_attention_cpp,
+	(void*)__sinit_d_ev_camera_cpp,
+	(void*)__sinit_d_a_alink_cpp,
+	(void*)__sinit_d_a_npc_cpp,
+	(void*)__sinit_d_a_npc_cd_cpp,
+	(void*)__sinit_d_a_npc_cd2_cpp,
+	(void*)__sinit_d_a_obj_item_cpp,
+	(void*)__sinit_d_camera_cpp,
+	(void*)__sinit_d_file_select_cpp,
+	(void*)__sinit_d_file_sel_warning_cpp,
+	(void*)__sinit_d_file_sel_info_cpp,
+	(void*)__sinit_d_bright_check_cpp,
+	(void*)__sinit_d_scope_cpp,
+	(void*)__sinit_d_select_icon_cpp,
+	(void*)__sinit_d_shop_system_cpp,
+	(void*)__sinit_d_gameover_cpp,
+	(void*)__sinit_d_kankyo_cpp,
+	(void*)__sinit_d_menu_calibration_cpp,
+	(void*)__sinit_d_menu_collect_cpp,
+	(void*)__sinit_d_menu_dmap_cpp,
+	(void*)__sinit_d_menu_dmap_map_cpp,
+	(void*)__sinit_d_menu_fishing_cpp,
+	(void*)__sinit_d_menu_fmap_cpp,
+	(void*)__sinit_d_menu_insect_cpp,
+	(void*)__sinit_d_menu_item_explain_cpp,
+	(void*)__sinit_d_menu_letter_cpp,
+	(void*)__sinit_d_menu_option_cpp,
+	(void*)__sinit_d_menu_ring_cpp,
+	(void*)__sinit_d_menu_save_cpp,
+	(void*)__sinit_d_menu_skill_cpp,
+	(void*)__sinit_d_menu_window_HIO_cpp,
+	(void*)__sinit_d_menu_window_cpp,
+	(void*)__sinit_d_meter_HIO_cpp,
+	(void*)__sinit_d_meter2_info_cpp,
+	(void*)__sinit_d_msg_object_cpp,
+	(void*)__sinit_d_msg_unit_cpp,
+	(void*)__sinit_d_msg_scrn_3select_cpp,
+	(void*)__sinit_d_msg_scrn_explain_cpp,
+	(void*)__sinit_d_msg_scrn_howl_cpp,
+	(void*)__sinit_d_msg_scrn_light_cpp,
+	(void*)__sinit_d_msg_flow_cpp,
+	(void*)__sinit_d_name_cpp,
+	(void*)__sinit_d_pane_class_cpp,
+	(void*)__sinit_d_s_logo_cpp,
+	(void*)__sinit_d_s_name_cpp,
+	(void*)__sinit_d_s_play_cpp,
+	(void*)__sinit_d_save_HIO_cpp,
+	(void*)__sinit_c_cc_d_cpp,
+	(void*)__sinit_c_xyz_cpp,
+	(void*)__sinit_c_sxyz_cpp,
+	(void*)__sinit_c_m3d_cpp,
+	(void*)__sinit_c_angle_cpp,
+	(void*)__sinit_JFWDisplay_cpp,
+	(void*)func_80288204,
+	(void*)func_8028B198,
+	(void*)func_8028C180,
+	(void*)func_8028C8A4,
+	(void*)func_8028D2B8,
+	(void*)func_8028E0F4,
+	(void*)__sinit_JASHeapCtrl_cpp,
+	(void*)__sinit_JASCmdStack_cpp,
+	(void*)__sinit_JASTrack_cpp,
+	(void*)__sinit_JASSeqCtrl_cpp,
+	(void*)__sinit_JASSeqParser_cpp,
+	(void*)__sinit_JASBNKParser_cpp,
+	(void*)__sinit_JASLfo_cpp,
+	(void*)__sinit_JASDriverIF_cpp,
+	(void*)__sinit_Z2Audience_cpp,
+	(void*)__sinit_Z2SoundObjMgr_cpp,
+	(void*)__sinit_Z2Creature_cpp,
+	(void*)__sinit_Z2WolfHowlMgr_cpp,
+	(void*)__sinit_JKRThread_cpp,
+	(void*)__sinit_JKRAram_cpp,
+	(void*)__sinit_JKRAramHeap_cpp,
+	(void*)__sinit_JKRAramPiece_cpp,
+	(void*)__sinit_JKRFileLoader_cpp,
+	(void*)__sinit_JKRDvdFile_cpp,
+	(void*)__sinit_JKRDvdRipper_cpp,
+	(void*)__sinit_JKRDvdAramRipper_cpp,
+	(void*)__sinit_JUTGamePad_cpp,
+	(void*)__sinit_JUTException_cpp,
+	(void*)__sinit_J2DPane_cpp,
+	(void*)__sinit_J3DSys_cpp,
+	(void*)__sinit_J3DShapeMtx_cpp,
+	(void*)__sinit_J3DMatBlock_cpp,
+	(void*)__sinit_J3DDrawBuffer_cpp,
+	(void*)__sinit_JMATrigonometric_cpp,
+};
+}
+
+
+/* ###################################################################################### */
+/*                                         .dtors                                         */
+/* ###################################################################################### */
+
+extern "C" {
+#pragma section ".dtors$10"
+/* 80373980-80373984 0004 .dtors     __destroy_global_chain_reference                             SymbolReferenceArrayData */
+__declspec(section ".dtors$10") const void* __destroy_global_chain_reference = (void*)__destroy_global_chain;
+
+#pragma section ".dtors$15"
+/* 80373984-80373988 0004 .dtors     __fini_cpp_exceptions_reference                              SymbolReferenceArrayData */
+__declspec(section ".dtors$15") const void* __fini_cpp_exceptions_reference = (void*)__fini_cpp_exceptions;
 }
 
 
@@ -22,7 +386,7 @@ SECTION_SDATA extern u8 fragmentID[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450AD0 0004 .sdata     fragmentID                                                   */
+/* 80450AD0-80450AD8 0004 .sdata     fragmentID                                                   InitializedData */
 SECTION_SDATA u8 fragmentID[8] = {
 	0xFF, 0xFF, 0xFF, 0xFE,
 	/* padding */
@@ -36,7 +400,7 @@ SECTION_SDATA u8 fragmentID[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036283C 0034 .text      __fini_cpp_exceptions                                        */
+/* 8036283C-80362870 0034 .text      __fini_cpp_exceptions                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -46,7 +410,7 @@ asm void __fini_cpp_exceptions() {
 }
 #pragma pop
 
-/* 80362870 003C .text      __init_cpp_exceptions                                        */
+/* 80362870-803628AC 003C .text      __init_cpp_exceptions                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -56,64 +420,5 @@ asm void __init_cpp_exceptions() {
 }
 #pragma pop
 
-}
-
-
-/* ###################################################################################### */
-/*                                         .ctors                                         */
-/* ###################################################################################### */
-
-extern "C" {
-#pragma section ".ctors$10"
-/* 803737C0 0004 .ctors     __init_cpp_exceptions_reference                              */
-__declspec(section ".ctors$10") const u8 __init_cpp_exceptions_reference[448] = {
-	0x80, 0x36, 0x28, 0x70,
-	/* padding */
-	0x80, 0x00, 0x65, 0xE0, 0x80, 0x00, 0x73, 0x18, 0x80, 0x00, 0xB1, 0xD0, 0x80, 0x00, 0xCF, 0xB8,
-	0x80, 0x01, 0x55, 0x44, 0x80, 0x01, 0x65, 0x74, 0x80, 0x01, 0x74, 0x70, 0x80, 0x01, 0x83, 0x88,
-	0x80, 0x01, 0x8B, 0x28, 0x80, 0x01, 0xDE, 0x14, 0x80, 0x02, 0x82, 0x4C, 0x80, 0x02, 0xFD, 0x18,
-	0x80, 0x03, 0x1D, 0xC4, 0x80, 0x03, 0xD6, 0xE4, 0x80, 0x04, 0x14, 0x60, 0x80, 0x04, 0x8B, 0xD8,
-	0x80, 0x05, 0x04, 0x80, 0x80, 0x05, 0x16, 0x14, 0x80, 0x05, 0x69, 0xB4, 0x80, 0x07, 0x40, 0x0C,
-	0x80, 0x09, 0x76, 0x9C, 0x80, 0x14, 0x1B, 0x04, 0x80, 0x14, 0xD3, 0xD8, 0x80, 0x15, 0x7A, 0x10,
-	0x80, 0x15, 0xA9, 0x0C, 0x80, 0x15, 0xDE, 0xD0, 0x80, 0x18, 0x25, 0xFC, 0x80, 0x19, 0x14, 0x28,
-	0x80, 0x19, 0x23, 0x8C, 0x80, 0x19, 0x2E, 0x88, 0x80, 0x19, 0x36, 0x08, 0x80, 0x19, 0x41, 0x40,
-	0x80, 0x19, 0x5C, 0x64, 0x80, 0x19, 0xAB, 0xB0, 0x80, 0x19, 0xC0, 0xC8, 0x80, 0x1A, 0xDC, 0xA4,
-	0x80, 0x1A, 0xFC, 0x14, 0x80, 0x1B, 0x7B, 0x14, 0x80, 0x1C, 0x05, 0xC4, 0x80, 0x1C, 0x26, 0x44,
-	0x80, 0x1C, 0x65, 0xBC, 0x80, 0x1C, 0xDA, 0x74, 0x80, 0x1D, 0xA6, 0x50, 0x80, 0x1D, 0xCC, 0x8C,
-	0x80, 0x1E, 0x1D, 0x7C, 0x80, 0x1E, 0x8E, 0x8C, 0x80, 0x1E, 0xF5, 0x80, 0x80, 0x1F, 0x6C, 0x1C,
-	0x80, 0x1F, 0x9A, 0x28, 0x80, 0x1F, 0x9F, 0x28, 0x80, 0x1F, 0xD9, 0x28, 0x80, 0x20, 0x12, 0x84,
-	0x80, 0x21, 0xE9, 0xD8, 0x80, 0x23, 0x8B, 0x58, 0x80, 0x23, 0x90, 0x7C, 0x80, 0x23, 0xB9, 0x14,
-	0x80, 0x23, 0xE6, 0x68, 0x80, 0x24, 0x44, 0x54, 0x80, 0x24, 0x63, 0x90, 0x80, 0x24, 0xDA, 0xCC,
-	0x80, 0x25, 0x11, 0xEC, 0x80, 0x25, 0x53, 0xD0, 0x80, 0x25, 0x85, 0xC0, 0x80, 0x25, 0x93, 0x24,
-	0x80, 0x25, 0xAC, 0x54, 0x80, 0x25, 0xC5, 0xFC, 0x80, 0x26, 0x49, 0xF8, 0x80, 0x26, 0x72, 0x90,
-	0x80, 0x26, 0x75, 0x8C, 0x80, 0x26, 0xEC, 0x3C, 0x80, 0x27, 0x1B, 0xD4, 0x80, 0x27, 0x36, 0xDC,
-	0x80, 0x28, 0x82, 0x04, 0x80, 0x28, 0xB1, 0x98, 0x80, 0x28, 0xC1, 0x80, 0x80, 0x28, 0xC8, 0xA4,
-	0x80, 0x28, 0xD2, 0xB8, 0x80, 0x28, 0xE0, 0xF4, 0x80, 0x29, 0x0B, 0x14, 0x80, 0x29, 0x11, 0x6C,
-	0x80, 0x29, 0x33, 0x88, 0x80, 0x29, 0x3C, 0x6C, 0x80, 0x29, 0x59, 0x50, 0x80, 0x29, 0xA0, 0x48,
-	0x80, 0x29, 0xBE, 0x6C, 0x80, 0x29, 0xE3, 0x20, 0x80, 0x2B, 0xDE, 0xDC, 0x80, 0x2C, 0x01, 0xEC,
-	0x80, 0x2C, 0x30, 0x40, 0x80, 0x2C, 0xBB, 0x7C, 0x80, 0x2D, 0x1E, 0x94, 0x80, 0x2D, 0x2D, 0xAC,
-	0x80, 0x2D, 0x32, 0x6C, 0x80, 0x2D, 0x3B, 0x04, 0x80, 0x2D, 0x45, 0xA0, 0x80, 0x2D, 0x9B, 0x00,
-	0x80, 0x2D, 0xA7, 0xDC, 0x80, 0x2D, 0xB5, 0xE8, 0x80, 0x2E, 0x1B, 0x60, 0x80, 0x2E, 0x41, 0x4C,
-	0x80, 0x2F, 0x84, 0x7C, 0x80, 0x31, 0x0E, 0xD0, 0x80, 0x31, 0x47, 0xEC, 0x80, 0x32, 0x35, 0x6C,
-	0x80, 0x32, 0x55, 0xF0, 0x80, 0x33, 0x9A, 0xEC, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-}
-
-
-/* ###################################################################################### */
-/*                                         .dtors                                         */
-/* ###################################################################################### */
-
-extern "C" {
-#pragma section ".dtors$10"
-/* 80373980 0004 .dtors     __destroy_global_chain_reference                             */
-__declspec(section ".dtors$10") 
-extern void * const __destroy_global_chain_reference = __destroy_global_chain;
-
-#pragma section ".dtors$15"
-/* 80373984 0004 .dtors     __fini_cpp_exceptions_reference                              */
-__declspec(section ".dtors$15") 
-extern void * const __fini_cpp_exceptions_reference = __fini_cpp_exceptions;
 }
 

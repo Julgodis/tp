@@ -22,8 +22,9 @@ JSUPPORT_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJSupport.a: dirs $(JSUPPORT_A_O_FILES)
+$(BUILD_DIR)/libJSupport.a: $(JSUPPORT_A_O_FILES)
 	$(LD) -xm l $(JSUPPORT_A_LDFLAGS) -o $(BUILD_DIR)/libJSupport.a $(JSUPPORT_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJSupport.a
 
 $(BUILD_DIR)/libs/JSupport/%.o: cpp/JSupport/%.cpp
 	mkdir -p $(@D)

@@ -14,21 +14,45 @@ extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void bzero__7JASCalcFPvUl();
+/* Function             */
+extern void __ct__12JASBasicInstFv();
+/* Function             */
 extern void __dt__12JASBasicInstFv();
+/* Function             */
 extern void getParam__12JASBasicInstCFiiP12JASInstParam();
+/* Function             */
+extern void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap();
+/* Function             */
+extern void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data();
+/* Function             */
+extern void getKeyRegion__12JASBasicInstFi();
+/* Function             */
 extern void __dt__Q212JASBasicInst7TKeymapFv();
+/* Function             */
 extern void __dt__7JASInstFv();
+/* Function             */
 extern void __ct__Q212JASBasicInst7TKeymapFv();
+/* Function             */
 extern void getType__12JASBasicInstCFv();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __destroy_new_array();
+/* Function             */
 extern void __construct_new_array();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__12JASBasicInst[5];
-SECTION_DATA extern const void* __vt__7JASInst[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12JASBasicInst[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JASInst[5];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_187[8];
 }
 
@@ -38,16 +62,16 @@ SECTION_SDATA2 extern u8 LIT_187[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C76E8 0014 .data      __vt__12JASBasicInst                                         */
-SECTION_DATA const  void* __vt__12JASBasicInst[5] = {
+/* 803C76E8-803C76FC 0014 .data      __vt__12JASBasicInst                                         VTableData */
+SECTION_DATA void* __vt__12JASBasicInst[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12JASBasicInstFv,
 	(void*)getParam__12JASBasicInstCFiiP12JASInstParam,
 	(void*)getType__12JASBasicInstCFv,
 };
-/* 803C76FC 0014 .data      __vt__7JASInst                                               */
-SECTION_DATA const  void* __vt__7JASInst[5] = {
+/* 803C76FC-803C7710 0014 .data      __vt__7JASInst                                               VTableData */
+SECTION_DATA void* __vt__7JASInst[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__7JASInstFv,
@@ -62,7 +86,7 @@ SECTION_DATA const  void* __vt__7JASInst[5] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455640 0004 .sdata2    @187                                                         */
+/* 80455640-80455648 0004 .sdata2    @187                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_187[8] = {
 	0x3F, 0x80, 0x00, 0x00,
 	/* padding */
@@ -76,7 +100,7 @@ SECTION_SDATA2 u8 LIT_187[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80298014 0068 .text      __ct__12JASBasicInstFv                                       */
+/* 80298014-8029807C 0068 .text      __ct__12JASBasicInstFv                                       Function */
 // JASBasicInst::JASBasicInst(void)
 #pragma push
 #pragma optimization_level 0
@@ -87,7 +111,7 @@ asm void __ct__12JASBasicInstFv() {
 }
 #pragma pop
 
-/* 8029807C 007C .text      __dt__12JASBasicInstFv                                       */
+/* 8029807C-802980F8 007C .text      __dt__12JASBasicInstFv                                       Function */
 // JASBasicInst::~JASBasicInst(void)
 #pragma push
 #pragma optimization_level 0
@@ -98,7 +122,7 @@ asm void __dt__12JASBasicInstFv() {
 }
 #pragma pop
 
-/* 802980F8 00A4 .text      getParam__12JASBasicInstCFiiP12JASInstParam                  */
+/* 802980F8-8029819C 00A4 .text      getParam__12JASBasicInstCFiiP12JASInstParam                  Function */
 // JASBasicInst::getParam(int, int, JASInstParam*) const
 #pragma push
 #pragma optimization_level 0
@@ -109,7 +133,7 @@ asm void getParam__12JASBasicInstCFiiP12JASInstParam() {
 }
 #pragma pop
 
-/* 8029819C 0080 .text      setKeyRegionCount__12JASBasicInstFUlP7JKRHeap                */
+/* 8029819C-8029821C 0080 .text      setKeyRegionCount__12JASBasicInstFUlP7JKRHeap                Function */
 // JASBasicInst::setKeyRegionCount(u32, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -120,7 +144,7 @@ asm void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap() {
 }
 #pragma pop
 
-/* 8029821C 0010 .text      setOsc__12JASBasicInstFiPCQ213JASOscillator4Data             */
+/* 8029821C-8029822C 0010 .text      setOsc__12JASBasicInstFiPCQ213JASOscillator4Data             Function */
 // JASBasicInst::setOsc(int, JASOscillator::Data)
 #pragma push
 #pragma optimization_level 0
@@ -131,7 +155,7 @@ asm void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data() {
 }
 #pragma pop
 
-/* 8029822C 0024 .text      getKeyRegion__12JASBasicInstFi                               */
+/* 8029822C-80298250 0024 .text      getKeyRegion__12JASBasicInstFi                               Function */
 // JASBasicInst::getKeyRegion(int)
 #pragma push
 #pragma optimization_level 0
@@ -142,7 +166,7 @@ asm void getKeyRegion__12JASBasicInstFi() {
 }
 #pragma pop
 
-/* 80298250 003C .text      __dt__Q212JASBasicInst7TKeymapFv                             */
+/* 80298250-8029828C 003C .text      __dt__Q212JASBasicInst7TKeymapFv                             Function */
 // JASBasicInst::TKeymap::~JASBasicInst::TKeymap(void)
 #pragma push
 #pragma optimization_level 0
@@ -153,7 +177,7 @@ asm void __dt__Q212JASBasicInst7TKeymapFv() {
 }
 #pragma pop
 
-/* 8029828C 0048 .text      __dt__7JASInstFv                                             */
+/* 8029828C-802982D4 0048 .text      __dt__7JASInstFv                                             Function */
 // JASInst::~JASInst(void)
 #pragma push
 #pragma optimization_level 0
@@ -164,7 +188,7 @@ asm void __dt__7JASInstFv() {
 }
 #pragma pop
 
-/* 802982D4 000C .text      __ct__Q212JASBasicInst7TKeymapFv                             */
+/* 802982D4-802982E0 000C .text      __ct__Q212JASBasicInst7TKeymapFv                             Function */
 // JASBasicInst::TKeymap::JASBasicInst::TKeymap(void)
 #pragma push
 #pragma optimization_level 0
@@ -175,7 +199,7 @@ asm void __ct__Q212JASBasicInst7TKeymapFv() {
 }
 #pragma pop
 
-/* 802982E0 000C .text      getType__12JASBasicInstCFv                                   */
+/* 802982E0-802982EC 000C .text      getType__12JASBasicInstCFv                                   Function */
 // JASBasicInst::getType(void) const
 #pragma push
 #pragma optimization_level 0

@@ -10,11 +10,18 @@
 
 struct node_list_class;
 
+extern void fpcLn_Create(void); /* fpcLn_Create__Fv */
 extern void cLs_Create(node_list_class*); /* cLs_Create__FP15node_list_class */
 
 extern "C" {
+/* Function             */
+extern void fpcLn_Create__Fv();
+/* Function             */
 extern void cLs_Create__FP15node_list_class();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 l_fpcLn_Line[192];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* g_fpcLn_Queue[2];
 }
 
 
@@ -23,9 +30,10 @@ SECTION_BSS extern u8 l_fpcLn_Line[192];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804505D8 0008 .sdata     g_fpcLn_Queue                                                */
-SECTION_SDATA u8 g_fpcLn_Queue[8] = {
-	0x80, 0x3F, 0x4C, 0xF0, 0x00, 0x00, 0x00, 0x10,
+/* 804505D8-804505E0 0008 .sdata     g_fpcLn_Queue                                                SymbolReferenceArrayData */
+SECTION_SDATA void* g_fpcLn_Queue[2] = {
+	(void*)&l_fpcLn_Line,
+	(void*)0x00000010,
 };
 }
 
@@ -35,7 +43,7 @@ SECTION_SDATA u8 g_fpcLn_Queue[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 803F4CF0 00C0 .bss       l_fpcLn_Line                                                 */
+/* 803F4CF0-803F4DB0 00C0 .bss       l_fpcLn_Line                                                 ZeroInitializedData */
 SECTION_BSS u8 l_fpcLn_Line[192];
 }
 
@@ -45,7 +53,7 @@ SECTION_BSS u8 l_fpcLn_Line[192];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021F64 0054 .text      fpcLn_Create__Fv                                             */
+/* 80021F64-80021FB8 0054 .text      fpcLn_Create__Fv                                             Function */
 }
 
 #pragma push

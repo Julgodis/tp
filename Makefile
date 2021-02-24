@@ -76,7 +76,7 @@ INCLUDES := -i include -i include/dolphin/ -i src
 ASFLAGS := -mgekko -I include
 
 # Linker flags
-LDFLAGS     := -map $(MAP) -fp hard -nodefaults -linkmode moreram  -w off
+LDFLAGS     := -map $(MAP) -fp hard -nodefaults -linkmode moreram  -w on -unused
 LIB_LDFLAGS := -library -fp hard -nodefaults -proc gekko
 
 # Compiler flags
@@ -152,12 +152,13 @@ dirs:
 test:
 	$(CC) $(CFLAGS) -c -o test.o test.cpp
 
-
-$(LDSCRIPT): ldscript.lcf
-	$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
+#ldscript.lcf
+$(LDSCRIPT): test.lcf
+	cp $< $@
+	#$(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | tools
-	$(ELF2DOL) $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
+	$(ELF2DOL) -v -v -v -s 13 $< $@ $(SDATA_PDHR) $(SBSS_PDHR) $(TARGET_COL)
 	$(SHA1SUM) -c $(TARGET).sha1
 
 clean:
@@ -172,6 +173,34 @@ tools:
 
 docs:
 	$(DOXYGEN) Doxyfile
+
+testx: $(LIBS)
+	echo Hej
+
+# elf
+$(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
+	@echo $(O_FILES) > build/o_files
+	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files $(LIBS)
+
+#@$(LD2) --map $(MAP) -o $@  $(O_FILES)
+# Metrowerks linker:
+#@echo $(O_FILES) > build/o_files
+# $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
+#	$(OBJCOPY) $@ $@
+
+$(BUILD_DIR)/%.o: %.s
+	$(AS) $(ASFLAGS) -o $@ $<
+
+$(BUILD_DIR)/%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+$(BUILD_DIR)/%.o: %.cpp
+	iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
+	$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
+	cp $@ $@.copy
+	$(STRIP) -d -R .dead -R .comment $@
+#$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
 
 	
 include libs/base/Makefile
@@ -221,34 +250,9 @@ include libs/Z2AudioLib/Makefile
 include libs/SComponent/Makefile
 include libs/SStandard/Makefile
 
-# elf
-$(ELF): $(LIBS) $(O_FILES) $(LDSCRIPT)
-	@echo $(O_FILES) > build/o_files
-	$(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files $(LIBS)
-
-#@$(LD2) --map $(MAP) -o $@  $(O_FILES)
-# Metrowerks linker:
-#@echo $(O_FILES) > build/o_files
-# $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
-# The Metrowerks linker doesn't generate physical addresses in the ELF program headers. This fixes it somehow.
-#	$(OBJCOPY) $@ $@
-
-$(BUILD_DIR)/%.o: %.s
-	$(AS) $(ASFLAGS) -o $@ $<
-
-$(BUILD_DIR)/%.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(BUILD_DIR)/%.o: %.cpp
-	iconv -f UTF-8 -t SHIFT-JIS -o $@.iconv.cpp $<
-	$(CC) $(CFLAGS) -c -o $@ $@.iconv.cpp
-#$(PYTHON) $(POSTPROC) -fsymbol-fixup $@
-
-
-
 
 ### Debug Print ###
 
 print-% : ; $(info $* is a $(flavor $*) variable set to [$($*)]) @true
 
-.PHONY: default all dirs clean tools docs print-%
+.PHONY: default all dirs clean tools docs testx print-%

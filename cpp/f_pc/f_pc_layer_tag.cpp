@@ -8,8 +8,8 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
 struct layer_management_tag_class;
+struct create_tag_class;
 struct layer_class;
 
 extern void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int); /* fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi */
@@ -18,20 +18,38 @@ extern void fpcLy_QueueTo(layer_class*, create_tag_class*); /* fpcLy_QueueTo__FP
 extern void fpcLy_Layer(unsigned int); /* fpcLy_Layer__FUi */
 extern void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16); /* fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs */
 extern void fpcLyTg_QueueTo(layer_management_tag_class*); /* fpcLyTg_QueueTo__FP26layer_management_tag_class */
+extern void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16); /* fpcLyTg_Move__FP26layer_management_tag_classUiUsUs */
+extern void fpcLyTg_Init(layer_management_tag_class*, unsigned int, void*); /* fpcLyTg_Init__FP26layer_management_tag_classUiPv */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
 extern void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
+/* Function             */
 extern void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
+/* Function             */
 extern void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
+/* Function             */
 extern void fpcLy_Layer__FUi();
+/* Function             */
 extern void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+/* Function             */
 extern void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+/* Function             */
+extern void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
+/* Function             */
+extern void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A3A00[32];
 }
 
@@ -41,7 +59,7 @@ SECTION_DATA extern u8 data_803A3A00[32];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3A00 001C .data      crear$2239                                                   */
+/* 803A3A00-803A3A20 001C .data      crear$2239                                                   InitializedData */
 SECTION_DATA u8 data_803A3A00[32] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF,
@@ -56,7 +74,7 @@ SECTION_DATA u8 data_803A3A00[32] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021CD4 00F8 .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        */
+/* 80021CD4-80021DCC 00F8 .text      fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs        Function */
 }
 
 #pragma push
@@ -69,7 +87,7 @@ asm void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16) {
 #pragma pop
 
 extern "C" {
-/* 80021DCC 0060 .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              */
+/* 80021DCC-80021E2C 0060 .text      fpcLyTg_QueueTo__FP26layer_management_tag_class              Function */
 }
 
 #pragma push
@@ -82,7 +100,7 @@ asm void fpcLyTg_QueueTo(layer_management_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021E2C 0084 .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           */
+/* 80021E2C-80021EB0 0084 .text      fpcLyTg_Move__FP26layer_management_tag_classUiUsUs           Function */
 }
 
 #pragma push
@@ -95,7 +113,7 @@ asm void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16) {
 #pragma pop
 
 extern "C" {
-/* 80021EB0 00B4 .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             */
+/* 80021EB0-80021F64 00B4 .text      fpcLyTg_Init__FP26layer_management_tag_classUiPv             Function */
 }
 
 #pragma push

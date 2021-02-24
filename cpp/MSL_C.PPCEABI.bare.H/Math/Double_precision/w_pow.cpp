@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_pow();
+/* Function             */
+extern void pow();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_pow();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C780 0020 .text      pow                                                          */
+/* 8036C780-8036C7A0 0020 .text      pow                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

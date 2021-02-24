@@ -9,6 +9,11 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void func_802A4A80();
+/* Function             */
+extern void getBank__12JAUBankTableCFUl();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
 }
 
@@ -18,7 +23,7 @@ extern void append__10JSUPtrListFP10JSUPtrLink();
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A4A80 0020 .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> */
+/* 802A4A80-802A4AA0 0020 .text      appendBankTable__22JAUBankTableDictionaryFP23JSULink<12JAUBankTable> Function */
 // JAUBankTableDictionary::appendBankTable(JSULink<12JAUBankTable>*)
 #pragma push
 #pragma optimization_level 0
@@ -29,7 +34,7 @@ asm void func_802A4A80() {
 }
 #pragma pop
 
-/* 802A4AA0 0024 .text      getBank__12JAUBankTableCFUl                                  */
+/* 802A4AA0-802A4AC4 0024 .text      getBank__12JAUBankTableCFUl                                  Function */
 // JAUBankTable::getBank(u32) const
 #pragma push
 #pragma optimization_level 0

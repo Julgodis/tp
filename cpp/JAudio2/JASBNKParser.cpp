@@ -14,57 +14,113 @@ extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void bcopy__7JASCalcFPCvPvUl();
+/* Function             */
 extern void __ct__17JASGenericMemPoolFv();
+/* Function             */
 extern void func_802978DC();
+/* Function             */
 extern void __ct__12JASBasicBankFv();
+/* Function             */
 extern void newInstTable__12JASBasicBankFUcP7JKRHeap();
+/* Function             */
 extern void setInst__12JASBasicBankFiP7JASInst();
+/* Function             */
 extern void getInst__12JASBasicBankCFi();
+/* Function             */
 extern void __ct__12JASBasicInstFv();
+/* Function             */
 extern void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap();
+/* Function             */
 extern void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data();
+/* Function             */
 extern void getKeyRegion__12JASBasicInstFi();
+/* Function             */
 extern void __ct__10JASDrumSetFv();
+/* Function             */
 extern void newPercArray__10JASDrumSetFUcP7JKRHeap();
+/* Function             */
 extern void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc();
+/* Function             */
 extern void __ct__Q210JASDrumSet5TPercFv();
+/* Function             */
 extern void setRelease__Q210JASDrumSet5TPercFUl();
+/* Function             */
+extern void createBank__12JASBNKParserFPCvP7JKRHeap();
+/* Function             */
 extern void createBasicBank__12JASBNKParserFPCvP7JKRHeap();
+/* Function             */
 extern void findChunk__Q212JASBNKParser4Ver1FPCvUl();
+/* Function             */
 extern void createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap();
+/* Function             */
 extern void createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap();
+/* Function             */
 extern void findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc();
+/* Function             */
 extern void getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point();
+/* Function             */
 extern void func_80299FA0();
+/* Function             */
 extern void func_80299FB8();
+/* Function             */
 extern void func_80299FD0();
+/* Function             */
 extern void func_80299FE8();
+/* Function             */
 extern void func_8029A000();
+/* Function             */
 extern void func_8029A018();
+/* Function             */
 extern void func_8029A030();
+/* SInitFunction        */
+extern void __sinit_JASBNKParser_cpp();
+/* Function             */
 extern void getFreeSize__7JKRHeapFv();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_17();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_17();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_28();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 JASBNKParser__LIT_1065[12];
-SECTION_BSS extern u8 data_80431B7C[20];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_80431B7C[16 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 JASDram[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sUsedHeapSize__12JASBNKParser[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_8045128C[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASBNKParser__LIT_835[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 JASBNKParser__LIT_838;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_990;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_1045;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_1046[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JASBNKParser__LIT_1047[8];
 }
 
@@ -74,26 +130,26 @@ SECTION_SDATA2 extern u8 JASBNKParser__LIT_1047[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455658 0004 .sdata2    @835                                                         */
+/* 80455658-80455660 0004 .sdata2    @835                                                         InitializedData */
 SECTION_SDATA2 u8 JASBNKParser__LIT_835[8] = {
 	0x42, 0xFE, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455660 0008 .sdata2    @838                                                         */
+/* 80455660-80455668 0008 .sdata2    @838                                                         Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 JASBNKParser__LIT_838 = 4503599627370496.000000;
-/* 80455668 0008 .sdata2    @990                                                         */
+/* 80455668-80455670 0008 .sdata2    @990                                                         Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 LIT_990 = 4503601774854144.000000;
-/* 80455670 0004 .sdata2    @1045                                                        */
+/* 80455670-80455674 0004 .sdata2    @1045                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_1045 = 1.000000f;
-/* 80455674 0004 .sdata2    @1046                                                        */
+/* 80455674-80455678 0004 .sdata2    @1046                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_1046[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455678 0004 .sdata2    @1047                                                        */
+/* 80455678-80455680 0004 .sdata2    @1047                                                        InitializedData */
 SECTION_SDATA2 u8 JASBNKParser__LIT_1047[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
@@ -107,10 +163,10 @@ SECTION_SDATA2 u8 JASBNKParser__LIT_1047[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80431B70 000C .bss       @1065                                                        */
+/* 80431B70-80431B7C 000C .bss       @1065                                                        ZeroInitializedData */
 SECTION_BSS u8 JASBNKParser__LIT_1065[12];
-/* 80431B7C 0010 .bss       memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>   */
-SECTION_BSS u8 data_80431B7C[20];
+/* 80431B7C-80431B90 0010 .bss       memPool___46JASPoolAllocObject_MultiThreaded<10JASChannel>   ZeroInitializedData */
+SECTION_BSS u8 data_80431B7C[16 + 4 /* padding */];
 }
 
 
@@ -119,9 +175,9 @@ SECTION_BSS u8 data_80431B7C[20];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451288 0004 .sbss      sUsedHeapSize__12JASBNKParser                                */
+/* 80451288-8045128C 0004 .sbss      sUsedHeapSize__12JASBNKParser                                ZeroInitializedData */
 SECTION_SBSS u8 sUsedHeapSize__12JASBNKParser[4];
-/* 8045128C 0004 .sbss      data_8045128C                                                */
+/* 8045128C-80451290 0004 .sbss      data_8045128C                                                ZeroInitializedData */
 SECTION_SBSS u8 data_8045128C[4];
 }
 
@@ -131,7 +187,7 @@ SECTION_SBSS u8 data_8045128C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80299538 0020 .text      createBank__12JASBNKParserFPCvP7JKRHeap                      */
+/* 80299538-80299558 0020 .text      createBank__12JASBNKParserFPCvP7JKRHeap                      Function */
 // JASBNKParser::createBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -142,7 +198,7 @@ asm void createBank__12JASBNKParserFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299558 00A8 .text      createBasicBank__12JASBNKParserFPCvP7JKRHeap                 */
+/* 80299558-80299600 00A8 .text      createBasicBank__12JASBNKParserFPCvP7JKRHeap                 Function */
 // JASBNKParser::createBasicBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -153,7 +209,7 @@ asm void createBasicBank__12JASBNKParserFPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299600 003C .text      findChunk__Q212JASBNKParser4Ver1FPCvUl                       */
+/* 80299600-8029963C 003C .text      findChunk__Q212JASBNKParser4Ver1FPCvUl                       Function */
 // JASBNKParser::Ver1::findChunk(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -164,7 +220,7 @@ asm void findChunk__Q212JASBNKParser4Ver1FPCvUl() {
 }
 #pragma pop
 
-/* 8029963C 0400 .text      createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap          */
+/* 8029963C-80299A3C 0400 .text      createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap          Function */
 // JASBNKParser::Ver1::createBasicBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -175,7 +231,7 @@ asm void createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299A3C 042C .text      createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap          */
+/* 80299A3C-80299E68 042C .text      createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap          Function */
 // JASBNKParser::Ver0::createBasicBank(const void*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -186,7 +242,7 @@ asm void createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap() {
 }
 #pragma pop
 
-/* 80299E68 0124 .text      findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc */
+/* 80299E68-80299F8C 0124 .text      findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc Function */
 // JASBNKParser::Ver0::findOscPtr(JASBasicBank*, JASBNKParser::Ver0::THeader, JASBNKParser::Ver0::TOsc)
 #pragma push
 #pragma optimization_level 0
@@ -197,7 +253,7 @@ asm void findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver
 }
 #pragma pop
 
-/* 80299F8C 0014 .text      getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point */
+/* 80299F8C-80299FA0 0014 .text      getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point Function */
 // JASBNKParser::Ver0::getOscTableEndPtr(JASOscillator::Point)
 #pragma push
 #pragma optimization_level 0
@@ -208,7 +264,7 @@ asm void getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point() {
 }
 #pragma pop
 
-/* 80299FA0 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl   */
+/* 80299FA0-80299FB8 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPmap>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -219,7 +275,7 @@ asm void func_80299FA0() {
 }
 #pragma pop
 
-/* 80299FB8 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl   */
+/* 80299FB8-80299FD0 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TPerc>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -230,7 +286,7 @@ asm void func_80299FB8() {
 }
 #pragma pop
 
-/* 80299FD0 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl   */
+/* 80299FD0-80299FE8 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TVmap>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -241,7 +297,7 @@ asm void func_80299FD0() {
 }
 #pragma pop
 
-/* 80299FE8 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl */
+/* 80299FE8-8029A000 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>__FPCvUl Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver07TKeymap>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -252,7 +308,7 @@ asm void func_80299FE8() {
 }
 #pragma pop
 
-/* 8029A000 0018 .text      JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl       */
+/* 8029A000-8029A018 0018 .text      JSUConvertOffsetToPtr<Q213JASOscillator5Point>__FPCvUl       Function */
 // JSUConvertOffsetToPtr<Q213JASOscillator5Point>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -263,7 +319,7 @@ asm void func_8029A000() {
 }
 #pragma pop
 
-/* 8029A018 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl    */
+/* 8029A018-8029A030 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>__FPCvUl    Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver04TOsc>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -274,7 +330,7 @@ asm void func_8029A018() {
 }
 #pragma pop
 
-/* 8029A030 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl   */
+/* 8029A030-8029A048 0018 .text      JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>__FPCvUl   Function */
 // JSUConvertOffsetToPtr<Q312JASBNKParser4Ver05TInst>(const void*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -285,7 +341,7 @@ asm void func_8029A030() {
 }
 #pragma pop
 
-/* 8029A048 0058 .text      __sinit_JASBNKParser_cpp                                     */
+/* 8029A048-8029A0A0 0058 .text      __sinit_JASBNKParser_cpp                                     SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

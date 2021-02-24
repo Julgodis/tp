@@ -9,13 +9,22 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void TRKNubMainLoop();
+/* Function             */
 extern void TRKNubWelcome();
+/* Function             */
 extern void TRKTerminateNub();
+/* Function             */
 extern void TRKInitializeNub();
+/* Function             */
+extern void TRK_main();
+/* Function             */
 extern void MWTRACE();
+/* InitializedData      */
 SECTION_RODATA extern const u8 MetroTRK_Portable_main_TRK__LIT_80[16];
-SECTION_BSS extern u8 TRK_mainError[4];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 TRK_mainError[4 + 4 /* padding */];
 }
 
 
@@ -24,7 +33,7 @@ SECTION_BSS extern u8 TRK_mainError[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A2BF8 000B .rodata    @80                                                          */
+/* 803A2BF8-803A2C08 000B .rodata    @80                                                          InitializedData */
 SECTION_RODATA const u8 MetroTRK_Portable_main_TRK__LIT_80[16] = {
 	0x54, 0x52, 0x4B, 0x5F, 0x4D, 0x61, 0x69, 0x6E, 0x20, 0x0A, 0x00,
 	/* padding */
@@ -38,11 +47,8 @@ SECTION_RODATA const u8 MetroTRK_Portable_main_TRK__LIT_80[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044F818 0004 .bss       TRK_mainError                                                */
-SECTION_BSS u8 TRK_mainError[4];
-SECTION_BSS u8 pad_8044F81C[4];
-/* 8044F820 0004 .bss       data_8044F820                                                */
-SECTION_BSS u8 data_8044F820[4];
+/* 8044F818-8044F820 0004 .bss       TRK_mainError                                                ZeroInitializedData */
+SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
 }
 
 
@@ -51,7 +57,7 @@ SECTION_BSS u8 data_8044F820[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80371B9C 0058 .text      TRK_main                                                     */
+/* 80371B9C-80371BF4 0058 .text      TRK_main                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

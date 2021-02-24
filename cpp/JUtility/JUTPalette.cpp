@@ -13,11 +13,23 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSPanic();
+/* Function             */
+extern void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
+/* Function             */
+extern void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+/* Function             */
+extern void load__10JUTPaletteFv();
+/* Function             */
 extern void GXInitTlutObj();
+/* Function             */
 extern void GXLoadTlut();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JUTPalette__stringBase0[48];
 }
 
@@ -27,9 +39,15 @@ SECTION_RODATA extern const u8 JUTPalette__stringBase0[48];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039D360 0029 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039D360 = "JUTPalette.cpp";
-const char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
+/* 8039D360-8039D390 0029 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D360 = "JUTPalette.cpp";
+SECTION_DEAD const char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D389 = "\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -38,7 +56,7 @@ const char* const stringBase_8039D36F = "JUTTexture: TLUT is NULL\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DE890 008C .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    */
+/* 802DE890-802DE91C 008C .text      storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT                    Function */
 // JUTPalette::storeTLUT(_GXTlut, ResTLUT*)
 #pragma push
 #pragma optimization_level 0
@@ -49,7 +67,7 @@ asm void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT() {
 }
 #pragma pop
 
-/* 802DE91C 0040 .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv */
+/* 802DE91C-802DE95C 0040 .text      storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv Function */
 // JUTPalette::storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*)
 #pragma push
 #pragma optimization_level 0
@@ -60,7 +78,7 @@ asm void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv() {
 }
 #pragma pop
 
-/* 802DE95C 0044 .text      load__10JUTPaletteFv                                         */
+/* 802DE95C-802DE9A0 0044 .text      load__10JUTPaletteFv                                         Function */
 // JUTPalette::load(void)
 #pragma push
 #pragma optimization_level 0

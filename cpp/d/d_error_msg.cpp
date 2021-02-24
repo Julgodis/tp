@@ -20,96 +20,190 @@ extern void drawCapture(u8); /* drawCapture__FUc */
 extern void cLib_chaseUC(u8*, u8, u8); /* cLib_chaseUC__FPUcUcUc */
 
 extern "C" {
+/* Function             */
 extern void OSReport_Error();
+/* Function             */
 extern void mDoAud_resetRecover__Fv();
+/* Function             */
 extern void beginRender__13mDoGph_gInf_cFv();
+/* Function             */
 extern void mDoGph_drawFilterQuad__FScSc();
+/* Function             */
 extern void mDoRst_reset__FiUli();
+/* Function             */
 extern void messageSet__FUlb();
+/* Function             */
 extern void draw__14dDvdErrorMsg_cFl();
+/* Function             */
+extern void execute__14dDvdErrorMsg_cFv();
+/* Function             */
 extern void drawCapture__FUc();
+/* Function             */
+extern void execute__19dShutdownErrorMsg_cFv();
+/* Function             */
 extern void cLib_chaseUC__FPUcUcUc();
+/* Function             */
 extern void resetProcess__10Z2AudioMgrFUlb();
+/* Function             */
 extern void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+/* Function             */
 extern void __dt__10JUTResFontFv();
+/* Function             */
 extern void __ct__13J2DOrthoGraphFffffff();
+/* Function             */
 extern void setPort__13J2DOrthoGraphFv();
+/* Function             */
 extern void func_802E980C();
+/* Function             */
 extern void func_802FC800();
+/* Function             */
 extern void __dt__10J2DPictureFv();
+/* Function             */
 extern void draw__10J2DPictureFffffbbb();
+/* Function             */
 extern void func_802FFBC4();
+/* Function             */
 extern void __dt__10J2DTextBoxFv();
+/* Function             */
 extern void draw__10J2DTextBoxFfff18J2DTextBoxHBinding();
+/* Function             */
 extern void drawInit__6J3DSysFv();
+/* Function             */
 extern void C_MTXOrtho();
+/* Function             */
 extern void DVDGetDriveStatus();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmt();
+/* Function             */
 extern void GXSetTexCoordGen2();
+/* Function             */
 extern void GXSetNumTexGens();
+/* Function             */
 extern void GXSetCullMode();
+/* Function             */
 extern void GXSetTexCopySrc();
+/* Function             */
 extern void GXSetTexCopyDst();
+/* Function             */
 extern void GXCopyTex();
+/* Function             */
 extern void GXSetNumChans();
+/* Function             */
 extern void GXInitTexObj();
+/* Function             */
 extern void GXInitTexObjLOD();
+/* Function             */
 extern void GXLoadTexObj();
+/* Function             */
 extern void GXSetNumIndStages();
+/* Function             */
 extern void GXSetTevColorIn();
+/* Function             */
 extern void GXSetTevAlphaIn();
+/* Function             */
 extern void GXSetTevColorOp();
+/* Function             */
 extern void GXSetTevAlphaOp();
+/* Function             */
 extern void GXSetTevColor();
+/* Function             */
 extern void GXSetAlphaCompare();
+/* Function             */
 extern void GXSetTevOrder();
+/* Function             */
 extern void GXSetNumTevStages();
+/* Function             */
 extern void GXSetFog();
+/* Function             */
 extern void GXSetFogRangeAdj();
+/* Function             */
 extern void GXSetBlendMode();
+/* Function             */
 extern void GXSetAlphaUpdate();
+/* Function             */
 extern void GXSetZMode();
+/* Function             */
 extern void GXSetZCompLoc();
+/* Function             */
 extern void GXSetDither();
+/* Function             */
 extern void GXSetProjection();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_27();
+/* InitializedData      */
 SECTION_RODATA extern const u8 black_tex[64];
+/* InitializedData      */
 SECTION_RODATA extern const u8 msg_data[608];
+/* InitializedData      */
 SECTION_RODATA extern const u8 font_data[74336];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_error_msg__stringBase0[24];
+/* InitializedData      */
 SECTION_DATA extern u8 g_mDoMtx_identity[72];
-SECTION_DATA extern const void* __vt__14J2DGrafContext[10];
-SECTION_DATA extern const void* __vt__13J2DOrthoGraph[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J2DGrafContext[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J2DOrthoGraph[10];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_clearColor[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 data_80450688[8];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BB8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
-SECTION_SBSS extern u8 mResetData__6mDoRst[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450FB0[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sManager__10JFWDisplay[4];
-SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_error_msg__LIT_3758[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3759;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3760;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3761;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3762;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3763;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3764;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3765;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3766;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_error_msg__LIT_3767;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_error_msg__LIT_3769;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_error_msg__LIT_3835[8];
-SECTION_SBSS2 extern u8 d_d_error_msg__LIT_3873[4];
+/* ZeroInitializedData  */
+SECTION_SBSS2 extern u8 d_d_error_msg__LIT_3873[4 + 4 /* padding */];
 }
 
 
@@ -118,14 +212,22 @@ SECTION_SBSS2 extern u8 d_d_error_msg__LIT_3873[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037B140 0040 .rodata    black_tex                                                    */
+/* 8038D640-8038D658 0013 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8038D640 = "DVD Error !! <%d>\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8038D653 = "\0\0\0\0";
+#pragma pop
+/* 8037B140-8037B180 0040 .rodata    black_tex                                                    InitializedData */
 SECTION_RODATA const u8 black_tex[64] = {
 	0x00, 0x00, 0x00, 0x08, 0x00, 0x08, 0x01, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x20,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8037B180 0260 .rodata    msg_data                                                     */
+/* 8037B180-8037B3E0 0260 .rodata    msg_data                                                     InitializedData */
 SECTION_RODATA const u8 msg_data[608] = {
 	0x4D, 0x45, 0x53, 0x47, 0x62, 0x6D, 0x67, 0x31, 0x00, 0x00, 0x02, 0x60, 0x00, 0x00, 0x00, 0x02,
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -166,7 +268,7 @@ SECTION_RODATA const u8 msg_data[608] = {
 	0x6F, 0x72, 0x20, 0x64, 0x65, 0x74, 0x61, 0x69, 0x6C, 0x73, 0x2E, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 8037B3E0 12260 .rodata    font_data                                                    */
+/* 8037B3E0-8038D640 12260 .rodata    font_data                                                    InitializedData */
 SECTION_RODATA const u8 font_data[74336] = {
 	0x46, 0x4F, 0x4E, 0x54, 0x62, 0x66, 0x6E, 0x31, 0x00, 0x01, 0x22, 0x60, 0x00, 0x00, 0x00, 0x04,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -4815,8 +4917,6 @@ SECTION_RODATA const u8 font_data[74336] = {
 	0x04, 0x0F, 0x04, 0x0F, 0x04, 0x0F, 0x05, 0x0D, 0x04, 0x0F, 0x05, 0x0D, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x6E, 0x72, 0x74, 0x73, 0xE1, 0xB8, 0x69, 0x72, 0x74, 0x73, 0xE1, 0xB8, 0x00, 0x00,
 };
-/* 8038D640 0013 .rodata    @stringBase0                                                 */
-const char* const stringBase_8038D640 = "DVD Error !! <%d>\n";
 }
 
 
@@ -4825,41 +4925,41 @@ const char* const stringBase_8038D640 = "DVD Error !! <%d>\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 80452C18 0004 .sdata2    @3758                                                        */
+/* 80452C18-80452C1C 0004 .sdata2    @3758                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_error_msg__LIT_3758[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80452C1C 0004 .sdata2    @3759                                                        */
+/* 80452C1C-80452C20 0004 .sdata2    @3759                                                        Float32Data */
 // 0x44180000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3759 = 608.000000f;
-/* 80452C20 0004 .sdata2    @3760                                                        */
+/* 80452C20-80452C24 0004 .sdata2    @3760                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3760 = 200.000000f;
-/* 80452C24 0004 .sdata2    @3761                                                        */
+/* 80452C24-80452C28 0004 .sdata2    @3761                                                        Float32Data */
 // 0x43e00000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3761 = 448.000000f;
-/* 80452C28 0004 .sdata2    @3762                                                        */
+/* 80452C28-80452C2C 0004 .sdata2    @3762                                                        Float32Data */
 // 0x41b80000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3762 = 23.000000f;
-/* 80452C2C 0004 .sdata2    @3763                                                        */
+/* 80452C2C-80452C30 0004 .sdata2    @3763                                                        Float32Data */
 // 0x41b00000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3763 = 22.000000f;
-/* 80452C30 0004 .sdata2    @3764                                                        */
+/* 80452C30-80452C34 0004 .sdata2    @3764                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3764 = 1.000000f;
-/* 80452C34 0004 .sdata2    @3765                                                        */
+/* 80452C34-80452C38 0004 .sdata2    @3765                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3765 = 0.500000f;
-/* 80452C38 0004 .sdata2    @3766                                                        */
+/* 80452C38-80452C3C 0004 .sdata2    @3766                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3766 = 2.000000f;
-/* 80452C3C 0004 .sdata2    @3767                                                        */
+/* 80452C3C-80452C40 0004 .sdata2    @3767                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 d_d_error_msg__LIT_3767 = 10.000000f;
-/* 80452C40 0008 .sdata2    @3769                                                        */
+/* 80452C40-80452C48 0008 .sdata2    @3769                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_error_msg__LIT_3769 = 4503601774854144.000000;
-/* 80452C48 0004 .sdata2    @3835                                                        */
+/* 80452C48-80452C50 0004 .sdata2    @3835                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_error_msg__LIT_3835[8] = {
 	0xBF, 0x80, 0x00, 0x00,
 	/* padding */
@@ -4873,9 +4973,8 @@ SECTION_SDATA2 u8 d_d_error_msg__LIT_3835[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456B78 0004 .sbss2     @3873                                                        */
-SECTION_SBSS2 u8 d_d_error_msg__LIT_3873[4];
-SECTION_SBSS2 u8 pad_80456B7C[4];
+/* 80456B78-80456B80 0004 .sbss2     @3873                                                        ZeroInitializedData */
+SECTION_SBSS2 u8 d_d_error_msg__LIT_3873[4 + 4 /* padding */];
 }
 
 
@@ -4884,7 +4983,7 @@ SECTION_SBSS2 u8 pad_80456B7C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8009CB88 060C .text      messageSet__FUlb                                             */
+/* 8009CB88-8009D194 060C .text      messageSet__FUlb                                             Function */
 }
 
 #pragma push
@@ -4897,8 +4996,8 @@ asm void messageSet(u32, bool) {
 #pragma pop
 
 extern "C" {
-/* 8009D194 01C0 .text      draw__14dDvdErrorMsg_cFl                                     */
-// dDvdErrorMsg_c::draw(s32)
+/* 8009D194-8009D354 01C0 .text      draw__14dDvdErrorMsg_cFl                                     Function */
+// dDvdErrorMsg_c::draw(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -4908,7 +5007,7 @@ asm void draw__14dDvdErrorMsg_cFl() {
 }
 #pragma pop
 
-/* 8009D354 00BC .text      execute__14dDvdErrorMsg_cFv                                  */
+/* 8009D354-8009D410 00BC .text      execute__14dDvdErrorMsg_cFv                                  Function */
 // dDvdErrorMsg_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -4919,7 +5018,7 @@ asm void execute__14dDvdErrorMsg_cFv() {
 }
 #pragma pop
 
-/* 8009D410 0380 .text      drawCapture__FUc                                             */
+/* 8009D410-8009D790 0380 .text      drawCapture__FUc                                             Function */
 }
 
 #pragma push
@@ -4932,7 +5031,7 @@ asm void drawCapture(u8) {
 #pragma pop
 
 extern "C" {
-/* 8009D790 00EC .text      execute__19dShutdownErrorMsg_cFv                             */
+/* 8009D790-8009D87C 00EC .text      execute__19dShutdownErrorMsg_cFv                             Function */
 // dShutdownErrorMsg_c::execute(void)
 #pragma push
 #pragma optimization_level 0

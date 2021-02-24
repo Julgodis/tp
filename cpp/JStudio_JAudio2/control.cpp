@@ -12,17 +12,28 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__Q27JStudio13TCreateObjectFv();
+/* Function             */
 extern void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound();
+/* Function             */
 extern void __dt__Q215JStudio_JAudio213TCreateObjectFv();
+/* Function             */
 extern void create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+/* Function             */
 extern void createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject();
+/* Function             */
 extern void __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__Q215JStudio_JAudio213TCreateObject[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__Q215JStudio_JAudio213TCreateObject[4];
 }
 
 
@@ -31,8 +42,8 @@ SECTION_DATA extern const void* __vt__Q215JStudio_JAudio213TCreateObject[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C5A68 0010 .data      __vt__Q215JStudio_JAudio213TCreateObject                     */
-SECTION_DATA const  void* __vt__Q215JStudio_JAudio213TCreateObject[4] = {
+/* 803C5A68-803C5A78 0010 .data      __vt__Q215JStudio_JAudio213TCreateObject                     VTableData */
+SECTION_DATA void* __vt__Q215JStudio_JAudio213TCreateObject[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__Q215JStudio_JAudio213TCreateObjectFv,
@@ -46,7 +57,7 @@ SECTION_DATA const  void* __vt__Q215JStudio_JAudio213TCreateObject[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028D550 0060 .text      __dt__Q215JStudio_JAudio213TCreateObjectFv                   */
+/* 8028D550-8028D5B0 0060 .text      __dt__Q215JStudio_JAudio213TCreateObjectFv                   Function */
 // JStudio_JAudio2::TCreateObject::~JStudio_JAudio2::TCreateObject(void)
 #pragma push
 #pragma optimization_level 0
@@ -57,7 +68,7 @@ asm void __dt__Q215JStudio_JAudio213TCreateObjectFv() {
 }
 #pragma pop
 
-/* 8028D5B0 0074 .text      create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object */
+/* 8028D5B0-8028D624 0074 .text      create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object Function */
 // JStudio_JAudio2::TCreateObject::create(JStudio::TObject, JStudio::stb::data::TParse_TBlock_object)
 #pragma push
 #pragma optimization_level 0
@@ -68,7 +79,7 @@ asm void create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JSt
 }
 #pragma pop
 
-/* 8028D624 0104 .text      createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject */
+/* 8028D624-8028D728 0104 .text      createObject_JAI_SOUND___Q215JStudio_JAudio213TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ215JStudio_JAudio213TCreateObject Function */
 // JStudio_JAudio2::TCreateObject::createObject_JAI_SOUND_(JStudio::stb::data::TParse_TBlock_object, JStudio_JAudio2::TCreateObject)
 #pragma push
 #pragma optimization_level 0

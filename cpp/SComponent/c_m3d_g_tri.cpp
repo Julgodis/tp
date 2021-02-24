@@ -16,10 +16,22 @@ extern void cM3d_CalcPla(const Vec*, const Vec*, const Vec*, Vec*, f32*); /* cM3
 extern void cM3d_Cross_CylTri(const cM3dGCyl*, const cM3dGTri*, Vec*); /* cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec */
 
 extern "C" {
+/* Function             */
 extern void cM3d_CalcPla__FPC3VecPC3VecPC3VecP3VecPf();
+/* Function             */
 extern void cM3d_Cross_CylTri__FPC8cM3dGCylPC8cM3dGTriP3Vec();
+/* Function             */
 extern void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
+/* Function             */
 extern void Set__8cM3dGPlaFPC8cM3dGPla();
+/* Function             */
+extern void cross__8cM3dGTriCFPC8cM3dGCylP3Vec();
+/* Function             */
+extern void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec();
+/* Function             */
+extern void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla();
+/* Function             */
+extern void set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec();
 }
 
 
@@ -28,7 +40,7 @@ extern void Set__8cM3dGPlaFPC8cM3dGPla();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026F7B0 002C .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec                           */
+/* 8026F7B0-8026F7DC 002C .text      cross__8cM3dGTriCFPC8cM3dGCylP3Vec                           Function */
 // cM3dGTri::cross(const cM3dGCyl*, Vec*) const
 #pragma push
 #pragma optimization_level 0
@@ -39,7 +51,7 @@ asm void cross__8cM3dGTriCFPC8cM3dGCylP3Vec() {
 }
 #pragma pop
 
-/* 8026F7DC 0080 .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         */
+/* 8026F7DC-8026F85C 0080 .text      setPos__8cM3dGTriFPC3VecPC3VecPC3Vec                         Function */
 // cM3dGTri::setPos(const Vec*, const Vec*, const Vec*)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +62,7 @@ asm void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec() {
 }
 #pragma pop
 
-/* 8026F85C 006C .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla               */
+/* 8026F85C-8026F8C8 006C .text      setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla               Function */
 // cM3dGTri::setBg(const Vec*, const Vec*, const Vec*, const cM3dGPla*)
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +73,7 @@ asm void setBg__8cM3dGTriFPC3VecPC3VecPC3VecPC8cM3dGPla() {
 }
 #pragma pop
 
-/* 8026F8C8 0074 .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec                      */
+/* 8026F8C8-8026F93C 0074 .text      set__8cM3dGTriFPC3VecPC3VecPC3VecPC3Vec                      Function */
 // cM3dGTri::set(const Vec*, const Vec*, const Vec*, const Vec*)
 #pragma push
 #pragma optimization_level 0

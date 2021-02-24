@@ -15,48 +15,99 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__11JKRDisposerFv();
+/* Function             */
 extern void __dt__11JKRDisposerFv();
+/* Function             */
+extern void __ct__10JKRDvdFileFv();
+/* Function             */
+extern void __ct__10JKRDvdFileFPCc();
+/* Function             */
+extern void __ct__10JKRDvdFileFl();
+/* Function             */
 extern void __dt__10JKRDvdFileFv();
+/* Function             */
 extern void initiate__10JKRDvdFileFv();
+/* Function             */
 extern void open__10JKRDvdFileFPCc();
+/* Function             */
 extern void open__10JKRDvdFileFl();
+/* Function             */
 extern void close__10JKRDvdFileFv();
+/* Function             */
 extern void readData__10JKRDvdFileFPvll();
-extern int writeData__10JKRDvdFileFPCvll();
+/* ReturnIntegerFunction */
+extern  int writeData__10JKRDvdFileFPCvll();
+/* Function             */
 extern void sync__10JKRDvdFileFv();
+/* Function             */
 extern void doneProcess__10JKRDvdFileFlP11DVDFileInfo();
+/* FirstParamFunction   */
 extern u32 getFileSize__10JKRDvdFileCFv(u8*);
+/* SInitFunction        */
+extern void __sinit_JKRDvdFile_cpp();
+/* Function             */
 extern void func_802D9B44();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __dt__10JSUPtrLinkFv();
+/* Function             */
 extern void __dt__10JSUPtrListFv();
+/* Function             */
 extern void initiate__10JSUPtrListFv();
+/* Function             */
 extern void append__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void remove__10JSUPtrListFP10JSUPtrLink();
+/* Function             */
 extern void panic_f__12JUTExceptionFPCciPCce();
+/* Function             */
 extern void OSInitMessageQueue();
+/* Function             */
 extern void OSSendMessage();
+/* Function             */
 extern void OSReceiveMessage();
+/* Function             */
 extern void OSInitMutex();
+/* Function             */
 extern void OSLockMutex();
+/* Function             */
 extern void OSUnlockMutex();
+/* Function             */
 extern void OSGetCurrentThread();
+/* Function             */
 extern void DVDFastOpen();
+/* Function             */
 extern void DVDOpen();
+/* Function             */
 extern void DVDClose();
+/* Function             */
 extern void DVDReadAsyncPrio();
+/* Function             */
 extern void DVDGetCommandBlockStatus();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 JKRDvdFile__stringBase0[48];
-SECTION_DATA extern const void* __vt__7JKRFile[8];
-SECTION_DATA extern const void* __vt__10JKRDvdFile[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__7JKRFile[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JKRDvdFile[10];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 LIT_657[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sDvdList__10JKRDvdFile[12];
 }
 
@@ -66,10 +117,16 @@ SECTION_BSS extern u8 sDvdList__10JKRDvdFile[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8039D260 0029 .rodata    @stringBase0                                                 */
-const char* const stringBase_8039D260 = "JKRDvdFile.cpp";
-const char* const stringBase_8039D26F = "%s";
-const char* const stringBase_8039D272 = "cannot close DVD file\n";
+/* 8039D260-8039D290 0029 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8039D260 = "JKRDvdFile.cpp";
+SECTION_DEAD const char* const stringBase_8039D26F = "%s";
+SECTION_DEAD const char* const stringBase_8039D272 = "cannot close DVD file\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8039D289 = "\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -78,8 +135,8 @@ const char* const stringBase_8039D272 = "cannot close DVD file\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC438 0024 .data      __vt__10JKRDvdFile                                           */
-SECTION_DATA const  void* __vt__10JKRDvdFile[10] = {
+/* 803CC438-803CC460 0024 .data      __vt__10JKRDvdFile                                           VTableData */
+SECTION_DATA void* __vt__10JKRDvdFile[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JKRDvdFileFv,
@@ -100,9 +157,9 @@ SECTION_DATA const  void* __vt__10JKRDvdFile[10] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80434360 000C .bss       @657                                                         */
+/* 80434360-8043436C 000C .bss       @657                                                         ZeroInitializedData */
 SECTION_BSS u8 LIT_657[12];
-/* 8043436C 000C .bss       sDvdList__10JKRDvdFile                                       */
+/* 8043436C-80434378 000C .bss       sDvdList__10JKRDvdFile                                       ZeroInitializedData */
 SECTION_BSS u8 sDvdList__10JKRDvdFile[12];
 }
 
@@ -112,7 +169,7 @@ SECTION_BSS u8 sDvdList__10JKRDvdFile[12];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D9584 0074 .text      __ct__10JKRDvdFileFv                                         */
+/* 802D9584-802D95F8 0074 .text      __ct__10JKRDvdFileFv                                         Function */
 // JKRDvdFile::JKRDvdFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -123,8 +180,8 @@ asm void __ct__10JKRDvdFileFv() {
 }
 #pragma pop
 
-/* 802D95F8 00A8 .text      __ct__10JKRDvdFileFPCc                                       */
-// JKRDvdFile::JKRDvdFile(const s8*)
+/* 802D95F8-802D96A0 00A8 .text      __ct__10JKRDvdFileFPCc                                       Function */
+// JKRDvdFile::JKRDvdFile(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -134,8 +191,8 @@ asm void __ct__10JKRDvdFileFPCc() {
 }
 #pragma pop
 
-/* 802D96A0 00A8 .text      __ct__10JKRDvdFileFl                                         */
-// JKRDvdFile::JKRDvdFile(s32)
+/* 802D96A0-802D9748 00A8 .text      __ct__10JKRDvdFileFl                                         Function */
+// JKRDvdFile::JKRDvdFile(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -145,7 +202,7 @@ asm void __ct__10JKRDvdFileFl() {
 }
 #pragma pop
 
-/* 802D9748 009C .text      __dt__10JKRDvdFileFv                                         */
+/* 802D9748-802D97E4 009C .text      __dt__10JKRDvdFileFv                                         Function */
 // JKRDvdFile::~JKRDvdFile(void)
 #pragma push
 #pragma optimization_level 0
@@ -156,7 +213,7 @@ asm void __dt__10JKRDvdFileFv() {
 }
 #pragma pop
 
-/* 802D97E4 006C .text      initiate__10JKRDvdFileFv                                     */
+/* 802D97E4-802D9850 006C .text      initiate__10JKRDvdFileFv                                     Function */
 // JKRDvdFile::initiate(void)
 #pragma push
 #pragma optimization_level 0
@@ -167,8 +224,8 @@ asm void initiate__10JKRDvdFileFv() {
 }
 #pragma pop
 
-/* 802D9850 0074 .text      open__10JKRDvdFileFPCc                                       */
-// JKRDvdFile::open(const s8*)
+/* 802D9850-802D98C4 0074 .text      open__10JKRDvdFileFPCc                                       Function */
+// JKRDvdFile::open(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -178,8 +235,8 @@ asm void open__10JKRDvdFileFPCc() {
 }
 #pragma pop
 
-/* 802D98C4 0074 .text      open__10JKRDvdFileFl                                         */
-// JKRDvdFile::open(s32)
+/* 802D98C4-802D9938 0074 .text      open__10JKRDvdFileFl                                         Function */
+// JKRDvdFile::open(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -189,7 +246,7 @@ asm void open__10JKRDvdFileFl() {
 }
 #pragma pop
 
-/* 802D9938 007C .text      close__10JKRDvdFileFv                                        */
+/* 802D9938-802D99B4 007C .text      close__10JKRDvdFileFv                                        Function */
 // JKRDvdFile::close(void)
 #pragma push
 #pragma optimization_level 0
@@ -200,8 +257,8 @@ asm void close__10JKRDvdFileFv() {
 }
 #pragma pop
 
-/* 802D99B4 00B4 .text      readData__10JKRDvdFileFPvll                                  */
-// JKRDvdFile::readData(void*, s32, s32)
+/* 802D99B4-802D9A68 00B4 .text      readData__10JKRDvdFileFPvll                                  Function */
+// JKRDvdFile::readData(void*, long, long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,13 +268,13 @@ asm void readData__10JKRDvdFileFPvll() {
 }
 #pragma pop
 
-/* 802D9A68 0008 .text      writeData__10JKRDvdFileFPCvll                                */
-// JKRDvdFile::writeData(const void*, s32, s32)
+/* 802D9A68-802D9A70 0008 .text      writeData__10JKRDvdFileFPCvll                                ReturnIntegerFunction */
+// JKRDvdFile::writeData(const void*, long, long)
 int writeData__10JKRDvdFileFPCvll() {
 	return -1;
 }
 
-/* 802D9A70 0054 .text      sync__10JKRDvdFileFv                                         */
+/* 802D9A70-802D9AC4 0054 .text      sync__10JKRDvdFileFv                                         Function */
 // JKRDvdFile::sync(void)
 #pragma push
 #pragma optimization_level 0
@@ -228,8 +285,8 @@ asm void sync__10JKRDvdFileFv() {
 }
 #pragma pop
 
-/* 802D9AC4 0034 .text      doneProcess__10JKRDvdFileFlP11DVDFileInfo                    */
-// JKRDvdFile::doneProcess(s32, DVDFileInfo*)
+/* 802D9AC4-802D9AF8 0034 .text      doneProcess__10JKRDvdFileFlP11DVDFileInfo                    Function */
+// JKRDvdFile::doneProcess(long, DVDFileInfo*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -239,13 +296,13 @@ asm void doneProcess__10JKRDvdFileFlP11DVDFileInfo() {
 }
 #pragma pop
 
-/* 802D9AF8 0008 .text      getFileSize__10JKRDvdFileCFv                                 */
+/* 802D9AF8-802D9B00 0008 .text      getFileSize__10JKRDvdFileCFv                                 FirstParamFunction */
 // JKRDvdFile::getFileSize(void) const
 u32 getFileSize__10JKRDvdFileCFv(u8* param0) {
 	return *(u32*)&param0[144]; /* param0->field_0x90 */
 }
 
-/* 802D9B00 0044 .text      __sinit_JKRDvdFile_cpp                                       */
+/* 802D9B00-802D9B44 0044 .text      __sinit_JKRDvdFile_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -255,7 +312,7 @@ asm void __sinit_JKRDvdFile_cpp() {
 }
 #pragma pop
 
-/* 802D9B44 0054 .text      __dt__21JSUList<10JKRDvdFile>Fv                              */
+/* 802D9B44-802D9B98 0054 .text      __dt__21JSUList<10JKRDvdFile>Fv                              Function */
 // JSUList<10JKRDvdFile>::~JSUList<10JKRDvdFile>(void)
 #pragma push
 #pragma optimization_level 0

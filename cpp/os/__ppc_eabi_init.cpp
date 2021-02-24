@@ -9,11 +9,16 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PPCHalt();
+/* Function             */
+extern void __init_user();
+/* Function             */
 extern void __init_cpp();
-typedef void (*voidfunctionptr) (void); 
-__declspec(section ".init") extern voidfunctionptr _ctors[];
-__declspec(section ".init") extern voidfunctionptr _dtors[];
+/* Function             */
+extern void _ExitProcess();
+/* SymbolReferenceArrayData */
+extern const void* __init_cpp_exceptions_reference;
 }
 
 
@@ -22,7 +27,7 @@ __declspec(section ".init") extern voidfunctionptr _dtors[];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80342B78 0020 .text      __init_user                                                  */
+/* 80342B78-80342B98 0020 .text      __init_user                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -32,7 +37,7 @@ asm void __init_user() {
 }
 #pragma pop
 
-/* 80342B98 0054 .text      __init_cpp                                                   */
+/* 80342B98-80342BEC 0054 .text      __init_cpp                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -42,7 +47,7 @@ asm void __init_cpp() {
 }
 #pragma pop
 
-/* 80342BEC 0020 .text      _ExitProcess                                                 */
+/* 80342BEC-80342C0C 0020 .text      _ExitProcess                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

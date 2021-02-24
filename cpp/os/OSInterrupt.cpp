@@ -9,24 +9,55 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void __OSSetExceptionHandler();
+/* Function             */
 extern void OSLoadContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
+extern void __RAS_OSDisableInterrupts_end();
+/* Function             */
+extern void OSEnableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
+extern void __OSSetInterruptHandler();
+/* Function             */
+extern void __OSGetInterruptHandler();
+/* Function             */
+extern void __OSInterruptInit();
+/* Function             */
 extern void SetInterruptMask();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
+extern void __OSUnmaskInterrupts();
+/* Function             */
 extern void __OSDispatchInterrupt();
+/* Function             */
 extern void ExternalInterruptHandler();
+/* Function             */
 extern void OSDisableScheduler();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void __OSReschedule();
+/* Function             */
 extern void OSGetTime();
+/* InitializedData      */
 SECTION_DATA extern u8 InterruptPrioTable[48];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 InterruptHandlerTable[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __OSLastInterruptSrr0[4];
-SECTION_SBSS extern u8 __OSLastInterrupt[2];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __OSLastInterrupt[2 + 6 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __OSLastInterruptTime[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451684[4];
 }
 
@@ -36,7 +67,7 @@ SECTION_SBSS extern u8 data_80451684[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D0758 002C .data      InterruptPrioTable                                           */
+/* 803D0758-803D0788 002C .data      InterruptPrioTable                                           InitializedData */
 SECTION_DATA u8 InterruptPrioTable[48] = {
 	0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x40, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00,
 	0x00, 0x00, 0x00, 0x80, 0x00, 0x00, 0x30, 0x00, 0x00, 0x00, 0x00, 0x20, 0x03, 0xFF, 0x8C, 0x00,
@@ -52,16 +83,15 @@ SECTION_DATA u8 InterruptPrioTable[48] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451670 0004 .sbss      InterruptHandlerTable                                        */
+/* 80451670-80451674 0004 .sbss      InterruptHandlerTable                                        ZeroInitializedData */
 SECTION_SBSS u8 InterruptHandlerTable[4];
-/* 80451674 0004 .sbss      __OSLastInterruptSrr0                                        */
+/* 80451674-80451678 0004 .sbss      __OSLastInterruptSrr0                                        ZeroInitializedData */
 SECTION_SBSS u8 __OSLastInterruptSrr0[4];
-/* 80451678 0002 .sbss      __OSLastInterrupt                                            */
-SECTION_SBSS u8 __OSLastInterrupt[2];
-SECTION_SBSS u8 pad_8045167C[4];
-/* 80451680 0004 .sbss      __OSLastInterruptTime                                        */
+/* 80451678-80451680 0002 .sbss      __OSLastInterrupt                                            ZeroInitializedData */
+SECTION_SBSS u8 __OSLastInterrupt[2 + 6 /* padding */];
+/* 80451680-80451684 0004 .sbss      __OSLastInterruptTime                                        ZeroInitializedData */
 SECTION_SBSS u8 __OSLastInterruptTime[4];
-/* 80451684 0004 .sbss      data_80451684                                                */
+/* 80451684-80451688 0004 .sbss      data_80451684                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80451684[4];
 }
 
@@ -71,8 +101,8 @@ SECTION_SBSS u8 data_80451684[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033D6F4 0000 .text      __RAS_OSDisableInterrupts_begin                              */
-/* 8033D6F4 000C .text      OSDisableInterrupts                                          */
+/* 8033D6F4-8033D6F4 0000 .text      __RAS_OSDisableInterrupts_begin                              Function */
+/* 8033D6F4-8033D700 000C .text      OSDisableInterrupts                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -82,7 +112,7 @@ asm void OSDisableInterrupts() {
 }
 #pragma pop
 
-/* 8033D700 0008 .text      __RAS_OSDisableInterrupts_end                                */
+/* 8033D700-8033D708 0008 .text      __RAS_OSDisableInterrupts_end                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -92,7 +122,7 @@ asm void __RAS_OSDisableInterrupts_end() {
 }
 #pragma pop
 
-/* 8033D708 0014 .text      OSEnableInterrupts                                           */
+/* 8033D708-8033D71C 0014 .text      OSEnableInterrupts                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -102,7 +132,7 @@ asm void OSEnableInterrupts() {
 }
 #pragma pop
 
-/* 8033D71C 0024 .text      OSRestoreInterrupts                                          */
+/* 8033D71C-8033D740 0024 .text      OSRestoreInterrupts                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -112,7 +142,7 @@ asm void OSRestoreInterrupts() {
 }
 #pragma pop
 
-/* 8033D740 001C .text      __OSSetInterruptHandler                                      */
+/* 8033D740-8033D75C 001C .text      __OSSetInterruptHandler                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -122,7 +152,7 @@ asm void __OSSetInterruptHandler() {
 }
 #pragma pop
 
-/* 8033D75C 0014 .text      __OSGetInterruptHandler                                      */
+/* 8033D75C-8033D770 0014 .text      __OSGetInterruptHandler                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -132,7 +162,7 @@ asm void __OSGetInterruptHandler() {
 }
 #pragma pop
 
-/* 8033D770 0074 .text      __OSInterruptInit                                            */
+/* 8033D770-8033D7E4 0074 .text      __OSInterruptInit                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,7 +172,7 @@ asm void __OSInterruptInit() {
 }
 #pragma pop
 
-/* 8033D7E4 02D8 .text      SetInterruptMask                                             */
+/* 8033D7E4-8033DABC 02D8 .text      SetInterruptMask                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +182,7 @@ asm void SetInterruptMask() {
 }
 #pragma pop
 
-/* 8033DABC 0088 .text      __OSMaskInterrupts                                           */
+/* 8033DABC-8033DB44 0088 .text      __OSMaskInterrupts                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -162,7 +192,7 @@ asm void __OSMaskInterrupts() {
 }
 #pragma pop
 
-/* 8033DB44 0088 .text      __OSUnmaskInterrupts                                         */
+/* 8033DB44-8033DBCC 0088 .text      __OSUnmaskInterrupts                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -172,7 +202,7 @@ asm void __OSUnmaskInterrupts() {
 }
 #pragma pop
 
-/* 8033DBCC 0344 .text      __OSDispatchInterrupt                                        */
+/* 8033DBCC-8033DF10 0344 .text      __OSDispatchInterrupt                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -182,7 +212,7 @@ asm void __OSDispatchInterrupt() {
 }
 #pragma pop
 
-/* 8033DF10 0050 .text      ExternalInterruptHandler                                     */
+/* 8033DF10-8033DF60 0050 .text      ExternalInterruptHandler                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

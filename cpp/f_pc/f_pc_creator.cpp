@@ -8,19 +8,35 @@
 // Additional Symbols:
 // 
 
-struct base_process_class;
 struct create_request;
+struct base_process_class;
 
 extern void fpcCtRq_IsCreatingByID(unsigned int); /* fpcCtRq_IsCreatingByID__FUi */
 extern void fpcCtRq_Cancel(create_request*); /* fpcCtRq_Cancel__FP14create_request */
 extern void fpcCtRq_IsDoing(create_request*); /* fpcCtRq_IsDoing__FP14create_request */
 extern void fpcCtRq_Handler(void); /* fpcCtRq_Handler__Fv */
+extern void fpcCt_IsCreatingByID(unsigned int); /* fpcCt_IsCreatingByID__FUi */
+extern void fpcCt_IsDoing(base_process_class*); /* fpcCt_IsDoing__FP18base_process_class */
+extern void fpcCt_Abort(base_process_class*); /* fpcCt_Abort__FP18base_process_class */
+extern void fpcCt_Handler(void); /* fpcCt_Handler__Fv */
 
 extern "C" {
+/* Function             */
 extern void fpcCtRq_IsCreatingByID__FUi();
+/* Function             */
 extern void fpcCtRq_Cancel__FP14create_request();
+/* Function             */
 extern void fpcCtRq_IsDoing__FP14create_request();
+/* Function             */
 extern void fpcCtRq_Handler__Fv();
+/* Function             */
+extern void fpcCt_IsCreatingByID__FUi();
+/* Function             */
+extern void fpcCt_IsDoing__FP18base_process_class();
+/* Function             */
+extern void fpcCt_Abort__FP18base_process_class();
+/* Function             */
+extern void fpcCt_Handler__Fv();
 }
 
 
@@ -29,7 +45,7 @@ extern void fpcCtRq_Handler__Fv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80020EA8 0020 .text      fpcCt_IsCreatingByID__FUi                                    */
+/* 80020EA8-80020EC8 0020 .text      fpcCt_IsCreatingByID__FUi                                    Function */
 }
 
 #pragma push
@@ -42,7 +58,7 @@ asm void fpcCt_IsCreatingByID(unsigned int) {
 #pragma pop
 
 extern "C" {
-/* 80020EC8 0024 .text      fpcCt_IsDoing__FP18base_process_class                        */
+/* 80020EC8-80020EEC 0024 .text      fpcCt_IsDoing__FP18base_process_class                        Function */
 }
 
 #pragma push
@@ -55,7 +71,7 @@ asm void fpcCt_IsDoing(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020EEC 0024 .text      fpcCt_Abort__FP18base_process_class                          */
+/* 80020EEC-80020F10 0024 .text      fpcCt_Abort__FP18base_process_class                          Function */
 }
 
 #pragma push
@@ -68,7 +84,7 @@ asm void fpcCt_Abort(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80020F10 0020 .text      fpcCt_Handler__Fv                                            */
+/* 80020F10-80020F30 0020 .text      fpcCt_Handler__Fv                                            Function */
 }
 
 #pragma push

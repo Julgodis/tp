@@ -8,31 +8,49 @@
 // Additional Symbols:
 // 
 
-struct create_request_method_class;
-struct base_process_class;
 struct layer_class;
-struct fast_create_request;
 struct create_request;
+struct base_process_class;
+struct fast_create_request;
+struct create_request_method_class;
 
 extern void fpcBs_MakeOfId(void); /* fpcBs_MakeOfId__Fv */
-extern void fpcBs_Create(s16, unsigned int, void*); /* fpcBs_Create__FsUiPv */
+extern void fpcBs_Create(short, unsigned int, void*); /* fpcBs_Create__FsUiPv */
 extern void fpcBs_SubCreate(base_process_class*); /* fpcBs_SubCreate__FP18base_process_class */
 extern void fpcCtRq_Cancel(create_request*); /* fpcCtRq_Cancel__FP14create_request */
 extern void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); /* fpcCtRq_Create__FP11layer_classUlP27create_request_method_class */
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
-extern void fpcLd_Use(s16); /* fpcLd_Use__Fs */
+extern void fpcLd_Use(short); /* fpcLd_Use__Fs */
+extern void fpcFCtRq_Do(fast_create_request*); /* fpcFCtRq_Do__FP19fast_create_request */
+extern void fpcFCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*); /* fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_MakeOfId__Fv();
+/* Function             */
 extern void fpcBs_Create__FsUiPv();
+/* Function             */
 extern void fpcBs_SubCreate__FP18base_process_class();
+/* Function             */
 extern void fpcCtRq_Cancel__FP14create_request();
+/* Function             */
 extern void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* Function             */
 extern void fpcLd_Use__Fs();
+/* Function             */
+extern void fpcFCtRq_Do__FP19fast_create_request();
+/* ReturnIntegerFunction */
+extern  int fpcFCtRq_Delete__FP19fast_create_request();
+/* Function             */
+extern void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
-SECTION_DATA extern u8 data_803A3AE0[16];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* data_803A3AE0[4];
 }
 
 
@@ -41,11 +59,13 @@ SECTION_DATA extern u8 data_803A3AE0[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3AE0 000C .data      submethod$2214                                               */
-SECTION_DATA u8 data_803A3AE0[16] = {
-	0x80, 0x02, 0x3A, 0x48, 0x00, 0x00, 0x00, 0x00, 0x80, 0x02, 0x3A, 0x98,
+/* 803A3AE0-803A3AF0 000C .data      submethod$2214                                               SymbolReferenceArrayData */
+SECTION_DATA void* data_803A3AE0[4] = {
+	(void*)fpcFCtRq_Do,
+	NULL,
+	(void*)fpcFCtRq_Delete__FP19fast_create_request,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -55,7 +75,7 @@ SECTION_DATA u8 data_803A3AE0[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80023A48 0050 .text      fpcFCtRq_Do__FP19fast_create_request                         */
+/* 80023A48-80023A98 0050 .text      fpcFCtRq_Do__FP19fast_create_request                         Function */
 }
 
 #pragma push
@@ -68,19 +88,19 @@ asm void fpcFCtRq_Do(fast_create_request*) {
 #pragma pop
 
 extern "C" {
-/* 80023A98 0008 .text      fpcFCtRq_Delete__FP19fast_create_request                     */
+/* 80023A98-80023AA0 0008 .text      fpcFCtRq_Delete__FP19fast_create_request                     ReturnIntegerFunction */
 // fpcFCtRq_Delete(fast_create_request*)
 int fpcFCtRq_Delete__FP19fast_create_request() {
 	return 1;
 }
 
-/* 80023AA0 00D0 .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023AA0-80023B70 00D0 .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*) {
+asm void fpcFCtRq_Request(layer_class*, short, int (*)(void*, void*), void*, void*) {
 	nofralloc
 #include "_include/f_pc/f_pc_fstcreate_req/fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv.s"
 }

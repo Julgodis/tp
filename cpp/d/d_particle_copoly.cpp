@@ -13,29 +13,121 @@ struct cXyz;
 extern void fopKyM_createWpillar(const cXyz*, f32, int); /* fopKyM_createWpillar__FPC4cXyzfi */
 
 extern "C" {
+/* Function             */
 extern void fopKyM_createWpillar__FPC4cXyzfi();
+/* Function             */
 extern void getEmitter__Q213dPa_control_c7level_cFUl();
+/* Function             */
 extern void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+/* Function             */
 extern void setStopContinue__13dPa_control_cFUl();
+/* Function             */
 extern void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
+/* Function             */
+extern void init__7dPaPo_cFP9dBgS_Acchff();
+/* Function             */
 extern void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff();
+/* Function             */
 extern void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc();
+/* Function             */
 extern void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
+/* Function             */
 extern void clearID__7dPaPo_cFPUlPUc();
+/* Function             */
 extern void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+/* Function             */
 extern void clearTwoAllID__8dPaPoT_cFv();
+/* Function             */
+extern void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+/* Function             */
+extern void clearFourAllID__8dPaPoF_cFv();
+/* Function             */
+extern void getRightEffType__8dPaPoT_cCFi();
+/* Function             */
+extern void getLeftEffType__8dPaPoT_cCFi();
+/* Function             */
+extern void getCenterEffType__7dPaPo_cCFi();
+/* Function             */
+extern void getRightEmitter__8dPaPoT_cFii();
+/* Function             */
+extern void getLeftEmitter__8dPaPoT_cFii();
+/* Function             */
+extern void getCenterEmitter__7dPaPo_cFii();
+/* Function             */
+extern void getBackRightEffType__8dPaPoF_cCFi();
+/* Function             */
+extern void getBackLeftEffType__8dPaPoF_cCFi();
+/* Function             */
+extern void getBackRightEmitter__8dPaPoF_cFii();
+/* Function             */
+extern void getBackLeftEmitter__8dPaPoF_cFii();
+/* SInitFunction        */
+extern void __sinit_d_particle_copoly_cpp();
+/* Function             */
 extern void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_DATA extern u8 d_d_particle_copoly__cNullVec__6Z2Calc[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3816[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_3817[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3818[3];
+/* InitializedData      */
+SECTION_DATA extern u8 m_typeTwoData__8dPaPoT_c[36];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3826[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3827[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3828[3];
+/* InitializedData      */
+SECTION_DATA extern u8 m_emitterTwoData__8dPaPoT_c[36];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3841[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3842[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3843[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3844[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3845[3];
+/* InitializedData      */
+SECTION_DATA extern u8 m_typeFourData__8dPaPoF_c[60];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3850[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3851[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3852[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3853[3];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* d_d_particle_copoly__LIT_3854[3];
+/* InitializedData      */
+SECTION_DATA extern u8 m_emitterFourData__8dPaPoF_c[88];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle_copoly__LIT_3672[8];
 }
 
@@ -45,95 +137,127 @@ SECTION_SDATA2 extern u8 d_d_particle_copoly__LIT_3672[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A85F8 0000 .data      ...data.0                                                    */
-/* 803A85F8 000C .data      cNullVec__6Z2Calc                                            */
+/* 803A85F8-803A85F8 0000 .data      ...data.0                                                    InitializedData */
+/* 803A85F8-803A8604 000C .data      cNullVec__6Z2Calc                                            InitializedData */
 SECTION_DATA u8 d_d_particle_copoly__cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A8604 000C .data      @3816                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3816[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x88,
+/* 803A8604-803A8610 000C .data      @3816                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3816[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getCenterEffType__7dPaPo_cCFi,
 };
-/* 803A8610 000C .data      @3817                                                        */
-SECTION_DATA u8 LIT_3817[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x7C,
+/* 803A8610-803A861C 000C .data      @3817                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_3817[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getLeftEffType__8dPaPoT_cCFi,
 };
-/* 803A861C 000C .data      @3818                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3818[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x70,
+/* 803A861C-803A8628 000C .data      @3818                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3818[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getRightEffType__8dPaPoT_cCFi,
 };
-/* 803A8628 0024 .data      m_typeTwoData__8dPaPoT_c                                     */
+/* 803A8628-803A864C 0024 .data      m_typeTwoData__8dPaPoT_c                                     InitializedData */
 SECTION_DATA u8 m_typeTwoData__8dPaPoT_c[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 803A864C 000C .data      @3826                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3826[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0x24,
+/* 803A864C-803A8658 000C .data      @3826                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3826[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getCenterEmitter__7dPaPo_cFii,
 };
-/* 803A8658 000C .data      @3827                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3827[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0xDC,
+/* 803A8658-803A8664 000C .data      @3827                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3827[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getLeftEmitter__8dPaPoT_cFii,
 };
-/* 803A8664 000C .data      @3828                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3828[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x94,
+/* 803A8664-803A8670 000C .data      @3828                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3828[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getRightEmitter__8dPaPoT_cFii,
 };
-/* 803A8670 0024 .data      m_emitterTwoData__8dPaPoT_c                                  */
+/* 803A8670-803A8694 0024 .data      m_emitterTwoData__8dPaPoT_c                                  InitializedData */
 SECTION_DATA u8 m_emitterTwoData__8dPaPoT_c[36] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 803A8694 000C .data      @3841                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3841[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x88,
+/* 803A8694-803A86A0 000C .data      @3841                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3841[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getCenterEffType__7dPaPo_cCFi,
 };
-/* 803A86A0 000C .data      @3842                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3842[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x7C,
+/* 803A86A0-803A86AC 000C .data      @3842                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3842[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getLeftEffType__8dPaPoT_cCFi,
 };
-/* 803A86AC 000C .data      @3843                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3843[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x70,
+/* 803A86AC-803A86B8 000C .data      @3843                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3843[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getRightEffType__8dPaPoT_cCFi,
 };
-/* 803A86B8 000C .data      @3844                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3844[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0x78,
+/* 803A86B8-803A86C4 000C .data      @3844                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3844[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getBackLeftEffType__8dPaPoF_cCFi,
 };
-/* 803A86C4 000C .data      @3845                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3845[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0x6C,
+/* 803A86C4-803A86D0 000C .data      @3845                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3845[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getBackRightEffType__8dPaPoF_cCFi,
 };
-/* 803A86D0 003C .data      m_typeFourData__8dPaPoF_c                                    */
+/* 803A86D0-803A870C 003C .data      m_typeFourData__8dPaPoF_c                                    InitializedData */
 SECTION_DATA u8 m_typeFourData__8dPaPoF_c[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 803A870C 000C .data      @3850                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3850[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0x24,
+/* 803A870C-803A8718 000C .data      @3850                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3850[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getCenterEmitter__7dPaPo_cFii,
 };
-/* 803A8718 000C .data      @3851                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3851[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0xDC,
+/* 803A8718-803A8724 000C .data      @3851                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3851[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getLeftEmitter__8dPaPoT_cFii,
 };
-/* 803A8724 000C .data      @3852                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3852[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x14, 0x94,
+/* 803A8724-803A8730 000C .data      @3852                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3852[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getRightEmitter__8dPaPoT_cFii,
 };
-/* 803A8730 000C .data      @3853                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3853[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0xCC,
+/* 803A8730-803A873C 000C .data      @3853                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3853[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getBackLeftEmitter__8dPaPoF_cFii,
 };
-/* 803A873C 000C .data      @3854                                                        */
-SECTION_DATA u8 d_d_particle_copoly__LIT_3854[12] = {
-	0x00, 0x00, 0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0x80, 0x05, 0x15, 0x84,
+/* 803A873C-803A8748 000C .data      @3854                                                        SymbolReferenceArrayData */
+SECTION_DATA void* d_d_particle_copoly__LIT_3854[3] = {
+	NULL,
+	(void*)0xFFFFFFFF,
+	(void*)getBackRightEmitter__8dPaPoF_cFii,
 };
-/* 803A8748 003C .data      m_emitterFourData__8dPaPoF_c                                 */
+/* 803A8748-803A87A0 003C .data      m_emitterFourData__8dPaPoF_c                                 InitializedData */
 SECTION_DATA u8 m_emitterFourData__8dPaPoF_c[88] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -151,7 +275,7 @@ SECTION_DATA u8 m_emitterFourData__8dPaPoF_c[88] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451FF8 0004 .sdata2    @3672                                                        */
+/* 80451FF8-80452000 0004 .sdata2    @3672                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle_copoly__LIT_3672[8] = {
 	0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -165,7 +289,7 @@ SECTION_SDATA2 u8 d_d_particle_copoly__LIT_3672[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80050C9C 0028 .text      init__7dPaPo_cFP9dBgS_Acchff                                 */
+/* 80050C9C-80050CC4 0028 .text      init__7dPaPo_cFP9dBgS_Acchff                                 Function */
 // dPaPo_c::init(dBgS_Acch*, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -176,7 +300,7 @@ asm void init__7dPaPo_cFP9dBgS_Acchff() {
 }
 #pragma pop
 
-/* 80050CC4 01B8 .text      checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff   */
+/* 80050CC4-80050E7C 01B8 .text      checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff   Function */
 // dPaPo_c::checkWaterIn(cXyz*, const cXyz*, const dKy_tevstr_c*, u32, s8, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -187,7 +311,7 @@ asm void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff() {
 }
 #pragma pop
 
-/* 80050E7C 018C .text      setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc */
+/* 80050E7C-80051008 018C .text      setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc Function */
 // dPaPo_c::setEffect(u32*, int, const dKy_tevstr_c*, const cXyz*, u32, u32, const cXyz*, const csXyz*, s8, u8*, u8*)
 #pragma push
 #pragma optimization_level 0
@@ -198,7 +322,7 @@ asm void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUc
 }
 #pragma pop
 
-/* 80051008 0134 .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff */
+/* 80051008-8005113C 0134 .text      setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff Function */
 // dPaPo_c::setEffectCenter(const dKy_tevstr_c*, const cXyz*, u32, u32, const cXyz*, const csXyz*, const cXyz*, s8, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -209,7 +333,7 @@ asm void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4
 }
 #pragma pop
 
-/* 8005113C 0020 .text      clearID__7dPaPo_cFPUlPUc                                     */
+/* 8005113C-8005115C 0020 .text      clearID__7dPaPo_cFPUlPUc                                     Function */
 // dPaPo_c::clearID(u32*, u8*)
 #pragma push
 #pragma optimization_level 0
@@ -220,7 +344,7 @@ asm void clearID__7dPaPo_cFPUlPUc() {
 }
 #pragma pop
 
-/* 8005115C 0138 .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 8005115C-80051294 0138 .text      setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff Function */
 // dPaPoT_c::setEffectTwo(const dKy_tevstr_c*, const cXyz*, u32, u32, const cXyz*, const cXyz*, const cXyz*, const csXyz*, const cXyz*, s8, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -231,7 +355,7 @@ asm void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXy
 }
 #pragma pop
 
-/* 80051294 0054 .text      clearTwoAllID__8dPaPoT_cFv                                   */
+/* 80051294-800512E8 0054 .text      clearTwoAllID__8dPaPoT_cFv                                   Function */
 // dPaPoT_c::clearTwoAllID(void)
 #pragma push
 #pragma optimization_level 0
@@ -242,7 +366,7 @@ asm void clearTwoAllID__8dPaPoT_cFv() {
 }
 #pragma pop
 
-/* 800512E8 013C .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff */
+/* 800512E8-80051424 013C .text      setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff Function */
 // dPaPoF_c::setEffectFour(const dKy_tevstr_c*, const cXyz*, u32, u32, const cXyz*, const cXyz*, const cXyz*, const cXyz*, const cXyz*, const csXyz*, const cXyz*, s8, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -253,7 +377,7 @@ asm void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cX
 }
 #pragma pop
 
-/* 80051424 004C .text      clearFourAllID__8dPaPoF_cFv                                  */
+/* 80051424-80051470 004C .text      clearFourAllID__8dPaPoF_cFv                                  Function */
 // dPaPoF_c::clearFourAllID(void)
 #pragma push
 #pragma optimization_level 0
@@ -264,7 +388,7 @@ asm void clearFourAllID__8dPaPoF_cFv() {
 }
 #pragma pop
 
-/* 80051470 000C .text      getRightEffType__8dPaPoT_cCFi                                */
+/* 80051470-8005147C 000C .text      getRightEffType__8dPaPoT_cCFi                                Function */
 // dPaPoT_c::getRightEffType(int) const
 #pragma push
 #pragma optimization_level 0
@@ -275,7 +399,7 @@ asm void getRightEffType__8dPaPoT_cCFi() {
 }
 #pragma pop
 
-/* 8005147C 000C .text      getLeftEffType__8dPaPoT_cCFi                                 */
+/* 8005147C-80051488 000C .text      getLeftEffType__8dPaPoT_cCFi                                 Function */
 // dPaPoT_c::getLeftEffType(int) const
 #pragma push
 #pragma optimization_level 0
@@ -286,7 +410,7 @@ asm void getLeftEffType__8dPaPoT_cCFi() {
 }
 #pragma pop
 
-/* 80051488 000C .text      getCenterEffType__7dPaPo_cCFi                                */
+/* 80051488-80051494 000C .text      getCenterEffType__7dPaPo_cCFi                                Function */
 // dPaPo_c::getCenterEffType(int) const
 #pragma push
 #pragma optimization_level 0
@@ -297,7 +421,7 @@ asm void getCenterEffType__7dPaPo_cCFi() {
 }
 #pragma pop
 
-/* 80051494 0048 .text      getRightEmitter__8dPaPoT_cFii                                */
+/* 80051494-800514DC 0048 .text      getRightEmitter__8dPaPoT_cFii                                Function */
 // dPaPoT_c::getRightEmitter(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -308,7 +432,7 @@ asm void getRightEmitter__8dPaPoT_cFii() {
 }
 #pragma pop
 
-/* 800514DC 0048 .text      getLeftEmitter__8dPaPoT_cFii                                 */
+/* 800514DC-80051524 0048 .text      getLeftEmitter__8dPaPoT_cFii                                 Function */
 // dPaPoT_c::getLeftEmitter(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -319,7 +443,7 @@ asm void getLeftEmitter__8dPaPoT_cFii() {
 }
 #pragma pop
 
-/* 80051524 0048 .text      getCenterEmitter__7dPaPo_cFii                                */
+/* 80051524-8005156C 0048 .text      getCenterEmitter__7dPaPo_cFii                                Function */
 // dPaPo_c::getCenterEmitter(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -330,7 +454,7 @@ asm void getCenterEmitter__7dPaPo_cFii() {
 }
 #pragma pop
 
-/* 8005156C 000C .text      getBackRightEffType__8dPaPoF_cCFi                            */
+/* 8005156C-80051578 000C .text      getBackRightEffType__8dPaPoF_cCFi                            Function */
 // dPaPoF_c::getBackRightEffType(int) const
 #pragma push
 #pragma optimization_level 0
@@ -341,7 +465,7 @@ asm void getBackRightEffType__8dPaPoF_cCFi() {
 }
 #pragma pop
 
-/* 80051578 000C .text      getBackLeftEffType__8dPaPoF_cCFi                             */
+/* 80051578-80051584 000C .text      getBackLeftEffType__8dPaPoF_cCFi                             Function */
 // dPaPoF_c::getBackLeftEffType(int) const
 #pragma push
 #pragma optimization_level 0
@@ -352,7 +476,7 @@ asm void getBackLeftEffType__8dPaPoF_cCFi() {
 }
 #pragma pop
 
-/* 80051584 0048 .text      getBackRightEmitter__8dPaPoF_cFii                            */
+/* 80051584-800515CC 0048 .text      getBackRightEmitter__8dPaPoF_cFii                            Function */
 // dPaPoF_c::getBackRightEmitter(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -363,7 +487,7 @@ asm void getBackRightEmitter__8dPaPoF_cFii() {
 }
 #pragma pop
 
-/* 800515CC 0048 .text      getBackLeftEmitter__8dPaPoF_cFii                             */
+/* 800515CC-80051614 0048 .text      getBackLeftEmitter__8dPaPoF_cFii                             Function */
 // dPaPoF_c::getBackLeftEmitter(int, int)
 #pragma push
 #pragma optimization_level 0
@@ -374,7 +498,7 @@ asm void getBackLeftEmitter__8dPaPoF_cFii() {
 }
 #pragma pop
 
-/* 80051614 019C .text      __sinit_d_particle_copoly_cpp                                */
+/* 80051614-800517B0 019C .text      __sinit_d_particle_copoly_cpp                                SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -28,8 +28,9 @@ JSTUDIO_JSTAGE_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJStudio_JStage.a: dirs $(JSTUDIO_JSTAGE_A_O_FILES)
+$(BUILD_DIR)/libJStudio_JStage.a: $(JSTUDIO_JSTAGE_A_O_FILES)
 	$(LD) -xm l $(JSTUDIO_JSTAGE_A_LDFLAGS) -o $(BUILD_DIR)/libJStudio_JStage.a $(JSTUDIO_JSTAGE_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJStudio_JStage.a
 
 $(BUILD_DIR)/libs/JStudio_JStage/%.o: cpp/JStudio_JStage/%.cpp
 	mkdir -p $(@D)

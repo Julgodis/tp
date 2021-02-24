@@ -17,64 +17,120 @@ struct J2DScreen;
 extern void mDoExt_getMesgFont(void); /* mDoExt_getMesgFont__Fv */
 extern void dComIfG_TimerDeleteRequest(int); /* dComIfG_TimerDeleteRequest__Fi */
 extern void dPaneClass_showNullPane(J2DScreen*); /* dPaneClass_showNullPane__FP9J2DScreen */
-extern void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); /* dTimer_createTimer__FlUlUcUcffff */
+extern void dTimer_createTimer(long, u32, u8, u8, f32, f32, f32, f32); /* dTimer_createTimer__FlUlUcUcffff */
 extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void mDoExt_getMesgFont__Fv();
+/* Function             */
 extern void dComIfG_TimerDeleteRequest__Fi();
-extern int isDead__11dMeterSub_cFv();
+/* ReturnIntegerFunction */
+extern  int isDead__11dMeterSub_cFv();
+/* Function             */
+extern void __ct__14dMeterString_cFi();
+/* Function             */
 extern void __dt__14dMeterString_cFv();
+/* Function             */
 extern void _create__14dMeterString_cFv();
+/* Function             */
 extern void _execute__14dMeterString_cFUl();
+/* Function             */
 extern void draw__14dMeterString_cFv();
+/* Function             */
 extern void _delete__14dMeterString_cFv();
+/* Function             */
 extern void createString__14dMeterString_cFi();
+/* Function             */
 extern void playBckAnimation__14dMeterString_cFf();
+/* Function             */
 extern void drawPikari__14dMeterString_cFv();
+/* Function             */
 extern void isLeadByte__14dMeterString_cFi();
+/* Function             */
 extern void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+/* Function             */
 extern void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+/* Function             */
 extern void resetMeterString__13dMeter2Info_cFv();
+/* Function             */
 extern void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+/* Function             */
 extern void paneTrans__8CPaneMgrFff();
+/* Function             */
 extern void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+/* Function             */
 extern void dPaneClass_showNullPane__FP9J2DScreen();
+/* Function             */
 extern void setAlphaRate__13CPaneMgrAlphaFf();
+/* Function             */
 extern void dTimer_createTimer__FlUlUcUcffff();
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+/* Function             */
 extern void getParentPane__7J2DPaneFv();
+/* Function             */
 extern void animationTransform__7J2DPaneFv();
+/* Function             */
 extern void __ct__9J2DScreenFv();
+/* Function             */
 extern void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+/* Function             */
 extern void draw__9J2DScreenFffPC14J2DGrafContext();
+/* FirstParamFunction   */
 extern u32 getStringPtr__10J2DTextBoxCFv(u8*);
+/* Function             */
 extern void setString__10J2DTextBoxFsPCce();
+/* Function             */
 extern void load__20J2DAnmLoaderDataBaseFPCv();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void strcpy();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_meter_string__stringBase0[72];
-SECTION_DATA extern const void* __vt__12dDlst_base_c[3];
-SECTION_DATA extern const void* __vt__11dMeterSub_c[11];
-SECTION_DATA extern const void* __vt__14dMeterString_c[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dDlst_base_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11dMeterSub_c[11];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14dMeterString_c[8];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_drawHIO[3880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_meter2_info[248];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3758;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3759;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3760;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3761;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_string__LIT_3762[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3819;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3820;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3821;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_meter_string__LIT_3822[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_meter_string__LIT_3824;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3866;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3979;
 }
 
@@ -84,10 +140,16 @@ SECTION_SDATA2 extern f32 d_d_meter_string__LIT_3979;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80398210 0041 .rodata    @stringBase0                                                 */
-const char* const stringBase_80398210 = "zelda_game_image_cow_get_in.blo";
-const char* const stringBase_80398230 = "zelda_game_image_cow_get_in.bck";
-const char* const stringBase_80398250 = "";
+/* 80398210-80398258 0041 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80398210 = "zelda_game_image_cow_get_in.blo";
+SECTION_DEAD const char* const stringBase_80398230 = "zelda_game_image_cow_get_in.bck";
+SECTION_DEAD const char* const stringBase_80398250 = "";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_80398251 = "\0\0\0\0\0\0";
+#pragma pop
 }
 
 
@@ -96,8 +158,8 @@ const char* const stringBase_80398250 = "";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803BF308 0020 .data      __vt__14dMeterString_c                                       */
-SECTION_DATA const  void* __vt__14dMeterString_c[8] = {
+/* 803BF308-803BF328 0020 .data      __vt__14dMeterString_c                                       VTableData */
+SECTION_DATA void* __vt__14dMeterString_c[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)draw__14dMeterString_cFv,
@@ -115,44 +177,44 @@ SECTION_DATA const  void* __vt__14dMeterString_c[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80454848 0004 .sdata2    @3758                                                        */
+/* 80454848-8045484C 0004 .sdata2    @3758                                                        Float32Data */
 // 0x43520000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3758 = 210.000000f;
-/* 8045484C 0004 .sdata2    @3759                                                        */
+/* 8045484C-80454850 0004 .sdata2    @3759                                                        Float32Data */
 // 0x43cd0000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3759 = 410.000000f;
-/* 80454850 0004 .sdata2    @3760                                                        */
+/* 80454850-80454854 0004 .sdata2    @3760                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3760 = 32.000000f;
-/* 80454854 0004 .sdata2    @3761                                                        */
+/* 80454854-80454858 0004 .sdata2    @3761                                                        Float32Data */
 // 0x43d18000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3761 = 419.000000f;
-/* 80454858 0004 .sdata2    @3762                                                        */
+/* 80454858-8045485C 0004 .sdata2    @3762                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_string__LIT_3762[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 8045485C 0004 .sdata2    @3819                                                        */
+/* 8045485C-80454860 0004 .sdata2    @3819                                                        Float32Data */
 // 0x42700000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3819 = 60.000000f;
-/* 80454860 0004 .sdata2    @3820                                                        */
+/* 80454860-80454864 0004 .sdata2    @3820                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3820 = 1.000000f;
-/* 80454864 0004 .sdata2    @3821                                                        */
+/* 80454864-80454868 0004 .sdata2    @3821                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3821 = -1.000000f;
-/* 80454868 0004 .sdata2    @3822                                                        */
+/* 80454868-80454870 0004 .sdata2    @3822                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_meter_string__LIT_3822[8] = {
 	0x41, 0x90, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80454870 0008 .sdata2    @3824                                                        */
+/* 80454870-80454878 0008 .sdata2    @3824                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_meter_string__LIT_3824 = 4503601774854144.000000;
-/* 80454878 0004 .sdata2    @3866                                                        */
+/* 80454878-8045487C 0004 .sdata2    @3866                                                        Float32Data */
 // 0x42200000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3866 = 40.000000f;
-/* 8045487C 0004 .sdata2    @3979                                                        */
+/* 8045487C-80454880 0004 .sdata2    @3979                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_meter_string__LIT_3979 = 0.500000f;
 }
@@ -163,7 +225,7 @@ SECTION_SDATA2 f32 d_d_meter_string__LIT_3979 = 0.500000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8020ED60 0094 .text      __ct__14dMeterString_cFi                                     */
+/* 8020ED60-8020EDF4 0094 .text      __ct__14dMeterString_cFi                                     Function */
 // dMeterString_c::dMeterString_c(int)
 #pragma push
 #pragma optimization_level 0
@@ -174,7 +236,7 @@ asm void __ct__14dMeterString_cFi() {
 }
 #pragma pop
 
-/* 8020EDF4 007C .text      __dt__14dMeterString_cFv                                     */
+/* 8020EDF4-8020EE70 007C .text      __dt__14dMeterString_cFv                                     Function */
 // dMeterString_c::~dMeterString_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -185,7 +247,7 @@ asm void __dt__14dMeterString_cFv() {
 }
 #pragma pop
 
-/* 8020EE70 02E0 .text      _create__14dMeterString_cFv                                  */
+/* 8020EE70-8020F150 02E0 .text      _create__14dMeterString_cFv                                  Function */
 // dMeterString_c::_create(void)
 #pragma push
 #pragma optimization_level 0
@@ -196,7 +258,7 @@ asm void _create__14dMeterString_cFv() {
 }
 #pragma pop
 
-/* 8020F150 0060 .text      _execute__14dMeterString_cFUl                                */
+/* 8020F150-8020F1B0 0060 .text      _execute__14dMeterString_cFUl                                Function */
 // dMeterString_c::_execute(u32)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +269,7 @@ asm void _execute__14dMeterString_cFUl() {
 }
 #pragma pop
 
-/* 8020F1B0 02EC .text      draw__14dMeterString_cFv                                     */
+/* 8020F1B0-8020F49C 02EC .text      draw__14dMeterString_cFv                                     Function */
 // dMeterString_c::draw(void)
 #pragma push
 #pragma optimization_level 0
@@ -218,7 +280,7 @@ asm void draw__14dMeterString_cFv() {
 }
 #pragma pop
 
-/* 8020F49C 0108 .text      _delete__14dMeterString_cFv                                  */
+/* 8020F49C-8020F5A4 0108 .text      _delete__14dMeterString_cFv                                  Function */
 // dMeterString_c::_delete(void)
 #pragma push
 #pragma optimization_level 0
@@ -229,7 +291,7 @@ asm void _delete__14dMeterString_cFv() {
 }
 #pragma pop
 
-/* 8020F5A4 00C8 .text      createString__14dMeterString_cFi                             */
+/* 8020F5A4-8020F66C 00C8 .text      createString__14dMeterString_cFi                             Function */
 // dMeterString_c::createString(int)
 #pragma push
 #pragma optimization_level 0
@@ -240,7 +302,7 @@ asm void createString__14dMeterString_cFi() {
 }
 #pragma pop
 
-/* 8020F66C 0080 .text      playBckAnimation__14dMeterString_cFf                         */
+/* 8020F66C-8020F6EC 0080 .text      playBckAnimation__14dMeterString_cFf                         Function */
 // dMeterString_c::playBckAnimation(f32)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +313,7 @@ asm void playBckAnimation__14dMeterString_cFf() {
 }
 #pragma pop
 
-/* 8020F6EC 039C .text      drawPikari__14dMeterString_cFv                               */
+/* 8020F6EC-8020FA88 039C .text      drawPikari__14dMeterString_cFv                               Function */
 // dMeterString_c::drawPikari(void)
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +324,7 @@ asm void drawPikari__14dMeterString_cFv() {
 }
 #pragma pop
 
-/* 8020FA88 002C .text      isLeadByte__14dMeterString_cFi                               */
+/* 8020FA88-8020FAB4 002C .text      isLeadByte__14dMeterString_cFi                               Function */
 // dMeterString_c::isLeadByte(int)
 #pragma push
 #pragma optimization_level 0

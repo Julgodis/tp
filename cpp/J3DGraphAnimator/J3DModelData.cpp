@@ -11,34 +11,75 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __ct__13J3DVertexDataFv();
+/* Function             */
 extern void __dt__14J3DDrawMtxDataFv();
+/* Function             */
 extern void countDLSize__11J3DMaterialFv();
+/* Function             */
 extern void newSharedDisplayList__11J3DMaterialFUl();
+/* Function             */
 extern void newSingleSharedDisplayList__11J3DMaterialFUl();
+/* Function             */
 extern void __ct__12J3DJointTreeFv();
+/* Function             */
 extern void clear__12J3DModelDataFv();
+/* Function             */
+extern void __ct__12J3DModelDataFv();
+/* Function             */
+extern void newSharedDisplayList__12J3DModelDataFUl();
+/* Function             */
+extern void indexToPtr__12J3DModelDataFv();
+/* Function             */
+extern void makeSharedDL__12J3DModelDataFv();
+/* Function             */
+extern void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+/* Function             */
+extern void syncJ3DSysPointers__12J3DModelDataCFv();
+/* Function             */
 extern void syncJ3DSysFlags__12J3DModelDataCFv();
+/* Function             */
 extern void __dt__13J3DShapeTableFv();
+/* Function             */
 extern void __dt__12J3DModelDataFv();
+/* Function             */
 extern void __ct__16J3DMaterialTableFv();
+/* Function             */
 extern void __dt__16J3DMaterialTableFv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void OSDisableScheduler();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void GDInitGDLObj();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__12J3DJointTree[5];
-SECTION_DATA extern const void* __vt__13J3DShapeTable[3];
-SECTION_DATA extern const void* __vt__12J3DModelData[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DJointTree[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DShapeTable[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DModelData[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804515E8[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_804515EC[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
 }
 
@@ -48,14 +89,14 @@ SECTION_SBSS extern u8 __GDCurrentDL[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CED08 000C .data      __vt__13J3DShapeTable                                        */
-SECTION_DATA const  void* __vt__13J3DShapeTable[3] = {
+/* 803CED08-803CED14 000C .data      __vt__13J3DShapeTable                                        VTableData */
+SECTION_DATA void* __vt__13J3DShapeTable[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13J3DShapeTableFv,
 };
-/* 803CED14 000C .data      __vt__12J3DModelData                                         */
-SECTION_DATA const  void* __vt__12J3DModelData[3] = {
+/* 803CED14-803CED20 000C .data      __vt__12J3DModelData                                         VTableData */
+SECTION_DATA void* __vt__12J3DModelData[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12J3DModelDataFv,
@@ -68,9 +109,9 @@ SECTION_DATA const  void* __vt__12J3DModelData[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515E8 0004 .sbss      sInterruptFlag$965                                           */
+/* 804515E8-804515EC 0004 .sbss      sInterruptFlag$965                                           ZeroInitializedData */
 SECTION_SBSS u8 data_804515E8[4];
-/* 804515EC 0004 .sbss      data_804515EC                                                */
+/* 804515EC-804515F0 0004 .sbss      data_804515EC                                                ZeroInitializedData */
 SECTION_SBSS u8 data_804515EC[4];
 }
 
@@ -80,7 +121,7 @@ SECTION_SBSS u8 data_804515EC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80325D88 0018 .text      clear__12J3DModelDataFv                                      */
+/* 80325D88-80325DA0 0018 .text      clear__12J3DModelDataFv                                      Function */
 // J3DModelData::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +132,7 @@ asm void clear__12J3DModelDataFv() {
 }
 #pragma pop
 
-/* 80325DA0 0074 .text      __ct__12J3DModelDataFv                                       */
+/* 80325DA0-80325E14 0074 .text      __ct__12J3DModelDataFv                                       Function */
 // J3DModelData::J3DModelData(void)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +143,7 @@ asm void __ct__12J3DModelDataFv() {
 }
 #pragma pop
 
-/* 80325E14 00B4 .text      newSharedDisplayList__12J3DModelDataFUl                      */
+/* 80325E14-80325EC8 00B4 .text      newSharedDisplayList__12J3DModelDataFUl                      Function */
 // J3DModelData::newSharedDisplayList(u32)
 #pragma push
 #pragma optimization_level 0
@@ -113,7 +154,7 @@ asm void newSharedDisplayList__12J3DModelDataFUl() {
 }
 #pragma pop
 
-/* 80325EC8 00CC .text      indexToPtr__12J3DModelDataFv                                 */
+/* 80325EC8-80325F94 00CC .text      indexToPtr__12J3DModelDataFv                                 Function */
 // J3DModelData::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -124,7 +165,7 @@ asm void indexToPtr__12J3DModelDataFv() {
 }
 #pragma pop
 
-/* 80325F94 0078 .text      makeSharedDL__12J3DModelDataFv                               */
+/* 80325F94-8032600C 0078 .text      makeSharedDL__12J3DModelDataFv                               Function */
 // J3DModelData::makeSharedDL(void)
 #pragma push
 #pragma optimization_level 0
@@ -135,7 +176,7 @@ asm void makeSharedDL__12J3DModelDataFv() {
 }
 #pragma pop
 
-/* 8032600C 00C0 .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   */
+/* 8032600C-803260CC 00C0 .text      simpleCalcMaterial__12J3DModelDataFUsPA4_f                   Function */
 // J3DModelData::simpleCalcMaterial(u16, f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -146,7 +187,7 @@ asm void simpleCalcMaterial__12J3DModelDataFUsPA4_f() {
 }
 #pragma pop
 
-/* 803260CC 002C .text      syncJ3DSysPointers__12J3DModelDataCFv                        */
+/* 803260CC-803260F8 002C .text      syncJ3DSysPointers__12J3DModelDataCFv                        Function */
 // J3DModelData::syncJ3DSysPointers(void) const
 #pragma push
 #pragma optimization_level 0
@@ -157,7 +198,7 @@ asm void syncJ3DSysPointers__12J3DModelDataCFv() {
 }
 #pragma pop
 
-/* 803260F8 003C .text      syncJ3DSysFlags__12J3DModelDataCFv                           */
+/* 803260F8-80326134 003C .text      syncJ3DSysFlags__12J3DModelDataCFv                           Function */
 // J3DModelData::syncJ3DSysFlags(void) const
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +209,7 @@ asm void syncJ3DSysFlags__12J3DModelDataCFv() {
 }
 #pragma pop
 
-/* 80326134 0048 .text      __dt__13J3DShapeTableFv                                      */
+/* 80326134-8032617C 0048 .text      __dt__13J3DShapeTableFv                                      Function */
 // J3DShapeTable::~J3DShapeTable(void)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +220,7 @@ asm void __dt__13J3DShapeTableFv() {
 }
 #pragma pop
 
-/* 8032617C 0098 .text      __dt__12J3DModelDataFv                                       */
+/* 8032617C-80326214 0098 .text      __dt__12J3DModelDataFv                                       Function */
 // J3DModelData::~J3DModelData(void)
 #pragma push
 #pragma optimization_level 0

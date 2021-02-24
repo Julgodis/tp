@@ -12,8 +12,8 @@
 // Additional Symbols:
 // 
 
-struct J3DTexCoord;
 struct _GXFogAdjTable;
+struct J3DTexCoord;
 
 extern void operator delete(void*); /* __dl__FPv */
 extern void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*); /* J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable */
@@ -24,597 +24,1221 @@ extern void loadTexNo(u32, const u16&); /* loadTexNo__FUlRCUs */
 extern void patchTexNo_PtrToIdx(u32, const u16&); /* patchTexNo_PtrToIdx__FUlRCUs */
 
 extern "C" {
-extern void memcpy();
+/* Function             */
+SECTION_INIT extern void memcpy();
+/* Function             */
 extern void OSReport();
+/* ReturnFunction       */
 extern void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void patch__10J3DPEBlockFv();
+/* ReturnFunction       */
 extern void patch__11J3DTevBlockFv();
-extern int getZCompLoc__10J3DPEBlockCFv();
-extern int getZMode__10J3DPEBlockFv();
-extern int getBlend__10J3DPEBlockFv();
-extern int getAlphaComp__10J3DPEBlockFv();
-extern int getFog__10J3DPEBlockFv();
-extern int getIndTevStage__11J3DTevBlockFUl();
-extern int getTevStage__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getZCompLoc__10J3DPEBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getZMode__10J3DPEBlockFv();
+/* ReturnIntegerFunction */
+extern  int getBlend__10J3DPEBlockFv();
+/* ReturnIntegerFunction */
+extern  int getAlphaComp__10J3DPEBlockFv();
+/* ReturnIntegerFunction */
+extern  int getFog__10J3DPEBlockFv();
+/* ReturnIntegerFunction */
+extern  int getIndTevStage__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevStage__11J3DTevBlockFUl();
+/* Function             */
 extern void getTexNo__11J3DTevBlockCFUl();
-extern int getTevSwapModeTable__11J3DTevBlockFUl();
-extern int getTevKAlphaSel__11J3DTevBlockFUl();
-extern int getTevKColorSel__11J3DTevBlockFUl();
-extern int getTevOrder__11J3DTevBlockFUl();
-extern int getTevKColor__11J3DTevBlockFUl();
-extern int getTevColor__11J3DTevBlockFUl();
-extern int getTevStageNum__11J3DTevBlockCFv();
-extern int getAmbColor__13J3DColorBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevSwapModeTable__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevKAlphaSel__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevKColorSel__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevOrder__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevKColor__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevColor__11J3DTevBlockFUl();
+/* ReturnIntegerFunction */
+extern  int getTevStageNum__11J3DTevBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getAmbColor__13J3DColorBlockFUl();
+/* ReturnFunction       */
 extern void setZCompLoc__10J3DPEBlockFUc();
+/* ReturnFunction       */
 extern void setZMode__10J3DPEBlockF8J3DZMode();
+/* ReturnFunction       */
 extern void setBlend__10J3DPEBlockFRC8J3DBlend();
+/* ReturnFunction       */
 extern void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
+/* Function             */
 extern void __dt__19J3DIndTexCoordScaleFv();
+/* Function             */
 extern void __dt__12J3DIndTexMtxFv();
+/* ReturnFunction       */
 extern void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
+/* ReturnFunction       */
 extern void setTevStage__11J3DTevBlockFUl11J3DTevStage();
+/* ReturnFunction       */
 extern void setTexNo__11J3DTevBlockFUlUs();
+/* ReturnFunction       */
 extern void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
+/* ReturnFunction       */
 extern void setTevKAlphaSel__11J3DTevBlockFUlUc();
+/* ReturnFunction       */
 extern void setTevKColorSel__11J3DTevBlockFUlUc();
+/* ReturnFunction       */
 extern void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
+/* ReturnFunction       */
 extern void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
+/* ReturnFunction       */
 extern void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
+/* ReturnFunction       */
 extern void setTevStageNum__11J3DTevBlockFUc();
+/* ReturnFunction       */
 extern void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
+/* ReturnFunction       */
 extern void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
+/* ReturnFunction       */
 extern void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10();
+/* ReturnFunction       */
 extern void setLight__13J3DColorBlockFUlP11J3DLightObj();
+/* ReturnFunction       */
 extern void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc();
+/* Function             */
 extern void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
+/* Function             */
 extern void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale();
+/* Function             */
 extern void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID();
+/* Function             */
 extern void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID();
+/* Function             */
 extern void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor();
+/* Function             */
 extern void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+/* Function             */
 extern void J3DGDSetFog__F10_GXFogTypeffff8_GXColor();
+/* Function             */
 extern void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable();
+/* Function             */
 extern void __dt__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void __dt__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void __dt__11J3DTevBlockFv();
-extern int countDLSize__11J3DTevBlockFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void load__11J3DTevBlockFv();
-extern int getNBTScale__14J3DTexGenBlockFv();
+/* ReturnIntegerFunction */
+extern  int getNBTScale__14J3DTexGenBlockFv();
+/* ReturnFunction       */
 extern void diff__10J3DPEBlockFUl();
+/* ReturnFunction       */
 extern void reset__10J3DPEBlockFP10J3DPEBlock();
+/* ReturnFunction       */
 extern void reset__11J3DTevBlockFP11J3DTevBlock();
+/* ReturnFunction       */
 extern void diffFog__10J3DPEBlockFv();
+/* ReturnFunction       */
 extern void diffBlend__10J3DPEBlockFv();
+/* ReturnFunction       */
 extern void setFog__10J3DPEBlockFP6J3DFog();
+/* ReturnFunction       */
 extern void setFog__10J3DPEBlockF6J3DFog();
+/* ReturnFunction       */
 extern void setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp();
+/* ReturnFunction       */
 extern void setBlend__10J3DPEBlockFPC8J3DBlend();
+/* ReturnFunction       */
 extern void setZMode__10J3DPEBlockFPC8J3DZMode();
+/* ReturnFunction       */
 extern void setZCompLoc__10J3DPEBlockFPCUc();
+/* ReturnFunction       */
 extern void setDither__10J3DPEBlockFUc();
+/* ReturnFunction       */
 extern void setDither__10J3DPEBlockFPCUc();
-extern int getDither__10J3DPEBlockCFv();
-extern int getFogOffset__10J3DPEBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getDither__10J3DPEBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getFogOffset__10J3DPEBlockCFv();
+/* ReturnFunction       */
 extern void setFogOffset__10J3DPEBlockFUl();
+/* ReturnFunction       */
 extern void setNBTScale__14J3DTexGenBlockF11J3DNBTScale();
+/* ReturnFunction       */
 extern void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale();
+/* ReturnFunction       */
 extern void diffAmbColor__13J3DColorBlockFv();
+/* ReturnFunction       */
 extern void diffLightObj__13J3DColorBlockFUl();
-extern int getLight__13J3DColorBlockFUl();
-extern int countDLSize__21J3DColorBlockLightOffFv();
-extern int countDLSize__22J3DColorBlockAmbientOnFv();
-extern int countDLSize__20J3DColorBlockLightOnFv();
-extern int countDLSize__21J3DTexGenBlockPatchedFv();
-extern int countDLSize__15J3DTexGenBlock4Fv();
-extern int countDLSize__19J3DTexGenBlockBasicFv();
-extern int countDLSize__18J3DTevBlockPatchedFv();
-extern int countDLSize__12J3DTevBlock1Fv();
-extern int countDLSize__12J3DTevBlock2Fv();
-extern int countDLSize__12J3DTevBlock4Fv();
-extern int countDLSize__13J3DTevBlock16Fv();
-extern int countDLSize__15J3DIndBlockFullFv();
-extern int countDLSize__13J3DPEBlockOpaFv();
-extern int countDLSize__17J3DPEBlockTexEdgeFv();
-extern int countDLSize__13J3DPEBlockXluFv();
-extern int countDLSize__16J3DPEBlockFogOffFv();
-extern int countDLSize__14J3DPEBlockFullFv();
+/* ReturnIntegerFunction */
+extern  int getLight__13J3DColorBlockFUl();
+/* Function             */
+extern void initialize__21J3DColorBlockLightOffFv();
+/* Function             */
+extern void initialize__22J3DColorBlockAmbientOnFv();
+/* Function             */
+extern void initialize__20J3DColorBlockLightOnFv();
+/* Function             */
+extern void initialize__21J3DTexGenBlockPatchedFv();
+/* Function             */
+extern void initialize__15J3DTexGenBlock4Fv();
+/* Function             */
+extern void initialize__19J3DTexGenBlockBasicFv();
+/* Function             */
+extern void initialize__15J3DTevBlockNullFv();
+/* Function             */
+extern void initialize__18J3DTevBlockPatchedFv();
+/* Function             */
+extern void initialize__12J3DTevBlock1Fv();
+/* Function             */
+extern void initialize__12J3DTevBlock2Fv();
+/* Function             */
+extern void initialize__12J3DTevBlock4Fv();
+/* Function             */
+extern void initialize__13J3DTevBlock16Fv();
+/* Function             */
+extern void initialize__15J3DIndBlockFullFv();
+/* Function             */
+extern void initialize__16J3DPEBlockFogOffFv();
+/* Function             */
+extern void initialize__14J3DPEBlockFullFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__21J3DColorBlockLightOffFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__22J3DColorBlockAmbientOnFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__20J3DColorBlockLightOnFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__21J3DTexGenBlockPatchedFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__15J3DTexGenBlock4Fv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__19J3DTexGenBlockBasicFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__18J3DTevBlockPatchedFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__12J3DTevBlock1Fv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__12J3DTevBlock2Fv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__12J3DTevBlock4Fv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__13J3DTevBlock16Fv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__15J3DIndBlockFullFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__13J3DPEBlockOpaFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__17J3DPEBlockTexEdgeFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__13J3DPEBlockXluFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__16J3DPEBlockFogOffFv();
+/* ReturnIntegerFunction */
+extern  int countDLSize__14J3DPEBlockFullFv();
+/* Function             */
 extern void load__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void load__22J3DColorBlockAmbientOnFv();
+/* Function             */
 extern void load__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void patch__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void patchMatColor__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void patchLight__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void patch__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void patchMatColor__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void patchLight__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void diff__21J3DColorBlockLightOffFUl();
+/* Function             */
 extern void diffMatColor__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void diffColorChan__21J3DColorBlockLightOffFv();
+/* Function             */
 extern void diff__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void diffAmbColor__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void diffMatColor__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void diffColorChan__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void diffLightObj__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void load__15J3DTexGenBlock4Fv();
+/* Function             */
 extern void load__19J3DTexGenBlockBasicFv();
+/* Function             */
 extern void patch__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void patch__15J3DTexGenBlock4Fv();
+/* Function             */
 extern void patch__19J3DTexGenBlockBasicFv();
+/* Function             */
 extern void diff__21J3DTexGenBlockPatchedFUl();
+/* Function             */
 extern void diffTexMtx__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void diffTexGen__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void load__12J3DTevBlock1Fv();
+/* Function             */
 extern void load__12J3DTevBlock2Fv();
+/* Function             */
 extern void load__12J3DTevBlock4Fv();
+/* Function             */
 extern void load__13J3DTevBlock16Fv();
+/* Function             */
 extern void patchTexNo__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void patchTevReg__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void patch__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void patchTexNo__12J3DTevBlock1Fv();
+/* ReturnFunction       */
 extern void patchTevReg__12J3DTevBlock1Fv();
+/* Function             */
 extern void patchTexNoAndTexCoordScale__12J3DTevBlock1Fv();
+/* Function             */
 extern void patch__12J3DTevBlock1Fv();
+/* Function             */
 extern void patchTexNo__12J3DTevBlock2Fv();
+/* Function             */
 extern void patchTevReg__12J3DTevBlock2Fv();
+/* Function             */
 extern void patchTexNoAndTexCoordScale__12J3DTevBlock2Fv();
+/* Function             */
 extern void patch__12J3DTevBlock2Fv();
+/* Function             */
 extern void patchTexNo__12J3DTevBlock4Fv();
+/* Function             */
 extern void patchTevReg__12J3DTevBlock4Fv();
+/* Function             */
 extern void patchTexNoAndTexCoordScale__12J3DTevBlock4Fv();
+/* Function             */
 extern void patch__12J3DTevBlock4Fv();
+/* Function             */
 extern void patchTexNo__13J3DTevBlock16Fv();
+/* Function             */
 extern void patchTevReg__13J3DTevBlock16Fv();
+/* Function             */
 extern void patchTexNoAndTexCoordScale__13J3DTevBlock16Fv();
+/* Function             */
 extern void patch__13J3DTevBlock16Fv();
+/* Function             */
 extern void diff__11J3DTevBlockFUl();
+/* Function             */
 extern void diffTexNo__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void diffTevStage__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void diffTevStageIndirect__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void diffTevReg__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void diffTexCoordScale__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void diffTexNo__12J3DTevBlock1Fv();
+/* ReturnFunction       */
 extern void diffTevReg__12J3DTevBlock1Fv();
+/* Function             */
 extern void diffTevStage__12J3DTevBlock1Fv();
+/* Function             */
 extern void diffTevStageIndirect__12J3DTevBlock1Fv();
+/* Function             */
 extern void diffTexCoordScale__12J3DTevBlock1Fv();
+/* Function             */
 extern void diffTexNo__12J3DTevBlock2Fv();
+/* Function             */
 extern void diffTevReg__12J3DTevBlock2Fv();
+/* Function             */
 extern void diffTevStage__12J3DTevBlock2Fv();
+/* Function             */
 extern void diffTevStageIndirect__12J3DTevBlock2Fv();
+/* Function             */
 extern void diffTexCoordScale__12J3DTevBlock2Fv();
+/* Function             */
 extern void diffTexNo__12J3DTevBlock4Fv();
+/* Function             */
 extern void diffTevReg__12J3DTevBlock4Fv();
+/* Function             */
 extern void diffTevStage__12J3DTevBlock4Fv();
+/* Function             */
 extern void diffTevStageIndirect__12J3DTevBlock4Fv();
+/* Function             */
 extern void diffTexCoordScale__12J3DTevBlock4Fv();
+/* Function             */
 extern void diffTexNo__13J3DTevBlock16Fv();
+/* Function             */
 extern void diffTevReg__13J3DTevBlock16Fv();
+/* Function             */
 extern void diffTevStage__13J3DTevBlock16Fv();
+/* Function             */
 extern void diffTevStageIndirect__13J3DTevBlock16Fv();
+/* Function             */
 extern void diffTexCoordScale__13J3DTevBlock16Fv();
+/* Function             */
 extern void ptrToIndex__13J3DTevBlock16Fv();
+/* Function             */
 extern void ptrToIndex__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void indexToPtr_private__11J3DTevBlockFUl();
+/* Function             */
 extern void load__15J3DIndBlockFullFv();
+/* Function             */
 extern void diff__15J3DIndBlockFullFUl();
+/* Function             */
 extern void load__13J3DPEBlockOpaFv();
+/* Function             */
 extern void load__17J3DPEBlockTexEdgeFv();
+/* Function             */
 extern void load__13J3DPEBlockXluFv();
+/* Function             */
 extern void load__16J3DPEBlockFogOffFv();
+/* Function             */
 extern void diffBlend__16J3DPEBlockFogOffFv();
+/* Function             */
 extern void load__14J3DPEBlockFullFv();
+/* Function             */
 extern void patch__14J3DPEBlockFullFv();
+/* Function             */
 extern void diffFog__14J3DPEBlockFullFv();
+/* Function             */
 extern void diffBlend__14J3DPEBlockFullFv();
+/* Function             */
 extern void diff__14J3DPEBlockFullFUl();
+/* Function             */
 extern void reset__21J3DColorBlockLightOffFP13J3DColorBlock();
+/* Function             */
 extern void reset__22J3DColorBlockAmbientOnFP13J3DColorBlock();
+/* Function             */
 extern void reset__20J3DColorBlockLightOnFP13J3DColorBlock();
+/* Function             */
 extern void reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock();
+/* Function             */
 extern void reset__15J3DTexGenBlock4FP14J3DTexGenBlock();
+/* Function             */
 extern void reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock();
+/* Function             */
 extern void reset__18J3DTevBlockPatchedFP11J3DTevBlock();
+/* Function             */
 extern void reset__12J3DTevBlock1FP11J3DTevBlock();
+/* Function             */
 extern void reset__12J3DTevBlock2FP11J3DTevBlock();
+/* Function             */
 extern void reset__12J3DTevBlock4FP11J3DTevBlock();
+/* Function             */
 extern void reset__13J3DTevBlock16FP11J3DTevBlock();
+/* Function             */
 extern void reset__15J3DIndBlockFullFP11J3DIndBlock();
+/* Function             */
 extern void reset__16J3DPEBlockFogOffFP10J3DPEBlock();
+/* Function             */
 extern void reset__14J3DPEBlockFullFP10J3DPEBlock();
+/* Function             */
 extern void calc__21J3DTexGenBlockPatchedFPA4_Cf();
+/* Function             */
 extern void calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+/* Function             */
 extern void calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+/* Function             */
 extern void calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+/* ReturnFunction       */
 extern void diffTevReg__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void diffTevStageIndirect__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void diffTevStage__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void diffTexCoordScale__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void diffTexNo__11J3DTevBlockFv();
+/* Function             */
 extern void getType__14J3DPEBlockFullFv();
+/* Function             */
 extern void setFog__14J3DPEBlockFullFP6J3DFog();
+/* Function             */
 extern void setFog__14J3DPEBlockFullF6J3DFog();
+/* FirstParamFunction   */
 extern u8* getFog__14J3DPEBlockFullFv(u8*);
+/* Function             */
 extern void setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp();
+/* Function             */
 extern void setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp();
+/* FirstParamFunction   */
 extern u8* getAlphaComp__14J3DPEBlockFullFv(u8*);
+/* Function             */
 extern void setBlend__14J3DPEBlockFullFRC8J3DBlend();
+/* Function             */
 extern void setBlend__14J3DPEBlockFullFPC8J3DBlend();
+/* FirstParamFunction   */
 extern u8* getBlend__14J3DPEBlockFullFv(u8*);
+/* Function             */
 extern void setZMode__14J3DPEBlockFullF8J3DZMode();
+/* Function             */
 extern void setZMode__14J3DPEBlockFullFPC8J3DZMode();
+/* FirstParamFunction   */
 extern u8* getZMode__14J3DPEBlockFullFv(u8*);
+/* Function             */
 extern void setZCompLoc__14J3DPEBlockFullFUc();
+/* Function             */
 extern void setZCompLoc__14J3DPEBlockFullFPCUc();
+/* FirstParamFunction   */
 extern u8 getZCompLoc__14J3DPEBlockFullCFv(u8*);
+/* Function             */
 extern void setDither__14J3DPEBlockFullFUc();
+/* Function             */
 extern void setDither__14J3DPEBlockFullFPCUc();
+/* FirstParamFunction   */
 extern u8 getDither__14J3DPEBlockFullCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getFogOffset__14J3DPEBlockFullCFv(u8*);
+/* Function             */
 extern void setFogOffset__14J3DPEBlockFullFUl();
+/* Function             */
 extern void __dt__14J3DPEBlockFullFv();
+/* Function             */
 extern void diff__16J3DPEBlockFogOffFUl();
+/* Function             */
 extern void getType__16J3DPEBlockFogOffFv();
+/* Function             */
 extern void setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp();
+/* Function             */
 extern void setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp();
+/* FirstParamFunction   */
 extern u8* getAlphaComp__16J3DPEBlockFogOffFv(u8*);
+/* Function             */
 extern void setBlend__16J3DPEBlockFogOffFRC8J3DBlend();
+/* Function             */
 extern void setBlend__16J3DPEBlockFogOffFPC8J3DBlend();
+/* FirstParamFunction   */
 extern u8* getBlend__16J3DPEBlockFogOffFv(u8*);
+/* Function             */
 extern void setZMode__16J3DPEBlockFogOffF8J3DZMode();
+/* Function             */
 extern void setZMode__16J3DPEBlockFogOffFPC8J3DZMode();
+/* FirstParamFunction   */
 extern u8* getZMode__16J3DPEBlockFogOffFv(u8*);
+/* Function             */
 extern void setZCompLoc__16J3DPEBlockFogOffFUc();
+/* Function             */
 extern void setZCompLoc__16J3DPEBlockFogOffFPCUc();
+/* FirstParamFunction   */
 extern u8 getZCompLoc__16J3DPEBlockFogOffCFv(u8*);
+/* Function             */
 extern void setDither__16J3DPEBlockFogOffFUc();
+/* Function             */
 extern void setDither__16J3DPEBlockFogOffFPCUc();
+/* FirstParamFunction   */
 extern u8 getDither__16J3DPEBlockFogOffCFv(u8*);
+/* Function             */
 extern void __dt__16J3DPEBlockFogOffFv();
+/* Function             */
 extern void indexToPtr__13J3DTevBlock16Fv();
+/* Function             */
 extern void getType__13J3DTevBlock16Fv();
+/* Function             */
 extern void setTexNo__13J3DTevBlock16FUlUs();
+/* Function             */
 extern void setTexNo__13J3DTevBlock16FUlPCUs();
+/* Function             */
 extern void getTexNo__13J3DTevBlock16CFUl();
+/* Function             */
 extern void setTevOrder__13J3DTevBlock16FUl11J3DTevOrder();
+/* Function             */
 extern void setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder();
+/* Function             */
 extern void getTevOrder__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevColor__13J3DTevBlock16FUl13J3DGXColorS10();
+/* Function             */
 extern void setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10();
+/* Function             */
 extern void getTevColor__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevKColor__13J3DTevBlock16FUl10J3DGXColor();
+/* Function             */
 extern void setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor();
+/* Function             */
 extern void getTevKColor__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevKColorSel__13J3DTevBlock16FUlUc();
+/* Function             */
 extern void setTevKColorSel__13J3DTevBlock16FUlPCUc();
+/* Function             */
 extern void getTevKColorSel__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevKAlphaSel__13J3DTevBlock16FUlUc();
+/* Function             */
 extern void setTevKAlphaSel__13J3DTevBlock16FUlPCUc();
+/* Function             */
 extern void getTevKAlphaSel__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevStageNum__13J3DTevBlock16FUc();
+/* Function             */
 extern void setTevStageNum__13J3DTevBlock16FPCUc();
+/* FirstParamFunction   */
 extern u8 getTevStageNum__13J3DTevBlock16CFv(u8*);
+/* Function             */
 extern void setTevStage__13J3DTevBlock16FUl11J3DTevStage();
+/* Function             */
 extern void setTevStage__13J3DTevBlock16FUlPC11J3DTevStage();
+/* Function             */
 extern void getTevStage__13J3DTevBlock16FUl();
+/* Function             */
 extern void setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable();
+/* Function             */
 extern void setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable();
+/* Function             */
 extern void getTevSwapModeTable__13J3DTevBlock16FUl();
+/* Function             */
 extern void setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage();
+/* Function             */
 extern void setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage();
+/* Function             */
 extern void getIndTevStage__13J3DTevBlock16FUl();
+/* FirstParamFunction   */
 extern u32 getTexNoOffset__13J3DTevBlock16CFv(u8*);
+/* FirstParamFunction   */
 extern u32 getTevRegOffset__13J3DTevBlock16CFv(u8*);
+/* Function             */
 extern void setTevRegOffset__13J3DTevBlock16FUl();
+/* Function             */
 extern void __dt__13J3DTevBlock16Fv();
+/* Function             */
 extern void setTexNoOffset__11J3DTevBlockFUl();
+/* ReturnFunction       */
 extern void ptrToIndex__12J3DTevBlock4Fv();
+/* Function             */
 extern void indexToPtr__12J3DTevBlock4Fv();
+/* Function             */
 extern void getType__12J3DTevBlock4Fv();
+/* Function             */
 extern void setTexNo__12J3DTevBlock4FUlUs();
+/* Function             */
 extern void setTexNo__12J3DTevBlock4FUlPCUs();
+/* Function             */
 extern void getTexNo__12J3DTevBlock4CFUl();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock4FUl11J3DTevOrder();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder();
+/* Function             */
 extern void getTevOrder__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevColor__12J3DTevBlock4FUl13J3DGXColorS10();
+/* Function             */
 extern void setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10();
+/* Function             */
 extern void getTevColor__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevKColor__12J3DTevBlock4FUl10J3DGXColor();
+/* Function             */
 extern void setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor();
+/* Function             */
 extern void getTevKColor__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevKColorSel__12J3DTevBlock4FUlUc();
+/* Function             */
 extern void setTevKColorSel__12J3DTevBlock4FUlPCUc();
+/* Function             */
 extern void getTevKColorSel__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevKAlphaSel__12J3DTevBlock4FUlUc();
+/* Function             */
 extern void setTevKAlphaSel__12J3DTevBlock4FUlPCUc();
+/* Function             */
 extern void getTevKAlphaSel__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevStageNum__12J3DTevBlock4FUc();
+/* Function             */
 extern void setTevStageNum__12J3DTevBlock4FPCUc();
+/* FirstParamFunction   */
 extern u8 getTevStageNum__12J3DTevBlock4CFv(u8*);
+/* Function             */
 extern void setTevStage__12J3DTevBlock4FUl11J3DTevStage();
+/* Function             */
 extern void setTevStage__12J3DTevBlock4FUlPC11J3DTevStage();
+/* Function             */
 extern void getTevStage__12J3DTevBlock4FUl();
+/* Function             */
 extern void setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable();
+/* Function             */
 extern void setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable();
+/* Function             */
 extern void getTevSwapModeTable__12J3DTevBlock4FUl();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage();
+/* Function             */
 extern void getIndTevStage__12J3DTevBlock4FUl();
+/* FirstParamFunction   */
 extern u32 getTexNoOffset__12J3DTevBlock4CFv(u8*);
+/* FirstParamFunction   */
 extern u32 getTevRegOffset__12J3DTevBlock4CFv(u8*);
+/* Function             */
 extern void setTevRegOffset__12J3DTevBlock4FUl();
+/* Function             */
 extern void __dt__12J3DTevBlock4Fv();
+/* ReturnFunction       */
 extern void ptrToIndex__12J3DTevBlock2Fv();
+/* Function             */
 extern void indexToPtr__12J3DTevBlock2Fv();
+/* Function             */
 extern void getType__12J3DTevBlock2Fv();
+/* Function             */
 extern void setTexNo__12J3DTevBlock2FUlUs();
+/* Function             */
 extern void setTexNo__12J3DTevBlock2FUlPCUs();
+/* Function             */
 extern void getTexNo__12J3DTevBlock2CFUl();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock2FUl11J3DTevOrder();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder();
+/* Function             */
 extern void getTevOrder__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevColor__12J3DTevBlock2FUl13J3DGXColorS10();
+/* Function             */
 extern void setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10();
+/* Function             */
 extern void getTevColor__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevKColor__12J3DTevBlock2FUl10J3DGXColor();
+/* Function             */
 extern void setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor();
+/* Function             */
 extern void getTevKColor__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevKColorSel__12J3DTevBlock2FUlUc();
+/* Function             */
 extern void setTevKColorSel__12J3DTevBlock2FUlPCUc();
+/* Function             */
 extern void getTevKColorSel__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevKAlphaSel__12J3DTevBlock2FUlUc();
+/* Function             */
 extern void setTevKAlphaSel__12J3DTevBlock2FUlPCUc();
+/* Function             */
 extern void getTevKAlphaSel__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevStageNum__12J3DTevBlock2FUc();
+/* Function             */
 extern void setTevStageNum__12J3DTevBlock2FPCUc();
+/* FirstParamFunction   */
 extern u8 getTevStageNum__12J3DTevBlock2CFv(u8*);
+/* Function             */
 extern void setTevStage__12J3DTevBlock2FUl11J3DTevStage();
+/* Function             */
 extern void setTevStage__12J3DTevBlock2FUlPC11J3DTevStage();
+/* Function             */
 extern void getTevStage__12J3DTevBlock2FUl();
+/* Function             */
 extern void setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo();
+/* Function             */
 extern void setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable();
+/* Function             */
 extern void setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable();
+/* Function             */
 extern void getTevSwapModeTable__12J3DTevBlock2FUl();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage();
+/* Function             */
 extern void getIndTevStage__12J3DTevBlock2FUl();
+/* FirstParamFunction   */
 extern u32 getTexNoOffset__12J3DTevBlock2CFv(u8*);
+/* FirstParamFunction   */
 extern u32 getTevRegOffset__12J3DTevBlock2CFv(u8*);
+/* Function             */
 extern void setTevRegOffset__12J3DTevBlock2FUl();
+/* Function             */
 extern void __dt__12J3DTevBlock2Fv();
+/* ReturnFunction       */
 extern void ptrToIndex__12J3DTevBlock1Fv();
+/* Function             */
 extern void indexToPtr__12J3DTevBlock1Fv();
+/* Function             */
 extern void getType__12J3DTevBlock1Fv();
+/* Function             */
 extern void setTexNo__12J3DTevBlock1FUlUs();
+/* Function             */
 extern void setTexNo__12J3DTevBlock1FUlPCUs();
+/* Function             */
 extern void getTexNo__12J3DTevBlock1CFUl();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock1FUl11J3DTevOrder();
+/* Function             */
 extern void setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder();
+/* Function             */
 extern void getTevOrder__12J3DTevBlock1FUl();
+/* ReturnFunction       */
 extern void setTevStageNum__12J3DTevBlock1FUc();
+/* ReturnFunction       */
 extern void setTevStageNum__12J3DTevBlock1FPCUc();
-extern int getTevStageNum__12J3DTevBlock1CFv();
+/* ReturnIntegerFunction */
+extern  int getTevStageNum__12J3DTevBlock1CFv();
+/* Function             */
 extern void setTevStage__12J3DTevBlock1FUl11J3DTevStage();
+/* Function             */
 extern void setTevStage__12J3DTevBlock1FUlPC11J3DTevStage();
+/* Function             */
 extern void getTevStage__12J3DTevBlock1FUl();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage();
+/* Function             */
 extern void setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage();
+/* Function             */
 extern void getIndTevStage__12J3DTevBlock1FUl();
+/* FirstParamFunction   */
 extern u32 getTexNoOffset__12J3DTevBlock1CFv(u8*);
+/* Function             */
 extern void __dt__12J3DTevBlock1Fv();
+/* ReturnFunction       */
 extern void setTevKColorSel__11J3DTevBlockFUlPCUc();
+/* ReturnFunction       */
 extern void setTevKAlphaSel__11J3DTevBlockFUlPCUc();
+/* ReturnFunction       */
 extern void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo();
+/* ReturnFunction       */
 extern void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo();
+/* ReturnFunction       */
 extern void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable();
-extern int getTevRegOffset__11J3DTevBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getTevRegOffset__11J3DTevBlockCFv();
+/* ReturnFunction       */
 extern void setTevRegOffset__11J3DTevBlockFUl();
+/* ReturnFunction       */
 extern void load__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void indexToPtr__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void getType__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void setTevStageNum__18J3DTevBlockPatchedFUc();
+/* Function             */
 extern void setTevStageNum__18J3DTevBlockPatchedFPCUc();
+/* FirstParamFunction   */
 extern u8 getTevStageNum__18J3DTevBlockPatchedCFv(u8*);
+/* Function             */
 extern void setTexNo__18J3DTevBlockPatchedFUlUs();
+/* Function             */
 extern void setTexNo__18J3DTevBlockPatchedFUlPCUs();
+/* Function             */
 extern void getTexNo__18J3DTevBlockPatchedCFUl();
+/* Function             */
 extern void setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder();
+/* Function             */
 extern void setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder();
+/* Function             */
 extern void getTevOrder__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage();
+/* Function             */
 extern void setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage();
+/* Function             */
 extern void getTevStage__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage();
+/* Function             */
 extern void setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage();
+/* Function             */
 extern void getIndTevStage__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10();
+/* Function             */
 extern void setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10();
+/* Function             */
 extern void getTevColor__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor();
+/* Function             */
 extern void setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor();
+/* Function             */
 extern void getTevKColor__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void setTevKColorSel__18J3DTevBlockPatchedFUlUc();
+/* Function             */
 extern void setTevKColorSel__18J3DTevBlockPatchedFUlPCUc();
+/* Function             */
 extern void getTevKColorSel__18J3DTevBlockPatchedFUl();
+/* FirstParamFunction   */
 extern u32 getTexNoOffset__18J3DTevBlockPatchedCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getTevRegOffset__18J3DTevBlockPatchedCFv(u8*);
+/* Function             */
 extern void setTevRegOffset__18J3DTevBlockPatchedFUl();
+/* Function             */
 extern void __dt__18J3DTevBlockPatchedFv();
+/* Function             */
 extern void getType__19J3DTexGenBlockBasicFv();
+/* Function             */
 extern void setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale();
+/* Function             */
 extern void setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale();
+/* FirstParamFunction   */
 extern u8* getNBTScale__19J3DTexGenBlockBasicFv(u8*);
+/* Function             */
 extern void __dt__19J3DTexGenBlockBasicFv();
+/* Function             */
 extern void setTexGenNum__21J3DTexGenBlockPatchedFUl();
+/* Function             */
 extern void setTexGenNum__21J3DTexGenBlockPatchedFPCUl();
+/* FirstParamFunction   */
 extern u32 getTexGenNum__21J3DTexGenBlockPatchedCFv(u8*);
+/* Function             */
 extern void setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord();
+/* Function             */
 extern void getTexCoord__21J3DTexGenBlockPatchedFUl();
+/* Function             */
 extern void setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx();
+/* Function             */
 extern void getTexMtx__21J3DTexGenBlockPatchedFUl();
+/* FirstParamFunction   */
 extern u32 getTexMtxOffset__21J3DTexGenBlockPatchedCFv(u8*);
+/* Function             */
 extern void setTexMtxOffset__21J3DTexGenBlockPatchedFUl();
+/* Function             */
 extern void getType__15J3DTexGenBlock4Fv();
+/* Function             */
 extern void setNBTScale__15J3DTexGenBlock4F11J3DNBTScale();
+/* Function             */
 extern void setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale();
+/* FirstParamFunction   */
 extern u8* getNBTScale__15J3DTexGenBlock4Fv(u8*);
+/* Function             */
 extern void __dt__15J3DTexGenBlock4Fv();
+/* ReturnFunction       */
 extern void load__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void getType__21J3DTexGenBlockPatchedFv();
+/* Function             */
 extern void getType__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor();
+/* Function             */
 extern void setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor();
+/* Function             */
 extern void getMatColor__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor();
+/* Function             */
 extern void setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor();
+/* Function             */
 extern void getAmbColor__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void setColorChanNum__20J3DColorBlockLightOnFPCUc();
+/* Function             */
 extern void setColorChanNum__20J3DColorBlockLightOnFUc();
+/* FirstParamFunction   */
 extern u8 getColorChanNum__20J3DColorBlockLightOnCFv(u8*);
+/* Function             */
 extern void setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan();
+/* Function             */
 extern void setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan();
+/* Function             */
 extern void getColorChan__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void setLight__20J3DColorBlockLightOnFUlP11J3DLightObj();
+/* Function             */
 extern void getLight__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void setCullMode__20J3DColorBlockLightOnFUc();
+/* Function             */
 extern void setCullMode__20J3DColorBlockLightOnFPCUc();
+/* FirstParamFunction   */
 extern u8 getCullMode__20J3DColorBlockLightOnCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getMatColorOffset__20J3DColorBlockLightOnCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getColorChanOffset__20J3DColorBlockLightOnCFv(u8*);
+/* Function             */
 extern void setMatColorOffset__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void setColorChanOffset__20J3DColorBlockLightOnFUl();
+/* Function             */
 extern void __dt__20J3DColorBlockLightOnFv();
+/* Function             */
 extern void getType__22J3DColorBlockAmbientOnFv();
+/* Function             */
 extern void setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor();
+/* Function             */
 extern void setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor();
+/* Function             */
 extern void getAmbColor__22J3DColorBlockAmbientOnFUl();
+/* Function             */
 extern void __dt__22J3DColorBlockAmbientOnFv();
+/* Function             */
 extern void setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor();
+/* Function             */
 extern void setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor();
+/* Function             */
 extern void getMatColor__21J3DColorBlockLightOffFUl();
+/* Function             */
 extern void setColorChanNum__21J3DColorBlockLightOffFPCUc();
+/* Function             */
 extern void setColorChanNum__21J3DColorBlockLightOffFUc();
+/* FirstParamFunction   */
 extern u8 getColorChanNum__21J3DColorBlockLightOffCFv(u8*);
+/* Function             */
 extern void setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan();
+/* Function             */
 extern void setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan();
+/* Function             */
 extern void getColorChan__21J3DColorBlockLightOffFUl();
+/* Function             */
 extern void setCullMode__21J3DColorBlockLightOffFUc();
+/* Function             */
 extern void setCullMode__21J3DColorBlockLightOffFPCUc();
+/* FirstParamFunction   */
 extern u8 getCullMode__21J3DColorBlockLightOffCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getMatColorOffset__21J3DColorBlockLightOffCFv(u8*);
+/* FirstParamFunction   */
 extern u32 getColorChanOffset__21J3DColorBlockLightOffCFv(u8*);
+/* Function             */
 extern void setMatColorOffset__21J3DColorBlockLightOffFUl();
+/* Function             */
 extern void setColorChanOffset__21J3DColorBlockLightOffFUl();
+/* Function             */
 extern void getType__13J3DPEBlockXluFv();
+/* Function             */
 extern void __dt__13J3DPEBlockXluFv();
+/* Function             */
 extern void getType__17J3DPEBlockTexEdgeFv();
+/* Function             */
 extern void __dt__17J3DPEBlockTexEdgeFv();
+/* Function             */
 extern void getType__13J3DPEBlockOpaFv();
+/* Function             */
 extern void __dt__13J3DPEBlockOpaFv();
+/* Function             */
 extern void getType__15J3DIndBlockFullFv();
+/* Function             */
 extern void setIndTexStageNum__15J3DIndBlockFullFUc();
+/* FirstParamFunction   */
 extern u8 getIndTexStageNum__15J3DIndBlockFullCFv(u8*);
+/* Function             */
 extern void setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder();
+/* Function             */
 extern void setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder();
+/* Function             */
 extern void getIndTexOrder__15J3DIndBlockFullFUl();
+/* Function             */
 extern void setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx();
+/* Function             */
 extern void setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx();
+/* Function             */
 extern void getIndTexMtx__15J3DIndBlockFullFUl();
+/* Function             */
 extern void setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale();
+/* Function             */
 extern void setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale();
+/* Function             */
 extern void getIndTexCoordScale__15J3DIndBlockFullFUl();
+/* Function             */
 extern void __dt__15J3DIndBlockFullFv();
+/* ReturnFunction       */
 extern void patchTexNo__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void patchTevReg__11J3DTevBlockFv();
+/* ReturnFunction       */
 extern void setTexNo__11J3DTevBlockFUlPCUs();
+/* ReturnFunction       */
 extern void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder();
+/* ReturnFunction       */
 extern void setTevStageNum__11J3DTevBlockFPCUc();
+/* ReturnFunction       */
 extern void setTevStage__11J3DTevBlockFUlPC11J3DTevStage();
+/* ReturnFunction       */
 extern void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage();
-extern int getTexNoOffset__11J3DTevBlockCFv();
+/* ReturnIntegerFunction */
+extern  int getTexNoOffset__11J3DTevBlockCFv();
+/* Function             */
 extern void getType__21J3DColorBlockLightOffFv();
+/* SInitFunction        */
+extern void __sinit_J3DMatBlock_cpp();
+/* Function             */
 extern void load__11J3DLightObjCFUl();
+/* Function             */
 extern void loadTexCoordGens__FUlP11J3DTexCoord();
+/* Function             */
 extern void load__9J3DTexMtxCFUl();
+/* Function             */
 extern void calc__9J3DTexMtxFPA4_Cf();
+/* Function             */
 extern void calcPostTexMtx__9J3DTexMtxFPA4_Cf();
+/* Function             */
 extern void isTexNoReg__FPv();
+/* Function             */
 extern void getTexNoReg__FPv();
+/* Function             */
 extern void loadTexNo__FUlRCUs();
+/* Function             */
 extern void patchTexNo_PtrToIdx__FUlRCUs();
+/* Function             */
 extern void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+/* Function             */
 extern void __as__10J3DFogInfoFRC10J3DFogInfo();
+/* Function             */
 extern void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+/* Function             */
 extern void DCStoreRange();
+/* Function             */
 extern void PSMTXCopy();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void GDOverflowed();
+/* Function             */
 extern void __destroy_arr();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultMtx[48];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 J3DMatBlock__stringBase0[32];
-SECTION_DATA extern const void* __vt__10J3DPEBlock[31];
-SECTION_DATA extern const void* __vt__11J3DIndBlock[19];
-SECTION_DATA extern const void* __vt__14J3DTexGenBlock[27];
-SECTION_DATA extern const void* __vt__13J3DColorBlock[36];
-SECTION_DATA extern u8 J3DMatBlock__LIT_5062[48];
-SECTION_DATA extern u8 J3DMatBlock__LIT_5110[48];
-SECTION_DATA extern u8 LIT_5150[48];
-SECTION_DATA extern u8 J3DMatBlock__LIT_5187[48];
-SECTION_DATA extern const void* __vt__14J3DPEBlockFull[31];
-SECTION_DATA extern const void* __vt__16J3DPEBlockFogOff[31];
-SECTION_DATA extern const void* __vt__13J3DTevBlock16[55];
-SECTION_DATA extern const void* __vt__12J3DTevBlock4[55];
-SECTION_DATA extern const void* __vt__12J3DTevBlock2[55];
-SECTION_DATA extern const void* __vt__12J3DTevBlock1[55];
-SECTION_DATA extern const void* __vt__18J3DTevBlockPatched[55];
-SECTION_DATA extern const void* __vt__19J3DTexGenBlockBasic[27];
-SECTION_DATA extern const void* __vt__15J3DTexGenBlock4[27];
-SECTION_DATA extern const void* __vt__21J3DTexGenBlockPatched[27];
-SECTION_DATA extern const void* __vt__20J3DColorBlockLightOn[36];
-SECTION_DATA extern const void* __vt__22J3DColorBlockAmbientOn[36];
-SECTION_DATA extern const void* __vt__13J3DPEBlockXlu[31];
-SECTION_DATA extern const void* __vt__17J3DPEBlockTexEdge[31];
-SECTION_DATA extern const void* __vt__13J3DPEBlockOpa[31];
-SECTION_DATA extern const void* __vt__15J3DIndBlockFull[19];
-SECTION_DATA extern const void* __vt__11J3DTevBlock[55];
-SECTION_DATA extern const void* __vt__21J3DColorBlockLightOff[37];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10J3DPEBlock[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DIndBlock[19];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J3DTexGenBlock[27];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DColorBlock[36];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DMatBlock__LIT_5062[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DMatBlock__LIT_5110[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* LIT_5150[12];
+/* SymbolReferenceArrayData */
+SECTION_DATA extern void* J3DMatBlock__LIT_5187[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14J3DPEBlockFull[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DPEBlockFogOff[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DTevBlock16[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DTevBlock4[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DTevBlock2[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12J3DTevBlock1[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18J3DTevBlockPatched[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19J3DTexGenBlockBasic[27];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15J3DTexGenBlock4[27];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21J3DTexGenBlockPatched[27];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20J3DColorBlockLightOn[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22J3DColorBlockAmbientOn[36];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DPEBlockXlu[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17J3DPEBlockTexEdge[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13J3DPEBlockOpa[31];
+/* VTableData           */
+SECTION_DATA extern void* __vt__15J3DIndBlockFull[19];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DTevBlock[55];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21J3DColorBlockLightOff[37];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
-SECTION_BSS extern u8 sTexCoordScaleTable__6J3DSys[68];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dTevSwapTableTable[1024];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dAlphaCmpTable[768];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dZModeTable[96];
+/* InitializedData      */
 SECTION_SDATA extern u8 SizeOfLoadMatColors[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 SizeOfLoadAmbColors[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 SizeOfLoadColorChans[8];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SizeOfJ3DColorBlockLightOffLoad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SizeOfJ3DColorBlockAmbientOnLoad[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __GDCurrentDL[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_585[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 J3DMatBlock__LIT_5060[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j3dDefaultColInfo[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j3dDefaultAmbInfo[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j3dDefaultTevColor[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 j3dDefaultTevKColor[4];
 }
 
@@ -624,8 +1248,14 @@ SECTION_SDATA2 extern u8 j3dDefaultTevKColor[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A1EA8 001D .rodata    @stringBase0                                                 */
-const char* const stringBase_803A1EA8 = "Error : TexMtx[%d] is Null.\n";
+/* 803A1EA8-803A1EC8 001D .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_803A1EA8 = "Error : TexMtx[%d] is Null.\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_803A1EC5 = "\0\0";
+#pragma pop
 }
 
 
@@ -634,32 +1264,68 @@ const char* const stringBase_803A1EA8 = "Error : TexMtx[%d] is Null.\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CDF30 0030 .data      @5062                                                        */
-SECTION_DATA u8 J3DMatBlock__LIT_5062[48] = {
-	0x80, 0x32, 0x15, 0x48, 0x80, 0x32, 0x14, 0x34, 0x80, 0x32, 0x14, 0x88, 0x80, 0x32, 0x14, 0xB8,
-	0x80, 0x32, 0x15, 0x48, 0x80, 0x32, 0x14, 0xFC, 0x80, 0x32, 0x14, 0x34, 0x80, 0x32, 0x14, 0x34,
-	0x80, 0x32, 0x14, 0x88, 0x80, 0x32, 0x14, 0xB8, 0x80, 0x32, 0x14, 0xFC, 0x80, 0x32, 0x14, 0xFC,
+/* 803CDF30-803CDF60 0030 .data      @5062                                                        SymbolReferenceArrayData */
+SECTION_DATA void* J3DMatBlock__LIT_5062[12] = {
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+98),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+50),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+62),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+98),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+79),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+50),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+62),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+79),
+	(void*)(((u32*)calc__21J3DTexGenBlockPatchedFPA4_Cf)+79),
 };
-/* 803CDF60 0030 .data      @5110                                                        */
-SECTION_DATA u8 J3DMatBlock__LIT_5110[48] = {
-	0x80, 0x32, 0x16, 0x9C, 0x80, 0x32, 0x15, 0xF8, 0x80, 0x32, 0x16, 0x0C, 0x80, 0x32, 0x16, 0x3C,
-	0x80, 0x32, 0x16, 0x9C, 0x80, 0x32, 0x16, 0x50, 0x80, 0x32, 0x15, 0xF8, 0x80, 0x32, 0x15, 0xF8,
-	0x80, 0x32, 0x16, 0x0C, 0x80, 0x32, 0x16, 0x3C, 0x80, 0x32, 0x16, 0x50, 0x80, 0x32, 0x16, 0x50,
+/* 803CDF60-803CDF90 0030 .data      @5110                                                        SymbolReferenceArrayData */
+SECTION_DATA void* J3DMatBlock__LIT_5110[12] = {
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+70),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+34),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+46),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+70),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+51),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+29),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+34),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+46),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+51),
+	(void*)(((u32*)calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+51),
 };
-/* 803CDF90 0030 .data      @5150                                                        */
-SECTION_DATA u8 LIT_5150[48] = {
-	0x80, 0x32, 0x17, 0xD8, 0x80, 0x32, 0x17, 0x40, 0x80, 0x32, 0x17, 0x5C, 0x80, 0x32, 0x17, 0x84,
-	0x80, 0x32, 0x17, 0xD8, 0x80, 0x32, 0x17, 0xA0, 0x80, 0x32, 0x17, 0x40, 0x80, 0x32, 0x17, 0x40,
-	0x80, 0x32, 0x17, 0x5C, 0x80, 0x32, 0x17, 0x84, 0x80, 0x32, 0x17, 0xA0, 0x80, 0x32, 0x17, 0xA0,
+/* 803CDF90-803CDFC0 0030 .data      @5150                                                        SymbolReferenceArrayData */
+SECTION_DATA void* LIT_5150[12] = {
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+64),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+33),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+43),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+64),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+50),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+33),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+43),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+50),
+	(void*)(((u32*)calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf)+50),
 };
-/* 803CDFC0 0030 .data      @5187                                                        */
-SECTION_DATA u8 J3DMatBlock__LIT_5187[48] = {
-	0x80, 0x32, 0x18, 0xF4, 0x80, 0x32, 0x18, 0x84, 0x80, 0x32, 0x18, 0xA0, 0x80, 0x32, 0x18, 0xBC,
-	0x80, 0x32, 0x18, 0xF4, 0x80, 0x32, 0x18, 0xD8, 0x80, 0x32, 0x18, 0x84, 0x80, 0x32, 0x18, 0x84,
-	0x80, 0x32, 0x18, 0xA0, 0x80, 0x32, 0x18, 0xBC, 0x80, 0x32, 0x18, 0xD8, 0x80, 0x32, 0x18, 0xD8,
+/* 803CDFC0-803CDFF0 0030 .data      @5187                                                        SymbolReferenceArrayData */
+SECTION_DATA void* J3DMatBlock__LIT_5187[12] = {
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+54),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+33),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+40),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+54),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+47),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+26),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+33),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+40),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+47),
+	(void*)(((u32*)calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf)+47),
 };
-/* 803CDFF0 007C .data      __vt__14J3DPEBlockFull                                       */
-SECTION_DATA const  void* __vt__14J3DPEBlockFull[31] = {
+/* 803CDFF0-803CE06C 007C .data      __vt__14J3DPEBlockFull                                       VTableData */
+SECTION_DATA void* __vt__14J3DPEBlockFull[31] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__14J3DPEBlockFullFP10J3DPEBlock,
@@ -692,8 +1358,8 @@ SECTION_DATA const  void* __vt__14J3DPEBlockFull[31] = {
 	(void*)setFogOffset__14J3DPEBlockFullFUl,
 	(void*)__dt__14J3DPEBlockFullFv,
 };
-/* 803CE06C 007C .data      __vt__16J3DPEBlockFogOff                                     */
-SECTION_DATA const  void* __vt__16J3DPEBlockFogOff[31] = {
+/* 803CE06C-803CE0E8 007C .data      __vt__16J3DPEBlockFogOff                                     VTableData */
+SECTION_DATA void* __vt__16J3DPEBlockFogOff[31] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__16J3DPEBlockFogOffFP10J3DPEBlock,
@@ -726,8 +1392,8 @@ SECTION_DATA const  void* __vt__16J3DPEBlockFogOff[31] = {
 	(void*)setFogOffset__10J3DPEBlockFUl,
 	(void*)__dt__16J3DPEBlockFogOffFv,
 };
-/* 803CE0E8 00DC .data      __vt__13J3DTevBlock16                                        */
-SECTION_DATA const  void* __vt__13J3DTevBlock16[55] = {
+/* 803CE0E8-803CE1C4 00DC .data      __vt__13J3DTevBlock16                                        VTableData */
+SECTION_DATA void* __vt__13J3DTevBlock16[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__13J3DTevBlock16FP11J3DTevBlock,
@@ -784,8 +1450,8 @@ SECTION_DATA const  void* __vt__13J3DTevBlock16[55] = {
 	(void*)setTevRegOffset__13J3DTevBlock16FUl,
 	(void*)__dt__13J3DTevBlock16Fv,
 };
-/* 803CE1C4 00DC .data      __vt__12J3DTevBlock4                                         */
-SECTION_DATA const  void* __vt__12J3DTevBlock4[55] = {
+/* 803CE1C4-803CE2A0 00DC .data      __vt__12J3DTevBlock4                                         VTableData */
+SECTION_DATA void* __vt__12J3DTevBlock4[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__12J3DTevBlock4FP11J3DTevBlock,
@@ -842,8 +1508,8 @@ SECTION_DATA const  void* __vt__12J3DTevBlock4[55] = {
 	(void*)setTevRegOffset__12J3DTevBlock4FUl,
 	(void*)__dt__12J3DTevBlock4Fv,
 };
-/* 803CE2A0 00DC .data      __vt__12J3DTevBlock2                                         */
-SECTION_DATA const  void* __vt__12J3DTevBlock2[55] = {
+/* 803CE2A0-803CE37C 00DC .data      __vt__12J3DTevBlock2                                         VTableData */
+SECTION_DATA void* __vt__12J3DTevBlock2[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__12J3DTevBlock2FP11J3DTevBlock,
@@ -900,8 +1566,8 @@ SECTION_DATA const  void* __vt__12J3DTevBlock2[55] = {
 	(void*)setTevRegOffset__12J3DTevBlock2FUl,
 	(void*)__dt__12J3DTevBlock2Fv,
 };
-/* 803CE37C 00DC .data      __vt__12J3DTevBlock1                                         */
-SECTION_DATA const  void* __vt__12J3DTevBlock1[55] = {
+/* 803CE37C-803CE458 00DC .data      __vt__12J3DTevBlock1                                         VTableData */
+SECTION_DATA void* __vt__12J3DTevBlock1[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__12J3DTevBlock1FP11J3DTevBlock,
@@ -958,8 +1624,8 @@ SECTION_DATA const  void* __vt__12J3DTevBlock1[55] = {
 	(void*)setTevRegOffset__11J3DTevBlockFUl,
 	(void*)__dt__12J3DTevBlock1Fv,
 };
-/* 803CE458 00DC .data      __vt__18J3DTevBlockPatched                                   */
-SECTION_DATA const  void* __vt__18J3DTevBlockPatched[55] = {
+/* 803CE458-803CE534 00DC .data      __vt__18J3DTevBlockPatched                                   VTableData */
+SECTION_DATA void* __vt__18J3DTevBlockPatched[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__18J3DTevBlockPatchedFP11J3DTevBlock,
@@ -1016,8 +1682,8 @@ SECTION_DATA const  void* __vt__18J3DTevBlockPatched[55] = {
 	(void*)setTevRegOffset__18J3DTevBlockPatchedFUl,
 	(void*)__dt__18J3DTevBlockPatchedFv,
 };
-/* 803CE534 006C .data      __vt__19J3DTexGenBlockBasic                                  */
-SECTION_DATA const  void* __vt__19J3DTexGenBlockBasic[27] = {
+/* 803CE534-803CE5A0 006C .data      __vt__19J3DTexGenBlockBasic                                  VTableData */
+SECTION_DATA void* __vt__19J3DTexGenBlockBasic[27] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock,
@@ -1046,8 +1712,8 @@ SECTION_DATA const  void* __vt__19J3DTexGenBlockBasic[27] = {
 	(void*)setTexMtxOffset__21J3DTexGenBlockPatchedFUl,
 	(void*)__dt__19J3DTexGenBlockBasicFv,
 };
-/* 803CE5A0 006C .data      __vt__15J3DTexGenBlock4                                      */
-SECTION_DATA const  void* __vt__15J3DTexGenBlock4[27] = {
+/* 803CE5A0-803CE60C 006C .data      __vt__15J3DTexGenBlock4                                      VTableData */
+SECTION_DATA void* __vt__15J3DTexGenBlock4[27] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__15J3DTexGenBlock4FP14J3DTexGenBlock,
@@ -1076,8 +1742,8 @@ SECTION_DATA const  void* __vt__15J3DTexGenBlock4[27] = {
 	(void*)setTexMtxOffset__21J3DTexGenBlockPatchedFUl,
 	(void*)__dt__15J3DTexGenBlock4Fv,
 };
-/* 803CE60C 006C .data      __vt__21J3DTexGenBlockPatched                                */
-SECTION_DATA const  void* __vt__21J3DTexGenBlockPatched[27] = {
+/* 803CE60C-803CE678 006C .data      __vt__21J3DTexGenBlockPatched                                VTableData */
+SECTION_DATA void* __vt__21J3DTexGenBlockPatched[27] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock,
@@ -1106,8 +1772,8 @@ SECTION_DATA const  void* __vt__21J3DTexGenBlockPatched[27] = {
 	(void*)setTexMtxOffset__21J3DTexGenBlockPatchedFUl,
 	(void*)__dt__21J3DTexGenBlockPatchedFv,
 };
-/* 803CE678 0090 .data      __vt__20J3DColorBlockLightOn                                 */
-SECTION_DATA const  void* __vt__20J3DColorBlockLightOn[36] = {
+/* 803CE678-803CE708 0090 .data      __vt__20J3DColorBlockLightOn                                 VTableData */
+SECTION_DATA void* __vt__20J3DColorBlockLightOn[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__20J3DColorBlockLightOnFv,
@@ -1145,8 +1811,8 @@ SECTION_DATA const  void* __vt__20J3DColorBlockLightOn[36] = {
 	(void*)setColorChanOffset__20J3DColorBlockLightOnFUl,
 	(void*)__dt__20J3DColorBlockLightOnFv,
 };
-/* 803CE708 0090 .data      __vt__22J3DColorBlockAmbientOn                               */
-SECTION_DATA const  void* __vt__22J3DColorBlockAmbientOn[36] = {
+/* 803CE708-803CE798 0090 .data      __vt__22J3DColorBlockAmbientOn                               VTableData */
+SECTION_DATA void* __vt__22J3DColorBlockAmbientOn[36] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__22J3DColorBlockAmbientOnFv,
@@ -1184,8 +1850,8 @@ SECTION_DATA const  void* __vt__22J3DColorBlockAmbientOn[36] = {
 	(void*)setColorChanOffset__21J3DColorBlockLightOffFUl,
 	(void*)__dt__22J3DColorBlockAmbientOnFv,
 };
-/* 803CE798 007C .data      __vt__13J3DPEBlockXlu                                        */
-SECTION_DATA const  void* __vt__13J3DPEBlockXlu[31] = {
+/* 803CE798-803CE814 007C .data      __vt__13J3DPEBlockXlu                                        VTableData */
+SECTION_DATA void* __vt__13J3DPEBlockXlu[31] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__10J3DPEBlockFP10J3DPEBlock,
@@ -1218,8 +1884,8 @@ SECTION_DATA const  void* __vt__13J3DPEBlockXlu[31] = {
 	(void*)setFogOffset__10J3DPEBlockFUl,
 	(void*)__dt__13J3DPEBlockXluFv,
 };
-/* 803CE814 007C .data      __vt__17J3DPEBlockTexEdge                                    */
-SECTION_DATA const  void* __vt__17J3DPEBlockTexEdge[31] = {
+/* 803CE814-803CE890 007C .data      __vt__17J3DPEBlockTexEdge                                    VTableData */
+SECTION_DATA void* __vt__17J3DPEBlockTexEdge[31] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__10J3DPEBlockFP10J3DPEBlock,
@@ -1252,8 +1918,8 @@ SECTION_DATA const  void* __vt__17J3DPEBlockTexEdge[31] = {
 	(void*)setFogOffset__10J3DPEBlockFUl,
 	(void*)__dt__17J3DPEBlockTexEdgeFv,
 };
-/* 803CE890 007C .data      __vt__13J3DPEBlockOpa                                        */
-SECTION_DATA const  void* __vt__13J3DPEBlockOpa[31] = {
+/* 803CE890-803CE90C 007C .data      __vt__13J3DPEBlockOpa                                        VTableData */
+SECTION_DATA void* __vt__13J3DPEBlockOpa[31] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__10J3DPEBlockFP10J3DPEBlock,
@@ -1286,8 +1952,8 @@ SECTION_DATA const  void* __vt__13J3DPEBlockOpa[31] = {
 	(void*)setFogOffset__10J3DPEBlockFUl,
 	(void*)__dt__13J3DPEBlockOpaFv,
 };
-/* 803CE90C 004C .data      __vt__15J3DIndBlockFull                                      */
-SECTION_DATA const  void* __vt__15J3DIndBlockFull[19] = {
+/* 803CE90C-803CE958 004C .data      __vt__15J3DIndBlockFull                                      VTableData */
+SECTION_DATA void* __vt__15J3DIndBlockFull[19] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__15J3DIndBlockFullFP11J3DIndBlock,
@@ -1308,8 +1974,8 @@ SECTION_DATA const  void* __vt__15J3DIndBlockFull[19] = {
 	(void*)getIndTexCoordScale__15J3DIndBlockFullFUl,
 	(void*)__dt__15J3DIndBlockFullFv,
 };
-/* 803CE958 00DC .data      __vt__11J3DTevBlock                                          */
-SECTION_DATA const  void* __vt__11J3DTevBlock[55] = {
+/* 803CE958-803CEA34 00DC .data      __vt__11J3DTevBlock                                          VTableData */
+SECTION_DATA void* __vt__11J3DTevBlock[55] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)reset__11J3DTevBlockFP11J3DTevBlock,
@@ -1366,8 +2032,8 @@ SECTION_DATA const  void* __vt__11J3DTevBlock[55] = {
 	(void*)setTevRegOffset__11J3DTevBlockFUl,
 	(void*)__dt__11J3DTevBlockFv,
 };
-/* 803CEA34 0090 .data      __vt__21J3DColorBlockLightOff                                */
-SECTION_DATA const  void* __vt__21J3DColorBlockLightOff[37] = {
+/* 803CEA34-803CEAC8 0090 .data      __vt__21J3DColorBlockLightOff                                VTableData */
+SECTION_DATA void* __vt__21J3DColorBlockLightOff[37] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)load__21J3DColorBlockLightOffFv,
@@ -1415,15 +2081,15 @@ SECTION_DATA const  void* __vt__21J3DColorBlockLightOff[37] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450960 0004 .sdata     SizeOfLoadMatColors                                          */
+/* 80450960-80450964 0004 .sdata     SizeOfLoadMatColors                                          InitializedData */
 SECTION_SDATA u8 SizeOfLoadMatColors[4] = {
 	0x00, 0x00, 0x00, 0x0D,
 };
-/* 80450964 0004 .sdata     SizeOfLoadAmbColors                                          */
+/* 80450964-80450968 0004 .sdata     SizeOfLoadAmbColors                                          InitializedData */
 SECTION_SDATA u8 SizeOfLoadAmbColors[4] = {
 	0x00, 0x00, 0x00, 0x0D,
 };
-/* 80450968 0004 .sdata     SizeOfLoadColorChans                                         */
+/* 80450968-80450970 0004 .sdata     SizeOfLoadColorChans                                         InitializedData */
 SECTION_SDATA u8 SizeOfLoadColorChans[8] = {
 	0x00, 0x00, 0x00, 0x15,
 	/* padding */
@@ -1437,11 +2103,11 @@ SECTION_SDATA u8 SizeOfLoadColorChans[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804563A8 0004 .sdata2    @585                                                         */
+/* 804563A8-804563AC 0004 .sdata2    @585                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_585[4] = {
 	0x02, 0x00, 0x02, 0x01,
 };
-/* 804563AC 0004 .sdata2    @5060                                                        */
+/* 804563AC-804563B0 0004 .sdata2    @5060                                                        InitializedData */
 SECTION_SDATA2 u8 J3DMatBlock__LIT_5060[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
@@ -1453,9 +2119,9 @@ SECTION_SDATA2 u8 J3DMatBlock__LIT_5060[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804515D8 0004 .sbss      SizeOfJ3DColorBlockLightOffLoad                              */
+/* 804515D8-804515DC 0004 .sbss      SizeOfJ3DColorBlockLightOffLoad                              ZeroInitializedData */
 SECTION_SBSS u8 SizeOfJ3DColorBlockLightOffLoad[4];
-/* 804515DC 0004 .sbss      SizeOfJ3DColorBlockAmbientOnLoad                             */
+/* 804515DC-804515E0 0004 .sbss      SizeOfJ3DColorBlockAmbientOnLoad                             ZeroInitializedData */
 SECTION_SBSS u8 SizeOfJ3DColorBlockAmbientOnLoad[4];
 }
 
@@ -1465,7 +2131,7 @@ SECTION_SBSS u8 SizeOfJ3DColorBlockAmbientOnLoad[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8031747C 0060 .text      initialize__21J3DColorBlockLightOffFv                        */
+/* 8031747C-803174DC 0060 .text      initialize__21J3DColorBlockLightOffFv                        Function */
 // J3DColorBlockLightOff::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1476,7 +2142,7 @@ asm void initialize__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 803174DC 00A4 .text      initialize__22J3DColorBlockAmbientOnFv                       */
+/* 803174DC-80317580 00A4 .text      initialize__22J3DColorBlockAmbientOnFv                       Function */
 // J3DColorBlockAmbientOn::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1487,7 +2153,7 @@ asm void initialize__22J3DColorBlockAmbientOnFv() {
 }
 #pragma pop
 
-/* 80317580 00C4 .text      initialize__20J3DColorBlockLightOnFv                         */
+/* 80317580-80317644 00C4 .text      initialize__20J3DColorBlockLightOnFv                         Function */
 // J3DColorBlockLightOn::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1498,7 +2164,7 @@ asm void initialize__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80317644 0030 .text      initialize__21J3DTexGenBlockPatchedFv                        */
+/* 80317644-80317674 0030 .text      initialize__21J3DTexGenBlockPatchedFv                        Function */
 // J3DTexGenBlockPatched::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1509,7 +2175,7 @@ asm void initialize__21J3DTexGenBlockPatchedFv() {
 }
 #pragma pop
 
-/* 80317674 0030 .text      initialize__15J3DTexGenBlock4Fv                              */
+/* 80317674-803176A4 0030 .text      initialize__15J3DTexGenBlock4Fv                              Function */
 // J3DTexGenBlock4::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1520,7 +2186,7 @@ asm void initialize__15J3DTexGenBlock4Fv() {
 }
 #pragma pop
 
-/* 803176A4 0030 .text      initialize__19J3DTexGenBlockBasicFv                          */
+/* 803176A4-803176D4 0030 .text      initialize__19J3DTexGenBlockBasicFv                          Function */
 // J3DTexGenBlockBasic::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1531,7 +2197,7 @@ asm void initialize__19J3DTexGenBlockBasicFv() {
 }
 #pragma pop
 
-/* 803176D4 000C .text      initialize__15J3DTevBlockNullFv                              */
+/* 803176D4-803176E0 000C .text      initialize__15J3DTevBlockNullFv                              Function */
 // J3DTevBlockNull::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1542,7 +2208,7 @@ asm void initialize__15J3DTevBlockNullFv() {
 }
 #pragma pop
 
-/* 803176E0 0108 .text      initialize__18J3DTevBlockPatchedFv                           */
+/* 803176E0-803177E8 0108 .text      initialize__18J3DTevBlockPatchedFv                           Function */
 // J3DTevBlockPatched::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1553,7 +2219,7 @@ asm void initialize__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 803177E8 0028 .text      initialize__12J3DTevBlock1Fv                                 */
+/* 803177E8-80317810 0028 .text      initialize__12J3DTevBlock1Fv                                 Function */
 // J3DTevBlock1::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1564,7 +2230,7 @@ asm void initialize__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 80317810 00DC .text      initialize__12J3DTevBlock2Fv                                 */
+/* 80317810-803178EC 00DC .text      initialize__12J3DTevBlock2Fv                                 Function */
 // J3DTevBlock2::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1575,7 +2241,7 @@ asm void initialize__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 803178EC 0114 .text      initialize__12J3DTevBlock4Fv                                 */
+/* 803178EC-80317A00 0114 .text      initialize__12J3DTevBlock4Fv                                 Function */
 // J3DTevBlock4::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1586,7 +2252,7 @@ asm void initialize__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 80317A00 0128 .text      initialize__13J3DTevBlock16Fv                                */
+/* 80317A00-80317B28 0128 .text      initialize__13J3DTevBlock16Fv                                Function */
 // J3DTevBlock16::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1597,7 +2263,7 @@ asm void initialize__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 80317B28 000C .text      initialize__15J3DIndBlockFullFv                              */
+/* 80317B28-80317B34 000C .text      initialize__15J3DIndBlockFullFv                              Function */
 // J3DIndBlockFull::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1608,7 +2274,7 @@ asm void initialize__15J3DIndBlockFullFv() {
 }
 #pragma pop
 
-/* 80317B34 0024 .text      initialize__16J3DPEBlockFogOffFv                             */
+/* 80317B34-80317B58 0024 .text      initialize__16J3DPEBlockFogOffFv                             Function */
 // J3DPEBlockFogOff::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1619,7 +2285,7 @@ asm void initialize__16J3DPEBlockFogOffFv() {
 }
 #pragma pop
 
-/* 80317B58 002C .text      initialize__14J3DPEBlockFullFv                               */
+/* 80317B58-80317B84 002C .text      initialize__14J3DPEBlockFullFv                               Function */
 // J3DPEBlockFull::initialize(void)
 #pragma push
 #pragma optimization_level 0
@@ -1630,109 +2296,109 @@ asm void initialize__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 80317B84 0008 .text      countDLSize__21J3DColorBlockLightOffFv                       */
+/* 80317B84-80317B8C 0008 .text      countDLSize__21J3DColorBlockLightOffFv                       ReturnIntegerFunction */
 // J3DColorBlockLightOff::countDLSize(void)
 int countDLSize__21J3DColorBlockLightOffFv() {
 	return 34;
 }
 
-/* 80317B8C 0008 .text      countDLSize__22J3DColorBlockAmbientOnFv                      */
+/* 80317B8C-80317B94 0008 .text      countDLSize__22J3DColorBlockAmbientOnFv                      ReturnIntegerFunction */
 // J3DColorBlockAmbientOn::countDLSize(void)
 int countDLSize__22J3DColorBlockAmbientOnFv() {
 	return 47;
 }
 
-/* 80317B94 0008 .text      countDLSize__20J3DColorBlockLightOnFv                        */
+/* 80317B94-80317B9C 0008 .text      countDLSize__20J3DColorBlockLightOnFv                        ReturnIntegerFunction */
 // J3DColorBlockLightOn::countDLSize(void)
 int countDLSize__20J3DColorBlockLightOnFv() {
 	return 623;
 }
 
-/* 80317B9C 0008 .text      countDLSize__21J3DTexGenBlockPatchedFv                       */
+/* 80317B9C-80317BA4 0008 .text      countDLSize__21J3DTexGenBlockPatchedFv                       ReturnIntegerFunction */
 // J3DTexGenBlockPatched::countDLSize(void)
 int countDLSize__21J3DTexGenBlockPatchedFv() {
 	return 424;
 }
 
-/* 80317BA4 0008 .text      countDLSize__15J3DTexGenBlock4Fv                             */
+/* 80317BA4-80317BAC 0008 .text      countDLSize__15J3DTexGenBlock4Fv                             ReturnIntegerFunction */
 // J3DTexGenBlock4::countDLSize(void)
 int countDLSize__15J3DTexGenBlock4Fv() {
 	return 254;
 }
 
-/* 80317BAC 0008 .text      countDLSize__19J3DTexGenBlockBasicFv                         */
+/* 80317BAC-80317BB4 0008 .text      countDLSize__19J3DTexGenBlockBasicFv                         ReturnIntegerFunction */
 // J3DTexGenBlockBasic::countDLSize(void)
 int countDLSize__19J3DTexGenBlockBasicFv() {
 	return 498;
 }
 
-/* 80317BB4 0008 .text      countDLSize__18J3DTevBlockPatchedFv                          */
+/* 80317BB4-80317BBC 0008 .text      countDLSize__18J3DTevBlockPatchedFv                          ReturnIntegerFunction */
 // J3DTevBlockPatched::countDLSize(void)
 int countDLSize__18J3DTevBlockPatchedFv() {
 	return 560;
 }
 
-/* 80317BBC 0008 .text      countDLSize__12J3DTevBlock1Fv                                */
+/* 80317BBC-80317BC4 0008 .text      countDLSize__12J3DTevBlock1Fv                                ReturnIntegerFunction */
 // J3DTevBlock1::countDLSize(void)
 int countDLSize__12J3DTevBlock1Fv() {
 	return 105;
 }
 
-/* 80317BC4 0008 .text      countDLSize__12J3DTevBlock2Fv                                */
+/* 80317BC4-80317BCC 0008 .text      countDLSize__12J3DTevBlock2Fv                                ReturnIntegerFunction */
 // J3DTevBlock2::countDLSize(void)
 int countDLSize__12J3DTevBlock2Fv() {
 	return 335;
 }
 
-/* 80317BCC 0008 .text      countDLSize__12J3DTevBlock4Fv                                */
+/* 80317BCC-80317BD4 0008 .text      countDLSize__12J3DTevBlock4Fv                                ReturnIntegerFunction */
 // J3DTevBlock4::countDLSize(void)
 int countDLSize__12J3DTevBlock4Fv() {
 	return 580;
 }
 
-/* 80317BD4 0008 .text      countDLSize__13J3DTevBlock16Fv                               */
+/* 80317BD4-80317BDC 0008 .text      countDLSize__13J3DTevBlock16Fv                               ReturnIntegerFunction */
 // J3DTevBlock16::countDLSize(void)
 int countDLSize__13J3DTevBlock16Fv() {
 	return 1000;
 }
 
-/* 80317BDC 0008 .text      countDLSize__15J3DIndBlockFullFv                             */
+/* 80317BDC-80317BE4 0008 .text      countDLSize__15J3DIndBlockFullFv                             ReturnIntegerFunction */
 // J3DIndBlockFull::countDLSize(void)
 int countDLSize__15J3DIndBlockFullFv() {
 	return 140;
 }
 
-/* 80317BE4 0008 .text      countDLSize__13J3DPEBlockOpaFv                               */
+/* 80317BE4-80317BEC 0008 .text      countDLSize__13J3DPEBlockOpaFv                               ReturnIntegerFunction */
 // J3DPEBlockOpa::countDLSize(void)
 int countDLSize__13J3DPEBlockOpaFv() {
 	return 30;
 }
 
-/* 80317BEC 0008 .text      countDLSize__17J3DPEBlockTexEdgeFv                           */
+/* 80317BEC-80317BF4 0008 .text      countDLSize__17J3DPEBlockTexEdgeFv                           ReturnIntegerFunction */
 // J3DPEBlockTexEdge::countDLSize(void)
 int countDLSize__17J3DPEBlockTexEdgeFv() {
 	return 30;
 }
 
-/* 80317BF4 0008 .text      countDLSize__13J3DPEBlockXluFv                               */
+/* 80317BF4-80317BFC 0008 .text      countDLSize__13J3DPEBlockXluFv                               ReturnIntegerFunction */
 // J3DPEBlockXlu::countDLSize(void)
 int countDLSize__13J3DPEBlockXluFv() {
 	return 30;
 }
 
-/* 80317BFC 0008 .text      countDLSize__16J3DPEBlockFogOffFv                            */
+/* 80317BFC-80317C04 0008 .text      countDLSize__16J3DPEBlockFogOffFv                            ReturnIntegerFunction */
 // J3DPEBlockFogOff::countDLSize(void)
 int countDLSize__16J3DPEBlockFogOffFv() {
 	return 30;
 }
 
-/* 80317C04 0008 .text      countDLSize__14J3DPEBlockFullFv                              */
+/* 80317C04-80317C0C 0008 .text      countDLSize__14J3DPEBlockFullFv                              ReturnIntegerFunction */
 // J3DPEBlockFull::countDLSize(void)
 int countDLSize__14J3DPEBlockFullFv() {
 	return 85;
 }
 
-/* 80317C0C 0560 .text      load__21J3DColorBlockLightOffFv                              */
+/* 80317C0C-8031816C 0560 .text      load__21J3DColorBlockLightOffFv                              Function */
 // J3DColorBlockLightOff::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -1743,7 +2409,7 @@ asm void load__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 8031816C 0688 .text      load__22J3DColorBlockAmbientOnFv                             */
+/* 8031816C-803187F4 0688 .text      load__22J3DColorBlockAmbientOnFv                             Function */
 // J3DColorBlockAmbientOn::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -1754,7 +2420,7 @@ asm void load__22J3DColorBlockAmbientOnFv() {
 }
 #pragma pop
 
-/* 803187F4 06C0 .text      load__20J3DColorBlockLightOnFv                               */
+/* 803187F4-80318EB4 06C0 .text      load__20J3DColorBlockLightOnFv                               Function */
 // J3DColorBlockLightOn::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -1765,7 +2431,7 @@ asm void load__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80318EB4 004C .text      patch__21J3DColorBlockLightOffFv                             */
+/* 80318EB4-80318F00 004C .text      patch__21J3DColorBlockLightOffFv                             Function */
 // J3DColorBlockLightOff::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1776,7 +2442,7 @@ asm void patch__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 80318F00 01AC .text      patchMatColor__21J3DColorBlockLightOffFv                     */
+/* 80318F00-803190AC 01AC .text      patchMatColor__21J3DColorBlockLightOffFv                     Function */
 // J3DColorBlockLightOff::patchMatColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1787,7 +2453,7 @@ asm void patchMatColor__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 803190AC 043C .text      patchLight__21J3DColorBlockLightOffFv                        */
+/* 803190AC-803194E8 043C .text      patchLight__21J3DColorBlockLightOffFv                        Function */
 // J3DColorBlockLightOff::patchLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -1798,7 +2464,7 @@ asm void patchLight__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 803194E8 004C .text      patch__20J3DColorBlockLightOnFv                              */
+/* 803194E8-80319534 004C .text      patch__20J3DColorBlockLightOnFv                              Function */
 // J3DColorBlockLightOn::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1809,7 +2475,7 @@ asm void patch__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80319534 01AC .text      patchMatColor__20J3DColorBlockLightOnFv                      */
+/* 80319534-803196E0 01AC .text      patchMatColor__20J3DColorBlockLightOnFv                      Function */
 // J3DColorBlockLightOn::patchMatColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1820,7 +2486,7 @@ asm void patchMatColor__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 803196E0 046C .text      patchLight__20J3DColorBlockLightOnFv                         */
+/* 803196E0-80319B4C 046C .text      patchLight__20J3DColorBlockLightOnFv                         Function */
 // J3DColorBlockLightOn::patchLight(void)
 #pragma push
 #pragma optimization_level 0
@@ -1831,7 +2497,7 @@ asm void patchLight__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80319B4C 0068 .text      diff__21J3DColorBlockLightOffFUl                             */
+/* 80319B4C-80319BB4 0068 .text      diff__21J3DColorBlockLightOffFUl                             Function */
 // J3DColorBlockLightOff::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1842,7 +2508,7 @@ asm void diff__21J3DColorBlockLightOffFUl() {
 }
 #pragma pop
 
-/* 80319BB4 017C .text      diffMatColor__21J3DColorBlockLightOffFv                      */
+/* 80319BB4-80319D30 017C .text      diffMatColor__21J3DColorBlockLightOffFv                      Function */
 // J3DColorBlockLightOff::diffMatColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1853,7 +2519,7 @@ asm void diffMatColor__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 80319D30 040C .text      diffColorChan__21J3DColorBlockLightOffFv                     */
+/* 80319D30-8031A13C 040C .text      diffColorChan__21J3DColorBlockLightOffFv                     Function */
 // J3DColorBlockLightOff::diffColorChan(void)
 #pragma push
 #pragma optimization_level 0
@@ -1864,7 +2530,7 @@ asm void diffColorChan__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 8031A13C 00A0 .text      diff__20J3DColorBlockLightOnFUl                              */
+/* 8031A13C-8031A1DC 00A0 .text      diff__20J3DColorBlockLightOnFUl                              Function */
 // J3DColorBlockLightOn::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1875,7 +2541,7 @@ asm void diff__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 8031A1DC 017C .text      diffAmbColor__20J3DColorBlockLightOnFv                       */
+/* 8031A1DC-8031A358 017C .text      diffAmbColor__20J3DColorBlockLightOnFv                       Function */
 // J3DColorBlockLightOn::diffAmbColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1886,7 +2552,7 @@ asm void diffAmbColor__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 8031A358 017C .text      diffMatColor__20J3DColorBlockLightOnFv                       */
+/* 8031A358-8031A4D4 017C .text      diffMatColor__20J3DColorBlockLightOnFv                       Function */
 // J3DColorBlockLightOn::diffMatColor(void)
 #pragma push
 #pragma optimization_level 0
@@ -1897,7 +2563,7 @@ asm void diffMatColor__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 8031A4D4 040C .text      diffColorChan__20J3DColorBlockLightOnFv                      */
+/* 8031A4D4-8031A8E0 040C .text      diffColorChan__20J3DColorBlockLightOnFv                      Function */
 // J3DColorBlockLightOn::diffColorChan(void)
 #pragma push
 #pragma optimization_level 0
@@ -1908,7 +2574,7 @@ asm void diffColorChan__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 8031A8E0 0068 .text      diffLightObj__20J3DColorBlockLightOnFUl                      */
+/* 8031A8E0-8031A948 0068 .text      diffLightObj__20J3DColorBlockLightOnFUl                      Function */
 // J3DColorBlockLightOn::diffLightObj(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1919,7 +2585,7 @@ asm void diffLightObj__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 8031A948 00A0 .text      load__15J3DTexGenBlock4Fv                                    */
+/* 8031A948-8031A9E8 00A0 .text      load__15J3DTexGenBlock4Fv                                    Function */
 // J3DTexGenBlock4::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -1930,7 +2596,7 @@ asm void load__15J3DTexGenBlock4Fv() {
 }
 #pragma pop
 
-/* 8031A9E8 00A0 .text      load__19J3DTexGenBlockBasicFv                                */
+/* 8031A9E8-8031AA88 00A0 .text      load__19J3DTexGenBlockBasicFv                                Function */
 // J3DTexGenBlockBasic::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -1941,7 +2607,7 @@ asm void load__19J3DTexGenBlockBasicFv() {
 }
 #pragma pop
 
-/* 8031AA88 0090 .text      patch__21J3DTexGenBlockPatchedFv                             */
+/* 8031AA88-8031AB18 0090 .text      patch__21J3DTexGenBlockPatchedFv                             Function */
 // J3DTexGenBlockPatched::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1952,7 +2618,7 @@ asm void patch__21J3DTexGenBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031AB18 00A8 .text      patch__15J3DTexGenBlock4Fv                                   */
+/* 8031AB18-8031ABC0 00A8 .text      patch__15J3DTexGenBlock4Fv                                   Function */
 // J3DTexGenBlock4::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1963,7 +2629,7 @@ asm void patch__15J3DTexGenBlock4Fv() {
 }
 #pragma pop
 
-/* 8031ABC0 00A8 .text      patch__19J3DTexGenBlockBasicFv                               */
+/* 8031ABC0-8031AC68 00A8 .text      patch__19J3DTexGenBlockBasicFv                               Function */
 // J3DTexGenBlockBasic::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -1974,7 +2640,7 @@ asm void patch__19J3DTexGenBlockBasicFv() {
 }
 #pragma pop
 
-/* 8031AC68 0068 .text      diff__21J3DTexGenBlockPatchedFUl                             */
+/* 8031AC68-8031ACD0 0068 .text      diff__21J3DTexGenBlockPatchedFUl                             Function */
 // J3DTexGenBlockPatched::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1985,7 +2651,7 @@ asm void diff__21J3DTexGenBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 8031ACD0 0060 .text      diffTexMtx__21J3DTexGenBlockPatchedFv                        */
+/* 8031ACD0-8031AD30 0060 .text      diffTexMtx__21J3DTexGenBlockPatchedFv                        Function */
 // J3DTexGenBlockPatched::diffTexMtx(void)
 #pragma push
 #pragma optimization_level 0
@@ -1996,7 +2662,7 @@ asm void diffTexMtx__21J3DTexGenBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031AD30 0034 .text      diffTexGen__21J3DTexGenBlockPatchedFv                        */
+/* 8031AD30-8031AD64 0034 .text      diffTexGen__21J3DTexGenBlockPatchedFv                        Function */
 // J3DTexGenBlockPatched::diffTexGen(void)
 #pragma push
 #pragma optimization_level 0
@@ -2007,7 +2673,7 @@ asm void diffTexGen__21J3DTexGenBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031AD64 0240 .text      load__12J3DTevBlock1Fv                                       */
+/* 8031AD64-8031AFA4 0240 .text      load__12J3DTevBlock1Fv                                       Function */
 // J3DTevBlock1::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2018,7 +2684,7 @@ asm void load__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031AFA4 051C .text      load__12J3DTevBlock2Fv                                       */
+/* 8031AFA4-8031B4C0 051C .text      load__12J3DTevBlock2Fv                                       Function */
 // J3DTevBlock2::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2029,7 +2695,7 @@ asm void load__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031B4C0 0544 .text      load__12J3DTevBlock4Fv                                       */
+/* 8031B4C0-8031BA04 0544 .text      load__12J3DTevBlock4Fv                                       Function */
 // J3DTevBlock4::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2040,7 +2706,7 @@ asm void load__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031BA04 0548 .text      load__13J3DTevBlock16Fv                                      */
+/* 8031BA04-8031BF4C 0548 .text      load__13J3DTevBlock16Fv                                      Function */
 // J3DTevBlock16::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2051,7 +2717,7 @@ asm void load__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031BF4C 0094 .text      patchTexNo__18J3DTevBlockPatchedFv                           */
+/* 8031BF4C-8031BFE0 0094 .text      patchTexNo__18J3DTevBlockPatchedFv                           Function */
 // J3DTevBlockPatched::patchTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2062,7 +2728,7 @@ asm void patchTexNo__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031BFE0 00CC .text      patchTevReg__18J3DTevBlockPatchedFv                          */
+/* 8031BFE0-8031C0AC 00CC .text      patchTevReg__18J3DTevBlockPatchedFv                          Function */
 // J3DTevBlockPatched::patchTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2073,7 +2739,7 @@ asm void patchTevReg__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031C0AC 017C .text      patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv           */
+/* 8031C0AC-8031C228 017C .text      patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv           Function */
 // J3DTevBlockPatched::patchTexNoAndTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2084,7 +2750,7 @@ asm void patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031C228 004C .text      patch__18J3DTevBlockPatchedFv                                */
+/* 8031C228-8031C274 004C .text      patch__18J3DTevBlockPatchedFv                                Function */
 // J3DTevBlockPatched::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2095,7 +2761,7 @@ asm void patch__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031C274 0070 .text      patchTexNo__12J3DTevBlock1Fv                                 */
+/* 8031C274-8031C2E4 0070 .text      patchTexNo__12J3DTevBlock1Fv                                 Function */
 // J3DTevBlock1::patchTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2106,13 +2772,13 @@ asm void patchTexNo__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031C2E4 0004 .text      patchTevReg__12J3DTevBlock1Fv                                */
+/* 8031C2E4-8031C2E8 0004 .text      patchTevReg__12J3DTevBlock1Fv                                ReturnFunction */
 // J3DTevBlock1::patchTevReg(void)
 void patchTevReg__12J3DTevBlock1Fv() {
 	return;
 }
 
-/* 8031C2E8 00E4 .text      patchTexNoAndTexCoordScale__12J3DTevBlock1Fv                 */
+/* 8031C2E8-8031C3CC 00E4 .text      patchTexNoAndTexCoordScale__12J3DTevBlock1Fv                 Function */
 // J3DTevBlock1::patchTexNoAndTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2123,7 +2789,7 @@ asm void patchTexNoAndTexCoordScale__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031C3CC 002C .text      patch__12J3DTevBlock1Fv                                      */
+/* 8031C3CC-8031C3F8 002C .text      patch__12J3DTevBlock1Fv                                      Function */
 // J3DTevBlock1::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2134,7 +2800,7 @@ asm void patch__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031C3F8 0094 .text      patchTexNo__12J3DTevBlock2Fv                                 */
+/* 8031C3F8-8031C48C 0094 .text      patchTexNo__12J3DTevBlock2Fv                                 Function */
 // J3DTevBlock2::patchTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2145,7 +2811,7 @@ asm void patchTexNo__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031C48C 00CC .text      patchTevReg__12J3DTevBlock2Fv                                */
+/* 8031C48C-8031C558 00CC .text      patchTevReg__12J3DTevBlock2Fv                                Function */
 // J3DTevBlock2::patchTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2156,7 +2822,7 @@ asm void patchTevReg__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031C558 0150 .text      patchTexNoAndTexCoordScale__12J3DTevBlock2Fv                 */
+/* 8031C558-8031C6A8 0150 .text      patchTexNoAndTexCoordScale__12J3DTevBlock2Fv                 Function */
 // J3DTevBlock2::patchTexNoAndTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2167,7 +2833,7 @@ asm void patchTexNoAndTexCoordScale__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031C6A8 004C .text      patch__12J3DTevBlock2Fv                                      */
+/* 8031C6A8-8031C6F4 004C .text      patch__12J3DTevBlock2Fv                                      Function */
 // J3DTevBlock2::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2178,7 +2844,7 @@ asm void patch__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031C6F4 0094 .text      patchTexNo__12J3DTevBlock4Fv                                 */
+/* 8031C6F4-8031C788 0094 .text      patchTexNo__12J3DTevBlock4Fv                                 Function */
 // J3DTevBlock4::patchTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2189,7 +2855,7 @@ asm void patchTexNo__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031C788 00CC .text      patchTevReg__12J3DTevBlock4Fv                                */
+/* 8031C788-8031C854 00CC .text      patchTevReg__12J3DTevBlock4Fv                                Function */
 // J3DTevBlock4::patchTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2200,7 +2866,7 @@ asm void patchTevReg__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031C854 017C .text      patchTexNoAndTexCoordScale__12J3DTevBlock4Fv                 */
+/* 8031C854-8031C9D0 017C .text      patchTexNoAndTexCoordScale__12J3DTevBlock4Fv                 Function */
 // J3DTevBlock4::patchTexNoAndTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2211,7 +2877,7 @@ asm void patchTexNoAndTexCoordScale__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031C9D0 004C .text      patch__12J3DTevBlock4Fv                                      */
+/* 8031C9D0-8031CA1C 004C .text      patch__12J3DTevBlock4Fv                                      Function */
 // J3DTevBlock4::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2222,7 +2888,7 @@ asm void patch__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031CA1C 0094 .text      patchTexNo__13J3DTevBlock16Fv                                */
+/* 8031CA1C-8031CAB0 0094 .text      patchTexNo__13J3DTevBlock16Fv                                Function */
 // J3DTevBlock16::patchTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2233,7 +2899,7 @@ asm void patchTexNo__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031CAB0 00CC .text      patchTevReg__13J3DTevBlock16Fv                               */
+/* 8031CAB0-8031CB7C 00CC .text      patchTevReg__13J3DTevBlock16Fv                               Function */
 // J3DTevBlock16::patchTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2244,7 +2910,7 @@ asm void patchTevReg__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031CB7C 017C .text      patchTexNoAndTexCoordScale__13J3DTevBlock16Fv                */
+/* 8031CB7C-8031CCF8 017C .text      patchTexNoAndTexCoordScale__13J3DTevBlock16Fv                Function */
 // J3DTevBlock16::patchTexNoAndTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2255,7 +2921,7 @@ asm void patchTexNoAndTexCoordScale__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031CCF8 004C .text      patch__13J3DTevBlock16Fv                                     */
+/* 8031CCF8-8031CD44 004C .text      patch__13J3DTevBlock16Fv                                     Function */
 // J3DTevBlock16::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2266,7 +2932,7 @@ asm void patch__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031CD44 00BC .text      diff__11J3DTevBlockFUl                                       */
+/* 8031CD44-8031CE00 00BC .text      diff__11J3DTevBlockFUl                                       Function */
 // J3DTevBlock::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -2277,7 +2943,7 @@ asm void diff__11J3DTevBlockFUl() {
 }
 #pragma pop
 
-/* 8031CE00 0064 .text      diffTexNo__18J3DTevBlockPatchedFv                            */
+/* 8031CE00-8031CE64 0064 .text      diffTexNo__18J3DTevBlockPatchedFv                            Function */
 // J3DTevBlockPatched::diffTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2288,7 +2954,7 @@ asm void diffTexNo__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031CE64 0114 .text      diffTevStage__18J3DTevBlockPatchedFv                         */
+/* 8031CE64-8031CF78 0114 .text      diffTevStage__18J3DTevBlockPatchedFv                         Function */
 // J3DTevBlockPatched::diffTevStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2299,7 +2965,7 @@ asm void diffTevStage__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031CF78 00B0 .text      diffTevStageIndirect__18J3DTevBlockPatchedFv                 */
+/* 8031CF78-8031D028 00B0 .text      diffTevStageIndirect__18J3DTevBlockPatchedFv                 Function */
 // J3DTevBlockPatched::diffTevStageIndirect(void)
 #pragma push
 #pragma optimization_level 0
@@ -2310,7 +2976,7 @@ asm void diffTevStageIndirect__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031D028 009C .text      diffTevReg__18J3DTevBlockPatchedFv                           */
+/* 8031D028-8031D0C4 009C .text      diffTevReg__18J3DTevBlockPatchedFv                           Function */
 // J3DTevBlockPatched::diffTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2321,7 +2987,7 @@ asm void diffTevReg__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031D0C4 00F8 .text      diffTexCoordScale__18J3DTevBlockPatchedFv                    */
+/* 8031D0C4-8031D1BC 00F8 .text      diffTexCoordScale__18J3DTevBlockPatchedFv                    Function */
 // J3DTevBlockPatched::diffTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2332,7 +2998,7 @@ asm void diffTexCoordScale__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031D1BC 0038 .text      diffTexNo__12J3DTevBlock1Fv                                  */
+/* 8031D1BC-8031D1F4 0038 .text      diffTexNo__12J3DTevBlock1Fv                                  Function */
 // J3DTevBlock1::diffTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2343,13 +3009,13 @@ asm void diffTexNo__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031D1F4 0004 .text      diffTevReg__12J3DTevBlock1Fv                                 */
+/* 8031D1F4-8031D1F8 0004 .text      diffTevReg__12J3DTevBlock1Fv                                 ReturnFunction */
 // J3DTevBlock1::diffTevReg(void)
 void diffTevReg__12J3DTevBlock1Fv() {
 	return;
 }
 
-/* 8031D1F8 00F0 .text      diffTevStage__12J3DTevBlock1Fv                               */
+/* 8031D1F8-8031D2E8 00F0 .text      diffTevStage__12J3DTevBlock1Fv                               Function */
 // J3DTevBlock1::diffTevStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2360,7 +3026,7 @@ asm void diffTevStage__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031D2E8 0080 .text      diffTevStageIndirect__12J3DTevBlock1Fv                       */
+/* 8031D2E8-8031D368 0080 .text      diffTevStageIndirect__12J3DTevBlock1Fv                       Function */
 // J3DTevBlock1::diffTevStageIndirect(void)
 #pragma push
 #pragma optimization_level 0
@@ -2371,7 +3037,7 @@ asm void diffTevStageIndirect__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031D368 0068 .text      diffTexCoordScale__12J3DTevBlock1Fv                          */
+/* 8031D368-8031D3D0 0068 .text      diffTexCoordScale__12J3DTevBlock1Fv                          Function */
 // J3DTevBlock1::diffTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2382,7 +3048,7 @@ asm void diffTexCoordScale__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 8031D3D0 0064 .text      diffTexNo__12J3DTevBlock2Fv                                  */
+/* 8031D3D0-8031D434 0064 .text      diffTexNo__12J3DTevBlock2Fv                                  Function */
 // J3DTevBlock2::diffTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2393,7 +3059,7 @@ asm void diffTexNo__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031D434 009C .text      diffTevReg__12J3DTevBlock2Fv                                 */
+/* 8031D434-8031D4D0 009C .text      diffTevReg__12J3DTevBlock2Fv                                 Function */
 // J3DTevBlock2::diffTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2404,7 +3070,7 @@ asm void diffTevReg__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031D4D0 0114 .text      diffTevStage__12J3DTevBlock2Fv                               */
+/* 8031D4D0-8031D5E4 0114 .text      diffTevStage__12J3DTevBlock2Fv                               Function */
 // J3DTevBlock2::diffTevStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2415,7 +3081,7 @@ asm void diffTevStage__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031D5E4 00B0 .text      diffTevStageIndirect__12J3DTevBlock2Fv                       */
+/* 8031D5E4-8031D694 00B0 .text      diffTevStageIndirect__12J3DTevBlock2Fv                       Function */
 // J3DTevBlock2::diffTevStageIndirect(void)
 #pragma push
 #pragma optimization_level 0
@@ -2426,7 +3092,7 @@ asm void diffTevStageIndirect__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031D694 00C4 .text      diffTexCoordScale__12J3DTevBlock2Fv                          */
+/* 8031D694-8031D758 00C4 .text      diffTexCoordScale__12J3DTevBlock2Fv                          Function */
 // J3DTevBlock2::diffTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2437,7 +3103,7 @@ asm void diffTexCoordScale__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 8031D758 0064 .text      diffTexNo__12J3DTevBlock4Fv                                  */
+/* 8031D758-8031D7BC 0064 .text      diffTexNo__12J3DTevBlock4Fv                                  Function */
 // J3DTevBlock4::diffTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2448,7 +3114,7 @@ asm void diffTexNo__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031D7BC 009C .text      diffTevReg__12J3DTevBlock4Fv                                 */
+/* 8031D7BC-8031D858 009C .text      diffTevReg__12J3DTevBlock4Fv                                 Function */
 // J3DTevBlock4::diffTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2459,7 +3125,7 @@ asm void diffTevReg__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031D858 0114 .text      diffTevStage__12J3DTevBlock4Fv                               */
+/* 8031D858-8031D96C 0114 .text      diffTevStage__12J3DTevBlock4Fv                               Function */
 // J3DTevBlock4::diffTevStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2470,7 +3136,7 @@ asm void diffTevStage__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031D96C 00B0 .text      diffTevStageIndirect__12J3DTevBlock4Fv                       */
+/* 8031D96C-8031DA1C 00B0 .text      diffTevStageIndirect__12J3DTevBlock4Fv                       Function */
 // J3DTevBlock4::diffTevStageIndirect(void)
 #pragma push
 #pragma optimization_level 0
@@ -2481,7 +3147,7 @@ asm void diffTevStageIndirect__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031DA1C 00F8 .text      diffTexCoordScale__12J3DTevBlock4Fv                          */
+/* 8031DA1C-8031DB14 00F8 .text      diffTexCoordScale__12J3DTevBlock4Fv                          Function */
 // J3DTevBlock4::diffTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2492,7 +3158,7 @@ asm void diffTexCoordScale__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8031DB14 0064 .text      diffTexNo__13J3DTevBlock16Fv                                 */
+/* 8031DB14-8031DB78 0064 .text      diffTexNo__13J3DTevBlock16Fv                                 Function */
 // J3DTevBlock16::diffTexNo(void)
 #pragma push
 #pragma optimization_level 0
@@ -2503,7 +3169,7 @@ asm void diffTexNo__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DB78 009C .text      diffTevReg__13J3DTevBlock16Fv                                */
+/* 8031DB78-8031DC14 009C .text      diffTevReg__13J3DTevBlock16Fv                                Function */
 // J3DTevBlock16::diffTevReg(void)
 #pragma push
 #pragma optimization_level 0
@@ -2514,7 +3180,7 @@ asm void diffTevReg__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DC14 0114 .text      diffTevStage__13J3DTevBlock16Fv                              */
+/* 8031DC14-8031DD28 0114 .text      diffTevStage__13J3DTevBlock16Fv                              Function */
 // J3DTevBlock16::diffTevStage(void)
 #pragma push
 #pragma optimization_level 0
@@ -2525,7 +3191,7 @@ asm void diffTevStage__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DD28 00B0 .text      diffTevStageIndirect__13J3DTevBlock16Fv                      */
+/* 8031DD28-8031DDD8 00B0 .text      diffTevStageIndirect__13J3DTevBlock16Fv                      Function */
 // J3DTevBlock16::diffTevStageIndirect(void)
 #pragma push
 #pragma optimization_level 0
@@ -2536,7 +3202,7 @@ asm void diffTevStageIndirect__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DDD8 00F8 .text      diffTexCoordScale__13J3DTevBlock16Fv                         */
+/* 8031DDD8-8031DED0 00F8 .text      diffTexCoordScale__13J3DTevBlock16Fv                         Function */
 // J3DTevBlock16::diffTexCoordScale(void)
 #pragma push
 #pragma optimization_level 0
@@ -2547,7 +3213,7 @@ asm void diffTexCoordScale__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DED0 00E4 .text      ptrToIndex__13J3DTevBlock16Fv                                */
+/* 8031DED0-8031DFB4 00E4 .text      ptrToIndex__13J3DTevBlock16Fv                                Function */
 // J3DTevBlock16::ptrToIndex(void)
 #pragma push
 #pragma optimization_level 0
@@ -2558,7 +3224,7 @@ asm void ptrToIndex__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 8031DFB4 00E4 .text      ptrToIndex__18J3DTevBlockPatchedFv                           */
+/* 8031DFB4-8031E098 00E4 .text      ptrToIndex__18J3DTevBlockPatchedFv                           Function */
 // J3DTevBlockPatched::ptrToIndex(void)
 #pragma push
 #pragma optimization_level 0
@@ -2569,7 +3235,7 @@ asm void ptrToIndex__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 8031E098 0094 .text      indexToPtr_private__11J3DTevBlockFUl                         */
+/* 8031E098-8031E12C 0094 .text      indexToPtr_private__11J3DTevBlockFUl                         Function */
 // J3DTevBlock::indexToPtr_private(u32)
 #pragma push
 #pragma optimization_level 0
@@ -2580,7 +3246,7 @@ asm void indexToPtr_private__11J3DTevBlockFUl() {
 }
 #pragma pop
 
-/* 8031E12C 01FC .text      load__15J3DIndBlockFullFv                                    */
+/* 8031E12C-8031E328 01FC .text      load__15J3DIndBlockFullFv                                    Function */
 // J3DIndBlockFull::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2591,7 +3257,7 @@ asm void load__15J3DIndBlockFullFv() {
 }
 #pragma pop
 
-/* 8031E328 00E0 .text      diff__15J3DIndBlockFullFUl                                   */
+/* 8031E328-8031E408 00E0 .text      diff__15J3DIndBlockFullFUl                                   Function */
 // J3DIndBlockFull::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -2602,7 +3268,7 @@ asm void diff__15J3DIndBlockFullFUl() {
 }
 #pragma pop
 
-/* 8031E408 02C0 .text      load__13J3DPEBlockOpaFv                                      */
+/* 8031E408-8031E6C8 02C0 .text      load__13J3DPEBlockOpaFv                                      Function */
 // J3DPEBlockOpa::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2613,7 +3279,7 @@ asm void load__13J3DPEBlockOpaFv() {
 }
 #pragma pop
 
-/* 8031E6C8 02C4 .text      load__17J3DPEBlockTexEdgeFv                                  */
+/* 8031E6C8-8031E98C 02C4 .text      load__17J3DPEBlockTexEdgeFv                                  Function */
 // J3DPEBlockTexEdge::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2624,7 +3290,7 @@ asm void load__17J3DPEBlockTexEdgeFv() {
 }
 #pragma pop
 
-/* 8031E98C 02C4 .text      load__13J3DPEBlockXluFv                                      */
+/* 8031E98C-8031EC50 02C4 .text      load__13J3DPEBlockXluFv                                      Function */
 // J3DPEBlockXlu::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2635,7 +3301,7 @@ asm void load__13J3DPEBlockXluFv() {
 }
 #pragma pop
 
-/* 8031EC50 0488 .text      load__16J3DPEBlockFogOffFv                                   */
+/* 8031EC50-8031F0D8 0488 .text      load__16J3DPEBlockFogOffFv                                   Function */
 // J3DPEBlockFogOff::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2646,7 +3312,7 @@ asm void load__16J3DPEBlockFogOffFv() {
 }
 #pragma pop
 
-/* 8031F0D8 02E8 .text      diffBlend__16J3DPEBlockFogOffFv                              */
+/* 8031F0D8-8031F3C0 02E8 .text      diffBlend__16J3DPEBlockFogOffFv                              Function */
 // J3DPEBlockFogOff::diffBlend(void)
 #pragma push
 #pragma optimization_level 0
@@ -2657,7 +3323,7 @@ asm void diffBlend__16J3DPEBlockFogOffFv() {
 }
 #pragma pop
 
-/* 8031F3C0 04D0 .text      load__14J3DPEBlockFullFv                                     */
+/* 8031F3C0-8031F890 04D0 .text      load__14J3DPEBlockFullFv                                     Function */
 // J3DPEBlockFull::load(void)
 #pragma push
 #pragma optimization_level 0
@@ -2668,7 +3334,7 @@ asm void load__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 8031F890 00B0 .text      patch__14J3DPEBlockFullFv                                    */
+/* 8031F890-8031F940 00B0 .text      patch__14J3DPEBlockFullFv                                    Function */
 // J3DPEBlockFull::patch(void)
 #pragma push
 #pragma optimization_level 0
@@ -2679,7 +3345,7 @@ asm void patch__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 8031F940 0078 .text      diffFog__14J3DPEBlockFullFv                                  */
+/* 8031F940-8031F9B8 0078 .text      diffFog__14J3DPEBlockFullFv                                  Function */
 // J3DPEBlockFull::diffFog(void)
 #pragma push
 #pragma optimization_level 0
@@ -2690,7 +3356,7 @@ asm void diffFog__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 8031F9B8 02E8 .text      diffBlend__14J3DPEBlockFullFv                                */
+/* 8031F9B8-8031FCA0 02E8 .text      diffBlend__14J3DPEBlockFullFv                                Function */
 // J3DPEBlockFull::diffBlend(void)
 #pragma push
 #pragma optimization_level 0
@@ -2701,7 +3367,7 @@ asm void diffBlend__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 8031FCA0 0068 .text      diff__14J3DPEBlockFullFUl                                    */
+/* 8031FCA0-8031FD08 0068 .text      diff__14J3DPEBlockFullFUl                                    Function */
 // J3DPEBlockFull::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -2712,7 +3378,7 @@ asm void diff__14J3DPEBlockFullFUl() {
 }
 #pragma pop
 
-/* 8031FD08 00DC .text      reset__21J3DColorBlockLightOffFP13J3DColorBlock              */
+/* 8031FD08-8031FDE4 00DC .text      reset__21J3DColorBlockLightOffFP13J3DColorBlock              Function */
 // J3DColorBlockLightOff::reset(J3DColorBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2723,7 +3389,7 @@ asm void reset__21J3DColorBlockLightOffFP13J3DColorBlock() {
 }
 #pragma pop
 
-/* 8031FDE4 0150 .text      reset__22J3DColorBlockAmbientOnFP13J3DColorBlock             */
+/* 8031FDE4-8031FF34 0150 .text      reset__22J3DColorBlockAmbientOnFP13J3DColorBlock             Function */
 // J3DColorBlockAmbientOn::reset(J3DColorBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2734,7 +3400,7 @@ asm void reset__22J3DColorBlockAmbientOnFP13J3DColorBlock() {
 }
 #pragma pop
 
-/* 8031FF34 0150 .text      reset__20J3DColorBlockLightOnFP13J3DColorBlock               */
+/* 8031FF34-80320084 0150 .text      reset__20J3DColorBlockLightOnFP13J3DColorBlock               Function */
 // J3DColorBlockLightOn::reset(J3DColorBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2745,7 +3411,7 @@ asm void reset__20J3DColorBlockLightOnFP13J3DColorBlock() {
 }
 #pragma pop
 
-/* 80320084 011C .text      reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock             */
+/* 80320084-803201A0 011C .text      reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock             Function */
 // J3DTexGenBlockPatched::reset(J3DTexGenBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2756,7 +3422,7 @@ asm void reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock() {
 }
 #pragma pop
 
-/* 803201A0 013C .text      reset__15J3DTexGenBlock4FP14J3DTexGenBlock                   */
+/* 803201A0-803202DC 013C .text      reset__15J3DTexGenBlock4FP14J3DTexGenBlock                   Function */
 // J3DTexGenBlock4::reset(J3DTexGenBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2767,7 +3433,7 @@ asm void reset__15J3DTexGenBlock4FP14J3DTexGenBlock() {
 }
 #pragma pop
 
-/* 803202DC 013C .text      reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock               */
+/* 803202DC-80320418 013C .text      reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock               Function */
 // J3DTexGenBlockBasic::reset(J3DTexGenBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2778,7 +3444,7 @@ asm void reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock() {
 }
 #pragma pop
 
-/* 80320418 01BC .text      reset__18J3DTevBlockPatchedFP11J3DTevBlock                   */
+/* 80320418-803205D4 01BC .text      reset__18J3DTevBlockPatchedFP11J3DTevBlock                   Function */
 // J3DTevBlockPatched::reset(J3DTevBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2789,7 +3455,7 @@ asm void reset__18J3DTevBlockPatchedFP11J3DTevBlock() {
 }
 #pragma pop
 
-/* 803205D4 00D8 .text      reset__12J3DTevBlock1FP11J3DTevBlock                         */
+/* 803205D4-803206AC 00D8 .text      reset__12J3DTevBlock1FP11J3DTevBlock                         Function */
 // J3DTevBlock1::reset(J3DTevBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2800,7 +3466,7 @@ asm void reset__12J3DTevBlock1FP11J3DTevBlock() {
 }
 #pragma pop
 
-/* 803206AC 02E0 .text      reset__12J3DTevBlock2FP11J3DTevBlock                         */
+/* 803206AC-8032098C 02E0 .text      reset__12J3DTevBlock2FP11J3DTevBlock                         Function */
 // J3DTevBlock2::reset(J3DTevBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2811,7 +3477,7 @@ asm void reset__12J3DTevBlock2FP11J3DTevBlock() {
 }
 #pragma pop
 
-/* 8032098C 0498 .text      reset__12J3DTevBlock4FP11J3DTevBlock                         */
+/* 8032098C-80320E24 0498 .text      reset__12J3DTevBlock4FP11J3DTevBlock                         Function */
 // J3DTevBlock4::reset(J3DTevBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2822,7 +3488,7 @@ asm void reset__12J3DTevBlock4FP11J3DTevBlock() {
 }
 #pragma pop
 
-/* 80320E24 028C .text      reset__13J3DTevBlock16FP11J3DTevBlock                        */
+/* 80320E24-803210B0 028C .text      reset__13J3DTevBlock16FP11J3DTevBlock                        Function */
 // J3DTevBlock16::reset(J3DTevBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2833,7 +3499,7 @@ asm void reset__13J3DTevBlock16FP11J3DTevBlock() {
 }
 #pragma pop
 
-/* 803210B0 0104 .text      reset__15J3DIndBlockFullFP11J3DIndBlock                      */
+/* 803210B0-803211B4 0104 .text      reset__15J3DIndBlockFullFP11J3DIndBlock                      Function */
 // J3DIndBlockFull::reset(J3DIndBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2844,7 +3510,7 @@ asm void reset__15J3DIndBlockFullFP11J3DIndBlock() {
 }
 #pragma pop
 
-/* 803211B4 00E8 .text      reset__16J3DPEBlockFogOffFP10J3DPEBlock                      */
+/* 803211B4-8032129C 00E8 .text      reset__16J3DPEBlockFogOffFP10J3DPEBlock                      Function */
 // J3DPEBlockFogOff::reset(J3DPEBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2855,7 +3521,7 @@ asm void reset__16J3DPEBlockFogOffFP10J3DPEBlock() {
 }
 #pragma pop
 
-/* 8032129C 0124 .text      reset__14J3DPEBlockFullFP10J3DPEBlock                        */
+/* 8032129C-803213C0 0124 .text      reset__14J3DPEBlockFullFP10J3DPEBlock                        Function */
 // J3DPEBlockFull::reset(J3DPEBlock*)
 #pragma push
 #pragma optimization_level 0
@@ -2866,7 +3532,7 @@ asm void reset__14J3DPEBlockFullFP10J3DPEBlock() {
 }
 #pragma pop
 
-/* 803213C0 01C4 .text      calc__21J3DTexGenBlockPatchedFPA4_Cf                         */
+/* 803213C0-80321584 01C4 .text      calc__21J3DTexGenBlockPatchedFPA4_Cf                         Function */
 // J3DTexGenBlockPatched::calc(const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -2877,7 +3543,7 @@ asm void calc__21J3DTexGenBlockPatchedFPA4_Cf() {
 }
 #pragma pop
 
-/* 80321584 0154 .text      calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf           */
+/* 80321584-803216D8 0154 .text      calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf           Function */
 // J3DTexGenBlockPatched::calcWithoutViewMtx(const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -2888,7 +3554,7 @@ asm void calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf() {
 }
 #pragma pop
 
-/* 803216D8 0144 .text      calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf               */
+/* 803216D8-8032181C 0144 .text      calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf               Function */
 // J3DTexGenBlockPatched::calcPostTexMtx(const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -2899,7 +3565,7 @@ asm void calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf() {
 }
 #pragma pop
 
-/* 8032181C 011C .text      calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf */
+/* 8032181C-80321938 011C .text      calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf Function */
 // J3DTexGenBlockPatched::calcPostTexMtxWithoutViewMtx(const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -2910,37 +3576,37 @@ asm void calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf() {
 }
 #pragma pop
 
-/* 80321938 0004 .text      diffTevReg__11J3DTevBlockFv                                  */
+/* 80321938-8032193C 0004 .text      diffTevReg__11J3DTevBlockFv                                  ReturnFunction */
 // J3DTevBlock::diffTevReg(void)
 void diffTevReg__11J3DTevBlockFv() {
 	return;
 }
 
-/* 8032193C 0004 .text      diffTevStageIndirect__11J3DTevBlockFv                        */
+/* 8032193C-80321940 0004 .text      diffTevStageIndirect__11J3DTevBlockFv                        ReturnFunction */
 // J3DTevBlock::diffTevStageIndirect(void)
 void diffTevStageIndirect__11J3DTevBlockFv() {
 	return;
 }
 
-/* 80321940 0004 .text      diffTevStage__11J3DTevBlockFv                                */
+/* 80321940-80321944 0004 .text      diffTevStage__11J3DTevBlockFv                                ReturnFunction */
 // J3DTevBlock::diffTevStage(void)
 void diffTevStage__11J3DTevBlockFv() {
 	return;
 }
 
-/* 80321944 0004 .text      diffTexCoordScale__11J3DTevBlockFv                           */
+/* 80321944-80321948 0004 .text      diffTexCoordScale__11J3DTevBlockFv                           ReturnFunction */
 // J3DTevBlock::diffTexCoordScale(void)
 void diffTexCoordScale__11J3DTevBlockFv() {
 	return;
 }
 
-/* 80321948 0004 .text      diffTexNo__11J3DTevBlockFv                                   */
+/* 80321948-8032194C 0004 .text      diffTexNo__11J3DTevBlockFv                                   ReturnFunction */
 // J3DTevBlock::diffTexNo(void)
 void diffTexNo__11J3DTevBlockFv() {
 	return;
 }
 
-/* 8032194C 000C .text      getType__14J3DPEBlockFullFv                                  */
+/* 8032194C-80321958 000C .text      getType__14J3DPEBlockFullFv                                  Function */
 // J3DPEBlockFull::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -2951,7 +3617,7 @@ asm void getType__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 80321958 0024 .text      setFog__14J3DPEBlockFullFP6J3DFog                            */
+/* 80321958-8032197C 0024 .text      setFog__14J3DPEBlockFullFP6J3DFog                            Function */
 // J3DPEBlockFull::setFog(J3DFog*)
 #pragma push
 #pragma optimization_level 0
@@ -2962,7 +3628,7 @@ asm void setFog__14J3DPEBlockFullFP6J3DFog() {
 }
 #pragma pop
 
-/* 8032197C 0024 .text      setFog__14J3DPEBlockFullF6J3DFog                             */
+/* 8032197C-803219A0 0024 .text      setFog__14J3DPEBlockFullF6J3DFog                             Function */
 // J3DPEBlockFull::setFog(J3DFog)
 #pragma push
 #pragma optimization_level 0
@@ -2973,13 +3639,13 @@ asm void setFog__14J3DPEBlockFullF6J3DFog() {
 }
 #pragma pop
 
-/* 803219A0 0008 .text      getFog__14J3DPEBlockFullFv                                   */
+/* 803219A0-803219A8 0008 .text      getFog__14J3DPEBlockFullFv                                   FirstParamFunction */
 // J3DPEBlockFull::getFog(void)
 u8* getFog__14J3DPEBlockFullFv(u8* param0) {
 	return (u8*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 803219A8 001C .text      setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp              */
+/* 803219A8-803219C4 001C .text      setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp              Function */
 // J3DPEBlockFull::setAlphaComp(const J3DAlphaComp&)
 #pragma push
 #pragma optimization_level 0
@@ -2990,7 +3656,7 @@ asm void setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp() {
 }
 #pragma pop
 
-/* 803219C4 001C .text      setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp              */
+/* 803219C4-803219E0 001C .text      setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp              Function */
 // J3DPEBlockFull::setAlphaComp(const J3DAlphaComp*)
 #pragma push
 #pragma optimization_level 0
@@ -3001,13 +3667,13 @@ asm void setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp() {
 }
 #pragma pop
 
-/* 803219E0 0008 .text      getAlphaComp__14J3DPEBlockFullFv                             */
+/* 803219E0-803219E8 0008 .text      getAlphaComp__14J3DPEBlockFullFv                             FirstParamFunction */
 // J3DPEBlockFull::getAlphaComp(void)
 u8* getAlphaComp__14J3DPEBlockFullFv(u8* param0) {
 	return (u8*)&param0[48]; /* param0->field_0x30 */
 }
 
-/* 803219E8 000C .text      setBlend__14J3DPEBlockFullFRC8J3DBlend                       */
+/* 803219E8-803219F4 000C .text      setBlend__14J3DPEBlockFullFRC8J3DBlend                       Function */
 // J3DPEBlockFull::setBlend(const J3DBlend&)
 #pragma push
 #pragma optimization_level 0
@@ -3018,7 +3684,7 @@ asm void setBlend__14J3DPEBlockFullFRC8J3DBlend() {
 }
 #pragma pop
 
-/* 803219F4 000C .text      setBlend__14J3DPEBlockFullFPC8J3DBlend                       */
+/* 803219F4-80321A00 000C .text      setBlend__14J3DPEBlockFullFPC8J3DBlend                       Function */
 // J3DPEBlockFull::setBlend(const J3DBlend*)
 #pragma push
 #pragma optimization_level 0
@@ -3029,13 +3695,13 @@ asm void setBlend__14J3DPEBlockFullFPC8J3DBlend() {
 }
 #pragma pop
 
-/* 80321A00 0008 .text      getBlend__14J3DPEBlockFullFv                                 */
+/* 80321A00-80321A08 0008 .text      getBlend__14J3DPEBlockFullFv                                 FirstParamFunction */
 // J3DPEBlockFull::getBlend(void)
 u8* getBlend__14J3DPEBlockFullFv(u8* param0) {
 	return (u8*)&param0[52]; /* param0->field_0x34 */
 }
 
-/* 80321A08 000C .text      setZMode__14J3DPEBlockFullF8J3DZMode                         */
+/* 80321A08-80321A14 000C .text      setZMode__14J3DPEBlockFullF8J3DZMode                         Function */
 // J3DPEBlockFull::setZMode(J3DZMode)
 #pragma push
 #pragma optimization_level 0
@@ -3046,7 +3712,7 @@ asm void setZMode__14J3DPEBlockFullF8J3DZMode() {
 }
 #pragma pop
 
-/* 80321A14 000C .text      setZMode__14J3DPEBlockFullFPC8J3DZMode                       */
+/* 80321A14-80321A20 000C .text      setZMode__14J3DPEBlockFullFPC8J3DZMode                       Function */
 // J3DPEBlockFull::setZMode(const J3DZMode*)
 #pragma push
 #pragma optimization_level 0
@@ -3057,13 +3723,13 @@ asm void setZMode__14J3DPEBlockFullFPC8J3DZMode() {
 }
 #pragma pop
 
-/* 80321A20 0008 .text      getZMode__14J3DPEBlockFullFv                                 */
+/* 80321A20-80321A28 0008 .text      getZMode__14J3DPEBlockFullFv                                 FirstParamFunction */
 // J3DPEBlockFull::getZMode(void)
 u8* getZMode__14J3DPEBlockFullFv(u8* param0) {
 	return (u8*)&param0[56]; /* param0->field_0x38 */
 }
 
-/* 80321A28 0008 .text      setZCompLoc__14J3DPEBlockFullFUc                             */
+/* 80321A28-80321A30 0008 .text      setZCompLoc__14J3DPEBlockFullFUc                             Function */
 // J3DPEBlockFull::setZCompLoc(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3074,7 +3740,7 @@ asm void setZCompLoc__14J3DPEBlockFullFUc() {
 }
 #pragma pop
 
-/* 80321A30 000C .text      setZCompLoc__14J3DPEBlockFullFPCUc                           */
+/* 80321A30-80321A3C 000C .text      setZCompLoc__14J3DPEBlockFullFPCUc                           Function */
 // J3DPEBlockFull::setZCompLoc(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3085,13 +3751,13 @@ asm void setZCompLoc__14J3DPEBlockFullFPCUc() {
 }
 #pragma pop
 
-/* 80321A3C 0008 .text      getZCompLoc__14J3DPEBlockFullCFv                             */
+/* 80321A3C-80321A44 0008 .text      getZCompLoc__14J3DPEBlockFullCFv                             FirstParamFunction */
 // J3DPEBlockFull::getZCompLoc(void) const
 u8 getZCompLoc__14J3DPEBlockFullCFv(u8* param0) {
 	return *(u8*)&param0[58]; /* param0->field_0x3a */
 }
 
-/* 80321A44 0008 .text      setDither__14J3DPEBlockFullFUc                               */
+/* 80321A44-80321A4C 0008 .text      setDither__14J3DPEBlockFullFUc                               Function */
 // J3DPEBlockFull::setDither(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3102,7 +3768,7 @@ asm void setDither__14J3DPEBlockFullFUc() {
 }
 #pragma pop
 
-/* 80321A4C 000C .text      setDither__14J3DPEBlockFullFPCUc                             */
+/* 80321A4C-80321A58 000C .text      setDither__14J3DPEBlockFullFPCUc                             Function */
 // J3DPEBlockFull::setDither(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3113,19 +3779,19 @@ asm void setDither__14J3DPEBlockFullFPCUc() {
 }
 #pragma pop
 
-/* 80321A58 0008 .text      getDither__14J3DPEBlockFullCFv                               */
+/* 80321A58-80321A60 0008 .text      getDither__14J3DPEBlockFullCFv                               FirstParamFunction */
 // J3DPEBlockFull::getDither(void) const
 u8 getDither__14J3DPEBlockFullCFv(u8* param0) {
 	return *(u8*)&param0[59]; /* param0->field_0x3b */
 }
 
-/* 80321A60 0008 .text      getFogOffset__14J3DPEBlockFullCFv                            */
+/* 80321A60-80321A68 0008 .text      getFogOffset__14J3DPEBlockFullCFv                            FirstParamFunction */
 // J3DPEBlockFull::getFogOffset(void) const
 u32 getFogOffset__14J3DPEBlockFullCFv(u8* param0) {
 	return *(u32*)&param0[60]; /* param0->field_0x3c */
 }
 
-/* 80321A68 0008 .text      setFogOffset__14J3DPEBlockFullFUl                            */
+/* 80321A68-80321A70 0008 .text      setFogOffset__14J3DPEBlockFullFUl                            Function */
 // J3DPEBlockFull::setFogOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3136,7 +3802,7 @@ asm void setFogOffset__14J3DPEBlockFullFUl() {
 }
 #pragma pop
 
-/* 80321A70 005C .text      __dt__14J3DPEBlockFullFv                                     */
+/* 80321A70-80321ACC 005C .text      __dt__14J3DPEBlockFullFv                                     Function */
 // J3DPEBlockFull::~J3DPEBlockFull(void)
 #pragma push
 #pragma optimization_level 0
@@ -3147,7 +3813,7 @@ asm void __dt__14J3DPEBlockFullFv() {
 }
 #pragma pop
 
-/* 80321ACC 0034 .text      diff__16J3DPEBlockFogOffFUl                                  */
+/* 80321ACC-80321B00 0034 .text      diff__16J3DPEBlockFogOffFUl                                  Function */
 // J3DPEBlockFogOff::diff(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3158,7 +3824,7 @@ asm void diff__16J3DPEBlockFogOffFUl() {
 }
 #pragma pop
 
-/* 80321B00 000C .text      getType__16J3DPEBlockFogOffFv                                */
+/* 80321B00-80321B0C 000C .text      getType__16J3DPEBlockFogOffFv                                Function */
 // J3DPEBlockFogOff::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -3169,7 +3835,7 @@ asm void getType__16J3DPEBlockFogOffFv() {
 }
 #pragma pop
 
-/* 80321B0C 001C .text      setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp            */
+/* 80321B0C-80321B28 001C .text      setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp            Function */
 // J3DPEBlockFogOff::setAlphaComp(const J3DAlphaComp&)
 #pragma push
 #pragma optimization_level 0
@@ -3180,7 +3846,7 @@ asm void setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp() {
 }
 #pragma pop
 
-/* 80321B28 001C .text      setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp            */
+/* 80321B28-80321B44 001C .text      setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp            Function */
 // J3DPEBlockFogOff::setAlphaComp(const J3DAlphaComp*)
 #pragma push
 #pragma optimization_level 0
@@ -3191,13 +3857,13 @@ asm void setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp() {
 }
 #pragma pop
 
-/* 80321B44 0008 .text      getAlphaComp__16J3DPEBlockFogOffFv                           */
+/* 80321B44-80321B4C 0008 .text      getAlphaComp__16J3DPEBlockFogOffFv                           FirstParamFunction */
 // J3DPEBlockFogOff::getAlphaComp(void)
 u8* getAlphaComp__16J3DPEBlockFogOffFv(u8* param0) {
 	return (u8*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80321B4C 000C .text      setBlend__16J3DPEBlockFogOffFRC8J3DBlend                     */
+/* 80321B4C-80321B58 000C .text      setBlend__16J3DPEBlockFogOffFRC8J3DBlend                     Function */
 // J3DPEBlockFogOff::setBlend(const J3DBlend&)
 #pragma push
 #pragma optimization_level 0
@@ -3208,7 +3874,7 @@ asm void setBlend__16J3DPEBlockFogOffFRC8J3DBlend() {
 }
 #pragma pop
 
-/* 80321B58 000C .text      setBlend__16J3DPEBlockFogOffFPC8J3DBlend                     */
+/* 80321B58-80321B64 000C .text      setBlend__16J3DPEBlockFogOffFPC8J3DBlend                     Function */
 // J3DPEBlockFogOff::setBlend(const J3DBlend*)
 #pragma push
 #pragma optimization_level 0
@@ -3219,13 +3885,13 @@ asm void setBlend__16J3DPEBlockFogOffFPC8J3DBlend() {
 }
 #pragma pop
 
-/* 80321B64 0008 .text      getBlend__16J3DPEBlockFogOffFv                               */
+/* 80321B64-80321B6C 0008 .text      getBlend__16J3DPEBlockFogOffFv                               FirstParamFunction */
 // J3DPEBlockFogOff::getBlend(void)
 u8* getBlend__16J3DPEBlockFogOffFv(u8* param0) {
 	return (u8*)&param0[8]; /* param0->field_0x8 */
 }
 
-/* 80321B6C 000C .text      setZMode__16J3DPEBlockFogOffF8J3DZMode                       */
+/* 80321B6C-80321B78 000C .text      setZMode__16J3DPEBlockFogOffF8J3DZMode                       Function */
 // J3DPEBlockFogOff::setZMode(J3DZMode)
 #pragma push
 #pragma optimization_level 0
@@ -3236,7 +3902,7 @@ asm void setZMode__16J3DPEBlockFogOffF8J3DZMode() {
 }
 #pragma pop
 
-/* 80321B78 000C .text      setZMode__16J3DPEBlockFogOffFPC8J3DZMode                     */
+/* 80321B78-80321B84 000C .text      setZMode__16J3DPEBlockFogOffFPC8J3DZMode                     Function */
 // J3DPEBlockFogOff::setZMode(const J3DZMode*)
 #pragma push
 #pragma optimization_level 0
@@ -3247,13 +3913,13 @@ asm void setZMode__16J3DPEBlockFogOffFPC8J3DZMode() {
 }
 #pragma pop
 
-/* 80321B84 0008 .text      getZMode__16J3DPEBlockFogOffFv                               */
+/* 80321B84-80321B8C 0008 .text      getZMode__16J3DPEBlockFogOffFv                               FirstParamFunction */
 // J3DPEBlockFogOff::getZMode(void)
 u8* getZMode__16J3DPEBlockFogOffFv(u8* param0) {
 	return (u8*)&param0[12]; /* param0->field_0xc */
 }
 
-/* 80321B8C 0008 .text      setZCompLoc__16J3DPEBlockFogOffFUc                           */
+/* 80321B8C-80321B94 0008 .text      setZCompLoc__16J3DPEBlockFogOffFUc                           Function */
 // J3DPEBlockFogOff::setZCompLoc(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3264,7 +3930,7 @@ asm void setZCompLoc__16J3DPEBlockFogOffFUc() {
 }
 #pragma pop
 
-/* 80321B94 000C .text      setZCompLoc__16J3DPEBlockFogOffFPCUc                         */
+/* 80321B94-80321BA0 000C .text      setZCompLoc__16J3DPEBlockFogOffFPCUc                         Function */
 // J3DPEBlockFogOff::setZCompLoc(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3275,13 +3941,13 @@ asm void setZCompLoc__16J3DPEBlockFogOffFPCUc() {
 }
 #pragma pop
 
-/* 80321BA0 0008 .text      getZCompLoc__16J3DPEBlockFogOffCFv                           */
+/* 80321BA0-80321BA8 0008 .text      getZCompLoc__16J3DPEBlockFogOffCFv                           FirstParamFunction */
 // J3DPEBlockFogOff::getZCompLoc(void) const
 u8 getZCompLoc__16J3DPEBlockFogOffCFv(u8* param0) {
 	return *(u8*)&param0[14]; /* param0->field_0xe */
 }
 
-/* 80321BA8 0008 .text      setDither__16J3DPEBlockFogOffFUc                             */
+/* 80321BA8-80321BB0 0008 .text      setDither__16J3DPEBlockFogOffFUc                             Function */
 // J3DPEBlockFogOff::setDither(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3292,7 +3958,7 @@ asm void setDither__16J3DPEBlockFogOffFUc() {
 }
 #pragma pop
 
-/* 80321BB0 000C .text      setDither__16J3DPEBlockFogOffFPCUc                           */
+/* 80321BB0-80321BBC 000C .text      setDither__16J3DPEBlockFogOffFPCUc                           Function */
 // J3DPEBlockFogOff::setDither(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3303,13 +3969,13 @@ asm void setDither__16J3DPEBlockFogOffFPCUc() {
 }
 #pragma pop
 
-/* 80321BBC 0008 .text      getDither__16J3DPEBlockFogOffCFv                             */
+/* 80321BBC-80321BC4 0008 .text      getDither__16J3DPEBlockFogOffCFv                             FirstParamFunction */
 // J3DPEBlockFogOff::getDither(void) const
 u8 getDither__16J3DPEBlockFogOffCFv(u8* param0) {
 	return *(u8*)&param0[15]; /* param0->field_0xf */
 }
 
-/* 80321BC4 005C .text      __dt__16J3DPEBlockFogOffFv                                   */
+/* 80321BC4-80321C20 005C .text      __dt__16J3DPEBlockFogOffFv                                   Function */
 // J3DPEBlockFogOff::~J3DPEBlockFogOff(void)
 #pragma push
 #pragma optimization_level 0
@@ -3320,7 +3986,7 @@ asm void __dt__16J3DPEBlockFogOffFv() {
 }
 #pragma pop
 
-/* 80321C20 0024 .text      indexToPtr__13J3DTevBlock16Fv                                */
+/* 80321C20-80321C44 0024 .text      indexToPtr__13J3DTevBlock16Fv                                Function */
 // J3DTevBlock16::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -3331,7 +3997,7 @@ asm void indexToPtr__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 80321C44 000C .text      getType__13J3DTevBlock16Fv                                   */
+/* 80321C44-80321C50 000C .text      getType__13J3DTevBlock16Fv                                   Function */
 // J3DTevBlock16::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -3342,7 +4008,7 @@ asm void getType__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 80321C50 0010 .text      setTexNo__13J3DTevBlock16FUlUs                               */
+/* 80321C50-80321C60 0010 .text      setTexNo__13J3DTevBlock16FUlUs                               Function */
 // J3DTevBlock16::setTexNo(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -3353,7 +4019,7 @@ asm void setTexNo__13J3DTevBlock16FUlUs() {
 }
 #pragma pop
 
-/* 80321C60 0014 .text      setTexNo__13J3DTevBlock16FUlPCUs                             */
+/* 80321C60-80321C74 0014 .text      setTexNo__13J3DTevBlock16FUlPCUs                             Function */
 // J3DTevBlock16::setTexNo(u32, const u16*)
 #pragma push
 #pragma optimization_level 0
@@ -3364,7 +4030,7 @@ asm void setTexNo__13J3DTevBlock16FUlPCUs() {
 }
 #pragma pop
 
-/* 80321C74 0010 .text      getTexNo__13J3DTevBlock16CFUl                                */
+/* 80321C74-80321C84 0010 .text      getTexNo__13J3DTevBlock16CFUl                                Function */
 // J3DTevBlock16::getTexNo(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -3375,7 +4041,7 @@ asm void getTexNo__13J3DTevBlock16CFUl() {
 }
 #pragma pop
 
-/* 80321C84 0014 .text      setTevOrder__13J3DTevBlock16FUl11J3DTevOrder                 */
+/* 80321C84-80321C98 0014 .text      setTevOrder__13J3DTevBlock16FUl11J3DTevOrder                 Function */
 // J3DTevBlock16::setTevOrder(u32, J3DTevOrder)
 #pragma push
 #pragma optimization_level 0
@@ -3386,7 +4052,7 @@ asm void setTevOrder__13J3DTevBlock16FUl11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80321C98 0014 .text      setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder               */
+/* 80321C98-80321CAC 0014 .text      setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder               Function */
 // J3DTevBlock16::setTevOrder(u32, const J3DTevOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -3397,7 +4063,7 @@ asm void setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80321CAC 0014 .text      getTevOrder__13J3DTevBlock16FUl                              */
+/* 80321CAC-80321CC0 0014 .text      getTevOrder__13J3DTevBlock16FUl                              Function */
 // J3DTevBlock16::getTevOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3408,7 +4074,7 @@ asm void getTevOrder__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321CC0 002C .text      setTevColor__13J3DTevBlock16FUl13J3DGXColorS10               */
+/* 80321CC0-80321CEC 002C .text      setTevColor__13J3DTevBlock16FUl13J3DGXColorS10               Function */
 // J3DTevBlock16::setTevColor(u32, J3DGXColorS10)
 #pragma push
 #pragma optimization_level 0
@@ -3419,7 +4085,7 @@ asm void setTevColor__13J3DTevBlock16FUl13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 80321CEC 002C .text      setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10             */
+/* 80321CEC-80321D18 002C .text      setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10             Function */
 // J3DTevBlock16::setTevColor(u32, const J3DGXColorS10*)
 #pragma push
 #pragma optimization_level 0
@@ -3430,7 +4096,7 @@ asm void setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 80321D18 0014 .text      getTevColor__13J3DTevBlock16FUl                              */
+/* 80321D18-80321D2C 0014 .text      getTevColor__13J3DTevBlock16FUl                              Function */
 // J3DTevBlock16::getTevColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3441,7 +4107,7 @@ asm void getTevColor__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321D2C 002C .text      setTevKColor__13J3DTevBlock16FUl10J3DGXColor                 */
+/* 80321D2C-80321D58 002C .text      setTevKColor__13J3DTevBlock16FUl10J3DGXColor                 Function */
 // J3DTevBlock16::setTevKColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -3452,7 +4118,7 @@ asm void setTevKColor__13J3DTevBlock16FUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80321D58 002C .text      setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor               */
+/* 80321D58-80321D84 002C .text      setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor               Function */
 // J3DTevBlock16::setTevKColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -3463,7 +4129,7 @@ asm void setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80321D84 0014 .text      getTevKColor__13J3DTevBlock16FUl                             */
+/* 80321D84-80321D98 0014 .text      getTevKColor__13J3DTevBlock16FUl                             Function */
 // J3DTevBlock16::getTevKColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3474,7 +4140,7 @@ asm void getTevKColor__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321D98 000C .text      setTevKColorSel__13J3DTevBlock16FUlUc                        */
+/* 80321D98-80321DA4 000C .text      setTevKColorSel__13J3DTevBlock16FUlUc                        Function */
 // J3DTevBlock16::setTevKColorSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -3485,7 +4151,7 @@ asm void setTevKColorSel__13J3DTevBlock16FUlUc() {
 }
 #pragma pop
 
-/* 80321DA4 0010 .text      setTevKColorSel__13J3DTevBlock16FUlPCUc                      */
+/* 80321DA4-80321DB4 0010 .text      setTevKColorSel__13J3DTevBlock16FUlPCUc                      Function */
 // J3DTevBlock16::setTevKColorSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3496,7 +4162,7 @@ asm void setTevKColorSel__13J3DTevBlock16FUlPCUc() {
 }
 #pragma pop
 
-/* 80321DB4 000C .text      getTevKColorSel__13J3DTevBlock16FUl                          */
+/* 80321DB4-80321DC0 000C .text      getTevKColorSel__13J3DTevBlock16FUl                          Function */
 // J3DTevBlock16::getTevKColorSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3507,7 +4173,7 @@ asm void getTevKColorSel__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321DC0 000C .text      setTevKAlphaSel__13J3DTevBlock16FUlUc                        */
+/* 80321DC0-80321DCC 000C .text      setTevKAlphaSel__13J3DTevBlock16FUlUc                        Function */
 // J3DTevBlock16::setTevKAlphaSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -3518,7 +4184,7 @@ asm void setTevKAlphaSel__13J3DTevBlock16FUlUc() {
 }
 #pragma pop
 
-/* 80321DCC 0010 .text      setTevKAlphaSel__13J3DTevBlock16FUlPCUc                      */
+/* 80321DCC-80321DDC 0010 .text      setTevKAlphaSel__13J3DTevBlock16FUlPCUc                      Function */
 // J3DTevBlock16::setTevKAlphaSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3529,7 +4195,7 @@ asm void setTevKAlphaSel__13J3DTevBlock16FUlPCUc() {
 }
 #pragma pop
 
-/* 80321DDC 000C .text      getTevKAlphaSel__13J3DTevBlock16FUl                          */
+/* 80321DDC-80321DE8 000C .text      getTevKAlphaSel__13J3DTevBlock16FUl                          Function */
 // J3DTevBlock16::getTevKAlphaSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3540,7 +4206,7 @@ asm void getTevKAlphaSel__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321DE8 0008 .text      setTevStageNum__13J3DTevBlock16FUc                           */
+/* 80321DE8-80321DF0 0008 .text      setTevStageNum__13J3DTevBlock16FUc                           Function */
 // J3DTevBlock16::setTevStageNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3551,7 +4217,7 @@ asm void setTevStageNum__13J3DTevBlock16FUc() {
 }
 #pragma pop
 
-/* 80321DF0 000C .text      setTevStageNum__13J3DTevBlock16FPCUc                         */
+/* 80321DF0-80321DFC 000C .text      setTevStageNum__13J3DTevBlock16FPCUc                         Function */
 // J3DTevBlock16::setTevStageNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3562,13 +4228,13 @@ asm void setTevStageNum__13J3DTevBlock16FPCUc() {
 }
 #pragma pop
 
-/* 80321DFC 0008 .text      getTevStageNum__13J3DTevBlock16CFv                           */
+/* 80321DFC-80321E04 0008 .text      getTevStageNum__13J3DTevBlock16CFv                           FirstParamFunction */
 // J3DTevBlock16::getTevStageNum(void) const
 u8 getTevStageNum__13J3DTevBlock16CFv(u8* param0) {
 	return *(u8*)&param0[88]; /* param0->field_0x58 */
 }
 
-/* 80321E04 003C .text      setTevStage__13J3DTevBlock16FUl11J3DTevStage                 */
+/* 80321E04-80321E40 003C .text      setTevStage__13J3DTevBlock16FUl11J3DTevStage                 Function */
 // J3DTevBlock16::setTevStage(u32, J3DTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -3579,7 +4245,7 @@ asm void setTevStage__13J3DTevBlock16FUl11J3DTevStage() {
 }
 #pragma pop
 
-/* 80321E40 003C .text      setTevStage__13J3DTevBlock16FUlPC11J3DTevStage               */
+/* 80321E40-80321E7C 003C .text      setTevStage__13J3DTevBlock16FUlPC11J3DTevStage               Function */
 // J3DTevBlock16::setTevStage(u32, const J3DTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -3590,7 +4256,7 @@ asm void setTevStage__13J3DTevBlock16FUlPC11J3DTevStage() {
 }
 #pragma pop
 
-/* 80321E7C 0014 .text      getTevStage__13J3DTevBlock16FUl                              */
+/* 80321E7C-80321E90 0014 .text      getTevStage__13J3DTevBlock16FUl                              Function */
 // J3DTevBlock16::getTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3601,7 +4267,7 @@ asm void getTevStage__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321E90 0038 .text      setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo   */
+/* 80321E90-80321EC8 0038 .text      setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo   Function */
 // J3DTevBlock16::setTevSwapModeInfo(u32, J3DTevSwapModeInfo)
 #pragma push
 #pragma optimization_level 0
@@ -3612,7 +4278,7 @@ asm void setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 80321EC8 0038 .text      setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo */
+/* 80321EC8-80321F00 0038 .text      setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo Function */
 // J3DTevBlock16::setTevSwapModeInfo(u32, const J3DTevSwapModeInfo*)
 #pragma push
 #pragma optimization_level 0
@@ -3623,7 +4289,7 @@ asm void setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 80321F00 0010 .text      setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable */
+/* 80321F00-80321F10 0010 .text      setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable Function */
 // J3DTevBlock16::setTevSwapModeTable(u32, J3DTevSwapModeTable)
 #pragma push
 #pragma optimization_level 0
@@ -3634,7 +4300,7 @@ asm void setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 80321F10 0010 .text      setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable */
+/* 80321F10-80321F20 0010 .text      setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable Function */
 // J3DTevBlock16::setTevSwapModeTable(u32, const J3DTevSwapModeTable*)
 #pragma push
 #pragma optimization_level 0
@@ -3645,7 +4311,7 @@ asm void setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 80321F20 0010 .text      getTevSwapModeTable__13J3DTevBlock16FUl                      */
+/* 80321F20-80321F30 0010 .text      getTevSwapModeTable__13J3DTevBlock16FUl                      Function */
 // J3DTevBlock16::getTevSwapModeTable(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3656,7 +4322,7 @@ asm void getTevSwapModeTable__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321F30 0014 .text      setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage           */
+/* 80321F30-80321F44 0014 .text      setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage           Function */
 // J3DTevBlock16::setIndTevStage(u32, J3DIndTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -3667,7 +4333,7 @@ asm void setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80321F44 0014 .text      setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage         */
+/* 80321F44-80321F58 0014 .text      setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage         Function */
 // J3DTevBlock16::setIndTevStage(u32, const J3DIndTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -3678,7 +4344,7 @@ asm void setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80321F58 0014 .text      getIndTevStage__13J3DTevBlock16FUl                           */
+/* 80321F58-80321F6C 0014 .text      getIndTevStage__13J3DTevBlock16FUl                           Function */
 // J3DTevBlock16::getIndTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3689,19 +4355,19 @@ asm void getIndTevStage__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321F6C 0008 .text      getTexNoOffset__13J3DTevBlock16CFv                           */
+/* 80321F6C-80321F74 0008 .text      getTexNoOffset__13J3DTevBlock16CFv                           FirstParamFunction */
 // J3DTevBlock16::getTexNoOffset(void) const
 u32 getTexNoOffset__13J3DTevBlock16CFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80321F74 0008 .text      getTevRegOffset__13J3DTevBlock16CFv                          */
+/* 80321F74-80321F7C 0008 .text      getTevRegOffset__13J3DTevBlock16CFv                          FirstParamFunction */
 // J3DTevBlock16::getTevRegOffset(void) const
 u32 getTevRegOffset__13J3DTevBlock16CFv(u8* param0) {
 	return *(u32*)&param0[368]; /* param0->field_0x170 */
 }
 
-/* 80321F7C 0008 .text      setTevRegOffset__13J3DTevBlock16FUl                          */
+/* 80321F7C-80321F84 0008 .text      setTevRegOffset__13J3DTevBlock16FUl                          Function */
 // J3DTevBlock16::setTevRegOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3712,7 +4378,7 @@ asm void setTevRegOffset__13J3DTevBlock16FUl() {
 }
 #pragma pop
 
-/* 80321F84 005C .text      __dt__13J3DTevBlock16Fv                                      */
+/* 80321F84-80321FE0 005C .text      __dt__13J3DTevBlock16Fv                                      Function */
 // J3DTevBlock16::~J3DTevBlock16(void)
 #pragma push
 #pragma optimization_level 0
@@ -3723,7 +4389,7 @@ asm void __dt__13J3DTevBlock16Fv() {
 }
 #pragma pop
 
-/* 80321FE0 0008 .text      setTexNoOffset__11J3DTevBlockFUl                             */
+/* 80321FE0-80321FE8 0008 .text      setTexNoOffset__11J3DTevBlockFUl                             Function */
 // J3DTevBlock::setTexNoOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3734,13 +4400,13 @@ asm void setTexNoOffset__11J3DTevBlockFUl() {
 }
 #pragma pop
 
-/* 80321FE8 0004 .text      ptrToIndex__12J3DTevBlock4Fv                                 */
+/* 80321FE8-80321FEC 0004 .text      ptrToIndex__12J3DTevBlock4Fv                                 ReturnFunction */
 // J3DTevBlock4::ptrToIndex(void)
 void ptrToIndex__12J3DTevBlock4Fv() {
 	return;
 }
 
-/* 80321FEC 0024 .text      indexToPtr__12J3DTevBlock4Fv                                 */
+/* 80321FEC-80322010 0024 .text      indexToPtr__12J3DTevBlock4Fv                                 Function */
 // J3DTevBlock4::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -3751,7 +4417,7 @@ asm void indexToPtr__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 80322010 000C .text      getType__12J3DTevBlock4Fv                                    */
+/* 80322010-8032201C 000C .text      getType__12J3DTevBlock4Fv                                    Function */
 // J3DTevBlock4::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -3762,7 +4428,7 @@ asm void getType__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 8032201C 0010 .text      setTexNo__12J3DTevBlock4FUlUs                                */
+/* 8032201C-8032202C 0010 .text      setTexNo__12J3DTevBlock4FUlUs                                Function */
 // J3DTevBlock4::setTexNo(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -3773,7 +4439,7 @@ asm void setTexNo__12J3DTevBlock4FUlUs() {
 }
 #pragma pop
 
-/* 8032202C 0014 .text      setTexNo__12J3DTevBlock4FUlPCUs                              */
+/* 8032202C-80322040 0014 .text      setTexNo__12J3DTevBlock4FUlPCUs                              Function */
 // J3DTevBlock4::setTexNo(u32, const u16*)
 #pragma push
 #pragma optimization_level 0
@@ -3784,7 +4450,7 @@ asm void setTexNo__12J3DTevBlock4FUlPCUs() {
 }
 #pragma pop
 
-/* 80322040 0010 .text      getTexNo__12J3DTevBlock4CFUl                                 */
+/* 80322040-80322050 0010 .text      getTexNo__12J3DTevBlock4CFUl                                 Function */
 // J3DTevBlock4::getTexNo(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -3795,7 +4461,7 @@ asm void getTexNo__12J3DTevBlock4CFUl() {
 }
 #pragma pop
 
-/* 80322050 0014 .text      setTevOrder__12J3DTevBlock4FUl11J3DTevOrder                  */
+/* 80322050-80322064 0014 .text      setTevOrder__12J3DTevBlock4FUl11J3DTevOrder                  Function */
 // J3DTevBlock4::setTevOrder(u32, J3DTevOrder)
 #pragma push
 #pragma optimization_level 0
@@ -3806,7 +4472,7 @@ asm void setTevOrder__12J3DTevBlock4FUl11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322064 0014 .text      setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder                */
+/* 80322064-80322078 0014 .text      setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder                Function */
 // J3DTevBlock4::setTevOrder(u32, const J3DTevOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -3817,7 +4483,7 @@ asm void setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322078 0014 .text      getTevOrder__12J3DTevBlock4FUl                               */
+/* 80322078-8032208C 0014 .text      getTevOrder__12J3DTevBlock4FUl                               Function */
 // J3DTevBlock4::getTevOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3828,7 +4494,7 @@ asm void getTevOrder__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 8032208C 002C .text      setTevColor__12J3DTevBlock4FUl13J3DGXColorS10                */
+/* 8032208C-803220B8 002C .text      setTevColor__12J3DTevBlock4FUl13J3DGXColorS10                Function */
 // J3DTevBlock4::setTevColor(u32, J3DGXColorS10)
 #pragma push
 #pragma optimization_level 0
@@ -3839,7 +4505,7 @@ asm void setTevColor__12J3DTevBlock4FUl13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 803220B8 002C .text      setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10              */
+/* 803220B8-803220E4 002C .text      setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10              Function */
 // J3DTevBlock4::setTevColor(u32, const J3DGXColorS10*)
 #pragma push
 #pragma optimization_level 0
@@ -3850,7 +4516,7 @@ asm void setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 803220E4 0014 .text      getTevColor__12J3DTevBlock4FUl                               */
+/* 803220E4-803220F8 0014 .text      getTevColor__12J3DTevBlock4FUl                               Function */
 // J3DTevBlock4::getTevColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3861,7 +4527,7 @@ asm void getTevColor__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 803220F8 002C .text      setTevKColor__12J3DTevBlock4FUl10J3DGXColor                  */
+/* 803220F8-80322124 002C .text      setTevKColor__12J3DTevBlock4FUl10J3DGXColor                  Function */
 // J3DTevBlock4::setTevKColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -3872,7 +4538,7 @@ asm void setTevKColor__12J3DTevBlock4FUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322124 002C .text      setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor                */
+/* 80322124-80322150 002C .text      setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor                Function */
 // J3DTevBlock4::setTevKColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -3883,7 +4549,7 @@ asm void setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322150 0014 .text      getTevKColor__12J3DTevBlock4FUl                              */
+/* 80322150-80322164 0014 .text      getTevKColor__12J3DTevBlock4FUl                              Function */
 // J3DTevBlock4::getTevKColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3894,7 +4560,7 @@ asm void getTevKColor__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 80322164 000C .text      setTevKColorSel__12J3DTevBlock4FUlUc                         */
+/* 80322164-80322170 000C .text      setTevKColorSel__12J3DTevBlock4FUlUc                         Function */
 // J3DTevBlock4::setTevKColorSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -3905,7 +4571,7 @@ asm void setTevKColorSel__12J3DTevBlock4FUlUc() {
 }
 #pragma pop
 
-/* 80322170 0010 .text      setTevKColorSel__12J3DTevBlock4FUlPCUc                       */
+/* 80322170-80322180 0010 .text      setTevKColorSel__12J3DTevBlock4FUlPCUc                       Function */
 // J3DTevBlock4::setTevKColorSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3916,7 +4582,7 @@ asm void setTevKColorSel__12J3DTevBlock4FUlPCUc() {
 }
 #pragma pop
 
-/* 80322180 000C .text      getTevKColorSel__12J3DTevBlock4FUl                           */
+/* 80322180-8032218C 000C .text      getTevKColorSel__12J3DTevBlock4FUl                           Function */
 // J3DTevBlock4::getTevKColorSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3927,7 +4593,7 @@ asm void getTevKColorSel__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 8032218C 000C .text      setTevKAlphaSel__12J3DTevBlock4FUlUc                         */
+/* 8032218C-80322198 000C .text      setTevKAlphaSel__12J3DTevBlock4FUlUc                         Function */
 // J3DTevBlock4::setTevKAlphaSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -3938,7 +4604,7 @@ asm void setTevKAlphaSel__12J3DTevBlock4FUlUc() {
 }
 #pragma pop
 
-/* 80322198 0010 .text      setTevKAlphaSel__12J3DTevBlock4FUlPCUc                       */
+/* 80322198-803221A8 0010 .text      setTevKAlphaSel__12J3DTevBlock4FUlPCUc                       Function */
 // J3DTevBlock4::setTevKAlphaSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3949,7 +4615,7 @@ asm void setTevKAlphaSel__12J3DTevBlock4FUlPCUc() {
 }
 #pragma pop
 
-/* 803221A8 000C .text      getTevKAlphaSel__12J3DTevBlock4FUl                           */
+/* 803221A8-803221B4 000C .text      getTevKAlphaSel__12J3DTevBlock4FUl                           Function */
 // J3DTevBlock4::getTevKAlphaSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -3960,7 +4626,7 @@ asm void getTevKAlphaSel__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 803221B4 0008 .text      setTevStageNum__12J3DTevBlock4FUc                            */
+/* 803221B4-803221BC 0008 .text      setTevStageNum__12J3DTevBlock4FUc                            Function */
 // J3DTevBlock4::setTevStageNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -3971,7 +4637,7 @@ asm void setTevStageNum__12J3DTevBlock4FUc() {
 }
 #pragma pop
 
-/* 803221BC 000C .text      setTevStageNum__12J3DTevBlock4FPCUc                          */
+/* 803221BC-803221C8 000C .text      setTevStageNum__12J3DTevBlock4FPCUc                          Function */
 // J3DTevBlock4::setTevStageNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -3982,13 +4648,13 @@ asm void setTevStageNum__12J3DTevBlock4FPCUc() {
 }
 #pragma pop
 
-/* 803221C8 0008 .text      getTevStageNum__12J3DTevBlock4CFv                            */
+/* 803221C8-803221D0 0008 .text      getTevStageNum__12J3DTevBlock4CFv                            FirstParamFunction */
 // J3DTevBlock4::getTevStageNum(void) const
 u8 getTevStageNum__12J3DTevBlock4CFv(u8* param0) {
 	return *(u8*)&param0[32]; /* param0->field_0x20 */
 }
 
-/* 803221D0 003C .text      setTevStage__12J3DTevBlock4FUl11J3DTevStage                  */
+/* 803221D0-8032220C 003C .text      setTevStage__12J3DTevBlock4FUl11J3DTevStage                  Function */
 // J3DTevBlock4::setTevStage(u32, J3DTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -3999,7 +4665,7 @@ asm void setTevStage__12J3DTevBlock4FUl11J3DTevStage() {
 }
 #pragma pop
 
-/* 8032220C 003C .text      setTevStage__12J3DTevBlock4FUlPC11J3DTevStage                */
+/* 8032220C-80322248 003C .text      setTevStage__12J3DTevBlock4FUlPC11J3DTevStage                Function */
 // J3DTevBlock4::setTevStage(u32, const J3DTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4010,7 +4676,7 @@ asm void setTevStage__12J3DTevBlock4FUlPC11J3DTevStage() {
 }
 #pragma pop
 
-/* 80322248 0014 .text      getTevStage__12J3DTevBlock4FUl                               */
+/* 80322248-8032225C 0014 .text      getTevStage__12J3DTevBlock4FUl                               Function */
 // J3DTevBlock4::getTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4021,7 +4687,7 @@ asm void getTevStage__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 8032225C 0038 .text      setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo    */
+/* 8032225C-80322294 0038 .text      setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo    Function */
 // J3DTevBlock4::setTevSwapModeInfo(u32, J3DTevSwapModeInfo)
 #pragma push
 #pragma optimization_level 0
@@ -4032,7 +4698,7 @@ asm void setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 80322294 0038 .text      setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo  */
+/* 80322294-803222CC 0038 .text      setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo  Function */
 // J3DTevBlock4::setTevSwapModeInfo(u32, const J3DTevSwapModeInfo*)
 #pragma push
 #pragma optimization_level 0
@@ -4043,7 +4709,7 @@ asm void setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 803222CC 0010 .text      setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable  */
+/* 803222CC-803222DC 0010 .text      setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable  Function */
 // J3DTevBlock4::setTevSwapModeTable(u32, J3DTevSwapModeTable)
 #pragma push
 #pragma optimization_level 0
@@ -4054,7 +4720,7 @@ asm void setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 803222DC 0010 .text      setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable */
+/* 803222DC-803222EC 0010 .text      setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable Function */
 // J3DTevBlock4::setTevSwapModeTable(u32, const J3DTevSwapModeTable*)
 #pragma push
 #pragma optimization_level 0
@@ -4065,7 +4731,7 @@ asm void setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 803222EC 0010 .text      getTevSwapModeTable__12J3DTevBlock4FUl                       */
+/* 803222EC-803222FC 0010 .text      getTevSwapModeTable__12J3DTevBlock4FUl                       Function */
 // J3DTevBlock4::getTevSwapModeTable(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4076,7 +4742,7 @@ asm void getTevSwapModeTable__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 803222FC 0014 .text      setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage            */
+/* 803222FC-80322310 0014 .text      setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage            Function */
 // J3DTevBlock4::setIndTevStage(u32, J3DIndTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4087,7 +4753,7 @@ asm void setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80322310 0014 .text      setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage          */
+/* 80322310-80322324 0014 .text      setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage          Function */
 // J3DTevBlock4::setIndTevStage(u32, const J3DIndTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4098,7 +4764,7 @@ asm void setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80322324 0014 .text      getIndTevStage__12J3DTevBlock4FUl                            */
+/* 80322324-80322338 0014 .text      getIndTevStage__12J3DTevBlock4FUl                            Function */
 // J3DTevBlock4::getIndTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4109,19 +4775,19 @@ asm void getIndTevStage__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 80322338 0008 .text      getTexNoOffset__12J3DTevBlock4CFv                            */
+/* 80322338-80322340 0008 .text      getTexNoOffset__12J3DTevBlock4CFv                            FirstParamFunction */
 // J3DTevBlock4::getTexNoOffset(void) const
 u32 getTexNoOffset__12J3DTevBlock4CFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80322340 0008 .text      getTevRegOffset__12J3DTevBlock4CFv                           */
+/* 80322340-80322348 0008 .text      getTevRegOffset__12J3DTevBlock4CFv                           FirstParamFunction */
 // J3DTevBlock4::getTevRegOffset(void) const
 u32 getTevRegOffset__12J3DTevBlock4CFv(u8* param0) {
 	return *(u32*)&param0[144]; /* param0->field_0x90 */
 }
 
-/* 80322348 0008 .text      setTevRegOffset__12J3DTevBlock4FUl                           */
+/* 80322348-80322350 0008 .text      setTevRegOffset__12J3DTevBlock4FUl                           Function */
 // J3DTevBlock4::setTevRegOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4132,7 +4798,7 @@ asm void setTevRegOffset__12J3DTevBlock4FUl() {
 }
 #pragma pop
 
-/* 80322350 005C .text      __dt__12J3DTevBlock4Fv                                       */
+/* 80322350-803223AC 005C .text      __dt__12J3DTevBlock4Fv                                       Function */
 // J3DTevBlock4::~J3DTevBlock4(void)
 #pragma push
 #pragma optimization_level 0
@@ -4143,13 +4809,13 @@ asm void __dt__12J3DTevBlock4Fv() {
 }
 #pragma pop
 
-/* 803223AC 0004 .text      ptrToIndex__12J3DTevBlock2Fv                                 */
+/* 803223AC-803223B0 0004 .text      ptrToIndex__12J3DTevBlock2Fv                                 ReturnFunction */
 // J3DTevBlock2::ptrToIndex(void)
 void ptrToIndex__12J3DTevBlock2Fv() {
 	return;
 }
 
-/* 803223B0 0024 .text      indexToPtr__12J3DTevBlock2Fv                                 */
+/* 803223B0-803223D4 0024 .text      indexToPtr__12J3DTevBlock2Fv                                 Function */
 // J3DTevBlock2::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -4160,7 +4826,7 @@ asm void indexToPtr__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 803223D4 000C .text      getType__12J3DTevBlock2Fv                                    */
+/* 803223D4-803223E0 000C .text      getType__12J3DTevBlock2Fv                                    Function */
 // J3DTevBlock2::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -4171,7 +4837,7 @@ asm void getType__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 803223E0 0010 .text      setTexNo__12J3DTevBlock2FUlUs                                */
+/* 803223E0-803223F0 0010 .text      setTexNo__12J3DTevBlock2FUlUs                                Function */
 // J3DTevBlock2::setTexNo(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -4182,7 +4848,7 @@ asm void setTexNo__12J3DTevBlock2FUlUs() {
 }
 #pragma pop
 
-/* 803223F0 0014 .text      setTexNo__12J3DTevBlock2FUlPCUs                              */
+/* 803223F0-80322404 0014 .text      setTexNo__12J3DTevBlock2FUlPCUs                              Function */
 // J3DTevBlock2::setTexNo(u32, const u16*)
 #pragma push
 #pragma optimization_level 0
@@ -4193,7 +4859,7 @@ asm void setTexNo__12J3DTevBlock2FUlPCUs() {
 }
 #pragma pop
 
-/* 80322404 0010 .text      getTexNo__12J3DTevBlock2CFUl                                 */
+/* 80322404-80322414 0010 .text      getTexNo__12J3DTevBlock2CFUl                                 Function */
 // J3DTevBlock2::getTexNo(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -4204,7 +4870,7 @@ asm void getTexNo__12J3DTevBlock2CFUl() {
 }
 #pragma pop
 
-/* 80322414 0014 .text      setTevOrder__12J3DTevBlock2FUl11J3DTevOrder                  */
+/* 80322414-80322428 0014 .text      setTevOrder__12J3DTevBlock2FUl11J3DTevOrder                  Function */
 // J3DTevBlock2::setTevOrder(u32, J3DTevOrder)
 #pragma push
 #pragma optimization_level 0
@@ -4215,7 +4881,7 @@ asm void setTevOrder__12J3DTevBlock2FUl11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322428 0014 .text      setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder                */
+/* 80322428-8032243C 0014 .text      setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder                Function */
 // J3DTevBlock2::setTevOrder(u32, const J3DTevOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -4226,7 +4892,7 @@ asm void setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder() {
 }
 #pragma pop
 
-/* 8032243C 0014 .text      getTevOrder__12J3DTevBlock2FUl                               */
+/* 8032243C-80322450 0014 .text      getTevOrder__12J3DTevBlock2FUl                               Function */
 // J3DTevBlock2::getTevOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4237,7 +4903,7 @@ asm void getTevOrder__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322450 002C .text      setTevColor__12J3DTevBlock2FUl13J3DGXColorS10                */
+/* 80322450-8032247C 002C .text      setTevColor__12J3DTevBlock2FUl13J3DGXColorS10                Function */
 // J3DTevBlock2::setTevColor(u32, J3DGXColorS10)
 #pragma push
 #pragma optimization_level 0
@@ -4248,7 +4914,7 @@ asm void setTevColor__12J3DTevBlock2FUl13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 8032247C 002C .text      setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10              */
+/* 8032247C-803224A8 002C .text      setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10              Function */
 // J3DTevBlock2::setTevColor(u32, const J3DGXColorS10*)
 #pragma push
 #pragma optimization_level 0
@@ -4259,7 +4925,7 @@ asm void setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 803224A8 0014 .text      getTevColor__12J3DTevBlock2FUl                               */
+/* 803224A8-803224BC 0014 .text      getTevColor__12J3DTevBlock2FUl                               Function */
 // J3DTevBlock2::getTevColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4270,7 +4936,7 @@ asm void getTevColor__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 803224BC 002C .text      setTevKColor__12J3DTevBlock2FUl10J3DGXColor                  */
+/* 803224BC-803224E8 002C .text      setTevKColor__12J3DTevBlock2FUl10J3DGXColor                  Function */
 // J3DTevBlock2::setTevKColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -4281,7 +4947,7 @@ asm void setTevKColor__12J3DTevBlock2FUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 803224E8 002C .text      setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor                */
+/* 803224E8-80322514 002C .text      setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor                Function */
 // J3DTevBlock2::setTevKColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -4292,7 +4958,7 @@ asm void setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322514 0014 .text      getTevKColor__12J3DTevBlock2FUl                              */
+/* 80322514-80322528 0014 .text      getTevKColor__12J3DTevBlock2FUl                              Function */
 // J3DTevBlock2::getTevKColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4303,7 +4969,7 @@ asm void getTevKColor__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322528 000C .text      setTevKColorSel__12J3DTevBlock2FUlUc                         */
+/* 80322528-80322534 000C .text      setTevKColorSel__12J3DTevBlock2FUlUc                         Function */
 // J3DTevBlock2::setTevKColorSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -4314,7 +4980,7 @@ asm void setTevKColorSel__12J3DTevBlock2FUlUc() {
 }
 #pragma pop
 
-/* 80322534 0010 .text      setTevKColorSel__12J3DTevBlock2FUlPCUc                       */
+/* 80322534-80322544 0010 .text      setTevKColorSel__12J3DTevBlock2FUlPCUc                       Function */
 // J3DTevBlock2::setTevKColorSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -4325,7 +4991,7 @@ asm void setTevKColorSel__12J3DTevBlock2FUlPCUc() {
 }
 #pragma pop
 
-/* 80322544 000C .text      getTevKColorSel__12J3DTevBlock2FUl                           */
+/* 80322544-80322550 000C .text      getTevKColorSel__12J3DTevBlock2FUl                           Function */
 // J3DTevBlock2::getTevKColorSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4336,7 +5002,7 @@ asm void getTevKColorSel__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322550 000C .text      setTevKAlphaSel__12J3DTevBlock2FUlUc                         */
+/* 80322550-8032255C 000C .text      setTevKAlphaSel__12J3DTevBlock2FUlUc                         Function */
 // J3DTevBlock2::setTevKAlphaSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -4347,7 +5013,7 @@ asm void setTevKAlphaSel__12J3DTevBlock2FUlUc() {
 }
 #pragma pop
 
-/* 8032255C 0010 .text      setTevKAlphaSel__12J3DTevBlock2FUlPCUc                       */
+/* 8032255C-8032256C 0010 .text      setTevKAlphaSel__12J3DTevBlock2FUlPCUc                       Function */
 // J3DTevBlock2::setTevKAlphaSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -4358,7 +5024,7 @@ asm void setTevKAlphaSel__12J3DTevBlock2FUlPCUc() {
 }
 #pragma pop
 
-/* 8032256C 000C .text      getTevKAlphaSel__12J3DTevBlock2FUl                           */
+/* 8032256C-80322578 000C .text      getTevKAlphaSel__12J3DTevBlock2FUl                           Function */
 // J3DTevBlock2::getTevKAlphaSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4369,7 +5035,7 @@ asm void getTevKAlphaSel__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322578 0008 .text      setTevStageNum__12J3DTevBlock2FUc                            */
+/* 80322578-80322580 0008 .text      setTevStageNum__12J3DTevBlock2FUc                            Function */
 // J3DTevBlock2::setTevStageNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -4380,7 +5046,7 @@ asm void setTevStageNum__12J3DTevBlock2FUc() {
 }
 #pragma pop
 
-/* 80322580 000C .text      setTevStageNum__12J3DTevBlock2FPCUc                          */
+/* 80322580-8032258C 000C .text      setTevStageNum__12J3DTevBlock2FPCUc                          Function */
 // J3DTevBlock2::setTevStageNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -4391,13 +5057,13 @@ asm void setTevStageNum__12J3DTevBlock2FPCUc() {
 }
 #pragma pop
 
-/* 8032258C 0008 .text      getTevStageNum__12J3DTevBlock2CFv                            */
+/* 8032258C-80322594 0008 .text      getTevStageNum__12J3DTevBlock2CFv                            FirstParamFunction */
 // J3DTevBlock2::getTevStageNum(void) const
 u8 getTevStageNum__12J3DTevBlock2CFv(u8* param0) {
 	return *(u8*)&param0[52]; /* param0->field_0x34 */
 }
 
-/* 80322594 003C .text      setTevStage__12J3DTevBlock2FUl11J3DTevStage                  */
+/* 80322594-803225D0 003C .text      setTevStage__12J3DTevBlock2FUl11J3DTevStage                  Function */
 // J3DTevBlock2::setTevStage(u32, J3DTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4408,7 +5074,7 @@ asm void setTevStage__12J3DTevBlock2FUl11J3DTevStage() {
 }
 #pragma pop
 
-/* 803225D0 003C .text      setTevStage__12J3DTevBlock2FUlPC11J3DTevStage                */
+/* 803225D0-8032260C 003C .text      setTevStage__12J3DTevBlock2FUlPC11J3DTevStage                Function */
 // J3DTevBlock2::setTevStage(u32, const J3DTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4419,7 +5085,7 @@ asm void setTevStage__12J3DTevBlock2FUlPC11J3DTevStage() {
 }
 #pragma pop
 
-/* 8032260C 0014 .text      getTevStage__12J3DTevBlock2FUl                               */
+/* 8032260C-80322620 0014 .text      getTevStage__12J3DTevBlock2FUl                               Function */
 // J3DTevBlock2::getTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4430,7 +5096,7 @@ asm void getTevStage__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322620 0038 .text      setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo    */
+/* 80322620-80322658 0038 .text      setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo    Function */
 // J3DTevBlock2::setTevSwapModeInfo(u32, J3DTevSwapModeInfo)
 #pragma push
 #pragma optimization_level 0
@@ -4441,7 +5107,7 @@ asm void setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 80322658 0038 .text      setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo  */
+/* 80322658-80322690 0038 .text      setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo  Function */
 // J3DTevBlock2::setTevSwapModeInfo(u32, const J3DTevSwapModeInfo*)
 #pragma push
 #pragma optimization_level 0
@@ -4452,7 +5118,7 @@ asm void setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo() {
 }
 #pragma pop
 
-/* 80322690 0010 .text      setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable  */
+/* 80322690-803226A0 0010 .text      setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable  Function */
 // J3DTevBlock2::setTevSwapModeTable(u32, J3DTevSwapModeTable)
 #pragma push
 #pragma optimization_level 0
@@ -4463,7 +5129,7 @@ asm void setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 803226A0 0010 .text      setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable */
+/* 803226A0-803226B0 0010 .text      setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable Function */
 // J3DTevBlock2::setTevSwapModeTable(u32, const J3DTevSwapModeTable*)
 #pragma push
 #pragma optimization_level 0
@@ -4474,7 +5140,7 @@ asm void setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable() {
 }
 #pragma pop
 
-/* 803226B0 0010 .text      getTevSwapModeTable__12J3DTevBlock2FUl                       */
+/* 803226B0-803226C0 0010 .text      getTevSwapModeTable__12J3DTevBlock2FUl                       Function */
 // J3DTevBlock2::getTevSwapModeTable(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4485,7 +5151,7 @@ asm void getTevSwapModeTable__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 803226C0 0014 .text      setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage            */
+/* 803226C0-803226D4 0014 .text      setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage            Function */
 // J3DTevBlock2::setIndTevStage(u32, J3DIndTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4496,7 +5162,7 @@ asm void setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 803226D4 0014 .text      setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage          */
+/* 803226D4-803226E8 0014 .text      setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage          Function */
 // J3DTevBlock2::setIndTevStage(u32, const J3DIndTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4507,7 +5173,7 @@ asm void setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 803226E8 0014 .text      getIndTevStage__12J3DTevBlock2FUl                            */
+/* 803226E8-803226FC 0014 .text      getIndTevStage__12J3DTevBlock2FUl                            Function */
 // J3DTevBlock2::getIndTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4518,19 +5184,19 @@ asm void getIndTevStage__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 803226FC 0008 .text      getTexNoOffset__12J3DTevBlock2CFv                            */
+/* 803226FC-80322704 0008 .text      getTexNoOffset__12J3DTevBlock2CFv                            FirstParamFunction */
 // J3DTevBlock2::getTexNoOffset(void) const
 u32 getTexNoOffset__12J3DTevBlock2CFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80322704 0008 .text      getTevRegOffset__12J3DTevBlock2CFv                           */
+/* 80322704-8032270C 0008 .text      getTevRegOffset__12J3DTevBlock2CFv                           FirstParamFunction */
 // J3DTevBlock2::getTevRegOffset(void) const
 u32 getTevRegOffset__12J3DTevBlock2CFv(u8* param0) {
 	return *(u32*)&param0[104]; /* param0->field_0x68 */
 }
 
-/* 8032270C 0008 .text      setTevRegOffset__12J3DTevBlock2FUl                           */
+/* 8032270C-80322714 0008 .text      setTevRegOffset__12J3DTevBlock2FUl                           Function */
 // J3DTevBlock2::setTevRegOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4541,7 +5207,7 @@ asm void setTevRegOffset__12J3DTevBlock2FUl() {
 }
 #pragma pop
 
-/* 80322714 005C .text      __dt__12J3DTevBlock2Fv                                       */
+/* 80322714-80322770 005C .text      __dt__12J3DTevBlock2Fv                                       Function */
 // J3DTevBlock2::~J3DTevBlock2(void)
 #pragma push
 #pragma optimization_level 0
@@ -4552,13 +5218,13 @@ asm void __dt__12J3DTevBlock2Fv() {
 }
 #pragma pop
 
-/* 80322770 0004 .text      ptrToIndex__12J3DTevBlock1Fv                                 */
+/* 80322770-80322774 0004 .text      ptrToIndex__12J3DTevBlock1Fv                                 ReturnFunction */
 // J3DTevBlock1::ptrToIndex(void)
 void ptrToIndex__12J3DTevBlock1Fv() {
 	return;
 }
 
-/* 80322774 0024 .text      indexToPtr__12J3DTevBlock1Fv                                 */
+/* 80322774-80322798 0024 .text      indexToPtr__12J3DTevBlock1Fv                                 Function */
 // J3DTevBlock1::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -4569,7 +5235,7 @@ asm void indexToPtr__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 80322798 000C .text      getType__12J3DTevBlock1Fv                                    */
+/* 80322798-803227A4 000C .text      getType__12J3DTevBlock1Fv                                    Function */
 // J3DTevBlock1::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -4580,7 +5246,7 @@ asm void getType__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 803227A4 0010 .text      setTexNo__12J3DTevBlock1FUlUs                                */
+/* 803227A4-803227B4 0010 .text      setTexNo__12J3DTevBlock1FUlUs                                Function */
 // J3DTevBlock1::setTexNo(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -4591,7 +5257,7 @@ asm void setTexNo__12J3DTevBlock1FUlUs() {
 }
 #pragma pop
 
-/* 803227B4 0014 .text      setTexNo__12J3DTevBlock1FUlPCUs                              */
+/* 803227B4-803227C8 0014 .text      setTexNo__12J3DTevBlock1FUlPCUs                              Function */
 // J3DTevBlock1::setTexNo(u32, const u16*)
 #pragma push
 #pragma optimization_level 0
@@ -4602,7 +5268,7 @@ asm void setTexNo__12J3DTevBlock1FUlPCUs() {
 }
 #pragma pop
 
-/* 803227C8 0010 .text      getTexNo__12J3DTevBlock1CFUl                                 */
+/* 803227C8-803227D8 0010 .text      getTexNo__12J3DTevBlock1CFUl                                 Function */
 // J3DTevBlock1::getTexNo(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -4613,7 +5279,7 @@ asm void getTexNo__12J3DTevBlock1CFUl() {
 }
 #pragma pop
 
-/* 803227D8 0014 .text      setTevOrder__12J3DTevBlock1FUl11J3DTevOrder                  */
+/* 803227D8-803227EC 0014 .text      setTevOrder__12J3DTevBlock1FUl11J3DTevOrder                  Function */
 // J3DTevBlock1::setTevOrder(u32, J3DTevOrder)
 #pragma push
 #pragma optimization_level 0
@@ -4624,7 +5290,7 @@ asm void setTevOrder__12J3DTevBlock1FUl11J3DTevOrder() {
 }
 #pragma pop
 
-/* 803227EC 0014 .text      setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder                */
+/* 803227EC-80322800 0014 .text      setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder                Function */
 // J3DTevBlock1::setTevOrder(u32, const J3DTevOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -4635,7 +5301,7 @@ asm void setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322800 0014 .text      getTevOrder__12J3DTevBlock1FUl                               */
+/* 80322800-80322814 0014 .text      getTevOrder__12J3DTevBlock1FUl                               Function */
 // J3DTevBlock1::getTevOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4646,25 +5312,25 @@ asm void getTevOrder__12J3DTevBlock1FUl() {
 }
 #pragma pop
 
-/* 80322814 0004 .text      setTevStageNum__12J3DTevBlock1FUc                            */
+/* 80322814-80322818 0004 .text      setTevStageNum__12J3DTevBlock1FUc                            ReturnFunction */
 // J3DTevBlock1::setTevStageNum(u8)
 void setTevStageNum__12J3DTevBlock1FUc() {
 	return;
 }
 
-/* 80322818 0004 .text      setTevStageNum__12J3DTevBlock1FPCUc                          */
+/* 80322818-8032281C 0004 .text      setTevStageNum__12J3DTevBlock1FPCUc                          ReturnFunction */
 // J3DTevBlock1::setTevStageNum(const u8*)
 void setTevStageNum__12J3DTevBlock1FPCUc() {
 	return;
 }
 
-/* 8032281C 0008 .text      getTevStageNum__12J3DTevBlock1CFv                            */
+/* 8032281C-80322824 0008 .text      getTevStageNum__12J3DTevBlock1CFv                            ReturnIntegerFunction */
 // J3DTevBlock1::getTevStageNum(void) const
 int getTevStageNum__12J3DTevBlock1CFv() {
 	return 1;
 }
 
-/* 80322824 003C .text      setTevStage__12J3DTevBlock1FUl11J3DTevStage                  */
+/* 80322824-80322860 003C .text      setTevStage__12J3DTevBlock1FUl11J3DTevStage                  Function */
 // J3DTevBlock1::setTevStage(u32, J3DTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4675,7 +5341,7 @@ asm void setTevStage__12J3DTevBlock1FUl11J3DTevStage() {
 }
 #pragma pop
 
-/* 80322860 003C .text      setTevStage__12J3DTevBlock1FUlPC11J3DTevStage                */
+/* 80322860-8032289C 003C .text      setTevStage__12J3DTevBlock1FUlPC11J3DTevStage                Function */
 // J3DTevBlock1::setTevStage(u32, const J3DTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4686,7 +5352,7 @@ asm void setTevStage__12J3DTevBlock1FUlPC11J3DTevStage() {
 }
 #pragma pop
 
-/* 8032289C 0014 .text      getTevStage__12J3DTevBlock1FUl                               */
+/* 8032289C-803228B0 0014 .text      getTevStage__12J3DTevBlock1FUl                               Function */
 // J3DTevBlock1::getTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4697,7 +5363,7 @@ asm void getTevStage__12J3DTevBlock1FUl() {
 }
 #pragma pop
 
-/* 803228B0 0014 .text      setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage            */
+/* 803228B0-803228C4 0014 .text      setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage            Function */
 // J3DTevBlock1::setIndTevStage(u32, J3DIndTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4708,7 +5374,7 @@ asm void setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 803228C4 0014 .text      setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage          */
+/* 803228C4-803228D8 0014 .text      setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage          Function */
 // J3DTevBlock1::setIndTevStage(u32, const J3DIndTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4719,7 +5385,7 @@ asm void setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 803228D8 0014 .text      getIndTevStage__12J3DTevBlock1FUl                            */
+/* 803228D8-803228EC 0014 .text      getIndTevStage__12J3DTevBlock1FUl                            Function */
 // J3DTevBlock1::getIndTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4730,13 +5396,13 @@ asm void getIndTevStage__12J3DTevBlock1FUl() {
 }
 #pragma pop
 
-/* 803228EC 0008 .text      getTexNoOffset__12J3DTevBlock1CFv                            */
+/* 803228EC-803228F4 0008 .text      getTexNoOffset__12J3DTevBlock1CFv                            FirstParamFunction */
 // J3DTevBlock1::getTexNoOffset(void) const
 u32 getTexNoOffset__12J3DTevBlock1CFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 803228F4 005C .text      __dt__12J3DTevBlock1Fv                                       */
+/* 803228F4-80322950 005C .text      __dt__12J3DTevBlock1Fv                                       Function */
 // J3DTevBlock1::~J3DTevBlock1(void)
 #pragma push
 #pragma optimization_level 0
@@ -4747,55 +5413,55 @@ asm void __dt__12J3DTevBlock1Fv() {
 }
 #pragma pop
 
-/* 80322950 0004 .text      setTevKColorSel__11J3DTevBlockFUlPCUc                        */
+/* 80322950-80322954 0004 .text      setTevKColorSel__11J3DTevBlockFUlPCUc                        ReturnFunction */
 // J3DTevBlock::setTevKColorSel(u32, const u8*)
 void setTevKColorSel__11J3DTevBlockFUlPCUc() {
 	return;
 }
 
-/* 80322954 0004 .text      setTevKAlphaSel__11J3DTevBlockFUlPCUc                        */
+/* 80322954-80322958 0004 .text      setTevKAlphaSel__11J3DTevBlockFUlPCUc                        ReturnFunction */
 // J3DTevBlock::setTevKAlphaSel(u32, const u8*)
 void setTevKAlphaSel__11J3DTevBlockFUlPCUc() {
 	return;
 }
 
-/* 80322958 0004 .text      setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo     */
+/* 80322958-8032295C 0004 .text      setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo     ReturnFunction */
 // J3DTevBlock::setTevSwapModeInfo(u32, J3DTevSwapModeInfo)
 void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo() {
 	return;
 }
 
-/* 8032295C 0004 .text      setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo   */
+/* 8032295C-80322960 0004 .text      setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo   ReturnFunction */
 // J3DTevBlock::setTevSwapModeInfo(u32, const J3DTevSwapModeInfo*)
 void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo() {
 	return;
 }
 
-/* 80322960 0004 .text      setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable */
+/* 80322960-80322964 0004 .text      setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable ReturnFunction */
 // J3DTevBlock::setTevSwapModeTable(u32, const J3DTevSwapModeTable*)
 void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable() {
 	return;
 }
 
-/* 80322964 0008 .text      getTevRegOffset__11J3DTevBlockCFv                            */
+/* 80322964-8032296C 0008 .text      getTevRegOffset__11J3DTevBlockCFv                            ReturnIntegerFunction */
 // J3DTevBlock::getTevRegOffset(void) const
 int getTevRegOffset__11J3DTevBlockCFv() {
 	return 0;
 }
 
-/* 8032296C 0004 .text      setTevRegOffset__11J3DTevBlockFUl                            */
+/* 8032296C-80322970 0004 .text      setTevRegOffset__11J3DTevBlockFUl                            ReturnFunction */
 // J3DTevBlock::setTevRegOffset(u32)
 void setTevRegOffset__11J3DTevBlockFUl() {
 	return;
 }
 
-/* 80322970 0004 .text      load__18J3DTevBlockPatchedFv                                 */
+/* 80322970-80322974 0004 .text      load__18J3DTevBlockPatchedFv                                 ReturnFunction */
 // J3DTevBlockPatched::load(void)
 void load__18J3DTevBlockPatchedFv() {
 	return;
 }
 
-/* 80322974 0024 .text      indexToPtr__18J3DTevBlockPatchedFv                           */
+/* 80322974-80322998 0024 .text      indexToPtr__18J3DTevBlockPatchedFv                           Function */
 // J3DTevBlockPatched::indexToPtr(void)
 #pragma push
 #pragma optimization_level 0
@@ -4806,7 +5472,7 @@ asm void indexToPtr__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 80322998 000C .text      getType__18J3DTevBlockPatchedFv                              */
+/* 80322998-803229A4 000C .text      getType__18J3DTevBlockPatchedFv                              Function */
 // J3DTevBlockPatched::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -4817,7 +5483,7 @@ asm void getType__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 803229A4 0008 .text      setTevStageNum__18J3DTevBlockPatchedFUc                      */
+/* 803229A4-803229AC 0008 .text      setTevStageNum__18J3DTevBlockPatchedFUc                      Function */
 // J3DTevBlockPatched::setTevStageNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -4828,7 +5494,7 @@ asm void setTevStageNum__18J3DTevBlockPatchedFUc() {
 }
 #pragma pop
 
-/* 803229AC 000C .text      setTevStageNum__18J3DTevBlockPatchedFPCUc                    */
+/* 803229AC-803229B8 000C .text      setTevStageNum__18J3DTevBlockPatchedFPCUc                    Function */
 // J3DTevBlockPatched::setTevStageNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -4839,13 +5505,13 @@ asm void setTevStageNum__18J3DTevBlockPatchedFPCUc() {
 }
 #pragma pop
 
-/* 803229B8 0008 .text      getTevStageNum__18J3DTevBlockPatchedCFv                      */
+/* 803229B8-803229C0 0008 .text      getTevStageNum__18J3DTevBlockPatchedCFv                      FirstParamFunction */
 // J3DTevBlockPatched::getTevStageNum(void) const
 u8 getTevStageNum__18J3DTevBlockPatchedCFv(u8* param0) {
 	return *(u8*)&param0[208]; /* param0->field_0xd0 */
 }
 
-/* 803229C0 0010 .text      setTexNo__18J3DTevBlockPatchedFUlUs                          */
+/* 803229C0-803229D0 0010 .text      setTexNo__18J3DTevBlockPatchedFUlUs                          Function */
 // J3DTevBlockPatched::setTexNo(u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -4856,7 +5522,7 @@ asm void setTexNo__18J3DTevBlockPatchedFUlUs() {
 }
 #pragma pop
 
-/* 803229D0 0014 .text      setTexNo__18J3DTevBlockPatchedFUlPCUs                        */
+/* 803229D0-803229E4 0014 .text      setTexNo__18J3DTevBlockPatchedFUlPCUs                        Function */
 // J3DTevBlockPatched::setTexNo(u32, const u16*)
 #pragma push
 #pragma optimization_level 0
@@ -4867,7 +5533,7 @@ asm void setTexNo__18J3DTevBlockPatchedFUlPCUs() {
 }
 #pragma pop
 
-/* 803229E4 0010 .text      getTexNo__18J3DTevBlockPatchedCFUl                           */
+/* 803229E4-803229F4 0010 .text      getTexNo__18J3DTevBlockPatchedCFUl                           Function */
 // J3DTevBlockPatched::getTexNo(u32) const
 #pragma push
 #pragma optimization_level 0
@@ -4878,7 +5544,7 @@ asm void getTexNo__18J3DTevBlockPatchedCFUl() {
 }
 #pragma pop
 
-/* 803229F4 0014 .text      setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder            */
+/* 803229F4-80322A08 0014 .text      setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder            Function */
 // J3DTevBlockPatched::setTevOrder(u32, J3DTevOrder)
 #pragma push
 #pragma optimization_level 0
@@ -4889,7 +5555,7 @@ asm void setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322A08 0014 .text      setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder          */
+/* 80322A08-80322A1C 0014 .text      setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder          Function */
 // J3DTevBlockPatched::setTevOrder(u32, const J3DTevOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -4900,7 +5566,7 @@ asm void setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder() {
 }
 #pragma pop
 
-/* 80322A1C 0014 .text      getTevOrder__18J3DTevBlockPatchedFUl                         */
+/* 80322A1C-80322A30 0014 .text      getTevOrder__18J3DTevBlockPatchedFUl                         Function */
 // J3DTevBlockPatched::getTevOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4911,7 +5577,7 @@ asm void getTevOrder__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322A30 003C .text      setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage            */
+/* 80322A30-80322A6C 003C .text      setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage            Function */
 // J3DTevBlockPatched::setTevStage(u32, J3DTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4922,7 +5588,7 @@ asm void setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage() {
 }
 #pragma pop
 
-/* 80322A6C 003C .text      setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage          */
+/* 80322A6C-80322AA8 003C .text      setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage          Function */
 // J3DTevBlockPatched::setTevStage(u32, const J3DTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4933,7 +5599,7 @@ asm void setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage() {
 }
 #pragma pop
 
-/* 80322AA8 0014 .text      getTevStage__18J3DTevBlockPatchedFUl                         */
+/* 80322AA8-80322ABC 0014 .text      getTevStage__18J3DTevBlockPatchedFUl                         Function */
 // J3DTevBlockPatched::getTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4944,7 +5610,7 @@ asm void getTevStage__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322ABC 0014 .text      setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage      */
+/* 80322ABC-80322AD0 0014 .text      setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage      Function */
 // J3DTevBlockPatched::setIndTevStage(u32, J3DIndTevStage)
 #pragma push
 #pragma optimization_level 0
@@ -4955,7 +5621,7 @@ asm void setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80322AD0 0014 .text      setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage    */
+/* 80322AD0-80322AE4 0014 .text      setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage    Function */
 // J3DTevBlockPatched::setIndTevStage(u32, const J3DIndTevStage*)
 #pragma push
 #pragma optimization_level 0
@@ -4966,7 +5632,7 @@ asm void setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage() {
 }
 #pragma pop
 
-/* 80322AE4 0014 .text      getIndTevStage__18J3DTevBlockPatchedFUl                      */
+/* 80322AE4-80322AF8 0014 .text      getIndTevStage__18J3DTevBlockPatchedFUl                      Function */
 // J3DTevBlockPatched::getIndTevStage(u32)
 #pragma push
 #pragma optimization_level 0
@@ -4977,7 +5643,7 @@ asm void getIndTevStage__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322AF8 002C .text      setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10          */
+/* 80322AF8-80322B24 002C .text      setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10          Function */
 // J3DTevBlockPatched::setTevColor(u32, J3DGXColorS10)
 #pragma push
 #pragma optimization_level 0
@@ -4988,7 +5654,7 @@ asm void setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 80322B24 002C .text      setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10        */
+/* 80322B24-80322B50 002C .text      setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10        Function */
 // J3DTevBlockPatched::setTevColor(u32, const J3DGXColorS10*)
 #pragma push
 #pragma optimization_level 0
@@ -4999,7 +5665,7 @@ asm void setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10() {
 }
 #pragma pop
 
-/* 80322B50 0014 .text      getTevColor__18J3DTevBlockPatchedFUl                         */
+/* 80322B50-80322B64 0014 .text      getTevColor__18J3DTevBlockPatchedFUl                         Function */
 // J3DTevBlockPatched::getTevColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5010,7 +5676,7 @@ asm void getTevColor__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322B64 002C .text      setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor            */
+/* 80322B64-80322B90 002C .text      setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor            Function */
 // J3DTevBlockPatched::setTevKColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -5021,7 +5687,7 @@ asm void setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322B90 002C .text      setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor          */
+/* 80322B90-80322BBC 002C .text      setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor          Function */
 // J3DTevBlockPatched::setTevKColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -5032,7 +5698,7 @@ asm void setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322BBC 0014 .text      getTevKColor__18J3DTevBlockPatchedFUl                        */
+/* 80322BBC-80322BD0 0014 .text      getTevKColor__18J3DTevBlockPatchedFUl                        Function */
 // J3DTevBlockPatched::getTevKColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5043,7 +5709,7 @@ asm void getTevKColor__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322BD0 000C .text      setTevKColorSel__18J3DTevBlockPatchedFUlUc                   */
+/* 80322BD0-80322BDC 000C .text      setTevKColorSel__18J3DTevBlockPatchedFUlUc                   Function */
 // J3DTevBlockPatched::setTevKColorSel(u32, u8)
 #pragma push
 #pragma optimization_level 0
@@ -5054,7 +5720,7 @@ asm void setTevKColorSel__18J3DTevBlockPatchedFUlUc() {
 }
 #pragma pop
 
-/* 80322BDC 0010 .text      setTevKColorSel__18J3DTevBlockPatchedFUlPCUc                 */
+/* 80322BDC-80322BEC 0010 .text      setTevKColorSel__18J3DTevBlockPatchedFUlPCUc                 Function */
 // J3DTevBlockPatched::setTevKColorSel(u32, const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -5065,7 +5731,7 @@ asm void setTevKColorSel__18J3DTevBlockPatchedFUlPCUc() {
 }
 #pragma pop
 
-/* 80322BEC 000C .text      getTevKColorSel__18J3DTevBlockPatchedFUl                     */
+/* 80322BEC-80322BF8 000C .text      getTevKColorSel__18J3DTevBlockPatchedFUl                     Function */
 // J3DTevBlockPatched::getTevKColorSel(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5076,19 +5742,19 @@ asm void getTevKColorSel__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322BF8 0008 .text      getTexNoOffset__18J3DTevBlockPatchedCFv                      */
+/* 80322BF8-80322C00 0008 .text      getTexNoOffset__18J3DTevBlockPatchedCFv                      FirstParamFunction */
 // J3DTevBlockPatched::getTexNoOffset(void) const
 u32 getTexNoOffset__18J3DTevBlockPatchedCFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80322C00 0008 .text      getTevRegOffset__18J3DTevBlockPatchedCFv                     */
+/* 80322C00-80322C08 0008 .text      getTevRegOffset__18J3DTevBlockPatchedCFv                     FirstParamFunction */
 // J3DTevBlockPatched::getTevRegOffset(void) const
 u32 getTevRegOffset__18J3DTevBlockPatchedCFv(u8* param0) {
 	return *(u32*)&param0[212]; /* param0->field_0xd4 */
 }
 
-/* 80322C08 0008 .text      setTevRegOffset__18J3DTevBlockPatchedFUl                     */
+/* 80322C08-80322C10 0008 .text      setTevRegOffset__18J3DTevBlockPatchedFUl                     Function */
 // J3DTevBlockPatched::setTevRegOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5099,7 +5765,7 @@ asm void setTevRegOffset__18J3DTevBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322C10 005C .text      __dt__18J3DTevBlockPatchedFv                                 */
+/* 80322C10-80322C6C 005C .text      __dt__18J3DTevBlockPatchedFv                                 Function */
 // J3DTevBlockPatched::~J3DTevBlockPatched(void)
 #pragma push
 #pragma optimization_level 0
@@ -5110,7 +5776,7 @@ asm void __dt__18J3DTevBlockPatchedFv() {
 }
 #pragma pop
 
-/* 80322C6C 000C .text      getType__19J3DTexGenBlockBasicFv                             */
+/* 80322C6C-80322C78 000C .text      getType__19J3DTexGenBlockBasicFv                             Function */
 // J3DTexGenBlockBasic::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5121,7 +5787,7 @@ asm void getType__19J3DTexGenBlockBasicFv() {
 }
 #pragma pop
 
-/* 80322C78 0024 .text      setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale             */
+/* 80322C78-80322C9C 0024 .text      setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale             Function */
 // J3DTexGenBlockBasic::setNBTScale(J3DNBTScale)
 #pragma push
 #pragma optimization_level 0
@@ -5132,7 +5798,7 @@ asm void setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale() {
 }
 #pragma pop
 
-/* 80322C9C 0024 .text      setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale           */
+/* 80322C9C-80322CC0 0024 .text      setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale           Function */
 // J3DTexGenBlockBasic::setNBTScale(const J3DNBTScale*)
 #pragma push
 #pragma optimization_level 0
@@ -5143,13 +5809,13 @@ asm void setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale() {
 }
 #pragma pop
 
-/* 80322CC0 0008 .text      getNBTScale__19J3DTexGenBlockBasicFv                         */
+/* 80322CC0-80322CC8 0008 .text      getNBTScale__19J3DTexGenBlockBasicFv                         FirstParamFunction */
 // J3DTexGenBlockBasic::getNBTScale(void)
 u8* getNBTScale__19J3DTexGenBlockBasicFv(u8* param0) {
 	return (u8*)&param0[92]; /* param0->field_0x5c */
 }
 
-/* 80322CC8 006C .text      __dt__19J3DTexGenBlockBasicFv                                */
+/* 80322CC8-80322D34 006C .text      __dt__19J3DTexGenBlockBasicFv                                Function */
 // J3DTexGenBlockBasic::~J3DTexGenBlockBasic(void)
 #pragma push
 #pragma optimization_level 0
@@ -5160,7 +5826,7 @@ asm void __dt__19J3DTexGenBlockBasicFv() {
 }
 #pragma pop
 
-/* 80322D34 0008 .text      setTexGenNum__21J3DTexGenBlockPatchedFUl                     */
+/* 80322D34-80322D3C 0008 .text      setTexGenNum__21J3DTexGenBlockPatchedFUl                     Function */
 // J3DTexGenBlockPatched::setTexGenNum(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5171,7 +5837,7 @@ asm void setTexGenNum__21J3DTexGenBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322D3C 000C .text      setTexGenNum__21J3DTexGenBlockPatchedFPCUl                   */
+/* 80322D3C-80322D48 000C .text      setTexGenNum__21J3DTexGenBlockPatchedFPCUl                   Function */
 // J3DTexGenBlockPatched::setTexGenNum(const u32*)
 #pragma push
 #pragma optimization_level 0
@@ -5182,13 +5848,13 @@ asm void setTexGenNum__21J3DTexGenBlockPatchedFPCUl() {
 }
 #pragma pop
 
-/* 80322D48 0008 .text      getTexGenNum__21J3DTexGenBlockPatchedCFv                     */
+/* 80322D48-80322D50 0008 .text      getTexGenNum__21J3DTexGenBlockPatchedCFv                     FirstParamFunction */
 // J3DTexGenBlockPatched::getTexGenNum(void) const
 u32 getTexGenNum__21J3DTexGenBlockPatchedCFv(u8* param0) {
 	return *(u32*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 80322D50 0014 .text      setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord       */
+/* 80322D50-80322D64 0014 .text      setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord       Function */
 // J3DTexGenBlockPatched::setTexCoord(u32, const J3DTexCoord*)
 #pragma push
 #pragma optimization_level 0
@@ -5199,7 +5865,7 @@ asm void setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord() {
 }
 #pragma pop
 
-/* 80322D64 0014 .text      getTexCoord__21J3DTexGenBlockPatchedFUl                      */
+/* 80322D64-80322D78 0014 .text      getTexCoord__21J3DTexGenBlockPatchedFUl                      Function */
 // J3DTexGenBlockPatched::getTexCoord(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5210,7 +5876,7 @@ asm void getTexCoord__21J3DTexGenBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322D78 0010 .text      setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx             */
+/* 80322D78-80322D88 0010 .text      setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx             Function */
 // J3DTexGenBlockPatched::setTexMtx(u32, J3DTexMtx*)
 #pragma push
 #pragma optimization_level 0
@@ -5221,7 +5887,7 @@ asm void setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx() {
 }
 #pragma pop
 
-/* 80322D88 0010 .text      getTexMtx__21J3DTexGenBlockPatchedFUl                        */
+/* 80322D88-80322D98 0010 .text      getTexMtx__21J3DTexGenBlockPatchedFUl                        Function */
 // J3DTexGenBlockPatched::getTexMtx(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5232,13 +5898,13 @@ asm void getTexMtx__21J3DTexGenBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322D98 0008 .text      getTexMtxOffset__21J3DTexGenBlockPatchedCFv                  */
+/* 80322D98-80322DA0 0008 .text      getTexMtxOffset__21J3DTexGenBlockPatchedCFv                  FirstParamFunction */
 // J3DTexGenBlockPatched::getTexMtxOffset(void) const
 u32 getTexMtxOffset__21J3DTexGenBlockPatchedCFv(u8* param0) {
 	return *(u32*)&param0[88]; /* param0->field_0x58 */
 }
 
-/* 80322DA0 0008 .text      setTexMtxOffset__21J3DTexGenBlockPatchedFUl                  */
+/* 80322DA0-80322DA8 0008 .text      setTexMtxOffset__21J3DTexGenBlockPatchedFUl                  Function */
 // J3DTexGenBlockPatched::setTexMtxOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5249,7 +5915,7 @@ asm void setTexMtxOffset__21J3DTexGenBlockPatchedFUl() {
 }
 #pragma pop
 
-/* 80322DA8 000C .text      getType__15J3DTexGenBlock4Fv                                 */
+/* 80322DA8-80322DB4 000C .text      getType__15J3DTexGenBlock4Fv                                 Function */
 // J3DTexGenBlock4::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5260,7 +5926,7 @@ asm void getType__15J3DTexGenBlock4Fv() {
 }
 #pragma pop
 
-/* 80322DB4 0024 .text      setNBTScale__15J3DTexGenBlock4F11J3DNBTScale                 */
+/* 80322DB4-80322DD8 0024 .text      setNBTScale__15J3DTexGenBlock4F11J3DNBTScale                 Function */
 // J3DTexGenBlock4::setNBTScale(J3DNBTScale)
 #pragma push
 #pragma optimization_level 0
@@ -5271,7 +5937,7 @@ asm void setNBTScale__15J3DTexGenBlock4F11J3DNBTScale() {
 }
 #pragma pop
 
-/* 80322DD8 0024 .text      setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale               */
+/* 80322DD8-80322DFC 0024 .text      setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale               Function */
 // J3DTexGenBlock4::setNBTScale(const J3DNBTScale*)
 #pragma push
 #pragma optimization_level 0
@@ -5282,13 +5948,13 @@ asm void setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale() {
 }
 #pragma pop
 
-/* 80322DFC 0008 .text      getNBTScale__15J3DTexGenBlock4Fv                             */
+/* 80322DFC-80322E04 0008 .text      getNBTScale__15J3DTexGenBlock4Fv                             FirstParamFunction */
 // J3DTexGenBlock4::getNBTScale(void)
 u8* getNBTScale__15J3DTexGenBlock4Fv(u8* param0) {
 	return (u8*)&param0[92]; /* param0->field_0x5c */
 }
 
-/* 80322E04 006C .text      __dt__15J3DTexGenBlock4Fv                                    */
+/* 80322E04-80322E70 006C .text      __dt__15J3DTexGenBlock4Fv                                    Function */
 // J3DTexGenBlock4::~J3DTexGenBlock4(void)
 #pragma push
 #pragma optimization_level 0
@@ -5299,13 +5965,13 @@ asm void __dt__15J3DTexGenBlock4Fv() {
 }
 #pragma pop
 
-/* 80322E70 0004 .text      load__21J3DTexGenBlockPatchedFv                              */
+/* 80322E70-80322E74 0004 .text      load__21J3DTexGenBlockPatchedFv                              ReturnFunction */
 // J3DTexGenBlockPatched::load(void)
 void load__21J3DTexGenBlockPatchedFv() {
 	return;
 }
 
-/* 80322E74 000C .text      getType__21J3DTexGenBlockPatchedFv                           */
+/* 80322E74-80322E80 000C .text      getType__21J3DTexGenBlockPatchedFv                           Function */
 // J3DTexGenBlockPatched::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5316,7 +5982,7 @@ asm void getType__21J3DTexGenBlockPatchedFv() {
 }
 #pragma pop
 
-/* 80322E80 000C .text      getType__20J3DColorBlockLightOnFv                            */
+/* 80322E80-80322E8C 000C .text      getType__20J3DColorBlockLightOnFv                            Function */
 // J3DColorBlockLightOn::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5327,7 +5993,7 @@ asm void getType__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80322E8C 002C .text      setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor           */
+/* 80322E8C-80322EB8 002C .text      setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor           Function */
 // J3DColorBlockLightOn::setMatColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -5338,7 +6004,7 @@ asm void setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322EB8 002C .text      setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor         */
+/* 80322EB8-80322EE4 002C .text      setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor         Function */
 // J3DColorBlockLightOn::setMatColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -5349,7 +6015,7 @@ asm void setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322EE4 0014 .text      getMatColor__20J3DColorBlockLightOnFUl                       */
+/* 80322EE4-80322EF8 0014 .text      getMatColor__20J3DColorBlockLightOnFUl                       Function */
 // J3DColorBlockLightOn::getMatColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5360,7 +6026,7 @@ asm void getMatColor__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80322EF8 002C .text      setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor           */
+/* 80322EF8-80322F24 002C .text      setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor           Function */
 // J3DColorBlockLightOn::setAmbColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -5371,7 +6037,7 @@ asm void setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322F24 002C .text      setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor         */
+/* 80322F24-80322F50 002C .text      setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor         Function */
 // J3DColorBlockLightOn::setAmbColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -5382,7 +6048,7 @@ asm void setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 80322F50 0014 .text      getAmbColor__20J3DColorBlockLightOnFUl                       */
+/* 80322F50-80322F64 0014 .text      getAmbColor__20J3DColorBlockLightOnFUl                       Function */
 // J3DColorBlockLightOn::getAmbColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5393,7 +6059,7 @@ asm void getAmbColor__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80322F64 000C .text      setColorChanNum__20J3DColorBlockLightOnFPCUc                 */
+/* 80322F64-80322F70 000C .text      setColorChanNum__20J3DColorBlockLightOnFPCUc                 Function */
 // J3DColorBlockLightOn::setColorChanNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -5404,7 +6070,7 @@ asm void setColorChanNum__20J3DColorBlockLightOnFPCUc() {
 }
 #pragma pop
 
-/* 80322F70 0008 .text      setColorChanNum__20J3DColorBlockLightOnFUc                   */
+/* 80322F70-80322F78 0008 .text      setColorChanNum__20J3DColorBlockLightOnFUc                   Function */
 // J3DColorBlockLightOn::setColorChanNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -5415,13 +6081,13 @@ asm void setColorChanNum__20J3DColorBlockLightOnFUc() {
 }
 #pragma pop
 
-/* 80322F78 0008 .text      getColorChanNum__20J3DColorBlockLightOnCFv                   */
+/* 80322F78-80322F80 0008 .text      getColorChanNum__20J3DColorBlockLightOnCFv                   FirstParamFunction */
 // J3DColorBlockLightOn::getColorChanNum(void) const
 u8 getColorChanNum__20J3DColorBlockLightOnCFv(u8* param0) {
 	return *(u8*)&param0[20]; /* param0->field_0x14 */
 }
 
-/* 80322F80 0014 .text      setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan      */
+/* 80322F80-80322F94 0014 .text      setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan      Function */
 // J3DColorBlockLightOn::setColorChan(u32, const J3DColorChan*)
 #pragma push
 #pragma optimization_level 0
@@ -5432,7 +6098,7 @@ asm void setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan() {
 }
 #pragma pop
 
-/* 80322F94 0014 .text      setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan      */
+/* 80322F94-80322FA8 0014 .text      setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan      Function */
 // J3DColorBlockLightOn::setColorChan(u32, const J3DColorChan&)
 #pragma push
 #pragma optimization_level 0
@@ -5443,7 +6109,7 @@ asm void setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan() {
 }
 #pragma pop
 
-/* 80322FA8 0014 .text      getColorChan__20J3DColorBlockLightOnFUl                      */
+/* 80322FA8-80322FBC 0014 .text      getColorChan__20J3DColorBlockLightOnFUl                      Function */
 // J3DColorBlockLightOn::getColorChan(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5454,7 +6120,7 @@ asm void getColorChan__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80322FBC 0010 .text      setLight__20J3DColorBlockLightOnFUlP11J3DLightObj            */
+/* 80322FBC-80322FCC 0010 .text      setLight__20J3DColorBlockLightOnFUlP11J3DLightObj            Function */
 // J3DColorBlockLightOn::setLight(u32, J3DLightObj*)
 #pragma push
 #pragma optimization_level 0
@@ -5465,7 +6131,7 @@ asm void setLight__20J3DColorBlockLightOnFUlP11J3DLightObj() {
 }
 #pragma pop
 
-/* 80322FCC 0010 .text      getLight__20J3DColorBlockLightOnFUl                          */
+/* 80322FCC-80322FDC 0010 .text      getLight__20J3DColorBlockLightOnFUl                          Function */
 // J3DColorBlockLightOn::getLight(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5476,7 +6142,7 @@ asm void getLight__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80322FDC 0008 .text      setCullMode__20J3DColorBlockLightOnFUc                       */
+/* 80322FDC-80322FE4 0008 .text      setCullMode__20J3DColorBlockLightOnFUc                       Function */
 // J3DColorBlockLightOn::setCullMode(u8)
 #pragma push
 #pragma optimization_level 0
@@ -5487,7 +6153,7 @@ asm void setCullMode__20J3DColorBlockLightOnFUc() {
 }
 #pragma pop
 
-/* 80322FE4 000C .text      setCullMode__20J3DColorBlockLightOnFPCUc                     */
+/* 80322FE4-80322FF0 000C .text      setCullMode__20J3DColorBlockLightOnFPCUc                     Function */
 // J3DColorBlockLightOn::setCullMode(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -5498,25 +6164,25 @@ asm void setCullMode__20J3DColorBlockLightOnFPCUc() {
 }
 #pragma pop
 
-/* 80322FF0 0008 .text      getCullMode__20J3DColorBlockLightOnCFv                       */
+/* 80322FF0-80322FF8 0008 .text      getCullMode__20J3DColorBlockLightOnCFv                       FirstParamFunction */
 // J3DColorBlockLightOn::getCullMode(void) const
 u8 getCullMode__20J3DColorBlockLightOnCFv(u8* param0) {
 	return *(u8*)&param0[64]; /* param0->field_0x40 */
 }
 
-/* 80322FF8 0008 .text      getMatColorOffset__20J3DColorBlockLightOnCFv                 */
+/* 80322FF8-80323000 0008 .text      getMatColorOffset__20J3DColorBlockLightOnCFv                 FirstParamFunction */
 // J3DColorBlockLightOn::getMatColorOffset(void) const
 u32 getMatColorOffset__20J3DColorBlockLightOnCFv(u8* param0) {
 	return *(u32*)&param0[68]; /* param0->field_0x44 */
 }
 
-/* 80323000 0008 .text      getColorChanOffset__20J3DColorBlockLightOnCFv                */
+/* 80323000-80323008 0008 .text      getColorChanOffset__20J3DColorBlockLightOnCFv                FirstParamFunction */
 // J3DColorBlockLightOn::getColorChanOffset(void) const
 u32 getColorChanOffset__20J3DColorBlockLightOnCFv(u8* param0) {
 	return *(u32*)&param0[72]; /* param0->field_0x48 */
 }
 
-/* 80323008 0008 .text      setMatColorOffset__20J3DColorBlockLightOnFUl                 */
+/* 80323008-80323010 0008 .text      setMatColorOffset__20J3DColorBlockLightOnFUl                 Function */
 // J3DColorBlockLightOn::setMatColorOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5527,7 +6193,7 @@ asm void setMatColorOffset__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80323010 0008 .text      setColorChanOffset__20J3DColorBlockLightOnFUl                */
+/* 80323010-80323018 0008 .text      setColorChanOffset__20J3DColorBlockLightOnFUl                Function */
 // J3DColorBlockLightOn::setColorChanOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5538,7 +6204,7 @@ asm void setColorChanOffset__20J3DColorBlockLightOnFUl() {
 }
 #pragma pop
 
-/* 80323018 005C .text      __dt__20J3DColorBlockLightOnFv                               */
+/* 80323018-80323074 005C .text      __dt__20J3DColorBlockLightOnFv                               Function */
 // J3DColorBlockLightOn::~J3DColorBlockLightOn(void)
 #pragma push
 #pragma optimization_level 0
@@ -5549,7 +6215,7 @@ asm void __dt__20J3DColorBlockLightOnFv() {
 }
 #pragma pop
 
-/* 80323074 000C .text      getType__22J3DColorBlockAmbientOnFv                          */
+/* 80323074-80323080 000C .text      getType__22J3DColorBlockAmbientOnFv                          Function */
 // J3DColorBlockAmbientOn::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5560,7 +6226,7 @@ asm void getType__22J3DColorBlockAmbientOnFv() {
 }
 #pragma pop
 
-/* 80323080 002C .text      setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor         */
+/* 80323080-803230AC 002C .text      setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor         Function */
 // J3DColorBlockAmbientOn::setAmbColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -5571,7 +6237,7 @@ asm void setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 803230AC 002C .text      setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor       */
+/* 803230AC-803230D8 002C .text      setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor       Function */
 // J3DColorBlockAmbientOn::setAmbColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -5582,7 +6248,7 @@ asm void setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 803230D8 0014 .text      getAmbColor__22J3DColorBlockAmbientOnFUl                     */
+/* 803230D8-803230EC 0014 .text      getAmbColor__22J3DColorBlockAmbientOnFUl                     Function */
 // J3DColorBlockAmbientOn::getAmbColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5593,7 +6259,7 @@ asm void getAmbColor__22J3DColorBlockAmbientOnFUl() {
 }
 #pragma pop
 
-/* 803230EC 006C .text      __dt__22J3DColorBlockAmbientOnFv                             */
+/* 803230EC-80323158 006C .text      __dt__22J3DColorBlockAmbientOnFv                             Function */
 // J3DColorBlockAmbientOn::~J3DColorBlockAmbientOn(void)
 #pragma push
 #pragma optimization_level 0
@@ -5604,7 +6270,7 @@ asm void __dt__22J3DColorBlockAmbientOnFv() {
 }
 #pragma pop
 
-/* 80323158 002C .text      setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor          */
+/* 80323158-80323184 002C .text      setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor          Function */
 // J3DColorBlockLightOff::setMatColor(u32, J3DGXColor)
 #pragma push
 #pragma optimization_level 0
@@ -5615,7 +6281,7 @@ asm void setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor() {
 }
 #pragma pop
 
-/* 80323184 002C .text      setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor        */
+/* 80323184-803231B0 002C .text      setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor        Function */
 // J3DColorBlockLightOff::setMatColor(u32, const J3DGXColor*)
 #pragma push
 #pragma optimization_level 0
@@ -5626,7 +6292,7 @@ asm void setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor() {
 }
 #pragma pop
 
-/* 803231B0 0014 .text      getMatColor__21J3DColorBlockLightOffFUl                      */
+/* 803231B0-803231C4 0014 .text      getMatColor__21J3DColorBlockLightOffFUl                      Function */
 // J3DColorBlockLightOff::getMatColor(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5637,7 +6303,7 @@ asm void getMatColor__21J3DColorBlockLightOffFUl() {
 }
 #pragma pop
 
-/* 803231C4 000C .text      setColorChanNum__21J3DColorBlockLightOffFPCUc                */
+/* 803231C4-803231D0 000C .text      setColorChanNum__21J3DColorBlockLightOffFPCUc                Function */
 // J3DColorBlockLightOff::setColorChanNum(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -5648,7 +6314,7 @@ asm void setColorChanNum__21J3DColorBlockLightOffFPCUc() {
 }
 #pragma pop
 
-/* 803231D0 0008 .text      setColorChanNum__21J3DColorBlockLightOffFUc                  */
+/* 803231D0-803231D8 0008 .text      setColorChanNum__21J3DColorBlockLightOffFUc                  Function */
 // J3DColorBlockLightOff::setColorChanNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -5659,13 +6325,13 @@ asm void setColorChanNum__21J3DColorBlockLightOffFUc() {
 }
 #pragma pop
 
-/* 803231D8 0008 .text      getColorChanNum__21J3DColorBlockLightOffCFv                  */
+/* 803231D8-803231E0 0008 .text      getColorChanNum__21J3DColorBlockLightOffCFv                  FirstParamFunction */
 // J3DColorBlockLightOff::getColorChanNum(void) const
 u8 getColorChanNum__21J3DColorBlockLightOffCFv(u8* param0) {
 	return *(u8*)&param0[12]; /* param0->field_0xc */
 }
 
-/* 803231E0 0014 .text      setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan     */
+/* 803231E0-803231F4 0014 .text      setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan     Function */
 // J3DColorBlockLightOff::setColorChan(u32, const J3DColorChan*)
 #pragma push
 #pragma optimization_level 0
@@ -5676,7 +6342,7 @@ asm void setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan() {
 }
 #pragma pop
 
-/* 803231F4 0014 .text      setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan     */
+/* 803231F4-80323208 0014 .text      setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan     Function */
 // J3DColorBlockLightOff::setColorChan(u32, const J3DColorChan&)
 #pragma push
 #pragma optimization_level 0
@@ -5687,7 +6353,7 @@ asm void setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan() {
 }
 #pragma pop
 
-/* 80323208 0014 .text      getColorChan__21J3DColorBlockLightOffFUl                     */
+/* 80323208-8032321C 0014 .text      getColorChan__21J3DColorBlockLightOffFUl                     Function */
 // J3DColorBlockLightOff::getColorChan(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5698,7 +6364,7 @@ asm void getColorChan__21J3DColorBlockLightOffFUl() {
 }
 #pragma pop
 
-/* 8032321C 0008 .text      setCullMode__21J3DColorBlockLightOffFUc                      */
+/* 8032321C-80323224 0008 .text      setCullMode__21J3DColorBlockLightOffFUc                      Function */
 // J3DColorBlockLightOff::setCullMode(u8)
 #pragma push
 #pragma optimization_level 0
@@ -5709,7 +6375,7 @@ asm void setCullMode__21J3DColorBlockLightOffFUc() {
 }
 #pragma pop
 
-/* 80323224 000C .text      setCullMode__21J3DColorBlockLightOffFPCUc                    */
+/* 80323224-80323230 000C .text      setCullMode__21J3DColorBlockLightOffFPCUc                    Function */
 // J3DColorBlockLightOff::setCullMode(const u8*)
 #pragma push
 #pragma optimization_level 0
@@ -5720,25 +6386,25 @@ asm void setCullMode__21J3DColorBlockLightOffFPCUc() {
 }
 #pragma pop
 
-/* 80323230 0008 .text      getCullMode__21J3DColorBlockLightOffCFv                      */
+/* 80323230-80323238 0008 .text      getCullMode__21J3DColorBlockLightOffCFv                      FirstParamFunction */
 // J3DColorBlockLightOff::getCullMode(void) const
 u8 getCullMode__21J3DColorBlockLightOffCFv(u8* param0) {
 	return *(u8*)&param0[22]; /* param0->field_0x16 */
 }
 
-/* 80323238 0008 .text      getMatColorOffset__21J3DColorBlockLightOffCFv                */
+/* 80323238-80323240 0008 .text      getMatColorOffset__21J3DColorBlockLightOffCFv                FirstParamFunction */
 // J3DColorBlockLightOff::getMatColorOffset(void) const
 u32 getMatColorOffset__21J3DColorBlockLightOffCFv(u8* param0) {
 	return *(u32*)&param0[24]; /* param0->field_0x18 */
 }
 
-/* 80323240 0008 .text      getColorChanOffset__21J3DColorBlockLightOffCFv               */
+/* 80323240-80323248 0008 .text      getColorChanOffset__21J3DColorBlockLightOffCFv               FirstParamFunction */
 // J3DColorBlockLightOff::getColorChanOffset(void) const
 u32 getColorChanOffset__21J3DColorBlockLightOffCFv(u8* param0) {
 	return *(u32*)&param0[28]; /* param0->field_0x1c */
 }
 
-/* 80323248 0008 .text      setMatColorOffset__21J3DColorBlockLightOffFUl                */
+/* 80323248-80323250 0008 .text      setMatColorOffset__21J3DColorBlockLightOffFUl                Function */
 // J3DColorBlockLightOff::setMatColorOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5749,7 +6415,7 @@ asm void setMatColorOffset__21J3DColorBlockLightOffFUl() {
 }
 #pragma pop
 
-/* 80323250 0008 .text      setColorChanOffset__21J3DColorBlockLightOffFUl               */
+/* 80323250-80323258 0008 .text      setColorChanOffset__21J3DColorBlockLightOffFUl               Function */
 // J3DColorBlockLightOff::setColorChanOffset(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5760,7 +6426,7 @@ asm void setColorChanOffset__21J3DColorBlockLightOffFUl() {
 }
 #pragma pop
 
-/* 80323258 000C .text      getType__13J3DPEBlockXluFv                                   */
+/* 80323258-80323264 000C .text      getType__13J3DPEBlockXluFv                                   Function */
 // J3DPEBlockXlu::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5771,7 +6437,7 @@ asm void getType__13J3DPEBlockXluFv() {
 }
 #pragma pop
 
-/* 80323264 005C .text      __dt__13J3DPEBlockXluFv                                      */
+/* 80323264-803232C0 005C .text      __dt__13J3DPEBlockXluFv                                      Function */
 // J3DPEBlockXlu::~J3DPEBlockXlu(void)
 #pragma push
 #pragma optimization_level 0
@@ -5782,7 +6448,7 @@ asm void __dt__13J3DPEBlockXluFv() {
 }
 #pragma pop
 
-/* 803232C0 000C .text      getType__17J3DPEBlockTexEdgeFv                               */
+/* 803232C0-803232CC 000C .text      getType__17J3DPEBlockTexEdgeFv                               Function */
 // J3DPEBlockTexEdge::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5793,7 +6459,7 @@ asm void getType__17J3DPEBlockTexEdgeFv() {
 }
 #pragma pop
 
-/* 803232CC 005C .text      __dt__17J3DPEBlockTexEdgeFv                                  */
+/* 803232CC-80323328 005C .text      __dt__17J3DPEBlockTexEdgeFv                                  Function */
 // J3DPEBlockTexEdge::~J3DPEBlockTexEdge(void)
 #pragma push
 #pragma optimization_level 0
@@ -5804,7 +6470,7 @@ asm void __dt__17J3DPEBlockTexEdgeFv() {
 }
 #pragma pop
 
-/* 80323328 000C .text      getType__13J3DPEBlockOpaFv                                   */
+/* 80323328-80323334 000C .text      getType__13J3DPEBlockOpaFv                                   Function */
 // J3DPEBlockOpa::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5815,7 +6481,7 @@ asm void getType__13J3DPEBlockOpaFv() {
 }
 #pragma pop
 
-/* 80323334 005C .text      __dt__13J3DPEBlockOpaFv                                      */
+/* 80323334-80323390 005C .text      __dt__13J3DPEBlockOpaFv                                      Function */
 // J3DPEBlockOpa::~J3DPEBlockOpa(void)
 #pragma push
 #pragma optimization_level 0
@@ -5826,7 +6492,7 @@ asm void __dt__13J3DPEBlockOpaFv() {
 }
 #pragma pop
 
-/* 80323390 000C .text      getType__15J3DIndBlockFullFv                                 */
+/* 80323390-8032339C 000C .text      getType__15J3DIndBlockFullFv                                 Function */
 // J3DIndBlockFull::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -5837,7 +6503,7 @@ asm void getType__15J3DIndBlockFullFv() {
 }
 #pragma pop
 
-/* 8032339C 0008 .text      setIndTexStageNum__15J3DIndBlockFullFUc                      */
+/* 8032339C-803233A4 0008 .text      setIndTexStageNum__15J3DIndBlockFullFUc                      Function */
 // J3DIndBlockFull::setIndTexStageNum(u8)
 #pragma push
 #pragma optimization_level 0
@@ -5848,13 +6514,13 @@ asm void setIndTexStageNum__15J3DIndBlockFullFUc() {
 }
 #pragma pop
 
-/* 803233A4 0008 .text      getIndTexStageNum__15J3DIndBlockFullCFv                      */
+/* 803233A4-803233AC 0008 .text      getIndTexStageNum__15J3DIndBlockFullCFv                      FirstParamFunction */
 // J3DIndBlockFull::getIndTexStageNum(void) const
 u8 getIndTexStageNum__15J3DIndBlockFullCFv(u8* param0) {
 	return *(u8*)&param0[4]; /* param0->field_0x4 */
 }
 
-/* 803233AC 0014 .text      setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder         */
+/* 803233AC-803233C0 0014 .text      setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder         Function */
 // J3DIndBlockFull::setIndTexOrder(u32, J3DIndTexOrder)
 #pragma push
 #pragma optimization_level 0
@@ -5865,7 +6531,7 @@ asm void setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder() {
 }
 #pragma pop
 
-/* 803233C0 0014 .text      setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder       */
+/* 803233C0-803233D4 0014 .text      setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder       Function */
 // J3DIndBlockFull::setIndTexOrder(u32, const J3DIndTexOrder*)
 #pragma push
 #pragma optimization_level 0
@@ -5876,7 +6542,7 @@ asm void setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder() {
 }
 #pragma pop
 
-/* 803233D4 0014 .text      getIndTexOrder__15J3DIndBlockFullFUl                         */
+/* 803233D4-803233E8 0014 .text      getIndTexOrder__15J3DIndBlockFullFUl                         Function */
 // J3DIndBlockFull::getIndTexOrder(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5887,7 +6553,7 @@ asm void getIndTexOrder__15J3DIndBlockFullFUl() {
 }
 #pragma pop
 
-/* 803233E8 0034 .text      setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx             */
+/* 803233E8-8032341C 0034 .text      setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx             Function */
 // J3DIndBlockFull::setIndTexMtx(u32, J3DIndTexMtx)
 #pragma push
 #pragma optimization_level 0
@@ -5898,7 +6564,7 @@ asm void setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx() {
 }
 #pragma pop
 
-/* 8032341C 0034 .text      setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx           */
+/* 8032341C-80323450 0034 .text      setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx           Function */
 // J3DIndBlockFull::setIndTexMtx(u32, const J3DIndTexMtx*)
 #pragma push
 #pragma optimization_level 0
@@ -5909,7 +6575,7 @@ asm void setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx() {
 }
 #pragma pop
 
-/* 80323450 0014 .text      getIndTexMtx__15J3DIndBlockFullFUl                           */
+/* 80323450-80323464 0014 .text      getIndTexMtx__15J3DIndBlockFullFUl                           Function */
 // J3DIndBlockFull::getIndTexMtx(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5920,7 +6586,7 @@ asm void getIndTexMtx__15J3DIndBlockFullFUl() {
 }
 #pragma pop
 
-/* 80323464 0014 .text      setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale */
+/* 80323464-80323478 0014 .text      setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale Function */
 // J3DIndBlockFull::setIndTexCoordScale(u32, J3DIndTexCoordScale)
 #pragma push
 #pragma optimization_level 0
@@ -5931,7 +6597,7 @@ asm void setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale() {
 }
 #pragma pop
 
-/* 80323478 0014 .text      setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale */
+/* 80323478-8032348C 0014 .text      setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale Function */
 // J3DIndBlockFull::setIndTexCoordScale(u32, const J3DIndTexCoordScale*)
 #pragma push
 #pragma optimization_level 0
@@ -5942,7 +6608,7 @@ asm void setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale() {
 }
 #pragma pop
 
-/* 8032348C 0014 .text      getIndTexCoordScale__15J3DIndBlockFullFUl                    */
+/* 8032348C-803234A0 0014 .text      getIndTexCoordScale__15J3DIndBlockFullFUl                    Function */
 // J3DIndBlockFull::getIndTexCoordScale(u32)
 #pragma push
 #pragma optimization_level 0
@@ -5953,7 +6619,7 @@ asm void getIndTexCoordScale__15J3DIndBlockFullFUl() {
 }
 #pragma pop
 
-/* 803234A0 009C .text      __dt__15J3DIndBlockFullFv                                    */
+/* 803234A0-8032353C 009C .text      __dt__15J3DIndBlockFullFv                                    Function */
 // J3DIndBlockFull::~J3DIndBlockFull(void)
 #pragma push
 #pragma optimization_level 0
@@ -5964,55 +6630,55 @@ asm void __dt__15J3DIndBlockFullFv() {
 }
 #pragma pop
 
-/* 8032353C 0004 .text      patchTexNo__11J3DTevBlockFv                                  */
+/* 8032353C-80323540 0004 .text      patchTexNo__11J3DTevBlockFv                                  ReturnFunction */
 // J3DTevBlock::patchTexNo(void)
 void patchTexNo__11J3DTevBlockFv() {
 	return;
 }
 
-/* 80323540 0004 .text      patchTevReg__11J3DTevBlockFv                                 */
+/* 80323540-80323544 0004 .text      patchTevReg__11J3DTevBlockFv                                 ReturnFunction */
 // J3DTevBlock::patchTevReg(void)
 void patchTevReg__11J3DTevBlockFv() {
 	return;
 }
 
-/* 80323544 0004 .text      setTexNo__11J3DTevBlockFUlPCUs                               */
+/* 80323544-80323548 0004 .text      setTexNo__11J3DTevBlockFUlPCUs                               ReturnFunction */
 // J3DTevBlock::setTexNo(u32, const u16*)
 void setTexNo__11J3DTevBlockFUlPCUs() {
 	return;
 }
 
-/* 80323548 0004 .text      setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder                 */
+/* 80323548-8032354C 0004 .text      setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder                 ReturnFunction */
 // J3DTevBlock::setTevOrder(u32, const J3DTevOrder*)
 void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder() {
 	return;
 }
 
-/* 8032354C 0004 .text      setTevStageNum__11J3DTevBlockFPCUc                           */
+/* 8032354C-80323550 0004 .text      setTevStageNum__11J3DTevBlockFPCUc                           ReturnFunction */
 // J3DTevBlock::setTevStageNum(const u8*)
 void setTevStageNum__11J3DTevBlockFPCUc() {
 	return;
 }
 
-/* 80323550 0004 .text      setTevStage__11J3DTevBlockFUlPC11J3DTevStage                 */
+/* 80323550-80323554 0004 .text      setTevStage__11J3DTevBlockFUlPC11J3DTevStage                 ReturnFunction */
 // J3DTevBlock::setTevStage(u32, const J3DTevStage*)
 void setTevStage__11J3DTevBlockFUlPC11J3DTevStage() {
 	return;
 }
 
-/* 80323554 0004 .text      setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage           */
+/* 80323554-80323558 0004 .text      setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage           ReturnFunction */
 // J3DTevBlock::setIndTevStage(u32, const J3DIndTevStage*)
 void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage() {
 	return;
 }
 
-/* 80323558 0008 .text      getTexNoOffset__11J3DTevBlockCFv                             */
+/* 80323558-80323560 0008 .text      getTexNoOffset__11J3DTevBlockCFv                             ReturnIntegerFunction */
 // J3DTevBlock::getTexNoOffset(void) const
 int getTexNoOffset__11J3DTevBlockCFv() {
 	return 0;
 }
 
-/* 80323560 000C .text      getType__21J3DColorBlockLightOffFv                           */
+/* 80323560-8032356C 000C .text      getType__21J3DColorBlockLightOffFv                           Function */
 // J3DColorBlockLightOff::getType(void)
 #pragma push
 #pragma optimization_level 0
@@ -6023,7 +6689,7 @@ asm void getType__21J3DColorBlockLightOffFv() {
 }
 #pragma pop
 
-/* 8032356C 0024 .text      __sinit_J3DMatBlock_cpp                                      */
+/* 8032356C-80323590 0024 .text      __sinit_J3DMatBlock_cpp                                      SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

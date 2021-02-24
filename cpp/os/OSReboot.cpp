@@ -9,13 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSSetArenaHi();
+/* Function             */
 extern void OSSetArenaLo();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void __OSBootDol();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
+extern void __OSReboot();
+/* Function             */
+extern void OSSetSaveRegion();
+/* Function             */
+extern void OSGetSaveRegion();
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SaveStart[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 SaveEnd[4];
 }
 
@@ -25,9 +39,9 @@ SECTION_SBSS extern u8 SaveEnd[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451688 0004 .sbss      SaveStart                                                    */
+/* 80451688-8045168C 0004 .sbss      SaveStart                                                    ZeroInitializedData */
 SECTION_SBSS u8 SaveStart[4];
-/* 8045168C 0004 .sbss      SaveEnd                                                      */
+/* 8045168C-80451690 0004 .sbss      SaveEnd                                                      ZeroInitializedData */
 SECTION_SBSS u8 SaveEnd[4];
 }
 
@@ -37,7 +51,7 @@ SECTION_SBSS u8 SaveEnd[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033F5D0 0070 .text      __OSReboot                                                   */
+/* 8033F5D0-8033F640 0070 .text      __OSReboot                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +61,7 @@ asm void __OSReboot() {
 }
 #pragma pop
 
-/* 8033F640 000C .text      OSSetSaveRegion                                              */
+/* 8033F640-8033F64C 000C .text      OSSetSaveRegion                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +71,7 @@ asm void OSSetSaveRegion() {
 }
 #pragma pop
 
-/* 8033F64C 0014 .text      OSGetSaveRegion                                              */
+/* 8033F64C-8033F660 0014 .text      OSGetSaveRegion                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

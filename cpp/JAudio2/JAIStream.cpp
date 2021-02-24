@@ -13,52 +13,107 @@ struct JASAramStream;
 extern void JAIStream_JASAramStreamCallback_(u32, JASAramStream*, void*); /* JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__17JASGenericMemPoolFv();
+/* Function             */
 extern void alloc__17JASGenericMemPoolFUl();
+/* Function             */
 extern void free__17JASGenericMemPoolFPvUl();
+/* Function             */
 extern void __ct__13JASAramStreamFv();
+/* Function             */
 extern void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
+/* Function             */
 extern void prepare__13JASAramStreamFli();
+/* Function             */
 extern void start__13JASAramStreamFv();
+/* Function             */
 extern void stop__13JASAramStreamFUs();
+/* Function             */
 extern void pause__13JASAramStreamFb();
+/* Function             */
 extern void cancel__13JASAramStreamFv();
+/* Function             */
 extern void func_802A1268();
+/* Function             */
 extern void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+/* Function             */
 extern void __ct__8JAISoundFv();
+/* Function             */
 extern void func_802A2328();
-extern int asSe__8JAISoundFv();
-extern int asSeq__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asSe__8JAISoundFv();
+/* ReturnIntegerFunction */
+extern  int asSeq__8JAISoundFv();
+/* Function             */
 extern void die_JAISound___8JAISoundFv();
+/* Function             */
 extern void increasePrepareCount_JAISound___8JAISoundFv();
+/* Function             */
 extern void calc_JAISound___8JAISoundFv();
+/* Function             */
 extern void init__13JAISoundChildFv();
+/* Function             */
 extern void calc__13JAISoundChildFv();
+/* Function             */
 extern void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv();
+/* Function             */
+extern void func_802A3104();
+/* Function             */
+extern void func_802A319C();
+/* Function             */
 extern void prepare_prepareStream___9JAIStreamFv();
+/* Function             */
 extern void prepare___9JAIStreamFv();
+/* Function             */
 extern void prepare_startStream___9JAIStreamFv();
+/* Function             */
+extern void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
+/* Function             */
 extern void die_JAIStream___9JAIStreamFv();
+/* Function             */
 extern void JAISound_tryDie___9JAIStreamFv();
-extern int getNumChild__9JAIStreamCFv();
+/* Function             */
+extern void JAIStreamMgr_calc___9JAIStreamFv();
+/* ReturnIntegerFunction */
+extern  int getNumChild__9JAIStreamCFv();
+/* Function             */
 extern void getChild__9JAIStreamFi();
+/* Function             */
 extern void releaseChild__9JAIStreamFi();
-extern int getTrack__9JAIStreamFv();
-extern int getChildTrack__9JAIStreamFi();
+/* ReturnIntegerFunction */
+extern  int getTrack__9JAIStreamFv();
+/* ReturnIntegerFunction */
+extern  int getChildTrack__9JAIStreamFi();
+/* ReturnFunction       */
 extern void asStream__9JAIStreamFv();
-extern int getTempoMgr__9JAIStreamFv();
+/* ReturnIntegerFunction */
+extern  int getTempoMgr__9JAIStreamFv();
+/* Function             */
 extern void __ct__10JSUPtrLinkFPv();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__9JAIStream[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__9JAIStream[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_804340B0[16];
-SECTION_BSS extern u8 LIT_881[16];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 LIT_881[12 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80451318[8];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_864;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_865[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 JAIStream__LIT_866[8];
 }
 
@@ -68,8 +123,8 @@ SECTION_SDATA2 extern u8 JAIStream__LIT_866[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C99D8 0030 .data      __vt__9JAIStream                                             */
-SECTION_DATA const  void* __vt__9JAIStream[12] = {
+/* 803C99D8-803C9A08 0030 .data      __vt__9JAIStream                                             VTableData */
+SECTION_DATA void* __vt__9JAIStream[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)getNumChild__9JAIStreamCFv,
@@ -91,14 +146,14 @@ SECTION_DATA const  void* __vt__9JAIStream[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804557F0 0004 .sdata2    @864                                                         */
+/* 804557F0-804557F4 0004 .sdata2    @864                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 LIT_864 = 1.000000f;
-/* 804557F4 0004 .sdata2    @865                                                         */
+/* 804557F4-804557F8 0004 .sdata2    @865                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_865[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804557F8 0004 .sdata2    @866                                                         */
+/* 804557F8-80455800 0004 .sdata2    @866                                                         InitializedData */
 SECTION_SDATA2 u8 JAIStream__LIT_866[8] = {
 	0x3F, 0x00, 0x00, 0x00,
 	/* padding */
@@ -112,8 +167,8 @@ SECTION_SDATA2 u8 JAIStream__LIT_866[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804340E0 000C .bss       @881                                                         */
-SECTION_BSS u8 LIT_881[16];
+/* 804340E0-804340F0 000C .bss       @881                                                         ZeroInitializedData */
+SECTION_BSS u8 LIT_881[12 + 4 /* padding */];
 }
 
 
@@ -122,7 +177,7 @@ SECTION_BSS u8 LIT_881[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A30D4 0030 .text      JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv      */
+/* 802A30D4-802A3104 0030 .text      JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv      Function */
 }
 
 #pragma push
@@ -135,7 +190,7 @@ asm void JAIStream_JASAramStreamCallback_(u32, JASAramStream*, void*) {
 #pragma pop
 
 extern "C" {
-/* 802A3104 0098 .text      __ct__9JAIStreamFP12JAIStreamMgrP31JAISoundStrategyMgr<9JAIStream> */
+/* 802A3104-802A319C 0098 .text      __ct__9JAIStreamFP12JAIStreamMgrP31JAISoundStrategyMgr<9JAIStream> Function */
 // JAIStream::JAIStream(JAIStreamMgr*, JAISoundStrategyMgr<9JAIStream>*)
 #pragma push
 #pragma optimization_level 0
@@ -146,8 +201,8 @@ asm void func_802A3104() {
 }
 #pragma pop
 
-/* 802A319C 0094 .text      JAIStreamMgr_startID___9JAIStreamF10JAISoundIDlPCQ29JGeometry8TVec3<f>P11JAIAudiencei */
-// JAIStream::JAIStreamMgr_startID_(JAISoundID, s32, JGeometry::TVec3<f>, JAIAudience*, int)
+/* 802A319C-802A3230 0094 .text      JAIStreamMgr_startID___9JAIStreamF10JAISoundIDlPCQ29JGeometry8TVec3<f>P11JAIAudiencei Function */
+// JAIStream::JAIStreamMgr_startID_(JAISoundID, long, JGeometry::TVec3<f>, JAIAudience*, int)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -157,7 +212,7 @@ asm void func_802A319C() {
 }
 #pragma pop
 
-/* 802A3230 01C4 .text      prepare_prepareStream___9JAIStreamFv                         */
+/* 802A3230-802A33F4 01C4 .text      prepare_prepareStream___9JAIStreamFv                         Function */
 // JAIStream::prepare_prepareStream_(void)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +223,7 @@ asm void prepare_prepareStream___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A33F4 00A4 .text      prepare___9JAIStreamFv                                       */
+/* 802A33F4-802A3498 00A4 .text      prepare___9JAIStreamFv                                       Function */
 // JAIStream::prepare_(void)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +234,7 @@ asm void prepare___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A3498 004C .text      prepare_startStream___9JAIStreamFv                           */
+/* 802A3498-802A34E4 004C .text      prepare_startStream___9JAIStreamFv                           Function */
 // JAIStream::prepare_startStream_(void)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +245,7 @@ asm void prepare_startStream___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A34E4 023C .text      JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity */
+/* 802A34E4-802A3720 023C .text      JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity Function */
 // JAIStream::JAIStreamMgr_mixOut_(const JASSoundParams&, JAISoundActivity)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +256,7 @@ asm void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity()
 }
 #pragma pop
 
-/* 802A3720 00DC .text      die_JAIStream___9JAIStreamFv                                 */
+/* 802A3720-802A37FC 00DC .text      die_JAIStream___9JAIStreamFv                                 Function */
 // JAIStream::die_JAIStream_(void)
 #pragma push
 #pragma optimization_level 0
@@ -212,7 +267,7 @@ asm void die_JAIStream___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A37FC 0090 .text      JAISound_tryDie___9JAIStreamFv                               */
+/* 802A37FC-802A388C 0090 .text      JAISound_tryDie___9JAIStreamFv                               Function */
 // JAIStream::JAISound_tryDie_(void)
 #pragma push
 #pragma optimization_level 0
@@ -223,7 +278,7 @@ asm void JAISound_tryDie___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A388C 00BC .text      JAIStreamMgr_calc___9JAIStreamFv                             */
+/* 802A388C-802A3948 00BC .text      JAIStreamMgr_calc___9JAIStreamFv                             Function */
 // JAIStream::JAIStreamMgr_calc_(void)
 #pragma push
 #pragma optimization_level 0
@@ -234,13 +289,13 @@ asm void JAIStreamMgr_calc___9JAIStreamFv() {
 }
 #pragma pop
 
-/* 802A3948 0008 .text      getNumChild__9JAIStreamCFv                                   */
+/* 802A3948-802A3950 0008 .text      getNumChild__9JAIStreamCFv                                   ReturnIntegerFunction */
 // JAIStream::getNumChild(void) const
 int getNumChild__9JAIStreamCFv() {
 	return 6;
 }
 
-/* 802A3950 00D4 .text      getChild__9JAIStreamFi                                       */
+/* 802A3950-802A3A24 00D4 .text      getChild__9JAIStreamFi                                       Function */
 // JAIStream::getChild(int)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +306,7 @@ asm void getChild__9JAIStreamFi() {
 }
 #pragma pop
 
-/* 802A3A24 0098 .text      releaseChild__9JAIStreamFi                                   */
+/* 802A3A24-802A3ABC 0098 .text      releaseChild__9JAIStreamFi                                   Function */
 // JAIStream::releaseChild(int)
 #pragma push
 #pragma optimization_level 0
@@ -262,25 +317,25 @@ asm void releaseChild__9JAIStreamFi() {
 }
 #pragma pop
 
-/* 802A3ABC 0008 .text      getTrack__9JAIStreamFv                                       */
+/* 802A3ABC-802A3AC4 0008 .text      getTrack__9JAIStreamFv                                       ReturnIntegerFunction */
 // JAIStream::getTrack(void)
 int getTrack__9JAIStreamFv() {
 	return 0;
 }
 
-/* 802A3AC4 0008 .text      getChildTrack__9JAIStreamFi                                  */
+/* 802A3AC4-802A3ACC 0008 .text      getChildTrack__9JAIStreamFi                                  ReturnIntegerFunction */
 // JAIStream::getChildTrack(int)
 int getChildTrack__9JAIStreamFi() {
 	return 0;
 }
 
-/* 802A3ACC 0004 .text      asStream__9JAIStreamFv                                       */
+/* 802A3ACC-802A3AD0 0004 .text      asStream__9JAIStreamFv                                       ReturnFunction */
 // JAIStream::asStream(void)
 void asStream__9JAIStreamFv() {
 	return;
 }
 
-/* 802A3AD0 0008 .text      getTempoMgr__9JAIStreamFv                                    */
+/* 802A3AD0-802A3AD8 0008 .text      getTempoMgr__9JAIStreamFv                                    ReturnIntegerFunction */
 // JAIStream::getTempoMgr(void)
 int getTempoMgr__9JAIStreamFv() {
 	return 0;

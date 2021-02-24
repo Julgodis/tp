@@ -79,8 +79,8 @@ lbl_80156110:
 /* 80156184 00000074  D0 23 00 44 */	stfs f1, 0x44(r3)
 /* 80156188 00000078  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 8015618C 0000007C  38 A0 00 00 */	li r5, 0
-/* 80156190 00000080  3C 60 80 15 */	lis r3, d_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi@ha
-/* 80156194 00000084  38 83 60 10 */	addi r4, r3, d_d_a_npc_cd__jntNodeCallBack__FP8J3DJointi@l
+/* 80156190 00000080  3C 60 80 15 */	lis r3, jntNodeCallBack__FP8J3DJointi@ha
+/* 80156194 00000084  38 83 60 10 */	addi r4, r3, jntNodeCallBack__FP8J3DJointi@l
 /* 80156198 00000088  48 00 00 18 */	b lbl_801561B0
 lbl_8015619C:
 /* 8015619C 00000000  80 7F 00 28 */	lwz r3, 0x28(r31)

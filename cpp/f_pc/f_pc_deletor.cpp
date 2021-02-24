@@ -8,15 +8,15 @@
 // Additional Symbols:
 // 
 
-struct create_tag_class;
+struct layer_class;
+struct process_priority_class;
+struct process_node_class;
+struct node_list_class;
+struct line_tag;
 struct base_process_class;
 struct node_class;
-struct layer_class;
-struct line_tag;
-struct process_priority_class;
-struct node_list_class;
 struct delete_tag_class;
-struct process_node_class;
+struct create_tag_class;
 
 extern void fpcBs_Is_JustOfType(int, int); /* fpcBs_Is_JustOfType__Fii */
 extern void fpcBs_IsDelete(base_process_class*); /* fpcBs_IsDelete__FP18base_process_class */
@@ -26,9 +26,12 @@ extern void fpcCt_Abort(base_process_class*); /* fpcCt_Abort__FP18base_process_c
 extern void fpcDtTg_IsEmpty(void); /* fpcDtTg_IsEmpty__Fv */
 extern void fpcDtTg_ToDeleteQ(delete_tag_class*); /* fpcDtTg_ToDeleteQ__FP16delete_tag_class */
 extern void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); /* fpcDtTg_Do__FP16delete_tag_classPFPv_i */
+extern void fpcDt_IsComplete(void); /* fpcDt_IsComplete__Fv */
 extern void fpcDt_deleteMethod(base_process_class*); /* fpcDt_deleteMethod__FP18base_process_class */
+extern void fpcDt_Handler(void); /* fpcDt_Handler__Fv */
 extern void fpcDt_ToQueue(base_process_class*); /* fpcDt_ToQueue__FP18base_process_class */
 extern void fpcDt_ToDeleteQ(base_process_class*); /* fpcDt_ToDeleteQ__FP18base_process_class */
+extern void fpcDt_Delete(void*); /* fpcDt_Delete__FPv */
 extern void fpcEx_IsExist(unsigned int); /* fpcEx_IsExist__FUi */
 extern void fpcEx_ExecuteQTo(base_process_class*); /* fpcEx_ExecuteQTo__FP18base_process_class */
 extern void fpcLy_DeletingMesg(layer_class*); /* fpcLy_DeletingMesg__FP11layer_class */
@@ -36,7 +39,7 @@ extern void fpcLy_DeletedMesg(layer_class*); /* fpcLy_DeletedMesg__FP11layer_cla
 extern void fpcLy_SetCurrentLayer(layer_class*); /* fpcLy_SetCurrentLayer__FP11layer_class */
 extern void fpcLy_Cancel(layer_class*); /* fpcLy_Cancel__FP11layer_class */
 extern void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*); /* fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv */
-extern void fpcLd_Free(s16); /* fpcLd_Free__Fs */
+extern void fpcLd_Free(short); /* fpcLd_Free__Fs */
 extern void fpcNd_IsDeleteTiming(process_node_class*); /* fpcNd_IsDeleteTiming__FP18process_node_class */
 extern void fpcPi_IsInQueue(process_priority_class*); /* fpcPi_IsInQueue__FP22process_priority_class */
 extern void fpcPi_Delete(process_priority_class*); /* fpcPi_Delete__FP22process_priority_class */
@@ -45,35 +48,70 @@ extern void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); 
 extern void cTg_IsUse(create_tag_class*); /* cTg_IsUse__FP16create_tag_class */
 
 extern "C" {
+/* Function             */
 extern void fpcBs_Is_JustOfType__Fii();
+/* Function             */
 extern void fpcBs_IsDelete__FP18base_process_class();
+/* Function             */
 extern void fpcBs_Delete__FP18base_process_class();
+/* Function             */
 extern void fpcCt_IsDoing__FP18base_process_class();
+/* Function             */
 extern void fpcCt_Abort__FP18base_process_class();
+/* Function             */
 extern void fpcDtTg_IsEmpty__Fv();
+/* Function             */
 extern void fpcDtTg_ToDeleteQ__FP16delete_tag_class();
+/* Function             */
 extern void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
+/* Function             */
+extern void fpcDt_IsComplete__Fv();
+/* Function             */
 extern void fpcDt_deleteMethod__FP18base_process_class();
+/* Function             */
+extern void fpcDt_Handler__Fv();
+/* Function             */
 extern void fpcDt_ToQueue__FP18base_process_class();
+/* Function             */
 extern void fpcDt_ToDeleteQ__FP18base_process_class();
+/* Function             */
+extern void fpcDt_Delete__FPv();
+/* Function             */
 extern void fpcEx_IsExist__FUi();
+/* Function             */
 extern void fpcEx_ExecuteQTo__FP18base_process_class();
+/* Function             */
 extern void fpcLy_DeletingMesg__FP11layer_class();
+/* Function             */
 extern void fpcLy_DeletedMesg__FP11layer_class();
+/* Function             */
 extern void fpcLy_SetCurrentLayer__FP11layer_class();
+/* Function             */
 extern void fpcLy_Cancel__FP11layer_class();
+/* Function             */
 extern void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv();
+/* Function             */
 extern void fpcLd_Free__Fs();
+/* Function             */
 extern void fpcNd_IsDeleteTiming__FP18process_node_class();
+/* Function             */
 extern void fpcPi_IsInQueue__FP22process_priority_class();
+/* Function             */
 extern void fpcPi_Delete__FP22process_priority_class();
+/* Function             */
 extern void fpcLnTg_QueueTo__FP8line_tag();
+/* Function             */
 extern void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+/* Function             */
 extern void cTg_IsUse__FP16create_tag_class();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fpcDtTg_Queue[16];
-SECTION_SBSS extern u8 g_fpcNd_type[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 g_fpcNd_type[4 + 4 /* padding */];
 }
 
 
@@ -82,7 +120,7 @@ SECTION_SBSS extern u8 g_fpcNd_type[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80021040 0020 .text      fpcDt_IsComplete__Fv                                         */
+/* 80021040-80021060 0020 .text      fpcDt_IsComplete__Fv                                         Function */
 }
 
 #pragma push
@@ -95,7 +133,7 @@ asm void fpcDt_IsComplete(void) {
 #pragma pop
 
 extern "C" {
-/* 80021060 0074 .text      fpcDt_deleteMethod__FP18base_process_class                   */
+/* 80021060-800210D4 0074 .text      fpcDt_deleteMethod__FP18base_process_class                   Function */
 }
 
 #pragma push
@@ -108,7 +146,7 @@ asm void fpcDt_deleteMethod(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 800210D4 0038 .text      fpcDt_Handler__Fv                                            */
+/* 800210D4-8002110C 0038 .text      fpcDt_Handler__Fv                                            Function */
 }
 
 #pragma push
@@ -121,7 +159,7 @@ asm void fpcDt_Handler(void) {
 #pragma pop
 
 extern "C" {
-/* 8002110C 007C .text      fpcDt_ToQueue__FP18base_process_class                        */
+/* 8002110C-80021188 007C .text      fpcDt_ToQueue__FP18base_process_class                        Function */
 }
 
 #pragma push
@@ -134,7 +172,7 @@ asm void fpcDt_ToQueue(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80021188 011C .text      fpcDt_ToDeleteQ__FP18base_process_class                      */
+/* 80021188-800212A4 011C .text      fpcDt_ToDeleteQ__FP18base_process_class                      Function */
 }
 
 #pragma push
@@ -147,7 +185,7 @@ asm void fpcDt_ToDeleteQ(base_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 800212A4 0064 .text      fpcDt_Delete__FPv                                            */
+/* 800212A4-80021308 0064 .text      fpcDt_Delete__FPv                                            Function */
 }
 
 #pragma push

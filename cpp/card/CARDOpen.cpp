@@ -9,13 +9,29 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* FirstParamFunction   */
 extern u32 __CARDGetDirBlock(u8*);
+/* Function             */
 extern void __CARDCompareFileName();
+/* Function             */
 extern void __CARDAccess();
+/* Function             */
+extern void __CARDIsWritable();
+/* Function             */
+extern void __CARDIsReadable();
+/* Function             */
+extern void CARDOpen();
+/* Function             */
+extern void CARDClose();
+/* Function             */
 extern void memcmp();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 __CARDDiskNone[32];
+/* MergedInitializedData */
 SECTION_SDATA extern u8 merged_80450A70[8];
 }
 
@@ -25,7 +41,7 @@ SECTION_SDATA extern u8 merged_80450A70[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80357C74 0068 .text      __CARDCompareFileName                                        */
+/* 80357C74-80357CDC 0068 .text      __CARDCompareFileName                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -35,7 +51,7 @@ asm void __CARDCompareFileName() {
 }
 #pragma pop
 
-/* 80357CDC 0094 .text      __CARDAccess                                                 */
+/* 80357CDC-80357D70 0094 .text      __CARDAccess                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -45,7 +61,7 @@ asm void __CARDAccess() {
 }
 #pragma pop
 
-/* 80357D70 0134 .text      __CARDIsWritable                                             */
+/* 80357D70-80357EA4 0134 .text      __CARDIsWritable                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -55,7 +71,7 @@ asm void __CARDIsWritable() {
 }
 #pragma pop
 
-/* 80357EA4 00F4 .text      __CARDIsReadable                                             */
+/* 80357EA4-80357F98 00F4 .text      __CARDIsReadable                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -65,7 +81,7 @@ asm void __CARDIsReadable() {
 }
 #pragma pop
 
-/* 80357F98 011C .text      CARDOpen                                                     */
+/* 80357F98-803580B4 011C .text      CARDOpen                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -75,7 +91,7 @@ asm void CARDOpen() {
 }
 #pragma pop
 
-/* 803580B4 0054 .text      CARDClose                                                    */
+/* 803580B4-80358108 0054 .text      CARDClose                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

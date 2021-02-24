@@ -11,79 +11,156 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void isDarkClearLV__21dSv_player_status_b_cCFi();
+/* Function             */
 extern void isTransformLV__21dSv_player_status_b_cCFi();
+/* Function             */
 extern void getLightDropNum__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+/* Function             */
 extern void isTbox__12dSv_memBit_cCFi();
+/* Function             */
 extern void isSwitch__12dSv_memBit_cCFi();
+/* Function             */
 extern void isItem__12dSv_memBit_cCFi();
+/* Function             */
 extern void isEventBit__11dSv_event_cCFUs();
+/* Function             */
 extern void isSwitch__12dSv_danBit_cCFi();
+/* Function             */
 extern void isItem__12dSv_danBit_cCFi();
+/* Function             */
 extern void __ct__29dSvBit_childSwPerfectionHIO_cFv();
+/* Function             */
 extern void init__29dSvBit_childSwPerfectionHIO_cFv();
+/* Function             */
 extern void __ct__26dSvBit_childSwDungeonHIO_cFv();
+/* Function             */
 extern void init__26dSvBit_childSwDungeonHIO_cFv();
+/* Function             */
 extern void __ct__23dSvBit_childSwZoneHIO_cFv();
+/* Function             */
 extern void init__23dSvBit_childSwZoneHIO_cFv();
+/* Function             */
 extern void __ct__26dSvBit_childSwOneZoneHIO_cFv();
+/* Function             */
 extern void init__26dSvBit_childSwOneZoneHIO_cFv();
+/* Function             */
 extern void __ct__29dSvBit_childItPerfectionHIO_cFv();
+/* Function             */
 extern void init__29dSvBit_childItPerfectionHIO_cFv();
+/* Function             */
 extern void __ct__26dSvBit_childItDungeonHIO_cFv();
+/* Function             */
 extern void init__26dSvBit_childItDungeonHIO_cFv();
+/* Function             */
 extern void __ct__23dSvBit_childItZoneHIO_cFv();
+/* Function             */
 extern void init__23dSvBit_childItZoneHIO_cFv();
+/* Function             */
 extern void __ct__26dSvBit_childItOneZoneHIO_cFv();
+/* Function             */
 extern void init__26dSvBit_childItOneZoneHIO_cFv();
+/* Function             */
 extern void __ct__29dSvBit_childTbPerfectionHIO_cFv();
+/* Function             */
 extern void init__29dSvBit_childTbPerfectionHIO_cFv();
+/* Function             */
 extern void __ct__25dSvBit_childDarknessHIO_cFv();
+/* Function             */
 extern void init__25dSvBit_childDarknessHIO_cFv();
+/* Function             */
 extern void __ct__26dSvBit_childTransformHIO_cFv();
+/* Function             */
 extern void init__26dSvBit_childTransformHIO_cFv();
+/* Function             */
 extern void __ct__22dSvBit_childOtherHIO_cFv();
+/* Function             */
 extern void init__22dSvBit_childOtherHIO_cFv();
+/* Function             */
+extern void init__12dSvBit_HIO_cFv();
+/* Function             */
 extern void __dt__22dSvBit_childOtherHIO_cFv();
+/* Function             */
 extern void __dt__26dSvBit_childTransformHIO_cFv();
+/* Function             */
 extern void __dt__25dSvBit_childDarknessHIO_cFv();
+/* Function             */
 extern void __dt__29dSvBit_childTbPerfectionHIO_cFv();
+/* Function             */
 extern void __dt__26dSvBit_childItOneZoneHIO_cFv();
+/* Function             */
 extern void __dt__23dSvBit_childItZoneHIO_cFv();
+/* Function             */
 extern void __dt__26dSvBit_childItDungeonHIO_cFv();
+/* Function             */
 extern void __dt__29dSvBit_childItPerfectionHIO_cFv();
+/* Function             */
 extern void __dt__26dSvBit_childSwOneZoneHIO_cFv();
+/* Function             */
 extern void __dt__23dSvBit_childSwZoneHIO_cFv();
+/* Function             */
 extern void __dt__26dSvBit_childSwDungeonHIO_cFv();
+/* Function             */
 extern void __dt__29dSvBit_childSwPerfectionHIO_cFv();
+/* SInitFunction        */
+extern void __sinit_d_save_HIO_cpp();
+/* Function             */
 extern void __dt__12dSvBit_HIO_cFv();
+/* Function             */
 extern void __dt__25dSvBit_childTreasureHIO_cFv();
+/* Function             */
 extern void __dt__21dSvBit_childItemHIO_cFv();
+/* Function             */
 extern void __dt__23dSvBit_childSwitchHIO_cFv();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__22dSvBit_childOtherHIO_c[3];
-SECTION_DATA extern const void* __vt__26dSvBit_childTransformHIO_c[3];
-SECTION_DATA extern const void* __vt__25dSvBit_childDarknessHIO_c[3];
-SECTION_DATA extern const void* __vt__29dSvBit_childTbPerfectionHIO_c[3];
-SECTION_DATA extern const void* __vt__26dSvBit_childItOneZoneHIO_c[3];
-SECTION_DATA extern const void* __vt__23dSvBit_childItZoneHIO_c[3];
-SECTION_DATA extern const void* __vt__26dSvBit_childItDungeonHIO_c[3];
-SECTION_DATA extern const void* __vt__29dSvBit_childItPerfectionHIO_c[3];
-SECTION_DATA extern const void* __vt__26dSvBit_childSwOneZoneHIO_c[3];
-SECTION_DATA extern const void* __vt__23dSvBit_childSwZoneHIO_c[3];
-SECTION_DATA extern const void* __vt__26dSvBit_childSwDungeonHIO_c[3];
-SECTION_DATA extern const void* __vt__29dSvBit_childSwPerfectionHIO_c[3];
-SECTION_DATA extern const void* __vt__25dSvBit_childTreasureHIO_c[3];
-SECTION_DATA extern const void* __vt__21dSvBit_childItemHIO_c[3];
-SECTION_DATA extern const void* __vt__23dSvBit_childSwitchHIO_c[3];
-SECTION_DATA extern const void* __vt__12dSvBit_HIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dSvBit_childOtherHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26dSvBit_childTransformHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dSvBit_childDarknessHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__29dSvBit_childTbPerfectionHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26dSvBit_childItOneZoneHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__23dSvBit_childItZoneHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26dSvBit_childItDungeonHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__29dSvBit_childItPerfectionHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26dSvBit_childSwOneZoneHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__23dSvBit_childSwZoneHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__26dSvBit_childSwDungeonHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__29dSvBit_childSwPerfectionHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dSvBit_childTreasureHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21dSvBit_childItemHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__23dSvBit_childSwitchHIO_c[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dSvBit_HIO_c[3];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_save_HIO__LIT_3659[12];
-SECTION_BSS extern u8 g_save_bit_HIO[1188];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
 }
 
 
@@ -92,98 +169,98 @@ SECTION_BSS extern u8 g_save_bit_HIO[1188];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3300 000C .data      __vt__22dSvBit_childOtherHIO_c                               */
-SECTION_DATA const  void* __vt__22dSvBit_childOtherHIO_c[3] = {
+/* 803C3300-803C330C 000C .data      __vt__22dSvBit_childOtherHIO_c                               VTableData */
+SECTION_DATA void* __vt__22dSvBit_childOtherHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dSvBit_childOtherHIO_cFv,
 };
-/* 803C330C 000C .data      __vt__26dSvBit_childTransformHIO_c                           */
-SECTION_DATA const  void* __vt__26dSvBit_childTransformHIO_c[3] = {
+/* 803C330C-803C3318 000C .data      __vt__26dSvBit_childTransformHIO_c                           VTableData */
+SECTION_DATA void* __vt__26dSvBit_childTransformHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26dSvBit_childTransformHIO_cFv,
 };
-/* 803C3318 000C .data      __vt__25dSvBit_childDarknessHIO_c                            */
-SECTION_DATA const  void* __vt__25dSvBit_childDarknessHIO_c[3] = {
+/* 803C3318-803C3324 000C .data      __vt__25dSvBit_childDarknessHIO_c                            VTableData */
+SECTION_DATA void* __vt__25dSvBit_childDarknessHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dSvBit_childDarknessHIO_cFv,
 };
-/* 803C3324 000C .data      __vt__29dSvBit_childTbPerfectionHIO_c                        */
-SECTION_DATA const  void* __vt__29dSvBit_childTbPerfectionHIO_c[3] = {
+/* 803C3324-803C3330 000C .data      __vt__29dSvBit_childTbPerfectionHIO_c                        VTableData */
+SECTION_DATA void* __vt__29dSvBit_childTbPerfectionHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__29dSvBit_childTbPerfectionHIO_cFv,
 };
-/* 803C3330 000C .data      __vt__26dSvBit_childItOneZoneHIO_c                           */
-SECTION_DATA const  void* __vt__26dSvBit_childItOneZoneHIO_c[3] = {
+/* 803C3330-803C333C 000C .data      __vt__26dSvBit_childItOneZoneHIO_c                           VTableData */
+SECTION_DATA void* __vt__26dSvBit_childItOneZoneHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26dSvBit_childItOneZoneHIO_cFv,
 };
-/* 803C333C 000C .data      __vt__23dSvBit_childItZoneHIO_c                              */
-SECTION_DATA const  void* __vt__23dSvBit_childItZoneHIO_c[3] = {
+/* 803C333C-803C3348 000C .data      __vt__23dSvBit_childItZoneHIO_c                              VTableData */
+SECTION_DATA void* __vt__23dSvBit_childItZoneHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__23dSvBit_childItZoneHIO_cFv,
 };
-/* 803C3348 000C .data      __vt__26dSvBit_childItDungeonHIO_c                           */
-SECTION_DATA const  void* __vt__26dSvBit_childItDungeonHIO_c[3] = {
+/* 803C3348-803C3354 000C .data      __vt__26dSvBit_childItDungeonHIO_c                           VTableData */
+SECTION_DATA void* __vt__26dSvBit_childItDungeonHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26dSvBit_childItDungeonHIO_cFv,
 };
-/* 803C3354 000C .data      __vt__29dSvBit_childItPerfectionHIO_c                        */
-SECTION_DATA const  void* __vt__29dSvBit_childItPerfectionHIO_c[3] = {
+/* 803C3354-803C3360 000C .data      __vt__29dSvBit_childItPerfectionHIO_c                        VTableData */
+SECTION_DATA void* __vt__29dSvBit_childItPerfectionHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__29dSvBit_childItPerfectionHIO_cFv,
 };
-/* 803C3360 000C .data      __vt__26dSvBit_childSwOneZoneHIO_c                           */
-SECTION_DATA const  void* __vt__26dSvBit_childSwOneZoneHIO_c[3] = {
+/* 803C3360-803C336C 000C .data      __vt__26dSvBit_childSwOneZoneHIO_c                           VTableData */
+SECTION_DATA void* __vt__26dSvBit_childSwOneZoneHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26dSvBit_childSwOneZoneHIO_cFv,
 };
-/* 803C336C 000C .data      __vt__23dSvBit_childSwZoneHIO_c                              */
-SECTION_DATA const  void* __vt__23dSvBit_childSwZoneHIO_c[3] = {
+/* 803C336C-803C3378 000C .data      __vt__23dSvBit_childSwZoneHIO_c                              VTableData */
+SECTION_DATA void* __vt__23dSvBit_childSwZoneHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__23dSvBit_childSwZoneHIO_cFv,
 };
-/* 803C3378 000C .data      __vt__26dSvBit_childSwDungeonHIO_c                           */
-SECTION_DATA const  void* __vt__26dSvBit_childSwDungeonHIO_c[3] = {
+/* 803C3378-803C3384 000C .data      __vt__26dSvBit_childSwDungeonHIO_c                           VTableData */
+SECTION_DATA void* __vt__26dSvBit_childSwDungeonHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__26dSvBit_childSwDungeonHIO_cFv,
 };
-/* 803C3384 000C .data      __vt__29dSvBit_childSwPerfectionHIO_c                        */
-SECTION_DATA const  void* __vt__29dSvBit_childSwPerfectionHIO_c[3] = {
+/* 803C3384-803C3390 000C .data      __vt__29dSvBit_childSwPerfectionHIO_c                        VTableData */
+SECTION_DATA void* __vt__29dSvBit_childSwPerfectionHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__29dSvBit_childSwPerfectionHIO_cFv,
 };
-/* 803C3390 000C .data      __vt__25dSvBit_childTreasureHIO_c                            */
-SECTION_DATA const  void* __vt__25dSvBit_childTreasureHIO_c[3] = {
+/* 803C3390-803C339C 000C .data      __vt__25dSvBit_childTreasureHIO_c                            VTableData */
+SECTION_DATA void* __vt__25dSvBit_childTreasureHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dSvBit_childTreasureHIO_cFv,
 };
-/* 803C339C 000C .data      __vt__21dSvBit_childItemHIO_c                                */
-SECTION_DATA const  void* __vt__21dSvBit_childItemHIO_c[3] = {
+/* 803C339C-803C33A8 000C .data      __vt__21dSvBit_childItemHIO_c                                VTableData */
+SECTION_DATA void* __vt__21dSvBit_childItemHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21dSvBit_childItemHIO_cFv,
 };
-/* 803C33A8 000C .data      __vt__23dSvBit_childSwitchHIO_c                              */
-SECTION_DATA const  void* __vt__23dSvBit_childSwitchHIO_c[3] = {
+/* 803C33A8-803C33B4 000C .data      __vt__23dSvBit_childSwitchHIO_c                              VTableData */
+SECTION_DATA void* __vt__23dSvBit_childSwitchHIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__23dSvBit_childSwitchHIO_cFv,
 };
-/* 803C33B4 000C .data      __vt__12dSvBit_HIO_c                                         */
-SECTION_DATA const  void* __vt__12dSvBit_HIO_c[3] = {
+/* 803C33B4-803C33C0 000C .data      __vt__12dSvBit_HIO_c                                         VTableData */
+SECTION_DATA void* __vt__12dSvBit_HIO_c[3] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dSvBit_HIO_cFv,
@@ -196,10 +273,10 @@ SECTION_DATA const  void* __vt__12dSvBit_HIO_c[3] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804307E0 000C .bss       @3659                                                        */
+/* 804307E0-804307EC 000C .bss       @3659                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_save_HIO__LIT_3659[12];
-/* 804307EC 04A0 .bss       g_save_bit_HIO                                               */
-SECTION_BSS u8 g_save_bit_HIO[1188];
+/* 804307EC-80430C90 04A0 .bss       g_save_bit_HIO                                               ZeroInitializedData */
+SECTION_BSS u8 g_save_bit_HIO[1184 + 4 /* padding */];
 }
 
 
@@ -208,7 +285,7 @@ SECTION_BSS u8 g_save_bit_HIO[1188];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8025BB78 0034 .text      __ct__29dSvBit_childSwPerfectionHIO_cFv                      */
+/* 8025BB78-8025BBAC 0034 .text      __ct__29dSvBit_childSwPerfectionHIO_cFv                      Function */
 // dSvBit_childSwPerfectionHIO_c::dSvBit_childSwPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -219,7 +296,7 @@ asm void __ct__29dSvBit_childSwPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BBAC 0068 .text      init__29dSvBit_childSwPerfectionHIO_cFv                      */
+/* 8025BBAC-8025BC14 0068 .text      init__29dSvBit_childSwPerfectionHIO_cFv                      Function */
 // dSvBit_childSwPerfectionHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -230,7 +307,7 @@ asm void init__29dSvBit_childSwPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BC14 0034 .text      __ct__26dSvBit_childSwDungeonHIO_cFv                         */
+/* 8025BC14-8025BC48 0034 .text      __ct__26dSvBit_childSwDungeonHIO_cFv                         Function */
 // dSvBit_childSwDungeonHIO_c::dSvBit_childSwDungeonHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -241,7 +318,7 @@ asm void __ct__26dSvBit_childSwDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BC48 0068 .text      init__26dSvBit_childSwDungeonHIO_cFv                         */
+/* 8025BC48-8025BCB0 0068 .text      init__26dSvBit_childSwDungeonHIO_cFv                         Function */
 // dSvBit_childSwDungeonHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -252,7 +329,7 @@ asm void init__26dSvBit_childSwDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BCB0 0034 .text      __ct__23dSvBit_childSwZoneHIO_cFv                            */
+/* 8025BCB0-8025BCE4 0034 .text      __ct__23dSvBit_childSwZoneHIO_cFv                            Function */
 // dSvBit_childSwZoneHIO_c::dSvBit_childSwZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -263,7 +340,7 @@ asm void __ct__23dSvBit_childSwZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BCE4 002C .text      init__23dSvBit_childSwZoneHIO_cFv                            */
+/* 8025BCE4-8025BD10 002C .text      init__23dSvBit_childSwZoneHIO_cFv                            Function */
 // dSvBit_childSwZoneHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -274,7 +351,7 @@ asm void init__23dSvBit_childSwZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BD10 0034 .text      __ct__26dSvBit_childSwOneZoneHIO_cFv                         */
+/* 8025BD10-8025BD44 0034 .text      __ct__26dSvBit_childSwOneZoneHIO_cFv                         Function */
 // dSvBit_childSwOneZoneHIO_c::dSvBit_childSwOneZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -285,7 +362,7 @@ asm void __ct__26dSvBit_childSwOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BD44 002C .text      init__26dSvBit_childSwOneZoneHIO_cFv                         */
+/* 8025BD44-8025BD70 002C .text      init__26dSvBit_childSwOneZoneHIO_cFv                         Function */
 // dSvBit_childSwOneZoneHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -296,7 +373,7 @@ asm void init__26dSvBit_childSwOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BD70 0034 .text      __ct__29dSvBit_childItPerfectionHIO_cFv                      */
+/* 8025BD70-8025BDA4 0034 .text      __ct__29dSvBit_childItPerfectionHIO_cFv                      Function */
 // dSvBit_childItPerfectionHIO_c::dSvBit_childItPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -307,7 +384,7 @@ asm void __ct__29dSvBit_childItPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BDA4 0068 .text      init__29dSvBit_childItPerfectionHIO_cFv                      */
+/* 8025BDA4-8025BE0C 0068 .text      init__29dSvBit_childItPerfectionHIO_cFv                      Function */
 // dSvBit_childItPerfectionHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -318,7 +395,7 @@ asm void init__29dSvBit_childItPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BE0C 0034 .text      __ct__26dSvBit_childItDungeonHIO_cFv                         */
+/* 8025BE0C-8025BE40 0034 .text      __ct__26dSvBit_childItDungeonHIO_cFv                         Function */
 // dSvBit_childItDungeonHIO_c::dSvBit_childItDungeonHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -329,7 +406,7 @@ asm void __ct__26dSvBit_childItDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BE40 0068 .text      init__26dSvBit_childItDungeonHIO_cFv                         */
+/* 8025BE40-8025BEA8 0068 .text      init__26dSvBit_childItDungeonHIO_cFv                         Function */
 // dSvBit_childItDungeonHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -340,7 +417,7 @@ asm void init__26dSvBit_childItDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BEA8 0034 .text      __ct__23dSvBit_childItZoneHIO_cFv                            */
+/* 8025BEA8-8025BEDC 0034 .text      __ct__23dSvBit_childItZoneHIO_cFv                            Function */
 // dSvBit_childItZoneHIO_c::dSvBit_childItZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -351,7 +428,7 @@ asm void __ct__23dSvBit_childItZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BEDC 002C .text      init__23dSvBit_childItZoneHIO_cFv                            */
+/* 8025BEDC-8025BF08 002C .text      init__23dSvBit_childItZoneHIO_cFv                            Function */
 // dSvBit_childItZoneHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -362,7 +439,7 @@ asm void init__23dSvBit_childItZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BF08 0034 .text      __ct__26dSvBit_childItOneZoneHIO_cFv                         */
+/* 8025BF08-8025BF3C 0034 .text      __ct__26dSvBit_childItOneZoneHIO_cFv                         Function */
 // dSvBit_childItOneZoneHIO_c::dSvBit_childItOneZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -373,7 +450,7 @@ asm void __ct__26dSvBit_childItOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BF3C 002C .text      init__26dSvBit_childItOneZoneHIO_cFv                         */
+/* 8025BF3C-8025BF68 002C .text      init__26dSvBit_childItOneZoneHIO_cFv                         Function */
 // dSvBit_childItOneZoneHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -384,7 +461,7 @@ asm void init__26dSvBit_childItOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BF68 0034 .text      __ct__29dSvBit_childTbPerfectionHIO_cFv                      */
+/* 8025BF68-8025BF9C 0034 .text      __ct__29dSvBit_childTbPerfectionHIO_cFv                      Function */
 // dSvBit_childTbPerfectionHIO_c::dSvBit_childTbPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -395,7 +472,7 @@ asm void __ct__29dSvBit_childTbPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025BF9C 0068 .text      init__29dSvBit_childTbPerfectionHIO_cFv                      */
+/* 8025BF9C-8025C004 0068 .text      init__29dSvBit_childTbPerfectionHIO_cFv                      Function */
 // dSvBit_childTbPerfectionHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -406,7 +483,7 @@ asm void init__29dSvBit_childTbPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C004 0034 .text      __ct__25dSvBit_childDarknessHIO_cFv                          */
+/* 8025C004-8025C038 0034 .text      __ct__25dSvBit_childDarknessHIO_cFv                          Function */
 // dSvBit_childDarknessHIO_c::dSvBit_childDarknessHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -417,7 +494,7 @@ asm void __ct__25dSvBit_childDarknessHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C038 0068 .text      init__25dSvBit_childDarknessHIO_cFv                          */
+/* 8025C038-8025C0A0 0068 .text      init__25dSvBit_childDarknessHIO_cFv                          Function */
 // dSvBit_childDarknessHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -428,7 +505,7 @@ asm void init__25dSvBit_childDarknessHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C0A0 0034 .text      __ct__26dSvBit_childTransformHIO_cFv                         */
+/* 8025C0A0-8025C0D4 0034 .text      __ct__26dSvBit_childTransformHIO_cFv                         Function */
 // dSvBit_childTransformHIO_c::dSvBit_childTransformHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -439,7 +516,7 @@ asm void __ct__26dSvBit_childTransformHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C0D4 0068 .text      init__26dSvBit_childTransformHIO_cFv                         */
+/* 8025C0D4-8025C13C 0068 .text      init__26dSvBit_childTransformHIO_cFv                         Function */
 // dSvBit_childTransformHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -450,7 +527,7 @@ asm void init__26dSvBit_childTransformHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C13C 003C .text      __ct__22dSvBit_childOtherHIO_cFv                             */
+/* 8025C13C-8025C178 003C .text      __ct__22dSvBit_childOtherHIO_cFv                             Function */
 // dSvBit_childOtherHIO_c::dSvBit_childOtherHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -461,7 +538,7 @@ asm void __ct__22dSvBit_childOtherHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C178 0080 .text      init__22dSvBit_childOtherHIO_cFv                             */
+/* 8025C178-8025C1F8 0080 .text      init__22dSvBit_childOtherHIO_cFv                             Function */
 // dSvBit_childOtherHIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -472,7 +549,7 @@ asm void init__22dSvBit_childOtherHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C1F8 00A4 .text      init__12dSvBit_HIO_cFv                                       */
+/* 8025C1F8-8025C29C 00A4 .text      init__12dSvBit_HIO_cFv                                       Function */
 // dSvBit_HIO_c::init(void)
 #pragma push
 #pragma optimization_level 0
@@ -483,7 +560,7 @@ asm void init__12dSvBit_HIO_cFv() {
 }
 #pragma pop
 
-/* 8025C29C 0048 .text      __dt__22dSvBit_childOtherHIO_cFv                             */
+/* 8025C29C-8025C2E4 0048 .text      __dt__22dSvBit_childOtherHIO_cFv                             Function */
 // dSvBit_childOtherHIO_c::~dSvBit_childOtherHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -494,7 +571,7 @@ asm void __dt__22dSvBit_childOtherHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C2E4 0048 .text      __dt__26dSvBit_childTransformHIO_cFv                         */
+/* 8025C2E4-8025C32C 0048 .text      __dt__26dSvBit_childTransformHIO_cFv                         Function */
 // dSvBit_childTransformHIO_c::~dSvBit_childTransformHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -505,7 +582,7 @@ asm void __dt__26dSvBit_childTransformHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C32C 0048 .text      __dt__25dSvBit_childDarknessHIO_cFv                          */
+/* 8025C32C-8025C374 0048 .text      __dt__25dSvBit_childDarknessHIO_cFv                          Function */
 // dSvBit_childDarknessHIO_c::~dSvBit_childDarknessHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -516,7 +593,7 @@ asm void __dt__25dSvBit_childDarknessHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C374 0048 .text      __dt__29dSvBit_childTbPerfectionHIO_cFv                      */
+/* 8025C374-8025C3BC 0048 .text      __dt__29dSvBit_childTbPerfectionHIO_cFv                      Function */
 // dSvBit_childTbPerfectionHIO_c::~dSvBit_childTbPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -527,7 +604,7 @@ asm void __dt__29dSvBit_childTbPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C3BC 0048 .text      __dt__26dSvBit_childItOneZoneHIO_cFv                         */
+/* 8025C3BC-8025C404 0048 .text      __dt__26dSvBit_childItOneZoneHIO_cFv                         Function */
 // dSvBit_childItOneZoneHIO_c::~dSvBit_childItOneZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -538,7 +615,7 @@ asm void __dt__26dSvBit_childItOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C404 0048 .text      __dt__23dSvBit_childItZoneHIO_cFv                            */
+/* 8025C404-8025C44C 0048 .text      __dt__23dSvBit_childItZoneHIO_cFv                            Function */
 // dSvBit_childItZoneHIO_c::~dSvBit_childItZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -549,7 +626,7 @@ asm void __dt__23dSvBit_childItZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C44C 0048 .text      __dt__26dSvBit_childItDungeonHIO_cFv                         */
+/* 8025C44C-8025C494 0048 .text      __dt__26dSvBit_childItDungeonHIO_cFv                         Function */
 // dSvBit_childItDungeonHIO_c::~dSvBit_childItDungeonHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -560,7 +637,7 @@ asm void __dt__26dSvBit_childItDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C494 0048 .text      __dt__29dSvBit_childItPerfectionHIO_cFv                      */
+/* 8025C494-8025C4DC 0048 .text      __dt__29dSvBit_childItPerfectionHIO_cFv                      Function */
 // dSvBit_childItPerfectionHIO_c::~dSvBit_childItPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -571,7 +648,7 @@ asm void __dt__29dSvBit_childItPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C4DC 0048 .text      __dt__26dSvBit_childSwOneZoneHIO_cFv                         */
+/* 8025C4DC-8025C524 0048 .text      __dt__26dSvBit_childSwOneZoneHIO_cFv                         Function */
 // dSvBit_childSwOneZoneHIO_c::~dSvBit_childSwOneZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -582,7 +659,7 @@ asm void __dt__26dSvBit_childSwOneZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C524 0048 .text      __dt__23dSvBit_childSwZoneHIO_cFv                            */
+/* 8025C524-8025C56C 0048 .text      __dt__23dSvBit_childSwZoneHIO_cFv                            Function */
 // dSvBit_childSwZoneHIO_c::~dSvBit_childSwZoneHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -593,7 +670,7 @@ asm void __dt__23dSvBit_childSwZoneHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C56C 0048 .text      __dt__26dSvBit_childSwDungeonHIO_cFv                         */
+/* 8025C56C-8025C5B4 0048 .text      __dt__26dSvBit_childSwDungeonHIO_cFv                         Function */
 // dSvBit_childSwDungeonHIO_c::~dSvBit_childSwDungeonHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -604,7 +681,7 @@ asm void __dt__26dSvBit_childSwDungeonHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C5B4 0048 .text      __dt__29dSvBit_childSwPerfectionHIO_cFv                      */
+/* 8025C5B4-8025C5FC 0048 .text      __dt__29dSvBit_childSwPerfectionHIO_cFv                      Function */
 // dSvBit_childSwPerfectionHIO_c::~dSvBit_childSwPerfectionHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -615,7 +692,7 @@ asm void __dt__29dSvBit_childSwPerfectionHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C5FC 0100 .text      __sinit_d_save_HIO_cpp                                       */
+/* 8025C5FC-8025C6FC 0100 .text      __sinit_d_save_HIO_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,7 +702,7 @@ asm void __sinit_d_save_HIO_cpp() {
 }
 #pragma pop
 
-/* 8025C6FC 0178 .text      __dt__12dSvBit_HIO_cFv                                       */
+/* 8025C6FC-8025C874 0178 .text      __dt__12dSvBit_HIO_cFv                                       Function */
 // dSvBit_HIO_c::~dSvBit_HIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -636,7 +713,7 @@ asm void __dt__12dSvBit_HIO_cFv() {
 }
 #pragma pop
 
-/* 8025C874 0060 .text      __dt__25dSvBit_childTreasureHIO_cFv                          */
+/* 8025C874-8025C8D4 0060 .text      __dt__25dSvBit_childTreasureHIO_cFv                          Function */
 // dSvBit_childTreasureHIO_c::~dSvBit_childTreasureHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -647,7 +724,7 @@ asm void __dt__25dSvBit_childTreasureHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C8D4 009C .text      __dt__21dSvBit_childItemHIO_cFv                              */
+/* 8025C8D4-8025C970 009C .text      __dt__21dSvBit_childItemHIO_cFv                              Function */
 // dSvBit_childItemHIO_c::~dSvBit_childItemHIO_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -658,7 +735,7 @@ asm void __dt__21dSvBit_childItemHIO_cFv() {
 }
 #pragma pop
 
-/* 8025C970 009C .text      __dt__23dSvBit_childSwitchHIO_cFv                            */
+/* 8025C970-8025CA0C 009C .text      __dt__23dSvBit_childSwitchHIO_cFv                            Function */
 // dSvBit_childSwitchHIO_c::~dSvBit_childSwitchHIO_c(void)
 #pragma push
 #pragma optimization_level 0

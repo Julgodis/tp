@@ -9,7 +9,10 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __ieee754_exp();
+/* Function             */
+extern void exp();
 }
 
 
@@ -18,7 +21,7 @@ extern void __ieee754_exp();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C740 0020 .text      exp                                                          */
+/* 8036C740-8036C760 0020 .text      exp                                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

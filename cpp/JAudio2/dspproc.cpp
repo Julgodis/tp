@@ -9,15 +9,36 @@
 // 
 
 extern void DSP_CreateMap2(u32); /* DSP_CreateMap2__FUl */
+extern void DSPReleaseHalt2(u32); /* DSPReleaseHalt2__FUl */
 extern void setup_callback(u16); /* setup_callback__FUs */
+extern void DsetupTable(u32, u32, u32, u32, u32); /* DsetupTable__FUlUlUlUlUl */
+extern void DsetMixerLevel(f32); /* DsetMixerLevel__Ff */
+extern void DsyncFrame2ch(u32, u32, u32); /* DsyncFrame2ch__FUlUlUl */
+extern void DsyncFrame4ch(u32, u32, u32, u32, u32); /* DsyncFrame4ch__FUlUlUlUlUl */
 extern void DSPSendCommands2(u32*, u32, void (*)(u16)); /* DSPSendCommands2__FPUlUlPFUs_v */
 
 extern "C" {
+/* Function             */
 extern void DSP_CreateMap2__FUl();
+/* Function             */
+extern void DSPReleaseHalt2__FUl();
+/* Function             */
 extern void setup_callback__FUs();
+/* Function             */
+extern void DsetupTable__FUlUlUlUlUl();
+/* Function             */
+extern void DsetMixerLevel__Ff();
+/* Function             */
+extern void DsyncFrame2ch__FUlUlUl();
+/* Function             */
+extern void DsyncFrame4ch__FUlUlUlUlUl();
+/* Function             */
 extern void DSPSendCommands2__FPUlUlPFUs_v();
+/* InitializedData      */
 SECTION_SDATA extern u8 DSP_MIXERLEVEL[8];
-SECTION_SBSS extern u8 flag[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 flag[4 + 4 /* padding */];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 dspproc__LIT_333[8];
 }
 
@@ -27,7 +48,7 @@ SECTION_SDATA2 extern u8 dspproc__LIT_333[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804507C8 0002 .sdata     DSP_MIXERLEVEL                                               */
+/* 804507C8-804507D0 0002 .sdata     DSP_MIXERLEVEL                                               InitializedData */
 SECTION_SDATA u8 DSP_MIXERLEVEL[8] = {
 	0x40, 0x00,
 	/* padding */
@@ -41,7 +62,7 @@ SECTION_SDATA u8 DSP_MIXERLEVEL[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455770 0004 .sdata2    @333                                                         */
+/* 80455770-80455778 0004 .sdata2    @333                                                         InitializedData */
 SECTION_SDATA2 u8 dspproc__LIT_333[8] = {
 	0x45, 0x80, 0x00, 0x00,
 	/* padding */
@@ -55,9 +76,8 @@ SECTION_SDATA2 u8 dspproc__LIT_333[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804512F8 0004 .sbss      flag                                                         */
-SECTION_SBSS u8 flag[4];
-SECTION_SBSS u8 pad_804512FC[4];
+/* 804512F8-80451300 0004 .sbss      flag                                                         ZeroInitializedData */
+SECTION_SBSS u8 flag[4 + 4 /* padding */];
 }
 
 
@@ -66,7 +86,7 @@ SECTION_SBSS u8 pad_804512FC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8029E4E0 0048 .text      DSPReleaseHalt2__FUl                                         */
+/* 8029E4E0-8029E528 0048 .text      DSPReleaseHalt2__FUl                                         Function */
 }
 
 #pragma push
@@ -80,7 +100,7 @@ asm void DSPReleaseHalt2(u32) {
 #pragma pop
 
 extern "C" {
-/* 8029E540 000C .text      setup_callback__FUs                                          */
+/* 8029E540-8029E54C 000C .text      setup_callback__FUs                                          Function */
 }
 
 #pragma push
@@ -94,7 +114,7 @@ asm void setup_callback(u16) {
 #pragma pop
 
 extern "C" {
-/* 8029E560 0064 .text      DsetupTable__FUlUlUlUlUl                                     */
+/* 8029E560-8029E5C4 0064 .text      DsetupTable__FUlUlUlUlUl                                     Function */
 }
 
 #pragma push
@@ -108,7 +128,7 @@ asm void DsetupTable(u32, u32, u32, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8029E5E0 0024 .text      DsetMixerLevel__Ff                                           */
+/* 8029E5E0-8029E604 0024 .text      DsetMixerLevel__Ff                                           Function */
 }
 
 #pragma push
@@ -122,7 +142,7 @@ asm void DsetMixerLevel(f32) {
 #pragma pop
 
 extern "C" {
-/* 8029E620 0054 .text      DsyncFrame2ch__FUlUlUl                                       */
+/* 8029E620-8029E674 0054 .text      DsyncFrame2ch__FUlUlUl                                       Function */
 }
 
 #pragma push
@@ -136,7 +156,7 @@ asm void DsyncFrame2ch(u32, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 8029E680 0050 .text      DsyncFrame4ch__FUlUlUlUlUl                                   */
+/* 8029E680-8029E6D0 0050 .text      DsyncFrame4ch__FUlUlUlUlUl                                   Function */
 }
 
 #pragma push

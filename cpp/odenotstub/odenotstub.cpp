@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* ReturnIntegerFunction */
+extern  int Hu_IsStub();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803737AC 0008 .text      Hu_IsStub                                                    */
+/* 803737AC-803737B4 0008 .text      Hu_IsStub                                                    ReturnIntegerFunction */
 int Hu_IsStub() {
 	return 0;
 }

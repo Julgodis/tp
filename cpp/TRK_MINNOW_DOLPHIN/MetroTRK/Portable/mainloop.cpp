@@ -9,16 +9,28 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void TRKNubMainLoop();
+/* Function             */
 extern void TRKDestructEvent();
+/* Function             */
 extern void TRKGetNextEvent();
+/* Function             */
 extern void TRKGetBuffer();
+/* Function             */
 extern void TRKGetInput();
+/* Function             */
 extern void TRKDispatchMessage();
+/* Function             */
 extern void TRKTargetStopped();
+/* Function             */
 extern void TRKTargetSupportRequest();
+/* Function             */
 extern void TRKTargetInterrupt();
+/* Function             */
 extern void TRKTargetContinue();
-SECTION_SBSS extern u8 gTRKInputPendingPtr[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 }
 
 
@@ -27,7 +39,7 @@ SECTION_SBSS extern u8 gTRKInputPendingPtr[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036CB20 00F8 .text      TRKNubMainLoop                                               */
+/* 8036CB20-8036CC18 00F8 .text      TRKNubMainLoop                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

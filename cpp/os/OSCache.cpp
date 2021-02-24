@@ -9,28 +9,100 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void PPCMfmsr();
+/* Function             */
 extern void PPCMtmsr();
+/* Function             */
 extern void PPCMfhid0();
+/* Function             */
 extern void PPCMfl2cr();
+/* Function             */
 extern void PPCMtl2cr();
+/* Function             */
 extern void PPCHalt();
+/* Function             */
 extern void PPCMfhid2();
+/* Function             */
 extern void PPCMthid2();
+/* Function             */
 extern void DCEnable();
+/* Function             */
+extern void DCInvalidateRange();
+/* Function             */
+extern void DCFlushRange();
+/* Function             */
+extern void DCStoreRange();
+/* Function             */
+extern void DCFlushRangeNoSync();
+/* Function             */
+extern void DCStoreRangeNoSync();
+/* Function             */
+extern void DCZeroRange();
+/* Function             */
+extern void ICInvalidateRange();
+/* Function             */
+extern void ICFlashInvalidate();
+/* Function             */
 extern void ICEnable();
+/* Function             */
 extern void __LCEnable();
+/* Function             */
+extern void LCEnable();
+/* Function             */
+extern void LCDisable();
+/* Function             */
 extern void LCStoreBlocks();
+/* Function             */
+extern void LCStoreData();
+/* Function             */
 extern void LCQueueWait();
+/* Function             */
 extern void L2GlobalInvalidate();
+/* Function             */
 extern void DMAErrorHandler();
+/* Function             */
+extern void __OSCacheInit();
+/* Function             */
 extern void OSDumpContext();
+/* Function             */
 extern void OSSetErrorHandler();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void DBPrintf();
+/* InitializedData      */
 SECTION_DATA extern u8 OSCache__LIT_63[44];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_84[24];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_85[28];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_86[48];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_87[60];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_88[56];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_89[64];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_90[44];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_91[32];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_92[28];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_104[28];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_105[28];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_106[24];
+/* InitializedData      */
+SECTION_DATA extern u8 OSCache__LIT_107[52];
 }
 
 
@@ -39,8 +111,8 @@ SECTION_DATA extern u8 OSCache__LIT_63[44];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CF510 0000 .data      ...data.0                                                    */
-/* 803CF510 0029 .data      @63                                                          */
+/* 803CF510-803CF510 0000 .data      ...data.0                                                    InitializedData */
+/* 803CF510-803CF53C 0029 .data      @63                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_63[44] = {
 	0x3E, 0x3E, 0x3E, 0x20, 0x4C, 0x32, 0x20, 0x49, 0x4E, 0x56, 0x41, 0x4C, 0x49, 0x44, 0x41, 0x54,
 	0x45, 0x20, 0x3A, 0x20, 0x53, 0x48, 0x4F, 0x55, 0x4C, 0x44, 0x20, 0x4E, 0x45, 0x56, 0x45, 0x52,
@@ -48,32 +120,32 @@ SECTION_DATA u8 OSCache__LIT_63[44] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF53C 0018 .data      @84                                                          */
+/* 803CF53C-803CF554 0018 .data      @84                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_84[24] = {
 	0x4D, 0x61, 0x63, 0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x72, 0x65,
 	0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x0A, 0x00,
 };
-/* 803CF554 001B .data      @85                                                          */
+/* 803CF554-803CF570 001B .data      @85                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_85[28] = {
 	0x48, 0x49, 0x44, 0x32, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x20, 0x20, 0x20, 0x53, 0x52,
 	0x52, 0x31, 0x20, 0x3D, 0x20, 0x30, 0x78, 0x25, 0x78, 0x0A, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803CF570 0030 .data      @86                                                          */
+/* 803CF570-803CF5A0 0030 .data      @86                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_86[48] = {
 	0x4D, 0x61, 0x63, 0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x77, 0x61,
 	0x73, 0x20, 0x6E, 0x6F, 0x74, 0x20, 0x44, 0x4D, 0x41, 0x2F, 0x6C, 0x6F, 0x63, 0x6B, 0x65, 0x64,
 	0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x72, 0x65, 0x6C, 0x61, 0x74, 0x65, 0x64, 0x0A, 0x00,
 };
-/* 803CF5A0 003C .data      @87                                                          */
+/* 803CF5A0-803CF5DC 003C .data      @87                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_87[60] = {
 	0x44, 0x4D, 0x41, 0x45, 0x72, 0x72, 0x6F, 0x72, 0x48, 0x61, 0x6E, 0x64, 0x6C, 0x65, 0x72, 0x28,
 	0x29, 0x3A, 0x20, 0x41, 0x6E, 0x20, 0x65, 0x72, 0x72, 0x6F, 0x72, 0x20, 0x6F, 0x63, 0x63, 0x75,
 	0x72, 0x72, 0x65, 0x64, 0x20, 0x77, 0x68, 0x69, 0x6C, 0x65, 0x20, 0x70, 0x72, 0x6F, 0x63, 0x65,
 	0x73, 0x73, 0x69, 0x6E, 0x67, 0x20, 0x44, 0x4D, 0x41, 0x2E, 0x0A, 0x00,
 };
-/* 803CF5DC 0037 .data      @88                                                          */
+/* 803CF5DC-803CF614 0037 .data      @88                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_88[56] = {
 	0x54, 0x68, 0x65, 0x20, 0x66, 0x6F, 0x6C, 0x6C, 0x6F, 0x77, 0x69, 0x6E, 0x67, 0x20, 0x65, 0x72,
 	0x72, 0x6F, 0x72, 0x73, 0x20, 0x68, 0x61, 0x76, 0x65, 0x20, 0x62, 0x65, 0x65, 0x6E, 0x20, 0x64,
@@ -82,7 +154,7 @@ SECTION_DATA u8 OSCache__LIT_88[56] = {
 	/* padding */
 	0x00,
 };
-/* 803CF614 003F .data      @89                                                          */
+/* 803CF614-803CF654 003F .data      @89                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_89[64] = {
 	0x09, 0x2D, 0x20, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x65, 0x64, 0x20, 0x61, 0x20, 0x6C,
 	0x6F, 0x63, 0x6B, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x74, 0x61, 0x67, 0x20,
@@ -91,7 +163,7 @@ SECTION_DATA u8 OSCache__LIT_89[64] = {
 	/* padding */
 	0x00,
 };
-/* 803CF654 0029 .data      @90                                                          */
+/* 803CF654-803CF680 0029 .data      @90                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_90[44] = {
 	0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x61, 0x74, 0x74, 0x65, 0x6D, 0x70, 0x74, 0x65, 0x64,
 	0x20, 0x74, 0x6F, 0x20, 0x61, 0x63, 0x63, 0x65, 0x73, 0x73, 0x20, 0x6E, 0x6F, 0x72, 0x6D, 0x61,
@@ -99,42 +171,42 @@ SECTION_DATA u8 OSCache__LIT_90[44] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF680 001D .data      @91                                                          */
+/* 803CF680-803CF6A0 001D .data      @91                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_91[32] = {
 	0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x6D, 0x69, 0x73, 0x73, 0x65, 0x64, 0x20, 0x69, 0x6E,
 	0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF6A0 0019 .data      @92                                                          */
+/* 803CF6A0-803CF6BC 0019 .data      @92                                                          InitializedData */
 SECTION_DATA u8 OSCache__LIT_92[28] = {
 	0x09, 0x2D, 0x20, 0x44, 0x4D, 0x41, 0x20, 0x71, 0x75, 0x65, 0x75, 0x65, 0x20, 0x6F, 0x76, 0x65,
 	0x72, 0x66, 0x6C, 0x6F, 0x77, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF6BC 0019 .data      @104                                                         */
+/* 803CF6BC-803CF6D8 0019 .data      @104                                                         InitializedData */
 SECTION_DATA u8 OSCache__LIT_104[28] = {
 	0x4C, 0x31, 0x20, 0x69, 0x2D, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74,
 	0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF6D8 0019 .data      @105                                                         */
+/* 803CF6D8-803CF6F4 0019 .data      @105                                                         InitializedData */
 SECTION_DATA u8 OSCache__LIT_105[28] = {
 	0x4C, 0x31, 0x20, 0x64, 0x2D, 0x63, 0x61, 0x63, 0x68, 0x65, 0x73, 0x20, 0x69, 0x6E, 0x69, 0x74,
 	0x69, 0x61, 0x6C, 0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803CF6F4 0016 .data      @106                                                         */
+/* 803CF6F4-803CF70C 0016 .data      @106                                                         InitializedData */
 SECTION_DATA u8 OSCache__LIT_106[24] = {
 	0x4C, 0x32, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x69, 0x6E, 0x69, 0x74, 0x69, 0x61, 0x6C,
 	0x69, 0x7A, 0x65, 0x64, 0x0A, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803CF70C 002E .data      @107                                                         */
+/* 803CF70C-803CF740 002E .data      @107                                                         InitializedData */
 SECTION_DATA u8 OSCache__LIT_107[52] = {
 	0x4C, 0x6F, 0x63, 0x6B, 0x65, 0x64, 0x20, 0x63, 0x61, 0x63, 0x68, 0x65, 0x20, 0x6D, 0x61, 0x63,
 	0x68, 0x69, 0x6E, 0x65, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6B, 0x20, 0x68, 0x61, 0x6E, 0x64, 0x6C,
@@ -150,7 +222,7 @@ SECTION_DATA u8 OSCache__LIT_107[52] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033B56C 0014 .text      DCEnable                                                     */
+/* 8033B56C-8033B580 0014 .text      DCEnable                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -160,7 +232,7 @@ asm void DCEnable() {
 }
 #pragma pop
 
-/* 8033B580 002C .text      DCInvalidateRange                                            */
+/* 8033B580-8033B5AC 002C .text      DCInvalidateRange                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -170,7 +242,7 @@ asm void DCInvalidateRange() {
 }
 #pragma pop
 
-/* 8033B5AC 0030 .text      DCFlushRange                                                 */
+/* 8033B5AC-8033B5DC 0030 .text      DCFlushRange                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +252,7 @@ asm void DCFlushRange() {
 }
 #pragma pop
 
-/* 8033B5DC 0030 .text      DCStoreRange                                                 */
+/* 8033B5DC-8033B60C 0030 .text      DCStoreRange                                                 Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +262,7 @@ asm void DCStoreRange() {
 }
 #pragma pop
 
-/* 8033B60C 002C .text      DCFlushRangeNoSync                                           */
+/* 8033B60C-8033B638 002C .text      DCFlushRangeNoSync                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +272,7 @@ asm void DCFlushRangeNoSync() {
 }
 #pragma pop
 
-/* 8033B638 002C .text      DCStoreRangeNoSync                                           */
+/* 8033B638-8033B664 002C .text      DCStoreRangeNoSync                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +282,7 @@ asm void DCStoreRangeNoSync() {
 }
 #pragma pop
 
-/* 8033B664 002C .text      DCZeroRange                                                  */
+/* 8033B664-8033B690 002C .text      DCZeroRange                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +292,7 @@ asm void DCZeroRange() {
 }
 #pragma pop
 
-/* 8033B690 0034 .text      ICInvalidateRange                                            */
+/* 8033B690-8033B6C4 0034 .text      ICInvalidateRange                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +302,7 @@ asm void ICInvalidateRange() {
 }
 #pragma pop
 
-/* 8033B6C4 0010 .text      ICFlashInvalidate                                            */
+/* 8033B6C4-8033B6D4 0010 .text      ICFlashInvalidate                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +312,7 @@ asm void ICFlashInvalidate() {
 }
 #pragma pop
 
-/* 8033B6D4 0014 .text      ICEnable                                                     */
+/* 8033B6D4-8033B6E8 0014 .text      ICEnable                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +322,7 @@ asm void ICEnable() {
 }
 #pragma pop
 
-/* 8033B6E8 00CC .text      __LCEnable                                                   */
+/* 8033B6E8-8033B7B4 00CC .text      __LCEnable                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +332,7 @@ asm void __LCEnable() {
 }
 #pragma pop
 
-/* 8033B7B4 0038 .text      LCEnable                                                     */
+/* 8033B7B4-8033B7EC 0038 .text      LCEnable                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +342,7 @@ asm void LCEnable() {
 }
 #pragma pop
 
-/* 8033B7EC 0028 .text      LCDisable                                                    */
+/* 8033B7EC-8033B814 0028 .text      LCDisable                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +352,7 @@ asm void LCDisable() {
 }
 #pragma pop
 
-/* 8033B814 0024 .text      LCStoreBlocks                                                */
+/* 8033B814-8033B838 0024 .text      LCStoreBlocks                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +362,7 @@ asm void LCStoreBlocks() {
 }
 #pragma pop
 
-/* 8033B838 00AC .text      LCStoreData                                                  */
+/* 8033B838-8033B8E4 00AC .text      LCStoreData                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +372,7 @@ asm void LCStoreData() {
 }
 #pragma pop
 
-/* 8033B8E4 0014 .text      LCQueueWait                                                  */
+/* 8033B8E4-8033B8F8 0014 .text      LCQueueWait                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +382,7 @@ asm void LCQueueWait() {
 }
 #pragma pop
 
-/* 8033B8F8 0098 .text      L2GlobalInvalidate                                           */
+/* 8033B8F8-8033B990 0098 .text      L2GlobalInvalidate                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +392,7 @@ asm void L2GlobalInvalidate() {
 }
 #pragma pop
 
-/* 8033B990 0160 .text      DMAErrorHandler                                              */
+/* 8033B990-8033BAF0 0160 .text      DMAErrorHandler                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +402,7 @@ asm void DMAErrorHandler() {
 }
 #pragma pop
 
-/* 8033BAF0 00F4 .text      __OSCacheInit                                                */
+/* 8033BAF0-8033BBE4 00F4 .text      __OSCacheInit                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

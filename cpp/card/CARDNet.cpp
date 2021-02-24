@@ -9,8 +9,14 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void __CARDGetControlBlock();
+/* Function             */
 extern void __CARDPutControlBlock();
+/* Function             */
+extern void CARDGetSerialNo();
+/* MergedInitializedData */
+SECTION_SDATA extern u8 merged_80450A70[8];
 }
 
 
@@ -19,7 +25,7 @@ extern void __CARDPutControlBlock();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450A70 0008 .sdata     merged_80450A70                                              */
+/* 80450A70-80450A78 0008 .sdata     merged_80450A70                                              MergedInitializedData */
 SECTION_SDATA u8 merged_80450A70[8] = {
 	/* __CARDVendorID */
 	0xFF, 0xFF,
@@ -34,7 +40,7 @@ SECTION_SDATA u8 merged_80450A70[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80359158 00C4 .text      CARDGetSerialNo                                              */
+/* 80359158-8035921C 00C4 .text      CARDGetSerialNo                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

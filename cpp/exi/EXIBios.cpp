@@ -9,38 +9,116 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSGetConsoleType();
+/* Function             */
 extern void __OSGetDIConfig();
+/* Function             */
 extern void OSRegisterVersion();
+/* Function             */
 extern void OSSetCurrentContext();
+/* Function             */
 extern void OSClearContext();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void __OSSetInterruptHandler();
+/* Function             */
 extern void __OSGetInterruptHandler();
+/* Function             */
 extern void __OSMaskInterrupts();
+/* Function             */
 extern void __OSUnmaskInterrupts();
+/* Function             */
 extern void OSGetTime();
+/* Function             */
 extern void SetExiInterruptMask();
+/* Function             */
 extern void EXIImm();
+/* Function             */
+extern void EXIImmEx();
+/* Function             */
+extern void EXIDma();
+/* Function             */
 extern void EXISync();
+/* Function             */
 extern void EXIClearInterrupts();
+/* Function             */
+extern void EXISetExiCallback();
+/* Function             */
 extern void __EXIProbe();
+/* Function             */
+extern void EXIProbe();
+/* Function             */
+extern void EXIProbeEx();
+/* Function             */
+extern void EXIAttach();
+/* Function             */
+extern void EXIDetach();
+/* Function             */
 extern void EXISelect();
+/* Function             */
 extern void EXIDeselect();
+/* Function             */
 extern void EXIIntrruptHandler();
+/* Function             */
 extern void TCIntrruptHandler();
+/* Function             */
 extern void EXTIntrruptHandler();
+/* Function             */
+extern void EXIInit();
+/* Function             */
 extern void EXILock();
+/* Function             */
+extern void EXIUnlock();
+/* Function             */
+extern void EXIGetState();
+/* Function             */
 extern void UnlockedHandler();
+/* Function             */
 extern void EXIGetID();
+/* Function             */
 extern void __OSEnableBarnacle();
+/* Function             */
 extern void __div2i();
+/* Function             */
 extern void memmove();
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_1[72];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_473[16];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_474[16];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_475[16];
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_476[16];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_477[20];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_478[20];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_479[12];
+/* InitializedData      */
+SECTION_DATA extern u8 LIT_485[12];
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_486[16];
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_487[20];
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_489[16];
+/* InitializedData      */
+SECTION_DATA extern u8 EXIBios__LIT_490[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 Ecb[192];
-SECTION_SDATA extern u8 __EXIVersion[8];
-SECTION_SBSS extern u8 __OSInIPL[4];
-SECTION_SBSS extern u8 IDSerialPort1[4];
+/* SymbolReferenceArrayData */
+SECTION_SDATA extern void* __EXIVersion[2];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 __OSInIPL[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 IDSerialPort1[4 + 4 /* padding */];
 }
 
 
@@ -49,8 +127,8 @@ SECTION_SBSS extern u8 IDSerialPort1[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D10A8 0000 .data      ...data.0                                                    */
-/* 803D10A8 0045 .data      @1                                                           */
+/* 803D10A8-803D10A8 0000 .data      ...data.0                                                    InitializedData */
+/* 803D10A8-803D10F0 0045 .data      @1                                                           InitializedData */
 SECTION_DATA u8 EXIBios__LIT_1[72] = {
 	0x3C, 0x3C, 0x20, 0x44, 0x6F, 0x6C, 0x70, 0x68, 0x69, 0x6E, 0x20, 0x53, 0x44, 0x4B, 0x20, 0x2D,
 	0x20, 0x45, 0x58, 0x49, 0x09, 0x72, 0x65, 0x6C, 0x65, 0x61, 0x73, 0x65, 0x20, 0x62, 0x75, 0x69,
@@ -60,68 +138,68 @@ SECTION_DATA u8 EXIBios__LIT_1[72] = {
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D10F0 000F .data      @473                                                         */
+/* 803D10F0-803D1100 000F .data      @473                                                         InitializedData */
 SECTION_DATA u8 LIT_473[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x35, 0x39, 0x00,
 	/* padding */
 	0x00,
 };
-/* 803D1100 0010 .data      @474                                                         */
+/* 803D1100-803D1110 0010 .data      @474                                                         InitializedData */
 SECTION_DATA u8 LIT_474[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x31, 0x32, 0x33, 0x00,
 };
-/* 803D1110 0010 .data      @475                                                         */
+/* 803D1110-803D1120 0010 .data      @475                                                         InitializedData */
 SECTION_DATA u8 LIT_475[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x32, 0x35, 0x31, 0x00,
 };
-/* 803D1120 0010 .data      @476                                                         */
+/* 803D1120-803D1130 0010 .data      @476                                                         InitializedData */
 SECTION_DATA u8 EXIBios__LIT_476[16] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x35, 0x30, 0x37, 0x00,
 };
-/* 803D1130 0011 .data      @477                                                         */
+/* 803D1130-803D1144 0011 .data      @477                                                         InitializedData */
 SECTION_DATA u8 LIT_477[20] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x31, 0x30, 0x31, 0x39,
 	0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1144 0011 .data      @478                                                         */
+/* 803D1144-803D1158 0011 .data      @478                                                         InitializedData */
 SECTION_DATA u8 LIT_478[20] = {
 	0x4D, 0x65, 0x6D, 0x6F, 0x72, 0x79, 0x20, 0x43, 0x61, 0x72, 0x64, 0x20, 0x32, 0x30, 0x34, 0x33,
 	0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1158 000C .data      @479                                                         */
+/* 803D1158-803D1164 000C .data      @479                                                         InitializedData */
 SECTION_DATA u8 LIT_479[12] = {
 	0x55, 0x53, 0x42, 0x20, 0x41, 0x64, 0x61, 0x70, 0x74, 0x65, 0x72, 0x00,
 };
-/* 803D1164 0009 .data      @485                                                         */
+/* 803D1164-803D1170 0009 .data      @485                                                         InitializedData */
 SECTION_DATA u8 LIT_485[12] = {
 	0x4E, 0x65, 0x74, 0x20, 0x43, 0x61, 0x72, 0x64, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1170 000D .data      @486                                                         */
+/* 803D1170-803D1180 000D .data      @486                                                         InitializedData */
 SECTION_DATA u8 EXIBios__LIT_486[16] = {
 	0x41, 0x72, 0x74, 0x69, 0x73, 0x74, 0x20, 0x45, 0x74, 0x68, 0x65, 0x72, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00,
 };
-/* 803D1180 0012 .data      @487                                                         */
+/* 803D1180-803D1194 0012 .data      @487                                                         InitializedData */
 SECTION_DATA u8 EXIBios__LIT_487[20] = {
 	0x42, 0x72, 0x6F, 0x61, 0x64, 0x62, 0x61, 0x6E, 0x64, 0x20, 0x41, 0x64, 0x61, 0x70, 0x74, 0x65,
 	0x72, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D1194 000E .data      @489                                                         */
+/* 803D1194-803D11A4 000E .data      @489                                                         InitializedData */
 SECTION_DATA u8 EXIBios__LIT_489[16] = {
 	0x53, 0x74, 0x72, 0x65, 0x61, 0x6D, 0x20, 0x48, 0x61, 0x6E, 0x67, 0x65, 0x72, 0x00,
 	/* padding */
 	0x00, 0x00,
 };
-/* 803D11A4 000E .data      @490                                                         */
+/* 803D11A4-803D11B8 000E .data      @490                                                         InitializedData */
 SECTION_DATA u8 EXIBios__LIT_490[20] = {
 	0x49, 0x53, 0x2D, 0x44, 0x4F, 0x4C, 0x2D, 0x56, 0x49, 0x45, 0x57, 0x45, 0x52, 0x00,
 	/* padding */
@@ -135,11 +213,11 @@ SECTION_DATA u8 EXIBios__LIT_490[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804509C0 0004 .sdata     __EXIVersion                                                 */
-SECTION_SDATA u8 __EXIVersion[8] = {
-	0x80, 0x3D, 0x10, 0xA8,
+/* 804509C0-804509C8 0004 .sdata     __EXIVersion                                                 SymbolReferenceArrayData */
+SECTION_SDATA void* __EXIVersion[2] = {
+	(void*)&EXIBios__LIT_1,
 	/* padding */
-	0x00, 0x00, 0x00, 0x00,
+	NULL,
 };
 }
 
@@ -149,7 +227,7 @@ SECTION_SDATA u8 __EXIVersion[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044C570 00C0 .bss       Ecb                                                          */
+/* 8044C570-8044C630 00C0 .bss       Ecb                                                          ZeroInitializedData */
 SECTION_BSS u8 Ecb[192];
 }
 
@@ -159,9 +237,8 @@ SECTION_BSS u8 Ecb[192];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804516D8 0004 .sbss      IDSerialPort1                                                */
-SECTION_SBSS u8 IDSerialPort1[4];
-SECTION_SBSS u8 pad_804516DC[4];
+/* 804516D8-804516E0 0004 .sbss      IDSerialPort1                                                ZeroInitializedData */
+SECTION_SBSS u8 IDSerialPort1[4 + 4 /* padding */];
 }
 
 
@@ -170,7 +247,7 @@ SECTION_SBSS u8 pad_804516DC[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80342C0C 00F4 .text      SetExiInterruptMask                                          */
+/* 80342C0C-80342D00 00F4 .text      SetExiInterruptMask                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -180,7 +257,7 @@ asm void SetExiInterruptMask() {
 }
 #pragma pop
 
-/* 80342D00 025C .text      EXIImm                                                       */
+/* 80342D00-80342F5C 025C .text      EXIImm                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -190,7 +267,7 @@ asm void EXIImm() {
 }
 #pragma pop
 
-/* 80342F5C 00A0 .text      EXIImmEx                                                     */
+/* 80342F5C-80342FFC 00A0 .text      EXIImmEx                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -200,7 +277,7 @@ asm void EXIImmEx() {
 }
 #pragma pop
 
-/* 80342FFC 00EC .text      EXIDma                                                       */
+/* 80342FFC-803430E8 00EC .text      EXIDma                                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,7 +287,7 @@ asm void EXIDma() {
 }
 #pragma pop
 
-/* 803430E8 024C .text      EXISync                                                      */
+/* 803430E8-80343334 024C .text      EXISync                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -220,7 +297,7 @@ asm void EXISync() {
 }
 #pragma pop
 
-/* 80343334 0048 .text      EXIClearInterrupts                                           */
+/* 80343334-8034337C 0048 .text      EXIClearInterrupts                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -230,7 +307,7 @@ asm void EXIClearInterrupts() {
 }
 #pragma pop
 
-/* 8034337C 007C .text      EXISetExiCallback                                            */
+/* 8034337C-803433F8 007C .text      EXISetExiCallback                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +317,7 @@ asm void EXISetExiCallback() {
 }
 #pragma pop
 
-/* 803433F8 0174 .text      __EXIProbe                                                   */
+/* 803433F8-8034356C 0174 .text      __EXIProbe                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +327,7 @@ asm void __EXIProbe() {
 }
 #pragma pop
 
-/* 8034356C 0080 .text      EXIProbe                                                     */
+/* 8034356C-803435EC 0080 .text      EXIProbe                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -260,7 +337,7 @@ asm void EXIProbe() {
 }
 #pragma pop
 
-/* 803435EC 00B4 .text      EXIProbeEx                                                   */
+/* 803435EC-803436A0 00B4 .text      EXIProbeEx                                                   Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -270,7 +347,7 @@ asm void EXIProbeEx() {
 }
 #pragma pop
 
-/* 803436A0 010C .text      EXIAttach                                                    */
+/* 803436A0-803437AC 010C .text      EXIAttach                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -280,7 +357,7 @@ asm void EXIAttach() {
 }
 #pragma pop
 
-/* 803437AC 00BC .text      EXIDetach                                                    */
+/* 803437AC-80343868 00BC .text      EXIDetach                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -290,7 +367,7 @@ asm void EXIDetach() {
 }
 #pragma pop
 
-/* 80343868 012C .text      EXISelect                                                    */
+/* 80343868-80343994 012C .text      EXISelect                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -300,7 +377,7 @@ asm void EXISelect() {
 }
 #pragma pop
 
-/* 80343994 0110 .text      EXIDeselect                                                  */
+/* 80343994-80343AA4 0110 .text      EXIDeselect                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -310,7 +387,7 @@ asm void EXIDeselect() {
 }
 #pragma pop
 
-/* 80343AA4 00C8 .text      EXIIntrruptHandler                                           */
+/* 80343AA4-80343B6C 00C8 .text      EXIIntrruptHandler                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -320,7 +397,7 @@ asm void EXIIntrruptHandler() {
 }
 #pragma pop
 
-/* 80343B6C 0218 .text      TCIntrruptHandler                                            */
+/* 80343B6C-80343D84 0218 .text      TCIntrruptHandler                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +407,7 @@ asm void TCIntrruptHandler() {
 }
 #pragma pop
 
-/* 80343D84 00D0 .text      EXTIntrruptHandler                                           */
+/* 80343D84-80343E54 00D0 .text      EXTIntrruptHandler                                           Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,7 +417,7 @@ asm void EXTIntrruptHandler() {
 }
 #pragma pop
 
-/* 80343E54 01D4 .text      EXIInit                                                      */
+/* 80343E54-80344028 01D4 .text      EXIInit                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -350,7 +427,7 @@ asm void EXIInit() {
 }
 #pragma pop
 
-/* 80344028 00F4 .text      EXILock                                                      */
+/* 80344028-8034411C 00F4 .text      EXILock                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,7 +437,7 @@ asm void EXILock() {
 }
 #pragma pop
 
-/* 8034411C 00DC .text      EXIUnlock                                                    */
+/* 8034411C-803441F8 00DC .text      EXIUnlock                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -370,7 +447,7 @@ asm void EXIUnlock() {
 }
 #pragma pop
 
-/* 803441F8 0018 .text      EXIGetState                                                  */
+/* 803441F8-80344210 0018 .text      EXIGetState                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -380,7 +457,7 @@ asm void EXIGetState() {
 }
 #pragma pop
 
-/* 80344210 0028 .text      UnlockedHandler                                              */
+/* 80344210-80344238 0028 .text      UnlockedHandler                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -390,7 +467,7 @@ asm void UnlockedHandler() {
 }
 #pragma pop
 
-/* 80344238 03B0 .text      EXIGetID                                                     */
+/* 80344238-803445E8 03B0 .text      EXIGetID                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -8,77 +8,251 @@
 // Additional Symbols:
 // 
 
-struct cBgS_PolyInfo;
-struct dBgW;
 struct cXyz;
 struct csXyz;
+struct dBgW;
+struct cBgS_PolyInfo;
 
 extern void dBgS_MoveBGProc_Typical(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*); /* dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
 extern void dBgS_MoveBGProc_RotY(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*); /* dBgS_MoveBGProc_RotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+extern void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*); /* dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+extern void dBgS_MoveBGProc_Trans(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*); /* dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+extern void dBgS_CheckBWallPoly(const cBgS_PolyInfo&); /* dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo */
+extern void dBgS_CheckBGroundPoly(const cBgS_PolyInfo&); /* dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo */
+extern void dBgS_CheckBRoofPoly(const cBgS_PolyInfo&); /* dBgS_CheckBRoofPoly__FRC13cBgS_PolyInfo */
+extern void dBgS_GetNY(const cBgS_PolyInfo&); /* dBgS_GetNY__FRC13cBgS_PolyInfo */
 extern void cBgW_CheckBGround(f32); /* cBgW_CheckBGround__Ff */
 extern void cBgW_CheckBRoof(f32); /* cBgW_CheckBRoof__Ff */
 extern void cBgW_CheckBWall(f32); /* cBgW_CheckBWall__Ff */
 
 extern "C" {
+/* Function             */
 extern void __dt__11cBgS_ChkElmFv();
+/* Function             */
 extern void __dt__4dBgSFv();
+/* Function             */
 extern void __dt__4cBgSFv();
+/* Function             */
 extern void Init__11cBgS_ChkElmFv();
+/* Function             */
 extern void Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv();
+/* Function             */
 extern void Release__11cBgS_ChkElmFv();
+/* Function             */
 extern void Regist__4cBgSFP9dBgW_BaseUiPv();
+/* Function             */
+extern void Release__4cBgSFP9dBgW_Base();
+/* Function             */
 extern void Ct__4cBgSFv();
+/* Function             */
 extern void Dt__4cBgSFv();
+/* Function             */
+extern void LineCross__4cBgSFP11cBgS_LinChk();
+/* Function             */
+extern void GroundCross__4cBgSFP11cBgS_GndChk();
+/* Function             */
+extern void ConvDzb__4cBgSFPv();
+/* Function             */
+extern void GetActorPointer__4cBgSCFi();
+/* Function             */
 extern void GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo();
+/* Function             */
 extern void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetGrpRoomId__4cBgSCFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+/* Function             */
+extern void GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz();
+/* Function             */
+extern void ShdwDraw__4cBgSFP13cBgS_ShdwDraw();
+/* Function             */
 extern void GetGrpInf__4cBgSCFRC13cBgS_PolyInfo();
+/* Function             */
 extern void Ct__4dBgSFv();
+/* Function             */
 extern void Dt__4dBgSFv();
+/* Function             */
+extern void ClrMoveFlag__4dBgSFv();
+/* Function             */
+extern void Move__4dBgSFv();
+/* Function             */
+extern void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+/* Function             */
+extern void SetOldShapeAngleY__9dBgW_BaseFs();
+/* Function             */
+extern void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetUnderwaterRoofCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetWallCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetGroundCode__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetRoomCamId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl();
+/* Function             */
+extern void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
+extern void WallCorrect__4dBgSFP9dBgS_Acch();
+/* Function             */
+extern void WallCorrectSort__4dBgSFP9dBgS_Acch();
+/* Function             */
+extern void RoofChk__4dBgSFP12dBgS_RoofChk();
+/* Function             */
+extern void SplGrpChk__4dBgSFP14dBgS_SplGrpChk();
+/* Function             */
+extern void SphChk__4dBgSFP11dBgS_SphChkPv();
+/* Function             */
+extern void MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb();
+/* Function             */
+extern void MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
+extern void MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
 extern void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
 extern void dBgS_MoveBGProc_RotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
+extern void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
+extern void dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+/* Function             */
+extern void RideCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_c();
+/* Function             */
+extern void ArrowStickCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_cR4cXyz();
+/* Function             */
+extern void PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+/* Function             */
+extern void dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo();
+/* Function             */
+extern void dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo();
+/* Function             */
+extern void dBgS_CheckBRoofPoly__FRC13cBgS_PolyInfo();
+/* Function             */
+extern void dBgS_GetNY__FRC13cBgS_PolyInfo();
+/* Function             */
 extern void SetNowActorInfo__9dBgS_AcchFiPvUi();
+/* Function             */
 extern void CalcMovePosWork__9dBgS_AcchFv();
+/* Function             */
 extern void CalcWallRR__9dBgS_AcchFv();
+/* Function             */
 extern void Init__14dBgS_SplGrpChkFv();
+/* Function             */
 extern void Init__12dBgS_RoofChkFv();
+/* Function             */
 extern void GetTrans__4cBgWCFP4cXyz();
+/* Function             */
 extern void CalcDiffShapeAngleY__9dBgW_BaseFs();
+/* Function             */
 extern void ChkSameActorPid__8cBgS_ChkCFUi();
+/* Function             */
 extern void PreCheck__11cBgS_GndChkFv();
+/* Function             */
 extern void PreCalc__11cBgS_LinChkFv();
+/* Function             */
 extern void ChkSetInfo__13cBgS_PolyInfoCFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
 extern void SetActorInfo__13cBgS_PolyInfoFiPvUi();
+/* Function             */
 extern void ChkSafe__13cBgS_PolyInfoCFPCvUi();
+/* Function             */
 extern void ChkBgIndex__13cBgS_PolyInfoCFv();
+/* Function             */
 extern void Regist__9cBgW_BgIdFi();
+/* Function             */
 extern void Release__9cBgW_BgIdFv();
+/* Function             */
 extern void ChkUsed__9cBgW_BgIdCFv();
+/* Function             */
 extern void cBgW_CheckBGround__Ff();
+/* Function             */
 extern void cBgW_CheckBRoof__Ff();
+/* Function             */
 extern void cBgW_CheckBWall__Ff();
+/* Function             */
 extern void PSMTXInverse();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECAdd();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__4dBgS[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__4cBgS[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11cBgS_ChkElm[4];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
-SECTION_SBSS extern u8 l_SetCounter[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 l_SetCounter[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450F68[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_bg_s__LIT_3738[8];
 }
 
@@ -88,24 +262,24 @@ SECTION_SDATA2 extern u8 d_d_bg_s__LIT_3738[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803AB608 0014 .data      __vt__4dBgS                                                  */
-SECTION_DATA const  void* __vt__4dBgS[5] = {
+/* 803AB608-803AB61C 0014 .data      __vt__4dBgS                                                  VTableData */
+SECTION_DATA void* __vt__4dBgS[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__4dBgSFv,
 	(void*)Ct__4dBgSFv,
 	(void*)Dt__4dBgSFv,
 };
-/* 803AB61C 0014 .data      __vt__4cBgS                                                  */
-SECTION_DATA const  void* __vt__4cBgS[5] = {
+/* 803AB61C-803AB630 0014 .data      __vt__4cBgS                                                  VTableData */
+SECTION_DATA void* __vt__4cBgS[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__4cBgSFv,
 	(void*)Ct__4cBgSFv,
 	(void*)Dt__4cBgSFv,
 };
-/* 803AB630 0010 .data      __vt__11cBgS_ChkElm                                          */
-SECTION_DATA const  void* __vt__11cBgS_ChkElm[4] = {
+/* 803AB630-803AB640 0010 .data      __vt__11cBgS_ChkElm                                          VTableData */
+SECTION_DATA void* __vt__11cBgS_ChkElm[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__11cBgS_ChkElmFv,
@@ -119,7 +293,7 @@ SECTION_DATA const  void* __vt__11cBgS_ChkElm[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804526B8 0004 .sdata2    @3738                                                        */
+/* 804526B8-804526C0 0004 .sdata2    @3738                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_bg_s__LIT_3738[8] = {
 	0xCE, 0x6E, 0x6B, 0x28,
 	/* padding */
@@ -133,10 +307,9 @@ SECTION_SDATA2 u8 d_d_bg_s__LIT_3738[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450F60 0004 .sbss      l_SetCounter                                                 */
-SECTION_SBSS u8 l_SetCounter[4];
-SECTION_SBSS u8 pad_80450F64[4];
-/* 80450F68 0008 .sbss      data_80450F68                                                */
+/* 80450F60-80450F68 0004 .sbss      l_SetCounter                                                 ZeroInitializedData */
+SECTION_SBSS u8 l_SetCounter[4 + 4 /* padding */];
+/* 80450F68-80450F70 0008 .sbss      data_80450F68                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450F68[8];
 }
 
@@ -146,7 +319,7 @@ SECTION_SBSS u8 data_80450F68[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 800740F4 001C .text      Init__11cBgS_ChkElmFv                                        */
+/* 800740F4-80074110 001C .text      Init__11cBgS_ChkElmFv                                        Function */
 // cBgS_ChkElm::Init(void)
 #pragma push
 #pragma optimization_level 0
@@ -157,7 +330,7 @@ asm void Init__11cBgS_ChkElmFv() {
 }
 #pragma pop
 
-/* 80074110 0018 .text      Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv                       */
+/* 80074110-80074128 0018 .text      Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv                       Function */
 // cBgS_ChkElm::Regist2(dBgW_Base*, unsigned int, void*)
 #pragma push
 #pragma optimization_level 0
@@ -168,7 +341,7 @@ asm void Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv() {
 }
 #pragma pop
 
-/* 80074128 001C .text      Release__11cBgS_ChkElmFv                                     */
+/* 80074128-80074144 001C .text      Release__11cBgS_ChkElmFv                                     Function */
 // cBgS_ChkElm::Release(void)
 #pragma push
 #pragma optimization_level 0
@@ -179,7 +352,7 @@ asm void Release__11cBgS_ChkElmFv() {
 }
 #pragma pop
 
-/* 80074144 010C .text      Regist__4cBgSFP9dBgW_BaseUiPv                                */
+/* 80074144-80074250 010C .text      Regist__4cBgSFP9dBgW_BaseUiPv                                Function */
 // cBgS::Regist(dBgW_Base*, unsigned int, void*)
 #pragma push
 #pragma optimization_level 0
@@ -190,7 +363,7 @@ asm void Regist__4cBgSFP9dBgW_BaseUiPv() {
 }
 #pragma pop
 
-/* 80074250 0094 .text      Release__4cBgSFP9dBgW_Base                                   */
+/* 80074250-800742E4 0094 .text      Release__4cBgSFP9dBgW_Base                                   Function */
 // cBgS::Release(dBgW_Base*)
 #pragma push
 #pragma optimization_level 0
@@ -201,7 +374,7 @@ asm void Release__4cBgSFP9dBgW_Base() {
 }
 #pragma pop
 
-/* 800742E4 0054 .text      Ct__4cBgSFv                                                  */
+/* 800742E4-80074338 0054 .text      Ct__4cBgSFv                                                  Function */
 // cBgS::Ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -212,7 +385,7 @@ asm void Ct__4cBgSFv() {
 }
 #pragma pop
 
-/* 80074338 007C .text      Dt__4cBgSFv                                                  */
+/* 80074338-800743B4 007C .text      Dt__4cBgSFv                                                  Function */
 // cBgS::Dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -223,7 +396,7 @@ asm void Dt__4cBgSFv() {
 }
 #pragma pop
 
-/* 800743B4 00EC .text      LineCross__4cBgSFP11cBgS_LinChk                              */
+/* 800743B4-800744A0 00EC .text      LineCross__4cBgSFP11cBgS_LinChk                              Function */
 // cBgS::LineCross(cBgS_LinChk*)
 #pragma push
 #pragma optimization_level 0
@@ -234,7 +407,7 @@ asm void LineCross__4cBgSFP11cBgS_LinChk() {
 }
 #pragma pop
 
-/* 800744A0 00D8 .text      GroundCross__4cBgSFP11cBgS_GndChk                            */
+/* 800744A0-80074578 00D8 .text      GroundCross__4cBgSFP11cBgS_GndChk                            Function */
 // cBgS::GroundCross(cBgS_GndChk*)
 #pragma push
 #pragma optimization_level 0
@@ -245,7 +418,7 @@ asm void GroundCross__4cBgSFP11cBgS_GndChk() {
 }
 #pragma pop
 
-/* 80074578 00A0 .text      ConvDzb__4cBgSFPv                                            */
+/* 80074578-80074618 00A0 .text      ConvDzb__4cBgSFPv                                            Function */
 // cBgS::ConvDzb(void*)
 #pragma push
 #pragma optimization_level 0
@@ -256,7 +429,7 @@ asm void ConvDzb__4cBgSFPv() {
 }
 #pragma pop
 
-/* 80074618 0010 .text      GetActorPointer__4cBgSCFi                                    */
+/* 80074618-80074628 0010 .text      GetActorPointer__4cBgSCFi                                    Function */
 // cBgS::GetActorPointer(int) const
 #pragma push
 #pragma optimization_level 0
@@ -267,7 +440,7 @@ asm void GetActorPointer__4cBgSCFi() {
 }
 #pragma pop
 
-/* 80074628 0038 .text      GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo                  */
+/* 80074628-80074660 0038 .text      GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo                  Function */
 // cBgS::GetBgWBasePointer(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -278,7 +451,7 @@ asm void GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074660 0094 .text      ChkPolySafe__4cBgSFRC13cBgS_PolyInfo                         */
+/* 80074660-800746F4 0094 .text      ChkPolySafe__4cBgSFRC13cBgS_PolyInfo                         Function */
 // cBgS::ChkPolySafe(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -289,7 +462,7 @@ asm void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 800746F4 0050 .text      GetGrpRoomId__4cBgSCFRC13cBgS_PolyInfo                       */
+/* 800746F4-80074744 0050 .text      GetGrpRoomId__4cBgSCFRC13cBgS_PolyInfo                       Function */
 // cBgS::GetGrpRoomId(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -300,7 +473,7 @@ asm void GetGrpRoomId__4cBgSCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074744 00AC .text      GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla                */
+/* 80074744-800747F0 00AC .text      GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla                Function */
 // cBgS::GetTriPla(const cBgS_PolyInfo&, cM3dGPla*) const
 #pragma push
 #pragma optimization_level 0
@@ -311,7 +484,7 @@ asm void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla() {
 }
 #pragma pop
 
-/* 800747F0 0050 .text      GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz        */
+/* 800747F0-80074840 0050 .text      GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz        Function */
 // cBgS::GetTriPnt(const cBgS_PolyInfo&, cXyz*, cXyz*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -322,7 +495,7 @@ asm void GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz() {
 }
 #pragma pop
 
-/* 80074840 006C .text      ShdwDraw__4cBgSFP13cBgS_ShdwDraw                             */
+/* 80074840-800748AC 006C .text      ShdwDraw__4cBgSFP13cBgS_ShdwDraw                             Function */
 // cBgS::ShdwDraw(cBgS_ShdwDraw*)
 #pragma push
 #pragma optimization_level 0
@@ -333,7 +506,7 @@ asm void ShdwDraw__4cBgSFP13cBgS_ShdwDraw() {
 }
 #pragma pop
 
-/* 800748AC 0050 .text      GetGrpInf__4cBgSCFRC13cBgS_PolyInfo                          */
+/* 800748AC-800748FC 0050 .text      GetGrpInf__4cBgSCFRC13cBgS_PolyInfo                          Function */
 // cBgS::GetGrpInf(const cBgS_PolyInfo&) const
 #pragma push
 #pragma optimization_level 0
@@ -344,7 +517,7 @@ asm void GetGrpInf__4cBgSCFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 800748FC 0020 .text      Ct__4dBgSFv                                                  */
+/* 800748FC-8007491C 0020 .text      Ct__4dBgSFv                                                  Function */
 // dBgS::Ct(void)
 #pragma push
 #pragma optimization_level 0
@@ -355,7 +528,7 @@ asm void Ct__4dBgSFv() {
 }
 #pragma pop
 
-/* 8007491C 0020 .text      Dt__4dBgSFv                                                  */
+/* 8007491C-8007493C 0020 .text      Dt__4dBgSFv                                                  Function */
 // dBgS::Dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -366,7 +539,7 @@ asm void Dt__4dBgSFv() {
 }
 #pragma pop
 
-/* 8007493C 006C .text      ClrMoveFlag__4dBgSFv                                         */
+/* 8007493C-800749A8 006C .text      ClrMoveFlag__4dBgSFv                                         Function */
 // dBgS::ClrMoveFlag(void)
 #pragma push
 #pragma optimization_level 0
@@ -377,7 +550,7 @@ asm void ClrMoveFlag__4dBgSFv() {
 }
 #pragma pop
 
-/* 800749A8 0060 .text      Move__4dBgSFv                                                */
+/* 800749A8-80074A08 0060 .text      Move__4dBgSFv                                                Function */
 // dBgS::Move(void)
 #pragma push
 #pragma optimization_level 0
@@ -388,7 +561,7 @@ asm void Move__4dBgSFv() {
 }
 #pragma pop
 
-/* 80074A08 00AC .text      Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c                       */
+/* 80074A08-80074AB4 00AC .text      Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c                       Function */
 // dBgS::Regist(dBgW_Base*, fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -399,8 +572,8 @@ asm void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 80074AB4 0008 .text      SetOldShapeAngleY__9dBgW_BaseFs                              */
-// dBgW_Base::SetOldShapeAngleY(s16)
+/* 80074AB4-80074ABC 0008 .text      SetOldShapeAngleY__9dBgW_BaseFs                              Function */
+// dBgW_Base::SetOldShapeAngleY(short)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +583,7 @@ asm void SetOldShapeAngleY__9dBgW_BaseFs() {
 }
 #pragma pop
 
-/* 80074ABC 0084 .text      ChkMoveBG__4dBgSFRC13cBgS_PolyInfo                           */
+/* 80074ABC-80074B40 0084 .text      ChkMoveBG__4dBgSFRC13cBgS_PolyInfo                           Function */
 // dBgS::ChkMoveBG(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -421,7 +594,7 @@ asm void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074B40 0058 .text      ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo                    */
+/* 80074B40-80074B98 0058 .text      ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo                    Function */
 // dBgS::ChkMoveBG_NoDABg(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -432,7 +605,7 @@ asm void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074B98 0050 .text      GetExitId__4dBgSFRC13cBgS_PolyInfo                           */
+/* 80074B98-80074BE8 0050 .text      GetExitId__4dBgSFRC13cBgS_PolyInfo                           Function */
 // dBgS::GetExitId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -443,7 +616,7 @@ asm void GetExitId__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074BE8 0084 .text      GetPolyColor__4dBgSFRC13cBgS_PolyInfo                        */
+/* 80074BE8-80074C6C 0084 .text      GetPolyColor__4dBgSFRC13cBgS_PolyInfo                        Function */
 // dBgS::GetPolyColor(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -454,7 +627,7 @@ asm void GetPolyColor__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074C6C 0050 .text      GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo                     */
+/* 80074C6C-80074CBC 0050 .text      GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo                     Function */
 // dBgS::GetHorseNoEntry(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -465,7 +638,7 @@ asm void GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074CBC 0050 .text      GetSpecialCode__4dBgSFRC13cBgS_PolyInfo                      */
+/* 80074CBC-80074D0C 0050 .text      GetSpecialCode__4dBgSFRC13cBgS_PolyInfo                      Function */
 // dBgS::GetSpecialCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -476,7 +649,7 @@ asm void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074D0C 0050 .text      GetMagnetCode__4dBgSFRC13cBgS_PolyInfo                       */
+/* 80074D0C-80074D5C 0050 .text      GetMagnetCode__4dBgSFRC13cBgS_PolyInfo                       Function */
 // dBgS::GetMagnetCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -487,7 +660,7 @@ asm void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074D5C 0050 .text      GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo                   */
+/* 80074D5C-80074DAC 0050 .text      GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo                   Function */
 // dBgS::GetMonkeyBarsCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -498,7 +671,7 @@ asm void GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074DAC 0054 .text      GetUnderwaterRoofCode__4dBgSFRC13cBgS_PolyInfo               */
+/* 80074DAC-80074E00 0054 .text      GetUnderwaterRoofCode__4dBgSFRC13cBgS_PolyInfo               Function */
 // dBgS::GetUnderwaterRoofCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -509,7 +682,7 @@ asm void GetUnderwaterRoofCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074E00 0050 .text      GetWallCode__4dBgSFRC13cBgS_PolyInfo                         */
+/* 80074E00-80074E50 0050 .text      GetWallCode__4dBgSFRC13cBgS_PolyInfo                         Function */
 // dBgS::GetWallCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -520,7 +693,7 @@ asm void GetWallCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074E50 0050 .text      GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo                         */
+/* 80074E50-80074EA0 0050 .text      GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo                         Function */
 // dBgS::GetPolyAtt0(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -531,7 +704,7 @@ asm void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074EA0 0050 .text      GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo                         */
+/* 80074EA0-80074EF0 0050 .text      GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo                         Function */
 // dBgS::GetPolyAtt1(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -542,7 +715,7 @@ asm void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074EF0 0050 .text      GetGroundCode__4dBgSFRC13cBgS_PolyInfo                       */
+/* 80074EF0-80074F40 0050 .text      GetGroundCode__4dBgSFRC13cBgS_PolyInfo                       Function */
 // dBgS::GetGroundCode(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -553,7 +726,7 @@ asm void GetGroundCode__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074F40 0050 .text      GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo                        */
+/* 80074F40-80074F90 0050 .text      GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo                        Function */
 // dBgS::GetCamMoveBG(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -564,7 +737,7 @@ asm void GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074F90 0050 .text      GetRoomCamId__4dBgSFRC13cBgS_PolyInfo                        */
+/* 80074F90-80074FE0 0050 .text      GetRoomCamId__4dBgSFRC13cBgS_PolyInfo                        Function */
 // dBgS::GetRoomCamId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -575,7 +748,7 @@ asm void GetRoomCamId__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80074FE0 0050 .text      GetRoomPathId__4dBgSFRC13cBgS_PolyInfo                       */
+/* 80074FE0-80075030 0050 .text      GetRoomPathId__4dBgSFRC13cBgS_PolyInfo                       Function */
 // dBgS::GetRoomPathId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -586,7 +759,7 @@ asm void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80075030 0050 .text      GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo                    */
+/* 80075030-80075080 0050 .text      GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo                    Function */
 // dBgS::GetRoomPathPntNo(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -597,7 +770,7 @@ asm void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 80075080 0050 .text      GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo                       */
+/* 80075080-800750D0 0050 .text      GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo                       Function */
 // dBgS::GetGrpSoundId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -608,7 +781,7 @@ asm void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 800750D0 0030 .text      ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl                         */
+/* 800750D0-80075100 0030 .text      ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl                         Function */
 // dBgS::ChkGrpInf(const cBgS_PolyInfo&, u32)
 #pragma push
 #pragma optimization_level 0
@@ -619,7 +792,7 @@ asm void ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl() {
 }
 #pragma pop
 
-/* 80075100 009C .text      GetRoomId__4dBgSFRC13cBgS_PolyInfo                           */
+/* 80075100-8007519C 009C .text      GetRoomId__4dBgSFRC13cBgS_PolyInfo                           Function */
 // dBgS::GetRoomId(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -630,7 +803,7 @@ asm void GetRoomId__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 8007519C 005C .text      GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo                */
+/* 8007519C-800751F8 005C .text      GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo                Function */
 // dBgS::GetPolyAttackThrough(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -641,7 +814,7 @@ asm void GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 800751F8 0054 .text      ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo                      */
+/* 800751F8-8007524C 0054 .text      ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo                      Function */
 // dBgS::ChkPolyHSStick(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -652,7 +825,7 @@ asm void ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 8007524C 0128 .text      WallCorrect__4dBgSFP9dBgS_Acch                               */
+/* 8007524C-80075374 0128 .text      WallCorrect__4dBgSFP9dBgS_Acch                               Function */
 // dBgS::WallCorrect(dBgS_Acch*)
 #pragma push
 #pragma optimization_level 0
@@ -663,7 +836,7 @@ asm void WallCorrect__4dBgSFP9dBgS_Acch() {
 }
 #pragma pop
 
-/* 80075374 0128 .text      WallCorrectSort__4dBgSFP9dBgS_Acch                           */
+/* 80075374-8007549C 0128 .text      WallCorrectSort__4dBgSFP9dBgS_Acch                           Function */
 // dBgS::WallCorrectSort(dBgS_Acch*)
 #pragma push
 #pragma optimization_level 0
@@ -674,7 +847,7 @@ asm void WallCorrectSort__4dBgSFP9dBgS_Acch() {
 }
 #pragma pop
 
-/* 8007549C 00C8 .text      RoofChk__4dBgSFP12dBgS_RoofChk                               */
+/* 8007549C-80075564 00C8 .text      RoofChk__4dBgSFP12dBgS_RoofChk                               Function */
 // dBgS::RoofChk(dBgS_RoofChk*)
 #pragma push
 #pragma optimization_level 0
@@ -685,7 +858,7 @@ asm void RoofChk__4dBgSFP12dBgS_RoofChk() {
 }
 #pragma pop
 
-/* 80075564 0124 .text      SplGrpChk__4dBgSFP14dBgS_SplGrpChk                           */
+/* 80075564-80075688 0124 .text      SplGrpChk__4dBgSFP14dBgS_SplGrpChk                           Function */
 // dBgS::SplGrpChk(dBgS_SplGrpChk*)
 #pragma push
 #pragma optimization_level 0
@@ -696,7 +869,7 @@ asm void SplGrpChk__4dBgSFP14dBgS_SplGrpChk() {
 }
 #pragma pop
 
-/* 80075688 00EC .text      SphChk__4dBgSFP11dBgS_SphChkPv                               */
+/* 80075688-80075774 00EC .text      SphChk__4dBgSFP11dBgS_SphChkPv                               Function */
 // dBgS::SphChk(dBgS_SphChk*, void*)
 #pragma push
 #pragma optimization_level 0
@@ -707,7 +880,7 @@ asm void SphChk__4dBgSFP11dBgS_SphChkPv() {
 }
 #pragma pop
 
-/* 80075774 010C .text      MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb */
+/* 80075774-80075880 010C .text      MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb Function */
 // dBgS::MoveBgCrrPos(const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*, bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -718,7 +891,7 @@ asm void MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb() {
 }
 #pragma pop
 
-/* 80075880 00DC .text      MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 80075880-8007595C 00DC .text      MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 // dBgS::MoveBgTransPos(const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -729,7 +902,7 @@ asm void MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz() {
 }
 #pragma pop
 
-/* 8007595C 00C8 .text      MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 8007595C-80075A24 00C8 .text      MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 // dBgS::MoveBgMatrixCrrPos(const cBgS_PolyInfo&, bool, cXyz*, csXyz*, csXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -740,7 +913,7 @@ asm void MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz() {
 }
 #pragma pop
 
-/* 80075A24 0080 .text      dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 80075A24-80075AA4 0080 .text      dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 }
 
 #pragma push
@@ -753,7 +926,7 @@ asm void dBgS_MoveBGProc_Typical(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*
 #pragma pop
 
 extern "C" {
-/* 80075AA4 0034 .text      dBgS_MoveBGProc_RotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 80075AA4-80075AD8 0034 .text      dBgS_MoveBGProc_RotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 }
 
 #pragma push
@@ -766,7 +939,7 @@ asm void dBgS_MoveBGProc_RotY(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, c
 #pragma pop
 
 extern "C" {
-/* 80075AD8 006C .text      dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 80075AD8-80075B44 006C .text      dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 }
 
 #pragma push
@@ -779,7 +952,7 @@ asm void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, const cBgS_PolyInfo&, bool, c
 #pragma pop
 
 extern "C" {
-/* 80075B44 0040 .text      dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz */
+/* 80075B44-80075B84 0040 .text      dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz Function */
 }
 
 #pragma push
@@ -792,7 +965,7 @@ asm void dBgS_MoveBGProc_Trans(dBgW*, void*, const cBgS_PolyInfo&, bool, cXyz*, 
 #pragma pop
 
 extern "C" {
-/* 80075B84 0070 .text      RideCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_c           */
+/* 80075B84-80075BF4 0070 .text      RideCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_c           Function */
 // dBgS::RideCallBack(const cBgS_PolyInfo&, fopAc_ac_c*)
 #pragma push
 #pragma optimization_level 0
@@ -803,7 +976,7 @@ asm void RideCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_c() {
 }
 #pragma pop
 
-/* 80075BF4 0078 .text      ArrowStickCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_cR4cXyz */
+/* 80075BF4-80075C6C 0078 .text      ArrowStickCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_cR4cXyz Function */
 // dBgS::ArrowStickCallBack(const cBgS_PolyInfo&, fopAc_ac_c*, cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -814,8 +987,8 @@ asm void ArrowStickCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_cR4cXyz() {
 }
 #pragma pop
 
-/* 80075C6C 00A0 .text      PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13PushPullLabel */
-// dBgS::PushPullCallBack(const cBgS_PolyInfo&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel)
+/* 80075C6C-80075D0C 00A0 .text      PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13PushPullLabel Function */
+// dBgS::PushPullCallBack(const cBgS_PolyInfo&, fopAc_ac_c*, short, dBgW_Base::PushPullLabel)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -825,7 +998,7 @@ asm void PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13Pu
 }
 #pragma pop
 
-/* 80075D0C 0070 .text      dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo                      */
+/* 80075D0C-80075D7C 0070 .text      dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo                      Function */
 }
 
 #pragma push
@@ -838,7 +1011,7 @@ asm void dBgS_CheckBWallPoly(const cBgS_PolyInfo&) {
 #pragma pop
 
 extern "C" {
-/* 80075D7C 0070 .text      dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo                    */
+/* 80075D7C-80075DEC 0070 .text      dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo                    Function */
 }
 
 #pragma push
@@ -851,7 +1024,7 @@ asm void dBgS_CheckBGroundPoly(const cBgS_PolyInfo&) {
 #pragma pop
 
 extern "C" {
-/* 80075DEC 0070 .text      dBgS_CheckBRoofPoly__FRC13cBgS_PolyInfo                      */
+/* 80075DEC-80075E5C 0070 .text      dBgS_CheckBRoofPoly__FRC13cBgS_PolyInfo                      Function */
 }
 
 #pragma push
@@ -864,7 +1037,7 @@ asm void dBgS_CheckBRoofPoly(const cBgS_PolyInfo&) {
 #pragma pop
 
 extern "C" {
-/* 80075E5C 0050 .text      dBgS_GetNY__FRC13cBgS_PolyInfo                               */
+/* 80075E5C-80075EAC 0050 .text      dBgS_GetNY__FRC13cBgS_PolyInfo                               Function */
 }
 
 #pragma push

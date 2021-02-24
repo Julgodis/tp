@@ -11,35 +11,67 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__7JKRHeapFPvUlP7JKRHeapb();
+/* Function             */
 extern void __dt__7JKRHeapFv();
+/* Function             */
 extern void alloc__7JKRHeapFUliP7JKRHeap();
+/* Function             */
 extern void callAllDisposer__7JKRHeapFv();
+/* Function             */
 extern void dispose__7JKRHeapFv();
+/* Function             */
 extern void __dl__FPv();
+/* ReturnFunction       */
 extern void state_register__7JKRHeapCFPQ27JKRHeap6TStateUl();
+/* Function             */
 extern void state_compare__7JKRHeapCFRCQ27JKRHeap6TStateRCQ27JKRHeap6TState();
+/* ReturnFunction       */
 extern void state_dump__7JKRHeapCFRCQ27JKRHeap6TState();
+/* Function             */
 extern void __ct__13JKRAssertHeapFPvUlP7JKRHeapb();
+/* Function             */
 extern void __dt__13JKRAssertHeapFv();
+/* Function             */
+extern void create__13JKRAssertHeapFP7JKRHeap();
+/* Function             */
 extern void do_destroy__13JKRAssertHeapFv();
+/* Function             */
 extern void getHeapType__13JKRAssertHeapFv();
-extern int check__13JKRAssertHeapFv();
-extern int dump__13JKRAssertHeapFv();
-extern int dump_sort__13JKRAssertHeapFv();
-extern int do_changeGroupID__13JKRAssertHeapFUc();
-extern int do_getCurrentGroupId__13JKRAssertHeapFv();
-extern int do_alloc__13JKRAssertHeapFUli();
+/* ReturnIntegerFunction */
+extern  int check__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int dump__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int dump_sort__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int do_changeGroupID__13JKRAssertHeapFUc();
+/* ReturnIntegerFunction */
+extern  int do_getCurrentGroupId__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int do_alloc__13JKRAssertHeapFUli();
+/* ReturnFunction       */
 extern void do_free__13JKRAssertHeapFPv();
+/* ReturnFunction       */
 extern void do_freeAll__13JKRAssertHeapFv();
+/* ReturnFunction       */
 extern void do_freeTail__13JKRAssertHeapFv();
+/* ReturnFunction       */
 extern void do_fillFreeArea__13JKRAssertHeapFv();
-extern int do_resize__13JKRAssertHeapFPvUl();
-extern int do_getSize__13JKRAssertHeapFPv();
-extern int do_getFreeSize__13JKRAssertHeapFv();
-extern int do_getMaxFreeBlock__13JKRAssertHeapFv();
-extern int do_getTotalFreeSize__13JKRAssertHeapFv();
-SECTION_DATA extern const void* __vt__13JKRAssertHeap[24];
+/* ReturnIntegerFunction */
+extern  int do_resize__13JKRAssertHeapFPvUl();
+/* ReturnIntegerFunction */
+extern  int do_getSize__13JKRAssertHeapFPv();
+/* ReturnIntegerFunction */
+extern  int do_getFreeSize__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int do_getMaxFreeBlock__13JKRAssertHeapFv();
+/* ReturnIntegerFunction */
+extern  int do_getTotalFreeSize__13JKRAssertHeapFv();
+/* VTableData           */
+SECTION_DATA extern void* __vt__13JKRAssertHeap[24];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
 }
 
@@ -49,8 +81,8 @@ SECTION_SBSS extern u8 sRootHeap__7JKRHeap[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC090 0060 .data      __vt__13JKRAssertHeap                                        */
-SECTION_DATA const  void* __vt__13JKRAssertHeap[24] = {
+/* 803CC090-803CC0F0 0060 .data      __vt__13JKRAssertHeap                                        VTableData */
+SECTION_DATA void* __vt__13JKRAssertHeap[24] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13JKRAssertHeapFv,
@@ -84,7 +116,7 @@ SECTION_DATA const  void* __vt__13JKRAssertHeap[24] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D12C4 003C .text      __ct__13JKRAssertHeapFPvUlP7JKRHeapb                         */
+/* 802D12C4-802D1300 003C .text      __ct__13JKRAssertHeapFPvUlP7JKRHeapb                         Function */
 // JKRAssertHeap::JKRAssertHeap(void*, u32, JKRHeap*, bool)
 #pragma push
 #pragma optimization_level 0
@@ -95,7 +127,7 @@ asm void __ct__13JKRAssertHeapFPvUlP7JKRHeapb() {
 }
 #pragma pop
 
-/* 802D1300 0068 .text      __dt__13JKRAssertHeapFv                                      */
+/* 802D1300-802D1368 0068 .text      __dt__13JKRAssertHeapFv                                      Function */
 // JKRAssertHeap::~JKRAssertHeap(void)
 #pragma push
 #pragma optimization_level 0
@@ -106,7 +138,7 @@ asm void __dt__13JKRAssertHeapFv() {
 }
 #pragma pop
 
-/* 802D1368 0070 .text      create__13JKRAssertHeapFP7JKRHeap                            */
+/* 802D1368-802D13D8 0070 .text      create__13JKRAssertHeapFP7JKRHeap                            Function */
 // JKRAssertHeap::create(JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -117,7 +149,7 @@ asm void create__13JKRAssertHeapFP7JKRHeap() {
 }
 #pragma pop
 
-/* 802D13D8 0030 .text      do_destroy__13JKRAssertHeapFv                                */
+/* 802D13D8-802D1408 0030 .text      do_destroy__13JKRAssertHeapFv                                Function */
 // JKRAssertHeap::do_destroy(void)
 #pragma push
 #pragma optimization_level 0
@@ -128,7 +160,7 @@ asm void do_destroy__13JKRAssertHeapFv() {
 }
 #pragma pop
 
-/* 802D1408 000C .text      getHeapType__13JKRAssertHeapFv                               */
+/* 802D1408-802D1414 000C .text      getHeapType__13JKRAssertHeapFv                               Function */
 // JKRAssertHeap::getHeapType(void)
 #pragma push
 #pragma optimization_level 0
@@ -139,91 +171,91 @@ asm void getHeapType__13JKRAssertHeapFv() {
 }
 #pragma pop
 
-/* 802D1414 0008 .text      check__13JKRAssertHeapFv                                     */
+/* 802D1414-802D141C 0008 .text      check__13JKRAssertHeapFv                                     ReturnIntegerFunction */
 // JKRAssertHeap::check(void)
 int check__13JKRAssertHeapFv() {
 	return 1;
 }
 
-/* 802D141C 0008 .text      dump__13JKRAssertHeapFv                                      */
+/* 802D141C-802D1424 0008 .text      dump__13JKRAssertHeapFv                                      ReturnIntegerFunction */
 // JKRAssertHeap::dump(void)
 int dump__13JKRAssertHeapFv() {
 	return 1;
 }
 
-/* 802D1424 0008 .text      dump_sort__13JKRAssertHeapFv                                 */
+/* 802D1424-802D142C 0008 .text      dump_sort__13JKRAssertHeapFv                                 ReturnIntegerFunction */
 // JKRAssertHeap::dump_sort(void)
 int dump_sort__13JKRAssertHeapFv() {
 	return 1;
 }
 
-/* 802D142C 0008 .text      do_changeGroupID__13JKRAssertHeapFUc                         */
+/* 802D142C-802D1434 0008 .text      do_changeGroupID__13JKRAssertHeapFUc                         ReturnIntegerFunction */
 // JKRAssertHeap::do_changeGroupID(u8)
 int do_changeGroupID__13JKRAssertHeapFUc() {
 	return 0;
 }
 
-/* 802D1434 0008 .text      do_getCurrentGroupId__13JKRAssertHeapFv                      */
+/* 802D1434-802D143C 0008 .text      do_getCurrentGroupId__13JKRAssertHeapFv                      ReturnIntegerFunction */
 // JKRAssertHeap::do_getCurrentGroupId(void)
 int do_getCurrentGroupId__13JKRAssertHeapFv() {
 	return 0;
 }
 
-/* 802D143C 0008 .text      do_alloc__13JKRAssertHeapFUli                                */
+/* 802D143C-802D1444 0008 .text      do_alloc__13JKRAssertHeapFUli                                ReturnIntegerFunction */
 // JKRAssertHeap::do_alloc(u32, int)
 int do_alloc__13JKRAssertHeapFUli() {
 	return 0;
 }
 
-/* 802D1444 0004 .text      do_free__13JKRAssertHeapFPv                                  */
+/* 802D1444-802D1448 0004 .text      do_free__13JKRAssertHeapFPv                                  ReturnFunction */
 // JKRAssertHeap::do_free(void*)
 void do_free__13JKRAssertHeapFPv() {
 	return;
 }
 
-/* 802D1448 0004 .text      do_freeAll__13JKRAssertHeapFv                                */
+/* 802D1448-802D144C 0004 .text      do_freeAll__13JKRAssertHeapFv                                ReturnFunction */
 // JKRAssertHeap::do_freeAll(void)
 void do_freeAll__13JKRAssertHeapFv() {
 	return;
 }
 
-/* 802D144C 0004 .text      do_freeTail__13JKRAssertHeapFv                               */
+/* 802D144C-802D1450 0004 .text      do_freeTail__13JKRAssertHeapFv                               ReturnFunction */
 // JKRAssertHeap::do_freeTail(void)
 void do_freeTail__13JKRAssertHeapFv() {
 	return;
 }
 
-/* 802D1450 0004 .text      do_fillFreeArea__13JKRAssertHeapFv                           */
+/* 802D1450-802D1454 0004 .text      do_fillFreeArea__13JKRAssertHeapFv                           ReturnFunction */
 // JKRAssertHeap::do_fillFreeArea(void)
 void do_fillFreeArea__13JKRAssertHeapFv() {
 	return;
 }
 
-/* 802D1454 0008 .text      do_resize__13JKRAssertHeapFPvUl                              */
+/* 802D1454-802D145C 0008 .text      do_resize__13JKRAssertHeapFPvUl                              ReturnIntegerFunction */
 // JKRAssertHeap::do_resize(void*, u32)
 int do_resize__13JKRAssertHeapFPvUl() {
 	return 0;
 }
 
-/* 802D145C 0008 .text      do_getSize__13JKRAssertHeapFPv                               */
+/* 802D145C-802D1464 0008 .text      do_getSize__13JKRAssertHeapFPv                               ReturnIntegerFunction */
 // JKRAssertHeap::do_getSize(void*)
 int do_getSize__13JKRAssertHeapFPv() {
 	return 0;
 }
 
-/* 802D1464 0008 .text      do_getFreeSize__13JKRAssertHeapFv                            */
+/* 802D1464-802D146C 0008 .text      do_getFreeSize__13JKRAssertHeapFv                            ReturnIntegerFunction */
 // JKRAssertHeap::do_getFreeSize(void)
 int do_getFreeSize__13JKRAssertHeapFv() {
 	return 0;
 }
 
-/* 802D146C 0008 .text      do_getMaxFreeBlock__13JKRAssertHeapFv                        */
+/* 802D146C-802D1474 0008 .text      do_getMaxFreeBlock__13JKRAssertHeapFv                        ReturnIntegerFunction */
 // JKRAssertHeap::do_getMaxFreeBlock(void)
 int do_getMaxFreeBlock__13JKRAssertHeapFv() {
 	return 0;
 }
 
-/* 802D1474 0008 .text      do_getTotalFreeSize__13JKRAssertHeapFv                       */
+/* 802D1474-802D147C 0008 .text      do_getTotalFreeSize__13JKRAssertHeapFv                       ReturnIntegerFunction */
 // JKRAssertHeap::do_getTotalFreeSize(void)
 int do_getTotalFreeSize__13JKRAssertHeapFv() {
 	return 0;

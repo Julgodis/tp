@@ -8,13 +8,18 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* InitializedData      */
+SECTION_SDATA2 extern u8 ga4cSignature__Q28JMessage4data[8];
+}
+
 
 /* ###################################################################################### */
 /*                                        .sdata2                                         */
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455818 0004 .sdata2    ga4cSignature__Q28JMessage4data                              */
+/* 80455818-80455820 0004 .sdata2    ga4cSignature__Q28JMessage4data                              InitializedData */
 SECTION_SDATA2 u8 ga4cSignature__Q28JMessage4data[8] = {
 	0x4D, 0x45, 0x53, 0x47,
 	/* padding */

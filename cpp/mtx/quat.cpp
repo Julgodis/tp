@@ -9,13 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void PSVECNormalize();
+/* Function             */
+extern void PSQUATMultiply();
+/* Function             */
+extern void C_QUATRotAxisRad();
+/* Function             */
+extern void C_QUATSlerp();
+/* Function             */
 extern void sinf();
+/* Function             */
 extern void cosf();
+/* Function             */
 extern void acosf();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_130[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 quat__LIT_133;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 quat__LIT_135;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_261[4];
 }
 
@@ -25,17 +39,17 @@ SECTION_SDATA2 extern u8 LIT_261[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456550 0004 .sdata2    @130                                                         */
+/* 80456550-80456554 0004 .sdata2    @130                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_130[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80456554 0004 .sdata2    @133                                                         */
+/* 80456554-80456558 0004 .sdata2    @133                                                         Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 quat__LIT_133 = 1.000000f;
-/* 80456558 0004 .sdata2    @135                                                         */
+/* 80456558-8045655C 0004 .sdata2    @135                                                         Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 quat__LIT_135 = 0.500000f;
-/* 8045655C 0004 .sdata2    @261                                                         */
+/* 8045655C-80456560 0004 .sdata2    @261                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_261[4] = {
 	0x3F, 0x7F, 0xFF, 0x58,
 };
@@ -47,7 +61,7 @@ SECTION_SDATA2 u8 LIT_261[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80347418 005C .text      PSQUATMultiply                                               */
+/* 80347418-80347474 005C .text      PSQUATMultiply                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -57,7 +71,7 @@ asm void PSQUATMultiply() {
 }
 #pragma pop
 
-/* 80347474 008C .text      C_QUATRotAxisRad                                             */
+/* 80347474-80347500 008C .text      C_QUATRotAxisRad                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +81,7 @@ asm void C_QUATRotAxisRad() {
 }
 #pragma pop
 
-/* 80347500 0174 .text      C_QUATSlerp                                                  */
+/* 80347500-80347674 0174 .text      C_QUATSlerp                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -9,13 +9,27 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void regist__14JASCallbackMgrFPFPv_lPv();
+/* Function             */
+extern void reject__14JASCallbackMgrFPFPv_lPv();
+/* Function             */
+extern void callback__14JASCallbackMgrFv();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -25,8 +39,8 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8028FFA8 0088 .text      regist__14JASCallbackMgrFPFPv_lPv                            */
-// JASCallbackMgr::regist(s32 (*)(void*), void*)
+/* 8028FFA8-80290030 0088 .text      regist__14JASCallbackMgrFPFPv_lPv                            Function */
+// JASCallbackMgr::regist(long (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -36,8 +50,8 @@ asm void regist__14JASCallbackMgrFPFPv_lPv() {
 }
 #pragma pop
 
-/* 80290030 0094 .text      reject__14JASCallbackMgrFPFPv_lPv                            */
-// JASCallbackMgr::reject(s32 (*)(void*), void*)
+/* 80290030-802900C4 0094 .text      reject__14JASCallbackMgrFPFPv_lPv                            Function */
+// JASCallbackMgr::reject(long (*)(void*), void*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -47,7 +61,7 @@ asm void reject__14JASCallbackMgrFPFPv_lPv() {
 }
 #pragma pop
 
-/* 802900C4 007C .text      callback__14JASCallbackMgrFv                                 */
+/* 802900C4-80290140 007C .text      callback__14JASCallbackMgrFv                                 Function */
 // JASCallbackMgr::callback(void)
 #pragma push
 #pragma optimization_level 0

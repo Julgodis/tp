@@ -11,14 +11,27 @@
 struct create_tag_class;
 struct node_list_class;
 
+extern void fopAcTg_ToActorQ(create_tag_class*); /* fopAcTg_ToActorQ__FP16create_tag_class */
+extern void fopAcTg_ActorQTo(create_tag_class*); /* fopAcTg_ActorQTo__FP16create_tag_class */
+extern void fopAcTg_Init(create_tag_class*, void*); /* fopAcTg_Init__FP16create_tag_classPv */
 extern void cTg_SingleCutFromTree(create_tag_class*); /* cTg_SingleCutFromTree__FP16create_tag_class */
 extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fopAcTg_ToActorQ__FP16create_tag_class();
+/* Function             */
+extern void fopAcTg_ActorQTo__FP16create_tag_class();
+/* Function             */
+extern void fopAcTg_Init__FP16create_tag_classPv();
+/* Function             */
 extern void cTg_SingleCutFromTree__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fopAcTg_Queue[16];
 }
 
@@ -28,7 +41,7 @@ SECTION_DATA extern u8 g_fopAcTg_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A35E0 000C .data      g_fopAcTg_Queue                                              */
+/* 803A35E0-803A35F0 000C .data      g_fopAcTg_Queue                                              InitializedData */
 SECTION_DATA u8 g_fopAcTg_Queue[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -42,7 +55,7 @@ SECTION_DATA u8 g_fopAcTg_Queue[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80019834 002C .text      fopAcTg_ToActorQ__FP16create_tag_class                       */
+/* 80019834-80019860 002C .text      fopAcTg_ToActorQ__FP16create_tag_class                       Function */
 }
 
 #pragma push
@@ -55,7 +68,7 @@ asm void fopAcTg_ToActorQ(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80019860 0020 .text      fopAcTg_ActorQTo__FP16create_tag_class                       */
+/* 80019860-80019880 0020 .text      fopAcTg_ActorQTo__FP16create_tag_class                       Function */
 }
 
 #pragma push
@@ -68,7 +81,7 @@ asm void fopAcTg_ActorQTo(create_tag_class*) {
 #pragma pop
 
 extern "C" {
-/* 80019880 0024 .text      fopAcTg_Init__FP16create_tag_classPv                         */
+/* 80019880-800198A4 0024 .text      fopAcTg_Init__FP16create_tag_classPv                         Function */
 }
 
 #pragma push

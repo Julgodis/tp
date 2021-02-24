@@ -9,12 +9,26 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void __ct__10JUTNameTabFv();
+/* Function             */
+extern void __ct__10JUTNameTabFPC7ResNTAB();
+/* Function             */
 extern void setResource__10JUTNameTabFPC7ResNTAB();
+/* Function             */
+extern void getIndex__10JUTNameTabCFPCc();
+/* Function             */
+extern void getName__10JUTNameTabCFUs();
+/* Function             */
 extern void calcKeyCode__10JUTNameTabCFPCc();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void strcmp();
-SECTION_DATA extern const void* __vt__10JUTNameTab[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JUTNameTab[3];
 }
 
 
@@ -23,7 +37,7 @@ SECTION_DATA extern const void* __vt__10JUTNameTab[3];
 /* ###################################################################################### */
 
 extern "C" {
-/* 802DE9A0 0040 .text      __ct__10JUTNameTabFv                                         */
+/* 802DE9A0-802DE9E0 0040 .text      __ct__10JUTNameTabFv                                         Function */
 // JUTNameTab::JUTNameTab(void)
 #pragma push
 #pragma optimization_level 0
@@ -34,7 +48,7 @@ asm void __ct__10JUTNameTabFv() {
 }
 #pragma pop
 
-/* 802DE9E0 003C .text      __ct__10JUTNameTabFPC7ResNTAB                                */
+/* 802DE9E0-802DEA1C 003C .text      __ct__10JUTNameTabFPC7ResNTAB                                Function */
 // JUTNameTab::JUTNameTab(const ResNTAB*)
 #pragma push
 #pragma optimization_level 0
@@ -45,7 +59,7 @@ asm void __ct__10JUTNameTabFPC7ResNTAB() {
 }
 #pragma pop
 
-/* 802DEA1C 003C .text      setResource__10JUTNameTabFPC7ResNTAB                         */
+/* 802DEA1C-802DEA58 003C .text      setResource__10JUTNameTabFPC7ResNTAB                         Function */
 // JUTNameTab::setResource(const ResNTAB*)
 #pragma push
 #pragma optimization_level 0
@@ -56,8 +70,8 @@ asm void setResource__10JUTNameTabFPC7ResNTAB() {
 }
 #pragma pop
 
-/* 802DEA58 00A0 .text      getIndex__10JUTNameTabCFPCc                                  */
-// JUTNameTab::getIndex(const s8*) const
+/* 802DEA58-802DEAF8 00A0 .text      getIndex__10JUTNameTabCFPCc                                  Function */
+// JUTNameTab::getIndex(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -67,7 +81,7 @@ asm void getIndex__10JUTNameTabCFPCc() {
 }
 #pragma pop
 
-/* 802DEAF8 0030 .text      getName__10JUTNameTabCFUs                                    */
+/* 802DEAF8-802DEB28 0030 .text      getName__10JUTNameTabCFUs                                    Function */
 // JUTNameTab::getName(u16) const
 #pragma push
 #pragma optimization_level 0
@@ -78,8 +92,8 @@ asm void getName__10JUTNameTabCFUs() {
 }
 #pragma pop
 
-/* 802DEB28 0030 .text      calcKeyCode__10JUTNameTabCFPCc                               */
-// JUTNameTab::calcKeyCode(const s8*) const
+/* 802DEB28-802DEB58 0030 .text      calcKeyCode__10JUTNameTabCFPCc                               Function */
+// JUTNameTab::calcKeyCode(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

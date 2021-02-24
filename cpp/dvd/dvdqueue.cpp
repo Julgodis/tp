@@ -9,8 +9,21 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
+extern void __DVDClearWaitingQueue();
+/* Function             */
+extern void __DVDPushWaitingQueue();
+/* Function             */
+extern void __DVDPopWaitingQueue();
+/* Function             */
+extern void __DVDCheckWaitingQueue();
+/* Function             */
+extern void __DVDDequeueWaitingQueue();
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 WaitingQueue[32];
 }
 
@@ -20,8 +33,8 @@ SECTION_BSS extern u8 WaitingQueue[32];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044C998 0000 .bss       ...bss.0                                                     */
-/* 8044C998 0020 .bss       WaitingQueue                                                 */
+/* 8044C998-8044C998 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 8044C998-8044C9B8 0020 .bss       WaitingQueue                                                 ZeroInitializedData */
 SECTION_BSS u8 WaitingQueue[32];
 }
 
@@ -31,7 +44,7 @@ SECTION_BSS u8 WaitingQueue[32];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8034B874 0038 .text      __DVDClearWaitingQueue                                       */
+/* 8034B874-8034B8AC 0038 .text      __DVDClearWaitingQueue                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -41,7 +54,7 @@ asm void __DVDClearWaitingQueue() {
 }
 #pragma pop
 
-/* 8034B8AC 0068 .text      __DVDPushWaitingQueue                                        */
+/* 8034B8AC-8034B914 0068 .text      __DVDPushWaitingQueue                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -51,7 +64,7 @@ asm void __DVDPushWaitingQueue() {
 }
 #pragma pop
 
-/* 8034B914 00A0 .text      __DVDPopWaitingQueue                                         */
+/* 8034B914-8034B9B4 00A0 .text      __DVDPopWaitingQueue                                         Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -61,7 +74,7 @@ asm void __DVDPopWaitingQueue() {
 }
 #pragma pop
 
-/* 8034B9B4 0058 .text      __DVDCheckWaitingQueue                                       */
+/* 8034B9B4-8034BA0C 0058 .text      __DVDCheckWaitingQueue                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -71,7 +84,7 @@ asm void __DVDCheckWaitingQueue() {
 }
 #pragma pop
 
-/* 8034BA0C 0060 .text      __DVDDequeueWaitingQueue                                     */
+/* 8034BA0C-8034BA6C 0060 .text      __DVDDequeueWaitingQueue                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

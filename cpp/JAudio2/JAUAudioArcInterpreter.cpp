@@ -11,11 +11,20 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__22JAUAudioArcInterpreterFv();
+/* Function             */
 extern void __dt__22JAUAudioArcInterpreterFv();
-extern int readCommandMore__22JAUAudioArcInterpreterFUl();
+/* Function             */
+extern void parse__22JAUAudioArcInterpreterFPCv();
+/* ReturnIntegerFunction */
+extern  int readCommandMore__22JAUAudioArcInterpreterFUl();
+/* Function             */
 extern void readCommand___22JAUAudioArcInterpreterFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__22JAUAudioArcInterpreter[18];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22JAUAudioArcInterpreter[18];
 }
 
 
@@ -24,8 +33,8 @@ SECTION_DATA extern const void* __vt__22JAUAudioArcInterpreter[18];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9A30 0044 .data      __vt__22JAUAudioArcInterpreter                               */
-SECTION_DATA const  void* __vt__22JAUAudioArcInterpreter[18] = {
+/* 803C9A30-803C9A78 0044 .data      __vt__22JAUAudioArcInterpreter                               VTableData */
+SECTION_DATA void* __vt__22JAUAudioArcInterpreter[18] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22JAUAudioArcInterpreterFv,
@@ -54,7 +63,7 @@ SECTION_DATA const  void* __vt__22JAUAudioArcInterpreter[18] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A4244 001C .text      __ct__22JAUAudioArcInterpreterFv                             */
+/* 802A4244-802A4260 001C .text      __ct__22JAUAudioArcInterpreterFv                             Function */
 // JAUAudioArcInterpreter::JAUAudioArcInterpreter(void)
 #pragma push
 #pragma optimization_level 0
@@ -65,7 +74,7 @@ asm void __ct__22JAUAudioArcInterpreterFv() {
 }
 #pragma pop
 
-/* 802A4260 0048 .text      __dt__22JAUAudioArcInterpreterFv                             */
+/* 802A4260-802A42A8 0048 .text      __dt__22JAUAudioArcInterpreterFv                             Function */
 // JAUAudioArcInterpreter::~JAUAudioArcInterpreter(void)
 #pragma push
 #pragma optimization_level 0
@@ -76,7 +85,7 @@ asm void __dt__22JAUAudioArcInterpreterFv() {
 }
 #pragma pop
 
-/* 802A42A8 006C .text      parse__22JAUAudioArcInterpreterFPCv                          */
+/* 802A42A8-802A4314 006C .text      parse__22JAUAudioArcInterpreterFPCv                          Function */
 // JAUAudioArcInterpreter::parse(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -87,13 +96,13 @@ asm void parse__22JAUAudioArcInterpreterFPCv() {
 }
 #pragma pop
 
-/* 802A4314 0008 .text      readCommandMore__22JAUAudioArcInterpreterFUl                 */
+/* 802A4314-802A431C 0008 .text      readCommandMore__22JAUAudioArcInterpreterFUl                 ReturnIntegerFunction */
 // JAUAudioArcInterpreter::readCommandMore(u32)
 int readCommandMore__22JAUAudioArcInterpreterFUl() {
 	return 0;
 }
 
-/* 802A431C 0424 .text      readCommand___22JAUAudioArcInterpreterFv                     */
+/* 802A431C-802A4740 0424 .text      readCommand___22JAUAudioArcInterpreterFv                     Function */
 // JAUAudioArcInterpreter::readCommand_(void)
 #pragma push
 #pragma optimization_level 0

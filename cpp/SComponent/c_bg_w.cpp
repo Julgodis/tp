@@ -10,11 +10,24 @@
 
 extern void cBgW_CheckBGround(f32); /* cBgW_CheckBGround__Ff */
 extern void cBgW_CheckBRoof(f32); /* cBgW_CheckBRoof__Ff */
+extern void cBgW_CheckBWall(f32); /* cBgW_CheckBWall__Ff */
 
 extern "C" {
+/* Function             */
+extern void Regist__9cBgW_BgIdFi();
+/* Function             */
+extern void Release__9cBgW_BgIdFv();
+/* Function             */
+extern void ChkUsed__9cBgW_BgIdCFv();
+/* Function             */
 extern void cBgW_CheckBGround__Ff();
+/* Function             */
 extern void cBgW_CheckBRoof__Ff();
+/* Function             */
+extern void cBgW_CheckBWall__Ff();
+/* Float32Data          */
 SECTION_SDATA2 extern f32 c_bg_w__LIT_2242;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_2249[4];
 }
 
@@ -24,10 +37,10 @@ SECTION_SDATA2 extern u8 LIT_2249[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804550E8 0004 .sdata2    @2242                                                        */
+/* 804550E8-804550EC 0004 .sdata2    @2242                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 c_bg_w__LIT_2242 = 0.500000f;
-/* 804550EC 0004 .sdata2    @2249                                                        */
+/* 804550EC-804550F0 0004 .sdata2    @2249                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_2249[4] = {
 	0xBF, 0x4C, 0xCC, 0xCD,
 };
@@ -39,7 +52,7 @@ SECTION_SDATA2 u8 LIT_2249[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802681C0 0008 .text      Regist__9cBgW_BgIdFi                                         */
+/* 802681C0-802681C8 0008 .text      Regist__9cBgW_BgIdFi                                         Function */
 // cBgW_BgId::Regist(int)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +63,7 @@ asm void Regist__9cBgW_BgIdFi() {
 }
 #pragma pop
 
-/* 802681C8 000C .text      Release__9cBgW_BgIdFv                                        */
+/* 802681C8-802681D4 000C .text      Release__9cBgW_BgIdFv                                        Function */
 // cBgW_BgId::Release(void)
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +74,7 @@ asm void Release__9cBgW_BgIdFv() {
 }
 #pragma pop
 
-/* 802681D4 0010 .text      ChkUsed__9cBgW_BgIdCFv                                       */
+/* 802681D4-802681E4 0010 .text      ChkUsed__9cBgW_BgIdCFv                                       Function */
 // cBgW_BgId::ChkUsed(void) const
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +85,7 @@ asm void ChkUsed__9cBgW_BgIdCFv() {
 }
 #pragma pop
 
-/* 802681E4 0018 .text      cBgW_CheckBGround__Ff                                        */
+/* 802681E4-802681FC 0018 .text      cBgW_CheckBGround__Ff                                        Function */
 }
 
 #pragma push
@@ -85,7 +98,7 @@ asm void cBgW_CheckBGround(f32) {
 #pragma pop
 
 extern "C" {
-/* 802681FC 0014 .text      cBgW_CheckBRoof__Ff                                          */
+/* 802681FC-80268210 0014 .text      cBgW_CheckBRoof__Ff                                          Function */
 }
 
 #pragma push
@@ -98,7 +111,7 @@ asm void cBgW_CheckBRoof(f32) {
 #pragma pop
 
 extern "C" {
-/* 80268210 0050 .text      cBgW_CheckBWall__Ff                                          */
+/* 80268210-80268260 0050 .text      cBgW_CheckBWall__Ff                                          Function */
 }
 
 #pragma push

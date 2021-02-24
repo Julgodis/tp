@@ -9,6 +9,9 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void frexp();
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_57[8];
 }
 
@@ -18,7 +21,7 @@ SECTION_SDATA2 extern u8 LIT_57[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80456B08 0008 .sdata2    @57                                                          */
+/* 80456B08-80456B10 0008 .sdata2    @57                                                          InitializedData */
 SECTION_SDATA2 u8 LIT_57[8] = {
 	0x43, 0x50, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -30,7 +33,7 @@ SECTION_SDATA2 u8 LIT_57[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036C244 008C .text      frexp                                                        */
+/* 8036C244-8036C2D0 008C .text      frexp                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

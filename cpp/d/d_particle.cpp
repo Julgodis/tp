@@ -12,14 +12,14 @@
 // Additional Symbols:
 // 
 
-struct JKRHeap;
-struct JKRSolidHeap;
-struct cXyz;
-struct cBgS_PolyInfo;
-struct dKy_tevstr_c;
-struct _GXColor;
 struct JPABaseParticle;
+struct JKRHeap;
+struct cXyz;
 struct JPABaseEmitter;
+struct dKy_tevstr_c;
+struct JKRSolidHeap;
+struct _GXColor;
+struct cBgS_PolyInfo;
 
 extern void mDoExt_createSolidHeapFromGame(u32, u32); /* mDoExt_createSolidHeapFromGame__FUlUl */
 extern void mDoExt_createSolidHeapFromSystem(u32, u32); /* mDoExt_createSolidHeapFromSystem__FUlUl */
@@ -28,7 +28,7 @@ extern void mDoExt_destroySolidHeap(JKRSolidHeap*); /* mDoExt_destroySolidHeap__
 extern void mDoExt_setCurrentHeap(JKRHeap*); /* mDoExt_setCurrentHeap__FP7JKRHeap */
 extern void dPa_cleanupGX(void); /* dPa_cleanupGX__Fv */
 extern void dPa_group_id_change(u32*, u8*); /* dPa_group_id_change__FPUlPUc */
-extern void initiateLighting8(_GXColor&, s16); /* initiateLighting8__FR8_GXColors */
+extern void initiateLighting8(_GXColor&, short); /* initiateLighting8__FR8_GXColors */
 extern void initiate_b_Lighting8(_GXColor&); /* initiate_b_Lighting8__FR8_GXColor */
 extern void drawFirst(JPABaseEmitter*); /* drawFirst__FP14JPABaseEmitter */
 extern void drawFirst_l8(JPABaseEmitter*); /* drawFirst_l8__FP14JPABaseEmitter */
@@ -41,8 +41,8 @@ extern void dPa_setWindPower(JPABaseParticle*); /* dPa_setWindPower__FP15JPABase
 extern void dPa_kankyocolor_set(f32, JPABaseEmitter*, const dKy_tevstr_c*, u32, const cXyz*, const _GXColor*, const _GXColor*); /* dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor */
 extern void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); /* dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf */
 extern void dKy_light_influence_col(_GXColor*, f32); /* dKy_light_influence_col__FP8_GXColorf */
-extern void dKy_setLight_nowroom(s8); /* dKy_setLight_nowroom__Fc */
-extern void dKy_setLight_nowroom_grass(s8, f32); /* dKy_setLight_nowroom_grass__Fcf */
+extern void dKy_setLight_nowroom(char); /* dKy_setLight_nowroom__Fc */
+extern void dKy_setLight_nowroom_grass(char, f32); /* dKy_setLight_nowroom_grass__Fcf */
 extern void dKy_setLight_again(void); /* dKy_setLight_again__Fv */
 extern void dKy_Global_amb_set(dKy_tevstr_c*); /* dKy_Global_amb_set__FP12dKy_tevstr_c */
 extern void dKy_GxFog_set(void); /* dKy_GxFog_set__Fv */
@@ -61,384 +61,844 @@ extern void dKy_pol_eff_ratio_get(const cBgS_PolyInfo*); /* dKy_pol_eff_ratio_ge
 extern void dKy_pol_eff2_alpha_get(const cBgS_PolyInfo*); /* dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo */
 extern void dKy_pol_eff2_ratio_get(const cBgS_PolyInfo*); /* dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo */
 extern void cM_atan2s(f32, f32); /* cM_atan2s__Fff */
-extern void cLib_chaseS(s16*, s16, s16); /* cLib_chaseS__FPsss */
-extern void JPAGetXYZRotateMtx(s16, s16, s16, f32 (*)[4]); /* JPAGetXYZRotateMtx__FsssPA4_f */
+extern void cLib_chaseS(short*, short, short); /* cLib_chaseS__FPsss */
+extern void JPAGetXYZRotateMtx(short, short, short, f32 (*)[4]); /* JPAGetXYZRotateMtx__FsssPA4_f */
 extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 extern void* operator new[](u32); /* __nwa__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void OSReport();
+/* GlobalFunction       */
 extern u32 mDoExt_getArchiveHeap__Fv();
+/* Function             */
 extern void mDoExt_createSolidHeapFromGame__FUlUl();
+/* Function             */
 extern void mDoExt_createSolidHeapFromSystem__FUlUl();
+/* Function             */
 extern void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+/* Function             */
 extern void mDoExt_setCurrentHeap__FP7JKRHeap();
+/* Function             */
 extern void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+/* ReturnFunction       */
 extern void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* ReturnFunction       */
 extern void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void __ct__11J3DLightObjFv();
+/* Function             */
 extern void waterCheck__11fopAcM_wt_cFPC4cXyz();
+/* Function             */
 extern void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
+/* Function             */
 extern void dPa_cleanupGX__Fv();
+/* Function             */
+extern void __ct__19dPa_followEcallBackFUcUc();
+/* Function             */
 extern void execute__19dPa_followEcallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void draw__19dPa_followEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void end__19dPa_followEcallBackFv();
+/* Function             */
 extern void setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void dPa_group_id_change__FPUlPUc();
+/* Function             */
 extern void initiateLighting8__FR8_GXColors();
+/* Function             */
 extern void initiate_b_Lighting8__FR8_GXColor();
+/* Function             */
 extern void drawFirst__FP14JPABaseEmitter();
+/* Function             */
 extern void drawFirst_l8__FP14JPABaseEmitter();
+/* Function             */
 extern void drawSecond_light8__FP14JPABaseEmitter();
+/* Function             */
 extern void drawSecond_b_light8__FP14JPABaseEmitter();
+/* Function             */
 extern void static_light8EcallBack__FP14JPABaseEmitter();
+/* Function             */
 extern void static_gen_b_light8EcallBack__FP14JPABaseEmitter();
+/* Function             */
 extern void static_gen_d_light8EcallBack__FP14JPABaseEmitter();
+/* Function             */
 extern void draw__19dPa_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void dPa_setWindPower__FP15JPABaseParticle();
+/* Function             */
 extern void draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
+/* Function             */
 extern void setup__Q218dPa_modelEcallBack7model_cFv();
+/* Function             */
 extern void cleanup__Q218dPa_modelEcallBack7model_cFv();
+/* Function             */
 extern void draw__Q218dPa_modelEcallBack7model_cFPA4_f();
+/* Function             */
 extern void draw__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void create__18dPa_modelEcallBackFUc();
+/* Function             */
 extern void __dt__Q218dPa_modelEcallBack7model_cFv();
+/* Function             */
 extern void remove__18dPa_modelEcallBackFv();
+/* Function             */
+extern void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
+/* Function             */
 extern void resetModel__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void setupModel__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f();
+/* Function             */
 extern void cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void getModel__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void draw__22dPa_selectTexEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __ct__19dPa_simpleEcallBackFv();
+/* Function             */
 extern void executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void draw__19dPa_simpleEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc();
+/* Function             */
 extern void __dt__16dPa_simpleData_cFv();
+/* ReturnFunction       */
 extern void __ct__16dPa_simpleData_cFv();
+/* Function             */
 extern void createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager();
+/* Function             */
 extern void set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
+/* Function             */
 extern void execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void onActive__Q313dPa_control_c7level_c9emitter_cFv();
+/* Function             */
 extern void entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack();
+/* Function             */
 extern void cleanup__Q313dPa_control_c7level_c9emitter_cFv();
+/* Function             */
 extern void __ct__Q213dPa_control_c7level_cFv();
+/* Function             */
 extern void execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
+/* Function             */
 extern void execute__Q213dPa_control_c7level_cFv();
+/* Function             */
 extern void cleanup__Q213dPa_control_c7level_cFv();
+/* Function             */
 extern void get__Q213dPa_control_c7level_cFUl();
+/* Function             */
 extern void forceOnEventMove__Q213dPa_control_c7level_cFUl();
+/* Function             */
+extern void allForceOnEventMove__Q213dPa_control_c7level_cFv();
+/* Function             */
 extern void getEmitter__Q213dPa_control_c7level_cFUl();
+/* Function             */
 extern void entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack();
+/* Function             */
 extern void addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
+/* Function             */
 extern void cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c();
+/* Function             */
+extern void __ct__13dPa_control_cFv();
+/* Function             */
 extern void getRM_ID__13dPa_control_cFUs();
+/* Function             */
+extern void createCommon__13dPa_control_cFPCv();
+/* Function             */
 extern void createRoomScene__13dPa_control_cFv();
+/* Function             */
+extern void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c();
+/* Function             */
+extern void createScene__13dPa_control_cFPCv();
+/* Function             */
 extern void removeRoomScene__13dPa_control_cFb();
+/* Function             */
+extern void removeScene__13dPa_control_cFb();
+/* Function             */
+extern void cleanup__13dPa_control_cFv();
+/* Function             */
+extern void calc3D__13dPa_control_cFv();
+/* Function             */
+extern void calc2D__13dPa_control_cFv();
+/* Function             */
+extern void calcMenu__13dPa_control_cFv();
+/* Function             */
+extern void draw__13dPa_control_cFP11JPADrawInfoUc();
+/* Function             */
+extern void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl();
+/* Function             */
+extern void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+/* Function             */
 extern void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf();
+/* Function             */
+extern void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
+/* Function             */
 extern void newSimple__13dPa_control_cFUsUcPUl();
+/* Function             */
+extern void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
+/* Function             */
 extern void getSimple__13dPa_control_cFUs();
+/* Function             */
 extern void dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor();
+/* Function             */
 extern void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+/* Function             */
 extern void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
+/* Function             */
+extern void setStopContinue__13dPa_control_cFUl();
+/* Function             */
+extern void setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz();
+/* Function             */
+extern void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
+/* Function             */
 extern void execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* ReturnFunction       */
 extern void draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* ReturnFunction       */
 extern void execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* ReturnFunction       */
 extern void execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* ReturnFunction       */
 extern void execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
+extern void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz();
+/* Function             */
 extern void executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter();
+/* Function             */
 extern void setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle();
+/* Function             */
 extern void __dt__18dPa_levelEcallBackFv();
+/* ReturnFunction       */
 extern void cleanup__18dPa_levelEcallBackFv();
+/* Function             */
 extern void __ct__Q218dPa_modelEcallBack7model_cFv();
+/* Function             */
 extern void __ct__Q313dPa_control_c7level_c9emitter_cFv();
+/* Function             */
 extern void __dt__19dPa_simpleEcallBackFv();
+/* Function             */
 extern void __dt__28dPa_particleTracePcallBack_cFv();
+/* Function             */
 extern void __dt__22dPa_hermiteEcallBack_cFv();
+/* Function             */
 extern void __dt__25dPa_gen_d_light8PcallBackFv();
+/* Function             */
 extern void __dt__25dPa_gen_b_light8PcallBackFv();
+/* Function             */
 extern void __dt__19dPa_light8PcallBackFv();
+/* Function             */
 extern void __dt__19dPa_fsenthPcallBackFv();
+/* Function             */
 extern void __dt__17dPa_wbPcallBack_cFv();
+/* Function             */
 extern void __dt__17dPa_windPcallBackFv();
+/* Function             */
 extern void __dt__22dPa_selectTexEcallBackFv();
+/* ReturnFunction       */
 extern void setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__18dPa_modelPcallBackFv();
+/* Function             */
 extern void drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__25dPa_gen_b_light8EcallBackFv();
+/* Function             */
 extern void drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__19dPa_light8EcallBackFv();
+/* Function             */
 extern void drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__19dPa_followEcallBackFv();
+/* Function             */
 extern void cleanup__19dPa_followEcallBackFv();
+/* Function             */
 extern void draw__21dPa_setColorEcallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc();
+/* Function             */
 extern void __dt__21dPa_setColorEcallBackFv();
+/* ReturnFunction       */
 extern void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+/* ReturnFunction       */
 extern void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+/* Function             */
 extern void __dt__18dPa_modelEcallBackFv();
+/* Function             */
 extern void __dt__25dPa_gen_d_light8EcallBackFv();
+/* SInitFunction        */
+extern void __sinit_d_particle_cpp();
+/* Function             */
 extern void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
+/* Function             */
 extern void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+/* Function             */
 extern void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+/* Function             */
 extern void checkNowWolfEyeUp__9daPy_py_cFv();
+/* Function             */
 extern void dKy_light_influence_col__FP8_GXColorf();
+/* Function             */
 extern void dKy_setLight_nowroom__Fc();
+/* Function             */
 extern void dKy_setLight_nowroom_grass__Fcf();
+/* Function             */
 extern void dKy_setLight_again__Fv();
+/* Function             */
 extern void dKy_Global_amb_set__FP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_SordFlush_set__F4cXyzi();
+/* Function             */
 extern void dKy_GxFog_set__Fv();
+/* Function             */
 extern void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+/* Function             */
 extern void dKy_ParticleColor_get_actor__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+/* Function             */
 extern void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+/* Function             */
 extern void dKy_camera_water_in_status_check__Fv();
+/* Function             */
 extern void dKy_pol_efftype_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void dKy_pol_efftype2_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void dKy_pol_eff_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
 extern void dKy_pol_eff_env_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
 extern void dKy_pol_eff2_prim_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
 extern void dKy_pol_eff2_env_get__FPC13cBgS_PolyInfoP8_GXColor();
+/* Function             */
 extern void dKy_pol_eff_alpha_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void dKy_pol_eff_ratio_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void dKy_pol_eff2_alpha_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void dKy_pol_eff2_ratio_get__FPC13cBgS_PolyInfo();
+/* Function             */
 extern void __ml__4cXyzCFf();
+/* Function             */
 extern void atan2sX_Z__4cXyzCFv();
+/* Function             */
 extern void cM_atan2s__Fff();
+/* Function             */
 extern void cLib_chaseS__FPsss();
+/* Function             */
 extern void clip__11J3DUClipperCFPA4_Cf3Vecf();
+/* Function             */
 extern void __ct__18JPAResourceManagerFPCvP7JKRHeap();
+/* Function             */
 extern void checkUserIndexDuplication__18JPAResourceManagerCFUs();
+/* Function             */
 extern void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
+/* Function             */
 extern void getResUserWork__18JPAResourceManagerCFUs();
+/* Function             */
 extern void __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc();
+/* Function             */
 extern void func_8027DEBC();
+/* Function             */
 extern void calc__17JPAEmitterManagerFUc();
+/* Function             */
 extern void draw__17JPAEmitterManagerFPC11JPADrawInfoUc();
+/* Function             */
 extern void forceDeleteAllEmitter__17JPAEmitterManagerFv();
+/* Function             */
 extern void entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc();
+/* Function             */
 extern void clearResourceManager__17JPAEmitterManagerFUc();
+/* Function             */
 extern void __dt__18JPAEmitterCallBackFv();
+/* Function             */
 extern void createParticle__14JPABaseEmitterFv();
+/* Function             */
 extern void getCurrentCreateNumber__14JPABaseEmitterCFv();
+/* Function             */
 extern void getDrawCount__14JPABaseEmitterCFv();
+/* Function             */
 extern void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
+/* Function             */
 extern void __dt__19JPAParticleCallBackFv();
+/* Function             */
 extern void getWidth__15JPABaseParticleCFPC14JPABaseEmitter();
+/* Function             */
 extern void getHeight__15JPABaseParticleCFPC14JPABaseEmitter();
+/* Function             */
 extern void JPAGetXYZRotateMtx__FsssPA4_f();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void __nwa__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void create__10JKRExpHeapFUlP7JKRHeapb();
+/* Function             */
 extern void reinitGX__6J3DSysFv();
+/* Function             */
 extern void loadGX__10J3DTextureCFUs11_GXTexMapID();
+/* Function             */
 extern void loadPreDrawSetting__8J3DShapeCFv();
+/* Function             */
 extern void __as__12J3DLightInfoFRC12J3DLightInfo();
+/* Function             */
 extern void syncJ3DSysPointers__12J3DModelDataCFv();
+/* Function             */
 extern void syncJ3DSysFlags__12J3DModelDataCFv();
+/* Function             */
 extern void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData();
+/* Function             */
 extern void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+/* Function             */
 extern void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+/* Function             */
 extern void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+/* Function             */
 extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+/* Function             */
 extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+/* Function             */
 extern void PSMTXIdentity();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXRotRad();
+/* Function             */
 extern void PSMTXRotAxisRad();
+/* Function             */
 extern void PSMTXScale();
+/* Function             */
 extern void PSMTXMultVec();
+/* Function             */
 extern void PSVECSquareMag();
+/* Function             */
 extern void PSVECCrossProduct();
+/* Function             */
 extern void PSVECSquareDistance();
+/* Function             */
 extern void GXSetVtxDesc();
+/* Function             */
 extern void GXClearVtxDesc();
+/* Function             */
 extern void GXSetVtxAttrFmt();
+/* Function             */
 extern void GXInvalidateVtxCache();
+/* Function             */
 extern void GXSetTexCoordGen2();
+/* Function             */
 extern void GXSetNumTexGens();
+/* Function             */
 extern void GXFlush();
+/* Function             */
 extern void GXBegin();
+/* Function             */
 extern void GXEnableTexOffsets();
+/* Function             */
 extern void GXSetCullMode();
+/* Function             */
 extern void GXSetCoPlanar();
+/* Function             */
 extern void GXSetChanAmbColor();
+/* Function             */
 extern void GXSetChanMatColor();
+/* Function             */
 extern void GXSetNumChans();
+/* Function             */
 extern void GXSetChanCtrl();
+/* Function             */
 extern void GXSetNumIndStages();
+/* Function             */
 extern void GXSetTevColorIn();
+/* Function             */
 extern void GXSetTevAlphaIn();
+/* Function             */
 extern void GXSetTevColorOp();
+/* Function             */
 extern void GXSetTevAlphaOp();
+/* Function             */
 extern void GXSetTevColor();
+/* Function             */
 extern void GXSetAlphaCompare();
+/* Function             */
 extern void GXSetTevOrder();
+/* Function             */
 extern void GXSetNumTevStages();
+/* Function             */
 extern void GXSetBlendMode();
+/* Function             */
 extern void GXSetColorUpdate();
+/* Function             */
 extern void GXSetAlphaUpdate();
+/* Function             */
 extern void GXSetZMode();
+/* Function             */
 extern void GXSetZCompLoc();
+/* Function             */
 extern void GXLoadPosMtxImm();
+/* Function             */
 extern void GXLoadNrmMtxImm();
+/* Function             */
 extern void GXSetCurrentMtx();
+/* Function             */
 extern void GXSetClipMode();
+/* Function             */
 extern void __register_global_object();
+/* Function             */
 extern void __destroy_new_array();
+/* Function             */
 extern void __construct_array();
+/* Function             */
 extern void __construct_new_array();
+/* Function             */
 extern void __save_gpr();
+/* Function             */
 extern void _savegpr_17();
+/* Function             */
 extern void _savegpr_19();
+/* Function             */
 extern void _savegpr_20();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_23();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_25();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void __restore_gpr();
+/* Function             */
 extern void _restgpr_17();
+/* Function             */
 extern void _restgpr_19();
+/* Function             */
 extern void _restgpr_20();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_23();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_25();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void sprintf();
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_particle__LIT_4065[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_particle__LIT_5691[12];
+/* InitializedData      */
 SECTION_RODATA extern const u8 d_d_particle__LIT_6363[12];
+/* StringBaseData       */
 SECTION_RODATA extern const u8 d_d_particle__stringBase0[76];
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultLightInfo[52];
-SECTION_DATA extern const void* __vt__19JPAParticleCallBack[5];
-SECTION_DATA extern const void* __vt__8cM3dGPla[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19JPAParticleCallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__8cM3dGPla[3];
+/* InitializedData      */
 SECTION_DATA extern u8 l_lifeBallColor[12];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A8314[24];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A832C[48];
+/* InitializedData      */
 SECTION_DATA extern u8 data_803A835C[48];
-SECTION_DATA extern const void* __vt__28dPa_particleTracePcallBack_c[5];
-SECTION_DATA extern const void* __vt__22dPa_hermiteEcallBack_c[9];
-SECTION_DATA extern const void* __vt__25dPa_gen_d_light8PcallBack[5];
-SECTION_DATA extern const void* __vt__25dPa_gen_b_light8PcallBack[5];
-SECTION_DATA extern const void* __vt__19dPa_light8PcallBack[5];
-SECTION_DATA extern const void* __vt__19dPa_fsenthPcallBack[5];
-SECTION_DATA extern const void* __vt__17dPa_wbPcallBack_c[8];
-SECTION_DATA extern const void* __vt__17dPa_windPcallBack[5];
-SECTION_DATA extern const void* __vt__19dPa_simpleEcallBack[7];
-SECTION_DATA extern const void* __vt__22dPa_selectTexEcallBack[9];
-SECTION_DATA extern const void* __vt__18dPa_modelEcallBack[9];
-SECTION_DATA extern const void* __vt__18dPa_modelPcallBack[5];
-SECTION_DATA extern const void* __vt__25dPa_gen_d_light8EcallBack[9];
-SECTION_DATA extern const void* __vt__25dPa_gen_b_light8EcallBack[9];
-SECTION_DATA extern const void* __vt__19dPa_light8EcallBack[9];
-SECTION_DATA extern const void* __vt__19dPa_followEcallBack[10];
-SECTION_DATA extern const void* __vt__18dPa_levelEcallBack[9];
-SECTION_DATA extern const void* __vt__18JPAEmitterCallBack[7];
-SECTION_DATA extern const void* __vt__21dPa_setColorEcallBack[15];
+/* VTableData           */
+SECTION_DATA extern void* __vt__28dPa_particleTracePcallBack_c[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dPa_hermiteEcallBack_c[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dPa_gen_d_light8PcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dPa_gen_b_light8PcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dPa_light8PcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dPa_fsenthPcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dPa_wbPcallBack_c[8];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17dPa_windPcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dPa_simpleEcallBack[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__22dPa_selectTexEcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dPa_modelEcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dPa_modelPcallBack[5];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dPa_gen_d_light8EcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__25dPa_gen_b_light8EcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dPa_light8EcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__19dPa_followEcallBack[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18dPa_levelEcallBack[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__18JPAEmitterCallBack[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__21dPa_setColorEcallBack[15];
+/* InitializedData      */
 SECTION_DATA extern u8 j_o_id__8dPa_name[12];
+/* InitializedData      */
 SECTION_DATA extern u8 s_o_id__8dPa_name[28];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mClipper__14mDoLib_clipper[92];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_dComIfG_gameInfo[122384];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 d_d_particle__LIT_4053[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4054[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 data_80424728[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4723[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4724[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4725[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4726[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4727[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4728[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4729[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4730[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mTsubo__13dPa_control_c[64];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4731[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4732[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4733[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 mLifeBall__13dPa_control_c[24];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4734[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4735[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4736[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4737[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4738[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4739[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4740[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4741[12];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mWindViewMatrix__13dPa_control_c[48];
-SECTION_BSS extern u8 data_804248AC[36];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 d_d_particle__LIT_4742[12];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 data_804248AC[32 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 g_env_light[4880];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 j3dSys[284];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sincosTable___5JMath[65536];
+/* InitializedData      */
 SECTION_SDATA extern u8 g_whiteColor[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_nan[4];
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_epsilon[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
-SECTION_SBSS extern u8 JPTracePCB4[4];
-SECTION_SBSS extern u8 mWaterY__11fopAcM_wt_c[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mWaterY__11fopAcM_wt_c[4 + 4 /* padding */];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450D64[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mEcallback__18dPa_modelEcallBack[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mPcallback__18dPa_modelEcallBack[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mModel__18dPa_modelEcallBack[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450E9C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mEmitterMng__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mWaterBubblePcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mFsenthPcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mLight8EcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 mLight8PcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_b_Light8EcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_b_Light8PcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_d_Light8EcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 m_d_Light8PcallBack__13dPa_control_c[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450EC4[4];
-SECTION_SBSS extern u8 mParticleTracePCB__13dPa_control_c[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sOldVcdVatCmd__8J3DShape[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_3880;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_3881;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_particle__LIT_3883;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_3964[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4048[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_4049;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4090[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4091[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_particle__LIT_4093;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_4391;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4473[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4474[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4482[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_4483[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_4518;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_4519;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_5066;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 data_80451F90[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5140[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5141[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5142[4];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_particle__LIT_5143;
+/* Float64Data          */
 SECTION_SDATA2 extern f64 d_d_particle__LIT_5144;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5145[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5189[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5190[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5198[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5199[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5374[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 d_d_particle__LIT_5375[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5383[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_5384[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6075;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6076;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6077;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6078;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6079;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6350;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 LIT_6351;
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_particle__LIT_6846;
 }
 
@@ -448,22 +908,28 @@ SECTION_SDATA2 extern f32 d_d_particle__LIT_6846;
 /* ###################################################################################### */
 
 extern "C" {
-/* 8037A108 000C .rodata    @4065                                                        */
+/* 8037A12C-8037A178 004B .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_8037A12C = "dummy";
+SECTION_DEAD const char* const stringBase_8037A132 = "/res/Particle/Pscene%03d.jpc";
+SECTION_DEAD const char* const stringBase_8037A14F = """\x1B""[43;30m１エミッター登録数オーバー！！\n";
+/* @stringBase0 padding */
+SECTION_DEAD const char* const pad_8037A177 = "";
+#pragma pop
+/* 8037A108-8037A114 000C .rodata    @4065                                                        InitializedData */
 SECTION_RODATA const u8 d_d_particle__LIT_4065[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
-/* 8037A114 000C .rodata    @5691                                                        */
+/* 8037A114-8037A120 000C .rodata    @5691                                                        InitializedData */
 SECTION_RODATA const u8 d_d_particle__LIT_5691[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
-/* 8037A120 000C .rodata    @6363                                                        */
+/* 8037A120-8037A12C 000C .rodata    @6363                                                        InitializedData */
 SECTION_RODATA const u8 d_d_particle__LIT_6363[12] = {
 	0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00, 0x3F, 0x80, 0x00, 0x00,
 };
-/* 8037A12C 004B .rodata    @stringBase0                                                 */
-const char* const stringBase_8037A12C = "dummy";
-const char* const stringBase_8037A132 = "/res/Particle/Pscene%03d.jpc";
-const char* const stringBase_8037A14F = """\x1B""[43;30m１エミッター登録数オーバー！！\n";
 }
 
 
@@ -472,38 +938,38 @@ const char* const stringBase_8037A14F = """\x1B""[43;30m１エミッター登録
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A8308 0000 .data      ...data.0                                                    */
-/* 803A8308 000C .data      l_lifeBallColor                                              */
+/* 803A8308-803A8308 0000 .data      ...data.0                                                    InitializedData */
+/* 803A8308-803A8314 000C .data      l_lifeBallColor                                              InitializedData */
 SECTION_DATA u8 l_lifeBallColor[12] = {
 	0xEB, 0x20, 0x78, 0xFF, 0x20, 0xF1, 0x9B, 0xFF, 0xEB, 0xD7, 0x2F, 0xFF,
 };
-/* 803A8314 0018 .data      effectIDTable$5499                                           */
+/* 803A8314-803A832C 0018 .data      effectIDTable$5499                                           InitializedData */
 SECTION_DATA u8 data_803A8314[24] = {
 	0x00, 0xE6, 0x00, 0xE7, 0x01, 0x43, 0x01, 0x46, 0x01, 0xAF, 0x01, 0xB8, 0x88, 0x1B, 0x88, 0x1E,
 	0x88, 0x1C, 0x88, 0x1F, 0x86, 0xAE, 0x86, 0xAF,
 };
-/* 803A832C 0030 .data      ringID$5531                                                  */
+/* 803A832C-803A835C 0030 .data      ringID$5531                                                  InitializedData */
 SECTION_DATA u8 data_803A832C[48] = {
 	0x00, 0xE7, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x46, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xAF, 0x01, 0xB0, 0x01, 0xB1, 0xFF, 0xFF, 0x88, 0x1E, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1F, 0x88, 0x20, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 803A835C 0030 .data      normalID$5532                                                */
+/* 803A835C-803A838C 0030 .data      normalID$5532                                                InitializedData */
 SECTION_DATA u8 data_803A835C[48] = {
 	0x00, 0xE6, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x01, 0x43, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x01, 0xB8, 0x01, 0xB9, 0x01, 0xBA, 0x01, 0xBB, 0x88, 0x1B, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 	0x88, 0x1C, 0x88, 0x1D, 0xFF, 0xFF, 0xFF, 0xFF, 0x86, 0xAE, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 803A838C 0014 .data      __vt__28dPa_particleTracePcallBack_c                         */
-SECTION_DATA const  void* __vt__28dPa_particleTracePcallBack_c[5] = {
+/* 803A838C-803A83A0 0014 .data      __vt__28dPa_particleTracePcallBack_c                         VTableData */
+SECTION_DATA void* __vt__28dPa_particleTracePcallBack_c[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__28dPa_particleTracePcallBack_cFv,
 	(void*)execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A83A0 0024 .data      __vt__22dPa_hermiteEcallBack_c                               */
-SECTION_DATA const  void* __vt__22dPa_hermiteEcallBack_c[9] = {
+/* 803A83A0-803A83C4 0024 .data      __vt__22dPa_hermiteEcallBack_c                               VTableData */
+SECTION_DATA void* __vt__22dPa_hermiteEcallBack_c[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dPa_hermiteEcallBack_cFv,
@@ -514,40 +980,40 @@ SECTION_DATA const  void* __vt__22dPa_hermiteEcallBack_c[9] = {
 	(void*)setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A83C4 0014 .data      __vt__25dPa_gen_d_light8PcallBack                            */
-SECTION_DATA const  void* __vt__25dPa_gen_d_light8PcallBack[5] = {
+/* 803A83C4-803A83D8 0014 .data      __vt__25dPa_gen_d_light8PcallBack                            VTableData */
+SECTION_DATA void* __vt__25dPa_gen_d_light8PcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dPa_gen_d_light8PcallBackFv,
 	(void*)execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A83D8 0014 .data      __vt__25dPa_gen_b_light8PcallBack                            */
-SECTION_DATA const  void* __vt__25dPa_gen_b_light8PcallBack[5] = {
+/* 803A83D8-803A83EC 0014 .data      __vt__25dPa_gen_b_light8PcallBack                            VTableData */
+SECTION_DATA void* __vt__25dPa_gen_b_light8PcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dPa_gen_b_light8PcallBackFv,
 	(void*)execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A83EC 0014 .data      __vt__19dPa_light8PcallBack                                  */
-SECTION_DATA const  void* __vt__19dPa_light8PcallBack[5] = {
+/* 803A83EC-803A8400 0014 .data      __vt__19dPa_light8PcallBack                                  VTableData */
+SECTION_DATA void* __vt__19dPa_light8PcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dPa_light8PcallBackFv,
 	(void*)execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A8400 0014 .data      __vt__19dPa_fsenthPcallBack                                  */
-SECTION_DATA const  void* __vt__19dPa_fsenthPcallBack[5] = {
+/* 803A8400-803A8414 0014 .data      __vt__19dPa_fsenthPcallBack                                  VTableData */
+SECTION_DATA void* __vt__19dPa_fsenthPcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dPa_fsenthPcallBackFv,
 	(void*)execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A8414 0014 .data      __vt__17dPa_wbPcallBack_c                                    */
-SECTION_DATA const  void* __vt__17dPa_wbPcallBack_c[8] = {
+/* 803A8414-803A8434 0014 .data      __vt__17dPa_wbPcallBack_c                                    VTableData */
+SECTION_DATA void* __vt__17dPa_wbPcallBack_c[8] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dPa_wbPcallBack_cFv,
@@ -558,16 +1024,16 @@ SECTION_DATA const  void* __vt__17dPa_wbPcallBack_c[8] = {
 	NULL,
 	NULL,
 };
-/* 803A8434 0014 .data      __vt__17dPa_windPcallBack                                    */
-SECTION_DATA const  void* __vt__17dPa_windPcallBack[5] = {
+/* 803A8434-803A8448 0014 .data      __vt__17dPa_windPcallBack                                    VTableData */
+SECTION_DATA void* __vt__17dPa_windPcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__17dPa_windPcallBackFv,
 	(void*)execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A8448 001C .data      __vt__19dPa_simpleEcallBack                                  */
-SECTION_DATA const  void* __vt__19dPa_simpleEcallBack[7] = {
+/* 803A8448-803A8464 001C .data      __vt__19dPa_simpleEcallBack                                  VTableData */
+SECTION_DATA void* __vt__19dPa_simpleEcallBack[7] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dPa_simpleEcallBackFv,
@@ -576,8 +1042,8 @@ SECTION_DATA const  void* __vt__19dPa_simpleEcallBack[7] = {
 	(void*)draw__19dPa_simpleEcallBackFP14JPABaseEmitter,
 	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
-/* 803A8464 0024 .data      __vt__22dPa_selectTexEcallBack                               */
-SECTION_DATA const  void* __vt__22dPa_selectTexEcallBack[9] = {
+/* 803A8464-803A8488 0024 .data      __vt__22dPa_selectTexEcallBack                               VTableData */
+SECTION_DATA void* __vt__22dPa_selectTexEcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__22dPa_selectTexEcallBackFv,
@@ -588,8 +1054,8 @@ SECTION_DATA const  void* __vt__22dPa_selectTexEcallBack[9] = {
 	(void*)setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A8488 0024 .data      __vt__18dPa_modelEcallBack                                   */
-SECTION_DATA const  void* __vt__18dPa_modelEcallBack[9] = {
+/* 803A8488-803A84AC 0024 .data      __vt__18dPa_modelEcallBack                                   VTableData */
+SECTION_DATA void* __vt__18dPa_modelEcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dPa_modelEcallBackFv,
@@ -600,16 +1066,16 @@ SECTION_DATA const  void* __vt__18dPa_modelEcallBack[9] = {
 	(void*)setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A84AC 0014 .data      __vt__18dPa_modelPcallBack                                   */
-SECTION_DATA const  void* __vt__18dPa_modelPcallBack[5] = {
+/* 803A84AC-803A84C0 0014 .data      __vt__18dPa_modelPcallBack                                   VTableData */
+SECTION_DATA void* __vt__18dPa_modelPcallBack[5] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dPa_modelPcallBackFv,
 	(void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 	(void*)draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
-/* 803A84C0 0024 .data      __vt__25dPa_gen_d_light8EcallBack                            */
-SECTION_DATA const  void* __vt__25dPa_gen_d_light8EcallBack[9] = {
+/* 803A84C0-803A84E4 0024 .data      __vt__25dPa_gen_d_light8EcallBack                            VTableData */
+SECTION_DATA void* __vt__25dPa_gen_d_light8EcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dPa_gen_d_light8EcallBackFv,
@@ -620,8 +1086,8 @@ SECTION_DATA const  void* __vt__25dPa_gen_d_light8EcallBack[9] = {
 	(void*)setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A84E4 0024 .data      __vt__25dPa_gen_b_light8EcallBack                            */
-SECTION_DATA const  void* __vt__25dPa_gen_b_light8EcallBack[9] = {
+/* 803A84E4-803A8508 0024 .data      __vt__25dPa_gen_b_light8EcallBack                            VTableData */
+SECTION_DATA void* __vt__25dPa_gen_b_light8EcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__25dPa_gen_b_light8EcallBackFv,
@@ -632,8 +1098,8 @@ SECTION_DATA const  void* __vt__25dPa_gen_b_light8EcallBack[9] = {
 	(void*)setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A8508 0024 .data      __vt__19dPa_light8EcallBack                                  */
-SECTION_DATA const  void* __vt__19dPa_light8EcallBack[9] = {
+/* 803A8508-803A852C 0024 .data      __vt__19dPa_light8EcallBack                                  VTableData */
+SECTION_DATA void* __vt__19dPa_light8EcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dPa_light8EcallBackFv,
@@ -644,8 +1110,8 @@ SECTION_DATA const  void* __vt__19dPa_light8EcallBack[9] = {
 	(void*)setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A852C 0028 .data      __vt__19dPa_followEcallBack                                  */
-SECTION_DATA const  void* __vt__19dPa_followEcallBack[10] = {
+/* 803A852C-803A8554 0028 .data      __vt__19dPa_followEcallBack                                  VTableData */
+SECTION_DATA void* __vt__19dPa_followEcallBack[10] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__19dPa_followEcallBackFv,
@@ -657,8 +1123,8 @@ SECTION_DATA const  void* __vt__19dPa_followEcallBack[10] = {
 	(void*)cleanup__19dPa_followEcallBackFv,
 	(void*)end__19dPa_followEcallBackFv,
 };
-/* 803A8554 0024 .data      __vt__18dPa_levelEcallBack                                   */
-SECTION_DATA const  void* __vt__18dPa_levelEcallBack[9] = {
+/* 803A8554-803A8578 0024 .data      __vt__18dPa_levelEcallBack                                   VTableData */
+SECTION_DATA void* __vt__18dPa_levelEcallBack[9] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__18dPa_levelEcallBackFv,
@@ -669,8 +1135,8 @@ SECTION_DATA const  void* __vt__18dPa_levelEcallBack[9] = {
 	NULL,
 	(void*)cleanup__18dPa_levelEcallBackFv,
 };
-/* 803A8578 001C .data      __vt__18JPAEmitterCallBack                                   */
-SECTION_DATA const  void* __vt__18JPAEmitterCallBack[7] = {
+/* 803A8578-803A8594 001C .data      __vt__18JPAEmitterCallBack                                   VTableData */
+SECTION_DATA void* __vt__18JPAEmitterCallBack[7] = {
 	NULL, /* RTTI */
 	NULL,
 	NULL,
@@ -679,8 +1145,8 @@ SECTION_DATA const  void* __vt__18JPAEmitterCallBack[7] = {
 	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
 	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
-/* 803A8594 0024 .data      __vt__21dPa_setColorEcallBack                                */
-SECTION_DATA const  void* __vt__21dPa_setColorEcallBack[15] = {
+/* 803A8594-803A85D0 0024 .data      __vt__21dPa_setColorEcallBack                                VTableData */
+SECTION_DATA void* __vt__21dPa_setColorEcallBack[15] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__21dPa_setColorEcallBackFv,
@@ -706,147 +1172,147 @@ SECTION_DATA const  void* __vt__21dPa_setColorEcallBack[15] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451F40 0004 .sdata2    @3880                                                        */
+/* 80451F40-80451F44 0004 .sdata2    @3880                                                        Float32Data */
 // 0x437f0000
 SECTION_SDATA2 f32 d_d_particle__LIT_3880 = 255.000000f;
-/* 80451F44 0004 .sdata2    @3881                                                        */
+/* 80451F44-80451F48 0004 .sdata2    @3881                                                        Float32Data */
 // 0x40800000
 SECTION_SDATA2 f32 d_d_particle__LIT_3881 = 4.000000f;
-/* 80451F48 0008 .sdata2    @3883                                                        */
+/* 80451F48-80451F50 0008 .sdata2    @3883                                                        Float64Data */
 // 0x4330000080000000 | compiler-generated value used in cast: (float)s32
 SECTION_SDATA2 f64 d_d_particle__LIT_3883 = 4503601774854144.000000;
-/* 80451F50 0004 .sdata2    @3964                                                        */
+/* 80451F50-80451F54 0004 .sdata2    @3964                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_3964[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451F54 0004 .sdata2    @4048                                                        */
+/* 80451F54-80451F58 0004 .sdata2    @4048                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4048[4] = {
 	0x3F, 0x26, 0x66, 0x66,
 };
-/* 80451F58 0004 .sdata2    @4049                                                        */
+/* 80451F58-80451F5C 0004 .sdata2    @4049                                                        Float32Data */
 // 0x41100000
 SECTION_SDATA2 f32 d_d_particle__LIT_4049 = 9.000000f;
-/* 80451F5C 0004 .sdata2    @4090                                                        */
+/* 80451F5C-80451F60 0004 .sdata2    @4090                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4090[4] = {
 	0xBB, 0xB4, 0x00, 0x00,
 };
-/* 80451F60 0004 .sdata2    @4091                                                        */
+/* 80451F60-80451F68 0004 .sdata2    @4091                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4091[8] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80451F68 0008 .sdata2    @4093                                                        */
+/* 80451F68-80451F70 0008 .sdata2    @4093                                                        Float64Data */
 // 0x4330000000000000 | compiler-generated value used in cast: (float)u32
 SECTION_SDATA2 f64 d_d_particle__LIT_4093 = 4503599627370496.000000;
-/* 80451F70 0004 .sdata2    @4391                                                        */
+/* 80451F70-80451F74 0004 .sdata2    @4391                                                        Float32Data */
 // 0x43480000
 SECTION_SDATA2 f32 LIT_4391 = 200.000000f;
-/* 80451F74 0004 .sdata2    @4473                                                        */
+/* 80451F74-80451F78 0004 .sdata2    @4473                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4473[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451F78 0004 .sdata2    @4474                                                        */
+/* 80451F78-80451F7C 0004 .sdata2    @4474                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4474[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451F7C 0004 .sdata2    @4482                                                        */
+/* 80451F7C-80451F80 0004 .sdata2    @4482                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4482[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451F80 0004 .sdata2    @4483                                                        */
+/* 80451F80-80451F84 0004 .sdata2    @4483                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_4483[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451F84 0004 .sdata2    @4518                                                        */
+/* 80451F84-80451F88 0004 .sdata2    @4518                                                        Float32Data */
 // 0x42c60000
 SECTION_SDATA2 f32 d_d_particle__LIT_4518 = 99.000000f;
-/* 80451F88 0004 .sdata2    @4519                                                        */
+/* 80451F88-80451F8C 0004 .sdata2    @4519                                                        Float32Data */
 // 0x3f800000
 SECTION_SDATA2 f32 d_d_particle__LIT_4519 = 1.000000f;
-/* 80451F8C 0004 .sdata2    @5066                                                        */
+/* 80451F8C-80451F90 0004 .sdata2    @5066                                                        Float32Data */
 // 0x3f000000
 SECTION_SDATA2 f32 d_d_particle__LIT_5066 = 0.500000f;
-/* 80451F90 0004 .sdata2    particleID$5076                                              */
+/* 80451F90-80451F94 0004 .sdata2    particleID$5076                                              InitializedData */
 SECTION_SDATA2 u8 data_80451F90[4] = {
 	0x01, 0xB3, 0x01, 0xB2,
 };
-/* 80451F94 0004 .sdata2    @5140                                                        */
+/* 80451F94-80451F98 0004 .sdata2    @5140                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5140[4] = {
 	0x3D, 0x4C, 0xCC, 0xCD,
 };
-/* 80451F98 0004 .sdata2    @5141                                                        */
+/* 80451F98-80451F9C 0004 .sdata2    @5141                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5141[4] = {
 	0x3E, 0x19, 0x99, 0x9A,
 };
-/* 80451F9C 0004 .sdata2    @5142                                                        */
+/* 80451F9C-80451FA0 0004 .sdata2    @5142                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5142[4] = {
 	0x3D, 0xCC, 0xCC, 0xCD,
 };
-/* 80451FA0 0008 .sdata2    @5143                                                        */
+/* 80451FA0-80451FA8 0008 .sdata2    @5143                                                        Float64Data */
 // 0x3fe0000000000000
 SECTION_SDATA2 f64 d_d_particle__LIT_5143 = 0.500000;
-/* 80451FA8 0008 .sdata2    @5144                                                        */
+/* 80451FA8-80451FB0 0008 .sdata2    @5144                                                        Float64Data */
 // 0x4008000000000000
 SECTION_SDATA2 f64 d_d_particle__LIT_5144 = 3.000000;
-/* 80451FB0 0008 .sdata2    @5145                                                        */
+/* 80451FB0-80451FB8 0008 .sdata2    @5145                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5145[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80451FB8 0004 .sdata2    @5189                                                        */
+/* 80451FB8-80451FBC 0004 .sdata2    @5189                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5189[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FBC 0004 .sdata2    @5190                                                        */
+/* 80451FBC-80451FC0 0004 .sdata2    @5190                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5190[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FC0 0004 .sdata2    @5198                                                        */
+/* 80451FC0-80451FC4 0004 .sdata2    @5198                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5198[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FC4 0004 .sdata2    @5199                                                        */
+/* 80451FC4-80451FC8 0004 .sdata2    @5199                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5199[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FC8 0004 .sdata2    @5374                                                        */
+/* 80451FC8-80451FCC 0004 .sdata2    @5374                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5374[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FCC 0004 .sdata2    @5375                                                        */
+/* 80451FCC-80451FD0 0004 .sdata2    @5375                                                        InitializedData */
 SECTION_SDATA2 u8 d_d_particle__LIT_5375[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FD0 0004 .sdata2    @5383                                                        */
+/* 80451FD0-80451FD4 0004 .sdata2    @5383                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5383[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FD4 0004 .sdata2    @5384                                                        */
+/* 80451FD4-80451FD8 0004 .sdata2    @5384                                                        InitializedData */
 SECTION_SDATA2 u8 LIT_5384[4] = {
 	0xFF, 0xFF, 0xFF, 0xFF,
 };
-/* 80451FD8 0004 .sdata2    @6075                                                        */
+/* 80451FD8-80451FDC 0004 .sdata2    @6075                                                        Float32Data */
 // 0x42000000
 SECTION_SDATA2 f32 LIT_6075 = 32.000000f;
-/* 80451FDC 0004 .sdata2    @6076                                                        */
+/* 80451FDC-80451FE0 0004 .sdata2    @6076                                                        Float32Data */
 // 0x40400000
 SECTION_SDATA2 f32 LIT_6076 = 3.000000f;
-/* 80451FE0 0004 .sdata2    @6077                                                        */
+/* 80451FE0-80451FE4 0004 .sdata2    @6077                                                        Float32Data */
 // 0x41200000
 SECTION_SDATA2 f32 LIT_6077 = 10.000000f;
-/* 80451FE4 0004 .sdata2    @6078                                                        */
+/* 80451FE4-80451FE8 0004 .sdata2    @6078                                                        Float32Data */
 // 0x40000000
 SECTION_SDATA2 f32 LIT_6078 = 2.000000f;
-/* 80451FE8 0004 .sdata2    @6079                                                        */
+/* 80451FE8-80451FEC 0004 .sdata2    @6079                                                        Float32Data */
 // 0xbf800000
 SECTION_SDATA2 f32 LIT_6079 = -1.000000f;
-/* 80451FEC 0004 .sdata2    @6350                                                        */
+/* 80451FEC-80451FF0 0004 .sdata2    @6350                                                        Float32Data */
 // 0x41480000
 SECTION_SDATA2 f32 LIT_6350 = 12.500000f;
-/* 80451FF0 0004 .sdata2    @6351                                                        */
+/* 80451FF0-80451FF4 0004 .sdata2    @6351                                                        Float32Data */
 // 0xc1480000
 SECTION_SDATA2 f32 LIT_6351 = -12.500000f;
-/* 80451FF4 0004 .sdata2    @6846                                                        */
+/* 80451FF4-80451FF8 0004 .sdata2    @6846                                                        Float32Data */
 // 0xc0000000
 SECTION_SDATA2 f32 d_d_particle__LIT_6846 = -2.000000f;
 }
@@ -857,61 +1323,61 @@ SECTION_SDATA2 f32 d_d_particle__LIT_6846 = -2.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80424710 0000 .bss       ...bss.0                                                     */
-/* 80424710 000C .bss       @4053                                                        */
+/* 80424710-80424710 0000 .bss       ...bss.0                                                     ZeroInitializedData */
+/* 80424710-8042471C 000C .bss       @4053                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4053[12];
-/* 8042471C 000C .bss       @4054                                                        */
+/* 8042471C-80424728 000C .bss       @4054                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4054[12];
-/* 80424728 000C .bss       pos$4424                                                     */
+/* 80424728-80424734 000C .bss       pos$4424                                                     ZeroInitializedData */
 SECTION_BSS u8 data_80424728[12];
-/* 80424734 000C .bss       @4723                                                        */
+/* 80424734-80424740 000C .bss       @4723                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4723[12];
-/* 80424740 000C .bss       @4724                                                        */
+/* 80424740-8042474C 000C .bss       @4724                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4724[12];
-/* 8042474C 000C .bss       @4725                                                        */
+/* 8042474C-80424758 000C .bss       @4725                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4725[12];
-/* 80424758 000C .bss       @4726                                                        */
+/* 80424758-80424764 000C .bss       @4726                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4726[12];
-/* 80424764 000C .bss       @4727                                                        */
+/* 80424764-80424770 000C .bss       @4727                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4727[12];
-/* 80424770 000C .bss       @4728                                                        */
+/* 80424770-8042477C 000C .bss       @4728                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4728[12];
-/* 8042477C 000C .bss       @4729                                                        */
+/* 8042477C-80424788 000C .bss       @4729                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4729[12];
-/* 80424788 000C .bss       @4730                                                        */
+/* 80424788-80424794 000C .bss       @4730                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4730[12];
-/* 80424794 0040 .bss       mTsubo__13dPa_control_c                                      */
+/* 80424794-804247D4 0040 .bss       mTsubo__13dPa_control_c                                      ZeroInitializedData */
 SECTION_BSS u8 mTsubo__13dPa_control_c[64];
-/* 804247D4 000C .bss       @4731                                                        */
+/* 804247D4-804247E0 000C .bss       @4731                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4731[12];
-/* 804247E0 000C .bss       @4732                                                        */
+/* 804247E0-804247EC 000C .bss       @4732                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4732[12];
-/* 804247EC 000C .bss       @4733                                                        */
+/* 804247EC-804247F8 000C .bss       @4733                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4733[12];
-/* 804247F8 0018 .bss       mLifeBall__13dPa_control_c                                   */
+/* 804247F8-80424810 0018 .bss       mLifeBall__13dPa_control_c                                   ZeroInitializedData */
 SECTION_BSS u8 mLifeBall__13dPa_control_c[24];
-/* 80424810 000C .bss       @4734                                                        */
+/* 80424810-8042481C 000C .bss       @4734                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4734[12];
-/* 8042481C 000C .bss       @4735                                                        */
+/* 8042481C-80424828 000C .bss       @4735                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4735[12];
-/* 80424828 000C .bss       @4736                                                        */
+/* 80424828-80424834 000C .bss       @4736                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4736[12];
-/* 80424834 000C .bss       @4737                                                        */
+/* 80424834-80424840 000C .bss       @4737                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4737[12];
-/* 80424840 000C .bss       @4738                                                        */
+/* 80424840-8042484C 000C .bss       @4738                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4738[12];
-/* 8042484C 000C .bss       @4739                                                        */
+/* 8042484C-80424858 000C .bss       @4739                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4739[12];
-/* 80424858 000C .bss       @4740                                                        */
+/* 80424858-80424864 000C .bss       @4740                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4740[12];
-/* 80424864 000C .bss       @4741                                                        */
+/* 80424864-80424870 000C .bss       @4741                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4741[12];
-/* 80424870 0030 .bss       mWindViewMatrix__13dPa_control_c                             */
+/* 80424870-804248A0 0030 .bss       mWindViewMatrix__13dPa_control_c                             ZeroInitializedData */
 SECTION_BSS u8 mWindViewMatrix__13dPa_control_c[48];
-/* 804248A0 000C .bss       @4742                                                        */
+/* 804248A0-804248AC 000C .bss       @4742                                                        ZeroInitializedData */
 SECTION_BSS u8 d_d_particle__LIT_4742[12];
-/* 804248AC 0020 .bss       jpcName$4821                                                 */
-SECTION_BSS u8 data_804248AC[36];
+/* 804248AC-804248D0 0020 .bss       jpcName$4821                                                 ZeroInitializedData */
+SECTION_BSS u8 data_804248AC[32 + 4 /* padding */];
 }
 
 
@@ -920,42 +1386,39 @@ SECTION_BSS u8 data_804248AC[36];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450E90 0004 .sbss      mEcallback__18dPa_modelEcallBack                             */
+/* 80450E90-80450E94 0004 .sbss      mEcallback__18dPa_modelEcallBack                             ZeroInitializedData */
 SECTION_SBSS u8 mEcallback__18dPa_modelEcallBack[4];
-/* 80450E94 0004 .sbss      mPcallback__18dPa_modelEcallBack                             */
+/* 80450E94-80450E98 0004 .sbss      mPcallback__18dPa_modelEcallBack                             ZeroInitializedData */
 SECTION_SBSS u8 mPcallback__18dPa_modelEcallBack[4];
-/* 80450E98 0004 .sbss      mModel__18dPa_modelEcallBack                                 */
+/* 80450E98-80450E9C 0004 .sbss      mModel__18dPa_modelEcallBack                                 ZeroInitializedData */
 SECTION_SBSS u8 mModel__18dPa_modelEcallBack[4];
-/* 80450E9C 0004 .sbss      merged_80450E9C                                              */
+/* 80450E9C-80450EA0 0004 .sbss      merged_80450E9C                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450E9C[4];
 /* 80450E9C 0001 data_80450E9C */
 /* 80450E9D 0001 data_80450E9D */
 /* 80450E9E 0002 data_80450E9E */
-/* 80450EA0 0004 .sbss      mEmitterMng__13dPa_control_c                                 */
+/* 80450EA0-80450EA4 0004 .sbss      mEmitterMng__13dPa_control_c                                 ZeroInitializedData */
 SECTION_SBSS u8 mEmitterMng__13dPa_control_c[4];
-/* 80450EA4 0004 .sbss      mWaterBubblePcallBack__13dPa_control_c                       */
+/* 80450EA4-80450EA8 0004 .sbss      mWaterBubblePcallBack__13dPa_control_c                       ZeroInitializedData */
 SECTION_SBSS u8 mWaterBubblePcallBack__13dPa_control_c[4];
-/* 80450EA8 0004 .sbss      mFsenthPcallBack__13dPa_control_c                            */
+/* 80450EA8-80450EAC 0004 .sbss      mFsenthPcallBack__13dPa_control_c                            ZeroInitializedData */
 SECTION_SBSS u8 mFsenthPcallBack__13dPa_control_c[4];
-/* 80450EAC 0004 .sbss      mLight8EcallBack__13dPa_control_c                            */
+/* 80450EAC-80450EB0 0004 .sbss      mLight8EcallBack__13dPa_control_c                            ZeroInitializedData */
 SECTION_SBSS u8 mLight8EcallBack__13dPa_control_c[4];
-/* 80450EB0 0004 .sbss      mLight8PcallBack__13dPa_control_c                            */
+/* 80450EB0-80450EB4 0004 .sbss      mLight8PcallBack__13dPa_control_c                            ZeroInitializedData */
 SECTION_SBSS u8 mLight8PcallBack__13dPa_control_c[4];
-/* 80450EB4 0004 .sbss      m_b_Light8EcallBack__13dPa_control_c                         */
+/* 80450EB4-80450EB8 0004 .sbss      m_b_Light8EcallBack__13dPa_control_c                         ZeroInitializedData */
 SECTION_SBSS u8 m_b_Light8EcallBack__13dPa_control_c[4];
-/* 80450EB8 0004 .sbss      m_b_Light8PcallBack__13dPa_control_c                         */
+/* 80450EB8-80450EBC 0004 .sbss      m_b_Light8PcallBack__13dPa_control_c                         ZeroInitializedData */
 SECTION_SBSS u8 m_b_Light8PcallBack__13dPa_control_c[4];
-/* 80450EBC 0004 .sbss      m_d_Light8EcallBack__13dPa_control_c                         */
+/* 80450EBC-80450EC0 0004 .sbss      m_d_Light8EcallBack__13dPa_control_c                         ZeroInitializedData */
 SECTION_SBSS u8 m_d_Light8EcallBack__13dPa_control_c[4];
-/* 80450EC0 0004 .sbss      m_d_Light8PcallBack__13dPa_control_c                         */
+/* 80450EC0-80450EC4 0004 .sbss      m_d_Light8PcallBack__13dPa_control_c                         ZeroInitializedData */
 SECTION_SBSS u8 m_d_Light8PcallBack__13dPa_control_c[4];
-/* 80450EC4 0004 .sbss      data_80450EC4                                                */
+/* 80450EC4-80450EC8 0004 .sbss      data_80450EC4                                                ZeroInitializedData */
 SECTION_SBSS u8 data_80450EC4[4];
-/* 80450EC8 0004 .sbss      mParticleTracePCB__13dPa_control_c                           */
-SECTION_SBSS u8 mParticleTracePCB__13dPa_control_c[4];
-SECTION_SBSS u8 pad_80450ECC[4];
-/* 80450ED0 0004 .sbss      data_80450ED0                                                */
-SECTION_SBSS u8 data_80450ED0[4];
+/* 80450EC8-80450ED0 0004 .sbss      mParticleTracePCB__13dPa_control_c                           ZeroInitializedData */
+SECTION_SBSS u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 }
 
 
@@ -964,7 +1427,7 @@ SECTION_SBSS u8 data_80450ED0[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80049420 0160 .text      dPa_cleanupGX__Fv                                            */
+/* 80049420-80049580 0160 .text      dPa_cleanupGX__Fv                                            Function */
 }
 
 #pragma push
@@ -977,7 +1440,7 @@ asm void dPa_cleanupGX(void) {
 #pragma pop
 
 extern "C" {
-/* 80049580 003C .text      __ct__19dPa_followEcallBackFUcUc                             */
+/* 80049580-800495BC 003C .text      __ct__19dPa_followEcallBackFUcUc                             Function */
 // dPa_followEcallBack::dPa_followEcallBack(u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -988,7 +1451,7 @@ asm void __ct__19dPa_followEcallBackFUcUc() {
 }
 #pragma pop
 
-/* 800495BC 00F4 .text      execute__19dPa_followEcallBackFP14JPABaseEmitter             */
+/* 800495BC-800496B0 00F4 .text      execute__19dPa_followEcallBackFP14JPABaseEmitter             Function */
 // dPa_followEcallBack::execute(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -999,13 +1462,13 @@ asm void execute__19dPa_followEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 800496B0 0004 .text      draw__19dPa_followEcallBackFP14JPABaseEmitter                */
+/* 800496B0-800496B4 0004 .text      draw__19dPa_followEcallBackFP14JPABaseEmitter                ReturnFunction */
 // dPa_followEcallBack::draw(JPABaseEmitter*)
 void draw__19dPa_followEcallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 800496B4 0098 .text      setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800496B4-8004974C 0098 .text      setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_followEcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1016,7 +1479,7 @@ asm void setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 }
 #pragma pop
 
-/* 8004974C 0050 .text      end__19dPa_followEcallBackFv                                 */
+/* 8004974C-8004979C 0050 .text      end__19dPa_followEcallBackFv                                 Function */
 // dPa_followEcallBack::end(void)
 #pragma push
 #pragma optimization_level 0
@@ -1027,7 +1490,7 @@ asm void end__19dPa_followEcallBackFv() {
 }
 #pragma pop
 
-/* 8004979C 0014 .text      setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004979C-800497B0 0014 .text      setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_light8EcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1038,7 +1501,7 @@ asm void setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 }
 #pragma pop
 
-/* 800497B0 001C .text      setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800497B0-800497CC 001C .text      setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_gen_b_light8EcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1049,7 +1512,7 @@ asm void setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc()
 }
 #pragma pop
 
-/* 800497CC 001C .text      setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800497CC-800497E8 001C .text      setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_gen_d_light8EcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1060,7 +1523,7 @@ asm void setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc()
 }
 #pragma pop
 
-/* 800497E8 014C .text      dPa_group_id_change__FPUlPUc                                 */
+/* 800497E8-80049934 014C .text      dPa_group_id_change__FPUlPUc                                 Function */
 }
 
 #pragma push
@@ -1073,20 +1536,20 @@ asm void dPa_group_id_change(u32*, u8*) {
 #pragma pop
 
 extern "C" {
-/* 80049934 01FC .text      initiateLighting8__FR8_GXColors                              */
+/* 80049934-80049B30 01FC .text      initiateLighting8__FR8_GXColors                              Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void initiateLighting8(_GXColor&, s16) {
+asm void initiateLighting8(_GXColor&, short) {
 	nofralloc
 #include "_include/d/d_particle/initiateLighting8__FR8_GXColors.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80049B30 0090 .text      initiate_b_Lighting8__FR8_GXColor                            */
+/* 80049B30-80049BC0 0090 .text      initiate_b_Lighting8__FR8_GXColor                            Function */
 }
 
 #pragma push
@@ -1099,7 +1562,7 @@ asm void initiate_b_Lighting8(_GXColor&) {
 #pragma pop
 
 extern "C" {
-/* 80049BC0 0060 .text      drawFirst__FP14JPABaseEmitter                                */
+/* 80049BC0-80049C20 0060 .text      drawFirst__FP14JPABaseEmitter                                Function */
 }
 
 #pragma push
@@ -1112,7 +1575,7 @@ asm void drawFirst(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 80049C20 0024 .text      drawFirst_l8__FP14JPABaseEmitter                             */
+/* 80049C20-80049C44 0024 .text      drawFirst_l8__FP14JPABaseEmitter                             Function */
 }
 
 #pragma push
@@ -1125,7 +1588,7 @@ asm void drawFirst_l8(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 80049C44 01FC .text      drawSecond_light8__FP14JPABaseEmitter                        */
+/* 80049C44-80049E40 01FC .text      drawSecond_light8__FP14JPABaseEmitter                        Function */
 }
 
 #pragma push
@@ -1138,7 +1601,7 @@ asm void drawSecond_light8(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 80049E40 01AC .text      drawSecond_b_light8__FP14JPABaseEmitter                      */
+/* 80049E40-80049FEC 01AC .text      drawSecond_b_light8__FP14JPABaseEmitter                      Function */
 }
 
 #pragma push
@@ -1151,7 +1614,7 @@ asm void drawSecond_b_light8(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 80049FEC 011C .text      static_light8EcallBack__FP14JPABaseEmitter                   */
+/* 80049FEC-8004A108 011C .text      static_light8EcallBack__FP14JPABaseEmitter                   Function */
 }
 
 #pragma push
@@ -1164,7 +1627,7 @@ asm void static_light8EcallBack(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 8004A108 011C .text      static_gen_b_light8EcallBack__FP14JPABaseEmitter             */
+/* 8004A108-8004A224 011C .text      static_gen_b_light8EcallBack__FP14JPABaseEmitter             Function */
 }
 
 #pragma push
@@ -1177,7 +1640,7 @@ asm void static_gen_b_light8EcallBack(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 8004A224 011C .text      static_gen_d_light8EcallBack__FP14JPABaseEmitter             */
+/* 8004A224-8004A340 011C .text      static_gen_d_light8EcallBack__FP14JPABaseEmitter             Function */
 }
 
 #pragma push
@@ -1190,7 +1653,7 @@ asm void static_gen_d_light8EcallBack(JPABaseEmitter*) {
 #pragma pop
 
 extern "C" {
-/* 8004A340 0024 .text      draw__19dPa_light8EcallBackFP14JPABaseEmitter                */
+/* 8004A340-8004A364 0024 .text      draw__19dPa_light8EcallBackFP14JPABaseEmitter                Function */
 // dPa_light8EcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1201,7 +1664,7 @@ asm void draw__19dPa_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004A364 0024 .text      draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter          */
+/* 8004A364-8004A388 0024 .text      draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter          Function */
 // dPa_gen_b_light8EcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1212,7 +1675,7 @@ asm void draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004A388 0024 .text      draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter          */
+/* 8004A388-8004A3AC 0024 .text      draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter          Function */
 // dPa_gen_d_light8EcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1223,7 +1686,7 @@ asm void draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004A3AC 00B4 .text      dPa_setWindPower__FP15JPABaseParticle                        */
+/* 8004A3AC-8004A460 00B4 .text      dPa_setWindPower__FP15JPABaseParticle                        Function */
 }
 
 #pragma push
@@ -1236,7 +1699,7 @@ asm void dPa_setWindPower(JPABaseParticle*) {
 #pragma pop
 
 extern "C" {
-/* 8004A460 01A8 .text      draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004A460-8004A608 01A8 .text      draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_modelPcallBack::draw(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -1247,7 +1710,7 @@ asm void draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8004A608 01A4 .text      set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
+/* 8004A608-8004A7AC 01A4 .text      set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc Function */
 // dPa_modelEcallBack::model_c::set(J3DModelData*, const dKy_tevstr_c&, u8, void*, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1258,7 +1721,7 @@ asm void set__Q218dPa_modelEcallBack7model_cFP12J3DModelDataRC12dKy_tevstr_cUcPv
 }
 #pragma pop
 
-/* 8004A7AC 00E0 .text      setup__Q218dPa_modelEcallBack7model_cFv                      */
+/* 8004A7AC-8004A88C 00E0 .text      setup__Q218dPa_modelEcallBack7model_cFv                      Function */
 // dPa_modelEcallBack::model_c::setup(void)
 #pragma push
 #pragma optimization_level 0
@@ -1269,7 +1732,7 @@ asm void setup__Q218dPa_modelEcallBack7model_cFv() {
 }
 #pragma pop
 
-/* 8004A88C 0050 .text      cleanup__Q218dPa_modelEcallBack7model_cFv                    */
+/* 8004A88C-8004A8DC 0050 .text      cleanup__Q218dPa_modelEcallBack7model_cFv                    Function */
 // dPa_modelEcallBack::model_c::cleanup(void)
 #pragma push
 #pragma optimization_level 0
@@ -1280,7 +1743,7 @@ asm void cleanup__Q218dPa_modelEcallBack7model_cFv() {
 }
 #pragma pop
 
-/* 8004A8DC 0158 .text      draw__Q218dPa_modelEcallBack7model_cFPA4_f                   */
+/* 8004A8DC-8004AA34 0158 .text      draw__Q218dPa_modelEcallBack7model_cFPA4_f                   Function */
 // dPa_modelEcallBack::model_c::draw(f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -1291,7 +1754,7 @@ asm void draw__Q218dPa_modelEcallBack7model_cFPA4_f() {
 }
 #pragma pop
 
-/* 8004AA34 0074 .text      draw__18dPa_modelEcallBackFP14JPABaseEmitter                 */
+/* 8004AA34-8004AAA8 0074 .text      draw__18dPa_modelEcallBackFP14JPABaseEmitter                 Function */
 // dPa_modelEcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1302,7 +1765,7 @@ asm void draw__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004AAA8 0074 .text      setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004AAA8-8004AB1C 0074 .text      setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_modelEcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1313,7 +1776,7 @@ asm void setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 }
 #pragma pop
 
-/* 8004AB1C 006C .text      create__18dPa_modelEcallBackFUc                              */
+/* 8004AB1C-8004AB88 006C .text      create__18dPa_modelEcallBackFUc                              Function */
 // dPa_modelEcallBack::create(u8)
 #pragma push
 #pragma optimization_level 0
@@ -1324,7 +1787,7 @@ asm void create__18dPa_modelEcallBackFUc() {
 }
 #pragma pop
 
-/* 8004AB88 003C .text      __dt__Q218dPa_modelEcallBack7model_cFv                       */
+/* 8004AB88-8004ABC4 003C .text      __dt__Q218dPa_modelEcallBack7model_cFv                       Function */
 // dPa_modelEcallBack::model_c::~dPa_modelEcallBack::model_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1335,7 +1798,7 @@ asm void __dt__Q218dPa_modelEcallBack7model_cFv() {
 }
 #pragma pop
 
-/* 8004ABC4 003C .text      remove__18dPa_modelEcallBackFv                               */
+/* 8004ABC4-8004AC00 003C .text      remove__18dPa_modelEcallBackFv                               Function */
 // dPa_modelEcallBack::remove(void)
 #pragma push
 #pragma optimization_level 0
@@ -1346,7 +1809,7 @@ asm void remove__18dPa_modelEcallBackFv() {
 }
 #pragma pop
 
-/* 8004AC00 0090 .text      setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc */
+/* 8004AC00-8004AC90 0090 .text      setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc Function */
 // dPa_modelEcallBack::setModel(JPABaseEmitter*, J3DModelData*, const dKy_tevstr_c&, u8, void*, u8, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1357,7 +1820,7 @@ asm void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_
 }
 #pragma pop
 
-/* 8004AC90 0030 .text      resetModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004AC90-8004ACC0 0030 .text      resetModel__18dPa_modelEcallBackFP14JPABaseEmitter           Function */
 // dPa_modelEcallBack::resetModel(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1368,7 +1831,7 @@ asm void resetModel__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004ACC0 002C .text      setupModel__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004ACC0-8004ACEC 002C .text      setupModel__18dPa_modelEcallBackFP14JPABaseEmitter           Function */
 // dPa_modelEcallBack::setupModel(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1379,7 +1842,7 @@ asm void setupModel__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004ACEC 003C .text      drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f       */
+/* 8004ACEC-8004AD28 003C .text      drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f       Function */
 // dPa_modelEcallBack::drawModel(JPABaseEmitter*, f32 (*)[4])
 #pragma push
 #pragma optimization_level 0
@@ -1390,7 +1853,7 @@ asm void drawModel__18dPa_modelEcallBackFP14JPABaseEmitterPA4_f() {
 }
 #pragma pop
 
-/* 8004AD28 0030 .text      cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter         */
+/* 8004AD28-8004AD58 0030 .text      cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter         Function */
 // dPa_modelEcallBack::cleanupModel(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1401,7 +1864,7 @@ asm void cleanupModel__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004AD58 0038 .text      getModel__18dPa_modelEcallBackFP14JPABaseEmitter             */
+/* 8004AD58-8004AD90 0038 .text      getModel__18dPa_modelEcallBackFP14JPABaseEmitter             Function */
 // dPa_modelEcallBack::getModel(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1412,7 +1875,7 @@ asm void getModel__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004AD90 0034 .text      getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter           */
+/* 8004AD90-8004ADC4 0034 .text      getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter           Function */
 // dPa_modelEcallBack::getRotAxis(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1423,7 +1886,7 @@ asm void getRotAxis__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004ADC4 0030 .text      draw__22dPa_selectTexEcallBackFP14JPABaseEmitter             */
+/* 8004ADC4-8004ADF4 0030 .text      draw__22dPa_selectTexEcallBackFP14JPABaseEmitter             Function */
 // dPa_selectTexEcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1434,7 +1897,7 @@ asm void draw__22dPa_selectTexEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004ADF4 0028 .text      __ct__19dPa_simpleEcallBackFv                                */
+/* 8004ADF4-8004AE1C 0028 .text      __ct__19dPa_simpleEcallBackFv                                Function */
 // dPa_simpleEcallBack::dPa_simpleEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -1445,7 +1908,7 @@ asm void __ct__19dPa_simpleEcallBackFv() {
 }
 #pragma pop
 
-/* 8004AE1C 0178 .text      executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter        */
+/* 8004AE1C-8004AF94 0178 .text      executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter        Function */
 // dPa_simpleEcallBack::executeAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -1456,13 +1919,13 @@ asm void executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004AF94 0004 .text      draw__19dPa_simpleEcallBackFP14JPABaseEmitter                */
+/* 8004AF94-8004AF98 0004 .text      draw__19dPa_simpleEcallBackFP14JPABaseEmitter                ReturnFunction */
 // dPa_simpleEcallBack::draw(JPABaseEmitter*)
 void draw__19dPa_simpleEcallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 8004AF98 008C .text      create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc       */
+/* 8004AF98-8004B024 008C .text      create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc       Function */
 // dPa_simpleEcallBack::create(JPAEmitterManager*, u16, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1473,7 +1936,7 @@ asm void create__19dPa_simpleEcallBackFP17JPAEmitterManagerUsUc() {
 }
 #pragma pop
 
-/* 8004B024 003C .text      __dt__16dPa_simpleData_cFv                                   */
+/* 8004B024-8004B060 003C .text      __dt__16dPa_simpleData_cFv                                   Function */
 // dPa_simpleData_c::~dPa_simpleData_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1484,13 +1947,13 @@ asm void __dt__16dPa_simpleData_cFv() {
 }
 #pragma pop
 
-/* 8004B060 0004 .text      __ct__16dPa_simpleData_cFv                                   */
+/* 8004B060-8004B064 0004 .text      __ct__16dPa_simpleData_cFv                                   ReturnFunction */
 // dPa_simpleData_c::dPa_simpleData_c(void)
 void __ct__16dPa_simpleData_cFv() {
 	return;
 }
 
-/* 8004B064 0104 .text      createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager    */
+/* 8004B064-8004B168 0104 .text      createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager    Function */
 // dPa_simpleEcallBack::createEmitter(JPAEmitterManager*)
 #pragma push
 #pragma optimization_level 0
@@ -1501,7 +1964,7 @@ asm void createEmitter__19dPa_simpleEcallBackFP17JPAEmitterManager() {
 }
 #pragma pop
 
-/* 8004B168 0378 .text      set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
+/* 8004B168-8004B4E0 0378 .text      set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif Function */
 // dPa_simpleEcallBack::set(const cXyz*, const dKy_tevstr_c*, u8, const _GXColor&, const _GXColor&, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1512,7 +1975,7 @@ asm void set__19dPa_simpleEcallBackFPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXCo
 }
 #pragma pop
 
-/* 8004B4E0 0024 .text      execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004B4E0-8004B504 0024 .text      execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_windPcallBack::execute(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -1523,7 +1986,7 @@ asm void execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8004B504 0040 .text      onActive__Q313dPa_control_c7level_c9emitter_cFv              */
+/* 8004B504-8004B544 0040 .text      onActive__Q313dPa_control_c7level_c9emitter_cFv              Function */
 // dPa_control_c::level_c::emitter_c::onActive(void)
 #pragma push
 #pragma optimization_level 0
@@ -1534,7 +1997,7 @@ asm void onActive__Q313dPa_control_c7level_c9emitter_cFv() {
 }
 #pragma pop
 
-/* 8004B544 0068 .text      entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack */
+/* 8004B544-8004B5AC 0068 .text      entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_levelEcallBack Function */
 // dPa_control_c::level_c::emitter_c::entry(u32, u16, JPABaseEmitter*, dPa_levelEcallBack*)
 #pragma push
 #pragma optimization_level 0
@@ -1545,7 +2008,7 @@ asm void entry__Q313dPa_control_c7level_c9emitter_cFUlUsP14JPABaseEmitterP18dPa_
 }
 #pragma pop
 
-/* 8004B5AC 00DC .text      cleanup__Q313dPa_control_c7level_c9emitter_cFv               */
+/* 8004B5AC-8004B688 00DC .text      cleanup__Q313dPa_control_c7level_c9emitter_cFv               Function */
 // dPa_control_c::level_c::emitter_c::cleanup(void)
 #pragma push
 #pragma optimization_level 0
@@ -1556,7 +2019,7 @@ asm void cleanup__Q313dPa_control_c7level_c9emitter_cFv() {
 }
 #pragma pop
 
-/* 8004B688 0070 .text      __ct__Q213dPa_control_c7level_cFv                            */
+/* 8004B688-8004B6F8 0070 .text      __ct__Q213dPa_control_c7level_cFv                            Function */
 // dPa_control_c::level_c::dPa_control_c::level_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1567,7 +2030,7 @@ asm void __ct__Q213dPa_control_c7level_cFv() {
 }
 #pragma pop
 
-/* 8004B6F8 00B0 .text      execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004B6F8-8004B7A8 00B0 .text      execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c Function */
 // dPa_control_c::level_c::execute(dPa_control_c::level_c::emitter_c)
 #pragma push
 #pragma optimization_level 0
@@ -1578,7 +2041,7 @@ asm void execute__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c
 }
 #pragma pop
 
-/* 8004B7A8 0060 .text      execute__Q213dPa_control_c7level_cFv                         */
+/* 8004B7A8-8004B808 0060 .text      execute__Q213dPa_control_c7level_cFv                         Function */
 // dPa_control_c::level_c::execute(void)
 #pragma push
 #pragma optimization_level 0
@@ -1589,7 +2052,7 @@ asm void execute__Q213dPa_control_c7level_cFv() {
 }
 #pragma pop
 
-/* 8004B808 006C .text      cleanup__Q213dPa_control_c7level_cFv                         */
+/* 8004B808-8004B874 006C .text      cleanup__Q213dPa_control_c7level_cFv                         Function */
 // dPa_control_c::level_c::cleanup(void)
 #pragma push
 #pragma optimization_level 0
@@ -1600,7 +2063,7 @@ asm void cleanup__Q213dPa_control_c7level_cFv() {
 }
 #pragma pop
 
-/* 8004B874 0040 .text      get__Q213dPa_control_c7level_cFUl                            */
+/* 8004B874-8004B8B4 0040 .text      get__Q213dPa_control_c7level_cFUl                            Function */
 // dPa_control_c::level_c::get(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1611,7 +2074,7 @@ asm void get__Q213dPa_control_c7level_cFUl() {
 }
 #pragma pop
 
-/* 8004B8B4 0034 .text      forceOnEventMove__Q213dPa_control_c7level_cFUl               */
+/* 8004B8B4-8004B8E8 0034 .text      forceOnEventMove__Q213dPa_control_c7level_cFUl               Function */
 // dPa_control_c::level_c::forceOnEventMove(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1622,7 +2085,7 @@ asm void forceOnEventMove__Q213dPa_control_c7level_cFUl() {
 }
 #pragma pop
 
-/* 8004B8E8 0030 .text      allForceOnEventMove__Q213dPa_control_c7level_cFv             */
+/* 8004B8E8-8004B918 0030 .text      allForceOnEventMove__Q213dPa_control_c7level_cFv             Function */
 // dPa_control_c::level_c::allForceOnEventMove(void)
 #pragma push
 #pragma optimization_level 0
@@ -1633,7 +2096,7 @@ asm void allForceOnEventMove__Q213dPa_control_c7level_cFv() {
 }
 #pragma pop
 
-/* 8004B918 0034 .text      getEmitter__Q213dPa_control_c7level_cFUl                     */
+/* 8004B918-8004B94C 0034 .text      getEmitter__Q213dPa_control_c7level_cFUl                     Function */
 // dPa_control_c::level_c::getEmitter(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1644,7 +2107,7 @@ asm void getEmitter__Q213dPa_control_c7level_cFUl() {
 }
 #pragma pop
 
-/* 8004B94C 00F4 .text      entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack */
+/* 8004B94C-8004BA40 00F4 .text      entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBack Function */
 // dPa_control_c::level_c::entry(u16, JPABaseEmitter*, dPa_levelEcallBack*)
 #pragma push
 #pragma optimization_level 0
@@ -1655,7 +2118,7 @@ asm void entry__Q213dPa_control_c7level_cFUsP14JPABaseEmitterP18dPa_levelEcallBa
 }
 #pragma pop
 
-/* 8004BA40 0034 .text      addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004BA40-8004BA74 0034 .text      addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c Function */
 // dPa_control_c::level_c::addTable(dPa_control_c::level_c::emitter_c)
 #pragma push
 #pragma optimization_level 0
@@ -1666,7 +2129,7 @@ asm void addTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_
 }
 #pragma pop
 
-/* 8004BA74 0058 .text      cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c */
+/* 8004BA74-8004BACC 0058 .text      cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_c Function */
 // dPa_control_c::level_c::cutTable(dPa_control_c::level_c::emitter_c)
 #pragma push
 #pragma optimization_level 0
@@ -1677,7 +2140,7 @@ asm void cutTable__Q213dPa_control_c7level_cFPQ313dPa_control_c7level_c9emitter_
 }
 #pragma pop
 
-/* 8004BACC 00A4 .text      __ct__13dPa_control_cFv                                      */
+/* 8004BACC-8004BB70 00A4 .text      __ct__13dPa_control_cFv                                      Function */
 // dPa_control_c::dPa_control_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -1688,7 +2151,7 @@ asm void __ct__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004BB70 0008 .text      getRM_ID__13dPa_control_cFUs                                 */
+/* 8004BB70-8004BB78 0008 .text      getRM_ID__13dPa_control_cFUs                                 Function */
 // dPa_control_c::getRM_ID(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1699,7 +2162,7 @@ asm void getRM_ID__13dPa_control_cFUs() {
 }
 #pragma pop
 
-/* 8004BB78 0164 .text      createCommon__13dPa_control_cFPCv                            */
+/* 8004BB78-8004BCDC 0164 .text      createCommon__13dPa_control_cFPCv                            Function */
 // dPa_control_c::createCommon(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -1710,7 +2173,7 @@ asm void createCommon__13dPa_control_cFPCv() {
 }
 #pragma pop
 
-/* 8004BCDC 0120 .text      createRoomScene__13dPa_control_cFv                           */
+/* 8004BCDC-8004BDFC 0120 .text      createRoomScene__13dPa_control_cFv                           Function */
 // dPa_control_c::createRoomScene(void)
 #pragma push
 #pragma optimization_level 0
@@ -1721,7 +2184,7 @@ asm void createRoomScene__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004BDFC 00B4 .text      readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c       */
+/* 8004BDFC-8004BEB0 00B4 .text      readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c       Function */
 // dPa_control_c::readScene(u8, mDoDvdThd_toMainRam_c**)
 #pragma push
 #pragma optimization_level 0
@@ -1732,7 +2195,7 @@ asm void readScene__13dPa_control_cFUcPP21mDoDvdThd_toMainRam_c() {
 }
 #pragma pop
 
-/* 8004BEB0 008C .text      createScene__13dPa_control_cFPCv                             */
+/* 8004BEB0-8004BF3C 008C .text      createScene__13dPa_control_cFPCv                             Function */
 // dPa_control_c::createScene(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -1743,7 +2206,7 @@ asm void createScene__13dPa_control_cFPCv() {
 }
 #pragma pop
 
-/* 8004BF3C 0098 .text      removeRoomScene__13dPa_control_cFb                           */
+/* 8004BF3C-8004BFD4 0098 .text      removeRoomScene__13dPa_control_cFb                           Function */
 // dPa_control_c::removeRoomScene(bool)
 #pragma push
 #pragma optimization_level 0
@@ -1754,7 +2217,7 @@ asm void removeRoomScene__13dPa_control_cFb() {
 }
 #pragma pop
 
-/* 8004BFD4 0080 .text      removeScene__13dPa_control_cFb                               */
+/* 8004BFD4-8004C054 0080 .text      removeScene__13dPa_control_cFb                               Function */
 // dPa_control_c::removeScene(bool)
 #pragma push
 #pragma optimization_level 0
@@ -1765,7 +2228,7 @@ asm void removeScene__13dPa_control_cFb() {
 }
 #pragma pop
 
-/* 8004C054 0024 .text      cleanup__13dPa_control_cFv                                   */
+/* 8004C054-8004C078 0024 .text      cleanup__13dPa_control_cFv                                   Function */
 // dPa_control_c::cleanup(void)
 #pragma push
 #pragma optimization_level 0
@@ -1776,7 +2239,7 @@ asm void cleanup__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004C078 0074 .text      calc3D__13dPa_control_cFv                                    */
+/* 8004C078-8004C0EC 0074 .text      calc3D__13dPa_control_cFv                                    Function */
 // dPa_control_c::calc3D(void)
 #pragma push
 #pragma optimization_level 0
@@ -1787,7 +2250,7 @@ asm void calc3D__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004C0EC 0048 .text      calc2D__13dPa_control_cFv                                    */
+/* 8004C0EC-8004C134 0048 .text      calc2D__13dPa_control_cFv                                    Function */
 // dPa_control_c::calc2D(void)
 #pragma push
 #pragma optimization_level 0
@@ -1798,7 +2261,7 @@ asm void calc2D__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004C134 0054 .text      calcMenu__13dPa_control_cFv                                  */
+/* 8004C134-8004C188 0054 .text      calcMenu__13dPa_control_cFv                                  Function */
 // dPa_control_c::calcMenu(void)
 #pragma push
 #pragma optimization_level 0
@@ -1809,7 +2272,7 @@ asm void calcMenu__13dPa_control_cFv() {
 }
 #pragma pop
 
-/* 8004C188 0090 .text      draw__13dPa_control_cFP11JPADrawInfoUc                       */
+/* 8004C188-8004C218 0090 .text      draw__13dPa_control_cFP11JPADrawInfoUc                       Function */
 // dPa_control_c::draw(JPADrawInfo*, u8)
 #pragma push
 #pragma optimization_level 0
@@ -1820,7 +2283,7 @@ asm void draw__13dPa_control_cFP11JPADrawInfoUc() {
 }
 #pragma pop
 
-/* 8004C218 0620 .text      setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl */
+/* 8004C218-8004C838 0620 .text      setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl Function */
 // dPa_control_c::setHitMark(u16, fopAc_ac_c*, const cXyz*, const csXyz*, const cXyz*, u32)
 #pragma push
 #pragma optimization_level 0
@@ -1831,7 +2294,7 @@ asm void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl() {
 }
 #pragma pop
 
-/* 8004C838 0258 .text      setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc */
+/* 8004C838-8004CA90 0258 .text      setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc Function */
 // dPa_control_c::setWaterRipple(u32*, cBgS_PolyInfo&, const cXyz*, f32, const dKy_tevstr_c*, const cXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1842,7 +2305,7 @@ asm void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevs
 }
 #pragma pop
 
-/* 8004CA90 0500 .text      set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
+/* 8004CA90-8004CF90 0500 .text      set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf Function */
 // dPa_control_c::set(u8, u16, const cXyz*, const dKy_tevstr_c*, const csXyz*, const cXyz*, u8, dPa_levelEcallBack*, s8, const _GXColor*, const _GXColor*, const cXyz*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1853,7 +2316,7 @@ asm void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa
 }
 #pragma pop
 
-/* 8004CF90 00D8 .text      getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf */
+/* 8004CF90-8004D068 00D8 .text      getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf Function */
 // dPa_control_c::getPolyColor(cBgS_PolyInfo&, int, _GXColor*, _GXColor*, u8*, f32*)
 #pragma push
 #pragma optimization_level 0
@@ -1864,7 +2327,7 @@ asm void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcP
 }
 #pragma pop
 
-/* 8004D068 00C0 .text      setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D068-8004D128 00C0 .text      setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz Function */
 // dPa_control_c::setPoly(u16, cBgS_PolyInfo&, const cXyz*, const dKy_tevstr_c*, const csXyz*, const cXyz*, int, dPa_levelEcallBack*, s8, const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -1875,7 +2338,7 @@ asm void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5cs
 }
 #pragma pop
 
-/* 8004D128 0090 .text      newSimple__13dPa_control_cFUsUcPUl                           */
+/* 8004D128-8004D1B8 0090 .text      newSimple__13dPa_control_cFUsUcPUl                           Function */
 // dPa_control_c::newSimple(u16, u8, u32*)
 #pragma push
 #pragma optimization_level 0
@@ -1886,7 +2349,7 @@ asm void newSimple__13dPa_control_cFUsUcPUl() {
 }
 #pragma pop
 
-/* 8004D1B8 0084 .text      setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif */
+/* 8004D1B8-8004D23C 0084 .text      setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif Function */
 // dPa_control_c::setSimple(u16, const cXyz*, const dKy_tevstr_c*, u8, const _GXColor&, const _GXColor&, int, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1897,7 +2360,7 @@ asm void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GX
 }
 #pragma pop
 
-/* 8004D23C 003C .text      getSimple__13dPa_control_cFUs                                */
+/* 8004D23C-8004D278 003C .text      getSimple__13dPa_control_cFUs                                Function */
 // dPa_control_c::getSimple(u16)
 #pragma push
 #pragma optimization_level 0
@@ -1908,7 +2371,7 @@ asm void getSimple__13dPa_control_cFUs() {
 }
 #pragma pop
 
-/* 8004D278 0254 .text      dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor */
+/* 8004D278-8004D4CC 0254 .text      dPa_kankyocolor_set__FfP14JPABaseEmitterPC12dKy_tevstr_cUlPC4cXyzPC8_GXColorPC8_GXColor Function */
 }
 
 #pragma push
@@ -1921,7 +2384,7 @@ asm void dPa_kankyocolor_set(f32, JPABaseEmitter*, const dKy_tevstr_c*, u32, con
 #pragma pop
 
 extern "C" {
-/* 8004D4CC 01D8 .text      set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf */
+/* 8004D4CC-8004D6A4 01D8 .text      set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf Function */
 // dPa_control_c::set(u32, u8, u16, const cXyz*, const dKy_tevstr_c*, const csXyz*, const cXyz*, u8, dPa_levelEcallBack*, s8, const _GXColor*, const _GXColor*, const cXyz*, f32)
 #pragma push
 #pragma optimization_level 0
@@ -1932,7 +2395,7 @@ asm void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18d
 }
 #pragma pop
 
-/* 8004D6A4 00CC .text      setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D6A4-8004D770 00CC .text      setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz Function */
 // dPa_control_c::setPoly(u32, u16, cBgS_PolyInfo&, const cXyz*, const dKy_tevstr_c*, const csXyz*, const cXyz*, int, dPa_levelEcallBack*, s8, const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -1943,7 +2406,7 @@ asm void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5
 }
 #pragma pop
 
-/* 8004D770 0054 .text      setStopContinue__13dPa_control_cFUl                          */
+/* 8004D770-8004D7C4 0054 .text      setStopContinue__13dPa_control_cFUl                          Function */
 // dPa_control_c::setStopContinue(u32)
 #pragma push
 #pragma optimization_level 0
@@ -1954,7 +2417,7 @@ asm void setStopContinue__13dPa_control_cFUl() {
 }
 #pragma pop
 
-/* 8004D7C4 01C4 .text      setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz */
+/* 8004D7C4-8004D988 01C4 .text      setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_ciPC5csXyzPC4cXyzP18dPa_levelEcallBackScPC4cXyz Function */
 // dPa_control_c::setSimpleFoot(u32, u32*, cBgS_PolyInfo&, const cXyz*, const dKy_tevstr_c*, int, const csXyz*, const cXyz*, dPa_levelEcallBack*, s8, const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -1965,7 +2428,7 @@ asm void setSimpleFoot__13dPa_control_cFUlPUlR13cBgS_PolyInfoPC4cXyzPC12dKy_tevs
 }
 #pragma pop
 
-/* 8004D988 02A0 .text      setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc */
+/* 8004D988-8004DC28 02A0 .text      setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc Function */
 // dPa_control_c::setCommonPoly(u32*, cBgS_PolyInfo*, const cXyz*, const cXyz*, const dKy_tevstr_c*, u32, u32, const csXyz*, const cXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -1976,7 +2439,7 @@ asm void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy
 }
 #pragma pop
 
-/* 8004DC28 0078 .text      execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DC28-8004DCA0 0078 .text      execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_wbPcallBack_c::execute(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -1987,7 +2450,7 @@ asm void execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8004DCA0 006C .text      execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DCA0-8004DD0C 006C .text      execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_fsenthPcallBack::execute(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -1998,31 +2461,31 @@ asm void execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8004DD0C 0004 .text      draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD0C-8004DD10 0004 .text      draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle ReturnFunction */
 // dPa_fsenthPcallBack::draw(JPABaseEmitter*, JPABaseParticle*)
 void draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 	return;
 }
 
-/* 8004DD10 0004 .text      execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD10-8004DD14 0004 .text      execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle ReturnFunction */
 // dPa_light8PcallBack::execute(JPABaseEmitter*, JPABaseParticle*)
 void execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 	return;
 }
 
-/* 8004DD14 0004 .text      execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD14-8004DD18 0004 .text      execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle ReturnFunction */
 // dPa_gen_b_light8PcallBack::execute(JPABaseEmitter*, JPABaseParticle*)
 void execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 	return;
 }
 
-/* 8004DD18 0004 .text      execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD18-8004DD1C 0004 .text      execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle ReturnFunction */
 // dPa_gen_d_light8PcallBack::execute(JPABaseEmitter*, JPABaseParticle*)
 void execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 	return;
 }
 
-/* 8004DD1C 098C .text      draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004DD1C-8004E6A8 098C .text      draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_light8PcallBack::draw(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -2033,7 +2496,7 @@ asm void draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle() {
 }
 #pragma pop
 
-/* 8004E6A8 069C .text      draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004E6A8-8004ED44 069C .text      draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_gen_b_light8PcallBack::draw(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -2044,7 +2507,7 @@ asm void draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle()
 }
 #pragma pop
 
-/* 8004ED44 0974 .text      draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004ED44-8004F6B8 0974 .text      draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_gen_d_light8PcallBack::draw(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -2055,7 +2518,7 @@ asm void draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle()
 }
 #pragma pop
 
-/* 8004F6B8 000C .text      setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz          */
+/* 8004F6B8-8004F6C4 000C .text      setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz          Function */
 // dPa_hermiteEcallBack_c::setOldPosP(const cXyz*, const cXyz*)
 #pragma push
 #pragma optimization_level 0
@@ -2066,7 +2529,7 @@ asm void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz() {
 }
 #pragma pop
 
-/* 8004F6C4 03F8 .text      executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter     */
+/* 8004F6C4-8004FABC 03F8 .text      executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter     Function */
 // dPa_hermiteEcallBack_c::executeAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2077,7 +2540,7 @@ asm void executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8004FABC 0018 .text      setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 8004FABC-8004FAD4 0018 .text      setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc Function */
 // dPa_hermiteEcallBack_c::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 #pragma push
 #pragma optimization_level 0
@@ -2088,7 +2551,7 @@ asm void setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 }
 #pragma pop
 
-/* 8004FAD4 0044 .text      execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle */
+/* 8004FAD4-8004FB18 0044 .text      execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle Function */
 // dPa_particleTracePcallBack_c::execute(JPABaseEmitter*, JPABaseParticle*)
 #pragma push
 #pragma optimization_level 0
@@ -2099,7 +2562,7 @@ asm void execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABasePart
 }
 #pragma pop
 
-/* 8004FB18 0074 .text      __dt__18dPa_levelEcallBackFv                                 */
+/* 8004FB18-8004FB8C 0074 .text      __dt__18dPa_levelEcallBackFv                                 Function */
 // dPa_levelEcallBack::~dPa_levelEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2110,13 +2573,13 @@ asm void __dt__18dPa_levelEcallBackFv() {
 }
 #pragma pop
 
-/* 8004FB8C 0004 .text      cleanup__18dPa_levelEcallBackFv                              */
+/* 8004FB8C-8004FB90 0004 .text      cleanup__18dPa_levelEcallBackFv                              ReturnFunction */
 // dPa_levelEcallBack::cleanup(void)
 void cleanup__18dPa_levelEcallBackFv() {
 	return;
 }
 
-/* 8004FB90 006C .text      __ct__Q218dPa_modelEcallBack7model_cFv                       */
+/* 8004FB90-8004FBFC 006C .text      __ct__Q218dPa_modelEcallBack7model_cFv                       Function */
 // dPa_modelEcallBack::model_c::dPa_modelEcallBack::model_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2127,7 +2590,7 @@ asm void __ct__Q218dPa_modelEcallBack7model_cFv() {
 }
 #pragma pop
 
-/* 8004FBFC 000C .text      __ct__Q313dPa_control_c7level_c9emitter_cFv                  */
+/* 8004FBFC-8004FC08 000C .text      __ct__Q313dPa_control_c7level_c9emitter_cFv                  Function */
 // dPa_control_c::level_c::emitter_c::dPa_control_c::level_c::emitter_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2138,7 +2601,7 @@ asm void __ct__Q313dPa_control_c7level_c9emitter_cFv() {
 }
 #pragma pop
 
-/* 8004FC08 0060 .text      __dt__19dPa_simpleEcallBackFv                                */
+/* 8004FC08-8004FC68 0060 .text      __dt__19dPa_simpleEcallBackFv                                Function */
 // dPa_simpleEcallBack::~dPa_simpleEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2149,7 +2612,7 @@ asm void __dt__19dPa_simpleEcallBackFv() {
 }
 #pragma pop
 
-/* 8004FC68 0060 .text      __dt__28dPa_particleTracePcallBack_cFv                       */
+/* 8004FC68-8004FCC8 0060 .text      __dt__28dPa_particleTracePcallBack_cFv                       Function */
 // dPa_particleTracePcallBack_c::~dPa_particleTracePcallBack_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2160,7 +2623,7 @@ asm void __dt__28dPa_particleTracePcallBack_cFv() {
 }
 #pragma pop
 
-/* 8004FCC8 0084 .text      __dt__22dPa_hermiteEcallBack_cFv                             */
+/* 8004FCC8-8004FD4C 0084 .text      __dt__22dPa_hermiteEcallBack_cFv                             Function */
 // dPa_hermiteEcallBack_c::~dPa_hermiteEcallBack_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2171,7 +2634,7 @@ asm void __dt__22dPa_hermiteEcallBack_cFv() {
 }
 #pragma pop
 
-/* 8004FD4C 0060 .text      __dt__25dPa_gen_d_light8PcallBackFv                          */
+/* 8004FD4C-8004FDAC 0060 .text      __dt__25dPa_gen_d_light8PcallBackFv                          Function */
 // dPa_gen_d_light8PcallBack::~dPa_gen_d_light8PcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2182,7 +2645,7 @@ asm void __dt__25dPa_gen_d_light8PcallBackFv() {
 }
 #pragma pop
 
-/* 8004FDAC 0060 .text      __dt__25dPa_gen_b_light8PcallBackFv                          */
+/* 8004FDAC-8004FE0C 0060 .text      __dt__25dPa_gen_b_light8PcallBackFv                          Function */
 // dPa_gen_b_light8PcallBack::~dPa_gen_b_light8PcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2193,7 +2656,7 @@ asm void __dt__25dPa_gen_b_light8PcallBackFv() {
 }
 #pragma pop
 
-/* 8004FE0C 0060 .text      __dt__19dPa_light8PcallBackFv                                */
+/* 8004FE0C-8004FE6C 0060 .text      __dt__19dPa_light8PcallBackFv                                Function */
 // dPa_light8PcallBack::~dPa_light8PcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2204,7 +2667,7 @@ asm void __dt__19dPa_light8PcallBackFv() {
 }
 #pragma pop
 
-/* 8004FE6C 0060 .text      __dt__19dPa_fsenthPcallBackFv                                */
+/* 8004FE6C-8004FECC 0060 .text      __dt__19dPa_fsenthPcallBackFv                                Function */
 // dPa_fsenthPcallBack::~dPa_fsenthPcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2215,7 +2678,7 @@ asm void __dt__19dPa_fsenthPcallBackFv() {
 }
 #pragma pop
 
-/* 8004FECC 0060 .text      __dt__17dPa_wbPcallBack_cFv                                  */
+/* 8004FECC-8004FF2C 0060 .text      __dt__17dPa_wbPcallBack_cFv                                  Function */
 // dPa_wbPcallBack_c::~dPa_wbPcallBack_c(void)
 #pragma push
 #pragma optimization_level 0
@@ -2226,7 +2689,7 @@ asm void __dt__17dPa_wbPcallBack_cFv() {
 }
 #pragma pop
 
-/* 8004FF2C 0060 .text      __dt__17dPa_windPcallBackFv                                  */
+/* 8004FF2C-8004FF8C 0060 .text      __dt__17dPa_windPcallBackFv                                  Function */
 // dPa_windPcallBack::~dPa_windPcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2237,7 +2700,7 @@ asm void __dt__17dPa_windPcallBackFv() {
 }
 #pragma pop
 
-/* 8004FF8C 0084 .text      __dt__22dPa_selectTexEcallBackFv                             */
+/* 8004FF8C-80050010 0084 .text      __dt__22dPa_selectTexEcallBackFv                             Function */
 // dPa_selectTexEcallBack::~dPa_selectTexEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2248,13 +2711,13 @@ asm void __dt__22dPa_selectTexEcallBackFv() {
 }
 #pragma pop
 
-/* 80050010 0004 .text      setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 80050010-80050014 0004 .text      setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc ReturnFunction */
 // dPa_selectTexEcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 void setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 	return;
 }
 
-/* 80050014 0024 .text      drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter            */
+/* 80050014-80050038 0024 .text      drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter            Function */
 // dPa_modelEcallBack::drawAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2265,7 +2728,7 @@ asm void drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 80050038 0060 .text      __dt__18dPa_modelPcallBackFv                                 */
+/* 80050038-80050098 0060 .text      __dt__18dPa_modelPcallBackFv                                 Function */
 // dPa_modelPcallBack::~dPa_modelPcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2276,7 +2739,7 @@ asm void __dt__18dPa_modelPcallBackFv() {
 }
 #pragma pop
 
-/* 80050098 0020 .text      drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter     */
+/* 80050098-800500B8 0020 .text      drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter     Function */
 // dPa_gen_d_light8EcallBack::drawAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2287,7 +2750,7 @@ asm void drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 800500B8 0084 .text      __dt__25dPa_gen_b_light8EcallBackFv                          */
+/* 800500B8-8005013C 0084 .text      __dt__25dPa_gen_b_light8EcallBackFv                          Function */
 // dPa_gen_b_light8EcallBack::~dPa_gen_b_light8EcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2298,7 +2761,7 @@ asm void __dt__25dPa_gen_b_light8EcallBackFv() {
 }
 #pragma pop
 
-/* 8005013C 0020 .text      drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter     */
+/* 8005013C-8005015C 0020 .text      drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter     Function */
 // dPa_gen_b_light8EcallBack::drawAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2309,7 +2772,7 @@ asm void drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 8005015C 0084 .text      __dt__19dPa_light8EcallBackFv                                */
+/* 8005015C-800501E0 0084 .text      __dt__19dPa_light8EcallBackFv                                Function */
 // dPa_light8EcallBack::~dPa_light8EcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2320,7 +2783,7 @@ asm void __dt__19dPa_light8EcallBackFv() {
 }
 #pragma pop
 
-/* 800501E0 0020 .text      drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter           */
+/* 800501E0-80050200 0020 .text      drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter           Function */
 // dPa_light8EcallBack::drawAfter(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2331,7 +2794,7 @@ asm void drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 80050200 0084 .text      __dt__19dPa_followEcallBackFv                                */
+/* 80050200-80050284 0084 .text      __dt__19dPa_followEcallBackFv                                Function */
 // dPa_followEcallBack::~dPa_followEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2342,7 +2805,7 @@ asm void __dt__19dPa_followEcallBackFv() {
 }
 #pragma pop
 
-/* 80050284 002C .text      cleanup__19dPa_followEcallBackFv                             */
+/* 80050284-800502B0 002C .text      cleanup__19dPa_followEcallBackFv                             Function */
 // dPa_followEcallBack::cleanup(void)
 #pragma push
 #pragma optimization_level 0
@@ -2353,7 +2816,7 @@ asm void cleanup__19dPa_followEcallBackFv() {
 }
 #pragma pop
 
-/* 800502B0 0030 .text      draw__21dPa_setColorEcallBackFP14JPABaseEmitter              */
+/* 800502B0-800502E0 0030 .text      draw__21dPa_setColorEcallBackFP14JPABaseEmitter              Function */
 // dPa_setColorEcallBack::draw(JPABaseEmitter*)
 #pragma push
 #pragma optimization_level 0
@@ -2364,13 +2827,13 @@ asm void draw__21dPa_setColorEcallBackFP14JPABaseEmitter() {
 }
 #pragma pop
 
-/* 800502E0 0004 .text      setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc */
+/* 800502E0-800502E4 0004 .text      setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc ReturnFunction */
 // dPa_setColorEcallBack::setup(JPABaseEmitter*, const cXyz*, const csXyz*, s8)
 void setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc() {
 	return;
 }
 
-/* 800502E4 0084 .text      __dt__21dPa_setColorEcallBackFv                              */
+/* 800502E4-80050368 0084 .text      __dt__21dPa_setColorEcallBackFv                              Function */
 // dPa_setColorEcallBack::~dPa_setColorEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2381,31 +2844,31 @@ asm void __dt__21dPa_setColorEcallBackFv() {
 }
 #pragma pop
 
-/* 80050368 0004 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
+/* 80050368-8005036C 0004 .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              ReturnFunction */
 // JPAEmitterCallBack::execute(JPABaseEmitter*)
 void execute__18JPAEmitterCallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 8005036C 0004 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
+/* 8005036C-80050370 0004 .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 ReturnFunction */
 // JPAEmitterCallBack::draw(JPABaseEmitter*)
 void draw__18JPAEmitterCallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 80050370 0004 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
+/* 80050370-80050374 0004 .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            ReturnFunction */
 // JPAEmitterCallBack::drawAfter(JPABaseEmitter*)
 void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 80050374 0004 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
+/* 80050374-80050378 0004 .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         ReturnFunction */
 // JPAEmitterCallBack::executeAfter(JPABaseEmitter*)
 void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter() {
 	return;
 }
 
-/* 80050378 0084 .text      __dt__18dPa_modelEcallBackFv                                 */
+/* 80050378-800503FC 0084 .text      __dt__18dPa_modelEcallBackFv                                 Function */
 // dPa_modelEcallBack::~dPa_modelEcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2416,7 +2879,7 @@ asm void __dt__18dPa_modelEcallBackFv() {
 }
 #pragma pop
 
-/* 800503FC 0084 .text      __dt__25dPa_gen_d_light8EcallBackFv                          */
+/* 800503FC-80050480 0084 .text      __dt__25dPa_gen_d_light8EcallBackFv                          Function */
 // dPa_gen_d_light8EcallBack::~dPa_gen_d_light8EcallBack(void)
 #pragma push
 #pragma optimization_level 0
@@ -2427,7 +2890,7 @@ asm void __dt__25dPa_gen_d_light8EcallBackFv() {
 }
 #pragma pop
 
-/* 80050480 081C .text      __sinit_d_particle_cpp                                       */
+/* 80050480-80050C9C 081C .text      __sinit_d_particle_cpp                                       SInitFunction */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

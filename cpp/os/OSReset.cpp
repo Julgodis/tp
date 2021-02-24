@@ -9,27 +9,56 @@
 // 
 
 extern "C" {
-extern void memset();
+/* Function             */
+SECTION_INIT extern void memset();
+/* Function             */
 extern void OSReport();
+/* Function             */
 extern void __OSStopAudioSystem();
+/* Function             */
 extern void ICFlashInvalidate();
+/* Function             */
 extern void LCDisable();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void __OSReboot();
+/* Function             */
+extern void OSRegisterResetFunction();
+/* Function             */
 extern void __OSCallResetFunctions();
+/* Function             */
 extern void Reset();
+/* Function             */
 extern void KillThreads();
+/* Function             */
+extern void __OSDoHotReset();
+/* Function             */
+extern void OSResetSystem();
+/* Function             */
+extern void OSGetResetCode();
+/* Function             */
 extern void __OSLockSram();
+/* Function             */
 extern void __OSUnlockSram();
+/* Function             */
 extern void __OSSyncSram();
+/* Function             */
 extern void OSDisableScheduler();
+/* Function             */
 extern void OSEnableScheduler();
+/* Function             */
 extern void OSCancelThread();
+/* Function             */
 extern void __PADDisableRecalibration();
+/* InitializedData      */
 SECTION_DATA extern u8 OSReset__LIT_153[80];
-SECTION_BSS extern u8 __OSRebootParams[32];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 __OSRebootParams[28 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 ResetFunctionQueue[8];
-SECTION_SBSS extern u8 bootThisDol[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 bootThisDol[4 + 4 /* padding */];
 }
 
 
@@ -38,7 +67,7 @@ SECTION_SBSS extern u8 bootThisDol[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D07E8 004E .data      @153                                                         */
+/* 803D07E8-803D0838 004E .data      @153                                                         InitializedData */
 SECTION_DATA u8 OSReset__LIT_153[80] = {
 	0x4F, 0x53, 0x52, 0x65, 0x73, 0x65, 0x74, 0x53, 0x79, 0x73, 0x74, 0x65, 0x6D, 0x28, 0x29, 0x3A,
 	0x20, 0x59, 0x6F, 0x75, 0x20, 0x63, 0x61, 0x6E, 0x27, 0x74, 0x20, 0x73, 0x70, 0x65, 0x63, 0x69,
@@ -56,11 +85,10 @@ SECTION_DATA u8 OSReset__LIT_153[80] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80451690 0008 .sbss      ResetFunctionQueue                                           */
+/* 80451690-80451698 0008 .sbss      ResetFunctionQueue                                           ZeroInitializedData */
 SECTION_SBSS u8 ResetFunctionQueue[8];
-/* 80451698 0004 .sbss      bootThisDol                                                  */
-SECTION_SBSS u8 bootThisDol[4];
-SECTION_SBSS u8 pad_8045169C[4];
+/* 80451698-804516A0 0004 .sbss      bootThisDol                                                  ZeroInitializedData */
+SECTION_SBSS u8 bootThisDol[4 + 4 /* padding */];
 }
 
 
@@ -69,7 +97,7 @@ SECTION_SBSS u8 pad_8045169C[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8033F660 0084 .text      OSRegisterResetFunction                                      */
+/* 8033F660-8033F6E4 0084 .text      OSRegisterResetFunction                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -79,7 +107,7 @@ asm void OSRegisterResetFunction() {
 }
 #pragma pop
 
-/* 8033F6E4 00A8 .text      __OSCallResetFunctions                                       */
+/* 8033F6E4-8033F78C 00A8 .text      __OSCallResetFunctions                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -89,7 +117,7 @@ asm void __OSCallResetFunctions() {
 }
 #pragma pop
 
-/* 8033F78C 0070 .text      Reset                                                        */
+/* 8033F78C-8033F7FC 0070 .text      Reset                                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -99,7 +127,7 @@ asm void Reset() {
 }
 #pragma pop
 
-/* 8033F7FC 0068 .text      KillThreads                                                  */
+/* 8033F7FC-8033F864 0068 .text      KillThreads                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -109,7 +137,7 @@ asm void KillThreads() {
 }
 #pragma pop
 
-/* 8033F864 0048 .text      __OSDoHotReset                                               */
+/* 8033F864-8033F8AC 0048 .text      __OSDoHotReset                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +147,7 @@ asm void __OSDoHotReset() {
 }
 #pragma pop
 
-/* 8033F8AC 0200 .text      OSResetSystem                                                */
+/* 8033F8AC-8033FAAC 0200 .text      OSResetSystem                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -129,7 +157,7 @@ asm void OSResetSystem() {
 }
 #pragma pop
 
-/* 8033FAAC 0038 .text      OSGetResetCode                                               */
+/* 8033FAAC-8033FAE4 0038 .text      OSGetResetCode                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

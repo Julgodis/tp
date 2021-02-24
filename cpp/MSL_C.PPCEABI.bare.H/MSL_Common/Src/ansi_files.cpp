@@ -9,12 +9,28 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void free();
+/* Function             */
+extern void __flush_all();
+/* Function             */
+extern void __close_all();
+/* ReturnFunction       */
 extern void __end_critical_region();
+/* ReturnFunction       */
 extern void __begin_critical_region();
+/* Function             */
 extern void fflush();
+/* Function             */
 extern void fclose();
+/* InitializedData      */
 SECTION_DATA extern u8 __files[320];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 stderr_buff[256];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 stdout_buff[256];
+/* ZeroInitializedData  */
+SECTION_BSS extern u8 stdin_buff[256];
 }
 
 
@@ -23,7 +39,7 @@ SECTION_DATA extern u8 __files[320];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803D29B0 0140 .data      __files                                                      */
+/* 803D29B0-803D2AF0 0140 .data      __files                                                      InitializedData */
 SECTION_DATA u8 __files[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x0A, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x44, 0xD7, 0x78,
@@ -54,11 +70,11 @@ SECTION_DATA u8 __files[320] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8044D578 0100 .bss       stderr_buff                                                  */
+/* 8044D578-8044D678 0100 .bss       stderr_buff                                                  ZeroInitializedData */
 SECTION_BSS u8 stderr_buff[256];
-/* 8044D678 0100 .bss       stdout_buff                                                  */
+/* 8044D678-8044D778 0100 .bss       stdout_buff                                                  ZeroInitializedData */
 SECTION_BSS u8 stdout_buff[256];
-/* 8044D778 0100 .bss       stdin_buff                                                   */
+/* 8044D778-8044D878 0100 .bss       stdin_buff                                                   ZeroInitializedData */
 SECTION_BSS u8 stdin_buff[256];
 }
 
@@ -68,7 +84,7 @@ SECTION_BSS u8 stdin_buff[256];
 /* ###################################################################################### */
 
 extern "C" {
-/* 8036300C 0070 .text      __flush_all                                                  */
+/* 8036300C-8036307C 0070 .text      __flush_all                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -78,7 +94,7 @@ asm void __flush_all() {
 }
 #pragma pop
 
-/* 8036307C 00A8 .text      __close_all                                                  */
+/* 8036307C-80363124 00A8 .text      __close_all                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

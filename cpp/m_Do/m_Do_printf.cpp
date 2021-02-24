@@ -15,47 +15,96 @@
 struct __va_list_struct;
 
 extern void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32); /* OSSwitchFiberEx__FUlUlUlUlUlUl */
-extern void my_PutString(const s8*); /* my_PutString__FPCc */
-extern void OSVAttention(const s8*, __va_list_struct*); /* OSVAttention__FPCcP16__va_list_struct */
+extern void my_PutString(const char*); /* my_PutString__FPCc */
+extern void OSVAttention(const char*, __va_list_struct*); /* OSVAttention__FPCcP16__va_list_struct */
 extern void OSReportInit(void); /* OSReportInit__Fv */
-extern void mDoPrintf_vprintf_Interrupt(const s8*, __va_list_struct*); /* mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct */
-extern void mDoPrintf_vprintf_Thread(const s8*, __va_list_struct*); /* mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct */
-extern void mDoPrintf_vprintf(const s8*, __va_list_struct*); /* mDoPrintf_vprintf__FPCcP16__va_list_struct */
+extern void mDoPrintf_vprintf_Interrupt(const char*, __va_list_struct*); /* mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct */
+extern void mDoPrintf_vprintf_Thread(const char*, __va_list_struct*); /* mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct */
+extern void mDoPrintf_vprintf(const char*, __va_list_struct*); /* mDoPrintf_vprintf__FPCcP16__va_list_struct */
 extern void mDoExt_GetCurrentRunningThread(void); /* mDoExt_GetCurrentRunningThread__Fv */
 
 extern "C" {
+/* Function             */
 extern void OSSwitchFiberEx__FUlUlUlUlUlUl();
+/* Function             */
 extern void my_PutString__FPCc();
+/* Function             */
 extern void OSVAttention__FPCcP16__va_list_struct();
+/* Function             */
 extern void OSAttention();
+/* Function             */
+extern void OSReportDisable();
+/* Function             */
+extern void OSReportEnable();
+/* Function             */
 extern void OSReportForceEnableOn();
+/* Function             */
 extern void OSReportForceEnableOff();
+/* Function             */
 extern void OSReportInit__Fv();
+/* Function             */
 extern void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct();
+/* Function             */
 extern void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct();
+/* Function             */
 extern void mDoPrintf_vprintf__FPCcP16__va_list_struct();
+/* Function             */
 extern void mDoPrintf_VReport();
+/* Function             */
 extern void OSVReport();
+/* Function             */
+extern void OSReport();
+/* Function             */
+extern void OSReport_FatalError();
+/* Function             */
+extern void OSReport_Error();
+/* Function             */
+extern void OSReport_Warning();
+/* Function             */
+extern void OSReport_System();
+/* Function             */
+extern void OSPanic();
+/* Function             */
 extern void mDoExt_GetCurrentRunningThread__Fv();
+/* Function             */
 extern void PPCHalt();
+/* Function             */
 extern void OSGetStackPointer();
+/* Function             */
 extern void OSDisableInterrupts();
+/* Function             */
 extern void OSRestoreInterrupts();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void fputs();
+/* Function             */
 extern void fflush();
+/* Function             */
 extern void vprintf();
+/* StringBaseData       */
 SECTION_RODATA extern const u8 m_Do_m_Do_printf__stringBase0[184];
+/* InitializedData      */
 SECTION_DATA extern u8 __files[320];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 mDoPrintf_FiberStack[2048];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450B98[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B9C[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 __OSReport_MonopolyThread[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 print_counts[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 print_errors[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 print_warings[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 print_systems[4];
+/* MergedZeroInitializedData */
 SECTION_SBSS extern u8 merged_80450BB4[4];
 }
 
@@ -65,18 +114,24 @@ SECTION_SBSS extern u8 merged_80450BB4[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80373CB0 00B8 .rodata    @stringBase0                                                 */
-const char* const stringBase_80373CB0 = 
-    """\x1B""[41;37m***** FATAL ERROR *****\n";
-const char* const stringBase_80373CD1 = "***** FATAL ERROR *****\n""\x1B""[m";
-const char* const stringBase_80373CED = """\x1B""[41;37m[ERROR]";
-const char* const stringBase_80373CFD = """\x1B""[m";
-const char* const stringBase_80373D01 = """\x1B""[43;30m[WARN]";
-const char* const stringBase_80373D10 = " in \"%s\" on line %d.\n";
-const char* const stringBase_80373D26 = 
-    "\nAddress:      Back Chain    LR "
+/* 80373CB0-80373D68 00B8 .rodata    @stringBase0                                                 StringBaseData */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD const char* const stringBase_80373CB0 = 
+    """\x1B""[41;37m***** FA"
+    "TAL ERROR *****\n";
+SECTION_DEAD const char* const stringBase_80373CD1 = "***** FATAL ERROR *****\n""\x1B""[m";
+SECTION_DEAD const char* const stringBase_80373CED = """\x1B""[41;37m[ERROR]";
+SECTION_DEAD const char* const stringBase_80373CFD = """\x1B""[m";
+SECTION_DEAD const char* const stringBase_80373D01 = """\x1B""[43;30m[WARN]";
+SECTION_DEAD const char* const stringBase_80373D10 = " in \"%s\" on line %d.\n";
+SECTION_DEAD const char* const stringBase_80373D26 = 
+    "\nAddress:      B"
+    "ack Chain    LR "
     "Save\n";
-const char* const stringBase_80373D4C = "0x%08x:   0x%08x    0x%08x\n";
+SECTION_DEAD const char* const stringBase_80373D4C = "0x%08x:   0x%08x    0x%08x\n";
+#pragma pop
 }
 
 
@@ -85,7 +140,7 @@ const char* const stringBase_80373D4C = "0x%08x:   0x%08x    0x%08x\n";
 /* ###################################################################################### */
 
 extern "C" {
-/* 803DB740 0800 .bss       mDoPrintf_FiberStack                                         */
+/* 803DB740-803DBF40 0800 .bss       mDoPrintf_FiberStack                                         ZeroInitializedData */
 SECTION_BSS u8 mDoPrintf_FiberStack[2048];
 }
 
@@ -95,25 +150,20 @@ SECTION_BSS u8 mDoPrintf_FiberStack[2048];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80450BA0 0004 .sbss      __OSReport_MonopolyThread                                    */
+/* 80450BA0-80450BA4 0004 .sbss      __OSReport_MonopolyThread                                    ZeroInitializedData */
 SECTION_SBSS u8 __OSReport_MonopolyThread[4];
-/* 80450BA4 0004 .sbss      print_counts                                                 */
+/* 80450BA4-80450BA8 0004 .sbss      print_counts                                                 ZeroInitializedData */
 SECTION_SBSS u8 print_counts[4];
-/* 80450BA8 0004 .sbss      print_errors                                                 */
+/* 80450BA8-80450BAC 0004 .sbss      print_errors                                                 ZeroInitializedData */
 SECTION_SBSS u8 print_errors[4];
-/* 80450BAC 0004 .sbss      print_warings                                                */
+/* 80450BAC-80450BB0 0004 .sbss      print_warings                                                ZeroInitializedData */
 SECTION_SBSS u8 print_warings[4];
-/* 80450BB0 0004 .sbss      print_systems                                                */
+/* 80450BB0-80450BB4 0004 .sbss      print_systems                                                ZeroInitializedData */
 SECTION_SBSS u8 print_systems[4];
-/* 80450BB4 0004 .sbss      merged_80450BB4                                              */
+/* 80450BB4-80450BB8 0004 .sbss      merged_80450BB4                                              MergedZeroInitializedData */
 SECTION_SBSS u8 merged_80450BB4[4];
 /* 80450BB4 0001 data_80450BB4 */
 /* 80450BB5 0003 data_80450BB5 */
-/* 80450BB8 0004 .sbss      merged_80450BB8                                              */
-SECTION_SBSS u8 merged_80450BB8[4];
-/* 80450BB8 0001 data_80450BB8 */
-/* 80450BB9 0001 data_80450BB9 */
-/* 80450BBA 0002 data_80450BBA */
 }
 
 
@@ -122,7 +172,7 @@ SECTION_SBSS u8 merged_80450BB8[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80006798 0030 .text      OSSwitchFiberEx__FUlUlUlUlUlUl                               */
+/* 80006798-800067C8 0030 .text      OSSwitchFiberEx__FUlUlUlUlUlUl                               Function */
 }
 
 #pragma push
@@ -135,33 +185,33 @@ asm void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32) {
 #pragma pop
 
 extern "C" {
-/* 800067C8 002C .text      my_PutString__FPCc                                           */
+/* 800067C8-800067F4 002C .text      my_PutString__FPCc                                           Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void my_PutString(const s8*) {
+asm void my_PutString(const char*) {
 	nofralloc
 #include "_include/m_Do/m_Do_printf/my_PutString__FPCc.s"
 }
 #pragma pop
 
 extern "C" {
-/* 800067F4 0020 .text      OSVAttention__FPCcP16__va_list_struct                        */
+/* 800067F4-80006814 0020 .text      OSVAttention__FPCcP16__va_list_struct                        Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void OSVAttention(const s8*, __va_list_struct*) {
+asm void OSVAttention(const char*, __va_list_struct*) {
 	nofralloc
 #include "_include/m_Do/m_Do_printf/OSVAttention__FPCcP16__va_list_struct.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80006814 0080 .text      OSAttention                                                  */
+/* 80006814-80006894 0080 .text      OSAttention                                                  Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -171,7 +221,7 @@ asm void OSAttention() {
 }
 #pragma pop
 
-/* 80006894 000C .text      OSReportDisable                                              */
+/* 80006894-800068A0 000C .text      OSReportDisable                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -181,7 +231,7 @@ asm void OSReportDisable() {
 }
 #pragma pop
 
-/* 800068A0 000C .text      OSReportEnable                                               */
+/* 800068A0-800068AC 000C .text      OSReportEnable                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -191,7 +241,7 @@ asm void OSReportEnable() {
 }
 #pragma pop
 
-/* 800068AC 000C .text      OSReportForceEnableOn                                        */
+/* 800068AC-800068B8 000C .text      OSReportForceEnableOn                                        Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,7 +251,7 @@ asm void OSReportForceEnableOn() {
 }
 #pragma pop
 
-/* 800068B8 000C .text      OSReportForceEnableOff                                       */
+/* 800068B8-800068C4 000C .text      OSReportForceEnableOff                                       Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,7 +261,7 @@ asm void OSReportForceEnableOff() {
 }
 #pragma pop
 
-/* 800068C4 0018 .text      OSReportInit__Fv                                             */
+/* 800068C4-800068DC 0018 .text      OSReportInit__Fv                                             Function */
 }
 
 #pragma push
@@ -224,46 +274,46 @@ asm void OSReportInit(void) {
 #pragma pop
 
 extern "C" {
-/* 800068DC 0088 .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct         */
+/* 800068DC-80006964 0088 .text      mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct         Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoPrintf_vprintf_Interrupt(const s8*, __va_list_struct*) {
+asm void mDoPrintf_vprintf_Interrupt(const char*, __va_list_struct*) {
 	nofralloc
 #include "_include/m_Do/m_Do_printf/mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80006964 0020 .text      mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct            */
+/* 80006964-80006984 0020 .text      mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct            Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoPrintf_vprintf_Thread(const s8*, __va_list_struct*) {
+asm void mDoPrintf_vprintf_Thread(const char*, __va_list_struct*) {
 	nofralloc
 #include "_include/m_Do/m_Do_printf/mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80006984 008C .text      mDoPrintf_vprintf__FPCcP16__va_list_struct                   */
+/* 80006984-80006A10 008C .text      mDoPrintf_vprintf__FPCcP16__va_list_struct                   Function */
 }
 
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void mDoPrintf_vprintf(const s8*, __va_list_struct*) {
+asm void mDoPrintf_vprintf(const char*, __va_list_struct*) {
 	nofralloc
 #include "_include/m_Do/m_Do_printf/mDoPrintf_vprintf__FPCcP16__va_list_struct.s"
 }
 #pragma pop
 
 extern "C" {
-/* 80006A10 008C .text      mDoPrintf_VReport                                            */
+/* 80006A10-80006A9C 008C .text      mDoPrintf_VReport                                            Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +323,7 @@ asm void mDoPrintf_VReport() {
 }
 #pragma pop
 
-/* 80006A9C 0020 .text      OSVReport                                                    */
+/* 80006A9C-80006ABC 0020 .text      OSVReport                                                    Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +333,7 @@ asm void OSVReport() {
 }
 #pragma pop
 
-/* 80006ABC 0080 .text      OSReport                                                     */
+/* 80006ABC-80006B3C 0080 .text      OSReport                                                     Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +343,7 @@ asm void OSReport() {
 }
 #pragma pop
 
-/* 80006B3C 00D0 .text      OSReport_FatalError                                          */
+/* 80006B3C-80006C0C 00D0 .text      OSReport_FatalError                                          Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -303,7 +353,7 @@ asm void OSReport_FatalError() {
 }
 #pragma pop
 
-/* 80006C0C 00E0 .text      OSReport_Error                                               */
+/* 80006C0C-80006CEC 00E0 .text      OSReport_Error                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -313,7 +363,7 @@ asm void OSReport_Error() {
 }
 #pragma pop
 
-/* 80006CEC 00E0 .text      OSReport_Warning                                             */
+/* 80006CEC-80006DCC 00E0 .text      OSReport_Warning                                             Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -323,7 +373,7 @@ asm void OSReport_Warning() {
 }
 #pragma pop
 
-/* 80006DCC 00B0 .text      OSReport_System                                              */
+/* 80006DCC-80006E7C 00B0 .text      OSReport_System                                              Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -333,7 +383,7 @@ asm void OSReport_System() {
 }
 #pragma pop
 
-/* 80006E7C 0138 .text      OSPanic                                                      */
+/* 80006E7C-80006FB4 0138 .text      OSPanic                                                      Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

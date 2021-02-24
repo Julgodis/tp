@@ -11,10 +11,28 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
+extern void __ct__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dt__13cBgS_PolyInfoFv();
+/* Function             */
+extern void ChkSetInfo__13cBgS_PolyInfoCFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
+extern void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo();
+/* Function             */
+extern void SetActorInfo__13cBgS_PolyInfoFiPvUi();
+/* Function             */
+extern void ChkSafe__13cBgS_PolyInfoCFPCvUi();
+/* Function             */
+extern void SetPolyIndex__13cBgS_PolyInfoFi();
+/* Function             */
+extern void ChkBgIndex__13cBgS_PolyInfoCFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__13cBgS_PolyInfo[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__13cBgS_PolyInfo[4];
 }
 
 
@@ -23,8 +41,8 @@ SECTION_DATA extern const void* __vt__13cBgS_PolyInfo[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C3FD0 000C .data      __vt__13cBgS_PolyInfo                                        */
-SECTION_DATA const  void* __vt__13cBgS_PolyInfo[4] = {
+/* 803C3FD0-803C3FE0 000C .data      __vt__13cBgS_PolyInfo                                        VTableData */
+SECTION_DATA void* __vt__13cBgS_PolyInfo[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__13cBgS_PolyInfoFv,
@@ -39,7 +57,7 @@ SECTION_DATA const  void* __vt__13cBgS_PolyInfo[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80268074 003C .text      __ct__13cBgS_PolyInfoFv                                      */
+/* 80268074-802680B0 003C .text      __ct__13cBgS_PolyInfoFv                                      Function */
 // cBgS_PolyInfo::cBgS_PolyInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +68,7 @@ asm void __ct__13cBgS_PolyInfoFv() {
 }
 #pragma pop
 
-/* 802680B0 0048 .text      __dt__13cBgS_PolyInfoFv                                      */
+/* 802680B0-802680F8 0048 .text      __dt__13cBgS_PolyInfoFv                                      Function */
 // cBgS_PolyInfo::~cBgS_PolyInfo(void)
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +79,7 @@ asm void __dt__13cBgS_PolyInfoFv() {
 }
 #pragma pop
 
-/* 802680F8 0028 .text      ChkSetInfo__13cBgS_PolyInfoCFv                               */
+/* 802680F8-80268120 0028 .text      ChkSetInfo__13cBgS_PolyInfoCFv                               Function */
 // cBgS_PolyInfo::ChkSetInfo(void) const
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +90,7 @@ asm void ChkSetInfo__13cBgS_PolyInfoCFv() {
 }
 #pragma pop
 
-/* 80268120 0028 .text      ClearPi__13cBgS_PolyInfoFv                                   */
+/* 80268120-80268148 0028 .text      ClearPi__13cBgS_PolyInfoFv                                   Function */
 // cBgS_PolyInfo::ClearPi(void)
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +101,7 @@ asm void ClearPi__13cBgS_PolyInfoFv() {
 }
 #pragma pop
 
-/* 80268148 0024 .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               */
+/* 80268148-8026816C 0024 .text      SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo               Function */
 // cBgS_PolyInfo::SetPolyInfo(const cBgS_PolyInfo&)
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +112,7 @@ asm void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo() {
 }
 #pragma pop
 
-/* 8026816C 0010 .text      SetActorInfo__13cBgS_PolyInfoFiPvUi                          */
+/* 8026816C-8026817C 0010 .text      SetActorInfo__13cBgS_PolyInfoFiPvUi                          Function */
 // cBgS_PolyInfo::SetActorInfo(int, void*, unsigned int)
 #pragma push
 #pragma optimization_level 0
@@ -105,7 +123,7 @@ asm void SetActorInfo__13cBgS_PolyInfoFiPvUi() {
 }
 #pragma pop
 
-/* 8026817C 0028 .text      ChkSafe__13cBgS_PolyInfoCFPCvUi                              */
+/* 8026817C-802681A4 0028 .text      ChkSafe__13cBgS_PolyInfoCFPCvUi                              Function */
 // cBgS_PolyInfo::ChkSafe(const void*, unsigned int) const
 #pragma push
 #pragma optimization_level 0
@@ -116,7 +134,7 @@ asm void ChkSafe__13cBgS_PolyInfoCFPCvUi() {
 }
 #pragma pop
 
-/* 802681A4 0008 .text      SetPolyIndex__13cBgS_PolyInfoFi                              */
+/* 802681A4-802681AC 0008 .text      SetPolyIndex__13cBgS_PolyInfoFi                              Function */
 // cBgS_PolyInfo::SetPolyIndex(int)
 #pragma push
 #pragma optimization_level 0
@@ -127,7 +145,7 @@ asm void SetPolyIndex__13cBgS_PolyInfoFi() {
 }
 #pragma pop
 
-/* 802681AC 0014 .text      ChkBgIndex__13cBgS_PolyInfoCFv                               */
+/* 802681AC-802681C0 0014 .text      ChkBgIndex__13cBgS_PolyInfoCFv                               Function */
 // cBgS_PolyInfo::ChkBgIndex(void) const
 #pragma push
 #pragma optimization_level 0

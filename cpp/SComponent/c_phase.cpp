@@ -11,17 +11,28 @@
 struct request_of_phase_process_class;
 
 extern void cPhs_Reset(request_of_phase_process_class*); /* cPhs_Reset__FP30request_of_phase_process_class */
+extern void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); /* cPhs_Set__FP30request_of_phase_process_classPPFPv_i */
 extern void cPhs_UnCompleate(request_of_phase_process_class*); /* cPhs_UnCompleate__FP30request_of_phase_process_class */
 extern void cPhs_Compleate(request_of_phase_process_class*); /* cPhs_Compleate__FP30request_of_phase_process_class */
 extern void cPhs_Next(request_of_phase_process_class*); /* cPhs_Next__FP30request_of_phase_process_class */
 extern void cPhs_Do(request_of_phase_process_class*, void*); /* cPhs_Do__FP30request_of_phase_process_classPv */
+extern void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); /* cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv */
 
 extern "C" {
+/* Function             */
 extern void cPhs_Reset__FP30request_of_phase_process_class();
+/* Function             */
+extern void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+/* Function             */
 extern void cPhs_UnCompleate__FP30request_of_phase_process_class();
+/* Function             */
 extern void cPhs_Compleate__FP30request_of_phase_process_class();
+/* Function             */
 extern void cPhs_Next__FP30request_of_phase_process_class();
+/* Function             */
 extern void cPhs_Do__FP30request_of_phase_process_classPv();
+/* Function             */
+extern void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
 }
 
 
@@ -30,7 +41,7 @@ extern void cPhs_Do__FP30request_of_phase_process_classPv();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80266624 000C .text      cPhs_Reset__FP30request_of_phase_process_class               */
+/* 80266624-80266630 000C .text      cPhs_Reset__FP30request_of_phase_process_class               Function */
 }
 
 #pragma push
@@ -43,7 +54,7 @@ asm void cPhs_Reset(request_of_phase_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266630 0010 .text      cPhs_Set__FP30request_of_phase_process_classPPFPv_i          */
+/* 80266630-80266640 0010 .text      cPhs_Set__FP30request_of_phase_process_classPPFPv_i          Function */
 }
 
 #pragma push
@@ -56,7 +67,7 @@ asm void cPhs_Set(request_of_phase_process_class*, int (**)(void*)) {
 #pragma pop
 
 extern "C" {
-/* 80266640 0028 .text      cPhs_UnCompleate__FP30request_of_phase_process_class         */
+/* 80266640-80266668 0028 .text      cPhs_UnCompleate__FP30request_of_phase_process_class         Function */
 }
 
 #pragma push
@@ -69,7 +80,7 @@ asm void cPhs_UnCompleate(request_of_phase_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266668 0010 .text      cPhs_Compleate__FP30request_of_phase_process_class           */
+/* 80266668-80266678 0010 .text      cPhs_Compleate__FP30request_of_phase_process_class           Function */
 }
 
 #pragma push
@@ -82,7 +93,7 @@ asm void cPhs_Compleate(request_of_phase_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266678 0060 .text      cPhs_Next__FP30request_of_phase_process_class                */
+/* 80266678-802666D8 0060 .text      cPhs_Next__FP30request_of_phase_process_class                Function */
 }
 
 #pragma push
@@ -95,7 +106,7 @@ asm void cPhs_Next(request_of_phase_process_class*) {
 #pragma pop
 
 extern "C" {
-/* 802666D8 00D4 .text      cPhs_Do__FP30request_of_phase_process_classPv                */
+/* 802666D8-802667AC 00D4 .text      cPhs_Do__FP30request_of_phase_process_classPv                Function */
 }
 
 #pragma push
@@ -108,7 +119,7 @@ asm void cPhs_Do(request_of_phase_process_class*, void*) {
 #pragma pop
 
 extern "C" {
-/* 802667AC 0028 .text      cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv    */
+/* 802667AC-802667D4 0028 .text      cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv    Function */
 }
 
 #pragma push

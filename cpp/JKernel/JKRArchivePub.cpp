@@ -13,51 +13,118 @@ struct JKRHeap;
 extern void* operator new(u32, JKRHeap*, int); /* __nw__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void getExpandedResSize__10JKRArchiveCFPCv();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nw__FUlP7JKRHeapi();
+/* Function             */
 extern void unmount__13JKRFileLoaderFv();
+/* Function             */
 extern void __ct__12JKRArcFinderFP10JKRArchivell();
+/* Function             */
 extern void check_mount_already__10JKRArchiveFlP7JKRHeap();
+/* Function             */
+extern void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+/* Function             */
+extern void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void becomeCurrent__10JKRArchiveFPCc();
+/* Function             */
+extern void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
+/* Function             */
+extern void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+/* Function             */
 extern void getResource__10JKRArchiveFPCc();
+/* Function             */
 extern void getResource__10JKRArchiveFUlPCc();
+/* Function             */
+extern void getIdxResource__10JKRArchiveFUl();
+/* Function             */
+extern void getResource__10JKRArchiveFUs();
+/* Function             */
 extern void readResource__10JKRArchiveFPvUlUlPCc();
+/* Function             */
 extern void readResource__10JKRArchiveFPvUlPCc();
+/* Function             */
+extern void readIdxResource__10JKRArchiveFPvUlUl();
+/* Function             */
+extern void readResource__10JKRArchiveFPvUlUs();
+/* Function             */
 extern void removeResourceAll__10JKRArchiveFv();
+/* Function             */
 extern void removeResource__10JKRArchiveFPv();
+/* Function             */
 extern void detachResource__10JKRArchiveFPv();
+/* Function             */
 extern void getResSize__10JKRArchiveCFPCv();
+/* Function             */
+extern void countResource__10JKRArchiveCFv();
+/* Function             */
 extern void countFile__10JKRArchiveCFPCc();
+/* Function             */
 extern void getFirstFile__10JKRArchiveCFPCc();
+/* Function             */
+extern void getFileAttribute__10JKRArchiveCFUl();
+/* Function             */
 extern void __dt__10JKRArchiveFv();
+/* Function             */
 extern void findDirectory__10JKRArchiveCFPCcUl();
+/* Function             */
 extern void findTypeResource__10JKRArchiveCFUlPCc();
+/* Function             */
 extern void findFsResource__10JKRArchiveCFPCcUl();
+/* Function             */
 extern void findIdxResource__10JKRArchiveCFUl();
+/* Function             */
 extern void findNameResource__10JKRArchiveCFPCc();
+/* Function             */
 extern void findPtrResource__10JKRArchiveCFPCv();
+/* Function             */
 extern void findIdResource__10JKRArchiveCFUs();
+/* Function             */
 extern void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+/* Function             */
 extern void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+/* Function             */
 extern void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+/* Function             */
 extern void __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void __ct__14JKRCompArchiveFlQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void DVDConvertPathToEntrynum();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_27();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JKRArchive[20];
+/* ZeroInitializedData  */
 SECTION_BSS extern u8 sVolumeList__13JKRFileLoader[12];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sSystemHeap__7JKRHeap[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
-SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4];
-SECTION_SBSS extern u8 sCurrentDirID__10JKRArchive[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 }
 
 
@@ -66,8 +133,8 @@ SECTION_SBSS extern u8 sCurrentDirID__10JKRArchive[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CC288 0050 .data      __vt__10JKRArchive                                           */
-SECTION_DATA const  void* __vt__10JKRArchive[20] = {
+/* 803CC288-803CC2D8 0050 .data      __vt__10JKRArchive                                           VTableData */
+SECTION_DATA void* __vt__10JKRArchive[20] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__10JKRArchiveFv,
@@ -97,8 +164,8 @@ SECTION_DATA const  void* __vt__10JKRArchive[20] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802D5778 006C .text      check_mount_already__10JKRArchiveFlP7JKRHeap                 */
-// JKRArchive::check_mount_already(s32, JKRHeap*)
+/* 802D5778-802D57E4 006C .text      check_mount_already__10JKRArchiveFlP7JKRHeap                 Function */
+// JKRArchive::check_mount_already(long, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -108,8 +175,8 @@ asm void check_mount_already__10JKRArchiveFlP7JKRHeap() {
 }
 #pragma pop
 
-/* 802D57E4 005C .text      mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection */
-// JKRArchive::mount(const s8*, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection)
+/* 802D57E4-802D5840 005C .text      mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection Function */
+// JKRArchive::mount(const char*, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -119,7 +186,7 @@ asm void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchiv
 }
 #pragma pop
 
-/* 802D5840 0088 .text      mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection */
+/* 802D5840-802D58C8 0088 .text      mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection Function */
 // JKRArchive::mount(void*, JKRHeap*, JKRArchive::EMountDirection)
 #pragma push
 #pragma optimization_level 0
@@ -130,8 +197,8 @@ asm void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection() {
 }
 #pragma pop
 
-/* 802D58C8 0170 .text      mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection */
-// JKRArchive::mount(s32, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection)
+/* 802D58C8-802D5A38 0170 .text      mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection Function */
+// JKRArchive::mount(long, JKRArchive::EMountMode, JKRHeap*, JKRArchive::EMountDirection)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -141,8 +208,8 @@ asm void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive1
 }
 #pragma pop
 
-/* 802D5A38 0088 .text      becomeCurrent__10JKRArchiveFPCc                              */
-// JKRArchive::becomeCurrent(const s8*)
+/* 802D5A38-802D5AC0 0088 .text      becomeCurrent__10JKRArchiveFPCc                              Function */
+// JKRArchive::becomeCurrent(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -152,7 +219,7 @@ asm void becomeCurrent__10JKRArchiveFPCc() {
 }
 #pragma pop
 
-/* 802D5AC0 0078 .text      getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl       */
+/* 802D5AC0-802D5B38 0078 .text      getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl       Function */
 // JKRArchive::getDirEntry(JKRArchive::SDirEntry, u32) const
 #pragma push
 #pragma optimization_level 0
@@ -163,8 +230,8 @@ asm void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl() {
 }
 #pragma pop
 
-/* 802D5B38 00B0 .text      getGlbResource__10JKRArchiveFUlPCcP10JKRArchive              */
-// JKRArchive::getGlbResource(u32, const s8*, JKRArchive*)
+/* 802D5B38-802D5BE8 00B0 .text      getGlbResource__10JKRArchiveFUlPCcP10JKRArchive              Function */
+// JKRArchive::getGlbResource(u32, const char*, JKRArchive*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -174,8 +241,8 @@ asm void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive() {
 }
 #pragma pop
 
-/* 802D5BE8 007C .text      getResource__10JKRArchiveFPCc                                */
-// JKRArchive::getResource(const s8*)
+/* 802D5BE8-802D5C64 007C .text      getResource__10JKRArchiveFPCc                                Function */
+// JKRArchive::getResource(const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -185,8 +252,8 @@ asm void getResource__10JKRArchiveFPCc() {
 }
 #pragma pop
 
-/* 802D5C64 0080 .text      getResource__10JKRArchiveFUlPCc                              */
-// JKRArchive::getResource(u32, const s8*)
+/* 802D5C64-802D5CE4 0080 .text      getResource__10JKRArchiveFUlPCc                              Function */
+// JKRArchive::getResource(u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -196,7 +263,7 @@ asm void getResource__10JKRArchiveFUlPCc() {
 }
 #pragma pop
 
-/* 802D5CE4 0054 .text      getIdxResource__10JKRArchiveFUl                              */
+/* 802D5CE4-802D5D38 0054 .text      getIdxResource__10JKRArchiveFUl                              Function */
 // JKRArchive::getIdxResource(u32)
 #pragma push
 #pragma optimization_level 0
@@ -207,7 +274,7 @@ asm void getIdxResource__10JKRArchiveFUl() {
 }
 #pragma pop
 
-/* 802D5D38 0054 .text      getResource__10JKRArchiveFUs                                 */
+/* 802D5D38-802D5D8C 0054 .text      getResource__10JKRArchiveFUs                                 Function */
 // JKRArchive::getResource(u16)
 #pragma push
 #pragma optimization_level 0
@@ -218,8 +285,8 @@ asm void getResource__10JKRArchiveFUs() {
 }
 #pragma pop
 
-/* 802D5D8C 00A4 .text      readResource__10JKRArchiveFPvUlUlPCc                         */
-// JKRArchive::readResource(void*, u32, u32, const s8*)
+/* 802D5D8C-802D5E30 00A4 .text      readResource__10JKRArchiveFPvUlUlPCc                         Function */
+// JKRArchive::readResource(void*, u32, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -229,8 +296,8 @@ asm void readResource__10JKRArchiveFPvUlUlPCc() {
 }
 #pragma pop
 
-/* 802D5E30 009C .text      readResource__10JKRArchiveFPvUlPCc                           */
-// JKRArchive::readResource(void*, u32, const s8*)
+/* 802D5E30-802D5ECC 009C .text      readResource__10JKRArchiveFPvUlPCc                           Function */
+// JKRArchive::readResource(void*, u32, const char*)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -240,7 +307,7 @@ asm void readResource__10JKRArchiveFPvUlPCc() {
 }
 #pragma pop
 
-/* 802D5ECC 0074 .text      readIdxResource__10JKRArchiveFPvUlUl                         */
+/* 802D5ECC-802D5F40 0074 .text      readIdxResource__10JKRArchiveFPvUlUl                         Function */
 // JKRArchive::readIdxResource(void*, u32, u32)
 #pragma push
 #pragma optimization_level 0
@@ -251,7 +318,7 @@ asm void readIdxResource__10JKRArchiveFPvUlUl() {
 }
 #pragma pop
 
-/* 802D5F40 0074 .text      readResource__10JKRArchiveFPvUlUs                            */
+/* 802D5F40-802D5FB4 0074 .text      readResource__10JKRArchiveFPvUlUs                            Function */
 // JKRArchive::readResource(void*, u32, u16)
 #pragma push
 #pragma optimization_level 0
@@ -262,7 +329,7 @@ asm void readResource__10JKRArchiveFPvUlUs() {
 }
 #pragma pop
 
-/* 802D5FB4 0088 .text      removeResourceAll__10JKRArchiveFv                            */
+/* 802D5FB4-802D603C 0088 .text      removeResourceAll__10JKRArchiveFv                            Function */
 // JKRArchive::removeResourceAll(void)
 #pragma push
 #pragma optimization_level 0
@@ -273,7 +340,7 @@ asm void removeResourceAll__10JKRArchiveFv() {
 }
 #pragma pop
 
-/* 802D603C 0060 .text      removeResource__10JKRArchiveFPv                              */
+/* 802D603C-802D609C 0060 .text      removeResource__10JKRArchiveFPv                              Function */
 // JKRArchive::removeResource(void*)
 #pragma push
 #pragma optimization_level 0
@@ -284,7 +351,7 @@ asm void removeResource__10JKRArchiveFPv() {
 }
 #pragma pop
 
-/* 802D609C 003C .text      detachResource__10JKRArchiveFPv                              */
+/* 802D609C-802D60D8 003C .text      detachResource__10JKRArchiveFPv                              Function */
 // JKRArchive::detachResource(void*)
 #pragma push
 #pragma optimization_level 0
@@ -295,7 +362,7 @@ asm void detachResource__10JKRArchiveFPv() {
 }
 #pragma pop
 
-/* 802D60D8 0034 .text      getResSize__10JKRArchiveCFPCv                                */
+/* 802D60D8-802D610C 0034 .text      getResSize__10JKRArchiveCFPCv                                Function */
 // JKRArchive::getResSize(const void*) const
 #pragma push
 #pragma optimization_level 0
@@ -306,7 +373,7 @@ asm void getResSize__10JKRArchiveCFPCv() {
 }
 #pragma pop
 
-/* 802D610C 0044 .text      countResource__10JKRArchiveCFv                               */
+/* 802D610C-802D6150 0044 .text      countResource__10JKRArchiveCFv                               Function */
 // JKRArchive::countResource(void) const
 #pragma push
 #pragma optimization_level 0
@@ -317,8 +384,8 @@ asm void countResource__10JKRArchiveCFv() {
 }
 #pragma pop
 
-/* 802D6150 0060 .text      countFile__10JKRArchiveCFPCc                                 */
-// JKRArchive::countFile(const s8*) const
+/* 802D6150-802D61B0 0060 .text      countFile__10JKRArchiveCFPCc                                 Function */
+// JKRArchive::countFile(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -328,8 +395,8 @@ asm void countFile__10JKRArchiveCFPCc() {
 }
 #pragma pop
 
-/* 802D61B0 00AC .text      getFirstFile__10JKRArchiveCFPCc                              */
-// JKRArchive::getFirstFile(const s8*) const
+/* 802D61B0-802D625C 00AC .text      getFirstFile__10JKRArchiveCFPCc                              Function */
+// JKRArchive::getFirstFile(const char*) const
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +406,7 @@ asm void getFirstFile__10JKRArchiveCFPCc() {
 }
 #pragma pop
 
-/* 802D625C 0038 .text      getFileAttribute__10JKRArchiveCFUl                           */
+/* 802D625C-802D6294 0038 .text      getFileAttribute__10JKRArchiveCFUl                           Function */
 // JKRArchive::getFileAttribute(u32) const
 #pragma push
 #pragma optimization_level 0

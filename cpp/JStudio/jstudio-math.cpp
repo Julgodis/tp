@@ -9,27 +9,53 @@
 // 
 
 extern "C" {
+/* Function             */
 extern void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
+/* Function             */
+extern void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
+/* Function             */
+extern void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
+/* Function             */
 extern void PSMTXConcat();
+/* Function             */
 extern void PSMTXTransApply();
+/* Function             */
 extern void PSMTXScale();
+/* Function             */
 extern void PSVECMag();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_28();
+/* Function             */
 extern void _restgpr_29();
+/* Function             */
 extern void cos();
+/* Function             */
 extern void sin();
+/* Function             */
 extern void asin();
+/* Function             */
 extern void atan2();
+/* InitializedData      */
 SECTION_SDATA extern u8 __float_epsilon[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_math__LIT_488[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_math__LIT_489[4];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_623[8];
+/* Float64Data          */
 SECTION_SDATA2 extern f64 LIT_624;
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_625[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_math__LIT_626[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_math__LIT_627[8];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 jstudio_math__LIT_628[8];
 }
 
@@ -39,36 +65,36 @@ SECTION_SDATA2 extern u8 jstudio_math__LIT_628[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 80455468 0004 .sdata2    @488                                                         */
+/* 80455468-8045546C 0004 .sdata2    @488                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_math__LIT_488[4] = {
 	0x3C, 0x8E, 0xFA, 0x35,
 };
-/* 8045546C 0004 .sdata2    @489                                                         */
+/* 8045546C-80455470 0004 .sdata2    @489                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_math__LIT_489[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455470 0008 .sdata2    @623                                                         */
+/* 80455470-80455478 0008 .sdata2    @623                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_623[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-/* 80455478 0008 .sdata2    @624                                                         */
+/* 80455478-80455480 0008 .sdata2    @624                                                         Float64Data */
 // 0x3ff0000000000000
 SECTION_SDATA2 f64 LIT_624 = 1.000000;
-/* 80455480 0004 .sdata2    @625                                                         */
+/* 80455480-80455488 0004 .sdata2    @625                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_625[8] = {
 	0x42, 0x00, 0x00, 0x00,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 80455488 0008 .sdata2    @626                                                         */
+/* 80455488-80455490 0008 .sdata2    @626                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_math__LIT_626[8] = {
 	0xBF, 0xF9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
 };
-/* 80455490 0008 .sdata2    @627                                                         */
+/* 80455490-80455498 0008 .sdata2    @627                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_math__LIT_627[8] = {
 	0x3F, 0xF9, 0x21, 0xFB, 0x54, 0x44, 0x2D, 0x18,
 };
-/* 80455498 0008 .sdata2    @628                                                         */
+/* 80455498-804554A0 0008 .sdata2    @628                                                         InitializedData */
 SECTION_SDATA2 u8 jstudio_math__LIT_628[8] = {
 	0x40, 0x4C, 0xA5, 0xDC, 0x1A, 0x63, 0xC1, 0xF8,
 };
@@ -80,7 +106,7 @@ SECTION_SDATA2 u8 jstudio_math__LIT_628[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802859DC 0168 .text      getRotation_xyz__Q27JStudio4mathFPA4_ffff                    */
+/* 802859DC-80285B44 0168 .text      getRotation_xyz__Q27JStudio4mathFPA4_ffff                    Function */
 // JStudio::math::getRotation_xyz(f32 (*)[4], f32, f32, f32)
 #pragma push
 #pragma optimization_level 0
@@ -91,7 +117,7 @@ asm void getRotation_xyz__Q27JStudio4mathFPA4_ffff() {
 }
 #pragma pop
 
-/* 80285B44 0088 .text      getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec */
+/* 80285B44-80285BCC 0088 .text      getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec Function */
 // JStudio::math::getTransformation_SRxyzT(f32 (*)[4], const Vec&, const Vec&, const Vec&)
 #pragma push
 #pragma optimization_level 0
@@ -102,7 +128,7 @@ asm void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec() {
 }
 #pragma pop
 
-/* 80285BCC 0240 .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf */
+/* 80285BCC-80285E0C 0240 .text      getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf Function */
 // JStudio::math::getFromTransformation_SRxyzT(Vec*, Vec*, Vec*, const f32 (*)[4])
 #pragma push
 #pragma optimization_level 0

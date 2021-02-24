@@ -20,8 +20,9 @@ JMATH_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libJMath.a: dirs $(JMATH_A_O_FILES)
+$(BUILD_DIR)/libJMath.a: $(JMATH_A_O_FILES)
 	$(LD) -xm l $(JMATH_A_LDFLAGS) -o $(BUILD_DIR)/libJMath.a $(JMATH_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libJMath.a
 
 $(BUILD_DIR)/libs/JMath/%.o: cpp/JMath/%.cpp
 	mkdir -p $(@D)

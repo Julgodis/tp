@@ -8,13 +8,20 @@
 // Additional Symbols:
 // 
 
+extern "C" {
+/* Function             */
+extern void __flush_buffer();
+/* Function             */
+extern void __prep_buffer();
+}
+
 
 /* ###################################################################################### */
 /*                                         .text                                          */
 /* ###################################################################################### */
 
 extern "C" {
-/* 803650E0 00C4 .text      __flush_buffer                                               */
+/* 803650E0-803651A4 00C4 .text      __flush_buffer                                               Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -24,7 +31,7 @@ asm void __flush_buffer() {
 }
 #pragma pop
 
-/* 803651A4 0034 .text      __prep_buffer                                                */
+/* 803651A4-803651D8 0034 .text      __prep_buffer                                                Function */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

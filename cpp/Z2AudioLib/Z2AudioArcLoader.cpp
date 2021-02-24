@@ -11,34 +11,65 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __dt__22JAUAudioArcInterpreterFv();
+/* Function             */
 extern void __ct__17JAUAudioArcLoaderFP10JAUSection();
+/* Function             */
 extern void readWS__17JAUAudioArcLoaderFUlPCvUl();
+/* Function             */
 extern void readBNK__17JAUAudioArcLoaderFUlPCv();
+/* Function             */
 extern void readBSC__17JAUAudioArcLoaderFPCvUl();
+/* Function             */
 extern void readBST__17JAUAudioArcLoaderFPCvUl();
+/* Function             */
 extern void readBMS__17JAUAudioArcLoaderFUlPCvUl();
+/* Function             */
 extern void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
+/* Function             */
 extern void newVoiceBank__17JAUAudioArcLoaderFUlUl();
+/* Function             */
 extern void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
+/* Function             */
 extern void readBSFT__17JAUAudioArcLoaderFPCv();
+/* Function             */
 extern void beginBNKList__17JAUAudioArcLoaderFUlUl();
+/* Function             */
 extern void endBNKList__17JAUAudioArcLoaderFv();
+/* Function             */
 extern void readMaxSeCategory__17JAUAudioArcLoaderFiii();
+/* Function             */
 extern void getOpenSection__14JAUSectionHeapFv();
+/* Function             */
+extern void __ct__16Z2AudioArcLoaderFP10JAUSection();
+/* Function             */
 extern void readCommandMore__16Z2AudioArcLoaderFUl();
+/* Function             */
 extern void readBFCA__16Z2AudioArcLoaderFPCv();
+/* ReturnFunction       */
 extern void readBSTN__16Z2AudioArcLoaderFPCvUl();
+/* Function             */
 extern void __dt__16Z2AudioArcLoaderFv();
+/* Function             */
 extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
-SECTION_DATA extern const void* __vt__17JAUAudioArcLoader[18];
-SECTION_DATA extern const void* __vt__16Z2AudioArcLoader[18];
+/* VTableData           */
+SECTION_DATA extern void* __vt__17JAUAudioArcLoader[18];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16Z2AudioArcLoader[18];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B40[4];
-SECTION_SBSS extern u8 data_80450CC0[4];
+/* ZeroInitializedData  */
+SECTION_SBSS extern u8 data_80450CC0[4 + 4 /* padding */];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 }
 
@@ -48,8 +79,8 @@ SECTION_SBSS extern u8 sCurrentHeap__7JKRHeap[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803C9CD0 0044 .data      __vt__16Z2AudioArcLoader                                     */
-SECTION_DATA const  void* __vt__16Z2AudioArcLoader[18] = {
+/* 803C9CD0-803C9D18 0044 .data      __vt__16Z2AudioArcLoader                                     VTableData */
+SECTION_DATA void* __vt__16Z2AudioArcLoader[18] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16Z2AudioArcLoaderFv,
@@ -78,7 +109,7 @@ SECTION_DATA const  void* __vt__16Z2AudioArcLoader[18] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802A9A34 003C .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       */
+/* 802A9A34-802A9A70 003C .text      __ct__16Z2AudioArcLoaderFP10JAUSection                       Function */
 // Z2AudioArcLoader::Z2AudioArcLoader(JAUSection*)
 #pragma push
 #pragma optimization_level 0
@@ -89,7 +120,7 @@ asm void __ct__16Z2AudioArcLoaderFP10JAUSection() {
 }
 #pragma pop
 
-/* 802A9A70 0058 .text      readCommandMore__16Z2AudioArcLoaderFUl                       */
+/* 802A9A70-802A9AC8 0058 .text      readCommandMore__16Z2AudioArcLoaderFUl                       Function */
 // Z2AudioArcLoader::readCommandMore(u32)
 #pragma push
 #pragma optimization_level 0
@@ -100,7 +131,7 @@ asm void readCommandMore__16Z2AudioArcLoaderFUl() {
 }
 #pragma pop
 
-/* 802A9AC8 008C .text      readBFCA__16Z2AudioArcLoaderFPCv                             */
+/* 802A9AC8-802A9B54 008C .text      readBFCA__16Z2AudioArcLoaderFPCv                             Function */
 // Z2AudioArcLoader::readBFCA(const void*)
 #pragma push
 #pragma optimization_level 0
@@ -111,13 +142,13 @@ asm void readBFCA__16Z2AudioArcLoaderFPCv() {
 }
 #pragma pop
 
-/* 802A9B54 0004 .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           */
+/* 802A9B54-802A9B58 0004 .text      readBSTN__16Z2AudioArcLoaderFPCvUl                           ReturnFunction */
 // Z2AudioArcLoader::readBSTN(const void*, u32)
 void readBSTN__16Z2AudioArcLoaderFPCvUl() {
 	return;
 }
 
-/* 802A9B58 0070 .text      __dt__16Z2AudioArcLoaderFv                                   */
+/* 802A9B58-802A9BC8 0070 .text      __dt__16Z2AudioArcLoaderFv                                   Function */
 // Z2AudioArcLoader::~Z2AudioArcLoader(void)
 #pragma push
 #pragma optimization_level 0

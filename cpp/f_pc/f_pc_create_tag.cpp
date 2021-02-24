@@ -8,18 +8,31 @@
 // Additional Symbols:
 // 
 
-struct create_tag;
 struct create_tag_class;
 struct node_list_class;
+struct create_tag;
 
+extern void fpcCtTg_ToCreateQ(create_tag*); /* fpcCtTg_ToCreateQ__FP10create_tag */
+extern void fpcCtTg_CreateQTo(create_tag*); /* fpcCtTg_CreateQTo__FP10create_tag */
+extern void fpcCtTg_Init(create_tag*, void*); /* fpcCtTg_Init__FP10create_tagPv */
 extern void cTg_SingleCut(create_tag_class*); /* cTg_SingleCut__FP16create_tag_class */
 extern void cTg_Addition(node_list_class*, create_tag_class*); /* cTg_Addition__FP15node_list_classP16create_tag_class */
 extern void cTg_Create(create_tag_class*, void*); /* cTg_Create__FP16create_tag_classPv */
 
 extern "C" {
+/* Function             */
+extern void fpcCtTg_ToCreateQ__FP10create_tag();
+/* Function             */
+extern void fpcCtTg_CreateQTo__FP10create_tag();
+/* Function             */
+extern void fpcCtTg_Init__FP10create_tagPv();
+/* Function             */
 extern void cTg_SingleCut__FP16create_tag_class();
+/* Function             */
 extern void cTg_Addition__FP15node_list_classP16create_tag_class();
+/* Function             */
 extern void cTg_Create__FP16create_tag_classPv();
+/* InitializedData      */
 SECTION_DATA extern u8 g_fpcCtTg_Queue[16];
 }
 
@@ -29,7 +42,7 @@ SECTION_DATA extern u8 g_fpcCtTg_Queue[16];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803A3990 000C .data      g_fpcCtTg_Queue                                              */
+/* 803A3990-803A39A0 000C .data      g_fpcCtTg_Queue                                              InitializedData */
 SECTION_DATA u8 g_fpcCtTg_Queue[16] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 	/* padding */
@@ -43,7 +56,7 @@ SECTION_DATA u8 g_fpcCtTg_Queue[16] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 80020E38 002C .text      fpcCtTg_ToCreateQ__FP10create_tag                            */
+/* 80020E38-80020E64 002C .text      fpcCtTg_ToCreateQ__FP10create_tag                            Function */
 }
 
 #pragma push
@@ -56,7 +69,7 @@ asm void fpcCtTg_ToCreateQ(create_tag*) {
 #pragma pop
 
 extern "C" {
-/* 80020E64 0020 .text      fpcCtTg_CreateQTo__FP10create_tag                            */
+/* 80020E64-80020E84 0020 .text      fpcCtTg_CreateQTo__FP10create_tag                            Function */
 }
 
 #pragma push
@@ -69,7 +82,7 @@ asm void fpcCtTg_CreateQTo(create_tag*) {
 #pragma pop
 
 extern "C" {
-/* 80020E84 0024 .text      fpcCtTg_Init__FP10create_tagPv                               */
+/* 80020E84-80020EA8 0024 .text      fpcCtTg_Init__FP10create_tagPv                               Function */
 }
 
 #pragma push

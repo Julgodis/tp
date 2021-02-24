@@ -8,12 +8,15 @@
 // Additional Symbols:
 // 
 
-struct node_list_class;
 struct node_class;
+struct node_list_class;
 
 extern void cLs_Init(node_list_class*); /* cLs_Init__FP15node_list_class */
 extern void cLs_SingleCut(node_class*); /* cLs_SingleCut__FP10node_class */
 extern void cLs_Addition(node_list_class*, node_class*); /* cLs_Addition__FP15node_list_classP10node_class */
+extern void cLs_Insert(node_list_class*, int, node_class*); /* cLs_Insert__FP15node_list_classiP10node_class */
+extern void cLs_GetFirst(node_list_class*); /* cLs_GetFirst__FP15node_list_class */
+extern void cLs_Create(node_list_class*); /* cLs_Create__FP15node_list_class */
 extern void cNd_LengthOf(node_class*); /* cNd_LengthOf__FP10node_class */
 extern void cNd_First(node_class*); /* cNd_First__FP10node_class */
 extern void cNd_Last(node_class*); /* cNd_Last__FP10node_class */
@@ -25,19 +28,39 @@ extern void cNd_SetObject(node_class*, void*); /* cNd_SetObject__FP10node_classP
 extern void cNd_ClearObject(node_class*); /* cNd_ClearObject__FP10node_class */
 
 extern "C" {
+/* Function             */
 extern void cLs_Init__FP15node_list_class();
+/* Function             */
 extern void cLs_SingleCut__FP10node_class();
+/* Function             */
 extern void cLs_Addition__FP15node_list_classP10node_class();
+/* Function             */
+extern void cLs_Insert__FP15node_list_classiP10node_class();
+/* Function             */
+extern void cLs_GetFirst__FP15node_list_class();
+/* Function             */
+extern void cLs_Create__FP15node_list_class();
+/* Function             */
 extern void cNd_LengthOf__FP10node_class();
+/* Function             */
 extern void cNd_First__FP10node_class();
+/* Function             */
 extern void cNd_Last__FP10node_class();
+/* Function             */
 extern void cNd_Order__FP10node_classi();
+/* Function             */
 extern void cNd_SingleCut__FP10node_class();
+/* Function             */
 extern void cNd_Addition__FP10node_classP10node_class();
+/* Function             */
 extern void cNd_Insert__FP10node_classP10node_class();
+/* Function             */
 extern void cNd_SetObject__FP10node_classPv();
+/* Function             */
 extern void cNd_ClearObject__FP10node_class();
+/* Function             */
 extern void _savegpr_29();
+/* Function             */
 extern void _restgpr_29();
 }
 
@@ -47,7 +70,7 @@ extern void _restgpr_29();
 /* ###################################################################################### */
 
 extern "C" {
-/* 80265E64 0014 .text      cLs_Init__FP15node_list_class                                */
+/* 80265E64-80265E78 0014 .text      cLs_Init__FP15node_list_class                                Function */
 }
 
 #pragma push
@@ -60,7 +83,7 @@ asm void cLs_Init(node_list_class*) {
 #pragma pop
 
 extern "C" {
-/* 80265E78 0084 .text      cLs_SingleCut__FP10node_class                                */
+/* 80265E78-80265EFC 0084 .text      cLs_SingleCut__FP10node_class                                Function */
 }
 
 #pragma push
@@ -73,7 +96,7 @@ asm void cLs_SingleCut(node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80265EFC 0074 .text      cLs_Addition__FP15node_list_classP10node_class               */
+/* 80265EFC-80265F70 0074 .text      cLs_Addition__FP15node_list_classP10node_class               Function */
 }
 
 #pragma push
@@ -86,7 +109,7 @@ asm void cLs_Addition(node_list_class*, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80265F70 0088 .text      cLs_Insert__FP15node_list_classiP10node_class                */
+/* 80265F70-80265FF8 0088 .text      cLs_Insert__FP15node_list_classiP10node_class                Function */
 }
 
 #pragma push
@@ -99,7 +122,7 @@ asm void cLs_Insert(node_list_class*, int, node_class*) {
 #pragma pop
 
 extern "C" {
-/* 80265FF8 0048 .text      cLs_GetFirst__FP15node_list_class                            */
+/* 80265FF8-80266040 0048 .text      cLs_GetFirst__FP15node_list_class                            Function */
 }
 
 #pragma push
@@ -112,7 +135,7 @@ asm void cLs_GetFirst(node_list_class*) {
 #pragma pop
 
 extern "C" {
-/* 80266040 0020 .text      cLs_Create__FP15node_list_class                              */
+/* 80266040-80266060 0020 .text      cLs_Create__FP15node_list_class                              Function */
 }
 
 #pragma push

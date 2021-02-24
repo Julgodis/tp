@@ -9,7 +9,12 @@
 // 
 
 extern "C" {
+/* Function             */
+extern void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
+/* InitializedData      */
 SECTION_SDATA extern u8 data_804508A8[8];
+/* InitializedData      */
+SECTION_SDATA extern u8 data_804508B0[8];
 }
 
 
@@ -18,13 +23,13 @@ SECTION_SDATA extern u8 data_804508A8[8];
 /* ###################################################################################### */
 
 extern "C" {
-/* 804508A8 0004 .sdata     cm2hw$539                                                    */
+/* 804508A8-804508B0 0004 .sdata     cm2hw$539                                                    InitializedData */
 SECTION_SDATA u8 data_804508A8[8] = {
 	0x00, 0x02, 0x01, 0x03,
 	/* padding */
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804508B0 0008 .sdata     data_804508B0                                                */
+/* 804508B0-804508B8 0008 .sdata     data_804508B0                                                InitializedData */
 SECTION_SDATA u8 data_804508B0[8] = {
 	0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -36,7 +41,7 @@ SECTION_SDATA u8 data_804508B0[8] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802CDDC8 008C .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode                        */
+/* 802CDDC8-802CDE54 008C .text      GFSetGenMode2__FUcUcUcUc11_GXCullMode                        Function */
 // GFSetGenMode2(u8, u8, u8, u8, _GXCullMode)
 #pragma push
 #pragma optimization_level 0

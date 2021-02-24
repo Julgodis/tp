@@ -11,22 +11,43 @@
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __ct__8dBgS_ChkFv();
+/* Function             */
 extern void __dt__8dBgS_ChkFv();
+/* ReturnFunction       */
 extern void GetPolyPassChkInfo__8dBgS_ChkFv();
+/* Function             */
 extern void GetGrpPassChkInfo__8dBgS_ChkFv();
+/* Function             */
+extern void __ct__12dBgS_RoofChkFv();
+/* Function             */
 extern void __dt__12dBgS_RoofChkFv();
+/* Function             */
+extern void Init__12dBgS_RoofChkFv();
+/* Function             */
 extern void func_8007914C();
+/* Function             */
 extern void func_80079154();
+/* Function             */
 extern void func_8007915C();
+/* Function             */
 extern void __ct__8cBgS_ChkFv();
+/* Function             */
 extern void __dt__8cBgS_ChkFv();
+/* Function             */
 extern void __ct__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dt__13cBgS_PolyInfoFv();
+/* Function             */
 extern void ClearPi__13cBgS_PolyInfoFv();
+/* Function             */
 extern void __dl__FPv();
-SECTION_DATA extern const void* __vt__12dBgS_RoofChk[12];
+/* VTableData           */
+SECTION_DATA extern void* __vt__12dBgS_RoofChk[12];
+/* InitializedData      */
 SECTION_SDATA2 extern u8 LIT_316[4];
+/* Float32Data          */
 SECTION_SDATA2 extern f32 d_d_bg_s_roof_chk__LIT_333;
 }
 
@@ -36,8 +57,8 @@ SECTION_SDATA2 extern f32 d_d_bg_s_roof_chk__LIT_333;
 /* ###################################################################################### */
 
 extern "C" {
-/* 803ABA50 0030 .data      __vt__12dBgS_RoofChk                                         */
-SECTION_DATA const  void* __vt__12dBgS_RoofChk[12] = {
+/* 803ABA50-803ABA80 0030 .data      __vt__12dBgS_RoofChk                                         VTableData */
+SECTION_DATA void* __vt__12dBgS_RoofChk[12] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__12dBgS_RoofChkFv,
@@ -59,11 +80,11 @@ SECTION_DATA const  void* __vt__12dBgS_RoofChk[12] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 804526F0 0004 .sdata2    @316                                                         */
+/* 804526F0-804526F4 0004 .sdata2    @316                                                         InitializedData */
 SECTION_SDATA2 u8 LIT_316[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
-/* 804526F4 0004 .sdata2    @333                                                         */
+/* 804526F4-804526F8 0004 .sdata2    @333                                                         Float32Data */
 // 0x4e6e6b28
 SECTION_SDATA2 f32 d_d_bg_s_roof_chk__LIT_333 = 1000000000.000000f;
 }
@@ -74,7 +95,7 @@ SECTION_SDATA2 f32 d_d_bg_s_roof_chk__LIT_333 = 1000000000.000000f;
 /* ###################################################################################### */
 
 extern "C" {
-/* 80078FF4 009C .text      __ct__12dBgS_RoofChkFv                                       */
+/* 80078FF4-80079090 009C .text      __ct__12dBgS_RoofChkFv                                       Function */
 // dBgS_RoofChk::dBgS_RoofChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -85,7 +106,7 @@ asm void __ct__12dBgS_RoofChkFv() {
 }
 #pragma pop
 
-/* 80079090 0094 .text      __dt__12dBgS_RoofChkFv                                       */
+/* 80079090-80079124 0094 .text      __dt__12dBgS_RoofChkFv                                       Function */
 // dBgS_RoofChk::~dBgS_RoofChk(void)
 #pragma push
 #pragma optimization_level 0
@@ -96,7 +117,7 @@ asm void __dt__12dBgS_RoofChkFv() {
 }
 #pragma pop
 
-/* 80079124 0028 .text      Init__12dBgS_RoofChkFv                                       */
+/* 80079124-8007914C 0028 .text      Init__12dBgS_RoofChkFv                                       Function */
 // dBgS_RoofChk::Init(void)
 #pragma push
 #pragma optimization_level 0
@@ -107,7 +128,7 @@ asm void Init__12dBgS_RoofChkFv() {
 }
 #pragma pop
 
-/* 8007914C 0008 .text      @16@__dt__12dBgS_RoofChkFv                                   */
+/* 8007914C-80079154 0008 .text      @16@__dt__12dBgS_RoofChkFv                                   Function */
 // dBgS_RoofChk::@16@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -118,7 +139,7 @@ asm void func_8007914C() {
 }
 #pragma pop
 
-/* 80079154 0008 .text      @52@__dt__12dBgS_RoofChkFv                                   */
+/* 80079154-8007915C 0008 .text      @52@__dt__12dBgS_RoofChkFv                                   Function */
 // dBgS_RoofChk::@52@__dt(void)
 #pragma push
 #pragma optimization_level 0
@@ -129,7 +150,7 @@ asm void func_80079154() {
 }
 #pragma pop
 
-/* 8007915C 0008 .text      @36@__dt__12dBgS_RoofChkFv                                   */
+/* 8007915C-80079164 0008 .text      @36@__dt__12dBgS_RoofChkFv                                   Function */
 // dBgS_RoofChk::@36@__dt(void)
 #pragma push
 #pragma optimization_level 0

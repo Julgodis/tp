@@ -8,18 +8,32 @@
 // Additional Symbols:
 // 
 
-struct cM3dGSph;
 struct Vec;
+struct cM3dGSph;
 struct cM3dGCyl;
 
 extern void cM3d_Cross_CylSph(const cM3dGCyl*, const cM3dGSph*, Vec*, f32*); /* cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf */
 extern void cM3d_Cross_SphSph(const cM3dGSph*, const cM3dGSph*, Vec*); /* cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec */
 
 extern "C" {
+/* Function             */
 extern void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
+/* Function             */
 extern void cM3d_Cross_SphSph__FPC8cM3dGSphPC8cM3dGSphP3Vec();
+/* Function             */
 extern void SetC__8cM3dGSphFRC4cXyz();
+/* Function             */
+extern void Set__8cM3dGSphFRC4cXyzf();
+/* Function             */
+extern void Set__8cM3dGSphFRC9cM3dGSphS();
+/* Function             */
 extern void SetR__8cM3dGSphFf();
+/* Function             */
+extern void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz();
+/* Function             */
+extern void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz();
+/* Function             */
+extern void GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz();
 }
 
 
@@ -28,7 +42,7 @@ extern void SetR__8cM3dGSphFf();
 /* ###################################################################################### */
 
 extern "C" {
-/* 8026F648 001C .text      SetC__8cM3dGSphFRC4cXyz                                      */
+/* 8026F648-8026F664 001C .text      SetC__8cM3dGSphFRC4cXyz                                      Function */
 // cM3dGSph::SetC(const cXyz&)
 #pragma push
 #pragma optimization_level 0
@@ -39,7 +53,7 @@ asm void SetC__8cM3dGSphFRC4cXyz() {
 }
 #pragma pop
 
-/* 8026F664 0044 .text      Set__8cM3dGSphFRC4cXyzf                                      */
+/* 8026F664-8026F6A8 0044 .text      Set__8cM3dGSphFRC4cXyzf                                      Function */
 // cM3dGSph::Set(const cXyz&, f32)
 #pragma push
 #pragma optimization_level 0
@@ -50,7 +64,7 @@ asm void Set__8cM3dGSphFRC4cXyzf() {
 }
 #pragma pop
 
-/* 8026F6A8 0060 .text      Set__8cM3dGSphFRC9cM3dGSphS                                  */
+/* 8026F6A8-8026F708 0060 .text      Set__8cM3dGSphFRC9cM3dGSphS                                  Function */
 // cM3dGSph::Set(const cM3dGSphS&)
 #pragma push
 #pragma optimization_level 0
@@ -61,7 +75,7 @@ asm void Set__8cM3dGSphFRC9cM3dGSphS() {
 }
 #pragma pop
 
-/* 8026F708 0008 .text      SetR__8cM3dGSphFf                                            */
+/* 8026F708-8026F710 0008 .text      SetR__8cM3dGSphFf                                            Function */
 // cM3dGSph::SetR(f32)
 #pragma push
 #pragma optimization_level 0
@@ -72,7 +86,7 @@ asm void SetR__8cM3dGSphFf() {
 }
 #pragma pop
 
-/* 8026F710 002C .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz                          */
+/* 8026F710-8026F73C 002C .text      cross__8cM3dGSphCFPC8cM3dGSphP4cXyz                          Function */
 // cM3dGSph::cross(const cM3dGSph*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -83,7 +97,7 @@ asm void cross__8cM3dGSphCFPC8cM3dGSphP4cXyz() {
 }
 #pragma pop
 
-/* 8026F73C 0030 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz                          */
+/* 8026F73C-8026F76C 0030 .text      cross__8cM3dGSphCFPC8cM3dGCylP4cXyz                          Function */
 // cM3dGSph::cross(const cM3dGCyl*, cXyz*) const
 #pragma push
 #pragma optimization_level 0
@@ -94,7 +108,7 @@ asm void cross__8cM3dGSphCFPC8cM3dGCylP4cXyz() {
 }
 #pragma pop
 
-/* 8026F76C 0044 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz                       */
+/* 8026F76C-8026F7B0 0044 .text      GetMinMaxCube__8cM3dGSphCFR4cXyzR4cXyz                       Function */
 // cM3dGSph::GetMinMaxCube(cXyz&, cXyz&) const
 #pragma push
 #pragma optimization_level 0

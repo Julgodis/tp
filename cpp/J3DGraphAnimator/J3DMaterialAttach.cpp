@@ -12,27 +12,68 @@ extern void* operator new(u32); /* __nw__FUl */
 extern void operator delete(void*); /* __dl__FPv */
 
 extern "C" {
+/* Function             */
 extern void __nw__FUl();
+/* Function             */
 extern void __dl__FPv();
+/* Function             */
 extern void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+/* Function             */
 extern void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+/* Function             */
 extern void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+/* Function             */
 extern void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+/* Function             */
 extern void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+/* Function             */
 extern void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+/* Function             */
+extern void clear__16J3DMaterialTableFv();
+/* Function             */
+extern void __ct__16J3DMaterialTableFv();
+/* Function             */
 extern void __dt__16J3DMaterialTableFv();
+/* Function             */
+extern void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+/* Function             */
+extern void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+/* Function             */
+extern void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+/* Function             */
+extern void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+/* Function             */
 extern void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+/* Function             */
+extern void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+/* Function             */
+extern void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+/* Function             */
+extern void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+/* Function             */
+extern void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_24();
+/* Function             */
 extern void _savegpr_26();
+/* Function             */
 extern void _savegpr_27();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_24();
+/* Function             */
 extern void _restgpr_26();
+/* Function             */
 extern void _restgpr_27();
+/* InitializedData      */
 SECTION_RODATA extern const u8 j3dDefaultTexMtxInfo[100];
-SECTION_DATA extern const void* __vt__11J3DTexNoAnm[3];
-SECTION_DATA extern const void* __vt__16J3DMaterialTable[4];
+/* VTableData           */
+SECTION_DATA extern void* __vt__11J3DTexNoAnm[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__16J3DMaterialTable[4];
 }
 
 
@@ -41,8 +82,8 @@ SECTION_DATA extern const void* __vt__16J3DMaterialTable[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CEE80 000C .data      __vt__16J3DMaterialTable                                     */
-SECTION_DATA const  void* __vt__16J3DMaterialTable[4] = {
+/* 803CEE80-803CEE90 000C .data      __vt__16J3DMaterialTable                                     VTableData */
+SECTION_DATA void* __vt__16J3DMaterialTable[4] = {
 	NULL, /* RTTI */
 	NULL,
 	(void*)__dt__16J3DMaterialTableFv,
@@ -57,7 +98,7 @@ SECTION_DATA const  void* __vt__16J3DMaterialTable[4] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 8032F5A8 0028 .text      clear__16J3DMaterialTableFv                                  */
+/* 8032F5A8-8032F5D0 0028 .text      clear__16J3DMaterialTableFv                                  Function */
 // J3DMaterialTable::clear(void)
 #pragma push
 #pragma optimization_level 0
@@ -68,7 +109,7 @@ asm void clear__16J3DMaterialTableFv() {
 }
 #pragma pop
 
-/* 8032F5D0 0034 .text      __ct__16J3DMaterialTableFv                                   */
+/* 8032F5D0-8032F604 0034 .text      __ct__16J3DMaterialTableFv                                   Function */
 // J3DMaterialTable::J3DMaterialTable(void)
 #pragma push
 #pragma optimization_level 0
@@ -79,7 +120,7 @@ asm void __ct__16J3DMaterialTableFv() {
 }
 #pragma pop
 
-/* 8032F604 0048 .text      __dt__16J3DMaterialTableFv                                   */
+/* 8032F604-8032F64C 0048 .text      __dt__16J3DMaterialTableFv                                   Function */
 // J3DMaterialTable::~J3DMaterialTable(void)
 #pragma push
 #pragma optimization_level 0
@@ -90,7 +131,7 @@ asm void __dt__16J3DMaterialTableFv() {
 }
 #pragma pop
 
-/* 8032F64C 00AC .text      removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor    */
+/* 8032F64C-8032F6F8 00AC .text      removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor    Function */
 // J3DMaterialTable::removeMatColorAnimator(J3DAnmColor*)
 #pragma push
 #pragma optimization_level 0
@@ -101,7 +142,7 @@ asm void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
 }
 #pragma pop
 
-/* 8032F6F8 00BC .text      removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern  */
+/* 8032F6F8-8032F7B4 00BC .text      removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern  Function */
 // J3DMaterialTable::removeTexNoAnimator(J3DAnmTexPattern*)
 #pragma push
 #pragma optimization_level 0
@@ -112,7 +153,7 @@ asm void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
 }
 #pragma pop
 
-/* 8032F7B4 00CC .text      removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032F7B4-8032F880 00CC .text      removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey Function */
 // J3DMaterialTable::removeTexMtxAnimator(J3DAnmTextureSRTKey*)
 #pragma push
 #pragma optimization_level 0
@@ -123,7 +164,7 @@ asm void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 }
 #pragma pop
 
-/* 8032F880 0140 .text      removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey  */
+/* 8032F880-8032F9C0 0140 .text      removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey  Function */
 // J3DMaterialTable::removeTevRegAnimator(J3DAnmTevRegKey*)
 #pragma push
 #pragma optimization_level 0
@@ -134,7 +175,7 @@ asm void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey() {
 }
 #pragma pop
 
-/* 8032F9C0 0134 .text      createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032F9C0-8032FAF4 0134 .text      createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey Function */
 // J3DMaterialTable::createTexMtxForAnimator(J3DAnmTextureSRTKey*)
 #pragma push
 #pragma optimization_level 0
@@ -145,7 +186,7 @@ asm void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 }
 #pragma pop
 
-/* 8032FAF4 00D4 .text      entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor     */
+/* 8032FAF4-8032FBC8 00D4 .text      entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor     Function */
 // J3DMaterialTable::entryMatColorAnimator(J3DAnmColor*)
 #pragma push
 #pragma optimization_level 0
@@ -156,7 +197,7 @@ asm void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor() {
 }
 #pragma pop
 
-/* 8032FBC8 00FC .text      entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern   */
+/* 8032FBC8-8032FCC4 00FC .text      entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern   Function */
 // J3DMaterialTable::entryTexNoAnimator(J3DAnmTexPattern*)
 #pragma push
 #pragma optimization_level 0
@@ -167,7 +208,7 @@ asm void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern() {
 }
 #pragma pop
 
-/* 8032FCC4 01AC .text      entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey */
+/* 8032FCC4-8032FE70 01AC .text      entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey Function */
 // J3DMaterialTable::entryTexMtxAnimator(J3DAnmTextureSRTKey*)
 #pragma push
 #pragma optimization_level 0
@@ -178,7 +219,7 @@ asm void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey() {
 }
 #pragma pop
 
-/* 8032FE70 017C .text      entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey   */
+/* 8032FE70-8032FFEC 017C .text      entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey   Function */
 // J3DMaterialTable::entryTevRegAnimator(J3DAnmTevRegKey*)
 #pragma push
 #pragma optimization_level 0

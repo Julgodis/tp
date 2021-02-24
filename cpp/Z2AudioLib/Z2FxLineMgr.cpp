@@ -13,27 +13,57 @@ struct JKRHeap;
 extern void* operator new[](u32, JKRHeap*, int); /* __nwa__FUlP7JKRHeapi */
 
 extern "C" {
+/* Function             */
 extern void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+/* Function             */
+extern void __ct__11Z2FxLineMgrFv();
+/* Function             */
+extern void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+/* Function             */
 extern void setLineID__11Z2FxLineMgrFScbb();
+/* Function             */
 extern void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
+/* Function             */
+extern void setFxForceOff__11Z2FxLineMgrFb();
+/* Function             */
+extern void setUnderWaterFx__11Z2FxLineMgrFb();
+/* Function             */
 extern void setSceneFx__11Z2FxLineMgrFl();
+/* Function             */
 extern void free__7JKRHeapFPvP7JKRHeap();
+/* Function             */
 extern void __nwa__FUlP7JKRHeapi();
+/* Function             */
 extern void getResource__10JKRArchiveFUs();
+/* Function             */
 extern void countResource__10JKRArchiveCFv();
+/* Function             */
 extern void __dt__14JSUInputStreamFv();
+/* Function             */
 extern void read__14JSUInputStreamFPvl();
+/* Function             */
 extern void setBuffer__20JSUMemoryInputStreamFPCvl();
+/* Function             */
 extern void _savegpr_22();
+/* Function             */
 extern void _savegpr_28();
+/* Function             */
 extern void _restgpr_22();
+/* Function             */
 extern void _restgpr_28();
-SECTION_DATA extern const void* __vt__10JSUIosBase[3];
+/* VTableData           */
+SECTION_DATA extern void* __vt__10JSUIosBase[3];
+/* InitializedData      */
 SECTION_DATA extern u8 LIT_3566[304];
-SECTION_DATA extern const void* __vt__20JSURandomInputStream[9];
-SECTION_DATA extern const void* __vt__14JSUInputStream[7];
-SECTION_DATA extern const void* __vt__20JSUMemoryInputStream[10];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20JSURandomInputStream[9];
+/* VTableData           */
+SECTION_DATA extern void* __vt__14JSUInputStream[7];
+/* VTableData           */
+SECTION_DATA extern void* __vt__20JSUMemoryInputStream[10];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B40[4];
+/* ZeroInitializedData  */
 SECTION_SBSS extern u8 data_80450B80[4];
 }
 
@@ -43,7 +73,7 @@ SECTION_SBSS extern u8 data_80450B80[4];
 /* ###################################################################################### */
 
 extern "C" {
-/* 803CAB18 0130 .data      @3566                                                        */
+/* 803CAB18-803CAC48 0130 .data      @3566                                                        InitializedData */
 SECTION_DATA u8 LIT_3566[304] = {
 	0x80, 0x2B, 0xAF, 0x40, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x34, 0x80, 0x2B, 0xAF, 0x20,
 	0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0xEC, 0x80, 0x2B, 0xAF, 0x20, 0x80, 0x2B, 0xAF, 0xEC,
@@ -73,7 +103,7 @@ SECTION_DATA u8 LIT_3566[304] = {
 /* ###################################################################################### */
 
 extern "C" {
-/* 802BA7DC 0020 .text      __ct__11Z2FxLineMgrFv                                        */
+/* 802BA7DC-802BA7FC 0020 .text      __ct__11Z2FxLineMgrFv                                        Function */
 // Z2FxLineMgr::Z2FxLineMgr(void)
 #pragma push
 #pragma optimization_level 0
@@ -84,7 +114,7 @@ asm void __ct__11Z2FxLineMgrFv() {
 }
 #pragma pop
 
-/* 802BA7FC 042C .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            */
+/* 802BA7FC-802BAC28 042C .text      initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap            Function */
 // Z2FxLineMgr::initDataArc(JKRArchive*, JKRHeap*)
 #pragma push
 #pragma optimization_level 0
@@ -95,7 +125,7 @@ asm void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap() {
 }
 #pragma pop
 
-/* 802BAC28 004C .text      setLineID__11Z2FxLineMgrFScbb                                */
+/* 802BAC28-802BAC74 004C .text      setLineID__11Z2FxLineMgrFScbb                                Function */
 // Z2FxLineMgr::setLineID(s8, bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -106,7 +136,7 @@ asm void setLineID__11Z2FxLineMgrFScbb() {
 }
 #pragma pop
 
-/* 802BAC74 01A8 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   */
+/* 802BAC74-802BAE1C 01A8 .text      setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb                   Function */
 // Z2FxLineMgr::setLine(Z2FxLineConfig*, bool, bool)
 #pragma push
 #pragma optimization_level 0
@@ -117,7 +147,7 @@ asm void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb() {
 }
 #pragma pop
 
-/* 802BAE1C 002C .text      setFxForceOff__11Z2FxLineMgrFb                               */
+/* 802BAE1C-802BAE48 002C .text      setFxForceOff__11Z2FxLineMgrFb                               Function */
 // Z2FxLineMgr::setFxForceOff(bool)
 #pragma push
 #pragma optimization_level 0
@@ -128,7 +158,7 @@ asm void setFxForceOff__11Z2FxLineMgrFb() {
 }
 #pragma pop
 
-/* 802BAE48 0070 .text      setUnderWaterFx__11Z2FxLineMgrFb                             */
+/* 802BAE48-802BAEB8 0070 .text      setUnderWaterFx__11Z2FxLineMgrFb                             Function */
 // Z2FxLineMgr::setUnderWaterFx(bool)
 #pragma push
 #pragma optimization_level 0
@@ -139,8 +169,8 @@ asm void setUnderWaterFx__11Z2FxLineMgrFb() {
 }
 #pragma pop
 
-/* 802BAEB8 0154 .text      setSceneFx__11Z2FxLineMgrFl                                  */
-// Z2FxLineMgr::setSceneFx(s32)
+/* 802BAEB8-802BB00C 0154 .text      setSceneFx__11Z2FxLineMgrFl                                  Function */
+// Z2FxLineMgr::setSceneFx(long)
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

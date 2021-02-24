@@ -30,8 +30,9 @@ DVD_A_LDFLAGS := \
 	-proc gekko \
 	-linkmode moreram \
 
-$(BUILD_DIR)/libdvd.a: dirs $(DVD_A_O_FILES)
+$(BUILD_DIR)/libdvd.a: $(DVD_A_O_FILES)
 	$(LD) -xm l $(DVD_A_LDFLAGS) -o $(BUILD_DIR)/libdvd.a $(DVD_A_O_FILES)
+	$(STRIP) -d -R .dead -R .comment $(BUILD_DIR)/libdvd.a
 
 $(BUILD_DIR)/libs/dvd/%.o: cpp/dvd/%.cpp
 	mkdir -p $(@D)
