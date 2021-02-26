@@ -18,6 +18,307 @@ import pickle
 from globals import *
 import demangle
 from intervaltree import Interval, IntervalTree
+import time
+import click
+
+import globals as g
+
+import rich
+from rich.progress import Progress
+from rich.tree import Tree
+
+import baserom
+import analyze
+import framework
+import symbol_sizes
+import sort_objects
+import generate_functions
+import generate_symbols
+import merge_symbols
+import symbol_naming
+
+@click.group()
+@click.version_option(g.DOL2ZEL_VERSION)
+@click.option('--debug/--no-debug', default=False)
+@click.option('--baserom', 'baserom_path', required=False, type=util.PathPath(file_okay=True, dir_okay=False))
+@click.option('--frameworkf', 'framework_path', required=False, type=util.PathPath(file_okay=True, dir_okay=False))
+@click.option('--symbol-info-file', 'symbol_info_path', required=False, type=util.PathPath(), default="generated/symbol_info.py")
+def dol2zel(debug, baserom_path, framework_path, symbol_info_path):
+    g.CONSOLE.print("")
+    g.CONSOLE.rule(f"dol2zel v{g.DOL2ZEL_VERSION}")
+    g.CONSOLE.print("")
+
+    if debug:
+        g.LOG.setLevel(logging.DEBUG)
+
+    # check if the baserom was provided
+    if not baserom_path:
+        g.LOG.error(f"no location for 'baserom.dol' was provided!")
+        sys.exit(1)
+
+    baserom_path.resolve()
+    g.LOG.debug(f"found baserom at '{baserom_path}'")
+    g.BASEROM_PATH = baserom_path
+
+    # check if the frameworkF.map was provided
+    if not framework_path:
+        g.LOG.error(f"no location for 'frameworkF.map' was provided!")
+        sys.exit(1)
+    framework_path.resolve()
+    g.LOG.debug(f"found frameworkF at '{framework_path}'")
+    g.FRAMEWORKF_PATH = framework_path
+
+    if not symbol_info_path:
+        g.LOG.error(f"symbol info path was not provided!")
+        sys.exit(1)
+    symbol_info_path.resolve()
+    g.SYMBOL_INFO_PATH = symbol_info_path
+
+    try:
+        baserom.load()
+        baserom.sha1_check()
+    except Dol2ZelException as err:
+        g.LOG.error(f"{err}")
+    except:
+        g.LOG.error(f"unknown exception")
+        g.CONSOLE.print_exception()
+        sys.exit(1)
+
+@dol2zel.command(name="full-build", help="Split 'baserom.dol' into C++ files.")
+@click.confirmation_option('--force-continue', prompt="By running 'full-build' all previous generated files, include C++ files, will be removed.\nDo you want to continue?")
+@click.option('--base-path', 'base_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True))
+@click.option('--asm-path', 'asm_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="asm/")
+@click.option('--library-path', 'library_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
+@click.option('--src-path', 'src_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="src/")
+def full_build(base_path, asm_path, library_path, src_path):
+    try:
+        g.LOG.debug(f"command: 'full-build'")
+        g.LOG.debug(f"base_path: '{base_path}'")
+        g.LOG.debug(f"asm_path: '{asm_path}'")
+        g.LOG.debug(f"library_path: '{library_path}'")
+        g.LOG.debug(f"src_path: '{src_path}'")
+
+        # Get symbols from the frameworkF.map
+        g.CONSOLE.print(f" 1 Reading symbols information from '{g.FRAMEWORKF_PATH}'")
+        sections = framework.execute()
+
+        # Get symbols and functions from code. This will find addresses accessed that are not in the frameworkF.map file.
+        g.CONSOLE.print(f" 2 Search for symbols and functions by analyzing code")
+        labels, functions = analyze.execute()
+        
+        # Combine results from step 1 and step 2, with information about known (predefined-symbols). 
+        g.CONSOLE.print(f" 3 Merge symbols from 1 and 2")
+        def add_symbol_from_addr(addr):
+            in_sections = [x for x in SECTIONS.values() if x.hasAddr(addr)]
+            if len(in_sections) > 1:
+                g.LOG.warning("multiple section for symbol at 0x%08X" % (addr))
+            elif not in_sections:
+                g.LOG.warning("no section for symbol at0x%08X" % (addr))
+            else:
+                section = in_sections[0]
+
+                obj = None
+                lib = None
+                name = None
+                if section.name == ".init":
+                    obj = "init.o"
+                if addr in g.PREDEFINED_SYMBOLS:
+                    name = g.PREDEFINED_SYMBOLS[addr]
+
+                symbol = framework.Symbol(addr, 0, name, lib, obj)
+                sections[section.name].symbols.append(symbol)
+
+        for addr in labels:
+            add_symbol_from_addr(addr)
+
+        for addr in functions:
+            add_symbol_from_addr(addr)
+
+        # From step 2 we add symbol without size. This step will calculate the size of 
+        # symbols and generate a new list of symbols with more information then framework.Symbol has.
+        g.CONSOLE.print(f" 4 Calculate symbols sizes")
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            tasks = {}
+            for k, section in g.SECTIONS.items():
+                if k in sections:
+                    tasks[k] = progress.add_task("%-14s" % k, total=5)
+
+            for k, section in g.SECTIONS.items():
+                if k in sections:
+                    section.symbols = symbol_sizes.execute(progress, tasks[k], section, sections[k].symbols)
+        
+        # Build tree with library/object-file/section/symbol
+        g.CONSOLE.print(f" 5 Build tree")
+        tree = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+        tree_order = defaultdict(lambda: defaultdict(list))
+        for section in SECTIONS.values():
+            if section.binaryExport:
+                continue
+            for symbol in section.symbols:
+                tree[symbol.lib][symbol.obj][section].append(symbol)
+                tree_order[symbol.lib][section].append(symbol.obj)
+
+        #
+        g.CONSOLE.print(f" 6 Generate library, translation units and sections")
+        reference_set = set()
+        groups_list = list()
+        libraries = list()
+        for k, v in tree.items():
+            library = Library(k, base_path, reference_set)
+            libraries.append(library)
+
+            # sort translation based on order in the frameworkF.map: Otherwise
+            # only using the .text order, translation units without code will
+            # not be included in the order and be appended last.
+            order_sections = tree_order[k]
+            order = sort_objects.sort(v.keys(), order_sections)
+
+            g.LOG.debug("Added library '%s' with %i object files" % (k, len(order)))
+
+            for tuk in order:
+                translation_unit = TranslationUnit(tuk)
+                library.addTranslationUnit(translation_unit)
+
+                for sk, sv in v[tuk].items():
+                    section = SectionPart(sk)
+                    translation_unit.addSectionPart(section)
+
+                    groups = generate_symbols.groups_from_symbols(sv)
+                    groups_list.append((library, translation_unit, section, groups))
+
+        g.LOG.debug("Found %i groups" % len(groups_list))
+
+        #
+        g.CONSOLE.print(f" 7 Generate symbols")
+        function_map = dict()
+        data_map = dict()
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            task = progress.add_task("generating...", total=len(groups_list))
+            for library, translation_unit, section, groups in groups_list:
+                for group in groups:
+                    assert len(group) > 0
+                    first = group[0]
+                    if first.isFunction:
+                        function = generate_functions.from_group(section, group)
+                        section.addSymbol(function)
+                        function_map[function.addr] = function
+                    else:
+                        for symbol_data in generate_symbols.from_group(section, group):
+                            section.addSymbol(symbol_data)
+                            data_map[symbol_data.addr] = symbol_data
+                progress.update(task, advance=1)
+
+        for section in SECTIONS.values():
+            if not section.binaryExport:
+                continue
+            for symbol in section.symbols:
+                group = [ symbol ]
+                for symbol_data in generate_symbols.from_group(section, group):
+                    symbol_data.section = section
+                    symbol.symbol_data = symbol_data
+                    data_map[symbol_data.addr] = symbol_data
+
+        g.LOG.debug("Generate %i functions" % len(function_map))
+        g.LOG.debug("Generate %i data symbols" % len(data_map))
+
+        #
+        g.CONSOLE.print(f" 8 Merge symbols and find function alignment")
+        symbol_map = {**data_map, **function_map}
+        ait = IntervalTree(
+            [Interval(x.addr, x.addr + x.size, x) for x in symbol_map.values() if x.size > 0]
+        )
+
+        merge_symbols.execute(libraries, ait, symbol_map, function_map, data_map)
+
+        #
+        g.CONSOLE.print(f" 9 Naming symbols")
+        symbol_naming.execute(libraries)
+
+        # Generate symbol information. This can later be used by other tools.
+        g.CONSOLE.print(f"10 Generate symbol information file '%s'" % (g.SYMBOL_INFO_PATH))
+        util.create_dirs_for_file(g.SYMBOL_INFO_PATH)
+        with g.SYMBOL_INFO_PATH.open("w") as file:
+            file.write("# \n")
+            file.write("# symbol information generated by dol2zel\n")
+            file.write("# \n")
+            file.write("\n")
+            file.write("# (generated_name, original_name, addr, size, padding, library, object, section, reference_count)\n")
+            file.write("SYMBOL_INFO_FUNCTIONS = [\n")
+
+            symbols = []
+            for lib in libraries:
+                for tu in lib.translation_units:
+                    for sec in tu.section_parts:
+                        symbols.extend(sec.symbols)      
+
+            reference_count = defaultdict(int)
+            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+                task = progress.add_task("counting symbol references...", total=len(symbols))
+
+                for symbol in symbols:
+                    # TODO:    
+                    #break
+
+                    for ref in symbol.getInternalReferences():
+                        if ref == symbol.addr:
+                            continue
+                        reference_count[ref] += 1
+                    progress.update(task, advance=1)
+
+            func_list = list(function_map.keys())
+            func_list.sort()
+            for addr in func_list:
+                sym = function_map[addr]
+                section = sym.section
+                tu = section.tu if hasattr(section, 'tu') else None
+                lib = tu.library if hasattr(tu, 'library') else None
+                file.write("\t\"%s\": (\"%s\", \"%s\", 0x%08X, 0x%06X, 0x%02X, \"%s\", \"%s\", \"%s\", %i),\n" % (
+                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding, 
+                    lib.name if lib else "", 
+                    tu.name if tu else "", 
+                    section.name, reference_count[addr]))
+            file.write("]\n")
+            file.write("\n")
+
+            file.write("SYMBOL_INFO_DATA = [\n")
+            data_list = list(data_map.keys())
+            data_list.sort()
+            for addr in data_list:
+                sym = data_map[addr]
+                section = sym.section
+                tu = section.tu if hasattr(section, 'tu') else None
+                lib = tu.library if hasattr(tu, 'library') else None
+                file.write("\t\"%s\": (\"%s\", \"%s\", 0x%08X, 0x%06X, 0x%02X, \"%s\", \"%s\", \"%s\", %i),\n" % (
+                    sym.name.label, sym.name.label, sym.name.original_name, sym.addr, sym.size, sym.padding, 
+                    lib.name if lib else "", 
+                    tu.name if tu else "", 
+                    section.name, reference_count[addr]))
+            file.write("]\n")
+
+        #
+        g.CONSOLE.print(f"11 Generate makefiles")
+        
+        #
+        g.CONSOLE.print(f"12 Generate ASM")
+        
+        #
+        g.CONSOLE.print(f"13 Generate C++")
+
+    except Dol2ZelException as err:
+        g.LOG.error(f"{err}")
+    except:
+        g.LOG.error(f"unknown exception")
+        g.CONSOLE.print_exception()
+        sys.exit(1)
+
+
+#
+#
+#
+
+
+dol2zel()
+sys.exit(1)
 
 #
 #
@@ -560,10 +861,10 @@ def dol2asm():
     reference_set = set()
     function_map = dict()
     data_map = dict()
+    
     libraries = list()
     for k, v in tree.items():
         library = Library(k, BASE_PATH, reference_set)
-
 
         #
         #
@@ -751,34 +1052,70 @@ def dol2asm():
     def merge_symbol_from_group(group):
         global data_map
         if len(group) == 1:
-            return group[0]
+            return group
 
         if isinstance(group[0], InitializedData):
             merge = MergedInitializedData(group)
             merge.section = merge.internal_data[0].section
-            return merge
+            return [merge]
         elif isinstance(group[0], ZeroInitializedData):
             merge = MergedZeroInitializedData(group)
             merge.section = merge.internal_data[0].section
-            return merge
+            return [merge]
 
         assert False
+
+    def static_local_from_group(group):
+        assert len(group) == 2
+
+        symbol = group[0]
+        initialized_flag = group[1]
+
+        if initialized_flag.name.original_name != None:
+            return group
+
+        print(symbol.name, initialized_flag.name, initialized_flag.name.original_name)
+
+        return group#[StaticLocalData(symbol, initialized_flag)]
+
 
     for lib in libraries:
         for tu in lib.translation_units:
             for sec in tu.section_parts:
+
+                static_local_group = []
                 group = []
                 symbols = []
                 for sym in sec.symbols:
+                    if static_local_group:
+                        static_local_group.append(sym)
+                        symbols.extend(static_local_from_group(static_local_group))
+                        static_local_group = []
+                        continue
+
+                    if sym.name.name.count("$") == 1 and isinstance(sym, ZeroInitializedData):
+                        if group:
+                            symbols.extend(merge_symbol_from_group(group))
+                        static_local_group = [sym]
+                        group = []
+                        continue
+
                     if (isinstance(sym, InitializedData) or isinstance(sym, ZeroInitializedData)) and sym.addr % 4 != 0 and group:
                         assert group[-1].padding == 0
                         group.append(sym)
                     else:
+                        if static_local_group:
+                            assert len(static_local_group) == 1
+                            symbols.extend(static_local_group)
                         if group:
-                            symbols.append(merge_symbol_from_group(group))
+                            symbols.extend(merge_symbol_from_group(group))
                         group = [sym]
+                
+                if static_local_group:
+                    assert len(static_local_group) == 1
+                    symbols.extend(static_local_group)
                 if group:
-                    symbols.append(merge_symbol_from_group(group))
+                    symbols.extend(merge_symbol_from_group(group))
 
                 sec.symbols = symbols
                     
@@ -812,47 +1149,53 @@ def dol2asm():
 
     label_collisions = defaultdict(int)
     reference_collisions = defaultdict(int)
+
+    def nameFix(symbol):
+        util.escape_name(symbol.name)
+
+        if type(symbol).__name__ == "Function" or isinstance(symbol, ReturnFunction):
+            if symbol.name.demangled:
+                parts = symbol.name.demangled.demangled
+                demangled = symbol.name.demangled.to_str()
+                
+                pointer_types = []
+                valid = is_demangled_safe(parts, pointer_types)
+
+                if valid and demangled:
+                    if not ("<" in demangled or ">" in demangled or ":" in demangled):
+                        if not symbol.return_type:
+                            ret_type = None
+                            if symbol.name.demangled.func_name == "operator new":
+                                ret_type = "void*"
+                            elif symbol.name.demangled.func_name == "operator new[]":
+                                ret_type = "void*"
+                            elif symbol.name.demangled.func_name == "operator==":
+                                ret_type = "bool"
+                            elif symbol.name.demangled.func_name == "operator!=":
+                                ret_type = "bool"
+                            elif symbol.name.demangled.func_name == "operator<":
+                                ret_type = "bool"
+                            elif symbol.name.demangled.func_name == "operator>":
+                                ret_type = "bool"
+
+                            symbol.return_type = ret_type
+                        symbol.name.pointer_types = pointer_types
+                        symbol.name.is_function = True
+                    
+        if isinstance(symbol, StaticLocalData):
+            nameFix(symbol.value)
+            nameFix(symbol.init_flag)
+
+        label_collisions[symbol.name.label] += 1
+        reference_collisions[symbol.name.reference] += 1
+
     for lib in libraries:
         for tu in lib.translation_units:
             for sec in tu.section_parts:
                 for symbol in sec.symbols:
                     if isinstance(symbol, StringBaseData):
                         tu.using_string_base = True
-
-                    util.escape_name(symbol.name)
-
-                    if type(symbol).__name__ == "Function" or isinstance(symbol, ReturnFunction):
-                        if symbol.name.demangled:
-                            parts = symbol.name.demangled.demangled
-                            demangled = symbol.name.demangled.to_str()
-                            
-                            pointer_types = []
-                            valid = is_demangled_safe(parts, pointer_types)
-
-                            if valid and demangled:
-                                if not ("<" in demangled or ">" in demangled or ":" in demangled):
-                                    if not symbol.return_type:
-                                        ret_type = None
-                                        if symbol.name.demangled.func_name == "operator new":
-                                            ret_type = "void*"
-                                        elif symbol.name.demangled.func_name == "operator new[]":
-                                            ret_type = "void*"
-                                        elif symbol.name.demangled.func_name == "operator==":
-                                            ret_type = "bool"
-                                        elif symbol.name.demangled.func_name == "operator!=":
-                                            ret_type = "bool"
-                                        elif symbol.name.demangled.func_name == "operator<":
-                                            ret_type = "bool"
-                                        elif symbol.name.demangled.func_name == "operator>":
-                                            ret_type = "bool"
-
-                                        symbol.return_type = ret_type
-                                    symbol.name.pointer_types = pointer_types
-                                    symbol.name.is_function = True
-                                
-
-                    label_collisions[symbol.name.label] += 1
-                    reference_collisions[symbol.name.reference] += 1
+                    nameFix(symbol)
 
     for section in SECTIONS.values():
         if section.binaryExport:
@@ -863,32 +1206,31 @@ def dol2asm():
                 label_collisions[symbol.name.label] += 1
                 reference_collisions[symbol.name.reference] += 1
 
+    def nameCollision(parent_name, symbol):
+        if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
+            obj_prefix = parent_name.replace(
+                "/", "_").replace(".", "_").replace("-", "_")
+            if symbol.name.is_function:
+                symbol.name.is_static = True
+            else:
+                symbol.name.label = obj_prefix + "__" + symbol.name.label
+                symbol.name.reference = obj_prefix + "__" + symbol.name.reference
+
+        # SectionSymbol doesn't have updateName 
+        if hasattr(symbol, 'updateName'):
+            symbol.updateName()
+
     for lib in libraries:
         for tu in lib.translation_units:
             for sec in tu.section_parts:
                 for symbol in sec.symbols:
-                    if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
-                        obj_prefix = tu.name[:-2].replace(
-                            "/", "_").replace(".", "_").replace("-", "_")
-                        if symbol.name.is_function:
-                            symbol.name.is_static = True
-                        else:
-                            symbol.name.label = obj_prefix + "__" + symbol.name.label
-                            symbol.name.reference = obj_prefix + "__" + symbol.name.reference
-                    symbol.updateName()
+                    nameCollision(tu.name[:-2], symbol)
 
 
     for section in SECTIONS.values():
         if section.binaryExport:
             for symbol in section.symbols:
-                if label_collisions[symbol.name.label] > 1 or reference_collisions[symbol.name.reference] > 1:
-                    obj_prefix = tu.name[:-2].replace("/",
-                                                    "_").replace(".", "_").replace("-", "_")
-                    if symbol.name.is_function:
-                        symbol.name.is_static = True
-                    else:
-                        symbol.name.label = obj_prefix + "__" + symbol.name.label
-                        symbol.name.reference = obj_prefix + "__" + symbol.name.reference
+                nameCollision(section.name.replace(".","_"), symbol)
 
     # Print everything
     if False:

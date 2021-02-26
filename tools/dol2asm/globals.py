@@ -1,4 +1,39 @@
 
+
+import logging
+from rich.logging import RichHandler
+from rich.console import Console
+
+DOL2ZEL_VERSION = "2.1"
+
+SYMBOL_INFO_PATH = None
+FRAMEWORKF_PATH = None
+
+BASEROM_DATA = None
+BASEROM_SHA1 = "4997D93B9692620C40E90374A0F1DBF0E4889395"
+BASEROM_PATH = None
+
+BASE_PATH = ""
+
+CONSOLE = Console()
+
+logging.basicConfig(
+    level="INFO",
+    format="%(message)s",
+    datefmt="[%X]",
+    handlers=[RichHandler(console=CONSOLE,rich_tracebacks=True)]
+)
+
+LOG = logging.getLogger("rich")
+
+
+class Dol2ZelException(Exception):
+    def __init__(self, msg):
+        super().__init__(msg)
+
+
+
+
 from symbols import Section
 
 SECTIONS = {

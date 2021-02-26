@@ -13,6 +13,7 @@ class Name:
         self.is_function = False
         self.is_static = False
         self.pointer_types = []
+        self.original_name = name
         if name:
             self.name = name
         else:
@@ -463,6 +464,22 @@ class StringBaseData(InitializedData):
             assert False
         else:
             return self.name.reference
+
+class StaticLocalData(ZeroInitializedData):
+    def __init__(self, value, init_flag):
+        start = value.addr
+        end = init_flag.addr + init_flag.size
+        assert value.addr + value.size + value.padding == init_flag.addr
+        super().__init__(Name("static_local", start, None), start, end - start, padding=init_flag.size-1)
+        self.value = value
+        self.init_flag = init_flag
+
+    def getCPPReferenceLabel(self, parent, addr):
+        if addr >= self.value.addr and addr < self.value.addr + self.value.size:
+            return self.value.getCPPReferenceLabel(self, addr)
+        if addr >= self.init_flag.addr and addr < self.init_flag.addr + self.init_flag.size:
+            return self.init_flag.getCPPReferenceLabel(self, addr)
+        assert False
 
 class MergedInitializedData(Data):
     def __init__(self, group):

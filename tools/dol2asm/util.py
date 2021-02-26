@@ -31,6 +31,19 @@ def magicsplit(l, *splitters):
 #
 #
 #
+
+import click
+from pathlib import Path
+
+class PathPath(click.Path):
+    """A Click path argument that returns a pathlib Path, not a string"""
+
+    def convert(self, value, param, ctx):
+        return Path(super().convert(value, param, ctx))
+
+#
+#
+#
 register_r_re = re.compile(r'r([0-9]+)')
 register_f_re = re.compile(r'r([0-9]+)')
 register_qr_re = re.compile(r'r([0-9]+)')
@@ -111,6 +124,15 @@ def escape_name(n):
     except:
         pass
 
+    if "$" in n.name:
+        sp = n.name.split("$")
+        if len(sp) == 1:
+            if is_weird(sp[0]) or is_weird(sp[1]):
+                return
+            n.label = f"{sp[0]}__ls{sp[1]}"
+            n.reference = f"{sp[0]}__ls{sp[1]}"
+            return
+
     if is_weird(n.name):
         return
 
@@ -127,6 +149,12 @@ def escape_name(n):
 def mkdir(filepath):
     path = Path("/".join(filepath.split("/")[:-1]))
     path.mkdir(parents=True, exist_ok=True)
+
+def create_dirs_for_file(filepath):
+    parent = filepath.parent
+    if parent.exists():
+        return
+    parent.mkdir(parents=True, exist_ok=True)
 
 #
 #

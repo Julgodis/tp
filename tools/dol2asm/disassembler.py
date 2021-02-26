@@ -316,6 +316,7 @@ class Disassembler:
                 callback(address, address - start, None, data[o: o + 4])
                 address += 4
             yield offset + (current - start) // 4
+        yield offset + (end - start) // 4
 
     def execute(self, addr, data, size):
         if size <= 0:
