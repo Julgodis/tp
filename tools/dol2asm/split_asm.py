@@ -20,12 +20,17 @@ import demangle
 from intervaltree import Interval, IntervalTree
 import time
 import click
+import asyncio
+import concurrent.futures
 
 import globals as g
+from exception import Dol2ZelException
 
 import rich
 from rich.progress import Progress
 from rich.tree import Tree
+
+from data import *
 
 import baserom
 import analyze
@@ -36,14 +41,26 @@ import generate_functions
 import generate_symbols
 import merge_symbols
 import symbol_naming
+import rellib
+import makefile
+
+import asyncio
+from functools import wraps
+
+def coro(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        return asyncio.run(f(*args, **kwargs))
+
+    return wrapper
 
 @click.group()
 @click.version_option(g.DOL2ZEL_VERSION)
-@click.option('--debug/--no-debug', default=False)
-@click.option('--baserom', 'baserom_path', required=False, type=util.PathPath(file_okay=True, dir_okay=False))
-@click.option('--frameworkf', 'framework_path', required=False, type=util.PathPath(file_okay=True, dir_okay=False))
+@click.option('--debug/--no-debug', help="enable/disable debug logging", default=False)
+@click.option('--game', 'game_path', help=f"Path to extracted games file for '{g.GAME_NAME}'", required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="game/")
 @click.option('--symbol-info-file', 'symbol_info_path', required=False, type=util.PathPath(), default="generated/symbol_info.py")
-def dol2zel(debug, baserom_path, framework_path, symbol_info_path):
+@coro
+async def dol2zel(debug, game_path, symbol_info_path):
     g.CONSOLE.print("")
     g.CONSOLE.rule(f"dol2zel v{g.DOL2ZEL_VERSION}")
     g.CONSOLE.print("")
@@ -51,34 +68,304 @@ def dol2zel(debug, baserom_path, framework_path, symbol_info_path):
     if debug:
         g.LOG.setLevel(logging.DEBUG)
 
-    # check if the baserom was provided
-    if not baserom_path:
-        g.LOG.error(f"no location for 'baserom.dol' was provided!")
-        sys.exit(1)
-
-    baserom_path.resolve()
-    g.LOG.debug(f"found baserom at '{baserom_path}'")
-    g.BASEROM_PATH = baserom_path
-
-    # check if the frameworkF.map was provided
-    if not framework_path:
-        g.LOG.error(f"no location for 'frameworkF.map' was provided!")
-        sys.exit(1)
-    framework_path.resolve()
-    g.LOG.debug(f"found frameworkF at '{framework_path}'")
-    g.FRAMEWORKF_PATH = framework_path
-
-    if not symbol_info_path:
-        g.LOG.error(f"symbol info path was not provided!")
-        sys.exit(1)
-    symbol_info_path.resolve()
-    g.SYMBOL_INFO_PATH = symbol_info_path
+    assert game_path
+    game_path.resolve()
+    if not game_path.exists():
+        g.LOG.error(f"invalid path to game directory, '{game_path}'")
+        sys.exit(1)   
 
     try:
+        baserom_path = util.check_file(game_path, "main.dol")
+        framework_path = util.check_file(game_path, "map/Final/Release/frameworkF.map")
+
+        g.LOG.debug(f"found 'main.dol' at '{baserom_path}'")
+        g.BASEROM_PATH = baserom_path
+        g.LOG.debug(f"found 'frameworkF.map' at '{framework_path}'")
+        g.FRAMEWORKF_PATH = framework_path
+
+        map_path = util.check_dir(game_path, "map/Final/Release")
+        maps_path = [x for x in util.get_files_with_ext(map_path, ".map") if x.name != "frameworkF.map"]
+        g.LOG.debug(f"found {len(maps_path)} map files at '{map_path}'")
+        g.MAP_PATH = map_path
+        g.MAPS_PATH = maps_path
+
+        rel_path = util.check_dir(game_path, "rel/Final/Release")
+        rels_path = util.get_files_with_ext(rel_path, ".rel")
+        g.LOG.debug(f"found {len(rels_path)} RELs at '{rel_path}'")
+        g.REL_PATH = rel_path
+        g.RELS_PATH = rels_path
+
+        assert symbol_info_path
+        symbol_info_path.resolve()
+        g.SYMBOL_INFO_PATH = symbol_info_path
+
         baserom.load()
         baserom.sha1_check()
+
+        g.MAPS = {}
+        for map_filepath in maps_path:
+            g.MAPS[map_filepath.name] = map_filepath
+
+        g.RELS = {}
+        for rel_filepath in rels_path:
+            with rel_filepath.open('rb') as file:
+                rel = rellib.read(bytearray(file.read()))
+                rel.path = rel_filepath
+                rel.map = g.MAPS[rel_filepath.name.replace(".rel", ".map")]
+                g.RELS[rel.index] = rel
+
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
+        sys.exit(1)
+    except:
+        g.LOG.error(f"unknown exception")
+        g.CONSOLE.print_exception()
+        sys.exit(1)
+
+import symbol_finder
+
+@dol2zel.command(name="rel")
+@click.option('--asm-path', 'asm_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="asm/")
+@click.option('--lib-path', 'lib_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
+@click.option('--src-path', 'src_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="src/")
+@click.option('--rel-path', 'rel_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="rel/")
+@coro
+async def rel_build(asm_path, lib_path, src_path, rel_path):
+    g.OPEN_FILES_SEMAPHORE = asyncio.Semaphore(g.MAX_FILE_COUNT)
+
+    try:
+        g.LOG.debug(f"command: 'rel'")
+        g.LOG.debug(f"asm_path: '{asm_path}'")
+        g.LOG.debug(f"lib_path: '{lib_path}'")
+        g.LOG.debug(f"src_path: '{src_path}'")
+        g.LOG.debug(f"rel_path: '{rel_path}'")
+
+        # Create paths
+        if not asm_path.exists():
+            asm_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{asm_path}'")
+        if not lib_path.exists():
+            lib_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{lib_path}'")
+        if not src_path.exists():
+            src_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{src_path}'")
+        if not rel_path.exists():
+            rel_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{rel_path}'")
+
+        modules = []
+        for index, rel in g.RELS.items():
+            base_addr = REL_TEMP_LOCATION[rel.path.name] & 0xFFFFFFFF
+            base_addr -= rel.sections[1].offset
+            g.LOG.debug(f"%3i: {rel.path},  {len(rel.sections)} sections and {len(rel.relocations)} relocations" % index)
+
+            relocations = defaultdict(list)
+            executable_sections = []
+            for section in rel.sections:
+                section.offset += base_addr
+                for relocation in section.relocations:
+                    relocations[section.index].append(relocation)
+
+                cs = []
+                if section.executable_flag:
+                    cs.append((0, section.length))
+                executable_sections.append(g.ExecutableSection(
+                    section.name, section.offset, section.length, base_addr, 
+                    section.data, cs, {}))
+
+            module = symbol_finder.search(index, rel.path.name.replace(".rel",".o"),  rel.map, executable_sections, relocations)
+            modules.append(module)
+            
+            #for section in rel.sections:
+            #    g.LOG.debug(f"\t{section.index:02} {executable_sections[section.index].name}")
+
+            #if len(modules) > 50:
+            #    break
+
+        # merge data
+        libraries = defaultdict(list)
+        for module in modules:
+            for lib in module.libraries.values():
+                libraries[lib.name].append(lib)
+
+        def all_equal(iterator):
+            return len(set(iterator)) <= 1
+
+        def merge_symbols(dsymbols):
+            result_symbols = []
+            for name, symbols in dsymbols.items():
+                if len(symbols) == 1:
+                    result_symbols.append(symbols[0])
+                else:
+                    sizes = [x.size for x in symbols]
+                    if not all_equal(sizes):
+                        raise Dol2ZelException("merging identical symbols, but they have different sizes...")
+                    
+                    """
+                    if True and isinstance(symbols[0], InitData):
+                        data = [x.data for x in symbols]
+                        if not all_equal(data):
+                            raise Dol2ZelException("merging identical symbols, but they have contain different data")
+                    """
+
+                    result_symbols.append(symbols[0])
+            return result_symbols
+
+        def merge_sections(dsections):
+            result_sections = dict()
+            for name, sections in dsections.items():
+                symbols = defaultdict(list)
+                unnamed_symbols = []
+                for section in sections:
+                    for symbol in section.symbols:
+                        #g.CONSOLE.print(f"0x%08X 0x%04X {symbol.section.id} {symbol.identifier}" % (symbol.addr, symbol.size))
+                        if symbol.identifier.name:
+                            symbols[symbol.identifier.name].append(symbol)
+                        elif symbol.identifier.label:
+                            symbols[symbol.identifier.label].append(symbol)
+                result_sections[name] = merge_symbols(symbols) 
+                result_sections[name].extend(unnamed_symbols)
+                result_sections[name].sort(key=lambda k: (k.addr, k.size))
+            return result_sections
+
+        def merge_tus(dtus):
+            result_tus = dict()
+            for name, tus in dtus.items():
+                sections = defaultdict(list)
+                for tu in tus:
+                    for section in tu.sections:
+                        sections[section.name].append(section)
+                    
+                result_tus[name] = merge_sections(sections)
+            return result_tus
+
+        def merge_libraries(dlibs):    
+            result_libs = dict()
+            for name, libs in dlibs.items():
+                if not name:
+                    continue
+                tus = defaultdict(list)
+                for lib in libs:
+                    for tu in lib.translation_units:
+                        tus[tu.name].append(tu)
+                    
+                result_libs[name] = merge_tus(tus)
+            return result_libs
+        
+        new_libs_dict = merge_libraries(libraries)
+        new_libs = dict()
+        for k,v in new_libs_dict.items():
+            lib = Library(k, lib_path=lib_path,asm_path=asm_path)
+            new_libs[k] = lib
+            for kk,vv in v.items():
+                tu = TranslationUnit(kk)
+                lib.addTranslationUnit(tu)
+                for kkk,vvv in vv.items():
+                    first = vvv[0]
+                    last = vvv[-1]
+                    section = Section(kkk, first.start, last.end - first.start, False, None)
+                    tu.addSection(section)
+                    for s in vvv:
+                        section.symbols.append(s)
+
+
+        symbol_naming.execute([*new_libs.values(), *libraries[None]])
+
+        symbol_map = {}
+        ait = IntervalTree(
+            [Interval(x.start, x.end, x) for x in symbol_map.values() if x.size > 0]
+        )
+
+        cpp_tasks = []
+        cpp_tasks += cpp.export_all(new_libs, symbol_map, ait)
+        """
+        asm_tasks = []
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            task = progress.add_task("building translation units...", total=len(cpp_tasks))
+
+            for tu, callback in cpp_tasks:
+                progress.update(task, description="%-30s" % tu.source_path)
+                asm_tasks.extend(callback())
+                progress.update(task, advance=1)
+
+        g.LOG.debug(f"{len(asm_tasks)} tasks for generating ASM code")
+
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            for function, callback in asm_tasks:
+                callback(progress)
+        """
+
+        for module in modules:
+            if module.index == 0:
+                continue
+
+            base = module.libraries[None]
+            base.name = g.RELS[module.index].path.name.replace(".rel", "")
+            base.lib_path = rel_path 
+            base.asm_path = asm_path.joinpath("rel/")
+
+            #g.LOG.debug(f"export {base.id}")
+            cpp_tasks += cpp.export_all({None: base}, symbol_map, ait)
+
+            """
+            asm_tasks = []
+            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+                task = progress.add_task("building translation units...", total=len(cpp_tasks))
+
+                for tu, callback in cpp_tasks:
+                    progress.update(task, description="%-30s" % tu.source_path)
+                    asm_tasks.extend(callback())
+                    progress.update(task, advance=1)
+
+            g.LOG.debug(f"{len(asm_tasks)} tasks for generating ASM code")
+
+            with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+                for function, callback in asm_tasks:
+                    callback(progress)
+            """
+
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            task = progress.add_task("")
+            advance = [0]
+            async def temp(advance, callback):
+                result = await callback
+                advance[0] += 1
+                return result
+
+            async def progress_bar(progress, description, advance):
+                total = 0
+                while True:
+                    await asyncio.sleep(0.25)
+                    for i in range(2):
+                        if advance[0] > 0:
+                            total += advance[0]
+                            progress.update(task, description=f"{description} ({total}/{progress._tasks[task].total})", advance=advance[0])
+                            advance[0] = 0
+
+            g.CONSOLE.print(f"{len(cpp_tasks)} tasks for generating C++ code")
+            cpp_async_tasks = [temp(advance, x) for x in cpp_tasks]
+            progress.update(task, total=len(cpp_async_tasks))
+      
+            pb_task = asyncio.create_task(progress_bar(progress, "generating C++", advance))
+            asm_tasks = await asyncio.gather(*cpp_async_tasks)
+            asm_tasks = sum(asm_tasks, [])
+            pb_task.cancel()
+
+            advance = [0]
+
+            g.CONSOLE.print(f"{len(asm_tasks)} tasks for generating ASM code")
+            asm_async_tasks = [temp(advance, x) for x in asm_tasks]
+            progress.update(task, total=len(asm_async_tasks))
+            pb_task = asyncio.create_task(progress_bar(progress, "generating ASM", advance))
+            await asyncio.gather(*asm_async_tasks)
+            pb_task.cancel()
+
+        g.CONSOLE.print("complete")
+
+    except Dol2ZelException as err:
+        g.LOG.error(f"{err}")
+        sys.exit(1)
     except:
         g.LOG.error(f"unknown exception")
         g.CONSOLE.print_exception()
@@ -86,21 +373,39 @@ def dol2zel(debug, baserom_path, framework_path, symbol_info_path):
 
 @dol2zel.command(name="full-build", help="Split 'baserom.dol' into C++ files.")
 @click.confirmation_option('--force-continue', prompt="By running 'full-build' all previous generated files, include C++ files, will be removed.\nDo you want to continue?")
-@click.option('--base-path', 'base_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True))
 @click.option('--asm-path', 'asm_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="asm/")
-@click.option('--library-path', 'library_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
+@click.option('--lib-path', 'lib_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="libs/")
 @click.option('--src-path', 'src_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="src/")
-def full_build(base_path, asm_path, library_path, src_path):
+@click.option('--rel-path', 'rel_path', required=False, type=util.PathPath(file_okay=False, dir_okay=True), default="rel/")
+def full_build(asm_path, lib_path, src_path, rel_path):
     try:
         g.LOG.debug(f"command: 'full-build'")
-        g.LOG.debug(f"base_path: '{base_path}'")
         g.LOG.debug(f"asm_path: '{asm_path}'")
-        g.LOG.debug(f"library_path: '{library_path}'")
+        g.LOG.debug(f"lib_path: '{lib_path}'")
         g.LOG.debug(f"src_path: '{src_path}'")
+        g.LOG.debug(f"rel_path: '{rel_path}'")
+
+        # Create paths
+        if not asm_path.exists():
+            asm_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{asm_path}'")
+        if not lib_path.exists():
+            lib_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{lib_path}'")
+        if not src_path.exists():
+            src_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{src_path}'")
+        if not rel_path.exists():
+            rel_path.mkdir(parents=True)
+            g.LOG.debug(f"create new path: '{rel_path}'")
 
         # Get symbols from the frameworkF.map
         g.CONSOLE.print(f" 1 Reading symbols information from '{g.FRAMEWORKF_PATH}'")
-        sections = framework.execute()
+        sections, framework_addrs = framework.execute(g.FRAMEWORKF_PATH)
+
+        for key, section in sections.items():
+            g.LOG.debug("%-14s: found %i symbols" % (key, len(section.symbols)))
+               
 
         # Get symbols and functions from code. This will find addresses accessed that are not in the frameworkF.map file.
         g.CONSOLE.print(f" 2 Search for symbols and functions by analyzing code")
@@ -128,10 +433,9 @@ def full_build(base_path, asm_path, library_path, src_path):
                 symbol = framework.Symbol(addr, 0, name, lib, obj)
                 sections[section.name].symbols.append(symbol)
 
-        for addr in labels:
-            add_symbol_from_addr(addr)
-
-        for addr in functions:
+        laf = list(labels.union(functions) - framework_addrs)
+        laf.sort()
+        for addr in laf:
             add_symbol_from_addr(addr)
 
         # From step 2 we add symbol without size. This step will calculate the size of 
@@ -164,7 +468,7 @@ def full_build(base_path, asm_path, library_path, src_path):
         groups_list = list()
         libraries = list()
         for k, v in tree.items():
-            library = Library(k, base_path, reference_set)
+            library = Library(k, lib_path, src_path, asm_path, reference_set)
             libraries.append(library)
 
             # sort translation based on order in the frameworkF.map: Otherwise
@@ -256,8 +560,8 @@ def full_build(base_path, asm_path, library_path, src_path):
                 task = progress.add_task("counting symbol references...", total=len(symbols))
 
                 for symbol in symbols:
-                    # TODO:    
-                    #break
+                    if g.SPEED_MODE: 
+                        break
 
                     for ref in symbol.getInternalReferences():
                         if ref == symbol.addr:
@@ -297,15 +601,44 @@ def full_build(base_path, asm_path, library_path, src_path):
 
         #
         g.CONSOLE.print(f"11 Generate makefiles")
+        for library in libraries:
+            if not library.name:
+                continue
+            makefile.export_library(library)
         
         #
         g.CONSOLE.print(f"12 Generate ASM")
-        
+        for section in SECTIONS.values():
+            if section.binaryExport:
+                asm.export_binary_section(asm_path, section)
+
         #
         g.CONSOLE.print(f"13 Generate C++")
+        cpp_tasks = cpp.export_all(libraries, symbol_map, ait)
+        g.LOG.debug(f"{len(cpp_tasks)} tasks for generating C++ code")
+
+        asm_tasks = []
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            task = progress.add_task("building translation units...", total=len(cpp_tasks))
+
+            for tu, callback in cpp_tasks:
+                progress.update(task, description="%-30s"%tu.getCppPath())
+                asm_tasks.extend(callback())
+                progress.update(task, advance=1)
+        #
+        g.CONSOLE.print(f"14 Generate ASM functions")
+        g.LOG.debug(f"{len(asm_tasks)} tasks for generating ASM code")
+
+        with Progress(console=CONSOLE, transient=True, refresh_per_second=4) as progress:
+            for function, callback in asm_tasks:
+                callback(progress)
+
+        #
+        g.CONSOLE.print(f"15 Complete")
 
     except Dol2ZelException as err:
         g.LOG.error(f"{err}")
+        sys.exit(1)
     except:
         g.LOG.error(f"unknown exception")
         g.CONSOLE.print_exception()
@@ -316,8 +649,21 @@ def full_build(base_path, asm_path, library_path, src_path):
 #
 #
 
+def profile():
+    import cProfile, pstats, io
+    from pstats import SortKey
+    pr = cProfile.Profile()
+    pr.enable()
+    dol2zel()
+    pr.disable()
 
-dol2zel()
+    ps = pstats.Stats(pr)
+    ps.sort_stats(SortKey.CUMULATIVE).print_stats()
+    print("")
+    print("")
+    ps.sort_stats(SortKey.TIME).print_stats(20)
+
+asyncio.run(dol2zel())
 sys.exit(1)
 
 #

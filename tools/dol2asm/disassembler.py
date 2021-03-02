@@ -112,16 +112,6 @@ def is_store_insn(insn):
     # TODO: all store instructions
     return insn.id in {PPC_INS_STW}
 
-from globals import SECTIONS
-def is_label_candidate(addr):
-    for section in SECTIONS.values():
-        if section.hasAddr(addr):
-            if section.isCode:
-                return (addr & 3) == 0
-            return True
-
-    return False
-
 def disasm_ps(inst):
     RA = ((inst >> 16) & 0x1f)
     RB = ((inst >> 11) & 0x1f)
@@ -258,7 +248,7 @@ def disasm_ld(inst):
 #
 
 class Disassembler:
-    def __init__(self):
+    def __init__(self, sections):
         self.cs = Cs(CS_ARCH_PPC, CS_MODE_32 | CS_MODE_BIG_ENDIAN)
         self.cs.detail = True
         self.cs.imm_unsigned = False
@@ -268,18 +258,32 @@ class Disassembler:
         self.linkedInsns = {} 
         self.r13AddrInsns = {}
         self.r2AddrInsns = {}
+        self.sections = sections
 
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
 
+    def is_label_candidate(self, addr):
+        for section in self.sections:
+            if addr in section:
+                if len(section.code_segments):
+                    return (addr & 3) == 0
+                return True
+
+        return False
+
     def fix_wrong_addresses(self, insn, value):
+        # TODO: is this still required?
         if insn.address == 0x80197108:
             assert value == 0x803C0004
             return 0x803bb8a8
 
         return value
 
-    def iter(self, address, data, size):
+    def execute(self, addr, data, size):
+        if size <= 0:
+            return
+
         self.lisInsns = {}  
         self.splitDataLoads = {}  
         self.linkedInsns = {} 
@@ -289,42 +293,35 @@ class Disassembler:
         self.r13_addr = 0x80458580
         self.r2_addr = 0x80459A00
 
-        yield from self._iter(address, data, size, 0, self.pre_callback)
-        yield from self._iter(address, data, size, size // 4, self.callback)
+        instructions = list(self.cs.disasm(data, addr))
+        for insn in instructions:
+            self.pre_callback(insn.address, insn.address - addr, insn, insn.bytes)
+        for insn in instructions:
+            self.callback(insn.address, insn.address - addr, insn, insn.bytes)
 
-    def _iter(self, address, data, size, offset, callback):
+    async def async_execute(self, addr, data, size):
         if size <= 0:
             return
 
-        assert size % 4 == 0
-        assert len(data) >= size
+        self.lisInsns = {}  
+        self.splitDataLoads = {}  
+        self.linkedInsns = {} 
+        self.r13AddrInsns = {}
+        self.r2AddrInsns = {}
 
-        start = address
-        end = address + size
-        while address < end:
-            current = address
-            code = data[(address-start):size]
-            for insn in self.cs.disasm(code, address):
-                address = insn.address
-                bytes = insn.bytes
-                if insn.id in blacklistedInsns:
-                    insn = None
-                callback(address, address - start, insn, bytes)
-                address += 4
-            if address < end:
-                o = address - start
-                callback(address, address - start, None, data[o: o + 4])
-                address += 4
-            yield offset + (current - start) // 4
-        yield offset + (end - start) // 4
+        self.r13_addr = 0x80458580
+        self.r2_addr = 0x80459A00
 
-    def execute(self, addr, data, size):
-        if size <= 0:
-            return
+        instructions = list(self.cs.disasm(data, addr))
+        for insn in instructions:
+            self.pre_callback(insn.address, insn.address - addr, insn, insn.bytes)
+        for insn in instructions:
+            await self.callback(insn.address, insn.address - addr, insn, insn.bytes)
 
-        deque(self.iter(addr, data, size), maxlen=0)
 
-    def callback(self, data, address, size, callback):
+        #deque(self.iter(addr, data, size), maxlen=0)
+
+    def callback(self, address, offset, insn, bytes):
         pass
 
     def pre_callback(self, address, offset, insn, bytes):
@@ -362,20 +359,20 @@ class Disassembler:
         elif (not is_store_insn(insn)) and len(insn.operands) >= 1 and insn.operands[0].type == PPC_OP_REG:
             self.lisInsns.pop(insn.operands[0].reg, None)
 
-
+import globals as g
 # Disassembler which will collect labels used
 class LCDisassembler(Disassembler):
-    def __init__(self):
-        super().__init__()
-        self.labels = set()
-        self.functions = set()
+    def __init__(self, sections):
+        super().__init__(sections)
+        self.labels = dict()
+        self.functions = dict()
         self.reference_fix = False
 
     def addFunction(self, insn, value):
-        self.functions.add(value)
+        self.functions[insn.address & 0xFFFFFFFF] = value & 0xFFFFFFFF
 
     def addLabel(self, insn, value):
-        self.labels.add(value)
+        self.labels[insn.address & 0xFFFFFFFF] = value & 0xFFFFFFFF
 
     def callback(self, address, offset, insn, bytes):
         if insn == None:
@@ -392,33 +389,35 @@ class LCDisassembler(Disassembler):
         if r13_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R13:
                 value = r13_addr + sign_extend_16(insn.operands[2].imm)
-                if is_label_candidate(value) and not self.reference_fix:
+                if self.is_label_candidate(value) and not self.reference_fix:
                     self.addLabel(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R13):
                 value = r13_addr + sign_extend_16(insn.operands[1].mem.disp)
-                if is_label_candidate(value):
+                if self.is_label_candidate(value):
                     self.addLabel(insn, value)
 
         if r2_addr != None:
             if insn.id == PPC_INS_ADDI and insn.operands[1].value.reg == PPC_REG_R2:
                 value = r2_addr + sign_extend_16(insn.operands[2].imm)
-                if is_label_candidate(value) and not self.reference_fix:
+                if self.is_label_candidate(value) and not self.reference_fix:
                     self.addLabel(insn, value)
             if is_load_store_reg_offset(insn, PPC_REG_R2):
                 value = r2_addr + sign_extend_16(insn.operands[1].mem.disp)
-                if is_label_candidate(value):
+                if self.is_label_candidate(value):
                     self.addLabel(insn, value)
 
         #
         if insn.address in self.splitDataLoads and insn.id == PPC_INS_LIS:
             value = self.splitDataLoads[insn.address]
-            if is_label_candidate(value):
+            if self.is_label_candidate(value):
                 self.addLabel(insn, value)
         elif insn.address in self.splitDataLoads and insn.id in {PPC_INS_ADDI, PPC_INS_ORI}:
             value = self.splitDataLoads[insn.address]
-            if is_label_candidate(value):
+            if self.is_label_candidate(value):
                 self.addLabel(insn, value)
         elif insn.address in self.splitDataLoads and is_load_store_reg_offset(insn, None):
             value = self.splitDataLoads[insn.address]
-            if is_label_candidate(value):
+            if self.is_label_candidate(value):
                 self.addLabel(insn, value)
+
+        #g.LOG.debug("0x%08X\t%s %s" % (insn.address, insn.mnemonic, insn.op_str))

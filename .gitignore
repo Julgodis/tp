@@ -9,6 +9,9 @@ build/
 *.dol
 vtable.lcf
 
+# Game assets
+game/
+
 # Generated documentation
 docs/doxygen/
 

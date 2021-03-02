@@ -10,6 +10,7 @@ from symbols import *
 import disassembler as dasm
 from capstone import *
 from capstone.ppc import *
+import globals as g
 
 class ASMDisassembler(dasm.Disassembler):
     def __init__(self, addr, data, builder, block_map, symbol_map):
@@ -296,14 +297,12 @@ def export_all(BASEROM, DRY_RUN, EXPORT_CPP, libraries):
     for library in libraries:
         export_library(BASEROM, DRY_RUN, library)
 
-def export_binary_section(BASE_PATH, section: Section):
+def export_binary_section(path, section: Section):
     name = section.name[1:] + ".s"
-    path = "asm/%s%s" % (BASE_PATH, name)
-    util.mkdir(path)
+    path = path.joinpath(name)
+    util.create_dirs_for_file(path)
 
-    print("Exporting", path)
-
-    builder = Builder(path, False)
+    builder = Builder(str(path), False)
     builder.write(".include \"macros.inc\"")
 
     builder.write("")
@@ -330,3 +329,5 @@ def export_binary_section(BASE_PATH, section: Section):
             symbol = InitializedData(name, section_symbol.addr, offset, data, padding_data=padding_data)
             export_symbol(builder, section, symbol)
     builder.close()
+
+    g.LOG.debug(f"Exported {path}")

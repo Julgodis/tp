@@ -1,5 +1,5 @@
 import struct
-from symbols import *
+from data import *
 
 # blr
 def is_blr(data):
@@ -129,13 +129,16 @@ def is_load_global_function(data):
     return False, None, None, None
 
 def from_group(section, group):
+    # TODO:
+    """
     if group[0].name.startswith("__sinit_"):
         return SInitFunction(group, section)
 
     if len(group) == 1:
         start = group[0].addr
         end = start + group[0].size
-        data = section.getData(start, end)
+        print(group[0])
+        data = section.data[start:end]
         if is_return_function(data):
             return ReturnFunction(group, section)
         if is_return_integer_function(data):
@@ -153,5 +156,6 @@ def from_group(section, group):
         lg_result, lg_value, lg_type, lg_section = is_load_global_function(data)
         if lg_result:
             return GlobalFunction("load", lg_value, lg_type, lg_section, group, section)
+    """
 
-    return Function(group, section)
+    return Function.create(section, group)

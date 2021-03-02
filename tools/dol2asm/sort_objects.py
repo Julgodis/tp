@@ -49,9 +49,10 @@ def sort(keys, order_sections):
     top_node = None
     top_nodes = [x for x in nodes.keys() if predecessor_count[x] == 0]
     if len(top_nodes) > 1:
-        g.LOG.warning("found multiple top-level nodes (using the first one)")
-        for node in top_nodes:
-            g.LOG.warning(f"    {node}")
+        pass
+        #g.LOG.warning("found multiple top-level nodes (using the first one)")
+        #for node in top_nodes:
+        #    g.LOG.warning(f"    {node}")
     elif len(top_nodes) == 0:
         raise Dol2ZelException("error: found no top-level node")
 

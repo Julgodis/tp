@@ -58,10 +58,12 @@ def execute(libraries, ait, symbol_map, function_map, data_map):
         if isinstance(group[0], InitializedData):
             merge = MergedInitializedData(group)
             merge.section = merge.internal_data[0].section
+            g.LOG.debug("merge initialized data symbols at: %08X" % merge.addr)
             return [merge]
         elif isinstance(group[0], ZeroInitializedData):
             merge = MergedZeroInitializedData(group)
             merge.section = merge.internal_data[0].section
+            g.LOG.debug("merge uninitialized data symbols at: %08X" % merge.addr)
             return [merge]
 
         assert False
@@ -94,12 +96,14 @@ def execute(libraries, ait, symbol_map, function_map, data_map):
                         static_local_group = []
                         continue
 
+                    """
                     if sym.name.name.count("$") == 1 and isinstance(sym, ZeroInitializedData):
                         if group:
                             symbols.extend(merge_symbol_from_group(group))
                         static_local_group = [sym]
                         group = []
                         continue
+                    """
 
                     if (isinstance(sym, InitializedData) or isinstance(sym, ZeroInitializedData)) and sym.addr % 4 != 0 and group:
                         if group[-1].padding != 0:

@@ -27,11 +27,13 @@ class Name:
 
 #
 class Library:
-    def __init__(self, name, path, reference_set):
+    def __init__(self, name, lib_path, cpp_path, asm_path, reference_set):
         self.name = name
         self.translation_units = []
-        self.path = path
+        self.lib_path = lib_path
         self.reference_set = reference_set
+        self.cpp_path = cpp_path
+        self.asm_path = asm_path
 
     def addTranslationUnit(self, tu):
         tu.library = self
@@ -40,11 +42,19 @@ class Library:
     def addReference(self, addr):
         self.reference_set.add(addr)
 
-    def getPath(self, top_path):
-        path = "%s%s" % (top_path, self.path)
+    def getMakefilePath(self):
+        assert self.name
+        return self.lib_path.joinpath(self.name[:-2])
+
+    def getCppPath(self):
         if self.name:
-            path += "%s/" % self.name[:-2]
-        return path
+            return self.lib_path.joinpath(self.name[:-2])
+        return self.cpp_path
+
+    def getASMFuncPath(self):
+        if self.name:
+            return self.asm_path.joinpath("libs/").joinpath(self.name[:-2])
+        return self.asm_path
 
     def fileName(self):
         return "lib" + self.name
@@ -72,6 +82,15 @@ class TranslationUnit:
     def getFilePath(self, top, ext):
         path = self.library.getPath(top)
         return (path + self.name).replace(".o", ext)
+
+    def getCppPath(self):
+        return self.library.getCppPath().joinpath(self.name.replace(".o", ".cpp"))
+
+    def getObjectPath(self):
+        return self.library.getCppPath().joinpath(self.name)
+
+    def getASMFuncPath(self):
+        return self.library.getASMFuncPath().joinpath(self.name.replace(".o", "/"))
 
     def __repr__(self):
         return self.__str__()

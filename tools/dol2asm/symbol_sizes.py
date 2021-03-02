@@ -10,7 +10,7 @@ def execute(progress, task, section, map_symbols):
     final_symbols = []
     for symbol in map_symbols:
         is_function = False
-        if section.isCode and symbol.name:
+        if section.is_code and symbol.name:
             is_function = True
 
         if is_function and symbol.addr in g.FAKE_FUNCTIONS:

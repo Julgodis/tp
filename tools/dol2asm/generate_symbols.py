@@ -1,6 +1,7 @@
 import globals as g
 import util
-from symbols import *
+from data import *
+from exception import *
 
 def string_decode(data):
     try:
@@ -23,7 +24,8 @@ def string_from_data(addr, offset, data):
 
     return StringData(Name("stringBase", addr, None), string, encoding, addr, offset, data)
 
-def symbol_from_data(section, name, offset, data, padding_data, symbol):
+def symbol_from_data(section, identifier, offset, data, padding_data, symbol):
+    """
     if name.name.startswith("__vt"):
         assert section.name == ".data"
         return [VTableData(name, symbol.addr, offset, data, padding_data=padding_data)]
@@ -114,36 +116,40 @@ def symbol_from_data(section, name, offset, data, padding_data, symbol):
             assert len(padding_data) == 0
             __fini_cpp_exceptions = struct.unpack(">I", data)[0]
             return [SymbolReferenceArrayData(name, [__fini_cpp_exceptions], symbol.addr, offset, data)]
+    """
 
-    return [InitializedData(name, symbol.addr, offset, data, padding_data=padding_data)]
+    return [InitData(identifier, symbol.addr, symbol.size,
+        section=section,
+        data=data, 
+        padding=len(padding_data),
+        padding_data=padding_data)]
 
 def from_group(section, group):
     assert len(group) == 1
     first = group[0]
-    name = Name("data", first.addr, first.name)
-    if section.isBSS:
-        return [ZeroInitializedData(name, first.addr, first.size, padding=first.padding)]
+    identifier = Identifier("data", first.addr, first.name)
+    if not section.data:
+        return [ZeroData(identifier, first.addr, first.size, padding=first.padding)]
     else:
-        offset = section.offset + first.addr - section.addr
+        data = bytes()
+        padding_data = bytes()
         try:
-            data = bytes()
-            padding_data = bytes()
-            if first.size:
-                data = g.BASEROM_DATA[offset:offset+first.size]
+            if first.size > 0:
+                data = section.getData(first.start, first.end)
                 if first.padding:
-                    padding_data = g.BASEROM_DATA[offset+first.size:offset+first.size+first.padding]
+                    padding_data = section.data[first.start:first.end+first.padding]
                 assert len(data) == first.size
-            return symbol_from_data(section, name, offset, data, padding_data, first)
-        except:
-            raise Dol2ZelException("%08X %04X (%08X-%08X, %08X-%08X) is outside of the '%s'" %
-                    (first.addr, first.size, offset, offset + first.size, 0, len(g.BASEROM_DATA), g.BASEROM_PATH))
+        except IndexError:
+            raise Dol2ZelException("%08X %04X (%08X-%08X %08X-%08X) is outside of section '%s'" %
+                    (first.addr, first.size, first.start-section.addr, first.end-section.addr, 0, len(section.data), section.name))
+        return symbol_from_data(section, identifier, first.addr, data, padding_data, first)
 
 
 def groups_from_symbols(symbols):
     group = []
     groups = []
     for symbol in symbols:
-        if symbol.isFunction:
+        if symbol.is_function:
             if group:
                 groups.append(group)
             group = [symbol]

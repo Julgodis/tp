@@ -104,26 +104,30 @@ def mwcc_decode_name(symbol):
 # Generate two labels for a name. One label can be used 
 #
 def escape_name(n):
+    if not n.name:
+        return
+
     if "@" in n.name:
         if n.name.endswith("@stringBase0"):
             rname = n.name.replace("@stringBase0", "stringBase0")
-            n.label = rname
-            n.reference = rname
+            n.override_name = rname
             return
 
         lname = literal_name(n.name)
         if lname:
-            n.label = lname
-            n.reference = lname
+            n.override_name = lname
             return
-        
+    
+    """
     try:
         p = demangle.ParseCtx(n.name)
         p.demangle()
         n.demangled = p
     except:
         pass
+    """
 
+    """
     if "$" in n.name:
         sp = n.name.split("$")
         if len(sp) == 1:
@@ -132,6 +136,7 @@ def escape_name(n):
             n.label = f"{sp[0]}__ls{sp[1]}"
             n.reference = f"{sp[0]}__ls{sp[1]}"
             return
+    """
 
     if is_weird(n.name):
         return
@@ -139,8 +144,7 @@ def escape_name(n):
     if "<" in n.name or ">" in n.name or "," in n.name:
         return # return "\"%s\"" % name, mwcc_encode_name(name)
 
-    n.label = n.name
-    n.reference = n.name
+    n.is_name_safe = True
 
 #
 #
@@ -150,11 +154,33 @@ def mkdir(filepath):
     path = Path("/".join(filepath.split("/")[:-1]))
     path.mkdir(parents=True, exist_ok=True)
 
-def create_dirs_for_file(filepath):
+def _create_dirs_for_file(filepath):
     parent = filepath.parent
     if parent.exists():
         return
     parent.mkdir(parents=True, exist_ok=True)
+
+create_dirs_for_file = aiofiles.wrap(_create_dirs_for_file)
+
+import globals as g
+from exception import Dol2ZelException
+
+def check_file(base, name):
+    new_path = base.joinpath(name)
+    g.LOG.debug(new_path)
+    if not new_path.is_file() or not new_path.exists():
+        raise Dol2ZelException(f"file '{name}' was not found in the game directory ('{base}')")
+    return new_path
+
+def check_dir(base, name):
+    new_path = base.joinpath(name)
+    g.LOG.debug(new_path)
+    if new_path.is_file() or not new_path.exists():
+        raise Dol2ZelException(f"path '{name}' was not found in the game directory ('{base}')")
+    return new_path
+
+def get_files_with_ext(path, ext):
+    return [x for x in path.glob(f"*{ext}") if x.is_file()]
 
 #
 #
